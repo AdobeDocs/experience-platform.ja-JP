@@ -1,6 +1,6 @@
 ---
 source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
-translation-type: tm+mt
+translation-type: ht
 
 ---
 # 記事のコントリビューション
@@ -9,17 +9,17 @@ translation-type: tm+mt
 
 ## アドビオープンソース行動規範
 
-このプロジェクトでは、[Adobe Open Source Code of Actions](code-of-conduct.md)または. NET Foundation [Codeの実施を採用してい](https://dotnetfoundation.org/code-of-conduct)ます。詳しくは[、貢献度の高い](contributing.md)記事を参照してください。
+このプロジェクトでは、[Adobe Open Source Code of Actions](code-of-conduct.md) または. NET Foundation [Code の実施を採用してい](https://dotnetfoundation.org/code-of-conduct)ます。詳しくは[、貢献度の高い](contributing.md)記事を参照してください。
 
-## Adobeコンテンツへの貢献事項について
+## Adobe コンテンツへの貢献事項について
 
-「 [Adobe Docs寄稿者ガイド](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)」を参照してください。
+「[Adobe Docs 寄稿者ガイド](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)」を参照してください。
 
 どのような貢献度が貢献しているか、およびどのように貢献したいかによって異なります。
 
 ### マイナーな変更またはリクエスト
 
-リクエストを送信するには、記事内の&#x200B;**問題のログ**&#x200B;リンクをクリックして、GitHub で問題を開きます。タイトルと説明を指定し、「**Submit new issue**」をクリックします。
+リクエストを送信するには、記事内の「**Log an issue**」リンクをクリックして、GitHub で問題を開きます。タイトルと説明を指定し、「**Submit new issue**」をクリックします。
 
 マイナーアップデートをリクエストするには、記事の「**Edit this page**」リンクをクリックして、GitHub でソース記事を開きます。GitHub の UI を使用して、更新をおこないます。詳しくは、全般的な事項について説明した[アドビドキュメントのコントリビューターガイド](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)を参照してください。
 
@@ -35,17 +35,17 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### アドビの従業員による大きな変更
 
-[!UICONTROL Adobe Experience Cloud] ソリューションの製品チームのテクニカルライター、プログラムマネージャーまたは開発者が、業務として技術記事の執筆やコントリビューションをする場合は、`https://git.corp.adobe.com/AdobeDocs` にあるプライベートリポジトリを使用する必要があります。『 [Internal Collaboration Guide』を参照してください](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)。
+[!UICONTROL Adobe Experience Cloud] ソリューションの製品チームのテクニカルライター、プログラムマネージャーまたは開発者が、業務として技術記事の執筆やコントリビューションをする場合は、`https://git.corp.adobe.com/AdobeDocs` にあるプライベートリポジトリを使用する必要があります。『[内部共同作業ガイド](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)』を参照してください。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## ツールとセットアップ
 
-コミュニティ寄稿者は、基本的な編集にGitHub UIを使用したり、レポをフォークしてメジャー貢献度を確保したりできます。
+コミュニティ寄稿者は、基本的な編集に GitHub UI を使用したり、レポをフォークしてメジャー貢献度を確保したりできます。
 
-詳しくは、[Adobe Docs寄稿者ガイド](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)を参照してください。
+詳しくは、[Adobe Docs 寄稿者ガイド](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)を参照してください。
 
-## markdownを使用してトピックをフォーマットする方法
+## markdown を使用してトピックをフォーマットする方法
 
 このリポジトリのすべての記事は GitHub フレーズダウンダウンを使用します。マークダウンについて詳しくない場合は、以下を参照してください。
 
