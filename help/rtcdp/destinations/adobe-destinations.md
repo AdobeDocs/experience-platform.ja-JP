@@ -1,16 +1,16 @@
 ---
-title: Adobe Destinations
-seo-title: Adobe Destinations
-description: Adobe Destinations
-seo-description: Adobe Destinations
-translation-type: tm+mt
+title: アドビの宛先
+seo-title: アドビの宛先
+description: アドビの宛先
+seo-description: アドビの宛先
+translation-type: ht
 source-git-commit: 520040dd7ac1e3fd3af4009eb5f112cb39e33850
 
 ---
 
 
-# Adobe Destinations {#adobe-destinations}
+# アドビの宛先 {#adobe-destinations}
 
-Adobe Real-time CDP内のデータを他のAdobe Experience cloudソリューションに接続して、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行い、顧客体験を管理します。
+Adobe Real-time CDP 内のデータを他の Adobe Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などを行い、顧客体験を管理します。
 
 * [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md)
