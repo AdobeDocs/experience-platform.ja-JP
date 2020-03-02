@@ -10,7 +10,7 @@ tutorials-title: チュートリアル
 tutorials-url: https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html
 git-repo: https://github.com/AdobeDocs/experience-platform.en
 index: true
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 28afcfb4a10a661984d44a5ae9082708a4ffb311
 
 ---
