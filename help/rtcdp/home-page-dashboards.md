@@ -1,9 +1,9 @@
 ---
 title: リアルタイム顧客データプラットフォームのホームページとダッシュボード
 seo-title: リアルタイム顧客データプラットフォームのホームページとダッシュボード
-description: Adobe Experience Platformのダッシュボード、ホームページ、初回ユーザーエクスペリエンス
-seo-description: Adobe Experience Platformのダッシュボード、ホームページ、初回ユーザーエクスペリエンス
-translation-type: tm+mt
+description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
+seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
+translation-type: ht
 source-git-commit: 6dde6c90fe9073c50c0a9d3dd43ef045730d1e13
 
 ---
@@ -11,13 +11,13 @@ source-git-commit: 6dde6c90fe9073c50c0a9d3dd43ef045730d1e13
 
 # リアルタイム顧客データプラットフォーム指標の概要
 
-指標ダッシュボードを含むAdobe Real-time Customer Data Platform(Real-time CDP)ホームページは、Real-time CDPにログインすると表示されます。
+Real-time CDP にログインすると、指標ダッシュボードを含むアドビリアルタイム顧客データプラットフォーム（Real-time CDP）ホームページが表示されます。
 
-ホームページは、指標カードが表示される場所の1つに過ぎません。 リアルタイムCDPは、お客様の経験を通じて指標カードを提供します。 これらの指標は、システム内のデータ、プロファイルおよびセグメントオーディエンスに関する情報を提供します。
+ホームページは、指標カードが表示される場所の 1 つに過ぎません。Real-time CDP は、ユーザーの経験を通じて指標カードを提供します。これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
 
-![image](assets/home2.jpg)
+![画像](assets/home2.jpg)
 
-Real-time CDPにログインしたときにシステムにデータがない場合、ホームページのダッシュボードは表示されません。 この場合、ホームページは初めてユーザーが体験できるように学習教材を提供します。 データが収集されると（つまり、データセット、プロファイル、セグメント、宛先が作成され、データがシステムにフローされると）、ダッシュボードは自動的に更新され、そのデータに関する情報が表示されます <!--sources--><!-- in metric cards-->。
+Real-time CDP にログインしたときにシステムにデータがない場合、ホームページのダッシュボードは表示されません。この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると（つまり、<!--sources-->データセット、プロファイル、セグメント、宛先が作成され、データがシステムにフローされると）、ダッシュボードは自動的に更新され、そのデータに関する情報が表示されます <!-- in metric cards-->。
 
 ## ホームページのダッシュボードビュー
 
@@ -25,46 +25,46 @@ Real-time CDPにログインしたときにシステムにデータがない場�
 
 ダッシュボードは次のように分かれています<!-- two areas.-->。
 
-* **リーダーボードは** 、ダッシュボードの上部に表示されます。 リーダーボードには、システム内のデータセット、プロファイル、セグメント、および宛先の数が表示されます。
+* **リーダーボード**&#x200B;は、ダッシュボードの上部に表示されます。リーダーボードには、システム内のデータセット、プロファイル、セグメント、宛先の数が表示されます。
 
-   ![image](assets/home-leaderboard2.jpg)
+   ![画像](assets/home-leaderboard2.jpg)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
-* **最近の項目には** 、システムに追加された最新の5つのデータセット、ソース、セグメント、および宛先が表示されます。
+* **最近の項目**&#x200B;には、システムに追加された最新の 5 つのデータセット、ソース、セグメント、宛先が表示されます。
 
-   ![image](assets/home-recent.jpg)
+   ![画像](assets/home-recent.jpg)
 
 追加の指標（プロファイルやセグメントなど）は、リアルタイム顧客データプラットフォームの他の部分で使用できます。
 
 ### データセット
 
-Datasetsカ **[!UICONTROL ウンターは]** 、システム内のデータセットの数とプラットフォーム内のデータの量を示します。 このカウンターは、データセットの作成時に更新されます。
+**[!UICONTROL データセット]**&#x200B;カウンターは、システム内のデータセットの数とプラットフォーム内のデータの量を示します。このカウンターは、データセットの作成時に更新されます。
 
-データセットについて詳しくは、Adobe Experience Platformへの [データの取り込みを参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)。
+データセットについて詳しくは、[Adobe Experience Platform へのデータの取り込み](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)を参照してください。
 
 ### プロファイル
 
-プロフ **[!UICONTROL ァイル数は]** 、リアルタイム顧客プロファイル内のプロファイルを持つ人の合計数を示します。 プロファイルフラグメントは含まれません。 これは、アドレス可能なオーディエンスの合計です。
+**[!UICONTROL プロファイル数]**&#x200B;は、リアルタイム顧客プロファイル内のプロファイルを持つ人の合計数を示します。プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
 
-このカウントでは、統合プロファイ [ルの結合ポリシー](profile/merge-policies.md) 構成で設定された既定の結合ポリシーを使用します。
+このカウントでは、「統合プロファイル」の[結合ポリシー](profile/merge-policies.md)構成で設定された既定の結合ポリシーを使用します。
 
-プロファイルの数は24時間に1回更新されます。
+プロファイルの数は 24 時間ごとに更新されます。
 
-プロファイルの詳細については、「 [A unified view of your customer in Real-time CDP](profile/profile-overview.md)」を参照してください。
+プロファイルの詳細については、「[Real-time CDP での顧客の統合ビュー](profile/profile-overview.md)」を参照してください。
 
 ### セグメント
 
-**[!UICONTROL セグメント]** ：組織に対して作成されたセグメントの合計数が表示されます。 この番号は、新しいセグメントが作成されると更新されます。
+**[!UICONTROL セグメント]**：組織に対して作成されたセグメントの合計数が表示されます。この数は、新しいセグメントが作成されると更新されます。
 
-セグメントについて詳しくは、 [Segmentation Serviceの概要を参照してください](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)。
+セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)」を参照してください。
 
 ### 宛先
 
-**[!UICONTROL 宛先は]** 、組織に対して作成された宛先の合計数を表示します。 この番号は、新しい宛先が作成されると更新されます。
+**[!UICONTROL 宛先]**&#x200B;は、組織に対して作成された宛先の合計数を表示します。この数は、新しい宛先が作成されると更新されます。
 
-宛先について詳しくは、宛先の概要を参 [照してください](destinations/destinations-overview.md)。
+宛先について詳しくは、「[宛先の概要](destinations/destinations-overview.md)」を参照してください。
 
 <!-- ### Successful profile records
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### 最近のデータセット
 
-最近のデ **[!UICONTROL ータセット]** ・カードには、組織内で作成された最新の5つのデータセットが表示されます。 このリストは、新しいデータセットが作成されると更新されます。
+**[!UICONTROL 最近のデータセット]**&#x200B;カードには、組織内で作成された最新の 5 つのデータセットが表示されます。このリストは、新しいデータセットが作成されると更新されます。
 
-データセットをクリックしてその項目の詳細を表示するか、「すべて表示」をク **[!UICONTROL リックして]** 「データセット」のリストを表示します。 ここから、特定のソースをクリックして詳細を表示できます。
+データセットをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてデータセットのリストを表示します。ここからは、特定のソースをクリックして詳細を表示できます。
 
-データセットについて詳しくは、Adobe Experience Platformへの [データの取り込みを参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)。
+データセットについて詳しくは、[Adobe Experience Platform へのデータの取り込み](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)を参照してください。
 
 ### 最近のソース
 
-「最近の **[!UICONTROL ソース]** 」指標カードには、組織内で作成された最新の5つのソースが表示されます。 このリストは、新しいソースが作成されると更新されます。
+「**[!UICONTROL 最近のソース]**」指標カードには、組織内で作成された最新の 5 つのソースが表示されます。このリストは、新しいソースが作成されると更新されます。
 
-ソースをクリックしてその項目の詳細を表示するか、「すべて表示」 **[!UICONTROL をクリックして]** 「ソース」のリストを表示します。 ここから、特定のソースをクリックして詳細を表示できます。
+ソースをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてソースのリストを表示します。ここからは、特定のソースをクリックして詳細を表示できます。
 
-ソースについて詳しくは、「ソースの概要」を参 [照してください](sources/sources-overview.md)。
+ソースについて詳しくは、「[ソースの概要](sources/sources-overview.md)」を参照してください。
 
 ### 最近のセグメント
 
-「最近の **[!UICONTROL セグメント]** 」指標カードには、組織内で作成された最新の5つのセグメントが表示されます。 このリストは、新しいセグメントが作成されると更新されます。
+「**[!UICONTROL 最近のセグメント]**」指標カードには、組織内で作成された最新の 5 つのセグメントが表示されます。このリストは、新しいセグメントが作成されると更新されます。
 
-セグメントをクリックしてその項目の詳細を表示するか、「すべて表示」をク **[!UICONTROL リックして]** 、その他のセグメントに関する情報を表示します。
+セグメントをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてその他のセグメントに関する情報を表示します。
 
-セグメントについて詳しくは、 [Segmentation Serviceの概要を参照してください](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)。
+セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)」を参照してください。
 
 ### 最近の宛先
 
-「最近の **[!UICONTROL 宛先]** 」指標カードには、組織内で作成された最新の宛先が5つ表示されます。 このリストは、新しい宛先が作成されると更新されます。
+「**[!UICONTROL 最近の宛先]**」指標カードには、組織内で作成された最新の 5 つの宛先が表示されます。このリストは、新しい宛先が作成されると更新されます。
 
-宛先をクリックしてそのアイテムの詳細を表示するか、「すべて表示」を **[!UICONTROL クリックして]** 、その他の宛先に関する情報を表示します。
+宛先をクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてその他の宛先に関する情報を表示します。
 
-宛先について詳しくは、宛先の概要を参 [照してください](destinations/destinations-overview.md)。
+宛先について詳しくは、「[宛先の概要](destinations/destinations-overview.md)」を参照してください。
