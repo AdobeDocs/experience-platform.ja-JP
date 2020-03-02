@@ -1,9 +1,9 @@
 ---
 title: データセットの概要
-seo-title: Adobe Experience Platformのデータセットの概要
-description: Adobe Experience Platformのデータセットの概要
-seo-description: Adobe Experience Platformのデータセットの概要
-translation-type: tm+mt
+seo-title: Adobe Experience Platform データセットの概要
+description: Adobe Experience Platform データセットの概要
+seo-description: Adobe Experience Platform データセットの概要
+translation-type: ht
 source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
 
 ---
@@ -11,8 +11,8 @@ source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
 
 # データセット
 
-Experience Platform内のDatasetsワークスペースを使用すると、IMS組織が作成したすべてのデータセットを表示および管理し、新しいデータセットを作成できます。
+Experience Platform 内の「データセット」ワークスペースを使用すると、IMS 組織が作成したすべてのデータセットを表示および管理し、新しいデータセットを作成できます。
 
-左側のナビゲーションで「 **[!UICONTROL Datasets]** 」をクリックして、Datasetsワークスペースを表示します。 [データセット]ワークスペースには、[名前]、[作成日時]、[ソース]、[スキーマ]、[最終バッチステータス]の列、およびデータセットが最終更新された日時を含むデータセットのリストが含まれます。
+左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックして、「データセット」ワークスペースを表示します。「データセット」ワークスペースには、名前、作成日時、ソース、スキーマ、最終バッチステータスを示す列、および最終更新日時を含むデータセットのリストが含まれています。
 
-データセットワークスペースの使用について詳しくは、Adobe Experience Platformへ [のデータの取り込みを参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)。
+「データセット」ワークスペースの使用について詳しくは、「[Adobe Experience Platform へのデータの取り込み](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)」を参照してください。
