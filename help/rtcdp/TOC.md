@@ -2,13 +2,13 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: ddf309a0291e655ab4cbc2953d671591835ed697
 
 ---
 
 
-# Real-time Customer Data Platform Help {#rtcdp}
+# リアルタイム顧客データプラットフォームのヘルプ {#rtcdp}
 
 * [製品概要](overview.md)
 * リアルタイムの顧客データプラットフォーム {#intro}
@@ -21,32 +21,32 @@ source-git-commit: ddf309a0291e655ab4cbc2953d671591835ed697
    * [プラットフォーム上のデータ品質](datasets/data-quality.md)
 * 宛先 {#destinations}
    * [宛先の概要](destinations/destinations-overview.md)
-   * 宛先インターフェイス  {#destinations-interface}
+   * 宛先インターフェイス {#destinations-interface}
       * [宛先ワークスペース](destinations/destinations-workspace.md)
       * [宛先の詳細ページ](destinations/destination-details-page.md)
    * 宛先カタログ {#destinations-cat}
       * [宛先カタログの概要](destinations/destinations-catalog.md)
-      * アドビの宛先{#adobe-destinations}
+      * アドビの宛先 {#adobe-destinations}
          * [アドビの宛先の概要](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-      * 広告の宛先{#advertiser-destinations}
+      * 広告の宛先 {#advertiser-destinations}
          * [広告の宛先の概要](destinations/advertising-destinations.md)
          * [Google](destinations/google-destination.md)
-      * 電子メールマーケティングの宛先{#email-destinations}
+      * 電子メールマーケティングの宛先 {#email-destinations}
          * [電子メールマーケティングの宛先の概要](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
          * [Oracle Responsys](destinations/oracle-responsys-destination.md)
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
-   * リンク先チュートリアル {#dest-tutorials}
+   * 宛先チュートリアル {#dest-tutorials}
       * [宛先に接続](/help/rtcdp/destinations/connect-destination.md)
-      * [宛先へのプロファイルとセグメントのアクティブ化](destinations/activate-destinations.md)
+      * [宛先へのプロファイルとセグメントのアクティベーション](destinations/activate-destinations.md)
 * プライバシーとデータガバナンス {#privacy}
    * [プライバシーの概要](privacy/privacy-overview.md)
    * [データガバナンスの概要](privacy/data-governance-overview.md)
 * リアルタイム顧客プロファイル {#profile}
    * [プロファイルの概要](profile/profile-overview.md)
-   * [IDとIDの名前空間](profile/identities-overview.md)
+   * [ID と ID 名前空間](profile/identities-overview.md)
    * [結合ポリシー](profile/merge-policies.md)
    * [プロファイルビューア](profile/profile-viewer.md)
 * セグメント {#segmentation}
@@ -55,6 +55,6 @@ source-git-commit: ddf309a0291e655ab4cbc2953d671591835ed697
 * ソース {#sources}
    * [ソースの概要](sources/sources-overview.md)
    * [ソースのチュートリアル](sources/sources-tutorials.md)
-   * [Adobe LaunchでのWebサイトタグの実装](sources/launch.md)
+   * [Adobe Launch での Web サイトタグの実装](sources/launch.md)
 * [リリースノート](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
 * [用語集](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
