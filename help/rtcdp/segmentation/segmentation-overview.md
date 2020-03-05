@@ -4,7 +4,7 @@ seo-title: アドビのリアルタイム顧客データプラットフォーム
 description: セグメント化サービスについて説明する概要です。
 seo-description: アドビのリアルタイム顧客データプラットフォームでのセグメント化サービスとセグメントについて説明する概要です。
 translation-type: ht
-source-git-commit: 176f857f38c7decd74b5fb01a8d0c39deaaabae2
+source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
 
 ---
 
@@ -25,4 +25,4 @@ Real-time CDP は Adobe Experience Platform をベースに構築され、多く
 
 ## 次の手順
 
-この概要を読み終わると、Real-time CDP がセグメント化を利用してマーケティングキャンペーンのカスタマイズとパーソナライズ機能を強化する方法を理解できるはずです。セグメント化サービスの詳細については、[Adobe I/O のセグメンテーションに関するドキュメント](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)を参照してください。
+この概要を読み終わると、Real-time CDP がセグメント化を利用してマーケティングキャンペーンのカスタマイズとパーソナライズ機能を強化する方法を理解できるはずです。セグメント化サービスの詳細については、[Adobe I/O のセグメンテーションに関するドキュメント](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)を参照してください。
