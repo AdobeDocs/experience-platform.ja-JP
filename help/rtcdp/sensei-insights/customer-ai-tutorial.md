@@ -5,7 +5,7 @@ description: このチュートリアルでは、顧客 AI（アルファ）の�
 seo-description: このチュートリアルでは、顧客 AI（アルファ）の使用方法を説明します。
 index: false
 translation-type: ht
-source-git-commit: fde2bb7af91dbcb0c701397c878b63044cb27a4d
+source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
 
 ---
 
@@ -27,8 +27,8 @@ Adobe Experience Platform の顧客 AI は、Adobe Sensei によって構築さ�
 このガイドでは、顧客 AI の使用に関連する様々なプラットフォームサービスについて、実際に理解している必要があります。このチュートリアルを始める前に、次のドキュメントを確認してください。
 
 * [リアルタイム顧客プロファイルの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)
-* [セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)
-* [セグメントビルダーユーザーガイド](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segment-builder-guide.md)
+* [セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)
+* [セグメントビルダーユーザーガイド](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md)
 
 ## インスタンスの設定
 
@@ -94,7 +94,7 @@ Experience Platform の顧客 AI は、簡単に使用できる Adobe Sensei サ
 
 ## 予測スコアを使用した顧客セグメントの作成
 
-予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づく顧客セグメントを作成できます。ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。セグメントの作成に関するより詳細なチュートリアルについては、『[セグメントビルダーユーザーガイド](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segment-builder-guide.md)』を参照してください。
+予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づく顧客セグメントを作成できます。ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。セグメントの作成に関するより詳細なチュートリアルについては、『[セグメントビルダーユーザーガイド](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md)』を参照してください。
 
 プラットフォーム UI で、左側のナビゲーションの「**セグメント**」をクリックし、「**セグメント作成**」をクリックします。
 
