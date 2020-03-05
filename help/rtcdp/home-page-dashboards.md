@@ -4,7 +4,7 @@ seo-title: リアルタイム顧客データプラットフォームのホーム
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 translation-type: ht
-source-git-commit: 6dde6c90fe9073c50c0a9d3dd43ef045730d1e13
+source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
 
 ---
 
@@ -58,7 +58,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 **[!UICONTROL セグメント]**：組織に対して作成されたセグメントの合計数が表示されます。この数は、新しいセグメントが作成されると更新されます。
 
-セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)」を参照してください。
+セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)」を参照してください。
 
 ### 宛先
 
@@ -122,7 +122,7 @@ The number of failed profile records is updated hourly. -->
 
 セグメントをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてその他のセグメントに関する情報を表示します。
 
-セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)」を参照してください。
+セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)」を参照してください。
 
 ### 最近の宛先
 
