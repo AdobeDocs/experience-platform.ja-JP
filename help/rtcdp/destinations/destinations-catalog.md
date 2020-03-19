@@ -3,8 +3,8 @@ title: 宛先カタログ
 seo-title: 宛先カタログ
 description: 宛先カタログは、データを受け取る準備ができた、使用可能な宛先のリストを提供します。これらの宛先には、アドビソリューション、広告プラットフォーム、顧客関係管理（CRM）システム、電子メールマーケティングプラットフォームなどが含まれます。
 seo-description: 宛先カタログは、データを受け取る準備ができた、使用可能な宛先のリストを提供します。これらの宛先には、アドビソリューション、広告プラットフォーム、顧客関係管理（CRM）システム、電子メールマーケティングプラットフォームなどが含まれます。
-translation-type: ht
-source-git-commit: f76c5326d4b658b76d8df3d285f185706b66a826
+translation-type: tm+mt
+source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ---
 
@@ -19,4 +19,5 @@ source-git-commit: f76c5326d4b658b76d8df3d285f185706b66a826
 
 * [アドビソリューション](/help/rtcdp/destinations/adobe-destinations.md)
 * [広告の宛先](/help/rtcdp/destinations/advertising-destinations.md)
+* [クラウドのストレージの宛先](/help/rtcdp/destinations/cloud-storage-destinations.md)
 * [電子メールマーケティング](/help/rtcdp/destinations/email-marketing-destinations.md)
