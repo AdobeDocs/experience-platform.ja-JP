@@ -3,8 +3,8 @@ title: 宛先へのプロファイルとセグメントのアクティブ化
 seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
-translation-type: ht
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+translation-type: tm+mt
+source-git-commit: 73925aa59f9981d8945fb0be6c4924e1831cf902
 
 ---
 
@@ -43,9 +43,9 @@ Real-time CDP の既存のアクティベーションフローを編集するに
 
 ## セグメントのアクティベーションが成功したことを確認します。 {#verify-activation}
 
-### 電子メールマーケティングの宛先
+### 電子メールマーケティングの宛先 クラウドストレージの宛先
 
-電子メールマーケティングの宛先の場合、Adobe Real-time CDP はストレージの指定した場所に、タブ区切りの `.txt` または `.csv` ファイルを作成します。新しいファイルはストレージの場所に毎日作成されます。ファイル形式は、`<destination name>id<destination id><timestamp-yyyymmddhhmmss>` です。
+For email marketing destinations and cloud storage destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. 新しいファイルはストレージの場所に毎日作成されます。ファイル形式は、`<destination name>id<destination id><timestamp-yyyymmddhhmmss>` です。
 
 3 日連続で受け取るファイルは次のようになります。
 
