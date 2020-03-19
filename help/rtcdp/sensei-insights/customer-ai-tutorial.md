@@ -4,7 +4,7 @@ seo-title: 顧客 AI（アルファ）を使用した顧客傾向スコアの予
 description: このチュートリアルでは、顧客 AI（アルファ）の使用方法を説明します。
 seo-description: このチュートリアルでは、顧客 AI（アルファ）の使用方法を説明します。
 index: false
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
 
 ---
