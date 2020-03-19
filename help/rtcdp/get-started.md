@@ -3,8 +3,8 @@ title: アドビのリアルタイム顧客データプラットフォーム - �
 seo-title: アドビのリアルタイム顧客データプラットフォーム - はじめに
 description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
 seo-description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
-translation-type: ht
-source-git-commit: bf4ef1e8ceb38fe20365859bb28772263917030c
+translation-type: tm+mt
+source-git-commit: eb26b9fbe2f4b63ea411ca61735f6e1b5308777c
 
 ---
 
@@ -171,6 +171,14 @@ Luma のチームは、顧客の行動とデータをすべて 1 か所にまと
 
 これで完了です。Microsoft CRM をデータソースとして Experience Platform に追加しました。
 
+### 取り込んだデータの使用ポリシーへのラベル付け
+
+Lumaには、収集された特定の種類の情報の使用を制限する内部ポリシーが多数あり、また、データの使用に関する法的およびプライバシーに関する問題にも準拠する必要があります。 Adobe Experience Platform Data Governanceを使用すると、事前定義されたデータ使用ラベルをデータセット（およびこれらのデータセット内の特定のフィールド）に適用でき、Lumaは特定の使用制限に従ってデータを分類できます。
+
+![](assets/governance-labels.png)
+
+データ使用ラベルが適用されると、Lumaはデータガバナンスを使用してデータ使用ポリシーを作成できます。 データ使用ポリシーは、特定のラベルを含むデータに対して実行できるアクションの種類を記述するルールです。 ポリシー違反を構成するリアルタイムCDPでアクションを実行しようとすると、アクションが防止され、どのポリシーに違反したかとその理由を示すアラートが表示されます。
+
 ## 特定の顧客データの統合
 
 このシナリオでは、Sarah Rose のプロファイルを検索します。プロファイルが表示され、ログインに使用した電子メールが送信されます。
@@ -184,7 +192,7 @@ Luma が所有する Sarah に関するプロファイル情報がすべて表�
 | ID | Sarah の異なるチャネルおよびデバイスでの Luma とのやりとりから、プラットフォームで相互にリンクされた ID を表示します。Web サイトから Sarah の ECID が表示されます。また、モバイルアプリケーションの ECID、電子メール Id、最近追加された Microsoft Dynamics データセットの CRM ID、Luma ロイヤリティーシステムから Adobe Experience Platform に渡されるロイヤリティー ID も含まれます。 |
 | イベント | Sarah の Luma ブランドとのインタラクションデータをすべて表示します。これには、Sarah が先ほど閲覧した品目、過去に閲覧したもの、受信した電子メール、コールセンターとのやりとり、またそれぞれのインタラクションが発生したチャネルとデバイスが含まれます。 |
 
-Real-time CDP プロファイルは、Luma マーケティングチームのワークフローを数週間から数分に短縮し、この 360 度の顧客ビューに基づいてパーソナライズ機能の可能性をアンロックします。このプロファイルは、サインイン前にサイトを閲覧した際の行動データと、既存の顧客プロファイルを結合し、Sarah の包括的なビューを作成します。
+Real-time CDPプロファイルは、Lumaマーケティングチームのワークフローを数週間から数分に短縮し、この360度の顧客ビューに基づいてパーソナライゼーションの可能性をロック解除します。 このプロファイルは、サインイン前にサイトを閲覧した際の行動データと、既存の顧客プロファイルを結合し、Sarah の包括的なビューを作成します。
 
 マーケティングチームは、この強化されたリアルタイム顧客プロファイルを使用して、Sarah の体験をよりよくパーソナライズし、Luma ブランドへの忠誠度を高めることができます。
 
@@ -228,20 +236,7 @@ Sarah が買い物かごにギフトと思われる品物を追加したまま�
 Adobe Real-time CDP では、Luma はオーディエンスセグメントにシームレスに対応して、パーソナライズできます。\
 以下に、Luma がこの宛先を送信する際に使用できるすべての宛先（アドビソリューションとアドビ以外のソリューションの両方）を示します。
 
-<!-- ![image](assets/luma-dest.png) -->
-
-<!-- ### Privacy
-
-Adobe Experience Platform includes privacy and security controls to ensure a segment is available to be activated to a particular destination based on its profile policy. If your activity violates policy, a warning appears. 
-
-![image](assets/luma-dule.png)
-
-With these controls, Experience Platform helps Luma be compliant with regulations and to market responsibly.  
-
-Luma can confidently address regional and organizational requirements for managing known and unknown customer data with unified governance tools.  
-
-These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams.
--->
+![画像](assets/luma-dest.png)
 
 ### 宛先の選択
 
@@ -265,6 +260,14 @@ These controls are flexible and can be modified to meet the requirements of Luma
 このオーディエンスの顧客が購入すると、その顧客のこのオーディエンスへのメンバーシップはリアルタイムで抑制されます。彼らのステータスが変わり、オーディエンス対象外となります。
 
 これにより、対象外のオーディエンスのために在庫を使い果たさないことで、Luma のメディアチームのディレクターは数十万ドルを節約できます。
+
+### 宛先に対するデータ使用ポリシーの適用
+
+Adobe Experience Platformには、セグメントを特定の宛先に対してアクティブ化できるかどうかを指定する、プライバシーとセキュリティのコントロールが含まれています。 アクティベーションは、作成時に宛先に割り当てられたマーケティングの目的と、組織で定義されたデータ使用ポリシーに基づいて有効または制限されます。
+
+アクティビティがポリシーに違反する場合は、警告が表示されます。 この警告には、ポリシーが違反された理由と、違反の解決方法を特定するのに役立つデータ系列情報が含まれています。
+
+これらの制御機能を使用すると、Lumaは規制やマーケティングに責任を持って対応できます。 これらのコントロールは柔軟性が高く、Lumaのセキュリティおよびガバナンス・チームの要件に合わせて変更できるので、既知のおよび不明な顧客データを管理するための地域および組織の要件に自信を持って対応できます。
 
 ### データフローキャンバス
 
