@@ -3,8 +3,8 @@ title: 宛先の概要
 seo-title: 宛先の概要
 description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前に構築された統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
 seo-description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前に構築された統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
-translation-type: ht
-source-git-commit: fe9f5a94b52e51fe317fc60efa7e140f4ed93cd0
+translation-type: tm+mt
+source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ---
 
@@ -37,7 +37,7 @@ Real-time CDP の主な機能の 1 つは、ファーストパーティーのデ
 
 Adobe Real-time CDP には、プロファイルの書き出し先とセグメントの書き出し先の 2 種類の宛先があります。以下のビデオでは、2 種類の宛先について説明します。
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12&captions=jpn)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ### プロファイルの書き出し先
 
@@ -49,7 +49,7 @@ Adobe Real-time CDP には、プロファイルの書き出し先とセグメン
 
 ### 宛先カテゴリ
 
-[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)内の宛先は、宛先カテゴリ（**広告**&#x200B;または&#x200B;**電子メールマーケティング**）別にグループ化されます 。それぞれについて詳しくは、「[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)」を参照してください。
+The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (**Advertising**, **Cloud storage**, or **Email marketing**). それぞれについて詳しくは、「[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)」を参照してください。
 
 ## 宛先とアクセス制御
 
