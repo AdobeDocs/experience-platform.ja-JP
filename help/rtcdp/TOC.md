@@ -2,8 +2,8 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
-translation-type: ht
-source-git-commit: ddf309a0291e655ab4cbc2953d671591835ed697
+translation-type: tm+mt
+source-git-commit: 974ba457d1782d1ab6a65200255d0b83db7aa667
 
 ---
 
@@ -32,6 +32,14 @@ source-git-commit: ddf309a0291e655ab4cbc2953d671591835ed697
       * 広告の宛先 {#advertiser-destinations}
          * [広告の宛先の概要](destinations/advertising-destinations.md)
          * [Google](destinations/google-destination.md)
+         * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
+         * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+         * [Google Display と Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+      * クラウドのストレージの宛先{#cloud-storage}
+         * [クラウドストレージの宛先の概要](destinations/cloud-storage-destinations.md)
+         * [クラウドストレージの宛先を作成するためのワークフロー](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+         * [Amazon S3の宛先](destinations/amazon-s3-destination.md)
+         * [SFTPの送信先](destinations/sftp-destination.md)
       * 電子メールマーケティングの宛先 {#email-destinations}
          * [電子メールマーケティングの宛先の概要](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
