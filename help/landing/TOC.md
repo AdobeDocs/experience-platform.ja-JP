@@ -2,8 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Help
-translation-type: ht
-source-git-commit: 3ecc87da369ac54a848fe7c3bfd325a0c90378dc
+translation-type: tm+mt
+source-git-commit: d4ce988304532bb0381fa58c67b4fea26e9ef21f
 
 ---
 
@@ -21,6 +21,7 @@ source-git-commit: 3ecc87da369ac54a848fe7c3bfd325a0c90378dc
 * [リアルタイムの顧客データプロファイルガイド](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
 * Launch {#launch}
-   * [Experience Platform Launch](https://docs.adobe.com/content/help/ja-JP/launch/using/overview.html)
+   * [Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
    * [Experience Platform Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
-   * [Experience Cloud デバッガー](https://docs.adobe.com/content/help/ja-JP/debugger/using/experience-cloud-debugger.html)
+   * [Experience Cloud デバッガー](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
+   * [（ベータ版）エクスペリエンスプラットフォームWeb SDK](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
