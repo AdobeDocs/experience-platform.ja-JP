@@ -3,7 +3,7 @@ title: セグメントビルダーガイド
 seo-title: リアルタイム顧客データプラットフォームでのセグメント化サービスセグメントビルダーの使用
 description: セグメントビルダーの使用方法を説明するガイドです。
 seo-description: リアルタイム顧客データプラットフォームでのセグメント化サービスセグメントビルダーの使用方法を説明するユーザーガイドです。
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 55e615d205e6fc015d8ca8514477fde143d943b5
 
 ---
