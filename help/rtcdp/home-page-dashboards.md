@@ -40,13 +40,13 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### データセット
 
-**[!UICONTROL データセット]**&#x200B;カウンターは、システム内のデータセットの数とプラットフォーム内のデータの量を示します。このカウンターは、データセットの作成時に更新されます。
+The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. このカウンターは、データセットの作成時に更新されます。
 
 データセットについて詳しくは、[Adobe Experience Platform へのデータの取り込み](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)を参照してください。
 
 ### プロファイル
 
-**[!UICONTROL プロファイル数]**&#x200B;は、リアルタイム顧客プロファイル内のプロファイルを持つ人の合計数を示します。プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
+The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the Real-time Customer Profile. プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
 
 このカウントでは、「統合プロファイル」の[結合ポリシー](profile/merge-policies.md)構成で設定された既定の結合ポリシーを使用します。
 
@@ -56,13 +56,13 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### セグメント
 
-**[!UICONTROL セグメント]**：組織に対して作成されたセグメントの合計数が表示されます。この数は、新しいセグメントが作成されると更新されます。
+**[!UICONTROL Segments]** 組織に対して作成されたセグメントの合計数が表示されます。 この数は、新しいセグメントが作成されると更新されます。
 
 セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)」を参照してください。
 
 ### 宛先
 
-**[!UICONTROL 宛先]**&#x200B;は、組織に対して作成された宛先の合計数を表示します。この数は、新しい宛先が作成されると更新されます。
+**[!UICONTROL Destinations]** 組織に対して作成された宛先の合計数が表示されます。 この数は、新しい宛先が作成されると更新されます。
 
 宛先について詳しくは、「[宛先の概要](destinations/destinations-overview.md)」を参照してください。
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### 最近のデータセット
 
-**[!UICONTROL 最近のデータセット]**&#x200B;カードには、組織内で作成された最新の 5 つのデータセットが表示されます。このリストは、新しいデータセットが作成されると更新されます。
+The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. このリストは、新しいデータセットが作成されると更新されます。
 
-データセットをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてデータセットのリストを表示します。ここからは、特定のソースをクリックして詳細を表示できます。
+Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. ここからは、特定のソースをクリックして詳細を表示できます。
 
 データセットについて詳しくは、[Adobe Experience Platform へのデータの取り込み](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)を参照してください。
 
 ### 最近のソース
 
-「**[!UICONTROL 最近のソース]**」指標カードには、組織内で作成された最新の 5 つのソースが表示されます。このリストは、新しいソースが作成されると更新されます。
+The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. このリストは、新しいソースが作成されると更新されます。
 
-ソースをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてソースのリストを表示します。ここからは、特定のソースをクリックして詳細を表示できます。
+Click a source to view the details for that item, or **[!UICONTROL View all]** to see the list of sources. ここからは、特定のソースをクリックして詳細を表示できます。
 
 ソースについて詳しくは、「[ソースの概要](sources/sources-overview.md)」を参照してください。
 
 ### 最近のセグメント
 
-「**[!UICONTROL 最近のセグメント]**」指標カードには、組織内で作成された最新の 5 つのセグメントが表示されます。このリストは、新しいセグメントが作成されると更新されます。
+The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. このリストは、新しいセグメントが作成されると更新されます。
 
-セグメントをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてその他のセグメントに関する情報を表示します。
+Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
 
 セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)」を参照してください。
 
 ### 最近の宛先
 
-「**[!UICONTROL 最近の宛先]**」指標カードには、組織内で作成された最新の 5 つの宛先が表示されます。このリストは、新しい宛先が作成されると更新されます。
+The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. このリストは、新しい宛先が作成されると更新されます。
 
-宛先をクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてその他の宛先に関する情報を表示します。
+Click a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations.
 
 宛先について詳しくは、「[宛先の概要](destinations/destinations-overview.md)」を参照してください。
