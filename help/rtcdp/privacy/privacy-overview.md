@@ -3,7 +3,7 @@ title: リアルタイム顧客データプロファイルでのプライバシ�
 seo-title: リアルタイム顧客データプロファイルでのプライバシー
 description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
 
 ---
