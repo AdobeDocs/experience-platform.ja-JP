@@ -3,7 +3,7 @@ title: 電子メールマーケティングの宛先
 seo-title: 電子メールマーケティングの宛先
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
 
 ---
@@ -21,11 +21,11 @@ source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
 
 ## 手順 1 — 宛先の接続 {#connect-destination}
 
-1. **[!UICONTROL 接続／宛先]**&#x200B;で、接続する電子メールマーケティングの宛先を選択し、「**[!UICONTROL 宛先の接続]**」を選択します。
+1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
    ![宛先に接続](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. 「接続」ウィザードで、ストレージの場所の&#x200B;**[!UICONTROL 接続タイプ]**&#x200B;を選択します。**Amazon S3**、**SFTP（パスワード）**、**SFTP（SSH キー）**&#x200B;の中から選択できます。接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
+2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. **Amazon S3**、**SFTP（パスワード）**、**SFTP（SSH キー）**&#x200B;の中から選択できます。Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 **S3 接続**&#x200B;の場合、アクセスキー ID とシークレットアクセスキーを指定する必要があります。
 
