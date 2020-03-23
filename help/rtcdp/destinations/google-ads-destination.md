@@ -48,7 +48,7 @@ Adobe Real-time CDPでGoogle広告の宛先を作成する前に、Googleに連�
 
 ## 宛先を作成
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
+1. で、「Google **[!UICONTROL Connections > Destinations]**&#x200B;広告」を選択し、を選択しま **[!UICONTROL Create destination]**す。
    ![Google広告のリンク先への接続](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. 宛先の作成ウィザードで、宛先の基本情報を入力します。
