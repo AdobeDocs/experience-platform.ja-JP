@@ -3,7 +3,7 @@ title: ドキュメントタイトル
 seo-title: Adobe Experience Platform のドキュメントタイトル
 description: 説明
 seo-description: SEO 説明
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: cd7c10fa789cf749296144b36e805da2ed76be8b
 
 ---
@@ -25,4 +25,4 @@ source-git-commit: cd7c10fa789cf749296144b36e805da2ed76be8b
 
 > [!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-何かをおこなうには、編集／[!UICONTROL 処理ルール]を選択します。  [!DNL Microsoft Visual Code].を使用します。
+編集/を選択し [!UICONTROL Processing Rules] て、操作を行います。 [!DNL Microsoft Visual Code].を使用します。
