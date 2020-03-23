@@ -3,7 +3,7 @@ title: 宛先ワークスペース
 seo-title: 宛先ワークスペース
 description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 seo-description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ---
@@ -19,7 +19,7 @@ source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ## カタログ {#catalog}
 
-「**[!UICONTROL カタログ]**」タブには、アドビが提供するすべての宛先のリストが表示されます。このリストには、データを送信できます。カタログ内の宛先を選択して、右側のレールを開きます。ここでは、宛先への接続を設定する（**宛先の接続**）か、ドキュメントを参照して各宛先に関する詳細情報を確認（**ドキュメントを表示**）できます。
+The **[!UICONTROL Catalog]** tab displays a list of all destinations offered by Adobe, that you can send data to. カタログ内の宛先を選択して、右側のレールを開きます。ここでは、宛先への接続を設定する（**宛先の接続**）か、ドキュメントを参照して各宛先に関する詳細情報を確認（**ドキュメントを表示**）できます。
 
 ![宛先カタログオプション](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
@@ -27,7 +27,7 @@ source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ## 参照 {#browse}
 
-「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。切り替えを有効にした宛先はアクティブに設定し、逆も同様に設定します。また、**セグメント／参照**&#x200B;を選択し、検査するセグメントを選択すると、データのフロー先を表示することもできます。「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. 切り替えを有効にした宛先はアクティブに設定し、逆も同様に設定します。また、**セグメント／参照**&#x200B;を選択し、検査するセグメントを選択すると、データのフロー先を表示することもできます。「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
 
 ![「参照」タブ](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -45,11 +45,11 @@ source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ![宛先行をクリック](/help/rtcdp/destinations/assets/click-destination-row.png)
 
-宛先名を選択して、この宛先に対してアクティブ化されたセグメントに関する情報を表示します。「**[!UICONTROL アクティベーションの編集]**」をクリックして、この宛先に送信されるセグメントを変更または追加します。
+宛先名を選択して、この宛先に対してアクティブ化されたセグメントに関する情報を表示します。Click **[!UICONTROL Edit activation]** to modify or add to the segments that are being sent to this destination.
 
 ## アカウント {#accounts}
 
-「**[!UICONTROL アカウント]**」タブでは、様々な宛先との接続を確立した場合の詳細を確認できます。各宛先について取得できるすべての情報については、次の表を参照してください。
+In the **[!UICONTROL Accounts]** tab, you can learn more about the connections that you have established with various destinations. 各宛先について取得できるすべての情報については、次の表を参照してください。
 
 ![「アカウント」タブ](/help/rtcdp/destinations/assets/accounts-tab.png)
 
@@ -62,10 +62,10 @@ source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ## データフロー {#data-flows}
 
-「**[!UICONTROL データフロー]**」タブには、リアルタイム顧客データプラットフォームで設定したアクティベーションフローの図が表示されます。
+The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
-ページに表示される任意の宛先を選択し、「**[!UICONTROL フローを表示]**」を押して、各宛先に設定したすべてのデータフローに関する情報を表示します。
+Select any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see information on all the data flows you have set up for each destination.
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
