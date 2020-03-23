@@ -3,7 +3,7 @@ title: ID と ID 名前空間
 seo-title: Adobe Experience Platform ID サービス
 description: 説明
 seo-description: SEO 説明
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
 
 ---
