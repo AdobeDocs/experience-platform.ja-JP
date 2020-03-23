@@ -39,7 +39,7 @@ source-git-commit: 73925aa59f9981d8945fb0be6c4924e1831cf902
 Real-time CDP の既存のアクティベーションフローを編集するには、次の手順に従います。
 
 1. 左側のナビゲーションバーで「**宛先**」を選択し、「**参照**」タブをクリックして、宛先名をクリックします。
-2. 右側のレールで「**[!UICONTROL アクティベーションの編集]**」を選択し、宛先に送信するセグメントを変更します。
+2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
 
 ## セグメントのアクティベーションが成功したことを確認します。 {#verify-activation}
 
@@ -66,6 +66,6 @@ Salesforce_id3544_20191122124530.csv
 既存のアクティベーションフローを無効化するには、次の手順に従います。
 
 1. 左側のナビゲーションバーで「**宛先**」を選択し、「**参照**」タブをクリックして、宛先名をクリックします。
-2. 右側のレールの「**[!UICONTROL 有効]**」コントロールをクリックして、アクティベーションフローの状態を変更します。
+2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
 3. 「**データフロー状態の更新**」ウィンドウで、「**確認**」を選択してアクティベーションフローを無効にします。
 
