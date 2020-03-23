@@ -4,7 +4,7 @@ seo-title: Google Ad Managerの表示先
 description: 'Google Ad Manager（以前はDoubleClick for PublishersまたはDoubleClick AdXと呼ばれていました）は、Googleの広告提供プラットフォームで、発行者はビデオやモバイルアプリを通じてWebサイト上の広告の表示を管理する手段を提供します。 '
 seo-description: 'Google Ad Manager（以前はDoubleClick for PublishersまたはDoubleClick AdXと呼ばれていました）は、Googleの広告提供プラットフォームで、発行者はビデオやモバイルアプリを通じてWebサイト上の広告の表示を管理する手段を提供します。 '
 translation-type: tm+mt
-source-git-commit: d42e4d60d273b08824e177f9aca0f208578ff099
+source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
 
 ---
 
@@ -46,10 +46,10 @@ Adobe Real-time CDPでGoogle Ad Managerの宛先を作成する前に、Google�
 ## 宛先を作成
 
 1. In **[!UICONTROL Connections > Destinations]**, select Google Ad Manager, and select **[!UICONTROL Create destination]**.
-   ![Google Ad Managerの宛先への接続](/help/rtcdp/destinations/assets/google-ad-manager-destination.png)
+   ![Google Ad Managerの宛先への接続](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. 宛先の作成ウィザードで、宛先の基本情報を入力します。
-   ![Google Ad Managerの基本情報](/help/rtcdp/destinations/assets/google-ad-manager-basic-information.png)
+   ![Google Ad Managerの基本情報](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **名前**:この宛先の名前を入力します。
 * **説明**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **アカウントの種類**：Google のアカウントに応じて、次のオプションを選択します。
