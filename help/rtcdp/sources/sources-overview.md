@@ -3,7 +3,7 @@ title: ソースの概要
 seo-title: Adobe Experience Platform のソース
 description: このドキュメントでは、リアルタイム顧客データプラットフォームのソースの概要を説明します。
 seo-description: このドキュメントでは、リアルタイム顧客データプラットフォームのソースの概要を説明します。
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: c0d5cf2e8345ad5ee84669fef508435e51700c23
 
 ---
