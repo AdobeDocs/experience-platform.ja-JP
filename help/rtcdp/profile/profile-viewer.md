@@ -3,7 +3,7 @@ title: プロファイルビューアー
 seo-title: リアルタイムの顧客データプラットフォームでのリアルタイム顧客プロファイルデータの表示
 description: リアルタイムの顧客データプラットフォームでのリアルタイム顧客プロファイルデータの表示
 seo-description: リアルタイムの顧客データプラットフォームでのリアルタイム顧客プロファイルデータの表示
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: f23a025336875adec1f4182fee451741833a1b63
 
 ---
