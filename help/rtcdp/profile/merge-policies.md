@@ -3,7 +3,7 @@ title: 結合ポリシー
 seo-title: リアルタイムの顧客データプラットフォームでの結合ポリシーの使用
 description: リアルタイムの顧客データプラットフォームでの結合ポリシーの使用
 seo-description: リアルタイムの顧客データプラットフォームでの結合ポリシーの使用
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: f23a025336875adec1f4182fee451741833a1b63
 
 ---
