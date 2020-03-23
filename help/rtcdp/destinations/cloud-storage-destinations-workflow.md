@@ -15,11 +15,11 @@ source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
 
 このページでは、Adobe Real-time Customer Data Platformでクラウドストレージの場所に接続する方法を説明します。
 
-1. 接続/ **[!UICONTROL 宛先で]**、目的のクラウドストレージの宛先を選択し、「宛先に接続」を **[!UICONTROL 選択します]**。
+1. で、目 **[!UICONTROL Connections > Destinations]**&#x200B;的のクラウドストレージの保存先を選択し、を選択しま **[!UICONTROL Connect destination]**&#x200B;す。
 
    ![クラウドストレージの接続先](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. クラウド **ストレージ** の宛先への接続を設定済みの場合は、認証手順で「既存のアカウント」を選択 **[!UICONTROL し、既存の接続を選択します]** 。 または、「新規アカウント」 **[!UICONTROL を選択して]** 、クラウドストレージの宛先への新しい接続を設定できます。 アカウント認証資格情報を入力し、「宛先に接続」 **[!UICONTROL を選択します]**。
+2. クラウド **ストレージ** の宛先への接続を設定済みの場合は、認証手順で、既存の接続を選択 **[!UICONTROL Existing Account]** して選択します。 または、クラウドストレージ **[!UICONTROL New Account]** の宛先への新しい接続を設定するように選択できます。 アカウント認証資格情報を入力し、を選択しま **[!UICONTROL Connect to destination]**&#x200B;す。
 
    >[!NOTE]
    >
@@ -27,12 +27,12 @@ source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
 
    ![クラウドストレージの接続先 — 認証手順](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-3. 設定手順 **[!UICONTROL で]** 、アクティベ **[!UICONTROL ートフ]** ローの名前と **** 説明を入力します。
-   1. Amazon S3の宛先の場合は、ファイルの配 **[!UICONTROL 信先に]** Bucket名と **[!UICONTROL Folderパスをクラウドストレージ]** の宛先に挿入します。 上記のフ **[!UICONTROL ィールドに入力し]** 、「宛先を作成」を選択します。
-   2. SFTPの宛先に対して、フォルダーパスを **[!UICONTROL 挿入します]**
+3. 手順で、ア **[!UICONTROL Setup]** クティブ化フ **[!UICONTROL Name]** ローのaと **[!UICONTROL Description]** aを入力します。
+   1. Amazon S3の宛先の場合は、ファイルが配 **[!UICONTROL Bucket name]** 信されるク **[!UICONTROL Folder path]** ラウドストレージの宛先に、とを挿入します。 上記のフ **[!UICONTROL Create Destination]** ィールドに入力した後に選択します。
+   2. SFTPの送信先に対して、 **[!UICONTROL Folder path]**
    ![クラウドストレージの接続先 — 認証手順](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-4. これで宛先が作成されます。 後でセグメントをア **[!UICONTROL クティブにする場合は]** 、「保存して終了」を選択できます。または、「次へ **** 」を選択してワークフローを続行し、アクティブにするセグメントを選択することもできます。 どちらの場合も、残りのデータをエクスポートするワークフ [ローについては](#activate-segments)、次の「セグメントをアクティブ化」の節を参照してください。
+4. これで宛先が作成されます。 後でセグメントをア **[!UICONTROL Save & Exit]** クティブにするか、ワークフローを続行してアクティブにするセグ **[!UICONTROL Next]** メントを選択するかを選択できます。 どちらの場合も、残りのデータをエクスポートするワークフ [ローについては](#activate-segments)、次の「セグメントをアクティブ化」の節を参照してください。
 
 ## セグメントのアクティブ化 {#activate-segments}
 
