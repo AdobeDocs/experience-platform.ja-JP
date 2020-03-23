@@ -43,7 +43,7 @@ Adobe Real-time CDPでGoogle Display &amp; Video 360の宛先を作成する前�
 
 ## 宛先を作成
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Display &amp; Video 360, and select **[!UICONTROL Create destination]**.
+1. で、「 **[!UICONTROL Connections > Destinations]** Google Display &amp; Video 360」を選択し、を選択しま **[!UICONTROL Create destination]**す。
    ![Googleディスプレイとビデオ360の接続](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. 宛先の作成ウィザードで、宛先の基本情報を入力します。
