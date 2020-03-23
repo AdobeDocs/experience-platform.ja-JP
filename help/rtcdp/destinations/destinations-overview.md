@@ -15,11 +15,11 @@ source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ## 宛先とソース
 
-Real-time CDP の主な機能の 1 つは、ファーストパーティーのデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。**[!UICONTROL ソース]**&#x200B;を使用し、Real-time CDP と&#x200B;**[!UICONTROL 宛先]**&#x200B;にデータを取り込んで 、Real-time CDP からデータを書き出します。
+Real-time CDP の主な機能の 1 つは、ファーストパーティーのデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。Use **[!UICONTROL Sources]** to ingest data into Real-time CDP and **[!UICONTROL Destinations]** to export data from Real-time CDP.
 
 ## 宛先の手順
 
-* **[!UICONTROL 宛先]**&#x200B;を使用して、プロファイルやセグメントを[アクティブ化](/help/rtcdp/destinations/activate-destinations.md)し、マーケティング自動化プラットフォームやデジタル広告プラットフォームに送信します。
+* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Real-time CDP で使用可能なすべての宛先の[セルフサービスカタログ](/help/rtcdp/destinations/destinations-catalog.md)から選択します。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
@@ -53,6 +53,6 @@ The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinat
 
 ## 宛先とアクセス制御
 
-Real-time CDP の&#x200B;**[!UICONTROL 宛先]**&#x200B;機能は、Adobe Experience Platform のアクセス制御権限と連携します。ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、「[Adobe Experience Platform でのアクセス制御](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md)」を参照して 、ページの下部まで下にスクロールします。
+The **[!UICONTROL Destinations]** functionality in Real-time CDP works with Adobe Experience Platform access control permissions. ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、「[Adobe Experience Platform でのアクセス制御](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md)」を参照して 、ページの下部まで下にスクロールします。
 
 アクセス制御の詳細については、『[アクセス制御ユーザーガイド](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)』を参照してください。
