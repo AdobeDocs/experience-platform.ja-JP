@@ -3,7 +3,7 @@ title: Oracle Eloqua の宛先
 seo-title: Oracle Eloqua の宛先
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 seo-description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ---
@@ -19,11 +19,11 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ## 宛先に接続 {#connect-destination}
 
-1. **[!UICONTROL 接続／宛先]**&#x200B;で、「Oracle Eloqua」を選択し、「**[!UICONTROL 宛先の接続]**」を選択します。
+1. で、「 **[!UICONTROL Connections > Destinations]** Oracle Eloqua」を選択し、「」を選択しま **[!UICONTROL Connect destination]**&#x200B;す。
 
    ![Eloqua に接続](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. 「宛先の接続」ウィザードで、ストレージの場所の&#x200B;**[!UICONTROL 接続タイプ]**&#x200B;を選択します。Oracle Eloqua の場合は、「**SFTP（パスワード）**」と「**SFTP（SSH キー）」**&#x200B;のどちらかを選択できます。接続タイプに応じて、以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Oracle Eloqua の場合は、「**SFTP（パスワード）**」と「**SFTP（SSH キー）」**&#x200B;のどちらかを選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
 
    ![Eloqua ウィザードの設定](/help/rtcdp/destinations/assets/eloqua-wizard.png)
 
