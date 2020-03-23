@@ -3,7 +3,7 @@ title: Salesforce Marketing Cloud
 seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
 seo-description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ---
@@ -19,11 +19,11 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ## 宛先の接続 {#connect-destination}
 
-1. **[!UICONTROL 接続／宛先]**&#x200B;で、「Salesforce Marketing Cloud」を選択し、「**[!UICONTROL 宛先の接続]**」を選択します。
+1. で、「Salesforce **[!UICONTROL Connections > Destinations]** Marketing Cloud」を選択し、「」を選択しま **[!UICONTROL Connect destination]**&#x200B;す。
 
    ![Salesforce への接続](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. 「宛先の接続」ウィザードで、ストレージの場所の&#x200B;**[!UICONTROL 接続タイプ]**&#x200B;を選択します。Salesforce Marketing Cloud の場合は、「**SFTP（パスワード）**」と「**SFTP（SSH キー）**」を選択できます。接続タイプに応じて、以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Salesforce Marketing Cloud の場合は、「**SFTP（パスワード）**」と「**SFTP（SSH キー）**」を選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
 
    ![Salesforce ウィザードの設定](/help/rtcdp/destinations/assets/salesforce-step1.png)
 
@@ -47,4 +47,4 @@ Salesforce Marketing Cloud の宛先に対して[セグメントをアクティ�
 
 ## Salesforce Marketing Cloud へのデータインポートの設定 {#import-data-into-salesforce}
 
-Real-time CDP を Amazon S3 または SFTP ストレージに接続した後、ストレージの場所から Salesforce Marketing Cloud へのデータインポートを設定する必要があります。これを達成する方法については、Salesforce ヘルプセンターの「[ファイルから Marketing Cloud に購読者をインポートする方法](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5)」を参照してください。
+Real-time CDP を Amazon S3 または SFTP ストレージに接続した後、ストレージの場所から Salesforce Marketing Cloud へのデータインポートを設定する必要があります。これを達成する方法については、Salesforce ヘルプセンターの「[ファイルから Marketing Cloud に購読者をインポートする方法](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5)」を参照してください。
