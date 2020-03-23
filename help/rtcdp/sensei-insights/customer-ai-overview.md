@@ -4,7 +4,7 @@ seo-title: 顧客 AI（アルファ）の概要
 description: このドキュメントでは、Sensei Insights - 顧客 AI（アルファ）の概要を説明します。
 seo-description: このドキュメントでは、Sensei Insights - 顧客 AI（アルファ）の概要を説明します。
 index: false
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: fde2bb7af91dbcb0c701397c878b63044cb27a4d
 
 ---
