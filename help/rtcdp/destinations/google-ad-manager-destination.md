@@ -45,7 +45,7 @@ Adobe Real-time CDPでGoogle Ad Managerの宛先を作成する前に、Google�
 
 ## 宛先を作成
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ad Manager, and select **[!UICONTROL Create destination]**.
+1. で、「 **[!UICONTROL Connections > Destinations]** Google Ad Manager」を選択し、を選択しま **[!UICONTROL Create destination]**す。
    ![Google Ad Managerの宛先への接続](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. 宛先の作成ウィザードで、宛先の基本情報を入力します。
