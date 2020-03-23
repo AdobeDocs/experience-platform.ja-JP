@@ -3,7 +3,7 @@ title: アドビの宛先
 seo-title: アドビの宛先
 description: アドビの宛先
 seo-description: アドビの宛先
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 520040dd7ac1e3fd3af4009eb5f112cb39e33850
 
 ---
