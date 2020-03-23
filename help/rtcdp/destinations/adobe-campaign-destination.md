@@ -3,7 +3,7 @@ title: Adobe Campaign
 seo-title: Adobe Campaign
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 seo-description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ---
@@ -13,17 +13,17 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ## 概要
 
-Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。詳しくは、「[Adobe Campaign Classic について](https://docs.adobe.com/content/help/ja-JP/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html)」を参照してください。
+Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。詳しくは、「[Adobe Campaign Classic について](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html)」を参照してください。
 
 セグメントデータを Adobe Campaign に送信するには、まずアドビのリアルタイム顧客データプラットフォームで[宛先に接続](#connect-destination)して、ストレージの場所から Adobe Campaign に[データインポートを設定](#import-data-into-campaign)する必要があります。
 
 ## 宛先の接続 {#connect-destination}
 
-1. **[!UICONTROL 接続／宛先]**&#x200B;で、「Adobe Campaign」を選択し、「**[!UICONTROL 宛先の接続]**」を選択します。
+1. で、「Adobe **[!UICONTROL Connections > Destinations]** Campaign」を選択し、を選択しま **[!UICONTROL Connect destination]**&#x200B;す。
 
    ![Adobe Campaign への接続](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. 「宛先の接続」ウィザードで、ストレージの場所の&#x200B;**[!UICONTROL 接続タイプ]**&#x200B;を選択します。Adobe Campaign の場合は、**Amazon S3**、**SFTP（パスワード）**、**SFTP（SSH キー）**&#x200B;のいずれかを選択できます。接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Adobe Campaign の場合は、**Amazon S3**、**SFTP（パスワード）**、**SFTP（SSH キー）**&#x200B;のいずれかを選択できます。Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
    ![Campaign ウィザードの設定](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
