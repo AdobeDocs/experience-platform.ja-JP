@@ -4,7 +4,7 @@ seo-title: Oracle Eloqua の宛先
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 seo-description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
 
 ---
 
@@ -23,23 +23,21 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
    ![Eloqua に接続](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Oracle Eloqua の場合は、「**SFTP（パスワード）**」と「**SFTP（SSH キー）」**&#x200B;のどちらかを選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
-
-   ![Eloqua ウィザードの設定](/help/rtcdp/destinations/assets/eloqua-wizard.png)
+2. クラウド **ストレージ** の宛先への接続を設定済みの場合は、認証手順で、既存の接続を選択 **[!UICONTROL Existing Account]** して選択します。 または、新しい接続を設 **[!UICONTROL New Account]** 定するように選択できます。 アカウント認証資格情報を入力し、を選択しま **[!UICONTROL Connect to destination]**&#x200B;す。 Oracle Eloqua の場合は、「**SFTP（パスワード）**」と「**SFTP（SSH キー）」**&#x200B;のどちらかを選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
    **SFTP（パスワード）** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
 **SFTP（SSH キー）** で接続する場合は、ドメイン、ポート、ユーザー名、SSH キーを指定する必要があります。
 
-   ![Eloqua 情報の入力](/help/rtcdp/destinations/assets/eloqua-step2.png)
+   ![Eloqua ウィザードの設定](/help/rtcdp/destinations/assets/eloqua-authentication.png)
 
-1. 「**基本情報**」で、目的の宛先に関する情報を次のように入力します。
+3. In the **Setup** step, fill in the relevant information for your destination as shown below:
    * **名前**：宛先の名前を選択します。
    * **説明**：宛先の説明を入力します。
    * **フォルダーパス**：Real-time CDP が書き出しデータを CSV またはタブ区切りファイルとして格納するストレージの場所へのパスを指定します。
    * **ファイル形式**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
    ![Eloqua の基本情報](/help/rtcdp/destinations/assets/eloqua-basic-information.png)
 
-1. 「**基本情報**」フィールドに入力した後、「**作成**」をクリックします。これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
+4. 上記のフ **ィールドに入力し** 、「宛先を作成」をクリックします。 Your destination is now created and you can [activate segments](/help/rtcdp/destinations/activate-destinations.md) to the destination.
 
 ## 宛先属性
 
