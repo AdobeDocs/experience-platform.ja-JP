@@ -4,7 +4,7 @@ seo-title: クラウドストレージの宛先のワークフロー
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
+source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
 
 ---
 
@@ -32,9 +32,7 @@ Amazon S3の宛先の場合は、ファイルが配 **[!UICONTROL Bucket name]**
 
    ![Amazon S3クラウドのストレージ宛先への接続 — 認証手順](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-
-
-   <br>SFTPの送信先に対して、 **[!UICONTROL Folder path]**
+   SFTPの送信先に対して、ファイル **[!UICONTROL Folder path]** の配信先を挿入します。
 
    ![SFTPクラウドのストレージの宛先への接続 — 認証手順](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
