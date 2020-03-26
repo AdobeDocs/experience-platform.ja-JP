@@ -1,10 +1,10 @@
 ---
 title: SFTPの送信先
 seo-title: SFTPの送信先
-description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
-seo-description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
+description: SFTPサーバーへのライブアウトバウンド接続を作成し、Experience Platformから定期的に区切られたデータファイルをエクスポートします。
+seo-description: SFTPサーバーへのライブアウトバウンド接続を作成し、Experience Platformから定期的に区切られたデータファイルをエクスポートします。
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
 
 ## 概要
 
-SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
+SFTPサーバーへのライブアウトバウンド接続を作成し、Experience Platformから定期的に区切られたデータファイルをエクスポートします。
 
 データをエクスポートするには、次の手順を実行します。
 
@@ -23,7 +23,6 @@ SFTPを含むク [ラウドストレージの宛 ](/help/rtcdp/destinations/clou
 
 SFTPの宛先については、宛先の作成ワークフローの認証手順で次の情報を入 **力します** 。
 
-* **Host**
-* **ユーザー名**
-* **Password**
-
+* **ホスト**:SFTPストレージの場所のアドレス
+* **Username**:SFTPストレージの場所にログインするためのユーザー名。
+* **パスワード**:SFTPストレージの場所にログインするためのパスワード
