@@ -4,7 +4,7 @@ seo-title: Oracle Eloqua の宛先
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 seo-description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 translation-type: tm+mt
-source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
 
    ![Eloqua に接続](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-2. クラウド **ストレージ** の宛先への接続を設定済みの場合は、認証手順で、既存の接続を選択 **[!UICONTROL Existing Account]** して選択します。 または、新しい接続を設 **[!UICONTROL New Account]** 定するように選択できます。 アカウント認証資格情報を入力し、を選択しま **[!UICONTROL Connect to destination]**&#x200B;す。 Oracle Eloqua の場合は、「**SFTP（パスワード）**」と「**SFTP（SSH キー）」**&#x200B;のどちらかを選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+2. クラウドス **トレージ** の宛先への接続を設定済みの場合は、認証手順で、既存の接続の1 **[!UICONTROL Existing Account]** つを選択します。 または、新しい接続を設 **[!UICONTROL New Account]** 定するように選択できます。 アカウント認証資格情報を入力し、を選択しま **[!UICONTROL Connect to destination]**&#x200B;す。 Oracle Eloqua の場合は、「**SFTP（パスワード）**」と「**SFTP（SSH キー）」**&#x200B;のどちらかを選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
    **SFTP（パスワード）** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
 **SFTP（SSH キー）** で接続する場合は、ドメイン、ポート、ユーザー名、SSH キーを指定する必要があります。
