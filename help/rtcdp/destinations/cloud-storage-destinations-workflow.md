@@ -4,7 +4,7 @@ seo-title: クラウドストレージの宛先のワークフロー
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 7f6151535f30043413a2c111345b7e2c6367fd50
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 7f6151535f30043413a2c111345b7e2c6367fd50
 
    ![クラウドストレージの接続先](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-1. クラウド **ストレージ** の宛先への接続を設定済みの場合は、認証手順で、既存の接続を選択 **[!UICONTROL Existing Account]** して選択します。 または、クラウドストレージ **[!UICONTROL New Account]** の宛先への新しい接続を設定するように選択できます。 アカウント認証資格情報を入力し、を選択しま **[!UICONTROL Connect to destination]**&#x200B;す。 認証手順での [秘密鍵証明書の入力について詳しくは、](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3の宛先 [/](/help/rtcdp/destinations/sftp-destination.md) SFTPの宛先を参照して **** ください。
+2. クラウド **ストレージ** の宛先への接続を設定済みの場合は、認証手順で、既存の接続を選択 **[!UICONTROL Existing Account]** して選択します。 または、クラウドストレージ **[!UICONTROL New Account]** の宛先への新しい接続を設定するように選択できます。 アカウント認証資格情報を入力し、を選択しま **[!UICONTROL Connect to destination]**&#x200B;す。 認証手順での [秘密鍵証明書の入力について詳しくは、](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3の宛先 [/](/help/rtcdp/destinations/sftp-destination.md) SFTPの宛先を参照して **** ください。
 
    >[!NOTE]
    >
@@ -27,7 +27,7 @@ source-git-commit: 7f6151535f30043413a2c111345b7e2c6367fd50
 
    ![クラウドストレージの接続先 — 認証手順](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-1. 手順で、ア **[!UICONTROL Setup]** クティブ化フ **[!UICONTROL Name]** ローのaと **[!UICONTROL Description]** aを入力します。 <br>
+3. 手順で、ア **[!UICONTROL Setup]** クティブ化フ **[!UICONTROL Name]** ローのaと **[!UICONTROL Description]** aを入力します。 <br>
 Amazon S3の宛先の場合は、ファイルが配 **[!UICONTROL Bucket name]** 信されるク **[!UICONTROL Folder path]** ラウドストレージの宛先に、とを挿入します。 上記のフ **[!UICONTROL Create Destination]** ィールドに入力した後に選択します。
 
    ![Amazon S3クラウドのストレージ宛先への接続 — 認証手順](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
@@ -36,7 +36,7 @@ Amazon S3の宛先の場合は、ファイルが配 **[!UICONTROL Bucket name]**
 
    ![SFTPクラウドのストレージの宛先への接続 — 認証手順](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-1. これで宛先が作成されます。 後でセグメントをア **[!UICONTROL Save & Exit]** クティブにするか、ワークフローを続行してアクティブにするセグ **[!UICONTROL Next]** メントを選択するかを選択できます。 どちらの場合も、残りのデータをエクスポートするワークフ [ローについては](#activate-segments)、次の「セグメントをアクティブ化」の節を参照してください。
+4. これで宛先が作成されます。 後でセグメントをア **[!UICONTROL Save & Exit]** クティブにするか、ワークフローを続行してアクティブにするセグ **[!UICONTROL Next]** メントを選択するかを選択できます。 どちらの場合も、残りのデータをエクスポートするワークフ [ローについては](#activate-segments)、次の「セグメントをアクティブ化」の節を参照してください。
 
 ## セグメントのアクティブ化 {#activate-segments}
 
