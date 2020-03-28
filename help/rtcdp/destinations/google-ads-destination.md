@@ -4,7 +4,7 @@ seo-title: Google広告の表示先
 description: Google Ads（旧称Google AdWords）は、企業がテキストベースの検索、グラフィック表示、YouTubeビデオ、アプリ内モバイルディスプレイにわたってクリックあたりの広告をペイパークリックできるオンライン広告サービスです。
 seo-description: Google Ads（旧称Google AdWords）は、企業がテキストベースの検索、グラフィック表示、YouTubeビデオ、アプリ内モバイルディスプレイにわたってクリックあたりの広告をペイパークリックできるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -21,11 +21,11 @@ Google広告の表示先に固有の次の詳細に注意してください。
 
 * 次のIDをGoogle広告の送 [信先](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) に送信できます。 **Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラム的に作成されます。
-* Adobe Real-time CDP には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスのターゲット設定のサイズを理解するには、Googleでオーディエンスのカウントを参照します。
+* Adobe Real-time CDP には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスのターゲット設定のサイズを理解するには、Googleでのオーディエンス数を参照します。
 
 >[!IMPORTANT]
 >
->Google Adsを使用して最初のリンク先を作成し、以前（Audience Managerなどのアプリケーションを使用して）Experience Cloud IDサービスで [](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID同期機能を有効にしていない場合は、アドビのコンサルティングまたはカスタマーケアに連絡して、ID同期を有効にしてください。 以前にAudience ManagerでGoogle統合を設定していた場合、設定したID同期はAdobe Real-time CDPに引き継がれます。
+>Google Adsを使用して最初のリンク先を作成する場合で、以前(オーディエンスマネージャーなどのアプリケーションを使用して)Experience Cloud IDサービスで [](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) ID同期機能を有効にしていない場合は、アドビのコンサルティングまたはカスタマーケアに連絡してID同期を有効にしてください。 以前にオーディエンスマネージャーでGoogle統合を設定していた場合、設定したID同期はAdobe Real-time CDPに引き継がれます。
 
 ## 前提条件
 
@@ -46,17 +46,17 @@ Adobe Real-time CDPでGoogle広告の宛先を作成する前に、Googleに連�
 * アカウントの種類：AdWords ****
 * **Google AdWords ID** :これはGoogleのIDです。 通常、IDの形式は123～456～7890です。
 
-## 宛先を作成
+## 宛先の作成
 
 1. で、「Google **[!UICONTROL Connections > Destinations]**&#x200B;広告」を選択し、を選択しま **[!UICONTROL Create destination]**す。
    ![Google広告のリンク先への接続](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. 宛先の作成ウィザードで、宛先の基本情報を入力します。
+2. 宛先を作成ワークフローで、宛先のを [!UICONTROL Basic Information] 入力します。
    ![Google広告の基本情報](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **名前**:この宛先の名前を入力します。
-* **説明**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
-* **アカウントの種類**:AdWordsは唯一のオプションです。
-* **アカウントID**:アカウントIDにGoogle広告を入力します。 通常、IDの形式は123～456～7890です。
+* **[!UICONTROL Name]**:この宛先の優先名を入力します。
+* **[!UICONTROL Description]**: オプション. 例えば、この宛先を使用しているキャンペーンを指定できます。
+* **[!UICONTROL Account Type]**:AdWordsは唯一のオプションです。
+* **[!UICONTROL Account ID]**:アカウントIDにGoogle広告を入力します。 通常、IDの形式は123～456～7890です。
 
 ## Google広告へのセグメントのアクティブ化
 
