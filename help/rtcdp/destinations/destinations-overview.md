@@ -4,7 +4,7 @@ seo-title: 宛先の概要
 description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前に構築された統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
 seo-description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前に構築された統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -13,16 +13,16 @@ source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ![宛先の概要バナー](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**宛先**&#x200B;は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前に構築された統合です。**宛先**&#x200B;を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+**宛先**&#x200B;は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前に構築された統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に関する既知および不明なデータをアクティブ化できます。
 
 ## 宛先とソース
 
-Real-time CDP の主な機能の 1 つは、ファーストパーティーのデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。Use **[!UICONTROL Sources]** to ingest data into Real-time CDP and **[!UICONTROL Destinations]** to export data from Real-time CDP.
+Real-time CDP の主な機能の 1 つは、ファーストパーティーのデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。ソースを使用して、データをリアルタイムCDPおよび宛先に取り込み、リアルタイムCDPからデータをエクスポートします。
 
 ## 宛先の手順
 
-* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Real-time CDP で使用可能なすべての宛先の[セルフサービスカタログ](/help/rtcdp/destinations/destinations-catalog.md)から選択します。
+* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
 ## コントロール
@@ -55,6 +55,6 @@ The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinat
 
 ## 宛先とアクセス制御
 
-The **[!UICONTROL Destinations]** functionality in Real-time CDP works with Adobe Experience Platform access control permissions. ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、「[Adobe Experience Platform でのアクセス制御](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md)」を参照して 、ページの下部まで下にスクロールします。
+リアルタイムCDPの宛先機能は、Adobe Experience Platformのアクセス制御権限と連携します。 ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、「[Adobe Experience Platform でのアクセス制御](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md)」を参照して 、ページの下部まで下にスクロールします。
 
 アクセス制御の詳細については、『[アクセス制御ユーザーガイド](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md)』を参照してください。
