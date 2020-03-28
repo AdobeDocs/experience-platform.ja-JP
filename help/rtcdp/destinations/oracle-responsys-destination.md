@@ -4,7 +4,7 @@ seo-title: Oracle Responsys の宛先
 description: Responsys は、Oracle が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向け電子メールマーケティングツールで、メール、モバイル、ディスプレイ、ソーシャルでのインタラクションをパーソナライズします。
 seo-description: Responsys は、Oracle が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向け電子メールマーケティングツールで、メール、モバイル、ディスプレイ、ソーシャルでのインタラクションをパーソナライズします。
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -23,21 +23,21 @@ To send segment data to Oracle Responsys, you must first [connect to the destina
 
    ![Responsys に接続](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-2. クラウドス **トレージ** の宛先への接続を設定済みの場合は、認証手順で、既存の接続の1 **[!UICONTROL Existing Account]** つを選択します。 または、新しい接続を設 **[!UICONTROL New Account]** 定するように選択できます。 アカウント認証資格情報を入力し、を選択しま **[!UICONTROL Connect to destination]**&#x200B;す。 Oracle Responsys の場合は、「**SFTP（パスワード）**」と「**SFTP（SSH キー）**」を選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+2. クラウド **[!UICONTROL Authentication]** ストレージの宛先への接続を設定済みの場合は、手順で、既存の接続の1 **[!UICONTROL Existing Account]** つを選択して選択します。 または、新しい接続を設 **[!UICONTROL New Account]** 定するように選択できます。 アカウント認証資格情報を入力し、を選択しま **[!UICONTROL Connect to destination]**&#x200B;す。 Oracle Responsysの場合は、とから選択でき **[!UICONTROL SFTP with Password]** ます **[!UICONTROL SFTP with SSH Key]**。 Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
-   **SFTP（パスワード）** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
-**SFTP（SSH キー）** で接続する場合は、ドメイン、ポート、ユーザー名、SSH キーを指定する必要があります。
+   For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
+接続の **[!UICONTROL SFTP with SSH Key]** 場合は、ドメイン、ポート、ユーザー名、SSHキーを指定する必要があります。
 
    ![Responsys 情報の入力](/help/rtcdp/destinations/assets/responsys-authentication.png)
 
-3. In the **Setup** step, fill in the relevant information for your destination as shown below:
-   * **名前**：宛先の名前を選択します。
-   * **説明**：宛先の説明を入力します。
-   * **フォルダーパス**：Real-time CDP が書き出しデータを CSV またはタブ区切りファイルとして格納するストレージの場所へのパスを指定します。
-   * **ファイル形式**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
+3. In the **[!UICONTROL Setup]** step, fill in the relevant information for your destination as shown below:
+   * **[!UICONTROL Name]**:目的の名前を選択します。
+   * **[!UICONTROL Description]**:宛先の説明を入力します。
+   * **[!UICONTROL Folder Path]**:リアルタイムCDPがエクスポートデータをCSVまたはタブ区切りのファイルとしてデポジットするストレージの場所のパスを指定します。
+   * **[!UICONTROL File Format]**: **CSV** 、 **TAB_DELIMITED**。 ストレージの場所に書き出すファイル形式を選択します。
    ![Responsys 基本情報](/help/rtcdp/destinations/assets/responsys-basic-information.png)
 
-4. 上記のフ **ィールドに入力し** 、「宛先を作成」をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
+4. 上記のフ **[!UICONTROL Create destination]** ィールドに入力した後、をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
 
 ## 宛先属性 {#destination-attributes}
 
