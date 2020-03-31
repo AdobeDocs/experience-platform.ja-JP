@@ -3,25 +3,44 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Help
 translation-type: tm+mt
-source-git-commit: d4ce988304532bb0381fa58c67b4fea26e9ef21f
+source-git-commit: 63005d0fe03444c2c0e12bea3570441bf39ec75b
 
 ---
 
 
 # Adobe Experience Platform {#landing}
 
-* [Experience Platform ホーム](home.md)
+* [エクスペリエンスプラットフォームの概要](home.md)
 * [はじめに](get-started.md)
-* [製品概要](https://www.adobe.io/apis/experienceplatform/home/overview.html)
-* Experience Platform リファレンス {#ref}
-   * [リリースノート](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
-   * [用語集](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
-   * [トラブルシューティングガイド](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html)
-* [Experience Platform サービスドキュメント](https://www.adobe.io/apis/experienceplatform/home/services.html)
-* [リアルタイムの顧客データプロファイルガイド](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
+* Experience Platform ドキュメント {#documentation}
+   * [ドキュメントの概要](documentation/overview.md)
+   * [アクセス制御](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
+   * [Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
+   * [カタログとデータセット](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
+   * [データアクセス](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
+   * [データガバナンス](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
+   * [データ取り込み（バッチおよびストリーミング）](https://docs.adobe.com/content/help/en/experience-platform/ingestion/home.html)
+   * [Data Science Workspace](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
+   * [Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
+   * [判定サービス](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
+   * [宛先](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [ETL（抽出、変換、読み込み）](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
+   * [エクスペリエンスプラットフォームWeb SDK（ベータ版）](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
+   * [ID サービス](https://docs.adobe.com/content/help/en/experience-platform/identity/home.html)
+   * [インテリジェントサービス](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
+   * [Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
+   * [観察性の洞察](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
+   * [プライバシーサービス](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
+   * [プロファイル(リアルタイム顧客プロファイル)](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)
+   * [クエリサービス](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
+   * [リアルタイムの顧客データプラットフォーム](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)
+   * [サンドボックス](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
+   * [セグメント](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
+   * [ソース（コネクタ）](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html)
+   * [XDM（エクスペリエンスデータモデル）](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
+* [エクスペリエンスプラットフォームチュートリアル](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
+* [リリースノート](https://docs.adobe.com/content/help/en/experience-platform/release-notes/latest.html)
+* [用語集](glossary.md)
+* [トラブルシューティングガイド](troubleshooting.md)
+* [APIの基本事項](api-fundamentals.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
-* Launch {#launch}
-   * [Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)
-   * [Experience Platform Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)
-   * [Experience Cloud デバッガー](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)
-   * [（ベータ版）エクスペリエンスプラットフォームWeb SDK](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
