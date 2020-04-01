@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイムの顧客プロファイルと機械学習の洞察を強化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 34fff508f49327ce314a517d77efabb286ef055c
+source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 
 このチュートリアルでは、プロファイルデータの取り込みとセグメントの作成に関わるAdobe Experience Platformの様々な側面を理解しておく必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-* [リアルタイム顧客プロファイル](../../rtcdp/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムのプロファイルを顧客に提供します。
+* [リアルタイム顧客プロファイル](../../rtcdp/overview.md):複数のソースからの集計データに基づいて、統合されたリアルタイムのプロファイルを顧客に提供します。
 * [IDサービス](../../identity-service/home.md):異なるデータソースのIDをPlatformに取り込むことで、リアルタイムの顧客プロファイルを有効にします。
 * [エクスペリエンスデータモデル(XDM)](../../xdm/home.md):プラットフォームが顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
 
