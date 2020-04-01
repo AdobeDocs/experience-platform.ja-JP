@@ -602,7 +602,7 @@ curl -X POST \
 | `filter.segments.segmentId` | **(を使用する場合は必須`segments`)** 、エクスポートするプロファイルのセグメントID。 |
 | `filter.segments.segmentNs` | *（オプション）* 、指定したのセグメント名前空間 `segmentID`。 |
 | `filter.segments.status` | *（オプション）* 、のステータスフィルターを提供する文字列の配 `segmentID`列。 デフォルトでは、 `status` は、現在の時間にセ `["realized", "existing"]` グメントに含まれるすべてのプロファイルを表す値を持ちます。 次の値を指定できます。 `"realized"`、、 `"existing"`および `"exited"`。 |
-| `filter.segmentQualificationTime` | *（オプション）* 、セグメントの資格時間に基づいてフィルターします。 開始時間および/または終了時間を指定できます。 |
+| `filter.segmentQualificationTime` | *（オプション）* 、セグメントの資格時間に基づいてフィルターします。 開始時間及び/又は終了時間を提供する。 |
 | `filter.segmentQualificationTime.startTime` | *（オプション）* 、特定のステータスのセグメントIDのセグメント資格開始時間。 このオプションは指定されていないので、セグメントIDの開始時間に対するフィルターは適用されません。 タイムスタンプは [RFC 3339形式で提供する必要があります](https://tools.ietf.org/html/rfc3339) 。 |
 | `filter.segmentQualificationTime.endTime` | *（オプション）* 、特定のステータスのセグメントIDのセグメントクオリフィケーション終了時間。 このオプションは指定されていないので、終了時間にセグメントIDの資格に対するフィルターは適用されません。 タイムスタンプは [RFC 3339形式で提供する必要があります](https://tools.ietf.org/html/rfc3339) 。 |
 | `filter.fromIngestTimestamp` | *（オプション）* 、書き出したプロファイルには、このタイムスタンプの後に更新されたアイテムのみが含まれるように制限します。 タイムスタンプは [RFC 3339形式で提供する必要があります](https://tools.ietf.org/html/rfc3339) 。 |
