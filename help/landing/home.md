@@ -1,43 +1,52 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform 製品ドキュメント
+title: Adobe Experience Platformの概要
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 4eea32af108c8e2655639b3a2d6202d3b791b4e4
+source-git-commit: 51aa09e5eff86c480946bcf706f10864b82841d2
 
 ---
 
 
-# Adobe Experience Platform
+# Adobe Experience Platformの概要
 
-![](/help/assets/platform-banner-1.png)
+>[!NOTE]
+>Adobe Experience Platformのドキュメントが最近移動されました。 新しいナビゲーションを確認し、既存のブックマークを更新してください。
 
-**[Adobe Experience Platform の概要](https://www.adobe.io/apis/experienceplatform/home/overview.html)**<br/>Experience Platform を使用すると、顧客データとコンテンツを任意のシステムから一元管理し、データサイエンスと機械学習を適用して、パーソナライズされた豊富なエクスペリエンスのデザインと配信を大幅に改善できます。
+Adobe Experience Platformは、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。 Experience Platformを使用すると、組織は顧客データとコンテンツを任意のシステムから一元管理し、データサイエンスと機械学習を適用して、豊富でパーソナライズされたエクスペリエンスの設計と配信を大幅に改善できます。
 
-## 参照ドキュメント
-
-* **[リリースノート](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)**<br/>最新リリースの情報を取得し、過去のリリースを確認します。
-
-* **[用語集](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)**<br/>Adobe Experience Platform の用語を確認します。
-
-* **[トラブルシューティングガイド](https://www.adobe.io/apis/experienceplatform/home/services/troubleshooting.html)**<br/>一般的なエラーと解決方法について説明します。
+オープンAPIを基盤としたExperience Platformは、システムの全機能を開発者に提供し、使い慣れたツールを使用してエンタープライズソリューションを簡単に統合できるようにします。 また、必要に応じて独自の製品とテクノロジーを構築し、統合するためのパートナーもサポートします。 この機能と柔軟性により、エクスペリエンスプラットフォームは市場で独自のものとなります。 パートナー、顧客、開発者のコミュニティに、The Experience Businessを推進する革新を構築するための基盤を提供します。顧客の360度の表示と個々の好みから引き出され、継続的に改善され完全にパーソナライズされたエクスペリエンスを提供することで、顧客の期待を上回る成果を得ることができます。
 
 ## Experience Platform ドキュメント
 
-* **[Experience Platform サービスドキュメント](https://www.adobe.io/apis/experienceplatform/home/services.html)**<br/>Experience Platform サービスを使用すると、プロファイル、データ、プライバシー、およびその他のビジネスにとって重要な項目を管理できます。
+エクスペリエンスプラットフォームのドキュメントは、様々な機能やサービスのために複数の形式で提供されています。 利用可能なドキュメントのタイプと各プラットフォームサービスの簡単な説明を読むには、 [Experience Platformのドキュメント概要を参照してください](documentation/overview.md)。 また、特定のプラットフォームサービスに関する詳細な情報をすぐに得るには、左側のナビゲーションにあるアルファベット順のリストからガイドを選択します。
 
-* **[リアルタイムの顧客データプラットフォーム](/help/rtcdp/overview.md)**<br/>Real-time CDP は、複数の大規模法人データソースを組み合わせて、1 対 1 のパーソナライズされた顧客体験をすべてのチャネルとデバイスにわたって提供するために使用できる、統合されたプロファイルを作成します。
+## エクスペリエンスプラットフォームチュートリアル
 
-* **[API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)**<br/>各 Experience Platform API に関する詳細。
+データを取り込むための準備から高度な機械学習アルゴリズムまで、すべての手順に関するチュートリアルに従って、すばやく簡単にプラットフォームを開始します。 これらのチュートリアルは、Experience Platformのドキュメントに記載されている情報を補完する目的で設計されているので、最良の結果を得るために、チュートリアルを完了する際にドキュメントを手元に置いておくことをお勧めします。 使い始めるには、 [Experience Platformのチュートリアル](../tutorials/home.md) （英語のみ）を参照してください。
 
-* **[Experience Platform Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html)**<br/>Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。
+## 参照ドキュメントとリソース
 
-* **[Experience Platform Auditor](https://docs.adobe.com/content/help/en/auditor/using/overview.html)**<br/>Auditor は、Adobe Experience Cloud の実装を評価し、その改善方法を示します。Auditor は、アドビ製品単体で、または複数のアドビ製品をまとめてさらに活用できるよう支援します。
+* [**リリースノート&#x200B;**](../release-notes/latest/latest.md)<br/>最新のExperience Platformリリースに関する情報を検索し、過去のリリースを確認します。
 
-* **[Experience Cloud Debugger](https://docs.adobe.com/content/help/en/debugger/using/experience-cloud-debugger.html)**<br/>Chrome 用 Adobe Experience Cloud Debugger 拡張機能は Web ページを調べ、ユーザーが Experience Cloud ソリューションの実装方法に関する問題を見つけるのを支援します。
+* [**用語集&#x200B;**](glossary.md)<br/>Adobe Experience Platform の用語を確認します。
 
-<!--
+* [**トラブルシューティ&#x200B;**](troubleshooting.md)<br/>ングガイドよくあるエラーの解決方法と、よくある質問への回答を見つけます。
+
+* [**APIの基本&#x200B;**](api-fundamentals.md)<br/>Platform APIの操作の基本について説明します。
+
+* [**APIリファレンス&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover Experience Platform API（ヘッダ、パラメータ、サンプルリクエスト、応答を含む）。*これらのドキュメントはAdobe I/Oでホストされます。*
+
+
+
+
+
+
+
+
+
+<!-- 
 ## What's New
 
 * **[Privacy management](https://helpx.adobe.com/campaign/kb/campaign-privacy.html)**<br/>
@@ -106,5 +115,4 @@ Learn more about general guidelines for mobile deliveries.
 * [Technical notes](https://helpx.adobe.com/campaign/kb/acs-article-list.html)
 
 * [Adobe Campaign Standard Implementation guide](https://helpx.adobe.com/campaign/kb/campaign-standard-implementation-guide.html)
-
--->
+ -->
