@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 260eddee41d337f25b90ab365a76ab2ffd3dedef
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
@@ -247,3 +247,4 @@ UIとAPIのどちらを使用しているかによって、次の必要システ
 | クエリサービス | [クエリサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [クエリサービストラブルシューティングガイド](../query-service/troubleshooting-guide.md) |
 | リアルタイム顧客プロファイル | [リアルタイム顧客プロファイルAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
 | サンドボックス | [Sandbox API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [サンドボックストラブルシューティングガイド](../sandboxes/troubleshooting-guide.md) |
+| セグメント化 | [セグメントAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
