@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInstances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 71e257c85790a96b5017dea314b757ec4ee07bed
+source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 ---
 
@@ -17,7 +17,7 @@ MLInstanceは、既存の [Engine](./engines.md) と、トレーニングパラ�
 
 MLInstanceを作成するには、有効なエンジンID()と適切なデフォルト設定のセットから成るリクエストペイロードを提供しながら、POSTリクエストを実行します。`{ENGINE_ID}`
 
-Engine IDがPySparkまたはSpark Engineを参照する場合は、コア数やメモリ量などの計算リソースの量を設定できます。 Pythonエンジンが参照されている場合は、トレーニングとスコアリングの目的でCPUまたはGPUを使用するかを選択できます。 詳細は、 [PySparkとSparkのリソース設定と](appendix.md#resource-config) Python CPUと [GPUの設定に関する付録の節を参照してください](appendix.md#cpu-gpu-config) 。
+Engine IDがPySparkまたはSpark Engineを参照する場合は、コア数やメモリ量などの計算リソースの量を設定できます。 Pythonエンジンが参照されている場合は、トレーニングとスコアリングの目的でCPUまたはGPUを使用するかを選択できます。 詳細は、 [PySparkとSparkのリソース設定と](./appendix.md#resource-config) Python CPUと [GPUの設定に関する付録の節を参照してください](./appendix.md#cpu-gpu-config) 。
 
 **API形式**
 
@@ -127,7 +127,7 @@ curl -X POST \
 
 ## MLInstancesのリストの取得
 
-MLInstancesのリストは、単一のGETリクエストを実行することで取得できます。 結果のフィルタリングに役立つように、リクエストパスでクエリパラメーターを指定できます。 使用可能なクエリのリストについては、アセット取得のための [クエリパラメータの付録の節を参照してください](appendix.md#query)。
+MLInstancesのリストは、単一のGETリクエストを実行することで取得できます。 結果のフィルタリングに役立つように、リクエストパスでクエリパラメーターを指定できます。 使用可能なクエリのリストについては、アセット取得のための [クエリパラメータの付録の節を参照してください](./appendix.md#query)。
 
 **API形式**
 
@@ -139,7 +139,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 結果のフィルターに使用 [するクエリ](appendix.md#query) ・パラメータの1つ。 |
+| `{QUERY_PARAMETER}` | 結果のフィルターに使用 [するクエリ](./appendix.md#query) ・パラメータの1つ。 |
 | `{VALUE}` | 前のパラメーターのクエリ値。 |
 
 **リクエスト**
