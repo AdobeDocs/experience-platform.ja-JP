@@ -1,17 +1,17 @@
 ---
 cloud: experience-cloud
 product: adobe experience platform
-solution-title: ドキュメント
-solution-hub-url: https://www.adobe.io/apis/experienceplatform/home/services.html
+solution-title: プラットフォームの概要
+solution-hub-url: https://docs.adobe.com/content/help/en/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
-getting-started-title: はじめに
-getting-started-url: https://docs.adobe.com/content/help/en/experience-platform/landing/get-started.html
+getting-started-title: ドキュメント
+getting-started-url: https://docs.adobe.com/content/help/en/experience-platform/landing/documentation/overview.html
 tutorials-title: チュートリアル
-tutorials-url: https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html
+tutorials-url: https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html
 git-repo: https://github.com/AdobeDocs/experience-platform.en
 index: true
-translation-type: ht
-source-git-commit: 28afcfb4a10a661984d44a5ae9082708a4ffb311
+translation-type: tm+mt
+source-git-commit: d16d13fdec107d3654ff2ef5c8e18661763470f0
 
 ---
 
