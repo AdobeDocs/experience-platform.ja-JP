@@ -4,7 +4,7 @@ seo-title: リアルタイム顧客データプラットフォームにおける
 description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 seo-description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 Adobe Experience Platform データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。データガバナンスは Real-time CDP 内で重要な役割を果たし、使用ポリシーの定義、それらのポリシーに基づくデータの分類、特定のマーケティングアクションの実行時のポリシー違反の確認をおこなうことができるようになります。
 
-Real-time CDP は Adobe Experience Platform をベースに構築されているので、データガバナンス機能の大部分は Experience Platform のドキュメントで説明されています。本書は、Experience Platform の『[データガバナンスの概要](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md)』を補完するものであり、Real-time CDP で利用可能なガバナンス機能の概要を説明しています。以下のトピックを取り上げます。
+Real-time CDP は Adobe Experience Platform をベースに構築されているので、データガバナンス機能の大部分は Experience Platform のドキュメントで説明されています。本書は、Experience Platform の『[データガバナンスの概要](../../data-governance/home.md)』を補完するものであり、Real-time CDP で利用可能なガバナンス機能の概要を説明しています。以下のトピックを取り上げます。
 
 * [データへの使用状況ラベルの適用](#labels)
 * [データ使用ポリシーの管理](#policies)
@@ -25,7 +25,7 @@ Real-time CDP は Adobe Experience Platform をベースに構築されている
 
 データガバナンスを使用すると、データセットレベルまたはデータセットフィールドレベルで、使用状況ラベルをデータに適用できます。データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータを分類できます。
 
-データ使用状況ラベルの使用について詳しくは、Adobe Experience Platform の『[データ使用ラベルユーザーガイド](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md)』を参照してください。
+データ使用状況ラベルの使用について詳しくは、Adobe Experience Platform の『[データ使用ラベルユーザーガイド](../../data-governance/labels/overview.md)』を参照してください。
 
 ## 宛先に対する制限の設定
 
@@ -36,9 +36,9 @@ Real-time CDP は Adobe Experience Platform をベースに構築されている
 
 ## データ使用ポリシーの管理 {#policies}
 
-データ使用状況ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを定義し、有効にする必要があります。データ使用ポリシーは、Real-time CDP 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するルールです詳しくは、Experience Platform で『[データガバナンスの概要](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md)』の「データ使用ポリシー」の節を参照してください。
+データ使用状況ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを定義し、有効にする必要があります。データ使用ポリシーは、Real-time CDP 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するルールです詳しくは、Experience Platform で『[データガバナンスの概要](../../data-governance/home.md)』の「データ使用ポリシー」の節を参照してください。
 
-Adobe Experience Platform では、一般的な顧客体験の使用例に対して、いくつかの&#x200B;**コアポリシー**&#x200B;があります。これらのポリシーは、[DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) に要求ことで表示できます（『[ポリシーサービス開発者ガイド](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md)』の「すべてのポリシーの一覧表示」節参照）。独自の&#x200B;**カスタムポリシー**&#x200B;を作成して、カスタムの使用制限をモデル化することもできます（開発者ガイドの「ポリシーの作成」節参照）。
+Adobe Experience Platform では、一般的な顧客体験の使用例に対して、いくつかの&#x200B;**コアポリシー**&#x200B;があります。これらのポリシーは、[DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) に要求ことで表示できます（『[ポリシーサービス開発者ガイド](../../data-governance/policies/overview.md)』の「すべてのポリシーの一覧表示」節参照）。独自の&#x200B;**カスタムポリシー**&#x200B;を作成して、カスタムの使用制限をモデル化することもできます（開発者ガイドの「ポリシーの作成」節参照）。
 
 ## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
 
@@ -70,7 +70,7 @@ Adobe Experience Platform では、一般的な顧客体験の使用例に対し
 
 アクティベーションがトリガーされると、データの使用 **ポリシーに従って適切なコンポーネントが更新されるまで、の「保存** 」ボタンは無効になります。
 
-### アクティブ化されたセグメントのポリシーの適用
+### アクティブ化されたセグメントのポリシーの適用 {#policy-enforcement-for-activated-segments}
 
 ポリシーの強制は、アクティブ化された後もセグメントに適用され、ポリシー違反の原因となるセグメントまたは宛先に対する変更が制限されます。 宛先へのセグメントのアクティブ化には多くのコンポーネントが関与しているので、次のいずれかの操作を行うと違反が発生する可能性があります。
 
@@ -83,4 +83,4 @@ Adobe Experience Platform では、一般的な顧客体験の使用例に対し
 
 ## 次の手順
 
-Real-time CDP の主要なデータガバナンス機能と、Experience Platform による機能の紹介が完了したので、[Adobe Experience Platform のデータガバナンスに関するドキュメント](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html)を引き続きご覧ください。このドキュメントには、データガバナンスの基本概念の概要と、データ使用ラベルとポリシーを管理するためのワークフローが順を追って記載されています。
+Real-time CDP の主要なデータガバナンス機能と、Experience Platform による機能の紹介が完了したので、[Adobe Experience Platform のデータガバナンスに関するドキュメント](../../data-governance/home.md)を引き続きご覧ください。このドキュメントには、データガバナンスの基本概念の概要と、データ使用ラベルとポリシーを管理するためのワークフローが順を追って記載されています。
