@@ -4,7 +4,7 @@ seo-title: リアルタイムの顧客データプラットフォームでのリ
 description: リアルタイムの顧客データプラットフォームを使用して、顧客に対して一貫性のある連携した関連性のあるエクスペリエンスをリアルタイム顧客プロファイルを介して提供する方法の概要を説明します。
 seo-description: リアルタイムの顧客データプラットフォーム，プロファイル，データ，エクスペリエンス，チャネル
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -31,4 +31,4 @@ source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
 
 ## 次の手順
 
-この概要を読み終わると、Real-time CDP がリアルタイム顧客プロファイルを利用してチャネル間のパーソナライズ機能を拡張する方法を理解できるはずです。異なるソースの ID を結合することで、個々の顧客の全体像を把握して、マーケティングキャンペーンをまったく新しいレベルまで引き上げることができます。ユーザーインターフェイスおよび API を使用してリアルタイム顧客プロファイルデータを使用するためのベストプラクティスやチュートリアルなど、詳細については、Adobe I/O の『[リアルタイム顧客プロファイルドキュメント](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)』を参照してください。
+この概要を読み終わると、Real-time CDP がリアルタイム顧客プロファイルを利用してチャネル間のパーソナライズ機能を拡張する方法を理解できるはずです。異なるソースの ID を結合することで、個々の顧客の全体像を把握して、マーケティングキャンペーンをまったく新しいレベルまで引き上げることができます。For more detailed information, including best practices and tutorials for working with Real-time Customer Profile data in the user interface and via APIs, please refer to the [Real-time Customer Profile documentation](../../profile/home.md).
