@@ -4,7 +4,7 @@ solution: Experience Platform
 title: APIを使用したデータセットの作成
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -454,7 +454,7 @@ curl -X GET \
 
 また、Data Access APIを使用して、名前、サイズ（バイト）、ファイルまたはフォルダーをダウンロードするためのリンクを返すこともできます。
 
-データアクセスAPIを使用する詳細な手順は、『データアクセス開発ガイド』 [を参照してください](../../data-access/api.md)。
+データアクセスAPIを使用する詳細な手順は、『データアクセス開発ガイド』 [を参照してください](../../data-access/home.md)。
 
 ## データセットスキーマ
 
