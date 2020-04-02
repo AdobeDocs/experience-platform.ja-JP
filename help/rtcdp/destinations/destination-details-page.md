@@ -4,7 +4,7 @@ seo-title: 宛先の詳細ページ
 description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 seo-description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 translation-type: tm+mt
-source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -51,7 +51,7 @@ source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
 | カテゴリ | 宛先のタイプを示します。詳しくは、「[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)」を参照してください。 |
 | 接続タイプ | オーディエンスが宛先に送信される形式を示します。**Cookie** または&#x200B;**プロファイルベース**&#x200B;にできます 。 |
 | 頻度 | オーディエンスが宛先に送信される頻度を示します。**ストリーミング**&#x200B;または&#x200B;**バッチ**&#x200B;です。 |
-| ID | 宛先で受け入れられる ID 名前空間を表します。例えば、「ID」フィールドは GAID、IDFA、電子メールにすることができます。受け入れられるすべての ID 名前空間については、[ID 名前空間の概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)の標準名前空間を参照してください。 |
+| ID | 宛先で受け入れられる ID 名前空間を表します。例えば、「ID」フィールドは GAID、IDFA、電子メールにすることができます。受け入れられるすべての ID 名前空間については、[ID 名前空間の概要](../../identity-service/namespaces.md)の標準名前空間を参照してください。 |
 | 作成者 | この宛先フローを作成したユーザーを示します。 |
 | 作成 | この宛先フローが作成された UTC の日時を示します。 |
 
