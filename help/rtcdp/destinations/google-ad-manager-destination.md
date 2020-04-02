@@ -4,7 +4,7 @@ seo-title: Google Ad Managerの表示先
 description: 'Google Ad Manager（以前はDoubleClick for PublishersまたはDoubleClick AdXと呼ばれていました）は、Googleの広告提供プラットフォームで、発行者はビデオやモバイルアプリを通じてWebサイト上の広告の表示を管理する手段を提供します。 '
 seo-description: 'Google Ad Manager（以前はDoubleClick for PublishersまたはDoubleClick AdXと呼ばれていました）は、Googleの広告提供プラットフォームで、発行者はビデオやモバイルアプリを通じてWebサイト上の広告の表示を管理する手段を提供します。 '
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ Google Ad Manager（以前はDoubleClick for PublishersまたはDoubleClick AdX�
 
 Google Ad Managerの表示先に固有の次の詳細に注意してください。
 
-* 次のIDをGoogle Ad Managerの送 [信先](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) に送信できます。 **Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
+* 次のIDをGoogle Ad Managerの送 [信先](../../identity-service/namespaces.md) に送信できます。 **Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラム的に作成されます。
 * Adobe Real-time CDP には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスのターゲット設定のサイズを理解するには、Googleでのオーディエンス数を参照します。
 
