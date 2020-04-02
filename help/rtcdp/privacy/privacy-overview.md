@@ -4,7 +4,7 @@ seo-title: リアルタイム顧客データプロファイルでのプライバ
 description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 translation-type: tm+mt
-source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -17,12 +17,12 @@ source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
 
 ## プライバシーサービス
 
-Adobe Experience Platform プライバシーサービスを使用すると、GDPR（EU 一般データ保護規則）やカリフォルニア州消費者プライバシー法（CCPA）などのプライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。Real-time CDP は、データ収集とストレージに Experience Platform の機能を活用するので、GDPR と CCPA に対するアクセス要求と削除要求は、プラットフォーム内で管理する必要があります。このサービスの概要について詳しくは、『[プライバシーサービスの概要](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md)』ドキュメントを参照してください。
+Adobe Experience Platform プライバシーサービスを使用すると、GDPR（EU 一般データ保護規則）やカリフォルニア州消費者プライバシー法（CCPA）などのプライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。Real-time CDP は、データ収集とストレージに Experience Platform の機能を活用するので、GDPR と CCPA に対するアクセス要求と削除要求は、プラットフォーム内で管理する必要があります。このサービスの概要について詳しくは、『[プライバシーサービスの概要](../../privacy-service/home.md)』ドキュメントを参照してください。
 
 個々の GDPR および CCPA データ主体アクセス要求を送信して顧客データにアクセスし、削除する方法は 2 つあります。
 
-* [プライバシーサービスの UI](https://gdprui.cloud.adobe.io/) を使用して、ビジュアルワークスペース内でアクセス要求と削除要求を作成および監視します。手順については、『[プライバシーサービスの UI チュートリアル](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)』を参照してください。
-* [プライバシーサービス API](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html) を使用して、RESTful API 呼び出しを介してアクセス要求と削除要求を管理します。手順については、『[プライバシーサービス API のチュートリアル](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md)』を参照してください。
+* [プライバシーサービスの UI](https://gdprui.cloud.adobe.io/) を使用して、ビジュアルワークスペース内でアクセス要求と削除要求を作成および監視します。手順については、『[プライバシーサービスの UI チュートリアル](../../privacy-service/ui/overview.md)』を参照してください。
+* [プライバシーサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) を使用して、RESTful API 呼び出しを介してアクセス要求と削除要求を管理します。手順については、『[プライバシーサービス API のチュートリアル](../../privacy-service/api/getting-started.md)』を参照してください。
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
@@ -35,4 +35,4 @@ Real-time CDP provides two types of consumer opt-out capabilities:
 
 ## 次の手順
 
-このドキュメントでは、Real-time CDP のプライバシー機能について簡単に説明します。アクセス要求や削除要求を送信する際のベストプラクティスと手順について詳しくは、[プライバシーサービスのドキュメント](https://www.adobe.io/apis/experiencecloud/gdpr/docs.html)を参照してください。
+このドキュメントでは、Real-time CDP のプライバシー機能について簡単に説明します。アクセス要求や削除要求を送信する際のベストプラクティスと手順について詳しくは、[プライバシーサービスのドキュメント](../../privacy-service/home.md)を参照してください。
