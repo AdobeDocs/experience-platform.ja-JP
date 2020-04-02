@@ -4,7 +4,7 @@ seo-title: リアルタイムの顧客データプラットフォームでのリ
 description: リアルタイムの顧客データプラットフォームでのリアルタイム顧客プロファイルデータの表示
 seo-description: リアルタイムの顧客データプラットフォームでのリアルタイム顧客プロファイルデータの表示
 translation-type: tm+mt
-source-git-commit: f23a025336875adec1f4182fee451741833a1b63
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,4 +15,4 @@ source-git-commit: f23a025336875adec1f4182fee451741833a1b63
 
 ユーザーインターフェイス内では、これらの読み取り専用プロファイルを表示し、環境設定、過去のイベントやインタラクション、個人が属するセグメントなど、個人顧客に関する重要な情報を確認できます。
 
-リアルタイムの顧客データプラットフォームは Adobe Experience Platform をベースに構築されているので、Real-time CDP は Experience Platform の一部であるプロファイル表示機能を利用できます。プラットフォームユーザーインターフェイス内での顧客プロファイルの表示に関する詳細なガイドについては、Adobe I/O の『[リアルタイムの顧客プロファイルユーザーガイド](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/profile-user-guide.md)』を参照してください。
+リアルタイムの顧客データプラットフォームは Adobe Experience Platform をベースに構築されているので、Real-time CDP は Experience Platform の一部であるプロファイル表示機能を利用できます。For a detailed guide to viewing customer profiles within the Platform user interface, please see the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md).
