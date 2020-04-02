@@ -4,7 +4,7 @@ seo-title: Google広告の表示先
 description: Google Ads（旧称Google AdWords）は、企業がテキストベースの検索、グラフィック表示、YouTubeビデオ、アプリ内モバイルディスプレイにわたってクリックあたりの広告をペイパークリックできるオンライン広告サービスです。
 seo-description: Google Ads（旧称Google AdWords）は、企業がテキストベースの検索、グラフィック表示、YouTubeビデオ、アプリ内モバイルディスプレイにわたってクリックあたりの広告をペイパークリックできるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ Google Ads（旧称Google AdWords）は、企業がテキストベースの検�
 
 Google広告の表示先に固有の次の詳細に注意してください。
 
-* 次のIDをGoogle広告の送 [信先](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) に送信できます。 **Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
+* 次のIDをGoogle広告の送 [信先](../../identity-service/namespaces.md) に送信できます。 **Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラム的に作成されます。
 * Adobe Real-time CDP には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスのターゲット設定のサイズを理解するには、Googleでのオーディエンス数を参照します。
 
