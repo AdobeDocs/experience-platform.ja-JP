@@ -4,14 +4,18 @@ solution: Experience Platform
 title: データ取り込みのチュートリアル
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: eef56cfc20eb8e4ac131bee20c5c3afbf82971d2
+source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
 
 ---
 
 
 # データをエクスペリエンスプラットフォームに取り込む
 
-Adobe Experience Platformは、複数のソースからのデータを統合し、マーケターが顧客の行動をより深く理解できるようにします。 Adobe Experience Platform Data Ingestionは、Platformがこれらのソースからデータを取り込む複数の方法と、そのデータがData Lake内でどのように保持され、ダウンストリームのPlatformサービスで使用されるかを表します。 データ取り込みには、ソースコネクタを使用したバッチ取り込み、ストリーミング取り込み、取り込みが含まれます。 詳しくは、データ取り込みの概要 [とソースの概要](../ingestion/home.md) （英語のみ）を [参照してください](../source-connectors/home.md)。
+Adobe Experience Platformは、複数のソースからのデータを統合し、マーケターが顧客の行動をより深く理解できるようにします。 Adobe Experience Platform Data Ingestionは、Platformがこれらのソースからデータを取り込む複数の方法と、そのデータがData Lake内でどのように保持され、ダウンストリームのPlatformサービスで使用されるかを表します。 データ取り込みには、ソースコネクタを使用したバッチ取り込み、ストリーミング取り込み、取り込みが含まれます。 詳しくは、データ収集の概要を読 [むか](../ingestion/home.md) 、ソースのドキュメントに直接進ん [でください](../source-connectors/home.md)。
+
+## UIとAPIでのソースコネクタの作成
+
+ソースコネクタを使用すると、複数のソースからデータを取り込み、プラットフォームサービスを使用してラベル付け、構造化、拡張を行うことができます。 UIを使用してコネクタの作成を開始するには、UIの概要で [ソースコネクタの作成を参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)。 APIを使用してソースコネクタを作成するには、Flow Service APIの概 [要を使用してソースコネクタを作成するを参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)。
 
 ## バッチデータの取り込み
 
@@ -31,13 +35,11 @@ Experience Platformに開始ストリーミングデータを送信するには�
 
 ## ストリームレコードと時系列データ
 
-データセット接続とストリーミング接続を使用して、レコードや時系列のデータをプラットフォームにストリーミング配信できます。 記録データのストリーミングを開始するには、ストリーム記録デ [ータの後に、プラットフォームのチュートリアルに進みま](../ingestion/tutorials/streaming-record-data.md)す。 時系列データのストリーミングを開始するには、ストリーム時 [系列データに従ってプラットフォームに入りま](../ingestion/tutorials/streaming-time-series-data.md)す。
+データセット接続とストリーミング接続を使用して、レコードや時系列のデータをプラットフォームにストリーミング配信できます。 記録データのストリーミングを開始するには、ストリーム記 [録データをプラットフォームのチュートリアルに進みま](../ingestion/tutorials/streaming-record-data.md)す。 時系列データのストリーミングを開始するには、ストリーム時 [系列データに従ってプラットフォームに入りま](../ingestion/tutorials/streaming-time-series-data.md)す。
 
 ## 1回のHTTPリクエストで複数のメッセージをストリーミング
 
 データをAdobe Experience Platformにストリーミングする場合、多数のHTTP呼び出しを作成すると高コストになる可能性があります。 例えば、1 KBのペイロードで200個のHTTPリクエストを作成する代わりに、200 KBの各メッセージで200個のペイロードを持つ1個のHTTPリクエストを作成する方が、より効率的です。 正しく使用すると、1つのリクエスト内で複数のメッセージをグループ化することが、エクスペリエンスプラットフォームに送信されるデータを最適化する優れた方法です。 ストリーミング取り込みを使用して、単一のHTTPリクエスト内で複数のメッセージをエクスペリエンスプラットフォームに送信する方法を学ぶには、複数のメッセージの送 [信のチュートリアルに従ってくださ](../ingestion/tutorials/streaming-multiple-messages.md)い。
 
-## UIとAPIでのソースコネクタの作成
 
-ソースコネクタを使用すると、複数のソースからデータを取り込み、プラットフォームサービスを使用してラベル付け、構造化、拡張を行うことができます。 UIを使用してコネクタの作成を開始するには、UIの概要で [ソースコネクタの作成を参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)。 APIを使用してソースコネクタを作成するには、Flow Service APIの概 [要を使用してソースコネクタを作成するを参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)。
 
