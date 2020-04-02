@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セグメントの評価
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -204,7 +204,7 @@ curl -X POST \
 
 セグメントジョブは、新しいジョブセグメントを作成する非同期オーディエンスプロセスです。 セグメント定義と、リアルタイム顧客プロファイルが複数のプロファイルフラグメント間で重なり合う属性をマージする方法を制御するマージポリシーを参照します。 セグメントジョブが正常に完了したら、処理中に発生したエラーやオーディエンスの最大サイズなど、セグメントに関する様々な情報を収集できます。
 
-新しいセグメントジョブを作成するには、Real-time Customer Job APIでエンドポイ `/segment/jobs` ントにPOSTリクエストを作成します。
+新しいセグメントジョブを作成するには、Real-time Customer Job APIでエンドポイン `/segment/jobs` トにPOSTリクエストを行います。
 
 **API形式**
 
@@ -602,7 +602,7 @@ curl -X POST \
 | `filter.segments.segmentId` | **(を使用する場合は必須`segments`)** 、エクスポートするプロファイルのセグメントID。 |
 | `filter.segments.segmentNs` | *（オプション）* 、指定したのセグメント名前空間 `segmentID`。 |
 | `filter.segments.status` | *（オプション）* 、のステータスフィルターを提供する文字列の配 `segmentID`列。 デフォルトでは、 `status` は、現在の時間にセ `["realized", "existing"]` グメントに含まれるすべてのプロファイルを表す値を持ちます。 次の値を指定できます。 `"realized"`、、 `"existing"`および `"exited"`。 |
-| `filter.segmentQualificationTime` | *（オプション）* 、セグメントの資格時間に基づいてフィルターします。 開始時間及び/又は終了時間を提供する。 |
+| `filter.segmentQualificationTime` | *（オプション）* 、セグメントの資格時間に基づいてフィルターします。 開始時間および/または終了時間を指定できます。 |
 | `filter.segmentQualificationTime.startTime` | *（オプション）* 、特定のステータスのセグメントIDのセグメント資格開始時間。 このオプションは指定されていないので、セグメントIDの開始時間に対するフィルターは適用されません。 タイムスタンプは [RFC 3339形式で提供する必要があります](https://tools.ietf.org/html/rfc3339) 。 |
 | `filter.segmentQualificationTime.endTime` | *（オプション）* 、特定のステータスのセグメントIDのセグメントクオリフィケーション終了時間。 このオプションは指定されていないので、終了時間にセグメントIDの資格に対するフィルターは適用されません。 タイムスタンプは [RFC 3339形式で提供する必要があります](https://tools.ietf.org/html/rfc3339) 。 |
 | `filter.fromIngestTimestamp` | *（オプション）* 、書き出したプロファイルには、このタイムスタンプの後に更新されたアイテムのみが含まれるように制限します。 タイムスタンプは [RFC 3339形式で提供する必要があります](https://tools.ietf.org/html/rfc3339) 。 |
@@ -951,7 +951,7 @@ curl -X GET \
 
 書き出しが正常に完了すると、データはエクスペリエンスプラットフォームのデータレイク内で使用できます。 その後、 [Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) （データアクセスAPI）を使用して、エクスポートに関連付けられたを使用し `batchId` てデータにアクセスできます。 セグメントのサイズに応じて、データがチャンク単位で、バッチが複数のファイルで構成される場合があります。
 
-データアクセスAPIを使用してバッチファイルにアクセスし、ダウンロードする手順については、データアクセスチュートリアルに [従ってください](../../data-access/api.md)。
+データアクセスAPIを使用してバッチファイルにアクセスし、ダウンロードする手順については、データアクセスチュートリアルに [従ってください](../../data-access/tutorials/dataset-data.md)。
 
 また、Adobe Experience Platform Platform Serviceを使用して、正常に書き出されたセグメントデータにアクセスすることもクエリできます。 クエリサービスでは、UIまたはRESTful APIを使用して、データレーク内のデータに対するクエリの書き込み、検証および実行を行うことができます。
 
