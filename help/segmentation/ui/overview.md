@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セグメントビルダーのUIガイド
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
 
 ---
 
@@ -173,6 +173,14 @@ ExperienceEvent要素を参照できるだけでなく、要素を検索する�
 ![](../images/segment-builder/enable-streaming-segmentation.png)
 
 ストリーミングセグメントを有効にしたら、ベースラインを確立する必要があります（これは、セグメントが常に最新の状態になる最初の実行です）。 ベースラインは自動的に処理されますが、これはスケジュールされたセグメント化が有効な場合にのみ可能です。 スケジュールされたセグメント化を有効にする方法の詳細については、 [このユーザガイドの前の節を参照してくださ](#enable-scheduled-segmentation)い。
+
+## ポリシー違反のスケジュール
+
+>[!NOTE] DULEポリシー違反は、宛先に割り当てられたセグメントを作成する場合にのみ適用されます。
+
+セグメントの作成が完了すると、セグメントがデータガバナンスによって分析され、セグメント内にポリシー違反がないことを確認します。 DULEとポリシー違反の詳細については、「データ使用ラベルの概 [要」を参照してください](../../data-governance/labels/overview.md)。
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
 
 ## 次の手順
 
