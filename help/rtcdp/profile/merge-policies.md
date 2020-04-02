@@ -4,7 +4,7 @@ seo-title: リアルタイムの顧客データプラットフォームでの結
 description: リアルタイムの顧客データプラットフォームでの結合ポリシーの使用
 seo-description: リアルタイムの顧客データプラットフォームでの結合ポリシーの使用
 translation-type: tm+mt
-source-git-commit: f23a025336875adec1f4182fee451741833a1b63
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,5 +15,5 @@ Adobe Experience Platform をベースに構築されたリアルタイム顧客
 
 ユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。また、データソースに関する環境設定を指定し、結合中に競合が発生した場合にどのデータの優先順位を持つかを指定することもできます。
 
-Adobe Experience Platform ユーザーインターフェイスを使用して結合ポリシーを操作する手順は、Adobe I/O の『[結合ポリシーの操作チュートリアル](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/merge_policies/create-merge-policies.md)』に従って確認できます。
+You can find step-by-step instructions for working with merge policies using the Adobe Experience Platform user interface by following the [merge policies user guide](../../profile/ui/merge-policies.md).
 
