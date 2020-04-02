@@ -4,7 +4,7 @@ seo-title: Oracle Responsys の宛先
 description: Responsys は、Oracle が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向け電子メールマーケティングツールで、メール、モバイル、ディスプレイ、ソーシャルでのインタラクションをパーソナライズします。
 seo-description: Responsys は、Oracle が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向け電子メールマーケティングツールで、メール、モバイル、ディスプレイ、ソーシャルでのインタラクションをパーソナライズします。
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -41,7 +41,7 @@ To send segment data to Oracle Responsys, you must first [connect to the destina
 
 ## 宛先属性 {#destination-attributes}
 
-Oracle Responsys の宛先に対して[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)する場合は、[ユニオンスキーマ](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)から一意の識別子を選択することをお勧めします。宛先に書き出す一意の識別子およびその他の XDM フィールドを選択します。詳しくは、「電子メールマーケティングの宛先」の「[書き出したファイルの宛先属性として使用するスキーマフィールドの選択](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes)」を参照してください。
+Oracle Responsys の宛先に対して[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)する場合は、[ユニオンスキーマ](../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。宛先に書き出す一意の識別子およびその他の XDM フィールドを選択します。詳しくは、「電子メールマーケティングの宛先」の「[書き出したファイルの宛先属性として使用するスキーマフィールドの選択](/help/rtcdp/destinations/email-marketing-destinations.md#destination-attributes)」を参照してください。
 
 ## Oracle Responsys へのデータインポートの設定 {#import-data-into-responsys}
 
