@@ -4,7 +4,7 @@ seo-title: リアルタイム顧客データプラットフォームのホーム
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 translation-type: tm+mt
-source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
+source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
 
 ---
 
@@ -42,7 +42,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. このカウンターは、データセットの作成時に更新されます。
 
-データセットについて詳しくは、[Adobe Experience Platform へのデータの取り込み](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)を参照してください。
+データセットの詳細については、「データセットの概要」を [参照してくださ](../catalog/datasets/overview.md)い。
 
 ### プロファイル
 
@@ -58,7 +58,7 @@ The **[!UICONTROL Profiles]** count shows the total number of people with profil
 
 **[!UICONTROL Segments]** 組織に対して作成されたセグメントの合計数が表示されます。 この数は、新しいセグメントが作成されると更新されます。
 
-セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)」を参照してください。
+セグメントについて詳しくは、「[セグメント化サービスの概要](segmentation/segmentation-overview.md)」を参照してください。
 
 ### 宛先
 
@@ -106,7 +106,7 @@ The **[!UICONTROL Recent datasets]** card shows the five most recent datasets cr
 
 Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. ここからは、特定のソースをクリックして詳細を表示できます。
 
-データセットについて詳しくは、[Adobe Experience Platform へのデータの取り込み](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md)を参照してください。
+データセットの詳細については、「データセットの概要」を [参照してくださ](../catalog/datasets/overview.md)い。
 
 ### 最近のソース
 
@@ -122,7 +122,7 @@ The **[!UICONTROL Recent segments]** metric card shows the five most recent segm
 
 Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
 
-セグメントについて詳しくは、「[セグメント化サービスの概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)」を参照してください。
+セグメントについて詳しくは、「[セグメント化サービスの概要](segmentation/segmentation-overview.md)」を参照してください。
 
 ### 最近の宛先
 
