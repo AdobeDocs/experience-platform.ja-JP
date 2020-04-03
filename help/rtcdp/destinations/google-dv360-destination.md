@@ -4,7 +4,7 @@ seo-title: Googleディスプレイ&ビデオ360の表示先
 description: ディスプレイ&ビデオ360（旧称DoubleClick Bid Manager）は、ディスプレイ、ビデオ、およびモバイルの在庫ソースでデジタルキャンペーンをターゲットにした再ターゲット化とオーディエンスを実行するためのツールです。
 seo-description: 'ディスプレイ&ビデオ360（旧称DoubleClick Bid Manager）は、ディスプレイ、ビデオ、およびモバイルの在庫ソースでデジタルキャンペーンをターゲットにした再ターゲット化とオーディエンスを実行するためのツールです。 '
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 Google Display &amp; Video 360の表示先に固有の次の詳細に注意してください。
 
-* 次のIDをGoogle Display [](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) &amp; Video 360の送信先に送信できます。 **Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
+* 次のIDをGoogle Display [](../../identity-service/namespaces.md) &amp; Video 360の送信先に送信できます。 **Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラム的に作成されます。
 * Adobe Real-time CDP には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスのターゲット設定のサイズを理解するには、Googleでのオーディエンス数を参照します。
 
