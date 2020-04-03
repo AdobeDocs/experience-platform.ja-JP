@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ジョブ
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
 
 ---
 
@@ -105,7 +105,7 @@ curl -X POST \
 | `expandIDs` | に設定した場合、アプリケーション内のIDを処 `true`理するための最適化を表すオプションのプロパティです（現在、Analyticsでのみサポートされています）。 If omitted, this value defaults to `false`. |
 | `priority` | リクエストの処理の優先度を設定する、Adobe Analyticsで使用されるオプションのプロパティです。 指定できる値は、 `normal` およびで `low`す。 を省略 `priority` すると、デフォルトの動作はです `normal`。 |
 | `analyticsDeleteMethod` | Adobe Analyticsでの個人データの処理方法を指定するオプションのプロパティです。 この属性には、次の2つの値を指定できます。 <ul><li>`anonymize`:特定のユーザーIDのコレクションによって参照されるすべてのデータは匿名になります。 を省略 `analyticsDeleteMethod` した場合のデフォルトの動作です。</li><li>`purge`:すべてのデータが完全に削除されます。</li></ul> |
-| `regulation` **（必須）** | リクエストの規制（「gdpr」または「ccpa」）。 |
+| `regulation` **（必須）** | 要請の規則。 次の3つの値のいずれかである必要があります。 <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **応答**
 
@@ -399,7 +399,7 @@ GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{REGULATION}` | クエリの種類。 指定できる値は、 `gdpr` およびで `ccpa`す。 |
+| `{REGULATION}` | クエリの種類。 指定できる値は、、 `gdpr`および `ccpa`です `pdpa_tha`。 |
 | `{PAGE}` | 0を基準とする番号を使用して、表示するデータのページ。 デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。 デフォルトはで `1` 、最大はです `100`。 最大値を超えると、APIは400コードエラーを返します。 |
 
