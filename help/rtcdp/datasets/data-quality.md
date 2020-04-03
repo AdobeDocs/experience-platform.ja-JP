@@ -4,7 +4,7 @@ seo-title: アドビのリアルタイム顧客データプラットフォーム
 description: リアルタイム顧客データプラットフォームのデータ品質に関するドキュメント
 seo-description: アドビのリアルタイム顧客データプラットフォームでのバッチ処理とデータ取り込みによるデータ品質の仕組みを説明するドキュメント
 translation-type: tm+mt
-source-git-commit: d7a2f7707b36c73f33ad52122d4debedc0877c7a
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,4 +15,4 @@ source-git-commit: d7a2f7707b36c73f33ad52122d4debedc0877c7a
 
 Real-time CDP は Adobe Experience Platform をベースに構築され、多くの Experience Platform サービスと機能を利用します。したがって、データは取り込みと同時に確実にチェックされ、検証されます。
 
-データ品質の詳細については、[Adobe I/O のデータ品質に関するドキュメント](https://www.adobe.io/apis/experienceplatform/home/data-ingestion/data-ingestion-services.html#!api-specification/markdown/narrative/technical_overview/data_ingestion_quality/data_ingestion_quality.md)を参照してください。
+データ品質の詳細については、[Adobe I/O のデータ品質に関するドキュメント](../../ingestion/quality/overview.md)を参照してください。
