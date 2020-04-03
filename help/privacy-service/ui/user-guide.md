@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プライバシーサービスユーザーガイド
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
+source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ---
 
@@ -74,16 +74,18 @@ source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
 
 ## 新しいプライバシージョブの要求を作成する
 
+>[!NOTE] プライバシージョブリクエストを作成するには、データのアクセスまたは削除を行う特定の顧客のID情報を指定する必要があります。 このセクションに進む前に [、プライバシーリクエストのIDデータの](../identity-data.md) ドキュメントを確認してください。
+
 プライバシーサービスのUIには、新しいジョブ要求を作成する2つの方法が用意されています。
 
-* リクエストビルダーの使用
-* JSONファイルのアップロード
+* [リクエストビルダーの使用](#request-builder)
+* [JSONファイルのアップロード](#json)
 
 これらの各方法の使用手順は、次の節で説明します。
 
-### リクエストビルダーの使用
+### リクエストビルダーの使用 {#request-builder}
 
-リクエストビルダーを使用すると、ユーザーインターフェイスで新しいプライバシージョブリクエストを手動で作成できます。 リクエストビルダーは、リクエストのIDタイプをユーザーごとに持つように制限されているので、よりシンプルでより小さなリクエストのセットに最適です。 より複雑なリクエストの場合は、代わりにJSONファイルをアッ [プロードする方がよい場合があります](#upload-a-json-file) 。
+リクエストビルダーを使用すると、ユーザーインターフェイスで新しいプライバシージョブリクエストを手動で作成できます。 リクエストビルダーは、リクエストのIDタイプをユーザーごとに持つように制限されているので、よりシンプルでより小さなリクエストのセットに最適です。 より複雑なリクエストの場合は、代わりにJSONファイルをアッ [プロードする方がよい場合があります](#json) 。
 
 リクエストビルダーを開始するには、 **画面の右側にある** 、ステータスレポートウィジェットの下の「リクエストを作成」をクリックします。
 
@@ -91,19 +93,31 @@ source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
 
 リクエスト *を作成ダイアログ* が開き、現在選択されている規制タイプに対するプライバシージョブリクエストを送信するための利用可能なオプションが表示されます。
 
-![](../images/user-guide/request-builder.png)
+<img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-リクエスト **の「ジョブのタイプ** 」（「削除」または「アクセス」）と、リストから1つ以上の使用可能な **製品を選択します** 。 「顧 **客ID**」で、ドロップダウンメニューからIDタイプ（電子メール、ECIDまたはAAID）を選択します。 右側のテキストボックスにID値を入力し、 **\&lt;enter>を押して** 、リストに追加します。
+リクエスト **の「ジョブのタイプ** 」（「削除」または「アクセス」）と、リストから1つ以上の使用可能な **製品を選択します** 。
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-このリストに含まれるIDは、プライバシーサービスから電子メール通知のコピーを受け取ります。この通知は、ジョブの完了、エラーが発生した場合、またはタイムアウト時に送信されます。 完了したら、「作成」をクリ **ックしま**&#x200B;す。
+[ *名前空間の種類*]で、プライバシーサービスに送信する顧客IDに適した名前空間の種類を選択します。
 
-![](../images/user-guide/request-builder-create.png)
+<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+
+標準の __ 名前空間タイプを使用する場合は、ドロップダウンメニューから名前空間（電子メール、ECID、AAID）を選択し、右側のテキストボックスにID値を入力し、各IDに対して **\&lt;enter>** を押してリストに追加します。
+
+<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+
+カスタム _名前空間_ タイプを使用する場合は、名前空間を手動で入力してから、以下のID値を指定する必要があります。
+
+<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+
+完了したら、「作成」をクリ **ックしま**&#x200B;す。
+
+<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
 ダイアログが消え、新しいジョブ（またはジョブ）が現在の処理ステータスと共にジョブリクエストウィジェットに表示されます。
 
-### JSONファイルのアップロード
+### JSONファイルのアップロード {#json}
 
 処理する各データサブジェクトに対して複数のIDタイプを使用するリクエストなど、より複雑なリクエストを作成する場合は、JSONファイルをアップロードしてリクエストを作成できます。
 
@@ -113,12 +127,12 @@ source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
 
 JSONファ ** イルをドラッグ&amp;ドロップするウィンドウが表示され、JSONをアップロードダイアログが表示されます。
 
-![](../images/user-guide/upload-json.png)
+<img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
 アップロードするJSONファイルがない場合は、「 **Download Adobe-GDPR-Request.json** 」をクリックして、データサブジェクトから収集した値に従って入力できるテンプレートをダウンロードします。
 
 
-![](../images/user-guide/privacy-template.png)
+<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
 コンピューター上でJSONファイルを探し、ダイアログウィンドウにドラッグします。 アップロードが正常に完了すると、ダイアログにファイル名が表示されます。 必要に応じて、引き続きJSONファイルをダイアログにドラッグ&amp;ドロップして追加できます。
