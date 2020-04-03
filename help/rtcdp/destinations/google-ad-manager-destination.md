@@ -21,7 +21,7 @@ Google Ad Managerの表示先に固有の次の詳細に注意してください
 
 * 次のIDをGoogle Ad Managerの送 [信先](../../identity-service/namespaces.md) に送信できます。 **Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID**。
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラム的に作成されます。
-* Adobe Real-time CDP には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスのターゲット設定のサイズを理解するには、Googleでのオーディエンス数を参照します。
+* Adobe Real-time CDP には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。Googleでオーディエンス数を参照して、統合を検証し、統合のターゲット設定のサイズをオーディエンスします。
 
 >[!IMPORTANT]
 >
