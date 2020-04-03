@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform ID サービス
 description: 説明
 seo-description: SEO 説明
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform ID サービスは、デバイスとシステム間で
 
 ## ID 名前空間
 
-ID 名前空間は ID サービスのコンポーネントで、顧客 ID に追加のコンテキストを提供するインジケーターとして機能します。一般的に使用される ID 名前空間の例としては、「電子メール」が挙げられます。複数の Web サイトで同じ電子メールアドレスが使用されると、同じ顧客に属する複数の異なる（それぞれが一意の顧客 ID を持つ） ID を結合できます。Experience Platform では、ID 名前空間を使用して、ユーザーインターフェイス内の個々のプロファイルを検索できます。プロファイルの表示について詳しくは、「[プロファイルビューアの概要](/help/rtcdp/profile/profile-viewer.md)」を参照してください。ID 名前空間について詳しくは、Adobe I/O の『[ID 名前空間の概要](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)』を参照してください。
+ID 名前空間は ID サービスのコンポーネントで、顧客 ID に追加のコンテキストを提供するインジケーターとして機能します。一般的に使用される ID 名前空間の例としては、「電子メール」が挙げられます。複数の Web サイトで同じ電子メールアドレスが使用されると、同じ顧客に属する複数の異なる（それぞれが一意の顧客 ID を持つ） ID を結合できます。Experience Platform では、ID 名前空間を使用して、ユーザーインターフェイス内の個々のプロファイルを検索できます。プロファイルの表示について詳しくは、「[プロファイルビューアの概要](/help/rtcdp/profile/profile-viewer.md)」を参照してください。ID名前空間の詳細については、「ID名前空間の概要」を参照し [てくださ](../../identity-service/namespaces.md)い。
 
 ## ID グラフ
 
@@ -27,4 +27,4 @@ ID サービスは、組織のみが表示できるデータに基づいて構�
 
 ## 次の手順
 
-ID および ID 間の関係は、ID サービスによって定義および維持され、リアルタイム顧客プロファイルによって使用されて個々の顧客とそのインタラクションの全体像を作成します。詳しくは、[Adobe I/O の ID サービスのドキュメント](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md)を参照してください。
+ID および ID 間の関係は、ID サービスによって定義および維持され、リアルタイム顧客プロファイルによって使用されて個々の顧客とそのインタラクションの全体像を作成します。詳しくは、IDサービスのドキュメントを参 [照してください](../../identity-service/home.md)。
