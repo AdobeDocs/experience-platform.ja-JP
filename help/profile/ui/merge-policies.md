@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: ポリシーのマージユーザーガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 83c7ff45af7266904121b7ff6edcb0f9b0559fee
+source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
 
 ---
 
@@ -82,10 +82,19 @@ Experience Platformユーザーインターフェイス内で、結合ポリシ�
 
 ![](../images/merge-policies/edit-screen.png)
 
-必要な変更を行ったら、「 **Save** 」をクリックして「 *Merge policies* 」タブに戻り、更新されたマージポリシー情報が表示されるようになります。
+必要な変更を行ったら、「 **Save** 」をクリックして「 *Merge policies* 」タブに戻り、更新されたマージポリシー情報が表示されるようにします。
 
 ![](../images/merge-policies/edited.png)
 
+## データガバナンスポリシー違反
+
+結合ポリシーを作成または更新すると、結合ポリシーが組織で定義されたデータ使用ポリシーに違反しているかどうかを確認するチェックが実行されます。 データ使用ポリシーは、Adobe Experience Platform Data Governanceの一部で、特定のプラットフォームデータに対して実行を許可（制限）するマーケティングアクションの種類を記述するルールです。 例えば、マージポリシーを使用して、サードパーティ宛先に対してアクティブ化されたセグメントを作成し、組織でデータ使用ポリシーが設定されている場合、特定のデータをサードパーティにエクスポートできないと、マージポリシーを保存しようとすると、「データ管理ポリシー違反が検出されます。
+
+この通知には、表示されたデータ使用ポリシーのリストが含まれ、違反の詳細をリストから選択して違反の詳細を違反の詳細に違反することができます。 アクティベーションポリシーを選択すると、「 *Data lineage* 」タブに「 *Reason for violation* 」と「 *Affected*」の各違反の理由が表示され、データ使用ポリシーの違反の詳細が表示されます。
+
+Adobe Experience Platform内でのデータガバナンスの実行方法について詳しくは、まずデータガバナンスの概要を読ん [でください](../../data-governance/home.md)。
+
+![](../images/merge-policies/policy-violation.png)
 
 ## 次の手順
 
