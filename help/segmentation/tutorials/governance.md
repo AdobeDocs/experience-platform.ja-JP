@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ使用量のコンプライアンスをオーディエンスセグメントに適用
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -42,7 +42,7 @@ source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-> [!NOTE] プラットフォームのサンドボックスについて詳しくは、サンドボックスの概要ドキュメ [ントを参照してくださ](../../sandboxes/home.md)い。
+>[!NOTE] プラットフォームのサンドボックスについて詳しくは、サンドボックスの概要ドキュメ [ントを参照してくださ](../../sandboxes/home.md)い。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次のヘッダーが追加で必要です。
 
@@ -253,7 +253,7 @@ curl -X GET \
 
 ## データフィールドのフィルタ
 
-> [!NOTE] この手順はオプションです。 データ使用ラベルを調べる前の手順の結果に基づいてセグメントに含まれるデータを調整しない場合 [、ポリシー違反のデータを評価する最終手順に進む](#lookup-data-usage-labels-for-the-source-datasets)ことができます [](#evaluate-data-for-policy-violations)。
+>[!NOTE] この手順はオプションです。 データ使用ラベルを調べる前の手順の結果に基づいてセグメントに含まれるデータを調整しない場合 [、ポリシー違反のデータを評価する最終手順に進む](#lookup-data-usage-labels-for-the-source-datasets)ことができます [](#evaluate-data-for-policy-violations)。
 
 オーディエンスセグメントに含まれるデータを調整する場合は、次の2つの方法のいずれかを使用します。
 
