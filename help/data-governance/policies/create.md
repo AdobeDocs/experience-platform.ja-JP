@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ使用ポリシーの作成
 topic: policies
 translation-type: tm+mt
-source-git-commit: 04b2e07ba39df9f530c9c93c4bf1af9e2cf30169
+source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 ---
 
@@ -409,6 +409,8 @@ curl -X PATCH \
 
 ## 次の手順
 
-このチュートリアルに従うと、マーケティングアクションのDULEポリシーが正常に作成されます。 これで、DULEポリシーの適用に関するチュートリアルを [続けて、ポリシー違反を確認し](../enforcement/api-enforcement.md) 、エクスペリエンスアプリケーションでそれらを処理する方法を学ぶことができます。
+このチュートリアルに従うと、マーケティングアクションのデータ使用ポリシーが正しく作成されます。 データ使用ポリシーの適用に関するチュートリアルを [続けて、ポリシー違反を確認し](../enforcement/api-enforcement.md) 、エクスペリエンスアプリケーションでそれらを処理する方法を学ぶことができます。
 
-Policy Service APIで使用可能な様々な操作について詳しくは、Policy Service開発者ガイド [を参照してください](../api/getting-started.md)。 リアルタイム顧客プロファイルデータに対してDULEポリシーを適用する方法については、オーディエンスセグメントに対するデータ使用コンプライアンスの [適用に関するチュートリアルを参照してくださ](../../segmentation/tutorials/governance.md)い。
+Policy Service APIで使用可能な様々な操作について詳しくは、Policy Service開発者ガイド [を参照してください](../api/getting-started.md)。 リアルタイム顧客プロファイルデータに対してポリシーを適用する方法については、オーディエンスセグメントに対するデータ使用コンプライアンスの [適用に関するチュートリアルを参照してくださ](../../segmentation/tutorials/governance.md)い。
+
+Experience Platformユーザーインターフェイスで使用ポリシーを管理する方法については、ポリシーユーザーガイド [を参照してくださ](user-guide.md)い。
