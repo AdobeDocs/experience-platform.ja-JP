@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Data Governance
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: 42efd7295dd8002869694a146ea166ad21bd14bb
 
 ---
 
@@ -74,15 +74,11 @@ UIを使用してデータセッ [トとフィールドにラベルを適用す�
 
 マーケティングアクションの例としては、データセットをサードパーティのサービスにエクスポートする場合などが考えられます。 個人情報(PII)など特定のタイプのデータはエクスポートできず、「I」ラベル（IDデータ）がデータセットに適用されているというポリシーが設定されている場合は、Policy Serviceからデータ使用ポリシーの違反を知らせる応答が返されます。
 
-### データ使用ポリシーの作成方法と使用方法
+データ使用ラベルが適用されると、データステワードはDULE Policy Service APIまたはExperience Platformユーザーインターフェイスを使用してポリシーを作成できます。
 
-データ使用ラベルが適用されると、データステワードはDULE Policy Service APIを使用してポリシーを作成できます。
+DULE Policy Service APIで提供される主要な操作の実行について詳しくは、「 [Policy Service Developer Guide」を参照してください](api/getting-started.md)。 DULEポリシーの操作手順については、APIを使用したDULEポリシーの作成と評価に関す [るチュートリアルを参照してください](policies/create.md)。
 
-データ管理者として、Policy Service APIを使用して、DULEラベルを含むデータに対して実行されるマーケティングアクションに関連するポリシーを管理および評価できます。 APIを使用すると、ポリシーの作成と更新、ポリシーのステータスの決定、およびマーケティングアクションを使用して、特定のアクションがデータ使用ポリシーに違反しているかどうかを評価できます。
-
-Policy Service API内では、すべてのポリシーとマーケティングアクションは、「または」リソースと `core` 呼ばれ `custom` ます。 `core` リソースはアドビが定義および管理するのに対し `custom` 、リソースは個々の顧客が作成および管理するのです。 したがっ `custom` て、リソースは一意で、作成元の組織にのみ表示されます。
-
-DULE Policy Service APIで提供される主要な操作の実行について詳しくは、「 [Policy Service Developer Guide」を参照してください](api/getting-started.md)。 DULEポリシーの操作手順については、DULEポリシーの作成と評価に関するチュートリ [アルを参照してください](policies/create.md)。
+Experience Platform UIでポリシーを管理する方法について詳しくは、ポリシーユーザーガイドを [参照してください](policies/user-guide.md)。
 
 ## 今後のリリース
 
