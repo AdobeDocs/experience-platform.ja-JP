@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PSQLとの接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: 8310204071375a55329f661c9ac678f96979a594
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -65,7 +65,7 @@ psql (PostgreSQL) 9.5.14
 
 ![画像](../images/clients/psql/connect-bi.png)
 
-> [!IMPORTANT]:PCを使用している場合は、テキストエディタを使用してコマンド文字列の改行を削除し、文字列をコピーします。
+>[!IMPORTANT]:PCを使用している場合は、テキストエディタを使用してコマンド文字列の改行を削除し、文字列をコピーします。
 
 コマンド文字列をターミナルまたはコマンドウィンドウに貼り付け、Enterキーを押します。
 
