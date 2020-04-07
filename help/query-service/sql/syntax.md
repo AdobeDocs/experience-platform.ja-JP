@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL構文
 topic: syntax
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -317,7 +317,7 @@ where option can be one of:
 - `FORMAT`:出力形式を指定します。TEXT、XML、JSONまたはYAMLを指定できます。 テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムの解析が容易です。 このパラメーターのデフォルトは `TEXT`です。
 - `statement`:どれ `SELECT`も，,, `INSERT``UPDATE``DELETE``VALUES``EXECUTE``DECLARE``CREATE TABLE AS``CREATE MATERIALIZED VIEW AS` ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
-> [!IMPORTANT] このオプションを使用すると、実際にステートメントが実行さ `ANALYZE` れることに注意してください。 が返す `EXPLAIN` 出力は破棄されますが、 `SELECT` 文の他の副作用は通常どおり発生します。
+>[!IMPORTANT] このオプションを使用すると、実際にステートメントが実行さ `ANALYZE` れることに注意してください。 が返す `EXPLAIN` 出力は破棄されますが、 `SELECT` 文の他の副作用は通常どおり発生します。
 
 #### 例
 
