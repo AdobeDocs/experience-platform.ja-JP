@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ使用ラベルのユーザーガイド
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
 
 ## データセットレベルでのデータ使用ラベルの管理
 
-データセットレベルでデータ使用量ラベルを管理するには、既存のデータセットを選択するか、新しいデータセットを作成する必要があります。 Adobe Experience Platformにログインした後、左側のナビゲ **ーションで** 「Datasets _」を選択し、「_ Datasets」ワークスペースを開きます。 このページのリストでは、組織に属するデータセットを作成し、各データセットに関連する有用な詳細情報を示します。
+データセットレベルでデータ使用量ラベルを管理するには、既存のデータセットを選択するか、新しいデータセットを作成する必要があります。 Adobe Experience Platformにログインした後、左側のナビゲーシ **ョンで** 「Datasets _」を選択し、「Datasets_ 」ワークスペースを開きます。 このページのリストでは、組織に属するデータセットを作成し、各データセットに関連する有用な詳細情報を示します。
 
 ![Data Workspace内の「データセット」タブ](../images/labels/datasets.png)
 
@@ -98,6 +98,8 @@ source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
 ## 次の手順
 
 データセットおよびフィールドレベルでデータ使用ラベルを追加したら、データをExperience Platformに取り込み始めます。 詳しくは、開始の取り込みに関するドキュメ [ントを参照してくださ](../../ingestion/home.md)い。
+
+適用したラベルに基づいてデータ使用ポリシーを定義することもできます。 詳しくは、データ使用ポリシーの概 [要を参照してください](../policies/overview.md)。
 
 ## その他のリソース
 
