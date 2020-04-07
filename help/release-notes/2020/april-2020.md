@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
+source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 
 ---
 
@@ -31,6 +31,26 @@ source-git-commit: c3166bea873572fe6ee2e63dfd13bc64d81e252b
 * None
 
 プライバシーサービスの詳細については、開始サービスの概要を [参照してください](../../privacy-service/home.md)。
+
+## ソース
+
+Adobe Experience Platformは、外部ソースからデータを取り込み、Platformサービスを使用してデータの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、お使いのCRMシステムなど、様々なソースからデータを取り込むことができます。
+
+エクスペリエンスプラットフォームは、様々なデータプロバイダーのソース接続を簡単に設定できるRESTful APIとインタラクティブUIを提供します。 これらのソース接続を使用すると、外部ストレージシステムおよびCRMサービスの認証と接続、取り込みの実行時間の設定、データ取り込みのスループットの管理を行うことができます。
+
+### 新機能
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| データベースのAPIとUIのサポート | Apache Spark(HDInsights)、Azure Synapse Analytics、Azure Tableストレージ、Hive(HDInsights)およびPhoenix用の新しいソースコネクタ。 |
+| 支払いベースのアプリケーションのAPIとUIのサポート | PayPal用の新しいソースコネクタ。 |
+| プロトコルベースのアプリケーションのAPIとUIのサポート | 汎用OData用の新しいソースコネクタ。 |
+
+### 既知の問題
+
+* None
+
+For more information about sources, see the [sources overview](../../source-connectors/home.md).
 
 <!-- ## Access control
 
