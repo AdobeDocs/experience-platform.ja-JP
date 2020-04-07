@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Governance Help
+user-guide-title: Adobe Experience Platform Data Governanceヘルプ
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 
 ---
 
@@ -17,6 +17,7 @@ source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
    * [サポートされるデータ使用ラベル](labels/reference.md)
 * データ使用ポリシー {#policies}
    * [データ使用ポリシーの概要](policies/overview.md)
+   * [データ使用ポリシーユーザーガイド](policies/user-guide.md)
    * [Policy Service APIを使用してデータ使用ポリシーを作成する](policies/create.md)
 * ポリシーの適用 {#enforcement}
    * [ポリシーの適用の概要](enforcement/overview.md)
