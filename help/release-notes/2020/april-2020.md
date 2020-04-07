@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Experience Platformリリースノート（2020年4月9日）
 doc-type: release notes
-last-update: March 4, 2020
+last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 1e2299980572116d589e7164dd20e171433a284a
+source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
 
 ---
 
@@ -36,7 +36,7 @@ DULEフレームワークは、Experience Platformユーザーインターフェ
 
 ## インテリジェントサービス
 
-インテリジェント・サービスは、マーケティング・アナリストや実践者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用する機能を提供します。 これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。 さらに、マーケティング担当者は、Adobe Experience Cloud、Adobe Experience Platformおよびサードパーティアプリケーションで予測をアクティブ化できます。
+インテリジェント・サービスは、マーケティング・アナリストや実践者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用する機能を提供します。 これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。 さらに、マーケティング担当者は、Adobe Experience Cloud、Adobe Experience Platformおよびサードパーティのアプリケーションで予測をアクティブ化できます。
 
 **主な特長**
 
