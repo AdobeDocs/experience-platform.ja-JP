@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: APIを使用したプロファイルおよびIDサービスのデータセットの設定
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 ---
 
@@ -169,7 +169,6 @@ curl -X GET \
         "createdUser": "{CREATED_BY}",
         "updatedUser": "{CREATED_BY}",
         "viewId": "5b020a27e7040801dedbf46f",
-        "aspect": "production",
         "status": "enabled",
         "fileDescription": {
             "persisted": true,
