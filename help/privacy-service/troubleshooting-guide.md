@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プライバシーサービスFAQ
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -14,6 +14,52 @@ source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
 このドキュメントでは、Adobe Experience Platformプライバシーサービスに関するよくある質問に対する回答を示します。
 
 プライバシーサービスは、顧客データのプライバシーリクエストを管理するのに役立つRESTful APIおよび会社インターフェイスを提供します。 プライバシーサービスを使用すると、個人または個人の顧客データへのアクセスや削除のリクエストを送信でき、組織や法的プライバシーに関する規制への自動コンプライアンスが容易になります。
+
+## APIでプライバシーリクエストを行う場合、ユーザーとユーザーIDの違いは何ですか。 {#user-ids}
+
+APIで新しいプライバシージョブを作成するには、リクエストのJSONペイロードに、プライバシーリクエストが適用される各リストに固有の情報をする配列を含める必要があります。 `users` 配列内の各項目 `users` は、値で識別される特定のユーザーを表すオブジェクト `key` です。
+
+次に、各ユーザオブジェクト(または `key`)には独自の配列が含ま `userIDs` れます。 この配列は、そのリストに固有 **のID値を持ちます**。
+
+Consider the following example `users` array:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+この配列には2つのオブジェクトが含まれ、それぞれの値(「DavidSmith」 `key` と「user12345」)で識別される個々のユーザーを表します。 「DavidSmith」には1つのID（電子メールアドレス）しかありませんが、「user12345」には2つ（電子メールアドレスとECID）があります。
+
+ユーザID情報の提供について詳しくは、プライバシーリクエストのIDデータに関す [るガイドを参照してください](identity-data.md)。
+
 
 ## プラットフォームに誤って送信されたデータをクリーンアップするために、プライバシーサービスを使用できますか。
 
