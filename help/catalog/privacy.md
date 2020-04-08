@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データレークでのプライバシー要求の処理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5f0e0deb4a2fae636ac4d2313a6541c25309c294
+source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 ---
 
@@ -64,7 +64,6 @@ Adobe Experience Platform Privacy Serviceは、General Data Protection Regulatio
         "createdUser": "{USER_ID}",
         "updatedUser": "{USER_ID}",
         "viewId": "5d8e9cf5872f18164763f972",
-        "aspect": "production",
         "status": "enabled",
         "fileDescription": {
             "persisted": true,
@@ -247,6 +246,6 @@ Experience Platformがプライバシーサービスから削除リクエスト�
 
 ## 次の手順
 
-このドキュメントを読むことで、Data Lakeのプライバシーリクエストの処理に関する重要な概念を紹介します。 IDデータの管理方法とプライバシージョブの作成方法についての理解を深めるために、このガイド全体に記載されているドキュメントを読み続けることをお勧めします。
+このドキュメントを読むことで、Data Lakeのプライバシーリクエストの処理に関する重要な概念を紹介します。 IDデータの管理方法とプライバシージョブの作成方法に関する理解を深めるために、このガイド全体に記載されているドキュメントを読み続けることをお勧めします。
 
 ドキュメントストアのプライバ [シー要求を処理する手順については、リアルタイム顧客プロファイルの](../profile/privacy.md) 「プライバシー要求の処理に関するプロファイル」を参照してください。
