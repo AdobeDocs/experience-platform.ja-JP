@@ -4,7 +4,7 @@ solution: Experience Platform
 title: カタログサービス開発者ガイドの付録
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b2524fcfda578d0debb89623bec6edb537db852
+source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 ---
 
@@ -131,7 +131,6 @@ curl -X POST \
       "method": "post",
       "body": {
         "status": "enabled",
-        "aspect": "production",
         "dataSetId": "<<firstObjectId.id>>"
       }
     }
@@ -184,7 +183,7 @@ curl -X POST \
 
 ### Pragma
 
-場合によっては、情報を保存せずにオブジェクトを検証する必要があります。 の値でヘ `Pragma` ッダーを使用す `validate-only` ると、検証目的でのみPOSTまたはPUTリクエストを送信でき、データに対する変更が保持されません。
+場合によっては、情報を保存せずにオブジェクトを検証する必要があります。 の値でヘッ `Pragma` ダーを使用すると、検 `validate-only` 証の目的でのみPOSTまたはPUTリクエストを送信でき、データに対する変更が保持されるのを防ぐことができます。
 
 ## データの圧縮
 
