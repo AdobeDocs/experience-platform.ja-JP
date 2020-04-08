@@ -1,16 +1,17 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Release Notes
+user-guide-title: Adobe Experience Platform リリースノート
 translation-type: tm+mt
-source-git-commit: aeadd97af86d2f1177b815daaffe01794d410ae6
+source-git-commit: fa1c78ff7d9fd682d93e1feae510fc1823f2d998
 
 ---
 
 
 # Adobe Experience Platform リリースノート {#release-notes}
 
-* [2020 年 3 月](latest/latest.md)
+* [2020 年 4 月](latest/latest.md)
+* [2020 年 3 月](2020/march-2020.md)
 * [2020 年 2 月](2020/february-2020.md)
 * [2020 年 1 月](2020/january-2020.md)
 * 2019 {#2019}
