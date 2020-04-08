@@ -4,7 +4,7 @@ solution: Experience Platform
 title: APIを使用したデータの書き出し
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
 
 ---
 
@@ -87,8 +87,7 @@ curl -X POST \
           "persisted": true,
           "containerFormat": "parquet",
           "format": "parquet"
-        },
-        "aspect": "production"
+        }
       }'
 ```
 
