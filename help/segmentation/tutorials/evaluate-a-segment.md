@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セグメントの評価
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
 
 ---
 
@@ -504,8 +504,7 @@ curl -X POST \
         "persisted": true,
         "containerFormat": "parquet",
         "format": "parquet"
-    },
-    "aspect": "production"
+    }
 }'
 ```
 
