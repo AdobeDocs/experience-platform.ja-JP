@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Segmentation Service開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 38762fa57188ed018c4347c07765f3d09daef2e6
+source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
 
 ---
 
@@ -40,7 +40,7 @@ Segmentation Service APIドキュメントには、リクエストの形式を�
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->**注意：** エクスペリエンスプラットフォームでのサンドボックスの操作について詳しくは、サンドボックスの概要ドキュメ [ントを参照してくださ](../../sandboxes/home.md)い。
+>[!NOTE] エクスペリエンスプラットフォームでのサンドボックスの操作について詳しくは、サンドボックスの概要ドキュメ [ントを参照してくださ](../../sandboxes/home.md)い。
 
 <!-- ## Estimates
 
