@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platformの観察性インサイト
 topic: overview
 translation-type: tm+mt
-source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
+source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
 
 観察性インサイトは、Adobe Experience Platformで主要な観察性指標を公開できるRESTful APIです。 これらの指標は、プラットフォームの使用状況の統計、プラットフォームサービスのヘルスチェック、様々なプラットフォーム機能の過去の傾向、パフォーマンス指標に関する洞察を提供します。
 
-このドキュメントでは、Observatibility Insights APIの呼び出し例を示し、サービスと互換性のある公開された指標のリストを提供します。 監視性エンドポイントの完全なリストについては、『 [Observatibility Insights APIリファレンス』を参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)。
+このドキュメントでは、Observatibility Insights APIの呼び出し例を示します。 監視性エンドポイントの完全なリストについては、『 [Observatibility Insights APIリファレンス』を参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)。
 
 ## はじめに
 
@@ -23,11 +23,9 @@ source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。 プラットフォームのサンドボックスについて詳しくは、サンドボックスの概要ドキュメ [ントを参照してくださ](../sandboxes/home.md)い。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、サンドボックスの概要ドキュメ [ントを参照してくださ](../sandboxes/home.md)い。
 
 ## 観察性指標の取得
 
@@ -48,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | パラメーター | 説明 |
 | --- | --- |
 | `{METRIC}` | 表示する指標。 1回の呼び出しで複数の指標を組み合わせる場合、アンパサンド(`&`)を使用して個々の指標を区切る必要があります。 例：`metric={METRIC_1}&metric={METRIC_2}`。 |
-| `{ID}` | 指標を公開する特定のプラットフォームリソースの識別子。 このIDは、使用する指標に応じて、オプション、必須、または適用されない場合があります。 使用可能な指標のリスト、および各指標でサポートされるID（必須と任意の両方）については、以下の利用可能な指標のリファレンスドキュメント [を参照し](metrics.md) 、 |
+| `{ID}` | 指標を公開する特定のプラットフォームリソースの識別子。 このIDは、使用する指標に応じて、オプション、必須、または適用されない場合があります。 使用可能な指標のリスト、および各指標でサポートされるID（必須と任意の両方）については、使用可能な指標に関するリファレンスドキュメントを参 [照してください](metrics.md)。 |
 | `{DATE_RANGE}` | ISO 8601形式(例： `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`)で公開する指標の日付範囲。 |
 
 **リクエスト**
