@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
+source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 
 ---
 
@@ -34,6 +34,22 @@ DULEフレームワークは、Experience Platformユーザーインターフェ
 * None.
 
 詳しくは、「データガバナンスの概要」を [参照してください](../../data-governance/home.md)。
+
+
+## 宛先
+
+アドビの [Real-time Customer Data Platformでは](../../rtcdp/overview.md)、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータをアクティブ化します。
+
+### 新しい宛先
+
+Adobe Real-time CDPは、50を超えるExperience Cloud Launch拡張に対するデータのアクティベーションをサポートするようになり、解析、パーソナライゼーション、その他の使用例を可能にします。 詳しくは、以下を参照してください。
+
+| ドキュメント | 説明 |
+|--- | ---|
+| [宛先のタイプとカテゴリ](/help/rtcdp/destinations/destination-types.md) | この記事では、Adobe Real-time CDPインターフェイスの接続と拡張の違いを説明し、これらの各宛先を使用する場合を推奨します。 |
+| [エクスペリエンスプラットフォーム起動の拡張](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | このページでは、Launchの拡張機能の概要、Launchの使用例、およびAdobe Real-time CDPの各Launchの拡張機能に関するドキュメントへのリンクを説明します。 |
+
+詳しくは、宛先の概要を参照し [てください](/help/rtcdp/destinations/destinations-overview.md)。
 
 ## インテリジェントサービス
 
