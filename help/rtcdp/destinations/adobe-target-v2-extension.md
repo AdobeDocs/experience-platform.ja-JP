@@ -4,12 +4,12 @@ seo-title: Adobe Target v2 拡張機能
 description: Adobeターゲットv2拡張機能は、Adobe Real-time Customer Data Platformのパーソナライゼーション先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
 
-# Adobeターゲットv2拡張機能(#adobe-ターゲット-v2-extension)
+# Adobe Target v2 Extension {#adobe-target-v2-extension}
 
 ## 概要 {#overview}
 
