@@ -4,7 +4,7 @@ seo-title: Adobe Livefyre拡張機能
 description: Adobe Livefyre拡張機能は、Adobe Real-time Customer Data Platformのソーシャルターゲットです。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -18,6 +18,8 @@ Adobe Livefyreを使用すると、ユーザーが生成したコンテンツの
 Adobe Livefyreは、Adobe Real-time Customer Data Platformのソーシャル拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能のページを参照してください](https://exchange.adobe.com/experiencecloud.details.100464.html)。
 
 この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでの起動拡張機能の動作について詳しくは、「エクスペリエンスプラットフォーム起動拡張機能の概 [要」を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
+
+![Adobe Livefyre拡張機能](/help/rtcdp/destinations/assets/adobe-livefyre-extension.png)
 
 
 ## 前提条件 {#prerequisites}
