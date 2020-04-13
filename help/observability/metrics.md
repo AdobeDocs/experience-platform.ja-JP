@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 使用可能な指標
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
+source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 次の表に、Adobe Experience Platform Data Ingestの指標の概要を示します。 太字の指標は **ストリーミング** 取り込み指標です。
 
 | インサイト指標 | 説明 | IDクエリ |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | 作成されたデータセットの合計数。 | なし |
 | timeseries.ingestion.dataset.size | 1つまたはすべてのデータセット用に取り込まれたすべてのデータの累積サイズ。 | データセットID（オプション） |
 | timeseries.ingestion.dataset.dailysize | 1つのデータセットまたはすべてのデータセットに対して毎日の使用量ベースで取り込まれるデータのサイズ。 | データセットID（オプション） |
@@ -46,7 +46,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 次の表に、Adobe Experience Platform IDサービスの指標の概要を示します。
 
 | インサイト指標 | 説明 | IDクエリ |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | 1つのデータセットまたはすべてのデータセットに対して、IDサービスによってデータソースに書き込まれたレコードの数。 | データセットID（オプション） |
 | timeseries.identity.dataset.recordfailed.count | 1つのデータセットまたはすべてのデータセットに対して、IDサービスが失敗したレコードの数。 | データセットID（オプション） |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | ユーザーが正常に取り込んだIDレコードの名前空間数。 | 名前空間ID(**必須**) |
@@ -62,7 +62,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 次の表に、Adobe Experience Platformプライバシーサービスの指標の概要を示します。
 
 | インサイト指標 | 説明 | IDクエリ |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | GDPRから作成されたジョブの合計数。 | ENV(必&#x200B;**須**) |
 | timeseries.gdpr.jobs.completedjobs.count | GDPRから完了したジョブの合計数。 | ENV(必&#x200B;**須**) |
 | timeseries.gdpr.jobs.errorjobs.count | GDPRからのエラー・ジョブの合計数。 | ENV(必&#x200B;**須**) |
@@ -72,7 +72,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 次の表に、Adobe Experience Platformプラットフォームクエリサービスの指標の概要を示します。
 
 | インサイト指標 | 説明 | IDクエリ |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | 定期的でないスケジュール済みクエリの合計数。 | なし |
 | timeseries.queryservice.query.scheduledrecurring.count | 定期的なスケジュールされたクエリの合計数。 | なし |
 | timeseries.queryservice.query.batchquery.count | 実行されたバッチクエリの合計数。 | なし |
@@ -85,7 +85,7 @@ source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
 次の表に、リアルタイム顧客プロファイルの指標
 
 | インサイト指標 | 説明 | IDクエリ |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | データレークから読み取ったレコードの数(プロファイル別)、1つのデータセットまたはすべてのデータセット用。 | データセットID（オプション） |
 | timeseries.profiles.dataset.recordsuccess.count | データソース、1つのデータセット、またはすべてのプロファイルセットに対してデータソースに書き込まれたレコードの数。 | データセットID（オプション） |
 | timeseries.profiles.dataset.recordfailed.count | 1つのデータセットまたはすべてのプロファイルセットに対して、失敗したレコードの数（データベース別）。 | データセットID（オプション） |
