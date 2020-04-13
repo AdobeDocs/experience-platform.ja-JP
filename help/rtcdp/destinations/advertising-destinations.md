@@ -4,7 +4,7 @@ seo-title: 広告の宛先
 description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 seo-description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -18,8 +18,8 @@ source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 現在、リアルタイムCDPは、以下に示す広告先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 * [Adobe Advertising Cloud(Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-* [Awin Adveritisingコンバージョンタグ（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Awin Adveritising Mastertag(Experience Platform Launch Extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Awin広告コンバージョンタグ（エクスペリエンスプラットフォームの起動の拡張）](/help/rtcdp/destinations/awin-conversiontag-extension.md)
+* [Awin Advertising Mastertag(Experience Platform Launch Extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Beemray（エクスペリエンスプラットフォームの起動の拡張）](beemray-extension.md)
 * [Bing Adsユニバーサルイベントトラッキング（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/bing-ads-extension.md)
 * [ブランチ（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/branch-extension.md)
