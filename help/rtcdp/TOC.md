@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: リアルタイム顧客データプラットフォームヘルプ
 translation-type: tm+mt
-source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -99,12 +99,12 @@ source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
          * [勝者（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/gainsight-extension.md)
          * [Kickfire（エクスペリエンスプラットフォーム起動の拡張）](/help/rtcdp/destinations/kickfire-extension.md)
          * [Marketto Webパーソナライゼーション（エクスペリエンスプラットフォームの起動の拡張）](destinations/marketo-web-personalization-extension.md)
-      * ソーシャルネットワークの宛先{#social-network-destinations}
+      * ソーシャルネットワークの宛先{#social-destinations}
          * [ソーシャルネットワークの宛先の概要](/help/rtcdp/destinations/social-network-destinations.md)
          * [ソーシャルネットワークの宛先の認証フロー](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre(Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-livefyre-extension.md)
          * [Facebookの宛先](/help/rtcdp/destinations/facebook-destination.md)
-      * 調査先 {#surveys}
+      * 調査先 {#survey-destinations}
          * [調査先の概要](/help/rtcdp/destinations/survey-destinations.md)
          * [予測（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/foresee-extension.md)
          * [InMoment(Experience Platform Launch extension)](/help/rtcdp/destinations/inmoment-extension.md)
