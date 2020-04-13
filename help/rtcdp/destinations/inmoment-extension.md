@@ -4,7 +4,7 @@ seo-title: InMoment拡張
 description: InMoment拡張は、Adobe Real-time Customer Data Platformの調査先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ InMoment Launch統合を使用すると、Digital Intercept製品を介したオ
 InMomentは、Adobe Real-time Customer Data Platformの調査拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能のページを参照してください](https://exchange.adobe.com/experiencecloud.details.100847.html)。
 
 この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでの起動拡張機能の動作について詳しくは、「エクスペリエンスプラットフォーム起動拡張機能の概 [要」を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
+
+![Inmoment extension](/help/rtcdp/destinations/assets/inmoment-extension.png)
 
 ## 前提条件 {#prerequisites}
 
