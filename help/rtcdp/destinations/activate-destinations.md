@@ -4,7 +4,7 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 ---
 
@@ -29,7 +29,14 @@ source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 5. *オプション*&#x200B;この手順は、電子メールマーケティングの宛先にマッピングされたセグメントにのみ適用されます。<br> ページ **[!UICONTROL Destination Attributes]** で、宛先 **[!UICONTROL Add new field]** に送信する属性を選択します。
 属性の 1 つをユニオンスキーマの[一意の識別子](/help/rtcdp/destinations/email-marketing-destinations.md#identity)にすることをお勧めします。必須属性について詳しくは、「[電子メールマーケティングの宛先](/help/rtcdp/destinations/email-marketing-destinations.md#identity)」で「ID」を参照してください。
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. On the **[!UICONTROL Schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+
+   >[!IMPORTANT]
+   >
+   >ソーシャルの宛先の場合は、この手順でオーディエンスの接触チャネルを選択する必要があります。 次の手順に進むには、次の画像のオプションの1つを選択してください。
+
+   ![データ接触チャネル](/help/rtcdp/destinations/assets/choose-data-origin.png)
+
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 ![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
@@ -60,6 +67,10 @@ Salesforce_id3544_20191122124530.csv
 ### 広告の宛先
 
 データをアクティブ化する対象の広告の宛先を確認します。アクティベーションに成功した場合、オーディエンスは広告プラットフォームに入力されます。
+
+### ソーシャルネットワークの宛先
+
+Facebookの場合、アクティベーションが成功すると、Facebookのカスタムオーディエンスが [Facebook広告マネージャーでプログラム的に作成されます](https://www.facebook.com/adsmanager/manage/)。 ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つか資格を持たないので、ユーザーのセグメントメンバーシップが追加および削除されます。
 
 ## アクティベーションの無効化 {#disable-activation}
 
