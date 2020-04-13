@@ -4,7 +4,7 @@ seo-title: Confirm Digital Feedback extension
 description: デジタルフィードバックの確認拡張は、Adobe Real-time Customer Data Platformの顧客宛先の音声です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -25,6 +25,9 @@ Confirm Digital Feedbackソリューションは、Webサイトのトラフィ�
 Adobe Real-time Customer Data PlatformのVoice of the Customer extensionであることを確認します。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能のページを参照してください](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html)。
 
 この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでの起動拡張機能の動作について詳しくは、「エクスペリエンスプラットフォーム起動拡張機能の概 [要」を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
+
+
+![Confirm Digital Feedback extension](assets/confirmit-digital-feedback-extension.png)
 
 ## 前提条件 {#prerequisites}
 
