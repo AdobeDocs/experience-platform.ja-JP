@@ -4,8 +4,9 @@ description: Experience Platformリリースノート（2020年3月12日）
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
+keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
 
 ---
 
@@ -22,8 +23,7 @@ Adobe Experience Platform Data Governanceは、顧客データを管理し、デ
 
 ### 新機能
 
->[!NOTE]
->次の新機能の一部は現在ベータ版で、一部のユーザーはご利用いただけません。 ベータ版の機能は変更される可能性があります。
+>[!NOTE] 次の新機能の一部は現在ベータ版で、一部のユーザーはご利用いただけません。 ベータ版の機能は変更される可能性があります。
 
 | 機能 | 説明 |
 | ------- | ----------- |
