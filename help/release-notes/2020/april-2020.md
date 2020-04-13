@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: 61b2df88bfe8cadd975eaa0b98872710aa3832d3
 
 ---
 
@@ -34,9 +34,25 @@ DULEフレームワークは、Experience Platformユーザーインターフェ
 
 詳しくは、「データガバナンスの概要」を [参照してください](../../data-governance/home.md)。
 
+
+## 宛先
+
+アドビの [Real-time Customer Data Platformでは](../../rtcdp/overview.md)、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータをアクティブ化します。
+
+### 新しい宛先
+
+Adobe Real-time CDPは、50を超えるExperience Cloud Launch拡張に対するデータのアクティベーションをサポートするようになり、解析、パーソナライゼーション、その他の使用例を可能にします。 詳しくは、以下を参照してください。
+
+| ドキュメント | 説明 |
+|--- | ---|
+| [宛先のタイプとカテゴリ](/help/rtcdp/destinations/destination-types.md) | この記事では、Adobe Real-time CDPインターフェイスの接続と拡張の違いを説明し、これらの各宛先を使用する場合を推奨します。 |
+| [エクスペリエンスプラットフォーム起動の拡張](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | このページでは、Launchの拡張機能の概要、Launchの使用例、およびAdobe Real-time CDPの各Launchの拡張機能に関するドキュメントへのリンクを説明します。 |
+
+詳しくは、宛先の概要を参照し [てください](/help/rtcdp/destinations/destinations-overview.md)。
+
 ## インテリジェントサービス
 
-インテリジェント・サービスは、マーケティング・アナリストや実践者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用する機能を提供します。 これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。 さらに、マーケティング担当者は、Adobe Experience Cloud、Adobe Experience Platformおよびサードパーティのアプリケーションで予測をアクティブ化できます。
+インテリジェント・サービスは、マーケティング・アナリストや実践者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用する機能を提供します。 これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。 さらに、マーケティング担当者は、Adobe Experience Cloud、Adobe Experience Platformおよびサードパーティアプリケーションで予測をアクティブ化できます。
 
 **主な特長**
 
