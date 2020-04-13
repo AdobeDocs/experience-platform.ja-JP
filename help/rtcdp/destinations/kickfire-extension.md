@@ -4,7 +4,7 @@ seo-title: KickFire拡張
 description: KickFire拡張機能は、Adobe Real-time Customer Data Platformのパーソナライゼーション先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 seo-description: KickFire拡張機能は、Adobe Real-time Customer Data Platformのパーソナライゼーション先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ KickFireのIPアドレスインテリジェンスとB2Bファーストグラフ�
 KickFireは、Adobe Real-time Customer Data Platformのパーソナライゼーション拡張機能です。 拡張機能について詳しくは、KickfireのWebサイトを参照 [してください](https://www.kickfire.com/)。
 
 この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでの起動拡張機能の動作について詳しくは、「エクスペリエンスプラットフォーム起動拡張機能の概 [要」を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
+
+![キックファイア拡張](/help/rtcdp/destinations/assets/kickfire-extension.png)
 
 ## 前提条件 {#prerequisites}
 
