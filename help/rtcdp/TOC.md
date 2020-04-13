@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: リアルタイム顧客データプラットフォームヘルプ
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
@@ -36,6 +36,7 @@ source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
          * [Awin広告コンバージョンタグ（エクスペリエンスプラットフォームの起動の拡張）](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Awin Advertising Mastertag(Experience Platform Launch Extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray（エクスペリエンスプラットフォームの起動の拡張）](/help/rtcdp/destinations/beemray-extension.md)
+         * [Bing Adsユニバーサルイベントトラッキング（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/bing-ads-extension.md)
          * [ブランチ（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
          * [Facebookピクセル（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/facebook-pixel-extension.md)
