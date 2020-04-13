@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: リアルタイム顧客データプラットフォームヘルプ
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -30,11 +30,11 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
       * アドビの宛先 {#adobe-destinations}
          * [アドビの宛先の概要](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-      * 広告の宛先 {#advertiser-destinations}
+      * 広告の宛先 {#advertising-destinations}
          * [広告の宛先の概要](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud(Experience Platform Launch extension)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
-         * [Awin Adveritisingコンバージョンタグ（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-         * [Awin Adveritising Mastertag(Experience Platform Launch Extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+         * [Awin広告コンバージョンタグ（エクスペリエンスプラットフォームの起動の拡張）](/help/rtcdp/destinations/awin-conversiontag-extension.md)
+         * [Awin Advertising Mastertag(Experience Platform Launch Extension)](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray（エクスペリエンスプラットフォームの起動の拡張）](/help/rtcdp/destinations/beemray-extension.md)
          * [ブランチ（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight（エクスペリエンスプラットフォーム起動拡張）](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
