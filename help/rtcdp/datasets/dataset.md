@@ -4,15 +4,13 @@ seo-title: Adobe Experience Platform データセットの概要
 description: Adobe Experience Platform データセットの概要
 seo-description: Adobe Experience Platform データセットの概要
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: 1ce68714cb5e484c7150be30c0347274d1414258
 
 ---
 
 
 # データセット
 
-Experience Platform 内の「データセット」ワークスペースを使用すると、IMS 組織が作成したすべてのデータセットを表示および管理し、新しいデータセットを作成できます。
+Adobe Experience Platformユーザーインターフェイス内で、IMS組織が作成したすべてのデータセットの表示と管理、および新しいデータセットの作成を行うことができます。 UIでデータセットを参照するには、左側のナ **[!UICONTROL Datasets]** ビゲーションでを選択します。 The *[!UICONTROL Browse]* tab contains a list of datasets, including columns showing Name, Created (date and time), Source, Schema, and Last Batch Status, as well as the date and time the dataset was Last Updated.
 
-View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. 「データセット」ワークスペースには、名前、作成日時、ソース、スキーマ、最終バッチステータスを示す列、および最終更新日時を含むデータセットのリストが含まれています。
-
-データセットワークスペースの使用に関する詳細は、「データセットの概要」を [参照してくださ](../../catalog/datasets/overview.md)い。
+Experience Platformのデータセットについて詳しくは、まずデータセットの概要を [参照してください](../../catalog/datasets/overview.md)。
