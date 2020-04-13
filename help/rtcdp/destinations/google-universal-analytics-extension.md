@@ -4,7 +4,7 @@ seo-title: Google Universal Analyticsの拡張機能
 description: Google Universal Analytics拡張機能は、Adobe Real-time Customer Data Platformの解析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 seo-description: Google Universal Analytics拡張機能は、Adobe Real-time Customer Data Platformの解析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ Google Universal Analyticsを使用すると、広告のROIを測定し、Flash�
 Google Universal Analyticsは、Adobe Real-time Customer Data PlatformのAnalytics拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能のページを参照してください](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html)。
 
 この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでの起動拡張機能の動作について詳しくは、「エクスペリエンスプラットフォーム起動拡張機能の概 [要」を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
+
+![Google Universal Analyticsの拡張機能](/help/rtcdp/destinations/assets/google-universal-analytics-extension.png)
 
 
 ## 前提条件 {#prerequisites}
