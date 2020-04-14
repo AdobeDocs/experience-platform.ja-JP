@@ -4,7 +4,7 @@ seo-title: Bing Ads Universalイベントトラッキング(UET)拡張
 description: Bing Ads Universal Customer Tracking(UET)拡張は、Adobe Real-time Customer Data Platformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 2a94444b35cac0c002d729798d96fd54aaafbacd
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
@@ -19,7 +19,7 @@ Bing Ads Universal Customer Tracking(UET)は、Adobe Real-time Customer Data Pla
 
 この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでの起動拡張機能の動作について詳しくは、「エクスペリエンスプラットフォーム起動拡張機能の概 [要」を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
 
-![Bing Ads拡張](assets/bing-ads-extension.png)
+![Bing Ads拡張](assets/bing-extension.png)
 
 
 ## 前提条件 {#prerequisites}
