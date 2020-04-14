@@ -4,7 +4,7 @@ seo-title: エクスペリエンスプラットフォーム起動の拡張
 description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
 seo-description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
 translation-type: tm+mt
-source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
@@ -18,13 +18,13 @@ Launch は、顧客体験の実現に必要なすべての分析、マーケテ�
 * Experience Platform Launch [documentation](https://docs.adobe.com/content/help/ja-JP/launch/using/overview.html)
 * エクスペリエンスプラットフォームの起 [動のクイック開始ビデオ](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html)。 開始とエ [クスペリエンスプラットフォームの起動](https://www.youtube.com/embed/rwqqkG1SERU)[/公開](https://helpx.adobe.com/jp/analytics/how-to/adobe-launch-publishing-process.html)プロセスの概要を参照し、次の概念に進みます。
 
-## Adobe Real-time CDPインターフェイスでの起動の拡張機能の検索方法
+## Adobe Real-time CDPインターフェイスでの起動の拡張機能の検索方法 {#how-to-find-extensions-in-interface}
 
 Adobe Real-time CDPインターフェイスで起動の拡張機能を探すには、フィルタ **[!UICONTROL Destinations > Catalog]** ーを参照し **[!UICONTROL Extensions]** て選択し **[!UICONTROL Types]** ます。
 
 ![インターフェイスの拡張フィルター](/help/rtcdp/destinations/assets/extensions-filter.png)
 
-## 起動拡張機能の仕組み
+## 起動拡張機能の仕組み {#how-extensions-work}
 
 起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 拡張子は、宛先の **イベント転送** (Destination Forwarding)タイプと考えます。 これは、生のプラットフォームデータの転送のみを行う宛先プラットフォームとの統合のより簡単なタイプでイベントします。 例えば、勝者パーソナライゼ [ーション拡張や](/help/rtcdp/destinations/gainsight-extension.md) 、顧客拡 [張の確認音声などがあります](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
 
@@ -32,7 +32,7 @@ Adobe Real-time CDPインターフェイスで起動の拡張機能を探すに�
 
 ![エクスペリエンスプラットフォーム起動の拡張と他の宛先との比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## 起動拡張機能を使用する利点
+## 起動拡張機能を使用する利点 {#extensions-benefits}
 
 エクスペリエンスプラットフォームの発売は、既存のExperience Cloudのお客様は無料です。 「起動」を使用すると、使いやすい拡張機能を使用して、Webサイト上でのタグの導入が簡単になり、インストール、設定、更新および削除が可能になります。 Launchは、Webサイト上の設置面積が小さく、ページの読み込みを素早く維持できます。
 
@@ -42,7 +42,7 @@ Adobe Real-time CDPインターフェイスで起動の拡張機能を探すに�
 
 拡張にイベントデータを *転送するタイミングを決定するルールを* 、いつ拡張に転送するかを指定できます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのとは異なり、特定の状況でのみイベントデータを転送できます。 For more information, read about rules in the [Launch documentation](https://docs.adobe.com/help/ja-JP/launch/using/reference/manage-resources/rules.html).
 
-## Launch拡張機能の使用例
+## Launch拡張機能の使用例 {#extensions-use-cases}
 
 起動の拡張機能を使用すると、様々な顧客の使用例を満たすことができます。 Launch拡張機能を使用する場合の使用例を次に示します。
 
@@ -51,7 +51,7 @@ Adobe Real-time CDPインターフェイスで起動の拡張機能を探すに�
 * 起動で設定したルールに従って、ユーザーがページとどのようにやり取りしているかに基づいて、適切なタイミングでクライアントサイドのChatboxアプリを有効にすることができます。
 
 
-## 拡張カテゴリ
+## 拡張カテゴリ {#extension-categories}
 
 Launch extensionsは、Adobe Real-time CDPでは次のカテゴリに該当します。
 
