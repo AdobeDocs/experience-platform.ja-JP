@@ -4,7 +4,7 @@ seo-title: 宛先のタイプとカテゴリ
 description: 'Adobe Real-time Customer Data Platformでは、プロファイル/セグメントエクスポート先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルをエクスポート先に適用します。 起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 '
 seo-description: Adobe Real-time Customer Data Platformでは、プロファイル/セグメントエクスポート先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルをエクスポート先に適用します。 起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 
 ### 接続
 
-**プロファイルエクスポート** /セグメントエクスポート先Adobe Real-time Customer Data Platformのセグメントエクスポート先は **、イベントデータを取り込み、他のデータソースと組み合わせて、リアルタイム顧客プロファイルを形成し、セグメント化**[](https://docs.adobe.com/content/help/en/experience-platform/profile/home.html)、セグメント化を適用し、セグメントと正規プロファイルを宛先に適用します。
+**プロファイルエクスポート** /セグメントエクスポート先Adobe Real-time Customer Data Platformのセグメントエクスポート先は **、イベントデータを取り込み、他のデータソースと組み合わせて、リアルタイム顧客プロファイルを形成し、セグメント化**[](/help/profile/home.md)、セグメント化を適用し、セグメントと正規プロファイルを宛先に適用します。
 
 <br> 
 
@@ -47,7 +47,7 @@ source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
 
 Adobe Real-time CDPは、Experience Platform Launchの機能と柔軟性を活用して、Adobe Real-time CDPインターフェイスにLaunch拡張機能を組み込みます。
 
-起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 拡張子は、宛先の **イベント転送** (Destination Forwarding)タイプと考えます。 これは、生のプラットフォームデータの転送のみを行う宛先プラットフォームとの統合のより簡単なタイプでイベントします。 例えば、勝者パーソナライゼ [ーション拡張や](/help/rtcdp/destinations/gainsight-extension.md) 、顧客拡 [張の確認音声などがあります](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
+起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 拡張子は、宛先の **イベント転送** (Destination Forwarding)タイプと考えます。 これは、生のプラットフォームデータの転送のみを行う宛先プラットフォームとの統合のより簡単なタイプでイベントします。 例えば、「勝者パーソナライゼ [ーション](/help/rtcdp/destinations/gainsight-extension.md) 」や「お客様の [声」拡張の「確認」などです](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
 
 エクスペリエンスプラットフォーム起動の拡張機能について詳しくは、起動の拡張機能の概要 [を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
 
@@ -68,7 +68,7 @@ Adobe Real-time CDPは、Experience Platform Launchの機能と柔軟性を活�
 
 ## 宛先カテゴリ
 
-宛先カタログ内の宛先と拡張子は、目的の [カテゴリ](https://platform.adobe.com/destination/catalog) (**Advertising**、 **Extensions** Platforms、 **Email** marketing Cloud、Email marketing Marketing Cloud、Email **marketing** Marketing Cloudなど)に応じて、目的のカタログ別にグループ化されます。 各カテゴリと各カテゴリに含まれる宛先について詳しくは、宛先カタログのドキュメントを参照 [してください](/help/rtcdp/destinations/destinations-catalog.md)。
+宛先カタログ内の接続と拡張子は、目的の [カテゴリ](https://platform.adobe.com/destination/catalog) (**Advertising**、 **Email** Marketing **Platforms、Email Marketing Cloud、Email Marketing****** Marketing Cloud、など)に応じて、目的のストレージ別にグループ化されます。 各カテゴリと各カテゴリに含まれる宛先について詳しくは、宛先カタログのドキュメントを参照 [してください](/help/rtcdp/destinations/destinations-catalog.md)。
 
-![宛先カテゴリ](/help/rtcdp/destinations/assets/destination-categories.png)
+![宛先カテゴリ](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
