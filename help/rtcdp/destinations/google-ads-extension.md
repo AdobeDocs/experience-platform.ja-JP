@@ -4,12 +4,12 @@ seo-title: Google広告の拡張
 description: Google Ads拡張は、Adobe Real-time Customer Data Platformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 seo-description: Google Ads拡張は、Adobe Real-time Customer Data Platformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
 
-# Google広告の表示先
+# Google広告の拡張
 
 ## 概要 {#overview}
 
@@ -19,7 +19,7 @@ Google Adsは、Adobe Real-time Customer Data Platformの広告拡張機能で�
 
 この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでの起動拡張機能の動作について詳しくは、「エクスペリエンスプラットフォーム起動拡張機能の概 [要」を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
 
-![Google広告の拡張](/help/rtcdp/destinations/assets/google-ads-extension.png)
+![Google広告の拡張](/help/rtcdp/destinations/assets/google-extension-2.png)
 
 ## 前提条件 {#prerequisites}
 
