@@ -4,7 +4,7 @@ seo-title: データ管理プラットフォーム(DMP)の宛先
 description: DMP(データ管理・プラットフォーム)を使用すると、広告主、発行者、代理店が独自のオーディエンスプロファイルを構築し、最も価値の高いセグメントを特定して、デジタル・チャネルを通じてそれらを使用できます。 これにより、実際の360表示の消費者プロファイルを作成し、意味のあるオーディエンスを構築し、アクティブ化できます。
 seo-description: DMP(データ管理・プラットフォーム)を使用すると、広告主、発行者、代理店が独自のオーディエンスプロファイルを構築し、最も価値の高いセグメントを特定して、デジタル・チャネルを通じてそれらを使用できます。 これにより、実際の360表示の消費者プロファイルを作成し、意味のあるオーディエンスを構築し、アクティブ化できます。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
 
 ---
 
@@ -15,4 +15,4 @@ DMP(データ管理・プラットフォーム)を使用すると、広告主、
 
 現在、Adobe Real-time Customer Data Platformは、以下に示すデータ管理プラットフォーム(DMP)の宛先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
-* [オーディエンスマネージャーDIL(Experience Platform Launch Extension)](/help/rtcdp/destinations/aam-dil-extension.md)
+* [オーディエンスマネージャDIL拡張](/help/rtcdp/destinations/aam-dil-extension.md)
