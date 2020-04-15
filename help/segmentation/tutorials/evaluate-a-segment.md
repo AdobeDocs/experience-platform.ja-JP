@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セグメントの評価
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -452,7 +452,7 @@ curl -X GET \
 
 アクセスする特定のプロファイルがわかっている場合は、Real-time CustomerプロファイルAPIを使用してアクセスできます。 個々のプロファイルにアクセスするための完全な手順は、プロファイルAPIのチュートリ [アルを使用したリアルタイム顧客プロファイルデータへのアクセスで](../../profile/api/entities.md) 説明します。
 
-## セグメントのエクスポート
+## セグメントのエクスポート {#export}
 
 セグメント化ジョブが正常に完了したら（属性の値は「SUCCEEDED」）、オーディエンスをデータセットにエクスポートし、そこでアクセスし、処理を行うことができます。 `status`
 
@@ -461,7 +461,7 @@ curl -X GET \
 - [ターゲットデータセットの作成](#create-a-target-dataset) — データセットを作成して、オーディエンスメンバーを保持します。
 - [オーディエンスプロファイルをデータセットに生成する](#generate-profiles-for-audience-members) — セグメントジョブの結果に基づいて、XDM個々のプロファイルをデータセットに埋め込みます。
 - [書き出しの進行状況を監視](#monitor-export-progress) — 書き出しの現在の進行状況を確認します。
-- [オーディエンスデータの読み取り](#next-steps) — 結果のXDM個々のプロファイルを取得し、オーディエンスのメンバを表します。
+- [オーディエンスデータの読み取り](#next-steps) — 結果のXDM個々のプロファイルを取得します。オーディエンスのメンバーです。
 
 ### ターゲットデータセットの作成
 
@@ -601,7 +601,7 @@ curl -X POST \
 | `filter.segments.segmentId` | **(を使用する場合は必須`segments`)** 、エクスポートするプロファイルのセグメントID。 |
 | `filter.segments.segmentNs` | *（オプション）* 、指定したのセグメント名前空間 `segmentID`。 |
 | `filter.segments.status` | *（オプション）* 、のステータスフィルターを提供する文字列の配 `segmentID`列。 デフォルトでは、 `status` は、現在の時間にセ `["realized", "existing"]` グメントに含まれるすべてのプロファイルを表す値を持ちます。 次の値を指定できます。 `"realized"`、、 `"existing"`および `"exited"`。 |
-| `filter.segmentQualificationTime` | *（オプション）* 、セグメントの資格時間に基づいてフィルターします。 開始時間及び/又は終了時間を提供する。 |
+| `filter.segmentQualificationTime` | *（オプション）* 、セグメントの資格時間に基づいてフィルターします。 開始時間および/または終了時間を指定できます。 |
 | `filter.segmentQualificationTime.startTime` | *（オプション）* 、特定のステータスのセグメントIDのセグメント資格開始時間。 このオプションは指定されていないので、セグメントIDの開始時間に対するフィルターは適用されません。 タイムスタンプは [RFC 3339形式で提供する必要があります](https://tools.ietf.org/html/rfc3339) 。 |
 | `filter.segmentQualificationTime.endTime` | *（オプション）* 、特定のステータスのセグメントIDのセグメントクオリフィケーション終了時間。 このオプションは指定されていないので、終了時間にセグメントIDの資格に対するフィルターは適用されません。 タイムスタンプは [RFC 3339形式で提供する必要があります](https://tools.ietf.org/html/rfc3339) 。 |
 | `filter.fromIngestTimestamp` | *（オプション）* 、書き出したプロファイルには、このタイムスタンプの後に更新されたアイテムのみが含まれるように制限します。 タイムスタンプは [RFC 3339形式で提供する必要があります](https://tools.ietf.org/html/rfc3339) 。 |
