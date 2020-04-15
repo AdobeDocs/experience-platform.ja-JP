@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ使用量のコンプライアンスをオーディエンスセグメントに適用
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
 
 ---
 
@@ -22,7 +22,9 @@ source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 - [セグメント](../home.md):リアルタイム顧客プロファイルは、プロファイルストアに含まれる大きな個人グループを、類似した特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割する方法を示します。
 - [データガバナンス](../../data-governance/home.md):データガバナンスは、次のコンポーネントを使用して、データ使用のラベル付けと実施(DULE)のインフラストラクチャを提供します。
    - [データ使用ラベル](../../data-governance/labels/user-guide.md):データセットとフィールドを、それぞれのデータを処理する際に使用する機密性のレベルの観点から記述するために使用されるラベル。
-   - [データ使用ポリシー](../../data-governance/api/getting-started.md):特定のデータ使用ラベルで分類されたデータで、どのマーケティングアクションが許可されるかを示す設定。
+   - [データ使用ポリシー](../../data-governance/policies/overview.md):特定のデータ使用ラベルで分類されたデータで、どのマーケティングアクションが許可されるかを示す設定。
+   - [ポリシーの適用](../../data-governance/enforcement/overview.md):データ使用ポリシーを適用し、ポリシー違反を構成するデータ操作を防ぐことができます。
+- [サンドボックス](../../sandboxes/home.md):Experience Platformは、デジタルエクスペリエンスアプリケーションの開発と発展を支援するために、単一のプラットフォームインスタンスを別々の仮想環境に分割する仮想サンドボックスを提供します。
 
 以下の節では、プラットフォームAPIを正しく呼び出すために知っておく必要がある追加情報を示します。
 
@@ -48,11 +50,11 @@ source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 - コンテンツタイプ：application/json
 
-## セグメント定義の結合ポリシーの参照
+## セグメント定義のマージポリシーを検索します {#merge-policy}
 
 このワークフローは、既知のワークフローセグメントにアクセスすることでオーディエンスを開始します。 リアルタイム顧客プロファイルで使用できるセグメントには、セグメント定義内にマージポリシーIDが含まれます。 このマージポリシーには、セグメントに含めるデータセットに関する情報が含まれ、さらに該当するデータ使用ラベルも含まれます。
 
-セグメント [APIを使用して](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)、IDでセグメント定義を参照し、関連する結合ポリシーを見つけることができます。
+セグメント [APIを使用して](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)、IDでセグメント定義を検索し、関連する結合ポリシーを見つけることができます。
 
 **API形式**
 
@@ -62,7 +64,7 @@ GET /segment/definitions/{SEGMENT_DEFINITION_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | 参照するセグメント定義のID。 |
+| `{SEGMENT_DEFINITION_ID}` | 検索するセグメント定義のID。 |
 
 **リクエスト**
 
@@ -75,7 +77,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**レポンス**
+**応答**
 
 成功した応答は、セグメント定義の詳細を返します。
 
@@ -117,9 +119,9 @@ curl -X GET \
 | -------- | ----------- |
 | `mergePolicyId` | セグメント定義に使用されるマージポリシーのID。 これは次の手順で使用します。 |
 
-## マージポリシーからソースデータセットを検索します
+## マージポリシーからソースデータセットを検索します {#datasets}
 
-マージ・ポリシーには、ソース・データセットに関する情報が含まれ、DULEラベルが含まれます。 マージポリシーの詳細を参照するには、プロファイルAPIへのGET要求でマージポリシーIDを指定します。
+マージ・ポリシーには、ソース・データセットに関する情報が含まれ、その情報にはデータ使用ラベルが含まれます。 マージポリシーの詳細を参照するには、プロファイルAPIへのGET要求でマージポリシーIDを指定します。
 
 **API形式**
 
@@ -129,7 +131,7 @@ GET /config/mergePolicies/{MERGE_POLICY_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{MERGE_POLICY_ID}` | 前の手順で取得したマージポリシ [ーのID](#lookup-a-merge-policy-for-a-segment-definition)。 |
+| `{MERGE_POLICY_ID}` | 前の手順で取得したマージポリシ [ーのID](#merge-policy)。 |
 
 **リクエスト**
 
@@ -142,7 +144,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**レポンス**
+**応答**
 
 成功した応答は、マージポリシーの詳細を返します。
 
@@ -174,92 +176,195 @@ curl -X GET \
 | `attributeMerge.type` | マージポリシーのデータ優先順位の構成タイプ。 値がの場合、このマ `dataSetPrecedence`ージポリシーに関連付けられたデータセットがに表示されま `attributeMerge > data > order`す。 値がの場合、で参照さ `timestampOrdered`れているスキーマに関連付けられているすべてのデ `schema.name` ータセットがマージポリシーで使用されます。 |
 | `attributeMerge.data.order` | がの場合、 `attributeMerge.type` この属 `dataSetPrecedence`性は、このマージポリシーで使用されるデータセットのIDを含む配列になります。 これらのIDは次の手順で使用します。 |
 
-## ソースデータセットの参照データ使用ラベル
+## データセットのポリシー違反の評価
 
-マージポリシーのソースデータセットのIDを収集したら、これらのIDを使用して、データセット自体およびデータセットに含まれる特定のデータフィールド用に設定されたデータ使用ラベルを参照できます。
+>[!NOTE]  この手順では、特定のラベルを含むデータに対して特定のマーケティングアクションが実行されないようにする、アクティブなデータ使用ポリシーが少なくとも1つあることを前提としています。 評価するデータセットに適用可能な使用ポリシーがない場合は、ポリシー作成のチュートリアルに従って [作成し](../../data-governance/policies/create.md) 、この手順に進む前に作成してください。
 
-次の [Catalog Service APIの呼び出しは](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 、リクエストパスにIDを指定することで、1つのデータセットに関連付けられたデータ使用ラベルを取得します。
+マージポリシーのソースデータセットのIDを取得したら、 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service APIを使用して、データ使用ポリシーの違反を確認するために、特定のマーケティングアクションに対してこれらのデータセットを評価できます。
+
+データセットを評価するには、次の例に示すように、リクエスト本文内にデータセットIDを指定しながら、POSTリクエストのパスにマーケティングアクションの名前を指定する必要があります。
 
 **API形式**
 
 ```http
-GET /dataSets/{DATASET_ID}/dule
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
 
-| プロパティ | 説明 |
-| -------- | ----------- |
-| `{DATASET_ID}` | 参照するデータ使用ラベルのデータセットのID。 |
+| パラメーター | 説明 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | データセットを評価するデータ使用ポリシーに関連付けられたマーケティングアクションの名前。 ポリシーがアドビによって定義されたか、組織によって定義されたかに応じて、それぞれまたはを使用 `/marketingActions/core` する必要が `/marketingActions/custom`あります。 |
 
 **リクエスト**
 
+次のリクエストは、前の手順で取得 `exportToThirdParty` したデータセットに対してマーケティングアクション [をテストしま](#datasets)す。 リクエストペイロードは、各データセットのIDを含む配列です。
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5b95b155419ec801e6eee780/dule \
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty/constraints
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780"
+    },
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df"
+    }
+  ]'
 ```
 
-**レポンス**
+| プロパティ | 説明 |
+| --- | --- |
+| `entityType` | ペイロード配列の各項目は、定義するエンティティのタイプを示す必要があります。 この使用例では、値は常に「dataSet」になります。 |
+| `entityID` | ペイロード配列の各項目は、データセットの一意のIDを提供する必要があります。 |
 
-成功した場合は、データセット全体に関連付けられたデータ使用量ラベルのリストと、ソーススキーマに関連付けられた特定のデータフィールドが返されます。
+**応答**
+
+成功した応答は、マーケティングアクションのURI、提供されたデータセットから収集されたデータ使用ラベル、およびこれらのラベルに対するアクションのテストの結果として違反されたデータ使用ポリシーのリストを返します。 この例では、「データをサードパーティにエクスポート」ポリシーが配列に表示され、マーケティングアクシ `violatedPolicies` ョンがポリシー違反をトリガーしたことを示しています。
 
 ```json
 {
-    "connection": {},
-    "dataset": {
-        "identity": [],
-        "contract": [
-            "C3"
-        ],
-        "sensitive": [],
-        "contracts": [
-            "C3"
-        ],
-        "identifiability": [],
-        "specialTypes": []
+  "timestamp": 1556324277895,
+  "clientId": "{CLIENT_ID}",
+  "userId": "{USER_ID}",
+  "imsOrg": "{IMS_ORG}",
+  "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty",
+  "duleLabels": [
+    "C1",
+    "C2",
+    "C4",
+    "C5"
+  ],
+  "discoveredLabels": [
+    {
+      "entityType": "dataSet",
+      "entityId": "5b95b155419ec801e6eee780",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C2",
+            ],
+            "path": "/properties/_customer"
+          },
+          {
+            "labels": [
+              "C5"
+            ],
+            "path": "/properties/geoUnit"
+          },
+          {
+            "labels": [
+              "C1"
+            ],
+            "path": "/properties/identityMap"
+          }
+        ]
+      }
     },
-    "fields": [],
-    "schemaFields": [
-        {
-            "path": "/properties/personalEmail/properties/address",
-            "identity": [
-                "I1"
+    {
+      "entityType": "dataSet",
+      "entityId": "5b7c86968f7b6501e21ba9df",
+      "dataSetLabels": {
+        "connection": {
+          "labels": []
+        },
+        "dataSet": {
+          "labels": [
+            "C5"
+          ]
+        },
+        "fields": [
+          {
+            "labels": [
+              "C5"
             ],
-            "contract": [
-                "C2",
-                "C9"
+            "path": "/properties/createdByBatchID"
+          },
+          {
+            "labels": [
+              "C5"
             ],
-            "sensitive": [],
-            "contracts": [
-                "C2",
-                "C9"
-            ],
-            "identifiability": [
-                "I1"
-            ],
-            "specialTypes": []
+            "path": "/properties/faxPhone"
+          }
+        ]
+      }
+    }
+  ],
+  "violatedPolicies": [
+    {
+      "name": "Export Data to Third Party",
+      "status": "ENABLED",
+      "marketingActionRefs": [
+        "https://platform-stage.adobe.io:443/data/foundation/dulepolicy/marketingActions/custom/exportToThirdParty"
+      ],
+      "description": "Conditions under which data cannot be exported to a third party",
+      "deny": {
+        "operator": "OR",
+        "operands": [
+          {
+            "label": "C1"
+          },
+          {
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C3"
+              },
+              {
+                "label": "C7"
+              }
+            ]
+          }
+        ]
+      },
+      "imsOrg": "{IMS_ORG}",
+      "created": 1565651746693,
+      "createdClient": "{CREATED_CLIENT}",
+      "createdUser": "{CREATED_USER",
+      "updated": 1565723012139,
+      "updatedClient": "{UPDATED_CLIENT}",
+      "updatedUser": "{UPDATED_USER}",
+      "_links": {
+        "self": {
+          "href": "https://platform-stage.adobe.io/data/foundation/dulepolicy/policies/custom/5d51f322e553c814e67af1a3"
         }
-    ]
+      },
+      "id": "5d51f322e553c814e67af1a3"
+    }
+  ]
 }
 ```
 
 | プロパティ | 説明 |
-| -------- | ----------- |
-| `dataset` | データセット全体に適用されるデータ使用ラベルを含むオブジェクトです。 |
-| `schemaFields` | データ使用ラベルが適用された特定のスキーマフィールドを表すオブジェクトの配列です。 |
-| `schemaFields.path` | データ使用ラベルが同じスキーマにリストされているオブジェクトフィールドのパス。 |
+| --- | --- |
+| `duleLabels` | 指定されたリストセットから抽出されたデータ使用ラベルのデータ。 |
+| `discoveredLabels` | リクエストペイロードで提供されたデータセットのリスト。各データセット内のデータセットレベルとフィールドレベルのラベルが表示されます。 |
+| `violatedPolicies` | 提供されたに対する（で指定された）マーケティングアクションのテストに違反したデータ使用ポリシーを `marketingActionRef`リストする配列で `duleLabels`す。 |
+
+API応答で返されたデータを使用して、エクスペリエンスアプリケーション内でプロトコルを設定し、ポリシー違反が発生した場合に適切にポリシー違反を適用することができます。
 
 ## データフィールドのフィルタ
 
->[!NOTE] この手順はオプションです。 データ使用ラベルを調べる前の手順の結果に基づいてセグメントに含まれるデータを調整しない場合 [、ポリシー違反のデータを評価する最終手順に進む](#lookup-data-usage-labels-for-the-source-datasets)ことができます [](#evaluate-data-for-policy-violations)。
-
-オーディエンスセグメントに含まれるデータを調整する場合は、次の2つの方法のいずれかを使用します。
+オーディエンスセグメントが評価に合格しない場合は、次に示す2つの方法のいずれかを使用して、セグメントに含まれるデータを調整できます。
 
 ### セグメント定義のマージポリシーの更新
 
-セグメント定義のマージポリシーを更新すると、セグメントジョブの実行時に含まれるデータセットとフィールドが調整されます。 詳しくは、マージポリシ [ーのチュートリアルで](../../profile/api/merge-policies.md) 、既存のマージポリシーの更新に関する節を参照してください。
+セグメント定義のマージポリシーを更新すると、セグメントジョブの実行時に含まれるデータセットとフィールドが調整されます。 詳しくは、APIマージポ [リシーチュートリアルの](../../profile/api/merge-policies.md#update) 、既存のマージポリシーの更新に関する節を参照してください。
 
 ### セグメントの書き出し時に特定のデータフィールドを制限する
 
@@ -267,11 +372,7 @@ curl -X GET \
 
 「A」、「B」および「C」という名前のデータフィールドを持つセグメントについて考えてみます。 フィールド「C」のみを書き出す場合、パラメーターにはフィール `fields` ド「C」のみが含まれます。 これにより、セグメントを書き出す際に「A」と「B」のフィールドが除外されます。
 
-詳しくは、セグメントチュ [ートリアルの](./evaluate-a-segment.md#export-a-segment) 、セグメントの書き出しに関する節を参照してください。
-
-## ポリシー違反のデータを評価します
-
-これで、オーディエンスセグメントに関連付けられたデータ使用ラベルを収集したので、これらのラベルをマーケティングアクションに対してテストし、データ使用ポリシー違反を評価できます。 [DULE Policy Service APIを使用してポリシー評価を実行する方法の詳細な手順については](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)、「ポリシー評価に関するドキュメント」を参 [照してください](../../data-governance/enforcement/overview.md)。
+詳しくは、セグメントチュ [ートリアルの](./evaluate-a-segment.md#export) 、セグメントの書き出しに関する節を参照してください。
 
 ## 次の手順
 
