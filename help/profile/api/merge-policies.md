@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルAPI開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -418,7 +418,7 @@ curl -X POST \
 
 結合ポリシ [ーを構成する個々の要素の詳細については](#components-of-merge-policies) 、このドキュメントの最初にある「結合ポリシーのコンポーネント」の節を参照してください。
 
-## マージポリシーの更新
+## マージポリシーの更新 {#update}
 
 既存のマージポリシーを変更するには、個々の属性(PATCH)を編集するか、マージポリシー全体を新しい属性(PUT)で上書きします。 それぞれの例を以下に示します。
 
