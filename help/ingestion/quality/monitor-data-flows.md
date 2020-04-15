@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データの取り込みの監視
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
+source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 ---
 
@@ -21,15 +21,21 @@ source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-[ストリ *ーミングエンドツーエンドの監視* ]ページが表示されます。 このワークスペースには、ストリーミングされるメッセージの割合と受信データの詳細リストを示すグラフが表示されます。
+[ストリ *ーミングエンドツーエンドの監視* ]ページが表示されます。 このワークスペースには、プラットフォームが受信するストリームイベントの割合を示すグラフ、リアルタイムイベントプロファイルが正常に処理したストリーム顧客の割合、および受信データの詳細リストを示すグラフが表示されます [](../../profile/home.md)。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-デフォルトでは、グラフには過去7日間の摂取率が表示されます。 この日付範囲は、強調表示されたボタンをクリックして、様々な期間を表示するように調整できます。
+デフォルトでは、上のグラフには過去7日間の摂取率が表示されます。 この日付範囲は、強調表示されたボタンをクリックして、様々な期間を表示するように調整できます。
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
+![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-グラフの下に、上に示したリスト範囲に対応するすべてのストリーミングインジェストレコードのデータが表示されます。 一覧に表示される各バッチには、ID、データセット名、最終更新時点、バッチ内のレコード数、エラー数（存在する場合）が表示されます。 任意のレコードをクリックすると、そのレコードに関する詳細情報を表示できます。
+下のグラフには、過去7日間のストリームイベントが正常に処理された割合がプロファイル別に表示されます。 この日付範囲は、強調表示されたボタンをクリックして、様々な期間を表示するように調整できます。
+
+> [!NOTE] このグラフにデータを表示するには、データを明示的に有効にする **** プロファイル。 ストリーミングデータをプロファイル可能にする方法については、『データセットユーザガイド』 [を参照してくださ](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)い。
+
+![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
+
+グラフの下に、上に示したリスト範囲に対応するすべてのストリーミング取り込みレコードが表示されます。 一覧に表示される各バッチには、ID、データセット名、最終更新時点、バッチ内のレコード数、エラー数（存在する場合）が表示されます。 任意のレコードをクリックすると、そのレコードに関する詳細情報を表示できます。
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 
