@@ -4,7 +4,7 @@ seo-title: 宛先のタイプとカテゴリ
 description: 'Adobe Real-time Customer Data Platformでは、プロファイル/セグメントエクスポート先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルをエクスポート先に適用します。 起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 '
 seo-description: Adobe Real-time Customer Data Platformでは、プロファイル/セグメントエクスポート先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルをエクスポート先に適用します。 起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。
 translation-type: tm+mt
-source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
+source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
 
 ---
 
@@ -47,10 +47,11 @@ source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
 
 Adobe Real-time CDPは、Experience Platform Launchの機能と柔軟性を活用して、Adobe Real-time CDPインターフェイスにLaunch拡張機能を組み込みます。
 
-起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 拡張子は、宛先の **イベント転送** (Destination Forwarding)タイプと考えます。 これは、生のプラットフォームデータの転送のみを行う宛先プラットフォームとの統合のより簡単なタイプでイベントします。 例えば、「勝者パーソナライゼ [ーション](/help/rtcdp/destinations/gainsight-extension.md) 」や「お客様の [声」拡張の「確認」などです](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
+>[!TIP]
+>
+>使用事例やインターフェイスでの検索方法など、エクスペリエンスプラットフォーム起動の拡張機能について詳しくは、起動の拡張機能の概要を [参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
 
-エクスペリエンスプラットフォーム起動の拡張機能について詳しくは、起動の拡張機能の概要 [を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
-
+起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 拡張子は、宛先の **イベント転送** (Destination Forwarding)タイプと考えます。 これは、生のプラットフォームデータの転送のみを行う宛先プラットフォームとの統合のより簡単なタイプでイベントします。 例えば、勝者パーソナライゼ [ーション拡張や](/help/rtcdp/destinations/gainsight-extension.md) 、顧客拡 [張の確認音声などがあります](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
 
 ![エクスペリエンスプラットフォーム起動の拡張と他の宛先との比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
