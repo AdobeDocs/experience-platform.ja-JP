@@ -4,14 +4,14 @@ solution: Experience Platform
 title: サンプルクエリ
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
 
 # Adobe Analyticsクエリのサンプルデータ
 
-選択したAdobe AnalyticsレポートスイートのデータはXDM ExperienceEventsに変換され、データセットとしてAdobe Experience Platformに取り込まれます。 このドキュメントでは、Adobe Experience Platformクエリサービスがこのデータを利用する多くの使用例を説明し、付属のサンプルクエリがAdobe Analyticsデータセットと連携するようにします。 XDM ExperienceEventsへのマッピングにつ [いて詳しくは、](../../source-connectors/ui/adobe-applications/analytics-mapping.md) Analyticsのフィールドマッピングドキュメントを参照してください。
+選択したAdobe AnalyticsレポートスイートのデータはXDM ExperienceEventsに変換され、データセットとしてAdobe Experience Platformに取り込まれます。 このドキュメントでは、Adobe Experience Platformクエリサービスがこのデータを利用する多くの使用例を説明し、付属のサンプルクエリがAdobe Analyticsデータセットと連携するようにします。 XDM ExperienceEventsへのマッピングにつ [いて詳しくは、](../../sources/connectors/adobe-applications/analytics-mapping.md) Analyticsのフィールドマッピングドキュメントを参照してください。
 
 ## はじめに
 
@@ -233,7 +233,7 @@ productListItems[#].sku
 
 ### サンプルクエリ
 
-次に、値を特定の製品とイベントのペア(この場合は製品の表示イベント)に連結するサンプルクエリを示します。
+次に、値を特定の製品とイベントのペア(この場合は製品の表示イベント)に連結するサンプルのクエリを示します。
 
 ```sql
 SELECT
