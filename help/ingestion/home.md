@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Data Engestの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -35,7 +35,7 @@ See the [streaming ingestion overview](./streaming-ingestion/overview.md) for mo
 
 ソース接続は、他のAdobeオーディエンス（Adobe AnalyticsやAdobe Application Managerなど）、サードパーティのクラウドストレージソース（Azure Blob、Amazon S3、FTPサーバー、SFTPサーバーなど）、およびサードパーティのCRMシステム（Microsoft DynamicsやSalesforceなど）からデータを収集するように設定できます。
 
-See the [Sources overview](../source-connectors/home.md) for more information.
+See the [Sources overview](../sources/home.md) for more information.
 
 ## 次の手順
 
