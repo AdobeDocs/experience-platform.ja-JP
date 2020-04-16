@@ -4,18 +4,18 @@ solution: Experience Platform
 title: データ取り込みのチュートリアル
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
 
 # データをエクスペリエンスプラットフォームに取り込む
 
-Adobe Experience Platformは、複数のソースからのデータを統合し、マーケターが顧客の行動をより深く理解できるようにします。 Adobe Experience Platform Data Ingestionは、Platformがこれらのソースからデータを取り込む複数の方法と、そのデータがData Lake内でどのように保持され、ダウンストリームのPlatformサービスで使用されるかを表します。 データ取り込みには、ソースコネクタを使用したバッチ取り込み、ストリーミング取り込み、取り込みが含まれます。 詳しくは、データ収集の概要を読 [むか](../ingestion/home.md) 、ソースのドキュメントに直接進ん [でください](../source-connectors/home.md)。
+Adobe Experience Platformは、複数のソースからのデータを統合し、マーケターが顧客の行動をより深く理解できるようにします。 Adobe Experience Platform Data Ingestionは、Platformがこれらのソースからデータを取り込む複数の方法と、そのデータがData Lake内でどのように保持され、ダウンストリームのPlatformサービスで使用されるかを表します。 データ取り込みには、ソースコネクタを使用したバッチ取り込み、ストリーミング取り込み、取り込みが含まれます。 詳しくは、データ収集の概要を読 [むか](../ingestion/home.md) 、ソースのドキュメントに直接進ん [でください](../sources/home.md)。
 
 ## UIとAPIでのソースコネクタの作成
 
-ソースコネクタを使用すると、複数のソースからデータを取り込み、プラットフォームサービスを使用してラベル付け、構造化、拡張を行うことができます。 UIを使用してコネクタの作成を開始するには、UIの概要で [ソースコネクタの作成を参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)。 APIを使用してソースコネクタを作成するには、Flow Service APIの概 [要を使用してソースコネクタを作成するを参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)。
+ソースコネクタを使用すると、複数のソースからデータを取り込み、プラットフォームサービスを使用してラベル付け、構造化、拡張を行うことができます。 ソースコネクタの作成を開始するには、ソースの概要を参 [照してください](../sources/home.md)。
 
 ## バッチデータの取り込み
 
