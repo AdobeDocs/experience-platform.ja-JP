@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -34,4 +34,4 @@ Adobe Experience Platformは、外部ソースからデータを取り込み、P
 
 * None
 
-For more information about sources, see the [sources overview](../../source-connectors/home.md).
+For more information about sources, see the [sources overview](../../sources/home.md).
