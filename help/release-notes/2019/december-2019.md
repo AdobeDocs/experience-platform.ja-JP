@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-## リリース日：2019年12月12日
+## リリース日：2019年12月13日
 
 ## Segmentation Service
 
@@ -66,7 +66,7 @@ Adobe Experience Platformは、外部ソースからデータを取り込み、P
 
 * None.
 
-For more information about sources, see the [sources overview](../../source-connectors/home.md).
+For more information about sources, see the [sources overview](../../sources/home.md).
 
 ## エクスペリエンスデータモデル(XDM)システム
 
