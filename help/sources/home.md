@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectorsの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 92ba230d71e419e33567833ad562e6ffef996d0a
+source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
 
 ---
 
@@ -26,9 +26,10 @@ Adobe Experience Platformを使用すると、外部ソースからデータを�
 Experience Platformを使用すると、Adobe Analytics、Adobe Platform Manager、Experience Platform Launchなど、他のAdobeオーディエンスからデータを取り込むことができます。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobeオーディエンスマネージャーコネクタの概要](connectors/adobe-applications/audience-manager.md)
-- [UIでのAdobeオーディエンスマネージャーソースコネクタの作成](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)
+- [UIでのAdobeオーディエンスマネージャーソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics data connectorの概要](connectors/adobe-applications/analytics.md)
-- [UIでのAdobe Analyticsソースコネクタの作成](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)
+- [UIでのAdobe Analyticsソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
+- [UIでの顧客属性ソースコネクタの作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### 広告
 
