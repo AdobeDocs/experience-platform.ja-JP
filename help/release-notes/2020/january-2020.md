@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -55,7 +55,7 @@ XDMは、デジタルエクスペリエンスのパワーを向上させるた�
 
 ## ソース
 
-Adobe Experience Platformでは、外部ソースからデータを取り込み、Platformサービスを使用してデータの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、お使いのCRMシステムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformは、外部ソースからデータを取り込み、Platformサービスを使用してデータの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、お使いのCRMシステムなど、様々なソースからデータを取り込むことができます。
 
 エクスペリエンスプラットフォームは、様々なデータプロバイダーのソース接続を簡単に設定できるRESTful APIとインタラクティブUIを提供します。 これらのソース接続を使用すると、外部ストレージシステムおよびCRMサービスの認証と接続、取り込みの実行時間の設定、データ取り込みのスループットの管理を行うことができます。
 
@@ -78,7 +78,7 @@ Adobe Experience Platformでは、外部ソースからデータを取り込み�
 
 * None
 
-For more information about sources, see the [sources overview](../../source-connectors/home.md)
+For more information about sources, see the [sources overview](../../sources/home.md)
 
 ## 宛先
 
