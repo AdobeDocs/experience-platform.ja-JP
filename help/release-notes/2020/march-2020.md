@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
+source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
 
 ---
 
@@ -64,7 +64,7 @@ Adobe Experience Platformは、あらゆる種類のデータや遅延を取り�
 
 | 宛先 | 説明 |
 |--- | ---|
-| クラウドストレージの宛先 | Adobe Real-time CDPは、セグメントをデータファイルとしてAmazon S3またはSFTPクラウドのストレージの場所に配信できます。 これにより、オーディエンスとそのプロファイル属性をCSVまたはタブ区切りファイル経由で内部システムに送信できます。 |
+| クラウドストレージの宛先 | Adobe Real-time CDPは、セグメントをデータファイルとしてAmazon S3またはSFTPクラウドのストレージの場所に配信できます。 これにより、オーディエンスとそのプロファイル属性を CSV またはタブ区切りファイル経由で内部システムに送信できます。 |
 | 広告の宛先 | 現在は、Adobe Real-time CDPで現在サポートされている3種類のGoogleプラットフォームに対して、Googleの宛先カードが3つの宛先カードに分割されます。Google Ads、Google Ad Manager、Google Display &amp; Video 360。 |
 
 詳しくは、リンク先の概要を参照し [てください](../../rtcdp/destinations/destinations-overview.md)
@@ -108,4 +108,4 @@ Adobe Experience Platformは、外部ソースからデータを取り込み、P
 
 * None
 
-ソースについて詳しくは、ソースの概要を参照 [してください](../../source-connectors/home.md)。
+ソースについて詳しくは、ソースの概要を参照 [してください](../../sources/home.md)。
