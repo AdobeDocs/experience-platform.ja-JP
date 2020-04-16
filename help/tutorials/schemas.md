@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDMスキーマと記述子
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
 
 ## アドホックスキーマ
 
-特定の状況では、単一のデータセットでのみ使用するために名前が付けられたフィールドを持つExperience Data Model(XDM)スキーマを作成する必要がある場合があります。 これは「アドホック」スキーマと呼ばれます。 アドホックスキーマは、CSVファイルの取り込み [や特定の種類のソース接続の作成など](../ingestion/home.md) 、Experience Platformの様々なデータ取り込みワークフローで使 [用されます](../source-connectors/home.md)。 アドホックスキーマの作成は、スキーマレジストリAPIを使用して行われ、アドホックスキーマをワークフローの一部として作成する必要がある他のエクスペリエンスプラットフォームチュートリアルと組み合わせて使用されます。 アドホックスキーマの作成を開始するには、APIを使用してアドホック [スキーマを作成するためのチュートリアルを参照してください](../xdm/tutorials/ad-hoc.md)。
+特定の状況では、単一のデータセットでのみ使用するために名前が付けられたフィールドを持つExperience Data Model(XDM)スキーマを作成する必要がある場合があります。 これは「アドホック」スキーマと呼ばれます。 アドホックスキーマは、CSVファイルの取り込み [や特定の種類のソース接続の作成など](../ingestion/home.md) 、Experience Platformの様々なデータ取り込みワークフローで使 [用されます](../sources/home.md)。 アドホックスキーマの作成は、スキーマレジストリAPIを使用して行われ、アドホックスキーマをワークフローの一部として作成する必要がある他のエクスペリエンスプラットフォームチュートリアルと組み合わせて使用されます。 アドホックスキーマの作成を開始するには、APIを使用してアドホック [スキーマを作成するためのチュートリアルを参照してください](../xdm/tutorials/ad-hoc.md)。
 
 ## 次の手順
 
