@@ -4,7 +4,7 @@ seo-title: 調査先
 description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックをキャプチャし、Adobe Real-time CDPとデータを共有します。
 seo-description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックをキャプチャし、Adobe Real-time CDPとデータを共有します。
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
