@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectors
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -15,4 +15,4 @@ Adobe Experience Platformを使用すると、外部ソースからデータを�
 
 エクスペリエンスプラットフォームは、様々なデータプロバイダーへのソース接続を簡単に設定できるRESTful APIとインタラクティブUIを提供します。 これらのソース接続を使用すると、ストレージシステムとCRMサービスの認証、取り込みの実行時間の設定、データ取り込みのスループットの管理を行うことができます。
 
-これらのソースコネクタの詳細については、ソースコネクタのドキュメント [を参照してくださ](../source-connectors/home.md)い。
+これらのソースコネクタの詳細については、ソースコネクタのドキュメント [を参照してくださ](../sources/home.md)い。
