@@ -1,0 +1,152 @@
+---
+product: experience-platform
+audience: user
+user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
+translation-type: tm+mt
+source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
+
+---
+
+
+# ソースコネクタ {#sources}
+
+- [ソースコネクタの概要](home.md)
+- 使用可能なソースコネクタ {#connectors}
+   - アドビアプリケーション {#adobe-applications}
+      - [Analyticsデータコネクタ](connectors/adobe-applications/analytics.md)
+      - [オーディエンスマネージャコネクタ](connectors/adobe-applications/audience-manager.md)
+      - [顧客属性コネクタ](connectors/adobe-applications/customer-attributes.md)
+   - 広告 {#advertising}
+      - [Google AdWordsコネクタ](connectors/advertising/ads.md)
+   - Cloud storage {#cloud-storage}
+      - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
+      - [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
+      - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
+      - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
+   - CRM {#crm}
+      - [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
+      - [Salesforceコネクタ](connectors/crm/salesforce.md)
+   - 顧客の成功 {#customer-success}
+      - [Salesforce Service Cloudコネクタ](connectors/customer-success/salesforce-service-cloud.md)
+      - [ServiceNowコネクタ](connectors/customer-success/servicenow.md)
+   - データベース {#databases}
+      - [Amazon Redshiftコネクタ](connectors/databases/redshift.md)
+      - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
+      - [Azure HDInsightsコネクタのApache Spark](connectors/databases/spark.md)
+      - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
+      - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
+      - [Google BigQueryコネクタ](connectors/databases/bigquery.md)
+      - [MariaDBコネクタ](connectors/databases/mariadb.md)
+      - [Microsoft SQL Serverコネクタ](connectors/databases/sql-server.md)
+      - [MySQLコネクタ](connectors/databases/mysql.md)
+      - [フェニックスコネクタ](connectors/databases/phoenix.md)
+      - [PostgreSQLコネクタ](connectors/databases/postgres.md)
+   - マーケティングの自動化 {#marketing-automation}
+      - [HubSpotコネクタ](connectors/marketing-automation/hubspot.md)
+   - 支払 {#payments}
+      - [PayPalコネクタ](connectors/payments/paypal.md)
+   - プロトコル {#protocols}
+      - [汎用ODataコネクタ](connectors/protocols/odata.md)
+- APIチュートリアル {#api-tutorials}
+   - ソースコネクタの作成 {#create}
+      - 広告 {#advertising}
+         - [Google広告コネクタ](tutorials/api/create/advertising/ads.md)
+      - Cloud storage {#cloud-storage}
+         - [Amazon S3コネクタ](tutorials/api/create/cloud-storage/s3.md)
+         - [Azure BLOBコネクタ](tutorials/api/create/cloud-storage/blob.md)
+         - [Azure Data LakeストレージGen2コネクタ](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Google Cloudストレージコネクタ](tutorials/api/create/cloud-storage/google.md)
+         - [SFTPコネクタ](tutorials/api/create/cloud-storage/sftp.md)
+      - CRM {#crm}
+         - [Google AdWordsコネクタ](tutorials/api/create/crm/adwords.md)
+         - [HubSpotコネクタ](tutorials/api/create/crm/hubspot.md)
+         - [Microsoft Dynamicsコネクタ](tutorials/api/create/crm/ms-dynamics.md)
+         - [Salesforceコネクタ](tutorials/api/create/crm/salesforce.md)
+      - 顧客の成功 {#customer-success}
+         - [Salesforce Service Cloudコネクタ](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNowコネクタ](tutorials/api/create/customer-success/servicenow.md)
+      - データベース {#databases}
+         - [Amazon Redshiftコネクタ](tutorials/api/create/databases/redshift.md)
+         - [Azure HDInsightsコネクタのApache Spark](tutorials/api/create/databases/spark.md)
+         - [Azure Synapse Analyticsコネクタ](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azureテーブルストレージコネクタ](tutorials/api/create/databases/ats.md)
+         - [Google BigQueryコネクタ](tutorials/api/create/databases/bigquery.md)
+         - [Hiveコネクタ](tutorials/api/create/databases/hive.md)
+         - [MariaDBコネクタ](tutorials/api/create/databases/mariadb.md)
+         - [MySQLコネクタ](tutorials/api/create/databases/mysql.md)
+         - [フェニックスコネクタ](tutorials/api/create/databases/phoenix.md)
+         - [PostgreSQLコネクタ](tutorials/api/create/databases/postgres.md)
+         - [SQL Serverコネクタ](tutorials/api/create/databases/sql-server.md)
+      - マーケティングの自動化 {#marketing-automation}
+         - [HubSpotコネクタ](tutorials/api/create/marketing-automation/hubspot.md)
+      - 支払 {#payments}
+         - [PayPalコネクタ](tutorials/api/create/payments/paypal.md)
+      - プロトコル {#protocols}
+         - [汎用ODataコネクタ](tutorials/api/create/protocols/odata.md)
+   - データの調査 {#explore}
+      - [広告データの調査](tutorials/api/explore/advertising.md)
+      - [クラウドストレージデータの調査](tutorials/api/explore/cloud-storage.md)
+      - [CRMデータの調査](tutorials/api/explore/crm.md)
+      - [顧客成功データの調査](tutorials/api/explore/customer-success.md)
+      - [データベースまたはNoSQLデータの参照](tutorials/api/explore/database-nosql.md)
+      - [マーケティング自動化データの調査](tutorials/api/explore/marketing-automation.md)
+      - [支払データの調査](tutorials/api/explore/payments.md)
+      - [プロトコルデータの調査](tutorials/api/explore/protocols.md)
+   - データの収集 {#collect}
+      - [広告データの収集](tutorials/api/collect/advertising.md)
+      - [クラウドストレージデータの収集](tutorials/api/collect/cloud-storage.md)
+      - [CRMデータの収集](tutorials/api/collect/crm.md)
+      - [顧客成功データの収集](tutorials/api/collect/customer-success.md)
+      - [データベースまたはNoSQLデータの収集](tutorials/api/collect/database-nosql.md)
+      - [マーケティング自動化データの収集](tutorials/api/collect/marketing-automation.md)
+      - [支払データの収集](tutorials/api/collect/payments.md)
+      - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
+   - [サードパーティのクラウドシステムからパーケットデータをストレージする](tutorials/api/create-dataset-base-connection.md)
+   - [Flow Service APIを使用したデータセットベース接続の作成](tutorials/api/cloud-storage-parquet.md)
+- UIチュートリアル {#ui-tutorials}
+   - ソースコネクタの作成 {#create}
+      - アドビアプリケーション {#adobe-applications}
+         - [Adobeオーディエンスマネージャーコネクタ](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Analyticsコネクタ](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [顧客属性コネクタ](tutorials/ui/create/adobe-applications/customer-attributes.md)
+      - 広告 {#create}
+         - [Google広告コネクタ](tutorials/ui/create/advertising/ads.md)
+      - Cloud storage {#cloud-storage}
+         - [Azure Data LakeストレージGen2コネクタ](tutorials/ui/create/cloud-storage/adls-gen2.md)
+         - [Azure BlobおよびAmazon S3コネクタ](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [FTPおよびSFTPコネクタ](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [Google Cloudストレージコネクタ](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - CRM {#crm}
+         - [Microsoft DynamicsおよびSalesforceコネクタ](tutorials/ui/create/crm/dynamics-salesforce.md)
+      - 顧客の成功 {#customer-success}
+         - [Salesforce Service Cloudコネクタ](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ServiceNowコネクタ](tutorials/ui/create/customer-success/servicenow.md)
+      - データベース {#databases}
+         - [Amazon Redshiftコネクタ](tutorials/ui/create/databases/redshift.md)
+         - [Azure Synapse Analyticsコネクタ](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azureテーブルストレージコネクタ](tutorials/ui/create/databases/ats.md)
+         - [Google Bigクエリコネクタ](tutorials/ui/create/databases/bigquery.md)
+         - [Hiveコネクタ](tutorials/ui/create/databases/hive.md)
+         - [MariaDBコネクタ](tutorials/ui/create/databases/mariadb.md)
+         - [Microsoft SQL Serverコネクタ](tutorials/ui/create/databases/sql-server.md)
+         - [MySQLコネクタ](tutorials/ui/create/databases/mysql.md)
+         - [フェニックスコネクタ](tutorials/ui/create/databases/phoenix.md)
+         - [PostgreSQLコネクタ](tutorials/ui/create/databases/postgres.md)
+         - [Sparkコネクタ](tutorials/ui/create/databases/spark.md)
+      - マーケティングの自動化 {#marketing-automation}
+         - [HubSpotコネクタ](tutorials/ui/create/marketing-automation/hubspot.md)
+      - 支払 {#payments}
+         - [PayPalコネクタ](tutorials/ui/create/payments/paypal.md)
+      - プロトコル {#protocols}
+         - [汎用ODataコネクタ](tutorials/ui/create/protocols/odata.md)
+   - データフローの設定 {#dataflow}
+      - [広告コネクタのデータフローの設定](tutorials/ui/dataflow/advertising.md)
+      - [クラウドデータフローコネクタのストレージ設定](tutorials/ui/dataflow/cloud-storage.md)
+      - [データベースコネクタのデータフローの設定](tutorials/ui/dataflow/databases.md)
+      - [CRMコネクタ用のデータフローの設定](tutorials/ui/dataflow/crm.md)
+      - [顧客成功コネクタのデータフローの設定](tutorials/ui/dataflow/customer-success.md)
+      - [マーケティング自動化コネクタ用のデータフローの設定](tutorials/ui/dataflow/marketing-automation.md)
+      - [支払コネクタのデータフローの設定](tutorials/ui/dataflow/payments.md)
+      - [プロトコルコネクタのデータフローの設定](tutorials/ui/dataflow/protocols.md)
+   - [受信データをアクティブ化して顧客のプロファイル](tutorials/ui/profile.md)
+   - [アカウントとデータセットフローの監視](tutorials/ui/monitor.md)
