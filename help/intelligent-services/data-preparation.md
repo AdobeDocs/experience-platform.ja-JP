@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1d827d1637da05d3d2afc338f48911bb23039949
+source-git-commit: 03135f564bd72fb60e41b02557cb9ca9ec11e6e8
 
 ---
 
 
 # Intelligent Servicesで使用するデータの準備
 
-インテリジェントサービスがマーケティングイベントデータからの洞察を見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Servicesで使用されるすべてのデータセットは、 **Consumer Experience Services(CEE)** XDMスキーマに準拠している必要があります。
+インテリジェントサービスがマーケティングイベントデータからの洞察を見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Servicesで使用されるすべてのデータセットは、 **Consumer ExperienceEvent(CEE)** XDMスキーマに準拠している必要があります。
 
 このドキュメントでは、複数のチャネルのマーケティングイベントのデータをこのスキーマにマッピングし、スキーマ内の重要なフィールドの情報をまとめ、データを効率的に構造にマッピングする方法を判断する際の一般的な手引きを示します。
 
@@ -52,7 +52,7 @@ mixinの完全な例は、 [public XDM repositoryにあります](https://github
 
 ## データのマッピングと取り込み
 
-時系列データをCEEスキーマにマッピングできるかどうかを判断したら、データをインテリジェントサービスに取り込むプロセスを開始できます。 データをアドビのコンサルティングサービスにマッピングし、スキーマに取り込む方法については、アドビのコンサルティングサービスにお問い合わせください。
+マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、データをインテリジェントサービスに取り込むプロセスを開始できます。 データをアドビのコンサルティングサービスにマッピングし、スキーマに取り込む方法については、アドビのコンサルティングサービスにお問い合わせください。
 
 Adobe Experience Platform購読をお持ちで、データを自分でマッピングして取り込む場合は、次の節で説明する手順に従います。
 
