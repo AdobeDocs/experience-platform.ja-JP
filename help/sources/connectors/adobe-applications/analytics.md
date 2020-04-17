@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analyticsデータコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -37,7 +37,7 @@ XDMについて詳しくは、 [XDM Systemの概要を参照してください](
 
 ## Adobe AnalyticsからXDMへのフィールドのマッピング方法を教えてください。
 
-プラットフォームユーザーインターフェイスを使用してAnalyticsデータをエクスペリエンスプラットフォームに取り込むためのソース接続が確立されると、データフィールドは自動的にマッピングされ、数分以内にリアルタイム顧客プロファイルに取り込まれます。 プラットフォームUIを使用してAdobe Analyticsとのソース接続を作成する手順については、 [Analytics data connectorsのチュートリアルを参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)。
+プラットフォームユーザーインターフェイスを使用してAnalyticsデータをエクスペリエンスプラットフォームに取り込むためのソース接続が確立されると、データフィールドは自動的にマッピングされ、数分以内にリアルタイム顧客プロファイルに取り込まれます。 プラットフォームUIを使用してAdobe Analyticsとのソース接続を作成する手順については、 [Analytics data connectorsのチュートリアルを参照してください](../../tutorials/ui/create/adobe-applications/analytics.md)。
 
 AnalyticsとExperience Platformの間で発生するフィールドマッピングについて詳しくは、 [Adobe Analyticsフィールドマッピングガイドを参照してください](./analytics-mapping.md) 。
 
