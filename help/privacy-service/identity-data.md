@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プライバシー要求のIDデータ
 topic: overview
 translation-type: tm+mt
-source-git-commit: f2fe9c01c8355d0b312a0236f76085d1743aa8cc
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -15,7 +15,7 @@ Adobe Experience Platformプライバシーサービスで個人データの顧�
 
 このドキュメントでは、データ操作を設定し、アドビのテクノロジーを活用して、顧客のプライバシーリクエストに適したID情報を効果的に取得する方法に関する一般的なガイダンスを提供します。
 
-## Identities and namespaces
+## IDと名前空間
 
 顧客が複数の異なるチャネルを通じてブランドとやり取りできる場合、多数のインタラクションから記録される異なる識別子を調整するのは困難な場合があります。 その結果、Experience Cloudアプリケーションの特定のユーザーに属するデータを特定するのが困難になる可能性があります。
 
@@ -23,13 +23,13 @@ Adobe Experience Platformプライバシーサービスで個人データの顧�
 
 したがって、プライバシーサービスに送信される各IDには、ID値を接触チャネルのシステムに関連付けることによってコンテキストを提供する **** 名前空間が付属する必要があります。 名前空間は、電子メールアドレス（「電子メール」）などの汎用概念を表すことや、IDを特定のアプリケーション(Adobe Advertising Cloud ID(「AdCloud」)やAdobeターゲットID(「TNTID」)など)に関連付けることができます。
 
-Adobe Experience Platform Identity Serviceは、グローバルに定義されたユーザー定義のID名前空間を管理します。 名前空間について詳しくは、ID名前空間の概要を参照し [てください](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)。 プライバシーサービスで一般的に使用される標準名前空間と名前空間修飾子のリストについては、開発者ガ [イドの付録の節](api/appendix.md) を参照してください。
+Adobe Experience Platform Identity Serviceは、グローバルに定義されたユーザー定義のID名前空間を管理します。 名前空間について詳しくは、ID名前空間の概要を参照し [てください](../identity-service/namespaces.md)。 プライバシーサービスで一般的に使用される標準名前空間と名前空間修飾子のリストについては、開発者ガ [イドの付録の節](api/appendix.md) を参照してください。
 
 ## ECIDとオプトインサービス
 
-Adobe Experience Cloud Identity Serviceは、Experience Cloudの共通の識別フレームワークとして機能し、各サイト訪問者に一意の永続的なIDを割り当てます。 Experience Cloud ID(ECID)は、ファーストパーティCookieを使用して顧客のアクティビティを追跡し、複数のアプリケーションでデバイスを一意に識別し、同じサイトの訪問者とそのデータを異なるExperience Cloudアプリケーションで識別できます。 See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) for more information.
+Adobe Experience Cloud Identity Serviceは、Experience Cloudの共通の識別フレームワークとして機能し、各サイト訪問者に一意の永続的なIDを割り当てます。 Experience Cloud ID(ECID)は、ファーストパーティCookieを使用して顧客のアクティビティを追跡し、複数のアプリケーションでデバイスを一意に識別し、同じサイトの訪問者とそのデータを異なるExperience Cloudアプリケーションで識別できます。 See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/ja-JP/id-service/using/intro/overview.html) for more information.
 
-Experience Cloud IDサービスの拡張機能であるオプトインサービスを使用すると、訪問者に対してプロトコルを設定し、訪問者がのデバイスまたはブラウザーにcookieを設定できるかどうかを判断できるようにできます。 ご使用のアプリケーションに対するサービスの設定方法など、オプトインサービスに関する詳細は、オプトインサービスのドキュメントを [参照してください](https://docs.adobe.com/content/help/en/id-service/using/implementation/opt-in-service/optin-overview.html)。
+Experience Cloud IDサービスの拡張機能であるオプトインサービスを使用すると、訪問者に対してプロトコルを設定し、訪問者がのデバイスまたはブラウザーにcookieを設定できるかどうかを判断できるようにできます。 ご使用のアプリケーションに対するサービスの設定方法など、オプトインサービスに関する詳細は、オプトインサービスのドキュメントを [参照してください](https://docs.adobe.com/content/help/ja-JP/id-service/using/implementation/opt-in-service/optin-overview.html)。
 
 サイト訪問者にECIDが割り当てられると、次の節で説明するように、AdobeプライバシーJavaScriptライブラリを利用して、プライバシーリクエストで使用するIDを取得できます。
 
