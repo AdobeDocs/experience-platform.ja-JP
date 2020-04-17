@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Datasetsユーザーガイド
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -50,7 +50,7 @@ Experience Platform UIで、左側のナビゲーション **で** 「Datasets�
 * [クエリサービスの概要](../../query-service/home.md)
 * [JupyterLabユーザガイド](../../data-science-workspace/jupyterlab/overview.md)
 
-## データセットの作成
+## データセットの作成 {#create}
 
 新しいデータセットを作成するには、開始セット **ダッシュボードの「データセットを作成** 」をクリック *します* 。
 
