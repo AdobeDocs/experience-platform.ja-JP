@@ -4,7 +4,7 @@ seo-title: リアルタイム顧客データプロファイルでのプライバ
 description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform プライバシーサービスを使用すると、GDP
 Real-time CDP provides two types of consumer opt-out capabilities:
 
 1. **General opt-out**: (Waiting on info)
-1. **Segment-level opt-out of sale**: Opt-out of sale requests are captured using the Profile Privacy mixin (see the section on "Handling opt-out requests" in the [Real-time Customer Profile overview](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md) for more information). Using this, you can exclude users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
+1. **Segment-level opt-out of sale**: Opt-out of sale requests are captured using the Profile Privacy mixin (see the section on "Handling opt-out requests" in the [Real-time Customer Profile overview](../../profile/home.md) for more information). Using this, you can exclude users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
 -->
 
 ## 次の手順
