@@ -4,7 +4,7 @@ solution: Experience Platform
 title: オーディエンスマネージャコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Manager Data Connectorは、Adobe Experience Managerで収集�
 
 オーディエンスマネージャーコネクターは、これらのデータカテゴリーをExperience Data Model(XDM)スキーマにマッピングし、プラットフォームに送信します。 リアルタイムデータとオンボードデータはXDM ExperienceEventデータとして送信され、プロファイルデータはXDM Individualプロファイルとして送信されます。
 
-Platform UIを使用してAdobe Platform Managerとの接続を作成する手順については、 [オーディエンスマネージャコネクタのチュートリアルを参照してください](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)。
+Platform UIを使用してAdobe Platform Managerとの接続を作成する手順については、 [オーディエンスマネージャコネクタのチュートリアルを参照してください](../../tutorials/ui/create/adobe-applications/audience-manager.md)。
 
 ## Experience Data Model(XDM)とは
 
