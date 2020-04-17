@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 承認されたID名前空間と修飾子
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 ## 標準ID名前空間
 
-プライバシーサービスに送信されるすべてのIDは、特定のID名前空間で提供されます。 ID名前空間は、IDが関連付けられるコ [ンテキストを示す](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md) 、Adobe Experience Platform Identity Serviceのコンポーネントです。
+プライバシーサービスに送信されるすべてのIDは、特定のID名前空間で提供されます。 ID名前空間は、IDが関連付けられるコ [ンテキストを示す](../../identity-service/home.md) 、Adobe Experience Platform Identity Serviceのコンポーネントです。
 
 次の表に、エクスペリエンスプラットフォームで使用可能な、一般的に使用される事前定義のIDタイプと、それに関連する値の概要を示 `namespace` します。
 
@@ -31,7 +31,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 >[!NOTE] 各IDタイプには整 `namespaceId` 数値も含まれ、IDのプロパティを「namespaceId」に設定する際に、 `namespace` 文字列の代わりに使 `type` 用できます。 詳しくは、 [名前空間修飾子の節を参照](#namespace-qualifiers) 。
 
-IDサービスAPIのエンドポイントにGET要求を行うことで、組織で使用中のID名前空間のリストを取 `idnamespace/identities` 得することができます。 詳しくは、「IDサ [ービス開発者ガイド](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_api.md) 」を参照してください。
+IDサービスAPIのエンドポイントにGET要求を行うことで、組織で使用中のID名前空間のリストを取 `idnamespace/identities` 得することができます。 詳しくは、「IDサ [ービス開発者ガイド](../../identity-service/api/getting-started.md) 」を参照してください。
 
 ## 名前空間修飾子
 
