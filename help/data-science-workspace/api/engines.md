@@ -4,7 +4,7 @@ solution: Experience Platform
 title: エンジン
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -14,6 +14,9 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 エンジンは、Data Science Workspaceの機械学習モデルの基礎です。 特定の問題を解決する機械学習アルゴリズム、フィーチャエンジニアリングを実行するフィーチャパイプライン、またはその両方が含まれます。
 
 ## Dockerレジストリの検索
+
+>[!TIP]
+>Docker URLがない場合は、 [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorialsを参照して、DockerホストURLの作成手順を確認してください。
 
 パッケージ化されたレシピファイル（DockerホストのURL、ユーザー名、パスワードなど）をアップロードするには、Dockerレジストリ資格情報が必要です。 この情報は、次のGETリクエストを実行することで調べることができます。
 
@@ -37,7 +40,8 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 成功した応答は、Docker URL(`host`)、ユーザー名()、パスワード(`username`)を含むDockerレジストリの詳細を含むペイロードを返`password`します。
 
->[!NOTE] Dockerのパスワードは、更新するたびに `{ACCESS_TOKEN}` 変更されます。
+>[!NOTE]
+>Dockerのパスワードは、更新するたびに `{ACCESS_TOKEN}` 変更されます。
 
 ```json
 {
@@ -47,7 +51,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 }
 ```
 
-## Docker URLを使用したエンジンの作成
+## Docker URLを使用したエンジンの作成 {#docker-image}
 
 エンジンを作成するには、メタデータと、マルチパートフォームのDocker画像を参照するDocker URLを提供しながら、POSTリクエストを実行します。
 
@@ -57,7 +61,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 POST /engines
 ```
 
-**リクエスト**
+**リクエストPython/R**
 
 ```shell
 curl -X POST \
@@ -93,10 +97,48 @@ curl -X POST \
 | `artifacts.default.image.location` | Docker URLによってリンクされたDockerイメージの場所。 |
 | `artifacts.default.image.executionType` | エンジンの実行タイプ。 この値は、Dockerイメージの構築元の言語に対応し、「Python」、「R」、「Tensorflow」のいずれかを指定できます。 |
 
+**PySpark/Scalaのリクエスト**
+
+PySparkレシピをリクエストする際、と `executionType` は「PySpark `type` 」となります。 Scalaレシピのリクエストを行う場合、と `executionType` は「Spark」 `type` になります。 次のScalaレシピの例では、Sparkを使用しています。
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+    "name": "Spark retail sales recipe",
+    "description": "A description for this Engine",
+    "type": "Spark",
+    "mlLibrary":"databricks-spark",
+    "artifacts": {
+        "default": {
+            "image": {
+                "name": "modelspark",
+                "executionType": "Spark",
+                "packagingType": "docker",
+                "location": "v1d2cs4mimnlttw.azurecr.io/sarunbatchtest:0.0.1"
+            }
+        }
+    }
+}'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `name` | エンジンの名前。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピ名として継承します。 |
+| `description` | エンジンのオプションの説明です。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピの説明として継承します。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
+| `type` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
+| `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する際に必要なフィールド。 このフィールドはに設定する必要がありま `databricks-spark`す。 |
+| `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
 
 **応答**
 
-成功した応答は、新たに作成されたエンジンの詳細を含むペイロードを、その一意の識別子(`id`)を返します。
+成功した応答は、新たに作成されたエンジンの詳細を含むペイロードを、その一意の識別子(`id`)を返します。 次に、Pythonエンジンのレスポンス例を示します。 すべてのエンジンの応答は次の形式に従います。
 
 ```json
 {
@@ -117,138 +159,6 @@ curl -X POST \
                 "name": "An additional name for the Docker image",
                 "executionType": "Python",
                 "packagingType": "docker"
-            }
-        }
-    }
-}
-```
-
-## バイナリアーティファクトを使用したエンジンの作成
-
-ローカルまたはバイナリのアーティファクトを使用し `.jar` てエンジ `.egg` ンを作成するには、メタデータとアーティファクトのパスをマルチパートフォームに提供しながらPOSTリクエストを実行します。
-
-**API形式**
-
-```http
-POST /engines
-```
-
-**リクエスト**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "A name for this Engine",
-        "description": "A description for this Engine",
-        "algorithm": "Classification",
-        "type": "PySpark",
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
-```
-
-| プロパティ | 説明 |
-| --- | --- |
-| `name` | エンジンの名前。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピ名として継承します。 |
-| `description` | エンジンのオプションの説明です。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピの説明として継承します。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `algorithm` | 機械学習アルゴリズムのタイプを指定する文字列。 サポートされるアルゴリズムのタイプには、「分類」、「回帰」または「カスタム」があります。 |
-| `type` | エンジンの実行タイプ。 この値は、バイナリアーティファクトが構築される言語に対応し、&quot;PySpark&quot;または&quot;Spark&quot;のいずれかを指定できます。 |
-
-
-**応答**
-
-成功した応答は、新たに作成されたエンジンの詳細を含むペイロードを、その一意の識別子(`id`)を返します。
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "A name for this Engine",
-    "description": "A description for this Engine",
-    "type": "PySpark",
-    "algorithm": "Classification",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-## バイナリアーティファクトを使用してフィーチャーパイプラインエンジンを作成する
-
-ローカルまたはバイナリのアーティファクトを使用してフィーチャーパイプラインエ `.jar``.egg` ンジンを作成するには、メタデータとアーティファクトのパスをマルチパートフォームに提供しながらPOSTリクエストを実行します。 PySparkまたはSpark Engineは、コア数やメモリ量などの計算リソースを指定できます。 詳細は、PySparkとSparkのリソース設定に関する付録の [節を参照してください](./appendix.md#resource-config) 。
-
-**API形式**
-
-```http
-POST /engines
-```
-
-**リクエスト**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'content-type: multipart/form-data' \
-    -F 'engine={
-        "name": "Feature Pipeline Engine",
-        "description": "A feature pipeline Engine",
-        "algorithm":"fp",
-        "type": "PySpark"
-    }' \
-    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
-    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
-```
-
-| プロパティ | 説明 |
-| --- | --- |
-| `name` | エンジンの名前。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピ名として継承します。 |
-| `description` | エンジンのオプションの説明です。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピの説明として継承します。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `algorithm` | 機械学習アルゴリズムのタイプを指定する文字列。 この作成をフィーチャーパイプラインエンジンに指定するには、この値を「fp」に設定します。 |
-| `type` | エンジンの実行タイプ。 この値は、バイナリアーティファクトが構築される言語に対応し、&quot;PySpark&quot;または&quot;Spark&quot;を指定できます。 |
-
-**応答**
-
-成功した応答は、新たに作成されたエンジンの詳細を含むペイロードを、その一意の識別子(`id`)を返します。
-
-```json
-{
-    "id": "{ENGINE_ID}",
-    "name": "Feature Pipeline Engine",
-    "description": "A feature pipeline Engine",
-    "type": "PySpark",
-    "algorithm": "fp",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "Jane_Doe@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
-                "name": "file.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
             }
         }
     }
@@ -505,5 +415,145 @@ curl -X DELETE \
     "title": "Success",
     "status": 200,
     "detail": "Engine deletion was successful"
+}
+```
+
+## 非推奨のリクエスト
+
+>[!IMPORTANT]
+>バイナリアーティファクトはサポートされなくなり、後で削除されるように設定されます。 新しいPySparkとScalaレシピは、Engineを作成するために [docker画像](#docker-image) の例に従う必要があります。
+
+## バイナリアーティファクトを使用したエンジンの作成 — 廃止
+
+ローカルまたはバイナリのアーティファクトを使用し `.jar` てエンジ `.egg` ンを作成するには、メタデータとアーティファクトのパスをマルチパートフォームに提供しながらPOSTリクエストを実行します。
+
+**API形式**
+
+```http
+POST /engines
+```
+
+**リクエスト**
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "A name for this Engine",
+        "description": "A description for this Engine",
+        "algorithm": "Classification",
+        "type": "PySpark",
+    }' \
+    -F 'defaultArtifact=@path/to/binary/artifact/file.egg'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `name` | エンジンの名前。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピ名として継承します。 |
+| `description` | エンジンのオプションの説明です。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピの説明として継承します。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
+| `algorithm` | 機械学習アルゴリズムのタイプを指定する文字列。 サポートされるアルゴリズムのタイプには、「分類」、「回帰」または「カスタム」があります。 |
+| `type` | エンジンの実行タイプ。 この値は、バイナリアーティファクトが構築される言語に対応し、&quot;PySpark&quot;または&quot;Spark&quot;のいずれかを指定できます。 |
+
+
+**応答**
+
+成功した応答は、新たに作成されたエンジンの詳細を含むペイロードを、その一意の識別子(`id`)を返します。
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "A name for this Engine",
+    "description": "A description for this Engine",
+    "type": "PySpark",
+    "algorithm": "Classification",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
+}
+```
+
+## バイナリアーティファクトを使用してフィーチャパイプラインエンジンを作成する — 廃止
+
+>[!IMPORTANT]
+>バイナリアーティファクトはサポートされなくなり、後で削除されるように設定されます。
+
+ローカルまたはバイナリのアーティファクトを使用してフィーチャーパイプラインエ `.jar``.egg` ンジンを作成するには、メタデータとアーティファクトのパスをマルチパートフォームに提供しながらPOSTリクエストを実行します。 PySparkまたはSpark Engineは、コア数やメモリ量などの計算リソースを指定できます。 詳細は、PySparkとSparkのリソース設定に関する付録の [節を参照してください](./appendix.md#resource-config) 。
+
+**API形式**
+
+```http
+POST /engines
+```
+
+**リクエスト**
+
+```shell
+curl -X POST \
+    https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'content-type: multipart/form-data' \
+    -F 'engine={
+        "name": "Feature Pipeline Engine",
+        "description": "A feature pipeline Engine",
+        "algorithm":"fp",
+        "type": "PySpark"
+    }' \
+    -F 'featurePipelineOverrideArtifact=@path/to/binary/artifact/feature_pipeline.egg' \
+    -F 'defaultArtifact=@path/to/binary/artifact/feature_pipeline.egg'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `name` | エンジンの名前。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピ名として継承します。 |
+| `description` | エンジンのオプションの説明です。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピの説明として継承します。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
+| `algorithm` | 機械学習アルゴリズムのタイプを指定する文字列。 この作成をフィーチャーパイプラインエンジンに指定するには、この値を「fp」に設定します。 |
+| `type` | エンジンの実行タイプ。 この値は、バイナリアーティファクトが構築される言語に対応し、&quot;PySpark&quot;または&quot;Spark&quot;を指定できます。 |
+
+**応答**
+
+成功した応答は、新たに作成されたエンジンの詳細を含むペイロードを、その一意の識別子(`id`)を返します。
+
+```json
+{
+    "id": "{ENGINE_ID}",
+    "name": "Feature Pipeline Engine",
+    "description": "A feature pipeline Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "created": "2019-01-01T00:00:00.000Z",
+    "createdBy": {
+        "userId": "Jane_Doe@AdobeID"
+    },
+    "updated": "2019-01-01T00:00:00.000Z",
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "wasbs://artifact-location.blob.core.windows.net/Engine_ID/default.egg",
+                "name": "file.egg",
+                "executionType": "PySpark",
+                "packagingType": "egg"
+            }
+        }
+    }
 }
 ```
