@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupyterノートブックを使用してレシピを作成する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 
 ---
 
@@ -38,9 +38,10 @@ source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
 
 Recipe Builderノートブックを使用すると、ノートブック内でトレーニングとスコアリングの実行を実行できます。 これにより、トレーニングデータとスコアリングデータの実 `train()` 験を実行す `score()` る間に、および方法を柔軟に変更できます。 トレーニングとスコアの出力に満足したら、Data Science Workspaceで使用するレシピを作成し、Recipe Builderノートブックに組み込まれているレシピの機能を使用します。
 
->[!NOTE] Recipe Builderノートブックは、すべてのファイル形式での作業をサポートしていますが、現在のところ、レシピの作成機能はPythonのみをサポートしています。
+>[!NOTE]
+>Recipe Builderノートブックは、すべてのファイル形式での作業をサポートしていますが、現在のところ、レシピの作成機能はPythonのみをサポートしています。
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 ランチャーからRecipe Builderノートブックをクリックすると、タブにノートブックが開きます。 ノートブックで使用されるテンプレートは、このパブリック・リポジトリにもあるPython小売売上予測レシピ [です。](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -50,7 +51,6 @@ Recipe Builderノートブックを使用すると、ノートブック内でト
 
 ## レシピファイルを編集する
 
-<!-- Databricks update to recipe needed -->
 レシピファイルを編集するには、ファイルパスに対応するジュピター内のセルに移動します。 例えば、に変更を加える場合は、を `evaluator.py`探します `%%writefile demo-recipe/evaluator.py`。
 
 開始がセルに必要な変更を加えたら、セルを実行します。 このコ `%%writefile filename.py` マンドは、セルの内容をに書き込みま `filename.py`す。 各ファイルのセルを手動で実行し、変更を加える必要があります。
@@ -69,9 +69,6 @@ JupyterLabノートブック環境の基本を理解したら、機械学習モ�
 - [評価ファイル](#evaluator-file)
 - [データセーバーファイル](#data-saver-file)
 
-
-
-
 ### 要件ファイル
 
 要件ファイルは、レシピで使用する追加のライブラリを宣言するために使用されます。 依存関係がある場合は、バージョン番号を指定できます。 その他のライブラリを探すには、https://anaconda.orgを参照してください。 既に使用されているメインリストのライブラリは次のとおりです。
@@ -84,9 +81,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] 追加したライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。
-
-
+>[!NOTE]
+>追加したライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。
 
 ### 設定ファイル
 
@@ -101,7 +97,7 @@ data_access_sdk_python
 
 データセットとスキーマIDを確認するには、左側のナビゲーションバー（フォルダーアイコンの下）にあるノートブック内の「データ」タブに移動します。
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
 同じ情報は、 [Adobe Experience Platformの「](https://platform.adobe.com/) スキーマ **[」タブと「データセ](https://platform.adobe.com/schema)**ット**[」タブにあ](https://platform.adobe.com/dataset/overview)** ります。
 
@@ -111,8 +107,6 @@ data_access_sdk_python
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
-
-
 
 ## トレーニングデータローダー
 
@@ -129,7 +123,8 @@ data_access_sdk_python
 - [プラットフォームSDK](#platform-sdk)
 - [外部ソース](#external-sources)
 
->[!NOTE] Recipe Builderノートブックでは、データはデータローダーを介して読み込 `platform_sdk` まれます。
+>[!NOTE]
+>Recipe Builderノートブックでは、データはデータローダーを介して読み込 `platform_sdk` まれます。
 
 ### プラットフォームSDK
 
@@ -155,11 +150,10 @@ df = pd.read_json(data)
 
 これで、データはデータフレームオブジェクトに含まれ、次のセクションで分析および操作 [できます](#data-preparation-and-feature-engineering)。
 
-
-
 ### データアクセスSDK（非推奨）
 
->[!CAUTION]  が推奨さ `data_access_sdk_python` れなくなりました。デ [ータローダの使用に関するガイドについては、「Convert Data Access code to Platform SDK](../authoring/platform-sdk.md) 」を参照して `platform_sdk` ください。
+>[!CAUTION]
+> `data_access_sdk_python` が推奨されなくなりました。データローダ [ーの使用に関するガイドについては、「Convert Data Access code to Platform SDK](../authoring/platform-sdk.md) 」を参照し `platform_sdk` てください。
 
 データアクセスSDKを使用してデータを読み込むことができます。 ライブラリは、次の行を含めることで、ページの上部に読み込むことができます。
 
@@ -176,7 +170,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] 設定ファイルの節で説 [明したように](#configuration-files)、Experience Platformのデータにアクセスする際には、次の設定パラメーターが設定されます。
+>[!NOTE]
+>設定ファイルの節で説 [明したように](#configuration-files)、Experience Platformのデータにアクセスする際には、次の設定パラメーターが設定されます。
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -297,17 +292,16 @@ df.dropna(0, inplace=True)
 
 スコアリ `load()` ングデータローダーの関数は、スコアリングデータセットを出力として使用して完了する必要があります。
 
-
-
 ### パイプラインファイル
 
-このファ `pipeline.py` イルには、トレーニングとスコアのロジックが含まれます。 次の2つの項で、両方を見てみましょう。
+このファ `pipeline.py` イルには、トレーニングとスコアのロジックが含まれます。
 
 ### トレーニング
 
 トレーニングの目的は、トレーニングデータセットの機能とラベルを使用してモデルを作成することです。
 
->[!NOTE]  機能 _とは_ 、機械学習モデルがラベルを予測するために使用する入力変数を指 _します_。
+>[!NOTE]\
+>_機能とは_ 、機械学習モデルがラベルを予測するために使用する入力変数を指 _します_。
 
 この機能 `train()` には、トレーニングモデルを含め、トレーニングされたモデルを返却する必要があります。 様々なモデルの例は、scikit-learnユーザーガイドのドキ [ュメントに記載されています](https://scikit-learn.org/stable/user_guide.html)。
 
@@ -346,8 +340,6 @@ def train(configProperties, data):
 ```
 
 アプリケーションに応じて、関数に引数が含まれることに注意してく `GradientBoostingRegressor()` ださい。 `xTrainingDataset` には、トレーニングに使用する機能を含める必要がありますが、ラ `yTrainingDataset` ベルを含める必要があります。
-
-
 
 ### スコア
 
@@ -456,7 +448,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## トレーニングとスコア
 
 ノートブックの変更が完了し、レシピのトレーニングを行う場合は、バーの上部にある関連するボタンをクリックして、セル内にトレーニング・ランを作成できます。 ボタンをクリックすると、トレーニングスクリプトのコマンドと出力のログがノートブック（セルの下）に表示 `evaluator.py` されます。 Condaは、最初にすべての依存関係をインストールし、その後トレーニングを開始します。
@@ -467,7 +458,11 @@ def save(configProperties, prediction):
 
 ## レシピの作成
 
-レシピの編集が完了し、トレーニング/スコアリングの出力に満足したら、「レシピの作成」を押してノートブックからレシピを作成 **できます**。 ボタンを押すと、レシピ名の入力を求めるプロンプトが表示されます。 この名前は、プラットフォームで作成された実際のレシピを表します。
+レシピの編集が完了し、トレーニング/スコアリングの出力に満足したら、右上のナビゲーションの「レシピの作成」を押して、ノートブックから **レシピ** を作成できます。
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+ボタンを押すと、レシピ名の入力を求められます。 この名前は、プラットフォーム上で作成された実際のレシピを表します。
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
