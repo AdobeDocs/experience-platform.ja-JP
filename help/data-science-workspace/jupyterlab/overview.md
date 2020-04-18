@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupyterLabユーザガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 700c927680d9b9ba4dabc2d2e068e4da3c801cce
+source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
 
 ---
 
@@ -56,7 +56,7 @@ JupyterLabの主な機能と、共通の操作を実行する手順に関する�
 
 ### JupyterLabへのアクセス
 
-<a href="https://platform.adobe.com" target="_blank">Adobe Experience Platformで、左のナビゲーション列の</a>「 **Models** 」をクリックし、上部のナビゲーションにある「 **Notebooks** 」をクリックしてJupyterLabにアクセスします。 JupyterLabが完全に初期化されるまでしばらく待ちます。
+「 [Adobe Experience Platform](https://platform.adobe.com)」で、左のナビゲ **ーション列から「ノートブック** 」を選択します。 JupyterLabが完全に初期化されるまでしばらく待ちます。
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -116,11 +116,9 @@ JupyterLabのメイン作業領域では、ドキュメントや他のアクテ�
 
 ### カーネル {#kernels}
 
-<!-- will need to edit this sparkmagic %% for data bricks not supported -->
-
 ノート型カーネルは、ノート型セルを処理するための言語固有のコンピューティングエンジンです。 JupyterLabは、Pythonに加えて、R、PySpark、Sparkで追加の言語サポートを提供します。 ノートブック・ドキュメントを開くと、関連するカーネルが起動します。 ノートブックセルが実行されると、カーネルは計算を行い、結果を生成し、CPUやメモリリソースを大量に消費する可能性があります。 割り当てられたメモリは、カーネルがシャットダウンされるまで解放されないことに注意してください。
 
->[!NOTE] PySparkとSparkの機能はSparkmagicでサポートされ <a href="https://github.com/jupyter-incubator/sparkmagic" target="_blank">ています</a>。
+>[!IMPORTANT] JupyterLab LauncherがSpark 2.3からSpark 2.4に更新されました。SparkとPySparkのカーネルは、Spark 2.4ノートブックではサポートされなくなりました。
 
 特定の機能は、以下の表で説明するように、特定のカーネルに限定されています。
 
@@ -128,8 +126,9 @@ JupyterLabのメイン作業領域では、ドキュメントや他のアクテ�
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | ○ | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li><li>クエリサービス</li></ul> |
 | **R** | ○ | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
-| **PySpark** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
-| **Spark** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
+| **PySpark — 非推奨** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
+| **Spark — 非推奨** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
+| **スカラ** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
 
 ### カーネルセッション
 
@@ -143,9 +142,23 @@ JupyterLab上のアクティブなノートブックやアクティビティは�
 
 ### PySpark/Spark実行リソース {#execution-resource}
 
-<!-- need to update with databricks -->
+>[!IMPORTANT]
+>Spark 2.3からSpark 2.4へのトランジションでは、SparkとPySparkの両方のカーネルが廃止されました。
+>
+>新しいPySpark 3 (Spark 2.4)ノートブックはPython3カーネルを使っています。 既存のノートブックの更新に関する詳細なチュートリアルについては、 [](../recipe-notebook-migration.md) Pyspark 3(Spark 2.3)をPySpark 3(Spark 2.4)に変換する際のガイドを参照してください。
+>
+>新しいSparkノートブックはScalaカーネルを利用する必要があります。 既存のノートブックの更新に関する詳細なチュートリアルについては、 [Spark 2.3からScala(Spark 2.4)への変換に関するガイドを参照してください](../recipe-notebook-migration.md) 。
 
 PySparkとSparkカーネルは、PySparkまたはSparkノートブック内にSparkクラスタリソースを設定するために、configureコマンド(`%%configure`)を使って設定のリストを提供します。 これらの設定は、Sparkアプリケーションの初期化前に定義するのが理想的です。 Sparkアプリケーションがアクティブな状態で設定を変更するには、次に示すように、コマンド(`%%configure -f`)の後にforceフラグを追加する必要があります。このフラグは、変更を適用するためにアプリケーションを再起動します。
+
+>[!CAUTION]
+>PySpark 3 (Spark 2.4)とScala (Spark 2.4)ノートブックでは、Sparkmagicはサポートさ `%%` れなくなりました。 次の操作は使用できなくなりました。
+* `%%help`
+* `%%info`
+* `%%cleanup`
+* `%%delete`
+* `%%configure`
+* `%%local`
 
 ```python
 %%configure -f 
@@ -160,8 +173,6 @@ PySparkとSparkカーネルは、PySparkまたはSparkノートブック内にSp
     }
 }
 ```
-
->[!TIP] ヘルプコマンド(`%%help`)を使用して、使用可能なすべてのコマンドを表示します。
 
 次の表に、すべての設定可能なプロパティを示します。
 
@@ -183,8 +194,6 @@ PySparkとSparkカーネルは、PySparkまたはSparkノートブック内にSp
 | conf | Spark設定プロパティ | キーのマップ=val |
 
 ### ランチャー
-
-<!-- Databricks update -->
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -242,7 +251,7 @@ PySparkとSparkカーネルは、PySparkまたはSparkノートブック内にSp
         <td >いいえ</td>
     </tr>
     <tr>
-        <th  ><strong>PySpark</strong></th>
+        <th  ><strong>PySpark 3（Spark 2.3 — 非推奨）</strong></th>
         <td >○</td>
         <td >○</td>
         <td >いいえ</td>
@@ -254,7 +263,31 @@ PySparkとSparkカーネルは、PySparkまたはSparkノートブック内にSp
         <td >いいえ</td>
     </tr>
     <tr>
-        <th ><strong>Spark</strong></th>
+        <th ><strong>Spark（Spark 2.3 — 非推奨）</strong></th>
+        <td >○</td>
+        <td >○</td>
+        <td >いいえ</td>
+        <td >いいえ</td>
+        <td >いいえ</td>
+        <td >いいえ</td>
+        <td >いいえ</td>
+        <td >いいえ</td>
+        <td >○</td>
+    </tr>
+      <tr>
+        <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
+        <td >いいえ</td>
+        <td >○</td>
+        <td >いいえ</td>
+        <td >いいえ</td>
+        <td >いいえ</td>
+        <td >いいえ</td>
+        <td >○</td>
+        <td >○</td>
+        <td >いいえ</td>
+    </tr>
+    <tr>
+        <th ><strong>スカラ</strong></th>
         <td >○</td>
         <td >○</td>
         <td >いいえ</td>
@@ -341,12 +374,21 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`:アクセスするデータセットの固有のID
 
-### PySpark/Sparkのデータセットから読み込む
+### PySpark/Spark/Scalaのデータセットから読み込む
+
+>[!IMPORTANT]
+>Spark 2.3からSpark 2.4へのトランジションでは、SparkとPySparkの両方のカーネルが廃止されました。
+>
+>新しいPySpark 3 (Spark 2.4)ノートブックはPython3カーネルを使っています。 既存のSpark 2.3コードを変換する場合は、 [Pyspark 3(Spark 2.3)をPySpark 3(Spark 2.4)に変換する方法のガイドを参照してください](../recipe-notebook-migration.md) 。 新しいノートブックは、 [以下のPySpark 3 (Spark 2.4)の例に従う必要があります](#pyspark2.4) 。
+>
+>新しいSparkノートブックはScalaカーネルを利用する必要があります。 既存のSpark 2.3コードを変換する場合は、 [Spark 2.3をScala(Spark 2.4)に変換する方法に関するガイドを参照してください](../recipe-notebook-migration.md) 。 新しいノートブックは、 [Scala (Spark 2.4)の例に従う必要があります](#spark2.4) 。
 
 アクティブなPySparkまたはSparkノートブックが開いた状態で、左側のサイドバーから **Data Explorer** （データエクスプローラ）タブを展開し、重複が「 **Datasets** s（データセット）」をクリックして、使用可能なデータセットのリストを表示します。 アクセスするデータセットのリストを右クリックし、「Explore Data in **Notebook」をクリックします**。 次のコードセルが生成されます。
 
+#### PySpark（Spark 2.3 — 非推奨）
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd0 = spark.read.format("com.adobe.platform.dataset").\
     option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -355,8 +397,22 @@ pd0.describe()
 pd0.show(10, False)
 ```
 
+#### PySpark (Spark 2.4) {#pyspark2.4}
+
+Spark 2.4の導入に伴い、カスタムマジッ [`%dataset`](#magic) クが提供されます。
+
+```python
+# PySpark 3 (Spark 2.4)
+
+%dataset read --datasetId {DATASET_ID} --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
+
+#### Spark（Spark 2.3 — 非推奨）
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -366,6 +422,54 @@ val dataFrame = spark.read.
 dataFrame.printSchema()
 dataFrame.show()
 ```
+
+#### Scala(Spark 2.4) {#spark2.4}
+
+```scala
+// Scala (Spark 2.4)
+
+// initialize the session
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+val dataFrame = spark.read.format("com.adobe.platform.query")
+    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+    .option("ims-org", sys.env("IMS_ORG_ID"))
+    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+    .option("mode", "batch")
+    .option("dataset-id", "{DATASET_ID}")
+    .load()
+dataFrame.printSchema()
+dataFrame.show()
+```
+
+>[!TIP]
+>Scalaでは、を使用して、内から値 `sys.env()` を宣言し、返すことができま `option`す。
+
+### PySpark 3 (Spark 2.4)ノートブックで%dataset magicを使用する {#magic}
+
+Spark 2.4の導入に伴い、新しいPySpark 3 (Spark 2.4) `%dataset` ノートブック（Python 3カーネル）で使用するためのカスタムマジックが提供されます。
+
+**用途**
+
+`%dataset {action} --datasetId {id} --dataFrame {df}`
+
+**説明**
+
+Pythonノートブック（Python 3カーネル）からデータセットを読み書きするためのカスタムData Science Workspaceマジックコマンド。
+
+* **{action}**:データセットに対して実行するアクションのタイプ。 「読み取り」と「書き込み」の2つのアクションを使用できます。
+* **—datasetId {id}**:読み取りまたは書き込みを行うデータセットのIDを指定するために使用します。 これは必須の引数です。
+* **—dataFrame {df}**:パンダのデータフレーム。 これは必須の引数です。
+   * アクションが「read」の場合、{df}はデータセット読み取り操作の結果を利用できる変数です。
+   * アクションが「書き込み」の場合、このデータフレーム{df}がデータセットに書き込まれます。
+* **—mode（オプション）**:使用できるパラメーターは、「batch」および「interactive」です。 デフォルトでは、モードは「interactive」に設定されています。 大量のデータを読み取る場合は、「バッチ」モードを使用することをお勧めします。
+
+**例**
+
+* **例を読みます**。 `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
+* **例を記述**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
 ### Pythonでクエリサービスを使用するクエリデータ
 
@@ -453,12 +557,21 @@ df <- dataset_reader$
 
 ### PySpark/SparkのExperienceEventデータのフィルタ
 
+>[!IMPORTANT]
+>Spark 2.3からSpark 2.4へのトランジションでは、SparkとPySparkの両方のカーネルが廃止されました。
+>
+>新しいPySpark 3 (Spark 2.4)ノートブックはPython3カーネルを使っています。 既存のコードの変換について詳しくは、 [Pyspark 3(Spark 2.3)をPySpark 3(Spark 2.4)に変換する際のガイドを参照してください](../recipe-notebook-migration.md) 。 新しいPySparkノートブックを作成する場合は、ExperienceEventデータのフィルタリングに [PySpark 3 (spark 2.4)](#pyspark3-spark2.4) の例を使用します。
+>
+>新しいSparkノートブックはScalaカーネルを利用する必要があります。 既存のコードの変換について詳しくは、 [Spark 2.3からScala(Spark 2.4)への変換に関するガイドを参照してください](../recipe-notebook-migration.md) 。 新しいSparkノートブックを作成する場合は、Scala( [spark 2.4)の例を使用してExperienceEventデータをフィルタリングします](#scala-spark) 。
+
 PySparkまたはSparkノートブック内のExperienceEventデータセットにアクセスしてフィルタするには、データセットID(`{DATASET_ID}`)、組織のIMS ID、および特定の時間範囲を定義するフィルタルールを指定する必要があります。 Filteringの時間範囲は、関数を使用して定義します。関 `spark.sql()`数パラメータはSQLクエリ文字列です。
 
 次のセルでは、ExperienceEventデータセットを、2019年1月1日から2019年12月31日の終わりまでの間にのみ存在するデータにフィルターします。
 
+#### PySpark 3（Spark 2.3 — 非推奨）
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd = spark.read.format("com.adobe.platform.dataset").\
     option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -473,8 +586,30 @@ timepd = spark.sql("""
 """)
 ```
 
+#### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
+
+```python
+# PySpark 3 (Spark 2.4)
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+
+%dataset read --datasetId {DATASET_ID} --dataFrame df
+
+df.createOrReplaceTempView("event")
+timepd = spark.sql("""
+    SELECT *
+    FROM event
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timepd.show()
+```
+
+#### Spark（Spark 2.3 — 非推奨）
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -491,6 +626,53 @@ val timedf = spark.sql("""
 """)
 ```
 
+#### Scala(Spark 2.4) {#scala-spark}
+
+```scala
+// Spark (Spark 2.4)
+
+// Turn off extra logging
+import org.apache.log4j.{Level, Logger}
+Logger.getLogger("org").setLevel(Level.OFF)
+Logger.getLogger("com").setLevel(Level.OFF)
+
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
+  .master("local")
+  .getOrCreate()
+
+// Stage Exploratory
+val dataSetId: String = "{DATASET_ID}"
+val orgId: String = sys.env("IMS_ORG_ID")
+val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
+val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
+val serviceToken: String = sys.env("PYDASDK_IMS_SERVICE_TOKEN")
+val mode: String = "batch"
+
+var df = spark.read.format("com.adobe.platform.query")
+  .option("user-token", userToken)
+  .option("ims-org", orgId)
+  .option("api-key", clientId)
+  .option("mode", mode)
+  .option("dataset-id", dataSetId)
+  .option("service-token", serviceToken)
+  .load()
+df.createOrReplaceTempView("event")
+val timedf = spark.sql("""
+    SELECT * 
+    FROM event 
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timedf.show()
+```
+
+>[!TIP]
+>Scalaでは、を使用して、内から値 `sys.env()` を宣言し、返すことができま `option`す。 これにより、変数が1回しか使用されないことがわかっている場合に、変数を定義する必要がなくなります。 次の例では、上記の例 `val userToken` を使用し、それを別の例としてインラインで宣言 `option` しています。
+> 
+```scala
+> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+> ```
 
 ## サポートされるライブラリ {#supported-libraries}
 
