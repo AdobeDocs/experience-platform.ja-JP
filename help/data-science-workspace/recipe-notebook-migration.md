@@ -4,7 +4,7 @@ solution: Experience Platform
 title: レシピとノートブックの移行ガイド
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 105317c0b9a7cf74d55e3436a49e1dc6eeb31b32
+source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
 
 ---
 
@@ -413,7 +413,7 @@ pd0 = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_o
 | 要素 | 説明 |
 | ------- | ----------- |
 | pd0 | 使用または作成するパンダのデータフレームオブジェクトの名前。 |
-| [%dataset](#magic) | Python3カーネルでのデータアクセスのためのカスタムマジック。 |
+| [%dataset](#magic) | Python3カーネルでのデータアクセスに関するカスタムマジック。 |
 
 次の画像は、PySpark 2.3とPySpark 2.4でのデータ読み込みの主な違いを示しています。この例では、JupyterLab Launcherで提供さ *れる* Aggregationスターターノートブックを使用します。
 
@@ -427,11 +427,11 @@ PySpark 3 (Spark 2.4)では、読み込み時に `sc = spark.sparkContext` 定�
 
 ![負荷1](./images/migration/pyspark-migration/2.4-load.png)
 
-**PySpark 2.3でのExperience Couldプラットフォームデータの読み込み — 廃止**
+**PySpark 2.3でのExperience Cloudプラットフォームデータの読み込み — 廃止**
 
 ![負荷2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**PySpark 2.4でのExperience Couldプラットフォームデータの読み込み**
+**PySpark 2.4でのExperience Cloudプラットフォームデータの読み込み**
 
 PySpark 3 (Spark 2.4)では、とを定義する `org_id` 必要は `dataset_id` なくなりました。 また、データ `df = spark.read.format` セットの読み取りと書き込みを容易にするた [`%dataset`](#magic) めのカスタムマジックに置き換えられました。
 
@@ -545,7 +545,7 @@ pd0.describe()pd0.show(10, False)
 | 要素 | 説明 |
 | ------- | ----------- |
 | pd0 | 使用または作成するパンダのデータフレームオブジェクトの名前。 |
-| [%dataset](#magic) | Python3カーネルでのデータアクセスのためのカスタムマジック。 |
+| [%dataset](#magic) | Python3カーネルでのデータアクセスに関するカスタムマジック。 |
 
 >[!TIP] —modeをまたはに設定で `interactive` きます `batch`。 —modeのデフォルトはです `interactive`。 大量のデータを読み取る場合は、 `batch` モードを使用することをお勧めします。
 
