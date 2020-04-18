@@ -4,7 +4,7 @@ solution: Experience Platform
 title: パッケージ化されたレシピの読み込み(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ## 前提条件
 
-このチュートリアルでは、DockerイメージのURLまたはバイナリファイルの形式でパッケージ化されたレシピが必要です。 詳しくは、ソースファイルをレシピにパッ [ケージ化する方法に関するチュートリアル](./package-source-files-recipe.md) （英語のみ）を参照してください。
+このチュートリアルでは、Docker画像URLの形式でパッケージ化されたレシピが必要です。 詳しくは、ソースファイルをレシピにパッ [ケージ化する方法に関するチュートリアル](./package-source-files-recipe.md) （英語のみ）を参照してください。
 
 ## UIワークフロー
 
@@ -23,10 +23,14 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 パッケージレシピの読み込みのワークフローは、次の手順で構成されます。
 - [レシピの設定](#configure)
-- [バイナリベースのレシピの読み込み — PySpark](#pyspark)
-- [バイナリベースのレシピの読み込み — Scala Spark](#scala)
 - [Dockerベースのレシピのインポート — Python](#python)
 - [Dockerベースのレシピの読み込み — R](#r)
+- [Dockerベースのレシピの読み込み — PySpark](#pyspark)
+- [Dockerベースのレシピの読み込み — Scala](#scala)
+
+非推奨ワークフロー:
+- [バイナリベースのレシピの読み込み — PySpark](#pyspark-deprecated)
+- [バイナリベースのレシピの読み込み — Scala Spark](#scala-deprecated)
 
 ### レシピの設定 {#configure}
 
@@ -115,7 +119,147 @@ Data Science Workspaceの各レシピインスタンスには、特定の使用�
 
 このチュートリアルでは、Data Science Workspace Referenceの小売販売レシピのデフォルトの設定ファイルをそのまま使用できます。
 
-### バイナリベースのレシピの読み込み — PySpark {#pyspark}
+### Dockerベースのレシピのインポート — Python {#python}
+
+開始を設定し **ます** 。 次に、「レシピの読み込 *み」を選択し* 、「起動」をク **リックします**。
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅 **の** 「次へ」を選択します。
+
+![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> 「 [Package source files into a Recipe](./package-source-files-recipe.md) tutorial」では、Pythonソースファイルを使用して小売売上のレシピを作成する際の最後に、Docker URLが提供されていました。
+
+「 *Select source* 」ページに移動したら、Pythonソースファイルを使用して作成したパッケージレシピに対応するDocker URLを「 **Source URL** 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`す。 「 **Runtime** 」ドロップダウンで「 *Python* 」を選択し、「 **Type** 」ドロップ ** ダウンで「Classification」を選択します。 すべての情報が入力されたら、 **右上隅の** 「次へ」をクリックして「スキーマの管理 **」に進みます。
+
+>[!NOTE]
+> *タイプは&#x200B;*、分&#x200B;**類と回帰**をサポート&#x200B;**します**。 モデルがこれらのタイプの1つに該当しない場合は、「カスタム」(**Custom**)を選択します。
+
+![](../images/models-recipes/import-package-ui/recipe_source_python.png)
+
+次に、「スキーマの管理」セクションの「小売売上の入出力スキーマ」を選択します。これらのオプションは、「小売売上スキーマとデータセットの作成」チュートリアルに用意されているブートストラップスクリ *プトを使用して作成されました*[](../models-recipes/create-retails-sales-dataset.md) 。
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しく設定したレシピを確認します。
+
+必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を確認します。
+
+### Dockerベースのレシピの読み込み — R {#r}
+
+開始を設定し **ます** 。 次に、「レシピの読み込 *み」を選択し* 、「起動」をク **リックします**。
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅 **の** 「次へ」を選択します。
+
+![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> Package [source files into a Recipe](./package-source-files-recipe.md) tutorialで、Rソースファイルを使用して小売売上のレシピを作成する際の最後にDocker URLが提供されていました。
+
+「 *Select source* 」ページに移動したら、Rソースファイルを使用して作成したパッケージレシピに対応するDocker URLを「 **Source URL** 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`す。 「実行時 **** 」ドロップダウンで「 *R* 」を選択し、「タイプ」ドロップダ ****** ウンで「分類」を選択します。 すべての情報が入力されたら、 **右上隅の** 「次へ」をクリックして「スキーマの管理 **」に進みます。
+
+>[!NOTE]
+> *タイプは&#x200B;*、分&#x200B;**類と回帰**をサポート&#x200B;**します**。 モデルがこれらのタイプの1つに該当しない場合は、「カスタム」(**Custom**)を選択します。
+
+![](../images/models-recipes/import-package-ui/recipe_source_R.png)
+
+次に、「スキーマの管理」セクションの「小売売上の入出力スキーマ」を選択します。これらのオプションは、「小売売上スキーマとデータセットの作成」チュートリアルに用意されているブートストラップスクリ *プトを使用して作成されました*[](../models-recipes/create-retails-sales-dataset.md) 。
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しい設定済みレシピを確認します。
+
+必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を確認します。
+
+### Dockerベースのレシピの読み込み — PySpark {#pyspark}
+
+開始を設定し **ます** 。 次に、「レシピの読み込 *み」を選択し* 、「起動」をク **リックします**。
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅の「 **次へ** 」を選択して次に進みます。
+
+![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> PySparkソースフ [ァイルを使用した小売販売レシピの構築の最後に、](./package-source-files-recipe.md) Package source files into a Recipe tutorialでDocker URLが提供されていました。
+
+「 *Select source* 」ページに移動したら、PySparkソースファイルを使用して作成したパッケージレシピに対応するDocker URLを「 **Source URL** 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`す。 「 **Runtime** 」ドロップダウン *で「PySpark* 」を選択します。 PySparkランタイムが選択されると、デフォルトのアーティファクトが **Dockerに自動入力されます**。 次に、「タイプ」ド **ロップダウ** ンで「分類 ** 」を選択します。 すべての情報が入力されたら、 **右上隅の** 「次へ」をクリックして「スキーマの管理 **」に進みます。
+
+>[!NOTE]
+> *タイプは&#x200B;*、分&#x200B;**類と回帰**をサポート&#x200B;**します**。 モデルがこれらのタイプの1つに該当しない場合は、「カスタム」(**Custom**)を選択します。
+
+![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
+
+次に、「スキーマの管理」セクションの「小売売上の入出力スキーマ」を選択します。これらのオプションは、「小売売上スキーマとデータセットの作成」チュートリアルに用意されているブートストラップスクリ *プトを使用して作成されました*[](../models-recipes/create-retails-sales-dataset.md) 。
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しく設定したレシピを確認します。
+
+必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を確認します。
+
+### Dockerベースのレシピの読み込み — Scala {#scala}
+
+開始を設定し **ます** 。 次に、「レシピの読み込 *み」を選択し* 、「起動」をク **リックします**。
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅の「 **次へ** 」を選択して次に進みます。
+
+![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> 「 [Package source files into a Recipe](./package-source-files-recipe.md) tutorial」で、Scala(Spark)ソースファイルを使用して小売売上のレシピを作成する際の最後に、Docker URLが提供されていました。
+
+「 *Select source* 」ページに移動したら、「Scala source files」を使用して作成したパッケージレシピに対応するDocker URLを「 *Source URL* 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`す。 「 **Runtime** 」ドロップダ *ウンでSpark* を選択します。 Sparkランタイムが選択されると、デフォルトのアーティファクトが **Dockerに自動的に設定されま**&#x200B;す。 次に、[タイプ]ド **ロップダウ** ンから *[回帰* ]を選択します。 すべての情報が入力されたら、 **右上隅の** 「次へ」をクリックして「スキーマの管理 **」に進みます。
+
+>[!NOTE]
+> *タイプは&#x200B;*、分&#x200B;**類と回帰**をサポート&#x200B;**します**。 モデルがこれらのタイプの1つに該当しない場合は、「カスタム」(**Custom**)を選択します。
+
+![](../images/models-recipes/import-package-ui/scala-databricks.png)
+
+次に、「スキーマの管理」セクションの「小売売上の入出力スキーマ」を選択します。これらのオプションは、「小売売上スキーマとデータセットの作成」チュートリアルに用意されているブートストラップスクリ *プトを使用して作成されました*[](../models-recipes/create-retails-sales-dataset.md) 。
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しく設定したレシピを確認します。
+
+必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を確認します。
+
+## 次の手順
+
+このチュートリアルでは、Data Science Workspaceでレシピを設定および読み込む方法に関する洞察を提供しました。 新しく作成したレシピを使用して、モデルの作成、トレーニング、評価を行うことができるようになりました。
+
+- [UIでのモデルのトレーニングと評価](./train-evaluate-model-ui.md)
+- [APIを使用したモデルのトレーニングと評価](./train-evaluate-model-api.md)
+
+## 廃止されたワークフロー
+
+>[!CAUTION]
+>バイナリベースのレシピの読み込みは、PySpark 3(Spark 2.4)およびScala(Spark 2.4)ではサポートされなくなりました。
+
+### バイナリベースのレシピの読み込み — PySpark {#pyspark-deprecated}
 
 Package [source files into a Recipe](./package-source-files-recipe.md) tutorialでは、 **EGG** binaryファイルがRetail Sales PySparkソースファイルを使用して構築されていました。
 
@@ -132,10 +276,10 @@ Package [source files into a Recipe](./package-source-files-recipe.md) tutorial�
 5. 必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-小売販売のレシピが作成されました。 次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を見つけます。
+次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を確認します。
 
 
-### バイナリベースのレシピの読み込み — Scala Spark {#scala}
+### バイナリベースのレシピの読み込み — Scala Spark {#scala-deprecated}
 
 「 [Package source files into a Recipe](./package-source-files-recipe.md) tutorial」で、 **JAR** binaryファイルがRetail Sales Scala Sparkソースファイルを使用して構築されました。
 
@@ -151,39 +295,4 @@ Package [source files into a Recipe](./package-source-files-recipe.md) tutorial�
 5. 必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-小売販売のレシピが作成されました。 次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を見つけます。
-
-### Dockerベースのレシピのインポート — Python {#python}
-
-「 [Package source files into a Recipe](./package-source-files-recipe.md) tutorial」では、Pythonソースファイルを使用して小売売上のレシピを作成する際の最後に、Docker URLが提供されていました。
-
-1. Pythonソースファイルを使用して作成したパッケージレシピに対応するDocker URLを「 **Source URL** 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`す。 両方の項 **目が指定されたら** 、「次へ」をクリックします。
-   ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
-2. 「スキーマの管理」セクションの「小売売上の入出力スキーマ」を選択します。これらのオプションは **、「小売売上スキーマとデータセットの作成」チュートリアルに用意されているブートストラップスクリ**&#x200B;プトを使用して作成されています [](../models-recipes/create-retails-sales-dataset.md) 。
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-「機能の管 **理** 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しく設定したレシピを確認します。
-3. 必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-小売販売のレシピが作成されました。 次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を見つけます。
-
-### Dockerベースのレシピの読み込み — R {#r}
-
-Package [source files into a Recipe](./package-source-files-recipe.md) tutorialで、Rソースファイルを使用して小売売上のレシピを作成する際の最後にDocker URLが提供されていました。
-
-1. Rソースファイルを使用して作成したパッケージレシピに対応するDocker URLを「 **Source URL** 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`す。 両方の項 **目が指定されたら** 、「次へ」をクリックします。
-   ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
-2. 「スキーマの管理」セクションの「小売売上の入出力スキーマ」を選択します。これらのオプションは **、「小売売上スキーマとデータセットの作成」チュートリアルに用意されているブートストラップスクリ**&#x200B;プトを使用して作成されています [](../models-recipes/create-retails-sales-dataset.md) 。
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-「機能の管 **理** 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しく設定したレシピを確認します。
-3. 必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-小売販売のレシピが作成されました。 次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を見つけます。
-
-## 次の手順
-
-このチュートリアルでは、Data Science Workspaceでレシピを設定および読み込む方法に関する洞察を提供しました。 新しく作成したレシピを使用して、モデルの作成、トレーニング、評価を行うことができるようになりました。
-
-- [UIでのモデルのトレーニングと評価](./train-evaluate-model-ui.md)
-- [APIを使用したモデルのトレーニングと評価](./train-evaluate-model-api.md)
+次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を確認します。
