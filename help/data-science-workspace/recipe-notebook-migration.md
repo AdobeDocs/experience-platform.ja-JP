@@ -4,7 +4,7 @@ solution: Experience Platform
 title: レシピとノートブックの移行ガイド
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
+source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
 
 ---
 
@@ -41,7 +41,7 @@ Data Science Workspaceに対する最近の変更では、既存のSparkレシ�
 
 これで、ビルド手順で生成されるレシピアーティファクトは、.jarバイナリファイルを含むDockerイメージになりました。 また、プラットフォームSDKを使用してデータセットの読み取りと書き込みを行うための構文が変更され、レシピコードを変更する必要があります。
 
-次のビデオは、Sparkのレシピに必要な変更をより深く理解できるように設計されています。
+次のビデオは、Sparkのレシピに必要な変更を理解しやすくするために設計されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33243)
 
@@ -292,6 +292,10 @@ JupyterLabノートブックに対する最近の変更では、既存のPySpark
 - [PySpark 2.3から2.4への移行ガイド](#pyspark-notebook-migration)
 - [Spark 2.3からSpark 2.4(Scala)への移行ガイド](#spark-notebook-migration)
 
+次のビデオは、JupyterLabノートブックに必要な変更を理解するために役立ちます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
+
 ## PySpark 2.3から2.4へのノートブック移行ガイド {#pyspark-notebook-migration}
 
 PySpark 2.4がJupyterLab Notebooksに導入され、PySpark 2.4を搭載した新しいPythonノートブックは、PySpark 3カーネルの代わりにPython 3カーネルを使用するようになりました。 つまり、PySpark 2.3上で動作する既存のコードはPySpark 2.4ではサポートされていません。
@@ -413,7 +417,7 @@ pd0 = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_o
 | 要素 | 説明 |
 | ------- | ----------- |
 | pd0 | 使用または作成するパンダのデータフレームオブジェクトの名前。 |
-| [%dataset](#magic) | Python3カーネルでのデータアクセスに関するカスタムマジック。 |
+| [%dataset](#magic) | Python3カーネルでのデータアクセスのためのカスタムマジック。 |
 
 次の画像は、PySpark 2.3とPySpark 2.4でのデータ読み込みの主な違いを示しています。この例では、JupyterLab Launcherで提供さ *れる* Aggregationスターターノートブックを使用します。
 
@@ -439,7 +443,7 @@ PySpark 3 (Spark 2.4)では、とを定義する `org_id` 必要は `dataset_id`
 
 | 要素 | 説明 |
 | ------- | ----------- |
-| [%dataset](#magic) | Python3カーネルでのデータアクセスのためのカスタムマジック。 |
+| [%dataset](#magic) | Python3カーネルでのデータアクセスに関するカスタムマジック。 |
 
 >[!TIP] —modeをまたはに設定で `interactive` きます `batch`。 —modeのデフォルトはです `interactive`。 大量のデータを読み取る場合は、 `batch` モードを使用することをお勧めします。
 
@@ -545,7 +549,7 @@ pd0.describe()pd0.show(10, False)
 | 要素 | 説明 |
 | ------- | ----------- |
 | pd0 | 使用または作成するパンダのデータフレームオブジェクトの名前。 |
-| [%dataset](#magic) | Python3カーネルでのデータアクセスに関するカスタムマジック。 |
+| [%dataset](#magic) | Python3カーネルでのデータアクセスのためのカスタムマジック。 |
 
 >[!TIP] —modeをまたはに設定で `interactive` きます `batch`。 —modeのデフォルトはです `interactive`。 大量のデータを読み取る場合は、 `batch` モードを使用することをお勧めします。
 
