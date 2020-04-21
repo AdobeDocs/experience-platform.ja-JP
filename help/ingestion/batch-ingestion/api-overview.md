@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Batch Ingestion開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -54,7 +54,7 @@ source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
 
 データを取り込む場合は、Experience Data Model(XDM)スキーマの動作を理解することが重要です。 XDMのフィールドタイプを様々な形式にマップする方法について詳しくは、『 [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照。
 
-データを取り込む際には、柔軟性があります。ターゲットスキーマ内のデータとタイプが一致しない場合、データは表現されたターゲットタイプに変換されます。  できない場合は、バッチが `TypeCompatibilityException`.
+データを取り込む際には、柔軟性があります。ターゲットスキーマ内のデータとタイプが一致しない場合、データは表現されたターゲットタイプに変換されます。 できない場合は、バッチが `TypeCompatibilityException`.
 
 例えば、JSONもCSVも日付や時刻のタイプを持ちません。 その結果、これらの値は [ISO 8061形式の文字列](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;)またはUnix時間形式のミリ秒(153126395)を使用して表されます。9000)に変換され、取り込み時にターゲットXDMタイプに変換されます。
 
@@ -382,7 +382,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | パラメーター | 説明 |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | 参照データセットのID。 |
 
 **応答**
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## バッチの削除
+## バッチの削除 {#delete-a-batch}
 
 削除するバッチのIDに対する `action=REVERT` クエリパラメーターを使用して、次のPOSTリクエストを実行すると、バッチを削除できます。 バッチは「非アクティブ」とマークされ、ガベージコレクションの対象となります。 バッチは非同期で収集され、その時点で「削除済み」とマークされます。
 
