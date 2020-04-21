@@ -4,7 +4,7 @@ solution: Experience Platform
 title: レシピとノートブックの移行ガイド
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
+source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
 
 ---
 
@@ -41,7 +41,7 @@ Data Science Workspaceに対する最近の変更では、既存のSparkレシ�
 
 これで、ビルド手順で生成されるレシピアーティファクトは、.jarバイナリファイルを含むDockerイメージになりました。 また、プラットフォームSDKを使用してデータセットの読み取りと書き込みを行うための構文が変更され、レシピコードを変更する必要があります。
 
-次のビデオは、Sparkのレシピに必要な変更を理解しやすくするために設計されています。
+次のビデオは、Sparkのレシピに必要な変更をより深く理解できるように設計されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33243)
 
@@ -66,11 +66,9 @@ Sparkレシピの更新では、多数の値を追加および変更する必要
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-import com.adobe.platform.クエリ.QSOption
-
-var df = sparkSession.read.format(&quot;com.adobe.platform.userToken&quot;, {userToken}).option(QSOption.serviceToken, {serviceToken}).option(QSOption.ims, {orgId}).option(QSOption.apiKey, {apiKey}).option(QSOption.mode, &quot;interactive&quot;).option(QSOption.datasetId, {dataSetId}).load()
-</pre>
-</td>
+import com.adobe.platform.クエリ.QSOptionvar df = sparkSession.read.format("com.adobe.platform.クエリ") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSO.ims,{orgId}) .option(QSOption.apiKey, {apiKey}) .option(QSOption.mode, "interactive") .option(QSOption.datasetId, {dataSetId}) .load()
+  </pre>
+  </td>
   </tr>
 </table>
 
@@ -94,11 +92,9 @@ Sparkレシピの更新では、多数の値を追加および変更する必要
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-import com.adobe.platform.クエリ.QSOption
-
-df.write.format(&quot;com.adobe.platform.userToken&quot;, {userToken}).option(QSOption.serviceToken, {serviceToken}).option(QSOption.imsOrg, {orgId}).option(QSOption.apiKey,apiKey}).option(QSOption.datasetId, {dataSetId}).save()
+import com.adobe.platform.クエリ.QSOptiondf.write.format("com.adobe.platform.クエリ") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {Id}) .option(QSOption.apiKey, {apiKey}) .option(QSOption.datasetId, {dataSetId}) .save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -186,18 +182,14 @@ Sparkレシピの更新では、多数の値を追加および変更する必要
   <tr>
   <td>
   <pre class="JSON language-JSON hljs">
-dataset_options = get_dataset_options(spark.sparkContext)
-
-pd = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_options.serviceToken(), service_token).option(dataset_options.userToken(), user_token).option(dataset_options.orgId(), org_id).option(dataset_opt_opt_keyKeyKey().load(id)
+dataset_options = get_dataset_options(spark.sparkContext)pd = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.serviceToken(), service_token) .option(dataset_options.userToken() .option(dataset_options.orgId(), org_op.s.serviceId)Key(), api_key) .load(dataset_id)
 </pre>
-</td>
+  </td>
   <td>
 <pre class="JSON language-JSON hljs">
-qs_option = spark_context。_jvm.com.adobe.platform.クエリ.QSOption
-
-pd = sparkSession.read.format(&quot;com.adobe.platform.format&quot;).option(qs_option.userToken, {userToken}).option(qs_option.serviceToken, {serviceToken}).option(qs_option.imsOrg, {orgId}).option(qs_option.api.apiKey, {apiKey}).option(qs_option.mode, &quot;interactive&quot;).option(qs_option.datasetId, {dataSetId}).load()
-</pre>
-</td>
+qs_option = spark_context。_jvm.com.adobe.platform.platform.クエリ.QSOptionpd = sparkSession.read.format("com.adobe.platform.クエリ") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken}) .option(qs_option.ims org, {org_id}option.apiKey, {apiKey}) .option(qs_option.mode, "interactive") .option(qs_option.datasetId, {dataSetId}) .load()
+  </pre>
+  </td>
   </tr>
 </table>
 
@@ -221,11 +213,9 @@ df.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgI
   </td>
   <td>
 <pre class="JSON language-JSON hljs">
-qs_option = spark_context。_jvm.com.adobe.platform.クエリ.QSOption
-
-scored_df.write.format(&quot;com.adobe.platform.format&quot;).option(qs_option.userToken, {userToken}).option(qs_option.serviceToken}, {serviceToken}).option(qs_option.imsOrg, {orgId}).option(qs_option.ation.api.apiKey, {apiKey}option.datasetId、{dataSetId}).save()
+qs_option = spark_context。_jvm.com.adobe.platform.platform.クエリ.QSOptionscored_df.write.format("com.adobe.platform.クエリ") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken}) .option(org_option.qs, {orgId}) .option（qs_option.aptionキー、{apiKey}） .option(qs_option.datasetId, {dataSetId}) .save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -401,11 +391,9 @@ Spark 2.4の導入に伴い、カスタムマジッ [`%dataset`](#magic) クが�
   <th>コード</th>
   <td>
   <pre class="JSON language-JSON hljs">
-dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
-
-pd0 = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).load(&quot;5e68141134492718af974844&quot;)
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionspd0 = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .load("5e68141134492718af97444")
 </pre>
-</td>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
 %dataset read —datasetId 5e68141134492718af974844 —dataFrame pd0
@@ -443,7 +431,7 @@ PySpark 3 (Spark 2.4)では、とを定義する `org_id` 必要は `dataset_id`
 
 | 要素 | 説明 |
 | ------- | ----------- |
-| [%dataset](#magic) | Python3カーネルでのデータアクセスに関するカスタムマジック。 |
+| [%dataset](#magic) | Python3カーネルでのデータアクセスのためのカスタムマジック。 |
 
 >[!TIP] —modeをまたはに設定で `interactive` きます `batch`。 —modeのデフォルトはです `interactive`。 大量のデータを読み取る場合は、 `batch` モードを使用することをお勧めします。
 
@@ -529,20 +517,14 @@ Spark 2.4の導入に伴い、書き込みデータセットをよりクリー [
   <th>コード</th>
   <td>
   <pre class="JSON language-JSON hljs">
-userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN)serviceApApApiKey =.spark.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")
-
-dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
-
-pd0.write.format(&quot;com.adobe.platform.dataset&quot;).option(dataset_options.orgId(), &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).option(dataset_options.userToken(), userToken).option(dataset_options.serviceToken(), serviceToken).option(datas_options.serviceS.serviceApiApiKeyKey(), saS(&quot;5e68141134492718af974844&quot;)
-</pre>
-</td>
+userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN)serviceApApApiKey =.spark.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionsspd0.write.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .option(dataset_options.userToken(), userToken) .option(dataset_options.s.serviceApiKey(), serviceApiKey) .save("5e68141134492718af974844")
+  </pre>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-%dataset write —datasetId 5e68141134492718af974844 —dataFrame pd0
-
-pd0.describe()pd0.show(10, False)
+%dataset write —datasetId 5e68141134492718af974844 —dataFrame pd0pd0.describe()pd0.show(10, False)
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -714,20 +696,14 @@ Spark 2.3では、データの読み取りやコ `option` ードセルでの生�
   <th>code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import com.adobe.platform.dataset.DataSetOptions
-
-var df1 = spark.read.format(&quot;com.adobe.platform.dataset&quot;).option(DataSetOptions.orgId, &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).option(DataSetOptions.batchId, &quot;dbe154d3-197a-4e6c-80f8-9b7025eeea2b9&quot;).load(&quot;5e68141134492718af974844&quot;)
+import com.adobe.platform.dataset.DataSetOptionsvar df1 = spark.read.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c6c80f8-9b7025eea2b9") .load("5e68141134492718af974844")
 </pre>
-</td>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
-org.apache.spark.sqlを読み込みます。{Dataset, SparkSession}val spark = SparkSession.builder().master(&quot;local&quot;).getOrCreate()
-
-val df1 = spark.read.format(&quot;com.adobe.platform.format&quot;).option(&quot;user-token&quot;, sys.env(&quot;PYDASDK_IMS_USER_TOKEN&quot;)).option(&quot;IMS_ORG_ID&quot;, sys.env&quot;).option(&quot;&quot;, sys.key&quot;dk_IMS_CLIENT_ID&quot;).option(&quot;service-token&quot;, sys.env(&quot;PYDASDK_IMS_SERVICE_TOKEN&quot;)).option(&quot;mode&quot;, &quot;interactive&quot;).option(&quot;dataset-id&quot;, &quot;5e681414492718af974844&quot;).load()
+org.apache.spark.sqlを読み込みます。{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()val df1 = spark.read.format("com.adobe.platform.クエリ") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN")))))))) .imsorg", sys.env("IMS_ORG_ID")) .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID")) .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN")))))) .option(", "mode", ") .option("dataset-id", "5e68141134492718af974844") .load()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
@@ -776,22 +752,14 @@ Scala (Spark 2.4)ノートブックはScalaカーネルを使用し、最初の�
   <th>code</th>
   <td>
   <pre class="JSON language-JSON hljs">
-
-import com.adobe.platform.dataset.DataSetOptions
-
-var userToken = spark.sparkContext.getConf.getOption(&quot;spark.harn.appMasterEnv.USER_TOKEN&quot;).getvar serviceToken = spark.sparkContext.getConf.getOption(&quot;spark.yarn.appMasterEnv.SERVICE_TOKEN&quot;)).getokKey = spark.sparkContext.getConf.getOption(&quot;spark.harn.appMasterEnv.SERVICE_API_KEY&quot;).get
-
-df1.write.format(&quot;com.adobe.platform.dataset&quot;).option(DataSetOptions.orgId, &quot;310C6D375BA5248F0A494212@AdobeOrg&quot;).option(DataSetOptions.userToken, userToken).option(DataSetOptions.serviceToken, serviceToken).option（DataSetOptions.serviceApiApiApiキー、serviceApiKey）.save(&quot;5e68141134492718af974844&quot;)
-</pre>
-</td>
+import com.adobe.platform.dataset.DataSetOptionsvar userToken = spark.sparkContext.getConf.getOption("spark.harn.appMasterEnv.USER_TOKEN").getvar serviceToken = spark.sparkContext.getOn("spar.ar.appMasterOnOn.SERVICE_TOKEN").getvar serviceApiKey = spark.sparkContext.getConf.getOption("spark.harn.appMasterEnv.SERVICE_API_KEY").getdf1.write.format("com.adobe.platform.dataset").option(Dataset,"310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.serviceApiKey, serviceApiKey) .save("5e6814134492718af974844")
+  </pre>
+  </td>
   <td>
   <pre class="JSON language-JSON hljs">
-
-org.apache.spark.sqlを読み込みます。{Dataset, SparkSession}val spark = SparkSession.builder().master(&quot;local&quot;).getOrCreate()
-
-df1.write.format(&quot;com.adobe.platform.クエリ&quot;).option(&quot;user-token&quot;, sys.env(&quot;PYDASDK_IMS_USER_TOKEN&quot;)).option(&quot;service-token&quot;, sys.env(&quot;PYDASDK_IMS_SERVICE_TOKEN&quot;)))).option(&quot;, sys.orIMS_ORG_ID&quot;).option(&quot;api-key&quot;, sys.env(&quot;PYDASDK_IMS_CLIENT_ID&quot;)).option(&quot;mode&quot;, &quot;interactive&quot;).option(&quot;dataset-id&quot;, &quot;5e6814134492718974844&quot;).save()
+org.apache.spark.sqlを読み込みます。{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()df1.write.format("com.adobe.platform.form") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN")")))))) .option) .option,","sys.env("PYDASDK_IMS_SERVICE_TOKEN")) .option("ims-org", sys.env("IMS_ORG_ID")) .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))))) .option(")) .option(", "mode", "interactive")("dataset-id", "5e68141134492718af974844") .save()
 </pre>
-</td>
+  </td>
   </tr>
 </table>
 
