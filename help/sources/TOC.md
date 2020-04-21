@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
+source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
 
 ---
 
@@ -16,6 +16,10 @@ source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
       - [Analyticsデータコネクタ](connectors/adobe-applications/analytics.md)
       - [オーディエンスマネージャコネクタ](connectors/adobe-applications/audience-manager.md)
       - [顧客属性コネクタ](connectors/adobe-applications/customer-attributes.md)
+      - アドビのアプリケーションフィールドのマッピング {#mapping}
+         - [Analyticsマッピングフィールド](connectors/adobe-applications/mapping/analytics.md)
+         - [オーディエンスマネージャーのマッピングフィールド](connectors/adobe-applications/mapping/audience-manager.md)
+         - [ターゲットマッピングフィールド](connectors/adobe-applications/mapping/target.md)
    - 広告 {#advertising}
       - [Google広告コネクタ](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
