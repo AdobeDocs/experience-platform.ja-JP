@@ -4,7 +4,7 @@ solution: Experience Platform
 title: オブジェクトの削除
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 85b497d87fcfb54f390302036ce24c98c6dba6ff
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -21,9 +21,11 @@ DELETEリクエストのパスにIDを指定することで、Catalogオブジ�
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
+>[!IMPORTANT] エンドポ `DELETE /batches/{ID}` イントは非推奨になりました。 バッチを削除するには、 [Batch Ingestion APIを使用する必要があります](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)。
+
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 削除するカタログオブジェクトの種類を指定します。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 削除するカタログオブジェクトの種類を指定します。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
