@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
+source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
 
 ---
 
@@ -105,8 +105,8 @@ source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 - UIチュートリアル {#ui-tutorials}
    - ソースコネクタの作成 {#create}
       - アドビアプリケーション {#adobe-applications}
-         - [Adobeオーディエンスマネージャーコネクタ](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobe Analyticsコネクタ](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Analyticsコネクタ](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobeオーディエンスマネージャーコネクタ](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [顧客属性コネクタ](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - 広告 {#create}
          - [Google広告コネクタ](tutorials/ui/create/advertising/ads.md)
