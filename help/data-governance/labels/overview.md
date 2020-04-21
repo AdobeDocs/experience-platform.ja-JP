@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ使用ラベルの概要
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
+source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 
 ---
 
@@ -25,4 +25,4 @@ Experience Platformで使用可能なデータ使用ラベルとそれらが表�
 
 ## 次の手順
 
-データ使用ラベルが導入されたので、引き続きユーザーガイドを読み、 [Experience Platform](user-guide.md) UIでラベルを管理する方法を学ぶことができます。
+データ使用ラベルが導入されたので、引き続きユーザーガイドを読み、 [Experience Platform](user-guide.md) UIでラベルを管理する方法を学ぶことができます。 APIを使用してラベルを管理する手順については、カタログサービス開発ガイドの該当する節 [を参照してください](../../catalog/api/labels.md)。
