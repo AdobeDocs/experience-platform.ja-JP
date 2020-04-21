@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Governanceヘルプ
 translation-type: tm+mt
-source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -13,7 +13,8 @@ source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 * [データガバナンスの概要](home.md)
 * データ使用ラベル {#labels}
    * [データ使用ラベルの概要](labels/overview.md)
-   * [データ使用ラベルのユーザーガイド](labels/user-guide.md)
+   * [UIでのデータ使用ラベルの管理](labels/user-guide.md)
+   * [APIでのデータ使用ラベルの管理](labels/api.md)
    * [サポートされるデータ使用ラベル](labels/reference.md)
 * データ使用ポリシー {#policies}
    * [データ使用ポリシーの概要](policies/overview.md)
