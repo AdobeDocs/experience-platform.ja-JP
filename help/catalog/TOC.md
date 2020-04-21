@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Catalog and Datasets Help
+user-guide-title: カタログとデータセットのヘルプ
 translation-type: tm+mt
-source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -22,6 +22,7 @@ source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
    * [オブジェクトの削除](api/delete-object.md)
    * [データセットの作成](api/create-dataset.md)
    * [バッチの作成](api/create-batch.md)
+   * [データ使用ラベル](api/labels.md)
    * [付録](api/appendix.md)
 * データセット {#datasets}
    * [データセットの概要](datasets/overview.md)
