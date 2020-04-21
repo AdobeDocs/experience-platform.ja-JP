@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
+source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
       - [オーディエンスマネージャコネクタ](connectors/adobe-applications/audience-manager.md)
       - [顧客属性コネクタ](connectors/adobe-applications/customer-attributes.md)
    - 広告 {#advertising}
-      - [Google AdWordsコネクタ](connectors/advertising/ads.md)
+      - [Google広告コネクタ](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
       - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
       - [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
@@ -58,7 +58,6 @@ source-git-commit: 5b036baba864b2b0f0c98d017d40f4d3c60ab80e
          - [Google Cloudストレージコネクタ](tutorials/api/create/cloud-storage/google.md)
          - [SFTPコネクタ](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Google AdWordsコネクタ](tutorials/api/create/crm/adwords.md)
          - [HubSpotコネクタ](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamicsコネクタ](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforceコネクタ](tutorials/api/create/crm/salesforce.md)
