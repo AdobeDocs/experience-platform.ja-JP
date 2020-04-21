@@ -4,14 +4,14 @@ solution: Experience Platform
 title: サンプルクエリ
 topic: queries
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
 
 # Adobe Analyticsクエリのサンプルデータ
 
-選択したAdobe AnalyticsレポートスイートのデータはXDM ExperienceEventsに変換され、データセットとしてAdobe Experience Platformに取り込まれます。 このドキュメントでは、Adobe Experience Platformクエリサービスがこのデータを利用する多くの使用例を説明し、付属のサンプルクエリがAdobe Analyticsデータセットと連携するようにします。 XDM ExperienceEventsへのマッピングにつ [いて詳しくは、](../../sources/connectors/adobe-applications/analytics-mapping.md) Analyticsのフィールドマッピングドキュメントを参照してください。
+選択したAdobe AnalyticsレポートスイートのデータはXDM ExperienceEventsに変換され、データセットとしてAdobe Experience Platformに取り込まれます。 このドキュメントでは、Adobe Experience Platformクエリサービスがこのデータを利用する多くの使用例を説明し、付属のサンプルクエリがAdobe Analyticsデータセットと連携するようにします。 XDM ExperienceEventsへのマッピングにつ [いて詳しくは、](../../sources/connectors/adobe-applications/mapping/analytics.md) Analyticsのフィールドマッピングドキュメントを参照してください。
 
 ## はじめに
 
