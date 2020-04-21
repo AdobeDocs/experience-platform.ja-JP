@@ -4,7 +4,7 @@ solution: Experience Platform
 title: オーディエンスマネージャコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -43,7 +43,7 @@ Experience PlatformでのXDMの使用方法について詳しくは、 [XDM Syst
 
 ## フィールドはAdobe ManagerからXDMにどのようにマッピングされますか？
 
-詳しくは、 [オーディエンスマネージャのマッピングフィールドのドキュメント][audience-manager-mapping-fields] を参照してください。
+詳しくは、 [オーディエンスマネージャのマッピングフィールドのドキュメント](./mapping/audience-manager.md) を参照してください。
 
 ## データ管理
 
