@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -153,3 +153,4 @@ source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
       - [プロトコルコネクタのデータフローの設定](tutorials/ui/dataflow/protocols.md)
    - [受信データをアクティブ化して顧客のプロファイル](tutorials/ui/profile.md)
    - [アカウントとデータセットフローの監視](tutorials/ui/monitor.md)
+- [プラットフォームのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
