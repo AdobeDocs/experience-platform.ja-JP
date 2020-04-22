@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspaceトラブルシューティングガイド
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: ef7c37438990d3bc42024e7fb106d781a5ebbd12
 
 ---
 
@@ -15,9 +15,9 @@ source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
 
 ## JupyterLab環境がGoogle Chromeで読み込まれない
 
-Google Chromeブラウザーの最新バージョン80.xへのアップデートにより、すべてのサードパーティCookieがデフォルトでブロックされます。 この新しいポリシーにより、JupyterLabがAdobe Experience Platform内で読み込まれなくなる可能性があります。
+>[!IMPORTANT] この問題は解決されましたが、Google Chrome 80.xブラウザーには引き続き存在する可能性があります。 Chromeブラウザーが最新の状態であることを確認してください。
 
->[!NOTE] これは一時的な問題です。 サードパーティCookieへの依存関係は、今後のリリースで削除されるように設定されています。
+Google Chromeブラウザーのバージョン80.xでは、すべてのサードパーティCookieがデフォルトでブロックされます。 このポリシーにより、JupyterLabがAdobe Experience Platform内で読み込まれない可能性があります。
 
 この問題を解決するには、次の手順を実行します。
 
@@ -45,7 +45,19 @@ Chromeブラウザーで、右上の「設定」を選択します **** (また�
 
 ## SafariでJupyterLabにアクセスできないのはなぜですか。
 
-Safariは、デフォルトでサードパーティcookieを無効にします。 Jupyter仮想マシンインスタンスは親フレームとは異なるドメインに存在するので、現在、Adobe Experience Platformではサードパーティcookieを有効にする必要があります。 サードパーティCookieを有効にするか、Google Chromeなどの別のブラウザーに切り替えてください。
+Safariでは、Safari &lt; 12で、デフォルトでサードパーティcookieが無効になっています。 Jupyter仮想マシンインスタンスは親フレームとは異なるドメインに存在するので、現在、Adobe Experience Platformではサードパーティcookieを有効にする必要があります。 サードパーティCookieを有効にするか、Google Chromeなどの別のブラウザーに切り替えてください。
+
+Safari 12の場合は、ユーザーエージェントを「Chrome」または「Firefox」に切り替える必要があります。 ユーザーエージェントを切り替えるには、 *Safari開始を開いて* 、「環境設定」を選 **択します**。 プリファレンスウィンドウが表示されます。
+
+![Safariの環境設定](./images/faq/preferences.png)
+
+Safariの環境設定ウィンドウで、「詳細」を選択 **します**。 次に、メニューバー *の「現像を表示」メニューボックスをオン* にします。 この手順が完了したら、環境設定ウィンドウを閉じることができます。
+
+![Safariの詳細](./images/faq/advanced.png)
+
+次に、上部ナビゲーションバーで、開発メニューを **選択します** 。 [開発]ドロップダ *ウンで* 、[ユーザエージェント] *の上にマウスポインタを置き*&#x200B;ます。 使用する **Chrome** または **Firefox** User Agent文字列を選択できます。
+
+![現像メニュー](./images/faq/user-agent.png)
 
 ## JupyterLabでファイルをアップロードまたは削除しようとすると、「403 Forbidden」というメッセージが表示されるのはなぜですか。
 
