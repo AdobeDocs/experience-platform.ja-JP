@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでのAdobe Analyticsソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: ac1e5dbe435d9e85e8ce3ad90c60dd31ba9248ff
 
 ---
 
@@ -23,7 +23,7 @@ source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
 
 >[!NOTE] 1つのソースに対する複数のインバウンド接続は、異なるデータを取り込むために作成できます。
 
-![](../../../..//images/tutorials/create/analytics/AA-source_activity.png)
+![](/help/sources/images/tutorials/create/analytics/AA-source_activity.png)
 
 使用可能なレポートスイートのリストから、プラットフォームに取り込むレポートスイートを選択し、「次へ」をクリッ **クします**。
 
