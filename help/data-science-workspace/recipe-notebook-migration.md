@@ -4,7 +4,7 @@ solution: Experience Platform
 title: レシピとノートブックの移行ガイド
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5191eb9ba48cc6dd4e2d42bd2a50539be7ea163e
+source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
 
 ---
 
@@ -41,7 +41,7 @@ Data Science Workspaceに対する最近の変更では、既存のSparkレシ�
 
 これで、ビルド手順で生成されるレシピアーティファクトは、.jarバイナリファイルを含むDockerイメージになりました。 また、プラットフォームSDKを使用してデータセットの読み取りと書き込みを行うための構文が変更され、レシピコードを変更する必要があります。
 
-次のビデオは、Sparkのレシピに必要な変更をより深く理解できるように設計されています。
+次のビデオは、Sparkのレシピに必要な変更を理解しやすくするために設計されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/33243)
 
@@ -53,24 +53,32 @@ Dockerイメージを構築する前に、以下の節に示す、プラット�
 
 この節では、データセットの読み取りに必要な変更点について説明し、アドビが提供する [helper.scalaの例を使用し](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) 、その内容を示します。
 
-Sparkレシピの更新では、多数の値を追加および変更する必要があります。 1つ目は、 `DataSetOptions` 現在は使用されません。 Replace `DataSetOptions` with `QSOption`. また、新しいパラメ `option` ーターが必要です。 との両方 `QSOption.mode` が必 `QSOption.datasetId` 要です。 最後に、 `orgId` とに変 `serviceApiKey` 更する必要があ `imsOrg` ります `apiKey`。 データセットの読み取りに関する比較について、次の表を確認します。
+**データセットの古い読み方**
 
-<table>
-  <th>データセットの古い読み方</th>
-  <th>データセットを読み取る新しい方法</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-  var df = sparkSession.read.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgId) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.DataserviceApiKey、apiKey) .load(dataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-import com.adobe.platform.クエリ.QSOptionvar df = sparkSession.read.format("com.adobe.platform.クエリ") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSO.ims,{orgId}) .option(QSOption.apiKey, {apiKey}) .option(QSOption.mode, "interactive") .option(QSOption.datasetId, {dataSetId}) .load()
-  </pre>
-  </td>
-  </tr>
-</table>
+```scala
+ var df = sparkSession.read.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .load(dataSetId)
+```
+
+**データセットを読み取る新しい方法**
+
+Sparkレシピの更新では、多数の値を追加および変更する必要があります。 1つ目は、 `DataSetOptions` 現在は使用されません。 Replace `DataSetOptions` with `QSOption`. また、新しいパラメ `option` ーターが必要です。 との両方 `QSOption.mode` が必 `QSOption.datasetId` 要です。 最後に、 `orgId` とに変 `serviceApiKey` 更する必要があ `imsOrg` ります `apiKey`。 データセットの読み取りに関する比較について、次の例を確認します。
+
+```scala
+import com.adobe.platform.query.QSOption
+var df = sparkSession.read.format("com.adobe.platform.query")
+  .option(QSOption.userToken", {userToken})
+  .option(QSOption.serviceToken, {serviceToken})
+  .option(QSOption.imsOrg, {orgId})
+  .option(QSOption.apiKey, {apiKey})
+  .option(QSOption.mode, "interactive")
+  .option(QSOption.datasetId, {dataSetId})
+  .load()
+```
 
 >[!TIP]
 > インタラクティブモードが10分を超えるとクエリがタイムアウトします。 数ギガバイトを超えるデータを取り込む場合は、「バッチ」モードに切り替えることをお勧めします。 バッチモードは、開始までに時間がかかりますが、大きなデータセットを処理できます。
@@ -79,24 +87,31 @@ import com.adobe.platform.クエリ.QSOptionvar df = sparkSession.read.format("c
 
 この節では、アドビが提供するScoringDataSaver.scalaの例を使用してデータセットを書 [き込む際に必要な変更点について説明します](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) 。
 
-Sparkレシピの更新では、多数の値を追加および変更する必要があります。 1つ目は、 `DataSetOptions` 現在は使用されません。 Replace `DataSetOptions` with `QSOption`. また、新しいパラメ `option` ーターが必要です。 `QSOption.datasetId` が必要で、でを読み込む必要がなくなり `{dataSetId}` ました `.save()`。 最後に、 `orgId` とに変 `serviceApiKey` 更する必要があ `imsOrg` ります `apiKey`。 データセットの書き込みに関する比較について、次の表を確認します。
+**データセットの従来の書き方**
 
-<table>
-  <th>データセットの従来の書き方</th>
-  <th>データセットの新しい書き方</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-  df.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgId) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.options.servions.serviceS.serviAApiAApiApikey, apiKey) .save(scoringResultsDataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-import com.adobe.platform.クエリ.QSOptiondf.write.format("com.adobe.platform.クエリ") .option(QSOption.userToken", {userToken}) .option(QSOption.serviceToken, {serviceToken}) .option(QSOption.imsOrg, {Id}) .option(QSOption.apiKey, {apiKey}) .option(QSOption.datasetId, {dataSetId}) .save()
-</pre>
-  </td>
-  </tr>
-</table>
+```scala
+df.write.format("com.adobe.platform.dataset")
+    .option(DataSetOptions.orgId, orgId)
+    .option(DataSetOptions.serviceToken, serviceToken)
+    .option(DataSetOptions.userToken, userToken)
+    .option(DataSetOptions.serviceApiKey, apiKey)
+    .save(scoringResultsDataSetId)
+```
+
+**データセットの新しい書き方**
+
+Sparkレシピの更新では、多数の値を追加および変更する必要があります。 1つ目は、 `DataSetOptions` 現在は使用されません。 Replace `DataSetOptions` with `QSOption`. また、新しいパラメ `option` ーターが必要です。 `QSOption.datasetId` が必要で、でを読み込む必要がなくなり `{dataSetId}` ました `.save()`。 最後に、 `orgId` とに変 `serviceApiKey` 更する必要があ `imsOrg` ります `apiKey`。 データセットの書き込みに関する比較について、次の例を確認します。
+
+```scala
+import com.adobe.platform.query.QSOption
+df.write.format("com.adobe.platform.query")
+  .option(QSOption.userToken", {userToken})
+  .option(QSOption.serviceToken, {serviceToken})
+  .option(QSOption.imsOrg, {orgId})
+  .option(QSOption.apiKey, {apiKey})
+  .option(QSOption.datasetId, {dataSetId})
+  .save()
+```
 
 ### Dockerベースのソースファイルのパッケージ化(Spark) {#package-docker-spark}
 
@@ -174,24 +189,33 @@ Dockerイメージを構築する前に、以下の節に示す、プラット�
 
 この節では、アドビが提供する [helper.pyの例を使用してデータセットを読み取る際に必要な変更点について説明します](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) 。
 
-Sparkレシピの更新では、多数の値を追加および変更する必要があります。 1つ目は、 `DataSetOptions` 現在は使用されません。 Replace `DataSetOptions` with `qs_option`. また、新しいパラメ `option` ーターが必要です。 との両方 `qs_option.mode` が必 `qs_option.datasetId` 要です。 最後に、 `orgId` とに変 `serviceApiKey` 更する必要があ `imsOrg` ります `apiKey`。 データセットの読み取りに関する比較について、次の表を確認します。
+**データセットの古い読み方**
 
-<table>
-  <th>データセットの古い読み方</th>
-  <th>データセットを読み取る新しい方法</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-dataset_options = get_dataset_options(spark.sparkContext)pd = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.serviceToken(), service_token) .option(dataset_options.userToken() .option(dataset_options.orgId(), org_op.s.serviceId)Key(), api_key) .load(dataset_id)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-qs_option = spark_context。_jvm.com.adobe.platform.platform.クエリ.QSOptionpd = sparkSession.read.format("com.adobe.platform.クエリ") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken}) .option(qs_option.ims org, {org_id}option.apiKey, {apiKey}) .option(qs_option.mode, "interactive") .option(qs_option.datasetId, {dataSetId}) .load()
-  </pre>
-  </td>
-  </tr>
-</table>
+```python
+dataset_options = get_dataset_options(spark.sparkContext)
+pd = spark.read.format("com.adobe.platform.dataset") 
+  .option(dataset_options.serviceToken(), service_token) 
+  .option(dataset_options.userToken(), user_token) 
+  .option(dataset_options.orgId(), org_id) 
+  .option(dataset_options.serviceApiKey(), api_key)
+  .load(dataset_id)
+```
+
+**データセットを読み取る新しい方法**
+
+Sparkレシピの更新では、多数の値を追加および変更する必要があります。 1つ目は、 `DataSetOptions` 現在は使用されません。 Replace `DataSetOptions` with `qs_option`. また、新しいパラメ `option` ーターが必要です。 との両方 `qs_option.mode` が必 `qs_option.datasetId` 要です。 最後に、 `orgId` とに変 `serviceApiKey` 更する必要があ `imsOrg` ります `apiKey`。 データセットの読み取りに関する比較について、次の例を確認します。
+
+```python
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
+pd = sparkSession.read.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.mode, "interactive") 
+  .option(qs_option.datasetId, {dataSetId}) 
+  .load()
+```
 
 >[!TIP]
 > インタラクティブモードが10分を超えるとクエリがタイムアウトします。 数ギガバイトを超えるデータを取り込む場合は、「バッチ」モードに切り替えることをお勧めします。 バッチモードは、開始までに時間がかかりますが、大きなデータセットを処理できます。
@@ -200,24 +224,31 @@ qs_option = spark_context。_jvm.com.adobe.platform.platform.クエリ.QSOptionp
 
 この節では、アドビが提供する [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) （例）を使用してデータセットを書き込む際に必要な変更点について説明します。
 
-PySparkレシピの更新を行うには、多数の値を追加し、変更する必要があります。 1つ目は、 `DataSetOptions` 現在は使用されません。 Replace `DataSetOptions` with `qs_option`. また、新しいパラメ `option` ーターが必要です。  `qs_option.datasetId` が必要で、でを読み込む必要がなくなり `{dataSetId}` まし `.save()` た。 最後に、 `orgId` とに変 `serviceApiKey` 更する必要があ `imsOrg` ります `apiKey`。 データセットの読み取りに関する比較について、次の表を確認します。
+**データセットの従来の書き方**
 
-<table>
-  <th>データセットの従来の書き方</th>
-  <th>データセットの新しい書き方</th>
-  <tr>
-  <td>
-  <pre class="JSON language-JSON hljs">
-df.write.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, orgId) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.options.servions.serviceS.serviAApiAApiApikey, apiKey) .save(scoringResultsDataSetId)
-</pre>
-  </td>
-  <td>
-<pre class="JSON language-JSON hljs">
-qs_option = spark_context。_jvm.com.adobe.platform.platform.クエリ.QSOptionscored_df.write.format("com.adobe.platform.クエリ") .option(qs_option.userToken, {userToken}) .option(qs_option.serviceToken}) .option(org_option.qs, {orgId}) .option（qs_option.aptionキー、{apiKey}） .option(qs_option.datasetId, {dataSetId}) .save()
-</pre>
-  </td>
-  </tr>
-</table>
+```python
+df.write.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, orgId)
+  .option(DataSetOptions.serviceToken, serviceToken)
+  .option(DataSetOptions.userToken, userToken)
+  .option(DataSetOptions.serviceApiKey, apiKey)
+  .save(scoringResultsDataSetId)
+```
+
+**データセットの新しい書き方**
+
+PySparkレシピの更新を行うには、多数の値を追加し、変更する必要があります。 1つ目は、 `DataSetOptions` 現在は使用されません。 Replace `DataSetOptions` with `qs_option`. また、新しいパラメ `option` ーターが必要です。  `qs_option.datasetId` が必要で、でを読み込む必要がなくなり `{dataSetId}` まし `.save()` た。 最後に、 `orgId` とに変 `serviceApiKey` 更する必要があ `imsOrg` ります `apiKey`。 データセットの読み取りに関する比較について、次の例を確認します。
+
+```python
+qs_option = spark_context._jvm.com.adobe.platform.query.QSOption
+scored_df.write.format("com.adobe.platform.query") 
+  .option(qs_option.userToken, {userToken}) 
+  .option(qs_option.serviceToken, {serviceToken}) 
+  .option(qs_option.imsOrg, {orgId}) 
+  .option(qs_option.apiKey, {apiKey}) 
+  .option(qs_option.datasetId, {dataSetId}) 
+  .save()
+```
 
 ### Dockerベースのソースファイルのパッケージ化(PySpark) {#pyspark-package-docker}
 
@@ -376,31 +407,22 @@ Pythonノートブック（Python 3カーネル）からデータセットを読
 
 ## LocalContextでのデータ・フレームへのロード
 
-Spark 2.4の導入に伴い、カスタムマジッ [`%dataset`](#magic) クが提供されます。 次の表は、PySpark(Spark 2.3)とPySpark(Spark 2.4)のノートブックでデータフレームをロードする際の主な違いを示しています。
+Spark 2.4の導入に伴い、カスタムマジッ [`%dataset`](#magic) クが提供されます。 次の例は、PySpark(Spark 2.3)とPySpark(Spark 2.4)のノートブックにデータフレームをロードする際の主な違いを示しています。
 
-<table>
-  <th>ノート</th>
-  <th>PySpark 3（Spark 2.3 — 非推奨）</th>
-  <th>PySpark 3 (Spark 2.4)</th>
-  <tr>
-  <th>カーネル</th>
-  <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
-  </tr>
-  <tr>
-  <th>コード</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionspd0 = spark.read.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .load("5e68141134492718af97444")
-</pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-%dataset read —datasetId 5e68141134492718af974844 —dataFrame pd0
-</pre>
-  </td>
-  </tr>
-</table>
+**PySpark 3 （Spark 2.3 — 非推奨）の使い方 — PySpark 3カーネル**
+
+```python
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
+pd0 = spark.read.format("com.adobe.platform.dataset")
+  .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
+  .load("5e68141134492718af974844")
+```
+
+**PySpark 3 (Spark 2.4)の使用 — Python 3カーネル**
+
+```python
+%dataset read --datasetId 5e68141134492718af974844 --dataFrame pd0
+```
 
 | 要素 | 説明 |
 | ------- | ----------- |
@@ -504,29 +526,30 @@ PySpark 3 (Spark 2.4)では、Sparkmagicはサポートされな `%%sql` くな�
 
 Spark 2.4の導入に伴い、書き込みデータセットをよりクリー [`%dataset`](#magic) ンにするカスタムマジックが提供されます。 データセットに書き込むには、次のSpark 2.4の例を使用します。
 
-<table>
-  <th>ノート</th>
-  <th>PySpark 3（Spark 2.3 — 非推奨）</th>
-  <th>PySpark 3 (Spark 2.4)</th>
-  <tr>
-  <th>カーネル</th>
-  <td align="center">PySpark 3</td>
-  <td align="center">Python 3</td>
-  </tr>
-  <tr>
-  <th>コード</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN)serviceApApApiKey =.spark.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptionsspd0.write.format("com.adobe.platform.dataset") .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg") .option(dataset_options.userToken(), userToken) .option(dataset_options.s.serviceApiKey(), serviceApiKey) .save("5e68141134492718af974844")
-  </pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-%dataset write —datasetId 5e68141134492718af974844 —dataFrame pd0pd0.describe()pd0.show(10, False)
-</pre>
-  </td>
-  </tr>
-</table>
+**PySpark 3 （Spark 2.3 — 非推奨）の使い方 — PySpark 3カーネル**
+
+```python
+userToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.USER_TOKEN")
+serviceToken = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_TOKEN")
+serviceApiKey = spark.sparkContext.getConf().get("spark.yarn.appMasterEnv.SERVICE_API_KEY")
+
+dataset_options = sc._jvm.com.adobe.platform.dataset.DataSetOptions
+
+pd0.write.format("com.adobe.platform.dataset")
+  .option(dataset_options.orgId(), "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(dataset_options.userToken(), userToken)
+  .option(dataset_options.serviceToken(), serviceToken)
+  .option(dataset_options.serviceApiKey(), serviceApiKey)
+  .save("5e68141134492718af974844")
+```
+
+**PySpark 3 (Spark 2.4)の使用 — Python 3カーネル**
+
+```python
+%dataset write --datasetId 5e68141134492718af974844 --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
 
 | 要素 | 説明 |
 | ------- | ----------- |
@@ -683,29 +706,30 @@ Scalaカーネルは、現在はsparkmagicをサポートしてい `%%sql` ま�
 
 Spark 2.3では、データの読み取りやコ `option` ードセルでの生の値の使用に使用する値に対して変数を定義する必要がありました。 Scalaでは、を使用して値を宣言し `sys.env("PYDASDK_IMS_USER_TOKEN")` て返すことができるので、などの変数を定義する必要はありませ `var userToken`ん。 以下のScala(Spark 2.4)の例では、データセットの読み取りに必要なす `sys.env` べての値を定義して返すために使用されています。
 
-<table>
-  <th>ノート</th>
-  <th>Spark（Spark 2.3 — 非推奨）</th>
-  <th>Scala(Spark 2.4)</th>
-  <tr>
-  <th>カーネル</th>
-  <td align="center">Spark</td>
-  <td align="center">スカラ</td>
-  </tr>
-  <tr>
-  <th>code</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-import com.adobe.platform.dataset.DataSetOptionsvar df1 = spark.read.format("com.adobe.platform.dataset") .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c6c80f8-9b7025eea2b9") .load("5e68141134492718af974844")
-</pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-org.apache.spark.sqlを読み込みます。{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()val df1 = spark.read.format("com.adobe.platform.クエリ") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN")))))))) .imsorg", sys.env("IMS_ORG_ID")) .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID")) .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN")))))) .option(", "mode", ") .option("dataset-id", "5e68141134492718af974844") .load()
-</pre>
-  </td>
-  </tr>
-</table>
+**Using Spark （Spark 2.3 — 非推奨） - Spark Kernel**
+
+```scala
+import com.adobe.platform.dataset.DataSetOptions
+var df1 = spark.read.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(DataSetOptions.batchId, "dbe154d3-197a-4e6c-80f8-9b7025eea2b9")
+  .load("5e68141134492718af974844")
+```
+
+**Scala (Spark 2.4)の使用 — Scalaカーネル**
+
+```scala
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+val df1 = spark.read.format("com.adobe.platform.query")
+  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+  .option("ims-org", sys.env("IMS_ORG_ID"))
+  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+  .option("mode", "interactive")
+  .option("dataset-id", "5e68141134492718af974844")
+  .load()
+```
 
 | element | 説明 |
 | ------- | ----------- |
@@ -737,31 +761,41 @@ Scala (Spark 2.4)ノートブックはScalaカーネルを使用し、最初の�
 
 ## データセットへの書き込み
 
-データセッ [トの読み取りと同様](#notebook-read-dataset-spark)、データセットに書き込むには `option` 、次の表に示す追加の値が必要になります。 Scalaでは、を使用して値を宣言し `sys.env("PYDASDK_IMS_USER_TOKEN")` て返すことができるので、などの変数を定義する必要はありませ `var userToken`ん。 以下のScalaの例では、を使用し `sys.env` て、データセットへの書き込みに必要なすべての値を定義し、返します。
+データセット [の読み取りと同様](#notebook-read-dataset-spark)、データセットに書き込むには、次の例で概要を説 `option` 明する追加の値が必要になります。 Scalaでは、を使用して値を宣言し `sys.env("PYDASDK_IMS_USER_TOKEN")` て返すことができるので、などの変数を定義する必要はありませ `var userToken`ん。 以下のScalaの例では、を使用し `sys.env` て、データセットへの書き込みに必要なすべての値を定義し、返します。
 
-<table>
-  <th>ノート</th>
-  <th>Spark（Spark 2.3 — 非推奨）</th>
-  <th>Scala(Spark 2.4)</th>
-  <tr>
-  <th>カーネル</th>
-  <td align="center">Spark</td>
-  <td align="center">スカラ</td>
-  </tr>
-  <tr>
-  <th>code</th>
-  <td>
-  <pre class="JSON language-JSON hljs">
-import com.adobe.platform.dataset.DataSetOptionsvar userToken = spark.sparkContext.getConf.getOption("spark.harn.appMasterEnv.USER_TOKEN").getvar serviceToken = spark.sparkContext.getOn("spar.ar.appMasterOnOn.SERVICE_TOKEN").getvar serviceApiKey = spark.sparkContext.getConf.getOption("spark.harn.appMasterEnv.SERVICE_API_KEY").getdf1.write.format("com.adobe.platform.dataset").option(Dataset,"310C6D375BA5248F0A494212@AdobeOrg") .option(DataSetOptions.userToken, userToken) .option(DataSetOptions.serviceToken, serviceToken) .option(DataSetOptions.serviceApiKey, serviceApiKey) .save("5e6814134492718af974844")
-  </pre>
-  </td>
-  <td>
-  <pre class="JSON language-JSON hljs">
-org.apache.spark.sqlを読み込みます。{Dataset, SparkSession}val spark = SparkSession.builder().master("local").getOrCreate()df1.write.format("com.adobe.platform.form") .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN")")))))) .option) .option,","sys.env("PYDASDK_IMS_SERVICE_TOKEN")) .option("ims-org", sys.env("IMS_ORG_ID")) .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))))) .option(")) .option(", "mode", "interactive")("dataset-id", "5e68141134492718af974844") .save()
-</pre>
-  </td>
-  </tr>
-</table>
+**Using Spark （Spark 2.3 — 非推奨） - Spark Kernel**
+
+```scala
+import com.adobe.platform.dataset.DataSetOptions
+
+var userToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.USER_TOKEN").get
+var serviceToken = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_TOKEN").get
+var serviceApiKey = spark.sparkContext.getConf.getOption("spark.yarn.appMasterEnv.SERVICE_API_KEY").get
+
+df1.write.format("com.adobe.platform.dataset")
+  .option(DataSetOptions.orgId, "310C6D375BA5248F0A494212@AdobeOrg")
+  .option(DataSetOptions.userToken, userToken)
+  .option(DataSetOptions.serviceToken, serviceToken)
+  .option(DataSetOptions.serviceApiKey, serviceApiKey)
+  .save("5e68141134492718af974844")
+```
+
+**Scala (Spark 2.4)の使用 — Scalaカーネル**
+
+```scala
+import org.apache.spark.sql.{Dataset, SparkSession}
+
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+df1.write.format("com.adobe.platform.query")
+  .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+  .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+  .option("ims-org", sys.env("IMS_ORG_ID"))
+  .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+  .option("mode", "interactive")
+  .option("dataset-id", "5e68141134492718af974844")
+  .save()
+```
 
 | element | 説明 |
 | ------- | ----------- |
