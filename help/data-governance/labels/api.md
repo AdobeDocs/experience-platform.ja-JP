@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'APIを使用したデータ使用ラベルの管理 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
 
 ---
 
@@ -143,8 +143,6 @@ curl -X POST \
 
 DELETEリクエストを行うことで、データセットに適用されたラベルを削除できます。
 
->[!NOTE] この操作は、親データセットを削除用に準備する場合にのみ使用してください。
-
 **API形式**
 
 ```http
@@ -168,7 +166,7 @@ curl -X DELETE \
 
 **応答**
 
-成功した応答HTTPステータス200 (OK)は、ラベルが削除されたことを示しています。 データセッ [トの既存のラベルを別の呼び出しで](#lookup) 、調べて確認することができます。
+成功した応答HTTPステータス200(OK)。ラベルが削除されたことを示します。 データセッ [トの既存のラベルを別の呼び出しで](#lookup) 、調べて確認することができます。
 
 ## 次の手順
 
