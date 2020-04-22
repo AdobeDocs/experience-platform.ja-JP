@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Ingestion Help
+user-guide-title: Adobe Experience Platform Data Ingestionヘルプ
 translation-type: tm+mt
-source-git-commit: 1e4155374b5d164fe5d955db65fe07880e246e3b
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -37,3 +37,4 @@ source-git-commit: 1e4155374b5d164fe5d955db65fe07880e246e3b
    - [データ取り込みイベント](quality/subscribe-events.md)
 - [ソースコネクタ](source-connectors.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [プラットフォームのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
