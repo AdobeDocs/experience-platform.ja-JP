@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 単一のHTTP要求での複数のメッセージのストリーミング
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
 
 ---
 
@@ -47,7 +47,7 @@ Experience Platformにストリーミングデータを開始する前に、ス�
 **API形式**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | プロパティ | 説明 |
@@ -57,7 +57,7 @@ POST /collection/{CONNECTION_ID}
 **リクエスト**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -229,7 +229,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 **API形式**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | プロパティ | 説明 |
@@ -239,7 +239,7 @@ POST /collection/{CONNECTION_ID}
 **リクエスト**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
