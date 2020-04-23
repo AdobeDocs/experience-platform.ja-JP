@@ -2,10 +2,11 @@
 title: Adobe Experience Platform リリースノート
 description: Experience Platformリリースノート（2020年4月9日）
 doc-type: release notes
-last-update: April 7, 2020
+last-update: April 13, 2020
 author: ens71067
+keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
+source-git-commit: 8cc3b63fc91877ca1337f65e8f5c0e949b7ef01f
 
 ---
 
@@ -14,43 +15,17 @@ source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
 
 ## リリース日：2020 年 4 月 8 日
 
-## データガバナンス
+Adobe Experience Platformの新機能：
+* [インテリジェントサービス](#intelligent)
 
-Adobe Experience Platform Data Governanceは、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへの準拠を確保するために使用される一連の戦略とテクノロジーです。 Experience Platform内の様々なレベルで重要な役割を果たします。例えば、カタログ化、データ系列、データ使用のラベル付け、データアクセスポリシー、マーケティングアクションのデータに関するアクセス制御などです。
+既存の機能の更新：
+* [エクスペリエンスデータモデル(XDM)](#xdm)
+* [データガバナンス](#governance)
+* [宛先](#destinations)
+* [プライバシーサービス](#privacy)
+* [ソース](#sources)
 
-データガバナンスを開始するには、お客様のデータに適用される規制、契約上の義務、および企業ポリシーを十分に理解する必要があります。 ここから、適切なデータ使用ラベルを適用してデータを分類し、その使用をデータ使用ポリシーの定義を通じて制御できます。
-
-DULEフレームワークは、Experience PlatformユーザーインターフェイスとDULE Policy Service APIを通じて、データの分類とデータ使用ポリシーの作成のプロセスを簡素化および合理化します。
-
-### 新機能
-
-| 機能 | 説明 |
-| -----------| ---------- |
-| UIでのデータ使用ポリシーの管理 | データ使用ポリシーは、Experience Platform UIの「ポリシー __ 」ワークスペース内で管理できるようになりました。 詳しくは、 [policyユーザーガイド](../../data-governance/policies/user-guide.md) を参照してください。 |
-
-**既知の問題**
-
-* None.
-
-詳しくは、「データガバナンスの概要」を [参照してください](../../data-governance/home.md)。
-
-
-## 宛先
-
-アドビの [Real-time Customer Data Platformでは](../../rtcdp/overview.md)、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータをアクティブ化します。
-
-### 新しい宛先
-
-Adobe Real-time CDPは、50を超えるExperience Cloud Launch拡張に対するデータのアクティベーションをサポートするようになり、解析、パーソナライゼーション、その他の使用例を可能にします。 詳しくは、以下を参照してください。
-
-| ドキュメント | 説明 |
-|--- | ---|
-| [宛先のタイプとカテゴリ](/help/rtcdp/destinations/destination-types.md) | この記事では、Adobe Real-time CDPインターフェイスの接続と拡張の違いを説明し、これらの各宛先を使用する場合を推奨します。 |
-| [エクスペリエンスプラットフォーム起動の拡張](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | このページでは、Launchの拡張機能の概要、Launchの使用例、およびAdobe Real-time CDPの各Launchの拡張機能に関するドキュメントへのリンクを説明します。 |
-
-詳しくは、宛先の概要を参照し [てください](/help/rtcdp/destinations/destinations-overview.md)。
-
-## インテリジェントサービス
+## インテリジェントサービス {#intelligent}
 
 インテリジェント・サービスは、マーケティング・アナリストや実践者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用する機能を提供します。 これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。 さらに、マーケティング担当者は、Adobe Experience Cloud、Adobe Experience Platformおよびサードパーティアプリケーションで予測をアクティブ化できます。
 
@@ -67,7 +42,65 @@ Adobe Real-time CDPは、50を超えるExperience Cloud Launch拡張に対する
 
 インテリジェント・サービスの詳細と、インテリジェント・サービスのオファーに関する詳細は、「インテリジェント・サービスの概要 [」を参照してくださ](../../intelligent-services/home.md)い。
 
-## プライバシーサービス
+## エクスペリエンスデータモデル(XDM)システム {#xdm}
+
+標準化と相互運用性は、Experience Platformの背後にある重要な概念です。 アドビが推進するエクスペリエンスデータモデル(XDM)は、顧客エクスペリエンスデータを標準化し、顧客エクスペリエンス管理のスキーマを定義する取り組みです。
+
+XDMは、デジタルエクスペリエンスのパワーを向上させるために設計された、公開された仕様です。 Adobe Experience Platform上のサービスと通信するための、すべてのアプリケーションの共通の構造と定義を提供します。 XDM標準に準拠することで、すべての顧客体験データを共通の表現に組み込み、より迅速で統合的な方法でインサイトを提供できます。 顧客のアクションから貴重なインサイトを得たり、セグメントを使用して顧客オーディエンスを定義したり、顧客属性をパーソナライゼーションの目的に使用したりできます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| 代替表示情報の自動化 | スキーマレジストリは、記述子に設定されたカスタマイズされたタイトルと説明の値を自動的に適用 `alternateDisplayInfo` します。 |
+| スカラーフィールドの制限 | スキーマレジストリでは、1つのスキーマで6,000個を超えるスカラーフィールドを使用できません。 |
+| パフォーマンスの概要 | スキーマレジストリは、Experience Platformの要求をより適切に満たすために見直されました。 |
+
+**バグの修正**
+
+* 標準のXDMの入れ子URIフィールドで、より簡潔なXED形式をサポートするように、XDMをXEDに変換しました。
+
+**既知の問題**
+
+* 既知
+
+## データガバナンス {#governance}
+
+Adobe Experience Platform Data Governanceは、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへの準拠を確保するために使用される一連の戦略とテクノロジーです。 Experience Platform内の様々なレベルで重要な役割を果たします。例えば、カタログ化、データ系列、データ使用のラベル付け、データアクセスポリシー、マーケティングアクションのデータに関するアクセス制御などです。
+
+データガバナンスを開始するには、お客様のデータに適用される規制、契約上の義務、および企業ポリシーを十分に理解する必要があります。 ここから、適切なデータ使用ラベルを適用してデータを分類し、その使用をデータ使用ポリシーの定義を通じて制御できます。
+
+DULEフレームワークは、Experience PlatformユーザーインターフェイスとDULE Policy Service APIを通じて、データの分類とデータ使用ポリシーの作成のプロセスを簡素化および合理化します。
+
+**新機能**
+
+| 機能 | 説明 |
+| -----------| ---------- |
+| UIでのデータ使用ポリシーの管理 | データ使用ポリシーは、Experience Platform UIの「ポリシー __ 」ワークスペース内で管理できるようになりました。 詳しくは、 [policyユーザーガイド](../../data-governance/policies/user-guide.md) を参照してください。 |
+
+**既知の問題**
+
+* None.
+
+詳しくは、「データガバナンスの概要」を [参照してください](../../data-governance/home.md)。
+
+
+## 宛先 {#destinations}
+
+アドビの [Real-time Customer Data Platformでは](../../rtcdp/overview.md)、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータをアクティブ化します。
+
+**新しい宛先**
+
+Adobe Real-time CDPは、50を超えるExperience Cloud Launch拡張に対するデータのアクティベーションをサポートするようになり、解析、パーソナライゼーション、その他の使用例を可能にします。 詳しくは、以下を参照してください。
+
+| ドキュメント | 説明 |
+|--- | ---|
+| [宛先のタイプとカテゴリ](/help/rtcdp/destinations/destination-types.md) | この記事では、Adobe Real-time CDPインターフェイスの接続と拡張の違いを説明し、これらの各宛先を使用する場合を推奨します。 |
+| [エクスペリエンスプラットフォーム起動の拡張](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | このページでは、Launchの拡張機能の概要、Launchの使用例、およびAdobe Real-time CDPの各Launchの拡張機能に関するドキュメントへのリンクを説明します。 |
+
+詳しくは、宛先の概要を参照し [てください](/help/rtcdp/destinations/destinations-overview.md)。
+
+## プライバシーサービス {#privacy}
 
 新しい法規制や組織の規制により、ユーザーは要求に応じて、データストアから個人データにアクセスしたり、個人データを削除したりする権利が与えられます。 Adobe Experience Platform Privacy Serviceは、RESTful APIとユーザーインターフェイスを提供し、顧客からのこれらのデータリクエストを管理するのに役立ちます。 プライバシーサービスを使用すると、Adobe Experience Cloudアプリケーションから個人または個人の顧客データにアクセスする要求を送信したり、データを削除したりでき、法的および組織のプライバシー規制への自動コンプライアンスが容易になります。
 
@@ -85,13 +118,13 @@ Adobe Real-time CDPは、50を超えるExperience Cloud Launch拡張に対する
 
 プライバシーサービスの詳細については、開始サービスの概要を [参照してください](../../privacy-service/home.md)。
 
-## ソース
+## ソース {#sources}
 
-Adobe Experience Platformは、外部ソースからデータを取り込み、Platformサービスを使用してデータの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、お使いのCRMシステムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformでは、外部ソースからデータを取り込み、Platformサービスを使用してデータの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、お使いのCRMシステムなど、様々なソースからデータを取り込むことができます。
 
 エクスペリエンスプラットフォームは、様々なデータプロバイダーのソース接続を簡単に設定できるRESTful APIとインタラクティブUIを提供します。 これらのソース接続を使用すると、外部ストレージシステムおよびCRMサービスの認証と接続、取り込みの実行時間の設定、データ取り込みのスループットの管理を行うことができます。
 
-### 新機能
+**新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
@@ -99,8 +132,8 @@ Adobe Experience Platformは、外部ソースからデータを取り込み、P
 | 支払いベースのアプリケーションのAPIとUIのサポート | PayPal用の新しいソースコネクタ。 |
 | プロトコルベースのアプリケーションのAPIとUIのサポート | 汎用OData用の新しいソースコネクタ。 |
 
-### 既知の問題
+**既知の問題**
 
 * None
 
-For more information about sources, see the [sources overview](../../sources/home.md).
+ソースについて詳しくは、ソースの概要を参照 [してください](../../sources/home.md)。
