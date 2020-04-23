@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
+source-git-commit: 26568ebbbe48b5a82e4f6b5cf035c354c11e8ed1
 
 ---
 
@@ -14,7 +14,13 @@ source-git-commit: 28a8fc496c85b334e89d0f0a130d3cc5c8956399
 
 ## リリース日：2019 年 9 月 10 日
 
-## データ収集
+Adobe Experience Platformの既存の機能の更新：
+
+* [データ収集](#ingestion)
+* [Data Science Workspace](#dsw)
+* [クエリサービス](#query)
+
+## データ収集 {#ingestion}
 
 Adobe Experience Platformは、あらゆる種類のデータや遅延を取り込むための豊富な機能セットを提供します。 Adobe Experience Platform Data Ingestは、Batch API、Streaming API、ネイティブのAdobeコネクター、データ統合パートナー、Adobe Experience Platform UIなど、データを取り込むための複数の代替手段を提供します。
 
@@ -26,7 +32,7 @@ Adobe Experience Platformは、あらゆる種類のデータや遅延を取り�
 
 詳しくは、データ収集のドキュメントを [参照してください](../../ingestion/home.md)。
 
-## Data Science Workspace
+## Data Science Workspace {#dsw}
 
 Adobe Experience Platform Data Science Workspaceは、Experience Platform内の完全に管理されたサービスで、Adobeソリューションやサードパーティ製システムのデータやコンテンツから、機械学習モデルの構築と運用によって、データ科学者がシームレスに洞察を生み出すことができます。 Data Science Workspaceは、プラットフォームと緊密に統合され、XDMデータの調査と準備を含む、エンドツーエンドのデータサイエンスのライフサイクルを強化します。その後、モデルの開発と運用を行い、リアルタイムの顧客プロファイルを機械学習インサイトに自動的に強化します。
 
@@ -46,7 +52,7 @@ Adobe Experience Platform Data Science Workspaceは、Experience Platform内の�
 
 詳しくは、 [Data Science Workspaceの概要を参照してください](../../data-science-workspace/home.md)。
 
-## クエリサービス
+## クエリサービス {#query}
 
 クエリサービスは、Adobe Experience Platformの標準のSQLからクエリへのデータを使用して、様々な分析およびデータ管理の使用例をサポートする機能を提供します。 Data Lakeのデータセットを結合し、クエリ結果を新しいデータセットとして取り込み、レポート、Data Science Workspace、またはリアルタイム顧客プロファイルに取り込むためのサーバーレスツールです。
 
