@@ -33,7 +33,7 @@ Recipe Builderノートブックを使用すると、ノートブック内でト
 
 ランチャーからRecipe Builderノートブックをクリックすると、タブにノートブックが開きます。 ノートブックで使用されるテンプレートは、このパブリック・リポジトリにもあるPython小売売上予測レシピ [です。](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-ツールバーには、とという3つの追加アクションがあ **[!UICONTROL Train]**&#x200B;り **[!UICONTROL Score]** ます **[!UICONTROL Create Recipe]**。 これらのアイコンは、レシピビルダーのノートブックにのみ表示されます。 これらのアクションに関する詳細は、ノート [ブックでレシピを作成した後](#training-and-scoring) 、トレーニングとスコアのセクションで説明します。
+ツールバーには、「 **[!UICONTROL Train]**」、「 **[!UICONTROL Score]** 」、「 **[!UICONTROL Create Recipe]**」の3つのアクションがあります。 これらのアイコンは、レシピビルダーのノートブックにのみ表示されます。 これらのアクションに関する詳細は、ノート [ブックでレシピを作成した後](#training-and-scoring) 、トレーニングとスコアのセクションで説明します。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -440,13 +440,13 @@ def save(configProperties, prediction):
 
 ノートブックの変更が完了し、レシピのトレーニングを行う場合は、バーの上部にある関連するボタンをクリックして、セル内にトレーニング・ランを作成できます。 ボタンをクリックすると、トレーニングスクリプトのコマンドと出力のログがノートブック（セルの下）に表示 `evaluator.py` されます。 Condaは、最初にすべての依存関係をインストールし、その後トレーニングを開始します。
 
-スコアを実行する前に、少なくとも1回はトレーニングを実行する必要があります。 ボタンをクリックす **[!UICONTROL Run Scoring]** ると、トレーニング中に生成されたトレーニング済みモデルにスコアが付けられます。 スコアリングスクリプトがに表示されま `datasaver.py`す。
+スコアを実行する前に、少なくとも1回はトレーニングを実行する必要があります。 「スコアを実行」ボ **[!UICONTROL タンをクリックすると]** 、トレーニング中に生成されたトレーニング対象モデルに対してスコアが付けられます。 スコアリングスクリプトがに表示されま `datasaver.py`す。
 
 デバッグの目的で、非表示の出力を表示する場合は、出力セ `debug` ルの末尾にを追加し、再実行します。
 
 ## レシピの作成 {#create-recipe}
 
-レシピの編集が完了し、トレーニング/スコアリングの出力に満足したら、右上のナビゲーションを押して、ノートブックからレシ **[!UICONTROL Create Recipe]** ピを作成することができます。
+レシピの編集が完了し、トレーニング/スコアリングの出力に満足したら、右上のナビゲーションの「レシピの作成」を押して、ノートブックから **[!UICONTROL レシピ]** を作成できます。
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -454,7 +454,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-押すと、 **[!UICONTROL Ok]** Adobe Experience Platformの新しいレシピに移動でき [ます](https://platform.adobe.com/)。 ボタンをクリック **[!UICONTROL View Recipes]****[!UICONTROL Recipes]** すると、 **[!UICONTROL ML Models]**
+「 **[!UICONTROL OK]** 」を押すと、 [Adobe Experience Platformの新しいレシピに移動できます](https://platform.adobe.com/)。 「 **[!UICONTROL 表示レシピ」ボタンをクリックすると]** 、 **[!UICONTROL MLモデルの「レシピ]** 」タブに移動で **[!UICONTROL きます。]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
