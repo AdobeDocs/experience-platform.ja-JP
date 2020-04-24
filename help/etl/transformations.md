@@ -46,7 +46,7 @@ CRMデータのマッピング要件を次の表に示し、次の変換を含�
 
 | CSV列 | XDMパス | データの形式設定 |
 | ---------- | -------- | --------------- |
-| タイトル | person.name.cortecyTitle | 文字列としてコピー |
+| タイトル | person.name.courtesyTitle | 文字列としてコピー |
 | F_NAME | person.name.firstName | 文字列としてコピー |
 | L_NAME | person.name.lastName | 文字列としてコピー |
 | 性別 | person.gender | 性別を対応するperson.gender列挙値に変換 |
