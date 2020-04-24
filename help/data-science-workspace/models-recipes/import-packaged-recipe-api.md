@@ -4,7 +4,7 @@ solution: Experience Platform
 title: パッケージ化されたレシピ(API)の読み込み
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -46,7 +46,7 @@ APIリクエストの一部として含めるパッケージ化されたレシ�
 - [ドッカーURLを使用したエンジンの作成](#create-an-engine-with-a-docker-url)
 - [バイナリアーティファクト（非推奨）を使用したエンジンの作成](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### ドッカーURLを使用したエンジンの作成
+### ドッカーURLを使用したエンジンの作成 {#create-an-engine-with-a-docker-url}
 
 パッケージ化されたレシピファイルをDockerコンテナに格納してエンジンを作成するには、パッケージ化されたレシピファイルのDocker URLを指定する必要があります。
 
@@ -199,11 +199,11 @@ curl -X POST \
 
 成功した応答には、新しく作成されたエンジンに関する情報を含むJSONペイロードが表示されます。 キーは `id` 一意のエンジン識別子を表し、MLInstanceを作成するための次のチュートリアルで必要となります。 次の手順に進む前に、エンジン識別子が保存されていることを確認します。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 APIを使用してエンジンを作成し、応答本文の一部として一意のエンジン識別子を取得した。 APIを使用してモデルの作成、トレーニング、評価を行う方法について学習する際に、 [次のチュートリアルでこのエンジン識別子を使用できます](./train-evaluate-model-api.md)。
 
-### バイナリアーティファクト（非推奨）を使用したエンジンの作成
+### バイナリアーティファクト（非推奨）を使用したエンジンの作成 {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
