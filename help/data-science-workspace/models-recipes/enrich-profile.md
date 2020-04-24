@@ -62,7 +62,7 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 4. スキーマの作成が完了したら、「構造」( *Structure* )ウィンドウ内のスキーマの最上位フィールドをクリックし、スキーマのプロパティを右側のプロパティウィンドウに表示します。 名前と説明を入力し、「保存」をクリックし **て** 、スキーマを作成
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
-5. 新しく作成したスキーマを使用して出力データセットを作成します。作成するには、左側のナビゲ **ーション列で** 「 **Datasets**」をクリックし、「Create dataset」をクリックします。 次の画面で、「データセットを **スキーマ**」を
+5. 新しく作成したスキーマを使用して出力データセットを作成します。作成するには、左のナビゲ **ーション列で** 「 **Datasets**」をクリックし、「Create dataset」をクリックします。 次の画面で、「データセットを **スキーマ**」を
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
 6. スキーマブラウザーを使用して、新しく作成したスキーマを探して選択し、「 **Next**」をクリックします。
