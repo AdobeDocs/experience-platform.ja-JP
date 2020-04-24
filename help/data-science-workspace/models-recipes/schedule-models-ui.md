@@ -4,7 +4,7 @@ solution: Experience Platform
 title: モデルのスケジュール(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 541acd9e1df8a53ae372f71230a705fb6a95d92b
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Platform Data Science Workspaceを使用すると、機械学�
 
 このチュートリアルには既存のサービスが必要です。 操作するアクセシブルなサービスがない場合は、UIチュートリアルの「モデルをサービスとしてパブリ [ッシュ」に従って作成できます](./publish-model-service-ui.md) 。
 
-## スケジュール済みスコアの設定
+## スケジュール済みスコアの設定 {#configure-scheduled-scoring}
 
 モデルスコアリングは、スケジュールに基づいて自動化されたプロセスに設定できます。 サービスを作成したら、次の手順に従って、スコアリングスケジュールを設定および適用できます。
 
@@ -41,7 +41,7 @@ Adobe Experience Platform Data Science Workspaceを使用すると、機械学�
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## 予定されたトレーニングの設定
+## 予定されたトレーニングの設定 {#configure-scheduled-training}
 
 サービスでの定期トレーニングの実行を設定すると、機械学習モデルが最新のデータパターンに更新されます。 スケジュールされたトレーニングの実行が完了するたびに、トレーニングを受けたモデルが使用され、次のスケジュールされたトレーニングの実行までサービスの電源が投入されます。
 
@@ -56,9 +56,9 @@ Adobe Experience Platform Data Science Workspaceを使用すると、機械学�
 3. トレーニングスケジュールに使用する頻度、開始日、終了日、入力データセットを設定します。 設定が完了したら、「作成」をクリックし **て** 、サービスのトレーニングスケジュールを更新します。
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
-4. Your updated training schedule is shown in the Service&#39;s *Overview* page.
+4. 更新されたトレーニングスケジュールがサービスの概要ページに表示 *されます* 。
    ![](../images/models-recipes/schedule/service_with_training_schedule.png)
 
 ## 次の手順
 
-このチュートリアルに従うと、サービスでの自動トレーニングとスコアリングの実行のスケジュールが正常に完了し、Data Science Workspace Tutorial UIワークフローが完了します。 If you have not done so already, consider [restarting the tutorial](./create-retails-sales-dataset.md) and follow the API workflow to create, train, score, and publish a Model.
+このチュートリアルに従うと、サービスでの自動トレーニングとスコアリングの実行のスケジュールが正常に完了し、Data Science Workspace Tutorial UIワークフローが完了します。 まだ実行していない場合は、チュートリアルを再 [起動し、APIワークフローに従って](./create-retails-sales-dataset.md) 、モデルの作成、トレーニング、スコア、および公開を行ってください。
