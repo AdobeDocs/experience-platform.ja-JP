@@ -13,7 +13,7 @@ source-git-commit: 7ee83b5bf14ec802801cfbc17141c02ceeaccd82
 
 このチュートリアルでは、API呼び出しを使用して、Adobe Experience Platformデータに接続し、電子メールマーケティングの宛先を作成し、新しく作成した宛先にデータフローを作成し [](../../rtcdp/destinations/email-marketing-destinations.md)、新しく作成した宛先にデータをアクティブ化する方法を説明します。
 
-このチュートリアルでは、すべての例でAdobe Campaignのリンク先を使用しますが、手順はすべての電子メールマーケティングのリンク先で同じです。
+このチュートリアルでは、Adobe Campaignの宛先をすべての例で使用しますが、手順はすべての電子メールマーケティングの宛先で同じです。
 
 ![概要 — 宛先の作成とセグメントのアクティブ化の手順](../images/destinations/flow-api-destinations-steps-overview.png)
 
@@ -271,7 +271,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-正常な応答は、新しく作成されたソース接続の`id`Unified Identifier()を、統合プロファイルサービスに返します。 これにより、エクスペリエンスプラットフォームのデータに正常に接続したことが確認されます。 この値は、後の手順で必要な場合に保存します。
+正常な応答は、新しく作成されたソース接続の`id`Unified Identifier()を、統合プロファイルサービスに返します。 これにより、エクスペリエンスプラットフォームデータに正常に接続したことが確認されます。 この値は、後の手順で必要な場合に保存します。
 
 ```json
 {
@@ -514,7 +514,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`:接続先の電子メールマーケティングのフローを使用します。 フロー仕様を取得するには、エンドポイントでGET操作を実行 `flowspecs` します。 Swaggerのドキュメントは、こちらを参照してください。https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. 応答で、接続先の電 `upsTo` 子メールマーケティングの宛先の対応するIDを探し、コピーします。 例えば、Adobe Campaignの場合、パラメーターを探し `upsToCampaign` てコピー `id` します。
+* `{FLOW_SPEC_ID}`:接続先の電子メールマーケティングのフローを使用します。 フロー仕様を取得するには、エンドポイントでGET操作を実行 `flowspecs` します。 Swaggerのドキュメントは、こちらを参照してください。https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. 応答で、接続先の電 `upsTo` 子メールマーケティングの宛先の対応するIDを探し、コピーします。 例えば、Adobe Campaignの場合は、パラメータ `upsToCampaign` ーを探してコピー `id` します。
 * `{SOURCE_CONNECTION_ID}`:手順「エクスペリエンスプラットフォームへの接続」で取得した [ソース接続IDを使用します](#connect-to-your-experience-platform-data)。
 * `{TARGET_CONNECTION_ID}`:手順「電子メールターゲットへの接続」で取得した [マーケティング先への接続IDを使用します](#connect-to-email-marketing-destination)。
 
