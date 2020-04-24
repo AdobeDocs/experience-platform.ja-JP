@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 機械学習モデルのチュートリアルの作成と公開
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -47,7 +47,7 @@ Adobe Experience Platform Data Science Workspaceは、事前に作成された�
    * バッチ：データセットは、バッチで構成されます。 バッチとは、一定期間に収集され、1つの単位として一緒に処理される一連のデータです。
    * JupyterLab:JupyterLabは [](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) 、Project JupyterのオープンソースWebベースのインターフェイスで、Experience Platformに緊密に統合されています。
 
-## データの準備
+## データの準備 {#prepare-your-data}
 
 顧客に対してパーソナライズされた商品レコメンデーションを作成する機械学習モデルを作成するには、Webサイトでの以前の顧客の購入を分析する必要があります。 この節では、このデータがAdobe Analyticsを通じてPlatformに取り込まれる方法と、そのデータが機能データセットに変換され、機械学習モデルで使用される方法について説明します。
 
@@ -68,7 +68,7 @@ Adobe Experience Platform Data Science Workspaceは、事前に作成された�
 | Recommendations入力データセット | Recommendations入力スキーマ | Analyticsデータは、機能パイプラインを使用してトレーニングデータセットに変換されます。 このデータは、Product Recommendationsの機械学習モデルのトレーニングに使用されます。 `itemid` そして、 `userid` その顧客が購入した製品に対応しています。 |
 | Recommendations出力データセット | Recommendationsの出力スキーマ | スコアリング結果が保存されるデータセットには、各顧客のレコメンデーション商品のリストが含まれます。 |
 
-## モデルのオーサリング
+## モデルのオーサリング {#author-your-model}
 
 Data Science Workspaceのライフサイクルの2番目の要素は、レシピとモデルの作成です。 商品レコメンデーションレシピは、過去の購入データと機械学習を利用して、商品レコメンデーションをスケールで生成するように設計されています。
 
@@ -85,7 +85,7 @@ Data Science Workspaceのライフサイクルの2番目の要素は、レシピ
 
 これで、商品レコメンデーションレシピで必要な入出力スキーマを確認しました。 次のセクションに進み、商品レコメンデーションモデルの作成、トレーニング、評価方法を見つけることができます。
 
-## モデルのトレーニングと評価
+## モデルのトレーニングと評価 {#train-and-evaluate-your-model}
 
 データの準備が完了し、レシピを使用する準備が整ったら、機械学習モデルを作成、トレーニング、評価できます。
 
@@ -130,7 +130,7 @@ Data Science Workspaceのライフサイクルの2番目の要素は、レシピ
 3. 各トレーニングの実行に使用されるスキーマセット、データセット、設定パラメーターは、右側のレールで確認できます。
 4. 「モデル」ページに戻り、評価指標を観察して、パフォーマンスが最も高いトレーニングを特定します。
 
-## モデルの操作
+## モデルの操作 {#operationalize-your-model}
 
 Data Scienceワークフローの最後の手順は、データストアからの洞察をスコア化し、利用するためにモデルを操作することです。
 
