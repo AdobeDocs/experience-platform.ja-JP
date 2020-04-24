@@ -41,7 +41,7 @@ Adobe IDをお持ちでない場合は、次の手順で作成できます。
 
 ### 組織のエクスペリエンスプラットフォームの開発者とユーザーになる
 
-Adobe I/Oで統合を作成する前に、IMS組織の製品の開発者権限を持つアカウントが必要です。 管理コンソールの開発者アカウントに関する詳細な情報は、開発者を管理するサポート [ドキュメント](https://helpx.adobe.com/enterprise/using/manage-developers.html) を参照してください。
+Adobe I/Oで統合を作成する前に、IMS組織の製品の開発者権限を持つアカウントが必要です。 管理コンソールの開発者アカウントに関する詳細な情報は、開発者を管理するサポート [ドキュメント](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) を参照してください。
 
 **開発者アクセスの獲得**
 
