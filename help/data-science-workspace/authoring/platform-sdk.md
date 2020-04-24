@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プラットフォームSDKガイド
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: a68aa62c3c3cc3e42083d6b0a1d1003f4137840f
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: a68aa62c3c3cc3e42083d6b0a1d1003f4137840f
 - [データの基本読み取り](#basic-reading-of-data)
 - [データの基本的な書き込み](#basic-writing-of-data)
 
-## 認証の構築
+## 認証の構築 {#build-authentication}
 
 認証は、Adobe Experience Platformを呼び出すために必要で、APIキー、IMS組織ID、ユーザートークンおよびサービストークンで構成されます。
 
@@ -64,7 +64,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## データの基本読み取り
+## データの基本読み取り {#basic-reading-of-data}
 
 新しいプラットフォームSDKでは、最大読み取りサイズは32 GBで、最大読み取り時間は10分です。
 
@@ -99,7 +99,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## オフセットと制限でフィルタ
+## オフセットと制限でフィルタ {#filter-by-offset-and-limit}
 
 バッチIDによるフィルタリングはサポートされなくなったので、データの読み取りの範囲を絞るには、とを使用する必要が `offset` ありま `limit`す。
 
@@ -117,7 +117,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## 日付でフィルタ
+## 日付でフィルタ {#filter-by-date}
 
 日付フィルターの精度が、日別に設定されるのではなく、タイムスタンプによって定義されるようになりました。
 
@@ -153,7 +153,7 @@ df2
 | And (`&`) | `And()` |
 | または (`|`) | `Or()` |
 
-## 選択した列でフィルタ
+## 選択した列でフィルタ {#filter-by-selected-columns}
 
 データの読み取りをさらに絞り込むために、列名でフィルターすることもできます。
 
@@ -169,7 +169,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## 並べ替え結果の取得
+## 並べ替え結果の取得 {#get-sorted-results}
 
 受け取った結果は、ターゲットデータセットの指定した列と、その順序(asc/desc)で並べ替えることができます。
 
@@ -187,7 +187,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## データの基本的な書き込み
+## データの基本的な書き込み {#basic-writing-of-data}
 
 >[!NOTE] IMS組織は、内で設定されます `client_context`。
 
