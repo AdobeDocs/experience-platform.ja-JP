@@ -4,7 +4,7 @@ solution: Experience Platform
 title: サービス
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: dabeee04dd6ec2bbdd37a6987efcb54b285df7ca
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -15,7 +15,7 @@ MLServiceは、事前に開発されたモデルにアクセスして再利用�
 
 自動トレーニングおよびスコアリングスケジュールは、開始タイムスタンプ、終了タイムスタンプおよび頻度をCron式として <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">定義しま</a>す。 スケジュールは、MLServiceの作成時 [に定義するか](#create-an-mlservice) 、既存のMLServiceを更新するこ [とによって適用できます](#update-an-mlservice)。
 
-## MLServiceの作成
+## MLServiceの作成 {#create-an-mlservice}
 
 MLServiceは、POSTリクエストと、サービスの名前と有効なMLInstance IDを提供するペイロードを実行することで作成できます。 MLServiceの作成に使用するMLInstanceは、既存のトレーニング実験を持つ必要はありませんが、対応するテストIDとトレーニング実行IDを指定することで、既存のトレーニングモデルを使用してMLServiceを作成することもできます。
 
@@ -103,7 +103,7 @@ curl -X POST \
 }
 ```
 
-## MLServicesのリストの取得
+## MLServicesのリストの取得 {#retrieve-a-list-of-mlservices}
 
 MLServicesのリストは、1回のGET要求を実行することで取得できます。 結果のフィルタリングに役立つように、リクエストパスでクエリパラメーターを指定できます。 使用可能なクエリのリストについては、アセット取得のための [クエリパラメータの付録の節を参照してください](./appendix.md#query)。
 
@@ -162,7 +162,7 @@ curl -X GET \
 }
 ```
 
-## 特定のMLServiceの取得
+## 特定のMLServiceの取得 {#retrieve-a-specific-mlservice}
 
 リクエストパスに目的のMLServiceのIDを含むGETリクエストを実行することで、特定のテストの詳細を取得できます。
 
@@ -206,7 +206,7 @@ curl -X GET \
 }
 ```
 
-## MLServiceの更新
+## MLServiceの更新 {#update-an-mlservice}
 
 既存のMLServiceを更新するには、リクエストパスにターゲットMLServiceのIDを含むPUT要求を使用してプロパティを上書きし、更新されたプロパティを含むJSONペイロードを提供します。
 
