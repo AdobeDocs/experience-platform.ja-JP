@@ -118,7 +118,7 @@ Data Science Workspaceは、インテリジェントサービスが呼び出さ�
 
 ### Data Science Workspaceのアクセス制御
 
-Access control for Experience Platform is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). この機能は、管理コンソールの製品プロファイルを利用し、ユーザーに権限とサンドボックスをリンクします。 See the [access control overview](../access-control/home.md) for more information.
+Access control for Experience Platform is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). この機能は、管理コンソールの製品プロファイルを利用します。この製品ユーザーは、権限とサンドボックスを持つユーザーをリンクします。 See the [access control overview](../access-control/home.md) for more information.
 
 >[!IMPORTANT] Data Science Workspaceを使用するには、「Data Science Workspaceを管理」権限を有効にする必要があります。
 
