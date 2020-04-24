@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspaceのチュートリアル
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -45,7 +45,7 @@ Adobe Experience Platform UIで、上部メニューの「データサイエン�
 
 ![](./images/walkthrough/retail_sales.png)
 
-### セットアップ
+### セットアップ {#setup}
 
 小売売上ノートブックを開いた状態で、まずワークフローに必要なライブラリを読み込みます。 次のリストでは、それぞれの用途について簡単に説明します。
 - **numpy** — 大きな多次元配列と行列のサポートを追加する科学計算ライブラリ
@@ -55,7 +55,7 @@ Adobe Experience Platform UIで、上部メニューの「データサイエン�
 - **sklearn** — 分類、回帰、サポートベクトルおよびクラスターアルゴリズムを備えた機械学習ライブラリ
 - **warnings** — 警告メッセージを制御するライブラリ
 
-### データの調査
+### データの調査 {#exploring-data}
 
 #### データの読み込み
 
@@ -129,7 +129,7 @@ df.describe()
 
 斜めの斜めが中央から下にあることに注目してください。 これは、変数をそれ自体と比較する場合、完全に正の相関関係があることを示しています。 強い正の相関は1に近い大きさになり、弱い相関は0に近い大きさになります。 負の相関は、逆の傾向を示す負の係数で示されます。
 
-### 機能エンジニアリング
+### 機能エンジニアリング {#feature-engineering}
 
 この節では、小売データセットを変更します。 我々は以下の業務を行う。
 
@@ -177,7 +177,7 @@ df.describe()
 
 ![](./images/walkthrough/df_info_new.png)
 
-### トレーニングと検証
+### トレーニングと検証 {#training-and-verification}
 
 次に、データの一部のモデルを作成し、将来の売上を予測するのに最もパフォーマンスの高いモデルを選択します。 以下の5つのアルゴリズムを評価します。
 
