@@ -19,25 +19,25 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ## 宛先の接続 {#connect-destination}
 
-1. で、「Salesforce **[!UICONTROL Connections > Destinations]** Marketing Cloud」を選択し、「」を選択しま **[!UICONTROL Connect destination]**&#x200B;す。
+1. **[!UICONTROL 接続／宛先]**&#x200B;で、「Salesforce Marketing Cloud」を選択し、「**[!UICONTROL 宛先の接続]**」を選択します。
 
    ![Salesforce への接続](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-2. クラウド **[!UICONTROL Authentication]** ストレージの宛先への接続を設定済みの場合は、手順で、既存の接続の1 **[!UICONTROL Existing Account]** つを選択して選択します。 または、新しい接続を設 **[!UICONTROL New Account]** 定するように選択できます。 アカウント認証資格情報を入力し、を選択しま **[!UICONTROL Connect to destination]**&#x200B;す。 Salesforce Marketing Cloudの場合は、とから選択でき **[!UICONTROL SFTP with Password]** ます **[!UICONTROL SFTP with SSH Key]**。 Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select one of your existing connections. または、「新規アカウント」を **[!UICONTROL 選択して]** 、新しい接続を設定できます。 アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。Salesforce Marketing Cloud の場合は、「**[!UICONTROL SFTP（パスワード）]**」と「**[!UICONTROL SFTP（SSH キー）]**」を選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
-   For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
-接続の **[!UICONTROL SFTP with SSH Key]** 場合は、ドメイン、ポート、ユーザー名、SSHキーを指定する必要があります。
+   **[!UICONTROL SFTP（パスワード）]** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
+**[!UICONTROL SFTP（SSH キー）]** で接続する場合は、ドメイン、ポート、ユーザー名、SSH キーを指定する必要があります。
 
    ![Salesforce 情報の入力](/help/rtcdp/destinations/assets/salesforce-authenticate.png)
 
 3. In the **[!UICONTROL Setup]** step, fill in the relevant information for your destination as shown below:
-   * **[!UICONTROL Name]**:目的の名前を選択します。
-   * **[!UICONTROL Description]**:宛先の説明を入力します。
-   * **[!UICONTROL Folder Path]**:リアルタイムCDPがエクスポートデータをCSVまたはタブ区切りのファイルとしてデポジットするストレージの場所のパスを指定します。
-   * **[!UICONTROL File Format]**:ま **[!UICONTROL CSV]** た **[!UICONTROL TAB_DELIMITED]**&#x200B;は ストレージの場所に書き出すファイル形式を選択します。
+   * **[!UICONTROL 名前]**：宛先の名前を選択します。
+   * **[!UICONTROL 説明]**：宛先の説明を入力します。
+   * **[!UICONTROL フォルダーパス]**：Real-time CDP が書き出しデータを CSV またはタブ区切りファイルとして格納するストレージの場所へのパスを指定します。
+   * **[!UICONTROL ファイル形式]**：**[!UICONTROL CSV]** または **[!UICONTROL TAB_DELIMITED]**。ストレージの場所に書き出すファイル形式を選択します。
    ![Salesforce の基本情報](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
 
-4. 上記のフ **[!UICONTROL Create destination]** ィールドに入力した後、をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
+4. 上記のフ **[!UICONTROL ィールドに入力し]** 、「宛先を作成」をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
 
 ## 宛先属性 {#destination-attributes}
 
@@ -45,4 +45,4 @@ Salesforce Marketing Cloud の宛先に対して[セグメントをアクティ�
 
 ## Salesforce Marketing Cloud へのデータインポートの設定 {#import-data-into-salesforce}
 
-Real-time CDP を Amazon S3 または SFTP ストレージに接続した後、ストレージの場所から Salesforce Marketing Cloud へのデータインポートを設定する必要があります。これを達成する方法については、Salesforce ヘルプセンターの「[ファイルから Marketing Cloud に購読者をインポートする方法](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5)」を参照してください。
+Real-time CDP を Amazon S3 または SFTP ストレージに接続した後、ストレージの場所から Salesforce Marketing Cloud へのデータインポートを設定する必要があります。これを達成する方法については、Salesforce ヘルプセンターの「[ファイルから Marketing Cloud に購読者をインポートする方法](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5)」を参照してください。
