@@ -35,7 +35,7 @@ source-git-commit: 065076aee83990bcad0110f0d7704a60fac400c6
 | `servicePrincipalKey` | アプリのキー。 |
 | `tenant` | アプリケーションを含むテナント情報。 |
 
-これらの値の詳細については、このADLS Gen2 [ドキュメントを参照](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage)。
+これらの値の詳細については、このADLS Gen2 [ドキュメント](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-data-lake-storage)。
 
 ### サンプルAPI呼び出しの読み取り
 
