@@ -19,11 +19,11 @@ Experience Cloud Identifier(ECID)は、ID管理へのアクセスを提供する
 
 オンライン訪問者を識別するには、サイトまたはモバイルアプリにECIDを実装する必要があります。ECIDは、Adobe Experience Platformのすべてのソリューションでユーザーを識別するユニバーサルで永続的なIDを提供します。
 
-Webサイトの実装を使用する場合は、ここでリソースを参照して [ください](https://marketing.adobe.com/resources/help/en_US/mcvid)。
+Webサイトの実装を使用する場合は、ここでリソースを参照して [ください](https://marketing.adobe.com/resources/help/ja_JP/mcvid)。
 
-モバイルアプリを使用している場合は、ECIDを使用してアプリとモバイルWebの [訪問者を追跡する方法を確認します](https://marketing.adobe.com/resources/help/en_US/mobile/ios/hybrid_app.html)。
+モバイルアプリを使用している場合は、ECIDを使用してアプリとモバイルWebの間の [訪問者を追跡する方法を確認します](https://marketing.adobe.com/resources/help/en_US/mobile/ios/hybrid_app.html)。
 
-これらのツールの導入は、 [Adobe Launchを使用する場合に、簡単で管理が簡単になります](https://docs.adobe.com/content/help/en/launch/using/overview.html)。
+これらのツールの導入は、 [Adobe Launchを使用する場合に、簡単で管理が簡単になります](https://docs.adobe.com/content/help/ja-JP/launch/using/overview.html)。
 
 また、GDPRへの準拠にECIDを使用す [る方法については](../privacy-service/identity-data.md) 、プライバシーサービスのドキュメントも参照してください。
 
