@@ -1,25 +1,25 @@
 ---
-title: 自動的に収集された情報
-seo-title: Adobe Experience Platform Web SDKによって自動的に収集される情報
-description: Adobe Experience Cloud SDKが自動的に収集する各情報の説明
-seo-description: Adobe Experience Cloud SDKが自動的に収集する各情報の説明
+title: 自動的に収集される情報
+seo-title: Adobe Experience Platform Web SDK で自動的に収集される情報
+description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
+seo-description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
 translation-type: tm+mt
 source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 ---
 
 
-# （ベータ版）自動収集情報
+# （ベータ版）自動的に収集される情報
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDKは現在ベータ版で、すべてのユーザーが利用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+>Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
 
-Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報を自動的に収集します。 ただし、この情報は、必要に応じて、コマンドのオプションを使用し `context` て無効にすることがで `configure` きます。 [SDKの設定を参照してください](../fundamentals/configuring-the-sdk.md)。 以下に、その情報の一覧を示します。 括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
+Adobe Experience Cloud SDK は、特別な設定をしなくても、多数の情報を自動的に収集します。ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
 
-## デバイス (`device`)
+## デバイス（`device`）
 
-デバイスに関する情報。これには、ユーザーエージェント文字列からサーバー側を参照できるデータは含まれません。
+デバイスに関する情報。ユーザーエージェント文字列からサーバサイドを参照できるデータは含みません。
 
 ### 画面の高さ
 
@@ -27,7 +27,7 @@ Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報
 | ---------------------------------- | ------------ |
 | `events[].xdm.device.screenHeight` | `900` |
 
-画面の高さ（ピクセル単位）。
+画面の高さをピクセル単位で指定します。
 
 ### 画面の向き
 
@@ -43,11 +43,11 @@ Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報
 | --------------------------------- | ------------ |
 | `events[].xdm.device.screenWidth` | `1440` |
 
-画面の幅（ピクセル単位）。
+画面の幅をピクセル単位で指定します。
 
-## 環境 (`environment`)
+## 環境（`environment`）
 
-ブラウザー環境に関する詳細。
+ブラウザー環境の詳細。
 
 ### 環境タイプ
 
@@ -57,7 +57,7 @@ Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-エクスペリエンスが表示された環境のタイプ。 JavaScript版Adobe Experience Platform SDKは、常に設定されま `browser`す。
+エクスペリエンスが表示された環境のタイプ。JavaScript 版 Adobe Experience Platform SDK では、常に `browser` が設定されます。
 
 ### ビューポートの高さ
 
@@ -65,7 +65,7 @@ Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報
 | -------------------------------------------------------- | ------------ |
 | `events[].xdm.environment.browserDetails.viewportHeight` | `679` |
 
-ブラウザーのコンテンツ領域の高さ（ピクセル単位）。
+ブラウザーのコンテンツ領域の高さをピクセル単位で指定します。
 
 ### ビューポートの幅
 
@@ -73,11 +73,11 @@ Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報
 | ------------------------------------------------------- | ------------ |
 | `events[].xdm.environment.browserDetails.viewportWidth` | `642` |
 
-ブラウザーのコンテンツ領域の幅（ピクセル単位）。
+ブラウザーのコンテンツ領域の幅をピクセル単位で指定します。
 
 ## 実装の詳細
 
-イベントの収集に使用されたSDKに関する情報です。
+イベントの収集に使用した SDK に関する情報です。
 
 ### 名前
 
@@ -85,7 +85,7 @@ Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-ソフトウェア開発キット(SDK)の識別子。  このフィールドでは、URIを使用して、異なるソフトウェアライブラリが提供する識別子間の一意性を改善します。
+ソフトウェア開発キット（SDK）の ID。このフィールドでは、URI を使用で、異なるソフトウェアライブラリで提供される ID 間の一意性を改善します。
 
 ### バージョン
 
@@ -93,17 +93,17 @@ Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-## 配置コンテキスト(`placeContext`)
+## 場所コンテキスト（`placeContext`）
 
-エンドユーザーの場所に関する情報です。
+エンドユーザーの場所に関する限定的な情報。
 
-### ローカル時間
+### 現地時間
 
 | **ペイロード内のパス：** | **例：** |
 | ------------------------------------- | ------------------------------- |
 | `events[].xdm.placeContext.localTime` | `2019-08-07T15:47:17.129-07:00` |
 
-簡易拡張ISO形式 [ISO 8601でのエンドユーザーのローカルタイムスタンプ](https://tools.ietf.org/html/rfc3339#section-5.6)。
+エンドユーザーのローカルタイムスタンプ（簡易拡張 ISO 形式 [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6) のエンドユーザーのローカルタイムスタンプを使用）。
 
 ### ローカルタイムゾーンのオフセット
 
@@ -111,7 +111,7 @@ Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報
 | ----------------------------------------------- | ------------ |
 | `events[].xdm.placeContext.localTimezoneOffset` | `360` |
 
-ユーザーがGMTからオフセットする時間（分）。
+ユーザーが GMT からオフセットする時間（分）。
 
 ## タイムスタンプ
 
@@ -119,26 +119,26 @@ Adobe Experience Cloud SDKは、特別な設定を行わずに、多数の情報
 | ------------------------ | -------------------------- |
 | `events[].xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
 
-イベントのタイムスタンプ。このコンテキスト部分は削除できません。
+イベントのタイムスタンプ。コンテキストのこの部分は削除できません。
 
-エンドユーザーのUTCタイムスタンプ(簡易拡張ISO形式 [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6))。
+エンドユーザーの UTC タイムスタンプ（簡易拡張 ISO 形式 [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6) のエンドユーザーのローカルタイムスタンプを使用）。
 
-## Web詳細(`web`)
+## Web の詳細（`web`）
 
 ユーザーが閲覧しているページの詳細。
 
-### 現在のページURL
+### 現在のページ URL
 
 | **ペイロード内のパス：** | **例：** |
 | ------------------------------------- | ------------------------------------ |
 | `events[].xdm.web.webPageDetails.URL` | `https://somesite.com/somepage.html` |
 
-現在のページのURL。
+現在のページの URL。
 
-### リファラーURL
+### リファラー URL
 
 | **ペイロード内のパス：** | **例：** |
 | ---------------------------------- | ----------------------------------------- |
 | `events[].xdm.web.webReferrer.URL` | `http://somereferrer.com/linkedpage.html` |
 
-前に訪問したページのURL。
+前に訪問したページの URL。
