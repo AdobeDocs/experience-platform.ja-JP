@@ -25,7 +25,7 @@ source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
 
 **例**
 
-次のPQLクエリは、ユーザーの自宅住所が存在しないかどうかを確認します。
+次のPQLクエリは、その人の自宅住所が存在しないかどうかを確認します。
 
 ```sql
 person.homeAddress.isNull()
