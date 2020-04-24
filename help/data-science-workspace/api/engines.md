@@ -4,7 +4,7 @@ solution: Experience Platform
 title: エンジン
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -489,7 +489,7 @@ curl -X POST \
 }
 ```
 
-## バイナリアーティファクトを使用してフィーチャパイプラインエンジンを作成する — 廃止
+## バイナリアーティファクトを使用してフィーチャパイプラインエンジンを作成する — 廃止 {#create-a-feature-pipeline-engine-using-binary-artifacts}
 
 >[!IMPORTANT]
 >バイナリアーティファクトはサポートされなくなり、後で削除されるように設定されます。
