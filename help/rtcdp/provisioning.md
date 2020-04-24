@@ -25,4 +25,4 @@ source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 >[!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-編集/を選択し [!UICONTROL Processing Rules] て、操作を行います。 [!DNL Microsoft Visual Code].を使用します。
+何かをおこなうには、編集／[!UICONTROL 処理ルール]を選択します。  [!DNL Microsoft Visual Code].を使用します。
