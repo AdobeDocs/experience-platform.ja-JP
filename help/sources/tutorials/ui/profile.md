@@ -44,7 +44,7 @@ source-git-commit: d6d2faf3d5eabcd8e948d3717fd8f8df4b9cb85a
 
 ![](../../images/tutorials/dataflow/cloud-storage/select-dataset-schema.png)
 
-[ *スキーマ* エディタ]が表示され、中央のキャンバスにスキーマの構造が表示されます。 キャンバス内で、プライマリIDとして設定するフィールドを選択します。 表示される「 *Field properties* 」タブで、「 **Identity** 」チェックボックスを選択し、「 **Primary identity**」を選択します。 最後に、適切なID名前空間を **選択し**、「 **Apply**」をクリックします。
+[ *スキーマエディタ* ]が表示され、中央のキャンバスにスキーマの構造が表示されます。 キャンバス内で、プライマリIDとして設定するフィールドを選択します。 表示される「 *Field properties* 」タブで、「 **Identity** 」チェックボックスを選択し、「 **Primary identity**」を選択します。 最後に、適切なID名前空間を **選択し**、「 **Apply**」をクリックします。
 
 ![](../../images/tutorials/dataflow/cloud-storage/set-schema-identity.png)
 
