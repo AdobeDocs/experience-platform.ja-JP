@@ -23,7 +23,7 @@ source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
 
 ## データ使用ラベルとマーケティングアクションを使用してポリシーを評価
 
-Evaluating policy violations based on the presence of data usage labels requires you to specify the set of labels that would be present on the data during the request. This is done through the use of query parameters, where data usage labels are provided as a comma-separated list of values, as shown in the following example.
+データ使用ラベルの存在に基づいてポリシー違反を評価するには、要求時にデータに存在するラベルのセットを指定する必要があります。 これは、次の例に示すように、クエリパラメーターを使用して行います。このパラメーターでは、データ使用ラベルは値のコンマ区切りリストとして提供されます。
 
 **API形式**
 
@@ -34,9 +34,9 @@ GET /marketingActions/custom/{marketingActionName}/constraints?duleLabels={value
 
 **リクエスト**
 
-次の例のリクエストは、ラベルC1およびC3に対するマーケティングアクションを評価します。 When evaluating policies using data usage labels, please keep the following in mind:
-* **データ使用ラベルでは大文字と小文字が区別されます。** The request shown above returns a violated policy, whereas making the same request using lowercase labels (e.g. `"c1,c3"`, `"C1,c3"`, `"c1,C3"`) does not.
-* **Be aware of the`AND`and`OR`operators in your policy expressions.** In this example, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. 両方のラベル(`C1 AND C3`)を使用して、違反ポリシーを返します。 Ensure you are evaluating policies carefully and defining policy expressions with equal care.
+次の例のリクエストは、ラベルC1およびC3に対するマーケティングアクションを評価します。 データ使用ラベルを使用してポリシーを評価する場合は、次の点に注意してください。
+* **データ使用ラベルでは大文字と小文字が区別されます。** 上に示したリクエストは違反ポリシーを返しますが、同じリクエストを小文字のラベル( `"c1,c3"`、 `"C1,c3"`、 `"c1,C3"`)は含まれません。
+* **ポリシー式の「お`AND`よび」`OR`演算子に注意してください。** この例では、いずれかのラベル(または`C1` )がリクエ `C3`スト内で単独で表示された場合、マーケティングアクションはこのポリシーに違反していません。 両方のラベル(`C1 AND C3`)を使用して、違反ポリシーを返します。 ポリシーを慎重に評価し、ポリシー式を十分に定義します。
 
 ```SHELL
 curl -X GET \
