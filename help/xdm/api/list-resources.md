@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リスト資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
+source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 # リスト資源
 
 1つのGET要求を実行することで、コンテナ内のすべてのリソース(スキーマ、クラス、ミックスイン、またはデータタイプ)のリストを表示できます。
+
+>[!NOTE] リソースをリストする場合、スキーマレジストリでは結果セットが300項目に制限されます。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必 [要がありま](#paging)す。 また、結果をフィルターし、返されるクエリの数を減らす [ために、リソース](#filtering) ・パラメーターを使用することをお勧めします。
+>
+> 300項目の制限を完全に上書きする場合は、Acceptヘッダーを使用して、1回のリクエストですべての結果を返 `application/vnd.adobe.xdm-v2+json` す必要があります。
 
 **API形式**
 
@@ -42,8 +46,9 @@ curl -X GET \
 
 | ヘッダーを受け入れる | 説明 |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | 各リソースの短い概要を返します。一般に、リストの際に推奨されるヘッダです。 |
-| application/vnd.adobe.xed+json | 各リソースの完全なJSONスキーマを、元のリソースと含めて `$ref` 返しま `allOf` す。 |
+| application/vnd.adobe.xed-id+json | 各リソースの短い概要を返します。 リソースの一覧表示に推奨されるヘッダーです。 (制限：300) |
+| application/vnd.adobe.xed+json | 各リソースの完全なJSONスキーマを、元のリソースと含め `$ref` て返 `allOf` します。 (制限：300) |
+| application/vnd.adobe.xdm-v2+json | 1つのリクエストですべての結果の完全なJSONスキーマを返し、300項目の制限を上書きします。 |
 
 **応答**
 
@@ -74,7 +79,7 @@ curl -X GET \
 
 >[!NOTE] 複数のクエリパラメーターを組み合わせる場合は、アンパサンド(`&`)で区切る必要があります。
 
-### ページ
+### ページ {#paging}
 
 ページングに最も一般的なクエリパラメータは次のとおりです。
 
@@ -84,7 +89,7 @@ curl -X GET \
 | `limit` | 返されるリソースの数を制限します。 例：5つのリ `limit=5` ソースのリストを返します。 |
 | `orderby` | 特定のプロパティで結果を並べ替えます。 例：タイ `orderby=title` トルの昇順(A ～ Z)で結果を並べ替えます。 タイトルの `-` 前に(`orderby=-title`)を追加すると、タイトルの降順(Z-A)で項目が並べ替えられます。 |
 
-### フィルター
+### フィルター {#filtering}
 
 パラメーターを使用して結果をフィルターでき `property` ます。このパラメーターは、取得したリソース内の特定のJSONプロパティに対して特定の演算子を適用するために使用されます。 次の演算子がサポートされています。
 
