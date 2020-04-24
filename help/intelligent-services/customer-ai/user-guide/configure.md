@@ -17,11 +17,11 @@ source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ## インスタンスの設定 {#set-up-your-instance}
 
-In the Platform UI, click **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays all available services at your disposal. In the container for Customer AI, click **[!UICONTROL Open]**.
+プラットフォーム UI で、左側のナビゲーションの「**[!UICONTROL サービス]**」をクリックします。「**[!UICONTROL サービス]**」ブラウザーが表示され、使用可能なすべてのサービスが表示されます。顧客 AI のコンテナで、「**[!UICONTROL 開く]**」をクリックします。
 
 ![](../images/user-guide/navigate-to-service.png)
 
-*顧客 AI* 画面には、既存のすべての顧客 AI インスタンスが表示されます。「**[!UICONTROL Create instance]**」をクリックします。
+*顧客 AI* 画面には、既存のすべての顧客 AI インスタンスが表示されます。「**[!UICONTROL インスタンス作成]**」をクリックします。
 
 ![](../images/user-guide/dashboard.png)
 
@@ -31,13 +31,13 @@ In the Platform UI, click **[!UICONTROL Services]** in the left navigation. The 
 
 * インスタンスの名前は、顧客AIスコアが表示されるすべての場所で使用されます。 したがって、「雑誌の購読をキャンセルする可能性」のように、予測スコアが何を表すかを名前で示す必要があります。
 
-* 傾向タイプによって、スコアと指標の極性の意図が決まります。またはを選択でき **[!UICONTROL Churn]** ます **[!UICONTROL Conversion]**。 傾向タイプがインスタンスに与え [る影響の詳細については](./discover-insights.md#scoring-summary) 、「インサイトの検出」ドキュメントのスコアリングの概要のメモを参照してください。
+* 傾向タイプによって、スコアと指標の極性の意図が決まります。「**[!UICONTROL チャーン]**」または「**[!UICONTROL コンバージョン]**」を選択できます。傾向タイプがインスタンスに与え [る影響の詳細については](./discover-insights.md#scoring-summary) 、「インサイトの検出」ドキュメントのスコアリングの概要のメモを参照してください。
 
 * データソースは、データが存在する場所です。 データセットは、スコアの予測に使用される入力データセットです。 設計上、顧客 AI はコンシューマーエクスペリエンスイベントデータを使用して傾向スコアを計算します。ドロップダウンセレクターからデータセットを選択すると、顧客AIと互換性のあるもののみが表示されます。
 
 * デフォルトでは、適格な母集団が指定されていない限り、すべてのプロファイルに対して傾向スコアが生成されます。イベントに基づいてプロファイルを含めたり除外したりする条件を定義することで、適格な母集団を指定できます。
 
-Provide the required values and then click **[!UICONTROL Next]**.
+必要な値を入力し、「**[!UICONTROL 次へ]**」をクリックします。
 
 ![](../images/user-guide/setup.png)
 
@@ -45,13 +45,13 @@ Provide the required values and then click **[!UICONTROL Next]**.
 
 *目標の定義*&#x200B;手順が表示され、目標を視覚的に定義できるインタラクティブな環境が提供されます。目標は 1 つ以上のイベントで構成され、各イベントの発生は保持する条件に基づきます。顧客 AI インスタンスの目的は、特定の期間内に目標を達成する可能性を判断することです。
 
-をクリック **[!UICONTROL Enter Field Name]** し、ドロップダウンリストからフィールドを選択します。 2 つ目の入力をクリックし、イベントの条件句を選択し、イベントを完了するターゲット値を指定します。Additional events can be configured by clicking **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then click **[!UICONTROL Next]**.
+「**[!UICONTROL フィールド名の入力]**」をクリックし、ドロップダウンリストからフィールドを選択します。2 つ目の入力をクリックし、イベントの条件句を選択し、イベントを完了するターゲット値を指定します。追加のイベントは、「**[!UICONTROL イベント追加]**」をクリックして設定できます。最後に、予測期間を日数で適用して目標を完了し、「**[!UICONTROL 次へ]**」をクリックします。
 
 ![](../images/user-guide/goal.png)
 
-### スケジュールの設定&#x200B;*（オプション）*{#configure-a-schedule}
+### スケジュールの設定&#x200B;*（オプション）* {#configure-a-schedule}
 
-*詳細*&#x200B;手順が表示されます。This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or click **[!UICONTROL Finish]** if nothing is needed.
+*詳細*&#x200B;手順が表示されます。このオプションの手順では、予測の実行を自動化するスケジュールを設定したり、予測から特定のイベントを除外するフィルターを定義したりできます。必要がない場合は「**[!UICONTROL 完了]**」をクリックします。
 
 「*スコアリング頻度*」を設定して、スコアリングスケジュールを設定します。予測の自動実行は、週単位または月単位でスケジュールできます。
 
@@ -59,11 +59,11 @@ Provide the required values and then click **[!UICONTROL Next]**.
 
 スケジュール設定では、特定の条件を満たすイベントがスコアの生成時に評価されるのを防ぐために、予測の除外を定義できます。この機能を使用して、無関係なデータ入力を除外できます。
 
-To exclude certain events, click **[!UICONTROL Add exclusion]** and define the event in the same fashion as to how the goal is defined. To remove an exclusion, click the ellipses (**[!UICONTROL ...]**) to the top-right of the event container and then click **[!UICONTROL Remove Container]**.
+特定のイベントを除外するには、「**[!UICONTROL 除外の追加]**」をクリックし、目標の定義方法と同じ方法でイベントを定義します。除外を削除するには、イベントコンテナの右上にある省略記号（**[!UICONTROL ...]**）をクリックし、「**[!UICONTROL コンテナを削除]**」をクリックします。
 
 ![](../images/user-guide/exclusion.png)
 
-Exclude events as needed and then click **[!UICONTROL Finish]** to create the instance.
+必要に応じてイベントを除外し、「**[!UICONTROL 完了]**」をクリックして、インスタンスを作成します。
 
 ![](../images/user-guide/advanced.png)
 
