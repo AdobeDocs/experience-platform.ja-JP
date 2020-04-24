@@ -1,21 +1,21 @@
 ---
 title: コマンドの実行
-seo-title: Adobe Experience Platform Web SDKコマンドの実行
-description: エクスペリエンスプラットフォームWeb SDKコマンドの実行方法を説明します。
-seo-description: エクスペリエンスプラットフォームWeb SDKコマンドの実行方法を説明します。
+seo-title: Adobe Experience Platform Web SDK コマンドの実行
+description: Experience Platform Web SDK コマンドの実行方法について説明します
+seo-description: Experience Platform Web SDK コマンドの実行方法について説明します
 translation-type: tm+mt
 source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 ---
 
 
-# （ベータ）コマンドの実行
+# （ベータ版）コマンドの実行
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDKは現在ベータ版で、すべてのユーザーが利用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+>Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
 
-Webページにベースコードが実装されたら、SDKを使用してコマンドの実行を開始できます。 コマンドを実行する前に、外部ファイル\(`alloy.js`\)がサーバから読み込まれるのを待つ必要はありません。 SDKが読み込みを完了していない場合、コマンドはSDKによって可能な限り早くキューに格納され、処理されます。
+Web ページにベースコードが実装されたら、SDK を使用してコマンドの実行を開始できます。コマンドを実行する前に、外部ファイル（`alloy.js`）がサーバーから読み込まれるのを待機する必要はありません。SDK が読み込みを完了していない場合、コマンドはキューに追加され、できるだけ早く SDK によって処理されます。
 
 コマンドは、次の構文を使用して実行されます。
 
@@ -23,15 +23,15 @@ Webページにベースコードが実装されたら、SDKを使用してコ�
 alloy("commandName", options);
 ```
 
-コマ `commandName` ンドに渡すパラメーターとデ `options` ータは、SDKに対して何を行うかを指示します。 使用可能なオプションはコマンドによって異なるので、各コマンドの詳細については、ドキュメントを参照してください。
+`commandName` は SDK に何を実行するかを伝え、`options` はコマンドに渡すパラメーターとデータです。使用可能なオプションはコマンドによって異なります。各コマンドの詳細については、ドキュメントを参照してください。
 
-## 約束の手紙
+## Promise に関する注記事項
 
-[約束は](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 、SDKがWebページ上のコードとどのように通信するかに関する基本原則です。 約束は、共通のプログラミング構造であり、このSDKやJavaScriptに固有のものではありません。 約束は、約束の作成時に不明な値の代理として機能します。 値が認識されると、その値でプロミスが「解決」されます。 ハンドラー関数を約束に関連付けると、約束が解決されたときや、約束の解決中にエラーが発生したときに通知を受け取ることができます。 公約の詳細については、このチュートリ [アルや](https://javascript.info/promise-basics) 、Web上の他のリソースをお読みください。
+[Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) は、SDK が Web ページ上のコードと通信する際の基本です。Promise は一般的なプログラミング構造であり、この SDK や JavaScript に固有のものではありません。ある Promise は、promise の作成時に不明な値のプロキシとしての役割を果たします。値が判明すると、その値を使用して promise が「解決」されます。ハンドラー関数を promise に関連付けると、promise が解決されたときや、promise の解決中にエラーが発生したときに通知を受け取ることができます。Promise の詳細については、[このチュートリアル](https://javascript.info/promise-basics)や、Web 上の他のリソースをお読みください。
 
 ## 成功または失敗の処理
 
-コマンドが実行されるたびに、プロミスが返されます。 promiseは、コマンドの最終的な完了を表します。 次の例では、およびメソッドを使用して、コ `then` マンド `catch` が成功したか失敗したかを判断できます。
+コマンドが実行されるたびに、promise が返されます。promise は、コマンドの最終的な完了を表します。次の例では、`then` および `catch` メソッドを使用して、コマンドが成功したか失敗したかを判断できます。
 
 ```javascript
 alloy("commandName", options)
@@ -45,7 +45,7 @@ alloy("commandName", options)
   })
 ```
 
-コマンドが正常に実行されたかどうかを知ることが重要でない場合は、呼び出しを削除で `then` きます。
+コマンドが正常に実行されたかどうかを把握することが重要でない場合は、`then` 呼び出しを削除してもかまいません。
 
 ```javascript
 alloy("commandName", options)
@@ -55,7 +55,7 @@ alloy("commandName", options)
   })
 ```
 
-同様に、コマンドが失敗したタイミングを把握することが重要でない場合は、呼び出しを削除で `catch` きます。
+同様に、コマンドが失敗したかどうかを把握することが重要でない場合は、`catch` 呼び出しを削除してもかまいません。
 
 ```javascript
 alloy("commandName", options)
@@ -67,4 +67,4 @@ alloy("commandName", options)
 
 ## エラーの抑制
 
-約束が拒否され、呼び出しを追加しなかった場合、エラーは「バブルアップ」され、Adobe Experience Platform Web SDKでログが有効になっているかどうかに関係なく、ブラウザーの開発者コンソールに記録されます。 `catch` これが問題となる場合は、SDKの設定で説明されているよ `suppressErrors` うに、設定オ `true` プションをに設 [定できます](configuring-the-sdk.md)。
+Promise が拒否され、`catch` 呼び出しを追加しなかった場合、エラーが表示され、Adobe Experience Platform Web SDK でログが有効になっているかどうかに関係なく、ブラウザーの開発者コンソールに記録されます。これが問題となる場合は、[SDK の設定](configuring-the-sdk.md)で説明されているように、`suppressErrors`設定オプションを `true` に設定できます。
