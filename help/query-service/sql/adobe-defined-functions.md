@@ -11,7 +11,7 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 
 # アドビ定義関数
 
-アドビ定義関数(ADF)は、ExperienceEventデータに関する一般的なビジネス関連タスクを実行するのに役立つ、クエリサービスの事前にビルドされた関数です。 これには、Adobe Analyticsのようなセッションおよびアトリビューションの関数が含まれます。 Adobe Analyticsと、このペ [ージで定義されているADFの概念について詳しくは](https://docs.adobe.com/content/help/en/analytics/landing/home.html) 、Adobe Analyticsのドキュメントを参照してください。 このドキュメントでは、アドビが定義した関数に関する情報をクエリサービスで提供します。
+アドビ定義関数(ADF)は、ExperienceEventデータに関する一般的なビジネス関連タスクを実行するのに役立つ、クエリサービスの事前にビルドされた関数です。 これには、Adobe Analyticsのようなセッションおよびアトリビューションの関数が含まれます。 Adobe Analyticsと、このペ [ージで定義されているADFの概念について詳しくは](https://docs.adobe.com/content/help/ja-JP/analytics/landing/home.html) 、Adobe Analyticsのドキュメントを参照してください。 このドキュメントでは、アドビが定義した関数に関する情報をクエリサービスで提供します。
 
 ## ウィンドウ関数
 
@@ -91,7 +91,7 @@ LIMIT 10
 
 顧客の行動を成功に関連付けることは、顧客体験に影響を与える要因を理解する上で重要な役割を果たします。 次のADFは、異なる有効期限設定でFirstとLastのアトリビューションをサポートしています。
 
-Adobe Analyticsのアトリビューションについて詳しくは、Analytics分析ガイドの [アトリビューションIQの概要](https://docs.adobe.com/content/help/en/analytics/analyze/analysis-workspace/panels/attribution.html) （英語のみ）を参照してください。
+Adobe Analyticsのアトリビューションについて詳しくは、Analytics分析ガイドの [アトリビューションIQの概要](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/analysis-workspace/panels/attribution.html) （英語のみ）を参照してください。
 
 ### ファーストタッチアトリビューション
 
