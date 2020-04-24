@@ -22,7 +22,7 @@ Real-time CDP の主な機能の 1 つは、ファーストパーティーのデ
 ## 宛先の手順
 
 * Real-time CDP で使用可能なすべての宛先の[セルフサービスカタログ](/help/rtcdp/destinations/destinations-catalog.md)から選択します。
-* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* **[!UICONTROL 宛先]**&#x200B;を使用して、プロファイルやセグメントを[アクティブ化](/help/rtcdp/destinations/activate-destinations.md)し、マーケティング自動化プラットフォームやデジタル広告プラットフォームに送信します。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
 ## コントロール
