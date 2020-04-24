@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SDK開発者ガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -15,16 +15,7 @@ source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 このドキュメントは、モデルオーサリングSDK内の様々なクラスに関する情報を提供します。
 
-- [DataLoader](#dataloader)
-   - [プラットフォームデータセットからのデータの読み込み](#load-data-from-a-platform-dataset)
-- [DataSaver](#datasaver)
-   - [プラットフォームデータセットへのデータの保存](#save-data-to-a-platform-dataset)
-- [DatasetTransformer](#datasettransformer)
-- [FeaturePipelineFactory](#featurepipelinefactory)
-- [PipelineFactory](#pipelinefactory)
-- [MLEvaluator](#mlevaluator)
-
-## DataLoader
+## DataLoader {#dataloader}
 
 DataLoaderクラスは、生の入力データの取得、フィルタリング、および返される操作に関連するすべてをカプセル化します。 入力データの例としては、トレーニング、スコアリング、機能エンジニアリングなどがあります。 データローダは抽象クラスを拡張し、抽 `DataLoader` 象メソッドをオーバーライドする必要がありま `load`す。
 
@@ -83,7 +74,7 @@ DataLoaderクラスは、生の入力データの取得、フィルタリング�
     </tbody>
 </table>
 
-### プラットフォームデータセットからのデータの読み込み
+### プラットフォームデータセットからのデータの読み込み {#load-data-from-a-platform-dataset}
 
 次の例では、プラットフォームデータをIDで取得し、DataFrameを返します。データセットID(`datasetId`)は設定ファイル内で定義されたプロパティです。
 
@@ -199,7 +190,7 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver
+## DataSaver {#datasaver}
 
 DataSaverクラスは、スコアリングや機能エンジニアリングの出力データなど、出力データの格納に関連するものをカプセル化します。 データ保存者は抽象クラスを拡張し、抽 `DataSaver` 象メソッドを上書きする必要がありま `save`す。
 
@@ -258,7 +249,7 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
     </tbody>
 </table>
 
-### プラットフォームデータセットへのデータの保存
+### プラットフォームデータセットへのデータの保存 {#save-data-to-a-platform-dataset}
 
 データをプラットフォームデータセットに格納するには、設定ファイルでプロパティを指定するか、定義する必要があります。
 
@@ -398,7 +389,7 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer
+## DatasetTransformer {#datasettransformer}
 
 DatasetTransformerクラスは、データセットの構造を変更および変換します。 Sensei Machine Learning Runtimeは、このコンポーネントを定義する必要はなく、要件に基づいて実装されます。
 
@@ -459,7 +450,7 @@ DatasetTransformerクラスは、データセットの構造を変更および�
     </tbody>
 </table>
 
-## FeaturePipelineFactory
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズムが含まれ、フィーチャパイプラインのステージを開始から終了まで定義します。
 
@@ -541,7 +532,7 @@ FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズム�
     </tbody>
 </table>
 
-## PipelineFactory
+## PipelineFactory {#pipelinefactory}
 
 PipelineFactoryクラスは、モデルのトレーニングとスコアリングのメソッドと定義をカプセル化します。トレーニングロジックとアルゴリズムは、Sparkパイプラインの形式で定義されます。
 
@@ -650,7 +641,7 @@ PipelineFactoryクラスは、モデルのトレーニングとスコアリン�
     </tbody>
 </table>
 
-## MLEvaluator
+## MLEvaluator {#mlevaluator}
 
 MLEvaluatorクラスは、評価指標を定義し、トレーニングデータセットとテストデータセットを決定するメソッドを提供します。
 
