@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupyterLabユーザガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -51,16 +51,16 @@ JupyterLabの主な機能と、共通の操作を実行する手順に関する�
 * [コードセル](#code-cells)
 * [カーネル](#kernels)
 * [カーネルセッション](#kernel-sessions)
-* [PySpark/Spark実行リソース](#pysparkspark-execution-resource)
+* [PySpark/Spark実行リソース](#execution-resource)
 * [ランチャー](#launcher)
 
-### JupyterLabへのアクセス
+### JupyterLabへのアクセス {#access-jupyterlab}
 
 「 [Adobe Experience Platform](https://platform.adobe.com)」で、左のナビゲ **ーション列から「ノートブック** 」を選択します。 JupyterLabが完全に初期化されるまでしばらく待ちます。
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### JupyterLabインタフェース
+### JupyterLabインタフェース {#jupyterlab-interface}
 
 JupyterLabインターフェイスは、メニューバー、折りたたみ可能な左サイドバー、およびドキュメントとアクティビティのタブを含むメイン作業領域で構成されます。
 
@@ -98,7 +98,7 @@ JupyterLabのメイン作業領域では、ドキュメントや他のアクテ�
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### コードセル
+### コードセル {#code-cells}
 
 コードセルは、ノートブックの主なコンテンツです。 これらは、ノートブックの関連するカーネルの言語のソースコードと、コードセルを実行した結果の出力を含む。 実行回数は、実行順序を表す各コードセルの右側に表示されます。
 
@@ -130,7 +130,7 @@ JupyterLabのメイン作業領域では、ドキュメントや他のアクテ�
 | **Spark — 非推奨** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
 | **スカラ** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
 
-### カーネルセッション
+### カーネルセッション {#kernel-sessions}
 
 JupyterLab上のアクティブなノートブックやアクティビティは、それぞれカーネルセッションを利用します。 すべてのアクティブなセッションは、左側のサイドバーから **Running terminals and kernels** （実行中の端末とカーネル）タブを展開すると見つかります。 ノートブックのカーネルのタイプと状態は、ノートブックのインターフェースの右上を見ることで識別できます。 下の図では、ノートブックに関連するカーネルは **Python 3** で、現在の状態は右側に灰色の円で表されています。 中空の円はアイドルカーネルを意味し、実円はビジーカーネルを意味します。
 
@@ -149,7 +149,7 @@ JupyterLab上のアクティブなノートブックやアクティビティは�
 >
 >新しいSparkノートブックはScalaカーネルを利用する必要があります。 既存のノートブックの更新に関する詳細なチュートリアルについては、 [Spark 2.3からScala(Spark 2.4)への変換に関するガイドを参照してください](../recipe-notebook-migration.md) 。
 
-PySparkとSparkカーネルは、PySparkまたはSparkノートブック内にSparkクラスタリソースを設定するために、configureコマンド(`%%configure`)を使って設定のリストを提供します。 これらの設定は、Sparkアプリケーションの初期化前に定義するのが理想的です。 Sparkアプリケーションがアクティブな状態で設定を変更するには、次に示すように、コマンド(`%%configure -f`)の後にforceフラグを追加する必要があります。このフラグは、変更を適用するためにアプリケーションを再起動します。
+PySparkとSparkカーネルは、PySparkまたはSparkノートブック内にSparkクラスタリソースを設定するために、configureコマンド(`%%configure`)を使って設定リストを提供します。 これらの設定は、Sparkアプリケーションの初期化前に定義するのが理想的です。 Sparkアプリケーションがアクティブな状態で設定を変更するには、次に示すように、コマンド(`%%configure -f`)の後にforceフラグを追加する必要があります。このフラグは、変更を適用するためにアプリケーションを再起動します。
 
 >[!CAUTION]
 >PySpark 3 (Spark 2.4)とScala (Spark 2.4)ノートブックでは、Sparkmagicはサポートさ `%%` れなくなりました。 次の操作は使用できなくなりました。
@@ -193,7 +193,7 @@ PySparkとSparkカーネルは、PySparkまたはSparkノートブック内にSp
 | name | アプリの名前 | 文字列 |
 | conf | Spark設定プロパティ | キーのマップ=val |
 
-### ランチャー
+### ランチャー {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -799,7 +799,7 @@ timedf.show()
 | Python | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## オプションのクエリサービスのSQLフラグ
+## オプションのクエリサービスのSQLフラグ {#optional-sql-flags-for-query-service}
 
 次の表に、クエリ・サービスに使用できるオプションのSQLフラグの概要を示します。
 
