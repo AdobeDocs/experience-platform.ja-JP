@@ -94,7 +94,7 @@ curl -X POST \
 | status | 削除要求のステータス。 指定可能な値は、「NEW」、「PROCESSING」、「COMPLETED」、「ERROR」です。 |
 | 指標 | 処理されたレコードの数(「recordsProcessed」)と要求の処理秒数、または要求の完了に要した時間(「timeTakedInSec」)を含むオブジェクト。 |
 
-## 削除リクエストの作成 {#create-a-delete-request}
+## Create a delete request {#create-a-delete-request}
 
 新しい削除リクエストの開始は、エンドポイントへのPOSTリクエストを通じて行われます。このエンドポイントでは、削除するデータセットまたはバッチのIDがリクエストの本文に表示されます。 `/systems/jobs`
 
