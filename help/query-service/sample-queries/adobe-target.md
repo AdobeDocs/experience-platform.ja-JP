@@ -28,7 +28,7 @@ Adobeターゲットエクスペリエンスイベント(わかりや <br>`adobe
 | ---- | --------- | ----- |
 | mboxName | `_experience.target.mboxname` |  |
 | アクティビティ ID | `_experience.target.activities.activityID` |  |
-| エクスペリエンスID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
+| エクスペリエンス ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
 | Segment ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
 | イベント範囲 | `_experience.target.activities[].activityEvents[].eventScope` | 新しい訪問者と訪問の追跡 |
 | ステップID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | キャンペーンのカスタム手順ID |
