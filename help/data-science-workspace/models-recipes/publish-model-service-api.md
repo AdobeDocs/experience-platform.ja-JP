@@ -4,7 +4,7 @@ solution: Experience Platform
 title: モデルをサービスとして公開(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -123,7 +123,7 @@ JSON応答から、対応する値を持つキ `scoringExperimentId` ーは、�
 
 MLサービスは、トレーニングやスコアリングの実験をスケジュールしなくても、MLインスタンスを使用して作成できます。 このようなMLサービスは、通常のテストエンティティと、トレーニングとスコアのための1回のテスト実行を作成します。
 
-### スコアリングのための予定されたテストを含むMLサービス
+### スコアリングのための予定されたテストを含むMLサービス {#ml-service-with-scheduled-experiment-for-scoring}
 
 スケジュールされたテストの実行を使用してMLインスタンスを公開してMLサービスを作成すると、トレーニング用の通常のテストエンティティが作成されます。 生成されたトレーニングテストの実行は、すべてのスケジュール済みスコアリングテストの実行に使用されます。 MLサービスの作成 `mlInstanceId`に必要な、 `trainingDataSetId`お `scoringDataSetId` よび、が存在し、それらが有効な値であることを確認してください。
 
@@ -197,7 +197,7 @@ curl -X POST
 
 応答から、キ `JSON` ーと提案は、こ `trainingExperimentId` のMLサービ `scoringExperimentId` ス用に新しいトレーニングとスコアリングのテストエンティティが作成されたことを示しています。 オブジェクトの存在とは、ス `scoringSchedule` コアリングテストの実行スケジュールの詳細を指します。 応答の `id` キーは、先ほど作成したMLサービスを参照します。
 
-### トレーニングとスコアリングのための予定された実験を含むMLサービス
+### トレーニングとスコアリングのための予定された実験を含むMLサービス {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 既存のMLインスタンスをMLサービスとして公開し、スケジュールされたトレーニングとスコアリングテストの実行を行うには、トレーニングとスコアリングの両方のスケジュールを提供する必要があります。 この設定のMLサービスが作成されると、トレーニングとスコアリングの両方に対する予定されたテストエンティティも作成されます。 トレーニングとスコアリングのスケジュールが同じである必要はありません。 スコアリングジョブの実行中に、スケジュール済みのトレーニング実験の実行によって生成された最新のトレーニングモデルが取得され、スケジュール済みのスコアリングの実行に使用されます。
 
@@ -281,7 +281,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 とを応答本体に追加 `trainingExperimentId` するこ `scoringExperimentId` とで、トレーニングとスコアの両方のテストエンティティの作成を提案します。 上記のテストエンテ `trainingSchedule` ィテ `scoringSchedule` ィのトレーニングとスコアリングが予定されていることを示し、が存在します。 応答の `id` キーは、先ほど作成したMLサービスを参照します。
 
-## MLサービスの取得
+## MLサービスの取得 {#retrieving-ml-services}
 
 既存のMLサービスを取得する方法は、エンドポイントにリクエストを送信する `GET` 場合と同じ `/mlServices` くらい簡単です。 取得しようとしている特定のMLサービスのMLサービスIDを持っていることを確認します。
 
