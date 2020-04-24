@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Tutorials
+user-guide-title: Adobe Experience Platform チュートリアル
 translation-type: tm+mt
 source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
 
