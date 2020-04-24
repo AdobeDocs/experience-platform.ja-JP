@@ -33,7 +33,7 @@ Adobe Experience Platform Data Ingestionは、データをExperience Platformに
 
 ### リクエストペイロードをプラットフォームに送信する前に検証できますか。
 
-リクエストペイロードは、プラットフォームに送信された後でのみ評価できます。 同期検証を実行すると、有効なペイロードは入力されたJSONオブジェクトを返し、無効なペイロードはエラーメッセージを返します。 非同期検証中に、サービスは不正なデータを検出してData Lakeに送信し、後でそのデータを取得して分析します。 See the [streaming validation overview](../quality/streaming-validation.md) for more information.
+リクエストペイロードは、プラットフォームに送信された後にのみ評価できます。 同期検証を実行すると、有効なペイロードは入力されたJSONオブジェクトを返し、無効なペイロードはエラーメッセージを返します。 非同期検証中に、サービスは不正なデータを検出してData Lakeに送信し、後でそのデータを取得して分析します。 See the [streaming validation overview](../quality/streaming-validation.md) for more information.
 
 ### 同期検証がサポートされていないエッジで同期検証が要求された場合、どうなりますか？
 
