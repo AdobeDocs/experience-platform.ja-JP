@@ -1,7 +1,7 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Privacy Service Help
+user-guide-title: Adobe Experience Platformプライバシーサービスヘルプ
 translation-type: tm+mt
 source-git-commit: 1cb730f8663291d104d5fbe61ecbba7d0103b75d
 
