@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupyterノートブックを使用してレシピを作成する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -12,18 +12,6 @@ source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 # Jupyterノートブックを使用してレシピを作成する
 
 このチュートリアルでは、2つの主なセクションについて説明します。 まず、JupterLabノートブック内のテンプレートを使用して機械学習モデルを作成します。 次に、JupyterLab内でノートブックをレシピワークフローに導き、Data Science Workspace内でレシピを作成します。
-- [JupyterLabノートブック環境](#get-started-with-the-jupyterlab-notebook-environment)
-- [レシピファイルを編集する](#make-edits-to-recipe-files)
-- [Recipe Builderノートブックの概要](#get-started-with-the-recipe-builder-notebook)
-   - [要件ファイル](#requirements-file)
-   - [設定ファイル](#configuration-files)
-   - [トレーニングデータローダー](#training-data-loader)
-   - [スコアデータローダー](#scoring-data-loader)
-   - [パイプラインファイル](#pipeline-file)
-   - [評価ファイル](#evaluator-file)
-   - [データセーバーファイル](#data-saver-file)
-- [トレーニングとスコア](#training-and-scoring)
-- [レシピの作成](#create-recipe)
 
 ## 導入された概念：
 
@@ -45,7 +33,7 @@ Recipe Builderノートブックを使用すると、ノートブック内でト
 
 ランチャーからRecipe Builderノートブックをクリックすると、タブにノートブックが開きます。 ノートブックで使用されるテンプレートは、このパブリック・リポジトリにもあるPython小売売上予測レシピ [です。](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-ツールバーには、「 **Train**」、「 **Score** 」、「 **Create Recipe**」の3つのアクションがあります。 これらのアイコンは、レシピビルダーのノートブックにのみ表示されます。 これらのアクションに関する詳細は、ノート [ブックでレシピを作成した後](#training-and-scoring) 、トレーニングとスコアのセクションで説明します。
+ツールバーには、とという3つの追加アクションがあ **[!UICONTROL Train]**&#x200B;り **[!UICONTROL Score]** ます **[!UICONTROL Create Recipe]**。 これらのアイコンは、レシピビルダーのノートブックにのみ表示されます。 これらのアクションに関する詳細は、ノート [ブックでレシピを作成した後](#training-and-scoring) 、トレーニングとスコアのセクションで説明します。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -69,7 +57,7 @@ JupyterLabノートブック環境の基本を理解したら、機械学習モ�
 - [評価ファイル](#evaluator-file)
 - [データセーバーファイル](#data-saver-file)
 
-### 要件ファイル
+### 要件ファイル {#requirements-file}
 
 要件ファイルは、レシピで使用する追加のライブラリを宣言するために使用されます。 依存関係がある場合は、バージョン番号を指定できます。 その他のライブラリを探すには、https://anaconda.orgを参照してください。 既に使用されているメインリストのライブラリは次のとおりです。
 
@@ -84,9 +72,9 @@ data_access_sdk_python
 >[!NOTE]
 >追加したライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。
 
-### 設定ファイル
+### 設定ファイル {#configuration-files}
 
-設定ファイルと、は、ト `training.conf` レーニ `scoring.conf`ングとスコアリングに使用するデータセットを指定し、ハイパーパラメータを追加するために使用されます。 トレーニングとスコアリングには別々の設定があります。
+との設定ファイルは、ト `training.conf` レーニ `scoring.conf`ングとスコアリングに使用するデータセットを指定し、ハイパーパラメータを追加するために使用します。 トレーニングとスコアリングには別々の設定があります。
 
 トレーニングとスコアリングを実行する前に、ユーザーは次の変数を入力する必要があります。
 - `trainingDataSetId`
@@ -108,7 +96,7 @@ data_access_sdk_python
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## トレーニングデータローダー
+## トレーニングデータローダー {#training-data-loader}
 
 トレーニングデータローダーの目的は、機械学習モデルの作成に使用するデータをインスタンス化することです。 通常、トレーニングデータローダーが達成するタスクは2つあります。
 - プラットフォームからのデータの読み込み
@@ -116,7 +104,7 @@ data_access_sdk_python
 
 以下の2つのセクションで、データの読み込みとデータの準備について説明します。
 
-### データの読み込み
+### データの読み込み {#loading-data}
 
 この手順では、pandasのデータフ [レームを使用しま](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)す。 データは、Platform SDK(`platform_sdk`)を使用してAdobe Experience Platformのファイルから、またはPandaや関数を使用して外部ソースから読み込むこ `read_csv()` とがで `read_json()` きます。
 
@@ -126,11 +114,11 @@ data_access_sdk_python
 >[!NOTE]
 >Recipe Builderノートブックでは、データはデータローダーを介して読み込 `platform_sdk` まれます。
 
-### プラットフォームSDK
+### プラットフォームSDK {#platform-sdk}
 
 データローダの使用に関する詳細なチュートリ `platform_sdk` アルについては、『プラットフォームSDK』ガ [イドを参照してくださ](../authoring/platform-sdk.md)い。 このチュートリアルでは、認証の構築、データの基本読み取り、およびデータの基本的な書き込みに関する情報を提供します。
 
-### 外部ソース
+### 外部ソース {#external-sources}
 
 この節では、JSONまたはCSVファイルをpandasオブジェクトに読み込む方法を示します。 pandasライブラリの公式ドキュメントは、次のURLを参照してください。
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -180,7 +168,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 
 データが揃ったら、データの準備と機能のエンジニアリングから始めます。
 
-### データの準備と機能のエンジニアリング
+### データの準備と機能のエンジニアリング {#data-preparation-and-feature-engineering}
 
 データの読み込み後、データは準備を行い、データセットとデータセットに分 `train` 割さ `val` れます。 サンプルコードを以下に示します。
 
@@ -222,7 +210,7 @@ dataframe.drop('date', axis=1, inplace=True)
 
 関数の `load()` 出力は、データセットとデ `train` ータセッ `val` トで完了する必要があります。
 
-### スコアデータローダー
+### スコアデータローダー {#scoring-data-loader}
 
 スコアリング用のデータを読み込む手順は、関数内のトレーニングデータを読み込む手順と似て `split()` います。 データアクセスSDKを使用して、ファイル内のからデ `scoringDataSetId` ータを読み込 `recipe.conf` みます。
 
@@ -292,11 +280,11 @@ df.dropna(0, inplace=True)
 
 スコアリ `load()` ングデータローダーの関数は、スコアリングデータセットを出力として使用して完了する必要があります。
 
-### パイプラインファイル
+### パイプラインファイル {#pipeline-file}
 
 このファ `pipeline.py` イルには、トレーニングとスコアのロジックが含まれます。
 
-### トレーニング
+### トレーニング {#training}
 
 トレーニングの目的は、トレーニングデータセットの機能とラベルを使用してモデルを作成することです。
 
@@ -341,7 +329,7 @@ def train(configProperties, data):
 
 アプリケーションに応じて、関数に引数が含まれることに注意してく `GradientBoostingRegressor()` ださい。 `xTrainingDataset` には、トレーニングに使用する機能を含める必要がありますが、ラ `yTrainingDataset` ベルを含める必要があります。
 
-### スコア
+### スコア {#scoring}
 
 関数にス `score()` コアリングアルゴリズムを含め、モデルの成功度を示す測定値を返す必要があります。 この関数 `score()` は、スコアリングデータセットラベルとトレーニングを受けたモデルを使用して、予測された機能のセットを生成します。 次に、これらの予測値が、スコアリングデータセットの実際の特徴と比較されます。 この例では、この関数は、トレーニ `score()` ングを受けたモデルを使用して、スコアリングデータセットのラベルを使用して機能を予測します。 予測された特徴が返されます。
 
@@ -363,11 +351,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### 評価ファイル
+### 評価ファイル {#evaluator-file}
 
 このフ `evaluator.py` ァイルには、トレーニングレシピの評価方法とトレーニングデータの分割方法に関するロジックが含まれています。 小売販売の例では、トレーニングデータの読み込みと準備のロジックが含まれます。 以下の2つのセクションを見てみましょう。
 
-### データセットの分割
+### データセットの分割 {#split-the-dataset}
 
 トレーニングのデータ準備段階では、トレーニングとテストに使用するデータセットを分割する必要があります。 このデ `val` ータは、トレーニング後にモデルを評価するために暗黙的に使用されます。 このプロセスはスコアリングとは別のものです。
 
@@ -386,7 +374,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### トレーニングされたモデルの評価
+### トレーニングされたモデルの評価 {#evaluate-the-trained-model}
 
 この関 `evaluate()` 数は、モデルのトレーニングが終わると実行され、モデルの成功度を示す指標が返されます。 この関数 `evaluate()` は、テストデータセットラベルとトレーニング済みモデルを使用して、一連の機能を予測します。 これらの予測値は、テストデータセットの実際の機能と比較されます。 一般的なスコアリングアルゴリズムには、次のものがあります。
 - [平均絶対誤差率(MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -415,7 +403,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 この関数は、評価指標の配列を含 `metric` むオブジェクトを返します。 これらの指標は、トレーニングを受けたモデルのパフォーマンスを評価するために使用されます。
 
-### データセーバーファイル
+### データセーバーファイル {#data-saver-file}
 
 このファ `datasaver.py` イルには、スコア `save()` リングのテスト中に予測を保存する関数が含まれています。 この関 `save()` 数は、予測を受け取り、エクスペリエンスプラットフォームカタログAPIを使用して、ファイルで指定した `scoringResultsDataSetId` データにデータを書き込 `scoring.conf` みます。
 
@@ -448,17 +436,17 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## トレーニングとスコア
+## トレーニングとスコア {#training-and-scoring}
 
 ノートブックの変更が完了し、レシピのトレーニングを行う場合は、バーの上部にある関連するボタンをクリックして、セル内にトレーニング・ランを作成できます。 ボタンをクリックすると、トレーニングスクリプトのコマンドと出力のログがノートブック（セルの下）に表示 `evaluator.py` されます。 Condaは、最初にすべての依存関係をインストールし、その後トレーニングを開始します。
 
-スコアを実行する前に、少なくとも1回はトレーニングを実行する必要があります。 「スコアを実行」ボ **タンをクリックすると** 、トレーニング中に生成されたトレーニング対象モデルに対してスコアが付けられます。 スコアリングスクリプトがに表示されま `datasaver.py`す。
+スコアを実行する前に、少なくとも1回はトレーニングを実行する必要があります。 ボタンをクリックす **[!UICONTROL Run Scoring]** ると、トレーニング中に生成されたトレーニング済みモデルにスコアが付けられます。 スコアリングスクリプトがに表示されま `datasaver.py`す。
 
 デバッグの目的で、非表示の出力を表示する場合は、出力セ `debug` ルの末尾にを追加し、再実行します。
 
-## レシピの作成
+## レシピの作成 {#create-recipe}
 
-レシピの編集が完了し、トレーニング/スコアリングの出力に満足したら、右上のナビゲーションの「レシピの作成」を押して、ノートブックから **レシピ** を作成できます。
+レシピの編集が完了し、トレーニング/スコアリングの出力に満足したら、右上のナビゲーションを押して、ノートブックからレシ **[!UICONTROL Create Recipe]** ピを作成することができます。
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -466,7 +454,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-「 **OK** 」を押すと、 [Adobe Experience Platformの新しいレシピに移動できます](https://platform.adobe.com/)。 「 **表示レシピ」ボタンをクリックすると** 、 **MLモデルの「レシピ** 」タブに移動で **きます。**
+押すと、 **[!UICONTROL Ok]** Adobe Experience Platformの新しいレシピに移動でき [ます](https://platform.adobe.com/)。 ボタンをクリック **[!UICONTROL View Recipes]****[!UICONTROL Recipes]** すると、 **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -480,13 +468,13 @@ def save(configProperties, prediction):
 > - 異なるノートブックに同時にレシピを作成しない
 
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このチュートリアルを完了すると、Recipe Builderノートブックで機械学習モデルを作成する方法を学習できます。 また、ノートブック内のレシピワークフローに従ってノートブックを使用し、Data Science Workspace内でレシピを作成する方法も学習しました。
 
 Data Science Workspace内のリソースの使い方の学習を続けるには、「Data Science Workspaceレシピとモデル」ドロップダウンを参照してください。
 
-## その他のリソース
+## その他のリソース {#additional-resources}
 
 次のビデオは、モデルの構築とデプロイに関する理解を深めるためのものです。
 
