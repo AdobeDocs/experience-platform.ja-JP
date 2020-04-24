@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 顧客AIでのスコアのダウンロード
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -34,7 +34,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ![データセットID](./images/download-scores/access-scores.png)
 
-## バッチIDの取得
+## バッチIDの取得 {#retrieve-your-batch-id}
 
 前の手順のデータセットIDを使用して、バッチIDを取得するには、Catalog APIを呼び出す必要があります。 追加のクエリパラメーターは、組織に属するバッチのリストではなく、単一のバッチを返すために、このAPI呼び出しに使用されます。 使用可能なクエリパラメータのタイプについて詳しくは、カタログパラメータを使用したカタログデータのフ [ィルタリングに関するガイドを参照してくださ](../../catalog/api/filter-data.md)い。
 
@@ -98,7 +98,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 }
 ```
 
-## バッチIDを使用して次のAPI呼び出しを取得する
+## バッチIDを使用して次のAPI呼び出しを取得する {#retrieve-the-next-api-call-with-your-batch-id}
 
 バッチIDを取得すると、に新しいGETリクエストを作成できます `/batches`。 リクエストは、次のAPIリクエストとして使用されるリンクを返します。
 
@@ -152,7 +152,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 }
 ```
 
-## ファイルの取得
+## ファイルの取得 {#retrieving-your-files}
 
 前の手順で `href` 取得した値をAPI呼び出しとして使用し、新しいGETリクエストを作成して、ファイルディレクトリを取得します。
 
