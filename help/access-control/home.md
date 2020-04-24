@@ -15,7 +15,7 @@ Experience Platformのアクセス制御は、 [Adobe Admin Consoleを通じて�
 
 ## アクセス制御階層とワークフロー
 
-Experience Platform用にアクセス制御を設定するには、Experience Platform製品統合を持つ組織の管理者権限が必要です。 権限を付与または取り消す最小の役割は、製品 **プロファイル管理者です**。 権限を管理できる他の管理者の役割は、 **製品管理者** (製品内のすべてのプロファイルを管理できます)とシス **テム管理者** （制限なし）です。 詳しくは、管理者の役割に関するAdobe Help Centerの記 [事を参照](https://helpx.adobe.com/enterprise/using/admin-roles.html) してください。
+Experience Platform用にアクセス制御を設定するには、Experience Platform製品統合を持つ組織の管理者権限が必要です。 権限を付与または取り消す最小の役割は、製品 **プロファイル管理者です**。 権限を管理できる他の管理者の役割は、 **製品管理者** (製品内のすべてのプロファイルを管理できます)とシス **テム管理者** （制限なし）です。 詳しくは、管理者の役割に関するAdobe Help Centerの記 [事を参照](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html) してください。
 
 >[!NOTE] これ以降、このドキュメントでの「administrator」のメンションは、（前述の説明に従って）製品プロファイル管理者以上を指します。
 
@@ -95,7 +95,7 @@ Experience Platformには、事前設定済みのデフォルト製品プロフ�
 | データ収集 | 表示ソース | 「カタログ」タブの使用可能なソースおよび「参照 *」タブの* 「認証済みのソース」への読み取り専用ア *クセス権* 。 |
 | Data Science Workspace | Data Science Workspaceの管理 | Data Science Workspaceでの読み取り、作成、編集および削除へのアクセス権。 |
 
-_(*)この許可には、リアルタイム顧客データプラットフォームに対する規定が必要です。 リアルタイムCDPの詳細については、まずリアルタイムCDPの概要を[参照してください](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)。_
+_(*)この許可には、リアルタイム顧客データプラットフォームに対する規定が必要です。 リアルタイムCDPの詳細については、まずリアルタイムCDPの概要を[参照してください](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/overview.html)。_
 
 ## 次の手順
 
