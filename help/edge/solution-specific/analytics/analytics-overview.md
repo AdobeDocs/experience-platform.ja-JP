@@ -1,35 +1,35 @@
 ---
-title: Adobe Analyticsへのデータの送信
-seo-title: Adobe Experience Platform Web SDKを使用したAdobe Analyticsへのデータの送信
-description: Experience Platform Web SDKを使用してAdobe Analyticsにデータを送信する方法を説明します。
-seo-description: Experience Platform Web SDKを使用してAdobe Analyticsにデータを送信する方法を説明します。
+title: Adobe Analytics へのデータの送信
+seo-title: Adobe Experience Platform Web SDK を使用した Adobe Analytics へのデータの送信
+description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
+seo-description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
 translation-type: tm+mt
 source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
 
 ---
 
 
-# （ベータ版）Adobe Analyticsへのデータの送信
+# （ベータ版）Adobe Analytics へのデータの送信
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDKは現在ベータ版で、すべてのユーザーが利用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+>Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
 
-Adobe Experience Platform Web SDKは、Adobe Analyticsにデータを送信できます。 これは、Adobe Analyticsで使用で `xdm` きる形式に変換することで機能します。
+Adobe Experience Platform Web SDK は、Adobe Analytics にデータを送信できます。これは、`xdm` を、Adobe Analytics で使用できる形式に変換することによって機能します。
 
 ## セットアップ
 
-顧客設定UIでレポートスイートがマッピングされている場合、Adobe Analyticsは送信するデータを自動的に取得します。 ここで、1つ以上のレポートを特定の設定にマップできます。 レポートスイートのマッピング後、データのフローが自動的に開始されます。
+顧客設定 UI でレポートスイートがマッピングされている場合、Adobe Analytics はユーザーが送信するデータを自動的に取得します。ここでは、1 つ以上のレポートを特定の設定にマッピングできます。レポートスイートのマッピングが完了したら、データのフローが自動的に開始します。
 
 ## 自動的にマッピングされたデータ
 
-Adobe Experience Platform Edge Networkは、多くのXDM変数を自動的にマッピングします。 自動的にマッピングされた変数の完全なリストをここに示 [します](../analytics/automatically-mapped-vars.md)。
+Adobe Experience Platform Edge Network は、多くの XDM 変数を自動的にマッピングします。自動的にマッピングされた変数の完全なリストについては、[こちら](../analytics/automatically-mapped-vars.md)をご覧ください。
 
 ## 手動でマッピングされたデータ
 
-エッジネットワークによって収集されたすべてのデータは、処理ルールを介してアクセスできます。 データはドット表記を使用して統合され、contextDataとして使用できます。
+エッジネットワークによって収集されたすべてのデータへは、処理ルールを介してアクセスできます。データはドット表記を使用して統合され、contextData として使用できます。
 
-このようなスキーマがある場合。
+次のようなスキーマがある場合。
 
 ```javascript
 {
