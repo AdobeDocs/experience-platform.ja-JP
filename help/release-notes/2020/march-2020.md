@@ -6,14 +6,14 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: e90dba1fb7419a77139c6b25c8701451bf20b14e
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-## リリース日：2020 年 3 月 11 日
+**リリース日：2020 年 3 月 11 日**
 
 Adobe Experience Platformの既存の機能の更新：
 
