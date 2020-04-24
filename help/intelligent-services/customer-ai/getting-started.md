@@ -4,7 +4,7 @@ solution: Experience Platform
 title: はじめに — お客様向けAI
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
 
 ## 顧客AIスコアのダウンロード
 
->[!NOTE] 生のスコアをダウンロードする必要がない場合は、この手順をスキップし、ユーザーインターフェイスガイドに進みます。
+>[!NOTE] 生のスコアをダウンロードする必要がない場合は、この手順をスキップして設定ガイドに進むこと [ができます](./user-guide/configure.md)。
 
 顧客AIスコアのダウンロードは、API呼び出しの組み合わせを通じて行われます。 プラットフォームAPIを呼び出すには、まず認証チュートリアルを完了する必要 [があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのエクスペリエンスプラットフォームAPI呼び出しで必要な各ヘッダーの値を入力します。
 
@@ -42,4 +42,4 @@ source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
 
 ## 次の手順
 
-準備が整い、すべての資格情報とスキーマが整ったら、『 [Customer AI user interface guide』に従って開始します](./user-guide.md)。 このガイドでは、インスタンスの作成、およびトレーニングとスコアの送信に関する手順を説明します。
+上記の手順を完了したら、 [Input and Output](./input-output.md) Documentationを参照してください。 このドキュメントでは、顧客AIで使用され、生成されるデータのタイプの概要を簡単に説明します。
