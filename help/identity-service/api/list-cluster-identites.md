@@ -81,7 +81,7 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **スタブ要求**
 
-ヘッダーを使 `x-uis-cst-ctx: stub` 用すると、スタブ化された応答が返されます。 これは、サービスの完了中に、初期の統合開発の進展を容易にする一時的なソリューションです。 これは不要になった時点で廃止されます。
+ヘッダーを使用 `x-uis-cst-ctx: stub` すると、スタブ化された応答が返されます。 これは、サービスの完了中に、初期の統合開発の進展を容易にする一時的なソリューションです。 これは不要になった時点で廃止されます。
 
 ```shell
 curl -X POST \
