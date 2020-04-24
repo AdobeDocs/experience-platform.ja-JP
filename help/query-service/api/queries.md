@@ -152,7 +152,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **応答**
 
-応答が成功すると、新しく作成した応答の詳細と共に、HTTPステータス202（受け入れ済み）が返されます。クエリ クエリのアクティブ化が完了し、正常に実行されたら、 `state` がからに変更さ `SUBMITTED` れま `SUCCESS`す。
+応答が成功すると、新しく作成された応答の詳細と共にHTTPステータス202 （受け入れ済み）が返されます。クエリ クエリのアクティブ化が完了し、正常に実行されたら、 `state` がからに変更さ `SUBMITTED` れま `SUCCESS`す。
 
 ```json
 {
