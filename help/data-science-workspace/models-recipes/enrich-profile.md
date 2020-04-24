@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイムの顧客プロファイルと機械学習の洞察を強化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -32,7 +32,7 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 * [スキーマ構成の基本](../../xdm/schema/composition.md):XDMスキーマ、構築ブロック、原則およびExperience Platformで使用するスキーマを構成するためのベストプラクティスについて説明します。
 * [スキーマエディタのチュートリアル](../../xdm/tutorials/create-schema-ui.md):Experience Platform内のプラットフォームエディターを使用してスキーマを作成するための詳細な手順を説明します。
 
-## 出力スキーマとデータセット
+## 出力スキーマとデータセット {#create-an-output-schema-and-dataset}
 
 リアルタイム顧客のプロファイルをスコアリングインサイトで強化するための最初のステップは、データが定義する現実世界のオブジェクト（人物など）を把握することです。 データを理解することで、リレーショナルデータベースの設計と同様に、データに意味を持つ構造を説明し、設計できます。
 
@@ -73,7 +73,7 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 
 これで、出力スキーマデータセットを作成し、次のセクションに進んで設定し、プロファイルエンリッチメントを有効にする準備が整いました。
 
-## 出力データセットとスキーマセットの設定
+## 出力データセットとスキーマセットの設定 {#configure-an-output-schema-and-dataset}
 
 プロファイル用のデータセットを有効にする前に、データセットのスキーマにプライマリIDフィールドを設定し、プロファイル用のスキーマを有効にする必要があります。 新しいスキーマを作成して有効にする場合は、スキーマエディタを使用したスキーマの作成に関するチ [ュートリアルを参照してください](../../xdm/tutorials/create-schema-ui.md)。 それ以外の場合は、次の手順に従って既存のスキーマとデータセットを有効にします。
 
@@ -97,7 +97,7 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 
 データがプロファイル対応のデータセットに取り込まれると、同じデータがデータレコードとして取り込まれるプロファイルとなります。 スキーマとデータセットの準備が整ったら、適切なモデルを使用してスコアリング実行を実行し、データセットに含まれるデータを生成し、このチュートリアルを続けて、セグメントビルダーを使用してインサイトセグメントを作成します。
 
-## セグメントビルダーを使用したセグメントの作成
+## セグメントビルダーを使用したセグメントの作成 {#create-segments-using-the-segment-builder}
 
 これで、プロファイル対応データセットにインサイトを生成し、取り込んだので、セグメントビルダーを使用して関連する要素のサブセットを識別し、データを管理できます。 次の手順に従って、独自のセグメントを作成します。
 
@@ -117,6 +117,6 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このドキュメントでは、プロファイルのスキーマとデータセットを有効にするために必要な手順を順を追って説明し、セグメントビルダーを使用してインサイトセグメントを作成するワークフローを簡単に説明しました。 セグメントとセグメントビルダーについて詳しくは、 [Segmentation serviceの概要を参照してください](../../segmentation/home.md)。
