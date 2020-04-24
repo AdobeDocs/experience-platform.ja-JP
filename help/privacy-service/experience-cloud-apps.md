@@ -44,7 +44,7 @@ Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does n
 
 | アプリケーション | ドキュメントの説明 |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://docs.campaign.adobe.com/doc/AC/getting_started/JA/ACC_GDPR.html) | Adobe CampaignClassicのGDPR機能の概要。 |
+| [Adobe Campaign Classic](https://docs.campaign.adobe.com/doc/AC/getting_started/JA/ACC_GDPR.html) | GDPR機能の概要をAdobe CampaignClassic。 |
 | [Adobe Dynamic Tag Manager](https://marketing.adobe.com/resources/help/ja_JP/dtm/opt-in.html) | 同意が得られるまでAdobeタグが実行されないようにする手順です。 |
 | [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | 顧客プライバシー管理者またはAEM管理者がGDPR要求を処理する方法の概要を示します。 |
 | [Adobe Experience Manager Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/c_gdpr_compliance.html) | Livefyreを使用してGDPRにアクセスし、リクエストを削除する手順。 |
