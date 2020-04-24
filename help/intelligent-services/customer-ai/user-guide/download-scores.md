@@ -26,7 +26,7 @@ source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
 
 ## Find your dataset ID {#dataset-id}
 
-顧客AIインサイトのサービスインスタンス内で、右上のナビゲ *ーション* 「その他のアクション」ドロップダウンをクリックし、を選択しま **[!UICONTROL Access scores]**&#x200B;す。
+顧客AIインサイトのサービスインスタンス内で、右上のナビゲ *ーションの* 「その他のアクション」ドロップダウンをクリックし、「アクセススコア」を **[!UICONTROL 選択します]**。
 
 ![その他のアクション](../images/insights/more-actions.png)
 
