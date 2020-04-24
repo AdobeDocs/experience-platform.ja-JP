@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 817f994fc0622b1c46e98f8d773a4d91c1064824
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-## リリース日：2019年12月13日
+**リリース日：2019年12月13日**
 
 Adobe Experience Platformの既存の機能の更新：
 
