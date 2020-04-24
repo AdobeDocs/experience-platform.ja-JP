@@ -983,7 +983,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 `not expr`:論理否定。
 
-####  または
+#### または
 
 `expr1 or expr2`:論理和。
 
