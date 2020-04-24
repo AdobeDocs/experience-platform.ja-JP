@@ -25,7 +25,7 @@ Boolean関数は、プロファイルクエリ言語(PQL)の異なる要素に�
 
 **例**
 
-次のPQLクエリは、1985年のカナダと生年を母国とするすべての人々を返します。
+次のPQLクエリは、1985年のカナダと生年を母国とするすべての人々を返却します。
 
 ```sql
 homeAddress.countryISO = "CA" and person.birthYear = 1985
@@ -68,7 +68,7 @@ not ({QUERY})
 not (homeAddress.countryISO = "CA")
 ```
 
-## If
+##   
 
 この関数 `if` は、指定した条件が真かどうかに応じて式を解決するために使用されます。
 
