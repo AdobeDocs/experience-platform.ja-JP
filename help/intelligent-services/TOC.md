@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: インテリジェントサービスヘルプ
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
 
 ---
 
@@ -21,7 +21,10 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 * 顧客AI {#customer-ai}
    * [概要](customer-ai/overview.md)
    * [はじめに — お客様向けAI](customer-ai/getting-started.md)
-   * [ユーザーインターフェイスガイド](customer-ai/user-guide.md)
-   * [洞察の発見](customer-ai/discover-insights.md)
-   * [スコアのダウンロード](customer-ai/download-scores.md)
+   * [Input and Output](customer-ai/input-output.md)
+   * ユーザーインターフェイスガイド {#user-guide}
+      * [インスタンスの設定](customer-ai/user-guide/configure.md)
+      * [洞察の発見](customer-ai/user-guide/discover-insights.md)
+      * [顧客AIスコアを使用したセグメントの作成](customer-ai/user-guide/create-segment.md)
+      * [スコアのダウンロード](customer-ai/user-guide/download-scores.md)
 * [プラットフォームのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
