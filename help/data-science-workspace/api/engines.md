@@ -4,7 +4,7 @@ solution: Experience Platform
 title: エンジン
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 45f310eb5747300e13f3c57b3f979c983a03d49d
 
 ---
 
@@ -22,7 +22,7 @@ source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 **API形式**
 
-```http
+```https
 GET /engines/dockerRegistry
 ```
 
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 
 **API形式**
 
-```http
+```https
 POST /engines
 ```
 
@@ -165,13 +165,93 @@ curl -X POST \
 }
 ```
 
+## Docker URLを使用してフィーチャパイプラインエンジンを作成する {#feature-pipeline-docker}
+
+フィーチャーパイプラインエンジンを作成するには、メタデータとDockerイメージを参照するDocker URLを指定しながらPOSTリクエストを実行します。
+
+**API形式**
+
+```https
+POST /engines
+```
+
+**リクエスト**
+
+```shell
+curl -X POST \
+ https://platform.adobe.io/data/sensei/engines \
+    -H 'Authorization: Bearer ' \
+    -H 'x-gw-ims-org-id: 20655D0F5B9875B20A495E23@AdobeOrg' \
+    -H 'Content-Type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
+    -H 'x-api-key: acp_foundation_machineLearning' \
+    -H 'Content-Type: text/plain' \
+    -F '{
+    "type": "PySpark",
+    "algorithm":"fp",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "mlLibrary": "databricks-spark",
+    "artifacts": {
+       "default": {
+           "image": {
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            },
+           "defaultMLInstanceConfigs": [
+           ]
+       }
+   }
+}'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `type` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
+| `algorithm` | 使用するアルゴリズムで、この値を `fp` （フィーチャパイプライン）に設定します。 |
+| `name` | フィーチャーパイプラインエンジンの名前。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピ名として継承します。 |
+| `description` | エンジンのオプションの説明です。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピの説明として継承します。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
+| `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する際に必要なフィールド。 このフィールドはに設定する必要がありま `databricks-spark`す。 |
+| `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
+| `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値はに設定する必要がありま `docker`す。 |
+
+**応答**
+
+成功した応答は、新しく作成されたフィーチャパイプラインエンジンの詳細を含むペイロードを、その一意の識別子(`id`)を含めて返します。 次の例は、PySpark機能のパイプラインエンジンに対する応答です。
+
+```json
+{
+    "id": "88236891-4309-4fd9-acd0-3de7827cecd1",
+    "name": "Feature_Pipeline_Engine",
+    "description": "Feature_Pipeline_Engine",
+    "type": "PySpark",
+    "algorithm": "fp",
+    "mlLibrary": "databricks-spark",
+    "created": "2020-04-24T20:46:58.382Z",
+    "updated": "2020-04-24T20:46:58.382Z",
+    "deprecated": false,
+    "artifacts": {
+        "default": {
+            "image": {
+                "location": "v7d1cs3mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
+                "name": "datatransformation",
+                "executionType": "PySpark",
+                "packagingType": "docker"
+            }
+        }
+    }
+}
+```
+
 ## エンジンのリストの取得
 
 エンジンのリストは、1回のGETリクエストを実行することで取得できます。 結果のフィルタリングに役立つように、リクエストパスでクエリパラメーターを指定できます。 使用可能なクエリのリストについては、アセット取得のための [クエリパラメータの付録の節を参照してください](./appendix.md#query)。
 
 **API形式**
 
-```http
+```https
 GET /engines
 GET /engines?parameter_1=value_1
 GET /engines?parameter_1=value_1&parameter_2=value_2
@@ -246,7 +326,7 @@ curl -X GET \
 
 **API形式**
 
-```http
+```https
 GET /engines/{ENGINE_ID}
 ```
 
@@ -321,7 +401,7 @@ curl -X GET \
 
 **API形式**
 
-```http
+```https
 PUT /engines/{ENGINE_ID}
 ```
 
@@ -389,7 +469,7 @@ curl -X PUT \
 
 **API形式**
 
-```http
+```https
 DELETE /engines/{ENGINE_ID}
 ```
 
@@ -429,7 +509,7 @@ curl -X DELETE \
 
 **API形式**
 
-```http
+```https
 POST /engines
 ```
 
@@ -498,7 +578,7 @@ curl -X POST \
 
 **API形式**
 
-```http
+```https
 POST /engines
 ```
 
