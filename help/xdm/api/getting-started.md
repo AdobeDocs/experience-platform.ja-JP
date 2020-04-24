@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマレジストリAPI開発者ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -52,7 +52,7 @@ source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
 
 * コンテンツタイプ：application/json
 
-## TENANT_IDの把握 {#know-your-tenant-id}
+## TENANT_IDの把握 {#know-your-tenant_id}
 
 このガイド全体で、に関するリファレンスを確認しま `TENANT_ID`す。 このIDは、作成したリソースの名前が適切に付けられ、IMS組織内に含まれていることを確認するために使用されます。 IDが不明な場合は、次のGETリクエストを実行してIDにアクセスできます。
 
