@@ -4,18 +4,16 @@ solution: Experience Platform
 title: リスト資源
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
+source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
 
 ---
 
 
 # リスト資源
 
-1つのGET要求を実行することで、コンテナ内のすべてのリソース(スキーマ、クラス、ミックスイン、またはデータタイプ)のリストを表示できます。
+1つのGET要求を実行することで、コンテナ内の特定のタイプ(クラス、ミックスイン、スキーマ、データ型、記述子)のすべてのスキーマレジストリリソースのリストを表示できます。
 
 >[!NOTE] リソースをリストする場合、スキーマレジストリでは結果セットが300項目に制限されます。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必 [要がありま](#paging)す。 また、結果をフィルターし、返されるクエリの数を減らす [ために、リソース](#filtering) ・パラメーターを使用することをお勧めします。
->
-> 300項目の制限を完全に上書きする場合は、Acceptヘッダーを使用して、1回のリクエストですべての結果を返 `application/vnd.adobe.xdm-v2+json` す必要があります。
 
 **API形式**
 
@@ -27,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | パラメーター | 説明 |
 | --- | --- |
 | `{CONTAINER_ID}` | リソースが配置されるコンテナ（「グローバル」または「テナント」）。 |
-| `{RESOURCE_TYPE}` | リソースライブラリから取得するスキーマのタイプ。 有効なタイプは、、、、お `datatypes`よびの `mixins`いず `schemas`れかです `classes`。 |
+| `{RESOURCE_TYPE}` | リソースライブラリから取得するスキーマのタイプ。 有効なタイ `classes`プは、、、、、、、、、、、、、、、の `mixins`いずれ `schemas`かで `datatypes``descriptors`す。 |
 | `{QUERY_PARAMS`} | 結果をフィルターするクエリパラメーター（オプション）。 詳しくは、 [クエリパラメータ](#query) の節を参照してください。 |
 
 **リクエスト**
@@ -48,7 +46,7 @@ curl -X GET \
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | 各リソースの短い概要を返します。 リソースの一覧表示に推奨されるヘッダーです。 (制限：300) |
 | application/vnd.adobe.xed+json | 各リソースの完全なJSONスキーマを、元のリソースと含め `$ref` て返 `allOf` します。 (制限：300) |
-| application/vnd.adobe.xdm-v2+json | 1つのリクエストですべての結果の完全なJSONスキーマを返し、300項目の制限を上書きします。 |
+| application/vnd.adobe.xdm-v2+json | エンドポイントを使 `/descriptors` 用する場合は、ページング機能を利用するために、このAcceptヘッダーを使用する必要があります。 |
 
 **応答**
 
