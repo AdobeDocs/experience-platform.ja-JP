@@ -237,7 +237,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 **リクエスト**
 
->[!NOTE] PUT要求では、sqlとnameの両方のフィールドに入力する必要があり、その **クエリ** ・テンプレートの現在の内容が上書きされます。
+>[!NOTE] PUT要求では、sqlとnameの両方のフィールドに入力する必要があり、そのクエリ **テンプ** レートの現在の内容が上書きされます。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
