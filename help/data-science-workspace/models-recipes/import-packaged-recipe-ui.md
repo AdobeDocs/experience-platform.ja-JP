@@ -4,7 +4,7 @@ solution: Experience Platform
 title: パッケージ化されたレシピの読み込み(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -121,21 +121,21 @@ Data Science Workspaceの各レシピインスタンスには、特定の使用�
 
 ### Dockerベースのレシピのインポート — Python {#python}
 
-開始を設定し **ます** 。 次に、「レシピの読み込 *み」を選択し* 、「起動」をク **リックします**。
+開始を参照してく **[!UICONTROL Workflows]** ださい。 次に、「レシピを読み込 *み」を選択し* 、をクリックしま **[!UICONTROL Launch]**&#x200B;す。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅 **の** 「次へ」を選択します。
+読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上 **[!UICONTROL Next]** 隅にあるを選択します。
 
 ![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > 「 [Package source files into a Recipe](./package-source-files-recipe.md) tutorial」では、Pythonソースファイルを使用して小売売上のレシピを作成する際の最後に、Docker URLが提供されていました。
 
-「 *Select source* 」ページに移動したら、Pythonソースファイルを使用して作成したパッケージレシピに対応するDocker URLを「 **Source URL** 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`す。 「 **Runtime** 」ドロップダウンで「 *Python* 」を選択し、「 **Type** 」ドロップ ** ダウンで「Classification」を選択します。 すべての情報が入力されたら、 **右上隅の** 「次へ」をクリックして「スキーマの管理 **」に進みます。
+「 *Select source* 」ページに移動したら、Pythonソースファイルを使用して作成したパッケージレシピに対応するDocker URLをフィールドに貼り付 **[!UICONTROL Source URL]** けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`す。 「実行時 **[!UICONTROL Python]** 」ドロッ *プダウンと* 「種類」ドロッ **[!UICONTROL Classification]** プダウン *で選択します* 。 すべての情報が入力されたら、右上隅 **[!UICONTROL Next]** のをクリックして「スキーマの管理」に *進みます*。
 
 >[!NOTE]
-> *タイプは&#x200B;*、分&#x200B;**類と回帰**をサポート&#x200B;**します**。 モデルがこれらのタイプの1つに該当しない場合は、「カスタム」(**Custom**)を選択します。
+> *「supports *」と&#x200B;**[!UICONTROL Classification]**「**[!UICONTROL Regression]**」と入力 モデルがこれらのタイプのいずれかに該当しない場合は、を選択しま&#x200B;**[!UICONTROL Custom]**す。
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -143,9 +143,9 @@ Data Science Workspaceの各レシピインスタンスには、特定の使用�
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しく設定したレシピを確認します。
+「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的のフィーチャーをハイライト表示し、右側のウィンドウでまたはのいずれかを選 **[!UICONTROL Input Feature]** 択して、入 **[!UICONTROL Target Feature]** 力および出力フィーチャーを選 **[!UICONTROL Field Properties]** 択します。 このチュートリアルの目的で、をに設定し、そ **[!UICONTROL weeklySales]** の他すべ **[!UICONTROL Target Feature]** てをに設定しま **[!UICONTROL Input Feature]**&#x200B;す。 をクリック **[!UICONTROL Next]** して、新しく設定したレシピを確認します。
 
-必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
+必要に応じて、レシピを確認し、設定を追加、変更または削除します。 をクリック **[!UICONTROL Finish]** してレシピを作成します。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -153,21 +153,21 @@ Data Science Workspaceの各レシピインスタンスには、特定の使用�
 
 ### Dockerベースのレシピの読み込み — R {#r}
 
-開始を設定し **ます** 。 次に、「レシピの読み込 *み」を選択し* 、「起動」をク **リックします**。
+開始を参照してく **[!UICONTROL Workflows]** ださい。 次に、「レシピを読み込 *み」を選択し* 、をクリックしま **[!UICONTROL Launch]**&#x200B;す。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅 **の** 「次へ」を選択します。
+読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上 **[!UICONTROL Next]** 隅にあるを選択します。
 
 ![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > Package [source files into a Recipe](./package-source-files-recipe.md) tutorialで、Rソースファイルを使用して小売売上のレシピを作成する際の最後にDocker URLが提供されていました。
 
-「 *Select source* 」ページに移動したら、Rソースファイルを使用して作成したパッケージレシピに対応するDocker URLを「 **Source URL** 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`す。 「実行時 **** 」ドロップダウンで「 *R* 」を選択し、「タイプ」ドロップダ ****** ウンで「分類」を選択します。 すべての情報が入力されたら、 **右上隅の** 「次へ」をクリックして「スキーマの管理 **」に進みます。
+「 *Select source* 」ページに移動したら、Rソースファイルを使用して作成したパッケージレシピに対応するDocker URLをフィールドに貼り付け **[!UICONTROL Source URL]** ます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`す。 「実行時 **[!UICONTROL R]** 」ドロッ *プダウンと* 「種類」ドロッ **[!UICONTROL Classification]** プダウンで ** 選択します。 すべての情報が入力されたら、右上隅 **[!UICONTROL Next]** のをクリックして「スキーマの管理」に *進みます*。
 
 >[!NOTE]
-> *タイプは&#x200B;*、分&#x200B;**類と回帰**をサポート&#x200B;**します**。 モデルがこれらのタイプの1つに該当しない場合は、「カスタム」(**Custom**)を選択します。
+> *「supports *」と&#x200B;**[!UICONTROL Classification]**「**[!UICONTROL Regression]**」と入力 モデルがこれらのタイプのいずれかに該当しない場合は、を選択しま&#x200B;**[!UICONTROL Custom]**す。
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -175,7 +175,7 @@ Data Science Workspaceの各レシピインスタンスには、特定の使用�
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しい設定済みレシピを確認します。
+「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的のフィーチャーをハイライト表示し、右側のウィンドウでまたはのいずれかを選 **[!UICONTROL Input Feature]** 択して、入 **[!UICONTROL Target Feature]** 力および出力フィーチャーを選 **[!UICONTROL Field Properties]** 択します。 このチュートリアルの目的で、をに設定し、そ **[!UICONTROL weeklySales]** の他すべ **[!UICONTROL Target Feature]** てをに設定しま **[!UICONTROL Input Feature]**&#x200B;す。 をクリック **[!UICONTROL Next]** して、新しい設定済みのレシピを確認します。
 
 必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
 
@@ -185,21 +185,21 @@ Data Science Workspaceの各レシピインスタンスには、特定の使用�
 
 ### Dockerベースのレシピの読み込み — PySpark {#pyspark}
 
-開始を設定し **ます** 。 次に、「レシピの読み込 *み」を選択し* 、「起動」をク **リックします**。
+開始を参照してく **[!UICONTROL Workflows]** ださい。 次に、「レシピを読み込 *み」を選択し* 、をクリックしま **[!UICONTROL Launch]**&#x200B;す。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅の「 **次へ** 」を選択して次に進みます。
+読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅 **[!UICONTROL Next]** のを選択して続行します。
 
 ![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > PySparkソースフ [ァイルを使用した小売販売レシピの構築の最後に、](./package-source-files-recipe.md) Package source files into a Recipe tutorialでDocker URLが提供されていました。
 
-「 *Select source* 」ページに移動したら、PySparkソースファイルを使用して作成したパッケージレシピに対応するDocker URLを「 **Source URL** 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`す。 「 **Runtime** 」ドロップダウン *で「PySpark* 」を選択します。 PySparkランタイムが選択されると、デフォルトのアーティファクトが **Dockerに自動入力されます**。 次に、「タイプ」ド **ロップダウ** ンで「分類 ** 」を選択します。 すべての情報が入力されたら、 **右上隅の** 「次へ」をクリックして「スキーマの管理 **」に進みます。
+「 *Select source* 」ページに移動したら、PySparkソースファイルを使用して作成したパッケージレシピに対応するDocker URLをフィールドに貼り付け **[!UICONTROL Source URL]** ます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`す。 「実行時 **[!UICONTROL PySpark]** 」ドロッ *プダウンで* 、を選択します。 PySparkランタイムが選択されると、デフォルトのアーティファクトが自動入力されま **[!UICONTROL Docker]**&#x200B;す。 次に、「タイプ」ド **[!UICONTROL Classification]** ロップダ *ウンで* 「」を選択します。 すべての情報が入力されたら、右上隅 **[!UICONTROL Next]** のをクリックして「スキーマの管理」に *進みます*。
 
 >[!NOTE]
-> *タイプは&#x200B;*、分&#x200B;**類と回帰**をサポート&#x200B;**します**。 モデルがこれらのタイプの1つに該当しない場合は、「カスタム」(**Custom**)を選択します。
+> *「supports *」と&#x200B;**[!UICONTROL Classification]**「**[!UICONTROL Regression]**」と入力 モデルがこれらのタイプのいずれかに該当しない場合は、を選択しま&#x200B;**[!UICONTROL Custom]**す。
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -207,9 +207,9 @@ Data Science Workspaceの各レシピインスタンスには、特定の使用�
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しく設定したレシピを確認します。
+「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的のフィーチャーをハイライト表示し、右側のウィンドウでまたはのいずれかを選 **[!UICONTROL Input Feature]** 択して、入 **[!UICONTROL Target Feature]** 力および出力フィーチャーを選 **[!UICONTROL Field Properties]** 択します。 このチュートリアルの目的で、をに設定し、そ **[!UICONTROL weeklySales]** の他すべ **[!UICONTROL Target Feature]** てをに設定しま **[!UICONTROL Input Feature]**&#x200B;す。 をクリック **[!UICONTROL Next]** して、新しく設定したレシピを確認します。
 
-必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
+必要に応じて、レシピを確認し、設定を追加、変更または削除します。 をクリック **[!UICONTROL Finish]** してレシピを作成します。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -217,21 +217,21 @@ Data Science Workspaceの各レシピインスタンスには、特定の使用�
 
 ### Dockerベースのレシピの読み込み — Scala {#scala}
 
-開始を設定し **ます** 。 次に、「レシピの読み込 *み」を選択し* 、「起動」をク **リックします**。
+開始を参照してく **[!UICONTROL Workflows]** ださい。 次に、「レシピを読み込 *み」を選択し* 、をクリックしま **[!UICONTROL Launch]**&#x200B;す。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
-読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅の「 **次へ** 」を選択して次に進みます。
+読み込み *レシピ* ・ワークフローの *「設定* 」ページが表示されます。 レシピの名前と説明を入力し、右上隅 **[!UICONTROL Next]** のを選択して続行します。
 
 ![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
 > 「 [Package source files into a Recipe](./package-source-files-recipe.md) tutorial」で、Scala(Spark)ソースファイルを使用して小売売上のレシピを作成する際の最後に、Docker URLが提供されていました。
 
-「 *Select source* 」ページに移動したら、「Scala source files」を使用して作成したパッケージレシピに対応するDocker URLを「 *Source URL* 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`す。 「 **Runtime** 」ドロップダ *ウンでSpark* を選択します。 Sparkランタイムが選択されると、デフォルトのアーティファクトが **Dockerに自動的に設定されま**&#x200B;す。 次に、[タイプ]ド **ロップダウ** ンから *[回帰* ]を選択します。 すべての情報が入力されたら、 **右上隅の** 「次へ」をクリックして「スキーマの管理 **」に進みます。
+「 *Select source* 」ページに移動したら、「Scala source files」を使用して作成したパッケージレシピに対応するDocker URLを「 *Source URL* 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browserを使用しま**&#x200B;す。 提供された設定ファイルは、にありま `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`す。 「実行時 **[!UICONTROL Spark]** 」ドロッ *プダウンで* 、を選択します。 Sparkランタイムが選択されると、デフォルトのアーティファクトが自動的に設定されま **[!UICONTROL Docker]**&#x200B;す。 次に、「タイプ」ドロ **[!UICONTROL Regression]** ップダウ *ンから* 「選択」を選択します。 すべての情報が入力されたら、右上隅 **[!UICONTROL Next]** のをクリックして「スキーマの管理」に *進みます*。
 
 >[!NOTE]
-> *タイプは&#x200B;*、分&#x200B;**類と回帰**をサポート&#x200B;**します**。 モデルがこれらのタイプの1つに該当しない場合は、「カスタム」(**Custom**)を選択します。
+> *「supports *」と&#x200B;**[!UICONTROL Classification]**「**[!UICONTROL Regression]**」と入力 モデルがこれらのタイプのいずれかに該当しない場合は、を選択しま&#x200B;**[!UICONTROL Custom]**す。
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
@@ -239,15 +239,15 @@ Data Science Workspaceの各レシピインスタンスには、特定の使用�
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的の機能をハイライト表示し、右側の「フィールドプロパティ」ウィンドウで「入力機能 **」または「** ターゲット機能 **」を選択して、入力機能と出力** 機能を選択します **** 。 このチュートリアルの目的では、 **weeklySalesを** ターゲット機能 **、その他すべてを** 入力機能として設定します ****。 「次へ **** 」をクリックして、新しく設定したレシピを確認します。
+「機能の管 *理* 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上」入力スキーマを展開します。 目的のフィーチャーをハイライト表示し、右側のウィンドウでまたはのいずれかを選 **[!UICONTROL Input Feature]** 択して、入 **[!UICONTROL Target Feature]** 力および出力フィーチャーを選 **[!UICONTROL Field Properties]** 択します。 このチュートリアルの目的で、をに設定し、そ **[!UICONTROL weeklySales]** の他すべ **[!UICONTROL Target Feature]** てをに設定しま **[!UICONTROL Input Feature]**&#x200B;す。 をクリック **[!UICONTROL Next]** して、新しく設定したレシピを確認します。
 
-必要に応じて、レシピを確認し、設定を追加、変更または削除します。 「完了」 **をクリックし** 、レシピを作成します。
+必要に応じて、レシピを確認し、設定を追加、変更または削除します。 をクリック **[!UICONTROL Finish]** してレシピを作成します。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
 次の手順に進み [、新しく作成した](#next-steps) Retail Salesレシピを使用してData Science Workspaceでモデルを作成する方法を確認します。
 
-## 次の手順
+## 次の手順 {#next-steps}
 
 このチュートリアルでは、Data Science Workspaceでレシピを設定および読み込む方法に関する洞察を提供しました。 新しく作成したレシピを使用して、モデルの作成、トレーニング、評価を行うことができるようになりました。
 
