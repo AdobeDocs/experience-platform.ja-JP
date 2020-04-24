@@ -29,7 +29,7 @@ source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 エクスペリエンスプラットフォームのドキュメントに、API呼び出しの例が2つの異なる方法で示されています。 最初に、呼び出しは **API形式で表され、操作(GET、POST**、PUT、PATCH、DELETEなど)と使用中のエンドポイント(例えば、 `/global/classes`)のみを示すテンプレート表現です。 また、テンプレートには、などの呼び出しの作成方法を示すために、変数の場所を示すものもありま `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`す。
 
-その後、呼び出しは、 **Request**（リクエスト）内のcURLコマンドとして表示されます。このコマンドには、APIとのやり取りに必要なヘッダーと完全な「ベースパス」が含まれます。 ベースパスは、すべてのエンドポイントに先頭に追加する必要があります。 例えば、前述のエンドポイント `/global/classes` がになりま `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`す。 ドキュメント全体にAPI形式/リクエストパターンが表示され、独自のプラットフォームAPIを呼び出す場合は、例のリクエストに示す完全なパスを使用する必要があります。
+その後、呼び出しは **Request**（リクエスト）内のcURLコマンドとして表示されます。このコマンドには、APIとのやり取りに必要なヘッダーと完全な「ベースパス」が含まれます。 ベースパスは、すべてのエンドポイントに先頭に追加する必要があります。 例えば、前述のエンドポイント `/global/classes` がになりま `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`す。 ドキュメント全体にAPI形式/リクエストパターンが表示され、独自のプラットフォームAPIを呼び出す場合は、例のリクエストに示す完全なパスを使用する必要があります。
 
 ### APIリクエストの例
 
