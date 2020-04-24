@@ -9,7 +9,7 @@ translation-type: tm+mt
 
 >[!IMPORTANT] この方法を利用するには、データセットに対してリアルタイムの顧客プロファイルを有効にする必要があります。
 
-In the Platform UI, click **[!UICONTROL Segments]** in the left navigation, and then click **[!UICONTROL Create segment]**.
+プラットフォーム UI で、左側のナビゲーションの「**[!UICONTROL セグメント]**」をクリックし、「**[!UICONTROL セグメント作成]**」をクリックします。
 
 ![](../images/user-guide/segments.png)
 
@@ -17,13 +17,13 @@ In the Platform UI, click **[!UICONTROL Segments]** in the left navigation, and 
 
 ![](../images/user-guide/results.png)
 
-Located in the center of Segment Builder, drag and drop the **[!UICONTROL Score]** attribute onto the *rule builder canvas* to define a rule.
+セグメントビルダーの中央にある「**[!UICONTROL スコア]**」属性を&#x200B;*ルールビルダーキャンバス*&#x200B;にドラッグ&amp;ドロップし、ルールを定義します。
 
 右側の「セグメントのプロ *パティ* 」列で、セグメントの名前を指定します。
 
 ![](../images/user-guide/properties.png)
 
-左側の「フィールド」列の上 *で* 、歯車アイコンをク **リックし** 、ドロップダウンから ** 「マージ」ポリシーを選択します。 をクリック **[!UICONTROL Save]** して、セグメントを作成します。
+左側の「フィールド」列の上 *で* 、歯車アイコンをク **リックし** 、ドロップダウンから ** 「マージ」ポリシーを選択します。 Click **[!UICONTROL Save]** to create the segment.
 
 ![](../images/user-guide/merge_policy.png)
 
