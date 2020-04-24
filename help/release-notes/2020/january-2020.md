@@ -51,7 +51,7 @@ XDMは、デジタルエクスペリエンスのパワーを向上させるた�
 | プライバシーサービスのリブランディング | GDPRに加え、他の規制に対応するようになったため、以前の名称は「GDPRサービス」に変更されました。 |
 | 新しいAPIエンドポイント | プライバシーサービスAPIのベースパスがからに更新され `/data/privacy/gdpr` まし `/data/core/privacy/jobs`た。 |
 | 新しい必須プロパ `regulation` ティ | プライバシーサービスAPIで新しいジョブを作成する場合は、要求ペイロ `regulation` ードでプロパティを指定し、ジョブを追跡する規則を示す必要があります。 指定できる値は、 `gdpr` およびで `ccpa`す。 |
-| Adobe Primetime認証のサポート | プライバシーサービスで、製品の値としてを使用して、Adobe Primetime Authenticationからのアクセス/削除の要求を受け `primetimeAuthentication` 入れるようになりました。 |
+| Adobe Primetime認証のサポート | プライバシーサービスで、製品の値としてを使用して、Adobe Primetime Authenticationからのアクセス/削除の要求を受け入れる `primetimeAuthentication` ようになりました。 |
 | プライバシーサービスのUIの強化 | GDPRとCCPAの規制に関する個別のジョブトラッキングページ。 GDPRとCCPAのトラ _ッキングデータを切り替える新しい「Regulation Type_ 」ドロップダウン。 |
 
 **既知の問題**
