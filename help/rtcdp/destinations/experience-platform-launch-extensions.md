@@ -20,7 +20,7 @@ Launch は、顧客体験の実現に必要なすべての分析、マーケテ�
 
 ## Adobe Real-time CDPインターフェイスでの起動の拡張機能の検索方法 {#how-to-find-extensions-in-interface}
 
-Adobe Real-time CDPインターフェイスで起動の拡張機能を探すには、フィルタ **[!UICONTROL Destinations > Catalog]** ーを参照し **[!UICONTROL Extensions]** て選択し **[!UICONTROL Types]** ます。
+Adobe Real-time CDPインターフェイスで起動の拡張機能を見つけるには、 **[!UICONTROL Destinations]** /Catalogを選択し、「 **[!UICONTROL Types]** 」フィルターで「 **[!UICONTROL Extensions]** 」を選択します。
 
 ![インターフェイスの拡張フィルター](/help/rtcdp/destinations/assets/extensions-filter.png)
 
