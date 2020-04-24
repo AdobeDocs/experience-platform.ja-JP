@@ -11,7 +11,7 @@ source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
 
 # アクセス制御開発ガイド
 
-Access control for Experience Platform is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). この機能は、管理コンソールの製品プロファイルを利用し、ユーザーに権限とサンドボックスをリンクします。 See the [access control overview](../home.md) for more information.
+Access control for Experience Platform is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). この機能は、管理コンソールの製品プロファイルを利用します。この製品ユーザーは、権限とサンドボックスを持つユーザーをリンクします。 See the [access control overview](../home.md) for more information.
 
 この開発者ガイドでは、 [アクセス制御APIへのリクエストの書式設定方法に関する情報を提供し](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)、次の操作について説明します。
 
