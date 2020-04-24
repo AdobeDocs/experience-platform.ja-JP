@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 顧客 AI の概要
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 
 ---
 
@@ -42,4 +42,4 @@ source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
 
 ## 次の手順
 
-はじめに、はじめにを参 [照して](./getting-started.md) 。 このガイドでは、顧客AIに必要なすべての事前リクエストの設定手順を説明します。 すでにすべての資格情報とデータの準備ができている場合は、カスタマーAIユ [ーザーガイドを参照してください](./user-guide.md)。 このチュートリアルは、顧客 AI の使用手順を示し、傾向スコアを使用した顧客セグメントの作成方法を示します。
+はじめに、はじめにを参 [照して](./getting-started.md) 。 このガイドでは、お客様のAIに必要なすべての前提条件の設定手順を説明します。 すでにすべての資格情報とデータの準備が整っている場合は、顧客AIイ [ンスタンスの設定にアクセスします](./user-guide/configure.md)。 顧客AIの使用手順を示します。
