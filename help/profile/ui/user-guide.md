@@ -73,7 +73,7 @@ Experience Platform UIで、左側のナビゲー [ションの](http://platform
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-UIでの結合ポリシーの操作について詳しくは、mMerge Policiesユーザーガイド [を参照してください](merge-policies.md)。
+UIでの結合ポリシーの操作について詳しくは、mMerge Policiesユーザーガ [イドを参照してください](merge-policies.md)。
 
 ## 和集合スキーマ
 
