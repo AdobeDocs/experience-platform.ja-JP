@@ -1,19 +1,19 @@
 ---
-title: Google AdsDestination
-seo-title: Google広告の表示先
-description: Google Ads（旧称Google AdWords）は、企業がテキストベースの検索、グラフィック表示、YouTubeビデオ、アプリ内モバイルディスプレイにわたってクリックあたりの広告をペイパークリックできるオンライン広告サービスです。
-seo-description: Google Ads（旧称Google AdWords）は、企業がテキストベースの検索、グラフィック表示、YouTubeビデオ、アプリ内モバイルディスプレイにわたってクリックあたりの広告をペイパークリックできるオンライン広告サービスです。
+title: Google 広告の宛先
+seo-title: Google 広告の宛先
+description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
+seo-description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
 
-# Google広告の表示先
+# Google 広告の宛先
 
 ## 概要
 
-Google Ads（旧称Google AdWords）は、企業がテキストベースの検索、グラフィック表示、YouTubeビデオ、アプリ内モバイルディスプレイにわたってクリックあたりの広告をペイパークリックできるオンライン広告サービスです。
+Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 
 ## 宛先の仕様
 
@@ -48,15 +48,15 @@ Adobe Real-time CDPでGoogle広告の宛先を作成する前に、Googleに連�
 
 ## 宛先の作成
 
-1. で、「Google **[!UICONTROL Connections > Destinations]**&#x200B;広告」を選択し、を選択しま **[!UICONTROL Create destination]**す。
+1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
    ![Google広告のリンク先への接続](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. 宛先を作成ワークフローで、宛先のを [!UICONTROL Basic Information] 入力します。
+2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination.
    ![Google広告の基本情報](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **[!UICONTROL Name]**:この宛先の優先名を入力します。
-* **[!UICONTROL Description]**: オプション. 例えば、この宛先を使用しているキャンペーンを指定できます。
-* **[!UICONTROL Account Type]**:AdWordsは唯一のオプションです。
-* **[!UICONTROL Account ID]**:アカウントIDにGoogle広告を入力します。 通常、IDの形式は123～456～7890です。
+* **[!UICONTROL 名前]**:この宛先の名前を入力します。
+* **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
+* **[!UICONTROL アカウントの種類]**:AdWordsは唯一のオプションです。
+* **[!UICONTROL アカウントID]**:アカウントIDにGoogle広告を入力します。 通常、IDの形式は123～456～7890です。
 
 ## Google広告へのセグメントのアクティブ化
 
