@@ -74,7 +74,7 @@ XDMスキーマは、JSONスキーマ標準と基本的なフィールドタイ�
     <td>文字列</td>
     <td>タイプ：stringOptionalプ<br/><br/><strong>ロパティ：</strong><br/>
       <ul>
-        <li>パターン</li>
+        <li>pattern</li>
         <li>minLength</li>
         <li>maxLength</li>
       </ul>
@@ -241,7 +241,7 @@ XDMスキーマは、JSONスキーマ標準と基本的なフィールドタイ�
 | XDM Type<br>(meta:xdmType) | JSON<br>(JSONスキーマ) | パーケ<br>（タイプ/注釈） | Spark SQL | Java | スカラ | .NET | CosmosDB | MongoDB | エアロスパイク | プロトバフ2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 文字列 | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | 文字列 | System.String | 文字列 | 文字列 | 文字列 | 文字列 |
-| 数値 | type:number | 重複 | DoubleType | java.lang.重複 | 重複 | System.重複 | 数値 | 重複 | 重複 | 重複 |
+| 数値 | type:number | 重複 | DoubleType | java.lang.Double | 重複 | System.Double | 数値 | 重複 | 重複 | 重複 |
 | long | type:<br>integermaximum:2^53+1<br>minimum:-2^53+1 | INT64 | LongType | java.lang.Long | ロング | System.Int64 | 数値 | long | 整数 | int64 |
 | int | type:<br>integermaximum:2^31<br>minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | 整数 | System.Int32 | 数値 | int | 整数 | int32 |
 | short | type:<br>integermaximum:2^15<br>minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | 短い | System.Int16 | 数値 | int | 整数 | int32 |
