@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ使用ポリシーユーザーガイド
 topic: policies
 translation-type: tm+mt
-source-git-commit: 304a84b81758b2f2a343977533f9120857a1fb33
+source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform Data Governanceは、データ使用ポリシーを作
 
 ## 表示データ使用ポリシー
 
-Experience Platform UIで、「ポリシー」をクリックし **[!UICONTROL て]** 、ポリシーワークスペ *[!UICONTROL ースを開きます]* 。 「参照」タ **[!UICONTROL ブには]** 、使用可能なポリシーのリスト（関連するラベル、マーケティングアクション、ステータスなど）が表示されます。
+エクスペリエンスプラットフォームUIで、をクリッ **[!UICONTROL Policies]** クしてワークスペースを開 *[!UICONTROL Policies]* きます。 このタブで **[!UICONTROL Browse]** は、使用可能なポリシーのリスト（関連するラベル、マーケティングアクション、ステータスなど）を確認できます。
 
 ![](../images/policies/browse-policies.png)
 
@@ -32,38 +32,38 @@ Experience Platform UIで、「ポリシー」をクリックし **[!UICONTROL �
 
 ## カスタムデータ使用ポリシーの作成
 
-新しいカスタムデータ使用ポリシーを作成するには、 **[!UICONTROL ポリシー]** ( *Policies* )ワークスペースの右上隅にある「ポリシーを作成」をクリックします。
+新しいカスタムデータ使用ポリシーを作成するには、ポリ **[!UICONTROL Create policy]** シーワークスペースの右上隅にあるをクリ *ック* します。
 
 ![](../images/policies/create-policy-button.png)
 
-ポリシーの *[!UICONTROL 作成ワークフロー]* が表示されます。 開始。新しいポリシーの名前と説明を指定します。
+ワークフロー *[!UICONTROL Create policy]* が表示されます。 開始。新しいポリシーの名前と説明を指定します。
 
 ![](../images/policies/create-policy-description.png)
 
-次に、ポリシーの基にするデータ使用ラベルを選択します。 複数のラベルを選択する場合は、ポリシーを適用するために、データにすべてのラベルを含めるか、1つのラベルのみを含めるかを選択できます。 終了したら「**[!UICONTROL 次へ]**」をクリックします。
+次に、ポリシーの基にするデータ使用ラベルを選択します。 複数のラベルを選択する場合は、ポリシーを適用するために、データにすべてのラベルを含めるか、1つのラベルのみを含めるかを選択できます。 終了したら「**[!UICONTROL Next]**」をクリックします。
 
 ![](../images/policies/add-labels.png)
 
-「マーケテ *[!UICONTROL ィングアクションの選択]* 」手順が表示されます。 表示されたアクションから適切なマーケティングリストを選択し、「 **[!UICONTROL Next]** 」をクリックして続行します。
+ステップが *[!UICONTROL Select marketing actions]* 表示されます。 提供されたアクションから適切なマーケティングリストを選択し、をクリックし **[!UICONTROL Next]** て続行します。
 
 >[!NOTE] 複数のマーケティングアクションを選択する場合、ポリシーはそれらを「OR」ルールとして解釈します。 つまり、選択したマーケティングアクションのいず _れかが_ 実行された場合に、ポリシーが適用されます。
 
 ![](../images/policies/add-marketing-actions.png)
 
-[ *[!UICONTROL Review]* ]ステップが表示され、新しいポリシーを作成する前にその詳細を確認できます。 問題が解決したら、「完了」をクリ **[!UICONTROL ックし]** 、ポリシーを作成します。
+手順が *[!UICONTROL Review]* 表示され、新しいポリシーを作成する前に、その詳細を確認できます。 問題がない場合は、をクリックし **[!UICONTROL Finish]** てポリシーを作成します。
 
 ![](../images/policies/policy-review.png)
 
-「参照」 *[!UICONTROL タブが再び表示され]* 、新しく作成したポリシーが「ドラフト」ステータスでリストされるようになりました。 ポリシーを有効にするには、次のセクションを参照してください。
+タブが再 *[!UICONTROL Browse]* 度表示され、新しく作成したリストが「ドラフト」ステータスで表示されます。 ポリシーを有効にするには、次のセクションを参照してください。
 
 ![](../images/policies/created-policy.png)
 
 ## データ使用ポリシーの有効化または無効化 {#enable}
 
-ポリシーワークスペースの「参照」タブで、カスタムデータ使用ポリシ *[!UICONTROL ーを]* 有効または無効に *[!UICONTROL できます]* 。 右側に詳細を表示するカスタムリストを選択します。 「ステー *[!UICONTROL タス]*」で、ポリシーを有効または無効にする切り替えボタンを選択します。
+ワークスペースのタブで、カスタムデータ使用ポリシーを有効ま *[!UICONTROL Browse]* たは無効にで *[!UICONTROL Policies]* きます。 右側に詳細を表示するカスタムリストを選択します。 ポリシー *[!UICONTROL Status]*&#x200B;を有効または無効にする切り替えボタンを選択します。
 
 ![](../images/policies/enable-policy.png)
 
 ## 次の手順
 
-このドキュメントでは、Experience Platform UIでデータ使用ポリシーを管理する方法の概要を説明しました。 DULE Policy APIを使用してポリシーを管理する手順については、 [APIポリシー作成のチュートリアルを参照してください](./create.md)。 データ使用ポリシーの適用方法について詳しくは、「ポリシーの適用の概要」 [を参照してくださ](../enforcement/overview.md)い。
+このドキュメントでは、Experience Platform UIでデータ使用ポリシーを管理する方法の概要を説明しました。 MODULE Policy APIを使用してポリシーを管理する手順については、開発者ガイドを参照し [てください](../api/getting-started.md)。 データ使用ポリシーの適用方法について詳しくは、「ポリシーの適用の概要」 [を参照してくださ](../enforcement/overview.md)い。
