@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDK のヘルプ
 seo-title: Adobe Experience Platform Web SDK のヘルプ
 description: Adobe Experience Platform Web SDK の概要と、その使用方法を説明します。
-seo-description: Adobe Experience Cloud のお客様が　Experience Cloud　の様々なサービスを利用できるようにします
+seo-description: Adobe Experience Cloud のお客様が　Experience Cloud　の様々なサービスを利用できるようにします.
 translation-type: tm+mt
-source-git-commit: 6ad09df6f6867ebe057d0043dea4bc97de2b66b3
+source-git-commit: 5027ae2cd083631d7122346796ef93572c129d3f
 
 ---
 
