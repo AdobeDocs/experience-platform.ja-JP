@@ -1,15 +1,21 @@
 ---
-source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
+keywords: Experience Platform;insights; customer ai;popular topics
+solution: Experience Platform
+title: 予測スコアを使用した顧客セグメントの作成
+topic: Create a segment
 translation-type: tm+mt
+source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
 
 ---
+
+
 # 予測スコアを使用した顧客セグメントの作成
 
 予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客AIスコアを使用してプロファイルを豊富にすることで、顧客セグメントを作成し、その傾向スコアに基づいてオーディエンスを見つけることができます。 ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。セグメントの作成に関するより詳細なチュートリアルについては、『[セグメントビルダーユーザーガイド](../../../segmentation/tutorials/create-a-segment.md)』を参照してください。
 
 >[!IMPORTANT] この方法を利用するには、データセットに対してリアルタイムの顧客プロファイルを有効にする必要があります。
 
-プラットフォーム UI で、左側のナビゲーションの「**[!UICONTROL セグメント]**」をクリックし、「**[!UICONTROL セグメント作成]**」をクリックします。
+In the Platform UI, click **[!UICONTROL Segments]** in the left navigation, and then click **[!UICONTROL Create segment]**.
 
 ![](../images/user-guide/segments.png)
 
@@ -17,13 +23,13 @@ translation-type: tm+mt
 
 ![](../images/user-guide/results.png)
 
-セグメントビルダーの中央にある「**[!UICONTROL スコア]**」属性を&#x200B;*ルールビルダーキャンバス*&#x200B;にドラッグ&amp;ドロップし、ルールを定義します。
+Located in the center of Segment Builder, drag and drop the **[!UICONTROL Score]** attribute onto the *rule builder canvas* to define a rule.
 
 右側の「セグメントのプロ *パティ* 」列で、セグメントの名前を指定します。
 
 ![](../images/user-guide/properties.png)
 
-左側の「フィールド」列の上 *で* 、歯車アイコンをク **リックし** 、ドロップダウンから ** 「マージ」ポリシーを選択します。 Click **[!UICONTROL Save]** to create the segment.
+左側の「フィールド」列の上 *で* 、歯車アイコンをク **リックし** 、ドロップダウンから ** 「マージ」ポリシーを選択します。 をクリック **[!UICONTROL Save]** して、セグメントを作成します。
 
 ![](../images/user-guide/merge_policy.png)
 
