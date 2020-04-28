@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics
 solution: Experience Platform
-title: はじめに — お客様向けAI
+title: 顧客AIの入出力
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 3146442ed0638559ddd68452fd42cc5731b4dc8a
+source-git-commit: 66ccea896846c1da4310c1077e2dc7066a258063
 
 ---
 
