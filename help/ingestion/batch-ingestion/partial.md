@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Adobe Experience Platform部分的なバッチ取り込みの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 ---
 
 
 
-# 部分的なバッチ取り込み
+# 部分的なバッチインジェスト（ベータ）
 
 部分的なバッチ取り込みは、エラーを含むデータを特定のしきい値まで取り込む機能です。 この機能を使用すると、ユーザーは正しいデータをすべてAdobe Experience Platformに正しく取り込み、間違ったデータはすべて別々にバッチ処理され、その理由の詳細も表示できます。
 
 このドキュメントでは、部分的なバッチ取り込みを管理するためのチュートリアルを提供します。
 
-さらに、このチュートリ [アルの付録](#partial-batch-ingestion-error-types) では、部分的なバッチ取り込みエラータイプの参照を示します。
+さらに、このチュートリ [アルの付録](#appendix) では、部分的なバッチ取り込みエラータイプの参照を示します。
+
+>[!IMPORTANT] この機能はAPIを使用してのみ存在します。 この機能にアクセスするには、チームにお問い合わせください。
 
 ## はじめに
 
@@ -47,7 +49,7 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ## APIでの部分的なバッチ取り込みのデータセットの有効化
 
->[!NOTE] この節では、APIを使用した部分的なバッチ取り込みのデータセットの有効化について説明します。 UIの使用手順については、UIの手順で部分的なバッ [チ取り込みのデータセットを有効にするを参照してください](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) 。
+<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
 新しいデータセットを作成したり、部分的な取り込みが有効な既存のデータセットを変更したりできます。
 
@@ -71,35 +73,35 @@ source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 データセット内に、上記のタグを追加する必要があります。
 
-## UIでの部分的なバッチ取り込みのデータセットの有効化
+<!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] この節では、UIを使用した部分的なバッチ取り込みのデータセットの有効化について説明します。 APIを使用して部分的なバッチ取り込みのデータセットを既に有効にしている場合は、次のセクションに進んでください。
+>[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
-プラットフォームUIから部分的な取り込みのためのデータセットを有効にするには、左のナビゲ **ーションで** 「Datasets」をクリックします。 新しいデータセッ [トを作成するか](#create-a-new-dataset-with-partial-batch-ingestion-enabled) 、既存の [データセットを変更できます](#modify-an-existing-dataset-to-enable-partial-batch-ingestion)。
+To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
-### 部分的なバッチ取り込みが有効な新しいデータセットの作成
+### Create a new dataset with partial batch ingestion enabled
 
-新しいデータセットを作成するには、『データセットユーザガイド』の手 [順に従ってくださ](../../catalog/datasets/user-guide.md)い。 データセットの設定手順 *に* 、「部分的なインジェスト *」フィールドと「エ* ラー診断 *」フィールド* を控えておきます。
+To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
 
-[部分 *的な取り込み* ]切り替えを使用すると、部分的なバッチ取り込みの使用を有効または無効にできます。
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-[エラ *ー診断* ]切り替えは、[部分的なインジェスト ** ]切り替えがオフの場合にのみ表示されます。 この機能を使用すると、取り込んだバッチに関する詳細なエラーメッセージをプラットフォームで生成できます。 [部分的なインジェ *スト* ]切り替えがオンになっている場合は、拡張されたエラー診断が自動的に適用されます。
+The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
 
-エラー *しきい値を使用すると* 、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。 デフォルトでは、この値は5%に設定されています。
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### 既存のデータセットを変更して、部分的なバッチ取り込みを有効にする
+### Modify an existing dataset to enable partial batch ingestion
 
-既存のデータセットを変更するには、変更するデータセットを選択します。 右側のサイドバーに、データセットに関する情報が表示されます。
+To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
 
 ![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
 
-[部分 *的な取り込み* ]切り替えを使用すると、部分的なバッチ取り込みの使用を有効または無効にできます。
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-エラー *しきい値を使用すると* 、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。 デフォルトでは、この値は5%に設定されています。
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
 ## 部分的なバッチ取り込みエラーの取得
 
@@ -176,7 +178,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 このチュートリアルでは、部分的なバッチ取り込みを有効にするデータセットの作成または変更方法について説明しました。 バッチインジェストの詳細については、『バッチインジェスト開発者ガ [イド』を参照してくださ](./api-overview.md)い。
 
-## 部分的なバッチ取り込みエラータイプ
+## 部分的なバッチ取り込みエラータイプ {#appendix}
 
 部分的なバッチ取り込みでは、データを取り込む際に4つの異なるエラータイプが発生します。
 
