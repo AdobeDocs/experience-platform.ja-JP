@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルユーザガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
+source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
 
 ---
 
@@ -73,7 +73,7 @@ Experience Platform UIで、左側のナビゲー [ションの](http://platform
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-UIでの結合ポリシーの操作について詳しくは、mMerge Policiesユーザーガ [イドを参照してください](merge-policies.md)。
+UIでの結合ポリシーの操作について詳しくは、Merge Policiesユーザーガイドを [参照してください](merge-policies.md)。
 
 ## 和集合スキーマ
 
