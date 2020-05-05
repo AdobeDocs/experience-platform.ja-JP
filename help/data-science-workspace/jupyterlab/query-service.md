@@ -1,76 +1,67 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
 solution: Experience Platform
-title: クエリサービス
+title: ジュピターノートのクエリサービス
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
 
-# クエリサービス
+# ジュピターノートのクエリサービス
 
-Adobe Experience Platformを使用すると、Data Science Workspaceで構造化クエリ言語(SQL)を使用できます。このため、クエリサービスを標準機能としてJupterLabに統合します。
+Adobe Experience Platformでは、Structured Language(SQL)をData Science Workspaceで使用できます。これにより、クエリサービスが標準機能としてJupterLabに統合されます。
 
-このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例の次のSQLクエリ例を示します。
-
-- [JupyterLabとクエリサービス](#access-jupyterlab-and-query-service)
-- [クエリデータ](#query-your-data)
-   - [時間別訪問者数](#hourly-visitor-count)
-   - [時間別アクティビティ数](#hourly-activity-count)
-   - [1回のイベントセッションあたりの訪問者数](#number-of-events-per-visitor-session)
-   - [特定の日の人気のあるページ](#popular-pages-for-a-given-day)
-   - [特定の日のアクティブなユーザー](#active-users-for-a-given-day)
-   - [ユーザ別のアクティブな市区町村アクティビティ](#active-cities-by-user-activity)
+このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例のサンプルSQLクエリを示します。
 
 ## はじめに
 
-このチュートリアルを開始する前に、次の前提条件が必要です。
+このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
 - Adobe Experience Platformへのアクセス。 Experience PlatformのIMS組織にアクセスできない場合は、次に進む前に、システム管理者にお問い合わせください。
 
 - Adobe Analyticsデータセット
 
-- このチュートリアルで使用する次の主要概念に関する実用的な理解
-   - [エクスペリエンスデータモデル(XDM)とXDMシステム](../../xdm/home.md)
+- このチュートリアルで使用する次の主要概念の実際の理解
+   - [Experience Data Model(XDM)およびXDMシステム](../../xdm/home.md)
    - [クエリサービス](../../query-service/home.md)
    - [クエリサービスのSQL構文](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## JupyterLabとクエリサービス
+## JupyterLabおよびクエリサービスへのアクセス {#access-jupyterlab-and-query-service}
 
-1. エクスペリエ [ンスプラットフォーム](https://platform.adobe.com)で、左のナビゲ **ーション列から** 「モデル」に移動します。 上部のヘ **ッダで** 「Notebooks」をクリックし、JupterLabを開きます。 JupyterLabが読み込まれるまで、しばらく待ちます。
+1. 「 [エクスペリエンスプラットフォーム](https://platform.adobe.com)」で、左のナビゲーション列 **[!UICONTROL Notebooks]** に移動します。 JupyterLabが読み込まれるまで、少し時間をお待ちください。
 
-   ![](../images/jupyterlab/query/notebook_ui.png)
+   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] 新しい「ランチャー」タブが自動的に表示されなかった場合は、ファイル/新規ランチャーをクリックして、新し **い「ランチャー」タブを開きます**。
+   > [!NOTE] 新しい「ランチャー」タブが自動的に表示されなかった場合は、をクリックして新しい「ランチャー」タブを開き、を選択 **[!UICONTROL File]** し **[!UICONTROL New Launcher]**&#x200B;ます。
 
-2. 「ランチャー」タブで、Python 3環境 **の空白** (Blank)アイコンをクリックして、空のノートブックを開きます。
+2. 「ランチャー」タブで、Python 3環境の **[!UICONTROL Blank]** アイコンをクリックして、空のノートブックを開きます。
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   > [!NOTE] 現在、Python 3は、ノートブックのクエリサービスでサポートされている環境はPython 3のみです。
+   > [!NOTE] Python 3は、現在、ノートブックのクエリサービスでサポートされている唯一の環境です。
 
-3. 左側の選択レールで、 **Data** （データ）アイコンをクリックし、重複で **Datasets** （データセット）ディレクトリをクリックして、すべてのデータセットをリストします。
+3. 左側の選択レールで、 **[!UICONTROL Data]** アイコンをクリックし、重複をクリックして、すべてのデータセットをリストする **[!UICONTROL Datasets]** ディレクトリをクリックします。
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 調査するAdobe Analyticsデータセットを探し、リストを右クリックして、「 **Notebookのクエリデータ」をクリックします** 。空のノートブックにSQLクエリが生成されます。
+4. 調査するAdobe Analyticsデータセットを探し、リストを右クリックして、をクリックし、空のノートブック **[!UICONTROL Query Data in Notebook]** にSQLクエリを生成します。
 
-5. 関数を含む最初の生成済みセルをクリックし、 `qs_connect()` 再生ボタンをクリックして実行します。 この関数は、ノートブックインスタンスとクエリサービスの間に接続を作成します。
+5. 関数を含む最初に生成されたセルをクリックし `qs_connect()` 、再生ボタンをクリックして実行します。 この関数は、ノートブックインスタンスとクエリサービスとの間の接続を作成します。
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. 2番目に生成されたSQLクエリからAdobe Analyticsデータセット名をコピーします。この名前は、の後の値になりま `FROM`す。
+6. 2番目に生成されたSQLクエリからAdobe Analyticsデータセット名をコピーします。この名前は、の後の値になり `FROM`ます。
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
-7. [ **+]ボタンをクリックして、新しいノートブックのセルを挿** 入します。
+7. [ **+]** ボタンをクリックして、新しいノートブックのセルを挿入します。
 
    ![](../images/jupyterlab/query/insert_cell.gif)
 
-8. 次のインポート文を新しいセルにコピー、貼り付け、実行します。 次の文は、データを視覚化するために使用されます。
+8. 次のインポート・ステートメントを新しいセルにコピー、貼り付け、実行します。 以下の文は、データを視覚化するために使用されます。
 
    ```python
    import plotly.plotly as py
@@ -87,23 +78,23 @@ Adobe Experience Platformを使用すると、Data Science Workspaceで構造化
    target_day = "01"
    ```
 
-   - `target_table` :Adobe Analyticsデータセットの名前。
-   - `target_year` :ターゲットデータの元の年。
-   - `target_month` :ターゲット元の特定の月。
-   - `target_day` :ターゲットデータの元の特定の日。
-   >[!NOTE] これらの値はいつでも変更できます。 変更を適用する場合は、必ず変数のセルを実行して変更を適用してください。
+   - `target_table` : Adobe Analyticsデータセットの名前。
+   - `target_year` : ターゲットデータの元となる特定の年。
+   - `target_month` : ターゲットの開始月を指定します。
+   - `target_day` : ターゲットデータの元となる特定の日。
+   >[!NOTE] これらの値はいつでも変更できます。 変更を適用する場合は、必ず変数セルを実行し、変更を適用してください。
 
-## クエリデータ
+## データのクエリ {#query-your-data}
 
-個々のノートブック・セルに次のSQLクエリを入力します。 クエリを実行するには、セルをクリックし、再生ボタンをク **リック** します。 成功したクエリの結果またはエラーログは、実行されたセルの下に表示されます。
+個々のノートブック・セルに次のSQLクエリを入力します。 クエリを実行するには、セルをクリックし、次に **[!UICONTROL play]** ボタンをクリックします。 正常なクエリ結果またはエラーログが、実行されたセルの下に表示されます。
 
-ノートブックが長期間非アクティブな場合、ノートブックとクエリサービスの接続が切断される場合があります。 その場合は、右上隅にある **Power** （パワー）ボタンをクリックしてJupyterLabを再起動します。
+ノートブックが長時間非アクティブな場合、ノートブックとクエリサービス間の接続が切断される場合があります。 このような場合は、右上隅にある **[!UICONTROL Power]** ボタンをクリックしてJupterLabを再起動します。
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-ノートブックのカーネルはリセットされますが、セルは残り、すべてのセ **ルを** 再実行して、中断した場所に移動します。
+ノートブックのカーネルはリセットされますが、セルは残ります。セルを再実行して、中断した場所 **[!UICONTROL all]** に移動してください。
 
-### 時間別訪問者数
+### 時間別訪問者数 {#hourly-visitor-count}
 
 次のクエリは、指定した日付の時間別訪問者数を返します。
 
@@ -123,9 +114,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-上記のクエリでは、句 `_acp_year` のターゲット `WHERE` がの値に設定されます `target_year`。 変数を中括弧(`{}`)で囲んで、SQLクエリに含めます。
+上記のクエリでは、 `_acp_year` 節のターゲットがの値に設定され `WHERE``target_year`ます。 変数を波括弧(`{}`)で囲んで、SQLクエリに含めます。
 
-オプションの変数は、クエリの最初の行に含まれま `hourly_visitor`す。 クエリの結果は、この変数にPandasデータフレームとして保存されます。 結果をデータフレームに保存すると、後で目的のPythonパッケージを使用してクエリ結果を視覚化できます。 次のPythonコードを新しいセルで実行し、棒グラフを生成します。
+クエリの最初の行には、オプションの変数が含まれ `hourly_visitor`ます。 クエリの結果は、この変数にPandasのデータフレームとして保存されます。 結果をデータフレームに格納すると、目的のPythonパッケージを使用して、後でクエリ結果を視覚化できます。 次のPythonコードを新しいセルで実行して、棒グラフを生成します。
 
 ```python
 trace = go.Bar(
@@ -144,7 +135,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### 時間別アクティビティ数
+### 時間別アクティビティ数 {#hourly-activity-count}
 
 次のクエリは、指定した日付の時間別アクション数を返します。
 
@@ -165,13 +156,13 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-上記のクエリを実行すると、結果がデータフレ `hourly_actions` ームとして保存されます。 新しいセルで次の関数を実行し、結果をプレビューします。
+上記のクエリを実行すると、結果がデータフレーム `hourly_actions` として保存されます。 新しいセルで次の関数を実行して、結果をプレビューします。
 
 ```python
 hourly_actions.head()
 ```
 
-上記のクエリを変更して、 **WHERE句の論理演算子を使用して、指定した日付範囲の時間別のアクション数を返すことができます** 。
+上記のクエリを変更して、 **WHERE** 節の論理演算子を使用して、指定した日付範囲に対して時間別のアクション数を返すことができます。
 
 #### クエリ <!-- omit in toc -->
 
@@ -189,15 +180,15 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-変更したクエリを実行すると、結果がデータフレ `hourly_actions_date_range` ームとして保存されます。 新しいセルで次の関数を実行し、結果をプレビューします。
+変更したクエリを実行すると、結果がデータフレーム `hourly_actions_date_range` として保存されます。 新しいセルで次の関数を実行して、結果をプレビューします。
 
 ```python
 hourly_actions_date_rage.head()
 ```
 
-### 1回のイベントセッションあたりの訪問者数
+### 訪問者セッションあたりのイベント数 {#number-of-events-per-visitor-session}
 
-次のクエリは、指定した日付のイベントセッションあたりの訪問者数を返します。
+次のクエリは、指定した日付に対する訪問者セッションあたりのイベント数を返します。
 
 #### クエリ <!-- omit in toc -->
 
@@ -230,9 +221,9 @@ fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
 
-### 特定の日の人気のあるページ
+### 特定の日の人気のあるページ {#popular-pages-for-a-given-day}
 
-次のクエリは、指定した日付で最も人気の高い10ページを返します。
+次のクエリは、指定した日付に対して、最頻訪問ページ10ページを返します。
 
 #### クエリ <!-- omit in toc -->
 
@@ -249,9 +240,9 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### 特定の日のアクティブなユーザー
+### 特定の日のアクティブなユーザー {#active-users-for-a-given-day}
 
-次のクエリは、指定した日付で最もアクティブな10人のユーザーを返します。
+次のクエリは、指定した日付に対して最もアクティブなユーザー10人を返します。
 
 #### クエリ <!-- omit in toc -->
 
@@ -268,9 +259,9 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-### ユーザ別のアクティブな市区町村アクティビティ
+### ユーザーアクティビティ別のアクティブな市区町村 {#active-cities-by-user-activity}
 
-次のクエリは、指定した日付のユーザーアクティビティの大部分を生成している10の市区町村を返します。
+次のクエリは、指定した日付に対して、ユーザーアクティビティの大部分を生み出している10の市区町村を返します。
 
 #### クエリ <!-- omit in toc -->
 
@@ -289,4 +280,4 @@ LIMIT  10;
 
 ## 次の手順 <!-- omit in toc -->
 
-このチュートリアルでは、Jupyterノートブックのクエリサービスを使用する場合の使用例をいくつか示しました。 「 [Analyze your data using Jupyter Notebooks](./analyze-your-data.md) 」チュートリアルに従って、データアクセスSDKを使用して同様の操作がどの程度実行されるかを確認します。
+このチュートリアルでは、Jupyterノートブックのクエリサービスを使用する場合の使用例をいくつか示しました。 「Jupyter Notebooks [(ジャプターノートブックを使用したデータの](./analyze-your-data.md) 分析)」チュートリアルに従って、データアクセスSDKを使用して同様の操作がどの程度実行されているかを確認します。
