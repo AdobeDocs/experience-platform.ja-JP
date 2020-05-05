@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 顧客AIでのスコアのダウンロード
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
+source-git-commit: 7c892d92a50312fb4b733431737b796651689804
 
 ---
 
@@ -15,43 +15,43 @@ source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
 
 ## はじめに
 
-顧客AIでは、パーケファイル形式でスコアをダウンロードできます。 このチュートリアルでは、はじめにのガイドの「お客様のAIスコアのダウンロード」の節を読み終えてい [る必要があ](../getting-started.md) ります。
+顧客AIでは、スコアをパーケファイル形式でダウンロードできます。 このチュートリアルでは、はじめに [](../getting-started.md) 「Customer AIスコアのダウンロード」の節を読み終えている必要があります。
 
-さらに、顧客AIのスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスを使用できる必要があります。 新しいサービスインスタンスを作成するには、「顧客AI [インスタンスの設定」にアクセスしま](./configure.md)す。 サービスインスタンスを最近作成し、まだトレーニングとスコアリングを行っている場合は、実行が終了するまで24時間お待ちください。
+さらに、顧客AIのスコアにアクセスするには、正常な実行ステータスのサービスインスタンスが使用可能である必要があります。 新しいサービスインスタンスを作成するには、「顧客AIインスタンスの [設定](./configure.md)」にアクセスします。 最近サービスインスタンスを作成したが、まだトレーニングとスコアリングを受けている場合は、24時間待ってから実行を終了してください。
 
-現在、顧客AIスコアをダウンロードする方法は2つあります。
+現在、顧客のAIスコアをダウンロードする方法は2つあります。
 
-1. 個々のレベルでスコアをダウンロードしたい場合や、リアルタイム顧客プロファイルが有効になっていない場合は、開始を行い、データセットIDを [探してください](#dataset-id)。
-2. プロファイルを有効にしていて、顧客AIを使用して設定したセグメントをダウンロードする場合は、顧客AIを使用して設定したセ [グメントをダウンロードするように移動しま](#segment)す。
+1. 個々のレベルでスコアをダウンロードしたい場合、またはリアルタイム顧客プロファイルが有効になっていない場合は、開始に進んでデータセットIDを [探してください](#dataset-id)。
+2. プロファイルが有効になっていて、Customer AIを使用して設定したセグメントをダウンロードする場合は、Customer AIを使用して設定したセグメントを [ダウンロードします](#segment)。
 
 ## Find your dataset ID {#dataset-id}
 
-顧客AIインサイトのサービスインスタンス内で、右上のナビゲ *ーションの* 「その他のアクション」ドロップダウンをクリックし、「アクセススコア」を **[!UICONTROL 選択します]**。
+顧客AIインサイトのサービスインスタンス内で、右上のナビゲーションの「 *その他のアクション* 」ドロップダウンをクリックし、「」を選択し **[!UICONTROL Access scores]**&#x200B;ます。
 
 ![その他のアクション](../images/insights/more-actions.png)
 
-新しいダイアログが表示され、ダウンロードスコアのドキュメントへのリンクと、現在のインスタンスのデータセットIDが含まれます。 データセットIDをクリップボードにコピーし、次の手順に進みます。
+新しいダイアログが表示され、ダウンロードスコアに関するドキュメントへのリンクと現在のインスタンスのデータセットIDが含まれます。 データセットIDをクリップボードにコピーし、次の手順に進みます。
 
 ![データセットID](../images/download-scores/access-scores.png)
 
 ## バッチIDの取得 {#retrieve-your-batch-id}
 
-前の手順のデータセットIDを使用して、バッチIDを取得するには、Catalog APIを呼び出す必要があります。 追加のクエリパラメーターは、組織に属するバッチのリストではなく、単一のバッチを返すために、このAPI呼び出しに使用されます。 使用可能なクエリパラメータのタイプについて詳しくは、カタログパラメータを使用したカタログデータのフ [ィルタリングに関するガイドを参照してくださ](../../../catalog/api/filter-data.md)い。
+前の手順のデータセットIDを使用して、バッチIDを取得するには、カタログAPIを呼び出す必要があります。 組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、limitクエリーパラメーターの値を、返す金額に増やします。 使用可能なクエリパラメーターのタイプの詳細については、クエリパラメーターを使用したカタログデータの [フィルタリングに関するガイドを参照してください](../../../catalog/api/filter-data.md)。
 
 **API形式**
 
 ```http
-GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
+GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1
 ```
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DATASET_ID}` | 「アクセススコア」ダイアログで使用できるデータセットID。 |
+| `{DATASET_ID}` | データセットIDは、「アクセススコア」ダイアログで使用できます。 |
 
 **リクエスト**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&orderBy=desc:created&limit=1' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -60,47 +60,58 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **応答**
 
-成功した応答は、スコアバッチIDオブジェクトを含むペイロードを返します。 In this example, the object is `5e602f67c2f39715a87f46b1`.
-
-スコアバッチIDオブジェクト内には配列が含ま `relatedObjects` れます。 この配列には2つのオブジェクトが含まれています。 最初のオブジェクトの値 `type` は「batch」で、IDも含まれています。 次の応答の例では、バッチIDはです `035e2520-5e69-11ea-b624-51evfeba55d1`。 次のAPI呼び出しで使用するバッチIDをコピーします。
+成功した応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチIDで `01E5QSWCAASFQ054FNBKYV6TIQ`す。 バッチIDをコピーして、次のAPI呼び出しで使用します。
 
 ```json
-{   
-    "5e602f67c2f39715a87f46b1": {
-        "imsOrg": "{IMS_ORG}",
+{
+    "01E5QSWCAASFQ054FNBKYV6TIQ": {
+        "status": "success",
+        "tags": {
+            "Tags": [ ... ],
+        },
         "relatedObjects": [
             {
-                "id": "5c01a91863540e14cd3d0432",
-                "type": "dataSet"
-            },
-            {
-                "id": "035e2520-5e69-11ea-b624-51evfeba55d1",
-                "type": "batch"
+                "type": "dataSet",
+                "id": "5cd9146b31dae914b75f654f"
             }
         ],
-        "status": "success",
-        "metrics": {
-            "recordsRead": 46721830,
-            "recordsWritten": 46721830,
-            "avgNumExecutorsPerTask": 33,
-            "startTime": 1583362385336,
-            "inputSizeInKb": 10242034,
-            "endTime": 1583363197517
+        "id": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "externalId": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "replay": {
+            "predecessors": [
+                "01E5N7EDQQP4JHJ93M7C3WM5SP"
+            ],
+            "reason": "Replacing for 2020-04-09",
+            "predecessorListingType": "IMMEDIATE"
         },
-        "errors": [],
-        "created": 1550791457173,
-        "createdClient": "{CLIENT_CREATED}",
-        "createdUser": "{CREATED_BY}",
-        "updatedUser": "{CREATED_BY}",
-        "updated": 1550792060301,
-        "version": "1.0.116"
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "412657965Y566A4A0A495D4A@AdobeOrg",
+        "started": 1586715571808,
+        "metrics": {
+            "partitionCount": 1,
+            "outputByteSize": 2380339,
+            "inputFileCount": -1,
+            "inputByteSize": 2381007,
+            "outputRecordCount": 24340,
+            "outputFileCount": 1,
+            "inputRecordCount": 24340
+        },
+        "completed": 1586715582735,
+        "created": 1586715571217,
+        "createdClient": "acp_foundation_push",
+        "createdUser": "sensei_exp_attributionai@AdobeID",
+        "updatedUser": "acp_foundation_dataTracker@AdobeID",
+        "updated": 1586715583582,
+        "version": "1.0.5"
     }
 }
 ```
 
-## バッチIDを使用して次のAPI呼び出しを取得する {#retrieve-the-next-api-call-with-your-batch-id}
+## バッチIDを使用した次のAPI呼び出しを取得する {#retrieve-the-next-api-call-with-your-batch-id}
 
-バッチIDを取得すると、に新しいGETリクエストを作成できます `/batches`。 リクエストは、次のAPIリクエストとして使用されるリンクを返します。
+バッチIDを取得すると、に新しいGETリクエストを作成でき `/batches`ます。 リクエストは、次のAPIリクエストとして使用されるリンクを返します。
 
 **API形式**
 
@@ -110,11 +121,11 @@ GET batches/{BATCH_ID}/files
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 前の手順で取得したバッチID [です](#retrieve-your-batch-id)。 |
+| `{BATCH_ID}` | 前の手順で取得したバッチIDは、バッチID [を取得します](#retrieve-your-batch-id)。 |
 
 **リクエスト**
 
-独自のバッチIDを使用して、次のリクエストを作成します。
+独自のバッチIDを使用して、次のリクエストを行います。
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5e69-11ea-b624-51evfeba55d1/files' \
@@ -126,7 +137,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 **応答**
 
-成功した応答は、オブジェクトを含むペイロードを返 `_links` します。 オブジェクト `_links` 内には、新し `href` いAPI呼び出しを値として含むが、 次の手順に進むには、この値をコピーします。
+成功した応答は、 `_links` オブジェクトを含むペイロードを返します。 オブジェクト内 `_links` には、新しいAPI呼び出し `href` を値として含むが、 この値をコピーして、次の手順に進みます。
 
 ```json
 {
@@ -154,7 +165,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 ## ファイルの取得 {#retrieving-your-files}
 
-前の手順で `href` 取得した値をAPI呼び出しとして使用し、新しいGETリクエストを作成して、ファイルディレクトリを取得します。
+前の手順で取得した `href` 値をAPI呼び出しとして使用し、新しいGETリクエストを作成してファイルディレクトリを取得します。
 
 **API形式**
 
@@ -164,7 +175,7 @@ GET files/{DATASETFILE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | dataSetFile IDは、前の手順の値 `href` で返さ [れます](#retrieve-the-next-api-call-with-your-batch-id)。 また、オブジェクトタイプの下の配 `data` 列からもアクセスできま `dataSetFileId`す。 |
+| `{DATASETFILE_ID}` | dataSetFile IDは、 `href` 前の手順の [値で返されます](#retrieve-the-next-api-call-with-your-batch-id)。 また、オブジェクトタイプの `data` 配列でもアクセスでき `dataSetFileId`ます。 |
 
 **リクエスト**
 
@@ -178,7 +189,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 **応答**
 
-応答には、単一のエントリを持つデータ配列、またはそのディレクトリに属するファイルのリストが含まれます。 次の例は、ファイルのリストを示し、読みやすくするために要約されています。 このシナリオでは、各ファイルのURLをたどって、ファイルにアクセスする必要があります。
+応答には、1つのエントリを持つデータ配列、またはそのディレクトリに属するファイルのリストが含まれます。 次の例は、ファイルのリストを示しており、読みやすくまとめられています。 このシナリオでは、各ファイルにアクセスするには、各ファイルのURLに従う必要があります。
 
 ```json
 {
@@ -223,13 +234,13 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 | `_links.self.href` | ディレクトリ内のファイルのダウンロードに使用するGET要求URLです。 |
 
 
-配列内の `href` 任意のファイルオブジェクトの値 `data` をコピーし、次の手順に進みます。
+アレイ内の任意のファイルオブジェクトの `href` 値をコピーし、 `data` 次の手順に進みます。
 
 ## ファイルデータのダウンロード
 
-ファイルデータをダウンロードするには、前の手順でコピーし `"href"` た値に対してGETリクエストを [実行します](#retrieving-your-files)。
+ファイルデータをダウンロードするには、前の手順でコピーした `"href"` 値にGETリクエストを行い、ファイル [を取得します](#retrieving-your-files)。
 
->[!NOTE] この要求をコマンドラインで直接行う場合は、要求ヘッダーの後に出力を追加するように求められる場合があります。 次のリクエストの例では、を使用していま `--output {FILENAME.FILETYPE}`す。
+>[!NOTE] この要求をコマンドラインで直接行う場合、要求ヘッダーの後に出力を追加するよう求められる場合があります。 次のリクエストの例は、を使用してい `--output {FILENAME.FILETYPE}`ます。
 
 **API形式**
 
@@ -239,7 +250,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | dataSetFile IDは、前の手順の値 `href` で返さ [れます](#retrieve-the-next-api-call-with-your-batch-id)。 |
+| `{DATASETFILE_ID}` | dataSetFile IDは、 `href` 前の手順の [値で返されます](#retrieve-the-next-api-call-with-your-batch-id)。 |
 | `{FILE_NAME}` | ファイルの名前。 |
 
 **リクエスト**
@@ -257,23 +268,23 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 **応答**
 
-応答により、現在のディレクトリで要求したファイルがダウンロードされます。 この例では、ファイル名は「filename.parket」です。
+応答によって、現在のディレクトリで要求したファイルがダウンロードされます。 この例では、ファイル名は「filename.parket」です。
 
 ![ターミナル](../images/download-scores/response.png)
 
-## 顧客AIで設定したセグメントのダウンロード {#segment}
+## 顧客AIで設定されたセグメントのダウンロード {#segment}
 
-スコアデータをダウンロードする別の方法は、データセットにオーディエンスを書き出すことです。 セグメント化ジョブが正常に完了したら（属性の値は「SUCCEEDED」）、オーディエンスをデータセットにエクスポートし、そこでアクセスし、処理を行うことができます。 `status` セグメント化について詳しくは、セグメントの概要を参 [照してくださ](../../../segmentation/home.md)い。
+スコアデータをダウンロードする別の方法は、オーディエンスをデータセットにエクスポートすることです。 セグメント化ジョブが正常に完了したら( `status` 属性の値は「SUCCEEDED」です)、オーディエンスをデータセットにエクスポートし、データセットにアクセスして処理できます。 セグメント化について詳しくは、 [セグメント化の概要を参照してください](../../../segmentation/home.md)。
 
 >[!IMPORTANT] この書き出し方法を利用するには、データセットに対してリアルタイム顧客プロファイルを有効にする必要があります。
 
-セグメント [評価ガイドの「セグメントの書き出し](../../../segmentation/tutorials/evaluate-a-segment.md) 」の節では、オーディエンスデータセットの書き出しに必要な手順について説明します。 このガイドでは、次の例の概要を説明しています。
+セグメント評価ガイドの「 [セグメントの](../../../segmentation/tutorials/evaluate-a-segment.md) エクスポート」の節では、オーディエンスデータセットのエクスポートに必要な手順について説明しています。 このガイドは、次の例の概要と例を示しています。
 
-- **ターゲットデータセットの作成：** データセットを作成して、オーディエンスメンバーを保持します。
-- **オーディエンスセットでのプロファイルの生成：** セグメントジョブの結果に基づいて、プロファイルセットにXDM個々のジョブを設定します。
+- **ターゲットデータセットの作成：** オーディエンスメンバーを格納するデータセットを作成します。
+- **データセット内でのオーディエンスプロファイルの生成：** セグメントジョブの結果に基づいて、XDM個々のプロファイルにデータセットを設定します。
 - **書き出しの進行状況の監視：** 書き出し処理の現在の進行状況を確認します。
-- **読み取りオーディエンスデータ：** 表示されるXDM個々のプロファイルを取得します。オーディエンスのメンバー。
+- **オーディエンスデータの読み取り：** オーディエンスのメンバーを表すXDM個々のプロファイルを取得します。
 
 ## 次の手順
 
-このドキュメントでは、顧客AIスコアのダウンロードに必要な手順を説明しています。 提供される他のインテリジェントサービス [とガイドを](../../home.md) 、引き続き参照できます。
+このドキュメントでは、顧客のAIスコアをダウンロードする際に必要な手順を説明しています。 提供される他の [インテリジェントサービス](../../home.md) 、ガイドを引き続き参照できるようになりました。
