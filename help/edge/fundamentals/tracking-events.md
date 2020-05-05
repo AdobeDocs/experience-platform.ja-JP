@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK のイベントのトラッキン�
 description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 translation-type: tm+mt
-source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
+source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
 
 ---
 
@@ -81,35 +81,6 @@ alloy("event", {
 });
 ```
 
-### ビューの開始
-
-ビューが開始したら、`event` コマンド内で `viewStart` を `true` に設定して SDK に通知すとが重要です。これは、特に、SDK がパーソナライズされたコンテンツを取得およびレンダリングする必要があることを示します。ページ上のコードを変更する必要がないので、現在パーソナライゼーションを使用していない場合でも、後からパーソナライゼーションやその他の機能を有効にする手順が大幅に簡略化されます。また、データを収集した後で分析レポートを表示する場合、ビューをトラッキングすると便利です。
-
-ビューの定義は、コンテキストによって異なります。
-
-* 通常の Web サイトでは一般的に、各 Web ページは個別の表示と見なされます。この場合、`viewStart` が `true` に設定されているイベントは、できる限り早くページの上部で実行する必要があります。
-* 単一ページアプリケーション（SPA）の方が、ビューの定義は少なくなります。これは通常、ユーザーがアプリケーション内を移動し、ほとんどのコンテンツが変更されたことを示します。単一ページアプリケーションの技術的な基礎に精通しているユーザー向けに説明すると、これは通常アプリケーションが新しいルートを読み込む際に発生します。ユーザーが新しいビューに移動した場合、_ビュー_&#x200B;の定義を選択すると、`viewStart` が `true` に設定されているイベントを実行する必要があります。
-
-`viewStart` が `true` に設定されているイベントは、Adobe Experience Cloud にデータを送信したり、Adobe Experience Cloud のコンテンツを要求したりする際の主なメカニズムです。次に、ビューの開始方法を示します。
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-データの送信後、サーバーはパーソナライズされたコンテンツなどを使用して応答します。このパーソナライズされたコンテンツは、自動的にビューへとレンダリングされます。新しいビューのコンテンツには、リンクハンドラーも自動的に添付されます。
-
 ## sendBeacon API の使用
 
 Web ページのユーザーが離脱する直前にイベントデータを送信するのは、困難な場合があります。リクエストに時間がかかりすぎると、ブラウザーによってリクエストがキャンセルされる場合があります。一部のブラウザーではこの間に、データを簡単に収集できるよう、`sendBeacon` と呼ばれる Web 標準 API が実装されています。`sendBeacon` を使用する場合、ブラウザーはグローバルブラウジングコンテキストで Web リクエストをおこないます。これは、ブラウザーがバックグラウンドでビーコンリクエストをおこない、ページナビゲーションを保持しないことを意味します。Adobe Experience Platform Web SDK に `sendBeacon` を使用するよう伝えるには、イベントコマンドにオプション `"documentUnloading": true` を追加します。次に例を示します。
@@ -138,7 +109,7 @@ alloy("event", {
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -149,7 +120,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
