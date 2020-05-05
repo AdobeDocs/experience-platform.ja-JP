@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
+source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
 
 ---
 
@@ -35,6 +35,7 @@ source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
       - [ServiceNowコネクタ](connectors/customer-success/servicenow.md)
    - データベース {#databases}
       - [Amazon Redshiftコネクタ](connectors/databases/redshift.md)
+      - [Apache Cassandraコネクタ](connectors/databases/cassandra.md)
       - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
       - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
       - [Azure Data Explorerコネクタ](connectors/databases/data-explorer.md)
@@ -73,6 +74,7 @@ source-git-commit: 30f36d18f0e670ede02041db04f1cc8be55d11a3
          - [ServiceNowコネクタ](tutorials/api/create/customer-success/servicenow.md)
       - データベース {#databases}
          - [Amazon Redshiftコネクタ](tutorials/api/create/databases/redshift.md)
+         - [Apache Cassandraコネクタ](tutorials/api/create/databases/cassandra.md)
          - [Azure HDInsightsコネクタのApache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorerコネクタ](tutorials/api/create/databases/data-explorer.md)
