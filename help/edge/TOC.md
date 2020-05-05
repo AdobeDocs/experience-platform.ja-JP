@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Networkヘルプ
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
 
 ---
 
@@ -17,12 +17,14 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 * 基本 {#fundamentals}
    * [SDK のインストール](fundamentals/installing-the-sdk.md)
    * [コマンドの実行](fundamentals/executing-commands.md)
+   * [エッジの設定](fundamentals/edge-configuration.md)
    * [SDK の設定](fundamentals/configuring-the-sdk.md)
    * [イベントのトラッキング](fundamentals/tracking-events.md)
    * [イベントデータの結合](fundamentals/merging-event-data.md)
    * [デバッグ](fundamentals/debugging.md)
    * [複数のプロパティの操作](fundamentals/interacting-with-multiple-properties.md)
    * [パーソナライズされたコンテンツのレンダリング](fundamentals/rendering-personalization-content.md)
+   * [ちらつきの管理](fundamentals/managing-flicker.md)
    * [同意のサポート](fundamentals/supporting-consent.md)
    * [アプリ内ブラウザーのサポート](fundamentals/supporting-in-app-browsers.md)
 * 実装内容 {#implement}
@@ -31,6 +33,8 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * Analytics {#analytics}
       * [Analytics の概要](solution-specific/analytics/analytics-overview.md)
       * [自動的にマッピングされた変数](solution-specific/analytics/automatically-mapped-vars.md)
+   * Target {#target}
+      * [ターゲットの概要](solution-specific/target/target-overview.md)
 * リファレンス {#ref}
    * [自動的に収集された値](reference/automatic-information.md)
    * [ライブラリ情報の取得](reference/retrieving-library-information.md)
