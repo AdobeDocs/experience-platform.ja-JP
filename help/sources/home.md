@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectorsの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
+source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
 
 ---
 
@@ -65,6 +65,7 @@ CRMシステムは、顧客との関係の構築に役立つデータを提供�
 エクスペリエンスプラットフォームは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
 - [Amazon Redshiftコネクタ](connectors/databases/redshift.md)
+- [Apache Cassandraコネクタ](connectors/databases/cassandra.md)
 - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
 - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
 - [Azure Data Explorerコネクタ](connectors/databases/data-explorer.md)
@@ -105,7 +106,7 @@ CRMシステムは、顧客との関係の構築に役立つデータを提供�
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **表示ソース** ：オン | 「 *カタログ* 」タブの各ソースタイプのソースに対して、「 *参照*」、「 **** アカウント」、「DataFlowAccounts」の各タブと共に読み取り専用アクセス権を付与します。 |
+| **表示ソース** ：オン | 「 *カタログ* 」タブの各ソースタイプのソースに対して、「 *参照*」、「 **** アカウント」、「DataFlow」の各タブと共に読み取り専用アクセス権を付与します。 |
 | **ソースの管理** : | **表示ソースに含まれる機能に加えて、**&#x200B;ソースに含まれる機能に加えて、Connect Source *option Catalog内の* Connect Source *option Catalogへのアクセス権を付与し、Select Data Option* Browse *Not Browse*** Notにアクセス権を付与します。 **また、「ソースの管理** 」では、DataFlowsを有効または無効にしたり ** 、スケジュールを編集したりできます。 |
 | **表示ソース** ：オフおよび **管理ソース** ：オフ | ソースへのアクセスをすべて取り消します。 |
 
