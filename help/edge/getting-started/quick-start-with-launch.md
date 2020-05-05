@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
 
 ---
 
@@ -32,14 +32,11 @@ Adobe Experience Platform にデータを送信するには、XDM スキーマ�
 - 作成したスキーマに Adobe Experience Platform Web SDK mixin を追加します。
 - スキーマを使用してデータの宛先となる[データセットを作成](https://platform.adobe.com/dataset/overview)します。
 
-## 設定 ID のリクエスト
+## 設定IDの作成
 
-SDK を使用するには、設定 ID が必要です。設定 ID を使用すると、データを適切な場所にルーティングできます。設定 ID は、コンサルタントまたは Client Care から入手できます。次の情報が必要になります。
+起動時に [エッジ設定ツールを使用して、設定IDを作成できます](../fundamentals/edge-configuration.md) 。
 
-- **組織 ID：**[こちら](https://docs.adobe.com/content/help/ja-JP/core-services/interface/manage-users-and-products/organizations.html)の手順を使用して確認できます。
-- **データセット ID：**&#x200B;データセットをクリックすると、データセットの UI に表示されます。
-- **スキーマ ID：**&#x200B;スキーマ作成画面の URL で使用できます。
-- **わかりやすい名前：**&#x200B;今後の UI でこの設定に使用されるわかりやすい名前です。
+>注意： この機能を使用するには、組織がホワイトリストに登録されている必要があります。 最終的なホワイトリスト登録のために、CSMにリストに登録するようにお問い合わせください。
 
 ## Launch での SDK のインストール
 
