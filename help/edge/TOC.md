@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Networkヘルプ
 translation-type: tm+mt
-source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
+source-git-commit: 44f8fceda91d4ee1044491d7eec363e501d46e70
+workflow-type: tm+mt
+source-wordcount: '89'
+ht-degree: 73%
 
 ---
 
@@ -27,6 +30,7 @@ source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
    * [ちらつきの管理](fundamentals/managing-flicker.md)
    * [同意のサポート](fundamentals/supporting-consent.md)
    * [アプリ内ブラウザーのサポート](fundamentals/supporting-in-app-browsers.md)
+   * [Experience Cloud IDの取得](fundamentals/retrieving-experience-cloud-id.md)
 * 実装内容 {#implement}
    * [製品](what-to-implement/commerce.md)
 * ソリューション固有の考慮事項 {#solutions}
