@@ -3,7 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: リアルタイム顧客データプラットフォームヘルプ
 translation-type: tm+mt
-source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
+source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+workflow-type: tm+mt
+source-wordcount: '407'
+ht-degree: 42%
 
 ---
 
@@ -35,8 +38,8 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [Adobe Advertising Cloud拡張機能](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Awin Advertising Conversionタグ拡張](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Awin Advertising Mastertag拡張](/help/rtcdp/destinations/awin-mastertag-extension.md)
-         * [ビームレイ拡張](/help/rtcdp/destinations/beemray-extension.md)
-         * [Bing Adsユニバーサルイベントトラッキング拡張](/help/rtcdp/destinations/bing-ads-extension.md)
+         * [Beemray拡張](/help/rtcdp/destinations/beemray-extension.md)
+         * [Bing Ads Universalイベントトラッキング拡張](/help/rtcdp/destinations/bing-ads-extension.md)
          * [ブランチの拡張](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight拡張](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
          * [Facebookピクセル拡張](/help/rtcdp/destinations/facebook-pixel-extension.md)
@@ -45,28 +48,28 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [Google広告の拡張](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
          * [Google Display と Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
-         * [Googleタグ拡張](/help/rtcdp/destinations/gtag-advertising-extension.md)
+         * [Googleのgtag拡張](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn Insightタグの拡張](/help/rtcdp/destinations/linkedin-extension.md)
-         * [Pinterestコンバージョントラッキング拡張](destinations/pinterest-extension.md)
+         * [Pinterestコンバージョントラッキングの拡張](destinations/pinterest-extension.md)
          * [TwitterユニバーサルWebサイトタグ拡張](destinations/twitter-uwt-extension.md)
       * Analyticsの宛先 {#analytics-destinations}
          * [Analyticsの宛先の概要](destinations/analytics-destinations.md)
-         * [Adform Webサイトトラッキング拡張](/help/rtcdp/destinations/adform-extension.md)
+         * [Adform Webサイトトラッキング拡張機能](/help/rtcdp/destinations/adform-extension.md)
          * [Adobe Analytics 拡張機能](/help/rtcdp/destinations/adobe-analytics-extension.md)
          * [Adobe Media Analytics for Audio and Video 拡張機能](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
          * [Clicktale拡張機能](/help/rtcdp/destinations/clicktale-extension.md)
          * [Contentsquare拡張子](/help/rtcdp/destinations/contentsquare-extension.md)
-         * [デシベル拡張](/help/rtcdp/destinations/decibel-extension.md)
+         * [デシベル拡張子](/help/rtcdp/destinations/decibel-extension.md)
          * [Demandbase拡張](/help/rtcdp/destinations/demandbase-extension.md)
          * [Dialogtechの拡張機能](/help/rtcdp/destinations/dialogtech-extension.md)
          * [Googleグローバルサイトタグ分析の拡張](/help/rtcdp/destinations/gtag-analytics-extension.md)
          * [Google Universal Analyticsの拡張機能](/help/rtcdp/destinations/google-universal-analytics-extension.md)
          * [JW Player Analytics（ベータ）拡張機能](/help/rtcdp/destinations/jw-player-analytics-extension.md)
          * [Nielsen BSDK拡張](destinations/nielsen-bsdk-extension.md)
-         * [Nielsen IMA Handler Extension](destinations/nielsen-ima-extension.md)
-         * [Nielsen VideoJSプレイヤーハンドラー拡張](destinations/nielsen-videojs-extension.md)
+         * [Nielsen IMAハンドラー拡張](destinations/nielsen-ima-extension.md)
+         * [Nielsen VideoJSプレイヤーハンドラーの拡張](destinations/nielsen-videojs-extension.md)
          * [Parse.ly Analytics拡張機能](destinations/parsely-extension.md)
-         * [量子指標の拡張](destinations/quantum-metric-extension.md)
+         * [量子指標拡張](destinations/quantum-metric-extension.md)
          * [SessionCam拡張](destinations/sessioncam-extension.md)
          * [TMMData拡張](destinations/tmmdata-extension.md)
          * [Yext Conversion Tracking拡張](destinations/yext-extension.md)
@@ -75,7 +78,7 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [クラウドストレージの宛先を作成するためのワークフロー](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Amazon S3 の宛先](destinations/amazon-s3-destination.md)
          * [SFTP の宛先](destinations/sftp-destination.md)
-      * データ管理プラットフォームの宛先{dmp-destinations}
+      * データ管理プラットフォームの宛先 {#dmp-destinations}
          * [データ管理プラットフォームの宛先の概要](destinations/dmp-destinations.md)
          * [オーディエンスマネージャDIL拡張](/help/rtcdp/destinations/aam-dil-extension.md)
       * 電子メールマーケティングの宛先 {#email-destinations}
@@ -89,34 +92,34 @@ source-git-commit: 6f27a5eb12991fce0fbeef2d77622dfcf4a97cae
          * [PebblePost拡張子](destinations/pebblepost-extension.md)
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
-         * [エクスペリエンスプラットフォーム起動の拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
-      * パーソナライゼーションの宛先 {#personalization-destinations}
+         * [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+      * 個人設定の宛先 {#personalization-destinations}
          * [パーソナライゼーションの宛先の概要](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target 拡張機能](/help/rtcdp/destinations/adobe-target-extension.md)
          * [Adobe Target v2 拡張機能](/help/rtcdp/destinations/adobe-target-v2-extension.md)
-         * [ビームレイ拡張](/help/rtcdp/destinations/beemray-extension.md)
-         * [D&amp;B訪問者情報拡張](/help/rtcdp/destinations/dnb-extension.md)
+         * [Beemray拡張](/help/rtcdp/destinations/beemray-extension.md)
+         * [D&amp;B訪問者インテリジェンス拡張](/help/rtcdp/destinations/dnb-extension.md)
          * [Experience Cloud ID サービス拡張機能](/help/rtcdp/destinations/adobe-ecid-extension.md)
          * [勝者拡張](/help/rtcdp/destinations/gainsight-extension.md)
          * [キックファイア拡張](/help/rtcdp/destinations/kickfire-extension.md)
-         * [Marketto Web Personalization Extension](destinations/marketo-web-personalization-extension.md)
+         * [Marketto Webパーソナライゼーション拡張機能](destinations/marketo-web-personalization-extension.md)
       * ソーシャルネットワークの宛先{#social-destinations}
          * [ソーシャルネットワークの宛先の概要](/help/rtcdp/destinations/social-network-destinations.md)
          * [ソーシャルネットワークの宛先の認証フロー](/help/rtcdp/destinations/social-network-destinations-workflow.md)
          * [Adobe Livefyre拡張機能](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-         * [Facebookの宛先](/help/rtcdp/destinations/facebook-destination.md)
+         * [Facebookのリンク先](/help/rtcdp/destinations/facebook-destination.md)
       * 調査先 {#survey-destinations}
          * [調査先の概要](/help/rtcdp/destinations/survey-destinations.md)
          * [Forese拡張](/help/rtcdp/destinations/foresee-extension.md)
          * [InMoment拡張](/help/rtcdp/destinations/inmoment-extension.md)
-         * [Qualtrics Webサイトのフィードバック拡張](destinations/qualtrics-extension.md)
-         * [Web切断調査- QuestionPro拡張機能](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
+         * [Qualtrics Webサイトフィードバック拡張](destinations/qualtrics-extension.md)
+         * [Web Intercept調査- QuestionPro拡張機能](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
       * 顧客の宛先の音声 {#voice-of-customer-destinations}
-         * [顧客の宛先の音声概要](/help/rtcdp/destinations/voice-of-customer-destinations.md)
-         * [Confirm Digital Feedback extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)
+         * [顧客の宛先の概要の音声](/help/rtcdp/destinations/voice-of-customer-destinations.md)
+         * [デジタルフィードバックの拡張を確認](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)
          * [インボカタグ拡張](/help/rtcdp/destinations/invoca-extension.md)
-         * [メダリア拡張](destinations/medallia-extension.md)
-         * [Talk URL Inbox Extension](destinations/talkurl-extension.md)
+         * [Medalia extension](destinations/medallia-extension.md)
+         * [Talk URL Inbox拡張](destinations/talkurl-extension.md)
    * 宛先チュートリアル {#dest-tutorials}
       * [宛先に接続](/help/rtcdp/destinations/connect-destination.md)
       * [宛先へのプロファイルとセグメントのアクティブ化](destinations/activate-destinations.md)
