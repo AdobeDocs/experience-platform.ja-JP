@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
+source-git-commit: 51acb07efe624c7cf1dfaabc4b03f04c76ac88f8
+workflow-type: tm+mt
+source-wordcount: '391'
+ht-degree: 89%
 
 ---
 
@@ -25,10 +28,7 @@ source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
 
 Adobe Experience Platform にデータを送信するには、XDM スキーマと、そのスキーマを使用するデータセットを作成する必要があります。
 
-- 次の mixin を使用して[スキーマを作成](../../xdm/tutorials/create-schema-ui.md)します。
-   - ExperienceEvent の実装の詳細
-   - ExperienceEvent の環境の詳細
-   - ExperienceEvent Web の詳細
+- [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
 - 作成したスキーマに Adobe Experience Platform Web SDK mixin を追加します。
 - スキーマを使用してデータの宛先となる[データセットを作成](https://platform.adobe.com/dataset/overview)します。
 
