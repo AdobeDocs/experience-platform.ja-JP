@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
+source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 1%
 
 ---
 
@@ -35,7 +38,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [ServiceNowコネクタ](connectors/customer-success/servicenow.md)
    - データベース {#databases}
       - [Amazon Redshiftコネクタ](connectors/databases/redshift.md)
-      - [Apache Cassandraコネクタ](connectors/databases/cassandra.md)
       - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
       - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
       - [Azure Data Explorerコネクタ](connectors/databases/data-explorer.md)
@@ -74,7 +76,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
          - [ServiceNowコネクタ](tutorials/api/create/customer-success/servicenow.md)
       - データベース {#databases}
          - [Amazon Redshiftコネクタ](tutorials/api/create/databases/redshift.md)
-         - [Apache Cassandraコネクタ](tutorials/api/create/databases/cassandra.md)
          - [Azure HDInsightsコネクタのApache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorerコネクタ](tutorials/api/create/databases/data-explorer.md)
@@ -112,8 +113,8 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [マーケティング自動化データの収集](tutorials/api/collect/marketing-automation.md)
       - [支払データの収集](tutorials/api/collect/payments.md)
       - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
-   - [サードパーティのクラウドストレージシステムからのパーケーデータの取り込み](tutorials/api/create-dataset-base-connection.md)
-   - [Flow Service APIを使用したデータセットベースの接続の作成](tutorials/api/cloud-storage-parquet.md)
+   - [サードパーティのクラウドストレージシステムからのパーケーデータの取り込み](tutorials/api/cloud-storage-parquet.md)
+   - [Flow Service APIを使用したデータセットベースの接続の作成](tutorials/api/create-dataset-base-connection.md)
 - UIチュートリアル {#ui-tutorials}
    - ソースコネクタを作成する {#create}
       - アドビアプリケーション {#adobe-applications}
