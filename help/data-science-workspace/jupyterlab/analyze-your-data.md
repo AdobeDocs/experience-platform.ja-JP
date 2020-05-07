@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ノートブックを使用してデータを分析する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '1746'
 ht-degree: 0%
@@ -54,7 +54,7 @@ Adobe Experience Platform UIで、上部のメニューの「Data Science」タ�
 
 Adobe Experience Platformの内部データと外部データへのアクセスを調べます。 このライブラリを使用して、データセットやXDMスキーマなどの内部データにアクセスします。 `data_access_sdk_python` 外部データの場合は、Pandas Pythonライブラリを使用します。
 
-#### 外部データ {#external-data}
+#### 外部データ
 
 小売売上ノートブックを開き、「Load Data」ヘッダーを探します。 以下のPythonコードは、GithubでホストされるCSVをDataFrameに読み込むために、pandasの `DataFrame` データ構造と [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 関数を使用しています。
 
@@ -72,7 +72,7 @@ PandasのDataFrameデータ構造は、2次元のラベル付きデータ構造�
 
 次に、エクスペリエンスプラットフォームのデータへのアクセスについて説明します。
 
-#### データセットID別
+##### データセットID別
 
 この節では、小売売上データセットを使用します。これは、小売売上サンプルノートブックで使用されているものと同じデータセットです。
 
@@ -148,7 +148,7 @@ df.describe()
 
 これは、22店舗が、17店舗 `storeType` 、 `A`6店舗であるこ `storeType` とを意味する `B``storeType``C`。
 
-### データの視覚化
+#### データの視覚化
 
 データフレームの値がわかったので、ビジュアライゼーションを使用してこれを補足し、パターンをより明確にし、より簡単に識別できるようにします。 グラフは、結果をオーディエンスに伝える場合にも便利です。 視覚化に役立つPythonライブラリには、次のものがあります。
 - [Matplotlib](https://matplotlib.org/)
@@ -167,7 +167,7 @@ df.describe()
 [ggplot](https://ggplot2.tidyverse.org/) はmatplotlibの上にも構築されたパッケージです。 ただし、主な違いは、ツールがR用のggplot2のポートであることです。seabornと同様に、matplotlibを使用して改善することです。 R向けのggplot2に詳しいユーザは、このライブラリを検討する必要があります。
 
 
-### 一変グラフ
+##### 一変グラフ
 
 単変数グラフは、個々の変数をグラフ化したものです。 一般的な単変量グラフを使用してデータを視覚化するのは、ボックスとウィスカーのプロットです。
 
@@ -177,7 +177,7 @@ df.describe()
 
 ボックスとウィスカープロットは、データの分布を示すのに使用されます。 プロットの外側の線は上下の四分位数を示し、ボックスは四分位数の範囲に及びます。 ボックス内の行は中央値を示しています。 四分位数または四分位数の1.5を超えるデータポイントは、すべて円としてマークされます。 これらの点は外れ値と見なされます。
 
-### 多変量分析グラフ
+##### 多変量分析グラフ
 
 多変量分析プロットは、変数間の相互作用を確認するために使用されます。 このビジュアライゼーションを使用すると、データ科学者は変数間に相関関係やパターンがあるかどうかを確認できます。 一般的な多変量分析グラフは相関行列です。 相関行列を用いて、相関係数を用いて、複数の変数間の依存関係を定量化する。
 
