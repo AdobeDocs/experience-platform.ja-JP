@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspaceヘルプ
 translation-type: tm+mt
-source-git-commit: f38a2ba85248bbd12f5ef2487e8d8e6fe3319b32
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 4%
+source-wordcount: '195'
+ht-degree: 3%
 
 ---
 
@@ -29,12 +29,6 @@ ht-degree: 4%
    * [MLServices](api/mlservices.md)
    * [インサイト](api/insights.md)
    * [付録](api/appendix.md)
-* リアルタイム機械学習（アルファ） {#real-time-machine-learning}
-   * [概要](real-time-machine-learning/home.md)
-   * [はじめに](real-time-machine-learning/getting-started.md)
-   * [リアルタイムMLモデルのトレーニング](real-time-machine-learning/training-ml-model.md)
-   * [リアルタイムMLモデルのスコアリング](real-time-machine-learning/scoring-ml-model.md)
-   * [ノードリファレンスガイド](real-time-machine-learning/node-reference.md)
 * 事前設計されたレシピ {#pre-built-recipes}
    * [商品の推奨レシピ](pre-built-recipes/product-recommendations.md)
    * [製品購入予測](pre-built-recipes/product-purchase-prediction.md)
