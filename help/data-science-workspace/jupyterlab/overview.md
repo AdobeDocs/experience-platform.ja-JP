@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupterLabユーザガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '3356'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # JupterLabユーザガイド
 
-JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型開発環境を提供します。
+JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型の開発環境を提供します。
 
 このドキュメントでは、JupyterLabとその機能の概要と、一般的な操作の実行方法を説明します。
 
@@ -54,7 +54,7 @@ JupyterLabの主な機能と共通の操作を実行する手順に関する情�
 * [コードセル](#code-cells)
 * [カーネル](#kernels)
 * [カーネルセッション](#kernel-sessions)
-* [PySpark/Spark実行リソース](#pyspark-spark-execution-resource)
+* [PySpark/Spark実行リソース](#execution-resource)
 * [ランチャー](#launcher)
 
 ### JupyterLabにアクセス {#access-jupyterlab}
@@ -143,7 +143,7 @@ JupyterLabのアクティブなノートブックまたはアクティビティ�
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### PySpark/Spark実行リソース {#pyspark-spark-execution-resource}
+### PySpark/Spark実行リソース {#execution-resource}
 
 >[!IMPORTANT]
 >Spark 2.3からSpark 2.4へのトランジションでは、SparkとPySparkの両方のカーネルは廃止されています。
