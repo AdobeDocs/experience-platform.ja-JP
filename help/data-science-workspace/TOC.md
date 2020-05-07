@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspaceヘルプ
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: f38a2ba85248bbd12f5ef2487e8d8e6fe3319b32
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 4%
 
 ---
 
@@ -12,44 +15,50 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 * [Data Science Workspaceの概要](home.md)
 * [Data Science Workspaceのチュートリアル](walkthrough.md)
-* JupyterLabノートブック {#jupyterlab}
-   * [JupyterLabユーザガイド](jupyterlab/overview.md)
+* JupterLabノートブック {#jupyterlab}
+   * [JupterLabユーザガイド](jupyterlab/overview.md)
    * [ノートブックを使用してデータを分析する](jupyterlab/analyze-your-data.md)
-   * [クエリサービス](jupyterlab/query-service.md)
+   * [ジュピターノートのクエリサービス](jupyterlab/query-service.md)
    * [Jupyterノートブックを使用してレシピを作成する](jupyterlab/create-a-recipe.md)
-* Senesi Machine Learning API {#api}
+* Senesie Machine Learning API {#api}
    * [はじめに](api/getting-started.md)
    * [エンジン](api/engines.md)
-   * [MLInstances （レシピ）](api/mlinstances.md)
+   * [MLInstances（レシピ）](api/mlinstances.md)
    * [実験](api/experiments.md)
    * [モデル](api/models.md)
    * [MLServices](api/mlservices.md)
    * [インサイト](api/insights.md)
    * [付録](api/appendix.md)
-* 事前に作成されたレシピ {#pre-built-recipes}
+* リアルタイム機械学習（アルファ） {#real-time-machine-learning}
+   * [概要](real-time-machine-learning/home.md)
+   * [はじめに](real-time-machine-learning/getting-started.md)
+   * [リアルタイムMLモデルのトレーニング](real-time-machine-learning/training-ml-model.md)
+   * [リアルタイムMLモデルのスコアリング](real-time-machine-learning/scoring-ml-model.md)
+   * [ノードリファレンスガイド](real-time-machine-learning/node-reference.md)
+* 事前設計されたレシピ {#pre-built-recipes}
    * [商品の推奨レシピ](pre-built-recipes/product-recommendations.md)
    * [製品購入予測](pre-built-recipes/product-purchase-prediction.md)
-   * [小売販売レシピ](pre-built-recipes/retail-sales.md)
+   * [小売の販売レシピ](pre-built-recipes/retail-sales.md)
 * モデルオーサリング {#authoring}
    * [モデルオーサリングSDK](authoring/sdk.md)
-   * [フィーチャパイプラインの作成](authoring/feature-pipeline.md)
+   * [フィーチャーパイプラインを作成する](authoring/feature-pipeline.md)
    * [プラットフォームSDKガイド(Python)](authoring/platform-sdk.md)
 * モデルとレシピのチュートリアル {#models-recipes}
-   * [機械学習モデルのチュートリアルの作成と公開](models-recipes/create-publish-model.md)
-   * [小売売上データセットとスキーマの作成](models-recipes/create-retails-sales-dataset.md)
+   * [機械学習モデルのチュートリアルを作成して公開する](models-recipes/create-publish-model.md)
+   * [小売売上スキーマとデータセットの作成](models-recipes/create-retails-sales-dataset.md)
    * [プレビュースキーマとデータセット](models-recipes/preview-schema-data.md)
    * [ソースファイルのレシピへのパッケージ化](models-recipes/package-source-files-recipe.md)
    * [パッケージ化されたレシピの読み込み(UI)](models-recipes/import-packaged-recipe-ui.md)
-   * [パッケージ化されたレシピ(API)の読み込み](models-recipes/import-packaged-recipe-api.md)
+   * [パッケージ化されたレシピの読み込み(API)](models-recipes/import-packaged-recipe-api.md)
    * [モデル(UI)のトレーニングと評価](models-recipes/train-evaluate-model-ui.md)
    * [モデル(API)のトレーニングと評価](models-recipes/train-evaluate-model-api.md)
-   * [モデルのスコア(UI)](models-recipes/score-model-ui.md)
-   * [モデルのスコア(API)](models-recipes/score-model-api.md)
+   * [モデルにスコアを付ける(UI)](models-recipes/score-model-ui.md)
+   * [モデルにスコアを付ける(API)](models-recipes/score-model-api.md)
    * [モデルの最適化](models-recipes/optimize-model.md)
-   * [リアルタイムの顧客プロファイルと機械学習の洞察を強化](models-recipes/enrich-profile.md)
-   * [モデルをサービスとして公開(UI)](models-recipes/publish-model-service-ui.md)
+   * [機械学習インサイトによるリアルタイムの顧客プロファイルの強化](models-recipes/enrich-profile.md)
+   * [モデルをサービスとして発行(UI)](models-recipes/publish-model-service-ui.md)
    * [モデルをサービスとして公開(API)](models-recipes/publish-model-service-api.md)
-   * [サービス(UI)の自動トレーニングとスコアリングのスケジュール設定](models-recipes/schedule-models-ui.md)
+   * [サービス(UI)に対する自動トレーニングとスコアリングのスケジュール設定](models-recipes/schedule-models-ui.md)
 * [レシピとノートブックの移行ガイド](recipe-notebook-migration.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
