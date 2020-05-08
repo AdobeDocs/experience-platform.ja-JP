@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 0e9b5e56ea40528446b69c1af6f6e0bbf17f8d08
+source-git-commit: 958decd19c0b2063e0e242dcd3ce321c02660707
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '518'
 ht-degree: 1%
 
 ---
@@ -144,6 +144,7 @@ ht-degree: 1%
          - [MariaDBコネクタ](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Serverコネクタ](tutorials/ui/create/databases/sql-server.md)
          - [MySQLコネクタ](tutorials/ui/create/databases/mysql.md)
+         - [Oracleコネクタ](tutorials/ui/create/databases/oracle.md)
          - [フェニックスコネクタ](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQLコネクタ](tutorials/ui/create/databases/postgres.md)
       - マーケティングの自動化 {#marketing-automation}
