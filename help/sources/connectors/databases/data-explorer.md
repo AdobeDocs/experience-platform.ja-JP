@@ -4,21 +4,29 @@ solution: Experience Platform
 title: Azure Data Explorerコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+workflow-type: tm+mt
+source-wordcount: '140'
+ht-degree: 0%
 
 ---
 
 
 # Azure Data Explorerコネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformは、Microsoft、MySQL、Azureなどのデータベースプロバイダーに対してネイティブの接続を提供します。 これらのシステムのデータをプラットフォームに取り込むことができます。
 
-エクスペリエンスプラットフォームは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 プラットフォームは、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートにはAzure Data Explorerが含まれます。
+リレーショナル、NoSQL、データ・ウェアハウスなど、サード・パーティ製のデータベースは、それぞれ異なるタイプがサポートされます。 データベースプロバイダーのサポートにはAzure Data Explorerが含まれます。
 
-次のドキュメントは、APIを使用してAzure Data Explorerをプラットフォームに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure Data Explorerをプラットフォームに接続する方法に関する情報を提供しています。
 
 ## APIを使用してAzure Data Explorerをプラットフォームに接続する
 
 - [Flow Service APIを使用してAzure Data Explorerコネクタを作成する](../../tutorials/api/create/databases/data-explorer.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
+
+## UIを使用してAzure Data Explorerをプラットフォームに接続する
+
+- [UIにAzure Data Explorerソースコネクタを作成する](../../tutorials/ui/create/databases/ats.md)
+- [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
