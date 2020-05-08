@@ -4,21 +4,29 @@ solution: Experience Platform
 title: Oracleコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+workflow-type: tm+mt
+source-wordcount: '124'
+ht-degree: 0%
 
 ---
 
 
 # Oracleコネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformは、Microsoft、MySQL、Azureなどのデータベースプロバイダーに対してネイティブの接続を提供します。 これらのシステムのデータをプラットフォームに取り込むことができます。
 
-エクスペリエンスプラットフォームは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 プラットフォームは、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートにはOracleが含まれます。
+リレーショナル、NoSQL、データ・ウェアハウスなど、サード・パーティ製のデータベースは、それぞれ異なるタイプがサポートされます。 データベースプロバイダーのサポートにはOracleが含まれます。
 
-次のドキュメントは、APIを使用してOracleをプラットフォームに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザー・インタフェースを使用してOracleをプラットフォームに接続する方法に関する情報を提供しています。
 
 ## APIを使用したOracleとプラットフォームの接続
 
 - [フロー・サービスAPIを使用したOracleコネクタの作成](../../tutorials/api/create/databases/oracle.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
+
+## UIを使用したOracleとプラットフォームの接続
+
+- [UIでのOracleソースコネクタの作成](../../tutorials/ui/create/databases/oracle.md)
+- [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
