@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 958decd19c0b2063e0e242dcd3ce321c02660707
+source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 1%
 
 ---
@@ -137,6 +137,7 @@ ht-degree: 1%
          - [Amazon Redshiftコネクタ](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsightsコネクタのApache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/ui/create/databases/spark.md)
+         - [Azure Data Explorerコネクタ](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analyticsコネクタ](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/ui/create/databases/ats.md)
          - [Google Bigクエリコネクタ](tutorials/ui/create/databases/bigquery.md)
