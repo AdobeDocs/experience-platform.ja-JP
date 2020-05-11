@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: リアルタイムの顧客プロファイルAPI開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 33091568c850375b399435f375e854667493152c
+source-git-commit: 4bab89c981f7e30b28477068625d1b6f534fa838
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 3%
@@ -251,7 +251,7 @@ curl -X POST \
         "ids": [
           {
             "id": "0bf16e61-90e9-4204-b8fa-ad250360957b"
-          }
+          },
           {
             "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130"
           }
@@ -316,7 +316,7 @@ curl -X POST \
 }
 ```
 
-結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [結合ポリシーのコンポーネントに関する節を参照してください](#components-of-merge-policies) 。
+結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [](#components-of-merge-policies) 結合ポリシーのコンポーネントに関する節を参照してください。
 
 ### 条件別の複数の結合ポリシーのリスト
 
