@@ -4,33 +4,36 @@ solution: Experience Platform
 title: データアクセスの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+workflow-type: tm+mt
+source-wordcount: '488'
+ht-degree: 4%
 
 ---
 
 
 # データアクセスの概要
 
-Data Access APIは、Adobe Experience Platformをサポートしています。Experience Platform内で取り込んだデータセットの検出性とアクセシビリティに重点を置いたRESTfulインターフェイスをユーザーに提供します。
+Data Access APIは、Experience Platform内で取り込まれたデータセットの検出性とアクセシビリティに重点を置いたRESTfulインターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートします。
 
 ![エクスペリエンスプラットフォームでのデータアクセス](images/Data_Access_Experience_Platform.png)
 
 ## API仕様リファレンス
 
-Swagger APIリファレンスドキュメントはこちらを参照して [ください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。
+Swagger APIリファレンスドキュメントは [こちら](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。
 
 ## 用語
 
-このドキュメントでよく使用される用語の説明。
+このドキュメントでよく使用される用語の一部を紹介します。
 
 | 用語 | 説明 |
 | ----- | ------------ |
-| データセット | データとフィールドを含むスキーマのコレクション。 |
-| バッチ | 一定期間に収集され、1つの単位として処理される一連のデータ。 |
+| データセット | スキーマとフィールドを含むデータのコレクションです。 |
+| バッチ | 一定期間に収集され、1つのユニットとして一緒に処理される一連のデータ。 |
 
-## バッチ内のリストのファイルの取得
+## バッチ内のファイルのリストを取得
 
-バッチ識別子(batchID)を使用すると、データアクセスAPIは特定のバッチに属するファイルのリストを取得できます。
+バッチ識別子(batchID)を使用すると、Data Access APIは特定のバッチに属するファイルのリストを取得できます。
 
 **API形式**
 
@@ -91,18 +94,18 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-配列に `"data"` は、指定したバッチ内のすべてのリストが含まれます。 返される各ファイルには、フィールド内に含まれる固有の`{FILE_ID}`ID()が含ま `"dataSetFileId"` れます。 この一意のIDを使用して、ファイルにアクセスしたり、ダウンロードしたりできます。
+この `"data"` 配列には、指定したバッチ内のすべてのファイルのリストが含まれます。 返される各ファイルには、フィールド内に含まれる固有のID(`{FILE_ID}`)があり `"dataSetFileId"` ます。 その後、この一意のIDを使用して、ファイルにアクセスしたり、ダウンロードしたりできます。
 
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `data.dataSetFileId` | 指定したバッチ内の各ファイルのファイルID。 |
-| `data._links.self.href` | ファイルにアクセスするURL。 |
+| `data._links.self.href` | ファイルにアクセスするURLです。 |
 
 ## バッチ内のファイルへのアクセスとダウンロード
 
-ファイル識別子(`{FILE_ID}`)を使用すると、Data Access APIを使用して、ファイルの名前、バイト単位のサイズ、ダウンロードするリンクなど、ファイルの特定の詳細にアクセスできます。
+ファイル識別子(`{FILE_ID}`)を使用すると、Data Access APIを使用して、ファイル名、バイト単位のサイズ、ダウンロードするリンクなど、ファイルの特定の詳細にアクセスできます。
 
-応答にはデータ配列が含まれます。 IDで指すファイルが個々のファイルかディレクトリかに応じて、返されるデータ配列には、そのディレクトリに属するファイルの1つのエントリかリストが含まれる場合があります。 各ファイル要素には、ファイルの詳細が含まれます。
+応答にはデータ配列が含まれます。 IDで指すファイルが個別のファイルかディレクトリかに応じて、返されるデータ配列には、そのディレクトリに属するファイルのリストが1つだけ含まれる場合もあります。 各ファイル要素には、ファイルの詳細が含まれます。
 
 **API形式**
 
@@ -112,7 +115,7 @@ GET /files/{FILE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{FILE_ID}` | に等しい。 `"dataSetFileId"`アクセスするファイルのID。 |
+| `{FILE_ID}` | に等し `"dataSetFileId"`い。アクセスするファイルのID。 |
 
 **リクエスト**
 
@@ -148,9 +151,9 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.name` | ファイルの名前(プロファイル.csvなど)。 |
+| `data.name` | ファイルの名前(例：プロファイル.csv)。 |
 | `data.length` | ファイルのサイズ（バイト単位）。 |
-| `data._links.self.href` | ファイルをダウンロードするURL。 |
+| `data._links.self.href` | ファイルをダウンロードするURLです。 |
 
 **ディレクトリ応答**
 
@@ -195,8 +198,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.name` | ファイルの名前(プロファイル.csvなど)。 |
-| `data._links.self.href` | ファイルをダウンロードするURL。 |
+| `data.name` | ファイルの名前(例：プロファイル.csv)。 |
+| `data._links.self.href` | ファイルをダウンロードするURLです。 |
 
 ## ファイルのコンテンツへのアクセス
 
@@ -235,9 +238,8 @@ Contents of the file
 
 ## その他のコードサンプル
 
-その他のサンプルについては、データアクセスチュートリ [アルを参照してくださ](tutorials/dataset-data.md)い。
+その他のサンプルについては、 [データアクセスのチュートリアルを参照してください](tutorials/dataset-data.md)。
 
+## データ取り込みイベントのサブスクライブ
 
-## データ取り込みイベント
-
-プラットフォームは、特定の高価値イベントを [Adobe I/Oコンソールを通じて購読に利用できるようにします](https://console.adobe.io/)。 例えば、データ取り込みイベントをサブスクライブして、遅延や障害の可能性を通知できます。 Adobe I/Oイベントの使用に関する詳細は、入門ガイドを参照し [てください](https://www.adobe.io/apis/experienceplatform/events/docs.html)。
+プラットフォームは、 [Adobe Developer Consoleを通じて特定の高価値イベントを購読に使用できるようにします](https://www.adobe.com/go/devs_console_ui)。 例えば、データ取り込みイベントを登録して、遅延や失敗の可能性を通知することができます。 詳しくは、データインジェスト通知の [サブスクライブに関するチュートリアル](../ingestion/quality/subscribe-events.md) を参照してください。
