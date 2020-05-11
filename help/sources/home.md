@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectorsの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+source-git-commit: 492adad9b38c8850130931d3d393f28c67057d07
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 1%
 
 ---
@@ -46,6 +46,7 @@ Experience Platformを使用すると、Adobe Analytics、Adobe Platform Manager
 
 - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
 - [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
+- [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
 - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
 
@@ -108,7 +109,7 @@ CRMシステムは、顧客との関係の構築に役立つデータを提供�
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **表示ソース** ：オン | 「 *カタログ* 」タブの各ソースタイプのソースに対して、「 *参照*」、「 **** アカウント」、「DataFlowAccounts」の各タブと共に読み取り専用アクセス権を付与します。 |
+| **表示ソース** ：オン | 「 *カタログ* 」タブの各ソースタイプのソースに対して、「 *参照*」、「 **** アカウント」、「DataFlow」の各タブと共に読み取り専用アクセス権を付与します。 |
 | **ソースの管理** : | **表示ソースに含まれる機能に加えて、**&#x200B;ソースに含まれる機能に加えて、Connect Source *option Catalog内の* Connect Source *option Catalogへのアクセス権を付与し、Select Data Option* Browse *Not Browse*** Notにアクセス権を付与します。 **また、「ソースの管理** 」では、DataFlowsを有効または無効にしたり ** 、スケジュールを編集したりできます。 |
 | **表示ソース** ：オフおよび **管理ソース** ：オフ | ソースへのアクセスをすべて取り消します。 |
 
