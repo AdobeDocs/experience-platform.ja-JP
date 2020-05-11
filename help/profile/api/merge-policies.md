@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: リアルタイムの顧客プロファイルAPI開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4bab89c981f7e30b28477068625d1b6f534fa838
+source-git-commit: 824e9eda41488efc362a6105c552f522185c046d
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 3%
@@ -223,7 +223,7 @@ curl -X GET \
 }
 ```
 
-結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [](#components-of-merge-policies) 結合ポリシーのコンポーネントに関する節を参照してください。
+結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [結合ポリシーのコンポーネントに関する節を参照してください](#components-of-merge-policies) 。
 
 ### ID別に複数のマージポリシーを取得する
 
@@ -264,59 +264,63 @@ curl -X POST \
 正常な応答は、HTTP Status 207(Multi-Status)と、POSTリクエストでIDが提供されたマージポリシーの詳細を返します。
 
 ```json
-{
-    "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
-    "name": "Profile Default Merge Policy",
-    "imsOrgId": "{IMS_ORG}",
-    "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "version": 1,
-    "identityGraph": {
-        "type": "none"
-    },
-    "attributeMerge": {
-        "type": "timestampOrdered"
-    },
-    "default": true,
-    "updateEpoch": 1552086578
-},
-{
-    "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
-    "name": "Dataset Precedence Merge Policy",
-    "imsOrgId": "{IMS_ORG}",
-    "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "version": 1,
-    "identityGraph": {
-        "type": "pdg"
-    },
-    "attributeMerge": {
-        "type": "dataSetPrecedence",
-        "order": [
-            "5b76f86b85d0e00000be5c8b",
-            "5b76f8d787a6af01e2ceda18"
-        ]
-    },
-    "default": false,
-    "updateEpoch": 1576099719
+{ 
+    "results": { 
+        "0bf16e61-90e9-4204-b8fa-ad250360957b": {
+            "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+            "name": "Profile Default Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "none"
+            },
+            "attributeMerge": {
+                "type": "timestampOrdered"
+            },
+            "default": true,
+            "updateEpoch": 1552086578
+        },
+        "42d4a596-b1c6-46c0-994e-ca5ef1f85130": {
+            "id": "42d4a596-b1c6-46c0-994e-ca5ef1f85130",
+            "name": "Dataset Precedence Merge Policy",
+            "imsOrgId": "{IMS_ORG}",
+            "sandbox": {
+                "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+                "sandboxName": "prod",
+                "type": "production",
+                "default": true
+            },
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "version": 1,
+            "identityGraph": {
+                "type": "pdg"
+            },
+            "attributeMerge": {
+                "type": "dataSetPrecedence",
+                "order": [
+                    "5b76f86b85d0e00000be5c8b",
+                    "5b76f8d787a6af01e2ceda18"
+                ]
+            },
+            "default": false,
+            "updateEpoch": 1576099719
+        }
+    }
 }
 ```
 
-結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [](#components-of-merge-policies) 結合ポリシーのコンポーネントに関する節を参照してください。
+結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [結合ポリシーのコンポーネントに関する節を参照してください](#components-of-merge-policies) 。
 
 ### 条件別の複数の結合ポリシーのリスト
 
