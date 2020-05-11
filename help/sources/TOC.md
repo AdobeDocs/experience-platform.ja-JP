@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
+source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -28,6 +28,7 @@ ht-degree: 1%
    - Cloud storage {#cloud-storage}
       - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
       - [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
+      - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
    - CRM {#crm}
@@ -65,6 +66,7 @@ ht-degree: 1%
          - [Amazon S3コネクタ](tutorials/api/create/cloud-storage/s3.md)
          - [Azure BLOBコネクタ](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data LakeストレージGen2コネクタ](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azure Fileストレージコネクタ](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloudストレージコネクタ](tutorials/api/create/cloud-storage/google.md)
          - [SFTPコネクタ](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -126,6 +128,7 @@ ht-degree: 1%
       - Cloud storage {#cloud-storage}
          - [Azure Data LakeストレージGen2コネクタ](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure BlobおよびAmazon S3コネクタ](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Azure Fileストレージコネクタ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTPおよびSFTPコネクタ](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google Cloudストレージコネクタ](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
