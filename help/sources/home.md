@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectorsの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 492adad9b38c8850130931d3d393f28c67057d07
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '753'
 ht-degree: 1%
 
 ---
@@ -46,6 +46,8 @@ Experience Platformを使用すると、Adobe Analytics、Adobe Platform Manager
 
 - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
 - [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
+- [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
+- [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
 - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
 - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
