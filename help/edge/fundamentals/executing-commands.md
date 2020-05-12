@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform Web SDK コマンドの実行
 description: Experience Platform Web SDK コマンドの実行方法について説明します
 seo-description: Experience Platform Web SDK コマンドの実行方法について説明します
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+workflow-type: tm+mt
+source-wordcount: '445'
+ht-degree: 80%
 
 ---
 
@@ -35,7 +38,7 @@ alloy("commandName", options);
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" is whatever the command returned
   })
@@ -59,12 +62,22 @@ alloy("commandName", options)
 
 ```javascript
 alloy("commandName", options)
-  .then(function(value) {
+  .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
   })
 ```
 
-## エラーの抑制
+### 応答オブジェクト
 
-Promise が拒否され、`catch` 呼び出しを追加しなかった場合、エラーが表示され、Adobe Experience Platform Web SDK でログが有効になっているかどうかに関係なく、ブラウザーの開発者コンソールに記録されます。これが問題となる場合は、[SDK の設定](configuring-the-sdk.md)で説明されているように、`suppressErrors`設定オプションを `true` に設定できます。
+コマンドから返されるすべてのプロミスは、 `result` オブジェクトを使用して解決されます。 結果オブジェクトには、コマンドおよびユーザーの同意に応じたデータが含まれます。 例えば、次のコマンドでは、library infoがresultsオブジェクトのプロパティとして渡されます。
+
+```js
+alloy("getLibraryInfo").then(function(result) {
+  console.log(results.libraryInfo.version);
+});
+```
+
+### 同意
+
+ユーザーが特定の目的に対して同意を示さなかった場合、約束は解決されます。 ただし、responseオブジェクトには、ユーザーが同意した内容のコンテキストで提供できる情報のみが含まれます。
