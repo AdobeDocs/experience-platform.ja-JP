@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '551'
 ht-degree: 1%
 
 ---
@@ -26,8 +26,10 @@ ht-degree: 1%
    - 広告 {#advertising}
       - [Google広告コネクタ](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
+      - [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
       - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
       - [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
+      - [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
       - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
@@ -159,7 +161,8 @@ ht-degree: 1%
          - [汎用ODataコネクタ](tutorials/ui/create/protocols/odata.md)
    - データフローの構成 {#dataflow}
       - [広告コネクタ用のデータフローの設定](tutorials/ui/dataflow/advertising.md)
-      - [クラウドストレージコネクタのデータフローの設定](tutorials/ui/dataflow/cloud-storage.md)
+      - [バッチクラウドストレージコネクタ用のデータフローの設定](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [ストリーミングクラウドストレージコネクタ用のデータフローの設定](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [データベースコネクタのデータフローの設定](tutorials/ui/dataflow/databases.md)
       - [CRMコネクタのデータフローの設定](tutorials/ui/dataflow/crm.md)
       - [顧客成功コネクタ用のデータフローの設定](tutorials/ui/dataflow/customer-success.md)
