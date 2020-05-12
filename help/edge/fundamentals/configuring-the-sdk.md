@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform Web SDK の設定
 description: Experience Platform Web SDK の設定方法について説明します
 seo-description: Experience Platform Web SDK の設定方法について説明します
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+workflow-type: tm+mt
+source-wordcount: '765'
+ht-degree: 100%
 
 ---
 
@@ -67,14 +70,6 @@ alloy("configure", {
 | 文字列 | × | `beta.adobedc.net` |
 
 Adobe Services とのやりとりに使用するドメイン。Adobe エッジインフラストラクチャにリクエストをプロキシするファーストパーティドメイン（CNAME）がある場合にのみ使用されます。
-
-### `errorsEnabled`
-
-| **タイプ** | **必須** | **デフォルト値** |
-| -------- | ------------ | ----------------- |
-| Boolean | × | `true` |
-
-エラーを抑制する必要があるかどうかを示します。[コマンドの実行](executing-commands.md)で説明したように、デバッグが Adobe Experience Platform Web SDK で有効になっているかどうかに関係なく、_不明な_&#x200B;エラーは開発者コンソールに記録されます。`errorsEnabled` を `false` に設定すると、 Adobe Experience Platform Web SDK から返される promise は拒否されません。ただし、Adobe Experience Platform Web SDK でログが有効になっている場合、エラーは引き続きコンソールに記録されます。
 
 ### `orgId`
 
