@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Networkヘルプ
 translation-type: tm+mt
-source-git-commit: 44f8fceda91d4ee1044491d7eec363e501d46e70
+source-git-commit: 1d864707226087d63a8f0afd9156efed0e369742
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 73%
+source-wordcount: '91'
+ht-degree: 78%
 
 ---
 
@@ -30,13 +30,15 @@ ht-degree: 73%
    * [ちらつきの管理](fundamentals/managing-flicker.md)
    * [同意のサポート](fundamentals/supporting-consent.md)
    * [アプリ内ブラウザーのサポート](fundamentals/supporting-in-app-browsers.md)
-   * [Experience Cloud IDの取得](fundamentals/retrieving-experience-cloud-id.md)
+   * [ID](fundamentals/identity.md)
 * 実装内容 {#implement}
    * [製品](what-to-implement/commerce.md)
 * ソリューション固有の考慮事項 {#solutions}
    * Analytics {#analytics}
       * [Analytics の概要](solution-specific/analytics/analytics-overview.md)
       * [自動的にマッピングされた変数](solution-specific/analytics/automatically-mapped-vars.md)
+   * Audience Manager {#aam}
+      * [Audience Manager の概要](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
       * [ターゲットの概要](solution-specific/target/target-overview.md)
 * リファレンス {#ref}
