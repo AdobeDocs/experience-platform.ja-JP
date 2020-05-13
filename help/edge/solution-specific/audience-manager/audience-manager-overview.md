@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDKを使用したAdobeオーディエ�
 description: Experience Platform Web SDKを使用してAdobeオーディエンスマネージャーにデータを送信する方法を学びます。
 seo-description: Experience Platform Web SDKを使用してAdobeオーディエンスマネージャーにデータを送信する方法を学びます。
 translation-type: tm+mt
-source-git-commit: cfb23e7fde246ca224d5e1f2688651aa7d992b2c
+source-git-commit: dfe9ea2889b3ba2e74f8b10296bfb2d123ad9d57
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 7%
@@ -12,7 +12,7 @@ ht-degree: 7%
 ---
 
 
-# （ベータ版）Experience Platform Edge NetworkのオーディエンスMAnager
+# （ベータ版）Experience Platform Edge Networkのオーディエンスマネージャ
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Adobe Experience Platform Web SDKは、Adobe Platform Web SDKと統合されて�
 
 Adobe Experience Platform Web SDKは、SyncIdentity [](../../fundamentals/identity.md) コマンドを使用して顧客IDとその認証状態を宣言する機能をサポートしています。
 
-syncIdentityメソッドは、 [IDサービス名前空間](../../../identity/../identity-service/namespaces.md) (ID)を使用して、IDが関連付けられるコンテキストを示します。 オーディエンスマネージャーのお客様は、IDタイプを使用するすべての既存のデータソースを次のように指定します。 デバイス間では、対応するID名前空間が自動的に設定されます。 オーディエンスマネージャーのデータソースに対応するID名前空間を探すには、Adobe Experience Platformにログインし、「ID」セクションに移動します。
+syncIdentityメソッドは、 [IDサービスの名前空間](../../../identity/../identity-service/namespaces.md) を使用して、IDが関連付けられるコンテキストを示します。 オーディエンスマネージャーのお客様は、IDタイプを使用するすべての既存のデータソースを次のように指定します。 デバイス間では、対応するID名前空間が自動的に設定されます。 オーディエンスマネージャーのデータソースに対応するID名前空間を探すには、Adobe Experience Platformにログインし、「ID」セクションに移動します。
 
 ![名前空間UIの表示](../../../assets/edge_configuration_identity.png)
 
