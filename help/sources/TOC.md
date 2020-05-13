@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 71080a1741ea0d660f63e2009f045c0e34f6c44b
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 1%
 
 ---
@@ -65,9 +65,11 @@ ht-degree: 1%
       - 広告 {#advertising}
          - [Google広告コネクタ](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
+         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3コネクタ](tutorials/api/create/cloud-storage/s3.md)
          - [Azure BLOBコネクタ](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data LakeストレージGen2コネクタ](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azureイベントハブコネクタ](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure Fileストレージコネクタ](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloudストレージコネクタ](tutorials/api/create/cloud-storage/google.md)
          - [SFTPコネクタ](tutorials/api/create/cloud-storage/sftp.md)
@@ -128,8 +130,10 @@ ht-degree: 1%
       - 広告 {#create}
          - [Google広告コネクタ](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Azure Data LakeストレージGen2コネクタ](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure BlobおよびAmazon S3コネクタ](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Azureイベントハブコネクタ](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure Fileストレージコネクタ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTPおよびSFTPコネクタ](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google Cloudストレージコネクタ](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
