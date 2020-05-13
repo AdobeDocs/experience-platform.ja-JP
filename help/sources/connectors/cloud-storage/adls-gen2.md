@@ -26,4 +26,4 @@ Adobe Experience Platformを使用すると、外部ソースからデータを�
 ## UIを使用したADLS-Gen2のプラットフォームへの接続
 
 - [UIでADLS-Gen2ソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/cloud-storage.md)
+- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
