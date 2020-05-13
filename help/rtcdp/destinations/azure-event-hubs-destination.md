@@ -1,18 +1,22 @@
 ---
-title: Azureイベントハブの宛先
-seo-title: Azureイベントハブの宛先
+title: （ベータ版）Azureイベントハブの宛先
+seo-title: （ベータ版）Azureイベントハブの宛先
 description: Azureイベントハブストレージへのリアルタイムのアウトバウンド接続を作成して、エクスペリエンスプラットフォームからデータをストリーミングします。
 seo-description: Azureイベントハブストレージへのリアルタイムのアウトバウンド接続を作成して、エクスペリエンスプラットフォームからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 4%
+source-wordcount: '470'
+ht-degree: 6%
 
 ---
 
 
-# Azureイベントハブの宛先
+# （ベータ版）Azureイベントハブの宛先
+
+>[!IMPORTANT]
+>
+>Adobe Real-time CDPの [!DNL Azure Event Hubs] 宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 ## 概要 {#overview}
 
@@ -21,7 +25,7 @@ ht-degree: 4%
 Adobe Experience Platformからのデータをストリーミングするために、 [!DNL Azure Event Hubs] ストレージへのリアルタイムのアウトバウンド接続を作成できます。
 
 * 詳細については、 [!DNL Azure Event Hubs]Microsoftのマニュアルを参照してください [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)。
-* API呼び出しを [!DNL Azure Event Hubs] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください]。
+* API呼び出しを [!DNL Azure Event Hubs] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)。
 * Adobe Real-time CDPユーザーインターフェイス [!DNL Azure Event Hubs] を使用して接続するには、以下のセクションを参照してください。
 
 ![AWS KinesisのUI](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
@@ -89,6 +93,6 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 
 >[!MORELIKETHIS]
 >
->* AzureイベントハブへのリンクAPIチュートリアル
+>* [Azureイベントハブに接続し、API呼び出しを使用してデータをアクティブにする](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [AWS Kinesisの宛先](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [宛先のタイプとカテゴリ](/help/rtcdp/destinations/destination-types.md)
