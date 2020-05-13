@@ -4,15 +4,20 @@ seo-title: Amazon Kinesisの宛先
 description: Amazon Kinesisストレージへのリアルタイムのアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングします。
 seo-description: Amazon Kinesisストレージへのリアルタイムのアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 5%
+source-wordcount: '446'
+ht-degree: 6%
 
 ---
 
 
-# Amazon Kinesisの宛先
+# （ベータ版）Amazon Kinesisの宛先
+
+
+>[!IMPORTANT]
+>
+>Adobe Real-time CDPの [!DNL Amazon Kinesis] 宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 ## 概要 {#overview}
 
@@ -21,7 +26,7 @@ ht-degree: 5%
 Adobe Experience Platformからのデータをストリーミングするために、 [!DNL Amazon Kinesis] ストレージへのリアルタイムのアウトバウンド接続を作成できます。
 
 * 詳しくは、 [!DNL Amazon Kinesis]Amazonのドキュメント [を参照してください](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
-* API呼び出しを [!DNL Amazon Kinesis] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください]。
+* API呼び出しを [!DNL Amazon Kinesis] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)。
 * Adobe Real-time CDPユーザーインターフェイス [!DNL Amazon Kinesis] を使用して接続するには、以下のセクションを参照してください。
 
 ![UIでのAmazon Kinesis](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
@@ -97,7 +102,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 >[!MORELIKETHIS]
 >
->* Amazon Kinesis APIチュートリアルへのリンク
+>* [Amazon Kinesisに接続し、API呼び出しを使用してデータをアクティブにする](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Azureイベントハブの宛先](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [宛先のタイプとカテゴリ](/help/rtcdp/destinations/destination-types.md)
 
