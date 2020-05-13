@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: リアルタイム顧客データプラットフォームヘルプ
 translation-type: tm+mt
-source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
+source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 41%
+source-wordcount: '439'
+ht-degree: 38%
 
 ---
 
@@ -122,9 +122,12 @@ ht-degree: 41%
          * [インボカタグ拡張](/help/rtcdp/destinations/invoca-extension.md)
          * [Medalia extension](destinations/medallia-extension.md)
          * [Talk URL Inbox拡張](destinations/talkurl-extension.md)
-   * 宛先チュートリアル {#dest-tutorials}
+   * リンク先UIチュートリアル {#dest-tutorials}
       * [宛先に接続](/help/rtcdp/destinations/connect-destination.md)
       * [宛先へのプロファイルとセグメントのアクティブ化](destinations/activate-destinations.md)
+   * Destination APIチュートリアル{api-tutorials}
+      * [ストリーミング先(AWS KinesisとAzureイベントハブ)に接続し、データをアクティブにする](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [電子メールマーケティングの宛先に接続し、データをアクティブにする](/help/tutorials/destinations/email-marketing-api.md)
 * プライバシーとデータガバナンス {#privacy}
    * [プライバシーの概要](privacy/privacy-overview.md)
    * [データガバナンスの概要](privacy/data-governance-overview.md)
