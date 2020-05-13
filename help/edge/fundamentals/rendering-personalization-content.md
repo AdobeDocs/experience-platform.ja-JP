@@ -4,7 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：パーソナライズされたコ
 description: Experience Platform Web SDK でパーソナライズされたコンテンツをレンダリングする方法について説明します
 seo-description: Experience Platform Web SDK でパーソナライズされたコンテンツをレンダリングする方法について説明します
 translation-type: tm+mt
-source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
+source-git-commit: 938e0e56111c96f6b0b378c9e14fb92af70c5e10
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 41%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
 >
 >Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
 
-Adobe Experience Platform Web SDKは、アドビのターゲットを含むアドビのパーソナライゼーションソリューションのクエリをサポートしています。 パーソナライゼーションには2つのモードがあります。 自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 SDKは、ちらつきを [管理する機能も提供します](managing-flicker.md)。
+Adobe Experience Platform Web SDKは、アドビのターゲットを含むアドビのパーソナライゼーションソリューションのクエリをサポートしています。 パーソナライゼーションには2つのモードがあります。 自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 SDKは、ちらつきを [管理する機能も提供します](../../edge/solution-specific/target/flicker-management.md)。
 
 ## コンテンツを自動的にレンダリング
 
