@@ -4,7 +4,10 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+workflow-type: tm+mt
+source-wordcount: '639'
+ht-degree: 77%
 
 ---
 
@@ -26,16 +29,16 @@ source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 3. **[!UICONTROL アクティブ化]**&#x200B;を選択します。
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
    ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
-5. *オプション*&#x200B;この手順は、電子メールマーケティングの宛先にマッピングされたセグメントにのみ適用されます。「<br>宛先属性&#x200B;**[!UICONTROL 」ページで]**、「**[!UICONTROL 新しいフィールドの追加]**」を選択し、宛先に送信する属性を選択します。
+5. *オプション*&#x200B;この手順は、クラウドストレージの宛先と電子メールマーケティングの宛先にマッピングされたセグメントに対してのみ適用されます。 「<br>宛先属性&#x200B;**[!UICONTROL 」ページで]**、「**[!UICONTROL 新しいフィールドの追加]**」を選択し、宛先に送信する属性を選択します。
 属性の 1 つをユニオンスキーマの[一意の識別子](/help/rtcdp/destinations/email-marketing-destinations.md#identity)にすることをお勧めします。必須属性について詳しくは、「[電子メールマーケティングの宛先](/help/rtcdp/destinations/email-marketing-destinations.md#identity)」で「ID」を参照してください。
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
    >[!IMPORTANT]
    >
-   >ソーシャルの宛先の場合は、この手順でオーディエンスの接触チャネルを選択する必要があります。 次の手順に進むには、次の画像のオプションの1つを選択してください。
+   >ソーシャルターゲットの場合は、この手順でオーディエンスの接触チャネルを選択する必要があります。 次の手順に進むには、次の画像のオプションの1つを選択してから行います。
 
-   ![データ接触チャネル](/help/rtcdp/destinations/assets/choose-data-origin.png)
+   ![データ接触チャネルの選択](/help/rtcdp/destinations/assets/choose-data-origin.png)
 
 7. 「**[!UICONTROL 確認]**」ページには、選択の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
@@ -70,7 +73,7 @@ Salesforce_id3544_20191122124530.csv
 
 ### ソーシャルネットワークの宛先
 
-Facebookの場合、アクティベーションが成功すると、Facebookのカスタムオーディエンスが [Facebook広告マネージャーでプログラム的に作成されます](https://www.facebook.com/adsmanager/manage/)。 ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つか資格を持たないので、ユーザーのセグメントメンバーシップが追加および削除されます。
+Facebookの場合、アクティベーションが成功すると、Facebookのカスタムオーディエンスが [Facebook広告マネージャーでプログラム的に作成され](https://www.facebook.com/adsmanager/manage/)ます。 ユーザーがアクティブ化されたセグメントに対して資格を持つか資格を失うかにより、オーディエンスのセグメントメンバーシップが追加および削除されます。
 
 ## アクティベーションの無効化 {#disable-activation}
 
