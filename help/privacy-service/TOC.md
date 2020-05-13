@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platformプライバシーサービスヘルプ
 translation-type: tm+mt
-source-git-commit: 1cb730f8663291d104d5fbe61ecbba7d0103b75d
+source-git-commit: 284768c0f5416972e51d2fa2078ad5267e1b8628
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 11%
 
 ---
 
@@ -21,12 +24,15 @@ source-git-commit: 1cb730f8663291d104d5fbe61ecbba7d0103b75d
    * [プライバシーサービスのUIの概要](ui/overview.md)
    * [プライバシーサービスユーザーガイド](ui/user-guide.md)
 * [プライバシー要求のIDデータ](identity-data.md)
-* [プライバシーイベント](privacy-events.md)
+* [プライバシーイベントの購読](privacy-events.md)
 * GDPRガイド {#gdpr}
    * [GDPR に関するよくある質問](gdpr/faq.md)
    * [GDPR 関連の用語](gdpr/terminology.md)
 * CCPAガイド {#ccpa}
    * [CCPA FAQ](ccpa/faq.md)
+* PDPA（タイ）ガイド {#pdpa-tha}
+   * [PDPA（タイ）FAQ](./pdpa-tha/faq.md)
+   * [PDPA（タイ）の用語](./pdpa-tha/terminology.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
-* [API リファレンス](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)
+* [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
 * [リリースノート](release-notes.md)
