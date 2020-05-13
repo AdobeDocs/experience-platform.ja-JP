@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '875'
 ht-degree: 5%
 
 ---
@@ -19,24 +19,46 @@ ht-degree: 5%
 
 Adobe Experience Platformの既存の機能の更新：
 
-- [Data Science Workspace](#dsw)
-- [エクスペリエンスプラットフォームWeb SDKおよびエクスペリエンスプラットフォームエッジネットワーク](#edge)
-- [ソース](#sources)
+- [Adobe Experience Platform リリースノート](#adobe-experience-platform-release-notes)
+   - [Data Science Workspace {#dsw}](#data-science-workspace-dsw)
+   - [宛先 {#destinations}](#destinations-destinations)
+   - [エクスペリエンスプラットフォームWeb SDKおよびエクスペリエンスプラットフォームエッジネットワーク {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
+   - [ソース {#sources}](#sources-sources)
 
 ## Data Science Workspace {#dsw}
 
-Data Science Workspaceは、機械学習と人工知能を使用して、データから洞察を引き出します。 Data Science WorkspaceはAdobe Experience Platformに統合されており、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。 Data Science Workspaceがこれを実現する方法の1つは、JupyterLabを使用することです。 JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型開発環境を提供します。
+Data Science Workspaceは、機械学習と人工知能を使用して、データから洞察を引き出します。 Data Science WorkspaceはAdobe Experience Platformに統合されており、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。 Data Science Workspaceがこれを実現する方法の1つは、JupyterLabを使用することです。 JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型の開発環境を提供します。
 
 **新機能**
 
 | 機能 | 説明 |
 |--- | ---|
-| JupterLabランチャー | JupyterLabランチャーに、Spark 2.4ノートブック用のスターターが含まれるようになりました。 Spark 2.3ノートブックスタートは非推奨としてマークされ、以降のリリースで削除されるように設定されました。 |
+| JupterLabランチャー | JupyterLabランチャーに、Spark 2.4ノートブック用のスターターが含まれるようになりました。 Spark 2.3ノートブックスターが非推奨としてマークされ、以降のリリースで削除されるように設定されました。 |
 | Spark 2.4 | 新しいScala (Spark)とPySparkレシピでSpark 2.4が使用されるようになりました。 |
 | カーネル | Scala (Spark)ノートブックは、Scalaカーネルを使用して作成されるようになりました。 PySparkノートブックは、Pythonカーネルを使って作成されるようになりました。 SparkとPySparkのカーネルは非推奨となり、以降のリリースで削除されるように設定されます。 |
 | レシピ | 新しいPySparkとSparkレシピは、PythonやRレシピと同じようなDockerワークフローに従うようになりました。 |
 
 Spark 2.4を使用するためのノートブックおよびレシピの移行の詳細については、『 [ノートブック移行ガイド](../../data-science-workspace/recipe-notebook-migration.md)』を参照してください。 Data Science Workspaceの一般情報について詳しくは、 [概要ドキュメントを参照してください](../../data-science-workspace/home.md)。
+
+## 宛先 {#destinations}
+
+ア [ドビのリアルタイム顧客データプラットフォームでは](../../rtcdp/overview.md)、宛先は、目的のプラットフォームとの統合が事前に構築されており、これらのパートナーに対してシームレスにデータをアクティブ化します。
+
+**新しい宛先**
+
+Adobe Real-time CDPは、クラウドストレージのストリーミング先へのデータアクティベーションをサポートするようになり、オーディエンスのデータとイベントをJSON形式でこれらの宛先にエクスポートできます。 その後、目的のイベントの上にビジネスロジックを記述できます。 詳しくは、以下を参照してください。
+
+>[!NOTE]
+>
+>Adobe Real-time CDP [!DNL Amazon Kinesis][!DNL Azure Event Hubs] の宛先と宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+
+| ドキュメント | 説明 |
+|--- | ---|
+| [（ベータ版）Amazon Kinesisの宛先](/help/rtcdp/destinations/amazon-kinesis-destination.md) | この記事では、Adobe Experience Platformからデータをストリーミングするために、 [!DNL Amazon Kinesis] ストレージへのリアルタイムのアウトバウンド接続を作成する方法を説明します。 |
+| [（ベータ版）Azureイベントハブの宛先](/help/rtcdp/destinations/azure-event-hubs-destination.md) | この記事では、Adobe Experience Platformからデータをストリーミングするために、 [!DNL Azure Event Hubs] ストレージへのリアルタイムのアウトバウンド接続を作成する方法を説明します。 |
+| [APIチュートリアル — ストリーミング先への接続とデータのアクティブ化](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | このチュートリアルでは、API呼び出しを使用してAdobe Experience Platformデータに接続し、ストリーミングクラウドストレージ先(Amazon KinesisまたはAzureイベントハブ)への接続を作成し、新しく作成した宛先にデータフローを作成し、データをアクティブ化する方法を説明します。 |
+
+詳しくは、 [宛先の概要を参照してください](/help/rtcdp/destinations/destinations-overview.md)。
 
 ## エクスペリエンスプラットフォームWeb SDKおよびエクスペリエンスプラットフォームエッジネットワーク {#edge}
 
