@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Networkヘルプ
 translation-type: tm+mt
-source-git-commit: 1d864707226087d63a8f0afd9156efed0e369742
+source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 78%
+ht-degree: 80%
 
 ---
 
@@ -27,7 +27,6 @@ ht-degree: 78%
    * [デバッグ](fundamentals/debugging.md)
    * [複数のプロパティの操作](fundamentals/interacting-with-multiple-properties.md)
    * [パーソナライズされたコンテンツのレンダリング](fundamentals/rendering-personalization-content.md)
-   * [ちらつきの管理](fundamentals/managing-flicker.md)
    * [同意のサポート](fundamentals/supporting-consent.md)
    * [アプリ内ブラウザーのサポート](fundamentals/supporting-in-app-browsers.md)
    * [ID](fundamentals/identity.md)
@@ -40,7 +39,8 @@ ht-degree: 78%
    * Audience Manager {#aam}
       * [Audience Manager の概要](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
-      * [ターゲットの概要](solution-specific/target/target-overview.md)
+      * [Target の概要](solution-specific/target/target-overview.md)
+      * [ちらつき管理](solution-specific/target/flicker-management.md)
 * リファレンス {#ref}
    * [自動的に収集された値](reference/automatic-information.md)
    * [ライブラリ情報の取得](reference/retrieving-library-information.md)
