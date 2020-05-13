@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 0eca2f6e50024ec43c025dd75c34ca876d71c3f2
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '959'
 ht-degree: 5%
 
 ---
@@ -20,10 +20,21 @@ ht-degree: 5%
 Adobe Experience Platformの既存の機能の更新：
 
 - [Adobe Experience Platform リリースノート](#adobe-experience-platform-release-notes)
+   - [ユーザーインターフェイスの更新 {#ux}](#user-interface-updates-ux)
    - [Data Science Workspace {#dsw}](#data-science-workspace-dsw)
    - [宛先 {#destinations}](#destinations-destinations)
    - [エクスペリエンスプラットフォームWeb SDKおよびエクスペリエンスプラットフォームエッジネットワーク {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
    - [ソース {#sources}](#sources-sources)
+
+## ユーザーインターフェイスの更新 {#ux}
+
+Adobe Experience Platformは、エクスペリエンスを向上させ、他のExperience Cloudアプリケーションと統合するために、ドメインとヘッダーバーのアップデートをリリースします。
+
+- 組織間または別のアプリケーション間の切り替えが容易
+- ヘルプメニューの特集記事やコンテキストに関するドキュメントなど、ユーザーヘルプが改善されました。
+- エクスペリエンスプラットフォームとファイルサポートチケットに関するフィードバックを提供する機能
+
+新しいエクスペリエンスの展開は段階的です。 エクスペリエンスは、https://experience.adobe.com/platformで表示でき [ます](https://experience.adobe.com/platform)。
 
 ## Data Science Workspace {#dsw}
 
