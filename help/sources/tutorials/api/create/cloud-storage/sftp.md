@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Flow Service APIを使用したSFTPコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '564'
 ht-degree: 2%
 
 ---
 
 
 # Flow Service APIを使用したSFTPコネクタの作成
+
+>[!NOTE]
+>SFTPコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
