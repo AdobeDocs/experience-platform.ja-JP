@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform Web SDK Experience Cloud IDの取得
 description: Adobe Experience Cloud IDを取得する方法を説明します。
 seo-description: Adobe Experience Cloud IDを取得する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 12%
+source-wordcount: '398'
+ht-degree: 7%
 
 ---
 
 
-# （ベータ版）Experience Cloud IDの取得
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
+# Experience Cloud IDの取得
 
 Adobe Experience Platform Web SDKは、 [Adobe Identity Service](../../identity-service/ecid.md)を利用します。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
 
