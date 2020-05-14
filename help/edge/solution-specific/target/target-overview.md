@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK and using Adobeターゲット
 description: Adobeターゲットを使用してExperience Platform Web SDKを使用してパーソナライズされたコンテンツをレンダリングする方法を学びます
 seo-description: Adobeターゲットを使用してExperience Platform Web SDKを使用してパーソナライズされたコンテンツをレンダリングする方法を学びます
 translation-type: tm+mt
-source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 2%
@@ -42,7 +42,7 @@ AEP Web SDKは、AdobeターゲットのWeb上でのVEC経由で定義された�
 
 ```javascript
 alloy
-("event", 
+("sendEvent", 
   { 
   "renderDecisions": true, 
   "xdm": {
@@ -65,7 +65,7 @@ alloy
 
 ```javascript
 alloy
-  ("event", { 
+  ("sendEvent", { 
     decisionScopes: [
       "foo", "bar"], 
       "xdm": {
@@ -91,7 +91,7 @@ alloy
 AEP Web SDKは、AEP Web SDKに依存せずにVECアクションを取得し、VECアクションをレンダリングする機能を提供します。 として `__view__` 定義されたイベントを送信し `decisionScopes`ます。
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
     "web": { 
