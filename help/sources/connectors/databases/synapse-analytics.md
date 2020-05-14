@@ -4,26 +4,29 @@ solution: Experience Platform
 title: Azure Synapse Analyticsコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41aa36f146834537813fb7e05a17291dbd4f9d9b
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
 
-# Azure Synapse Analyticsコネクタ
+# （ベータ版） Azure Synapse Analyticsコネクタ
 
-Adobe Experience Platformを使用すると、外部ソースからデータを取り込み、プラットフォームサービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-エクスペリエンスプラットフォームは、サードパーティのデータベースからデータを取り込む機能を提供します。 プラットフォームは、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには、Azure Synapse Analyticsが含まれます。
+エクスペリエンスプラットフォームは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 プラットフォームは、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには、Azure Snapse Analyticsが含まれます。
 
 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure Synapse Analyticsをプラットフォームに接続する方法に関する情報を提供しています。
 
 ## APIを使用してAzure Synapse Analyticsをプラットフォームに接続する
 
-- [フローサービスAPIを使用してAzure Synapse Analyticsコネクタを作成する](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Flow Service APIを使用してAzure Synapse Analyticsコネクタを作成する](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用してAzure Synapse Analyticsをプラットフォームに接続する
 
-- [UIでAzure Synapse Analyticsソースコネクタを作成する](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [UIにAzure Synapse Analyticsソースコネクタを作成する](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
