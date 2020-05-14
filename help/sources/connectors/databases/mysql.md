@@ -4,22 +4,25 @@ solution: Experience Platform
 title: MySQLコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8a8e0f48cb4c5cad44e808a740ad70f2d0ea3332
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 0%
 
 ---
 
 
-# MySQLコネクタ
+# （ベータ版） MySQL Connector
 
-Adobe Experience Platformを使用すると、外部ソースからデータを取り込み、プラットフォームサービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-エクスペリエンスプラットフォームは、サードパーティのデータベースからデータを取り込む機能を提供します。 プラットフォームは、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートにはMySQLが含まれます。
+エクスペリエンスプラットフォームは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 プラットフォームは、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートにはMySQLが含まれます。
 
-以下のドキュメントでは、APIまたはユーザーインターフェイスを使用してMySQLをプラットフォームに接続する方法について説明します。
+次のドキュメントは、APIまたはユーザーインターフェイスを使用してMySQLをプラットフォームに接続する方法に関する情報を提供しています。
 
 ## APIを使用したMySQLのプラットフォームへの接続
 
-- [フローサービスAPIを使用したMySQLコネクタの作成](../../tutorials/api/create/databases/mysql.md)
+- [Flow Service APIを使用してMySQLコネクタを作成する](../../tutorials/api/create/databases/mysql.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
