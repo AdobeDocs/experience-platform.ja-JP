@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのIBM DB2ソースコネクターの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77dadb4257c16e19113f6224790fbb3b8207a52
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,9 @@ ht-degree: 0%
 
 
 # UIでのIBM DB2ソースコネクターの作成
+
+> [!NOTE]
+> IBM DB2 Connectorはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 Adobe Experience Platformのソースコネクターは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してIBM DB2（以下「DB2」と呼ばれる）ソースコネクタを作成する手順を説明します。
 
