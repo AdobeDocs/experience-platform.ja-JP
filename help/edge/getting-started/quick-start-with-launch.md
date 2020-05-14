@@ -4,39 +4,34 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: 51acb07efe624c7cf1dfaabc4b03f04c76ac88f8
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 89%
+source-wordcount: '529'
+ht-degree: 31%
 
 ---
 
 
-# （ベータ版）前提条件
+# ようこそ
 
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
+このガイドでは、Adobe Experience Platform Web SDKの起動でのセットアップ方法を説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動する場合は、CSMに連絡してください。
 
-現在、Adobe Experience Platform Web SDK は、XDM を使用した Adobe Experience Platform へのデータの送信のみをサポートしています。次の前提条件を満たす必要があります。
-
-- [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。
-- Adobe Experience Platform　を使用する資格がある
+- [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。開発環境でのテストはCNAMEなしでは機能しますが、実稼働環境に移行する前にCNAMEが必要になります
+- Adobe Experience Platform Data Platformの権利を付与されます。 プラットフォームを購入していない場合は、SDKと共に使用するExperience Platform Data Services Foundationを提供します。
 - 訪問者 ID サービスの最新バージョンを使用している
-
-## プラットフォームの準備
-
-Adobe Experience Platform にデータを送信するには、XDM スキーマと、そのスキーマを使用するデータセットを作成する必要があります。
-
-- [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
-- 作成したスキーマに Adobe Experience Platform Web SDK mixin を追加します。
-- スキーマを使用してデータの宛先となる[データセットを作成](https://platform.adobe.com/dataset/overview)します。
 
 ## 設定IDの作成
 
-起動時に [エッジ設定ツールを使用して、設定IDを作成できます](../fundamentals/edge-configuration.md) 。
+起動時に [エッジ設定ツールを使用して、設定IDを作成できます](../fundamentals/edge-configuration.md) 。 これにより、Edge Networkで様々なソリューションにデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
 
 >注意： この機能を使用するには、組織がホワイトリストに登録されている必要があります。 最終的なホワイトリスト登録のために、CSMにリストに登録するようにお問い合わせください。
+
+## スキーマの準備
+
+Experience Platform Edge Networkは、データをXDMとして受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、Edge Networkでデータの形式設定方法を定義します。 データを送信するには、スキーマを定義する必要があります。
+
+- [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
+- 作成したスキーマに Adobe Experience Platform Web SDK mixin を追加します。
 
 ## Launch での SDK のインストール
 
@@ -44,28 +39,25 @@ Launch にログインし、`AEP Web SDK` 拡張機能をインストールし�
 
 様々な設定オプションについて詳しくは、[SDK の設定](../fundamentals/configuring-the-sdk.md)を参照してください。
 
+## スキーマに基づくデータ要素の作成
+
+起動時に、拡張機能をAEP Web SDKに変更し、種類をXDMオブジェクトに設定して、スキーマを参照するデータ要素を作成します。 これによりスキーマが読み込まれ、データ要素をスキーマの別の部分にマップできます。
+
+![開始時の日付要素](../../assets/edge_data_element.png)
+
 ## イベントの送信
 
-拡張機能をインストールした後、AEP Web SDK 拡張機能から「ビーコンを送信」アクションを追加して、イベントの送信を開始します。「ビューの開始時に発生する」オプションをオンにして、ページが読み込まれるたびに 1 つ以上のイベントを送信することをお勧めします。
+拡張機能のインストール後、開始は、AEP Web SDK拡張機能から「sendEvent」アクションをルールに追加してイベントを送信します。 作成したデータ要素をXDMデータとしてイベントに追加してください。 ページが読み込まれるたびに、少なくとも1つのイベントを送信することをお勧めします。
 
 イベントの追跡方法について詳しくは、[イベントのトラッキング](../fundamentals/tracking-events.md)を参照してください。
 
-## データの送信
+## 次の手順
 
-イベントとともに、以前作成したスキーマと一致するデータを送信できます。例えば、コマースサイトを所有しており、コマース mixin をスキーマに追加した場合、誰かが製品を表示すると次の構造を送信することになります。
+データのフローが完了したら、次の操作を実行できます。
 
-```javascript
-{
-  "commerce": {
-    "productListAdds": {
-        "value":1
-    }
-  },
-  "productListItems":{
-      "name":"Floppy Green Hat",
-      "SKU":"HATFLP123",
-      "product":"1234567",
-      "quantity":2
-  }
-}
-```
+- [スキーマの構築](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- エクスペリエンスを [パーソナライズする方法を説明します。](../fundamentals/rendering-personalization-content.md)
+- 複数のソリューションにデータを送信する方法について説明します。
+   - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
+   - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
+   - [Adobe Target](../solution-specific/target/target-overview.md)
