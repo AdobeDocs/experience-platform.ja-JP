@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform Web SDK コマンドの実行
 description: Experience Platform Web SDK コマンドの実行方法について説明します
 seo-description: Experience Platform Web SDK コマンドの実行方法について説明します
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 80%
+source-wordcount: '419'
+ht-degree: 79%
 
 ---
 
 
-# （ベータ版）コマンドの実行
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
+# コマンドの実行
 
 Web ページにベースコードが実装されたら、SDK を使用してコマンドの実行を開始できます。コマンドを実行する前に、外部ファイル（`alloy.js`）がサーバーから読み込まれるのを待機する必要はありません。SDK が読み込みを完了していない場合、コマンドはキューに追加され、できるだけ早く SDK によって処理されます。
 
