@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK：パーソナライズされたコ
 description: Experience Platform Web SDK でパーソナライズされたコンテンツをレンダリングする方法について説明します
 seo-description: Experience Platform Web SDK でパーソナライズされたコンテンツをレンダリングする方法について説明します
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 35%
@@ -21,7 +21,7 @@ Adobe Experience Platform Web SDKは、アドビのターゲットを含むア�
 イベントをサーバーに送信し、イベントのオプションとして `renderDecisions` を `true` に設定している場合、SDK はパーソナライズされたコンテンツを自動的にレンダリングします。
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -43,7 +43,7 @@ alloy("event", {
 を使用して、 `event` コマンドに対する約束として返す決定のリストを要求でき `scopes`ます。 スコープとは、パーソナライゼーションソリューションに対して、どの決定を行うかを知らせる文字列です。
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){
