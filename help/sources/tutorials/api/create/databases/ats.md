@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzureテーブルストレージコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9556b85b26e2eb3d4a2b3e41db5f0c3a14459d32
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '578'
+ht-degree: 2%
 
 ---
 
 
 # Flow Service APIを使用してAzureテーブルストレージコネクタを作成する
+
+>[!NOTE]
+>Azureテーブルストレージコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
