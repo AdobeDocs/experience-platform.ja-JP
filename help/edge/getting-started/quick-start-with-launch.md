@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 31%
 
 ---
@@ -17,14 +17,16 @@ ht-degree: 31%
 このガイドでは、Adobe Experience Platform Web SDKの起動でのセットアップ方法を説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動する場合は、CSMに連絡してください。
 
 - [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。開発環境でのテストはCNAMEなしでは機能しますが、実稼働環境に移行する前にCNAMEが必要になります
-- Adobe Experience Platform Data Platformの権利を付与されます。 プラットフォームを購入していない場合は、SDKと共に使用するExperience Platform Data Services Foundationを提供します。
+- Adobe Experience Platform Data Platformの権利を付与されます。 プラットフォームを購入していない場合は、Experience Platform Data Services Foundationをご利用いただき、SDKでの利用を制限し、無償で提供します。
 - 訪問者 ID サービスの最新バージョンを使用している
 
 ## 設定IDの作成
 
 起動時に [エッジ設定ツールを使用して、設定IDを作成できます](../fundamentals/edge-configuration.md) 。 これにより、Edge Networkで様々なソリューションにデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
 
->注意： この機能を使用するには、組織がホワイトリストに登録されている必要があります。 最終的なホワイトリスト登録のために、CSMにリストに登録するようにお問い合わせください。
+>[!NOTE]
+>
+>この機能を使用するには、組織がホワイトリストに登録されている必要があります。 最終的なホワイトリスト登録のために、CSMにリストに登録するようにお問い合わせください。
 
 ## スキーマの準備
 
@@ -56,6 +58,7 @@ Launch にログインし、`AEP Web SDK` 拡張機能をインストールし�
 データのフローが完了したら、次の操作を実行できます。
 
 - [スキーマの構築](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [デバッグについて](../fundamentals/debugging.md)
 - エクスペリエンスを [パーソナライズする方法を説明します。](../fundamentals/rendering-personalization-content.md)
 - 複数のソリューションにデータを送信する方法について説明します。
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
