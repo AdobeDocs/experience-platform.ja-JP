@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzure Fileストレージコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8beee3f15aa867026b28f9c395553d1c934ef7a3
+source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
 
 
 # Flow Service APIを使用してAzure Fileストレージコネクタを作成する
+
+>[!NOTE]
+>Azure Fileストレージコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
