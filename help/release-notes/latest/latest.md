@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0eca2f6e50024ec43c025dd75c34ca876d71c3f2
+source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '961'
 ht-degree: 5%
 
 ---
@@ -38,7 +38,7 @@ Adobe Experience Platformは、エクスペリエンスを向上させ、他のE
 
 ## Data Science Workspace {#dsw}
 
-Data Science Workspaceは、機械学習と人工知能を使用して、データから洞察を引き出します。 Data Science WorkspaceはAdobe Experience Platformに統合されており、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。 Data Science Workspaceがこれを実現する方法の1つは、JupyterLabを使用することです。 JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型の開発環境を提供します。
+Data Science Workspaceは、機械学習と人工知能を使用して、データから洞察を引き出します。 Data Science WorkspaceはAdobe Experience Platformに統合されており、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。 Data Science Workspaceがこれを実現する方法の1つは、JupyterLabを使用することです。 JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型開発環境を提供します。
 
 **新機能**
 
@@ -87,7 +87,7 @@ Experience Platform Web SDKおよびExperience Platform Edge Networkを使用す
 | Adobe Analytics | エッジ設定を介してAnalyticsレポートスイートにデータを送信します。 XDMはコンテキストデータにフラット化され、マルチスイートタギングをサポート |
 | Adobe Target | アドビターゲットのサポート。 VEC、フォームベースのコンポーザー、A/B、XT、自動パーソナライゼーション、MVTを含む |
 | Adobeオーディエンスマネージャーのサポート | オーディエンスマネージャーIDの同期、URLの宛先およびCookieの宛先のサポート |
-| `synceIdnetity` | より明確 `setCustomersIds` にす `syncIdentity` るために、に名前を変更 |
+| IDの同期 | より明確 `setCustomersIds` にす `syncIdentity` るために、に名前を変更 |
 | XDM Object Builder | Launch拡張では、XDMオブジェクトをデータ要素として構築できるようになりました。 |
 
 プラットフォームWeb SDKおよびエッジネットワークについて詳しくは、ドキュメントを参照して [ください](../../edge/home.md)。
