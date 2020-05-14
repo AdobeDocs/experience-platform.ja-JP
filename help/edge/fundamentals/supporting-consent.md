@@ -4,16 +4,15 @@ seo-title: Adobe Experience Platform Web SDK：同意設定のサポート
 description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 seo-description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '518'
+ht-degree: 99%
 
 ---
 
 
-# （ベータ版）同意のサポート
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
+# 同意の支援
 
 ユーザーのプライバシーを尊重するため、SDK に対して特定の目的でユーザー固有のデータを使用することを許可する前に、ユーザーの同意を求めることができます。現在、SDK はユーザーに対し、あらゆる目的に対するオプトインまたはオプトアウトのみを許可していますが、アドビでは、将来的に、特定の目的でより詳細な制御を提供したいと考えています。
 
