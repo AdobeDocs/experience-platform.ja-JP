@@ -4,16 +4,15 @@ seo-title: Adobe Experience Platform Web SDK のイベントのトラッキン�
 description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 translation-type: tm+mt
-source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 97%
 
 ---
 
 
 # イベントのトラッキング
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
 
 イベントデータを Adobe Experience Cloud に送信するには、`event` コマンドを使用します。この `event` コマンドは、Experience Cloud にデータを送信し、パーソナライズされたコンテンツ、ID、オーディエンスの宛先を取得する主な方法です。
 
