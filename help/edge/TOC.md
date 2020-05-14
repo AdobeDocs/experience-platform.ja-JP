@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Networkヘルプ
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
 workflow-type: tm+mt
-source-wordcount: '85'
-ht-degree: 78%
+source-wordcount: '89'
+ht-degree: 75%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 78%
 * [Edge Network の概要](home.md)
 * はじめに {#get-started}
    * [Launch のクイックスタート](getting-started/quick-start-with-launch.md)
+   * [起動しないクイック開始](getting-started/quick-start-without-launch.md)
 * 基本 {#fundamentals}
    * [SDK のインストール](fundamentals/installing-the-sdk.md)
    * [コマンドの実行](fundamentals/executing-commands.md)
