@@ -4,12 +4,18 @@ solution: Experience Platform
 title: フロー・サービスAPIを使用したOracleコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77808990de4ad6e9620a5ce7e7839817c70e336
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '547'
+ht-degree: 2%
 
 ---
 
 
 # フロー・サービスAPIを使用したOracleコネクタの作成
+
+>[!NOTE]
+>Oracleコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
