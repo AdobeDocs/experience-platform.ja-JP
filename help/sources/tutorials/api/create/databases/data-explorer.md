@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzure Data Explorerコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '676'
+ht-degree: 1%
 
 ---
 
 
 # Flow Service APIを使用してAzure Data Explorerコネクタを作成する
+
+>[!NOTE]
+>Azure Data Explorerコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
