@@ -1,11 +1,17 @@
 ---
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
-workflow-type: tm+mt
+title: パーソナライズされたエクスペリエンスのちらつきの管理
+seo-title: ちらつきを管理するAdobe Experience Platform Web SDK
+description: ユーザーエクスペリエンスのちらつきを管理する方法を説明します。
+seo-description: エクスペリエンスプラットフォームWeb SDKプロパティを使用してちらつきを管理する方法を説明します
 translation-type: tm+mt
-source-wordcount: '459'
-ht-degree: 82%
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '491'
+ht-degree: 76%
 
 ---
+
+
 # ちらつきの管理
 
 パーソナライゼーションコンテンツをレンダリングする場合、SDK はちらつきがないことを確認する必要があります。ちらつき(FOOC（オリジナルコンテンツのフラッシュ）とも呼ばれます)は、テスト/パーソナライゼーション中に代替コンテンツが表示される前に、オリジナルコンテンツが短く表示されたときです。 SDK は、パーソナライゼーションコンテンツが正常にレンダリングされるまでこれらの要素が非表示になるよう、ページの要素に CSS スタイルを適用しよう試みます。
