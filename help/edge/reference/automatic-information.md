@@ -4,16 +4,15 @@ seo-title: Adobe Experience Platform Web SDK で自動的に収集される情�
 description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
 seo-description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '382'
+ht-degree: 100%
 
 ---
 
 
-# （ベータ版）自動的に収集される情報
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
+# 自動的に収集される情報
 
 Adobe Experience Cloud SDK は、特別な設定をしなくても、多数の情報を自動的に収集します。ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
 
