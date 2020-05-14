@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK のイベントのトラッキン�
 description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 97%
@@ -14,7 +14,7 @@ ht-degree: 97%
 
 # イベントのトラッキング
 
-イベントデータを Adobe Experience Cloud に送信するには、`event` コマンドを使用します。この `event` コマンドは、Experience Cloud にデータを送信し、パーソナライズされたコンテンツ、ID、オーディエンスの宛先を取得する主な方法です。
+イベントデータを Adobe Experience Cloud に送信するには、`sendEvent` コマンドを使用します。この `sendEvent` コマンドは、Experience Cloud にデータを送信し、パーソナライズされたコンテンツ、ID、オーディエンスの宛先を取得する主な方法です。
 
 Adobe Experience Cloud に送信されるデータは、次の 2 つのカテゴリに分類されます。
 
@@ -28,7 +28,7 @@ XDM データは、Adobe Experience Platform 内で作成したスキーマと�
 分析、パーソナライゼーション、オーディエンスまたは宛先の一部とする XDM データは、`xdm` オプションを使用して送信する必要がありあｍす。
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "commerce": {
       "order": {
@@ -54,7 +54,7 @@ alloy("event", {
 XDM エクスペリエンスイベントには、`eventType` フィールドがあります。ここには、レコードのプライマリイベントタイプが表示されます。これは、`xdm` オプションの一部として渡すことができます。
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "xdm": {
     "eventType": "commerce.purchases",
     "commerce": {
@@ -74,7 +74,7 @@ alloy("event", {
 ```javascript
 var myXDMData = { ... };
 
-alloy("event", {
+alloy("sendEvent", {
   "xdm": myXDMData,
   "type": "commerce.purchases"
 });
@@ -85,7 +85,7 @@ alloy("event", {
 Web ページのユーザーが離脱する直前にイベントデータを送信するのは、困難な場合があります。リクエストに時間がかかりすぎると、ブラウザーによってリクエストがキャンセルされる場合があります。一部のブラウザーではこの間に、データを簡単に収集できるよう、`sendBeacon` と呼ばれる Web 標準 API が実装されています。`sendBeacon` を使用する場合、ブラウザーはグローバルブラウジングコンテキストで Web リクエストをおこないます。これは、ブラウザーがバックグラウンドでビーコンリクエストをおこない、ページナビゲーションを保持しないことを意味します。Adobe Experience Platform Web SDK に `sendBeacon` を使用するよう伝えるには、イベントコマンドにオプション `"documentUnloading": true` を追加します。次に例を示します。
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "documentUnloading": true,
   "xdm": {
     "commerce": {
@@ -107,7 +107,7 @@ alloy("event", {
 イベントからの応答を処理する場合は、次のように成功または失敗の通知を受け取ることができます。
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -148,7 +148,7 @@ alloy("configure", {
 
 `xdm` フィールドは次の順序で設定されます。
 
-1. イベントコマンド　`alloy("event", { xdm: ... });`　にオプションとして渡される値
+1. イベントコマンド　`alloy("sendEvent", { xdm: ... });`　にオプションとして渡される値
 2. 自動的に収集された値（[自動情報](../reference/automatic-information.md)を参照）
 3. `onBeforeEventSend` コールバックで加えられた変更です。
 
