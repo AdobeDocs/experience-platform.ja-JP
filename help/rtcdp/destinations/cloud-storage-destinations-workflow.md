@@ -4,7 +4,10 @@ seo-title: クラウドストレージの宛先ワークフロー
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 37c51435ce8330dbd61857bda408df03ff21a491
+workflow-type: tm+mt
+source-wordcount: '329'
+ht-degree: 67%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
    ![クラウドストレージの宛先に接続](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. クラウドストレージの宛先への接続を既に設定している場合は、**[!UICONTROL 認証]**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新しいアカウント]**」を選択して、クラウドストレージの宛先への新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。認証手順での [秘密鍵証明書の入力について詳しくは、](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3の宛先 [/](/help/rtcdp/destinations/sftp-destination.md) SFTPの宛先を参照して **** ください。
+2. クラウドストレージの宛先への接続を既に設定している場合は、**[!UICONTROL 認証]**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新しいアカウント]**」を選択して、クラウドストレージの宛先への新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。<br> Amazon S3 [](/help/rtcdp/destinations/amazon-s3-destination.md) , [Amazon S](/help/rtcdp/destinations/amazon-kinesis-destination.md) , [Azureイベントハブ](/help/rtcdp/destinations/azure-event-hubs-destination.md) , SFTP宛先詳細は、Amazon S3 [,](/help/rtcdp/destinations/sftp-destination.md) Amazon S3 **, Azure Authentication Hubs** , and SSFTP宛先を参照してください。
 
    >[!NOTE]
    >
@@ -27,14 +30,14 @@ source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
    ![クラウドストレージの宛先 - 認証手順](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-3. 設定手順 **[!UICONTROL で]** 、 **[!UICONTROL アクティベーションフ]****** ローの名前と説明を入力します。 <br>
-Amazon S3の宛先の場合は、ファイルの配 **[!UICONTROL 信先となるクラウドストレージ]****** の宛先に、バケット名とフォルダーパスを挿入します。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+3. 「 **[!UICONTROL 設定]** 」( **[!UICONTROL Setup]** )手順で、アクティベーションフローの **[!UICONTROL 名前]** (Name)と説明(Description)を入力します。 <br>
+Amazon S3の宛先の場合は、ファイルが配信されるクラウドストレージーの宛先に **[!UICONTROL バケット名]** と **[!UICONTROL フォルダーパス]** を挿入します。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
    ![Amazon S3クラウドのストレージ先への接続 — 認証手順](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-   SFTPの宛先に対して、ファイルが配 **[!UICONTROL 信される]** Folderパスを挿入します。
+   SFTPの送信先の場合は、ファイルが配信される **[!UICONTROL フォルダーパス]** を挿入します。
 
-   ![SFTPクラウドの接続先ストレージ — 認証手順](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+   ![SFTPクラウドのストレージ先に接続 — 認証手順](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
 4. これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択できます。または、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow to export data.
 
