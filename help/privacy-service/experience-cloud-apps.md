@@ -4,7 +4,10 @@ solution: Experience Platform
 title: プライバシーサービスおよびExperience Cloudアプリケーション
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: f4a007b66806cb0d322226e1e1837cfce7ca4095
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 16%
 
 ---
 
@@ -30,13 +33,11 @@ Adobe Experience Platformプライバシーサービスは、複数のAdobe Expe
 | Adobe Analytics | ✓ | ✓ | <ul><li>[ドキュメントへのアクセスと削除](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>Analyticsは、 [プライバシーレポート変数を使用してオプトアウト要求を処理します](https://docs.adobe.com/content/help/ja-JP/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[ドキュメントへのアクセスと削除](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[オプトアウトに関するドキュメント](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[ドキュメントへのアクセスと削除](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[オプトアウトに関するドキュメント](../segmentation/honoring-opt-outs.md)</li></ul> |
+| アドビ顧客属性(CRS) | ✓ | なし | <ul><li>[GDPR向けドキュメントへのアクセス/削除](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/gdpr.html)</li><li>[CCPAのドキュメントへのアクセスと削除](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/ccpa.html)</li><li>顧客属性にはデータを転送する機能がないので、オプトアウトオブセールのリクエストは適用されません。</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | <ul><li>[Data Lakeのドキュメントへのアクセスと削除](../catalog/privacy.md)</li><li>[リアルタイムのお客様プロファイル向けドキュメントへのアクセスと削除](../profile/privacy.md)</li><li>Experience Platformは、オーディエンスセグメントに対する [オプトアウト要求に従います](../segmentation/honoring-opt-outs.md)。</li></ul> |
 | Adobe Primetime Authentication | ✓ | なし | <ul><li>[ドキュメントへのアクセスと削除](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetimeにはデータを転送する機能がないので、オプトアウトオブセールのリクエストは適用されません。</li></ul> |
 | Adobe Target | ✓ | なし | <ul><li>[ドキュメントへのアクセスと削除](https://docs.adobe.com/content/help/ja-JP/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.translate.html)</li><li>ターゲットにはデータを転送する機能がないので、オプトアウトオブセールのリクエストは適用されません。</li></ul> |
 
-<!-- (To include once access/delete documentation is available)
-Adobe Customer Attributes (CRS) | ✓ | N/A | <ul><li>Customer Attributes does not have the capability to transfer data, therefore opt-out-of-sale requests are not applicable.</li></ul>
--->
 
 ## セルフサービスアプリケーション {#self-serve}
 
