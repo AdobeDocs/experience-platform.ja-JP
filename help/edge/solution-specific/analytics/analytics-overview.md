@@ -4,16 +4,15 @@ seo-title: Adobe Experience Platform Web SDK を使用した Adobe Analytics へ
 description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
 seo-description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 100%
 
 ---
 
 
-# （ベータ版）Adobe Analytics へのデータの送信
-
->[!IMPORTANT]
->
->Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
+# Adobe Analytics へのデータの送信
 
 Adobe Experience Platform Web SDK は、Adobe Analytics にデータを送信できます。これは、`xdm` を、Adobe Analytics で使用できる形式に変換することによって機能します。
 
