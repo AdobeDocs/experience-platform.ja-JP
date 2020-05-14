@@ -4,19 +4,19 @@ seo-title: Adobe Experience Platform Web SDK：イベントデータの結合
 description: Experience Platform Web SDK イベントデータの結合方法について説明します
 seo-description: Experience Platform Web SDK イベントデータの結合方法について説明します
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 100%
+source-wordcount: '436'
+ht-degree: 95%
 
 ---
 
 
-# （ベータ版）イベントデータの結合
+# イベントデータの結合
 
 >[!IMPORTANT]
 >
->Adobe Experience Platform Web SDK は現在ベータ版で、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
+>この機能は現在開発中です。したがって、すべてのソリューションでこのデータを統合できるわけではありません。
 
 イベントが発生すると、一部のデータが利用できなくなる場合があります。ユーザーがブラウザーを閉じた場合などに、データが失われないよう、_取得した_&#x200B;データを取り込むことができます。一方、後で使用できるようデータも含めることができます。
 
