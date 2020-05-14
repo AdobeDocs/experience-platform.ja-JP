@@ -4,15 +4,18 @@ solution: Experience Platform
 title: UIでのOracle DBソース・コネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2e10056a3dcbff1075d786327ea7a7ea2ccc776c
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '490'
 ht-degree: 1%
 
 ---
 
 
 # UIでのOracleソースコネクタの作成
+
+> [!NOTE]
+> Oracleコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 Adobe Experience Platformのソースコネクターは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォーム・ユーザー・インタフェースを使用してOracleソース・コネクタを作成する手順を説明します。
 
@@ -21,7 +24,7 @@ Adobe Experience Platformのソースコネクターは、外部ソースのデ�
 このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 * [Experience Data Model(XDM)System](../../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
