@@ -4,26 +4,29 @@ solution: Experience Platform
 title: PayPalコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: e1c92c010ee718138d4234abcb7b9f2f75187b8c
+source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 0%
 
 ---
 
 
-# PayPalコネクタ
+# （ベータ版）PayPalコネクタ
 
-Adobe Experience Platformを使用すると、外部ソースからデータを取り込み、プラットフォームサービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-エクスペリエンスプラットフォームは、サードパーティの支払い申し込みデータを取り込むためのサポートを提供します。 支払いプロバイダーのサポートにはPayPalが含まれます。
+エクスペリエンスプラットフォームは、サードパーティの支払い申請書からデータを取り込むためのサポートを提供します。 支払いプロバイダーのサポートにはPayPalが含まれます。
 
 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してPayPalをプラットフォームに接続する方法に関する情報を提供しています。
 
-## APIを使用してPayPalをプラットフォームに接続する
+## APIを使用したPayPalのプラットフォームへの接続
 
-- [フローサービスAPIを使用したPayPalコネクタの作成](../../tutorials/api/create/payments/paypal.md)
-- [フローサービスAPIを使用した支払申込の調査](../../tutorials/api/explore/payments.md)
-- [フローサービスAPIを使用して、支払い申し込みからデータを収集する](../../tutorials/api/collect/payments.md)
+- [Flow Service APIを使用してPayPalコネクタを作成する](../../tutorials/api/create/payments/paypal.md)
+- [Flow Service APIを使用して支払申込書を調査します](../../tutorials/api/explore/payments.md)
+- [Flow Service APIを使用して、支払い申請からデータを収集する](../../tutorials/api/collect/payments.md)
 
-## UIを使用してPayPalをプラットフォームに接続する
+## UIを使用したPayPalのプラットフォームへの接続
 
 - [UIでのPayPalソースコネクタの作成](../../tutorials/ui/create/payments/paypal.md)
-- [UIでの支払コネクタのデータフローの設定](../../tutorials/ui/dataflow/payments.md)
+- [UIで支払コネクタのデータフローを構成します](../../tutorials/ui/dataflow/payments.md)
