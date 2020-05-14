@@ -4,15 +4,18 @@ solution: Experience Platform
 title: UIにAzure Data Explorerソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
 
 
 # UIにAzure Data Explorerソースコネクタを作成する
+
+> [!NOTE]
+> Azure Data Explorerコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 Adobe Experience Platformのソースコネクターは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してAzure Data Explorer （以下、「Data Explorer」と呼ばれる）ソースコネクタを作成する手順を説明します。
 
