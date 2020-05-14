@@ -4,15 +4,18 @@ solution: Experience Platform
 title: UIにAzureテーブルストレージソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 899c4fbe8a1bb3fef24f606e77f13ef5184d1eda
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 
 # UIにAzureテーブルストレージソースコネクタを作成する
+
+>[!NOTE]
+>Azureテーブルストレージコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 Adobe Experience Platformのソースコネクターは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してAzureテーブルストレージ（以下「ATS」と呼ばれる）ソースコネクタを作成する手順を説明します。
 
