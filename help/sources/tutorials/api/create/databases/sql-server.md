@@ -1,58 +1,64 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: フローサービスAPIを使用したSQL Serverコネクタの作成
+title: Flow Service APIを使用してSQL Serverコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 173faf861ca8feb6dd4e2159b0708e41fa0f601f
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 1%
 
 ---
 
 
 # Flow Service APIを使用してMicrosoft SQL Serverコネクタを作成する
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、サポートされるすべてのソースを接続できるユーザーインターフェイスとRESTful APIを提供します。
+>[!NOTE]
+>Microsoft SQL Serverコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
+
+フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをMicrosoft SQL Server（以下「SQL Server」と呼ばれる）に接続する手順を順を追って説明します。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
-* [資料](../../../../home.md):エクスペリエンスプラットフォームを使用すると、様々なソースからデータを取り込みながら、プラットフォームサービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md):Experience Platformは、デジタルエクスペリエンスアプリケーションの開発と発展を支援するために、単一のプラットフォームインスタンスを別々の仮想環境に分割する仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むと同時に、プラットフォームサービスを使用して、入力データの構造、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-次の節では、フローサービスAPIを使用してSQL Serverに正常に接続するために知っておく必要がある追加情報を示します。
+次の節では、Flow Service APIを使用してSQL Serverに正常に接続するために知っておく必要がある追加情報について説明します。
 
 ### 必要な資格情報の収集
 
 SQL Serverに接続するには、次の接続プロパティを指定する必要があります。
 
-| 資格情報 | 説明 |
+| Credential | 説明 |
 | ---------- | ----------- |
 | `connectionString` | SQL Serverアカウントに関連付けられている接続文字列。 |
 
-SQL Serverの使い始めにつ [いては](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) 、このドキュメントを参照してください。
+SQL Serverの使い始めについて詳しくは、 [このドキュメント](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) を参照してください。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を示します。 これには、パス、必須ヘッダー、適切にフォーマットされたリクエストペイロードが含まれます。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、エクスペリエンスプラットフォームのトラブルシューテ [ィングガイドのAPI呼び出し例の読み方に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) （英語のみ）を参照してください。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず認証チュートリアルを完了する必要 [があります](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのエクスペリエンスプラットフォームAPI呼び出しで必要な各ヘッダーの値を入力します。
+プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
 
-* 認証：無記名 `{ACCESS_TOKEN}`
+* 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-フローサービスに属するリソースを含む、エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platformのすべてのリソース（Flow Serviceに属するリソースを含む）は、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 ペイロード(POST、PUT、PATCH)を含むすべての要求には、追加のメディアタイプヘッダーが必要です。
 
-* コンテンツタイプ： `application/json`
+* Content-Type: `application/json`
 
 ## 接続仕様の検索
 
@@ -60,7 +66,7 @@ SQL Server接続を作成するには、一連のSQL Server接続仕様がフロ
 
 **API形式**
 
-使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GET要求をエンドポイントに送信すると、 `/connectionSpecs` 使用可能なすべてのソースの接続指定が返されます。 また、SQL Server専用の情報を取得するクエリ `property=name=="sql-server"` を含めることもできます。
+使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GET要求をエンドポイントに送信すると、使用可能なすべてのソースの接続指定が返され `/connectionSpecs` ます。 また、SQL Server専用のクエリ `property=name=="sql-server"` を取得する情報を含めることもできます。
 
 ```http
 GET /connectionSpecs
@@ -82,7 +88,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、一意の識別子(`id`)を含むSQL Serverの接続仕様を返します。 このIDは、次の手順でベース接続を作成する際に必要です。
+正常な応答は、固有な識別子(`id`)を含むSQL Serverの接続仕様を返します。 このIDは、次の手順でベース接続を作成する際に必要となります。
 
 ```json
 {
@@ -122,9 +128,9 @@ curl -X GET \
 }
 ```
 
-## ベース接続の作成
+## ベース接続を作成する
 
-ベース接続はソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するために使用できるSQL Serverアカウントごとに1つのベース接続のみが必要です。
+ベース接続はソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクタを作成する場合に使用できるので、SQL Serverアカウントごとに必要なベース接続は1つだけです。
 
 **API形式**
 
@@ -159,12 +165,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | SQL Server認証に関連付けられている接続文字列です。 |
-| `connectionSpec.id` | 前の手順で収集`id`した接続仕様()。 |
+| `auth.params.connectionString` | SQL Server認証に関連付けられている接続文字列。 |
+| `connectionSpec.id` | 前の手順で収集した接続仕様(`id`)。 |
 
 **応答**
 
-成功した応答は、新しく作成されたベース接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常な応答は、新たに作成されたベース接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -175,4 +181,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、Flow Service APIを使用してSQL Serverベースの接続を作成し、接続の一意のID値を取得します。 この基本接続IDは、次のチュートリアルで、フローサービスAPIを使用してデータベースやNoSQL [システムを探索する方法を学ぶ際に使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うと、Flow Service APIを使用してSQL Serverの基本接続を作成し、接続の一意のID値を取得したことになります。 フローサービスAPIを使用してデータベースやNoSQLシステムを [探索する方法を学ぶ際に、次のチュートリアルでこの基本接続IDを使用できます](../../explore/database-nosql.md)。
