@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure Data Explorerコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fb07723aedcf6dfd49765c10342b70b0a7d24f3
+source-git-commit: 58cc359527a590fce3825f41682cbb32be88f8d1
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -28,5 +28,5 @@ Adobe Experience Platformは、Microsoft、MySQL、Azureなどのデータベー
 
 ## UIを使用してAzure Data Explorerをプラットフォームに接続する
 
-- [UIにAzure Data Explorerソースコネクタを作成する](../../tutorials/ui/create/databases/ats.md)
+- [UIにAzure Data Explorerソースコネクタを作成する](../../tutorials/ui/create/databases/data-explorer.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
