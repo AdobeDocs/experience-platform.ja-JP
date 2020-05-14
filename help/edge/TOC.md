@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Edge Networkヘルプ
 translation-type: tm+mt
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 80%
+source-wordcount: '85'
+ht-degree: 78%
 
 ---
 
@@ -16,7 +16,6 @@ ht-degree: 80%
 * [Edge Network の概要](home.md)
 * はじめに {#get-started}
    * [Launch のクイックスタート](getting-started/quick-start-with-launch.md)
-   * [すべての製品のデプロイ](getting-started/deploying-all-products.md)
 * 基本 {#fundamentals}
    * [SDK のインストール](fundamentals/installing-the-sdk.md)
    * [コマンドの実行](fundamentals/executing-commands.md)
@@ -28,7 +27,6 @@ ht-degree: 80%
    * [複数のプロパティの操作](fundamentals/interacting-with-multiple-properties.md)
    * [パーソナライズされたコンテンツのレンダリング](fundamentals/rendering-personalization-content.md)
    * [同意のサポート](fundamentals/supporting-consent.md)
-   * [アプリ内ブラウザーのサポート](fundamentals/supporting-in-app-browsers.md)
    * [ID](fundamentals/identity.md)
 * 実装内容 {#implement}
    * [製品](what-to-implement/commerce.md)
