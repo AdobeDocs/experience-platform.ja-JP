@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platformプライバシーサービスヘルプ
 translation-type: tm+mt
-source-git-commit: 284768c0f5416972e51d2fa2078ad5267e1b8628
+source-git-commit: 63412f07b2e9237bbceaee8f1febef3ff655c286
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '87'
 ht-degree: 11%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 11%
 * Privacy Service API {#api}
    * [はじめに](api/getting-started.md)
    * [プライバシージョブ](api/privacy-jobs.md)
+   * [同意](api/consent.md)
    * [付録](api/appendix.md)
 * プライバシーサービスUI {#ui}
    * [プライバシーサービスのUIの概要](ui/overview.md)
