@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK を使用した Adobe Analytics へ
 description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
 seo-description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 890004b54cb4daf08f188147ed5c97d56e4055fb
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 100%
@@ -38,16 +38,16 @@ Adobe Experience Platform Edge Network は、多くの XDM 変数を自動的に
     key2:value2
   },
   array:[
-    v1,
-    v2,
-    v3
+    "v0",
+    "v1",
+    "v2"
   ],
   arrayofobjects:[
     {
-      obj1key:objval1
+      obj1key:objval0
     },
     {
-      obj2key:objval2
+      obj2key:objval1
     }
   ]
 }
@@ -59,11 +59,11 @@ Adobe Experience Platform Edge Network は、多くの XDM 変数を自動的に
 a.x.key //value
 a.x.object.key1 //value1
 a.x.object.key2 //value2
-a.x.array[0] //v1
-a.x.array[1] //v2
-a.x.array[3] //v3
-a.x.arrayofobjects[1].obj1key //objval1
-a.x.arrayofobjects[2].obj2key //objval2
+a.x.array.0 //v0
+a.x.array.1 //v1
+a.x.array.2 //v2
+a.x.arrayofobjects.0.obj1key //objval0
+a.x.arrayofobjects.1.obj2key //objval1
 ```
 
 次に、このデータを使用する処理ルールの例を示します。
