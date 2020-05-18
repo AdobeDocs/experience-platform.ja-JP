@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
+source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
 workflow-type: tm+mt
-source-wordcount: '1026'
-ht-degree: 5%
+source-wordcount: '1075'
+ht-degree: 4%
 
 ---
 
@@ -55,7 +55,15 @@ Spark 2.4を使用するためのノートブックおよびレシピの移行�
 
 ア [ドビのリアルタイム顧客データプラットフォームでは](../../rtcdp/overview.md)、宛先は、目的のプラットフォームとの統合が事前に構築されており、これらのパートナーに対してシームレスにデータをアクティブ化します。
 
-**新しい宛先**
+**Facebook**
+
+Adobe Real-time CDPは、Facebookへのデータアクティベーションをサポートするようになり、ハッシュされた電子メールに基づくオーディエンスのターゲット設定、パーソナライゼーション、および抑制のために、Facebookキャンペーンのプロファイルをアクティブ化できます。
+
+新しい機能について詳しくは、 [Facebookの表示先](/help/rtcdp/destinations/facebook-destination.md) ページを参照してください。
+
+<br> 
+
+**Amazon KinesisとAzureイベントハブのストリーミングクラウドストレージ先**
 
 Adobe Real-time CDPは、クラウドストレージのストリーミング先へのデータアクティベーションをサポートするようになり、オーディエンスのデータとイベントをJSON形式でこれらの宛先にエクスポートできます。 その後、目的のイベントの上にビジネスロジックを記述できます。 詳しくは、以下を参照してください。
 
