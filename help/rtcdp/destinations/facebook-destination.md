@@ -4,10 +4,10 @@ seo-title: Facebookのリンク先
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するFacebookキャンペーンのプロファイルをアクティブにします。
 seo-description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するFacebookキャンペーンのプロファイルをアクティブにします。
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 522014f8e5f3de0f553a69763d3a37482953b7c4
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 25%
+source-wordcount: '665'
+ht-degree: 24%
 
 ---
 
@@ -17,6 +17,8 @@ ht-degree: 25%
 ## 概要 {#overview}
 
 ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するFacebookキャンペーンのプロファイルをアクティブにします。
+
+![Real-time CDP UI内のFacebookの宛先](/help/rtcdp/destinations/assets/facebook-destination.png)
 
 ## 使用例
 
