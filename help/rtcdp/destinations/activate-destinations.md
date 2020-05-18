@@ -4,10 +4,10 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 77%
+source-wordcount: '775'
+ht-degree: 61%
 
 ---
 
@@ -29,9 +29,13 @@ ht-degree: 77%
 3. **[!UICONTROL アクティブ化]**&#x200B;を選択します。
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
    ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
-5. *オプション*&#x200B;この手順は、クラウドストレージの宛先と電子メールマーケティングの宛先にマッピングされたセグメントに対してのみ適用されます。 「<br>宛先属性&#x200B;**[!UICONTROL 」ページで]**、「**[!UICONTROL 新しいフィールドの追加]**」を選択し、宛先に送信する属性を選択します。
+5. *オプション*&#x200B;この手順は、セグメントをアクティブ化する宛先のタイプによって異なります。 <br> *電子メールマーケティングの宛先* 、 *クラウドストレージの宛先については、属性を*&#x200B;選択 **[!UICONTROL ページで、]****** 新しいフィールドを選択し、宛先に送信する属性を選択します。
 属性の 1 つをユニオンスキーマの[一意の識別子](/help/rtcdp/destinations/email-marketing-destinations.md#identity)にすることをお勧めします。必須属性について詳しくは、「[電子メールマーケティングの宛先](/help/rtcdp/destinations/email-marketing-destinations.md#identity)」で「ID」を参照してください。
-   ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
+   ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
+ソーシャル *ネットワークの宛先の場合*、「 **[!UICONTROL IDマッピング]** 」手順で、ターゲットIDにマップするソース属性を選択します。
+   ![フィールドに入力する前のIDマッピング](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)以下の例では、Facebookの電子メールハッシュ要件に準拠するために、Experience Platformに取り込む際に、IDスキーマの個人 [用電子メールアドレスがハッシュされました](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 マッピングを選択し **[!UICONTROL た後]** 、「次へ」を押します。
+   ![フィールドへの入力後のIDマッピング](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
    >[!IMPORTANT]
@@ -75,6 +79,10 @@ Salesforce_id3544_20191122124530.csv
 
 Facebookの場合、アクティベーションが成功すると、Facebookのカスタムオーディエンスが [Facebook広告マネージャーでプログラム的に作成され](https://www.facebook.com/adsmanager/manage/)ます。 ユーザーがアクティブ化されたセグメントに対して資格を持つか資格を失うかにより、オーディエンスのセグメントメンバーシップが追加および削除されます。
 
+>[!TIP]
+>
+>Adobe Real-time CDPとFacebookの統合により、履歴オーディエンスのバックフィルがサポートされます。 宛先にセグメントをアクティブ化すると、すべての過去のセグメント資格情報がFacebookに送信されます。
+
 ## アクティベーションの無効化 {#disable-activation}
 
 既存のアクティベーションフローを無効化するには、次の手順に従います。
@@ -83,3 +91,4 @@ Facebookの場合、アクティベーションが成功すると、Facebookの�
 2. 右側のレールの「**[!UICONTROL 有効]**」コントロールをクリックして、アクティベーションフローの状態を変更します。
 3. 「**データフロー状態の更新**」ウィンドウで、「**確認**」を選択してアクティベーションフローを無効にします。
 
+AWS Kinesisで、アクセスキー — 秘密アクセスキーペアを生成し、Adobe Real-time CDPにAWS Kinesisアカウントへのアクセスを許可します。 詳しくは、 [AWS Kinesisドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
