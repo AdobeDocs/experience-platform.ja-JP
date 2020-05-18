@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK Experience Cloud IDの取得
 description: Adobe Experience Cloud IDを取得する方法を説明します。
 seo-description: Adobe Experience Cloud IDを取得する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 7%
+source-wordcount: '416'
+ht-degree: 8%
 
 ---
 
@@ -77,6 +77,14 @@ alloy("syncIdentity",{
 | 文字列 | ○ | なし |
 
 これは、特定の名前空間に対して同期するIDです。
+
+#### `authenticationState`
+
+| **タイプ** | **必須** | **デフォルト値** | **可能な値** |
+| -------- | ------------ | ----------------- | ------------------------------------ |
+| 文字列 | ○ | 曖昧な | あいまい、認証済み、ログアウト |
+
+IDの認証状態。
 
 #### `primary`
 
