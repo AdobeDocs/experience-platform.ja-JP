@@ -5,6 +5,9 @@ title: Apache Cassandraコネクタ
 topic: overview
 translation-type: tm+mt
 source-git-commit: 1fd2f526ee3efb4ae9f4d7af851bb5cd5d63cfa9
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
