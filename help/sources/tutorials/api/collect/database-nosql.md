@@ -5,6 +5,9 @@ title: ソースコネクタとAPIを使用して、サードパーティのデ�
 topic: overview
 translation-type: tm+mt
 source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+workflow-type: tm+mt
+source-wordcount: '1606'
+ht-degree: 2%
 
 ---
 
