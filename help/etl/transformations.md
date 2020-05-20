@@ -5,26 +5,29 @@ title: ETL変換の例
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+workflow-type: tm+mt
+source-wordcount: '470'
+ht-degree: 1%
 
 ---
 
 
 # ETL変換の例
 
-この記事では、抽出、変換、読み込み(ETL)開発者が直面する変換の例を示します。
+この記事では、抽出、変換、読み込み(ETL)開発者が発生する可能性のある変換の例を示します。
 
-## 階層へのCSVのフラット化
+## 階層へのフラットなCSV
 
 ### サンプルファイル
 
-サンプルのCSVおよびJSONファイルは、アドビが管理するパブリックETLリファレンスGitHubリポジトリから入手できます。
+サンプルのCSVファイルとJSONファイルは、アドビが管理するパブリックETLリファレンスGitHubレポートから入手できます。
 
 - [CRM_プロファイル.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_プロファイル.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### CSVの例
 
-次のCRMデータは、次の形式でエクスポートされまし `CRM_profiles.csv`た：
+次のCRMデータは、 `CRM_profiles.csv`
 
 ```shell
 TITLE   F_NAME  L_NAME  GENDER  DOB EMAIL   CRMID   ECID    LOYALTYID   ECID2   PHONE   STREET  CITY    STATE   COUNTRY ZIP LAT LONG
@@ -39,36 +42,36 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 ### マッピング
 
-CRMデータのマッピング要件を次の表に示し、次の変換を含めます。
-- プロパティの識別 `identityMap` 列
-- 生年月日(DOB)から年月日まで
+CRMデータのマッピング要件について、次の表に示す変換について説明します。
+- プロパティへのID列 `identityMap`
+- 生年月日(DOB)から年月日
 - 文字列を重複または短い整数に変換します。
 
-| CSV列 | XDMパス | データの形式設定 |
+| CSV列 | XDM Path | データの形式設定 |
 | ---------- | -------- | --------------- |
 | タイトル | person.name.courtesyTitle | 文字列としてコピー |
 | F_NAME | person.name.firstName | 文字列としてコピー |
 | L_NAME | person.name.lastName | 文字列としてコピー |
 | 性別 | person.gender | 性別を対応するperson.gender列挙値に変換 |
-| DOB | person.birthDayAndMonth:&quot;MM-DD&quot;<br/>person.birthDate:&quot;YYYY-MM-DD&quot;<br/>person.birthYear:YYYY | Transform birthDayAndMonth as<br/>stringTransform birthDate as<br/>stringTransform birthYear as short int |
+| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | Transform birthDayAndMonth as<br/><br/>stringTransform birthDate as stringTransform birthYear as short int |
 | EMAIL | personalEmail.address | 文字列としてコピー |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | identityMapのCRMID配列に文字列としてコピーし、Primaryをfalseに設定します。 |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMapのECID配列の最初のエントリに文字列としてコピーし、Primaryをfalseに設定します。 |
+| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | identityMapのCRMID配列に文字列としてコピーし、Primaryをfalseに設定します |
+| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | identityMapのECID配列の最初のエントリに文字列としてコピーし、Primaryをfalseに設定します。 |
 | LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | identityMapのLOYALTYID配列に文字列としてコピーし、Primaryをtrueに設定します。 |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMapのECID配列の2番目のエントリに文字列としてコピーし、Primaryをfalseに設定します。 |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMapのECID配列の2番目のエントリに文字列としてコピーし、「Primary」を「false」に設定します。 |
 | 電話 | homePhone.number | 文字列としてコピー |
 | 通り | homeAddress.street1 | 文字列としてコピー |
 | 市区町村 | homeAddress.city | 文字列としてコピー |
-| 州 | homeAddress.stateProvince | 文字列としてコピー |
+| STATE | homeAddress.stateProvince | 文字列としてコピー |
 | 国 | homeAddress.country | 文字列としてコピー |
 | ZIP | homeAddress.postalCode | 文字列としてコピー |
-| LAT | homeAddress.latitude | 変換重複 |
-| LONG | homeAddress.longitude | 変換重複 |
+| LAT | homeAddress.latitude | 重複に変換 |
+| LONG | homeAddress.longitude | 重複に変換 |
 
 
 ### Output XDM
 
-次のサンプルは、に示すように、CSVの最初の2行をXDMに変換したものです `CRM_profiles.json`。
+次の例は、に示すように、CSVの最初の2行をXDMに変換したもので `CRM_profiles.json`す。
 
 ```json
 {
@@ -168,13 +171,13 @@ CRMデータのマッピング要件を次の表に示し、次の変換を含�
 }
 ```
 
-## 「Dataframe to XDM」スキーマ
+## XDMへのデータフレームスキーマ
 
-データフレーム（Parketファイルなど）の階層は、アップロード先のXDMスキーマの階層と一致する必要があります。
+データ・フレーム（Parketファイルなど）の階層は、アップロード先のXDMスキーマの階層と一致する必要があります。
 
 ### データフレームの例
 
-次の例のデータフレームの構造は、XDM個々のプロファイルクラスを実装するスキーマにマップされ、そのタイプのスキーマに関連付けられた最も一般的なフィールドが含まれています。
+次の例のデータフレームの構造は、XDM Individualプロファイルクラスを実装するスキーマにマップされており、その型のスキーマに関連付けられた最も一般的なフィールドが含まれています。
 
 ```python
 [
@@ -247,9 +250,9 @@ CRMデータのマッピング要件を次の表に示し、次の変換を含�
 ]
 ```
 
-Adobe Experience Platformで使用するデータフレームを作成する場合は、フィールドが正しくマップされるように、階層構造が既存のXDMスキーマと完全に一致するようにすることが重要です。
+Adobe Experience Platformで使用するデータフレームを作成する場合、フィールドが正しくマップされるように、階層構造が既存のXDMスキーマの階層構造と完全に一致するようにすることが重要です。
 
-## IDマップ
+## IDをIDマップに変換
 
 ### IDの配列
 
@@ -278,17 +281,17 @@ Adobe Experience Platformで使用するデータフレームを作成する場�
 
 ### マッピング
 
-次の表に、IDの配列のマッピング要件を示します。
+IDの配列に対するマッピング要件を次の表に示します。
 
 | IDフィールド | identityMapフィールド | データタイプ |
 | -------------- | ----------------- | --------- |
-| identitys[0].id | identityMapEmail[][{"id"}] | 文字列としてコピー |
-| identitys[1].id | identityMapCRMID[][{"id"}] | 文字列としてコピー |
-| identitys[2].id | identityMapLOYALTYID[][{"id"}] | 文字列としてコピー |
+| identitys[0].id | [identityMapEmail][{"id"}] | 文字列としてコピー |
+| identitys[1].id | [identityMapCRMID][{"id"}] | 文字列としてコピー |
+| identitys[2].id | [identityMapLOYALTYID][{"id"}] | 文字列としてコピー |
 
 ### Output XDM
 
-XDMに変換されたIDの配列を以下に示します。
+以下はXDMに変換されたIDの配列です。
 
 ```JSON
 "identityMap": {
