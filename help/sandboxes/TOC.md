@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Adobe Experience Platformヘルプのサンドボックス
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '71'
+ht-degree: 7%
 
 ---
 
@@ -16,9 +19,9 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * [Sandboxユーザーガイド](ui/user-guide.md)
 * Sandbox API {#api}
    * [はじめに](api/getting-started.md)
-   * [リストがサポートするサンドボックスタイプ](api/list-sandbox-types.md)
-   * [リスト](api/list-all-sandboxes.md)
-   * [リストのアクティブなサンドボックス（現在のユーザー用）](api/list-active-sandboxes.md)
+   * [リストがサポートするサンドボックスの種類](api/list-sandbox-types.md)
+   * [すべてのサンドボックスをリスト](api/list-all-sandboxes.md)
+   * [現在のユーザー用のリストアクティブサンドボックス](api/list-active-sandboxes.md)
    * [サンドボックスの検索](api/look-up-sandbox.md)
    * [サンドボックスの作成](api/create-sandbox.md)
    * [サンドボックスの更新](api/update-sandbox.md)
