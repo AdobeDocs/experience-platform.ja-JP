@@ -1,60 +1,63 @@
 ---
-title: Qualtrics Webサイトのフィードバック拡張
-seo-title: Qualtrics Webサイトのフィードバック拡張
-description: E Qualtrics WebサイトのFeedback Extensionは、Adobe Real-time Customer Data Platformの調査先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
-seo-description: Qualtrics Webサイトのフィードバック拡張は、Adobe Real-time Customer Data Platformの調査の宛先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能のページを参照してください。
+title: Qualtrics Webサイトフィードバック拡張
+seo-title: Qualtrics Webサイトフィードバック拡張
+description: Qualtrics Webサイトフィードバック拡張機能は、Adobe Real-time Customer Data Platformの調査先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: Qualtrics Webサイトのフィードバック拡張機能は、Adobe Real-time Customer Data Platformの調査先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
 source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+workflow-type: tm+mt
+source-wordcount: '631'
+ht-degree: 4%
 
 ---
 
 
-# Qualtrics Webサイトのフィードバック拡張 {#qualtrics-extension}
+# Qualtrics Webサイトフィードバック拡張 {#qualtrics-extension}
 
 ## 概要 {#overview}
 
-Qualtrics Webサイトのフィードバックを使用すると、Webサイトの訪問者を適切なメッセージで適切なタイミングで惹きつけることができます。 Webサイトのフィードバック調査の訪問者エクスペリエンスを向上させるか、コンバージョンを向上させるかに関わらず、Qualtrics Webサイトのフィードバックをご利用ください。
+Qualtrics Webサイトのフィードバックを使用すると、適切なメッセージを適切なタイミングでWebサイトの訪問者に提供できます。 Webサイトのフィードバック調査に関する訪問者体験の向上を望む場合でも、コンバージョンの向上を望む場合でも、Qualtrics Webサイトのフィードバックに関するカバーを受けています。
 
-直感的なポイント&amp;クリック操作で、ターゲットを絞り込んだブランドのWebメッセージを数分で作成し、展開できます。 Webサイトから収集したデータとインサイトは、顧客のフィードバックデータと共に、顧客体験の完全な表示を提供するすべてのチャネル（すべて1つのプラットフォーム）に表示されます。
+直感的なポイント&amp;クリック操作により、ターゲットを絞り込んだブランドのWebメッセージを数分以内で作成し、展開できます。 Webサイトから収集したデータとインサイトは、顧客のフィードバックデータと共にすべてのチャネルに表示され、顧客体験の完全な表示をすべて1つのプラットフォームで提供します。
 
-Qualtrics Webサイトのフィードバックは、Adobe Real-time Customer Data Platformの調査拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能のページを参照してください](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html)。
+Qualtrics Webサイトのフィードバックは、Adobe Real-time Customer Data Platformの調査拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでの起動拡張機能の動作について詳しくは、「エクスペリエンスプラットフォーム起動拡張機能の概 [要」を参照してくださ](/help/rtcdp/destinations/experience-platform-launch-extensions.md)い。
+この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
 
-![Qualtrics Webサイトのフィードバック拡張](assets/qualtrics-extension.png)
+![Qualtrics Webサイトフィードバック拡張](assets/qualtrics-extension.png)
 
 ## 前提条件 {#prerequisites}
 
 この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 組織の管理者に連絡して、Launchへのアクセス権を取得し、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-Qualtrics Webサイトのフィードバック拡張をインストールするには：
+Qualtrics Webサイトフィードバック拡張機能をインストールするには：
 
-1. Adobe Real-time CDP [インターフェイスで](http://platform.adobe.com/)、宛先/カタロ **[!UICONTROL グに移動します]**。
+1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
-3. リンク先をクリックしてハイライトし、右側のレールで「 **[!UICONTROL Install Extension]** 」を選択します。 「 **[!UICONTROL Install Extension]** 」コントロールが灰色表示になっている場合は、 **[!UICONTROL manage_properties]** 権限がありません。 前提条件を [参照してくださ](#prerequisites)い。
-4. 「使用可能な **[!UICONTROL 起動プロパティを選択]** 」ウィンドウで、拡張機能をインストールする起動プロパティを選択します。 また、「起動」で新しいプロパティを作成するオプションもあります。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、起動ドキュメ [ントの「プロパティ](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) 」ページの節を参照してください。
+3. リンク先をクリックしてハイライト表示し、右側のレールで「 **[!UICONTROL Install Extension]** 」を選択します。 「 **[!UICONTROL Install Extension]** 」コントロールが灰色表示になっている場合は、 **[!UICONTROL manage_properties]** 権限がありません。 「 [前提条件](#prerequisites)」を参照してください。
+4. 「使用可能な起動プロパティ **[!UICONTROL を選択]** 」ウィンドウで、拡張機能をインストールするLaunchプロパティを選択します。 また、「起動」で新しいプロパティを作成するオプションもあります。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、起動ドキュメントの [プロパティページセクション](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) で説明します。
 5. ワークフローが起動し、インストールが完了します。
 
 拡張機能の設定オプションとインストールのサポートについて詳しくは、Adobe Exchangeの [Qualtrics Webサイトのフィードバックページを参照してください](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html)。
 
-拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュ [メ追加ントの新しい拡張機能](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) （英語のみ）を参照してください。
+この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
-## How to use the extension {#how-to-use}
+## 拡張機能の使用方法 {#how-to-use}
 
-拡張機能をインストールすると、「起動」で開始がその拡張機能のルールを直接設定できます。
+拡張機能をインストールすると、「起動」で直接、拡張機能のルール設定を開始できます。
 
-「起動」では、特定の状況でのみ拡張の宛先にイベントデータを送信するように、インストール済みの拡張のルールを設定できます。 拡張機能のルールの設定について詳しくは、ルールのドキュメントを参照 [してください](https://docs.adobe.com/help/ja-JP/launch/using/reference/manage-resources/rules.html)。
+「起動」では、特定の状況でのみイベントデータを拡張子の宛先に送信するように、インストール済みの拡張子のルールを設定できます。 拡張機能のルールの設定について詳しくは、「ルール [ドキュメント](https://docs.adobe.com/help/ja-JP/launch/using/reference/manage-resources/rules.html)」を参照してください。
 
 ## 拡張機能の設定、アップグレード、削除 {#configure-upgrade-delete}
 
-起動インターフェイスで、拡張機能の設定、アップグレードおよび削除を行うことができます。
+起動インターフェイスでは、拡張機能の設定、アップグレードおよび削除が可能です。
 
 >[!TIP]
 >
->拡張機能が既にいずれかのプロパティにインストールされている場合、Adobe Real-time CDP UIには、拡張機能の **[!UICONTROL Install]** が表示されます。 「拡張機能のインストール」の説明に従って [](#install-extension) 、インストールワークフローを開始し、拡張機能を設定または削除します。
+>拡張機能が既にいずれかのプロパティにインストールされている場合、Adobe Real-time CDP UIには、拡張機能の **[!UICONTROL Install]** と表示されます。 「 [Install extension](#install-extension) 」の説明に従ってインストールワークフローを開始し、拡張機能を起動して設定または削除します。
 
-拡張機能をアップグレードするには、Launchドキュメ [ントの](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) Extensionアップグレードを参照してください。
+拡張機能をアップグレードするには、Launchドキュメントの [Extensionアップグレード](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) を参照してください。
