@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: リアルタイム顧客データプラットフォームヘルプ
 translation-type: tm+mt
-source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 38%
 
 ---
@@ -78,7 +78,7 @@ ht-degree: 38%
          * [クラウドストレージの宛先を作成するためのワークフロー](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
          * [Amazon Kinesisの宛先](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Amazon S3 の宛先](destinations/amazon-s3-destination.md)
-         * [Azure EventHubsの宛先](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+         * [Azureイベントハブの宛先](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP の宛先](destinations/sftp-destination.md)
       * データ管理プラットフォームの宛先 {#dmp-destinations}
          * [データ管理プラットフォームの宛先の概要](destinations/dmp-destinations.md)
