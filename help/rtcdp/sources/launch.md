@@ -5,6 +5,9 @@ description: Adobe Launch を使用した Adobe Experience Platform での Web �
 seo-description: Adobe Launch を使用した Adobe Experience Platform での Web サイトタグの実装
 translation-type: tm+mt
 source-git-commit: b8eda33a88b81dff5f3b45a131a5585a062519c2
+workflow-type: tm+mt
+source-wordcount: '497'
+ht-degree: 100%
 
 ---
 
