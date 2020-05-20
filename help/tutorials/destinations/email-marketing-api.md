@@ -5,59 +5,62 @@ title: 電子メールマーケティングの宛先の作成
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 7ee83b5bf14ec802801cfbc17141c02ceeaccd82
+workflow-type: tm+mt
+source-wordcount: '1660'
+ht-degree: 1%
 
 ---
 
 
-# アドビのリアルタイム顧客データプラットフォームで電子メールのマーケティング先を作成し、データをアクティブ化する
+# 電子メールマーケティングの宛先を作成し、アドビのリアルタイム顧客データプラットフォームでデータをアクティブにする
 
-このチュートリアルでは、API呼び出しを使用して、Adobe Experience Platformデータに接続し、電子メールマーケティングの宛先を作成し、新しく作成した宛先にデータフローを作成し [](../../rtcdp/destinations/email-marketing-destinations.md)、新しく作成した宛先にデータをアクティブ化する方法を説明します。
+このチュートリアルでは、API呼び出しを使用してAdobe Experience Platformデータに接続する方法、 [電子メールマーケティングの宛先を作成する方法](../../rtcdp/destinations/email-marketing-destinations.md)、新しく作成した宛先へのデータフローを作成する方法、新しく作成した宛先へのデータをアクティブ化する方法を説明します。
 
-このチュートリアルでは、Adobe Campaignの宛先をすべての例で使用しますが、手順はすべての電子メールマーケティングの宛先で同じです。
+このチュートリアルでは、Adobe Campaignのリンク先をすべての例で使用しますが、手順はすべての電子メールマーケティングのリンク先で同じです。
 
-![概要 — 宛先の作成とセグメントのアクティブ化の手順](../images/destinations/flow-api-destinations-steps-overview.png)
+![概要 — 宛先を作成し、セグメントをアクティブ化する手順](../images/destinations/flow-api-destinations-steps-overview.png)
 
-アドビのリアルタイムCDPのユーザーインターフェイスを使用して宛先を接続し、データをアクティブにする場合は、「宛先の接続 [」と「宛先のプロファイルとセグメントを宛先のチュートリ](../../rtcdp/destinations/connect-destination.md) アルにアクティブ化する [](../../rtcdp/destinations/activate-destinations.md) 」を参照してください。
+アドビのReal-time CDPのユーザーインターフェイスを使用して宛先を接続し、データをアクティブにする場合は、「宛先の [接続](../../rtcdp/destinations/connect-destination.md) 」および「宛先へのプロファイルとセグメントのアク [ティブ化](../../rtcdp/destinations/activate-destinations.md) 」のチュートリアルを参照してください。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../xdm/home.md):エクスペリエンスプラットフォームが顧客エクスペリエンスデータを整理するための標準化されたフレームワーク。
-* [Catalog Service](../../catalog/home.md):カタログは、エクスペリエンスプラットフォーム内のデータの場所と系列の記録システムです。
-* [サンドボックス](../../sandboxes/home.md):Experience Platformは、デジタルエクスペリエンスアプリケーションの開発と発展を支援するために、単一のプラットフォームインスタンスを別々の仮想環境に分割する仮想サンドボックスを提供します。
+* [Experience Data Model(XDM)System](../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
+* [カタログサービス](../../catalog/home.md): カタログは、エクスペリエンスプラットフォーム内のデータの場所と系列の記録システムです。
+* [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-以下の節では、Adobe Real-time CDPで電子メールマーケティングの宛先に対するデータをアクティブ化するために知っておく必要がある追加情報を示します。
+Adobe Real-time CDPの電子メールマーケティング先に対してデータをアクティブ化するために知っておく必要がある追加情報について、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-このチュートリアルの手順を完了するには、セグメントを接続およびアクティブ化する宛先のタイプに応じて、次の資格情報を準備しておく必要があります。
+このチュートリアルの手順を完了するには、セグメントを接続およびアクティブ化する宛先のタイプに応じて、次の資格情報を準備する必要があります。
 
-* 電子メールマーケティングプラットフォームへのAmazon S3接続の場合： `accessId``secretKey`
-* 電子メールマーケティングプラットフォームへのSFTP接続の場合： `domain`、、、 `port`ま `username``password``ssh key` たは（FTPの場所への接続方法に応じて）
+* 電子メールマーケティングプラットフォームへのAmazon S3接続の場合： `accessId`, `secretKey`
+* 電子メールマーケティングプラットフォームへのSFTP接続の場合： `domain`、、 `port`、 `username`ま `password` たは `ssh key` （FTPの場所への接続方法に応じて異なります）
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を示します。 これには、パス、必須ヘッダー、適切にフォーマットされたリクエストペイロードが含まれます。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、エクスペリエンスプラットフォームのトラブルシューテ [ィングガイドのAPI呼び出し例の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) （英語のみ）を参照してください。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
 
-### 必須およびオプションのヘッダーの値の収集
+### 必須ヘッダーと任意選択ヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず認証チュートリアルを完了する必要 [があります](../authentication.md)。 次に示すように、認証チュートリアルで、すべてのエクスペリエンスプラットフォームAPI呼び出しで必要な各ヘッダーの値を入力します。
+プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
 
-* 認証：無記名 `{ACCESS_TOKEN}`
+* 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのリソースは、特定の仮想サンドボックスに分離できます。 プラットフォームAPIへのリクエストでは、操作を実行するサンドボックスの名前とIDを指定できます。 これらはオプションのパラメータです。
+エクスペリエンスプラットフォームのリソースは、特定の仮想サンドボックスに分離できます。 プラットフォームAPIへのリクエストでは、操作を実行するサンドボックスの名前とIDを指定できます。 これらはオプションのパラメーターです。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!N注意]
->エクスペリエンスプラットフォームのサンドボックスについて詳しくは、サンドボックスの概要に関するドキュメ [ントを参照してくださ](../../sandboxes/home.md)い。
+>エクスペリエンスプラットフォームのサンドボックスについて詳しくは、 [サンドボックスの概要に関するドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべての要求には、追加のメディアタイプヘッダーが必要です。
 
-* コンテンツタイプ： `application/json`
+* Content-Type: `application/json`
 
 <!--
 
@@ -75,15 +78,15 @@ Before starting this tutorial, familiarize yourself with the following terms whi
 
 -->
 
-### Swaggerのドキュメント
+### Swaggerドキュメント
 
 Swaggerのこのチュートリアルでは、すべてのAPI呼び出しに関する付属のリファレンスドキュメントを参照できます。 https://platform.adobe.io/data/foundation/flowservice/swagger#/を参照してください。 このチュートリアルとSwaggerのドキュメントページを並行して使用することをお勧めします。
 
-## 使用可能な宛先のリストを取得する {#get-the-list-of-available-destinations}
+## 使用可能な宛先のリストの取得 {#get-the-list-of-available-destinations}
 
 ![宛先手順の概要手順1](../images/destinations/flow-api-destinations-step1.png)
 
-最初の手順として、データをアクティブにする電子メールマーケティングの宛先を決定する必要があります。 最初に、セグメントを接続してアクティブ化できる、使用可能な宛先のリストをリクエストする呼び出しを実行します。 使用可能な宛先のリストを返すには、次のGET `connectionSpecs` リクエストをエンドポイントに実行します。
+最初の手順として、データをアクティブ化する電子メールマーケティングの宛先を決定する必要があります。 最初に、接続してセグメントをアクティブにできる、使用可能な宛先のリストをリクエストする呼び出しを実行します。 使用可能な宛先のリストを返すには、次のGETリクエストを `connectionSpecs` エンドポイントに実行します。
 
 **API形式**
 
@@ -120,7 +123,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答**
 
-成功した応答には、使用可能な宛先のリストと、その一意の識別子(`id`)が含まれます。 使用する宛先の値を保存します。この値は、以降の手順で必要になります。 例えば、セグメントをAdobe Campaignに接続して配信する場合、応答内で次のスニペットを探します。
+成功した応答には、使用可能な宛先とその一意の識別子(`id`)のリストが含まれます。 使用する宛先の値を保存します。この値は、以降の手順で必要になります。 例えば、セグメントをAdobe Campaignに接続して配信する場合は、応答内で次のスニペットを探します。
 
 ```json
 {
@@ -131,11 +134,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 }
 ```
 
-## エクスペリエンスプラットフォームデータへの接続 {#connect-to-your-experience-platform-data}
+## エクスペリエンスプラットフォームデータに接続する {#connect-to-your-experience-platform-data}
 
 ![宛先手順の概要手順2](../images/destinations/flow-api-destinations-step2.png)
 
-次に、Experience Platformデータに接続し、プロファイルデータを書き出して、希望の宛先でアクティブ化できるようにする必要があります。 これは、以下に説明する2つのサブステップで構成されます。
+次に、Experience Platformデータに接続し、プロファイルデータを書き出して、目的のデータを書き出し先でアクティブ化できるようにする必要があります。 これは、次に説明する2つのサブステップで構成されます。
 
 1. まず、ベース接続を設定して、エクスペリエンスプラットフォームでのデータへのアクセスを許可するための呼び出しを実行する必要があります。
 2. 次に、ベース接続IDを使用して、別の呼び出しを行い、ソース接続を作成して、エクスペリエンスプラットフォームデータとの接続を確立します。
@@ -193,11 +196,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`:統合接続サービスの接続仕様IDを使用します — `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
+* `{CONNECTION_SPEC_ID}`: ユニファイドプロファイルングサービスの接続仕様IDを使用します — `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
 
 **応答**
 
-成功した応答には、ベース接続の一意の識別子(`id`)が含まれます。 この値は、次の手順でソース接続を作成する際に必要な値として格納します。
+成功した応答には、ベース接続の固有な識別子(`id`)が含まれます。 この値は、次の手順でソース接続を作成する際に必要となる場合に保存します。
 
 ```json
 {
@@ -205,7 +208,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### エクスペリエンスプラットフォームデータへの接続
+### エクスペリエンスプラットフォームデータに接続する
 
 **API形式**
 
@@ -266,12 +269,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`:前の手順で取得したIDを使用します。
-* `{CONNECTION_SPEC_ID}`:統合接続サービスの接続仕様IDを使用します — `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
+* `{BASE_CONNECTION_ID}`: 前の手順で取得したIDを使用します。
+* `{CONNECTION_SPEC_ID}`: ユニファイドプロファイルングサービスの接続仕様IDを使用します — `8a9c3494-9708-43d7-ae3f-cda01e5030e1`。
 
 **応答**
 
-正常な応答は、新しく作成されたソース接続の`id`Unified Identifier()を、統合プロファイルサービスに返します。 これにより、エクスペリエンスプラットフォームデータに正常に接続したことが確認されます。 この値は、後の手順で必要な場合に保存します。
+正常な応答は、新しく作成されたUnified Connection Serviceへのソース接続の固有な識別子(`id`)を返します。 これにより、エクスペリエンスプラットフォームのデータに正常に接続できたことが確認できます。 この値は、後の手順で必要となる場合に格納します。
 
 ```json
 {
@@ -280,14 +283,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-## 電子メールマーケティングの宛先に接続 {#connect-to-email-marketing-destination}
+## 電子メールのマーケティング先に接続 {#connect-to-email-marketing-destination}
 
 ![宛先手順の概要手順3](../images/destinations/flow-api-destinations-step3.png)
 
-この手順では、目的の電子メールマーケティングの宛先への接続を設定します。 これは、以下に説明する2つのサブステップで構成されます。
+この手順では、目的の電子メールマーケティングの宛先への接続を設定します。 これは、次に説明する2つのサブステップで構成されます。
 
-1. 最初に、ベース接続を設定して、電子メールサービスプロバイダーへのアクセスを許可する呼び出しを実行する必要があります。
-2. 次に、ベース接続IDを使用して、別の呼び出しを行い、ターゲット接続を作成します。この呼び出しでは、書き出されたデータが配信されるストレージアカウント内の場所と、書き出されるデータの形式を指定します。
+1. まず、ベースサービスプロバイダーを設定して、電子メール接続へのアクセスを許可する呼び出しを実行する必要があります。
+2. 次に、ベース接続IDを使用して別の呼び出しを行い、ターゲット接続を作成します。この呼び出しでは、エクスポートされたデータが配信されるストレージアカウント内の場所と、エクスポートされるデータの形式を指定します。
 
 ### 電子メールマーケティングの宛先へのアクセスを許可する
 
@@ -354,14 +357,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}`:手順「使用可能な宛先のリストを取得」で取得した接続 [仕様IDを使用します](#get-the-list-of-available-destinations)。
-* `{S3 or SFTP}`:この宛先の接続タイプを入力します。 リンク先カ [タログで](../../rtcdp/destinations/destinations-catalog.md)、目的のリンク先までスクロールして、S3またはSFTPの接続タイプがサポートされているかどうかを確認します。
-* `{ACCESS_ID}`:Amazon S3ストレージの場所のアクセスID。
-* `{SECRET_KEY}`:Amazon S3ストレージの秘密鍵。
+* `{CONNECTION_SPEC_ID}`: 使用可能な宛先のリストの [取得で取得した接続仕様IDを使用します](#get-the-list-of-available-destinations)。
+* `{S3 or SFTP}`: この宛先に対して必要な接続タイプを入力します。 リンク [先カタログで](../../rtcdp/destinations/destinations-catalog.md)、目的のリンク先までスクロールして、S3またはSFTPの接続タイプがサポートされているかどうかを確認します。
+* `{ACCESS_ID}`: Amazon S3ストレージの場所のアクセスID。
+* `{SECRET_KEY}`: Amazon S3ストレージの場所の秘密キー。
 
 **応答**
 
-成功した応答には、ベース接続の一意の識別子(`id`)が含まれます。 この値は、次の手順で接続を作成する際に必要となるとおりに保存してください。ターゲット接続の作成
+成功した応答には、ベース接続の固有な識別子(`id`)が含まれます。 この値は、次の手順でターゲット接続を作成する際に必要となる場合に格納します。
 
 ```json
 {
@@ -369,7 +372,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### ストレージの場所とデータ形式の指定
+### ストレージの場所とデータ形式を指定する
 
 **API形式**
 
@@ -443,14 +446,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{BASE_CONNECTION_ID}`:上記の手順で取得したベース接続IDを使用します。
-* `{CONNECTION_SPEC_ID}`:手順「使用可能な宛先のリストを取得」で取得し [た接続仕様を使用します](#get-the-list-of-available-destinations)。
-* `{BUCKETNAME}`:Amazon S3バケット。リアルタイムCDPがデータエクスポートをデポジットします。
-* `{FILEPATH}`:Amazon S3バケットディレクトリ内の、リアルタイムCDPがデータエクスポートをデポジットするパス。
+* `{BASE_CONNECTION_ID}`: 上記の手順で取得したベース接続IDを使用します。
+* `{CONNECTION_SPEC_ID}`: 使用可能な宛先のリストを [取得する手順で取得した接続仕様を使用します](#get-the-list-of-available-destinations)。
+* `{BUCKETNAME}`: Amazon S3バケット。リアルタイムCDPがデータエクスポートをデポジットします。
+* `{FILEPATH}`: Amazon S3バケットディレクトリ内の、リアルタイムCDPがデータエクスポートをデポジットするパスです。
 
 **応答**
 
-成功した応答は、電子メールマーケティングの宛先に対して新しく`id`作成されたターゲット接続の固有な識別子()を返します。 この値は、後の手順で必要な場合に保存します。
+正常な応答を返すと、新たに作成されたターゲット接続と電子メールマーケティングの宛先との間の一意の識別子(`id`)が返されます。 この値は、後の手順で必要となるので保存します。
 
 ```json
 {
@@ -460,13 +463,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ## データフローの作成
 
-![宛先手順の概要手順4](../images/destinations/flow-api-destinations-step4.png)
+![宛先手順の概要：手順4](../images/destinations/flow-api-destinations-step4.png)
 
-前の手順で取得したIDを使用して、Experience Platformデータと、データをアクティブ化する宛先との間にデータフローを作成できるようになりました。 この手順は、後でデータが流れるパイプラインを構築し、エクスペリエンスプラットフォームと目的の宛先の間で行うことを考えてください。
+前の手順で取得したIDを使用して、Experience Platformデータと、データをアクティブ化する先との間にデータフローを作成できるようになりました。 この手順は、後でデータが流れるパイプラインを構築し、エクスペリエンスプラットフォームと目的の宛先の間に行くことと考えてください。
 
 データフローを作成するには、以下に示すように、ペイロード内で以下に示す値を指定しながら、POSTリクエストを実行します。
 
-次のPOSTリクエストを実行して、データフローを作成します。
+次のPOST要求を実行して、データフローを作成します。
 
 **API形式**
 
@@ -514,13 +517,13 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`:接続先の電子メールマーケティングのフローを使用します。 フロー仕様を取得するには、エンドポイントでGET操作を実行 `flowspecs` します。 Swaggerのドキュメントは、こちらを参照してください。https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. 応答で、接続先の電 `upsTo` 子メールマーケティングの宛先の対応するIDを探し、コピーします。 例えば、Adobe Campaignの場合は、パラメータ `upsToCampaign` ーを探してコピー `id` します。
-* `{SOURCE_CONNECTION_ID}`:手順「エクスペリエンスプラットフォームへの接続」で取得した [ソース接続IDを使用します](#connect-to-your-experience-platform-data)。
-* `{TARGET_CONNECTION_ID}`:手順「電子メールターゲットへの接続」で取得した [マーケティング先への接続IDを使用します](#connect-to-email-marketing-destination)。
+* `{FLOW_SPEC_ID}`: 接続先の電子メールマーケティングの宛先のフローを使用します。 フロー仕様を取得するには、エンドポイントでGET操作を実行し `flowspecs` ます。 Swaggerのドキュメントはこちらを参照してください。 https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs 応答で、接続先の電子メールマーケティング `upsTo` 先の対応するIDを探してコピーします。 例えば、Adobe Campaignの場合は、パラメーターを探し `upsToCampaign` てコピー `id` します。
+* `{SOURCE_CONNECTION_ID}`: 手順「エクスペリエンスプラットフォームへの [接続」で取得したソース接続IDを使用します](#connect-to-your-experience-platform-data)。
+* `{TARGET_CONNECTION_ID}`: 手順「電子メールマーケティングの [宛先に接続」で取得したターゲット接続IDを使用します](#connect-to-email-marketing-destination)。
 
 **応答**
 
-成功した応答は、新しく作成されたデ`id``etag`ータフローのID()と、 両方の値を控えておきます。 次の手順で行うのと同じように、セグメントをアクティブにします。
+正常な応答は、新しく作成されたデータフローのID(`id``etag`)と、 両方の値を書き留めておきます。 次の手順で行うように、セグメントをアクティブにします。
 
 ```json
 {
@@ -530,13 +533,13 @@ curl -X POST \
 ```
 
 
-## 新しい宛先にデータをアクティブにする
+## 新しい送信先にデータをアクティブにする
 
-![宛先手順の概要手順5](../images/destinations/flow-api-destinations-step5.png)
+![宛先手順の概要：手順5](../images/destinations/flow-api-destinations-step5.png)
 
-すべての接続とデータフローを作成したら、電子メールマーケティングプラットフォームに対してプロファイルデータをアクティブ化できます。 この手順では、送信先に送信するセグメントとプロファイル属性を選択し、スケジュールして送信先にデータを送信できます。
+すべての接続とデータフローを作成したら、電子メールマーケティングプラットフォームに対してプロファイルデータをアクティブ化できます。 この手順では、送信先に送信するセグメントとプロファイル属性を選択し、スケジュールを設定して送信先にデータを送信できます。
 
-新しい宛先に対してセグメントをアクティブ化するには、次の例のようなJSON PATCH操作を実行する必要があります。 1回の呼び出しで複数のセグメントとプロファイル属性をアクティブ化できます。 JSONパッチの詳細については、 [RFC仕様を参照してください](https://tools.ietf.org/html/rfc6902)。
+新しい宛先に対してセグメントをアクティブ化するには、次の例のようなJSON PATCH操作を実行する必要があります。 1回の呼び出しで複数のセグメントとプロファイル属性をアクティブ化できます。 JSON PATCHの詳細については、 [RFC仕様を参照してください](https://tools.ietf.org/html/rfc6902)。
 
 **API形式**
 
@@ -593,14 +596,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`:前の手順で取得したデータフローを使用します。
-* `{ETAG}`:前の手順で取得したetagを使用します。
-* `{SEGMENT_ID}`:この宛先にエクスポートするセグメントIDを指定します。 アクティブにするセグメントのセグメントIDを取得するには、https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/にアクセスし、操作を探し `GET /segment/jobs` ます。
-* `{PROFILE_ATTRIBUTE}`:例えば、 `"person.lastName"`
+* `{DATAFLOW_ID}`: 前の手順で取得したデータフローを使用します。
+* `{ETAG}`: 前の手順で取得したetagを使用します。
+* `{SEGMENT_ID}`: この宛先にエクスポートするセグメントIDを指定します。 アクティブ化するセグメントのセグメントIDを取得するには、https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/にアクセスし、 `GET /segment/jobs` 操作を探します。
+* `{PROFILE_ATTRIBUTE}`: 例えば、 `"person.lastName"`
 
 **応答**
 
-202 OK応答を探します。 応答本文は返されません。 リクエストが正しかったことを検証するには、次の手順「データフローの検証」を参照してください。
+202 OK応答を探します。 応答本文は返されません。 リクエストが正しいことを検証するには、次の手順「データフローを検証する」を参照してください。
 
 ## データフローの検証
 
@@ -628,12 +631,12 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 --header 'If-Match: "{ETAG}"' 
 ```
 
-* `{DATAFLOW_ID}`:前の手順のデータフローを使用します。
-* `{ETAG}`:前の手順のetagを使用します。
+* `{DATAFLOW_ID}`: 前の手順のデータフローを使用します。
+* `{ETAG}`: 前の手順のetagを使用します。
 
 **応答**
 
-返される応答には、前の手順で送信 `transformations` したセグメントとプロファイル属性がパラメーターに含まれる必要があります。 応答内のサ `transformations` ンプルパラメータは次のようになります。
+返される応答には、前の手順で送信したセグメントとプロファイル属性を `transformations` パラメーターに含める必要があります。 応答内のサンプル `transformations` パラメーターは次のようになります。
 
 ```
 "transformations": [
@@ -662,7 +665,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 次の手順
 
-このチュートリアルに従うと、Real-time CDPを優先する電子メールマーケティングの宛先の1つに接続し、それぞれの宛先にデータフローを設定できます。 送信データを電子メールキャンペーン、ターゲット広告、その他多くの使用例の送信先で使用できるようになりました。 詳しくは、次のページを参照してください。
+このチュートリアルに従うと、Real-time CDPを優先メール・マーケティング先の1つに接続し、それぞれの宛先にデータ・フローを設定できます。 送信データは、電子メールキャンペーン、ターゲット広告、その他多くの使用例の送信先で使用できるようになりました。 詳しくは、次のページを参照してください。
 
 * [宛先の概要](../../rtcdp/destinations/destinations-overview.md)
 * [宛先カタログの概要](../../rtcdp/destinations/destinations-catalog.md)
