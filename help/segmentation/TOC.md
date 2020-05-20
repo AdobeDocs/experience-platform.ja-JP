@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Adobe Experience Platform Segmentation Serviceヘルプ
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 8%
 
 ---
 
@@ -36,7 +39,7 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    - [セグメントの作成](tutorials/create-a-segment.md)
    - [セグメントの評価](tutorials/evaluate-a-segment.md)
    - [データの書き出し](tutorials/export-data.md)
-   - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
+   - [データセットを作成してデータをエクスポートする](tutorials/create-dataset-export-segment.md)
    - [セグメントのデータ使用コンプライアンスの実施](tutorials/governance.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
 - [プラットフォームのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
