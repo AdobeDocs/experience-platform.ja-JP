@@ -5,17 +5,20 @@ title: マップ関数
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 6%
 
 ---
 
 
 # マップ関数
 
-プロファイルクエリ言語(PQL)オファーは、マップとのやり取りを容易にする機能です。 その他のPQL関数の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照。
+プロファイルクエリ言語(PQL)オファー機能を使用すると、マップとのやり取りが容易になります。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
 
-## 取得
+## Get
 
-この関 `get` 数は、特定のキーのマップの値を取得するために使用されます。
+この `get` 関数は、特定のキーのマップの値を取得するために使用されます。
 
 **形式**
 
@@ -25,7 +28,7 @@ source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
 
 **例**
 
-次のPQLクエリは、キーのIDマップの値を取得します `example@example.com`。
+次のPQLクエリは、キーのIDマップの値を取得し `example@example.com`ます。
 
 ```sql
 identityMap.get("example@example.com")
@@ -33,7 +36,7 @@ identityMap.get("example@example.com")
 
 ## キー
 
-この関 `keys` 数は、特定のマップのすべてのキーを取得するために使用されます。
+この `keys` 関数は、特定のマップのすべてのキーを取得するために使用します。
 
 **形式**
 
@@ -43,7 +46,7 @@ identityMap.get("example@example.com")
 
 **例**
 
-次のPQLクエリは、マップのすべてのキーを取得しま `identityMap`す。
+次のPQLクエリは、マップのすべてのキーを取得し `identityMap`ます。
 
 ```sql
 identityMap.keys()
@@ -51,7 +54,7 @@ identityMap.keys()
 
 ## 値
 
-この関 `values` 数は、特定のマップのすべての値を取得するために使用されます。
+この `values` 関数は、指定したマップのすべての値を取得するために使用されます。
 
 **形式**
 
@@ -61,7 +64,7 @@ identityMap.keys()
 
 **例**
 
-次のPQLクエリは、マップのすべての値を取得しま `identityMap`す。
+次のPQLクエリは、マップのすべての値を取得し `identityMap`ます。
 
 ```sql
 identityMap.values()
@@ -69,4 +72,4 @@ identityMap.values()
 
 ## 次の手順
 
-これで、マップ関数の学習が終わったので、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照。
+マップ関数について学習したら、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
