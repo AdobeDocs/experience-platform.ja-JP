@@ -5,32 +5,35 @@ title: 付録
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+workflow-type: tm+mt
+source-wordcount: '304'
+ht-degree: 4%
 
 ---
 
 
 # 付録
 
-以下の節では、Sensei Machine Learning APIの様々な機能に関するリファレンス情報を提供します。
+以下の節では、Senesie Machine Learning APIの様々な機能に関するリファレンス情報を提供します。
 
-## クエリ取得用のアセットパラメータ {#query}
+## アセット取得のクエリパラメータ {#query}
 
-Senesi Machine Learning APIは、アセットの取得に関するクエリパラメーターをサポートしています。 使用可能なクエリパラメーターとその使用方法を次の表に示します。
+Senesie Machine Learning APIは、アセットの取得に関するクエリパラメーターをサポートしています。 次の表に、使用可能なクエリパラメーターとその使用方法を示します。
 
 | クエリーパラメーター | 説明 | デフォルト値 |
 | --------------- | ----------- | ------- |
 | `start` | ページネーションの開始インデックスを示します。 | `start=0` |
 | `limit` | 返す結果の最大数を示します。 | `limit=25` |
-| `orderby` | 優先順での並べ替えに使用するプロパティを示します。 プロパティ名の前にダッシュ(**-**)を含めると、降順で並べ替えられます。それ以外の場合、結果は昇順で並べ替えられます。 | `orderby=created` |
-| `property` | オブジェクトが返される式の中で満たす必要がある比較パラメータを示します。 | `property=deleted==false` |
+| `orderby` | 並べ替えの優先順に使用するプロパティを示します。 プロパティ名の前にダッシュ(**-**)を付けると、降順で並べ替えられます。ダッシュ(-)を付けると、結果が昇順で並べ替えられます。 | `orderby=created` |
+| `property` | オブジェクトが返されるために満たす必要がある比較式を示します。 | `property=deleted==false` |
 
 >[!NOTE] 複数のクエリパラメーターを組み合わせる場合は、アンパサンド(**&amp;**)で区切る必要があります。
 
 ## Python CPUとGPUの設定 {#cpu-gpu-config}
 
-Pythonエンジンは、トレーニングまたはスコアリングの目的でCPUまたはGPUのいずれかを選択でき、 [MLInstanceでタスク仕様](./mlinstances.md) (`tasks.specification`)として定義されます。
+Pythonエンジンは、トレーニングまたはスコアリングの目的でCPUまたはGPUのどちらかを選択でき、 [MLInstance](./mlinstances.md) 上でタスク仕様(`tasks.specification`)として定義されます。
 
-次の設定例では、トレーニングにCPUを使用し、スコアにGPUを使用するよう指定しています。
+次の設定例は、トレーニングにCPUを使用することと、スコアリングにGPUを使用することを指定しています。
 
 ```json
 [
@@ -63,21 +66,21 @@ Pythonエンジンは、トレーニングまたはスコアリングの目的�
 ]
 ```
 
->[!NOTE] との値は、CPU `cpus` ま `gpus` たはGPUの数ではなく、物理マシンの数を示します。 これらの値は許可されており、 `"1"` それ以外の場合は例外がスローされます。
+>[!NOTE] との値 `cpus``gpus` は、CPUまたはGPUの数ではなく、物理マシンの数を表します。 これらの値は許可されており、それ以外 `"1"` の場合は例外がスローされます。
 
-## PySparkおよびSparkのリソース設定 {#resource-config}
+## PySparkとSparkのリソース設定 {#resource-config}
 
-Sparkエンジンでは、トレーニングやスコアリングの目的で計算リソースを変更できます。 次の表に、これらのリソースを示します。
+Spark Enginesには、トレーニングとスコアリングの目的で計算リソースを変更する機能があります。 次の表に、これらのリソースを示します。
 
 | リソース | 説明 | タイプ |
 | -------- | ----------- | ---- |
-| driverMemory | ドライバのメモリ(MB) | int |
-| driverCores | ドライバが使用するコアの数 | int |
+| driverMemory | ドライバのメモリ（MB単位） | int |
+| driverCores | ドライバが使用するコア数 | int |
 | executorMemory | 実行者のメモリ(MB) | int |
-| executorCores | 実行者が使用するコアの数 | int |
-| numExecutors | 実行者の数 | int |
+| executorCores | 実行者が使用するコア数 | int |
+| numExecutors | 実行者数 | int |
 
-リソースは、 [MLInstanceに対して](./mlinstances.md) 、(A)個々のトレーニングまたはスコアリングパラメータ、または(B)追加の仕様オブジェクト内(`specification`)として指定できます。 例えば、次のリソース設定は、トレーニングとスコアの両方で同じです。
+リソースは、 [MLInstanceに対して、(A)個別のトレーニングまたはスコアリングパラメーター、](./mlinstances.md) (B)追加の仕様オブジェクト(`specification`)内で指定できます。 例えば、次のリソース設定は、トレーニングとスコアリングの両方で同じです。
 
 ```json
 [
