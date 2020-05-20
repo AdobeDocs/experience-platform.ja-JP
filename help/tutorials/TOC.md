@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Adobe Experience Platform チュートリアル
 translation-type: tm+mt
 source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+workflow-type: tm+mt
+source-wordcount: '52'
+ht-degree: 9%
 
 ---
 
@@ -11,9 +14,9 @@ source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
 # Adobe Experience Platform tutorials {#tutorials}
 
 * [チュートリアルの概要](home.md)
-* [エクスペリエンスプラットフォームAPIに対する認証](authentication.md)
-* [プラットフォームデータへのアクセス](data-access.md)
-* [データガバナンスとプライバシー](data-governance-privacy.md)
+* [Experience Platform APIに対する認証](authentication.md)
+* [アクセスプラットフォームデータ](data-access.md)
+* [データ・ガバナンスとプライバシー](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)
 * [判定](decisioning.md)
 * 宛先 {#destinations}
