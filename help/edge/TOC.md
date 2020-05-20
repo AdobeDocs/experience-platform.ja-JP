@@ -1,19 +1,19 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Edge Networkヘルプ
+user-guide-title: Adobe Experience Platform Web SDKヘルプ
 translation-type: tm+mt
-source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
+source-git-commit: 73e0c245191c88025e59cf226ec5b07a55064b97
 workflow-type: tm+mt
 source-wordcount: '89'
-ht-degree: 75%
+ht-degree: 66%
 
 ---
 
 
-# Adobe Experience Platform Edge Network {#edge}
+# Adobe Experience Platform Web SDK {#edge}
 
-* [Edge Network の概要](home.md)
+* [Web SDKの概要](home.md)
 * はじめに {#get-started}
    * [Launch のクイックスタート](getting-started/quick-start-with-launch.md)
    * [起動しないクイック開始](getting-started/quick-start-without-launch.md)
