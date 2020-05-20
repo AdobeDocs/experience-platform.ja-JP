@@ -5,6 +5,9 @@ title: 顧客AIでのスコアのダウンロード
 topic: Downloading scores
 translation-type: tm+mt
 source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 7c892d92a50312fb4b733431737b796651689804
 
 ## Find your dataset ID {#dataset-id}
 
-顧客AIインサイトのサービスインスタンス内で、右上のナビゲーションの「 *その他のアクション* 」ドロップダウンをクリックし、「」を選択し **[!UICONTROL Access scores]**&#x200B;ます。
+顧客AIインサイトのサービスインスタンス内で、右上のナビゲーションの「 *その他のアクション* 」ドロップダウンをクリックし、「 **[!UICONTROL アクセススコア]**」を選択します。
 
 ![その他のアクション](../images/insights/more-actions.png)
 
