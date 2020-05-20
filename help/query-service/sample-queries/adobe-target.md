@@ -5,24 +5,27 @@ title: サンプルクエリ
 topic: queries
 translation-type: tm+mt
 source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 3%
 
 ---
 
 
-# Adobeクエリデータのサンプルターゲット
+# Adobeターゲットデータのサンプルクエリ
 
-Adobeターゲットのデータは、エクスペリエンスイベントXDMスキーマに変換され、ユーザーのデータセットとしてExperience Platformに取り込まれます。 このデータを使用するクエリサービスの使用例は多数あり、以下のサンプルクエリがアドビのターゲットデータセットと連携します。
+Adobeターゲットからのデータは、エクスペリエンスイベントXDMスキーマに変換され、データセットとしてExperience Platformに取り込まれます。 このデータを使用するクエリサービスの使用例は多数あり、以下のサンプルクエリはAdobeターゲットデータセットと連携する必要があります。
 
 >[!NOTE]
->次の例では、SQLを編集し、評価するデータセット、変数、または時間枠に基づいて、クエリーに対して期待されるパラメーターを設定する必要があります。 SQLで表示される任意の場所にパラメ `{ }` ータを指定します。
+>次の例では、SQLを編集し、評価したいデータセット、変数、または時間枠に基づいて、クエリに期待されるパラメーターを設定する必要があります。 SQLで表示される任意の場所にパラメーター `{ }` を指定します。
 
 ## プラットフォーム上のターゲットデータソースの標準データセット名：
 
-Adobeターゲットエクスペリエンスイベント(わかりや <br>`adobe_target_experience_events` すい名前)(クエリで使用する名前)
+Adobeターゲットエクスペリエンスイベント（わかりやすい名前） <br>`adobe_target_experience_events` (クエリで使用する名前)
 
 ## 高レベルの部分XDMフィールドマッピング
 
-配列を表 `[ ]` す
+配列を `[ ]` 表す
 
 | 名前 | XDMフィールド | メモ |
 | ---- | --------- | ----- |
@@ -31,10 +34,10 @@ Adobeターゲットエクスペリエンスイベント(わかりや <br>`adobe
 | エクスペリエンス ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
 | Segment ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
 | イベント範囲 | `_experience.target.activities[].activityEvents[].eventScope` | 新しい訪問者と訪問の追跡 |
-| ステップID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | キャンペーンのカスタム手順ID |
+| ステップID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | キャンペーンのカスタムステップID |
 | 価格合計 | `commerce.order.priceTotal` |  |
 
-## 特定の日の時間別アクティビティ数
+## 特定の日の時間別アクティビティカウント
 
 ```sql
 SELECT
@@ -58,7 +61,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-## 特定の日の特定のアクティビティの時間別の詳細
+## 特定の日の特定のアクティビティの時間別詳細
 
 ```sql
 SELECT
@@ -142,7 +145,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 30
 ```
 
-## 指定した日の訪問者、訪問、アクティビティごとのインプレッションの返された数
+## ある特定の日の訪問者数、訪問数、アクティビティごとのインプレッション数の再訪
 
 ```sql
 SELECT
@@ -168,7 +171,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-## 特定の日の訪問者、訪問数、エクスペリエンスIDのインプレッション数、セグメントID、EventScopeを返す
+## 特定の日のリターン訪問者、訪問回数、エクスペリエンスIDのインプレッション数、セグメントID、EventScope
 
 ```sql
 SELECT
