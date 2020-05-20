@@ -5,6 +5,9 @@ description: アドビのリアルタイム顧客データプラットフォー�
 seo-description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
 translation-type: tm+mt
 source-git-commit: eb26b9fbe2f4b63ea411ca61735f6e1b5308777c
+workflow-type: tm+mt
+source-wordcount: '2373'
+ht-degree: 100%
 
 ---
 
