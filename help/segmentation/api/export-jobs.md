@@ -5,6 +5,9 @@ title: ジョブの書き出し
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
+workflow-type: tm+mt
+source-wordcount: '522'
+ht-degree: 4%
 
 ---
 
@@ -20,13 +23,13 @@ source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、セグメントAPIの一部です。 先に進む前に、セグメント化開発ガイ [ドを参照してください](./getting-started.md)。
+このガイドで使用されるAPIエンドポイントは、セグメント化APIの一部です。 先に進む前に、 [セグメント化開発ガイドを参照してください](./getting-started.md)。
 
-特に、『セグメン [ト開発者](./getting-started.md#getting-started) 』ガイドの「はじめに」の節には、関連トピックへのリンク、ドキュメントでのサンプルAPI呼び出しの読み方のガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
+特に、セグメント化開発ガイドの「 [はじめに](./getting-started.md#getting-started) 」の節には、関連トピックへのリンク、ドキュメント内のサンプルAPI呼び出しを読むためのガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
 
 ## 書き出しジョブのリストの取得
 
-IMS組織のすべての書き出しジョブのリストを取得するには、エンドポイントにGETリクエストを作成 `/export/jobs` します。
+エンドポイントにGETリクエストを作成して、IMS組織のすべてのエクスポートジョブのリストを取得でき `/export/jobs` ます。
 
 **API形式**
 
@@ -35,17 +38,17 @@ GET /export/jobs
 GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`:(オ&#x200B;*プション*)応答に返される結果を設定する要求パスに追加されるパラメーター。 複数のパラメーターを含め、アンパサンド(`&`)で区切ることができます。 使用可能なパラメーターを以下に示します。
+- `{QUERY_PARAMETERS}`: (*オプション*)リクエストパスに追加されるパラメーター。応答で返される結果を設定します。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。 使用可能なパラメーターを以下に示します。
 
-**クエリパラメータ**
+**クエリパラメーター**
 
-次に、書き出しジョブのリストに使用できるクエリパラメーターを示します。 これらのパラメーターはすべてオプションです。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。
+書き出しジョブを一覧表示するために使用できるクエリパラメータのリストを次に示します。 これらのパラメーターはすべてオプションです。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `limit` | 返される書き出しジョブの数を指定します。 |
 | `offset` | 結果のページのオフセットを指定します。 |
-| `status` | フィルターは、ステータスに基づいて結果を表示します。 サポートされている値 `NEW`は、、お `SUCCEEDED`よびで `FAILED`す。 |
+| `status` | ステータスに基づいて結果をフィルターします。 サポートされている値は、 `NEW`、 `SUCCEEDED`および `FAILED`です。 |
 
 **リクエスト**
 
@@ -59,7 +62,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED
 
 **応答**
 
-成功した応答は、指定したIMS組織の書き出しジョブのリストをJSONとして持つHTTPステータス200を返します。 次の応答は、IMS組織の成功したすべてのリストの書き出しジョブを返します。
+正常な応答は、指定されたIMS組織の書き出しジョブのリストがJSONとしてHTTPステータス200を返します。 次の応答は、IMS組織の正常に終了したすべての書き出しジョブのリストを返します。
 
 ```json
 {
@@ -163,7 +166,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED
 
 ## 新しい書き出しジョブの作成
 
-エンドポイントにPOSTリクエストを行うことで、新しい書き出しジョブを作成で `/export/jobs` きます。
+エンドポイントにPOSTリクエストを作成して、新しい書き出しジョブを作成でき `/export/jobs` ます。
 
 **API形式**
 
@@ -223,21 +226,21 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `fields` | オプション. 書き出すフィールドのリストをコンマで区切って指定します。 空白の場合、すべてのフィールドが書き出されます。 |
+| `fields` | オプション. カンマで区切った、書き出されたフィールドのリスト。 空白の場合、すべてのフィールドが書き出されます。 |
 | `mergePolicy` | オプション. 指定しなかった場合、エクスポートは指定したセグメントと同じマージポリシーを使用します。 |
 | `filter` | オプション. 空白の場合、すべてのデータがエクスポートされます。 |
-| `filter.segments` | オプション. エクスポートフィルターのセグメントジョブ。 |
-| `filter.segmentQualificationTime` | オプション. セグメントのクオリフィケーション時間のフィルタ。 開始および/または終了時間を提供できる。 |
+| `filter.segments` | オプション. エクスポートジョブのセグメントフィルター。 |
+| `filter.segmentQualificationTime` | オプション. セグメントクオリフィケーション時間のフィルタ。 開始及び/又は終了時間を提供することができる。 |
 | `filter.fromIngestTimestamp` | オプション. RFC-3339形式のタイムスタンプ。 |
-| `destination.datasetId` | 必須. デー `id` タの書き出し先のデータセットの値。 |
-| `segments.segmentId` | 必須. エク `id` スポートするセグメントの値。 |
-| `segments.sgementNs` | オプション. 特定の `namespace` セグメントの |
+| `destination.datasetId` | 必須。データのエクスポート先のデータセットの `id` 値。 |
+| `segments.segmentId` | 必須。エクスポートするセグメントの `id` 値。 |
+| `segments.sgementNs` | オプション. 特定 `namespace` のセグメントの |
 
 
 
 **応答**
 
-正常な応答は、新しく作成された書き出しジョブの詳細と共にHTTPステータス200を返します。
+正常に応答すると、新しく作成した書き出しジョブの詳細と共に、HTTPステータス200が返されます。
 
 ```json
 {
@@ -328,7 +331,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 ## 特定の書き出しジョブの取得
 
-エンドポイントにGETリクエストを行い、リクエストパスにエクスポートジョブの値を指定することで、特定のエク `/export/jobs` スポートジョブに関する詳細 `id` な情報を取得できます。
+エンドポイントにGETリクエストを送信し、リクエストパスにエクスポートジョブの `/export/jobs``id` 値を指定することで、特定のエクスポートジョブに関する詳細な情報を取得できます。
 
 **API形式**
 
@@ -336,7 +339,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 GET /export/jobs/{EXPORT_JOB_ID}
 ```
 
-- `{EXPORT_JOB_ID}`:取得 `id` するエクスポートジョブの値。
+- `{EXPORT_JOB_ID}`: 取得する書き出しジョブの `id` 値。
 
 **リクエスト**
 
@@ -350,7 +353,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} 
 
 **応答**
 
-成功した応答は、指定された書き出しジョブに関する詳細情報と共にHTTPステータス200を返します。
+正常に応答すると、指定された書き出しジョブに関する詳細情報と共に、HTTPステータス200が返されます。
 
 ```json
 {
@@ -441,7 +444,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} 
 
 ## 特定の書き出しジョブのキャンセルまたは削除
 
-エンドポイントにDELETEリクエストを行い、リクエストパスにエクスポートジョブの値を指定するこ `/export/jobs` とで、指定したエクスポートジョ `id` ブの削除をリクエストできます。
+エンドポイントにDELETEリクエストを送信し、リクエストパスにエクスポートジョブの `/export/jobs``id` 値を指定することで、指定したエクスポートジョブを削除するようにリクエストできます。
 
 **API形式**
 
@@ -449,7 +452,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} 
 DELETE /export/jobs/{EXPORT_JOB_ID}
 ```
 
-- `{EXPORT_JOB_ID}`:削除 `id` する書き出しジョブの値。
+- `{EXPORT_JOB_ID}`: 削除する書き出しジョブの `id` 値。
 
 **リクエスト**
 
@@ -463,7 +466,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
 
 **応答**
 
-成功した応答は、次のメッセージと共にHTTPステータス200を返します。
+正常に応答すると、HTTPステータス200が返され、次のメッセージが表示されます。
 
 ```json
 {
