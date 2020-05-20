@@ -5,39 +5,42 @@ title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 translation-type: tm+mt
 source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+workflow-type: tm+mt
+source-wordcount: '1146'
+ht-degree: 1%
 
 ---
 
 
 # Intelligent Servicesで使用するデータの準備
 
-インテリジェントサービスがマーケティングイベントデータからの洞察を見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Servicesで使用されるすべてのデータセットは、 **Consumer ExperienceEvent(CEE)** XDMスキーマに準拠している必要があります。
+インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、インテリジェントサービスで使用されるすべてのデータセットは、 **Consumer ExperienceEvent(CEE)** XDMスキーマに準拠している必要があります。
 
-このドキュメントでは、複数のチャネルのマーケティングイベントのデータをこのスキーマにマッピングし、スキーマ内の重要なフィールドの情報をまとめ、データを効率的に構造にマッピングする方法を判断する際の一般的な手引きを示します。
+このドキュメントでは、複数のチャネルからこのスキーマへのマーケティングイベントデータのマッピング、スキーマ内の重要なフィールドの概要を説明し、データを構造に効果的にマッピングする方法を判断する際の一般的な手引きを示します。
 
-## CEEについてのスキーマ
+## CEEスキーマについて
 
-Consumer ExperienceEventスキーマは、デジタルマーケティングイベント（Webまたはモバイル）、オンラインまたはオフラインのコマースアクティビティに関する個人の行動を説明します。 このスキーマの使用は、意味的に適切に定義されたフィールド（列）があるので、Intelligent Servicesでは必須です。そうしないと、データの明確性が低下する不明な名前は避けられます。
+Consumer ExperienceEventスキーマでは、デジタルマーケティングイベント（Webまたはモバイル）、オンラインまたはオフラインのコマースアクティビティに関する個人の行動を説明します。 このスキーマの使用は、Intelligent Servicesで必要となるのは、意味的に適切に定義されたフィールド（列）であるためです。そうしないとデータが明確にならなくなる不明な名前は一切避けられます。
 
-インテリジェントサービスは、このスキーマ内の複数の主要なフィールドを利用してマーケティングイベントのデータからインサイトを生成します。これらのすべてはルートレベルで見つかり、展開して必須のサブフィールドを表示できます。
+インテリジェントサービスは、このスキーマ内の複数の主要フィールドを利用してマーケティングイベントデータからインサイトを生成します。これらのすべてはルートレベルで見つかり、展開して必須サブフィールドを表示できます。
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-すべてのXDMスキーマと同様、CEEミックスインも拡張可能です。 つまり、CEEミックスインにフィールドを追加し、必要に応じて複数のスキーマに異なるバリエーションを含めることができます。
+すべてのXDMスキーマと同様、CEEミックスインも拡張可能です。 つまり、CEEミックスインにはフィールドを追加でき、必要に応じて複数のスキーマに異なるバリエーションを含めることができます。
 
-mixinの完全な例は、 [public XDM repositoryにあります](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)。以下の節で概要を説明するキーフィールドの参照として使用してください。
+Mixinの完全な例は、 [public XDM repositoryにあります](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)。以下の節で説明するキーフィールドの参照として使用してください。
 
 ## キーフィールド
 
-以下の節では、CEEミックスイン内の主要なフィールドを強調し、インテリジェントサービスが有用なインサイトを生成するために利用する必要があります。例えば、その他の例に関する説明や参照ドキュメントへのリンクが含まれます。
+以下の節では、CEEミックスイン内の主なフィールドを強調して、インテリジェントサービスが有用なインサイトを生成できるようにする必要があります。例えば、その他の例に関するリファレンスドキュメントの説明やリンクが含まれます。
 
 ### xdm:チャネル
 
-このフィールドは、ExperienceEventに関連するマーケティングチャネルを表します。 このフィールドには、チャネルの種類、メディアの種類、場所の種類に関する情報が含まれます。 **アトリビュー&#x200B;_ション_AIがデータを処理するには、このフィールドを指定する必要があります**。
+このフィールドは、ExperienceEventに関連するマーケティングチャネルを表します。 このフィールドには、チャネルのタイプ、メディアのタイプ、場所のタイプに関する情報が含まれます。 **アトリビューションAIがデータを処理できるようにするには、このフィールド&#x200B;_を指定する必要があります_**。
 
 ![](./images/data-preparation/channel.png)
 
-**サンプルスキーマ**
+**スキーマ例**
 
 ```json
 {
@@ -48,22 +51,22 @@ mixinの完全な例は、 [public XDM repositoryにあります](https://github
 }
 ```
 
-の必須サブフィールドの詳細については、エクスペリエンスの `xdm:channel`チャネルスキーマ仕様を参照してく [ださ](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) い。 マッピングの例については、以下の表を参照 [してください](#example-channels)。
+各必須サブフィールドの詳細については、 `xdm:channel`エクスペリエンスチャネルスキーマ [](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) 仕様を参照してください。 マッピングの例については、次の [表を参照してください](#example-channels)。
 
 #### チャネルマッピングの例 {#example-channels}
 
-次の表に、スキーマにマッピングされたマーケティングチャネルの例を示 `xdm:channel` します。
+次の表に、 `xdm:channel` スキーマにマッピングされたマーケティングチャネルの例を示します。
 
 | Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
-| 有料検索 | https:/<span>/ns.adobe.com/xdm/チャネルタイプ/search | 支払った | clicks |
-| Social - Marketing | https:/<span>/ns.adobe.com/xdm/チャネルタイプ/social | 獲得した | clicks |
-| 表示 | https:/<span>/ns.adobe.com/xdm/チャネルタイプ/display | 支払った | clicks |
-| 電子メール | https:/<span>/ns.adobe.com/xdm/チャネルタイプ/email | 支払った | clicks |
-| 内部転送者 | https:/<span>/ns.adobe.com/xdm/チャネルタイプ/direct | 所有 | clicks |
-| ビュースルーを表示 | https:/<span>/ns.adobe.com/xdm/チャネルタイプ/display | 支払った | インプレッション |
-| QRコードのリダイレクト | https:/<span>/ns.adobe.com/xdm/チャネルタイプ/direct | 所有 | clicks |
-| Mobile | https:/<span>/ns.adobe.com/xdm/チャネルタイプ/mobile | 所有 | clicks |
+| 有料検索 | https:/<span>/ns.adobe | 支払った | clicks |
+| Social - Marketing | https:/<span>/ns.adobe | 獲得した | clicks |
+| 表示 | https:/<span>/ns.adobe | 支払った | clicks |
+| 電子メール | https:/<span>/ns.adobe | 支払った | clicks |
+| 内部転送者 | https:/<span>/ns.adobe | 所有 | clicks |
+| Display ViewThrough | https:/<span>/ns.adobe | 支払った | インプレッション |
+| QRコードのリダイレクト | https:/<span>/ns.adobe | 所有 | clicks |
+| Mobile | https:/<span>/ns.adobe | 所有 | clicks |
 
 ### xdm:productListItems
 
@@ -71,7 +74,7 @@ mixinの完全な例は、 [public XDM repositoryにあります](https://github
 
 ![](./images/data-preparation/productListItems.png)
 
-**サンプルスキーマ**
+**スキーマ例**
 
 ```json
 [
@@ -92,7 +95,7 @@ mixinの完全な例は、 [public XDM repositoryにあります](https://github
 ]
 ```
 
-の必須サブフィールドの詳細については、コマースの詳細 `xdm:productListItems`スキーマ仕様を [参照してください](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 。
+各必須サブフィールドの詳細については、「 `xdm:productListItems`コマース詳細スキーマ [](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 」仕様を参照してください。
 
 ### xdm:commerce
 
@@ -100,7 +103,7 @@ mixinの完全な例は、 [public XDM repositoryにあります](https://github
 
 ![](./images/data-preparation/commerce.png)
 
-**サンプルスキーマ**
+**スキーマ例**
 
 ```json
 {
@@ -130,15 +133,15 @@ mixinの完全な例は、 [public XDM repositoryにあります](https://github
   }
 ```
 
-の必須サブフィールドの詳細については、コマースの詳細 `xdm:commerce`スキーマ仕様を [参照してください](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 。
+各必須サブフィールドの詳細については、「 `xdm:commerce`コマース詳細スキーマ [](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) 」仕様を参照してください。
 
 ### xdm:web
 
-このフィールドは、インタラクション、ページの詳細、転送者など、ExperienceEventに関連するWebの詳細を表します。
+このフィールドは、インタラクション、ページの詳細、転送者など、ExperienceEventに関するWebの詳細を表します。
 
 ![](./images/data-preparation/web.png)
 
-**サンプルスキーマ**
+**スキーマ例**
 
 ```json
 {
@@ -160,7 +163,7 @@ mixinの完全な例は、 [public XDM repositoryにあります](https://github
 }
 ```
 
-各必須サブフィールドの詳細については、ExperienceEvent Webの詳細 `xdm:productListItems`スキーマ [](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) 。
+に必要な各サブフィールドの詳細については、ExperienceEvent Web詳細スキーマ `xdm:productListItems`仕様を参照して [](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) ください。
 
 ### xdm:marketing
 
@@ -168,7 +171,7 @@ mixinの完全な例は、 [public XDM repositoryにあります](https://github
 
 ![](./images/data-preparation/marketing.png)
 
-**サンプルスキーマ**
+**スキーマ例**
 
 ```json
 {
@@ -178,45 +181,45 @@ mixinの完全な例は、 [public XDM repositoryにあります](https://github
 }
 ```
 
-各必須サブフィールドの詳細については、「マーケティング `xdm:productListItems`の仕様」を参照し [てください](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 。
+の必須サブフィールドの詳細については、 `xdm:productListItems`marketing sechma [](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 仕様を参照してください。
 
 ## データのマッピングと取り込み
 
-マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、データをインテリジェントサービスに取り込むプロセスを開始できます。 データをアドビのコンサルティングサービスにマッピングし、スキーマに取り込む方法については、アドビのコンサルティングサービスにお問い合わせください。
+マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、データをインテリジェントサービスに取り込むプロセスを開始できます。 アドビのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、サービスに取り込む方法を確認してください。
 
-Adobe Experience Platform購読をお持ちで、データを自分でマッピングして取り込む場合は、次の節で説明する手順に従います。
+Adobe Experience Platformの購読がいて、自分でデータをマッピングし取り込む場合は、次の節に示す手順に従います。
 
 ### Adobe Experience Platformの使用
 
->[!NOTE] 次の手順では、エクスペリエンスプラットフォームへの購読が必要です。 プラットフォームにアクセスできない場合は、次の手順に進ん [でください](#next-steps) 。
+>[!NOTE] 以下の手順では、購読がエクスペリエンスプラットフォームを使用する必要があります。 プラットフォームにアクセスできない場合は、 [次の手順](#next-steps) 「」セクションに進みます。
 
-この節では、詳細な手順のチュートリアルへのリンクを含め、Intelligent Servicesで使用するデータをExperience Platformにマッピングして取り込むためのワークフローについて説明します。
+この節では、データをマッピングし、インテリジェントサービスで使用するためのエクスペリエンスプラットフォームに取り込むためのワークフローについて説明します。詳細な手順のチュートリアルへのリンクも含まれます。
 
-#### CEEデータセットとスキーマの作成
+#### CEEスキーマとデータセットの作成
 
-取り込むデータを準備する開始の準備が整ったら、まずCEEミックスインを使用する新しいXDMスキーマを作成します。 次のチュートリアルでは、UIまたはAPIで新しいスキーマを作成するプロセスを説明します。
+取り込み用にデータを準備する際に開始が発生する準備が整ったら、最初の手順は、CEEミックスインを使用する新しいXDMスキーマを作成することです。 次のチュートリアルでは、UIまたはAPIで新しいスキーマを作成するプロセスについて説明します。
 
 * [UIでのスキーマの作成](../xdm/tutorials/create-schema-ui.md)
 * [APIでのスキーマの作成](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] 上記のチュートリアルは、ワークフローを作成するための一般的なスキーマです。 スキーマのクラスを選択する場合は、 **XDM ExperienceEventクラスを使用する必要があります**。 このクラスを選択したら、CEEミックスインをスキーマに追加。
+>[!IMPORTANT] 上記のチュートリアルは、スキーマを作成するための一般的なワークフローに従っています。 スキーマのクラスを選択する場合は、 **XDM ExperienceEventクラスを使用する必要があります**。 このクラスを選択したら、CEEミックスインをスキーマに追加できます。
 
-CEEミックスインをスキーマに追加した後、データ内の追加のフィールドに必要に応じて他のミックスインを追加できます。
+CEEミックスインをスキーマに追加した後、データ内の追加フィールドに必要に応じて他のミックスインを追加できます。
 
-データセットを作成して保存した後、スキーマに基づいて新しいデータセットをスキーマします。 次のチュートリアルでは、UIまたはAPIで新しいデータセットを作成するプロセスについて説明します。
+スキーマを作成して保存したら、そのスキーマに基づいて新しいデータセットを作成できます。 以下のチュートリアルでは、UIまたはAPIで新しいデータセットを作成するプロセスについて説明します。
 
-* [UIでのデータセットの作成](../catalog/datasets/user-guide.md#create) （既存のデータセットの使用ワークフローに従います）
+* [UIでのデータセットの作成](../catalog/datasets/user-guide.md#create) (既存のスキーマを使用する場合のワークフローに従います)
 * [APIでのデータセットの作成](../catalog/datasets/create.md)
 
 #### データのマッピングと取り込み
 
-CEEスキーマとデータセットを作成したら、データテーブルをスキーマに開始マッピングし、そのデータをプラットフォームに取り込むことができます。 UIでCSVファイルを実行す [る手順については、CSVファイルをXDMスキーマにマッピングする](../ingestion/tutorials/map-a-csv-file.md) （英語のみ）のチュートリアルを参照してください。 データセットを設定したら、同じデータセットを使用して追加のデータファイルを取り込むことができます。
+CEEスキーマとデータセットを作成したら、データテーブルをスキーマに開始マッピングし、そのデータをプラットフォームに取り込むことができます。 UIでCSVファイルを実行する方法については、CSVファイルのXDMスキーマ [への](../ingestion/tutorials/map-a-csv-file.md) マッピングに関するチュートリアルを参照してください。 データセットを取り込むと、同じデータセットを使用して他のデータファイルを取り込むことができます。
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、インテリジェントサービスで使用するデータの準備に関する一般的なガイダンスを提供しました。 使用事例に基づいて追加のコンサルティングが必要な場合は、アドビのコンサルティングサポートにお問い合わせください。
+このドキュメントでは、インテリジェントサービスで使用するデータを準備する際の一般的なガイダンスを提供しました。 使用事例に基づく追加のコンサルティングが必要な場合は、アドビのコンサルティングサポートにお問い合わせください。
 
-データセットに顧客体験データを正しく埋め込むと、インテリジェントサービスを使用してインサイトを生成できます。 使用を開始するには、次のドキュメントを参照してください。
+顧客体験データのデータセットへの入力が完了すると、インテリジェントサービスを使用してインサイトを生成できます。 開始するには、次のドキュメントを参照してください。
 
 * [アトリビューションAIの概要](./attribution-ai/overview.md)
 * [顧客 AI の概要](./customer-ai/overview.md)
