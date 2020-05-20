@@ -1,15 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: スキーマレジストリAPIを使用してスキーマを作成する
+title: スキーマレジストリAPIを使用したスキーマの作成
 topic: tutorials
 translation-type: tm+mt
 source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+workflow-type: tm+mt
+source-wordcount: '2418'
+ht-degree: 1%
 
 ---
 
 
-# スキーマレジストリAPIを使用してスキーマを作成する
+# スキーマレジストリAPIを使用したスキーマの作成
 
 スキーマレジストリは、Adobe Experience Platform内のスキーマライブラリにアクセスするために使用します。 スキーマライブラリには、アドビ、エクスペリエンスプラットフォームパートナー、および使用するアプリケーションのベンダーが提供するリソースが含まれています。 レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスとRESTful APIを提供します。
 
@@ -20,7 +23,7 @@ source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 * [Experience Data Model(XDM)System](../home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   * [スキーマ構成の基本](../schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+   * [スキーマ構成の基本](../schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
 * [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
