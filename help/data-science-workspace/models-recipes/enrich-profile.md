@@ -5,6 +5,9 @@ title: 機械学習インサイトによるリアルタイムの顧客プロフ�
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '1226'
+ht-degree: 0%
 
 ---
 
@@ -38,37 +41,37 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 
 スキーマの構成は、クラスの割り当てから始まります。 スキーマに格納されるデータ（レコードまたは時系列）の行動面を定義するクラスです。 この節では、スキーマビルダーを使用してスキーマを作成する基本的な手順を説明します。 詳細なチュートリアルについては、スキーマエディタを使用したスキーマの [作成に関するチュートリアルを参照してください](../../xdm/tutorials/create-schema-ui.md)。
 
-1. Adobe Experience Platformで、タブをクリックしてスキーマブラウザーにアクセスし **[!UICONTROL Schema]** ます。 をクリックして、 **[!UICONTROL Create Schema]** スキーマエディタにアクセスします **。このエディタでは、スキーマをインタラクティブに作成できます。
+1. Adobe Experience Platformで、「 **[!UICONTROL スキーマ]** 」タブをクリックしてスキーマブラウザーにアクセスします。 「 **[!UICONTROL スキーマを]** 作成 *」をクリックして*スキーマエディタにアクセスし、スキーマをインタラクティブに作成できます。
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. 「 *Composition* 」ウィンドウでをクリックし、使用可能なクラス **[!UICONTROL Assign]** を参照します。
-   * 既存のクラスを割り当てるには、をクリックして目的のクラスを選択し、をクリックし **[!UICONTROL Assign Class]**ます。
+2. 「 *組版* 」ウィンドウで「 **[!UICONTROL 割り当て]** 」をクリックし、使用可能なクラスを参照します。
+   * 既存のクラスを割り当てるには、をクリックして目的のクラスを選択し、「 **[!UICONTROL Assign Class]**」をクリックします。
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
-   * カスタムクラスを作成するには、ブラウザーウィンドウの中央上部付近にある「 **[!UICONTROL Create New Class]** 見つかった」をクリックします。 クラス名と説明を入力し、クラスの動作を選択します。 終了 **[!UICONTROL Assign Class]** したら、をクリックします。
+   * カスタムクラスを作成するには、ブラウザーウィンドウの中央上部近くにある **[!UICONTROL 新しいクラスを作成]** (Create New Class)をクリックします。 クラス名と説明を入力し、クラスの動作を選択します。 終了したら、「 **[!UICONTROL クラスを割り当て]** 」をクリックします。
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
    この時点で、スキーマの構造にはいくつかのクラスフィールドが含まれている必要があり、ミックスインを割り当てる準備が整います。 ミックスインは、特定の概念を説明する1つ以上のフィールドのグループです。
 
-3. 「 *コンポジション* 」ウィンドウで、「 **[!UICONTROL Add]** ミックスイン ** 」サブセクションのをクリックします。
-   * 既存のMixinを割り当てるには、をクリックし、目的のMixinをハイライト表示して、をクリックし **[!UICONTROL Add Mixin]**ます。 クラスとは異なり、複数のミックスインを1つのスキーマに割り当てるのは、割り当てる必要がある限り可能です。
+3. 「 *コンポジション* 」ウィンドウで、「 **[!UICONTROL Mixins]**** 」サブセクションのをクリックします。
+   * 既存のMixinを割り当てるには、目的のMixinをクリックしてハイライト表示し、「 **[!UICONTROL 追加Mixin]**」をクリックします。 クラスとは異なり、複数のミックスインを1つのスキーマに割り当てるのは、割り当てる必要がある限り可能です。
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
-   * 新しいミックスインを作成するには、ブラウザーウィンドウの中央上部付近にある「 **[!UICONTROL Create New Mixin]** 見つかった」をクリックします。 ミックスインの名前と説明を入力し、完了したら、をクリック **[!UICONTROL Assign Mixin]** します。
+   * 新しいMixinを作成するには、ブラウザウィンドウの中央上部近くにある **** 「新しいMixinを作成」をクリックします。 ミックスインの名前と説明を入力し、完了したら「Mixinを **[!UICONTROL 割り当て]** 」をクリックします。
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * Mixinフィールドを追加するには、 *コンポジション* (Composition)ウィンドウ内でMixinの名前をクリックします。 次に、「 **[!UICONTROL Add Field]** 構造 ** 」ウィンドウ内のをクリックして、Mixinフィールドを追加するオプションを提供します。 それに応じて、mixinプロパティを必ず指定してください。
+   * Mixinフィールドを追加するには、 *コンポジション* (Composition)ウィンドウ内でMixinの名前をクリックします。 次に、「構造 **[!UICONTROL 」(]** Structure *)ウィンドウ内の「* 追加フィールド」(Field)をクリックして、Mixinフィールドを追加するオプションを提供します。 それに応じて、mixinプロパティを必ず指定してください。
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. スキーマの構築が完了したら、「 *構造* 」ウィンドウ内でスキーマの最上位フィールドをクリックし、スキーマのプロパティを右側の「プロパティー」ウィンドウに表示します。 名前と説明を入力し、をクリックしてスキーマ **[!UICONTROL Save]** を作成します。
+4. スキーマの構築が完了したら、「 *構造* 」ウィンドウ内でスキーマの最上位フィールドをクリックし、スキーマのプロパティを右側の「プロパティー」ウィンドウに表示します。 名前と説明を入力し、「 **[!UICONTROL 保存]** 」をクリックしてスキーマを作成します。
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
-5. 新しく作成したスキーマを使用して出力データセットを作成するには、左側のナビゲーション列 **[!UICONTROL Datasets]** をクリックし、をクリックし **[!UICONTROL Create dataset]**&#x200B;ます。 次の画面で、を選択し **[!UICONTROL Create dataset from schema]**ます。
+5. 新しく作成したスキーマを使用して出力データセットを作成するには、左のナビゲーション列で **[!UICONTROL 「Datasets]** 」をクリックし、「データセットを **[!UICONTROL 作成]**」をクリックします。 次の画面で、「スキーマからデータセットを **[!UICONTROL 作成]**」を選択します。
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
-6. スキーマブラウザーを使用して、新しく作成したスキーマを探して選択し、をクリックし **[!UICONTROL Next]**ます。
+6. スキーマブラウザーを使用して、新しく作成したスキーマを探して選択し、「 **[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/enrich-rtcdp/choose_schema.png)
 
-7. 名前と説明（オプション）を入力し、をクリックしてデータセット **[!UICONTROL Finish]** を作成します。
+7. 名前と説明（オプション）を入力し、「 **[!UICONTROL 完了]** 」をクリックしてデータセットを作成します。
    ![](../images/models-recipes/enrich-rtcdp/configure_dataset.png)
 
 出力スキーマデータセットを作成したら、次のセクションに進み、プロファイルエンリッチメントの設定と有効化を行う準備が整いました。
@@ -83,16 +86,16 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 2. スキーマ構造を展開し、主識別子として設定する適切なフィールドを探します。 目的のフィールドをクリックして、そのプロパティを表示します。
    ![](../images/models-recipes/enrich-rtcdp/schema_structure.png)
 
-3. フィールドのプロパティと **[!UICONTROL Identity]** プロパティを有効にし、適切なプロパティを選択して、フィールドを主IDとして設定し **[!UICONTROL Primary Identity]****[!UICONTROL Identity Namespace]**&#x200B;ます。 変更 **[!UICONTROL Apply]** を行ったら、をクリックします。
+3. フィールドの **[!UICONTROL Identity]** プロパティと **[!UICONTROL Primary Identity]** プロパティを有効にし、適切な **[!UICONTROL Identity名前空間を選択して、フィールドを主IDとして設定します]**。 変更を行ったら、 **[!UICONTROL 「適用]** 」をクリックします。
    ![](../images/models-recipes/enrich-rtcdp/set_identity.png)
 
-4. スキーマ構造の最上位のオブジェクトをクリックしてスキーマのプロパティを表示し、スイッチを切り替えてスキーマのプロファイルを有効にし **[!UICONTROL Profile]** ます。 クリック **[!UICONTROL Save]** して変更を終了します。このスキーマを使用して作成されたデータセットは、プロファイルを有効にできます。
+4. スキーマ構造の最上位のオブジェクトをクリックしてスキーマのプロパティを表示し、 **[!UICONTROL プロファイル]** スイッチを切り替えてスキーマのプロファイルを有効にします。 「 **[!UICONTROL 保存]** 」をクリックして変更を確定すると、このスキーマを使用して作成されたデータセットをプロファイル可能にできます。
    ![](../images/models-recipes/enrich-rtcdp/enable_schema.png)
 
 5. プロファイルを有効にするデータセットを見つけるには、データセットブラウザを使用し、その名前をクリックして詳細を表示します。
    ![](../images/models-recipes/enrich-rtcdp/datasets.png)
 
-6. 右側のプロファイル列にあるスイッチを切り替えて、情報用のデータセットを有効にし **[!UICONTROL Profile]** ます。
+6. 右側のプロファイル列にある **[!UICONTROL プロファイル]** ・スイッチを切り替えて、情報用のデータセットを有効にします。
    ![](../images/models-recipes/enrich-rtcdp/enable_dataset.png)
 
 データがプロファイル対応データセットに取り込まれると、同じデータがプロファイルレコードとして取り込まれます。 スキーマとデータセットを準備したら、適切なモデルを使用してスコアリング実行を実行し、データセットに含まれるデータを生成し、このチュートリアルでセグメントビルダーを使用してインサイトセグメントを作成します。
@@ -101,7 +104,7 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 
 インサイトを生成し、プロファイル対応データセットに取り込んだので、セグメントビルダーを使用して関連要素のサブセットを識別し、データを管理できます。 独自のセグメントを作成するには、次の手順に従います。
 
-1. Adobe Experience Platformで、タブをクリックし、続いてセグメントビルダー **[!UICONTROL Segments]****[!UICONTROL Create Segment]** にアクセスします。
+1. Adobe Experience Platformで、「 **[!UICONTROL セグメント]** 」タブをクリックし、「セグメントを **[!UICONTROL 作成]** 」をクリックしてセグメントビルダーにアクセスします。
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
 2. セグメントビルダー内で、左側のレールから、セグメントの主要な構成要素にアクセスできます。 属性、イベントおよび既存のセグメント。 各文書パーツは、それぞれのタブに表示されます。 プロファイルが有効なスキーマを拡張するクラスを選択し、セグメントの構築ブロックを参照して探します。
@@ -113,7 +116,7 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 4. セグメントを作成する際に、 *セグメントのプロパティ* パネルを観察することで、セグメントの結果の予測をプレビューできます。
    ![](../images/models-recipes/enrich-rtcdp/preview_segment.gif)
 
-5. 適切なセグメントを選択 **[!UICONTROL Merge Policy]**&#x200B;し、名前と説明（オプション）を入力してから、をクリックして新しいセグメント **[!UICONTROL Save]** を完成させます。
+5. 適切な「 **[!UICONTROL 結合ポリシー]**」を選択し、名前とオプションの説明を入力し、「 **[!UICONTROL 保存]** 」をクリックして新しいセグメントを完成させます。
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
