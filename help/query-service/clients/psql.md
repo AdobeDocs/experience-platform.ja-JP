@@ -5,13 +5,16 @@ title: PSQLとの接続
 topic: connect
 translation-type: tm+mt
 source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 1%
 
 ---
 
 
 # PSQLとの接続
 
-PSQLは、Postgresをマシンにインストールする際に提供されるコマンドラインインターフェイスです。 次の手順に従ってインストールできます。
+PSQLは、Postgresをマシンにインストールする際に提供されるコマンドラインインターフェイスです。 以下の手順に従って、インストールできます。
 
 ## MacでのPostgresのインストール
 
@@ -29,23 +32,23 @@ brew install postgres
 which psql
 ```
 
-これらのコマンドを発行すると、次の内容が表示されます。
+これらのコマンドを発行すると、次のように表示されます。
 
 ```shell
 /usr/local/bin/psql
 ```
 
-## PCへのPostgresのインストール
+## PCにPostgresをインストールする
 
-この場所からPostgresをダウンロードしてインスト [ールしま](https://www.postgresql.org/download/windows/)す。
+この [場所からPostgresをダウンロードしてインストールします](https://www.postgresql.org/download/windows/)。
 
-パス変数の編集：
+パス変数を編集します。
 
 ![画像](../images/clients/psql/path.png)
 
-「追加Postgres」を含む2行が表示されています。
+表追加示されている2行に「Postgres」が含まれています。
 
-更新を保存し、コマンドプロンプトを開いて、次のように入力します。
+更新を保存し、コマンドプロンプトを開いて次のように入力します。
 
 ```shell
 psql -V
@@ -57,19 +60,19 @@ psql -V
 psql (PostgreSQL) 9.5.14
 ```
 
-## PSQLとクエリサービス
+## PSQLとクエリサービスの接続
 
-「Connect BIツール」ページのプラットフォームUIに戻ります。
+「Connect BI Tools」ページのプラットフォームUIに戻ります。
 
-「PSQLコ **マンド** 」の「copy」をクリックします。
+「 **PSQLコマンド」の「** コピー」をクリックします。
 
 ![画像](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]:PCを使用している場合は、テキストエディタを使用してコマンド文字列の改行を削除し、文字列をコピーします。
+>[!IMPORTANT]: PCを使用している場合は、テキストエディタを使用してコマンド文字列の改行を削除し、文字列をコピーします。
 
 コマンド文字列をターミナルまたはコマンドウィンドウに貼り付け、Enterキーを押します。
 
-次のような結果が表示されます。
+次のような結果になります。
 
 ```shell
 psql (10.5, server 0.1.0)
