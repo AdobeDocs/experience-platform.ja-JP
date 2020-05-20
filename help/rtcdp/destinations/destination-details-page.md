@@ -5,6 +5,9 @@ description: '個々の宛先の詳細ページには、宛先名、ID、宛先�
 seo-description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 translation-type: tm+mt
 source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 100%
 
 ---
 
