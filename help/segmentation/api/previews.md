@@ -5,6 +5,9 @@ title: プレビュー
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 45a196d13b50031d635ceb7c5c952e42c09bd893
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 4%
 
 ---
 
@@ -13,19 +16,19 @@ source-git-commit: 45a196d13b50031d635ceb7c5c952e42c09bd893
 
 導入
 
-- 新しいプレビュー
+- 新しいプレビューの作成
 - 特定のプレビューの結果の取得
-- 特定のプレビュー
+- 特定のプレビューのキャンセルまたは削除
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、セグメントAPIの一部です。 先に進む前に、セグメント化開発ガイ [ドを参照してください](./getting-started.md)。
+このガイドで使用されるAPIエンドポイントは、セグメント化APIの一部です。 先に進む前に、 [セグメント化開発ガイドを参照してください](./getting-started.md)。
 
-特に、『セグメン [ト開発者](./getting-started.md#getting-started) 』ガイドの「はじめに」の節には、関連トピックへのリンク、ドキュメントでのサンプルAPI呼び出しの読み方のガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
+特に、セグメント化開発ガイドの「 [はじめに](./getting-started.md#getting-started) 」の節には、関連トピックへのリンク、ドキュメント内のサンプルAPI呼び出しを読むためのガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
 
-## 新しいプレビュー
+## 新しいプレビューの作成
 
-エンドポイントにPOSTリクエストをプレビューすることで、新しいエンドポイントを作成で `/preview` きます。
+エンドポイントにPOSTリクエストを作成して、新しいプレビューを作成でき `/preview` ます。
 
 **API形式**
 
@@ -56,7 +59,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 **応答**
 
-応答が成功すると、新しく作成された応答の詳細と共に、HTTPステータス201（作成済み）が返されます。プレビュー
+正常に応答すると、新しく作成したプレビューの詳細と共に、HTTPステータス201（作成済み）が返されます。
 
 ```json
 {
@@ -72,7 +75,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 ## 特定のプレビューの結果の取得
 
-特定のプレビューに関する詳細な情報を取得するには、エンドポイントにGETリクエストを送信し、 `/preview` リクエストパスにプレビューの値を `id` 指定します。
+エンドポイントにGETリクエストを送信し、リクエストパスにプレビューの `/preview``id` 値を指定することで、特定のプレビューに関する詳細な情報を取得できます。
 
 **API形式**
 
@@ -80,7 +83,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 GET /preview/{PREVIEW_ID}
 ```
 
-- `{PREVIEW_ID}`:取得 `id` するプレビューの値。
+- `{PREVIEW_ID}`: 取得するプレビューの `id` 値。
 
 **リクエスト**
 
@@ -94,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 **応答**
 
-成功した応答は、HTTPステータス200を返し、指定された応答に関する詳細な情報がプレビューされます。
+成功した応答は、指定されたプレビューに関する詳細情報と共にHTTPステータス200を返します。
 
 ```json
 {
@@ -111,9 +114,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 }
 ```
 
-## 特定のプレビュー
+## 特定のプレビューのキャンセルまたは削除
 
-特定のプレビューを削除するには、エンドポイントにDELETEリクエストを送信し、 `/preview` リクエストパスにプレビューの値を `id` 指定します。この場合、
+エンドポイントにDELETEリクエストを送信し、リクエストパスにプレビューの `/preview``id` 値を指定することで、特定のプレビューを削除できます。
 
 **API形式**
 
@@ -121,7 +124,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 DELETE /preview/{PREVIEW_ID}
 ```
 
-- `{PREVIEW_ID}` 削除 `id` するプレビューの値。
+- `{PREVIEW_ID}` 削除するプレビューの `id` 値。
 
 **リクエスト**
 
@@ -135,7 +138,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzM
 
 **応答**
 
-成功した応答は、次のメッセージと共にHTTPステータス200を返します。
+正常に応答すると、HTTPステータス200が返され、次のメッセージが表示されます。
 
 ```json
 {
