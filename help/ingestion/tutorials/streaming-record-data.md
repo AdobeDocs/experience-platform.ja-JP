@@ -5,49 +5,52 @@ title: ストリーミングレコードデータ
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+workflow-type: tm+mt
+source-wordcount: '1107'
+ht-degree: 2%
 
 ---
 
 
-# Adobe Experience Platformへのレコードデータのストリーミング
+# Adobe Experience Platformにレコードデータをストリーム送信する
 
-このチュートリアルは、Adobe Experience Platform Data Ingestion Service APIの一部であるストリーミングインジェストAPIの使用を開始する際に役立ちます。
+このチュートリアルは、Adobe Experience Platform Data Ingestion Service APIの一部であるストリーミング取り込みAPIの使用を開始する際に役立ちます。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの各種サービスに関する実用的な知識が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、様々なAdobe Experience Platformサービスの実用的な知識が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [エクスペリエンスデータモデル(XDM)](../../xdm/home.md):プラットフォームがエクスペリエンスデータを整理するための標準化されたフレームワーク。
-- [リアルタイム顧客プロファイル](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたプロファイルをリアルタイムで提供します。
-- [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md):スキーマレジストリAPIの使用可能な各エンドポイントと、それらのエンドポイントを呼び出す方法をカバーする包括的なガイドです。 これには、このチュート `{TENANT_ID}`リアル全体の呼び出しに表示されるスキーマを把握することや、取り込み用のデータセットを作成する際に使用するデータセットの作成方法を知ることも含まれます。
+- [Experience Data Model(XDM)](../../xdm/home.md): プラットフォームがエクスペリエンスデータを編成する際に使用する、標準化されたフレームワークです。
+- [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [スキーマレジストリ開発ガイド](../../xdm/api/getting-started.md): スキーマレジストリAPIの使用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法をカバーする包括的なガイドです。 これには、このチュートリアル全体の呼び出しに表示されるユーザ `{TENANT_ID}`ー情報や、スキーマの作成方法を知ることが含まれます。この方法は、統合用のデータセットの作成に使用されます。
 
-また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。 ストリーミング接続の作成について詳しくは、「ストリーミング接続の作成」チ [ュートリアルを参照してくださ](./create-streaming-connection.md)い。
+また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。 ストリーミング接続の作成について詳しくは、「ストリーミング接続の [作成」チュートリアルを参照してください](./create-streaming-connection.md)。
 
-以下の節では、ストリーミング取り込みAPIの呼び出しを正常に行うために知っておく必要がある追加情報を示します。
+以下の節では、ストリーミング取り込みAPIの呼び出しを正常に行うために知っておく必要がある追加情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 これには、パス、必須ヘッダー、適切にフォーマットされたリクエストペイロードが含まれます。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、エクスペリエンスプラットフォームのトラブルシューテ [ィングガイドのAPI呼び出し例の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) （英語のみ）を参照してください。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず認証チュートリアルを完了する必要 [があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのエクスペリエンスプラットフォームAPI呼び出しで必要な各ヘッダーの値を入力します。
+プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
 
-- 認証：無記名 `{ACCESS_TOKEN}`
+- 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、サンドボックスの概要ドキュメ [ントを参照してくださ](../../sandboxes/home.md)い。
+>[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次のヘッダーが追加で必要です。
+ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
-- コンテンツタイプ：application/json
+- Content-Type: application/json
 
-## XDM個々のスキーマクラスを基にプロファイルを作成
+## XDM Individualプロファイルクラスを基にしたスキーマの作成
 
 データセットを作成するには、まずXDM Individualプロファイルクラスを実装する新しいスキーマを作成する必要があります。 スキーマの作成方法について詳しくは、 [スキーマレジストリAPI開発者ガイドを参照してください](../../xdm/api/getting-started.md)。
 
@@ -89,13 +92,13 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `title` | スキーマ名。 この名前は一意である必要があります。 |
-| `description` | 作成するスキーマのわかりやすい説明。 |
-| `meta:immutableTags` | この例では、タグを使用 `union` して、データをリアルタイム顧客 [プロファイルに保持します](../../profile/home.md)。 |
+| `title` | スキーマに使用する名前。 この名前は一意にする必要があります。 |
+| `description` | 作成しているスキーマに関するわかりやすい説明。 |
+| `meta:immutableTags` | この例では、 `union` タグを使用してデータを [リアルタイム顧客プロファイルに保持します](../../profile/home.md)。 |
 
 **応答**
 
-正常な応答は、新しく作成された応答の詳細と共にHTTPステータス201を返します。スキーマ
+正常に応答すると、新しく作成したスキーマの詳細と共にHTTPステータス201が返されます。
 
 ```json
 {
@@ -146,17 +149,17 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{TENANT_ID}` | このIDは、作成したリソースの名前が適切に付けられ、IMS組織内に含まれていることを確認するために使用されます。 テナントIDの詳細については、『 [スキーマレジストリガイド](../../xdm/api/getting-started.md#know-your-tenant-id)』 |
+| `{TENANT_ID}` | このIDは、作成するリソースの名前が適切に指定され、IMS組織内に含まれていることを確認するために使用されます。 テナントIDの詳細については、 [スキーマレジストリガイドを参照してください](../../xdm/api/getting-started.md#know-your-tenant-id)。 |
 
-データセットを作成する `$id` 際には、属性と `version` 属性の両方が使用されるので、注意してください。
+データセットを作成する際 `$id` には、これらの両方が使用されるので、 `version` 属性と共にこれらも注意してください。
 
-## スキーマのプライマリID記述子の設定
+## スキーマのプライマリID記述子を設定します
 
-次に、作業用の電子メ [ールアドレス属性をプライマリスキーマとして](../../xdm/api/descriptors.md) 、上で作成した識別子にID記述子を追加します。 これを行うと、次の2つの変更が行われます。
+次に、 [ID記述子](../../xdm/api/descriptors.md) を上で作成したスキーマに追加します。プライマリ識別子として、work email address属性を使用します。 これを行うと、次の2つの変更が行われます。
 
-1. 勤務先の電子メールアドレスは必須フィールドになります。 これは、このフィールドを使用しないで送信されたメッセージは検証に失敗し、取り込まれないことを意味します。
+1. 勤務先の電子メールアドレスは必須フィールドになります。 これは、このフィールドを使用せずに送信されたメッセージは検証に失敗し、取り込まれないことを意味します。
 
-2. リアルタイムの顧客プロファイルは、勤務先の電子メールアドレスを識別子として使用し、個人に関する詳細情報をまとめます。
+2. リアルタイム顧客プロファイルは、勤務先の電子メールアドレスを識別子として使用し、個人に関する詳細情報をまとめます。
 
 ### リクエスト
 
@@ -180,17 +183,17 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEMA_REF_ID}` | 以前 `$id` に受信したスキーマ。 次のようになります。 `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
+| `{SCHEMA_REF_ID}` | スキーマ `$id` を作成した際に以前に受け取ったもの。 次のようになります。 `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] ID&#x200B;&#x200B;**名前空間コード**
+>[!NOTE] &#x200B;ID&#x200B;名前空間コード&#x200B;****
 >
-> コードが有効であることを確認してください。上の例では、標準のID名前空間である「email」を使用しています。 その他の一般的に使用される標準ID名前空間は、IDサービスのFAQ [に記載されています](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)。
+> コードが有効であることを確認してください。上の例では、標準的なID名前空間である「email」が使用されています。 一般的に使用されるその他の標準ID名前空間は、「 [IDサービスFAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)」に記載されています。
 >
-> カスタム名前空間を作成する場合は、「ID名前空間の概要」で概要を説明している手順に従 [います](../../identity-service/home.md)。
+> カスタム名前空間を作成する場合は、「 [ID名前空間の概要](../../identity-service/home.md)」に説明されている手順に従います。
 
 **応答**
 
-正常な応答は、新たに作成されたプライマリID記述子に関する情報と共に、HTTPステータス201をスキーマに返します。
+成功した応答は、新たに作成されたスキーマのプライマリID記述子に関する情報と共にHTTPステータス201を返す。
 
 ```json
 {
@@ -210,9 +213,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 ## レコードデータのデータセットの作成
 
-レコードデータを取り込むスキーマセットを作成する必要があります。
+スキーマの作成後は、レコードデータを取り込むデータセットを作成する必要があります。
 
->[!NOTE] このデータセットは、リアルタイム **顧客プロファイル** / **IDサービスで有効になります**。
+>[!NOTE] このデータセットは、 **リアルタイム顧客プロファイル** / **IDサービスに対して有効になります**。
 
 **API形式**
 
@@ -245,7 +248,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 **応答**
 
-成功した応答は、HTTPステータス201と、新しく作成されたデータセットのIDを形式で含む配列を返しま `@/dataSets/{DATASET_ID}`す。
+正常に応答した場合、HTTPステータス201と、新しく作成されたデータセットのIDを含む配列が形式で返され `@/dataSets/{DATASET_ID}`ます。
 
 ```json
 [
@@ -253,7 +256,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
-## レコードデータをストリーミング接続に取り込む
+## レコードデータをストリーミング接続に取り込みます
 
 データセットとストリーミング接続が確立された状態で、XDM形式のJSONレコードを取り込み、レコードデータをプラットフォームに取り込むことができます。
 
@@ -265,12 +268,12 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 以前に `id` 作成したストリーミング接続の値。 |
-| `synchronousValidation` | 開発目的のクエリパラメーター（オプション）。 に設定した場合、リ `true`クエストが正常に送信されたかどうかを確認するために、即座のフィードバックに使用できます。 デフォルトでは、この値はに設定されていま `false`す。 |
+| `{CONNECTION_ID}` | 以前に作成したストリーミング接続の `id` 値。 |
+| `synchronousValidation` | 開発を目的としたオプションのクエリパラメーターです。 に設定した場合 `true`は、リクエストが正常に送信されたかどうかを確認するためのフィードバックを即時に使用できます。 デフォルトでは、この値はに設定されてい `false`ます。 |
 
 **リクエスト**
 
->[!NOTE] 次のAPI呼び出しでは、認証ヘ **ッダー** は必要ありません。
+>[!NOTE] 次のAPI呼び出しでは、認証ヘッダーは **必要ありません** 。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -318,7 +321,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **応答**
 
-成功した応答は、新しくストリーミングされた応答の詳細を含むHTTPステータス200を返します。プロファイル
+正常に応答すると、新たにストリーミングされたプロファイルの詳細と共にHTTPステータス200が返されます。
 
 ```json
 {
@@ -334,15 +337,15 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 以前に作成したストリーミング接続のID。 |
-| `xactionId` | 先ほど送信したレコードに対してサーバー側で生成された一意の識別子。 このIDは、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
-| `receivedTimeMs` | リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポック）。 |
-| `synchronousValidation.status` | クエリパラメー `synchronousValidation=true` ターが追加されたので、この値が表示されます。 検証が成功した場合、ステータスは次のようになりま `pass`す。 |
+| `xactionId` | 先ほど送信したレコード用にサーバー側で生成された一意の識別子。 このIDは、様々なシステムを介して、デバッグ機能を備えたこのレコードのライフサイクルをアドビが追跡するのに役立ちます。 |
+| `receivedTimeMs` | リクエストが受信された時間を示すタイムスタンプ(エポック（ミリ秒）。 |
+| `synchronousValidation.status` | クエリパラメーター `synchronousValidation=true` が追加されたので、この値が表示されます。 検証が成功した場合は、ステータスがになり `pass`ます。 |
 
 ## 新しく取り込んだレコードデータを取得する
 
-以前に取り込んだレコードを検証するには、 [プロファイルアクセスAPI](../../profile/api/entities.md) （レコードデータ）を使用します。
+以前に取り込んだレコードを検証するには、 [プロファイルアクセスAPI](../../profile/api/entities.md) (API)を使用してレコードデータを取得します。
 
->[!NOTE] マージポリシーIDが定義されていない場合、およびスキーマ。</span>nameまたはrelatedSchema</span>.nameがです。 `_xdm.context.profile`プロファイルアクセスは関連するすべ **ての** IDを取得します。
+>[!NOTE] マージポリシーIDが定義されていない場合とスキーマ。</span>nameまたはrelatedSchema</span>.nameがで `_xdm.context.profile`す。プロファイルアクセスは **** すべての関連IDを取得します。
 
 **API形式**
 
@@ -354,8 +357,8 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `schema.name` | **必須.** アクセスするスキーマの名前。 |
-| `entityId` | エンティティのID。 指定する場合は、エンティティの名前空間も指定します。 |
+| `schema.name` | **必須。** アクセスしているスキーマの名前。 |
+| `entityId` | エンティティのID。 指定する場合は、エンティティ名前空間も指定する必要があります。 |
 | `entityIdNS` | 取得しようとしているIDの名前空間。 |
 
 **リクエスト**
@@ -372,7 +375,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 **応答**
 
-成功した応答は、要求されたエンティティの詳細と共にHTTPステータス200を返します。 ご覧の通り、これは以前に正常に取り込まれたのと同じ記録です。
+正常に応答すると、HTTPステータス200が返され、要求されたエンティティの詳細が返されます。 ご覧の通り、これは初めに正常に摂取された記録と同じです。
 
 ```json
 {
@@ -421,8 +424,8 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 次の手順
 
-このドキュメントを読むと、ストリーミング接続を使用して、レコードデータをプラットフォームに取り込む方法を理解できます。 様々な値を持つ呼び出しをさらに行い、更新された値を取得してみることができます。 さらに、プラットフォームUIを使用して、開始による取り込んだデータの監視も可能です。 詳しくは、監視データ取り込みガイド [を参照してください](../quality/monitor-data-flows.md) 。
+このドキュメントを読むと、ストリーミング接続を使用して記録データをプラットフォームに取り込む方法が理解できます。 様々な値を持つ呼び出しをさらに試して、更新された値を取得できます。 また、プラットフォームUIを使用して、取り込んだデータを開始で監視できます。 詳しくは、『 [監視データ取り込み](../quality/monitor-data-flows.md) 』ガイドを参照してください。
 
-一般的なストリーミング取り込みの詳細については、ストリーミング取り込みの概要を [参照してくださ](../streaming-ingestion/overview.md)い。
+一般的なストリーミング取り込みの詳細については、 [ストリーミング取り込みの概要を参照してください](../streaming-ingestion/overview.md)。
 
 
