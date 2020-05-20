@@ -1,39 +1,42 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platformの観察性インサイト
+title: Adobe Experience Platform Observibility Insights
 topic: overview
 translation-type: tm+mt
 source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+workflow-type: tm+mt
+source-wordcount: '408'
+ht-degree: 2%
 
 ---
 
 
-# Adobe Experience Platformの観察性インサイトの概要
+# Adobe Experience Platform Observibility Insightsの概要
 
-観察性インサイトは、Adobe Experience Platformで主要な観察性指標を公開できるRESTful APIです。 これらの指標は、プラットフォームの使用状況の統計、プラットフォームサービスのヘルスチェック、様々なプラットフォーム機能の過去の傾向、パフォーマンス指標に関する洞察を提供します。
+観察性インサイトは、主要な観察性指標をAdobe Experience Platformで公開できるRESTful APIです。 これらの指標は、プラットフォーム使用状況の統計、プラットフォームサービスの正常性チェック、各種プラットフォーム機能の過去の傾向、およびパフォーマンスインジケーターに関するインサイトを提供します。
 
-このドキュメントでは、Observatibility Insights APIの呼び出し例を示します。 監視性エンドポイントの完全なリストについては、『 [Observatibility Insights APIリファレンス』を参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)。
+このドキュメントは、Obsermability Insights APIの呼び出し例を示します。 監視性エンドポイントの完全なリストについては、『 [Observatibility Insights API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)』を参照してください。
 
 ## はじめに
 
-プラットフォームAPIを呼び出すには、まず認証チュートリアルを完了する必要 [があります](../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのエクスペリエンスプラットフォームAPI呼び出しで必要な各ヘッダーの値を入力します。
+プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
 
-* 認証：無記名 `{ACCESS_TOKEN}`
+* 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。 プラットフォームのサンドボックスについて詳しくは、サンドボックスの概要ドキュメ [ントを参照してくださ](../sandboxes/home.md)い。
+エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。 プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../sandboxes/home.md)」を参照してください。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 ## 観察性指標の取得
 
-監視性インサイトAPIでエンドポイントにGETリクエストを送信することで、 `/metrics` 監視性指標を取得できます。
+Obsermability Insights APIでエンドポイントにGETリクエストを行うことで、観察性指標を取得できます。 `/metrics`
 
 **API形式**
 
-エンドポイントを使用す `/metrics` る場合は、1つ以上の指標リクエストパラメーターを指定する必要があります。 その他のクエリパラメーターは、結果をフィルタリングする場合はオプションです。
+エンドポイントを使用する場合は、少なくとも1つの指標リクエストパラメーターを指定する必要があり `/metrics` ます。 その他のクエリパラメーターは、結果をフィルタリングする場合はオプションです。
 
 ```http
 GET /metrics?metric={METRIC}
@@ -45,8 +48,8 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{METRIC}` | 表示する指標。 1回の呼び出しで複数の指標を組み合わせる場合、アンパサンド(`&`)を使用して個々の指標を区切る必要があります。 例：`metric={METRIC_1}&metric={METRIC_2}`。 |
-| `{ID}` | 指標を公開する特定のプラットフォームリソースの識別子。 このIDは、使用する指標に応じて、オプション、必須、または適用されない場合があります。 使用可能な指標のリスト、および各指標でサポートされるID（必須と任意の両方）については、使用可能な指標に関するリファレンスドキュメントを参 [照してください](metrics.md)。 |
+| `{METRIC}` | 公開する指標。 1回の呼び出しで複数の指標を組み合わせる場合、アンパサンド(`&`)を使用して個々の指標を区切る必要があります。 例：`metric={METRIC_1}&metric={METRIC_2}`。 |
+| `{ID}` | 指標を公開する特定のプラットフォームリソースの識別子。 このIDは、使用する指標に応じて、オプション、必須、または適用されない場合があります。 使用可能な指標のリスト、および各指標でサポートされるID（必須と任意の両方）については、 [使用可能な指標に関するリファレンスドキュメントを参照してください](metrics.md)。 |
 | `{DATE_RANGE}` | ISO 8601形式(例： `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`)で公開する指標の日付範囲。 |
 
 **リクエスト**
@@ -62,7 +65,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、オブジェクトのリストを返します。各オブジェクトには、指定された値内にタイムスタ `dateRange` ンプが含まれ、リクエストパスで指定された指標に対応する値が含まれます。 プラットフ `id` ォームリソースのが要求パスに含まれる場合、結果はその特定のリソースにのみ適用されます。 を省略する `id` と、結果はIMS組織内の該当するすべてのリソースに適用されます。
+成功した応答は、指定された値内のタイムスタンプと、リクエストパスで指定された指標に対応する値を含むオブジェクトのリスト `dateRange` を返します。 プラットフォームリソース `id` のが要求パスに含まれている場合、結果はその特定のリソースにのみ適用されます。 を省略 `id` すると、結果はIMS組織内の該当するすべてのリソースに適用されます。
 
 ```json
 {
@@ -116,4 +119,4 @@ curl -X GET \
 
 ## 次の手順
 
-このドキュメントでは、Observatibility Insights APIの概要を提供しました。 APIで使用できる指標 [の完全なリストについては](metrics.md) 、利用可能な指標に関するドキュメントを参照してください。
+このドキュメントでは、Observability Insights APIの概要を提供しました。 APIで使用できる指標の完全なリストについては、 [利用可能な指標](metrics.md) （英語）のドキュメントを参照してください。
