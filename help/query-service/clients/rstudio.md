@@ -5,15 +5,18 @@ title: RStudioに接続
 topic: connect
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 2%
 
 ---
 
 
 # RStudioに接続
 
-このドキュメントでは、R StudioとAdobe Experience Platform Platform Serviceを接続する手順について説明します。
+このドキュメントでは、R StudioとAdobe Experience Platformクエリサービスを接続する手順について説明します。
 
-RStudioをインストールした後、表示さ *れる* Console画面で、まずPostgreSQLを使用するRスクリプトを準備する必要があります。
+RStudioをインストールした後、表示される *コンソール* 画面で、PostgreSQLを使用するためのRスクリプトを準備する必要があります。
 
 ```r
 install.packages("RPostgreSQL")
@@ -22,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-PostgreSQLを使用するためのRスクリプトを準備したら、PostgreSQLドライバを読み込むことで、RStudioをクエリサービスに接続できます。
+PostgreSQLを使用するためのRスクリプトを準備したら、PostgreSQLドライバを読み込むことで、RStudioをクエリサービスに接続できるようになりました。
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -37,16 +40,16 @@ con <- dbConnect(drv,
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `{DATABASE_NAME}` | 使用するデータベースの名前。 |
-| `{HOST_NUMBER` および `{PORT_NUMBER}` | ホストエンドポイントと、そのクエリサービス用のポート。 |
-| `{USERNAME}` および `{PASSWORD}` | 使用されるログイン資格情報。 ユーザー名は、の形式をとりま `ORG_ID@AdobeOrg`す。 |
+| `{HOST_NUMBER` および `{PORT_NUMBER}` | クエリサービス用のホストエンドポイントとそのポートです。 |
+| `{USERNAME}` および `{PASSWORD}` | 使用するログイン資格情報。 ユーザー名は、の形式をとり `ORG_ID@AdobeOrg`ます。 |
 
->[!NOTE] データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、プラットフォームの資格情報 [ページを参照してください](https://platform.adobe.com/query/configuration)。 資格情報を検索するには、Platformにログインし、「 **クエリ**」をクリックし、「秘密鍵証明書」をクリ **ックします**。
+>[!NOTE] データベース名、ホスト、ポート、ログインの資格情報の検索について詳しくは、Platformの [資格情報ページを参照してください](https://platform.adobe.com/query/configuration)。 資格情報を探すには、Platformにログインし、「 **クエリ**」をクリックし、「 **資格情報**」をクリックします。
 
 ## 次の手順
 
-これで、クエリサービスに接続したので、SQLステートメントを実行および編集するクエリを書き込むことができます。 たとえば、を使用して `dbGetQuery(con, sql)` クエリを実行できます。 `sql` は実行するSQLクエリです。
+クエリサービスに接続したら、SQL文を実行および編集するクエリを作成できます。 たとえば、を使用してクエリ `dbGetQuery(con, sql)` を実行できます。ここで、 `sql` は実行するSQLクエリです。
 
-次のクエリでは、 [ExperienceEventsを含むデータセットを使用し](../creating-queries/experience-event-queries.md) 、デバイスの画面の高さを指定して、Webサイトのページ表示のヒストグラムを作成します。
+次のクエリでは、ExperienceEventsを含むデータセットを使用し [て](../creating-queries/experience-event-queries.md) 、デバイスの画面の高さが決まると、Webサイトのページ表示のヒストグラムを作成します。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -67,7 +70,7 @@ ORDER BY buckets
 LIMIT 1000000")
 ```
 
-成功した応答は、次の結果を返します。クエリ:
+成功した応答は、クエリの結果を返します。
 
 ```r
 df_pageviews
@@ -81,4 +84,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-クエリの書き込みおよび実行方法の詳細については、『実行中のクエリ』ガイドを [参照してくださ](../creating-queries/creating-queries.md)い。
+クエリの書き込みおよび実行方法の詳細については、『 [実行中のクエリ』ガイドを参照してください](../creating-queries/creating-queries.md)。
