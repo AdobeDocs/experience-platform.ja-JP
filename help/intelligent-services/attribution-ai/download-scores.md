@@ -5,6 +5,9 @@ title: アトリビューションAIのスコアへのアクセス
 topic: Accessing scores
 translation-type: tm+mt
 source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
 
 ## Find your dataset ID {#dataset-id}
 
-アトリビューションAIインサイトのサービスインスタンス内で、右上のナビゲーションにある *その他のアクション* (More Actions **[!UICONTROL Access scores]**)ドロップダウンをクリックし、を選択します。
+アトリビューションAIインサイトのサービスインスタンス内で、右上のナビゲーションの「 *その他のアクション* 」ドロップダウンをクリックし、「 **[!UICONTROL アクセススコア]**」を選択します。
 
 ![その他のアクション](./images/download-scores/more-actions.png)
 
