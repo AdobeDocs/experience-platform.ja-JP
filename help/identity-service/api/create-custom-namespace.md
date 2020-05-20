@@ -1,21 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: カスタム名前空間
+title: カスタム名前空間の作成
 topic: API guide
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '77'
+ht-degree: 5%
 
 ---
 
 
-# カスタム名前空間
+# カスタム名前空間の作成
 
-ID名前空間APIを使用して、組織でのみ使用可能なカスタムID名前空間を作成できます。
+ID名前空間APIを使用して、自分の組織のみが利用できるカスタムID名前空間を作成できます。
 
-カスタム名前空間の作成に関する推奨事項については、IDサ [ービスのFAQドキュメントを参照してくださ](../troubleshooting-guide.md)い。
+カスタム名前空間の作成に関する推奨事項については、「IDサービス [に関するFAQドキュメント](../troubleshooting-guide.md)」を参照してください。
 
->[!NOTE] 名前空間はIDの修飾子です。 したがって、一度作成した名前空間は削除できません。
+>[!NOTE] 名前空間はIDの限定子です。 したがって、一度名前空間を作成すると、削除できなくなります。
 
 **API形式**
 
@@ -59,4 +62,4 @@ curl -X POST \
 
 ## 次の手順
 
-次のチュートリアルに進み、IDのネイ [ティブIDをリストします。](./list-native-id.md)
+次のチュートリアルに進み、IDのネイティブIDを [リストします](./list-native-id.md)
