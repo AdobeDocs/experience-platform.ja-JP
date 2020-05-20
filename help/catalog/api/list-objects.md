@@ -5,6 +5,9 @@ title: リストオブジェクト
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 1%
 
 ---
 
@@ -22,12 +25,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 表示するCatalogオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | クエリに返された結果をフィルターするために使用される応答パラメーター。 複数のパラメーターはアンパサンド(`&`)で区切られます。 詳しくは、カタログデータのフィ [ルタリングに関するガイド](filter-data.md) （英語のみ）を参照してください。 |
+| `{OBJECT_TYPE}` | 表示するカタログオブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{FILTER}` | 応答で返される結果をフィルターするために使用するクエリパラメーター。 複数のパラメーターは、アンパサンド(`&`)で区切られます。 詳しくは、カタログデータの [フィルタリングに関するガイド](filter-data.md) を参照してください。 |
 
 **リクエスト**
 
-以下のサンプルリクエストでは、データセットのリストを取得し、5つの結果に対する応答を減らすフィルターと、各データセットに対して表示されるプ `limit``properties` ロパティを制限するフィルターを使用しています。
+以下のサンプルリクエストでは、データセットのリストを取得します。5つの結果に対する応答を減らす `limit` フィルターと、各データセットに対して表示されるプロパティを制限する `properties` フィルターが用意されています。
 
 ```shell
 curl -X GET \
@@ -40,9 +43,9 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、キーと値のペアの形式でCatalogオブジェクトのリストを返し、リクエストで指定されたクエリパラメーターでフィルタリングされます。 各キーと値のペアに対して、キーは対象のCatalogオブジェクトの固有な識別子を表します。この識別子は、詳細について特定のオブジェクトを呼び出す別の [表示呼び出しで](look-up-object.md) 使用できます。
+正常な応答は、リクエストで提供されるクエリパラメーターでフィルタリングされた、キーと値のペアの形式のCatalogオブジェクトのリストを返します。 キーと値のペアごとに、キーは対象のCatalogオブジェクトの固有な識別子を表します。この識別子は、特定のオブジェクトを呼び出す別の呼び出しで使用して [表示を詳細にすることができます](look-up-object.md) 。
 
->[!NOTE] 返されたオブジェクトに、クエリが示す要求されたプロパティが1つ以上含まれていない場合、応答は、以下の「サンプルデータセット3」および「サンプルデータセット4」に示すように、要求されたプロパティのみを返します。 `properties`
+>[!NOTE] 返されたオブジェクトに、 `properties` クエリが示す要求されたプロパティが1つ以上含まれていない場合、以下の「Sample Dataset 3」と「Sample Dataset 4」に示すように、応答は、そのオブジェクトに含まれる要求されたプロパティのみを返します。
 
 ```json
 {
