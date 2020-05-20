@@ -5,6 +5,9 @@ description: リアルタイムの顧客データプラットフォームでの�
 seo-description: リアルタイムの顧客データプラットフォームでのリアルタイム顧客プロファイルデータの表示
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 88%
 
 ---
 
