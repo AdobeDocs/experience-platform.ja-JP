@@ -5,6 +5,9 @@ title: Flow Service APIを使用してApache Cassandraコネクタを作成す�
 topic: overview
 translation-type: tm+mt
 source-git-commit: accbb95234085c7c1969e9fecc4f5db52426c8b7
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 1%
 
 ---
 
