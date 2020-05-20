@@ -5,19 +5,22 @@ title: ExperienceEventクエリ
 topic: queries
 translation-type: tm+mt
 source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+workflow-type: tm+mt
+source-wordcount: '293'
+ht-degree: 0%
 
 ---
 
 
 # ExperienceEventクエリ
 
-Adobe Experience Platformクエリサービスは、標準のSQLクエリに加え、ExperienceEventsを使用したクエリの記述をサポートします。 ExperienceEventは、ユーザーがWebサイトやサービスを操作する際の、不変の非集計スナップショットを表すExperience Data Model(XDM)クラスで、タイムドメイン分析に使用できます。 XDMとエクスペリエンスのイベントについて詳しくは、XDM Systemの概要を参照してください。 クエリサービスとExperienceEventsを組み合わせることで、ユーザー間の行動傾向を効果的に追跡できます。 次のドキュメントは、ExperienceEventsに関連するクエリの例です。
+Adobe Experience Platformクエリサービスは、標準的なSQLクエリに加え、ExperienceEventsを使用したクエリの記述をサポートします。 ExperienceEventはExperience Data Model(XDM)クラスで、ユーザーがWebサイトやサービスを操作したときに、不変で集約されないシステムのスナップショットを表します。したがって、時間ドメインの分析に使用できます。 XDMとエクスペリエンスのイベントについて詳しくは、「XDM System」の概要を参照してください。 クエリサービスとExperienceEventsを組み合わせることで、ユーザー間の行動傾向を効果的に追跡できます。 次のドキュメントは、ExperienceEventsに関連するクエリの例を示しています。
 
 ## 特定の日付範囲での日別イベントのトレンドレポートの作成
 
-次の例では、指定した日付範囲のイベントのトレンドレポートを日付別にグループ化して作成します。 具体的には、A、B、Cの様々な解析値を合計し、パーカが閲覧された回数を合計します。
+次の例では、指定した日付範囲で、日付ごとにグループ化したイベントのトレンドレポートを作成します。 具体的には、様々な解析値をA、BおよびCと合計し、パーカが視聴された回数を合計します。
 
-エクスペリエンスイベントデータセットのtimestamp列はUTCです。 次の例では、この関数を使用し `from_utc_timestamp()` て、タイムスタンプをUTCからEDTに変換します。 その後、この関数を使 `date_format()` 用して、残りのタイムスタンプから日付を分離します。
+エクスペリエンスイベントデータセットのタイムスタンプ列はUTCです。 次の例では、この `from_utc_timestamp()` 関数を使用して、タイムスタンプをUTCからEDTに変換します。 次に、この関数を使用して、タイムスタンプの残りの部分から日付を分離します。 `date_format()`
 
 ```sql
 SELECT 
@@ -75,9 +78,9 @@ ORDER BY Day ASC, pageViews DESC;
  (31 rows)
 ```
 
-## ページリスト数別に整理された訪問者の表示を取得する。
+## ページ表示数別に整理された訪問者のリストを取得する。
 
-次の例では、最も多くのページを閲覧したリストのIDをするレポートを作成します。
+次の例では、最も多くのページを閲覧したユーザーのIDをリストするレポートを作成します。
 
 ```sql
 SELECT 
@@ -105,9 +108,9 @@ LIMIT 10;
 (10 rows)
 ```
 
-## 訪問者セッションの再生
+## 訪問者のセッションの再生
 
-次の例では、指定したリストが最近閲覧した100ページをします。
+次の例は、指定したユーザーが最近100ページ閲覧したページをリストします。
 
 
 ```sql
@@ -151,9 +154,9 @@ LIMIT 100;
 2019-11-08 20:14:05.0 | typed_bookmark |                                                                    | Seasonal Sale                       |     |     |     |          1.0
 ```
 
-## ロールアップレポートの訪問者
+## 訪問者のロールアップレポートの表示
 
-次の例は、指定した集計に関する様々な分析値の分析レポートを示しています。
+次の例は、指定したユーザーに関する様々な解析値の集計レポートを示しています。
 
 ```sql
 SELECT 
@@ -182,5 +185,5 @@ ORDER BY pageViews DESC;
 
 ## 次の手順
 
-Adobe Defined Functions(ADF)を使用したサンプルクエリについて詳しくは、Adobe Defined Functions（アドビ定義関数）ガイドを参照してください。 クエリの実行に関する一般的なガイダンスについては、クエリサービスでの [クエリの実行に関するガイドを参照してくださ](./writing-queries.md)い。
+Adobe Defined Functions(ADF)を使用したサンプルクエリについて詳しくは、Adobe Defined Functions(Adobe Defined Functions)ガイドを参照してください。 クエリの実行に関する一般的なガイダンスについては、クエリサービスでのクエリの実行に関する [ガイドをお読みください](./writing-queries.md)。
 
