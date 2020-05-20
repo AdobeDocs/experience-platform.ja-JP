@@ -5,15 +5,18 @@ title: セグメント定義
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 45a196d13b50031d635ceb7c5c952e42c09bd893
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 3%
 
 ---
 
 
 # セグメント定義開発ガイド
 
-Adobe Experience Platformを使用すると、セグメントのグループから特定の属性や行動のグループを定義するセグメントを作成できます。プロファイル
+Adobe Experience Platformでは、プロファイルのグループから特定の属性や行動のグループを定義するセグメントを作成できます。
 
-この開発者ガイドでは、次のセグメント定義の説明を提供します。
+この開発者ガイドでは、セグメント定義に関する次の領域での手順を説明します。
 
 - [セグメント定義のリストの取得](#retrieve-a-list-of-segment-definitions)
 - [新しいセグメント定義の作成](#create-a-new-segment-definition)
@@ -23,13 +26,13 @@ Adobe Experience Platformを使用すると、セグメントのグループか�
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、セグメントAPIの一部です。 先に進む前に、セグメント化開発ガイ [ドを参照してください](./getting-started.md)。
+このガイドで使用されるAPIエンドポイントは、セグメント化APIの一部です。 先に進む前に、 [セグメント化開発ガイドを参照してください](./getting-started.md)。
 
-特に、『セグメン [ト開発者](./getting-started.md#getting-started) 』ガイドの「はじめに」の節には、関連トピックへのリンク、ドキュメントでのサンプルAPI呼び出しの読み方のガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
+特に、セグメント化開発ガイドの「 [はじめに](./getting-started.md#getting-started) 」の節には、関連トピックへのリンク、ドキュメント内のサンプルAPI呼び出しを読むためのガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
 
 ## セグメント定義のリストの取得
 
-エンドポイントにGETリクエストを行うことで、IMS組織のすべてのセグメント定義のリストを取得で `/segment/definitions` きます。
+エンドポイントにGETリクエストを作成して、IMS組織のすべてのセグメント定義のリストを取得でき `/segment/definitions` ます。
 
 **API形式**
 
@@ -38,18 +41,18 @@ GET /segment/definitions
 GET /segment/definitions?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`:(オ&#x200B;*プション*)応答に返される結果を設定する要求パスに追加されるパラメーター。 複数のパラメーターを含め、アンパサンド(`&`)で区切ることができます。 使用可能なパラメーターを以下に示します。
+- `{QUERY_PARAMETERS}`: (*オプション*)リクエストパスに追加されるパラメーター。応答で返される結果を設定します。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。 使用可能なパラメーターを以下に示します。
 
-**クエリパラメータ**
+**クエリパラメーター**
 
-次に、セグメント定義のリストに使用できるクエリパラメータの一覧を示します。 これらのパラメーターはすべてオプションです。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべてのセグメント定義が取得されます。
+次に、セグメント定義の一覧表示に使用できるクエリパラメータのリストを示します。 これらのパラメーターはすべてオプションです。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべてのセグメント定義が取得されます。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `start` | ??? |
 | `limit` | 1ページに返されるセグメント定義の数を指定します。 |
-| `page` | セグメント定義の結果の開始元ページ。 |
-| `sort` | 結果の並べ替えに使用するフィールドを指定します。 |
+| `page` | セグメント定義の結果の開始元となるページを指定します。 |
+| `sort` | 結果を並べ替える基準となるフィールドを指定。 |
 | `evaluationInfo.continuous.enabled` | セグメント定義がストリーミングを有効にするかどうかを指定します。 |
 
 **リクエスト**
@@ -64,7 +67,7 @@ cur -X GET https://platform.adobe.io/data/core/ups/segment/definitions?QUERY \
 
 **応答**
 
-成功した応答は、指定したIMS組織のセグメント定義のリストをJSONとして持つHTTPステータス200を返します。
+正常な応答が返されると、指定したIMS組織のセグメント定義のリストを持つHTTPステータス200がJSONとして返されます。
 
 ```json
 {
@@ -159,7 +162,7 @@ cur -X GET https://platform.adobe.io/data/core/ups/segment/definitions?QUERY \
 
 ## 新しいセグメント定義の作成
 
-エンドポイントにPOSTリクエストを行うことで、新しいセグメント定義を作成で `/segment/definitions` きます。
+エンドポイントにPOSTリクエストを作成して、新しいセグメント定義を作成でき `/segment/definitions` ます。
 
 **API形式**
 
@@ -198,11 +201,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
  '
 ```
 
-説明体
+体を説明する
 
 **応答**
 
-正常な応答は、新しく作成したセグメント定義の詳細を含むHTTPステータス200を返します。
+正常に応答すると、新しく作成したセグメント定義の詳細を含むHTTPステータス200が返されます。
 
 ```json
 {
@@ -250,7 +253,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ## 特定のセグメント定義の取得
 
-特定のセグメント定義に関する詳細な情報を取得するには、エンドポイントにGETリクエストを作成し、 `/segment/definitions` リクエストパスにセグメント定義の値を `id` 指定します。
+エンドポイントにGETリクエストを送信し、リクエストパスにセグメント定義の `/segment/definitions``id` 値を指定することで、特定のセグメント定義に関する詳細な情報を取得できます。
 
 **API形式**
 
@@ -258,7 +261,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 GET /segment/definitions/{SEGMENT_ID}
 ```
 
-- `{SEGMENT_ID}`:取得 `id` するセグメント定義の値。
+- `{SEGMENT_ID}`: 取得するセグメント定義の `id` 値。
 
 **リクエスト**
 
@@ -272,7 +275,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 
 **応答**
 
-成功した応答は、HTTPステータス200を返し、指定したセグメント定義に関する詳細情報が返されます。
+正常に応答すると、HTTPステータス200が返され、指定したセグメント定義に関する詳細情報が返されます。
 
 ```json
 {
@@ -318,7 +321,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 
 ## 特定のセグメント定義の削除
 
-エンドポイントにDELETEリクエストを行い、リクエストパスにセグメント定義の値を指定するこ `/segment/definitions` とで、指定したセグメント定義を削 `id` 除するようにリクエストできます。
+エンドポイントにDELETEリクエストを送信し、リクエストパスにセグメント定義の `/segment/definitions``id` 値を指定することで、指定したセグメント定義を削除するようにリクエストできます。
 
 **API形式**
 
@@ -326,7 +329,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 DELETE /segment/definitions/{SEGMENT_ID}
 ```
 
-- `{SEGMENT_ID}` 削除 `id` するセグメント定義の値。
+- `{SEGMENT_ID}` 削除するセグメント定義の `id` 値。
 
 **リクエスト**
 
@@ -340,11 +343,11 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 
 **応答**
 
-成功した応答は、HTTPステータス200をメッセージなしで返します。
+応答が成功すると、メッセージなしのHTTPステータス200が返されます。
 
 ## 特定のセグメント定義の更新
 
-エンドポイントにPATCHリクエストを作成し、リクエストパスにセグメント定義の値を `/segment/definitions` 指定することで、指定したセ `id` グメント定義を更新できます。
+エンドポイントにPATCHリクエストを作成し、リクエストパスにセグメント定義の `/segment/definitions``id` 値を指定することで、指定したセグメント定義を更新できます。
 
 **API形式**
 
@@ -352,7 +355,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 PATCH /segment/definitions/{SEGMENT_ID}
 ```
 
-- `{SEGMENT_ID}`:更新 `id` するセグメント定義の値。
+- `{SEGMENT_ID}`: 更新するセグメント定義の `id` 値。
 
 **リクエスト**
 
@@ -386,11 +389,11 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 '
 ```
 
-説明体
+体を説明する
 
 **応答**
 
-正常に応答すると、新たに更新されたセグメント定義の詳細と共にHTTPステータス200が返されます。
+正常に応答すると、HTTPステータス200が返され、新たに更新されたセグメント定義の詳細が返されます。
 
 ```json
 {
@@ -434,6 +437,6 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }
 ```
 
-本文とヘッダを説明する
+本文とヘッダーを説明する
 
 ## 次の手順
