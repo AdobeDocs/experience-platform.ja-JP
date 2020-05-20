@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google Cloudストレージコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 256a193e56e69078d1c01c622656f0b1a18e73ff
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '377'
 ht-degree: 0%
 
 ---
@@ -18,15 +18,37 @@ Adobe Experience Platformは、AWS、Google Cloud Platform、Azureなどのク�
 
 クラウドストレージソースは、ダウンロード、形式設定、アップロードを行うことなく、独自のデータをプラットフォームに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 プラットフォームを使用すると、Google Cloudストレージからデータをバッチで取り込むことができます。
 
+## Google Cloudストレージアカウント接続の前提条件の設定
+
+Platformに接続するには、まずGoogle Cloudストレージアカウントの相互運用を有効にする必要があります。 相互運用性設定にアクセスするには、Google Cloud Platformを開き、ナビゲーションパネルの **[!UICONTROL ストレージ]****[!UICONTROL (Settings]** )オプションを選択します。
+
+![](../../images/tutorials/create/google-cloud-storage/nav.png)
+
+[ **[!UICONTROL 設定]** ]ページが表示されます。 ここから、GoogleプロジェクトIDに関する情報とGoogle Cloudストレージアカウントに関する詳細を確認できます。 相互運用性設定にアクセスするには、上部のヘッダーで **[!UICONTROL 「Interoperability]** 」を選択します。
+
+![](../../images/tutorials/create/google-cloud-storage/project-access.png)
+
+[ **[!UICONTROL 相互運用性]** ]ページには、認証、アクセスキー、およびユーザアカウントに関連付けられた既定のプロジェクトに関する情報が含まれます。 相互運用可能アクセス用の既定のプロジェクトをまだ確立していない場合は、[相互運用可能アクセス用の *[!UICONTROL 既定のプロジェクト]* ]セクションで設定できます。 既定のプロジェクトが既に確立されている場合は、このセクションに、プロジェクトが既定として設定されていることを確認するメッセージが表示されます。
+
+ユーザーアカウントの新しいアクセスキーIDと秘密鍵を生成するには、「キーを **[!UICONTROL 作成]**」を選択します。
+
+![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
+
+新しく生成したアクセスキーIDと秘密アクセスキーを使用して、Google Cloudストレージアカウントをプラットフォームに接続できます。
+
 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle Cloudストレージをプラットフォームに接続する方法に関する情報を提供しています。
 
-## APIを使用したGoogle Cloudストレージとプラットフォームの接続
+## Google Cloudストレージのプラットフォームへの接続
+
+以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle Cloudストレージをプラットフォームに接続する方法に関する情報を提供しています。
+
+### APIの使用
 
 - [Flow Service APIを使用してGoogle Cloudストレージコネクタを作成する](../../tutorials/api/create/cloud-storage/google.md)
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
-## UIを使用したGoogle Cloudストレージのプラットフォームへの接続
+### UIの使用
 
 - [UIでのGoogle Cloudストレージソースコネクタの作成](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
 - [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
