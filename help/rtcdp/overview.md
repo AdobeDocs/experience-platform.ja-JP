@@ -5,6 +5,9 @@ description: リアルタイム顧客データプラットフォームの概要
 seo-description: リアルタイム顧客データプラットフォームの概要
 translation-type: tm+mt
 source-git-commit: 08b35c862472308fbec282a7727035fb3924d19b
+workflow-type: tm+mt
+source-wordcount: '288'
+ht-degree: 100%
 
 ---
 
