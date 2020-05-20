@@ -5,6 +5,9 @@ title: 予測
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 3%
 
 ---
 
@@ -13,17 +16,17 @@ source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
 
 導入
 
-- 特定の見積ジョブの結果の取得
+- 特定の見積ジョブの結果を取得します
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、セグメントAPIの一部です。 先に進む前に、セグメント化開発ガイ [ドを参照してください](./getting-started.md)。
+このガイドで使用されるAPIエンドポイントは、セグメント化APIの一部です。 先に進む前に、 [セグメント化開発ガイドを参照してください](./getting-started.md)。
 
-特に、『セグメン [ト開発者](./getting-started.md#getting-started) 』ガイドの「はじめに」の節には、関連トピックへのリンク、ドキュメントでのサンプルAPI呼び出しの読み方のガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
+特に、セグメント化開発ガイドの「 [はじめに](./getting-started.md#getting-started) 」の節には、関連トピックへのリンク、ドキュメント内のサンプルAPI呼び出しを読むためのガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
 
-## 特定の見積ジョブの結果の取得
+## 特定の見積ジョブの結果を取得します
 
-特定の見積ジョブの詳細を取得するには、エンドポイントにGETリクエストを作成し、 `/estimate` 見積ジョブの値をリクエストパス `id` に指定します。
+特定の予測ジョブの詳細を取得するには、エンドポイントにGETリクエストを作成し、その予測ジョブの `/estimate``id` 値をリクエストパスに指定します。
 
 **API形式**
 
@@ -31,13 +34,13 @@ source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
 GET /estimate/{PREVIEW_ID}
 ```
 
-- `{PREVIEW_ID}`:取得 `id` する見積ジョブの値。
+- `{PREVIEW_ID}`: 取得する見積ジョブの `id` 値。
 
 **リクエスト**
 
 次のリクエストは、特定の見積ジョブの結果を取得します。
 
-//プレビューIDを取得
+//プレビューIDを取得する必要があります
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/{PREVIEW_ID} \
@@ -49,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/{PREVIEW_ID} \
 
 **応答**
 
-成功した応答は、推定ジョブの詳細を含むHTTPステータス200を返します。
+正常な応答は、予測ジョブの詳細と共にHTTPステータス200を返します。
 
 ```json
 {
