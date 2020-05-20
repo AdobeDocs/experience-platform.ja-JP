@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ取り込みイベントのサブスクライブ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 1%
+source-wordcount: '851'
+ht-degree: 2%
 
 ---
 
@@ -41,40 +41,52 @@ ht-degree: 1%
 
 ## データ取り込みステータス通知のサブスクライブ
 
-Adobe I/O [イベントを通じて](https://www.adobe.io/apis/experienceplatform/events.html)、Webフックを使用して複数の通知タイプをサブスクライブできます。 Webhookの詳細およびWebhookを使用したAdobe I/Oイベントの登録方法については、『Adobe I/Oイベントの [概要』の「Webhook](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) 」ガイドを参照してください。
+Adobe I/O [イベントを通じて](https://www.adobe.io/apis/experienceplatform/events.html)、Webフックを使用して複数の通知タイプをサブスクライブできます。 以下の節では、Adobe Developer Consoleを使用してデータ取り込みイベントのプラットフォーム通知をサブスクライブする手順を説明します。
 
-### Adobe I/Oコンソールを使用した新しい統合の作成
+### Adobe Developer Consoleでの新しいプロジェクトの作成
 
-[Adobe I/O Consoleにサインインし、「](https://console.adobe.io/home) Integrations *（統合）」タブをクリックするか、「Quick Integration(クイック開始)* 」の「Create integration **** （統合を作成）」をクリックします。 「 *統合* 」画面が表示されたら、「 **新しい統合** 」をクリックして新しい統合を作成します。
+Adobe Developer Console [に移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe Developer Consoleドキュメントで空のプロジェクトの [作成に関するチュートリアルに概要を説明している手順に従い](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ます。
 
-![新しい統合の作成](../images/quality/subscribe-events/create_integration_start.png)
+### プロジェクトへの追加エクスペリエンスプラットフォームのイベント
 
-[新しい統合の *作成* ]画面が表示されます。 「近いリアルタイムイベントを **受信する**」を選択し、「 **続行**」をクリックします。
+新しいプロジェクトを作成したら、そのプロジェクトの概要画面に移動します。 ここから、 **[!UICONTROL イベントをクリックします]**。
 
-![ほぼリアルタイムのイベントを受信](../images/quality/subscribe-events/create_integration_receive_events.png)
+![](../images/quality/subscribe-events/add-event-button.png)
 
-次の画面には、購読、権限および権限に基づいて、組織が使用できる様々なイベント、製品およびサービスとの統合を作成するオプションが表示されます。 この統合の場合、「エクスペリエンスプラットフォーム **」の下にある「** プラットフォーム通知 **」を選択し、「**&#x200B;続行」をクリックします。
+[ _[!UICONTROL イベント]_]ダイアログが表示されます。 「**[!UICONTROL &#x200B;エクスペリエンスプラットフォーム&#x200B;]**」をクリックして利用可能なオプションのリストをフィルターし、「**[!UICONTROL &#x200B;プラットフォーム通知&#x200B;]**」をクリックしてから「**[!UICONTROL &#x200B;次へ&#x200B;]**」をクリックします。
 
-![イベントプロバイダーの選択](../images/quality/subscribe-events/create_integration_select_provider.png)
+![](../images/quality/subscribe-events/select-platform-events.png)
 
-「 *統合の詳細* 」フォームが表示され、統合の名前と説明、および公開鍵証明書を入力する必要があります。
+次の画面には、登録するイベントタイプのリストが表示されます。 「 **[!UICONTROL データ取り込み通知]**」を選択し、「 **[!UICONTROL 次へ]**」をクリックします。
 
-公開証明書がない場合は、次のコマンドを使用してターミナルで証明書を生成できます。
+![](../images/quality/subscribe-events/choose-event-subscriptions.png)
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+次の画面では、JSON Web Token(JWT)の作成を求めるプロンプトが表示されます。 自動的にキーペアを生成するか、端末で生成した独自の公開鍵をアップロードするかを選択できます。
 
-証明書を生成したら、ファイルを「 **公開鍵証明書** 」ボックスにドラッグ&amp;ドロップするか、「ファイルを **** 選択」をクリックしてファイルディレクトリを参照し、証明書を直接選択します。
+このチュートリアルでは、最初のオプションに従います。 「キーペアを **[!UICONTROL 生成」のオプションボックスをクリックし]**、右下隅の「キーペアを **[!UICONTROL 生成]** 」ボタンをクリックします。
 
-証明書を追加すると、「 *イベント登録* 」オプションが表示されます。 「 **イベント登録**」をクリックします。
+![](../images/quality/subscribe-events/generate-keypair.png)
 
-![統合の詳細](../images/quality/subscribe-events/create_integration_details.png)
+キーペアが生成されると、ブラウザーによって自動的にダウンロードされます。 このファイルは開発者コンソールで保持されないので、自分で保存する必要があります。
 
-[ *イベント登録の詳細* ]ダイアログボックスが展開し、追加のコントロールが表示されます。 ここでは、目的のイベントタイプを選択して、Webフックを登録できます。 イベント登録の名前、WebフックURL *（オプション）*、簡単な説明を入力します。 最後に、登録するイベントタイプ（データ取り込み通知）を選択し、「 **保存**」をクリックします。
+次の画面では、新しく生成されたキーペアの詳細を確認できます。 「**[!UICONTROL 次へ]**」をクリックして次に進みます。
 
-![イベントの選択](../images/quality/subscribe-events/create_integration_select_event.png)
+![](../images/quality/subscribe-events/keypair-generated.png)
+
+次の画面で、イベント登録の名前と説明を入力します。 ベストプラクティスは、同じプロジェクト内の他のユーザーとこのイベントの登録を区別できるように、一意で、簡単に識別できる名前を作成することです。
+
+![](../images/quality/subscribe-events/registration-details.png)
+
+同じ画面の下で、イベントの受信方法をオプションで設定できます。 **[!UICONTROL Webhook]** では、イベントを受け取るカスタムWebフックアドレスを指定できますが、 **[!UICONTROL Runtime action]** では、 [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+
+このチュートリアルでは、このオプションの設定手順は省略します。 完了したら、「設定済みのイベントを **[!UICONTROL 保存]** 」をクリックしてイベントの登録を完了します。
+
+![](../images/quality/subscribe-events/receive-events.png)
+
+新しく作成されたイベント登録の詳細ページが表示され、受信したイベントを確認し、デバッグトレースを実行して設定を編集できます。
+
+![](../images/quality/subscribe-events/registration-complete.png)
 
 ## 次の手順
 
-I/O統合を作成すると、その統合に関して受信した通知を表示できます。 イベントをトレースする方法の詳細な手順については、『 [Adobe I/Oイベントのトレース](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 』ガイドを参照してください。
+プラットフォーム通知をプロジェクトに登録すると、プロジェクトダッシュボードから受信したイベントを表示できます。 イベントをトレースする方法の詳細な手順については、『 [Adobe I/Oイベントのトレース](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 』ガイドを参照してください。
