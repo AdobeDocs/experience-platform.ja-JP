@@ -5,6 +5,9 @@ description: Adobe Campaign は、オンラインおよびオフラインのす�
 seo-description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '464'
+ht-degree: 92%
 
 ---
 
@@ -27,7 +30,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
    ![Campaign ウィザードの設定](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   **[!UICONTROL Amazon S3接続の場合]** 、アクセスキーIDとシークレットアクセスキーを指定する必要があります。
+   **[!UICONTROL Amazon S3]** 接続の場合は、アクセスキーIDとシークレットアクセスキーを指定する必要があります。
 **[!UICONTROL SFTP（パスワード）]** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
 **[!UICONTROL SFTP（SSH キー）]** で接続する場合は、ドメイン、ポート、ユーザー名、SSH キーを指定する必要があります。
 
@@ -41,7 +44,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
    * **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
    ![Campaign の基本情報](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
-1. 上記のフ **[!UICONTROL ィールドに入]** 力した後、「作成」をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
+1. 上のフィールドに入力したら、 **[!UICONTROL 「作成]** 」をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
 
 ## 宛先属性 {#destination-attributes}
 
