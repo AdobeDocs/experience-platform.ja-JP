@@ -5,6 +5,9 @@ description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者�
 seo-description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 83%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
    ![Salesforce への接続](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select one of your existing connections. または、「新規アカウント」を **[!UICONTROL 選択して]** 、新しい接続を設定できます。 アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。Salesforce Marketing Cloud の場合は、「**[!UICONTROL SFTP（パスワード）]**」と「**[!UICONTROL SFTP（SSH キー）]**」を選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select one of your existing connections. または、「 **[!UICONTROL 新規アカウント]** 」を選択して新しい接続を設定できます。 アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。Salesforce Marketing Cloud の場合は、「**[!UICONTROL SFTP（パスワード）]**」と「**[!UICONTROL SFTP（SSH キー）]**」を選択できます。Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
    **[!UICONTROL SFTP（パスワード）]** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
 **[!UICONTROL SFTP（SSH キー）]** で接続する場合は、ドメイン、ポート、ユーザー名、SSH キーを指定する必要があります。
@@ -37,7 +40,7 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
    * **[!UICONTROL ファイル形式]**：**[!UICONTROL CSV]** または **[!UICONTROL TAB_DELIMITED]**。ストレージの場所に書き出すファイル形式を選択します。
    ![Salesforce の基本情報](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
 
-4. 上記のフ **[!UICONTROL ィールドに入力し]** 、「宛先を作成」をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
+4. 上記のフィールドに入力したら、 **[!UICONTROL 「保存先を作成]** 」をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
 
 ## 宛先属性 {#destination-attributes}
 
