@@ -5,6 +5,9 @@ title: ジュピターノートのクエリサービス
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+workflow-type: tm+mt
+source-wordcount: '817'
+ht-degree: 1%
 
 ---
 
@@ -31,23 +34,23 @@ Adobe Experience Platformでは、Structured Language(SQL)をData Science Worksp
 
 ## JupyterLabおよびクエリサービスへのアクセス {#access-jupyterlab-and-query-service}
 
-1. 「 [エクスペリエンスプラットフォーム](https://platform.adobe.com)」で、左のナビゲーション列 **[!UICONTROL Notebooks]** に移動します。 JupyterLabが読み込まれるまで、少し時間をお待ちください。
+1. 「 [エクスペリエンスプラットフォーム](https://platform.adobe.com)」で、左のナビゲーション列から「 **[!UICONTROL ノートブック]** 」に移動します。 JupyterLabが読み込まれるまで、少し時間をお待ちください。
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] 新しい「ランチャー」タブが自動的に表示されなかった場合は、をクリックして新しい「ランチャー」タブを開き、を選択 **[!UICONTROL File]** し **[!UICONTROL New Launcher]**&#x200B;ます。
+   > [!NOTE] 新しい「ランチャー」タブが自動的に表示されなかった場合は、「 **[!UICONTROL ファイル]** 」をクリックして新しい「ランチャー」タブを開き、「 **[!UICONTROL 新規ランチャー」を選択します]**。
 
-2. 「ランチャー」タブで、Python 3環境の **[!UICONTROL Blank]** アイコンをクリックして、空のノートブックを開きます。
+2. 「ランチャー」タブで、Python 3環境の **[!UICONTROL 空白]** (Blank)アイコンをクリックして、空のノートブックを開きます。
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] Python 3は、現在、ノートブックのクエリサービスでサポートされている唯一の環境です。
 
-3. 左側の選択レールで、 **[!UICONTROL Data]** アイコンをクリックし、重複をクリックして、すべてのデータセットをリストする **[!UICONTROL Datasets]** ディレクトリをクリックします。
+3. 左側の選択レールで、 **[!UICONTROL Data]** アイコンをクリックし、重複で **[!UICONTROL Datasets]** ディレクトリをクリックして、すべてのデータセットをリストします。
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 調査するAdobe Analyticsデータセットを探し、リストを右クリックして、をクリックし、空のノートブック **[!UICONTROL Query Data in Notebook]** にSQLクエリを生成します。
+4. 調査するAdobe Analyticsデータセットを探し、リスト上で右クリックして、「ノートブックの **[!UICONTROL クエリデータ]** 」をクリックし、空のノートブックにSQLクエリを生成します。
 
 5. 関数を含む最初に生成されたセルをクリックし `qs_connect()` 、再生ボタンをクリックして実行します。 この関数は、ノートブックインスタンスとクエリサービスとの間の接続を作成します。
 
@@ -86,13 +89,13 @@ Adobe Experience Platformでは、Structured Language(SQL)をData Science Worksp
 
 ## データのクエリ {#query-your-data}
 
-個々のノートブック・セルに次のSQLクエリを入力します。 クエリを実行するには、セルをクリックし、次に **[!UICONTROL play]** ボタンをクリックします。 正常なクエリ結果またはエラーログが、実行されたセルの下に表示されます。
+個々のノートブック・セルに次のSQLクエリを入力します。 クエリを実行するには、セルをクリックし、 **[!UICONTROL 再生]** ボタンをクリックします。 正常なクエリ結果またはエラーログが、実行されたセルの下に表示されます。
 
-ノートブックが長時間非アクティブな場合、ノートブックとクエリサービス間の接続が切断される場合があります。 このような場合は、右上隅にある **[!UICONTROL Power]** ボタンをクリックしてJupterLabを再起動します。
+ノートブックが長時間非アクティブな場合、ノートブックとクエリサービス間の接続が切断される場合があります。 このような場合は、右上隅にある[ **[!UICONTROL Power]** ]ボタンをクリックしてJupterLabを再起動します。
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-ノートブックのカーネルはリセットされますが、セルは残ります。セルを再実行して、中断した場所 **[!UICONTROL all]** に移動してください。
+ノートブックのカーネルはリセットされますが、セルは残ります。 **[!UICONTROL すべてのセルを再実行し]** 、離れた場所に移動します。
 
 ### 時間別訪問者数 {#hourly-visitor-count}
 
