@@ -5,6 +5,9 @@ title: Tableauとの接続
 topic: connect
 translation-type: tm+mt
 source-git-commit: 8310204071375a55329f661c9ac678f96979a594
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 2%
 
 ---
 
@@ -13,16 +16,16 @@ source-git-commit: 8310204071375a55329f661c9ac678f96979a594
 
 Tableauをインストールします（まだインストールされていない場合）。
 
->[!NOTE] 「Tableau Desktop」の14日間の体験版を入手でき [ます](https://www.tableau.com/products/desktop/download)。
+>[!NOTE] 14日間の「Tableau Desktop」の体験版を入手 [できます](https://www.tableau.com/products/desktop/download)。
 >    
-> バージョンは `2018.1.2 (20181.18.0615.1128 64 bit)` 正常に接続されました。クエリサービス
+> クエリサービスへの接続 `2018.1.2 (20181.18.0615.1128 64 bit)` に成功しました。
 
-Tableauを実行し、開始画面でをクリックしてPostgres接続を開きます。
+Tableauを実行し、開いた画面でをクリックしてPostgres接続を開きます。
 
 ![画像](../images/clients/tableau/open-connection.png)
 
-プラットフ `Host, Port, Database, Username, Password` ォームUIの **Connect BI Toolsページから、対応する** Tableauフィールドに個別にコピーします。
+プラットフォームUI `Host, Port, Database, Username, Password` の **Connect BI Tools** ページから、対応するTableauフィールドに個別にコピーします。
 
-接続を試みる前に、「 **SSL Required** 」ボックスをオンにしたことを確認します。
+接続を試行する前に、「 **SSL Required** 」ボックスをオンにしたことを確認します。
 
 ![画像](../images/clients/tableau/ssl-required.png)
