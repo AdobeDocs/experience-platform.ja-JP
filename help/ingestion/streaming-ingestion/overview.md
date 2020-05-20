@@ -5,29 +5,32 @@ title: Adobe Experience Platform Streaming Ingestの概要
 topic: overview
 translation-type: tm+mt
 source-git-commit: a570a7a3d905c4618d80f56f01747cced1d124e8
+workflow-type: tm+mt
+source-wordcount: '260'
+ht-degree: 3%
 
 ---
 
 
 # ストリーミング取り込みの概要
 
-Adobe Experience Platformのストリーミングインジェストでは、クライアントおよびサーバー側のデバイスからExperience Platformにリアルタイムでデータを送信する方法が提供されます。
+Adobe Experience Platformのストリーミング取り込み機能を使用すると、ユーザーはクライアントおよびサーバー側のデバイスからExperience Platformにデータをリアルタイムで送信できます。
 
-## ストリーミングの取り込みで何ができる？
+## ストリーミング取り込みで何ができますか。
 
-Adobe Experience Platformを使用すると、各顧客に対してリアルタイム顧客プロファイルを生成することで、調整され、一貫性のある、関連するエクスペリエンスを実現できます。 ストリーミング取り込みは、プロファイルデータを可能な限り短い待ち時間でデータレークに配信できるようにすることで、これらのプロファイルの構築に重要な役割を果たします。
+Adobe Experience Platformを使用すると、個々の顧客に対してリアルタイムの顧客プロファイルを生成することで、連携し、一貫性のある、関連するエクスペリエンスを実現できます。 ストリーミング取り込みは、プロファイルデータを可能な限り待ち時間を短くしてデータレークに配信できるようにすることで、これらのプロファイルを構築する上で重要な役割を果たします。
 
 ### ストリームプロファイルレコードとExperienceEvents
 
-ストリーミングの取り込みにより、プロファイルレコードとExperienceEventを数秒でプラットフォームにストリーミングし、リアルタイムのパーソナライゼーションを実現できます。 ストリーミング取り込みAPIに送信されるすべてのデータは、データレークに自動的に保持されます。
+ストリーミング取り込みにより、プロファイルの記録とExperienceEventsを数秒でプラットフォームにストリーミング配信し、リアルタイムのパーソナライゼーションを実現できます。 ストリーミング取り込みAPIに送信されたすべてのデータは、データレークに自動的に保持されます。
 
-詳しくは、『ストリーミ [ング接続の作成ガイド](../tutorials/create-streaming-connection.md) 』を参照してください。
+詳しくは、『ストリーミング接続の [作成](../tutorials/create-streaming-connection.md) 』ガイドを参照してください。
 
-### データセットへのストリーミング
+### データセットへのストリーム
 
-データがクリーンであると確信したら、リアルタイムの顧客プロファイルとIDサービスのデータセットを有効にできます。
+データがクリーンであると確信したら、リアルタイム顧客プロファイルおよびIDサービス用のデータセットを有効にできます。
 
-プロファイルおよびIDサービスのデータセットを有効にする方法について詳しくは、『データセットの設定』 [ガイドを参照してくださ](../../profile/tutorials/dataset-configuration.md)い。
+プロファイルおよびIDサービスのデータセットを有効にする方法について詳しくは、『データセットの [設定』ガイドを参照してください](../../profile/tutorials/dataset-configuration.md)。
 
 ## プラットフォームでのストリーミング取り込みに予想される遅延は何ですか。
 
@@ -38,4 +41,4 @@ Adobe Experience Platformを使用すると、各顧客に対してリアルタ�
 
 ## Adobe Experience Platform 拡張機能
 
-Adobe Experience Platform Extensionを使用して、新しいストリーミング接続を作成できます。 Experience Platform Extensionは、Experience Data Model(XDM)でフォーマットされたビーコンを送信し、Experience Platformにリアルタイムで取り込むためのアクションを提供します。 詳しくは、 [Experience Platform Extensionのドキュメントを参照してください](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) 。
+Adobe Experience Platform Extensionを使用して、新しいストリーミング接続を作成できます。 Experience Platform Extensionには、Experience Data Model(XDM)でフォーマットされたビーコンを送信するアクションが用意されており、Experience Platformにリアルタイムで取り込むことができます。 詳しくは、 [エクスペリエンスプラットフォーム拡張機能のドキュメントを参照してください](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) 。
