@@ -5,6 +5,9 @@ description: アドビのリアルタイム顧客データプラットフォー�
 seo-description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
 source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+workflow-type: tm+mt
+source-wordcount: '609'
+ht-degree: 66%
 
 ---
 
@@ -21,7 +24,7 @@ The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL
 
 「**[!UICONTROL カタログ]**」タブには、アドビが提供するすべての宛先のリストが表示されます。このリストには、データを送信できます。
 
-ページ上の検索機能を使用して、 **[!UICONTROL カテゴリコントロールを使用して、特定の宛先を見つけたり、宛先をフィルターしたりします]** 。
+ページの検索機能を使用して、 **[!UICONTROL カテゴリ]** ・コントロールを使用して特定の宛先を見つけたり、宛先をフィルターしたりします。
 
 カタログ内の宛先を選択して、右側のレールを開きます。Here, you can set up a connection to the destination (**[!UICONTROL Connect destination]**), view existing destination connections (**[!UICONTROL Browse destinations]**) or learn more detailed information about each destination by viewing the documentation (**[!UICONTROL View documentation]**).
 
@@ -39,7 +42,7 @@ The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL
 ---------|----------
 | 名前 | この宛先へのアクティベーションフローに指定した名前。 |
 | [!UICONTROL 宛先] | アクティベーションフローに対して選択した宛先プラットフォームです。 |
-| [!UICONTROL 接続タイプ] | 接続グループまたは接続先へのストレージの種類を表します。 <ul><li>電子メールマーケティングの宛先の場合：S3またはFTPを使用できます。</li><li>リアルタイム広告の宛先の場合：サーバー間</li></ul> |
+| [!UICONTROL 接続タイプ] | ストレージグループまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合： S3またはFTPを使用できます。</li><li>リアルタイム広告の送信先の場合： サーバー間</li></ul> |
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
 | [!UICONTROL セグメント] | この宛先に対してアクティブ化されているセグメントの数。 |
 | [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）です。 |
@@ -60,13 +63,13 @@ The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL
 | 要素 | 説明 |
 ---------|----------
 | [!UICONTROL プラットフォーム] | 接続を設定した宛先。 |
-| [!UICONTROL 接続タイプ] | 接続グループまたは接続先へのストレージの種類を表します。 <ul><li>電子メールマーケティングの宛先の場合：S3またはFTPを使用できます。</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3クラウドのストレージ先：アクセスキー </li><li>SFTPクラウドのストレージ先：SFTPの基本認証</li></ul> |
+| [!UICONTROL 接続タイプ] | ストレージグループまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合： S3またはFTPを使用できます。</li><li>リアルタイム広告の送信先の場合： サーバー間</li><li>Amazon S3クラウドストレージの宛先の場合： アクセスキー </li><li>SFTPクラウドストレージの宛先の場合： SFTPの基本認証</li></ul> |
 | [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)で選択したユーザー名。 |
 | [!UICONTROL データフロー] | 宛先に対して作成された基本情報に接続された、一意に成功した宛先フローの数を表します。 |
 | [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
 | [!UICONTROL Status] | `Active` または `Inactive`.データが現在この宛先に対してアクティブ化されているかどうかを示します。ステータスを編集するには、「[アクティベーションの無効化](/help/rtcdp/destinations/activate-destinations.md#disable-activation)」を参照してください。 |
 
-## [!UICONTROL システム表示]{#system-view}
+## [!UICONTROL システム表示] {#system-view}
 
 The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
 
