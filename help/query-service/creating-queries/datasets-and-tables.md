@@ -5,30 +5,33 @@ title: データセットとテーブルとスキーマ
 topic: queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
 
 # データセットとテーブルとスキーマ
 
-[Adobe Experience Platform UIで使用できるデータセットのリストを確認し](https://platform.adobe.com/datasets)、データセット名を必ず確認してください。
->[!NOTE] 一部のデータセット名にはスペースが含まれ、スペースが含まれていない場合はSQLセーフにならない可能性があります。
+Adobe Experience Platform UI [で使用できるデータセットのリストを確認し](https://platform.adobe.com/datasets)、データセット名を必ず確認してください。
+>[!NOTE] 一部のデータセット名にはスペースが含まれ、スペースが含まれていない場合はSQLセーフでないことがあります。
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
 
-データセットテーブル内のスキーマ名をクリックして、UIでデータセットスキーマの階層構造を確認します。
+データセットテーブル内のスキーマ名をクリックして、UIのデータセットスキーマの階層構造を確認します。
 
 ![](../images/queries/datasets-and-tables/schema-information.png)
 
-PSQLコマンド・ラインを開き、次の場所から接続の詳細を使用します。 [https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration)。
+PSQLコマンドラインを開き、次の場所から接続の詳細を使用します。 [https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration).
 
 ![](../images/clients/psql/connect-bi.png)
 
-SQLを使用したプラットフォームで使用可能な表を表示するには、またはを使用で `\d` きま `SHOW TABLES;`す。
+SQLを使用したプラットフォームで使用可能なテーブルを表示するには、 `\d` またはを使用でき `SHOW TABLES;`ます。
 
 
-`\d` 標準のPostgreSQL表示
+`\d` 標準のPostgreSQL表示を表示します。
 
 ```
              List of relations
@@ -39,7 +42,7 @@ SQLを使用したプラットフォームで使用可能な表を表示する�
 (2 rows)
 ```
 
-`SHOW TABLES;` は、より詳細な表示を提供し、テーブルと、プラットフォームUIにあるデータセット名を表示するカスタムコマンドです。
+`SHOW TABLES;` は、より詳細な表示を提供し、テーブルとプラットフォームUIにあるデータセット名を表示するカスタムコマンドです。
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -49,9 +52,9 @@ SQLを使用したプラットフォームで使用可能な表を表示する�
 (2 rows)
 ```
 
-テーブルのルートスキーマを表示するには、コマンドを使用 `\d table_name` します。
+テーブルのルートスキーマを表示するには、 `\d table_name` コマンドを使用します。
 
->[!NOTE] 表示されたスキーマは、ルートフィールドを示し、そのほとんどが複雑で、データセットスキーマUIのオブジェクトタイプを参照します。
+>[!NOTE] 表示されるスキーマは、ルートフィールドを示しています。ルートフィールドのほとんどは複雑で、データセットスキーマUIのオブジェクトタイプを指します。
 
 `\d luma_midvalues`
 
@@ -76,7 +79,7 @@ SQLを使用したプラットフォームで使用可能な表を表示する�
  search            | search                      |           |          | 
 ```
 
-さらに詳細なスキーマを表示するには、アンダースコア(`_`)を使用して、説明するテーブルの列を宣言します。 例：`\d table_name_column`。
+スキーマをさらに進めるには、アンダースコア(`_`)を使用して、説明するテーブルの列を宣言します。 例：`\d table_name_column`。
 
 `\d luma_midvalues_web`
 
