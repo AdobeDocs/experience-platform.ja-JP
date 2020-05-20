@@ -5,6 +5,9 @@ description: Amazon Web Services（AWS）S3 3ストレージへのライブア�
 seo-description: Amazon Web Services（AWS）S3 3ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 translation-type: tm+mt
 source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 82%
 
 ---
 
@@ -21,7 +24,7 @@ Amazon Web Services（AWS）S3 3ストレージへのライブアウトバウン
 
 Amazon S3 の宛先については、宛先の作成ワークフローで次の情報を入力します。
 
-* **Amazon S3アクセスキーとAmazon S3秘密キー**:Amazon S3で、アクセスキー — 秘密アクセスキーのペアを生成し、Amazon S3アカウントにAdobe Real-time CDPアクセスを許可します。
+* **Amazon S3アクセスキーとAmazon S3シークレットキー**: Amazon S3で、アクセスキー — シークレットアクセスキーペアを生成して、Amazon S3アカウントへのAdobe Real-time CDPアクセスを許可します。
 
 
 
