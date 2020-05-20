@@ -5,6 +5,9 @@ title: Data Science Workspaceの概要
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '2736'
+ht-degree: 0%
 
 ---
 
@@ -156,7 +159,7 @@ Access control for Experience Platform is administered through the [Adobe Admin 
 
 ![](./images/home/example_problem.png)
 
-コールセンターの連絡時に、顧客は買い物かごに2組の靴を入れていますが、シャツは取り除いています。 この情報により、インテリジェントサービスは、コールセンターエージェントに対して、コール中の靴に対する20%オフのクーポンのオファーを推奨する場合があります。 顧客がクーポンを使用する場合は、その情報がデータセットに追加され、次に訪問者が電話をかけたときの予測がさらに改善されます。
+コールセンターの連絡時に、顧客は買い物かごに2組の靴を入れていますが、シャツは取り除いています。 この情報により、インテリジェントサービスは、コールセンターエージェントに対して、コール中の靴の20%オフのクーポンをオファーすることを推奨する場合があります。 顧客がクーポンを使用する場合は、その情報がデータセットに追加され、次に訪問者が電話をかけたときの予測がさらに改善されます。
 
 ### データの表示と準備
 
