@@ -5,6 +5,9 @@ title: インテリジェントサービスの概要
 topic: Intelligent Services overview
 translation-type: tm+mt
 source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
+workflow-type: tm+mt
+source-wordcount: '443'
+ht-degree: 0%
 
 ---
 
