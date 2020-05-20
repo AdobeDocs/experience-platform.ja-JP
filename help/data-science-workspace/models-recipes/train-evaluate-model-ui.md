@@ -5,6 +5,9 @@ title: モデル(UI)のトレーニングと評価
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '985'
+ht-degree: 2%
 
 ---
 
@@ -23,42 +26,42 @@ Adobe Experience Platform Data Science Workspaceでは、機械学習モデル�
 
 ## モデルの作成
 
-1. Adobe Experience Platformで、左側のナビゲーション列にある **[!UICONTROL Models]** リンクをクリックして、既存のすべてのモデルをリストします。 ページの右上 **[!UICONTROL Create Model]** 近くにあるをクリックして、モデル作成プロセスを開始します。
+1. Adobe Experience Platformで、左側のナビゲーション列にある「 **[!UICONTROL モデル]** 」リンクをクリックして、既存のすべてのモデルをリストします。 ページ右上 **[!UICONTROL 付近にある「モデルを作成]** 」をクリックして、モデル作成プロセスを開始します。
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. 既存のレシピのリストを参照し、モデルの作成に使用するレシピを探して選択し、をクリックし **[!UICONTROL Next]**ます。
+2. 既存のレシピのリストを参照し、モデルの作成に使用するレシピを探して選択し、 **[!UICONTROL 「Next]**」をクリックします。
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. 適切な入力データセットを選択し、をクリックし **[!UICONTROL Next]**ます。 これにより、モデルのデフォルトの入力トレーニングデータセットが設定されます。
+3. 適切な入力データセットを選択し、「 **[!UICONTROL 次へ]**」をクリックします。 これにより、モデルのデフォルトの入力トレーニングデータセットが設定されます。
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. モデルの名前を指定し、デフォルトのモデル設定を確認します。 レシピの作成時にデフォルトの設定が適用され、重複が値をクリックして、設定値を確認および変更しました。 新しい設定のセットを提供するには、をクリックし **[!UICONTROL Upload New Config]** て、モデル設定を含むJSONファイルをブラウザーウィンドウにドラッグします。 をクリック **[!UICONTROL Finish]** して、モデルを作成します。
+4. モデルの名前を指定し、デフォルトのモデル設定を確認します。 レシピの作成時にデフォルトの設定が適用され、重複が値をクリックして、設定値を確認および変更しました。 新しい設定のセットを提供するには、「新しい設定を **[!UICONTROL アップロード]** 」をクリックし、モデル設定を含むJSONファイルをブラウザーウィンドウにドラッグします。 「 **[!UICONTROL 完了]** 」(Finish)をクリックして、モデルを作成します。
    >[!NOTE]設定は、意図したレシピに固有であり、小売売上高レシピの設定は、商品レコメンデーションレシピでは機能しません。 小売売上手法設定のリストについては、 [リファレンス](#reference) 「」の項を参照してください。
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## トレーニング実行の作成
 
-1. Adobe Experience Platformで、左側のナビゲーション列にある **[!UICONTROL Models]** リンクをクリックして、既存のすべてのモデルをリストします。 トレーニングを受けるモデルの名前を見つけ、クリックします。
+1. Adobe Experience Platformで、左側のナビゲーション列にある「 **[!UICONTROL モデル]** 」リンクをクリックして、既存のすべてのモデルをリストします。 トレーニングを受けるモデルの名前を見つけ、クリックします。
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. 既存のトレーニングの実行が、現在のトレーニングのステータスですべて表示されます。 Data Science Workspaceユーザーインターフェイスを使用して作成されたモデルの場合、トレーニング実行は自動的に生成され、デフォルトの設定と入力トレーニングデータセットを使用して実行されます。
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. 「モデルの概要」ページの右上 **[!UICONTROL Train]** 近くにあるをクリックして、新しいトレーニングを作成します。
+3. [モデルの概要]ページの右上にある[トレ **[!UICONTROL ーニング]** ]をクリックして、新しいトレーニングを作成します。
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. トレーニング実行のトレーニング入力データセットを選択し、をクリックし **[!UICONTROL Next]**ます。
+4. トレーニング実行のトレーニング入力データセットを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. モデルの作成時に提供されるデフォルトの設定が表示され、値を重複クリックして、それに応じて変更および変更します。 をクリック **[!UICONTROL Finish]** して、トレーニングの実行を作成および実行します。
+5. モデルの作成時に提供されるデフォルトの設定が表示され、値を重複クリックして、それに応じて変更および変更します。 「 **[!UICONTROL 完了]** 」をクリックして、トレーニングの実行を作成し、実行します。
    >[!NOTE]設定は、意図したレシピに固有であり、小売売上高レシピの設定は、商品レコメンデーションレシピでは機能しません。 小売売上手法設定のリストについては、 [リファレンス](#reference) 「」の項を参照してください。
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## モデルの評価
 
-1. Adobe Experience Platformで、左側のナビゲーション列にある **[!UICONTROL Models]** リンクをクリックして、既存のすべてのモデルをリストします。 評価するモデルの名前を探してクリックします。
+1. Adobe Experience Platformで、左側のナビゲーション列にある「 **[!UICONTROL モデル]** 」リンクをクリックして、既存のすべてのモデルをリストします。 評価するモデルの名前を探してクリックします。
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. 既存のトレーニングの実行が、現在のトレーニングのステータスですべて表示されます。 複数のトレーニングの実行が完了した場合、モデル評価グラフの異なるトレーニングの実行間で評価指標を比較できます。グラフの上にあるドロップダウンリストを使用して、評価指標を選択します。
