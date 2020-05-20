@@ -5,6 +5,9 @@ title: アトリビューションAIユーザーガイド
 topic: User guide
 translation-type: tm+mt
 source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
+workflow-type: tm+mt
+source-wordcount: '1433'
+ht-degree: 0%
 
 ---
 
