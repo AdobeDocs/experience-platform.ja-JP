@@ -5,17 +5,20 @@ title: 日付と時間関数
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 4%
 
 ---
 
 
 # 日付と時間関数
 
-日付と時間の関数は、プロファイルクエリ言語(PQL)内の値に対して日付と時間の操作を実行するために使用されます。 その他のPQL関数の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照。
+日付と時間の関数は、プロファイルクエリ言語(PQL)内の値に対して日付と時間の演算を実行するために使用します。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
 
 ## 現在の月
 
-この関 `currentMonth` 数は、現在の月を整数で返します。
+この `currentMonth` 関数は、現在の月を整数で返します。
 
 **形式**
 
@@ -25,15 +28,15 @@ currentMonth()
 
 **例**
 
-次のPQLクエリは、個人の生誕月が現在の月かどうかを確認します。
+次のPQLクエリは、その人の生まれた月が現在の月かどうかを確認します。
 
 ```sql
 person.birthMonth = currentMonth()
 ```
 
-## 月の取得
+## 月を取得
 
-渡さ `getMonth` れたタイムスタンプに基づいて月を整数で返します。
+この `getMonth` 関数は、渡されたタイムスタンプに基づいて月を整数で返します。
 
 **形式**
 
@@ -43,7 +46,7 @@ person.birthMonth = currentMonth()
 
 **例**
 
-次のPQLクエリは、その人の生誕月が6月かどうかを確認します。
+次のPQLクエリは、その人の生まれた月が6月かどうかを確認します。
 
 ```sql
 person.birthdate.getMonth() = 6
@@ -51,7 +54,7 @@ person.birthdate.getMonth() = 6
 
 ## 現在の年
 
-この関 `currentYear` 数は、現在の年を整数で返します。
+この `currentYear` 関数は、現在の年を整数で返します。
 
 **形式**
 
@@ -61,15 +64,15 @@ currentYear()
 
 **例**
 
-次のPQLクエリは、製品が今年中に販売されたかどうかを確認します。
+次のPQLクエリは、その製品が今年中に販売されたかどうかを確認します。
 
 ```sql
 product.saleYear = currentYear()
 ```
 
-## 年を取得
+## 年の取得
 
-渡さ `getYear` れたタイムスタンプに基づいて、年を整数で返します。
+この `getYear` 関数は、渡されたタイムスタンプに基づいて、年を整数で返します。
 
 **形式**
 
@@ -79,7 +82,7 @@ product.saleYear = currentYear()
 
 **例**
 
-次のPQLクエリは、1991年、1992年、1993年、1994年、または1995年に生誕年に該当するかどうかを確認します。
+次のPQLクエリは、1991年、1992年、1993年、1994年、または1995年に生誕年が該当するかどうかを確認します。
 
 ```sql
 person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
@@ -97,15 +100,15 @@ currentDayOfMonth()
 
 **例**
 
-次のPQLクエリは、その人の生誕日がその月の現在の日と一致するかどうかを確認します。
+次のPQLクエリは、その人の生まれた日がその月の現在の日と一致するかどうかを確認します。
 
 ```sql
 person.birthDay = currentDayOfMonth()
 ```
 
-## 月の日を取得
+## 日付の取得
 
-指定し `getDayOfMonth` たタイムスタンプに基づいて、日を整数で返します。
+この `getDayOfMonth` 関数は、渡されたタイムスタンプに基づいて日を整数で返します。
 
 **形式**
 
@@ -115,7 +118,7 @@ person.birthDay = currentDayOfMonth()
 
 **例**
 
-次のPQLクエリは、その品目が月の最初の15日以内に販売されたかどうかを確認します。
+次のPQLクエリは、その月の最初の15日以内に製品が販売されたかどうかを確認します。
 
 ```sql
 product.sale.getDayOfMonth() <= 15
@@ -123,11 +126,11 @@ product.sale.getDayOfMonth() <= 15
 
 ## 発生
 
-この関 `occurs` 数は、指定されたtimestamp関数と一定期間を比較します。
+この `occurs` 関数は、指定したタイムスタンプ関数と一定期間を比較します。
 
 **形式**
 
-この関 `occurs` 数は、次のいずれかの形式を使用して記述できます。
+この `occurs` 関数は、次のいずれかの形式を使用して記述できます。
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -138,23 +141,23 @@ product.sale.getDayOfMonth() <= 15
 
 | 引数 | 説明 |
 | --------- | ----------- |
-| `{COMPARISON}` | 比較演算子。 次のいずれかの演算子を使用できます。 `>`、 `>=`、、 `<`、 `<=`、 `=`、 `!=`、 比較関数の詳細については、「比較関数」ドキュメントを参照し [てください](./comparison-functions.md)。 |
-| `{INTEGER}` | 負でない整数です。 |
-| `{TIME_UNIT}` | 時間の単位。 次のいずれかの単語を指定できます。 `millisecond(s)`そう、そう、そう、そう、そ `second(s)`う、そう、そう、 `minute(s)``hour(s)``day(s)``week(s)``month(s)``year(s)``decade(s)``century``centuries``millennium``millennia`そう、そう、そう、そう、こう、続けて来た。 |
-| `{DIRECTION}` | 日付を比較するタイミングを説明する前置詞。 次のいずれかの単語を指定できます。 `before``after`、 `from` |
-| `{TIME}` | タイムスタンプリテラル(`today`、、、 `now`、 `yesterday`、 `tomorrow`)、相対時間単位(いずれか、 `this`または `last``next` 後に時間単位が続く)、タイムスタンプ属性を指定できます。 |
+| `{COMPARISON}` | 比較演算子。 次の演算子のいずれかを使用できます。 `>`、 `>=`、 `<`、 `<=`、 `=`、 `!=`、 比較関数の詳細については、「 [比較関数ドキュメント](./comparison-functions.md)」を参照してください。 |
+| `{INTEGER}` | 負でない整数。 |
+| `{TIME_UNIT}` | 時間の単位。 次のいずれかの単語を使用できます。 `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, , `century``centuries``millennium``millennia`, , |
+| `{DIRECTION}` | 日付をいつ比較するかを説明する前置詞。 次のいずれかの単語を使用できます。 `before`、 `after`、 `from`. |
+| `{TIME}` | タイムスタンプリテラル(`today`、 `now`、 `yesterday`、 `tomorrow`)、相対時間単位(時間単位の1つ、 `this`または `last``next` その後に時間単位が続く)、またはタイムスタンプ属性を使用できます。 |
 
->[!NOTE] この単語の使用はオプ `on` ションです。 など、一部の組み合わせの読みやすさを向上させるために用意されていま `timestamp occurs on date(2019,12,31)`す。
+>[!NOTE] この単語の使用は任意 `on` です。 例えば、一部の組み合わせで読みやすさが向上し `timestamp occurs on date(2019,12,31)`ます。
 
 **例**
 
-次のPQLクエリは、品目が先週販売されたかどうかを確認します。
+次のPQLクエリは、商品が先週販売されたかどうかを確認します。
 
 ```sql
 product.saleDate occurs last week
 ```
 
-次のPQLクエリは、品目が2015年1月8日から2017年7月1日の間に販売されたかどうかを確認します。
+次のPQLクエリは、2015年1月8日～ 2017年7月1日の間に品目が販売されたかどうかを確認します。
 
 ```sql
 product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
@@ -166,7 +169,7 @@ product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
 
 **例**
 
-次のPQLクエリは、商品が3時間前に販売されたかどうかを確認します。
+次のPQLクエリは、商品が正確に3時間前に販売されたかどうかを確認します。
 
 ```sql
 product.saleDate occurs = 3 hours before now
@@ -174,11 +177,11 @@ product.saleDate occurs = 3 hours before now
 
 ## 今日
 
-`today` は、PQL実行日の開始を表す予約語です。
+`today` は、PQL実行日の開始のタイムスタンプを表す予約語です。
 
 **例**
 
-次のPQLクエリは、人の誕生日が3日前かどうかを確認します。
+次のPQLクエリは、人の誕生日が3日前かどうかをチェックします。
 
 ```sql
 person.birthday occurs = 3 days before today
@@ -186,4 +189,4 @@ person.birthday occurs = 3 days before today
 
 ## 次の手順
 
-これで、日付と時間の関数について学習できたので、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照。
+これで日付と時間の関数について学習できたので、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
