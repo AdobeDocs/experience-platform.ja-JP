@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: クエリサービス開発者ガイド
+title: クエリサービス開発ガイド
 topic: connection parameters
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 1%
 
 ---
 
@@ -13,11 +16,11 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 
 ## サンプルAPI呼び出し
 
-これで、使用するヘッダーを理解できたので、クエリサービスAPIの呼び出しを開始できます。 以下の節では、クエリサービスAPIを使用して行える様々なAPI呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを示すサンプルリクエスト、およびサンプル応答が含まれます。
+これで、使用するヘッダーが分かったので、クエリサービスAPIの呼び出しを開始する準備が整いました。 以下の節では、クエリサービスAPIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
 
 ### インタラクティブサービスの接続パラメーターを要求します
 
-エンドポイントにGET要求を行うことで、インタラクテ [ィブサービスを使用する](../creating-queries/writing-queries.md) ための接続パラメーターを取得で `/connection_parameters` きます。 インタラクティブサービスを介して接続する接続パラメーターを使用するクライアントの詳細については、 [クエリサービスクライアントのドキュメントを参照してくださ](../clients/overview.md)い。
+エンドポイントにGET要求を行うと、イン [タラクティブサービスを使用するための接続パラメーターを取得でき](../creating-queries/writing-queries.md)`/connection_parameters` ます。 接続パラメーターを使用してインタラクティブサービスを介して接続するクライアントの詳細については、 [クエリサービスクライアントに関するドキュメントを参照してください](../clients/overview.md)。
 
 **API形式**
 
@@ -37,7 +40,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/connection_parameter
 
 **応答**
 
-成功した応答は、接続パラメーターと共にHTTPステータス200を返します。
+正常に応答すると、接続パラメーターと共にHTTPステータス200が返されます。
 
 ```json
 {
