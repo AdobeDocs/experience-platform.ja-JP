@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzureイベントハブコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Flow ServiceがAzureイベントハブアカウントに接続するには、次
 | ---------- | ----------- |
 | `sasKeyName` | 認証規則の名前。SASキー名とも呼ばれます。 |
 | `sasKey` | 生成された共有アクセス署名です。 |
-| `namespace` | アクセスするEventHubの名前空間。 |
+| `namespace` | アクセスしているイベントハブの名前空間。 |
+| `connectionSpec.id` | Azureイベントハブ接続仕様ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-これらの値の詳細については、 [このEventHubドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+これらの値の詳細については、 [次の「イベントハブのドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)」を参照してください。
 
 ### サンプルAPI呼び出しの読み取り
 
@@ -86,10 +87,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -103,6 +105,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | 認証規則の名前。SASキー名とも呼ばれます。 |
 | `auth.params.sasKey` | 生成された共有アクセス署名です。 |
+| `namespace` | アクセスしているイベントハブの名前空間。 |
 | `connectionSpec.id` | Azureイベントハブ接続仕様ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **応答**
