@@ -5,6 +5,9 @@ description: セグメント化サービスについて説明する概要です�
 seo-description: アドビのリアルタイム顧客データプラットフォームでのセグメント化サービスとセグメントについて説明する概要です。
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '277'
+ht-degree: 95%
 
 ---
 
