@@ -73,7 +73,7 @@ POST /connections
 
 **リクエスト**
 
-Synapse接続を作成するには、その一意の接続仕様IDをPOST要求の一部として指定する必要があります。 シナプスの接続仕様IDは `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`です。
+Synapse接続を作成するには、POST要求の一部として一意の接続仕様IDを提供する必要があります。 シナプスの接続仕様IDは `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`です。
 
 ```shell
 curl -X POST \
