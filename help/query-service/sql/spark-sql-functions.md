@@ -5,17 +5,20 @@ title: Spark SQL関数
 topic: spark sql functions
 translation-type: tm+mt
 source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
+workflow-type: tm+mt
+source-wordcount: '4903'
+ht-degree: 6%
 
 ---
 
 
 # Spark SQL関数
 
-Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関数を提供します。
+Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関数を提供します。
 
-参照： [Spark SQL関数のドキュメント](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
+リファレンス： [Spark SQL関数ドキュメント](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
->[!NOTE] 外部ドキュメント内のすべての機能がサポートされているわけではありません。
+>[!NOTE] 外部ドキュメントの機能の一部がサポートされているわけではありません。
 
 ## カテゴリ
 
@@ -33,7 +36,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 剰余
 
-`expr1 % expr2`:/の後の剰余を返し `expr1`ます`expr2`。
+`expr1 % expr2`: /の後の剰余を返し `expr1`ま`expr2`す。
 
 例：
 
@@ -92,7 +95,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### abs
 
-`abs(expr)`:数値の絶対値を返します。
+`abs(expr)`: 数値の絶対値を返します。
 
 例：
 
@@ -101,9 +104,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
   1
 ```
 
-#### アコス
+#### acos
 
-`acos(expr)`:の逆コサイン（アークコサインとも呼ばれます）を返します。こ `expr`の逆コサインは、で計算されたものと同じで `java.lang.Math.acos`す。
+`acos(expr)`: の逆コサイン（アークコサインとも呼ばれます） `expr`を返します。これは、で計算された場合と同様で `java.lang.Math.acos`す。
 
 例：
 
@@ -116,7 +119,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### approx_percentile
 
-`approx_percentile(col, percentage [, accuracy])`:指定した割合での数値列の近似百分位 `col` 値を返します。 パーセント値は、0.0 ～ 1.0の範囲で指定する必要があります。パラメ `accuracy` ータ(デフォルト：10000)は正の数値リテラルで、メモリコストで近似精度を制御します。 の値を大きくす `accuracy` ると、精度が向上し `1.0/accuracy` 、近似の相対誤差が発生します。 が配 `percentage` 列の場合、割合配列の各値は0.0 ～ 1.0の範囲である必要があります。この場合、指定した割合の配列における列の概 `col` 算パーセンタイル配列が返されます。
+`approx_percentile(col, percentage [, accuracy])`: 指定した割合での数値列の近似パーセンタイル値 `col` を返します。 パーセント値は、0.0 ～ 1.0の範囲で設定する必要があります。 `accuracy` パラメータ(デフォルト： 10000)は正の数値リテラルで、メモリコストでの近似精度を制御します。 の値を大きくする `accuracy` と、より正確な精度 `1.0/accuracy` が得られ、近似の相対誤差になります。 が配列 `percentage` の場合、割合配列の各値は0.0 ～ 1.0の範囲である必要があります。この場合、指定した割合配列の列の概算パーセンタイル配列 `col` が返されます。
 
 例：
 
@@ -129,7 +132,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### asin
 
-`asin(expr)`:逆サイン（アークサインとも呼ばれます）を返します。この逆サインは、で計算され `expr`たかのように、のアークサインで `java.lang.Math.asin`す。
+`asin(expr)`: で計算された場合と同様に、逆サイン（アークサイン） `expr`を返し `java.lang.Math.asin`ます。
 
 例：
 
@@ -142,7 +145,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### atan
 
-`atan(expr)`:の逆正接（逆正接）を返します。こ `expr`の値は、 `java.lang.Math.atan`
+`atan(expr)`: の逆正接（逆正接）を返し `expr`ます。 `java.lang.Math.atan`
 
 例：
 
@@ -153,11 +156,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### atan2
 
-`atan2(exprY, exprX)`:平面の正のx軸と座標(`exprX`, `exprY``java.lang.Math.atan2`)で指定された点との間の角度をラジアンで返します。
+`atan2(exprY, exprX)`: 平面の正のx軸と座標(`exprX`, `exprY`)で指定された点との間の角度（ラジアン）を返します。この値は、で計算された場合と同様で `java.lang.Math.atan2`す。
 
 引数：
 
-`exprY`:Y軸の座標`exprX`:X軸の座標
+`exprY`: Y軸の座標`exprX`: X軸の座標
 
 例：
 
@@ -168,11 +171,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### avg
 
-`avg(expr)`:グループの値から計算された平均値を返します。
+`avg(expr)`: グループの値から計算した平均値を返します。
 
 #### 基数
 
-`cardinality(expr)`:配列またはマップのサイズを返します。 入力がnullで、true（デフォルト）に設定されている場合、 `spark.sql.legacy.sizeOfNull` この関数は —1を返します。 をfalse `spark.sql.legacy.sizeOfNull` に設定すると、null入力の場合はnullを返します。
+`cardinality(expr)`: 配列またはマップのサイズを返します。 入力がnullで、true（デフォルト）に設定されている場合は、-1 `spark.sql.legacy.sizeOfNull` を返します。 をfalse `spark.sql.legacy.sizeOfNull` に設定した場合、null入力に対してnullを返します。
 
 例：
 
@@ -187,7 +190,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### cbrt
 
-`cbrt(expr)`:のキューブルートを返しま `expr`す。
+`cbrt(expr)`: のキューブルートを返し `expr`ます。
 
 例：
 
@@ -198,7 +201,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### ceil
 
-`ceil(expr)`:次の値以上の最小の整数を返しま `expr`す。
+`ceil(expr)`: 以下の最小の整数を返し `expr`ます。
 
 例：
 
@@ -209,9 +212,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  5
 ```
 
-#### 天井
+#### ceiling
 
-`ceiling(expr)`:次の値以上の最小の整数を返しま `expr`す。
+`ceiling(expr)`: 以下の最小の整数を返し `expr`ます。
 
 例：
 
@@ -224,7 +227,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### conv
 
-`conv(num, from_base, to_base)`:次の値 `num` に変換 `from_base` する `to_base`
+`conv(num, from_base, to_base)`: 次 `num` の値 `from_base` に変換 `to_base`
 
 例：
 
@@ -237,11 +240,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### cor
 
-`corr(expr1, expr2)`:一連の数の対の相関係数を返します。
+`corr(expr1, expr2)`: 一連の数値対の相関係数を返します。
 
 #### cos
 
-`cos(expr)`:のコサインを返しま `expr``java.lang.Math.cos`す。これは、
+`cos(expr)`: のコサインを返し `expr`ます。このコサインは、で計算された場合と同様で `java.lang.Math.cos`す。
 
 例：
 
@@ -252,10 +255,10 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### コッシュ
 
-`cosh(expr)`:のハイパボリックコサインを返します。このコサ `expr`インは、で計算された場合と同様に返され `java.lang.Math.cosh`ます。
+`cosh(expr)`: のハイパボリックコサインを返し `expr``java.lang.Math.cosh`ます。このコサインは、
 
 引数：
-- `expr`:ハイパボリック角
+- `expr`: 双曲角
 
 例：
 
@@ -266,10 +269,10 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### コット
 
-`cot(expr)`:のコタンジェントを返しま `expr`す。この値は、で計算された場合と同様で `1/java.lang.Math.cot`す。
+`cot(expr)`: のコタンジェントを返し `expr`ます。この値は、で計算されたとおりで `1/java.lang.Math.cot`す。
 
 引数：
-- `expr`:角度（ラジアン）
+- `expr`: 角度（ラジアン）
 
 例：
 
@@ -280,11 +283,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### dense_rank
 
-`dense_rank()`:値のグループ内の値のランクを計算します。 結果は、以前に割り当てられたランク値に1を足した値になります。 関数とは異なり、 `rank`はラ `dense_rank` ンキング順序にギャップを生成しません。
+`dense_rank()`: 値のグループ内の値のランクを計算します。 結果は、以前に割り当てられたランク値に1を足した値になります。 関数とは異なり `rank`、ランキング順序 `dense_rank` にギャップは生じません。
 
 #### e
 
-`e()`:オイラー数eを返します。
+`e()`: オイラーの数eを返します。
 
 例：
 
@@ -295,7 +298,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### exp
 
-`exp(expr)`:の累乗にeを返します `expr`。
+`exp(expr)`: のべき乗にeを返し `expr`ます。
 
 例：
 
@@ -306,7 +309,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### expml
 
-`expm1(expr)`:exp(`expr`) - 1を返します。
+`expm1(expr)`: exp(`expr`) - 1を返します。
 
 例：
 
@@ -317,7 +320,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 要因
 
-`factorial(expr)`:の階乗を返します `expr`。 `expr` は [0 ～ 20です]。 それ以外の場合はnull。
+`factorial(expr)`: の階乗を返し `expr`ます。 `expr` は [0 ～ 20です]。 それ以外の場合はnull。
 
 例：
 
@@ -326,9 +329,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  120
 ```
 
-#### 床
+#### floor
 
-`floor(expr)`:次の値以下の最大の整数を返しま `expr`す。
+`floor(expr)`: 以下の最大の整数を返し `expr`ます。
 
 例：
 
@@ -341,7 +344,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 最大
 
-`greatest(expr, ...)`:すべてのパラメーターの最大値を返し、null値をスキップします。
+`greatest(expr, ...)`: すべてのパラメーターの最大値を返し、null値をスキップします。
 
 例：
 
@@ -350,9 +353,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  10
 ```
 
-#### 偽善
+#### 偽善者
 
-`hypot(expr1, expr2)`:sqrt(`expr1`<sup>2</sup> + `expr2`<sup>2</sup>)を返します。
+`hypot(expr1, expr2)`: sqrt(`expr1`<sup>2</sup> + `expr2`<sup>2</sup>)を返します。
 
 例：
 
@@ -361,14 +364,14 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  5.0
 ```
 
-#### 尖度
+#### 陥没
 
-`kurtosis(expr)`:グループの値から計算された尖度の値を返します。
+`kurtosis(expr)`: グループの値から計算された尖度の値を返します。
 
 
 #### least
 
-`least(expr, ...)`:すべてのパラメーターの最小値を返し、null値をスキップします。
+`least(expr, ...)`: すべてのパラメーターの最小値を返し、null値をスキップします。
 
 例：
 
@@ -377,9 +380,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2
 ```
 
-#### レベンシュテイン
+#### levenshtein
 
-`levenshtein(str1, str2)`:2つの指定した文字列の間のLevenshtein距離を返します。
+`levenshtein(str1, str2)`: 渡された2つの文字列の間のLevenshtein距離を返します。
 
 例：
 
@@ -390,7 +393,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### ln
 
-`ln(expr)`:の自然対数（底e）を返します `expr`。
+`ln(expr)`: の自然対数（底e）を返し `expr`ます。
 
 例：
 
@@ -401,7 +404,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### log
 
-`log(base, expr)`:の対数を返し `expr` ます `base`。
+`log(base, expr)`: の対数を返 `expr` し `base`ます。
 
 例：
 
@@ -412,7 +415,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### log10
 
-`log10(expr)`:10を底とするの `expr` 対数を返します。
+`log10(expr)`: 10を底とするの対数 `expr` を返します。
 
 例：
 
@@ -434,7 +437,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### log2
 
-`log2(expr)`:2を底とするの対数 `expr` を返します。
+`log2(expr)`: 2を底とするの対数 `expr` を返します。
 
 例：
 
@@ -445,23 +448,23 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### max
 
-`max(expr)`:の最大値を返します `expr`。
+`max(expr)`: の最大値を返し `expr`ます。
 
-#### 平均
+#### mean
 
-`mean(expr)`:グループの値から計算された平均値を返します。
+`mean(expr)`: グループの値から計算した平均値を返します。
 
 #### min
 
-`min(expr)`:の最小値を返します `expr`。
+`min(expr)`: の最小値を返し `expr`ます。
 
-#### 単調増加_id
+#### 単調な増加_id
 
-`monotonically_increasing_id()`:単調に増加する64ビット整数を返します。 生成されるIDは、単調に増加し、一意であることが保証されますが、連続していることはありません。 現在の実装では、パーティションIDが上位31ビットに配置され、下位33ビットは各パーティション内のレコード番号を表します。 データフレームのパーティション数が10億未満で、各パーティションのレコード数が80億未満であると仮定します。 この関数の結果はパーティションIDに依存するので、決定的ではありません。
+`monotonically_increasing_id()`: 単調に増加する64ビット整数を返します。 生成されたIDは、単調に増加し、一意になりますが、連続していません。 現在の実装では、パーティションIDが上位31ビットに配置され、下位33ビットは各パーティション内のレコード番号を表します。 データフレームのパーティション数が10億個未満で、各パーティションのレコード数が80億個未満であることが前提です。 この関数の結果はパーティションIDに依存するので、決定的ではありません。
 
-#### 陰性
+#### negative
 
-`negative(expr)`:の負の値を返します `expr`。
+`negative(expr)`: の負の値を返し `expr`ます。
 
 例：
 
@@ -472,17 +475,17 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### percent_rank
 
-`percent_rank()`:値のグループ内の値のパーセントのランクを計算します。
+`percent_rank()`: 値のグループ内の値のパーセンテージのランクを計算します。
 
 #### 百分位
 
-`percentile(col, percentage [, frequency])`:指定した割合での数値列の正確なパーセ `col` ンタイル値を返します。 の値は、0.0 `percentage` から1.0の間である必要があります。の値は正の整 `frequency` 数である必要があります。
+`percentile(col, percentage [, frequency])`: 指定した割合での数値列の正確なパーセンタイル値 `col` を返します。 の値は、0.0 ～ 1.0の範囲で設定する `percentage` 必要があります。の値は、正の整数である必要 `frequency` があります。
 
-`percentile(col, array(percentage1 [, percentage2]...) [, frequency])`:渡された割合での数値列の正確なパーセンタ `col` イル値の配列を返します。 パーセント配列の各値は、0.0 ～ 1.0の範囲で指定する必要があります。の値は正の整 `frequency` 数である必要があります。
+`percentile(col, array(percentage1 [, percentage2]...) [, frequency])`: 渡された割合での数値列の正確なパーセンタイル値配列 `col` を返します。 パーセンテージ配列の各値は、0.0 ～ 1.0の範囲で設定する必要があります。の値は、正の整数で `frequency` ある必要があります。
 
 #### percentile_approx
 
-`percentile_approx(col, percentage [, accuracy])`:指定した割合での数値列の近似百分位 `col` 値を返します。 の値は、0.0 `percentage` から1.0の間である必要があります。パラメ `accuracy` ータ(デフォルト：10000)は正の数値リテラルで、メモリコストで近似精度を制御します。 の値を大きくす `accuracy` ると、精度が向上し `1.0/accuracy` 、近似の相対誤差が発生します。 が配 `percentage` 列の場合、割合配列の各値は0.0 ～ 1.0の範囲である必要があります。この場合、指定した割合の配列での列の近似百分位 `col` の配列を返します。
+`percentile_approx(col, percentage [, accuracy])`: 指定した割合での数値列の近似パーセンタイル値 `col` を返します。 の値は、0.0 ～ 1.0の範囲で設定する `percentage` 必要があります。 `accuracy` パラメータ(デフォルト： 10000)は正の数値リテラルで、メモリコストでの近似精度を制御します。 の値を大きくする `accuracy` と、より正確な精度 `1.0/accuracy` が得られ、近似の相対誤差になります。 が配列 `percentage` の場合、割合配列の各値は0.0 ～ 1.0の範囲である必要があります。この場合、指定した割合配列の列の概算パーセンタイル配列 `col` を返します。
 
 例：
 
@@ -495,7 +498,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### pi
 
-`pi()`:piを返します。
+`pi()`: piを返します。
 
 例：
 
@@ -506,7 +509,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### pmod
 
-`pmod(expr1, expr2)`:modの正の値を返し `expr1` ます `expr2`。
+`pmod(expr1, expr2)`: modの正の値を返し `expr1` ま `expr2`す。
 
 例：
 
@@ -519,11 +522,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 陽性
 
-`positive(expr)`:次の正の値を返します。 `expr`
+`positive(expr)`: 正の値( `expr`
 
 #### ポウ
 
-`pow(expr1, expr2)`:の `expr1` 力を引き上げ `expr2`る
+`pow(expr1, expr2)`: の力 `expr1` を引き上げ `expr2`ます。
 
 例：
 
@@ -532,9 +535,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  8.0
 ```
 
-#### 電力
+#### 電源
 
-`power(expr1, expr2)`:の `expr1` 力を引き上げ `expr2`る
+`power(expr1, expr2)`: の力 `expr1` を引き上げ `expr2`ます。
 
 例：
 
@@ -545,11 +548,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### ラジアン
 
-`radians(expr)`:度をラジアンに変換します。
+`radians(expr)`: 度をラジアンに変換します。
 
 引数：
 
-- `expr`:角度（度単位）
+- `expr`: 角度（度単位）
 
 例：
 
@@ -558,9 +561,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  3.141592653589793
 ```
 
-#### ランド
+#### rand
 
-`rand([seed])`:(0, 1)の値を均等に分布した、独立した値（つまり、ID）を持つランダムな値を返します。
+`rand([seed])`: (0, 1)の値を均等に分布した値（つまり、非同一分布）を持つ乱数値を返します。
 
 例：
 
@@ -575,9 +578,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 >[!NOTE] この関数は、一般的には非決定的です。
 
-#### ランドン
+#### 乱数
 
-`randn([seed])`:標準の正規分布から引き出された、独立した同一の分布（つまり、d）値を持つランダムな値を返します。
+`randn([seed])`: 標準正規分布から抽出された、独立した同一の分布（つまり、d）値を持つランダム値を返します。
 
 例：
 
@@ -594,7 +597,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### rint
 
-`rint(expr)`:引数に最も近い重複値を返し、数値の整数と等しい値を返します。
+`rint(expr)`: 引数に最も近い重複値を返します。この値は数学的な整数と等しくなります。
 
 例：
 
@@ -605,7 +608,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### round
 
-`round(expr, d)`:HALF_UP丸 `expr` めモードを `d` 使用して小数点以下の桁数に丸められた値を返します。
+`round(expr, d)`: HALF_UP丸めモード `expr``d` を使用して、小数点以下の桁数に丸められた値を返します。
 
 例：
 
@@ -616,7 +619,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### sign
 
-`sign(expr)`:-1.0、0.0または1.0を負、0または正 `expr` の数で返します。
+`sign(expr)`: -1.0、0.0または1.0を返します。負の値、0または正の値 `expr` を返します。
 
 例：
 
@@ -625,9 +628,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  1.0
 ```
 
-#### 信号
+#### 合図
 
-`signum(expr)`:-1.0、0.0または1.0を負、0または正 `expr` の値として返します。
+`signum(expr)`: -1.0、0.0または1.0を返します。負、0または正の値 `expr` を返します。
 
 例：
 
@@ -638,11 +641,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 罪
 
-`sin(expr)`:のサインを返しま `expr``java.lang.Math.sin`す。このサインは、
+`sin(expr)`: のサインを返し `expr``java.lang.Math.sin`ます。このサインは、
 
 引数：
 
-- `expr`:角度（ラジアン）
+- `expr`: 角度（ラジアン）
 
 例：
 
@@ -653,11 +656,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### sinh
 
-`sinh(expr)`:のハイパボリックサインを返し `expr``java.lang.Math.sinh`ます。このサインは、
+`sinh(expr)`: のハイパボリックサインを返し `expr``java.lang.Math.sinh`ます。このサインは、
 
 引数：
 
-- `expr`:ハイパボリック角
+- `expr`: 双曲角
 
 例：
 
@@ -668,7 +671,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### sqrt
 
-`sqrt(expr)`:の平方根を返します `expr`。
+`sqrt(expr)`: の平方根を返し `expr`ます。
 
 例：
 
@@ -677,29 +680,29 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2.0
 ```
 
-#### stddev
+#### stdev
 
-`stddev(expr)`:グループの値から計算したサンプルの標準偏差を返します。
+`stddev(expr)`: グループの値から計算したサンプルの標準偏差を返します。
 
 #### stddev_pop
 
-`sttdev_pop(expr)`:グループの値から計算された母集団の標準偏差を返します。
+`sttdev_pop(expr)`: グループの値から計算された母集団の標準偏差を返します。
 
 #### stddev_samp
 
-`stddev_samp(expr)`:グループの値から計算したサンプルの標準偏差を返します。
+`stddev_samp(expr)`: グループの値から計算したサンプルの標準偏差を返します。
 
 #### sum
 
-`sum(expr)`:グループの値から計算された合計を返します。
+`sum(expr)`: グループの値から計算した合計を返します。
 
 #### タン
 
-`tan(expr)`:のタンジェントを返しま `expr``java.lang.Math.tan`す。このタンジェントは、
+`tan(expr)`: のタンジェントを返し `expr`ます。このタンジェントは、で計算されたとおりで `java.lang.Math.tan`す。
 
 引数：
 
-- `expr`:角度（ラジアン）
+- `expr`: 角度（ラジアン）
 
 例：
 
@@ -710,11 +713,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### タン
 
-`tanh(expr)`:のハイパボリックタンジェントを返し `expr`ます。このタンジェントは、で計算された場合と同様で `java.lang.Math.tanh`す。
+`tanh(expr)`: のハイパボリックタンジェントを返し `expr``java.lang.Math.tanh`ます。このタンジェントは、
 
 引数：
 
-- `expr`:ハイパボリック角
+- `expr`: 双曲角
 
 例：
 
@@ -725,29 +728,29 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### Var_pop
 
-`var_pop(expr)`:グループの値から計算された母集団の平方偏差を返します。
+`var_pop(expr)`: グループの値から計算された母集団の平方偏差を返します。
 
 #### Var_samp
 
-`var_samp(expr)`:グループの値から計算されたサンプルの平方偏差を返します。
+`var_samp(expr)`: グループの値から計算されたサンプルの平方偏差を返します。
 
-#### 分散
+#### 差異
 
-`variance(expr)`:グループの値から計算されたサンプルの平方偏差を返します。
+`variance(expr)`: グループの値から計算されたサンプルの平方偏差を返します。
 
 ### 論理演算子
 
 #### 論理否定
 
-`! expr`:論理否定。
+`! expr`: 論理否定。
 
 #### より小さい
 
-`expr1 < expr2`:が次の値より小さ `expr1` い場合はtrueを返しま `expr2`す。
+`expr1 < expr2`: が次の値より小さい場合 `expr1` はtrueを返し `expr2`ます。
 
 引数：
 
-- `expr1, expr2`:2つの式は同じタイプであるか、共通のタイプにキャストでき、注文可能なタイプである必要があります。 例えば、マップタイプは順序指定不可なので、サポートされていません。 配列や構造体などの複合型の場合、フィールドのデータ型は並べ替え可能である必要があります。
+- `expr1, expr2`: 2つの式は同じ型であるか、共通型にキャストでき、注文可能な型である必要があります。 例えば、マップタイプはorderableでないので、サポートされていません。 配列や構造体などの複合型の場合、フィールドのデータ型は順序付け可能でなければなりません。
 
 例：
 
@@ -766,11 +769,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 次よりも小さいか等しい
 
-`expr1 <= expr2`:が次よりも小さ `expr1` いか等しい場合はtrueを返しま `expr2`す。
+`expr1 <= expr2`: 次よりも小さいか等しい場合 `expr1` はtrueを返し `expr2`ます。
 
 引数：
 
-- `expr1, expr2`:2つの式は、同じタイプであるか、共通のタイプにキャストでき、また、注文可能なタイプである必要があります。 例えば、マップタイプは順序指定不可なので、サポートされていません。 配列や構造体などの複雑な型の場合は、フィールドのデータ型を並べ替え可能にする必要があります。
+- `expr1, expr2`: 2つの式は、同じ型であるか、共通型にキャストでき、注文可能な型である必要があります。 例えば、マップタイプはorderableでないので、サポートされていません。 配列や構造体などの複合型の場合、フィールドのデータ型は順序付け可能でなければなりません。
 
 例：
 
@@ -789,11 +792,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 次と等しい
 
-`expr1 = expr2`:等しい場合はtrueを返し、そ `expr1` れ以外の `expr2`場合はfalseを返します。
+`expr1 = expr2`: 等しい場合はtrueを返し、そ `expr1` れ以外の場合 `expr2`はfalseを返します。
 
 引数：
 
-- `expr1, expr2`:2つの式は同じ型であるか、共通の型にキャストでき、等価比較で使用できる型である必要があります。 マップの種類がサポートされていません。 配列や構造体などの複合型の場合、フィールドのデータ型は並べ替え可能である必要があります。
+- `expr1, expr2`: 2つの式は同じ型であるか、共通型にキャストでき、等価比較で使用できる型である必要があります。 マップの種類がサポートされていません。 配列や構造体などの複合型の場合、フィールドのデータ型は順序付け可能でなければなりません。
 
 例：
 
@@ -810,11 +813,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### より大きい
 
-`expr1 > expr2`:がより大きい場合 `expr1` はtrueを返しま `expr2`す。
+`expr1 > expr2`: が次よりも大きい場合 `expr1` はtrueを返し `expr2`ます。
 
 引数：
 
-- `expr1, expr2`:2つの式は同じタイプであるか、共通のタイプにキャストでき、注文可能なタイプである必要があります。 例えば、マップタイプは順序指定不可なので、サポートされていません。 配列や構造体などの複合型の場合、フィールドのデータ型は並べ替え可能である必要があります。
+- `expr1, expr2`: 2つの式は同じ型であるか、共通型にキャストでき、注文可能な型である必要があります。 例えば、マップタイプはorderableでないので、サポートされていません。 配列や構造体などの複合型の場合、フィールドのデータ型は順序付け可能でなければなりません。
 
 例：
 
@@ -833,11 +836,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 次よりも大きいか等しい
 
-`expr1 >= expr2`:が次よりも大き `expr1` いか等しい場合はtrueを返しま `expr2`す。
+`expr1 >= expr2`: が次よりも大きいか等しい場合 `expr1` はtrueを返し `expr2`ます。
 
 引数：
 
-- `expr1, expr2`:2つの式は同じタイプであるか、共通のタイプにキャストでき、注文可能なタイプである必要があります。 例えば、マップタイプは順序指定不可なので、サポートされていません。 配列や構造体などの複合型の場合、フィールドのデータ型は並べ替え可能である必要があります。
+- `expr1, expr2`: 2つの式は同じ型であるか、共通型にキャストでき、注文可能な型である必要があります。 例えば、マップタイプはorderableでないので、サポートされていません。 配列や構造体などの複合型の場合、フィールドのデータ型は順序付け可能でなければなりません。
 
 例：
 
@@ -856,7 +859,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### ビット単位で排他的または
 
-`expr1 ^ expr2`:ビット単位の排他的論理和(OR)の結果（およびの結果） `expr1` を返しま `expr2`す。
+`expr1 ^ expr2`: ビット単位の排他的論理和(OR)の結果( `expr1` andの結果)を返 `expr2`します。
 
 例：
 
@@ -871,7 +874,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### arrays_overlap
 
-`arrays_overlap(a1, a2)`:a1にもa2にnull以外の要素が含まれている場合、trueを返します。 配列に共通の要素がなく、両方が空でなく、どちらか一方がnull要素を含む場合、nullが返されます。 それ以外の場合は、falseが返されます。
+`arrays_overlap(a1, a2)`: a1にもa2に存在するnullでない要素が少なくとも1つ含まれている場合は、trueを返します。 配列に共通の要素がなく、その両方が空でなく、いずれかの配列にnull要素が含まれている場合は、nullが返されます。 それ以外の場合は、falseが返されます。
 
 例：
 
@@ -880,11 +883,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  true
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### assert_true
 
-`assert_true(expr)`:がtrueでない場合は例外 `expr` をスローします。
+`assert_true(expr)`: trueでない場合は例外 `expr` をスローします。
 
 例：
 
@@ -895,7 +898,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### if
 
-`if(expr1, expr2, expr3)`:評価が `expr1` trueの場合は、次の値を返しま `expr2`す。それ以外の場合は、を返し `expr3`ます。
+`if(expr1, expr2, expr3)`: 値がtrue `expr1` の場合は、 `expr2`; それ以外の場合は、が返 `expr3`します。
 
 例：
 
@@ -906,7 +909,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### ifnull
 
-`ifnull(expr1, expr2)`:nullの場合 `expr2` は `expr1` 返し、それ以外の場合は `expr1` 返します。
+`ifnull(expr1, expr2)`: がnullの `expr2` 場合 `expr1` 、またはそれ以外の場合に `expr1` 返します。
 
 例：
 
@@ -917,10 +920,10 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### in
 
-`expr1 in(expr2, expr3, ...)`:いずれかのvalNに等し `expr` い場合はtrueを返します。
+`expr1 in(expr2, expr3, ...)`: 任意のvalNに `expr` 等しい場合はtrueを返します。
 
 引数：
-- `expr1, expr2, expr3, ...`:引数は同じ型である必要があります。
+- `expr1, expr2, expr3, ...`: 引数は同じ型である必要があります。
 
 例：
 
@@ -937,7 +940,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### isnan
 
-`isnan(expr)`:がNaNの場合はtrueを返し、それ `expr` 以外の場合はfalseを返します。
+`isnan(expr)`: がNaNの場合はtrue `expr` を、それ以外の場合はfalseを返します。
 
 例：
 
@@ -948,7 +951,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### NULL
 
-`isnotnull(expr)`:nullでない場合はtrue `expr` を、それ以外の場合はfalseを返します。
+`isnotnull(expr)`: nullでない場合はtrue `expr` を、それ以外の場合はfalseを返します。
 
 例：
 
@@ -959,7 +962,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### isnull
 
-`isnull(expr)`:nullの場合はtrueを返し、それ `expr` 以外の場合はfalseを返します。
+`isnull(expr)`: nullの場合はtrue `expr` を、それ以外の場合はfalseを返します。
 
 例：
 
@@ -970,7 +973,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### nanvl
 
-`nanvl(expr1, expr2)`:NaNでな `expr1` い場合は返し、それ以外の場合は返 `expr2` します。
+`nanvl(expr1, expr2)`: NaNでない `expr1` 場合は返し、それ以外の場合は返 `expr2` します。
 
 例：
 
@@ -981,15 +984,15 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### not
 
-`not expr`:論理否定。
+`not expr`: 論理否定。
 
 #### または
 
-`expr1 or expr2`:論理和。
+`expr1 or expr2`: 論理OR。
 
 #### xpath_boolean
 
-`xpath_boolean(xml, xpath)`:XPathノードがtrueと評価される場合、または一致する式が見つかった場合は、trueを返します。
+`xpath_boolean(xml, xpath)`: XPath式がtrueと評価される場合、または一致するノードが見つかる場合は、trueを返します。
 
 例：
 
@@ -1002,7 +1005,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### add_months
 
-`add_months(start_date, num_months)`:後の日付を返し `num_months` ます `start_date`。
+`add_months(start_date, num_months)`: 次の日付より後の日付 `num_months` を返し `start_date`ます。
 
 例：
 
@@ -1011,11 +1014,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2016-09-30
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### date_add
 
-`date_add(start_date, num_days)`:後の日付を返し `num_days` ます `start_date`。
+`date_add(start_date, num_days)`: 次の日付より後の日付 `num_days` を返し `start_date`ます。
 
 例：
 
@@ -1024,11 +1027,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2016-07-31
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### date_format
 
-`date_format(timestamp, fmt)`:日付 `timestamp` 形式で指定された形式の文字列値に変換します `fmt`。
+`date_format(timestamp, fmt)`: 日付形式 `timestamp` で指定された形式の文字列値に変換し `fmt`ます。
 
 例：
 
@@ -1037,11 +1040,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2016
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### date_sub
 
-`date_sub(start_date, num_days)`:以前の日付を返し `num_days` ます `start_date`。
+`date_sub(start_date, num_days)`: 以前の日付を返 `num_days` し `start_date`ます。
 
 例：
 
@@ -1050,11 +1053,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2016-07-29
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### date_trunc
 
-`date_trunc(fmt, ts)`:形式モデルで指定された単位に切り捨てられたタイムスタンプを返しま `fmt`す。 `fmt` は、 [&quot;YEAR&quot;、&quot;YYYY&quot;、&quot;YY&quot;、&quot;MON&quot;、&quot;MM&quot;、&quot;DAY&quot;、&quot;DD&quot;、&quot;HOUR&quot;、&quot;MINUTE&quot;、&quot;SECOND&quot;、&quot;WEEK&quot;、&quot;QUARTER&quot;のいずれかになります。]
+`date_trunc(fmt, ts)`: 形式モデルで指定された単位に切り捨てられたタイムスタンプを返 `fmt`します。 `fmt` は、「YEAR」、「YYY」、「YY」、「MON」、「MM」、「DAY」、「DD」、「HOUR」、「MINUTE」、「SECOND」、「WEEK」、「QUARTER」のいずれかである必要があります。 []
 
 例：
 
@@ -1069,11 +1072,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2015-03-05 09:00:00
 ```
 
-次の期間：2.3.0
+期間： 2.3.0
 
 #### datediff
 
-`datediff(endDate, startDate)`:からまでの日数を返し `startDate` ます `endDate`。
+`datediff(endDate, startDate)`: からまでの日数を返 `startDate` し `endDate`ます。
 
 例：
 
@@ -1085,11 +1088,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  -1
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
-#### 日
+#### day
 
-`day(date)`:日付/タイムスタンプの月の日を返します。
+`day(date)`: 日付/タイムスタンプの月の日付を返します。
 
 例：
 
@@ -1098,11 +1101,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  30
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
-#### dayofmonth
+#### dayfmonth
 
-`dayofmonth(date)`:日付/タイムスタンプの月の日を返します。
+`dayofmonth(date)`: 日付/タイムスタンプの月の日付を返します。
 
 例：
 
@@ -1111,11 +1114,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  30
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### dayofweek
 
-`dayofweek(date)`:日付/タイムスタンプの曜日を返します（1 =日曜日、2 =月曜日…、7 =土曜日）。
+`dayofweek(date)`: 日付/タイムスタンプの曜日を返します（1 =日曜日、2 =月曜日、...、7 =土曜日）。
 
 例：
 
@@ -1124,11 +1127,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  5
 ```
 
-次の期間：2.3.0
+期間： 2.3.0
 
 #### dayofyear
 
-`dayofyear(date)`:日付/タイムスタンプの年の日付を返します。
+`dayofyear(date)`: 日付/タイムスタンプの年の日付を返します。
 
 例：
 
@@ -1137,11 +1140,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  100
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### from_unixtime
 
-`from_unixtime(unix_time, format)`:指定さ `unix_time` れた値を返しま `format`す。
+`from_unixtime(unix_time, format)`: 指定 `unix_time` した値を返し `format`ます。
 
 例：
 
@@ -1150,11 +1153,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  1970-01-01 00:00:00
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### from_utc_timestamp
 
-`from_utc_timestamp(timestamp, timezone)`:「2017-07-14 02:40:00.0」のようなタイムスタンプをUTCでの時刻として解釈し、その時刻を指定されたタイムゾーンのタイムスタンプとしてレンダリングします。 例えば、「GMT+1」は「2017-07-14 03:40:00.0」を返します。
+`from_utc_timestamp(timestamp, timezone)`: 「2017-07-14 02:40:00.0」などのタイムスタンプをUTCで時刻として解釈し、その時刻を指定されたタイムゾーンのタイムスタンプとしてレンダリングします。 例えば、「GMT+1」の場合、「2017-07-14 03:40:00.0」となります。
 
 例：
 
@@ -1163,11 +1166,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2016-08-31 09:00:00
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### 時間
 
-`hour(timestamp)`:文字列/タイムスタンプの時間要素を返します。
+`hour(timestamp)`: 文字列/タイムスタンプの時間コンポーネントを返します。
 
 例：
 
@@ -1176,7 +1179,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  12
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### last_day
 
@@ -1189,11 +1192,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2009-01-31
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### 分
 
-`minute(timestamp)`:文字列/タイムスタンプの分の構成要素を返します。
+`minute(timestamp)`: 文字列/タイムスタンプの分成分を返します。
 
 例：
 
@@ -1202,11 +1205,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  58
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### month
 
-`month(date)` 日付/タイムスタンプの月の構成要素を返します。
+`month(date)` 日付/タイムスタンプの月の要素を返します。
 
 例：
 
@@ -1215,11 +1218,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  7
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### months_between
 
-`months_between(timestamp1, timestamp2[, roundOff])`:がよ `timestamp1` り後の場合、 `timestamp2`結果は正の数になります。 とが `timestamp1` 同 `timestamp2` じ日付の場合、または両方が月の最後の日付の場合、時刻は無視されます。 それ以外の場合、差は1か月に31日分に基づいて計算され、 `roundOff=false`
+`months_between(timestamp1, timestamp2[, roundOff])`: がより後 `timestamp1` の場合 `timestamp2`は、肯定的な結果になります。 と `timestamp1``timestamp2` が月の同じ日にある場合、またはその両方が月の最後の日である場合、時間帯は無視されます。 それ以外の場合は、1か月あたり31日に基づいて差異が計算され、 `roundOff=false`
 
 例：
 
@@ -1230,11 +1233,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  3.9495967741935485
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### next_day
 
-`next_day(start_date, day_of_week)`:指定された日付より後の最初の日付を `start_date` 返します。
+`next_day(start_date, day_of_week)`: 指定された日付より後の最初の日付 `start_date` を返します。
 
 例：
 
@@ -1243,11 +1246,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2015-01-20
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### 四半期
 
-`quarter(date)`:日付の四半期を1 ～ 4の範囲で返します。
+`quarter(date)`: 日付の四半期を1 ～ 4の範囲で返します。
 
 例：
 
@@ -1256,11 +1259,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  3
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### second
 
-`second(timestamp)`:文字列/タイムスタンプの2番目の要素を返します。
+`second(timestamp)`: 文字列/タイムスタンプの2番目の要素を返します。
 
 例：
 
@@ -1269,11 +1272,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  59
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### to_date
 
-`to_date(date_str[, fmt])`:日付まで `date_str` 式を `fmt` 解析します。 無効な入力を含むnullを返します。 デフォルトでは、を省略した場合、日付へのキャストルールに従 `fmt` っています。
+`to_date(date_str[, fmt])`: 式を使用して `date_str` 式を解析し、日付を `fmt` 指定します。 無効な入力でnullを返します。 デフォルトでは、キャストルールを省略すると、キャストルールに従って日付が決ま `fmt` ります。
 
 例：
 
@@ -1284,11 +1287,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2016-12-31
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### to_timestamp
 
-`to_timestamp(timestamp[, fmt])`:タイムスタンプを `timestamp` 持つ式を `fmt` 式で解析します。 無効な入力を含むnullを返します。 デフォルトでは、タイムスタンプを省略した場合、キャストルールに従 `fmt` っています。
+`to_timestamp(timestamp[, fmt])`: タイムスタンプへの `timestamp``fmt` 式を含む式を解析します。 無効な入力でnullを返します。 デフォルトでは、キャストルールが省略された場合、キャストルールをタイムスタンプに従 `fmt` います。
 
 例：
 
@@ -1299,11 +1302,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2016-12-31 00:00:00
 ```
 
-次の期間：2.2.0
+期間： 2.2.0
 
 #### to_unix_timestamp
 
-`to_unix_timestamp(expr[, pattern])`:指定した時刻のUNIXタイムスタンプを返します。
+`to_unix_timestamp(expr[, pattern])`: 渡された時間のUNIXタイムスタンプを返します。
 
 例：
 
@@ -1312,11 +1315,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  1460041200
 ```
 
-次の期間：1.6.0
+期間： 1.6.0
 
 #### to_utc_timestamp
 
-`to_utc_timestamp(timestamp, timezone)`:「2017-07-14 02:40:00.0」のようなタイムスタンプを指定されたタイムゾーンの時刻として解釈し、その時刻をUTCでのタイムスタンプとしてレンダリングします。 例えば、「GMT+1」は「2017-07-14 01:40:00.0」を返します。
+`to_utc_timestamp(timestamp, timezone)`: タイムスタンプ&#39;2017-07-14 02:40:00.0&#39;などのタイムスタンプを特定のタイムゾーンの時刻として解釈し、その時刻をUTCでのタイムスタンプとしてレンダリングします。 例えば、「GMT+1」の場合、「2017-07-14 01:40:00.0」となります。
 
 例：
 
@@ -1325,11 +1328,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2016-08-30 15:00:00
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### 切り詰める
 
-`trunc(date, fmt)`:日付の時間部分が、形式モデルで指定された単位に切り捨てられた日付を返します `fmt`。 `fmt` は、「 [year」、「yyyy」、「yy」、「mon」、「month」、「mm」のいずれかです。]
+`trunc(date, fmt)`: 日付の時間部分を、書式モデルで指定された単位に切り捨てて返 `fmt`します。 `fmt` は、「year」、「yyyy」、「yy」、「mon」、「month」、「mm」のいずれかです。 []
 
 例：
 
@@ -1340,11 +1343,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2015-01-01
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### unix_timestamp
 
-`unix_timestamp([expr[, pattern]])`:現在または指定された時間のUNIXタイムスタンプを返します。
+`unix_timestamp([expr[, pattern]])`: 現在または指定した時刻のUNIXタイムスタンプを返します。
 
 例：
 
@@ -1355,11 +1358,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  1460041200
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### 平日
 
-`weekday(date)`:日付/タイムスタンプの曜日を返します（0 =月曜日、1 =火曜日、...、6 =日曜日）。
+`weekday(date)`: 日付/タイムスタンプの曜日を返します（0 =月曜日、1 =火曜日、...、6 =日曜日）。
 
 例：
 
@@ -1368,11 +1371,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  3
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### week_of_year
 
-`weekofyear(date)`:指定した日付の年の週を返します。 週は月曜日の開始と見なされ、1週目は3日を超える最初の週です。
+`weekofyear(date)`: 指定した日付の年の週を返します。 週は月曜日の開始と見なされ、1週目の曜日は3日を超える最初の週と見なされます。
 
 例：
 
@@ -1381,16 +1384,16 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  8
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### when
 
-`CASE WHEN expr1 THEN expr2 [WHEN expr3 THEN expr4]* [ELSE expr5] END`:When `expr1` = true, returns `expr2`;else when `expr3` = trueの場合、返 `expr4`す；elseは、を返しま `expr5`す。
+`CASE WHEN expr1 THEN expr2 [WHEN expr3 THEN expr4]* [ELSE expr5] END`: When `expr1` = true, returns `expr2`; else when `expr3` = trueの場合は、 `expr4`; elseは、を返 `expr5`します。
 
 引数：
 
-- `expr1`, `expr3`:ブランチ条件の式は、すべてBoolean型にする必要があります。
-- `expr2`, `expr4`, `expr5`:ブランチ値の式とelse値の式は、すべて同じ型であるか、共通型に強制可能である必要があります。
+- `expr1`, `expr3`: ブランチ条件の式は、すべてブール型にする必要があります。
+- `expr2`, `expr4`, `expr5`: ブランチ値の式とelse値の式は、すべて同じ型であるか、共通の型に強制可能である必要があります。
 
 例：
 
@@ -1405,7 +1408,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### year
 
-`year(date)`:日付/タイムスタンプの年の構成要素を返します。
+`year(date)`: 日付/タイムスタンプの年の要素を返します。
 
 例：
 
@@ -1414,19 +1417,19 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  2016
 ```
 
-次の期間：1.5.0
+期間： 1.5.0
 
 ### 集計関数
 
 #### approx_count_distinct
 
-`approx_count_distinct(expr[, relativeSD])`:HyperLogLog++による推定基数を返します。 `relativeSD` 許可される最大推定エラーを定義します。
+`approx_count_distinct(expr[, relativeSD])`: HyperLogLog++による推定基数を返します。 `relativeSD` 許可される最大推定エラーを定義します。
 
 ### 配列
 
-#### 配列
+#### array
 
-`array(expr, ...)`:渡された要素を持つ配列を返します。
+`array(expr, ...)`: 渡された要素を持つ配列を返します。
 
 例：
 
@@ -1437,7 +1440,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### array_contains
 
-`array_contains(array, value)`:配列に値が含まれる場合はtrueを返します。
+`array_contains(array, value)`: 配列に値が含まれる場合はtrueを返します。
 
 例：
 
@@ -1448,7 +1451,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### array_distinct
 
-`array_distinct(array)`:配列から重複値を削除します。
+`array_distinct(array)`: 配列から重複値を削除します。
 
 例：
 
@@ -1457,11 +1460,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [1,2,3,null]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_except
 
-`array_except(array1, array2)`:の要素の配列を返しますが、の要素は含ま `array1` れません( `array2`重複なし)。
+`array_except(array1, array2)`: 内の要素の配列を返します。内の要素は含ま `array1` れません。重複 `array2`は含まれません。
 
 例：
 
@@ -1470,11 +1473,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [2]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_intersect
 
-`array_intersect(array1, array2)`:との交点にある要素の配列を返します。 `array1` 要素 `array2`は含まれません。
+`array_intersect(array1, array2)`: との交点にある要素の配列を返します。重複 `array1` は含ま `array2`れません。
 
 例：
 
@@ -1483,11 +1486,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [1,3]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_join
 
-`array_join(array, delimiter[, nullReplacement])`:指定した配列の要素を区切り文字とオプションの文字列を使用して連結し、NULLを置き換えます。 に値が設定されていない場合、 `nullReplacement`null値はすべてフィルタされます。
+`array_join(array, delimiter[, nullReplacement])`: 指定した配列の要素を、区切り文字とオプションの文字列を使用して連結し、NULLを置き換えます。 に値が設定されていない場合 `nullReplacement`、null値がフィルタされます。
 
 例：
 
@@ -1500,11 +1503,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  hello , world
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_max
 
-`array_max(array)`:配列の最大値を返します。 Null要素はスキップされます。
+`array_max(array)`: 配列の最大値を返します。 Null要素はスキップされます。
 
 例：
 
@@ -1513,11 +1516,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  20
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_min
 
-`array_min(array)`:配列の最小値を返します。 Null要素はスキップされます。
+`array_min(array)`: 配列の最小値を返します。 Null要素はスキップされます。
 
 例：
 
@@ -1526,11 +1529,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  1
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_position
 
-`array_position(array, element)`:配列の最初の要素の（1から始まる）インデックスを長整数型で返します。
+`array_position(array, element)`: 配列の最初の要素の（1を基準とする）インデックスを長い値で返します。
 
 例：
 
@@ -1539,11 +1542,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  3
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_remove
 
-`array_remove(array, element)`:要素と等しい要素をすべて配列から削除します。
+`array_remove(array, element)`: 要素に等しい要素をすべて配列から削除します。
 
 例：
 
@@ -1552,11 +1555,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [1,2,null]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_repeat
 
-`array_repeat(element, count)`:要素のカウント時間を含む配列を返します。
+`array_repeat(element, count)`: 要素のカウント回数を含む配列を返します。
 
 例：
 
@@ -1565,11 +1568,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  ["123","123"]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_sort
 
-`array_sort(array)`:入力配列を昇順に並べ替えます。 入力配列の要素は、順序が有効である必要があります。 null要素は、返された配列の末尾に配置されます。
+`array_sort(array)`: 入力配列を昇順で並べ替えます。 入力配列の要素は順序が有効である必要があります。 null要素は、返される配列の末尾に配置されます。
 
 例：
 
@@ -1578,11 +1581,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  ["a","b","c","d",null]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_和集合
 
-`array_union(array1, array2)`:との和集合内の要素の配列を返します( `array1` 重複な `array2`し)。
+`array_union(array1, array2)`: 重複を含まない、およびの和集合内の要素の配列 `array1` を返 `array2`します。
 
 例：
 
@@ -1591,11 +1594,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [1,2,3,5]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### array_zip
 
-`arrays_zip(a1, a2, ...)`:N番目の構造体に入力配列のN番目の値がすべて含まれている、構造体の結合配列を返します。
+`arrays_zip(a1, a2, ...)`: N番目の構造体に入力配列のN番目の値がすべて含まれている構造体の結合配列を返します。
 
 例：
 
@@ -1606,13 +1609,13 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [{"0":1,"1":2,"2":3},{"0":2,"1":3,"2":4}]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### element_at
 
-`element_at(array, index)`:渡された（1から始まる）インデックスの配列の要素を返します。 の場合 `index < 0`は、最後から最初の要素にアクセスします。 インデックスが配列の長さを超える場合はNULLを返します。
+`element_at(array, index)`: 渡された（1から始まる）インデックスの配列の要素を返します。 の場合 `index < 0`は、最後から最初の要素にアクセスします。 インデックスが配列の長さを超える場合はNULLを返します。
 
-`element_at(map, key)`:渡されたキーの値を返します。キーがマップに含まれていない場合はNULLを返します。
+`element_at(map, key)`: 指定されたキーの値を返します。キーがマップに含まれていない場合はNULLを返します。
 
 例：
 
@@ -1623,11 +1626,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  b
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### 爆発する
 
-`explode(expr)`:配列の要素を複数の行 `expr` に分割するか、マップの要素を複数の行 `expr` と列に分割します。
+`explode(expr)`: 配列の要素を複数の行 `expr` に、またはmapの要素を複数の行と列 `expr` に分けます。
 
 例：
 
@@ -1639,7 +1642,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### explode_outer
 
-`explode_outer(expr)`:配列の要素を複数の行 `expr` に分割するか、マップの要素を複数の行 `expr` と列に分割します。
+`explode_outer(expr)`: 配列の要素を複数の行 `expr` に、またはmapの要素を複数の行と列 `expr` に分けます。
 
 例：
 
@@ -1651,7 +1654,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### find_in_set
 
-`find_in_set(str, str_array)`:渡された文字列()のインデックス（1から始まる）を`str`、カンマで区切ったリスト(`str_array`)で返します。 文字列が見つからなかった場合、または指定した文字列(`str`)にコンマが含まれている場合は0を返します。
+`find_in_set(str, str_array)`: 渡された文字列()のインデックス（1から始まる）をコンマ区切りリスト(`str``str_array`)で返します。 文字列が見つからなかった場合、または渡された文字列(`str`)にコンマが含まれている場合は、0を返します。
 
 例：
 
@@ -1662,7 +1665,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 平らにする
 
-`flatten(arrayOfArrays)`:配列の配列を単一の配列に変換します。
+`flatten(arrayOfArrays)`: 配列を単一の配列に変換します。
 
 例：
 
@@ -1671,11 +1674,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [1,2,3,4]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### inline
 
-`inline(expr)`:構造体の配列をテーブルに分解します。
+`inline(expr)`: 構造体の配列をテーブルに分解します。
 
 例：
 
@@ -1687,7 +1690,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### inline_outer
 
-`inline_outer(expr)`:構造体の配列をテーブルに分解します。
+`inline_outer(expr)`: 構造体の配列をテーブルに分解します。
 
 例：
 
@@ -1699,7 +1702,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 足踏み
 
-`posexplode(expr)`:配列の要素を、位置を持 `expr` つ複数の行に分割するか、または位置を持つ複数の行と `expr` 列にマップの要素を分割します。
+`posexplode(expr)`: 配列の要素を、位置を持つ複数の行 `expr` に分けます。また、マップの要素を、位置を持つ複数の行と列 `expr` に分けます。
 
 例：
 
@@ -1711,7 +1714,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### posexplode_outer
 
-`posexplode_outer(expr)`:配列の要素を、位置を持 `expr` つ複数の行に分割するか、または位置を持つ複数の行と `expr` 列にマップの要素を分割します。
+`posexplode_outer(expr)`: 配列の要素を、位置を持つ複数の行 `expr` に分けます。また、マップの要素を、位置を持つ複数の行と列 `expr` に分けます。
 
 例：
 
@@ -1723,7 +1726,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### reverse
 
-`reverse(array)`:逆順の文字列、または要素の順序が逆の配列を返します。
+`reverse(array)`: 逆の文字列、または要素の順序が逆の配列を返します。
 
 例：
 
@@ -1734,12 +1737,12 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [3,4,1,2]
 ```
 
-次の期間：1.5.0
->[!NOTE] アレイの論理は2.4.0以降で使用可能です。
+期間： 1.5.0
+>[!NOTE] アレイのrseロジックは2.4.0以降で使用可能です。
 
-#### シャッフル
+#### シャッフ
 
-`shuffle(array)`:渡された配列のランダムな順列を返します。
+`shuffle(array)`: 渡された配列のランダムな置換を返します。
 
 例：
 
@@ -1750,12 +1753,12 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [20,null,3,1]
 ```
 
-次の期間：2.4.0
->[!NOTE] 関数が決定的でない場合。
+期間： 2.4.0
+>[!NOTE] 関数は非決定論的です。
 
-#### スライス
+#### slice
 
-`slice(x, start, length)`:指定した長さのインデックス開始(開始が負の場合は最後から開始)から始まるサブセット配列x。
+`slice(x, start, length)`: 指定した長さのインデックス開始(開始が負の場合は最後から)から始まるサブセット配列x。
 
 例：
 
@@ -1766,11 +1769,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [3,4]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### sort_array
 
-`sort_array(array[, ascendingOrder])`:入力配列を、配列要素の自然な順序に従って昇順または降順に並べ替えます。 null要素は、返された配列の昇順または降順で返された配列の最後に配置されます。
+`sort_array(array[, ascendingOrder])`: 入力配列を、配列要素の自然な順序に従って昇順または降順に並べ替えます。 null要素は、返される配列の先頭に昇順または返される配列の末尾に降順で配置されます。
 
 例：
 
@@ -1781,7 +1784,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### zip_with
 
-`zip_with(left, right, func)`:関数を使用して、2つの要素ごとの配列を1つの配列に結合します。 1つの配列が短い場合は、関数を適用する前に、長い配列の長さに合わせて末尾にnullが追加されます。
+`zip_with(left, right, func)`: 関数を使用して、2つの指定された配列（要素単位）を1つの配列に結合します。 1つの配列が短い場合は、関数を適用する前に、長い配列の長さに合わせて、末尾にNULLが追加されます。
 
 例：
 
@@ -1794,25 +1797,25 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  ["ad","be","cf"]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 ### データ型キャスト関数
 
 #### bigint
 
-`bigint(expr)`:値をデータ型 `expr` ターゲットにキャストしま `bigint`す。
+`bigint(expr)`: 値をターゲットデータ型 `expr` にキャスト `bigint`します。
 
-#### バイナリ
+#### binary
 
-`binary(expr)`:値をデータ型 `expr` ターゲットにキャストしま `binary`す。
+`binary(expr)`: 値をターゲットデータ型 `expr` にキャスト `binary`します。
 
 #### ブール型
 
-`boolean(expr)`:値をデータ型 `expr` ターゲットにキャストしま `boolean`す。
+`boolean(expr)`: 値をターゲットデータ型 `expr` にキャスト `boolean`します。
 
 #### 鋳造
 
-`cast(expr AS type)`:値をデータ型 `expr` ターゲットにキャストしま `type`す。
+`cast(expr AS type)`: 値をターゲットデータ型 `expr` にキャスト `type`します。
 
 例：
 
@@ -1823,27 +1826,27 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### date
 
-`date(expr)`:値をデータ型 `expr` ターゲットにキャストしま `date`す。
+`date(expr)`: 値をターゲットデータ型 `expr` にキャスト `date`します。
 
 #### decimal
 
-`decimal(expr)`:値をデータ型 `expr` ターゲットにキャストしま `decimal`す。
+`decimal(expr)`: 値をターゲットデータ型 `expr` にキャスト `decimal`します。
 
 #### 重複
 
-`double(expr)`:値をデータ型 `expr` ターゲットにキャストしま `double`す。
+`double(expr)`: 値をターゲットデータ型 `expr` にキャスト `double`します。
 
 #### float
 
-`float(expr)`:値をデータ型 `expr` ターゲットにキャストしま `float`す。
+`float(expr)`: 値をターゲットデータ型 `expr` にキャスト `float`します。
 
 #### int
 
-`int(expr)`:値をデータ型 `expr` ターゲットにキャストしま `int`す。
+`int(expr)`: 値をターゲットデータ型 `expr` にキャスト `int`します。
 
 #### map
 
-`map(key0, value0, key1, value1, ...)`:指定したキーと値のペアを持つマップを作成します。
+`map(key0, value0, key1, value1, ...)`: 指定したキー/値のペアを持つマップを作成します。
 
 例：
 
@@ -1854,11 +1857,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### smallint
 
-`smallint(expr)`:値をデータ型 `expr` ターゲットにキャストしま `smallint`す。
+`smallint(expr)`: 値をターゲットデータ型 `expr` にキャスト `smallint`します。
 
 #### str_to_map
 
-`str_to_map(text[, pairDelim[, keyValueDelim]])`:区切り文字を使用してテキストをキー/値のペアに分割した後に、マップを作成します。 デフォルトの区切り文字は、「,」（の場合） `pairDelim` および「:」（の場合）で `keyValueDelim`す。
+`str_to_map(text[, pairDelim[, keyValueDelim]])`: 区切り文字を使用してテキストをキー/値のペアに分割した後に、マップを作成します。 デフォルトの区切り文字は、の「,」 `pairDelim` およびの「:」 `keyValueDelim`です。
 
 例：
 
@@ -1871,21 +1874,21 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 文字列
 
-`string(expr)`:値をデータ型 `expr` ターゲットにキャストしま `string`す。
+`string(expr)`: 値をターゲットデータ型 `expr` にキャスト `string`します。
 
-#### struct
+#### 構造体
 
-`struct(col1, col2, col3, ...)`:渡されたフィールド値を持つ構造体を作成します。
+`struct(col1, col2, col3, ...)`: 指定されたフィールド値を持つ構造体を作成します。
 
 #### tinyint
 
-`tinyint(expr)`:値をデータ型 `expr` ターゲットにキャストしま `tinyint`す。
+`tinyint(expr)`: 値をターゲットデータ型 `expr` にキャスト `tinyint`します。
 
 ### 変換関数と書式設定関数
 
 #### ascii
 
-`ascii(str)`:の最初の文字の数値を返します `str`。
+`ascii(str)`: の最初の文字の数値を返し `str`ます。
 
 例：
 
@@ -1898,7 +1901,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### base64
 
-`base64(bin)`:引数をバイナリからベース64文 `bin` 字列に変換します。
+`base64(bin)`: 引数をバイナリからベース64文字列 `bin` に変換します。
 
 例：
 
@@ -1909,7 +1912,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### bin
 
-`bin(expr)`:バイナリ形式で表されたlong値の文字列 `expr` 表現を返します。
+`bin(expr)`: バイナリで表されるlong値の文字列表現 `expr` を返します。
 
 例：
 
@@ -1924,7 +1927,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### bit_length
 
-`bit_length(expr)`:文字列データのビット長またはバイナリデータのビット数を返します。
+`bit_length(expr)`: 文字列データのビット長またはバイナリデータのビット数を返します。
 
 例：
 
@@ -1935,7 +1938,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### char
 
-`char(expr)`:と同等のバイナリを持つASCII文字を返しま `expr`す。 nが256より大きい場合、結果はと同じになります `chr(n % 256)`。
+`char(expr)`: に相当するバイナリを持つASCII文字を返し `expr`ます。 nが256より大きい場合、結果はと等しくなります `chr(n % 256)`。
 
 例：
 
@@ -1946,7 +1949,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### char_length
 
-`char_length(expr)`:文字列データの文字長またはバイナリデータのバイト数を返します。 文字列データの長さの末尾に空白文字が含まれます。 バイナリデータの長さには、バイナリゼロが含まれます。
+`char_length(expr)`: 文字列データの文字長またはバイナリデータのバイト数を返します。 文字列データの長さの末尾には空白文字が含まれます。 バイナリデータの長さには、バイナリのゼロが含まれます。
 
 例：
 
@@ -1961,7 +1964,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### character_length
 
-`character_length(expr)`:文字列データの文字長またはバイナリデータのバイト数を返します。 文字列データの長さの末尾に空白文字が含まれます。 バイナリデータの長さには、バイナリゼロが含まれます。
+`character_length(expr)`: 文字列データの文字長またはバイナリデータのバイト数を返します。 文字列データの長さの末尾には空白文字が含まれます。 バイナリデータの長さには、バイナリのゼロが含まれます。
 
 例：
 
@@ -1976,7 +1979,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### chr
 
-`chr(expr)`:exprに相当するバイナリを持つASCII文字を返します。 nが256より大きい場合、結果は `chr(n % 256)`
+`chr(expr)`: exprと同等のバイナリを持つASCII文字を返します。 nが256より大きい場合、結果は `chr(n % 256)`
 
 例：
 
@@ -1987,10 +1990,10 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 度
 
-`degrees(expr)`:ラジアンを度に変換します。
+`degrees(expr)`: ラジアンを度に変換します。
 
 引数：
-- `expr`:角度（ラジアン）
+- `expr`: 角度（ラジアン）
 
 例：
 
@@ -2001,7 +2004,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### format_number
 
-`format_number(expr1, expr2)`:「#,###,#### `expr1` 」のような数値の形式を設定します。##&#39;を小数点以下の桁数に丸 `expr2` めます。 が0の `expr2` 場合、結果には小数点や小数部分は含まれません。 `expr2` は、ユーザー指定の形式も受け入れます。 これは、MySQLと同様に機能することを目的としていま `FORMAT`す。
+`format_number(expr1, expr2)`: 数値の書式を「#,###,###」 `expr1` のように設定します。##&#39;を小数点以下に丸め `expr2` ます。 が0 `expr2` の場合、結果には小数点や小数部は含まれません。 `expr2` は、ユーザー指定の形式も受け入れます。 これは、MySQLと同様に機能することを目的としてい `FORMAT`ます。
 
 例：
 
@@ -2014,7 +2017,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### from_json
 
-`from_json(jsonStr, schema[, options])`:渡されたと共にstruct値を返し `jsonStr` ます `schema`。
+`from_json(jsonStr, schema[, options])`: 渡されたANDを持つstruct値を返 `jsonStr` し `schema`ます。
 
 例：
 
@@ -2025,11 +2028,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  {"time":"2015-08-26 00:00:00.0"}
 ```
 
-次の期間：2.2.0
+期間： 2.2.0
 
 #### ハッシュ
 
-`hash(expr1, expr2, ...)`:引数のハッシュ値を返します。
+`hash(expr1, expr2, ...)`: 引数のハッシュ値を返します。
 
 例：
 
@@ -2038,9 +2041,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  -1321691492
 ```
 
-#### 16進
+#### hex
 
-`hex(expr)`:16進数に `expr` 変換します。
+`hex(expr)`: 16進数 `expr` に変換します。
 
 例：
 
@@ -2053,7 +2056,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### initcap
 
-`initcap(str)`:各単語 `str` の最初の文字を大文字で返します。 その他の文字はすべて小文字で表されます。 単語は空白で区切られます。
+`initcap(str)`: 各単語 `str` の最初の文字を大文字で返します。 その他の文字はすべて小文字で表されます。 単語は空白で区切られます。
 
 例：
 
@@ -2064,7 +2067,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### lcase
 
-`lcase(str)`:すべての `str` 文字を小文字に変更して返します。
+`lcase(str)`: すべての文字 `str` を小文字に変更して返します。
 
 例：
 
@@ -2075,7 +2078,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### lower
 
-`lower(str)`:すべての `str` 文字を小文字に変更して返します。
+`lower(str)`: すべての文字 `str` を小文字に変更して返します。
 
 例：
 
@@ -2086,7 +2089,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### lpad
 
-`lpad(str, len, pad)`:の長 `str`さの左パディ `pad` ングを返します `len`。 がより `str` 長い場合、 `len`戻り値は文字に短縮され `len` ます。
+`lpad(str, len, pad)`: の長さ `str`を持つ左パディング `pad` を返し `len`ます。 がより長 `str` い場合 `len`、戻り値は文字に短縮され `len` ます。
 
 例：
 
@@ -2099,7 +2102,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### map
 
-`map(key0, value0, key1, value1, ...)`:指定したキーと値のペアを持つマップを作成します。
+`map(key0, value0, key1, value1, ...)`: 指定したキー/値のペアを持つマップを作成します。
 
 例：
 
@@ -2110,7 +2113,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### map_from_arrays
 
-`map_from_arrays(keys, values)`:指定されたキー/値の配列のペアを持つマップを作成します。 キー内の要素はNULLにできません。
+`map_from_arrays(keys, values)`: 指定したキー/値の配列のペアを持つマップを作成します。 キー内の要素はNULLにできません。
 
 例：
 
@@ -2119,11 +2122,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  {1.0:"2",3.0:"4"}
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### map_from_entries
 
-`map_from_entries(arrayOfEntries)`:渡されたエントリの配列から作成されたマップを返します。
+`map_from_entries(arrayOfEntries)`: 渡されたエントリの配列から作成されたマップを返します。
 
 例：
 
@@ -2132,11 +2135,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  {1:"a",2:"b"}
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### md5
 
-`md5(expr)`:MD5 128ビットのチェックサムを16進文字列で返します `expr`。
+`md5(expr)`: MD5 128ビットのチェックサムを16進文字列のとして返し `expr`ます。
 
 例：
 
@@ -2147,7 +2150,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### rpad
 
-`rpad(str, len, pad)`:の長 `str`さの右パッドを `pad` 返します `len`。 がより `str` 長い場合、 `len`戻り値は文字に短縮され `len` ます。
+`rpad(str, len, pad)`: の長さ `str`を持つ右パッド `pad` を返し `len`ます。 がより長 `str` い場合 `len`、戻り値は文字に短縮され `len` ます。
 
 例：
 
@@ -2160,13 +2163,13 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### rtrim
 
-`rtrim(str)`:末尾の空白文字をから削除しま `str`す。
+`rtrim(str)`: の末尾の空白文字を削除し `str`ます。
 
-`rtrim(trimStr, str)`:末尾の文字列を削除します。この文字列には、 `str`
+`rtrim(trimStr, str)`: 末尾の文字列を削除します。この文字列には、 `str`
 
 引数：
-- `str`:文字列式
-- `trimStr`:トリミングするトリミング文字列文字。 デフォルト値は1つのスペースです
+- `str`: 文字列式
+- `trimStr`: トリミングするトリミング文字列文字。 デフォルト値は1つのスペースです
 
 例：
 
@@ -2179,7 +2182,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### sha
 
-`sha(expr)`:の16進 `sha1` 数文字列としてハッシュ値を返します `expr`。
+`sha(expr)`: ハッシュ値を、の16進文字列として返し `sha1``expr`ます。
 
 例：
 
@@ -2190,7 +2193,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### sha1
 
-`sha1(expr)`:の16進 `sha1` 数文字列としてハッシュ値を返します `expr`。
+`sha1(expr)`: ハッシュ値を、の16進文字列として返し `sha1``expr`ます。
 
 例：
 
@@ -2201,7 +2204,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### sha2
 
-`sha2(expr, bitLength)`:SHA-2ファミリのチェックサムを16進文字列で返します `expr`。 SHA-224、SHA-256、SHA-384およびSHA-512がサポートされています。 ビット長が0の場合は256と等しくなります。
+`sha2(expr, bitLength)`: SHA-2ファミリのチェックサムを16進文字列のとして返し `expr`ます。 SHA-224、SHA-256、SHA-384およびSHA-512がサポートされます。 ビット長0は256に相当します。
 
 例：
 
@@ -2212,7 +2215,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### soundex
 
-`soundex(str)`:文字列のSoundexコードを返します。
+`soundex(str)`: 文字列のSoundexコードを返します。
 
 例：
 
@@ -2223,7 +2226,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### 積み重ね
 
-`stack(n, expr1, ..., exprk)`:... `expr1`を行に分割 `exprk` しま `n` す。
+`stack(n, expr1, ..., exprk)`: ... `expr1`、...を行 `exprk` に区切り `n` ます。
 
 例：
 
@@ -2235,7 +2238,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### substr
 
-`substr(str, pos[, len])`:開始の長さと長さのサ `str` ブ文字列、ま `pos` たは開始が長で `len`あるバイト配列のスライスを返 `pos` します `len`。
+`substr(str, pos[, len])`: その開始のサブ文字列 `str` が長さと長さ `pos` のサブ文字列、または開始が長さと長さのバイト配列 `len`のスライスを返 `pos``len`します。
 
 例：
 
@@ -2250,7 +2253,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### substring
 
-`substring(str, pos[, len])`:開始の長さと長さのサ `str` ブ文字列、ま `pos` たは開始が長で `len`あるバイト配列のスライスを返 `pos` します `len`。
+`substring(str, pos[, len])`: その開始のサブ文字列 `str` が長さと長さ `pos` のサブ文字列、または開始が長さと長さのバイト配列 `len`のスライスを返 `pos``len`します。
 
 例：
 
@@ -2265,7 +2268,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### to_json
 
-`to_json(expr[, options])`:渡された構造体値を持つJSON文字列を返します。
+`to_json(expr[, options])`: 渡されたstruct値を持つJSON文字列を返します。
 
 例：
 
@@ -2286,11 +2289,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [{"a":1}]
 ```
 
-次の期間：2.2.0
+期間： 2.2.0
 
 #### translate
 
-`translate(input, from, to)`:文字列内 `input` の文字を文字列内の対応す `from` る文字で置き換えて、文字列を変換し `to` ます。
+`translate(input, from, to)`: 文字列内にある文字を、文字列内の対応する文字に置き換えて、 `input` 文字列 `from` を変換し `to` ます。
 
 例：
 
@@ -2301,20 +2304,20 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### trim
 
-`trim(str)`:先頭と末尾の空白文字を削除しま `str`す。
+`trim(str)`: 先頭と末尾の空白文字を削除し `str`ます。
 
-`trim(BOTH trimStr FROM str)`:の先頭と末尾の文字を `trimStr` 削除しま `str`す。
+`trim(BOTH trimStr FROM str)`: の先頭と末尾の `trimStr` 文字を削除し `str`ます。
 
-`trim(LEADING trimStr FROM str)`:の先頭文字を削 `trimStr` 除します `str`。
+`trim(LEADING trimStr FROM str)`: の先頭の `trimStr` 文字を削除し `str`ます。
 
-`trim(TRAILING trimStr FROM str)`:から末尾の文字を `trimStr` 削除しま `str`す。
+`trim(TRAILING trimStr FROM str)`: の末尾の `trimStr` 文字を削除し `str`ます。
 
 引数：
-- `str`:文字列式
-- `trimStr`:トリミングするトリミング文字列文字。デフォルト値は1スペースです
-- `BOTH`, `FROM`:文字列の両端から文字列を切り抜くことを指定するキーワードです。
-- `LEADING`, `FROM`:文字列の左端から文字列の文字を切り抜くことを指定するキーワードです
-- `TRAILING`, `FROM`:文字列の右端から文字列の文字を切り抜くことを指定するキーワードです。
+- `str`: 文字列式
+- `trimStr`: トリミングするトリミング文字列文字。デフォルト値は1スペースです
+- `BOTH`, `FROM`: 文字列の両端から文字列を切り抜くことを指定するキーワードです
+- `LEADING`, `FROM`: 文字列の左端から文字列を切り抜くことを指定するキーワードです
+- `TRAILING`, `FROM`: 文字列の右端から文字列を切り抜くことを指定するキーワードです
 
 例：
 
@@ -2333,7 +2336,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### ucase
 
-`ucase(str)`:すべての `str` 文字を大文字に変更して返します。
+`ucase(str)`: すべての文字 `str` を大文字に変更して返します。
 
 例：
 
@@ -2344,7 +2347,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### unbase64
 
-`unbase64(str)`:引数をベース64文字列からバイナリに `str` 変換します。
+`unbase64(str)`: 引数をベース64文字列からバイナリ `str` に変換します。
 
 例：
 
@@ -2353,9 +2356,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  Spark SQL
 ```
 
-#### 16進法の
+#### 非16進
 
-`unhex(expr)`:16進数を2進数 `expr` に変換します。
+`unhex(expr)`: 16進数をバイナリ `expr` に変換します。
 
 例：
 
@@ -2366,7 +2369,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### upper
 
-`upper(str)`:すべての `str` 文字を大文字に変更して返します。
+`upper(str)`: すべての文字 `str` を大文字に変更して返します。
 
 例：
 
@@ -2377,7 +2380,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### uuid
 
-`uuid()`:UUID(Universally Unique Identifier)文字列を返します。 値は、標準のUUID 36文字の文字列として返されます。
+`uuid()`: UUID(Universally Unique Identifier)文字列を返します。 この値は、標準のUUID 36文字の文字列として返されます。
 
 例：
 
@@ -2386,13 +2389,13 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
 
->[!NOTE] 関数が決定的ではありません。
+>[!NOTE] 関数は非決定的です。
 
 ### データ評価
 
 #### 合体
 
-`coalesce(expr1, expr2, ...)`:最初のnull以外の引数が存在する場合は、それを返します。 それ以外の場合はnull。
+`coalesce(expr1, expr2, ...)`: nullでない最初の引数が存在する場合は、その引数を返します。 それ以外の場合はnull。
 
 例：
 
@@ -2403,15 +2406,15 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### collect_リスト
 
-`collect_list(expr)`:一意でない要素のリストを収集し、返します。
+`collect_list(expr)`: 一意でない要素のリストを収集して返します。
 
 #### collect_set
 
-`collect_set(expr)`:一意の要素のセットを収集して返します。
+`collect_set(expr)`: 一意の要素のセットを収集して返します。
 
 #### concat
 
-`concat(col1, col2, ..., colN)`:col1、col2、...、colNを連結して返します。
+`concat(col1, col2, ..., colN)`: col1、col2、...、colNを連結して返します。
 
 例：
 
@@ -2422,11 +2425,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [1,2,3,4,5,6]
 ```
 
->[!NOTE] 配 `concat` 列のロジックは2.4.0以降で使用可能です。
+>[!NOTE] `concat` アレイのロジックは、2.4.0以降で使用できます。
 
 #### concat_ws
 
-`concat_ws(sep, [str | array(str)]+)`:で区切られた文字列を連結して返しま `sep`す。
+`concat_ws(sep, [str | array(str)]+)`: で区切られた文字列を連結して返し `sep`ます。
 
 例：
 
@@ -2437,15 +2440,15 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### count
 
-`count(*)`:取得した行の総数（nullを含む行も含む）を返します。
+`count(*)`: 取得した行の総数（nullを含む行も含む）を返します。
 
-`count(expr[, expr...])`:指定された行の数を返します。この行の式はすべてnull以外です。
+`count(expr[, expr...])`: 指定された式がすべてnull以外の行数を返します。
 
-`count(DISTINCT expr[, expr...])`:指定された行のうち、指定された式が一意で、null以外の行数を返します。
+`count(DISTINCT expr[, expr...])`: 指定された式が一意でnull以外の行の数を返します。
 
 #### crc32
 
-`crc32(expr)`:の巡回冗長チェック値をbigintとして `expr` 返します。
+`crc32(expr)`: の循環冗長チェック値をbigintとして返 `expr` します。
 
 例：
 
@@ -2454,9 +2457,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  1557323817
 ```
 
-#### デコード
+#### decode
 
-`decode(bin, charset)`:2番目の引数文字セットを使用して、最初の引数をデコードします。
+`decode(bin, charset)`: 2番目の引数の文字セットを使用して、最初の引数をデコードします。
 
 例：
 
@@ -2467,7 +2470,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### elt
 
-`elt(n, input1, input2, ...)`:次の入 `n`力を返します。例えば、が2の場合 `input2` に返 `n` されます。
+`elt(n, input1, input2, ...)`: 2番目 `n`の入力を返します。例えば、が2の場合 `input2` に返 `n` します。
 
 例：
 
@@ -2478,7 +2481,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### エンコード
 
-`encode(str, charset)`:2番目の引数文字セットを使用して、最初の引数をエンコードします。
+`encode(str, charset)`: 2番目の引数の文字セットを使用して、最初の引数をエンコードします。
 
 例：
 
@@ -2489,15 +2492,15 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### first
 
-`first(expr[, isIgnoreNull])`:行のグループの最初 `expr` の値を返します。 がtrueの `isIgnoreNull` 場合、null以外の値のみを返します。
+`first(expr[, isIgnoreNull])`: 行グループの最初 `expr` の値を返します。 trueの場合 `isIgnoreNull` は、null以外の値のみを返します。
 
 #### first_value
 
-`first_value(expr[, isIgnoreNull])`:行のグループの最初 `expr` の値を返します。 がtrueの `isIgnoreNull` 場合、null以外の値のみを返します。
+`first_value(expr[, isIgnoreNull])`: 行グループの最初 `expr` の値を返します。 trueの場合 `isIgnoreNull` は、null以外の値のみを返します。
 
 #### get_json_object
 
-`get_json_object(json_txt, path)`:からjsonオブジェクトを抽出しま `path`す。
+`get_json_object(json_txt, path)`: jsonオブジェクトを抽出し `path`ます。
 
 例：
 
@@ -2516,7 +2519,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### instr
 
-`instr(str, substr)`:inの1番目の値の（1から始まる）インデックスを返し `substr` ます `str`。
+`instr(str, substr)`: inの1番目の値の（1を基準とする）インデックス `substr` を返し `str`ます。
 
 例：
 
@@ -2527,7 +2530,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### json_tuple
 
-`json_tuple(jsonStr, p1, p2, ..., pn)`:関数と同じタプルを返しますが、 `get_json_object`複数の名前を取ります。 すべての入力パラメーターと出力列のタイプは文字列です。
+`json_tuple(jsonStr, p1, p2, ..., pn)`: 関数と同じタプルを返します `get_json_object`が、複数の名前を取ります。 入力パラメーターと出力列の型はすべて文字列です。
 
 例：
 
@@ -2536,35 +2539,36 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  1  2
 ```
 
-#### 遅れ
+#### 遅れる
 
-`lag(input[, offset[, default]])`:ウィンドウ内の現 `input` 在の行 `offset`の前の行の値を返します。 のデフォルト値 `offset` は1で、のデフォルト値は `default` nullです。 1行目の値がnull `input` の場 `offset`合、nullが返されます。 このようなオフセット行がない場合（例えば、オフセットが1の場合、ウィンドウの最初の行には前の行が含まれません）、が返 `default` されます。
+`lag(input[, offset[, default]])`: ウィンドウ内 `input` の現在の行の前 `offset`の行の値を返します。 デフォルト値の `offset` は1で、デフォルト値の `default` はnullです。 行 `input` の `offset`thの値がnullの場合は、nullが返されます。 そのようなオフセット行がない場合（例えば、オフセットが1の場合、ウィンドウの最初の行に前の行がない場合）、が返 `default` されます。
 
 #### last
 
-`last(expr[, isIgnoreNull])`:行のグループの最後 `expr` の値を返します。 がtrueの `isIgnoreNull` 場合、null以外の値のみを返します。
+`last(expr[, isIgnoreNull])`: 行のグループの最後 `expr` の値を返します。 trueの場合 `isIgnoreNull` は、null以外の値のみを返します。
 
 #### last_value
 
-`last_value(expr[, isIgnoreNull])`:行のグループの最後 `expr` の値を返します。 がtrueの `isIgnoreNull` 場合、null以外の値のみを返します。
+`last_value(expr[, isIgnoreNull])`: 行のグループの最後 `expr` の値を返します。 trueの場合 `isIgnoreNull` は、null以外の値のみを返します。
 
 #### 鉛
 
-`lead(input[, offset[, default]])`:ウィンドウ内の現 `input` 在の `offset`行の後の行の値を返します。 のデフォルト値 `offset` は1で、のデフォルト値は `default` nullです。 1行目の値がnull `input` の場 `offset`合、nullが返されます。 オフセット行がない場合（例えば、オフセットが1の場合、ウィンドウの最後の行に後続の行がない場合）、が返さ `default` れます。
+`lead(input[, offset[, default]])`: ウィンドウ内 `input` の現在の行の後 `offset`の行の値を返します。 デフォルト値の `offset` は1で、デフォルト値の `default` はnullです。 行 `input` の `offset`thの値がnullの場合は、nullが返されます。 このようなオフセット行がない場合（例えば、オフセットが1の場合、ウィンドウの最後の行に後続の行がない場合）、が返 `default` されます。
 
 
 #### left
 
-`left(str, len)`:文字列の左端( `len` 文字`len` 列タイプの場合もあります)を返します `str`。 が0以 `len` 下の場合、結果は空の文字列になります。
+`left(str, len)`: 文字列から左端 `len` (文字列`len` 型の場合もあります)の文字を返 `str`します。 が0以下 `len` の場合、結果は空の文字列になります。
 
 例：
 
-> SELECT left(&#39;Spark SQL&#39;, 3);スパ
+> SELECT left(&#39;Spark SQL&#39;, 3);
+スパ
 
 
 #### length
 
-`length(expr)`:文字列データの文字長またはバイナリデータのバイト数を返します。 文字列データの長さの末尾に空白文字が含まれます。 バイナリデータの長さには、バイナリゼロが含まれます。
+`length(expr)`: 文字列データの文字長またはバイナリデータのバイト数を返します。 文字列データの長さの末尾には空白文字が含まれます。 バイナリデータの長さには、バイナリのゼロが含まれます。
 
 例：
 
@@ -2577,9 +2581,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  10
 ```
 
-#### 検索
+#### 見つける
 
-`locate(substr, str[, pos])`:inの最初の値の後の位置を `substr` 返 `str` します `pos`。 渡された値 `pos` と戻り値は1から始まります。
+`locate(substr, str[, pos])`: positionの後の最初の値の位置 `substr` を返し `str` ま `pos`す。 渡された値 `pos` と戻り値は1から始まります。
 
 例：
 
@@ -2594,7 +2598,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### map_concat
 
-`map_concat(map, ...)`:指定されたすべての和集合のマップを返します。
+`map_concat(map, ...)`: 渡されたすべてのマップの和集合を返します。
 
 例：
 
@@ -2603,11 +2607,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  {1:"a",2:"c",3:"d"}
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### map_keys
 
-`map_keys(map)`:マップのキーを含む、順序のない配列を返します。
+`map_keys(map)`: マップのキーを含む、順不同の配列を返します。
 
 例：
 
@@ -2618,7 +2622,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### map_values
 
-`map_values(map)`:マップの値を含む、順不同の配列を返します。
+`map_values(map)`: マップの値を含む順不同の配列を返します。
 
 例：
 
@@ -2627,13 +2631,13 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  ["a","b"]
 ```
 
-#### 全く
+#### 無
 
-`ntile(n)`:各ウィンドウパーティションの行を、1 ～ `n` 1以上の範囲のグループに分割しま `n`す。
+`ntile(n)`: 各ウィンドウパーティションの行を、1 ～最大の範囲の `n` グループに分割し `n`ます。
 
 #### 無効
 
-`nullif(expr1, expr2)`:次に等しい場合はnullを `expr1` 返し、それ以外の `expr2`場合はnullを返 `expr1` します。
+`nullif(expr1, expr2)`: が次に等しい場合はnullを返し `expr1` ます。それ以外の場合はnullを返 `expr2``expr1` します。
 
 例：
 
@@ -2644,7 +2648,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### nvl
 
-`nvl(expr1, expr2)`:nullの場合 `expr2` は `expr1` 返し、それ以外の場合は `expr1` 返します。
+`nvl(expr1, expr2)`: がnullの `expr2` 場合 `expr1` 、またはそれ以外の場合に `expr1` 返します。
 
 例：
 
@@ -2655,7 +2659,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### nvl2
 
-`nvl2(expr1, expr2, expr3)`:nullでな `expr2` い場 `expr1` 合は返し、それ以外の場合は `expr3` 返します。
+`nvl2(expr1, expr2, expr3)`: nullでない `expr2` 場合 `expr1` は返し、それ以外の場合は返 `expr3` します。
 
 例：
 
@@ -2666,7 +2670,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### parse_url
 
-`parse_url(url, partToExtract[, key])`:URLから部分を抽出します。
+`parse_url(url, partToExtract[, key])`: URLから部分を抽出します。
 
 例：
 
@@ -2681,7 +2685,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### position
 
-`position(substr, str[, pos])`:inの最初の値の後の位置を `substr` 返 `str` します `pos`。 渡された値 `pos` と戻り値は1から始まります。
+`position(substr, str[, pos])`: positionの後の最初の値の位置 `substr` を返し `str` ま `pos`す。 渡された値 `pos` と戻り値は1から始まります。
 
 例：
 
@@ -2696,11 +2700,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### ランク
 
-`rank()`:値のグループ内の値のランクを計算します。 結果は、パーティションの順序で現在の行の前または同じ行の数に1を加えた値になります。 この値は、シーケンス内でギャップを生成します。
+`rank()`: 値のグループ内の値のランクを計算します。 結果は、パーティションの順序で、現在の行の前または同じ行の数に1を加えた値になります。 値によって、シーケンス内でギャップが生じます。
 
 #### regexp_extract
 
-`regexp_extract(str, regexp[, idx])`:一致するグループを抽出しま `regexp`す。
+`regexp_extract(str, regexp[, idx])`: 一致するグループを抽出し `regexp`ます。
 
 例：
 
@@ -2711,7 +2715,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### regex_replace
 
-`regexp_replace(str, regexp, rep)`:に一致するすべてのサブ文字列 `str` をに置き換 `regexp` えます `rep`。
+`regexp_replace(str, regexp, rep)`: 一致するすべてのサブ文字列 `str` をに置換 `regexp` し `rep`ます。
 
 例：
 
@@ -2722,7 +2726,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### repeat
 
-`repeat(str, n)`:渡された文字列値をn回繰り返す文字列を返します。
+`repeat(str, n)`: 渡された文字列値をn回繰り返す文字列を返します。
 
 例：
 
@@ -2733,12 +2737,12 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### replace
 
-`replace(str, search[, replace])`:すべてののをに置き換 `search` えます `replace`。
+`replace(str, search[, replace])`: すべてののをに置き換え `search` ま `replace`す。
 
 引数：
-- `str`:文字列式
-- `search`:文字列式。 がに見 `search` つからない場合、変 `str`更なし `str` で返されます。
-- `replace`:文字列式。 が指 `replace` 定されていない場合、または空の文字列の場合、削除された文字列は何も置き換えられませ `str`ん。
+- `str`: 文字列式
+- `search`: 文字列式。 がに見つ `search` からない場合 `str`は、変更なく `str` 返されます。
+- `replace`: 文字列式。 が指定され `replace` ていない場合、または空の文字列の場合は、削除された文字列は何も置き換えられません `str`。
 
 例：
 
@@ -2753,11 +2757,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### row_number
 
-`row_number()`:ウィンドウ・パーティション内の行の順序に従って、各行に1から始まる一意の順番を割り当てます。
+`row_number()`: ウィンドウ・パーティション内の行の順序に従って、各行に1から始まる一意の順次番号を割り当てます。
 
 #### スキーマ_of_json
 
-`schema_of_json(json[, options])`:スキーマをJSON文字列のDDL形式で返します。
+`schema_of_json(json[, options])`: JSON文字列のDDL形式のスキーマを返します。
 
 例：
 
@@ -2766,11 +2770,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  array<struct<col:int>>
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### 文
 
-`sentences(str[, lang, country])`:単語 `str` の配列に分割します。
+`sentences(str[, lang, country])`: 単語 `str` の配列に分割します。
 
 例：
 
@@ -2781,16 +2785,16 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### シーケンス
 
-`sequence(start, stop, step)`:停止する要素の配列(開始を含む)を生成し、ステップごとに増分します。 返される要素の型は、引数の要素の型と同じです。式
+`sequence(start, stop, step)`: 開始から停止（両端を含む）する要素の配列を生成し、ステップ単位で増分します。 返される要素の型は、引数式の型と同じです。
 
-次のタイプがサポートされています。byte、short、integer、long、date、timestamp。
+次のタイプがサポートされています。 byte、short、integer、long、date、timestamp。
 
-との解 `start` 決は、 `stop` 式と同じタイプに解決する必要があります。 および `start``stop` 式が「日付」または「タイムスタンプ」タイプに解決される場合、 `step` 式は「間隔」タイプに解決される必要があります。それ以外の場合は、とと同じ型に解決さ `start` れ `stop` ます。
+と `start``stop` 式は同じタイプに解決される必要があります。 と `start` 式が「日付」または「タイムスタンプ」の型に解決される場合、 `stop``step` 式は「間隔」の型に解決される必要があります。 それ以外の場合は、 `start` および `stop` 式と同じ型に解決されます。
 
 引数：
-- `start`:式。 範囲の開始。
-- `stop`:式。 範囲の終了（範囲を含む）。
-- `step`:オプションの式。 範囲のステップ。 の値が次の値 `step` 以下の場合は `start` デフォルトで1、それ以外の場合は `stop`-1です。 時間シーケンスの場合、それぞれ1日と —1日です。 が次の値 `start` より大きい場 `stop`合は負の値に `step` 設定し、逆の場合も同様に設定します。
+- `start`: 式。 範囲の開始。
+- `stop`: 式。 範囲の終了（範囲を含む）。
+- `step`: オプションの式。 範囲のステップ。 デフォルト `step` では、が次よりも小さいか等しい `start` 場合は1、それ以外の場合 `stop`は —1です。 時間シーケンスの場合は、それぞれ1日と —1日です。 がより大き `start` い場合 `stop`は負の値に `step` 設定し、逆の場合は負の値に設定します。
 
 例：
 
@@ -2803,11 +2807,11 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  [2018-01-01,2018-02-01,2018-03-01]
 ```
 
-次の期間：2.4.0
+期間： 2.4.0
 
 #### 左へ
 
-`shiftleft(base, expr)`:ビット単位の左シフト。
+`shiftleft(base, expr)`: ビット単位の左シフト。
 
 例：
 
@@ -2816,9 +2820,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  4
 ```
 
-#### 震え
+#### 酔っぱらった
 
-`shiftright(base, expr)`:ビット単位（符号付き）の右シフト。
+`shiftright(base, expr)`: ビット単位（符号付き）の右シフト。
 
 例：
 
@@ -2829,7 +2833,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### shiftrightunsigned
 
-`shiftrightunsigned(base, expr)`:ビット単位の符号なし右シフト。
+`shiftrightunsigned(base, expr)`: ビット単位の符号なし右シフト。
 
 例：
 
@@ -2840,7 +2844,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### size
 
-`size(expr)`:配列またはマップのサイズを返します。 入力がnullで、trueに設定されている場合は、-1 `spark.sql.legacy.sizeOfNull` を返します。 をfalse `spark.sql.legacy.sizeOfNull` に設定すると、null入力の場合はnullを返します。 デフォルトでは、このパ `spark.sql.legacy.sizeOfNull` ラメーターはtrueに設定されています。
+`size(expr)`: 配列またはマップのサイズを返します。 この関数は、入力がnullでtrueに設定されている場合、-1 `spark.sql.legacy.sizeOfNull` を返します。 をfalse `spark.sql.legacy.sizeOfNull` に設定した場合、null入力に対してnullを返します。 デフォルトでは、この `spark.sql.legacy.sizeOfNull` パラメーターはtrueに設定されています。
 
 例：
 
@@ -2853,9 +2857,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
  -1
 ```
 
-#### スペース
+#### space
 
-`space(n)`:スペースで構成される文字列を返 `n` します。
+`space(n)`: ス `n` ペースで構成される文字列を返します。
 
 例：
 
@@ -2864,9 +2868,9 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
    1
 ```
 
-#### 分割
+#### split
 
-`split(str, regex)`:一致す `str` る回を囲んで分割しま `regex`す。
+`split(str, regex)`: 一致する回 `str` 数を分割 `regex`します。
 
 例：
 
@@ -2877,7 +2881,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### substring_index
 
-`substring_index(str, delim, count)`:区切り文字のオカレンスの前のサ `str` ブ文字列 `count` を返します(文字列の前の部分文字列を返しま `delim`す)。 が正 `count` の値の場合、（左から数える）最後の区切り文字の左側のすべてが返されます。 が負の `count` 場合は、最後の区切り文字の右側（右から数える）がすべて返されます。 この関数は、 `substring_index` 検索時に大文字と小文字が区別される一致を実行しま `delim`す。
+`substring_index(str, delim, count)`: 区切り文字の `str` 出現前のサブ文字列を返 `count``delim`します。 が正の数の場合 `count` は、最終的な区切り文字の左側（左から数える）の要素がすべて返されます。 が負の値の場合 `count` は、最後の区切り文字の右側（右側から数えた値）がすべて返されます。 この関数は、検索時に大文字と小文字が区別される一致を `substring_index` 実行し `delim`ます。
 
 例：
 
@@ -2892,7 +2896,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### xpath
 
-`xpath(xml, xpath)`:XPathノードと一致するxmlのノード内の値の文字列配列を返します。式
+`xpath(xml, xpath)`: XPath式と一致するxmlのノード内の値の文字列配列を返します。
 
 例：
 
@@ -2903,7 +2907,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### xpath_重複
 
-`xpath_double(xml, xpath)`:重複値を返します。一致が見つからない場合は値0を返し、一致が見つかった場合は値が数値以外の場合はNaNを返します。
+`xpath_double(xml, xpath)`: 重複の値を返します。一致が見つからない場合は値0、一致が見つかっても数値以外の場合は値NaNを返します。
 
 例：
 
@@ -2914,7 +2918,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### xpath_float
 
-`xpath_float(xml, xpath)`:一致が見つからない場合は値0を、見つからない場合は値が数値以外の場合はNaNを返します。
+`xpath_float(xml, xpath)`: 検索結果が見つからない場合は値0（浮動小数点数値）を返し、一致が見つからない場合は値NaN（数値以外）を返します。
 
 例：
 
@@ -2925,7 +2929,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### xpath_int
 
-`xpath_int(xml, xpath)`:整数値を返します。一致が見つからない場合、または一致が見つかったが数値以外の場合は、値0を返します。
+`xpath_int(xml, xpath)`: 整数値を返します。一致が見つからない場合や、一致が見つかっても数値以外の場合は、値0を返します。
 
 例：
 
@@ -2936,7 +2940,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### xpath_long
 
-`xpath_long(xml, xpath)`:長い整数値を返します。一致が見つからない場合、または一致が見つかったが数値以外の場合は、値0を返します。
+`xpath_long(xml, xpath)`: 長い整数値を返します。一致が見つからない場合や、一致が見つかっても数値以外の場合は、値0を返します。
 
 例：
 
@@ -2947,7 +2951,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### xpath_number
 
-`xpath_number(xml, xpath)`:重複値を返します。一致が見つからない場合は値0を返し、一致が見つかった場合は値が数値以外の場合はNaNを返します。
+`xpath_number(xml, xpath)`: 重複の値を返します。一致が見つからない場合は値0、一致が見つかっても数値以外の場合は値NaNを返します。
 
 例：
 
@@ -2958,7 +2962,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### xpath_short
 
-`xpath_short(xml, xpath)`:短い整数値を返します。一致が見つからない場合、または一致が見つかったが数値以外の場合は、値0を返します。
+`xpath_short(xml, xpath)`: 短い整数値を返します。一致が見つからない場合や、一致が見つかっても数値以外の場合は、値0を返します。
 
 例：
 
@@ -2969,7 +2973,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### xpath_string
 
-`xpath_string(xml, xpath)`:XPathノードに一致する最初のxmlノードのテキスト内容を返します。式
+`xpath_string(xml, xpath)`: XPath式と最初に一致するxmlノードのテキストコンテンツを返します。
 
 例：
 
@@ -2982,7 +2986,7 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### current_database
 
-`current_database()`:現在のデータベースを返します。
+`current_database()`: 現在のデータベースを返します。
 
 例：
 
@@ -2993,18 +2997,18 @@ Spark SQLヘルパーは、SQL機能を拡張するSpark SQLの組み込み関�
 
 #### current_date
 
-`current_date()`:評価の開始時の現在の日付を返します。
+`current_date()`: クエリ評価の開始時の現在の日付を返します。
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### current_timestamp
 
-`current_timestamp()`:評価の開始時の現在のタイムスタンプを返します。
+`current_timestamp()`: クエリ評価の開始時の現在のタイムスタンプを返します。
 
-次の期間：1.5.0
+期間： 1.5.0
 
 #### now
 
-`now()`:評価の開始時の現在のタイムスタンプを返します。
+`now()`: クエリ評価の開始時の現在のタイムスタンプを返します。
 
-次の期間：1.5.0
+期間： 1.5.0
