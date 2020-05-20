@@ -5,6 +5,9 @@ title: 承認されたID名前空間と修飾子
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
+workflow-type: tm+mt
+source-wordcount: '479'
+ht-degree: 9%
 
 ---
 
@@ -56,7 +59,7 @@ Privacy Service APIで `namespace` 値を指定する場合、 **名前空間修
 | Adobe Advertizing Cloud | &quot;AdCloud&quot; |
 | Adobe Analytics | &quot;Analytics&quot; |
 | Adobe Audience Manager | 「AudienceManager」 |
-| Adobe Campaign | &quot;Campaign&quot; |
+| Adobe Campaign | &quot;キャンペーン&quot; |
 | Adobe Experience Platform | &quot;aepDataLake&quot; |
 | Adobe Primetime Authentication | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
