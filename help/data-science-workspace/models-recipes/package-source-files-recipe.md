@@ -5,6 +5,9 @@ title: ソースファイルのレシピへのパッケージ化
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '1276'
+ht-degree: 0%
 
 ---
 
@@ -35,22 +38,22 @@ Dockerイメージを使用すると、開発者は、ライブラリやその�
 
 作成されたDockerイメージは、レシピ作成ワークフローで指定された資格情報を使用してAzureコンテナレジストリにプッシュされます。
 
-Azureコンテナレジストリ資格情報を取得するには、 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platformにログインし</a>ます。 左側のナビゲーション列で、に移動し **[!UICONTROL Workflows]**&#x200B;ます。 を選択 **[!UICONTROL Import Recipe]** し、を選択し **[!UICONTROL Launch]**&#x200B;ます。 以下のスクリーンショットを参照してください。
+Azureコンテナレジストリ資格情報を取得するには、 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platformにログインし</a>ます。 左側のナビゲーション列で、 **[!UICONTROL ワークフローに移動します]**。 「 **[!UICONTROL レシピの]** 読み込み **[!UICONTROL 」を選択し、「]**&#x200B;開始」を選択します。 以下のスクリーンショットを参照してください。
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-「 *設定* 」ページが開きます。 適切な *レシピ名を指定します(例：「小売売上高レシピ*」)。オプションで説明またはドキュメントURLを入力します。 完了したら、をクリックし **[!UICONTROL Next]**&#x200B;ます。
+「 *設定* 」ページが開きます。 適切な *レシピ名を指定します(例：「小売売上高レシピ*」)。オプションで説明またはドキュメントURLを入力します。 完了したら、「 **[!UICONTROL 次へ]**」をクリックします。
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-適切な *Runtime*&#x200B;を選択し、「 **[!UICONTROL Classification]** Type *」で「a」を選択します*。 Azureコンテナレジストリ資格情報は、完了すると生成されます。
+適切な *ランタイムを選択し*、「 **[!UICONTROL タイプ]** 」で「 *分類*」を選択します。 Azureコンテナレジストリ資格情報は、完了すると生成されます。
 
 >[!NOTE]
 >*「タイプ&#x200B;*」は、レシピが設計する機械学習の問題のクラスで、トレーニングの後に使用され、トレーニングの実施状況をカスタマイズするのに役立ちます。
 
 >[!TIP]
 >- Pythonレシピの場合は、 **[!UICONTROL Python]** ランタイムを選択します。
->- Rレシピの場合は、 **[!UICONTROL R]** ランタイムを選択します。
+>- Rレシピの場合は、 **[!UICONTROL R]** runtimeを選択します。
 >- PySparkレシピの場合は、 **[!UICONTROL PySpark]** ランタイムを選択します。 アーティファクトタイプが自動入力されます。
 >- Scalaレシピの場合は、 **[!UICONTROL Spark]** ランタイムを選択します。 アーティファクトタイプが自動入力されます。
 
