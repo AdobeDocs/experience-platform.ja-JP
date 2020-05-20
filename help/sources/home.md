@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectorsの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 1%
 
 ---
@@ -77,6 +77,8 @@ CRMシステムは、顧客との関係の構築に役立つデータを提供�
 - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
 - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
 - [Google BigQuery Connector](connectors/databases/bigquery.md)
+- [GreenPlumコネクタ](connectors/databases/greenplum.md)
+- [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
 - [IBM DB2コネクタ](connectors/databases/ibm-db2.md)
 - [MariaDBコネクタ](connectors/databases/mariadb.md)
 - [Microsoft SQL Serverコネクタ](connectors/databases/sql-server.md)
@@ -111,7 +113,7 @@ CRMシステムは、顧客との関係の構築に役立つデータを提供�
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **表示ソース** ：オン | 「 *カタログ* 」タブの各ソースタイプのソースに対して、「 *参照*」、「 **** アカウント」、「DataFlow」の各タブと共に読み取り専用アクセス権を付与します。 |
+| **表示ソース** ：オン | 「 *カタログ* 」タブの各ソースタイプのソースに対して、「 *参照*」、「 **** アカウント」、「DataFlowAccounts」の各タブと共に読み取り専用アクセス権を付与します。 |
 | **ソースの管理** : | **表示ソースに含まれる機能に加えて、**&#x200B;ソースに含まれる機能に加えて、Connect Source *option Catalog内の* Connect Source *option Catalogへのアクセス権を付与し、Select Data Option* Browse *Not Browse*** Notにアクセス権を付与します。 **また、「ソースの管理** 」では、DataFlowsを有効または無効にしたり ** 、スケジュールを編集したりできます。 |
 | **表示ソース** ：オフおよび **管理ソース** ：オフ | ソースへのアクセスをすべて取り消します。 |
 
