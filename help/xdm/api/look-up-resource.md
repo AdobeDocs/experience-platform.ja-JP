@@ -5,13 +5,16 @@ title: リソースの検索
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 2%
 
 ---
 
 
 # リソースの検索
 
-特定のリソースを検索するには、リソースの `$id` （URLエンコードされたURI）をリクエストパスに含むGETリクエストを作成します。
+リクエストパスにリソースの `$id` （URLエンコードされたURI）を含むGETリクエストを作成することで、特定のリソースを検索できます。
 
 **API形式**
 
@@ -21,9 +24,9 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | リソースが配置されるコンテナ（「グローバル」または「テナント」）。 |
-| `{RESOURCE_TYPE}` | リソースライブラリから取得するスキーマのタイプ。 有効なタイプは、、、、お `datatypes`よびの `mixins`いず `schemas`れかです `classes`。 |
-| `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリ `meta:altId` ソースのURIです。 |
+| `{CONTAINER_ID}` | リソースが配置されているコンテナ（「グローバル」または「テナント」）。 |
+| `{RESOURCE_TYPE}` | スキーマライブラリから取得するリソースのタイプ。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
+| `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
 
 **リクエスト**
 
@@ -37,21 +40,21 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-リソース参照要求は、Acceptヘッ `version` ダーに含める必要があります。 検索には、次の「承認」ヘッダーを使用できます。
+リソース参照要求を受け入れるには、Acceptヘッダーに含める必要があ `version` ります。 検索には、次のAcceptヘッダーを使用できます。
 
-| 承認 | 説明 |
+| 同意 | 説明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | 「生」と「お `$ref` よび」 `allOf`には、タイトルと説明が含まれます。 |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 解決され `allOf` ました。タイトルと説明があります。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | 「および」を含 `$ref` む、タ `allOf`イトルや説明のない「生」。 |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` タイトル `allOf` や説明がなく解決されました。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 解決され `allOf` 、記述子が含まれます。 |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | 「および」を含む「生」 `$ref` には、タイトルと説明が含まれ `allOf`ます。 |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` にはタイトルと説明が `allOf` あります。 |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | 「お `$ref` よび」付きの生データ `allOf`で、タイトルや説明は付きません。 |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` タイトルも説明も `allOf` なく解決しました。 |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 解 `allOf` 決され、記述子が含まれます。 |
 
->[!NOTE] バージョン `major` （1、2、3など）のみを指定した場合、レジストリは最新バージョン（.1、.2、.3など） `minor` を自動的に返します。
+>[!NOTE] バージョン（1、2、3など）のみを指定した場合、レジストリは最新 `major``minor` バージョン（.1、.2、.3など）を自動的に返します。
 
 **応答**
 
-成功した応答は、リソースの詳細を返します。 返されるフィールドは、リクエストで送信されるAcceptヘッダーによって異なります。 異なる受け入れヘッダーを試して、回答を比較し、使用事例に最適なヘッダーを判断します。
+成功した応答は、リソースの詳細を返します。 返されるフィールドは、要求で送信されるAcceptヘッダーによって異なります。 様々なAcceptヘッダーを使用してテストし、応答を比較し、使用事例に最適なヘッダーを判断します。
 
 ```JSON
 {
