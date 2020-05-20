@@ -5,27 +5,30 @@ title: ターゲットマッピング場
 topic: overview
 translation-type: tm+mt
 source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+workflow-type: tm+mt
+source-wordcount: '427'
+ht-degree: 0%
 
 ---
 
 
 # ターゲットマッピングフィールド
 
-Adobe Experience Platformを使用すると、アドビのターゲットデータをターゲットソースコネクタで取り込みます。 コネクタを使用する場合、ターゲットフィールドのすべてのデータを、XDM ExperienceEventクラスに関連付けられた [Experience Data Model](../../../../xdm/home.md) (XDM)フィールドにマップする必要があります。
+Adobe Experience Platformでは、ターゲットソースコネクタを介してAdobeターゲットデータを取り込むことができます。 コネクタを使用する場合、ターゲットフィールドのすべてのデータを、XDM ExperienceEventクラスに関連付けられた [Experience Data Model(XDM)](../../../../xdm/home.md) フィールドにマップする必要があります。
 
-次の表に、エクスペリエンスイベントスキーマ(*XDM ExperienceEventフィールド*)のフィールドと、マッピングする必要がある対応するターゲットフィールド(*ターゲットリクエストフィールド*)の概要を示します。 一部のマッピングに関する追加のメモも提供されます。
+次の表に、エクスペリエンスイベントスキーマ(*XDM ExperienceEventフィールド*)のフィールドと、マップする必要がある対応するターゲットフィールド(*ターゲットリクエストフィールド*)の概要を示します。 一部のマッピングに関する追加の注意事項も表示されます。
 
 >[!NOTE] 左右にスクロールして、テーブルの全内容を表示してください。
 
-| XDM ExperienceEventフィールド | ターゲット要求フィールド | メモ |
+| XDM ExperienceEventフィールド | ターゲットリクエストフィールド | メモ |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | 一意の要求識別子 |
-| **`dataSource`** |  | すべてのクライアントに対して「1」に設定されます。 |
-| `dataSource._id` | 要求で渡されない、システム生成値。 | このデータソースの一意のID。 これは、データソースを作成した個人またはシステムによって提供されます。 |
-| `dataSource.code` | 要求で渡されない、システム生成値。 | 完全な@idへのショートカット。 少なくとも1つのコードまたは@idを使用できます。 このコードは、データソース統合コードと呼ばれる場合があります。 |
-| `dataSource.tags` | 要求で渡されない、システム生成値。 | タグは、特定のデータソースで表されるエイリアスが、それらのエイリアスを使用するアプリケーションでどのように解釈されるかを示します。<br><br>例：<br><ul><li>`isAVID`:Analyticsの訪問者IDを表すデータソース。</li><li>`isCRSKey`:CRSでキーとして使用するエイリアスを表すデータソース。</li></ul>タグは、データソースの作成時に設定されますが、特定のデータソースを参照する際に、パイプラインメッセージにも含まれます。 |
+| **`dataSource`** |  | すべてのクライアントに対して「1」に設定されています。 |
+| `dataSource._id` | 要求で渡すことができない、システム生成値。 | このデータソースの一意のID。 これは、データソースを作成した個人またはシステムが提供します。 |
+| `dataSource.code` | 要求で渡すことができない、システム生成値。 | 完全な@idへのショートカット。 コードまたは@idの少なくとも1つを使用できます。 このコードは、データソース統合コードと呼ばれる場合もあります。 |
+| `dataSource.tags` | 要求で渡すことができない、システム生成値。 | タグは、特定のデータソースで表されるエイリアスが、それらのエイリアスを使用するアプリケーションでどのように解釈されるかを示すために使用されます。<br><br>例：<br><ul><li>`isAVID`: Analytics訪問者IDを表すデータソース。</li><li>`isCRSKey`: CRSでキーとして使用する必要があるエイリアスを表すデータソース。</li></ul>タグは、データソースの作成時に設定されますが、特定のデータソースを参照する際にパイプラインメッセージにも含まれます。 |
 | **`timestamp`** | イベントタイムスタンプ |
-| **`channel`** | `context.channel` | 機能は表示配信 オプションは「web」と「mobile」で、「web」がデフォルトです。 |
+| **`channel`** | `context.channel` | 表示配信でのみ機能します。 オプションは「web」と「mobile」で、「web」がデフォルトです。 |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
 | `endUserIds.experience.mcId` | `marketingCloudVisitorId` |
@@ -38,7 +41,7 @@ Adobe Experience Platformを使用すると、アドビのターゲットデー�
 | `environment.viewportHeight` | `mboxRequest.screenHeight` |
 | `environment.viewportWidth` | `mboxRequest.screenWidth` |
 | `environment.colorDepth` | `mboxRequest.colorDepth` |
-| `environment.carrier` | 要求のIPアドレスに基づいて解決された携帯電話会社の名前。 |
+| `environment.carrier` | リクエストのIPアドレスに基づいて解決された携帯電話会社名。 |
 | `environment.ipV4` | `mboxRequest.ipAddress` （V4形式の場合） |
 | `environment.ipV6` | `mboxRequest.ipAddress` （V6形式の場合） |
 | **`experience`** |
@@ -46,17 +49,17 @@ Adobe Experience Platformを使用すると、アドビのターゲットデー�
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
-| `experience.target.environmentID` | ターゲットの顧客定義環境（開発、QA、製品など）の内部マッピング。 |
-| `experience.target.supplementalDataID` | Analyticsの識別子を使用してターゲットイベントをステッチするために使用されるイベント |
+| `experience.target.environmentID` | 顧客定義環境に対するターゲットの内部マッピング（dev、qa、prodなど）。 |
+| `experience.target.supplementalDataID` | ターゲットイベントをAnalyticsイベントと結合するために使用される識別子 |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
-| `experience.target.activities` | リストが適格とするアクティビティの訪問者（配列） |
+| `experience.target.activities` | 訪問者が認定したアクティビティのリスト（配列） |
 | `experience.target.activities[i].activityID` | 訪問者が資格を持つ任意のアクティビティのID |
-| `experience.target.activities[i].version` | 訪問者が認める任意のアクティビティのバージョン |
-| `experience.target.activities[i].activityEvents` | ユーザーがこのアクティビティでヒットしたイベントの詳細が含まれます。 |
+| `experience.target.activities[i].version` | 訪問者が対象とする任意のアクティビティのバージョン |
+| `experience.target.activities[i].activityEvents` | ユーザーがこのイベントでヒットしたアクティビティイベントの詳細が含まれます。 |
 | **`device`** |
 | `device.typeIDService` | `XDMDevice.Device.TypeIDService.typeIDService_deviceatlas` |
-| `device.type` | 次の（またはNULL）のプ `deviceAtlas` ロパティの1つ： <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
+| `device.type` | 次のいずれかのプロパティ `deviceAtlas` （またはNULL）: <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
 | `device.typeID` | （空の文字列） |
 | `device.manufacturer` | `deviceAtlas.manufacturer` |
 | `device.model` | `deviceAtlas.model` |
@@ -65,11 +68,11 @@ Adobe Experience Platformを使用すると、アドビのターゲットデー�
 | `device.screenWidth` | `deviceAtlas.displayWidth` |
 | `device.colorDepth` | `deviceAtlas.displayColorDepth` |
 | **`placeContext`** |
-| `placeContext.geo.id` | ランダムUUID（必須） |
-| `placeContext.geo.city` | 要求のIPアドレスに基づいて解決される都市名。 |
-| `placeContext.geo.countryCode` | 要求のIPアドレスに基づいて解決される国コード。 |
-| `placeContext.geo.dmaId` | リクエストのIPアドレスに基づいて解決された、指定市場地域コード。 |
-| `placeContext.geo.postalCode` | 要求のIPアドレスに基づいて解決される郵便番号。 |
+| `placeContext.geo.id` | ランダムなUUID（必須） |
+| `placeContext.geo.city` | 要求のIPアドレスに基づいて解決された都市名。 |
+| `placeContext.geo.countryCode` | リクエストのIPアドレスに基づいて解決される国コード。 |
+| `placeContext.geo.dmaId` | 指定された市場地域コードは、要求のIPアドレスに基づいて解決されます。 |
+| `placeContext.geo.postalCode` | リクエストのIPアドレスに基づいて解決される郵便番号です。 |
 | `placeContext.geo.stateProvince` | 要求のIPアドレスに基づいて解決された州または郡。 |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
 | **`commerce`** |  | 注文の詳細がリクエストに存在する場合にのみ設定します。 |
