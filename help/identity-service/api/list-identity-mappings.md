@@ -5,17 +5,20 @@ title: リストIDマッピング
 topic: API guide
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 2%
 
 ---
 
 
 # リストIDマッピング
 
-マッピングとは、指定したクラスターのすべてのIDの名前空間です。
+マッピングとは、クラスター内の、指定した名前空間のすべてのIDの集まりです。
 
-## 単一のIDのIDマッピングの取得
+## 単一のIDに対するIDマッピングの取得
 
-IDを指定し、リクエスト内のIDで表されるのと同じ名前空間からすべての関連IDを取得します。
+IDを指定し、リクエスト内のIDで表されるのと同じ名前空間ーからすべての関連IDを取得します。
 
 **API形式**
 
@@ -25,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **リクエスト**
 
-オプション1:IDを名前空間(ID`nsId`別)およびID値(`id`)として指定します。
+オプション1: IDを名前空間(`nsId`、ID)およびID値(`id`)として指定します。
 
 ```shell
 curl -X GET \
@@ -36,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-オプション2:IDを名前空間(`ns`名前順)とID値(`id`)として指定します。
+オプション2: IDを名前空間(名前`ns`別)およびID値(`id`)として指定します。
 
 ```shell
 curl -X GET \
@@ -47,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-オプション3:IDをXID (`xid`)として指定します。 IDのXIDを取得する方法について詳しくは、IDのXIDの取得に関するこのドキュメントの [節を参照してください](./list-native-id.md)。
+オプション3: IDをXID (`xid`)として指定します。 IDのXIDを取得する方法について詳しくは、IDのXIDの [取得について説明しているこのドキュメントの節を参照してください](./list-native-id.md)。
 
 ```shell
 curl -X GET \
@@ -60,9 +63,9 @@ curl -X GET \
 
 ### 複数のIDのIDマッピングの取得
 
-このメソッドを、 `POST` 前述のメソッドと同等の方法とし `GET` て使用し、複数のIDのマッピングを取得します。
+この `POST``GET` メソッドは、上記のメソッドとバッチ同等に、複数のIDのマッピングを取得するために使用します。
 
->[!NOTE] 要求は、IDの数が最大1000個以下であることを示す必要があります。 IDが1000を超える要求は、400のステータスコードになります。
+>[!NOTE] 要求は、IDの数が最大1000個に達することを示す必要があります。 IDが1000個を超える要求は、400個のステータスコードになります。
 
 **API形式**
 
@@ -72,7 +75,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **リクエスト本文**
 
-オプション1:マッピングを取得するXIDのリストを指定します。
+オプション1: マッピングを取得するXIDのリストを指定します。
 
 ```shell
 {
@@ -81,7 +84,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-オプション2:IDのリストを複合IDとして指定します。各IDは、ID値と名前空間を名前空間IDで指定します。 この例は、「Private Graph」のデフォルト値を上書きする際に、このメソッ `graph-type` ドを使用する方法を示しています。
+オプション2: IDのリストを複合IDとして指定します。各IDは名前空間IDごとにID値と名前空間を示します。 この例は、「Private Graph」のデフォルト値を上書きする際に、このメソッド `graph-type` を使用する方法を示しています。
 
 ```shell
 {
@@ -140,7 +143,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-指定された入力で関連IDが見つからなかった場合、応答コードは `HTTP 204` コンテンツなしで返されます。
+指定された入力で関連IDが見つからなかった場合、 `HTTP 204` 応答コードはコンテンツなしで返されます。
 
 **応答**
 
@@ -178,9 +181,9 @@ curl -X POST \
 }
 ```
 
-- `lastAssociationTime`:入力IDが最後にこのIDに関連付けられた時のタイムスタンプ。
-- `regions`:IDが表示さ `regionId` れた場 `lastAssociationTime` 所のおよびを提供します。
+- `lastAssociationTime`: 入力IDが最後にこのIDに関連付けられた時のタイムスタンプ。
+- `regions`: IDが表示され `regionId` た場所 `lastAssociationTime` のANDを提供します。
 
 ## 次の手順
 
-次のチュートリアルに進み、利用可能な [リストを名前空間](./list-namespaces.md)。
+次のチュートリアルに進み、使用可能な [名前空間のリスト](./list-namespaces.md)。
