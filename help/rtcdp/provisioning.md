@@ -5,6 +5,9 @@ description: 説明
 seo-description: SEO 説明
 translation-type: tm+mt
 source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+workflow-type: tm+mt
+source-wordcount: '37'
+ht-degree: 100%
 
 ---
 
