@@ -5,6 +5,9 @@ title: モデルのスケジュール(UI)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 0%
 
 ---
 
@@ -28,13 +31,13 @@ Adobe Experience Platform Data Science Workspaceを使用すると、機械学�
 
 モデルスコアリングは、スケジュールに基づいて自動化されたプロセスに設定できます。 サービスを作成したら、次の手順に従って、スコアリングスケジュールを設定および適用できます。
 
-1. Adobe Experience Platformで、左側のナビゲーション列にある **[!UICONTROL Services]** タブをクリックして、 *サービスギャラリーにアクセスします*。 スコアリングの実行をスケジュールするサービスを探し、をクリックして **[!UICONTROL Open]** 概要 ** ページを表示します。
+1. Adobe Experience Platformで、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックして、 *サービスギャラリーにアクセスします*。 スコアリングの実行をスケジュールするサービスを探し、 **[!UICONTROL 「開く]** 」をクリックして *概要* ページを表示します。
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. 概要ページには、サービスのスコアリング情報が表示されます。 リンクをクリックして、スコアリングスケジュールを設定します。 **[!UICONTROL Update Schedule]**
+2. 概要ページには、サービスのスコアリング情報が表示されます。 「スケジュールを **[!UICONTROL 更新]** 」リンクをクリックして、スコアリングスケジュールを設定します。
    ![](../images/models-recipes/schedule/service_overview_score.png)
 
-3. スコアリングスケジュールの頻度、開始日、終了日、入力データセット、出力データセットを設定します。 設定が完了したら、をクリックして、サービス **[!UICONTROL Create]** のスコアリングスケジュールを更新します。
+3. スコアリングスケジュールの頻度、開始日、終了日、入力データセット、出力データセットを設定します。 設定が完了したら、「 **[!UICONTROL 作成]** 」をクリックして、サービスのスコアリングスケジュールを更新します。
    ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
 4. 更新したスコアリングスケジュールがサービスの *概要* ページに表示されます。
@@ -47,13 +50,13 @@ Adobe Experience Platform Data Science Workspaceを使用すると、機械学�
 
 サービスを作成したら、次の手順に従ってトレーニングスケジュールを設定および適用できます。
 
-1. Adobe Experience Platformで、左側のナビゲーション列にある **[!UICONTROL Services]** タブをクリックして、 *サービスギャラリーにアクセスします*。 トレーニングの実施をスケジュールするサービスを探し、「 **[!UICONTROL Open]** 概要 ** 」ページをクリックして表示します。
+1. Adobe Experience Platformで、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックして、 *サービスギャラリーにアクセスします*。 トレーニングの実行スケジュールを設定するサービスを探し、 **[!UICONTROL 「開く]** 」をクリックして表示の *概要* ページを表示します。
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. 概要ページには、サービスのトレーニング情報が表示されます。 トレーニングスケジュールを設定するには、 **[!UICONTROL Update Schedule]** リンクをクリックします。
+2. 概要ページには、サービスのトレーニング情報が表示されます。 トレーニングスケジュールを設定するには、 **[!UICONTROL 「スケジュールを]** 更新」リンクをクリックします。
    ![](../images/models-recipes/schedule/service_overview_train.png)
 
-3. トレーニングスケジュールに使用する頻度、開始日、終了日、入力データセットを設定します。 設定が完了したら、をクリックして、サービス **[!UICONTROL Create]** のトレーニングスケジュールを更新します。
+3. トレーニングスケジュールに使用する頻度、開始日、終了日、入力データセットを設定します。 設定が完了したら、「 **[!UICONTROL 作成]** 」をクリックして、サービスのトレーニングスケジュールを更新します。
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
 4. 更新されたトレーニングスケジュールが、サービスの *概要* ページに表示されます。
