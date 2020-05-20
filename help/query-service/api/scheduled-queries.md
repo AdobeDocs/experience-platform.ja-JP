@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: クエリサービス開発者ガイド
+title: クエリサービス開発ガイド
 topic: scheduled queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '947'
+ht-degree: 3%
 
 ---
 
@@ -13,11 +16,11 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 
 ## サンプルAPI呼び出し
 
-これで、使用するヘッダーを理解できたので、クエリサービスAPIの呼び出しを開始できます。 以下の節では、クエリサービスAPIを使用して行える様々なAPI呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを示すサンプルリクエスト、およびサンプル応答が含まれます。
+これで、使用するヘッダーが分かったので、クエリサービスAPIの呼び出しを開始する準備が整いました。 以下の節では、クエリサービスAPIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
 
-### スケジュールされたリストの取得クエリ
+### スケジュールされたクエリのリストの取得
 
-エンドポイントにGET要求を行うことで、IMS組織のすべてのスケジュール済みクエリのリストを取得で `/schedules` きます。
+エンドポイントにGETリクエストを行うと、IMS組織でスケジュールされたすべてのクエリのリストを取得でき `/schedules` ます。
 
 **API形式**
 
@@ -28,22 +31,22 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (オ&#x200B;*プション*)応答に返される結果を設定する要求パスに追加されるパラメーター。 複数のパラメーターを含め、アンパサンド(`&`)で区切ることができます。 使用可能なパラメーターを以下に示します。 |
+| `{QUERY_PARAMETERS}` | (*オプション*)リクエストパスに追加されるパラメーター。応答で返される結果を設定します。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。 使用可能なパラメーターを以下に示します。 |
 
-**クエリパラメータ**
+**クエリパラメーター**
 
-次に、スケジュールされたリストを一覧表示するために使用できるクエリパラメータのクエリを示します。 これらのパラメーターはすべてオプションです。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべてのスケジュール済みクエリが取得されます。
+次に、スケジュールされたクエリのリストに使用できるクエリパラメーターのリストを示します。 これらのパラメーターはすべてオプションです。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべてのスケジュール済みクエリが取得されます。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `orderby` | 結果を並べ替えるフィールドを指定します。 サポートされているフィールドは `created` とで `updated`す。 例えば、は、 `orderby=created` 昇順で結果を並べ替えます。 「作成前( `-` )」を追加す`orderby=-created`ると、アイテムが作成された降順で並べ替えられます。 |
-| `limit` | ページに含める結果の数を制御するためのページサイズの制限を指定します。 (*Default value: 20*) |
-| `start` | ゼロベースの番号付けを使用して、応答リストをオフセットします。 例えば、3番目 `start=2` のリストのリストからクエリを返します。 (*Default value: 0*) |
-| `property` | フィールドに基づいて結果をフィルターします。 フィルター **は** HTMLエスケープする必要があります。 複数のコンマを使用して、複数のフィルターを組み合わせます。 サポートされているフィ `created`ールドは、、 `templateId`およびで `userId`す。 サポートされる演 `>` 算子のリストは、 `<` （より大きい）、（より小さい）お `==` よび（等しい）です。 例えば、は、指定さ `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` れたユーザーIDを持つスケジュール済みクエリをすべて返します。 |
+| `orderby` | 結果の並べ替えに使用するフィールドを指定します。 サポートされているフィールドは `created` とで `updated`す。 例えば、 `orderby=created` は、作成された結果を昇順で並べ替えます。 作成 `-` 前(`orderby=-created`)を追加すると、作成されたアイテムを降順で並べ替えます。 |
+| `limit` | ページに含める結果の数を制御するためのページサイズ制限を指定します。 (*Default value: 20*) |
+| `start` | 0から始まる番号を使用して、応答のリストをオフセットします。 例えば、3番目 `start=2` にリストされたクエリから開始するリストが返されます。 (*Default value: 0*) |
+| `property` | フィールドに基づいて結果をフィルターします。 フィルター **は** 、HTMLエスケープする必要があります。 複数のフィルターセットを組み合わせる場合は、コンマを使用します。 サポートされているフィールドは、 `created`、 `templateId`および `userId`です。 サポートされる演算子は、 `>` （より大きい）、 `<` （より小さい）、 `==` （等しい）のリストです。 例えば、 `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` は、ユーザーIDが指定されたとおりである、スケジュールされたすべてのクエリを返します。 |
 
 **リクエスト**
 
-次のリクエストでは、IMS組織用に作成された最新のスケジュール済みクエリを取得します。
+次のリクエストは、IMS組織用に作成された最新のスケジュール済みクエリを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -55,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **応答**
 
-成功した応答は、指定したIMS組織に対してスケジュールされたクエリのリストを含むHTTPステータス200を返します。 次の応答は、IMS組織用に作成された最新のスケジュールクエリを返します。
+正常な応答は、指定したIMS組織に対してスケジュールされたクエリのリストを含むHTTPステータス200を返します。 次の応答は、IMS組織用に作成された最新のスケジュール済みクエリを返します。
 
 ```json
 {
@@ -119,9 +122,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 }
 ```
 
-### 新しいスケジュール済みクエリ
+### 新しい予定クエリの作成
 
-エンドポイントにPOSTリクエストを行うことで、新しいスケジュール済みクエリを作成することが `/schedules` できます。
+エンドポイントにPOSTリクエストを作成して、新しいスケジュール済みクエリを作成でき `/schedules` ます。
 
 **API形式**
 
@@ -155,15 +158,15 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `query.dbName` | スケジュールされたデータベースを作成するクエリの名前。 |
+| `query.dbName` | スケジュールクエリを作成するデータベースの名前。 |
 | `query.sql` | 作成するSQLクエリ。 |
 | `query.name` | スケジュールされたクエリの名前。 |
-| `schedule.schedule` | クエリのCronスケジュール。 cronスケジュールの詳細については、Cron式形式のドキュメントを [参照し](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 、 この例では、「30 * * * *」は、クエリが毎時30分の時点で実行されることを意味します。 |
-| `schedule.startDate` | スケジュールされた開始のクエリ日で、UTCタイムスタンプで書き込まれます。 |
+| `schedule.schedule` | クエリのcronスケジュール。 cronスケジュールの詳細については、cron式形式のドキュメントを参照して [ください](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 この例で「30 * * * *」は、クエリが30分の時点で毎時実行されることを意味します。 |
+| `schedule.startDate` | スケジュールされたクエリの開始日。UTCタイムスタンプで書き込まれます。 |
 
 **応答**
 
-正常に応答すると、新しく作成されたスケジュール済みクエリの詳細と共に、HTTPステータス202（受け入れ済み）が返されます。 スケジュールされたクエリのアクティブ化が完了す `state` ると、がからに変 `REGISTERING` 更されま `ENABLED`す。
+正常に応答すると、HTTPステータス202（「受け入れ済み」）が返され、新たに作成されたスケジュール済みクエリの詳細が返されます。 スケジュールされたクエリのアクティブ化が完了する `state` と、の値がからに変更 `REGISTERING` され `ENABLED`ます。
 
 ```json
 {
@@ -214,11 +217,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 }
 ```
 
->[!NOTE] の値を使用して、作成したスケジ `_links.delete` ュー [ル済みクエリを削除できま](#delete-a-specified-scheduled-query)す。
+>[!NOTE] の値を使用して、作成したスケジュール済みクエリ `_links.delete` を [削除できます](#delete-a-specified-scheduled-query)。
 
-### 指定したスケジュール済みクエリの詳細
+### 指定したスケジュール済みクエリの詳細の要求
 
-特定のスケジュールされたクエリの情報を取得するには、エンドポイントにGETリクエストを送信し、そのIDを `/schedules` リクエストパスに指定します。
+エンドポイントにGETリクエストを行い、そのIDをリクエストパスに指定することで、特定のスケジュール済みクエリの情報を取得でき `/schedules` ます。
 
 **API形式**
 
@@ -228,7 +231,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 取得す `id` るスケジュール済みクエリの値。 |
+| `{SCHEDULE_ID}` | 取得するスケジュール済みクエリの `id` 値。 |
 
 **リクエスト**
 
@@ -242,7 +245,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **応答**
 
-成功した応答は、指定されたスケジュール済みの応答の詳細を含むHTTPステータス200を返します。クエリ
+正常に応答すると、指定したスケジュール済みクエリの詳細と共にHTTPステータス200が返されます。
 
 ```json
 {
@@ -295,17 +298,17 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 }
 ```
 
->[!NOTE] の値を使用して、作成したスケジ `_links.delete` ュー [ル済みクエリを削除できま](#delete-a-specified-scheduled-query)す。
+>[!NOTE] の値を使用して、作成したスケジュール済みクエリ `_links.delete` を [削除できます](#delete-a-specified-scheduled-query)。
 
-### 指定したスケジュール済みクエリの詳細
+### 指定したスケジュール済みクエリの詳細の更新
 
-エンドポイントにPATCHリクエストを行い、リクエストパスにIDを指定することで、指定したスケジュール済み `/schedules` クエリの詳細を更新することができます。
+エンドポイントにPATCHリクエストを行い、そのIDをリクエストパスに指定することで、指定したスケジュール済みクエリの詳細を更新でき `/schedules` ます。
 
-PATCHリクエストは、次の2つの異なるパスをサポートします。 `/state` と `/schedule/schedule`
+PATCHリクエストは、次の2つの異なるパスをサポートします。 `/state` と `/schedule/schedule`。
 
 ### スケジュールされたクエリ状態の更新
 
-を使用して、選択し `/state` たスケジュール済みクエリの状態（ENABLEDまたはDISABLED）を更新できます。 状態を更新するには、値をまたはに設定する必要があ `enable` ります `disable`。
+を使用して、選択したスケジュール済みクエリの状態(「有効」(ENABLED)または「無効」(DISABLED))を更新できます。 `/state` 状態を更新するには、値をまたはに設定する必要があり `enable` ま `disable`す。
 
 **API形式**
 
@@ -315,12 +318,12 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 取得す `id` るスケジュール済みクエリの値。 |
+| `{SCHEDULE_ID}` | 取得するスケジュール済みクエリの `id` 値。 |
 
 
 **リクエスト**
 
-このAPIリクエストは、ペイロードにJSONパッチ構文を使用します。 JSONパッチの仕組みについて詳しくは、APIの基本ドキュメントを参照してください。
+このAPIリクエストは、ペイロードにJSONパッチ構文を使用します。 JSONパッチの機能について詳しくは、APIの基本ドキュメントを参照してください。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -341,12 +344,12 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `path` | パッチを適用する値のパス。 この場合、スケジュールされたクエリの状態を更新するので、の値をに設定する必要があ `path` ります `/state`。 |
-| `value` | の更新された値 `/state`。 この値は、スケジュールされたクエリを有効 `enable` または `disable` 無効にするために設定できます。 |
+| `path` | パッチを適用する値のパス。 この場合、スケジュールされたクエリの状態を更新するので、の値をに設定する必要 `path` があり `/state`ます。 |
+| `value` | の更新された値 `/state`。 この値は、スケジュールされたクエリを有効または無効にす `enable` るた `disable` めに、または有効に設定できます。 |
 
 **応答**
 
-成功した応答は、次のメッセージと共にHTTPステータス202（受け入れ済み）を返します。
+応答が成功すると、次のメッセージと共にHTTPステータス202（受け入れ済み）が返されます。
 
 ```json
 {
@@ -357,7 +360,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### スケジュールされたクエリスケジュールの更新
 
-を使用して、スケジ `/schedule/schedule` ュールされたクエリのCronスケジュールを更新できます。 cronスケジュールの詳細については、Cron式形式のドキュメントを [参照し](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 、
+を使用して、スケジュールさ `/schedule/schedule` れたクエリのCronスケジュールを更新できます。 cronスケジュールの詳細については、cron式形式のドキュメントを参照して [ください](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。
 
 **API形式**
 
@@ -367,11 +370,11 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 取得す `id` るスケジュール済みクエリの値。 |
+| `{SCHEDULE_ID}` | 取得するスケジュール済みクエリの `id` 値。 |
 
 **リクエスト**
 
-このAPIリクエストは、ペイロードにJSONパッチ構文を使用します。 JSONパッチの仕組みについて詳しくは、APIの基本ドキュメントを参照してください。
+このAPIリクエストは、ペイロードにJSONパッチ構文を使用します。 JSONパッチの機能について詳しくは、APIの基本ドキュメントを参照してください。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -392,12 +395,12 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `path` | パッチを適用する値のパス。 この場合、スケジュールされたクエリのスケジュールを更新するので、の値をに設定する必要があ `path` りま `/schedule/schedule`す。 |
-| `value` | の更新された値 `/schedule`。 この値は、Cronスケジュールの形式で指定する必要があります。 この例では、スケジュールされたクエリは毎時45分に実行されます。 |
+| `path` | パッチを適用する値のパス。 この場合、スケジュールされたクエリのスケジュールを更新するので、の値をに設定する必要 `path` があり `/schedule/schedule`ます。 |
+| `value` | の更新された値 `/schedule`。 この値は、Cronスケジュールの形式にする必要があります。 この例では、スケジュールされたクエリは45分の時点で毎時実行されます。 |
 
 **応答**
 
-成功した応答は、次のメッセージと共にHTTPステータス202（受け入れ済み）を返します。
+応答が成功すると、次のメッセージと共にHTTPステータス202（受け入れ済み）が返されます。
 
 ```json
 {
@@ -408,9 +411,9 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### 指定したスケジュール済みクエリの削除
 
-エンドポイントにDELETEリクエストを行い、削除するスケジュール済みクエリのIDをリクエストパス `/schedules` に指定することで、指定したスケジュール済みクエリを削除できます。
+エンドポイントにDELETEリクエストを送信し、削除する予定クエリのIDをリクエストパスに指定することで、指定した予定クエリを削除でき `/schedules` ます。
 
->[!NOTE] スケジュールを **削除する前に** 、スケジュールを無効にする必要があります。
+>[!NOTE] スケジュールを削除する前に **** 、無効にする必要があります。
 
 **API形式**
 
@@ -420,7 +423,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | 取得す `id` るスケジュール済みクエリの値。 |
+| `{SCHEDULE_ID}` | 取得するスケジュール済みクエリの `id` 値。 |
 
 **リクエスト**
 
@@ -434,7 +437,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/schedules/e95186d
 
 **応答**
 
-成功した応答は、次のメッセージと共にHTTPステータス202（受け入れ済み）を返します。
+応答が成功すると、次のメッセージと共にHTTPステータス202（受け入れ済み）が返されます。
 
 ```json
 {
