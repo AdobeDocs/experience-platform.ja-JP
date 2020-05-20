@@ -5,15 +5,18 @@ title: オブジェクトの削除
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 2%
 
 ---
 
 
 # オブジェクトの削除
 
-DELETEリクエストのパスにIDを指定することで、Catalogオブジェクトを削除できます。
+DELETEリクエストのパスにIDを指定すると、カタログオブジェクトを削除できます。
 
->[!WARNING] オブジェクトの削除は取り消しできず、エクスペリエンスプラットフォームの他の場所で中断的な変更が生じる場合があるので、注意が必要です。
+>[!WARNING] オブジェクトの削除は元に戻すことができず、エクスペリエンスプラットフォームのどこかで改行の変更が生じる場合があるので、注意が必要です。
 
 **API形式**
 
@@ -21,16 +24,16 @@ DELETEリクエストのパスにIDを指定することで、Catalogオブジ�
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
->[!IMPORTANT] エンドポ `DELETE /batches/{ID}` イントは非推奨になりました。 バッチを削除するには、 [Batch Ingestion APIを使用する必要があります](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)。
+>[!IMPORTANT] エンドポイ `DELETE /batches/{ID}` ントは非推奨です。 バッチを削除するには、 [Batch Ingestion APIを使用する必要があります](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)。
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 削除するカタログオブジェクトの種類を指定します。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 削除するカタログオブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
-次のリクエストでは、リクエストパスでIDが指定されたデータセットを削除します。
+次のリクエストでは、リクエストパスでIDが指定されているデータセットを削除します。
 
 ```shell
 curl -X DELETE \
@@ -43,7 +46,7 @@ curl -X DELETE \
 
 **応答**
 
-成功した応答は、HTTPステータス200(OK)と、削除されたデータセットのIDを含む配列を返します。 このIDは、DELETE要求で送信されたIDと一致する必要があります。 削除されたオブジェクトに対してGETリクエストを実行すると、HTTPステータス404（見つかりません）が返され、データセットが正常に削除されたことが確認されます。
+正常に応答すると、HTTPステータス200(OK)と、削除されたデータセットのIDを含む配列が返されます。 このIDは、DELETE要求で送信されたIDと一致する必要があります。 削除したオブジェクトに対してGETリクエストを実行すると、データセットが正常に削除されたことを確認するHTTPステータス404（見つかりません）が返されます。
 
 ```json
 [
