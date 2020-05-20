@@ -5,15 +5,18 @@ title: データセットの作成
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 1%
 
 ---
 
 
 # データセットの作成
 
-Catalog APIを使用してデータセットを作成するには、データセットの基となるExperience Data Model(XDM) `$id` スキーマの値を把握しておく必要があります。 スキーマIDを取得したら、カタログAPIのエンドポイントにPOSTリクエストを送信して、データセ `/datasets` ットを作成できます。
+カタログAPIを使用してデータセットを作成するには、そのデータセットの基となるExperience Data Model(XDM)スキーマの `$id` 値を把握しておく必要があります。 スキーマIDを取得したら、カタログAPIのエンドポイントにPOSTリクエストを行って、データセットを作成でき `/datasets` ます。
 
->[!NOTE] このドキュメントでは、Catalogでのデータセットオブジェクトの作成方法についてのみ説明します。 データセットの作成、設定、監視の手順について詳しくは、次のチュートリアルを参照してく [ださい](../datasets/create.md)。
+>[!NOTE] このドキュメントでは、Catalogでデータセットオブジェクトを作成する方法についてのみ説明します。 データセットの作成、設定、監視の手順について詳しくは、次の [チュートリアルを参照してください](../datasets/create.md)。
 
 **API形式**
 
@@ -23,7 +26,7 @@ POST /dataSets
 
 **リクエスト**
 
-次のリクエストでは、事前に定義されたデータセットを参照するスキーマセットを作成します。
+次のリクエストは、以前に定義したスキーマーを参照するデータセットを作成します。
 
 ```SHELL
 curl -X POST \
@@ -50,13 +53,13 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | 作成するデータセットの名前。 |
-| `schemaRef.id` | データセ `$id` ットの基になるXDMスキーマのURI値。 |
+| `schemaRef.id` | データセットの基となるXDMスキーマのURI `$id` 値。 |
 
->[!NOTE] この例では、プロパティに [パーケット](https://parquet.apache.org/documentation/latest/) ・ファイル形式を使用 `containerFormat` しています。 JSONファイル形式の使用例については、バッチインジェスト開発ガイド [を参照してください](../../ingestion/batch-ingestion/api-overview.md)。
+>[!NOTE] 次の例では、 [パーケット](https://parquet.apache.org/documentation/latest/) ・ファイル形式を `containerFormat` プロパティに使用します。 JSONファイル形式の使用例については、『 [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md)』を参照してください。
 
 **応答**
 
-成功した応答は、HTTP Status 201(Created)と、新しく作成されたデータセットのIDを形式で含む配列で構成される応答オブジェクトを返しま `"@/datasets/{DATASET_ID}"`す。 データセットIDは、API呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。
+正常に完了すると、HTTPステータス201（作成済み）と、新たに作成されたデータセットのIDを形式で含む配列で構成される応答オブジェクトが返され `"@/datasets/{DATASET_ID}"`ます。 データセットIDは、API呼び出しでデータセットを参照するために使用される、読み取り専用の、システム生成の文字列です。
 
 ```JSON
 [
