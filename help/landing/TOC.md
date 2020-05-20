@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platformヘルプ
 translation-type: tm+mt
-source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
+source-git-commit: 2c95e34b56b322f7cfb098b27210dd5242128803
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 34%
 
 ---
 
@@ -24,8 +27,7 @@ source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
    * [Debugger](https://docs.adobe.com/content/help/ja-JP/debugger/using/experience-cloud-debugger.html)
    * [判定サービス](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
    * [宛先](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html)
-   * [ETL（抽出、変換、読み込み）](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
-   * [エクスペリエンスプラットフォームWeb SDK（ベータ版）](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/home.html)
+   * [ETL （抽出、変換、読み込み）](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
    * [ID サービス](https://docs.adobe.com/content/help/en/experience-platform/identity/home.html)
    * [インテリジェントサービス](https://docs.adobe.com/content/help/en/experience-platform/intelligent-services/home.html)
    * [Launch](https://docs.adobe.com/content/help/ja-JP/launch/using/overview.html)
@@ -37,9 +39,10 @@ source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
    * [サンドボックス](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html)
    * [セグメント](https://docs.adobe.com/content/help/en/experience-platform/segmentation/home.html)
    * [ソース（コネクタ）](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
-   * [XDM（エクスペリエンスデータモデル）](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
-* [エクスペリエンスプラットフォームチュートリアル](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
-* [リリースノート](https://docs.adobe.com/content/help/en/experience-platform/release-notes/latest.html)
+   * [Web SDK](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/home.html)
+   * [XDM(Experience Data Model)](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html)
+* [エクスペリエンスプラットフォームのチュートリアル](https://docs.adobe.com/content/help/ja-JP/experience-platform/tutorials/home.html)
+* [リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
 * [用語集](glossary.md)
 * [トラブルシューティングガイド](troubleshooting.md)
 * [APIの基本事項](api-fundamentals.md)
