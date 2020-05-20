@@ -1,10 +1,13 @@
 ---
 title: アドビの宛先
 seo-title: アドビの宛先
-description: Adobe Real-time CDP内のデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理します。
-seo-description: Adobe Real-time CDP内のデータを他のAdobe Experience Cloudソリューションに接続して、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理します。
+description: Adobe Real-time CDP内のデータを他のAdobe Experience Cloudソリューションに結び付け、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理できます。
+seo-description: Adobe Real-time CDP内のデータを他のAdobe Experience Cloudソリューションに結び付け、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理できます。
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+workflow-type: tm+mt
+source-wordcount: '129'
+ht-degree: 46%
 
 ---
 
@@ -24,4 +27,4 @@ Adobe Real-time CDP 内のデータを他の Adobe Experience Cloud ソリュー
 * [Experience Cloud ID サービス拡張機能](/help/rtcdp/destinations/adobe-ecid-extension.md)
 * [Marketo拡張機能](/help/rtcdp/destinations/marketo-extension.md)
 * [Marketo Munchkin 拡張機能](/help/rtcdp/destinations/marketo-munchkin-extension.md)
-* [Marketto Web Personalization Extension](/help/rtcdp/destinations/marketo-web-personalization-extension.md)
+* [Marketto Webパーソナライゼーション拡張機能](/help/rtcdp/destinations/marketo-web-personalization-extension.md)
