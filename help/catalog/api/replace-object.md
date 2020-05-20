@@ -5,15 +5,18 @@ title: オブジェクトの置換
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 2%
 
 ---
 
 
 # オブジェクトの置換
 
-PUTリクエストを使用してCatalogオブジェクトのコンテンツを上書きできます。この場合、リソース全体がリクエストペイロードで置き換えられます。
+PUTリクエストを使用して、Catalogオブジェクトのコンテンツを上書きできます。この場合、リソース全体がリクエストペイロードに置き換えられます。
 
->[!NOTE] カタログオブジェクト内の特定のフィールドのみを更新する必要がある場合は、PATCHリクエストを使用する方が効率的です。
+>[!NOTE] カタログオブジェクト内の特定のフィールドを更新するだけで済む場合は、PATCHリクエストを使用する方が効率的です。
 
 **API形式**
 
@@ -23,12 +26,12 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 置き換えるカタログオブジェクトの種類を指定します。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 置き換えるカタログオブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
-次のリクエストは、ペイロードで指定された値でデータセットを上書きします。
+次のリクエストは、ペイロードに指定された値でデータセットを上書きします。
 
 ```shell
 curl -X PUT \
@@ -53,7 +56,7 @@ curl -X PUT \
 
 **応答**
 
-成功した場合は、上書きされたオブジェクトのIDを含む配列が返されます。 このIDは、PUT要求で送信されたIDと一致する必要があります。 このオブジェクトに対してGETリクエストを実行すると、その詳細が以前のPUTリクエストのペイロードで提供された詳細に置き換えられたことが示されます。
+正常に応答すると、上書きされたオブジェクトのIDを含む配列が返されます。 このIDは、PUT要求で送信されたIDと一致する必要があります。 このオブジェクトに対してGETリクエストを実行すると、その詳細が以前のPUTリクエストのペイロードで提供された詳細に置き換えられたことが示されます。
 
 ```json
 [
