@@ -5,6 +5,9 @@ title: アトリビューションAIの概要
 topic: Attribution AI
 translation-type: tm+mt
 source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+workflow-type: tm+mt
+source-wordcount: '657'
+ht-degree: 1%
 
 ---
 
