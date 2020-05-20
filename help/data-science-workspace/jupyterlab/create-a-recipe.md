@@ -5,6 +5,9 @@ title: Jupyterノートブックを使用してレシピを作成する
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+workflow-type: tm+mt
+source-wordcount: '2333'
+ht-degree: 0%
 
 ---
 
@@ -22,9 +25,9 @@ source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ## JupyterLabノートブック環境の使用を開始する
 
-レシピを一から作成するには、Data Science Workspace内で行います。 開始するには、 [Adobe Experience Platformに移動し](https://platform.adobe.com) 、左側の **[!UICONTROL Notebooks]** タブをクリックします。 JupterLabランチャーからレシピビルダテンプレートを選択して、新しいノートブックを作成します。
+レシピを一から作成するには、Data Science Workspace内で行います。 開始するには、 [Adobe Experience Platform](https://platform.adobe.com) に移動し、左側の「 **[!UICONTROL ノートブック]** 」タブをクリックします。 JupterLabランチャーからレシピビルダテンプレートを選択して、新しいノートブックを作成します。
 
-Recipe Builderノートブックを使用すると、ノートブック内でトレーニングとスコアリングの実行を実行できます。 これにより、トレーニングデータとスコアリングデータの実験を実行する間に、その `train()` 方法と `score()` 方法を柔軟に変更できます。 トレーニングとスコアの出力結果に満足したら、Data Science Workspaceで使用するレシピを作成し、Recipe Builderノートブックに組み込まれているレシピ機能を使用します。
+Recipe Builderノートブックを使用すると、ノートブック内でトレーニングとスコアリングの実行を実行できます。 これにより、トレーニングデータとスコアリングデータの実験を実行する間に、 `train()` および `score()` 方法を柔軟に変更できます。 トレーニングとスコアの出力結果に満足したら、Data Science Workspaceで使用するレシピを作成し、Recipe Builderノートブックに組み込まれているレシピ機能を使用します。
 
 >[!NOTE]
 >Recipe Builderノートブックは、すべてのファイル形式での作業をサポートしていますが、現在のところ、レシピの作成機能はPythonのみをサポートしています。
@@ -33,7 +36,7 @@ Recipe Builderノートブックを使用すると、ノートブック内でト
 
 ランチャーからRecipe Builderノートブックをクリックすると、タブにノートブックが開きます。 ノートブックで使用されるテンプレートは、Python小売売上予測レシピで、 [このパブリック・リポジトリにもあります。](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-ツールバーには、とという3つの追加のアクションがあり **[!UICONTROL Train]**&#x200B;ま **[!UICONTROL Score]** す **[!UICONTROL Create Recipe]**。 これらのアイコンは、Recipe Builderノートブックにのみ表示されます。 これらの操作に関する詳細は、ノートブックでレシピ [を作成した後のトレーニングとスコアリングのセクション](#training-and-scoring) で説明します。
+ツールバーには、 **[!UICONTROL トレイン]**、 **[!UICONTROL スコア]** 、 **[!UICONTROL レシピの]**&#x200B;作成の3つのアクションがあります。 これらのアイコンは、Recipe Builderノートブックにのみ表示されます。 これらの操作に関する詳細は、ノートブックでレシピ [を作成した後のトレーニングとスコアリングのセクション](#training-and-scoring) で説明します。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -440,13 +443,13 @@ def save(configProperties, prediction):
 
 ノートブックの変更が完了し、レシピのトレーニングを行う場合は、バーの上部にある関連ボタンをクリックして、セル内にトレーニングの実施を作成できます。 ボタンをクリックすると、トレーニングスクリプトのコマンドと出力のログがノートブックの( `evaluator.py` セルの下に)表示されます。 Condaは、最初にすべての依存関係をインストールし、その後トレーニングを開始します。
 
-スコアリングを実行する前に、少なくとも1回はトレーニングを実行する必要があります。 ボタンをクリックすると、トレーニング中に生成されたトレーニングモデルにスコアが付けられます。 **[!UICONTROL Run Scoring]** スコアリングスクリプトが下に表示され `datasaver.py`ます。
+スコアリングを実行する前に、少なくとも1回はトレーニングを実行する必要があります。 「 **[!UICONTROL スコアリングを]** 実行」ボタンをクリックすると、トレーニング中に生成されたトレーニングモデルにスコアが付けられます。 スコアリングスクリプトが下に表示され `datasaver.py`ます。
 
 デバッグの目的で、非表示の出力を確認する場合は、出力セル `debug` の末尾にを追加し、再実行します。
 
 ## レシピの作成 {#create-recipe}
 
-レシピの編集が完了し、トレーニング/スコアリングの出力に満足したら、右上のナビゲーションを押して、ノートブックからレシピ **[!UICONTROL Create Recipe]** を作成できます。
+レシピの編集が完了し、トレーニング/スコアリング出力に満足したら、右上のナビゲーションにある「レシピの **[!UICONTROL 作成]** 」を押して、ノートブックからレシピを作成できます。
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -454,7 +457,7 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-押すと、 **[!UICONTROL Ok]** Adobe Experience Platform [の新しいレシピに移動できます](https://platform.adobe.com/)。 ボタンをクリックする **[!UICONTROL View Recipes]****[!UICONTROL Recipes]** と、「 **[!UICONTROL ML Models]**
+「 **[!UICONTROL OK]** 」を押すと、 [Adobe Experience Platformの新しいレシピに移動できます](https://platform.adobe.com/)。 [ **[!UICONTROL 表示レシピ]** ]ボタンをクリックすると、[ **[!UICONTROL MLモデル]** ]の[ **[!UICONTROL レシピ]タブに移動できます。]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
