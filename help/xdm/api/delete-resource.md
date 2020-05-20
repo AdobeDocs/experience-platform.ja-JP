@@ -5,13 +5,16 @@ title: リソースの削除
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: d9ab2b1226b051be43f8fc0dd222bc075caed6f0
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 7%
 
 ---
 
 
 # リソースの削除
 
-リソースレジストリからリソースを削除(DELETE)する必要が生じる場合があります。 削除できるのは、テナントリソースで作成したコンテナのみです。 これは、削除するリソースのを使用してDELETE `$id` リクエストを実行することで行われます。
+スキーマレジストリからリソースを削除(DELETE)する必要がある場合があります。 テナントコンテナで作成したリソースのみを削除できます。 これは、削除するリソース `$id` のDELETEリクエストを実行することで行います。
 
 **API形式**
 
@@ -21,12 +24,12 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | リソースライブラリから削除するスキーマの種類。 有効なタイプは、、、、お `datatypes`よびの `mixins`いず `schemas`れかです `classes`。 |
-| `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリ `meta:altId` ソースのURIです。 |
+| `{RESOURCE_TYPE}` | スキーマライブラリから削除するリソースの種類です。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
+| `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
 
 **リクエスト**
 
-DELETE要求には、Acceptヘッダーは不要です。
+DELETE要求には、Acceptヘッダーは必要ありません。
 
 ```SHELL
 curl -X DELETE \
@@ -39,6 +42,6 @@ curl -X DELETE \
 
 **応答**
 
-成功した応答は、HTTPステータス204（コンテンツなし）と空白の本文を返します。
+応答が成功すると、HTTPステータス204（コンテンツなし）と空白の本文が返されます。
 
-リソースに対してルックアップ(GET)リクエストを試行すると、削除を確認できます。 リソースがスキーマレジストリから削除されているので、Acceptヘッダーを要求に含める必要がありますが、HTTPステータス404 (Not Found)を受け取る必要があります。
+リソースに対してルックアップ(GET)要求を試行すると、削除を確認できます。 Acceptヘッダーを要求に含める必要がありますが、リソースがスキーマレジストリから削除されたので、HTTPステータス404 （見つかりません）を受け取る必要があります。
