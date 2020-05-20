@@ -5,6 +5,9 @@ title: 顧客 AI の概要
 topic: Customer AI overview
 translation-type: tm+mt
 source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+workflow-type: tm+mt
+source-wordcount: '489'
+ht-degree: 25%
 
 ---
 
