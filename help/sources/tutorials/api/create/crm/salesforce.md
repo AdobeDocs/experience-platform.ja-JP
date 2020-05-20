@@ -5,69 +5,72 @@ title: フローサービスAPIを使用したSalesforceコネクタの作成
 topic: overview
 translation-type: tm+mt
 source-git-commit: cc999ce1ab426f412c0cc2b69173a336a14024f3
+workflow-type: tm+mt
+source-wordcount: '734'
+ht-degree: 1%
 
 ---
 
 
 # フローサービスAPIを使用したSalesforceコネクタの作成
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、サポートされるすべてのソースを接続できるユーザーインターフェイスとRESTful APIを提供します。
+フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、フローサービスAPIを使用して、CRMデータを収集するためにPlatformをSalesforceアカウントに接続する手順を説明します。
+このチュートリアルでは、フローサービスAPIを使用して、CRMデータを収集するためのSalesforceアカウントにプラットフォームを接続する手順を説明します。
 
-エクスペリエンスプラットフォームでユーザーインターフェイスを使用する場合、 [DynamicsまたはSalesforceソースコネクタのUIチュートリアルでは](../../../ui/create/crm/dynamics-salesforce.md) 、同様の操作を実行するための手順を順を追って説明します。
+エクスペリエンスプラットフォームでユーザーインターフェイスを使用したい場合は、 [DynamicsまたはSalesforceソースコネクタのUIチュートリアル](../../../ui/create/crm/dynamics-salesforce.md) に、同様の操作を実行するための手順が順を追って説明されています。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントに関する作業を理解している必要があります。
+このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
-* [資料](../../../../home.md):エクスペリエンスプラットフォームを使用すると、様々なソースからデータを取り込みながら、プラットフォームサービスを使用して受信データの構造化、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md):Experience Platformは、デジタルエクスペリエンスアプリケーションの開発と発展を支援するために、単一のプラットフォームインスタンスを別々の仮想環境に分割する仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むと同時に、プラットフォームサービスを使用して、入力データの構造、ラベル付け、拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-次の節では、フローサービスAPIを使用してPlatformをSalesforceアカウントに正常に接続するために知っておく必要がある追加情報を示します。
+Flow Service APIを使用してPlatformをSalesforceアカウントに正しく接続するために知っておく必要がある追加情報については、以下の節に説明します。
 
 ### 必要な資格情報の収集
 
 フローサービスがSalesforceに接続するには、次の接続プロパティの値を指定する必要があります。
 
-| 資格情報 | 説明 |
+| Credential | 説明 |
 | ---------- | ----------- |
 | `environmentUrl` | SalesforceソースインスタンスのURL。 |
 | `username` | Salesforceユーザーアカウントのユーザー名。 |
 | `password` | Salesforceユーザーアカウントのパスワード。 |
 | `securityToken` | Salesforceユーザーアカウントのセキュリティトークン。 |
 
-使い始める方法の詳細については、このSalesforce [ドキュメント](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)。
+開始方法の詳細については、 [このSalesforceドキュメントを参照してください](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を示します。 これには、パス、必須ヘッダー、適切にフォーマットされたリクエストペイロードが含まれます。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、エクスペリエンスプラットフォームのトラブルシューテ [ィングガイドのAPI呼び出し例の読み方に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) （英語のみ）を参照してください。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず認証チュートリアルを完了する必要 [があります](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのエクスペリエンスプラットフォームAPI呼び出しで必要な各ヘッダーの値を入力します。
+プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
 
-* 認証：無記名 `{ACCESS_TOKEN}`
+* 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-フローサービスに属するリソースを含む、エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platformのすべてのリソース（Flow Serviceに属するリソースを含む）は、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 ペイロード(POST、PUT、PATCH)を含むすべての要求には、追加のメディアタイプヘッダーが必要です。
 
-* コンテンツタイプ： `application/json`
+* Content-Type: `application/json`
 
 ## 接続仕様の検索
 
-PlatformをSalesforceアカウントに接続する前に、Salesforce用の接続仕様が存在することを確認する必要があります。 接続仕様が存在しない場合は、接続を確立できません。
+プラットフォームをSalesforceアカウントに接続する前に、Salesforce用の接続仕様が存在することを確認する必要があります。 接続仕様が存在しない場合は、接続を確立できません。
 
-使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GETリクエストを実行し、接続パラメーターを使用して、Salesforceの接続仕様をクエリできます。
+使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GETリクエストを実行し、クエリパラメータを使用して、Salesforceの接続仕様を検索できます。
 
 **API形式**
 
-GETリクエストをクエリパラメータなしで送信すると、使用可能なすべてのソースの接続指定が返されます。 この情報を含めて、Salesforce専用のクエリ `property=name=="salesforce"` を取得することができます。
+クエリパラメータを指定せずにGET要求を送信すると、使用可能なすべてのソースの接続仕様が返されます。 このクエリを含めて、Salesforce専用 `property=name=="salesforce"` の情報を取得できます。
 
 ```http
 GET /connectionSpecs
@@ -89,7 +92,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、一意の識別子(`id`)を含むSalesforceの接続仕様を返します。 このIDは、次の手順でベース接続を作成する際に必要です。
+正常に応答すると、固有の識別子(`id`)を含むSalesforceの接続仕様が返されます。 このIDは、次の手順でベース接続を作成する際に必要となります。
 
 ```json
 {
@@ -140,7 +143,7 @@ curl -X GET \
 }
 ```
 
-## ベース接続の作成
+## ベース接続を作成する
 
 ベース接続はソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するのに使用できるので、Salesforceアカウントごとに1つのベース接続が必要です。
 
@@ -182,14 +185,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.username` | Salesforceアカウントに関連付けられているユーザー名。 |
+| `auth.params.username` | Salesforceアカウントに関連付けられているユーザ名。 |
 | `auth.params.password` | Salesforceアカウントに関連付けられているパスワード。 |
 | `auth.params.securityToken` | Salesforceアカウントに関連付けられているセキュリティトークン。 |
-| `connectionSpec.id` | 前の手順で取 `id` 得したSalesforceアカウントの接続指定。 |
+| `connectionSpec.id` | 前の手順で取得 `id` したSalesforceアカウントの接続仕様。 |
 
 **応答**
 
-成功した応答には、ベース接続の一意の識別子(`id`)が含まれます。 このIDは、次のチュートリアルでデータを調べるために必要です。
+成功した応答には、ベース接続の固有な識別子(`id`)が含まれます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -200,4 +203,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、APIを使用してSalesforceアカウントのベース接続を作成し、応答本文の一部として一意のIDを取得できます。 この基本接続IDは、次のチュートリアルでフローサービスAPIを使用してCRMシ [ステムを調査する方法を学ぶ際に使用できます](../../explore/crm.md)。
+このチュートリアルに従うと、APIを使用してSalesforceアカウントの基本接続を作成し、一意のIDを応答本文の一部として取得できます。 Flow Service APIを使用してCRMシステムを [調査する方法について学習する際に、次のチュートリアルでこの基本接続IDを使用できます](../../explore/crm.md)。
