@@ -5,13 +5,16 @@ title: データセットの作成
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: a25ca22fb8ec9eb95f74e4fd76a7f18e87343085
+workflow-type: tm+mt
+source-wordcount: '87'
+ht-degree: 4%
 
 ---
 
 
 # バッチの作成
 
-データセットにデータを取り込むには、データセットにバッチが関連付けられている必要があります。 既存のデー `id` タセットの値を使用して、カタログAPIのエンドポイントにPOSTリクエストを作成することで、バ `/batches` ッチを作成できます。
+データセットがデータを取り込むには、データセットにバッチが関連付けられている必要があります。 既存のデータセットの `id` 値を使用して、カタログAPIのエンドポイントにPOSTリクエストを行うことで、バッチを作成でき `/batches` ます。
 
 **API形式**
 
@@ -36,11 +39,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `datasetId` | バッ `id` チが関連付けられるデータセットの名前。 |
+| `datasetId` | バッチ `id` が関連付けられるデータセットの名前。 |
 
 **応答**
 
-成功した応答は、HTTP Status 201(Created)と、新しく作成されたバッチの詳細（読み取り専用の、システムで生成された文字列を含む） `id`を含む応答オブジェクトを返します。
+正常な応答は、HTTPステータス201（作成済み）と、新しく作成されたバッチの詳細（読み取り専用の、システムで生成された文字列を含む） `id`を含む応答オブジェクトを返します。
 
 ```JSON
 {
