@@ -1,23 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: データセットの参加
+title: データセットの結合
 topic: queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '53'
+ht-degree: 3%
 
 ---
 
 
-# データセットの参加
+# データセットの結合
 
-データセットを結合すると、他のデータセットのデータをデータに含めることができます。クエリ この例では、カスタムのオペレーティングシステムデータセットを使用して、を値にマ `operatingsystemID` ッピングして `operatingsystem` います。
+データセットを結合すると、クエリに他のデータセットのデータを含めることができます。 次の例では、カスタムのオペレーティングシステムデータセットを使用して、を `operatingsystemID``operatingsystem` 値にマッピングします。
 
 データセット:
 - your_analytics_table
 - custom_operating_system_lookup
 
-上位50のオペ `SELECT` レーティングシステムに関する文をページ表示数別に作成
+上位50オペレーティングシステムに関する `SELECT` 文を、ページ表示数別に作成します。
 
 ```sql
 SELECT 
