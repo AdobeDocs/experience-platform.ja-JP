@@ -5,6 +5,9 @@ description: Experience Platform Web SDK でアプリ内ブラウザーをサポ
 seo-description: Experience Platform Web SDK でアプリ内ブラウザーをサポートする方法について説明します
 translation-type: tm+mt
 source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 100%
 
 ---
 
