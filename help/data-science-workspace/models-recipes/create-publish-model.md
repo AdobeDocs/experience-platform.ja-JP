@@ -5,6 +5,9 @@ title: 機械学習モデルのチュートリアルを作成して公開する
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '1596'
+ht-degree: 0%
 
 ---
 
@@ -53,9 +56,9 @@ Adobe Experience Platform Data Science Workspaceは、事前に組み込まれ�
 
 ### データを調べ、スキーマを理解する
 
-1. [Adobe Experience Platform](https://platform.adobe.com/)**[!UICONTROL Datasets]** にログインし、をクリックして既存のデータセットをすべてリストし、調査するデータセットを選択します。 この場合、Analyticsデータセット **ゴールデンデータセットのpostValues**。
+1. [Adobe Experience Platform](https://platform.adobe.com/) にログインし、「 **[!UICONTROL Datasets]** 」をクリックして既存のデータセットをすべてリストし、調査するデータセットを選択します。 この場合、Analyticsデータセット **ゴールデンデータセットのpostValues**。
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. 右上 **[!UICONTROL Preview Dataset]** 付近にあるを選択し、サンプルレコードを確認してから、をクリックし **[!UICONTROL Close]**ます。
+2. 右上近くにある **[!UICONTROL プレビューデータセット]** (Dataset **[!UICONTROL )を選択し、サンプルレコードを調べてから、「]**閉じる」をクリックします。
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
 3. 右側のパネルの「スキーマ」の下にあるリンクを選択して、データセットのスキーマを表示し、データセットの詳細ページに戻ります。」
    ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
@@ -76,11 +79,11 @@ Data Science Workspaceのライフサイクルの2番目の要素は、レシピ
 
 ### 商品レコメンデーションレシピの参照
 
-1. Adobe Experience Platformで左のナビゲーション列に移動し、上部 **[!UICONTROL Models]****[!UICONTROL Recipes]** のをクリックして、組織で使用可能なレシピのリストを表示します。
+1. Adobe Experience Platformで、左のナビゲーション列から「 **[!UICONTROL モデル]** 」に移動し、上部の「 **[!UICONTROL レシピ]** 」をクリックして、組織で使用可能なレシピのリストを表示します。
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. 名前をクリックして、提供された **[!UICONTROL Recommendations Recipe]** ファイルを探して開きます。
+2. 指定された **[!UICONTROL Recommendationsレシピを探して開きます]** 。レコメンデーションレシピ名はクリックします。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 右側のレールで、をクリックして、レシピの電源 **[!UICONTROL Recommendations Input Schema]** が入っているスキーマを表示します。 スキーマフィールド **[!UICONTROL itemId]** と **[!UICONTROL userId]** は、特定の時刻(**[!UICONTROL interactionType]**)にその顧客が購入した商品(**[!UICONTROL timestamp]**)に対応します。 同じ手順に従って、のフィールドを確認し **[!UICONTROL Recommendations Output Schema]**ます。
+3. 右側のパネルで、「 **[!UICONTROL Recommendations入力スキーマ]** 」をクリックして、レシピを実行するスキーマを表示します。 スキーマフィールド **[!UICONTROL itemId]** と **[!UICONTROL userId]** は、特定の時刻(**[!UICONTROL timestamp)に、その顧客が購入した商品(]** interactionType ****)に対応します。 同じ手順に従って、 **[!UICONTROL Recommendationsの出力スキーマのフィールドを確認します]**。
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 これで、商品レコメンデーションレシピで必要な入出力スキーマを確認しました。 次のセクションに進み、商品レコメンデーションモデルの作成、トレーニング、評価の方法を見つけることができます。
@@ -93,13 +96,13 @@ Data Science Workspaceのライフサイクルの2番目の要素は、レシピ
 
 モデルはレシピのインスタンスで、データをスケールでトレーニングし、スコアを付けることができます。
 
-1. Adobe Experience Platformで、左のナビゲーション列に移動し、ページ上部のをクリックして、組織で使用可能なすべてのレシピのリスト **[!UICONTROL Models]****[!UICONTROL Recipes]** を表示します。
+1. Adobe Experience Platformで、左のナビゲーション列から「 **[!UICONTROL モデル]** 」に移動し、ページ上部の「 **[!UICONTROL レシピ]** 」をクリックして、組織で使用可能なすべてのレシピのリストを表示します。
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. 表示されたレシピを見つけて開きます。そ **[!UICONTROL Recommendations Recipe]** のレシピの名前をクリックし、レシピの概要ページを入力します。 中央（既存のモデルがない場合） **[!UICONTROL Create a Model]** または「レシピの概要」ページの右上にあるをクリックします。
+2. レコメンデーションレシピを探して開きます **** 。レコメンデーションレシピの名前をクリックし、レシピの概要ページを入力します。 中央から（既存のモデルがない場合）またはレシピ概要ページの右上から **** 、「モデルを作成」をクリックします。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. トレーニングに使用できる入力データセットのリストが表示されます。を選択し、 **[!UICONTROL Recommendations Input Dataset]** をクリックし **[!UICONTROL Next]**ます。
+3. トレーニングに使用できる入力データセットのリストを示します。「 **[!UICONTROL Recommendations入力データセット]** 」を選択し、「 **[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. モデルの名前を指定します（例：「商品レコメンデーションモデル」）。 モデルに使用可能な設定が一覧表示されます。この設定には、モデルのデフォルトのトレーニングおよびスコアリング動作の設定が含まれます。 これらの設定は組織に固有なので、変更は必要ありません。 設定を確認し、をクリックし **[!UICONTROL Finish]**ます。
+4. モデルの名前を指定します（例：「商品レコメンデーションモデル」）。 モデルに使用可能な設定が一覧表示されます。この設定には、モデルのデフォルトのトレーニングおよびスコアリング動作の設定が含まれます。 これらの設定は組織に固有なので、変更は必要ありません。 設定を確認し、「 **[!UICONTROL 完了]**」をクリックします。
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. モデルが作成され、新しく生成されたトレーニング実行内にモデルの *概要* ページが表示されます。 モデルが作成されると、デフォルトでトレーニング実行が生成されます。
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -108,13 +111,13 @@ Data Science Workspaceのライフサイクルの2番目の要素は、レシピ
 
 ### カスタムハイパーパラメータを使用してモデルをトレーニングする
 
-1. 「 *モデルの概要* 」ページで、右上の **[!UICONTROL Train]** 近くにあるをクリックして、新しいトレーニング実行を作成します。 モデルの作成時に使用したのと同じ入力データセットを選択し、をクリックし **[!UICONTROL Next]**ます。
+1. [ *モデルの概要* ]ページで、右上の **[!UICONTROL [トレーニング]** ]をクリックして、新しいトレーニング経路を作成します。 モデルの作成時に使用したのと同じ入力データセットを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. 「 *設定* 」ページが表示されます。 ここで、トレーニングの実行の **[!UICONTROL num_recommendations]** 値（ハイパーパラメーターとも呼ばれる）を設定できます。 トレーニングを受け、最適化されたモデルは、トレーニングの実行結果に基づいて、パフォーマンスの最も優れたハイパーパラメータを利用します。
+2. 「 *設定* 」ページが表示されます。 ここで、トレーニング実行の **[!UICONTROL num_recommendations]** 値（Hyperparameterとも呼ばれます）を設定できます。 トレーニングを受け、最適化されたモデルは、トレーニングの実行結果に基づいて、パフォーマンスの最も優れたハイパーパラメータを利用します。
 
    ハイパーパラメータは学習できないため、トレーニングを実行する前に割り当てる必要があります。 ハイパーパラメータを調整すると、トレーニングを受けたモデルの精度が変わる場合があります。 モデルの最適化は反復的なプロセスなので、十分な評価を得る前に、複数のトレーニングの実行が必要になる場合があります。
 
-   >[!TIP] 10 **[!UICONTROL num_recommendations]** に設定します。
+   >[!TIP] num_recommendations **[!UICONTROL を10に設定します]** 。
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. 新しいトレーニングの実行が完了すると、モデル評価グラフに追加のデータポイントが表示されます。これには数分かかる場合があります。
@@ -137,12 +140,12 @@ Data Science Workspaceのライフサイクルの2番目の要素は、レシピ
 ### スコアを算出し、インサイトを生成する
 
 1. 商品レコメンデーションモデル *の概要* ページで、最もパフォーマンスの高いトレーニング実行の名前をクリックし、最も再現率と精度の高い値を入力します。
-2. トレーニングの実行の詳細ページの右上にあるをクリックし **[!UICONTROL Score]**&#x200B;ます。
-3. スコアリング入力データセット **[!UICONTROL Recommendations Input Dataset]** としてを選択します。これは、モデルの作成時に使用したデータセットと同じで、モデルのトレーニング実行を行ったデータセットです。 Then, click **[!UICONTROL Next]**.
+2. トレーニングの実行の詳細ページの右上にある「 **[!UICONTROL スコア]**」をクリックします。
+3. スコアリング入力データセットとして **[!UICONTROL Recommendations入力データセット]** を選択します。これは、モデルの作成時に使用したものと同じデータセットで、トレーニングの実行を行います。 Then, click **[!UICONTROL Next]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. スコアリング出力データセット **[!UICONTROL Recommendations Output Dataset]** として「」を選択します。 スコアリング結果は、このデータセットにバッチとして保存されます。
+4. スコアリング出力データセットとして **[!UICONTROL Recommendations出力データセット]** を選択します。 スコアリング結果は、このデータセットにバッチとして保存されます。
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5. スコア設定を確認します。 これらのパラメーターには、前に選択した入出力データセットと適切なスキーマーが含まれます。 をクリック **[!UICONTROL Finish]** して、スコアリングの実行を開始します。 実行が完了するまでに数分かかる場合があります。
+5. スコア設定を確認します。 これらのパラメーターには、前に選択した入出力データセットと適切なスキーマーが含まれます。 「 **[!UICONTROL 完了]** 」をクリックして、スコアリングの実行を開始します。 実行が完了するまでに数分かかる場合があります。
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
@@ -150,9 +153,9 @@ Data Science Workspaceのライフサイクルの2番目の要素は、レシピ
 
 スコアリングの実行が正常に完了すると、生成されたインサイトの結果と表示をプレビューできます。
 
-1. スコアリングの実行ページで、完了したスコアリングの実行をクリックし、右側のパネル **[!UICONTROL Preview Scoring Results Dataset]** のをクリックします。
+1. スコアリングの実行ページで、完了したスコアリングの実行をクリックし、右側のレールの「 **[!UICONTROL プレビュースコアリング結果データセット]** 」をクリックします。
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. プレビュー表の各行には、特定の顧客に対する商品レコメンデーションが含まれ、それぞれ「」および「」とラベルが付けら **[!UICONTROL recommendations]** れ **[!UICONTROL userId]** ています。 サンプルのスクリーンショットでは **[!UICONTROL num_recommendations]** Hyperparameterが10に設定されているので、レコメンデーションの各行には、番号記号(#)で区切られた最大10個の製品IDを含めることができます。
+2. プレビュー表の各行には、特定の顧客に対する商品レコメンデーションが含まれています。この商品レコメンデーションには、 **[!UICONTROL recommendations]** 、 **[!UICONTROL userId]** というラベルがそれぞれ付けられています。 サンプルのスクリーンショットでは **[!UICONTROL num_recommendations]** Hyperparameterが10に設定されているので、レコメンデーションの各行には、番号記号(#)で区切られた最大10個の製品IDを含めることができます。
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## 次の手順 {#next-steps}
