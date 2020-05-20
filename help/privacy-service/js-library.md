@@ -5,46 +5,49 @@ title: アドビプライバシーJavaScriptライブラリの概要
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b916ac5529db6ca383bf8bad56961bb1b8a0b0c
+workflow-type: tm+mt
+source-wordcount: '972'
+ht-degree: 5%
 
 ---
 
 
 # アドビプライバシーJavaScriptライブラリの概要
 
-データプロセッサーとして、アドビでは、お客様の許可と指示に従って個人会社を処理します。 データ管理者であるお客様は、アドビに処理および保管を委任する個人データを決めます。Adobe Experience Cloudソリューションを通じて送信する情報に応じて、アドビは、General Data Protection Regulation(GDPR)やCalifornia Consumer Privacy Act(CCPA)などのプライバシー規制に適用される個人情報を保存できます。 Experience Cloudソリューションがプライベ [ートデータを収集する方法について詳しくは、Adobe Experience Cloudのプライバシーに関するドキュメント](https://www.adobe.com/privacy/marketing-cloud.html) （英語）を参照してください。
+Adobeは、データ処理装置として、会社の権限および指示に従って個人データを処理します。 データ管理者であるお客様は、アドビに処理および保管を委任する個人データを決めます。Adobe Experience Cloudソリューションで送信する情報に応じて、アドビは、General Data Protection Regulation(GDPR)やCalifornia Consumer Privacy Act(CCPA)などのプライバシー規制に適用される個人情報を保存できます。 Experience Cloudソリューションがプライベートデータを収集する方法について詳しくは、Adobe Experience Cloud [のプライバシーに関するドキュメントを参照してください](https://www.adobe.com/privacy/marketing-cloud.html) 。
 
-データコ **ントローラーは** 、AdobeプライバシーJavaScriptライブラリを使用して、特定のドメインに対してExperience Cloudソリューションで生成されたすべてのデータの件名のIDを取得できます。 これらのIDは、 [Adobe Experience Platformプライバシーサービスが提供するAPIを使用して](home.md)、データサブジェクトに属するプライベートデータに対するアクセスおよび削除のリクエストを作成する際に使用できます。
+データコントローラーは、 **AdobeプライバシーJavaScriptライブラリ** （JavaScriptライブラリ）を使用して、特定のドメイン用にExperience Cloudソリューションで生成されたすべてのデータ件名IDの取得を自動化できます。 これらのIDは、 [Adobe Experience Platformプライバシーサービスが提供するAPIを使用して](home.md)、データサブジェクトに属するプライベートデータに対するアクセス要求や削除要求を作成できます。
 
 >[!NOTE] プライバシーJSライブラリは、通常、プライバシー関連のページにのみインストールする必要があり、Webサイトやドメインのすべてのページにインストールする必要はありません。
 
 ## 関数
 
-プライバシーJSライブラリは、プライバシーサービスでIDを管理するための機能をいくつか提供します。 これらの関数は、特定のブラウザー用にブラウザーに保存されるIDの管理にのみ使用できます。訪問者 Experience Cloud Central Serviceに情報を直接送信するために使用することはできません。
+プライバシーJSライブラリは、プライバシーサービスでIDを管理するための機能をいくつか提供します。 これらの関数は、特定の訪問者用にブラウザーに保存されているIDの管理にのみ使用できます。 Experience Cloud Central Serviceに直接情報を送信する場合は使用できません。
 
 次の表に、ライブラリが提供する様々な機能の概要を示します。
 
 | 関数 | 説明 |
 | --- | --- |
-| `retrieveIdentities` | プライバシーサービスから取得した一致するID(`validIds`)と、見つからなかったIDの配列(`failedIds`)を返します。 |
-| `removeIdentities` | 一致する（有効な）各IDをブラウザーから削除します。 一致するID(`validIds`)の配列を返します。各IDには、このIDが削除さ `isDeleteClientSide` れたかどうかを示すブール値が含まれます。 |
-| `retrieveThenRemoveIdentities` | 一致するIDの配列(`validIds`)を取得し、ブラウザーからそれらのIDを削除します。 この関数はと似ていますが、削除が可能な場合（削除要求で提供する前に一意の識別子を取得する必要がある場合など）に、使用するAdobeソリューションでアクセス要求が必要な場合に最も適しています。 `removeIdentities` |
+| `retrieveIdentities` | プライバシーサービスから取得された一致するID(`validIds`)の配列と、見つからなかったIDの配列(`failedIds`)を返します。 |
+| `removeIdentities` | 一致する（有効な）各IDをブラウザーから削除します。 一致するID(`validIds`)の配列を返します。各IDには、このIDが削除されたかどうかを示す `isDeleteClientSide` ブール値が含まれます。 |
+| `retrieveThenRemoveIdentities` | 一致するIDの配列(`validIds`)を取得し、ブラウザーからそれらのIDを削除します。 この関数はと似ていますが `removeIdentities`、削除が可能な場合（削除要求で提供する前に一意の識別子を取得する必要がある場合など）に、使用するAdobeソリューションでアクセス要求が必要な場合に使用するのが最適です。 |
 
->[!NOTE] また、ブ `removeIdentities``retrieveThenRemoveIdentities` ラウザーからIDを削除するのは、IDをサポートする特定のアドビソリューションのIDのみです。 例えば、Adobeオーディエンスマネージャーではサードパーティcookieに保存されているdemdex IDは削除せず、アドビのターゲットではIDを保存しているすべてのcookieが削除されます。
+>[!NOTE] `removeIdentities` また、IDをサポートする特定のアドビソリューションのIDのみをブラウザーから削除し `retrieveThenRemoveIdentities` ます。 例えば、Adobeオーディエンスマネージャーでは、サードパーティcookieに保存されているdemdex IDは削除されませんが、Adobeターゲットでは、IDが保存されているすべてのcookieを削除します。
 
-3つの関数はすべて非同期プロセスを表すので、取得したIDはコールバックまたはプロミスを使用して処理する必要があります。
+3つの関数はすべて非同期プロセスを表すので、取得したIDはすべてコールバックまたは約束を使用して処理する必要があります。
 
 
 ## 設置
 
-プライバシーJSライブラリを使用して開始を行うには、次のいずれかの方法を使用して、コンピューターにインストールする必要があります。
+プライバシーJSライブラリを使用して開始を行うには、次のいずれかの方法を使用して、JSライブラリをマシンにインストールする必要があります。
 
 * 次のコマンドを実行して、npmを使用してインストールします。 `npm install @adobe/adobe-privacy`
-* Adobe Launch Extensionを `AdobePrivacy`
+* 名前の下にAdobe Launch Extensionを使用 `AdobePrivacy`
 * https://github.com/Adobe-Marketing-Cloud/adobe-privacyからダウンロ [ード](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## プライバシーJSライブラリのインスタンス化
 
-プライバシーJSライブラリを利用するすべてのアプリでは、新しいオブジェクトをインスタンス化する必要があ `AdobePrivacy` ります。このオブジェクトは、特定のアドビソリューションに設定する必要があります。 例えば、Adobe Analyticsのインスタンス化は次のようになります。
+プライバシーJSライブラリを利用するすべてのアプリでは、新しい `AdobePrivacy` オブジェクトをインスタンス化する必要があります。このオブジェクトは、特定のアドビソリューションに設定する必要があります。 例えば、Adobe Analyticsのインスタンス化は次のようになります。
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -56,19 +59,19 @@ var adobePrivacy = new AdobePrivacy({
 });
 ```
 
-様々なアドビソリューションでサポートされるリストの完全なパラメーターについては、サポートされるアドビソリューション設定パラメーターに関する付録 [の節を参照してくださ](#adobe-solution-configuration-parameters)い。
+様々なアドビソリューションでサポートされるパラメーターの完全なリストについては、サポートされる [Adobeソリューション設定パラメーターに関する付録の節を参照してください](#adobe-solution-configuration-parameters)。
 
 ## コードサンプル
 
-LaunchまたはDTMを使用していない場合を除き、次のコードサンプルで、いくつかの一般的なシナリオでプライバシーJSライブラリを使用する方法を示します。
+LaunchまたはDTMを使用しない場合を除き、次のコードサンプルで、いくつかの一般的なシナリオでプライバシーJSライブラリを使用する方法を示します。
 
 ### Retrieve identities
 
-この例は、Experience CloudからIDのリストを取得する方法を示します。
+この例は、Experience CloudからIDのリストを取得する方法を示しています。
 
 #### JavaScript
 
-次のコードは、で取得したIDを `handleRetrievedIDs`処理するコールバックまたは約束として使用する関数を定義しま `retrieveIdentities`す。
+次のコードは、によって取得されたIDを処理するコールバック `handleRetrievedIDs`として使用する関数、またはを定義 `retrieveIdentities`します。
 
 ```javascript
 function handleRetrievedIDs(ids) {
@@ -86,11 +89,11 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 | 変数 | 説明 |
 | --- | --- |
 | `validIds` | 正常に取得されたすべてのIDを含むJSONオブジェクト。 |
-| `failedIDs` | プライバシーサービスから取得されなかった、または見つからなかったすべてのIDを含むJSONオブジェクト。 |
+| `failedIDs` | プライバシーサービスから取得されなかった、または見つからなかったIDをすべて含むJSONオブジェクト。 |
 
 #### 結果
 
-コードが正常に実行された場合は、取 `validIDs` 得したIDのリストが入力されます。
+コードが正常に実行されると、取得したID `validIDs` のリストが入力されます。
 
 ```json
 {
@@ -113,11 +116,11 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 
 ### Remove identities
 
-この例は、ブラウザーからIDのリストを削除する方法を示します。
+この例は、IDのリストをブラウザーから削除する方法を示しています。
 
 #### JavaScript
 
-次のコードは、がブラウザーから削除さ `handleRemovedIDs`れた後に取得したIDを処理するコールバックまたは約束として使用する `removeIdentities` 関数を定義します。
+次のコードは、がブラウザーから削除さ `handleRemovedIDs`れた後に取得したIDを処理するコールバックとして使用する関数、または約束する関数 `removeIdentities` を定義します。
 
 ```javascript
 function handleRemovedIDs(ids) {
@@ -135,11 +138,11 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | 変数 | 説明 |
 | --- | --- |
 | `validIds` | 正常に取得されたすべてのIDを含むJSONオブジェクト。 |
-| `failedIDs` | プライバシーサービスから取得されなかった、または見つからなかったすべてのIDを含むJSONオブジェクト。 |
+| `failedIDs` | プライバシーサービスから取得されなかった、または見つからなかったIDをすべて含むJSONオブジェクト。 |
 
 #### 結果
 
-コードが正常に実行された場合は、取 `validIDs` 得したIDのリストが入力されます。
+コードが正常に実行されると、取得したID `validIDs` のリストが入力されます。
 
 ```json
 {
@@ -164,38 +167,38 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 ## 次の手順
 
-このドキュメントを読むと、プライバシーJSライブラリのコア機能が紹介されます。 ライブラリを使用してIDのリストを取得した後、これらのIDを使用して、プライバシーサービスAPIへのデータアクセスを作成したり、リクエストを削除したりできます。 詳しくは、「 [Privacy Service Developer Guide](api/getting-started.md) 」を参照してください。
+このドキュメントを読むと、プライバシーJSライブラリのコア機能が紹介されます。 ライブラリを使用してIDのリストを取得した後、これらのIDを使用してPrivacy Service APIへのデータアクセスおよび削除要求を作成できます。 詳しくは、「 [プライバシーサービス開発者ガイド](api/getting-started.md) 」を参照してください。
 
 ## 付録
 
-ここでは、プライバシーJSライブラリの使用に関する補足情報を説明します。
+この節では、プライバシーJSライブラリの使用に関する補足情報を説明します。
 
 ### アドビのソリューション設定パラメーター
 
-次に、AdobePrivacyオブジェクトをインスタンス化する際に使用される、サポートされるAdobeソリューションで受け入れら [れる設定パラメーターを示します](#instantiate-the-privacy-js-library)。
+以下は、AdobePrivacyオブジェクトを [インスタンス化する際に使用される、サポートされるAdobeソリューションで使用できる設定パラメーターのリストです](#instantiate-the-privacy-js-library)。
 
 **Adobe Analytics**
 
 | パラメーター | 説明 |
 | --- | --- |
-| `cookieDomainPeriods` | cookie追跡用のドメイン内のピリオド数（デフォルトは2）。 |
-| `dataCenter` | アドビのデータ収集データセンター。 これは、JavaScript Webビーコンで指定されている場合にのみ含める必要があります。 次の値が考えられます。 <ul><li>&quot;d1&quot;:サンノゼデータセンター。</li><li>&quot;d2&quot;:ダラスデータセンター。</li></ul> |
-| `reportSuite` | JavaScript Webビーコンで指定されたレポートスイートID（「s_code.js」や「dtm」など）。 |
+| `cookieDomainPeriods` | cookieトラッキング用のドメイン内のピリオド数（デフォルトは2）。 |
+| `dataCenter` | アドビのデータ収集データセンター。 これは、JavaScript Webビーコンで指定されている場合にのみ含める必要があります。 有効な値は次のとおりです。 <ul><li>&quot;d1&quot;: サンノゼデータセンター。</li><li>&quot;d2&quot;: ダラスデータセンター。</li></ul> |
+| `reportSuite` | JavaScript Webビーコンで指定されたレポートスイートID（「s_code.js」や「dtm」など） |
 | `trackingServer` | データ収集ドメイン（SSL以外）。 これは、JavaScript Webビーコンで指定されている場合にのみ含める必要があります。 |
 | `trackingServerSecure` | データ収集ドメイン(SSL)。 これは、JavaScript Webビーコンで指定されている場合にのみ含める必要があります。 |
-| `visitorNamespace` | 名前空間のグループ化に使用される訪問者。 これは、JavaScript Webビーコンで指定されている場合にのみ含める必要があります。 |
+| `visitorNamespace` | 訪問者のグループ化に使用する名前空間。 これは、JavaScript Webビーコンで指定されている場合にのみ含める必要があります。 |
 
 **Adobe Target**
 
 | パラメーター | 説明 |
 | --- | --- |
-| `clientCode` | アドビシステムでクライアントを識別するターゲットコード。 |
+| `clientCode` | Adobeターゲットシステムでクライアントを識別するクライアントコード。 |
 
 **Adobe Audience Manager**
 
 | パラメーター | 説明 |
 | --- | --- |
-| `aamUUIDCookieName` | Adobe User Managerから返された一意のユーザーIDを含むファーストパーティCookieのオーディエンス名。 |
+| `aamUUIDCookieName` | Adobe User Managerから返される一意のオーディエンスIDを含むファーストパーティCookieの名前。 |
 
 **Adobe IDサービス(ECID)**
 
