@@ -5,6 +5,9 @@ title: データレークでのプライバシー要求の処理
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+workflow-type: tm+mt
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +52,7 @@ Data Lakeのプライバシーリクエストを作成する場合、データ�
 
 ### UIの使用 {#identity-ui}
 
-Experience Platformユーザーインターフェイスでは、Workspaceで既存のXDMスキーマを編集でき _[!UICONTROL Schemas]_ます。 スキーマにID記述子を追加するには、リストからスキーマを選択し、スキーマエディタのチュートリアルで、スキーマフィールドをIDフィールドとして[設定する手順](../xdm/tutorials/create-schema-ui.md#identity-field)に従います。
+Experience Platformユーザーインターフェイスでは、 _[!UICONTROL スキーマ]_Workspaceを使用して既存のXDMスキーマを編集できます。 スキーマにID記述子を追加するには、リストからスキーマを選択し、スキーマエディタのチュートリアルで、スキーマフィールドをIDフィールドとして[設定する手順](../xdm/tutorials/create-schema-ui.md#identity-field)に従います。
 
 スキーマ内の適切なフィールドをIDフィールドとして設定したら、次のセクションに進んで、プライバシー [要求の送信に関するセクション](#submit)。
 
