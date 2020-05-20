@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 71080a1741ea0d660f63e2009f045c0e34f6c44b
+source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '578'
 ht-degree: 1%
 
 ---
@@ -47,6 +47,8 @@ ht-degree: 1%
       - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
       - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
+      - [GreenPlumコネクタ](connectors/databases/greenplum.md)
+      - [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
       - [IBM DB2コネクタ](connectors/databases/ibm-db2.md)
       - [MariaDBコネクタ](connectors/databases/mariadb.md)
       - [Microsoft SQL Serverコネクタ](connectors/databases/sql-server.md)
@@ -88,6 +90,8 @@ ht-degree: 1%
          - [Azure Synapse Analyticsコネクタ](tutorials/api/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/api/create/databases/ats.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
+         - [GreenPlumコネクタ](tutorials/api/create/databases/greenplum.md)
+         - [HP Verticaコネクタ](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2コネクタ](tutorials/api/create/databases/ibm-db2.md)
          - [MariaDBコネクタ](tutorials/api/create/databases/mariadb.md)
          - [MySQLコネクタ](tutorials/api/create/databases/mysql.md)
@@ -150,6 +154,8 @@ ht-degree: 1%
          - [Azure Synapse Analyticsコネクタ](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/ui/create/databases/ats.md)
          - [Google Bigクエリコネクタ](tutorials/ui/create/databases/bigquery.md)
+         - [GreenPlumコネクタ](tutorials/ui/create/databases/greenplum.md)
+         - [HP Verticaコネクタ](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2コネクタ](tutorials/ui/create/databases/ibm-db2.md)
          - [MariaDBコネクタ](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Serverコネクタ](tutorials/ui/create/databases/sql-server.md)
