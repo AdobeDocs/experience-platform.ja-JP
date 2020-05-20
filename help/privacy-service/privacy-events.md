@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシーイベントの購読
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e4cd042722e13dafc32b059d75fca2dab828df60
+source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 ## はじめに
 
-このチュートリアルでは、 **ngrok**、セキュリティで保護されたトンネルを通してローカルサーバをパブリックインターネットに公開するソフトウェア製品を使用します。 このチュートリアルを開始する前に [、ngrokを](https://ngrok.com/download) インストールして、ローカルマシンにWebフックを作成してください。 また、このガイドでは、 [Node.jsで記述されたシンプルなサーバーを含むGITリポジトリをダウンロードする必要があります](https://nodejs.org/)。
+このチュートリアルでは、 **ngrok**、セキュリティで保護されたトンネルを通してローカルサーバをパブリックインターネットに公開するソフトウェア製品を使用します。 このチュートリアルを開始する前に [、ngrokを](https://ngrok.com/download) インストールして、ローカルマシンにWebフックを作成してください。 また、このガイドでは、シンプルな [Node.js](https://nodejs.org/) サーバーを含むGITリポジトリをダウンロードする必要があります。
 
 ## ローカルサーバーの作成
 
@@ -60,71 +60,73 @@ app.listen(app.get('port'), function() {
 
 ## ngrookを使用してWebフックを作成する
 
-同じディレクトリ内および新しいコマンドラインウィンドウで、次のコマンドを入力します。
+新しいコマンドラインウィンドウを開き、以前にngrookをインストールしたディレクトリに移動します。 ここから、次のコマンドを入力します。
 
 ```shell
-ngrok http -bind-tls=true 3000
+./ngrok http -bind-tls=true 3000
 ```
 
 成功した場合の出力結果は次のようになります。
 
 ![ngrook出力](images/privacy-events/ngrok-output.png)
 
-次の手順でWebフックを識別するために使用される `Forwarding` URL(`https://e142b577.ngrok.io`)を控えておいてください。
+次の手順でWebフックを識別するために使用される `Forwarding` URL(`https://212d6cd2.ngrok.io`)を控えておいてください。
 
-## Adobe I/Oコンソールを使用した新しい統合の作成
+## Adobe Developer Consoleでの新しいプロジェクトの作成
 
-[Adobe I/Oコンソールにサインインし](https://console.adobe.io) 、「 **統合** 」タブをクリックします。 「 _統合_ 」ウィンドウが表示されます。 ここから、「 **新しい統合**」をクリックします。
+Adobe Developer Console [に移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe Developer Consoleドキュメントで空のプロジェクトの [作成に関するチュートリアルに概要を説明している手順に従い](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ます。
 
-![Adobe I/Oコンソールでの表示統合](images/privacy-events/integrations.png)
+## プロジェクトの追加プライバシーイベント
 
-[新しい統合の *作成* ]ウィンドウが表示されます。 「近いリアルタイムイベントを **受信する**」を選択し、「 **続行**」をクリックします。
+コンソールで新しいプロジェクトの作成が完了したら、「プ **[!UICONTROL ロジェクト概要]** 」画面の「 _イベント_ 」をクリックします。
 
-![新しい統合の作成](images/privacy-events/new-integration.png)
+![](./images/privacy-events/add-event-button.png)
 
-次の画面には、購読、権限および権限に基づいて、組織が使用できる様々なイベント、製品およびサービスとの統合を作成するオプションが表示されます。 この統合の場合は、「 **プライバシーサービスのイベント**」を選択し、「 **続行**」をクリックします。
+[ _イベント_ ]ダイアログが表示されます。 「 **[!UICONTROL Experience Cloud]** 」を選択して利用可能なイベントタイプのリストを絞り込み、「 **[!UICONTROL 次へ]** 」をクリックする前に「 **[!UICONTROL プライバシーサービスのイベント]**」を選択します。
 
-![プライバシーイベントの選択](images/privacy-events/privacy-events.png)
+![](./images/privacy-events/add-privacy-events.png)
 
-「 *統合の詳細* 」フォームが表示され、統合の名前と説明、および公開鍵証明書を入力する必要があります。
+[ _イベント登録の_ 設定]ダイアログが表示されます。 対応するチェックボックスをオンにして、受け取るイベントを選択します。 選択したイベントは、左の列の「 _[!UICONTROL 購読済みイベント]_」の下に表示されます。 終了したら、「**[!UICONTROL &#x200B;次へ&#x200B;]**」をクリックします。
 
-![統合の詳細](images/privacy-events/integration-details.png)
+![](./images/privacy-events/choose-subscriptions.png)
 
-公開証明書がない場合は、次のterminalコマンドを使用して証明書を生成できます。
+次の画面では、イベント登録用の公開鍵を入力するように求められます。 自動的にキーペアを生成するか、端末で生成した独自の公開鍵をアップロードするかを選択できます。
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+このチュートリアルでは、最初のオプションに従います。 「キーペアを **[!UICONTROL 生成」のオプションボックスをクリックし]**、右下隅の「キーペアを **[!UICONTROL 生成]** 」ボタンをクリックします。
 
-証明書を生成したら、ファイルを「 **公開鍵証明書** 」ボックスにドラッグ&amp;ドロップするか、「ファイルの **選択** 」をクリックしてファイルディレクトリを参照し、証明書を直接選択します。
+![](./images/privacy-events/generate-key-value.png)
 
-証明書を追加すると、「 *イベント登録* 」オプションが表示されます。 「 **イベント登録**」をクリックします。
+キーペアが生成されると、ブラウザーによって自動的にダウンロードされます。 このファイルは開発者コンソールで保持されないので、自分で保存する必要があります。
 
-![追加イベント登録](images/privacy-events/add-event-registration.png)
+次の画面では、新しく生成されたキーペアの詳細を確認できます。 「**[!UICONTROL 次へ]**」をクリックして次に進みます。
 
-ダイアログが展開され、追加のコントロールが表示されます。 ここでは、目的のイベントタイプを選択して、Webフックを登録できます。 イベント登録の名前、WebフックURL(Webフックを最初に `Forwarding` 作成したときに返される [アドレス](#create-a-webhook-using-ngrok))、簡単な説明を入力します。 最後に、購読するイベントタイプを選択し、「 **保存**」をクリックします。
+![](./images/privacy-events/keypair-generated.png)
 
-![イベント登録フォーム](images/privacy-events/event-registration-form.png)
+次の画面で、イベント登録の名前と説明を入力します。 ベストプラクティスは、同じプロジェクト内の他のユーザーとこのイベントの登録を区別できるように、一意で、簡単に識別できる名前を作成することです。
 
-イベント登録フォームが完了したら、[統合の **作成** ]をクリックします。I/O統合が完了します。
+![](./images/privacy-events/event-details.png)
 
-![統合の作成](images/privacy-events/create-integration.png)
+同じ画面の下に、イベントの受信方法を設定する2つのオプションが表示されます。 「 **[!UICONTROL Webhook]** 」を選択し、「 `Forwarding` Webhook URL _[!UICONTROL 」で前に作成したNgrook Webフックの]_URLを指定します。 次に、「設定済みのイベントを**[!UICONTROL &#x200B;保存」をクリックする前に、希望の配信スタイル（単一またはバッチ）を選択し、イベントの登録を完了します&#x200B;]**。
+
+![](./images/privacy-events/webhook-details.png)
+
+プロジェクトの詳細ページが再表示され、左のナビゲーションの _[!UICONTROL イベントの下にプライバシーイベントが表示されます]_。
 
 ## 表示イベントデータ
 
-I/O統合とプライバシージョブの作成が完了すると、その統合に関して受信した通知を表示できます。 I/Oコンソールの **統合** (Integrations)タブで、統合に移動し、「 **表示**」をクリックします。
+プロジェクトにプライバシーイベントを登録し、プライバシージョブが処理されると、その登録に関して受信した通知を表示できます。 デベロッパーコンソールの **[!UICONTROL プロジェクト]** タブで、リストからプロジェクトを選択し、 _製品概要_ ページを開きます。 画面左側のナビゲーションから「 **[!UICONTROL プライバシーイベント]** 」を選択します。
 
-![表示統合](images/privacy-events/view-integration.png)
+![](./images/privacy-events/events-left-nav.png)
 
-統合の詳細ページが表示されます。 「 **イベント** 」をクリックして、統合のイベント登録を表示します。 プライバシーイベント登録を見つけ、「 **表示**」をクリックします。
+「 _登録の詳細_ 」タブが表示され、登録の詳細表示、設定の編集、Webフックのアクティブ化後に受け取った実際のイベントの表示を行うことができます。
 
-![表示イベント登録](images/privacy-events/view-registration.png)
+![](./images/privacy-events/registration-details.png)
 
-[ *イベントの詳細* ]ウィンドウが表示され、登録の詳細を表示したり、設定を編集したり、Webフックのアクティブ化後に受け取った実際のイベントを表示したりできます。 表示イベントの詳細を表示したり、[ **デバッグトレース** ]オプションに移動したりできます。
+[ **[!UICONTROL デバッグトレース]** ]タブをクリックして、受信したイベントのリストを表示します。 表示されたイベントをクリックして詳細を表示します。
 
-![トレースのデバッグ](images/privacy-events/debug-tracing.png)
+![](images/privacy-events/debug-tracing.png)
 
-「 **Payload** 」セクションには、上の例で強調表示されているイベントタイプ(`"com.adobe.platform.gdpr.productcomplete"`)を含む、選択したイベントに関する詳細が表示されます。
+「 _[!UICONTROL Payload]_」セクションには、上の例で強調表示されているイベントタイプ(`com.adobe.platform.gdpr.productcomplete`)を含む、選択したイベントに関する詳細が表示されます。
 
 ## 次の手順
 
