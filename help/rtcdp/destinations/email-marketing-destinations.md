@@ -5,6 +5,9 @@ description: 電子メールサービスプロバイダー（ESP）を使用す�
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 100%
 
 ---
 
