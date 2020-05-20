@@ -5,23 +5,26 @@ title: Salesforceコネクタ
 topic: overview
 translation-type: tm+mt
 source-git-commit: f46e95b1e1af3ff5021561eb45f408e45c657834
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
 # Salesforceコネクタ
 
-Adobe Experience Platformを使用すると、外部ソースからデータを取り込み、プラットフォームサービスを使用して、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 エクスペリエンスプラットフォームは、サードパーティのCRMシステムからデータを取り込むためのサポートを提供します。 CRMプロバイダのサポートにはSalesforceが含まれます。
 
 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してSalesforceをプラットフォームに接続する方法に関する情報を提供しています。
 
-## APIを使用したSalesforceのプラットフォームへの接続
+## APIを使用したSalesforceとプラットフォームの接続
 
 - [フローサービスAPIを使用したSalesforceコネクタの作成](../../tutorials/api/create/crm/salesforce.md)
-- [フローサービスAPIを使用したCRMシステムの調査](../../tutorials/api/explore/crm.md)
-- [フローサービスAPIを使用してCRMデータを収集する](../../tutorials/api/collect/crm.md)
+- [Flow Service APIを使用したCRMシステムの調査](../../tutorials/api/explore/crm.md)
+- [Flow Service APIを使用してCRMデータを収集する](../../tutorials/api/collect/crm.md)
 
 ## UIを使用したSalesforceのプラットフォームへの接続
 
