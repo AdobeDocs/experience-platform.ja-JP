@@ -5,6 +5,9 @@ description: Adobe Experience Platform のダッシュボード、ホームペ�
 seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 translation-type: tm+mt
 source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
+workflow-type: tm+mt
+source-wordcount: '642'
+ht-degree: 97%
 
 ---
 
@@ -42,7 +45,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 **[!UICONTROL データセット]**&#x200B;カウンターは、システム内のデータセットの数とプラットフォーム内のデータの量を示します。このカウンターは、データセットの作成時に更新されます。
 
-データセットの詳細については、「データセットの概要」を [参照してくださ](../catalog/datasets/overview.md)い。
+データセットの詳細については、「 [データセットの概要](../catalog/datasets/overview.md)」を参照してください。
 
 ### プロファイル
 
@@ -106,7 +109,7 @@ The number of failed profile records is updated hourly. -->
 
 データセットをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてデータセットのリストを表示します。ここからは、特定のソースをクリックして詳細を表示できます。
 
-データセットの詳細については、「データセットの概要」を [参照してくださ](../catalog/datasets/overview.md)い。
+データセットの詳細については、「 [データセットの概要](../catalog/datasets/overview.md)」を参照してください。
 
 ### 最近のソース
 
