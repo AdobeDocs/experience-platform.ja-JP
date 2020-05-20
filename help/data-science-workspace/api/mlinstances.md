@@ -5,19 +5,22 @@ title: MLInstances
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 4%
 
 ---
 
 
 # MLInstances
 
-MLInstanceは、既存の [Engine](./engines.md) と、トレーニングパラメータ、スコアリングパラメータ、またはハードウェアリソース設定を定義する適切な設定のセットとのペアリングです。
+MLInstanceは、既存の [エンジン](./engines.md) 、トレーニングパラメーター、スコアリングパラメーターまたはハードウェアリソース設定を定義する適切な設定セットとのペアです。
 
 ## MLInstanceの作成 {#create-an-mlinstance}
 
-MLInstanceを作成するには、有効なエンジンID()と適切なデフォルト設定のセットから成るリクエストペイロードを提供しながら、POSTリクエストを実行します。`{ENGINE_ID}`
+MLInstanceを作成するには、有効なエンジンID(`{ENGINE_ID}`)と適切なデフォルト設定のセットから成るリクエストペイロードを提供しながら、POSTリクエストを実行します。
 
-Engine IDがPySparkまたはSpark Engineを参照する場合は、コア数やメモリ量などの計算リソースの量を設定できます。 Pythonエンジンが参照されている場合は、トレーニングとスコアリングの目的でCPUまたはGPUを使用するかを選択できます。 詳細は、 [PySparkとSparkのリソース設定と](./appendix.md#resource-config) Python CPUと [GPUの設定に関する付録の節を参照してください](./appendix.md#cpu-gpu-config) 。
+Engine IDがPySparkまたはSpark Engineを参照する場合は、コア数やメモリ量などの計算リソースの量を設定できます。 Pythonエンジンを参照する場合は、トレーニングとスコアリングの目的でCPUまたはGPUを使用するかを選択できます。 詳細は、PySparkとSparkのリソース設定 [、](./appendix.md#resource-config) Python CPUとGPUの設定に関する付録の節を参照してください [](./appendix.md#cpu-gpu-config) 。
 
 **API形式**
 
@@ -73,14 +76,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | MLInstanceの名前。 このMLInstanceに対応するモデルは、この値を継承し、UIにモデル名として表示されます。 |
+| `name` | MLInstanceに必要な名前。 このMLInstanceに対応するモデルは、この値を継承し、UIにモデル名として表示されます。 |
 | `description` | MLInstanceのオプションの説明です。 このMLInstanceに対応するモデルは、この値を継承し、モデルの説明としてUIに表示されます。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
 | `engineId` | 既存のエンジンのID。 |
-| `tasks` | トレーニング、スコア、またはフィーチャパイプラインの一連の設定。 |
+| `tasks` | トレーニング、スコアリング、またはフィーチャパイプラインの設定のセット。 |
 
 **応答**
 
-成功した応答は、新たに作成されたMLInstanceの詳細を含むペイロードを返します。この詳細には、一意の識別子(`id`)が含まれます。
+成功した応答は、新たに作成されたMLInstanceの詳細を含むペイロードを返します。この詳細には、固有な識別子(`id`)が含まれます。
 
 ```json
 {
@@ -125,9 +128,9 @@ curl -X POST \
 }
 ```
 
-## MLInstancesのリストの取得
+## MLInstancesのリストを取得する
 
-MLInstancesのリストは、単一のGETリクエストを実行することで取得できます。 結果のフィルタリングに役立つように、リクエストパスでクエリパラメーターを指定できます。 使用可能なクエリのリストについては、アセット取得のための [クエリパラメータの付録の節を参照してください](./appendix.md#query)。
+単一のGETリクエストを実行して、MLInstancesのリストを取得できます。 結果をフィルターするのに役立つように、リクエストパスでクエリパラメーターを指定できます。 使用可能なクエリのリストについては、付録の「アセット取得の [クエリパラメータ」の節を参照してください](./appendix.md#query)。
 
 **API形式**
 
@@ -139,8 +142,8 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 結果のフィルターに使用 [するクエリ](./appendix.md#query) ・パラメータの1つ。 |
-| `{VALUE}` | 前のパラメーターのクエリ値。 |
+| `{QUERY_PARAMETER}` | 結果のフィルタリングに [使用できるクエリパラメーターの1つ](./appendix.md#query) 。 |
+| `{VALUE}` | 前のクエリパラメーターの値。 |
 
 **リクエスト**
 
@@ -155,7 +158,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、MLInstancesのリストとその詳細を返します。
+正常な応答は、MLInstancesとその詳細のリストを返します。
 
 ```json
 {
@@ -195,7 +198,7 @@ curl -X GET \
 
 ## 特定のMLInstanceの取得 {#retrieve-specific}
 
-特定のMLInstanceの詳細を取得するには、要求パスに目的のMLInstanceのIDを含むGET要求を実行します。
+特定のMLInstanceの詳細を取得するには、目的のMLInstanceのIDをリクエストパスに含むGETリクエストを実行します。
 
 **API形式**
 
@@ -268,9 +271,9 @@ curl -X GET \
 
 ## MLInstanceの更新
 
-既存のMLInstanceを更新するには、要求パスにターゲットMLInstanceのIDを含むPUT要求を使用してプロパティを上書きし、更新したプロパティを含むJSONペイロードを提供します。
+既存のMLInstanceを更新するには、要求パスにターゲットMLInstanceのIDが含まれるPUT要求を介してプロパティを上書きし、更新されたプロパティを含むJSONペイロードを提供します。
 
->[!TIP] このPUTリクエストを確実に成功させるために、まずGETリクエストを実行し、IDでMLInstanceを取得す [ることをお勧めします](#retrieve-specific)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクトの全体をPUT要求のペイロードとして適用します。
+>[!TIP] このPUTリクエストを確実に成功させるために、まずGETリクエストを実行し、IDでMLInstanceを [取得することをお勧めします](#retrieve-specific)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
 
 以下のサンプルAPI呼び出しは、MLInstanceのトレーニングパラメーターとスコアリングパラメーターを更新し、これらのプロパティを最初に持つようにします。
 
@@ -398,9 +401,9 @@ curl -X PUT \
 }
 ```
 
-## エンジンID別のMLInstanceの削除
+## エンジンIDによるMLInstancesの削除
 
-エンジンIDをエンジンパラメーターとして含むDELETEリクエストを実行すると、同じエンジンを共有するすべてのMLInstanceをクエリできます。
+エンジンIDをクエリパラメーターとして含むDELETEリクエストを実行すると、同じエンジンを共有するすべてのMLInstanceを削除できます。
 
 **API形式**
 
