@@ -5,6 +5,9 @@ description: セグメントビルダーの使用方法を説明するガイド�
 seo-description: リアルタイム顧客データプラットフォームでのセグメント化サービスセグメントビルダーの使用方法を説明するユーザーガイドです。
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 84%
 
 ---
 
