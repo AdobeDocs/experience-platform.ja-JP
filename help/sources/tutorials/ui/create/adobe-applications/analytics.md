@@ -5,6 +5,9 @@ title: UIでのAdobe Analyticsソースコネクタの作成
 topic: overview
 translation-type: tm+mt
 source-git-commit: d2f8e11591b30a0bfd345e56a33a8bb62501358c
+workflow-type: tm+mt
+source-wordcount: '726'
+ht-degree: 1%
 
 ---
 
@@ -23,17 +26,17 @@ source-git-commit: d2f8e11591b30a0bfd345e56a33a8bb62501358c
 
 ## Adobe Analyticsでのソース接続の作成
 
-Adobe Experience Platformにログインし、 <a href="https://platform.adobe.com" target="_blank">左のナビゲーションバー</a>**[!UICONTROL Sources]** から選択してソースワークスペースにアクセスします。 カ *タログ* 画面には、受信接続を作成するために利用できるソースが表示され、各ソースには、それらに関連付けられた既存のアカウント数とデータセットフローが表示されます。
+Adobe Experience Platformにログインし、左のナビゲーションバーで「 <a href="https://platform.adobe.com" target="_blank">Sources</a>**** 」を選択してソースワークスペースにアクセスします。 カ *タログ* 画面には、受信接続を作成するために利用できるソースが表示され、各ソースには、それらに関連付けられた既存のアカウント数とデータセットフローが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 *Adobe applications***[!UICONTROL Adobe Analytics]** 」カテゴリの下で、を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 既存のアカウントを表示するには、を選択し **[!UICONTROL Accounts]**&#x200B;ます。
+「 *Adobe applications* 」カテゴリの下で、「 **[!UICONTROL Adobe Analytics]** 」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 既存のアカウントを表示するには、「 **[!UICONTROL アカウント]**」を選択します。
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### データの選択
 
-「 *Adobe Analytics* 」の手順が表示されます。 この画面には、Analyticsで事前に設定されたデータセットフローが表示されます。 をクリックして、新しいデータセットフローを作成でき **[!UICONTROL Select data]**&#x200B;ます。
+「 *Adobe Analytics* 」の手順が表示されます。 この画面には、Analyticsで事前に設定されたデータセットフローが表示されます。 「データの **[!UICONTROL 選択]**」をクリックして、新しいデータセットフローを作成できます。
 
 >[!NOTE] 異なるデータを取り込むために、1つのソースに対して複数のインバウンド接続を作成できます。
 
@@ -41,7 +44,7 @@ Adobe Experience Platformにログインし、 <a href="https://platform.adobe.c
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-使用可能なレポートスイートのリストから、プラットフォームに取り込むレポートスイートを選択し、をクリックし **[!UICONTROL Next]**&#x200B;ます。
+使用可能なレポートスイートのリストから、プラットフォームに取り込むレポートスイートを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
