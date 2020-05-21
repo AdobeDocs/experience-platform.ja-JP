@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1445'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,8 @@ Mixinの完全な例は、 [public XDM repositoryにあります](https://github
 ## キーフィールド
 
 以下の節では、CEEミックスイン内の主なフィールドを強調して、インテリジェントサービスが有用なインサイトを生成できるようにする必要があります。例えば、その他の例に関するリファレンスドキュメントの説明やリンクが含まれます。
+
+>[!IMPORTANT] アトリビューションAIがデータを処理するには、 `xdm:channel` フィールド（下の最初の節で説明）が **必要ですが** 、顧客AIには必須フィールドがありません。 その他のすべての主要フィールドは強くお勧めしますが、必須ではありません。
 
 ### xdm:チャネル
 
@@ -185,7 +187,9 @@ Mixinの完全な例は、 [public XDM repositoryにあります](https://github
 
 ## データのマッピングと取り込み
 
-マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、データをインテリジェントサービスに取り込むプロセスを開始できます。 アドビのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、サービスに取り込む方法を確認してください。
+マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、次の手順は、インテリジェントサービスに取り込むデータを決定することです。 Intelligent Servicesで使用されるすべての履歴データは、4か月のデータの最小期間に加え、ルックバック期間として予定されている日数に該当する必要があります。
+
+送信するデータの範囲を決定したら、Adobe Consulting Servicesに連絡して、データをスキーマにマッピングし、サービスに取り込む方法についてお問い合わせください。
 
 Adobe Experience Platformの購読がいて、自分でデータをマッピングし取り込む場合は、次の節に示す手順に従います。
 
@@ -211,9 +215,81 @@ CEEミックスインをスキーマに追加した後、データ内の追加�
 * [UIでのデータセットの作成](../catalog/datasets/user-guide.md#create) (既存のスキーマを使用する場合のワークフローに従います)
 * [APIでのデータセットの作成](../catalog/datasets/create.md)
 
-#### データのマッピングと取り込み
+#### データセット追加の主なID名前空間タグ
+
+Adobeオーディエンスマネージャー、Adobe Analyticsまたは他の外部ソースからデータを取り込む場合は、データセットに `primaryIdentityNameSpace` タグを追加する必要があります。 これは、カタログサービスAPIにPATCHリクエストを行うことで行うことができます。
+
+ローカルCSVファイルからデータを取り込む場合は、データの [マッピングと取り込みに関する次の節に進むことができます](#ingest)。
+
+以下のAPI呼び出しの例に従う前に、カタログ開発ガイドの [はじめにの節](../catalog/api/getting-started.md) 、必要なヘッダーに関する重要な情報を参照してください。
+
+**API形式**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{DATASET_ID}` | 前に作成したデータセットのID。 |
+
+**リクエスト**
+
+データを取り込む元のソースに応じて、リクエストペイロードに適切な `primaryIdentityNamespace` タグ値と `sourceConnectorId` タグ値を指定する必要があります。
+
+次のリクエストで、オーディエンスマネージャーに適したタグ値が追加されます。
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["mcid"],
+          "sourceConnectorId": ["audiencemanager"],
+        }
+      }'
+```
+
+次のリクエストによって、Analyticsに適したタグ値が追加されます。
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["aaid"],
+          "sourceConnectorId": ["analytics"],
+        }
+      }'
+```
+
+>[!NOTE] プラットフォームでのID名前空間の操作について詳しくは、「 [ID名前空間の概要](../identity-service/namespaces.md)」を参照してください。
+
+**応答**
+
+正常に完了すると、更新されたデータセットのIDを含む配列が返されます。 このIDは、PATCH要求で送信されたIDと一致する必要があります。
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```
+
+#### データのマッピングと取り込み {#ingest}
 
 CEEスキーマとデータセットを作成したら、データテーブルをスキーマに開始マッピングし、そのデータをプラットフォームに取り込むことができます。 UIでCSVファイルを実行する方法については、CSVファイルのXDMスキーマ [への](../ingestion/tutorials/map-a-csv-file.md) マッピングに関するチュートリアルを参照してください。 データセットを取り込むと、同じデータセットを使用して他のデータファイルを取り込むことができます。
+
+サポートされるサードパーティアプリケーションにデータを格納している場合は、 [ソースコネクタを作成してマーケティングイベントのデータをリアルタイムでプラットフォームに取り込むこともできます](../sources/home.md) 。
 
 ## 次の手順 {#next-steps}
 
