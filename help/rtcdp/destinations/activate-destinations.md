@@ -4,10 +4,10 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
+source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
 workflow-type: tm+mt
-source-wordcount: '775'
-ht-degree: 61%
+source-wordcount: '889'
+ht-degree: 53%
 
 ---
 
@@ -32,9 +32,25 @@ ht-degree: 61%
 5. *オプション*&#x200B;この手順は、セグメントをアクティブ化する宛先のタイプによって異なります。 <br> *電子メールマーケティングの宛先* 、 *クラウドストレージの宛先については、属性を*&#x200B;選択 **[!UICONTROL ページで、]****** 新しいフィールドを選択し、宛先に送信する属性を選択します。
 属性の 1 つをユニオンスキーマの[一意の識別子](/help/rtcdp/destinations/email-marketing-destinations.md#identity)にすることをお勧めします。必須属性について詳しくは、「[電子メールマーケティングの宛先](/help/rtcdp/destinations/email-marketing-destinations.md#identity)」で「ID」を参照してください。
    ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
-ソーシャル *ネットワークの宛先の場合*、「 **[!UICONTROL IDマッピング]** 」手順で、ターゲットIDにマップするソース属性を選択します。
-   ![フィールドに入力する前のIDマッピング](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)以下の例では、Facebookの電子メールハッシュ要件に準拠するために、Experience Platformに取り込む際に、IDスキーマの個人 [用電子メールアドレスがハッシュされました](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 マッピングを選択し **[!UICONTROL た後]** 、「次へ」を押します。
-   ![フィールドへの入力後のIDマッピング](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
+   <br> 
+
+   *ソーシャル宛先の場合*、 **[!UICONTROL IDマッピング手順で]** 、宛先のターゲットIDとしてマッピングするソース属性を選択できます。 この手順は、スキーマで使用しているプライマリIDに応じて、オプションまたは必須です。 <br> 
+
+   *プライマリIDとしての電子メールアドレス*: スキーマでプライマリIDとして電子メールアドレスを使用している場合は、次に示すように、IDマッピング手順をスキップできます。
+
+   ![IDとしての電子メールアドレス](/help/rtcdp/destinations/assets/email-as-identity.gif)
+
+   <br> 
+
+   *プライマリIDとしての別のID*: スキーマで *報酬ID* 、 *忠誠度ID*、などの別のIDを主IDとして使用する場合は、次に示すように、IDスキーマからの電子メールアドレスをソーシャルの宛先のターゲットIDとして手動でマッピングする必要があります。
+
+   ![IDとしての忠誠度ID](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
+
+
+   Facebookの電子メールハッシュ要件 `Email_LC_SHA256` に従って、Adobe Experience Platformにデータを取り込む際に顧客の電子メールアドレスをハッシュ化した場合は、ターゲットIDとして選択 [します](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 Adobe Real-time CDPは、Facebookの要件に準拠するために電子メールアドレスをハッシュします。
+
+   ![フィールドへの入力後のIDマッピング](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
