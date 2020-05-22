@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: d41952e5905d4ebc579a29ad3282a8f732b7c331
+source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
 workflow-type: tm+mt
-source-wordcount: '1075'
-ht-degree: 4%
+source-wordcount: '1299'
+ht-degree: 6%
 
 ---
 
@@ -19,12 +19,12 @@ ht-degree: 4%
 
 Adobe Experience Platformの既存の機能の更新：
 
-- [Adobe Experience Platform リリースノート](#adobe-experience-platform-release-notes)
-   - [ユーザーインターフェイスの更新 {#ux}](#user-interface-updates-ux)
-   - [Data Science Workspace {#dsw}](#data-science-workspace-dsw)
-   - [宛先 {#destinations}](#destinations-destinations)
-   - [エクスペリエンスプラットフォームWeb SDKおよびエクスペリエンスプラットフォームエッジネットワーク {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
-   - [ソース {#sources}](#sources-sources)
+- [ユーザーインターフェイスの更新](#ux)
+- [Data Science Workspace](#dsw)
+- [宛先](#destinations)
+- [エクスペリエンスプラットフォームWeb SDKおよびエクスペリエンスプラットフォームエッジネットワーク](#edge)
+- [リアルタイム顧客プロファイル](#profile)
+- [ソース](#sources)
 
 ## ユーザーインターフェイスの更新 {#ux}
 
@@ -38,7 +38,7 @@ Adobe Experience Platformは、エクスペリエンスを向上させ、他のE
 
 ## Data Science Workspace {#dsw}
 
-Data Science Workspaceは、機械学習と人工知能を使用して、データから洞察を引き出します。 Data Science WorkspaceはAdobe Experience Platformに統合されており、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。 Data Science Workspaceがこれを実現する方法の1つは、JupyterLabを使用することです。 JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型開発環境を提供します。
+Data Science Workspaceは、機械学習と人工知能を使用して、データから洞察を引き出します。 Data Science WorkspaceはAdobe Experience Platformに統合されており、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。 Data Science Workspaceがこれを実現する方法の1つは、JupyterLabを使用することです。 JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型の開発環境を提供します。
 
 **新機能**
 
@@ -100,6 +100,29 @@ Experience Platform Web SDKおよびExperience Platform Edge Networkを使用す
 
 プラットフォームWeb SDKおよびエッジネットワークについて詳しくは、ドキュメントを参照して [ください](../../edge/home.md)。
 
+## リアルタイム顧客プロファイル {#profile}
+
+Adobe Experience Platformを使用すると、顧客がブランドとどこで、いつやり取りしても、顧客に対して、調整され、一貫性のある、関連性のあるエクスペリエンスを提供できます。 リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせた各顧客の全体的な表示を確認できます。 プロファイルを使用すると、個別の顧客データを統合ビューに統合し、顧客のやり取りごとに実用的なタイムスタンプ付きの説明を提供できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| -----------| ---------- |
+| 新しいプロファイルエクスポート指標 | プロファイルのエクスポートジョブに指標を追加し、エクスポートしたプロファイルの合計数および各名前空間のプロファイル数を示す。 |
+| 新しい観察性インサイト指標 | 観察性インサイトAPIに、プロファイルへのストリーミング取り込みに関する次の指標が追加されました。 受信要求率、取り込み成功率、取り込まれたレコードサイズ。 |
+| 一括GETエンドポイント | 1回のAPI呼び出しで複数の結果を取得できるように、リアルタイム顧客プロファイルAPIに一括GETエンドポイントを追加しました。 セグメント定義、セグメントジョブ、および結合ポリシーに対して、最大100個のIDをGETで一括処理できるようになりました。 |
+| ID別のプロファイルの参照 | プラットフォームUIで、プロファイルを参照するためにID名前空間を選択し、ID値を指定できるようになりました。 |
+
+**バグの修正**
+
+- None.
+
+**既知の問題**
+
+- None.
+
+リアルタイム顧客プロファイルの詳細については、チュートリアル、プロファイルデータを操作するためのベストプラクティスなど、 [リアルタイム顧客プロファイルの概要を参照してください](../../profile/home.md)。
+
 ## ソース {#sources}
 
 Adobe Experience Platformでは、外部ソースからデータを取り込みながら、Platform Servicesを使用してデータの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRMシステムなど、様々なソースからデータを取り込むことができます。
@@ -116,6 +139,6 @@ Adobe Experience Platformでは、外部ソースからデータを取り込み�
 
 **既知の問題**
 
-- None
+- None.
 
 ソースについて詳しくは、 [ソースの概要を参照してください](../../sources/home.md)。
