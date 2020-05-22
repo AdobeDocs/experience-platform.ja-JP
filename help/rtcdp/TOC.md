@@ -3,9 +3,9 @@ product: adobe experience platform
 audience: user
 user-guide-title: リアルタイム顧客データプラットフォームヘルプ
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: fc8bdc6a46e0b64f29d89a36b0810f7312200616
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '439'
 ht-degree: 38%
 
 ---
@@ -125,7 +125,7 @@ ht-degree: 38%
    * リンク先UIチュートリアル {#dest-tutorials}
       * [宛先に接続](/help/rtcdp/destinations/connect-destination.md)
       * [宛先へのプロファイルとセグメントのアクティブ化](destinations/activate-destinations.md)
-   * Destination APIチュートリアル{api-tutorials}
+   * Destination APIチュートリアル {#api-tutorials}
       * [ストリーミング先(AWS KinesisとAzureイベントハブ)に接続し、データをアクティブにする](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [電子メールマーケティングの宛先に接続し、データをアクティブにする](/help/tutorials/destinations/email-marketing-api.md)
 * プライバシーとデータガバナンス {#privacy}
