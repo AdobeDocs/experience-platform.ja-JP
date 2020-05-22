@@ -71,7 +71,7 @@ not ({QUERY})
 not (homeAddress.countryISO = "CA")
 ```
 
-##   
+## If
 
 この `if` 関数は、指定した条件が真かどうかに応じて式を解決するために使用されます。
 
