@@ -4,9 +4,9 @@ solution: Experience Platform
 title: APIを使用したデータの書き出し
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1953'
 ht-degree: 1%
 
 ---
@@ -172,6 +172,9 @@ curl -X POST \
     },
     "schema": {
       "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
   }'
 ```
@@ -192,6 +195,7 @@ curl -X POST \
 | `additionalFields.eventList` | *（オプション）* 次の設定を1つ以上指定して、子オブジェクトまたは関連付けられたオブジェクト用に書き出す時系列イベントフィールドを制御します。<ul><li>`eventList.fields`: 書き出すフィールドを制御します。</li><li>`eventList.filter`: 関連するオブジェクトから含まれる結果を制限する基準を指定します。 エクスポートに必要な最小値（通常は日付）。</li><li>`eventList.filter.fromIngestTimestamp`: 指定されたタイムスタンプの後に取り込まれたものに対するフィルター時系列イベント。 これは、イベント時間そのものではなく、イベントの取り込み時間です。</li></ul> |
 | `destination` | **（必須）** 書き出すデータの保存先情報：<ul><li>`destination.datasetId`: **（必須）** 、データをエクスポートするデータセットのID。</li><li>`destination.segmentPerBatch`: *（オプション）* Boolean値。指定しなかった場合のデフォルト値は `false`です。 値を指定すると、すべてのセグメントIDが1つのバッチIDに `false` エクスポートされます。 値として、1つのセグメントIDを1つのバッチIDに `true` エクスポートします。 この値を設定すると、バッチエクスポートのパフォーマンスに影響を与える `true` 場合があります。</li></ul> |
 | `schema.name` | **（必須）** 、データをエクスポートするデータセットに関連付けられているスキーマの名前。 |
+| `evaluationInfo.segmentation` | *（オプション）* boolean値。指定しなかった場合のデフォルト値は `false`です。 値がの場合、セグメント化は書き出しジョブで行う必要があります。 `true` |
 
 >[!NOTE] プロファイルデータのみを書き出し、関連するExperienceEventデータを含めない場合は、「additionalFields」オブジェクトをリクエストから削除します。
 
