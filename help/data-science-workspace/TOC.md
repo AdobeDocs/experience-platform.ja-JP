@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspaceヘルプ
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '215'
 ht-degree: 4%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 4%
    * [ノートブックを使用してデータを分析する](jupyterlab/analyze-your-data.md)
    * [ジュピターノートのクエリサービス](jupyterlab/query-service.md)
    * [Jupyterノートブックを使用してレシピを作成する](jupyterlab/create-a-recipe.md)
+   * [Gitを使用したJupyterLabでのコラボレーション](jupyterlab/using-git-for-collaboration.md)
 * Senesie Machine Learning API {#api}
    * [はじめに](api/getting-started.md)
    * [エンジン](api/engines.md)
