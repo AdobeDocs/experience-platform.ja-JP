@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzure BLOBコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 2%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
@@ -35,9 +35,10 @@ ht-degree: 2%
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | BLOBストレージのデータにアクセスするために必要な接続文字列です。 |
+| `connectionString` | BLOBストレージのデータにアクセスするために必要な接続文字列です。 BLOB接続文字列パターンは次のとおりです。 `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 BLOBの接続指定ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-開始方法の詳細については、 [このAzure Blobドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)。
+接続文字列の取得の詳細については、 [このAzure BLOBドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)。
 
 ### サンプルAPI呼び出しの読み取り
 
@@ -71,6 +72,8 @@ POST /connections
 
 **リクエスト**
 
+BLOB接続を作成するには、一意の接続指定IDをPOST要求の一部として指定する必要があります。 Blobの接続指定IDはで `4c10e202-c428-4796-9208-5f1f5732b1cf`す。
+
 ```shell
 curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -85,7 +88,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -97,8 +100,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | Blobストレージの接続文字列です。 |
-| `connectionSpec.id` | BLOBストレージ接続指定ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | BLOBストレージのデータにアクセスするために必要な接続文字列です。 BLOB接続文字列パターンは次のとおりです。 `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | BLOBストレージ接続の指定ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **応答**
 
