@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIにAzureテーブルストレージソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Adobe Experience Platformのソースコネクターは、外部ソースのデ�
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | Azureテーブルストレージインスタンスに接続する接続文字列です。 |
+| `connectionString` | Azureテーブルストレージインスタンスに接続する接続文字列です。 ATSインスタンスに接続する接続文字列です。 ATSの接続文字列パターンはで `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`す。 |
 
 開始方法の詳細については、 [このAzureテーブルストレージドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)。
 
