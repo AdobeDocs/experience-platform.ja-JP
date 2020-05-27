@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 記述子
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 599991af774e283d9fb60216e3d3bd5b17cf8193
+source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1499'
 ht-degree: 1%
 
 ---
@@ -304,20 +304,25 @@ ID記述子は、「sourceSchema」の「sourceProperty」が [Adobe Experience 
 
 #### フレンドリ名記述子
 
-わかりやすい名前記述子を使用すると、コアライブラリスキーマフィールド `title` の値と `description` 値を変更できます。 組織に固有の情報を含むとしてラベル付けする「eVar」や他の「汎用」フィールドを扱う場合に特に便利です。 UIは、これらを使用して、わかりやすい名前を表示したり、わかりやすい名前を持つフィールドのみを表示したりできます。
+わかりやすい名前記述子を使用して、コアライブラリスキーマフィールドの `title`、 `description`、および `meta:enum` 値を変更できます。 組織に固有の情報を含むとしてラベル付けする「eVar」や他の「汎用」フィールドを扱う場合に特に便利です。 UIは、これらを使用して、わかりやすい名前を表示したり、わかりやすい名前を持つフィールドのみを表示したりできます。
 
 ```json
 {
   "@type": "xdm:alternateDisplayInfo",
   "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-  "xdm:sourceVersion": 1
-  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
   "xdm:title": {
-    "en_us":{"Loyalty ID"}
+    "en_us": "Event Type"
   },
   "xdm:description": {
-    "en_us":{"Unique ID of loyalty program member."}
+    "en_us": "The type of experience event detected by the system."
   },
+  "meta:enum": {
+    "click": "Mouse Click",
+    "addCart": "Add to Cart",
+    "checkout": "Cart Checkout"
+  }
 }
 ```
 
@@ -329,6 +334,7 @@ ID記述子は、「sourceSchema」の「sourceProperty」が [Adobe Experience 
 | `xdm:sourceProperty` | IDとなる特定のプロパティへのパスです。 パスは「/」で始まり、1で終わらないようにしてください。 パスに「プロパティ」を含めない（例：「/properties/personalEmail/properties/address」ではなく「/personalEmail/address」を使用） |
 | `xdm:title` | このフィールドに表示する新しいタイトル。タイトルの大文字と小文字で示されます。 |
 | `xdm:description` | オプションで、タイトルと共に説明を追加できます。 |
+| `meta:enum` | に示すフィールドが文字列フィールド `xdm:sourceProperty` の場合、Experience Platform UIでそのフィールドに推奨される値のリストを `meta:enum` 決定します。 定義済みリストを宣言しないこと、またはXDMフィールドに対してデータの検証を行わないことに注意して `meta:enum` ください。<br><br>これは、アドビが定義するコアXDMフィールドに対してのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合は、 `meta:enum` PUT要求を介して、フィールドの [プロパティを直接編集する必要があります](./update-resource.md)。 |
 
 #### 関係記述子
 
