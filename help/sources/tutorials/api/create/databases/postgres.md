@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Flow Service APIを使用したPostgreSQLコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 1%
+source-wordcount: '583'
+ht-degree: 2%
 
 ---
 
@@ -36,9 +36,10 @@ ht-degree: 1%
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | PSQLアカウントに関連付けられている接続文字列です。 |
+| `connectionString` | PSQLアカウントに関連付けられている接続文字列です。 PSQL接続文字列パターンは次のとおりです。 `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | 接続の生成に使用するID。 PSQLの固定接続仕様IDはで `74a1c565-4e59-48d7-9d67-7c03b8a13137`す。 |
 
-使用を開始する方法の詳細については、この [PSQLドキュメントを参照してください](https://www.postgresql.org/docs/9.2/app-psql.html)。
+接続文字列の取得の詳細については、 [このPSQLドキュメントを参照してください](https://www.postgresql.org/docs/9.2/app-psql.html)。
 
 ### サンプルAPI呼び出しの読み取り
 
@@ -60,72 +61,9 @@ Experience Platformのすべてのリソース（Flow Serviceに属するリソ�
 
 * Content-Type: `application/json`
 
-## 接続仕様の検索
+## 接続の作成
 
-PSQL接続を作成するには、一連のPSQL接続仕様がフローサービス内に存在する必要があります。 プラットフォームをPSQLに接続する最初の手順は、これらの仕様を取得することです。
-
-**API形式**
-
-使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GET要求をエンドポイントに送信すると、使用可能なすべてのソースの接続指定が返され `/connectionSpecs` ます。 また、PSQL専用の情報を取得す `property=name=="postgre-sql"` るクエリを含めることもできます。
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="postgre-sql"
-```
-
-**リクエスト**
-
-次のリクエストは、PSQLの接続仕様を取得します。
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="postgre-sql"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答**
-
-正常な応答は、固有な識別子(`id`)を含むPSQLの接続仕様を返します。 このIDは、次の手順でベース接続を作成する際に必要となります。
-
-```json
-{
-    "items": [
-        {
-            "id": "74a1c565-4e59-48d7-9d67-7c03b8a13137",
-            "name": "postgre-sql",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for PostgreSQL",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to PostgreSQL",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "An ODBC connection string to connect to Azure Database for PostgreSQL.",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ],
-        }
-    ]
-}
-```
-
-## ベース接続を作成する
-
-ベース接続はソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、PSQLアカウントごとに1つのベース接続が必要です。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるため、PSQLアカウントごとに必要な接続は1つだけです。
 
 **API形式**
 
@@ -134,6 +72,8 @@ POST /connections
 ```
 
 **リクエスト**
+
+PSQL接続を作成するには、一意の接続仕様IDをPOST要求の一部として指定する必要があります。 PSQLの接続仕様IDはで `74a1c565-4e59-48d7-9d67-7c03b8a13137`す。
 
 ```shell
 curl -X POST \
@@ -144,12 +84,12 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Base connection for PostgreSQL",
-        "description": "Base connection for PostgreSQL",
+        "name": "Test connection for PostgreSQL",
+        "description": "Test connection for PostgreSQL",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -161,8 +101,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | ------------- | --------------- |
-| `auth.params.connectionString` | PSQLアカウントに関連付けられている接続文字列です。 |
-| `connectionSpec.id` | 前の手順 `id` で取得したPSQLアカウントの接続指定。 |
+| `auth.params.connectionString` | PSQLアカウントに関連付けられている接続文字列です。 PSQL接続文字列パターンは次のとおりです。 `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | PSQLの接続仕様ID: `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 **応答**
 
@@ -177,4 +117,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、Flow Service APIを使用してPSQLベースの接続を作成し、接続の一意のID値を取得したことになります。 フローサービスAPIを使用してデータベースやNoSQLシステムを [探索する方法を学ぶ際に、次のチュートリアルでこの基本接続IDを使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うと、Flow Service APIを使用してPSQL接続を作成し、接続の一意のID値を取得したことになります。 この接続IDは、Flow Service APIを使用してデータベースやNoSQLシステムを [探索する方法を学ぶ際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
