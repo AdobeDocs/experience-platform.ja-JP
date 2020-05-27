@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイム機械学習の概要
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Real-time Machine Learningを利用するには、Adobe Experience PlatformとDa
 
 Real-time Machine Learningのガイドでは、Python 3、 [Jupyterノートブック](../jupyterlab/overview.md)、データサイエンス、および機械学習に関する作業を理解する必要があります。
 
-キーワード:
+**キーワード:**
 
 - **DSL:** ドメイン固有の言語を参照してください。
 - **エッジ：** リアルタイムの機械学習スコアリングサービスは、アクティベーションやアプリケーションに近いエッジクラスターで実行できます。
