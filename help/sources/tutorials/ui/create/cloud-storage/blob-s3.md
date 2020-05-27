@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIにAzure BlobまたはAmazon S3ソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '591'
 ht-degree: 1%
 
 ---
@@ -37,9 +37,22 @@ Experience Platformは、次のファイル形式をサポートしており、�
 
 ### 必要な資格情報の収集
 
-プラットフォームのBLOBストレージにアクセスするには、有効な **Azureストレージ接続文字列を指定する必要があります**。 このMicrosoft Azureドキュメントを使用して接続文字列を取得する方法など、接続文字列の詳細 <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string" target="_blank">を確認できます</a>。
+プラットフォームのBLOBストレージにアクセスするには、次の秘密鍵証明書の有効な値を指定する必要があります。
 
-同様に、プラットフォーム上のS3バケットにアクセスするには、 **S3アクセスキー** と **S3シークレットキーを指定する必要があります**。 For more information, refer to <a href="https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/" target="_blank">this AWS document</a>.
+| Credential | 説明 |
+| ---------- | ----------- |
+| `connectionString` | BLOBストレージのデータにアクセスするために必要な接続文字列です。 BLOB接続文字列パターンは次のとおりです。 `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+
+開始方法の詳細については、 [このAzure Blobドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)。
+
+同様に、プラットフォーム上のS3バケットにアクセスするには、次の資格情報の有効値を指定する必要があります。
+
+| Credential | 説明 |
+| ---------- | ----------- |
+| `s3AccessKey` | S3ストレージのアクセスキーID。 |
+| `s3SecretKey` | S3ストレージの秘密鍵ID。 |
+
+開始方法の詳細については、 [このAWSドキュメントを参照してください](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/)。
 
 ## BlobまたはS3アカウントの接続
 
