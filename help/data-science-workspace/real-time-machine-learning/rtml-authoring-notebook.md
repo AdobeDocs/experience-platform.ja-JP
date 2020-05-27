@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Real-time Machine Learningノートブックユーザーガイド
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,8 @@ pprint(nf.discover_nodes())
 >[!NOTE]
 >Real-time **ML** （リアルタイム）テンプレートでは、 [自動車保険のCSVデータセットがGithubから取得されます](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) 。
 
+![トレーニングデータの読み込み](../images/rtml/load_training.png)
+
 Adobe Experience Platform内でデータセットを使用する場合は、以下のセルのコメントを解除します。 次に、を適切な値に置き換え `DATASET_ID` る必要があります。
 
 ![rtmlデータセット](../images/rtml/rtml-dataset.png)
@@ -114,7 +116,7 @@ config_properties = {
 リアルタイムML *Templatesの* Data Transformations ** セルは、独自のデータセットを使用できるように変更する必要があります。 通常は、列名の変更、データのロールアップ、データの準備/機能の設計に関係します。
 
 >[!NOTE]
->次の例は、を使用して読みやすくしたもので `[ ... ]`す。 完全なコードセルに対して *リアルタイムML* テンプレートを表示してください。
+>次の例は、を使用して読みやすくしたもので `[ ... ]`す。 完全なコードセルの「 *Real-time XML* templates data transformations」セクションを表示して展開してください。
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -189,7 +191,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-指定したセルを実行して、結果の例を表示します。 データセットから返される出力テーブルは、 `carinsurancedataset.csv` 定義された変更を返します。
+指定したセルを実行して、結果の例を表示します。 データセットから返される出力テーブルは、定義した変更内容を `carinsurancedataset.csv` 返します。
 
 ![データ変換の例](../images/rtml/table-return.png)
 
@@ -237,18 +239,23 @@ import skl2onnx, subprocess
 model.generate_onnx_resources()
 ```
 
+>[!NOTE]
+>文字 `model_path` 列値(`model.onnx`)を変更して、モデルの名前を変更します。
+
 ```python
 model_path = "model.onnx"
+```
 
+>[!NOTE]
+>次のセルは編集も削除もできず、Real-time Machine Learningアプリケーションが動作するために必要です。
+
+```python
 model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
 print("Model ID : ", model_id)
 ```
-
->[!NOTE]
->文字列値を変更して、モデルに名前を付けます。 `model_path`
 
 ![ONNXモデル](../images/rtml/onnx-model-rail.png)
 
@@ -272,7 +279,7 @@ JupterLabノートブックにあるアップロードボタンを使用して�
 ### ノードオーサリング
 
 >[!NOTE]
-> 使用するデータのタイプに基づいて複数のノードを持つ場合があります。 次の例は、 *リアルタイムML* テンプレート内の1つのノードのみを示しています。 完全なコードセルに対して *リアルタイムML* テンプレートを表示してください。
+> 使用するデータのタイプに基づいて複数のノードを持つ場合があります。 次の例は、 *リアルタイムML* テンプレート内の1つのノードのみを示しています。 完全なコードセルの「 *Real-time ML* templates *Node Authoring* 」セクションを表示してください。
 
 以下のPandasノードでは、を使用 `"import": "map"` してメソッド名をパラメーター内の文字列として読み込み、続いてパラメーターをmap関数として入力します。 次の例では、を使用してこれを行い `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`ます。 マップを配置した後、またはとして設定するオプション `inplace` があり `True` ま `False`す。 変換 `inplace` をインプレイスで適用するかどうかを、に `True``False` 基づいて設定します。 デフォルトでは、新しい列 `"inplace": False` が作成されます。 新しい列名の提供のサポートは、以降のリリースで追加されるように設定されています。 最後の行 `cols` は、1つの列名または列のリストにすることができます。 変換を適用する列を指定します。 この例では、を指定し `leasing` ます。 使用可能なノードとその使用方法の詳細については、 [ノードリファレンスガイドを参照してください](./node-reference.md)。
 
@@ -323,7 +330,7 @@ nodes = [json_df_node,
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
 ```
 
-ノードを接続したら、グラフを作成します。
+ノードを接続したら、グラフを作成します。 下のセルは必須で、編集または削除できません。
 
 ```python
 dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
@@ -413,10 +420,33 @@ Edgeサービスに対してスコアを適用するには、 *Real-time ML* （
 
 スコアリングが完了すると、エッジURL、ペイロード、およびエッジからのスコア出力が返されます。
 
-## デプロイ済みのアプリをEdgeから削除（オプション）
+## デプロイ済みアプリのEdgeからのリスト
 
->!![CAUTION]
-このセルは、デプロイ済みのEdgeアプリケーションを削除するために使用します。 デプロイ済みのEdgeアプリケーションを削除する必要がある場合を除き、次のセルを使用しないでください。
+現在エッジにデプロイされているアプリのリストを生成するには、次のコードセルを実行します。 このセルは編集または削除できません。
+
+```python
+services = edge_utils.list_deployed_services()
+print(services)
+```
+
+返される応答は、デプロイ済みのサービスの配列です。
+
+```json
+[
+    {
+        "created": "2020-05-25T19:18:52.731Z",
+        "deprecated": false,
+        "id": "40eq76c0-1c6f-427a-8f8f-54y9cdf041b7",
+        "type": "edge",
+        "updated": "2020-05-25T19:18:52.731Z"
+    }
+]
+```
+
+## デプロイ済みのアプリケーションまたはサービスIDをEdgeから削除する（オプション）
+
+>[!CAUTION]
+>このセルは、デプロイ済みのEdgeアプリケーションを削除するために使用します。 デプロイ済みのEdgeアプリケーションを削除する必要がある場合を除き、次のセルを使用しないでください。
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
