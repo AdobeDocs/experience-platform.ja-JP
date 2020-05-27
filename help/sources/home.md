@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectorsの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
+source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Experience Platformを使用すると、Adobe Analytics、Adobe Platform Manager
 
 エクスペリエンスプラットフォームは、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
-- [Google広告コネクタ](connectors/advertising/ads.md)
+- [Google AdWordsコネクタ](connectors/advertising/ads.md)
 
 ### クラウドストレージ
 
