@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service APIを使用してSQL Serverコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '607'
 ht-degree: 1%
 
 ---
@@ -36,9 +36,10 @@ SQL Serverに接続するには、次の接続プロパティを指定する必�
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | SQL Serverアカウントに関連付けられている接続文字列。 |
+| `connectionString` | SQL Serverアカウントに関連付けられている接続文字列。 SQL Serverの接続文字列パターンは次のとおりです。 `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | 接続の生成に使用するID。 SQL Serverの固定接続仕様IDはで `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`す。 |
 
-SQL Serverの使い始めについて詳しくは、 [このドキュメント](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server) を参照してください。
+接続文字列の取得の詳細については、 [このSQL Serverドキュメントを参照してください](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server)。
 
 ### サンプルAPI呼び出しの読み取り
 
@@ -60,77 +61,9 @@ Experience Platformのすべてのリソース（Flow Serviceに属するリソ�
 
 * Content-Type: `application/json`
 
-## 接続仕様の検索
+## 接続の作成
 
-SQL Server接続を作成するには、一連のSQL Server接続仕様がフローサービス内に存在する必要があります。 プラットフォームをSQL Serverに接続する最初の手順は、これらの仕様を取得することです。
-
-**API形式**
-
-使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GET要求をエンドポイントに送信すると、使用可能なすべてのソースの接続指定が返され `/connectionSpecs` ます。 また、SQL Server専用のクエリ `property=name=="sql-server"` を取得する情報を含めることもできます。
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="sql-server"
-```
-
-**リクエスト**
-
-次の要求は、SQL Serverの接続仕様を取得します。
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="sql-server"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答**
-
-正常な応答は、固有な識別子(`id`)を含むSQL Serverの接続仕様を返します。 このIDは、次の手順でベース接続を作成する際に必要となります。
-
-```json
-{
-    "items": [
-        {
-            "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
-            "name": "sql-server",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Connection String Based Authentication",
-                    "type": "connectionString",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to SQL Server database",
-                        "properties": {
-                            "connectionString": {
-                                "type": "string",
-                                "description": "connection string to connect to any SQL Server database.",
-                                "format": "password",
-                                "pattern": "^(Data Source=)(.*)(;Initial Catalog=)(.*)(;Integrated Security=)(.*)(;User ID=)(.*)(;Password=)(.*)(;)",
-                                "examples": [
-                                    "Data Source=<servername>\\<instance name if using named instance>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "connectionString"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## ベース接続を作成する
-
-ベース接続はソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクタを作成する場合に使用できるので、SQL Serverアカウントごとに必要なベース接続は1つだけです。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるため、SQL Serverアカウントごとに必要な接続は1つだけです。
 
 **API形式**
 
@@ -139,6 +72,8 @@ POST /connections
 ```
 
 **リクエスト**
+
+SQL Server接続を作成するには、一意の接続仕様IDをPOST要求の一部として指定する必要があります。 SQL Serverの接続仕様IDはで `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`す。
 
 ```shell
 curl -X POST \
@@ -154,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};"
             }
         },
         "connectionSpec": {
@@ -165,12 +100,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | SQL Server認証に関連付けられている接続文字列。 |
-| `connectionSpec.id` | 前の手順で収集した接続仕様(`id`)。 |
+| `auth.params.connectionString` | SQL Serverアカウントに関連付けられている接続文字列。 SQL Serverの接続文字列パターンは次のとおりです。 `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| `connectionSpec.id` | SQL Serverの接続仕様ID: `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **応答**
 
-正常な応答は、新たに作成されたベース接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常な応答は、新たに作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータベースを調べるために必要です。
 
 ```json
 {
@@ -181,4 +116,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、Flow Service APIを使用してSQL Serverの基本接続を作成し、接続の一意のID値を取得したことになります。 フローサービスAPIを使用してデータベースやNoSQLシステムを [探索する方法を学ぶ際に、次のチュートリアルでこの基本接続IDを使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うと、Flow Service APIを使用してSQL Server接続を作成し、接続の一意のID値を取得したことになります。 この接続IDは、Flow Service APIを使用してデータベースやNoSQLシステムを [探索する方法を学ぶ際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
