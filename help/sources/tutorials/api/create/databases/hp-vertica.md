@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service APIを使用してHP Verticaコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Flow Service APIを使用してHP Verticaに正常に接続するために知っ
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | HP Verticaインスタンスへの接続に使用する接続文字列。 HP Verticaの接続文字列パターンは、 `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | HP Verticaインスタンスへの接続に使用する接続文字列。 HP Verticaの接続文字列パターンは、 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | 接続を作成するために必要な識別子。 HP Verticaの固定接続仕様IDは次のとおりです。 `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 接続文字列の取得の詳細については、 [このHP Verticaドキュメントを参照してください](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)。
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -101,7 +101,7 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | HP Verticaアカウントに関連付けられている接続文字列。 |
+| `auth.params.connectionString` | HP Verticaアカウントに関連付けられている接続文字列。 HP Verticaの接続文字列パターンは次のとおりです。 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | HP Vertica接続仕様ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **応答**
