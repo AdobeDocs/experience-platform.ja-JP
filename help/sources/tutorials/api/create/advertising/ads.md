@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Flow Service APIを使用してGoogle Adsコネクタを作成する
+title: Flow Service APIを使用してGoogle AdWordsコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 950fa88ed6c9235bff98658763b662113bb76caa
+source-git-commit: 00f785577999d2ec3147a3cc2b8edd1028be2471
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 1%
@@ -12,11 +12,11 @@ ht-degree: 1%
 ---
 
 
-# Flow Service APIを使用してGoogle Adsコネクタを作成する
+# Flow Service APIを使用してGoogle AdWordsコネクタを作成する
 
 フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して、エクスペリエンスプラットフォームをGoogle Adsに接続する手順を順を追って説明します。
+このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle AdWordsに接続する手順を順を追って説明します。
 
 ## はじめに
 
@@ -29,18 +29,18 @@ Flow Service APIを使用してAdに正常に接続するために知ってお�
 
 ### 必要な資格情報の収集
 
-フローサービスが広告と接続するには、次の接続プロパティの値を指定する必要があります。
+フローサービスがAdWordsと接続するには、次の接続プロパティの値を指定する必要があります。
 
 | **Credential** | **説明** |
 | -------------- | --------------- |
-| 顧客ID | 広告アカウントのクライアント顧客ID。 |
+| 顧客ID | AdWordsアカウントのクライアント顧客ID。 |
 | 開発者トークン | マネージャーアカウントに関連付けられている開発者トークン。 |
-| 更新トークン | 広告へのアクセスを承認するためにGoogleから取得した更新トークン。 |
+| 更新トークン | AdWordsへのアクセスを承認するためにGoogleから取得した更新トークン。 |
 | クライアントID | 更新トークンの取得に使用されるGoogleアプリケーションのクライアントID。 |
 | クライアントシークレット | 更新トークンの取得に使用されるGoogleアプリケーションのクライアントシークレット。 |
-| 接続指定ID | 接続を作成するために必要な一意の識別子。 Google広告の接続仕様IDは次のとおりです。 `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| 接続指定ID | 接続を作成するために必要な一意の識別子。 Google AdWordsの接続仕様IDは次のとおりです。 `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
-これらの値の詳細については、次の [Google Adsドキュメントを参照してください](https://developers.google.com/adwords/api/docs/guides/authentication)。
+これらの値の詳細については、この [Google AdWordsドキュメントを参照してください](https://developers.google.com/adwords/api/docs/guides/authentication)。
 
 ### サンプルAPI呼び出しの読み取り
 
@@ -64,7 +64,7 @@ Experience Platformのすべてのリソース（Flow Serviceに属するリソ�
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、Google Adsアカウントごとに必要な接続は1つだけです。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、Google AdWordsアカウントごとに必要な接続は1つだけです。
 
 **API形式**
 
@@ -74,7 +74,7 @@ POST /connections
 
 **リクエスト**
 
-Google Adsの接続を作成するには、POSTリクエストの一部として、一意の接続指定IDを指定する必要があります。 Google広告の接続仕様IDはで `221c7626-58f6-4eec-8ee2-042b0226f03b`す。
+Google AdWords接続を作成するには、その一意の接続指定IDをPOSTリクエストの一部として指定する必要があります。 Google AdWordsの接続仕様IDはで `221c7626-58f6-4eec-8ee2-042b0226f03b`す。
 
 ```shell
 curl -X POST \
@@ -85,8 +85,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "google-ads connection",
-        "description": "Connection for google-ads",
+        "name": "google-AdWords connection",
+        "description": "Connection for google-AdWords",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -107,12 +107,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | 広告アカウントのクライアント顧客ID。 |
-| `auth.params.developerToken` | 広告アカウントの開発者トークン。 |
-| `auth.params.refreshToken` | 広告アカウントの更新トークン。 |
-| `auth.params.clientID` | 広告アカウントのクライアントID。 |
-| `auth.params.clientSecret` | 広告アカウントのクライアントシークレット。 |
-| `connectionSpec.id` | Google Ads接続仕様ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | AdWordsアカウントのクライアント顧客ID。 |
+| `auth.params.developerToken` | AdWordsアカウントの開発者トークン。 |
+| `auth.params.refreshToken` | AdWordsアカウントの更新トークン。 |
+| `auth.params.clientID` | AdWordsアカウントのクライアントID。 |
+| `auth.params.clientSecret` | AdWordsアカウントのクライアントシークレット。 |
+| `connectionSpec.id` | Google AdWords接続仕様ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **応答**
 
@@ -127,4 +127,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、Flow Service APIを使用してGoogle Ads接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service APIを使用して広告システムを [調査する方法を学ぶ際に、次のチュートリアルで使用できます](../../explore/advertising.md)。
+このチュートリアルに従うと、Flow Service APIを使用してGoogle AdWords接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service APIを使用して広告システムを [調査する方法を学ぶ際に、次のチュートリアルで使用できます](../../explore/advertising.md)。
