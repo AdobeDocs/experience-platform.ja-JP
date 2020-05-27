@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
+source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
          - [オーディエンスマネージャーのマッピングフィールド](connectors/adobe-applications/mapping/audience-manager.md)
          - [ターゲットマッピングフィールド](connectors/adobe-applications/mapping/target.md)
    - 広告 {#advertising}
-      - [Google広告コネクタ](connectors/advertising/ads.md)
+      - [Google AdWordsコネクタ](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
       - [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
       - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
@@ -65,7 +65,7 @@ ht-degree: 1%
 - APIチュートリアル {#api-tutorials}
    - ソースコネクタを作成する {#create}
       - 広告 {#advertising}
-         - [Google広告コネクタ](tutorials/api/create/advertising/ads.md)
+         - [Google AdWordsコネクタ](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3コネクタ](tutorials/api/create/cloud-storage/s3.md)
@@ -132,7 +132,7 @@ ht-degree: 1%
          - [Adobeオーディエンスマネージャーコネクタ](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [顧客属性コネクタ](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - 広告 {#create}
-         - [Google広告コネクタ](tutorials/ui/create/advertising/ads.md)
+         - [Google AdWordsコネクタ](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Azure Data LakeストレージGen2コネクタ](tutorials/ui/create/cloud-storage/adls-gen2.md)
