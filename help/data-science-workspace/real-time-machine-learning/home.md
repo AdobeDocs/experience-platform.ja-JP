@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイム機械学習の概要
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 1%
@@ -61,7 +61,7 @@ ht-degree: 1%
 > アルファの制限：
 > - 現在、ONNXベースのモデルのみがサポートされています。
 > - ノードで使用される関数はシリアライズできません。 例えば、Pandasノードで使用されるラムダ関数です。
-> - Edgeのデプロイメントを手動で実行した後、60秒のスリープ状態が発生します。
+> - Edgeのデプロイメントを手動で実行した後、20秒のスリープ状態が発生します。
 > - 詳細な学習を行う場合は、データを、呼び出されたときに、DLモデルが受け入れ可能なアレイを返すように送信する必要があり `df.values` ます。 これは、ONNXモデルスコアリングノードが出力を使用 `df.values` して送信し、モデルに対してスコアリングを行うためです。
 
 
