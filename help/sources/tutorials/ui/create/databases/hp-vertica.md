@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでHP Verticaソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Flow Service APIを使用してHP Verticaに正常に接続するために知っ
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | HP Verticaインスタンスへの接続に使用する接続文字列。 HP Verticaの接続文字列パターンは、 `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | HP Verticaインスタンスへの接続に使用する接続文字列。 HP Verticaの接続文字列パターンは、 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 使い始める前に、 [このHP Verticaドキュメントを参照してください](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)。
 
