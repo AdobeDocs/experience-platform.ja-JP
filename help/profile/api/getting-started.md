@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: リアルタイムの顧客プロファイルAPI開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 8449681a7fd0fc5dccf4837a1e8e512f1e2f2601
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ## エッジ投影法
 
-Adobe Experience Platformを使用すると、「エッジ」と呼ばれる戦略的に配置されたサーバー上でデータに容易にアクセスできるようにし、顧客体験をリアルタイムでパーソナライズできます。 Real-time Customer CustomerプロファイルAPIは、「投影」と呼ばれるコンポーネントを介してエッジを操作するためのエンドポイントを提供します。 これには、各エッジに投影するデータを決定する投影設定や、投影のルーティング先を定義する投影先が含まれます。
+Adobe Experience Platformを使用すると、「エッジ」と呼ばれる戦略的に配置されたサーバー上でデータに容易にアクセスできるようにすることで、顧客体験をリアルタイムでパーソナライズできます。 Real-time Customer CustomerプロファイルAPIは、「投影」と呼ばれるコンポーネントを介してエッジを操作するためのエンドポイントを提供します。 これには、各エッジに投影するデータを決定する投影設定や、投影のルーティング先を定義する投影先が含まれます。
 
 エッジ投影法の操作について詳しくは、 [エッジ投影法のサブガイドを参照してください](edge-projections.md)。
 
@@ -78,10 +78,6 @@ Adobe Experience Platformを通じて、RESTful APIまたはユーザーイン�
 リアルタイム顧客プロファイルAPIを使用すると、新しい結合ポリシーを作成し、既存のポリシーを管理し、組織のデフォルトの結合ポリシーを設定できます。 APIを使用した結合ポリシーの操作について詳しくは、 [結合ポリシーのサブガイドを参照してください](merge-policies.md)。
 
 プラットフォームUIを使用して結合ポリシーを操作する手引きについては、 [Merge Policiesユーザーガイドを参照してください](../ui/merge-policies.md)。
-
-## プロファイル検索
-
-プロファイル検索は、様々なデータソースに含まれる設定可能なフィールドを検索およびインデックス付けして、ほぼリアルタイムで返すために使用します。 プロファイル検索の使用を開始するには、 [searchサブガイドを参照してください](profile-search.md)
 
 ## プロファイルシステムジョブ
 
