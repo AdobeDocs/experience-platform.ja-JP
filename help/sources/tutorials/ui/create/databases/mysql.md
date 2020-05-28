@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのMySQLソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ MySQLベースの接続が既にある場合は、このドキュメントの残
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | アカウントに関連付けられているMySQL接続文字列。 |
+| `connectionString` | アカウントに関連付けられているMySQL接続文字列。 MySQLの接続文字列パターンは次のとおりです。 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 
 接続文字列の詳細と、MySQLドキュメントを読むことによる接続文字列の取得方法について詳し [く説明します](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)。
 
