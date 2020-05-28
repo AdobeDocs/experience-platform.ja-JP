@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentation Service開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '429'
 ht-degree: 1%
 
 ---
@@ -86,6 +86,10 @@ For more information on using this endpoint, please read the [segment definition
 セグメントジョブは、以前に確立されたセグメント定義を処理して、オーディエンスセグメントを生成します。 エンドポイントを使用して、セグメントジョブのリストの取得、新しいセグメントジョブの作成、特定のセグメントジョブの詳細の取得または特定のセグメントジョブの削除を行うことができます。 `/segment/jobs`
 
 このエンドポイントの使用方法の詳細については、『 [セグメントジョブ開発者ガイド](./segment-jobs.md)』を参照してください。
+
+## セグメント検索
+
+セグメント検索は、様々なデータソースに含まれる設定可能なフィールドを検索およびインデックス付けして、ほぼリアルタイムで返すために使用します。 セグメント検索の使用を開始するには、 [検索開発者ガイドを参照してください](segment-search.md)
 
 ## 次の手順
 
