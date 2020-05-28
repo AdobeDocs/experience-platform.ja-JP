@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platformの概要
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
+source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 2%
+source-wordcount: '526'
+ht-degree: 4%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 2%
 # Adobe Experience Platformの概要
 
 >[!NOTE]
+>
 >Adobe Experience Platformドキュメントは最近、移動されました。 新しいナビゲーションを確認し、既存のブックマークを更新してください。
 
 Adobe Experience Platformは、顧客体験を高める完全なソリューションを構築、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。 Experience Platformを使用すると、組織はあらゆるシステムから顧客データとコンテンツを一元管理し、データ科学と機械学習を適用して、パーソナライズされた豊富なエクスペリエンスの設計と配信を大幅に改善できます。
@@ -42,6 +43,10 @@ Adobe Experience Platformは、顧客体験を高める完全なソリューシ�
 ## エクスペリエンスプラットフォームのチュートリアル
 
 取り込み用のデータ準備から高度な機械学習アルゴリズムまで、すべての作業に関するチュートリアルに従い、すばやく簡単にプラットフォームを開始できます。 これらのチュートリアルは、Experience Platformのドキュメントに記載されている情報を補完する目的で設計されているので、最良の結果を得るために、チュートリアルを完了する際にドキュメントを傍聴しておくことをお勧めします。 使用を開始するには、 [エクスペリエンスプラットフォームのチュートリアル](../tutorials/home.md) を参照してください。
+
+## ビデオチュートリアル
+
+様々なエクスペリエンスプラットフォームのトピックについては、 [ビデオチュートリアル](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) （英語）を参照してください。
 
 ## リファレンスドキュメントとリソース
 
