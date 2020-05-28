@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzureテーブルストレージコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -36,10 +36,10 @@ Flow Service APIを使用してATSに正常に接続するために必要な追�
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | Azureテーブルストレージインスタンスに接続する接続文字列です。 |
-| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 ATSの接続指定IDはで `ecde33f2-c56f-46cc-bdea-ad151c16cd69`す。 |
+| `connectionString` | ATSインスタンスへの接続に使用する接続文字列です。 ATSの接続文字列パターンは次のとおりです。 `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | 接続の生成に使用するID。 ATSの固定接続仕様IDは `ecde33f2-c56f-46cc-bdea-ad151c16cd69`です。 |
 
-使い始める方法の詳細については、 [このATSドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)。
+接続文字列の取得の詳細については、 [このATSドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)。
 
 ### サンプルAPI呼び出しの読み取り
 
@@ -73,7 +73,7 @@ POST /connections
 
 **リクエスト**
 
-ATS接続を作成するには、一意の接続指定IDをPOST要求の一部として指定する必要があります。 ATSの接続指定IDはで `ecde33f2-c56f-46cc-bdea-ad151c16cd69`す。
+ATS接続を作成するには、一意の接続仕様IDをPOST要求の一部として指定する必要があります。 ATSの接続仕様IDはで `ecde33f2-c56f-46cc-bdea-ad151c16cd69`す。
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -101,8 +101,8 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | ATSアカウントに関連付けられている接続文字列です。 |
-| `connectionSpec.id` | ATS接続指定ID: `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | ATSインスタンスへの接続に使用する接続文字列です。 ATSの接続文字列パターンは次のとおりです。 `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | ATS接続仕様IDは次のとおりです。 `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **応答**
 
