@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 記述子
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -334,7 +334,7 @@ ID記述子は、「sourceSchema」の「sourceProperty」が [Adobe Experience 
 | `xdm:sourceProperty` | IDとなる特定のプロパティへのパスです。 パスは「/」で始まり、1で終わらないようにしてください。 パスに「プロパティ」を含めない（例：「/properties/personalEmail/properties/address」ではなく「/personalEmail/address」を使用） |
 | `xdm:title` | このフィールドに表示する新しいタイトル。タイトルの大文字と小文字で示されます。 |
 | `xdm:description` | オプションで、タイトルと共に説明を追加できます。 |
-| `meta:enum` | に示すフィールドが文字列フィールド `xdm:sourceProperty` の場合、Experience Platform UIでそのフィールドに推奨される値のリストを `meta:enum` 決定します。 定義済みリストを宣言しないこと、またはXDMフィールドに対してデータの検証を行わないことに注意して `meta:enum` ください。<br><br>これは、アドビが定義するコアXDMフィールドに対してのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合は、 `meta:enum` PUT要求を介して、フィールドの [プロパティを直接編集する必要があります](./update-resource.md)。 |
+| `meta:enum` | に示すフィールドが文字列フィールド `xdm:sourceProperty` の場合、Experience Platform UIでそのフィールドに推奨される値のリストを `meta:enum` 決定します。 定義済みリストを宣言しないこと、またはXDMフィールドに対してデータの検証を行わないことに注意して `meta:enum` ください。<br><br>これは、アドビが定義するコアXDMフィールドに対してのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合は、 `meta:enum` PATCH要求を介して、フィールドの [プロパティを直接編集する必要があります](./update-resource.md)。 |
 
 #### 関係記述子
 
