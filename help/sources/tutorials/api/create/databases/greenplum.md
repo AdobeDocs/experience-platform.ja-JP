@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service APIを使用してGreenPlumコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '566'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Flow Service APIを使用してGreenPlumに正常に接続するために知っ�
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | GreenPlumインスタンスへの接続に使用する接続文字列。 GreenPlumの接続文字列パターンは `HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | GreenPlumインスタンスへの接続に使用する接続文字列。 GreenPlumの接続文字列パターンは `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | 接続を作成するために必要な識別子。 GreenPlumの固定接続仕様IDは `37b6bf40-d318-4655-90be-5cd6f65d334b`です。 |
 
 接続文字列の取得について詳しくは、 [このGreenPlumドキュメントを参照してください](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn)。
@@ -85,7 +85,7 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication",
             "params": {
-                    "connectionString": "HOST=<server>;PORT=<port>;DB=<database>;UID=<user name>;PWD=<password>"
+                    "connectionString": "HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}"
                 }
         },
         "connectionSpec": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | GreenPlumアカウントに関連付けられている接続文字列。 |
-| `connectionSpec.id` | DB2接続仕様ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | GreenPlumアカウントへの接続に使用する接続文字列。 接続文字列パターンは次のとおりです。 `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | GreenPlum接続仕様ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **応答**
 
