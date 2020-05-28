@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでPostgreSQLソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '482'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ PSQLベースの接続が既に存在する場合は、このドキュメント�
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | PSQLアカウントに関連付けられている接続文字列です。 |
+| `connectionString` | PSQLアカウントに関連付けられている接続文字列です。 PSQL接続文字列パターンは次のとおりです。 `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
 使用を開始する方法の詳細については、この [PSQLドキュメントを参照してください](https://www.postgresql.org/docs/9.2/app-psql.html)。
 
