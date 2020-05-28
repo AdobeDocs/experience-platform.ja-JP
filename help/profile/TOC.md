@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: リアルタイム顧客プロファイルヘルプ
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: 59831f5c2445f65371d1897f66dfc45507a9955c
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '78'
 ht-degree: 25%
 
 ---
@@ -20,7 +20,6 @@ ht-degree: 25%
    * [エッジ投影法](api/edge-projections.md)
    * [エンティティ(プロファイルアクセス)](api/entities.md)
    * [結合ポリシー](api/merge-policies.md)
-   * [プロファイル検索](api/profile-search.md)
    * [プロファイルシステムジョブ（削除要求）](api/profile-system-jobs.md)
 * プロファイルUI {#ui}
    * [プロファイルユーザーガイド](ui/user-guide.md)
