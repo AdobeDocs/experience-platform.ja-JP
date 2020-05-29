@@ -4,10 +4,10 @@ seo-title: リアルタイム顧客データプラットフォームにおける
 description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 seo-description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 100%
+source-wordcount: '946'
+ht-degree: 97%
 
 ---
 
@@ -87,3 +87,7 @@ Adobe Experience Platform では、一般的な顧客体験の使用例に対し
 ## 次の手順
 
 Real-time CDP の主要なデータガバナンス機能と、Experience Platform による機能の紹介が完了したので、[Adobe Experience Platform のデータガバナンスに関するドキュメント](../../data-governance/home.md)を引き続きご覧ください。このドキュメントには、データガバナンスの基本概念の概要と、データ使用ラベルとポリシーを管理するためのワークフローが順を追って記載されています。
+
+次のビデオでは、宛先に対するマーケティングの使用例や、異なるシナリオでのワークフロー例など、リアルタイムCDPでのデータ・ガバナンスの概要を説明しています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
