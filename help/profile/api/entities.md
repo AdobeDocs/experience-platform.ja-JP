@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: リアルタイムの顧客プロファイルAPI開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 95e002c60389ca7e4c1dcf32bbcf6f552cd55d95
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1694'
 ht-degree: 1%
 
 ---
@@ -776,7 +776,7 @@ curl -X POST \
 
 ## 複数のスキーマエンティティの時系列イベントへのアクセス
 
-関係記述子を介して接続された複数のエンティティにアクセスできます。 次のAPI呼び出しの例では、2つのスキーマ間で既に関係が定義されていると仮定しています。 リレーションシップ記述子の詳細については、スキーマレジストリAPI開発者ガイド [記述子のサブガイド]](../../xdm/api/descriptors.md)を参照してください。
+関係記述子を介して接続された複数のエンティティにアクセスできます。 次のAPI呼び出しの例では、2つのスキーマ間で既に関係が定義されていると仮定しています。 関係記述子の詳細については、『スキーマレジストリAPI開発者ガイド [記述子』サブガイドを参照してください](../../xdm/api/descriptors.md)。
 
 リクエストパスにクエリパラメーターを含めて、アクセスするデータを指定できます。 複数のパラメーターを含めることができ、アンパサンド(&amp;)で区切って指定できます。 有効なパラメーターの完全なリストは、付録の「 [クエリパラメーター](#query-parameters) 」セクションに記載されています。
 
