@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: リアルタイムの顧客プロファイルAPI開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1940'
 ht-degree: 2%
 
 ---
@@ -19,6 +19,9 @@ ht-degree: 2%
 ## はじめに
 
 このガイドで使用されるAPIエンドポイントは、リアルタイム顧客プロファイルAPIの一部です。 先に進む前に、 [リアルタイムのお客様向けプロファイル開発ガイドを参照してください](getting-started.md)。 特に、プロファイル開発ガイドの「 [はじめに](getting-started.md#getting-started) 」の節には、関連トピックへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience Platform APIの呼び出しを成功させるために必要なヘッダーに関する重要な情報が含まれています。
+
+>[!NOTE]
+>ペイロード(POST、PUT、PATCH)を含む要求には、 `Content-Type` ヘッダーが必要です。 このドキュメントでは、複数 `Content-Type` が使用されています。 サンプル呼び出しのヘッダーには特に注意を払い、各リクエストで正しいヘッダーが使用されていることを確認して `Content-Type` ください。
 
 ## 投影先
 
@@ -425,6 +428,9 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 **リクエスト**
 
+>[!NOTE]
+>設定を作成するPOSTリクエストには、以下に示すように、特定の `Content-Type` ヘッダーが必要です。 正しくない `Content-Type` ヘッダーを使用すると、HTTPステータス415（サポートされていないメディアタイプ）エラーが発生します。
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
@@ -432,7 +438,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
         "selector": "emails,person(firstName)",
         "name": "my_test_projection",
@@ -495,7 +501,7 @@ curl -X POST \
 * 複数のフィールドを選択する場合は、コンマを使用します。 スペースは使用しないでください。
 * ネストされたフィールドを選択するには、ドット表記を使用します。
    * 例えば、という名前のフィールド内にネストされ `field` ている、という名前のフィールドを選択するに `foo`は、セレクターを使用し `foo.field`ます。
-* サブフィールドを含むフィールドを含めると、すべてのサブフィールドもデフォルトで投影されます。 ただし、丸括弧を使用して返されるサブフィールドをフィルタリングでき `"( )"`ます。
+* サブフィールドを含むフィールドを含めると、すべてのサブフィールドもデフォルトで投影されます。 ただし、丸括弧を使用して返されるサブフィールドをフィルターでき `"( )"`ます。
    * 例えば、は、各 `addresses(type,city.country)``addresses` 配列要素に対して、住所の種類と住所の市区町村が存在する国のみを返します。
    * 上記の例はと同じで `addresses.type,addresses.city.country`す。
 
