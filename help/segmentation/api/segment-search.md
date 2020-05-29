@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: セグメント化API開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 7c33ba8edc886d2b689e1125b5c378e16a487324
+source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
 workflow-type: tm+mt
-source-wordcount: '1198'
+source-wordcount: '1172'
 ht-degree: 2%
 
 ---
@@ -41,8 +41,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **（必須）** {スキーマ}は、検索オブジェクトに関連付けられたスキーマクラス値を表します。 現在、のみがサポートさ `_xdm.context.segmentdefinition` れています。 |
-| s={SEARCH_TERM} | *（オプション）* {SEARCH_TERM}は、Microsoftによる [Luceneの検索構文の実装に準拠するクエリを表します](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 検索語句を指定しない場合、に関連付けられているすべてのレコード `schema.name` が返されます。 詳しくは、このドキュメントの [付録](#appendix) 「」を参照してください。 |
+| `schema.name={SCHEMA}` | **（必須）** {スキーマ}は、検索オブジェクトに関連付けられたスキーマクラス値を表します。 現在、のみがサポートさ `_xdm.context.segmentdefinition` れています。 |
+| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM}は、Microsoftによる [Luceneの検索構文の実装に準拠するクエリを表します](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 検索語句を指定しない場合、に関連付けられているすべてのレコード `schema.name` が返されます。 詳しくは、このドキュメントの [付録](#appendix) 「」を参照してください。 |
 
 **リクエスト**
 
@@ -65,18 +65,22 @@ curl -X GET \
 {
   "namespaces": [
     {
-      "name": "AAMTraits",
+      "namespace": "AAMTraits",
+      "displayName": "AAMTraits",
       "count": 45
     },
     {
-      "name": "AAMSegments",
+      "namespace": "AAMSegments",
+      "displayName": "AAMSegment",
       "count": 10
     },
     {
-      "name": "SegmentsAISegments",
+      "namespace": "SegmentsAISegments",
+      "displayName": "SegmentSAISegment",
       "count": 3
     }
   ],
+  "totalCount": 3,
   "status": {
     "message": "Success"
   }
@@ -97,12 +101,12 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在、のみがサポートさ `_xdm.context.segmentdefinition` れています。 |
-| 名前空間={名前空間} | **（必須）** {名前空間}には、検索対象の名前空間が含まれています。 |
-| s={SEARCH_TERM} | *（オプション）* {SEARCH_TERM}には、Microsoftによる [Luceneの検索構文の実装に準拠するクエリが含まれています](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 検索語句を指定しない場合、に関連付けられているすべてのレコード `schema.name` が返されます。 詳しくは、このドキュメントの [付録](#appendix) 「」を参照してください。 |
-| entityId={ENTITY_ID} | *（オプション）* {ENTITY_ID}で指定した指定フォルダー内での検索を制限します。 |
-| limit={LIMIT} | *（オプション）* {LIMIT}は、返す検索結果の数を表します。 デフォルト値は 50 です。 |
-| page={PAGE} | *（オプション）* {PAGE}は、検索したクエリのページ番号の結果を示すページ番号です。 ページ番号の開始は **0にあることに注意してください**。 |
+| `schema.name={SCHEMA}` | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在、のみがサポートさ `_xdm.context.segmentdefinition` れています。 |
+| `namespace={NAMESPACE}` | **（必須）** {名前空間}には、検索対象の名前空間が含まれています。 |
+| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM}には、Microsoftによる [Luceneの検索構文の実装に準拠するクエリが含まれています](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 検索語句を指定しない場合、に関連付けられているすべてのレコード `schema.name` が返されます。 詳しくは、このドキュメントの [付録](#appendix) 「」を参照してください。 |
+| `entityId={ENTITY_ID}` | *（オプション）* {ENTITY_ID}で指定した指定フォルダー内での検索を制限します。 |
+| `limit={LIMIT}` | *（オプション）* {LIMIT}は、返す検索結果の数を表します。 デフォルト値は 50 です。 |
+| `page={PAGE}` | *（オプション）* {PAGE}は、検索したクエリのページ番号の結果を示すページ番号です。 ページ番号の開始は **0にあることに注意してください**。 |
 
 
 **リクエスト**
@@ -168,9 +172,9 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| schema.name={SCHEMA} | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在、のみがサポートさ `_xdm.context.segmentdefinition` れています。 |
-| 名前空間={名前空間} | **（必須）** {名前空間}には、検索対象の名前空間が含まれています。 |
-| entityId={ENTITY_ID} | **（必須）** {ENTITY_ID}で指定された、構造情報を取得する検索オブジェクトのID。 |
+| `schema.name={SCHEMA}` | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在、のみがサポートさ `_xdm.context.segmentdefinition` れています。 |
+| `namespace={NAMESPACE}` | **（必須）** {名前空間}には、検索対象の名前空間が含まれています。 |
+| `entityId={ENTITY_ID}` | **（必須）** {ENTITY_ID}で指定された、構造情報を取得する検索オブジェクトのID。 |
 
 **リクエスト**
 
