@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data usage policiesユーザーガイド
 topic: policies
 translation-type: tm+mt
-source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '435'
 ht-degree: 2%
 
 ---
@@ -70,3 +70,7 @@ Adobe Experience Platform Data Governanceは、データ使用ポリシーの作
 ## 次の手順
 
 このドキュメントでは、Experience Platform UIでデータ使用ポリシーを管理する方法の概要を説明しました。 DULE Policy APIを使用してポリシーを管理する手順については、 [開発者ガイドを参照してください](../api/getting-started.md)。 データ使用ポリシーの適用方法について詳しくは、「 [ポリシー適用の概要](../enforcement/overview.md)」を参照してください。
+
+次のビデオでは、エクスペリエンスプラットフォームUIでの使用ポリシーの操作方法のデモを提供します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
