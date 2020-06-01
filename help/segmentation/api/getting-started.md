@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentation Service開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
+source-git-commit: bbca6d8f4ab7a684e8bfb1d39b538d937a99244f
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
@@ -73,13 +73,13 @@ For more information on using this endpoint, please read the [PQL conversions de
 
 Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
-For more information on using this endpoint, please read the [schedules developer guide](./schedules.md).
+For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). -->
 
-## Segment definitions
+## セグメント定義
 
-Segment definitions define which profiles will be part of which audience segments. You can use the `/segment/definitions` endpoint to retrieve a list of segment definitions, create a new segment definition, retrieve details of a specific segment definition, delete a specific segment definition, or overwrite details of a specific segment definition.
+セグメント定義は、どのプロファイルがどのオーディエンスセグメントに含まれるかを定義します。 エンドポイントを使用して、セグメント定義のリストの取得、新しいセグメント定義の作成、特定のセグメント定義の詳細の取得、特定のセグメント定義の削除または特定のセグメント定義の詳細の上書きを行うことができます。 `/segment/definitions`
 
-For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md). -->
+このエンドポイントの使用方法の詳細については、『 [セグメント定義開発者ガイド](./segment-definitions.md)』を参照してください。
 
 ## セグメントジョブ
 
