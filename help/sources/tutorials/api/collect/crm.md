@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタとAPIを使用してCRMデータを収集する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 88376a67e064208ab62dd339e820adb8e47d3c4e
+source-git-commit: 1fbc348f6355bbecf20616bb72193777b966b878
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1623'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,13 @@ ht-degree: 2%
 
 # ソースコネクタとAPIを使用してCRMデータを収集する
 
-このチュートリアルでは、CRMシステムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
+フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+
+このチュートリアルでは、サードパーティのCRMシステムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効な基本接続を通じてCRMシステムにアクセスでき、テーブルのパスや構造など、プラットフォームに組み込むテーブルに関する情報が必要です。 この情報がない場合は、このチュートリアルを試す前に、Flow Service APIを使用したCRMシステムの [詳細に関するチュートリアルを参照してください](../explore/crm.md) 。
+このチュートリアルでは、有効な接続と、テーブルのパスや構造など、プラットフォームに組み込むテーブルに関する情報を通じて、サードパーティのCRMシステムにアクセスできる必要があります。 この情報がない場合は、このチュートリアルを試す前に、Flow Service APIを使用したCRMシステムの [詳細に関するチュートリアルを参照してください](../explore/crm.md) 。
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
@@ -57,11 +59,23 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 
 アドホッククラスとスキーマを作成するには、 [アドホックスキーマチュートリアルで概要を説明している手順に従い](../../../../xdm/tutorials/ad-hoc.md)ます。 アドホッククラスを作成する場合、ソースデータ内のすべてのフィールドをリクエスト本文内で記述する必要があります。
 
-開発ガイドに説明されている手順に従って、アドホックスキーマを作成してから、続行します。 アドホックスキーマの固有な識別子(`$id`)を取得して保存し、次の手順に進みます。
+開発ガイドに説明されている手順に従って、アドホックスキーマを作成してから、続行します。 このチュートリアルの次の手順に進むには、アドホックスキーマの固有な識別子(`$id`)が必要です。
 
 ## ソース接続の作成 {#source}
 
-アドホックXDMスキーマを作成した場合、Flow Service APIへのPOST要求を使用してソース接続を作成できるようになりました。 ソース接続は、ベース接続、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
+アドホックXDMスキーマを作成した場合、Flow Service APIへのPOST要求を使用してソース接続を作成できるようになりました。 ソース接続は、接続ID、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
+
+ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
+
+フ **ァイルベースのコネクタの列挙値は、次のとおりです**。
+
+| Data.format | 列挙値 |
+| ----------- | ---------- |
+| 区切りファイル | `delimited` |
+| JSONファイル | `json` |
+| パーケファイル | `parquet` |
+
+すべての **テーブルベースのコネクタに** 、列挙値を使用します。 `tabular`.
 
 **API形式**
 
@@ -73,7 +87,7 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -84,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Source Connection for a CRM system",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -121,17 +135,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `baseConnectionId` | CRMシステムのベース接続のID。 |
+| `baseConnectionId` | アクセスするサードパーティCRMシステムの一意の接続ID。 |
 | `data.schema.id` | アドホックXDMスキーマのID。 |
 | `params.path` | ソースファイルのパス。 |
+| `connectionSpec.id` | 特定のサードパーティCRMシステムに関連付けられている接続仕様ID。 接続仕様IDのリストについては、 [付録](#appendix) を参照してください。 |
 
 **応答**
 
-正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 この値は、後の手順でターゲット接続を作成する際に必要となるので保存します。
+正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 このIDは、後の手順でデータフローを作成する際に必要です。
 
 ```json
 {
     "id": "9a603322-19d2-4de9-89c6-c98bd54eb184"
+    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
 }
 ```
 
@@ -183,7 +199,7 @@ curl -X POST \
 
 **応答**
 
-成功した応答は、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を含む)を返します。 このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となるので、保存してください。
+成功した応答は、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を含む)を返します。 このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となります。
 
 ```json
 {
@@ -223,7 +239,7 @@ curl -X POST \
 
 ## ターゲットデータセットの作成
 
-ターゲットデータセットは、カタログサービスAPIに対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを提供することで作成できます。
+ターゲットデータセットは、 [カタログサービスAPIに対してPOSTリクエストを実行し](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)、ペイロード内のターゲットスキーマのIDを提供することで作成できます。
 
 **API形式**
 
@@ -256,7 +272,7 @@ curl -X POST \
 
 **応答**
 
-正常に完了すると、新しく作成されたデータセットのIDを含む配列が形式で返され `"@/datasets/{DATASET_ID}"`ます。 データセットIDは、API呼び出しでデータセットを参照するために使用される、読み取り専用の、システム生成の文字列です。 後の手順でターゲットデータセット接続とデータフローを作成する際に必要なターゲットデータセットIDを保存します。
+正常に完了すると、新しく作成されたデータセットのIDを含む配列が形式で返され `"@/datasets/{DATASET_ID}"`ます。 データセットIDは、API呼び出しでデータセットを参照するために使用される、読み取り専用の、システム生成の文字列です。 ターゲットデータセットIDは、後の手順でターゲット接続とデータフローを作成する際に必要となります。
 
 ```json
 [
@@ -264,15 +280,9 @@ curl -X POST \
 ]
 ```
 
-## データセットベースの接続の作成
-
-ターゲット接続を作成し、外部データをPlatformに取り込むには、まずデータセットベースの接続を取得する必要があります。
-
-データセットベースの接続を作成するには、「 [データセットベースの接続のチュートリアル](../create-dataset-base-connection.md)」に示されている手順に従います。
-
-開発ガイドに説明されている手順に従って、データセットベースの接続を作成してから、続行します。 基本接続の固有な識別子(`$id`)を取得して保存し、次の手順に進みます。
-
 ## ターゲット接続の作成
+
+ターゲット接続は、取り込まれたデータが到着した宛先への接続を表します。 ターゲット接続を作成するには、データレークに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 これで、データセットベースの接続、ターゲットスキーマ、ターゲットデータセットに対して一意のIDを割り当てることができます。 これらの識別子を使用して、Flow Service APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
 
@@ -286,18 +296,16 @@ POST /targetConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection",
+        "name": "Target Connection for a CRM connector",
         "description": "Target Connection for CRM data",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
@@ -307,7 +315,7 @@ curl -X POST \
             "dataSetId": "5c8c3c555033b814b69f947f"
         },
         "connectionSpec": {
-            "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -315,12 +323,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | データセットベースの接続のID。 |
 | `data.schema.id` | ターゲット `$id` のXDMスキーマ。 |
 | `params.dataSetId` | ターゲットデータセットのID。 |
-| `connectionSpec.id` | CRMの接続仕様ID。 |
-
->[!NOTE] ターゲット接続を作成する場合は、サードパーティのソースコネクタのベース接続ではなく、ベース接続にデータセットベース接続の値 `id` を使用する必要があります。
+| `connectionSpec.id` | Data Lakeへの固定接続仕様ID。 このIDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -389,7 +394,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新たに作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 この値は、後の手順でデータフローを作成する際に必要となるので保存します。
+正常な応答は、新たに作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 この値は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -459,7 +464,7 @@ curl -X POST \
 }
 ```
 
-## データフロー仕様の検索 {#specs}
+## データフロー仕様の取得 {#specs}
 
 データフローは、ソースからデータを収集し、プラットフォームに取り込む役割を持ちます。 データフローを作成するには、まずCRMデータの収集を担当するデータフロー仕様を取得する必要があります。
 
@@ -481,7 +486,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答を得ると、CRMシステムからプラットフォームにデータを取り込む役割を持つデータフロー仕様の詳細が返されます。 新しいデータフローを作成するための次の手順で必要となる `id` フィールドの値を格納します。
+正常な応答を得ると、CRMシステムからプラットフォームにデータを取り込む役割を持つデータフロー仕様の詳細が返されます。 このIDは、次の手順で新しいデータフローを作成する際に必要です。
 
 ```json
 {
@@ -614,6 +619,8 @@ CRMデータを収集する最後の手順は、データフローを作成す�
 
 データフローは、ソースからのデータのスケジュールおよび収集を担当します。 データフローを作成するには、ペイロード内で前述の値を指定しながらPOSTリクエストを実行します。
 
+取り込みのスケジュールを設定するには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 interval値は、2つの連続したインジェスションの間の期間を指定し、1回限りのインジェストを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の場合、間隔の値は次の値と等しいかそれ以上に設定する必要があり `15`ます。
+
 **API形式**
 
 ```http
@@ -644,12 +651,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "mode": "append"
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
@@ -666,10 +667,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `flowSpec.id` | データフロー仕様ID |
-| `sourceConnectionIds` | ソース接続ID |
-| `targetConnectionIds` | ターゲット接続ID |
-| `transformations.params.mappingId` | マッピング ID |
+| `flowSpec.id` | 前の手順で取得したフロー仕様ID。 |
+| `sourceConnectionIds` | 前の手順で取得したソース接続ID。 |
+| `targetConnectionIds` | 前の手順で取得したターゲット接続ID。 |
+| `transformations.params.mappingId` | 前の手順で取得したマッピングID。 |
+| `scheduleParams.startTime` | データフローの開始時間（秒単位）。 |
+| `scheduleParams.frequency` | 選択可能な頻度の値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
+| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があ `15` ります。 |
 
 **応答**
 
@@ -678,6 +682,8 @@ curl -X POST \
 ```json
 {
     "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+
 }
 ```
 
@@ -687,3 +693,14 @@ curl -X POST \
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspaceの概要](../../../../data-science-workspace/home.md)
+
+## 付録
+
+次の節では、様々なCRMソースコネクタとその接続仕様をリストします。
+
+### 接続の指定
+
+| コネクタ名 | 接続仕様 |
+| -------------- | --------------- |
+| Microsoft Dynamics | `38ad80fe-8b06-4938-94f4-d4ee80266b07` |
+| Salesforce | `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` |
