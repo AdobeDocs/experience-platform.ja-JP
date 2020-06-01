@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタとAPIを使用して支払データを収集する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3d8682eb1a33b7678ed814e5d6d2cb54d233c03e
+source-git-commit: 577027e52041d642e03ca5abf5cb8b05c689b9f2
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1663'
 ht-degree: 2%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 2%
 
 ## はじめに
 
-このチュートリアルでは、有効な基本接続を通じて支払いシステムにアクセスでき、プラットフォームに組み込むファイル（ファイルのパスと構造など）に関する情報が必要です。 この情報がない場合は、このチュートリアルを試みる前に、Flow Service APIを使用した支払い申し込みの [調査に関するチュートリアルを参照してください](../explore/payments.md) 。
+このチュートリアルでは、有効な接続を通じて支払いシステムにアクセスでき、プラットフォームに組み込むファイル（ファイルのパスと構造など）に関する情報が必要です。 この情報がない場合は、このチュートリアルを試みる前に、Flow Service APIを使用した支払い申し込みの [調査に関するチュートリアルを参照してください](../explore/payments.md) 。
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 * [Experience Data Model(XDM)System](../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   * [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+   * [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    * [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
 * [カタログサービス](../../../../catalog/home.md): カタログは、エクスペリエンスプラットフォーム内のデータの場所と系列の記録システムです。
 * [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md): Batch Ingestion APIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
@@ -65,6 +65,18 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 
 アドホックXDMスキーマを作成した場合、Flow Service APIへのPOST要求を使用してソース接続を作成できるようになりました。 ソース接続は、接続ID、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
 
+ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
+
+フ **ァイルベースのコネクタの列挙値は、次のとおりです**。
+
+| Data.format | 列挙値 |
+| ----------- | ---------- |
+| 区切りファイル | `delimited` |
+| JSONファイル | `json` |
+| パーケファイル | `parquet` |
+
+すべての **テーブルベースのコネクタに** 、列挙値を使用します。 `tabular`.
+
 **API形式**
 
 ```https
@@ -86,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
         "description": "Paypal",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/396f583b57577b2f2fca79c2cb88e9254992f5fa70ce5f1a",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -104,7 +116,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | 支払い申請の接続ID |
+| `baseConnectionId` | アクセスしているサードパーティ支払い申し込みの一意の接続ID。 |
 | `data.schema.id` | アドホックXDMスキーマ `$id` の |
 | `params.path` | ソースファイルのパス。 |
 | `connectionSpec.id` | 支払い申請の接続仕様ID。 |
@@ -278,17 +290,11 @@ curl -X POST \
 ]
 ```
 
-## データセットベースの接続の作成
-
-外部データをプラットフォームに取り込むには、まずExperience Platformのデータセットベース接続を取得する必要があります。
-
-データセットベースの接続を作成するには、「 [データセットベースの接続のチュートリアル](../create-dataset-base-connection.md)」に示されている手順に従います。
-
-開発ガイドに説明されている手順に従って、データセットベースの接続を作成してから、続行します。 一意の識別子(`$id`)を取得して保存し、次の手順でターゲット接続を作成する際に接続IDとして使用します。
-
 ## ターゲット接続の作成
 
-データセットベースの接続、ターゲットスキーマ、ターゲットデータセットの一意のIDが追加されました。 Flow Service APIを使用してターゲット接続を作成し、インバウンドソースデータを含むデータセットを指定できるようになりました。
+ターゲット接続は、取り込まれたデータが到着した宛先への接続を表します。 ターゲット接続を作成するには、データレークに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+ターゲットスキーマ、ターゲットデータセット、データレークへの接続仕様IDに固有の識別子が追加されました。 これらの識別子を使用して、Flow Service APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
 
 **API形式**
 
@@ -307,11 +313,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "72c47da8-c225-40c0-847d-a8c22550c01b",
         "name": "Target Connection for payments",
         "description": "Target Connection for payments",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722"
             }
@@ -328,10 +332,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | データセットベースの接続のID。 |
 | `data.schema.id` | ターゲット `$id` のXDMスキーマ。 |
 | `params.dataSetId` | ターゲットデータセットのID。 |
-| `connectionSpec.id` | 支払い申請の接続仕様ID。 |
+| `connectionSpec.id` | Data Lakeへの固定接続仕様ID。 このIDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **応答**
 
@@ -581,6 +584,8 @@ curl -X GET \
 
 データフローは、ソースからのデータのスケジュールおよび収集を担当します。 データフローを作成するには、ペイロード内で前述の値を指定しながらPOSTリクエストを実行します。
 
+取り込みのスケジュールを設定するには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 interval値は、2つの連続したインジェスションの間の期間を指定し、1回限りのインジェストを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の場合、間隔の値は次の値と等しいかそれ以上に設定する必要があり `15`ます。
+
 **API形式**
 
 ```https
@@ -630,11 +635,21 @@ curl -X POST \
         ],
         "scheduleParams": {
             "startTime": "1567411548",
-            "frequency":"minute",
+            "frequency": "minute",
             "interval":"30"
         }
     }'
 ```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `flowSpec.id` | 前の手順で取得したフロー仕様ID。 |
+| `sourceConnectionIds` | 前の手順で取得したソース接続ID。 |
+| `targetConnectionIds` | 前の手順で取得したターゲット接続ID。 |
+| `transformations.params.mappingId` | 前の手順で取得したマッピングID。 |
+| `scheduleParams.startTime` | データフローの開始時間（秒単位）。 |
+| `scheduleParams.frequency` | 選択可能な頻度の値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
+| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があ `15` ります。 |
 
 **応答**
 
@@ -642,7 +657,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
