@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクターとAPIを使用したクラウドストレージデータの収集
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: 4a66be0b49bdcd765fd5dcbd0e646d35df54c7e4
 workflow-type: tm+mt
-source-wordcount: '1490'
+source-wordcount: '1688'
 ht-degree: 2%
 
 ---
@@ -14,16 +14,18 @@ ht-degree: 2%
 
 # ソースコネクターとAPIを使用したクラウドストレージデータの収集
 
+フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+
 このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効な基本ストレージを通じてサードパーティのクラウド接続にアクセスでき、ファイルのパスや構造など、プラットフォームに組み込むファイルに関する情報が必要です。 この情報がない場合は、このチュートリアルを試す前に、Flow Service APIを使用したサードパーティのクラウドストレージの [調査に関するチュートリアルを参照してください](../explore/cloud-storage.md) 。
+このチュートリアルでは、有効な接続を通じてサードパーティのクラウドストレージにアクセスでき、ファイルのパスや構造など、プラットフォームに組み込むファイルに関する情報が必要です。 この情報がない場合は、このチュートリアルを試す前に、Flow Service APIを使用したサードパーティのクラウドストレージの [詳細に関するチュートリアルを参照してください](../explore/cloud-storage.md) 。
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 - [Experience Data Model(XDM)System](../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
    - [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
 - [カタログサービス](../../../../catalog/home.md): カタログは、エクスペリエンスプラットフォーム内のデータの場所と系列の記録システムです。
 - [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md): Batch Ingestion APIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
@@ -57,11 +59,23 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 
 アドホッククラスとスキーマを作成するには、 [アドホックスキーマチュートリアルで概要を説明している手順に従い](../../../../xdm/tutorials/ad-hoc.md)ます。 アドホッククラスを作成する場合、ソースデータ内のすべてのフィールドをリクエスト本文内で記述する必要があります。
 
-開発ガイドに説明されている手順に従って、アドホックスキーマを作成してから、続行します。 アドホックスキーマの固有な識別子(`$id`)を取得して保存し、次の手順に進みます。
+開発ガイドに説明されている手順に従って、アドホックスキーマを作成してから、続行します。 このチュートリアルの次の手順に進むには、アドホックスキーマの固有な識別子(`$id`)が必要です。
 
 ## ソース接続の作成 {#source}
 
-アドホックXDMスキーマを作成した場合、Flow Service APIへのPOST要求を使用してソース接続を作成できるようになりました。 ソース接続は、ベース接続、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
+アドホックXDMスキーマを作成した場合、Flow Service APIへのPOST要求を使用してソース接続を作成できるようになりました。 ソース接続は、接続ID、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
+
+ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
+
+フ **ァイルベースのコネクタの列挙値は、次のとおりです**。
+
+| Data.format | 列挙値 |
+| ----------- | ---------- |
+| 区切りファイル | `delimited` |
+| JSONファイル | `json` |
+| パーケファイル | `parquet` |
+
+すべての **テーブルベースのコネクタに** 、列挙値を使用します。 `tabular`.
 
 **API形式**
 
@@ -73,52 +87,57 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Source Connection for a cloud storage",
-        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
-        "description": "Source Connection to ingest data.csv",
+        "name": "Test source connection for a Cloud Storage connector",
+        "baseConnectionId": "ac33bd66-1565-4915-b3bd-6615657915c4",
+        "description": "Test source connection for a Cloud Storage connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "delimited",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/22a4ab59462a64de551d42dd10ec1f19d8d7246e3f90072a",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
         "params": {
-            "path": "/some/path/data.csv",
+            "path": "/backfil/data8.csv",
             "recursive": "true"
         },
         "connectionSpec": {
-            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
             "version": "1.0"
+        }
     }'
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `baseConnectionId` | クラウドストレージシステムのベース接続のID。 |
+| `baseConnectionId` | アクセスするサードパーティのクラウドストレージシステムの一意の接続ID。 |
 | `data.schema.id` | アドホックXDMスキーマのID。 |
-| `params.path` | ソースファイルのパス。 |
+| `params.path` | アクセスするソースファイルのパス。 |
+| `connectionSpec.id` | 特定のサードパーティクラウドストレージシステムに関連付けられている接続仕様ID。 接続仕様IDのリストについては、 [付録](#appendix) を参照してください。 |
 
 **応答**
 
-正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 この値は、後の手順でターゲット接続を作成する際に必要となるので保存します。
+正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 このIDは、後の手順でデータフローを作成する際に必要です。
 
 ```json
 {
-    "id": "9a603322-19d2-4de9-89c6-c98bd54eb184"
+    "id": "8bae595c-8548-4716-ae59-5c85480716e9",
+    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
 }
 ```
 
 ## ターゲットXDMスキーマの作成 {#target}
 
 以前の手順では、ソースデータを構造化するためにアドホックXDMスキーマを作成しました。 Platformでソースデータを使用するには、必要に応じてソースデータを構造化するためのターゲットスキーマも作成する必要があります。 次に、このターゲットスキーマを使用して、ソースデータが含まれるプラットフォームデータセットを作成します。
+
+ターゲットXDMスキーマは、 [スキーマレジストリAPIに対してPOST要求を実行することで作成できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
 
 Experience Platformでユーザーインターフェイスを使用したい場合は、 [スキーマエディターのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md) （英語のみ）に、スキーマエディターで同様の操作を実行するための手順を順を追って説明しています。
 
@@ -142,14 +161,17 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for cloud storage source connector",
-        "description": "",
+        "title": "Target schema for a Cloud Storage connector",
+        "description": "Target schema for a Cloud Storage connector",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
             },
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
+            },
+            {
+                "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             },
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
@@ -164,47 +186,74 @@ curl -X POST \
 
 **応答**
 
-成功した応答は、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を含む)を返します。 このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となるので、保存してください。
+成功した応答は、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を含む)を返します。 このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となります。
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
-    "meta:altId": "{TENANT_ID}.schemas.417a33eg81a221bd10495920574gfa2d",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+    "meta:altId": "_{TENANT_ID}.schemas.e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for cloud storage source connector",
-    "description": "",
+    "title": "Target schema for a Cloud Storage connector",
     "type": "object",
+    "description": "Target schema for Cloud Storage",
     "allOf": [
         {
-            "$ref": "https://ns.adobe.com/xdm/context/profile"
+            "$ref": "https://ns.adobe.com/xdm/context/profile",
+            "type": "object",
+            "meta:xdmType": "object"
         },
         {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
+            "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
+            "type": "object",
+            "meta:xdmType": "object"
         },
         {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
+            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
+            "type": "object",
+            "meta:xdmType": "object"
+        },
+        {
+            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
+            "type": "object",
+            "meta:xdmType": "object"
         }
     ],
-    "meta:xdmType": "object",
-    "meta:class": "https://ns.adobe.com/xdm/context/profile",
-    "meta:abstract": false,
-    "meta:extensible": false,
-    "meta:extends": [
-        "https://ns.adobe.com/xdm/context/profile",
+    "refs": [
         "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/xdm/context/profile-personal-details"
+        "https://ns.adobe.com/xdm/context/profile-personal-details",
+        "https://ns.adobe.com/xdm/context/profile"
     ],
-    "meta:containerId": "tenant",
+    "imsOrg": "{IMS_ORG}",
+    "meta:extensible": false,
+    "meta:abstract": false,
+    "meta:extends": [
+        "https://ns.adobe.com/xdm/context/profile-person-details",
+        "https://ns.adobe.com/xdm/context/profile-personal-details",
+        "https://ns.adobe.com/xdm/common/auditable",
+        "https://ns.adobe.com/xdm/data/record",
+        "https://ns.adobe.com/xdm/context/profile"
+    ],
+    "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "eTag": "6m/FrIlXYU2+yH6idbcmQhKSlMo="
-    }
+        "repo:createdDate": 1589398474190,
+        "repo:lastModifiedDate": 1589398474190,
+        "xdm:createdClientId": "{CREATED_CLIENT_ID}",
+        "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
+        "xdm:createdUserId": "{CREATED_USER_ID}",
+        "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
+        "eTag": "f07723475e933dc30ed411d97986a36f13aa20c820463dd8cf7b74e63f4e7801",
+        "meta:globalLibVersion": "1.10.1.1"
+    },
+    "meta:class": "https://ns.adobe.com/xdm/context/profile",
+    "meta:containerId": "tenant",
+    "meta:tenantNamespace": "_{TENANT_ID}"
 }
 ```
 
 ## ターゲットデータセットの作成
 
-ターゲットデータセットは、カタログサービスAPIに対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを提供することで作成できます。
+ターゲットデータセットは、 [カタログサービスAPIに対してPOSTリクエストを実行し](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)、ペイロード内のターゲットスキーマのIDを提供することで作成できます。
 
 **API形式**
 
@@ -223,9 +272,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Dataset",
+        "name": "Target dataset for a Cloud Storage connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
+            "id": "https://ns.adobe.com/{TENANT}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -237,25 +286,19 @@ curl -X POST \
 
 **応答**
 
-正常に完了すると、新しく作成されたデータセットのIDを含む配列が形式で返され `"@/datasets/{DATASET_ID}"`ます。 データセットIDは、API呼び出しでデータセットを参照するために使用される、読み取り専用の、システム生成の文字列です。 後の手順でターゲットデータセット接続とデータフローを作成する際に必要なターゲットデータセットIDを保存します。
+正常に完了すると、新しく作成されたデータセットのIDを含む配列が形式で返され `"@/datasets/{DATASET_ID}"`ます。 データセットIDは、API呼び出しでデータセットを参照するために使用される、読み取り専用の、システム生成の文字列です。 ターゲットデータセットIDは、後の手順でターゲット接続とデータフローを作成する際に必要となります。
 
 ```json
 [
-    "@/dataSets/5c8c3c555033b814b69f947f"
+    "@/dataSets/5ebc4be8590b1b191a8dc4ca"
 ]
 ```
 
-## データセットベースの接続の作成
-
-外部データをプラットフォームに取り込むには、まずExperience Platformのデータセットベース接続を取得する必要があります。
-
-データセットベースの接続を作成するには、「 [データセットベースの接続のチュートリアル](../create-dataset-base-connection.md)」に示されている手順に従います。
-
-開発ガイドに説明されている手順に従って、データセットベースの接続を作成してから、続行します。 一意の識別子(`$id`)を取得して保存し、次の手順でターゲット接続を作成する際にそれをベースの接続IDとして使用します。
-
 ## ターゲット接続の作成
 
-これで、データセットベースの接続、ターゲットスキーマ、ターゲットデータセットに対して一意のIDを割り当てることができます。 これらの識別子を使用して、Flow Service APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
+ターゲット接続は、取り込まれたデータが到着した宛先への接続を表します。 ターゲット接続を作成するには、データレークに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+ターゲットスキーマ、ターゲットデータセット、データレークへの接続仕様IDに固有の識別子が追加されました。 これらの識別子を使用して、Flow Service APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
 
 **API形式**
 
@@ -267,49 +310,45 @@ POST /targetConnections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+    'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection",
-        "description": "Target Connection for cloud storage data",
+        "name": "Target Connection for a Cloud Storage connector",
+        "description": "Target Connection for a Cloud Storage connector",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5c8c3c555033b814b69f947f"
+            "dataSetId": "5ebc4be8590b1b191a8dc4ca"
         },
-        "connectionSpec": {
-            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+            "connectionSpec": {
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
+        }
     }'
 ```
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | データセットベースの接続のID。 |
 | `data.schema.id` | ターゲット `$id` のXDMスキーマ。 |
 | `params.dataSetId` | ターゲットデータセットのID。 |
-| `connectionSpec.id` | クラウドストレージの接続指定ID。 |
-
->[!NOTE] ターゲット接続を作成する場合は、サードパーティのソースコネクタのベース接続ではなく、ベース接続にData Lakeのベース接続値 `id` を使用する必要があります。
+| `connectionSpec.id` | Data Lakeへの固定接続仕様ID。 このIDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **応答**
 
-正常な応答は、新しいターゲット接続の固有な識別子(`id`)を返します。 この値は、後の手順で必要となるので保存します。
+正常な応答は、新しいターゲット接続の固有な識別子(`id`)を返します。 このIDは、後の手順で必要になります。
 
 ```json
 {
-    "id": "4ee890c7-519c-4291-bd20-d64186b62da8",
-    "etag": "\"2a007aa8-0000-0200-0000-5e597aaf0000\""
+    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
+    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
 }
 ```
 
@@ -335,13 +374,13 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
                 "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "FirstName",
+                "sourceAttribute": "first_name",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -349,23 +388,7 @@ curl -X POST \
             },
             {
                 "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "LastName",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "mobilePhone.number",
-                "sourceAttribute": "Phone",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "Email",
+                "sourceAttribute": "last_name",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -373,7 +396,15 @@ curl -X POST \
             },
             {
                 "destinationXdmPath": "_id",
-                "sourceAttribute": "Id",
+                "sourceAttribute": "id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "personalEmail.address",
+                "sourceAttribute": "email",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -389,73 +420,16 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新たに作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 この値は、後の手順でデータフローを作成する際に必要となるので保存します。
+正常な応答は、新たに作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 この値は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/417a33eg81a221bd10495920574gfa2d",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/2574494fdb01fa14c25b52d717ccb828",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/2574494fdb01fa14c25b52d717ccb828"
+    "id": "febec6a6785e45ea9ed594422cc483d7",
+    "version": 0,
+    "createdDate": 1589398562232,
+    "modifiedDate": 1589398562232,
+    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
@@ -481,7 +455,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答が返されると、クラウドストレージからのデータをプラットフォームに取り込むためのデータフロー仕様の詳細が返されます。 新しいデータフローを作成するための次の手順で必要となる `id` フィールドの値を格納します。
+成功した応答は、クラウドストレージのデータをプラットフォームに取り込むためのデータフロー仕様の詳細を返します。 この応答には、一意のフロー仕様IDが含まれます。 このIDは、次の手順で新しいデータフローを作成する際に必要です。
 
 ```json
 {
@@ -491,6 +465,20 @@ curl -X GET \
             "name": "CloudStorageToAEP",
             "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
             "version": "1.0",
+            "sourceConnectionSpecIds": [
+                "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+                "ecadc60c-7455-4d87-84dc-2a0e293d997b",
+                "b7829c2f-2eb0-4f49-a6ee-55e33008b629",
+                "4c10e202-c428-4796-9208-5f1f5732b1cf",
+                "fb2e94c9-c031-467d-8103-6bd6e0a432f2",
+                "32e8f412-cdf7-464c-9885-78184cb113fd",
+                "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+                "998b8ae3-cec0-43b7-8abe-40b1eb4ee069",
+                "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8"
+            ],
+            "targetConnectionSpecIds": [
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+            ],
             "transformationSpecs": [
                 {
                     "name": "Mapping",
@@ -568,6 +556,26 @@ curl -X GET \
                         }
                     }
                 }
+            },
+            "permissionsInfo": {
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ],
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ]
             }
         }
     ]
@@ -585,6 +593,8 @@ curl -X GET \
 
 データフローは、ソースからのデータのスケジュールおよび収集を担当します。 データフローを作成するには、ペイロード内で前述の値を指定しながらPOSTリクエストを実行します。
 
+取り込みのスケジュールを設定するには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 interval値は、2つの連続したインジェスションの間の期間を指定し、1回限りのインジェストを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の場合、間隔の値は次の値と等しいかそれ以上に設定する必要があり `15`ます。
+
 **API形式**
 
 ```http
@@ -601,34 +611,29 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between cloud storage and Platform",
-        "description": "collecting data.csv",
+        "name": "Cloud Storage flow to AEP",
+        "description": "Cloud Storage flow to AEP",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "9a603322-19d2-4de9-89c6-c98bd54eb184"
+            "8bae595c-8548-4716-ae59-5c85480716e9"
         ],
         "targetConnectionIds": [
-            "4ee890c7-519c-4291-bd20-d64186b62da8"
+            "1f5af99c-f1ef-4076-9af9-9cf1ef507678"
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "mode": "append"
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
+                    "mappingId": "febec6a6785e45ea9ed594422cc483d7",
+                    "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1567411548",
+            "startTime": "1589398646",
             "frequency":"minute",
             "interval":"30"
         }
@@ -637,10 +642,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `flowSpec.id` | データフロー仕様ID |
-| `sourceConnectionIds` | ソース接続ID |
-| `targetConnectionIds` | ターゲット接続ID |
-| `transformations.params.mappingId` | マッピング ID |
+| `flowSpec.id` | 前の手順で取得したフロー仕様ID。 |
+| `sourceConnectionIds` | 前の手順で取得したソース接続ID。 |
+| `targetConnectionIds` | 前の手順で取得したターゲット接続ID。 |
+| `transformations.params.mappingId` | 前の手順で取得したマッピングID。 |
+| `scheduleParams.startTime` | データフローの開始時間（秒単位）。 |
+| `scheduleParams.frequency` | 選択可能な頻度の値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
+| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があり `15` ます。 |
 
 **応答**
 
@@ -648,7 +656,8 @@ curl -X POST \
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
@@ -672,5 +681,6 @@ curl -X POST \
 | Azure Blob (Blob) | `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 | Azure Data LakeストレージGen2 (ADLS Gen2) | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
 | Azureイベントハブ(イベントハブ) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| Azure Fileストレージ | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | Google Cloudストレージ | `32e8f412-cdf7-464c-9885-78184cb113fd` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
