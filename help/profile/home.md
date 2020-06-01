@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルの概要
 topic: guide
 translation-type: tm+mt
-source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+source-git-commit: 86fe1f407afb24d7222cff51cf9937a42571fd54
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 3%
+source-wordcount: '1775'
+ht-degree: 2%
 
 ---
 
@@ -98,6 +98,37 @@ Adobe Experience Platform Segmentation Serviceは、個々の顧客に対して�
 ### オプトアウトおよびデータのプライバシー要求の処理
 
 エクスペリエンスプラットフォームを使用すると、顧客は、データの使用状況やストレージに関するオプトアウトリクエストをリアルタイムの顧客プロファイル内で送信できます。 オプトアウト要求の処理方法について詳しくは、オプトアウト要求の [実行に関するドキュメントを参照してください](../segmentation/honoring-opt-outs.md)。
+
+## プロファイルガイドライン
+
+Experience Platformは、プロファイルを効果的に使用するために従うべき一連のガイドラインを備えています。
+
+| セクション | 境界 |
+| ------- | -------- |
+| プロファイル和集合スキーマ | 最大20個の **** データセットがプロファイル和集合のスキーマに貢献できます。 |
+| 複数エンティティの関係 | 最大 **5** 個のマルチエンティティ関係を作成できます。 |
+| 複数エンティティの関連付けのJSONの深さ | JSONの最大の深さは **4です**。 |
+| 時系列データ | 非人口エンティティのプロファイルでは、時系列データは **使用できません** 。 |
+| 非人口スキーマの関係 | 非人物スキーマの関係は **許可されません** 。 |
+| プロファイル断片 | プロファイルフラグメントの推奨最大サイズは10kB **です**。<br><br> プロファイルフラグメントの絶対最大サイズは **1MB**&#x200B;です。 |
+| 非個人エンティティ | 1人の非個人エンティティの最大合計サイズは200MB **です**。 |
+| 非人間エンティティごとのデータセット | 個人以外のエンティティに関連付けることができる **データセットは、最大** 1つです。 |
+
+<!--
+| Section | Boundary | Enforcement |
+| ------- | -------- | ----------- |
+| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. | A message stating you've reached the maximum number of datasets appears. You must either disable or clean up other obsolete datasets in order to create a new dataset. |
+| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | A message stating all available mappings have been used appears when the fifth relationship is mapped. An error message letting you know you have exceeded the number of available mappings appears when attempting to map a sixth relationship. | 
+| JSON depth for multi-entity association | The maximum JSON depth is **4**. | When trying to use the relationship selector with a field that is more than four levels deep, an error message appears, stating it is ineligible for multi-entity association. |
+| Time series data | Time-series data is **not** permitted in Profile for non-people entities. | A message stating that this data cannot be enabled for Profile because it is of an unsupported type appears. |
+| Non-people schema relationships | Non-people schema relationships are **not** permitted. | Relationships between two non-people schemas cannot be created. The relationships checkbox will be disabled. |
+| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. | If you upload a fragment that is larger than 10kB, a warning appears, stating that performance may be degraded since the fragment exceeds the recommended maximum working size.<br><br> If you upload a fragment that is larger than 1MB, ingestion will fail, and an alert letting you know that records have failed will be sent. |
+| Non-person entity | The maximum total size for a single non-person entity is **200MB**. | If you load an object as a non-person entity that is larger than 200MB, an alert will appear, stating that the entity has exceeded the maximum allowable size and will not be useable for segmentation. |
+| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. | If you try to create a second dataset that is associated to the same non-person entity, an error appears, stating that only one dataset can be active per non-person entity. |
+
+--->
+
+>!![NOTE] 非個人エンティティは、プロファイルの一部で **はないXDMクラスを参照します** 。
 
 ## 次の手順とその他のリソース
 
