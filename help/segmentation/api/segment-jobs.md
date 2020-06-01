@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントジョブ
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: db4cdbfb7719d94919c896162ca7875fdf7d2502
+source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '657'
 ht-degree: 3%
 
 ---
@@ -323,6 +323,102 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
     "updateTime": 1579304339000,
     "creationTime": 1579304260897,
     "updateEpoch": 1579304339
+}
+```
+
+## セグメントの一括取得ジョブ
+
+エンドポイントにPOSTリクエストを送信し、リクエスト本文にセグメントジョブの `/segment/jobs/bulk-get``id` 値を指定することで、指定した複数のセグメントジョブに関する詳細な情報を取得できます。
+
+**API形式**
+
+```http
+POST /segment/jobs/bulk-get
+```
+
+**リクエスト**
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "ids": [
+            {
+                "id": "cc3419d3-0389-47f1-b174-fead6b3c830d"
+            },
+            {
+                "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8"
+            }
+        ]
+    }'
+```
+
+**応答**
+
+正常な応答が返されると、HTTPステータス207が返され、要求されたセグメントジョブが返されます。
+
+>[!NOTE] 次の応答は領域に対して切り捨てられ、各セグメントジョブの詳細の一部のみが表示されました。 完全な回答には、リクエストされたセグメントジョブの完全な詳細がリストされます。
+
+```json
+{
+    "results": {
+        "cc3419d3-0389-47f1-b174-fead6b3c830d": {
+            "id": "cc3419d3-0389-47f1-b174-fead6b3c830d",
+            "imsOrgId": "{IMS_ORG}",
+            "status": "SUCCEEDED",
+            "segments": [
+                {
+                    "segmentId": "30230300-ccf1-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-ccf1-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
+                }
+            ],
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        },
+        "c527dc3f-07fe-4b96-be4e-23f38e734ff8": {
+            "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8",
+            "imsOrgId": "{IMS_ORG}",
+            "status": "SUCCEEDED",
+            "segments": [
+                {
+                    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                    "segment": {
+                        "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
+                }
+            ],
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        }
+    }
 }
 ```
 
