@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ストリーミング送信先への接続とデータのアクティブ化
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 1%
+source-wordcount: '1847'
+ht-degree: 2%
 
 ---
 
@@ -310,8 +310,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -321,7 +320,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{NAME_OF_DATA_STREAM}`: *Amazon Kinesis接続の場合。* Amazon Kinesisアカウント内の既存のデータストリームの名前を指定します。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。
 * `{REGION}`: *Amazon Kinesis接続の場合。* Adobe Real-time CDPがデータをストリーミングするAmazon Kinesisアカウント内の領域。
 * `{EVENT_HUB_NAME}`: *Azureイベントハブ接続の場合。* Azureイベントハブ名に、Adobe Real-time CDPがデータをストリーミングする場所を入力します。 詳しくは、Microsoftのドキュメントの「イベントハブの [作成](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 」を参照してください。
-* `{EVENT_HUB_NAMESPACE}`: *Azureイベントハブ接続の場合。* Adobe Real-time CDPがデータをストリーミングするAzureイベントハブ名前空間に入力します。 詳細については、Microsoftのドキュメントの「イベントハブの [作成」名前空間](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
 
 **応答**
 
@@ -376,7 +374,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: 接続先のストリーミングのフローを使用します。 フロー仕様を取得するには、エンドポイントでGET操作を実行し `flowspecs` ます。 Swaggerのドキュメントはこちらを参照してください。 https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs 応答で、接続先のストリーミング先の対応するIDを探 `upsTo` してコピーします。
+* `{FLOW_SPEC_ID}`: プロファイルベースの宛先のフロー仕様IDはで `71471eba-b620-49e4-90fd-23f1fa0174d8`す。 この値は呼び出しで使用します。
 * `{SOURCE_CONNECTION_ID}`: 手順「エクスペリエンスプラットフォームへの [接続」で取得したソース接続IDを使用します](#connect-to-your-experience-platform-data)。
 * `{TARGET_CONNECTION_ID}`: 「ストリーミング宛先への [接続」の手順で取得したターゲット接続IDを使用します](#connect-to-streaming-destination)。
 
@@ -392,7 +390,7 @@ curl -X POST \
 ```
 
 
-## 新しい送信先にデータをアクティブにする
+## 新しい送信先にデータをアクティブにする {#activate-data}
 
 ![宛先手順の概要：手順5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -451,6 +449,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -458,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: 前の手順で取得したデータフローを使用します。
 * `{ETAG}`: 前の手順で取得したetagを使用します。
 * `{SEGMENT_ID}`: この宛先にエクスポートするセグメントIDを指定します。 アクティブ化するセグメントのセグメントIDを取得するには、https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/にアクセスし、左側のナビゲーションメニューで **Segmentation Service API** (Segmentation Service API `GET /segment/jobs` )を選択して、操作を探します。
-* `{PROFILE_ATTRIBUTE}`: 例えば、 `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: 例えば、 `personalEmail.address` または `person.lastName`
 
 **応答**
 
@@ -503,8 +513,23 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -520,6 +545,50 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
         }
     }
 ],
+```
+
+**書き出されたデータ**
+
+>[!IMPORTANT]
+>
+> 手順「新しい宛先にデータを [アクティブ化する](#activate-data)」のプロファイル属性とセグメントに加えて、AWS KinesisとAzureイベントハブにエクスポートされたデータには、IDマップに関する情報も含まれます。 これは、書き出されたプロファイルのID( [ECID](https://docs.adobe.com/content/help/ja-JP/id-service/using/intro/id-request.html)、モバイルID、Google ID、電子メールアドレスなど)を表します。 以下の例を参照してください。
+
+```
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 ## 次の手順
