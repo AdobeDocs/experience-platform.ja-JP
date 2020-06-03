@@ -4,7 +4,7 @@ seo-title: Google 広告の宛先
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 seo-description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 34%
@@ -54,7 +54,7 @@ Adobe Real-time CDPでGoogle Adsの配信先を作成する前に、Googleに連
 1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
    ![Google広告のリンク先の接続](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination.
+2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
    ![Google広告の基本情報](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **[!UICONTROL 名前]**:この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
