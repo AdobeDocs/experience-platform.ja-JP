@@ -4,7 +4,7 @@ seo-title: 電子メールマーケティングの宛先
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 100%
@@ -26,7 +26,7 @@ ht-degree: 100%
 
 1. **[!UICONTROL 接続／宛先]**&#x200B;で、接続する電子メールマーケティングの宛先を選択し、「**[!UICONTROL 宛先の接続]**」を選択します。
 
-   ![宛先に接続](/help/rtcdp/destinations/assets/connect-destination.png)
+   ![宛先に接続](/help/rtcdp/destinations/assets/connect-destination-1.png)
 
 2. 「接続」ウィザードで、ストレージの場所の&#x200B;**[!UICONTROL 接続タイプ]**&#x200B;を選択します。**Amazon S3**、**SFTP（パスワード）**、**SFTP（SSH キー）**&#x200B;の中から選択できます。接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
 
