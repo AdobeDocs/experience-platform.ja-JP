@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gitを使用したJupyterLabでのコラボレーション
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 0134c21bc35c0cb1bde7f0201a33517a81addae3
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Data Science Workspace JupyterLab環境はホスト環境で、会社のファ�
 
 ## GitをData Science Workspace JupyterLabノートブック環境に接続
 
-Adobe Experience Platformを起動し、 [JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) 環境に移動して開始します。
+JupyterLabs Notebooks [!DNL Adobe Experience Platform][](https://platform.adobe.com/notebooks/jupyterLab) 環境を起動し、移動して開始します。
 
 「JupyterLab」内で、「 **[!UICONTROL File]** 」を選択し、「 **[!UICONTROL New]**」の上にカーソルを置きます。 表示されるドロップダウンで[ **[!UICONTROL ターミナル]**]を選択します。
 
