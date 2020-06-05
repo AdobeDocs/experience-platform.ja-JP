@@ -4,9 +4,9 @@ solution: Experience Platform
 title: お客様向けAIはじめに
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '532'
 ht-degree: 15%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 15%
 
 お客様向けAIのガイドでは、お客様向けAIの使用に関連する様々なプラットフォームサービスについて、十分に理解しておく必要があります。 開始を行う前に、次のドキュメントを確認してください。
 
-- [Experience Data Model(XDM)システム概要](../../xdm/home.md): XDMは、Adobe Experience Cloudの基盤となるフレームワークです。Experience Platformを利用して、適切なチャネルを適切な人に、ちょうど適切なタイミングで配信できます。 Experience Platformが構築される方法論XDM Systemは、Platform Servicesで使用するExperience Data Modelスキーマを運用します。
-- [スキーマ構成の基本](../../xdm/schema/composition.md): このドキュメントでは、Experience Data Model(XDM)スキーマと、Adobe Experience Platformで使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
+- [Experience Data Model(XDM)システム概要](../../xdm/home.md): XDMは、Experience Platformを利用し [!DNL Adobe Experience Cloud]た基本的なフレームワークです。適切なメッセージを適切な人に、適切なチャネルに、ちょうど適切なタイミングで配信できます。 Experience Platformが構築される方法論XDM Systemは、Platform Servicesで使用するExperience Data Modelスキーマを運用します。
+- [スキーマ構成の基本](../../xdm/schema/composition.md): このドキュメントでは、Experience Data Model(XDM)スキーマと、で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介 [!DNL Adobe Experience Platform]します。
 - [スキーマの作成](../../xdm/tutorials/create-schema-ui.md): このチュートリアルでは、Experience Platform内でスキーマエディターを使用してスキーマを作成する手順を説明します。
-- [リアルタイム顧客プロファイルの概要](../../rtcdp/overview.md): Adobe Real-time Customer Data Platform(Real-time CDP)は、Adobe Experience Platformを基盤としており、会社が既知の未知のデータを集め、顧客の遍歴を通じてインテリジェントな判定を行い、顧客のプロファイルを活性化するのに役立ちます。 Real-time CDP は、複数の大規模法人データソースを組み合わせて、1 対 1 のパーソナライズされた顧客体験をすべてのチャネルとデバイスにわたって提供するために使用できる、統合されたプロファイルを作成します。
+- [リアルタイム顧客プロファイルの概要](../../rtcdp/overview.md): 基盤として構築され [!DNL Adobe Experience Platform]た [!DNL Adobe Real-time Customer Data Platform] （リアルタイムCDP）により、会社は既知の未知のデータを統合し、お客様の遍歴を通じてインテリジェントな判定を行い、お客様のプロファイルをアクティブ化できます。 Real-time CDP は、複数の大規模法人データソースを組み合わせて、1 対 1 のパーソナライズされた顧客体験をすべてのチャネルとデバイスにわたって提供するために使用できる、統合されたプロファイルを作成します。
 - [Segmentation Serviceの概要](../../segmentation/home.md): 分類とは、マーケティング可能な人々のグループを顧客ベースから区別するために、プロファイルのサブセットによってプロファイルストアから共有される特定の属性や行動を定義するプロセスです。 例えば、「スニーカーを購入し忘れましたか？」という電子メールキャンペーンでは、過去 30 日間にランニングシューズを検索したが購入を完了しなかったすべてのユーザーのオーディエンスが必要な場合があります。様々なセグメントを使用すると、様々なオーディエンスに焦点を当て、よりカスタマイズされたマーケティングエクスペリエンスを提供できます。
 - [セグメントビルダーユーザーガイド](../../segmentation/tutorials/create-a-segment.md): プラットフォームでは、セグメントを簡単に作成してアクセスできるほか、異なる構築ブロックを使用してセグメントの特徴をさらに明確にできます。
 
