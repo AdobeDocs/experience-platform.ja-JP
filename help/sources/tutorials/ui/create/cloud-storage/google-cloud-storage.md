@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのGoogle Cloudストレージソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '553'
 ht-degree: 1%
 
 ---
@@ -41,20 +41,30 @@ Experience Platformは、次のファイル形式をサポートしており、�
 
 ## GCSアカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って新しい受信ベース接続を作成し、GCSアカウントをプラットフォームにリンクします。
+必要な資格情報を収集したら、次の手順に従って新しいGCSアカウントを作成し、プラットフォームに接続します。
 
-<a href="https://platform.adobe.com" target="_blank">Adobe Experience Platformにログインし、左のナビゲーションバーで「</a> Sources **** 」を選択して *Sources* ワークスペースにアクセスします。 [ *カタログ* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) Sources **** 」を選択して *[!UICONTROL Sources]* ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
 
-「 *クラウドストレージ* 」カテゴリの下で、「 **Googleクラウドストレージ** 」を選択し、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソース表示のドキュメントに接続するか、ソースに接続するかを選択できるオプションが表示されます。 新しい受信ベース接続を作成するには、[ **接続元**]をクリックします。
+画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-![](../../../../images/tutorials/create/google-cloud-storage/sources-catalog.png)
+「 *[!UICONTROL Databases]* 」 **[!UICONTROL カテゴリで「]** Google Cloud」ストレージを選択し、+アイコン(+) **** をクリックして新しいGCSコネクタを作成します。
 
-Google Cloudストレージ _に接続_ ダイアログが表示されます。 入力フォームで、基本接続に名前、オプションの説明、およびGCS秘密鍵証明書を入力します。 終了したら、[ **接続** ]をクリックし、新しいベース接続が確立されるまでの時間をお待ちください。
+![カタログ](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-![](../../../../images/tutorials/create/google-cloud-storage/gcs-credentials.png)
+「Google Cloud *[!UICONTROL ストレージに]* 接続」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
-ベース接続が確立されたら、次のセクションに進み、データをプラットフォームに取り込むようにデータフローを設定できます。
+### 新しいアカウント
+
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明およびGCS秘密鍵証明書を入力します。 完了したら、「 **[!UICONTROL 接続]** 」を選択し、新しいアカウントが確立されるまでの時間を許可します。
+
+![connect](../../../../images/tutorials/create/google-cloud-storage/connect.png)
+
+### 既存のアカウント
+
+既存のアカウントに接続するには、接続するGCSアカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
+
+![既存の](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、GCSアカウントへの基本的な接続を確立しました。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/batch/cloud-storage.md)。
+このチュートリアルに従って、GCSアカウントへの接続を確立しました。 次のチュートリアルに進み、クラウドストレージのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/batch/cloud-storage.md)。
