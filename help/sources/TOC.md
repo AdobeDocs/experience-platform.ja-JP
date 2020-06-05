@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
+source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 1%
@@ -142,7 +142,8 @@ ht-degree: 1%
          - [FTPおよびSFTPコネクタ](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google Cloudストレージコネクタ](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
-         - [Microsoft DynamicsおよびSalesforceコネクタ](tutorials/ui/create/crm/dynamics-salesforce.md)
+         - [Microsoft Dynamicsコネクタ](tutorials/ui/create/crm/dynamics.md)
+         - [Salesforceコネクタ](tutorials/ui/create/crm/salesforce.md)
       - 顧客の成功 {#customer-success}
          - [Salesforce Service Cloudコネクタ](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNowコネクタ](tutorials/ui/create/customer-success/servicenow.md)
