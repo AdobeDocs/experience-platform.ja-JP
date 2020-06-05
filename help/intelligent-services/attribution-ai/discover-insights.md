@@ -4,7 +4,7 @@ solution: Experience Platform
 title: アトリビューションAIでのインサイトの検出
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -57,7 +57,7 @@ Attribution AIサービスページが表示されます。 このページに�
 
 ![投稿の編集](./images/insights/edit-popover.png)
 
-### その他のアクション
+### その他のアクション {#more-actions}
 
 「 *その他のアクション* 」ボタンは、右上のナビゲーションで「 *編集*」の横にあります。 「 **その他のアクション** 」をクリックすると、ドロップダウンが開き、以下の操作のいずれかを選択できます。
 
@@ -132,7 +132,7 @@ Attribution AIサービスページが表示されます。 このページに�
 
 「 *週別トレンド* 」カードの右上にある三点リーダーをクリックすると、ドロップダウンリストが表示され、日別、週別、月別のトレンドを選択できます。
 
-特定のアトリビューションモデルのデータ行の上にマウスポインターを置くと、その日のコンバージョンの合計数を示すポッパーが作成されます。
+特定のアトリビューションモデルのデータ行の上にカーソルを置くと、その日のコンバージョンの合計数を示すポッパーが作成されます。
 
 ![変化の傾向](./images/insights/weekly-trend-hover.png)
 
