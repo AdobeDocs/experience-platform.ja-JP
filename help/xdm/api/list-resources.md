@@ -4,9 +4,9 @@ solution: Experience Platform
 title: リストリソース
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
+source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '519'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ curl -X GET \
 
 | パラメーター | 説明 |
 | --- | --- |
-| `start` | リストの結果をginにする必要がある場所を指定します。 例： `start=2` は、3番目に返されたアイテムから先にリスト結果を返します。 |
+| `start` | リストの結果を開始する場所を指定します。 この値はリスト応答の `_page.next` 属性から取得でき、結果の次のページにアクセスするのに使用されます。 この `_page.next` 値がnullの場合、追加のページはありません。 |
 | `limit` | 返されるリソースの数を制限する。 例： `limit=5` は、5つのリソースのリストを返します。 |
 | `orderby` | 特定のプロパティで結果を並べ替える。 例： `orderby=title` は、タイトルを昇順(A ～ Z)で並べ替えます。 タイトル()の `-``orderby=-title`前にを追加すると、タイトル(Z-A)の降順で項目が並べ替えられます。 |
 
