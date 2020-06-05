@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのFTPまたはSFTPソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 46b57900d9323cffeb59a0a6250bf5a9f4ac64ab
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '556'
 ht-degree: 1%
 
 ---
@@ -42,22 +42,32 @@ Experience Platformは、次のファイル形式をサポートしており、�
 
 プラットフォーム上のFTPまたはSFTPサーバーにアクセスするには、サーバーの **ホスト名**、 **ユーザー名**、 **パスワードを指定する必要があります**。
 
-## サーバーに接続
+## FTPまたはSFTPサーバーに接続する
 
-サーバーの資格情報の準備ができたら、次の手順に従って、FTPまたはSFTPサーバーをプラットフォームにリンクする新しい受信ベース接続を作成できます。
+必要な資格情報を収集したら、次の手順に従って新しいFTPまたはSFTPアカウントを作成し、プラットフォームに接続します。
 
-Adobe Experience Platformにログインし、左のナビゲーションバーで「 <a href="https://platform.adobe.com" target="_blank">Sources</a>**** 」を選択してソースワークスペースにアクセスします。 [ *カタログ* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) Sources **** 」を選択して *[!UICONTROL Sources]* ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
 
-「 *クラウドストレージ***」カテゴリで、「** FTP **」または「** SFTP」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ドキュメントの表示やソースへの接続に関するオプションが表示されます。 新しい受信ベース接続を作成するには、[ **接続元**]をクリックします。
+画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-![](../../../../images/tutorials/create/sftp/sftp_sources_catalog.png)
+「 *[!UICONTROL Databases]* 」 **[!UICONTROL カテゴリで「]** SFTP **」を選択し、+アイコン(+)** をクリックして新しいFTPまたはSFTPコネクタを作成します。
 
-入力フォームで、ベース接続に名前、オプションの説明、およびFTPまたはSFTPの資格情報を入力します。 最後に、[ **接続** ]をクリックし、新しいベース接続が確立されるまでの時間をお待ちください。
+![カタログ](../../../../images/tutorials/create/sftp/catalog.png)
 
-![](../../../../images/tutorials/create/sftp/sftp_credentials.png)
+「SFTP *[!UICONTROL に接続]* 」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
-FTPまたはSFTPサーバーとのベース接続が確立されたら、次のセクションに進み、データをプラットフォームに取り込むようにデータフローを設定できます。
+### 新しいアカウント
+
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明、およびFTPまたはSFTPの資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
+
+![connect](../../../../images/tutorials/create/sftp/new.png)
+
+### 既存のアカウント
+
+既存のアカウントに接続するには、接続するFTPまたはSFTPアカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
+
+![既存の](../../../../images/tutorials/create/sftp/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、FTPまたはSFTPサーバーへの接続を確立しました。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/batch/cloud-storage.md)。
+このチュートリアルに従って、FTPまたはSFTPアカウントへの接続を確立しました。 次のチュートリアルに進み、クラウドストレージのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/batch/cloud-storage.md)。
