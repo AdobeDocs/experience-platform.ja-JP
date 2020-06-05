@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service APIを使用してMicrosoft Dynamics Connectorを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6c86cec91774f3444dc90042cd7ad5c71429aabd
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '729'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 このチュートリアルでは、Flow Service APIを使用して、CRMデータを収集するためのMicrosoft Dynamics（以下「Dynamics」と呼ばれる）アカウントにプラットフォームを接続する手順を説明します。
 
-エクスペリエンスプラットフォームでユーザーインターフェイスを使用したい場合は、 [DynamicsまたはSalesforceソースコネクタのUIチュートリアル](../../../ui/create/crm/dynamics-salesforce.md) に、同様の操作を実行するための手順が順を追って説明されています。
+Experience Platformでユーザーインターフェイスを使用したい場合は、 [DynamicsソースコネクタのUIチュートリアル](../../../ui/create/crm/dynamics.md) （英語のみ）で、同様の操作を実行するための手順を順を追って説明します。
 
 ## はじめに
 
