@@ -46,7 +46,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 **例**
 
-次のPQLクエリは、母国がカナダまたは1985年の生年であるすべての人々を返します。
+次のPQLクエリは、1985年のカナダまたは生年を母国とするすべての人々を返します。
 
 ```sql
 homeAddress.countryISO = "CA" or person.birthYear = 1985
@@ -71,7 +71,7 @@ not ({QUERY})
 not (homeAddress.countryISO = "CA")
 ```
 
-## If
+##   
 
 この `if` 関数は、指定した条件が真かどうかに応じて式を解決するために使用されます。
 
