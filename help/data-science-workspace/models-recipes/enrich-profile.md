@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 機械学習インサイトによるリアルタイムの顧客プロファイルの強化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # 機械学習インサイトによるリアルタイムの顧客プロファイルの強化
 
-Adobe Experience Platform Data Science Workspaceは、機械学習モデルを作成、評価、利用してデータ予測とインサイトを生成するためのツールとリソースを提供します。 機械学習インサイトがプロファイル対応データセットに取り込まれると、同じデータがプロファイルレコードとして取り込まれ、Experience Platform Segmentation Serviceを使用して関連要素のサブセットにセグメント化できます。
+[!DNL Adobe Experience Platform] Data Science Workspaceは、機械学習モデルを作成、評価、利用してデータ予測とインサイトを生成するためのツールとリソースを提供します。 機械学習インサイトがプロファイル対応データセットに取り込まれると、同じデータがプロファイルレコードとして取り込まれ、Experience Platform Segmentation Serviceを使用して関連要素のサブセットにセグメント化できます。
 
 このドキュメントでは、リアルタイム顧客プロファイルを機械学習のインサイトに強化するためのチュートリアルを順を追って説明します。手順は次のセクションに分かれています。
 
@@ -24,7 +24,7 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 
 ## はじめに
 
-このチュートリアルでは、プロファイルデータの取り込みとセグメントの作成に関わるAdobe Experience Platformの様々な側面について、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、プロファイルデータの取り込みとセグメントの作成に [!DNL Adobe Experience Platform] 関わる様々な側面について、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 * [リアルタイム顧客プロファイル](../../rtcdp/overview.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [IDサービス](../../identity-service/home.md): プラットフォームに取り込まれる個別のデータソースからIDをブリッジすることで、リアルタイムの顧客プロファイルを有効にします。
@@ -44,12 +44,13 @@ Adobe Experience Platform Data Science Workspaceは、機械学習モデルを�
 1. Adobe Experience Platformで、「 **[!UICONTROL スキーマ]** 」タブをクリックしてスキーマブラウザーにアクセスします。 「 **[!UICONTROL スキーマを]** 作成 *」をクリックして*スキーマエディタにアクセスし、スキーマをインタラクティブに作成できます。
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. 「 *組版* 」ウィンドウで「 **[!UICONTROL 割り当て]** 」をクリックし、使用可能なクラスを参照します。
+2. 「 *組版* 」ウィンドウで、「 **[!UICONTROL 割り当て]** 」をクリックして使用可能なクラスを参照します。
    * 既存のクラスを割り当てるには、をクリックして目的のクラスを選択し、「 **[!UICONTROL Assign Class]**」をクリックします。
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
    * カスタムクラスを作成するには、ブラウザーウィンドウの中央上部近くにある **[!UICONTROL 新しいクラスを作成]** (Create New Class)をクリックします。 クラス名と説明を入力し、クラスの動作を選択します。 終了したら、「 **[!UICONTROL クラスを割り当て]** 」をクリックします。
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
+
    この時点で、スキーマの構造にはいくつかのクラスフィールドが含まれている必要があり、ミックスインを割り当てる準備が整います。 ミックスインは、特定の概念を説明する1つ以上のフィールドのグループです。
 
 3. 「 *コンポジション* 」ウィンドウで、「 **[!UICONTROL Mixins]**** 」サブセクションのをクリックします。
