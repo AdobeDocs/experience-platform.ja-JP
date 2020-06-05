@@ -4,9 +4,9 @@ solution: Experience Platform
 title: アトリビューションAIユーザーガイド
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1430'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## インスタンスの作成
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. サー *ビス* ・ブラウザが表示され、使用可能なAdobe Intelligent Servicesが表示されます。 In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. サー *ビス* ・ブラウザが表示され、使用可能なAdobe Intelligent Servicesが表示されます。 In the container for Attribution AI, click **Open**.
 
 ![インスタンスへのアクセス](./images/user-guide/open_Attribution_ai.png)
 
@@ -134,7 +134,7 @@ Attribution AIサービスページが表示されます。 このページに�
 
 ス *ケジュールを使用して*、スコアリングを実行する曜日と時間を選択できます。
 
-「 *スコアリング頻度* 」の下のドロップダウンをクリックして、日別、週別、月別のスコアを選択します。 次に、スコアリングを行う曜日を選択します。 複数の日付を選択できます。 選択を解除するには、1日をもう1回クリックします。
+「 *スコアリング頻度* 」の下のドロップダウンをクリックして、日別、週別、月別のスコアを選択します。 次に、スコアリングを行う曜日を選択します。 複数の日付を選択できます。 選択を解除するには、1日目をもう1回クリックします。
 
 ![トレーニングのスケジュール設定](./images/user-guide/schedule_training.png)
 
