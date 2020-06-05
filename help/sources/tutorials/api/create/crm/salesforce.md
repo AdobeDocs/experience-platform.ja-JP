@@ -4,9 +4,9 @@ solution: Experience Platform
 title: フローサービスAPIを使用したSalesforceコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc999ce1ab426f412c0cc2b69173a336a14024f3
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '732'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 このチュートリアルでは、フローサービスAPIを使用して、CRMデータを収集するためのSalesforceアカウントにプラットフォームを接続する手順を説明します。
 
-エクスペリエンスプラットフォームでユーザーインターフェイスを使用したい場合は、 [DynamicsまたはSalesforceソースコネクタのUIチュートリアル](../../../ui/create/crm/dynamics-salesforce.md) に、同様の操作を実行するための手順が順を追って説明されています。
+エクスペリエンスプラットフォームでユーザーインターフェイスを使用したい場合は、 [SalesforceソースコネクタUIチュートリアル](../../../ui/create/crm/salesforce.md) に、同様の操作を実行するための手順が順を追って説明されています。
 
 ## はじめに
 
