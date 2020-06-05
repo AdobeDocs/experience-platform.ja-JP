@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 小売売上スキーマとデータセットの作成
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,12 @@ ht-degree: 0%
 
 # 小売売上スキーマとデータセットの作成
 
-このチュートリアルでは、他のすべてのAdobe Experience Platform Data Science Workspaceチュートリアルに必要な前提条件とアセットについて説明します。 完了すると、Experience PlatformのIMS組織のメンバーが、小売販売のスキーマとデータセットを使用できるようになります。
+このチュートリアルでは、他のすべての [!DNL Adobe Experience Platform] Data Science Workspaceチュートリアルに必要な前提条件とアセットについて説明します。 完了すると、Experience PlatformのIMS組織のメンバーが、小売販売のスキーマとデータセットを使用できるようになります。
 
 ## はじめに
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
-- Adobe Experience Platformへのアクセス。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
+- へのアクセス [!DNL Adobe Experience Platform]。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
 - エクスペリエンスプラットフォームAPI呼び出しを行うための認証。 このチュートリアルを正常に完了するには、 [Adobe Experience Platform APIの](../../tutorials/authentication.md) 認証とアクセスのチュートリアルを完了し、次の値を取得します。
    - 認証: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
