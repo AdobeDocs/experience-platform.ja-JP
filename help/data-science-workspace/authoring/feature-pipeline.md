@@ -4,9 +4,9 @@ solution: Experience Platform
 title: フィーチャーパイプラインを作成する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # フィーチャーパイプラインを作成する
 
-Adobe Experience Platformでは、Sensei Machine Learning Framework Runtime（以下「Runtime」と呼ぶ）を通じて、カスタム機能パイプラインを作成し、スケールで機能のエンジニアリングを実行できます。
+[!DNL Adobe Experience Platform] Senesie Machine Learning Framework Runtime（以下「Runtime」と呼ぶ）を使用して、カスタム機能パイプラインを作成し、尺度を変更して機能エンジニアリングを実行できます。
 
 このドキュメントでは、フィーチャパイプラインに含まれる各種クラスについて説明し、PySparkおよびSparkの [](./sdk.md) モデルオーサリングSDKを使用してカスタムフィーチャパイプラインを作成するための手順を説明します。
 
