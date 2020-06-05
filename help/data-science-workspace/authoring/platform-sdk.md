@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プラットフォームSDKガイド
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '451'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 ## 認証の構築 {#build-authentication}
 
-認証は、Adobe Experience Platformの呼び出しを行うために必要で、APIキー、IMS組織ID、ユーザートークンおよびサービストークンで構成されます。
+認証は、に対する呼び出しを行うために必要 [!DNL Adobe Experience Platform]で、APIキー、IMS組織ID、ユーザートークンおよびサービストークンで構成されます。
 
 ### Python
 
