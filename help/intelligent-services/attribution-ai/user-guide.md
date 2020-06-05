@@ -4,7 +4,7 @@ solution: Experience Platform
 title: アトリビューションAIユーザーガイド
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Attribution AIサービスページが表示されます。 このページに�
 - **ルックバックウィンドウ：** コンバージョンイベントのタッチポイントを含める日数を示す時間枠を提供します。
 - **タッチポイント：** コンバージョンの数値ベースまたは売上高ベースの影響を評価するために使用される受信者、個人レベルまたはcookieレベルのマーケティングイベント。
 
-### コンバージョンイベントの定義
+### コンバージョンイベントの定義 {#define-conversion-events}
 
 コンバージョンイベントを定義するには、イベントに名前を付け、[フィールド名の **入力** ]ドロップダウンメニューをクリックしてイベントタイプを選択する必要があります。
 
@@ -144,7 +144,7 @@ Attribution AIサービスページが表示されます。 このページに�
 
 ![時計アイコン](./images/user-guide/time_of_day.png)
 
-### 領域ベースのモデリング（オプション）
+### 領域ベースのモデリング（オプション） {#region-based-modeling-optional}
 
 お客様の行動は、国や地域によって大きく異なる場合があります。 グローバルビジネスでは、国ベースまたは地域ベースのモデルを使用すると、アトリビューションの正確性が向上します。 追加された各領域は、その領域のデータを持つ新しいモデルを作成します。
 
