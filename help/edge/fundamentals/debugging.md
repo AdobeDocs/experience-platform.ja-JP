@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK のデバッグ
 description: Experience Platform Web SDK のデバッグを切り替える方法について説明します
 seo-description: Experience Platform Web SDK のデバッグを切り替える方法について説明します
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 31a527cb4ad1348262131f827c7e932404542c4b
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 100%
@@ -19,7 +19,7 @@ ht-degree: 100%
 デバッグはデフォルトで無効になっていますが、次の 3 つの方法で切り替えることができます。
 
 * `configure` コマンド
-* `debug` コマンド
+* `setDebug` コマンド
 * クエリ文字列パラメーター
 
 ## configure コマンドを使用したデバッグの切り替え
@@ -42,7 +42,7 @@ alloy("configure", {
 次のように、別の `debug` コマンドでデバッグを切り替えます。
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```
