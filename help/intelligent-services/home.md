@@ -4,9 +4,9 @@ solution: Experience Platform
 title: インテリジェントサービスの概要
 topic: Intelligent Services overview
 translation-type: tm+mt
-source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # インテリジェントサービスの概要
 
-インテリジェントサービスは、マーケティングアナリストや実務者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用するよう強化します。 これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。 また、マーケティングの専門家は、Adobe Experience Cloud、Adobe Experience Platform、およびサードパーティのアプリケーションで予測を有効にすることができます。
+インテリジェントサービスは、マーケティングアナリストや実務者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用するよう強化します。 これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。 さらに、マーケティング担当者は、 [!DNL Adobe Experience Cloud]、 [!DNL Adobe Experience Platform]およびサードパーティのアプリケーションで予測をアクティブ化できます。
 
 次のビデオは、インテリジェントサービスに関する理解を深めるためのものです。 このビデオでは、ビジネス用途の例を使用して、高度なワークフローと、アトリビューションAIと顧客AIの両方の機能の概要を説明します。
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## インテリジェント・サービスのメリット
 
-Adobe Experience Platformに基づくインテリジェントサービスは、AI-as-a-serviceへの顧客エクスペリエンスへのアクセスを担当するマーケターに対して、誰でも簡単に顧客の行動を予測し、キャンペーンの影響を測定したり、各投資利益率を向上させたりできます。 以下に、インテリジェントサービスが提供する利点の一部を示します。
+インテリジェントサービスは、AI-as-a-serviceへの顧客体験のアクセスを担当するマーケティング担当者に対して提供され [!DNL Adobe Experience Platform]るため、誰でも簡単に顧客行動を予測し、キャンペーンの影響を測定したり、すべての投資に対するより良いROIを確保できます。 以下に、インテリジェントサービスが提供する利点の一部を示します。
 
 ### コスト効率に優れた市場投入速度
 
@@ -40,7 +40,7 @@ Adobe Experience Platformに基づくインテリジェントサービスは、A
 
 ### インゲスト
 
-顧客データは、Adobe Experience PlatformのExperience Data Model(XDM)で取り込まれ、変換されます。 XDMの詳細については、 [XDMの概要を参照してください](../xdm/home.md)。
+顧客データは、エクスペリエンスデータモデル(XDM)がオンの状態で取り込まれ、変換され [!DNL Adobe Experience Platform]ます。 XDMの詳細については、 [XDMの概要を参照してください](../xdm/home.md)。
 
 ### メッセージの
 
@@ -52,7 +52,7 @@ Adobe Experience Platformに基づくインテリジェントサービスは、A
 
 ### 対策を講じる
 
-最後に、インサイトの利用、Adobe Experience Cloud全体でのアプリのアクティブ化、カスタムダッシュボードの作成など、予測に対して実行するアクションを決定できます。
+最後に、インサイトの消費、全体でのアプリのアクティブ化、カスタムダッシュボードの作成など、予測に対して実行するアクションを決定でき [!DNL Adobe Experience Cloud]ます。
 
 ## 次の手順
 
