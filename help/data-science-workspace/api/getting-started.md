@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Senesi Machine Learning API開発者ガイド
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '206'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Senesie Machine Learning APIは、データ科学者が機械学習サービス�
 
 ## はじめに
 
-次のリクエストヘッダーにアクセスしてAdobe Experience Platform APIを呼び出すには、 [認証](../../tutorials/authentication.md) チュートリアルを完了している必要があります。
+APIを呼び出すために次のリクエストヘッダーにアクセスするには、 [認証](../../tutorials/authentication.md)[!DNL Adobe Experience Platform] のチュートリアルを完了している必要があります。
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
