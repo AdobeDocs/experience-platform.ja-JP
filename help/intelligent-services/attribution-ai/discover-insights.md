@@ -4,9 +4,9 @@ solution: Experience Platform
 title: アトリビューションAIでのインサイトの検出
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 ## サービスインスタンスインサイトの概要
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. サー *ビス* ・ブラウザが表示され、使用可能なAdobe Intelligent Servicesが表示されます。 In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. サー *ビス* ・ブラウザが表示され、使用可能なAdobe Intelligent Servicesが表示されます。 In the container for Attribution AI, click **Open**.
 
 ![インスタンスへのアクセス](./images/insights/open_Attribution_ai.png)
 
@@ -106,11 +106,11 @@ Attribution AIサービスページが表示されます。 このページに�
 
 このフィルタを使用すると、インスタンス作成プロセスで設定した任意の領域を選択できます。
 
-### Channel
+### チャネル
 
 [ *チャネル* ]フィルタをクリックすると、使用可能なマーケティングチャネルをすべて含むドロップダウンが表示されます。 複数のチャネルを選択して比較できます。
 
-![Channel](./images/insights/channel.png)
+![チャネル](./images/insights/channel.png)
 
 ### Date Range
 
