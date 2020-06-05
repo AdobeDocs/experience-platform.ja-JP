@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIにAzure BlobまたはAmazon S3ソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 9fd00ec198f61843bb9a395103215e5441b23745
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '644'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platformのソースコネクターは、外部ソースのデ�
 このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 - [Experience Data Model(XDM)System](../../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
@@ -56,18 +56,30 @@ Experience Platformは、次のファイル形式をサポートしており、�
 
 ## BlobまたはS3アカウントの接続
 
-クラウドストレージの資格情報の準備が整ったら、次の手順に従って新しい受信ベース接続を作成し、BlobまたはS3アカウントをプラットフォームにリンクできます。
+必要な資格情報を収集したら、次の手順に従って新しいBlobまたはS3アカウントを作成し、プラットフォームに接続します。
 
-Adobe Experience Platformにログインし、左のナビゲーションバーで「 <a href="https://platform.adobe.com" target="_blank">Sources</a>**** 」を選択してソースワークスペースにアクセスします。 [ *カタログ* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) Sources **** 」を選択して *[!UICONTROL Sources]* ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
 
-「 *Cloudストレージ* 」カテゴリで、「 **Azure Blobストレージ** 」または「 **Amazon S3** 」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ドキュメントの表示やソースへの接続に関するオプションが表示されます。 新しい受信ベース接続を作成するには、[ **接続元**]をクリックします。
+画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-![](../../../../images/tutorials/create/s3/s3_sources_catalog.png)
+「 *[!UICONTROL Databases]* 」 **[!UICONTROL カテゴリで、「]** Azure Databasesストレージ **[!UICONTROL 」または「]** Amazon S3 **** 」を選択し、「+」アイコン(+)をクリックして、新しいBlobまたはS3コネクタを作成します。
 
-入力フォームで、基本接続に名前、オプションの説明、およびBlobまたはS3秘密鍵証明書を入力します。 最後に、[ **接続** ]をクリックし、新しいベース接続が確立されるまでの時間をお待ちください。
+![カタログ](../../../../images/tutorials/create/blob/catalog.png)
 
-![](../../../../images/tutorials/create/s3/s3_credentials.png)
+[ *[!UICONTROL Azure BLOBストレージに]* 接続]ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+
+### 新しいアカウント
+
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明、およびBlobまたはS3秘密鍵証明書を入力します。 完了したら、「 **[!UICONTROL 接続]** 」を選択し、新しいアカウントが確立されるまでの時間を許可します。
+
+![connect](../../../../images/tutorials/create/blob/new.png)
+
+### 既存のアカウント
+
+既存のアカウントに接続するには、接続するBLOBまたはS3アカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
+
+![既存の](../../../../images/tutorials/create/blob/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、Azure BlobまたはAmazon S3アカウントへの基本接続を確立しました。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/batch/cloud-storage.md)。
+このチュートリアルに従って、BlobまたはS3アカウントへの接続を確立しました。 次のチュートリアルに進み、クラウドストレージのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/batch/cloud-storage.md)。
