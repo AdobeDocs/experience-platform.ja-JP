@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 顧客AIによるインサイトの発見
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1062'
-ht-degree: 4%
+source-wordcount: '1059'
+ht-degree: 5%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 4%
 
 ## サービスインスタンスの概要
 
-In the Adobe Experience Platform UI, click **[!UICONTROL Services]** in the left navigation. サー *ビス* ・ブラウザが表示され、使用可能なインテリジェント・サービスが表示されます。 顧客 AI のコンテナで、「**[!UICONTROL 開く]**」をクリックします。
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. サー *ビス* ・ブラウザが表示され、使用可能なインテリジェント・サービスが表示されます。 顧客 AI のコンテナで、「**[!UICONTROL 開く]**」をクリックします。
 
 ![インスタンスへのアクセス](../images/insights/navigate-to-service.png)
 
