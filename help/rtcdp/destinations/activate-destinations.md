@@ -4,7 +4,7 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
+source-git-commit: 24e4746b28620210c138a1e803b6afadff79ab30
 workflow-type: tm+mt
 source-wordcount: '889'
 ht-degree: 53%
@@ -18,7 +18,7 @@ ht-degree: 53%
 
 ## 前提条件 {#prerequisites}
 
-宛先へのデータをアクティブ化するには、[宛先が接続されている](/help/rtcdp/destinations/assets/connect-destination.png)必要があります。まだの場合は、[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)に移動し 、サポートされている宛先を参照して、1 つ以上の宛先を設定します。
+宛先へのデータをアクティブ化するには、[宛先が接続されている](/help/rtcdp/destinations/assets/connect-destination-1.png)必要があります。まだの場合は、[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)に移動し 、サポートされている宛先を参照して、1 つ以上の宛先を設定します。
 
 ## データのアクティブ化 {#activate-data}
 
