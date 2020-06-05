@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1437'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Mixinの完全な例は、 [public XDM repositoryにあります](https://github
 
 次の表に、 `xdm:channel` スキーマにマッピングされたマーケティングチャネルの例を示します。
 
-| Channel | `@type` | `mediaType` | `mediaAction` |
+| チャネル | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | 有料検索 | https:/<span>/ns.adobe | 支払った | clicks |
 | Social - Marketing | https:/<span>/ns.adobe | 獲得した | clicks |
@@ -191,7 +191,7 @@ Mixinの完全な例は、 [public XDM repositoryにあります](https://github
 
 送信するデータの範囲を決定したら、Adobe Consulting Servicesに連絡して、データをスキーマにマッピングし、サービスに取り込む方法についてお問い合わせください。
 
-Adobe Experience Platformの購読がいて、自分でデータをマッピングし取り込む場合は、次の節に示す手順に従います。
+購読があり、自分でデータをマッピングおよび取り込む場合は、次の節に示す手順に従ってください。 [!DNL Adobe Experience Platform]
 
 ### Adobe Experience Platformの使用
 
@@ -217,7 +217,7 @@ CEEミックスインをスキーマに追加した後、データ内の追加�
 
 #### データセット追加の主なID名前空間タグ
 
-Adobeオーディエンスマネージャー、Adobe Analyticsまたは他の外部ソースからデータを取り込む場合は、データセットに `primaryIdentityNameSpace` タグを追加する必要があります。 これは、カタログサービスAPIにPATCHリクエストを行うことで行うことができます。
+、などの外部ソースからデータを取り込む場合 [!DNL Adobe Audience Manager]は、データセットに [!DNL Adobe Analytics]`primaryIdentityNameSpace` タグを追加する必要があります。 これは、カタログサービスAPIにPATCHリクエストを行うことで行うことができます。
 
 ローカルCSVファイルからデータを取り込む場合は、データの [マッピングと取り込みに関する次の節に進むことができます](#ingest)。
 
