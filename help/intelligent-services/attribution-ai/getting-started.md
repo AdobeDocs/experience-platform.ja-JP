@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Attribution AIの概要
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 # Attribution AIの概要
 
-以下のガイドでは、Attribution AIの使用に関連する様々なAdobe Experience Platformサービスについて理解している必要があります。 チュートリアルを開始する前に、次のドキュメントを確認してください。
+以下のガイドでは、Attribution AIの使用に関連する様々な [!DNL Adobe Experience Platform] サービスについて理解している必要があります。 チュートリアルを開始する前に、次のドキュメントを確認してください。
 
-- [Experience Data Model(XDM)システム概要](../../xdm/home.md): XDMは、Adobe Experience Cloudの基盤となるフレームワークです。Experience Platformを利用して、適切なチャネルを適切な人に、ちょうど適切なタイミングで配信できます。 Experience Platformが構築される方法論XDM Systemは、Platform Servicesで使用するExperience Data Modelスキーマを運用します。
-- [スキーマ構成の基本](../../xdm/schema/composition.md): このドキュメントでは、Experience Data Model(XDM)スキーマと、Adobe Experience Platformで使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
+- [Experience Data Model(XDM)システム概要](../../xdm/home.md): XDMは、Experience Platformを利用し [!DNL Adobe Experience Cloud]た基本的なフレームワークです。適切なメッセージを適切な人に、適切なチャネルに、ちょうど適切なタイミングで配信できます。 Experience Platformが構築される方法論XDM Systemは、Platform Servicesで使用するExperience Data Modelスキーマを運用します。
+- [スキーマ構成の基本](../../xdm/schema/composition.md): このドキュメントでは、Experience Data Model(XDM)スキーマと、で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介 [!DNL Adobe Experience Platform]します。
 - [スキーマの作成](../../xdm/tutorials/create-schema-ui.md): このチュートリアルでは、Experience Platform内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 
 アトリビューションAIの場合、データセットは、 [Experience Data Model](../../xdm/home.md) (XDM)のミックスインであるConsumer Experience Data Model(CEE)スキーマに準拠する必要があります。 このデータを実装または変更するには、アドビサポート(attributionai-support@adobe.com)にお問い合わせください。 メディア支出データが存在する場合は、売上の増加やROI（投資収益率）など、さらに分析を行うことができます。 顧客プロファイルデータが使用可能な場合は、クレジットを顧客プロファイルレベルに関連付けることができます。
