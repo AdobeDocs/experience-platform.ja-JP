@@ -4,9 +4,9 @@ solution: Experience Platform
 title: JupterLabユーザガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '3356'
+source-wordcount: '3349'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # JupterLabユーザガイド
 
-JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型の開発環境を提供します。
+JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、に緊密に統合されて [!DNL Adobe Experience Platform]います。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型の開発環境を提供します。
 
 このドキュメントでは、JupyterLabとその機能の概要と、一般的な操作の実行方法を説明します。
 
@@ -29,7 +29,7 @@ Experience PlatformのJupterLab統合には、アーキテクチャの変更、�
 | **カーネル** | カーネルは、ノートやJupterLabのフロントエンドで、異なるプログラミング言語でコードを実行したり内観したりする機能を提供します。 Experience Platformは、Python、R、PySpark、Sparkでの開発をサポートする追加のカーネルを提供します。 詳細は [カーネルの節を参照してください](#kernels) 。 |
 | **データアクセス** | 読み取り/書き込み機能を完全にサポートし、既存のデータセットにJupterLab内から直接アクセス |
 | **プラットフォームサービスの統合** | 組み込みの統合により、JupterLab内から他のプラットフォーム・サービスを直接利用できます。 サポートされる統合の完全なリストは、「他のプラットフォームサービスとの [統合](#service-integration)」の節に記載されています。 |
-| **認証** | JupyterLabの組み込みのセキュリティモデルに加え <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">て</a>、プラットフォームのサービス間通信を含む、アプリケーションとエクスペリエンスプラットフォーム間のすべての対話は暗号化され、 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe Identity Management System(IMS)を介して認証され</a>ます。 |
+| **認証** | JupyterLabの組み込みのセキュリティモデルに加え <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">て</a>、プラットフォームのサービス間通信を含む、アプリケーションとエクスペリエンスプラットフォーム間のすべてのやり取りは、暗号化され、 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)を介して認証され</a>ます。 |
 | **開発ライブラリ** | Experience Platformでは、JupyterLabはPython、R、PySpark用に事前にインストールされたライブラリを提供します。 サポートされているライブラリの完全なリストについては、 [付録](#supported-libraries) を参照してください。 |
 | **ライブラリコントローラー** | プレインストールされたライブラリがニーズに合わない場合は、PythonとR用に追加のライブラリをインストールし、プラットフォームの整合性を維持し、データを安全に保つために、一時的に独立したコンテナに保存します。 詳細は [カーネルの節を参照してください](#kernels) 。 |
 
@@ -206,7 +206,7 @@ PySparkとSparkカーネルは、PySparkまたはSparkノートブック内でSp
 | --- | --- |
 | 空白 | 空のノートブックファイルです。 |
 | スターター | サンプルデータを使用したデータ調査を示す、事前入力済みのノートブック。 |
-| 小売売上高 | サンプルデータを使用した <a href="https://adobe.ly/2wOgO3L" target="_blank">小売売上のレシピを含む事前入力済みのノートブック</a> 。 |
+| 小売売上高 | サンプルデータを使用した <a href="https://adobe.ly/2wOgO3L" target="_blank">小売販売レシピを含む事前入力済みのノートブック</a> 。 |
 | レシピビルダ | JupterLabでレシピを作成するためのノートブックテンプレート。 レシピ作成プロセスの説明や説明を行うコードや注釈が事前に入力されています。 詳細なチュートリアルについては、 <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">『レシピのチュートリアル</a> 』を参照してください。 |
 | クエリサービス | クエリサービスの使用をJupterLabに直接示す事前入力ノートブック。データを規模別に分析するサンプルワークフローが付属しています。 |
 | XDMイベント | データ構造全体に共通の機能に重点を置いた、価値の高いエクスペリエンスイベントデータに関するデータ調査をデモする、事前入力済みのノートパソコン。 |
