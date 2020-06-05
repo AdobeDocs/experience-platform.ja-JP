@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupyterノートブックを使用してレシピを作成する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '2333'
+source-wordcount: '2330'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Recipe Builderノートブックを使用すると、ノートブック内でト
 
 レシピファイルを編集するには、ファイルパスに対応するジュピター内のセルに移動します。 例えば、に変更を加える場合は、を探 `evaluator.py`し `%%writefile demo-recipe/evaluator.py`ます。
 
-開始がセルに必要な変更を加えた後、セルを実行します。 セルの内容がに書き込まれ `%%writefile filename.py``filename.py`ます。 各ファイルのセルを手動で実行し、変更を加える必要があります。
+開始がセルに必要な変更を加えた後、セルを実行します。 セルの内容が `%%writefile filename.py` に書き込まれ `filename.py`ます。 各ファイルのセルを手動で実行し、変更を加える必要があります。
 
 >[!NOTE] 該当する場合は、セルを手動で実行する必要があります。
 
@@ -75,7 +75,7 @@ data_access_sdk_python
 >[!NOTE]
 >追加するライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。
 
-### 設定ファイル {#configuration-files}
+### Configuration files {#configuration-files}
 
 設定ファイル `training.conf``scoring.conf`と、は、トレーニングとスコアリングに使用するデータセットを指定すると共に、ハイパーパラメーターを追加するために使用します。 トレーニングとスコアリングの設定は別々です。
 
@@ -109,7 +109,7 @@ data_access_sdk_python
 
 ### データの読み込み {#loading-data}
 
-この手順では、 [pandasのデータフレームを使用し](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)ます。 データは、プラットフォームSDK(`platform_sdk`)を使用してAdobe Experience Platformのファイルから、またはパンダや関数を使用して外部ソースから読み込むこ `read_csv()` とができ `read_json()` ます。
+この手順では、 [pandasのデータフレームを使用し](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)ます。 データは、プラットフォームSDK( [!DNL Adobe Experience Platform] )を使用してファイルから、またはパンダや`platform_sdk`関数を使用して外部ソースから読み込むこ `read_csv()``read_json()` とができます。
 
 - [プラットフォームSDK](#platform-sdk)
 - [外部ソース](#external-sources)
