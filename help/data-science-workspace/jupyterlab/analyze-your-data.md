@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ノートブックを使用してデータを分析する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 次の概念について説明します。
 
-- **JupterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project Jupyterの次世代Webベースのインターフェイスで、Adobe Experience Platformと緊密に統合されています。
+- **JupterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project Jupyterの次世代のWebベースのインターフェースで、に緊密に統合されてい [!DNL Adobe Experience Platform]ます。
 - **バッチ：** データセットはバッチで構成されます。 バッチとは、ある期間に収集され、1つの単位として一緒に処理される一連のデータです。 データセットにデータが追加されると、新しいバッチが作成されます。
 - **Data Access SDK（非推奨）:** データアクセスSDKは廃止されました。 『 [プラットフォームSDK](../authoring/platform-sdk.md) 』ガイドを使用してください。
 
@@ -38,7 +38,7 @@ JupyterLabを起動すると、Jupyter Notebooks用のWebベースのインタ�
 
 ### 新しいノートブックを作成する
 
-Adobe Experience Platform UIで、上部のメニューの「Data Science」タブをクリックし、Data Science Workspaceに移動します。 このページで、[ JupyterLab ]タブをクリックし、 JupyterLabランチャーを開きます。 次のようなページが表示されます。
+UIで、上部メニューの「データサイエンス」タブをクリックして、データサイエンスワークスペースに移動します。 [!DNL Adobe Experience Platform] このページで、[ JupyterLab ]タブをクリックし、 JupyterLabランチャーを開きます。 次のようなページが表示されます。
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Adobe Experience Platform UIで、上部のメニューの「Data Science」タ�
 
 >[!NOTE] は非推奨 `data_access_sdk_python` で、推奨されなくなりました。 コードを変換するには、「 [データアクセスSDKからプラットフォームSDKへの変換](../authoring/platform-sdk.md) 」チュートリアルを参照してください。 このチュートリアルでは、次と同じ手順を引き続き使用します。
 
-Adobe Experience Platformの内部データと外部データへのアクセスを調べます。 このライブラリを使用して、データセットやXDMスキーマなどの内部データにアクセスします。 `data_access_sdk_python` 外部データの場合は、Pandas Pythonライブラリを使用します。
+内部からのデータおよび外部からのデータへのアクセス [!DNL Adobe Experience Platform] を調べます。 このライブラリを使用して、データセットやXDMスキーマなどの内部データにアクセスします。 `data_access_sdk_python` 外部データの場合は、Pandas Pythonライブラリを使用します。
 
 #### 外部データ
 
@@ -70,7 +70,7 @@ PandasのDataFrameデータ構造は、2次元のラベル付きデータ構造�
 
 #### エクスペリエンスプラットフォームデータ
 
-次に、エクスペリエンスプラットフォームのデータへのアクセスについて説明します。
+次に、 [!DNL Experience Platform] データへのアクセスについて説明します。
 
 ##### データセットID別
 
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Python以外のカーネルで作業している場合は、 [このページを参照して](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) 、Adobe Experience Platformのデータにアクセスしてください。
+Python以外のカーネルで作業している場合は、 [このページを参照し](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) 、のデータにアクセスしてください [!DNL Adobe Experience Platform]。
 
 実行可能セルを選択し、ツールバーの再生ボタンを押すと、実行可能コードが実行されます。 の出力は、データセットのキー `head()` を列、データセット内の最初のn行に含むテーブルになります。 `head()` 出力する行数を指定する整数引数を受け取ります。 デフォルトは5です。
 
@@ -190,7 +190,7 @@ df.describe()
 
 ## 次の手順
 
-このチュートリアルでは、Data Science Workspaceで新しいジャプターノートブックを作成する方法、およびAdobe Experience Platformから外部データにアクセスする方法について説明しました。 具体的には、次の手順に従いました。
+このチュートリアルでは、Data Science Workspaceで新しいジャプターノートブックを作成する方法、およびから外部のデータにアクセスする方法について説明し [!DNL Adobe Experience Platform]ました。 具体的には、次の手順に従いました。
 - 新しいジュピターノートブックを作成する
 - データセットとスキーマへのアクセス
 - データセットの調査
