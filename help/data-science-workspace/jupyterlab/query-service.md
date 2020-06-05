@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ジュピターノートのクエリサービス
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 1%
 
 # ジュピターノートのクエリサービス
 
-Adobe Experience Platformでは、Structured Language(SQL)をData Science Workspaceで使用できます。これにより、クエリサービスが標準機能としてJupterLabに統合されます。
+[!DNL Adobe Experience Platform] クエリサービスを標準機能としてJupterLabに統合することにより、Data Science Workspaceで構造化クエリ言語(SQL)を使用できます。
 
-このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例のサンプルSQLクエリを示します。
+このチュートリアルでは、 [!DNL Adobe Analytics] データの調査、変換、分析を行う一般的な使用例のサンプルSQLクエリを示します。
 
 ## はじめに
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-- Adobe Experience Platformへのアクセス。 Experience PlatformのIMS組織にアクセスできない場合は、次に進む前に、システム管理者にお問い合わせください。
+- へのアクセス [!DNL Adobe Experience Platform]。 Experience PlatformのIMS組織にアクセスできない場合は、次に進む前に、システム管理者にお問い合わせください。
 
-- Adobe Analyticsデータセット
+- データ [!DNL Adobe Analytics] セット
 
 - このチュートリアルで使用する次の主要概念の実際の理解
    - [Experience Data Model(XDM)およびXDMシステム](../../xdm/home.md)
    - [クエリサービス](../../query-service/home.md)
    - [クエリサービスのSQL構文](../../query-service/sql/overview.md)
-   - Adobe Analytics
+   - [!DNL Adobe Analytics]
 
 ## JupyterLabおよびクエリサービスへのアクセス {#access-jupyterlab-and-query-service}
 
@@ -50,13 +50,13 @@ Adobe Experience Platformでは、Structured Language(SQL)をData Science Worksp
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. 調査するAdobe Analyticsデータセットを探し、リスト上で右クリックして、「ノートブックの **[!UICONTROL クエリデータ]** 」をクリックし、空のノートブックにSQLクエリを生成します。
+4. 調査する [!DNL Adobe Analytics] データセットを見つけて、リスト上で右クリックし、[ノートブックの **[!UICONTROL クエリデータ]** ]をクリックして空のノートブックにSQLクエリを生成します。
 
 5. 関数を含む最初に生成されたセルをクリックし `qs_connect()` 、再生ボタンをクリックして実行します。 この関数は、ノートブックインスタンスとクエリサービスとの間の接続を作成します。
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. 2番目に生成されたSQLクエリからAdobe Analyticsデータセット名をコピーします。この名前は、の後の値になり `FROM`ます。
+6. 2番目に生成されたSQLクエリから [!DNL Adobe Analytics] データセット名をコピーします。この名前は、の後の値になり `FROM`ます。
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -81,7 +81,7 @@ Adobe Experience Platformでは、Structured Language(SQL)をData Science Worksp
    target_day = "01"
    ```
 
-   - `target_table` : Adobe Analyticsデータセットの名前。
+   - `target_table` : データ [!DNL Adobe Analytics] セットの名前。
    - `target_year` : ターゲットデータの元となる特定の年。
    - `target_month` : ターゲットの開始月を指定します。
    - `target_day` : ターゲットデータの元となる特定の日。
