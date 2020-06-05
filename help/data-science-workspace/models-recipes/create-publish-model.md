@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 機械学習モデルのチュートリアルを作成して公開する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1582'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 オンラインの小売Webサイトを所有しているふりをします。 顧客が小売Webサイトで買い物をする際、ビジネスオファーに様々な他の商品を公開するために、パーソナライズされた商品のレコメンデーションを提示したいと考えます。 Webサイトが存在する間、顧客データを継続的に収集し、このデータを使用してパーソナライズされた商品レコメンデーションを生成したいと考えています。
 
-Adobe Experience Platform Data Science Workspaceは、事前に組み込まれた [製品推奨レシピを使用して目標を達成する手段を提供します](../pre-built-recipes/product-recommendations.md)。 このチュートリアルに従って、小売データにアクセスして理解し、機械学習モデルを作成して最適化し、Data Science Workspaceでインサイトを生成する方法を確認します。
+[!DNL Adobe Experience Platform] Data Science Workspaceは、事前に組み込まれた [製品レコメンデーションレシピを使用して目標を達成する手段を提供します](../pre-built-recipes/product-recommendations.md)。 このチュートリアルに従って、小売データにアクセスして理解し、機械学習モデルを作成して最適化し、Data Science Workspaceでインサイトを生成する方法を確認します。
 
 このチュートリアルは、Data Science Workspaceのワークフローを反映しており、機械学習モデルを作成するための次の手順をカバーしています。
 
@@ -31,7 +31,7 @@ Adobe Experience Platform Data Science Workspaceは、事前に組み込まれ�
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-* Adobe Experience Platformへのアクセス。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
+* へのアクセス [!DNL Adobe Experience Platform]。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
 
 * 有効化アセット。 アカウント担当者に問い合わせて、次のアイテムをプロビジョニングしてください。
    * Recommendationsのレシピ
@@ -52,7 +52,7 @@ Adobe Experience Platform Data Science Workspaceは、事前に組み込まれ�
 
 ## データの準備 {#prepare-your-data}
 
-機械学習モデルを作成して、顧客に対する商品の推奨事項をパーソナライズするには、Webサイトでの以前の顧客の購入を分析する必要があります。 この節では、このデータがAdobe Analyticsを通じてPlatformに取り込まれる方法、およびそのデータが機械学習モデルで使用される機能データセットにどのように変換されるかについて説明します。
+機械学習モデルを作成して、顧客に対する商品の推奨事項をパーソナライズするには、Webサイトでの以前の顧客の購入を分析する必要があります。 この節では、このデータがを通じてプラットフォームに取り込まれる方法 [!DNL Adobe Analytics]と、そのデータが機械学習モデルで使用する機能データセットにどのように変換されるかについて説明します。
 
 ### データを調べ、スキーマを理解する
 
@@ -75,11 +75,11 @@ Adobe Experience Platform Data Science Workspaceは、事前に組み込まれ�
 
 Data Science Workspaceのライフサイクルの2番目の要素は、レシピとモデルの作成です。 商品レコメンデーションレシピは、過去の購入データや機械学習を利用して、商品レコメンデーションを規模の大きいもので生成するように設計されています。
 
-レシピは、機械学習アルゴリズムと特定の問題を解決するためのロジックを含むので、モデルの基本となります。 さらに重要な点は、レシピを使用することで、組織全体の機械学習を民主化でき、他のユーザーがコードを記述することなく、さまざまな使用例に対応したモデルにアクセスできることです。
+レシピは、機械学習アルゴリズムと特定の問題を解決するためのロジックを含むので、モデルの基本となります。 さらに重要な点は、レシピを使用することで、組織全体の機械学習を民主化でき、他のユーザーがコードを書かずに異なる使用例に対するモデルにアクセスできる点です。
 
 ### 商品レコメンデーションレシピの参照
 
-1. Adobe Experience Platformで、左のナビゲーション列から「 **[!UICONTROL モデル]** 」に移動し、上部の「 **[!UICONTROL レシピ]** 」をクリックして、組織で使用可能なレシピのリストを表示します。
+1. で、左 [!DNL Adobe Experience Platform]のナビゲーション列から[ **[!UICONTROL モデル]** ]に移動し、上部の[ **[!UICONTROL レシピ]** ]をクリックして、組織で使用可能なレシピのリストを表示します。
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. 指定された **[!UICONTROL Recommendationsレシピを探して開きます]** 。レコメンデーションレシピ名はクリックします。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
@@ -96,7 +96,7 @@ Data Science Workspaceのライフサイクルの2番目の要素は、レシピ
 
 モデルはレシピのインスタンスで、データをスケールでトレーニングし、スコアを付けることができます。
 
-1. Adobe Experience Platformで、左のナビゲーション列から「 **[!UICONTROL モデル]** 」に移動し、ページ上部の「 **[!UICONTROL レシピ]** 」をクリックして、組織で使用可能なすべてのレシピのリストを表示します。
+1. で、左 [!DNL Adobe Experience Platform]のナビゲーション列から「 **[!UICONTROL モデル]** 」に移動し、ページ上部の「 **[!UICONTROL レシピ]** 」をクリックして、組織で使用可能なすべてのレシピのリストを表示します。
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. レコメンデーションレシピを探して開きます **** 。レコメンデーションレシピの名前をクリックし、レシピの概要ページを入力します。 中央から（既存のモデルがない場合）またはレシピ概要ページの右上から **** 、「モデルを作成」をクリックします。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
