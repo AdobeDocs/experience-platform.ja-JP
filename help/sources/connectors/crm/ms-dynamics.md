@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Microsoft Dynamicsコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: f46e95b1e1af3ff5021561eb45f408e45c657834
+source-git-commit: 565c8c4b084343e5488a725a6a93d5d50d59fe66
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -28,5 +28,5 @@ Adobe Experience Platformを使用すると、データを外部ソースから�
 
 ## UIを使用してMicrosoft Dynamicsをプラットフォームに接続する
 
-- [UIでMicrosoft Dynamicsソースコネクタを作成する](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+- [UIでMicrosoft Dynamicsソースコネクタを作成する](../../tutorials/ui/create/crm/dynamics.md)
 - [UIでのCRMコネクタのデータフローの設定](../../tutorials/ui/dataflow/crm.md)
