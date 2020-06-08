@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクターとAPIを使用したクラウドストレージデータの収集
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a66be0b49bdcd765fd5dcbd0e646d35df54c7e4
+source-git-commit: 2a8e8f2deffca06782f0ad9b8154ee763c05f06d
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1689'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 - [Experience Data Model(XDM)System](../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    - [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
 - [カタログサービス](../../../../catalog/home.md): カタログは、エクスペリエンスプラットフォーム内のデータの場所と系列の記録システムです。
 - [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md): Batch Ingestion APIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
@@ -648,7 +648,7 @@ curl -X POST \
 | `transformations.params.mappingId` | 前の手順で取得したマッピングID。 |
 | `scheduleParams.startTime` | データフローの開始時間（秒単位）。 |
 | `scheduleParams.frequency` | 選択可能な頻度の値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
-| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があり `15` ます。 |
+| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があ `15` ります。 |
 
 **応答**
 
@@ -668,7 +668,7 @@ curl -X POST \
 - [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 - [Data Science Workspaceの概要](../../../../data-science-workspace/home.md)
 
-## 付録
+## 付録 {#appendix}
 
 次の節では、様々なクラウドストレージのソースコネクタと接続仕様をリストします。
 
@@ -683,4 +683,5 @@ curl -X POST \
 | Azureイベントハブ(イベントハブ) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | Azure Fileストレージ | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | Google Cloudストレージ | `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
 | SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
