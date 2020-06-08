@@ -4,10 +4,10 @@ solution: Experience Platform
 title: パッケージ化されたレシピの読み込み(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '2451'
-ht-degree: 1%
+source-wordcount: '1798'
+ht-degree: 0%
 
 ---
 
@@ -30,10 +30,6 @@ ht-degree: 1%
 - [Dockerベースのレシピのインポート — R](#r)
 - [Dockerベースのレシピのインポート — PySpark](#pyspark)
 - [Dockerベースのレシピのインポート — Scala](#scala)
-
-非推奨ワークフロー:
-- [バイナリベースのレシピの読み込み — PySpark](#pyspark-deprecated)
-- [バイナリベースのレシピの読み込み — Scala Spark](#scala-deprecated)
 
 ### レシピの設定 {#configure}
 
@@ -115,7 +111,7 @@ Data Science Workspaceのすべてのレシピインスタンスには、特定�
 | `ACP_DSW_TARGET_FEATURES` | 文字列 | カンマ区切りの出力スキーマ属性のリスト。 |
 | `ACP_DSW_FEATURE_UPDATE_SUPPORT` | Boolean | 入出力フィーチャを変更可能にするかどうかを指定します |
 | `tenantId` | 文字列 | このIDを使用すると、作成するリソースの名前が適切に付けられ、IMS組織内に含まれるようになります。 [テナントIDを検索するには](../../xdm/api/getting-started.md#know-your-tenant_id) 、ここの手順に従います。 |
-| `ACP_DSW_TRAINING_XDM_SCHEMA` | 文字列 | モデルのトレーニングに使用する入力スキーマ。 APIを使用して読み込む場合、UIに読み込むときは、この値を空のままにして、トレーニングSchemaIDに置き換えます。 |
+| `ACP_DSW_TRAINING_XDM_SCHEMA` | 文字列 | モデルのトレーニングに使用する入力スキーマ。 UIに読み込む場合は、この値を空のままにし、APIを使用して読み込む場合はトレーニングSchemaIDに置き換えます。 |
 | `evaluation.labelColumn` | 文字列 | 評価のビジュアライゼーションの列ラベル。 |
 | `evaluation.metrics` | 文字列 | モデルの評価に使用する評価指標のコンマ区切りリスト。 |
 | `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | 文字列 | モデルのスコアリングに使用する出力スキーマ。 UIに読み込む場合は、この値を空のままにし、APIを使用して読み込む際にスコアリングSchemaIDに置き換えます。 |
@@ -256,46 +252,3 @@ Data Science Workspaceのすべてのレシピインスタンスには、特定�
 
 - [UIでのモデルのトレーニングと評価](./train-evaluate-model-ui.md)
 - [APIを使用したモデルのトレーニングと評価](./train-evaluate-model-api.md)
-
-## 非推奨ワークフロー
-
->[!CAUTION]
->バイナリベースのレシピの読み込みは、PySpark 3 (Spark 2.4)およびScala (Spark 2.4)ではサポートされなくなりました。
-
-### バイナリベースのレシピの読み込み — PySpark {#pyspark-deprecated}
-
-Package [sourceファイルをRecipe](./package-source-files-recipe.md) Tutorialに含めると、Retail Sales PySparkソースファイルを使用して **EGG** binaryファイルが構築されます。
-
-1. [Adobe Experience Platform](https://platform.adobe.com/)で、左側のナビゲーションパネルを探し、「 **ワークフロー**」をクリックします。 ワークフローインターフェイスで、 **「ソースファイルから** 読み込みレシピを新規に起動 **** 」処理を実行します。
-   ![](../images/models-recipes/import-package-ui/workflow_ss.png)
-2. 小売売上のレシピに適切な名前を入力します。 例えば、「Retail Sales recipe PySpark」とします。 オプションで、レシピの説明とドキュメントURLを含めます。 完了したら、「**Next**」をクリックします。
-   ![](../images/models-recipes/import-package-ui/recipe_info.png)
-3. ドラッグ&amp;ドロップするか、ファイルシステムの [Browser](./package-source-files-recipe.md)****. パッケージ化されたレシピはに配置する必要があり `experience-platform-dsw-reference/recipes/pyspark/dist`ます。
-同様に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browser**&#x200B;を使用します。 提供された設定ファイルは、にあり `experience-platform-dsw-reference/recipes/pyspark/pipeline.json`ます。 両方のファイルが提供されたら **「次へ** 」をクリックします。
-   ![](../images/models-recipes/import-package-ui/recipe_source.png)
-4. この時点でエラーが発生する場合があります。 これは正常な動作で、期待される動作です。 「スキーマの **管理**」セクションの「小売売上の入出力スキーマー」を選択します。これらのパラメーターは、「小売売上スキーマとデータセット [の](../models-recipes/create-retails-sales-dataset.md) 作成」チュートリアルの付属のブートストラップスクリプトを使用して作成されています。
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-「 **機能の管理** 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上高」入力スキーマを展開します。 目的の機能をハイライト表示して入出力機能を選択し、右側の「フィールドプロパティ **」ウィンドウで「** 入力機能 **」または「** ターゲット機能 **** 」を選択します。 このチュートリアルでは、 **weeklySales** を **ターゲット機能** 、その他すべてを **入力機能に設定します**。 「 **次へ** 」をクリックして、新しく設定したレシピを確認します。
-5. 必要に応じて、レシピを確認し、設定を追加、変更、または削除します。 「 **完了** 」をクリックしてレシピを作成します。
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-次の手順に進み、新しく作成した小売売上高のレシピを使用してData Science Workspaceでモデルを作成する方法を調べます [](#next-steps) 。
-
-
-### バイナリベースのレシピの読み込み — Scala Spark {#scala-deprecated}
-
-Package [source files into a Recipe](./package-source-files-recipe.md) tutorialでは、 **JAR** binaryファイルはRetail Sales Scala Sparkソースファイルを使用して構築されました。
-
-1. [Adobe Experience Platform](https://platform.adobe.com/)で、左側のナビゲーションパネルを探し、「 **ワークフロー**」をクリックします。 ワークフローインターフェイスで、 **「ソースファイルから** 読み込みレシピを新規に起動 **** 」処理を実行します。
-   ![](../images/models-recipes/import-package-ui/workflow_ss.png)
-2. 小売売上のレシピに適切な名前を入力します。 例えば、「Retail Sales recipe Scala Spark」などです。 オプションで、レシピの説明とドキュメントURLを含めます。 完了したら、「**Next**」をクリックします。
-   ![](../images/models-recipes/import-package-ui/recipe_info_scala.png)
-3. ドラッグ&amp;ドロップして [パッケージソースファイルで作成したScala Spark Retail SalesレシピをRecipe](./package-source-files-recipe.md) Tutorialに読み込むか、ファイルシステムの **Browser**. 依存関係 **を持つパッケージレシピは** 、にあり `experience-platform-dsw-reference/recipes/scala/target`ます。 同様に、指定した設定ファイルをドラッグ&amp;ドロップして読み込むか、ファイルシステムの **Browser**&#x200B;を使用します。 提供された設定ファイルは、にあり `experience-platform-dsw-reference/recipes/scala/src/main/resources/pipelineservice.json`ます。 両方のファイルが提供されたら **「次へ** 」をクリックします。
-   ![](../images/models-recipes/import-package-ui/recipe_source_scala.png)
-4. この時点でエラーが発生する場合があります。 これは正常な動作で、期待される動作です。 「スキーマの **管理**」セクションの「小売売上の入出力スキーマー」を選択します。これらのパラメーターは、「小売売上スキーマとデータセット [の](../models-recipes/create-retails-sales-dataset.md) 作成」チュートリアルの付属のブートストラップスクリプトを使用して作成されています。
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-「 **機能の管理** 」セクションで、スキーマビューアのテナントIDをクリックして、「小売売上高」入力スキーマを展開します。 目的の機能をハイライト表示して入出力機能を選択し、右側の「フィールドプロパティ **」ウィンドウで「** 入力機能 **」または「** ターゲット機能 **** 」を選択します。 このチュートリアルでは、 **weeklySales** を **ターゲット機能** 、その他すべてを **入力機能に設定します**。 「 **次へ** 」をクリックして、新しく設定したレシピを確認します。
-5. 必要に応じて、レシピを確認し、設定を追加、変更、または削除します。 「 **完了** 」をクリックしてレシピを作成します。
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-次の手順に進み、新しく作成した小売売上高のレシピを使用してData Science Workspaceでモデルを作成する方法を調べます [](#next-steps) 。
