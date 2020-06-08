@@ -4,9 +4,9 @@ solution: Experience Platform
 title: フローサービスAPIを使用したSalesforceサービスクラウドコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '700'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Flow Service APIを使用してSSCに正常に接続するために知ってお�
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platformのすべてのリソース（Flow Serviceに属するリソースを含む）は、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platformのすべてのリソース（フローサービスに属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
