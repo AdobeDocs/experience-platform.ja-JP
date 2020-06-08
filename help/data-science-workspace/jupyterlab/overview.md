@@ -4,9 +4,9 @@ solution: Experience Platform
 title: JupterLabユーザガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '3349'
+source-wordcount: '2773'
 ht-degree: 6%
 
 ---
@@ -119,9 +119,7 @@ JupterLabの主な作業領域を使用すると、ドキュメントやその�
 
 ### カーネル {#kernels}
 
-ノート型カーネルは、ノート型セルを処理するための言語固有のコンピューティングエンジンです。 Pythonに加えて、JupyterLabはR、PySpark、Sparkで追加の言語サポートを提供します。 ノートブックドキュメントを開くと、関連付けられたカーネルが起動します。 ノート型セルを実行すると、カーネルは計算を行い、結果を生み出し、CPUやメモリのリソースを大量に消費する可能性がある。 割り当てられたメモリは、カーネルがシャットダウンするまで解放されないことに注意してください。
-
->[!IMPORTANT] Spark 2.3からSpark 2.4に更新されたJupterLab Launcher。 SparkとPySparkカーネルは、Spark 2.4ノートブックではサポートされなくなりました。
+ノート型カーネルは、ノート型セルを処理するための言語固有のコンピューティングエンジンです。 Pythonに加えて、JupterLabはR、PySpark、Spark (Scala)で追加の言語サポートを提供します。 ノートブックドキュメントを開くと、関連付けられたカーネルが起動します。 ノート型セルを実行すると、カーネルは計算を行い、結果を生み出し、CPUやメモリのリソースを大量に消費する可能性がある。 割り当てられたメモリは、カーネルがシャットダウンするまで解放されないことに注意してください。
 
 特定の機能は、以下の表に示すように特定のカーネルに限定されています。
 
@@ -129,8 +127,6 @@ JupterLabの主な作業領域を使用すると、ドキュメントやその�
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | ○ | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li><li>クエリサービス</li></ul> |
 | **R** | ○ | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
-| **PySpark — 非推奨** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
-| **Spark — 非推奨** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
 | **スカラ** | × | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
 
 ### カーネルセッション {#kernel-sessions}
@@ -142,59 +138,6 @@ JupyterLabのアクティブなノートブックまたはアクティビティ�
 カーネルがシャットダウンされたり、長時間非アクティブになったりした場合は、 **No Kernel!** に実線の円が表示されます。 カーネルの状態をクリックし、以下に示すように適切なカーネルタイプを選択して、カーネルをアクティブにします。
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
-
-### PySpark/Spark実行リソース {#execution-resource}
-
->[!IMPORTANT]
->Spark 2.3からSpark 2.4へのトランジションでは、SparkとPySparkの両方のカーネルは廃止されています。
->
->新しいPySpark 3 (Spark 2.4)ノートブックはPython3 Kernelを使用します。 既存のノートブックの更新に関する詳細なチュートリアルについては、 [Pyspark 3 (Spark 2.3)をPySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) に変換する際のガイドを参照してください。
->
->新しいSparkノートブックはScalaカーネルを利用する必要があります。 既存のノートブックの更新に関する詳しいチュートリアルについては、 [Spark 2.3をScala (Spark 2.4)に変換する際のガイドを参照してください](../recipe-notebook-migration.md) 。
-
-PySparkとSparkカーネルは、PySparkまたはSparkノートブック内でSparkクラスタリソースを設定するために、configureコマンド(`%%configure`)を使用し、設定のリストを提供します。 これらの設定は、Sparkアプリケーションの初期化前に定義するのが理想的です。 Sparkアプリケーションがアクティブな間に設定を変更するには、次に示すように、コマンド(`%%configure -f`)の後にforceフラグを追加する必要があります。コマンドは、変更を適用するためにアプリケーションを再起動します。
-
->[!CAUTION]
->PySpark 3 (Spark 2.4)とScala (Spark 2.4)ノートブックでは、Sparkmagicはサポートされなくなりました。 `%%` 次の操作は、使用できなくなりました。
-* `%%help`
-* `%%info`
-* `%%cleanup`
-* `%%delete`
-* `%%configure`
-* `%%local`
-
-```python
-%%configure -f 
-{
-    "numExecutors": 10,
-    "executorMemory": "8G",
-    "executorCores":4,
-    "driverMemory":"2G",
-    "driverCores":2,
-    "conf": {
-        "spark.cores.max": "40"
-    }
-}
-```
-
-次の表に、設定可能なすべてのプロパティを示します。
-
-| プロパティ | 説明 | タイプ |
-| :------- | :---------- | :-----:|
-| 親切な | セッションの種類（必須） | `session kind`_ |
-| proxyUser | このセッションを実行する、偽装するユーザー（bobなど） | 文字列 |
-| jars | Javaに配置するファイル `classpath` | パスのリスト |
-| pyFiles | ファイルを `PYTHONPATH` | パスのリスト |
-| ファイル | 実行者の作業ディレクトリに配置するファイル | パスのリスト |
-| driverMemory | MBまたはGB単位のドライバのメモリ（例：1000M、2G） | 文字列 |
-| driverCores | ドライバが使用するコア数（YARNモードのみ） | int |
-| executorMemory | MBまたはGB単位のエグゼキューターのメモリ（例：1000M、2G） | 文字列 |
-| executorCores | 実行者が使用するコア数 | int |
-| numExecutors | エグゼクター数（YARNモードのみ） | int |
-| アーカイブ | エクゼクターの作業ディレクトリで圧縮解除するアーカイブ（YARNモードのみ） | パスのリスト |
-| キュー | 送信するYARNキュー（YARNモードのみ） | 文字列 |
-| name | アプリケーションの名前 | 文字列 |
-| conf | Spark設定プロパティ | key=valのマップ |
 
 ### ランチャー {#launcher}
 
@@ -252,30 +195,6 @@ PySparkとSparkカーネルは、PySparkまたはSparkノートブック内でSp
         <td >いいえ</td>
         <td >いいえ</td>
         <td >いいえ</td>
-    </tr>
-    <tr>
-        <th  ><strong>PySpark 3（Spark 2.3 — 非推奨）</strong></th>
-        <td >○</td>
-        <td >○</td>
-        <td >いいえ</td>
-        <td >いいえ</td>
-        <td >いいえ</td>
-        <td >いいえ</td>
-        <td >○</td>
-        <td >○</td>
-        <td >いいえ</td>
-    </tr>
-    <tr>
-        <th ><strong>Spark（Spark 2.3 — 非推奨）</strong></th>
-        <td >○</td>
-        <td >○</td>
-        <td >いいえ</td>
-        <td >いいえ</td>
-        <td >いいえ</td>
-        <td >いいえ</td>
-        <td >いいえ</td>
-        <td >いいえ</td>
-        <td >○</td>
     </tr>
       <tr>
         <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
@@ -377,28 +296,9 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: アクセスするデータセットの固有のID
 
-### PySpark/Spark/Scalaのデータセットから読み込む
+### PySpark/Scalaのデータセットから読み込む
 
->[!IMPORTANT]
->Spark 2.3からSpark 2.4へのトランジションでは、SparkとPySparkの両方のカーネルは廃止されています。
->
->新しいPySpark 3 (Spark 2.4)ノートブックはPython3 Kernelを使用します。 既存のSpark 2.3コードを変換する場合は、 [Pyspark 3 (Spark 2.3)をPySpark 3 (Spark 2.4)に変換する際のガイドを参照してください](../recipe-notebook-migration.md) 。 新しいノートブックは、 [以下のPySpark 3 (Spark 2.4)](#pyspark2.4) の例に従う必要があります。
->
->新しいSparkノートブックはScalaカーネルを利用する必要があります。 既存のSpark 2.3コードを変換する場合は、 [Spark 2.3をScala(Spark 2.4)に変換する方法に関するガイドを参照してください](../recipe-notebook-migration.md) 。 新しいノートブックは、 [Scala (Spark 2.4)](#spark2.4) の例に従う必要があります。
-
-アクティブなPySparkまたはSparkノートブックを開いた状態で、左のサイドバーから **Data Explorer** タブを展開し、重複が **Datasets** （データセット）をクリックして、使用可能なデータセットのリストを表示します。 アクセスするデータセットのリストを右クリックし、「Explore Data in Notebook ****」をクリックします。 次のコードセルが生成されます。
-
-#### PySpark（Spark 2.3 — 非推奨）
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd0 = spark.read.format("com.adobe.platform.dataset").\
-    option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-pd0.describe()
-pd0.show(10, False)
-```
+アクティブなPySparkまたはScalaノートブックを開き、左のサイドバーから「 **Data Explorer** 」タブを展開し、重複が「 **Datasets** 」をクリックして、使用可能なデータセットのリストを表示します。 アクセスするデータセットのリストを右クリックし、「Explore Data in Notebook ****」をクリックします。 次のコードセルが生成されます。
 
 #### PySpark (Spark 2.4) {#pyspark2.4}
 
@@ -410,20 +310,6 @@ Spark 2.4の導入に伴い、 [`%dataset`](#magic) カスタムマジックが�
 %dataset read --datasetId {DATASET_ID} --dataFrame pd0
 pd0.describe()
 pd0.show(10, False)
-```
-
-#### Spark（Spark 2.3 — 非推奨）
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-dataFrame.printSchema()
-dataFrame.show()
 ```
 
 #### Scala(Spark 2.4) {#spark2.4}
@@ -560,34 +446,9 @@ df <- dataset_reader$
 
 ### PySpark/Spark内のExperienceEventデータのフィルタ
 
->[!IMPORTANT]
->Spark 2.3からSpark 2.4へのトランジションでは、SparkとPySparkの両方のカーネルは廃止されています。
->
->新しいPySpark 3 (Spark 2.4)ノートブックはPython3 Kernelを使用します。 既存のコードの変換の詳細については、 [Pyspark 3 (Spark 2.3)をPySpark 3 (Spark 2.4)に変換する際のガイドを参照してください](../recipe-notebook-migration.md) 。 新しいPySparkノートブックを作成する場合は、ExperienceEventデータをフィルタする [ためにPySpark 3 (spark 2.4)](#pyspark3-spark2.4) 例を使用します。
->
->新しいSparkノートブックはScalaカーネルを利用する必要があります。 既存のコードの変換の詳細については、 [Spark 2.3からScala (Spark 2.4)](../recipe-notebook-migration.md) への変換に関するガイドを参照してください。 新しいSparkノートブックを作成する場合は、 [Scala (spark 2.4)](#scala-spark) （ExperienceEventデータのフィルタリング例）を使用します。
-
-PySparkまたはSparkノートブック内のExperienceEventデータセットにアクセスしてフィルタするには、データセットID(`{DATASET_ID}`)、組織のIMS ID、および特定の時間範囲を定義するフィルタルールを指定する必要があります。 フィルタ時間範囲は、関数を使用して定義します。関数パラメータ `spark.sql()`はSQLクエリ文字列です。
+PySparkまたはScalaノートブック内のExperienceEventデータセットにアクセスしてフィルタするには、データセットID(`{DATASET_ID}`)、組織のIMS ID、および特定の時間範囲を定義するフィルタルールを指定する必要があります。 フィルタ時間範囲は、関数を使用して定義します。関数パラメータ `spark.sql()`はSQLクエリ文字列です。
 
 次のセルでは、2019年1月1日から2019年12月31日末の間にのみ存在するデータに対してExperienceEventデータセットをフィルタリングします。
-
-#### PySpark 3（Spark 2.3 — 非推奨）
-
-```python
-# PySpark 3 (Spark 2.3 - deprecated)
-
-pd = spark.read.format("com.adobe.platform.dataset").\
-    option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
-    load("{DATASET_ID}")
-
-pd.createOrReplaceTempView("event")
-timepd = spark.sql("""
-    SELECT *
-    FROM event
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-```
 
 #### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
 
@@ -607,26 +468,6 @@ timepd = spark.sql("""
     AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
 """)
 timepd.show()
-```
-
-#### Spark（Spark 2.3 — 非推奨）
-
-```scala
-// Spark (Spark 2.3 - deprecated)
-
-import com.adobe.platform.dataset.DataSetOptions
-val dataFrame = spark.read.
-    format("com.adobe.platform.dataset").
-    option(DataSetOptions.orgId, "YOUR_IMS_ORG_ID@AdobeOrg").
-    load("{DATASET_ID}")
-
-dataFrame.createOrReplaceTempView("event")
-val timedf = spark.sql("""
-    SELECT * 
-    FROM event 
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
 ```
 
 #### Scala(Spark 2.4) {#scala-spark}
