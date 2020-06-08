@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Azure Data LakeストレージGen2コネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Azure Data LakeストレージGen2コネクタ
 
-Adobe Experience Platformは、AWS、Google Cloud Platform、Azureなどのクラウドプロバイダーに対してネイティブの接続を提供します。 これらのシステムのデータをプラットフォームに取り込むことができます。
+Adobe Experience Platformは、AWS、Google Cloud Platform、Azureなどのクラウドプロバイダーに対してネイティブの接続性を提供し、これらのシステムからデータを取り込むことができます。
 
 クラウドストレージソースは、ダウンロード、形式設定、アップロードを行うことなく、独自のデータをプラットフォームに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 プラットフォームでは、Azure Data LakeストレージGen2からバッチを使用してデータを取り込むことができます。
 
