@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースファイルのレシピへのパッケージ化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 0%
 
 ### Dockerベースのモデルオーサリング {#docker-based-model-authoring}
 
-Dockerイメージを使用すると、開発者は、ライブラリやその他の依存関係など必要なすべての部分を含むアプリケーションをパッケージ化し、それを1つのパッケージとして出荷できます。
+Dockerイメージを使用すると、開発者は、ライブラリやその他の依存関係など必要なすべての部分を含むアプリケーションをパッケージ化し、1つのパッケージとして出荷できます。
 
 作成されたDockerイメージは、レシピ作成ワークフローで指定された資格情報を使用してAzureコンテナレジストリにプッシュされます。
 
@@ -196,46 +196,3 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 - [パッケージ化されたレシピをUIに読み込む](./import-packaged-recipe-ui.md)
 - [APIを使用したパッケージ化されたレシピの読み込み](./import-packaged-recipe-api.md)
-
-## バイナリの構築（非推奨）
-
->[!CAUTION]
-> バイナリは新しいPySparkおよびScalaレシピではサポートされておらず、将来のリリースで削除されるように設定されています。 PySparkとScalaを使用する場合は、 [Dockerワークフローに従ってください](#docker-based-model-authoring) 。 次のワークフローは、Spark 2.3レシピのみに適用できます。
-
-### PySparkバイナリの構築（非推奨）
-
-まだ作成していない場合は、次のコマンドを使用して、githubリポジトリをローカルシステムにコピーします。
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-ローカルシステム上のクローン・リポジトリに移動し、次のコマンドを実行してPySparkレシピをインポートするために必要な `.egg` ファイルを作成します。
-
-```BASH
-cd recipes/pyspark
-./build.sh
-```
-
-フ `.egg` ァイルがフォルダーに生成され `dist` ます。
-
-次の手順に進むことができ [ます](#next-steps)。
-
-#### Scalaバイナリの構築（廃止）
-
-まだGitHubリポジトリをローカルシステムにコピーしていない場合は、次のコマンドを実行します。
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Scalaレシピのインポートに使用するアーティファクトを作成するには、クローン・リポジトリに移動し、次の手順に従います。 `.jar`
-
-```BASH
-cd recipes/scala/
-./build.sh
-```
-
-依存関係を持つ生成された `.jar` アーティファクトが `/target` ディレクトリに見つかります。
-
-次の手順に進むことができ [ます](#next-steps)。
