@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectorsの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
+source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '762'
 ht-degree: 1%
 
 ---
@@ -51,6 +51,7 @@ Experience Platformを使用すると、Adobe Analytics、Adobe Platform Manager
 - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
 - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
+- [HDFSコネクタ](connectors/cloud-storage/hdfs.md)
 
 ### 顧客関係管理（CRM）
 
@@ -76,6 +77,7 @@ CRMシステムは、顧客との関係の構築に役立つデータを提供�
 - [Azure Data Explorerコネクタ](connectors/databases/data-explorer.md)
 - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
 - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
+- [CouchBaseコネクタ](connectors/databases/couchbase.md)
 - [Google BigQuery Connector](connectors/databases/bigquery.md)
 - [GreenPlumコネクタ](connectors/databases/greenplum.md)
 - [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
