@@ -4,9 +4,9 @@ solution: Experience Platform
 title: レシピとノートブックの移行ガイド
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '3460'
+source-wordcount: '3459'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # レシピとノートブックの移行ガイド
 
 >[!NOTE]
->Python/Rを使用したノートブックおよびレシピは影響を受けません。 移行は、既存のPySpark/Sparkレシピとノートブックにのみ適用されます。
+>Python/Rを使用したノートブックおよびレシピは影響を受けません。 移行は、PySpark/Spark(2.3)のレシピとノートブックにのみ適用されます。
 
 次のガイドは、既存のレシピとノートブックの移行に必要な手順と情報を示しています。
 
@@ -575,7 +575,7 @@ PySpark 3 (Spark 2.4)を使えば、 `%dataset` カスタムマジックは `use
 
 ## Spark 2.3からSpark 2.4 (Scala)ノートブック移行ガイド {#spark-notebook-migration}
 
-Spark 2.4がJupyterLab Notebooksに導入され、既存のSpark (Spark 2.3)ノートブックは、Sparkカーネルの代わりにScalaカーネルを使用しています。 つまり、Spark(Spark 2.3)で実行されている既存のコードはScala(Spark 2.4)ではサポートされていません。 さらに、新しいSparkノートブックはすべて、JupyterLabランチャーでScala (Spark 2.4)を使用する必要があります。
+Spark 2.4がJupyterLab Notebooksに導入され、既存のSpark (Spark 2.3)ノートブックは、Sparkカーネルの代わりにScalaカーネルを使用しています。 つまり、Spark(Spark 2.3)で実行されている既存のコードは、Scala(Spark 2.4)ではサポートされていません。 さらに、新しいSparkノートブックはすべて、JupyterLabランチャーでScala (Spark 2.4)を使用する必要があります。
 
 >[!IMPORTANT] Spark(Spark 2.3)は非推奨となり、以降のリリースで削除されるように設定されています。 既存の例はすべてScala(Spark 2.4)の例に置き換えるように設定されています。
 
