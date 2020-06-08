@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google Cloudストレージコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 256a193e56e69078d1c01c622656f0b1a18e73ff
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Google Cloudストレージコネクタ
 
-Adobe Experience Platformは、AWS、Google Cloud Platform、Azureなどのクラウドプロバイダーに対してネイティブの接続を提供します。 これらのシステムのデータをプラットフォームに取り込むことができます。
+Adobe Experience Platformは、AWS、Google Cloud Platform、Azureなどのクラウドプロバイダーに対してネイティブの接続性を提供し、これらのシステムからデータを取り込むことができます。
 
 クラウドストレージソースは、ダウンロード、形式設定、アップロードを行うことなく、独自のデータをプラットフォームに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 プラットフォームを使用すると、Google Cloudストレージからデータをバッチで取り込むことができます。
 
