@@ -4,10 +4,10 @@ solution: Experience Platform
 title: パッケージ化されたレシピの読み込み(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '1301'
-ht-degree: 1%
+source-wordcount: '974'
+ht-degree: 2%
 
 ---
 
@@ -31,9 +31,8 @@ ht-degree: 1%
 
 ## はじめに
 
-このチュートリアルでは、バイナリアーティファクトまたはDocker URLの形式のパッケージレシピファイルが必要です。 「 [Package source files into a Recipe](./package-source-files-recipe.md) tutorial」に従って、パッケージ化されたレシピファイルを作成するか、独自のレシピファイルを用意します。
+このチュートリアルでは、Docker URLの形式でパッケージ化されたレシピファイルが必要です。 「 [Package source files into a Recipe](./package-source-files-recipe.md) tutorial」に従って、パッケージ化されたレシピファイルを作成するか、独自のレシピファイルを用意します。
 
-- バイナリアーティファクト（非推奨）: バイナリアーティファクト( JAR、EGG)は、エンジンの作成に使用されます。
 - `{DOCKER_URL}`: インテリジェントサービスのDockerイメージへのURLアドレス。
 
 このチュートリアルでは、プラットフォームAPIの呼び出しを正常に行うために、 [Adobe Experience Platformへの認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があります。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
@@ -47,7 +46,6 @@ ht-degree: 1%
 パッケージ化されたレシピファイルの形式に応じて、APIリクエストに含められるエンジンは、次の2つの方法のいずれかで作成されます。
 
 - [ドッカーURLを使用したエンジンの作成](#create-an-engine-with-a-docker-url)
-- [バイナリアーティファクトを使用したエンジンの作成（非推奨）](#create-an-engine-with-a-binary-artifact-deprecated)
 
 ### ドッカーURLを使用したエンジンの作成 {#create-an-engine-with-a-docker-url}
 
@@ -205,72 +203,3 @@ curl -X POST \
 ## 次の手順 {#next-steps}
 
 APIを使用してエンジンを作成し、一意のエンジン識別子が応答本体の一部として取得された。 APIを使用してモデルを [作成、トレーニング、評価する方法を学習する際に、次のチュートリアルでこのエンジン識別子を使用できます](./train-evaluate-model-api.md)。
-
-### バイナリアーティファクトを使用したエンジンの作成（非推奨） {#create-an-engine-with-a-binary-artifact-deprecated}
-
-<!-- Will need to remove binary artifact documentation once the old flags are turned off -->
-
->[!CAUTION]
-> バイナリアーティファクトは、古いPySparkおよびSparkレシピで使用されます。 Data Science Workspaceで、すべてのレシピでDocker URLがサポートされるようになりました。 この更新により、すべてのエンジンはDocker URLを使用して作成されます。 このドキュメントの [Docker URLの節を参照してください](#create-an-engine-with-a-docker-url) 。 バイナリアーティファクトは、以降のリリースで削除されるように設定されます。
-
-ローカルパッケージまたはバイナリアーティファクトを使用してエンジンを作成するに `.jar``.egg` は、ローカルファイルシステムのバイナリアーティファクトファイルへの絶対パスを指定する必要があります。 ターミナル・環境内のバイナリ・アーティファクトを含むディレクトリに移動し、絶対パスに対して `pwd` Unixコマンドを実行します。
-
-次の呼び出しは、バイナリアーティファクトを持つエンジンを作成します。
-
-**API形式**
-
-```http
-POST /engines
-```
-
-**リクエスト**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: {ACCESS_TOKEN}' \
-    -H 'X-API-KEY: {API_KEY}' \
-    -H 'content-type: multipart/form-data' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -F 'engine={
-        "name": "Retail Sales Engine PySpark",
-        "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-        "type": "PySpark"
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file/pysparkretailapp-0.1.0-py3.7.egg'
-```
-
-| プロパティ | 説明 |
-| -------  | ----------- |
-| `engine.name` | エンジンの名前。 このエンジンに対応するレシピは、Data Science Workspaceユーザーインターフェイスに表示されるこの値をレシピ名として継承します。 |
-| `engine.description` | エンジンのオプションの説明。 このエンジンに対応するレシピは、Data Science Workspaceユーザーインターフェイスに表示されるこの値をレシピの説明として継承します。 このプロパティを削除しないでください。説明を入力しない場合は、この値を空の文字列にします。 |
-| `engine.type` | エンジンの実行タイプ。 この値は、バイナリアーティファクトが開発された言語に対応します。 エンジンを作成するバイナリアーティファクトをアップロードする場合、 `type` は `Spark` または `PySpark`です。 |
-| `defaultArtifact` | エンジンの作成に使用するバイナリアーティファクトファイルの絶対パスです。 ファイルパスの `@` 前にを必ず含めます。 |
-
-**応答**
-
-```JSON
-{
-    "id": "00000000-1111-2222-3333-abcdefghijkl",
-    "name": "Retail Sales Engine PySpark",
-    "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-    "type": "PySpark",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "your_user_id@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://some-storage-location.net/some-path/your-uploaded-binary-artifact.egg",
-                "name": "pysparkretailapp-0.1.0-py3.7.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-正常な応答では、新しく作成されたエンジンに関する情報が含まれたJSONペイロードが表示されます。 この `id` キーは一意のエンジン識別子を表し、MLInstanceを作成するには、次のチュートリアルで必要となります。 次の手順に進む前に、エンジン識別子が保存されていることを確認 [します](#next-steps)。
