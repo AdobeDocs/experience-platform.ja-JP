@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service APIを使用してGoogle AdWordsコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00f785577999d2ec3147a3cc2b8edd1028be2471
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '632'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Flow Service APIを使用してAdに正常に接続するために知ってお�
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platformのすべてのリソース（Flow Serviceに属するリソースを含む）は、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platformのすべてのリソース（フローサービスに属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -74,7 +74,8 @@ POST /connections
 
 **リクエスト**
 
-Google AdWords接続を作成するには、その一意の接続指定IDをPOSTリクエストの一部として指定する必要があります。 Google AdWordsの接続仕様IDはで `221c7626-58f6-4eec-8ee2-042b0226f03b`す。
+次の要求は、ペイロードで提供されるプロパティによって設定された、新しいAdWords接続を作成します。
+
 
 ```shell
 curl -X POST \
