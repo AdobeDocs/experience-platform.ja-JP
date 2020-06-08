@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
+source-git-commit: bfbaaf0367b601c4ad521f42cd5ff6bdd25a8274
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 1%
       - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
+      - [HDFSコネクタ](connectors/cloud-storage/hdfs.md)
    - CRM {#crm}
       - [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforceコネクタ](connectors/crm/salesforce.md)
@@ -46,6 +47,7 @@ ht-degree: 1%
       - [Azure Data Explorerコネクタ](connectors/databases/data-explorer.md)
       - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
       - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
+      - [CouchBaseコネクタ](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlumコネクタ](connectors/databases/greenplum.md)
       - [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
@@ -74,6 +76,7 @@ ht-degree: 1%
          - [Azureイベントハブコネクタ](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure Fileストレージコネクタ](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloudストレージコネクタ](tutorials/api/create/cloud-storage/google.md)
+         - [HDFSコネクタ](tutorials/api/create/cloud-storage/hdfs.md)
          - [SFTPコネクタ](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [HubSpotコネクタ](tutorials/api/create/crm/hubspot.md)
@@ -89,6 +92,7 @@ ht-degree: 1%
          - [Azure Data Explorerコネクタ](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analyticsコネクタ](tutorials/api/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/api/create/databases/ats.md)
+         - [CouchBaseコネクタ](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlumコネクタ](tutorials/api/create/databases/greenplum.md)
          - [HP Verticaコネクタ](tutorials/api/create/databases/hp-vertica.md)
