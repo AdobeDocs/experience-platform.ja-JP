@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SDK開発者ガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 564603fdec6050463937c6e162cdff00cda506c4
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '951'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # SDK開発者ガイド
 
-モデルオーサリングSDKを使用すると、Data Science Workspaceで使用できるカスタムの機械学習レシピと機能パイプラインを開発でき、PySparkおよびSparkで実装可能なテンプレートを提供します。 [!DNL Adobe Experience Platform]
+モデルオーサリングSDKを使用すると、Data Science Workspaceで使用できるカスタムの機械学習レシピと機能パイプラインを開発でき、PySparkとSpark (Scala)で実装可能なテンプレートを提供します。 [!DNL Adobe Experience Platform]
 
 このドキュメントは、モデルオーサリングSDK内の様々なクラスに関する情報を提供します。
 
@@ -93,102 +93,101 @@ class MyDataLoader(DataLoader):
     Implementation of DataLoader which loads a DataFrame and prepares data
     """
 
-    def load(self, configProperties, spark):
-        """
-        Load and return dataset
+    def load_dataset(config_properties, spark, task_id):
 
-        :param configProperties:    Configuration properties
-        :param spark:               Spark session
-        :return:                    DataFrame
-        """
-
-        # preliminary checks
-        if configProperties is None :
-            raise ValueError("configProperties parameter is null")
-        if spark is None:
-            raise ValueError("spark parameter is null")
+        PLATFORM_SDK_PQS_PACKAGE = "com.adobe.platform.query"
+        PLATFORM_SDK_PQS_INTERACTIVE = "interactive"
 
         # prepare variables
-        dataset_id = str(
-            configProperties.get("datasetId"))
-        service_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
-        user_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
-        org_id = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
-        api_key = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
+        service_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
+        user_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
+        org_id = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
+        api_key = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
+
+        dataset_id = str(config_properties.get(task_id))
 
         # validate variables
-        for arg in ['dataset_id', 'service_token', 'user_token', 'org_id', 'api_key']:
+        for arg in ['service_token', 'user_token', 'org_id', 'dataset_id', 'api_key']:
             if eval(arg) == 'None':
                 raise ValueError("%s is empty" % arg)
 
         # load dataset through Spark session
-        pd = spark.read.format("com.adobe.platform.dataset") \
-            .option('serviceToken', service_token) \
-            .option('userToken', user_token) \
-            .option('orgId', org_id) \
-            .option('serviceApiKey', api_key) \
-            .load(dataset_id)
+
+        query_options = get_query_options(spark.sparkContext)
+
+        pd = spark.read.format(PLATFORM_SDK_PQS_PACKAGE) \
+            .option(query_options.userToken(), user_token) \
+            .option(query_options.serviceToken(), service_token) \
+            .option(query_options.imsOrg(), org_id) \
+            .option(query_options.apiKey(), api_key) \
+            .option(query_options.mode(), PLATFORM_SDK_PQS_INTERACTIVE) \
+            .option(query_options.datasetId(), dataset_id) \
+            .load()
+        pd.show()
 
         # return as DataFrame
         return pd
 ```
 
-**Spark**
+**Spark (Scala)**
 
 ```scala
 // Spark
 
+package com.adobe.platform.ml
+
+import java.time.LocalDateTime
+
 import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.DataLoader
+import com.adobe.platform.query.QSOption
+import org.apache.spark.ml.feature.StringIndexer
+import org.apache.spark.sql.expressions.Window
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql.types.{StructType, TimestampType}
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.Column
 
 /**
  * Implementation of DataLoader which loads a DataFrame and prepares data
  */
 class MyDataLoader extends DataLoader {
 
+    final val PLATFORM_SDK_PQS_PACKAGE: String = "com.adobe.platform.query"
+    final val PLATFORM_SDK_PQS_INTERACTIVE: String = "interactive"
+    final val PLATFORM_SDK_PQS_BATCH: String = "batch"
+
     /**
-     * @param configProperties  - Configuration properties
-     * @param sparkSession      - Spark session
-     * @return                  - DataFrame
-     */
-    override def load(configProperties: ConfigProperties, sparkSession: SparkSession): DataFrame = {
+    *
+    * @param configProperties - Configuration Properties map
+    * @param sparkSession     - SparkSession
+    * @return                 - DataFrame which is loaded for training
+    */
 
-        // preliminary checks
-        require(configProperties != null)
-        require(sparkSession != null)
 
-        // prepare variables
-        val dataSetId: String = configProperties
-            .get("datasetId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+  def load_dataset(configProperties: ConfigProperties, sparkSession: SparkSession, taskId: String): DataFrame = {
 
-        // validate variables
-        List(dataSetId, serviceToken, userToken, orgId, apiKey).foreach(
-            value => required(value != "")
-        )
+    require(configProperties != null)
+    require(sparkSession != null)
 
-        // load dataset through Spark session
-        var df = sparkSession.read.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .load(dataSetId)
-        
-        // return as DataFrame
-        df
+    // Read the configs
+    val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
+    val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
+    val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
+    val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+
+    val dataSetId: String = configProperties.get(taskId).getOrElse("")
+
+    // Load the dataset
+    var df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
+      .option(QSOption.userToken, userToken)
+      .option(QSOption.serviceToken, serviceToken)
+      .option(QSOption.imsOrg, orgId)
+      .option(QSOption.apiKey, apiKey)
+      .option(QSOption.mode, PLATFORM_SDK_PQS_INTERACTIVE)
+      .option(QSOption.datasetId, dataSetId)
+      .load()
+    df.show()
+    df
     }
 }
 ```
@@ -225,7 +224,7 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
 次の表に、Spark Data Saverクラスの抽象メソッドを示します。
 
@@ -269,6 +268,8 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
 
 from sdk.data_saver import DataSaver
 from pyspark.sql.types import StringType, TimestampType
+from pyspark.sql.functions import col, lit, struct
+from .helper import *
 
 
 class MyDataSaver(DataSaver):
@@ -276,66 +277,66 @@ class MyDataSaver(DataSaver):
     Implementation of DataSaver which stores a DataFrame to a Platform dataset
     """
 
-    def save(self, configProperties, prediction):
-        """
-        Store DataFrame to a Platform dataset
-
-        :param configProperties:    Configuration properties
-        :param prediction:          DataFrame to be stored to a Platform dataset
-        """
+    def save(self, config_properties, prediction):
 
         # Spark context
         sparkContext = prediction._sc
 
         # preliminary checks
-        if configProperties is None:
-            raise ValueError("configProperties parameter is null")
+        if config_properties is None:
+            raise ValueError("config_properties parameter is null")
         if prediction is None:
             raise ValueError("prediction parameter is null")
         if sparkContext is None:
             raise ValueError("sparkContext parameter is null")
+        
+        PLATFORM_SDK_PQS_PACKAGE = "com.adobe.platform.query"
 
         # prepare variables
+        scored_dataset_id = str(config_properties.get("scoringResultsDataSetId"))
+        tenant_id = str(config_properties.get("tenant_id"))
         timestamp = "2019-01-01 00:00:00"
-        output_dataset_id = str(
-            configProperties.get("datasetId"))
-        tenant_id = str(
-            configProperties.get("tenantId"))
-        service_token = str(
-            sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
-        user_token = str(
-            sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
-        org_id = str(
-            sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
-        api_key = str(
-            sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
+
+        service_token = str(sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
+        user_token = str(sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
+        org_id = str(sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
+        api_key = str(sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
 
         # validate variables
-        for arg in ['output_dataset_id', 'tenant_id', 'service_token', 'user_token', 'org_id', 'api_key']:
+       for arg in ['service_token', 'user_token', 'org_id', 'scored_dataset_id', 'api_key', 'tenant_id']:
             if eval(arg) == 'None':
                 raise ValueError("%s is empty" % arg)
+        
+        scored_df = prediction.withColumn("date", col("date").cast(StringType()))
+        scored_df = scored_df.withColumn(tenant_id, struct(col("date"), col("store"), col("prediction")))
+        scored_df = scored_df.withColumn("timestamp", lit(timestamp).cast(TimestampType()))
+        scored_df = scored_df.withColumn("_id", lit("empty"))
+        scored_df = scored_df.withColumn("eventType", lit("empty")
 
         # store data into dataset
-        prediction.write.format("com.adobe.platform.dataset") \
-            .option('orgId', org_id) \
-            .option('serviceToken', service_token) \
-            .option('userToken', user_token) \
-            .option('serviceApiKey', api_key) \
-            .save(output_dataset_id)
+
+        query_options = get_query_options(sparkContext)
+
+        scored_df.select(tenant_id, "_id", "eventType", "timestamp").write.format(PLATFORM_SDK_PQS_PACKAGE) \
+            .option(query_options.userToken(), user_token) \
+            .option(query_options.serviceToken(), service_token) \
+            .option(query_options.imsOrg(), org_id) \
+            .option(query_options.apiKey(), api_key) \
+            .option(query_options.datasetId(), scored_dataset_id) \
+            .save()
 ```
 
-
-
-
-**Spark**
+**Spark (Scala)**
 
 ```scala
 // Spark
 
-import com.adobe.platform.dataset.DataSetOptions
+package com.adobe.platform.ml
+
 import com.adobe.platform.ml.config.ConfigProperties
 import com.adobe.platform.ml.impl.Constants
 import com.adobe.platform.ml.sdk.DataSaver
+import com.adobe.platform.query.QSOption
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.TimestampType
@@ -343,51 +344,50 @@ import org.apache.spark.sql.types.TimestampType
 /**
  * Implementation of DataSaver which stores a DataFrame to a Platform dataset
  */
+
 class ScoringDataSaver extends DataSaver {
 
-    /**
-     * @param configProperties  - Configuration properties
-     * @param dataFrame         - DataFrame to be stored to a Platform dataset
-     */
-    override def save(configProperties: ConfigProperties, dataFrame: DataFrame): Unit =  {
+  final val PLATFORM_SDK_PQS_PACKAGE: String = "com.adobe.platform.query"
+  final val PLATFORM_SDK_PQS_BATCH: String = "batch"
 
-        // Spark session
-        val sparkSession = dataFrame.sparkSession
-        import sparkSession.implicits._
+  /**
+    * Method that saves the scoring data into a dataframe
+    * @param configProperties  - Configuration Properties map
+    * @param dataFrame         - Dataframe with the scoring results
+    */
+    
+  override def save(configProperties: ConfigProperties, dataFrame: DataFrame): Unit =  {
 
-        // preliminary checks
-        require(configProperties != null)
-        require(dataFrame != null)
+    require(configProperties != null)
+    require(dataFrame != null)
 
-        // prepare variables
-        val predictionColumn = configProperties.get(Constants.PREDICTION_COL)
-            .getOrElse(Constants.DEFAULT_PREDICTION)
-        val timestamp:String = "2019-01-01 00:00:00"
-        val output_dataset_id: String = configProperties
-            .get("datasetId").getOrElse("")
-        val tenant_id:String = configProperties
-            .get("tenantId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+    val predictionColumn = configProperties.get(Constants.PREDICTION_COL).getOrElse(Constants.DEFAULT_PREDICTION)
+    val sparkSession = dataFrame.sparkSession
 
-        // validate variables
-        List(output_dataset_id, tenant_id, serviceToken, userToken, orgId, apiKey).foreach(
-            value => require(value != "")
-        )
+    val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
+    val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
+    val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
+    val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+    val tenantId:String = configProperties.get("tenantId").getOrElse("")
+    val timestamp:String = "2019-01-01 00:00:00"
 
-        // store data into dataset
-        dataFrame.write.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .save(output_dataset_id)
+    val scoringResultsDataSetId: String = configProperties.get("scoringResultsDataSetId").getOrElse("")
+    import sparkSession.implicits._
+
+    var df = dataFrame.withColumn("date", $"date".cast("String"))
+
+    var scored_df  = df.withColumn(tenantId, struct(df("date"), df("store"), df(predictionColumn)))
+    scored_df = scored_df.withColumn("timestamp", lit(timestamp).cast(TimestampType))
+    scored_df = scored_df.withColumn("_id", lit("empty"))
+    scored_df = scored_df.withColumn("eventType", lit("empty"))
+
+    scored_df.select(tenantId, "_id", "eventType", "timestamp").write.format(PLATFORM_SDK_PQS_PACKAGE)
+      .option(QSOption.userToken, userToken)
+      .option(QSOption.serviceToken, serviceToken)
+      .option(QSOption.imsOrg, orgId)
+      .option(QSOption.apiKey, apiKey)
+      .option(QSOption.datasetId, scoringResultsDataSetId)
+      .save()
     }
 }
 ```
@@ -426,7 +426,7 @@ DatasetTransformerクラスは、データセットの構造を変更および�
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
 次の表に、Sparkデータセットトランスフォームクラスの抽象メソッドを示します。
 
@@ -497,7 +497,7 @@ FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズム�
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
 次の表に、Spark FeaturePipelineFactoryのクラスメソッドを示します。
 
@@ -606,7 +606,7 @@ PipelineFactoryクラスには、モデルトレーニングとスコアリン�
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
 次の表に、Spark PipelineFactoryのクラスメソッドを示します。
 
@@ -690,7 +690,7 @@ MLEvaluatorクラスは、評価指標を定義し、トレーニングおよび
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
 次の表に、Spark MLEvaluatorのクラスメソッドを示します。
 
