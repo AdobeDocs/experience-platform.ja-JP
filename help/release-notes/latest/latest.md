@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
+source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '429'
 ht-degree: 6%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 6%
 Adobe Experience Platformの既存の機能の更新：
 
 - [Data Science Workspace](#dsw)
+- [セグメント](#segmentation)
 - [ソース](#sources)
 
 ## Data Science Workspace {#dsw}
@@ -35,6 +36,20 @@ Data Science Workspaceは、リアルタイム機械学習を通じて、より�
 | JupterLabランチャーリアルタイムMLスターター | JupyterLabランチャーに、Real-time Machine Learning (Alpha)用のPythonノートブックスターターが含まれるようになりました。 |
 
 リアルタイム機械学習のアルファについて詳しくは、 [リアルタイム機械学習の概要を参照してください](../../data-science-workspace/real-time-machine-learning/home.md)。
+
+## セグメント {#segmentation}
+
+Adobe Experience Platform Segmentation Serviceは、セグメントを作成し、リアルタイムの顧客プロファイルデータからオーディエンスを生成できるユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントはプラットフォーム上で一元的に設定および管理され、アドビの任意のアプリケーションから容易にアクセスできます。
+
+Segmentation Serviceは、顧客ベース内のマーケティング可能な人々のグループを区別する基準を定義することで、特定のプロファイルのサブセットを定義します。 セグメントは、記録データ（人口統計情報など）や、ブランドに対する顧客のインタラクションを表す時系列イベントに基づくことができます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 日付フィールド | 日付関数の「記念日」機能が追加され、ユーザーは年なしで日付を評価できます。 |
+
+セグメント化について詳しくは、 [セグメント化の概要を参照してください。](../../segmentation/home.md)
 
 ## ソース {#sources}
 
