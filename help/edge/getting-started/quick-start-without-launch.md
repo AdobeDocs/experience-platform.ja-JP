@@ -4,9 +4,9 @@ seo-title: 'Adobe Experience Platform Web SDKのクイック開始 '
 description: Experience Platform Web SDKを使用してデータを収集するクイック開始ガイド
 seo-description: Experience Platform Web SDKを使用してデータを収集するクイック開始ガイド
 translation-type: tm+mt
-source-git-commit: 7c5d4306f9964553cf48a208166fce265dcdd94d
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '515'
 ht-degree: 14%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 # ようこそ
 
-このガイドでは、Adobe Experience Platform Web SDKを設定する様々な方法の手順を説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動したい場合は、CSMに連絡してください。
+このガイドでは、Adobe Experience Platform Web SDKを設定する様々な方法の手順を説明します。 この機能を使用するには、許可リストをオンにする必要があります。 待機中のリストに移動したい場合は、CSMに連絡してください。
 
 - [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。CNAMEを使用しない開発環境でのテストは可能ですが、実稼働環境に移行する前に必要です
 - Adobe Experience Platform Data Platformの権利を付与されます。  プラットフォームを購入していない場合は、Experience Platform Data Services Foundationをご利用いただき、SDKでの利用を制限し、無償で提供します。
@@ -26,7 +26,7 @@ Adobe Launchの [エッジ設定ツールを使用して設定IDを作成でき�
 
 >[!NOTE]
 >
->この機能を使用するには、組織がホワイトリストに登録されている必要があります。 最終的なホワイトリスト登録のために、CSMにリストに登録するようにお問い合わせください。
+>組織で、この機能のリストを許可している必要があります。 許可リストを有効にするには、CSMに問い合わせてください。
 
 ## スキーマの準備
 
