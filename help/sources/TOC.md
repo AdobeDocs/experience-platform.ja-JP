@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
 translation-type: tm+mt
-source-git-commit: bfbaaf0367b601c4ad521f42cd5ff6bdd25a8274
+source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -27,13 +27,13 @@ ht-degree: 1%
       - [Google AdWordsコネクタ](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
       - [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
+      - [Apache HDFSコネクタ](connectors/cloud-storage/hdfs.md)
       - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
       - [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
       - [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
       - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
-      - [HDFSコネクタ](connectors/cloud-storage/hdfs.md)
    - CRM {#crm}
       - [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforceコネクタ](connectors/crm/salesforce.md)
@@ -47,7 +47,7 @@ ht-degree: 1%
       - [Azure Data Explorerコネクタ](connectors/databases/data-explorer.md)
       - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
       - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
-      - [CouchBaseコネクタ](connectors/databases/couchbase.md)
+      - [Couchbaseコネクタ](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlumコネクタ](connectors/databases/greenplum.md)
       - [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
@@ -71,12 +71,12 @@ ht-degree: 1%
       - Cloud storage {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3コネクタ](tutorials/api/create/cloud-storage/s3.md)
+         - [Apache HDFSコネクタ](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure BLOBコネクタ](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data LakeストレージGen2コネクタ](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azureイベントハブコネクタ](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure Fileストレージコネクタ](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Google Cloudストレージコネクタ](tutorials/api/create/cloud-storage/google.md)
-         - [HDFSコネクタ](tutorials/api/create/cloud-storage/hdfs.md)
          - [SFTPコネクタ](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [HubSpotコネクタ](tutorials/api/create/crm/hubspot.md)
@@ -92,7 +92,7 @@ ht-degree: 1%
          - [Azure Data Explorerコネクタ](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analyticsコネクタ](tutorials/api/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/api/create/databases/ats.md)
-         - [CouchBaseコネクタ](tutorials/api/create/databases/couchbase.md)
+         - [Couchbaseコネクタ](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
          - [GreenPlumコネクタ](tutorials/api/create/databases/greenplum.md)
          - [HP Verticaコネクタ](tutorials/api/create/databases/hp-vertica.md)
@@ -138,7 +138,8 @@ ht-degree: 1%
       - 広告 {#create}
          - [Google AdWordsコネクタ](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Amazon Kinesisコネクタ](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Apache HDFSコネクタ](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data LakeストレージGen2コネクタ](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure BlobおよびAmazon S3コネクタ](tutorials/ui/create/cloud-storage/blob-s3.md)
          - [Azureイベントハブコネクタ](tutorials/ui/create/cloud-storage/eventhub.md)
@@ -158,6 +159,7 @@ ht-degree: 1%
          - [Azure Data Explorerコネクタ](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analyticsコネクタ](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/ui/create/databases/ats.md)
+         - [Couchbaseコネクタ](tutorials/ui/create/databases/couchbase.md)
          - [Google Bigクエリコネクタ](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlumコネクタ](tutorials/ui/create/databases/greenplum.md)
          - [HP Verticaコネクタ](tutorials/ui/create/databases/hp-vertica.md)
