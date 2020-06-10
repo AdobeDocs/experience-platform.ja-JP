@@ -4,9 +4,9 @@ seo-title: エクスペリエンスプラットフォームWeb SDKのエッジ�
 description: 'Experience Platform Edge Networkを設定する方法を説明します。 '
 seo-description: 'Experience Platform Edge Networkを設定する方法を説明します。 '
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '886'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform Web SDKの設定は、2か所に分かれています�
 
 >[!NOTE]
 >
->エッジ設定ツールは、ホワイトリスト登録を受けたお客様は、Launchをタグマネージャーとして使用しているかどうかに関係なく使用できます。 また、ユーザーは起動時に開発権限が必要です。 詳しくは、起動ドキュメントの「 [ユーザー権限](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/user-permissions.html) 」の記事を参照してください。
+>エッジ設定ツールは、許可リストで、ユーザーがタグマネージャーとして「起動」を使用しているかどうかに関係なく使用できます。 また、ユーザーは起動時に開発権限が必要です。 詳しくは、起動ドキュメントの「 [ユーザー権限](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/user-permissions.html) 」の記事を参照してください。
 
 エッジ設定を作成するには、画面の右上領域にある「 **[UICONTROL」「新しいエッジ設定]** 」(New Edge Configuration)の順にクリックします。 名前と説明を指定すると、各環境のデフォルト設定が求められます。
 
