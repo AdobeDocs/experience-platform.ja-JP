@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Experience Platformリリースノート（2020年5月14日）
+description: Experience Platformリリースノート（2020年6月11日）
 doc-type: release notes
-last-update: May 13, 2020
+last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: db3acec75c24a0cb75d1d88e7aa2171e794abc4f
+source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '306'
 ht-degree: 6%
 
 ---
@@ -15,113 +15,26 @@ ht-degree: 6%
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 5 月 13 日**
+**リリース日：2020 年 6 月 10 日**
 
 Adobe Experience Platformの既存の機能の更新：
 
-- [ユーザーインターフェイスの更新](#ux)
 - [Data Science Workspace](#dsw)
-- [宛先](#destinations)
-- [エクスペリエンスプラットフォームWeb SDKおよびエクスペリエンスプラットフォームエッジネットワーク](#edge)
-- [リアルタイム顧客プロファイル](#profile)
 - [ソース](#sources)
-
-## ユーザーインターフェイスの更新 {#ux}
-
-Adobe Experience Platformは、エクスペリエンスを向上させ、他のExperience Cloudアプリケーションと統合するために、ドメインとヘッダーバーのアップデートをリリースします。
-
-- 組織間または別のアプリケーション間の切り替えが容易
-- ヘルプメニューの特集記事やコンテキストに関するドキュメントなど、ユーザーヘルプが改善されました。
-- エクスペリエンスプラットフォームとファイルサポートチケットに関するフィードバックを提供する機能
-
-新しいエクスペリエンスの展開は段階的です。 エクスペリエンスは、https://experience.adobe.com/platformで表示でき [ます](https://experience.adobe.com/platform)。
 
 ## Data Science Workspace {#dsw}
 
-Data Science Workspaceは、機械学習と人工知能を使用して、データから洞察を引き出します。 Data Science WorkspaceはAdobe Experience Platformに統合されており、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。 Data Science Workspaceがこれを実現する方法の1つは、JupyterLabを使用することです。 JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project JupyterのWebベースのユーザーインターフェイスで</a> 、Adobe Experience Platformと緊密に統合されています。 これは、データ科学者がJupterのノート、コード、データを扱うための対話型の開発環境を提供します。
+Data Science Workspaceは、機械学習と人工知能を使用して、データから洞察を引き出します。 Data Science WorkspaceはAdobe Experience Platformに統合されており、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。
 
-**新機能**
+Data Science Workspaceは、リアルタイム機械学習を通じて、より良いエクスペリエンスと予測を可能にする新しい方法に取り組んでいます。 Real-time Machine Learningは、APIエンドポイントを介して、カスタムまたはインポートしたプレトレーニング済みの機械学習モデルを、業界標準の相互運用可能なモデル形式で作成、テスト、導入する機能を提供します。
 
-| 機能 | 説明 |
-|--- | ---|
-| JupterLabランチャー | JupyterLabランチャーに、Spark 2.4ノートブック用のスターターが含まれるようになりました。 Spark 2.3ノートブックスターが非推奨としてマークされ、以降のリリースで削除されるように設定されました。 |
-| Spark 2.4 | 新しいScala (Spark)とPySparkレシピでSpark 2.4が使用されるようになりました。 |
-| カーネル | Scala (Spark)ノートブックは、Scalaカーネルを使用して作成されるようになりました。 PySparkノートブックは、Pythonカーネルを使って作成されるようになりました。 SparkとPySparkのカーネルは非推奨となり、以降のリリースで削除されるように設定されます。 |
-| レシピ | 新しいPySparkとSparkレシピは、PythonやRレシピと同じようなDockerワークフローに従うようになりました。 |
-
-Spark 2.4を使用するためのノートブックおよびレシピの移行の詳細については、『 [ノートブック移行ガイド](../../data-science-workspace/recipe-notebook-migration.md)』を参照してください。 Data Science Workspaceの一般情報について詳しくは、 [概要ドキュメントを参照してください](../../data-science-workspace/home.md)。
-
-## 宛先 {#destinations}
-
-ア [ドビのリアルタイム顧客データプラットフォームでは](../../rtcdp/overview.md)、宛先は、目的のプラットフォームとの統合が事前に構築されており、これらのパートナーに対してシームレスにデータをアクティブ化します。
-
-**Facebook**
-
-Adobe Real-time CDPは、Facebookへのデータアクティベーションをサポートするようになり、ハッシュされた電子メールに基づくオーディエンスのターゲット設定、パーソナライゼーション、および抑制のために、Facebookキャンペーンのプロファイルをアクティブ化できます。
-
-新しい機能について詳しくは、 [Facebookの表示先](/help/rtcdp/destinations/facebook-destination.md) ページを参照してください。
-
-<br> 
-
-**Amazon KinesisとAzureイベントハブのストリーミングクラウドストレージ先**
-
-Adobe Real-time CDPは、クラウドストレージのストリーミング先へのデータアクティベーションをサポートするようになり、オーディエンスのデータとイベントをJSON形式でこれらの宛先にエクスポートできます。 その後、目的のイベントの上にビジネスロジックを記述できます。 詳しくは、以下を参照してください。
-
->[!NOTE]
->
->Adobe Real-time CDP [!DNL Amazon Kinesis][!DNL Azure Event Hubs] の宛先と宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
-
-| ドキュメント | 説明 |
-|--- | ---|
-| [（ベータ版）Amazon Kinesisの宛先](/help/rtcdp/destinations/amazon-kinesis-destination.md) | この記事では、Adobe Experience Platformからデータをストリーミングするために、 [!DNL Amazon Kinesis] ストレージへのリアルタイムのアウトバウンド接続を作成する方法を説明します。 |
-| [（ベータ版）Azureイベントハブの宛先](/help/rtcdp/destinations/azure-event-hubs-destination.md) | この記事では、Adobe Experience Platformからデータをストリーミングするために、 [!DNL Azure Event Hubs] ストレージへのリアルタイムのアウトバウンド接続を作成する方法を説明します。 |
-| [APIチュートリアル — ストリーミング先への接続とデータのアクティブ化](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | このチュートリアルでは、API呼び出しを使用してAdobe Experience Platformデータに接続し、ストリーミングクラウドストレージ先(Amazon KinesisまたはAzureイベントハブ)への接続を作成し、新しく作成した宛先にデータフローを作成し、データをアクティブ化する方法を説明します。 |
-
-詳しくは、 [宛先の概要を参照してください](/help/rtcdp/destinations/destinations-overview.md)。
-
-## エクスペリエンスプラットフォームWeb SDKおよびエクスペリエンスプラットフォームエッジネットワーク {#edge}
-
-Experience Platform Web SDKおよびExperience Platform Edge Networkを使用すると、エンドユーザーはAdobe Experience Platformおよびその他のアドビソリューションにリアルタイムでデータを送信でき、エンドユーザーのデバイスやブラウザーに対応できます。 最新の使用例のリストは、 [公開ロードマップ](https://github.com/adobe/alloy/projects/5) （頻繁に更新される）で確認できます。
-
-**新機能**
+リアルタイム機械学習はアルファベット順で、現在開発中です。
 
 | 機能 | 説明 |
 |--- | ---|
-| ECIDのサポート | SDKは、追加のライブラリやインストールする情報なしで、ECIDをサポートしていて、すぐに使用できます |
-| 設定UI | 起動の新しいエッジ設定UIを使用して設定ID設定を管理します。にアクセスするには、ホワイトリストに登録する必要があります |
-| Adobe Experience Platform Web SDK Mixin | サポートされるすべてのフィールドを含む、エクスペリエンスプラットフォームWeb SDKで使用するミックスインです。 |
-| コースの同意管理 | エクスペリエンスプラットフォームWeb SDKのオプトインとオプトアウトを会社が制御できる |
-| 新しいExperience Cloud Debugger Extensionでのクライアント側のデバッグのサポート | Experience Platform Web SDKからのリクエストと、システム内でのデータの流れを確認するエッジトレースを確認します。 |
-| Adobe Analytics | エッジ設定を介してAnalyticsレポートスイートにデータを送信します。 XDMはコンテキストデータにフラット化され、マルチスイートタギングをサポート |
-| Adobe Target | アドビターゲットのサポート。 VEC、フォームベースのコンポーザー、A/B、XT、自動パーソナライゼーション、MVTを含む |
-| Adobeオーディエンスマネージャーのサポート | オーディエンスマネージャーIDの同期、URLの宛先およびCookieの宛先のサポート |
-| IDの同期 | より明確 `setCustomersIds` にす `syncIdentity` るために、に名前を変更 |
-| XDM Object Builder | Launch拡張では、XDMオブジェクトをデータ要素として構築できるようになりました。 |
+| JupterLabランチャーリアルタイムMLスターター | JupyterLabランチャーに、Real-time Machine Learning (Alpha)用のPythonノートブックスターターが含まれるようになりました。 |
 
-プラットフォームWeb SDKおよびエッジネットワークについて詳しくは、ドキュメントを参照して [ください](../../edge/home.md)。
-
-## リアルタイム顧客プロファイル {#profile}
-
-Adobe Experience Platformを使用すると、顧客がブランドとどこで、いつやり取りしても、顧客に対して、調整され、一貫性のある、関連性のあるエクスペリエンスを提供できます。 リアルタイム顧客プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせた各顧客の全体的な表示を確認できます。 プロファイルを使用すると、個別の顧客データを統合ビューに統合し、顧客のやり取りごとに実用的なタイムスタンプ付きの説明を提供できます。
-
-**新機能**
-
-| 機能 | 説明 |
-| -----------| ---------- |
-| 新しいプロファイルエクスポート指標 | プロファイルのエクスポートジョブに指標を追加し、エクスポートしたプロファイルの合計数および各名前空間のプロファイル数を示す。 |
-| 新しい観察性インサイト指標 | 観察性インサイトAPIに、プロファイルへのストリーミング取り込みに関する次の指標が追加されました。 受信要求率、取り込み成功率、取り込まれたレコードサイズ。 |
-| 一括GETエンドポイント | 1回のAPI呼び出しで複数の結果を取得できるように、リアルタイム顧客プロファイルAPIに一括GETエンドポイントを追加しました。 セグメント定義、セグメントジョブ、および結合ポリシーに対して、最大100個のIDをGETで一括処理できるようになりました。 |
-| ID別のプロファイルの参照 | プラットフォームUIで、プロファイルを参照するためにID名前空間を選択し、ID値を指定できるようになりました。 |
-
-**バグの修正**
-
-- None.
-
-**既知の問題**
-
-- None.
-
-リアルタイム顧客プロファイルの詳細については、チュートリアル、プロファイルデータを操作するためのベストプラクティスなど、 [リアルタイム顧客プロファイルの概要を参照してください](../../profile/home.md)。
+リアルタイム機械学習のアルファについて詳しくは、 [リアルタイム機械学習の概要を参照してください](../../data-science-workspace/real-time-machine-learning/home.md)。
 
 ## ソース {#sources}
 
@@ -133,12 +46,7 @@ Adobe Experience Platformでは、外部ソースからデータを取り込み�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| クラウドストレージシステム向けの追加のAPIとUIのサポート | Azure Fileストレージ用の新しいソースコネクタ。 |
-| データベース用の追加のAPIとUIのサポート | Azure Data Explorer、IBM DB2、およびOracle DB用の新しいソースコネクタ。 |
-| Adobe PlatformとExperience Platformのデータ共有 | オーディエンスマネージャーコネクタのプロビジョニングプロセスが更新されました。 リアルタイム顧客プロファイルのオーディエンスマネージャデータセットが、デフォルトで無効になりました。 プロファイルにプロモートするデータセットは、手動で選択できます。 新しいデフォルト設定は遡及されず、新しいオーディエンスマネージャーコネクタのプロビジョニングにのみ影響します。 詳細については、『 [Datasets user guide](../../catalog/datasets/user-guide.md)』を参照してください。 |
-
-**既知の問題**
-
-- None.
+| クラウドストレージシステム向けの追加のAPIとUIのサポート | Apache HDFS用の新しいソースコネクタ |
+| データベース用の追加のAPIとUIのサポート | Couchbase用の新しいソースコネクタ。 |
 
 ソースについて詳しくは、 [ソースの概要を参照してください](../../sources/home.md)。
