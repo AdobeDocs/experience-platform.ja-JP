@@ -4,10 +4,10 @@ seo-title: Google 広告の宛先
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 seo-description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 34%
+source-wordcount: '544'
+ht-degree: 33%
 
 ---
 
@@ -34,15 +34,15 @@ Google広告の表示先に固有の次の詳細に注意してください。
 
 ### 既存のGoogle広告アカウント
 
-Googleは、サードパーティベンダーとの新しいGoogle広告統合を一時停止しました。 次のセクションのホワイトリストの手順を実行し、Adobe Real-time CDPでGoogle Adsの宛先を作成するには、Google Adsとの既存の統合が必要です。
+Googleは、サードパーティベンダーとの新しいGoogle広告統合を一時停止しました。 次の節の許可リスト手順を実行し、Adobe Real-time CDPでGoogle Adsの宛先を作成するには、Google Adsとの既存の統合が必要です。
 
-### ホワイトリスト
+### リストを許可
 
 >[!NOTE]
 >
->ホワイトリストは、Adobe Real-time CDPで最初のGoogle広告の宛先を設定する前に必須です。 リンク先を作成する前に、Googleが以下に説明するホワイトリスト登録プロセスを完了していることを確認してください。
+>許可リストは、Adobe Real-time CDPで最初のGoogle広告の宛先を設定する前に必須です。 宛先を作成する前に、以下に説明するリストの許可プロセスがGoogleによって完了していることを確認してください。
 
-Adobe Real-time CDPでGoogle Adsの配信先を作成する前に、Googleに連絡して、Adobeをデータプロバイダーとしてホワイトリストに登録するように依頼し、ホワイトリストに登録するアカウントを取得する必要があります。 Google に連絡し、次の情報を提供します。
+Adobe Real-time CDPでGoogle Adsの配信先を作成する前に、Googleに問い合わせて、許可されているデータプロバイダーのリストを有効にし、アカウントを許可リストに追加する必要があります。 Google に連絡し、次の情報を提供します。
 
 * **アカウント ID**：これは、アドビの Google アカウント ID です。このIDを取得するには、アドビカスタマーケアまたはアドビの担当者にお問い合わせください。
 * **顧客 ID**：これは、アドビの Google 顧客アカウント ID です。このIDを取得するには、アドビカスタマーケアまたはアドビの担当者にお問い合わせください。
@@ -55,6 +55,7 @@ Adobe Real-time CDPでGoogle Adsの配信先を作成する前に、Googleに連
    ![Google広告のリンク先の接続](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
+
    ![Google広告の基本情報](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **[!UICONTROL 名前]**:この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
