@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマレジストリAPIを使用したスキーマの作成
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -23,7 +23,7 @@ ht-degree: 1%
 このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 * [Experience Data Model(XDM)System](../home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   * [スキーマ構成の基本](../schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+   * [スキーマ構成の基本](../schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
 * [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
@@ -1013,7 +1013,7 @@ curl -X POST \
 
 ## リアルタイム顧客プロファイルでのスキーマの使用を有効にする
 
-「和集合」タグを `meta:immutableTags` 属性に追加することで、リアルタイム顧客プロファイルで使用するための忠誠度メンバースキーマを有効にできます。
+属性に「和集合」タグを追加すると、リアルタイム顧客プロファイルで使用できるように、 `meta:immutableTags` 忠誠度メンバースキーマを有効にできます。
 
 和集合表示の使用方法の詳細については、『スキーマレジストリ開発者ガイド [』の](../api/unions.md) 和集合に関する節を参照してください。
 
@@ -1778,7 +1778,7 @@ curl -X GET \
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1853,7 +1853,7 @@ curl -X GET \
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1905,7 +1905,7 @@ curl -X GET \
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1970,7 +1970,7 @@ curl -X GET \
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -2035,7 +2035,7 @@ curl -X GET \
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
