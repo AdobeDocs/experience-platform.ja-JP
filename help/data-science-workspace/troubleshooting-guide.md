@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Science Workspaceトラブルシューティングガイド
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Chromeブラウザーで、右上の「 **設定** 」を選択します(また�
 
 ![chrome advanced](./images/faq/toggle-off.png)
 
->[!NOTE] または、サードパーティcookieとホワイトリスト [*を無効にすることもできます。]ds.adobe.net
+>[!NOTE] または、サードパーティCookieを無効にして、 [*を追加します。]ds.adobe.netを許可リストに追加します。
 
 アドレスバーの「chrome://flags/」に移動します。 右側のドロップダウンメニューを使用して、「SameSite by default cookies」という名前のフラグを検索して無効に *し* ます。
 
@@ -64,7 +64,7 @@ Safariの環境設定ウィンドウで、「 **詳細」を選択します**。
 
 ## JupyterLabでファイルをアップロードまたは削除しようとすると「403 Forbidden」というメッセージが表示されるのはなぜですか。
 
-ブラウザがGhosteryやAdBlock Plusなどの広告ブロックソフトウェアで有効になっている場合、JupterLabが正常に動作するには、各広告ブロックソフトウェアでドメイン「\*.adobe.net」をホワイトリストに登録する必要があります。 これは、JupyterLab仮想マシンがエクスペリエンスプラットフォームドメインとは異なるドメインで実行されているためです。
+ブラウザがGhosteryやAdBlock Plusなどの広告ブロックソフトウェアで有効になっている場合、JupyterLabが正常に動作するには、各広告ブロックソフトウェアでドメイン「\*.adobe.net」を許可する必要があります。 これは、JupyterLab仮想マシンがエクスペリエンスプラットフォームドメインとは異なるドメインで実行されているためです。
 
 ## ジュピター・ノートブックの一部が乱れて見えるか、コードとして表示されないのはなぜですか。
 
