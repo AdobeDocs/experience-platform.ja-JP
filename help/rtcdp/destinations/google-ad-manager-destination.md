@@ -4,10 +4,10 @@ seo-title: Google Ad Manager の宛先
 description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 seo-description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 41%
+source-wordcount: '599'
+ht-degree: 40%
 
 ---
 
@@ -32,13 +32,13 @@ Google Ad Managerの表示先に固有の次の詳細に注意してください
 
 ## 前提条件
 
-### ホワイトリスト
+### リストを許可
 
 >[!NOTE]
 >
->ホワイトリストは、Adobe Real-time CDPでGoogle Ad Managerの最初の宛先を設定する前に必須です。 リンク先を作成する前に、Googleが以下に説明するホワイトリスト登録プロセスを完了していることを確認してください。
+>allowリストは、Adobe Real-time CDPで最初のGoogle Ad Manager宛先を設定する前に必須です。 宛先を作成する前に、以下に説明するリストの許可プロセスがGoogleによって完了していることを確認してください。
 
-Adobe Real-time CDPでGoogle Ad Managerの宛先を作成する前に、Googleに連絡して、Adobeをデータプロバイダーとしてホワイトリストに登録するように依頼し、ホワイトリストに登録するアカウントを取得する必要があります。 Google に連絡し、次の情報を提供します。
+Adobe Real-time CDPでGoogle Ad Managerの宛先を作成する前に、Googleに問い合わせて、許可されているデータプロバイダーのリストを有効にし、アカウントを許可リストに追加するようにする必要があります。 Google に連絡し、次の情報を提供します。
 
 * **アカウント ID**：これは、アドビの Google アカウント ID です。このIDを取得するには、アドビカスタマーケアまたはアドビの担当者にお問い合わせください。
 * **顧客 ID**：これは、アドビの Google 顧客アカウント ID です。このIDを取得するには、アドビカスタマーケアまたはアドビの担当者にお問い合わせください。
@@ -52,6 +52,7 @@ Adobe Real-time CDPでGoogle Ad Managerの宛先を作成する前に、Google�
    ![Google Ad Managerのリンク先への接続](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
+
    ![Google Ad Managerの基本情報](/help/rtcdp/destinations/assets/google-1-basic-information.png)
 * **[!UICONTROL 名前]**:この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
