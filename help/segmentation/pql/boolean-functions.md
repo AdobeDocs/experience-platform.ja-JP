@@ -3,24 +3,24 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: ブール関数
 topic: developer guide
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '226'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 
 # ブール関数
 
-Boolean関数は、プロファイルクエリ言語(PQL)の異なる要素に対してBooleanロジックを実行するために使用します。  その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+ブール関数は、プロファイルクエリ言語（PQL）の異なる要素にブール論理を実行するために使用されます。その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
-## AND
+## And
 
-この `and` 関数は、論理的な関数の作成に使用されます。
+`and` 関数は、論理積を作成するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {QUERY} and {QUERY}
@@ -28,17 +28,17 @@ Boolean関数は、プロファイルクエリ言語(PQL)の異なる要素に�
 
 **例**
 
-次のPQLクエリは、1985年のカナダと生年を母国とするすべての人々を返します。
+次の PQL クエリは、住んでいる国がカナダで、生まれた年が 1985 年のすべての人を返します。
 
 ```sql
 homeAddress.countryISO = "CA" and person.birthYear = 1985
 ```
 
-## または
+## Or
 
-この `or` 関数は、論理的な分離を作成するために使用されます。
+`or` 関数は、論理和を作成するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {QUERY} or {QUERY}
@@ -46,17 +46,17 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 **例**
 
-次のPQLクエリは、1985年のカナダまたは生年を母国とするすべての人々を返します。
+次の PQL クエリは、住んでいる国がカナダか、生まれた年が 1985 年のすべての人を返します。
 
 ```sql
 homeAddress.countryISO = "CA" or person.birthYear = 1985
 ```
 
-## NOT
+## Not
 
-論理否定 `not` の作成には、(または `!`)関数を使用します。
+`not`（または `!`）関数は、論理否定を作成するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 not ({QUERY})
@@ -65,17 +65,17 @@ not ({QUERY})
 
 **例**
 
-次のPQLクエリは、母国をカナダとして持っていないすべての人に返します。
+次の PQL クエリは、住んでいる国がカナダでないすべての人を返します。
 
 ```sql
 not (homeAddress.countryISO = "CA")
 ```
 
-##   
+## If
 
-この `if` 関数は、指定した条件が真かどうかに応じて式を解決するために使用されます。
+`if` 関数は、指定した条件が true かどうかに応じて式を解決するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
@@ -83,13 +83,13 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 
 | 引数 | 説明 |
 | --------- | ----------- |
-| `{TEST_EXPRESSION}` | テストするブール式です。 |
-| `{TRUE_EXPRESSION}` | がtrueの場合に値を使用する式 `{TEST_EXPRESSION}` 。 |
-| `{FALSE_EXPRESSION}` | 値がfalseの場合に値を使用する式 `{TEST_EXPRESSION}` です。 |
+| `{TEST_EXPRESSION}` | テストされているブール式。 |
+| `{TRUE_EXPRESSION}` | `{TEST_EXPRESSION}` が true の場合に値が使用される式。 |
+| `{FALSE_EXPRESSION}` | `{TEST_EXPRESSION}` が false の場合に値が使用される式。 |
 
 **例**
 
-次のPQLクエリは、国がカナダ、国がカナダでない場合 `1` に値をカナダ `2` として設定します。
+次の PQL クエリは、住んでいる国がカナダの場合は値を `1` に設定し、住んでいる国がカナダでない場合は `2` に設定します。
 
 ```sql
 if (homeAddress.countryISO = "CA", 1, 2)
@@ -97,4 +97,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## 次の手順
 
-ブール関数について学習したので、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
+ここで学習したブール関数は、PQL クエリ内で使用できます。その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
