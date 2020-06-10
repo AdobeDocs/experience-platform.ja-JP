@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Source Connectorsの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '763'
 ht-degree: 1%
 
 ---
@@ -47,11 +47,11 @@ Experience Platformを使用すると、Adobe Analytics、Adobe Platform Manager
 - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
 - [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
 - [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
+- [Apache HDFSコネクタ](connectors/cloud-storage/hdfs.md)
 - [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
 - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
 - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
 - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
-- [HDFSコネクタ](connectors/cloud-storage/hdfs.md)
 
 ### 顧客関係管理（CRM）
 
@@ -77,7 +77,7 @@ CRMシステムは、顧客との関係の構築に役立つデータを提供�
 - [Azure Data Explorerコネクタ](connectors/databases/data-explorer.md)
 - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
 - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
-- [CouchBaseコネクタ](connectors/databases/couchbase.md)
+- [Couchbaseコネクタ](connectors/databases/couchbase.md)
 - [Google BigQuery Connector](connectors/databases/bigquery.md)
 - [GreenPlumコネクタ](connectors/databases/greenplum.md)
 - [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
