@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Flow Service APIを使用してCouchBaseコネクタを作成する
+title: Flow Service APIを使用してCouchbaseコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 566db28997dce2c7e1181d140f12adc4250f5e0d
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 2%
@@ -12,14 +12,14 @@ ht-degree: 2%
 ---
 
 
-# Flow Service APIを使用してCouchBaseコネクタを作成する
+# Flow Service APIを使用してCouchbaseコネクタを作成する
 
 >[!NOTE]
->CouchBaseコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
+>Couchbaseコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
 
 フローサービスは、さまざまな異なるソースから顧客データを収集および一元化して、Adobe Experience Platformに組み込むために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して、CouchBaseをエクスペリエンスプラットフォームに接続する手順を順を追って説明します。
+このチュートリアルでは、Flow Service APIを使用してCouchbaseをエクスペリエンスプラットフォームに接続する手順を順を追って説明します。
 
 ## はじめに
 
@@ -28,14 +28,14 @@ ht-degree: 2%
 * [ソース](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むと同時に、プラットフォームサービスを使用して、入力データの構造、ラベル付け、拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してCouchBaseに正常に接続するために必要な追加情報については、以下の節で説明します。
+Flow Service APIを使用してCouchbaseに正常に接続するために知っておく必要がある追加情報については、以下の節に説明します。
 
 ### 必要な資格情報の収集
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | CouchBaseインスタンスへの接続に使用する接続文字列。 CouchBaseの接続文字列パターンはで `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`す。 接続文字列の取得について詳しくは、 [このCouchBaseドキュメントを参照してください](https://docs.couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)。 |
-| `connectionSpec.id` | 接続を作成するために必要な識別子。 CouchBaseの接続仕様IDは修正され `1fe283f6-9bec-11ea-bb37-0242ac130002`ました。 |
+| `connectionString` | Couchbaseインスタンスへの接続に使用する接続文字列です。 Couchbaseの接続文字列パターンはで `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`す。 接続文字列の取得の詳細については、 [このCouchbaseドキュメントを参照してください](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)。 |
+| `connectionSpec.id` | 接続を作成するために必要な識別子。 Couchbaseの接続仕様IDは修正され `1fe283f6-9bec-11ea-bb37-0242ac130002`ました。 |
 
 ### サンプルAPI呼び出しの読み取り
 
@@ -59,7 +59,7 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、CouchBaseアカウントごとに必要なコネクタは1つだけです。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、Couchbaseアカウントごとに1つのコネクタが必要です。
 
 **API形式**
 
@@ -69,7 +69,7 @@ POST /connections
 
 **リクエスト**
 
-次のリクエストは、ペイロードで提供されるプロパティによって設定された、新しいCouchBase接続を作成します。
+次の要求は、ペイロードで提供されるプロパティで設定された、新しいCouchbase接続を作成します。
 
 ```shell
 curl -X POST \
@@ -80,8 +80,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "CouchBase test connection",
-        "description": "A test connection for a CouchBase source",
+        "name": "Couchbase test connection",
+        "description": "A test connection for a Couchbase source",
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
@@ -97,8 +97,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | CouchBaseアカウントへの接続に使用する接続文字列。 接続文字列パターンは次のとおりです。 `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | CouchBase接続仕様ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `auth.params.connectionString` | Couchbaseアカウントへの接続に使用する接続文字列です。 接続文字列パターンは次のとおりです。 `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
+| `connectionSpec.id` | Couchbase接続仕様ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **応答**
 
@@ -113,4 +113,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うことで、Flow Service APIを使用してCouchBase接続を作成し、接続の一意のID値を取得しました。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うことで、Flow Service APIを使用してCouchbase接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
