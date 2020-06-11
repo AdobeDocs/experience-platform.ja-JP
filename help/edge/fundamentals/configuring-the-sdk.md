@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK の設定
 description: Experience Platform Web SDK の設定方法について説明します
 seo-description: Experience Platform Web SDK の設定方法について説明します
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 100%
@@ -21,7 +21,7 @@ SDK の設定は、`configure` コマンドを使用しておこないます。
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 ```
@@ -30,13 +30,13 @@ alloy("configure", {
 
 ## 一般オプション
 
-### `configId`
+### `edgeConfigId`
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
 | 文字列 | ○ | なし |
 
-割り当てられた設定 ID。SDK を適切なアカウントと設定にリンクします。1 つのページ内で複数のインスタンスを設定する場合は、インスタンスごとに異なる `configId` を設定する必要があります。
+割り当てられた設定 ID。SDK を適切なアカウントと設定にリンクします。1 つのページ内で複数のインスタンスを設定する場合は、インスタンスごとに異なる `edgeConfigId` を設定する必要があります。
 
 ### `context`
 
