@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'APIを使用したデータ使用ラベルの管理 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '610'
 ht-degree: 3%
 
 ---
@@ -14,13 +14,15 @@ ht-degree: 3%
 
 # APIを使用したデータ使用ラベルの管理
 
-このドキュメントでは、Catalog Service APIを使用して、データセットレベルおよびフィールドレベルでデータ使用量ラベルを管理する方法について手順を説明します。
+Dataset Service APIを使用すると、データセットの使用ラベルをプログラムで管理できます。 これは、Adobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理するCatalog Service APIとは別のものです。
+
+このドキュメントでは、Dataset Service APIを使用して、データセットレベルおよびフィールドレベルでデータ使用量ラベルを管理する方法について手順を説明します。
 
 ## はじめに
 
-このガイドを読む前に、 [カタログサービスの概要を読んで、サービスのより強力な概要を確認することをお勧めします](../../catalog/home.md) 。 また、カタログAPIを呼び出すために必要な資格情報を収集するには、カタログ開発者ガイドの [はじめに](../../catalog/api/getting-started.md) 「はじめに」の節に説明されている手順に従う必要があります。
+このガイドを読む前に、カタログ開発者ガイドの [はじめに節に説明されている手順に従って](../../catalog/api/getting-started.md) 、APIを呼び出すために必要な資格情報を収集し [!DNL Platform] ます。
 
-以下の節で説明するエンドポイントを呼び出すには、特定のデータセットに固有の `id` 値を持つ必要があります。 この値がない場合は、カタログオブジェクトの [リスト表示に関する開発者ガイドの節を参照して、既存のデータセットのIDを確認してください](../../catalog/api/list-objects.md) 。
+以下の節で説明するエンドポイントを呼び出すには、特定のデータセットに固有の `id` 値を持つ必要があります。 この値がない場合は、カタログオブジェクトの [一覧表示に関するガイドを参照して](../../catalog/api/list-objects.md) 、既存のデータセットのIDを確認してください。
 
 ## データセットのラベルを検索する {#lookup}
 
@@ -29,7 +31,7 @@ GETリクエストを作成して、既存のデータセットに適用され�
 **API形式**
 
 ```http
-GET /dataSets/{DATASET_ID}/labels
+GET /datasets/{DATASET_ID}/labels
 ```
 
 | パラメーター | 説明 |
@@ -40,7 +42,7 @@ GET /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -82,8 +84,8 @@ POSTまたはPUTリクエストのペイロードにラベルを提供するこ�
 **API形式**
 
 ```http
-POST /dataSets/{DATASET_ID}/labels
-PUT /dataSets/{DATASET_ID}/labels
+POST /datasets/{DATASET_ID}/labels
+PUT /datasets/{DATASET_ID}/labels
 ```
 
 | パラメーター | 説明 |
@@ -96,7 +98,7 @@ PUT /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +151,7 @@ DELETEリクエストを行うと、データセットに適用されたラベ�
 **API形式**
 
 ```http
-DELETE /dataSets/{DATASET_ID}/labels
+DELETE /datasets/{DATASET_ID}/labels
 ```
 
 | パラメーター | 説明 |
@@ -160,7 +162,7 @@ DELETE /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -176,3 +178,5 @@ curl -X DELETE \
 データセットレベルとフィールドレベルでデータ使用量ラベルを追加したら、Experience Platformにデータを取り込み始めます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
 
 適用したラベルに基づいてデータ使用ポリシーを定義できるようになりました。 詳しくは、「 [データ使用ポリシーの概要](../policies/overview.md)」を参照してください。
+
+でのデータセットの管理について詳し [!DNL Experience Platform]くは、「 [データセットの概要](../../catalog/datasets/overview.md)」を参照してください。
