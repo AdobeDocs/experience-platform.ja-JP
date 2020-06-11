@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK：複数のプロパティの操作
 description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します
 seo-description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 100%
@@ -40,7 +40,7 @@ SDK では、ベースコード内の配列に別の名前を追加すること�
 
 ```javascript
 mycustomname1("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
@@ -51,7 +51,7 @@ mycustomname1("sendEvent", {
 });
 
 mycustomname2("configure", {
-  "configId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
@@ -66,4 +66,4 @@ mycustomname2("sendEvent", {
 
 ## 制限事項
 
-Cookie との競合を避けるために、1 つのページ内の Adobe Experience Platform Web SDK のインスタンスのうち、いずれか 1 つにのみ特定の `configId` を含めることができます。同様に、特定の `orgId` を持つことのできる Adobe Experience Platform Web SDK のインスタンスは 1 つだけです。
+Cookie との競合を避けるために、1 つのページ内の Adobe Experience Platform Web SDK のインスタンスのうち、いずれか 1 つにのみ特定の `edgeConfigId` を含めることができます。同様に、特定の `orgId` を持つことのできる Adobe Experience Platform Web SDK のインスタンスは 1 つだけです。
