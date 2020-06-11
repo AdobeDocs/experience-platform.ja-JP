@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 62b18ed8f70ad87b04f60ade5730ff30d8985415
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 30%
+source-wordcount: '511'
+ht-degree: 32%
 
 ---
 
@@ -17,7 +17,6 @@ ht-degree: 30%
 このガイドでは、起動時にAdobe Experience Platform Web SDKをセットアップする方法に関する様々な手順を順を追って説明します。 この機能を使用するには、権限があり、許可リストに属している必要があります。 待機中のリストに移動する場合は、CSMに連絡してください。
 
 - [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。開発環境でのテストはCNAMEなしでは機能しますが、実稼働環境に移行する前にCNAMEが必要になります
-- Adobe Experience Platform Data Platformの権利を付与されます。 プラットフォームを購入していない場合は、Experience Platform Data Services Foundationをご利用いただき、SDKでの利用を制限し、無償で提供します。
 - 訪問者 ID サービスの最新バージョンを使用している
 
 ## 設定IDの作成
