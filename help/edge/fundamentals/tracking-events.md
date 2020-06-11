@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK のイベントのトラッキン�
 description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 97%
@@ -133,7 +133,7 @@ alloy("sendEvent", {
 
 ```javascript
 alloy("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
   "onBeforeEventSend": function(event) {
     // Change existing values
