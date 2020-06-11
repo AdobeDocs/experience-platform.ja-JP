@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データセットの概要
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 06733eb374d1b9409102a7cf13d61ed266cedaad
+source-git-commit: dcdd94a3a13a13b4104e57b74ecf613bc316b0af
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 0%
+source-wordcount: '776'
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ XDMについて詳しくは、「 [XDM System overview](../../xdm/home.md)」を
 
 ## データセットへのデータの取り込み
 
-Adobe Experience Platform Data Ingestは、プラットフォームが様々なソースからデータを取り込む複数の方法を表しています。 取り込み方法にかかわらず、正常に取り込まれたデータはすべてバッチファイルに変換されます。 バッチとは、1つの単位として取り込まれる1つ以上のファイルで構成されるデータの単位です。 これらのバッチファイルは、専用のデータセットに追加され、Data Lake内で保持されます。
+Adobe Experience Platform Data Ingestは、プラットフォームが様々なソースからデータを取り込む複数の方法を表しています。 取り込み方法にかかわらず、正常に取り込まれたデータはすべてバッチファイルに変換されます。 バッチとは、1 つの単位として取り込まれる 1 つ以上のファイルで構成されるデータの単位です。これらのバッチファイルは、専用のデータセットに追加され、Data Lake内で保持されます。
 
 See the [Data Ingestion overview](../../ingestion/home.md) for more information.
 
@@ -44,7 +44,10 @@ Adobe Experience Platform Data Governanceでは、顧客データを管理して
 
 データ使用量ラベルは、データセット全体または個々のデータセットフィールドに適用できます。 データセットレベルで追加されたラベルは、そのデータセット内のすべてのフィールドに継承されます。
 
-サービスの詳細については、 [データ管理の概要](../../data-governance/home.md) （英語）を参照してください。 Experience Platform UIで使用状況ラベルを使用する手順については、『 [データ使用状況ラベルユーザーガイド](../../data-governance/labels/user-guide.md)』を参照してください。
+サービスの詳細については、 [データ管理の概要](../../data-governance/home.md) （英語）を参照してください。 で使用状況ラベルを使用する手順については、次のガイドを参照し [!DNL Platform]てください。
+
+* [UIでのラベルの管理](../../data-governance/labels/user-guide.md)
+* [APIでのラベルの管理](../../data-governance/labels/api.md)
 
 ## ダウンストリーム・プラットフォーム・サービスのデータセット
 
