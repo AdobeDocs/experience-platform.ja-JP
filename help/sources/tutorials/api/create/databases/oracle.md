@@ -4,7 +4,7 @@ solution: Experience Platform
 title: フロー・サービスAPIを使用したOracleコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: c04106b42bef92344fb0474a986ec7dfd64a17d9
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | Oracleへの接続に使用する接続文字列。 Oracle接続文字列パターンは次のとおりです。 `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `connectionString` | Oracleへの接続に使用する接続文字列。 Oracle接続文字列パターンは次のとおりです。 `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 Oracleの接続仕様IDはで `d6b52d86-f0f8-475f-89d4-ce54c8527328`す。 |
 
 開始方法の詳細は、 [このOracleドキュメントを参照してください](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)。
@@ -97,7 +97,7 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | Oracleデータベースへの接続に使用する接続文字列。 Oracle接続文字列パターンは次のとおりです。 `Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}`. |
+| `auth.params.connectionString` | Oracleデータベースへの接続に使用する接続文字列。 Oracle接続文字列パターンは次のとおりです。 `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Oracle接続指定ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
 **応答**
