@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシーサービスユーザーガイド
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
+source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1088'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,11 @@ ht-degree: 0%
 
 ### 規則の種類
 
-プライバシーサービスは、次の2種類の規則に対するジョブの要求をサポートしています。
+プライバシーサービスは、次の3種類の規則に対する求職をサポートしています。
 
-* GDPR(General Data Protection Regulation)
+* 欧州和集合のGDPR(General Data Protection Regulation)
 * カリフォルニア消費者プライバシー法(CCPA)
+* タイの個人データ保護法(PDPA_THA)
 
 各規制タイプのジョブは、別々に追跡されます。 規則タイプを切り替えるには、[ **規則タイプ** ]ドロップダウンメニューをクリックし、リストから目的の規則を選択します。
 
@@ -77,7 +78,7 @@ ht-degree: 0%
 
 ## 新しいプライバシージョブリクエストの作成
 
->[!NOTE] プライバシージョブリクエストを作成するには、データのアクセスまたは削除を行う特定の顧客のID情報を提供する必要があります。 このセクションに進む前に [、プライバシー要求の](../identity-data.md) IDデータに関するドキュメントを確認してください。
+>[!NOTE] プライバシージョブのリクエストを作成するには、データのアクセスまたは削除を行う特定の顧客のID情報を提供する必要があります。 このセクションに進む前に [、プライバシー要求の](../identity-data.md) IDデータに関するドキュメントを確認してください。
 
 プライバシーサービスのUIには、新しいジョブ要求を作成する2つの方法が用意されています。
 
