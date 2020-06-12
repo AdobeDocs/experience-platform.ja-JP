@@ -4,9 +4,9 @@ solution: Experience Platform
 title: プライバシーサービスのUIの概要
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: 8704d762ea71b44133cd6d394587342198c54b99
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '183'
 ht-degree: 1%
 
 ---
@@ -20,15 +20,17 @@ Adobe Experience Platform Privacy Serviceは、RESTful APIとユーザーイン�
 
 プライバシーサービスのUIを認証するには、Adobe IDが必要です。 さらに、Adobe IDが関連付けられている組織内のシステム管理者権限が必要です。
 
-Adobe Experience Cloudのサインインページ(https://experience.adobe.com)に移動します。 「 **Adobe IDでサインイン」をクリックし** 、プロンプトが表示されたらAdobe IDの資格情報を入力します。 サインインしたら、「 **管理**」をクリックします。
+Adobe Experience Cloudのサインインページ(https://experience.adobe.com)に移動します。 「 **[!UICONTROL Adobe IDでサインイン」をクリックし]** 、プロンプトが表示されたらAdobe IDの資格情報を入力します。
 
-![「管理」タブ](../images/ui-overview/admin-tab.png)
+サインインしたら、「 **[!UICONTROL プライバシーUI]**」をクリックします。
 
->[!NOTE] 「管理」タブは、組織内でシステム管理者権限を持っている場合にのみ表示されます。
+![](../images/ui-overview/quick-access.png)
 
-最後に、次の画面で「プライバシーUI **を起動」を選択し** 、プライバシーサービスのUIを開きます。
+### Experience Platformからのログイン
 
-![管理ページ](../images/ui-overview/admin-page.png)
+Adobe Experience Platform UIにアクセスできる場合は、左のナビゲーションにある「 **[!UICONTROL リクエスト]** 」タブからプライバシーサービスUIにアクセスすることもできます。
+
+![](../images/ui-overview/platform.png)
 
 ## 次の手順
 
