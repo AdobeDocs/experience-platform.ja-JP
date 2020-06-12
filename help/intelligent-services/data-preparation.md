@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1595'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,26 @@ ht-degree: 1%
 
 このドキュメントでは、複数のチャネルからこのスキーマへのマーケティングイベントデータのマッピング、スキーマ内の重要なフィールドの概要を説明し、データを構造に効果的にマッピングする方法を判断する際の一般的な手引きを示します。
 
-## CEEスキーマについて
+## ワークフローの概要
+
+準備プロセスは、データがAdobe Experience Platformに保存されているか、外部に保存されているかによって異なります。 この節では、いずれかのシナリオで必要となる手順について要約します。
+
+### 外部データの準備
+
+データをの外部に保存する場合 [!DNL Experience Platform]は、次の手順に従います。
+
+1. 専用のAzure BLOBストレージコンテナのアクセス資格情報を要求するには、Adobe Consulting Servicesにお問い合わせください。
+1. アクセス資格情報を使用して、データをBlobコンテナにアップロードします。
+1. アドビのコンサルティングサービスと連携して、データを [Consumer ExperienceEventスキーマにマッピングし](#cee-schema) 、それをIntelligent Servicesに取り込みます。
+
+### [!DNL Experience Platform] データ準備
+
+データが既ににに保存されている場合 [!DNL Platform]は、次の手順に従います。
+
+1. Consumer ExperienceEventスキーマの構造を確認し、 [Consumer ExperienceEvent](#cee-schema) のフィールドにデータをマッピングできるかどうかを確認します。
+1. アドビのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、Intelligent Servicesに取り込む方法についてお問い合わせください。または、自分でデータをマッピングする場合は、このガイド [](#mapping) の手順に従ってください。
+
+## CEEスキーマについて {#cee-schema}
 
 Consumer ExperienceEventスキーマでは、デジタルマーケティングイベント（Webまたはモバイル）、オンラインまたはオフラインのコマースアクティビティに関する個人の行動を説明します。 このスキーマの使用は、Intelligent Servicesで必要となるのは、意味的に適切に定義されたフィールド（列）であるためです。そうしないとデータが明確にならなくなる不明な名前は一切避けられます。
 
@@ -185,13 +204,13 @@ Mixinの完全な例は、 [public XDM repositoryにあります](https://github
 
 の必須サブフィールドの詳細については、 `xdm:productListItems`marketing sechma [](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 仕様を参照してください。
 
-## データのマッピングと取り込み
+## データのマッピングと取り込み(#mapping)
 
 マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、次の手順は、インテリジェントサービスに取り込むデータを決定することです。 Intelligent Servicesで使用されるすべての履歴データは、4か月のデータの最小期間に加え、ルックバック期間として予定されている日数に該当する必要があります。
 
 送信するデータの範囲を決定したら、Adobe Consulting Servicesに連絡して、データをスキーマにマッピングし、サービスに取り込む方法についてお問い合わせください。
 
-購読があり、自分でデータをマッピングおよび取り込む場合は、次の節に示す手順に従ってください。 [!DNL Adobe Experience Platform]
+購読があり、自分でデータをマッピングおよび取り込む場合は、次の節に示す手順に従います。 [!DNL Adobe Experience Platform]
 
 ### Adobe Experience Platformの使用
 
@@ -237,7 +256,7 @@ PATCH /dataSets/{DATASET_ID}
 
 データを取り込む元のソースに応じて、リクエストペイロードに適切な `primaryIdentityNamespace` タグ値と `sourceConnectorId` タグ値を指定する必要があります。
 
-次のリクエストで、オーディエンスマネージャーに適したタグ値が追加されます。
+次のリクエストで、Audience Managerに適切なタグ値が追加されます。
 
 ```shell
 curl -X PATCH \
