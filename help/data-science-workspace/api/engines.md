@@ -4,9 +4,9 @@ solution: Experience Platform
 title: エンジン
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: d9f4649f5946fa3eea8d6a2ab65a07568f9c697f
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1118'
 ht-degree: 3%
 
 ---
@@ -202,7 +202,7 @@ curl -X POST \
                 "executionType": "PySpark",
                 "packagingType": "docker"
             },
-           "defaultMLInstanceConfigs": [
+           "defaultMLInstanceConfigs": [ ...
            ]
        }
    }
@@ -219,6 +219,7 @@ curl -X POST \
 | `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
 | `artifacts.default.image.executionType` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
 | `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値はに設定する必要があり `docker`ます。 |
+| `artifacts.default.defaultMLInstanceConfigs` | 設定ファイルの `pipeline.json` パラメーター。 |
 
 **応答**
 
@@ -242,7 +243,8 @@ curl -X POST \
                 "name": "datatransformation",
                 "executionType": "PySpark",
                 "packagingType": "docker"
-            }
+            },
+        "defaultMLInstanceConfigs": [ ... ]
         }
     }
 }
