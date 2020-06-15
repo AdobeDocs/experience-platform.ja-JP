@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 実験
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 63a128202826ec39911e70d34dda9dfb2bc585b2
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 モデルの開発とトレーニングは、テストレベルで行われます。テストは、MLInstance、トレーニングの実行、スコアの実行で構成されます。
 
-## テストの作成
+## テストの作成 {#create-an-experiment}
 
 リクエストペイロードで名前と有効なMLInstance IDを指定しながらPOSTリクエストを実行すると、テストを作成できます。
 
@@ -67,7 +67,7 @@ curl -X POST \
 }
 ```
 
-## トレーニングまたはスコアリングの実行を作成して実行します
+## トレーニングまたはスコアリングの実行を作成して実行します {#experiment-training-scoring}
 
 POSTリクエストを実行し、有効なテストIDを入力し、実行タスクを指定することで、トレーニングまたはスコアリングの実行を作成できます。 スコアリングの実行は、テストに既存のトレーニングの実行が成功している場合にのみ作成できます。 トレーニングの実行を正常に作成すると、モデルのトレーニング手順が初期化され、完了に成功すると、トレーニングを受けたモデルが生成されます。 トレーニングを受けたモデルの作成は、テストが常に1つのトレーニングを受けたモデルを利用できるよう、以前からあるモデルを置き換えます。
 
@@ -98,7 +98,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `{TASK}` | 実行のタスクを指定します。 この値は、トレーニング、スコアリング `train` 、またはフィーチャーパイプライン `score``fp` に対して設定します。 |
+| `{TASK}` | 実行のタスクを指定します。 この値は、トレーニング、スコアリング `train` 、またはフィーチャーパイプライン `score``featurePipeline` に対して設定します。 |
 
 **応答**
 
@@ -219,7 +219,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **応答**
 
