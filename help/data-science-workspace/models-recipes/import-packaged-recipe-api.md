@@ -4,9 +4,9 @@ solution: Experience Platform
 title: パッケージ化されたレシピの読み込み(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 # パッケージ化されたレシピの読み込み(API)
 
-このチュートリアルでは、 [Senesie Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) ( [Machine Learning API](../api/engines.md))を使用して、ユーザーインターフェイスでエンジン（レシピとも呼ばれます）を作成します。
+このチュートリアルでは、 [Senesie Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) ( [Machine Learning API](../api/engines.md))を使用して、ユーザーインターフェイスでエンジン（レシピとも呼ばれる）を作成します。
 
-はじめにする前に、Adobe Experience Platform Data Science Workspaceは異なる用語を使用して、APIとUI内の類似する要素を参照することに注意してください。 APIの用語はこのチュートリアル全体で使用され、次の表に、相関する用語の概要を示します。
+最初に、Data Science Workspaceは異なる用語を使用してAPIとUI内の類似したAdobe Experience Platformを参照していることに注意してください。 APIの用語はこのチュートリアル全体で使用され、次の表に、相関する用語の概要を示します。
 
 | UI用語 | API用語 |
 | ---- | ---- |
@@ -35,17 +35,15 @@ ht-degree: 2%
 
 - `{DOCKER_URL}`: インテリジェントサービスのDockerイメージへのURLアドレス。
 
-このチュートリアルでは、プラットフォームAPIの呼び出しを正常に行うために、 [Adobe Experience Platformへの認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があります。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+このチュートリアルでは、PlatformAPIの呼び出しを正常に行うために、 [Adobe Experience Platformへの認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があります。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。
-- `{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。
-- `{API_KEY}`: 独自のAdobe Experience Platform統合に見つかった特定のAPIキー値。
+- `{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
+- `{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。
 
 ## エンジンの作成
 
-パッケージ化されたレシピファイルの形式に応じて、APIリクエストに含められるエンジンは、次の2つの方法のいずれかで作成されます。
-
-- [ドッカーURLを使用したエンジンの作成](#create-an-engine-with-a-docker-url)
+エンジンは、/enginesエンドポイントにPOSTリクエストを行うことで作成できます。 作成したエンジンは、パッケージ化されたレシピファイルの形式に基づいて設定されます。この形式は、APIリクエストの一部として含める必要があります。
 
 ### ドッカーURLを使用したエンジンの作成 {#create-an-engine-with-a-docker-url}
 
