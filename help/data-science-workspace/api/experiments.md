@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 実験
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 63a128202826ec39911e70d34dda9dfb2bc585b2
+source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -40,7 +40,7 @@ curl -X POST \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
     -d '{
         "name": "a name for this Experiment",
-        "mlInstanceId": "{MLINSTANCE_ID}"
+        "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda"
     }'
 ```
 
@@ -55,9 +55,9 @@ curl -X POST \
 
 ```json
 {
-    "id": "{EXPERIMENT_ID}",
+    "id": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
     "name": "A name for this Experiment",
-    "mlInstanceId": "{MLINSTANCE_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -85,7 +85,7 @@ POST /experiments/{EXPERIMENT_ID}/runs
 
 ```shell
 curl -X POST \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -106,9 +106,9 @@ curl -X POST \
 
 ```json
 {
-    "id": "{RUN_ID}",
+    "id": "33408593-2871-4198-a812-6d1b7d939cda",
     "mode": "{TASK}",
-    "experimentId": "{EXPERIMENT_ID}",
+    "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -149,7 +149,7 @@ GET /experiments?property=mlInstanceId=={MLINSTANCE_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/experiments?property=mlInstanceId=={MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/experiments?property=mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -164,25 +164,25 @@ curl -X GET \
 {
     "children": [
         {
-            "id": "{EXPERIMENT_ID}",
+            "id": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
             "name": "A name for this Experiment",
-            "mlInstanceId": "{MLINSTANCE_ID}",
+            "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
             "created": "2019-01-01T00:00:00.000Z",
             "updated": "2019-01-01T00:00:00.000Z",
             "createdByService": false
         },
         {
-            "id": "{EXPERIMENT_ID}",
+            "id": "6cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
             "name": "Training Run 1",
-            "mlInstanceId": "{MLINSTANCE_ID}",
+            "mlInstanceId": "46986c8f-7839-4376-8509-0178bdf32cda",
             "created": "2019-01-01T00:00:00.000Z",
             "updated": "2019-01-01T00:00:00.000Z",
             "createdByService": false
         },
         {
-            "id": "{EXPERIMENT_ID}",
+            "id": "7cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
             "name": "Training Run 2",
-            "mlInstanceId": "{MLINSTANCE_ID}",
+            "mlInstanceId": "46986c8f-7939-4376-8509-0178bdf32cda",
             "created": "2019-01-01T00:00:00.000Z",
             "updated": "2019-01-01T00:00:00.000Z",
             "createdByService": false
@@ -213,7 +213,7 @@ GET /experiments/{EXPERIMENT_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID} \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -226,9 +226,9 @@ curl -X GET \
 
 ```json
 {
-    "id": "{EXPERIMENT_ID}",
+    "id": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
     "name": "A name for this Experiment",
-    "mlInstanceId": "{MLINSTANCE_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -264,7 +264,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID}/runs?property=mode==train \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs?property=mode==train \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -279,9 +279,9 @@ curl -X GET \
 {
     "children": [
         {
-            "id": "{RUN_ID}",
+            "id": "33408593-2871-4198-a812-6d1b7d939cda",
             "mode": "train",
-            "experimentId": "{EXPERIMENT_ID}",
+            "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
             "created": "2019-01-01T00:00:00.000Z",
             "createdBy": {
                 "userId": "Jane_Doe@AdobeID"
@@ -290,7 +290,7 @@ curl -X GET \
         }
     ],
     "_page": {
-        "property": "mode==train,experimentId=={EXPERIMENT_ID},deleted==false",
+        "property": "mode==train,experimentId==5cb25a2d-2cbd-4c99-a619-8ddae5250a7b,deleted==false",
         "totalCount": 1,
         "count": 1
     }
@@ -308,7 +308,7 @@ curl -X GET \
 ```json
 {
     "name": "A name for this Experiment",
-    "mlInstanceId": "{MLINSTANCE_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -331,7 +331,7 @@ PUT /experiments/{EXPERIMENT_ID}
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID} \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -339,7 +339,7 @@ curl -X PUT \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiments.v1.json' \
     -d '{
         "name": "An upated name",
-        "mlInstanceId": "{MLINSTANCE_ID}",
+        "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
         "created": "2019-01-01T00:00:00.000Z",
         "createdBy": {
             "userId": "Jane_Doe@AdobeID"
@@ -354,9 +354,9 @@ curl -X PUT \
 
 ```json
 {
-    "id": "{EXPERIMENT_ID}",
+    "id": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
     "name": "An updated name",
-    "mlInstanceId": "{MLINSTANCE_ID}",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
     "created": "2019-01-01T00:00:00.000Z",
     "createdBy": {
         "userId": "Jane_Doe@AdobeID"
@@ -384,7 +384,7 @@ DELETE /experiments/{EXPERIMENT_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/experiments/{EXPERIMENT_ID} \
+    https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -419,7 +419,7 @@ DELETE /experiments?mlInstanceId={MLINSTANCE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/experiments?mlInstanceId={MLINSTANCE_ID} \
+    https://platform.adobe.io/data/sensei/experiments?mlInstanceId=46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
