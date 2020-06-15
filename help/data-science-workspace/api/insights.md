@@ -4,7 +4,7 @@ solution: Experience Platform
 title: インサイト
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 7bd6807e620febe134f8c75e67c0f723850e49c1
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 4%
@@ -45,11 +45,11 @@ curl -X GET \
 {
     "children": [
         {
-            "id": "{INSIGHT_ID}",
+            "id": "08b8d174-6b0d-4d7e-acd8-1c4c908e14b2",
             "context": {
-                "experimentId": "{EXPERIMENT_ID}",
-                "experimentRunId": "{EXPERIMENT_RUN_ID}",
-                "modelId": "{MODEL_ID}"
+                "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+                "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
+                "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71"
             },
             "events": {
                 "name": "fit",
@@ -69,11 +69,11 @@ curl -X GET \
             "updated": "2019-01-02T00:00:00.000Z"
         },
         {
-            "id": "{INSIGHT_ID}",
+            "id": "08b8d174-6b0d-4d7e-acd8-1c4c908e14b2",
             "context": {
-                "experimentId": "{EXPERIMENT_ID}",
-                "experimentRunId": "{EXPERIMENT_RUN_ID}",
-                "modelId": "{MODEL_ID}"
+                "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+                "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
+                "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71"
             },
             "events": {
                 "name": "fit",
@@ -124,7 +124,7 @@ GET /insights/{INSIGHT_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/sensei/insights/{INSIGHT_ID} \
+  https://platform.adobe.io/data/sensei/insights/08b8d174-6b0d-4d7e-acd8-1c4c908e14b2 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -137,11 +137,11 @@ curl -X GET \
 
 ```json
 {
-    "id": "{INSIGHT_ID}",
+    "id": "08b8d174-6b0d-4d7e-acd8-1c4c908e14b2",
     "context": {
-        "experimentId": "{EXPERIMENT_ID}",
-        "experimentRunId": "{EXPERIMENT_RUN_ID}",
-        "modelId": "{MODEL_ID}"
+        "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+        "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
+        "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71"
     },
     "events": {
         "name": "fit",
@@ -175,14 +175,14 @@ curl -X GET \
 
 ```json
 "context": {
-    "clientId": "{CLIENT_ID}",
-    "notebookId": "{NOTEBOOK_ID}",
-    "experimentId": "{EXPERIMENT_ID}",
-    "engineId": "{ENGINE_ID}",
-    "mlInstanceId": "{MLINSTANCE_ID}",
-    "experimentRunId": "{EXPERIMENT_RUN_ID}",
-    "modelId": "{MODEL_ID}",
-    "dataSetId": "{DATASET_ID}"
+    "clientId": "f1ab3164-e688-433d-99ef-077b2be84731",
+    "notebookId": "T4ab3164-e658-443d-97ef-022b2be84999",
+    "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+    "engineId": "22f4166f-85ba-4130-a995-a2b8e1edde32",
+    "mlInstanceId": "46986c8f-7739-4376-8509-0178bdf32cda",
+    "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
+    "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71",
+    "dataSetId": "5ee3cd7f2d34011913c56941"
   }
 ```
 
@@ -204,9 +204,9 @@ curl -X POST \
     -H `Content-Type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json`
     -d {
     "context": {
-        "experimentId": "{EXPERIMENT_ID}",
-        "experimentRunId": "{EXPERIMENT_RUN_ID}",
-        "modelId": "{MODEL_ID}"
+        "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+        "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
+        "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71"
     },
     "events": {
         "name": "fit2",
@@ -233,11 +233,11 @@ curl -X POST \
 
 ```json
 {
-    "id": "{INSIGHT_ID}",
+    "id": "08b8d174-6b0d-4d7e-acd8-1c4c908e14b2",
     "context": {
-        "experimentId": "{EXPERIMENT_ID}",
-        "experimentRunId": "{EXPERIMENT_RUN_ID}",
-        "modelId": "{MODEL_ID}"
+        "experimentId": "5cb25a2d-2cbd-4c99-a619-8ddae5250a7b",
+        "experimentRunId": "33408593-2871-4198-a812-6d1b7d939cda",
+        "modelId": "15c53796-bd6b-4e09-b51d-7296aa20af71"
     },
     "events": {
         "name": "fit2",
@@ -298,7 +298,7 @@ curl -X GET \
 {
     "children": [
         {
-            "algorithm": "{ALGORITHM}",
+            "algorithm": "15c53796-bd6b-4e09-b51d-7296aa20af71",
             "defaultMetrics": [
                 "f-score",
                 "auroc",
