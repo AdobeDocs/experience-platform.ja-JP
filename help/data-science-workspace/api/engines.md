@@ -4,7 +4,7 @@ solution: Experience Platform
 title: エンジン
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: d9f4649f5946fa3eea8d6a2ab65a07568f9c697f
+source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -82,7 +82,7 @@ curl -X POST \
         "artifacts": {
             "default": {
                 "image": {
-                    "location": "{DOCKER_URL}",
+                    "location": "v1rsvj32smc4wbs.azurecr.io/ml-featurepipeline-pyspark:1.0",
                     "name": "An additional name for the Docker image",
                     "executionType": "Python"
                 }
@@ -145,7 +145,7 @@ curl -X POST \
 
 ```json
 {
-    "id": "{ENGINE_ID}",
+    "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "name": "A name for this Engine",
     "description": "A description for this Engine",
     "type": "Python",
@@ -158,7 +158,7 @@ curl -X POST \
     "artifacts": {
         "default": {
             "image": {
-                "location": "{DOCKER_URL}",
+                "location": "v1rsvj32smc4wbs.azurecr.io/ml-featurepipeline-pyspark:1.0",
                 "name": "An additional name for the Docker image",
                 "executionType": "Python",
                 "packagingType": "docker"
@@ -281,7 +281,7 @@ curl -X GET \
 {
     "children": [
         {
-            "id": "{ENGINE_ID}",
+            "id": "22f4166f-85ba-4130-a995-a2b8e1edde31",
             "name": "A name for this Engine",
             "description": "A description for this Engine",
             "type": "PySpark",
@@ -293,7 +293,7 @@ curl -X GET \
             "updated": "2019-01-01T00:00:00.000Z"
         },
         {
-            "id": "{ENGINE_ID}",
+            "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
             "name": "A name for this Engine",
             "description": "A description for this Engine",
             "type": "Python",
@@ -305,7 +305,7 @@ curl -X GET \
             "updated": "2019-01-01T00:00:00.000Z"
         },
         {
-            "id": "{ENGINE_ID}",
+            "id": "22f4166f-85ba-4130-a995-a2b8e1edde33",
             "name": "Feature Pipeline Engine",
             "description": "A feature pipeline Engine",
             "type": "PySpark",
@@ -343,7 +343,7 @@ GET /engines/{ENGINE_ID}
 
 ```shell
 curl -X GET \
-    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -356,7 +356,7 @@ curl -X GET \
 
 ```json
 {
-    "id": "{ENGINE_ID}",
+    "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "name": "A name for this Engine",
     "description": "A description for this Engine",
     "type": "PySpark",
@@ -369,10 +369,10 @@ curl -X GET \
     "artifacts": {
         "default": {
             "image": {
-                "location": "wasbs://artifact-location.blob.core.windows.net/{ENGINE_ID}/default.egg",
+                "location": "v7d1cs2mimnlttw.azurecr.io/ml-featurepipeline-pyspark:0.2.1",
                 "name": "file.egg",
                 "executionType": "PySpark",
-                "packagingType": "egg"
+                "packagingType": "docker"
             }
         }
     }
@@ -418,7 +418,7 @@ PUT /engines/{ENGINE_ID}
 
 ```shell
 curl -X PUT \
-    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -446,7 +446,7 @@ curl -X PUT \
 
 ```json
 {
-    "id": "{ENGINE_ID}",
+    "id": "22f4166f-85ba-4130-a995-a2b8e1edde32",
     "name": "An updated name for this Engine",
     "description": "An updated description",
     "type": "Python",
@@ -486,7 +486,7 @@ DELETE /engines/{ENGINE_ID}
 
 ```shell
 curl -X DELETE \
-    https://platform.adobe.io/data/sensei/engines/{ENGINE_ID} \
+    https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
