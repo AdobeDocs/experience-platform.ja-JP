@@ -1,20 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: プライバシーサービスのリリースノート
+title: Privacy Serviceのリリースノート
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 682436b29df4696e98ef96fe5a65ab32221098ba
+source-git-commit: 580cce74ab7da9547417a9e74e88b5ddab52171f
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '546'
 ht-degree: 5%
 
 ---
 
 
-# プライバシーサービスのリリースノート
+# Privacy Serviceのリリースノート
 
-このドキュメントには、Adobe Experience Platformプライバシーサービスの新機能に関する情報と、機能強化および重要なバグ修正が含まれています。
+このドキュメントには、Adobe Experience Platform Privacy Serviceの新機能に関する情報と、拡張機能および重要なバグ修正が含まれています。
+
+>[!NOTE] 他のExperience Platformサービスの最新のリリースノートは、 [こちらを参照してください](../release-notes/latest/latest.md)。
 
 ## 2020 年 4 月 9 日
 
@@ -23,7 +25,7 @@ ht-degree: 5%
 | 機能 | 説明 |
 | --- | --- |
 | PDPAのサポート | タイのPersonal Data Protection Act(PDPA)で、プライバシー要求を作成し、追跡できるようになりました。 APIでプライバシーリクエストを行う場合、 `regulation` 配列は値「pdpa_tha」を受け入れます。 |
-| UIの名前空間タイプ | プライバシーサービスのUIのリクエストビルダーで、別の名前空間タイプを指定できるようになりました。 詳しくは、 [ユーザガイド](ui/user-guide.md) を参照してください。 |
+| UIの名前空間タイプ | Privacy ServiceUIのリクエストビルダーで、異なる名前空間タイプを指定できるようになりました。 詳しくは、 [ユーザガイド](ui/user-guide.md) を参照してください。 |
 | 古いエンドポイントの廃止 | 古いAPIエンドポイント(`data/privacy/gdpr`)は非推奨となりました。 |
 
 ## 2020 年 1 月 14 日
@@ -32,14 +34,14 @@ ht-degree: 5%
 
 | 機能 | 説明 |
 | --- | --- |
-| プライバシーサービスのリブランディング | GDPRに加え、他の規制をサポートするようになったため、従来の「GDPRサービス」は、プライバシー・サービスのブランドに変更されました。 |
-| 新しいAPIエンドポイント | Privacy Service APIの基本パスが、からに更新され `/data/privacy/gdpr` ました `/data/core/privacy/jobs` |
-| 新しい必須 `regulation` プロパティ | プライバシーサービスAPIで新しいジョブを作成する場合、要求ペイロードで `regulation` プロパティを指定して、ジョブを追跡する規則を示す必要があります。 指定できる値は `gdpr` とで `ccpa`す。 詳しくは、プライバシーサービス開発者ガイドの [プライバシージョブに関するドキュメント](api/privacy-jobs.md) （英語のみ）を参照してください。 |
-| Adobe Primetime認証のサポート | プライバシーサービスで、製品の値としてを使用し、Adobe Primetime Authenticationからのアクセス/削除の要求を受け入れるよう `primetimeAuthentication` になりました。 See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
+| Privacy Serviceリブランディング | GDPRに加え、他の規制をサポートするようになったため、従来の「GDPRサービス」はPrivacy Serviceにリブランドされました。 |
+| 新しいAPIエンドポイント | Privacy ServiceAPIのベースパスが、からに更新され `/data/privacy/gdpr` ました `/data/core/privacy/jobs` |
+| 新しい必須 `regulation` プロパティ | Privacy ServiceAPIで新しいジョブを作成する場合、要求ペイロードで `regulation` プロパティを指定して、ジョブを追跡する規則を示す必要があります。 指定できる値は `gdpr` とで `ccpa`す。 詳しくは、Privacy Service開発者ガイドの [プライバシージョブに関するドキュメント](api/privacy-jobs.md) （英語のみ）を参照してください。 |
+| Adobe Primetime認証のサポート | Privacy Serviceは、製品の値としてを使用し、Adobe Primetime Authenticationからのアクセス/削除要求 `primetimeAuthentication` を受け入れるようになりました。 See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
 
 ### 強化された機能
 
-* プライバシーサービスのUIの強化：
+* Privacy ServiceUIの強化：
    * GDPRおよびCCPA規制に関する個別のジョブトラッキングページ。
    * GDPRとCCPAのトラッキングデータを切り替えるための新しい _Regulation Type_ （規則タイプ）ドロップダウン。
 
@@ -49,21 +51,21 @@ ht-degree: 5%
 
 | 機能 | 説明 |
 | --- | --- |
-| リクエスト指標ダッシュボード | プライバシー・サービスUIの新しい指標ダッシュボードは、送信されたGDPR要求、エラーが発生したGDPR要求、完了したGDPR要求を表示します。 |
-| リクエストビルダー | GDPR要求を提出する技術的なユーザーと技術的でないユーザーの両方を持つ組織に対して、UIに「リクエストの作成」機能が追加されました。 JSONファイル送信機能は、引き続き使用したい組織のプライバシーサービスUIで引き続き使用できます。 |
-| GDPRジョブイベント通知 | GDPRジョブのステータスに関するイベント通知は、多くのワークフローにとって重要な要素です。 以前は個々の電子メール通知を使用して通知が提供されていましたが、GDPRイベント通知はAdobe I/Oイベントを利用するメッセージで、設定済みのWebフックに送信され、ジョブリクエストの自動化が容易になります。 プライバシーサービスのUIユーザーは、Adobe I/O GDPRイベントを登録し、製品またはGDPRジョブが完了したときに更新を受け取ることができます。 |
+| リクエスト指標ダッシュボード | Privacy ServiceUIの新しい指標ダッシュボードは、送信されたGDPRリクエスト、エラー・リクエスト、完了したGDPRリクエストを表示します。 |
+| リクエストビルダー | GDPR要求を提出する技術的なユーザーと技術的でないユーザーの両方を持つ組織に対して、UIに「リクエストの作成」機能が追加されました。 JSONファイル送信機能は、引き続き使用したい組織のPrivacy ServiceUIでも使用できます。 |
+| GDPRジョブイベント通知 | GDPRジョブのステータスに関するイベント通知は、多くのワークフローにとって重要な要素です。 以前は個々の電子メール通知を使用して通知が提供されていましたが、GDPRイベント通知はAdobe I/Oイベントを利用するメッセージで、設定済みのWebフックに送信され、ジョブリクエストの自動化が容易になります。 Privacy ServiceUIのユーザーは、Adobe I/O GDPRイベントに登録して、製品またはGDPRジョブが完了したときに更新を受け取ることができます。 |
 
 ## 2019 年 18 月 5 日
 
 ### 強化された機能
 
-* プライバシーサービスUIのステータステーブルのデフォルトの範囲が7日間に変更されました。
+* Privacy ServiceUIのステータステーブルのデフォルトの範囲が7日間に変更されました。
 * 内部例外処理の改善。
 * データ変更率が低い一般的な内部呼び出しのキャッシュを導入することで、パフォーマンスが向上しました。
 
 ### バグの修正
 
-* プライバシーサービスAPIの `GET /` エンドポイントに、フィルターされたクエリに関する欠落したログ情報を追加しました。
+* Privacy ServiceAPIのエンドポイントに、フィルターされたクエリに関する見つからない `GET /` ログ情報を追加しました。
 
 ## 2019 年 4 月 12 日
 
@@ -88,4 +90,4 @@ ht-degree: 5%
 
 ### バグの修正
 
-* お客様がプライバシーサービスのUIを読み込めない問題を修正しました。
+* ユーザーがPrivacy ServiceUIを読み込めない問題を修正しました。
