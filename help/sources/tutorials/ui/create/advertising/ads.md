@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのGoogle AdWordsソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: e7211c9ebfd8fecff3780198d71e18436f3ffab3
+source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,16 @@ ht-degree: 0%
 
 # UIでのGoogle AdWordsソースコネクタの作成
 
-Adobe Experience Platformのソースコネクターは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してGoogle AdWordsソースコネクタを作成する手順を説明します。
+>[!NOTE]
+>Google AdWordsコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してGoogle AdWordsソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
+* [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
@@ -29,7 +32,7 @@ Adobe Experience Platformのソースコネクターは、外部ソースのデ�
 
 ### 必要な資格情報の収集
 
-Google AdWordsアカウントプラットフォームにアクセスするには、次の値を指定する必要があります。
+Google AdWordsアカウントPlatformにアクセスするには、次の値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
@@ -43,9 +46,9 @@ Google AdWordsアカウントプラットフォームにアクセスするには
 
 ## Google AdWordsアカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って新しい受信ベース接続を作成し、Google AdWordsアカウントをプラットフォームにリンクします。
+必要な資格情報を収集したら、次の手順に従って新しい受信ベース接続を作成し、Google AdWordsアカウントをPlatformにリンクします。
 
-[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) Sources **** 」を選択して *Sources* ワークスペースにアクセスします。 [ *カタログ* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **ソース** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 [ *カタログ* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
 
 「 *広告* 」カテゴリの下で「 **Google AdWords** 」を選択し、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、「 **接続ソース**」を選択します。
 
@@ -67,4 +70,4 @@ Google AdWordsアカウントプラットフォームにアクセスするには
 
 ## 次の手順
 
-このチュートリアルに従って、Google AdWordsアカウントへの基本的な接続を確立しました。 次のチュートリアルに進み、広告データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/advertising.md)。
+このチュートリアルに従って、Google AdWordsアカウントへの基本的な接続を確立しました。 次のチュートリアルに進み、広告データをPlatformに取り込むようにデータフローを [設定できるようになりました](../../dataflow/advertising.md)。
