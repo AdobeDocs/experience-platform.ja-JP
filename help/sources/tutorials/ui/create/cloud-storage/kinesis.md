@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのAmazon Kinesisソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: dcd6293a71178fee14647f5b2c8b56d03d1ec7df
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '454'
 ht-degree: 1%
 
 ---
@@ -15,16 +15,16 @@ ht-degree: 1%
 # UIでのAmazon Kinesisソースコネクタの作成
 
 >[!NOTE]
-> Amazon Kinesisコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
+>Amazon Kinesisコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformのソースコネクターは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してAmazon Kinesis（以下「Kinesis」と呼ばれる）ソースコネクタを認証する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してAmazon Kinesis（以下「Kinesis」と呼ばれる）ソースコネクタを認証する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-- [Experience Data Model(XDM)System](../../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+- [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
@@ -44,9 +44,9 @@ Kinesisソースコネクタを認証するには、次の接続プロパティ�
 
 ## Kinesisアカウントの接続
 
-必要な資格情報を収集したら、次の手順に従ってKinesisアカウントをプラットフォームにリンクできます。
+必要な資格情報を収集したら、次の手順に従ってKinesisアカウントをPlatformにリンクできます。
 
-[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) Sources **** 」を選択して *Sources* ワークスペースにアクセスします。 「 *カタログ* 」タブには、プラットフォームに接続できる様々なソースが表示されます。 各ソースには、関連付けられた既存のアカウントの数が表示されます。
+「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **ソース** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 「 *カタログ* 」タブには、Platformに接続できる様々なソースが表示されます。 各ソースには、関連付けられた既存のアカウントの数が表示されます。
 
 「 *クラウドストレージ***」カテゴリで、「** Amazon Kinesis」を選択し、「+」アイコン(+) **** をクリックして新しいKinesisコネクタを作成します。
 
@@ -68,4 +68,4 @@ Kinesisソースコネクタを認証するには、次の接続プロパティ�
 
 ## 次の手順
 
-このチュートリアルに従うことで、Kinesisアカウントをプラットフォームに接続できました。 次のチュートリアルに進み、クラウドストレージのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/streaming/cloud-storage.md)。
+このチュートリアルに従うことで、KinesisアカウントにPlatformに接続できました。 次のチュートリアルに進み、クラウドストレージのデータをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/streaming/cloud-storage.md)。
