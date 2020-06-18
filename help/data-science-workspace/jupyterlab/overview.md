@@ -4,9 +4,9 @@ solution: Experience Platform
 title: JupterLabユーザガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
+source-git-commit: 49f0678cf8bf4349d0b63f3525a1f707f725ede9
 workflow-type: tm+mt
-source-wordcount: '3672'
+source-wordcount: '3782'
 ht-degree: 11%
 
 ---
@@ -18,29 +18,29 @@ JupyterLabは、 <a href="https://jupyter.org/" target="_blank">Project Jupyter�
 
 このドキュメントでは、JupyterLabとその機能の概要と、一般的な操作の実行方法を説明します。
 
-## エクスペリエンスプラットフォームのJupterLab
+## Experience PlatformのJupyterLab
 
-Experience PlatformのJupterLab統合には、アーキテクチャの変更、設計上の考慮事項、カスタマイズされたノートブック拡張機能、事前インストールされたライブラリ、アドビ主題のインターフェイスが含まれます。
+Experience PlatformのJupyterLab統合には、アーキテクチャの変更、設計上の考慮事項、カスタマイズされたノートブック拡張機能、事前にインストールされたライブラリ、Adobe主題のインターフェイスが含まれます。
 
-次のリストは、JupterLab on Platformに固有の機能の一部を示しています。
+次のリストは、Platformに関するJupterLabに固有の機能の一部を示しています。
 
 | 機能 | 説明 |
 | --- | --- |
-| **カーネル** | カーネルは、ノートやJupterLabのフロントエンドで、異なるプログラミング言語でコードを実行したり内観したりする機能を提供します。 Experience Platformは、Python、R、PySpark、Sparkでの開発をサポートする追加のカーネルを提供します。 詳細は [カーネルの節を参照してください](#kernels) 。 |
+| **カーネル** | カーネルは、ノートやJupterLabのフロントエンドで、異なるプログラミング言語でコードを実行したり内観したりする機能を提供します。 Experience Platformは、Python、R、PySpark、Sparkでの開発をサポートする追加のカーネルを提供しています。 詳細は [カーネルの節を参照してください](#kernels) 。 |
 | **データアクセス** | 読み取り/書き込み機能を完全にサポートし、既存のデータセットにJupterLab内から直接アクセス |
-| **プラットフォームサービスの統合** | 組み込みの統合により、JupterLab内から他のプラットフォーム・サービスを直接利用できます。 サポートされる統合の完全なリストは、「他のプラットフォームサービスとの [統合](#service-integration)」の節に記載されています。 |
-| **認証** | JupyterLabの組み込みのセキュリティモデルに加え <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">て</a>、プラットフォームのサービス間通信を含む、アプリケーションとエクスペリエンスプラットフォーム間のすべてのやり取りは、暗号化され、 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)を介して認証され</a>ます。 |
+| **Platformサービスの統合** | 組み込みの統合により、JupyterLab内から他のPlatformサービスを直接利用できます。 サポートされる統合の完全なリストは、「他のPlatformサービスとの [統合](#service-integration)」の節に記載されています。 |
+| **認証** | JupyterLabの組み込みのセキュリティ・モデルに加え <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">て</a>、Platform・サービス間の通信を含む、アプリケーションとExperience Platform間のすべてのやり取りは暗号化され、 <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)を介して認証され</a>ます。 |
 | **開発ライブラリ** | Experience Platformでは、JupyterLabはPython、R、PySpark用に事前にインストールされたライブラリを提供します。 サポートされているライブラリの完全なリストについては、 [付録](#supported-libraries) を参照してください。 |
-| **ライブラリコントローラー** | プレインストールされたライブラリがニーズに合わない場合は、PythonとR用に追加のライブラリをインストールし、プラットフォームの整合性を維持し、データを安全に保つために、一時的に独立したコンテナに保存します。 詳細は [カーネルの節を参照してください](#kernels) 。 |
+| **ライブラリコントローラー** | プレインストールされたライブラリがニーズに合わない場合は、PythonとR用に追加のライブラリをインストールし、Platformの整合性を維持し、データを安全に保つために、一時的に独立したコンテナに保存します。 詳細は [カーネルの節を参照してください](#kernels) 。 |
 
 >[!NOTE] 追加のライブラリは、そのライブラリがインストールされたセッションでのみ使用できます。 新しいセッションを開始する際に必要な追加のライブラリを再インストールする必要があります。
 
-## 他のプラットフォームサービスとの統合 {#service-integration}
+## 他のPlatformサービスとの統合 {#service-integration}
 
 標準化と相互運用性は、重要な概念 [!DNL Experience Platform]です。 組み込みIDEとしてJupyterLabを統合す [!DNL Platform] ると、他の [!DNL Platform] サービスとのやり取りが可能になり、その可能性を最大限に活用 [!DNL Platform] できます。 JupyterLabでは、以下の [!DNL Platform] サービスを利用できます。
 
 * **カタログサービス：** 読み取り/書き込み機能を備えたデータセットへのアクセスと調査
-* **クエリサービス：** SQLを使用してデータセットにアクセスし、データセットを調査します。大量のデータを処理する際に、データ・アクセスのオーバーヘッドが低くなります。
+* **クエリサービス：** SQLを使用してデータセットにアクセスし、データセットを調査します。大量のデータを処理する際に、データ・アクセス・オーバーヘッドが低くなります。
 * **先生MLフレームワーク：** データのトレーニングとスコア機能を備えたモデル開発と、1回のクリックでレシピを作成。
 * **エクスペリエンスデータモデル(XDM):** 標準化と相互運用性は、Adobe Experience Platformの背後にある重要な概念です。 [アドビが推進するExperience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)は、カスタマーエクスペリエンスデータを標準化し、カスタマーエクスペリエンス管理のスキーマを定義する取り組みです。
 
@@ -124,7 +124,7 @@ JupterLabの主な作業領域を使用すると、ドキュメントやその�
 
 特定の機能は、以下の表に示すように特定のカーネルに限定されています。
 
-| カーネル | ライブラリのインストールサポート | プラットフォームの統合 |
+| カーネル | ライブラリのインストールサポート | Platform統合 |
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | ○ | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li><li>クエリサービス</li></ul> |
 | **R** | ○ | <ul><li>先生MLフレームワーク</li><li>カタログサービス</li></ul> |
@@ -227,9 +227,18 @@ JupyterLabのアクティブなノートブックまたはアクティビティ�
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-## ノートブックを使用したプラットフォームデータへのアクセス
+### Python/RでのGPUおよびメモリサーバの設定
 
-サポートされる各カーネルは組み込み機能を備えており、ノートブック内のデータセットからプラットフォームデータを読み取ることができます。 ただし、データのページ番号付けはPythonとRノートブックに限定されます。
+で、右上隅の歯車アイコンを [!DNL JupyterLab] 選択して、 *ノートブックサーバー設定を開きます*。 GPUのオン/オフを切り替え、スライダーを使用して必要なメモリ量を割り当てることができます。 割り当て可能なメモリの量は、組織でプロビジョニングされているメモリの量によって異なります。 「 **[!UICONTROL 設定を更新]** 」を選択して保存します。
+
+>[!NOTE]
+>1つの組織でノートブック用にプロビジョニングされるGPUは1つだけです。 GPUが使用中の場合は、現在GPUを予約しているユーザーがGPUを解放するのを待つ必要があります。 これは、GPUをログアウトするか、4時間以上アイドル状態のままにすることで実行できます。
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+## ノートブックを使用してPlatformデータにアクセスする
+
+サポートされる各カーネルは組み込み機能を備えており、ノートブック内のデータセットからPlatformデータを読み取ることができます。 ただし、データのページ番号付けはPythonとRノートブックに限定されます。
 
 ### ノートブックデータの制限
 
@@ -439,7 +448,7 @@ Pythonノートブック（Python 3カーネル）からデータセットを読
 
 ### Pythonでのクエリサービスを使用したクエリデータ
 
-JupyterLab on Platformを使用すると、PythonノートブックでSQLを使用して、 <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platformクエリサービスを通じてデータにアクセスできます</a>。 クエリサービスを通じてデータにアクセスすると、実行時間が長いため、大規模なデータセットを扱う場合に便利です。 クエリサービスを使用したデータのクエリの処理時間は10分に制限されています。
+Platform上のJupterLabを使用すると、PythonノートブックでSQLを使用して、 <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platformクエリサービスを通じてデータにアクセスでき</a>ます。 クエリサービスを通じてデータにアクセスすると、実行時間が長いため、大規模なデータセットを扱う場合に便利です。 クエリサービスを使用したデータのクエリの処理時間は10分に制限されています。
 
 JupyterLabのクエリサービスを使用する前に、 <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">クエリサービスのSQL構文を十分に理解しておく必要があります</a>。
 
