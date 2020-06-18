@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのAmazon Redshiftソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
+source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '506'
 ht-degree: 1%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 1%
 # UIでのAmazon Redshiftソースコネクタの作成
 
 >「[!NOTE]
->Amazon Redshiftコネクタはベータ版です。 機能とドキュメントは、変更されることがあります。
+>Amazon Redshiftコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformのソースコネクターは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してAmazon Redshift（以下「Redshift」と呼ばれる）ソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してAmazon Redshift（以下「Redshift」と呼ばれる）ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-- [Experience Data Model(XDM)System](../../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
+- [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
@@ -32,7 +32,7 @@ Adobe Experience Platformのソースコネクターは、外部ソースのデ�
 
 ### 必要な資格情報の収集
 
-プラットフォームのRedshiftアカウントにアクセスするには、次の値を指定する必要があります。
+Platform上のRedshiftアカウントにアクセスするには、次の値を指定する必要があります。
 
 | **Credential** | **説明** |
 | -------------- | --------------- |
@@ -45,9 +45,9 @@ Adobe Experience Platformのソースコネクターは、外部ソースのデ�
 
 ## Redshiftアカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って新しい受信ベース接続を作成し、Redshiftアカウントをプラットフォームにリンクします。
+必要な資格情報を収集したら、次の手順に従って新しい受信ベース接続を作成し、RedshiftアカウントをPlatformにリンクします。
 
-<a href="https://platform.adobe.com" target="_blank">Adobe Experience Platformにログインし、左のナビゲーションバーで「</a> Sources **** 」を選択して *Sources* ワークスペースにアクセスします。 [ *カタログ* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+「 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> 」にログインし、左のナビゲーションバーで「 **ソース** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 [ *カタログ* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
 
 「 *Databases* 」カテゴリの下で、「 **Amazon Redshift** 」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、「 **接続ソース**」を選択します。
 
@@ -69,4 +69,4 @@ Adobe Experience Platformのソースコネクターは、外部ソースのデ�
 
 ## 次の手順
 
-このチュートリアルに従うと、Redshiftアカウントへの基本的な接続が確立されます。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/databases.md)。
+このチュートリアルに従うと、Redshiftアカウントへの基本的な接続が確立されます。 次のチュートリアルに進み、データをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/databases.md)。
