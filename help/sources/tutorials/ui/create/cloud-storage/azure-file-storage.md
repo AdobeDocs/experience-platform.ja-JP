@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIにAzure Fileストレージソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
+source-git-commit: ced839f64bea48703c530c83d8592f3842c17e53
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 0%
 # UIにAzure Fileストレージソースコネクタを作成する
 
 >[!NOTE]
->Azureテーブルストレージはベータ版です。 機能とドキュメントは、変更されることがあります。
+>Azure Fileストレージコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformのソースコネクターは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してAzureファイルストレージソースコネクタを認証する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してAzureファイルストレージソースコネクタを認証する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-- [Experience Data Model(XDM)System](../../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
+- [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
@@ -44,9 +44,9 @@ Azure Fileストレージソースコネクタを認証するには、次の接�
 
 ## Azure Fileストレージアカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って新しいAzure Fileストレージアカウントを作成し、プラットフォームに接続します。
+必要な資格情報を収集したら、次の手順に従って新しいAzureファイルストレージアカウントを作成し、Platformに接続します。
 
-[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) Sources **** 」を選択して *[!UICONTROL Sources]* ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
+「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
@@ -70,4 +70,4 @@ Azure Fileストレージソースコネクタを認証するには、次の接�
 
 ## 次の手順
 
-このチュートリアルに従うと、Azure Fileストレージアカウントへの接続が確立されます。 次のチュートリアルに進み、クラウドストレージのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/batch/cloud-storage.md)。
+このチュートリアルに従うと、Azure Fileストレージアカウントへの接続が確立されます。 次のチュートリアルに進み、クラウドストレージのデータをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/batch/cloud-storage.md)。
