@@ -4,9 +4,9 @@ solution: Experience Platform
 title: モデルをサービスとして発行(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -14,16 +14,11 @@ ht-degree: 0%
 
 # モデルをサービスとして発行(UI)
 
-Adobe Experience Platform Data Science Workspaceを使用すると、トレーニングを受けた評価済みのモデルをサービスとして公開でき、IMS組織内のユーザーは、独自のモデルを作成することなくデータをスコアできます。
-
-このチュートリアルでは、モデルをサービスとして公開する手順を順を追って説明し、サー *ビスギャラリーを通じてサービスを使用してデータにスコアを付けます*。 以下の主な節に分かれています。
-
-- [モデルのパブリッシュ](#publish-a-model)
-- [サービスを使用したスコア](#access-a-service)
+Adobe Experience Platformデータサイエンスワークスペースを使用すると、トレーニングを受けた評価済みのモデルをサービスとして公開でき、IMS組織内のユーザーは、独自のモデルを作成することなくデータをスコアできます。
 
 ## はじめに
 
-このチュートリアルを完了するには、エクスペリエンスプラットフォームにアクセスできる必要があります。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
+このチュートリアルを完了するには、にアクセスする必要があり [!DNL Experience Platform]ます。 でIMS組織にアクセスできない場合は、先に進む前にシステム管理者にお問い合わせ [!DNL Experience Platform]ください。
 
 このチュートリアルでは、トレーニングを正常に実施した既存のモデルが必要です。 パブリッシュ可能なモデルがない場合は、先に進む前に、UI [(UI](./train-evaluate-model-ui.md) )チュートリアルのモデルをトレーニングして評価してください。
 
@@ -44,7 +39,7 @@ Senesie Machine Learning APIを使用してモデルを公開する場合は、 
 
 ## サービスを使用したスコア {#access-a-service}
 
-1. Adobe Experience Platformで、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックして、 *サービスギャラリーにアクセスします*。 使用するサービスを見つけ、「 **[!UICONTROL スコア]**」をクリックします。
+1. 「Adobe Experience Platform」で、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックし、「 *サービスギャラリー*」にアクセスします。 使用するサービスを見つけ、「 **[!UICONTROL スコア]**」をクリックします。
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. スコアリング実行に適した入力データセットを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
