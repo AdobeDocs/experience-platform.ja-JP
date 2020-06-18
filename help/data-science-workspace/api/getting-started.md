@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Senesi Machine Learning API開発者ガイド
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 4f74acdc41d5049c1aa8eb3dfcef4e9d75c785ca
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Senesi Machine Learning API開発者ガイド
 
-Senesie Machine Learning APIは、データ科学者が機械学習サービスを編成、管理するメカニズムを提供します。これは、アルゴリズムによる搭乗から実験まで、サービスの導入までを対象としています。
+Senesie Machine Learning APIは、データ科学者が、アルゴリズムによる搭乗から実験まで、サービスの展開まで、機械学習サービスを整理、管理するメカニズムを提供します。
 
 この開発者ガイドでは、 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Senesi Machine Learning APIを使用する開始を支援する手順を説明し、様々なData Science Workspaceリソースに対してCRUD操作を実行するAPI呼び出しの例を示します。
 
@@ -26,11 +26,11 @@ APIを呼び出すために次のリクエストヘッダーにアクセスす�
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
