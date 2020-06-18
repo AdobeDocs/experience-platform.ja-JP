@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google AdWordsコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: f344b69ac7fc2c87880baf2ba47dce68b5a697f2
+source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # Google AdWordsコネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+>[!NOTE]
+>Google AdWordsコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-エクスペリエンスプラットフォームは、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 広告プロバイダーのサポートにはGoogle AdWordsが含まれます。
+Adobe Experience Platformを使用すると、Platformサービスを使用して、外部ソースからデータを取り込み、データの構造化、ラベル付け、および入力データの拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle AdWordsをプラットフォームに接続する方法に関する情報を提供しています。
+Experience Platformは、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 広告プロバイダーのサポートにはGoogle AdWordsが含まれます。
 
-## APIを使用したGoogle AdWordsのプラットフォームへの接続
+以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle AdWordsをPlatformに接続する方法に関する情報を提供しています。
+
+## APIを使用したGoogle AdWordsのPlatformへの接続
 
 - [Flow Service APIを使用してGoogle AdWordsコネクタを作成する](../../tutorials/api/create/advertising/ads.md)
 - [Flow Service APIを使用して広告システムを調査する](../../tutorials/api/explore/advertising.md)
 - [Flow Service APIを使用して広告データを収集する](../../tutorials/api/collect/advertising.md)
 
-## UIを使用したGoogle AdWordsのプラットフォームへの接続
+## UIを使用したGoogle AdWordsのPlatformへの接続
 
 - [UIでのGoogle AdWordsソースコネクタの作成](../../tutorials/ui/create/advertising/ads.md)
 - [UIでの広告コネクタのデータフローの設定](../../tutorials/ui/dataflow/advertising.md)
