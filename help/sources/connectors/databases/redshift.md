@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Amazon Redshiftコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # （ベータ版）Amazon Redshiftコネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+>[!NOTE]
+>Amazon Redshiftコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-エクスペリエンスプラットフォームは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 プラットフォームは、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 Amazon Redshiftは、データベースプロバイダーをサポートします。
+Adobe Experience Platformを使用すると、Platformサービスを使用して、外部ソースからデータを取り込み、データの構造化、ラベル付け、および入力データの拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAmazon Redshiftをプラットフォームに接続する方法に関する情報を提供しています。
+Experience Platformは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 Platformは、リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 Amazon Redshiftは、データベースプロバイダーをサポートします。
 
-## APIを使用したAmazon Redshiftのプラットフォームへの接続
+以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAmazon RedshiftをPlatformに接続する方法に関する情報を提供しています。
+
+## APIを使用したPlatformへのAmazon Redshiftの接続
 
 - [Flow Service APIを使用してAmazon Redshiftコネクタを作成する](../../tutorials/api/create/databases/redshift.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用したAmazon Redshiftのプラットフォームへの接続
+## UIを使用してAmazon RedshiftをPlatformに接続する
 
 - [UIでのAmazon Redshiftソースコネクタの作成](../../tutorials/ui/create/databases/redshift.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
