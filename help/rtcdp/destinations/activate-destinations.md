@@ -4,10 +4,10 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 24e4746b28620210c138a1e803b6afadff79ab30
+source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
 workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 53%
+source-wordcount: '1019'
+ht-degree: 46%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 53%
 
 ## 前提条件 {#prerequisites}
 
-宛先へのデータをアクティブ化するには、[宛先が接続されている](/help/rtcdp/destinations/assets/connect-destination-1.png)必要があります。まだの場合は、[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)に移動し 、サポートされている宛先を参照して、1 つ以上の宛先を設定します。
+宛先へのデータをアクティブ化するには、[宛先が接続されている](/help/rtcdp/destinations/connect-destination.md)必要があります。まだの場合は、[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)に移動し 、サポートされている宛先を参照して、1 つ以上の宛先を設定します。
 
 ## データのアクティブ化 {#activate-data}
 
@@ -28,9 +28,19 @@ ht-degree: 53%
 宛先に対するアクティベーションフローが既に存在する場合は、その宛先に現在送信されているセグメントを確認できます。右側のレールで「**[!UICONTROL アクティベーションの編集]**」を選択し、以下の手順に従ってアクティベーションの詳細を変更します。
 3. **[!UICONTROL アクティブ化]**&#x200B;を選択します。
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
-   ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
+   ![segments-to-destination](/help/rtcdp/destinations/assets/email-select-segments.png)
 5. *オプション*&#x200B;この手順は、セグメントをアクティブ化する宛先のタイプによって異なります。 <br> *電子メールマーケティングの宛先* 、 *クラウドストレージの宛先については、属性を*&#x200B;選択 **[!UICONTROL ページで、]****** 新しいフィールドを選択し、宛先に送信する属性を選択します。
 属性の 1 つをユニオンスキーマの[一意の識別子](/help/rtcdp/destinations/email-marketing-destinations.md#identity)にすることをお勧めします。必須属性について詳しくは、「[電子メールマーケティングの宛先](/help/rtcdp/destinations/email-marketing-destinations.md#identity)」で「ID」を参照してください。
+
+   >[!NOTE]
+   > 
+   >データセット内の特定のフィールド（データセット全体ではなく）に対してデータ使用ラベルが適用されている場合、アクティベーション上でこれらのフィールドレベルのラベルが適用されるのは、次の条件の下です。
+   >* これらのフィールドは、セグメント定義で使用されます。
+   >* フィールドは、ターゲット先の投影属性として設定されます。
+
+   >
+   > 下のスクリーンショットを見てみましょう。 例えば、フィールドに、宛先のマーケティングの使用例と競合する特定のデータ使用ラベルが含まれ `person.name.first.Name` ている場合、レビュー手順（手順7）でデータ使用ポリシー違反が表示されます。 詳細については、「 [Data Governance in Real-time CDP」を参照してください。](/help/rtcdp/privacy/data-governance-overview.md#destinations)
+
    ![destination-attributes](/help/rtcdp/destinations/assets/select-attributes-step.png)
 
    <br> 
@@ -48,7 +58,7 @@ ht-degree: 53%
    ![IDとしての忠誠度ID](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Facebookの電子メールハッシュ要件 `Email_LC_SHA256` に従って、Adobe Experience Platformにデータを取り込む際に顧客の電子メールアドレスをハッシュ化した場合は、ターゲットIDとして選択 [します](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 Adobe Real-time CDPは、Facebookの要件に準拠するために電子メールアドレスをハッシュします。
+   Facebookの電子メールハッシュ要件 `Email_LC_SHA256` に従って、データ取り込み時にAdobe Experience Platformに顧客の電子メールアドレスをハッシュする場合は、ターゲットIDとして選択 [します](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 Adobe Real-time CDPは、Facebookの要件に準拠するために電子メールアドレスをハッシュします。
 
    ![フィールドへの入力後のIDマッピング](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -62,7 +72,17 @@ ht-degree: 53%
 
 7. 「**[!UICONTROL 確認]**」ページには、選択の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
+   >[!IMPORTANT]
+   >
+   >この手順では、リアルタイムCDPがデータ使用ポリシー違反をチェックします。 次に、ポリシー違反の例を示します。 セグメントアクティベーションのワークフローは、違反を解決するまで完了できません。 ポリシー違反の解決方法について詳しくは、「データ管理ドキュメント」の「 [ポリシーの適用](/help/rtcdp/privacy/data-governance-overview.md#enforcement) 」を参照してください。
+
+![confirm-selection](/help/rtcdp/destinations/assets/data-policy-violation.png)
+
+ポリシー違反が検出されなかった場合は、「 **[!UICONTROL Finish]** 」を選択して、選択を確定し、開始が宛先にデータを送信することを確認します。
+
 ![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
+
+
 
 ## アクティベーションの編集 {#edit-activation}
 
@@ -106,5 +126,3 @@ Facebookの場合、アクティベーションが成功すると、Facebookの�
 1. 左側のナビゲーションバーで「**[!UICONTROL 宛先]**」を選択し、「**[!UICONTROL 参照]**」タブをクリックして、宛先名をクリックします。
 2. 右側のレールの「**[!UICONTROL 有効]**」コントロールをクリックして、アクティベーションフローの状態を変更します。
 3. 「**データフロー状態の更新**」ウィンドウで、「**確認**」を選択してアクティベーションフローを無効にします。
-
-AWS Kinesisで、アクセスキー — 秘密アクセスキーペアを生成し、Adobe Real-time CDPにAWS Kinesisアカウントへのアクセスを許可します。 詳しくは、 [AWS Kinesisドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
