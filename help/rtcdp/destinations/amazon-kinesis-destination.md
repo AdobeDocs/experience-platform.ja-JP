@@ -4,7 +4,7 @@ seo-title: Amazon Kinesisの宛先
 description: Amazon Kinesisストレージへのリアルタイムのアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングします。
 seo-description: Amazon Kinesisストレージへのリアルタイムのアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 6%
@@ -23,7 +23,7 @@ ht-degree: 6%
 
 アマゾンウェブサービスによる [!DNL Kinesis Data Streams] サービスを使用すると、大量のデータレコードのストリームをリアルタイムで収集して処理できます。
 
-Adobe Experience Platformからのデータをストリーミングするために、 [!DNL Amazon Kinesis] ストレージへのリアルタイムのアウトバウンド接続を作成できます。
+Adobe Experience Platformからデータをストリーミングするために、 [!DNL Amazon Kinesis] ストレージへのリアルタイムの送信接続を作成できます。
 
 * 詳しくは、 [!DNL Amazon Kinesis]Amazonのドキュメント [を参照してください](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
 * API呼び出しを [!DNL Amazon Kinesis] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)。
@@ -44,20 +44,20 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For [!DNL Amazon Kinesis] destinations, enter the following information in the create destination workflow:
 
-### アカウントステップ内 {#account-step}
+### 認証手順の {#authentication-step}
 
 * **アマゾンウェブサービスのアクセスキーと秘密鍵**: で、アクセスキー — 秘密アクセスキーペアを生成 [!DNL Amazon Web Services]して、アドビのリアルタイムCDPアクセスを [!DNL Amazon Kinesis] アカウントに付与します。 詳しくは、 [アマゾンウェブサービスドキュメントを参照してください](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
 * **region**: データをストリーミングする [!DNL Amazon Web Services] 領域を指定します。
 
 ![アカウント手順の入力フィールド](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
 
-### 認証手順の {#authentication-step}
+### 設定手順で {#setup-step}
 
 * **名前**: 接続先の名前を指定 [!DNL Amazon Kinesis]
 * **説明**: への接続の説明を入力し [!DNL Amazon Kinesis]ます。
 * **stream**: アカウント内の既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。
 
-![認証手順の入力フィールド](/help/rtcdp/destinations/assets/aws-kinesis-authentication-step.png)
+![認証手順の入力フィールド](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
 <!--
 
@@ -73,7 +73,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ## 書き出されたデータ {#exported-data}
 
-書き出したエクスペリエンスプラットフォームのデータは、JSON形式 [!DNL Amazon Kinesis] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
+書き出されたExperience PlatformデータはJSON形式 [!DNL Amazon Kinesis] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
 
 ```
 {
