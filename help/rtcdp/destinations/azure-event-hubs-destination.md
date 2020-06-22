@@ -1,10 +1,10 @@
 ---
 title: （ベータ版）Azureイベントハブの宛先
 seo-title: （ベータ版）Azureイベントハブの宛先
-description: Azureイベントハブストレージへのリアルタイムのアウトバウンド接続を作成して、エクスペリエンスプラットフォームからデータをストリーミングします。
-seo-description: Azureイベントハブストレージへのリアルタイムのアウトバウンド接続を作成して、エクスペリエンスプラットフォームからデータをストリーミングします。
+description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
+seo-description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 6%
@@ -22,7 +22,7 @@ ht-degree: 6%
 
 [!DNL Azure Event Hubs] は、大規模なデータストリーミングプラットフォームおよびイベント取り込みサービスです。 1秒あたり数百万個のイベントを受信し、処理できます。 イベントハブに送信されたデータは、任意のリアルタイム分析プロバイダーまたはバッチ/ストレージアダプターを使用して、変換および保存できます。
 
-Adobe Experience Platformからのデータをストリーミングするために、 [!DNL Azure Event Hubs] ストレージへのリアルタイムのアウトバウンド接続を作成できます。
+Adobe Experience Platformからデータをストリーミングするために、 [!DNL Azure Event Hubs] ストレージへのリアルタイムの送信接続を作成できます。
 
 * 詳細については、 [!DNL Azure Event Hubs]Microsoftのマニュアルを参照してください [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)。
 * API呼び出しを [!DNL Azure Event Hubs] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)。
@@ -42,20 +42,20 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For [!DNL Azure Event Hubs] destinations, enter the following information in the create destination workflow:
 
-### アカウントステップ内 {#account-step}
+### 認証手順の {#authentication-step}
 
 * **[!UICONTROL SASキー名]** と **[!UICONTROL SASキー]**: SASキーの名前とキーを入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
 * **[!UICONTROL 名前空間]**: 名前空間を入力し [!DNL Azure Event Hubs] ます。 [!DNL Azure Event Hubs] Microsoftのドキュメントで [名前空間について説明します](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
 
-![認証手順で必要な入力](/help/rtcdp/destinations/assets/event-hubs-account-step.png)
+![認証手順で必要な入力](/help/rtcdp/destinations/assets/event-hubs-authentication.png)
 
-### 認証手順の {#authentication-step}
+### 設定手順で {#setup-step}
 
 * **[!UICONTROL 名前]**: 接続先の名前を入力し [!DNL Azure Event Hubs]ます。
 * **[!UICONTROL 説明]**: 接続の説明を入力します。  例： 「Premium tier customers」、「Osins in kitesurfing」
 * **[!UICONTROL eventHubName]**: 目的のストリームの名前を指定し [!DNL Azure Event Hubs] ます。
 
-![設定手順で必要なデータ](/help/rtcdp/destinations/assets/event-hubs-authentication-step.png)
+![設定手順で必要なデータ](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
 
 ## セグメントのアクティブ化 {#activate-segments}
 
@@ -64,7 +64,7 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 
 ## 書き出されたデータ {#exported-data}
 
-書き出したエクスペリエンスプラットフォームのデータは、JSON形式 [!DNL Azure Event Hubs] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
+書き出されたExperience PlatformデータはJSON形式 [!DNL Azure Event Hubs] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
 
 ```
 {
