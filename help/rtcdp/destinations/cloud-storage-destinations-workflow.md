@@ -4,10 +4,10 @@ seo-title: クラウドストレージの宛先ワークフロー
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 37c51435ce8330dbd61857bda408df03ff21a491
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 67%
+source-wordcount: '503'
+ht-degree: 49%
 
 ---
 
@@ -31,13 +31,22 @@ ht-degree: 67%
    ![クラウドストレージの宛先 - 認証手順](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
 3. 「 **[!UICONTROL 設定]** 」( **[!UICONTROL Setup]** )手順で、アクティベーションフローの **[!UICONTROL 名前]** (Name)と説明(Description)を入力します。 <br>
+また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 アドビ定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 アドビが定義した個々のマーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>
 Amazon S3の宛先の場合は、ファイルが配信されるクラウドストレージーの宛先に **[!UICONTROL バケット名]** と **[!UICONTROL フォルダーパス]** を挿入します。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
-   ![Amazon S3クラウドのストレージ先への接続 — 認証手順](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+   ![Amazon S3クラウドのストレージ先への接続 — 認証手順](/help/rtcdp/destinations/assets/amazon-s3-setup-step.png)
 
-   SFTPの送信先の場合は、ファイルが配信される **[!UICONTROL フォルダーパス]** を挿入します。
+   SFTPの送信先の場合は、ファイルが配信される **[!UICONTROL フォルダーパス]** を挿入します。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
    ![SFTPクラウドのストレージ先に接続 — 認証手順](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+   Amazon Kinesisの宛先の場合は、ア [!DNL Amazon Kinesis] カウント内の既存のデータストリームの名前を指定します。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+
+   ![Kinesisクラウドストレージの宛先への接続 — 認証手順](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
+
+   Azureイベントハブの宛先の場合は、ア [!DNL Amazon Kinesis] カウント内の既存のデータストリームの名前を指定します。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+
+   ![Kinesisクラウドストレージの宛先への接続 — 認証手順](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
 4. これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択できます。または、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow to export data.
 
