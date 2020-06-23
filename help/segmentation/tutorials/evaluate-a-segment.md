@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セグメントの評価
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
 workflow-type: tm+mt
 source-wordcount: '2841'
 ht-degree: 2%
@@ -18,26 +18,26 @@ ht-degree: 2%
 
 ## はじめに
 
-このチュートリアルでは、オーディエンスセグメントの作成に関連する様々なAdobe Experience Platformサービスについて、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、オーディエンスセグメントの作成に関連する様々なAdobe Experience Platformサービスについて、十分な理解が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [Adobe Experience Platform Segmentation Service](../home.md): リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
-- [Experience Data Model(XDM)](../../xdm/home.md): プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [Adobe Experience Platformセグメントサービス](../home.md): リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
+- [Experience Data Model(XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### 必須ヘッダー
 
-また、このチュートリアルでは、プラットフォームAPIの呼び出しを正常に行うために、 [認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があります。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+また、PlatformAPIの呼び出しを正しく行うために、 [認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があります。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへの要求には、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへの要求には、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE] Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 すべてのPOST、PUT、およびPATCHリクエストには、次の追加のヘッダーが必要です。
 
@@ -51,7 +51,7 @@ ht-degree: 2%
 
 まだ「Real-time Customer Definition API [」チュートリアルを完了していない場合、または「](./create-a-segment.md) Segment Builderを使用してセグメントプロファイルを作成している場合は、このチュートリアルに進む前に作成してください [](../ui/overview.md)。
 
-## 評価の予定
+## 評価の予定 {#scheduled-evaulation}
 
 定期評価を通じて、IMS組織は定期的なスケジュールを作成し、エクスポートジョブを自動的に実行できます。
 
@@ -413,7 +413,7 @@ curl -X GET \
 
 ## セグメント結果の解釈
 
-セグメントジョブが正常に実行されると、セグメントに含まれるプロファイルごとに `segmentMembership` マップが更新されます。 `segmentMembership` また、評価済みのオーディエンスセグメントをPlatformに取り込んで保存し、Adobeオーディエンスマネージャーなどの他のソリューションとの統合を可能にします。
+セグメントジョブが正常に実行されると、セグメントに含まれるプロファイルごとに `segmentMembership` マップが更新されます。 `segmentMembership` また、評価済みのオーディエンスセグメントをPlatformに取り込んで保存し、Adobe Audience Managerなどの他のソリューションと統合することもできます。
 
 次の例は、個々のプロファイルレコードの `segmentMembership` 属性がどのように表示されるかを示しています。
 
@@ -475,7 +475,7 @@ curl -X GET \
 必要なデータセットを作成する方法は2つあります。
 
 - **APIの使用：** このチュートリアルでは、Catalog APIを使用してXDM Individualプロファイル和集合スキーマを参照するデータセットを作成する方法について説明します。
-- **UIの使用：** Adobe Experience Platformユーザーインターフェイスを使用して和集合スキーマを参照するデータセットを作成するには、 [UIチュートリアルの手順に従って](../ui/overview.md) 、このチュートリアルに戻り、オーディエンスプロファイルの [生成手順に進みます](#generate-xdm-profiles-for-audience-members)。
+- **UIの使用：** Adobe Experience Platformのユーザーインターフェイスを使用して和集合スキーマを参照するデータセットを作成するには、 [UIチュートリアルの手順に従って](../ui/overview.md) 、このチュートリアルに戻り、オーディエンスプロファイルの [生成手順に進みます](#generate-xdm-profiles-for-audience-members)。
 
 互換性のあるデータセットが既に存在し、そのIDがわかっている場合は、オーディエンスプロファイルの [生成手順に直接進むことができます](#generate-xdm-profiles-for-audience-members)。
 
@@ -604,7 +604,7 @@ curl -X POST \
 | `filter.segments.segmentId` | **(使用する場合は必須`segments`)** プロファイルのセグメントIDをエクスポートします。 |
 | `filter.segments.segmentNs` | *（オプション）* 指定したのセグメント名前空間 `segmentID`。 |
 | `filter.segments.status` | *（オプション）* 、のステータスフィルタを提供する文字列の配列 `segmentID`。 デフォルトでは、 `status` は、現在の時間にセグメントに含まれるすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。 使用できる値は次のとおりです。 `"realized"`、 `"existing"`および `"exited"`。 |
-| `filter.segmentQualificationTime` | *（オプション）* 、セグメント資格時間に基づいてフィルターします。 開始時刻及び/又は終了時刻を提供することができる。 |
+| `filter.segmentQualificationTime` | *（オプション）* 、セグメント資格時間に基づいてフィルターします。 開始時間及び/又は終了時間を提供することができる。 |
 | `filter.segmentQualificationTime.startTime` | *（オプション）* 特定のステータスのセグメントIDに対するセグメント資格開始時間。 これは指定されていません。セグメントID資格の開始時間に対するフィルターはありません。 タイムスタンプは、 [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
 | `filter.segmentQualificationTime.endTime` | *（オプション）* 特定のステータスのセグメントIDに対するセグメントクオリフィケーションの終了時間。 これは指定されていません。セグメントID資格の終了時間にフィルターは適用されません。 タイムスタンプは、 [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
 | `filter.fromIngestTimestamp` | *（オプション）* 、書き出すプロファイルに、このタイムスタンプの後に更新されたアイテムのみが含まれるように制限します。 タイムスタンプは、 [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
@@ -951,10 +951,10 @@ curl -X GET \
 
 ## 次の手順
 
-書き出しが正常に完了すると、データはExperience PlatformのData Lake内で使用できます。 その後、 [データアクセスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) (Data Access API)を使用して `batchId` 、エクスポートに関連付けられたを使用してデータにアクセスできます。 セグメントのサイズに応じて、データはチャンクになり、バッチは複数のファイルで構成される場合があります。
+エクスポートが正常に完了すると、Experience Platformのデータレーク内でデータを使用できます。 その後、 [データアクセスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) (Data Access API)を使用して `batchId` 、エクスポートに関連付けられたを使用してデータにアクセスできます。 セグメントのサイズに応じて、データはチャンクになり、バッチは複数のファイルで構成される場合があります。
 
 Data Access APIを使用してバッチファイルにアクセスし、ダウンロードする手順については、「 [データアクセス](../../data-access/tutorials/dataset-data.md)」チュートリアルに従ってください。
 
-また、Adobe Experience Platformクエリサービスを使用して、正常に書き出されたセグメントデータにアクセスすることもできます。 クエリサービスでは、UIまたはRESTful APIを使用して、データレーク内のデータに対してクエリの書き込み、検証、および実行を行うことができます。
+Adobe Experience Platformクエリサービスを使用して、正常にエクスポートされたセグメントデータにアクセスすることもできます。 クエリサービスでは、UIまたはRESTful APIを使用して、データレーク内のデータに対してクエリの書き込み、検証、および実行を行うことができます。
 
 オーディエンスデータのクエリ方法の詳細については、 [クエリサービスのドキュメントを参照してください](../../query-service/home.md)。
