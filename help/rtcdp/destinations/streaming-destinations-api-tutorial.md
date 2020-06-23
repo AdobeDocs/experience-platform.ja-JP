@@ -4,21 +4,21 @@ solution: Experience Platform
 title: ストリーミング送信先への接続とデータのアクティブ化
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
+source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1857'
 ht-degree: 2%
 
 ---
 
 
-# APIを使用して、ストリーミング送信先に接続し、アドビのリアルタイム顧客データプラットフォームでデータをアクティブにします。
+# APIを使用して、ストリーミング送信先に接続し、アドビのリアルタイム顧客データPlatformでデータをアクティブにします。
 
 >[!NOTE]
 >
 >Adobe Real-time CDP [!DNL Amazon Kinesis][!DNL Azure Event Hubs] の宛先と宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-このチュートリアルでは、API呼び出しを使用してAdobe Experience Platformデータに接続し、ストリーミングクラウドストレージ先([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) または [Azureイベントハブ](/help/rtcdp/destinations/azure-event-hubs-destination.md))に接続し、新しく作成した宛先にデータフローを作成し、新しく作成した宛先にデータをアクティブ化する方法を説明します。
+このチュートリアルでは、API呼び出しを使用してAdobe Experience Platformデータに接続し、ストリーミングクラウドストレージ先([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) または [Azureイベントハブ](/help/rtcdp/destinations/azure-event-hubs-destination.md))に接続する方法、新しく作成した宛先にデータフローを作成する方法、新しく作成した宛先にデータをアクティブ化する方法を説明します。
 
 このチュートリアルでは、すべての例で [!DNL Amazon Kinesis] 宛先を使用しますが、手順はで同じで [!DNL Azure Event Hubs]す。
 
@@ -28,11 +28,11 @@ ht-degree: 2%
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-* [カタログサービス](../../catalog/home.md): カタログは、エクスペリエンスプラットフォーム内のデータの場所と系列の記録システムです。
-* [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [カタログサービス](../../catalog/home.md): カタログは、Experience Platform内のデータの場所と系列の記録システムです。
+* [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 Adobe Real-time CDPのストリーミング宛先に対するデータをアクティブ化するために知っておく必要がある追加情報について、以下の節で説明します。
 
@@ -45,22 +45,22 @@ Adobe Real-time CDPのストリーミング宛先に対するデータをアク�
 
 ### サンプルAPI呼び出しの読み取り {#reading-sample-api-calls}
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必須ヘッダーと任意選択ヘッダーの値の収集 {#gather-values}
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](/help/tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](/help/tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのリソースは、特定の仮想サンドボックスに分離できます。 プラットフォームAPIへのリクエストでは、操作を実行するサンドボックスの名前とIDを指定できます。 これらはオプションのパラメーターです。
+Experience Platform内のリソースは、特定の仮想サンドボックスに分離できます。 PlatformAPIへのリクエストでは、操作を実行するサンドボックスの名前とIDを指定できます。 これらはオプションのパラメーターです。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!N注意]
->エクスペリエンスプラットフォームのサンドボックスについて詳しくは、 [サンドボックスの概要に関するドキュメントを参照してください](../../sandboxes/home.md)。
+>Experience Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべての要求には、追加のメディアタイプヘッダーが必要です。
 
@@ -68,7 +68,7 @@ Adobe Real-time CDPのストリーミング宛先に対するデータをアク�
 
 ### Swaggerドキュメント {#swagger-docs}
 
-Swaggerのこのチュートリアルでは、すべてのAPI呼び出しに関する付属のリファレンスドキュメントを参照できます。 https://platform.adobe.io/data/foundation/flowservice/swagger#/を参照してください。 このチュートリアルとSwaggerのドキュメントページを並行して使用することをお勧めします。
+Swaggerのこのチュートリアルでは、すべてのAPI呼び出しに関する付属のリファレンスドキュメントを参照できます。 Adobe.ioの [Flow Service APIドキュメントを参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。 このチュートリアルとSwaggerのドキュメントページを並行して使用することをお勧めします。
 
 ## 使用可能なストリーミング先のリストの取得 {#get-the-list-of-available-streaming-destinations}
 
@@ -114,17 +114,17 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 }
 ```
 
-## エクスペリエンスプラットフォームデータに接続する {#connect-to-your-experience-platform-data}
+## Experience Platformデータに接続する {#connect-to-your-experience-platform-data}
 
 ![宛先手順の概要手順2](/help/rtcdp/destinations/assets/step2-create-streaming-destination-api.png)
 
-次に、Experience Platformデータに接続し、プロファイルデータを書き出して、目的のデータを書き出し先でアクティブ化できるようにする必要があります。 これは、次に説明する2つのサブステップで構成されます。
+次に、Experience Platformデータに接続し、プロファイルデータを書き出して、希望の場所でアクティブにできるようにする必要があります。 これは、次に説明する2つのサブステップで構成されます。
 
-1. まず、ベース接続を設定して、エクスペリエンスプラットフォームでのデータへのアクセスを許可するための呼び出しを実行する必要があります。
-2. 次に、ベース接続IDを使用して、別の呼び出しを行い、ソース接続を作成して、エクスペリエンスプラットフォームデータとの接続を確立します。
+1. まず、ベース接続を設定して、Experience Platformでのデータへのアクセスを許可する呼び出しを実行する必要があります。
+2. 次に、ベース接続IDを使用して別の呼び出しを行い、ソース接続を作成して、Experience Platformデータとの接続を確立します。
 
 
-### エクスペリエンスプラットフォームでのデータへのアクセスを許可する
+### Experience Platform内のデータへのアクセスを許可する
 
 **API形式**
 
@@ -164,7 +164,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### エクスペリエンスプラットフォームデータに接続する
+### Experience Platformデータに接続する
 
 **API形式**
 
@@ -201,7 +201,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答**
 
-正常な応答は、新しく作成されたUnified Connection Serviceへのソース接続の固有な識別子(`id`)を返します。 これにより、エクスペリエンスプラットフォームのデータに正常に接続できたことが確認できます。 この値は、後の手順で必要となる場合に格納します。
+正常な応答は、新しく作成されたUnified Connection Serviceへのソース接続の固有な識別子(`id`)を返します。 これにより、Experience Platformデータに正常に接続できたことが確認されます。 この値は、後の手順で必要となる場合に格納します。
 
 ```json
 {
@@ -335,7 +335,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 ![宛先手順の概要：手順4](/help/rtcdp/destinations/assets/step4-create-streaming-destination-api.png)
 
-前の手順で取得したIDを使用して、Experience Platformデータと、データをアクティブ化する先との間にデータフローを作成できるようになりました。 この手順は、後でデータが流れるパイプラインを構築し、エクスペリエンスプラットフォームと目的の宛先の間に行くことと考えてください。
+前の手順で取得したIDを使用して、Experience Platformデータと、データをアクティブ化する宛先との間にデータフローを作成できるようになりました。 この手順は、後でデータが流れるパイプラインをExperience Platformと目的の宛先の間に構築することと考えてください。
 
 データフローを作成するには、以下に示すように、ペイロード内で以下に示す値を指定しながら、POSTリクエストを実行します。
 
@@ -375,7 +375,7 @@ curl -X POST \
 ```
 
 * `{FLOW_SPEC_ID}`: プロファイルベースの宛先のフロー仕様IDはで `71471eba-b620-49e4-90fd-23f1fa0174d8`す。 この値は呼び出しで使用します。
-* `{SOURCE_CONNECTION_ID}`: 手順「エクスペリエンスプラットフォームへの [接続」で取得したソース接続IDを使用します](#connect-to-your-experience-platform-data)。
+* `{SOURCE_CONNECTION_ID}`: 手順「Experience Platformへの [接続」で取得したソース接続IDを使用します](#connect-to-your-experience-platform-data)。
 * `{TARGET_CONNECTION_ID}`: 「ストリーミング宛先への [接続」の手順で取得したターゲット接続IDを使用します](#connect-to-streaming-destination)。
 
 **応答**
