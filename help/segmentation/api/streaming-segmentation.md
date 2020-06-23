@@ -4,49 +4,47 @@ solution: Experience Platform
 title: ストリーミングセグメント
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 2%
+source-wordcount: '1343'
+ht-degree: 1%
 
 ---
 
 
-# ストリーミングセグメント（ベータ版）を使用してイベントをリアルタイムで評価します。
+# ストリーミングセグメント化により、ほぼリアルタイムでイベントを評価
 
->[!NOTE] ストリーミングセグメントはベータ版機能で、ご要望に応じてご利用いただけます。
-
-ストリーミングセグメント(継続的なクエリ評価とも呼ばれます)は、イベントが特定のセグメントグループに入った直後に顧客を即座に評価する機能です。 この機能により、ほとんどのセグメントルールをAdobe Experience Platformに渡すデータと同時に評価できるようになりました。つまり、セグメント化ジョブをスケジュールせずに、セグメントのメンバーシップが最新の状態に維持されます。
+セグメント化のストリーミング [!DNL Adobe Experience Platform] により、お客様はデータの豊富性に重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、データが到着する際にセグメントの認定が行われ、セグメント化ジョブのスケジュール [!DNL Platform]や実行の必要性が軽減されました。 この機能を使用すると、ほとんどのセグメントルールをデータが渡されると評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメントジョブを実行しなくても最新の状態に維持されます。 [!DNL Platform]
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 ## はじめに
 
-この開発者ガイドでは、ストリーミングのセグメント化に関連する様々なAdobe Experience Platformサービスについて、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+この開発者ガイドでは、ストリーミングセグメント化に関連する様々な [!DNL Adobe Experience Platform] サービスについて、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
-- [セグメント](../home.md): リアルタイムの顧客プロファイルデータからセグメントやオーディエンスを作成できます。
-- [Experience Data Model(XDM)](../../xdm/home.md): プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
+- [!DNL Segmentation](../home.md): データからセグメントやオーディエンスを作成する機能を提供し [!DNL Real-time Customer Profile] ます。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
-以下の節では、プラットフォームAPIの呼び出しを正常に行うために知っておく必要がある追加情報について説明します。
+以下の節では、APIの呼び出しを正常に行うために知っておく必要がある追加情報について説明し [!DNL Platform] ます。
 
 ### サンプルAPI呼び出しの読み取り
 
-この開発者ガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+この開発者ガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE] のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -54,22 +52,39 @@ ht-degree: 2%
 
 特定のリクエストを完了するには、追加のヘッダーが必要になる場合があります。 このドキュメントの各例には、正しいヘッダーが表示されます。 必要なヘッダーがすべて含まれていることを確認するため、サンプルリクエストには特に注意してください。
 
-### ストリーミングセグメント化が有効なクエリタイプ
+### ストリーミングセグメント化が有効なクエリタイプ {#streaming-segmentation-query-types}
 
-次の表に、様々なタイプのセグメントクエリと、ストリーミングセグメントをサポートしているかどうかをリストします。
+>[!NOTE] ストリーミングセグメントを機能させるには、組織でスケジュールされたセグメント化を有効にする必要があります。 スケジュール済みセグメントを有効にする方法については、「スケジュール済みセグメントを [有効にする」の節を参照してください。](#enable-scheduled-segmentation)
 
-| クエリ型 | サンプルクエリ | ストリーミングセグメントのサポート |
-| ---------- | ------------ | --------------------------------- |
-| 単純人口統計 | 「カナダに住所を持つ人を全員教えて下さい」 | サポート |
-| 時系列イベント | 「Lightroomをダウンロードしたすべての人を教えてください。」 | サポート |
-| 人口統計と時系列 | 「カナダに住んで、過去30日間に注文した人を全員私にくれ」 | サポート |
-| イベントの欠如 | 「2日以内に別々の買い物かごを2つ捨てた人を全員私にくれ」 | サポート |
-| マルチエンティティ | 「エンタイトルメントのタイプが「エクスペリエンス」である人を全員教えてください」 | サポートなし |
-| 高度なPQL関数 | 「先週注文したプロファイルを全部教えて、購入したすべての製品のSKUと名前を含めてください。」 | サポートなし |
+ストリーミングセグメントを使用してセグメントを評価するには、クエリが次のガイドラインに従う必要があります。
 
-## すべてのストリーミングセグメント化が有効なセグメントの取得
+| クエリ型 | 詳細 |
+| ---------- | ------- |
+| 受信ヒット | 時間制限のない、単一の着信イベントを参照するセグメント定義。 |
+| 相対時間枠内での着信ヒット | 過去7日間に発生した単一のイベントを参照す **るセグメント定義**。 |
+| プロファイルを参照する着信ヒット | 時間制限のない、1つの着信イベント、および1つ以上のプロファイル属性を参照するセグメント定義。 |
+| 相対的な時間枠内のプロファイルを参照する着信ヒット | 過去7日間の、1つの着信イベントと1つ以上のプロファイル属性を参照す **るセグメント定義**。 |
+| プロファイルを参照する複数のイベント | 過去24時間以内に複数のイベントを参照するセグメント定義 **には** 、1つ以上のプロファイル属性が含まれます。 |
 
-新しいストリーミング対応セグメントを作成する前、または既存のセグメントをストリーミング対応に更新する前に、すべてのストリーミング対応セグメントのリストを取得して、情報が重複していないことを確認してください。
+次の節では、ストリーミングセグメントに対して **有効にしないリストセグメント定義の例を示します** 。
+
+| クエリ型 | 詳細 |
+| ---------- | ------- | 
+| 相対時間枠内での着信ヒット | セグメント定義が、 **過去7日間** 以内でない着信イベントを参照する場合 ****。 例えば、 **過去2週間以内の場合**。 |
+| 相対的なウィンドウ内のプロファイルを参照する着信ヒット | 次のオプションは、ストリーミングセグメントをサポートし **ません** 。<ul><li>過去7日間 **以** 内の着信イベント ****。</li><li>Adobe Audience Manager(AAM)のセグメントまたは特性を含むセグメント定義。</li></ul> |
+| プロファイルを参照する複数のイベント | 次のオプションは、ストリーミングセグメントをサポートし **ません** 。<ul><li>過去24時間以内に **発生しないイベント******。</li><li>Adobe Audience Manager(AAM)のセグメントまたは特性を含むセグメント定義。</li></ul> |
+| マルチエンティティクエリ | マルチエンティティクエリは、全体として、ストリーミングセグメントでは **サポートされていません** 。 |
+
+さらに、ストリーミングセグメント化を行う際には、次のようなガイドラインが適用されます。
+
+| クエリ型 | ガイドライン |
+| ---------- | -------- |
+| 単一イベントクエリ | ルックバックウィンドウは **7日間に制限されています**。 |
+| イベント履歴のあるクエリ | <ul><li>ルックバックウィンドウは **1日に制限されます**。</li><li>イベント間に厳密な時間順序条件 **が存在する** 。</li><li>イベント間の単純な時間順（前後）のみが許可されます。</li><li>個々のイベント **を無効にすることはできません** 。 ただし、クエリ全体を無効にす **ることはできます** 。</li></ul> |
+
+## ストリーミングセグメントで有効になっているすべてのセグメントを取得
+
+エンドポイントにGETリクエストを行うことで、IMS組織内でストリーミングセグメント化が有効になっているすべてのセグメントのリストを取得でき `/segment/definitions` ます。
 
 **API形式**
 
@@ -88,7 +103,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME'
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **応答**
@@ -182,7 +197,7 @@ curl -X GET \
 
 ## ストリーミングが有効なセグメントの作成
 
-作成するセグメントが存在しないことを確認したら、ストリーミングセグメントを有効にする新しいセグメントを作成できます。
+上記のいずれかのストリー [ミングセグメントタイプと一致する場合、セグメントは自動的にストリーミングが有効になります](#streaming-segmentation-query-types)。
 
 **API形式**
 
@@ -191,8 +206,6 @@ POST /segment/definitions
 ```
 
 **リクエスト**
-
-次のリクエストは、ストリーミングセグメント化が有効な新しいセグメントを作成します。 Note that the `continuous` section is set to `enabled: true`.
 
 ```shell
 curl -X POST \
@@ -213,22 +226,11 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
     }
 }'
 ```
 
->[!NOTE] これは、標準の「セグメントを作成」リクエストで、 `continuous` セクションのパラメーターがに設定され `enabled: true`ます。 セグメント定義の作成の詳細については、セグメント作成に関するドキュメントを参照して [ください](../tutorials/create-a-segment.md)。
+>[!NOTE] これは、標準の「セグメントの作成」リクエストです。 セグメント定義の作成の詳細については、セグメントの [作成に関するチュートリアルを参照してください](../tutorials/create-a-segment.md)。
 
 **応答**
 
@@ -272,174 +274,9 @@ curl -X POST \
 }
 ```
 
-## ストリーミングセグメント用の既存のセグメントの有効化
+## スケジュールされた評価の有効化 {#enable-scheduled-segmentation}
 
-セグメント定義のIDをPATCHリクエストのパスに指定することで、既存のセグメントを有効にしてセグメントをストリーミングできます。 さらに、このPATCHリクエストのペイロードには、既存のセグメント定義の完全な詳細を含める必要があります。これは、該当するセグメント定義にGETリクエストを行うことでアクセスできます。
-
-### 既存のセグメント定義の検索
-
-既存のセグメント定義を検索するには、GETリクエストのパスに既存のセグメント定義のIDを指定する必要があります。
-
-**API形式**
-
-```http
-GET /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | 検索するセグメント定義のID。 |
-
-**リクエスト**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004\
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答**
-
-正常に応答すると、リクエストしたセグメント定義の詳細が返されます。
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "sandbox": {
-        "sandboxId": "",
-        "sandboxName": "",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": false
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}
-```
-
->[!NOTE] 次のリクエストでは、この応答で返されたセグメント定義の完全な詳細が必要になります。 この応答の詳細をコピーして、次の要求の本文に使用してください。
-
-### ストリーミングセグメント用の既存のセグメントの有効化
-
-更新するセグメントの詳細がわかったら、PATCHリクエストを実行してセグメントを更新し、ストリーミングセグメントを有効にできます。
-
-**API形式**
-
-```http
-PATCH /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-**リクエスト**
-
-次のリクエストのペイロードは、( [前の手順で取得した](#look-up-an-existing-segment-definition))セグメント定義の詳細を指定し、その `continuous.enabled` プロパティをに変更して更新しま `true`す。
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -d '{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}'
-```
-
-**応答**
-
-正常に完了すると、新しく更新されたセグメント定義の詳細が返されます。
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "ttlInDays": 30,
-    "imsOrgId": "4A21D36B544916100A4C98A7@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    },
-    "creationTime": 1572029711000,
-    "updateEpoch": 1572029712000,
-    "updateTime": 1572029712000
-}
-```
-
-## スケジュールされた評価の有効化
-
-ストリーミング評価を有効にしたら、ベースラインを作成する必要があります（ベースラインを作成した後、セグメントは常に最新の状態になります）。 これはシステムによって自動的に行われますが、ベースライン設定を行うには、スケジュールされた評価（スケジュールされたセグメント化とも呼ばれます）を最初に有効にする必要があります。
-
-スケジュール済みセグメントを使用すると、IMS組織で繰り返しスケジュールを作成して、セグメントを評価するために書き出しジョブを自動的に実行できます。
+ストリーミング評価を有効にしたら、ベースラインを作成する必要があります（ベースラインを作成した後、セグメントは常に最新の状態になります）。 システムが自動的にベースライン設定を実行するには、スケジュールされた評価（「スケジュールされたセグメント化」とも呼ばれます）を有効にする必要があります。 スケジュール済みセグメントを使用すると、IMS組織は繰り返しのスケジュールに従って、セグメントを評価するために書き出しジョブを自動的に実行できます。
 
 >[!NOTE] スケジュールされた評価は、XDM個別プロファイル用に最大5個のマージポリシーを持つサンドボックスに対して有効にできます。 1つのSandbox環境内にXDM個々のプロファイル用に5つ以上のマージポリシーがある場合、スケジュールされた評価を使用できません。
 
@@ -552,6 +389,6 @@ curl -X POST \
 
 ## 次の手順
 
-これで、新しいセグメントと既存のセグメントの両方をストリーミングセグメント用に有効にし、スケジュールされたセグメントを有効にしてベースラインを作成し、定期的な評価を実行できるようになりました。
+これで、新しいセグメントと既存のセグメントの両方をストリーミングセグメント用に有効にし、スケジュール済みのセグメントを有効にしてベースラインを作成し、定期的な評価を実行できるようになりました。
 
-Adobe Experience Platformユーザーインターフェイスを使用して、同様のアクションを実行し、セグメントを操作する方法については、 [セグメントビルダーユーザーガイドを参照してください](../ui/overview.md)。
+Adobe Experience Platformのユーザーインターフェイスを使用して、同様の操作を実行し、セグメントを操作する方法については、 [セグメントビルダーユーザーガイドを参照してください](../ui/overview.md)。
