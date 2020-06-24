@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セグメントビルダーのUIガイド
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
 source-wordcount: '2562'
 ht-degree: 0%
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## ストリーミングセグメント
+## ストリーミングセグメント {#streaming-segmentation}
 
 >[!NOTE] ストリーミングセグメントを機能させるには、お客様が組織でスケジュール済みのセグメントを有効にする必要があります。 スケジュールされたセグメント化を有効にする方法の詳細については、このユーザーガイド [の前の節を参照してください](#enable-scheduled-segmentation)。
 
