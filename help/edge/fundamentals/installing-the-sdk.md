@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK：SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します
 seo-description: Experience Platform Web SDK のインストール方法について説明します
 translation-type: tm+mt
-source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
+source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '571'
 ht-degree: 87%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 87%
 
 # SDK のインストール
 
-AEP Web SDKは、CDN上で使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
+Adobe Experience PlatformWeb SDKは、コンテンツ配信ネットワーク(CDN)で使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
 
 [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
