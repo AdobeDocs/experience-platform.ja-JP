@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントのチュートリアル
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '556'
 ht-degree: 5%
 
 ---
@@ -36,10 +36,7 @@ Adobe Experience Platformを使用すると、複数のソースからデータ�
 
 リアルタイム顧客プロファイルで使用できるセグメントは、セグメント定義内にマージポリシーIDを含みます。 このマージポリシーには、セグメントに含めるデータセットに関する情報が含まれ、そのデータセットには該当するデータ使用ラベルが含まれます。 オーディエンスセグメントに対するデータ使用量の準拠の適用に関する具体的な手順については、セグメントの [データ使用量準拠の実施チュートリアルに従ってください](../segmentation/tutorials/governance.md)。
 
-## （ベータ版）ストリーミングセグメント
-
->[!NOTE]
->ストリーミングセグメントはベータ版で、ご要望に応じてご利用いただけます。 機能とドキュメントは、変更されることがあります。
+## ストリーミングセグメント
 
 ストリーミングセグメント化機能は、イベントが特定のセグメントグループに入った直後に顧客を即座に評価する機能です。 この機能を使用すると、ほとんどのセグメントルールをAdobe Experience Platformに渡す際に評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメント化ジョブを実行せずに最新の状態に維持されます。 詳しくは、 [ストリーミングセグメントの概要](../segmentation/api/streaming-segmentation.md)。
 
