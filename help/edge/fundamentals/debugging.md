@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK のデバッグ
 description: Experience Platform Web SDK のデバッグを切り替える方法について説明します
 seo-description: Experience Platform Web SDK のデバッグを切り替える方法について説明します
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 100%
+source-wordcount: '324'
+ht-degree: 91%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 デバッグが有効になっている場合、SDK は、実装のデバッグや SDK の動作の理解に役立つメッセージをブラウザーコンソールに出力します。また、デバッグをおこなうと、設定したスキーマに対して収集されるデータの、サーバーサイド同期検証がおこなわれます。
 
-デバッグはデフォルトで無効になっていますが、次の 3 つの方法で切り替えることができます。
+デバッグはデフォルトで無効になっていますが、次の3つの方法でオンに切り替えることができます。
 
 * `configure` コマンド
 * `setDebug` コマンド
@@ -34,7 +34,8 @@ alloy("configure", {
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >自分のブラウザーだけでなく、Web ページのすべてのユーザーに対するデバッグを可能にします。
 
 ## debug コマンドを使用したデバッグの切り替え
@@ -61,7 +62,7 @@ http://example.com/?alloy_debug=true
 
 ## 優先度と期間
 
-デバッグを `debug` コマンドまたはクエリ文字列パラメーターで設定すると、`configure` コマンドで設定された `debug` オプションが上書きされます。この 2 つの場合、セッション中もデバッグは切り替えられたままになります。つまり、debug コマンドまたはクエリ文字列パラメーターを使用してデバッグを有効にした場合、次のいずれかが実行されるまで、デバッグは有効なままになります。
+デバッグを `debug` コマンドまたはクエリ文字列パラメーターで設定すると、`configure` コマンドで設定された `debug` オプションが上書きされます。この2つの場合、セッション中、デバッグもオンのままです。 つまり、debug コマンドまたはクエリ文字列パラメーターを使用してデバッグを有効にした場合、次のいずれかが実行されるまで、デバッグは有効なままになります。
 
 * セッションの終了
 * `debug` コマンドを実行します
