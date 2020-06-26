@@ -4,21 +4,22 @@ seo-title: Adobe Experience Platform Web SDK：SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します
 seo-description: Experience Platform Web SDK のインストール方法について説明します
 translation-type: tm+mt
-source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
+source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 87%
+source-wordcount: '580'
+ht-degree: 82%
 
 ---
 
 
-# SDK のインストール
+# SDK のインストール {#installing-the-sdk}
 
 Adobe Experience PlatformWeb SDKは、コンテンツ配信ネットワーク(CDN)で使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
 
-[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+* 縮小バージョン： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* 縮小されていないバージョン： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
-## コードの追加
+## コードの追加 {#adding-the-code}
 
 Adobe Experience Platform Web SDK を実装する最初の手順として、次の「ベースコード」を、HTML の `<head>` のタグ内のできるだけ上位にコピーして貼り付けます。
 
@@ -51,7 +52,7 @@ Adobe Experience Platform Web SDK を実装する最初の手順として、次�
 
 このベースコードは、グローバル関数を作成するだけでなく、サーバ上でホストされる外部ファイル（`alloy.js`）に含まれる追加のコードも読み込みます。デフォルトでは、このコードは非同期で読み込まれ、Web ページのパフォーマンスを可能な限り高めます。これは推奨される実装です。
 
-## Internet Explorer のサポート
+## Internet Explorer のサポート {#support-internet-explore}
 
 この SDK は、非同期タスクの完了を伝える方法として promise を使用します。SDK が使用する [promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) 実装は、Internet Explorer を除くすべてのターゲットブラウザーでネイティブにサポートされます。Internet Explorer で SDKを使用するには、`window.Promise` の[ポリフィル](https://remysharp.com/2010/10/08/what-is-a-polyfill)をおこなう必要があります。
 
@@ -71,9 +72,9 @@ Adobe Experience Platform Web SDK を実装する最初の手順として、次�
 
 これにより、`window.Promise` が有効な promise 実装であることを確認するスクリプトが読み込まれます。
 
-## JavaScript ファイルの同期読み込み
+## JavaScript ファイルの同期読み込み {#loading-javascript-synchronously}
 
-前述のとおり、Web サイトの HTML にコピー＆ペーストしたベースコードは、追加コードが入った外部ファイルを読み込みます。この追加のコードには、SDK のコア機能が含まれています。このファイルの読み込み中に実行しようとしたコマンドは、キューに追加され、ファイルの読み込み後に処理されます。これは、最もパフォーマンスの高いインストール方法です。
+As explained in the section [Adding the code](#adding-the-code), the base code you have copied and pasted into your website&#39;s HTML loads an external file with additional code. この追加のコードには、SDK のコア機能が含まれています。このファイルの読み込み中に実行しようとしたコマンドは、キューに追加され、ファイルの読み込み後に処理されます。これは、最もパフォーマンスの高いインストール方法です。
 
 ただし、特定の状況では、ファイルを同期的に読み込むことが望ましい場合もあります（これらの状況に関する詳細は後で説明します）。これをおこなうと、外部ファイルが読み込まれて実行されるまで、HTML ドキュメントの残りの部分がブラウザーで解析およびレンダリングされなくなります。通常、プライマリコンテンツをユーザーに表示する前にこの遅延が発生するのはお勧めしませんが、状況によっては合理的な場合もあります。
 
