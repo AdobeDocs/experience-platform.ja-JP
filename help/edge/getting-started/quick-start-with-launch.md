@@ -4,45 +4,45 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: 62b18ed8f70ad87b04f60ade5730ff30d8985415
+source-git-commit: 3f52def8318f57cfc6534e15415d172e768a8614
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 32%
+source-wordcount: '531'
+ht-degree: 27%
 
 ---
 
 
 # ようこそ
 
-このガイドでは、起動時にAdobe Experience Platform Web SDKをセットアップする方法に関する様々な手順を順を追って説明します。 この機能を使用するには、権限があり、許可リストに属している必要があります。 待機中のリストに移動する場合は、CSMに連絡してください。
+このガイドでは、Adobe LaunchでのAdobe Experience PlatformWeb SDKのセットアップ方法に関する様々な手順を順を追って説明します。 この機能を使用するには、権限が必要で、許可リスト上にある必要があります。 待機中のリストに移動したい場合は、CSMに連絡してください。 また、この機能を使用するには、次の作業が必要です。
 
-- [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。開発環境でのテストはCNAMEなしでは機能しますが、実稼働環境に移行する前にCNAMEが必要になります
+- [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。アドビAnalyticsのCNAMEを既にお持ちの場合は、そのCNAMEを使用する必要があります。 開発環境でのテストはCNAMEなしでは機能しますが、実稼働環境に移行する前にCNAMEが必要になります
 - 訪問者 ID サービスの最新バージョンを使用している
 
 ## 設定IDの作成
 
-起動時に [エッジ設定ツールを使用して、設定IDを作成できます](../fundamentals/edge-configuration.md) 。 これにより、Edge Networkで様々なソリューションにデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
+Adobe Launchの [エッジ設定ツールを使用して、設定IDを作成できます](../fundamentals/edge-configuration.md) 。 これにより、Edge Networkで様々なソリューションにデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
 
 >[!NOTE]
 >
->組織で、この機能のリストを許可している必要があります。 許可リストを有効にするには、CSMに問い合わせてください。
+>組織がこの機能を使用する許可リスト上に存在する必要があります。 許可リストに追加するには、CSMに問い合わせてください。
 
 ## スキーマの準備
 
-Experience Platform Edge Networkは、データをXDMとして受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、Edge Networkでデータの形式設定方法を定義します。 データを送信するには、スキーマを定義する必要があります。
+Experience Platformエッジネットワークは、データをXDMとして受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、Edge Networkでデータの形式設定方法を定義します。 データを送信するには、スキーマを定義する必要があります。 次の項目を必ず実行してください。
 
 - [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
 - 作成したスキーマに Adobe Experience Platform Web SDK mixin を追加します。
 
-## Launch での SDK のインストール
+## Adobe LaunchでのSDKのインストール
 
-Launch にログインし、`AEP Web SDK` 拡張機能をインストールします。SDK のインストールの一環として、拡張機能を設定するよう求めるプロンプトが表示されます。上記で要求した設定 ID を入力します。拡張機能によって、組織の ID が自動的に入力されます。
+Log in to Adobe Launch and install the `AEP Web SDK` extension. SDK のインストールの一環として、拡張機能を設定するよう求めるプロンプトが表示されます。上記で要求した構成IDを入力します。 拡張機能によって、組織の ID が自動的に入力されます。
 
 様々な設定オプションについて詳しくは、[SDK の設定](../fundamentals/configuring-the-sdk.md)を参照してください。
 
 ## スキーマに基づくデータ要素の作成
 
-起動時に、拡張機能をAEP Web SDKに変更し、種類をXDMオブジェクトに設定して、スキーマを参照するデータ要素を作成します。 これによりスキーマが読み込まれ、データ要素をスキーマの別の部分にマップできます。
+Adobe Launchで、拡張機能をAEP Web SDKに変更し、タイプをXDMオブジェクトに設定して、スキーマを参照するデータ要素を作成します。 これによりスキーマが読み込まれ、データ要素をスキーマの別の部分にマップできます。
 
 ![開始時の日付要素](../../assets/edge_data_element.png)
 
@@ -56,7 +56,7 @@ Launch にログインし、`AEP Web SDK` 拡張機能をインストールし�
 
 データのフローが完了したら、次の操作を実行できます。
 
-- [スキーマの構築](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [スキーマの構築](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/schema/composition.html)
 - [デバッグについて](../fundamentals/debugging.md)
 - エクスペリエンスを [パーソナライズする方法を説明します。](../fundamentals/rendering-personalization-content.md)
 - 複数のソリューションにデータを送信する方法について説明します。
