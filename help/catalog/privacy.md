@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データレークでのプライバシー要求の処理
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # データレークでのプライバシー要求の処理
 
-Adobe Experience Platform Privacy Serviceは、法的および組織のプライバシー規制に基づく説明に従って、顧客の要求を処理し、個人データにアクセス、販売、または削除します。
+Adobe Experience Platform Privacy Serviceは、法的および組織のプライバシーに関する規則に基づオプトアウトいて説明した、個人データにアクセス、販売、または削除するように顧客の要求を処理します。
 
 このドキュメントでは、データレークに保存された顧客データに対するプライバシー要求の処理に関する基本的な概念について説明します。
 
@@ -22,18 +22,18 @@ Adobe Experience Platform Privacy Serviceは、法的および組織のプライ
 
 このガイドを読む前に、次のExperience Platformサービスに関する十分な理解を得ておくことをお勧めします。
 
-* [プライバシーサービス](../privacy-service/home.md): Adobe Experience Cloudアプリケーションで個人データにアクセス、オプトアウト、削除を行う場合の顧客の要求を管理します。
-* [カタログサービス](home.md): エクスペリエンスプラットフォーム内のデータの場所と系列の記録システムです。 データセットメタデータの更新に使用できるAPIを提供します。
-* [Experience Data Model(XDM)System](../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
+* [Privacy Service](../privacy-service/home.md): Adobe Experience Cloudアプリケーションで個人データにアクセス、オプトアウト、削除を行う場合の顧客の要求を管理します。
+* [カタログサービス](home.md): Experience Platform内のデータの場所と系列のレコードシステム。 データセットメタデータの更新に使用できるAPIを提供します。
+* [Experience Data Model(XDM)System](../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 * [IDサービス](../identity-service/home.md): デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
 
 ## ID名前空間について {#namespaces}
 
-Adobe Experience Platform Identity Serviceは、システムとデバイス間で顧客のIDデータを結合します。 アイデンティティサービスは **ID名前空間** を使用して、ID値を接触チャネルのシステムに関連付けることで、ID値のコンテキストを提供します。 名前空間は、電子メールアドレス（「電子メール」）などの汎用的な概念を表したり、IDを特定のアプリケーション(Adobe Advertising Cloud ID(「AdCloud」)やAdobeターゲットID(「TNTID」)など)に関連付けたりできます。
+Adobe Experience PlatformIDサービスは、システムとデバイス間で顧客IDデータを結合します。 アイデンティティサービスは **ID名前空間** を使用して、ID値を接触チャネルのシステムに関連付けることで、ID値のコンテキストを提供します。 名前空間は、電子メールアドレス（「電子メール」）などの汎用的な概念を表したり、IDを特定のAdvertising Cloud(AdCloud)やAdobe TargetID(「TNTID」)など)に関連付けたりできます。
 
 アイデンティティサービスは、グローバルに定義された（標準）ID名前空間とユーザー定義の（カスタム）IDユーザーのストアを管理します。 標準名前空間は、すべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
 
-エクスペリエンスプラットフォームのID名前空間について詳しくは、 [ID名前空間の概要を参照してください](../identity-service/namespaces.md)。
+Experience PlatformでのID名前空間について詳しくは、「 [ID名前空間の概要](../identity-service/namespaces.md)」を参照してください。
 
 ## IDデータをデータセットに追加する
 
@@ -43,7 +43,9 @@ Data Lakeのプライバシーリクエストを作成する場合、データ�
 
 既存のデータセットのXDMスキーマにID記述子を追加する手順を説明します。 ID記述子を持つデータセットが既に存在する場合は、 [次の節に進みます](#nested-maps)。
 
->[!IMPORTANT] IDとして設定するスキーマフィールドを決定する場合は、入れ子のマップタイプフィールドを使用する [制限事項に注意してください](#nested-maps)。
+>[!IMPORTANT]
+>
+>IDとして設定するスキーマフィールドを決定する場合は、入れ子のマップタイプフィールドを使用する [制限事項に注意してください](#nested-maps)。
 
 データセットスキーマにID記述子を追加するには、次の2つの方法があります。
 
@@ -52,7 +54,7 @@ Data Lakeのプライバシーリクエストを作成する場合、データ�
 
 ### UIの使用 {#identity-ui}
 
-Experience Platformユーザーインターフェイスでは、 _[!UICONTROL スキーマ]_Workspaceを使用して既存のXDMスキーマを編集できます。 スキーマにID記述子を追加するには、リストからスキーマを選択し、スキーマエディタのチュートリアルで、スキーマフィールドをIDフィールドとして[設定する手順](../xdm/tutorials/create-schema-ui.md#identity-field)に従います。
+Experience Platformユーザーインターフェイスでは、 _[!UICONTROL スキーマ]_・ワークスペースを使用して既存のXDMスキーマを編集できます。 スキーマにID記述子を追加するには、リストからスキーマを選択し、スキーマエディタのチュートリアルで、スキーマフィールドをIDフィールドとして[設定する手順](../xdm/tutorials/create-schema-ui.md#identity-field)に従います。
 
 スキーマ内の適切なフィールドをIDフィールドとして設定したら、次のセクションに進んで、プライバシー [要求の送信に関するセクション](#submit)。
 
@@ -100,7 +102,7 @@ curl -X POST \
 | `xdm:sourceSchema` | データセットのXDMスキーマの一意のURI ID。 |
 | `xdm:sourceVersion` | で指定されているXDMスキーマのバージョンで `xdm:sourceSchema`す。 |
 | `xdm:sourceProperty` | 記述子を適用するスキーマフィールドへのパス。 |
-| `xdm:namespace` | プライバシーサービスで認識される [標準的なID名前空間](../privacy-service/api/appendix.md#standard-namespaces) 、または組織で定義されるカスタム名前空間の1つ。 |
+| `xdm:namespace` | Privacy Serviceが認識する [標準ID名前空間](../privacy-service/api/appendix.md#standard-namespaces) 、または組織が定義するカスタム名前空間の1つ。 |
 | `xdm:property` | で使用される名前空間に応じて、「xdm:id」または「xdm:code」のいずれか `xdm:namespace`。 |
 | `xdm:isPrimary` | オプションのboolean値。 trueの場合は、フィールドが主IDであることを示します。 スキーマには、1つのプライマリIDのみを含めることができます。 含めない場合のデフォルトはfalseです。 |
 
@@ -124,9 +126,9 @@ curl -X POST \
 
 ## 要求の送信 {#submit}
 
->[!NOTE] この節では、データレークのプライバシー要求をフォーマットする方法について説明します。 プライバシーサービスのUI [(](../privacy-service/ui/overview.md) プライバシーサービスのAPI [)または](../privacy-service/api/getting-started.md) プライバシーサービスのAPI（プライバシーサービスのAPI）のドキュメントで、リクエストペイロードで送信したユーザーIDデータを適切に書式設定する方法など、プライバシージョブの送信方法に関する詳細な手順を確認することを強くお勧めします。
+>[!NOTE] この節では、データレークのプライバシー要求をフォーマットする方法について説明します。 リクエストペイロードで送信されたユーザーIDデータを適切にフォーマットする方法など、プライバシージョブの送信方法に関する完全な手順については、 [Privacy ServiceUI](../privacy-service/ui/overview.md)[(](../privacy-service/api/getting-started.md) Privacy ServiceAPI)のドキュメントを確認することを強くお勧めします。
 
-次の節では、プライバシーサービスのUIまたはAPIを使用して、Data Lakeのプライバシーを要求する方法について概要を説明します。
+次の節では、Privacy ServiceUIまたはAPIを使用してデータレークのプライバシーリクエストを行う方法について概要を説明します。
 
 ### UIの使用
 
@@ -183,9 +185,9 @@ curl -X POST \
 
 ## 削除要求処理
 
-Experience Platformがプライバシーサービスから削除のリクエストを受け取ると、プラットフォームは、リクエストが受信され、影響を受けるデータが削除のマークが付けられたことをプライバシーサービスに確認するメッセージを送信します。 レコードは7日以内にデータレークから削除されます。 この7日間の期間は、データはソフト削除されるので、どのプラットフォームサービスからもアクセスできません。
+Experience PlatformがPrivacy Serviceから削除要求を受け取ると、Platformは、要求が受信され、影響を受けたデータが削除のマークを付けられたことをPrivacy Serviceに確認するメッセージを送信します。 レコードは7日以内にデータレークから削除されます。 その7日間の期間は、データがソフト削除されるので、どのPlatformサービスからもアクセスできません。
 
-今後のリリースでは、データが物理的に削除された後、プラットフォームはプライバシーサービスに確認メッセージを送信します。
+今後のリリースでは、データが物理的に削除された後、PlatformはPrivacy Serviceに確認メッセージを送信する予定です。
 
 ## 次の手順
 
