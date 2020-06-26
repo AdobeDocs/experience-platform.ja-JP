@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK コマンドの実行
 description: Experience Platform Web SDK コマンドの実行方法について説明します
 seo-description: Experience Platform Web SDK コマンドの実行方法について説明します
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 79%
