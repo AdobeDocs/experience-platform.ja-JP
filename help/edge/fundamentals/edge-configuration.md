@@ -1,36 +1,36 @@
 ---
 title: エッジ設定
-seo-title: エクスペリエンスプラットフォームWeb SDKのエッジ設定
-description: 'Experience Platform Edge Networkを設定する方法を説明します。 '
-seo-description: 'Experience Platform Edge Networkを設定する方法を説明します。 '
+seo-title: Experience PlatformWeb SDKのエッジ設定
+description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
+seo-description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 translation-type: tm+mt
-source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '882'
 ht-degree: 3%
 
 ---
 
 
-# エッジ設定
+# エッジの設定
 
-Adobe Experience Platform Web SDKの設定は、2か所に分かれています。 SDKの [configureコマンド](configuring-the-sdk.md) は `edgeDomain`、クライアントで処理する必要のある操作（例：）を制御します。 エッジ設定は、SDKのその他すべての設定を処理します。 リクエストがAdobe Experience Platform Edge Networkに送信されると、の値 `edgeConfigId` がサーバー側の設定の参照に使用されます。 これにより、Webサイトでコードを変更することなく、設定を更新できます。
+Adobe Experience PlatformWeb SDKの設定は、2か所に分かれています。 SDKの [configureコマンド](configuring-the-sdk.md) は `edgeDomain`、クライアントで処理する必要のある操作（例：）を制御します。 エッジ設定は、SDKのその他すべての設定を処理します。 要求がAdobe Experience Platformエッジネットワークに送信されると、その要求 `edgeConfigId` がサーバ側の設定の参照に使用されます。 これにより、Webサイトでコードを変更することなく、設定を更新できます。
 
 ## エッジ設定IDの作成
 
-エッジ設定IDは、「起動」で、エッジ設定ツールを使用して作成できます。 このツールを使用すると、エッジ設定と、それらの設定内の環境の両方を作成できます。
+エッジ設定IDは、Adobeでエッジ設定ツールを [!DNL Launch] 使用して作成できます。 このツールを使用すると、エッジ設定と、それらの設定内の環境の両方を作成できます。
 
 ![エッジ設定ツールのナビゲーション](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->エッジ設定ツールは、許可リストで、ユーザーがタグマネージャーとして「起動」を使用しているかどうかに関係なく使用できます。 また、ユーザーは起動時に開発権限が必要です。 詳しくは、起動ドキュメントの「 [ユーザー権限](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/user-permissions.html) 」の記事を参照してください。
+>エッジ設定ツールは、タグマネージャーとして使用しているかどうかに関係なく、許可リスト [!DNL Launch] 上で利用できます。 また、での開発権限も必要で [!DNL Launch]す。 詳しくは、ドキュメントの「 [ユーザー権限](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/user-permissions.html) 」 [!DNL Launch] の記事を参照してください。
 
 エッジ設定を作成するには、画面の右上領域にある「 **[UICONTROL」「新しいエッジ設定]** 」(New Edge Configuration)の順にクリックします。 名前と説明を指定すると、各環境のデフォルト設定が求められます。
 
 ### デフォルトの環境設定
 
-これらのデフォルト設定は、同じ設定で最初の3つの環境を作成する場合に使用します。 これらの3つの環境は、dev、stage、prodです。 これらは、「起動」の3つのデフォルト環境に一致します。 開発環境に対して起動ライブラリを構築する場合、ライブラリは設定の開発環境を自動的に使用します。 個々の環境の設定を必要に応じて編集できます。
+これらのデフォルト設定は、同じ設定で最初の3つの環境を作成する場合に使用します。 これらの3つの環境は、 *dev*、 *stage*、 *prod*&#x200B;です。 これらは、の3つのデフォルト環境に一致し [!DNL Launch]ます。 開発環境への [!DNL Launch] ライブラリを構築する場合、ライブラリは設定の開発環境を自動的に使用します。 個々の環境の設定を必要に応じて編集できます。
 
 SDKでとして使用されるID `edgeConfigId` は、設定と環境を指定する複合IDです。 環境が存在しない場合は、実稼働環境が使用されます。
 
@@ -40,7 +40,7 @@ SDKでとして使用されるID `edgeConfigId` は、設定と環境を指定�
 
 #### [!UICONTROL ID]
 
-IDセクションは、常にオンになる唯一のセクションです。 次の2つの設定を使用できます。 ID同期が有効になり、ID同期コンテナIDが有効になります。
+IDセクションは、常にオンになる唯一のセクションです。 次の2つの設定を使用できます。 [!UICONTROL ID同期が有効] 、 [!UICONTROL ID同期コンテナID]。
 
 ![設定UIの「ID」セクション](../../assets/edge_configuration_identity.png)
 
@@ -60,11 +60,11 @@ ID同期をコンテナにグループ化して、異なるID同期を異なる�
 
 ##### [!UICONTROL サンドボックス]
 
-サンドボックスは、Adobe Experience Platform内の場所で、顧客はデータと実装を相互に分離できます。 動作方法の詳細については、 [サンドボックスのドキュメントを参照してください](../../sandboxes/home.md)。
+サンドボックスは、Adobe Experience Platform内で顧客がデータと実装を相互に分離できる場所です。 サンドボックスの機能について詳しくは、 [サンドボックスのドキュメントを参照してください](../../sandboxes/home.md)。
 
 ##### [!UICONTROL ストリーミングインレット]
 
-ストリーミングインレットは、Adobe Experience PlatformのHTTPソースです。 これらは、Adobe Experience Platformの「 [!UICONTROL Sources] 」タブの下にHTTP APIとして作成されます。
+ストリーミングインレットは、Adobe Experience Platform内のHTTPソースです。 これらは、HTTP APIとしてAdobe Experience Platformの [!UICONTROL 「ソース] 」タブに作成されます。
 
 ##### [!UICONTROL イベントデータセット]
 
@@ -72,9 +72,9 @@ ID同期をコンテナにグループ化して、異なるID同期を異なる�
 
 #### Adobe Target
 
-Adobeターゲットを設定するには、クライアントコードを指定する必要があります。 その他のフィールドはオプションです。
+Adobe Targetを設定するには、クライアントコードを指定する必要があります。 その他のフィールドはオプションです。
 
-![Adobeターゲット設定ブロック](../../assets/edge_configuration_target.png)
+![Adobe Target設定ブロック](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -82,40 +82,40 @@ Adobeターゲットを設定するには、クライアントコードを指定
 
 ##### [!UICONTROL クライアントコード]
 
-ターゲットアカウントの一意のID。 これについては、 [!UICONTROL Adobeターゲット] / [!UICONTROL 設定/]設定/ [!UICONTROL 実装/次の編集/mbox.jsの設定/mbox.jsのいずれかのdownloadボタンを表示する場合は、] Adobe [!UICONTROL /設定/] 設定/設定/ [!UICONTROL mbox.jsの設定/次の設定に移動します。]
+ターゲットアカウントの一意のID。 これを見つけるには、 [!UICONTROL Adobe Target] / [!UICONTROL 設定]/設定の設定 [!UICONTROL の編集/設定の編集/設定の次の.js mboxまたはmboxの] どちらかの.js mboxの [!UICONTROL download buttonに移動しま][!UICONTROL す。]
 
 ##### [!UICONTROL プロパティトークン]
 
-ターゲットを使用すると、プロパティを使用して権限を制御できます。 詳しくは、ターゲットドキュメントの「 [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 」セクションを参照してください。
+Targetを使用すると、プロパティを使用して権限を制御できます。 詳しくは、Targetドキュメントの「 [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 」セクションを参照してください。
 
-プロパティトークンは、 [!UICONTROL Adobeターゲット] / [!UICONTROL セットアップ/][UICONTROLプロパティにあります]
+プロパティトークンは、 [!UICONTROL Adobe Target] / [!UICONTROL 設定/][UICONTROLのプロパティにあります]
 
-##### [!UICONTROL ターゲット環境ID]
+##### [!UICONTROL Target環境ID]
 
-[アドビターゲットの環境](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) は、開発のすべての段階を通じて実装を管理するのに役立ちます。 この設定は、各環境で使用する環境を指定します。
+[Adobe Targetの環境](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) は、開発のすべての段階を通じて実装を管理するのに役立ちます。 この設定は、各環境で使用する環境を指定します。
 
-簡単な設定にするために、 `dev`、 `stage``prod` エッジ設定環境ごとに異なる設定を行うことをお勧めします。 ただし、既に [!UICONTROL Adobeターゲット環境を定義している場合は] 、それらを使用できます。
+簡単な設定にするために、 `dev`、 `stage``prod` エッジ設定環境ごとに異なる設定を行うことをお勧めします。 ただし、既に [!UICONTROL Adobe Target環境が定義されている場合は] 、それらを使用できます。
 
 #### Adobe Audience Manager
 
-Adobeオーディエンスマネージャーにデータを送信する際に必要なのは、このセクションを有効にすることだけです。 その他の設定はオプションですが、推奨されています。
+Adobe Audience Managerにデータを送信する際に必要なのは、このセクションを有効にすることだけです。 その他の設定はオプションですが、推奨されています。
 
 ![Adobeオーディエンス管理設定ブロック](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Cookieの宛先が有効]
 
-SDKが、オーディエンスマネージャーの [Cookie宛先を使用してセグメント情報を共有できるようにします](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 。
+SDKが、 [Cookieの宛先を介してAudience Managerからセグメント情報を共有できるようにします](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 。
 
 ##### [!UICONTROL URL宛先が有効]
 
-SDKが [URLの宛先を介してセグメント情報を共有できるようにします](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)。 これらは、オーディエンスマネージャーで設定します。
+SDKが [URLの宛先を介してセグメント情報を共有できるようにします](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)。 これらはAudience Managerで設定されます。
 
 #### Adobe Analytics
 
-データをAdobe Analyticsに送信するかどうかを制御します。 詳しくは、 [Analyticsの概要を参照してください](../solution-specific/analytics/analytics-overview.md)。
+データをアドビのAnalyticsに送信するかどうかを制御します。 詳細は [Analytics概要](../solution-specific/analytics/analytics-overview.md)。
 
-![Adobe Analytics設定ブロック](../../assets/edge_configuration_aa.png)
+![AdobeAnalytics設定ブロック](../../assets/edge_configuration_aa.png)
 
 ##### [!UICONTROL レポートスイート ID]
 
-このレポートスイートは、Adobe Analyticsの管理者セクションの [!UICONTROL 管理者/レポートスイートにあります]。 複数のレポートスイートを指定した場合は、各レポートスイートにデータがコピーされます。
+レポートスイートは、アドビのAnalytics管理者セクションの [!UICONTROL 管理者/レポートスイートからアクセスできます]。 複数のレポートスイートを指定した場合は、各レポートスイートにデータがコピーされます。
