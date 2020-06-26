@@ -4,9 +4,9 @@ solution: Experience Platform
 title: CSVファイルのXDMスキーマへのマップ
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1354'
 ht-degree: 2%
 
 ---
@@ -14,74 +14,110 @@ ht-degree: 2%
 
 # CSVファイルのXDMスキーマへのマップ
 
-CSVデータをAdobe Experience Platformに取り込むには、そのデータをExperience Data Model(XDM)スキーマにマッピングする必要があります。 このチュートリアルでは、Experience Platformユーザーインターフェイスを使用してCSVファイルをXDMスキーマにマップする方法について説明します。
+CSVデータをに取り込むに [!DNL Adobe Experience Platform]は、データを [!DNL Experience Data Model] (XDM)スキーマにマップする必要があります。 このチュートリアルでは、ユー [!DNL Platform] ザーインターフェイスを使用してCSVファイルをXDMスキーマにマップする方法について説明します。
 
 さらに、このチュートリアルの付録では、 [マッピング関数の使用に関する詳細について説明します](#mapping-functions)。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このチュートリアルでは、次のコンポーネントについて十分に理解している必要があり [!DNL Platform]ます。
 
-- [エクスペリエンスデータモデル（XDMシステム）](../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-- [バッチインジェスト](../batch-ingestion/overview.md): プラットフォームがユーザー指定のデータファイルからデータを取り込む方法。
+- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+- [!DNL Batch ingestion](../batch-ingestion/overview.md): ユーザーが指定したデータファイルからデータを [!DNL Platform] 取り込む方法。
 
 また、このチュートリアルでは、CSVデータを取り込むデータセットを既に作成している必要があります。 UIでデータセットを作成する手順については、「 [データ取り込みのチュートリアル](./ingest-batch-data.md)」を参照してください。
 
+## 宛先の選択
+
+にログインし [!DNL Adobe Experience Platform](https://platform.adobe.com) 、左のナビゲーションバーから **[!UICONTROL ワークフローを選択して]** ワークフロー ** ワークスペースにアクセスします。
+
+**[!UICONTROL ワークフロー]** 画面の「 **[!UICONTROL Data ingestion]** 」セクションで「 **[!UICONTROL CSVをXDMスキーマにマップ」を選択し、「]** Launch **** Launch」を選択します。
+
+![](../images/tutorials/map-a-csv-file/workflows.png)
+
+「 *[!UICONTROL CSVをXDMに]* マップ」スキーマ *[!UICONTROL ・ワークフローが表示され、]* 宛先手順に進みます。 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
+
+**既存のデータセットの使用**
+
+CSVデータを既存のデータセットに取り込むには、「既存のデータセット **[!UICONTROL を使用]**」を選択します。 検索関数を使用して既存のデータセットを取得するか、パネル内の既存のデータセットのリストをスクロールして取得できます。
+
+![](../images/tutorials/map-a-csv-file/use-existing-dataset.png)
+
+CSVデータを新しいデータセットに取り込むには、「新しいデータセットを **[!UICONTROL 作成]** 」を選択し、表示されるフィールドにデータセットの名前と説明を入力します。 検索機能を使用するか、提供されるスキーマのリストをスクロールして、スキーマを選択します。 「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
+
+![](../images/tutorials/map-a-csv-file/create-new-dataset.png)
+
 ## 追加データ
 
-Experience Platform UIで、左側のナビゲーションの **ワークフロー** をクリックし、「CSVをXDMスキーマに **マップ」をクリックします**。 表示される右側のパネルで、「 **起動**」をクリックします。
-
-![](../images/tutorials/map-a-csv-file/workflow-tab.png)
-
-「 _CSVをXDMに_ マップ」スキーマ _・ワークフローが表示され、_ 追加dataステップから開始します。
+*[!UICONTROL 追加]* data stepが表示されます。 CSVファイルを用意されているスペースにドラッグ&amp;ドロップするか、「ファイルを **[!UICONTROL 選択]** 」を選択してCSVファイルを手動で入力します。
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-CSVファイルを用意されているスペースにドラッグ&amp;ドロップするか、「 **参照** 」をクリックしてファイルを直接選択します。 ファイルがアップロードされると、 _サンプルデータ_ (Sample data)セクションが表示され、最初の10行のデータが表示されます。 データが期待どおりにアップロードされたことを確認したら、「 **次へ**」をクリックします。
+ファイルがアップロードされると、「 *[!UICONTROL サンプルデータ]* 」セクションが表示され、最初の10行のデータが表示されます。 データが期待どおりにアップロードされたことを確認したら、「 **[!UICONTROL 次へ]**」を選択します。
 
-![](../images/tutorials/map-a-csv-file/csv-added.png)
-
-## 宛先の選択
-
-The _Destination_ step appears. 提供されたリストから、CSVデータを取り込むデータセットを選択し、「 **次へ**」をクリックします。
-
-![](../images/tutorials/map-a-csv-file/select-destination.png)
+![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## CSVフィールドのXDMスキーマフィールドへのマップ
 
-The _Mapping_ step appears. CSVファイルの列は「 _Source Field_」の下に表示され、対応するXDMスキーマフィールドは「 _ターゲットフィールド_」の下に表示されます。 未選択のターゲットフィールドは赤で枠線表示されます。
+The *[!UICONTROL Mapping]* step appears. CSVファイルの列は「 *[!UICONTROL Source Field]*」の下に表示され、対応するXDMスキーマフィールドは「 *[!UICONTROL Targetフィールド]*」の下に表示されます。 未選択のターゲットフィールドは赤で枠線表示されます。 フィルターフィールドオプションを使用して、使用可能なソースフィールドのリストを絞り込むことができます。
 
-CSV列をXDMフィールドにマップするには、列の対応するターゲットフィールドの横にあるスキーマアイコンをクリックします。
+CSV列をXDMフィールドにマップするには、列の対応するターゲットフィールドの横にあるスキーマアイコンを選択します。
 
-![](../images/tutorials/map-a-csv-file/target-field-mapping.png)
+![](../images/tutorials/map-a-csv-file/mapping.png)
 
-[ _スキーマフィールドの_ 選択]ウィンドウが表示されます。 XDMスキーマの構造に移動して、CSV列のマッピング先のフィールドを探します。 XDMフィールドをクリックして選択し、「 **Select**」をクリックします。
+[ *[!UICONTROL スキーマフィールドの]* 選択]ウィンドウが表示されます。 XDMスキーマの構造に移動して、CSV列のマッピング先のフィールドを探します。 XDMフィールドをクリックして選択し、「 **[!UICONTROL Select]**」をクリックします。
 
-![](../images/tutorials/map-a-csv-file/xdm-field-selection.png)
+![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-「 _マッピング_ 」画面が再表示され、選択したXDMフィールドが「 _ターゲットフィールド_」の下に表示されます。
+「 *[!UICONTROL マッピング]* 」画面が再表示され、選択したXDMフィールドが「 *[!UICONTROL Targetフィールド]*」の下に表示されます。
 
-![](../images/tutorials/map-a-csv-file/xdm-field-mapped.png)
+![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
-特定のCSV列をマップしない場合は、「ターゲット」フィールドの **横にある削除アイコンをクリックして、マッピングを削除できます** 。 新しいマッピングを追加する場合は、リストの下部にある **追加「新しいマッピング** 」をクリックします。
+特定のCSV列をマップしない場合は、「ターゲット」フィールドの **横にある削除アイコンをクリックして、マッピングを削除できます** 。 「すべてのマッピングを **[!UICONTROL クリア」ボタンを選択して、すべてのマッピングを削除することもできます]**。
 
-![](../images/tutorials/map-a-csv-file/remove-or-add-mapping.png)
+![](../images/tutorials/map-a-csv-file/remove-mapping.png)
+
+新しいマッピングを追加する場合は、「 **[!UICONTROL ソースフィールド]***[!UICONTROL 」リストの上部で「]* 新しいマッピング」を選択します。
+
+![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 フィールドのマッピング時には、入力ソースフィールドに基づいて値を計算する関数を含めることもできます。 詳細については、付録の「 [マッピング関数](#mapping-functions) 」の節を参照してください。
 
-上記の手順を繰り返して、CSV列のXDMフィールドへのマッピングを続行します。 完了したら、「 **次へ**」をクリックします。
+### 追加計算フィールド
 
-![](../images/tutorials/map-a-csv-file/mapping-finish.png)
+計算済みフィールドでは、入力スキーマーの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して、参照しやすくすることができます。
 
-## データを取り込む
+先に進むには、 **[!UICONTROL 追加]** 計算フィールドボタンを選択します。
 
-取り込み __ 手順が表示され、ソースファイルとターゲットデータセットの詳細を確認できます。 「 **取り込み** 」をクリックして、CSVデータを取り込む開始を選択します。 CSVファイルのサイズによっては、処理に数分かかる場合があります。 取り込みが完了すると画面が更新され、成功または失敗を示します。 Click **Finish** to complete the workflow.
+![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
-![](../images/tutorials/map-a-csv-file/ingest-data.png)
+計算済みフィールド **[!UICONTROL を作成]** パネルが表示されます。 左側のダイアログボックスには、計算フィールドでサポートされるフィールド、関数、演算子が含まれています。 いずれかのタブを選択して、式エディタに関数、フィールドまたは演算子を追加する開始を行います。
+
+![](../images/tutorials/map-a-csv-file/create-calculated-fields.png)
+
+| タブ | 説明 |
+| --------- | ----------- |
+| フィールド | 「フィールド」タブのリストフィールドと属性は、ソーススキーマで使用できます。 |
+| 関数 | 「関数」タブには、データの変換に使用できる関数がリストされます。 |
+| 演算子 | 「operators」タブには、データの変換に使用できる演算子がリストされます。 |
+
+中央の式エディターを使用して、手動でフィールド、関数および演算子を追加できます。 式の作成を開始するエディタを選択します。
+
+![](../images/tutorials/map-a-csv-file/expression-editor.png)
+
+「 **[!UICONTROL 保存]** 」を選択して続行します。
+
+マッピング画面が再び開き、新しく作成したソースフィールドが表示されます。 対応するターゲットフィールドを適用し、「 **[!UICONTROL 完了]** 」を選択してマッピングを完了します。
+
+![](../images/tutorials/map-a-csv-file/new-field.png)
+
+## データフローの監視
+
+CSVファイルをマッピングして作成したら、ファイルを介して取り込まれるデータを監視できます。 データフローの監視の詳細については、「ストリーミングデータフローの [監視に関するチュートリアル](../../ingestion/quality/monitor-data-flows.md)」を参照してください。
 
 ## 次の手順
 
-このチュートリアルに従うと、フラットなCSVファイルをXDMスキーマに正常にマッピングし、プラットフォームに取り込むことができます。 このデータは、リアルタイム顧客プロファイルなどのダウンストリームプラットフォームサービスで使用できるようになりました。 詳しくは、 [リアルタイム顧客プロファイルの概要](../../profile/home.md) （英語）を参照してください。
+このチュートリアルに従うと、フラットなCSVファイルをXDMスキーマに正常にマッピングし、に取り込むことができ [!DNL Platform]ます。 このデータは、などのダウンストリーム [!DNL Platform] サービスで使用できるようになり [!DNL Real-time Customer Profile]ました。 詳しくは、概要を参照し [!DNL Real-time Customer Profile](../../profile/home.md) てください。
 
 ## 付録
 
@@ -89,7 +125,7 @@ CSV列をXDMフィールドにマップするには、列の対応するター�
 
 ### マッピング関数
 
-特定のマッピング関数を使用して、ソースフィールドに入力した値に基づいて値を計算および計算できます。 関数を使用するには、「 _ソースフィールド_ 」に適切な構文と入力を入力して、関数を入力します。
+特定のマッピング関数を使用して、ソースフィールドに入力した値に基づいて値を計算および計算できます。 関数を使用するには、「 *[!UICONTROL ソースフィールド]* 」に適切な構文と入力を入力して、関数を入力します。
 
 例えば、 **city** と **country** CSVフィールドを連結し、city **XDMフィールドに割り当てるには、ソースフィールドを次のように設定し**`concat(city, ", ", county)`ます。
 
