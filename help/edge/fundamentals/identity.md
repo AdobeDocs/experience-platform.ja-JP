@@ -1,28 +1,28 @@
 ---
-title: Experience Cloud IDの取得
-seo-title: Adobe Experience Platform Web SDK Experience Cloud IDの取得
+title: Experience CloudIDを取得しています
+seo-title: Experience CloudIDを取得するAdobe Experience PlatformWeb SDK
 description: Adobe Experience Cloud IDを取得する方法を説明します。
 seo-description: Adobe Experience Cloud IDを取得する方法を説明します。
 translation-type: tm+mt
-source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '412'
 ht-degree: 10%
 
 ---
 
 
-# Experience Cloud IDの取得
+# ID -Experience CloudIDの取得
 
-Adobe Experience Platform Web SDKは、 [Adobe Identity Service](../../identity-service/ecid.md)を利用します。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
+Adobe Experience PlatformWeb SDKは、 [Adobe Identity Service](../../identity-service/ecid.md)を利用します。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
 
 ## ファーストパーティID
 
-IDサービスは、IDをファーストパーティドメインのcookieに保存します。 IDサービスは、ドメインのHTTPヘッダーを使用してcookieを設定しようとしますが、それに失敗すると、IDサービスがJavaScriptを使用したcookieの設定に戻ります。 クライアント側のITP制限によってcookieの上限が設定されないように、CNAMEを設定することをお勧めします。
+は、そのIDをファーストパーティドメインのcookieに [!DNL Identity Service] 保存します。 は、ドメインのHTTPヘッダーを使用してcookieを設定しようとします。 [!DNL Identity Service] その場合、はJavaScriptを使用したCookieの設定に戻 [!DNL Identity Service] ります。 クライアント側のITP制限によってcookieが制限されないように、CNAMEを設定することをお勧めします。
 
 ## サードパーティID
 
-IDサービスでは、IDをサードパーティドメイン(demdex.net)と同期して、サイト間での追跡を有効にすることができます。 これが有効な場合、訪問者の最初のリクエスト（ECIDのないユーザーなど）は、demdex.netに対して行われます。 これは、Chromeなどを許可するブラウザーでのみ実行され、設定の `thirdPartyCookiesEnabled` パラメーターで制御されます。 この機能を無効にする場合は、すべてfalseに設定 `thirdPartyCookiesEnabled` します。
+ID [!DNL Identity Service] をサードパーティドメイン(demdex.net)と同期して、サイト間の追跡を有効にする機能があります。 これが有効な場合、訪問者の最初のリクエスト（ECIDのないユーザーなど）は、demdex.netに対して行われます。 これは、Chromeなどを許可するブラウザーでのみ実行され、設定の `thirdPartyCookiesEnabled` パラメーターで制御されます。 この機能をすべて同時に無効にする場合は、false `thirdPartyCookiesEnabled` に設定します。
 
 ## 訪問者IDの取得
 
@@ -30,7 +30,7 @@ IDサービスでは、IDをサードパーティドメイン(demdex.net)と同�
 
 >[!NOTE]
 >
->この方法は、通常、Experience Cloud IDを読み取る必要があるカスタムソリューションで使用されます。 標準の実装では使用されません。
+>このメソッドは、通常、Experience CloudIDを読み取る必要があるカスタムソリューションで使用されます。 標準の実装では使用されません。
 
 ```javascript
 alloy("getIdentity")
@@ -45,7 +45,7 @@ alloy("getIdentity")
 
 ## IDの同期
 
-また、IDサービスでは、 `syncIdentity` コマンドを使用して独自のIDをECIDと同期できます。
+また、コマンド [!DNL Identity Service] を使用して、独自のIDをECIDと同期でき `syncIdentity` ます。
 
 ```javascript
 alloy("syncIdentity",{
@@ -68,7 +68,7 @@ alloy("syncIdentity",{
 | -------- | ------------ | ----------------- |
 | 文字列 | ○ | なし |
 
-オブジェクトのキーは、 [ID名前空間](../../identity-service/namespaces.md) (Identity Symbol)です。 これは、「ID」の下のAdobe Experience Platform UIに表示されます。
+オブジェクトのキーは、 [ID名前空間](../../identity-service/namespaces.md) (Identity Symbol)です。 これは、「 [!UICONTROL ID]」のAdobe Experience Platformユーザーインターフェイスに表示されます。
 
 #### `id`
 
@@ -92,7 +92,7 @@ IDの認証状態。
 | -------- | ------------ | ----------------- |
 | Boolean | オプション | false |
 
-このIDを統合プロファイルのプライマリフラグメントとして使用する場合。 デフォルトでは、ECIDがユーザーの主な識別子として設定されます。
+このIDを統合プロファイルのプライマリフラグメントとして使用するかどうかを指定します。 デフォルトでは、ECIDがユーザーの主識別子として設定されます。
 
 #### `hashEnabled`
 
@@ -100,4 +100,4 @@ IDの認証状態。
 | -------- | ------------ | ----------------- |
 | Boolean | オプション | false |
 
-有効にすると、SHA256ハッシュを使用してIDをハッシュします。
+有効にすると、SHA256ハッシュを使用してIDがハッシュされます。
