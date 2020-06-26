@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK のイベントのトラッキン�
 description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 97%
+source-wordcount: '638'
+ht-degree: 93%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Cloud に送信されるデータは、次の 2 つのカテゴ
 
 XDM データは、Adobe Experience Platform 内で作成したスキーマとコンテンツと同じ構造を持つオブジェクトです。[スキーマの作成方法の詳細について説明します。](../../xdm/tutorials/create-schema-ui.md)
 
-分析、パーソナライゼーション、オーディエンスまたは宛先の一部とする XDM データは、`xdm` オプションを使用して送信する必要がありあｍす。
+Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
 
 ```javascript
 alloy("sendEvent", {
