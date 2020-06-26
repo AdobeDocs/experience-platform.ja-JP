@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：イベントデータの結合
 description: Experience Platform Web SDK イベントデータの結合方法について説明します
 seo-description: Experience Platform Web SDK イベントデータの結合方法について説明します
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 95%
+source-wordcount: '411'
+ht-degree: 41%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->この機能は現在開発中です。したがって、すべてのソリューションでこのデータを統合できるわけではありません。
+>この機能は現在開発中です。 このページで説明されているように、一部のソリューションでイベントデータを結合できるわけではありません。
 
 イベントが発生すると、一部のデータが利用できなくなる場合があります。ユーザーがブラウザーを閉じた場合などに、データが失われないよう、_取得した_&#x200B;データを取り込むことができます。一方、後で使用できるようデータも含めることができます。
 
@@ -58,15 +58,15 @@ alloy("sendEvent", {
 });
 ```
 
-この例では、両方のイベントコマンドに同じイベント結合 ID 値を渡すことで、1 番目のイベントコマンドで以前に送信されたデータを、2 番目のイベントコマンドのデータで強化します。各イベントコマンドのレコードは Experience Data Platform で作成されますが、報告時には、イベント結合 ID を使用してレコードを結合し、単一のイベントとして表示します。
+By passing the same `eventMergeID` value to both event commands in this example, the data in the second event command is augmented to data previously sent on the first event command. A record for each event command is created in the Experience Data Platform, but during reporting the records are joined together using the `eventMergeID` and appear as a single event.
 
-特定のイベントに関するデータをサードパーティプロバイダーに送信する場合は、同じイベント結合 ID をそのデータに含めることもできます。サードパーティのデータを後から Adobe Experience Platform に読み込む場合、イベントの結合 ID は、Web ページで発生した個別のイベントの結果として収集されたすべてのデータを結合するために使用されます。
+If you are sending data about a particular event to third-party providers, you can include the same `eventMergeID` with that data as well. Later, if you choose to import the third-party data into the Adobe Experience Platform, `eventMergeID` will be used to merge together all data that was collected as a result of the discrete event that occurred on your webpage.
 
-## イベント結合 ID の生成
+## JavaScriptでの `eventMergeID`
 
-イベント結合 ID の値には任意の文字列を選択できます。ただし、同じ ID を使用して送信されるすべてのイベントは単一のイベントとしてレポートされるので、イベントを結合しない場合は一意性を強化するように注意してください。自分に変わって SDK で一意のイベント結合 ID を生成する場合（広く採用されている [UUID v4 の仕様](https://www.ietf.org/rfc/rfc4122.txt)に従って）一意のイベント結合 ID を自分に代わって生成する場合は は、`createEventMergeId` コマンドを使用できます。
+The `eventMergeID` value can be any string you choose, but remember that all events sent using the same ID are reported as a single event, so be careful to enforce uniqueness when events should not be merged. If you would like the SDK to generate a unique `eventMergeID` on your behalf (following the widely-adopted [UUID v4 specification](https://www.ietf.org/rfc/rfc4122.txt)), you can use the `createEventMergeId` command to do so.
 
-SDK が読み込みを完了する前にユーザーがコマンドを実行する可能性があるので、すべてのコマンドと同様に、promise が返されます。Promise は、可能な限り早く一意のイベント結合 ID を使用して解決されます。次のように、promise が解決されるのを待ってから、サーバーにデータを送信できます。
+SDK が読み込みを完了する前にユーザーがコマンドを実行する可能性があるので、すべてのコマンドと同様に、promise が返されます。The promise will be resolved with a unique `eventMergeID` as soon as possible. 次のように、promise が解決されるのを待ってから、サーバーにデータを送信できます。
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
@@ -110,7 +110,7 @@ eventMergeIdPromise.then(function(results) {
 });
 ```
 
-他の理由（例えば、サードパーティプロバイダーに送信する場合）でイベント結合 ID にアクセスする場合も、同じパターンに従います。
+Follow this same pattern if you would like access to the `eventMergeID` for other reasons (for example, to send it to a third-party provider):
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
