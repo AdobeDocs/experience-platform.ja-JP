@@ -4,9 +4,9 @@ solution: Experience Platform
 title: マーケティングアクション
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '536'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # マーケティングアクション
 
-マーケティングアクションは、Adobe Experience Platform Data Governanceの観点から見ると、Experience Platformデータコンシューマーが行うアクションで、データ使用ポリシーの違反を確認する必要があります。
+Adobe Experience Platformデータガバナンスの観点から見たマーケティングアクションは、 [!DNL Experience Platform] データコンシューマが行うアクションで、データ使用ポリシーの違反を確認する必要があります。
 
 APIでマーケティングアクションを使用するには、エンドポイントを使用する必要があり `/marketingActions` ます。
 
@@ -142,7 +142,7 @@ responseオブジェクトには、マーケティングアクションの詳細
 
 ## マーケティングアクションの作成または更新
 
-Policy Service APIを使用すると、独自のマーケティングアクションを定義したり、既存のマーケティングアクションを更新したりできます。 作成と更新は、どちらもマーケティングアクションの名前に対するPUT操作を使用して行います。
+この [!DNL Policy Service] APIを使用すると、既存のマーケティングアクションを更新するだけでなく、独自のマーケティングアクションを定義することもできます。 作成と更新は、どちらもマーケティングアクションの名前に対するPUT操作を使用して行います。
 
 **API形式**
 
@@ -195,7 +195,7 @@ curl -X PUT \
 
 ## マーケティングアクションの削除
 
-削除するマーケティングアクションのに削除リクエストを送信することで、マーケティングアクション `{marketingActionName}` を削除できます。
+削除するマーケティングアクションのにDELETEリクエストを送信することで、マーケティングアクション `{marketingActionName}` を削除できます。
 
 >[!NOTE] 既存のポリシーで参照されているマーケティングアクションは削除できません。 そうすると、400エラー（NGリクエスト）が発生し、削除しようとしているマーケティングアクションへの参照を含むポリシー（またはポリシー）の( `id` または複数のID)が含まれるエラーメッセージが表示されます。
 
