@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Real-time Machine Learningノードリファレンスガイド
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## MLパイプラインで使用するノードを検出しています
 
-次のコードをPythonノートブックにコピーして、使用可能なすべてのノードを表示します。
+次のコードを [!DNL Python] ノートブックにコピーして、使用可能なすべてのノードを表示します。
 
 ```python
 from pprint import pprint
@@ -121,7 +121,7 @@ msg6 = model_train.process(msg5)
 | 値 | 説明 |
 | --- | --- |
 | 機能 | モデルに入力フィーチャを追加します(文字列のリスト)。 <br> 次に例を示します。 `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | ターゲットの列名（文字列） |
+| label | Targetの列名（文字列） |
 | mode | トレーニング/テスト（文字列） |
 | model_path | onnx形式でローカルに保存したモデルのパス。 |
 | params.model | モデルへの絶対インポートパス（文字列）: `sklearn.linear_model.LogisticRegression`. |
