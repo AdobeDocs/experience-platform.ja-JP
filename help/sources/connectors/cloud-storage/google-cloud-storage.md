@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Google Cloudストレージコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Google Cloudストレージコネクタ
 
-Adobe Experience Platformは、AWS、Google Cloud Platform、Azureなどのクラウドプロバイダーに対してネイティブの接続性を提供し、これらのシステムからデータを取り込むことができます。
+Adobe Experience Platformは、AWS、 [!DNL Google Cloud Platform]およびなどのクラウドプロバイダーに対してネイティブの接続を提供し、これらのシステムからデータを取得でき [!DNL Azure]ます。
 
-クラウドストレージソースは、ダウンロード、形式設定、アップロードを行うことなく、独自のデータをプラットフォームに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 プラットフォームを使用すると、Google Cloudストレージからデータをバッチで取り込むことができます。
+Cloudストレージソースからは、ダウンロード、フォーマット、アップロードを行う [!DNL Platform] ことなく、独自のデータをに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] バッチを使用してデータを取り込むこ [!DNL Google Cloud Storage] とができます。
 
-## Google Cloudストレージアカウント接続の前提条件の設定
+## アカウント接続の前提条件の [!DNL Google Cloud Storage] 設定
 
-Platformに接続するには、まずGoogle Cloudストレージアカウントの相互運用を有効にする必要があります。 相互運用性設定にアクセスするには、Google Cloud Platformを開き、ナビゲーションパネルの **[!UICONTROL ストレージ]****[!UICONTROL (Settings]** )オプションを選択します。
+に接続するに [!DNL Platform]は、最初にアカウントの相互運用性を有効にする必要があり [!DNL Google Cloud Storage] ます。 相互運用性設定にアクセスするには、を開き、ナビゲーションパネルの [!DNL Google Cloud Platform] ストレージ **[!UICONTROL (]** Settings **[!UICONTROL )オプションから「]** Settings」を選択します。
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-[ **[!UICONTROL 設定]** ]ページが表示されます。 ここから、GoogleプロジェクトIDに関する情報とGoogle Cloudストレージアカウントに関する詳細を確認できます。 相互運用性設定にアクセスするには、上部のヘッダーで **[!UICONTROL 「Interoperability]** 」を選択します。
+[ **[!UICONTROL 設定]** ]ページが表示されます。 ここから、 [!DNL Google] プロジェクトIDに関する情報とアカウントに関する詳細を確認でき [!DNL Google Cloud Storage] ます。 相互運用性設定にアクセスするには、上部のヘッダーで **[!UICONTROL 「Interoperability]** 」を選択します。
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
@@ -34,13 +34,13 @@ Platformに接続するには、まずGoogle Cloudストレージアカウント
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-新しく生成したアクセスキーIDと秘密アクセスキーを使用して、Google Cloudストレージアカウントをプラットフォームに接続できます。
+新しく生成したアクセスキーIDと秘密鍵を使用して、 [!DNL Google Cloud Storage] アカウントをに接続でき [!DNL Platform]ます。
 
-以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle Cloudストレージをプラットフォームに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Google Cloud Storage] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
 
-## Google Cloudストレージのプラットフォームへの接続
+## 接続 [!DNL Google Cloud Storage] 先 [!DNL Platform]
 
-以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle Cloudストレージをプラットフォームに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Google Cloud Storage] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
 
 ### APIの使用
 
