@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ポリシー
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '940'
 ht-degree: 2%
 
 ---
@@ -493,6 +493,6 @@ curl -X POST \
 }
 ```
 
-## リアルタイムの顧客プロファイルに関するポリシー評価
+## ポリシー評価 [!DNL Real-time Customer Profile]
 
-Policy Service APIは、リアルタイム顧客プロファイルセグメントの使用に関連するポリシー違反の有無を確認する場合にも使用できます。 詳しくは、[オーディエンスセグメントのデータ使用に対する準拠の適用](../../segmentation/tutorials/governance.md)に関するチュートリアルを参照してください。
+また、 [!DNL Policy Service] APIを使用して、セグメントの使用に関連するポリシー違反の有無を確認することもでき [!DNL Real-time Customer Profile] ます。 詳しくは、[オーディエンスセグメントのデータ使用に対する準拠の適用](../../segmentation/tutorials/governance.md)に関するチュートリアルを参照してください。
