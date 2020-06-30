@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SDK開発者ガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 564603fdec6050463937c6e162cdff00cda506c4
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # SDK開発者ガイド
 
-モデルオーサリングSDKを使用すると、Data Science Workspaceで使用できるカスタムの機械学習レシピと機能パイプラインを開発でき、PySparkとSpark (Scala)で実装可能なテンプレートを提供します。 [!DNL Adobe Experience Platform]
+モデルオーサリングSDKを使用すると、Data Science Workspaceで使用できるカスタムの機械学習レシピおよび機能パイプラインを開発し、およびで実装可能なテンプレートを提供でき [!DNL Adobe Experience Platform][!DNL PySpark][!DNL Spark (Scala)]ます。
 
 このドキュメントは、モデルオーサリングSDK内の様々なクラスに関する情報を提供します。
 
@@ -37,7 +37,7 @@ DataLoaderクラスは、生の入力データの取得、フィルタリング�
         <tr>
             <td>
                 <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
-                <p>Pandas DataFrameとしてプラットフォームデータを読み込んで返す</p>
+                <p>PlatformデータをPandas DataFrameとして読み込んで返す</p>
             </td>
             <td>
                 <ul>
@@ -52,7 +52,7 @@ DataLoaderクラスは、生の入力データの取得、フィルタリング�
 
 **Spark**
 
-次の表に、Spark Data Loaderクラスの抽象メソッドを示します。
+次の表に、 [!DNL Spark] Data Loaderクラスの抽象メソッドを示します。
 
 <table>
     <thead>
@@ -65,7 +65,7 @@ DataLoaderクラスは、生の入力データの取得、フィルタリング�
         <tr>
             <td>
                 <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
-                <p>プラットフォームデータをDataFrameとして読み込んで返す</p>
+                <p>PlatformデータをDataFrameとして読み込んで返す</p>
             </td>
             <td>
                 <ul>
@@ -77,9 +77,9 @@ DataLoaderクラスは、生の入力データの取得、フィルタリング�
     </tbody>
 </table>
 
-### プラットフォームデータセットからのデータの読み込み {#load-data-from-a-platform-dataset}
+### データセットからのデータの読み込み [!DNL Platform] {#load-data-from-a-platform-dataset}
 
-次の例では、プラットフォームデータをIDで取得し、DataFrameを返します。データセットID(`datasetId`)は設定ファイル内で定義されたプロパティです。
+次の例では、IDで [!DNL Platform] データを取得し、DataFrameを返します。この場合、データセットID(`datasetId`)は設定ファイル内で定義されたプロパティです。
 
 **PySpark**
 
@@ -198,7 +198,7 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
 
 **PySpark**
 
-次の表は、PySpark Data Saverクラスの抽象メソッドを説明しています。
+次の表に、 [!DNL PySpark] Data Saverクラスの抽象メソッドを示します。
 
 <table>
     <thead>
@@ -211,7 +211,7 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
         <tr>
             <td>
                 <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
-                <p>出力データをDataFrameとして受け取り、プラットフォームデータセットに格納する</p>
+                <p>出力データをDataFrameとして受け取り、Platformデータセットに格納する</p>
             </td>
             <td>
                 <ul>
@@ -226,7 +226,7 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
 
 **Spark (Scala)**
 
-次の表に、Spark Data Saverクラスの抽象メソッドを示します。
+次の表に、 [!DNL Spark] Data Saverクラスの抽象メソッドを示します。
 
 <table>
     <thead>
@@ -239,7 +239,7 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
         <tr>
             <td>
                 <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
-                <p>出力データをDataFrameとして受け取り、プラットフォームデータセットに格納する</p>
+                <p>出力データをDataFrameとして受け取り、Platformデータセットに格納する</p>
             </td>
             <td>
                 <ul>
@@ -251,14 +251,14 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
     </tbody>
 </table>
 
-### プラットフォームデータセットへのデータの保存 {#save-data-to-a-platform-dataset}
+### データセットへのデータの [!DNL Platform] 保存 {#save-data-to-a-platform-dataset}
 
-データをプラットフォームデータセットに格納するには、次のいずれかのプロパティを指定するか、設定ファイルで定義する必要があります。
+データセットにデータを格納するには、次のように設定ファイルでプロパティを指定するか、定義する必要があり [!DNL Platform] ます。
 
-- データの格納先となる有効なプラットフォームデータセットID
+- データの格納先となる有効な [!DNL Platform] データセットID
 - 組織に属するテナントID
 
-次の例では、データ(`prediction`)をプラットフォームデータセットに格納します。データセットID(`datasetId`)とテナントID(`tenantId`)は、設定ファイル内で定義されたプロパティです。
+次の例では、データ(`prediction`)をデータセットに格納します。データセットID( [!DNL Platform] )とテナントID(`datasetId``tenantId`)は、設定ファイル内で定義されたプロパティです。
 
 
 **PySpark**
@@ -394,7 +394,7 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-DatasetTransformerクラスは、データセットの構造を変更および変換します。 Senesie Machine Learning Runtimeは、このコンポーネントを定義する必要はなく、必要に応じて実装します。
+DatasetTransformerクラスは、データセットの構造を変更および変換します。 は、このコンポーネント [!DNL Sensei Machine Learning Runtime] を定義する必要はなく、要件に基づいて実装されます。
 
 フィーチャパイプラインに関しては、データセット変圧器をフィーチャパイプラインファクトリと共に使用して、フィーチャエンジニアリング用のデータを準備できます。
 
@@ -428,7 +428,7 @@ DatasetTransformerクラスは、データセットの構造を変更および�
 
 **Spark (Scala)**
 
-次の表に、Sparkデータセットトランスフォームクラスの抽象メソッドを示します。
+次の表に、 [!DNL Spark] dataset transformerクラスの抽象メソッドを示します。
 
 <table>
     <thead>
@@ -499,7 +499,7 @@ FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズム�
 
 **Spark (Scala)**
 
-次の表に、Spark FeaturePipelineFactoryのクラスメソッドを示します。
+次の表に、FeaturePipelineFactoryのクラスメソッドを示し [!DNL Spark] ます。
 
 <table>
     <thead>
@@ -537,7 +537,7 @@ FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズム�
 
 ## PipelineFactory {#pipelinefactory}
 
-PipelineFactoryクラスには、モデルトレーニングとスコアリングのメソッドと定義がカプセル化されています。トレーニングロジックとアルゴリズムは、Sparkパイプラインの形式で定義されます。
+PipelineFactoryクラスには、モデルトレーニングとスコアリングのメソッドと定義がカプセル化されています。この場合、トレーニングロジックとアルゴリズムは [!DNL Spark] パイプラインの形式で定義されます。
 
 **PySpark**
 
@@ -608,7 +608,7 @@ PipelineFactoryクラスには、モデルトレーニングとスコアリン�
 
 **Spark (Scala)**
 
-次の表に、Spark PipelineFactoryのクラスメソッドを示します。
+次の表に、PipelineFactoryのクラスメソッドを示し [!DNL Spark] ます。
 
 <table>
     <thead>
@@ -692,7 +692,7 @@ MLEvaluatorクラスは、評価指標を定義し、トレーニングおよび
 
 **Spark (Scala)**
 
-次の表に、Spark MLEvaluatorのクラスメソッドを示します。
+次の表に、 [!DNL Spark] MLEvaluatorのクラスメソッドを示します。
 
 <table>
     <thead>
