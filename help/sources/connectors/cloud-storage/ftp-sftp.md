@@ -4,9 +4,9 @@ solution: Experience Platform
 title: FTPおよびSFTPコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '192'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 0%
 >[!NOTE]
 >FTPおよびSFTPコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformは、AWS、Google CloudPlatform、Azureなどのクラウドプロバイダーに対してネイティブの接続を提供し、これらのシステムからデータを取り込むことができます。
+Adobe Experience Platformは、AWS、 [!DNL Google Cloud Platform]およびなどのクラウドプロバイダーに対してネイティブの接続を提供し、これらのシステムからデータを取得でき [!DNL Azure]ます。
 
-Cloudストレージソースを使用すると、ダウンロード、形式設定、アップロードを行う必要なく、独自のデータをPlatformに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 Platformを使用すると、FTPまたはSFTPサーバーからデータをバッチで取り込むことができます。
+Cloudストレージソースからは、ダウンロード、フォーマット、アップロードを行う [!DNL Platform] ことなく、独自のデータをに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] FTPまたはSFTPサーバーからデータをバッチで取り込むことができます。
 
-以下のドキュメントは、APIまたはユーザーインターフェイスを使用してFTPまたはSTFPサーバーをPlatformに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイスを使用してFTPまたはSTFPサーバーを接続する方法に関する情報を提供し [!DNL Platform] ています。
 
-## APIを使用したFTPとSFTPのPlatformへの接続
+## APIを [!DNL Platform] 使用したFTPとSFTPの接続
 
 - [Flow Service APIを使用してFTPまたはSFTPコネクタを作成する](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
-## UIを使用したFTPまたはSFTPのPlatformへの接続
+## UIを [!DNL Platform] 使用したFTPまたはSFTPへの接続
 
 - [UIでのFTPまたはSFTPソースコネクタの作成](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
 - [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
