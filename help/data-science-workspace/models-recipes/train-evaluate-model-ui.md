@@ -4,9 +4,9 @@ solution: Experience Platform
 title: モデル(UI)のトレーニングと評価
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '975'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # モデル(UI)のトレーニングと評価
 
-Adobe Experience Platform Data Science Workspaceでは、機械学習モデルは、モデルの意図に適した既存のレシピを組み込むことで作成されます。 次に、モデルのトレーニングと評価を行い、関連するハイパーパラメーターを微調整して、その動作効率と有効性を最適化します。 レシピは再利用可能です。つまり、複数のモデルを作成し、1つのレシピで特定の目的に合わせてカスタマイズできます。
+Adobe Experience Platformデータサイエンスワークスペースでは、機械学習モデルは、モデルの意図に適した既存のレシピを組み込むことで作成されます。 次に、モデルのトレーニングと評価を行い、関連するハイパーパラメーターを微調整して、その動作効率と有効性を最適化します。 レシピは再利用可能です。つまり、複数のモデルを作成し、1つのレシピで特定の目的に合わせてカスタマイズできます。
 
 このチュートリアルでは、モデルの作成、トレーニング、評価の手順について説明します。
 
 ## はじめに
 
-このチュートリアルを完了するには、エクスペリエンスプラットフォームにアクセスできる必要があります。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
+このチュートリアルを完了するには、にアクセスする必要があり [!DNL Experience Platform]ます。 でIMS組織にアクセスできない場合は、先に進む前にシステム管理者にお問い合わせ [!DNL Experience Platform]ください。
 
 このチュートリアルでは、既存のレシピが必要です。 レシピがない場合は、先に進む前に、UI [チュートリアルの「パッケージ化されたレシピを](./import-packaged-recipe-ui.md) 読み込む」に従ってください。
 
@@ -45,10 +45,10 @@ Adobe Experience Platform Data Science Workspaceでは、機械学習モデル�
 1. Adobe Experience Platformで、左側のナビゲーション列にある「 **[!UICONTROL モデル]** 」リンクをクリックして、既存のすべてのモデルをリストします。 トレーニングを受けるモデルの名前を見つけ、クリックします。
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. 既存のトレーニングの実行が、現在のトレーニングのステータスですべて表示されます。 Data Science Workspaceユーザーインターフェイスを使用して作成されたモデルの場合、トレーニング実行は自動的に生成され、デフォルトの設定と入力トレーニングデータセットを使用して実行されます。
+2. 既存のトレーニングの実行が、現在のトレーニングのステータスですべて表示されます。 ユーザーインターフェイスを使用して作成されたモデルの場合、トレーニング実行は自動的に生成され、デフォルトの設定と入力トレーニングデータセットを使用して実行されます。 [!DNL Data Science Workspace]
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. [モデルの概要]ページの右上にある[トレ **[!UICONTROL ーニング]** ]をクリックして、新しいトレーニングを作成します。
+3. モデルの概要ページの右上近くにある **[!UICONTROL トレーニング]** (Train)をクリックして、新しいトレーニングを作成します。
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
 4. トレーニング実行のトレーニング入力データセットを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
@@ -80,7 +80,7 @@ Adobe Experience Platform Data Science Workspaceでは、機械学習モデル�
 
 ## 次の手順
 
-このチュートリアルでは、Data Science Workspaceでのモデルの作成、トレーニング、評価に関する手順を説明しました。 最適化されたモデルに到達したら、UI [チュートリアルの「モデルの](./score-model-ui.md) スコア」に従って、トレーニングを受けたモデルを使用してインサイトを生成できます。
+このチュートリアルでは、のモデルの作成、トレーニング、評価に関する手順を説明し [!DNL Data Science Workspace]ました。 最適化されたモデルに到達したら、UI [チュートリアルの「モデルの](./score-model-ui.md) スコア」に従って、トレーニングを受けたモデルを使用してインサイトを生成できます。
 
 ## リファレンス {#reference}
 
