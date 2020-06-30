@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ノートブックを使用してデータを分析する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -18,31 +18,31 @@ ht-degree: 0%
 
 次の概念について説明します。
 
-- **JupterLab:** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project Jupyterの次世代のWebベースのインターフェースで、に緊密に統合されてい [!DNL Adobe Experience Platform]ます。
+- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)は、Project Jupyter向けの次世代のWebベースのインターフェースで、と緊密に統合されてい[!DNL Adobe Experience Platform]ます。
 - **バッチ：** データセットはバッチで構成されます。 バッチとは、ある期間に収集され、1つの単位として一緒に処理される一連のデータです。 データセットにデータが追加されると、新しいバッチが作成されます。
-- **Data Access SDK（非推奨）:** データアクセスSDKは廃止されました。 『 [プラットフォームSDK](../authoring/platform-sdk.md) 』ガイドを使用してください。
+- **Data Access SDK（非推奨）:** データアクセスSDKは廃止されました。 ガイドをご利用くだ [!DNL Platform SDK](../authoring/platform-sdk.md) さい。
 
 ## Data Science Workspaceのノートブックの参照
 
 この節では、以前小売販売スキーマに取り込まれたデータについて説明します。
 
-Data Science Workspaceを使用すると、JupterLabプラットフォームを通じてJupyter Notebooksを作成し、機械学習ワークフローを作成および編集できます。 JupterLabは、Webブラウザを使用してノートブックドキュメントを編集できるサーバクライアントコラボレーションツールです。 これらのノートブックには、実行可能コードとリッチテキストの両方の要素を含めることができます。 当社の目的では、分析の説明と実行可能なPythonコードにMarkdownを使用して、データの探索と分析を行います。
+Data Science Workspaceを使用すると、ユーザーは、機械学習ワークフロー [!DNL Jupyter Notebooks] を作成および編集できる [!DNL JupyterLab] プラットフォームを使用して作成できます。 [!DNL JupyterLab] は、Webブラウザーを使用してノートブックドキュメントを編集できるサーバークライアントコラボレーションツールです。 これらのノートブックには、実行可能コードとリッチテキストの両方の要素を含めることができます。 当社の目的では、分析の説明と実行可能な [!DNL Python] コードにMarkdownを使用して、データの調査と分析を行います。
 
 ### ワークスペースの選択
 
-JupyterLabを起動すると、Jupyter Notebooks用のWebベースのインターフェースが提供されます。 どの種類のノートブックを選ぶかによって、対応するカーネルが起動します。
+起動時 [!DNL JupyterLab]に、Jupter Notebooks用のWebベースのインターフェースが表示されます。 どの種類のノートブックを選ぶかによって、対応するカーネルが起動します。
 
-どの環境を使用するかを比較する際には、各サービスの制限事項を考慮する必要があります。 たとえば、Pythonで [pandas](https://pandas.pydata.org/) libraryを使用している場合、通常のユーザーとしてRAMの制限は2 GBです。 パワーユーザーの場合でも、20 GBのRAMに制限されます。 より大きな計算を扱う場合は、すべてのノートブックインスタンスで共有されるオファー1.5 TBのSparkを使用すると効果的です。
+どの環境を使用するかを比較する際には、各サービスの制限事項を考慮する必要があります。 例えば、 [pandas](https://pandas.pydata.org/) libraryをと共に使用する場合、通常のユーザー [!DNL Python]としてRAMの上限は2 GBです。 パワーユーザーの場合でも、20 GBのRAMに制限されます。 より大きな計算を扱う場合は、すべてのノートブックインスタンスで共有されるオファー1.5 TB [!DNL Spark] を使用すると効果的です。
 
 デフォルトでは、TensorflowレシピはGPUクラスタで動作し、PythonはCPUクラスタ内で動作します。
 
 ### 新しいノートブックを作成する
 
-UIで、上部メニューの「データサイエンス」タブをクリックして、データサイエンスワークスペースに移動します。 [!DNL Adobe Experience Platform] このページで、[ JupyterLab ]タブをクリックし、 JupyterLabランチャーを開きます。 次のようなページが表示されます。
+UIで、上部メニューの「データサイエンス」タブをクリックして、データサイエンスワークスペースに移動します。 [!DNL Adobe Experience Platform] このページで、ランチャーを開く [!DNL JupyterLab] タブをクリックし [!DNL JupyterLab] ます。 次のようなページが表示されます。
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
-このチュートリアルでは、Jupyter NotebookのPython 3を使用して、データにアクセスし、データを調べる方法を示します。 ランチャーページには、サンプルノートブックが用意されています。 Python 3向けの小売売上レシピを使用します。
+チュートリアルでは、「Jupyter Notebook」の [!DNL Python] 3を使用して、データにアクセスして調査する方法を示します。 ランチャーページには、サンプルノートブックが用意されています。 小売売上のレシピを [!DNL Python] 3に使用します。
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -50,13 +50,13 @@ UIで、上部メニューの「データサイエンス」タブをクリック
 
 ### データへのアクセス
 
->[!NOTE] は非推奨 `data_access_sdk_python` で、推奨されなくなりました。 コードを変換するには、「 [データアクセスSDKからプラットフォームSDKへの変換](../authoring/platform-sdk.md) 」チュートリアルを参照してください。 このチュートリアルでは、次と同じ手順を引き続き使用します。
+>[!NOTE] は非推奨 `data_access_sdk_python` で、推奨されなくなりました。 コードを変換するには、「 [PlatformSDKへのデータアクセスSDKの](../authoring/platform-sdk.md) 変換」チュートリアルを参照してください。 このチュートリアルでは、次と同じ手順を引き続き使用します。
 
-内部からのデータおよび外部からのデータへのアクセス [!DNL Adobe Experience Platform] を調べます。 このライブラリを使用して、データセットやXDMスキーマなどの内部データにアクセスします。 `data_access_sdk_python` 外部データの場合は、Pandas Pythonライブラリを使用します。
+内部からのデータおよび外部からのデータへのアクセス [!DNL Adobe Experience Platform] を調べます。 このライブラリを使用して、データセットやXDMスキーマなどの内部データにアクセスします。 `data_access_sdk_python` 外部データの場合は、pandas [!DNL Python] ライブラリを使用します。
 
 #### 外部データ
 
-小売売上ノートブックを開き、「Load Data」ヘッダーを探します。 以下のPythonコードは、GithubでホストされるCSVをDataFrameに読み込むために、pandasの `DataFrame` データ構造と [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 関数を使用しています。
+小売売上ノートブックを開き、「Load Data」ヘッダーを探します。 次の [!DNL Python] コードは、pandasの `DataFrame` データ構造と [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv)[!DNL Github] 関数を使用して、DataFrameでホストされるCSVを読み込みます。
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
@@ -68,7 +68,7 @@ PandasのDataFrameデータ構造は、2次元のラベル付きデータ構造�
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### エクスペリエンスプラットフォームデータ
+#### [!DNL Experience Platform]data
 
 次に、 [!DNL Experience Platform] データへのアクセスについて説明します。
 
@@ -86,7 +86,7 @@ Datasetsディレクトリで、取り込まれたすべてのデータセット
 
 これで、データセットを右クリックし、ドロップダウンの「Explore Data in Notebook」オプションを選択でき `Retail-Training-<your-alias>` ます。 実行可能なコードエントリがノートブックに表示されます。
 
->[!TIP] コードを変換するには、『 [プラットフォームSDK](../authoring/platform-sdk.md) 』ガイドを参照してください。
+>[!TIP] コードを変換するには、 [!DNL Platform SDK](../authoring/platform-sdk.md) ガイドを参照してください。
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Python以外のカーネルで作業している場合は、 [このページを参照し](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) 、のデータにアクセスしてください [!DNL Adobe Experience Platform]。
+以外のカーネルで作業している場合は [!DNL Python]、 [このページを参照して](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) 、のデータにアクセスしてくだ [!DNL Adobe Experience Platform]さい。
 
 実行可能セルを選択し、ツールバーの再生ボタンを押すと、実行可能コードが実行されます。 の出力は、データセットのキー `head()` を列、データセット内の最初のn行に含むテーブルになります。 `head()` 出力する行数を指定する整数引数を受け取ります。 デフォルトは5です。
 
@@ -122,7 +122,7 @@ Python以外のカーネルで作業している場合は、 [このページを
 
 #### 統計概要
 
-Pythonのパンダライブラリを利用して、各属性のデータ型を取得できます。 次の呼び出しの出力は、各列のエントリ数とデータタイプに関する情報を提供します。
+各属性のデータタイプを取得するために、 [!DNL Python's] pandasライブラリを利用できます。 次の呼び出しの出力は、各列のエントリ数とデータタイプに関する情報を提供します。
 
 ```PYTHON
 df.info()
@@ -150,7 +150,7 @@ df.describe()
 
 #### データの視覚化
 
-データフレームの値がわかったので、ビジュアライゼーションを使用してこれを補足し、パターンをより明確にし、より簡単に識別できるようにします。 グラフは、結果をオーディエンスに伝える場合にも便利です。 視覚化に役立つPythonライブラリには、次のものがあります。
+データフレームの値がわかったので、ビジュアライゼーションを使用してこれを補足し、パターンをより明確にし、より簡単に識別できるようにします。 グラフは、結果をオーディエンスに伝える場合にも便利です。 視覚化に役立つ [!DNL Python] ライブラリをいくつか挙げます。
 - [Matplotlib](https://matplotlib.org/)
 - [パンダ](https://pandas.pydata.org/)
 - [海辺](https://seaborn.pydata.org/)
@@ -158,7 +158,7 @@ df.describe()
 
 この節では、各ライブラリの使用に関する利点を簡単に説明します。
 
-[Matplotlib](https://matplotlib.org/) は、最も古いPythonビジュアライゼーションパッケージです。 彼らの目標は、「簡単で難しいことを可能にする」ことだ。 これは非常に強力なパッケージであり、複雑さも伴うためです。 相当な時間と労力をかけずに合理的なグラフを得るのは、必ずしも簡単ではない。
+[Matplotlib](https://matplotlib.org/) は、最も古い [!DNL Python] ビジュアライゼーションパッケージです。 彼らの目標は、「簡単で難しいことを可能にする」ことだ。 これは非常に強力なパッケージであり、複雑さも伴うためです。 相当な時間と労力をかけずに合理的なグラフを得るのは、必ずしも簡単ではない。
 
 [Pandas](https://pandas.pydata.org/) は主にDataFrameオブジェクトに使用され、統合インデックスを使用したデータ操作が可能です。 ただし、pandasにはmatplotlibに基づく組み込みの印刷機能も含まれています。
 
