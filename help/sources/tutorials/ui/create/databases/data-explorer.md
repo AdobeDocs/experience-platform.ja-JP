@@ -4,49 +4,49 @@ solution: Experience Platform
 title: UIにAzure Data Explorerソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
 
 
-# UIにAzure Data Explorerソースコネクタを作成する
+# UIで [!DNL Azure Data Explorer] ソースコネクタを作成する
 
 > [!NOTE]
-> Azure Data Explorerコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+> コネクタ [!DNL Azure Data Explorer] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してAzure Data Explorer （以下、「Data Explorer」と呼ばれる）ソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、 [!DNL Azure Data Explorer] ユーザインターフェイスを使用して、[!DNL Data Explorer](以下「 [!DNL Platform] 」と呼ばれる)ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
 このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+* [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に有効なData Explorer接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/databases.md)。
+既に有効な [!DNL Data Explorer] 接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/databases.md)。
 
 ### 必要な資格情報の収集
 
-Platform上のデータエクスプローラーアカウントにアクセスするには、次の値を指定する必要があります。
+で [!DNL Data Explorer] アカウントにアクセスするに [!DNL Platform]は、次の値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `endpoint` | Data Explorerサーバーのエンドポイント。 |
-| `database` | Data Explorerデータベースの名前。 |
-| `tenant` | Data Explorerデータベースへの接続に使用する一意のテナントID。 |
+| `endpoint` | サー [!DNL Data Explorer] バーのエンドポイント。 |
+| `database` | The name of the [!DNL Data Explorer] database. |
+| `tenant` | データベースへの接続に使用する一意のテナントID [!DNL Data Explorer] です。 |
 | `servicePrincipalId` | Data Explorerデータベースへの接続に使用する一意のサービスプリンシパルID。 |
 | `servicePrincipalKey` | Data Explorerデータベースへの接続に使用する一意のサービスプリンシパルキーです。 |
 
 使い始める前に、 [このData Explorerドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)。
 
-## Azure Data Explorerアカウントの接続
+## アカウントに接続 [!DNL Azure Data Explorer] する
 
-必要な資格情報を収集したら、次の手順に従って新しいData Explorerアカウントを作成し、Platformに接続します。
+必要な資格情報を収集したら、次の手順に従って、接続する新しい [!DNL Data Explorer] アカウントを作成でき [!DNL Platform]ます。
 
 「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースから受信アカウントを作成できます。各ソースには既存のアカウントの数と関連するデータセットフローが表示されます。
 
@@ -60,16 +60,16 @@ Platform上のデータエクスプローラーアカウントにアクセスす
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明、およびデータエクスプローラの資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明および [!DNL Data Explorer] 資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
 
 ![connect](../../../../images/tutorials/create/data-explorer/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するデータエクスプローラアカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
+既存のアカウントに接続するには、接続する [!DNL Data Explorer] アカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
 
 ![既存の](../../../../images/tutorials/create/data-explorer/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、Data Explorerアカウントへの接続を確立しました。 次のチュートリアルに進み、データをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/databases.md)。
+このチュートリアルに従って、ア [!DNL Data Explorer] カウントへの接続を確立しました。 次のチュートリアルに進み、データをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/databases.md)。
