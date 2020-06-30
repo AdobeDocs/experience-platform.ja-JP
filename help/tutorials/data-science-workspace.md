@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data Science Workspaceのチュートリアル
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4d7d61660e6691d77701db1c089b84eee7f60974
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Adobe Experience Platformを使用すると、Senesi Machine Learning Framework 
 
 ## Real-Time Machine Learningアプリケーション（アルファ）の構築
 
-ハブとエッジの両方でシームレスな計算を組み合わせることで、従来、関連性が高く応答性の高い、パーソナライズされたエクスペリエンスのパワーに関与してきた待ち時間が大幅に削減されます。 したがって、リアルタイム機械学習では、同期的な意思決定に対する遅延が非常に低いという推測が提供されます。 例としては、パーソナライズされたWebページコンテンツのレンダリング、オファーの表示、Webストアでのコンバージョンを増やしながら変化を減らす割引などがあります。
+ハブとレスポンシブの両方でシームレスな計算を組み合わせることで、従来、関連性が高く応答性の高いパーソナライズされたエクスペリエンスの電源投入に関与していた待ち時間が大幅に削減されます。 [!DNL Edge] したがって、リアルタイム機械学習では、同期的な意思決定に対する遅延が非常に低いという推測が提供されます。 例としては、パーソナライズされたWebページコンテンツのレンダリング、オファーの表示、Webストアでのコンバージョンを増やしながら変化を減らす割引などがあります。
 
 **このガイドは次の目的に役立ちます。**
 - リアルタイム機械学習アーキテクチャについて説明します。
