@@ -4,7 +4,7 @@ solution: Experience Platform
 title: モデルをサービスとして発行(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Senesie Machine Learning APIを使用してモデルを公開する場合は、 
 
 ## サービスを使用したスコア {#access-a-service}
 
-1. 「Adobe Experience Platform」で、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックし、「 *サービスギャラリー*」にアクセスします。 使用するサービスを見つけ、「 **[!UICONTROL スコア]**」をクリックします。
+1. 「Adobe Experience Platform」で、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックし、「 *[!UICONTROL サービスギャラリー]*」にアクセスします。 使用するサービスを見つけ、「 **[!UICONTROL スコア]**」をクリックします。
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. スコアリング実行に適した入力データセットを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -52,4 +52,4 @@ Senesie Machine Learning APIを使用してモデルを公開する場合は、 
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うと、アクセシブルなサービスとしてモデルを正常に公開し、 *サービスギャラリーを通じて新しいサービスを使用してデータにスコアを割り当てることができます*。 次のチュートリアルに進み、サービスでの自動トレーニングとスコアリングの実行を [スケジュールする方法を学習します](./schedule-models-ui.md)。
+このチュートリアルに従うと、アクセシブルなサービスとしてモデルを正常に公開し、 *[!UICONTROL サービスギャラリーを通じて新しいサービスを使用してデータにスコアを割り当てることができます]*。 次のチュートリアルに進み、サービスでの自動トレーニングとスコアリングの実行を [スケジュールする方法を学習します](./schedule-models-ui.md)。
