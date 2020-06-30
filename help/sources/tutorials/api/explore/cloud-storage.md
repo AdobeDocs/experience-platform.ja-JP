@@ -4,32 +4,32 @@ solution: Experience Platform
 title: Flow Service APIを使用したクラウドストレージシステムの調査
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7cd9bec7336d0e1d9f3036cf862633f498002af8
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '682'
 ht-degree: 2%
 
 ---
 
 
-# Flow Service APIを使用したクラウドストレージシステムの調査
+# APIを使用したクラウドストレージシステムの調査 [!DNL Flow Service]
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムを調査します。
+このチュートリアルでは、 [!DNL Flow Service] APIを使用してサードパーティのクラウドストレージシステムを調査します。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [ソース](../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むと同時に、プラットフォームサービスを使用して、入力データの構造、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してクラウドストレージシステムに正常に接続するために必要な追加情報については、以下の節で説明します。
+次の節では、 [!DNL Flow Service] APIを使用してクラウドストレージシステムに正常に接続するために知っておく必要がある追加情報について説明します。
 
 ### ベース接続の取得
 
-Platform APIを使用してサードパーティのクラウドストレージを調査するには、有効なベース接続IDが必要です。 操作するストレージの基本接続がまだない場合は、次のチュートリアルを使用して作成できます。
+APIを使用してサードパーティのクラウドストレージを調査するに [!DNL Platform] は、有効なベース接続IDが必要です。 操作するストレージの基本接続がまだない場合は、次のチュートリアルを使用して作成できます。
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure BLOB](../create/cloud-storage/blob.md)
@@ -39,17 +39,17 @@ Platform APIを使用してサードパーティのクラウドストレージ�
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platformのすべてのリソース（フローサービスに属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -66,7 +66,7 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 | `objectType` | 調査するオブジェクトのタイプ。 この値は次のいずれかに設定します。 <ul><li>`folder`: 特定のディレクトリの参照</li><li>`root`: ルートディレクトリを調べます。</li></ul> |
 | `object` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 この値は、調査するディレクトリのパスを表します。 |
 
-次の呼び出しを使用して、プラットフォームに取り込むファイルのパスを探します。
+次の呼び出しを使用して、に取り込むファイルのパスを探しま [!DNL Platform]す。
 
 **API形式**
 
@@ -168,4 +168,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、クラウドストレージシステムを調べ、プラットフォームに取り込むファイルのパスを見つけ、その構造を確認しました。 次のチュートリアルでこの情報を使用して、クラウドストレージからデータを [収集し、Platformに取り込むことができます](../collect/cloud-storage.md)。
+このチュートリアルに従って、クラウドストレージシステムを調べ、に取り込むファイルのパスを見つけ、その構造を確認し [!DNL Platform]ました。 次のチュートリアルでこの情報を使用して、クラウドストレージからデータを [収集し、Platformに取り込むことができます](../collect/cloud-storage.md)。
