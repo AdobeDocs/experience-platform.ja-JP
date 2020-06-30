@@ -4,48 +4,48 @@ solution: Experience Platform
 title: UIでMicrosoft Dynamicsソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 44c43afc653c147fa12e3e962904bfc79ee0fc64
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '445'
 ht-degree: 1%
 
 ---
 
 
-# UIでMicrosoft Dynamicsソースコネクタを作成する
+# UIで [!DNL Microsoft Dynamics] ソースコネクタを作成する
 
-Adobe Experience Platformのソースコネクターは、外部ソースのCRMデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してMicrosoft Dynamics （以下「Dynamics」と呼ばれる）ソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのCRMデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、 [!DNL Microsoft Dynamics] ユーザインターフェイスを使用して、[!DNL Dynamics](以下「 [!DNL Platform] 」と呼ばれる)ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
+* [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に有効なDynamicsアカウントをお持ちの場合は、このドキュメントの残りの部分をスキップし、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/crm.md)。
+既に有効な [!DNL Dynamics] アカウントをお持ちの場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/crm.md)。
 
 ### 必要な資格情報の収集
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `serviceUri` | DynamicsインスタンスのサービスURL。 |
-| `username` | Dynamicsユーザーアカウントのユーザー名です。 |
+| `serviceUri` | インスタンスのサービスURL [!DNL Dynamics] 。 |
+| `username` | ユーザーアカウントのユー [!DNL Dynamics] ザー名です。 |
 | `password` | Dynamicsアカウントのパスワードです。 |
 
 開始方法の詳細については、 [このDynamicsドキュメントを参照してください](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth)。
 
-## Dynamicsアカウントに接続
+## アカウントに接続 [!DNL Dynamics] する
 
-必要な資格情報を収集したら、次の手順に従って、プラットフォームに接続する新しいDynamicsアカウントを作成できます。
+必要な資格情報を収集したら、次の手順に従って、接続する新しい [!DNL Dynamics] アカウントを作成でき [!DNL Platform]ます。
 
-[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) Sources **** 」を選択して *[!UICONTROL Sources]* ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには既存のアカウントの数と関連するデータセットフローが表示されます。
+「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには既存のアカウントの数と関連するデータセットフローが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-[ *[!UICONTROL データベース]***カテゴリで[]** Dynamics **]を選択し、[+]アイコン(+)** をクリックして新しいDynamicsコネクタを作成します。
+[ *[!UICONTROL Databases]* ] **[!UICONTROL カテゴリで、[]** Dynamics **]を選択し、[+]アイコン(+)** をクリックして新しい [!DNL Dynamics] コネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
@@ -53,16 +53,16 @@ Adobe Experience Platformのソースコネクターは、外部ソースのCRM�
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明、およびDynamics資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明および [!DNL Dynamics] 資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
 
 ![connect](../../../../images/tutorials/create/ms-dynamics/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するDynamicsアカウントを選択し、右上隅の **[!UICONTROL 「次へ]** 」を選択して次に進みます。
+既存のアカウントに接続するには、接続する [!DNL Dynamics] アカウントを選択し、右上隅の「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
 
 ![既存の](../../../../images/tutorials/create/ms-dynamics/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従うことで、Dynamicsアカウントへの接続を確立できました。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/crm.md)。
+このチュートリアルに従って、ア [!DNL Dynamics] カウントへの接続を確立しました。 次のチュートリアルに進み、データをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/crm.md)。
