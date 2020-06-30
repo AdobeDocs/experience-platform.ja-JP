@@ -4,70 +4,70 @@ solution: Experience Platform
 title: UIでServiceNowソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: cada7c7eff7597015caa7333559bef16a59eab65
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
 
 
-# UIでServiceNowソースコネクタを作成する
+# UIで [!DNL ServiceNow] ソースコネクタを作成する
 
 >[!NOTE]
->ServiceNow Connectorはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>コネクタ [!DNL ServiceNow] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してServiceNowソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ユー [!DNL ServiceNow] ザインタフェースを使用して [!DNL Platform] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
 このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+* [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既にServiceNow接続をお持ちの場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/customer-success.md)
+既に接続している場合は、このドキュメントの残りの部分をスキップして、データフローの [!DNL ServiceNow][設定に関するチュートリアルに進むことができます](../../dataflow/customer-success.md)
 
 ### 必要な資格情報の収集
 
-PlatformでServiceNowアカウントにアクセスするには、次の値を指定する必要があります。
+で [!DNL ServiceNow] アカウントにアクセスするに [!DNL Platform]は、次の値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `endpoint` | ServiceNowサーバーのエンドポイントです。 |
-| `username` | 認証のためにServiceNowサーバーに接続するために使用するユーザー名です。 |
-| `password` | 認証用にServiceNowサーバーに接続するためのパスワードです。 |
+| `endpoint` | サー [!DNL ServiceNow] バーのエンドポイント。 |
+| `username` | 認証のためにサー [!DNL ServiceNow] バーに接続するために使用するユーザー名です。 |
+| `password` | 認証用に [!DNL ServiceNow] サーバーに接続するためのパスワードです。 |
 
 使い始める方法の詳細については、 [このServiceNowドキュメントを参照してください](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)。
 
-## ServiceNowアカウントに接続
+## アカウントに接続 [!DNL ServiceNow] する
 
-必要な資格情報を収集したら、次の手順に従って新しいServiceNowアカウントを作成し、Platformに接続します。
+必要な資格情報を収集したら、次の手順に従って、接続する新しい [!DNL ServiceNow] アカウントを作成でき [!DNL Platform]ます。
 
-「 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> 」にログインし、左のナビゲーションバーで「 **ソース** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 カ *タログ* 画面には様々なソースが表示され、このソースからアカウントを作成できます。各ソースには既存のアカウントの数と、それらに関連付けられたデータセットフローが表示されます。
+「 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースからアカウントを作成できます。各ソースには既存のアカウントの数と、それらに関連付けられたデータセットフローが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 *Customer Success* ( **顧客成功** )」カテゴリの下で「ServiceNow（サービス提供）」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しいアカウントを作成するには、「 **接続元**」を選択します。
+「 *[!UICONTROL Customer Success]* ( **[!UICONTROL 顧客成功]** )」カテゴリの下で「ServiceNow（サービス提供）」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しいアカウントを作成するには、「 **[!UICONTROL 接続元]**」を選択します。
 
 ![](../../../../images/tutorials/create/servicenow/catalog.png)
 
-「ServiceNow *に接続* 」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+「ServiceNow *[!UICONTROL に接続]* 」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **新規アカウント**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明、ServiceNow資格情報を入力します。 完了したら、[ **接続** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明および [!DNL ServiceNow] 資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
 
 ![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するServiceNowアカウントを選択し、「 **次へ** 」を選択して次に進みます。
+既存のアカウントに接続するには、接続する [!DNL ServiceNow] アカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
 
 ![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、ServiceNowアカウントへの接続を確立しました。 次のチュートリアルに進み、データをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/customer-success.md)。
+このチュートリアルに従って、ア [!DNL ServiceNow] カウントへの接続を確立しました。 次のチュートリアルに進み、データをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/customer-success.md)。
