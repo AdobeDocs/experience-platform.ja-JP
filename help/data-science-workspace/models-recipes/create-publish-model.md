@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 機械学習モデルのチュートリアルを作成して公開する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1542'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 オンラインの小売Webサイトを所有しているふりをします。 顧客が小売Webサイトで買い物をする際、ビジネスオファーに様々な他の商品を公開するために、パーソナライズされた商品のレコメンデーションを提示したいと考えます。 Webサイトが存在する間、顧客データを継続的に収集し、このデータを使用してパーソナライズされた商品レコメンデーションを生成したいと考えています。
 
-[!DNL Adobe Experience Platform] Data Science Workspaceは、事前に組み込まれた [製品レコメンデーションレシピを使用して目標を達成する手段を提供します](../pre-built-recipes/product-recommendations.md)。 このチュートリアルに従って、小売データにアクセスして理解し、機械学習モデルを作成して最適化し、Data Science Workspaceでインサイトを生成する方法を確認します。
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 事前に作成された [商品レコメンデーションレシピを使用して目標を達成する手段を提供します](../pre-built-recipes/product-recommendations.md)。 このチュートリアルに従って、小売データにアクセスして理解し、機械学習モデルを作成して最適化し、でインサイトを生成する方法を確認し [!DNL Data Science Workspace]ます。
 
-このチュートリアルは、Data Science Workspaceのワークフローを反映しており、機械学習モデルを作成するための次の手順をカバーしています。
+このチュートリアルは、のワークフローを反映し [!DNL Data Science Workspace]ており、機械学習モデルを作成するための次の手順をカバーしています。
 
 1. [データの準備](#prepare-your-data)
 2. [モデルの作成](#author-your-model)
@@ -31,7 +31,7 @@ ht-degree: 0%
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-* へのアクセス [!DNL Adobe Experience Platform]。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
+* へのアクセス [!DNL Adobe Experience Platform]。 でIMS組織にアクセスできない場合は、先に進む前にシステム管理者にお問い合わせ [!DNL Experience Platform]ください。
 
 * 有効化アセット。 アカウント担当者に問い合わせて、次のアイテムをプロビジョニングしてください。
    * Recommendationsのレシピ
@@ -42,23 +42,23 @@ ht-degree: 0%
    * ゴールデンデータセットpostValues
    * ゴールデンデータセットスキーマ
 
-* 必要な3つのJupyterノートブックファイルを <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe Public Gitリポジトリからダウンロードします</a>。これらは、Data Science WorkspaceでJupterLabワークフローを示すのに使用されます。
+* 必要な3つの [!DNL Jupyter Notebook] ファイルを <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobeパブリック [!DNL Git] リポジトリからダウンロードします</a>。これらのファイルは、での [!DNL JupyterLab] ワークフローのデモに使用され [!DNL Data Science Workspace]ます。
 
 * このチュートリアルで使用する次の主要概念の実際の理解
-   * [Experience Data Model](../../xdm/home.md): 標準化の取り組みは、Customer Experience Managementに対して、プロファイルやExperienceEventなどの標準スキーマを定義する際にアドビが主導します。
+   * [!DNL Experience Data Model](../../xdm/home.md): 標準化の取り組みは、Customer Experience Managementに対して、ExperienceEventやExperienceEventなどの標準スキーマを定義する際にアドビが主導 [!DNL Profile] します。
    * データセット： 実際のデータのストレージと管理の構成体。 [XDMスキーマの物理的にインスタンス化されたインスタンス](../../xdm/schema/field-dictionary.md)。
    * バッチ： データセットはバッチで構成されます。 バッチとは、ある期間に収集され、1つの単位として一緒に処理される一連のデータです。
-   * JupterLab: [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project Jupyter向けのオープンソースのWebベースのインターフェイスで、Experience Platformに緊密に統合されています。
+   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project用のオープンソースのWebベースのインターフェイスで、に緊密に統合さ [!DNL Jupyter] れてい [!DNL Experience Platform]ます。
 
 ## データの準備 {#prepare-your-data}
 
-機械学習モデルを作成して、顧客に対する商品の推奨事項をパーソナライズするには、Webサイトでの以前の顧客の購入を分析する必要があります。 この節では、このデータがを通じてプラットフォームに取り込まれる方法 [!DNL Adobe Analytics]と、そのデータが機械学習モデルで使用する機能データセットにどのように変換されるかについて説明します。
+機械学習モデルを作成して、顧客に対する商品の推奨事項をパーソナライズするには、Webサイトでの以前の顧客の購入を分析する必要があります。 この節では、このデータがどのように [!DNL Platform] 取り込まれ [!DNL Adobe Analytics]るか、およびそのデータが機能データセットに変換され、機械学習モデルで使用されるようにする方法について説明します。
 
 ### データを調べ、スキーマを理解する
 
-1. [Adobe Experience Platform](https://platform.adobe.com/) にログインし、「 **[!UICONTROL Datasets]** 」をクリックして既存のデータセットをすべてリストし、調査するデータセットを選択します。 この場合、Analyticsデータセット **ゴールデンデータセットのpostValues**。
+1. [Adobe Experience Platformにログインし](https://platform.adobe.com/) 、「 **[!UICONTROL Datasets]** 」をクリックして既存のデータセットをすべてリストし、調査するデータセットを選択します。 この場合、データ [!DNL Analytics] セット **Golden Data Set postValues**。
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. 右上近くにある **[!UICONTROL プレビューデータセット]** (Dataset **[!UICONTROL )を選択し、サンプルレコードを調べてから、「]**閉じる」をクリックします。
+2. 右上付近にある **[!UICONTROL プレビューデータセット]** (Dataset **[!UICONTROL )を選択し、サンプルレコードを調べてから、「]**閉じる」をクリックします。
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
 3. 右側のパネルの「スキーマ」の下にあるリンクを選択して、データセットのスキーマを表示し、データセットの詳細ページに戻ります。」
    ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
@@ -67,15 +67,15 @@ ht-degree: 0%
 
 | データセット名 | スキーマ | 説明 |
 | ----- | ----- | ----- |
-| ゴールデンデータセットpostValues | ゴールデンデータセットスキーマ | WebサイトからのAnalyticsソースデータ |
-| Recommendations入力データセット | レコメンデーション入力スキーマ | Analyticsデータは、機能パイプラインを使用してトレーニングデータセットに変換されます。 このデータは、Product Recommendationsの機械学習モデルのトレーニングに使用されます。 `itemid` そして `userid` その顧客が購入した商品に対応する |
+| ゴールデンデータセットpostValues | ゴールデンデータセットスキーマ | [!DNL Analytics] webサイトのソースデータ |
+| Recommendations入力データセット | レコメンデーション入力スキーマ | データは、機能パイプラインを使用してトレーニングデータセットに変換されます。 [!DNL Analytics] このデータは、Product Recommendationsの機械学習モデルのトレーニングに使用されます。 `itemid` そして `userid` その顧客が購入した商品に対応する |
 | Recommendations出力データセット | Recommendationsの出力スキーマ | スコアリング結果が格納されるデータセット。各顧客のレコメンデーション商品のリストが含まれます。 |
 
 ## モデルの作成 {#author-your-model}
 
-Data Science Workspaceのライフサイクルの2番目の要素は、レシピとモデルの作成です。 商品レコメンデーションレシピは、過去の購入データや機械学習を利用して、商品レコメンデーションを規模の大きいもので生成するように設計されています。
+この [!DNL Data Science Workspace] ライフサイクルの2つ目の要素は、レシピとモデルの作成です。 商品レコメンデーションレシピは、過去の購入データや機械学習を利用して、商品レコメンデーションを規模の大きいもので生成するように設計されています。
 
-レシピは、機械学習アルゴリズムと特定の問題を解決するためのロジックを含むので、モデルの基本となります。 さらに重要な点は、レシピを使用することで、組織全体の機械学習を民主化でき、他のユーザーがコードを書かずに異なる使用例に対するモデルにアクセスできる点です。
+レシピは、機械学習アルゴリズムと特定の問題を解決するためのロジックを含むので、モデルの基本となります。 さらに重要な点は、レシピを使用することで、組織全体の機械学習を民主化でき、他のユーザーがコードを記述することなく、さまざまな使用例に対応したモデルにアクセスできることです。
 
 ### 商品レコメンデーションレシピの参照
 
@@ -162,4 +162,4 @@ Data Science Workspaceのライフサイクルの2番目の要素は、レシピ
 
 商品レコメンデーションの生成が成功しました。
 
-このチュートリアルでは、Data Science Workspaceのワークフローについて説明し、機械学習を通じて生の未処理データを有用な情報に変換する方法を示します。 Data Science Workspaceの使用方法の詳細については、次のガイドで小売売上高のスキーマとデータセットの [作成に進みます](./create-retails-sales-dataset.md)。
+このチュートリアルでは、のワークフローを紹介し [!DNL Data Science Workspace]、機械学習を通じて生の未処理データを有用な情報に変換する方法を説明します。 このツールの使用方法の詳細につ [!DNL Data Science Workspace]いては、次の小売売上高スキーマとデータセット [の](./create-retails-sales-dataset.md)作成ガイドに進みます。
