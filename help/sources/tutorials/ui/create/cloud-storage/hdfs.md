@@ -4,27 +4,27 @@ solution: Experience Platform
 title: UIでApache HDFSソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
 
 
-# UIでApache HDFSソースコネクタを作成する
+# UIで [!DNL Apache] HDFSソースコネクタを作成する
 
 >[!NOTE]
->Apache HDFSコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>HDFS [!DNL Apache] コネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-のソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を [!DNL Adobe Experience Platform] 提供します。 このチュートリアルでは、ユー [!DNL Platform] ザーインターフェイスを使用してApache Hadoop Distributed File System（以下「HDFS」と呼ばれる）ソースコネクタを認証する手順を説明します。
+のソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を [!DNL Adobe Experience Platform] 提供します。 このチュートリアルでは、ユー [!DNL Apache Hadoop Distributed File System][!DNL Platform] ザーインターフェイスを使用して、HDFS(HDFS)ソースコネクタを認証する手順を説明します。
 
 ## はじめに
 
 このチュートリアルでは、次のコンポーネントについて十分に理解している必要があり [!DNL Platform]ます。
 
 - [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
