@@ -4,9 +4,9 @@ solution: Experience Platform
 title: モデルをサービスとして公開(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 967ca85efba315819c6241d034dc3c25a5b1fc70
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # モデルをサービスとして公開(API)
 
-このチュートリアルでは、 [Senesi Machine Learning APIを使用して、モデルをサービスとして公開するプロセスについて説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
+このチュートリアルでは、を使用して、モデルをサービスとしてパブリッシュするプロセスについて説明 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)します。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platform Data Science Workspaceに関する十分な理解が必要です。 このチュートリアルを始める前に、 [Data Science Workspaceの概要](../home.md) 、サービスの概要を確認してください。
+このチュートリアルでは、Adobe Experience Platformデータサイエンスワークスペースに関する実用的な理解が必要です。 このチュートリアルを始める前に、 [Data Science Workspaceの概要](../home.md) 、サービスの概要を確認してください。
 
 このチュートリアルに従うには、既存のMLエンジン、MLインスタンス、およびテストが必要です。 APIでこれらを作成する手順については、パッケージ化されたレシピの [読み込みに関するチュートリアルを参照してください](./import-packaged-recipe-api.md)。
 
-最後に、このチュートリアルを始める前に、開発者ガイドの [「はじめに](../api/getting-started.md) 」の節を参照し、Senesi Machine Learning APIを正しく呼び出すために必要な重要な情報を確認してください。このチュートリアルでは必須のヘッダーを含みます。
+最後に、このチュートリアルを開始する前に、開発者ガイドの [「はじめに](../api/getting-started.md) 」の節を参照して、 [!DNL Sensei Machine Learning] APIを正しく呼び出すために必要な重要な情報を確認してください。このチュートリアル全体で使用する必要のあるヘッダーも含まれます。
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -38,7 +38,7 @@ ht-degree: 1%
 
 | 用語 | 定義 |
 --- | ---
-| **機械学習インスタンス（MLインスタンス）** | 特定のデータ、パラメーター、先生コードを含む、特定のテナント用の先生エンジンのインスタンス。 |
+| **機械学習インスタンス（MLインスタンス）** | 特定のデータ、パラメーター、および [!DNL Sensei][!DNL Sensei] コードを含む、特定のテナント用のエンジンのインスタンス。 |
 | **テスト** | トレーニングテストの実行、テストの実行のスコアリング、またはその両方を保持するための傘のエンティティ。 |
 | **予定された実験** | テストの実行のトレーニングまたはスコアリングの自動化を表す用語で、ユーザー定義のスケジュールによって制御されます。 |
 | **テストの実行** | トレーニングまたはスコアリングの実験の特定の例。 特定のテストからの複数のテストの実行では、トレーニングやスコアリングに使用するデータセットの値が異なる場合があります。 |
