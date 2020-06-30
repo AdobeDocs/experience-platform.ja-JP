@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Real-time Machine Learningノートブックユーザーガイド
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1637'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## リアルタイム機械学習ノートブックの作成
 
-Adobe Experience Platform UIの「 **[!UICONTROL Data Science]** 」で「ノートブック **」を選択します。 次に、 **[!UICONTROL JupyterLabを選択し]** 、環境の読み込みに時間をかけます。
+[Adobe Experience PlatformUI]で、[ **[!UICONTROL Data Science]** ]から[ノートブック **]を選択します。 次に、 **[!UICONTROL JupyterLabを選択し]** 、環境の読み込みに時間をかけます。
 
 ![JupyterLabを開く](../images/rtml/open-jupyterlab.png)
 
-JupyterLabランチャーが表示されます。 「 *Real-Time Machine Learning* 」まで下にスクロールし、「 **Real-time ML** 」ノートブックを選択します。 データセットの例が記載されたノートブックセルを含むテンプレートが開きます。
+ラン [!DNL JupyterLab] チャーが表示されます。 「 *Real-Time Machine Learning* 」まで下にスクロールし、「 **[!UICONTROL Real-time ML]** 」ノートブックを選択します。 データセットの例が記載されたノートブックセルを含むテンプレートが開きます。
 
 ![空白のPython](../images/rtml/authoring-notebook.png)
 
@@ -70,7 +70,7 @@ pprint(nf.discover_nodes())
 
 ## リアルタイム機械学習モデルのトレーニング
 
-次のいずれかのオプションを使用して、Pythonコードを記述し、データの読み取り、前処理、分析を行います。 次に、独自のMLモデルをトレーニングし、ONNX形式にシリアル化して、Real-time Machine Learningモデルストアにアップロードする必要があります。
+次のいずれかのオプションを使用して、データの読み取り、前処理、分析を行う [!DNL Python] コードを作成します。 次に、独自のMLモデルをトレーニングし、ONNX形式にシリアル化して、Real-time Machine Learningモデルストアにアップロードする必要があります。
 
 - [JupterLabノートブックでの独自のモデルのトレーニング](#training-your-own-model)
 - [JupterLabノートブックに、トレーニング済みのONNXモデルをアップロード](#pre-trained-model-upload)
@@ -80,15 +80,15 @@ pprint(nf.discover_nodes())
 開始を設定します。
 
 >[!NOTE]
->Real-time **ML** （リアルタイム）テンプレートでは、 [自動車保険のCSVデータセットがGithubから取得されます](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) 。
+>リアルタイム **ML** テンプレートでは、 [自動車保険のCSVデータセット](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) が取得され [!DNL Github]ます。
 
 ![トレーニングデータの読み込み](../images/rtml/load_training.png)
 
-Adobe Experience Platform内でデータセットを使用する場合は、以下のセルのコメントを解除します。 次に、を適切な値に置き換え `DATASET_ID` る必要があります。
+Adobe Experience Platform内のデータセットを使用する場合は、下のセルのコメントを解除します。 次に、を適切な値に置き換え `DATASET_ID` る必要があります。
 
 ![rtmlデータセット](../images/rtml/rtml-dataset.png)
 
-JupterLabノートブックのデータセットにアクセスするには、JupterLabの左側のナビゲーションで[ **Data** ]タブを選択します。 「 *Datasets* 」ディレクトリと「 *スキーマ* 」ディレクトリが表示されます。 「 **[!UICONTROL Datasets]** 」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「 **[!UICONTROL Explore Data in Notebook]** 」オプションを選択します。 ノートブックの下部に実行可能コードのエントリが表示されます。 このセルにあなたのが入ってい `dataset_id`ます。
+ノートブックのデータセットにアクセスするには、の左側の [!DNL JupyterLab] ナビゲーションで「 **Data** ( [!DNL JupyterLab]データ)」タブを選択します。 「 *[!UICONTROL Datasets]* 」ディレクトリと「 *[!UICONTROL スキーマ]* 」ディレクトリが表示されます。 「 **[!UICONTROL Datasets]** 」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「 **[!UICONTROL Explore Data in Notebook]** 」オプションを選択します。 ノートブックの下部に実行可能コードのエントリが表示されます。 このセルにあなたのが入ってい `dataset_id`ます。
 
 ![データセットアクセス](../images/rtml/access-dataset.png)
 
@@ -113,7 +113,7 @@ config_properties = {
 
 **データ変換**
 
-リアルタイムML *Templatesの* Data Transformations ** セルは、独自のデータセットを使用できるように変更する必要があります。 通常は、列名の変更、データのロールアップ、データの準備/機能の設計に関係します。
+リアルタイムML *[!UICONTROL Templatesの]* Data Transformations ** セルは、独自のデータセットを使用できるように変更する必要があります。 通常は、列名の変更、データのロールアップ、データの準備/機能の設計に関係します。
 
 >[!NOTE]
 >次の例は、を使用して読みやすくしたもので `[ ... ]`す。 完全なコードセルの「 *Real-time XML* templates data transformations」セクションを表示して展開してください。
@@ -261,7 +261,7 @@ print("Model ID : ", model_id)
 
 ### 独自のトレーニング済みONNXモデルのアップロード {#pre-trained-model-upload}
 
-JupterLabノートブックにあるアップロードボタンを使用して、トレーニング済みのONNXモデルをData Science Workspaceノートブック環境にアップロードします。
+ノートブックにある「Upload」ボタンを使用して、事前にトレーニングを受けたONNXモデルをノートブック・環境にアップロードし [!DNL JupyterLab][!DNL Data Science Workspace] ます。
 
 ![アップロードアイコン](../images/rtml/upload.png)
 
@@ -321,7 +321,7 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-次に、ノードをエッジで接続します。 各タプルはエッジ接続です。
+次に、ノードをエッジで接続します。 各タプルは [!DNL Edge] 接続です。
 
 >[!TIP]
 > ノードは互いに線形的に依存しているので（各ノードは前のノードの出力に依存しています）、単純なPythonリストの理解を使ってリンクを作成できます。 ノードが複数の入力に依存する場合は、独自の接続を追加してください。
@@ -344,12 +344,12 @@ pprint(json.loads(dsl))
 ## Edgeに公開（ハブ）
 
 >[!NOTE]
->リアルタイム機械学習は、Adobe Experience Platform Hubに一時的に導入され、管理されます。 詳しくは、 [リアルタイム機械学習アーキテクチャの概要セクションを参照してください](./home.md#architecture)。
+>リアルタイム機械学習は、Adobe ExperiencePlatformハブに一時的に導入され、管理されます。 詳しくは、 [リアルタイム機械学習アーキテクチャの概要セクションを参照してください](./home.md#architecture)。
 
-DSLグラフを作成したら、Edgeにグラフを配信できます。
+DSLグラフを作成したら、にグラフを配信でき [!DNL Edge]ます。
 
 >[!IMPORTANT]
->頻繁にエッジに公開しないでください。これは、エッジノードに大きな負荷がかかる可能性があります。 同じモデルを複数回パブリッシュすることはお勧めしません。
+>頻繁に発行しないで [!DNL Edge] ください。これは、ノードに大きな負荷がかかる場合があり [!DNL Edge] ます。 同じモデルを複数回パブリッシュすることはお勧めしません。
 
 ```python
 edge_utils = EdgeUtils()
@@ -365,7 +365,7 @@ DSLを更新する必要がない場合は、 [スコアリングにスキップ
 >[!NOTE]
 >次のセルは、Edgeに公開された既存のDSLを更新する場合にのみ必要です。
 
-モデルは開発を続ける可能性が高い。 新しいサービスを作成する代わりに、既存のサービスを新しいモデルで更新できます。 更新するノードを定義し、新しいIDを割り当ててから、新しいDSLをEdgeに再アップロードできます。
+モデルは開発を続ける可能性が高い。 新しいサービスを作成する代わりに、既存のサービスを新しいモデルで更新できます。 更新するノードを定義し、新しいIDを割り当ててから、に新しいDSLを再度アップロードでき [!DNL Edge]ます。
 
 次の例では、ノード0は新しいIDで更新されます。
 
@@ -397,7 +397,7 @@ print(f'Updated dsl: {updated_dsl}')
 
 ## スコア {#scoring}
 
-エッジに投稿した後、スコアリングはクライアントからのPOSTリクエストによって実行されます。 通常、これはMLスコアを必要とするクライアントアプリケーションから実行できます。 ポストマンからもできる。 リアルタイム *ML* テンプレートは、EdgeUtilsを使用してこのプロセスを示します。
+に投稿した後 [!DNL Edge]、スコアリングはクライアントからのPOSTリクエストによって行われます。 通常、これはMLスコアを必要とするクライアントアプリケーションから実行できます。 ポストマンからもできる。 リアルタイム *[!UICONTROL ML]* テンプレートは、EdgeUtilsを使用してこのプロセスを示します。
 
 >[!NOTE]
 >スコアリング開始の前に、少しの処理時間が必要です。
@@ -414,15 +414,15 @@ time.sleep(20)
 
 ### エッジエンドポイントに対するスコア
 
-Edgeサービスに対してスコアを適用するには、 *Real-time ML* （リアルタイムML）テンプレート内の次のセルを使用します。
+リアルタイムML *テンプレート内の次のセルを使用して、サー*[!DNL Edge] ビスに対してスコアを付けます。
 
 ![エッジに対するスコア](../images/rtml/scoring-edge.png)
 
-スコアリングが完了すると、エッジURL、ペイロード、およびエッジからのスコア出力が返されます。
+スコアリングが完了すると、 [!DNL Edge] URL、ペイロード、およびからのスコア出力が返 [!DNL Edge] されます。
 
-## デプロイ済みアプリのEdgeからのリスト
+## デプロイ済みのアプリを [!DNL Edge]
 
-現在エッジにデプロイされているアプリのリストを生成するには、次のコードセルを実行します。 このセルは編集または削除できません。
+に現在デプロイされているアプリのリストを生成するに [!DNL Edge]は、次のコードセルを実行します。 このセルは編集または削除できません。
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -443,10 +443,10 @@ print(services)
 ]
 ```
 
-## デプロイ済みのアプリケーションまたはサービスIDをEdgeから削除する（オプション）
+## デプロイ済みのアプリまたはサービスIDを [!DNL Edge]
 
 >[!CAUTION]
->このセルは、デプロイ済みのEdgeアプリケーションを削除するために使用します。 デプロイ済みのEdgeアプリケーションを削除する必要がある場合を除き、次のセルを使用しないでください。
+>このセルは、デプロイ済みのEdgeアプリケーションを削除するために使用します。 デプロイ済みのアプリケーションを削除する必要がある場合を除き、次のセルは使用しないでくだ [!DNL Edge] さい。
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
