@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformソースコネクタの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: a9ce046d6ee8622e23f31edbbf777b045109c13b
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 1%
 
 # ソースコネクタの概要
 
-Adobe Experience Platformを使用すると、Platformサービスを使用して、外部ソースからデータを取り込み、データの構造化、ラベル付け、および入力データの拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience PlatformにはRESTful APIとインタラクティブUIが用意されており、これにより様々なデータプロバイダーへのソース接続を簡単に設定できます。 これらのソース接続を使用すると、サードパーティ製システムの認証、インジェストの実行時間の設定、データインジェストのスループットの管理を行うことができます。
+[!DNL Experience Platform] には、様々なデータプロバイダーへのソース接続を簡単に設定できる、RESTful APIとインタラクティブUIが用意されています。 これらのソース接続を使用すると、サードパーティ製システムの認証、インジェストの実行時間の設定、データインジェストのスループットの管理を行うことができます。
 
-Experience Platformにより、異なるソースから収集したデータを一元管理し、得られた洞察を利用してより多くの作業を行うことができます。
+こ [!DNL Experience Platform]れにより、異なるソースから収集したデータを一元管理し、得られた洞察を利用してより多くの作業を行うことができます。
 
 ## ソースのタイプ
 
-Experience Platform内のソースは、次のカテゴリにグループ化されます。
+のソース [!DNL Experience Platform] は、次のカテゴリにグループ化されます。
 
 ### アドビアプリケーション
 
-Experience Platformを使用すると、アドビのAnalytics、Adobe Audience Manager、Experience Platform Launchなど、他のアドビアプリケーションからデータを取り込むことができます。 詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] アドビのAnalytics、Adobe Audience Manager、その他のアドビアプリケーションなど、他のアドビアプリケーションからデータを取り込むことができ [!DNL Experience Platform Launch]ます。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Managerコネクタの概要](connectors/adobe-applications/audience-manager.md)
 - [UIでのAdobe Audience Managerソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -36,88 +36,88 @@ Experience Platformを使用すると、アドビのAnalytics、Adobe Audience M
 
 ### 広告
 
-Experience Platformは、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
-- [Google AdWordsコネクタ](connectors/advertising/ads.md)
+- [!DNL Google AdWords](connectors/advertising/ads.md) コネクタ
 
 ### クラウドストレージ
 
-Cloudストレージソースを使用すると、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータをPlatformに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、ユーザーインターフェイスを使用してSourcesワークフローに統合されます。 詳しくは、次の関連ドキュメントを参照してください。
+Cloudストレージソースからは、ダウンロード、フォーマット、アップロードを行う [!DNL Platform] ことなく、独自のデータをに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、ユーザーインターフェイスを使用してSourcesワークフローに統合されます。 詳しくは、次の関連ドキュメントを参照してください。
 
-- [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
-- [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
-- [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
-- [Apache HDFSコネクタ](connectors/cloud-storage/hdfs.md)
-- [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
-- [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
-- [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
-- [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
+- [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) コネクタ
+- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) コネクタ
+- [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) コネクタ
+- [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) コネクタ
+- [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) コネクタ
+- [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) コネクタ
+- [!DNL FTP and SFTP](connectors/cloud-storage/ftp-sftp.md) コネクタ
+- [!DNL Google Cloud Storage](connectors/cloud-storage/google-cloud-storage.md) コネクタ
 
 ### 顧客関係管理（CRM）
 
-CRMシステムは、顧客との関係の構築に役立つデータを提供し、顧客の忠誠度を高め、顧客の定着を促進します。 Experience Platformは、Microsoft Dynamics 365およびSalesforceからCRMデータを取り込むためのサポートを提供します。 詳しくは、次の関連ドキュメントを参照してください。
+CRMシステムは、顧客との関係の構築に役立つデータを提供し、顧客の忠誠度を高め、顧客の定着を促進します。 [!DNL Experience Platform] とからCRMデータを取り込むためのサポート [!DNL Microsoft Dynamics 365] を提供 [!DNL Salesforce]します。 詳しくは、次の関連ドキュメントを参照してください。
 
-- [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
-- [Salesforceコネクタ](connectors/crm/salesforce.md)
+- [!DNL Microsoft Dynamics](connectors/crm/ms-dynamics.md) コネクタ
+- [!DNL Salesforce](connectors/crm/salesforce.md) コネクタ
 
 ### 顧客の成功
 
-Experience Platformは、サードパーティの顧客サクセスアプリケーションからデータを取り込むためのサポートを提供します。 詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティの顧客成功アプリケーションからデータを取り込むためのサポートを提供します。 詳しくは、次の関連ドキュメントを参照してください。
 
-- [Salesforce Service Cloudコネクタ](connectors/customer-success/salesforce-service-cloud.md)
-- [ServiceNowコネクタ](connectors/customer-success/servicenow.md)
+- [!DNL Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md) コネクタ
+- [!DNL ServiceNow](connectors/customer-success/servicenow.md) コネクタ
 
 ### データベース
 
-Experience Platformは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
-- [Amazon Redshiftコネクタ](connectors/databases/redshift.md)
-- [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
-- [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
-- [Azure Data Explorerコネクタ](connectors/databases/data-explorer.md)
-- [Azure SynapseAnalyticsコネクタ](connectors/databases/synapse-analytics.md)
-- [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
-- [Couchbaseコネクタ](connectors/databases/couchbase.md)
-- [Google BigQuery Connector](connectors/databases/bigquery.md)
-- [GreenPlumコネクタ](connectors/databases/greenplum.md)
-- [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
-- [IBM DB2コネクタ](connectors/databases/ibm-db2.md)
-- [MariaDBコネクタ](connectors/databases/mariadb.md)
-- [Microsoft SQL Serverコネクタ](connectors/databases/sql-server.md)
-- [MySQLコネクタ](connectors/databases/mysql.md)
-- [Oracleコネクタ](connectors/databases/oracle.md)
-- [フェニックスコネクタ](connectors/databases/phoenix.md)
-- [PostgreSQLコネクタ](connectors/databases/postgres.md)
+- [!DNL Amazon Redshift](connectors/databases/redshift.md) コネクタ
+- [!DNL Apache Hive on Azure HDInsights](connectors/databases/hive.md) コネクタ
+- [!DNL Apache Spark on Azure HDInsights](connectors/databases/spark.md) コネクタ
+- [!DNL Azure Data Explorer](connectors/databases/data-explorer.md) コネクタ
+- [!DNL Azure Synapse Analytics](connectors/databases/synapse-analytics.md) コネクタ
+- [!DNL Azure Table Storage](connectors/databases/ats.md) コネクタ
+- [!DNL Couchbase](connectors/databases/couchbase.md) コネクタ
+- [!DNL Google BigQuery](connectors/databases/bigquery.md) コネクタ
+- [!DNL GreenPlum](connectors/databases/greenplum.md) コネクタ
+- [!DNL HP Vertica](connectors/databases/hp-vertica.md) コネクタ
+- [!DNL IBM DB2](connectors/databases/ibm-db2.md) コネクタ
+- [!DNL MariaDB](connectors/databases/mariadb.md) コネクタ
+- [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) コネクタ
+- [!DNL MySQL](connectors/databases/mysql.md) コネクタ
+- [!DNL Oracle](connectors/databases/oracle.md) コネクタ
+- [!DNL Phoenix](connectors/databases/phoenix.md) コネクタ
+- [!DNL PostgreSQL](connectors/databases/postgres.md) コネクタ
 
 ### マーケティングの自動化
 
-Experience Platformは、サードパーティのマーケティング自動化システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティのマーケティング自動化システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
-- [HubSpotコネクタ](connectors/marketing-automation/hubspot.md)
+- [!DNL HubSpot](connectors/marketing-automation/hubspot.md) コネクタ
 
 ### 支払い
 
-Experience Platformは、サードパーティの支払いシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティの支払いシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
-- [PayPalコネクタ](connectors/payments/paypal.md)
+- [!DNL PayPal](connectors/payments/paypal.md) コネクタ
 
 ### プロトコル
 
-Experience Platformは、サードパーティのプロトコルシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティのプロトコルシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
 
-- [汎用ODataコネクタ](connectors/protocols/odata.md)
+- [!DNL Generic OData](connectors/protocols/odata.md) コネクタ
 
 ## データ取り込み時のソースのアクセス制御
 
-データ取り込みのソースに対する権限は、アドビのAdmin Console内で管理できます。 権限には、特定の製品プロファイルの「 *権限* 」タブからアクセスできます。 権限を **編集パネルから** 、 *データ取り込み* メニューのエントリを使用して、ソースに関する権限にアクセスできます。 「 **表示ソース***」権限は「* カタログ *」タブの使用可能なソースおよび「認証されたソース」タブの読み取り専用アクセス権を付与し、「ソースの***** 管理」権限は「ソースの作成」、「編集」、「無効化」の各ソースに対する完全なアクセス権を付与します。
+データ取り込みのソースに対する権限は、アドビのAdmin Console内で管理できます。 権限には、特定の製品プロファイルの「 *[!UICONTROL 権限]* 」タブからアクセスできます。 権限を **[!UICONTROL 編集パネルから]** 、 *[!UICONTROL データ取り込み]* メニューのエントリを使用して、ソースに関する権限にアクセスできます。 「 **[!UICONTROL 表示ソース]***[!UICONTROL 」権限は「]* カタログ *[!UICONTROL 」タブの使用可能なソースおよび「認証されたソース」タブの読み取り専用アクセス権を付与し、「ソースの]***** 管理」権限は「ソースの作成」、「編集」、「無効化」の各ソースに対する完全なアクセス権を付与します。
 
 次の表に、権限の様々な組み合わせに基づくUIの動作を示します。
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **表示ソース** ：オン | 「 *カタログ* 」タブの各ソースタイプのソースに対して、「 *参照*」、「 **** アカウント」、「DataFlow」の各タブと共に読み取り専用アクセス権を付与します。 |
-| **ソースの管理** : | **表示ソースに含まれる機能に加えて、**&#x200B;ソースに含まれる機能に加えて、Connect Source *option Catalog内の* Connect Source *option Catalogへのアクセス権を付与し、Select Data Option* Browse *Not Browse*** Notにアクセス権を付与します。 **また、「ソースの管理** 」では、DataFlowsを有効または無効にしたり ** 、スケジュールを編集したりできます。 |
-| **表示ソース** ：オフおよび **管理ソース** ：オフ | ソースへのアクセスをすべて取り消します。 |
+| **[!UICONTROL 表示ソース]** ：オン | 「 *カタログ* 」タブの各ソースタイプのソースに対して、「 *参照*」、「 **** アカウント」、「DataFlowAccounts」の各タブと共に読み取り専用アクセス権を付与します。 |
+| **[!UICONTROL ソースの管理]** : | **[!UICONTROL 表示ソースに含まれる機能に加えて、]**&#x200B;ソースに含まれる機能に加えて、Connect Source *[!UICONTROL option Catalog内の]* Connect Source *[!UICONTROL option Catalogへのアクセス権を付与し、Select Data Option]* Browse *[!UICONTROL Not Browse]*** Notにアクセス権を付与します。 **[!UICONTROL また、「ソースの管理]** 」では、DataFlowsを有効または無効にしたり ** 、スケジュールを編集したりできます。 |
+| **[!UICONTROL 表示ソース]** ：オフおよび **[!UICONTROL 管理ソース]** ：オフ | ソースへのアクセスをすべて取り消します。 |
 
 Admin Consoleを通じて付与される権限（これら4つのソースを含む）の詳細については、 [アクセス制御の概要を参照してください](../access-control/home.md)。
 
