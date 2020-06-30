@@ -4,49 +4,49 @@ solution: Experience Platform
 title: Flow Service APIを使用した顧客成功システムの調査
 topic: overview
 translation-type: tm+mt
-source-git-commit: ea2e67ae30bae1f2c0a76f0e5aa97aaf378bbdec
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '569'
 ht-degree: 1%
 
 ---
 
 
-# Flow Service APIを使用した顧客成功システムの調査
+# APIを使用した顧客成功システムの調査 [!DNL Flow Service]
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して顧客成功(CS)システムを調べます。
+このチュートリアルでは、 [!DNL Flow Service] APIを使用して顧客成功(CS)システムを調べます。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [ソース](../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むと同時に、プラットフォームサービスを使用して、入力データの構造、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してCSシステムに正常に接続するために必要な追加情報については、以下の節で説明します。
+APIを使用してCSシステムに正しく接続するために必要な追加情報については、以下の節で説明し [!DNL Flow Service] ます。
 
 ### ベース接続の取得
 
-プラットフォームAPIを使用してCSシステムを調査するには、有効なベース接続IDが必要です。 作業対象のCSシステムに対する基本的な接続がまだない場合は、次のチュートリアルを使用して作成できます。
+APIを使用してCSシステムを調査するには、有効なベース接続IDが必要 [!DNL Platform] です。 作業対象のCSシステムに対する基本的な接続がまだない場合は、次のチュートリアルを使用して作成できます。
 
 * [Salesforceサービスクラウド](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platformのすべてのリソース（フローサービスに属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 
 ## データテーブルの調査
 
-CSシステムのベース接続を使用して、GETリクエストを実行し、データテーブルを調べることができます。 次の呼び出しを使用して、プラットフォームに対して検査または取り込むテーブルのパスを探します。
+CSシステムのベース接続を使用して、GETリクエストを実行し、データテーブルを調べることができます。 次の呼び出しを使用して、検査または取り込むテーブルのパスを探し [!DNL Platform]ます。
 
 **API形式**
 
@@ -81,7 +81,7 @@ curl -X GET \
 
 **応答**
 
-正常に応答すると、CSシステムから一連のテーブルが返されます。 プラットフォームに取り込む表を探し、次の手順でプラットフォームの構造を調べる必要があるので、その `path` プロパティをメモしておきます。
+正常に応答すると、CSシステムから一連のテーブルが返されます。 次の手順で、に取り込む表を探し [!DNL Platform] 、 `path` プロパティをメモしておきます。このプロパティは、次の手順で指定して構造を検査する必要があります。
 
 ```json
 [
@@ -177,4 +177,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、CSシステムを調べ、プラットフォームに取り込む表のパスを見つけ、その構造に関する情報を取得しました。 次のチュートリアルでこの情報を使用して、CSシステムからデータを [収集し、Platformに取り込むことができます](../collect/customer-success.md)。
+このチュートリアルに従って、CSシステムを調べ、取り込むテーブルのパスを見つけ、その構造に関する情報を入手し [!DNL Platform]ました。 次のチュートリアルでこの情報を使用して、CSシステムからデータを [収集し、Platformに取り込むことができます](../collect/customer-success.md)。
