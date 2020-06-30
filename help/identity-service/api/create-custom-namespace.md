@@ -4,9 +4,9 @@ solution: Experience Platform
 title: カスタム名前空間の作成
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '75'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 # カスタム名前空間の作成
 
-ID名前空間APIを使用して、自分の組織のみが利用できるカスタムID名前空間を作成できます。
+この [!DNL Identity Namespace] APIを使用して、自分の組織だけが利用できるカスタムID名前空間を作成できます。
 
 カスタム名前空間の作成に関する推奨事項については、「IDサービス [に関するFAQドキュメント](../troubleshooting-guide.md)」を参照してください。
 
