@@ -4,9 +4,9 @@ solution: Experience Platform
 title: MySQLコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 0%
 >[!NOTE]
 >MySQL Connectorはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformを使用すると、Platformサービスを使用して、外部ソースからデータを取り込み、データの構造化、ラベル付け、および入力データの拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-Experience Platformは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 Platformは、リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートにはMySQLが含まれます。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 [!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートにはMySQLが含まれます。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用してMySQLをPlatformに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイスを [!DNL Platform] 使用してMySQLを接続する方法に関する情報を提供しています。
 
-## APIを使用したMySQLのPlatformへの接続
+## APIを [!DNL Platform] 使用したMySQLへの接続
 
 - [Flow Service APIを使用してMySQLコネクタを作成する](../../tutorials/api/create/databases/mysql.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用したMySQLのPlatformへの接続
+## UIを [!DNL Platform] 使用したMySQLへの接続
 
 - [UIでのMySQLソースコネクタの作成](../../tutorials/ui/create/databases/mysql.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
