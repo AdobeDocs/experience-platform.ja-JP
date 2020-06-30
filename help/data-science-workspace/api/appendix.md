@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 付録
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '298'
 ht-degree: 4%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 4%
 
 # 付録
 
-以下の節では、Senesie Machine Learning APIの様々な機能に関するリファレンス情報を提供します。
+以降の節では、 [!DNL Sensei Machine Learning] APIの様々な機能に関するリファレンス情報を提供します。
 
 ## アセット取得のクエリパラメータ {#query}
 
-Senesie Machine Learning APIは、アセットの取得に関するクエリパラメーターをサポートしています。 次の表に、使用可能なクエリパラメーターとその使用方法を示します。
+この [!DNL Sensei Machine Learning] APIは、アセットの取得に関するクエリパラメーターをサポートしています。 次の表に、使用可能なクエリパラメーターとその使用方法を示します。
 
 | クエリーパラメーター | 説明 | デフォルト値 |
 | --------------- | ----------- | ------- |
