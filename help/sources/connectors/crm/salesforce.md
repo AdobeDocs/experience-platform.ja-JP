@@ -4,29 +4,29 @@ solution: Experience Platform
 title: Salesforceコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 565c8c4b084343e5488a725a6a93d5d50d59fe66
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
 
-# Salesforceコネクタ
+# [!DNL Salesforce] コネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-エクスペリエンスプラットフォームは、サードパーティのCRMシステムからデータを取り込むためのサポートを提供します。 CRMプロバイダのサポートにはSalesforceが含まれます。
+[!DNL Experience Platform] は、サードパーティのCRMシステムからデータを取り込むためのサポートを提供します。 CRMプロバイダのサポートには以下が含まれ [!DNL Salesforce]ます。
 
-以下のドキュメントは、APIまたはユーザーインターフェイスを使用してSalesforceをプラットフォームに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Salesforce] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
 
-## APIを使用したSalesforceとプラットフォームの接続
+## API [!DNL Salesforce] を [!DNL Platform] 使用した接続
 
 - [フローサービスAPIを使用したSalesforceコネクタの作成](../../tutorials/api/create/crm/salesforce.md)
 - [Flow Service APIを使用したCRMシステムの調査](../../tutorials/api/explore/crm.md)
 - [Flow Service APIを使用してCRMデータを収集する](../../tutorials/api/collect/crm.md)
 
-## UIを使用したSalesforceのプラットフォームへの接続
+## UI [!DNL Salesforce] を [!DNL Platform] 使用して接続
 
 - [UIでのSalesforceソースコネクタの作成](../../tutorials/ui/create/crm/salesforce.md)
 - [UIでのCRMコネクタのデータフローの設定](../../tutorials/ui/dataflow/crm.md)
