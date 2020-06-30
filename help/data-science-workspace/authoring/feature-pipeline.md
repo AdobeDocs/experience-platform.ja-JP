@@ -4,9 +4,9 @@ solution: Adobe Experience Platform Data Science Workspace
 title: フィーチャパイプラインの作成
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -284,7 +284,7 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 ### DataSaverで機能データセットを保存する {#store-your-feature-dataset-with-datasaver}
 
-DataSaverは、結果の機能データセットをストレージの場所に格納する役割を持ちます。 DataSaverの実装は、抽象クラスを拡張し、抽象メソッドをオーバーライドする必要 `DataSaver` があり `save`ます。
+DataSaverは、結果の機能データセットをストレージの場所に保存する役割を持ちます。 DataSaverの実装は、抽象クラスを拡張し、抽象メソッドをオーバーライドする必要 `DataSaver` があり `save`ます。
 
 次の例は、データをID別のデータセットに格納するDataSaverクラスを拡張したものです。データセットID( [!DNL Platform] )とテナントID(`featureDatasetId``tenantId`)は、設定で定義されたプロパティです。
 
@@ -387,7 +387,7 @@ scoring.dataSaver: MyDatasetSaver
 
 ## APIを使用して、機能のパイプラインエンジンを作成する {#create-feature-pipeline-engine-api}
 
-フィーチャパイプラインを作成したら、Dockerイメージを作成して、Senesie Machine Learning APIのフィーチャパイプラインエンドポイントを呼び出す必要があります。 フィーチャパイプラインエンドポイントを呼び出すには、DockerイメージURLが必要です。
+フィーチャーパイプラインを作成したら、Dockerイメージを作成して、 [!DNL Sensei Machine Learning] APIのフィーチャーパイプラインエンドポイントを呼び出す必要があります。 フィーチャパイプラインエンドポイントを呼び出すには、DockerイメージURLが必要です。
 
 >[!TIP]
 >Docker URLがない場合は、 [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorialを参照し、DockerホストURLの作成に関する手順を説明します。
@@ -398,7 +398,7 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### フィーチャパイプラインエンジンを作成する {#create-engine-api}
 
-Dockerイメージの場所を特定したら、にPOSTを実行して、Senesi Machine Learning [APIを使用してフィーチャーパイプラインエンジンを](../api/engines.md#feature-pipeline-docker) 作成でき `/engines`ます。 フィーチャパイプラインエンジンの作成に成功すると、エンジン固有の識別子(`id`)が提供されます。 続行する前に、この値を保存してください。
+Dockerイメージの場所を特定したら、POSTを実行して [APIを使用してフィーチャーパイプラインエンジン](../api/engines.md#feature-pipeline-docker) を [!DNL Sensei Machine Learning] 作成でき `/engines`ます。 フィーチャパイプラインエンジンの作成に成功すると、エンジン固有の識別子(`id`)が提供されます。 続行する前に、この値を保存してください。
 
 ### MLInstanceの作成 {#create-mlinstance}
 
@@ -435,4 +435,4 @@ Dockerイメージの場所を特定したら、にPOSTを実行して、Senesi 
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-このドキュメントを読むと、Model Authoring SDKを使用してフィーチャパイプラインを作成し、Dockerイメージを作成し、DockerイメージURLを使用してSenei Machine Learning APIを使用してフィーチャパイプラインモデルを作成します。 これで、 [Senesi Machine Learning APIを使用して、データセットの変換とデータ機能の抽出を大規模に継続できる状態になりました](../api/getting-started.md)。
+このドキュメントを読むと、Model Authoring SDKを使用してフィーチャパイプラインを作成し、Dockerイメージを作成し、DockerイメージURLを使用して、 [!DNL Sensei Machine Learning] APIを使用してフィーチャパイプラインモデルを作成します。 これで、を使用して、データセットの変換とデータ機能の抽出をスケール設定で続行する準備が整い [!DNL Sensei Machine Learning API](../api/getting-started.md)ました。
