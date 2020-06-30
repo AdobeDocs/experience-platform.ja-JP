@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ジュピターノートのクエリサービス
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # ジュピターノートのクエリサービス
 
-[!DNL Adobe Experience Platform] クエリサービスを標準機能としてJupterLabに統合することにより、Data Science Workspaceで構造化クエリ言語(SQL)を使用できます。
+[!DNL Adobe Experience Platform] 標準機能としてに統合するこ [!DNL Data Science Workspace] とで、で構造化クエリ言語(SQL) [!DNL Query Service] を使用 [!DNL JupyterLab] できます。
 
 このチュートリアルでは、 [!DNL Adobe Analytics] データの調査、変換、分析を行う一般的な使用例のサンプルSQLクエリを示します。
 
@@ -22,19 +22,19 @@ ht-degree: 1%
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-- へのアクセス [!DNL Adobe Experience Platform]。 Experience PlatformのIMS組織にアクセスできない場合は、次に進む前に、システム管理者にお問い合わせください。
+- へのアクセス [!DNL Adobe Experience Platform]。 でIMS組織にアクセスできない場合は、次に進む前にシステム管理者にお問い合わせ [!DNL Experience Platform]ください。
 
 - データ [!DNL Adobe Analytics] セット
 
 - このチュートリアルで使用する次の主要概念の実際の理解
-   - [Experience Data Model(XDM)およびXDMシステム](../../xdm/home.md)
-   - [クエリサービス](../../query-service/home.md)
-   - [クエリサービスのSQL構文](../../query-service/sql/overview.md)
-   - [!DNL Adobe Analytics]
+   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
+   - [!DNL Query Service](../../query-service/home.md)
+   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [Adobe Analytics]
 
-## JupyterLabおよびクエリサービスへのアクセス {#access-jupyterlab-and-query-service}
+## アクセス [!DNL JupyterLab] および [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. 「 [エクスペリエンスプラットフォーム](https://platform.adobe.com)」で、左のナビゲーション列から「 **[!UICONTROL ノートブック]** 」に移動します。 JupyterLabが読み込まれるまで、少し時間をお待ちください。
+1. で、左 [!DNL Experience Platform](https://platform.adobe.com)のナビゲーション列から[ **[!UICONTROL ノートブック]** ]に移動します。 JupyterLabが読み込まれるまで、少し時間をお待ちください。
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ ht-degree: 1%
 
 4. 調査する [!DNL Adobe Analytics] データセットを見つけて、リスト上で右クリックし、[ノートブックの **[!UICONTROL クエリデータ]** ]をクリックして空のノートブックにSQLクエリを生成します。
 
-5. 関数を含む最初に生成されたセルをクリックし `qs_connect()` 、再生ボタンをクリックして実行します。 この関数は、ノートブックインスタンスとクエリサービスとの間の接続を作成します。
+5. 関数を含む最初に生成されたセルをクリックし `qs_connect()` 、再生ボタンをクリックして実行します。 この関数は、ノートブックインスタンスとの間に接続を作成し [!DNL Query Service]ます。
 
    ![](../images/jupyterlab/query/execute.png)
 
@@ -85,13 +85,14 @@ ht-degree: 1%
    - `target_year` : ターゲットデータの元となる特定の年。
    - `target_month` : ターゲットの開始月を指定します。
    - `target_day` : ターゲットデータの元となる特定の日。
+
    >[!NOTE] これらの値はいつでも変更できます。 変更を適用する場合は、必ず変数セルを実行し、変更を適用してください。
 
 ## データのクエリ {#query-your-data}
 
 個々のノートブック・セルに次のSQLクエリを入力します。 クエリを実行するには、セルをクリックし、 **[!UICONTROL 再生]** ボタンをクリックします。 正常なクエリ結果またはエラーログが、実行されたセルの下に表示されます。
 
-ノートブックが長時間非アクティブな場合、ノートブックとクエリサービス間の接続が切断される場合があります。 このような場合は、右上隅にある[ **[!UICONTROL Power]** ]ボタンをクリックしてJupterLabを再起動します。
+ノートブックが長時間非アクティブになると、ノートブックとの接続が切断され [!DNL Query Service] る場合があります。 その場合は、右上隅にある [!DNL JupyterLab] 電源 **** ボタンをクリックして再起動します。
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -119,7 +120,7 @@ ORDER  BY Hour;
 
 上記のクエリでは、 `_acp_year` 節のターゲットがの値に設定され `WHERE``target_year`ます。 変数を波括弧(`{}`)で囲んで、SQLクエリに含めます。
 
-クエリの最初の行には、オプションの変数が含まれ `hourly_visitor`ます。 クエリの結果は、この変数にPandasのデータフレームとして保存されます。 結果をデータフレームに格納すると、目的のPythonパッケージを使用して、後でクエリ結果を視覚化できます。 次のPythonコードを新しいセルで実行して、棒グラフを生成します。
+クエリの最初の行には、オプションの変数が含まれ `hourly_visitor`ます。 クエリの結果は、この変数にPandasのデータフレームとして保存されます。 結果をデータフレームに保存すると、目的の [!DNL Python] パッケージを使用して、後でクエリ結果を視覚化できます。 新しいセルで次の [!DNL Python] コードを実行して、棒グラフを生成します。
 
 ```python
 trace = go.Bar(
@@ -209,7 +210,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-次のPythonコードを実行して、訪問セッションあたりのイベント数のヒストグラムを生成します。
+次の [!DNL Python] コードを実行して、訪問セッションあたりのイベント数のヒストグラムを生成します。
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -283,4 +284,4 @@ LIMIT  10;
 
 ## 次の手順 <!-- omit in toc -->
 
-このチュートリアルでは、Jupyterノートブックのクエリサービスを使用する場合の使用例をいくつか示しました。 「Jupyter Notebooks [(ジャプターノートブックを使用したデータの](./analyze-your-data.md) 分析)」チュートリアルに従って、データアクセスSDKを使用して同様の操作がどの程度実行されているかを確認します。
+このチュートリアルでは、ノートブックで使用する場合の使用例 [!DNL Query Service] をいくつか示しました [!DNL Jupyter] 。 「Jupyter Notebooks [(ジャプターノートブックを使用したデータの](./analyze-your-data.md) 分析)」チュートリアルに従って、データアクセスSDKを使用して同様の操作がどの程度実行されているかを確認します。
