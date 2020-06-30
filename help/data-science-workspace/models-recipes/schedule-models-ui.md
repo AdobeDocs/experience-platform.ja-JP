@@ -4,9 +4,9 @@ solution: Experience Platform
 title: モデルのスケジュール(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -14,16 +14,16 @@ ht-degree: 0%
 
 # モデルのスケジュール(UI)
 
-Adobe Experience Platform Data Science Workspaceを使用すると、機械学習サービスでのスコアおよびトレーニングの実行をスケジュール設定できます。 トレーニングとスコアリングプロセスを自動化すると、データ内のパターンに対応し、時間をかけてサービスの効率を維持、向上させるのに役立ちます。
+Adobe Experience Platform [!DNL Data Science Workspace] を使用すると、機械学習サービスでのスケジュール済みスコアおよびトレーニングの実行を設定できます。 トレーニングとスコアリングプロセスを自動化すると、データ内のパターンに対応し、時間をかけてサービスの効率を維持、向上させるのに役立ちます。
 
-このチュートリアルでは、 *サービスギャラリーを通じて、既存のサービスに対するトレーニングとスコアリングのスケジュールを設定する手順について説明します*。 以下の主な節に分かれています。
+このチュートリアルでは、 *[!UICONTROL サービスギャラリーを通じて、既存のサービスに対するトレーニングとスコアリングのスケジュールを設定する手順について説明します]*。 以下の主な節に分かれています。
 
 - [スケジュール済みスコアの設定](#configure-scheduled-scoring)
 - [予定されたトレーニングの設定](#configure-scheduled-training)
 
 ## はじめに
 
-このチュートリアルを完了するには、エクスペリエンスプラットフォームにアクセスできる必要があります。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
+このチュートリアルを完了するには、にアクセスする必要があり [!DNL Experience Platform]ます。 でIMS組織にアクセスできない場合は、先に進む前にシステム管理者にお問い合わせ [!DNL Experience Platform]ください。
 
 このチュートリアルでは、既存のサービスが必要です。 操作するアクセス可能なサービスがない場合は、UI [チュートリアルの「モデルをサービスとして](./publish-model-service-ui.md) 公開」に従って作成できます。
 
@@ -31,7 +31,7 @@ Adobe Experience Platform Data Science Workspaceを使用すると、機械学�
 
 モデルスコアリングは、スケジュールに基づいて自動化されたプロセスに設定できます。 サービスを作成したら、次の手順に従って、スコアリングスケジュールを設定および適用できます。
 
-1. Adobe Experience Platformで、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックして、 *サービスギャラリーにアクセスします*。 スコアリングの実行をスケジュールするサービスを探し、 **[!UICONTROL 「開く]** 」をクリックして *概要* ページを表示します。
+1. Adobe Experience Platformで、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックして、にアクセス *[!DNL Service Gallery]*&#x200B;します。 スコアリングの実行をスケジュールするサービスを探し、 **[!UICONTROL 「開く]** 」をクリックして *概要* ページを表示します。
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. 概要ページには、サービスのスコアリング情報が表示されます。 「スケジュールを **[!UICONTROL 更新]** 」リンクをクリックして、スコアリングスケジュールを設定します。
@@ -50,7 +50,7 @@ Adobe Experience Platform Data Science Workspaceを使用すると、機械学�
 
 サービスを作成したら、次の手順に従ってトレーニングスケジュールを設定および適用できます。
 
-1. Adobe Experience Platformで、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックして、 *サービスギャラリーにアクセスします*。 トレーニングの実行スケジュールを設定するサービスを探し、 **[!UICONTROL 「開く]** 」をクリックして表示の *概要* ページを表示します。
+1. 「Adobe Experience Platform」で、左のナビゲーション列にある「 **[!UICONTROL サービス]** 」タブをクリックし、「 *[!UICONTROL サービスギャラリー]*」にアクセスします。 トレーニングの実行スケジュールを設定するサービスを探し、 **[!UICONTROL 「開く]** 」をクリックして表示の *概要* ページを表示します。
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. 概要ページには、サービスのトレーニング情報が表示されます。 トレーニングスケジュールを設定するには、 **[!UICONTROL 「スケジュールを]** 更新」リンクをクリックします。
@@ -64,4 +64,4 @@ Adobe Experience Platform Data Science Workspaceを使用すると、機械学�
 
 ## 次の手順
 
-このチュートリアルに従うと、サービスでの自動トレーニングとスコアの実行を正しくスケジュールし、Data Science WorkspaceチュートリアルのUIワークフローを完了しました。 まだモデルを作成、トレーニング、スコアリングおよび公開していない場合は、チュートリアルを [再起動し](./create-retails-sales-dataset.md) 、APIワークフローに従ってモデルを作成、トレーニング、スコアリングおよび公開します。
+このチュートリアルに従うと、サービスでの自動トレーニングとスコアリングの実行を正常にスケジュールし、チュートリアルの [!DNL Data Science Workspace] UIワークフローを完了できます。 まだモデルを作成、トレーニング、スコアリングおよび公開していない場合は、チュートリアルを [再起動し](./create-retails-sales-dataset.md) 、APIワークフローに従ってモデルを作成、トレーニング、スコアリングおよび公開します。
