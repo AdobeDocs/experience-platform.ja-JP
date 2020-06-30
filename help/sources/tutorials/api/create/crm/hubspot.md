@@ -4,37 +4,37 @@ solution: Experience Platform
 title: Flow Service APIを使用してHubSpotコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7aa6f85308bacb275bd6f3234d03530a621c1c02
+source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '640'
 ht-degree: 1%
 
 ---
 
 
-# Flow Service APIを使用してHubSpotコネクタを作成する
+# APIを使用して [!DNL HubSpot][!DNL Flow Service] コネクタを作成する
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをHubSpotに接続する手順を順を追って説明します。
+このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順を順を追って説明 [!DNL Experience Platform] し [!DNL HubSpot]ます。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [ソース](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むと同時に、プラットフォームサービスを使用して、入力データの構造、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してHubSpotに正常に接続するために必要な追加情報については、以下の節で説明します。
+以下の節では、 [!DNL HubSpot][!DNL Flow Service] APIを使用してに正常に接続するために知っておく必要がある追加情報について説明します。
 
 ### 必要な資格情報の収集
 
-フローサービスがHubSpotと接続するには、次の接続プロパティを指定する必要があります。
+と接続 [!DNL Flow Service] するには、次の接続プロパティを指定する必要があ [!DNL HubSpot]ります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `clientId` | HubSpotアプリケーションに関連付けられているクライアントID。 |
-| `clientSecret` | HubSpotアプリケーションに関連付けられているクライアントシークレット。 |
+| `clientId` | アプリケーションに関連付けられているクライアントID [!DNL HubSpot] 。 |
+| `clientSecret` | アプリケーションに関連付けられているクライアントシークレット [!DNL HubSpot] です。 |
 | `accessToken` | OAuth統合を最初に認証する際に取得されるアクセストークン。 |
 | `refreshToken` | OAuth統合を最初に認証する際に取得される更新トークン。 |
 
@@ -42,17 +42,17 @@ Flow Service APIを使用してHubSpotに正常に接続するために必要な
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platformのすべてのリソース（Flow Serviceに属するリソースを含む）は、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -62,11 +62,11 @@ Experience Platformのすべてのリソース（Flow Serviceに属するリソ�
 
 ## 接続仕様の検索
 
-HubSpot接続を作成するには、一連のHubSpot接続仕様がフローサービス内に存在する必要があります。 プラットフォームをHubSpotに接続する最初の手順は、これらの仕様を取得することです。
+接続を作成するには、 [!DNL HubSpot] 接続仕様のセットがに存在する必要があり [!DNL HubSpot][!DNL Flow Service]ます。 に接続する最初の手順 [!DNL Platform] は、これらの仕様 [!DNL HubSpot] を取得することです。
 
 **API形式**
 
-使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GET要求をエンドポイントに送信すると、使用可能なすべてのソースの接続指定が返され `/connectionSpecs` ます。 また、クエリを含めて、HubSpot専用 `property=name=="hubspot"` の情報を取得することもできます。
+使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GET要求をエンドポイントに送信すると、使用可能なすべてのソースの接続指定が返され `/connectionSpecs` ます。 特別な情報を取得するクエリ `property=name=="hubspot"` を含めることもでき [!DNL HubSpot]ます。
 
 ```http
 GET /connectionSpecs
@@ -75,7 +75,7 @@ GET /connectionSpecs?property=name=="hubspot"
 
 **リクエスト**
 
-次のリクエストは、HubSpotの接続仕様を取得します。
+次のリクエストは、の接続仕様を取得し [!DNL HubSpot]ます。
 
 ```shell
 curl -X GET \
@@ -88,7 +88,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、一意の識別子(`id`)を含むHubSpotの接続仕様を返します。 このIDは、次の手順でAPIの接続を作成する際に必要です。
+正常に応答すると、固有な識別子( [!DNL HubSpot]`id`)を含む、の接続仕様が返されます。 このIDは、次の手順でAPIの接続を作成する際に必要です。
 
 ```json
 {
@@ -142,7 +142,7 @@ curl -X GET \
 
 ## API用の接続の作成
 
-APIの接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するのに使用できるため、HubSpotアカウントごとに必要なAPIへの接続は1つだけです。
+APIの接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するために使用できるので、APIは [!DNL HubSpot] アカウントごとに1つの接続のみ必要です。
 
 **API形式**
 
@@ -181,8 +181,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.clientId` | HubSpotアプリケーションに関連付けられているクライアントID。 |
-| `auth.params.clientSecret` | HubSpotアプリケーションに関連付けられているクライアントシークレット。 |
+| `auth.params.clientId` | アプリケーションに関連付けられているクライアントID [!DNL HubSpot] 。 |
+| `auth.params.clientSecret` | アプリケーションに関連付けられているクライアントシークレット [!DNL HubSpot] です。 |
 | `auth.params.accessToken` | OAuth統合を最初に認証する際に取得されるアクセストークン。 |
 | `auth.params.refreshToken` | OAuth統合を最初に認証する際に取得される更新トークン。 |
 
@@ -197,4 +197,4 @@ curl -X POST \
 }
 ```
 
-このチュートリアルに従うことで、Flow Service APIを使用してHubSpot接続を作成し、接続の一意のID値を取得しました。 Flow Service APIを使用してCRMシステムを [調査する方法について学習する際に、次のチュートリアルでこの接続IDを使用できます](../../explore/crm.md)。
+このチュートリアルに従うことで、 [!DNL HubSpot] APIを使用して [!DNL Flow Service] 接続を作成し、接続の一意のID値を取得しました。 Flow Service APIを使用してCRMシステムを [調査する方法について学習する際に、次のチュートリアルでこの接続IDを使用できます](../../explore/crm.md)。
