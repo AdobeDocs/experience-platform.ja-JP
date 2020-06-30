@@ -4,53 +4,53 @@ solution: Experience Platform
 title: Flow Service APIを使用してGoogle Cloudストレージコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '497'
 ht-degree: 2%
 
 ---
 
 
-# Flow Service APIを使用してGoogle Cloudストレージコネクタを作成する
+# APIを使用して [!DNL Google Cloud Storage][!DNL Flow Service] コネクタを作成する
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle Cloudストレージアカウントに接続する手順を順を追って説明します。
+このチュートリアルでは、 [!DNL Flow Service] APIを使用して、アカウントに接続する手順を順を追っ [!DNL Experience Platform] て説明し [!DNL Google Cloud Storage] ます。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [ソース](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むと同時に、プラットフォームサービスを使用して、入力データの構造、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してGoogle Cloudストレージアカウントに正常に接続するために必要な追加情報については、以下の節で説明します。
+次の節では、 [!DNL Flow Service] APIを使用してGoogle Cloudストレージアカウントに正しく接続するために知っておく必要がある追加情報について説明します。
 
 ### 必要な資格情報の収集
 
-フローサービスがGoogle Cloudストレージアカウントに接続するには、次の接続プロパティの値を指定する必要があります。
+アカウント [!DNL Flow Service] に接続するには、次の接続プロパティの値を指定する必要があり [!DNL Google Cloud Storage] ます。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | Google CloudストレージアカウントのアクセスキーID。 |
-| `secretAccessKey` | Google Cloudストレージアカウントの秘密アクセスキー。 |
+| `accessKeyId` | アカウントのアクセスキーID [!DNL Google Cloud Storage] 。 |
+| `secretAccessKey` | アカウントの秘密アクセスキー [!DNL Google Cloud Storage] 。 |
 
 使い始める前に、 [このGoogle Cloudドキュメントにアクセスしてください](https://cloud.google.com/docs/authentication)。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platformのすべてのリソース（フローサービスに属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -60,7 +60,7 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、Google Cloudストレージアカウントごとに1つの接続のみ必要です。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクタを作成する場合に使用できるので、 [!DNL Google Cloud Storage] アカウントごとに必要な接続は1つだけです。
 
 **API形式**
 
@@ -97,9 +97,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | Google Cloudストレージアカウントに関連付けられているアクセスキーID。 |
-| `auth.params.secretAccessKey` | Google Cloudストレージアカウントに関連付けられている秘密アクセスキー。 |
-| `connectionSpec.id` | Google Cloudストレージ接続仕様ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| `auth.params.accessKeyId` | アカウントに関連付けられているアクセスキーID [!DNL Google Cloud Storage] 。 |
+| `auth.params.secretAccessKey` | アカウントに関連付けられている秘密アクセスキー [!DNL Google Cloud Storage] です。 |
+| `connectionSpec.id` | 接続 [!DNL Google Cloud Storage] 指定ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **応答**
 
@@ -114,4 +114,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、APIを使用してGoogle Cloudストレージ接続を作成し、一意のIDを応答本文の一部として取得できます。 この接続IDを使用して、Flow Service APIを使用してクラウドストレージを [調べたり、Flow Service APIを使用してパーケーデータを](../../explore/cloud-storage.md) 取り込んだりできます [](../../cloud-storage-parquet.md)。
+このチュートリアルに従うと、APIを使用して [!DNL Google Cloud Storage] 接続を作成し、一意のIDを応答本文の一部として取得できます。 この接続IDを使用して、Flow Service APIを使用してクラウドストレージを [調べたり、Flow Service APIを使用してパーケーデータを](../../explore/cloud-storage.md) 取り込んだりできます [](../../cloud-storage-parquet.md)。
