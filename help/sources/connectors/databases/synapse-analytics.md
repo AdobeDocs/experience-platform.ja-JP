@@ -1,32 +1,32 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Azure Synapse Analyticsコネクタ
+title: Azure SynapseAnalyticsコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45ce6e876a42c5594ae4b7787757e5db7024a22f
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
 
-# （ベータ版） Azure Synapse Analyticsコネクタ
+# （ベータ版） [!DNL Azure Synapse Analytics] コネクタ
 
-Adobe Experience Platformを使用すると、データを外部ソースから取り込むと同時に、Platform Servicesを使用して、入力データの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-エクスペリエンスプラットフォームは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 プラットフォームは、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには、Azure Snapse Analyticsが含まれます。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 [!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートには以下が含まれ [!DNL Azure Synapse Analytics]ます。
 
-以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure Synapse Analyticsをプラットフォームに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Azure Synapse Analytics] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
 
-## APIを使用してAzure Synapse Analyticsをプラットフォームに接続する
+## API [!DNL Azure Synapse Analytics] を [!DNL Platform] 使用した接続
 
-- [Flow Service APIを使用してAzure Synapse Analyticsコネクタを作成する](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Flow Service APIを使用してAzure SynapseAnalyticsコネクタを作成する](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用してAzure Synapse Analyticsをプラットフォームに接続する
+## UI [!DNL Azure Synapse Analytics] を [!DNL Platform] 使用して接続
 
-- [UIにAzure Synapse Analyticsソースコネクタを作成する](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [UIにAzure SynapseAnalyticsソースコネクタを作成する](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
