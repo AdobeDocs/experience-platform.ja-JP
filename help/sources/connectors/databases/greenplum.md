@@ -4,32 +4,32 @@ solution: Experience Platform
 title: GreenPlumコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: b92f33627636b351dbd7b490e461d4f6b2866310
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
 
-# （ベータ版）GreenPlumコネクタ
+# （ベータ版） [!DNL GreenPlum] コネクタ
 
 >[!NOTE]
->GreenPlumコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
+>コネクタ [!DNL GreenPlum] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformは、Microsoft、MySQL、Azureなどのデータベースプロバイダーに対してネイティブの接続を提供します。 これらのシステムのデータをPlatformに取り込むことができます。
+Adobe Experience Platformは、 [!DNL Microsoft]、MySQL、などのデータベースプロバイダに対してネイティブの接続を提供 [!DNL Azure]します。 これらのシステムのデータをに取り込むことができ [!DNL Platform]ます。
 
-リレーショナル、NoSQL、data warehouseなど、サードパーティのデータベースは、それぞれ異なる種類がサポートされます。 データベースプロバイダーのサポートにはGreenPlumが含まれます。
+リレーショナル、NoSQL、data warehouseなど、サードパーティのデータベースは、それぞれ異なる種類がサポートされます。 データベースプロバイダーのサポートには、が含まれ [!DNL GreenPlum]ます。
 
-以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGreenPlumをPlatformに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL GreenPlum] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
 
-## APIを使用したGreenPlumとPlatformの接続
+## API [!DNL GreenPlum] を [!DNL Platform] 使用した接続
 
 - [Flow Service APIを使用してGreenPlumコネクタを作成する](../../tutorials/api/create/databases/greenplum.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用してGreenPlumをPlatformに接続
+## UI [!DNL GreenPlum] を [!DNL Platform] 使用して接続
 
 - [UIでのGreenPlumソースコネクタの作成](../../tutorials/ui/create/databases/greenplum.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
