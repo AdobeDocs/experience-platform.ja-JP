@@ -4,9 +4,9 @@ solution: Experience Platform
 title: モデルにスコアを付ける(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # モデルにスコアを付ける(UI)
 
-Adobe Experience Platform Data Science Workspaceでのスコアリングは、既存のトレーニングを受けたモデルに入力データを入力することで達成できます。 次に、スコアリング結果が新しいバッチとして指定した出力データセットに保存され、表示可能になります。
+Adobe Experience Platformのスコアは、既存のトレーニングを受けたモデルに入力データを入力することで達成 [!DNL Data Science Workspace] できます。 次に、スコアリング結果が新しいバッチとして指定した出力データセットに保存され、表示可能になります。
 
-このチュートリアルでは、Data Science Workspaceユーザーインターフェイスでモデルにスコアを付けるために必要な手順を説明します。
+このチュートリアルでは、ユー [!DNL Data Science Workspace] ザインターフェイスでモデルにスコアを付けるために必要な手順を示します。
 
 ## はじめに
 
-このチュートリアルを完了するには、エクスペリエンスプラットフォームにアクセスできる必要があります。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
+このチュートリアルを完了するには、にアクセスする必要があり [!DNL Experience Platform]ます。 でIMS組織にアクセスできない場合は、先に進む前にシステム管理者にお問い合わせ [!DNL Experience Platform]ください。
 
 このチュートリアルには、トレーニングを受けたモデルが必要です。 トレーニングを受けたモデルがない場合は、先に進む前に、UI [チュートリアルで](./train-evaluate-model-ui.md) トレーニングに従ってモデルを評価してください。
 
@@ -63,4 +63,4 @@ Adobe Experience Platform Data Science Workspaceでのスコアリングは、�
 
 ## 次の手順
 
-このチュートリアルでは、Data Science Workspaceのトレーニングを受けたモデルを使用してデータにスコアを付ける手順を順を追って説明しました。 機械学習サービスに簡単にアクセスできるようにして、組織内のユーザーがデータをスコアできるように、UI [](./publish-model-service-ui.md) でモデルをサービスとして公開する方法に関するチュートリアルに従ってください。
+このチュートリアルでは、のトレーニングを受けたモデルを使用してデータにスコアを付ける手順を順を追って説明し [!DNL Data Science Workspace]ました。 機械学習サービスに簡単にアクセスできるようにして、組織内のユーザーがデータをスコアできるように、UI [](./publish-model-service-ui.md) でモデルをサービスとして公開する方法に関するチュートリアルに従ってください。
