@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのFTPまたはSFTPソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!NOTE]
 >FTPおよびSFTPコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してFTPまたはSFTPソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ユー [!DNL Platform] ザインターフェイスを使用してFTPまたはSFTPソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -32,7 +32,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ### サポートされているファイル形式
 
-Experience Platformでは、外部ソースから取り込む次のファイル形式をサポートしています。
+[!DNL Experience Platform] は、外部ソースから取り込む次のファイル形式をサポートしています。
 
 * 区切り文字区切り値(DSV): DSV形式のデータ・ファイルのサポートは、現在、コンマ区切り値(CSV)に制限されています。 DSV形式のファイル内のフィールド・ヘッダーの値は、英数字とアンダースコアのみで構成する必要があります。 将来、一般的なDSVのサポートが提供される予定です。
 * JavaScript Object Notation (JSON): JSON形式のデータファイルは、XDMに準拠している必要があります。
@@ -40,11 +40,11 @@ Experience Platformでは、外部ソースから取り込む次のファイル�
 
 ### 必要な資格情報の収集
 
-Platform上のFTPまたはSFTPサーバにアクセスするには、サーバの **ホスト名**、 **ユーザ名**、 **パスワードを指定する必要があります**。
+でFTPまたはSFTPサーバにアクセスするに [!DNL Platform]は、サーバの **ホスト名**、 **ユーザ名**、 **パスワードを指定する必要があります**。
 
 ## FTPまたはSFTPサーバーに接続する
 
-必要な資格情報を収集したら、次の手順に従って新しいFTPまたはSFTPアカウントを作成し、Platformに接続します。
+必要な資格情報を収集したら、次の手順に従って、接続先の新しいFTPまたはSFTPアカウントを作成でき [!DNL Platform]ます。
 
 「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
 
