@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Data Science Workspaceのチュートリアル
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
 
 
-# Data Science Workspaceのチュートリアル
+# [!DNL Data Science Workspace] walkthrough
 
-このドキュメントでは、Adobe Experience Platform Data Science Workspaceのチュートリアルを提供します。 具体的には、データサイエンティストが通る一般的なワークフローを調べ、機械学習を使用した問題の解決を図ります。
+このドキュメントでは、Adobe Experience Platformのチュートリアルを提供 [!DNL Data Science Workspace]します。 具体的には、データサイエンティストが通る一般的なワークフローを調べ、機械学習を使用した問題の解決を図ります。
 
 ## 前提条件
 
-- 登録済みのAdobe IDアカウント
-   - Adobe IDアカウントは、Adobe Experience PlatformおよびData Science Workspaceへのアクセス権を持つ組織に追加されている必要があります
+- 登録されたAdobe IDアカウント
+   - Adobe IDアカウントは、Adobe Experience Platformおよび [!DNL Data Science Workspace]
 
 ## データサイエンティストの動機
 
@@ -29,22 +29,22 @@ ht-degree: 0%
 
 データサイエンティストのソリューションは、小売業者がアクセスできる豊富な履歴データを活用し、将来のトレンドを予測し、価格決定を最適化することです。 過去の販売データを使って機械学習モデルをトレーニングし、モデルを使用して将来の販売傾向を予測します。 これにより、小売業者は価格を変更する際に役立つインサイトを得ることができます。
 
-この概要では、データ科学者がデータセットを取得し、週別の売上を予測するモデルを作成する手順について説明します。 Adobe Experience Platform Data Science Workspaceのサンプル小売売上ノートブックの以下のセクションに移動します。
+この概要では、データ科学者がデータセットを取得し、週別の売上を予測するモデルを作成する手順について説明します。 Adobe Experience Platform版小売売上ノートブックの例では、以下のセクションを参照し [!DNL Data Science Workspace]ます。
 
 - [セットアップ](#setup)
 - [データの調査](#exploring-data)
 - [機能エンジニアリング](#feature-engineering)
 - [トレーニングと検証](#training-and-verification)
 
-### Data Science Workspaceのノートブック
+### ノートブック [!DNL Data Science Workspace]
 
-まず、JupterLabノートブックを作成して「小売売上」サンプルノートブックを開きます。 ノートブック内のデータサイエンティストが行った手順に従って、一般的なワークフローを理解できます。
+まず、「小売売上」サンプルノートブックを開く [!DNL JupyterLab] ノートブックを作成します。 ノートブック内のデータサイエンティストが行った手順に従って、一般的なワークフローを理解できます。
 
-Adobe Experience Platform UIで、上部のメニューの「Data Science」タブをクリックし、Data Science Workspaceに移動します。 このページで、[ JupyterLab ]タブをクリックし、 JupyterLabランチャーを開きます。 次のようなページが表示されます。
+Adobe Experience PlatformUIで、上部メニューの[データ科学]タブをクリックして、に移動し [!DNL Data Science Workspace]ます。 このページで、ランチャーを開く [!DNL JupyterLab] タブをクリックし [!DNL JupyterLab] ます。 次のようなページが表示されます。
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-このチュートリアルでは、Jupyter NotebookのPython 3を使用して、データにアクセスし、データを調べる方法を示します。 ランチャーページには、サンプルノートブックが用意されています。 Python 3の「小売売上」サンプルを使用します。
+このチュートリアルでは、の3を使用して、データにアクセスして調査する方法 [!DNL Python][!DNL Jupyter Notebook] を示します。 ランチャーページには、サンプルノートブックが用意されています。 ここでは、 [!DNL Python] 3.に「小売売上」サンプルを使用します。
 
 ![](./images/walkthrough/retail_sales.png)
 
@@ -62,7 +62,7 @@ Adobe Experience Platform UIで、上部のメニューの「Data Science」タ�
 
 #### データの読み込み
 
-ライブラリの読み込み後、開始でデータを確認できます。 以下のPythonコードは、pandasの `DataFrame` データ構造と [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) 関数を使用して、GithubでホストされるCSVをpandas DataFrameに読み込みます。
+ライブラリの読み込み後、開始でデータを確認できます。 次の [!DNL Python] コードは、pandasの `DataFrame` データ構造と [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv)[!DNL Github] 関数を使用して、pandas DataFrameでホストされているCSVを読み取ります。
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -76,7 +76,7 @@ PandasのDataFrameデータ構造は、2次元のラベル付きデータ構造�
 
 #### 統計概要
 
-Pythonのパンダライブラリを利用して、各属性のデータ型を取得できます。 次の呼び出しの出力は、各列のエントリ数とデータタイプに関する情報を提供します。
+各属性のデータタイプを取得するために、 [!DNL Python's] pandasライブラリを利用できます。 次の呼び出しの出力は、各列のエントリ数とデータタイプに関する情報を提供します。
 
 ```PYTHON
 df.info()
