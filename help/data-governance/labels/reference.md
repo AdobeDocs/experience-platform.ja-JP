@@ -4,9 +4,9 @@ solution: Experience Platform
 title: サポートされるデータ使用量ラベル
 topic: labels
 translation-type: tm+mt
-source-git-commit: 2f8da8688897476f89ca1b176e0c988d6e79264b
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1878'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Adobe Experience Platformには、Data Usage Labeling and Enforcement(DULE)を中核とするデータ・ガバナンスのインフラストラクチャが含まれます。  DULE機能を使用すると、データ使用ラベルをデータセットやフィールドに適用し、そのデータに適用される使用ポリシーの種類に従ってデータを分類できます。
 
-このドキュメントでは、Experience Platformが現在サポートしているすべてのデータ使用ラベルについて概説します。 Data GovernanceとDULEに関する詳細は、「 [Data Governance overview](../home.md)」を参照してください。
+このドキュメントでは、で現在サポートされているすべてのデータ使用ラベルについて説明 [!DNL Experience Platform]します。 SDULE [!DNL Data Governance] とANDに関する詳細は、 [Data Governanceの概要を参照してください](../home.md)。
 
 ## 契約ラベル
 
