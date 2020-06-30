@@ -4,45 +4,45 @@ solution: Experience Platform
 title: UIでのSalesforceソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 44c43afc653c147fa12e3e962904bfc79ee0fc64
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '450'
 ht-degree: 1%
 
 ---
 
 
-# UIでのSalesforceソースコネクタの作成
+# UIで [!DNL Salesforce] ソースコネクタを作成する
 
-Adobe Experience Platformのソースコネクターは、外部ソースのCRMデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してSalesforceソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのCRMデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ユー [!DNL Salesforce] ザインタフェースを使用して [!DNL Platform] ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+* [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に有効なSalesforceアカウントをお持ちの場合は、このドキュメントの残りの部分をスキップし、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/crm.md)。
+既に有効な [!DNL Salesforce] アカウントをお持ちの場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/crm.md)。
 
 ### 必要な資格情報の収集
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `environmentUrl` | SalesforceソースインスタンスのURL。 |
-| `username` | Salesforceユーザーアカウントのユーザー名。 |
-| `password` | Salesforceユーザーアカウントのパスワード。 |
-| `securityToken` | Salesforceユーザーアカウントのセキュリティトークン。 |
+| `environmentUrl` | ソースインスタンスのURL [!DNL Salesforce] です。 |
+| `username` | ユーザーアカウントのユー [!DNL Salesforce] ザー名。 |
+| `password` | ユーザーアカウントのパス [!DNL Salesforce] ワードです。 |
+| `securityToken` | ユーザーアカウントのセキュリティト [!DNL Salesforce] ークンです。 |
 
 開始方法の詳細については、 [このSalesforceドキュメントを参照してください](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)。
 
-## Salesforceアカウントの接続
+## アカウントに接続 [!DNL Salesforce] する
 
-必要な資格情報を収集したら、次の手順に従って新しいSalesforceアカウントを作成し、プラットフォームに接続します。
+必要な資格情報を収集したら、次の手順に従って、接続する新しい [!DNL Salesforce] アカウントを作成でき [!DNL Platform]ます。
 
-[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) Sources **** 」を選択して *[!UICONTROL Sources]* ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには既存のアカウントの数と関連するデータセットフローが表示されます。
+「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには既存のアカウントの数と関連するデータセットフローが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
@@ -54,16 +54,16 @@ Adobe Experience Platformのソースコネクターは、外部ソースのCRM�
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明、Salesforce資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明および [!DNL Salesforce] 資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
 
 ![connect](../../../../images/tutorials/create/salesforce/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するSalesforceアカウントを選択し、右上隅の **[!UICONTROL 「次へ]** 」を選択して次に進みます。
+既存のアカウントに接続するには、接続する [!DNL Salesforce] アカウントを選択し、右上隅の「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
 
 ![既存の](../../../../images/tutorials/create/salesforce/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従うことで、Salesforceアカウントへの接続を確立できました。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/crm.md)。
+このチュートリアルに従って、ア [!DNL Salesforce] カウントへの接続を確立しました。 次のチュートリアルに進み、データをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/crm.md)。
