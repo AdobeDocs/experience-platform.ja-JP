@@ -4,9 +4,9 @@ solution: Experience Platform
 title: フィールドをIDとしてラベル付けする
 topic: api guide
 translation-type: tm+mt
-source-git-commit: 40ce232e39f62f1ee478ef05229dd2fc125ee4c0
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '145'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # フィールドをIDとしてラベル付けする
 
-個人識別情報(PII)を含むフィールドは、識別情報フィールドとしてラベル付けできます。 IDフィールドに指定された値は、IDサービスによってIDとして解釈されます。 IDの名前空間は、フィールドのラベル付けの一部として指定されます。
+個人識別情報(PII)を含むフィールドは、識別情報フィールドとしてラベル付けできます。 IDフィールドに指定された値は、によってIDとして解釈され [!DNL Identity Service]ます。 IDの名前空間は、フィールドのラベル付けの一部として指定されます。
 
 フィールドにIDのラベルを付けるには、次の条件を満たす必要があります。
 
