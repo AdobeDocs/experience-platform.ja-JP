@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用ラベルユーザーガイド
 topic: labels
 translation-type: tm+mt
-source-git-commit: 475e774d5e7ebac036b42aa94736ba8e22c7185f
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # データ使用ラベルユーザーガイド
 
-このユーザーガイドでは、Experience Platformユーザーインターフェイス内でデータ使用ラベル（DULEラベルとも呼ばれます）を操作する手順を説明します。 このガイドを使用する前に、DULEフレームワークのより強固な概要については、 [データ・ガバナンスの概要](../home.md) を参照してください。
+このユーザーガイドでは、ユーザーインターフェイス内でデータ使用ラベル（DULEラベルとも呼ばれます）を使用する手順を説明し [!DNL Experience Platform] ます。 このガイドを使用する前に、DULEフレームワークのより強固な概要については、 [データ・ガバナンスの概要](../home.md) を参照してください。
 
 ## データセットレベルでのデータ使用量ラベルの管理
 
-データセットレベルでデータ使用量ラベルを管理するには、既存のデータセットを選択するか、新しいデータセットを作成する必要があります。 Adobe Experience Platformにログインした後、左側のナビゲーションで「 **[!UICONTROL Datasets]** 」を選択して、 _Datasets_ ワークスペースを開きます。 このページには、組織に属するすべてのデータセットが作成され、各データセットに関連する有用な詳細情報と共にリストされます。
+データセットレベルでデータ使用量ラベルを管理するには、既存のデータセットを選択するか、新しいデータセットを作成する必要があります。 Adobe Experience Platformにログインした後、左側のナビゲーションで「 **[!UICONTROL Datasets]** 」を選択し、 _Datasets_ Workspaceを開きます。 このページには、組織に属するすべてのデータセットが作成され、各データセットに関連する有用な詳細情報と共にリストされます。
 
 ![Data Workspace内の「データセット」タブ](../images/labels/datasets.png)
 
@@ -100,12 +100,12 @@ ht-degree: 0%
 
 ## 次の手順
 
-データセットとフィールドレベルにデータ使用量ラベルを追加したら、データをExperience Platformに取り込むことができます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
+データセットとフィールドレベルにデータ使用量ラベルを追加したら、にデータを取り込み始め [!DNL Experience Platform]ます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
 
 適用したラベルに基づいてデータ使用ポリシーを定義できるようになりました。 詳しくは、「 [データ使用ポリシーの概要](../policies/overview.md)」を参照してください。
 
 ## その他のリソース
 
-次のビデオでは、データガバナンスの理解を深め、データセットと個々のフィールドにラベルを適用する方法の概要を説明します。
+次のビデオでは、の理解を深めることを目的としており、データセット [!DNL Data Governance]と個々のフィールドにラベルを適用する方法の概要を説明しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
