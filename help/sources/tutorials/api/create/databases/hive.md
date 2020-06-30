@@ -4,58 +4,58 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzure HDInsights ConnectorでApache Hiveを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '546'
 ht-degree: 2%
 
 ---
 
 
-# Flow Service APIを使用してAzure HDInsights ConnectorでApache Hiveを作成する
+# [!DNL Apache Hive] APIを使用して [!DNL Azure HDInsights][!DNL Flow Service] コネクタを作成する
 
 >[!NOTE]
->Azure HDInsightsコネクターのApache Hiveはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>オン [!DNL Apache Hive] の [!DNL Azure HDInsights] コネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-フローサービスは、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集および一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して、Azure HDInsights上のApache HiveをExperience Platformに接続する手順を順を追って説明します。
+このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順を順を追っ [!DNL Apache Hive] て説明 [!DNL Azure HDInsights] し [!DNL Experience Platform]ます。
 
 ## はじめに
 
 このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [ソース](../../../../home.md): Experience Platformを使用すると、Platformサービスを使用して、様々なソースからデータを取り込み、データの構造、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してHiveに正常に接続するために知っておく必要がある追加情報については、以下の節に説明します。
+以下の節では、 [!DNL Hive][!DNL Flow Service] APIを使用してに正常に接続するために知っておく必要がある追加情報について説明します。
 
 ### 必要な資格情報の収集
 
-フローサービスがHiveと接続するには、次の接続プロパティの値を指定する必要があります。
+と接続 [!DNL Flow Service] するには、次の接続プロパティの値を指定する必要があ [!DNL Hive]ります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `host` | HiveサーバーのIPアドレスまたはホスト名。 |
-| `username` | Hiveサーバーへのアクセスに使用するユーザー名です。 |
+| `host` | サーバーのIPアドレスまたはホスト名 [!DNL Hive] 。 |
+| `username` | サーバーへのアクセスに使用するユー [!DNL Hive] ザー名。 |
 | `password` | ユーザーに対応するパスワード。 |
-| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 Hiveの接続指定ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 の接続指定ID [!DNL Hive] は次のとおりです。 `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
 
 使い始める方法の詳細については、 [このHiveドキュメントを参照してください](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted)。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-フローサービスに属するリソースを含む、Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -75,7 +75,7 @@ POST /connections
 
 **リクエスト**
 
-Hive接続を作成するには、その一意の接続指定IDをPOST要求の一部として指定する必要があります。 Hiveの接続指定IDはで `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`す。
+接続を作成するには、その [!DNL Hive] 一意の接続指定IDをPOSTリクエストの一部として指定する必要があります。 の接続指定ID [!DNL Hive] はです `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`。
 
 ```shell
 curl -X POST \
@@ -103,8 +103,8 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | Hiveアカウントに関連付けられている接続文字列です。 |
-| `connectionSpec.id` | Hive接続指定ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
+| `auth.params.connectionString` | アカウントに関連付けられている接続文字列 [!DNL Hive] です。 |
+| `connectionSpec.id` | 接続 [!DNL Hive] 指定ID: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
 
 **応答**
 
@@ -119,4 +119,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、Flow Service APIを使用してHive接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うことで、 [!DNL Hive] APIを使用して [!DNL Flow Service] 接続を作成し、接続の一意のID値を取得しました。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
