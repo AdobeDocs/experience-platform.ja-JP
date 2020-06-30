@@ -4,9 +4,9 @@ solution: Experience Platform
 title: IDのクラスター履歴の取得
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # IDのクラスター履歴の取得
 
-IDは、様々なデバイスグラフの実行中にクラスターを移動できます。 アイデンティティサービスは、特定のIDに対するクラスターの関連付けを経時的に表示します。
+IDは、様々なデバイスグラフの実行中にクラスターを移動できます。 [!DNL Identity Service] 特定のIDに対するクラスターの関連付けを経時的に表示します。
 
 オプションの `graph-type` パラメーターを使用して、クラスターの取得元の出力形式を指定します。 オプションは次のとおりです。
 
