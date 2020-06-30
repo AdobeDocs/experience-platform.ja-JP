@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用ポリシーの作成
 topic: policies
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1216'
+source-wordcount: '1194'
 ht-degree: 3%
 
 ---
@@ -16,22 +16,22 @@ ht-degree: 3%
 
 Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformデータガバナンスの中核的なメカニズムです。 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) (DULE Policy Service API)を使用すると、DULEポリシーを作成および管理して、特定のDULEラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
 
-このドキュメントでは、Policy Service APIを使用してSCHEDULEポリシーを作成するための、手順を追ったチュートリアルを提供します。 APIで利用可能な様々な操作の詳細なガイドについては、 [Policy Service開発者ガイドを参照してください](../api/getting-started.md)。
+このドキュメントでは、 [!DNL Policy Service] APIを使用してDULEポリシーを作成するための、手順を追ったチュートリアルを提供します。 APIで利用可能な様々な操作の詳細なガイドについては、 [Policy Service開発者ガイドを参照してください](../api/getting-started.md)。
 
 ## はじめに
 
 このチュートリアルでは、DULEポリシーの作成と評価に関する次の主要概念について、十分に理解している必要があります。
 
-* [Data Governance](../home.md): Platformがデータ使用のコンプライアンスを強制するフレームワーク。
+* [Data Governance](../home.md): データ使用のコンプライアンスを [!DNL Platform] 適用するフレームワーク。
 * [データ使用ラベル](../labels/overview.md): データ使用ラベルは、XDMデータフィールドに適用され、そのデータへのアクセス方法に関する制限を指定します。
-* [Experience Data Model(XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [Experience Data Model(XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+* [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-このチュートリアルを開始する前に、 [](../api/getting-started.md) 開発者ガイドを参照して、必要なヘッダーやAPI呼び出し例の読み取り方法など、DULE Policy Service APIの呼び出しを正しく行うために必要な重要な情報を確認してください。
+このチュートリアルを開始する前に、 [開発者ガイドを参照して](../api/getting-started.md) 、必要なヘッダーやAPI呼び出し例の読み方など、DULE [!DNL Policy Service] APIを正しく呼び出すために必要な重要な情報を確認してください。
 
 ## マーケティングアクションの定義 {#define-action}
 
-Data Governanceフレームワークでは、マーケティングアクションとは、Experience Platformデータの消費者が行うアクションのことで、データ使用ポリシーの違反を確認する必要があります。
+この [!DNL Data Governance] フレームワークでは、マーケティングアクションとは、 [!DNL Experience Platform] データ消費者が行うアクションのことで、データ使用ポリシーの違反を確認する必要があります。
 
 DULEポリシーを作成する最初の手順は、ポリシーが評価するマーケティングアクションを決定することです。 これは、次のいずれかのオプションを使用して行うことができます。
 
@@ -44,7 +44,7 @@ GETリクエストをエンドポイントの1つに作成することで、DULE
 
 **API形式**
 
-Experience Platformが提供するマーケティングアクションを検索するか、組織が作成したカスタムマーケティングアクションを検索するかに応じて、それぞれエンドポイント `marketingActions/core` または `marketingActions/custom` エンドポイントを使用します。
+組織が提供するマーケティングアクションを検索するか、組織が作成したカスタムマーケティングアクション [!DNL Experience Platform] を検索するかに応じて、それぞれ `marketingActions/core` のエンドポイントを使用し `marketingActions/custom` ます。
 
 ```http
 GET /marketingActions/core
@@ -414,6 +414,6 @@ curl -X PATCH \
 
 このチュートリアルに従うと、マーケティングアクションのデータ使用ポリシーが正しく作成されました。 データ使用ポリシーの [](../enforcement/api-enforcement.md) 適用に関するチュートリアルを続行して、ポリシー違反を確認し、エクスペリエンスアプリケーションでそれらを処理する方法を学ぶことができます。
 
-Policy Service APIで使用可能な様々な操作について詳しくは、 [Policy Service開発者ガイドを参照してください](../api/getting-started.md)。 リアルタイム顧客プロファイルデータに対してポリシーを適用する方法については、オーディエンスセグメントに対するデータ使用コンプライアンスの [適用に関するチュートリアルを参照してください](../../segmentation/tutorials/governance.md)。
+APIで使用可能な様々な操作について詳しくは、 [!DNL Policy Service] Policy Service開発者ガイドを参照してください [](../api/getting-started.md)。 データに対してポリシーを適用する方法については、オーディエンスセグメントに対するデータの使用に対するコンプライアンスの [!DNL Real-time Customer Profile] 適用に関するチュートリアル [](../../segmentation/tutorials/governance.md)を参照してください。
 
-Experience Platformユーザーインターフェイスで使用ポリシーを管理する方法については、「 [ポリシーユーザーガイド](user-guide.md)」を参照してください。
+ユーザーインターフェイスで使用ポリシーを管理する方法については、「 [!DNL Experience Platform][ポリシーユーザーガイド](user-guide.md)」を参照してください。
