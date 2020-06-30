@@ -4,52 +4,52 @@ solution: Experience Platform
 title: Flow Service APIを使用してCouchbaseコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
 
-# Flow Service APIを使用してCouchbaseコネクタを作成する
+# APIを使用して [!DNL Couchbase][!DNL Flow Service] コネクタを作成する
 
 >[!NOTE]
->Couchbaseコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>コネクタ [!DNL Couchbase] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-フローサービスは、さまざまな異なるソースから顧客データを収集および一元化してAdobe Experience Platformに導くために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] 様々な異なるソースから顧客データを収集および一元化してAdobe Experience Platformに導くために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して、CouchbaseをExperience Platformに接続する手順を順を追って説明します。
+このチュートリアルでは、Flow Service APIを使用して、に接続する手順を順を追って説明 [!DNL Couchbase] し [!DNL Experience Platform]ます。
 
 ## はじめに
 
 このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [ソース](../../../../home.md): Experience Platformを使用すると、Platformサービスを使用して、様々なソースからデータを取り込み、データの構造、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してCouchbaseに正常に接続するために知っておく必要がある追加情報については、以下の節に説明します。
+以下の節では、 [!DNL Couchbase][!DNL Flow Service] APIを使用してに正常に接続するために知っておく必要がある追加情報について説明します。
 
 ### 必要な資格情報の収集
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | Couchbaseインスタンスへの接続に使用する接続文字列です。 Couchbaseの接続文字列パターンはで `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`す。 接続文字列の取得の詳細については、 [このCouchbaseドキュメントを参照してください](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)。 |
-| `connectionSpec.id` | 接続を作成するために必要な識別子。 Couchbaseの接続仕様IDは修正され `1fe283f6-9bec-11ea-bb37-0242ac130002`ました。 |
+| `connectionString` | インスタンスへの接続に使用する接続文字列 [!DNL Couchbase] です。 の接続文字列パターン [!DNL Couchbase] は、 `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`です。 接続文字列の取得の詳細については、 [このCouchbaseドキュメントを参照してください](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)。 |
+| `connectionSpec.id` | 接続を作成するために必要な識別子。 の固定接続仕様ID [!DNL Couchbase] は、 `1fe283f6-9bec-11ea-bb37-0242ac130002`です。 |
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-フローサービスに属するリソースを含む、Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -59,7 +59,7 @@ PlatformAPIを呼び出すには、まず [認証チュートリアルを完了�
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、Couchbaseアカウントごとに1つのコネクタが必要です。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクタを作成する場合に使用できるので、 [!DNL Couchbase] アカウントごとに1つのコネクタが必要です。
 
 **API形式**
 
@@ -69,7 +69,7 @@ POST /connections
 
 **リクエスト**
 
-次の要求は、ペイロードで提供されるプロパティで設定された、新しいCouchbase接続を作成します。
+次の要求は、ペイロードで提供されるプロパティで設定された新しい [!DNL Couchbase] 接続を作成します。
 
 ```shell
 curl -X POST \
@@ -97,8 +97,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | Couchbaseアカウントへの接続に使用する接続文字列です。 接続文字列パターンは次のとおりです。 `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | Couchbase接続仕様ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `auth.params.connectionString` | アカウントへの接続に使用する接続文字列 [!DNL Couchbase] です。 接続文字列パターンは次のとおりです。 `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
+| `connectionSpec.id` | 接続 [!DNL Couchbase] 仕様ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **応答**
 
@@ -113,4 +113,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うことで、Flow Service APIを使用してCouchbase接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うことで、 [!DNL Couchbase] APIを使用して [!DNL Flow Service] 接続を作成し、接続の一意のID値を取得しました。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
