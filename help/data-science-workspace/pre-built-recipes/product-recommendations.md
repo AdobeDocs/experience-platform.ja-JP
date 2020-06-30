@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 商品の推奨レシピ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '421'
 ht-degree: 5%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 ## 使用を始めるにはどうすればよいですか。
 
-「Adobe Experience Platform Lab」チュートリアル（以下の「Lab」リンクを参照）に従って作業を開始します。 このチュートリアルでは、 [](../jupyterlab/create-a-recipe.md) ノートブックをレシピワークフローに従い、Experience Platform Data Science Workspaceでレシピを実装することで、ジャプターノートブックでProduct Recommendationsレシピを作成する方法を示します。
+「Adobe Experience Platformラボ」のチュートリアルに従って作業を開始することもできます（以下の「実習」リンクを参照）。 このチュートリアルでは、 [ノートブックをレシピワークフローに従い、でレシピを実装し、ジャプターノートブックでProduct Recommendationsレシピを作成する方法を示し](../jupyterlab/create-a-recipe.md)[!DNL Experience Platform][!DNL Data Science Workspace]ます。
 
 * [ラボ： Data Science Workspaceで未来を予測](https://expleague.azureedge.net/labs/L777/index.html)
 * [ラボリソース](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
@@ -57,4 +57,4 @@ ht-degree: 5%
 * 興味が似ている顧客もいて、購入行動と閲覧行動を比較することでグループ化できます。
 * 顧客は、購入や閲覧の行動に関して、類似の顧客に基づくレコメンデーションに興味を持つ可能性が高くなります。
 
-このプロセスは、主に2つのステップに分類されます。 まず、類似する顧客のサブセットを定義します。 次に、そのセット内で、ターゲット顧客にレコメンデーションを返すために、顧客間で類似の機能を識別します。
+このプロセスは、主に2つのステップに分類されます。 まず、類似した顧客のサブセットを定義します。 次に、そのセット内で、ターゲット顧客にレコメンデーションを返すために、顧客間で類似の機能を識別します。
