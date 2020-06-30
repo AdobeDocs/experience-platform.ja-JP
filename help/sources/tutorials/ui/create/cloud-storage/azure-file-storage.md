@@ -4,26 +4,26 @@ solution: Experience Platform
 title: UIにAzure Fileストレージソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: ced839f64bea48703c530c83d8592f3842c17e53
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 0%
+source-wordcount: '485'
+ht-degree: 1%
 
 ---
 
 
-# UIにAzure Fileストレージソースコネクタを作成する
+# UIで [!DNL Azure File Storage] ソースコネクタを作成する
 
 >[!NOTE]
->Azure Fileストレージコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>コネクタ [!DNL Azure File Storage] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してAzureファイルストレージソースコネクタを認証する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ユー [!DNL Azure File Storage] ザーインターフェイスを使用して [!DNL Platform] ソースコネクタを認証する手順を説明します。
 
 ## はじめに
 
 このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-- [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
@@ -32,19 +32,19 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ### 必要な資格情報の収集
 
-Azure Fileストレージソースコネクタを認証するには、次の接続プロパティの値を指定する必要があります。
+ソースコネクタを認証するには、次の接続プロパティの値を指定する必要があり [!DNL Azure File Storage] ます。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `host` | アクセスするAzure Fileストレージインスタンスのエンドポイントです。 |
-| `userId` | Azure Fileストレージエンドポイントへの十分なアクセス権を持つユーザー。 |
-| `password` | Azure Fileストレージアクセスキー。 |
+| `host` | アクセスする [!DNL Azure File Storage] インスタンスのエンドポイント。 |
+| `userId` | エンドポイントへの十分なアクセス権を持つユー [!DNL Azure File Storage] ザー。 |
+| `password` | アク [!DNL Azure File Storage] セスキー。 |
 
 開始方法の詳細については、 [このAzure Fileストレージドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)。
 
-## Azure Fileストレージアカウントの接続
+## アカウントに接続 [!DNL Azure File Storage] する
 
-必要な資格情報を収集したら、次の手順に従って新しいAzureファイルストレージアカウントを作成し、Platformに接続します。
+必要な資格情報を収集したら、次の手順に従って、接続する新しい [!DNL Azure File Storage] アカウントを作成でき [!DNL Platform]ます。
 
 「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
 
@@ -64,10 +64,10 @@ Azure Fileストレージソースコネクタを認証するには、次の接�
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するAzure Fileストレージアカウントを選択し、[ **[!UICONTROL 次へ]** ]を選択して次に進みます。
+既存のアカウントに接続するには、接続する [!DNL Azure File Storage] アカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
 
 ![既存の](../../../../images/tutorials/create/azure-file-storage/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従うと、Azure Fileストレージアカウントへの接続が確立されます。 次のチュートリアルに進み、クラウドストレージのデータをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/batch/cloud-storage.md)。
+このチュートリアルに従って、ア [!DNL Azure File Storage] カウントへの接続を確立しました。 次のチュートリアルに進み、クラウドストレージのデータをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/batch/cloud-storage.md)。
