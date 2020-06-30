@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ポリシー
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # ポリシー
 
-データ使用ポリシーとは、組織が採用するルールで、Experience Platform内のデータに対して実行を許可（制限）されるマーケティングアクションの種類を示します。
+Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 エンドポイント `/policies` は、データ使用ポリシーの表示、作成、更新または削除に関連するすべてのAPI呼び出しに使用されます。
 
@@ -406,7 +406,7 @@ curl -X PUT \
 
 ポリシーの特定の部分は、PATCH要求を使用して更新できます。 ポリシーを _書き換えるPUT要求とは異なり_ 、PATCH要求は要求本文で指定されたパスのみを更新します。 これは、ポリシーを有効または無効にする場合に特に便利です。更新する特定のパス(`/status`)とその値(`ENABLE` または `DISABLE`)のみを送信する必要があるからです。
 
-Policy Service APIは現在、「add」、「replace」、「remove」の各PATCH操作をサポートしており、次の例に示すように、各更新をアレイ内のオブジェクトとして1回の呼び出しに結合できます。
+この [!DNL Policy Service] APIは現在、「add」、「replace」、「remove」の各PATCH操作をサポートしており、次の例に示すように、各更新を配列内のオブジェクトとして追加することで、複数の更新を1回の呼び出しに結合できます。
 
 **API形式**
 
