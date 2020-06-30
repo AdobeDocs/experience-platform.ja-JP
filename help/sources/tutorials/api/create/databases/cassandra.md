@@ -4,56 +4,56 @@ solution: Experience Platform
 title: Flow Service APIを使用してApache Cassandraコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: accbb95234085c7c1969e9fecc4f5db52426c8b7
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 1%
+source-wordcount: '588'
+ht-degree: 2%
 
 ---
 
 
-# Flow Service APIを使用してApache Cassandraコネクタを作成する
+# APIを使用した [!DNL Apache Cassandra][!DNL Flow Service] コネクタの作成
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して、Apache Cassandra（以下「Cassandra」と呼ばれる）をExperience Platformに接続する手順を順を追って説明します。
+このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順(以下「Cassandra」と呼ばれ [!DNL Apache Cassandra] る)を順を追って説明 [!DNL Experience Platform]します。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [ソース](../../../../home.md): Experience Platformを使用すると、様々なソースからデータを取り込むと同時に、プラットフォームサービスを使用して、入力データの構造、ラベル付け、拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してCassandraに正常に接続するために知っておく必要がある追加情報については、以下の節に説明します。
+以下の節では、 [!DNL Flow Service] APIを使用してCassandraに正常に接続するために知っておく必要がある追加情報について説明します。
 
 ### 必要な資格情報の収集
 
-フローサービスがCassandraと接続するには、次の接続プロパティの値を指定する必要があります。
+と接続 [!DNL Flow Service] するには、次の接続プロパティの値を指定する必要があ [!DNL Cassandra]ります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `host` | CassandraサーバのIPアドレスまたはホスト名。 |
-| `port` | Cassandraサーバーがクライアント接続をリッスンするために使用するTCPポート。 The default port is `9042`. |
-| `username` | 認証用にCassandraサーバーに接続するために使用するユーザー名。 |
-| `password` | Cassandraサーバーに接続して認証を行うためのパスワード。 |
-| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 Cassandraの接続仕様IDはで `a8f4d393-1a6b-43f3-931f-91a16ed857f4`す。 |
+| `host` | サー [!DNL Cassandra] バーのIPアドレスまたはホスト名。 |
+| `port` | サー [!DNL Cassandra] バーがクライアント接続をリッスンするために使用するTCPポートです。 The default port is `9042`. |
+| `username` | 認証のためにサー [!DNL Cassandra] バーに接続するために使用するユーザー名です。 |
+| `password` | 認証用に [!DNL Cassandra] サーバーに接続するためのパスワードです。 |
+| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 の接続指定ID [!DNL Cassandra] はです `a8f4d393-1a6b-43f3-931f-91a16ed857f4`。 |
 
 使い始める前に、このCassandraドキュメントを参照し [てください](https://cassandra.apache.org/doc/latest/operating/security.html#authentication)。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platformのすべてのリソース（Flow Serviceに属するリソースを含む）は、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -63,7 +63,7 @@ Experience Platformのすべてのリソース（Flow Serviceに属するリソ�
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、Cassandraアカウントごとに1つのコネクタが必要です。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクタを作成する場合に使用できるので、 [!DNL Cassandra] アカウントごとに1つのコネクタが必要です。
 
 **API形式**
 
@@ -73,7 +73,7 @@ POST /connections
 
 **リクエスト**
 
-Cassandra接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 Cassandraの接続仕様IDはで `a8f4d393-1a6b-43f3-931f-91a16ed857f4`す。
+接続を作成するには、その [!DNL Cassandra] 一意の接続指定IDをPOSTリクエストの一部として指定する必要があります。 の接続指定ID [!DNL Cassandra] はです `a8f4d393-1a6b-43f3-931f-91a16ed857f4`。
 
 ```shell
 curl -X POST \
@@ -104,11 +104,11 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | CassandraサーバのIPアドレスまたはホスト名。 |
-| `auth.params.port` | Cassandraサーバーがクライアント接続をリッスンするために使用するTCPポート。 The default port is `9042`. |
-| `auth.params.username` | 認証用にCassandraサーバーに接続するために使用するユーザー名。 |
-| `auth.params.password` | Cassandraサーバーに接続して認証を行うためのパスワード。 |
-| `connectionSpec.id` | Cassandra接続仕様ID: `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
+| `auth.params.host` | サー [!DNL Cassandra] バーのIPアドレスまたはホスト名。 |
+| `auth.params.port` | サー [!DNL Cassandra] バーがクライアント接続をリッスンするために使用するTCPポートです。 The default port is `9042`. |
+| `auth.params.username` | 認証のためにサー [!DNL Cassandra] バーに接続するために使用するユーザー名です。 |
+| `auth.params.password` | 認証用に [!DNL Cassandra] サーバーに接続するためのパスワードです。 |
+| `connectionSpec.id` | 接続 [!DNL Cassandra] 仕様ID: `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
 **応答**
 
@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、Flow Service APIを使用してCassandra接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うことで、 [!DNL Cassandra] APIを使用して [!DNL Flow Service] 接続を作成し、接続の一意のID値を取得しました。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
