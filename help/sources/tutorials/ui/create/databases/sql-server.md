@@ -4,20 +4,20 @@ solution: Experience Platform
 title: UIでのMicrosoft SQL Serverソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
 
 
-# UIでのMicrosoft SQL Serverソースコネクタの作成
+# UIでの [!DNL Microsoft] SQL Serverソースコネクタの作成
 
 > [!NOTE]
-> Microsoft SQL Serverコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+> SQL Serverコネクタはベータ版です。 [!DNL Microsoft] ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してMicrosoft SQL Server（以下「SQL Server」と呼ばれる）ソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ユー [!DNL Microsoft][!DNL Platform] ザーインターフェイスを使用してSQL Server（以下「SQL Server」という）ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -32,7 +32,7 @@ SQL Serverベースの接続が既に存在する場合は、このドキュメ�
 
 ### 必要な資格情報の収集
 
-Platform上のSQL Serverに接続するには、次の接続プロパティを指定する必要があります。
+でSQL Serverに接続するに [!DNL Platform]は、次の接続プロパティを指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
@@ -42,25 +42,25 @@ SQL Serverの使い始めについて詳しくは、 [このドキュメント](
 
 ## SQL Serverアカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って新しい受信ベース接続を作成し、SQL ServerアカウントをPlatformにリンクできます。
+必要な資格情報を収集したら、次の手順に従って、SQL Serverアカウントをリンクする新しい受信ベース接続を作成でき [!DNL Platform]ます。
 
-「 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> 」にログインし、左のナビゲーションバーで「 **ソース** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 [ *カタログ* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+「 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 [ *[!UICONTROL カタログ]* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
 
-[ *Databases* ]カテゴリの下で[ **Microsoft SQL Server** ]を選択し、情報バーを画面の右側に表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、「 **接続ソース**」を選択します。
+[ *[!UICONTROL Databases]* ]カテゴリの下で[ **[!UICONTROL Microsoft SQL Server]** ]を選択し、情報バーを画面の右側に表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、「 **[!UICONTROL 接続ソース]**」を選択します。
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
-「 *Connect to Microsoft SQL Server* 」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+「 *[!UICONTROL Connect to Microsoft SQL Server]* 」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **新規アカウント**」を選択します。 表示される入力フォームで、基本接続に名前、オプションの説明、およびSQL Serverの資格情報を指定します。 終了したら、[ **接続** ]を選択し、新しいベース接続が確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、基本接続に名前、オプションの説明、およびSQL Serverの資格情報を指定します。 終了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいベース接続が確立されるまでの時間を許可します。
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するSQL Serverアカウントを選択し、「 **次へ** 」を選択して次に進みます。
+既存のアカウントに接続するには、接続するSQL Serverアカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
