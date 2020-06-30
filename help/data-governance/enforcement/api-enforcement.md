@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Policy Service APIを使用してデータ使用ポリシーを適用する
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '875'
 ht-degree: 3%
 
 ---
@@ -18,18 +18,18 @@ ht-degree: 3%
 
 >[!NOTE] デフォルトでは、ステータスがに設定されているポリシーのみが評価に参加 `ENABLED` できます。 ポリシーが評価に参加できるようにするには、リクエストパス `DRAFT``includeDraft=true` にクエリパラメーターを含める必要があります。
 
-このドキュメントでは、Policy Service APIを使用して様々なシナリオでのポリシー違反を確認する手順を説明します。
+このドキュメントでは、 [!DNL Policy Service] APIを使用して様々なシナリオでのポリシー違反をチェックする手順を説明します。
 
 ## はじめに
 
 このチュートリアルでは、DULEポリシーの適用に関連する次の主要概念を十分に理解している必要があります。
 
-* [Data Governance](../home.md): プラットフォームがデータ使用のコンプライアンスを強制するフレームワーク。
+* [Data Governance](../home.md): データ使用のコンプライアンスを [!DNL Platform] 適用するフレームワーク。
    * [データ使用ラベル](../labels/overview.md): データ使用ラベルは、データセット（および/またはそのデータセット内の個々のフィールド）に適用され、そのデータの使用方法に関する制限を指定します。
    * [データ使用ポリシー](../policies/overview.md): データ使用ポリシーは、特定のDULEラベルのセットに対して許可または制限されるマーケティングアクションの種類を記述するルールです。
-* [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-このチュートリアルを開始する前に、 [](../api/getting-started.md) 開発者ガイドを参照して、必要なヘッダーやAPI呼び出し例の読み取り方法など、DULE Policy Service APIの呼び出しを正しく行うために必要な重要な情報を確認してください。
+このチュートリアルを開始する前に、 [開発者ガイドを参照して](../api/getting-started.md) 、必要なヘッダーやAPI呼び出し例の読み方など、DULE [!DNL Policy Service] APIを正しく呼び出すために必要な重要な情報を確認してください。
 
 ## DULEラベルとマーケティングアクションを使用して評価
 
@@ -365,4 +365,4 @@ curl -X POST \
 
 このドキュメントを読むと、データセットまたは一連のDULEラベルに対するマーケティングアクションを実行する際のポリシー違反の確認が成功します。 API応答で返されるデータを使用して、エクスペリエンスアプリケーション内でプロトコルを設定し、ポリシー違反が発生した場合に適切にポリシー違反を適用することができます。
 
-リアルタイム顧客プロファイルでオーディエンスセグメントに対してデータ使用ポリシーを適用する手順については、次の [チュートリアルを参照してください](../../segmentation/tutorials/governance.md)。
+のオーディエンスセグメントに対してデータ使用ポリシーを適用する手順につ [!DNL Real-time Customer Profile]いては、次の [チュートリアルを参照してください](../../segmentation/tutorials/governance.md)。
