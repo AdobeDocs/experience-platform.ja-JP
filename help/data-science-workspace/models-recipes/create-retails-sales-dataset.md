@@ -4,36 +4,36 @@ solution: Experience Platform
 title: 小売売上スキーマとデータセットの作成
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 0%
+source-wordcount: '497'
+ht-degree: 1%
 
 ---
 
 
 # 小売売上スキーマとデータセットの作成
 
-このチュートリアルでは、他のすべての [!DNL Adobe Experience Platform] Data Science Workspaceチュートリアルに必要な前提条件とアセットについて説明します。 完了すると、Experience PlatformのIMS組織のメンバーが、小売販売のスキーマとデータセットを使用できるようになります。
+このチュートリアルでは、他のすべての [!DNL Adobe Experience Platform] チュートリアルで必要な前提条件とアセットについて説明し [!DNL Data Science Workspace] ます。 完了すると、お客様およびIMS組織のメンバーが、小売販売スキーマとデータセットを使用でき [!DNL Experience Platform]ます。
 
 ## はじめに
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
-- へのアクセス [!DNL Adobe Experience Platform]。 Experience PlatformのIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
-- エクスペリエンスプラットフォームAPI呼び出しを行うための認証。 このチュートリアルを正常に完了するには、 [Adobe Experience Platform APIの](../../tutorials/authentication.md) 認証とアクセスのチュートリアルを完了し、次の値を取得します。
+- へのアクセス [!DNL Adobe Experience Platform]。 でIMS組織にアクセスできない場合は、先に進む前にシステム管理者にお問い合わせ [!DNL Experience Platform]ください。
+- API呼び出しを行うための認証。 [!DNL Experience Platform] このチュートリアルを正常に完了するには、 [Authenticate and accessAdobe Experience PlatformAPIs](../../tutorials/authentication.md) （認証およびアクセスのAPI）チュートリアルを完了し、次の値を取得します。
    - 認証: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Client secret: `{CLIENT_SECRET}`
    - クライアント証明書： `{PRIVATE_KEY}`
-- 小 [売販売レシピ用のサンプルデータおよびソースファイル](../pre-built-recipes/retail-sales.md)。 このチュートリアルと他のData Science Workspaceチュートリアルに必要なアセットを、 [AdobeのパブリックGitリポジトリからダウンロードします](https://github.com/adobe/experience-platform-dsw-reference/)。
-- [Python >= 2.7](https://www.python.org/downloads/) 、および次のPythonパッケージ：
+- 小 [売販売レシピ用のサンプルデータおよびソースファイル](../pre-built-recipes/retail-sales.md)。 このチュートリアルと他の [!DNL Data Science Workspace] チュートリアルに必要なアセットを [Adobe Public Gitリポジトリからダウンロードします](https://github.com/adobe/experience-platform-dsw-reference/)。
+- [Python >= 2.7](https://www.python.org/downloads/) と次の [!DNL Python] パッケージ：
    - [パイプ](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
    - [ディクター](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - このチュートリアルで使用する次の概念について、実際に理解しておく必要があります。
-   - [エクスペリエンスデータモデル(XDM)](../../xdm/home.md)
+   - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
    - [スキーマ組成の基本](../../xdm/schema/field-dictionary.md)
 
 ## 小売売上スキーマとデータセットの作成
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ### ファイルの設定
 
-1. Experience Platformチュートリアルリソースパッケージ内で、ディレクトリに移動し、適切なテキストエディタ `bootstrap`ーを `config.yaml` 使用して開きます。
+1. チュートリアル [!DNL Experience Platform] リソースパッケージ内で、ディレクトリに移動し `bootstrap`、適切なテキストエディタ `config.yaml` ーを使用して開きます。
 2. この `Enterprise` セクションで、次の値を入力します。
 
    ```yaml
@@ -91,8 +91,8 @@ ht-degree: 0%
 
 ### ブートストラップスクリプトの実行
 
-1. ターミナルアプリケーションを開き、Experience Platform Tutorialリソースディレクトリに移動します。
-2. ディレクトリを現在の作業パスに設定し、次のコマンドを入力して `bootstrap``bootstrap.py` Pythonスクリプトを実行します。
+1. ターミナルアプリケーションを開き、チュートリアルリソースディレクトリに移動し [!DNL Experience Platform] ます。
+2. ディレクトリを現在の作業パスとして設定し、次のコマンドを入力して `bootstrap` スクリプ `bootstrap.py`[!DNL Python] トを実行します。
 
    ```bash
    python bootstrap.py
@@ -102,12 +102,12 @@ ht-degree: 0%
 
 ## 次の手順
 
-ブートストラップスクリプトが正常に完了すると、小売の販売の入出力スキーマーとデータセットをエクスペリエンスプラットフォームで表示できます。 詳しくは、 [プレビュースキーマデータのチュートリアル](./preview-schema-data.md)を参照してください。
+ブートストラップスクリプトが正常に完了すると、小売売上の入出力スキーマとデータセットを表示でき [!DNL Experience Platform]ます。 詳しくは、 [プレビュースキーマデータのチュートリアル](./preview-schema-data.md)を参照してください。
 
-また、提供されたブートストラップスクリプトを使用して、小売販売のサンプルデータをエクスペリエンスプラットフォームに正常に取り込みました。
+また、小売販売サンプルデータは、提供されたブートストラップスクリプトを [!DNL Experience Platform] 使用してに取り込まれました。
 
 取り込んだデータを引き続き使用するには：
 - [Jupyterノートブックを使用してデータを分析する](../jupyterlab/analyze-your-data.md)
    - Data Science WorkspaceのJupyterノートブックを使用して、データにアクセス、調査、視覚化、理解します。
 - [ソースファイルのレシピへのパッケージ化](./package-source-files-recipe.md)
-   - 読み込み可能なレシピファイルにソースファイルをパッケージ化して、独自のモデルをData Science Workspaceに取り込む方法を学ぶには、このチュートリアルに従います。
+   - 読み込み可能なレシピファイルにソースファイルをパッケージ化して、独自のモデルをに取り込む方法 [!DNL Data Science Workspace] を学ぶには、このチュートリアルに従ってください。
