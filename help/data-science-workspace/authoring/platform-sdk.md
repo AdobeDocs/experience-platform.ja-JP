@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: プラットフォームSDKガイド
+title: PlatformSDKガイド
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 5%
+source-wordcount: '447'
+ht-degree: 6%
 
 ---
 
 
-# プラットフォームSDKガイド
+# [!DNL Platform] SDKガイド
 
 このチュートリアルでは、PythonとRの両方で新しいPython `data_access_sdk_python` に変換する方法 `platform_sdk` について説明します。このチュートリアルでは、次の操作に関する情報を提供します。
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## データの基本的な読み取り {#basic-reading-of-data}
 
-新しいプラットフォームSDKでは、最大読み取りサイズは32 GBで、最大読み取り時間は10分です。
+新しい [!DNL Platform] SDKでは、最大読み取りサイズは32 GBで、最大読み取り時間は10分です。
 
 読み取り時間が長すぎる場合は、次のいずれかのフィルターオプションを使用してみてください。
 
@@ -144,7 +144,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-新しいプラットフォームSDKは、次の操作をサポートします。
+新しい [!DNL Platform] SDKは、次の操作をサポートします。
 
 | 操作 | 関数 |
 | --------- | -------- |
@@ -154,7 +154,7 @@ df2
 | より小さい (`<`) | `lt()` |
 | 次よりも小さいか等しい (`<=`) | `le()` |
 | And (`&`) | `And()` |
-| または (`|`) | `Or()` |
+| Or (`|`) | `Or()` |
 
 ## 選択した列でフィルタ {#filter-by-selected-columns}
 
@@ -217,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## 次の手順
 
-データローダーを設定すると、 `platform_sdk` データは準備が完了し、データセットとデータセットに分割され `train` ま `val` す。 データの準備と機能のエンジニアリングについては、JupyterLabノートブックを使用したレシピの作成に関するチュートリアルの [データ準備と機能のエンジニアリングに関する節を参照してください](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) 。
+データローダーを設定すると、 `platform_sdk` データは準備が完了し、データがデータセット `train` と `val` データセットに分割されます。 データの準備と機能のエンジニアリングについては、ノート [ブックを使用したレシピの作成に関するチュートリアルの](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering)[!DNL JupyterLab] データ準備と機能のエンジニアリングに関する節を参照してください。
