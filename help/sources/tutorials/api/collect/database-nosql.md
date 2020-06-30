@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタとAPIを使用して、サードパーティのデータベースからデータを収集する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4a831a0e72ac614bb4646ea3aa5f511984e5aa07
+source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1522'
 ht-degree: 2%
 
 ---
@@ -14,38 +14,38 @@ ht-degree: 2%
 
 # ソースコネクタとAPIを使用して、サードパーティのデータベースからデータを収集する
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、サードパーティのデータベースからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
+このチュートリアルでは、サードパーティのデータベースからデータを取得し、ソースコネクタとAPIを使用してデータを取り込む手順 [!DNL Platform] について説明します。
 
 ## はじめに
 
-このチュートリアルでは、サードパーティのデータベースへの有効な接続と、プラットフォームに組み込むファイル（ファイルのパスと構造を含む）に関する情報が必要です。 この情報がない場合は、このチュートリアルを試す前に、Flow Service APIを使用したデータベースの [調査に関するチュートリアルを参照してください](../explore/database-nosql.md) 。
+このチュートリアルでは、サードパーティのデータベースへの有効な接続と、に含めるファイルに関する情報 [!DNL Platform] （ファイルのパスと構造を含む）が必要です。 この情報がない場合は、このチュートリアルを試す前に、Flow Service APIを使用したデータベースの [調査に関するチュートリアルを参照してください](../explore/database-nosql.md) 。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+また、このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   * [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+* [Experience Data Model(XDM)System](../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+   * [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
    * [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
-* [カタログサービス](../../../../catalog/home.md): カタログは、エクスペリエンスプラットフォーム内のデータの場所と系列の記録システムです。
-* [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md): Batch Ingestion APIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
-* [サンドボックス](../../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [カタログサービス](../../../../catalog/home.md): カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
+* [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md): Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
+* [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 次の節では、Flow Service APIを使用してデータベースまたはNoSQLシステムに正常に接続するために知っておく必要がある追加情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platformのすべてのリソース（フローサービスに属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 
 ## アドホックXDMクラスとスキーマの作成
 
-ソースコネクタを介して外部データをプラットフォームに取り込むには、生のソースデータ用にアドホックXDMクラスとスキーマを作成する必要があります。
+外部データをソースコネクタを [!DNL Platform] 介してに取り込むには、生のソースデータ用にアドホックXDMクラスとスキーマを作成する必要があります。
 
 アドホッククラスとスキーマを作成するには、 [アドホックスキーマチュートリアルで概要を説明している手順に従い](../../../../xdm/tutorials/ad-hoc.md)ます。 アドホッククラスを作成する場合、ソースデータ内のすべてのフィールドをリクエスト本文内で記述する必要があります。
 
@@ -63,7 +63,7 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 
 ## ソース接続の作成 {#source}
 
-アドホックXDMスキーマを作成した場合、Flow Service APIへのPOST要求を使用してソース接続を作成できるようになりました。 ソース接続は、ベース接続、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
+アドホックXDMスキーマを作成した場合、APIへのPOSTリクエストを使用してソース接続を作成できるようになりました [!DNL Flow Service] 。 ソース接続は、ベース接続、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
 
 **API形式**
 
@@ -122,9 +122,9 @@ curl -X POST \
 
 ## ターゲットXDMスキーマの作成 {#target}
 
-以前の手順では、ソースデータを構造化するためにアドホックXDMスキーマを作成しました。 Platformでソースデータを使用するには、必要に応じてソースデータを構造化するためのターゲットスキーマも作成する必要があります。 次に、このターゲットスキーマを使用して、ソースデータが含まれるプラットフォームデータセットを作成します。 このターゲットXDMスキーマは、XDM Individualプロファイルクラスも拡張します。
+以前の手順では、ソースデータを構造化するためにアドホックXDMスキーマを作成しました。 でソースデータを使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマも作成する必要があり [!DNL Platform]ます。 次に、このターゲットスキーマを使用して、ソースデータが含まれる [!DNL Platform] データセットを作成します。 このターゲットXDMスキーマは、 [!DNL XDM Individual Profile] クラスを拡張します。
 
-ターゲットXDMスキーマは、 [スキーマレジストリAPIに対してPOST要求を実行することで作成できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 Experience Platformでユーザーインターフェイスを使用したい場合は、 [スキーマエディターのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md) （英語のみ）に、スキーマエディターで同様の操作を実行するための手順を順を追って説明しています。
+ターゲットXDMスキーマは、 [スキーマレジストリAPIに対してPOST要求を実行することで作成できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 でユーザインターフェイスを使用する場合は、「 [!DNL Experience Platform]スキーマエディタ [](../../../../xdm/tutorials/create-schema-ui.md) 」チュートリアルで、スキーマエディタで同様の操作を実行するための手順を順を追って説明します。
 
 **API形式**
 
@@ -134,7 +134,7 @@ POST /tenant/schemas
 
 **リクエスト**
 
-次のリクエスト例は、XDM Individualプロファイルクラスを拡張するXDMスキーマを作成します。
+次のリクエスト例は、XDM [!DNL Individual Profile] クラスを拡張するXDMスキーマを作成します。
 
 ```shell
 curl -X POST \
@@ -269,7 +269,7 @@ curl -X POST \
 
 ## データセットベースの接続の作成
 
-外部データをプラットフォームに取り込むには、まずExperience Platformのデータセットベース接続を取得する必要があります。
+外部データをに取り込むに [!DNL Platform]は、まずデータセットベースの [!DNL Experience Platform] 接続を取得する必要があります。
 
 データセットベースの接続を作成するには、「 [データセットベースの接続のチュートリアル](../create-dataset-base-connection.md)」に示されている手順に従います。
 
@@ -277,7 +277,7 @@ curl -X POST \
 
 ## ターゲット接続の作成
 
-これで、データセットベースの接続、ターゲットスキーマ、ターゲットデータセットに対して一意のIDを割り当てることができます。 これらの識別子を使用して、Flow Service APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
+これで、データセットベースの接続、ターゲットスキーマ、ターゲットデータセットに対して一意のIDを割り当てることができます。 これらの識別子を使用して、 [!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
 
 **API形式**
 
@@ -338,7 +338,7 @@ curl -X POST \
 
 ## マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、要求ペイロード内で定義されたデータマッピングを使用して、Conversion Service APIに対するPOST要求を実行することで達成されます。
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、要求ペイロード内で定義されたデータマッピングを使用して、 [!DNL Conversion Service] APIに対してPOST要求を実行することで達成されます。
 
 **API形式**
 
@@ -468,7 +468,7 @@ curl -X POST \
 
 ## データフロー仕様の取得 {#specs}
 
-データフローは、ソースからデータを収集し、プラットフォームに取り込む役割を持ちます。 データフローを作成するには、最初にFlow Service APIに対してGET要求を実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を持ちます。
+データフローは、ソースからデータを収集し、それらをに取り込む役割を持ち [!DNL Platform]ます。 データフローを作成するには、まず、 [!DNL Flow Service] APIに対してGET要求を実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を持ちます。
 
 **API形式**
 
@@ -488,7 +488,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、データベースまたはNoSQLシステムからプラットフォームにデータを取り込むためのデータフロー仕様の詳細を返します。 このIDは、次の手順で新しいデータフローを作成する際に必要です。
+正常な応答は、データベースまたはNoSQLシステムからのデータの取り込みを担当するデータフロー仕様の詳細を返し [!DNL Platform]ます。 このIDは、次の手順で新しいデータフローを作成する際に必要です。
 
 ```json
 {
@@ -615,7 +615,7 @@ curl -X GET \
 データ収集に向けた最後の手順は、データフローを作成することです。 この時点で、次の必須値を準備する必要があります。
 
 * [ソース接続ID](#source)
-* [ターゲット接続ID](#target)
+* [Target接続ID](#target)
 * [マッピング ID](#mapping)
 * [データフロー仕様ID](#specs)
 
@@ -685,7 +685,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、サードパーティのデータベースからデータをスケジュールに基づいて収集するソースコネクタを作成しました。 受信データは、リアルタイム顧客プロファイルやデータサイエンスワークスペースなどのダウンストリームプラットフォームサービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従って、サードパーティのデータベースからデータをスケジュールに基づいて収集するソースコネクタを作成しました。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science Workspaceの概要](../../../../data-science-workspace/home.md)
@@ -698,18 +698,18 @@ curl -X POST \
 
 | コネクタ名 | 接続仕様ID |
 | -------------- | --------------- |
-| Amazon Redshift | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
-| Azure HDInsightsのApache Hive | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
-| Azure HDInsightsでのApache Spark | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
-| Azure Data Explorer | `0479cc14-7651-4354-b233-7480606c2ac3` |
-| Azure Synapse Analytics | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
-| Azureテーブルストレージ | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
-| CouchBase | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
-| Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
-| IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
-| MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
-| Microsoft SQL Server | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
-| MySQL | `26d738e0-8963-47ea-aadf-c60de735468a` |
-| Oracle | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
-| フェニックス | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
-| PostgreSQL | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
+| [!DNL Amazon Redshift] | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| [!DNL Apache Hive] on [!DNL Azure HDInsights] | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| [!DNL Apache Spark] on [!DNL Azure HDInsights] | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
+| [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| [!DNL CouchBase] | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
+| [!DNL Google BigQuery] | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| [!DNL IBM DB2] | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
+| [!DNL MariaDB] | `000eb99-cd47-43f3-827c-43caf170f015` |
+| [!DNL Microsoft SQL Server] | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
+| [!DNL MySQL] | `26d738e0-8963-47ea-aadf-c60de735468a` |
+| [!DNL Oracle] | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
+| [!DNL Phoenix] | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| [!DNL PostgreSQL] | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
