@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Jupyterノートブックを使用してレシピを作成する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '2330'
+source-wordcount: '2292'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Jupyterノートブックを使用してレシピを作成する
 
-このチュートリアルでは、2つの主なセクションについて説明します。 まず、JupterLabノートブック内のテンプレートを使用して機械学習モデルを作成します。 次に、JupyterLab内でノートブックをレシピワークフローに合わせて使用し、Data Science Workspace内でレシピを作成します。
+このチュートリアルでは、2つの主なセクションについて説明します。 まず、内のテンプレートを使用して機械学習モデルを作成し [!DNL JupyterLab Notebook]ます。 次に、内でノートブックをレシピワークフローに導き、内でレシピ [!DNL JupyterLab] を作成し [!DNL Data Science Workspace]ます。
 
 ## 導入された概念：
 
@@ -23,20 +23,20 @@ ht-degree: 0%
 - **トレーニング：** トレーニングは、ラベル付きのデータからパターンや洞察を学ぶプロセスです。
 - **スコア：** スコアリングは、トレーニングを受けたモデルを使用して、データからインサイトを生成するプロセスです。
 
-## JupyterLabノートブック環境の使用を開始する
+## ノート [!DNL JupyterLab] ブック環境の使用を開始する
 
-レシピを一から作成するには、Data Science Workspace内で行います。 開始するには、 [Adobe Experience Platform](https://platform.adobe.com) に移動し、左側の「 **[!UICONTROL ノートブック]** 」タブをクリックします。 JupterLabランチャーからレシピビルダテンプレートを選択して、新しいノートブックを作成します。
+レシピを最初から作成する場合は、内で作成し [!DNL Data Science Workspace]ます。 開始するには、 [Adobe Experience Platformに移動し](https://platform.adobe.com) 、左側の「 **[!UICONTROL ノートブック]** 」タブをクリックします。 新しいノートブックを作成するには、からレシピビルダーテンプレートを選択し [!DNL JupyterLab Launcher]ます。
 
-Recipe Builderノートブックを使用すると、ノートブック内でトレーニングとスコアリングの実行を実行できます。 これにより、トレーニングデータとスコアリングデータの実験を実行する間に、 `train()` および `score()` 方法を柔軟に変更できます。 トレーニングとスコアの出力結果に満足したら、Data Science Workspaceで使用するレシピを作成し、Recipe Builderノートブックに組み込まれているレシピ機能を使用します。
+レ [!UICONTROL シピビルダー] ・ノートブックを使用すると、トレーニングとスコアリングの実行をノートブック内で実行できます。 これにより、トレーニングデータとスコアリングデータの実験を実行する間に、 `train()` および `score()` 方法を柔軟に変更できます。 トレーニングとスコアの出力結果に満足したら、Recipe Builderノートブックに組み込まれているレシピ機能にノートブックを [!DNL Data Science Workspace] 使用する際に使用するレシピを作成できます。
 
 >[!NOTE]
->Recipe Builderノートブックは、すべてのファイル形式での作業をサポートしていますが、現在のところ、レシピの作成機能はPythonのみをサポートしています。
+>Recipe Builderノートブックは、すべてのファイル形式での作業をサポートしていますが、現在のところ、レシピの作成機能でサポートされているのは、そのみで [!DNL Python]す。
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 ランチャーからRecipe Builderノートブックをクリックすると、タブにノートブックが開きます。 ノートブックで使用されるテンプレートは、Python小売売上予測レシピで、 [このパブリック・リポジトリにもあります。](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-ツールバーには、 **[!UICONTROL トレイン]**、 **[!UICONTROL スコア]** 、 **[!UICONTROL レシピの]**&#x200B;作成の3つのアクションがあります。 これらのアイコンは、Recipe Builderノートブックにのみ表示されます。 これらの操作に関する詳細は、ノートブックでレシピ [を作成した後のトレーニングとスコアリングのセクション](#training-and-scoring) で説明します。
+ツールバーには、 **[!UICONTROL トレイン]**、 **[!UICONTROL スコア]** 、 **[!UICONTROL レシピの]**&#x200B;作成の3つのアクションがあります。 これらのアイコンは、 [!UICONTROL レシピビルダー] ・ノートブックにのみ表示されます。 これらの操作に関する詳細は、ノートブックでレシピ [を作成した後のトレーニングとスコアリングのセクション](#training-and-scoring) で説明します。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -50,7 +50,7 @@ Recipe Builderノートブックを使用すると、ノートブック内でト
 
 ## Recipe Builderノートブックの概要
 
-JupyterLabノートブック環境の基本を理解したら、機械学習モデルのレシピを構成するファイルを調べ始めます。 ここで説明するファイルは次のとおりです。
+これで、 [!DNL JupyterLab] ノートブック環境の基本事項がわかったので、機械学習モデルのレシピを構成するファイルを調べることができます。 ここで説明するファイルは次のとおりです。
 
 - [要件ファイル](#requirements-file)
 - [設定ファイル](#configuration-files)
@@ -90,7 +90,7 @@ data_access_sdk_python
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-同じ情報は、 [Adobe Experience Platform](https://platform.adobe.com/) の「 **[スキーマ](https://platform.adobe.com/schema)**」タブと「**[データセット](https://platform.adobe.com/dataset/overview)** 」タブにもあります。
+同じ情報は、「 [スキーマ](https://platform.adobe.com/) 」タブと「 **[データセット](https://platform.adobe.com/schema)****[](https://platform.adobe.com/dataset/overview)** 」タブのAdobe Experience Platformにもあります。
 
 デフォルトでは、データにアクセスする際に次の設定パラメーターが設定されます。
 
@@ -102,24 +102,24 @@ data_access_sdk_python
 ## トレーニングデータローダー {#training-data-loader}
 
 トレーニングデータローダーの目的は、機械学習モデルの作成に使用するデータをインスタンス化することです。 通常、トレーニングデータローダーが実行するタスクは2つあります。
-- プラットフォームからのデータの読み込み
+- データの読み込み元 [!DNL Platform]
 - データの準備と機能のエンジニアリング
 
 以下の2つのセクションでは、データの読み込みとデータの準備について詳しく説明します。
 
 ### データの読み込み {#loading-data}
 
-この手順では、 [pandasのデータフレームを使用し](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)ます。 データは、プラットフォームSDK( [!DNL Adobe Experience Platform] )を使用してファイルから、またはパンダや`platform_sdk`関数を使用して外部ソースから読み込むこ `read_csv()``read_json()` とができます。
+この手順では、 [pandasのデータフレームを使用し](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)ます。 データは、 [!DNL Adobe Experience Platform] SDK ( [!DNL Platform] )を使用してファイルから、またはパンダや関数を使用して外部ソースから読み込むこ`platform_sdk`とができ `read_csv()``read_json()` ます。
 
-- [プラットフォームSDK](#platform-sdk)
+- [!DNL Platform SDK](#platform-sdk)
 - [外部ソース](#external-sources)
 
 >[!NOTE]
 >Recipe Builderノートブックでは、データは `platform_sdk` Data Loaderを使用して読み込まれます。
 
-### プラットフォームSDK {#platform-sdk}
+### [!DNL Platform] SDK {#platform-sdk}
 
-Data Loaderの使用に関する詳しいチュートリアルについては、『 `platform_sdk` Platform SDK [](../authoring/platform-sdk.md)』ガイドを参照してください。 このチュートリアルでは、認証の構築、データの基本的な読み取り、およびデータの基本的な書き込みに関する情報を提供します。
+Data Loaderの使用に関する詳しいチュートリアルについては、『 `platform_sdk` PlatformSDK [](../authoring/platform-sdk.md)』ガイドを参照してください。 このチュートリアルでは、認証の構築、データの基本的な読み取り、およびデータの基本的な書き込みに関する情報を提供します。
 
 ### 外部ソース {#external-sources}
 
@@ -144,7 +144,7 @@ df = pd.read_json(data)
 ### From Data Access SDK（非推奨）
 
 >[!CAUTION]
-> `data_access_sdk_python` の使用が推奨されなくなりました。 [data loaderの使用に関するガイドについては、「Convert Data Access code to Platform SDK](../authoring/platform-sdk.md)`platform_sdk` 」を参照してください。
+> `data_access_sdk_python` の使用が推奨されなくなりました。 [data loaderの使用に関するガイドについては、「Convert Data Access code toPlatformSDK](../authoring/platform-sdk.md)`platform_sdk` 」を参照してください。
 
 ユーザーは、データアクセスSDKを使用してデータを読み込むことができます。 ライブラリは、ページの上部に次の行を含めて読み込むことができます。
 
@@ -162,7 +162,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->「 [設定ファイル」セクションで説明したように](#configuration-files)、Experience Platformのデータにアクセスする場合は、次の設定パラメーターが設定されます。
+>「 [設定ファイル](#configuration-files)」セクションで説明したように [!DNL Experience Platform]、のデータにアクセスする際に設定される設定パラメーターは次のとおりです。
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -203,7 +203,7 @@ dataframe.drop('date', axis=1, inplace=True)
 - 将来 `weeklySales` と過去の売り上げ値を得るオフセット
 - データを日付別に分割し、データセット `train``val` に分割
 
-最初に、 `week` および `year` 列が作成され、元の `date` 列がPython [datetimeに変換されます](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html)。 週と年の値は、datetimeオブジェクトから抽出されます。
+最初に、 `week` および `year` 列が作成され、元の `date` 列が [!DNL Python] datetimeに変換されます [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html)。 週と年の値は、datetimeオブジェクトから抽出されます。
 
 次に、 `storeType` は3種類の店舗タイプ(`A`、 `B`、および `C`)を表す3つの列に変換されます。 それぞれにboolean値が含まれ、trueが設定さ `storeType` れます。 列が削除さ `storeType` れます。
 
@@ -408,9 +408,9 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 ### Data Saverファイル {#data-saver-file}
 
-スコアリングのテスト中に予測を保存する `datasaver.py``save()` 関数がファイルに含まれています。 この `save()` 関数は、予測を受け取り、エクスペリエンスプラットフォームカタログAPIを使用して、 `scoringResultsDataSetId``scoring.conf` ファイルで指定したデータにデータを書き込みます。
+スコアリングのテスト中に予測を保存する `datasaver.py``save()` 関数がファイルに含まれています。 この `save()` 関数は、予測と使用 [!DNL Experience Platform Catalog] APIを取得し、 `scoringResultsDataSetId``scoring.conf` ファイルで指定したデータにデータを書き込みます。
 
-小売売上のサンプルレシピの例を次に示します。 ライブラリを使用してプラットフォームにデータを書き込むことに注意して `DataSetWriter` ください。
+小売売上のサンプルレシピの例を次に示します。 Platformにデータを書き込む際に `DataSetWriter` ライブラリを使用することに注意してください。
 
 ```PYTHON
 from data_access_sdk_python.writer import DataSetWriter
@@ -453,11 +453,11 @@ def save(configProperties, prediction):
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-ボタンを押すと、レシピ名の入力を求められます。 この名前は、プラットフォームで作成された実際のレシピを表します。
+ボタンを押すと、レシピ名の入力を求められます。 この名前は、に作成された実際のレシピを表し [!DNL Platform]ます。
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-「 **[!UICONTROL OK]** 」を押すと、 [Adobe Experience Platformの新しいレシピに移動できます](https://platform.adobe.com/)。 [ **[!UICONTROL 表示レシピ]** ]ボタンをクリックすると、[ **[!UICONTROL MLモデル]** ]の[ **[!UICONTROL レシピ]タブに移動できます。]**
+「 **[!UICONTROL OK]** 」を押すと、 [Adobe Experience Platform上の新しいレシピに移動できます](https://platform.adobe.com/)。 [ **[!UICONTROL 表示レシピ]** ]ボタンをクリックすると、[ **[!UICONTROL MLモデル]** ]の[ **[!UICONTROL レシピ]タブに移動できます。]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -473,9 +473,9 @@ def save(configProperties, prediction):
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルを完了すると、Recipe Builderノートブックで機械学習モデルの作成方法を学習できます。 また、ノートブック内でノートブックをレシピワークフローに合わせて使用し、Data Science Workspace内でレシピを作成する方法も学習しました。
+このチュートリアルを完了すると、Recipe Builderノートブックで機械学習モデルの作成方法を学習できます。 また、ノートブック内でレシピワークフローを使用して、内でレシピを作成する方法も学習し [!DNL Data Science Workspace]ました。
 
-Data Science Workspace内のリソースの使い方の学習を続けるには、「Data Science Workspace recipes and models」ドロップダウンを参照してください。
+内のリソースの使い方の学習を続けるに [!DNL Data Science Workspace]は、[ [!DNL Data Science Workspace] レシピとモデル]ドロップダウンを参照してください。
 
 ## その他のリソース {#additional-resources}
 
