@@ -1,51 +1,51 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Flow Service APIを使用して、Experience Platformデータセットベースの接続を作成する
+title: Flow Service APIを使用してExperience Platformデータセットベースの接続を作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: e409b287d6965ede4030829287bd3e405e9d709b
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '690'
 ht-degree: 1%
 
 ---
 
 
-# Flow Service APIを使用して、Experience Platformデータセットベースの接続を作成する
+# APIを使用した [!DNL Experience Platform][!DNL Flow Service] データセットベースの接続の作成
 
-フローサービスは、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-サードパーティのソースのデータをプラットフォームに接続するには、まずデータセットベースの接続を確立する必要があります。
+サードパーティのソースのデータをソースに接続するに [!DNL Platform]は、まずデータセットベースの接続を確立する必要があります。
 
-このチュートリアルでは、Flow Service APIを使用して、データセットベースの接続を作成する手順を順を追って説明します。
+このチュートリアルでは、 [!DNL Flow Service] APIを使用して、データセットベースの接続を作成する手順を順を追って説明します。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-   * [スキーマ構成の基本](../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+* [Experience Data Model(XDM)System](../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+   * [スキーマ構成の基本](../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
    * [スキーマレジストリ開発ガイド](../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
-* [カタログサービス](../../../catalog/home.md): カタログは、エクスペリエンスプラットフォーム内のデータの場所と系列の記録システムです。
-* [バッチインジェスト](../../../ingestion/batch-ingestion/overview.md): バッチ取り込みAPIを使用すると、データをバッチファイルとしてエクスペリエンスプラットフォームに取り込むことができます。
-* [サンドボックス](../../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [カタログサービス](../../../catalog/home.md): カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
+* [バッチインジェスト](../../../ingestion/batch-ingestion/overview.md): バッチ取り込みAPIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
+* [サンドボックス](../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してData Lakeに正常に接続するために必要な追加情報については、以下の節で説明します。
+次の節では、 [!DNL Flow Service] APIを使用してData Lakeに正常に接続するために知っておく必要がある追加情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platformのすべてのリソース（フローサービスに属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Experience Platformのすべてのリソース（フローサービスに属す�
 
 ## 接続仕様の検索
 
-データセットベースの接続を作成する最初の手順は、Flow Service内から一連の接続仕様を取得することです。
+データセットベースの接続を作成する最初の手順は、内から一連の接続仕様を取得すること [!DNL Flow Service]です。
 
 **API形式**
 
@@ -182,7 +182,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、Flow Service APIを使用してデータセットベースの接続を作成し、接続の一意のID値を取得したことになります。 この基本接続を使用して、ターゲット接続を作成できます。 次のチュートリアルでは、使用するソースコネクタのカテゴリに応じて、ターゲット接続を作成する手順を説明します。
+このチュートリアルに従うと、 [!DNL Flow Service] APIを使用したデータセットベースの接続を作成し、接続の一意のID値を取得したことになります。 この基本接続を使用して、ターゲット接続を作成できます。 次のチュートリアルでは、使用するソースコネクタのカテゴリに応じて、ターゲット接続を作成する手順を説明します。
 
 * [クラウドストレージ](./collect/cloud-storage.md)
 * [CRM](./collect/crm.md)
