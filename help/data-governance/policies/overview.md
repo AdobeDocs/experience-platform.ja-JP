@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用ポリシーの概要
 topic: policies
 translation-type: tm+mt
-source-git-commit: 92092620a7ba9129eef4bde852b1e0afc6612d74
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '979'
 ht-degree: 1%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # データ使用ポリシーの概要
 
-データ使用ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実装する必要があります。 データ使用ポリシーとは、Experience Platform内のデータに対して実行を許可（制限）されるマーケティングアクションの種類を記述するルールです。
+データ使用ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実装する必要があります。 Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 このドキュメントでは、データ使用ポリシーの概要を説明し、UIまたはAPIでポリシーを操作するための詳細なドキュメントへのリンクを示します。
 
 ## マーケティングアクション {#marketing-actions}
 
-**マーケティングアクション**( **マーケティングの使用例とも呼ばれます**)は、データ管理フレームワークの観点から見ると、Experience Platformデータの消費者が行うことのできるアクションで、組織でデータの使用を制限したいと考えています。 そのため、データ使用ポリシーは次の方法で定義します。
+**マーケティングアクション**( **マーケティングの使用例**)は、データ管理フレームワークの観点から見ると、データ消費者が行うことのできるアクションです。 [!DNL Experience Platform] データの使用を制限したい場合には、そのアクションに対して、組織が行います。 そのため、データ使用ポリシーは次の方法で定義します。
 
 1. 特定のマーケティングアクション
 2. アクションの実行が制限されているデータ使用ラベル
 
-マーケティングアクションの例としては、データセットをサードパーティのサービスにエクスポートしたい場合などが考えられます。 特定の種類のデータ(Personally Identifiable Information(PII)など)はエクスポートできないというポリシーが設定されている場合、「I」ラベル(Identity data)を含むデータセットをエクスポートしようとすると、Policy Serviceからデータ使用ポリシーに違反したことを伝える応答が返されます。
+マーケティングアクションの例としては、データセットをサードパーティのサービスにエクスポートしたい場合などが考えられます。 特定の種類のデータ(PII(Personally Identifial Information)など)はエクスポートできないというポリシーが設定されている場合、「I」ラベル(Identity data)を含むデータセットをエクスポートしようとすると、データ使用ポリシーに違反したことを伝える応答が返されます。 [!DNL Policy Service]
 
 >[!NOTE] マーケティングアクション自体は、データの使用を制限しません。 これらのアクションをポリシー違反で評価するには、有効なデータ使用ポリシーに含める必要があります。
 
