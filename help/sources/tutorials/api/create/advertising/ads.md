@@ -4,60 +4,60 @@ solution: Experience Platform
 title: Flow Service APIを使用してGoogle AdWordsコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
+source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 1%
+source-wordcount: '598'
+ht-degree: 2%
 
 ---
 
 
-# Flow Service APIを使用してGoogle AdWordsコネクタを作成する
+# APIを使用して [!DNL Google AdWords][!DNL Flow Service] コネクタを作成する
 
 >[!NOTE]
->Google AdWordsコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>コネクタ [!DNL Google AdWords] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-フローサービスは、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集および一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle AdWordsに接続する手順を順を追って説明します。
+このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順を順を追って説明 [!DNL Experience Platform] し [!DNL Google AdWords]ます。
 
 ## はじめに
 
 このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [ソース](../../../../home.md): Experience Platformを使用すると、Platformサービスを使用して、様々なソースからデータを取り込み、データの構造、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Flow Service APIを使用してAdに正常に接続するために知っておく必要がある追加情報については、以下の節に説明します。
+以下の節では、 [!DNL Flow Service] APIを使用して広告に正しく接続するために知っておく必要がある追加情報について説明します。
 
 ### 必要な資格情報の収集
 
-フローサービスがAdWordsと接続するには、次の接続プロパティの値を指定する必要があります。
+AdWordsと接続 [!DNL Flow Service] するには、次の接続プロパティの値を指定する必要があります。
 
 | **Credential** | **説明** |
 | -------------- | --------------- |
 | 顧客ID | AdWordsアカウントのクライアント顧客ID。 |
 | 開発者トークン | マネージャーアカウントに関連付けられている開発者トークン。 |
-| 更新トークン | AdWordsへのアクセスを承認するためにGoogleから取得した更新トークン。 |
-| クライアントID | 更新トークンの取得に使用されるGoogleアプリケーションのクライアントID。 |
-| クライアントシークレット | 更新トークンの取得に使用されるGoogleアプリケーションのクライアントシークレット。 |
-| 接続指定ID | 接続を作成するために必要な一意の識別子。 Google AdWordsの接続仕様IDは次のとおりです。 `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| 更新トークン | AdWordsへのアクセスを許可す [!DNL Google] るために取得した更新トークン。 |
+| クライアントID | 更新トークンの取得に使用される [!DNL Google] アプリケーションのクライアントID。 |
+| クライアントシークレット | 更新トークンの取得に使用される [!DNL Google] アプリケーションのクライアントシークレット。 |
+| 接続指定ID | 接続を作成するために必要な一意の識別子。 の接続指定ID [!DNL Google AdWords] は次のとおりです。 `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 これらの値の詳細については、この [Google AdWordsドキュメントを参照してください](https://developers.google.com/adwords/api/docs/guides/authentication)。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../../../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-フローサービスに属するリソースを含む、Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -67,7 +67,7 @@ PlatformAPIを呼び出すには、まず [認証チュートリアルを完了�
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、Google AdWordsアカウントごとに必要な接続は1つだけです。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクタを作成する場合に使用できるので、 [!DNL Google AdWords] アカウントごとに必要な接続は1つだけです。
 
 **API形式**
 
@@ -111,12 +111,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.clientCustomerID` | AdWordsアカウントのクライアント顧客ID。 |
-| `auth.params.developerToken` | AdWordsアカウントの開発者トークン。 |
-| `auth.params.refreshToken` | AdWordsアカウントの更新トークン。 |
-| `auth.params.clientID` | AdWordsアカウントのクライアントID。 |
-| `auth.params.clientSecret` | AdWordsアカウントのクライアントシークレット。 |
-| `connectionSpec.id` | Google AdWords接続仕様ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
+| `auth.params.clientCustomerID` | アカウントのクライアント顧客ID [!DNL AdWords] 。 |
+| `auth.params.developerToken` | アカウントの開発者トー [!DNL AdWords] クン。 |
+| `auth.params.refreshToken` | アカウントの更新トークン [!DNL AdWords] 。 |
+| `auth.params.clientID` | アカウントのクライアントID [!DNL AdWords] 。 |
+| `auth.params.clientSecret` | アカウントのクライアントシークレット [!DNL AdWords] 。 |
+| `connectionSpec.id` | 接続 [!DNL Google AdWords] 指定ID: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 **応答**
 
@@ -131,4 +131,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、Flow Service APIを使用してGoogle AdWords接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service APIを使用して広告システムを [調査する方法を学ぶ際に、次のチュートリアルで使用できます](../../explore/advertising.md)。
+このチュートリアルに従うことで、 [!DNL Google AdWords] APIを使用して [!DNL Flow Service] 接続を作成し、接続の一意のID値を取得しました。 このIDは、Flow Service APIを使用して広告システムを [調査する方法を学ぶ際に、次のチュートリアルで使用できます](../../explore/advertising.md)。
