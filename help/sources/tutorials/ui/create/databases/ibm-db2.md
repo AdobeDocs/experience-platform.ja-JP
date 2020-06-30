@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのIBM DB2ソースコネクターの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 0%
 > [!NOTE]
 > IBM DB2 Connectorはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Platformユーザーインターフェイスを使用してIBM DB2（以下「DB2」と呼ばれる）ソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ユー [!DNL Platform] ザーインターフェイスを使用してIBM DB2（以下「DB2」と呼ばれる）ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
 このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
@@ -33,7 +33,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ### 必要な資格情報の収集
 
-Flow Service APIを使用してDB2に正常に接続するために必要な追加情報については、以下の節で説明します。
+APIを使用してDB2に正常に接続するために必要な追加情報については、以下の節で説明し [!DNL Flow Service] ます。
 
 | Credential | 説明 |
 | ---------- | ----------- |
@@ -46,7 +46,7 @@ Flow Service APIを使用してDB2に正常に接続するために必要な追�
 
 ## IBM DB2アカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って新しいDB2アカウントを作成し、Platformに接続します。
+必要な資格情報を収集したら、次の手順に従って、接続先の新しいDB2アカウントを作成でき [!DNL Platform]ます。
 
 「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには既存のアカウントの数と関連するデータセットフローが表示されます。
 
