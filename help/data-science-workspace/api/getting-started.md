@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Senesi Machine Learning API開発者ガイド
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 4f74acdc41d5049c1aa8eb3dfcef4e9d75c785ca
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 2%
+source-wordcount: '196'
+ht-degree: 3%
 
 ---
 
 
-# Senesi Machine Learning API開発者ガイド
+# [!DNL Sensei Machine Learning] API開発者ガイド
 
-Senesie Machine Learning APIは、データ科学者が、アルゴリズムによる搭乗から実験まで、サービスの展開まで、機械学習サービスを整理、管理するメカニズムを提供します。
+この [!DNL Sensei Machine Learning] APIは、データ科学者が機械学習サービスを、アルゴリズムのオンボーディングから実験まで、サービスの展開まで、整理および管理するためのメカニズムを提供します。
 
 この開発者ガイドでは、 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Senesi Machine Learning APIを使用する開始を支援する手順を説明し、様々なData Science Workspaceリソースに対してCRUD操作を実行するAPI呼び出しの例を示します。
 
@@ -26,11 +26,11 @@ APIを呼び出すために次のリクエストヘッダーにアクセスす�
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
