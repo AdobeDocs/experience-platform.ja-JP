@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform ECID
+title: Adobe Experience PlatformECID
 topic: overview
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '162'
 ht-degree: 15%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 15%
 
 # ECIDの概要
 
-Experience Cloud Identifier(ECID)は、ID管理へのアクセスを提供するクライアント側のモジュールで、主に次の3つの機能を備えています。
+ECID [!DNL Experience Cloud Identifier] (ECID)は、ID管理へのアクセスを提供するクライアント側モジュールで、次の3つの主な機能を提供します。
 
 - 各訪問者の特定
 - パートナーとの同期の提供
 - オフラインまたは他のIDとグラフに接続する一対のリンクをフィード
 
-オンラインユーザーを識別するには、サイトまたはモバイルアプリにECIDを実装する必要があります。ECIDは、Adobe Experience Platformのすべてのソリューションで訪問者を識別する汎用の永続的なIDを提供します。
+オンラインユーザーを識別するには、サイトまたはモバイルアプリにECIDを実装する必要があります。ECIDは、Adobe Experience Platform内のすべてのソリューションにわたって訪問者を識別する、汎用の永続的なIDを提供します。
 
 Webサイトの実装を使用する場合は、 [ここでリソースを調べます](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html)。
 
@@ -28,5 +28,5 @@ Webサイトの実装を使用する場合は、 [ここでリソースを調べ
 
 これらのツールの導入は、 [Adobe Launchを使用する場合に、簡単で管理が容易になる場合があります](https://docs.adobe.com/content/help/ja-JP/launch/using/overview.html)。
 
-また、GDPR準拠のためのECIDの使用については、 [プライバシー・サービスのドキュメント](../privacy-service/identity-data.md) を参照してください。
+また、GDPRへの準拠にECIDを使用する場合は、 [Privacy Serviceのドキュメント](../privacy-service/identity-data.md) を参照してください。
 
