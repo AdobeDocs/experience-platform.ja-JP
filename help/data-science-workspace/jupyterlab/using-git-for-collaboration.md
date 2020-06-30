@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Gitを使用したJupyterLabでのコラボレーション
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '248'
 ht-degree: 1%
 
 ---
 
 
-# Gitを使用したJupyterLabでのコラボレーション
+# 使用に関する共同作業 [!DNL JupyterLab] [!DNL Git]
 
-Gitは、ソフトウェア開発中にソースコードの変更を追跡するための分散バージョン管理システムです。 Gitは、Data Science Workspace JupterLab環境内に事前にインストールされています。
+[!DNL Git] は、ソフトウェア開発時にソースコードの変更を追跡する分散バージョン管理システムです。 Gitが [!DNL Data Science Workspace JupyterLab] 環境ー内にプリインストールされています。
 
 ## 前提条件
 
 >[!NOTE]
 > 使用するGitサーバーは、インターネット経由でアクセスできる必要があります。
 
-Data Science Workspace JupyterLab環境はホスト環境で、会社のファイアウォール内に配置されていません。したがって、接続するGitサーバはパブリックインターネットからアクセスできる必要があります。 これは、GitHub上のパブリックまたはプライベートのリポジトリ、 [](https://github.com/) または自分自身をホストすることに決定したGitサーバーの別のインスタンスである可能性があります。
+この [!DNL Data Science Workspace JupyterLab] 環境はホスト環境で、会社のファイアウォール内に展開されていないため、接続先のGitサーバーはパブリックインターネットからアクセスできる必要があります。 これは、GitHub上のパブリックまたはプライベートのリポジトリ [、または自分自身をホストすることに決定した](https://github.com/)[!DNL Git] サーバーの別のインスタンスである可能性があります。
 
-## GitをData Science Workspace JupyterLabノートブック環境に接続
+## 環境 [!DNL Git] に接続し [!DNL Data Science Workspace JupyterLab Notebooks] ます
 
-JupyterLabs Notebooks [!DNL Adobe Experience Platform][](https://platform.adobe.com/notebooks/jupyterLab) 環境を起動し、移動して開始します。
+環境を起動 [!DNL Adobe Experience Platform] し、 [!DNL JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) 開始に移動する。
 
-「JupyterLab」内で、「 **[!UICONTROL File]** 」を選択し、「 **[!UICONTROL New]**」の上にカーソルを置きます。 表示されるドロップダウンで[ **[!UICONTROL ターミナル]**]を選択します。
+内 [!DNL JupyterLab]で、「 **[!UICONTROL ファイル]** 」を選択し、「 **[!UICONTROL 新規」の上にマウスポインターを置きます]**。 表示されるドロップダウンで[ **[!UICONTROL ターミナル]**]を選択します。
 
 ![JupyterLab Nav](../images/jupyterlab/tutorials/open-terminal.png)
 
@@ -55,4 +55,4 @@ JupyterLabs Notebooks [!DNL Adobe Experience Platform][](https://platform.adobe.
 
 ## 次の手順
 
-リポジトリの複製が完了したら、通常はローカルコンピューター上で行うのと同じようにGitを使用して、ノートブック上の他のユーザーと共同作業できます。 JupyterLabで実行できる操作の詳細については、『JupyterLabユーザガイド [』を参照してください](./overview.md)。
+リポジトリの複製が完了したら、通常はローカルコンピューター上で行うのと同じようにGitを使用して、ノートブック上の他のユーザーと共同作業できます。 内で実行できる操作の詳細については、を参照し [!DNL JupyterLab]てくだ [!DNL JupyterLab user guide](./overview.md)さい。
