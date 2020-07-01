@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform APIの基本事項
+title: Adobe Experience PlatformAPIの基本事項
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c94f065a5d56ac495dd2d541531aaec94c187612
+source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 2%
+source-wordcount: '425'
+ht-degree: 3%
 
 ---
 
 
-# Adobe Experience Platform APIの基本事項
+# Adobe Experience PlatformAPIの基本事項
 
-Adobe Experience Platform APIは、JSONベースのプラットフォームリソースを効果的に管理するために理解する必要がある、基礎となる複数のテクノロジーと構文を採用しています。 このドキュメントでは、これらのテクノロジーの概要を簡単に説明し、詳細については外部ドキュメントへのリンクを提供します。
+Adobe Experience PlatformAPIは、JSONベースのリソースを効果的に管理するために理解する必要がある、いくつかの基礎となるテクノロジーと構文を採用してい [!DNL Platform] ます。 このドキュメントでは、これらのテクノロジーの概要を簡単に説明し、詳細については外部ドキュメントへのリンクを提供します。
 
 ## JSONポインタ {#json-pointer}
 
-JSONポインターは、JSONドキュメント内の特定の値を識別するための標準化された文字列構文([RFC 6901](https://tools.ietf.org/html/rfc6901))です。 JSONポインターは、オブジェクトのキーまたは配列のインデックスを指定する、 `/` 文字で区切られたトークンの文字列です。トークンは文字列または数値です。 JSONポインタ文字列は、このドキュメントで後述するように、多くのPlatform APIのPATCH操作で使用されます。 JSONポインターについて詳しくは、 [JSONポインターの概要に関するドキュメントを参照してください](https://rapidjson.org/md_doc_pointer.html)。
+JSONポインターは、JSONドキュメント内の特定の値を識別するための標準化された文字列構文([RFC 6901](https://tools.ietf.org/html/rfc6901))です。 JSONポインターは、オブジェクトのキーまたは配列のインデックスを指定する、 `/` 文字で区切られたトークンの文字列です。トークンは文字列または数値です。 JSONポインタ文字列は、このドキュメントで後述するように、多くの [!DNL Platform] APIのPATCH操作で使用されます。 JSONポインターについて詳しくは、 [JSONポインターの概要に関するドキュメントを参照してください](https://rapidjson.org/md_doc_pointer.html)。
 
 ### JSONスキーマオブジェクトの例
 
@@ -81,11 +81,11 @@ JSONポインターは、JSONドキュメント内の特定の値を識別する
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!N注意]
->エクスペリエンスデータモデル(XDM)記述子 `xdm:sourceProperty` のおよび `xdm:destinationProperty` 属性を処理する場合、すべての `properties` キーをJSONポインター文字列から **** 除外する必要があります。 詳しくは、 [記述子に関する『スキーマレジストリAPI開発者ガイド](../xdm/api/descriptors.md) 』を参照してください。
+>( `xdm:sourceProperty` XDM)記述子の `xdm:destinationProperty` および [!DNL Experience Data Model] 属性を処理する場合、すべての `properties` キーはJSONポインタ文字列から **** 除外する必要があります。 詳しくは、 [記述子に関する『スキーマレジストリAPI開発者ガイド](../xdm/api/descriptors.md) 』を参照してください。
 
 ## JSONパッチ
 
-プラットフォームAPIには、要求ペイロードにJSONパッチオブジェクトを受け入れる多くのPATCH操作があります。 JSONパッチは、JSONドキュメントの変更を記述する標準形式([RFC 6902](https://tools.ietf.org/html/rfc6902))です。 これにより、リクエスト本文でドキュメント全体を送信する必要なく、JSONに部分的な更新を定義できます。
+APIには、要求ペイロードにJSONパッチオブジェクトを受け入れる多くのPATCH操作が [!DNL Platform] あります。 JSONパッチは、JSONドキュメントの変更を記述する標準形式([RFC 6902](https://tools.ietf.org/html/rfc6902))です。 これにより、リクエスト本文でドキュメント全体を送信する必要なく、JSONに部分的な更新を定義できます。
 
 ### JSONパッチオブジェクトの例
 
@@ -96,7 +96,7 @@ JSONポインターは、JSONドキュメント内の特定の値を識別する
 }
 ```
 
-* `op`: パッチ操作のタイプ。 JSONパッチは複数の異なる操作タイプをサポートしますが、プラットフォームAPIのすべてのPATCH操作が各操作タイプと互換性があるわけではありません。 次の操作タイプを使用できます。
+* `op`: パッチ操作のタイプ。 JSONパッチは複数の異なる操作タイプをサポートしますが、APIのすべてのPATCH操作が各操作タイプと互換性があるとは限りま [!DNL Platform] せん。 次の操作タイプを使用できます。
    * `add`
    * `remove`
    * `replace`
@@ -113,4 +113,4 @@ JSONスキーマは、JSONデータの構造を記述し、検証するために
 
 ## 次の手順
 
-このドキュメントでは、エクスペリエンスプラットフォームのJSONベースのリソースの管理に関連するテクノロジーと構文の一部を紹介しました。 プラットフォームAPIの操作に関する詳細（よくある質問へのベストプラクティスや回答など）については、 [プラットフォームトラブルシューティングガイドを参照してください](troubleshooting.md)。
+このドキュメントでは、のJSONベースのリソースの管理に関連するテクノロジーと構文の一部を紹介し [!DNL Experience Platform]ました。 よくある質問へのベストプラクティスや回答を含む、 [!DNL Platform] APIの操作について詳しくは、 [Platformのトラブルシューティングガイドを参照してください](troubleshooting.md)。
