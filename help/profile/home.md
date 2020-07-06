@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルの概要
 topic: guide
 translation-type: tm+mt
-source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
+source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ Adobe Experience Platformを使用すると、顧客がブランドとどこで�
 
 ### プロファイルと記録データ
 
-プロファイルとは、対象、組織、または個人を表したもので、レコードデータとも呼ばれます。 例えば、製品のプロファイルにはSKUと説明が含まれ、個人のプロファイルには名、姓、電子メールアドレスなどの情報が含まれます。 Experience Platformを使用して、プロファイルをカスタマイズし、ビジネスに関連するデータのタイプを使用できます。 標準のExperience Data Model(XDM)Individualプロファイルクラスは、顧客レコードデータを記述する際にスキーマを構築し、Platformサービス間の多くのやり取りにデータ統合を提供するのに最適なクラスです。 Experience Platformでのスキーマの操作に関する詳細は、 [XDMシステムの概要を読んでください](../xdm/home.md)。
+プロファイルとは、対象、組織、または個人を表したもので、レコードデータとも呼ばれます。 例えば、ある商品のプロファイルにはSKUと説明が含まれていても、その人のプロファイルには名、姓、電子メールアドレスなどの情報が含まれています。 Experience Platformを使用して、プロファイルをカスタマイズし、ビジネスに関連するデータのタイプを使用できます。 標準のExperience Data Model(XDM)Individualプロファイルクラスは、顧客レコードデータを記述する際にスキーマを構築し、Platformサービス間の多くのやり取りにデータ統合を提供するのに最適なクラスです。 Experience Platformでのスキーマの操作に関する詳細は、 [XDMシステムの概要を読んでください](../xdm/home.md)。
 
 ### 時系列イベント
 
@@ -54,7 +54,7 @@ Adobe Experience Platformセグメントサービスは、個々の顧客に対�
 
 複数のソースからデータを統合し、それを組み合わせて個々の顧客の完全な表示を確認する場合、マージポリシーは、Platformがデータの優先順位付け方法とどのデータを組み合わせて統合表示を作成するかを決定するために使用するルールです。 RESTful APIまたはユーザーインターフェイスを使用して、新しい結合ポリシーを作成し、既存のポリシーを管理し、組織のデフォルトの結合ポリシーを設定できます。 Real-time Customer Endpoint APIを使用した結合ポリシーの操作について詳しくは、 [結合ポリシーエンドポイントガイドを参照してください](api/merge-policies.md)。 Experience PlatformUIを使用してマージポリシーを操作するには、 [マージポリシーのユーザーガイドを参照してください](ui/merge-policies.md)。
 
-## (Alpha)計算済み属性の設定
+### (Alpha)計算済み属性の設定
 
 >[!IMPORTANT]
 >このドキュメントで概要を説明する計算済みの属性機能は、alphaです。 ドキュメントと機能は変更される場合があります。
@@ -80,7 +80,7 @@ Platformは、レコードと時系列のデータをプロファイルに送信
 >[!N注意]
 >Analyticsクラウド、マーケティングクラウド、Advertising Cloudなどのアドビのソリューションで収集されたデータは、Experience Platformに流れ込み、プロファイルに取り込まれます。
 
-### プロファイルストリーミング取り込み指標
+### プロファイル取り込み指標
 
 観察性インサイトを使用すると、主要指標をAdobe Experience Platformに表示できます。 様々なPlatform機能に関するPlatform使用統計とパフォーマンスインジケーターに加えて、プロファイルに関する特定の指標があり、受信要求率、取り込み成功率、取り込まれた記録サイズなどを把握できます。 詳細については、「 [観察性インサイトの概要](../observability/home.md)」を読み、プロファイル指標の完全なリストについては、 [利用可能な指標に関するドキュメントを参照してください](../observability/metrics.md)。
 
