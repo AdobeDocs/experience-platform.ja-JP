@@ -4,7 +4,7 @@ solution: Experience Platform
 title: JupterLabユーザガイド
 topic: Overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3647'
 ht-degree: 12%
@@ -20,7 +20,7 @@ ht-degree: 12%
 
 ## [!DNL JupyterLab] on [!DNL Experience Platform]
 
-Experience PlatformのJupyterLab統合には、アーキテクチャの変更、設計上の考慮事項、カスタマイズされたノートブック拡張機能、事前にインストールされたライブラリ、Adobeテーマのインターフェイスが含まれています。
+Experience PlatformのJupyterLab統合には、アーキテクチャの変更、設計上の考慮事項、カスタマイズされたノートブック拡張機能、事前にインストールされたライブラリ、Adobe主題のインターフェイスが含まれます。
 
 次のリストは、Platformに関するJupterLabに固有の機能の一部を示しています。
 
@@ -33,7 +33,9 @@ Experience PlatformのJupyterLab統合には、アーキテクチャの変更、
 | **開発ライブラリ** | では、 [!DNL Experience Platform]、R、PySpark用に事前にインストールされたライブラリを [!DNL JupyterLab][!DNL Python]提供します。 サポートされているライブラリの完全なリストについては、 [付録](#supported-libraries) を参照してください。 |
 | **ライブラリコントローラー** | プレインストールされたライブラリがニーズに合わない場合は、PythonとR用に追加のライブラリをインストールし、個別のコンテナに一時的に保存して、データの整合性を維持し、データを安全に保つこ [!DNL Platform] とができます。 詳細は [カーネルの節を参照してください](#kernels) 。 |
 
->[!NOTE] 追加のライブラリは、そのライブラリがインストールされたセッションでのみ使用できます。 新しいセッションを開始する際に必要な追加のライブラリを再インストールする必要があります。
+>[!NOTE]
+>
+>追加のライブラリは、そのライブラリがインストールされたセッションでのみ使用できます。 新しいセッションを開始する際に必要な追加のライブラリを再インストールする必要があります。
 
 ## 他の [!DNL Platform] サービスとの統合 {#service-integration}
 
@@ -44,7 +46,9 @@ Experience PlatformのJupyterLab統合には、アーキテクチャの変更、
 * **[!DNL Sensei ML Framework]:**データのトレーニングとスコア機能を備えたモデル開発と、1回のクリックでレシピを作成。
 * **[!DNL Experience Data Model (XDM)]:**標準化と相互運用性は、Adobe Experience Platformの背後にある重要な概念です。[アドビが推進するExperience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)は、カスタマーエクスペリエンスデータを標準化し、カスタマーエクスペリエンス管理のスキーマを定義する取り組みです。
 
->[!NOTE] 上の一部の [!DNL Platform] サービス統合 [!DNL JupyterLab] は、特定のカーネルに限定されます。 詳細は [カーネルの節を参照して](#kernels) ください。
+>[!NOTE]
+>
+>上の一部の [!DNL Platform] サービス統合 [!DNL JupyterLab] は、特定のカーネルに限定されます。 詳細は [カーネルの節を参照して](#kernels) ください。
 
 ## 主な機能と一般的な操作
 
@@ -316,7 +320,7 @@ Experience PlatformのJupyterLab統合には、アーキテクチャの変更、
 | SDKインタラクティブモード（秒） | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
 | SDKバッチモード（秒） | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
 
-### [!DNL Python]/R内のデータセットから読み取る
+### / [!DNL Python]R内のデータセットから読み取る
 
 [!DNL Python] また、Rノートブックでは、データセットにアクセスする際にデータをページネーションできます。 ページネーションの有無に関係なくデータを読み取るサンプルコードを以下に示します。
 
@@ -484,7 +488,7 @@ SELECT {table_columns}
 FROM {table_name}
 ```
 
-### [!DNL Python]/RでのExperienceEventデータのフィルタ
+### / [!DNL Python]RでのExperienceEventデータのフィルタ
 
 ま [!DNL Python] たはRノートブックのExperienceEventデータセットにアクセスしてフィルタリングするには、論理演算子を使用して、データセット(`{DATASET_ID}`)のIDと、特定の時間範囲を定義するフィルタールールを指定する必要があります。 時間範囲を定義すると、指定したページ番号は無視され、データセット全体が考慮されます。
 
@@ -598,6 +602,8 @@ timedf.show()
 ```
 
 >[!TIP]
+>
+>
 >Scalaでは、を使用して、内部から値 `sys.env()` を宣言して返すことができ `option`ます。 これにより、変数が1回しか使用されないことがわかっている場合に、変数を定義する必要がなくなります。 次の例は、上記の例 `val userToken` から取り出し、インライン内で代替として宣言 `option` します。
 > 
 ```scala
