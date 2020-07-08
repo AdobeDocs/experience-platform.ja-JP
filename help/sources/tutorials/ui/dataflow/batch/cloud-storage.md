@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでのクラウドストレージバッチコネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1184'
 ht-degree: 1%
@@ -48,7 +48,9 @@ ht-degree: 1%
 
 プレビューーウィンドウが設定されたら、「 **[!UICONTROL 次へ]** 」をクリックして、選択したフォルダー内のすべてのファイルをアップロードできます。 特定のファイルにアップロードする場合は、「 **[!UICONTROL 次へ]**」をクリックする前に、リストからそのファイルを選択します。
 
->[!NOTE] サポートされるファイル形式は、CSV、JSON、Parketです。 JSONファイルとParketファイルは、XDMに準拠している必要があります。
+>[!NOTE]
+>
+>サポートされるファイル形式は、CSV、JSON、Parketです。 JSONファイルとParketファイルは、XDMに準拠している必要があります。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-next.png)
 
