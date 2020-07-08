@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セグメントジョブ
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '657'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 このガイドで使用されるAPIエンドポイントは、セグメント化APIの一部です。 先に進む前に、 [セグメント化開発ガイドを参照してください](./getting-started.md)。
 
-特に、セグメント化開発ガイドの「 [はじめに](./getting-started.md#getting-started) 」の節には、関連トピックへのリンク、ドキュメント内のサンプルAPI呼び出しを読むためのガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
+特に、『セグメント化開発ガイド』の [「はじめに](./getting-started.md#getting-started) 」の節には、関連トピックへのリンク、ドキュメント内のサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを成功させるために必要なヘッダーに関する重要な情報が含まれています。
 
 ## セグメントジョブのリストの取得
 
@@ -63,7 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 正常な応答は、指定したIMS組織のセグメントジョブのリストを持つHTTPステータス200をJSONとして返します。 次の応答は、IMS組織の成功したすべてのセグメントジョブのリストを返します。
 
->[!NOTE] 次の応答は領域に対して切り捨てられ、最初に返されたジョブのみを表示します。
+>[!NOTE]
+>
+>次の応答は領域に対して切り捨てられ、最初に返されたジョブのみを表示します。
 
 ```json
 {
@@ -361,7 +363,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 正常な応答が返されると、HTTPステータス207が返され、要求されたセグメントジョブが返されます。
 
->[!NOTE] 次の応答は領域に対して切り捨てられ、各セグメントジョブの詳細の一部のみが表示されました。 完全な回答には、リクエストされたセグメントジョブの完全な詳細がリストされます。
+>[!NOTE]
+>
+>次の応答は領域に対して切り捨てられ、各セグメントジョブの詳細の一部のみが表示されました。 完全な回答には、リクエストされたセグメントジョブの完全な詳細がリストされます。
 
 ```json
 {
