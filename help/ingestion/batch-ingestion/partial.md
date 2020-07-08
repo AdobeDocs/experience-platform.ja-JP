@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform部分的なバッチ取り込みの概要
+title: Adobe Experience Platformの部分バッチ取り込みの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 2%
@@ -15,46 +15,50 @@ ht-degree: 2%
 
 # 部分的なバッチインジェスト（ベータ版）
 
-部分的なバッチ取り込みとは、エラーを含むデータを特定のしきい値まで取り込む機能です。 この機能を使用すると、ユーザーは正しいデータをすべてAdobe Experience Platformに正しく取り込むと同時に、誤ったデータをすべて個別にバッチ処理し、その理由を詳細にまとめることができます。
+部分的なバッチ取り込みとは、エラーを含むデータを特定のしきい値まで取り込む機能です。 この機能を使用すると、正しいデータをすべてAdobe Experience Platformに取り込むと同時に、誤ったデータをすべて個別にバッチ処理し、その理由を詳細にまとめることができます。
 
 このドキュメントでは、部分的なバッチ取り込みを管理するためのチュートリアルを提供します。
 
 また、このチュートリアルの [付録](#appendix) 、部分的なバッチ取り込みエラータイプのリファレンスも紹介します。
 
->[!IMPORTANT] この機能はAPIを使用した場合にのみ存在します。 この機能にアクセスするには、チームにお問い合わせください。
+>[!IMPORTANT]
+>
+>この機能はAPIを使用した場合にのみ存在します。 この機能にアクセスするには、チームにお問い合わせください。
 
 ## はじめに
 
 このチュートリアルでは、部分的なバッチ取り込みに関連する様々なAdobe Experience Platformサービスに関する実用的な知識が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [バッチインジェスト](./overview.md): プラットフォームが、CSVやParketなどのデータファイルからデータを取り込んで保存する方法。
-- [Experience Data Model(XDM)](../../xdm/home.md): プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [バッチインジェスト](./overview.md): PlatformがCSVやParketなどのデータファイルのデータを取り込んで保存する方法。
+- [Experience Data Model(XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 
-以下の節では、プラットフォームAPIの呼び出しを正常に行うために知っておく必要がある追加情報について説明します。
+以下の節では、PlatformAPIを正しく呼び出すために知る必要がある追加情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ## APIでの部分的なバッチ取り込みのデータセットの有効化
 
 <!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
-部分的な取り込みが有効な場合は、新しいデータセットを作成したり、既存のデータセットを変更したりできます。
+部分的な取り込みを有効にして、新しいデータセットを作成したり、既存のデータセットを変更したりできます。
 
 新しいデータセットを作成するには、「データセットの [作成」チュートリアルの手順に従い](../../catalog/api/create-dataset.md)ます。 「データセットの *作成* 」の手順に進んだら、リクエスト本文に次のフィールドを追加します。
 
@@ -78,7 +82,9 @@ ht-degree: 2%
 
 <!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>[!NOTE]
+>
+>This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
 To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
