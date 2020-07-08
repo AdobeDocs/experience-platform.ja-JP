@@ -4,7 +4,7 @@ solution: Experience Platform
 title: メタデータコマンド
 topic: metadata
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 データセットのメタデータについては、現在、次のPSQLコマンドによるクエリがサポートされています。
 
->[!NOTE] 次に示す各コマンドでは、大文字と小文字が区別されます。
+>[!NOTE]
+>
+>次に示す各コマンドでは、大文字と小文字が区別されます。
 
 | コマンド | 説明 |
 |------- | ------------|
@@ -41,5 +43,5 @@ ht-degree: 0%
 
 と開始するすべてのコマンドを組み合わせ `\d` ることができます。 例えば、すべてのテーブル、シーケンス、スキーマ `\dtsn` のリストを表示するように指定できます。 `\d` 表示されるすべての表、表示、マテリアライズド・表示、シーケンスが表示されます。
 
-上記のコマンドの詳細は、 [postgresql.orgのドキュメントを参照してください](https://www.postgresql.org/docs/10/app-psql.html)。 ただし、PostgreSQLのドキュメントに示すすべてのオプションがExperience Platformでサポートされているわけではありません。
+上記のコマンドの詳細は、 [postgresql.orgのドキュメントを参照してください](https://www.postgresql.org/docs/10/app-psql.html)。 ただし、PostgreSQLのドキュメントに示されているすべてのオプションがExperience Platformでサポートされているわけではありません。
 
