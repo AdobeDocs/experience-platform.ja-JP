@@ -4,7 +4,7 @@ solution: Experience Platform
 title: パッケージ化されたレシピの読み込み(UI)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -35,7 +35,9 @@ ht-degree: 0%
 
 の各レシピインスタンス [!DNL Data Science Workspace] には一連の設定が伴い、特定の使用事例に合わせてレシピインスタンスを調整します。 設定ファイルは、このレシピインスタンスを使用して作成されたモデルのデフォルトのトレーニングおよびスコアリング動作を定義します。
 
->[!NOTE] 設定ファイルは、レシピとケースに固有のものです。
+>[!NOTE]
+>
+>設定ファイルは、レシピとケースに固有のものです。
 
 以下に、小売売上のレシピのデフォルトのトレーニングとスコアリングの動作を示す設定ファイルの例を示します。
 
