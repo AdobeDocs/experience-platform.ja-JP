@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Batch Ingestの概要
+title: Adobe Experience Platformバッチ取り込みの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 2%
@@ -24,7 +24,7 @@ Batch Ingestion APIを使用すると、データをバッチファイルとし�
 
 ## APIの使用
 
-Data Ingestion APIを使用すると、次の3つの基本的な手順でデータをバッチ（1つのユニットとして取り込む1つ以上のファイルで構成されるデータの単位）としてExperience Platformに取り込むことができます。
+Data Ingestion APIを使用すると、次の3つの基本的な手順でデータをバッチ（1つのユニットとして取り込まれる1つ以上のファイルで構成されるデータの単位）としてExperience Platformに取り込むことができます。
 
 1. 新しいバッチを作成します。
 2. データのXDMスキーマに一致する指定したデータセットにファイルをアップロードします。
@@ -47,21 +47,23 @@ Data Ingestion APIを使用すると、次の3つの基本的な手順でデー�
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -126,7 +128,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ファイルは、 **小さいファイルアップロードAPIを使用してアップロードできます**。 ただし、ファイルが大きすぎて、ゲートウェイの制限を超えている場合（拡張タイムアウト、本文のサイズの要求の超過、その他の制限など）は、 **Large File Upload API**（大きいファイルアップロードAPI）に切り替えることができます。 このAPIは、ファイルをチャンク単位でアップロードし、 **Large File Upload Complete API** 呼び出しを使用してデータをまとめます。
 
->[!NOTE] 次の例では、パーケット [ファイル形式を使用し](https://parquet.apache.org/documentation/latest/) ます。 JSONファイル形式の使用例については、『 [batch ingestion developer guide](./api-overview.md)』を参照してください。
+>[!NOTE]
+>
+>次の例では、パーケット [ファイル形式を使用し](https://parquet.apache.org/documentation/latest/) ます。 JSONファイル形式の使用例については、『 [batch ingestion developer guide](./api-overview.md)』を参照してください。
 
 ### 小さいファイルのアップロード
 
