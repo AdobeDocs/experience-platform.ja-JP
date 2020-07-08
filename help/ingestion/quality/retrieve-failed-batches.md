@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 失敗したバッチの取得
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 1%
@@ -14,34 +14,36 @@ ht-degree: 1%
 
 # APIを使用した失敗したバッチの取得
 
-Adobe Experience Platformには、データのアップロードと取り込みに2つの方法が用意されています。 バッチ取り込みを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングエンドポイントを使用してリアルタイムにデータをプラットフォームに挿入できます。
+Adobe Experience Platformには、データのアップロードと取り込みに2つの方法が用意されています。 バッチ取り込みを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングエンドポイントを使用してリアルタイムにデータをPlatformに挿入できます。
 
 このチュートリアルでは、Data Ingest APIを使用して、失敗したバッチに関する情報を取得する手順を説明します。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-- [Experience Data Model(XDM)System](../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-- [データ取り込み](../home.md): データをエクスペリエンスプラットフォームに送信する方法。
+- [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [データ取り込み](../home.md): データをExperience Platformに送信する方法。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-スキーマレジストリに属するリソースを含む、エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されます。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+スキーマレジストリに属するリソースを含むExperience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
