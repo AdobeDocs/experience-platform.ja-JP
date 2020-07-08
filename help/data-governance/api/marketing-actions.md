@@ -4,7 +4,7 @@ solution: Experience Platform
 title: マーケティングアクション
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 1%
@@ -154,7 +154,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 後続のリクエストでは、リクエストペイロード `name` 内の値がAPI呼び出し内の値と同じであるこ `{marketingActionName}` とに注意してください。 読み取り専用でシステム生成 `id` のポリシーとは異なり、マーケティングアクションを作成するには、作成時にマーケティングアクションの __ 目的の名前を指定する必要があります。
 
->[!NOTE] この呼び出しでPUTを指定し `{marketingActionName}` ないと、エンドポイントに対して直接PUTを実行できないので、405エラー(Method Not Allowed)が発生し `/marketingActions/custom` ます。 また、ペイロード `name` 内のがパス内のと一致しない場合 `{marketingActionName}` は、400エラー(Bad Request)が発生します。
+>[!NOTE]
+>
+>この呼び出しでPUTを指定し `{marketingActionName}` ないと、エンドポイントに対して直接PUTを実行できないので、405エラー(Method Not Allowed)が発生し `/marketingActions/custom` ます。 また、ペイロード `name` 内のがパス内のと一致しない場合 `{marketingActionName}` は、400エラー(Bad Request)が発生します。
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +199,9 @@ curl -X PUT \
 
 削除するマーケティングアクションのにDELETEリクエストを送信することで、マーケティングアクション `{marketingActionName}` を削除できます。
 
->[!NOTE] 既存のポリシーで参照されているマーケティングアクションは削除できません。 そうすると、400エラー（NGリクエスト）が発生し、削除しようとしているマーケティングアクションへの参照を含むポリシー（またはポリシー）の( `id` または複数のID)が含まれるエラーメッセージが表示されます。
+>[!NOTE]
+>
+>既存のポリシーで参照されているマーケティングアクションは削除できません。 そうすると、400エラー（NGリクエスト）が発生し、削除しようとしているマーケティングアクションへの参照を含むポリシー（またはポリシー）の( `id` または複数のID)が含まれるエラーメッセージが表示されます。
 
 **API形式**
 
