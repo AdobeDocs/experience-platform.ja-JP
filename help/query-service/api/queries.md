@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービス開発ガイド
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 2%
@@ -196,7 +196,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 }
 ```
 
->[!NOTE] の値を使用して、作成したクエリ `_links.cancel` を [キャンセルできます](#cancel-a-query)。
+>[!NOTE]
+>
+>の値を使用して、作成したクエリ `_links.cancel` を [キャンセルできます](#cancel-a-query)。
 
 ### IDによるクエリの取得
 
@@ -265,7 +267,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 }
 ```
 
->[!NOTE] の値を使用して、作成したクエリ `_links.cancel` を [キャンセルできます](#cancel-a-query)。
+>[!NOTE]
+>
+>の値を使用して、作成したクエリ `_links.cancel` を [キャンセルできます](#cancel-a-query)。
 
 ### クエリのキャンセル
 
