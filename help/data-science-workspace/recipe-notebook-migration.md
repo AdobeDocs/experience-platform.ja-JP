@@ -4,7 +4,7 @@ solution: Experience Platform
 title: レシピとノートブックの移行ガイド
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 0%
@@ -324,7 +324,9 @@ APIを使ってレシピを作るには、PySpark用のパッケージレシピ�
 
 PySpark 2.4がに導入され [!DNL JupyterLab Notebooks]ると、PySpark 2.4を搭載した新しい [!DNL Python] ノートブックは、PySpark 3カーネルではなく [!DNL Python] 3カーネルを使うようになります。 つまり、PySpark 2.3上で動作する既存のコードはPySpark 2.4ではサポートされていません。
 
->[!IMPORTANT] PySpark 2.3は非推奨となり、以降のリリースで削除されるように設定されています。 既存の例はすべてPySpark 2.4の例に置き換えるように設定されています。
+>[!IMPORTANT]
+>
+>PySpark 2.3は非推奨となり、以降のリリースで削除されるように設定されています。 既存の例はすべてPySpark 2.4の例に置き換えるように設定されています。
 
 既存のPySpark 3 ([!DNL Spark][!DNL Spark] 2.3)ノートを2.4に変換するには、次の例に従います。
 
@@ -458,7 +460,9 @@ PySpark 3 ([!DNL Spark] 2.4)では、とを定義する必要はありま `org_i
 | ------- | ----------- |
 | [%dataset](#magic) | 3カーネルでのデータアクセスに関するカスタムマジック [!DNL Python] 。 |
 
->[!TIP] —modeは、またはに設定でき `interactive` ま `batch`す。 —modeのデフォルトはで `interactive`す。 大量のデータを読み取る場合は、 `batch` モードを使用することをお勧めします。
+>[!TIP]
+>
+>—modeは、またはに設定でき `interactive` ま `batch`す。 —modeのデフォルトはで `interactive`す。 大量のデータを読み取る場合は、 `batch` モードを使用することをお勧めします。
 
 ## ローカルデータフレームの作成
 
@@ -511,7 +515,9 @@ sample_df = df.sample(fraction)
    </tr>
 </table>
 
->[!TIP] また、オプションのシードサンプル(boolean withReplacement、重複分数、長いシードなど)を指定することもできます。
+>[!TIP]
+>
+>また、オプションのシードサンプル(boolean withReplacement、重複分数、長いシードなど)を指定することもできます。
 
 次の図は、PySpark 2.3とPySpark 2.4でローカル・データ・フレームを作成する際の主な違いを示しています。この例では、に用意されている *Aggregation*[!DNL JupyterLab Launcher]starterノートを使用しています。
 
@@ -559,7 +565,9 @@ pd0.show(10, False)
 | pd0 | 使用または作成するパンダのデータフレームオブジェクトの名前。 |
 | [%dataset](#magic) | 3カーネルでのデータアクセスに関するカスタムマジック [!DNL Python] 。 |
 
->[!TIP] —modeは、またはに設定でき `interactive` ま `batch`す。 —modeのデフォルトはで `interactive`す。 大量のデータを読み取る場合は、 `batch` モードを使用することをお勧めします。
+>[!TIP]
+>
+>—modeは、またはに設定でき `interactive` ま `batch`す。 —modeのデフォルトはで `interactive`す。 大量のデータを読み取る場合は、 `batch` モードを使用することをお勧めします。
 
 次の図は、PySpark 2.3とPySpark 2.4にデータを書き戻す際の主な違いを示しています。この例では、に用意されている [!DNL Platform] Aggregation ** starterノートブックを使用し [!DNL JupyterLab Launcher]ます。
 
@@ -577,7 +585,9 @@ PySpark 3 ([!DNL Spark] 2.4)を使えば、 `%dataset` カスタムマジック�
 
 2.4の導入に伴い、既存の [!DNL Spark] ( [!DNL JupyterLab Notebooks]2.3)ノートブックは、 [!DNL Spark][!DNL Spark][!DNL Spark] カーネルの代わりにScalaカーネルを使用しています。 つまり、 [!DNL Spark] ([!DNL Spark] 2.3)で実行されている既存のコードはScala([!DNL Spark] 2.4)ではサポートされていません。 また、新しい [!DNL Spark] ノートブックはすべて、Scala ([!DNL Spark] 2.4)を使用する必要があり [!DNL JupyterLab Launcher]ます。
 
->[!IMPORTANT] [!DNL Spark] ([!DNL Spark] 2.3)は非推奨となり、以降のリリースで削除されるように設定されています。 既存の例はすべてScala ([!DNL Spark] 2.4)の例に置き換えるように設定されています。
+>[!IMPORTANT]
+>
+>[!DNL Spark] ([!DNL Spark] 2.3)は非推奨となり、以降のリリースで削除されるように設定されています。 既存の例はすべてScala ([!DNL Spark] 2.4)の例に置き換えるように設定されています。
 
 既存の [!DNL Spark] ([!DNL Spark] 2.3)ノートブックをScala ([!DNL Spark] 2.4)に変換するには、次の例に従います。
 
@@ -707,7 +717,7 @@ Scalaカーネルは、 `%%sql` sparkmagicをサポートしなくなりまし�
 
 ## データセットの読み取り {#notebook-read-dataset-spark}
 
-[!DNL Spark] 2.3では、データの読み取りやコードセルでの生の値の使用に使用する `option` 値に対して変数を定義する必要がありました。 Scalaでは、を使用して値を宣言して返すこ `sys.env("PYDASDK_IMS_USER_TOKEN")` とができるので、などの変数を定義する必要がありません `var userToken`。 以下のScala(Spark 2.4)の例では、データセットの読み取りに必要なすべての値を定義して返すために `sys.env` 使用されています。
+2. [!DNL Spark] 3では、データの読み取りやコードセルでの生の値の使用に使用する `option` 値に対して変数を定義する必要がありました。 Scalaでは、を使用して値を宣言して返すこ `sys.env("PYDASDK_IMS_USER_TOKEN")` とができるので、などの変数を定義する必要がありません `var userToken`。 以下のScala(Spark 2.4)の例では、データセットの読み取りに必要なすべての値を定義して返すために `sys.env` 使用されています。
 
 **Using[!DNL Spark]([!DNL Spark]2.3 — 非推奨) -[!DNL Spark]Kernel**
 
@@ -756,7 +766,9 @@ Scala ([!DNL Spark] 2.4)ノートブックはScalaカーネルを使用します
 
 ![spark 2.4のロード](./images/migration/spark-scala/load-2.4.png)
 
->[!TIP] Scalaでは、を使用して、内部から値 `sys.env()` を宣言して返すことができ `option`ます。 これにより、変数が1回しか使用されないことがわかっている場合に、変数を定義する必要がなくなります。 次の例では、上の例 `val userToken` を取り込み、インラインで宣言し `option`ます。
+>[!TIP]
+>
+>Scalaでは、を使用して、内部から値 `sys.env()` を宣言して返すことができ `option`ます。 これにより、変数が1回しか使用されないことがわかっている場合に、変数を定義する必要がなくなります。 次の例では、上の例 `val userToken` を取り込み、インラインで宣言し `option`ます。
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
