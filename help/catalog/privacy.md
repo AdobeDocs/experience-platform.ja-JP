@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データレークでのプライバシー要求の処理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Adobe Experience Platform Privacy Serviceは、法的および組織のプライ
 
 このガイドを読む前に、次のExperience Platformサービスに関する十分な理解を得ておくことをお勧めします。
 
-* [Privacy Service](../privacy-service/home.md): Adobe Experience Cloudアプリケーションで個人データにアクセス、オプトアウト、削除を行う場合の顧客の要求を管理します。
+* [Privacy Service](../privacy-service/home.md): Adobe Experience Cloudアプリケーションで個人データにアクセス、オプトアウト、削除を行う際の顧客の要求を管理します。
 * [カタログサービス](home.md): Experience Platform内のデータの場所と系列のレコードシステム。 データセットメタデータの更新に使用できるAPIを提供します。
 * [Experience Data Model(XDM)System](../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 * [IDサービス](../identity-service/home.md): デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
@@ -39,7 +39,9 @@ Experience PlatformでのID名前空間について詳しくは、「 [ID名前�
 
 Data Lakeのプライバシーリクエストを作成する場合、データを見つけて処理するために、有効なID値(および関連する名前空間)を各顧客に提供する必要があります。 したがって、プライバシー要求の対象となるすべてのデータセットには、関連するXDMスキーマに **ID記述子** が含まれている必要があります。
 
->[!NOTE] 現在、ID記述子メタデータ（アドホックデータセットなど）をサポートしないスキーマに基づくデータセットは、プライバシー要求で処理できません。
+>[!NOTE]
+>
+>現在、ID記述子メタデータ（アドホックデータセットなど）をサポートしないスキーマに基づくデータセットは、プライバシー要求で処理できません。
 
 既存のデータセットのXDMスキーマにID記述子を追加する手順を説明します。 ID記述子を持つデータセットが既に存在する場合は、 [次の節に進みます](#nested-maps)。
 
@@ -60,7 +62,9 @@ Experience Platformユーザーインターフェイスでは、 _[!UICONTROL �
 
 ### Using the API {#identity-api}
 
->[!NOTE] この節では、データセットのXDMスキーマの固有のURI ID値を把握していることを前提としています。 この値がわからない場合は、Catalog Service APIを使用して取得できます。 開発ガイドの「 [はじめに](./api/getting-started.md) 」の節を読んだ後、に示す [リストの](./api/list-objects.md) 手順 [、または](./api/look-up-object.md) Catalogオブジェクトを参照してデータセットを見つける手順に従います。 スキーマIDは、 `schemaRef.id`
+>[!NOTE]
+>
+>この節では、データセットのXDMスキーマの固有のURI ID値を把握していることを前提としています。 この値がわからない場合は、Catalog Service APIを使用して取得できます。 開発ガイドの「 [はじめに](./api/getting-started.md) 」の節を読んだ後、に示す [リストの](./api/list-objects.md) 手順 [、または](./api/look-up-object.md) Catalogオブジェクトを参照してデータセットを見つける手順に従います。 スキーマIDは、 `schemaRef.id`
 >
 > この節には、スキーマレジストリAPIの呼び出しが含まれます。 APIの使用に関する重要な情報(コンテナの概念や概念を把握する `{TENANT_ID}` など)については、開発者ガイドの [はじめに](../xdm/api/getting-started.md) （英語のみ）の節を参照してください。
 
@@ -126,7 +130,9 @@ curl -X POST \
 
 ## 要求の送信 {#submit}
 
->[!NOTE] この節では、データレークのプライバシー要求をフォーマットする方法について説明します。 リクエストペイロードで送信されたユーザーIDデータを適切にフォーマットする方法など、プライバシージョブの送信方法に関する完全な手順については、 [Privacy ServiceUI](../privacy-service/ui/overview.md)[(](../privacy-service/api/getting-started.md) Privacy ServiceAPI)のドキュメントを確認することを強くお勧めします。
+>[!NOTE]
+>
+>この節では、データレークのプライバシー要求をフォーマットする方法について説明します。 リクエストペイロードで送信されたユーザーIDデータを適切にフォーマットする方法など、プライバシージョブの送信方法に関する完全な手順については、 [Privacy ServiceUI](../privacy-service/ui/overview.md)[(](../privacy-service/api/getting-started.md) Privacy ServiceAPI)のドキュメントを確認することを強くお勧めします。
 
 次の節では、Privacy ServiceUIまたはAPIを使用してデータレークのプライバシーリクエストを行う方法について概要を説明します。
 
