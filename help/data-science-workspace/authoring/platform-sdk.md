@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PlatformSDKガイド
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 6%
@@ -78,7 +78,9 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 - [列によるデータのフィルタ](#filter-by-selected-columns)
 - [並べ替え結果の取得](#get-sorted-results)
 
->[!NOTE] IMS組織は、内で設定され `client_context`ます。
+>[!NOTE]
+>
+>IMS組織は、内で設定され `client_context`ます。
 
 ### Python
 
@@ -192,7 +194,9 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 ## データの基本的な記述 {#basic-writing-of-data}
 
->[!NOTE] IMS組織は、内で設定され `client_context`ます。
+>[!NOTE]
+>
+>IMS組織は、内で設定され `client_context`ます。
 
 PythonとRでデータを書き込むには、次の例のいずれかを使用します。
 
