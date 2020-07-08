@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 和集合
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 1%
@@ -34,7 +34,7 @@ See the [Identity Service documentation](../../identity-service/home.md) for mor
 
 ### セグメントのメンバーシップマップ
 
-この `segmentMembership` マップには、セグメントの評価結果が格納されます。 セグメント化APIを使用してセグメントジョブが正常に実行されると [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)、マップが更新されます。 `segmentMembership` また、評価済みのオーディエンスセグメントをPlatformに取り込んで保存し、Adobeオーディエンスマネージャーなどの他のソリューションとの統合を可能にします。
+この `segmentMembership` マップには、セグメントの評価結果が格納されます。 セグメント化APIを使用してセグメントジョブが正常に実行されると [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)、マップが更新されます。 `segmentMembership` また、評価済みのオーディエンスセグメントをPlatformに取り込んで保存し、Adobe Audience Managerなどの他のソリューションと統合することもできます。
 
 詳しくは、APIを使用したセグメントの [作成に関するチュートリアルを参照してください](../../segmentation/tutorials/create-a-segment.md) 。
 
@@ -42,7 +42,9 @@ See the [Identity Service documentation](../../identity-service/home.md) for mor
 
 結合された和集合表示にスキーマを含めるには、スキーマの `meta:immutableTags` 属性に「和集合」タグを追加する必要があります。 これは、PATCHリクエストを通じて行われ、スキーマを更新し、「和集合」の値を持つ `meta:immutableTags` 配列を追加します。
 
->[!NOTE] 不変タグとは、設定を意図したが削除されなかったタグです。
+>[!NOTE]
+>
+>不変タグとは、設定を意図したが削除されなかったタグです。
 
 **API形式**
 
@@ -164,7 +166,9 @@ curl -X GET \
 
 特定の和集合を表示するには、Acceptヘッダーに応じて、和集合の一部またはすべての詳細を含むGET要求 `$id` を実行します。
 
->[!NOTE] 和集合検索は、エンドポイント `/unions``/schemas` とエンドポイントを使用して使用でき、プロファイルをデータセットにエクスポートする際に使用できます。
+>[!NOTE]
+>
+>和集合検索は、エンドポイント `/unions``/schemas` とエンドポイントを使用して使用でき、プロファイルをデータセットにエクスポートする際に使用できます。
 
 **API形式**
 
