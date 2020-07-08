@@ -4,7 +4,7 @@ solution: Experience Platform
 title: オブジェクトの削除
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 DELETEリクエストのパスにカタログオブジェクトのIDを指定すると、そのカタログオブジェクトを削除できます。
 
->[!WARNING] オブジェクトの削除は元に戻せず、Experience Platform内の別の場所で改行の変更が行われる場合があるので、注意が必要です。
+>[!WARNING]
+>
+>オブジェクトの削除は元に戻せず、Experience Platform内の別の場所で改行の変更が行われる場合があるので、注意が必要です。
 
 **API形式**
 
@@ -56,4 +58,6 @@ curl -X DELETE \
 ]
 ```
 
->[!NOTE] リクエストで指定されたIDに一致するCatalogオブジェクトがない場合、HTTPステータスコード200を引き続き受け取ることができますが、応答配列は空になります。
+>[!NOTE]
+>
+>リクエストで指定されたIDに一致するCatalogオブジェクトがない場合、HTTPステータスコード200を引き続き受け取ることができますが、応答配列は空になります。
