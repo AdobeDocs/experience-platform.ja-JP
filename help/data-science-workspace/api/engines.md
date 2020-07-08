@@ -4,7 +4,7 @@ solution: Experience Platform
 title: エンジン
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,6 +44,8 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 正常な応答は、Docker URL(`host`)、ユーザー名(`username`)、パスワード(`password`)を含むDockerレジストリの詳細を含むペイロードを返します。
 
 >[!NOTE]
+>
+>
 >Dockerのパスワードは、が更新されるたびに変更 `{ACCESS_TOKEN}` されます。
 
 ```json
@@ -383,7 +385,9 @@ curl -X GET \
 
 リクエストパスにターゲットエンジンのIDを含むPUT要求を介してプロパティを上書きし、更新されたプロパティを含むJSONペイロードを提供することで、既存のエンジンを変更および更新できます。
 
->[!NOTE] このPUT要求を確実に成功させるために、最初にGET要求を実行し、IDでエンジンを [取得することをお勧めします](#retrieve-specific)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
+>[!NOTE]
+>
+>このPUT要求を確実に成功させるために、最初にGET要求を実行し、IDでエンジンを [取得することをお勧めします](#retrieve-specific)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
 
 以下のサンプルAPI呼び出しは、以下のプロパティを最初に持つと同時に、エンジンの名前と説明を更新します。
 
