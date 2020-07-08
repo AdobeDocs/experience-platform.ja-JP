@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform ID サービス
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 2%
@@ -57,7 +57,7 @@ IDとは、エンティティ（通常は個人）に固有のデータです。
 
 ## ID名前空間とIDのグラフ
 
-顧客は、オンラインとオフラインのチャネルを組み合わせてブランドとやり取りするので、その結果、それらの断片化されたインタラクションを1つの顧客IDにどのように調整するかという課題が生じます。
+顧客は、オンラインとオフラインのチャネルを組み合わせてブランドとやり取りするので、その結果、断片化されたインタラクションを1つの顧客IDにどのように調整するかという課題が生じます。
 
 [!DNL Experience Platform] この課題には、2つの概念を通じて対処します。 [ID名前空間](#identity-namespaces) と [IDのグラフ](#identity-graphs)。
 
@@ -94,7 +94,9 @@ IDデータの供給やラベル付けを行う際に考慮すべき潜在的な
 
 様々な標準的な名前空間を [!DNL Experience Platform] オファーする場合でも、IDを適切に分類するために、追加の名前空間を作成する必要がある場合があります。 詳しくは、「ID名前空間の概要 [」の「組織の名前空間の](./namespaces.md) 表示と作成」の節を参照してください。
 
->[!NOTE] ID名前空間はIDの修飾子です。 その結果、名前空間を一度作成すると、削除できません。
+>[!NOTE]
+>
+>ID名前空間はIDの修飾子です。 その結果、名前空間を一度作成すると、削除できません。
 
 ### IDデータを次に含め [!DNL Experience Data Model] る(XDM)
 
@@ -109,7 +111,9 @@ IDデータの供給やラベル付けを行う際に考慮すべき潜在的な
 IDフィールドは、共通のPIIデータを共有している場合にIDをリンクすることもできます。
 例えば、電話番号フィールドをIDフィールドとしてラベル付けすると、同じ電話番号を使用している他の個人との関係が [!DNL Identity Service] 自動的にグラフ化されます。
 
->[!NOTE] 結果のIDの名前空間は、フィールドにラベルが付けられた時点で提供されます。
+>[!NOTE]
+>
+>結果のIDの名前空間は、フィールドにラベルが付けられた時点で提供されます。
 
 ### 次のデータセットの設定 [!DNL Identity Service]
 
