@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 製品プロファイルの権限の管理
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 2%
@@ -32,7 +32,9 @@ ht-degree: 2%
 
 ![add-permissions](../images/add-permissions.png)
 
->[!NOTE] 「 *含まれる権限項目* 」リストには、現在選択されているカテゴリから追加された権限のみが表示されます。
+>[!NOTE]
+>
+>「 *含まれる権限項目* 」リストには、現在選択されているカテゴリから追加された権限のみが表示されます。
 
 権限を削除するには、権限名の横にある **X** アイコンをクリックするか、「すべて削除」を選択して、現在のカテゴリの下にあるすべての権限を削除します **** 。 削除された権限は、「 *利用可能な権限項目*」に再表示されます。
 
