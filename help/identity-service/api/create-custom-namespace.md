@@ -4,7 +4,7 @@ solution: Experience Platform
 title: カスタム名前空間の作成
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 5%
@@ -18,7 +18,9 @@ ht-degree: 5%
 
 カスタム名前空間の作成に関する推奨事項については、「IDサービス [に関するFAQドキュメント](../troubleshooting-guide.md)」を参照してください。
 
->[!NOTE] 名前空間はIDの限定子です。 したがって、一度名前空間を作成すると、削除できなくなります。
+>[!NOTE]
+>
+>名前空間はIDの限定子です。 したがって、一度名前空間を作成すると、削除できなくなります。
 
 **API形式**
 
