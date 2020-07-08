@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 顧客AIインスタンスの設定
 topic: Instance creation
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 59%
@@ -72,7 +72,9 @@ ht-degree: 59%
 
 インスタンスが正常に作成されると、予測実行は直ちにトリガされ、定義したスケジュールに従って後続の実行が実行されます。
 
->[!NOTE] 入力データのサイズに応じて、予測の実行が完了するまでに最大24時間かかる場合があります。
+>[!NOTE]
+>
+>入力データのサイズに応じて、予測の実行が完了するまでに最大24時間かかる場合があります。
 
 この節では、顧客 AI のインスタンスを設定し、予測実行が実行されました。ランが成功したときに、インサイトに予測されたスコアがプロファイルに自動的に入力されます。 このチュートリアルの次のセクションに進む前に、最大24時間お待ちください。
 
