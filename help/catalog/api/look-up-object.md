@@ -4,7 +4,7 @@ solution: Experience Platform
 title: オブジェクトの検索
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 特定のカタログオブジェクトの固有な識別子がわかっている場合は、そのオブジェクトの詳細を表示するためにGETリクエストを実行できます。
 
->[!NOTE] 特定のオブジェクトを表示する場合は、プロパティで [フィルタし](filter-data.md) 、目的のプロパティのみを返すことをお勧めします。
+>[!NOTE]
+>
+>特定のオブジェクトを表示する場合は、プロパティで [フィルタし](filter-data.md) 、目的のプロパティのみを返すことをお勧めします。
 
 **API形式**
 
@@ -63,4 +65,6 @@ curl -X GET \
 }
 ```
 
->[!NOTE] 値のプリフィックスが付けられたプロパティは、相互に関連するオブジェクトを `@` 表します。 これらのオブジェクトの詳細を表示する手順については、 [相互に関連するオブジェクトの表示に関する付録の節を参照してください](appendix.md#view-interrelated-objects) 。
+>[!NOTE]
+>
+>値のプリフィックスが付けられたプロパティは、相互に関連するオブジェクトを `@` 表します。 これらのオブジェクトの詳細を表示する手順については、 [相互に関連するオブジェクトの表示に関する付録の節を参照してください](appendix.md#view-interrelated-objects) 。
