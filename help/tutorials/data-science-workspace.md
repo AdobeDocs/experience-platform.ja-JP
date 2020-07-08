@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspaceのチュートリアル
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -60,6 +60,8 @@ Dockerイメージを使用すると、アプリケーションを必要なす�
 ## レシピの読み込み
 
 >[!NOTE]
+>
+>
 >このチュートリアルでは、DockerソースファイルのURLが必要です。 DockerソースファイルのURLがない場合は、 [パッケージソースファイルをレシピチュートリアルにアクセスし](../data-science-workspace/models-recipes/package-source-files-recipe.md) 、
 
 読み込みレシピのチュートリアルでは、パッケージ化されたレシピを設定および読み込む方法に関するインサイトを提供します。 このチュートリアルを終了するまでに、Adobe Experience Platformデータサイエンスワークスペースでモデルを作成、トレーニング、評価することができます。
