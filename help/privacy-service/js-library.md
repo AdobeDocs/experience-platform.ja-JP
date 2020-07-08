@@ -4,7 +4,7 @@ solution: Experience Platform
 title: アドビプライバシーJavaScriptライブラリの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b916ac5529db6ca383bf8bad56961bb1b8a0b0c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 5%
@@ -14,25 +14,29 @@ ht-degree: 5%
 
 # アドビプライバシーJavaScriptライブラリの概要
 
-Adobeは、データ処理装置として、会社の権限および指示に従って個人データを処理します。 データ管理者であるお客様は、アドビに処理および保管を委任する個人データを決めます。Adobe Experience Cloudソリューションで送信する情報に応じて、アドビは、General Data Protection Regulation(GDPR)やCalifornia Consumer Privacy Act(CCPA)などのプライバシー規制に適用される個人情報を保存できます。 Experience Cloudソリューションがプライベートデータを収集する方法について詳しくは、Adobe Experience Cloud [のプライバシーに関するドキュメントを参照してください](https://www.adobe.com/privacy/marketing-cloud.html) 。
+Adobeは、データ処理装置として、会社の権限および指示に従って個人データを処理します。 データ管理者であるお客様は、アドビに処理および保管を委任する個人データを決めます。Adobe Experience Cloudソリューションで送信する情報に応じて、アドビは、General Data Protection Regulation(GDPR)やCalifornia Consumer Privacy Act(CCPA)などのプライバシー規制に適用される個人情報を保存できます。 Experience Cloudソリューションがプライベートデータを収集する方法について詳しくは、Adobe Experience Cloud [での](https://www.adobe.com/privacy/marketing-cloud.html) プライバシーに関するドキュメントを参照してください。
 
-データコントローラーは、 **AdobeプライバシーJavaScriptライブラリ** （JavaScriptライブラリ）を使用して、特定のドメイン用にExperience Cloudソリューションで生成されたすべてのデータ件名IDの取得を自動化できます。 これらのIDは、 [Adobe Experience Platformプライバシーサービスが提供するAPIを使用して](home.md)、データサブジェクトに属するプライベートデータに対するアクセス要求や削除要求を作成できます。
+データコントローラーは、 **AdobeプライバシーJavaScriptライブラリ** (DPS)を使用して、特定のドメインに関するExperience Cloudソリューションで生成されたすべてのデータサブジェクトIDの取得を自動化できます。 その後、 [Adobe Experience Platform Privacy Serviceが提供するAPIを使用して](home.md)、これらのIDを使用して、データサブジェクトに属するプライベートデータに対するアクセス要求や削除要求を作成できます。
 
->[!NOTE] プライバシーJSライブラリは、通常、プライバシー関連のページにのみインストールする必要があり、Webサイトやドメインのすべてのページにインストールする必要はありません。
+>[!NOTE]
+>
+>プライバシーJSライブラリは、通常、プライバシー関連のページにのみインストールする必要があり、Webサイトやドメインのすべてのページにインストールする必要はありません。
 
 ## 関数
 
-プライバシーJSライブラリは、プライバシーサービスでIDを管理するための機能をいくつか提供します。 これらの関数は、特定の訪問者用にブラウザーに保存されているIDの管理にのみ使用できます。 Experience Cloud Central Serviceに直接情報を送信する場合は使用できません。
+Privacy JS Libraryは、Privacy Service内のIDを管理するための機能をいくつか提供します。 これらの関数は、特定の訪問者用にブラウザーに保存されているIDの管理にのみ使用できます。 Experience Cloudサービスに情報を直接送信する場合は使用できません。
 
 次の表に、ライブラリが提供する様々な機能の概要を示します。
 
 | 関数 | 説明 |
 | --- | --- |
-| `retrieveIdentities` | プライバシーサービスから取得された一致するID(`validIds`)の配列と、見つからなかったIDの配列(`failedIds`)を返します。 |
+| `retrieveIdentities` | Privacy Serviceから取得された一致するID(`validIds`)の配列と、見つからなかったID(`failedIds`)の配列を返します。 |
 | `removeIdentities` | 一致する（有効な）各IDをブラウザーから削除します。 一致するID(`validIds`)の配列を返します。各IDには、このIDが削除されたかどうかを示す `isDeleteClientSide` ブール値が含まれます。 |
 | `retrieveThenRemoveIdentities` | 一致するIDの配列(`validIds`)を取得し、ブラウザーからそれらのIDを削除します。 この関数はと似ていますが `removeIdentities`、削除が可能な場合（削除要求で提供する前に一意の識別子を取得する必要がある場合など）に、使用するAdobeソリューションでアクセス要求が必要な場合に使用するのが最適です。 |
 
->[!NOTE] `removeIdentities` また、IDをサポートする特定のアドビソリューションのIDのみをブラウザーから削除し `retrieveThenRemoveIdentities` ます。 例えば、Adobeオーディエンスマネージャーでは、サードパーティcookieに保存されているdemdex IDは削除されませんが、Adobeターゲットでは、IDが保存されているすべてのcookieを削除します。
+>[!NOTE]
+>
+>`removeIdentities` また、IDをサポートする特定のアドビソリューションのIDのみをブラウザーから削除し `retrieveThenRemoveIdentities` ます。 例えば、Adobe Audience Managerがサードパーティcookieに保存されているdemdex IDを削除するのではなく、Adobe TargetがIDを保存しているすべてのcookieを削除するとします。
 
 3つの関数はすべて非同期プロセスを表すので、取得したIDはすべてコールバックまたは約束を使用して処理する必要があります。
 
@@ -47,7 +51,7 @@ Adobeは、データ処理装置として、会社の権限および指示に従
 
 ## プライバシーJSライブラリのインスタンス化
 
-プライバシーJSライブラリを利用するすべてのアプリでは、新しい `AdobePrivacy` オブジェクトをインスタンス化する必要があります。このオブジェクトは、特定のアドビソリューションに設定する必要があります。 例えば、Adobe Analyticsのインスタンス化は次のようになります。
+プライバシーJSライブラリを利用するすべてのアプリでは、新しい `AdobePrivacy` オブジェクトをインスタンス化する必要があります。このオブジェクトは、特定のアドビソリューションに設定する必要があります。 例えば、Adobe Serverのインスタンス化は次のようになります。
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -86,10 +90,10 @@ adobePrivacy.retrieveIdentities(handleRetrievedIDs);
 adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 ```
 
-| 変数 | 説明 |
+| Variable | 説明 |
 | --- | --- |
 | `validIds` | 正常に取得されたすべてのIDを含むJSONオブジェクト。 |
-| `failedIDs` | プライバシーサービスから取得されなかった、または見つからなかったIDをすべて含むJSONオブジェクト。 |
+| `failedIDs` | Privacy Serviceから取得されなかった、または見つからなかったIDをすべて含むJSONオブジェクト。 |
 
 #### 結果
 
@@ -135,10 +139,10 @@ adobePrivacy.removeIdentities(handleRemovedIDs);
 adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 ```
 
-| 変数 | 説明 |
+| Variable | 説明 |
 | --- | --- |
 | `validIds` | 正常に取得されたすべてのIDを含むJSONオブジェクト。 |
-| `failedIDs` | プライバシーサービスから取得されなかった、または見つからなかったIDをすべて含むJSONオブジェクト。 |
+| `failedIDs` | Privacy Serviceから取得されなかった、または見つからなかったIDをすべて含むJSONオブジェクト。 |
 
 #### 結果
 
@@ -167,7 +171,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 ## 次の手順
 
-このドキュメントを読むと、プライバシーJSライブラリのコア機能が紹介されます。 ライブラリを使用してIDのリストを取得した後、これらのIDを使用してPrivacy Service APIへのデータアクセスおよび削除要求を作成できます。 詳しくは、「 [プライバシーサービス開発者ガイド](api/getting-started.md) 」を参照してください。
+このドキュメントを読むと、プライバシーJSライブラリのコア機能が紹介されます。 ライブラリを使用してIDのリストを取得した後、これらのIDを使用してPrivacy ServiceAPIへのデータアクセスおよび削除リクエストを作成できます。 詳しくは、 [Privacy Service開発者ガイド](api/getting-started.md) を参照してください。
 
 ## 付録
 
@@ -192,13 +196,13 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 | パラメーター | 説明 |
 | --- | --- |
-| `clientCode` | Adobeターゲットシステムでクライアントを識別するクライアントコード。 |
+| `clientCode` | Adobe Targetシステム内のクライアントを識別するクライアントコード。 |
 
 **Adobe Audience Manager**
 
 | パラメーター | 説明 |
 | --- | --- |
-| `aamUUIDCookieName` | Adobe User Managerから返される一意のオーディエンスIDを含むファーストパーティCookieの名前。 |
+| `aamUUIDCookieName` | Adobe Audience Managerから返される一意のユーザーIDを含むファーストパーティCookieの名前。 |
 
 **Adobe IDサービス(ECID)**
 
