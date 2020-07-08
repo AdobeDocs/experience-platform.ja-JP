@@ -4,7 +4,7 @@ solution: Experience Platform
 title: APIを使用したデータの書き出し
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1953'
 ht-degree: 1%
@@ -20,26 +20,28 @@ ht-degree: 1%
 
 ## はじめに
 
-このチュートリアルでは、プロファイルデータの操作に関わる様々なAdobe Experience Platformサービスについて、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、プロファイルデータの操作に関連する様々なAdobe Experience Platformサービスについて、十分な理解が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [Adobe Experience Platform Segmentation Service](../home.md): リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
-- [Experience Data Model(XDM)](../../xdm/home.md): プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [Adobe Experience Platformセグメントサービス](../home.md): リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
+- [Experience Data Model(XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### 必須ヘッダー
 
-また、このチュートリアルでは、プラットフォームAPIの呼び出しを正常に行うために、 [認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があります。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+また、PlatformAPIの呼び出しを正しく行うために、 [認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があります。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへの要求には、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへの要求には、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 すべてのPOST、PUT、およびPATCHリクエストには、次の追加のヘッダーが必要です。
 
@@ -47,7 +49,7 @@ ht-degree: 1%
 
 ## 書き出しジョブの作成
 
-プロファイルデータをエクスポートするには、まずデータのエクスポート先となるデータセットを作成し、新しいエクスポートジョブを開始する必要があります。 これらの手順は両方とも、Experience Platform APIを使用して実現できます。前者はCatalog Service APIを使用し、後者はReal-time Customer Platform APIを使用して実現します。 各手順の詳細な手順については、以降の節で説明します。
+プロファイルデータをエクスポートするには、まずデータのエクスポート先となるデータセットを作成し、新しいエクスポートジョブを開始する必要があります。 これらの手順はどちらも、Experience PlatformAPIを使用して行うことができます。前者はCatalog Service APIを使用し、後者はReal-time Customer Commentation APIを使用します。 各手順の詳細な手順については、以降の節で説明します。
 
 - [ターゲットデータセットの作成](#create-a-target-dataset) — 書き出したデータを保存するデータセットを作成します。
 - [新しいエクスポートジョブの開始](#initiate-export-job) - XDM個別プロファイルデータをデータセットに入力します。
@@ -197,7 +199,9 @@ curl -X POST \
 | `schema.name` | **（必須）** 、データをエクスポートするデータセットに関連付けられているスキーマの名前。 |
 | `evaluationInfo.segmentation` | *（オプション）* boolean値。指定しなかった場合のデフォルト値は `false`です。 値がの場合、セグメント化は書き出しジョブで行う必要があります。 `true` |
 
->[!NOTE] プロファイルデータのみを書き出し、関連するExperienceEventデータを含めない場合は、「additionalFields」オブジェクトをリクエストから削除します。
+>[!NOTE]
+>
+>プロファイルデータのみを書き出し、関連するExperienceEventデータを含めない場合は、「additionalFields」オブジェクトをリクエストから削除します。
 
 **応答**
 
@@ -529,7 +533,7 @@ curl -X GET \
 
 ## 書き出しジョブのキャンセル
 
-エクスペリエンスプラットフォームでは、既存の書き出しジョブをキャンセルできます。これは、書き出しジョブが完了しなかったか、処理段階で停止した場合など、様々な理由で役立つ場合があります。 書き出しジョブをキャンセルするには、エンドポイントに対してDELETE要求を実行し、キャンセルする書き出しジョブ `/export/jobs``id` を要求パスに含めます。
+Experience Platformを使用すると、既存の書き出しジョブをキャンセルできます。これは、書き出しジョブが完了しなかったか、処理段階で停止した場合など、様々な理由で役立ちます。 書き出しジョブをキャンセルするには、エンドポイントに対してDELETE要求を実行し、 `/export/jobs` キャンセルする書き出しジョブ `id` を要求パスに含めます。
 
 **API形式**
 
@@ -558,10 +562,10 @@ curl -X POST \
 
 ## 次の手順
 
-書き出しが正常に完了すると、データはExperience PlatformのData Lake内で使用できます。 その後、 [データアクセスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) (Data Access API)を使用して `batchId` 、エクスポートに関連付けられたを使用してデータにアクセスできます。 エクスポートのサイズに応じて、データはチャンクになり、バッチは複数のファイルで構成される場合があります。
+エクスポートが正常に完了すると、Experience Platformのデータレーク内でデータを使用できます。 その後、 [データアクセスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) (Data Access API)を使用して `batchId` 、エクスポートに関連付けられたを使用してデータにアクセスできます。 エクスポートのサイズに応じて、データはチャンクになり、バッチは複数のファイルで構成される場合があります。
 
 Data Access APIを使用してバッチファイルにアクセスし、ダウンロードする手順については、「 [データアクセス](../../data-access/tutorials/dataset-data.md)」チュートリアルに従ってください。
 
-また、Adobe Experience Platformクエリサービスを使用して、書き出したリアルタイム顧客プロファイルデータにアクセスすることもできます。 クエリサービスでは、UIまたはRESTful APIを使用して、データレーク内のデータに対してクエリの書き込み、検証、および実行を行うことができます。
+また、Adobe Experience Platformクエリサービスを使用して、正常にエクスポートされたリアルタイム顧客プロファイルデータにアクセスすることもできます。 クエリサービスでは、UIまたはRESTful APIを使用して、データレーク内のデータに対してクエリの書き込み、検証、および実行を行うことができます。
 
 オーディエンスデータのクエリ方法の詳細については、 [クエリサービスのドキュメントを参照してください](../../query-service/home.md)。
