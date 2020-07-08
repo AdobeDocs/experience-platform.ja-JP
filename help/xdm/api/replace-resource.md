@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リソースの置換
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 1%
@@ -18,7 +18,9 @@ ht-degree: 1%
 
 この方法は、リソース内の多くの情報を一度に更新する場合に特に便利です。
 
->[!NOTE] リソース全体を置き換えるのではなく、リソースの一部だけを更新したい場合は、PATCH操作を使ってリソースを [更新するドキュメントを参照してください](update-resource.md)。
+>[!NOTE]
+>
+>リソース全体を置き換えるのではなく、リソースの一部だけを更新したい場合は、PATCH操作を使ってリソースを [更新するドキュメントを参照してください](update-resource.md)。
 
 **API形式**
 
