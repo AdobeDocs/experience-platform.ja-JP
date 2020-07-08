@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 現在のユーザー用のリストアクティブサンドボックス
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 982764ae7807e40cbca5ca60c70bf363a271e3c2
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 1%
@@ -14,7 +14,9 @@ ht-degree: 1%
 
 # 現在のユーザー用のリストアクティブサンドボックス
 
->[!NOTE] Sandbox APIで提供される他のエンドポイントとは異なり、このエンドポイントは、Sandbox管理アクセス権限のないユーザーも含め、すべてのユーザーが使用できます。
+>[!NOTE]
+>
+>Sandbox APIで提供される他のエンドポイントとは異なり、このエンドポイントは、Sandbox管理アクセス権限のないユーザーも含め、すべてのユーザーが使用できます。
 
 ルート(`/`)エンドポイントにGETリクエストを行うことで、現在のユーザーに対してアクティブなサンドボックスをリストできます。
 
