@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aqua Data Studioに接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -27,7 +27,9 @@ Aqua Data Studioのインストール後、まずサーバーを登録する必�
 - **ホストとポート**: クエリサービス用のホストエンドポイントとそのポートです。
 - **データベース：** 使用するデータベースです。
 
->[!NOTE] ログイン資格情報、ホスト、ポートおよびデータベース名の検索について詳しくは、Platformの [資格情報ページを参照してください](https://platform.adobe.com/query/configuration)。 資格情報を探すには、Platformにログインし、「 **クエリ**」をクリックし、「 **資格情報**」をクリックします。
+>[!NOTE]
+>
+>ログイン資格情報、ホスト、ポートおよびデータベース名の検索について詳しくは、Platformの [資格情報ページを参照してください](https://platform.adobe.com/query/configuration)。 資格情報を探すには、Platformにログインし、「 **クエリ**」をクリックし、「 **資格情報**」をクリックします。
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
