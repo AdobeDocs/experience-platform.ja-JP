@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ使用ラベルユーザーガイド
 topic: labels
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 0%
@@ -26,7 +26,9 @@ ht-degree: 0%
 
 ### 新しいデータセットの作成
 
->[!NOTE] この例では、事前設定済みのExperience Data Model(XDM)スキーマを使用してデータセットを作成します。 XDMスキーマについて詳しくは、「 [XDM System overview](../../xdm/home.md) and [basics ofスキーマ構成](../../xdm/schema/composition.md)」を参照してください。
+>[!NOTE]
+>
+>この例では、事前設定済みのExperience Data Model(XDM)スキーマを使用してデータセットを作成します。 XDMスキーマについて詳しくは、「 [XDM System overview](../../xdm/home.md) and [basics ofスキーマ構成](../../xdm/schema/composition.md)」を参照してください。
 
 新しいデータセットを作成するには、 **[!UICONTROL Datasets]** ワークスペースの右上隅にある「データセットを _[!UICONTROL 作成]_」をクリックします。
 
@@ -100,7 +102,7 @@ ht-degree: 0%
 
 ## 次の手順
 
-データセットとフィールドレベルにデータ使用量ラベルを追加したら、にデータを取り込み始め [!DNL Experience Platform]ます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
+データセットとフィールドレベルにデータ使用量ラベルを追加したら、にデータを取り込み始めることができ [!DNL Experience Platform]ます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
 
 適用したラベルに基づいてデータ使用ポリシーを定義できるようになりました。 詳しくは、「 [データ使用ポリシーの概要](../policies/overview.md)」を参照してください。
 
