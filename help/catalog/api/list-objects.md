@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リストオブジェクト
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 1%
@@ -45,7 +45,9 @@ curl -X GET \
 
 正常な応答は、リクエストで提供されるクエリパラメーターでフィルタリングされた、キーと値のペアの形式のCatalogオブジェクトのリストを返します。 キーと値のペアごとに、キーは対象のCatalogオブジェクトの固有な識別子を表します。この識別子は、特定のオブジェクトを呼び出す別の呼び出しで使用して [表示を詳細にすることができます](look-up-object.md) 。
 
->[!NOTE] 返されたオブジェクトに、 `properties` クエリが示す要求されたプロパティが1つ以上含まれていない場合、以下の「Sample Dataset 3」と「Sample Dataset 4」に示すように、応答は、そのオブジェクトに含まれる要求されたプロパティのみを返します。
+>[!NOTE]
+>
+>返されたオブジェクトに、 `properties` クエリが示す要求されたプロパティが1つ以上含まれていない場合、以下の「Sample Dataset 3」と「Sample Dataset 4」に示すように、応答は、そのオブジェクトに含まれる要求されたプロパティのみを返します。
 
 ```json
 {
