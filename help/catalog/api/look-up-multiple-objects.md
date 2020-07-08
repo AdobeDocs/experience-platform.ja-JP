@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 複数のオブジェクトの検索
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f3e9da9ab3d02006c07c59b17751c971a95d49bc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 1%
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 1つのオブジェクトにつき1つのリクエストを行うのではなく、複数の特定のオブジェクトを表示したい場合は、カタログを使用すると、同じ種類の複数のオブジェクトをリクエストする簡単なショートカットを使用できます。 IDのカンマ区切りリストを含めることで、1つのGETリクエストを使用して、複数の特定のオブジェクトを返すことができます。
 
->[!NOTE] 特定のCatalogオブジェクトをリクエストする場合でも、 `properties` クエリパラメーターは、必要なプロパティのみを返すことをお勧めします。
+>[!NOTE]
+>
+>特定のCatalogオブジェクトをリクエストする場合でも、 `properties` クエリパラメーターは、必要なプロパティのみを返すことをお勧めします。
 
 **API形式**
 
@@ -45,7 +47,9 @@ curl -X GET \
 
 成功した応答は、指定されたデータセットのリストを返します。このデータセットには、それぞれに対して要求されたプロパティ(`name`、 `description`および `files`)のみが含まれます。
 
->[!NOTE] 返されたオブジェクトに、 `properties` クエリが示す要求したプロパティが1つ以上含まれていない場合は、以下の「Sample Dataset 3」と「Sample Dataset 4」に示すように、その応答は、そのオブジェクトに含まれる要求されたプロパティのみを返します。
+>[!NOTE]
+>
+>返されたオブジェクトに、 `properties` クエリが示す要求したプロパティが1つ以上含まれていない場合は、以下の「Sample Dataset 3」と「Sample Dataset 4」に示すように、その応答は、そのオブジェクトに含まれる要求されたプロパティのみを返します。
 
 ```json
 {
