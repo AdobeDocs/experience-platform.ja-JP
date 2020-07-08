@@ -4,7 +4,7 @@ solution: Experience Platform
 title: CCPA FAQ
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 0%
@@ -20,7 +20,9 @@ ht-degree: 0%
 
 カリフォルニア州消費者プライバシー法(CCPA)は、カリフォルニア州の新しいプライバシー法で、住民に個人情報に関する新しい権利を与え、カリフォルニア州で事業を行う一部の事業者に対するデータ保護責任を課します。
 
->[!NOTE] 2020年1月には技術面での効果があるが、CCPAは依然として法律メーカーの調整を受けている。 また、カリフォルニア州の規制当局がまだ書かれていない規則には、重要な実施やその他のガイダンスの詳細が含まれています。
+>[!NOTE]
+>
+>2020年1月には技術面での効果があるが、CCPAは依然として法律メーカーの調整を受けている。 また、カリフォルニア州の規制当局がまだ書かれていない規則には、重要な実施やその他のガイダンスの詳細が含まれています。
 
 CCPAは、個人の個人情報へのアクセス権や削除権など、欧州和集合のGDPR(General Data Protection Regulation)に基づいて提供される概念を共有していますが、CCPAとGDPRが異なる主な方法はいくつかあります。 例えば、CCPAは、事前の同意を必要とする代わりに、個人アクティビティを第三者に「販売」する」と認める特定のデータ共有情報のオプトアウト権を消費者に提供します。
 
@@ -46,9 +48,9 @@ CCPAは、個人の個人情報へのアクセス権や削除権など、欧州�
 - 検索履歴
 - Webサイト、アプリケーションまたは広告との消費者のインタラクションに関する情報
 
-CCPAが個人情報の多くを対象とする場合でも、アドビの標準の契約条件では、機密情報（SSN、運転免許証情報、金融アカウント情報、生体認証データなど）は、通常、Experience Cloudアプリケーションでの読み込みおよび使用を禁止しています。
+CCPAが個人情報の多くを対象とする場合でも、アドビの標準の契約条件では、機密性の高い個人情報（SSN、運転免許証情報、金融口座情報、生体認証データなど）は、通常、Experience Cloudアプリケーションでの読み込みおよび使用が禁止されています。
 
-## CCPAの様々な役割や責任がExperience Cloudにどのように適用されますか。
+## CCPAの役割や責任の違いは、Experience Cloudにどのように適用されますか。
 
 CCPAの定義に従って、次の役割がアドビとそのお客様に適用されます。
 
@@ -73,9 +75,11 @@ CCPAの定義に従って、次の役割がアドビとそのお客様に適用�
 
 ## 要件に対応する特定の種類のデータを維持する場合、CCPAの下で消費者のプライバシー要件をサポートするにはどうすればよいですか。
 
-CAのコンシューマーを認証するために必要な手順を実行すると、Adobe Experience Platformプライバシーサービスにより、互換性のあるExperience Cloudアプリケーションにコンシューマープライバシーリクエストを送信できます。 See the [Privacy Service overview](../home.md) for more information. ご使用のExperience Cloudアプリケーションがプライバシー要求を順守する方法について詳しくは、 [プライバシーサービスおよびExperience Cloudアプリケーションに関するガイドを参照してください](../experience-cloud-apps.md)。
+CAコンシューマを認証するために必要な手順を実行すると、Adobe Experience Platform Privacy Serviceは、コンシューマプライバシー要求を互換性のあるExperience Cloudアプリケーションに送信できます。 See the [Privacy Service overview](../home.md) for more information. お使いのExperience Cloudアプリケーションがプライバシーリクエストを順守する方法について詳しくは、 [Privacy ServiceおよびExperience Cloudの申し込みに関するガイドを参照してください](../experience-cloud-apps.md)。
 
->[!NOTE] California Regulatorのさらなるガイダンスは、どのタイプのデータが消費者のプライバシーリクエストに適格かについて、今後も提供されます。
+>[!NOTE]
+>
+>California Regulatorのさらなるガイダンスは、どのタイプのデータが消費者のプライバシーリクエストに適格かについて、今後も提供されます。
 
 ## CCPAの要件に対処する上で役立つその他のツールがAdobeオファーにあるか。
 
