@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience PlatformIDサービストラブルシューティングガイド
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 1%
@@ -120,7 +120,9 @@ PIIデータをPlatformに取り込む前に、PIIデータを手動で暗号化
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
->[!NOTE] An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
+>[!NOTE]
+>
+>An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
 
 Write|XDM identity field|`identityMap`
 ---|---|---
