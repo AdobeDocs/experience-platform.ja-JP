@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマレジストリ開発者付録
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 4%
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 エクスペリエンスデータモデル(XDM)は、アドビが推進する公式に文書化された仕様で、デジタルエクスペリエンスの相互運用性、表現力、パワーを向上させます。 アドビは、GitHub上の [オープンソースプロジェクトにソースコードと正式なXDM定義を保持しています](https://github.com/adobe/xdm/)。 これらの定義はXDM標準表記で記述され、JSON-LD（リンクデータのJavaScript Object Notation）とJSONスキーマをXDMスキーマを定義する文法として使用します。
 
-パブリックリポジトリで正式なXDM定義を調べると、標準のXDMはAdobe Experience Platformでの表示とは異なることがわかります。 Experience Platformで表示される内容は「互換性モード」と呼ばれ、標準のXDMとプラットフォーム内での使用方法の間の単純なマッピングを提供します。
+パブリックリポジトリで正式なXDM定義を見ると、標準のXDMはAdobe Experience Platformで見るものとは異なることがわかります。 Experience Platformで表示される内容はCompatibility Modeと呼ばれ、標準のXDMとPlatform内での使い方との間の単純なマッピングを提供します。
 
 ### 互換モードの動作
 
@@ -49,19 +49,21 @@ ht-degree: 4%
 
 ### 互換モードが必要な理由
 
-Adobe Experience Platformは、複数のソリューションおよびサービスと連携するように設計されており、それぞれ独自の技術的な課題と制限（特定のテクノロジーでの特殊文字の扱いなど）を持ちます。 これらの制限を克服するため、互換モードが開発されました。
+Adobe Experience Platformは、複数のソリューションやサービスを使用するように設計されており、それぞれが独自の技術的な課題と制限（特定のテクノロジーが特殊文字をどのように処理するかなど）を持っています。 これらの制限を克服するため、互換モードが開発されました。
 
 カタログ、Data Lake、リアルタイム顧客プロファイルを含むほとんどのExperience Platformサービスでは、標準のXDMの代わりに互換モードが使用されます。 スキーマレジストリAPIでも互換モードが使用され、このドキュメントの例はすべて互換モードを使用して表示されます。
 
-標準のXDMとExperience Platformでの動作との間でマッピングが行われることを知っておくことをお勧めしますが、これはPlatform Servicesの使用に影響を与えないでください。
+標準のXDMとExperience Platformでの動作との間でマッピングが行われることを知っておく価値はありますが、Platformサービスの使用に影響を与えることはありません。
 
 オープンソースプロジェクトは利用できますが、スキーマレジストリを通じてリソースとの対話に関しては、このドキュメントのAPIの例が、知り、従うべきベストプラクティスを提供します。
 
 ## APIでのXDMフィールドタイプの定義 {#field-types}
 
-XDMスキーマは、JSONスキーマ標準と基本的なフィールドタイプを使用して定義され、Experience Platformによって適用されるフィールド名に対する追加の制限があります。 XDMでは、形式やオプションの制約を使用して、追加のフィールドの種類を定義できます。 XDMフィールドタイプは、フィールドレベルの属性( )で公開され `meta:xdmType`ます。
+XDMスキーマは、JSONスキーマ標準規格と基本的なフィールドタイプを使用して定義され、Experience Platformによって適用されるフィールド名に対する追加の制限があります。 XDMでは、形式やオプションの制約を使用して、追加のフィールドの種類を定義できます。 XDMフィールドタイプは、フィールドレベルの属性( )で公開され `meta:xdmType`ます。
 
->[!NOTE] `meta:xdmType` はシステム生成値なので、このプロパティをフィールドのJSONに追加する必要はありません。 ベストプラクティスは、JSONスキーマタイプ（文字列や整数など）と、以下の表に定義されている適切な最小/最大制約を使用することです。
+>[!NOTE]
+>
+>`meta:xdmType` はシステム生成値なので、このプロパティをフィールドのJSONに追加する必要はありません。 ベストプラクティスは、JSONスキーマタイプ（文字列や整数など）と、以下の表に定義されている適切な最小/最大制約を使用することです。
 
 次の表に、オプションのプロパティを使用して、スカラーフィールドの種類とより具体的なフィールドの種類を定義するための適切な形式の概要を示します。 オプションのプロパティとタイプ固有のキーワードに関する詳細は、 [JSONスキーマのドキュメントを参照してください](https://json-schema.org/understanding-json-schema/reference/type.html)。
 
@@ -74,7 +76,7 @@ XDMスキーマは、JSONスキーマ標準と基本的なフィールドタイ�
     <th>コードサンプル</th>
   </tr>
   <tr>
-    <td>文字列</td>
+    <td>string</td>
     <td>type:<br/><br/><strong>stringOptionalプロパティ：</strong><br/>
       <ul>
         <li>pattern</li>
@@ -243,7 +245,7 @@ XDMスキーマは、JSONスキーマ標準と基本的なフィールドタイ�
 
 | XDM Type<br>(meta:xdmType) | JSON<br>(JSONスキーマ) | パーケ<br>（タイプ/注釈） | Spark SQL | Java | スカラ | .NET | CosmosDB | MongoDB | エアロスパイク | プロトバフ2 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 文字列 | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | 文字列 | System.String | 文字列 | 文字列 | 文字列 | 文字列 |
+| string | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | 文字列 | System.String | 文字列 | string | 文字列 | string |
 | 数値 | type:number | 重複 | DoubleType | java.lang.Double | 重複 | System.Double | 数値 | 重複 | 重複 | 重複 |
 | long | type:<br>integermaximum:2^53+1<br>最小：-2^53+1 | INT64 | LongType | java.lang.Long | ロング | System.Int64 | 数値 | long | 整数 | int64 |
 | int | type:<br>integermaximum:2^31<br>最小：-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | 整数 | System.Int32 | 数値 | int | 整数 | int32 |
