@@ -4,7 +4,7 @@ solution: Experience Platform
 title: モデルにスコアを付ける(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 1%
@@ -34,9 +34,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。\
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 独自のAdobe Experience Platform統合に見つかった特定のAPIキー値。\
+`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
 `{JSON_PAYLOAD}`: 送信する実行オブジェクトをテストします。 チュートリアルで使用する例を次に示します。
 
 ```JSON
@@ -122,9 +122,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。\
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 独自のAdobe Experience Platform統合に見つかった特定のAPIキー値。\
+`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
 `{EXPERIMENT_ID}`: ターゲットするテストに対応するID。 これは、テストの作成時の応答に含まれます。\
 `{JSON_PAYLOAD}`: 投稿するデータ。 チュートリアルで使用する例は次のとおりです。
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`:  実行するテストに対応するID。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
 
 特定のテストに対して複数のテスト実行があるので、返される応答には実行IDの配列が含まれます。
 
@@ -217,7 +217,7 @@ curl -X GET \
 
 ### スケジュールされたテストの停止と削除
 
-スケジュールされたテストの実行をその前に停止したい場合 `endTime`は、 `{EXPERIMENT_ID}`
+スケジュールされたテストの実行をその前に停止する場合 `endTime`は、DELETEリクエストを `{EXPERIMENT_ID}`
 
 **リクエスト**
 
@@ -230,9 +230,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  テストに対応するID。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
 
->[!NOTE] API呼び出しは、新しいテスト実行の作成を無効にします。 ただし、既に実行中のテスト実行の実行は停止しません。
+>[!NOTE]
+>
+>API呼び出しは、新しいテスト実行の作成を無効にします。 ただし、既に実行中のテスト実行の実行は停止しません。
 
 次に、テストが正常に削除されたことを通知する応答を示します。
 
