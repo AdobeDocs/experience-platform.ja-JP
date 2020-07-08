@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ノートブックを使用してデータを分析する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -50,7 +50,9 @@ UIで、上部メニューの「データサイエンス」タブをクリック
 
 ### データへのアクセス
 
->[!NOTE] は非推奨 `data_access_sdk_python` で、推奨されなくなりました。 コードを変換するには、「 [PlatformSDKへのデータアクセスSDKの](../authoring/platform-sdk.md) 変換」チュートリアルを参照してください。 このチュートリアルでは、次と同じ手順を引き続き使用します。
+>[!NOTE]
+>
+>は非推奨 `data_access_sdk_python` で、推奨されなくなりました。 コードを変換するには、「 [PlatformSDKへのデータアクセスSDKの](../authoring/platform-sdk.md) 変換」チュートリアルを参照してください。 このチュートリアルでは、次と同じ手順を引き続き使用します。
 
 内部からのデータおよび外部からのデータへのアクセス [!DNL Adobe Experience Platform] を調べます。 このライブラリを使用して、データセットやXDMスキーマなどの内部データにアクセスします。 `data_access_sdk_python` 外部データの場合は、pandas [!DNL Python] ライブラリを使用します。
 
@@ -86,7 +88,9 @@ Datasetsディレクトリで、取り込まれたすべてのデータセット
 
 これで、データセットを右クリックし、ドロップダウンの「Explore Data in Notebook」オプションを選択でき `Retail-Training-<your-alias>` ます。 実行可能なコードエントリがノートブックに表示されます。
 
->[!TIP] コードを変換するには、 [!DNL Platform SDK](../authoring/platform-sdk.md) ガイドを参照してください。
+>[!TIP]
+>
+>コードを変換するには、 [!DNL Platform SDK](../authoring/platform-sdk.md) ガイドを参照してください。
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
