@@ -4,7 +4,7 @@ solution: Experience Platform
 title: サンドボックスの削除
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 4%
@@ -16,7 +16,9 @@ ht-degree: 4%
 
 サンドボックスを削除するには、そのサンドボックスを要求パスに含むDELETE要求 `name` を行います。
 
->[!NOTE] このAPI呼び出しを行うと、サンドボックスの `status` プロパティが「削除済み」に更新され、非アクティブになります。 GET要求は、サンドボックスが削除された後も、サンドボックスの詳細を取得できます。
+>[!NOTE]
+>
+>このAPI呼び出しを行うと、サンドボックスの `status` プロパティが「削除済み」に更新され、非アクティブになります。 GET要求は、サンドボックスが削除された後も、サンドボックスの詳細を取得できます。
 
 **API形式**
 
