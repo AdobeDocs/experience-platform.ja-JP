@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セグメントの作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1328'
 ht-degree: 2%
@@ -44,7 +44,9 @@ Experience Platform内のすべてのリソースは、特定の仮想サンド�
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -99,7 +101,7 @@ curl -X POST \
 | `expression.type` | 式タイプを指定します。 現在、「PQL」のみがサポートされています。 |
 | `expression.format` | 式の構造を値で示します。 現在、次の形式がサポートされています。 <ul><li>`pql/text`: パブリッシュされたPQL文法に従った、セグメント定義のテキスト表現。  例：`workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
 | `expression.value` | に示す種類に適合する式 `expression.format`。 |
-| `mergePolicyId` | エクスポートするデータに使用するマージポリシーの識別子。 詳しくは、 [マージポリシー設定ドキュメントを参照してください](../../profile/api/merge-policies.md)。 |
+| `mergePolicyId` | エクスポートされたデータに使用するマージポリシーの識別子。 詳しくは、 [マージポリシー設定ドキュメントを参照してください](../../profile/api/merge-policies.md)。 |
 | `description` | 定義の人間が読み取り可能な説明。 |
 
 **応答**
@@ -126,7 +128,7 @@ curl -X POST \
 
 セグメント定義を作成する際、リアルタイム顧客プロファイル内の見積もりツールとプレビューツールを使用して表示の概要レベルの情報を提供し、期待されるオーディエンスを確実に特定できます。 予測は、予測されるオーディエンスサイズや信頼区間など、セグメント定義の統計情報を提供します。 プレビューは、セグメント定義の条件を満たすプロファイルのページ分割リストを提供し、期待どおりの結果と比較できます。
 
-オーディエンスを見積もってプレビューすることで、PQL予測をテストして最適化し、必要な結果を得られるようにします。結果は、PQL予測をテストして最適化し、更新したセグメント定義で使用できます。
+オーディエンスを見積もってプレビューすることで、PQL予測をテストして最適化し、必要な結果を得られるようにします。結果は、PQL予測をテストして最適化した後で、セグメント定義を更新します。
 
 セグメントのプレビューや予測の取得に必要な手順は2つあります。
 
