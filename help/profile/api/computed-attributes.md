@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: リアルタイムの顧客プロファイルAPI開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2431'
 ht-degree: 1%
@@ -483,6 +483,8 @@ curl -X PATCH \
 APIを使用して、計算済み属性を削除することもできます。 これは、削除する計算済み属性のIDを要求パスに含め、 `/config/computedAttributes` エンドポイントにDELETE要求を行うことで行われます。
 
 >[!N注意]
+>
+>
 >計算済み属性を削除する場合は、注意が必要です。計算済み属性が複数のスキーマで使用されている可能性があり、DELETE操作を元に戻すことはできません。
 
 **API形式**
