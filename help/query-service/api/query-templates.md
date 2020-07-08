@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービス開発ガイド
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 3%
@@ -105,7 +105,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 }
 ```
 
->[!NOTE] の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
+>[!NOTE]
+>
+>の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
 
 ### クエリテンプレートの作成
 
@@ -166,7 +168,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 }
 ```
 
->[!NOTE] の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
+>[!NOTE]
+>
+>の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
 
 ### 指定したクエリテンプレートの取得
 
@@ -222,7 +226,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 }
 ```
 
->[!NOTE] の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
+>[!NOTE]
+>
+>の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
 
 ### 指定したクエリテンプレートの更新
 
@@ -240,7 +246,9 @@ PUT /query-templates/{TEMPLATE_ID}
 
 **リクエスト**
 
->[!NOTE] PUT要求では、sqlとnameの両方のフィールドに値を入力する必要があり、そのクエリテンプレートの現在の内容が **上書きされます** 。
+>[!NOTE]
+>
+>PUT要求では、sqlとnameの両方のフィールドに値を入力する必要があり、そのクエリテンプレートの現在の内容が **上書きされます** 。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -290,7 +298,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 }
 ```
 
->[!NOTE] の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
+>[!NOTE]
+>
+>の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
 
 ### 指定したクエリテンプレートの削除
 
