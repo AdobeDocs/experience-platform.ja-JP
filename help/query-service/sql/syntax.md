@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL構文
 topic: syntax
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 1%
@@ -320,7 +320,9 @@ where option can be one of:
 - `FORMAT`: 出力形式を指定します。TEXT、XML、JSON、YAMLのいずれかを指定できます。 テキスト以外の出力には、テキスト出力形式と同じ情報が含まれますが、プログラムは簡単に解析できます。 このパラメーターのデフォルト値は `TEXT`です。
 - `statement`: `SELECT`,,,,,,,,, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS``CREATE MATERIALIZED VIEW AS` , , , ，実行計画を表示したい。
 
->[!IMPORTANT] このオプションを使用すると、実際に文が実行されることに注意して `ANALYZE` ください。 返される出力は `EXPLAIN``SELECT` 破棄されますが、文の他の副作用は通常どおり発生します。
+>[!IMPORTANT]
+>
+>このオプションを使用すると、実際に文が実行されることに注意して `ANALYZE` ください。 返される出力は `EXPLAIN``SELECT` 破棄されますが、文の他の副作用は通常どおり発生します。
 
 #### 例
 
