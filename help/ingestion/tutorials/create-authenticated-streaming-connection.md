@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 認証済みストリーミング接続の作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d9ce9506e43c4deed01f18e5913fda5a5c3cee84
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 2%
@@ -18,34 +18,36 @@ ht-degree: 2%
 
 ## はじめに
 
-Adobe Experience Platformに開始ストリーミングデータを接続するには、ストリーミング接続の登録が必要です。 ストリーミング接続を登録する場合は、ストリーミングデータのソースなど、主な詳細情報を入力する必要があります。
+Adobe Experience Platformに対してストリーミングデータを開始するには、ストリーミング接続登録が必要です。 ストリーミング接続を登録する場合は、ストリーミングデータのソースなど、主な詳細情報を入力する必要があります。
 
-ストリーミング接続を登録すると、データプロデューサーとして、ユーザーは一意のURLを持ち、このURLを使用してプラットフォームにデータをストリーミングできます。
+ストリーミング接続を登録すると、データプロデューサーとして、一意のURLが割り当てられ、このURLを使用してPlatformにデータをストリーミングできます。
 
-このチュートリアルでは、様々なAdobe Experience Platformサービスの実用的な知識も必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、さまざまなAdobe Experience Platformサービスの実用的な知識も必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [Experience Data Model(XDM)](../../xdm/home.md): プラットフォームがエクスペリエンスデータを編成する際に使用する、標準化されたフレームワークです。
+- [Experience Data Model(XDM)](../../xdm/home.md): Platformがエクスペリエンスデータを編成する際に使用する標準化されたフレームワーク。
 - [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
 
 以下の節では、ストリーミング取り込みAPIの呼び出しを正常に行うために知っておく必要がある追加情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -63,7 +65,9 @@ POST /flowservice/connections
 
 **リクエスト**
 
->[!NOTE] 例に示すように、リスト `providerId` ととの値を使用する `connectionSpec` 必要があります **** 。これは、ストリーミング取り込み用にストリーミング接続を作成するAPIに対して何が指定されているかを示す値です。
+>[!NOTE]
+>
+>例に示すように、リスト `providerId` ととの値を使用する `connectionSpec` 必要があります **** 。これは、ストリーミング取り込み用にストリーミング接続を作成するAPIに対して何が指定されているかを示す値です。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -173,7 +177,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 次の手順
 
-認証済みのストリーミング接続を作成したら、時系列またはデータを記録して、プラットフォーム内のデータを取り込むことができます。 時系列データをプラットフォームにストリーミングする方法については、「 [ストリーミング時系列データのチュートリアル](./streaming-time-series-data.md)」を参照してください。 レコードデータをプラットフォームにストリーミング再生する方法については、「 [ストリーミングレコードデータのチュートリアル](./streaming-record-data.md)」を参照してください。
+認証済みのストリーミング接続を作成したら、時系列またはデータを記録して、Platform内のデータを取り込むことができます。 時系列データをPlatformにストリーミングする方法については、「 [ストリーミング時系列データのチュートリアル](./streaming-time-series-data.md)」を参照してください。 レコードデータをPlatformにストリーミングする方法については、「 [ストリーミングレコードデータのチュートリアル](./streaming-record-data.md)」を参照してください。
 
 ## 付録
 
