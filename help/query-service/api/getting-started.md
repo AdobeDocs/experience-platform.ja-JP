@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービス開発ガイド
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 91104399e50bce03fed7c9196e6e83fc48a54d1c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 1%
@@ -14,35 +14,37 @@ ht-degree: 1%
 
 # クエリサービス開発ガイド
 
-この開発者ガイドは、Adobe Experience PlatformクエリサービスAPIの様々な操作を実行する手順を提供します。
+この開発者ガイドでは、Adobe Experience PlatformクエリサービスAPIの様々な操作を実行する手順を説明します。
 
 ## はじめに
 
-このガイドでは、クエリサービスの使用に関連する様々なAdobe Experience Platformサービスについて、十分に理解している必要があります。
+このガイドでは、クエリサービスの使用に関連する様々なAdobe Experience Platformサービスについて、十分な理解を得ている必要があります。
 
-- [クエリサービス](../home.md): Experience Platformの新しいデータセットとしてデータセットをクエリし、結果のクエリを取得する機能を提供します。
-- [Experience Data Model(XDM)System](../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-- [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [クエリサービス](../home.md): データセットをクエリし、結果のクエリをExperience Platformの新しいデータセットとして取得する機能を提供します。
+- [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 以下の節では、APIを使用してクエリサービスを正しく使用するために知っておく必要がある追加情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 このドキュメントでサンプルAPI呼び出しに使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例を読む [方法に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 このドキュメントでサンプルAPI呼び出しに使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-Experience Platform APIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのプラットフォームAPI呼び出しに必要な各ヘッダーの値を指定する。
+Experience PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] エクスペリエンスプラットフォームでのサンドボックスの操作について詳しくは、サンドボックスの概要ドキュメントを参照して [ください](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>Experience Platformでのサンドボックスの操作について詳しくは、 [サンドボックスの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ## サンプルAPI呼び出し
 
