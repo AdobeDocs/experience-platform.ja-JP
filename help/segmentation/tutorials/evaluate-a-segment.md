@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セグメントの評価
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2841'
 ht-degree: 2%
@@ -37,7 +37,9 @@ Experience Platform内のすべてのリソースは、特定の仮想サンド�
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 すべてのPOST、PUT、およびPATCHリクエストには、次の追加のヘッダーが必要です。
 
@@ -55,7 +57,9 @@ Experience Platform内のすべてのリソースは、特定の仮想サンド�
 
 定期評価を通じて、IMS組織は定期的なスケジュールを作成し、エクスポートジョブを自動的に実行できます。
 
->[!NOTE] スケジュールされた評価は、XDM個別プロファイル用に最大5個のマージポリシーを持つサンドボックスに対して有効にできます。 1つのSandbox環境内にXDM個々のプロファイル用に5つ以上のマージポリシーがある場合、スケジュールされた評価を使用できません。
+>[!NOTE]
+>
+>スケジュールされた評価は、XDM個別プロファイル用に最大5個のマージポリシーを持つサンドボックスに対して有効にできます。 1つのSandbox環境内にXDM個々のプロファイル用に5つ以上のマージポリシーがある場合、スケジュールされた評価を使用できません。
 
 ### スケジュールの作成
 
