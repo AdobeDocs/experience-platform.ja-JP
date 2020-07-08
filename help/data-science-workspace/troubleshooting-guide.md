@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspaceトラブルシューティングガイド
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 ## [!DNL JupyterLab] 環境が [!DNL Google Chrome]
 
->[!IMPORTANT] この問題は解決しましたが、Google Chrome 80.xブラウザーには引き続き存在する可能性があります。 Chromeブラウザーが最新の状態であることを確認してください。
+>[!IMPORTANT]
+>
+>この問題は解決しましたが、Google Chrome 80.xブラウザーには引き続き存在する可能性があります。 Chromeブラウザーが最新の状態であることを確認してください。
 
 ブラウザーバージョン80.xでは、 [!DNL Google Chrome] サードパーティCookieはすべてデフォルトでブロックされます。 このポリシーは、Adobe Experience Platform内での読み込み [!DNL JupyterLab] を妨げる可能性があります。
 
@@ -38,7 +40,9 @@ ht-degree: 0%
 
 ![chrome advanced](./images/faq/toggle-off.png)
 
->[!NOTE] または、サードパーティCookieを無効にして、 [*を追加します。]ds.adobe.netを許可リストに追加します。
+>[!NOTE]
+>
+>または、サードパーティCookieを無効にして、 [*を追加します。]ds.adobe.netを許可リストに追加します。
 
 アドレスバーの「chrome://flags/」に移動します。 右側のドロップダウンメニューを使用して、「SameSite by default cookies」という名前のフラグを検索して無効に *し* ます。
 
