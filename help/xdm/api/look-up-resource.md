@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リソースの検索
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 2%
@@ -50,7 +50,9 @@ curl -X GET \
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` タイトルも説明も `allOf` なく解決しました。 |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 解 `allOf` 決され、記述子が含まれます。 |
 
->[!NOTE] バージョン（1、2、3など）のみを指定した場合、レジストリは最新 `major``minor` バージョン（.1、.2、.3など）を自動的に返します。
+>[!NOTE]
+>
+>バージョン（1、2、3など）のみを指定した場合、レジストリは最新 `major``minor` バージョン（.1、.2、.3など）を自動的に返します。
 
 **応答**
 
