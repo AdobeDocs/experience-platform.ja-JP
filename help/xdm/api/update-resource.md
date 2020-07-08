@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リソースの更新
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 2%
@@ -18,7 +18,9 @@ PATCH要求を使用して、テナントコンテナ内のリソースを変更
 
 使用可能な操作を含むJSONパッチについて詳しくは、公式の [JSONパッチドキュメントを参照してください](http://jsonpatch.com/)。
 
->[!NOTE] 個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、「PUT操作を使用したリソースの [置き換えに関するドキュメント](replace-resource.md)」を参照してください。
+>[!NOTE]
+>
+>個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、「PUT操作を使用したリソースの [置き換えに関するドキュメント](replace-resource.md)」を参照してください。
 
 ## スキーマ追加へのミックスイン
 
