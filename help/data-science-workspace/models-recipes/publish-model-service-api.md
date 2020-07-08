@@ -4,7 +4,7 @@ solution: Experience Platform
 title: モデルをサービスとして公開(API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 1%
@@ -338,7 +338,9 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 }
 ```
 
->[!NOTE] 異なるMLサービスを取得すると、キーと値のペアの数が多いか少ない応答が返される場合があります。 上記の回答は、スケジュールされたトレーニングとスコアリングテストの実行の両方を含む [MLサービスを表したものです](#ml-service-with-scheduled-experiments-for-training-and-scoring)。
+>[!NOTE]
+>
+>異なるMLサービスを取得すると、キーと値のペアの数が多いか少ない応答が返される場合があります。 上記の回答は、スケジュールされたトレーニングとスコアリングテストの実行の両方を含む [MLサービスを表したものです](#ml-service-with-scheduled-experiments-for-training-and-scoring)。
 
 
 ## トレーニングまたはスコアリングのスケジュール設定
@@ -388,7 +390,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] 既存のスケジュール済みトレーニングジョブとスコアリングジョブ `startTime` に対して、変更を行わないでください。 を変更する `startTime` 必要がある場合は、同じモデルを公開し、トレーニングおよびスコアリングジョブを再スケジュールすることを検討します。
+>[!WARNING]
+>
+>既存のスケジュール済みトレーニングジョブとスコアリングジョブ `startTime` に対して、変更を行わないでください。 を変更する `startTime` 必要がある場合は、同じモデルを公開し、トレーニングおよびスコアリングジョブを再スケジュールすることを検討します。
 
 **応答**
 
