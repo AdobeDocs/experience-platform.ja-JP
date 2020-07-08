@@ -4,7 +4,7 @@ solution: Experience Platform
 title: サンドボックスのリセット
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 4%
@@ -62,4 +62,6 @@ curl -X PUT \
 }
 ```
 
->[!NOTE] サンドボックスをリセットすると、システムによるプロビジョニングが15分ほどかかります。 プロビジョニングが完了すると、Sandboxの「アクティブ」または「失敗」 `state` になります。
+>[!NOTE]
+>
+>サンドボックスをリセットすると、システムによるプロビジョニングが15分ほどかかります。 プロビジョニングが完了すると、Sandboxの「アクティブ」または「失敗」 `state` になります。
