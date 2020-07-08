@@ -4,7 +4,7 @@ solution: Experience Platform
 title: オブジェクトの置換
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 PUTリクエストを使用して、Catalogオブジェクトのコンテンツを上書きできます。この場合、リソース全体がリクエストペイロードに置き換えられます。
 
->[!NOTE] カタログオブジェクト内の特定のフィールドを更新するだけで済む場合は、PATCHリクエストを使用する方が効率的です。
+>[!NOTE]
+>
+>カタログオブジェクト内の特定のフィールドを更新するだけで済む場合は、PATCHリクエストを使用する方が効率的です。
 
 **API形式**
 
