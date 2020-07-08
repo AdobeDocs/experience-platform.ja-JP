@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 時系列データのストリーミング
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 2%
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # 時系列データをAdobe Experience Platformにストリーミングする
 
-このチュートリアルは、Adobe Experience Platform Data Ingestion Service APIの一部であるストリーミング取り込みAPIの使用を開始する際に役立ちます。
+このチュートリアルは、Adobe Experience Platformデータ取り込みサービスAPIの一部であるストリーミング取り込みAPIの使用を開始する際に役立ちます。
 
 ## はじめに
 
-このチュートリアルでは、様々なAdobe Experience Platformサービスの実用的な知識が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、さまざまなAdobe Experience Platformサービスに関する実用的な知識が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [Experience Data Model(XDM)](../../xdm/home.md): プラットフォームがエクスペリエンスデータを編成する際に使用する、標準化されたフレームワークです。
+- [Experience Data Model(XDM)](../../xdm/home.md): Platformがエクスペリエンスデータを編成する際に使用する標準化されたフレームワーク。
 - [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
 - [スキーマレジストリ開発ガイド](../../xdm/api/getting-started.md): スキーマレジストリAPIの使用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法をカバーする包括的なガイドです。 これには、このチュートリアル全体の呼び出しに表示されるユーザ `{TENANT_ID}`ー情報や、スキーマの作成方法を知ることが含まれます。この方法は、統合用のデータセットの作成に使用されます。
 
@@ -30,21 +30,23 @@ ht-degree: 2%
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -211,7 +213,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | スキーマ `$id` を作成した際に以前に受け取ったもの。 次のようになります。 `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] &#x200B;ID&#x200B;名前空間コード&#x200B;****
+>[!NOTE]
+>
+>&#x200B;ID&#x200B;名前空間コード&#x200B;****
 >
 > コードが有効であることを確認してください。上の例では、標準的なID名前空間である「email」が使用されています。 一般的に使用されるその他の標準ID名前空間は、「 [IDサービスFAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)」に記載されています。
 >
@@ -240,7 +244,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 スキーマの作成後は、レコードデータを取り込むデータセットを作成する必要があります。
 
->[!NOTE] このデータセットは、適切なタグを設定することで、 **リアルタイムの顧客プロファイル** / **IDに対して有効になります** 。
+>[!NOTE]
+>
+>このデータセットは、適切なタグを設定することで、 **リアルタイムの顧客プロファイル** / **IDに対して有効になります** 。
 
 **API形式**
 
@@ -288,7 +294,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ## 時系列データをストリーミング接続に取り込む
 
-データセットとストリーミング接続が確立された状態で、XDM形式のJSONレコードを取り込み、プラットフォーム内の時系列データを取り込むことができます。
+データセットとストリーミング接続が確立された状態で、XDM形式のJSONレコードを取り込み、Platform内の時系列データを取り込むことができます。
 
 **API形式**
 
@@ -303,7 +309,9 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **リクエスト**
 
->[!NOTE] 独自のおよびを生成する必要があ `xdmEntity._id` り `xdmEntity.timestamp`ます。 IDを生成する良い方法は、UUIDを使用することです。 また、以下のAPI呼び出しでは、認証ヘッダーは **必要ありません** 。
+>[!NOTE]
+>
+>独自のおよびを生成する必要があ `xdmEntity._id` り `xdmEntity.timestamp`ます。 IDを生成する良い方法は、UUIDを使用することです。 また、以下のAPI呼び出しでは、認証ヘッダーは **必要ありません** 。
 
 
 ```shell
@@ -396,9 +404,11 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 新たに取り込まれた時系列データの取得
 
-以前に取り込んだレコードを検証するには、 [プロファイルアクセスAPI](../../profile/api/entities.md) (Time Series)を使用して時系列データを取得します。 これは、エンドポイントへのGET要求を使用し、オプションのクエリパラメーターを使用して行うことが `/access/entities` できます。 複数のパラメーターを使用でき、アンパサンド(&amp;)で区切ります。」
+以前に取り込んだレコードを検証するには、 [プロファイルアクセスAPI](../../profile/api/entities.md) (Time Series)を使用して時系列データを取得します。 これは、エンドポイントへのGET要求を使用し、オプションのクエリパラメーターを使用して行うこ `/access/entities` とができます。 複数のパラメーターを使用でき、アンパサンド(&amp;)で区切ります。」
 
->[!NOTE] マージポリシーIDが定義されていない場合とスキーマ。</span>nameまたはrelatedSchema</span>.nameがで `_xdm.context.profile`す。プロファイルアクセスは **** すべての関連IDを取得します。
+>[!NOTE]
+>
+>マージポリシーIDが定義されていない場合とスキーマ。</span>nameまたはrelatedSchema</span>.nameがで `_xdm.context.profile`す。プロファイルアクセスは **** すべての関連IDを取得します。
 
 **API形式**
 
@@ -496,6 +506,6 @@ curl -X GET \
 
 ## 次の手順
 
-このドキュメントを読むと、ストリーミング接続を使用して記録データをプラットフォームに取り込む方法が理解できます。 様々な値を持つ呼び出しをさらに試して、更新された値を取得できます。 また、プラットフォームUIを使用して、取り込んだデータを開始で監視できます。 詳しくは、『 [監視データ取り込み](../quality/monitor-data-flows.md) 』ガイドを参照してください。
+このドキュメントを読むと、ストリーミング接続を使用してレコードデータをPlatformに取り込む方法が理解できます。 様々な値を持つ呼び出しをさらに試して、更新された値を取得できます。 また、PlatformUIを使用して、取り込んだデータを開始で監視することもできます。 詳しくは、『 [監視データ取り込み](../quality/monitor-data-flows.md) 』ガイドを参照してください。
 
 一般的なストリーミング取り込みの詳細については、 [ストリーミング取り込みの概要を参照してください](../streaming-ingestion/overview.md)。
