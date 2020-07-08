@@ -4,7 +4,7 @@ solution: Experience Platform
 title: アトリビューションAIでのインサイトの検出
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -30,7 +30,9 @@ In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navig
 
 Attribution AIサービスページが表示されます。 このページには、Attribution AIのサービスインスタンスがリストされ、インスタンス名、コンバージョンイベント、インスタンスが実行される頻度、最後の更新のステータスなど、それらのインスタンスに関する情報が表示されます。 開始するサービスインスタンス名をクリックします。
 
->[!NOTE] スコアリングの実行が成功したサービスインスタンスのみを選択できます。
+>[!NOTE]
+>
+>スコアリングの実行が成功したサービスインスタンスのみを選択できます。
 
 ![インスタンスの作成](./images/insights/select-service-instance.png)
 
@@ -72,7 +74,9 @@ Attribution AIサービスページが表示されます。 このページに�
 
 アトリビューションAIインサイトを使用すると、データをフィルターし、選択したフィルターに基づいてUIのビジュアルを自動的に更新できます。
 
->[!NOTE] デフォルトでは、「属性モデル *」フィルターを除くすべてのフィルターが「すべて」に設定されます。ただし、「* 属性モデル」フィルターは「増分的で影響を受ける属性付きの変換」に設定されます。
+>[!NOTE]
+>
+>デフォルトでは、「属性モデル *」フィルターを除くすべてのフィルターが「すべて」に設定されます。ただし、「* 属性モデル」フィルターは「増分的で影響を受ける属性付きの変換」に設定されます。
 
 ### コンバージョンイベント
 
@@ -98,11 +102,15 @@ Attribution AIサービスページが表示されます。 このページに�
 
 地域 ** フィルターは、地域ベースのモデルに基づいて国コードを入力します。 データに応じて、このフィルターが存在する場合と存在しない場合があります。
 
->[!NOTE] 国コードの長さは2文字です。 完全なリストは、 [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>国コードの長さは2文字です。 完全なリストは、 [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ### 領域
 
->[!NOTE] このフィルターは、サービスインスタンスの作成時に『Attribution AIユーザーインターフェイスガイド [』でオプションの手順である](./user-guide.md#region-based-modeling-optional) 領域ベースのモデリングを実行した場合にのみ表示されます。
+>[!NOTE]
+>
+>このフィルターは、サービスインスタンスの作成時に『Attribution AIユーザーインターフェイスガイド [』でオプションの手順である](./user-guide.md#region-based-modeling-optional) 領域ベースのモデリングを実行した場合にのみ表示されます。
 
 このフィルタを使用すると、インスタンス作成プロセスで設定した任意の領域を選択できます。
 
