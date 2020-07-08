@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 顧客AIでのスコアのダウンロード
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 2%
@@ -243,7 +243,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 ファイルデータをダウンロードするには、前の手順でコピーした `"href"` 値にGETリクエストを行い、ファイル [を取得します](#retrieving-your-files)。
 
->[!NOTE] この要求をコマンドラインで直接行う場合、要求ヘッダーの後に出力を追加するよう求められる場合があります。 次のリクエストの例は、を使用してい `--output {FILENAME.FILETYPE}`ます。
+>[!NOTE]
+>
+>この要求をコマンドラインで直接行う場合、要求ヘッダーの後に出力を追加するよう求められる場合があります。 次のリクエストの例は、を使用してい `--output {FILENAME.FILETYPE}`ます。
 
 **API形式**
 
@@ -267,7 +269,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -O 'filename.parquet'
 ```
 
->[!TIP] GETリクエストを行う前に、ファイルを保存するディレクトリまたはフォルダーが正しいことを確認してください。
+>[!TIP]
+>
+>GETリクエストを行う前に、ファイルを保存するディレクトリまたはフォルダーが正しいことを確認してください。
 
 **応答**
 
@@ -279,7 +283,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 スコアデータをダウンロードする別の方法は、オーディエンスをデータセットにエクスポートすることです。 セグメント化ジョブが正常に完了したら( `status` 属性の値は「SUCCEEDED」です)、オーディエンスをデータセットにエクスポートし、データセットにアクセスして処理できます。 セグメント化について詳しくは、 [セグメント化の概要を参照してください](../../../segmentation/home.md)。
 
->[!IMPORTANT] この書き出し方法を利用するには、データセットに対してリアルタイム顧客プロファイルを有効にする必要があります。
+>[!IMPORTANT]
+>
+>この書き出し方法を利用するには、データセットに対してリアルタイム顧客プロファイルを有効にする必要があります。
 
 セグメント評価ガイドの「 [セグメントの](../../../segmentation/tutorials/evaluate-a-segment.md) エクスポート」の節では、オーディエンスデータセットのエクスポートに必要な手順について説明しています。 このガイドは、次の例の概要と例を示しています。
 
