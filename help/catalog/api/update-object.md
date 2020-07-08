@@ -4,7 +4,7 @@ solution: Experience Platform
 title: オブジェクトの更新
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 3%
@@ -19,7 +19,9 @@ ht-degree: 3%
 * フィールドの使用
 * JSONパッチ表記の使用
 
->[!NOTE] オブジェクトに対するPATCH操作では、拡大可能なフィールドを変更できません。これは、相互に関連するオブジェクトを表します。  相互に関連するオブジェクトに対する変更は、直接行う必要があります。
+>[!NOTE]
+>
+>オブジェクトに対するPATCH操作では、拡大可能なフィールドを変更できません。これは、相互に関連するオブジェクトを表します。  相互に関連するオブジェクトに対する変更は、直接行う必要があります。
 
 ## フィールドを使用した更新
 
