@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupyterノートブックを使用してレシピを作成する
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,6 +30,8 @@ ht-degree: 0%
 レ [!UICONTROL シピビルダー] ・ノートブックを使用すると、トレーニングとスコアリングの実行をノートブック内で実行できます。 これにより、トレーニングデータとスコアリングデータの実験を実行する間に、 `train()` および `score()` 方法を柔軟に変更できます。 トレーニングとスコアの出力結果に満足したら、Recipe Builderノートブックに組み込まれているレシピ機能にノートブックを [!DNL Data Science Workspace] 使用する際に使用するレシピを作成できます。
 
 >[!NOTE]
+>
+>
 >Recipe Builderノートブックは、すべてのファイル形式での作業をサポートしていますが、現在のところ、レシピの作成機能でサポートされているのは、そのみで [!DNL Python]す。
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
@@ -44,9 +46,11 @@ ht-degree: 0%
 
 レシピファイルを編集するには、ファイルパスに対応するジュピター内のセルに移動します。 例えば、に変更を加える場合は、を探 `evaluator.py`し `%%writefile demo-recipe/evaluator.py`ます。
 
-開始がセルに必要な変更を加えた後、セルを実行します。 セルの内容が `%%writefile filename.py` に書き込まれ `filename.py`ます。 各ファイルのセルを手動で実行し、変更を加える必要があります。
+開始がセルに必要な変更を加えた後、セルを実行します。 セルの内容がに書き込まれ `%%writefile filename.py``filename.py`ます。 各ファイルのセルを手動で実行し、変更を加える必要があります。
 
->[!NOTE] 該当する場合は、セルを手動で実行する必要があります。
+>[!NOTE]
+>
+>該当する場合は、セルを手動で実行する必要があります。
 
 ## Recipe Builderノートブックの概要
 
@@ -73,6 +77,8 @@ data_access_sdk_python
 ```
 
 >[!NOTE]
+>
+>
 >追加するライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。
 
 ### Configuration files {#configuration-files}
@@ -115,6 +121,8 @@ data_access_sdk_python
 - [外部ソース](#external-sources)
 
 >[!NOTE]
+>
+>
 >Recipe Builderノートブックでは、データは `platform_sdk` Data Loaderを使用して読み込まれます。
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -144,6 +152,8 @@ df = pd.read_json(data)
 ### From Data Access SDK（非推奨）
 
 >[!CAUTION]
+>
+>
 > `data_access_sdk_python` の使用が推奨されなくなりました。 [data loaderの使用に関するガイドについては、「Convert Data Access code toPlatformSDK](../authoring/platform-sdk.md)`platform_sdk` 」を参照してください。
 
 ユーザーは、データアクセスSDKを使用してデータを読み込むことができます。 ライブラリは、ページの上部に次の行を含めて読み込むことができます。
@@ -162,6 +172,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
+>
+>
 >「 [設定ファイル](#configuration-files)」セクションで説明したように [!DNL Experience Platform]、のデータにアクセスする際に設定される設定パラメーターは次のとおりです。
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
@@ -291,7 +303,9 @@ df.dropna(0, inplace=True)
 
 トレーニングの目的は、トレーニングデータセットの機能とラベルを使用してモデルを作成することです。
 
->[!NOTE]\
+>[!NOTE]
+>
+> 
 >_機能_ は、機械学習モデルが __&#x200B;ラベルを予測するために使用する入力変数を参照します。
 
 この `train()` 機能には、トレーニングモデルを含め、トレーニングされたモデルを返す必要があります。 様々なモデルの例は、『 [scikit-learnユーザーガイド』ドキュメントに記載されています](https://scikit-learn.org/stable/user_guide.html)。
