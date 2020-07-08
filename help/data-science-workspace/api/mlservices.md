@@ -4,7 +4,7 @@ solution: Experience Platform
 title: サービス
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 2%
@@ -213,7 +213,9 @@ curl -X GET \
 
 既存のMLServiceを更新するには、リクエストパスにターゲットMLServiceのIDが含まれるPUT要求を介してプロパティを上書きし、更新されたプロパティを含むJSONペイロードを提供します。
 
->[!TIP] このPUT要求を確実に行うためには、まずGET要求を実行し、ID別にMLServiceを [取得することをお勧めします](#retrieve-a-specific-mlservice)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
+>[!TIP]
+>
+>このPUT要求を確実に行うためには、まずGET要求を実行し、ID別にMLServiceを [取得することをお勧めします](#retrieve-a-specific-mlservice)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
 
 **API形式**
 
