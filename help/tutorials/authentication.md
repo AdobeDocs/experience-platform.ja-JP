@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Experience PlatformAPIの認証とアクセス
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 280456e68f54f49ce4a0134e226af89ad1f849a4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '877'
 ht-degree: 3%
@@ -69,7 +69,9 @@ Adobe I/Oで統合を作成する前に、IMS組織の製品に対する開発�
 
 ## Adobe Developer Consoleでのアクセス資格情報の生成
 
->[!NOTE] 『 [Privacy Service開発者ガイド](../privacy-service/api/getting-started.md)』からこのドキュメントをフォローしている場合は、このガイドに戻って、Privacy Service固有のアクセス資格情報を生成できます。
+>[!NOTE]
+>
+>『 [Privacy Service開発者ガイド](../privacy-service/api/getting-started.md)』からこのドキュメントをフォローしている場合は、このガイドに戻って、Privacy Service固有のアクセス資格情報を生成できます。
 
 Adobe Developer Consoleを使用して、次の3つのアクセス資格情報を生成する必要があります。
 
