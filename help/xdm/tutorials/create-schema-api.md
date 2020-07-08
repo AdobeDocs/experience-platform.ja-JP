@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマレジストリAPIを使用してスキーマを作成する
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -256,7 +256,9 @@ curl -X PATCH \
 
 別のミックスインを使用して手順を繰り返すことで、別の標準ミックスインを追加できるようになりました。
 
->[!TIP] 各フィールドに含まれる内容に慣れるために、使用可能なすべてのミックスインを確認することをお勧めします。 「グローバル」と「テナント」の各コンテナに対してリクエストを実行し、使用しているクラスと「meta:intendedToExtend」フィールドが一致するミックスインのみを返すことで、特定のクラスで使用できるすべてのミックスインをリスト(GET)できます。 この場合、XDM Individualプロファイルクラスなので、XDM Individualプロファイル `$id` が使用されます。
+>[!TIP]
+>
+>各フィールドに含まれる内容に慣れるために、使用可能なすべてのミックスインを確認することをお勧めします。 「グローバル」と「テナント」の各コンテナに対してリクエストを実行し、使用しているクラスと「meta:intendedToExtend」フィールドが一致するミックスインのみを返すことで、特定のクラスで使用できるすべてのミックスインをリスト(GET)できます。 この場合、XDM Individualプロファイルクラスなので、XDM Individualプロファイル `$id` が使用されます。
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -991,7 +993,9 @@ curl -X POST \
       }'
 ```
 
->[!NOTE] 「xdm:名前空間」の値をリストしたり、 [Identity Service APIを使用して新しい値を作成したりできます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 「xdm:property」の値は、使用する「xdm:名前空間」に応じて、「xdm:code」または「xdm:id」にすることができます。
+>[!NOTE]
+>
+>「xdm:名前空間」の値をリストしたり、 [Identity Service APIを使用して新しい値を作成したりできます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 「xdm:property」の値は、使用する「xdm:名前空間」に応じて、「xdm:code」または「xdm:id」にすることができます。
 
 **応答**
 
