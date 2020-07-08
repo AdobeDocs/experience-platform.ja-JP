@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースファイルのレシピへのパッケージ化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/ret
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-次に、スクリプトとを検索でき `experience-platform-dsw-reference/recipes/scala/retail` るディレクトリに移動 `login.sh` し `build.sh`ます。 これらのスクリプトは、DockerにログインしてDockerイメージを作成するために使用されます。 [Docker資格情報の準備ができている場合は](#docker-based-model-authoring) 、次のコマンドを端末に順番に入力します。
+次に、スクリプトとを検索でき `experience-platform-dsw-reference/recipes/scala` るディレクトリに移動 `login.sh` し `build.sh`ます。 これらのスクリプトは、DockerにログインしてDockerイメージを作成するために使用されます。 [Docker資格情報の準備ができている場合は](#docker-based-model-authoring) 、次のコマンドを端末に順番に入力します。
 
 ```BASH
 # for logging in to Docker
@@ -178,6 +178,9 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 # for building Docker image
 ./build.sh
 ```
+
+>[!TIP]
+>スクリプトを使用してDockerにログインしようとする際にアクセス許可エラーが発生した場合は、 `login.sh` コマンドを使用してみ `bash login.sh`ます。
 
 ログインスクリプトを実行する場合、Dockerホスト、ユーザー名、パスワードを指定する必要があります。 構築時には、Dockerホストと、構築用のバージョンタグを指定する必要があります。
 
