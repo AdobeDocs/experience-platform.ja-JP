@@ -4,7 +4,7 @@ solution: Experience Platform
 title: モデルの最適化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 0%
@@ -62,7 +62,9 @@ training.evaluate=true
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 ```
 
->[!NOTE] 指標が定義されていない場合、デフォルトの指標がアクティブになります。
+>[!NOTE]
+>
+>指標が定義されていない場合、デフォルトの指標がアクティブになります。
 
 特定の指標は、の値を変更することで有効にでき `evaluation.metrics.com`ます。 次の例では、F-Score指標が有効です。
 
@@ -83,7 +85,9 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 カスタム評価基準は、フ `MLEvaluator.scala``Evaluator.scala` ァイル内のののインターフェイスを拡張することで提供できます。 例の [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) ファイルでは、カスタム `split()` および `evaluate()` 関数を定義します。 この `split()``evaluate()` 関数は、データをランダムに8:2の比率で分割し、3つの指標を定義して返します。 MAPE、MAE、RMSE。
 
->[!IMPORTANT] このクラスの場合は、新しい評価指標を作成する `MLMetric` 際には使用しないでください。作成し `"measures"``valueType``MLMetric` ない場合は、指標がカスタム評価指標テーブルに入力されません。
+>[!IMPORTANT]
+>
+>このクラスの場合は、新しい評価指標を作成する `MLMetric` 際には使用しないでください。作成し `"measures"``valueType``MLMetric` ない場合は、指標がカスタム評価指標テーブルに入力されません。
 >  
 > 実行する手順： `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > 次の条件を満たさない： `metrics.add(new MLMetric("MAPE", mape, "measures"))`
