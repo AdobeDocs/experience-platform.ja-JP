@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ使用ポリシーの作成
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 3%
@@ -217,7 +217,9 @@ curl -X PUT \
 }
 ```
 
->[!NOTE] ORおよびAND演算子のみがサポートされます。
+>[!NOTE]
+>
+>ORおよびAND演算子のみがサポートされます。
 
 ポリシー式を設定したら、エンドポイントにPOSTリクエストを行って、新しいDULEポリシーを作成でき `/policies/custom` ます。
 
@@ -322,7 +324,9 @@ curl -X POST \
 
 ## DULEポリシーの有効化
 
->[!NOTE] この手順はオプションですが、SCHEDULEポリシーのステータスを変更しない場合は、デフォルトで、評価に参加するにはポリシーのステータスがに設定され `DRAFT``ENABLED` ている必要があります。 ステータスのポリシーに対して例外を行う方法については、 [DULEポリシーの](../enforcement/api-enforcement.md) 適用に関するチュートリアルを参照してく `DRAFT` ださい。
+>[!NOTE]
+>
+>この手順はオプションですが、SCHEDULEポリシーのステータスを変更しない場合は、デフォルトで、評価に参加するにはポリシーのステータスがに設定され `DRAFT``ENABLED` ている必要があります。 ステータスのポリシーに対して例外を行う方法については、 [DULEポリシーの](../enforcement/api-enforcement.md) 適用に関するチュートリアルを参照してく `DRAFT` ださい。
 
 デフォルトでは、プロパティが「 `status` 」に設定されているSCHEDULEポリシーは評価に `DRAFT` 関与しません。 エンドポイントにPATCH要求を行い、要求パスの最後にポリシーの一意の識別子を指定することで、評価用のポリシーを有効にすることがで `/policies/custom/` きます。
 
