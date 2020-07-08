@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform ID サービス
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
@@ -72,8 +72,10 @@ UIを使用してカスタム名前空間を作成するには、「ID名前空�
 
 標準名前空間と同様に、「 *[!UICONTROL 参照]* 」タブでカスタム名前空間をクリックして詳細を表示できますが、カスタム名前空間では、詳細領域から表示名と説明を編集することもできます。
 
->[!NOTE] 名前空間を作成すると、そのシンボルを削除できなくなり、「IDシンボル」（APIでは「コード」）と「タイプ」は変更できなくなります。
+>[!NOTE]
+>
+>名前空間を作成すると、そのシンボルを削除できなくなり、「IDシンボル」（APIでは「コード」）と「タイプ」は変更できなくなります。
 
 ## IDデータの名前空間
 
-IDの名前空間の入力は、IDデータの提供に使用する方法に応じて異なります。 データIDデータの提供について詳しくは、 [概要のIDデータの](./home.md#supplying-identity-data-to-identity-service)[!DNL Identity Service] 供給に関する節を参照してください。
+IDの名前空間の入力は、IDデータの提供に使用する方法に応じて異なります。 データIDデータの提供について詳しくは、 [概要のIDデータの](./home.md#supplying-identity-data-to-identity-service) 供給に関する節を参照してください [!DNL Identity Service] 。
