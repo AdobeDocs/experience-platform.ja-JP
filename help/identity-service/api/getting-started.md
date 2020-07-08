@@ -4,7 +4,7 @@ solution: Experience Platform
 title: はじめに
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 1%
@@ -42,7 +42,9 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -61,7 +63,9 @@ APIで現在サポートされている領域は2つあり [!DNL Identity Servic
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
 
->[!NOTE] 領域を指定せずに要求を行うと、誤った領域に対する呼び出しルーティングが発生したり、呼び出しが予期せず失敗したりする場合があります。
+>[!NOTE]
+>
+>領域を指定せずに要求を行うと、誤った領域に対する呼び出しルーティングが発生したり、呼び出しが予期せず失敗したりする場合があります。
 
 IMS組織プロファイル内で地域が見つからない場合は、システム管理者に問い合わせてください。
 
@@ -77,7 +81,9 @@ IDが持続する場合、はIDを [!DNL Identity Service] 生成し、ネイテ
 
 このドキュメントの例では、 [!DNL Identity Service] APIの全機能について説明していません。 完全なAPIについては、『 [Swagger API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)』を参照してください。
 
->[!NOTE] 要求でネイティブXIDが使用されている場合、返されるIDはすべてネイティブXID形式になります。 ID/名前空間フォームの使用をお勧めします。 詳しくは、IDのXIDの [取得に関する節を参照してください](./create-custom-namespace.md)。
+>[!NOTE]
+>
+>要求でネイティブXIDが使用されている場合、返されるIDはすべてネイティブXID形式になります。 ID/名前空間フォームの使用をお勧めします。 詳しくは、IDのXIDの [取得に関する節を参照してください](./create-custom-namespace.md)。
 
 ## 次の手順
 
