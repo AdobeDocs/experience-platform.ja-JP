@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Batch Ingestion開発ガイド
+title: Adobe Experience Platformバッチ取り込み開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2577'
 ht-degree: 6%
@@ -24,29 +24,31 @@ ht-degree: 6%
 
 以下の節では、バッチインジェストAPIの呼び出しを正常に行うために知っておく必要がある、または手元に置く必要がある追加情報について説明します。
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
 - [バッチインジェスト](./overview.md): データをバッチファイルとしてAdobe Experience Platformに取り込むことができます。
-- [Experience Data Model(XDM)System](../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-- [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含む要求には、追加の `Content-Type` ヘッダーが必要な場合があります。 各呼び出しに固有の受け入れられた値は、呼び出しパラメーターに提供されます。 このガイドでは、次のコンテンツタイプを使用します。
 
@@ -59,11 +61,11 @@ ht-degree: 6%
 
 データを取り込む際には、柔軟性があります。ターゲットスキーマ内のデータと一致しない場合、データは表示されるターゲットタイプに変換されます。 できない場合は、バッチはaで失敗し `TypeCompatibilityException`ます。
 
-例えば、JSONもCSVも日付や日時のタイプを持ちません。 その結果、これらの値は、 [ISO 8061形式の文字列](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;)またはUNIX時間(153126395)を使用して表されます。9000)に変換され、取り込み時にターゲットXDMタイプに変換されます。
+例えば、JSONもCSVも、日付や日付時間タイプを持ちません。 その結果、これらの値は、 [ISO 8061形式の文字列](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;)またはUNIX時間(153126395)を使用して表されます。9000)に変換され、取り込み時にターゲットXDMタイプに変換されます。
 
 次の表に、データを取り込む際にサポートされる変換を示します。
 
-| 受信（行）とターゲット（列） | 文字列 | バイト | Short | 整数 | ロング | 重複 | 日付 | 日時 | オブジェクト | マップ |
+| 受信（行）とTarget（列） | 文字列 | バイト | Short | 整数 | ロング | 重複 | 日付 | 日時 | オブジェクト | マップ |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 文字列 | X | X | X | X | X | X | X | X |  |  |
 | バイト | X | X | X | X | X | X |  |  |  |  |
@@ -76,7 +78,9 @@ ht-degree: 6%
 | オブジェクト |  |  |  |  |  |  |  |  | X | X |
 | マップ |  |  |  |  |  |  |  |  | X | X |
 
->[!NOTE] ブール値と配列は、他の型に変換できません。
+>[!NOTE]
+>
+>ブール値と配列は、他の型に変換できません。
 
 ## 取り込みの制約
 
@@ -88,13 +92,17 @@ ht-degree: 6%
 
 ## 取り込みJSONファイル
 
->[!NOTE] 以下の手順は、小さいファイル（256 MB以下）に適用されます。 ゲートウェイのタイムアウトまたは要求本文のサイズのエラーが発生した場合は、大きいファイルのアップロードに切り替える必要があります。
+>[!NOTE]
+>
+>以下の手順は、小さいファイル（256 MB以下）に適用されます。 ゲートウェイのタイムアウトまたは要求本文のサイズのエラーが発生した場合は、大きいファイルのアップロードに切り替える必要があります。
 
 ### バッチの作成
 
 まず、入力形式としてJSONを含むバッチを作成する必要があります。 バッチを作成する場合は、データセットIDを指定する必要があります。 また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされたXDMスキーマに準拠していることを確認する必要もあります。
 
->[!NOTE] 以下に、1行JSONの例を示します。 複数行のJSONを取り込むには、 `isMultiLineJson` フラグを設定する必要があります。 詳しくは、 [バッチインジェストのトラブルシューティングガイドを参照してください](./troubleshooting.md)。
+>[!NOTE]
+>
+>以下に、1行JSONの例を示します。 複数行のJSONを取り込むには、 `isMultiLineJson` フラグを設定する必要があります。 詳しくは、 [バッチインジェストのトラブルシューティングガイドを参照してください](./troubleshooting.md)。
 
 **API形式**
 
@@ -154,7 +162,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 これでバッチが作成されたので、前の `batchId` からを使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
 
->[!NOTE] 適切にフォーマットされたJSONデータファイルの [例については、付録の節を参照してください](#data-transformation-for-batch-ingestion)。
+>[!NOTE]
+>
+>適切にフォーマットされたJSONデータファイルの [例については、付録の節を参照してください](#data-transformation-for-batch-ingestion)。
 
 **API形式**
 
@@ -170,7 +180,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **リクエスト**
 
->[!NOTE] このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
+>[!NOTE]
+>
+>このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -224,7 +236,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ## インジェストパーケファイル
 
->[!NOTE] 以下の手順は、小さいファイル（256 MB以下）に適用されます。 ゲートウェイのタイムアウトまたは要求本文のサイズのエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
+>[!NOTE]
+>
+>以下の手順は、小さいファイル（256 MB以下）に適用されます。 ゲートウェイのタイムアウトまたは要求本文のサイズのエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
 
 ### バッチの作成
 
@@ -301,7 +315,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **リクエスト**
 
->[!CAUTION] このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
+>[!CAUTION]
+>
+>このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -355,7 +371,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 大きなパーケファイルを取り込む
 
->[!NOTE] この節では、256 MBを超えるファイルをアップロードする方法について説明します。 大きなファイルはチャンクでアップロードされ、API信号を介して繋ぎ合わされます。
+>[!NOTE]
+>
+>この節では、256 MBを超えるファイルをアップロードする方法について説明します。 大きなファイルはチャンクでアップロードされ、API信号を介して繋ぎ合わされます。
 
 ### バッチの作成
 
@@ -470,7 +488,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **リクエスト**
 
->[!CAUTION] このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
+>[!CAUTION]
+>
+>このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -562,7 +582,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 CSVファイルを取り込むには、CSVをサポートするクラス、スキーマ、データセットを作成する必要があります。 必要なクラスとスキーマを作成する方法について詳しくは、「 [ad hocスキーマの作成」チュートリアルに記載されている手順に従ってください](../../xdm/api/ad-hoc.md)。
 
->[!NOTE] 以下の手順は、小さいファイル（256 MB以下）に適用されます。 ゲートウェイのタイムアウトまたは要求本文のサイズのエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
+>[!NOTE]
+>
+>以下の手順は、小さいファイル（256 MB以下）に適用されます。 ゲートウェイのタイムアウトまたは要求本文のサイズのエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
 
 ### データセットの作成
 
@@ -698,7 +720,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 これでバッチが作成されたので、前の `batchId` からを使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
 
->[!NOTE] 適切にフォーマットされたCSVデータファイルの [例については、付録の節を参照してください](#data-transformation-for-batch-ingestion)。
+>[!NOTE]
+>
+>適切にフォーマットされたCSVデータファイルの [例については、付録の節を参照してください](#data-transformation-for-batch-ingestion)。
 
 **API形式**
 
@@ -714,7 +738,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **リクエスト**
 
->[!CAUTION] このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
+>[!CAUTION]
+>
+>このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -919,7 +945,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **リクエスト**
 
->[!CAUTION] このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。 APIと互換性のないマルチパートリクエストがデフォルトの設定になるので、curl -Fオプションは使用しないでください。
+>[!CAUTION]
+>
+>このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。 APIと互換性のないマルチパートリクエストがデフォルトの設定になるので、curl -Fオプションは使用しないでください。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -975,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### バッチ取り込み用のデータ変換
 
-データファイルをExperience Platformに取り込むには、ファイルの階層構造が、アップロード先のデータセットに関連付けられている [Experience Data Model(XDM)](../../xdm/home.md) スキーマに準拠している必要があります。
+データファイルをExperience Platformに取り込むためには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた [Experience Data Model(XDM)](../../xdm/home.md) スキーマに準拠している必要があります。
 
 XDMスキーマに準拠するためのCSVファイルのマッピング方法に関する情報は、 [サンプルのtransformations](../../etl/transformations.md) ドキュメントに記載されています。また、適切にフォーマットされたJSONデータファイルの例も含まれています。 ドキュメントーに用意されているサンプルファイルは次の場所にあります。
 
