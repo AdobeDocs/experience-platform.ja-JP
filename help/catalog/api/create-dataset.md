@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データセットの作成
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 1%
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 カタログAPIを使用してデータセットを作成するには、そのデータセットの基となるExperience Data Model(XDM)スキーマの `$id` 値を把握しておく必要があります。 スキーマIDを取得したら、カタログAPIのエンドポイントにPOSTリクエストを行って、データセットを作成でき `/datasets` ます。
 
->[!NOTE] このドキュメントでは、Catalogでデータセットオブジェクトを作成する方法についてのみ説明します。 データセットの作成、設定、監視の手順について詳しくは、次の [チュートリアルを参照してください](../datasets/create.md)。
+>[!NOTE]
+>
+>このドキュメントでは、Catalogでデータセットオブジェクトを作成する方法についてのみ説明します。 データセットの作成、設定、監視の手順について詳しくは、次の [チュートリアルを参照してください](../datasets/create.md)。
 
 **API形式**
 
@@ -55,7 +57,9 @@ curl -X POST \
 | `name` | 作成するデータセットの名前。 |
 | `schemaRef.id` | データセットの基となるXDMスキーマのURI `$id` 値。 |
 
->[!NOTE] 次の例では、 [パーケット](https://parquet.apache.org/documentation/latest/) ・ファイル形式を `containerFormat` プロパティに使用します。 JSONファイル形式の使用例については、『 [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md)』を参照してください。
+>[!NOTE]
+>
+>次の例では、 [パーケット](https://parquet.apache.org/documentation/latest/) ・ファイル形式を `containerFormat` プロパティに使用します。 JSONファイル形式の使用例については、『 [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md)』を参照してください。
 
 **応答**
 
