@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリ結果からデータセットを生成する
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
@@ -14,12 +14,12 @@ ht-degree: 0%
 
 # クエリ結果からデータセットを生成する
 
-Data Science Workspace、Real-time Customer Commenter Workspace、分析Workspaceなどの他のサービスへの入力として使用するデータレーク内のデータセットをクエリを使用して生成する場合に、クエリサービスの真の利点が明らかになります。
+Data Science Workspace、Real-time Customer Workspace、Analysis Workspaceなどの他のサービスへの入力として使用するデータレーク内のデータセットをクエリが生成する際に、クエリサービスの真の力が明らかになります。
 
 クエリサービスを使用すると、UIからデータセットを作成できます。 次の手順に従います。
 
 1. 接続されたクライアントを使用してクエリを書き込み、出力を検証します。
-2. プラットフォームUIにログインし、クエリに移動します。
+2. PlatformUIにログインし、クエリに移動します。
 3. リスト内のクエリを見つけ、行の上にカーソルを置きます。
 4. 「データセット **を作成**」をクリックします。 ![画像](../images/queries/create-datasets/click-create-dataset.png)
 5. LDAP IDの前に付けたデータセット名を入力します（一意である必要もSQLセーフでない場合もあります）。 システムは、ここで与えられた名前に基づいて「テーブル名」を生成します)。
@@ -28,7 +28,9 @@ Data Science Workspace、Real-time Customer Commenter Workspace、分析Workspac
 
 作成したデータセットは、データレーク内の他のデータセットと同様にアクセスでき、様々な使用例に使用できます。
 
->[!NOTE] 実稼働中の実装では、データセットの作成後にData Governanceラベルを適用する必要があります。
+>[!NOTE]
+>
+>実稼働中の実装では、データセットの作成後にData Governanceラベルを適用する必要があります。
 
 ## 定義済みのExperience Data Modelスキーマを使用したデータセットの生成
 
