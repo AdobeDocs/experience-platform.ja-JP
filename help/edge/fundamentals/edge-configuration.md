@@ -4,7 +4,7 @@ seo-title: Experience PlatformWeb SDKのエッジ設定
 description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 seo-description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 3%
@@ -23,6 +23,8 @@ Adobe Experience PlatformWeb SDKの設定は、2か所に分かれています�
 ![エッジ設定ツールのナビゲーション](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
+>
+>
 >
 >エッジ設定ツールは、タグマネージャーとして使用しているかどうかに関係なく、許可リスト [!DNL Launch] 上で利用できます。 また、での開発権限も必要で [!DNL Launch]す。 詳しくは、ドキュメントの「 [ユーザー権限](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/user-permissions.html) 」 [!DNL Launch] の記事を参照してください。
 
@@ -77,6 +79,8 @@ Adobe Targetを設定するには、クライアントコードを指定する�
 ![Adobe Target設定ブロック](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
+>
+>
 >
 >クライアントコードに関連付けられた組織は、設定IDが作成された組織と一致する必要があります。
 
