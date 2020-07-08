@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Power BIに接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -46,7 +46,9 @@ Power BIをインストールした後、PostgreSQLコネクタをサポート�
 
 - *（オプションですが、データベースに対して「all」が宣言されている場合に推奨されます）* SQL文を入力します。
 
->[!NOTE] SQL文を指定しない場合、Power BIはデータベース内のすべてのテーブルをプレビューします。 階層データの場合は、カスタムSQLステートメントを使用する必要があります。 テーブルスキーマがフラットな場合は、カスタムSQLステートメントを使用するか、使用しないかを指定します。 複合型はPower BIではまだサポートされていません。複合型からプリミティブ型を取得するには、SQL文を記述して派生させる必要があります。
+>[!NOTE]
+>
+>SQL文を指定しない場合、Power BIはデータベース内のすべてのテーブルをプレビューします。 階層データの場合は、カスタムSQLステートメントを使用する必要があります。 テーブルスキーマがフラットな場合は、カスタムSQLステートメントを使用するか、使用しないかを指定します。 複合型はPower BIではまだサポートされていません。複合型からプリミティブ型を取得するには、SQL文を記述して派生させる必要があります。
 
 ```sql
 SELECT web.webPageDetails.name AS Page_Name, 
