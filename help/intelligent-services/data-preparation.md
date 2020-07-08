@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 1%
@@ -82,7 +82,9 @@ CEEミックスインには、インテリジェントサービスが有用な�
 
 #### xdm:チャネル {#channel}
 
->[!NOTE] このフィールドは、アトリビューションAIを使用する場合にのみ必須です。
+>[!NOTE]
+>
+>このフィールドは、アトリビューションAIを使用する場合にのみ必須です。
 
 このフィールドは、ExperienceEventに関連するマーケティングチャネルを表します。 このフィールドには、チャネルのタイプ、メディアのタイプ、場所のタイプに関する情報が含まれます。
 
@@ -245,7 +247,9 @@ CEEミックスインには、インテリジェントサービスが有用な�
 
 ### Adobe Experience Platformの使用
 
->[!NOTE] 以下の手順では、Experience Platformを購読する必要があります。 Platformにアクセスできない場合は、 [次の手順](#next-steps) 。
+>[!NOTE]
+>
+>以下の手順では、Experience Platformを購読する必要があります。 Platformにアクセスできない場合は、 [次の手順](#next-steps) 。
 
 この節では、詳細な手順のチュートリアルへのリンクを含む、Intelligent Servicesで使用するデータをマッピングし、Experience Platformに取り込むためのワークフローについて説明します。
 
@@ -256,7 +260,9 @@ CEEミックスインには、インテリジェントサービスが有用な�
 * [UIでのスキーマの作成](../xdm/tutorials/create-schema-ui.md)
 * [APIでのスキーマの作成](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] 上記のチュートリアルは、スキーマを作成するための一般的なワークフローに従っています。 スキーマのクラスを選択する場合は、 **XDM ExperienceEventクラスを使用する必要があります**。 このクラスを選択したら、CEEミックスインをスキーマに追加できます。
+>[!IMPORTANT]
+>
+>上記のチュートリアルは、スキーマを作成するための一般的なワークフローに従っています。 スキーマのクラスを選択する場合は、 **XDM ExperienceEventクラスを使用する必要があります**。 このクラスを選択したら、CEEミックスインをスキーマに追加できます。
 
 CEEミックスインをスキーマに追加した後、データ内の追加フィールドに必要に応じて他のミックスインを追加できます。
 
@@ -271,7 +277,9 @@ CEEミックスインをスキーマに追加した後、データ内の追加�
 
 #### データセット追加の主なID名前空間タグ
 
->[!NOTE] 今後のリリースのIntelligent Servicesでは、 [Adobe Experience PlatformIDサービス](../identity-service/home.md) をお客様の識別機能に統合する予定です。 したがって、次の手順は変更される場合があります。
+>[!NOTE]
+>
+>今後のリリースのIntelligent Servicesでは、 [Adobe Experience PlatformIDサービス](../identity-service/home.md) をお客様の識別機能に統合する予定です。 したがって、次の手順は変更される場合があります。
 
 、などの外部ソースからデータを取り込む場合 [!DNL Adobe Audience Manager]は、データセットに [!DNL Adobe Analytics]`primaryIdentityNameSpace` タグを追加する必要があります。 これは、カタログサービスAPIにPATCHリクエストを行うことで行うことができます。
 
@@ -329,7 +337,9 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] PlatformでのID名前空間の操作について詳しくは、「 [ID名前空間の概要](../identity-service/namespaces.md)」を参照してください。
+>[!NOTE]
+>
+>PlatformでのID名前空間の操作について詳しくは、「 [ID名前空間の概要](../identity-service/namespaces.md)」を参照してください。
 
 **応答**
 
