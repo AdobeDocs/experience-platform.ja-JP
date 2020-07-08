@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspaceの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2569'
 ht-degree: 0%
@@ -123,7 +123,9 @@ Data Science Workspaceは、実験プロセスに大幅な柔軟性をもたら�
 
 Access control for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). この機能は、Admin Consoleの製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。 See the [access control overview](../access-control/home.md) for more information.
 
->[!IMPORTANT] を使用するに [!DNL Data Science Workspace]は、「データサイエンスワークスペース [!UICONTROL を管理] 」権限を有効にする必要があります。
+>[!IMPORTANT]
+>
+>を使用するに [!DNL Data Science Workspace]は、「データサイエンスワークスペース [!UICONTROL を管理] 」権限を有効にする必要があります。
 
 次の表に、この権限を有効または無効にした場合の影響を示します。
 
