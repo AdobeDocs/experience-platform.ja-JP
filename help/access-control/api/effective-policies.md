@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 表示効果の高いポリシー
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%
@@ -40,7 +40,9 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] ペイロード配列で提供できる権限とリソースタイプの完全なリストについては、 [許可された権限とリソースタイプに関する付録の節を参照してください](#accepted-permissions-and-resource-types)。
+>[!NOTE]
+>
+>ペイロード配列で提供できる権限とリソースタイプの完全なリストについては、 [許可された権限とリソースタイプに関する付録の節を参照してください](#accepted-permissions-and-resource-types)。
 
 **応答**
 
@@ -63,7 +65,7 @@ curl -X POST \
 
 ## 次の手順
 
-このドキュメントでは、アクセス制御APIを呼び出して、アクティブな権限とリソースタイプの関連ポリシーに関する情報を返す方法について説明しました。 エクスペリエンスプラットフォームのアクセス制御について詳しくは、 [アクセス制御の概要を参照してください](../home.md)。
+このドキュメントでは、アクセス制御APIを呼び出して、アクティブな権限とリソースタイプの関連ポリシーに関する情報を返す方法について説明しました。 Experience Platformのアクセス制御について詳しくは、 [アクセス制御の概要を参照してください](../home.md)。
 
 ## 付録
 
