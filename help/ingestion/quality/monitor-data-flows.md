@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ取り込みの監視
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # データ取り込みの監視
 
-データ取り込みを使用すると、データをAdobe Experience Platformに取り込むことができます。 バッチインジェストを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングエンドポイントを使用してリアルタイムにデータをプラットフォームに取り込むことができます。
+データ取り込みを使用すると、Adobe Experience Platformにデータを取り込むことができます。 バッチインジェストを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングエンドポイントを使用してリアルタイムにデータをPlatformに取り込むことができます。
 
-このユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内でデータを監視する手順を説明します。 このガイドを使用するには、Adobe IDをお持ちの方がAdobe Experience Platformにアクセスできる必要があります。
+このユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内のデータを監視する手順を説明します。 このガイドを使用するには、Adobe IDとAdobe Experience Platformへのアクセス権が必要です。
 
 ## ストリーミングのエンド・ツー・エンドのデータ取り込みの監視
 
-Experience Platform UI [(](https://platform.adobe.com)エクスペリエンスプラットフォームUI **)で、左側のナビゲーションメニューの「** 監視 **」をクリックし、「** Streaming end-to-end（エンドツーエンド）」をクリックします。
+[Experience PlatformUIで、左側のナビゲーションメニューの「](https://platform.adobe.com)監視 **」をクリックし、「** Streaming end-to-end ****」をクリックします。
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-[ *ストリーミングエンドツーエンドの監視* ]ページが表示されます。 このワークスペースには、プラットフォームが受信したストリームイベントの割合を示すグラフ、 [リアルタイム顧客プロファイルが正常に処理したストリームイベントの割合](../../profile/home.md)、および入力データの詳細なリストが表示されます。
+[ *ストリーミングエンドツーエンドの監視* ]ページが表示されます。 このワークスペースには、Platformが受け取るストリームイベントの割合を示すグラフ、リアルタイム顧客プロファイルが正常に処理したストリームイベントの割合を示すグラフ [](../../profile/home.md)、および入力データの詳細リストが表示されます。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -34,7 +34,9 @@ Experience Platform UI [(](https://platform.adobe.com)エクスペリエンス�
 
 下のグラフには、過去7日間にプロファイル別に、正常に処理されたストリームイベントの割合が表示されます。 この日付範囲は、強調表示されたボタンをクリックすると、様々な期間を表示するように調整できます。
 
-> [!NOTE] このグラフにデータを表示するには、プロファイルを **明示的に有効にする必要があります** 。 プロファイル用のストリーミングデータを有効にする方法については、『 [datasetsユーザガイド](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)』を参照してください。
+>[!NOTE]
+>
+>このグラフにデータを表示するには、プロファイルを **明示的に有効にする必要があります** 。 プロファイル用のストリーミングデータを有効にする方法については、『 [datasetsユーザガイド](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)』を参照してください。
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -58,7 +60,7 @@ Experience Platform UI [(](https://platform.adobe.com)エクスペリエンス�
 
 ## バッチのエンドツーエンドのデータ取り込みの監視
 
-Experience Platform UI [(](https://platform.adobe.com)エクスペリエンスプラットフォームのUI **)で、左側のナビゲーションメニューの「** 監視」をクリックします。
+[ [Experience PlatformUI](https://platform.adobe.com)]で、左側のナビゲーションメニューの[ **監視** ]をクリックします。
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
