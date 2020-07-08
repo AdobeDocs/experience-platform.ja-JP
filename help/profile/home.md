@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルの概要
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 2%
@@ -129,6 +129,8 @@ Experience Platformは、プロファイルを効果的に使用するために�
 --->
 
 >[!NOTE]
+>
+>
 >非個人エンティティは、プロファイルの一部で **はないXDMクラスを参照します** 。
 
 ## 次の手順とその他のリソース
