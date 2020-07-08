@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービス開発ガイド
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 2%
@@ -147,7 +147,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 }
 ```
 
->[!NOTE] の値を使用して、指定したスケジュール済みクエリ `_links.cancel` の実行を [停止できます](#immediately-stop-a-run-for-a-specific-scheduled-query)。
+>[!NOTE]
+>
+>の値を使用して、指定したスケジュール済みクエリ `_links.cancel` の実行を [停止できます](#immediately-stop-a-run-for-a-specific-scheduled-query)。
 
 ### 特定のスケジュールされたクエリに対する実行を直ちにトリガーする
 
