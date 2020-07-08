@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 配列、リスト、セット関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '740'
-ht-degree: 5%
+ht-degree: 9%
 
 ---
 
 
 # 配列、リスト、セット関数
 
-プロファイルクエリ言語(PQL)オファーは、配列、リスト、文字列とのやり取りを容易にするための機能です。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+プロファイルクエリ言語(PQL)オファーは、配列、リスト、文字列とのやり取りを容易にするための機能です。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## イン
 
 この `in` 関数は、項目が配列のメンバかリストのメンバかを判断するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {VALUE} in {ARRAY}
@@ -38,9 +38,11 @@ person.birthMonth in [3, 6, 9]
 
 この `notIn` 関数は、項目が配列またはリストのメンバでないかどうかを判断するために使用されます。
 
->[!NOTE] また、 `notIn` この関数 *は* 、どちらの値もnullに等しくないことを確認します。 したがって、結果は `in` 関数の否定ではありません。
+>[!NOTE]
+>
+>また、 `notIn` この関数 *は* 、どちらの値もnullに等しくないことを確認します。 したがって、結果は `in` 関数の否定ではありません。
 
-**形式**
+**書式**
 
 ```sql
 {VALUE} notIn {ARRAY}
@@ -58,7 +60,7 @@ person.birthMonth notIn [3, 6, 9]
 
 この `intersects` 関数は、2つの配列またはリストに少なくとも1つの共通メンバが存在するかどうかを判断するために使用します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.intersects({ARRAY})
@@ -76,7 +78,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 この `intersection` 関数は、2つの配列またはリストの共通メンバーを特定するために使用します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.intersection({ARRAY})
@@ -94,7 +96,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 この `subsetOf` 関数は、特定の配列（配列A）が別の配列（配列B）のサブセットであるかどうかを判定するために使用されます。 つまり、配列Aの要素はすべて配列Bの要素です。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.subsetOf({ARRAY})
@@ -112,7 +114,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 この `supersetOf` 関数は、特定の配列（配列A）が別の配列（配列B）のスーパーセットであるかを判断するために使用されます。 つまり、配列Aには配列Bの要素がすべて含まれます。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.supersetOf({ARRAY})
@@ -128,9 +130,9 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## 含む
 
-この `includes` 関数は、配列またはリストに特定の項目が含まれているかどうかを調べるために使用されます。
+この `includes` 関数は、配列またはリストに特定の項目が含まれているかどうかを調べるのに使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.includes({ITEM})
@@ -148,7 +150,7 @@ person.favoriteColors.includes("red")
 
 この `distinct` 関数は、配列またはリストから重複値を削除するために使用します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.distinct()
@@ -166,7 +168,7 @@ person.orders.storeId.distinct().count() > 1
 
 この `groupBy` 関数は、配列またはリストの値を式の値に基づいてグループに分割するために使用します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.groupBy({EXPRESSION)
@@ -189,7 +191,7 @@ orders.groupBy(storeId)
 
 この `filter` 関数は、式に基づいて配列またはリストをフィルタリングするために使用します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.filter({EXPRESSION})
@@ -212,7 +214,7 @@ person.filter(age >= 21)
 
 この `map` 関数は、特定の配列内の各項目に式を適用して新しい配列を作成するために使用します。
 
-**形式**
+**書式**
 
 ```sql
 array.map(expression)
@@ -230,7 +232,7 @@ numbers.map(square)
 
 この `topN` 関数は、渡された数値式に基づいて昇順で並べ替えられた場合に、配列の最初の `N` 項目を返すために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.topN({VALUE}, {AMOUNT})
@@ -254,7 +256,7 @@ orders.topN(price, 5)
 
 この `bottomN` 関数は、渡された数値式に基づいて昇順で並べ替えられた場合に、配列の最後の `N` 項目を返すために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.bottomN({VALUE}, {AMOUNT})
@@ -278,7 +280,7 @@ orders.bottomN(price, 5)
 
 この `head` 関数は、配列またはリスト内の最初の項目を返すために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.head()
@@ -294,4 +296,4 @@ orders.topN(price, 5).head()
 
 ## 次の手順
 
-これで、配列、リスト、および設定関数について学習できたので、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
+これで、配列、リスト、および設定関数について学習できたので、PQLクエリ内で使用できます。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
