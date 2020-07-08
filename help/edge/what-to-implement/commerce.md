@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK での製品のサポート
 description: Experience Platform Web SDK で製品または買い物かごを使用している場合に、データを追加する方法について説明します。
 seo-description: Experience Platform Web SDK で製品または買い物かごを使用している場合に、データを追加する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 100%
@@ -19,6 +19,8 @@ ht-degree: 100%
 このドキュメントでは、[ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) mixin を使用します。`commerce` mixin は　2　つの部分（`commerce` オブジェクトと `productListItems` 配列）に分類されます。`commerce` オブジェクトを使用すると、`productListItems` 配列に対してどのアクションが発生しているかを指定できます。
 
 >[!Tip]
+>
+>
 >Adobe Analytics に詳しい方向けに説明すると、`commerce` は `events` と最も密接に関係しています。`productListItems` は、`products`　変数とより密接に関連しています。
 
 ## 製品に関するアクション
@@ -26,6 +28,8 @@ ht-degree: 100%
 以下に、`commerce` オブジェクトで使用可能な `measures` のリストを示します。
 
 >[!Tip]
+>
+>
 >測定には、2 つのフィールド（`id` と `value`）があります。ほとんどの場合、`value` フィールドのみを使用します（例：`'value':1`）。この `id` フィールドでは、測定が送信されたタイミングを追跡可能な一意の ID を設定できます。[測定](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md)については、XDM のドキュメントを参照してください。
 
 | **測定** | **推奨** | **説明** |
