@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: リアルタイムの顧客プロファイルAPI開発ガイド
+title: マージポリシー — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '2052'
+source-wordcount: '2053'
 ht-degree: 3%
 
 ---
 
 
-# 結合ポリシー
+# ポリシーエンドポイントの結合
 
 Adobe Experience Platformを使用すると、複数のソースからデータを統合し、それを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する場合、統合ポリシーは、データの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するためにプラットフォームで使用されるルールです。RESTful APIまたはユーザーインターフェイスを使用して、新しい結合ポリシーを作成し、既存のポリシーを管理し、組織のデフォルトの結合ポリシーを設定できます。 このガイドでは、APIを使用した結合ポリシーの操作手順を示します。 UIを使用してマージポリシーを操作するには、 [マージポリシーユーザーガイドを参照してください](../ui/merge-policies.md)。
 
@@ -516,7 +516,7 @@ curl -X POST \
 }
 ```
 
-結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [結合ポリシーのコンポーネントに関する節を参照してください](#components-of-merge-policies) 。
+結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [](#components-of-merge-policies) 結合ポリシーのコンポーネントに関する節を参照してください。
 
 ## マージポリシーの更新 {#update}
 
