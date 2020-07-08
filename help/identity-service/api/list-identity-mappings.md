@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リストIDマッピング
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -65,7 +65,9 @@ curl -X GET \
 
 この `POST``GET` メソッドは、上記のメソッドとバッチ同等に、複数のIDのマッピングを取得するために使用します。
 
->[!NOTE] 要求は、IDの数が最大1000個に達することを示す必要があります。 IDが1000個を超える要求は、400個のステータスコードになります。
+>[!NOTE]
+>
+>要求は、IDの数が最大1000個に達することを示す必要があります。 IDが1000個を超える要求は、400個のステータスコードになります。
 
 **API形式**
 
