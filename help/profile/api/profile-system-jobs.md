@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: リアルタイムの顧客プロファイルAPI開発ガイド
+title: プロファイルシステムジョブ — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1503'
 ht-degree: 2%
 
 ---
 
 
-# プロファイルシステムジョブ（削除要求）
+# プロファイルシステムジョブエンドポイント（削除要求）
 
 Adobe Experience Platformを使用すると、複数のソースからデータを取り込み、個々の顧客に対して堅牢なプロファイルを構築できます。 Platformに取り込まれたデータは、データレークとリアルタイム顧客プロファイルデータストアに保存されます。 不要になった、または誤って追加されたデータを削除するために、プロファイルストアからデータセットまたはバッチを削除する必要が生じる場合があります。 これには、「削除リクエスト」とも呼ばれるプロファイルシステムジョブ（必要に応じて変更、監視または削除も可能）を作成するために、リアルタイムカスタマープロファイルAPIを使用する必要があります。
 
