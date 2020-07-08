@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリサービス開発ガイド
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 3%
@@ -217,7 +217,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 }
 ```
 
->[!NOTE] の値を使用して、作成したスケジュール済みクエリ `_links.delete` を [削除できます](#delete-a-specified-scheduled-query)。
+>[!NOTE]
+>
+>の値を使用して、作成したスケジュール済みクエリ `_links.delete` を [削除できます](#delete-a-specified-scheduled-query)。
 
 ### 指定したスケジュール済みクエリの詳細の要求
 
@@ -298,7 +300,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 }
 ```
 
->[!NOTE] の値を使用して、作成したスケジュール済みクエリ `_links.delete` を [削除できます](#delete-a-specified-scheduled-query)。
+>[!NOTE]
+>
+>の値を使用して、作成したスケジュール済みクエリ `_links.delete` を [削除できます](#delete-a-specified-scheduled-query)。
 
 ### 指定したスケジュール済みクエリの詳細の更新
 
@@ -413,7 +417,9 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 エンドポイントにDELETEリクエストを送信し、削除する予定クエリのIDをリクエストパスに指定することで、指定した予定クエリを削除でき `/schedules` ます。
 
->[!NOTE] スケジュールを削除する前に **** 、無効にする必要があります。
+>[!NOTE]
+>
+>スケジュールを削除する前に **** 、無効にする必要があります。
 
 **API形式**
 
