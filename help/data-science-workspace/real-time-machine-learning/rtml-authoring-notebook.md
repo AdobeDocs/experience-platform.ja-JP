@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Real-time Machine Learningノートブックユーザーガイド
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -274,6 +274,8 @@ print("Model ID : ", model_id)
 この節では、DSLの作成について概説します。 ONNXノードと共に、データの前処理を含むノードを作成します。 次に、ノードとエッジを用いてDSLグラフを作成する。 エッジは、タプルベースのフォーマット(node_1、node_2)を使用してノードを接続します。 グラフにサイクルは含めないでください。
 
 >[!IMPORTANT]
+>
+>
 >ONNXノードの使用は必須です。 ONNXノードがないと、アプリケーションは失敗します。
 
 ### ノードオーサリング
