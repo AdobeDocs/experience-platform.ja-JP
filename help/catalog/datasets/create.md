@@ -4,7 +4,7 @@ solution: Experience Platform
 title: APIを使用したデータセットの作成
 topic: datasets
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 1%
@@ -14,35 +14,37 @@ ht-degree: 1%
 
 # APIを使用したデータセットの作成
 
-このドキュメントでは、Adobe Experience Platform APIを使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順を説明します。
+このドキュメントでは、Adobe Experience PlatformAPIを使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順について説明します。
 
 ## はじめに
 
-このガイドでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): エクスペリエンスプラットフォームでは、データをバッチファイルとして取り込むことができます。
-* [Experience Data Model(XDM)System](../../xdm/home.md): エクスペリエンスプラットフォームが顧客エクスペリエンスデータを編成する際に使用する標準化されたフレームワークです。
-* [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): Experience Platformを使用すると、データをバッチファイルとして取り込むことができます。
+* [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-以下の節では、プラットフォームAPIを正しく呼び出すために知る必要がある追加情報について説明します。
+以下の節では、PlatformAPIを正しく呼び出すために知っておく必要がある追加情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -210,7 +212,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] このチュートリアルでは、 [parket](https://parquet.apache.org/documentation/latest/) file形式を使用してそのすべての例を示します。 JSONファイル形式の使用例については、『 [batch ingestion developer guide』を参照してください](../../ingestion/batch-ingestion/api-overview.md)
+>[!NOTE]
+>
+>このチュートリアルでは、 [parket](https://parquet.apache.org/documentation/latest/) file形式を使用してそのすべての例を示します。 JSONファイル形式の使用例については、『 [batch ingestion developer guide』を参照してください](../../ingestion/batch-ingestion/api-overview.md)
 
 **応答**
 
@@ -292,7 +296,9 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 アップロード用の新しいバッチが正常に作成された後に、特定のデータセットにファイルをアップロードできるようになりました。 データセットを定義する際、ファイル形式をパーケットとして指定したことを忘れないでください。 したがって、アップロードするファイルはその形式にする必要があります。
 
->[!NOTE] サポートされるデータアップロードファイルのサイズは512 MBです。 データファイルのサイズがこれより大きい場合は、512 MB以下のチャンクに分割し、一度に1つずつアップロードする必要があります。 同じバッチIDを使用して、各ファイルに対してこの手順を繰り返すことで、同じバッチ内の各ファイルをアップロードできます。 ファイルをバッチの一部としてアップロードできる場合、数に制限はありません。
+>[!NOTE]
+>
+>サポートされるデータアップロードファイルのサイズは512 MBです。 データファイルのサイズがこれより大きい場合は、512 MB以下のチャンクに分割し、一度に1つずつアップロードする必要があります。 同じバッチIDを使用して、各ファイルに対してこの手順を繰り返すことで、同じバッチ内の各ファイルをアップロードできます。 ファイルをバッチの一部としてアップロードできる場合、数に制限はありません。
 
 **API形式**
 
@@ -449,7 +455,9 @@ curl -X GET \
 }
 ```
 
->[!NOTE] 推奨されるポーリング間隔は2分です。
+>[!NOTE]
+>
+>推奨されるポーリング間隔は2分です。
 
 ## データセットからのデータの読み取り
 
