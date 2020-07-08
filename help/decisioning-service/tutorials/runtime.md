@@ -4,7 +4,7 @@ solution: Experience Platform
 title: APIを使用したDecisioningサービスランタイムの操作
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
 ht-degree: 0%
@@ -43,7 +43,9 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../tutorials/authentication.md)。
+>[!NOTE]
+>
+>のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../tutorials/authentication.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -53,7 +55,9 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 - x-request-id: `{UUID}`
 
->[!NOTE] `UUID` は、グローバルに一意の文字列で、別のAPI呼び出しで再利用できないUUID形式の文字列です
+>[!NOTE]
+>
+>`UUID` は、グローバルに一意の文字列で、別のAPI呼び出しで再利用できないUUID形式の文字列です
 
 [!DNL Decisioning Service] は、互いに関連する多数のビジネスオブジェクトによって制御されます。 すべてのビジネス・オブジェクトは、 [!DNL Platform’s] ビジネス・オブジェクト・リポジトリ、XDMコア・オブジェクト・リポジトリに格納されます。 このリポジトリの主な特徴は、APIがビジネスオブジェクトのタイプと直交していることです。 APIエンドポイント内のリソースの種類を示すPOST、GET、PUT、PATCH、またはDELETEAPIを使用する代わりに、6つの汎用エンドポイントしか存在しませんが、その曖昧性を解除する必要がある場合に、オブジェクトの種類を示すパラメータを受け取るか返します。 スキーマはリポジトリに登録する必要がありますが、その後、リポジトリはオープンエンドなオブジェクト型のセットに対して使用できます。
 
@@ -260,7 +264,7 @@ curl -X POST {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/decisions \
 組織で定義されたスキーマには、通常、テナント名前空間文字列とも呼ばれ `_{TENANT_ID}`る名前のルートプロパティが含まれます。
 _などのグローバルスキーマコンポーネントで使用されるプロパティには、名前空間プレフィックスが付いていることに注意して`https://ns.adobe.com/xdm/context/product` く `xdm:`ださい。 この場合、組織定義のプロパティ `productDetails` はそのデータ型を使用して構築されました。 テナントプロパティはテナント名前空間にちなんで名前が付いたプロパティにネストされますが、グローバルに使用可能なデータ型は予約済みのプレフィックスを使用して、プロパティ名の競合を防ぎます。 `xdm:`
 
-このプロパティには、複数のデータオブジェクトを表示でき `xdm:contextData` ます。 各オブジェクトは、 `@type` プロパティを使用して型を識別する必要があります。
+このプロパティには複数のデータオブジェクトを表示でき `xdm:contextData` ます。 各オブジェクトは、 `@type` プロパティを使用して型を識別する必要があります。
 コンテキストデータオブジェクトの値は、PQL式で使用できます。例えば、実施要件ルールの条件で使用できます。 コンテキストデータオブジェクトは、特別なパス参照式を通じて指定する必要があ `@{schemaId}`ります。 次の参照式に従う式は、データオブジェクトのプロパティにアクセスする正規パス式ーです。
 
 ```json
