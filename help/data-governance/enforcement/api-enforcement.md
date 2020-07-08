@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Policy Service APIを使用してデータ使用ポリシーを適用する
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 3%
@@ -16,7 +16,9 @@ ht-degree: 3%
 
 データのデータ使用ラベルを作成し、それらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) (DOCULE Policy Service API)を使用して、マーケティングアクションがポリシー違反かどうかを評価できます。 その後、独自の内部プロトコルを設定し、API応答に基づくポリシー違反を処理できます。
 
->[!NOTE] デフォルトでは、ステータスがに設定されているポリシーのみが評価に参加 `ENABLED` できます。 ポリシーが評価に参加できるようにするには、リクエストパス `DRAFT``includeDraft=true` にクエリパラメーターを含める必要があります。
+>[!NOTE]
+>
+>デフォルトでは、ステータスがに設定されているポリシーのみが評価に参加 `ENABLED` できます。 ポリシーが評価に参加できるようにするには、リクエストパス `DRAFT``includeDraft=true` にクエリパラメーターを含める必要があります。
 
 このドキュメントでは、 [!DNL Policy Service] APIを使用して様々なシナリオでのポリシー違反をチェックする手順を説明します。
 
@@ -51,7 +53,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 次のリクエストは、ラベル `exportToThirdParty` と `C1``C3`マーケティングアクションに対してテストします。 このチュートリアルで前に作成したデータ使用ポリシーでは、 `C1` ラベルがそのポリシー式の `deny` 条件の1つとして定義されているので、マーケティングアクションはポリシー違反をトリガーする必要があります。
 
->[!NOTE] データ使用量のラベルでは、大文字と小文字が区別されます。 ポリシー違反は、そのポリシー式に定義されたラベルが正確に一致する場合にのみ発生します。 この例では、 `C1` ラベルは違反をトリガーしますが、 `c1` ラベルは違反をトリガーしません。
+>[!NOTE]
+>
+>データ使用量のラベルでは、大文字と小文字が区別されます。 ポリシー違反は、そのポリシー式に定義されたラベルが正確に一致する場合にのみ発生します。 この例では、 `C1` ラベルは違反をトリガーしますが、 `c1` ラベルは違反をトリガーしません。
 
 ```shell
 curl -X GET \
