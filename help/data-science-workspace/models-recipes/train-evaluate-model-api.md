@@ -4,7 +4,7 @@ solution: Experience Platform
 title: モデル(API)のトレーニングと評価
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 1%
@@ -26,8 +26,8 @@ API呼び出しを行う開始の認証については、この [チュートリ
 チュートリアルでは、次の値を使用する必要があります。
 
 - `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。
-- `{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。
-- `{API_KEY}`: 独自のAdobe Experience Platform統合に見つかった特定のAPIキー値。
+- `{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
+- `{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。
 
 - インテリジェントサービスのDockerイメージへのリンク
 
@@ -37,7 +37,9 @@ API呼び出しを行う開始の認証については、この [チュートリ
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
->[!NOTE] UIでは、「Engine」、「MLInstance」、「MLService」、「Estript」、「Model」という用語は別の用語と呼ばれます。 UIからアクセスしている場合、次の表に相違点を示します。
+>[!NOTE]
+>
+>UIでは、「Engine」、「MLInstance」、「MLService」、「Estript」、「Model」という用語は別の用語と呼ばれます。 UIからアクセスしている場合、次の表に相違点を示します。
 > 
 > | UI用語 | API用語 |
 > --- | ---
@@ -65,8 +67,8 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。\
-`{API_KEY}`: 独自のAdobe Experience Platform統合に見つかった特定のAPIキー値。\
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
+`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
 `{JSON_PAYLOAD}`: MLInstanceの設定。 チュートリアルで使用する例を次に示します。
 
 ```JSON
@@ -120,7 +122,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] で `{JSON_PAYLOAD}`は、アレイ内のトレーニングとスコアリングに使用するパラメーターを定義し `tasks` ます。 は使用するエンジンのID `{ENGINE_ID}` で、 `tag` フィールドはインスタンスの識別に使用されるオプションのパラメータです。
+>[!NOTE]
+>
+>で `{JSON_PAYLOAD}`は、アレイ内のトレーニングとスコアリングに使用するパラメーターを定義し `tasks` ます。 は使用するエンジンのID `{ENGINE_ID}` で、 `tag` フィールドはインスタンスの識別に使用されるオプションのパラメータです。
 
 応答には、作成されたMLInstance `{INSTANCE_ID}` を表すが含まれます。 異なる設定の複数のモデルMLInstanceを作成できます。
 
@@ -174,9 +178,9 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。\
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 独自のAdobe Experience Platform統合に見つかった特定のAPIキー値。\
+`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
 `{JSON_PAYLOAD}`: 作成されたテストオブジェクト。 チュートリアルで使用する例を次に示します。
 
 ```JSON
@@ -230,9 +234,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。\
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 独自のAdobe Experience Platform統合に見つかった特定のAPIキー値。\
+`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
 `{JSON_PAYLOAD}`: 転記するデータセット。 チュートリアルで使用する例を次に示します。
 
 ```JSON
@@ -318,9 +322,9 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: ターゲットするテストに対応するID。 これは、テストの作成時の応答に含まれます。\
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。\
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 独自のAdobe Experience Platform統合に見つかった特定のAPIキー値。\
+`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
 `{JSON_PAYLOAD}`: トレーニングの実行を作成するには、本文に次の内容を含める必要があります。
 
 ```JSON
@@ -389,8 +393,8 @@ curl -X GET \
 `{EXPERIMENT_ID}`: テストを表すID。\
 `{EXPERIMENT_RUN_ID}`: テスト実行を表すID。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。\
-`{API_KEY}`: 独自のAdobe Experience Platform統合に見つかった特定のAPIキー値。
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
+`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。
 
 **応答**
 
@@ -452,7 +456,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: ターゲットするテスト実行に対応するID。 これは、テスト実行の作成時の応答に含まれています。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
 
 応答は、作成されたトレーニングを受けたモデルを表します。
 
@@ -486,7 +490,7 @@ curl -X GET \
 
 ### スケジュールされたテストの停止と削除
 
-スケジュールされたテストの実行をその前に停止したい場合 `endTime`は、 `{EXPERIMENT_ID}`
+スケジュールされたテストの実行をその前に停止する場合 `endTime`は、DELETEリクエストを `{EXPERIMENT_ID}`
 
 **リクエスト**
 
@@ -499,9 +503,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  テストに対応するID。\
 `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が一意のAdobe Experience Platform統合で見つかりました。
+`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
 
->[!NOTE] API呼び出しは、新しいテスト実行の作成を無効にします。 ただし、既に実行中のテスト実行の実行は停止しません。
+>[!NOTE]
+>
+>API呼び出しは、新しいテスト実行の作成を無効にします。 ただし、既に実行中のテスト実行の実行は停止しません。
 
 次に、テストが正常に削除されたことを通知する応答を示します。
 
