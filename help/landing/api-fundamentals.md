@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience PlatformAPIの基本事項
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 3%
@@ -81,6 +81,8 @@ JSONポインターは、JSONドキュメント内の特定の値を識別する
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!N注意]
+>
+>
 >( `xdm:sourceProperty` XDM)記述子の `xdm:destinationProperty` および [!DNL Experience Data Model] 属性を処理する場合、すべての `properties` キーはJSONポインタ文字列から **** 除外する必要があります。 詳しくは、 [記述子に関する『スキーマレジストリAPI開発者ガイド](../xdm/api/descriptors.md) 』を参照してください。
 
 ## JSONパッチ
