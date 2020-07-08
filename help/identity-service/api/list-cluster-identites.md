@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リストクラスターID
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 1%
@@ -70,7 +70,9 @@ curl -X GET \
 
 複数のID `POST` のクラスター内のIDを返すには、上記の `GET` メソッドと同じバッチとして使用します。
 
->[!NOTE] 要求は、IDの数が最大1000個に達することを示す必要があります。 IDが1000個を超える要求は、400個のステータスコードになります。
+>[!NOTE]
+>
+>要求は、IDの数が最大1000個に達することを示す必要があります。 IDが1000個を超える要求は、400個のステータスコードになります。
 
 **API形式**
 
@@ -234,7 +236,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] 要求のXIDが同じクラスターに属しているか、1つ以上のXIDにクラスターが関連付けられているかに関係なく、要求で提供される各XIDに対して、応答には常に1つのエントリが存在します。
+>[!NOTE]
+>
+>要求のXIDが同じクラスターに属しているか、1つ以上のXIDにクラスターが関連付けられているかに関係なく、要求で提供される各XIDに対して、応答には常に1つのエントリが存在します。
 
 ## 次の手順
 
