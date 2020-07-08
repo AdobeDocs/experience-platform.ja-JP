@@ -4,7 +4,7 @@ solution: Experience Platform
 title: DULE Policy Service API開発者ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 0%
@@ -50,7 +50,9 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>[!NOTE]
+>
+>のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
