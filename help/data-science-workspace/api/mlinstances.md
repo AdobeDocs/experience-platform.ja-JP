@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInstances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 4%
@@ -273,7 +273,9 @@ curl -X GET \
 
 既存のMLInstanceを更新するには、要求パスにターゲットMLInstanceのIDが含まれるPUT要求を介してプロパティを上書きし、更新されたプロパティを含むJSONペイロードを提供します。
 
->[!TIP] このPUTリクエストを確実に成功させるために、まずGETリクエストを実行し、IDでMLInstanceを [取得することをお勧めします](#retrieve-specific)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
+>[!TIP]
+>
+>このPUTリクエストを確実に成功させるために、まずGETリクエストを実行し、IDでMLInstanceを [取得することをお勧めします](#retrieve-specific)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
 
 以下のサンプルAPI呼び出しは、MLInstanceのトレーニングパラメーターとスコアリングパラメーターを更新し、これらのプロパティを最初に持つようにします。
 
