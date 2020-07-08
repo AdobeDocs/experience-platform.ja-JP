@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 付録
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 4%
@@ -27,7 +27,9 @@ ht-degree: 4%
 | `orderby` | 並べ替えの優先順に使用するプロパティを示します。 プロパティ名の前にダッシュ(**-**)を付けると、降順で並べ替えられます。ダッシュ(-)を付けると、結果が昇順で並べ替えられます。 | `orderby=created` |
 | `property` | オブジェクトが返されるために満たす必要がある比較式を示します。 | `property=deleted==false` |
 
->[!NOTE] 複数のクエリパラメーターを組み合わせる場合は、アンパサンド(**&amp;**)で区切る必要があります。
+>[!NOTE]
+>
+>複数のクエリパラメーターを組み合わせる場合は、アンパサンド(**&amp;**)で区切る必要があります。
 
 ## Python CPUとGPUの設定 {#cpu-gpu-config}
 
@@ -66,7 +68,9 @@ Pythonエンジンは、トレーニングまたはスコアリングの目的�
 ]
 ```
 
->[!NOTE] との値 `cpus``gpus` は、CPUまたはGPUの数ではなく、物理マシンの数を表します。 これらの値は許可されており、それ以外 `"1"` の場合は例外がスローされます。
+>[!NOTE]
+>
+>との値 `cpus``gpus` は、CPUまたはGPUの数ではなく、物理マシンの数を表します。 これらの値は許可されており、それ以外 `"1"` の場合は例外がスローされます。
 
 ## PySparkとSparkのリソース設定 {#resource-config}
 
