@@ -4,7 +4,7 @@ solution: Experience Platform
 title: アトリビューションAIのスコアへのアクセス
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 2%
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 ## バッチIDの取得 {#retrieve-your-batch-id}
 
-前の手順のデータセットIDを使用して、バッチIDを取得するには、Catalog APIを呼び出す必要があります。 組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、 `limit` クエリパラメーターの数値を、返す金額に増やします。 使用可能なクエリパラメーターのタイプの詳細については、クエリパラメーターを使用したカタログデータの [フィルタリングに関するガイドを参照してください](../../catalog/api/filter-data.md)。
+前の手順のデータセットIDを使用して、バッチIDを取得するには、カタログAPIを呼び出す必要があります。 組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、 `limit` クエリパラメーターの数値を、返す金額に増やします。 使用可能なクエリパラメーターのタイプの詳細については、クエリパラメーターを使用したカタログデータの [フィルタリングに関するガイドを参照してください](../../catalog/api/filter-data.md)。
 
 **API形式**
 
@@ -223,7 +223,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 ファイルデータをダウンロードするには、前の手順でコピーした `"href"` 値にGETリクエストを行い、ファイル [を取得します](#retrieving-your-files)。
 
->[!NOTE] この要求をコマンドラインで直接行う場合、要求ヘッダーの後に出力を追加するよう求められる場合があります。 次のリクエストの例は、を使用してい `--output {FILENAME.FILETYPE}`ます。
+>[!NOTE]
+>
+>この要求をコマンドラインで直接行う場合、要求ヘッダーの後に出力を追加するよう求められる場合があります。 次のリクエストの例は、を使用してい `--output {FILENAME.FILETYPE}`ます。
 
 **API形式**
 
@@ -247,7 +249,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] GETリクエストを行う前に、ファイルを保存するディレクトリまたはフォルダーが正しいことを確認してください。
+>[!TIP]
+>
+>GETリクエストを行う前に、ファイルを保存するディレクトリまたはフォルダーが正しいことを確認してください。
 
 **応答**
 
@@ -261,7 +265,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ## スノーフレークを使用したスコアへのアクセス
 
->[!IMPORTANT] SnowFlakeを使用したスコアへのアクセスについて詳しくは、attributionai-support@adobe.comにお問い合わせください。
+>[!IMPORTANT]
+>
+>SnowFlakeを使用したスコアへのアクセスについて詳しくは、attributionai-support@adobe.comにお問い合わせください。
 
 集計されたアトリビューションAIスコアには、Snowflakeを使用してアクセスできます。 現在、Snowflakeの読者アカウントに資格情報を設定して受け取るには、アドビサポート(attributionai-support@adobe.com)に電子メールでお問い合わせいただく必要があります。
 
@@ -271,7 +277,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 - ユーザー名
 - パスワード
 
->[!NOTE] Readerアカウントは、JDBC ConnectorをサポートするSQLクライアント、WorksheetおよびBIソリューションを使用して、データに対するクエリーを行います。
+>[!NOTE]
+>
+>Readerアカウントは、JDBC ConnectorをサポートするSQLクライアント、WorksheetおよびBIソリューションを使用して、データに対するクエリーを行います。
 
 資格情報とURLを取得したら、モデル表をクエリし、タッチポイント日またはコンバージョン日別に集計できます。
 
