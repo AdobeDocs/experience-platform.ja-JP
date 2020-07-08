@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 受信ソースデータをアクティブ化して顧客プロファイルを入力します
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -61,7 +61,9 @@ ht-degree: 0%
 
 スキーマとデータセットの両方を有効にした状態で [!DNL Profile]、そのデータセットに取り込まれたデータも顧客のプロファイルに割り当てられるようになりました。
 
->[!NOTE] 最近有効にしたデータセット内の既存のデータは、 [!DNL Profile]
+>[!NOTE]
+>
+>最近有効にしたデータセット内の既存のデータは、 [!DNL Profile]
 
 ## 次の手順
 
