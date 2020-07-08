@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Spark SQL関数
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '4903'
 ht-degree: 6%
@@ -18,7 +18,9 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
 
 リファレンス： [Spark SQL関数ドキュメント](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
->[!NOTE] 外部ドキュメントの機能の一部がサポートされているわけではありません。
+>[!NOTE]
+>
+>外部ドキュメントの機能の一部がサポートされているわけではありません。
 
 ## カテゴリ
 
@@ -576,7 +578,9 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
  0.8446490682263027
 ```
 
->[!NOTE] この関数は、一般的には非決定的です。
+>[!NOTE]
+>
+>この関数は、一般的には非決定的です。
 
 #### 乱数
 
@@ -593,7 +597,9 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
  1.1164209726833079
 ```
 
->[!NOTE] この関数は、一般的には非決定的です。
+>[!NOTE]
+>
+>この関数は、一般的には非決定的です。
 
 #### rint
 
@@ -1090,7 +1096,7 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
 
 期間： 1.5.0
 
-#### day
+#### 日
 
 `day(date)`: 日付/タイムスタンプの月の日付を返します。
 
@@ -1207,7 +1213,7 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
 
 期間： 1.5.0
 
-#### month
+#### ヶ月
 
 `month(date)` 日付/タイムスタンプの月の要素を返します。
 
@@ -1276,7 +1282,7 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
 
 #### to_date
 
-`to_date(date_str[, fmt])`: 式を使用して `date_str` 式を解析し、日付を `fmt` 指定します。 無効な入力でnullを返します。 デフォルトでは、キャストルールを省略すると、キャストルールに従って日付が決ま `fmt` ります。
+`to_date(date_str[, fmt])`: 式を使用して `date_str` 式を解析し、日付を `fmt` 指定します。 無効な入力でnullを返します。 デフォルトでは、キャストルールが省略された場合、キャストルールに従 `fmt` います。
 
 例：
 
@@ -1406,7 +1412,7 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
  NULL
 ```
 
-#### year
+#### 年
 
 `year(date)`: 日付/タイムスタンプの年の要素を返します。
 
@@ -1738,7 +1744,9 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
 ```
 
 期間： 1.5.0
->[!NOTE] アレイのrseロジックは2.4.0以降で使用可能です。
+>[!NOTE]
+>
+>アレイのrseロジックは2.4.0以降で使用可能です。
 
 #### シャッフ
 
@@ -1754,7 +1762,9 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
 ```
 
 期間： 2.4.0
->[!NOTE] 関数は非決定論的です。
+>[!NOTE]
+>
+>関数は非決定論的です。
 
 #### slice
 
@@ -1872,7 +1882,7 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
  map("a":null)
 ```
 
-#### 文字列
+#### string
 
 `string(expr)`: 値をターゲットデータ型 `expr` にキャスト `string`します。
 
@@ -2389,7 +2399,9 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
 
->[!NOTE] 関数は非決定的です。
+>[!NOTE]
+>
+>関数は非決定的です。
 
 ### データ評価
 
@@ -2425,7 +2437,9 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
  [1,2,3,4,5,6]
 ```
 
->[!NOTE] `concat` アレイのロジックは、2.4.0以降で使用できます。
+>[!NOTE]
+>
+>`concat` アレイのロジックは、2.4.0以降で使用できます。
 
 #### concat_ws
 
