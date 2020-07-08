@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 記述子
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 記述子
 
-スキーマは、データエンティティの静的な表示を定義しますが、これらのスキーマ（データセットなど）に基づくデータが相互にどのように関連付けられるかに関する具体的な詳細は提供しません。 Adobe Experience Platformでは、記述子を使用して、これらの関係と、スキーマに関するその他の解釈的なメタデータを記述できます。
+スキーマは、データエンティティの静的な表示を定義しますが、これらのスキーマ（データセットなど）に基づくデータが相互にどのように関連付けられるかに関する具体的な詳細は提供しません。 Adobe Experience Platformを使用すると、これらの関係と、記述子を使用したスキーマに関する他の解釈メタデータを記述できます。
 
 スキーマ記述子はテナントレベルのメタデータで、IMS組織に固有で、すべての記述子コンテナがテナント操作で実行されます。
 
@@ -22,7 +22,9 @@ ht-degree: 1%
 
 このドキュメントは、記述子のAPI呼び出しの例と、使用可能な記述子の完全なリストと、各型の定義に必要なフィールドを提供します。
 
->[!NOTE] 記述子には一意のAcceptヘッダーが必要です。このヘッダーはで置き換え `xed` られ `xdm`ますが、それ以外の場合は、スキーマレジストリの別の場所で使用されるAcceptヘッダーと非常に似ています。 以下のサンプル呼び出しには、適切なAcceptヘッダが含まれていますが、正しいヘッダが使用されていることを確認するために十分に注意してください。
+>[!NOTE]
+>
+>記述子には一意のAcceptヘッダーが必要です。このヘッダーはで置き換え `xed` られ `xdm`ますが、それ以外の場合は、スキーマレジストリの別の場所で使用されるAcceptヘッダーと非常に似ています。 以下のサンプル呼び出しには、適切なAcceptヘッダが含まれていますが、正しいヘッダが使用されていることを確認するために十分に注意してください。
 
 ## リスト記述子
 
@@ -141,7 +143,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストは、サンプルスキーマの「電子メールアドレス」フィールドにID記述子を定義します。 これにより、Experience Platformは、電子メールアドレスを識別子として使用して、個々の人に関する情報を組み合わせることができます。
+次のリクエストは、サンプルスキーマの「電子メールアドレス」フィールドにID記述子を定義します。 これにより、Experience Platformは、電子メールアドレスを識別子として使用し、個々の人に関する情報を結合するのに役立ちます。
 
 ```SHELL
 curl -X POST \
@@ -236,7 +238,7 @@ curl -X PUT \
 
 ## 記述子の削除
 
-場合によっては、スキーマレジストリから定義した記述子を削除する必要があります。 これは、削除したいディスクリプタ `@id` のDELETEリクエストを行うことで行われます。
+場合によっては、スキーマレジストリから定義した記述子を削除する必要があります。 これは、削除したいディスクリプタ `@id` の内容を参照するDELETEリクエストを行うことで行われます。
 
 **API形式**
 
@@ -277,7 +279,7 @@ curl -X DELETE \
 
 #### ID記述子
 
-ID記述子は、「sourceSchema」の「sourceProperty」が [Adobe Experience Platform Identity Serviceの記述に従うIDフィールドであることを通知します](../../identity-service/home.md)。
+ID記述子は、「sourceSchema」の「sourceProperty」が [Adobe Experience PlatformIDサービスで記述されるIDフィールドであることを通知します](../../identity-service/home.md)。
 
 ```json
 {
@@ -334,7 +336,7 @@ ID記述子は、「sourceSchema」の「sourceProperty」が [Adobe Experience 
 | `xdm:sourceProperty` | IDとなる特定のプロパティへのパスです。 パスは「/」で始まり、1で終わらないようにしてください。 パスに「プロパティ」を含めない（例：「/properties/personalEmail/properties/address」ではなく「/personalEmail/address」を使用） |
 | `xdm:title` | このフィールドに表示する新しいタイトル。タイトルの大文字と小文字で示されます。 |
 | `xdm:description` | オプションで、タイトルと共に説明を追加できます。 |
-| `meta:enum` | に示すフィールドが文字列フィールド `xdm:sourceProperty` の場合、Experience Platform UIでそのフィールドに推奨される値のリストを `meta:enum` 決定します。 定義済みリストを宣言しないこと、またはXDMフィールドに対してデータの検証を行わないことに注意して `meta:enum` ください。<br><br>これは、アドビが定義するコアXDMフィールドに対してのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合は、 `meta:enum` PATCH要求を介して、フィールドの [プロパティを直接編集する必要があります](./update-resource.md)。 |
+| `meta:enum` | に示すフィールドが文字列フィールド `xdm:sourceProperty` の場合、Experience PlatformUIでそのフィールドに対して推奨される値のリストを `meta:enum` 決定します。 定義済みリストを宣言しないこと、またはXDMフィールドに対してデータの検証を行わないことに注意して `meta:enum` ください。<br><br>これは、アドビが定義するコアXDMフィールドに対してのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合は、 `meta:enum` PATCH要求を介して、フィールドの [プロパティを直接編集する必要があります](./update-resource.md)。 |
 
 #### 関係記述子
 
