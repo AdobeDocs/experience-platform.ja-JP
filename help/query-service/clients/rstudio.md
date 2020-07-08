@@ -4,7 +4,7 @@ solution: Experience Platform
 title: RStudioに接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 2%
@@ -43,7 +43,9 @@ con <- dbConnect(drv,
 | `{HOST_NUMBER` および `{PORT_NUMBER}` | クエリサービス用のホストエンドポイントとそのポートです。 |
 | `{USERNAME}` および `{PASSWORD}` | 使用するログイン資格情報。 ユーザー名は、の形式をとり `ORG_ID@AdobeOrg`ます。 |
 
->[!NOTE] データベース名、ホスト、ポート、ログインの資格情報の検索について詳しくは、Platformの [資格情報ページを参照してください](https://platform.adobe.com/query/configuration)。 資格情報を探すには、Platformにログインし、「 **クエリ**」をクリックし、「 **資格情報**」をクリックします。
+>[!NOTE]
+>
+>データベース名、ホスト、ポート、ログインの資格情報の検索について詳しくは、Platformの [資格情報ページを参照してください](https://platform.adobe.com/query/configuration)。 資格情報を探すには、Platformにログインし、「 **クエリ**」をクリックし、「 **資格情報**」をクリックします。
 
 ## 次の手順
 
