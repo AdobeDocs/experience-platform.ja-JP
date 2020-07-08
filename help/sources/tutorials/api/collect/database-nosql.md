@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ソースコネクタとAPIを使用して、サードパーティのデータベースからデータを収集する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 2%
@@ -25,7 +25,7 @@ ht-degree: 2%
 また、このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
 * [Experience Data Model(XDM)System](../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+   * [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    * [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
 * [カタログサービス](../../../../catalog/home.md): カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
 * [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md): Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
@@ -323,7 +323,9 @@ curl -X POST \
 | `params.dataSetId` | ターゲットデータセットのID。 |
 | `connectionSpec.id` | サードパーティデータベースの接続仕様ID。 |
 
->[!NOTE] ターゲット接続を作成する場合は、サードパーティのソースコネクタのベース接続ではなく、ベース接続にデータセットベース接続の値 `id` を使用する必要があります。
+>[!NOTE]
+>
+>ターゲット接続を作成する場合は、サードパーティのソースコネクタのベース接続ではなく、ベース接続にデータセットベース接続の値 `id` を使用する必要があります。
 
 **応答**
 
