@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Catalog Service開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -14,37 +14,39 @@ ht-degree: 0%
 
 # Catalog Service開発ガイド
 
-カタログサービスは、Adobe Experience Platform内のデータの場所と系列の記録システムです。 カタログはメタデータストア（「カタログ」）の役割を果たし、データ自体にアクセスする必要なく、エクスペリエンスプラットフォーム内でデータに関する情報を検索できます。 See the [Catalog overview](../home.md) for more information.
+カタログサービスは、Adobe Experience Platform内のデータの場所と系列を示す記録システムです。 カタログはメタデータストア（「カタログ」）の役割を果たし、Experience Platform内でデータに関する情報を検索できるので、データ自体にアクセスする必要はありません。 See the [Catalog overview](../home.md) for more information.
 
 この開発者ガイドでは、カタログAPIを使用する開始に役立つ手順を説明します。 次に、Catalogを使用して主要な操作を実行するためのサンプルAPI呼び出しを提供します。
 
 ## 前提条件
 
-カタログは、エクスペリエンスプラットフォーム内の様々な種類のリソースおよび操作のメタデータを追跡します。 この開発者ガイドでは、以下のリソースの作成と管理に関連する様々なExperience Platformサービスについて、十分に理解している必要があります。
+カタログは、Experience Platform内の複数の種類のリソースおよび操作のメタデータを追跡します。 この開発者ガイドでは、以下のリソースの作成と管理に関連する様々なExperience Platformサービスについて、十分に理解している必要があります。
 
-* [Experience Data Model(XDM)](../../xdm/home.md): プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): エクスペリエンスプラットフォームがCSVやParketなどのデータファイルからデータを取り込んで保存する方法。
-* [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md): Experience Platformがクライアント側とサーバー側のデバイスからデータをリアルタイムで取り込み、保存する方法。
+* [Experience Data Model(XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): CSVやParketなどのデータファイルからExperience Platformがデータを取り込んで保存する方法。
+* [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md): Experience Platformがクライアント側およびサーバー側のデバイスからデータをリアルタイムで取り込み、保存する方法。
 
 以下の節では、Catalog Service APIの呼び出しを正常に行うために知る必要がある、または手元にある情報について説明します。
 
 ## サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ## 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
