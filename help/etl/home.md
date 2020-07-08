@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ETL統合の作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '4227'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Adobe Experience Platform用ETL統合の開発
 
-ETL統合ガイドでは、エクスペリエンスプラットフォーム用の高パフォーマンスで安全なコネクタを作成し、データをプラットフォームに取り込むための一般的な手順について説明しています。
+ETL統合ガイドでは、Experience Platform用の高パフォーマンスで安全なコネクタを作成し、データをPlatformに取り込むための一般的な手順について説明しています。
 
 
 - [カタログ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
@@ -23,7 +23,7 @@ ETL統合ガイドでは、エクスペリエンスプラットフォーム用�
 - [認証および認証API](../tutorials/authentication.md)
 - [スキーマレジストリ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
-このガイドには、ETLコネクターの設計時に使用するサンプルAPI呼び出しも含まれています。また、各Experience Platformサービスの概要とAPIの使用について詳しく説明したドキュメントへのリンクも含まれています。
+このガイドには、ETLコネクタの設計時に使用するサンプルAPI呼び出しも含まれています。また、各Experience Platformサービスの概要とAPIの使用について詳しく説明したドキュメントへのリンクも含まれています。
 
 GitHubでは、Apacheライセンスバージョン2.0の [ETLエコシステム統合リファレンスコード](https://github.com/adobe/acp-data-services-etl-reference) (ETL)を介してサンプル統合を利用できます。
 
@@ -33,40 +33,42 @@ GitHubでは、Apacheライセンスバージョン2.0の [ETLエコシステム
 
 ![](images/etl.png)
 
-## Adobe Experience Platformコンポーネント
+## Adobe Experience Platform成分
 
-ETLコネクタ統合には、複数のExperience Platformコンポーネントが関係します。 次のリストでは、主要なコンポーネントと機能の概要を説明します。
+ETLコネクタ統合には複数のExperience Platformコンポーネントが関係します。 次のリストでは、主要なコンポーネントと機能の概要を説明します。
 
-- **Adobe Identity Management System(IMS)** — アドビのサービスに対する認証のフレームワークを提供します。
+- **AdobeIdentity Managementシステム(IMS)** — アドビのサービスに対する認証のフレームワークを提供します。
 - **IMS組織** — 製品やサービスを所有またはライセンスでき、メンバーへのアクセスを許可する企業エンティティ。
 - **IMSユーザー** - IMS組織のメンバー。 組織とユーザーの関係は、多くの人にとって非常に重要です。
-- **Sandbox** — デジタルエクスペリエンスアプリケーションの開発と発展に役立つ、単一のプラットフォームインスタンスを仮想パーティションにします。
-- **データ検出** — 取り込んだデータおよび変換したデータのメタデータをエクスペリエンスプラットフォームに記録します。
-- **データアクセス** — ユーザーは、エクスペリエンスプラットフォームでデータにアクセスするためのインターフェイスを使用できます。
-- **データ取り込み** — データ取り込みAPIを使用して、エクスペリエンスプラットフォームにデータをプッシュします。
-- **スキーマレジストリ** - Experience Platformで使用するデータの構造を説明するスキーマを定義し、保存します。
+- **Sandbox** — デジタルエクスペリエンスアプリケーションの開発と発展に役立つ、単一のPlatformインスタンスを仮想パーティションにします。
+- **データ検出** — 取り込まれたデータおよび変換されたデータのメタデータをExperience Platformに記録します。
+- **データアクセス** -Experience Platform内のデータにアクセスするためのインターフェイスをユーザーに提供します。
+- **データ取り込み** — データ取り込みAPIを使用してデータをExperience Platformにプッシュします。
+- **スキーマレジストリ** -Experience Platformで使用するデータの構造を記述するスキーマを定義し、保存します。
 
-## エクスペリエンスプラットフォームAPIの概要
+## Experience PlatformAPIの概要
 
-以下の節では、エクスペリエンスプラットフォームAPIの呼び出しを正常に行うために知る必要がある、または手元に置く必要がある追加情報について説明します。
+以下の節では、Experience PlatformAPIの呼び出しを正常に行うために知る必要がある、または手元にある情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-プラットフォームAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-エクスペリエンスプラットフォームのすべてのリソースは、特定の仮想サンドボックスに分離されています。 プラットフォームAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] プラットフォームのサンドボックスについて詳しくは、「 [サンドボックスの概要に関するドキュメント](../sandboxes/home.md)」を参照してください。
+>[!NOTE]
+>
+>Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../sandboxes/home.md)」を参照してください。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -74,15 +76,17 @@ ETLコネクタ統合には、複数のExperience Platformコンポーネント�
 
 ## 一般的なユーザーフロー
 
-最初に、ETLユーザーがExperience Platformユーザーインターフェイス(UI)にログインし、標準のコネクターまたはプッシュサービスコネクターを使用して取り込み用のデータセットを作成します。
+最初に、ETLユーザーがExperience Platformユーザーインターフェイス(UI)にログインし、標準のコネクタまたはプッシュサービスコネクタを使用して取り込み用のデータセットを作成します。
 
-ユーザーはUIでデータセットスキーマを選択し、出力データセットを作成します。 スキーマの選択は、プラットフォームに取り込まれるデータの種類（記録または時系列）に応じて異なります。 UI内の「スキーマ」タブをクリックすると、スキーマがサポートする動作タイプを含む、使用可能なすべてのスキーマを表示できます。
+ユーザーはUIでデータセットスキーマを選択し、出力データセットを作成します。 スキーマの選択は、Platformに取り込まれるデータ（記録または時系列）の種類に応じて異なります。 UI内の「スキーマ」タブをクリックすると、スキーマがサポートする動作タイプを含む、使用可能なすべてのスキーマを表示できます。
 
-ETLツールでは、ユーザーは、適切な接続を設定した後（資格情報を使用して）、マッピング変換を設計する際に開始が発生します。 ETLツールには、既にExperience Platform Connectorsがインストールされていると想定されます（この統合ガイドでは定義されていないプロセス）。
+ETLツールでは、ユーザーは、適切な接続を設定した後（資格情報を使用して）、マッピング変換を設計する際に開始が発生します。 ETLツールには、既にExperience Platformコネクタがインストールされていると想定されます（この統合ガイドでは定義されていないプロセス）。
 
 サンプルのETLツールおよびワークフローのモックアップは、 [ETLワークフローで提供されています](./workflow.md)。 ETLツールの形式は異なる場合がありますが、ほとんどの場合、類似した機能が公開されています。
 
->[!NOTE] ETLコネクタは、データを取り込み、オフセットする日付（データを読み込むウィンドウ）を示すタイムスタンプフィルタを指定する必要があります。 ETLツールは、このUIまたは別の関連UIでこれら2つのパラメーターの取得をサポートする必要があります。 Adobe Experience Platformでは、これらのパラメーターは、使用可能な日付（存在する場合）またはデータセットのバッチオブジェクトに存在する取り込み日付にマップされます。
+>[!NOTE]
+>
+>ETLコネクタは、データを取り込み、オフセットする日付（データを読み込むウィンドウ）を示すタイムスタンプフィルタを指定する必要があります。 ETLツールは、このUIまたは別の関連UIでこれら2つのパラメーターの取得をサポートする必要があります。 Adobe Experience Platformでは、これらのパラメーターは、使用可能な日付（存在する場合）またはデータセットのバッチオブジェクトに存在する取得した日付にマップされます。
 
 ### データセットの表示リスト
 
@@ -166,7 +170,9 @@ XDMスキーマは、書き込み可能なすべてのフィールドのリス�
 
 前の応答オブジェクト(`https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18`)の最初の「schemaRef.id」値は、スキーマレジストリ内の特定のXDMスキーマを指すURIです。 スキーマは、スキーマレジストリAPIに対してルックアップ(GET)リクエストを行うことで取得できます。
 
->[!NOTE] 「schemaRef」プロパティは、現在非推奨になっている「スキーマ」プロパティを置き換えます。 データセットに「schemaRef」がない場合、または値が含まれていない場合は、「schemaRef」プロパティの存在を確認する必要があります。 これは、前の呼び出しの `properties` クエリパラメーターで「schemaRef」を「スキーマ」に置き換えることで可能です。 「スキーマ」プロパティの詳細については、次の「 [データセット「スキーマ」プロパティ](#dataset-schema-property-deprecated---eol-2019-05-30) 」セクションを参照してください。
+>[!NOTE]
+>
+>「schemaRef」プロパティは、現在非推奨になっている「スキーマ」プロパティを置き換えます。 データセットに「schemaRef」がない場合、または値が含まれていない場合は、「schemaRef」プロパティの存在を確認する必要があります。 これは、前の呼び出しの `properties` クエリパラメーターで「schemaRef」を「スキーマ」に置き換えることで可能です。 「スキーマ」プロパティの詳細については、次の「 [データセット「スキーマ」プロパティ](#dataset-schema-property-deprecated---eol-2019-05-30) 」セクションを参照してください。
 
 **API形式**
 
@@ -195,11 +201,13 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | リスト(GET)の要求、タイトル、ID、バージョン |
 | `application/vnd.adobe.xed-full+json; version={major version}` | $refsとallOfが解決されました。タイトルと説明があります。 |
 | `application/vnd.adobe.xed+json; version={major version}` | $refとallOfを含む生データには、タイトルと説明が含まれます。 |
-| `application/vnd.adobe.xed-notext+json; version={major version}` | 生（$refとallOfを含む）。タイトルや説明は付けません。 |
+| `application/vnd.adobe.xed-notext+json; version={major version}` | 生（$refとallOfを含み、タイトルや説明は含まない） |
 | `application/vnd.adobe.xed-full-notext+json; version={major version}` | $refs and allOf resolved, no titles or descriptions |
 | `application/vnd.adobe.xed-full-desc+json; version={major version}` | $refsとallOf解決済み、記述子が含まれています |
 
->[!NOTE] `application/vnd.adobe.xed-id+json` とは、最も一般的 `application/vnd.adobe.xed-full+json; version={major version}` に使用されるAcceptヘッダーです。 `application/vnd.adobe.xed-id+json` は、「title」、「id」、「version」のみを返すので、スキーマレジストリにリソースをリストする場合に推奨されます。 `application/vnd.adobe.xed-full+json; version={major version}` は、（「プロパティ」の下にネストされた）すべてのフィールド、およびタイトルと説明を返すので、特定のリソースを（「id」で）表示する場合に推奨されます。
+>[!NOTE]
+>
+>`application/vnd.adobe.xed-id+json` とは、最も一般的 `application/vnd.adobe.xed-full+json; version={major version}` に使用されるAcceptヘッダーです。 `application/vnd.adobe.xed-id+json` は、「title」、「id」、「version」のみを返すので、スキーマレジストリにリソースをリストする場合に推奨されます。 `application/vnd.adobe.xed-full+json; version={major version}` は、（「プロパティ」の下にネストされた）すべてのフィールド、およびタイトルと説明を返すので、特定のリソースを（「id」で）表示する場合に推奨されます。
 
 **応答**
 
@@ -239,13 +247,17 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
   -H "x-api-key: {API_KEY}"
 ```
 
->[!NOTE] オプションのクエリパラメーター `expansion=xdm`は、参照されるスキーマを完全に展開し、インラインにするようAPIに指示します。 この操作は、すべてのフィールドのリストをユーザーに表示する場合に行います。
+>[!NOTE]
+>
+>オプションのクエリパラメーター `expansion=xdm`は、参照されるスキーマを完全に展開し、インラインにするようAPIに指示します。 この操作は、すべてのフィールドのリストをユーザーに表示する場合に行います。
 
 **応答**
 
 データセットスキーマを [表示する手順と同様](#view-dataset-schema)、応答にはJSONとしてシリアル化されたデータの構造とフィールドレベルの情報を記述したJSONスキーマが含まれています。
 
->[!NOTE] 「スキーマ」フィールドが空の場合や完全に存在しない場合は、コネクタは「schemaRef」フィールドを読み取り、 [スキーマセットスキーマを](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) 表示する前の手順に示すように、スキーマレジストリAPI [()を使用する必要があります](#view-dataset-schema)。
+>[!NOTE]
+>
+>「スキーマ」フィールドが空の場合や完全に存在しない場合は、コネクタは「schemaRef」フィールドを読み取り、 [スキーマセットスキーマを](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) 表示する前の手順に示すように、スキーマレジストリAPI [()を使用する必要があります](#view-dataset-schema)。
 
 ### 「observableSchema」プロパティ
 
@@ -479,19 +491,19 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-データは、 [Data Ingest APIを使用してExperience Platformに書き込まれます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。  データの書き込みは非同期的なプロセスです。 データがAdobe Experience Platformに書き込まれると、データが完全に書き込まれた後でのみ、バッチが作成され、成功としてマークされます。
+データは、 [Data Ingestion APIを使用してExperience Platformに書き込まれます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。  データの書き込みは非同期的なプロセスです。 データがAdobe Experience Platformに書き込まれると、データが完全に書き込まれた後でのみ、バッチが作成され、成功としてマークされます。
 
-エクスペリエンスプラットフォームのデータは、パーケーファイルの形式で書き込む必要があります。
+Experience Platform内のデータは、パーケーファイルの形式で書き込む必要があります。
 
 ## 実行段階
 
-実行開始として、コネクター（ソースコンポーネントで定義）は、 [データアクセスAPIを使用してExperience Platformからデータを読み取り](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)ます。 変換プロセスは、特定の期間のデータを読み取ります。 内部的には、ソース・データセットのクエリ・バッチが行われます。 クエリー中、これらのバッチに対して、パラメータ化（時系列データまたは増分データをローリング）された開始日付とリストデータセットファイルを使用し、開始がこれらのデータセットファイルに対してデータのリクエストを行います。
+実行開始として、コネクタは（ソースコンポーネントで定義されたとおり） [データアクセスAPIを使用してExperience Platformからデータを読み取り](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)ます。 変換プロセスは、特定の期間のデータを読み取ります。 内部的には、ソース・データセットのクエリ・バッチが行われます。 クエリー中、これらのバッチに対して、パラメータ化（時系列データまたは増分データをローリング）された開始日付とリストデータセットファイルを使用し、開始がこれらのデータセットファイルに対してデータのリクエストを行います。
 
 ### 変換の例
 
 ETL変換 [ドキュメントのサンプルには](./transformations.md) 、ID処理やデータ型マッピングなど、様々な変換の例が含まれています。 これらの変換は参考にしてください。
 
-### エクスペリエンスプラットフォームからのデータの読み取り
+### Experience Platformからデータを読み取ります
 
 [カタログAPIを使用すると](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)、指定した開始時間と終了時間の間にあるすべてのバッチを取得し、作成された順序で並べ替えることができます。
 
@@ -562,11 +574,13 @@ GitHubにある参照実装を使用している場合は、 [systemプロパテ
 
 検証は、論理XDM型に対して、文字列 `minLength` や文字列、整数などの属性を使用して実行でき `maxlength` ます。 `minimum` そ `maximum` の他の型に対しても実行できます。 『 [スキーマレジストリAPI開発者ガイド](../xdm/api/getting-started.md) 』には、XDMの種類と検証に使用できるプロパティについて概説した表が含まれています。
 
->[!NOTE] 様々な `integer` タイプに対して提供される最小値と最大値は、タイプがサポートするMIN値とMAX値ですが、これらの値は、選択した最小値と最大値に制限することができます。
+>[!NOTE]
+>
+>様々な `integer` タイプに対して提供される最小値と最大値は、タイプがサポートするMIN値とMAX値ですが、これらの値は、選択した最小値と最大値に制限することができます。
 
 ### バッチの作成
 
-データが処理されると、ETLツールは、 [バッチインジェストAPIを使用して、データをエクスペリエンスプラットフォームに書き戻し](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)ます。 データセットにデータを追加する前に、データをバッチにリンクし、そのバッチを特定のデータセットに後でアップロードする必要があります。
+データが処理されると、ETLツールは [Batch Ingest APIを使用してExperience Platformにデータを書き戻します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)。 データセットにデータを追加する前に、データをバッチにリンクし、そのバッチを特定のデータセットに後でアップロードする必要があります。
 
 **リクエスト**
 
@@ -590,7 +604,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 **リクエスト**
 
-エクスペリエンスプラットフォームのデータは、パーケーファイルの形式で書き込む必要があります。
+Experience Platform内のデータは、パーケーファイルの形式で書き込む必要があります。
 
 ```shell
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/dataSets/{DATASET_ID}/files/{FILE_NAME}.parquet" \
@@ -606,7 +620,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 すべてのファイルがバッチにアップロードされた後、バッチは完了を示すために署名できます。 これにより、完了したファイルに対してカタログ「DataSetFile」エントリが作成され、生成バッチに関連付けられます。 次に、カタログバッチが成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータが取り込まれます。
 
-データは、最初にAdobe Experience Platformのステージング場所に配置され、次にカタログと検証の後、最終的な場所に移動されます。 すべてのデータが永続的な場所に移動されると、バッチは成功とマークされます。
+データは、最初にAdobe Experience Platform上のステージング場所にランディングし、次にカタログと検証の後、最終的な場所に移動します。 すべてのデータが永続的な場所に移動されると、バッチは成功とマークされます。
 
 **リクエスト**
 
@@ -745,13 +759,13 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 過去&#39;n&#39;日間、ETL処理中のデータが予期したとおりに発生しなかった場合、またはソースデータ自体が正しくなかった場合は、バッチ再生とデータ再処理が必要になる場合があります。
 
-これを行うには、クライアントのデータ管理者がプラットフォームUIを使用して、破損したデータを含むバッチを削除します。 その後、ETLを再実行する必要が生じる可能性が高くなり、これにより正しいデータが再入力されます。 ソース自体が破損したデータを持つ場合、データエンジニアまたは管理者は、ソースバッチを修正し、データを（Adobe Experience PlatformまたはETLコネクタを介して）再取り込みする必要があります。
+これを行うには、クライアントのデータ管理者がPlatformUIを使用して、破損したデータを含むバッチを削除します。 その後、ETLを再実行する必要が生じる可能性が高くなり、これにより正しいデータが再入力されます。 ソース自体が破損したデータを持つ場合、データエンジニア/管理者は、ソースバッチを修正し、データを(Adobe Experience PlatformまたはETLコネクタを介して)再取り込みする必要があります。
 
-生成されるデータのタイプに基づいて、特定のデータセットから1つのバッチまたはすべてのバッチを削除するのは、データエンジニアが選択する方法です。 データは、エクスペリエンスプラットフォームのガイドラインに従って削除/アーカイブされます。
+生成されるデータのタイプに基づいて、特定のデータセットから1つのバッチまたはすべてのバッチを削除するのは、データエンジニアが選択する方法です。 Experience Platformのガイドラインに従って、データが削除/アーカイブされます。
 
 ETL機能によるデータ削除が重要になる可能性が高いと考えられます。
 
-削除が完了すると、クライアント管理者は、バッチが削除された時点からコアサービスの処理を再開するように、Adobe Experience Platformを再設定する必要があります。
+削除が完了すると、クライアント管理者は、バッチが削除された時点からコアサービスの処理を再開するようにAdobe Experience Platformを再設定する必要があります。
 
 ## 同時バッチ処理
 
@@ -767,7 +781,7 @@ ETL機能によるデータ削除が重要になる可能性が高いと考え�
 
 繰り返しとは、入力データがまだダウンストリームプロセスに送り出すのに十分な量に達していないが、将来使用できる可能性があるプロセスです。 クライアントは、データの抽出と次の変換の実行時の再処理に関する判断を通知するため、保存期間内の将来のリンチ/調整/ステッチが可能な場合に、将来の照合に対するデータ・ウィンドウの個々の許容範囲と、処理コストを判断します。 このサイクルは、行が十分に処理されるか、古すぎて投資を続行できないと見なされるまで継続されます。 繰り返しごとに、繰り返し後のデータが生成されます。繰り返し後のデータは、前の繰り返しのすべての繰り返し後のデータのスーパーセットです。
 
-現在、Adobe Experience Platformは遅延データを識別しないので、クライアントの実装は、ETLおよびデータセットの手動設定に依存して、遅延データの保持に使用できるソースデータセットのミラーリングプラットフォームで別のデータセットを作成する必要があります。 この場合、遅延データは、スナップショット・データに似ています。 ETL変換を実行するたびに、ソースデータは遅延データと統合され、処理用に送信されます。
+Adobe Experience Platformは、現在、遅延データを識別していないので、クライアントの導入では、ETLとデータセットの手動設定に依存して、遅延データの保持に使用できるソースデータセットのミラーリングPlatform内に別のデータセットを作成する必要があります。 この場合、遅延データは、スナップショット・データに似ています。 ETL変換を実行するたびに、ソースデータは遅延データと統合され、処理用に送信されます。
 
 ## チャンゲログ
 
