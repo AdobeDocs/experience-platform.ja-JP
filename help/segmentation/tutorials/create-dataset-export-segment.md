@@ -4,7 +4,7 @@ solution: Experience Platform
 title: オーディエンスセグメントの書き出し用データセットの作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # オーディエンスセグメントの書き出し用データセットの作成
 
-Adobe Experience Platformを使用すると、顧客のプロファイルを特定の属性に基づいてオーディエンスに簡単にセグメント化できます。 セグメントを作成したら、そのオーディエンスをデータセットにエクスポートし、データセットにアクセスして処理することができます。 エクスポートが正常に完了するには、データセットを正しく設定する必要があります。
+Adobe Experience Platformを使用すると、顧客プロファイルを特定の属性に基づいてオーディエンスに簡単にセグメント化できます。 セグメントを作成したら、そのオーディエンスをデータセットにエクスポートし、データセットにアクセスして処理することができます。 エクスポートが正常に完了するには、データセットを正しく設定する必要があります。
 
-Experience Platform UIを使用したオーディエンスセグメントの書き出しに使用できるデータセットを作成する手順を説明します。
+Experience PlatformUIを使用したオーディエンスセグメントの書き出しに使用できるデータセットを作成する手順を説明します。
 
-このチュートリアルは、セグメント結果の [評価とアクセスのチュートリアルで概要を説明している手順に直接関連しています](./evaluate-a-segment.md)。 セグメントの評価のチュートリアルでは、Catalog APIを使用してデータセットを作成する手順を説明します。このチュートリアルでは、Experience Platform UIを使用してデータセットを作成する手順について概説します。
+このチュートリアルは、セグメント結果の [評価とアクセスのチュートリアルで概要を説明している手順に直接関連しています](./evaluate-a-segment.md)。 セグメントの評価のチュートリアルでは、カタログAPIを使用してデータセットを作成する手順を説明します。このチュートリアルでは、Experience PlatformUIを使用してデータセットを作成する手順について概説します。
 
 ## はじめに
 
@@ -26,16 +26,18 @@ Experience Platform UIを使用したオーディエンスセグメントの書�
 
 UIで和集合スキーマを表示するには、左側のナビゲーションで **プロファイル** (「 ** 」)をクリックし、次に示す和集合スキーマ(「」)タブをクリックします。
 
-![Experience Platform UIの「和集合スキーマ」タブ](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Experience PlatformUIの「和集合スキーマ」タブ](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## Datasetsワークスペース
 
-Experience Platform UI内のデータセットワークスペースを使用すると、IMS組織が作成したすべてのデータセットの表示と管理を行えるほか、新しいデータセットを作成できます。
+Experience PlatformUI内のデータセットワークスペースを使用すると、IMS組織が作成したすべてのデータセットの表示と管理を行うことができ、また新しいデータセットを作成することもできます。
 
 データセットワークスペースを表示するには、左側のナビゲーションで **「Datasets** 」をクリックし、「 *Browse* （参照）」タブをクリックします。 The datasets workspace contains a list of datasets, including columns showing *Name*, *Created* (date and time), *Source*, *Schema*, and *Last Batch Status*, as well as the date and time the dataset was *Last Updated*. 各列の幅に応じて、すべての列を表示するために左右にスクロールする必要がある場合があります。
 
->[!NOTE] 検索バーの横にあるフィルターアイコンをクリックして、フィルター機能を使用し、リアルタイム顧客プロファイルに対して有効になっているデータセットのみを表示します。
+>[!NOTE]
+>
+>検索バーの横にあるフィルターアイコンをクリックして、フィルター機能を使用し、リアルタイム顧客プロファイルに対して有効になっているデータセットのみを表示します。
 
 ![すべてのデータセットの表示](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
