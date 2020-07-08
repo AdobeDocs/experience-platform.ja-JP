@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ取り込みイベントのサブスクライブ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '851'
 ht-degree: 2%
@@ -14,19 +14,21 @@ ht-degree: 2%
 
 # データ取り込み通知
 
-データをAdobe Experience Platformに取り込むプロセスは、複数の手順で構成されます。 プラットフォームに取り込む必要のあるデータファイルを特定したら、取り込みプロセスが開始され、データが正常に取り込まれるか、または失敗するまで各手順が連続して行われます。 インジェスト処理は、 [Adobe Experience Platform Data Ingest API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) 、またはExperience Platformユーザーインターフェイスを使用して開始できます。
+データをAdobe Experience Platformに取り込むプロセスは、複数のステップで構成されます。 Platformに取り込む必要のあるデータファイルを特定したら、取り込みプロセスが開始され、データが正常に取り込まれるか、取り込みに失敗するまで、各ステップが連続して実行されます。 取り込みプロセスは、 [Adobe Experience Platformデータ取り込みAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) 、またはExperience Platformユーザーインターフェイスを使用して開始できます。
 
-プラットフォームに読み込まれたデータは、目的のデータレーク(Data Lake)またはリアルタイム顧客プロファイルデータストアに到達するために、複数の手順を経る必要があります。 各手順では、データの処理、データの検証、データの格納、データの次の手順への渡しを行います。 取り込まれるデータ量に応じて、この処理は時間がかかる場合があり、検証、セマンティック、または処理エラーが原因でプロセスが失敗する可能性が常にあります。 エラーがイベントした場合は、データの問題を修正し、修正したデータファイルを使用してインジェストプロセス全体を再起動する必要があります。
+Platformに読み込まれたデータは、その読み込み先、Data Lakeまたはリアルタイム顧客プロファイルデータストアに到達するために、複数の手順を経る必要があります。 各手順では、データの処理、データの検証、データの格納、データの次の手順への渡しを行います。 取り込まれるデータ量に応じて、この処理は時間がかかる場合があり、検証、セマンティック、または処理エラーが原因でプロセスが失敗する可能性が常にあります。 エラーがイベントした場合は、データの問題を修正し、修正したデータファイルを使用してインジェストプロセス全体を再起動する必要があります。
 
-インジェストプロセスの監視を支援するため、Experience Platformでは、プロセスの各手順で公開された一連のイベントに登録し、取り込まれたデータのステータスと発生する可能性のあるエラーを通知できます。
+Experience Platformは、取り込みプロセスの監視を支援するため、プロセスの各ステップで公開された一連のイベントをサブスクライブし、取り込まれたデータの状態と発生した可能性があるデータを通知する。
 
 ## 使用可能な状態通知イベント
 
 以下に、サブスクライブ可能なデータ取り込みステータス通知のリストを示します。
 
->[!NOTE] すべてのデータ取り込み通知に対して1つのイベントトピックのみが提供されます。 異なるステータスを区別するために、イベントコードを使用できます。
+>[!NOTE]
+>
+>すべてのデータ取り込み通知に対して1つのイベントトピックのみが提供されます。 異なるステータスを区別するために、イベントコードを使用できます。
 
-| プラットフォームサービス | Status | イベントの説明 | イベントコード |
+| Platformサービス | Status | イベントの説明 | イベントコード |
 | ---------------- | ------ | ----------------- | ---------- |
 | データのランディング | success | 取り込み — バッチが成功しました | ing_load_success |
 | データのランディング | 失敗 | 取り込み — バッチが失敗しました | ing_load_failure |
@@ -41,19 +43,19 @@ ht-degree: 2%
 
 ## データ取り込みステータス通知のサブスクライブ
 
-Adobe I/O [イベントを通じて](https://www.adobe.io/apis/experienceplatform/events.html)、Webフックを使用して複数の通知タイプをサブスクライブできます。 以下の節では、Adobe Developer Consoleを使用してデータ取り込みイベントのプラットフォーム通知をサブスクライブする手順を説明します。
+Adobe I/O [イベントを通じて](https://www.adobe.io/apis/experienceplatform/events.html)、Webフックを使用して複数の通知タイプをサブスクライブできます。 以下の節では、Adobe Developer Consoleを使用してデータ取り込みイベントのPlatform通知をサブスクライブする手順を説明します。
 
 ### Adobe Developer Consoleでの新しいプロジェクトの作成
 
-Adobe Developer Console [に移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe Developer Consoleドキュメントで空のプロジェクトの [作成に関するチュートリアルに概要を説明している手順に従い](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ます。
+Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](https://www.adobe.com/go/devs_console_ui) 。 次に、Adobe Developer Consoleドキュメントで空のプロジェクトの [作成に関するチュートリアルに概要を説明している手順に従い](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ます。
 
-### プロジェクトへの追加エクスペリエンスプラットフォームのイベント
+### プロジェクトへの追加Experience Platformイベント
 
 新しいプロジェクトを作成したら、そのプロジェクトの概要画面に移動します。 ここから、 **[!UICONTROL イベントをクリックします]**。
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-[ _[!UICONTROL イベント]_]ダイアログが表示されます。 「**[!UICONTROL &#x200B;エクスペリエンスプラットフォーム&#x200B;]**」をクリックして利用可能なオプションのリストをフィルターし、「**[!UICONTROL &#x200B;プラットフォーム通知&#x200B;]**」をクリックしてから「**[!UICONTROL &#x200B;次へ&#x200B;]**」をクリックします。
+[ _[!UICONTROL イベント]_]ダイアログが表示されます。 「**[!UICONTROL  Experience Platform ]**」をクリックして利用可能なオプションのリストをフィルターし、「**[!UICONTROL &#x200B;次へ&#x200B;]**」をクリックする前に**[!UICONTROL  Platform通知&#x200B;]**をクリックします。
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
@@ -89,4 +91,4 @@ Adobe Developer Console [に移動し](https://www.adobe.com/go/devs_console_ui)
 
 ## 次の手順
 
-プラットフォーム通知をプロジェクトに登録すると、プロジェクトダッシュボードから受信したイベントを表示できます。 イベントをトレースする方法の詳細な手順については、『 [Adobe I/Oイベントのトレース](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 』ガイドを参照してください。
+プロジェクトにPlatform通知を登録すると、プロジェクトダッシュボードから受信したイベントを表示できます。 イベントをトレースする方法の詳細な手順については、『 [Adobe I/Oイベントのトレース](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 』ガイドを参照してください。
