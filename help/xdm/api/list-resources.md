@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リストリソース
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 1つのGET要求を実行することで、コンテナ内の特定の種類(クラス、ミックスイン、スキーマ、データ型、または記述子)のスキーマレジストリリソースのリストを表示できます。
 
->[!NOTE] リソースをリストする場合、スキーマレジストリでは結果セットが300項目に制限されます。 この制限を超えるリソースを返すには、 [ページングパラメーターを使用する必要があります](#paging)。 また、結果を [フィルターし](#filtering) 、返されるリソースの数を減らすために、クエリパラメーターを使用することもお勧めします。
+>[!NOTE]
+>
+>リソースをリストする場合、スキーマレジストリでは結果セットが300項目に制限されます。 この制限を超えるリソースを返すには、 [ページングパラメーターを使用する必要があります](#paging)。 また、結果を [フィルターし](#filtering) 、返されるリソースの数を減らすために、クエリパラメーターを使用することもお勧めします。
 
 **API形式**
 
@@ -78,7 +80,9 @@ curl -X GET \
 
 スキーマレジストリでは、リソースのリストを作成する際に、クエリパラメーターを使用してページを作成し、結果をフィルターすることができます。
 
->[!NOTE] 複数のクエリパラメーターを組み合わせる場合は、アンパサンド(`&`)で区切る必要があります。
+>[!NOTE]
+>
+>複数のクエリパラメーターを組み合わせる場合は、アンパサンド(`&`)で区切る必要があります。
 
 ### ページング {#paging}
 
@@ -105,4 +109,6 @@ curl -X GET \
 | `~` | 指定された正規式とプロパティが一致するかどうかを示すフィルター。 | `property=title~test$` |
 | (None) | プロパティ名のみをステートすると、プロパティが存在するエントリのみが返されます。 | `property=title` |
 
->[!TIP] この `property` パラメーターを使用して、互換性のあるクラスでミックスインをフィルタリングできます。 例えば、はXDM Individualプロファイルクラスと互換性のあるミックスインのみを `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 返します。
+>[!TIP]
+>
+>この `property` パラメーターを使用して、互換性のあるクラスでミックスインをフィルタリングできます。 例えば、はXDM Individualプロファイルクラスと互換性のあるミックスインのみを `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 返します。
