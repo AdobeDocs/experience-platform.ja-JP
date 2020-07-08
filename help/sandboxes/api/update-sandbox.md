@@ -4,7 +4,7 @@ solution: Experience Platform
 title: サンドボックスの更新
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 4%
@@ -16,7 +16,9 @@ ht-degree: 4%
 
 サンドボックス内の1つ以上のフィールドを更新するには、要求パスにサンドボックスを含むPATCH要求を作成し、要求ペイロード内 `name` で更新するプロパティを作成します。
 
->[!NOTE] 現在、サンドボックスの `title` プロパティのみを更新できます。
+>[!NOTE]
+>
+>現在、サンドボックスの `title` プロパティのみを更新できます。
 
 **API形式**
 
