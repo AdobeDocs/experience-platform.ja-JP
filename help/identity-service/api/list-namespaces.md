@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リストで使用できる名前空間
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 5%
@@ -35,7 +35,9 @@ curl -X GET \
 
 応答は、オブジェクトの配列を含み、各オブジェクトは使用可能な名前空間を表します。 「[!UICONTROL custom]」値が「[!UICONTROL false」の名前空間は標準名前空間ですが、「]custom[!UICONTROL 」値が「]true」の名前空間は組織が作成したです。
 
->[!NOTE] この応答は領域のために切り捨てられました。
+>[!NOTE]
+>
+>この応答は領域のために切り捨てられました。
 
 ```json
 [
