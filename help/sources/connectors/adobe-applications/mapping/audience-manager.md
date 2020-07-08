@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: オーディエンスマネージャーのマッピングフィールド
+title: Audience Managerマッピングフィールド
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 ---
 
 
-# オーディエンスマネージャーのマッピングフィールド
+# Audience Managerマッピングフィールド
 
-以下の表に、Adobe Adobe Managerデータ(リアルタイム、オンボード、プロファイルの各データ)内のフィールドと、対応するXDMフィールドとのマッピングを示します。
+以下の表に、Adobe Audience Managerデータ(リアルタイム、オンボード、プロファイルデータ)内のフィールドと、対応するXDMフィールドのマッピングを示します。
 
 各XDMフィールドについて詳しくは、 [XDMフィールドディクショナリ](../../../../xdm/schema/field-dictionary.md) (XDM)を参照してください。
 
@@ -50,7 +50,9 @@ ht-degree: 0%
 | `b_time` | `ExperienceEvent.timeStamp` |
 | `overwrite` | `overwriteTraits` |
 
->[!NOTE] 今後のリリースで、Inbound Fieldsは非推奨となる予定です。
+>[!NOTE]
+>
+>今後のリリースで、Inbound Fieldsは非推奨となる予定です。
 
 ## プロファイルデータ
 
