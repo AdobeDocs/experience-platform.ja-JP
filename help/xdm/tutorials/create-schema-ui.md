@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマエディターを使用してスキーマを作成する。
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d55dc9776968099901325c58506c5e322449368e
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -289,13 +289,25 @@ More information about relationships and other schema metadata can be found in t
 >
 >スキーマをリアルタイム顧客プロファイルに対して有効にして保存すると、無効にすることはできません。
 
-## 次の手順
+## 次の手順とその他のリソース
 
 「忠誠度メンバー」スキーマの構成が完了すると、エディターの *構造* セクションに完全なスキーマが表示されます。 「 **保存** 」をクリックすると、スキーマがスキーマライブラリに保存され、スキーマレジストリからアクセスできるようになります。
 
 これで、新しいスキーマを使用してPlatformにデータを取り込むことができます。 スキーマを使用してデータを取り込むと、追加的な変更のみが行われる場合があることに注意してください。 スキーマのバージョン管理について詳しくは、スキーマ構成の [基本](../schema/composition.md) （英語）を参照してください。
 
 スキーマレジストリAPIを使用して、「Loyality Members」スキーマを表示および管理することもできます。 APIの使用を開始するには、 [スキーマレジストリAPI開発ガイドを読んで開始します](../api/getting-started.md)。
+
+>[!WARNING]
+>
+>次のビデオに示す [!DNL Platform] UIは古いものです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
+
+次のビデオでは、 [!DNL Platform] UIで単純なスキーマを作成する方法を示します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+次のビデオは、ミックスインとクラスを使用する際の理解を深めるためのものです。
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## 付録
 
