@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platformの部分バッチ取り込みの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
+source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 1%
@@ -103,7 +103,7 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-「 [!UICONTROL *[!UICONTROL 部分インジェスト]*] 」切り替えを使用すると、部分バッチインジェストの使用を有効または無効にできます。
+「 *[!UICONTROL 部分インジェスト]* 」切り替えを使用すると、部分バッチインジェストの使用を有効または無効にできます。
 
 [ *[!UICONTROL エラー診断]* ]トグルは、[ *[!UICONTROL 部分的なインジェスト]* ]トグルがオフの場合にのみ表示されます。 この機能を使用すると、取り込んだバッチ [!DNL Platform] に関する詳細なエラーメッセージを生成できます。 [ *[!UICONTROL 部分的な取り込み]* ]トグルがオンになっている場合は、拡張されたエラー診断が自動的に適用されます。
 
