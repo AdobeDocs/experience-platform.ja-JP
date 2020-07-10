@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: リアルタイムの顧客プロファイルAPI開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 リアルタイム顧客プロファイルにより、Adobe Experience Platform内の各顧客の全体的な表示を確認できます。 プロファイルを使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルの個別の顧客データを、各顧客インタラクションに関する実用的なタイムスタンプの付いたアカウントを提供する統合表示に統合できます。
 
-リアルタイム顧客プロファイルAPIには、複数のエンドポイントが含まれています。エンドポイントの概要を以下に示します。 詳しくは、個々のエンドポイントガイドを参照してください。また、 [入門ガイドを参照し](getting-started.md) 、必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み取りなどを確認してください。
+リアルタイム顧客プロファイルAPIには、複数のエンドポイントが含まれています。エンドポイントの概要を以下に示します。 詳しくは、個々のエンドポイントのガイドを参照してください。必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み方などについては、 [はじめに](getting-started.md) 「はじめに」のガイドを参照してください。
 
 使用可能なすべてのエンドポイントとCRUD操作を表示するには、『 [リアルタイムプロファイルAPIリファレンス』スウォッチガーを参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
 
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 Adobe Experience Platformは、「エッジ」と呼ばれる戦略的に配置されたサーバー上でデータに容易にアクセスできるようにすることで、顧客体験をリアルタイムにパーソナライズできます。 Real-time Customer CustomerプロファイルAPIは、「投影」と呼ばれるコンポーネントを介してエッジを操作するためのエンドポイントを提供します。 これには、各エッジに投影するデータを決定する投影設定や、投影のルーティング先を定義する投影先が含まれます。 エッジ投影法の操作について詳しくは、『 [投影の設定と宛先のエンドポイント』ガイドを参照してください](edge-projections.md)。
 
-## エンティティ
+## エンティティ(プロファイルアクセス) {#entities}
 
 Adobe Experience Platformを通じて、RESTful APIまたはユーザーインターフェイスを使用してリアルタイム顧客プロファイルデータにアクセスできます。 APIを使用して、「プロファイル」と呼ばれるエンティティにアクセスする方法を学ぶには、「エン [ティティエンドポイントガイド](entities.md)」に記載されている手順に従います。 PlatformUIを使用してプロファイルにアクセスするには、 [プロファイルユーザーガイドを参照してください](../ui/user-guide.md)。
 
