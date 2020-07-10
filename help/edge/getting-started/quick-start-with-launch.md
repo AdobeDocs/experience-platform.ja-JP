@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: 3f52def8318f57cfc6534e15415d172e768a8614
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 27%
+source-wordcount: '553'
+ht-degree: 26%
 
 ---
 
@@ -33,6 +33,10 @@ Experience Platformエッジネットワークは、データをXDMとして受�
 
 - [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
 - 作成したスキーマに Adobe Experience Platform Web SDK mixin を追加します。
+
+次のビデオでは、Web SDKデータ用のスキーマ、データセット、ストリーミングソースコネクタの作成をサポートします。
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## Adobe LaunchでのSDKのインストール
 
