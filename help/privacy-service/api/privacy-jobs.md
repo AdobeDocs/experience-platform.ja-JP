@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ジョブ
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: df36d88de8ac117206d8d744cfcdd7804fcec61e
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1807'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,56 @@ ht-degree: 2%
 
 # プライバシージョブ
 
-以下の節では、Privacy ServiceAPIの `/jobs` エンドポイントを使用して行う呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
+このドキュメントでは、API呼び出しを使用してプライバシージョブを操作する方法について説明します。 特に、Privacy ServiceAPIでの `/job` エンドポイントの使用について説明します。 このガイドを読む前に、 [はじめにの節を参照し](./getting-started.md#getting-started) 、必要なヘッダーやAPI呼び出し例の読み方など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+
+## すべてのジョブのリスト {#list}
+
+エンドポイントにGETリクエストを行うことで、組織内で使用可能なすべてのプライバシージョブのリストを表示でき `/jobs` ます。
+
+**API形式**
+
+このリクエストの形式では、エンドポイントの `regulation` クエリパラメーターが使用されるので、 `/jobs` 次に示すように、疑問符(`?`)で始まります。 応答はページ分割され、他のクエリパラメーター(`page` および `size`)を使用して応答をフィルターできます。 アンパサンド(`&`)を使用して、複数のパラメーターを区切ることができます。
+
+```http
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{REGULATION}` | クエリする規則のタイプ。 指定できる値は、 `gdpr`、 `ccpa`および `pdpa_tha`です。 |
+| `{PAGE}` | 0を基準とするページ番号を使用して、表示するデータのページ。 デフォルトは `0` です。 |
+| `{SIZE}` | 各ページに表示する結果の数。 デフォルトはです。最大値 `1` はで `100`す。 最大値を超えると、APIは400コードエラーを返します。 |
+
+**リクエスト**
+
+次のリクエストは、ページサイズが50の3番目のページから、IMS組織内のすべてのジョブのページ分割リストを取得します。
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**応答**
+
+正常な応答は、ジョブのリストを返します。各ジョブには、ジョブなどの詳細が含まれ `jobId`ます。 この例では、結果の3ページ目から始まる50個のジョブのリストが応答に含まれます。
+
+### 後続のページへのアクセス
+
+ページ分割応答の次の結果セットを取得するには、 `page` クエリパラメーターを1増やしながら、同じエンドポイントに対して別のAPI呼び出しを行う必要があります。
 
 ## プライバシージョブの作成 {#create-job}
 
-新しいジョブリクエストを作成する前に、まず、アクセス、削除、または販売するデータを持つデータサブジェクトに関する識別情報を収集する必要があオプトアウトります。 必要なデータを取得したら、ルートエンドポイントへのPOST要求のペイロードで指定する必要があります。
+新しいジョブリクエストを作成する前に、まず、アクセス、削除、または販売するデータを持つデータサブジェクトに関する識別情報を収集する必要があオプトアウトります。 必要なデータを取得したら、エンドポイントへのPOST要求のペイロードで指定する必要があり `/jobs` ます。
 
 >[!NOTE]
 >
->互換性のあるAdobe Experience Cloudアプリケーションでは、データの件名を識別するために様々な値が使用されます。 Privacy ServiceおよびExperience Cloudに必要なIDの詳細については、 [アプリケーション](../experience-cloud-apps.md) （複数可）に関するガイドを参照してください。
+>互換性のあるAdobe Experience Cloudアプリケーションでは、データの件名を識別するために様々な値が使用されます。 Privacy ServiceおよびExperience Cloudに必要なIDの詳細については、 [アプリケーション](../experience-cloud-apps.md) （複数可）に関するガイドを参照してください。 Privacy Serviceに送信するIDの決定に関する一般的な手順については、プライバシー要求の [IDデータに関するドキュメントを参照してください](../identity-data.md)。
 
 Privacy ServiceAPIは、個人データに対する2種類のジョブリクエストをサポートしています。
 
@@ -290,7 +331,7 @@ curl -X POST \
 
 ## ジョブのステータスの確認 {#check-status}
 
-前の手順で返した値の1つを使用して、そのジョブに関する情報（現在の処理ステータスなど）を取得できます。 `jobId`
+エンドポイントへのGET要求のパスにそのジョブを含めると、現在の処理ステータスなど、特定のジョブに関する情報 `jobId` を取得でき `/jobs` ます。
 
 >[!IMPORTANT]
 >
@@ -304,7 +345,7 @@ GET /jobs/{JOB_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{JOB_ID}` | 検索するジョブのID。前の手順 `jobId` に応答してに返され [ます](#create-job)。 |
+| `{JOB_ID}` | 検索するジョブのID。 このIDは、ジョブ `jobId` の [作成とすべてのジョブの](#create-job) 一覧表示に成功したAPI応答で返されます [](#list)。 |
 
 **リクエスト**
 
@@ -324,12 +365,12 @@ curl -X GET \
 
 ```json
 {
-    "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
+    "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076b0842b6",
     "requestId": "15700479082313109RX-899",
     "userKey": "David Smith",
     "action": "access",
-    "status": "error",
-    "submittedBy": "02b38adf-6573-401e-b4cc-6b08dbc0e61c@techacct.adobe.com",
+    "status": "complete",
+    "submittedBy": "{ACCOUNT_ID}",
     "createdDate": "10/02/2019 08:25 PM GMT",
     "lastModifiedDate": "10/02/2019 08:25 PM GMT",
     "userIds": [
@@ -354,8 +395,21 @@ curl -X GET \
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Finished successfully."
+            }
+        },
+        {
+            "product": "Profile",
+            "retryCount": 0,
+            "processedDate": "10/02/2019 08:25 PM GMT",
+            "productStatusResponse": {
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Success dataSetIds = [5dbb87aad37beb18a96feb61], Failed dataSetIds = []"
             }
         },
         {
@@ -363,8 +417,14 @@ curl -X GET \
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6054-200",
+                "responseMsgDetail": "PARTIALLY COMPLETED- Data not found for some requests, check results for more info.",
+                "results": {
+                  "processed": ["1123A4D5690B32A"],
+                  "ignored": ["dsmith@acme.com"]
+                }
             }
         }
     ],
@@ -375,64 +435,28 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `productStatusResponse` | ジョブの現在のステータス。 可能な各ステータスの詳細を次の表に示します。 |
+| `productStatusResponse` | 配列内の各オブジェクトには、特定のアプリケーションに関するジョブの現在の状態に関する情報が含まれ `productResponses`[!DNL Experience Cloud] ます。 |
+| `productStatusResponse.status` | ジョブの現在のステータスカテゴリ。 次の表に、 [使用可能なステータスカテゴリのリスト](#status-categories) 、および対応する意味を示します。 |
+| `productStatusResponse.message` | ステータスカテゴリに対応する、ジョブの固有のステータス。 |
+| `productStatusResponse.responseMsgCode` | Privacy Serviceが受信した製品応答メッセージの標準コードです。 メッセージの詳細は、に示し `responseMsgDetail`ます。 |
+| `productStatusResponse.responseMsgDetail` | ジョブのステータスに関する詳細な説明。 同様のステータスのメッセージは、製品によって異なる場合があります。 |
+| `productStatusResponse.results` | 特定のステータスの場合、一部の製品は、で扱われない追加情報を提供する `results` オブジェクトを返す場合があり `responseMsgDetail`ます。 |
 | `downloadURL` | ジョブのステータスがZIPファイルの場合 `complete`、この属性はジョブの結果をダウンロードするためのURLを提供します。 このファイルは、ジョブの完了後60日間ダウンロードできます。 |
 
-### ジョブステータス応答
+### ジョブステータスカテゴリ {#status-categories}
 
-次の表に、様々なジョブのステータスと対応する意味をリストします。
+次の表に、様々なジョブステータスカテゴリと、それに対応する意味を示します。
 
-| ステータスコード | ステータスメッセージ | 意味 |
-| ----------- | -------------- | -------- |
-| 1 | 完了 | ジョブが完了し、（必要に応じて）各アプリケーションからファイルがアップロードされます。 |
-| 2 | 処理 | アプリケーションはジョブを確認し、現在処理中です。 |
-| 3 | Submitted | ジョブは、該当するすべての申し込みに送信されます。 |
-| 4 | エラー | ジョブの処理でエラーが発生しました。個々のジョブの詳細を取得することで、より具体的な情報を取得できる場合があります。 |
+| ステータスカテゴリ | 意味 |
+| -------------- | -------- |
+| 完了 | ジョブが完了し、（必要に応じて）各アプリケーションからファイルがアップロードされます。 |
+| 処理 | アプリケーションはジョブを確認し、現在処理中です。 |
+| Submitted | ジョブは、該当するすべての申し込みに送信されます。 |
+| エラー | ジョブの処理でエラーが発生しました。個々のジョブの詳細を取得することで、より具体的な情報を取得できる場合があります。 |
 
 >[!NOTE]
 >
 >依存する子ジョブがまだ処理中の場合、送信されたジョブは、処理状態のままになる可能性があります。
-
-## すべてのジョブのリスト
-
-ルート(`/`)エンドポイントにGETリクエストを行うことで、組織内で使用可能なすべてのジョブリクエストのリストを表示できます。
-
-**API形式**
-
-このリクエスト形式では、ルート( `regulation` )エンドポイントで`/`クエリパラメーターが使用されるので、次に示す疑問符(`?`)で始まります。 応答はページ分割され、他のクエリパラメーター(`page` および `size`)を使用して応答をフィルターできます。 アンパサンド(`&`)を使用して、複数のパラメーターを区切ることができます。
-
-```http
-GET /jobs?regulation={REGULATION}
-GET /jobs?regulation={REGULATION}&page={PAGE}
-GET /jobs?regulation={REGULATION}&size={SIZE}
-GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
-```
-
-| パラメーター | 説明 |
-| --- | --- |
-| `{REGULATION}` | クエリする規則のタイプ。 指定できる値は、 `gdpr`、 `ccpa`および `pdpa_tha`です。 |
-| `{PAGE}` | 0を基準とするページ番号を使用して、表示するデータのページ。 デフォルトは `0` です。 |
-| `{SIZE}` | 各ページに表示する結果の数。 デフォルトはです。最大値 `1` はで `100`す。 最大値を超えると、APIは400コードエラーを返します。 |
-
-**リクエスト**
-
-次のリクエストは、ページサイズが50の3番目のページから、IMS組織内のすべてのジョブのページ分割リストを取得します。
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-```
-
-**応答**
-
-正常な応答は、ジョブのリストを返します。各ジョブには、ジョブなどの詳細が含まれ `jobId`ます。 この例では、結果の3ページ目から始まる50個のジョブのリストが応答に含まれます。
-
-### 後続のページへのアクセス
-
-ページ分割応答の次の結果セットを取得するには、 `page` クエリパラメーターを1増やしながら、同じエンドポイントに対して別のAPI呼び出しを行う必要があります。
 
 ## 次の手順
 
