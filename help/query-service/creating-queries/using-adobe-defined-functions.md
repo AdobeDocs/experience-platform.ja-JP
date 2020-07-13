@@ -4,9 +4,9 @@ solution: Experience Platform
 title: アドビ定義関数
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '292'
 ht-degree: 6%
 
 ---
@@ -240,4 +240,10 @@ LIMIT 10;
 ```
 
 ![画像](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## その他のリソース
+
+次のビデオでは、Adobe Experience PlatformインターフェイスとPSQLクライアントでクエリを実行する方法を示します。 また、このビデオでは、XDMオブジェクト内の個々のプロパティ、Adobe定義の関数、CREATE TABLE AS SELECT(CTAS)の使用に関する例も使用しています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
