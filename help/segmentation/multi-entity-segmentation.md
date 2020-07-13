@@ -4,9 +4,9 @@ solution: Experience Platform
 title: マルチエンティティセグメント
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -16,15 +16,17 @@ ht-degree: 0%
 
 複数エンティティのセグメント化は、プロファイル、店舗、または他の非プロファイルクラスに基づいて、追加のデータを使用して製品データを拡張する機能です。 接続すると、追加のクラスのデータは、プロファイルスキーマにネイティブであるかのように使用可能になります。
 
-マルチエンティティセグメント化の詳細については、 [セグメント化の概要を参照してください](./home.md)。
+マルチエンティティのセグメント化の詳細については、以下のビデオを見て、ドキュメントを読み、学習を補完してください。また、 [セグメント化の概要を調べてください](./home.md)。]
+
+>[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
 ## はじめに
 
-このチュートリアルでは、セグメント化の使用に関連する様々なAdobe Experience Platformサービスについて、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、セグメント化の使用に関連する様々なAdobe Experience Platformサービスについて、十分な理解が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [リアルタイム顧客プロファイル](../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
-- [Adobe Experience Platform Segmentation Service](./home.md): リアルタイム顧客プロファイルからセグメントを作成できます。
-- [Experience Data Model(XDM)](../xdm/home.md): プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [Adobe Experience Platformセグメントサービス](./home.md): リアルタイム顧客プロファイルからセグメントを作成できます。
+- [Experience Data Model(XDM)](../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 
 ## XDMの関係を定義する方法
 
