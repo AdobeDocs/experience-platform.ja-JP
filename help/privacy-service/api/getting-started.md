@@ -5,7 +5,7 @@ title: Privacy Service開発ガイド
 description: RESTful APIを使用して、Adobe Experience Cloudアプリケーション全体でデータサブジェクトの個人データを管理します
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6f93191defad6a79a3f6623da3492ab405787b5c
+source-git-commit: b45fdfff70ce4ba857f23e7116812a07825871bc
 workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 2%
@@ -19,7 +19,7 @@ Adobe Experience Platform Privacy Serviceは、Adobe Experience Cloudアプリ�
 
 このガイドはPrivacy ServiceAPIの使用方法をカバーしています。 UIの使用方法について詳しくは、 [Privacy ServiceUIの概要を参照してください](../ui/overview.md)。 Privacy ServiceAPIで使用可能なすべてのエンドポイントの包括的なリストについては、 [APIリファレンスを参照してください](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
 
-## はじめに
+## はじめに {#getting-started}
 
 このガイドでは、次のExperience Platform機能を理解している必要があります。
 
