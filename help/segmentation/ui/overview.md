@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントビルダーのUIガイド
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
 workflow-type: tm+mt
-source-wordcount: '2683'
+source-wordcount: '2766'
 ht-degree: 0%
 
 ---
@@ -233,6 +233,12 @@ ht-degree: 0%
 
 ![](../images/segment-builder/info-bubble.png)
 
+### ストリーミングセグメントのビデオデモ
+
+次のビデオでは、ストリーミングのセグメント化について理解しておくことを目的としています。 ここには、顧客体験の例を示し、その後インター [!DNL Platform] フェイスの主な機能を簡単に紹介します。
+
+>[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+
 ## ポリシー違反のスケジュール
 
 >[!NOTE]
@@ -243,7 +249,7 @@ ht-degree: 0%
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## 次の手順
+## 次の手順とその他のリソース {#next-steps}
 
 セグメントビルダーは、マーケティング可能なオーディエンスをデータから分離できる豊富なワークフローを提供し [!DNL Real-time Customer Profile] ます。 このガイドを読むと、次のことができるようになります。
 
@@ -253,4 +259,16 @@ ht-degree: 0%
 - スケジュール済みセグメントのすべてのセグメント定義を有効にします。
 - ストリーミングセグメントに対して、指定したセグメント定義を有効にします。
 
-APIを使用した作業手順については、APIを使用した [!DNL Segmentation Service] オーディエンスセグメントの [!DNL Segmentation Service] 作成のチュートリアルを参照してください [](../tutorials/create-a-segment.md) 。
+詳しくは、ドキュメントを読み続け [!DNL Segmentation Service]て、以下のビデオを参照して学習内容を補ってください。 APIを使用した作業手順については、APIを使用した [!DNL Segmentation Service] オーディエンスセグメントの [!DNL Segmentation Service] 作成のチュートリアルを参照してください [](../tutorials/create-a-segment.md) 。
+
+>[!WARNING]
+>
+> 次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
+
+**セグメントの作成：**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+
+**動的セグメントの作成：**
+
+>[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
