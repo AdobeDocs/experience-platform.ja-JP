@@ -1,12 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Access
+user-guide-title: Adobe Experience Platformデータアクセス
 translation-type: tm+mt
-source-git-commit: d9aa21a7439a6c40f6f51dfbdf5c7b3690c4593a
+source-git-commit: 5f3afdbb52f5c99257c35e675c782e7477618ce6
 workflow-type: tm+mt
-source-wordcount: '24'
-ht-degree: 4%
+source-wordcount: '31'
+ht-degree: 3%
 
 ---
 
@@ -14,6 +14,9 @@ ht-degree: 4%
 # Adobe Experience Platform Data Access {#data-access}
 
 - [データアクセスの概要](home.md)
+- [データアクセスAPI](api.md)
 - チュートリアル {#tutorials}
    - [データセットデータへのアクセス](tutorials/dataset-data.md)
-- [プラットフォームのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
+   - [Python SDK](tutorials/python-sdk.md)
+   - [Spark SDK](tutorials/spark-sdk.md)
+- [Platformのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
