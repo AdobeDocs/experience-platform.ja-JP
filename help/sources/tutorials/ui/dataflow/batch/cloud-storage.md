@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのクラウドストレージバッチコネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1223'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
 * [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
@@ -80,7 +80,7 @@ ht-degree: 1%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパーの機能について詳しくは、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../../ingestion/tutorials/map-a-csv-file.md)。
+必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパー関数の詳細については、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../../ingestion/tutorials/map-a-csv-file.md)。
 
 ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」をクリックします。
 
@@ -129,10 +129,16 @@ ht-degree: 1%
 
 ## 次の手順
 
-このチュートリアルに従うと、外部のクラウドストレージからデータを取り込むためのデータフローが正しく作成され、データセットの監視に関する洞察が得られます。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従うと、外部のクラウドストレージからデータを取り込むためのデータフローが正しく作成され、データセットの監視に関する洞察が得られます。 データフローの作成について詳しくは、以下のビデオを参照して学習を補うことができます。 また、入力データは、やなどの下流の [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../../profile/home.md)
 * [Data Science Workspaceの概要](../../../../../data-science-workspace/home.md)
+
+>[!WARNING]
+>
+> 次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 
 ## 付録
 
