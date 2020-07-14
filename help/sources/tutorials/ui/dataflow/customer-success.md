@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでの顧客成功コネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1022'
 ht-degree: 1%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 1%
 
 ![select-スキーマ](../../../images/tutorials/dataflow/customer-success/select-schema.png)
 
-必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパーの機能について詳しくは、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../ingestion/tutorials/map-a-csv-file.md)。
+必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパー関数の詳細については、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
 ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」をクリックします。
 
@@ -104,23 +104,9 @@ ht-degree: 1%
 
 ![レビュー](../../../images/tutorials/dataflow/customer-success/review.png)
 
-## データフローの監視
+## データフローの監視と削除
 
-データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 次の手順に従って、データフローのデータセットモニターにアクセスします。
-
-「 *[!UICONTROL Sources]* 」ワークスペース内の「Customer Success ** 」カテゴリで、表示する顧客成功ソースを選択します。 「 *[!UICONTROL Connect Source]* 」を選択して、認証インターフェイスを起動します。 既存のデータフローを表示するには、「 *[!UICONTROL 既存のアカウント]* 」を選択し、アクセスするアカウントを選択します。
-
-![monitor](../../../images/tutorials/dataflow/customer-success/monitor.png)
-
-[ *[!UICONTROL ソースアクティビティ]* ]画面が表示されます。 アクティビティを監視するデータセットの名前をここからクリックします。
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/customer-success/select-dataflow-dataset.png)
-
-[ *[!UICONTROL データセットアクティビティ]* ]画面が表示されます。 このページには、グラフの形式で消費されるメッセージの割合が表示されます。
-
-![データセットアクティビティ](../../../images/tutorials/dataflow/customer-success/dataset-activity.png)
-
-データセットの監視と取り込みの詳細については、ストリーミングデータフローの [監視に関するチュートリアルを参照してください](../../../../ingestion/quality/monitor-data-flows.md)。
+データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 データフローの監視および削除方法の詳細については、「データフローの [監視および削除に関するチュートリアル](../monitor.md)」を参照してください。
 
 ## 次の手順
 
