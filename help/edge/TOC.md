@@ -1,17 +1,17 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Web SDKヘルプ
+user-guide-title: Adobe Experience PlatformWeb SDKヘルプ
 translation-type: tm+mt
-source-git-commit: 73e0c245191c88025e59cf226ec5b07a55064b97
+source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 66%
+source-wordcount: '94'
+ht-degree: 62%
 
 ---
 
 
-# Adobe Experience Platform Web SDK {#edge}
+# Adobe Experience PlatformWeb SDK {#edge}
 
 * [Web SDKの概要](home.md)
 * はじめに {#get-started}
@@ -34,6 +34,7 @@ ht-degree: 66%
 * ソリューション固有の考慮事項 {#solutions}
    * Analytics {#analytics}
       * [Analytics の概要](solution-specific/analytics/analytics-overview.md)
+      * [Analyticsでの変数の手動マッピング](solution-specific/analytics/manually-mapping-variables.md)
       * [自動的にマッピングされた変数](solution-specific/analytics/automatically-mapped-vars.md)
    * Audience Manager {#aam}
       * [Audience Manager の概要](solution-specific/audience-manager/audience-manager-overview.md)
@@ -43,4 +44,4 @@ ht-degree: 66%
 * リファレンス {#ref}
    * [自動的に収集された値](reference/automatic-information.md)
    * [ライブラリ情報の取得](reference/retrieving-library-information.md)
-* [プラットフォームのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
+* [Platformのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
