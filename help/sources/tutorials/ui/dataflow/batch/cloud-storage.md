@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのクラウドストレージバッチコネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1226'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 1%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパー関数の詳細については、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../../ingestion/tutorials/map-a-csv-file.md)。
+必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパーの機能について詳しくは、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../../ingestion/tutorials/map-a-csv-file.md)。
 
 ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」をクリックします。
 
@@ -123,9 +123,9 @@ ht-degree: 1%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
-## データフローの監視
+## データフローの監視と削除
 
-クラウドストレージのデータフローが作成されたら、データを通じて取り込まれるデータを監視できます。 データセットの監視の詳細については、「ストリーミングデータフローの [監視に関するチュートリアル](../../../../../ingestion/quality/monitor-data-flows.md)」を参照してください。
+クラウドストレージのデータフローが作成されたら、データを通じて取り込まれるデータを監視できます。 データ・フローの監視および削除の詳細は、「データ・フローの [監視に関するチュートリアル](../../../../../ingestion/quality/monitor-data-flows.md)」を参照してください。
 
 ## 次の手順
 
