@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでの広告コネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '1072'
 ht-degree: 1%
 
 ---
@@ -111,9 +111,9 @@ ht-degree: 1%
 
 ![レビュー](../../../images/tutorials/dataflow/advertising/review.png)
 
-## データセットフローの監視
+## データフローの監視と削除
 
-データセットフローが作成されたら、データを通じて取り込まれるデータを監視できます。 データセットフローの監視方法について詳しくは、 [アカウントとデータセットフローに関するチュートリアルを参照してください](../monitor.md)。
+データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 データフローの監視および削除方法の詳細については、「データフローの [監視および削除に関するチュートリアル](../monitor.md)」を参照してください。
 
 ## 次の手順
 
