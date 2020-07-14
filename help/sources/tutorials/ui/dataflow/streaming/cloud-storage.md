@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのクラウドストレージストリーミングコネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
@@ -74,9 +74,9 @@ ht-degree: 1%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
-## データフローの監視
+## データフローの監視と削除
 
-クラウドストレージのデータフローが作成されたら、データを通じて取り込まれるデータを監視できます。 データセットの監視の詳細については、「ストリーミングデータフローの [監視に関するチュートリアル](../../../../../ingestion/quality/monitor-data-flows.md)」を参照してください。
+クラウドストレージのデータフローが作成されたら、データを通じて取り込まれるデータを監視できます。 データ・フローの監視および削除の詳細は、「データ・フローの [監視に関するチュートリアル](../../../../../ingestion/quality/monitor-data-flows.md)」を参照してください。
 
 ## 次の手順
 
