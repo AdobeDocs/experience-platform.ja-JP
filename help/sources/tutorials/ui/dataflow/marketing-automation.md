@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのマーケティング自動化コネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1022'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
 - [Experience Data Model(XDM)System](../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    - [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
@@ -103,23 +103,9 @@ ht-degree: 1%
 
 ![レビュー](../../../images/tutorials/dataflow/marketing-automation/review.png)
 
-## データフローの監視
+## データフローの監視と削除
 
-データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 次の手順に従って、データフローのデータセットモニターにアクセスします。
-
-[ *[!UICONTROL ソース]**ワークスペース内の[マーケティング自動化]* ]カテゴリで、表示するマーケティング自動化ソースを選択します。 「 *[!UICONTROL Connect Source]* 」を選択して、認証インターフェイスを起動します。 既存のデータフローを表示するには、「 *[!UICONTROL 既存のアカウント]* 」を選択し、アクセスするアカウントを選択します。
-
-![monitor](../../../images/tutorials/dataflow/marketing-automation/monitor.png)
-
-[ *[!UICONTROL ソースアクティビティ]* ]画面が表示されます。 アクティビティを監視するデータセットの名前をここからクリックします。
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/marketing-automation/select-dataflow-dataset.png)
-
-[ *[!UICONTROL データセットアクティビティ]* ]画面が表示されます。 このページには、グラフの形式で消費されるメッセージの割合が表示されます。
-
-![データセットアクティビティ](../../../images/tutorials/dataflow/marketing-automation/dataset-activity.png)
-
-データセットの監視と取り込みの詳細については、ストリーミングデータフローの [監視に関するチュートリアルを参照してください](../../../../ingestion/quality/monitor-data-flows.md)。
+データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 データフローの監視および削除方法の詳細については、「データフローの [監視および削除に関するチュートリアル](../monitor.md)」を参照してください。
 
 ## 次の手順
 
