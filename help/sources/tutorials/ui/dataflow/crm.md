@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIでのCRMコネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # UIでのCRMコネクタのデータフローの設定
 
-データフローとは、ソースからデータセットにデータを取得し、取り込むスケジュール済みのタスク [!DNL Platform] です。 このチュートリアルでは、CRMベースコネクタを使用して新しいデータフローを設定する手順を説明します。
+データフローとは、ソースからデータセットにデータを取得し、取り込むスケジュール済みのタスク [!DNL Platform] です。 このチュートリアルでは、CRMコネクタを使用して新しいデータフローを設定する手順を説明します。
 
 ## はじめに
 
@@ -103,23 +103,9 @@ CRMコネクタの作成後、 *データの選択* 手順が表示され、フ�
 
 ![レビュー](../../../images/tutorials/dataflow/crm/review.png)
 
-## データフローの監視
+## データフローの監視と削除
 
-データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 次の手順に従って、データフローのデータセットモニターにアクセスします。
-
-「 _ソース_*[!UICONTROL 」ワークスペース内の「]* CRM」カテゴリで、表示するCRMソースを選択します。 「 *[!UICONTROL Connect Source]* 」を選択して、認証インターフェイスを起動します。 既存のデータフローを表示するには、「 *既存のアカウント* 」を選択し、アクセスするアカウントを選択します。
-
-![monitor](../../../images/tutorials/dataflow/crm/monitor.png)
-
-[ *[!UICONTROL ソースアクティビティ]* ]画面が表示されます。 アクティビティを監視するデータセットの名前をここからクリックします。
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/crm/select-dataflow-dataset.png)
-
-[ *[!UICONTROL データセットアクティビティ]* ]画面が表示されます。 このページには、グラフの形式で消費されるメッセージの割合が表示されます。
-
-![データセットアクティビティ](../../../images/tutorials/dataflow/crm/dataset-activity.png)
-
-データセットの監視と取り込みの詳細については、ストリーミングデータフローの [監視に関するチュートリアルを参照してください](../../../../ingestion/quality/monitor-data-flows.md)。
+データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 データフローの監視および削除方法の詳細については、「データフローの [監視および削除に関するチュートリアル](../monitor.md)」を参照してください。
 
 ## 次の手順
 
