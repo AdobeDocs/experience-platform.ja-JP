@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sandboxユーザーガイド
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,10 @@ Experience PlatformUIで、左側のナビゲーションの **サンドボッ�
 ![](../images/ui/sandbox-switched.png)
 
 ## 新しいサンドボックスを作成する
+
+での使用方法を簡単に説明するには、次のビデオを使用 [!DNL Sandboxes] し [!DNL Experience Platform]ます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
 UIで新しいサンドボックスを作成するには、左側のナビゲーションで **「サンドボックス** 」をクリックし、「サンドボックスを **作成**」をクリックします。
 
