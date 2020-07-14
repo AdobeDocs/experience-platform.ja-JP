@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタとAPIを使用してプロトコルデータを収集する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: d5a21462b9f0362414dfe4f73a6c4e4a2c92af61
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1605'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 このチュートリアルでは、有効な基本接続を通じてプロトコルシステムにアクセスし、テーブルのパスや構造など、に取り込むファイルに関する情報を得る必要があ [!DNL Platform]ります。 この情報がない場合は、このチュートリアルを試す前に、Flow Service APIを使用したプロトコル・システムの [詳細に関するチュートリアルを参照してください](../explore/protocols.md) 。
 
 * [Experience Data Model(XDM)System](../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+   * [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
    * [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
 * [カタログサービス](../../../../catalog/home.md): カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
 * [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md): Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
@@ -63,6 +63,18 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 アドホックXDMスキーマを作成した場合、APIへのPOSTリクエストを使用してソース接続を作成できるようになりました [!DNL Flow Service] 。 ソース接続は、接続ID、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
 
+ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
+
+フ **ァイルベースのコネクタの列挙値は、次のとおりです**。
+
+| Data.format | 列挙値 |
+| ----------- | ---------- |
+| 区切りファイル | `delimited` |
+| JSONファイル | `json` |
+| パーケファイル | `parquet` |
+
+すべての **テーブルベースのコネクタに** 、列挙値を使用します。 `tabular`.
+
 **API形式**
 
 ```http
@@ -84,7 +96,7 @@ curl -X POST \
         "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "description": "Protocols source connection to ingest Orders",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9e800522521c1ed7d05d3782897f6bd78ee8c2302169bc19",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -275,17 +287,11 @@ curl -X POST \
 ]
 ```
 
-## データセットベースの接続の作成
-
-外部データをに取り込むに [!DNL Platform]は、まずデータセットベースの [!DNL Experience Platform] 接続を取得する必要があります。
-
-データセットベースの接続を作成するには、「 [データセットベースの接続のチュートリアル](../create-dataset-base-connection.md)」に示されている手順に従います。
-
-開発ガイドに説明されている手順に従って、データセットベースの接続を作成してから、続行します。 一意の識別子(`$id`)を取得して保存し、次の手順でターゲット接続を作成する際に接続IDとして使用します。
-
 ## ターゲット接続の作成
 
-データセットベースの接続、ターゲットスキーマ、ターゲットデータセットの一意のIDが追加されました。 これで、 [!DNL Flow Service] APIを使用してターゲット接続を作成し、インバウンドソースデータを含むデータセットを指定できるようになりました。
+ターゲット接続は、取り込まれたデータが到着した宛先への接続を表します。 ターゲット接続を作成するには、データレークに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+ターゲットスキーマ、ターゲットデータセット、データレークへの接続仕様IDに固有の識別子が追加されました。 これらの識別子を使用して、 [!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
 
 **API形式**
 
@@ -304,7 +310,6 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "name": "Target Connection for protocols",
         "description": "Target Connection for protocols",
         "data": {
@@ -325,10 +330,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | データセットベースの接続のID。 |
 | `data.schema.id` | ターゲット `$id` のXDMスキーマ。 |
 | `params.dataSetId` | ターゲットデータセットのID。 |
-| `connectionSpec.id` | プロトコルアプリケーションの接続指定ID。 |
+| `connectionSpec.id` | Data Lakeへの固定接続仕様ID。 このIDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **応答**
 
@@ -441,7 +445,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **応答**
 
@@ -578,6 +581,9 @@ curl -X GET \
 
 データフローは、ソースからのデータのスケジュールおよび収集を担当します。 データフローを作成するには、ペイロード内で前述の値を指定しながらPOSTリクエストを実行します。
 
+取り込みのスケジュールを設定するには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 interval値は、2つの連続したインジェスションの間の期間を指定し、1回限りのインジェストを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の場合、間隔の値は次の値と等しいかそれ以上に設定する必要があり `15`ます。
+
+
 **API形式**
 
 ```http
@@ -633,13 +639,25 @@ curl -X POST \
     }'
 ```
 
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `flowSpec.id` | サードパーティのプロトコルソースに関連付けられているデータフロー仕様ID。 |
+| `sourceConnectionIds` | サードパーティのプロトコルソースに関連付けられているソース接続ID。 |
+| `targetConnectionIds` | サードパーティのプロトコルソースに関連付けられているターゲット接続ID。 |
+| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 |
+| `transformations.params.mappingId` | サードパーティのプロトコルソースに関連付けられているマッピングID。 |
+| `scheduleParams.startTime` | データフローの開始時間（秒単位）。 |
+| `scheduleParams.frequency` | 選択可能な頻度の値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
+| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があ `15` ります。 |
+
 **応答**
 
 正常な応答は、新しく作成されたデータフロー `id` のIDを返します。
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
