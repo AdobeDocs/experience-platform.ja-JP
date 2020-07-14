@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIで支払コネクタのデータフローを構成します
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1071'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
 
 - [Experience Data Model(XDM)System](../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
    - [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
@@ -93,13 +93,13 @@ ht-degree: 1%
 
 ![スケジュール](../../../images/tutorials/dataflow/payments/scheduling.png)
 
-## データセットフローの名前を指定する
+## データフローに名前を付ける
 
-データセットフローの詳細 *[!UICONTROL (]* データセットフローの名前と説明)を入力する必要がある手順が表示されます。 終了したら **[!UICONTROL 「次へ]** 」を選択します。
+デー *[!UICONTROL タセットフローの詳細]* （オプション）が表示されます。データセットフローの名前と説明を入力する必要があります。 終了したら **[!UICONTROL 「次へ]** 」を選択します。
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
 
-## データセットのフローの確認
+## データフローの確認
 
 「 *[!UICONTROL レビュー]* 」ステップが表示され、新しいデータフローを作成前に確認できます。 詳細は次のカテゴリに分類されます。
 
@@ -111,9 +111,9 @@ ht-degree: 1%
 
 ![レビュー](../../../images/tutorials/dataflow/payments/review.png)
 
-## データセットフローの監視
+## データフローの監視と削除
 
-データセットフローが作成されたら、データを通じて取り込まれるデータを監視できます。 データセットフローの監視方法について詳しくは、 [アカウントとデータセットフローに関するチュートリアルを参照してください](../monitor.md)。
+データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 データフローの監視および削除方法の詳細については、「データフローの [監視および削除に関するチュートリアル](../monitor.md)」を参照してください。
 
 ## 次の手順
 
