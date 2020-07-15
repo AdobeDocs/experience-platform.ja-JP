@@ -1,67 +1,82 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: エクスペリエンスプラットフォームの最新のリリースノート
+description: Experience Platformに関する最新のリリースノート
 doc-type: release notes
-last-update: June 10, 2020
-author: crhoades, ens28527
+last-update: July 15, 2020
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 1dad479708291e911719c3f3dd5edd2e9b497973
+source-git-commit: 1e420d26f89150999f356f9cf5af94d434076c2b
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 6%
+source-wordcount: '331'
+ht-degree: 7%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 6 月 10 日**
+**リリース日：2020 年 7 月 15 日**
 
-Adobe Experience Platformの既存の機能の更新：
+Adobe Experience Platform内の既存の機能の更新：
 
-- [Data Science Workspace](#dsw)
-- [セグメント](#segmentation)
+<!-- - [Data Governance](#governance) -->
+- [リアルタイム顧客プロファイル](#profile)
+- [Segmentation Service](#segmentation)
 - [ソース](#sources)
 
-## Data Science Workspace {#dsw}
+<!-- ## [!DNL Data Governance] {#governance}
 
-Data Science Workspaceは、機械学習と人工知能を使用して、データから洞察を引き出します。 Data Science WorkspaceはAdobe Experience Platformに統合されており、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。
+Adobe Experience Platform Data Governance is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
-Data Science Workspaceは、リアルタイム機械学習を通じて、より良いエクスペリエンスと予測を可能にする新しい方法に取り組んでいます。 Real-time Machine Learningは、APIエンドポイントを介して、カスタムまたはインポートしたプレトレーニング済みの機械学習モデルを、業界標準の相互運用可能なモデル形式で作成、テスト、導入する機能を提供します。
+**New features**
 
-リアルタイム機械学習はアルファベット順で、現在開発中です。
+| Feature    | Description  |
+| -----------| ---------- |
+| Automatic policy enforcement in [!DNL Real-time Customer Data Platform] | Data usage policies are now automatically enforced in [!DNL Real-time CDP] when violating actions occur, including activating segments to destinations. When a policy violation is triggered, users get real-time visibility into usage restrictions within the activation workflow, indicating what data they cannot use and why.<br><br>See the section on [enforcing data usage compliance](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) within the overview on [!DNL Data Governance] in [!DNL Real-time CDP] for more information. |
+| Adobe Audience Manager integration | Any segments that are shared with [!DNL Audience Manager] from [!DNL Platform] inherit any applied data usage labels as [!DNL Data Export Controls], and vice versa. See the [!DNL Audience Manager] documentation for specific [mappings between usage labels and Data Export Controls](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep). |
+| Custom data usage labels | You can now create custom data usage labels using the Policy Service API or in the UI. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
 
-| 機能 | 説明 |
-|--- | ---|
-| JupterLabランチャーリアルタイムMLスターター | JupyterLabランチャーに、Real-time Machine Learning (Alpha)用のPythonノートブックスターターが含まれるようになりました。 |
+See the [Data Governance overview](../../data-governance/home.md) for more information on the service.
 
-リアルタイム機械学習のアルファについて詳しくは、 [リアルタイム機械学習の概要を参照してください](../../data-science-workspace/real-time-machine-learning/home.md)。
+## [!DNL Real-time Customer Profile] {#profile}
 
-## セグメント {#segmentation}
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
-Adobe Experience Platform Segmentation Serviceは、セグメントを作成し、リアルタイムの顧客プロファイルデータからオーディエンスを生成できるユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントはプラットフォーム上で一元的に設定および管理され、アドビの任意のアプリケーションから容易にアクセスできます。
+**New features**
 
-Segmentation Serviceは、顧客ベース内のマーケティング可能な人々のグループを区別する基準を定義することで、特定のプロファイルのサブセットを定義します。 セグメントは、記録データ（人口統計情報など）や、ブランドに対する顧客のインタラクションを表す時系列イベントに基づくことができます。
+| Feature | Description |
+| ------- | ----------- |
+| Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Profile] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | 
+
+-->
+
+## [!DNL Segmentation Service] {#segmentation}
+
+Adobe Experience Platformセグメントサービスは、セグメントを作成して [!DNL Real-time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントは一元的に設定および管理され [!DNL Platform]、アドビの任意のアプリケーションから容易にアクセスできます。
+
+[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。 セグメントは、記録データ（人口統計情報など）や、ブランドに対する顧客のインタラクションを表す時系列イベントに基づくことができます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 日付フィールド | 日付関数の「記念日」機能が追加され、ユーザーは年なしで日付を評価できます。 |
+| ストリーミングセグメント | ストリーミングセグメントは、ユーザーをデータの到着地としてセグメントに分類できるようになり、セグメントの認定時間を大幅に短縮で [!DNL Platform]きます。 また、セグメントのストリーミングは、セグメント化ジョブを手動で実行する必要がなくなります。 |
 
-セグメント化について詳しくは、 [セグメント化の概要を参照してください。](../../segmentation/home.md)
+<!-- | Data usage policy enforcement | In [!DNL Real-time Customer Data Platform], data usage policy violations are automatically surfaced when a violating action in the [!UICONTROL Segments] workspace is attempted. See the [release notes for Data Governance](#governance) for more information on automatic policy enforcement. | -->
+
+詳しくは、 [!DNL Segmentation Service][セグメント化の概要を参照してください。](../../segmentation/home.md)
 
 ## ソース {#sources}
 
-Adobe Experience Platformでは、外部ソースからデータを取り込みながら、Platform Servicesを使用してデータの構造、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRMシステムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformは、外部ソースからデータを取り込みながら、サー [!DNL Platform] ビスを使用してデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRMシステムなど、様々なソースからデータを取り込むことができます。
 
-エクスペリエンスプラットフォームは、RESTful APIとインタラクティブUIを備えており、様々なデータプロバイダーのソース接続を簡単に設定できます。 これらのソース接続を使用すると、外部のストレージシステムやCRMサービスの認証と接続、取り込みの実行時間の設定、データ取り込みスループットの管理を行うことができます。
+Experience PlatformにはRESTful APIとインタラクティブUIが用意されており、様々なデータプロバイダーのソース接続を簡単に設定できます。 これらのソース接続を使用すると、外部のストレージシステムやCRMサービスの認証と接続、取り込みの実行時間の設定、データ取り込みスループットの管理を行うことができます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| クラウドストレージシステム向けの追加のAPIとUIのサポート | Apache HDFS用の新しいソースコネクタ |
-| データベース用の追加のAPIとUIのサポート | Couchbase用の新しいソースコネクタ。 |
+| データフローの削除に対するAPIとUIのサポート | エラーが発生したデータフローや不要になったデータフローは、APIまたはUIを使用して削除できるようになりました。 |
+| 1回の取り込みでのAPIとUIのサポート | 開始日のみが提供され、将来のインジェストがスケジュールされないデータフローの1回限りのインジェストは、APIまたはUIを使用して実行できるようになりました。 |
 
 ソースについて詳しくは、 [ソースの概要を参照してください](../../sources/home.md)。
