@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用量ラベルの概要
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,9 @@ Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformデー�
 
 データセットレベルで適用されるデータ使用量ラベルは、データセット内のすべてのフィールドに反映されます。 ラベルは、データセット内の個々のフィールド（列ヘッダー）に、伝播せずに直接適用することもできます。
 
-で使用可能なデータ使用ラベル [!DNL Experience Platform] とそれらが表す使用ポリシーについて詳しくは、 [サポートされるデータ使用ラベルのガイドを参照してください](reference.md)。
+[!DNL Platform] は、「コア」データ使用ラベルを標準搭載で提供しています。これは、データ管理に適用される様々な一般的な制限をカバーしています。 これらのラベルとそれらが表す使用ポリシーについて詳しくは、 [コアデータ使用ラベルのガイドを参照してください](reference.md)。
+
+アドビが提供するラベルに加えて、独自のカスタムラベルを定義することもできます。 UIでこの操作を行う手順については、『 [data usage labels user guide](./user-guide.md)』を参照してください。 API呼び出しを使用してこれを実行する手順については、『 [data usage labels API』ガイドを参照してください](./api.md)。
 
 ## オーディエンスセグメントのラベルの継承
 
@@ -34,14 +36,13 @@ Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformデー�
 
 Real-time CDPでの自動強制の動作方法について詳しくは、 [Adobe Real-time CDP Data Governanceの概要を参照してください](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)。
 
-<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
-### Inheritance from Adobe Audience Manager Data Export Controls
+### Adobe Audience Managerデータエクスポートコントロールからの継承
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+Experience Platformは、セグメントをAdobe Audience Managerと共有できます。 Audience Managerセグメントに適用されたデータエクスポートコントロールは、Experience Platformデータガバナンスで認識される同等のラベルおよびマーケティングアクションに変換されます。
 
-For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
--->
+特定のデータエクスポートコントロールがPlatform内のデータ使用ラベルにどのようにマッピングされるかについては、 [Audience Managerのドキュメントを参照してください](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
+
 
 ## 次の手順
 
-データ使用ラベルが導入されたので、 [ユーザガイドを読み、](user-guide.md)[!DNL Experience Platform] UIでラベルを管理する方法を学び続けることができます。 APIを使用してラベルを管理する手順については、 [Catalog Service開発者ガイドの該当する節を参照してください](../../catalog/api/labels.md)。
+データ使用ラベルが導入されたので、 [ユーザガイドを読み、](user-guide.md)[!DNL Experience Platform] UIでラベルを管理する方法を学び続けることができます。 APIを使用してラベルを管理する手順については、『 [使用ラベルAPIガイド](./api.md)』を参照してください。
