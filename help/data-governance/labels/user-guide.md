@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用ラベルユーザーガイド
 topic: labels
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -99,6 +99,30 @@ ht-degree: 0%
 ![複数のフィールドを選択して、フィールドレベルのラベルを同時に適用します。](../images/labels/fields_select_multiple.png)
 
 継承の移動は最上位レベルから下に行われる（データセット→フィールド）のみであり、フィールドレベルで適用されたラベルは他のフィールドやデータセットには反映されないことに注意する必要があります。
+
+## カスタムラベルの管理
+
+UIの「 *[!UICONTROL ポリシー]* 」ワークスペース内に、独自のカスタム使用ラベルを作成でき [!DNL Experience Platform] ます。 左側のナビゲーションで「 **[!UICONTROL ポリシー]** 」をクリックし、「 **[!UICONTROL ラベル]** 」をクリックして既存のラベルのリストを表示します。 ここから、「ラベルを **[!UICONTROL 作成]**」をクリックします。
+
+![](../images/labels/create-label-btn.png)
+
+[ *[!UICONTROL ラベルを作成]* ]ダイアログが表示されます。 ここから、新しいラベルに次の情報を入力します。
+
+* **[!UICONTROL 識別子]**: ラベルの一意の識別子。 この値は参照用に使用するので、短く簡潔にする必要があります。
+* **[!UICONTROL 名前]**: ラベルのわかりやすい表示名。
+* **[!UICONTROL 説明]**: （オプション）詳細なコンテキストを提供するためのラベルの説明。
+
+終了したら、「 **[!UICONTROL 作成]**」をクリックします。
+
+![](../images/labels/create-label.png)
+
+ダイアログが閉じ、新しく作成したカスタムラベルが「 *[!UICONTROL ラベル]* 」タブのリストに表示されます。
+
+![](../images/labels/label-created.png)
+
+データセットおよびフィールドの使用ラベルを編集する場合や、データ使用ポリシーを作成する場合に、「 *[!UICONTROL カスタムラベル]* 」でラベルを選択できるようになりました。
+
+<img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## 次の手順
 
