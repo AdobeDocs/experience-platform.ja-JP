@@ -4,29 +4,233 @@ solution: Experience Platform
 title: 'APIを使用したデータ使用ラベルの管理 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 3%
+source-wordcount: '995'
+ht-degree: 4%
 
 ---
 
 
 # APIを使用したデータ使用ラベルの管理
 
-Dataset Service APIを使用すると、データセットの使用ラベルをプログラムで管理できます。 これは、Adobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理するCatalog Service APIとは別のものです。
+このドキュメントでは、Policy Service APIとDataset Service APIを使用してデータ使用量ラベルを管理する方法について手順を説明します。
 
-このドキュメントでは、Dataset Service APIを使用して、データセットレベルおよびフィールドレベルでデータ使用量ラベルを管理する方法について手順を説明します。
+[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) （ポリシーサービスAPI）は、組織のデータ使用ラベルを作成および管理できる複数のエンドポイントを提供します。
+
+Dataset Service APIを使用すると、データセットの使用ラベルを適用および編集できます。 これは、Adobe Experience Platformのデータカタログ機能の一部ですが、データセットのメタデータを管理するCatalog Service APIとは別のものです。
 
 ## はじめに
 
 このガイドを読む前に、カタログ開発者ガイドの [はじめに節に説明されている手順に従って](../../catalog/api/getting-started.md) 、APIを呼び出すために必要な資格情報を収集し [!DNL Platform] ます。
 
-以下の節で説明するエンドポイントを呼び出すには、特定のデータセットに固有の `id` 値を持つ必要があります。 この値がない場合は、カタログオブジェクトの [一覧表示に関するガイドを参照して](../../catalog/api/list-objects.md) 、既存のデータセットのIDを確認してください。
+このドキュメントで概要を説明するDataset Serviceエンドポイントを呼び出すには、特定のデータセットに固有の `id` 値を割り当てる必要があります。 この値がない場合は、カタログオブジェクトの [一覧表示に関するガイドを参照して](../../catalog/api/list-objects.md) 、既存のデータセットのIDを確認してください。
 
-## データセットのラベルを検索する {#lookup}
+## すべてのラベルをリスト {#list-labels}
 
-GETリクエストを作成して、既存のデータセットに適用されているデータ使用量ラベルを調べることができます。
+APIを使用して、すべてのラベルまたは [!DNL Policy Service] ラベルをリストするには、それぞれGETリクエストを作成す `core` るか、またはGETリクエストを作成 `custom``/labels/core``/labels/custom`します。
+
+**API形式**
+
+```http
+GET /labels/core
+GET /labels/custom
+```
+
+**リクエスト**
+
+次のリクエストでは、組織で作成されたすべてのカスタムラベルをリストします。
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**応答**
+
+正常に応答すると、システムから取得されたカスタムラベルのリストが返されます。 上の例のリクエストはに対して行われたので `/labels/custom`、以下の応答にはカスタムラベルのみが表示されています。
+
+```json
+{
+    "_page": {
+        "count": 2
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom?{?limit,start,property}",
+            "templated": true
+        }
+    },
+    "children": [
+        {
+            "name": "L1",
+            "category": "Custom",
+            "friendlyName": "Banking Information",
+            "description": "Data containing banking information for a customer.",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594396718731,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594396718731,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L1"
+                }
+            }
+        },
+        {
+            "name": "L2",
+            "category": "Custom",
+            "friendlyName": "Purchase History Data",
+            "description": "Data containing information on past transactions",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594397415663,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594397728708,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+                }
+            }
+        }
+    ]
+}
+```
+
+## ラベルを検索 {#look-up-label}
+
+特定のラベルを検索するには、そのラベルのプロパティをPolicy Service APIへのGET要求のパスに含めます。 `name`
+
+**API形式**
+
+```http
+GET /labels/core/{LABEL_NAME}
+GET /labels/custom/{LABEL_NAME}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{LABEL_NAME}` | 検索するカスタムラベルの `name` プロパティです。 |
+
+**リクエスト**
+
+次のリクエストは、パスに示されているカスタムラベル `L2`を取得します。
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L2' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**応答**
+
+正常に応答すると、カスタムラベルの詳細が返されます。
+
+```json
+{
+    "name": "L2",
+    "category": "Custom",
+    "friendlyName": "Purchase History Data",
+    "description": "Data containing information on past transactions",
+    "imsOrg": "{IMS_ORG}",
+    "sandboxName": "{SANDBOX_NAME}",
+    "created": 1594397415663,
+    "createdClient": "{CLIENT_ID}",
+    "createdUser": "{USER_ID}",
+    "updated": 1594397728708,
+    "updatedClient": "{CLIENT_ID}",
+    "updatedUser": "{USER_ID}",
+    "_links": {
+        "self": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+        }
+    }
+}
+```
+
+## カスタムラベルの作成または更新 {#create-update-label}
+
+カスタムラベルを作成または更新するには、Policy Service APIにPUT要求を行う必要があります。
+
+**API形式**
+
+```http
+PUT /labels/custom/{LABEL_NAME}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{LABEL_NAME}` | カスタムラベルの `name` プロパティ。 この名前のカスタムラベルが存在しない場合は、新しいラベルが作成されます。 存在する場合は、そのラベルが更新されます。 |
+
+**リクエスト**
+
+次のリクエストは、顧客が選択した支払計画に関する情報を含むデータを記述するための新しいラベルを作成し `L3`ます。
+
+```shell
+curl -X PUT \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L3' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "name": "L3",
+        "category": "Custom",
+        "friendlyName": "Payment Plan",
+        "description": "Data containing information on selected payment plans."
+      }'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `name` | ラベルの一意の文字列識別子。 この値は参照目的で使用され、ラベルをデータセットやフィールドに適用するので、短く簡潔にすることをお勧めします。 |
+| `category` | ラベルのカテゴリ。 カスタムラベル用に独自のカテゴリを作成できますが、ラベルをUIに表示する `Custom` 場合は、を使用することを強くお勧めします。 |
+| `friendlyName` | ラベルのわかりやすい名前。表示目的で使用されます。 |
+| `description` | （オプション）詳細なコンテキストを提供するラベルの説明です。 |
+
+**応答**
+
+正常な応答は、カスタムラベルの詳細を返します。既存のラベルが更新された場合はHTTPコード200(OK)、新しいラベルが作成された場合は201（作成済み）を返します。
+
+```json
+{
+  "name": "L3",
+  "category": "Custom",
+  "friendlyName": "Payment Plan",
+  "description": "Data containing information on selected payment plans.",
+  "imsOrg": "{IMS_ORG}",
+  "sandboxName": "{SANDBOX_NAME}",
+  "created": 1529696681413,
+  "createdClient": "{CLIENT_ID}",
+  "createdUser": "{USER_ID}",
+  "updated": 1529697651972,
+  "updatedClient": "{CLIENT_ID}",
+  "updatedUser": "{USER_ID}",
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L3"
+    }
+  }
+}
+```
+
+## データセットのラベルを検索する {#look-up-dataset-labels}
+
+Dataset Service APIにGETリクエストを行うことで、既存のデータセットに適用されているデータ使用量ラベルを調べることができます。
 
 **API形式**
 
@@ -77,9 +281,9 @@ curl -X GET \
 | `labels` | データセットに適用されたデータ使用量ラベルのリスト。 |
 | `optionalLabels` | データセット内の個々のフィールドのリストで、データ使用ラベルが適用されています。 |
 
-## データセットへのラベルの適用
+## データセットへのラベルの適用 {#apply-dataset-labels}
 
-POSTまたはPUTリクエストのペイロードにラベルを提供することで、データセット用の一連のラベルを作成できます。 これらのいずれかの方法を使用すると、既存のラベルが上書きされ、ペイロードに指定されたラベルに置き換えられます。
+データセット用の一連のラベルを作成するには、Dataset Service APIへのPOST要求またはPUT要求のペイロードにラベルを指定します。 これらのいずれかの方法を使用すると、既存のラベルが上書きされ、ペイロードに指定されたラベルに置き換えられます。
 
 **API形式**
 
@@ -105,18 +309,18 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-  "labels": [ "C1", "C2", "C3", "I1", "I2" ],
-  "optionalLabels": [
-    {
-      "option": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
-        "contentType": "application/vnd.adobe.xed-full+json;version=1",
-        "schemaPath": "/properties/repositoryCreatedBy"
-      },
-      "labels": [ "S1", "S2" ]
-    }
-  ]
-}'
+        "labels": [ "C1", "C2", "C3", "I1", "I2" ],
+        "optionalLabels": [
+          {
+            "option": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
+              "contentType": "application/vnd.adobe.xed-full+json;version=1",
+              "schemaPath": "/properties/repositoryCreatedBy"
+            },
+            "labels": [ "S1", "S2" ]
+          }
+        ]
+      }'
 ```
 
 | プロパティ | 説明 |
@@ -144,9 +348,9 @@ curl -X POST \
 }
 ```
 
-## データセットのラベルの削除
+## データセットからのラベルの削除 {#remove-dataset-labels}
 
-DELETEリクエストを行うと、データセットに適用されたラベルを削除できます。
+Dataset Service APIにDELETEリクエストを行うと、データセットに適用されたラベルを削除できます。
 
 **API形式**
 
@@ -171,11 +375,13 @@ curl -X DELETE \
 
 **応答**
 
-成功した応答HTTPステータス200 (OK)。ラベルが削除されたことを示します。 別の呼び出しで、データセットの既存のラベルを [調べて](#lookup) 、これを確認できます。
+成功した応答HTTPステータス200 (OK)。ラベルが削除されたことを示します。 別の呼び出しで、データセットの既存のラベルを [調べて](#look-up-dataset-labels) 、これを確認できます。
 
 ## 次の手順
 
-データセットレベルとフィールドレベルでデータ使用量ラベルを追加したら、Experience Platformにデータを取り込み始めます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
+このドキュメントを読むことで、APIを使用したデータ使用ラベルの管理方法を学びました。
+
+データセットレベルとフィールドレベルでデータ使用量ラベルを追加したら、データをExperience Platformに取り込むことができます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
 
 適用したラベルに基づいてデータ使用ポリシーを定義できるようになりました。 詳しくは、「 [データ使用ポリシーの概要](../policies/overview.md)」を参照してください。
 
