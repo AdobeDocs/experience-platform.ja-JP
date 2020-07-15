@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformデータガバナンス
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1434'
 ht-degree: 3%
 
 ---
@@ -92,7 +92,6 @@ Data Governanceは、現在、2つのレベル（データセットとフィー�
 
 以降のリリースでは、次の機能が提供されます。
 
-* カスタムデータ使用ラベル： 組織のニーズに基づいて新しいラベルと定義を作成します。
 * ポリシーの適用： ポリシーフレームワークを使用して、様々なデータアクセスパターンにわたってポリシーを通知し、適用します。
 * 監査： データ・アクセス・アクティビティを監視し、コンプライアンスの問題を特定してレポートします。
 
