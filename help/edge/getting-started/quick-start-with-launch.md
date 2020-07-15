@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 26%
+source-wordcount: '560'
+ht-degree: 23%
 
 ---
 
@@ -31,8 +31,9 @@ Adobe Launchの [エッジ設定ツールを使用して、設定IDを作成で�
 
 Experience Platformエッジネットワークは、データをXDMとして受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、Edge Networkでデータの形式設定方法を定義します。 データを送信するには、スキーマを定義する必要があります。 次の項目を必ず実行してください。
 
-- [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
-- 作成したスキーマに Adobe Experience Platform Web SDK mixin を追加します。
+1. [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
+2. AEP Web SDK ExperienceEvent Mixin追加を作成したスキーマにミックスインします。
+3. 作成したスキーマからデータセットを作成します。
 
 次のビデオでは、Web SDKデータ用のスキーマ、データセット、ストリーミングソースコネクタの作成をサポートします。
 
