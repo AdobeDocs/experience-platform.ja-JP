@@ -4,10 +4,10 @@ seo-title: リアルタイム顧客データプラットフォームにおける
 description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 seo-description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 72%
+source-wordcount: '1056'
+ht-degree: 71%
 
 ---
 
@@ -49,10 +49,7 @@ Real-time CDP は Adobe Experience Platform をベースに構築されている
 
 Adobe Experience Platform では、一般的な顧客体験の使用例に対して、いくつかの&#x200B;**コアポリシー**&#x200B;があります。これらのポリシーは、「 **[!UICONTROL ポリシー]** 」ワークスペースに移動し、「 **[!UICONTROL 参照]** 」タブを選択すると、UIで表示できます。 独自のカスタムポリシーの作成方法など、UIでのポリシーの操作に関する詳しい手順については、Experience Platformドキュメントの [policiesユーザーガイドを参照してください](../../data-governance/policies/user-guide.md) 。
 
-## （ベータ版）データ使用コンプライアンスの実施 {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->この機能は 現在ベータ版で、すべてのユーザーが利用できるわけではありません。ご要望に応じて有効にできます。ドキュメントと機能は変更される場合があります。
+## データ使用コンプライアンスの実施 {#enforce-data-usage-compliance}
 
 データにラベルが付けられ、使用ポリシーが定義されたら、データ使用に対するポリシーのコンプライアンスを適用できます。Real-time CDP で宛先に対するオーディエンスセグメントをアクティブ化すると、データガバナンスは、違反が発生した場合に使用ポリシーを自動適用します。
 
