@@ -4,9 +4,9 @@ solution: Experience Platform
 title: PDPA（タイ）FAQ
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: ccfc90fe6de80ab050c3b937be7626be4e90db1c
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # PDPA（タイ）FAQ
 
-このドキュメントでは、タイの個人データ保護法(PDPA)とAdobe Experience Cloudでの実装に関するよくある質問に対する回答を示します。
+このドキュメントでは、タイ [!DNL Personal Data Protection Act] (PDPA)およびAdobe Experience Cloudでのタイの実装に関するよくある質問に対する回答を示します。
 
 このドキュメントで使用される様々なPDPA関連用語の定義については、 [PDPA（タイ）の用語](./terminology.md) 「」を参照してください。
 
