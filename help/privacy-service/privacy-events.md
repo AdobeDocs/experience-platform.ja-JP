@@ -4,28 +4,28 @@ solution: Experience Platform
 title: プライバシーイベントの購読
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '843'
 ht-degree: 1%
 
 ---
 
 
-# プライバシーイベントの購読
+# 購読する [!DNL Privacy Events]
 
-プライバシーイベントは、Adobe Experience Platform Privacy Serviceが提供するメッセージです。Adobe Experience Platform Privacy Serviceは、設定されたWebフックに送信されるAdobe I/Oイベントを利用して、効率的なジョブリクエストの自動化を促進します。 ジョブが完了したか、ワークフロー内の特定のマイルストーンに達したかを確認するために、プライバシーサービスAPIをポーリングする必要が少なくなるか、不要になります。
+[!DNL Privacy Events] は、Adobe Experience Platformが提供するメッセージ [!DNL Privacy Service]です。これは、設定されたwebフックに送信されるAdobe I/Oイベントを利用して、効率的なジョブリクエストの自動化を促進します。 ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために、 [!DNL Privacy Service] APIをポーリングする必要が少なくなるか、不要になります。
 
 現在、プライバシージョブリクエストのライフサイクルに関連する通知には、次の4種類があります。
 
 | タイプ | 説明 |
 --- | ---
-| ジョブ完了 | すべてのExperience Cloudソリューションが報告を取り戻し、ジョブの全体的なステータスまたはグローバルステータスが完了とマークされました。 |
+| ジョブ完了 | すべての [!DNL Experience Cloud] ソリューションがレポートバックし、ジョブの全体的なステータスまたはグローバルステータスが完了とマークされました。 |
 | ジョブエラー | 1つ以上のソリューションが、要求の処理中にエラーを報告しました。 |
 | 製品完了 | このジョブに関連付けられている解決策の1つが、作業を完了しました。 |
 | 製品エラー | いずれかのソリューションで、要求の処理中にエラーが報告されました。 |
 
-このドキュメントでは、Adobe I/O内でプライバシーサービス通知の統合を設定する手順を説明します。 プライバシーサービスとその機能の概要については、「 [プライバシーサービスの概要](home.md)」を参照してください。
+このドキュメントでは、Adobe I/O内の [!DNL Privacy Service] 通知の統合を設定する手順を説明します。 とその機能の概要については、 [!DNL Privacy Service] Privacy Serviceの概要を参照してください [](home.md)。
 
 ## はじめに
 
@@ -74,7 +74,7 @@ app.listen(app.get('port'), function() {
 
 ## Adobe Developer Consoleでの新しいプロジェクトの作成
 
-Adobe Developer Console [に移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe Developer Consoleドキュメントで空のプロジェクトの [作成に関するチュートリアルに概要を説明している手順に従い](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ます。
+Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](https://www.adobe.com/go/devs_console_ui) 。 次に、Adobe Developer Consoleドキュメントで空のプロジェクトの [作成に関するチュートリアルに概要を説明している手順に従い](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ます。
 
 ## プロジェクトの追加プライバシーイベント
 
@@ -82,7 +82,7 @@ Adobe Developer Console [に移動し](https://www.adobe.com/go/devs_console_ui)
 
 ![](./images/privacy-events/add-event-button.png)
 
-[ _イベント_ ]ダイアログが表示されます。 「 **[!UICONTROL Experience Cloud]** 」を選択して利用可能なイベントタイプのリストを絞り込み、「 **[!UICONTROL 次へ]** 」をクリックする前に「 **[!UICONTROL プライバシーサービスのイベント]**」を選択します。
+[ _イベント_ ]ダイアログが表示されます。 「 **[!UICONTROL Experience Cloud]** 」を選択して使用可能なイベントタイプのリストを絞り込み、「 **[!UICONTROL Privacy Serviceイベント]** 」を選択してから「 **[!UICONTROL 次へ]**」をクリックします。
 
 ![](./images/privacy-events/add-privacy-events.png)
 
@@ -110,11 +110,11 @@ Adobe Developer Console [に移動し](https://www.adobe.com/go/devs_console_ui)
 
 ![](./images/privacy-events/webhook-details.png)
 
-プロジェクトの詳細ページが再表示され、左のナビゲーションの _[!UICONTROL イベントの下にプライバシーイベントが表示されます]_。
+プロジェクトの詳細ページが再表示され、左のナビゲーションの [!DNL Privacy Events] イベント __の下に表示されます。
 
 ## 表示イベントデータ
 
-プロジェクトにプライバシーイベントを登録し、プライバシージョブが処理されると、その登録に関して受信した通知を表示できます。 デベロッパーコンソールの **[!UICONTROL プロジェクト]** タブで、リストからプロジェクトを選択し、 _製品概要_ ページを開きます。 画面左側のナビゲーションから「 **[!UICONTROL プライバシーイベント]** 」を選択します。
+プロジェクトに登録し、プライバシージョブ [!DNL Privacy Events] が処理されると、その登録に関して受信した通知を表示できます。 デベロッパーコンソールの **[!UICONTROL プロジェクト]** タブで、リストからプロジェクトを選択し、 _製品概要_ ページを開きます。 画面左側のナビゲーションから「 **[!UICONTROL プライバシーイベント]** 」を選択します。
 
 ![](./images/privacy-events/events-left-nav.png)
 
