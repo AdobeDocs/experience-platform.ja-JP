@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマレジストリ開発者付録
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1265'
 ht-degree: 4%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 4%
 
 # 付録
 
-このドキュメントでは、スキーマレジストリAPIの操作に関する補足情報を提供します。
+このドキュメントでは、 [!DNL Schema Registry] APIの操作に関する補足情報を提供します。
 
 ## 互換モード
 
-エクスペリエンスデータモデル(XDM)は、アドビが推進する公式に文書化された仕様で、デジタルエクスペリエンスの相互運用性、表現力、パワーを向上させます。 アドビは、GitHub上の [オープンソースプロジェクトにソースコードと正式なXDM定義を保持しています](https://github.com/adobe/xdm/)。 これらの定義はXDM標準表記で記述され、JSON-LD（リンクデータのJavaScript Object Notation）とJSONスキーマをXDMスキーマを定義する文法として使用します。
+[!DNL Experience Data Model] (XDM)は、アドビが推進する公開された仕様で、デジタルエクスペリエンスの相互運用性、表現力、パワーを向上させます。 アドビは、GitHub上の [オープンソースプロジェクトにソースコードと正式なXDM定義を保持しています](https://github.com/adobe/xdm/)。 これらの定義はXDM標準表記で記述され、JSON-LD（リンクデータのJavaScript Object Notation）とJSONスキーマをXDMスキーマを定義する文法として使用します。
 
-パブリックリポジトリで正式なXDM定義を見ると、標準のXDMはAdobe Experience Platformで見るものとは異なることがわかります。 Experience Platformで表示される内容はCompatibility Modeと呼ばれ、標準のXDMとPlatform内での使い方との間の単純なマッピングを提供します。
+パブリックリポジトリで正式なXDM定義を見ると、標準のXDMはAdobe Experience Platformで見るものとは異なることがわかります。 で表示される内容は「互換モード」 [!DNL Experience Platform] と呼ばれ、標準XDMと内での使用方法との間の単純なマッピングを提供し [!DNL Platform]ます。
 
 ### 互換モードの動作
 
 互換モードを使用すると、標準のXDM内の値を変更しながらセマンティックを同じままにすることで、XDM JSON-LDモデルが既存のデータインフラストラクチャと連携できます。 ネストされたJSON構造を使用し、スキーマをツリー形式で表示します。
 
-標準のXDMと互換モードの主な違いは、フィールド名のプレフィックス「xdm:」が削除されたことです。
+標準のXDMと互換性モードの主な違いは、フィールド名のプレフィックス「xdm:」が削除されたことです。
 
 標準のXDMと互換モードの両方で、誕生日関連のフィールド（「description」属性を削除した状態）を並べて比較した結果を次に示します。 「Compatibility Mode」フィールドには、「meta:xdmField」属性と「meta:xdmType」属性に、XDMフィールドへの参照とそのデータ型が含まれています。
 
@@ -51,15 +51,15 @@ ht-degree: 4%
 
 Adobe Experience Platformは、複数のソリューションやサービスを使用するように設計されており、それぞれが独自の技術的な課題と制限（特定のテクノロジーが特殊文字をどのように処理するかなど）を持っています。 これらの制限を克服するため、互換モードが開発されました。
 
-カタログ、Data Lake、リアルタイム顧客プロファイルを含むほとんどのExperience Platformサービスでは、標準のXDMの代わりに互換モードが使用されます。 スキーマレジストリAPIでも互換モードが使用され、このドキュメントの例はすべて互換モードを使用して表示されます。
+標準的なXDMの代わりに、、 [!DNL Experience Platform] 、 [!DNL Catalog]およびを含むほとんどの [!DNL Data Lake]サービスを [!DNL Real-time Customer Profile][!DNL Compatibility Mode] 使用します。 APIでも使用され [!DNL Schema Registry] ており、このドキュメントの例はすべてをを使用して示してい [!DNL Compatibility Mode][!DNL Compatibility Mode]ます。
 
-標準のXDMとExperience Platformでの動作との間でマッピングが行われることを知っておく価値はありますが、Platformサービスの使用に影響を与えることはありません。
+標準のXDMとでの動作との間でマッピングが行われることを知っておく価値はありますが、これはサー [!DNL Experience Platform][!DNL Platform] ビスの使用に影響を与えないでください。
 
-オープンソースプロジェクトは利用できますが、スキーマレジストリを通じてリソースとの対話に関しては、このドキュメントのAPIの例が、知り、従うべきベストプラクティスを提供します。
+オープンソースプロジェクトは利用できますが、を通じてリソースとやり取りする際に [!DNL Schema Registry]は、このドキュメントのAPIの例が、理解し、従うべきベストプラクティスを示しています。
 
 ## APIでのXDMフィールドタイプの定義 {#field-types}
 
-XDMスキーマは、JSONスキーマ標準規格と基本的なフィールドタイプを使用して定義され、Experience Platformによって適用されるフィールド名に対する追加の制限があります。 XDMでは、形式やオプションの制約を使用して、追加のフィールドの種類を定義できます。 XDMフィールドタイプは、フィールドレベルの属性( )で公開され `meta:xdmType`ます。
+XDMスキーマは、JSONスキーマ規格と基本フィールドタイプを使用して定義され、によって適用されるフィールド名に追加の制限があり [!DNL Experience Platform]ます。 XDMでは、形式やオプションの制約を使用して、追加のフィールドの種類を定義できます。 XDMフィールドタイプは、フィールドレベルの属性( )で公開され `meta:xdmType`ます。
 
 >[!NOTE]
 >
@@ -221,7 +221,7 @@ XDMスキーマは、JSONスキーマ標準規格と基本的なフィールド�
   <tr>
     <td>map</td>
     <td>type:<br/><br/><strong>objectNote: 'map'データ型の</strong><br/>使用は、業界およびベンダーのスキーマ使用のために予約されており、テナント定義フィールドでは使用できません。 ある値にマップするキーとしてデータが表される場合や、静的なスキーマにキーを適切に含めることができず、データ値として扱う必要がある場合は、標準スキーマで使用されます。</td>
-    <td>'map'はプロパティを定義してはいけません。 'map'に含まれる値のタイプを記述する「additionalProperties」スキーマを1つ定義する必要があります。 XDMの「map」には、1つのデータ型のみを含めることができます。 値は、配列やオブジェクト、または別のスキーマへの参照を含む任意の有効なXDMスキーマ定義です（$ref経由）。<br/><br/>値のタイプが「string」のフィールドをマップ：
+    <td>'map'はプロパティを定義してはいけません。 'map'に含まれる値の種類を記述するために、"[!UICONTROL additionalProperties]"スキーマを1つ定義する必要があります。 XDMの「map」には、1つのデータ型のみを含めることができます。 値は、配列やオブジェクト、または別のスキーマへの参照を含む任意の有効なXDMスキーマ定義です（$ref経由）。<br/><br/>値のタイプが「string」のフィールドをマップ：
       <pre class="JSON language-JSON hljs">
         "sampleField": { "type": "object", "additionalProperties":{ "type": "string" } }
       </pre>
@@ -243,7 +243,7 @@ XDMスキーマは、JSONスキーマ標準規格と基本的なフィールド�
 
 次の表に、「meta:xdmType」と他のシリアル化形式の対応付けを示します。
 
-| XDM Type<br>(meta:xdmType) | JSON<br>(JSONスキーマ) | パーケ<br>（タイプ/注釈） | Spark SQL | Java | スカラ | .NET | CosmosDB | MongoDB | エアロスパイク | プロトバフ2 |
+| XDM Type<br>(meta:xdmType) | JSON<br>(JSONスキーマ) | パーケ<br>（タイプ/注釈） | [!DNL Spark] SQL | Java | スカラ | .NET | CosmosDB | MongoDB | エアロスパイク | プロトバフ2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | 文字列 | System.String | 文字列 | string | 文字列 | string |
 | 数値 | type:number | 重複 | DoubleType | java.lang.Double | 重複 | System.Double | 数値 | 重複 | 重複 | 重複 |
