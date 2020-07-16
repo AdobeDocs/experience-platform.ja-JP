@@ -4,9 +4,9 @@ solution: Experience Platform
 title: DULE Policy Service API開発者ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # モジュール [!DNL Policy Service] API開発者ガイド
 
-Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformデータガバナンスの中核的なメカニズムです。 DULE PolicyサービスはRESTful APIを提供します。このAPIを使用すると、データ使用ポリシーを作成および管理して、特定のデータ使用ラベルでラベル付けされたデータに対して実行できるマーケティングアクションを決定できます。
+Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformの中核的なメカニズム [!DNL Data Governance]です。 DULEにはRESTful APIが [!DNL Policy Service] 用意されています。このAPIを使用すると、データ使用ポリシーを作成および管理して、特定のデータ使用ラベルでラベル付けされたデータに対して実行できるマーケティングアクションを決定できます。
 
-このドキュメントでは、Policy Service APIで使用可能な主要操作を実行する手順を説明します。 まだDULEフレームワークに慣れていない場合は、 [データ・ガバナンスの概要を見直して](../home.md) 、DULEフレームワークに慣れてください。 DULEポリシーを作成および適用する手順については、「 [SCHEDULE policy tutorial](../policies/create.md)」を参照してください。
+このドキュメントでは、 [!DNL Policy Service] APIで使用可能な主要な操作を実行する手順を説明します。 まだDULEフレームワークに慣れていない場合は、 [データ・ガバナンスの概要を見直して](../home.md) 、DULEフレームワークに慣れてください。 DULEポリシーを作成および適用する手順については、「 [SCHEDULE policy tutorial](../policies/create.md)」を参照してください。
 
-このドキュメントでは、Policy Service APIを呼び出す前に知っておく必要があるコア概念の概要を説明します。
+このドキュメントでは、 [!DNL Policy Service] APIを呼び出す前に知っておく必要があるコア概念の概要を説明します。
 
 ## Getting started with DULE [!DNL Policy Service]
 
@@ -28,11 +28,11 @@ Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformデー�
 
 このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [Data Governance](../home.md): データ使用のコンプライアンスを [!DNL Experience Platform] 適用するフレームワーク。
-   * [ラベルの集計](../labels/overview.md): データ使用ラベルは、エクスペリエンスデータモデル(XDM)データフィールドに適用され、そのデータへのアクセス方法に関する制限を指定します。
-* [Experience Data Model(XDM)System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-* [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [!DNL Data Governance](../home.md): データ使用のコンプライアンスを [!DNL Experience Platform] 適用するフレームワーク。
+   * [ラベルの集計](../labels/overview.md): データ使用ラベルは、 [!DNL Experience Data Model] (XDM)データフィールドに適用され、そのデータへのアクセス方法に関する制限を指定します。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ## サンプルAPI呼び出しの読み取り
 
