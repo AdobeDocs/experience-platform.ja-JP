@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ジョブ
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df36d88de8ac117206d8d744cfcdd7804fcec61e
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1795'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # プライバシージョブ
 
-このドキュメントでは、API呼び出しを使用してプライバシージョブを操作する方法について説明します。 特に、Privacy ServiceAPIでの `/job` エンドポイントの使用について説明します。 このガイドを読む前に、 [はじめにの節を参照し](./getting-started.md#getting-started) 、必要なヘッダーやAPI呼び出し例の読み方など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+このドキュメントでは、API呼び出しを使用してプライバシージョブを操作する方法について説明します。 特に、 `/job`[!DNL Privacy Service] APIでのエンドポイントの使用について説明します。 このガイドを読む前に、 [はじめにの節を参照し](./getting-started.md#getting-started) 、必要なヘッダーやAPI呼び出し例の読み方など、APIを正しく呼び出すために必要な重要な情報を確認してください。
 
 ## すべてのジョブのリスト {#list}
 
@@ -63,9 +63,9 @@ curl -X GET \
 
 >[!NOTE]
 >
->互換性のあるAdobe Experience Cloudアプリケーションでは、データの件名を識別するために様々な値が使用されます。 Privacy ServiceおよびExperience Cloudに必要なIDの詳細については、 [アプリケーション](../experience-cloud-apps.md) （複数可）に関するガイドを参照してください。 Privacy Serviceに送信するIDの決定に関する一般的な手順については、プライバシー要求の [IDデータに関するドキュメントを参照してください](../identity-data.md)。
+>互換性のあるAdobe Experience Cloudアプリケーションでは、データの件名を識別するために様々な値が使用されます。 Privacy ServiceおよびExperience Cloudに必要なIDの詳細については、 [アプリケーション](../experience-cloud-apps.md) （複数可）に関するガイドを参照してください。 送信先IDの決定に関する一般的な手順については、プライバシー要求 [!DNL Privacy Service]の [IDデータに関するドキュメントを参照してください](../identity-data.md)。
 
-Privacy ServiceAPIは、個人データに対する2種類のジョブリクエストをサポートしています。
+この [!DNL Privacy Service] APIは、個人データに対する2種類のジョブリクエストをサポートしています。
 
 * [アクセス/削除](#access-delete): 個人データにアクセス（読み取り）または削除します。
 * [販売オプトアウト中](#opt-out): 個人データを販売しないものとしてマークします。
@@ -150,7 +150,7 @@ curl -X POST \
 | `companyContexts` **(必須)** | 組織の認証情報を含む配列。 リストに表示される各識別子には、次の属性が含まれます。 <ul><li>`namespace`: 識別子の名前空間。</li><li>`value`: 識別子の値。</li></ul>識別子の1つがIMS組織の一意のID **を** 含む、その識別子がその識別子として使用されてい `imsOrgId``namespace``value` る必要があります。 <br/><br/>追加の識別子には、製品固有の会社修飾子(例えば `Campaign`)を使用できます。この修飾子は、組織に属するAdobeアプリケーションとの統合を識別します。 有効な値には、アカウント名、クライアントコード、テナントID、その他のアプリケーション識別子が含まれます。 |
 | `users` **(必須)** | アクセスまたは削除する情報を持つ少なくとも1人のユーザーのコレクションを含む配列。 1回のリクエストで提供できるユーザーIDは最大1000個です。 各userオブジェクトには、次の情報が含まれます。 <ul><li>`key`: 応答データ内の個別のジョブIDを修飾するために使用されるユーザーの識別子。 ベストプラクティスとして、この値を簡単に参照または後で参照できるように、一意で識別しやすい文字列を選択します。</li><li>`action`: ユーザーのデータに対して行うアクションをリストする配列。 実行するアクションに応じて、この配列には、、、 `access`、またはその両方を含める必要があり `delete`ます。</li><li>`userIDs`: ユーザーのIDの集まり。 1人のユーザーが持つことのできるIDの数は9個に制限されます。 各IDは、 `namespace`、、 `value`および名前空間修飾子(`type`)で構成されます。 必要なプロパティの詳細については、 [付録](appendix.md) を参照してください。</li></ul> との詳細については、『トラブルシューティングガイド』 `users` を参照し `userIDs`てください [](../troubleshooting-guide.md#user-ids)。 |
 | `include` **(必須)** | 処理に含めるアドビ製品の配列。 この値がない場合や空の場合は、要求は拒否されます。 組織が統合を持つ製品のみを含めます。 詳細については、付録の [受け入れられる製品値](appendix.md) の節を参照してください。 |
-| `expandIDs` | に設定した場合に、アプリケーション内のIDを処理するための最適化を表すオプションのプロパティ `true`です(現在、Analyticsのみがサポートされています)。 If omitted, this value defaults to `false`. |
+| `expandIDs` | に設定した場合に、アプリケーション内のIDを処理するための最適化を表すオプションのプロパティ `true`です(現在、は、でのみサポートされてい [!DNL Analytics]ます)。 If omitted, this value defaults to `false`. |
 | `priority` | リクエストの処理の優先度を設定する、アドビAnalyticsが使用するオプションのプロパティです。 指定できる値は `normal` とで `low`す。 を省略 `priority` した場合のデフォルトの動作はで `normal`す。 |
 | `analyticsDeleteMethod` | アドビのAnalyticsでの個人データの処理方法を指定するオプションのプロパティです。 この属性には、次の2つの値を指定できます。 <ul><li>`anonymize`: 特定のユーザーIDのコレクションによって参照されるすべてのデータは匿名になります。 を省略 `analyticsDeleteMethod` した場合の動作はデフォルトです。</li><li>`purge`: すべてのデータが完全に削除されます。</li></ul> |
 | `regulation` **(必須)** | 請求の規則 次の3つの値のいずれかにする必要があります。 <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
@@ -283,7 +283,7 @@ curl -X POST \
 | `companyContexts` **(必須)** | 組織の認証情報を含む配列。 リストに表示される各識別子には、次の属性が含まれます。 <ul><li>`namespace`: 識別子の名前空間。</li><li>`value`: 識別子の値。</li></ul>識別子の1つがIMS組織の一意のID **を** 含む、その識別子がその識別子として使用されてい `imsOrgId``namespace``value` る必要があります。 <br/><br/>追加の識別子には、製品固有の会社修飾子(例えば `Campaign`)を使用できます。この修飾子は、組織に属するAdobeアプリケーションとの統合を識別します。 有効な値には、アカウント名、クライアントコード、テナントID、その他のアプリケーション識別子が含まれます。 |
 | `users` **(必須)** | アクセスまたは削除する情報を持つ少なくとも1人のユーザーのコレクションを含む配列。 1回のリクエストで提供できるユーザーIDは最大1000個です。 各userオブジェクトには、次の情報が含まれます。 <ul><li>`key`: 応答データ内の個別のジョブIDを修飾するために使用されるユーザーの識別子。 ベストプラクティスとして、この値を簡単に参照または後で参照できるように、一意で識別しやすい文字列を選択します。</li><li>`action`: データに対して行う必要のあるアクションをリストする配列。 販売中止のリクエストの場合、配列には値のみを含める必要があり `opt-out-of-sale`ます。</li><li>`userIDs`: ユーザーのIDの集まり。 1人のユーザーが持つことのできるIDの数は9個に制限されます。 各IDは、 `namespace`、、 `value`および名前空間修飾子(`type`)で構成されます。 必要なプロパティの詳細については、 [付録](appendix.md) を参照してください。</li></ul> との詳細については、『トラブルシューティングガイド』 `users` を参照し `userIDs`てください [](../troubleshooting-guide.md#user-ids)。 |
 | `include` **(必須)** | 処理に含めるアドビ製品の配列。 この値がない場合や空の場合は、要求は拒否されます。 組織が統合を持つ製品のみを含めます。 詳細については、付録の [受け入れられる製品値](appendix.md) の節を参照してください。 |
-| `expandIDs` | に設定した場合に、アプリケーション内のIDを処理するための最適化を表すオプションのプロパティ `true`です(現在、Analyticsのみがサポートされています)。 If omitted, this value defaults to `false`. |
+| `expandIDs` | に設定した場合に、アプリケーション内のIDを処理するための最適化を表すオプションのプロパティ `true`です(現在、は、でのみサポートされてい [!DNL Analytics]ます)。 If omitted, this value defaults to `false`. |
 | `priority` | リクエストの処理の優先度を設定する、アドビAnalyticsが使用するオプションのプロパティです。 指定できる値は `normal` とで `low`す。 を省略 `priority` した場合のデフォルトの動作はで `normal`す。 |
 | `analyticsDeleteMethod` | アドビのAnalyticsでの個人データの処理方法を指定するオプションのプロパティです。 この属性には、次の2つの値を指定できます。 <ul><li>`anonymize`: 特定のユーザーIDのコレクションによって参照されるすべてのデータは匿名になります。 を省略 `analyticsDeleteMethod` した場合の動作はデフォルトです。</li><li>`purge`: すべてのデータが完全に削除されます。</li></ul> |
 | `regulation` **(必須)** | 請求の規則 次の3つの値のいずれかにする必要があります。 <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
@@ -438,7 +438,7 @@ curl -X GET \
 | `productStatusResponse` | 配列内の各オブジェクトには、特定のアプリケーションに関するジョブの現在の状態に関する情報が含まれ `productResponses`[!DNL Experience Cloud] ます。 |
 | `productStatusResponse.status` | ジョブの現在のステータスカテゴリ。 次の表に、 [使用可能なステータスカテゴリのリスト](#status-categories) 、および対応する意味を示します。 |
 | `productStatusResponse.message` | ステータスカテゴリに対応する、ジョブの固有のステータス。 |
-| `productStatusResponse.responseMsgCode` | Privacy Serviceが受信した製品応答メッセージの標準コードです。 メッセージの詳細は、に示し `responseMsgDetail`ます。 |
+| `productStatusResponse.responseMsgCode` | が受信した製品応答メッセージの標準コード [!DNL Privacy Service]です。 メッセージの詳細は、に示し `responseMsgDetail`ます。 |
 | `productStatusResponse.responseMsgDetail` | ジョブのステータスに関する詳細な説明。 同様のステータスのメッセージは、製品によって異なる場合があります。 |
 | `productStatusResponse.results` | 特定のステータスの場合、一部の製品は、で扱われない追加情報を提供する `results` オブジェクトを返す場合があり `responseMsgDetail`ます。 |
 | `downloadURL` | ジョブのステータスがZIPファイルの場合 `complete`、この属性はジョブの結果をダウンロードするためのURLを提供します。 このファイルは、ジョブの完了後60日間ダウンロードできます。 |
@@ -460,4 +460,4 @@ curl -X GET \
 
 ## 次の手順
 
-これで、Privacy ServiceAPIを使用してプライバシージョブを作成および監視する方法がわかりました。 ユーザインターフェイスを使用して同じタスクを実行する方法について詳しくは、 [Privacy ServiceUIの概要を参照してください](../ui/overview.md)。
+これで、 [!DNL Privacy Service] APIを使用したプライバシージョブの作成および監視方法を理解できました。 ユーザインターフェイスを使用して同じタスクを実行する方法について詳しくは、 [Privacy ServiceUIの概要を参照してください](../ui/overview.md)。
