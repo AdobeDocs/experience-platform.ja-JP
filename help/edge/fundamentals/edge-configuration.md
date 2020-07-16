@@ -4,9 +4,9 @@ seo-title: Experience PlatformWeb SDKのエッジ設定
 description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 seo-description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 translation-type: tm+mt
-source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
+source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 3%
 
 ---
@@ -92,7 +92,7 @@ Adobe Targetを設定するには、クライアントコードを指定する�
 
 Targetを使用すると、プロパティを使用して権限を制御できます。 詳しくは、Targetドキュメントの「 [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 」セクションを参照してください。
 
-プロパティトークンは、 [!UICONTROL Adobe Target] / [!UICONTROL 設定/][UICONTROLのプロパティにあります]
+プロパティトークンは、 [!UICONTROL Adobe Target] / [!UICONTROL 設定] / [!UICONTROL プロパティで確認できます]
 
 ##### [!UICONTROL Target環境ID]
 
