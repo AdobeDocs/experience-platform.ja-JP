@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ポリシー
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '938'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # ポリシー評価
 
-マーケティングアクションが作成され、ポリシーが定義されたら、Policy Service APIを使用して、特定のアクションによってポリシーが違反されたかどうかを評価できます。 返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反する一連のポリシーの形式をとります。
+マーケティングアクションが作成され、ポリシーが定義されたら、 [!DNL Policy Service] APIを使用して、特定のアクションによってポリシーが違反されたかどうかを評価できます。 返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反する一連のポリシーの形式をとります。
 
 デフォルトでは、ステータスが「有効」に設定されているポリシーの **みが評価に参加します**。ただし、クエリパラメーターを使用して、評価に「ドラフト」ポリシー `?includeDraft=true` を含めることができます。
 
