@@ -5,45 +5,45 @@ title: Privacy Service開発ガイド
 description: RESTful APIを使用して、Adobe Experience Cloudアプリケーション全体でデータサブジェクトの個人データを管理します
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b45fdfff70ce4ba857f23e7116812a07825871bc
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '759'
 ht-degree: 2%
 
 ---
 
 
-# Privacy Service開発ガイド
+# [!DNL Privacy Service] 開発ガイド
 
-Adobe Experience Platform Privacy Serviceは、Adobe Experience Cloudアプリケーション全体でデータサブジェクト（お客様）の個人データを管理（アクセスおよび削除）できるRESTful APIおよびユーザーインターフェイスを提供します。 Privacy Serviceは、Experience Cloudアプリケーションに関連するジョブのステータスと結果にアクセスできる、中央の監査とログのメカニズムも提供します。
+Adobe Experience Platform [!DNL Privacy Service] は、Adobe Experience Cloudアプリケーション全体でデータサブジェクト（お客様）の個人データを管理（アクセスおよび削除）できるRESTful APIおよびユーザーインターフェイスを提供します。 [!DNL Privacy Service] また、中央の監査とログのメカニズムも提供します。このメカニズムを使用すると、 [!DNL Experience Cloud] アプリケーションに関連するジョブのステータスと結果にアクセスできます。
 
-このガイドはPrivacy ServiceAPIの使用方法をカバーしています。 UIの使用方法について詳しくは、 [Privacy ServiceUIの概要を参照してください](../ui/overview.md)。 Privacy ServiceAPIで使用可能なすべてのエンドポイントの包括的なリストについては、 [APIリファレンスを参照してください](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
+このガイドは、 [!DNL Privacy Service] APIの使用方法をカバーしています。 UIの使用方法について詳しくは、 [Privacy ServiceUIの概要を参照してください](../ui/overview.md)。 APIで使用可能なすべてのエンドポイントの包括的なリストについては、 [!DNL Privacy Service] APIリファレンスを参照してください [](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)。
 
 ## はじめに {#getting-started}
 
-このガイドでは、次のExperience Platform機能を理解している必要があります。
+このガイドでは、次の [!DNL Experience Platform] 機能を理解したうえで作業を行う必要があります。
 
-* [Privacy Service](../home.md): RESTful APIとユーザーインターフェイスを提供します。このインターフェイスを使用すると、Adobe Experience Cloudアプリケーション全体で、データサブジェクト（顧客）からのアクセス要求と削除要求を管理できます。
+* [!DNL Privacy Service](../home.md): RESTful APIとユーザーインターフェイスを提供します。このインターフェイスを使用すると、Adobe Experience Cloudアプリケーション全体で、データサブジェクト（顧客）からのアクセス要求と削除要求を管理できます。
 
 以下の節では、Privacy ServiceAPIを正しく呼び出すために知る必要がある追加情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md) を参照してください。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md) を参照して [!DNL Experience Platform] ください。
 
 ## 必要なヘッダーの値の収集
 
-Privacy ServiceAPIを呼び出すには、まずアクセス資格情報を収集し、必要なヘッダーで使用する必要があります。
+APIを呼び出すには、最初にアクセス資格情報を収集して、必要なヘッダーで使用する必要があります。 [!DNL Privacy Service]
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-これには、アドビAdmin ConsoleでExperience Platformの開発者権限を取得し、Adobe Developer Consoleで資格情報を生成する必要があります。
+これには、アドビのAdmin Consoleでの開発者権限 [!DNL Experience Platform] を取得し、Adobe Developer Consoleで資格情報を生成する必要があります。
 
-### Experience Platformへの開発者のアクセス権を取得
+### 開発者向けのアクセス権の取得 [!DNL Experience Platform]
 
-開発者がPlatformにアクセスするには、 [Experience Platform認証チュートリアルの最初の手順に従い](../../tutorials/authentication.md)ます。 「Generate access credentials in Adobe Developer Console」の手順に到達したら、このチュートリアルに戻って、Privacy Serviceに固有の秘密鍵証明書を生成します。
+開発者がにアクセスできるようにするには [!DNL Platform]、 [Experience Platform認証チュートリアルの最初の手順に従い](../../tutorials/authentication.md)ます。 「Generate access credentials in Adobe Developer Console」の手順に到達したら、このチュートリアルに戻って、に固有の秘密鍵証明書を生成し [!DNL Privacy Service]ます。
 
 ### アクセス資格情報の生成
 
@@ -77,7 +77,7 @@ API _[!UICONTROL を設定]_画面が表示されます。 「キーペアを**[
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-APIがプロジェクトに追加されると、 _Privacy ServiceAPIの概要_ ページにプロジェクトページが再び表示されます。 ここから、「 _[!UICONTROL サービスアカウント(JWT)]_」セクションまで下にスクロールします。このセクションには、Privacy ServiceAPIのすべての呼び出しで必要な次のアクセス資格情報が含まれます。
+APIがプロジェクトに追加されると、 _Privacy ServiceAPIの概要_ ページにプロジェクトページが再び表示されます。 ここから、「 _[!UICONTROL サービスアカウント(JWT)]_」セクションまで下にスクロールします。このセクションには、[!DNL Privacy Service]APIへのすべての呼び出しに必要な次のアクセス資格情報が表示されます。
 
 * **[!UICONTROL クライアントID]**: クライアントIDは、x-api-keyヘッダー `{API_KEY}` で指定する必要があるクライアントIDです。
 * **[!UICONTROL 組織ID]**: 組織IDは、x-gw-ims-org-idヘッダーで使用する必要がある `{IMS_ORG}` 値です。
@@ -86,7 +86,7 @@ APIがプロジェクトに追加されると、 _Privacy ServiceAPIの概要_ �
 
 #### 各セッションの認証
 
-収集する必要がある最後の必要な秘密鍵証明書 `{ACCESS_TOKEN}`は、「認証」ヘッダーで使用される、自分の秘密鍵証明書です。 との値とは異なり、新しいトークン `{API_KEY}``{IMS_ORG}`は、PlatformAPIを引き続き使用するために24時間ごとに生成する必要があります。
+収集する必要がある最後の必要な秘密鍵証明書 `{ACCESS_TOKEN}`は、「認証」ヘッダーで使用される、自分の秘密鍵証明書です。 との値とは異なり、APIを使用し続け `{API_KEY}` るに `{IMS_ORG}`は、新しいトークンを24時間ごとに生成する必要があり [!DNL Platform] ます。
 
 新しい秘密鍵を生成するに `{ACCESS_TOKEN}`は、「トークンの生成」をクリックする前に、以前にダウンロードした秘密鍵を開き、「 _[!UICONTROL アクセストークンの]_生成**[!UICONTROL 」の横のテキストボックスにその内容を貼り付けます&#x200B;]**。
 
@@ -98,4 +98,4 @@ APIがプロジェクトに追加されると、 _Privacy ServiceAPIの概要_ �
 
 ## 次の手順
 
-これで、使用するヘッダーが分かったので、Privacy ServiceAPIの呼び出しを開始する準備が整いました。 プ [ライバシージョブに関するドキュメントでは](privacy-jobs.md) 、Privacy ServiceAPIを使用して実行できる様々なAPI呼び出しについて詳しく説明します。 各サンプル呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
+これで、使用するヘッダーが分かったので、 [!DNL Privacy Service] APIの呼び出しを開始する準備が整いました。 プ [ライバシージョブに関するドキュメントは](privacy-jobs.md) 、 [!DNL Privacy Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各サンプル呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
