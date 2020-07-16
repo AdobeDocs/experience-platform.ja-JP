@@ -4,9 +4,9 @@ solution: Experience Platform
 title: マーケティングアクション
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '534'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # マーケティングアクション
 
-Adobe Experience Platformデータガバナンスの観点から見たマーケティングアクションは、 [!DNL Experience Platform] データコンシューマが行うアクションで、データ使用ポリシーの違反を確認する必要があります。
+マーケティングアクションは、Adobe Experience Platformの観点から見ると、デー [!DNL Data Governance][!DNL Experience Platform] タ消費者が行うアクションで、データ使用ポリシーの違反を確認する必要があります。
 
 APIでマーケティングアクションを使用するには、エンドポイントを使用する必要があり `/marketingActions` ます。
 
