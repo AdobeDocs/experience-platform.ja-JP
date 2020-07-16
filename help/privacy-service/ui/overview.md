@@ -1,37 +1,37 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: プライバシーサービスのUIの概要
+title: Privacy ServiceUIの概要
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 8704d762ea71b44133cd6d394587342198c54b99
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '167'
 ht-degree: 1%
 
 ---
 
 
-# プライバシーサービスのUIの概要
+# [!DNL Privacy Service] UIの概要
 
-Adobe Experience Platform Privacy Serviceは、RESTful APIとユーザーインターフェイスを備えており、これにより、様々なソリューション間でプライバシーとコンプライアンスの要求を調整できます。 このドキュメントでは、プライバシーサービスのUIについて説明します。 APIの使用について詳しくは、 [プライバシーサービス開発者ガイドを参照してください](../api/getting-started.md)。
+Adobe Experience Platform [!DNL Privacy Service] は、RESTful APIとユーザーインターフェイスを提供し、各種ソリューション間でプライバシーとコンプライアンスの要求を調整できます。 このドキュメントは、 [!DNL Privacy Service] UIを調べます。 APIの使用について詳しくは、 [Privacy Service開発ガイドを参照してください](../api/getting-started.md)。
 
-## プライバシーサービスのUIにログインします。
+## Log in to the [!DNL Privacy Service] UI
 
-プライバシーサービスのUIを認証するには、Adobe IDが必要です。 さらに、Adobe IDが関連付けられている組織内のシステム管理者権限が必要です。
+UIに対して認証を行うには、Adobe IDが必要で [!DNL Privacy Service] す。 また、Adobe IDが関連付けられている組織内でのシステム管理者権限が必要です。
 
-Adobe Experience Cloudのサインインページ(https://experience.adobe.com)に移動します。 「 **[!UICONTROL Adobe IDでサインイン」をクリックし]** 、プロンプトが表示されたらAdobe IDの資格情報を入力します。
+Adobe Experience Cloudのサインインページ(https://experience.adobe.com)に移動します。 「 **[!UICONTROL Adobe IDでサインイン]** 」をクリックし、プロンプトが表示されたらAdobe IDの資格情報を入力します。
 
 サインインしたら、「 **[!UICONTROL プライバシーUI]**」をクリックします。
 
 ![](../images/ui-overview/quick-access.png)
 
-### Experience Platformからのログイン
+### ログイン元 [!DNL Experience Platform]
 
-Adobe Experience Platform UIにアクセスできる場合は、左のナビゲーションにある「 **[!UICONTROL リクエスト]** 」タブからプライバシーサービスUIにアクセスすることもできます。
+Adobe Experience PlatformUIにアクセスできる場合は、左側のナビゲーションにある「 [!DNL Privacy Service] 要求 **** 」タブからUIにアクセスすることもできます。
 
 ![](../images/ui-overview/platform.png)
 
 ## 次の手順
 
-これで正常にログインできたので、プライバシーサービスのUIを使用した様々な操作の実行方法に関する手順については、 [ユーザーガイド](user-guide.md) を参照してください。
+これで正常にログインできたので、 [UIを使用した様々な操作の実行手順については、](user-guide.md) ユーザガイド [!DNL Privacy Service] を参照してください。
