@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 記述子
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1477'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->記述子には一意のAcceptヘッダーが必要です。このヘッダーはで置き換え `xed` られ `xdm`ますが、それ以外の場合は、スキーマレジストリの別の場所で使用されるAcceptヘッダーと非常に似ています。 以下のサンプル呼び出しには、適切なAcceptヘッダが含まれていますが、正しいヘッダが使用されていることを確認するために十分に注意してください。
+>記述子には一意のAcceptヘッダが必要です。このヘッダはで置き換えら `xed` れ `xdm`ますが、それ以外の場合は、Acceptヘッダが内の他の場所で使用されているのと非常に似ていま [!DNL Schema Registry]す。 以下のサンプル呼び出しには、適切なAcceptヘッダが含まれていますが、正しいヘッダが使用されていることを確認するために十分に注意してください。
 
 ## リスト記述子
 
@@ -48,7 +48,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-応答の形式は、要求で送信されるAcceptヘッダーによって異なります。 エンドポイントには、スキーマレジストリAPIの他のすべてのエンドポイントと異なるAcceptヘッダーが使用されています。 `/descriptors`
+応答の形式は、要求で送信されるAcceptヘッダーによって異なります。 エンドポイントでは、API内の他のすべてのエンドポイントとは異なるAcceptヘッダーが `/descriptors`[!DNL Schema Registry] 使用されていることに注意してください。
 
 記述子受け付けヘッダーは、 `xed` に置き換え `xdm`られ、記述子に固有の `link` オプションをオファーします。
 
@@ -133,7 +133,7 @@ curl -X GET \
 
 ## 記述子の作成
 
-スキーマレジストリでは、複数の異なる記述子の種類を定義できます。 各記述子の型は、POST要求で送信する固有のフィールドを必要とします。 記述子の完全なリストと、それらを定義するのに必要なフィールドは、記述子の [定義に関する付録の節で説明](#defining-descriptors)。
+では、異なる複数の種類の記述子を定義で [!DNL Schema Registry] きます。 各記述子の型は、POST要求で送信する固有のフィールドを必要とします。 記述子の完全なリストと、それらを定義するのに必要なフィールドは、記述子の [定義に関する付録の節で説明](#defining-descriptors)。
 
 **API形式**
 
@@ -143,7 +143,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストは、サンプルスキーマの「電子メールアドレス」フィールドにID記述子を定義します。 これにより、Experience Platformは、電子メールアドレスを識別子として使用し、個々の人に関する情報を結合するのに役立ちます。
+次のリクエストは、サンプルスキーマの「電子メールアドレス」フィールドにID記述子を定義します。 これにより、電子メールアドレス [!DNL Experience Platform] を識別子として使用し、個々の人に関する情報を結合するのに役立ちます。
 
 ```SHELL
 curl -X POST \
@@ -167,7 +167,7 @@ curl -X POST \
 
 **応答**
 
-応答が成功すると、HTTPステータス201（作成済み）と、新たに作成された記述子の詳細（その記述子を含む）が返され `@id`ます。 は、スキーマレジストリによって割り当てられ、APIの記述子を参照するために使用される読み取り専用のフィールドです。 `@id`
+応答が成功すると、HTTPステータス201（作成済み）と、新たに作成された記述子の詳細（その記述子を含む）が返され `@id`ます。 は、によって割り当てら `@id`[!DNL Schema Registry] れ、APIで記述子を参照するために使用される読み取り専用のフィールドです。
 
 ```JSON
 {
@@ -238,7 +238,7 @@ curl -X PUT \
 
 ## 記述子の削除
 
-場合によっては、スキーマレジストリから定義した記述子を削除する必要があります。 これは、削除したいディスクリプタ `@id` の内容を参照するDELETEリクエストを行うことで行われます。
+定義した記述子をから削除しなければならない場合があり [!DNL Schema Registry]ます。 これは、削除したいディスクリプタ `@id` の内部を参照するDELETEリクエストを行うことで行われます。
 
 **API形式**
 
@@ -267,11 +267,11 @@ curl -X DELETE \
 
 応答が成功すると、HTTPステータス204（コンテンツなし）と空白の本文が返されます。
 
-記述子が削除されたことを確認するために、記述子に対してルックアップリクエストを実行でき `@id`ます。 記述子がスキーマレジストリから削除されたため、応答はHTTPステータス404 （見つかりません）を返します。
+記述子が削除されたことを確認するために、記述子に対してルックアップリクエストを実行でき `@id`ます。 記述子がから削除されたので、応答はHTTPステータス404 （見つかりません）を返し [!DNL Schema Registry]ます。
 
 ## 付録
 
-次の節では、スキーマレジストリAPIの記述子の操作に関する追加情報について説明します。
+次の節では、 [!DNL Schema Registry] APIの記述子の操作に関する追加情報について説明します。
 
 ### 記述子の定義
 
@@ -279,7 +279,7 @@ curl -X DELETE \
 
 #### ID記述子
 
-ID記述子は、「sourceSchema」の「sourceProperty」が [Adobe Experience PlatformIDサービスで記述されるIDフィールドであることを通知します](../../identity-service/home.md)。
+ID記述子は、「[!UICONTROL sourceSchema]」の「[!UICONTROL sourceProperty]」が、 [!DNL Identity] Adobe Experience PlatformIDサービスの記述に従うフィールドであることを通知します [](../../identity-service/home.md)。
 
 ```json
 {
@@ -300,7 +300,7 @@ ID記述子は、「sourceSchema」の「sourceProperty」が [Adobe Experience 
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | IDとなる特定のプロパティへのパスです。 パスは「/」で始まり、1で終わらないようにしてください。 パスに「プロパティ」を含めない（例：「/properties/personalEmail/properties/address」ではなく「/personalEmail/address」を使用） |
-| `xdm:namespace` | ID名前空間 `id` のまたは `code` 値。 名前空間のリストは、 [IDサービスAPIを使用して見つかります](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)。 |
+| `xdm:namespace` | ID名前空間 `id` のまたは `code` 値。 名前空間のリストは、を使用して確認でき [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)ます。 |
 | `xdm:property` | ま `xdm:id` た `xdm:code`は( `xdm:namespace` 使用されるデータに応じて) |
 | `xdm:isPrimary` | オプションのboolean値。 trueの場合、フィールドを主IDとして示します。 スキーマには、1つのプライマリIDのみを含めることができます。 |
 
@@ -336,7 +336,7 @@ ID記述子は、「sourceSchema」の「sourceProperty」が [Adobe Experience 
 | `xdm:sourceProperty` | IDとなる特定のプロパティへのパスです。 パスは「/」で始まり、1で終わらないようにしてください。 パスに「プロパティ」を含めない（例：「/properties/personalEmail/properties/address」ではなく「/personalEmail/address」を使用） |
 | `xdm:title` | このフィールドに表示する新しいタイトル。タイトルの大文字と小文字で示されます。 |
 | `xdm:description` | オプションで、タイトルと共に説明を追加できます。 |
-| `meta:enum` | に示すフィールドが文字列フィールド `xdm:sourceProperty` の場合、Experience PlatformUIでそのフィールドに対して推奨される値のリストを `meta:enum` 決定します。 定義済みリストを宣言しないこと、またはXDMフィールドに対してデータの検証を行わないことに注意して `meta:enum` ください。<br><br>これは、アドビが定義するコアXDMフィールドに対してのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合は、 `meta:enum` PATCH要求を介して、フィールドの [プロパティを直接編集する必要があります](./update-resource.md)。 |
+| `meta:enum` | に示すフィールド `xdm:sourceProperty` が文字列フィールドの場合、 `meta:enum` UI内のフィールドに推奨される値のリストを [!DNL Experience Platform] 決定します。 定義済みリストを宣言しないこと、またはXDMフィールドに対してデータの検証を行わないことに注意して `meta:enum` ください。<br><br>これは、アドビが定義するコアXDMフィールドに対してのみ使用する必要があります。 ソースプロパティが組織で定義されたカスタムフィールドの場合は、 `meta:enum` PATCH要求を介して、フィールドの [プロパティを直接編集する必要があります](./update-resource.md)。 |
 
 #### 関係記述子
 
