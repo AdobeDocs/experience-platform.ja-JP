@@ -4,9 +4,9 @@ solution: Experience Platform
 title: リソースの更新
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # リソースの更新
 
-PATCH要求を使用して、テナントコンテナ内のリソースを変更または更新できます。 スキーマレジストリでは、追加、削除、置換など、すべての標準的なJSONパッチ操作がサポートされています。
+PATCH要求を使用して、テナントコンテナ内のリソースを変更または更新できます。 は、追加、削除、置換を含む、すべての標準的なJSONパッチ操作を [!DNL Schema Registry] サポートします。
 
 使用可能な操作を含むJSONパッチについて詳しくは、公式の [JSONパッチドキュメントを参照してください](http://jsonpatch.com/)。
 
@@ -34,7 +34,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | スキーマライブラリから更新するリソースの種類です。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
+| `{RESOURCE_TYPE}` | から更新するリソースのタイプ [!DNL Schema Library]。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
 | `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
 
 **リクエスト**
@@ -110,7 +110,7 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | スキーマライブラリから更新するリソースの種類です。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
+| `{RESOURCE_TYPE}` | から更新するリソースのタイプ [!DNL Schema Library]。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
 | `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
 
 **リクエスト**
