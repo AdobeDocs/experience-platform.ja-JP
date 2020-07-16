@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'APIを使用したデータ使用ラベルの管理 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '967'
 ht-degree: 4%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 4%
 
 # APIを使用したデータ使用ラベルの管理
 
-このドキュメントでは、Policy Service APIとDataset Service APIを使用してデータ使用量ラベルを管理する方法について手順を説明します。
+このドキュメントでは、 [!DNL Policy Service] APIと [!DNL Dataset Service] APIを使用してデータ使用ラベルを管理する方法について手順を説明します。
 
-[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) （ポリシーサービスAPI）は、組織のデータ使用ラベルを作成および管理できる複数のエンドポイントを提供します。
+には、組織のデータ使用ラベルを作成および管理するための複数のエンドポイントが [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 用意されています。
 
-Dataset Service APIを使用すると、データセットの使用ラベルを適用および編集できます。 これは、Adobe Experience Platformのデータカタログ機能の一部ですが、データセットのメタデータを管理するCatalog Service APIとは別のものです。
+この [!DNL Dataset Service] APIを使用すると、データセットの使用ラベルを適用および編集できます。 これは、Adobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] APIとは別のものです。
 
 ## はじめに
 
 このガイドを読む前に、カタログ開発者ガイドの [はじめに節に説明されている手順に従って](../../catalog/api/getting-started.md) 、APIを呼び出すために必要な資格情報を収集し [!DNL Platform] ます。
 
-このドキュメントで概要を説明するDataset Serviceエンドポイントを呼び出すには、特定のデータセットに固有の `id` 値を割り当てる必要があります。 この値がない場合は、カタログオブジェクトの [一覧表示に関するガイドを参照して](../../catalog/api/list-objects.md) 、既存のデータセットのIDを確認してください。
+このドキュメントで概要を説明している [!DNL Dataset Service] エンドポイントを呼び出すには、特定のデータセットに固有の `id` 値を割り当てる必要があります。 この値がない場合は、カタログオブジェクトの [一覧表示に関するガイドを参照して](../../catalog/api/list-objects.md) 、既存のデータセットのIDを確認してください。
 
 ## すべてのラベルをリスト {#list-labels}
 
@@ -110,7 +110,7 @@ curl -X GET \
 
 ## ラベルを検索 {#look-up-label}
 
-特定のラベルを検索するには、そのラベルのプロパティをPolicy Service APIへのGET要求のパスに含めます。 `name`
+APIへのGET要求のパスにラベルのプロパティを含めると、特定のラベルを検索でき `name`[!DNL Policy Service] ます。
 
 **API形式**
 
@@ -164,7 +164,7 @@ curl -X GET \
 
 ## カスタムラベルの作成または更新 {#create-update-label}
 
-カスタムラベルを作成または更新するには、Policy Service APIにPUT要求を行う必要があります。
+カスタムラベルを作成または更新するには、 [!DNL Policy Service] APIにPUTリクエストを行う必要があります。
 
 **API形式**
 
@@ -230,7 +230,7 @@ curl -X PUT \
 
 ## データセットのラベルを検索する {#look-up-dataset-labels}
 
-Dataset Service APIにGETリクエストを行うことで、既存のデータセットに適用されているデータ使用量ラベルを調べることができます。
+APIにGETリクエストを行うことで、既存のデータセットに適用されているデータ使用量ラベルを調べることができ [!DNL Dataset Service] ます。
 
 **API形式**
 
@@ -283,7 +283,7 @@ curl -X GET \
 
 ## データセットへのラベルの適用 {#apply-dataset-labels}
 
-データセット用の一連のラベルを作成するには、Dataset Service APIへのPOST要求またはPUT要求のペイロードにラベルを指定します。 これらのいずれかの方法を使用すると、既存のラベルが上書きされ、ペイロードに指定されたラベルに置き換えられます。
+APIへのPOSTまたはPUT要求のペイロードにラベルを提供することで、データセット用の一連のラベルを作成でき [!DNL Dataset Service] ます。 これらのいずれかの方法を使用すると、既存のラベルが上書きされ、ペイロードに指定されたラベルに置き換えられます。
 
 **API形式**
 
@@ -326,7 +326,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `labels` | データセットに追加するデータ使用ラベルのリストです。 |
-| `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。 <br/><br/>`option`: フィールドのエクスペリエンスデータモデル(XDM)属性を含むオブジェクトです。 次の3つのプロパティが必要です。<ul><li>id</code>: フィールドに関連付けられているスキーマのURI $id</code> 。</li><li>contentType</code>: スキーマのコンテンツタイプとバージョン番号。 これは、XDMルックアップ要求に対して有効な <a href="../../xdm/api/look-up-resource.md">Acceptヘッダーの1つの形式にする必要があります</a> 。</li><li>schemaPath</code>: データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`: フィールドに追加するデータ使用ラベルのリストです。 |
+| `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。 <br/><br/>`option`: フィールドの [!DNL Experience Data Model] (XDM)属性を含むオブジェクトです。 次の3つのプロパティが必要です。<ul><li>id</code>: フィールドに関連付けられているスキーマのURI $id</code> 。</li><li>contentType</code>: スキーマのコンテンツタイプとバージョン番号。 これは、XDMルックアップ要求に対して有効な <a href="../../xdm/api/look-up-resource.md">Acceptヘッダーの1つの形式にする必要があります</a> 。</li><li>schemaPath</code>: データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`: フィールドに追加するデータ使用ラベルのリストです。 |
 
 **応答**
 
@@ -350,7 +350,7 @@ curl -X POST \
 
 ## データセットからのラベルの削除 {#remove-dataset-labels}
 
-Dataset Service APIにDELETEリクエストを行うと、データセットに適用されたラベルを削除できます。
+APIにDELETEリクエストを行うことで、データセットに適用されたラベルを削除でき [!DNL Dataset Service] ます。
 
 **API形式**
 
@@ -381,7 +381,7 @@ curl -X DELETE \
 
 このドキュメントを読むことで、APIを使用したデータ使用ラベルの管理方法を学びました。
 
-データセットレベルとフィールドレベルでデータ使用量ラベルを追加したら、データをExperience Platformに取り込むことができます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
+データセットレベルとフィールドレベルでデータ使用量ラベルを追加したら、にデータを取り込み始めることができ [!DNL Experience Platform]ます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
 
 適用したラベルに基づいてデータ使用ポリシーを定義できるようになりました。 詳しくは、「 [データ使用ポリシーの概要](../policies/overview.md)」を参照してください。
 
