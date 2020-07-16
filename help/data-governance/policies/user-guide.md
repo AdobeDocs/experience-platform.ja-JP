@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Data usage policiesユーザーガイド
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Data usage policiesユーザーガイド
 
-Adobe Experience Platformデータガバナンスは、データ使用ポリシーの作成と管理を可能にするユーザーインターフェイスを提供します。 このドキュメントでは、ユーザーインター _フェイスのポリシー_[!DNL Experience Platform] ワークスペースで実行できるアクションの概要を説明します。
+Adobe Experience Platform [!DNL Data Governance] には、データ使用ポリシーの作成と管理を可能にするユーザーインターフェイスが用意されています。 このドキュメントでは、ユーザーインター _フェイスのポリシー_[!DNL Experience Platform] ワークスペースで実行できるアクションの概要を説明します。
 
 >[!IMPORTANT]
 >
