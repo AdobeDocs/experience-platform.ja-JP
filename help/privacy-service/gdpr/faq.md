@@ -4,9 +4,9 @@ solution: Experience Platform
 title: GDPR に関するよくある質問
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: e176cc69613fad1d4a6b44138a6d88a688438578
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '642'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # GDPR に関するよくある質問
 
-このドキュメントでは、GDPR(General Data Protection Regulation)とAdobe Experience Cloudでの導入に関するよくある質問に対する回答を示します。
+このドキュメントでは、Adobe Experience CloudでのGDPR [!DNL General Data Protection Regulation] (GDPR)とその導入に関するよくある質問に対する回答を示します。
 
 このドキュメントで使用されるGDPR関連の様々な用語の定義は、 [GDPR用語の記事で確認できます](terminology.md) 。
 
