@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 同意
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '220'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 同意
 
-個人データを収集するには、一定の規制で顧客の明示的な同意が必要でした。 Privacy ServiceAPIの `/consent` エンドポイントを使用すると、顧客の同意要求を処理して、プライバシーワークフローに統合できます。
+個人データを収集するには、一定の規制で顧客の明示的な同意が必要でした。 APIの `/consent`[!DNL Privacy Service] エンドポイントを使用すると、顧客の同意要求を処理し、それらをプライバシーワークフローに統合できます。
 
 このガイドを使用する前に、以下のAPI呼び出し例に示す必須の認証ヘッダーの詳細については、 [「はじめに](./getting-started.md) 」の節を参照してください。
 
@@ -68,8 +68,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Privacy Serviceに送信する顧客ID値を決定する方法について詳しくは、IDデータの [提供に関するガイドを参照してください](../identity-data.md)。
+>送信先の顧客ID値を決定する方法について詳し [!DNL Privacy Service]くは、IDデータの [提供に関するガイドを参照してください](../identity-data.md)。
 
 **応答**
 
-正常な応答は、ペイロードのないHTTPステータス202(Accepted)を返し、その要求がPrivacy Serviceによって受け入れられ、処理中であることを示します。
+正常な応答が返されると、ペイロードのないHTTPステータス202(Accepted)が返され、その要求がによって受け入れられ、処理中であるこ [!DNL Privacy Service] とを示します。
