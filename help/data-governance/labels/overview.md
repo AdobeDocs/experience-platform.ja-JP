@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用量ラベルの概要
 topic: labels
 translation-type: tm+mt
-source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # データ使用量ラベルの概要
 
-Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformデータガバナンスの中核的なメカニズムです。 DULE機能を使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従ってそれぞれを分類できます。
+Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformの中核的なメカニズム [!DNL Data Governance]です。 DULE機能を使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従ってそれぞれを分類できます。
 
 このドキュメントでは、のデータ使用ラベル（DULEラベルとも呼ばれます）の概要を説明 [!DNL Experience Platform]します。 このガイドを読む前に、DULEフレームワークのより強固な概要について、 [データ・ガバナンスの概要](../home.md) （英語）を参照してください。
 
@@ -38,9 +38,9 @@ Real-time CDPでの自動強制の動作方法について詳しくは、 [Adobe
 
 ### Adobe Audience Managerデータエクスポートコントロールからの継承
 
-Experience Platformは、セグメントをAdobe Audience Managerと共有できます。 Audience Managerセグメントに適用されたデータエクスポートコントロールは、Experience Platformデータガバナンスで認識される同等のラベルおよびマーケティングアクションに変換されます。
+[!DNL Experience Platform] には、Adobe Audience Managerとセグメントを共有する機能があります。 Audience Managerセグメントに適用されたデータエクスポートコントロールは、で認識される同等のラベルおよびマーケティングアクションに変換され [!DNL Experience Platform][!DNL Data Governance]ます。
 
-特定のデータエクスポートコントロールがPlatform内のデータ使用ラベルにどのようにマッピングされるかについては、 [Audience Managerのドキュメントを参照してください](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
+特定のデータエクスポートコントロールとのデータ使用ラベルとの対応付けにつ [!DNL Platform]いては、 [Audience Managerのドキュメントを参照してください](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
 
 
 ## 次の手順
