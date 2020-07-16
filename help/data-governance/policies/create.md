@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用ポリシーの作成
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1186'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # APIでのデータ使用ポリシーの作成
 
-Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformデータガバナンスの中核的なメカニズムです。 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) (DULE Policy Service API)を使用すると、DULEポリシーを作成および管理して、特定のDULEラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
+Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformの中核的なメカニズム [!DNL Data Governance]です。 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) (DULE Policy Service API)を使用すると、DULEポリシーを作成および管理して、特定のDULEラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
 
 このドキュメントでは、 [!DNL Policy Service] APIを使用してDULEポリシーを作成するための、手順を追ったチュートリアルを提供します。 APIで利用可能な様々な操作の詳細なガイドについては、 [Policy Service開発者ガイドを参照してください](../api/getting-started.md)。
 
@@ -22,9 +22,9 @@ Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformデー�
 
 このチュートリアルでは、DULEポリシーの作成と評価に関する次の主要概念について、十分に理解している必要があります。
 
-* [Data Governance](../home.md): データ使用のコンプライアンスを [!DNL Platform] 適用するフレームワーク。
+* [!DNL Data Governance](../home.md): データ使用のコンプライアンスを [!DNL Platform] 適用するフレームワーク。
 * [データ使用ラベル](../labels/overview.md): データ使用ラベルは、XDMデータフィールドに適用され、そのデータへのアクセス方法に関する制限を指定します。
-* [Experience Data Model(XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 * [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 このチュートリアルを開始する前に、 [開発者ガイドを参照して](../api/getting-started.md) 、必要なヘッダーやAPI呼び出し例の読み方など、DULE [!DNL Policy Service] APIを正しく呼び出すために必要な重要な情報を確認してください。
