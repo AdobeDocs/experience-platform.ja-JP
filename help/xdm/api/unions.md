@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 和集合
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '788'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # 和集合
 
-和集合(または和集合表示)は、同じクラス(XDM ExperienceEventまたはXDM Individualプロファイル)を共有し、 [リアルタイム顧客プロファイルが有効になっているすべてのスキーマのフィールドを集計する、システム生成の読み取り専用スキーマ](../../profile/home.md)です。
+和集合(または和集合表示)は、同じクラス([!DNL XDM ExperienceEvent] または [!DNL XDM Individual Profile])を共有し、有効になっているすべてのスキーマのフィールドを集計する、システム生成の読み取り専用スキーマ [!DNL Real-time Customer Profile](../../profile/home.md)です。
 
 このドキュメントでは、様々な操作のサンプル呼び出しを含む、スキーマレジストリAPIの和集合を操作するための基本的な概念について説明します。 XDMの和集合に関する一般的な情報については、スキーマ構成の [基本の和集合に関する節を参照してください](../schema/composition.md#union)。
 
 ## 和集合ミックスイン
 
-スキーマレジストリは、和集合スキーマ内に3つのミックスインを自動的に含めます。 `identityMap`、 `timeSeriesEvents`および `segmentMembership`。
+和集合スキーマ内に3つのミックスインが [!DNL Schema Registry] 自動的に含まれます。 `identityMap`、 `timeSeriesEvents`および `segmentMembership`。
 
 ### IDマップ
 
@@ -30,7 +30,7 @@ See the [Identity Service documentation](../../identity-service/home.md) for mor
 
 ### 時系列イベント
 
-この `timeSeriesEvents` 配列は、和集合に関連付けられているレコードスキーマに関連する時系列イベントのリストです。 プロファイルデータをデータセットにエクスポートする場合、この配列は各レコードに含まれます。 これは、機械学習など、モデルが記録属性に加えてプロファイルの行動履歴全体を必要とする様々な使用例に役立ちます。
+この `timeSeriesEvents` 配列は、和集合に関連付けられているレコードスキーマに関連する時系列イベントのリストです。 データをデータセットにエクスポートする場合、この配列は各レコードに含まれます。 [!DNL Profile] これは、機械学習など、モデルが記録属性に加えてプロファイルの行動履歴全体を必要とする様々な使用例に役立ちます。
 
 ### セグメントのメンバーシップマップ
 
@@ -54,7 +54,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | プロファイルでの使用に有効にする、URLエンコードされた `$id` URI `meta:altId` またはスキーマのURI。 |
+| `{SCHEMA_ID}` | での使用を有効にする、URLエンコードされた `$id` URI `meta:altId` またはスキーマの [!DNL Profile]URI。 |
 
 **リクエスト**
 
@@ -117,7 +117,7 @@ curl -X PATCH \
 
 ## リスト和集合
 
-スキーマに「和集合」タグを設定すると、スキーマレジストリによって、スキーマの基となるクラスの和集合が自動的に作成され、維持されます。 この和集合 `$id` の値は、クラスの標準 `$id` に似ていますが、2つのアンダースコアと「和集合」(`"__union"`)という単語が付加されるのが唯一の違いです。
+スキーマに「和集合」タグを設定すると、は、スキーマの基となるクラスの和集合を [!DNL Schema Registry] 自動的に作成し、維持します。 この和集合 `$id` の値は、クラスの標準 `$id` に似ていますが、2つのアンダースコアと「和集合」(`"__union"`)という単語が付加されるのが唯一の違いです。
 
 使用可能な和集合のリストを表示するには、エンドポイントに対してGETリクエストを実行でき `/unions` ます。
 
@@ -168,7 +168,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->和集合検索は、エンドポイント `/unions``/schemas` とエンドポイントを使用して使用でき、プロファイルをデータセットにエクスポートする際に使用できます。
+>和集合検索は、エンドポイント `/unions` とエンドポイントを使用して使用でき、データセットへの `/schemas`[!DNL Profile] エクスポートで使用できます。
 
 **API形式**
 
@@ -265,7 +265,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **リクエスト**
 
-次の要求は、XDM Individualプロファイルクラス和集合に含まれるすべてのスキーマを調べます。
+次のリクエストは、 [!DNL XDM Individual Profile] クラス和集合に含まれるすべてのスキーマを検索します。
 
 ```SHELL
 curl -X GET \
