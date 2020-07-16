@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ型の作成
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0d8c8ee4df11d601d8feb122c70a9cd5d7d5b77
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 0%
+source-wordcount: '200'
+ht-degree: 1%
 
 ---
 
@@ -67,7 +67,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、HTTPステータス201（作成済み）と、、、など、新しく作成されたデータタイプの詳細を含むペイロード `$id`を返し `meta:altId`ま `version`す。 これらの3つの値は読み取り専用で、スキーマレジストリによって割り当てられます。
+正常な応答は、HTTPステータス201（作成済み）と、、、など、新しく作成されたデータタイプの詳細を含むペイロード `$id`を返し `meta:altId`ま `version`す。 これらの3つの値は読み取り専用で、によって割り当てられ [!DNL Schema Registry]ます。
 
 ```JSON
 {
