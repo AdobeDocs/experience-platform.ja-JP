@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマの作成
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 162316c3b908ffa87d8df4dff72e26ba237993db
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '235'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # スキーマの作成
 
-スキーマは、エクスペリエンスプラットフォームに取り込むデータの青写真と見なすことができます。 各スキーマは、クラスと0個以上のミックスインで構成されます。 つまり、スキーマを定義するためにmixinを追加する必要はありませんが、ほとんどの場合、少なくとも1つのmixinが使用されます。
+スキーマは、取り込むデータの青写真と考えることができ [!DNL Experience Platform]ます。 各スキーマは、クラスと0個以上のミックスインで構成されます。 つまり、スキーマを定義するためにmixinを追加する必要はありませんが、ほとんどの場合、少なくとも1つのmixinが使用されます。
 
 スキーマ構成プロセスは、クラスの割り当てから開始します。 このクラスは、データ（レコードまたは時系列）の主要な動作要素と、取り込まれるデータを記述するのに必要な最小フィールドを定義します。
 
@@ -54,7 +54,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、HTTPステータス201（作成済み）と、ペイロードに、、、など、新しく作成されたスキーマの詳細が含まれ `$id`てい `meta:altId`ま `version`す。 これらの値は読み取り専用で、スキーマレジストリによって割り当てられます。
+正常な応答は、HTTPステータス201（作成済み）と、ペイロードに、、、など、新しく作成されたスキーマの詳細が含まれ `$id`てい `meta:altId`ま `version`す。 これらの値は読み取り専用で、によって割り当てられ [!DNL Schema Registry]ます。
 
 ```JSON
 {
