@@ -4,9 +4,9 @@ solution: Experience Platform
 title: リストリソース
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '508'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # リストリソース
 
-1つのGET要求を実行することで、コンテナ内の特定の種類(クラス、ミックスイン、スキーマ、データ型、または記述子)のスキーマレジストリリソースのリストを表示できます。
+単一のGET要求を実行することで、コンテナ内の特定のタイプ(クラス、ミックスイン、スキーマ、データ型、または記述子)のすべての [!DNL Schema Registry] リソースのリストを表示できます。
 
 >[!NOTE]
 >
->リソースをリストする場合、スキーマレジストリでは結果セットが300項目に制限されます。 この制限を超えるリソースを返すには、 [ページングパラメーターを使用する必要があります](#paging)。 また、結果を [フィルターし](#filtering) 、返されるリソースの数を減らすために、クエリパラメーターを使用することもお勧めします。
+>リソースをリストする場合、結果セットは300項目に [!DNL Schema Registry] 制限されます。 この制限を超えるリソースを返すには、 [ページングパラメーターを使用する必要があります](#paging)。 また、結果を [フィルターし](#filtering) 、返されるリソースの数を減らすために、クエリパラメーターを使用することもお勧めします。
 
 **API形式**
 
@@ -30,7 +30,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | パラメーター | 説明 |
 | --- | --- |
 | `{CONTAINER_ID}` | リソースが配置されているコンテナ（「グローバル」または「テナント」）。 |
-| `{RESOURCE_TYPE}` | スキーマライブラリから取得するリソースのタイプ。 有効なタイプは、 `classes`、、、、、 `mixins`、 `schemas``datatypes``descriptors`です。 |
+| `{RESOURCE_TYPE}` | から取得するリソースのタイプ [!DNL Schema Library]。 有効なタイプは、 `classes`、、、、、 `mixins`、 `schemas``datatypes``descriptors`です。 |
 | `{QUERY_PARAMS`} | 結果をフィルターするオプションのクエリパラメーター。 詳しくは、 [クエリパラメーターの節を参照してください](#query) 。 |
 
 **リクエスト**
@@ -78,7 +78,7 @@ curl -X GET \
 
 ## クエリパラメーターの使用 {#query}
 
-スキーマレジストリでは、リソースのリストを作成する際に、クエリパラメーターを使用してページを作成し、結果をフィルターすることができます。
+は、リソースのリスト表示時に、ページを作成し結果をフィルタリングするクエリパラメーターの使用をサポートしています。 [!DNL Schema Registry]
 
 >[!NOTE]
 >
@@ -111,4 +111,4 @@ curl -X GET \
 
 >[!TIP]
 >
->この `property` パラメーターを使用して、互換性のあるクラスでミックスインをフィルタリングできます。 例えば、はXDM Individualプロファイルクラスと互換性のあるミックスインのみを `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` 返します。
+>この `property` パラメーターを使用して、互換性のあるクラスでミックスインをフィルタリングできます。 例えば、は、そのク `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`[!DNL XDM Individual Profile] ラスと互換性のあるミックスインのみを返します。
