@@ -4,21 +4,21 @@ solution: Experience Platform
 title: セグメントのチュートリアル
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 5%
+source-wordcount: '538'
+ht-degree: 0%
 
 ---
 
 
 # セグメントのチュートリアル
 
-Adobe Experience Platformセグメントサービスは、セグメントを作成し、リアルタイム顧客プロファイルデータからオーディエンスを生成するためのユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントはPlatform上で一元的に設定および管理され、どのアドビのソリューションでも簡単にアクセスできます。 セグメント化の詳細については、まず [Segmentation Serviceの概要を参照してください](../segmentation/home.md)。
+Adobe Experience Platform [!DNL Segmentation Service][!DNL Real-time Customer Profile] には、セグメントを作成してデータからオーディエンスを生成するためのユーザーインターフェイスとRESTful APIが用意されています。 これらのセグメントは一元的に設定され、管理され [!DNL Platform]、どのアドビソリューションでも簡単にアクセスできます。 セグメント化の詳細については、まず [Segmentation Serviceの概要を参照してください](../segmentation/home.md)。
 
 ## セグメント定義の作成
 
-セグメント定義とは、ターゲットオーディエンスの主な特性や動作を記述するために使用されるルールセットです。 概念化された後は、セグメント定義で説明されているルールを使用して、セグメントの適格なオーディエンスメンバーが決定されます。 セグメント定義の開発、テスト、プレビュー、保存は、PlatformのユーザーインターフェイスまたはAPIを使用して行うことができます。 セグメント定義を作成するには、「セグメントAPIの [作成](../segmentation/tutorials/create-a-segment.md) 」チュートリアル [、または『](../segmentation/ui/overview.md)セグメントビルダーのUIユーザーガイド』に従います。
+セグメント定義とは、ターゲットオーディエンスの主な特性や動作を記述するために使用されるルールセットです。 概念化された後は、セグメント定義で説明されているルールを使用して、セグメントの適格なオーディエンスメンバーが決定されます。 セグメント定義の開発、テスト、プレビュー、保存は、ユー [!DNL Platform] ザーインターフェイスまたはAPIを使用して行うことができます。 セグメント定義を作成するには、「セグメントAPIの [作成](../segmentation/tutorials/create-a-segment.md) 」チュートリアル [、または『](../segmentation/ui/overview.md)セグメントビルダーのUIユーザーガイド』に従います。
 
 ## セグメントの評価とアクセス結果
 
@@ -26,15 +26,15 @@ Adobe Experience Platformセグメントサービスは、セグメントを作�
 
 ## セグメントデータのエクスポート
 
-プロファイルデータを含むセグメントの書き出しを行うには、まずデータの書き出し先となるデータセットを [作成し](../segmentation/tutorials/create-dataset-export-segment.md)、次に新しい書き出しジョブを開始する必要があります。 書き出しジョブの生成手順は、 [書き出しAPIチュートリアルで説明しています](../segmentation/tutorials/export-data.md)。
+データを含むセグメントを書き出すには、まず [!DNL Profile] データの書き出し先となるデータセットを [作成し](../segmentation/tutorials/create-dataset-export-segment.md)、新しい書き出しジョブを開始する必要があります。 書き出しジョブの生成手順は、 [書き出しAPIチュートリアルで説明しています](../segmentation/tutorials/export-data.md)。
 
 ## 結合ポリシーの設定
 
-Adobe Experience Platformを使用すると、複数のソースからデータを統合し、それを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する場合、統合ポリシーは、データの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するためにプラットフォームで使用されるルールです。RESTful APIまたはユーザーインターフェイスを使用して、新しい結合ポリシーを作成し、既存のポリシーを管理し、組織のデフォルトの結合ポリシーを設定できます。 PlatformUIで結合ポリシーを使用するには、 [結合ポリシーのユーザーガイドを参照してください](../profile/ui/merge-policies.md)。 リアルタイム顧客プロファイルAPIを使用してマージポリシーを操作するには、 [マージポリシーの開発ガイドを参照してください](../profile/api/merge-policies.md)。
+Adobe Experience Platformを使用すると、複数のソースからデータを統合し、それを組み合わせて、個々の顧客の完全な表示を確認できます。 When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. RESTful APIまたはユーザーインターフェイスを使用して、新しい結合ポリシーを作成し、既存のポリシーを管理し、組織のデフォルトの結合ポリシーを設定できます。 UIで結合ポリシーを使用するには、 [!DNL Platform][結合ポリシーユーザーガイドを参照してください](../profile/ui/merge-policies.md)。 APIを使用して結合ポリシーを操作するには、 [!DNL Real-time Customer Profile][結合ポリシーの開発ガイドを参照してください](../profile/api/merge-policies.md)。
 
 ## セグメントのデータ使用コンプライアンスの実施
 
-リアルタイム顧客プロファイルで使用できるセグメントは、セグメント定義内にマージポリシーIDを含みます。 このマージポリシーには、セグメントに含めるデータセットに関する情報が含まれ、そのデータセットには該当するデータ使用ラベルが含まれます。 オーディエンスセグメントに対するデータ使用量の準拠の適用に関する具体的な手順については、セグメントの [データ使用量準拠の実施チュートリアルに従ってください](../segmentation/tutorials/governance.md)。
+で使用できるセグメントは、セグメント定義内にマージポリシーIDを [!DNL Real-time Customer Profile] 含みます。 このマージポリシーには、セグメントに含めるデータセットに関する情報が含まれ、そのデータセットには該当するデータ使用ラベルが含まれます。 オーディエンスセグメントに対するデータ使用量の準拠の適用に関する具体的な手順については、セグメントの [データ使用量準拠の実施チュートリアルに従ってください](../segmentation/tutorials/governance.md)。
 
 ## ストリーミングセグメント
 
@@ -42,4 +42,4 @@ Adobe Experience Platformを使用すると、複数のソースからデータ�
 
 ## マルチエンティティセグメント
 
-複数エンティティのセグメント化は、プロファイル、店舗、または他の非プロファイルクラスに基づいて、追加のデータを使用して製品データを拡張する機能です。 接続すると、追加のクラスのデータは、プロファイルスキーマにネイティブであるかのように使用可能になります。 移行方法については、 [複数エンティティのセグメント化に関するドキュメントを参照してください](../segmentation/multi-entity-segmentation.md)。
+複数エンティティのセグメント化は、プロファイル、店舗またはその他の非製品クラスに基づいて、追加のデータを使用して [!DNL Profile] データを拡張する機能です。 接続すると、追加のクラスのデータは、 [!DNL Profile] スキーマにネイティブであるかのように使用できるようになります。 移行方法については、 [複数エンティティのセグメント化に関するドキュメントを参照してください](../segmentation/multi-entity-segmentation.md)。
