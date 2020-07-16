@@ -4,9 +4,9 @@ solution: Experience Platform
 title: GDPR 関連の用語
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 39d5446c04fcceaf9d75db91ecb2c136986de098
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1066'
 ht-degree: 5%
 
 ---
@@ -64,7 +64,7 @@ __ファイルシステム：__ 特定の基準に従ってアクセス可能な
 
 ## G
 
-__GDPR:__ GDPR(General Data Protection Regulation)は、欧州和集合(EU)内の個人情報の収集と処理に関するガイドラインを定めた法的枠組みである。 GDPRは、データ管理と個人の権利に関する原則を定め、また、収益に基づく罰金も課す。 GDPRは、EU市民のデータに関するすべての会社を対象としており、銀行、保険会社、その他の金融会社の企業コンプライアンス担当者にとって重要な規制となっています。 GDPRは、2018年5月25日にEU全域で発効する。
+__GDPR:__ ( [!DNL General Data Protection Regulation] GDPR)は、欧州和集合(EU)内の個人情報の収集・処理に関するガイドラインを定めた法的枠組みである。 GDPRは、データ管理と個人の権利に関する原則を定め、また、収益に基づく罰金も課す。 GDPRは、EU市民のデータに関するすべての会社を対象としており、銀行、保険会社、その他の金融会社の企業コンプライアンス担当者にとって重要な規制となっています。 GDPRは、2018年5月25日にEU全域で発効する。
 
 __遺伝的データ：__ 相続又は取得された個人の特性に関するデータで、当該個人の健康又は生理に関する固有の情報を与えるもの。
 
@@ -74,7 +74,7 @@ __事業グループ：__ 支配事業及びその支配事業
 
 ## I
 
-__IMS(Identity Management Services):__ Adobe IDユーザーの認証とアドビリソースの認証のためのFederated IDおよびOAuth 2.0のアドビ実装。 お客様は、ユーザーがアドビのサービスにログインしてアクセスできるようにするためには、利用しているアドビのアプリケーションおよびサービスを IMS と統合する必要があります。ユーザーは、Renga（Adobe IDサービスプロバイダー）を使用して直接ログインしたり、信頼できるサードパーティの認証ドメイン（Google、Facebook、または企業/組織のLDAPなど）を使用してログインしたりできます。
+__Identity Managementサービス(IMS):__ Adobe IDユーザーの認証とアドビリソースの認証のためのFederated IDおよびOAuth 2.0のアドビ実装。 お客様は、ユーザーがアドビのサービスにログインしてアクセスできるようにするためには、利用しているアドビのアプリケーションおよびサービスを IMS と統合する必要があります。Users can log in directly with Renga (the Adobe identity services provider), or log in through a trusted third party authentication domain (such as [!DNL Google], [!DNL Facebook], or a corporate/organization LDAP).
 
 __IMS組織ID:__ サービス間認証のためのAdobe認証トークンのことで、ユーザーログインは不要です。 IMSクライアントに対して発行され、ユーザーは関連付けられていません。 IMSクライアントは、サービス間のバックチャネル要求を承認するために、サービストークンが必要です。 （サービストークンは「システムトークン」と呼ばれることもあります）。
 
