@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用ポリシーの概要
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '964'
 ht-degree: 1%
 
 ---
@@ -35,9 +35,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->リアルタイム顧客データPlatformを使用する場合、宛先に対するマーケティングの使用例を設定して、ポリシーの適用を自動化できます。 詳細は、Real-time CDPの [Data Governanceに関するドキュメントを参照してください](../../rtcdp/privacy/data-governance-overview.md) 。
+>を使用している場合 [!DNL Real-time Customer Data Platform]は、宛先にマーケティングの使用例を設定して、ポリシーの適用を自動化できます。 詳細は、Real-time CDPの [Data Governanceに関するドキュメントを参照してください](../../rtcdp/privacy/data-governance-overview.md) 。
 
-[使用可能なAdobe定義のマーケティングアクションのリストについては、このドキュメントの付録を参照してください](#core-actions)。 DULE Policy Service APIまたはExperience Platformユーザーインターフェイスを使用して、独自のカスタムマーケティングアクションを定義することもできます。 マーケティングアクションとポリシーの操作について詳しくは、次のセクションを参照してください。
+[使用可能なAdobe定義のマーケティングアクションのリストについては、このドキュメントの付録を参照してください](#core-actions)。 また、DULE [!DNL Policy Service] APIまたはユー [!DNL Experience Platform ]ザーインターフェイスを使用して、独自のカスタムマーケティングアクションを定義することもできます。 マーケティングアクションとポリシーの操作について詳しくは、次のセクションを参照してください。
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -49,15 +49,15 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## データ使用ポリシーの管理 {#manage}
 
-データ使用ラベルが適用されると、データステワードはDULE Policy Service APIまたはExperience PlatformUIを使用して、データ使用ラベルを含むデータに対して行われるマーケティングアクションに関連するポリシーを管理および評価できます。 ポリシーの作成と更新、ポリシーのステータスの決定、およびマーケティングアクションを使用して、特定のアクションがデータ使用ポリシーに違反しているかどうかを評価できます。
+データ使用ラベルが適用されると、データステワードはDULE [!DNL Policy Service] APIまたは [!DNL Experience Platform] UIを使用して、データ使用ラベルを含むデータに対して行われるマーケティングアクションに関連するポリシーを管理および評価できます。 ポリシーの作成と更新、ポリシーのステータスの決定、およびマーケティングアクションを使用して、特定のアクションがデータ使用ポリシーに違反しているかどうかを評価できます。
 
 >[!IMPORTANT]
 >
 >すべてのデータ使用ポリシー（アドビが提供するコアポリシーを含む）は、デフォルトで無効になっています。 個々のポリシーの適用が考慮されるようにするには、APIまたはUIを使用して手動でそのポリシーを有効にする必要があります。
 
-APIでマーケティングアクションとデータ使用ポリシーを使用する手順については、データ使用ポリシーの [作成と評価に関するチュートリアルを参照してください](create.md)。 Policy Service APIが提供する主要な操作について詳しくは、 [Policy Service開発者ガイドを参照してください](../api/getting-started.md)。
+APIでマーケティングアクションとデータ使用ポリシーを使用する手順については、データ使用ポリシーの [作成と評価に関するチュートリアルを参照してください](create.md)。 APIが提供する主要な操作について詳しくは、 [!DNL Policy Service] Policy Service開発者ガイドを参照してください [](../api/getting-started.md)。
 
-PlatformUIでマーケティングアクションとポリシーを使用する方法について詳しくは、『 [data usage policy user guide](./user-guide.md)』を参照してください。
+UIでマーケティングアクションとポリシーを使用する方法について詳しくは、『 [!DNL Platform] data usage policy user guide [](./user-guide.md)』を参照してください。
 
 ## 次の手順
 
