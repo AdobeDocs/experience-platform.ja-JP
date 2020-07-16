@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Policy Service APIを使用してデータ使用ポリシーを適用する
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '869'
 ht-degree: 3%
 
 ---
 
 
-# Policy Service APIを使用してデータ使用ポリシーを適用する
+# APIを使用したデータ使用ポリシーの強制 [!DNL Policy Service]
 
-データのデータ使用ラベルを作成し、それらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) (DOCULE Policy Service API)を使用して、マーケティングアクションがポリシー違反かどうかを評価できます。 その後、独自の内部プロトコルを設定し、API応答に基づくポリシー違反を処理できます。
+データのデータ使用ラベルを作成し、それらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、を使用して、マーケティングアクションがデータセットまたは任意のラベルのグループに対して実行された場合にポリシー違反と見なすかを評価できます。 [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) その後、独自の内部プロトコルを設定し、API応答に基づくポリシー違反を処理できます。
 
 >[!NOTE]
 >
