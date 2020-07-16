@@ -4,9 +4,9 @@ solution: Experience Platform
 title: リソースの削除
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d9ab2b1226b051be43f8fc0dd222bc075caed6f0
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '133'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # リソースの削除
 
-スキーマレジストリからリソースを削除(DELETE)する必要がある場合があります。 テナントコンテナで作成したリソースのみを削除できます。 これは、削除するリソース `$id` のDELETEリクエストを実行することで行います。
+リソースをから削除(DELETE)する必要がある場合があり [!DNL Schema Registry]ます。 テナントコンテナで作成したリソースのみを削除できます。 これは、削除するリソースを使用してDELETEリクエスト `$id` を実行することで行われます。
 
 **API形式**
 
@@ -24,12 +24,12 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | スキーマライブラリから削除するリソースの種類です。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
+| `{RESOURCE_TYPE}` | から削除するリソースの種類で [!DNL Schema Library]す。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
 | `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
 
 **リクエスト**
 
-DELETE要求には、Acceptヘッダーは必要ありません。
+DELETE要求にはAcceptヘッダーは必要ありません。
 
 ```SHELL
 curl -X DELETE \
@@ -44,4 +44,4 @@ curl -X DELETE \
 
 応答が成功すると、HTTPステータス204（コンテンツなし）と空白の本文が返されます。
 
-リソースに対してルックアップ(GET)要求を試行すると、削除を確認できます。 Acceptヘッダーを要求に含める必要がありますが、リソースがスキーマレジストリから削除されたので、HTTPステータス404 （見つかりません）を受け取る必要があります。
+リソースに対してルックアップ(GET)要求を試行すると、削除を確認できます。 要求にはAcceptヘッダーを含める必要がありますが、リソースがリソースから削除されたので、HTTPステータス404 （見つかりません）を受け取る必要があり [!DNL Schema Registry]ます。
