@@ -4,9 +4,9 @@ solution: Experience Platform
 title: リソースの置換
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '203'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # リソースの置換
 
-スキーマレジストリを使用すると、PUT操作でリソース全体を置き換えることができます。 この操作は基本的にリソースを書き直すので、リクエスト本文には、POSTリクエストを使用して新しいリソースを作成する際に必要となるフィールドをすべて含める必要があります。
+では、PUT操作を使用してリソース全体を置き換えることがで [!DNL Schema Registry] きます。 この操作は基本的にリソースを書き直すので、リクエスト本文には、POSTリクエストを使用して新しいリソースを作成する際に必要となるフィールドをすべて含める必要があります。
 
 この方法は、リソース内の多くの情報を一度に更新する場合に特に便利です。
 
@@ -32,7 +32,7 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | スキーマライブラリから更新するリソースの種類です。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
+| `{RESOURCE_TYPE}` | から更新するリソースのタイプ [!DNL Schema Library]。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
 | `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
 
 **リクエスト**
