@@ -4,9 +4,9 @@ solution: Experience Platform
 title: リソースの検索
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '174'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}/{RESOURCE_ID}
 | パラメーター | 説明 |
 | --- | --- |
 | `{CONTAINER_ID}` | リソースが配置されているコンテナ（「グローバル」または「テナント」）。 |
-| `{RESOURCE_TYPE}` | スキーマライブラリから取得するリソースのタイプ。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
+| `{RESOURCE_TYPE}` | から取得するリソースのタイプ [!DNL Schema Library]。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
 | `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
 
 **リクエスト**
