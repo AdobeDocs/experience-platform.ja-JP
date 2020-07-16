@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mixinの作成
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ミックスインは、「アドレス」や「プロファイルの環境設定」など、特定の概念を説明するために使用される一連のフィールドです。 多数の標準ミックスインを利用できます。また、組織に固有の情報を取り込む場合に独自のミックスインを定義することもできます。 各ミックスインには、ミックスインが互換性を持つクラスをリストする `meta:intendedToExtend` フィールドが含まれます。
 
-使用可能なすべてのミックスインを確認し、各ミックスに含まれるフィールドの内容を理解しておくと役に立ちます。 「グローバル」と「テナント」の各コンテナに対してリクエストを実行し、使用しているクラスと「meta:intendedToExtend」フィールドが一致するミックスインのみを返すことで、特定のクラスと互換性のあるすべてのミックスインをリスト(GET)できます。 以下の例は、XDM Individualプロファイルクラスで使用できるすべてのミックスインを返します。
+使用可能なすべてのミックスインを確認し、各ミックスに含まれるフィールドの内容を理解しておくと役に立ちます。 「グローバル」と「テナント」の各コンテナに対してリクエストを実行し、使用しているクラスと「meta:intendedToExtend」フィールドが一致するミックスインのみを返すことで、特定のクラスと互換性のあるすべてのミックスインをリスト(GET)できます。 以下の例は、クラスで使用できるすべてのミックスインを返し [!DNL XDM Individual Profile] ます。
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -102,7 +102,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、HTTPステータス201（作成済み）と、新しく作成されたミックスインの詳細（、、など）を含むペイロードを返し `$id`ま `meta:altId`す `version`。 これらの値は読み取り専用で、スキーマレジストリによって割り当てられます。
+正常な応答は、HTTPステータス201（作成済み）と、新しく作成されたミックスインの詳細（、、など）を含むペイロードを返し `$id`ま `meta:altId`す `version`。 これらの値は読み取り専用で、によって割り当てられ [!DNL Schema Registry]ます。
 
 ```JSON
 {
