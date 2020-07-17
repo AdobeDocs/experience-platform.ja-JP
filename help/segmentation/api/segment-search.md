@@ -1,30 +1,28 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: セグメント化API開発ガイド
+title: セグメント検索エンドポイントガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1141'
 ht-degree: 2%
 
 ---
 
 
-# セグメント検索
+# セグメント検索エンドポイントガイド
 
-セグメント検索は、様々なデータソースに含まれる設定可能なフィールドを検索およびインデックス付けし、ほぼリアルタイムで返すために使用します。
+セグメント検索は、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返す場合に使用します。
 
 このガイドは、セグメント検索をより深く理解するのに役立つ情報を提供し、APIを使用して基本的なアクションを実行するためのサンプルAPI呼び出しを含みます。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、セグメント化APIの一部です。 先に進む前に、 [セグメント化開発ガイドを参照してください](getting-started.md)。
+このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、 [入門ガイドを参照して](./getting-started.md) 、必要なヘッダーやAPI呼び出し例を読む方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
 
-特に、セグメント化開発ガイドの「 [はじめに](getting-started.md) 」の節には、関連トピックへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
-
-「はじめに」の節で説明されている必須ヘッダーに加えて、セグメント検索APIへのすべてのリクエストには、次の追加ヘッダーが必要です。
+「はじめに」の節で説明されている必須ヘッダーに加えて、セグメント検索エンドポイントへのすべてのリクエストには、次の追加ヘッダーが必要です。
 
 - x-ups-search-version: &quot;1.0&quot;
 
@@ -223,11 +221,11 @@ curl -X GET \
 
 ## 次の手順
 
-このガイドを読むと、セグメント検索のしくみをより深く理解できます。 セグメント化について詳しくは、 [セグメント化の概要を参照してください](../home.md)。
+このガイドを読むと、セグメント検索のしくみをより深く理解できます。
 
 ## 付録 {#appendix}
 
-以下の節では、検索用語の仕組みについて詳しく説明します。 検索クエリは、次の方法で書き込まれます。 `s={FieldName}:{SearchExpression}`. したがって、例えば、AAMまたはPlatformという名前のセグメントを検索するには、次の検索クエリを使用します。 `s=segmentName:AAM%20OR%20Platform`.
+以下の節では、検索用語の仕組みについて詳しく説明します。 検索クエリは、次の方法で書き込まれます。 `s={FieldName}:{SearchExpression}`. したがって、例えば、AAMやPlatformという名前のセグメントを検索するには、次の検索クエリを使用します。 `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] ベストプラクティスとして、上の例のように、検索式はHTMLエンコードする必要があります。
 
