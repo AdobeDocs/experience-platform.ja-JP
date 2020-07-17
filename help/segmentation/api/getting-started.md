@@ -4,34 +4,32 @@ solution: Experience Platform
 title: Segmentation Service開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 1%
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# Segmentation Service開発ガイド
+# Getting started with [!DNL Segmentation Service] {#getting-started}
 
-セグメント化を使用すると、セグメントを作成し、リアルタイムの顧客プロファイルデータからAdobe Experience Platformのオーディエンスを生成できます。
+Adobe Experience Platformセグメントサービスを使用すると、セグメントを作成し、 [!DNL Real-time Customer Profile] データをAdobe Experience Platformしてオーディエンスを生成できます。
 
-## はじめに
+開発者ガイドでは、の使用に関連する様々なExperience Platformサービスについて、作業を理解している必要があり [!DNL Segmentation Service]ます。
 
-このガイドでは、セグメント化の使用に関連する様々なAdobe Experience Platformサービスについて、十分に理解している必要があります。
-
-- [セグメント](../home.md): リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
-- [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [!DNL Segmentation](../home.md): リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 - [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-APIを使用してセグメントを正しく使用するために知っておく必要がある追加情報について、以下の節で説明します。
+以下の節では、 [!DNL Segmentation] APIを正しく操作するために知っておく必要がある追加情報について説明します。
 
-### サンプルAPI呼び出しの読み取り
+## サンプルAPI呼び出しの読み取り
 
-Segmentation Service APIドキュメントには、リクエストをフォーマットする方法を示すAPI呼び出しの例が記載されています。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+APIドキュメントには、リクエストをフォーマットする方法を示すAPI呼び出しの例が含まれています。 [!DNL Segmentation Service] 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
 
-### 必須ヘッダー
+## 必須ヘッダー
 
 また、APIドキュメントでは、Platformエンドポイントの呼び出しを正常に行うために、 [認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があります。 次に示すように、Experience PlatformAPI呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
@@ -39,13 +37,13 @@ Segmentation Service APIドキュメントには、リクエストをフォー�
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Experience Platformでのサンドボックスの操作について詳しくは、 [サンドボックスの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>でのサンドボックスの操作について詳し [!DNL Experience Platform]くは、 [サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 <!-- ## Estimates
 
@@ -95,4 +93,4 @@ For more information on using this endpoint, please read the [schedules develope
 
 ## 次の手順
 
-セグメントAPIを使用して呼び出しを開始するには、サブガイドの1つを選択して、特定のセグメント関連エンドポイントの使用方法を学習します。 PlatformUIを使用したセグメントの操作について詳しくは、 [セグメント化ユーザーガイドを参照してください](../ui/overview.md)。
+APIを使用して呼び出しを行うには、左側のナビゲーションまたは [!DNL Segmentation Service][開発者ガイドの概要で、使用可能なエンドポイントガイドの1つを選択します](./overview.md)
