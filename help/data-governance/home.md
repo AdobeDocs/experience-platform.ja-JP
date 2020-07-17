@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformデータガバナンス
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1342'
 ht-degree: 1%
 
 ---
@@ -85,15 +85,6 @@ DULEフレームワークには、次の3つの方法でデータを分類する
 >すべてのデータ使用ポリシー（アドビが提供するコアポリシーを含む）は、デフォルトで無効になっています。 個々のポリシーを適用対象と見なすには、そのポリシーを手動で有効にする必要があります。
 
 データ使用ポリシーとマーケティングアクションについて詳しくは、「 [ポリシーの概要](./policies/overview.md)」を参照してください。
-
-## 今後のリリース
-
-[!DNL Data Governance] 現在、2つのレベル（データセットとフィールド）でのDULEラベル付けをサポートしています。 [!DNL Data Governance] また、データ使用ポリシーおよびマーケティングアクションの作成と管理をDULE [!DNL Policy Service] API経由でサポートします。
-
-以降のリリースでは、次の機能が提供されます。
-
-* ポリシーの適用： ポリシーフレームワークを使用して、様々なデータアクセスパターンにわたってポリシーを通知し、適用します。
-* 監査： データ・アクセス・アクティビティを監視し、コンプライアンスの問題を特定してレポートします。
 
 ## 次の手順
 
