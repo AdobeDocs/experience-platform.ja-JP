@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントのチュートリアル
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience Platform [!DNL Segmentation Service][!DNL Real-time Customer Pr
 
 ## セグメントデータのエクスポート
 
-データを含むセグメントを書き出すには、まず [!DNL Profile] データの書き出し先となるデータセットを [作成し](../segmentation/tutorials/create-dataset-export-segment.md)、新しい書き出しジョブを開始する必要があります。 書き出しジョブの生成手順は、 [書き出しAPIチュートリアルで説明しています](../segmentation/tutorials/export-data.md)。
+データを含むセグメントを書き出すには、まず [!DNL Profile] データの書き出し先となるデータセットを [作成し](../segmentation/tutorials/create-dataset-export-segment.md)、新しい書き出しジョブを開始する必要があります。 書き出しジョブの生成手順は、セグメントの [評価のチュートリアルで確認できます](../segmentation/tutorials/evaluate-a-segment.md)。
 
 ## 結合ポリシーの設定
 
