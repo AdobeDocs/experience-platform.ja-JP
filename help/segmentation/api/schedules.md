@@ -4,56 +4,47 @@ solution: Experience Platform
 title: スケジュール
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 45a196d13b50031d635ceb7c5c952e42c09bd893
+source-git-commit: 842f31aac2bdbf7e9f79e4ae7d4c36be1dc92392
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 4%
+source-wordcount: '1172'
+ht-degree: 3%
 
 ---
 
 
-# スケジュール開発ガイド
+# スケジュールエンドポイントガイド
 
-導入
-
-- スケジュールのリストの取得
-- 新しいスケジュールの作成
-- 特定のスケジュールの取得
-- 特定のスケジュールの更新
-- 特定のスケジュールの削除
+スケジュールは、バッチセグメントジョブを1日1回自動的に実行するために使用できるツールです。 エンドポイントを使用して、スケジュールのリストの取得、新しいスケジュールの作成、特定のスケジュールの詳細の取得、特定のスケジュールの更新または特定のスケジュールの削除を行うことができます。 `/config/schedules`
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、セグメント化APIの一部です。 先に進む前に、 [セグメント化開発ガイドを参照してください](./getting-started.md)。
+このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、 [入門ガイドを参照して](./getting-started.md) 、必要なヘッダーやAPI呼び出し例を読む方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
 
-特に、セグメント化開発ガイドの「 [はじめに](./getting-started.md#getting-started) 」の節には、関連トピックへのリンク、ドキュメント内のサンプルAPI呼び出しを読むためのガイド、Experience Platform APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報が含まれています。
-
-## スケジュールのリストの取得
+## スケジュールのリストの取得 {#retrieve-list}
 
 エンドポイントにGETリクエストを行うことで、IMS組織のすべてのスケジュールのリストを取得でき `/config/schedules` ます。
 
 **API形式**
 
+エンドポイントでは、結果のフィルタリングに役立ついくつかのクエリパラメーターが `/config/schedules` サポートされています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべてのスケジュールが取得されます。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。
+
 ```http
 GET /config/schedules
-GET /config/schedules?{QUERY_PARAMETERS}
+GET /config/schedules?start={START}
+GET /config/schedules?limit={LIMIT}
 ```
-
-- `{QUERY_PARAMETERS}`: (*オプション*)リクエストパスに追加されるパラメーター。応答で返される結果を設定します。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。 使用可能なパラメーターを以下に示します。
-
-**クエリパラメーター**
-
-次に、集計表を一覧表示する際に使用できるクエリパラメータのリストを示します。 これらのパラメーターはすべてオプションです。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべてのスケジュールが取得されます。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `start` | オフセットの開始元となるページを指定します。 デフォルトでは、この値は0です。 |
-| `limit` | 返されるスケジュールの数を指定します。 デフォルトでは、この値は100になります。 |
+| `{START}` | オフセットの開始元となるページを指定します。 デフォルトでは、この値は0です。 |
+| `{LIMIT}` | 返されるスケジュールの数を指定します。 デフォルトでは、この値は100になります。 |
 
 **リクエスト**
 
+次のリクエストは、IMS組織内で投稿された最新10件のスケジュールを取得します。
+
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=X \
+curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -64,10 +55,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=X \
 
 正常な応答は、指定されたIMS組織のスケジュールのリストを持つHTTPステータス200をJSONとして返します。
 
+>[!NOTE] 次の応答は領域のために切り捨てられ、最初に返されたスケジュールのみを表示します。
+
 ```json
 {
     "_page": {
-        "totalCount": 1,
+        "totalCount": 10,
         "pageSize": 1
     },
     "children": [
@@ -97,7 +90,18 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=X \
 }
 ```
 
-## 新しいスケジュールの作成
+| プロパティ | 説明 |
+| -------- | ------------ |
+| `_page.totalCount` | 返されたスケジュールの合計数。 |
+| `_page.pageSize` | スケジュールのページのサイズ。 |
+| `children.name` | スケジュールの名前を文字列で指定します。 |
+| `children.type` | 文字列としてのジョブのタイプ。 サポートされる2つのタイプは、「batch_segmentation」と「export」です。 |
+| `children.properties` | 集計表に関連する追加のプロパティを含むオブジェクト。 |
+| `children.properties.segments` | を使用すると、すべてのセグメントが確実に含まれます。 `["*"]` |
+| `children.schedule` | ジョブスケジュールを含む文字列。 ジョブは、1日に1回しか実行するようにスケジュールできません。つまり、24時間の間にジョブを2回以上実行するようにスケジュールすることはできません。 cronスケジュールの詳細については、cron式形式のドキュメントを参照して [ください](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 この例で、「0 0 1 * *」は、このスケジュールが毎月1日の午前0時に実行されることを意味します。 |
+| `children.state` | スケジュールの状態を含む文字列。 サポートされる2つの状態は、「アクティブ」と「非アクティブ」です。 デフォルトでは、状態は「inactive」に設定されています。 |
+
+## Create a new schedule {#create}
 
 エンドポイントにPOSTリクエストを作成して、新しいスケジュールを作成でき `/config/schedules` ます。
 
@@ -118,27 +122,26 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 {
-  "name": "profile-default",
-  "type": "batch_segmentation",
-  "properties": {
-    "segments": [
-      "*"
-    ]
-  },
-  "schedule": "0 0 1 * * ?",
-  "state": "inactive"
-}
- '
+    "name":"profile-default",
+    "type":"batch_segmentation",
+    "properties":{
+        "segments":[
+            "*"
+        ]
+    },
+    "schedule":"0 0 1 * * ?",
+    "state":"inactive"
+}'
 ```
 
-| パラメーター | 説明 |
-| --------- | ------------ |
+| プロパティ | 説明 |
+| -------- | ------------ |
 | `name` | **必須。** スケジュールの名前を文字列で指定します。 |
-| `type` | **必須。** 文字列としてのジョブのタイプ。 サポートされる2つのタイプは `batch_segmentation` とで `export`す。 |
+| `type` | **必須。** 文字列としてのジョブのタイプ。 サポートされる2つのタイプは、「batch_segmentation」と「export」です。 |
 | `properties` | **必須。** 集計表に関連する追加のプロパティを含むオブジェクト。 |
-| `properties.segments` | **が次の値と等しい場合`type`は必須`batch_segmentation`です。** を使用すると、すべてのセグメントが確実に含まれます。 `["*"]` |
-| `schedule` | **必須。** ジョブスケジュールを含む文字列。 cronスケジュールの詳細については、cron式形式のドキュメントを参照して [ください](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 この例で、「0 0 1 * *」は、このスケジュールが毎月1日の午前0時に実行されることを意味します。 |
-| `state` | *オプション.* スケジュールの状態を含む文字列。 サポートされる2つの状態は、 `active` およびで `inactive`す。 By default, the state is set to `inactive`. |
+| `properties.segments` | **「batch_segmentation」`type`と等しい場合に必須です。** を使用すると、すべてのセグメントが確実に含まれます。 `["*"]` |
+| `schedule` | *オプション.* ジョブスケジュールを含む文字列。 ジョブは、1日に1回しか実行するようにスケジュールできません。つまり、24時間の間にジョブを2回以上実行するようにスケジュールすることはできません。 cronスケジュールの詳細については、cron式形式のドキュメントを参照して [ください](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 この例で、「0 0 1 * *」は、このスケジュールが毎月1日の午前0時に実行されることを意味します。 <br><br>この文字列を指定しない場合、システム生成スケジュールが自動的に生成されます。 |
+| `state` | *オプション.* スケジュールの状態を含む文字列。 サポートされる2つの状態は、「アクティブ」と「非アクティブ」です。 デフォルトでは、状態は「inactive」に設定されています。 |
 
 **応答**
 
@@ -168,9 +171,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 }
 ```
 
-## 特定のスケジュールの取得
+## 特定のスケジュールの取得 {#get}
 
-エンドポイントにGETリクエストを送信し、リクエストパスにスケジュールの `/config/schedules``id` 値を指定することで、特定のスケジュールに関する詳細な情報を取得できます。
+特定のスケジュールに関する詳細な情報を取得するには、エンドポイントにGETリクエストを送信し、リクエストパスに取得するスケジュールのIDを指定し `/config/schedules` ます。
 
 **API形式**
 
@@ -178,12 +181,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 GET /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: 取得するスケジュールの `id` 値。
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{SCHEDULE_ID}` | 取得するスケジュールの `id` 値。 |
 
 **リクエスト**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID}
+curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -215,17 +220,27 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_I
     },
     "createEpoch": 1568267948,
     "updateEpoch": 1568267948
+}
 ```
 
-## 特定のスケジュールの詳細を更新する
+| プロパティ | 説明 |
+| -------- | ------------ |
+| `name` | スケジュールの名前を文字列で指定します。 |
+| `type` | 文字列としてのジョブのタイプ。 サポートされる2つのタイプは `batch_segmentation` とで `export`す。 |
+| `properties` | 集計表に関連する追加のプロパティを含むオブジェクト。 |
+| `properties.segments` | を使用すると、すべてのセグメントが確実に含まれます。 `["*"]` |
+| `schedule` | ジョブスケジュールを含む文字列。 ジョブは、1日に1回しか実行するようにスケジュールできません。つまり、24時間にジョブを2回以上実行するようにスケジュールすることはできません。 cronスケジュールの詳細については、cron式形式のドキュメントを参照して [ください](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 この例で、「0 0 1 * *」は、このスケジュールが毎月1日の午前0時に実行されることを意味します。 |
+| `state` | スケジュールの状態を含む文字列。 サポートされる2つの状態は、 `active` およびで `inactive`す。 By default, the state is set to `inactive`. |
 
-エンドポイントにPATCHリクエストを送信し、リクエストパスにスケジュールの `/config/schedules``id` 値を指定することで、指定したスケジュールを更新できます。
+## 特定のスケジュールの詳細を更新する {#update}
 
-PATCHリクエストは、次の2つの異なるパスをサポートします。 `/state` と `/schedule`。
+エンドポイントにPATCHリクエストを送信し、更新しようとしているスケジュールのIDを要求パスに指定することで、特定のスケジュールを更新でき `/config/schedules` ます。
 
-### スケジュール状態の更新
+PATCHリクエストを使用すると、 [状態](#update-state) または [cronスケジュールを個々のスケジュールに対して更新できます](#update-schedule) 。
 
-を使用して、スケジュールの状態（ACTIVEまたはINACTIVE） `/state` を更新できます。 状態を更新するには、値をまたはに設定する必要があり `active` ま `inactive`す。
+### スケジュール状態の更新 {#update-state}
+
+「JSONパッチ」操作を使用して、スケジュールの状態を更新できます。 状態を更新するには、 `path` プロパティをと宣言し、を `/state` またはに設定し `value``active``inactive`ます。 JSONパッチの詳細については、 [JSONパッチのドキュメントを読んでください](http://jsonpatch.com/) 。
 
 **API形式**
 
@@ -233,39 +248,40 @@ PATCHリクエストは、次の2つの異なるパスをサポートします�
 PATCH /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: 更新するスケジュールの `id` 値。
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{SCHEDULE_ID}` | 更新するスケジュールの `id` 値。 |
 
 **リクエスト**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 [
-  {
-    "op": "add",
-    "path": "/state",
-    "value": "active"
-  }
-]
-'
+    {
+        "op": "add",
+        "path": "/state",
+        "value": "active"
+    }
+]'
 ```
 
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `path` | パッチを適用する値のパス。 この場合、スケジュールの状態を更新するので、の値をに設定する必要があ `path` り `/state`ます。 |
-| `value` | の更新された値 `/state`。 この値は、スケジュールをアクティブ化または非アクティブ化す `active` るた `inactive` めに、またはとして設定できます。 |
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `path` | パッチを適用する値のパス。 この場合、スケジュールの状態を更新するので、の値を「/state」に設定する必要 `path` があります。 |
+| `value` | スケジュールの状態の更新された値。 この値を「active」または「inactive」に設定して、スケジュールをアクティブ化または非アクティブ化できます。 |
 
 **応答**
 
 応答が成功すると、HTTPステータス204（コンテンツなし）が返されます。
 
-### スケジュールcronスケジュールの更新
+### Cronスケジュールの更新 {#update-schedule}
 
-を使用して、Cronスケジュール `schedule` を更新できます。 cronスケジュールの詳細については、cron式形式のドキュメントを参照して [ください](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。
+「JSONパッチ」操作を使用してCronスケジュールを更新できます。 集計表を更新するには、 `path` プロパティをと宣言し、を有効なCron集計表 `/schedule``value` に設定します。 JSONパッチの詳細については、 [JSONパッチのドキュメントを読んでください](http://jsonpatch.com/) 。 cronスケジュールの詳細については、cron式形式のドキュメントを参照して [ください](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。
 
 **API形式**
 
@@ -273,31 +289,32 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDUL
 PATCH /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: 更新するスケジュールの `id` 値。
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{SCHEDULE_ID}` | 更新するスケジュールの `id` 値。 |
 
 **リクエスト**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
 [
-  {
-    "op": "add",
-    "path": "/schedule",
-    "value": "0 0 2 * *"
-  }
-]
-'
+    {
+        "op":"add",
+        "path":"/schedule",
+        "value":"0 0 2 * *"
+    }
+]'
 ```
 
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `path` | パッチを適用する値のパス。 この場合、スケジュールのCronスケジュールを更新するので、の値をに設定する必要があ `path` り `/schedule`ます。 |
-| `value` | の更新された値 `/state`。 この値は、Cronスケジュールの形式にする必要があります。 この例では、スケジュールは毎月2日に実行されます。 |
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `path` | 更新する値のパス。 この場合、Cronスケジュールを更新するので、の値をに設定する必要があ `path` り `/schedule`ます。 |
+| `value` | Cronスケジュールの更新された値。 この値は、Cronスケジュールの形式にする必要があります。 この例では、スケジュールは毎月2日に実行されます。 |
 
 **応答**
 
@@ -305,7 +322,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDUL
 
 ## 特定のスケジュールの削除
 
-リクエストパスにDELETEリクエストを作成し、リクエストパスにスケジュールの `/config/schedules``id` 値を指定することで、指定したスケジュールを削除するようにリクエストできます。
+エンドポイントにDELETEリクエストを送信し、削除するスケジュールのIDをリクエストパスに指定することで、特定のスケジュールを削除するようにリクエストでき `/config/schedules` ます。
 
 **API形式**
 
@@ -313,12 +330,14 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDUL
 DELETE /config/schedules/{SCHEDULE_ID}
 ```
 
-- `{SCHEDULE_ID}`: 削除するスケジュールの `id` 値。
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{SCHEDULE_ID}` | 削除するスケジュールの `id` 値。 |
 
 **リクエスト**
 
 ```shell
-curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDULE_ID} \
+curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -327,10 +346,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/{SCHEDUL
 
 **応答**
 
-応答が成功すると、HTTPステータス204（コンテンツなし）が返され、次のメッセージが表示されます。
-
-```json
-(No Content) Schedule deleted successfully
-```
+応答が成功すると、HTTPステータス204（コンテンツなし）が返されます。
 
 ## 次の手順
+
+このガイドを読むと、スケジュールの動作に関する理解が深まります。
