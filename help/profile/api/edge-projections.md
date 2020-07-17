@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: エッジ予測 — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1900'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # エッジ投影設定と宛先エンドポイント
 
-複数のチャネルにわたって顧客に対して、調整、一貫性、パーソナライズされたエクスペリエンスをリアルタイムで提供するためには、変更が発生した場合に適切なデータを容易に利用でき、継続的に更新する必要があります。 Adobe Experience Platformを使用すると、エッジと呼ばれるものを使用して、データにリアルタイムでアクセスできます。 エッジは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバです。 例えば、Adobe TargetやAdobe Campaignなどのアドビアプリケーションは、パーソナライズされた顧客体験をリアルタイムで提供するためにエッジを使用します。 データは投影によってエッジにルーティングされ、投影先はデータの送信先となるエッジを定義し、投影設定はエッジで利用可能にする特定の情報を定義します。 このガイドでは、リアルタイム顧客プロファイルAPIを使用して、宛先や設定などのエッジ予測を操作するための詳細な手順を説明します。
+複数のチャネルにわたって顧客に対して、調整、一貫性、パーソナライズされたエクスペリエンスをリアルタイムで提供するためには、変更が発生した場合に適切なデータを容易に利用でき、継続的に更新する必要があります。 Adobe Experience Platformを使用すると、エッジと呼ばれるものを使用して、データにリアルタイムでアクセスできます。 エッジは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバです。 例えば、Adobe TargetやAdobe Campaignなどのアドビアプリケーションは、パーソナライズされた顧客体験をリアルタイムで提供するためにエッジを使用します。 データは投影によってエッジにルーティングされ、投影先はデータの送信先となるエッジを定義し、投影設定はエッジで利用可能にする特定の情報を定義します。 このガイドでは、 [!DNL Real-time Customer Profile] APIを使用して、宛先や設定などのエッジ投影を操作する詳細な手順を説明します。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、 [リアルタイム顧客プロファイルAPIの一部](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)です。 先に進む前に、 [はじめに](getting-started.md) 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、に含まれてい [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)ます。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
 >[!NOTE]
 >ペイロード(POST、PUT、PATCH)を含む要求には、 `Content-Type` ヘッダーが必要です。 このドキュメントでは、複数 `Content-Type` が使用されています。 サンプル呼び出しのヘッダーには特に注意を払い、各リクエストで正しいヘッダーが使用されていることを確認して `Content-Type` ください。
@@ -103,7 +103,7 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `_links.self.href` | トップレベルで、はGETリクエストを行う際に使用するパスと一致します。 個々の宛先オブジェクト内で、このパスをGETリクエストで使用して、特定の宛先の詳細を直接参照できます。 |
-| `id` | 各宛先オブジェクト内で、には、その宛先に対する読み取り専用の、システム生成の一意のIDが `"id"` 表示されます。 このIDは、特定の宛先を参照する場合や、投影設定を作成する場合に使用されます。 |
+| `id` | 各宛先オブジェクト内で、には、宛先の読み取り専用の、システム生成の一意のIDが `"id"` 表示されます。 このIDは、特定の宛先を参照する場合や、投影設定を作成する場合に使用されます。 |
 
 個々の宛先の属性の詳細については、次の宛先の [作成に関する節を参照してください](#create-a-destination) 。
 
@@ -325,7 +325,7 @@ curl -X DELETE \
 
 ## 投影設定
 
-投影設定は、各エッジで使用可能なデータに関する情報を提供します。 完全なExperience Data Model(XDM)スキーマを端に投影する代わりに、投影はスキーマから特定のデータ（フィールド）のみを提供します。 組織では、各XDMスキーマに対して複数の投影設定を定義できます。
+投影設定は、各エッジで使用可能なデータに関する情報を提供します。 投影は、完全な [!DNL Experience Data Model] (XDM)スキーマを端に投影するのではなく、スキーマから特定のデータ（フィールド）のみを提供します。 組織では、各XDMスキーマに対して複数の投影設定を定義できます。
 
 ### すべての投影設定のリスト
 
@@ -349,7 +349,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **リクエスト**
 
-次のリクエストでは、Experience Data ModelスキーマクラスXDM Individualプロファイルに関連付けられているすべての投影設定をリストします。 XDMとPlatform内でのその役割についての詳細は、 [XDMシステムの概要を読んでください](../../xdm/home.md)。
+次のリクエストでは、 [!DNL Experience Data Model] スキーマクラスに関連付けられているすべての投影設定をリスト [!DNL XDM Individual Profile]します。 XDMとXDM内での役割についての詳細は、まず [!DNL Platform]XDMシステムの概要を読んでください [](../../xdm/home.md)。
 
 ```shell
 curl -X GET \
