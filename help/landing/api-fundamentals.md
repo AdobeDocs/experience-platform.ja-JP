@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience PlatformAPIの基本事項
 topic: getting started
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -83,7 +83,7 @@ JSONポインターは、JSONドキュメント内の特定の値を識別する
 >[!N注意]
 >
 >
->( `xdm:sourceProperty` XDM)記述子の `xdm:destinationProperty` および [!DNL Experience Data Model] 属性を処理する場合、すべての `properties` キーはJSONポインタ文字列から **** 除外する必要があります。 詳しくは、 [記述子に関する『スキーマレジストリAPI開発者ガイド](../xdm/api/descriptors.md) 』を参照してください。
+>( `xdm:sourceProperty` XDM)記述子の `xdm:destinationProperty` および [!DNL Experience Data Model] 属性を処理する場合、すべての `properties` キーはJSONポインタ文字列から **** 除外する必要があります。 詳しくは、 [!DNL Schema Registry] API開発者ガイドの [記述子を参照してください](../xdm/api/descriptors.md) 。
 
 ## JSONパッチ
 
