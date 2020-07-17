@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: エンティティ — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1671'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # エンティティエンドポイント(プロファイルアクセス)
 
-Adobe Experience Platformを使用すると、RESTful APIまたはユーザーインターフェイスを使用して、リアルタイム顧客プロファイルデータにアクセスできます。 このガイドでは、APIを使用して、一般に「プロファイル」と呼ばれるエンティティにアクセスする方法について概説します。 PlatformUIを使用したプロファイルへのアクセスについて詳しくは、 [プロファイルユーザーガイドを参照してください](../ui/user-guide.md)。
+Adobe Experience Platformを使用すると、RESTful APIまたはユーザーインターフェイスを使用して [!DNL Real-time Customer Profile] データにアクセスできます。 このガイドでは、APIを使用して、一般に「プロファイル」と呼ばれるエンティティにアクセスする方法について概説します。 UIを使用したプロファイルへのアクセスについて詳しくは、『 [!DNL Platform] プロファイルユーザガイド [](../ui/user-guide.md)』を参照してください。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、 [リアルタイム顧客プロファイルAPIの一部](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)です。 先に進む前に、 [はじめに](getting-started.md) 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、に含まれてい [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)ます。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
 ## ID別のプロファイルデータへのアクセス
 
-エンドポイントにGETリクエストを送信し、一連のクエリパラメーターとしてエンティティのIDを指定することで、プロファイルエンティティにアクセスでき `/access/entities` ます。 このIDは、ID値(`entityId`)とID名前空間(`entityIdNS`)で構成されます。
+エン [!DNL Profile]`/access/entities` ティティにアクセスするには、エンドポイントにGETリクエストを送信し、一連のクエリパラメーターとしてエンティティのIDを指定します。 このIDは、ID値(`entityId`)とID名前空間(`entityIdNS`)で構成されます。
 
 リクエストパスで指定されるクエリパラメーターで、アクセスするデータを指定します。 複数のパラメーターを含めることができ、アンパサンド(&amp;)で区切って指定できます。 有効なパラメーターの完全なリストは、付録の「 [クエリパラメーター](#query-parameters) 」セクションに記載されています。
 
@@ -774,7 +774,7 @@ curl -X POST \
 
 ## 複数のスキーマエンティティの時系列イベントへのアクセス
 
-関係記述子を介して接続された複数のエンティティにアクセスできます。 次のAPI呼び出しの例では、2つのスキーマ間で既に関係が定義されていると仮定しています。 関係記述子の詳細については、『スキーマレジストリAPI開発者ガイド [記述子エンドポイントガイド](../../xdm/api/descriptors.md)』を参照してください。
+関係記述子を介して接続された複数のエンティティにアクセスできます。 次のAPI呼び出しの例では、2つのスキーマ間で既に関係が定義されていると仮定しています。 関係記述子の詳細については、『 [!DNL Schema Registry] API開発者ガイド [記述子エンドポイントガイド』を参照してください](../../xdm/api/descriptors.md)。
 
 リクエストパスにクエリパラメーターを含めて、アクセスするデータを指定できます。 複数のパラメーターを含めることができ、アンパサンド(&amp;)で区切って指定できます。 有効なパラメーターの完全なリストは、付録の「 [クエリパラメーター](#query-parameters) 」セクションに記載されています。
 
@@ -884,11 +884,11 @@ curl -X GET \
 
 ## 次の手順
 
-このガイドに従うと、リアルタイム顧客プロファイルデータフィールド、プロファイルおよび時系列データに正常にアクセスできます。 Platformに保存されているその他のデータリソースにアクセスする方法については、「 [データアクセスの概要](../../data-access/home.md)」を参照してください。
+このガイドに従うと、データフィールド、 [!DNL Real-time Customer Profile] プロファイル、および時系列データに正常にアクセスできます。 に保存されているその他のデータリソースへのアクセス方法につ [!DNL Platform]いては、「 [データアクセスの概要](../../data-access/home.md)」を参照してください。
 
 ## 付録 {#appendix}
 
-次の節では、APIを使用したプロファイルデータへのアクセスに関する補足情報を説明します。
+次の節では、APIを使用した [!DNL Profile] データへのアクセスに関する補足情報を説明します。
 
 ### クエリパラメーター {#query-parameters}
 
