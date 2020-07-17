@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformの概要
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b73bd7e163c2861c751b1b505894923f70c99755
+source-git-commit: 6c90e68bde1fb8474ba23127ecf7b6fd617c7765
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '747'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Platformは、お客様の体験を促進する包括的なソ�
 
 オープンAPIを基に構築され、 [!DNL Experience Platform] 開発者にシステムの全機能を公開し、使い慣れたツールを使用してエンタープライズソリューションの統合を容易にサポートします。 [!DNL Experience Platform] また、必要に応じて独自の製品とテクノロジーを構築および統合するパートナーもサポートします。 このパワーと柔軟性は、市場で [!DNL Experience Platform] 独自のものとなります。 パートナー、顧客、開発者のコミュニティに、エクスペリエンスビジネスを推進する革新的なアイデアを構築するための基盤を提供します。 360度の表示と個々の好みから引き出された、継続的に改善と完全にパーソナライズされたエクスペリエンスを提供することで、お客様の期待を上回る成果を得ることができます。
 
-次のビデオでは、顧客の観点から見た、Adobe Experience Platformを使用して構築された仮想的なエクスペリエンスの概要を説明しています。 詳しくは、に [!DNL Experience Platform] よって、リッチで関連性の高いリアルタイムのエクスペリエンスを作成する方法を参照してください。
+次のビデオでは、顧客の観点から [!DNL Experience Platform] 、まず舞台裏の技術的な観点から、リッチで関連性の高いリアルタイムのエクスペリエンスを作成する方法について概説します。
 
 **顧客の視点：**
 
@@ -94,7 +94,7 @@ Adobe Experience Platformドキュメントは複数の言語で提供されて�
 
 ## リファレンスドキュメントとリソース
 
-* [**Release notes **](../release-notes/latest/latest.md)<br/>Find information about the most recent[!DNL Experience Platform]release and review past releases.
+* [**リリースノート&#x200B;**](../release-notes/latest/latest.md)<br/>最新のリリースに関する情報を確認し、過去の[!DNL Experience Platform]リリースを確認します。
 
 * [**用語集&#x200B;**](glossary.md)<br/>Adobe Experience Platform の用語を確認します。
 
