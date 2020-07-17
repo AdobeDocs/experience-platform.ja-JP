@@ -4,25 +4,25 @@ solution: Adobe Experience Platform
 title: マージポリシー — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '2053'
-ht-degree: 3%
+source-wordcount: '2035'
+ht-degree: 1%
 
 ---
 
 
 # ポリシーエンドポイントの結合
 
-Adobe Experience Platformを使用すると、複数のソースからデータを統合し、それを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する場合、統合ポリシーは、データの優先順位付け方法と、統合されたビューを作成するためにどのデータを組み合わせるかを決定するためにプラットフォームで使用されるルールです。RESTful APIまたはユーザーインターフェイスを使用して、新しい結合ポリシーを作成し、既存のポリシーを管理し、組織のデフォルトの結合ポリシーを設定できます。 このガイドでは、APIを使用した結合ポリシーの操作手順を示します。 UIを使用してマージポリシーを操作するには、 [マージポリシーユーザーガイドを参照してください](../ui/merge-policies.md)。
+Adobe Experience Platformを使用すると、複数のソースからデータを統合し、それを組み合わせて、個々の顧客の完全な表示を確認できます。 When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. RESTful APIまたはユーザーインターフェイスを使用して、新しい結合ポリシーを作成し、既存のポリシーを管理し、組織のデフォルトの結合ポリシーを設定できます。 このガイドでは、APIを使用した結合ポリシーの操作手順を示します。 UIを使用してマージポリシーを操作するには、 [マージポリシーユーザーガイドを参照してください](../ui/merge-policies.md)。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、 [リアルタイム顧客プロファイルAPIの一部](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)です。 先に進む前に、 [はじめに](getting-started.md) 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、に含まれてい [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)ます。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
 ## 結合ポリシーのコンポーネント {#components-of-merge-policies}
 
-マージポリシーはIMS組織に対して非公開であり、異なるポリシーを作成して、スキーマを必要に応じて結合できます。 プロファイルデータにアクセスするAPIにはマージポリシーが必要ですが、明示的に指定されない場合はデフォルトが使用されます。 Platformは、既定の結合ポリシーを提供します。または、特定のスキーマ用に結合ポリシーを作成し、それを組織の既定としてマークすることができます。 各組織は、スキーマごとに複数の結合ポリシーを持つことができますが、各スキーマは、1つのデフォルトの結合ポリシーしか持つことができません。 デフォルトとして設定されたマージポリシーは、スキーマ名が指定され、マージポリシーが必須で指定されていない場合に使用されます。 マージポリシーをデフォルトとして設定すると、以前にデフォルトとして設定された既存のマージポリシーは自動的に更新され、デフォルトとして使用されなくなります。
+マージポリシーはIMS組織に対して非公開であり、異なるポリシーを作成して、スキーマを必要に応じて結合できます。 データにアクセスするAPIにはマージポリシーが必要ですが、明示的に指定されない場合はデフォルトが使用されます。 [!DNL Profile] [!DNL Platform] では、既定の結合ポリシーを使用できます。また、特定のスキーマ用に結合ポリシーを作成し、それを組織の既定としてマークすることもできます。 各組織は、スキーマごとに複数の結合ポリシーを持つことができますが、各スキーマは、1つのデフォルトの結合ポリシーしか持つことができません。 デフォルトとして設定されたマージポリシーは、スキーマ名が指定され、マージポリシーが必須で指定されていない場合に使用されます。 マージポリシーをデフォルトとして設定すると、以前にデフォルトとして設定された既存のマージポリシーは自動的に更新され、デフォルトとして使用されなくなります。
 
 ### マージポリシーオブジェクトの完了
 
@@ -59,7 +59,7 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
 | `attributeMerge` | [データの競合が発生した場合にマージポリシーがプロファイル属性値に優先順位を付ける方法を示す属性マージ](#attribute-merge) ・オブジェクト。 |
 | `schema` | マージポリシーを使用できる [スキーマ](#schema) ・オブジェクト。 |
 | `default` | このマージポリシーが指定したスキーマのデフォルトであるかどうかを示すブール値です。 |
-| `version` | Platformがマージポリシーのバージョンを管理しました。 この読み取り専用の値は、マージポリシーが更新されるたびに増加します。 |
+| `version` | [!DNL Platform] マージポリシーのバージョンを維持しました。 この読み取り専用の値は、マージポリシーが更新されるたびに増加します。 |
 | `updateEpoch` | マージポリシーの最後の更新日。 |
 
 **マージポリシーの例**
@@ -86,7 +86,7 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
 
 ### 識別グラフ {#identity-graph}
 
-[Adobe Experience PlatformIDサービス](../../identity-service/home.md) ：グローバルに、またはExperience Platform上の各組織で使用されるIDグラフを管理します。 マージポリシーの `identityGraph` 属性は、ユーザーの関連IDの決定方法を定義します。
+[Adobe Experience PlatformIDサービス](../../identity-service/home.md) は、グローバルに、およびの各組織で使用されるIDグラフを管理 [!DNL Experience Platform]します。 マージポリシーの `identityGraph` 属性は、ユーザーの関連IDの決定方法を定義します。
 
 **identityGraphオブジェクト**
 
@@ -173,7 +173,7 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
 
 ## アクセス結合ポリシー {#access-merge-policies}
 
-エンドポイントでは、リアルタイム顧客プロファイルAPIを使用して、特定のマージポリシーをIDで表示するか、特定の条件でフィルタリングしたIMS組織のすべてのマージポリシーにアクセスするためのルックアップリクエストを実行できます。 `/config/mergePolicies` また、エンドポイントを使用して、ID別に複数のマージポリシーを取得することもで `/config/mergePolicies/bulk-get` きます。 これらの各呼び出しを実行する手順を、以下の各節で説明します。
+エンドポイントでは [!DNL Real-time Customer Profile]`/config/mergePolicies` APIを使用して、ルックアップリクエストを実行し、特定のマージポリシーをIDで表示したり、特定の条件でフィルタリングしたIMS組織のすべてのマージポリシーにアクセスしたりできます。 また、エンドポイントを使用して、ID別に複数のマージポリシーを取得することもで `/config/mergePolicies/bulk-get` きます。 これらの各呼び出しを実行する手順を、以下の各節で説明します。
 
 ### IDによる単一の結合ポリシーへのアクセス
 
@@ -320,7 +320,7 @@ curl -X POST \
 }
 ```
 
-結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [](#components-of-merge-policies) 結合ポリシーのコンポーネントに関する節を参照してください。
+結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [結合ポリシーのコンポーネントに関する節を参照してください](#components-of-merge-policies) 。
 
 ### 条件別の複数の結合ポリシーのリスト
 
@@ -724,7 +724,7 @@ curl -X DELETE \
 
 ## 次の手順
 
-これで、IMS組織の結合ポリシーを作成および設定する方法がわかり、それらを使用してリアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。 セグメントの定義と操作を開始するには、 [Adobe Experience Platformセグメントサービスのドキュメント](../../segmentation/home.md) を参照してください。
+これで、IMS組織の結合ポリシーを作成および設定する方法がわかり、それらを使用して [!DNL Real-time Customer Profile] データからオーディエンスセグメントを作成できます。 セグメントの定義と操作を開始するには、 [Adobe Experience Platformセグメントサービスのドキュメント](../../segmentation/home.md) を参照してください。
 
 
 
