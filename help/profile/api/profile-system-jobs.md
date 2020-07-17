@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: プロファイルシステムジョブ — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1420'
 ht-degree: 2%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 2%
 
 # プロファイルシステムジョブエンドポイント（削除要求）
 
-Adobe Experience Platformを使用すると、複数のソースからデータを取り込み、個々の顧客に対して堅牢なプロファイルを構築できます。 Platformに取り込まれたデータは、データレークとリアルタイム顧客プロファイルデータストアに保存されます。 不要になった、または誤って追加されたデータを削除するために、プロファイルストアからデータセットまたはバッチを削除する必要が生じる場合があります。 これには、「削除リクエスト」とも呼ばれるプロファイルシステムジョブ（必要に応じて変更、監視または削除も可能）を作成するために、リアルタイムカスタマープロファイルAPIを使用する必要があります。
+Adobe Experience Platformを使用すると、複数のソースからデータを取り込み、個々の顧客に対して堅牢なプロファイルを構築できます。 に取り込ま [!DNL Platform] れたデータは、データストアと共 [!DNL Data Lake] に [!DNL Real-time Customer Profile] データストアに保存されます。 不要になった、または誤って追加されたデータを削除するために、プロファイルストアからデータセットまたはバッチを削除する必要が生じる場合があります。 これには、 [!DNL Real-time Customer Profile] APIを使用して [!DNL Profile][!DNL delete request]「」とも呼ばれるシステムジョブを作成する必要があります。このジョブは、必要に応じて変更、監視または削除することもできます。
 
 >[!NOTE]
->Data Lakeからデータセットやバッチを削除する場合は、 [Catalog Serviceの概要](../../catalog/home.md) （英語）を参照して手順を確認してください。
+>からデータセットまたはバッチを削除する場合 [!DNL Data Lake]は、 [Catalog Serviceの概要](../../catalog/home.md) を参照してください。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、 [リアルタイム顧客プロファイルAPIの一部](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)です。 先に進む前に、 [はじめに](getting-started.md) 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、に含まれてい [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)ます。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
 ## 表示の削除要求
 
@@ -103,10 +103,10 @@ curl -X POST \
 
 ### データセットの削除
 
-データセットを削除するには、データセットIDをPOSTリクエストの本文に含める必要があります。 この操作により、特定のデータセットのALLデータが削除されます。 Experience Platformを使用すると、レコードと時系列の両方のスキーマに基づいてデータセットを削除できます。
+データセットを削除するには、データセットIDをPOSTリクエストの本文に含める必要があります。 この操作により、特定のデータセットのALLデータが削除されます。 [!DNL Experience Platform] レコードと時系列の両方のスキーマに基づいてデータセットを削除できます。
 
 >[!CAUTION]
-> Experience PlatformUIを使用してプロファイル対応のデータセットを削除しようとすると、そのデータセットは取り込み禁止になりますが、APIを使用して削除リクエストを作成するまで削除されません。 詳しくは、このドキュメントの [付録](#appendix) を参照してください。
+> UIを使用して [!DNL Profile][!DNL Experience Platform] 有効なデータセットを削除しようとすると、データセットの取り込みは無効になりますが、削除は、APIを使用して削除リクエストを作成するまで行われません。 詳しくは、このドキュメントの [付録](#appendix) を参照してください。
 
 **API形式**
 
@@ -161,7 +161,7 @@ curl -X POST \
 >[!NOTE]
 > レコードのスキーマに基づいてデータセットのバッチを削除できないのは、レコードタイプのデータセットバッチによって以前のレコードが上書きされるので、「元に戻す」や削除を行うことができないためです。 レコードのスキーマに基づいてデータセットに誤ったバッチが及ぼす影響を取り除く唯一の方法は、誤ったレコードを上書きするために、バッチを正しいデータで再取り込みすることです。
 
-レコードと時系列の動作の詳細については、「XDMシステムの概要 [」の「XDMデータ動作](../../xdm/home.md#data-behaviors) 」の節を参照してください。
+レコードと時系列の動作について詳しくは、 [概要の「XDMデータ動作](../../xdm/home.md#data-behaviors) 」の [!DNL XDM System] 節を参照してください。
 
 **API形式**
 
@@ -277,7 +277,7 @@ curl -X POST \
 
 ## 削除要求の削除
 
-Experience Platformを使用すると、以前のリクエストを削除できます。削除ジョブが完了しなかったか、処理段階で停止したなど、様々な理由で役立つ場合があります。 削除要求を削除するには、エンドポイントに対してDELETE要求を実行し、削除する削除要求のIDを要求パスに含め `/system/jobs` ます。
+[!DNL Experience Platform] 以前のリクエストを削除できます。削除ジョブが完了しなかった場合や、処理段階で停止した場合など、様々な理由で役立つ場合があります。 削除要求を削除するには、エンドポイントに対してDELETE要求を実行し、削除する削除要求のIDを要求パスに含め `/system/jobs` ます。
 
 **API形式**
 
@@ -306,19 +306,19 @@ curl -X POST \
 
 ## 次の手順
 
-Experience Platform内のプロファイルストアからデータセットやバッチを削除する手順がわかったので、誤って追加されたデータや組織で不要になったデータを安全に削除できます。 削除のリクエストは元に戻せないので、今は不要であり、将来は不要になると確信しているデータのみを削除するようにしてください。
+データセットやバッチの削除手順が [!DNL Profile Store] 内からわかったので、誤って追加されたデータや組織で不要になったデータを安全に削除でき [!DNL Experience Platform]ます。 削除のリクエストは元に戻せないので、今は不要であり、将来は不要になると確信しているデータのみを削除するようにしてください。
 
 ## 付録 {#appendix}
 
-以下は、プロファイルストアからデータセットを削除する操作の補足情報です。
+次の情報は、からデータセットを削除する操作の補足情報で [!DNL Profile Store]す。
 
-### Experience PlatformUIを使用したデータセットの削除
+### UIを使用したデータセットの削除 [!DNL Experience Platform]
 
-Experience Platformユーザーインターフェイスを使用してプロファイルが有効になっているデータセットを削除すると、「このデータセットをExperience Data Lakeから削除しますか？ 「プロファイルシステムジョブ」 APIを使用して、プロファイルサービスからこのデータセットを削除します。」
+ユーザーインターフェイスを使用して有効になっているデータセットを削除する [!DNL Experience Platform][!DNL Profile][!DNL Experience Data Lake]と、「このデータセットを &#39;p[!DNL rofile systems jobs]&#39; APIを使用して、このデータセットをから削除 [!DNL Profile Service]します。」
 
-UIの「 **削除** 」をクリックすると、データセットの取り込みが無効になりますが、バックエンドのデータセットは自動的に削除されません。 データセットを完全に削除するには、このガイドの手順に従って、削除リクエストを手動で作成し、削除リクエストを [作成する必要があります](#create-a-delete-request)。
+UIの「 **[!UICONTROL 削除]** 」をクリックすると、データセットの取り込みが無効になりますが、バックエンドのデータセットは自動的に削除されません。 データセットを完全に削除するには、このガイドの手順に従って、削除リクエストを手動で作成し、削除リクエストを [作成する必要があります](#create-a-delete-request)。
 
-次の図に、UIを使用してプロファイル対応のデータセットを削除しようとした場合の警告を示します。
+次の図に、UIを使用して [!DNL Profile]有効なデータセットを削除しようとした場合の警告を示します。
 
 ![](../images/delete-profile-dataset.png)
 
