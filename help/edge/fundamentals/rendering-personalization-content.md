@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK：パーソナライズされたコ
 description: Experience Platform Web SDK でパーソナライズされたコンテンツをレンダリングする方法について説明します
 seo-description: Experience Platform Web SDK でパーソナライズされたコンテンツをレンダリングする方法について説明します
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 24%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 24%
 
 # パーソナライゼーションオプションの概要
 
-Adobe Experience PlatformWeb SDKは、Adobe Targetを含むアドビのパーソナライゼーションソリューションのクエリをサポートしています。 パーソナライゼーションには2つのモードがあります。 自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 SDKは、ちらつきを [管理する機能も提供します](../../edge/solution-specific/target/flicker-management.md)。
+Adobe Experience Platformでは、Adobe Targetを含むアドビのパーソナライゼーションソリューションのクエリをサポートしています。 [!DNL Web SDK] パーソナライゼーションには2つのモードがあります。 自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 SDKは、ちらつきを [管理する機能も提供します](../../edge/solution-specific/target/flicker-management.md)。
 
 ## コンテンツを自動的にレンダリング
 
@@ -92,7 +92,7 @@ alloy("sendEvent",{
 
 >[!TIP]
 >
-> Targetスコープをサーバー上でmBoxにすると、使用されるのは、個別のリクエストではなく、すべてのスコープだけです。 グローバルmboxは常に送信されます。
+> 使用するスコープがサーバー上のmBoxになると、個々の [!DNL Target] スコープではなく、すべてのリクエストが一度に作成されます。 グローバルmboxは常に送信されます。
 
 ### 自動コンテンツの取得
 
