@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: プレビューと予測エンドポイントガイド
+title: エンドポイントのプレビューと予測
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '750'
 ht-degree: 2%
 
 ---
 
 
-# プレビューと予測エンドポイントガイド
+# エンドポイントのプレビューと予測
 
 セグメント定義を作成する際に、の見積もりツールとプレビューツールを使用して、表示の概要レベルの情報 [!DNL Adobe Experience Platform] を得ることで、期待されるオーディエンスを確実に分離できます。 **プレビューには** 、セグメント定義の条件を満たすプロファイルのページ分割リストが用意されており、期待どおりの結果と比較できます。 **予測は** 、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報を提供します。
 
