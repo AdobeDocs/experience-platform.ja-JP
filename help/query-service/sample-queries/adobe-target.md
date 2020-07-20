@@ -4,24 +4,24 @@ solution: Experience Platform
 title: サンプルクエリ
 topic: queries
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '227'
 ht-degree: 3%
 
 ---
 
 
-# Adobeターゲットデータのサンプルクエリ
+# Adobe Targetデータのサンプルクエリ
 
-Adobeターゲットからのデータは、エクスペリエンスイベントXDMスキーマに変換され、データセットとしてExperience Platformに取り込まれます。 このデータを使用するクエリサービスの使用例は多数あり、以下のサンプルクエリはAdobeターゲットデータセットと連携する必要があります。
+Adobe TargetのデータはエクスペリエンスイベントXDMスキーマに変換され、データセット [!DNL Experience Platform] としてユーザー用に取り込まれます。 このデータの使用例は多くあ [!DNL Query Service] り、次のサンプルクエリはAdobe Targetデータセットと連携する必要があります。
 
 >[!NOTE]
 >次の例では、SQLを編集し、評価したいデータセット、変数、または時間枠に基づいて、クエリに期待されるパラメーターを設定する必要があります。 SQLで表示される任意の場所にパラメーター `{ }` を指定します。
 
-## プラットフォーム上のターゲットデータソースの標準データセット名：
+## Targetデータソースの標準データセット名 [!DNL Platform]:
 
-Adobeターゲットエクスペリエンスイベント（わかりやすい名前） <br>`adobe_target_experience_events` (クエリで使用する名前)
+Adobe Targetエクスペリエンスイベント（わかりやすい名前） <br>`adobe_target_experience_events` (クエリで使用する名前)
 
 ## 高レベルの部分XDMフィールドマッピング
 
