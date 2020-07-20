@@ -4,34 +4,34 @@ seo-title: Adobe Experience PlatformWeb SDKを使用したAdobe Audience Manager
 description: Experience PlatformWeb SDKを使用してAdobe Audience Managerにデータを送信する方法を学びます
 seo-description: Experience PlatformWeb SDKを使用してAdobe Audience Managerにデータを送信する方法を学びます
 translation-type: tm+mt
-source-git-commit: 6a83ab1c6405f45700f4f8899139010d50010b0c
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
 
 
-# Experience PlatformエッジネットワークのAudience Manager
+# [!DNL Audience Manager] の [!DNL Experience Platform Edge Network]
 
-Adobe Experience PlatformWeb SDKは、Adobe Audience Managerと統合されており、Audience Manager、CookieとURLの宛先、IDの同期からのデータの送受信をサポートしています。
+このAdobe Experience Platform [!DNL Web SDK] はAdobe Audience Managerと統合されており、CookieとURLの宛先 [!DNL Audience Manager]、IDの同期からのデータの送受信をサポートしています。
 
-## Audience Managerの有効化
+## 有効にする [!DNL Audience Manager]
 
-Audience Managerを有効にするには、次の手順を実行する必要があります。
+有効にす [!DNL Audience Manager] るには、次の操作を行う必要があります。
 
-- エ [ッジ設定でAudience Managerを有効にします](../../fundamentals/edge-configuration.md)。
+- [!DNL Audience Manager] エッジ設定 [でを有効にします](../../fundamentals/edge-configuration.md)。
 - CookieとURLの宛先を有効または無効にします。
 - 外部パートナー同期のID同期コンテナを指定します（オプション）
 
 ## IDの同期
 
-Adobe Experience PlatformWeb SDKは、SyncIdentity [](../../fundamentals/identity.md) コマンドを使用して顧客IDとその認証状態を宣言する機能をサポートしています。
+Adobe Experience Platform [!DNL Web SDK] では、SyncIdentity [](../../fundamentals/identity.md) コマンドを使用して顧客IDとその認証状態を宣言する機能をサポートしています。
 
-syncIdentityメソッドは、 [IDサービス名前空間](../../../identity/../identity-service/namespaces.md) (ID)を使用して、IDが関連付けられるコンテキストを示します。 Audience Managerのお客様は、IDタイプを使用するすべての既存のデータソースを次のように指定します。 デバイス間では、対応するID名前空間が自動的に設定されます。 Audience Managerデータソースに対応するID名前空間を探すには、Adobe Experience Platformにログインし、「ID」セクションに移動します。
+syncIdentityメソッドは、 [IDサービス名前空間](../../../identity/../identity-service/namespaces.md) (ID)を使用して、IDが関連付けられるコンテキストを示します。 顧客として、 [!DNL Audience Manager] IDタイプを使用するすべての既存のデータソース： デバイス間では、自動的に対応する [!DNL Identity Namespace]。 対応するのが見つか [!DNL Identity Namespace] るに [!DNL Audience Manager Data Source]は、Adobe Experience Platformにログインし、その [!DNL Identities] セクションに移動します。
 
 ![名前空間UIの表示](../../../assets/edge_configuration_identity.png)
 
-Audience Managerデータソースを名前で検索できます。 syncIdentityメソッドは、名前空間を示すためにID記号を使用します。
+ここでは、「名前」で [!DNL Audience Manager] データソースを検索できます。 syncIdentityメソッドは、名前空間を示すためにID記号を使用します。
 
-IDタイプを使用する新しいAudience Managerデータソース： デバイス間で、対応するID名前空間が生成されます。 データソースIDタイプのCookieとデバイス広告IDは、現在サポートされていません。 また、Adobe Experience Platformで作成したID名前空間は、対応するAudience Managerデータソースを生成しますが、syncIdentityメソッドは名前空間IDシンボルのみをサポートすることに注意してください。
+IDタイプを使用する新しい [!DNL Audience Manager] データソース： デバイス間で、対応するID名前空間が生成されます。 データソースIDタイプのCookieとデバイス広告IDは、現在サポートされていません。 また、Adobe Experience Platformで作成したID名前空間は、対応する [!DNL Audience Manager] データソースを生成しますが、syncIdentityメソッドは名前空間IDシンボルのみをサポートすることに注意してください。
