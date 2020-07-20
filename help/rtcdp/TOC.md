@@ -1,20 +1,20 @@
 ---
 product: adobe experience platform
 audience: user
-user-guide-title: リアルタイム顧客データプラットフォームヘルプ
+user-guide-title: リアルタイム顧客データPlatformヘルプ
 translation-type: tm+mt
-source-git-commit: fc8bdc6a46e0b64f29d89a36b0810f7312200616
+source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 38%
+source-wordcount: '440'
+ht-degree: 36%
 
 ---
 
 
 # リアルタイム顧客データプラットフォームのヘルプ {#rtcdp}
 
-* [製品概要](overview.md)
-* リアルタイムの顧客データプラットフォーム {#intro}
+* [リアルタイムCDPの概要](overview.md)
+* はじめに {#intro}
    * [はじめに](get-started.md)
    * [指標の概要](home-page-dashboards.md)
 * 管理 {#admin}
@@ -35,7 +35,7 @@ ht-degree: 38%
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
       * 広告の宛先 {#advertising-destinations}
          * [広告の宛先の概要](destinations/advertising-destinations.md)
-         * [Adobe Advertising Cloud拡張機能](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
+         * [AdobeAdvertising Cloud拡張機能](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
          * [Awin Advertising Conversionタグ拡張](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Awin Advertising Mastertag拡張](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray拡張](/help/rtcdp/destinations/beemray-extension.md)
@@ -52,8 +52,8 @@ ht-degree: 38%
          * [LinkedIn Insightタグの拡張](/help/rtcdp/destinations/linkedin-extension.md)
          * [Pinterestコンバージョントラッキングの拡張](destinations/pinterest-extension.md)
          * [TwitterユニバーサルWebサイトタグ拡張](destinations/twitter-uwt-extension.md)
-      * Analyticsの宛先 {#analytics-destinations}
-         * [Analyticsの宛先の概要](destinations/analytics-destinations.md)
+      * Analyticsの目的地 {#analytics-destinations}
+         * [Analyticsの目的地概要](destinations/analytics-destinations.md)
          * [Adform Webサイトトラッキング拡張機能](/help/rtcdp/destinations/adform-extension.md)
          * [Adobe Analytics 拡張機能](/help/rtcdp/destinations/adobe-analytics-extension.md)
          * [Adobe Media Analytics for Audio and Video 拡張機能](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
@@ -63,12 +63,12 @@ ht-degree: 38%
          * [Demandbase拡張](/help/rtcdp/destinations/demandbase-extension.md)
          * [Dialogtechの拡張機能](/help/rtcdp/destinations/dialogtech-extension.md)
          * [Googleグローバルサイトタグ分析の拡張](/help/rtcdp/destinations/gtag-analytics-extension.md)
-         * [Google Universal Analyticsの拡張機能](/help/rtcdp/destinations/google-universal-analytics-extension.md)
-         * [JW Player Analytics（ベータ）拡張機能](/help/rtcdp/destinations/jw-player-analytics-extension.md)
+         * [GoogleユニバーサルAnalytics拡張](/help/rtcdp/destinations/google-universal-analytics-extension.md)
+         * [JWプレイヤーAnalytics（ベータ）拡張機能](/help/rtcdp/destinations/jw-player-analytics-extension.md)
          * [Nielsen BSDK拡張](destinations/nielsen-bsdk-extension.md)
          * [Nielsen IMAハンドラー拡張](destinations/nielsen-ima-extension.md)
          * [Nielsen VideoJSプレイヤーハンドラーの拡張](destinations/nielsen-videojs-extension.md)
-         * [Parse.ly Analytics拡張機能](destinations/parsely-extension.md)
+         * [Parse.lyAnalytics拡張子](destinations/parsely-extension.md)
          * [量子指標拡張](destinations/quantum-metric-extension.md)
          * [SessionCam拡張](destinations/sessioncam-extension.md)
          * [TMMData拡張](destinations/tmmdata-extension.md)
@@ -80,13 +80,13 @@ ht-degree: 38%
          * [Amazon S3 の宛先](destinations/amazon-s3-destination.md)
          * [Azureイベントハブの宛先](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [SFTP の宛先](destinations/sftp-destination.md)
-      * データ管理プラットフォームの宛先 {#dmp-destinations}
-         * [データ管理プラットフォームの宛先の概要](destinations/dmp-destinations.md)
-         * [オーディエンスマネージャDIL拡張](/help/rtcdp/destinations/aam-dil-extension.md)
+      * データ管理Platform先 {#dmp-destinations}
+         * [データ管理Platform先の概要](destinations/dmp-destinations.md)
+         * [Audience ManagerDIL拡張](/help/rtcdp/destinations/aam-dil-extension.md)
       * 電子メールマーケティングの宛先 {#email-destinations}
          * [電子メールマーケティングの宛先の概要](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
-         * [Bizbile Analytics拡張機能](/help/rtcdp/destinations/bizible-extension.md)
+         * [BizibleAnalytics拡張機能](/help/rtcdp/destinations/bizible-extension.md)
          * [Marketo拡張機能](destinations/marketo-extension.md)
          * [Marketo Munchkin 拡張機能](destinations/marketo-munchkin-extension.md)
          * [Oracle Eloqua](destinations/oracle-eloqua-destination.md)
@@ -94,7 +94,7 @@ ht-degree: 38%
          * [PebblePost拡張子](destinations/pebblepost-extension.md)
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch extensions{#launch-extensions}
-         * [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+         * [Experience Platform Launch拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
       * 個人設定の宛先 {#personalization-destinations}
          * [パーソナライゼーションの宛先の概要](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target 拡張機能](/help/rtcdp/destinations/adobe-target-extension.md)
@@ -131,7 +131,7 @@ ht-degree: 38%
 * プライバシーとデータガバナンス {#privacy}
    * [プライバシーの概要](privacy/privacy-overview.md)
    * [データガバナンスの概要](privacy/data-governance-overview.md)
-* リアルタイム顧客プロファイル {#profile}
+* プロファイル {#profile}
    * [プロファイルの概要](profile/profile-overview.md)
    * [ID と ID 名前空間](profile/identities-overview.md)
    * [結合ポリシー](profile/merge-policies.md)
@@ -142,5 +142,5 @@ ht-degree: 38%
 * ソース {#sources}
    * [ソースの概要](sources/sources-overview.md)
    * [Adobe Launch での Web サイトタグの実装](sources/launch.md)
-* [リリースノート](https://www.adobe.com/go/platform-release-notes-en)
-* [用語集](https://www.adobe.com/go/platform-glossary-en)
+* [Experience Platformリリースノート](https://www.adobe.com/go/platform-release-notes-en)
+* [Experience Platform用語集](https://www.adobe.com/go/platform-glossary-en)
