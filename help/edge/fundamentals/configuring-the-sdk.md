@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK の設定
 description: Experience Platform Web SDK の設定方法について説明します
 seo-description: Experience Platform Web SDK の設定方法について説明します
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 87%
+source-wordcount: '737'
+ht-degree: 86%
 
 ---
 
@@ -74,7 +74,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | 文字列 | ○ | なし |
 
-担当の Experience Cloud 組織 ID です。1 つのページ内で複数のインスタンスを設定する場合は、インスタンスごとに異なる `orgId` を設定する必要があります。
+Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で複数のインスタンスを設定する場合は、インスタンスごとに異なる `orgId` を設定する必要があります。
 
 ## データの収集
 
@@ -134,7 +134,7 @@ alloy("configure", {
 | -------- | ------------ | ----------------- |
 | Boolean | × | `true` |
 
-Enables Audience Manager [!UICONTROL cookie destinations], which allows the setting of cookies based on segment qualification.
+[!DNL Audience Manager] Cookieの宛先を有効にします 。これにより、セグメントクオリフィケーションに基づいたCookieの設定が可能になります。
 
 ### `urlDestinationsEnabled`
 
@@ -142,7 +142,7 @@ Enables Audience Manager [!UICONTROL cookie destinations], which allows the sett
 | -------- | ------------ | ----------------- |
 | Boolean | × | `true` |
 
-Enables Audience Manager [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
+Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
 
 ## ID オプション
 
