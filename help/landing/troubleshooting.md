@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformに関するFAQとトラブルシューティングガイド
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 2e5668a8b1d5fb831188fbd4e453b9f4aa7474df
+source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
 workflow-type: tm+mt
-source-wordcount: '1959'
+source-wordcount: '1962'
 ht-degree: 3%
 
 ---
@@ -145,7 +145,7 @@ UIとAPIのどちらを使用しているかに応じて、次の必要システ
 | 400 | 不正な要求 | 要求が不適切に構築され、キー情報が欠落しているか、または正しくない構文が含まれていました。 |
 | 401 | 認証に失敗しました | 要求は認証チェックに合格しませんでした。 アクセストークンが見つからないか、無効です。 詳しくは、 [OAuthトークンエラーの節](#oauth-token-is-missing) 、以下を参照してください。 |
 | 403 | 禁止 | リソースが見つかりましたが、表示に必要な資格情報がありません。 |
-| 404 | Not found | 要求されたリソースがサーバーで見つかりませんでした。 リソースが削除されたか、要求されたパスが正しく入力されていない可能性があります。 |
+| 404 | 見つかりません | 要求されたリソースがサーバーで見つかりませんでした。 リソースが削除されたか、要求されたパスが正しく入力されていない可能性があります。 |
 | 500 | 内部サーバーエラー | これはサーバー側のエラーです。 同時に多数の呼び出しを行う場合、APIの制限に達する可能性があり、結果をフィルターする必要があります。 (詳しくは、 [!DNL Catalog Service] API開発者ガイドのデータ [フィルタリングのサブガイド](../catalog/api/filter-data.md) を参照してください)。 要求を再試行する前に少し待ってください。問題が解決しない場合は、管理者に問い合わせてください。 |
 
 ## 要求ヘッダーエラー {#request-header-errors}
@@ -248,6 +248,6 @@ UIとAPIのどちらを使用しているかに応じて、次の必要システ
 | エクスペリエンスデータモデル(XDM) | [スキーマレジストリAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDMシステムに関するFAQとトラブルシューティングガイド](../xdm/troubleshooting-guide.md) |
 | ID サービス | [IDサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [IDサービストラブルシューティングガイド](../identity-service/troubleshooting-guide.md) |
 | クエリサービス | [クエリサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [クエリサービストラブルシューティングガイド](../query-service/troubleshooting-guide.md) |
-| リアルタイム顧客プロファイル | [リアルタイム顧客プロファイルAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) |  |
+| リアルタイム顧客プロファイル | [リアルタイム顧客プロファイルAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [プロファイルトラブルシューティングガイド](../profile/troubleshooting.md) |
 | サンドボックス | [Sandbox API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [サンドボックストラブルシューティングガイド](../sandboxes/troubleshooting-guide.md) |
 | セグメント化 | [セグメントAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
