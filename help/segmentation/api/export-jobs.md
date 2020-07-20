@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 書き出しジョブエンドポイントガイド
+title: ジョブエンドポイントの書き出し
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3e39333207ef6c94b6d792be33a4605f185ff5ab
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1497'
 ht-degree: 2%
 
 ---
 
 
-# 書き出しジョブエンドポイントガイド
+# ジョブエンドポイントの書き出し
 
 書き出しジョブは、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 Adobe Experience PlatformセグメントAPIの `/export/jobs` エンドポイントを使用すると、プログラムによって、書き出しジョブを取得、作成およびキャンセルできます。
+
+>[!NOTE]
+>
+>このガイドでは、の書き出しジョブの使用について説明し [!DNL Segmentation API]ます。 データの書き出しジョブを管理する方法について詳しくは、プロファイルAPIの書き出しジョブに関するガイドを参照して [!DNL Real-time Customer Profile][ください](../../profile/api/export-jobs.md)
 
 ## はじめに
 
