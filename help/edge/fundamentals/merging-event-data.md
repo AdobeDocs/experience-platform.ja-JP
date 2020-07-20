@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：イベントデータの結合
 description: Experience Platform Web SDK イベントデータの結合方法について説明します
 seo-description: Experience Platform Web SDK イベントデータの結合方法について説明します
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 41%
+source-wordcount: '408'
+ht-degree: 42%
 
 ---
 
@@ -58,7 +58,7 @@ alloy("sendEvent", {
 });
 ```
 
-By passing the same `eventMergeID` value to both event commands in this example, the data in the second event command is augmented to data previously sent on the first event command. A record for each event command is created in the Experience Data Platform, but during reporting the records are joined together using the `eventMergeID` and appear as a single event.
+By passing the same `eventMergeID` value to both event commands in this example, the data in the second event command is augmented to data previously sent on the first event command. A record for each event command is created in the [!DNL Experience Data Platform], but during reporting the records are joined together using the `eventMergeID` and appear as a single event.
 
 If you are sending data about a particular event to third-party providers, you can include the same `eventMergeID` with that data as well. Later, if you choose to import the third-party data into the Adobe Experience Platform, `eventMergeID` will be used to merge together all data that was collected as a result of the discrete event that occurred on your webpage.
 
