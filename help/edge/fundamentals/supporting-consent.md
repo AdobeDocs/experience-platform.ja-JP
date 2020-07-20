@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：同意設定のサポート
 description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 seo-description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 translation-type: tm+mt
-source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 99%
+source-wordcount: '516'
+ht-degree: 96%
 
 ---
 
@@ -79,7 +79,7 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->現在、SDK は `general` 目的のみをサポートしています。アドビでは、様々な機能や製品に対応する、さらに堅牢な目的やカテゴリのセットを構築する予定ですが、現在の実装アプリーチでは、すべてをオプトインするか、すべてをオプトインしないかのいずれかです。これは、Adobe Experience Platform Web SDK にのみ当てはまり、他の Adobe JavaScript ライブラリには当てはまりません。
+>現在、SDK は `general` 目的のみをサポートしています。アドビでは、様々な機能や製品に対応する、さらに堅牢な目的やカテゴリのセットを構築する予定ですが、現在の実装アプリーチでは、すべてをオプトインするか、すべてをオプトインしないかのいずれかです。This only applies to the Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
 
 ## 同意設定の保持
 
