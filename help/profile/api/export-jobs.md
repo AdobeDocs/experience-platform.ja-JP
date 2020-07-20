@@ -1,0 +1,504 @@
+---
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+solution: Adobe Experience Platform
+title: ジョブの書き出し — リアルタイム顧客プロファイルAPI
+topic: guide
+translation-type: tm+mt
+source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+workflow-type: tm+mt
+source-wordcount: '1494'
+ht-degree: 2%
+
+---
+
+
+# ジョブエンドポイントの書き出し
+
+[!DNL Real-time Customer Profile] 属性データと行動データの両方を含む複数のソースからのデータを統合することで、個々の顧客の単一の表示を構築できます。 その後、内で利用できるデータ [!DNL Profile] をデータセットにエクスポートして、さらに処理することができます。 例えば、データのオーディエンスセグメントをアクティベーション用に書き出したり、プロファイル属性をレポート用に書き出したりでき [!DNL Profile] ます。
+
+このドキュメントでは、 [プロファイルAPIを使用して書き出しジョブを作成し管理する手順を順を追って説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
+
+>[!NOTE]
+>
+>このガイドでは、の書き出しジョブの使用について説明し [!DNL Profile API]ます。 Adobe Experience Platformセグメントサービス用の書き出しジョブを管理する方法について詳しくは、Segmentation APIの [書き出しジョブに関するガイドを参照してください](../../profile/api/export-jobs.md)。
+
+書き出しジョブの作成に加えて、 [!DNL Profile] エンドポイント(「 `/entities`[!DNL Profile Access]」とも呼ばれます)を使用してデータにアクセスすることもできます。 詳しくは、 [エンティティエンドポイントガイド](./entities.md) を参照してください。 UIを使用して [!DNL Profile] データにアクセスする手順については、 [ユーザガイドを参照してください](../ui/user-guide.md)。
+
+## はじめに
+
+このガイドで使用されるAPIエンドポイントは、 [!DNL Real-time Customer Profile] APIの一部です。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+
+## 書き出しジョブの作成
+
+データのエクスポート [!DNL Profile] を行うには、まずデータのエクスポート先となるデータセットを作成し、新しいエクスポートジョブを開始する必要があります。 これらの手順はどちらも、Experience PlatformAPIを使用して行うことができます。前者はCatalog Service APIを使用し、後者はReal-time Customer Commentation APIを使用します。 各手順の詳細な手順については、以降の節で説明します。
+
+### ターゲットデータセットの作成
+
+データを書き出す場合は、 [!DNL Profile] ターゲットデータセットを最初に作成する必要があります。 データセットを正しく設定して、エクスポートが正常に完了するようにすることが重要です。
+
+重要な考慮事項の1つは、データセットのベースとなるスキーマです(以下のAPIサンプルリクエスト`schemaRef.id` を参照)。 プロファイルデータをエクスポートするには、データセットが [!DNL XDM Individual Profile] 和集合スキーマ(`https://ns.adobe.com/xdm/context/profile__union`)に基づいている必要があります。 和集合スキーマは、同じクラスを共有するスキーマのフィールドを集計する、システム生成の読み取り専用スキーマです。 この場合、それが [!DNL XDM Individual Profile] クラスです。 和集合表示のスキーマについて詳しくは、『スキーマ構成の基本』ガイドの [和集合の節を参照してください](../../xdm/schema/composition.md#union)。
+
+このチュートリアルで説明する手順は、 [!DNL XDM Individual Profile] APIを使用して [!DNL Catalog] 和集合スキーマを参照するデータセットを作成する方法を示しています。 和集合スキーマを参照するデータセットは、 [!DNL Platform] ユーザーインターフェイスを使用して作成することもできます。 UIの使用手順は、セグメントの書き出しに関する [このUIチュートリアルで説明しています](../../segmentation/tutorials/create-dataset-export-segment.md) 。ここでも説明します。 完了したら、このチュートリアルに戻って、新しい書き出しジョブを [開始する手順に進むことができます](#initiate)。
+
+互換性のあるデータセットが既に存在し、そのIDがわかっている場合は、新しい書き出しジョブを [開始するための手順に直接進むことができます](#initiate)。
+
+**API形式**
+
+```http
+POST /dataSets
+```
+
+**リクエスト**
+
+次のリクエストは、ペイロードに設定パラメーターを提供する新しいデータセットを作成します。
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/foundation/catalog/dataSets \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "name": "Profile Data Export",
+        "schemaRef": {
+          "id": "https://ns.adobe.com/xdm/context/profile__union",
+          "contentType": "application/vnd.adobe.xed+json;version=1"
+        },
+        "fileDescription": {
+          "persisted": true,
+          "containerFormat": "parquet",
+          "format": "parquet"
+        }
+      }'
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `name` | データセットを説明する名前。 |
+| `schemaRef.id` | データセットが関連付けられる和集合表示(スキーマ)のID。 |
+| `fileDescription.persisted` | に設定した場合、和集合セットが表示内で保持され `true`るようにするBoolean値です。 |
+
+**応答**
+
+正常に完了すると、新たに作成されたデータセットの読み取り専用、システム生成、一意のIDを含む配列が返されます。 プロファイルデータを正常にエクスポートするには、適切に設定されたデータセットIDが必要です。
+
+```json
+[
+  "@/datasets/5b020a27e7040801dedba61b"
+] 
+```
+
+### 書き出しジョブの開始 {#initiate}
+
+和集合持続性データセットを取得したら、リアルタイム顧客プロファイルAPIのエンドポイントにPOSTリクエストを送信し、リクエストの本文でエクスポートするデータの詳細を提供することで、プロファイルデータをデータセットに永続化するエクスポートジョブを作成できます。 `/export/jobs`
+
+**API形式**
+
+```http
+POST /export/jobs
+```
+
+**リクエスト**
+
+次のリクエストは、ペイロードに設定パラメーターを提供する、新しい書き出しジョブを作成します。
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/export/jobs \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "fields": "identities.id,personalEmail.address",
+    "mergePolicy": {
+      "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
+      "version": 1
+    },
+    "additionalFields" : {
+      "eventList": {
+        "fields": "environment.browserDetails.name,environment.browserDetails.version",
+        "filter": {
+          "fromIngestTimestamp": "2018-10-25T13:22:04-07:00"
+        }
+      }
+    }
+    "destination": {
+      "datasetId": "5b020a27e7040801dedba61b",
+      "segmentPerBatch": false
+    },
+    "schema": {
+      "name": "_xdm.context.profile"
+    }
+  }' 
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `fields` | *（オプション）* 、エクスポートに含めるデータフィールドを、このパラメーターで指定されたデータフィールドのみに制限します。 この値を省略すると、書き出されたデータにすべてのフィールドが含まれます。 |
+| `mergePolicy` | *（オプション）* 、エクスポートされたデータを管理するマージポリシーを指定します。 複数のセグメントを書き出す場合は、このパラメーターを含めます。 |
+| `mergePolicy.id` | マージポリシーのID。 |
+| `mergePolicy.version` | 使用するマージポリシーの特定のバージョンです。 この値を省略すると、デフォルトで最新バージョンが使用されます。 |
+| `additionalFields.eventList` | *（オプション）* 次の設定を1つ以上指定して、子オブジェクトまたは関連付けられたオブジェクト用に書き出す時系列イベントフィールドを制御します。<ul><li>`eventList.fields`: 書き出すフィールドを制御します。</li><li>`eventList.filter`: 関連するオブジェクトから含まれる結果を制限する基準を指定します。 エクスポートに必要な最小値（通常は日付）。</li><li>`eventList.filter.fromIngestTimestamp`: 指定されたタイムスタンプの後に取り込まれたものへの時系列イベントのフィルター。 これは、イベント時間そのものではなく、イベントの取り込み時間です。</li></ul> |
+| `destination` | **（必須）** 書き出すデータの保存先情報：<ul><li>`destination.datasetId`: **（必須）** 、データをエクスポートするデータセットのID。</li><li>`destination.segmentPerBatch`: *（オプション）* Boolean値。指定しなかった場合のデフォルト値は `false`です。 値を指定すると、すべてのセグメントIDが1つのバッチIDに `false` エクスポートされます。 値として、1つのセグメントIDを1つのバッチIDに `true` エクスポートします。 この値を設定すると、バッチエクスポートのパフォーマンスに影響を与える `true` 場合があります。</li></ul> |
+| `schema.name` | **（必須）** 、データをエクスポートするデータセットに関連付けられているスキーマの名前。 |
+
+>[!NOTE] プロファイルデータのみをエクスポートし、時系列関連のデータを含めない場合は、「additionalFields」オブジェクトをリクエストから削除します。
+
+**応答**
+
+成功した場合は、リクエストで指定されたプロファイルデータが入力されたデータセットが返されます。
+
+```json
+{
+    "profileInstanceId": "ups",
+    "jobType": "BATCH",
+    "id": 24115,
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "mergePolicy": {
+        "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+        "version": 1
+    },
+    "status": "NEW",
+    "requestId": "IwkVcD4RupdSmX376OBVORvcvTdA4ypN",
+    "computeGatewayJobId": {},
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 1559674261657
+        }
+    },
+    "destination": {
+      "dataSetId" : "5cf6bcf79ecc7c14530fe436",
+      "segmentPerBatch": false,
+      "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
+    },
+    "updateTime": 1559674261868,
+    "imsOrgId": "{IMS_ORG}",
+    "creationTime": 1559674261657
+}
+```
+
+## すべての書き出しジョブのリスト
+
+エンドポイントに対してGET要求を実行すると、特定のIMS組織のすべての書き出しジョブのリストを返すことができ `export/jobs` ます。 このリクエストでは、以下に示すように、クエリパラメーター `limit` と `offset`もサポートされます。
+
+**API形式**
+
+```http
+GET /export/jobs
+GET /export/jobs?{QUERY_PARAMETERS}
+```
+
+| パラメーター | 説明 |
+| -------- | ----------- |
+| `start` | リクエストの作成時間に従って、返される結果のページをオフセットします。 例: `start=4` |
+| `limit` | 返す結果の数を制限する。 例: `limit=10` |
+| `page` | リクエストの作成時刻に従って、特定のページの結果を返します。 例: `page=2` |
+| `sort` | 特定のフィールドによる結果の昇順( **`asc`** )または降順( **`desc`** )で並べ替えます。 結果の複数ページを返す場合、並べ替えパラメーターは機能しません。 例: `sort=updateTime:asc` |
+
+**リクエスト**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/export/jobs/ \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' 
+```
+
+**応答**
+
+応答には、IMS組織によって作成された書き出しジョブを含む `records` オブジェクトが含まれます。
+
+```json
+{
+  "records": [
+    {
+      "profileInstanceId": "ups",
+      "jobType": "BATCH",
+      "id": 726,
+      "schema": {
+          "name": "_xdm.context.profile"
+      },
+      "mergePolicy": {
+          "id": "timestampOrdered-none-mp",
+          "version": 1
+      },
+      "status": "SUCCEEDED",
+      "requestId": "d995479c-8a08-4240-903b-af469c67be1f",
+      "computeGatewayJobId": {
+          "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94",
+          "pushJob": "feaeca05-d137-4605-aa4e-21d19d801fc6"
+      },
+      "metrics": {
+          "totalTime": {
+              "startTimeInMs": 1538615973895,
+              "endTimeInMs": 1538616233239,
+              "totalTimeInMs": 259344
+          },
+          "profileExportTime": {
+              "startTimeInMs": 1538616067445,
+              "endTimeInMs": 1538616139576,
+              "totalTimeInMs": 72131
+          },
+          "aCPDatasetWriteTime": {
+              "startTimeInMs": 1538616195172,
+              "endTimeInMs": 1538616195715,
+              "totalTimeInMs": 543
+          }
+      },
+      "destination": {
+          "datasetId": "5b7c86968f7b6501e21ba9df",
+          "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
+      },
+      "updateTime": 1538616233239,
+      "imsOrgId": "{IMS_ORG}",
+      "creationTime": 1538615973895
+    },
+    {
+      "profileInstanceId": "test_xdm_latest_profile_20_e2e_1538573005395",
+      "errors": [
+        {
+          "code": "0090000009",
+          "msg": "Error writing profiles to output path 'adl://va7devprofilesnapshot.azuredatalakestore.net/snapshot/722'",
+          "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger" 
+        },
+        {
+          "code": "unknown",
+          "msg": "Job aborted.",
+          "callStack": "org.apache.spark.SparkException: Job aborted."
+        }
+      ],
+      "jobType": "BATCH",
+      "filter": {
+        "segments": [
+            {
+                "segmentId": "7a93d2ff-a220-4bae-9a4e-5f3c35032be3"
+            }
+        ]
+      },
+      "id": 722,
+      "schema": {
+          "name": "_xdm.context.profile"
+      },
+      "mergePolicy": {
+          "id": "7972e3d6-96ea-4ece-9627-cbfd62709c5d",
+          "version": 1
+      },
+      "status": "FAILED",
+      "requestId": "KbOAsV7HXmdg262lc4yZZhoml27UWXPZ",
+      "computeGatewayJobId": {
+          "exportJob": "15971e0f-317c-4390-9038-1a0498eb356f"
+      },
+      "metrics": {
+          "totalTime": {
+              "startTimeInMs": 1538573416687,
+              "endTimeInMs": 1538573922551,
+              "totalTimeInMs": 505864
+          },
+          "profileExportTime": {
+              "startTimeInMs": 1538573872211,
+              "endTimeInMs": 1538573918809,
+              "totalTimeInMs": 46598
+          }
+      },
+      "destination": {
+          "datasetId": "5bb4c46757920712f924a3eb",
+          "batchId": ""
+      },
+      "updateTime": 1538573922551,
+      "imsOrgId": "{IMS_ORG}",
+      "creationTime": 1538573416687
+    }
+  ],
+  "page": {
+      "sortField": "createdTime",
+      "sort": "desc",
+      "pageOffset": "1538573416687_722",
+      "pageSize": 2
+  },
+  "link": {
+      "next": "/export/jobs/?limit=2&offset=1538573416687_722"
+  }
+}
+```
+
+## 書き出しの進行状況の監視
+
+特定の書き出しジョブの詳細を表示したり、処理中にそのステータスを監視したりするには、 `/export/jobs` エンドポイントにGETリクエストを行い、書き出しジョブ `id` のパスを含めます。 エクスポートジョブは、 `status` フィールドが値「SUCCEEDEDED」を返すと完了します。
+
+**API形式**
+
+```http
+GET /export/jobs/{EXPORT_JOB_ID}
+```
+
+| パラメーター | 説明 |
+| -------- | ----------- |
+| `{EXPORT_JOB_ID}` | アクセス `id` する書き出しジョブの名前。 |
+
+**リクエスト**
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/export/jobs/24115 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**応答**
+
+```json
+{
+    "profileInstanceId": "ups",
+    "jobType": "BATCH",
+    "id": 24115,
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "mergePolicy": {
+        "id": "0bf16e61-90e9-4204-b8fa-ad250360957b",
+        "version": 1
+    },
+    "status": "SUCCEEDED",
+    "requestId": "YwMt1H8QbVlGT2pzyxgwFHTwzpMbHrTq",
+    "computeGatewayJobId": {
+      "exportJob": "305a2e5c-2cf3-4746-9b3d-3c5af0437754",
+      "pushJob": "963f275e-91a3-4fa1-8417-d2ca00b16a8a"
+    },
+    "metrics": {
+      "totalTime": {
+        "startTimeInMs": 1547053539564,
+        "endTimeInMs": 1547054743929,
+        "totalTimeInMs": 1204365
+      },
+      "profileExportTime": {
+        "startTimeInMs": 1547053667591,
+        "endTimeInMs": 1547053778195,
+        "totalTimeInMs": 110604
+      },
+      "aCPDatasetWriteTime": {
+        "startTimeInMs": 1547054660416,
+        "endTimeInMs": 1547054698918,
+        "totalTimeInMs": 38502
+      }
+    },
+    "destination": {
+      "dataSetId" : "5cf6bcf79ecc7c14530fe436",
+      "segmentPerBatch": false,
+      "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
+    },
+    "updateTime": 1559674261868,
+    "imsOrgId": "{IMS_ORG}",
+    "creationTime": 1559674261657
+}
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `batchId` | プロファイルデータを読み取る際に参照用に使用される、成功したエクスポートから作成されたバッチの識別子。 |
+
+## 書き出しジョブのキャンセル
+
+Experience Platformを使用すると、既存の書き出しジョブをキャンセルできます。これは、書き出しジョブが完了しなかったか、処理段階で停止した場合など、様々な理由で役立ちます。 書き出しジョブをキャンセルするには、エンドポイントに対してDELETE要求を実行し、 `/export/jobs` キャンセルする書き出しジョブ `id` を要求パスに含めます。
+
+**API形式**
+
+```http
+DELETE /export/jobs/{EXPORT_JOB_ID}
+```
+
+| パラメーター | 説明 |
+| -------- | ----------- |
+| `{EXPORT_JOB_ID}` | アクセス `id` する書き出しジョブの名前。 |
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/export/jobs/726 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**応答**
+
+削除要求が成功すると、HTTPステータス204（コンテンツなし）と空の応答本文が返され、キャンセル操作が成功したことを示します。
+
+## 次の手順
+
+エクスポートが正常に完了すると、Experience Platformのデータレーク内でデータを使用できます。 その後、 [データアクセスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) (Data Access API)を使用して `batchId` 、エクスポートに関連付けられたを使用してデータにアクセスできます。 エクスポートのサイズに応じて、データはチャンクになり、バッチは複数のファイルで構成される場合があります。
+
+Data Access APIを使用してバッチファイルにアクセスし、ダウンロードする手順については、「 [データアクセス](../../data-access/tutorials/dataset-data.md)」チュートリアルに従ってください。
+
+また、Adobe Experience Platformクエリサービスを使用して、正常にエクスポートされたリアルタイム顧客プロファイルデータにアクセスすることもできます。 クエリサービスでは、UIまたはRESTful APIを使用して、データレーク内のデータに対してクエリの書き込み、検証、および実行を行うことができます。
+
+オーディエンスデータのクエリ方法の詳細については、 [クエリサービスのドキュメントを参照してください](../../query-service/home.md)。
+
+## 付録
+
+次の節では、プロファイルAPIの書き出しジョブに関する追加情報を説明します。
+
+### 追加のエクスポートペイロードの例
+
+書き出しジョブの [開始に関する節に示すAPI呼び出しの例では、プロファイル](#initiate) （レコード）とイベント（時系列）の両方のデータを含むジョブを作成します。 この節では、1つのデータタイプまたは他のデータタイプを含むようにエクスポートを制限する追加のリクエストペイロードの例を示します。
+
+次のペイロードは、プロファイルデータのみを含む(イベントを含まない)エクスポートジョブを作成します。
+
+```json
+{
+    "fields": "identities.id,personalEmail.address",
+    "mergePolicy": {
+      "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
+      "version": 1
+    },
+    "destination": {
+      "datasetId": "5b020a27e7040801dedba61b",
+      "segmentPerBatch": false
+    },
+    "schema": {
+      "name": "_xdm.context.profile"
+    }
+  }
+```
+
+イベントデータのみを含む(プロファイル属性を含まない)書き出しジョブを作成するには、ペイロードは次のようになります。
+
+```json
+{
+    "fields": "identityMap",
+    "mergePolicy": {
+      "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
+      "version": 1
+    },
+    "additionalFields" : {
+      "eventList": {
+        "fields": "environment.browserDetails.name,environment.browserDetails.version",
+        "filter": {
+          "fromIngestTimestamp": "2018-10-25T13:22:04-07:00"
+        }
+      }
+    },
+    "destination": {
+      "datasetId": "5b020a27e7040801dedba61b",
+      "segmentPerBatch": false
+    },
+    "schema": {
+      "name": "_xdm.context.profile"
+    }
+  }
+```
+
+### セグメントの書き出し
+
+また、書き出しジョブのエンドポイントを使用して、データの代わりにオーディエンスセグメントを書き出すこともでき [!DNL Profile] ます。 詳しくは、セグメント化APIの [書き出しジョブに関するガイドを参照してください](../../segmentation/api/export-jobs.md) 。
