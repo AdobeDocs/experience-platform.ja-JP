@@ -4,9 +4,9 @@ seo-title: Experience PlatformWeb SDKのエッジ設定
 description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 seo-description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 translation-type: tm+mt
-source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '870'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # エッジの設定
 
-Adobe Experience PlatformWeb SDKの設定は、2か所に分かれています。 SDKの [configureコマンド](configuring-the-sdk.md) は `edgeDomain`、クライアントで処理する必要のある操作（例：）を制御します。 エッジ設定は、SDKのその他すべての設定を処理します。 要求がAdobe Experience Platformエッジネットワークに送信されると、その要求 `edgeConfigId` がサーバ側の設定の参照に使用されます。 これにより、Webサイトでコードを変更することなく、設定を更新できます。
+Adobe Experience Platformの設定 [!DNL Web SDK] は2か所に分かれます。 SDKの [configureコマンド](configuring-the-sdk.md) は `edgeDomain`、クライアントで処理する必要のある操作（例：）を制御します。 エッジ設定は、SDKのその他すべての設定を処理します。 リクエストがAdobe Experience Platformに送信されると [!DNL Edge Network]、そのリクエスト `edgeConfigId` がサーバ側の設定の参照に使用されます。 これにより、Webサイトでコードを変更することなく、設定を更新できます。
 
 ## エッジ設定IDの作成
 
@@ -90,7 +90,7 @@ Adobe Targetを設定するには、クライアントコードを指定する�
 
 ##### [!UICONTROL プロパティトークン]
 
-Targetを使用すると、プロパティを使用して権限を制御できます。 詳しくは、Targetドキュメントの「 [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 」セクションを参照してください。
+[!DNL Target] プロパティを使用して権限を制御できます。 詳しくは、ドキュメントの「 [エンタープライズ権限](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) 」セクションを参照して [!DNL Target] ください。
 
 プロパティトークンは、 [!UICONTROL Adobe Target] / [!UICONTROL 設定] / [!UICONTROL プロパティで確認できます]
 
@@ -108,11 +108,11 @@ Adobe Audience Managerにデータを送信する際に必要なのは、この�
 
 ##### [!UICONTROL Cookieの宛先が有効]
 
-SDKが、 [Cookieの宛先を介してAudience Managerからセグメント情報を共有できるようにします](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) 。
+SDKが、 [Cookieの宛先を使用して、からセグメント情報を共有でき](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html)[!DNL Audience Manager]ます。
 
 ##### [!UICONTROL URL宛先が有効]
 
-SDKが [URLの宛先を介してセグメント情報を共有できるようにします](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)。 これらはAudience Managerで設定されます。
+SDKが [URLの宛先を介してセグメント情報を共有できるようにします](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)。 これらは、で設定し [!DNL Audience Manager]ます。
 
 #### Adobe Analytics
 
