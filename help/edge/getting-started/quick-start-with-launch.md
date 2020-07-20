@@ -4,17 +4,17 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 23%
+source-wordcount: '543'
+ht-degree: 24%
 
 ---
 
 
 # ようこそ
 
-このガイドでは、Adobe LaunchでのAdobe Experience PlatformWeb SDKのセットアップ方法に関する様々な手順を順を追って説明します。 この機能を使用するには、権限が必要で、許可リスト上にある必要があります。 待機中のリストに移動したい場合は、CSMに連絡してください。 また、この機能を使用するには、次の作業が必要です。
+このガイドでは、Adobe LaunchでのAdobe Experience Platformの設定方法に関する様々な手順を順を追って説明 [!DNL Web SDK] します。 この機能を使用するには、権限が必要で、許可リスト上にある必要があります。 待機中のリストに移動したい場合は、CSMに連絡してください。 また、この機能を使用するには、次の作業が必要です。
 
 - [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。アドビAnalyticsのCNAMEを既にお持ちの場合は、そのCNAMEを使用する必要があります。 開発環境でのテストはCNAMEなしでは機能しますが、実稼働環境に移行する前にCNAMEが必要になります
 - 訪問者 ID サービスの最新バージョンを使用している
@@ -29,13 +29,13 @@ Adobe Launchの [エッジ設定ツールを使用して、設定IDを作成で�
 
 ## スキーマの準備
 
-Experience Platformエッジネットワークは、データをXDMとして受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、Edge Networkでデータの形式設定方法を定義します。 データを送信するには、スキーマを定義する必要があります。 次の項目を必ず実行してください。
+はXDMとしてデータを [!DNL Experience Platform Edge Network] 受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、データの形式設定方法 [!DNL Edge Network] を定義します。 データを送信するには、スキーマを定義する必要があります。 次の項目を必ず実行してください。
 
 1. [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
-2. AEP Web SDK ExperienceEvent Mixin追加を作成したスキーマにミックスインします。
+2. 作追加成したスキーマに対するAEP Mixin。 [!DNL Web SDK ExperienceEvent]
 3. 作成したスキーマからデータセットを作成します。
 
-次のビデオでは、Web SDKデータ用のスキーマ、データセット、ストリーミングソースコネクタの作成をサポートします。
+次のビデオでは、データ用のスキーマ、データセット、ストリーミングソースコネクタの作成をサポートします。 [!DNL Web SDK]
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
@@ -47,13 +47,13 @@ Log in to Adobe Launch and install the `AEP Web SDK` extension. SDK のインス
 
 ## スキーマに基づくデータ要素の作成
 
-Adobe Launchで、拡張機能をAEP Web SDKに変更し、タイプをXDMオブジェクトに設定して、スキーマを参照するデータ要素を作成します。 これによりスキーマが読み込まれ、データ要素をスキーマの別の部分にマップできます。
+Adobe Launchで、拡張機能をAEPに変更し、種類をXDMオブジェクトに設定して、スキーマを参照するデータ要素 [!DNL Web SDK] を作成します。 これによりスキーマが読み込まれ、データ要素をスキーマの別の部分にマップできます。
 
 ![開始時の日付要素](../../assets/edge_data_element.png)
 
 ## イベントの送信
 
-拡張機能のインストール後、開始は、AEP Web SDK拡張機能から「sendEvent」アクションをルールに追加してイベントを送信します。 作成したデータ要素をXDMデータとしてイベントに追加してください。 ページが読み込まれるたびに、少なくとも1つのイベントを送信することをお勧めします。
+拡張機能のインストール後、開始は、AEP拡張機能の「sendEvent」アクションをルールに追加してイベントを送信 [!DNL Web SDK] します。 作成したデータ要素をXDMデータとしてイベントに追加してください。 ページが読み込まれるたびに、少なくとも1つのイベントを送信することをお勧めします。
 
 イベントの追跡方法について詳しくは、[イベントのトラッキング](../fundamentals/tracking-events.md)を参照してください。
 
