@@ -4,19 +4,19 @@ seo-title: Adobe Experience Platform Web SDK を使用して Analytics で自動
 description: Adobe Experience Platform Web SDK を使用して Analytics で自動的にマッピングされる変数について説明します
 seo-description: Adobe Experience Platform Web SDK を使用して Analytics で自動的にマッピングされる変数について説明します
 translation-type: tm+mt
-source-git-commit: a7c8830c5c8152b1f21373a506b2fff97d43c40a
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 58%
+source-wordcount: '543'
+ht-degree: 55%
 
 ---
 
 
-# Analytics で自動的にマッピングされる変数
+#  で自動的にマッピングされる変数[!DNL Analytics]
 
-以下に、Adobe Experience Platform Edge Network が自動的に Analytics へとマッピングする変数の一覧を示します。
+Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
 
-| XDM フィールドパス | Analytics クエリ文字列／HTTP ヘッダー | 説明 |
+| XDM フィールドパス | [!DNL Analytics Query String] / HTTP ヘッダー | 説明 |
 | ---------- | ------------------------- | -------- |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement クエリパラメーター PURCHASEID のマッピング。 |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement クエリパラメーター CURRENCY のマッピング。 |
@@ -52,7 +52,7 @@ ht-degree: 58%
 | `media.mediaTimed.progress95.value` | `c.a.media.progress95` | AppMeasurementコンテキストデータ。 |
 | `media.mediaTimed.completes.value` | `c.a.media.complete` | AppMeasurementコンテキストデータ。 |
 | `media.mediaTimed.mediaSegmentView.value` | `c.a.media.segmentView` | AppMeasurementコンテキストデータ。 |
-| `media.mediaTimed.dropBeforeStart.value` | `c.a.media.view`, `c.a.media.timePlayed`, `c.a.media.play` | AppMeasurementコンテキストデータ。 |
+| `media.mediaTimed.dropBeforeStart.value` | `c.a.media.view`、`c.a.media.timePlayed`、`c.a.media.play` | AppMeasurementコンテキストデータ。 |
 | `environment.browserDetails.userAgent` | `User-Agent` | HTTP ヘッダーマッピング（HEADER_USER_AGENT）です。 |
 | `environment.browserDetails.acceptLanguage` | `Accept-Language` | HTTP ヘッダーマッピング（HEADER_ACCEPT_LANGUAGE）です。 |
 | `environment.browserDetails.cookiesEnabled` | `k` | コンバージョン BOOLEAN_TO_YN を使用した AppMeasurement クエリパラメーター COOKIES のマッピング。 |
