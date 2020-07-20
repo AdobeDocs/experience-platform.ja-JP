@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platformセグメントサービスヘルプ
 translation-type: tm+mt
-source-git-commit: a1f80b86a1e761c15d567821b13c7533b7fcf622
+source-git-commit: 82067c3bfa6d80cd5f5dcc6644cdbcacbae85053
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '111'
 ht-degree: 9%
 
 ---
@@ -15,8 +15,11 @@ ht-degree: 9%
 
 - [概要](home.md)
 - [セグメントデータタイプ](data-types.md)
-- セグメントAPI {#api}
+- セグメント化API開発ガイド{#api}
+   - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
+   - [ジョブの書き出し](api/export-jobs.md)
+   - [プレビューと予測](api/previews-and-estimates.md)
    - [セグメント定義](api/segment-definitions.md)
    - [セグメントジョブ](api/segment-jobs.md)
    - [セグメント検索](api/segment-search.md)
