@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Adobe Experience Platformセグメントサービス開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform Segmentation Service] セグメントを作成し、データ [!DNL Adobe Experience Platform] からでオーディエンスを生成でき [!DNL Real-time Customer Profile] ます。
 
-この [!DNL Segmentation Service] APIは複数のエンドポイントを提供し、でのセグメント化操作をプログラムで管理できるようにし [!DNL Experience Platform]ます。 この概要ドキュメントでは、これらの各エンドポイントの概要を説明し、詳しくは、関連するエンドポイントガイドへのリンクを示します。 個々のエンドポイントのガイドを読む前に、 [はじめに](getting-started.md) 、必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み方などについてのガイドを参照してください。
+この [!DNL Segmentation Service] APIは複数のエンドポイントを提供し、でのセグメント化操作をプログラムで管理できるようにし [!DNL Experience Platform]ます。 この概要ドキュメントでは、これらの各エンドポイントの概要を説明し、詳しくは、関連するエンドポイントガイドへのリンクを示します。 個々のエンドポイントのガイドを読む前に、 [はじめに](./getting-started.md) 、必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み方などについてのガイドを参照してください。
 
 使用可能なすべてのエンドポイントとCRUD操作を表示するには、 [Segmentation Service APIリファレンスを参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)。
 
