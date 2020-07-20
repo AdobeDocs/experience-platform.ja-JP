@@ -4,15 +4,15 @@ solution: Experience Platform
 title: セグメント定義
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1041'
 ht-degree: 4%
 
 ---
 
 
-# セグメント定義エンドポイントガイド
+# セグメント定義エンドポイント
 
 Adobe Experience Platformを使用すると、プロファイルのグループから、特定の属性または行動のグループを定義するセグメントを作成できます。 セグメント定義は、 [!DNL Profile Query Language] (PQL)に書き込まれたクエリをカプセル化するオブジェクトです。 このオブジェクトは、PQL述語とも呼ばれます。 PQL述語は、指定するレコードまたは時系列データに関連する条件に基づいて、セグメントの規則を定義し [!DNL Real-time Customer Profile]ます。 PQLクエリの記述の詳細については、 [PQLガイド](../pql/overview.md) を参照してください。
 
