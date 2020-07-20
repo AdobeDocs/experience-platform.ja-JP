@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentation Service開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -44,52 +44,6 @@ APIドキュメントには、リクエストをフォーマットする方法�
 >[!NOTE]
 >
 >でのサンドボックスの操作について詳し [!DNL Experience Platform]くは、 [サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
-
-<!-- ## Estimates
-
-Estimates provides statistical information for a segment definition, such as projected audience size and confidence interval. You can use the `/estimate` endpoint to view an estimate of a segment definition. 
-
-For more information on using this endpoint, please read the [estimates developer guide](./estimates.md). 
-
-## Export jobs
-
-Export jobs are asynchronous processes that are used to persist audience segment members to datasets. You can use the `/export/jobs` endpoint to retrieve all export jobs, create a new export job, retrieve details of a specific export job, or cancel a specific export job.
-
-For more information on using this endpoint, please read the [export jobs developer guide](./export-jobs.md).
-
-## Previews
-
-Previews provide a paginated list of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. You can use the `/preview` endpoint to create a new preview job, look up results of a specific preview job, or delete a specific preview job.
-
-For more information on using this endpoint, please read the [previews developer guide](./previews.md).
-
-## PQL conversions
-
-Profile Query Language (PQL) conversions allows you to convert your formatting between `pql/text` and `pql/json`. You can do this by using the `/segment/conversion` endpoint.
-
-For more information on using this endpoint, please read the [PQL conversions developer guide](./pql-conversions.md).
-
-## Schedules
-
-Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
-
-For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). -->
-
-## セグメント定義
-
-セグメント定義は、どのプロファイルがどのオーディエンスセグメントに含まれるかを定義します。 エンドポイントを使用して、セグメント定義のリストの取得、新しいセグメント定義の作成、特定のセグメント定義の詳細の取得、特定のセグメント定義の削除または特定のセグメント定義の詳細の上書きを行うことができます。 `/segment/definitions`
-
-このエンドポイントの使用方法の詳細については、『 [セグメント定義開発者ガイド](./segment-definitions.md)』を参照してください。
-
-## セグメントジョブ
-
-セグメントジョブは、以前に確立されたセグメント定義を処理して、オーディエンスセグメントを生成します。 エンドポイントを使用して、セグメントジョブのリストの取得、新しいセグメントジョブの作成、特定のセグメントジョブの詳細の取得または特定のセグメントジョブの削除を行うことができます。 `/segment/jobs`
-
-このエンドポイントの使用方法の詳細については、『 [セグメントジョブ開発者ガイド](./segment-jobs.md)』を参照してください。
-
-## セグメント検索
-
-セグメント検索は、様々なデータソースに含まれる設定可能なフィールドを検索およびインデックス付けして、ほぼリアルタイムで返すために使用します。 セグメント検索の使用を開始するには、 [検索開発者ガイドを参照してください](segment-search.md)
 
 ## 次の手順
 
