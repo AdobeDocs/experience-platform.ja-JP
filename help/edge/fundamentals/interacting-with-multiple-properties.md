@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：複数のプロパティの操作
 description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します
 seo-description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 100%
+source-wordcount: '252'
+ht-degree: 87%
 
 ---
 
@@ -66,4 +66,4 @@ mycustomname2("sendEvent", {
 
 ## 制限事項
 
-Cookie との競合を避けるために、1 つのページ内の Adobe Experience Platform Web SDK のインスタンスのうち、いずれか 1 つにのみ特定の `edgeConfigId` を含めることができます。同様に、特定の `orgId` を持つことのできる Adobe Experience Platform Web SDK のインスタンスは 1 つだけです。
+To avoid conflicts with cookies, only one instance of Adobe Experience Platform [!DNL Web SDK] within a page can have a particular `edgeConfigId`.  Similarly, only one instance of Adobe Experience Platform [!DNL Web SDK] can have a particular `orgId`.
