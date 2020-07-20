@@ -4,9 +4,9 @@ seo-title: Experience CloudIDを取得するAdobe Experience PlatformWeb SDK
 description: Adobe Experience Cloud IDを取得する方法を説明します。
 seo-description: Adobe Experience Cloud IDを取得する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '408'
 ht-degree: 10%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 # ID -Experience CloudIDの取得
 
-Adobe Experience PlatformWeb SDKは、 [Adobe Identity Service](../../identity-service/ecid.md)を利用します。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
+このAdobe Experience Platform [!DNL Web SDK] は、 [Adobe Identity Service](../../identity-service/ecid.md)を利用します。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
 
 ## ファーストパーティID
 
@@ -30,7 +30,7 @@ ID [!DNL Identity Service] をサードパーティドメイン(demdex.net)と�
 
 >[!NOTE]
 >
->このメソッドは、通常、Experience CloudIDを読み取る必要があるカスタムソリューションで使用されます。 標準の実装では使用されません。
+>このメソッドは、通常、 [!DNL Experience Cloud] IDを読み取る必要があるカスタムソリューションで使用されます。 標準の実装では使用されません。
 
 ```javascript
 alloy("getIdentity")
