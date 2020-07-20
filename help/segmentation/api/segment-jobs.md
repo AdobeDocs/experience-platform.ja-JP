@@ -4,15 +4,15 @@ solution: Experience Platform
 title: セグメントジョブ
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 3%
 
 ---
 
 
-# セグメントジョブエンドポイントガイド
+# セグメントジョブエンドポイント
 
 セグメントジョブは、新しいオーディエンスセグメントを作成する非同期プロセスです。 これは [セグメント定義](./segment-definitions.md)、およびプロファイルフラグメント間で重なり合う属性を [](../../profile/api/merge-policies.md)[!DNL Real-time Customer Profile] 結合する方法を制御する結合ポリシーを参照します。 セグメントジョブが正常に完了したら、処理中に発生した可能性のあるエラーやオーディエンスの最大サイズなど、セグメントに関する様々な情報を収集できます。
 
