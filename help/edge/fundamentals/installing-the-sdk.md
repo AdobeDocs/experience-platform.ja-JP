@@ -4,24 +4,24 @@ seo-title: Adobe Experience Platform Web SDK：SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します
 seo-description: Experience Platform Web SDK のインストール方法について説明します
 translation-type: tm+mt
-source-git-commit: 90afc28d41878cbed90fc05176276a30d8aebe09
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 82%
+source-wordcount: '570'
+ht-degree: 72%
 
 ---
 
 
 # SDK のインストール {#installing-the-sdk}
 
-Adobe Experience PlatformWeb SDKは、コンテンツ配信ネットワーク(CDN)で使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
+このAdobe Experience Platform [!DNL Web SDK] は、コンテンツ配信ネットワーク(CDN)上で使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
 
 * 縮小バージョン： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
 * 縮小されていないバージョン： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## コードの追加 {#adding-the-code}
 
-Adobe Experience Platform Web SDK を実装する最初の手順として、次の「ベースコード」を、HTML の `<head>` のタグ内のできるだけ上位にコピーして貼り付けます。
+The first step in implementing the Adobe Experience Platform [!DNL Web SDK] is to copy and paste the following &quot;base code&quot; as high as possible in the `<head>` tag of your HTML:
 
 ```markup
 <script>
@@ -54,11 +54,11 @@ Adobe Experience Platform Web SDK を実装する最初の手順として、次�
 
 ## Internet Explorer のサポート {#support-internet-explore}
 
-この SDK は、非同期タスクの完了を伝える方法として promise を使用します。SDK が使用する [promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) 実装は、Internet Explorer を除くすべてのターゲットブラウザーでネイティブにサポートされます。Internet Explorer で SDKを使用するには、`window.Promise` の[ポリフィル](https://remysharp.com/2010/10/08/what-is-a-polyfill)をおこなう必要があります。
+この SDK は、非同期タスクの完了を伝える方法として promise を使用します。The [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you need to have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 既に `window.Promise` がポリフィルされているかどうかを判断するには、次の手順を実行します。
 
-1. Internet Explorer で Web サイトを開きます。
+1. Open your website in [!DNL Internet Explorer].
 1. ブラウザーのデバッグコンソールを開きます。
 1. コンソールに「`window.Promise`」とに入力し、Enter キーを押します。
 
