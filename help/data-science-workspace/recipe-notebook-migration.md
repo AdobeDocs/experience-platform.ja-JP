@@ -717,7 +717,7 @@ Scalaカーネルは、 `%%sql` sparkmagicをサポートしなくなりまし�
 
 ## データセットの読み取り {#notebook-read-dataset-spark}
 
-2. [!DNL Spark] 3では、データの読み取りやコードセルでの生の値の使用に使用する `option` 値に対して変数を定義する必要がありました。 Scalaでは、を使用して値を宣言して返すこ `sys.env("PYDASDK_IMS_USER_TOKEN")` とができるので、などの変数を定義する必要がありません `var userToken`。 以下のScala(Spark 2.4)の例では、データセットの読み取りに必要なすべての値を定義して返すために `sys.env` 使用されています。
+[!DNL Spark] 2.3では、データの読み取りやコードセルでの生の値の使用に使用する `option` 値に対して変数を定義する必要がありました。 Scalaでは、を使用して値を宣言して返すこ `sys.env("PYDASDK_IMS_USER_TOKEN")` とができるので、などの変数を定義する必要がありません `var userToken`。 以下のScala(Spark 2.4)の例では、データセットの読み取りに必要なすべての値を定義して返すために `sys.env` 使用されています。
 
 **Using[!DNL Spark]([!DNL Spark]2.3 — 非推奨) -[!DNL Spark]Kernel**
 
