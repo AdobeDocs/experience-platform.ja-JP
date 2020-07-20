@@ -4,19 +4,19 @@ seo-title: Adobe Experience Platform Web SDK のヘルプ
 description: Adobe Experience Platform Web SDK の概要と、その使用方法を説明します。
 seo-description: Adobe Experience Cloud のお客様が　Experience Cloud　の様々なサービスを利用できるようにします 
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 29%
+source-wordcount: '429'
+ht-degree: 31%
 
 ---
 
 
 # Adobe Experience PlatformWeb SDKとは
 
-Adobe Experience PlatformWeb SDKは、Adobe Experience Cloudのお客様がAdobe Experience Platformエッジネットワークを介してExperience Cloud内の様々なサービスとやり取りすることを可能にする、クライアント側のJavaScriptライブラリです。
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network].
 
-次のビデオでは、Adobe Experience PlatformWeb SDKとEdge Networkの概要を説明します。
+次のビデオでは、Adobe Experience Platform [!DNL Web SDK] との概要を説明し [!DNL Edge Network]ます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -29,11 +29,11 @@ Adobe Experience Platform Web SDK は、次の SDK の代わりとなります�
 * AT.js
 * DIL.js
 
-これは、既存のライブラリの単なるラッパーではなく、完全なリライトです。目的は、タグを適切な順序で実行する必要があり、ライブラリのバージョン管理の課題との矛盾、依存関係の管理の改善によって、課題を解決することです。 これはExperience Cloudを実装する新しい方法で、 [オープンソースです](https://github.com/adobe/alloy)。
+これは、既存のライブラリの単なるラッパーではなく、完全なリライトです。目的は、タグを適切な順序で実行する必要があり、ライブラリのバージョン管理の課題との矛盾、依存関係の管理の改善によって、課題を解決することです。 これは、を実装する新しい方法で [!DNL Experience Cloud] あり、 [オープンソースです](https://github.com/adobe/alloy)。
 
-新しいライブラリに加えて、アドビのソリューションに対する HTTP 要求を整理する新しいエンドポイントが追加されました。以前は、Visitor.js は訪問者 ID サービスに対してブロック呼び出しを送信した後、AT.js は Adobe Target に呼び出しを送信、DIL.js は Adobe Audience Manager に呼び出しを送信、最後に AppMeasurement.js は Adobe Analytics に呼び出しを送信していました。This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to Audience Manager, and pass the data to the Adobe Experience Platform in a single call.
+新しいライブラリに加えて、アドビのソリューションに対する HTTP 要求を整理する新しいエンドポイントが追加されました。以前は、Visitor.js は訪問者 ID サービスに対してブロック呼び出しを送信した後、AT.js は Adobe Target に呼び出しを送信、DIL.js は Adobe Audience Manager に呼び出しを送信、最後に AppMeasurement.js は Adobe Analytics に呼び出しを送信していました。This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to the Adobe Experience Platform in a single call.
 
-次のビデオでは、Adobe Experience PlatformWeb SDKとEdge Networkの動作を示します。 このビデオの例では、アドビへの1回の呼び出しを使用して、Experience Platform、Analytics、Audience ManagerおよびTargetにデータを送信します。
+次のビデオでは、Adobe Experience Platform [!DNL Web SDK] と実行中の動作 [!DNL Edge Network] を示します。 このビデオの例では、Adobeへの1回の呼び出しを使用して、 [!DNL Experience Platform]、、 [!DNL Analytics]、 [!DNL Audience Manager]およびにデータを送信し [!DNL Target]ます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
