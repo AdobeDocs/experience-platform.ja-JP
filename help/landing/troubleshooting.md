@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platformに関するFAQとトラブルシューティングガイド
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 635f8cf8173cc7db2032f2181848b0ce1e9095cc
+source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 3%
@@ -118,7 +118,7 @@ APIの多くのPATCH操作では、 [!DNL Platform] JSONポインタ文字列を
 
 ## ポストマンを使用してAPIを呼び出すことはでき [!DNL Platform] ますか。 {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.getpostman.com/) は、RESTful APIへの呼び出しを視覚化するのに便利なツールです。 この [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)[!DNL Experience Platform] （中）では、Postmanを設定して自動的に認証を実行し、それを使用してAPIを使用する方法について説明します。
+[Postman](https://www.postman.com/) は、RESTful APIへの呼び出しを視覚化するのに便利なツールです。 この [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)[!DNL Experience Platform] （中）では、Postmanを設定して自動的に認証を実行し、それを使用してAPIを使用する方法について説明します。
 
 ## 必要システム構成は何で [!DNL Platform]すか。 {#what-are-the-system-requirements-for-platform}
 
