@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Adobe Experience Platformバッチ取り込みの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1144'
 ht-degree: 2%
 
 ---
 
 
-# バッチ取り込みの概要
+# [!DNL Batch Ingestion]概要
 
-Batch Ingestion APIを使用すると、データをバッチファイルとしてAdobe Experience Platformに取り込むことができます。 取り込まれるデータは、CRMシステムのフラットファイル（パーケーファイルなど）のプロファイルデータ、またはエクスペリエンスデータモデル(XDM)レジストリの既知のスキーマに準拠するデータです。
+この [!DNL Batch Ingestion] APIを使用すると、データをバッチファイルとしてAdobe Experience Platformに取り込むことができます。 取り込まれるデータは、CRMシステムのフラットファイル（パーケファイルなど）のプロファイルデータ、または [!DNL Experience Data Model] (XDM)レジストリの既知のスキーマに適合するデータです。
 
 [データ取り込みAPIリファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) は、これらのAPI呼び出しに関する追加情報を提供します。
 
@@ -24,17 +24,17 @@ Batch Ingestion APIを使用すると、データをバッチファイルとし�
 
 ## APIの使用
 
-Data Ingestion APIを使用すると、次の3つの基本的な手順でデータをバッチ（1つのユニットとして取り込まれる1つ以上のファイルで構成されるデータの単位）としてExperience Platformに取り込むことができます。
+この [!DNL Data Ingestion] APIを使用すると、次の3つの基本的な手順でデータをバッチ（1つのユニットとして取り込む1つ以上のファイルで構成されるデータの単位） [!DNL Experience Platform] として取り込むことができます。
 
 1. 新しいバッチを作成します。
 2. データのXDMスキーマに一致する指定したデータセットにファイルをアップロードします。
 3. バッチの終わりを伝えます。
 
 
-### データ取り込みの前提条件
+### [!DNL Data Ingestion] 前提条件
 
 - アップロードするデータは、ParketまたはJSON形式である必要があります。
-- [Catalogサービスで作成されたデータセット](../../catalog/home.md)。
+- で作成されたデータセット [!DNL Catalog services](../../catalog/home.md)。
 - パーケットファイルの内容は、アップロード先のデータセットのスキーマのサブセットと一致する必要があります。
 - 認証後に固有のアクセストークンを持つ。
 
@@ -47,23 +47,23 @@ Data Ingestion APIを使用すると、次の3つの基本的な手順でデー�
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -237,7 +237,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## シグナルバッチ完了
 
-すべてのファイルがバッチにアップロードされた後、バッチは完了を示すために署名できます。 これにより、完了したファイルに対してCatalog **DataSetFile** エントリが作成され、上で生成したバッチに関連付けられます。 次に、カタログバッチが成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータが取り込まれます。
+すべてのファイルがバッチにアップロードされた後、バッチは完了を示すために署名できます。 これにより、完了したファイルに対してDataSetFile [!DNL Catalog]**** エントリが作成され、上記で生成したバッチに関連付けられます。 次に、 [!DNL Catalog] バッチが成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータが取り込まれます。
 
 **リクエスト**
 
