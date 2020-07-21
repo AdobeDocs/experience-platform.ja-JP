@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 時系列データのストリーミング
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 2%
@@ -324,9 +324,6 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-            "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -404,7 +401,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 新たに取り込まれた時系列データの取得
 
-以前に取り込んだレコードを検証するには、 [プロファイルアクセスAPI](../../profile/api/entities.md) (Time Series)を使用して時系列データを取得します。 これは、エンドポイントへのGET要求を使用し、オプションのクエリパラメーターを使用して行うこ `/access/entities` とができます。 複数のパラメーターを使用でき、アンパサンド(&amp;)で区切ります。」
+以前に取り込んだレコードを検証するには、 [プロファイルアクセスAPI](../../profile/api/entities.md) (Time Series)を使用して時系列データを取得します。 これは、エンドポイントへのGET要求を使用し、オプションのクエリパラメーターを使用して行うことが `/access/entities` できます。 複数のパラメーターを使用でき、アンパサンド(&amp;)で区切ります。」
 
 >[!NOTE]
 >
