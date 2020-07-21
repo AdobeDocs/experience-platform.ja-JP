@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマスキーマエディタを使用した2つのスキーマ間の関係の定義
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1445646be8fa3416a34408205eadca0a792290c6
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 ### ホテルズスキーマ
 
-リンク先スキーマ「[!UICONTROL ホテル]」には、ホテルの説明、住所、ブランド、客室数、スターレーティングを含むフィールドが含まれます。 「[!UICONTROL hotelId]」フィールドは、「ECID」名前空間下のスキーマの主なIDとして機能します。 「[!UICONTROL ロイヤルティメンバ]」とは異なり、このスキーマはに対して有効になっていません [!DNL Real-time Customer Profile]。
+リンク先スキーマ「[!UICONTROL ホテル]」には、ホテルの説明、住所、ブランド、客室数、スターレーティングを含むフィールドが含まれます。 The &quot;[!UICONTROL hotelId]&quot; field serves as the primary identity for the schema under the &quot;ECID&quot; namespace. Unlike &quot;[!UICONTROL Loyalty Members]&quot;, this schema has not been enabled for [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/hotels.png)
 
@@ -50,9 +50,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->この手順は、ソーススキーマに、別のスキーマへの参照として使用する専用の文字列型フィールドがない場合にのみ必要です。 このフィールドがソーススキーマで既に定義されている場合は、次の手順に進んで関係フィールドを [定義し](#relationship-field)ます。
+>This step is only required if your source schema does not have a dedicated string-type field to be used as a reference to another schema. If this field is already defined in your source schema, skip to the next step of [defining a relationship field](#relationship-field).
 
-2つのスキーマ間の関係を定義するには、ソーススキーマに、ターゲットスキーマへの参照として使用する専用のフィールドが必要です。 新しいMixinを作成して、このフィールドをソーススキーマに追加できます。
+2つのスキーマ間の関係を定義するには、ソーススキーマに、ターゲットスキーマへの参照として使用する専用のフィールドが必要です。 You can add this field to the source schema by creating a new mixin.
 
 開始するには、 **[!UICONTROL Mixins]**__ セクションのをクリックします。
 
@@ -62,7 +62,7 @@ ht-degree: 0%
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-キャンバスが再表示され、「[!UICONTROL 忠誠度の関係]」が「ミ _ックスイン_ 」セクションに表示されます。 Mixin名をクリックし、ルートレベルの「 **[!UICONTROL Loyality Members]**[!UICONTROL 」フィールドの横にある「]Field」をクリックします。
+キャンバスが再表示され、「[!UICONTROL お気に入りのホテル]」が「ミ _ックスイン_ 」セクションに表示されます。 Mixin名をクリックし、ルートレベルの「 **[!UICONTROL Loyality Members]**[!UICONTROL 」フィールドの横にある「]Field」をクリックします。
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -70,11 +70,11 @@ ht-degree: 0%
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-終了したら、「 **[!UICONTROL 適用]**」をクリックします。
+When finished, click **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-更新された「[!UICONTROL 忠誠度の関係]」フィールドがキャンバスに表示されます。 「 **[!UICONTROL 保存]** 」をクリックして、スキーマに対する変更を確定します。
+更新された「[!UICONTROL favoriteHotel]」フィールドがキャンバスに表示されます。 「 **[!UICONTROL 保存]** 」をクリックして、スキーマに対する変更を確定します。
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
