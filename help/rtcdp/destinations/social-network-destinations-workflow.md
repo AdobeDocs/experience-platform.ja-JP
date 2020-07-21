@@ -4,9 +4,9 @@ seo-title: ソーシャルネットワーク宛先のワークフロー
 description: ソーシャルネットワーク広告アカウントに接続する手順
 seo-description: ソーシャルネットワーク広告アカウントに接続する手順
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '464'
 ht-degree: 11%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 ## ソーシャルネットワークの宛先を作成するためのワークフロー
 
-このチュートリアルではFacebookを例として使用しますが、Adobeリアルタイム顧客データPlatformのワークフローは、すべてのソーシャルネットワークの宛先に対して同じになり、もう一度製品に追加されます。
+このチュートリアルでは例 [!DNL Facebook] を使用しますが、Adobe Real-time Customer DataPlatformのワークフローは、すべてのソーシャルネットワークの宛先に対して同じになり、もう一度製品に追加されます。
 
 1. 「 **[!UICONTROL Destinations/Catalog]**」で、「 **[!UICONTROL Social]** 」カテゴリまでスクロールします。 希望するソーシャルネットワークの宛先を選択し、「 **[!UICONTROL 宛先に接続]**」を選択します。
 
@@ -39,7 +39,7 @@ ht-degree: 11%
    >[!IMPORTANT]
    >
    > * ソーシャルネットワークの宛先に対しては、 *単一IDパーソナライゼーション* (Single Identity Personalization)マーケティングの使用例がデフォルトで選択されており、削除できません。
-   > * Facebookのリンク先の場合。 **[!UICONTROL アカウントID]** は、Facebook広告のアカウントIDです。 このIDはFacebook広告マネージャーで確認できます。 IDの先頭に、次のよう `act_` に付けます。
+   > * 目的 [!DNL Facebook] 地用。 **[!UICONTROL アカウントID]** がお客様のアカウント [!DNL Facebook Ad Account ID]です。 このIDは、で確認でき [!DNL Facebook Ads Manager]ます。 IDの先頭に、次のよう `act_` に付けます。
 
 
    ![ソーシャルネットワークの宛先に接続 — 設定手順](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
