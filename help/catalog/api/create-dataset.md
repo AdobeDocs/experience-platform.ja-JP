@@ -4,21 +4,21 @@ solution: Experience Platform
 title: データセットの作成
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
 
 # データセットの作成
 
-カタログAPIを使用してデータセットを作成するには、そのデータセットの基となるExperience Data Model(XDM)スキーマの `$id` 値を把握しておく必要があります。 スキーマIDを取得したら、カタログAPIのエンドポイントにPOSTリクエストを行って、データセットを作成でき `/datasets` ます。
+APIを使用してデータセットを作成するには、データセットの基となる [!DNL Catalog] (XDM)スキーマの `$id`[!DNL Experience Data Model] 値を把握しておく必要があります。 スキーマIDを取得したら、APIでエンドポイントにPOSTリクエストを行って、データセットを作成 `/datasets` でき [!DNL Catalog] ます。
 
 >[!NOTE]
 >
->このドキュメントでは、Catalogでデータセットオブジェクトを作成する方法についてのみ説明します。 データセットの作成、設定、監視の手順について詳しくは、次の [チュートリアルを参照してください](../datasets/create.md)。
+>このドキュメントでは、でデータセットオブジェクトを作成する方法についてのみ説明 [!DNL Catalog]します。 データセットの作成、設定、監視の手順について詳しくは、次の [チュートリアルを参照してください](../datasets/create.md)。
 
 **API形式**
 
