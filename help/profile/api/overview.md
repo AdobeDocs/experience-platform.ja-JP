@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: リアルタイムの顧客プロファイルAPI開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,9 @@ ht-degree: 0%
 
 この [!DNL Real-time Customer Profile] APIには複数のエンドポイントが含まれ、以下に概要を示します。 詳しくは、個々のエンドポイントガイドを参照してください。また、 [入門ガイドを参照し](getting-started.md) 、必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み取りなどを確認してください。
 
-使用可能なすべてのエンドポイントとCRUD操作を表示するには、『 [リアルタイムプロファイルAPIリファレンス』スウォッチガーを参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
+使用可能なすべてのエンドポイントとCRUD操作を表示するには、 [リアルタイムプロファイルAPIリファレンススウォッチガーを参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
+
+[!DNL Real-time Customer Profile] UIで [!DNL Experience Platform] データを操作する手引きについては、 [プロファイルユーザーガイドを参照してください](../ui/user-guide.md)。
 
 ## （アルファ）計算済み属性 {#computed-attributes}
 
@@ -52,4 +54,4 @@ UIを使用して結合ポリシーを操作する手引きについては、 [!
 
 ## 次の手順 {#next-steps}
 
-APIを使用した呼び出しを開始するには、「はじめに [!DNL Real-time Customer Profile] 」ガイドを読み [、特定の](getting-started.md)[!DNL Profile]関連エンドポイントの使い方を学ぶためのエンドポイントガイドの1つを選択します。 UIを使用した [!DNL Profile] データの操作について詳しくは、リアルタイム顧客プロファイルユーザーガイドを参照して [!DNL Platform] ください [](../ui/user-guide.md)。
+APIを使用した呼び出しを開始するには、「はじめに [!DNL Real-time Customer Profile] 」ガイドを読み [、特定の](getting-started.md)[!DNL Profile]関連エンドポイントの使い方を学ぶためのエンドポイントガイドの1つを選択します。 UIを使用して [!DNL Profile] データを操作するには、リアルタイムのお客様向けプロファイルユーザガイドを参照してください [!DNL Experience Platform][](../ui/user-guide.md)。
