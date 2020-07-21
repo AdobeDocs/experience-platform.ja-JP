@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ストリーミング送信先への接続とデータのアクティブ化
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ed9d6eadeb00db51278ea700f7698a1b5590632f
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1810'
 ht-degree: 2%
 
 ---
@@ -30,8 +30,8 @@ ht-degree: 2%
 
 このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [カタログサービス](../../catalog/home.md): カタログは、Experience Platform内のデータの場所と系列の記録システムです。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] は、Experience Platform内のデータの場所と系列のレコードシステムです。
 * [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 Adobe Real-time CDPのストリーミング宛先に対するデータをアクティブ化するために知っておく必要がある追加情報について、以下の節で説明します。
@@ -261,12 +261,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`: 使用可能な宛先のリストの [取得で取得した接続仕様IDを使用します](#get-the-list-of-available-destinations)。
 * `{AUTHENTICATION_CREDENTIALS}`: ストリーミング先の名前を入力します。例： `Amazon Kinesis authentication credentials` または `Azure Event Hubs authentication credentials`。
-* `{ACCESS_ID}`: *Amazon Kinesis接続の場合。* Amazon Kinesisストレージの場所のアクセスID。
-* `{SECRET_KEY}`: *Amazon Kinesis接続の場合。* Amazon Kinesisストレージの場所の秘密キー。
-* `{REGION}`: *Amazon Kinesis接続の場合。* Adobe Real-time CDPがデータをストリーミングするAmazon Kinesisアカウント内の領域。
-* `{SAS_KEY_NAME}`: *Azureイベントハブ接続の場合。* SASキー名を入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* `{SAS_KEY}`: *Azureイベントハブ接続の場合。* SASキーを入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* `{EVENT_HUB_NAMESPACE}`: *Azureイベントハブ接続の場合。* Adobe Real-time CDPがデータをストリーミングするAzureイベントハブ名前空間に入力します。 詳細については、Microsoftのドキュメントの「イベントハブの [作成」名前空間](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照してください。
+* `{ACCESS_ID}`: *接続[!DNL Amazon Kinesis]の場合。* Amazon Kinesisストレージの場所のアクセスID。
+* `{SECRET_KEY}`: *接続[!DNL Amazon Kinesis]の場合。* Amazon Kinesisストレージの場所の秘密キー。
+* `{REGION}`: *接続[!DNL Amazon Kinesis]の場合。* Adobe Real-time CDPがデータをストリーミングする [!DNL Amazon Kinesis] アカウント内の領域。
+* `{SAS_KEY_NAME}`: *接続[!DNL Azure Event Hubs]の場合。* SASキー名を入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* `{SAS_KEY}`: *接続[!DNL Azure Event Hubs]の場合。* SASキーを入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* `{EVENT_HUB_NAMESPACE}`: *接続[!DNL Azure Event Hubs]の場合。* Adobe Real-time CDPがデータをストリーミングする [!DNL Azure Event Hubs] 名前空間を入力します。 詳しくは、ドキュメントの「イベントハブの [作成」名前空間](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照して [!DNL Microsoft] ください。
 
 **応答**
 
@@ -317,9 +317,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: 上記の手順で取得したベース接続IDを使用します。
 * `{CONNECTION_SPEC_ID}`: 使用可能な宛先のリストを [取得する手順で取得した接続仕様を使用します](#get-the-list-of-available-destinations)。
-* `{NAME_OF_DATA_STREAM}`: *Amazon Kinesis接続の場合。* Amazon Kinesisアカウント内の既存のデータストリームの名前を指定します。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。
-* `{REGION}`: *Amazon Kinesis接続の場合。* Adobe Real-time CDPがデータをストリーミングするAmazon Kinesisアカウント内の領域。
-* `{EVENT_HUB_NAME}`: *Azureイベントハブ接続の場合。* Azureイベントハブ名に、Adobe Real-time CDPがデータをストリーミングする場所を入力します。 詳しくは、Microsoftのドキュメントの「イベントハブの [作成](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 」を参照してください。
+* `{NAME_OF_DATA_STREAM}`: *接続[!DNL Amazon Kinesis]の場合。* アカウント内の既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。
+* `{REGION}`: *接続[!DNL Amazon Kinesis]の場合。* Adobe Real-time CDPがデータをストリーミングするAmazon Kinesisアカウント内の領域。
+* `{EVENT_HUB_NAME}`: *接続[!DNL Azure Event Hubs]の場合。* Adobe Real-time CDPがデータをストリーミングする [!DNL Azure Event Hub] 名前を入力します。 詳しくは、ドキュメントの「イベントハブの [作成](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 」を参照して [!DNL Microsoft] ください。
 
 **応答**
 
@@ -467,7 +467,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: 前の手順で取得したデータフローを使用します。
 * `{ETAG}`: 前の手順で取得したetagを使用します。
-* `{SEGMENT_ID}`: この宛先にエクスポートするセグメントIDを指定します。 アクティブ化するセグメントのセグメントIDを取得するには、https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/にアクセスし、左側のナビゲーションメニューで **Segmentation Service API** (Segmentation Service API `GET /segment/jobs` )を選択して、操作を探します。
+* `{SEGMENT_ID}`: この宛先にエクスポートするセグメントIDを指定します。 アクティブ化するセグメントのセグメントIDを取得するには、https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/にアクセスし、左側のナビゲーションメニューで **[!UICONTROL Segmentation Service API]** (Segmentation Service API `GET /segment/jobs` )を選択して、操作を探します。
 * `{PROFILE_ATTRIBUTE}`: 例えば、 `personalEmail.address` または `person.lastName`
 
 **応答**
@@ -551,7 +551,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 >[!IMPORTANT]
 >
-> 手順「新しい宛先にデータを [アクティブ化する](#activate-data)」のプロファイル属性とセグメントに加えて、AWS KinesisとAzureイベントハブにエクスポートされたデータには、IDマップに関する情報も含まれます。 これは、書き出されたプロファイルのID( [ECID](https://docs.adobe.com/content/help/ja-JP/id-service/using/intro/id-request.html)、モバイルID、Google ID、電子メールアドレスなど)を表します。 以下の例を参照してください。
+> 手順「新しい宛先にデータを [アクティブにする](#activate-data)」のプロファイル属性とセグメントに加えて、に書き出されたデータ [!DNL AWS Kinesis] が [!DNL Azure Event Hubs] 、IDマップに関する情報も含まれます。 これは、書き出されたプロファイルのID( [ECID](https://docs.adobe.com/content/help/ja-JP/id-service/using/intro/id-request.html)、モバイルID、Google ID、電子メールアドレスなど)を表します。 以下の例を参照してください。
 
 ```
 {
