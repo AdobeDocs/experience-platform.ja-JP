@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 論理量指定子
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 5%
+source-wordcount: '188'
+ht-degree: 20%
 
 ---
 
 
 # 論理的な数量化関数
 
-論理量指定子は、プロファイルクエリ言語(PQL)の配列と条件をアサートするために使用できます。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+論理量指定子は、 [!DNL Profile Query Language] (PQL)内の配列と条件をアサートするために使用できます。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## 存在する
 
 この `exists` 関数は、指定された条件を満たす配列内の項目の存在を判断します。
 
-**形式**
+**書式**
 
 ```sql
 exists {VARIABLE} from {EXPRESSION} where {CONDITION}
@@ -45,7 +45,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 この `forall` 関数は、配列内のすべての項目を特定の条件を満たすものから判断します。
 
-**形式**
+**書式**
 
 ```sql
 forall {VARIABLE} from {EXPRESSION} where {CONDITION}
@@ -68,4 +68,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## 次の手順
 
-論理量指定子について学んだので、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
+論理量指定子について学んだので、PQLクエリ内で使用できます。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
