@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformクエリサービスクイックスタートガイド
 topic: quickstart
 translation-type: tm+mt
-source-git-commit: 659955e60531abd505337f1b266b147ce08ddad9
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 # クイックスタートガイド
 
-1. クエリサービスを使用するには、組織がAdobe Experience Platform用にプロビジョニングされている必要があります。また、管理者からアクセス権を付与される必要があります。
-2. データをまだAdobe Experience Platformに取り込んでいない場合は、開始が必要な場所です。 データ取り込みのドキュメントを参照してください。
-3. データをAdobe Experience Platformに取り込んだら、 [Platform UIを使用してクエリサービスの使用を開始できます](ui/overview.md)。 例えば、Adobe Experience Platformのブラウザーベースの [クエリエディターを使用して、クエリの書き込み、検証](ui/user-guide.md) 、実行を行うことができます。
+1. を使用するに [!DNL Query Service]は、組織がAdobe Experience Platform用にプロビジョニングされている必要があり、管理者からアクセス権を付与される必要があります。
+2. データをAdobe Experience Platformにまだ取り込んでいない場合は、そこで開始を行う必要があります。 データ取り込みのドキュメントを参照してください。
+3. データをAdobe Experience Platformに取り込んだら、 [!DNL Query Service] PlatformUIの使用を開始できます [](ui/overview.md)。 例えば、Adobe Experience Platformのブラウザーベースを使用して、クエリ [!DNL Query Editor](ui/user-guide.md) の書き込み、検証、実行を行うことができます。
 
 
-クエリサービスは、外部ツールを接続してクエリを発行する方法も提供します。 ビジネスインテリジェンスツールやコマンドラインインターフェイスなどのツールを接続する手順については、ツールの [接続をお読みください](clients/overview.md)。
+[!DNL Query Service] また、外部ツールを接続してクエリを発行する方法も提供します。 Business Intelligenceツールやコマンドラインインターフェイスなどのツールを接続する手順については、ツールの [接続をお読みください](clients/overview.md)。
 
