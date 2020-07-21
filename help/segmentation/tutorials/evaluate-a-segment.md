@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントの評価
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1543'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->スケジュールされた評価は、XDM個別プロファイル用に最大5個のマージポリシーを持つサンドボックスに対して有効にできます。 1つのSandbox環境内にXDM個々のプロファイル用に5つ以上のマージポリシーがある場合、スケジュールされた評価を使用できません。
+>スケジュールされた評価は、最大5つのマージポリシーを持つサンドボックスに対して有効にでき [!DNL XDM Individual Profile]ます。 1つのSandbox環境内に5つを超えるマージポリシーがある場合、 [!DNL XDM Individual Profile] 予定された評価を使用できません。
 
 ### スケジュールの作成
 
@@ -157,11 +157,11 @@ APIのエンドポイントにPOSTリクエストを作成して、新しいセ�
 
 オーディエンスを書き出す場合は、まずターゲットデータセットを作成する必要があります。 データセットを正しく設定して、エクスポートが正常に完了するようにすることが重要です。
 
-重要な考慮事項の1つは、データセットのベースとなるスキーマです(以下のAPIサンプルリクエスト`schemaRef.id` を参照)。 セグメントをエクスポートするには、XDM個別プロファイル和集合スキーマ(`https://ns.adobe.com/xdm/context/profile__union`)に基づくデータセットが必要です。 和集合スキーマは、システム生成の読み取り専用スキーマで、同じクラス(この場合はXDM Individualプロファイルクラス)を共有するスキーマのフィールドを集計します。 和集合表示のスキーマの詳細については、『スキーマレジストリ開発ガイド』の「 [リアルタイム顧客プロファイル」の節を参照してください](../../xdm/api/getting-started.md)。
+重要な考慮事項の1つは、データセットのベースとなるスキーマです(以下のAPIサンプルリクエスト`schemaRef.id` を参照)。 セグメントをエクスポートするには、 [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`)に基づくデータセットが必要です。 和集合スキーマは、システム生成の読み取り専用スキーマで、同じクラス(この場合はXDM Individualプロファイルクラス)を共有するスキーマのフィールドを集計します。 和集合表示のスキーマの詳細については、『スキーマレジストリ開発ガイド』の「 [リアルタイム顧客プロファイル」の節を参照してください](../../xdm/api/getting-started.md)。
 
 必要なデータセットを作成する方法は2つあります。
 
-- **APIの使用：** このチュートリアルでは、Catalog APIを使用してXDM Individualプロファイル和集合スキーマを参照するデータセットを作成する方法について説明します。
+- **APIの使用：** このチュートリアルで説明する手順は、 [!DNL XDM Individual Profile Union Schema][!DNL Catalog] APIを使用して、データセットを参照するデータセットを作成する方法を示しています。
 - **UIの使用：** 和集合スキーマを参照するデータセットを作成するには、 [!DNL Adobe Experience Platform] UIチュートリアルの手順に従い [、このチュートリアルに戻って、オーディエンスプロファイルの](../ui/overview.md) 生成手順に進みます [](#generate-xdm-profiles-for-audience-members)。
 
 互換性のあるデータセットが既に存在し、そのIDがわかっている場合は、オーディエンスプロファイルの [生成手順に直接進むことができます](#generate-xdm-profiles-for-audience-members)。
@@ -228,10 +228,10 @@ curl -X POST \
 
 ## 次の手順
 
-エクスポートが正常に完了すると、データは、のデータレーク内で使用でき [!DNL Experience Platform]ます。 その後、 [データアクセスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) (Data Access API)を使用して `batchId` 、エクスポートに関連付けられたを使用してデータにアクセスできます。 セグメントのサイズに応じて、データはチャンクになり、バッチは複数のファイルで構成される場合があります。
+書き出しが正常に完了すると、の内でデータを使用で [!DNL Data Lake] き [!DNL Experience Platform]ます。 その後、を使用して、エクスポート [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) に関連付けられたを使用してデータにアクセス `batchId` できます。 セグメントのサイズに応じて、データはチャンクになり、バッチは複数のファイルで構成される場合があります。
 
 APIを使用してバッチファイルにアクセスしてダウンロードする手順については、「 [!DNL Data Access] データアクセス [](../../data-access/tutorials/dataset-data.md)」チュートリアルに従ってください。
 
-また、を使用して、正常にエクスポートされたセグメントデータにアクセスすることもでき [!DNL Adobe Experience Platform Query Service]ます。 UIまたはRESTful APIを使用して、データレーク内のデータに対してクエリの書き込み、検証、実行を行うことがで [!DNL Query Service] きます。
+また、を使用して、正常にエクスポートされたセグメントデータにアクセスすることもでき [!DNL Adobe Experience Platform Query Service]ます。 UIまたはRESTful APIを使用して、内のデータに関するクエリの書き込み、検証、実行を [!DNL Query Service] 行うことができ [!DNL Data Lake]ます。
 
 オーディエンスデータをクエリする方法の詳細については、のドキュメントを参照してくだ [!DNL Query Service](../../query-service/home.md)さい。
