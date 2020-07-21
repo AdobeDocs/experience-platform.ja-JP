@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 配列、リスト、セット関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '737'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 # 配列、リスト、セット関数
 
-プロファイルクエリ言語(PQL)オファーは、配列、リスト、文字列とのやり取りを容易にするための機能です。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
+[!DNL Profile Query Language] (PQL)オファーは、配列、リスト、文字列とのやり取りを容易にするために機能します。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## イン
 
