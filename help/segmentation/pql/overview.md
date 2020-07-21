@@ -4,17 +4,17 @@ solution: Experience Platform
 title: プロファイルクエリ言語(PQL)の概要
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '670'
 ht-degree: 3%
 
 ---
 
 
-# プロファイルクエリ言語(PQL)の概要
+# [!DNL Profile Query Language] (PQL)の概要
 
-プロファイルクエリ言語(PQL)は、Experience Data Model(XDM)に準拠したクエリ言語です。この言語は、リアルタイム顧客プロファイルデータのセグメントクエリの定義と実行をサポートするように設計されています。
+[!DNL Profile Query Language] (PQL)は [!DNL Experience Data Model] (XDM)準拠のクエリ言語で、 [!DNL Real-time Customer Profile] データに対するセグメントクエリの定義と実行をサポートするように設計されています。
 
 このガイドでは、PQLの一般的な概要を説明し、フォーマットのガイドラインとPQL式の例を示します。
 
@@ -60,13 +60,13 @@ PQLでは、次のリテラル型がサポートされます。
 
 | リテラル | 定義 | 例 |
 | ------- | ---------- | ------- |
-| 文字列 | 重複の引用符で囲まれた文字で構成されるデータ型です。 | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"` |
+| 文字列 | 重複の引用符で囲まれた文字で構成されるデータ型です。 | `"pizza"`、`"jobs"`、`"antidisestablishmentarianism"` |
 | Boolean | trueまたはfalseのデータ型です。 | `true`、`false` |
-| 整数 | 整数を表すデータ型です。 正、負、またはゼロのいずれかです。 | `-201`, `0`, `412` |
-| 重複 | 任意の実数を表すデータ型です。 正、負、またはゼロのいずれかです。 | `-51.24`, `3.14`, `0.6942058` |
+| 整数 | 整数を表すデータ型です。 正、負、またはゼロのいずれかです。 | `-201`、`0`、`412` |
+| 重複 | 任意の実数を表すデータ型です。 正、負、またはゼロのいずれかです。 | `-51.24`、`3.14`、`0.6942058` |
 | 日付 | 年、月、日に基づく日付を整数のパラメーターとして作成するために使用できるデータ型です。 It is formatted as `date(year, month, day)` | `date(2020, 3, 14)` |
 | 配列 | 他のリテラル値のグループとして構成されるデータ型です。 異なる値を区切るために、角括弧で囲み、カンマを使用します。 <br> **注意：** 配列内の項目のプロパティに直接アクセスすることはできません。 したがって、配列内のプロパティにアクセスする必要がある場合は、次のメソッドがサポートされ `select X from array where X.item = ...`ます。 <br> PQLは、プロファイルにリンクされた一連のエクスペリエンスイベント `xEvent` を参照する単語を予約します。 | `[1, 4, 7]`、`["US", "CA"]` |
-| 相対時間参照 | タイムスタンプと時間間隔の参照を形成するために使用できる予約語です。 <ul><li>今日昨日明日</li><li>これ、最後、次</li><li>前、後、後</li><li>ミリ秒、秒、分、時間、日、週、月、年、10年、世紀/世紀、ミレニアム/ミレニアム</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
+| 相対時間参照 | タイムスタンプと時間間隔の参照を形成するために使用できる予約語です。 <ul><li>今日昨日明日</li><li>これ、最後、次</li><li>前、後、後</li><li>ミリ秒、秒、分、時間、日、週、月、年、10年、世紀/世紀、ミレニアム/ミレニアム</li></ul> | `X.timestamp occurs before today`、`X.timestamp occurs last month`、`X.timestamp occurs <= 3 days before now` |
 
 
 ## PQL関数
@@ -89,4 +89,4 @@ PQLでは、次のリテラル型がサポートされます。
 
 ## 次の手順
 
-プロファイルクエリ言語の使い方を習得したので、セグメントの作成と変更時にPQLを使用できます。 セグメント化について詳しくは、 [セグメント化の概要を参照してください](../home.md)。
+使い方を習得したので、セグメントの作成 [!DNL Profile Query Language]と変更時にPQLを使用できます。 セグメント化について詳しくは、 [セグメント化の概要を参照してください](../home.md)。
