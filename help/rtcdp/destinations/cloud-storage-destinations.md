@@ -4,17 +4,17 @@ seo-title: クラウドストレージの宛先
 description: Adobe Real-time CDPは、セグメントをデータファイルとしてAmazon S3、AWS Kinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
 seo-description: Adobe Real-time CDPは、セグメントをデータファイルとしてAmazon S3、AWS Kinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 34%
+source-wordcount: '178'
+ht-degree: 35%
 
 ---
 
 
 # クラウドストレージの宛先 {#cloud-storage-destinations}
 
-Adobe Real-time CDPは、セグメントをデータファイルとしてクラウドストレージの場所に配信できます。 これにより、Amazon S3およびSFTP用のCSVファイルまたはタブ区切りファイルを使用して、オーディエンスとそのプロファイル属性を社内システムに送信できます。 AWS KinesisとAzureイベントハブの宛先の場合、データはJSON形式でエクスペリエンスプラットフォームからストリーミングされます。
+Adobe Real-time CDPは、セグメントをデータファイルとしてクラウドストレージの場所に配信できます。 This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for [!DNL Amazon S3] and SFTP. 宛先 [!DNL AWS Kinesis] と [!DNL Azure Event Hubs] 宛先の場合、データはJSON形式でExperience Platformからストリーミングされます。
 
 ![Adobe Cloud のストレージの保存先](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
 
