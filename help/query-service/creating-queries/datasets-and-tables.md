@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データセットとテーブルとスキーマ
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '181'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ PSQLコマンドラインを開き、次の場所から接続の詳細を使用�
 
 ![](../images/clients/psql/connect-bi.png)
 
-SQLとのPlatformで使用可能なテーブルを表示するには、 `\d` またはを使用でき `SHOW TABLES;`ます。
+SQLで使用可能なテーブルを表示す [!DNL Platform] るには、またはを使用でき `\d` ま `SHOW TABLES;`す。
 
 
 `\d` 標準のPostgreSQL表示を表示します。
@@ -44,7 +44,7 @@ SQLとのPlatformで使用可能なテーブルを表示するには、 `\d` ま
 (2 rows)
 ```
 
-`SHOW TABLES;` は、より詳細な表示を提供し、テーブルとPlatformUIにあるデータセット名を表示するカスタムコマンドです。
+`SHOW TABLES;` は、より詳細な表示を提供し、テーブルと [!DNL Platform] UIにあるデータセット名を表示するカスタムコマンドです。
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
