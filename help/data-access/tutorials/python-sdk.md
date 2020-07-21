@@ -4,21 +4,21 @@ solution: Experience Platform
 title: セキュアPythonデータアクセスSDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 49aa2e2664fe658d89b6279d1f869eb30c48ccad
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
 
 
-# セキュアPython [!DNL Data Access] SDK
+# セキュア [!DNL Python][!DNL Data Access] SDK
 
-Secure Python [!DNL Data Access] SDKは、Adobe Experience Platformからのデータセットの読み取りと書き込みを可能にするソフトウェア開発キットです。
+Secure [!DNL Python][!DNL Data Access] SDKは、Adobe Experience Platformからのデータセットの読み取りと書き込みを可能にするソフトウェア開発キットです。
 
 ## はじめに
 
-Secure Python [SDKを呼び出すための値にアクセスするには、次の](../../tutorials/authentication.md) 認証 [!DNL Data Access] チュートリアルを完了する必要があります。
+Secure [SDKを呼び出すための値にアクセスするには、次の](../../tutorials/authentication.md) 認証 [!DNL Python][!DNL Data Access] チュートリアルを完了する必要があります。
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
@@ -63,7 +63,7 @@ Secure Python [SDKを呼び出すための値にアクセスするには、次�
 python3 setup.py bdist_wheel --universal
 ```
 
-プロジェクトディレクトリから、Python 3環境にホイールをロードします。
+プロジェクトディレクトリから、ホイールを [!DNL Python] 3環境にロードします。
 
 ```python
 pip3 install ./dist/<name_of_wheel_file>.whl
@@ -148,7 +148,7 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY句
 
-ORDER BY句を使用すると、受け取った結果を、指定した列で特定の順序（昇順または降順）で並べ替えることができます。 Python SDKでは、この処理は `sort()` 関数を使用して行います。
+ORDER BY句を使用すると、受け取った結果を、指定した列で特定の順序（昇順または降順）で並べ替えることができます。 SDKでは、これは [!DNL Python] 関数を使用して行われ `sort()` ます。
 
 この `sort()` 関数の使用例を次に示します。
 
@@ -178,7 +178,7 @@ df = dataset_reader.offset(100).read()
 
 ## データセットの書き込み
 
-SDKは、データセットの書き込みをサポートしています。 [!DNL Python] データセットに書き込む必要があるパンダのデータフレームをユーザーが指定する必要があります。
+SDKは、データセットの書き込みをサポートしています。 [!DNL Python] ユーザーは、データセットに書き込む必要があるパンダのデータフレームを提供する必要があります。
 
 ### パンダのデータフレームの書き込み
 
