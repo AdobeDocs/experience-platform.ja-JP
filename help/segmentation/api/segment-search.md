@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: セグメント検索エンドポイント
 topic: guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 2%
 
 ---
@@ -225,7 +225,7 @@ curl -X GET \
 
 ## 付録 {#appendix}
 
-以下の節では、検索用語の仕組みについて詳しく説明します。 検索クエリは、次の方法で書き込まれます。 `s={FieldName}:{SearchExpression}`. したがって、例えば、AAMやPlatformという名前のセグメントを検索するには、次の検索クエリを使用します。 `s=segmentName:AAM%20OR%20Platform`.
+以下の節では、検索用語の仕組みについて詳しく説明します。 検索クエリは、次の方法で書き込まれます。 `s={FieldName}:{SearchExpression}`. したがって、AAMという名前のセグメントを検索する場合や、次の検索クエリ [!DNL Platform]を使用する場合などが考えられます。 `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] ベストプラクティスとして、上の例のように、検索式はHTMLエンコードする必要があります。
 
