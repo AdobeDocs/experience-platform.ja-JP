@@ -4,19 +4,19 @@ seo-title: 宛先の概要
 description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前に構築された統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
 seo-description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前に構築された統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: a61a2a4d9d51c402bb50153c06a93d255a3613cb
+source-git-commit: 7aa15772003cce1dfc7c3636048bce9a35bf8197
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 61%
+source-wordcount: '526'
+ht-degree: 58%
 
 ---
 
 
-# 宛先の概要 {#overview}
+# [!DNL Destinations]概要{#overview}
 
 ![宛先の概要バナー](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-**宛先**&#x200B;は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前に構築された統合です。宛先を使用して、チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲットを絞った広告など、様々な使用例に関する既知および不明なデータをアクティブ化できます。
+**[!DNL Destinations]** は、リアルタイム顧客データPlatformからのデータをシームレスにアクティベーションできる、目的のプラットフォームとの事前に構築された統合です。 宛先を使用して、チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲットを絞った広告など、様々な使用例に関する既知および不明なデータをアクティブ化できます。
 
 ## 宛先とソース {#destinations-and-sources}
 
@@ -48,14 +48,14 @@ Real-time CDP の主な機能の 1 つは、ファーストパーティーのデ
 
 アクセス制御の詳細については、『[アクセス制御ユーザーガイド](../../access-control/ui/overview.md)』を参照してください。
 
-## 宛先へのデータのアクティブ化に関するデータ・ガバナンス制限 {#data-governance}
+## [!DNL Data Governance] 宛先へのデータのアクティブ化に関する制限 {#data-governance}
 
 データ・ガバナンスは、次を通じて、リアルタイムCDPの宛先に適用されます。
 
 * *マーケティングの使用例* 。
 * *特定の使用ラベルを含むデータを、特定のマーケティング用途の宛先に対してアクティブ化できないように制限するデータ使用ポリシー* 。
 
-マー [ケティングの使用事例](/help/rtcdp/privacy/data-governance-overview.md#destinations) 、およびデータ・ポリシー違反の [解決についての詳細は、Real-time CDPのドキュメントの「Data Governance」を参照してください](/help/rtcdp/privacy/data-governance-overview.md#enforcement)。
+マー [!DNL Data Governance] ケティングの使用事例 [とデータ・ポリシー違反の](/help/rtcdp/privacy/data-governance-overview.md#destinations) 解決についての詳細は、「 Real-time CDP 」のドキュメントを参照してください [](/help/rtcdp/privacy/data-governance-overview.md#enforcement)。
 
 宛先作成ワークフローでのマーケティングの使用例の選択の詳細については、Real-time CDPの異なる宛先タイプについて、次のページを参照してください。
 
