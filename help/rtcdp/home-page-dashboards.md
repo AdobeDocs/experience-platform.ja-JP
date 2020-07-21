@@ -4,15 +4,15 @@ seo-title: リアルタイム顧客データプラットフォームのホーム
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 translation-type: tm+mt
-source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 97%
+source-wordcount: '634'
+ht-degree: 92%
 
 ---
 
 
-# リアルタイム顧客データプラットフォーム指標の概要
+# [!DNL Real-time Customer Data Platform] 指標の概要
 
 Real-time CDP にログインすると、指標ダッシュボードを含むアドビリアルタイム顧客データプラットフォーム（Real-time CDP）ホームページが表示されます。
 
@@ -43,13 +43,13 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### データセット
 
-**[!UICONTROL データセット]**&#x200B;カウンターは、システム内のデータセットの数とプラットフォーム内のデータの量を示します。このカウンターは、データセットの作成時に更新されます。
+The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. このカウンターは、データセットの作成時に更新されます。
 
 データセットの詳細については、「 [データセットの概要](../catalog/datasets/overview.md)」を参照してください。
 
 ### プロファイル
 
-**[!UICONTROL プロファイル数]**&#x200B;は、リアルタイム顧客プロファイル内のプロファイルを持つ人の合計数を示します。プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
+**[!UICONTROL プロファイル数]** は、内でプロファイルを持つ人の合計数を示し [!DNL Real-time Customer Profile]ます。 プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
 
 このカウントでは、「統合プロファイル」の[結合ポリシー](profile/merge-policies.md)構成で設定された既定の結合ポリシーを使用します。
 
