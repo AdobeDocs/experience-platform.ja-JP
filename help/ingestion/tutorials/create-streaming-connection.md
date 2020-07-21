@@ -4,9 +4,9 @@ solution: Experience Platform
 title: APIを使用したストリーミング接続の作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '633'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # APIを使用したストリーミング接続の作成
 
-このチュートリアルは、Adobe Experience Platformデータ取り込みサービスAPIの一部であるストリーミング取り込みAPIの使用を開始する際に役立ちます。
+このチュートリアルは、Adobe Experience PlatformデータAPIの一部であるストリーミング取り込みAPIの使用を開始する際に役立ち [!DNL Ingestion Service] ます。
 
 ## はじめに
 
@@ -24,30 +24,30 @@ Adobe Experience Platformに対してストリーミングデータを開始す�
 
 このチュートリアルでは、さまざまなAdobe Experience Platformサービスの実用的な知識も必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [Experience Data Model(XDM)](../../xdm/home.md): Platformがエクスペリエンスデータを編成する際に使用する標準化されたフレームワーク。
-- [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): エクスペリエンスデータを [!DNL Platform] 編成するための標準化されたフレームワーク。
+- [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
 
 以下の節では、ストリーミング取り込みAPIの呼び出しを正常に行うために知っておく必要がある追加情報について説明します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -176,7 +176,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 次の手順
 
-ストリーミング接続を作成したら、時系列または記録データをストリーミングして、Platform内のデータを取り込むことができます。 時系列データをPlatformにストリーミングする方法については、「 [ストリーミング時系列データのチュートリアル](./streaming-time-series-data.md)」を参照してください。 レコードデータをPlatformにストリーミングする方法については、「 [ストリーミングレコードデータのチュートリアル](./streaming-record-data.md)」を参照してください。
+ストリーミング接続を作成したら、時系列または記録データをストリーミングし、データを取り込むことができ [!DNL Platform]ます。 時系列データをストリーミングする方法につ [!DNL Platform]いては、「 [ストリーミング時系列データのチュートリアル](./streaming-time-series-data.md)」を参照してください。 レコードデータをストリーミング再生する方法につ [!DNL Platform]いては、 [ストリーミングレコードデータのチュートリアル](./streaming-record-data.md)を参照してください。
 
 ## 付録
 
@@ -184,6 +184,6 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ### 認証済みストリーミング接続
 
-認証済みのデータ収集機能を使用すると、リアルタイム顧客プロファイルやIDなどのAdobe Experience Platformサービスで、信頼できるソースからのレコードと信頼できないソースからのレコードを区別できます。 個人識別情報(PII)を送信するクライアントは、POSTリクエストの一部としてIMSアクセストークンを送信することで行うことができます。IMSトークンが有効な場合、レコードは信頼できるソースから収集されたレコードとしてマークされます。
+認証済みのデータ収集機能を使用すると、 [!DNL Real-time Customer Profile][!DNL Identity]やなどのAdobe Experience Platformサービスを使用して、信頼できるソースと信頼できないソースからのレコードを区別できます。 個人識別情報(PII)を送信するクライアントは、POSTリクエストの一部としてIMSアクセストークンを送信することで行うことができます。IMSトークンが有効な場合、レコードは信頼できるソースから収集されたレコードとしてマークされます。
 
 認証済みストリーミング接続の作成について詳しくは、「認証済みストリーミング接続の [作成](create-authenticated-streaming-connection.md)」チュートリアルを参照してください。
