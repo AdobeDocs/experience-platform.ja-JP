@@ -4,9 +4,9 @@ solution: Experience Platform
 title: APIを使用したデータセットの作成
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1234'
 ht-degree: 1%
 
 ---
@@ -20,31 +20,31 @@ ht-degree: 1%
 
 このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): Experience Platformを使用すると、データをバッチファイルとして取り込むことができます。
-* [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] データをバッチファイルとして取り込むことができます。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-以下の節では、PlatformAPIを正しく呼び出すために知っておく必要がある追加情報について説明します。
+以下の節では、APIを正しく呼び出すために知る必要がある追加情報について説明し [!DNL Platform] ます。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 * 認証： 無記名 `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -60,9 +60,9 @@ Experience Platform内のすべてのリソースは、特定の仮想サンド�
 
 このチュートリアルは、 [スキーマレジストリAPIのチュートリアルが終了した時点で開始され](../../xdm/tutorials/create-schema-api.md) 、そのチュートリアルで作成したロイヤルティメンバーのスキーマを利用します。
 
-スキーマレジストリのチュートリアルを完了していない場合は、開始して、必要なスキーマを構成した後で、このデータセットのチュートリアルを続行してください。
+この [!DNL Schema Registry] チュートリアルを完了していない場合は、開始を進め、必要なスキーマを構成した後で、このデータセットのチュートリアルを続けてください。
 
-次の呼び出しを使用して、スキーマレジストリAPIチュートリアルで作成したロイヤルティメンバースキーマを表示できます。
+次の呼び出しを使用して、 [!DNL Schema Registry] APIチュートリアルで作成した忠誠度メンバースキーマを表示できます。
 
 **API形式**
 
@@ -329,7 +329,7 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 ## シグナルバッチ完了
 
-すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。 シグナリングの完了により、サービスでは、アップロードされたファイルに対してカタログ `DataSetFile` エントリが作成され、以前に生成されたバッチに関連付けられます。 カタログバッチは成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータに対して使用できるようになります。
+すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。 シグナリングの完了により、サービスはアップロードされたファイルの [!DNL Catalog]`DataSetFile` エントリを作成し、以前に生成されたバッチに関連付けます。 バッチは成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータに対して使用できるようになります。 [!DNL Catalog]
 
 **API形式**
 
