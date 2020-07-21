@@ -4,23 +4,23 @@ solution: Experience Platform
 title: ExperienceEventクエリ
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
 
 
-# ExperienceEventクエリ
+# [!DNL ExperienceEvent] クエリ
 
-Adobe Experience Platformクエリサービスは、標準的なSQLクエリに加え、ExperienceEventsを使用したクエリの記述をサポートします。 ExperienceEventはExperience Data Model(XDM)クラスで、ユーザーがWebサイトやサービスを操作したときに、不変で集約されないシステムのスナップショットを表します。したがって、時間ドメインの分析に使用できます。 XDMとエクスペリエンスのイベントについて詳しくは、「XDM System」の概要を参照してください。 クエリサービスとExperienceEventsを組み合わせることで、ユーザー間の行動傾向を効果的に追跡できます。 次のドキュメントは、ExperienceEventsに関連するクエリの例を示しています。
+Adobe Experience Platformでは、標準的なSQLクエリに加えて、を使用したクエリの書き込みもサポート [!DNL Query Service][!DNL ExperienceEvents]されます。 An [!DNL ExperienceEvent] は [!DNL Experience Data Model] (XDM)クラスで、ユーザーがWebサイトやサービスを操作したときの、不変で集約されないシステムのスナップショットを表し、タイムドメイン分析に使用できます。 XDMについて詳しくは、 [!DNL Experience Events][!DNL XDM System] 概要を参照してください。 と組み合わせ [!DNL Query Service] るこ [!DNL ExperienceEvents]とで、ユーザー間の行動トレンドを効果的に追跡できます。 次のドキュメントは、に関するクエリの例を示し [!DNL ExperienceEvents]ます。
 
 ## 特定の日付範囲での日別イベントのトレンドレポートの作成
 
 次の例では、指定した日付範囲で、日付ごとにグループ化したイベントのトレンドレポートを作成します。 具体的には、様々な解析値をA、BおよびCと合計し、パーカが視聴された回数を合計します。
 
-エクスペリエンスイベントデータセットのタイムスタンプ列はUTCです。 次の例では、この `from_utc_timestamp()` 関数を使用して、タイムスタンプをUTCからEDTに変換します。 次に、この関数を使用して、タイムスタンプの残りの部分から日付を分離します。 `date_format()`
+データセットに含まれるタイムスタンプ列 [!DNL Experience Event] はUTCです。 次の例では、この `from_utc_timestamp()` 関数を使用して、タイムスタンプをUTCからEDTに変換します。 次に、この関数を使用して、タイムスタンプの残りの部分から日付を分離します。 `date_format()`
 
 ```sql
 SELECT 
