@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ETLワークフロー
 topic: overview
 translation-type: tm+mt
-source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 0%
 
 以下に示すアクションは、『 [ETL統合ガイド](home.md)』で概要を説明しています。 特定の「図」を参照する手順と、ここに示すワークフローと同様の操作を説明する手順があります。
 
-### 図1 — 新しいAdobe Experience Platform Connectorの設定：
+### 図1 — 新しいAdobe Experience Platformコネクタの設定：
 
 ![](images/image2.png)
 
-### 図2 — エクスペリエンスプラットフォームコネクタが有効になっています：
+### 図2 - [!DNL Experience Platform] コネクタがアクティブになっています：
 
 ![](images/image3.png)
 
@@ -34,11 +34,11 @@ ht-degree: 0%
 
 ![](images/image4.png)
 
-### 図4 — 新しい変換UI、エクスペリエンスプラットフォーム接続の選択：
+### 図4 — 新しい変換UI、「 [!DNL Experience Platform] Connection」を選択します。
 
 ![](images/image5.png)
 
-### 図5 — ソースエクスペリエンスプラットフォームのデータセットの参照：
+### 図5 — ソース [!DNL Experience Platform] データセットの参照：
 
 ![](images/image6.png)
 
@@ -58,7 +58,7 @@ ht-degree: 0%
 
 ![](images/image10.png)
 
-### 図10 - Experience Data Model(XDM)ターゲットデータセットの定義：
+### 図10 - [!DNL Experience Data Model] (XDM)ターゲットデータセットの定義：
 
 ![](images/image11.png)
 
