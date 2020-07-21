@@ -1,37 +1,37 @@
 ---
-title: JW Player Analytics（ベータ版）拡張機能
-seo-title: JW Player Analytics（ベータ版）拡張機能
-description: JW Player Analytics（ベータ版）拡張機能は、アドビのリアルタイム顧客データプラットフォームの分析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: JW Player Analytics（ベータ版）拡張機能は、アドビのリアルタイム顧客データプラットフォームの分析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+title: JWプレイヤーAnalytics（ベータ版）拡張機能
+seo-title: JWプレイヤーAnalytics（ベータ版）拡張機能
+description: JWプレイヤーAnalytics（ベータ版）拡張機能は、Adobe Real-time Customer DataPlatformでの解析の対象となるものです。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: JWプレイヤーAnalytics（ベータ版）拡張機能は、Adobe Real-time Customer DataPlatformでの解析の対象となるものです。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '570'
 ht-degree: 4%
 
 ---
 
 
-# JW Player Analytics（ベータ版）拡張機能 {#jw-player-analytics-extension}
+# [!DNL JW Player Analytics] （ベータ版）拡張機能 {#jw-player-analytics-extension}
 
 ## 概要 {#overview}
 
-この拡張機能は、JW PlayerイベントをAdobe Video Analyticsに接続するためのJW Playerアダプターをインストールします。 Adobe Video Analyticsの機能を活用して、顧客のビデオ表示習慣を把握するための詳細なインサイトを得ます。
+この拡張機能は、アドビのビデオAnalyticsに [!DNL JW Player] イベントを接続するための [!DNL JW Player] アダプターをインストールします。 アドビビデオAnalyticsの機能を活用して、顧客のビデオ視聴習慣を把握するための詳細な洞察を得ます。
 
-JW Player Analytics（ベータ版）は、Adobe Real-time Customer Data PlatformのAnalytics拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)。
+[!DNL JW Player Analytics] （ベータ版）は、Adobeリアルタイム顧客データPlatformのAnalytics拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-JW Player Analytics（ベータ版）拡張機能をインストールするには：
+（ベータ版）拡張機能をインストールするに [!DNL JW Player Analytics] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -39,9 +39,9 @@ JW Player Analytics（ベータ版）拡張機能をインストールするに�
 4. 「使用可能な起動プロパティ **[!UICONTROL を選択]** 」ウィンドウで、拡張機能をインストールするLaunchプロパティを選択します。 また、「起動」で新しいプロパティを作成するオプションもあります。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、起動ドキュメントの [プロパティページセクション](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) で説明します。
 5. ワークフローが起動し、インストールが完了します。
 
-拡張機能の設定オプションについて詳しくは、Adobe Exchangeの [JW Player Analytics(BETA)拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) を参照してください。
+拡張機能の設定オプションについて詳しくは、Adobe Exchangeの [JW PlayerAnalytics(BETA)拡張機能のページ](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) を参照してください。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 
 ## 拡張機能の使用方法 {#how-to-use}
