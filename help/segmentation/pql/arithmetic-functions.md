@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 演算関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 5%
+source-wordcount: '230'
+ht-degree: 18%
 
 ---
 
 
 # 演算関数
 
-演算関数は、プロファイルクエリ言語(PQL)の値に対して基本的な演算を実行するために使用します。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+演算関数は、 [!DNL Profile Query Language] (PQL)の値に対して基本的な演算を実行するために使用します。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## Add
 
 2つの引数式の合計を求めるには、 `+` （加算）関数を使用します。
 
-**形式**
+**書式**
 
 ```sql
 {NUMBER} + {NUMBER}
@@ -38,7 +38,7 @@ product1.price + product2.price
 
 2つの引数式の積を求めるには、 `*` （乗算）関数を使用します。
 
-**形式**
+**書式**
 
 ```sql
 {NUMBER} * {NUMBER}
@@ -56,7 +56,7 @@ product.inventory * product.price
 
 2つの引数式の違いを見つけるには、 `-` （減算）関数を使用します。
 
-**形式**
+**書式**
 
 ```sql
 {NUMBER} - {NUMBER}
@@ -74,7 +74,7 @@ product1.price - product2.price
 
 2つの引数式の商を求めるのに `/` （除算）関数を使用します。
 
-**形式**
+**書式**
 
 ```sql
 {NUMBER} / {NUMBER}
@@ -92,7 +92,7 @@ totalProduct.price / totalProduct.sold
 
 2つの引数式を除算した後の剰余を求めるには、 `%` (modulo/remainder)関数を使用します。
 
-**形式**
+**書式**
 
 ```sql
 {NUMBER} % {NUMBER}
@@ -108,4 +108,4 @@ person.age % 5 = 0
 
 ## 次の手順
 
-これで算術関数の学習が終わり、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
+これで算術関数の学習が終わり、PQLクエリ内で使用できます。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
