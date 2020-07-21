@@ -4,9 +4,9 @@ solution: Experience Platform
 title: アドビ定義関数
 topic: queries
 translation-type: tm+mt
-source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '287'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 アドビの大きな差別化要因の1つは、エクスペリエンスデータを理解し、そのデータを使用して顧客が何を行う必要があるかを把握できることです。 この理解を活用して、ジョブを簡単にするヘルパー関数を作成できます。
 
-このドキュメントでは、3つの主要なAnalyticsアクティビティをサポートするAdobe定義関数(ADF)について説明します。
+このドキュメントでは、3つの主要な [!DNL Analytics] アクティビティをサポートするAdobe定義関数(ADF)について説明します。
 - [セッション化](#sessionization)
 - [帰属](#attribution)
 - [パス](#pathing)
@@ -91,13 +91,13 @@ LIMIT 31;
 
 アドビAnalyticsでは、アトリビューション設定はeVarなどの変数を使用して設定され、データが取り込まれると生成されます。
 
-クエリサービスにあるAttribution ADFでは、クエリ時にこれらの割り当てを定義して生成することができます。
+にあるアトリビューションADFは、クエリ時にこれらの割り当てを定義して生成するのを [!DNL Query Service] 許可します。
 
 この例では、ラストタッチアトリビューションに焦点を当てていますが、アドビではファーストタッチアトリビューションもオファーしています。
 
 >[!NOTE]
 >
->タイムアウトおよびイベントベースの有効期限が設定されたその他のオプションは、今後のクエリサービスバージョンで利用できる予定です。
+>タイムアウトおよびイベントベースの有効期限が設定されたその他のオプションは、の今後のバージョンで利用できるようにな [!DNL Query Service]ります。
 
 **構文：**
 
