@@ -1,39 +1,39 @@
 ---
 title: Contentsquare拡張子
 seo-title: Contentsquare拡張子
-description: Contentsquareの拡張機能は、Adobe Real-time Customer Data Platformの解析の送信先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: Contentsquareの拡張機能は、Adobe Real-time Customer Data Platformの解析の送信先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: Contentsquareの拡張機能は、Adobe Real-time Customer DataPlatformの解析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: Contentsquareの拡張機能は、Adobe Real-time Customer DataPlatformの解析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '569'
 ht-degree: 4%
 
 ---
 
 
-# Contentsquare拡張子 {#contentsquare-extension}
+# [!DNL Contentsquare] 拡張機能 {#contentsquare-extension}
 
 ## 概要 {#overview}
 
-ページ内の行動を視覚化するには、「顧客が放棄した理由」と「改善策」を参照してください。 売上高は、各AnalyticsセグメントおよびターゲットテストのUX要素とコンテンツ要素に関連付けます。 Contentsquareタグをインストールし、カスタム変数とイベントを設定します。 数回のクリックでUX分析のデータを収集する開始。
+ページ内の行動を視覚化するには、「顧客が放棄した理由」と「改善策」を参照してください。 売上高は、各AnalyticsセグメントとTargetテストのUX要素とコンテンツ要素に属する。 タグをインストールし、カスタム変数とイベントを [!DNL Contentsquare] 設定します。 数回のクリックでUX分析のデータを収集する開始。
 
-Contentsquareは、Adobe Real-time Customer Data PlatformのAnalytics拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100364.html)。
+[!DNL Contentsquare] は、アドビのリアルタイム顧客データPlatformのanalytics拡張です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100364.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ![Contentsquare拡張子](assets/contentsquare-extension.png)
 
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-Contentsquare拡張機能をインストールするには：
+拡張機能をインストールするに [!DNL Contentsquare] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -43,7 +43,7 @@ Contentsquare拡張機能をインストールするには：
 
 拡張機能設定オプションについて詳しくは、Adobe Exchangeの [Contentsquare拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.100364.html) を参照してください。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 
 ## 拡張機能の使用方法 {#how-to-use}
