@@ -4,23 +4,23 @@ solution: Experience Platform
 title: オブジェクト関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 5%
+source-wordcount: '111'
+ht-degree: 31%
 
 ---
 
 
 # オブジェクト関数
 
-プロファイルクエリ言語(PQL)オファー機能を使用して、オブジェクトとのやり取りを簡単にします。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+[!DNL Profile Query Language] (PQL)オファーは、オブジェクトとのやり取りを簡単にするために機能します。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## Nullである
 
 この `isNull` 関数は、オブジェクト参照が存在しないかどうかを判定します。
 
-**形式**
+**書式**
 
 ```sql
 {OBJECT}.isNull()
@@ -38,7 +38,7 @@ person.homeAddress.isNull()
 
 この `isNotNull` 関数は、オブジェクト参照が存在するかどうかを判定します。
 
-**形式**
+**書式**
 
 ```sql
 {OBJECT}.isNotNull()
@@ -54,4 +54,4 @@ person.homeAddress.isNotNull()
 
 ## 次の手順
 
-オブジェクトの機能について学習したので、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
+オブジェクトの機能について学習したので、PQLクエリ内で使用できます。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
