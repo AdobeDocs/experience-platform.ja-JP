@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ETL変換の例
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '466'
 ht-degree: 1%
 
 ---
@@ -20,12 +20,12 @@ ht-degree: 1%
 
 ### サンプルファイル
 
-サンプルのCSVファイルとJSONファイルは、アドビが管理するパブリックETLリファレンスGitHubレポートから入手できます。
+サンプルのCSVファイルとJSONファイルは、アドビが管理するパブリックETLリファレンス [!DNL GitHub] レポートから入手できます。
 
 - [CRM_プロファイル.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_プロファイル.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
-### CSVの例
+### CSV の例
 
 次のCRMデータは、 `CRM_profiles.csv`
 
@@ -55,10 +55,10 @@ CRMデータのマッピング要件について、次の表に示す変換に�
 | 性別 | person.gender | 性別を対応するperson.gender列挙値に変換 |
 | DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | Transform birthDayAndMonth as<br/><br/>stringTransform birthDate as stringTransform birthYear as short int |
 | EMAIL | personalEmail.address | 文字列としてコピー |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | identityMapのCRMID配列に文字列としてコピーし、Primaryをfalseに設定します |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | identityMapのECID配列の最初のエントリに文字列としてコピーし、Primaryをfalseに設定します。 |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | identityMapのLOYALTYID配列に文字列としてコピーし、Primaryをtrueに設定します。 |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMapのECID配列の2番目のエントリに文字列としてコピーし、「Primary」を「false」に設定します。 |
+| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | identityMapのCRMID配列に文字列としてコピーし、プライマリをfalseに設定 |
+| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | identityMapのECID配列の最初のエントリに文字列としてコピーし、プライマリをfalseに設定します。 |
+| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | identityMapのLOYALTYID配列に文字列としてコピーし、プライマリをtrueに設定します。 |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMapのECID配列の2番目のエントリに文字列としてコピーし、プライマリをfalseに設定します。 |
 | 電話 | homePhone.number | 文字列としてコピー |
 | 通り | homeAddress.street1 | 文字列としてコピー |
 | 市区町村 | homeAddress.city | 文字列としてコピー |
@@ -177,7 +177,7 @@ CRMデータのマッピング要件について、次の表に示す変換に�
 
 ### データフレームの例
 
-次の例のデータフレームの構造は、XDM Individualプロファイルクラスを実装するスキーマにマップされており、その型のスキーマに関連付けられた最も一般的なフィールドが含まれています。
+次の例のデータフレームの構造は、 [!DNL XDM Individual Profile] クラスを実装するスキーマにマップされており、その型のスキーマに関連付けられた最も一般的なフィールドが含まれています。
 
 ```python
 [
@@ -250,7 +250,7 @@ CRMデータのマッピング要件について、次の表に示す変換に�
 ]
 ```
 
-Adobe Experience Platformで使用するデータフレームを作成する場合、フィールドが正しくマップされるように、階層構造が既存のXDMスキーマの階層構造と完全に一致するようにすることが重要です。
+Adobe Experience Platformで使用するデータフレームを作成する場合、フィールドを正しくマップするためには、階層構造が既存のXDMスキーマの階層構造と完全に一致していることを確認することが重要です。
 
 ## IDをIDマップに変換
 
