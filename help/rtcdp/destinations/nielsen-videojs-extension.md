@@ -1,42 +1,42 @@
 ---
 title: Nielsen VideoJSプレイヤーハンドラーの拡張
 seo-title: Nielsen VideoJSプレイヤーハンドラーの拡張
-description: ニールセンビデオJSプレーヤーハンドラー拡張は、アドビのリアルタイム顧客データプラットフォームの分析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: ニールセンビデオJSプレーヤーハンドラー拡張機能は、Adobe Real-time Customer Data Platformの分析の対象です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: ニールセンビデオJSプレイヤーハンドラー拡張機能は、アドビのリアルタイム顧客データPlatformの分析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: Nielsen VideoJS Player Handler Extensionは、Adobe Real-time Customer DataPlatformの分析の対象です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '630'
 ht-degree: 4%
 
 ---
 
 
-# Nielsen VideoJSプレーヤーハンドラーの拡張 {#nielsen-vjs-extension}
+# [!DNL Nielsen VideoJS Player Handler] 拡張機能 {#nielsen-vjs-extension}
 
 ## 概要 {#overview}
 
-Nielsen Digital SDKは、以下のデジタル測定製品を使用して、拡張機能オファーオーディエンス測定を起動します。
+[!DNL Nielsen Digital SDK] 以下のデジタル測定製品を使用して、拡張機能オファーのオーディエンス測定を開始します。
 
 DCR: 広告のあるコンテンツを含む、非線形のデジタルコンテンツを日々測定できる測定ソリューションは、デスクトップ、モバイル、タブレット、および接続されたデバイスでのデジタルコンテンツのオーディエンス消費量を包括的に表示できます。
 
 DTVR: これは、プログラミングソースに参加するデスクトップおよびモバイルデバイスで発生するリニアテレビ視聴を考慮したものです。 MRCから認定を受けた最初のソリューションは、コンピュータや携帯端末でのプログラミングに関するTVオーディエンスの測定への貢献です。
 
-Nielsen VideoJS Player Handlerは、Adobe Real-time Customer Data PlatformのAnalytics拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html)。
+[!DNL Nielsen VideoJS Player Handler] は、アドビのリアルタイム顧客データPlatformのanalytics拡張です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ![Nielsen VideoJSプレーヤーハンドラーの拡張](assets/nielsen-videojs-extension.png)
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-Nielsen VideoJS Player Handler Extensionをインストールするには：
+拡張機能をインストールするに [!DNL Nielsen VideoJS Player Handler] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -46,7 +46,7 @@ Nielsen VideoJS Player Handler Extensionをインストールするには：
 
 拡張機能の構成オプションとインストールのサポートについて詳しくは、Adobe Exchangeの [Nielsen Digital SDKページを参照してください](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html)。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 ## 拡張機能の使用方法 {#how-to-use}
 
