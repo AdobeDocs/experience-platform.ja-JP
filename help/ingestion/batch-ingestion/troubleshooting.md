@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Batch Ingestionトラブルシューティングガイド
+title: Adobe Experience Platformバッチ取り込みのトラブルシューティングガイド
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Batch Ingestionトラブルシューティングガイド
 
-このドキュメントは、Adobe Experience Platform Batch Data Ingest APIに関するよくある質問への回答に役立ちます。
+このドキュメントは、Adobe Experience PlatformAPIに関するよくある質問への回答に役立ち [!DNL Batch Data Ingestion] ます。
 
 ## バッチAPI呼び出し
 
@@ -109,7 +109,7 @@ JSON行の場合、1行に1つのJSONオブジェクトがあります。 以下
 ]
 ```
 
-デフォルトでは、バッチデータ取り込みでは1行のJSONが使用されます。
+デフォルトでは、は1行のJSONを [!DNL Batch Data Ingestion] 使用します。
 
 ### CSVの取り込みはサポートされていますか。
 
@@ -171,14 +171,14 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | Status | マスターに書き込まれたデータ | 説明 |
 | ------ | ---------------------- | ----------- |
 | 破棄 |  | クライアントは、予想された時間枠でバッチを完了できませんでした。 |
-| 中止 |  | クライアントは、Batch Data Ingest APIを使用して、指定したバッチに対して中止操作を明示的に呼び出しました。 バッチがロード済み状態になると、バッチは中止できません。 |
+| 中止 |  | クライアントは、APIを介して、指定したバッチに対して中止操作を明示的に呼び出しました。 [!DNL Batch Data Ingestion] バッチがロード済み状態になると、バッチは中止できません。 |
 | アクティブ/成功 | x | バッチはステージからマスターに正常にプロモートされ、ダウンストリーム消費に使用できるようになりました。 **注意：** 「アクティブ」と「成功」は同じ意味で使用されます。 |
 | アーカイブ済み |  | バッチはコールドストレージにアーカイブされました。 |
 | 失敗/失敗 |  | 不正な構成または不正なデータ、あるいはその両方から生じる端末状態。 実行可能なエラーがバッチと共に記録され、クライアントがデータを修正して再送信できるようになります。 **注意：** 「失敗」と「失敗」は同じ意味で使用されます。 |
-| 非アクティブ | x | バッチは正常にプロモートされましたが、元に戻されたか、期限が切れています。 バッチはダウンストリーム消費に使用できなくなりますが、基になるデータが保持、アーカイブまたはその他の方法で削除されるまで、基になるデータはマスターに残ります。 |
+| 非アクティブ | x | バッチは正常にプロモートされましたが、元に戻されたか、期限が切れています。 バッチはダウンストリーム消費に使用できなくなりますが、基礎となるデータは、保持、アーカイブまたはその他の方法で削除されるまでマスターに残ります。 |
 | ロード中 |  | クライアントは現在バッチのデータを書き込んでいます。 バッチは、現時点で **はプロモーションの準備ができていません** 。 |
 | ロード済み |  | クライアントはバッチのデータの書き込みを完了しました。 バッチはプロモーションの準備ができています。 |
-| 保持 |  | データはマスターから取り出され、Adobe Data Lakeの指定されたアーカイブに保存されています。 |
+| 保持 |  | データはマスターから取り出され、Adobe Data Lakeの指定されたアーカイブに保存されます。 |
 | ステージング |  | クライアントがプロモーション用のバッチに正常に署名しました。データはダウンストリームでの消費用にステージングされています。 |
 | 再試行中 |  | クライアントはプロモーション用のバッチに署名しましたが、エラーが発生したため、バッチはバッチ監視サービスによって再試行されています。 この状態は、データの取り込みに遅延が生じる可能性があることをクライアントに通知するために使用できます。 |
 | 停止 |  | クライアントがプロモーション用のバッチに署名しましたが、バッチ監視サービスによる `n` 再試行の後、バッチプロモーションが停止しました。 |
@@ -193,7 +193,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### バッチが「停止」の場合の意味は何ですか。
 
-バッチが「停止」にある場合は、Data Ingestion Servicesでバッチの取り込みが困難で、すべての再試行が使い果たされていることを意味します。
+バッチが「停止」にある場合は、バッチの取り込み [!DNL Data Ingestion Services] が困難で、すべての再試行が使い果たされたことを意味します。
 
 ### バッチがまだ「読み込み中」の場合、どのような意味を持ちますか。
 
@@ -228,7 +228,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### バッチの削除方法
 
-バッチは、カタログから直接削除する代わりに、次のいずれかの方法を使用して削除する必要があります。
+バッチは、から直接削除する代わりに、 [!DNL Catalog]以下に示すいずれかの方法を使用して削除する必要があります。
 
 1. バッチが進行中の場合は、バッチを中止する必要があります。
 2. バッチが正常にマスターされた場合は、バッチを元に戻す必要があります。
@@ -239,11 +239,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 | 指標 | 説明 |
 | ------ | ----------- |
-| inputByteSize | Data Ingest Servicesで処理するためにステージングされた合計バイト数です。 |
-| inputRecordSize | Data Ingest Servicesで処理するためにステージ化された行の合計数です。 |
-| outputByteSize | Data Ingestion ServicesがData Lakeに出力する合計バイト数です。 |
-| outputRecordSize | Data Ingestion ServicesがData Lakeに出力する行の合計数です。 |
-| partitionCount | Data Lakeに書き込まれたパーティションの合計数です。 |
+| inputByteSize | 処理対象としてステージングされた合計バイト数 [!DNL Data Ingestion Services] です。 |
+| inputRecordSize | 処理対象としてステージングされた行の合計数 [!DNL Data Ingestion Services] です。 |
+| outputByteSize | によって出力される合計バイト数 [!DNL Data Ingestion Services] で [!DNL Data Lake]す。 |
+| outputRecordSize | によって出力される行の総数 [!DNL Data Ingestion Services] で [!DNL Data Lake]す。 |
+| partitionCount | に書き込まれたパーティションの合計数 [!DNL Data Lake]。 |
 
 ### 指標が一部のバッチで使用できないのはなぜですか？
 
@@ -259,6 +259,6 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | 106 | データセットファイルが空です。 |
 | 118 | CSVファイルには、空のヘッダー行が含まれています。 |
 | 200 | バッチは処理に受け入れられ、アクティブや失敗などの最終状態にトランジションします。 送信されたバッチは、エンドポイントを使用して監視でき `GetBatch` ます。 |
-| 400 | 正しくないリクエストです。バッチ内に不足しているか、重複しているチャンクがある場合に返されます。 |
+| 400 | 正しくないリクエストです. バッチ内に不足しているか、重複しているチャンクがある場合に返されます。 |
 
 [large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
