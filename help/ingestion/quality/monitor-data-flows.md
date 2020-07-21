@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ取り込みの監視
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # データ取り込みの監視
 
-データ取り込みを使用すると、Adobe Experience Platformにデータを取り込むことができます。 バッチインジェストを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングエンドポイントを使用してリアルタイムにデータをPlatformに取り込むことができます。
+データ取り込みを使用すると、Adobe Experience Platformにデータを取り込むことができます。 バッチインジェストを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングインジェストを使用すると、データをリアルタイムでストリーミングエンドポイントを使用して取り込むことができます。 [!DNL Platform]
 
 このユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内のデータを監視する手順を説明します。 このガイドを使用するには、Adobe IDとAdobe Experience Platformへのアクセス権が必要です。
 
 ## ストリーミングのエンド・ツー・エンドのデータ取り込みの監視
 
-[Experience PlatformUIで、左側のナビゲーションメニューの「](https://platform.adobe.com)監視 **」をクリックし、「** Streaming end-to-end ****」をクリックします。
+[Experience PlatformUIで、左側のナビゲーションメニューの「](https://platform.adobe.com)監視 **[!UICONTROL 」をクリックし、「]** Streaming end-to-end ****」をクリックします。
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-[ *ストリーミングエンドツーエンドの監視* ]ページが表示されます。 このワークスペースには、Platformが受け取るストリームイベントの割合を示すグラフ、リアルタイム顧客プロファイルが正常に処理したストリームイベントの割合を示すグラフ [](../../profile/home.md)、および入力データの詳細リストが表示されます。
+[ *[!UICONTROL ストリーミングエンドツーエンドの監視]* ]ページが表示されます。 このワークスペースには、受信したストリームイベントの割合を示すグラフ [!DNL Platform]、によって正常に処理されたストリームイベントの割合を示すグラフ、 [!DNL Real-time Customer Profile](../../profile/home.md)および入力データの詳細リストが表示されます。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -32,11 +32,11 @@ ht-degree: 0%
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-下のグラフには、過去7日間にプロファイル別に、正常に処理されたストリームイベントの割合が表示されます。 この日付範囲は、強調表示されたボタンをクリックすると、様々な期間を表示するように調整できます。
+下のグラフには、過去7日間で正常に処理されたストリームイベントの割合 [!DNL Profile] が表示されます。 この日付範囲は、強調表示されたボタンをクリックすると、様々な期間を表示するように調整できます。
 
 >[!NOTE]
 >
->このグラフにデータを表示するには、プロファイルを **明示的に有効にする必要があります** 。 プロファイル用のストリーミングデータを有効にする方法については、『 [datasetsユーザガイド](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)』を参照してください。
+>このグラフにデータを表示するには、データを **明示的に有効にする必要があり**[!DNL Profile]ます。 のストリーミングデータを有効にする方法につ [!DNL Profile]いては、『 [datasetsユーザガイド](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)』を参照してください。
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -60,11 +60,11 @@ ht-degree: 0%
 
 ## バッチのエンドツーエンドのデータ取り込みの監視
 
-[ [Experience PlatformUI](https://platform.adobe.com)]で、左側のナビゲーションメニューの[ **監視** ]をクリックします。
+で、左側のナビゲ [!DNL Experience Platform UI](https://platform.adobe.com)ーションメニューの[ **[!UICONTROL 監視]** ]をクリックします。
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-「 **バッチエンドツーエンドの監視** 」ページが表示され、以前に取り込んだバッチのリストが表示されます。 任意のバッチをクリックすると、そのレコードに関する詳細情報を表示できます。
+「 **[!UICONTROL バッチエンドツーエンドの監視]** 」ページが表示され、以前に取り込んだバッチのリストが表示されます。 任意のバッチをクリックすると、そのレコードに関する詳細情報を表示できます。
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
