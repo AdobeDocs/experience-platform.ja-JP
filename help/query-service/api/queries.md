@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービス開発ガイド
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '645'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 ## サンプルAPI呼び出し
 
-以下の節では、クエリサービスAPIの `/queries` エンドポイントを使用した呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
+以下の節では、 `/queries`[!DNL Query Service] APIのエンドポイントを使用して行う呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
 
 ### クエリのリストの取得
 
