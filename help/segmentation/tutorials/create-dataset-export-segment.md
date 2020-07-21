@@ -4,9 +4,9 @@ solution: Experience Platform
 title: オーディエンスセグメントの書き出し用データセットの作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## はじめに
 
-セグメントをエクスポートするには、XDM個別プロファイル和集合スキーマに基づくデータセットが必要です。 和集合スキーマは、システム生成の読み取り専用スキーマで、同じクラス(この場合はXDM Individualプロファイルクラス)を共有するすべてのスキーマのフィールドを集計します。 和集合表示のスキーマの詳細については、『スキーマレジストリ開発ガイド』の「 [リアルタイム顧客プロファイル」の節を参照してください](../../xdm/schema/composition.md#union)。
+セグメントをエクスポートするには、データセットがに基づいている必要があり [!DNL XDM Individual Profile Union Schema]ます。 和集合スキーマは、システム生成の読み取り専用スキーマで、同じクラス(この場合は [!DNL XDM Individual Profile] クラス)を共有するすべてのスキーマのフィールドを集計します。 和集合表示のスキーマの詳細については、『スキーマレジストリ開発ガイド』の「 [リアルタイム顧客プロファイル」の節を参照してください](../../xdm/schema/composition.md#union)。
 
 UIで和集合スキーマを表示するには、左側のナビゲーションで **[!UICONTROL プロファイル]** (「 **** 」)をクリックし、次に示す和集合スキーマ(「」)タブをクリックします。
 
@@ -53,7 +53,7 @@ The datasets workspace within the [!DNL Experience Platform] UI allows you to vi
 
 ## 「XDM Individualプロファイル和集合」スキーマの選択
 
-データセットに使用するXDM個別プロファイル和集合スキーマを選択するには、[!UICONTROL スキーマを選択画面で「]和集合[!UICONTROL 」のタイプを持つ「XDM個別プロファイル]** 」スキーマを探します。
+データセットで使用 [!DNL XDM Individual Profile Union Schema] するスキーマを選択するには、「[!UICONTROL XDM Individualプロファイル]」スキーマ(タイプが「[!UICONTROL 和集合]** 」)を選択画面で探します。
 
 「 **[!UICONTROL XDM個々のプロファイル]**」の横のラジオボタンを選択し、右上隅の「 **[!UICONTROL 次へ]** 」をクリックします。
 
@@ -84,6 +84,6 @@ Workspaceの右側には、新しいデータセットに関連する情報を�
 
 ## 次の手順
 
-XDM個々のプロファイル和集合スキーマに基づいてデータセットを作成したら、 **[!UICONTROL データセットID]** を使用して、 [評価とセグメント結果](./evaluate-a-segment.md) のチュートリアルを続行できます。
+これで、に基づいてデータセットを作成したので、 [!DNL XDM Individual Profile Union Schema]データセットID **[!UICONTROL (データセットID]** )を使用して、セグメント結果の [評価とアクセスのチュートリアルを続行できます](./evaluate-a-segment.md) 。
 
 この時点で、評価セグメントの結果のチュートリアルに戻り、セグメントのエクスポートのオーディエンスメンバーの [プロファイルの生成手順](./evaluate-a-segment.md#generate-profiles) （英語のみ）を参照してください。
