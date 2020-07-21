@@ -4,9 +4,9 @@ solution: Experience Platform
 title: オーディエンスセグメントに対するデータ使用コンプライアンスの実施
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1323'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 このチュートリアルでは、次のコンポーネントについて十分に理解している必要があり [!DNL Adobe Experience Platform]ます。
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] は汎用の参照エンティティストアで、内で [!DNL Experience Data Model] (XDM)データを管理するために使用され [!DNL Platform]ます。 プロファイルは、様々な企業データアセットにわたるデータを結合し、統合されたプレゼンテーションでそのデータへのアクセスを提供します。
-   - [ポリシーの結合](../../profile/api/merge-policies.md): 特定の条件下で統合表示 [!DNL Real-time Customer Profile] に統合できるデータを決定するためにに使用されるルール。 マージポリシーは、データ管理の目的で設定できます。
+   - [ポリシーの結合](../../profile/api/merge-policies.md): 特定の条件下で統合表示 [!DNL Real-time Customer Profile] に統合できるデータを決定するためにに使用されるルール。 マージポリシーは、 [!DNL Data Governance] 目的に合わせて設定できます。
 - [!DNL Segmentation](../home.md): プロファイルストアに含まれる多数の個人を、同じ特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割する方法を [!DNL Real-time Customer Profile] 説明します。
 - [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] 次のコンポーネントを使用して、データ使用のラベル付けと実施(DULE)のインフラストラクチャを提供します。
    - [データ使用ラベル](../../data-governance/labels/user-guide.md): データセットとフィールドを、それぞれのデータを処理する際の機密性のレベルに関して記述するために使用されるラベル。
