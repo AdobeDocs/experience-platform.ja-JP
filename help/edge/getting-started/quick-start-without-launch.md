@@ -4,21 +4,21 @@ seo-title: 'Adobe Experience PlatformWeb SDKのクイック開始 '
 description: Experience PlatformWeb SDKを使用してデータを収集するクイック開始ガイド
 seo-description: Experience PlatformWeb SDKを使用してデータを収集するクイック開始ガイド
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 12%
+source-wordcount: '517'
+ht-degree: 14%
 
 ---
 
 
 # ようこそ
 
-このガイドでは、Adobe Experience Platformの様々な設定方法を順を追って説明 [!DNL Web SDK]します。 この機能を使用するには、許可リスト上にいる必要があります。 待機中のリストに移動したい場合は、CSMに連絡してください。
+このガイドでは、Adobe Experience PlatformWeb SDKの様々な設定方法を順を追って説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動したい場合は、CSMに連絡してください。
 
-- [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。If you already have a CNAME for [!DNL Analytics], you should use that one. CNAMEを使用しない開発環境でのテストは可能ですが、実稼働環境に移行する前に必要です
-- Adobe Experience Platform　を使用する資格がある [!DNL Data Platform].  Platformを購入していない場合は、SDKを使用した限られた方法での利用 [!DNL Experience Platform Data Services Foundation] を無料で提供します。
-- 訪問者 ID サービスの最新バージョンを使用している
+- [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。CNAMEを使用しない開発環境でのテストは可能ですが、実稼働環境に移行する前に必要です。
+- Adobe Experience Platform　を使用する資格がある.  Platformを購入していない場合は、Adobeは、Experience PlatformData Services Foundationをご利用いただけるよう、SDKでの利用を制限し、無償で提供します。
+- 訪問者 ID サービスの最新バージョンを使用している.
 
 ## 設定IDの作成
 
