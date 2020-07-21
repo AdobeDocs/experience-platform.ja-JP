@@ -4,15 +4,15 @@ seo-title: Amazon Kinesisの宛先
 description: Amazon Kinesisストレージへのリアルタイムのアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングします。
 seo-description: Amazon Kinesisストレージへのリアルタイムのアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 6%
+source-wordcount: '442'
+ht-degree: 7%
 
 ---
 
 
-# （ベータ版）Amazon Kinesisの宛先
+# （ベータ） [!DNL Amazon Kinesis] 宛先
 
 
 >[!IMPORTANT]
@@ -21,7 +21,7 @@ ht-degree: 6%
 
 ## 概要 {#overview}
 
-アマゾンウェブサービスによる [!DNL Kinesis Data Streams] サービスを使用すると、大量のデータレコードのストリームをリアルタイムで収集して処理できます。
+によるこの [!DNL Kinesis Data Streams][!DNL Amazon Web Services] サービスでは、大量のデータレコードのストリームをリアルタイムで収集して処理できます。
 
 Adobe Experience Platformからデータをストリーミングするために、 [!DNL Amazon Kinesis] ストレージへのリアルタイムの送信接続を作成できます。
 
@@ -34,9 +34,9 @@ Adobe Experience Platformからデータをストリーミングするために�
 
 ## 使用例 {#use-cases}
 
-Amazon Kinesisなどのストリーミング送信先を使用すると、高価値のセグメント化イベントや関連するプロファイル属性を、お客様の希望するシステムに簡単にフィードできます。
+などのストリーミング送信先を使用すると [!DNL Amazon Kinesis]、高価値のセグメントイベントや関連するプロファイル属性を、選択したシステムに簡単にフィードできます。
 
-例えば、見込み客が、「コンバージョンする傾向が高い」セグメントに該当するホワイトペーパーをダウンロードしたとします。 見込み客が属するセグメントをAmazon Kinesisの宛先にマッピングすると、Amazon Kinesisでこのイベントを受け取ることになります。 企業のITシステムで最も効果的に機能すると考えられるように、Do-It-Yoursenアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
+例えば、見込み客が、「コンバージョンする傾向が高い」セグメントに該当するホワイトペーパーをダウンロードしたとします。 見込み客が属するセグメントを [!DNL Amazon Kinesis] 宛先にマッピングすると、このイベントがに表示され [!DNL Amazon Kinesis]ます。 企業のITシステムで最も効果的に機能すると考えられるように、Do-It-Yoursenアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
 
 ## 宛先の接続 {#connect-destination}
 
@@ -46,7 +46,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### 認証手順の {#authentication-step}
 
-* **アマゾンウェブサービスのアクセスキーと秘密鍵**: で、アクセスキー — 秘密アクセスキーペアを生成 [!DNL Amazon Web Services]して、アドビのリアルタイムCDPアクセスを [!DNL Amazon Kinesis] アカウントに付与します。 詳しくは、 [アマゾンウェブサービスドキュメントを参照してください](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **[!DNL Amazon Web Services]アクセスキーと秘密鍵&#x200B;**: で、アクセスキー — 秘密アクセスキーペアを生成[!DNL Amazon Web Services]して、アドビのリアルタイムCDPアクセスを[!DNL Amazon Kinesis]アカウントに付与します。 詳しくは、[アマゾンウェブサービスドキュメントを参照してください](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
 * **region**: データをストリーミングする [!DNL Amazon Web Services] 領域を指定します。
 
 ![アカウント手順の入力フィールド](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -73,7 +73,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ## 書き出されたデータ {#exported-data}
 
-書き出されたExperience PlatformデータはJSON形式 [!DNL Amazon Kinesis] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
+書き出された [!DNL Experience Platform] データはJSON形式 [!DNL Amazon Kinesis] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
 
 ```
 {
