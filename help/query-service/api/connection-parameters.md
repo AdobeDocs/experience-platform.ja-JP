@@ -4,9 +4,9 @@ solution: Experience Platform
 title: クエリサービス開発ガイド
 topic: connection parameters
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '122'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 ## サンプルAPI呼び出し
 
-これで、使用するヘッダーが分かったので、クエリサービスAPIの呼び出しを開始する準備が整いました。 以下の節では、クエリサービスAPIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
+これで、使用するヘッダーが分かったので、 [!DNL Query Service] APIの呼び出しを開始する準備が整いました。 以下の節では、 [!DNL Query Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
 
 ### インタラクティブサービスの接続パラメーターを要求します
 
