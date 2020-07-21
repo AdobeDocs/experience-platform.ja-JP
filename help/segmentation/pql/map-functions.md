@@ -4,23 +4,23 @@ solution: Experience Platform
 title: マップ関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 6%
+source-wordcount: '146'
+ht-degree: 26%
 
 ---
 
 
 # マップ関数
 
-プロファイルクエリ言語(PQL)オファー機能を使用すると、マップとのやり取りが容易になります。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+[!DNL Profile Query Language] (PQL)オファーは、マップとのやり取りを容易にする機能です。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## Get
 
 この `get` 関数は、特定のキーのマップの値を取得するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {MAP}.get({STRING})
@@ -38,7 +38,7 @@ identityMap.get("example@example.com")
 
 この `keys` 関数は、特定のマップのすべてのキーを取得するために使用します。
 
-**形式**
+**書式**
 
 ```sql
 {MAP}.keys()
@@ -56,7 +56,7 @@ identityMap.keys()
 
 この `values` 関数は、指定したマップのすべての値を取得するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {MAP}.values()
@@ -72,4 +72,4 @@ identityMap.values()
 
 ## 次の手順
 
-マップ関数について学習したら、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
+マップ関数について学習したら、PQLクエリ内で使用できます。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
