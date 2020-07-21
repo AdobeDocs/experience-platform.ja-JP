@@ -4,10 +4,10 @@ solution: Experience Platform
 title: リストオブジェクト
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 1%
+source-wordcount: '197'
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 表示するカタログオブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 表示する [!DNL Catalog] オブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | 応答で返される結果をフィルターするために使用するクエリパラメーター。 複数のパラメーターは、アンパサンド(`&`)で区切られます。 詳しくは、カタログデータの [フィルタリングに関するガイド](filter-data.md) を参照してください。 |
 
 **リクエスト**
@@ -43,11 +43,11 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、リクエストで提供されるクエリパラメーターでフィルタリングされた、キーと値のペアの形式のCatalogオブジェクトのリストを返します。 キーと値のペアごとに、キーは対象のCatalogオブジェクトの固有な識別子を表します。この識別子は、特定のオブジェクトを呼び出す別の呼び出しで使用して [表示を詳細にすることができます](look-up-object.md) 。
+成功した応答は、キーと値のペアの形式で、リクエストに指定されたクエリパラメーターでフィルタリングされた [!DNL Catalog] オブジェクトのリストを返します。 キーと値のペアごとに、キーは対象の [!DNL Catalog] オブジェクトの固有な識別子を表します。この識別子は、特定のオブジェクトを [表示する別の呼び出しで使用して、詳細を確認できます](look-up-object.md) 。
 
 >[!NOTE]
 >
->返されたオブジェクトに、 `properties` クエリが示す要求されたプロパティが1つ以上含まれていない場合、以下の「Sample Dataset 3」と「Sample Dataset 4」に示すように、応答は、そのオブジェクトに含まれる要求されたプロパティのみを返します。
+>返されるオブジェクトに、 `properties` クエリが示す要求されたプロパティが1つ以上含まれていない場合は、次に示すように、要求されたプロパティのみが返され ***`Sample Dataset 3`*** ま ***`Sample Dataset 4`*** す。
 
 ```json
 {
