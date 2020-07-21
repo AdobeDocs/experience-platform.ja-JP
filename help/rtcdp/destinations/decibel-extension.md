@@ -1,39 +1,39 @@
 ---
 title: デシベル拡張子
 seo-title: デシベル拡張子
-description: デシベル拡張機能は、Adobe Real-time Customer Data Platformの分析対象です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: デシベル拡張機能は、Adobe Real-time Customer Data Platformの分析対象です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: デシベル拡張機能は、Adobe Real-time Customer DataPlatformの分析対象です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: デシベル拡張機能は、Adobe Real-time Customer DataPlatformの分析対象です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 4%
+source-wordcount: '548'
+ht-degree: 5%
 
 ---
 
 
-# デシベル拡張子 {#decibel-extension}
+# [!DNL Decibel] 拡張機能 {#decibel-extension}
 
 ## 概要 {#overview}
 
-DecibelをWebプロパティにすばやくシームレスに配信します。 拡張機能を介して実行可能なアクションを使用して、追加の高度な設定をルールと共にデプロイすることもできます。
+Webプロパティにすばやくシームレス [!DNL Decibel] にデプロイできます。 拡張機能を介して実行可能なアクションを使用して、追加の高度な設定をルールと共にデプロイすることもできます。
 
-デシベルは、Adobe Real-time Customer Data PlatformのAnalytics拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100913.html)。
+[!DNL Decibel] は、アドビのリアルタイム顧客データPlatformのanalytics拡張です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100913.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ![デシベル拡張子](assets/decibel-extension.png)
 
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-デシベル拡張機能をインストールするには：
+拡張機能をインストールするに [!DNL Decibel] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -43,7 +43,7 @@ DecibelをWebプロパティにすばやくシームレスに配信します。 
 
 拡張機能の設定オプションについて詳しくは、Adobe Exchangeの [デシベル拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.100913.html) を参照してください。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 
 ## 拡張機能の使用方法 {#how-to-use}
