@@ -1,9 +1,9 @@
 ---
-title: Adobe Real-time Customer Data Platformでの宛先への接続
-seo-title: Adobe Real-time Customer Data Platformでの宛先への接続
+title: アドビのリアルタイム顧客データPlatformでの宛先への接続
+seo-title: アドビのリアルタイム顧客データPlatformでの宛先への接続
 description: このチュートリアルでは、アドビのリアルタイム顧客データプラットフォームで宛先に接続する手順を示します
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: b070a8a6eee1c1b95b20468c7067181ec62bdbd0
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 76%
@@ -16,7 +16,7 @@ ht-degree: 76%
 次の手順に従って、ドビのリアルタイム顧客データプラットフォームで宛先に接続します。
 
 1. 左側のナビゲーションバーから「**[!UICONTROL 宛先]**」に移動します。
-2. 「[カタログ](/help/rtcdp/destinations/destinations-workspace.md#catalog)」タブで、接続先を選択します。
+2. 「[!UICONTROL カタログ](/help/rtcdp/destinations/destinations-workspace.md#catalog)」タブで、接続先を選択します。
 3. 「**[!UICONTROL 接続先]**」を押して、「宛先の接続」ウィザードを起動します。
 4. 特定の宛先に接続する手順については、宛先ページを参照してください。ク [ラウドストレージのリンク先](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)、 [電子メールマーケティングのリンク先](/help/rtcdp/destinations/email-marketing-destinations.md)、 [広告のリンク先を参照してください](/help/rtcdp/destinations/advertising-destinations.md)。
 
