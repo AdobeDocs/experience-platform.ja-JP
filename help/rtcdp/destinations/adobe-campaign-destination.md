@@ -4,10 +4,10 @@ seo-title: Adobe Campaign
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 seo-description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 92%
+source-wordcount: '462'
+ht-degree: 87%
 
 ---
 
@@ -42,6 +42,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
    * **[!UICONTROL バケット名]**：*S3 接続用*。Real-time CDP が書き出しデータを CSV またはタブ区切りファイルとして収納する S3 バケットの場所を入力します。
    * **[!UICONTROL フォルダーパス]**：Real-time CDP が書き出しデータを CSV またはタブ区切りファイルとして格納するストレージの場所へのパスを指定します。
    * **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
+
    ![Campaign の基本情報](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
 1. 上のフィールドに入力したら、 **[!UICONTROL 「作成]** 」をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
@@ -53,4 +54,4 @@ Adobe Campaign の宛先に対して[セグメントをアクティブ化する]
 
 ## Adobe Campaign へのデータインポートの設定 {#import-data-into-campaign}
 
-Real-time CDP を Amazon S3 または SFTP ストレージに接続した後、ストレージの場所から Adobe Campaign へのデータインポートを設定する必要があります。これをおこなう方法については、Adobe Campaign ヘルプドキュメントの「[データのインポート](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html)」を参照してください。
+After connecting Real-time CDP to your [!DNL Amazon S3] or SFTP storage, you must set up the data import from your storage location into Adobe Campaign. これをおこなう方法については、Adobe Campaign ヘルプドキュメントの「[データのインポート](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html)」を参照してください。
