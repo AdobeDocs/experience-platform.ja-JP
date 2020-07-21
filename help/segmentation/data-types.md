@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Adobe Experience Platformセグメントサービスのデータタイプ
 topic: overview
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '406'
 ht-degree: 2%
 
 ---
 
 
-# Adobe Experience PlatformSegmentation Serviceでサポートされるデータタイプ
+# Adobe Experience Platform [!DNL Segmentation Service] でサポートされるデータ型
 
 では、すべてのXDMデータ型がサポートされてい [!DNL Segmentation Service]ます。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 
@@ -39,7 +39,7 @@ ht-degree: 2%
 
 ## エクスペリエンスイベント
 
-Adobe Experience Platformスキーマとして、XDM ExperienceEventsは、インタラクションが発生した時点のシステムのスナップショットを含む、 [!DNL Platform]統合されたアプリケーションを使用した明示的および暗黙的な顧客の操作を記録します。 ExperienceEventsはファクトレコードです。 したがって、これらはセグメント定義時に使用できるデータソースです。
+Adobe Experience Platformスキーマとして、インタラクションが発生した時点のシステムのスナップショットを含む、 [!DNL XDM ExperienceEvents][!DNL Platform]統合アプリケーションを使用した明示的および暗黙的な顧客インタラクションを記録します。 [!DNL ExperienceEvents] は事実の記録です したがって、これらはセグメント定義時に使用できるデータソースです。
 
 次の表に示すように、イベントデータは、イベントの動作を絞り込み、イベント属性を指定するのに役立つキーワードを使用してレンダリングされます。
 
