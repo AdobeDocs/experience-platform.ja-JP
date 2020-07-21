@@ -4,28 +4,28 @@ seo-title: アドビのリアルタイム顧客データプラットフォーム
 description: セグメント化サービスについて説明する概要です。
 seo-description: アドビのリアルタイム顧客データプラットフォームでのセグメント化サービスとセグメントについて説明する概要です。
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 95%
+source-wordcount: '254'
+ht-degree: 52%
 
 ---
 
 
-# リアルタイム顧客データプラットフォームにおけるセグメント化サービス
+# [!DNL Segmentation Service] in [!DNL Real-time Customer Data Platform]
 
-リアルタイム顧客データプラットフォーム（Real-time CDP）を使用すると、複数のソースからデータを取り込み、顧客に合わせた一貫性のあるエクスペリエンスを提供できます。関連するパーソナライズされたマーケティングキャンペーンの配信は、Adobe Experience Platform の一部であるセグメント化サービスを使用して実現できます。
+[!DNL Real-time Customer Data Platform] （リアルタイムCDP）では、複数のソースからのデータを取得し、お客様に対して調整と一貫性のあるエクスペリエンスを提供できます。 Delivering relevant personalized marketing campaigns can be achieved using the [!DNL Segmentation Service], part of Adobe Experience Platform.
 
-Real-time CDP は Adobe Experience Platform をベースに構築され、多くの Experience Platform サービスと機能を利用します。セグメント化サービスを使用すると、顧客を類似の特徴を持つ小さなグループに分けて、独自のマーケティングを提供できます。
+Real-time CDP is built on top of Adobe Experience Platform and utilizes many of the [!DNL Experience Platform] services and functionality. Using the [!DNL Segmentation Service], you can provide tailor-made marketing by dividing your customers into smaller groups with similar traits.
 
 ## セグメント化
 
 セグメント化とは、プロファイルストアにあるプロファイルのサブセットによって共有される特定の属性や行動を定義し、マーケティング可能な人々のグループを顧客ベースから選別するプロセスです。例えば、「スニーカーを購入し忘れましたか？」という電子メールキャンペーンでは、過去 30 日間にランニングシューズを検索したが購入を完了しなかったすべてのユーザーのオーディエンスが必要な場合があります。様々なセグメントを使用すると、様々なオーディエンスに焦点を当て、よりカスタマイズされたマーケティングエクスペリエンスを提供できます。
 
-## セグメントビルダー
+## [!DNL Segment Builder]
 
-プラットフォームでは、セグメントを簡単に作成してアクセスでき、様々な構築ブロックを使用してセグメントをさらに特徴付けることができます。セグメントビルダーの使用方法の詳細については、『[セグメントビルダーガイド](./segment-builder-guide.md)』を参照してください。
+[!DNL Platform] セグメントを簡単に作成してアクセスでき、異なる構築ブロックを使用してセグメントの特徴をさらに明確にできます。 セグメントビルダーの使用方法の詳細については、『[セグメントビルダーガイド](./segment-builder-guide.md)』を参照してください。
 
 ## 次の手順
 
-この概要を読み終わると、Real-time CDP がセグメント化を利用してマーケティングキャンペーンのカスタマイズとパーソナライズ機能を強化する方法を理解できるはずです。For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).
+After reading this overview, you should now understand how Real-time CDP utilizes [!DNL Segmentation Service] to enhance customization and personalization of marketing campaigns. の詳細については、「 [!DNL Segmentation Service]セグメント化ドキュメント [](../../segmentation/home.md)」を参照してください。
