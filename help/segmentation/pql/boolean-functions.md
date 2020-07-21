@@ -3,18 +3,18 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: ブール関数
 topic: developer guide
-translation-type: ht
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
-workflow-type: ht
-source-wordcount: '226'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 94%
 
 ---
 
 
 # ブール関数
 
-ブール関数は、プロファイルクエリ言語（PQL）の異なる要素にブール論理を実行するために使用されます。その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
+Boolean functions are used to perform boolean logic on different elements in [!DNL Profile Query Language] (PQL).  その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## And
 
