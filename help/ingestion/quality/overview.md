@@ -4,17 +4,17 @@ solution: Experience Platform
 title: データ取り込みの品質
 topic: overview
 translation-type: tm+mt
-source-git-commit: 24df962656706d769a7034020d96a545e8f905ca
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '282'
 ht-degree: 6%
 
 ---
 
 
-# Adobe Experience Platformでのデータ画質
+# Adobe Experience Platformのデータ品質
 
-Adobe Experience Platformは、バッチまたはストリーミング取り込みを通じてアップロードされたすべてのデータの完全性、正確性、一貫性に関して、明確な保証を提供します。 次のドキュメントでは、Experience Platformでのバッチおよびストリーミング取り込みに対してサポートされているチェックおよび検証動作の概要を示します。
+Adobe Experience Platformは、バッチまたはストリーミング取り込みを通じてアップロードされたデータの完全性、正確性、一貫性に関して、明確な保証を提供します。 次のドキュメントに、でのバッチおよびストリーミング取り込みでサポートされているチェックおよび検証動作の概要を示 [!DNL Experience Platform]します。
 
 ## サポートされるチェック
 
@@ -29,7 +29,7 @@ Adobe Experience Platformは、バッチまたはストリーミング取り込�
 
 ## サポートされる検証動作
 
-バッチとストリーミングの取り込みの両方で、Data Lakeでの取り込みと分析のために不正なデータを移動し、失敗したデータがダウンストリームに移動するのを防ぎます。 データ取り込みでは、バッチおよびストリーミングの取り込みに関して次の検証を行うことができます。
+バッチとストリーミングの取り込みの両方で、失敗したデータがダウンストリームに行かないように、取得およびでの分析のために不正なデータを移動 [!DNL Data Lake]します。 データ取り込みでは、バッチおよびストリーミングの取り込みに関して次の検証を行うことができます。
 
 ### バッチ取り込み
 
@@ -55,4 +55,4 @@ Adobe Experience Platformは、バッチまたはストリーミング取り込�
 | データセット | データセットが指定され、有効になっており、削除されていないことを確認します。 |
 | Header | ヘッダーが指定され、有効であることを確認します。 |
 
-プラットフォームがデータを監視および検証する方法について詳しくは、「 [監視データフローのドキュメント](./monitor-data-flows.md)」を参照してください。
+データの [!DNL Platform] 監視と検証の方法について詳しくは、「 [監視データ・フロー」のドキュメントを参照してください](./monitor-data-flows.md)。
