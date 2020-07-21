@@ -4,24 +4,24 @@ solution: Experience Platform
 title: クライアントをクエリサービスに接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: c5bb112220b40fa6c2adfa89c80ddb87d382fbda
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '76'
-ht-degree: 1%
+source-wordcount: '56'
+ht-degree: 0%
 
 ---
 
 
-# クライアントをクエリサービスに接続
+# クライアントの接続先 [!DNL Query Service]
 
-この節では、様々なデスクトップクライアントアプリケーションからクエリサービスに接続する方法と、それらの接続を検証する方法について説明します。 クエリサービスはPostgresプロトコルを使用するので、この節の説明では、Postgresツールとドライバを使用してクエリを接続および書き込む方法について説明します。
+この節では、様々なデスクトップクライアントアプリケーション [!DNL Query Service] からに接続する方法と、それらの接続を検証する方法について説明します。 [!DNL Query Service] は [!DNL Postgres] プロトコルを使用するので、この節の説明では、クエリを接続および書き込むための [!DNL Postgres] ツールとドライバの使用方法を説明します。
 
 手順は、次のクライアントに対して提供されます。
 
-- [アクアデータスタジオ](./aqua-data-studio.md)
-- [Looker](./looker.md)
-- [ポスティコ(Mac)](./postico.md)
-- [Power BI (PC)](./power-bi.md)
-- [PSQL](./psql.md)
-- [Rtudio](./rstudio.md)
-- [Tableau](./tableau.md)
+- [!DNL Aqua Data Studio](./aqua-data-studio.md)
+- [!DNL Looker](./looker.md)
+- [!DNL Postico (Mac)](./postico.md)
+- [!DNL Power BI (PC)](./power-bi.md)
+- [!DNL PSQL](./psql.md)
+- [!DNL RStudio](./rstudio.md)
+- [!DNL Tableau](./tableau.md)
