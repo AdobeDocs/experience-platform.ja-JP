@@ -4,17 +4,17 @@ solution: Experience Platform
 title: オブジェクトの検索
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 2%
+source-wordcount: '132'
+ht-degree: 3%
 
 ---
 
 
 # オブジェクトの検索
 
-特定のカタログオブジェクトの固有な識別子がわかっている場合は、そのオブジェクトの詳細を表示するためにGETリクエストを実行できます。
+特定の [!DNL Catalog] オブジェクトの固有な識別子がわかっている場合は、GETリクエストを実行して、そのオブジェクトの詳細を表示できます。
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するCatalogオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 取得する特定のオブジェクトの識別子。 |
 
 **リクエスト**
