@@ -4,9 +4,9 @@ solution: Experience Platform
 title: PSQLとの接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '170'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # PSQLとの接続
 
-PSQLは、Postgresをマシンにインストールする際に提供されるコマンドラインインターフェイスです。 以下の手順に従って、インストールできます。
+PSQLは、をマシンにインストールする際に提供されるコマンドラインインターフェイス [!DNL Postgres] です。 以下の手順に従って、インストールできます。
 
 ## MacでのPostgresのインストール
 
@@ -38,15 +38,15 @@ which psql
 /usr/local/bin/psql
 ```
 
-## PCにPostgresをインストールする
+## PC [!DNL Postgres] にインストールする
 
-この [場所からPostgresをダウンロードしてインストールします](https://www.postgresql.org/download/windows/)。
+この [!DNL Postgres] 場所からダウンロードしてインストール [します](https://www.postgresql.org/download/windows/)。
 
 パス変数を編集します。
 
 ![画像](../images/clients/psql/path.png)
 
-表追加示されている2行に「Postgres」が含まれています。
+表示さ追加れている2つの行には「[!DNL Postgres]」が含まれます。
 
 更新を保存し、コマンドプロンプトを開いて次のように入力します。
 
@@ -60,11 +60,11 @@ psql -V
 psql (PostgreSQL) 9.5.14
 ```
 
-## PSQLとクエリサービスの接続
+## PSQLの接続と [!DNL Query Service]
 
-「Connect BI Tools」ページのプラットフォームUIに戻ります。
+[ [!DNL Platform] Connect BI Tools ** ]ページのUIに戻ります。
 
-「 **PSQLコマンド」の「** コピー」をクリックします。
+「 **[!UICONTROL PSQLコマンドの]** コピー *[!UICONTROL 」をクリックし]*&#x200B;ます。
 
 ![画像](../images/clients/psql/connect-bi.png)
 
