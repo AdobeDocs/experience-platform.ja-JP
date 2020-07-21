@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 文字列関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 7%
+source-wordcount: '757'
+ht-degree: 11%
 
 ---
 
 
 # 文字列関数
 
-プロファイルクエリ言語(PQL)オファー関数を使用して、文字列とのやり取りを簡単にします。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+[!DNL Profile Query Language] (PQL)オファーは、文字列とのやり取りを簡単にするための機能です。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## いいね！
 
 この `like` 関数は、文字列が指定したパターンと一致するかどうかを判断するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1} like {STRING_2}
@@ -43,7 +43,7 @@ city like "%es%"
 
 この `startsWith` 関数は、指定したサブ文字列を持つ文字列開始ーかどうかを判定するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1}.startsWith({STRING_2}, {BOOLEAN})
@@ -67,7 +67,7 @@ person.name.startsWith("Joe")
 
 この `doesNotStartWith` 関数は、文字列が指定したサブ文字列と開始していないかどうかを判定するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1}.doesNotStartWith({STRING_2}, {BOOLEAN})
@@ -91,7 +91,7 @@ person.name.doesNotStartWith("Joe")
 
 この `endsWith` 関数は、文字列が指定したサブ文字列で終わるかどうかを判断するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1}.endsWith({STRING_2}, {BOOLEAN})
@@ -115,7 +115,7 @@ person.emailAddress.endsWith(".com")
 
 この `doesNotEndWith` 関数は、文字列が指定したサブ文字列で終わらないかどうかを判断するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1}.doesNotEndWith({STRING_2}, {BOOLEAN})
@@ -139,7 +139,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 この `contains` 関数は、文字列に指定したサブ文字列が含まれているかどうかを調べるために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1}.contains({STRING_2}, {BOOLEAN})
@@ -163,7 +163,7 @@ person.emailAddress.contains("2010@gm")
 
 この `doesNotContain` 関数は、文字列に指定したサブ文字列が含まれていないかどうかを調べるために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1}.doesNotContain({STRING_2}, {BOOLEAN})
@@ -187,7 +187,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 この `equals` 関数は、文字列が指定した文字列と等しいかどうかを判断するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1}.equals({STRING_2})
@@ -210,7 +210,7 @@ person.name.equals("John")
 
 この `notEqualTo` 関数は、文字列が指定した文字列と等しくないかどうかを判定するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1}.notEqualTo({STRING_2})
@@ -233,7 +233,7 @@ person.name.notEqualTo("John")
 
 この `matches` 関数は、文字列が特定の正規式と一致するかどうかを判別するために使用されます。 正規式でのパターンの一致について詳しくは、 [このドキュメント](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) を参照してください。
 
-**形式**
+**書式**
 
 ```sql
 {STRING_1}.matches(STRING_2})
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 この `regexGroup` 関数は、提供される正規式に基づいて特定の情報を抽出するために使用されます。
 
-**形式**
+**書式**
 
 ```sql
 {STRING}.regexGroup({EXPRESSION})
@@ -267,5 +267,5 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## 次の手順
 
-文字列関数について学習したので、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
+文字列関数について学習したので、PQLクエリ内で使用できます。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
