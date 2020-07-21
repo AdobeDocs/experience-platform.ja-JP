@@ -1,36 +1,36 @@
 ---
 title: インボカタグ拡張
 seo-title: インボカタグ拡張
-description: Invoca Tags Extensionは、アドビのリアルタイム顧客データプラットフォームの顧客の連絡先の音声です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: Invoca Tags Extensionは、アドビのリアルタイム顧客データPlatformの顧客の連絡先の音声です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 4%
+source-wordcount: '538'
+ht-degree: 5%
 
 ---
 
 
-# インボカタグ拡張 {#invoca-extension}
+# [!DNL Invoca Tags] 拡張機能 {#invoca-extension}
 
 ## 概要 {#overview}
 
-Invocaは、デジタル顧客の遍歴にコールデータと音声の洞察を提供します。 インボカ社のコールインテリジェンスプラットフォームを使用すると、マーケティング担当者は、コールの成果を測定し、オフラインのコンバージョンをデジタル費用に結び付ける分析を行うことができます。
+[!DNL Invoca] デジタル顧客の遍歴に、通話データと音声のインサイトを組み込みます。 コールインテリジェンスプラットフォームを使用すると、マーケティング担当者は、最終的に分析を行い、コールの成果を測定し、オフラインのコンバージョンをデジタル費用に結び付けることができます。 [!DNL Invoca’s]
 
-Invoca Tagsは、アドビのリアルタイム顧客データプラットフォームにおける顧客拡張機能の音声です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html)。
+[!DNL Invoca Tags] は、アドビのリアルタイム顧客データPlatformにおける顧客拡張機能の音声です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-Invoca Tags Extensionをインストールするには：
+拡張機能をインストールするに [!DNL Invoca Tags] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -40,7 +40,7 @@ Invoca Tags Extensionをインストールするには：
 
 拡張機能の構成オプションとインストールのサポートについて詳しくは、Adobe Exchangeの [Invoca Tagsページを参照してください](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html)。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 
 ## 拡張機能の使用方法 {#how-to-use}
