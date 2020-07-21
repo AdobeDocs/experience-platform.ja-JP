@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformの部分バッチ取り込みの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1243'
+source-wordcount: '1237'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 このチュートリアルでは、部分的なバッチ取り込みに関連する様々なAdobe Experience Platformサービスに関する実用的な知識が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [バッチインジェスト](./overview.md): CSVやParketなどのデータファイルからデータを [!DNL Platform] 取り込んで保存する方法。
-- [Experience Data Model(XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
 以下の節では、APIの呼び出しを正常に行うために知っておく必要がある追加情報について説明し [!DNL Platform] ます。
 
@@ -42,7 +42,7 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -115,7 +115,7 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 ### 「[!UICONTROL Map CSV to XDMスキーマ]」フローの使用 {#map-flow}
 
-「[!UICONTROL CSVをXDMスキーマに]マップ [」のフローを使用するには、「CSVファイルを](../tutorials/map-a-csv-file.md)マップ」のチュートリアルに示されている手順に従います。 デ *ー追加タ* 手順に進んだら、 *[!UICONTROL 部分的な取り込み]* と *[!UICONTROL エラー診断]* のフィールドに注意してください。
+「[!UICONTROL CSVをXDMスキーマに]マップ [」のフローを使用するには、「CSVファイルを](../tutorials/map-a-csv-file.md)マップ」のチュートリアルに示されている手順に従います。 デ *[!UICONTROL ー追加タ]* 手順に進んだら、 *[!UICONTROL 部分的な取り込み]* と *[!UICONTROL エラー診断]* のフィールドに注意してください。
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
