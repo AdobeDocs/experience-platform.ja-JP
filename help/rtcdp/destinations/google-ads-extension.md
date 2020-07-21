@@ -1,26 +1,26 @@
 ---
 title: Google広告の拡張
 seo-title: Google広告の拡張
-description: Google Ads拡張機能は、Adobe Real-time Customer Data Platformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: Google Ads拡張機能は、Adobe Real-time Customer Data Platformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: Google Ads拡張機能は、Adobe Real-time Customer DataPlatformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: Google Ads拡張機能は、Adobe Real-time Customer DataPlatformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '562'
 ht-degree: 4%
 
 ---
 
 
-# Google広告の拡張
+# [!DNL Google Ads] 拡張機能
 
 ## 概要 {#overview}
 
-この拡張機能は、Google広告をクリックするユーザーのコンバージョンを追跡します。 また、Google広告が依存するので、gtag.js拡張をインストールしてライブラリに追加する必要があります。
+この拡張機能は、 [!DNL Google Ads]また、gtag.js拡張をインストールし、ライブラリに追加する必要があります。これは、gtag.js拡張に [!DNL Google Ads] 依存します。
 
-Google Adsは、Adobe Real-time Customer Data Platformの広告拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html)。
+[!DNL Google Ads] は、アドビのリアルタイム顧客データPlatformのadvertising extensionです。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ![Google広告の拡張](/help/rtcdp/destinations/assets/google-extension-2.png)
 
@@ -28,11 +28,11 @@ Google Adsは、Adobe Real-time Customer Data Platformの広告拡張機能で�
 
 この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-Google Ads拡張機能をインストールするには：
+拡張機能をインストールするに [!DNL Google Ads] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -42,7 +42,7 @@ Google Ads拡張機能をインストールするには：
 
 拡張機能の設定オプションとインストールのサポートについて詳しくは、Adobe Exchangeの [Google広告ページを参照してください](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html)。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 
 ## 拡張機能の使用方法 {#how-to-use}
