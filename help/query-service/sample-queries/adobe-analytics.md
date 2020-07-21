@@ -4,17 +4,17 @@ solution: Experience Platform
 title: サンプルクエリ
 topic: queries
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
 
 
-# Adobe Analyticsデータのサンプルクエリ
+# AdobeAnalyticsデータのサンプルクエリ
 
-選択したAdobe AnalyticsレポートスイートのデータはXDM ExperienceEventsに変換され、データセットとしてAdobe Experience Platformに取り込まれます。 このドキュメントでは、Adobe Experience Platformクエリサービスがこのデータを使用する様々な使用例について概説し、付属のサンプルクエリはAdobe Analyticsデータセットと連携する必要があります。 XDM ExperienceEventsへのマッピングについて詳しくは、 [Analyticsのフィールドマッピングドキュメント](../../sources/connectors/adobe-applications/mapping/analytics.md) を参照してください。
+選択したAdobeAnalyticsレポートスイートのデータはXDMに変換され、Adobe Experience Platformにデータセットとして取り込ま [!DNL ExperienceEvents] れます。 このドキュメントでは、Adobe Experience Platformがこのデータを使用する様々な使用例を概説し、付属のサンプルクエリはAdobeAnalyticsのデータセットと連携する必要があります。 [!DNL Query Service] XDMへのマッピングについて詳しくは、 [Analyticsのフィールドマッピングドキュメント](../../sources/connectors/adobe-applications/mapping/analytics.md) を参照してくだ [!DNL ExperienceEvents]さい。
 
 ## はじめに
 
@@ -129,9 +129,9 @@ ORDER BY Hour;
 
 ## マーチャンダイジング変数（製品の構文）
 
-Adobe Analyticsでは、「マーチャンダイジング変数」と呼ばれる特別に設定された変数を使用して、カスタムの製品レベルのデータを収集できます。 eVarまたはカスタムイベントに基づいています。 これらの変数とその標準的な使用方法の違いは、ヒットの単一の値ではなく、ヒットで見つかった各製品の個別の値を表すことです。 これらの変数は、製品構文マーチャンダイジング変数と呼ばれます。 これにより、製品ごとの「割引金額」や、顧客の検索結果での製品の「ページ上の場所」に関する情報などの情報を収集できます。
+アドビのAnalyticsでは、カスタムの製品レベルのデータは、「マーチャンダイジング変数」と呼ばれる特別に設定された変数を通して収集できます。 eVarまたはカスタムイベントに基づいています。 これらの変数とその標準的な使用方法の違いは、ヒットの単一の値ではなく、ヒットで見つかった各製品の個別の値を表すことです。 これらの変数は、製品構文マーチャンダイジング変数と呼ばれます。 これにより、製品ごとの「割引金額」や、顧客の検索結果での製品の「ページ上の場所」に関する情報などの情報を収集できます。
 
-Analyticsデータセット内のマーチャンダイジング変数にアクセスするためのXDMフィールドを次に示します。
+デー [!DNL Analytics] タセット内のマーチャンダイジング変数にアクセスするためのXDMフィールドを次に示します。
 
 ### eVar
 
@@ -165,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-この次のクエリは、各マーチャンダイジングeVar `productListItems` とイベントを製品ごとに「展開」して返します。 元のヒットとの関係を示す `_id` フィールドが含まれます。 この `_id` 値は、ExperienceEventデータセットの一意の主キーです。
+この次のクエリは、各マーチャンダイジングeVar `productListItems` とイベントを製品ごとに「展開」して返します。 元のヒットとの関係を示す `_id` フィールドが含まれます。 この `_id` 値は、データセット内の一意の主キー [!DNL ExperienceEvent] です。
 
 ```sql
 SELECT
@@ -195,7 +195,7 @@ ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered.
 
 ## マーチャンダイジング変数（コンバージョン構文）
 
-Adobe Analyticsにある別の種類のマーチャンダイジング変数は、コンバージョンの構文です。 製品の構文を使用すると、製品と同時に値が収集されますが、そのためにはデータが同じページに存在する必要があります。 コンバージョンや商品に関連する関心のあるイベントの前にページでデータが発生するシナリオがあります。 例えば、商品を探す方法のレポートの使用例を考えてみましょう。
+アドビのAnalyticsにある別のタイプのマーチャンダイジング変数は、コンバージョンの構文です。 製品の構文を使用すると、製品と同時に値が収集されますが、そのためにはデータが同じページに存在する必要があります。 コンバージョンや商品に関連する関心のあるイベントの前にページでデータが発生するシナリオがあります。 例えば、商品を探す方法のレポートの使用例を考えてみましょう。
 
 1. ユーザが「winter hat」を実行し、内部検索を行います。これにより、コンバージョン構文でマーチャンダイジングeVar6が有効になり、「internal search:winter hat」に設定されます。
 2. ユーザーが「ワッフルビーニー」をクリックし、商品の詳細ページに移動します。\
@@ -216,7 +216,7 @@ Adobe Analyticsにある別の種類のマーチャンダイジング変数は�
 | 内部検索：サマーシャツ | 19.99 | 1 | 1 | 1 |
 | 内部検索：冬帽 | 12.99 | 1 | 1 | 1 |
 
-Analyticsデータセットにコンバージョン構文を生成するためのXDMフィールドを次に示します。
+デー [!DNL Analytics] タセットに変換構文を生成するためのXDMフィールドを次に示します。
 
 ### eVar
 
