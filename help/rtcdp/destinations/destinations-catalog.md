@@ -4,17 +4,17 @@ seo-title: 宛先カタログ
 description: 宛先カタログは、データを受け取る準備ができた、使用可能な宛先のリストを提供します。これらの宛先には、アドビソリューション、広告プラットフォーム、調査プラットフォーム、電子メールマーケティングプラットフォームなどがあります。
 seo-description: 宛先カタログは、データを受け取る準備ができた、使用可能な宛先のリストを提供します。これらの宛先には、アドビソリューション、広告プラットフォーム、調査プラットフォーム、電子メールマーケティングプラットフォームなどがあります。
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 67%
+source-wordcount: '170'
+ht-degree: 58%
 
 ---
 
 
-# 宛先カタログ
+# [!DNL Destinations Catalog]
 
-**宛先カタログ**&#x200B;は、データを受け取る準備ができた、使用可能な宛先プラットフォームのリストを提供します。これらの表示先プラットフォームには、アドビソリューション、広告プラットフォーム、調査プラットフォーム、電子メールマーケティングプラットフォーム、エクスペリエンスプラットフォーム拡張などがあります。
+The **[!DNL Destinations Catalog]** provides a list of available destination platforms that are ready to receive data. これらの表示先プラットフォームには、アドビソリューション、広告プラットフォーム、調査プラットフォーム、電子メールマーケティングプラットフォーム、Experience Platform拡張機能などがあります。
 
 カタログを参照して、広告やパーソナライズ機能の使用例に最適なターゲットプラットフォームを決定し、フローを設定して、ターゲットに対するセグメントをアクティブ化します。
 
@@ -24,9 +24,9 @@ ht-degree: 67%
 
 * [アドビソリューション](/help/rtcdp/destinations/adobe-destinations.md)
 * [広告の宛先](/help/rtcdp/destinations/advertising-destinations.md)
-* [Analyticsの宛先](/help/rtcdp/destinations/analytics-destinations.md)
+* [Analyticsの目的地](/help/rtcdp/destinations/analytics-destinations.md)
 * [クラウドストレージの宛先](/help/rtcdp/destinations/cloud-storage-destinations.md)
-* [データ管理プラットフォーム](/help/rtcdp/destinations/dmp-destinations.md)
+* [データ管理Platform](/help/rtcdp/destinations/dmp-destinations.md)
 * [電子メールマーケティング](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [パーソナライズ機能](/help/rtcdp/destinations/personalization-destinations.md)
 * [ソーシャルのリンク先](/help/rtcdp/destinations/social-network-destinations.md)
