@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データセットの作成
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a25ca22fb8ec9eb95f74e4fd76a7f18e87343085
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '86'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # バッチの作成
 
-データセットがデータを取り込むには、データセットにバッチが関連付けられている必要があります。 既存のデータセットの `id` 値を使用して、カタログAPIのエンドポイントにPOSTリクエストを行うことで、バッチを作成でき `/batches` ます。
+データセットがデータを取り込むには、データセットにバッチが関連付けられている必要があります。 既存のデータセットの `id` 値を使用して、 `/batches`[!DNL Catalog] APIのエンドポイントにPOSTリクエストを行うことで、バッチを作成できます。
 
 **API形式**
 
