@@ -4,15 +4,15 @@ seo-title: （ベータ版）Azureイベントハブの宛先
 description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 seo-description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '467'
 ht-degree: 6%
 
 ---
 
 
-# （ベータ版）Azureイベントハブの宛先
+# （ベータ） [!DNL Azure Event Hubs] 宛先
 
 >[!IMPORTANT]
 >
@@ -32,9 +32,9 @@ Adobe Experience Platformからデータをストリーミングするために�
 
 ## 使用例 {#use-cases}
 
-Azureイベントハブなどのストリーミング宛先を使用すると、高価値のセグメントイベントや関連するプロファイル属性を、お客様のシステムに簡単にフィードできます。
+などのストリーミング送信先を使用すると [!DNL Azure Event Hubs]、高価値のセグメントイベントや関連するプロファイル属性を、選択したシステムに簡単にフィードできます。
 
-例えば、見込み客が、「コンバージョンする傾向が高い」セグメントに該当するホワイトペーパーをダウンロードしたとします。 見込み客が属するセグメントをAzureイベントハブの宛先にマッピングすると、このイベントがAzureイベントハブで受け取られます。 企業のITシステムで最も効果的に機能すると考えられるように、Do-It-Yoursenアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
+例えば、見込み客が、「コンバージョンする傾向が高い」セグメントに該当するホワイトペーパーをダウンロードしたとします。 見込み客が属するセグメントを [!DNL Azure Event Hubs] 宛先にマッピングすると、このイベントがに表示され [!DNL Azure Event Hubs]ます。 企業のITシステムで最も効果的に機能すると考えられるように、Do-It-Yoursenアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
 
 ## 宛先の接続 {#connect-destination}
 
@@ -64,7 +64,7 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 
 ## 書き出されたデータ {#exported-data}
 
-書き出されたExperience PlatformデータはJSON形式 [!DNL Azure Event Hubs] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
+書き出された [!DNL Experience Platform] データはJSON形式 [!DNL Azure Event Hubs] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
 
 ```
 {
