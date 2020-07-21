@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 日付と時間関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '468'
 ht-degree: 10%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 # 日付と時間関数
 
-日付と時間の関数は、プロファイルクエリ言語(PQL)内の値に対して日付と時間の演算を実行するために使用します。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
+日付と時間関数は、 [!DNL Profile Query Language] (PQL)内の値に対して日付と時間の操作を実行するために使用します。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## 現在の月
 
