@@ -1,34 +1,34 @@
 ---
 title: DoubleClick Floodlight（ベータ）拡張機能
 seo-title: DoubleClick Floodlight（ベータ）拡張機能
-description: DoubleClick Floodlight（ベータ版）拡張は、Adobe Real-time Customer Data Platformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: DoubleClick Floodlight（ベータ版）拡張は、Adobe Real-time Customer Data Platformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: DoubleClick Floodlight（ベータ版）拡張は、Adobe Real-time Customer DataPlatformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: DoubleClick Floodlight（ベータ版）拡張は、Adobe Real-time Customer DataPlatformの広告先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 5%
+source-wordcount: '546'
+ht-degree: 6%
 
 ---
 
 
-# DoubleClick Floodlight（ベータ）拡張機能
+# [!DNL DoubleClick Floodlight] （ベータ版）拡張機能
 
 ## 概要 {#overview}
 
-この拡張機能を使用すると、（グローバルサイトタグではなく）従来のfloodlight形式を使用して、DoubleClick Floodlightタグをすばやく簡単にデプロイできます。 注意： この拡張機能はベータ版です。
+この拡張機能を使用すると、（グローバルサイトタグではなく）従来のfloodlight形式を使用した [!DNL DoubleClick Floodlight] タグを、すばやく簡単にデプロイできます。 注意： この拡張機能はベータ版です。
 
-DoubleClick Floodlight（ベータ版）は、Adobe Real-time Customer Data Platformの広告拡張です。 拡張機能について詳しくは、DoubleClick Floodlightに関するGoogleサポートドキュメントを参照して [ください](https://support.google.com/dcm/answer/2823388?hl=ja)。
+[!DNL DoubleClick Floodlight] （ベータ版）は、アドビのリアルタイム顧客データPlatformにおける広告拡張機能です。 拡張機能の機能について詳しくは、DoubleClick Floodlightの [!DNL Google] サポートドキュメントを参照して [ください](https://support.google.com/dcm/answer/2823388?hl=ja)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ![Doubleclick Floodlight拡張](assets/doubleclick-floodlight-extension.png)
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
@@ -40,7 +40,7 @@ DoubleClick Floodlight（ベータ版）拡張をインストールするには�
 4. 「使用可能な起動プロパティ **[!UICONTROL を選択]** 」ウィンドウで、拡張機能をインストールするLaunchプロパティを選択します。 また、「起動」で新しいプロパティを作成するオプションもあります。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、起動ドキュメントの [プロパティページセクション](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) で説明します。
 5. ワークフローが起動し、インストールが完了します。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 
 ## 拡張機能の使用方法 {#how-to-use}
