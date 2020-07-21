@@ -1,38 +1,38 @@
 ---
 title: PebblePost拡張子
 seo-title: PebblePost拡張子
-description: PebblePost拡張子は、Adobe Real-time Customer Data Platformの電子メールの送信先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: PebblePost拡張子は、Adobe Real-time Customer Data Platformの電子メールの送信先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: PebblePost拡張子は、アドビのリアルタイム顧客データPlatformの電子メール送信先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: PebblePost拡張子は、Adobeリアルタイム顧客データPlatformの電子メールの送信先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '576'
 ht-degree: 4%
 
 ---
 
 
-# PebblePost拡張 {#pebblepost-extension}
+# [!DNL PebblePost] 拡張機能 {#pebblepost-extension}
 
 ## 概要 {#overview}
 
-PebblePostのプログラムダイレクトメール®ソリューションは、デジタルマーケターがオンラインでの関心と意図を、コンバージョン対象となるオフラインの有形メディアに結び付けるのに役立ちます。 マーケティング担当者は、アドビで作成したカスタムデータセグメントを活用して、顧客を関連性の高い、長期にわたる社内メディアのインプレッションでターゲットできます。 応答パスのアクティビティとオンサイトのコンバージョンに基づいて、パフォーマンスをリアルタイムで分析します。
+[!DNL PebblePost's Programmatic Direct Mail®] ソリューションは、デジタルマーケターがオンラインの関心と意図を、コンバージョンを行うオフラインの有形メディアに結び付けるのに役立ちます。 マーケティング担当者は、アドビで作成したカスタムデータセグメントを活用して、顧客を関連性の高い、長期にわたる社内メディアのインプレッションでターゲットできます。 応答パスのアクティビティとオンサイトのコンバージョンに基づいて、パフォーマンスをリアルタイムで分析します。
 
-PebblePostは、Adobe Real-time Customer Data Platformの電子メール拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html)。
+[!DNL PebblePost] は、アドビのリアルタイム顧客データPlatformの電子メール拡張子です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ![PebblePost拡張](assets/pebblepost-extension.png)
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-PebblePost拡張機能をインストールするには：
+拡張機能をインストールするに [!DNL PebblePost] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -42,7 +42,7 @@ PebblePost拡張機能をインストールするには：
 
 拡張機能の設定オプションとインストールのサポートについて詳しくは、Adobe Exchangeの [PebblePostページを参照してください](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html)。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 ## 拡張機能の使用方法 {#how-to-use}
 
