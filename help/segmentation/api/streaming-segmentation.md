@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ストリーミングセグメント
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1364'
 ht-degree: 1%
 
 ---
@@ -290,7 +290,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->スケジュールされた評価は、XDM個別プロファイル用に最大5個のマージポリシーを持つサンドボックスに対して有効にできます。 1つのSandbox環境内にXDM個々のプロファイル用に5つ以上のマージポリシーがある場合、スケジュールされた評価を使用できません。
+>スケジュールされた評価は、最大5つのマージポリシーを持つサンドボックスに対して有効にでき [!DNL XDM Individual Profile]ます。 1つのSandbox環境内に5つを超えるマージポリシーがある場合、 [!DNL XDM Individual Profile] 予定された評価を使用できません。
 
 ### スケジュールの作成
 
