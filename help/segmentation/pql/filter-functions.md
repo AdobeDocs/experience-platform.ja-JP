@@ -4,23 +4,23 @@ solution: Experience Platform
 title: フィルター関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 4%
+source-wordcount: '191'
+ht-degree: 19%
 
 ---
 
 
 # フィルター関数
 
-フィルタ関数は、プロファイルクエリ言語(PQL)でアレイ内のデータをフィルタするために使用します。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+フィルタ関数は、 [!DNL Profile Query Language] (PQL)のアレイ内のデータをフィルタするために使用します。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## フィルター
 
 ( `[]` フィルタ)関数を使用すると、フィルターを配列に適用し、指定した条件に一致する配列のサブセットを返すことができます。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}[filter]
@@ -38,7 +38,7 @@ xEvent[productListItems[SKU="PS"]]
 
 ( `^` up)演算子を使用すると、上位レベルのフィルターのプロパティを参照できます。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}[{FILTER_1}[{FILTER_2} or ^{PROPERTY}]]
@@ -61,4 +61,4 @@ xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
 
 ## 次の手順
 
-これでフィルタ機能の学習が終わり、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
+これでフィルタ機能の学習が終わり、PQLクエリ内で使用できます。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
