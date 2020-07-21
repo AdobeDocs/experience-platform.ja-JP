@@ -4,15 +4,15 @@ solution: Adobe Experience Platform
 title: Adobe Experience Platformセグメントサービス開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience PlatformセグメントサービスAPI開発者ガイド
+# Adobe Experience Platform [!DNL Segmentation Service] API開発ガイド
 
 [!DNL Adobe Experience Platform Segmentation Service] セグメントを作成し、データ [!DNL Adobe Experience Platform] からでオーディエンスを生成でき [!DNL Real-time Customer Profile] ます。
 
