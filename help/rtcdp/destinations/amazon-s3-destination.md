@@ -4,27 +4,27 @@ seo-title: Amazon S3 の宛先
 description: Amazon Web Services（AWS）S3 3ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 seo-description: Amazon Web Services（AWS）S3 3ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 82%
+source-wordcount: '164'
+ht-degree: 51%
 
 ---
 
 
-# Amazon S3 の宛先
+# [!DNL Amazon S3] destination
 
 ## 概要
 
-Amazon Web Services（AWS）S3 3ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
+Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
 
 ## 宛先の接続 {#connect-destination}
 
-クラウドストレージの宛先（Amazon S3 を含む）への接続方法については、「[クラウドストレージの宛先のワークフロー](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)」を参照してください。
+See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL Amazon S3].
 
-Amazon S3 の宛先については、宛先の作成ワークフローで次の情報を入力します。
+For [!DNL Amazon S3] destinations, enter the following information in the create destination workflow:
 
-* **Amazon S3アクセスキーとAmazon S3シークレットキー**: Amazon S3で、アクセスキー — シークレットアクセスキーペアを生成して、Amazon S3アカウントへのAdobe Real-time CDPアクセスを許可します。
+* **[!DNL Amazon S3]アクセスキーと[!DNL Amazon S3]秘密鍵&#x200B;**: で、アクセスキー — 秘密アクセスキーペアを生成[!DNL Amazon S3]して、アドビのリアルタイムCDPアクセスを[!DNL Amazon S3]アカウントに付与します。
 
 
 
