@@ -4,9 +4,9 @@ solution: Experience Platform
 title: オプトアウトの実行
 topic: overview
 translation-type: tm+mt
-source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
@@ -68,13 +68,13 @@ Mixinを使用すると、次の2種類のCCPAオプトアウトリクエスト�
 
 Mixinの完全な構造を表示するには、 [!DNL Profile Privacy] XDMのパブリックGitHubリポジトリ [](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) 、またはPlatformUIを使用してMixinをプレビューする方法を参照してください。
 
-### プロファイルの環境設定の詳細
+### [!DNL Profile Preferences Details]
 
-プロファイル環境設定の詳細ミックスインには、顧客プロファイルに対する環境設定を表すいくつかのフィールドが用意されています(E メールフォーマット、好みの言語、タイムゾーンなど)。 このミックスインに含まれるフィールドの1つであるOptInOut (`optInOut`)を使用すると、個々のチャネルに対してオプトアウト値を設定できます。
+mixinは、顧客プロファイルに対する環境設定を表すいくつかのフィールドを提供します(E メールフォーマット、優先言語、タイムゾーンなど)。 [!DNL Profile Preferences Details] このミックスインに含まれるフィールドの1つであるOptInOut (`optInOut`)を使用すると、個々のチャネルに対してオプトアウト値を設定できます。
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-「プロファイル環境設定の詳細」ミックスインには、オプトアウトに関連する次のフィールドが含まれています。
+ミックスインには、オプトアウトに関連する次のフィールドが含まれ [!DNL Profile Preferences Details] ます。
 
 - OptInOut (`optInOut`): 各キーが通信チャネルの有効で既知のURIを表すオブジェクトで、各チャネルのオプトアウトのアクティブ状態が表します。 各チャネルには、次の4つの値のいずれかを指定できます。
    - 提供なし(`not_provided`): このチャネルのオプトアウト要求は提供されていません。
