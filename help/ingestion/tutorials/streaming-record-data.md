@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ストリーミングレコードデータ
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 2%
@@ -294,9 +294,6 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-            "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}"
     },
     "body": {
