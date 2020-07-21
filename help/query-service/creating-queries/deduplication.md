@@ -4,17 +4,17 @@ solution: Experience Platform
 title: データ重複排除 - 重複
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '405'
 ht-degree: 1%
 
 ---
 
 
-# クエリサービスでのデータ重複排除 - 重複
+# データ重複排除 - 重複 [!DNL Query Service]
 
-Adobe Experience Platformクエリサービスでは、重複から行全体を削除するか、特定のフィールドのセットを無視する必要がある場合に、データ重複排除 - 重複をサポートします。これは、行内のデータの一部だけが計算に含まれるためです。 重複排除 - 重複の一般的なパターンでは、IDやIDのペアの `ROW_NUMBER()` 関数を順番に(Experience Data Model(XDM) `timestamp` フィールドを使用して)ウィンドウ全体で使用し、重複が検出された回数を表す新しいフィールドを返すことがあります。 この値がの場合、は元のインスタンス `1`を参照し、ほとんどの場合は使用するインスタンスを参照します。他のインスタンスはすべて無視します。 これは、多くの場合、集計カウントの実行のように高いレベルで重複排除 - 重複が行われる下位選択の中で行われ `SELECT` ます。
+Adobe Experience Platform [!DNL Query Service] では、行全体を重複から削除する必要がある場合や、行のデータの一部だけが計算に含まれるので、特定のフィールドのセットを無視する場合に、データ重複排除 - 重複がサポートされます。 重複排除 - 重複の一般的なパターンでは、ウィンドウ全体でID `ROW_NUMBER()` 関数、またはIDのペアを順番に(XDM [!DNL Experience Data Model]`timestamp` フィールドを使用して)使用し、重複が検出された回数を表す新しいフィールドを返します。 この値がの場合、は元のインスタンス `1`を参照し、ほとんどの場合は使用するインスタンスを参照します。他のインスタンスはすべて無視します。 これは、多くの場合、集計カウントの実行のように高いレベルで重複排除 - 重複が行われる下位選択の中で行われ `SELECT` ます。
 
 ## 使用例
 
@@ -31,7 +31,7 @@ Adobe Experience Platformクエリサービスでは、重複から行全体を�
 
 >[!CAUTION]
 >
->Experience Platform内の多くのデータセット（Adobe Data Connectorが生成するものを含む）には、既にExperienceEventレベルの重複排除 - 重複が適用されています。 したがって、このレベルの重複排除 - 重複を再適用する必要がなく、クエリが遅くなります。 DataSetのソースを理解し、ExperienceEventレベルでの重複排除 - 重複が既に適用されているかどうかを知ることが重要です。 ストリーム化されるすべてのデータセット(例えば、Adobe Targetからのデータセット)に対しては、「少なくとも1回」のセマンティックがあるので、ExperienceEventレベルの重複排除 - 重複を適用する必要があります。
+>の多くのデータセット [!DNL Experience Platform]（Adobe Data Connectorで作成されたものを含む）には、既にExperienceEventレベルの重複排除 - 重複が適用されています。 したがって、このレベルの重複排除 - 重複を再適用する必要がなく、クエリが遅くなります。 DataSetのソースを理解し、ExperienceEventレベルでの重複排除 - 重複が既に適用されているかどうかを知ることが重要です。 ストリーム化されるすべてのデータセット(例えば、Adobe Targetからのデータセット)に対しては、「少なくとも1回」のセマンティックがあるので、ExperienceEventレベルの重複排除 - 重複を適用する必要があります。
 
 **範囲：** グローバル
 
