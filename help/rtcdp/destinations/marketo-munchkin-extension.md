@@ -1,40 +1,40 @@
 ---
 title: Marketo Munchkin 拡張機能
 seo-title: Marketo Munchkin 拡張機能
-description: Marketo Munchkin拡張機能は、Adobe Real-time Customer Data Platformのパーソナライズ先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: Marketo Munchkin拡張機能は、Adobe Real-time Customer Data Platformのパーソナライズ先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: Marketo Munchkin拡張機能は、Adobe Real-time Customer DataPlatformでのパーソナライズの対象となります。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: Marketo Munchkin拡張機能は、Adobe Real-time Customer DataPlatformでのパーソナライズの対象となります。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 6%
+source-wordcount: '574'
+ht-degree: 9%
 
 ---
 
 
-# Marketo Munchkin 拡張機能 {#marketo-munchkin-extension}
+# [!DNL Marketo Munchkin] 拡張機能 {#marketo-munchkin-extension}
 
 ## 概要 {#overview}
 
-リード管理からアカウントベースのマーケティングに至るまで、Marketo Engagement Platformは、顧客や見込み客とのエンゲージメントの計画、調整、測定を、各自の経験の段階でシンプル化します。
+リード管理からアカウントベースのマーケティングに至るまで、顧客や見込み客との関与の計画、調整、測定を、各自の経験の段階でシンプル化し [!DNL Marketo Engagement Platform] ます。
 
-マーケティング担当者のMunchkin JavaScriptを使用すると、マーケティング担当者のランディングページおよび外部Webページに対するエンドユーザーのページ訪問回数およびクリック数を追跡できます。
+[!DNL Marketo’s Munchkin][!DNL Marketo] JavaScript を使用すると、 ランディングページと外部 We bページに対するエンドユーザーのページ訪問回数およびクリック数を追跡できます。
 
-Marketo Munchkinは、Adobe Real-time Customer Data Platformの電子メール拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html)。
+[!DNL Marketo Munchkin] は、アドビのリアルタイム顧客データPlatformの電子メール拡張子です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ![Marketo Munchkin 拡張機能](assets/marketo-munchkin-extension.png)
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-Marketo Munchkin拡張機能をインストールするには：
+拡張機能をインストールするに [!DNL Marketo Munchkin] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -44,7 +44,7 @@ Marketo Munchkin拡張機能をインストールするには：
 
 拡張機能の構成オプションとインストールのサポートについて詳しくは、Adobe Exchangeの [Marketo Munchkinページを参照してください](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html)。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 ## 拡張機能の使用方法 {#how-to-use}
 
