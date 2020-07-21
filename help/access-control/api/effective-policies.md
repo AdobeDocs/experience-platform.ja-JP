@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 表示効果の高いポリシー
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '265'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 表示効果の高いポリシー
 
-現在のアクセス制御に対して有効なポリシーを表示するには、ユーザーAPIのエンドポイントにPOSTリクエストを行い `/acl/effective-policies` ます。 取得する権限とリソースタイプは、配列の形式で要求ペイロードに指定する必要があります。 これは、以下のAPI呼び出しの例で示されます。
+現在のユーザーに対して有効なポリシーを表示するには、 `/acl/effective-policies`[!DNL Access Control] APIのエンドポイントにPOSTリクエストを行います。 取得する権限とリソースタイプは、配列の形式で要求ペイロードに指定する必要があります。 これは、以下のAPI呼び出しの例で示されます。
 
 **API形式**
 
@@ -24,7 +24,7 @@ POST /acl/effective-policies
 
 **リクエスト**
 
-次のリクエストは、「データセットを管理」権限に関する情報を取得し、現在のユーザーの「スキーマ」リソースタイプにアクセスします。
+次のリクエストは、「データセットを[!UICONTROL 管理]」権限に関する情報を取得し、現在のユーザーの「[!UICONTROL スキーマ]」リソースタイプにアクセスします。
 
 ```shell
 curl -X POST \
@@ -65,11 +65,11 @@ curl -X POST \
 
 ## 次の手順
 
-このドキュメントでは、アクセス制御APIを呼び出して、アクティブな権限とリソースタイプの関連ポリシーに関する情報を返す方法について説明しました。 Experience Platformのアクセス制御について詳しくは、 [アクセス制御の概要を参照してください](../home.md)。
+このドキュメントでは、アクティブな権限とリソースタイプの関連ポリシーに関する情報を返すために [!DNL Access Control] APIを呼び出す方法について説明しました。 のアクセス制御について詳し [!DNL Experience Platform]くは、 [アクセス制御の概要](../home.md)を参照してください。
 
 ## 付録
 
-この節では、アクセス制御APIの使用に関する補足情報を提供します。
+この節では、 [!DNL Access Control] APIの使用に関する補足情報を提供します。
 
 ### 許可された権限とリソースの種類
 
