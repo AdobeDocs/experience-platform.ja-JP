@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 時系列データのストリーミング
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
+source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1130'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 # 時系列データをAdobe Experience Platformにストリーミングする
 
-このチュートリアルは、Adobe Experience Platformデータ取り込みサービスAPIの一部であるストリーミング取り込みAPIの使用を開始する際に役立ちます。
+このチュートリアルは、Adobe Experience PlatformAPIの一部であるストリーミング取り込みAPIの使用を開始する際に役立ち [!DNL Data Ingestion Service] ます。
 
 ## はじめに
 
 このチュートリアルでは、さまざまなAdobe Experience Platformサービスに関する実用的な知識が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [Experience Data Model(XDM)](../../xdm/home.md): Platformがエクスペリエンスデータを編成する際に使用する標準化されたフレームワーク。
-- [リアルタイム顧客プロファイル](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [スキーマレジストリ開発ガイド](../../xdm/api/getting-started.md): スキーマレジストリAPIの使用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法をカバーする包括的なガイドです。 これには、このチュートリアル全体の呼び出しに表示されるユーザ `{TENANT_ID}`ー情報や、スキーマの作成方法を知ることが含まれます。この方法は、統合用のデータセットの作成に使用されます。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): エクスペリエンスデータを [!DNL Platform] 編成するための標準化されたフレームワーク。
+- [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [スキーマレジストリ開発ガイド](../../xdm/api/getting-started.md): APIの使用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法をカバーする包括的なガイドです。 [!DNL Schema Registry] これには、このチュートリアル全体の呼び出しに表示されるユーザ `{TENANT_ID}`ー情報や、スキーマの作成方法を知ることが含まれます。この方法は、統合用のデータセットの作成に使用されます。
 
 また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。 ストリーミング接続の作成について詳しくは、「ストリーミング接続の [作成」チュートリアルを参照してください](./create-streaming-connection.md)。
 
@@ -30,23 +30,23 @@ ht-degree: 2%
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -54,7 +54,7 @@ Experience Platform内のすべてのリソースは、特定の仮想サンド�
 
 ## XDM ExperienceEventクラスからスキーマを作成します
 
-データセットを作成するには、まずXDM ExperienceEventクラスを実装する新しいスキーマを作成する必要があります。 スキーマの作成方法について詳しくは、 [スキーマレジストリAPI開発者ガイドを参照してください](../../xdm/api/getting-started.md)。
+データセットを作成するには、まず、そのク [!DNL XDM ExperienceEvent] ラスを実装する新しいスキーマを作成する必要があります。 スキーマの作成方法について詳しくは、 [スキーマレジストリAPI開発者ガイドを参照してください](../../xdm/api/getting-started.md)。
 
 **API形式**
 
@@ -99,7 +99,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | スキーマに使用する名前。 この名前は一意にする必要があります。 |
 | `description` | 作成しているスキーマに関するわかりやすい説明。 |
-| `meta:immutableTags` | この例では、 `union` タグを使用してデータを [リアルタイム顧客プロファイルに保持します](../../profile/home.md)。 |
+| `meta:immutableTags` | この例では、 `union` タグを使用してデータを保持しま [!DNL Real-time Customer Profile](../../profile/home.md)す。 |
 
 **応答**
 
@@ -187,7 +187,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 
 1. 勤務先の電子メールアドレスは必須フィールドになります。 これは、このフィールドを使用せずに送信されたメッセージは検証に失敗し、取り込まれないことを意味します。
 
-2. リアルタイム顧客プロファイルは、勤務先の電子メールアドレスを識別子として使用し、個人に関する詳細情報をまとめます。
+2. [!DNL Real-time Customer Profile] は、勤務先の電子メールアドレスを識別子として使用して、その個人に関する詳細情報を結合します。
 
 ### リクエスト
 
@@ -246,7 +246,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->このデータセットは、適切なタグを設定することで、 **リアルタイムの顧客プロファイル** / **IDに対して有効になります** 。
+>このデータセットは、適切なタグを設定するこ **[!DNL Real-time Customer Profile]** とで、およびに対 **[!DNL Identity]** して有効になります。
 
 **API形式**
 
@@ -294,7 +294,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 ## 時系列データをストリーミング接続に取り込む
 
-データセットとストリーミング接続が確立された状態で、XDM形式のJSONレコードを取り込み、Platform内の時系列データを取り込むことができます。
+データセットとストリーミング接続が確立された状態で、XDM形式のJSONレコードを取り込み、内の時系列データを取り込むことができ [!DNL Platform]ます。
 
 **API形式**
 
@@ -379,7 +379,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **応答**
 
-正常に応答すると、新たにストリーミングされたプロファイルの詳細と共にHTTPステータス200が返されます。
+正常に応答した場合、新たにストリーム化されたの詳細と共にHTTPステータス200が返され [!DNL Profile]ます。
 
 ```json
 {
@@ -401,11 +401,11 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 新たに取り込まれた時系列データの取得
 
-以前に取り込んだレコードを検証するには、 [プロファイルアクセスAPI](../../profile/api/entities.md) (Time Series)を使用して時系列データを取得します。 これは、エンドポイントへのGET要求を使用し、オプションのクエリパラメーターを使用して行うことが `/access/entities` できます。 複数のパラメーターを使用でき、アンパサンド(&amp;)で区切ります。」
+以前に取り込んだレコードを検証するには、を使用して時系列データ [!DNL Profile Access API](../../profile/api/entities.md) を取得します。 これは、エンドポイントへのGET要求を使用し、オプションのクエリパラメーターを使用して行うこ `/access/entities` とができます。 複数のパラメーターを使用でき、アンパサンド(&amp;)で区切ります。」
 
 >[!NOTE]
 >
->マージポリシーIDが定義されていない場合とスキーマ。</span>nameまたはrelatedSchema</span>.nameがで `_xdm.context.profile`す。プロファイルアクセスは **** すべての関連IDを取得します。
+>マージポリシーIDが定義されていない場合とスキーマ。</span>nameまたはrelatedSchema</span>.nameは `_xdm.context.profile`、 [!DNL Profile Access] す **べての** 関連IDを取得します。
 
 **API形式**
 
@@ -503,6 +503,6 @@ curl -X GET \
 
 ## 次の手順
 
-このドキュメントを読むと、ストリーミング接続を使用してレコードデータをPlatformに取り込む方法が理解できます。 様々な値を持つ呼び出しをさらに試して、更新された値を取得できます。 また、PlatformUIを使用して、取り込んだデータを開始で監視することもできます。 詳しくは、『 [監視データ取り込み](../quality/monitor-data-flows.md) 』ガイドを参照してください。
+このドキュメントを読むと、記録データをストリーミング接続に取り込む方法が理解でき [!DNL Platform] ます。 様々な値を持つ呼び出しをさらに試して、更新された値を取得できます。 また、 [!DNL Platform] UIを使用して、取り込んだデータを開始で監視することもできます。 詳しくは、『 [監視データ取り込み](../quality/monitor-data-flows.md) 』ガイドを参照してください。
 
 一般的なストリーミング取り込みの詳細については、 [ストリーミング取り込みの概要を参照してください](../streaming-ingestion/overview.md)。
