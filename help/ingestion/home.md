@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformデータ取り込みの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '417'
 ht-degree: 10%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 # データ取り込みの概要
 
-Adobe Experience Platformは、複数のソースからのデータを統合し、マーケティング担当者が顧客の行動をより深く理解できるようにします。 Adobe Experience Platformデータ取り込みは、これらのソースからデータを [!DNL Platform] 取り込む複数の方法、およびダウンストリームサー [!DNL Platform] ビスで使用するデータレーク内でのデータの保持方法を表します。
+Adobe Experience Platformは、複数のソースからのデータを統合して、マーケティング担当者が顧客の行動をより深く理解できるようにします。 Adobe Experience Platformデータ取り込みは、これらのソースからデータを [!DNL Platform] 取り込む複数の方法、およびダウンストリームサー [!DNL Platform] ビスで使用するデータレーク内でのデータの保持方法を表します。
 
 このドキュメントでは、データを取り込む主な3つの方法について説明し [!DNL Platform]、詳細については、それぞれの概要ドキュメントへのリンクを示します。
 
@@ -36,7 +36,7 @@ See the [streaming ingestion overview](./streaming-ingestion/overview.md) for mo
 
 [!DNL Experience Platform] 様々なデータプロバイダーへのソース接続を設定できます。 これらの接続を使用すると、外部データソースの認証、インジェストの実行時間の設定、インジェストスループットの管理を行うことができます。
 
-ソース接続は、他のアドビアプリケーション(アドビのAnalyticsやAdobe Audience Managerなど)、サードパーティのクラウドストレージソース( [!DNL Azure Blob][!DNL Amazon] S3、FTPサーバー、SFTPサーバーなど)、およびサードパーティのCRMシステム（Microsoft DynamicsやSalesforceなど）からデータを収集するように設定できます。
+ソース接続は、他のアドビアプリケーション(アドビのAnalyticsやAdobe Audience Managerなど)、サードパーティのクラウドストレージソース( [!DNL Azure Blob]S3、FTPサーバー、SFTPサーバーなど)、およびサードパーティのCRMシステム( [!DNL Amazon] と [!DNL Microsoft Dynamics][!DNL Salesforce]など)からデータを収集するように設定できます。
 
 See the [Sources overview](../sources/home.md) for more information.
 
