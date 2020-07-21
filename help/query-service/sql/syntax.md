@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL構文
 topic: syntax
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1940'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # SQL構文
 
-クエリサービスは、標準ANSI SQLを文や他の制限付きコマンドに使用する機能を提供し `SELECT` ます。 このドキュメントは、クエリサービスでサポートされるSQL構文を示しています。
+[!DNL Query Service] は、標準のANSI SQLを文や他の制限付きコマンドに使用する機能を提供し `SELECT` ます。 このドキュメントは、でサポートされているSQL構文を示し [!DNL Query Service]ます。
 
 ## SELECTクエリの定義
 
-次の構文は、クエリサービスでサポートされる `SELECT` クエリを定義します。
+次の構文は、でサポートされる `SELECT` クエリを定義し [!DNL Query Service]ます。
 
 ```
 [ WITH with_query [, ...] ]
@@ -111,7 +111,7 @@ SELECT statement 2
 
 ## 選択としてテーブルを作成
 
-次の構文は、クエリサービスでサポートされる `CREATE TABLE AS SELECT` (CTAS)クエリを定義します。
+次の構文は、でサポートされる `CREATE TABLE AS SELECT` (CTAS)クエリを定義し [!DNL Query Service]ます。
 
 ```
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
@@ -136,7 +136,7 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 
 ## 挿入する
 
-次の構文は、クエリサービスでサポートされる `INSERT INTO` クエリを定義します。
+次の構文は、でサポートされる `INSERT INTO` クエリを定義し [!DNL Query Service]ます。
 
 ```
 INSERT INTO table_name select_query
@@ -170,7 +170,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## 表示の作成
 
-次の構文は、クエリサービスでサポートされる `CREATE VIEW` クエリを定義します。
+次の構文は、でサポートされる `CREATE VIEW` クエリを定義し [!DNL Query Service]ます。
 
 ```
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
@@ -187,7 +187,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### ドロップ表示
 
-次の構文は、クエリサービスでサポートされる `DROP VIEW` クエリを定義します。
+次の構文は、でサポートされる `DROP VIEW` クエリを定義し [!DNL Query Service]ます。
 
 ```
 DROP VIEW [IF EXISTS] view_name
@@ -202,7 +202,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Spark SQLコマンド
+## [!DNL Spark] SQLコマンド
 
 ### SET
 
@@ -242,7 +242,7 @@ CLOSE { name }
 
 ### COMMIT
 
-クエリサービスでは、commit transactionステートメントへの応答としての操作は行われません。
+コミットトランザクション明細書への応答 [!DNL Query Service] としてのアクションは実行されません。
 
 ```
 COMMIT [ WORK | TRANSACTION ]
