@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Tableauとの接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '74'
 ht-degree: 2%
 
 ---
 
 
-# Tableauとの接続
+# 接続先 [!DNL Tableau]
 
-Tableauをインストールします（まだインストールされていない場合）。
+インストール [!DNL Tableau]します（まだインストールされていない場合）。
 
 >[!NOTE]
 >
->14日間の「Tableau Desktop」の体験版を入手 [できます](https://www.tableau.com/products/desktop/download)。
+>14日間の「[!DNL Tableau] Desktop」の体験版を入手でき [ます](https://www.tableau.com/products/desktop/download)。
 >    
-> クエリサービスへの接続 `2018.1.2 (20181.18.0615.1128 64 bit)` に成功しました。
+> バージョン `2018.1.2 (20181.18.0615.1128 64 bit)` はに接続できました [!DNL Query Service]。
 
-Tableauを実行し、開いた画面でをクリックしてPostgres接続を開きます。
+を実行 [!DNL Tableau]し、開いた画面でをクリックして、 [!DNL Postgres] 接続を開きます。
 
 ![画像](../images/clients/tableau/open-connection.png)
 
-PlatformUI `Host, Port, Database, Username, Password` の **Connect BI Tools** ページから、対応するTableauフィールドに個別にコピーします。
+UIの `Host, Port, Database, Username, Password` Connect BI Tools [!DNL Platform]**** ページから、対応するTableauフィールドに個別にコピーします。
 
-接続を試行する前に、「 **SSL Required** 」ボックスをオンにしたことを確認します。
+接続を試行する前に、「 **[!UICONTROL SSL Required]** 」ボックスをオンにしたことを確認します。
 
 ![画像](../images/clients/tableau/ssl-required.png)
