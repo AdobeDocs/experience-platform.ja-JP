@@ -4,10 +4,10 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '1019'
-ht-degree: 46%
+source-wordcount: '1013'
+ht-degree: 47%
 
 ---
 
@@ -58,7 +58,7 @@ ht-degree: 46%
    ![IDとしての忠誠度ID](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Facebookの電子メールハッシュ要件 `Email_LC_SHA256` に従って、データ取り込み時にAdobe Experience Platformに顧客の電子メールアドレスをハッシュする場合は、ターゲットIDとして選択 [します](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 Adobe Real-time CDPは、Facebookの要件に準拠するために電子メールアドレスをハッシュします。
+   データ取り込み時 `Email_LC_SHA256` にターゲットの電子メールアドレスをAdobe Experience Platformにハッシュ化する場合は、電子メールのハッシュ要件に従って、 [!DNL Facebook] IDとして選択します [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 Adobe Real-time CDPは、 [!DNL Facebook] 要件に準拠するために電子メールアドレスをハッシュ化します。
 
    ![フィールドへの入力後のIDマッピング](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -113,11 +113,11 @@ Salesforce_id3544_20191122124530.csv
 
 ### ソーシャルネットワークの宛先
 
-Facebookの場合、アクティベーションが成功すると、Facebookのカスタムオーディエンスが [Facebook広告マネージャーでプログラム的に作成され](https://www.facebook.com/adsmanager/manage/)ます。 ユーザーがアクティブ化されたセグメントに対して資格を持つか資格を失うかにより、オーディエンスのセグメントメンバーシップが追加および削除されます。
+例えば、アクティベーション [!DNL Facebook]が成功した場合、 [!DNL Facebook] カスタムオーディエンスは [Facebook広告マネージャーでプログラム的に作成されます](https://www.facebook.com/adsmanager/manage/)。 ユーザーがアクティブ化されたセグメントに対して資格を持つか資格を失うかにより、オーディエンスのセグメントメンバーシップが追加および削除されます。
 
 >[!TIP]
 >
->Adobe Real-time CDPとFacebookの統合により、履歴オーディエンスのバックフィルがサポートされます。 宛先にセグメントをアクティブ化すると、すべての過去のセグメント資格情報がFacebookに送信されます。
+>Adobe Real-time CDPとの統合により、過去のオーディエンスバックフィルが [!DNL Facebook] サポートされます。 宛先に対してセグメントをアクティブ化する [!DNL Facebook] と、すべての過去のセグメント資格情報がに送信されます。
 
 ## アクティベーションの無効化 {#disable-activation}
 
