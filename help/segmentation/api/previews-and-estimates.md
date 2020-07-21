@@ -4,9 +4,9 @@ solution: Experience Platform
 title: エンドポイントのプレビューと予測
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '742'
 ht-degree: 2%
 
 ---
@@ -71,7 +71,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | データをクエリするPQL式。 |
 | `predicateType` | の下にあるクエリ式の述語の種類 `predicateExpression`です。 現在、このプロパティに指定できる値は `pql/text`です。 |
-| `predicateModel` | プロファイルデータの基になるExperience Data Model(XDM)スキーマの名前。 |
+| `predicateModel` | プロファイルデータの基になる [!DNL Experience Data Model] (XDM)スキーマの名前。 |
 
 **応答**
 
@@ -167,7 +167,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、 [プロファイルアクセスAPIを使用して、指定されたエンティティを検索するために使用できます](../../profile/api/entities.md)。 |
+| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、を使用して、指定されたエンティティを検索するために使用でき [!DNL Profile Access API](../../profile/api/entities.md)ます。 |
 
 ## 特定の見積ジョブの結果を取得します {#get-estimate}
 
@@ -226,4 +226,4 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ## 次の手順
 
-このガイドを読むと、プレビューと予測の使い方に関する理解が深まります。 その他のSegmentation Service APIエンドポイントについて詳しくは、 [Segmentation Service開発者ガイドの概要を参照してください](./overview.md)。
+このガイドを読むと、プレビューと予測の使い方に関する理解が深まります。 その他の [!DNL Segmentation Service] APIエンドポイントについて詳しくは、 [Segmentation Service開発者ガイドの概要を参照してください](./overview.md)。
