@@ -1,38 +1,38 @@
 ---
 title: Yext Conversion Tracking拡張
 seo-title: Yext Conversion Tracking拡張
-description: Yext Conversion Tracking Extensionは、Adobe Real-time Customer Data Platformの分析の対象となります。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: Yext Conversion Tracking Extensionは、Adobe Real-time Customer Data Platformの分析の対象となります。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: Yext Conversion Tracking Extensionは、Adobe Real-time Customer DataPlatformのAnalytics宛先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: Yext Conversion Tracking Extensionは、Adobe Real-time Customer DataPlatformの分析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 4%
+source-wordcount: '555'
+ht-degree: 5%
 
 ---
 
 
-# Yextコンバージョントラッキング拡張 {#yext-extension}
+# [!DNL Yext Conversion Tracking] 拡張機能 {#yext-extension}
 
 ## 概要 {#overview}
 
-Yext Conversion Tracking Extensionを使用すると、外部製品の使用に関連付けられるコンバージョンを測定できます。
+この [!DNL Yext Conversion Tracking] 拡張機能を使用すると、外部製品の使用に関連付けられるコンバージョンを測定できます。
 
-Yext Conversion Trackingは、Adobe Real-time Customer Data PlatformのAnalytics拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html)。
+[!DNL Yext Conversion Tracking] は、アドビのリアルタイム顧客データPlatformのanalytics拡張です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ![Yextコンバージョントラッキング拡張](assets/yext-extension.png)
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-Yext Conversion Tracking Extensionをインストールするには：
+拡張機能をインストールするに [!DNL Yext Conversion Tracking] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -42,7 +42,7 @@ Yext Conversion Tracking Extensionをインストールするには：
 
 拡張機能の設定オプションとインストールのサポートについて詳しくは、Adobe Exchangeの「 [外部コンバージョンの追跡」ページを参照してください](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html)。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 ## 拡張機能の使用方法 {#how-to-use}
 
