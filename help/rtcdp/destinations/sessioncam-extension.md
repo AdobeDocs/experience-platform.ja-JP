@@ -1,38 +1,38 @@
 ---
 title: SessionCam拡張
 seo-title: SessionCam拡張
-description: SessionCam拡張機能は、Adobe Real-time Customer Data Platformの解析の送信先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
-seo-description: SessionCam拡張機能は、Adobe Real-time Customer Data Platformの解析の送信先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+description: SessionCam拡張機能は、Adobe Real-time Customer DataPlatformの解析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+seo-description: SessionCam拡張機能は、Adobe Real-time Customer DataPlatformの解析先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 4%
+source-wordcount: '545'
+ht-degree: 5%
 
 ---
 
 
-# SessionCam拡張 {#sessioncam-extension}
+# [!DNL SessionCam] 拡張機能 {#sessioncam-extension}
 
 ## 概要 {#overview}
 
-SessionCamは、ユーザの行動を明らかにし、修正すべき最も重要な問題を示す重要なツールスイートです。
+[!DNL SessionCam] は、ユーザーの行動を明らかにし、修正すべき最も重要な問題を示す重要なツールスイートを提供します。
 
-SessionCamは、Adobe Real-time Customer Data PlatformのAnalytics拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100517.html)。
+[!DNL SessionCam] は、アドビのリアルタイム顧客データPlatformのanalytics拡張です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100517.html)。
 
-この宛先は、エクスペリエンスプラットフォーム起動の拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、「 [エクスペリエンスプラットフォーム起動拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)」を参照してください。
+この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
 ![SessionCam拡張](assets/sessioncam-extension.png)
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、アドビのリアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
 
-この拡張機能を使用するには、エクスペリエンスプラットフォームの起動にアクセスする必要があります。 エクスペリエンスプラットフォームの発売は、Adobe Experience Cloudのお客様に対して、付加価値機能として提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
-SessionCam拡張機能をインストールするには：
+拡張機能をインストールするに [!DNL SessionCam] は：
 
 1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
 2. カタログから拡張子を選択するか、検索バーを使用します。
@@ -42,7 +42,7 @@ SessionCam拡張機能をインストールするには：
 
 拡張機能の構成オプションとインストールのサポートについて詳しくは、Adobe ExchangeのSessionCamページを参照して [ください](https://exchange.adobe.com/experiencecloud.details.100517.html)。
 
-この拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
 
 ## 拡張機能の使用方法 {#how-to-use}
 
