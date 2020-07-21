@@ -4,10 +4,10 @@ seo-title: Adobe Launch を使用した Web サイトタグの実装
 description: Adobe Launch を使用した Adobe Experience Platform での Web サイトタグの実装
 seo-description: Adobe Launch を使用した Adobe Experience Platform での Web サイトタグの実装
 translation-type: tm+mt
-source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 100%
+source-wordcount: '475'
+ht-degree: 70%
 
 ---
 
@@ -18,32 +18,32 @@ ht-degree: 100%
 
 ## 前提条件
 
-* 必要なスキーマとデータセットが Platform で作成されている。
-* 必要な設定が Experience Edge にデプロイされ、一致する設定 ID と Edge ドメインを持っている。
-* 会社の CMS は、各ページに JavaScript オブジェクトを配信し、Platform 送信する必要のあるデータを提供するように設定されている。。
+* The necessary schema and dataset are created in [!DNL Platform].
+* The necessary configuration has been deployed in [!DNL Experience Edge] and has the matching Configuration ID and [!DNL Edge] domain.
+* The company CMS has already been configured to deliver a JavaScript object on each page with the data you need to send to [!DNL Platform].
 
 ## 手順
 
 このチュートリアルでは、次の手順を実行します。
 
-1. Adobe Experience Platform Web SDK 拡張機能をインストールします。
-1. Launch に送信するデータを指定するルールを作成します。
+1. Install the Adobe Experience Platform [!DNL Web SDK] extension.
+1. Create a rule to tell [!DNL Launch] what data to send.
 1. 拡張機能とルールをライブラリにバンドルします。
 
-## Adobe Experience Platform Web SDK 拡張機能のインストール
+## Install the Adobe Experience Platform [!DNL Web SDK] extension
 
-まず、Adobe Experience Platform Web SDK 拡張機能をインストールします。
+First, install the Adobe Experience Platform [!DNL Web SDK] extension.
 
-1. Launch で、「**[!UICONTROL 拡張機能]**」タブを開きます。
+1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
 
    ![画像](assets/launch-overview.png)
 
-1. 「Launch 拡張機能カタログ」から「Adobe Experience Platform Web SDK 拡張機能」を選択します。
-設定画面が開きます。
+1. Select the Adobe Experience Platform Web SDK extension from the [!DNL Launch] Extension [!DNL Catalog]
+The configuration screen opens.
 
    ![画像](assets/launch-extension-install.png)
 
-   詳しくは、Launch ドキュメントの「[拡張機能](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/overview.html)」を参照してください。
+   詳しくは、 ドキュメントの「[拡張機能](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/overview.html)」を参照してください。[!DNL Launch]
 
 1. 拡張機能を設定します。
 
@@ -54,17 +54,17 @@ ht-degree: 100%
 
 1. 「**[!UICONTROL 保存]**」をクリックし、次の手順に進みます。
 
-## Launch に送信するデータを指定するルールの作成
+## Create a rule to tell [!DNL Launch] what data to send
 
-次に、Adobe Experience Platform に送信するデータといつ送信するかを Launch に知らせるルールを作成します。
+Next, create a rule to let [!DNL Launch] know what data you want to send to Adobe Experience Platform and when you want to send it.
 
-1. 「**[!UICONTROL ルール]**」タブで、Launch ライブラリが読み込まれたときに Web サイトの新しい各ページでトリガーされるイベントを設定します。
+1. 「**[!UICONTROL ルール]**」タブで、 ライブラリが読み込まれたときに Web サイトの新しい各ページでトリガーされるイベントを設定します。[!DNL Launch]
 
    ![画像](assets/launch-make-a-rule.png)
 
 1. アクションを追加します。
 
-   アクションを設定するには、Launch にデータレイヤーの場所を指定します。データレイヤーは、ページ上に存在する JavaScript オブジェクトで、Web ページをレンダリングするのと同じ CMS から配信されます。データオブジェクトへの JavaScript パスを指定します。
+   To configure the action, tell [!DNL Launch] where to find your data layer. データレイヤーは、ページ上に存在する JavaScript オブジェクトで、Web ページをレンダリングするのと同じ CMS から配信されます。データオブジェクトへの JavaScript パスを指定します。
 
    ![画像](assets/launch-add-aep-action.png)
 
@@ -72,7 +72,7 @@ ht-degree: 100%
 
 1. 「**[!UICONTROL 変更を保存]**」をクリックします。
 
-詳しくは、Launch ドキュメントの「[ルール](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/rules.html)」を参照してください。
+詳しくは、 ドキュメントの「[ルール](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/rules.html)」を参照してください。[!DNL Launch]
 
 ## ライブラリでの拡張機能とルールのバンドル
 
@@ -84,4 +84,4 @@ ht-degree: 100%
 
 ![画像](assets/launch-promote-library.png)
 
-詳しくは、Launch ドキュメントの「[ライブラリ](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/publish/libraries.html)」を参照してください。
+詳しくは、 ドキュメントの「[ライブラリ](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/publish/libraries.html)」を参照してください。[!DNL Launch]
