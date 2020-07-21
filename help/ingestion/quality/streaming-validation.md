@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ストリーミング取り込みの検証
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '815'
 ht-degree: 3%
 
 ---
@@ -20,28 +20,28 @@ ht-degree: 3%
 
 このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-- [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [ストリーミング取り込み](../streaming-ingestion/overview.md): データをExperience Platformに送信する方法の1つ。
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): データの送信先のメソッドの1つ [!DNL Experience Platform]。
 
 ### サンプルAPI呼び出しの読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-スキーマレジストリに属するリソースを含むExperience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Schema Registry]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
@@ -49,7 +49,7 @@ PlatformAPIを呼び出すには、まず [認証チュートリアルを完了�
 
 ### 検証範囲
 
-ストリーミング検証サービスでは、次の領域での検証について説明します。
+[!DNL Streaming Validation Service] は、次の領域の検証について説明します。
 - 範囲
 - 配置
 - 列挙
@@ -140,7 +140,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 非同期検証
 
-非同期検証は、即時のフィードバックを提供しない検証方法です。 代わりに、データが失われないように、データがData Lakeの失敗したバッチに送信されます。 この失敗したデータは、後で取得して、さらに分析および再生することができます。 この方法は実稼働環境で使用する必要があります。 特に要求がない限り、ストリーミング取り込みは非同期検証モードで行われます。
+非同期検証は、即時のフィードバックを提供しない検証方法です。 その代わりに、データの損失を防ぐために、失敗したバッチ [!DNL Data Lake] にデータが送信されます。 この失敗したデータは、後で取得して、さらに分析および再生することができます。 この方法は実稼働環境で使用する必要があります。 特に要求がない限り、ストリーミング取り込みは非同期検証モードで行われます。
 
 **API形式**
 
