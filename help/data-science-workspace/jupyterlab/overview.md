@@ -488,7 +488,7 @@ SELECT {table_columns}
 FROM {table_name}
 ```
 
-### / [!DNL Python]RでのExperienceEventデータのフィルタ
+### [!DNL Python]/RでのExperienceEventデータのフィルタ
 
 ま [!DNL Python] たはRノートブックのExperienceEventデータセットにアクセスしてフィルタリングするには、論理演算子を使用して、データセット(`{DATASET_ID}`)のIDと、特定の時間範囲を定義するフィルタールールを指定する必要があります。 時間範囲を定義すると、指定したページ番号は無視され、データセット全体が考慮されます。
 
