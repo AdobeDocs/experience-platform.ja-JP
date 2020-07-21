@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Spark SQL関数
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '4903'
+source-wordcount: '4900'
 ht-degree: 6%
 
 ---
 
 
-# Spark SQL関数
+# [!DNL Spark] SQL関数
 
-Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関数を提供します。
+SQLヘルパーは、SQL機能を拡張する組み込み [!DNL Spark][!DNL Spark] SQL関数を提供します。
 
 リファレンス： [Spark SQL関数ドキュメント](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
@@ -1282,7 +1282,7 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
 
 #### to_date
 
-`to_date(date_str[, fmt])`: 式を使用して `date_str` 式を解析し、日付を `fmt` 指定します。 無効な入力でnullを返します。 デフォルトでは、キャストルールが省略された場合、キャストルールに従 `fmt` います。
+`to_date(date_str[, fmt])`: 式を使用して `date_str` 式を解析し、日付を `fmt` 指定します。 無効な入力でnullを返します。 デフォルトでは、キャストルールを省略すると、キャストルールに従って日付が決ま `fmt` ります。
 
 例：
 
@@ -1338,7 +1338,7 @@ Spark SQLヘルパーは、SQL機能を拡張する組み込みのSpark SQL関�
 
 #### 切り詰める
 
-`trunc(date, fmt)`: 日付の時間部分を、書式モデルで指定された単位に切り捨てて返 `fmt`します。 `fmt` は、「year」、「yyyy」、「yy」、「mon」、「month」、「mm」のいずれかです。 []
+`trunc(date, fmt)`: 日付の時間部分を、書式モデルで指定された単位に切り捨てた日付を返 `fmt`します。 `fmt` は、「year」、「yyyy」、「yy」、「mon」、「month」、「mm」のいずれかです。 []
 
 例：
 
