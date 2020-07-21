@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 複数のオブジェクトの検索
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '176'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # 複数のオブジェクトの検索
 
-1つのオブジェクトにつき1つのリクエストを行うのではなく、複数の特定のオブジェクトを表示したい場合は、カタログを使用すると、同じ種類の複数のオブジェクトをリクエストする簡単なショートカットを使用できます。 IDのカンマ区切りリストを含めることで、1つのGETリクエストを使用して、複数の特定のオブジェクトを返すことができます。
+1つのオブジェクトにつき1つのリクエストを行うのではなく、複数の特定のオブジェクトを表示したい場合は、同じ種類の複数のオブジェクトをリクエストするためのシンプルなショートカットを [!DNL Catalog] 提供します。 IDのカンマ区切りリストを含めることで、1つのGETリクエストを使用して、複数の特定のオブジェクトを返すことができます。
 
 >[!NOTE]
 >
->特定のCatalogオブジェクトをリクエストする場合でも、 `properties` クエリパラメーターは、必要なプロパティのみを返すことをお勧めします。
+>特定の [!DNL Catalog] オブジェクトをリクエストする場合でも、 `properties` クエリパラメーターは必要なプロパティのみを返すことをお勧めします。
 
 **API形式**
 
@@ -27,7 +27,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` |取得するCatalogオブジェクトの種類。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` |取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` |取得する特定のオブジェクトの識別子。 |
 
 **リクエスト**
@@ -49,7 +49,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->返されたオブジェクトに、 `properties` クエリが示す要求したプロパティが1つ以上含まれていない場合は、以下の「Sample Dataset 3」と「Sample Dataset 4」に示すように、その応答は、そのオブジェクトに含まれる要求されたプロパティのみを返します。
+>返されるオブジェクトに、 `properties` クエリが示す要求されたプロパティが1つ以上含まれていない場合は、次に示すように、要求されたプロパティのみが返され ***`Sample Dataset 3`*** ま ***`Sample Dataset 4`*** す。
 
 ```json
 {
