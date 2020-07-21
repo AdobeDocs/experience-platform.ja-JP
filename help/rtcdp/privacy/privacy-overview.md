@@ -4,28 +4,28 @@ seo-title: リアルタイム顧客データプロファイルでのプライバ
 description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 97%
+source-wordcount: '304'
+ht-degree: 58%
 
 ---
 
 
 # Real-time CDP のプライバシー
 
-リアルタイム顧客データプラットフォーム（Real-time CDP）は、マーケティング担当者が複数の大規模法人システムからデータを統合し、顧客の特定、理解、関与を促進するのに役立ちます。アドビでは、基本的なデザイン原則として消費者データのプライバシーを保持し、マーケティング担当者が顧客のデータのプライバシーを管理するのに役立つ様々なコントロールを提供しています。
+[!DNL Real-time Customer Data Platform] （リアルタイムCDP）は、マーケティング担当者が複数のエンタープライズ・システムからデータを統合し、顧客の識別、理解、関与性を高めるのに役立ちます。 アドビでは、基本的なデザイン原則として消費者データのプライバシーを保持し、マーケティング担当者が顧客のデータのプライバシーを管理するのに役立つ様々なコントロールを提供しています。
 
-ほとんどの Real-time CDP 機能は、Adobe Experience Platform によって動作します。このドキュメントでは、Real-time CDP がサポートする各種プライバシー強化テクノロジーに関する情報と、詳細を含む Experience Platform のドキュメントへのリンクを提供します。
+ほとんどの Real-time CDP 機能は、Adobe Experience Platform によって動作します。This document provides information about the various privacy enhancement technologies supported by Real-time CDP, with links to [!DNL Experience Platform] documentation for more information.
 
-## プライバシーサービス
+## [!DNL Privacy Service]
 
-Adobe Experience Platform プライバシーサービスを使用すると、GDPR（EU 一般データ保護規則）やカリフォルニア州消費者プライバシー法（CCPA）などのプライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。Real-time CDP は、データ収集とストレージに Experience Platform の機能を活用するので、GDPR と CCPA に対するアクセス要求と削除要求は、プラットフォーム内で管理する必要があります。このサービスの概要について詳しくは、『[プライバシーサービスの概要](../../privacy-service/home.md)』ドキュメントを参照してください。
+Adobe Experience Platform [!DNL Privacy Service] により、GDPR [!DNL General Data Protection Regulation] や [!DNL California Consumer Privacy Act] CCPAなどのプライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。 Since Real-time CDP leverages [!DNL Experience Platform] capabilities for data collection and storage, the access and delete requests for GDPR and CCPA should be managed within [!DNL Platform]. このサービスの概要について詳しくは、『[プライバシーサービスの概要](../../privacy-service/home.md)』ドキュメントを参照してください。
 
 個々の GDPR および CCPA データ主体アクセス要求を送信して顧客データにアクセスし、削除する方法は 2 つあります。
 
-* [プライバシーサービスの UI](https://gdprui.cloud.adobe.io/) を使用して、ビジュアルワークスペース内でアクセス要求と削除要求を作成および監視します。手順については、『[プライバシーサービスの UI チュートリアル](../../privacy-service/ui/overview.md)』を参照してください。
-* [プライバシーサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) を使用して、RESTful API 呼び出しを介してアクセス要求と削除要求を管理します。手順については、『[プライバシーサービス API のチュートリアル](../../privacy-service/api/getting-started.md)』を参照してください。
+* Use the [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. 手順については、『[プライバシーサービスの UI チュートリアル](../../privacy-service/ui/overview.md)』を参照してください。
+* Use the [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. 手順については、『[プライバシーサービス API のチュートリアル](../../privacy-service/api/getting-started.md)』を参照してください。
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
