@@ -4,23 +4,23 @@ solution: Experience Platform
 title: クエリパラメーターを使用したカタログデータのフィルター
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2060'
+source-wordcount: '2033'
 ht-degree: 1%
 
 ---
 
 
-# クエリパラメーターを使用したカタログデータのフィルター
+# クエリパラメーターを使用した [!DNL Catalog] データのフィルター
 
-Catalog Service APIを使用すると、リクエストクエリーパラメーターを使用して応答データをフィルタリングできます。 カタログのベストプラクティスの一つは、すべてのAPI呼び出しでフィルターを使用することです。これらのメソッドを使用すると、APIの読み込みが減り、全体的なパフォーマンスが向上するのに役立ちます。
+この [!DNL Catalog Service] APIを使用すると、リクエストクエリパラメーターを使用して応答データをフィルタリングできます。 のベストプラクティスの一部 [!DNL Catalog] は、すべてのAPI呼び出しでフィルターを使用することです。これらのメソッドを使用すると、APIの負荷が軽減され、全体的なパフォーマンスが向上します。
 
-このドキュメントでは、APIでカタログオブジェクトをフィルタリングする最も一般的な方法について説明します。 Catalog APIの使い方の詳細については、 [Catalog開発者ガイドを読みながらこのドキュメントを参照することをお勧めします](getting-started.md) 。 カタログサービスの一般情報について詳しくは、 [カタログの概要を参照してください](../home.md)。
+このドキュメントでは、APIで [!DNL Catalog] オブジェクトをフィルタリングする最も一般的な方法について説明します。 この [APIの使い方について詳しくは、](getting-started.md) カタログ開発者ガイドを読みながらこのドキュメントを参照することをお勧めします [!DNL Catalog] 。 詳しくは、 [!DNL Catalog Service]カタログの概要を参照してください [](../home.md)。
 
 ## 返されるオブジェクトの制限
 
-応答で返されるオブジェクトの数は、 `limit` クエリパラメーターによって制限されます。 カタログの応答は、設定された制限に従って自動的に有料になります。
+応答で返されるオブジェクトの数は、 `limit` クエリパラメーターによって制限されます。 [!DNL Catalog] 次の制限に従って、応答は自動的に課金されます。
 
 * パラメーターが指定されていない場合、応答ペイロードあたりのオブジェクトの最大数は20です。 `limit`
 * データセットクエリの場合、 `observableSchema` クエリパラメーターを使用してリクエスト `properties` が行われると、返されるデータセットの最大数は20です。
@@ -36,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するCatalogオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 返すオブジェクトの数を示す1 ～ 100の整数です。 |
 
 **リクエスト**
@@ -104,9 +104,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するCatalogオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 応答本文に含める属性の名前。 |
-| `{OBJECT_ID}` | 取得する特定のCatalogオブジェクトの固有な識別子。 |
+| `{OBJECT_ID}` | 取得する特定の [!DNL Catalog] オブジェクトの固有な識別子。 |
 
 **リクエスト**
 
@@ -123,7 +123,7 @@ curl -X GET \
 
 **応答**
 
-正常に応答すると、要求されたプロパティのみが表示されたCatalogオブジェクトのリストが返されます。
+正常に応答すると、要求されたプロパティのみが表示された [!DNL Catalog] オブジェクトのリストが返されます。
 
 ```json
 {
@@ -205,9 +205,9 @@ curl -X GET \
 * 現在タグをサポートしているCatalogオブジェクトは、データセット、バッチ、接続のみです。
 * タグ名はIMS組織に固有です。
 * アドビのプロセスでは、特定の動作に対してタグが使用される場合があります。 これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。 したがって、タグ名を宣言する際は、このような表記規則は避ける必要があります。
-* 次のタグ名は、Experience Platform全体で使用するために予約されているので、組織のタグ名として宣言することはできません。
-   * `unifiedProfile`: このタグ名は、リアルタイム顧客プロファイルが取り込むデータセット用に予約されて [います](../../profile/home.md)。
-   * `unifiedIdentity`: このタグ名は、 [IDサービスが取り込むデータセット用に予約されています](../../identity-service/home.md)。
+* 次のタグ名は、全体で使用するために予約されてい [!DNL Experience Platform]るので、貴社のタグ名として宣言することはできません。
+   * `unifiedProfile`: このタグ名は、で取り込むデータセット用に予約されてい [!DNL Real-time Customer Profile](../../profile/home.md)ます。
+   * `unifiedIdentity`: このタグ名は、で取り込むデータセット用に予約されてい [!DNL Identity Service](../../identity-service/home.md)ます。
 
 次に、 `tags` プロパティを含むデータセットの例を示します。 このプロパティ内のタグは、キーと値のペアの形式をとります。各タグ値は、1つの文字列を含む配列として表示されます。
 
@@ -261,7 +261,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するCatalogオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | フィルターに使用するタグの名前。 |
 | `{TAG_VALUE}` | フィルターに使用するタグの値。 ワイルドカード文字(`*`)をサポートします。 |
 
@@ -332,7 +332,7 @@ curl -X GET \
 
 ## 日付範囲でフィルター
 
-カタログAPIの一部のエンドポイントには、幅のあるクエリを可能にするクエリパラメーターがあります。ほとんどの場合、日付が使用されます。
+APIの一部のエンドポイントには、幅のあるクエリを許可するクエリパラメーターがあります。ほとんどの場合、日付が使用されます。 [!DNL Catalog]
 
 **API形式**
 
@@ -359,7 +359,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答には、指定した日付範囲に該当するCatalogオブジェクトのリストが含まれます。 制限も指定しない限り、応答には最大20個のオブジェクトが含まれます。
+成功した応答には、指定した日付範囲に該当する [!DNL Catalog] オブジェクトのリストが含まれます。 制限も指定しない限り、応答には最大20個のオブジェクトが含まれます。
 
 ```json
 {
@@ -396,7 +396,7 @@ curl -X GET \
 
 複数の並べ替えプロパティは、カンマで区切ったリストで指定できます。 最初の並べ替えプロパティで、そのプロパティに対して同じ値を持つ複数のオブジェクトが生成される場合は、2番目の並べ替えプロパティを使用して、一致するオブジェクトをさらに並べ替えます。
 
-例えば、次のクエリを考えてみましょう。 `orderBy=name,desc:created`. 結果は、最初の並べ替えプロパティに基づいて昇順で並べ替えられ `name`ます。 複数のレコードが同じ `name` プロパティを共有する場合、一致するレコードは、2番目のsortingプロパティ()で並べ替えられ `created`ます。 返されたレコードが同じレコードを共有しない場合 `name`、この `created` プロパティは並べ替えの要素になりません。
+例えば、次のクエリを考えてみましょう。 `orderBy=name,desc:created`. 結果は、最初の並べ替えプロパティに基づいて昇順で並べ替えられ `name`ます。 複数のレコードが同じ `name` プロパティを共有する場合、一致するレコードは、2番目のsortingプロパティ()で並べ替えられ `created`ます。 返されたレコードが同じレコードを持たない場合 `name`、この `created` プロパティは並べ替えの要素になりません。
 
 
 **API形式**
@@ -427,7 +427,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答には、パラメーターに従って並べ替えられたCatalogオブジェクトのリストが含まれ `orderBy` ます。 制限も指定しない限り、応答には最大20個のオブジェクトが含まれます。
+成功した応答には、パラメーターに従って並べ替えられた [!DNL Catalog] オブジェクトのリストが含まれ `orderBy` ます。 制限も指定しない限り、応答には最大20個のオブジェクトが含まれます。
 
 ```json
 {
@@ -472,7 +472,7 @@ curl -X GET \
 
 ## プロパティでフィルタ
 
-Catalogには、プロパティでフィルタリングする2つの方法があります。以下の節で詳しく説明します。
+[!DNL Catalog] プロパティでフィルタリングする方法は2つあり、以下の節で詳しく説明します。
 
 * [単純なフィルターの使用](#using-simple-filters): 特定のプロパティが特定の値と一致するかどうかでフィルタします。
 * [プロパティパラメーターの使用](#using-the-property-parameter): 条件付き式を使用して、プロパティが存在するかどうか、またはプロパティの値が別の指定した値や正規式と一致、近似、比較するかどうかを基にフィルタリングします。
@@ -483,7 +483,7 @@ Catalogには、プロパティでフィルタリングする2つの方法があ
 
 例えば、このクエリは、 `name=exampleName``name` プロパティに「exampleName」という値が含まれているオブジェクトのみを返します。 一方、このクエリは、 `name=!exampleName` プロパティが「exampleName `name` 」で **** ないオブジェクトのみを返します。
 
-また、単純なフィルターでは、単一のプロパティに対して複数の値をクエリする機能もサポートされています。 複数の値が指定された場合、指定されたリスト内の値のい **ずれかに一致するプロパティを持つオブジェクトが応答によって返されます** 。 リストに `!` 文字をプリフィックスすると、指定したクエリにプロパティ値がな **いオブジェクト(例えば**`name=!exampleName,anotherName`)のみが返され、複数値のリストを反転できます。
+また、単純なフィルターでは、単一のプロパティに対して複数の値をクエリする機能もサポートされています。 複数の値が指定された場合、指定されたリスト内の値のい **ずれかに一致するプロパティを持つオブジェクトが返されます** 。 リストに `!` 文字をプリフィックスすると、指定したクエリにプロパティ値がな **いオブジェクト(例えば**`name=!exampleName,anotherName`)のみが返され、複数値のリストを反転できます。
 
 **API形式**
 
@@ -496,7 +496,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するCatalogオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 値のフィルターに使用するプロパティの名前です。 |
 | `{VALUE}` | 含める（または除外する）結果をクエリに応じて決定するプロパティ値です。 |
 
@@ -572,7 +572,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するCatalogオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | クエリするプロパティとその値の評価方法を示す条件付き式。 以下に例を示します。 |
 
 この `property` パラメーターの値は、複数の異なる種類の条件式をサポートします。 次の表に、サポートされる式の基本的な構文を示します。
