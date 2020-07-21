@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントビルダーのUIガイド
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '2750'
+source-wordcount: '2745'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 セグメントの定義を使用するには、セグメント化に関連する様々な [!DNL Experience Platform] サービスについて理解しておく必要があります。 このユーザーガイドを読む前に、次のサービスのドキュメントを確認してください。
 
-- [!DNL Segmentation Service](../home.md): Segmentation Serviceを使用すると、個人(顧客、見込み客、ユーザーまたは組織)に関連 [!DNL Experience Platform] するに格納されたデータを、類似した特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割できます。
+- [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] 個人(顧客、見込み客、ユーザー、組織など) [!DNL Experience Platform] に関連付けて保存されたデータを、類似した特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割できます。
 - [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-- [!DNL Identity Service](../../identity-service/home.md): Platform [!DNL Real-time Customer Profile] に取り込まれる異なるデータソースのIDをブリッジ化することで有効にします。
+- [!DNL Identity Service](../../identity-service/home.md): 取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
 また、このドキュメントを通じて使用される2つの主要用語を知り、それらの違いを理解することも重要です。
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 ### イベント
 
-「 **[!UICONTROL イベント]** 」タブでは、XDM ExperienceEventデータ要素を使用して行われたイベントまたはアクションに基づいてオーディエンスを作成できます。 また、セグメントをより迅速に作成できるようにするためによく使用される **[!UICONTROL イベントの集まりである「イベント]** 」タブにイベントタイプが表示されます。
+「 **[!UICONTROL イベント]** 」タブでは、データ要素を使用して行われたイベントまたはアクションに基づいてオーディエンスを作成でき [!DNL XDM ExperienceEvent] ます。 また、セグメントをより迅速に作成できるようにするためによく使用される **[!UICONTROL イベントの集まりである「イベント]** 」タブにイベントタイプが表示されます。
 
 要素を参照できるだけでなく、 [!DNL ExperienceEvent] イベントタイプを検索することもできます。 イベントタイプはと同じコーディングロジックを使用し [!DNL ExperienceEvents]ます。クラス内を検索して正しいイベントを探す必要はありません [!DNL XDM ExperienceEvent] 。 例えば、検索バーを使用して「cart」を検索すると、「AddCart[!UICONTROL 」と「RemoveCart]」というイベントタイプが返されます。これは、セグメント定義の作成時に非常に一般的に使用される2つの買い物かごアクションです。
 
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 ### オーディエンスの追加
 
-オーディエンスを「 *[!UICONTROL オーディエンス]* 」タブからルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義のオーディエンスのメンバーシップを参照できます。 これにより、オーディエンスのメンバーシップを属性として新しいセグメントルールに含めたり、除外したりできます。
+オーディエンスを「 *[!UICONTROL オーディエンス]* 」タブからルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義のオーディエンスのメンバーシップを参照できます。 これにより、オーディエンスのメンバーシップを属性として新しいセグメントルールに含めたり除外したりできます。
 
 を使用して作成された [!DNL Platform] オーディエンスに [!DNL Segment Builder]は、そのオーディエンスのセグメント定義で使用された一連のルールにオーディエンスを変換するオプションが与えられます。 この変換により、ルールロジックのコピーが作成され、元のセグメント定義に影響を与えることなく変更できます。 セグメント定義をルールロジックに変換する前に、セグメント定義に対する最新の変更を保存していることを確認してください。
 
