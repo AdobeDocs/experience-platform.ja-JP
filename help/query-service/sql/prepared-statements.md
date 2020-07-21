@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 準備済み明細書
 topic: prepared statements
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '340'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 # 準備済み明細書
 
-SQLでは、準備された文を使用して、類似したクエリや更新をテンプレート化します。 Adobe Experience Platformクエリサービスは、パラメータ化クエリを使用した準備済みのステートメントをサポートします。 クエリを何度も再解析する必要がなくなるので、これを使用してパフォーマンスを最適化できます。
+SQLでは、準備された文を使用して、類似したクエリや更新をテンプレート化します。 Adobe Experience Platform [!DNL Query Service] は、パラメータ化クエリを使用して準備された文をサポートします。 クエリを何度も再解析する必要がなくなるので、これを使用してパフォーマンスを最適化できます。
 
 ## 準備文の使用
 
