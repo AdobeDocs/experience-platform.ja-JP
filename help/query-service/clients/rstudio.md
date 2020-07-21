@@ -4,19 +4,19 @@ solution: Experience Platform
 title: RStudioに接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
 
 
-# RStudioに接続
+# 接続先 [!DNL RStudio]
 
-このドキュメントでは、R StudioとAdobe Experience Platformクエリサービスを接続する手順について説明します。
+このドキュメントでは、R StudioとAdobe Experience Platformを接続する手順について説明 [!DNL Query Service]します。
 
-RStudioをインストールした後、表示される *コンソール* 画面で、PostgreSQLを使用するためのRスクリプトを準備する必要があります。
+インストール後 [!DNL RStudio]、表示される *コンソール画面で* 、使用するRスクリプトを準備する必要があり [!DNL PostgreSQL]ます。
 
 ```r
 install.packages("RPostgreSQL")
@@ -25,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-PostgreSQLを使用するためのRスクリプトを準備したら、PostgreSQLドライバを読み込むことで、RStudioをクエリサービスに接続できるようになりました。
+使用するRスクリプトを準備したら、 [!DNL PostgreSQL]ドライバを読み込むことで、に接続できるようにな [!DNL RStudio] り [!DNL Query Service][!DNL PostgreSQL] ます。
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -45,11 +45,11 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->データベース名、ホスト、ポート、ログインの資格情報の検索について詳しくは、Platformの [資格情報ページを参照してください](https://platform.adobe.com/query/configuration)。 資格情報を探すには、Platformにログインし、「 **クエリ**」をクリックし、「 **資格情報**」をクリックします。
+>データベース名、ホスト、ポート、ログインの資格情報の検索について詳しくは、Platformの [資格情報ページを参照してください](https://platform.adobe.com/query/configuration)。 資格情報を探すには、にログインし、「 [!DNL Platform]クエリ **[!UICONTROL 」をクリックし、「]**&#x200B;資格情報 ****」をクリックします。
 
 ## 次の手順
 
-クエリサービスに接続したら、SQL文を実行および編集するクエリを作成できます。 たとえば、を使用してクエリ `dbGetQuery(con, sql)` を実行できます。ここで、 `sql` は実行するSQLクエリです。
+に接続したら、SQL文を実行 [!DNL Query Service]および編集するクエリを作成できます。 たとえば、を使用してクエリ `dbGetQuery(con, sql)` を実行できます。ここで、 `sql` は実行するSQLクエリです。
 
 次のクエリでは、ExperienceEventsを含むデータセットを使用し [て](../creating-queries/experience-event-queries.md) 、デバイスの画面の高さが決まると、Webサイトのページ表示のヒストグラムを作成します。
 
