@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformストリーミング取り込みの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '249'
 ht-degree: 3%
 
 ---
@@ -14,29 +14,29 @@ ht-degree: 3%
 
 # ストリーミング取り込みの概要
 
-Adobe Experience Platformのストリーミング取り込みにより、ユーザーはクライアントおよびサーバー側デバイスからExperience Platformにデータをリアルタイムで送信できます。
+Adobe Experience Platformのストリーミング取り込みでは、ユーザーはクライアントおよびサーバー側のデバイスからデータをリアルタイムに送信する方法 [!DNL Experience Platform] を使用できます。
 
 ## ストリーミング取り込みで何ができますか。
 
-Adobe Experience Platformを使用すると、個々の顧客に対してリアルタイムの顧客プロファイルを生成することで、調整済みで一貫性のある関連性のあるエクスペリエンスを実現できます。 ストリーミング取り込みは、プロファイルデータを可能な限り待ち時間を短くしてデータレークに配信できるようにすることで、これらのプロファイルを構築する上で重要な役割を果たします。
+Adobe Experience Platformを使用すると、個々の顧客に対してを生成することで、調整され、一貫性のある、関連性のあるエクスペリエンス [!DNL Real-time Customer Profile] を実現できます。 ストリーミング取り込みは、可能な限り待ち時間を短くして [!DNL Profile][!DNL Data Lake] データをに配信できるようにすることで、これらのプロファイルを構築する上で重要な役割を果たします。
 
 次のビデオは、ストリーミング取り込みに関する理解を深めるために設計されており、上述の概念について概説しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
-### ストリームプロファイルレコードとExperienceEvents
+### ストリームプロファイルレコードおよび [!DNL ExperienceEvents]
 
-ストリーミング取り込みを使用すると、プロファイルの記録やExperienceEventsを数秒でPlatformにストリーミングして、リアルタイムのパーソナライゼーションを実現できます。 ストリーミング取り込みAPIに送信されたすべてのデータは、データレークに自動的に保持されます。
+ストリーミング取り込みにより、プロファイルの記録を数秒でストリーミングし、リアルタイム [!DNL ExperienceEvents] のパーソナライゼーション [!DNL Platform] を促進できます。 ストリーミング取り込みAPIに送信されたすべてのデータは、で自動的に保持され [!DNL Data Lake]ます。
 
 詳しくは、『ストリーミング接続の [作成](../tutorials/create-streaming-connection.md) 』ガイドを参照してください。
 
 ### データセットへのストリーム
 
-データがクリーンであると確信したら、リアルタイム顧客プロファイルおよびIDサービス用のデータセットを有効にできます。
+データがクリーンであることが確実にわかったら、 [!DNL Real-time Customer Profile] およびのデータセットを有効にでき [!DNL Identity Service]ます。
 
-プロファイルおよびIDサービスのデータセットを有効にする方法について詳しくは、『データセットの [設定』ガイドを参照してください](../../profile/tutorials/dataset-configuration.md)。
+およびのデータセットの有効化について詳し [!DNL Profile] くは、『データセットの [!DNL Identity Service]設定 [](../../profile/tutorials/dataset-configuration.md)』ガイドを参照してください。
 
-## Platformでのストリーミング取り込みに予想される遅延は何ですか。
+## What is the expected latency for streaming ingestion on [!DNL Platform]?
 
 | 宛先 | 予想される遅延 |
 | --------- | ---------------- |
@@ -45,4 +45,4 @@ Adobe Experience Platformを使用すると、個々の顧客に対してリア�
 
 ## Adobe Experience Platform 拡張機能
 
-Adobe Experience Platform拡張機能を使用して、新しいストリーミング接続を作成できます。 Experience Platform拡張機能は、Experience Data Model(XDM)でフォーマットされたビーコンを送信して、Experience Platformにリアルタイムで取り込むためのアクションを提供します。 詳しくは、 [Experience Platform拡張機能のドキュメントを参照してください](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) 。
+Adobe Experience Platform拡張機能を使用して、新しいストリーミング接続を作成できます。 この [!DNL Experience Platform] 拡張機能は、(XDM)でフォーマットされたビーコンを送信し、リアルタイムで取り込むためのアクションを提供し [!DNL Experience Data Model] ま [!DNL Experience Platform]す。 詳しくは、 [Experience Platform拡張機能のドキュメントを参照してください](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/adobe-experience-platform-extension.html) 。
