@@ -4,10 +4,10 @@ seo-title: クラウドストレージの宛先ワークフロー
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 49%
+source-wordcount: '493'
+ht-degree: 50%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 49%
 
    ![クラウドストレージの宛先に接続](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. クラウドストレージの宛先への接続を既に設定している場合は、**[!UICONTROL 認証]**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新しいアカウント]**」を選択して、クラウドストレージの宛先への新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。<br> Amazon S3 [](/help/rtcdp/destinations/amazon-s3-destination.md) , [Amazon S](/help/rtcdp/destinations/amazon-kinesis-destination.md) , [Azureイベントハブ](/help/rtcdp/destinations/azure-event-hubs-destination.md) , SFTP宛先詳細は、Amazon S3 [,](/help/rtcdp/destinations/sftp-destination.md) Amazon S3 **, Azure Authentication Hubs** , and SSFTP宛先を参照してください。
+2. クラウドストレージの宛先への接続を既に設定している場合は、**[!UICONTROL 認証]**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新しいアカウント]**」を選択して、クラウドストレージの宛先への新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。<br> 認証手順での秘密鍵証明書の入力について詳しくは、 [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) の宛先、 [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) 宛先、 [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) 宛先、 [SFTPの宛先を参照して](/help/rtcdp/destinations/sftp-destination.md)**** ください。
 
    >[!NOTE]
    >
@@ -40,11 +40,11 @@ Amazon S3の宛先の場合は、ファイルが配信されるクラウドス�
 
    ![SFTPクラウドのストレージ先に接続 — 認証手順](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-   Amazon Kinesisの宛先の場合は、ア [!DNL Amazon Kinesis] カウント内の既存のデータストリームの名前を指定します。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+   宛先の場合は、ア [!DNL Amazon Kinesis] カウント内の既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
    ![Kinesisクラウドストレージの宛先への接続 — 認証手順](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
 
-   Azureイベントハブの宛先の場合は、ア [!DNL Amazon Kinesis] カウント内の既存のデータストリームの名前を指定します。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+   宛先の場合は、ア [!DNL Azure Event Hubs] カウント内の既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
    ![Kinesisクラウドストレージの宛先への接続 — 認証手順](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
