@@ -4,23 +4,23 @@ solution: Experience Platform
 title: 集計関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 6%
+source-wordcount: '208'
+ht-degree: 21%
 
 ---
 
 
 # 集計関数
 
-集約関数は、プロファイルクエリ言語(PQL)配列内の複数の値をグループ化して単一の要約値を形成するために使用します。 その他のPQL機能の詳細については、「 [プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+集計関数は、 [!DNL Profile Query Language] (PQL)アレイ内の複数の値をグループ化して単一の要約値を形成するために使用します。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
 
 ## 回数
 
 この `count` 関数は、渡された配列内の要素数を返します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.count()
@@ -38,7 +38,7 @@ orders.count()
 
 この `sum` 関数は、配列内で選択されたすべての値の合計を返します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.sum()
@@ -56,7 +56,7 @@ orders.sum(order.price)
 
 この `average` 関数は、配列内で選択されたすべての値の算術平均を返します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.average()
@@ -74,7 +74,7 @@ orders.average(order.price)
 
 この `min` 関数は、配列内で選択されたすべての値の中で最も小さい値を返します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.min()
@@ -92,7 +92,7 @@ orders.min(order.price)
 
 この `max` 関数は、配列内で選択されたすべての値の中で最も大きい値を返します。
 
-**形式**
+**書式**
 
 ```sql
 {ARRAY}.max()
@@ -108,4 +108,4 @@ orders.max(order.price)
 
 ## 次の手順
 
-集約関数の学習が終わったので、PQLクエリ内で使用できます。 その他のPQL関数の詳細については、 [プロファイルクエリ言語の概要を参照してください](./overview.md)。
+集約関数の学習が終わったので、PQLクエリ内で使用できます。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
