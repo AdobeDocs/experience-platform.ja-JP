@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 権限とリソースタイプのリスト名
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '123'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 エンドポイントにGETリクエストを行うことで、すべての権限とリソースの種類の名前をリストでき `/acl/reference` ます。 これらの名前は、現在のユーザーに対して有効なポリシーを [表示するためのAPI呼び出しで使用でき](./effective-policies.md) ます。
 
-「 **権限** 」とは、Adobe管理コンソールで管理され、0個以上のリソースタイプポリシーに対応付けられるポリシーです。 リ **ソースタイプ** とは、特定の種類のプラットフォームリソース(データセットやスキーマなど)の読み取り、書き込み、削除の機能を有効にするポリシーです。
+「 **権限** 」とは、AdobeAdmin Consoleを介して管理され、0個以上のリソースタイプポリシーに対応付けられるポリシーです。 リ **ソースタイプ**[!DNL Platform] とは、特定の種類のリソース(データセットやスキーマなど)に対して読み取り、書き込み、削除の機能を有効にするポリシーです。
 
 **API形式**
 
