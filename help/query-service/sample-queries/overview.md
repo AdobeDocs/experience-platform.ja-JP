@@ -4,9 +4,9 @@ solution: Experience Platform
 title: サンプルクエリ
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # サンプルクエリ
 
-Adobe Experience Cloudソリューションデータは、Experience Platformでネイティブに利用できます。 初めて、データを移動することなく、同じデータストアからAdobe Analytics、Adobeターゲット、Adobe CampaignおよびAdobeオーディエンスマネージャーのデータをクエリできます。 データは、ソリューションからAdobe Experience Platformに取り込まれると、エクスペリエンスイベントエクスペリエンスデータモデル(エクスペリエンスイベントXDM)に変換されます。 これは、スキーマの標準化のレイヤーを提供します。
+Adobe Experience Cloudソリューションデータは、でネイティブに利用でき [!DNL Experience Platform]ます。 初めて、同じデータストアからAdobeAnalytics、Adobe Target、Adobe CampaignおよびAdobe Audience Managerのデータをクエリでき、データを移動する必要はありません。 データはソリューションからAdobe Experience Platformに取り込まれると、そのソリューションは [!DNL Experience Event Experience Data Model] (エクスペリエンスイベントXDM)に変換されます。 これは、スキーマの標準化のレイヤーを提供します。
 
-アドビのデータに対して実行する標準的なクエリはいくつかあります。 Adobe AnalyticsおよびAdobeターゲットのサンプルクエリについては、以下のドキュメントを参照してください。 その他のソリューションデータのサンプルクエリは、今後追加される予定です。
+アドビのデータに対して実行する標準的なクエリはいくつかあります。 アドビのAnalyticsおよびAdobe Targetのサンプルクエリについては、以下のドキュメントを参照してください。 その他のソリューションデータのサンプルクエリは、今後追加される予定です。
 
-- [Adobe Analyticsサンプルクエリ](adobe-analytics.md)
-- [アドビターゲットサンプルクエリ](adobe-target.md)
+- [アドビAnalyticsサンプルクエリ](adobe-analytics.md)
+- [Adobe Targetサンプルクエリ](adobe-target.md)
