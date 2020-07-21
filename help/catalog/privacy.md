@@ -4,40 +4,40 @@ solution: Experience Platform
 title: データレークでのプライバシー要求の処理
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1187'
 ht-degree: 0%
 
 ---
 
 
-# データレークでのプライバシー要求の処理
+# プライバシーリクエストの処理( [!DNL Data Lake]
 
-Adobe Experience Platform Privacy Serviceは、法的および組織のプライバシーに関する規則に基づオプトアウトいて説明した、個人データにアクセス、販売、または削除するように顧客の要求を処理します。
+Adobe Experience Platform [!DNL Privacy Service] は、法的および組織のプライバシーに関する規則に基づいて説明された個人データにアクセス、販売、または削除するように顧客の要求を処理します。
 
-このドキュメントでは、データレークに保存された顧客データに対するプライバシー要求の処理に関する基本的な概念について説明します。
+このドキュメントでは、に保存された顧客データのプライバシーリクエストを処理する際に必要となる基本的な概念について説明 [!DNL Data Lake]します。
 
 ## はじめに
 
-このガイドを読む前に、次のExperience Platformサービスに関する十分な理解を得ておくことをお勧めします。
+このガイドを読む前に、次の [!DNL Experience Platform] サービスに関する作業上の理解を得ておくことをお勧めします。
 
-* [Privacy Service](../privacy-service/home.md): Adobe Experience Cloudアプリケーションで個人データにアクセス、オプトアウト、削除を行う際の顧客の要求を管理します。
-* [カタログサービス](home.md): Experience Platform内のデータの場所と系列のレコードシステム。 データセットメタデータの更新に使用できるAPIを提供します。
-* [Experience Data Model(XDM)System](../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [IDサービス](../identity-service/home.md): デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
+* [!DNL Privacy Service](../privacy-service/home.md): Adobe Experience Cloudアプリケーションで個人データにアクセス、オプトアウト、削除を行う際の顧客の要求を管理します。
+* [!DNL Catalog Service](home.md): データの場所と内の系列のレコードのシステム [!DNL Experience Platform]。 データセットメタデータの更新に使用できるAPIを提供します。
+* [!DNL Experience Data Model (XDM) System](../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Identity Service](../identity-service/home.md): デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
 
 ## ID名前空間について {#namespaces}
 
-Adobe Experience PlatformIDサービスは、システムとデバイス間で顧客IDデータを結合します。 アイデンティティサービスは **ID名前空間** を使用して、ID値を接触チャネルのシステムに関連付けることで、ID値のコンテキストを提供します。 名前空間は、電子メールアドレス（「電子メール」）などの汎用的な概念を表したり、IDを特定のAdvertising Cloud(AdCloud)やAdobe TargetID(「TNTID」)など)に関連付けたりできます。
+Adobe Experience Platform [!DNL Identity Service] は、システムやデバイス間で顧客のIDデータを結合します。 [!DNL Identity Service] は、 **[!UICONTROL identity名前空間]** を使用して、identity値に対するコンテキストを、その接触チャネルのシステムに関連付けることで提供します。 名前空間は、電子メールアドレス（「電子メール」）などの汎用的な概念を表したり、IDを特定のAdvertising Cloud(AdCloud)やAdobe TargetID(「TNTID」)など)に関連付けたりできます。
 
-アイデンティティサービスは、グローバルに定義された（標準）ID名前空間とユーザー定義の（カスタム）IDユーザーのストアを管理します。 標準名前空間は、すべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
+[!DNL Identity Service] グローバルに定義された（標準）ID名前空間とユーザー定義の（カスタム）IDユーザーのストアを維持します。 標準名前空間は、すべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
 
-Experience PlatformでのID名前空間について詳しくは、「 [ID名前空間の概要](../identity-service/namespaces.md)」を参照してください。
+のID名前空間について詳し [!DNL Experience Platform]くは、「 [ID名前空間の概要](../identity-service/namespaces.md)」を参照してください。
 
 ## IDデータをデータセットに追加する
 
-Data Lakeのプライバシーリクエストを作成する場合、データを見つけて処理するために、有効なID値(および関連する名前空間)を各顧客に提供する必要があります。 したがって、プライバシー要求の対象となるすべてのデータセットには、関連するXDMスキーマに **ID記述子** が含まれている必要があります。
+のプライバシーリクエストを作成する場合 [!DNL Data Lake]、データを見つけて処理するために、有効なID値(および関連する名前空間)を各顧客に提供する必要があります。 したがって、プライバシー要求の対象となるすべてのデータセットには、関連するXDMスキーマに **[!UICONTROL ID記述子]** が含まれている必要があります。
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Data Lakeのプライバシーリクエストを作成する場合、データ�
 
 ### UIの使用 {#identity-ui}
 
-Experience Platformユーザーインターフェイスでは、 _[!UICONTROL スキーマ]_・ワークスペースを使用して既存のXDMスキーマを編集できます。 スキーマにID記述子を追加するには、リストからスキーマを選択し、スキーマエディタのチュートリアルで、スキーマフィールドをIDフィールドとして[設定する手順](../xdm/tutorials/create-schema-ui.md#identity-field)に従います。
+ユー [!DNL Experience Platform ]ザーインターフェイスでは、 __スキーマワークスペースを使用して、既存のXDMスキーマを編集できます。 ID記述子をスキーマに追加するには、リストからスキーマを選択し、チュートリアルのIDフィールドとしてスキーマフィールドを[設定する手順に従い](../xdm/tutorials/create-schema-ui.md#identity-field)[!DNL Schema Editor]ます。
 
 スキーマ内の適切なフィールドをIDフィールドとして設定したら、次のセクションに進んで、プライバシー [要求の送信に関するセクション](#submit)。
 
@@ -64,11 +64,11 @@ Experience Platformユーザーインターフェイスでは、 _[!UICONTROL �
 
 >[!NOTE]
 >
->この節では、データセットのXDMスキーマの固有のURI ID値を把握していることを前提としています。 この値がわからない場合は、Catalog Service APIを使用して取得できます。 開発ガイドの「 [はじめに](./api/getting-started.md) 」の節を読んだ後、に示す [リストの](./api/list-objects.md) 手順 [、または](./api/look-up-object.md) Catalogオブジェクトを参照してデータセットを見つける手順に従います。 スキーマIDは、 `schemaRef.id`
+>この節では、データセットのXDMスキーマの固有のURI ID値を把握していることを前提としています。 この値がわからない場合は、 [!DNL Catalog Service] APIを使用して取得できます。 開発者ガイドの「 [はじめに](./api/getting-started.md) 」の節を読んだら、に示す [手順に従って](./api/list-objects.md) 一覧表示するか [](./api/look-up-object.md)[!DNL Catalog] 、データセットを見つけるオブジェクトを調べます。 スキーマIDは、 `schemaRef.id`
 >
 > この節には、スキーマレジストリAPIの呼び出しが含まれます。 APIの使用に関する重要な情報(コンテナの概念や概念を把握する `{TENANT_ID}` など)については、開発者ガイドの [はじめに](../xdm/api/getting-started.md) （英語のみ）の節を参照してください。
 
-スキーマレジストリAPIのエンドポイントにPOSTリクエストを行うことで、データセットのXDMスキーマにID記述子を追加でき `/descriptors` ます。
+APIでエンドポイントにPOSTリクエストを行うことで、データセットのXDMスキーマにID記述子を追加でき `/descriptors`[!DNL Schema Registry] ます。
 
 **API形式**
 
@@ -106,7 +106,7 @@ curl -X POST \
 | `xdm:sourceSchema` | データセットのXDMスキーマの一意のURI ID。 |
 | `xdm:sourceVersion` | で指定されているXDMスキーマのバージョンで `xdm:sourceSchema`す。 |
 | `xdm:sourceProperty` | 記述子を適用するスキーマフィールドへのパス。 |
-| `xdm:namespace` | Privacy Serviceが認識する [標準ID名前空間](../privacy-service/api/appendix.md#standard-namespaces) 、または組織が定義するカスタム名前空間の1つ。 |
+| `xdm:namespace` | が認識する [標準ID名前空間](../privacy-service/api/appendix.md#standard-namespaces) 、 [!DNL Privacy Service]または組織が定義するカスタム名前空間の1つ。 |
 | `xdm:property` | で使用される名前空間に応じて、「xdm:id」または「xdm:code」のいずれか `xdm:namespace`。 |
 | `xdm:isPrimary` | オプションのboolean値。 trueの場合は、フィールドが主IDであることを示します。 スキーマには、1つのプライマリIDのみを含めることができます。 含めない場合のデフォルトはfalseです。 |
 
@@ -132,23 +132,23 @@ curl -X POST \
 
 >[!NOTE]
 >
->この節では、データレークのプライバシー要求をフォーマットする方法について説明します。 リクエストペイロードで送信されたユーザーIDデータを適切にフォーマットする方法など、プライバシージョブの送信方法に関する完全な手順については、 [Privacy ServiceUI](../privacy-service/ui/overview.md)[(](../privacy-service/api/getting-started.md) Privacy ServiceAPI)のドキュメントを確認することを強くお勧めします。
+>この節では、のプライバシー要求を書式設定する方法について説明 [!DNL Data Lake]します。 プライバシージョブの送信方法に関する完全な手順（リクエストペイロードで送信されたユーザーIDデータを適切に書式設定する方法など）については、 [!DNL Privacy Service UI](../privacy-service/ui/overview.md) または [!DNL Privacy Service API](../privacy-service/api/getting-started.md) ドキュメントを確認することを強くお勧めします。
 
-次の節では、Privacy ServiceUIまたはAPIを使用してデータレークのプライバシーリクエストを行う方法について概要を説明します。
+次の節では、 [!DNL Data Lake][!DNL Privacy Service] UIまたはAPIを使用してプライバシーをリクエストする方法について概説します。
 
 ### UIの使用
 
-UIでジョブリクエストを作成する場合、Data LakeまたはReal-time Customerプロファイルに保存されたデータのジョブを処理するには、「 **Products** (製品 **)」で「AEP Data Lake** (プロファイル)」または「 __ AEP Data Lake（ジョブ）」を必ず選択してください。
+UIでジョブリクエストを作成する場合、Productsの下で **[!UICONTROL AEP Data Lake]** または **[!UICONTROL プロファイル]** （またはその両方）を選択して、それぞれ _[!UICONTROL に格納されているジョブを]_[!DNL Data Lake][!DNL Real-time Customer Profile]UIで処理します。
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
 ### APIの使用
 
-APIでジョブリクエストを作成する場合、提供され `userIDs` るジョブリクエストは、適用するデータストアに応じて、特定の `namespace` を使用する `type` 必要があります。 Data LakeのIDは、値に「unregistered」を使用する必要があり `type` ます。また、該当するデータセットに追加された `namespace` プライバシーラベル [](#privacy-labels) と一致する値を使用する必要があります。
+APIでジョブリクエストを作成する場合、提供され `userIDs` るジョブリクエストは、適用するデータストアに応じて、特定の `namespace` を使用する `type` 必要があります。 のIDは、値に「unregistered」を使用する [!DNL Data Lake] 必要があります。また、該当するデータセットに追加された `type` プライバシーラベル `namespace`[](#privacy-labels) と一致する値を使用する必要があります。
 
-さらに、要求ペイロードの `include` 配列には、要求が行われる別のデータストアの製品値を含める必要があります。 データレークにリクエストを行う場合、配列には値「aepDataLake」を含める必要があります。
+さらに、要求ペイロードの `include` 配列には、要求が行われる別のデータストアの製品値を含める必要があります。 にリクエストを行う場合 [!DNL Data Lake]は、配列に値を含める必要があり `aepDataLake`ます。
 
-次のリクエストは、未登録の「email_label」名前空間を使用して、Data Lake用の新しいプライバシージョブを作成します。 また、次のように、アレイ内のData Lakeの製品値も含まれ `include` ます。
+次のリクエストは、未登録の「email_label」名前空間を使用して、の新しいプライバシージョブ [!DNL Data Lake]を作成します。 また、 [!DNL Data Lake]`include` 配列内ののの製品値も含まれます。
 
 ```shell
 curl -X POST \
@@ -191,19 +191,19 @@ curl -X POST \
 
 ## 削除要求処理
 
-Experience PlatformがPrivacy Serviceから削除要求を受け取ると、Platformは、要求が受信され、影響を受けたデータが削除のマークを付けられたことをPrivacy Serviceに確認するメッセージを送信します。 レコードは7日以内にデータレークから削除されます。 その7日間の期間は、データがソフト削除されるので、どのPlatformサービスからもアクセスできません。
+から削除リクエスト [!DNL Experience Platform] を受け取ると、リクエストが受信され、影響を受けるデータが削除のマーク [!DNL Privacy Service]が付けられたこと [!DNL Platform] を [!DNL Privacy Service] 確認するメッセージがに送信されます。 レコードは7日以内に削除さ [!DNL Data Lake] れます。 その7日間の期間は、データはソフトデリートされるので、どの [!DNL Platform] サービスからもアクセスできません。
 
-今後のリリースでは、データが物理的に削除された後、PlatformはPrivacy Serviceに確認メッセージを送信する予定です。
+今後のリリースでは、データ [!DNL Platform] が物理的に削除された [!DNL Privacy Service] 後に、に確認メッセージが送信されます。
 
 ## 次の手順
 
-このドキュメントを読むと、Data Lakeのプライバシー要求の処理に関する重要な概念について説明しています。 IDデータの管理方法とプライバシージョブの作成方法についての理解を深めるために、このガイドに記載されているドキュメントを読み続けることをお勧めします。
+このドキュメントを読むことで、のプライバシー要求の処理に関する重要な概念について説明し [!DNL Data Lake]ます。 IDデータの管理方法とプライバシージョブの作成方法についての理解を深めるために、このガイドに記載されているドキュメントを読み続けることをお勧めします。
 
-プロファイルストアに対するプライバシー要求の処理手順については、リアルタイム [プロファイル向けプライバシー要求の処理に関するドキュメント](../profile/privacy.md) （英語）を参照してください。
+ストアのプライバシー要求を処理する手順については、リアルタイム顧客プロファイルの [プライバシー要求処理に関するドキュメント](../profile/privacy.md)[!DNL Profile] （英語）を参照してください。
 
 ## 付録
 
-次の節では、データレークでのプライバシー要求の処理に関する追加情報について説明します。
+次の節では、のプライバシー要求を処理するための追加情報について説明し [!DNL Data Lake]ます。
 
 ### ネストされたマップタイプフィールドのラベル付け {#nested-maps}
 
