@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformバッチ取り込み開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2577'
+source-wordcount: '2552'
 ht-degree: 6%
 
 ---
@@ -27,28 +27,28 @@ ht-degree: 6%
 このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
 - [バッチインジェスト](./overview.md): データをバッチファイルとしてAdobe Experience Platformに取り込むことができます。
-- [Experience Data Model(XDM)System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [サンドボックス](../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### サンプルAPI呼び出しの読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照してください。
+このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
 
 ### 必要なヘッダーの値の収集
 
-PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
 
 - 認証： 無記名 `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
 
 ペイロード(POST、PUT、PATCH)を含む要求には、追加の `Content-Type` ヘッダーが必要な場合があります。 各呼び出しに固有の受け入れられた値は、呼び出しパラメーターに提供されます。 このガイドでは、次のコンテンツタイプを使用します。
 
@@ -57,7 +57,7 @@ Experience Platform内のすべてのリソースは、特定の仮想サンド�
 
 ## タイプ
 
-データを取り込む場合、Experience Data Model(XDM)スキーマの動作を理解することが重要です。 XDMフィールドの型を異なる形式にマップする方法について詳しくは、『 [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
+データを取り込む際は、 [!DNL Experience Data Model] (XDM)スキーマの動作を理解することが重要です。 XDMフィールドの型を異なる形式にマップする方法について詳しくは、『 [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
 
 データを取り込む際には、柔軟性があります。ターゲットスキーマ内のデータと一致しない場合、データは表示されるターゲットタイプに変換されます。 できない場合は、バッチはaで失敗し `TypeCompatibilityException`ます。
 
@@ -1003,7 +1003,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### バッチ取り込み用のデータ変換
 
-データファイルをExperience Platformに取り込むためには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた [Experience Data Model(XDM)](../../xdm/home.md) スキーマに準拠している必要があります。
+データファイルをに取り込むために [!DNL Experience Platform]は、ファイルの階層構造が、アップロード先のデータセットに関連付けられた [Experience Data Model(XDM)](../../xdm/home.md) スキーマに準拠している必要があります。
 
 XDMスキーマに準拠するためのCSVファイルのマッピング方法に関する情報は、 [サンプルのtransformations](../../etl/transformations.md) ドキュメントに記載されています。また、適切にフォーマットされたJSONデータファイルの例も含まれています。 ドキュメントーに用意されているサンプルファイルは次の場所にあります。
 
