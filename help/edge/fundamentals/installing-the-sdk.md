@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します
 seo-description: Experience Platform Web SDK のインストール方法について説明します
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 72%
+source-wordcount: '583'
+ht-degree: 70%
 
 ---
 
@@ -71,6 +71,10 @@ The first step in implementing the Adobe Experience Platform [!DNL Web SDK] is t
 ```
 
 これにより、`window.Promise` が有効な promise 実装であることを確認するスクリプトが読み込まれます。
+
+>[!NOTE]
+>
+>別のPromise実装を読み込む場合は、それがサポートしていることを確認してくだ `Promise.prototype.finally`さい。
 
 ## JavaScript ファイルの同期読み込み {#loading-javascript-synchronously}
 
