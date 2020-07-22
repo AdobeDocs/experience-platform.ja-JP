@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformセグメントサービス
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1974'
 ht-degree: 4%
 
 ---
@@ -215,8 +215,10 @@ Adding this specific data to the segment itself allows execution engines to pers
 - オブジェクト
 - マップ
 - イベント
+- 外部オーディエンス
+- セグメント
 
-これらのサポートされるデータ型について詳しくは、「 [support data types」ドキュメントを参照してください](./data-types.md)。
+サポートされるこれらのデータ型について詳しくは、 [サポートされるデータ型のドキュメントを参照してください](./data-types.md)。
 
 ## 次の手順
 
