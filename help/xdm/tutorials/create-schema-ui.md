@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマエディターを使用してスキーマを作成する。
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
 workflow-type: tm+mt
 source-wordcount: '3376'
 ht-degree: 0%
@@ -98,9 +98,9 @@ Mixinを追加するには、「Mixins ****** 」サブセクションでをク�
 
 ![](../images/tutorials/create-schema/add_mixin_button.png)
 
-[ *[!UICONTROL Mixin]* ]ダイアログが表示されます。 ミックスインは特定のクラスでのみ使用されるため、ミックスインのリストは選択したクラス（この場合はクラス）と互換性のあるもののみを表示し [!DNL XDM Individual Profile] ます。
+The *[!UICONTROL Add Mixin]* dialog appears. Mixins are only intended for use with specific classes, therefore the list of mixins shows only those compatible with the class you selected (in this case, the [!DNL XDM Individual Profile] class).
 
-Mixinの横にあるラジオボタンを選択すると、Mixinの構造を **[!UICONTROL プレビューするオプションが表示されます]**。 「プロファイルの人物の詳細」ミックスインを選択し、「 **[!UICONTROL 追加Mixin」をクリックします]**。
+Mixinの横にあるラジオボタンを選択すると、Mixinの構造を **[!UICONTROL プレビューするオプションが表示されます]**。 Select the &quot;Profile Person Details&quot; mixin, then click **[!UICONTROL Add Mixin]**.
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
@@ -112,41 +112,41 @@ Mixinの横にあるラジオボタンを選択すると、Mixinの構造を **[
 
 >[!NOTE]
 >
->フィールドのデータ型は、スカラー型（文字列、整数、配列、日付など）と共に、内の「データ型」（共通の概念を表すフィールドのグループ）を使用でき [!DNL Schema Registry]ます。
+>Remember that fields may use scalar types (such as string, integer, array, or date) as their data type, as well as any &quot;data type&quot; (a group of fields representing a common concept) in the [!DNL Schema Registry].
 
-「[!UICONTROL 名前]」フィールドのデータ型は「[!UICONTROL 人名]」です。つまり、共通の概念を表し、名、姓、フルネームなどの名前関連のサブフィールドが含まれます。
+Notice that the &quot;[!UICONTROL name]&quot; field has a data type of &quot;[!UICONTROL Person Name]&quot;, meaning it too describes a common concept and contains name-related sub-fields such as first name, last name, and full name.
 
 キャンバス内の別のフィールドをクリックして、そのフィールドがスキーマ構造に貢献する追加のフィールドを表示します。
 
-## 追加別のミックスイン {#mixin-2}
+## Add another mixin {#mixin-2}
 
-同じ手順を繰り返して別のミックスインを追加できるようになりました。 今回、 *[!UICONTROL Mixin]* 追加ダイアログを表示するときに、「[!UICONTROL プロファイルの人物の詳細]」ミックスインが灰色表示になっていて、隣のラジオボタンは選択できないことに注意してください。 これにより、現在のスキーマに既に含まれているミックスインが誤って複製されるのを防ぐことができます。
+You can now repeat the same steps to add another mixin. When you view the *[!UICONTROL Add Mixin]* dialog this time, notice that the &quot;[!UICONTROL Profile Person Details]&quot; mixin has been greyed out and the radio button next to it cannot be selected. This prevents you from accidentally duplicating mixins that you have already included in the current schema.
 
-「」をMixin[!DNL Profile Personal Details" mixin] ダイアログ *[!UICONTROL から追加できるようになりました]* 。
+You can now add the &quot;[!DNL Profile Personal Details" mixin] from the *[!UICONTROL Add Mixin]* dialog.
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-追加したキャンバスが再び表示されます。 「[!UICONTROL プロファイルの個人詳細]」は、「 *[!UICONTROL 構成]* 」セクションの「ミックスイン」の下に表示され、自宅住所、携帯電話、さらにStructure *[!UICONTROL Personal Detailsの下に追加されてい]***&#x200B;ます。
+Once added, the canvas reappears. 「[!UICONTROL プロファイルの個人詳細]」は、「 *[!UICONTROL 構成]* 」セクションの「ミックスイン」の下に表示され、自宅住所、携帯電話、さらにStructure *[!UICONTROL Personal Detailsの下に追加されてい]***&#x200B;ます。
 
-「[!UICONTROL 名前]」フィールドと同様に、先ほど追加したフィールドは複数フィールドの概念を表します。 例えば、「[!UICONTROL homeAddress]」のデータ型は「[!UICONTROL Address]」、「[!UICONTROL mobilePhone]」のデータ型は「Phone Number」となります。 これらの各フィールドをクリックすると、それらのフィールドが展開され、データ型に含まれる追加のフィールドが表示されます。
+Similar to the &quot;[!UICONTROL name]&quot; field, the fields you just added represent multi-field concepts. For example, &quot;[!UICONTROL homeAddress]&quot; has a data type of &quot;[!UICONTROL Address]&quot; and &quot;[!UICONTROL mobilePhone]&quot; has a data type of &quot;[!UICONTROL Phone Number]&quot;. You can click on each of these fields to expand them and see the additional fields included in the data type.
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
 ## 新しいミックスインの定義 {#define-mixin}
 
-「[!UICONTROL 忠誠度メンバー]」スキーマは、忠誠度プログラムのメンバーに関連するデータを取り込むためのものなので、いくつかの特定の忠誠度関連フィールドが必要になります。 必要なフィールドを含む標準ミックスインが存在しないので、新しいミックスインを定義する必要があります。
+The &quot;[!UICONTROL Loyalty Members]&quot; schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. 必要なフィールドを含む標準ミックスインが存在しないので、新しいミックスインを定義する必要があります。
 
-今回は、 *[!UICONTROL 追加Mixin]* ダイアログを開いたときに、「新規Mixinを **[!UICONTROL 作成]**」を選択します。 その後、ミックスインの **[!UICONTROL 表示名]** と **** 説明を入力するように求められます。
+This time, when you open the *[!UICONTROL Add Mixin]* dialog, select **[!UICONTROL Create New Mixin]**. You will then be asked to provide a **[!UICONTROL Display Name]** and **[!UICONTROL Description]** for your mixin.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
-クラス名と同様に、ミックスイン名は短く単純で、ミックスインがスキーマに何を貢献するかを説明する必要があります。 これらも一意なので、名前を再利用できないので、十分に限定的であることを確認する必要があります。
+As with class names, the mixin name should be short and simple, describing what the mixin will contribute to the schema. These too are unique, so you will not be able to reuse the name and must therefore ensure it is specific enough.
 
-このチュートリアルでは、新しいmixinに「[!UICONTROL Loyality Details]」という名前を付けます。
+For this tutorial, name the new mixin &quot;[!UICONTROL Loyalty Details]&quot;.
 
-「 **[!UICONTROL 追加Mixin]** 」をクリックしてスキーマエディタに戻ります。 「[!UICONTROL 忠誠度の詳細]」は、キャンバスの左側の *[!UICONTROL ミックスインの下に表示されるはずですが、関連するフィールドはまだないので、]* 構造の下に新しいフィールドは表示されません **。
+Click **[!UICONTROL Add Mixin]** to return to the schema editor. 「[!UICONTROL 忠誠度の詳細]」は、キャンバスの左側の *[!UICONTROL ミックスインの下に表示されるはずですが、関連するフィールドはまだないので、]* 構造の下に新しいフィールドは表示されません **。
 
-## Mixin追加のフィールド {#mixin-fields}
+## Add fields to the mixin {#mixin-fields}
 
 「[!UICONTROL 忠誠度の詳細]」ミックスインを作成したので、ここでミックスインがスキーマに貢献するフィールドを定義します。
 
@@ -154,7 +154,7 @@ Mixinの横にあるラジオボタンを選択すると、Mixinの構造を **[
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-「 **[!UICONTROL Loyality Members]**[!UICONTROL 」の横の「]Field」をクリックして、構造内に新しいノードを作成します。 このノード（この例では「_tenantId」と呼ばれます）は、IMS組織のテナントIDを表し、前にアンダースコアが付きます。 テナントIDが表示されている場合は、追加するフィールドが組織の名前空間に含まれていることを示します。
+「 **[!UICONTROL Loyality Members]**[!UICONTROL 」の横の「]Field」をクリックして、構造内に新しいノードを作成します。 このノード（この例では「_tenantId」と呼ばれます）は、IMS組織のテナントIDを表し、前にアンダースコアが付きます。 The presence of the tenant ID indicates that the fields you are adding are contained in your organization&#39;s namespace.
 
 つまり、追加するフィールドは組織に固有で、IMS組織にのみアクセス可能な特定の領域 [!DNL Schema Registry] に保存されます。 定義するフィールドは、他の標準クラス、ミックスイン、データ型、フィールドの名前との競合を防ぐために、常に名前空間に追加する必要があります。
 
@@ -273,7 +273,7 @@ More information about relationships and other schema metadata can be found in t
 
 スキーマをで使用できるようにするには、プライマリIDが定義されている必要があ [!DNL Real-time Customer Profile]ります。 最初にプライマリIDを定義せずにプライマリを有効にしようとすると、「スキーマIDが見つかりません」というエラーメッセージが表示されます。
 
-![](../images/tutorials/create-schema/missing_primary_identity.png)
+<img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
 での「忠誠度メンバー」スキーマの使用を有効にするに [!DNL Profile]は、まずエディターの「 *構造* 」セクションで「忠誠度メンバー」をクリックします。
 
