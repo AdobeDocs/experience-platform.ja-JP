@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platformの概要
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 6c90e68bde1fb8474ba23127ecf7b6fd617c7765
+source-git-commit: efde1b9bf65bde1a55084774c845b8d5585272d4
 workflow-type: tm+mt
-source-wordcount: '747'
-ht-degree: 3%
+source-wordcount: '844'
+ht-degree: 4%
 
 ---
 
@@ -31,6 +31,43 @@ Adobe Experience Platformは、お客様の体験を促進する包括的なソ�
 **背景：**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+
+## ブラウザーのサポート
+
+Adobe Experience PlatformのWebサイトおよびAdobeAdmin Consoleなどの関連Webサイトは、すべて最新バージョンのGoogle Chrome、Safari、FirefoxおよびMicrosoft Edgeで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
+
+<table>
+<tr>
+  <th>オペレーティングシステム</th>
+  <th>サポートされているブラウザー</th>
+  <th></th>
+  <th></th>
+</tr>
+<tr>
+  <td>Mac OS X</td>
+  <td>Google Chromeの最新バージョン</td>
+  <td>Safariの最新バージョン</td>
+  <td>Firefoxの最新バージョン</td>
+</tr>
+<tr>
+  <td>Windows 10</td>
+  <td>Google Chromeの最新バージョン</td>
+  <td>Microsoft Edgeの最新バージョン</td>
+  <td>Firefoxの最新バージョン</td>
+</tr>
+<tr>
+  <td>Windows 7</td>
+  <td>Google Chromeの最新バージョン</td>
+  <td> </td>
+  <td>Firefoxの最新バージョン</td>
+</tr>
+</table>
+
+サポートなし:
+
+* Internet Explorer 10
+* Windows 8
+* Opera
 
 ## 言語サポート
 
