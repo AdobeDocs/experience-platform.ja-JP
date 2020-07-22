@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 記述子
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 1%
@@ -238,7 +238,7 @@ curl -X PUT \
 
 ## 記述子の削除
 
-定義した記述子をから削除しなければならない場合があり [!DNL Schema Registry]ます。 これは、削除したいディスクリプタ `@id` の内部を参照するDELETEリクエストを行うことで行われます。
+定義した記述子をから削除しなければならない場合があり [!DNL Schema Registry]ます。 これは、削除したいディスクリプタ `@id` の内容を参照するDELETEリクエストを行うことで行われます。
 
 **API形式**
 
@@ -369,7 +369,7 @@ ID記述子は、「[!UICONTROL sourceSchema]」の「[!UICONTROL sourceProperty
 
 #### 参照ID記述子
 
-参照ID記述子は、スキーマフィールドへの参照コンテキストを提供し、この参照コンテキストを宛先スキーマのプライマリIDフィールドにリンクできます。 フィールドに参照記述子を適用する前に、ID記述子のラベルを付けておく必要があります。
+参照ID記述子は、スキーマフィールドの主要なIDへの参照コンテキストを提供し、他のスキーマのフィールドから参照できるようにします。 フィールドに参照記述子を適用する前に、ID記述子のラベルを付けておく必要があります。
 
 ```json
 {
