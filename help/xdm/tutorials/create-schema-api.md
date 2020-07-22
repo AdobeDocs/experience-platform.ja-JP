@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スキーマレジストリAPIを使用したスキーマの作成
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 1%
@@ -1015,7 +1015,7 @@ curl -X POST \
 }
 ```
 
-## スキーマを [!DNL Real-time Customer Profile]
+## スキーマを [!DNL Real-time Customer Profile] {#profile}
 
 「和集合」タグを `meta:immutableTags` 属性に追加することで、で使用する忠誠度メンバースキーマを有効にでき [!DNL Real-time Customer Profile]ます。
 
