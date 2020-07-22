@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platformセグメントサービスのデータタイプ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 2%
+source-wordcount: '456'
+ht-degree: 6%
 
 ---
 
@@ -50,15 +50,15 @@ Adobe Experience Platformスキーマとして、インタラクションが発�
 | 「タイムルールを適用」切り替えボタン | 日付データを組み込みます。 |
 | 等しい、等しくない、開始、次の値を含まない、次の値を含む、次の値を含まない、次の値で終わらない、次の値を含まない、次の値を含まない、次の値を含まない、が存在しない | 文字列データを組み込みます。 |
 
-## セグメント
-
-既存のセグメント定義は、新しいセグメント定義のコンポーネントとして使用し、新しいセグメントにその属性とイベント型ルールを追加することもできます。
-
-## オーディエンス
+### オーディエンスの共有
 
 外部オーディエンスは、新しいセグメント定義のコンポーネントとして使用し、新しいセグメントに属性ルールを追加することもできます。
 
-現在、オーディエンスとしてはAdobe Audience Managerのみがサポートされています。 今後、追加のソースが有効になる予定です。
+現在、外部オーディエンスとしてAdobe Audience Managerのみがサポートされ、今後、追加のソースが有効になります。 PlatformでのAdobe Audience Managerオーディエンスの使用について詳しくは、Adobe Audience Managerドキュメント内の [オーディエンス共有ガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)。
+
+### セグメントの共有
+
+Platformで作成されたセグメントは、他の [Adobe Experience Cloudコアサービス内で使用できます](https://docs.adobe.com/content/help/ja-JP/core-services/interface/experience-cloud.html)。 この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントに連絡する必要があります。
 
 ## その他のデータタイプ
 
