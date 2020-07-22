@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platformの概要
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efde1b9bf65bde1a55084774c845b8d5585272d4
+source-git-commit: 444185df28026bf2045afcdadf29f9255885dafb
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 4%
+source-wordcount: '820'
+ht-degree: 6%
 
 ---
 
@@ -34,34 +34,13 @@ Adobe Experience Platformは、お客様の体験を促進する包括的なソ�
 
 ## ブラウザーのサポート
 
-Adobe Experience PlatformのWebサイトおよびAdobeAdmin Consoleなどの関連Webサイトは、すべて最新バージョンのGoogle Chrome、Safari、FirefoxおよびMicrosoft Edgeで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
+Adobe Experience PlatformのWebサイトおよびAdobeAdmin Consoleなどの関連Webサイトは、すべて **最新のGoogle Chrome、Safari、Firefox** 、Microsoft Edgeで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
 
-<table>
-<tr>
-  <th>オペレーティングシステム</th>
-  <th>サポートされているブラウザー</th>
-  <th></th>
-  <th></th>
-</tr>
-<tr>
-  <td>Mac OS X</td>
-  <td>Google Chromeの最新バージョン</td>
-  <td>Safariの最新バージョン</td>
-  <td>Firefoxの最新バージョン</td>
-</tr>
-<tr>
-  <td>Windows 10</td>
-  <td>Google Chromeの最新バージョン</td>
-  <td>Microsoft Edgeの最新バージョン</td>
-  <td>Firefoxの最新バージョン</td>
-</tr>
-<tr>
-  <td>Windows 7</td>
-  <td>Google Chromeの最新バージョン</td>
-  <td> </td>
-  <td>Firefoxの最新バージョン</td>
-</tr>
-</table>
+| オペレーティングシステム | サポートされているブラウザー |  |  |
+|---|---|---|---|
+| Mac OS X | Google Chrome | Safari | Firefox |
+| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
+| Windows 7 | Google Chrome |  | Firefox&lt; |
 
 サポートなし:
 
