@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマレジストリAPIを使用して2つのスキーマ間の関係を定義する
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1274'
 ht-degree: 1%
 
 ---
@@ -17,24 +17,28 @@ ht-degree: 1%
 
 様々なチャネルにわたる顧客とブランドとの関係を理解する能力は、Adobe Experience Platformの重要な部分です。 これらの関係を [!DNL Experience Data Model] (XDM)スキーマの構造内で定義すると、顧客データに対する複雑な洞察を得ることができます。
 
+スキーマの関係は、和集合スキーマを使用して推論できますが、 [!DNL Real-time Customer Profile]これは同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する2つのスキーマ間の関係を確立するには、目的のスキーマのIDを参照するソーススキーマに、専用の **関係フィールド** を追加する必要があります。
+
 このドキュメントでは、を使用して、組織で定義されている2つのスキーマ間の1対1の関係を定義するためのチュートリアルを提供し [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)ます。
 
 ## はじめに
 
 このチュートリアルでは、 [!DNL Experience Data Model] (XDM)との詳細を理解している必要があり [!DNL XDM System]ます。 このチュートリアルを開始する前に、次のドキュメントを確認してください。
 
-* [Experience PlatformのXDMシステム](../home.md): XDMとExperience Platformでのその実装の概要を示します。
+* [Experience PlatformのXDMシステム](../home.md): XDMとその実装の概要を、で説明し [!DNL Experience Platform]ます。
    * [スキーマ構成の基本](../schema/composition.md): XDMスキーマの構築ブロックの紹介。
 * [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-このチュートリアルを開始する前に、 [開発者ガイドを参照して](../api/getting-started.md) 、 [!DNL Schema Registry] APIの呼び出しを正常に行うために知っておく必要がある重要な情報を確認してください。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
+このチュートリアルを開始する前に、 [開発者ガイドを参照して](../api/getting-started.md) 、 [!DNL Schema Registry] APIの呼び出しを正常に行うために知っておく必要がある重要な情報を確認してください。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行うために必要なヘッダー(ヘッダーと可能な値に特に注意して [!DNL Accept] ください)が含まれます。
 
 ## ソースと宛先のスキーマの定義 {#define-schemas}
 
-この関係で定義される2つのスキーマを既に作成済みであることが想定されます。 このチュートリアルでは、組織の現在の忠誠度プログラム(「忠誠度メンバー」スキーマで定義)のメンバーと、お気に入りのホテル(「ホテル」スキーマで定義)との間に関係を作成します。
+この関係で定義される2つのスキーマを既に作成済みであることが想定されます。 このチュートリアルでは、組織の現在の忠誠度プログラム(「[!DNL Loyalty Members][!DNL Hotels]」スキーマで定義)のメンバーと、お気に入りのホテル(「」スキーマで定義)との間に関係を作成します。
 
-スキーマ関係は、 **[!UICONTROL ソーススキーマ]** ( **[!UICONTROL ソーススキーマ]**)が表し、ターゲット内の別のフィールドを参照するフィールドを持ちます。 次の手順では、「[!UICONTROL Loyalty Members]」がソーススキーマになり、「[!UICONTROL Hotels]」がターゲットスキーマになります。
+スキーマ関係は、 **ソーススキーマ** ( **ソーススキーマ**)が表し、ターゲット内の別のフィールドを参照するフィールドを持ちます。 次の手順では、「[!DNL Loyalty Members]」がソーススキーマ、「[!DNL Hotels]」がターゲットスキーマとして機能します。
+
+>[!IMPORTANT] 関係を確立するには、両方のスキーマがプライマリIDを定義し、有効にする必要があり [!DNL Real-time Customer Profile]ます。 スキーマをそれに応じて設定する方法のガイダンスが必要な場合は、「プロファイルの作成」チュートリアルの「スキーマをスキーマで使用できるようにする」のセクションを参照して [](./create-schema-api.md#profile) ください。
 
 2つのスキーマ間の関係を定義するには、まず両方のスキーマの `$id` 値を取得する必要があります。 スキーマの表示名(`title`)がわかっている場合は、 `$id` APIの `/tenant/schemas`[!DNL Schema Registry] エンドポイントにGETリクエストを行うと、その値を見つけることができます。
 
@@ -58,7 +62,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->Acceptヘッダーは、結果のスキーマのタイトル、IDおよびバージョンのみを返します。 `application/vnd.adobe.xed-id+json`
+>この [!DNL Accept]`application/vnd.adobe.xed-id+json` ヘッダーは、結果のスキーマのタイトル、IDおよびバージョンのみを返します。
 
 **応答**
 
@@ -102,17 +106,17 @@ curl -X GET \
 
 関係を定義する2つのスキーマの `$id` 値を記録します。 これらの値は、後の手順で使用します。
 
-## 両方のスキーマの参照フィールドの定義
+## ソーススキーマの参照フィールドの定義
 
-リレーションシップ記述子 [!DNL Schema Registry]は、SQLテーブルの外部キーと同様に機能します。 ソーススキーマのフィールドは、ターゲットスキーマのフィールドへの参照として機能します。 関係を定義する場合、他のスキーマへの参照として使用する各スキーマには専用のフィールドが必要です。
+リレーショナル・データベース・テーブル内で [!DNL Schema Registry]は、リレーショナル・ディスクリプタは、リレーショナル・データベース・テーブル内の外部キーと同様に機能します。 ソーススキーマ内のフィールドは、宛先スキーマの **主なidentity** フィールドへの参照として機能します。 ソーススキーマにこの目的のフィールドがない場合は、新しいフィールドを使用してミックスインを作成し、スキーマに追加する必要があります。 この新しいフィールドの `type` 値は「[!DNL string]」にする必要があります。
 
 >[!IMPORTANT]
 >
->スキーマをでの使用を有効にする場合は、 [!DNL Real-time Customer Profile](../../profile/home.md)宛先スキーマの参照フィールドを **[!UICONTROL 主IDにする必要があります]**。 これについては、このチュートリアルで後述します。
+>宛先スキーマとは異なり、ソーススキーマは、その主IDを参照フィールドとして使用できません。
 
-どちらのスキーマにもこの目的のフィールドがない場合は、新しいフィールドを使用してミックスインを作成し、スキーマに追加する必要があります。 この新しいフィールドの `type` 値は、&quot;string&quot;である必要があります。
+このチュートリアルでは、宛先スキーマ「[!DNL Hotels]」に、スキーマの主IDとしての役割を果たす `email` フィールドが含まれているので、その参照フィールドとしても機能します。 ただし、ソーススキーマ「[!DNL Loyalty Members]」には参照として使用する専用のフィールドがないため、スキーマに新しいフィールドを追加する新しいミックスインを与える必要があります。 `favoriteHotel`.
 
-このチュートリアルの目的上、リンク先スキーマ「Hotels」には、次のフィールドが既に含まれています。 `hotelId`. ただし、ソーススキーマ「忠誠度メンバー」にはこのようなフィールドがないので、 `favoriteHotel``TENANT_ID` 名前空間の下に新しいフィールドを追加する新しいミックスインを与える必要があります。
+>[!NOTE] ソーススキーマに、参照フィールドとして使用する専用のフィールドが既に存在する場合は、参照記述子の [作成の手順に進むことができます](#reference-identity)。
 
 ### 新しいミックスインの作成
 
@@ -126,7 +130,7 @@ POST /tenant/mixins
 
 **リクエスト**
 
-次の要求は、新しいミックスインを作成し、追加先のスキーマの `favoriteHotel``TENANT_ID` 名前空間の下にフィールドを追加します。
+次の要求は、新しいミックスインを作成し、追加先のスキーマの `favoriteHotel``_{TENANT_ID}` 名前空間の下にフィールドを追加します。
 
 ```shell
 curl -X POST\
@@ -240,7 +244,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **リクエスト**
 
-次のリクエストは、「お気に入りのホテル」ミックスインを「ロイヤルティメンバー」スキーマに追加します。
+次のリクエストは、「[!DNL Favorite Hotel]」ミックスインを「[!DNL Loyalty Members]」スキーマに追加します。
 
 ```shell
 curl -X PATCH \
@@ -264,7 +268,7 @@ curl -X PATCH \
 | プロパティ | 説明 |
 | --- | --- |
 | `op` | 実行するPATCH操作。 このリクエストでは、 `add` 操作が使用されます。 |
-| `path` | 新しいリソースを追加するスキーマフィールドへのパスです。 スキーマにミックスインを追加する場合、値をにする必要があり `/allOf/-`ます。 |
+| `path` | 新しいリソースを追加するスキーマフィールドへのパスです。 スキーマにミックスインを追加する場合、値は「/allOf/ — 」にする必要があります。 |
 | `value.$ref` | 追加 `$id` するミックスインの名前。 |
 
 **応答**
@@ -328,75 +332,9 @@ curl -X PATCH \
 }
 ```
 
-## 両方のスキーマの主なIDフィールドの定義
+## 参照ID記述子の作成 {#reference-identity}
 
->[!NOTE]
->
->この手順は、での使用を有効にするスキーマに対してのみ必要で [!DNL Real-time Customer Profile](../../profile/home.md)す。 スキーマを和集合に参加させたくない場合、またはスキーマにプライマリIDが既に定義されている場合は、次の手順に進んで、宛先スキーマの参照ID記述子 [を](#create-descriptor) 作成します。
-
-での使用を有効にするには、スキーマにプライマリIDが定義されている [!DNL Real-time Customer Profile]必要があります。 さらに、関係の宛先スキーマは、その主IDを参照フィールドとして使用する必要があります。
-
-このチュートリアルでは、ソーススキーマに既にプライマリIDが定義されていますが、宛先スキーマは定義されていません。 ID記述子を作成することで、スキーマフィールドをプライマリIDフィールドとしてマークすることができます。 これは、エンドポイントにPOSTリクエストを行うことで行われ `/tenant/descriptors` ます。
-
-**API形式**
-
-```http
-POST /tenant/descriptors
-```
-
-**リクエスト**
-
-次の要求は、宛先スキーマ「Hotels」の `hotelId` フィールドを主IDフィールドとして定義する新しいID記述子を作成します。
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "@type": "xdm:descriptorIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
-    "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
-    "xdm:namespace": "ECID",
-    "xdm:property": "xdm:code",
-    "xdm:isPrimary": true
-  }'
-```
-
-| パラメーター | 説明 |
-| --- | --- |
-| `@type` | 作成する記述子の型です。 ID記述子の `@type` 値はです `xdm:descriptorIdentity`。 |
-| `xdm:sourceSchema` | `$id` 前の手順で取得した宛先スキーマの [値](#define-schemas)。 |
-| `xdm:sourceVersion` | スキーマのバージョン番号。 |
-| `sourceProperty` | スキーマのプライマリIDとなる特定のフィールドへのパス。 このパスは、「プロパティ」名前空間も除外し、末尾が「/」ではなく「/」で始まる必要があります。 例えば、上記のリクエストでは、の `/_{TENANT_ID}/hotelId` 代わりにが使用され `/properties/_{TENANT_ID}/properties/hotelId`ます。 |
-| `xdm:namespace` | IDフィールドのID名前空間です。 `hotelId` は、この例のECID値なので、「ECID」名前空間が使用されます。 使用可能な [名前空間のリストについては、「](../../identity-service/home.md) ID名前空間の概要」を参照してください。 |
-| `xdm:isPrimary` | IDフィールドをスキーマのプライマリIDにするかどうかを指定するブール型プロパティです。 このリクエストはプライマリIDを定義するので、値はtrueに設定されます。 |
-
-**応答**
-
-正常な応答は、新たに作成されたID記述子の詳細を返します。
-
-```json
-{
-    "@type": "xdm:descriptorIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
-    "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
-    "xdm:namespace": "ECID",
-    "xdm:property": "xdm:code",
-    "xdm:isPrimary": true,
-    "meta:containerId": "tenant",
-    "@id": "e3cfa302d06dc27080e6b54663511a02dd61316f"
-}
-```
-
-## 参照ID記述子の作成
-
-スキーマフィールドは、リレーションシップ内の他のスキーマからの参照として使用される場合、参照ID記述子を適用する必要があります。 「Loyalty Members」の `favoriteHotel` フィールドは「Hotels」の `hotelId` フィールドを参照するので、参照ID記述子を指定する `hotelId` 必要があります。
+スキーマフィールドは、リレーションシップ内の他のスキーマからの参照として使用される場合、参照ID記述子を適用する必要があります。 「」内の `favoriteHotel` フィールドは「」内の[!DNL Loyalty Members]フィールドを参照するので、参照ID記述子 `email`[!DNL Hotels]`email` を与える必要があります。
 
 エンドポイントにPOSTリクエストを行って、宛先スキーマの参照記述子を作成し `/tenant/descriptors` ます。
 
@@ -408,7 +346,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストは、宛先スキーマ「Hotels」の `hotelId` フィールドの参照記述子を作成します。
+次のリクエストは、宛先スキーマ「 `email`[!DNL Hotels]」のフィールドの参照記述子を作成します。
 
 ```shell
 curl -X POST \
@@ -422,17 +360,18 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
-    "xdm:identityNamespace": "ECID"
+    "xdm:sourceProperty": "/_{TENANT_ID}/email",
+    "xdm:identityNamespace": "Email"
   }'
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
+| `@type` | 定義する記述子の型。 参照記述子の場合、値は&quot;xdm:descriptorReferenceIdentity&quot;でなければなりません。 |
 | `xdm:sourceSchema` | リンク先スキーマの `$id` URL。 |
 | `xdm:sourceVersion` | 宛先スキーマのバージョン番号。 |
 | `sourceProperty` | 宛先スキーマのプライマリIDフィールドへのパス。 |
-| `xdm:identityNamespace` | 参照フィールドのID名前空間。 `hotelId` は、この例のECID値なので、「ECID」名前空間が使用されます。 使用可能な [名前空間のリストについては、「](../../identity-service/home.md) ID名前空間の概要」を参照してください。 |
+| `xdm:identityNamespace` | 参照フィールドのID名前空間。 この名前空間は、フィールドをスキーマのプライマリIDとして定義する場合と同じにする必要があります。 See the [identity namespace overview](../../identity-service/home.md) for more information. |
 
 **応答**
 
@@ -443,8 +382,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
-    "xdm:identityNamespace": "ECID",
+    "xdm:sourceProperty": "/_{TENANT_ID}/email",
+    "xdm:identityNamespace": "Email",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -452,7 +391,7 @@ curl -X POST \
 
 ## 関係記述子の作成 {#create-descriptor}
 
-関係記述子は、ソース・スキーマと宛先スキーマの間に1対1の関係を確立します。 エンドポイントにPOSTリクエストを作成して、新しい関係記述子を作成でき `/tenant/descriptors` ます。
+関係記述子は、ソース・スキーマと宛先スキーマの間に1対1の関係を確立します。 宛先スキーマの参照記述子を定義すると、エンドポイントにPOSTリクエストを作成して、新しい関係記述子を作成でき `/tenant/descriptors` ます。
 
 **API形式**
 
@@ -462,7 +401,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次の要求は、新しい関係記述子を作成します。この際、「Loyality Members」がソース・スキーマ、「Legacy Loyality Members」が宛先スキーマとして作成されます。
+次のリクエストは、新しい関係記述子を作成します。この関係記述子は、ソーススキーマ[!DNL Loyalty Members]として「」を、宛先スキーマとして「[!DNL Legacy Loyalty Members]」を持ちます。
 
 ```shell
 curl -X POST \
@@ -479,19 +418,19 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
+    "xdm:destinationProperty": "/_{TENANT_ID}/email"
   }'
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `@type` | 作成する記述子の型です。 関係記述子の `@type` 値はで `xdm:descriptorOneToOne`す。 |
+| `@type` | 作成する記述子の型です。 関係記述子の `@type` 値は&quot;xdm:descriptorOneToOne&quot;です。 |
 | `xdm:sourceSchema` | ソーススキーマの `$id` URL。 |
 | `xdm:sourceVersion` | ソーススキーマのバージョン番号。 |
-|  `sourceProperty`。 | ソーススキーマーの参照フィールドへのパス。 |
+| `xdm:sourceProperty` | ソーススキーマの参照フィールドへのパス。 |
 | `xdm:destinationSchema` | リンク先スキーマの `$id` URL。 |
 | `xdm:destinationVersion` | 宛先スキーマのバージョン番号。 |
-|  `destinationProperty`。 | リンク先スキーマの参照フィールドへのパス。 |
+| `xdm:destinationProperty` | コピー先スキーマの参照フィールドへのパス。 |
 
 ### 応答
 
@@ -513,4 +452,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、2つのスキーマ間に1対1の関係が正しく作成されます。 APIを使用した記述子の操作について詳しくは、『 [!DNL Schema Registry] スキーマレジストリ開発者ガイド [](../api/getting-started.md)』を参照してください。 UIでスキーマの関係を定義する手順については、スキーマエディタを使用したスキーマの関係の [定義に関するチュートリアルを参照してください](relationship-ui.md)。
+このチュートリアルに従うと、2つのスキーマ間に1対1の関係が正しく作成されます。 APIを使用した記述子の操作について詳しくは、『 [!DNL Schema Registry] スキーマレジストリ開発者ガイド [](../api/descriptors.md)』を参照してください。 UIでスキーマの関係を定義する手順については、スキーマエディタを使用したスキーマの関係の [定義に関するチュートリアルを参照してください](relationship-ui.md)。
