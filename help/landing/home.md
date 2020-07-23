@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platformの概要
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 444185df28026bf2045afcdadf29f9255885dafb
+source-git-commit: 0c4395556a546915df4718a0e812b38b15e04735
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '812'
 ht-degree: 6%
 
 ---
@@ -34,7 +34,7 @@ Adobe Experience Platformは、お客様の体験を促進する包括的なソ�
 
 ## ブラウザーのサポート
 
-Adobe Experience PlatformのWebサイトおよびAdobeAdmin Consoleなどの関連Webサイトは、すべて **最新のGoogle Chrome、Safari、Firefox** 、Microsoft Edgeで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
+このAdobe Experience Platformは、 **最新バージョンのGoogle Chrome、Safari、Firefox** 、Microsoft Edgeで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
 
 | オペレーティングシステム | サポートされているブラウザー |  |  |
 |---|---|---|---|
@@ -42,7 +42,7 @@ Adobe Experience PlatformのWebサイトおよびAdobeAdmin Consoleなどの関�
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
 | Windows 7 | Google Chrome |  | Firefox&lt; |
 
-サポートなし:
+次のブラウザーはサポートされていません。
 
 * Internet Explorer 10
 * Windows 8
