@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platformの概要
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0c4395556a546915df4718a0e812b38b15e04735
+source-git-commit: f86625f2cf9a08b2395f190a50d7fb40c71bc49b
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 6%
@@ -40,7 +40,7 @@ Adobe Experience Platformは、お客様の体験を促進する包括的なソ�
 |---|---|---|---|
 | Mac OS X | Google Chrome | Safari | Firefox |
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
-| Windows 7 | Google Chrome |  | Firefox&lt; |
+| Windows 7 | Google Chrome |  | Firefox |
 
 次のブラウザーはサポートされていません。
 
