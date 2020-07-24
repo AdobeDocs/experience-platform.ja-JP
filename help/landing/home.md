@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platformの概要
+title: Adobe Experience Platform 概要
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f86625f2cf9a08b2395f190a50d7fb40c71bc49b
+source-git-commit: c79d9690f5d1f6c199d0c0a74238225c5b6fd2c2
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 6%
+source-wordcount: '815'
+ht-degree: 32%
 
 ---
 
 
-# Adobe Experience Platformの概要
+# Adobe Experience Platform 概要
 
 >[!NOTE]
 >
->Adobe Experience Platformドキュメントが最近移動されました。 新しいナビゲーションを確認し、既存のブックマークを更新してください。
+>Adobe Experience Platform のドキュメントが最近移動されました。新しいナビゲーションを確認し、既存のブックマークを更新してください。
 
-Adobe Experience Platformは、お客様の体験を促進する包括的なソリューションの構築と管理を市場で最も強力かつ柔軟性の高いオープン・システムです。 [!DNL Experience Platform] 組織は、あらゆるシステムから顧客データとコンテンツを一元化し標準化し、データサイエンスと機械学習を適用して、パーソナライズされた豊富なエクスペリエンスの設計と配信を大幅に改善できます。
+Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。[!DNL Experience Platform] を使用すると、顧客データとコンテンツを任意のシステムから一元管理し、データサイエンスと機械学習を適用して、パーソナライズされた豊富なエクスペリエンスのデザインと配信を大幅に改善できます。
 
-オープンAPIを基に構築され、 [!DNL Experience Platform] 開発者にシステムの全機能を公開し、使い慣れたツールを使用してエンタープライズソリューションの統合を容易にサポートします。 [!DNL Experience Platform] また、必要に応じて独自の製品とテクノロジーを構築および統合するパートナーもサポートします。 このパワーと柔軟性は、市場で [!DNL Experience Platform] 独自のものとなります。 パートナー、顧客、開発者のコミュニティに、エクスペリエンスビジネスを推進する革新的なアイデアを構築するための基盤を提供します。 360度の表示と個々の好みから引き出された、継続的に改善と完全にパーソナライズされたエクスペリエンスを提供することで、お客様の期待を上回る成果を得ることができます。
+Built on open APIs, [!DNL Experience Platform] exposes the full functionality of the system to developers, supporting the easy integration of enterprise solutions using familiar tools. [!DNL Experience Platform] また、必要に応じて独自の製品とテクノロジーを構築および統合するパートナーもサポートします。 This power and flexibility makes [!DNL Experience Platform] unique in the market. パートナー、顧客、開発者のコミュニティに、「エクスペリエンスビジネス」を推進する革新を構築するための基盤を提供します。あらゆる角度からの顧客の表示と個々の好みから引き出され、継続的に改善され完全にパーソナライズされたエクスペリエンスを提供することで、顧客の期待を上回る成果を得ることができます。
 
 次のビデオでは、顧客の観点から [!DNL Experience Platform] 、まず舞台裏の技術的な観点から、リッチで関連性の高いリアルタイムのエクスペリエンスを作成する方法について概説します。
 
@@ -42,10 +42,10 @@ Adobe Experience Platformは、お客様の体験を促進する包括的なソ�
 | Windows 10 | Google Chrome | Microsoft Edge | Firefox |
 | Windows 7 | Google Chrome |  | Firefox |
 
-次のブラウザーはサポートされていません。
+次のオペレーティングシステムおよびブラウザーはサポートされていません。
 
-* Internet Explorer 10
 * Windows 8
+* Internet Explorer 10
 * Opera
 
 ## 言語サポート
@@ -79,7 +79,7 @@ Adobe Experience Platformドキュメントは複数の言語で提供されて�
 
 ## [!DNL Experience Platform] ドキュメント
 
-[!DNL Experience Platform] ドキュメントは、様々な機能およびサービスを対象とした複数の形式で提供されています。 使用可能なドキュメントのタイプの詳細、および各 [!DNL Platform] サービスの簡単な説明を参照するには、 [Experience Platformドキュメントの概要を参照してください](documentation/overview.md)。 また、特定の [!DNL Platform] サービスに関する詳細な情報をすぐに学ぶには、左側のナビゲーションにあるアルファベット順のリストからガイドを選択します。
+[!DNL Experience Platform] ドキュメントは、様々な機能やサービスのために複数の形式で提供されています。To learn more about the types of documentation that are available, as well as to read brief descriptions of each of the [!DNL Platform] services, please visit the [Experience Platform documentation overview](documentation/overview.md). Or, to begin learning more about a specific [!DNL Platform] service right away, select a guide from the alphabetical list in the left navigation.
 
 >[!NOTE]
 >
@@ -98,7 +98,7 @@ Adobe Experience Platformドキュメントは複数の言語で提供されて�
 
 ## [!DNL Experience Platform] チュートリアル
 
-取り込み用のデータの準備から高度な機械学習アルゴリズムまで、すべての作業に関するチュートリアルに従い、すばやく簡単に作業を開始で [!DNL Platform] きます。 これらのチュートリアルは、ドキュメントに記載されている情報を補完する目的で設計されているので、最良の結果を得るために、チュートリアルを完了する際にドキュメントを手元に置いておくことをお勧めします。 [!DNL Experience Platform] 使用を開始するには、 [Experience Platformのチュートリアル](../tutorials/home.md) を参照してください。
+Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms. これらのチュートリアルは、[!DNL Experience Platform] のドキュメントに記載されている情報を補完する目的でデザインされているので、最良の結果を得るためには、チュートリアルを完了する際にドキュメントを手元に置いておくことをお勧めします。使い始めるには、[Experience Platform のチュートリアル](../tutorials/home.md)を参照してください。
 
 ## ビデオチュートリアル
 
@@ -108,17 +108,17 @@ Adobe Experience Platformドキュメントは複数の言語で提供されて�
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
 
-## リファレンスドキュメントとリソース
+## 参照ドキュメントとリソース
 
 * [**リリースノート&#x200B;**](../release-notes/latest/latest.md)<br/>最新のリリースに関する情報を確認し、過去の[!DNL Experience Platform]リリースを確認します。
 
 * [**用語集&#x200B;**](glossary.md)<br/>Adobe Experience Platform の用語を確認します。
 
-* [**トラブルシューティングガイド&#x200B;**](troubleshooting.md)<br/>よくあるエラーの解決策とよくある質問への回答を見つけます。
+* [**トラブルシューティングガイド&#x200B;**](troubleshooting.md)<br/>よくあるエラーの解決方法と、よくある質問への回答を見つけます。
 
-* [**APIの基本&#x200B;**](api-fundamentals.md)<br/>APIを使用する基本的な方法を学び[!DNL Platform]ます。
+* [**API の基本&#x200B;**](api-fundamentals.md)<br/>[!DNL Platform]API の操作の基本について説明します。
 
-* [**APIリファレンス&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>Discover[!DNL Experience Platform]API。ヘッダ、パラメータ、サンプルリクエスト、応答を含みます。*これらのドキュメントは、Adobe I/Oでホストされます。*
+* [**API リファレンス&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>[!DNL Experience Platform]API（ヘッダー、パラメーター、サンプルリクエスト、応答を含む）を発見します。*これらのドキュメントは Adobe I/O でホストされます。*
 
 ## Adobe Experience Platform統合ビデオリソース
 
