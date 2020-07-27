@@ -4,21 +4,21 @@ solution: Experience Platform
 title: 予測スコアを使用した顧客セグメントの作成
 topic: Create a segment
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: fba6ae701a38737812dccbf4f63e5a07f935ad8b
 workflow-type: tm+mt
 source-wordcount: '272'
-ht-degree: 52%
+ht-degree: 87%
 
 ---
 
 
 # 予測スコアを使用した顧客セグメントの作成
 
-予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客AIスコアを使用してプロファイルを強化することで、顧客セグメントを作成し、その傾向スコアに基づいてオーディエンスを見つけることができます。 ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。セグメントの作成に関するより詳細なチュートリアルについては、『[セグメントビルダーユーザーガイド](../../../segmentation/tutorials/create-a-segment.md)』を参照してください。
+予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づくオーディエンスを発見するための顧客セグメントを作成できます。ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。セグメントの作成に関するより詳細なチュートリアルについては、『[セグメントビルダーユーザーガイド](../../../segmentation/ui/overview.md)』を参照してください。
 
 >[!IMPORTANT]
 >
->この方法を利用するには、データセットに対してリアルタイム顧客プロファイルを有効にする必要があります。
+> この方法を利用するには、データセットに対してリアルタイムの顧客プロファイルを有効にする必要があります。
 
 プラットフォーム UI で、左側のナビゲーションの「**[!UICONTROL セグメント]**」をクリックし、「**[!UICONTROL セグメント作成]**」をクリックします。
 
@@ -30,14 +30,14 @@ ht-degree: 52%
 
 セグメントビルダーの中央にある「**[!UICONTROL スコア]**」属性を&#x200B;*ルールビルダーキャンバス*&#x200B;にドラッグ&amp;ドロップし、ルールを定義します。
 
-右側の *セグメントプロパティ* 列で、セグメントの名前を指定します。
+右側の&#x200B;*セグメントのプロパティ*&#x200B;列で、セグメントの名前を指定します。
 
 ![](../images/user-guide/properties.png)
 
-左側の「 *フィールド* 」列の上で、 **歯車** アイコンをクリックし、ドロップダウンから「 *マージポリシー* 」を選択します。 Click **[!UICONTROL Save]** to create the segment.
+Above the left-hand *Fields* column, click the **gear** icon and select a *Merge policy* from the drop-down. 「**[!UICONTROL 保存]**」をクリックしてセグメントを作成します。
 
 ![](../images/user-guide/merge_policy.png)
 
 ## 次の手順
 
-このチュートリアルに従うと、セグメントビルダーを使用して、その傾向スコアに基づくオーディエンスを正しく見つけることができました。 目的のオーディエンスをアクティブ化して、ターゲットできるようになりました。 See the [destinations overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) for more information.
+このチュートリアルに従うと、セグメントビルダーを使用して、その傾向スコアに基づくオーディエンスを正しく見つけることができました。 これで、オーディエンスを宛先にアクティブ化することでターゲットに設定できます。詳しくは、「[宛先の概要](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/destinations/destinations-overview.html)」を参照してください。
