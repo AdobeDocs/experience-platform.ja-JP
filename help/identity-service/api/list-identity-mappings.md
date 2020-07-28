@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: リストIDマッピング
+title: ID マッピングのリストの表示
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '248'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# リストIDマッピング
+# ID マッピングのリストの表示
 
-マッピングとは、クラスター内の、指定した名前空間のすべてのIDの集まりです。
+マッピングは、クラスターにある、指定した名前空間の全 ID の集まりです。
 
-## 単一のIDに対するIDマッピングの取得
+## 単一の ID の ID マッピングの取得
 
-IDを指定し、リクエスト内のIDで表されるのと同じ名前空間ーからすべての関連IDを取得します。
+ID を指定し、リクエスト内の ID で表されるものと同じ名前空間から、すべての関連 ID を取得します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
@@ -28,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **リクエスト**
 
-オプション1: IDを名前空間(`nsId`、ID)およびID値(`id`)として指定します。
+オプション 1：ID を名前空間（ID 別 `nsId`）および ID 値（`id`）として指定します。
 
 ```shell
 curl -X GET \
@@ -39,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-オプション2: IDを名前空間(名前`ns`別)およびID値(`id`)として指定します。
+オプション 2：ID を名前空間（`ns`名前別）と ID 値（`id`）として指定します。
 
 ```shell
 curl -X GET \
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-オプション3: IDをXID (`xid`)として指定します。 IDのXIDを取得する方法について詳しくは、IDのXIDの [取得について説明しているこのドキュメントの節を参照してください](./list-native-id.md)。
+オプション 3：ID を XID（`xid`）として指定します。ID の XID を取得する方法について詳しくは、このドキュメントの [ID の XID の取得](./list-native-id.md)に関する節を参照してください。
 
 ```shell
 curl -X GET \
@@ -61,15 +61,15 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-### 複数のIDのIDマッピングの取得
+### 複数の ID の ID マッピングの取得
 
-この `POST``GET` メソッドは、上記のメソッドとバッチ同等に、複数のIDのマッピングを取得するために使用します。
+`POST` メソッドを前述の `GET` メソッドと同等のバッチとして使用して、複数の ID のマッピングを取得します。
 
 >[!NOTE]
 >
->要求は、IDの数が最大1000個に達することを示す必要があります。 IDが1000個を超える要求は、400個のステータスコードになります。
+> リクエストで使用できる ID 数の上限は 1000 です。ID 数が 1000 を超えるリクエストに対しては、ステータスコード 400 が発生します。
 
-**API形式**
+**API 形式**
 
 ```http
 POST https://platform.adobe.io/data/core/identity/mappings
@@ -77,7 +77,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **リクエスト本文**
 
-オプション1: マッピングを取得するXIDのリストを指定します。
+オプション 1：マッピングを取得する XID のリストを指定します。
 
 ```shell
 {
@@ -86,7 +86,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 }
 ```
 
-オプション2: IDのリストを複合IDとして指定します。各IDは名前空間IDごとにID値と名前空間を示します。 この例は、「Private Graph」のデフォルト値を上書きする際に、このメソッド `graph-type` を使用する方法を示しています。
+オプション 2：ID のリストを複合 ID として指定します。それぞれの ID は ID 値で、名前空間は名前空間 ID で指定します。この例では、このメソッドを使用すると同時に、「プライベートグラフ」のデフォルトの `graph-type` を上書きしています。
 
 ```shell
 {
@@ -105,7 +105,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **リクエスト**
 
-**XIDの使用**
+**XID を使用**
 
 ```shell
 curl -X POST \
@@ -121,7 +121,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**UIDの使用**
+**UID を使用**
 
 ```shell
 curl -X POST \
@@ -145,7 +145,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-指定された入力で関連IDが見つからなかった場合、 `HTTP 204` 応答コードはコンテンツなしで返されます。
+指定した入力内容に関連する ID が見つからなかった場合は、応答コード `HTTP 204` がコンテンツなしで返されます。
 
 **応答**
 
@@ -183,9 +183,9 @@ curl -X POST \
 }
 ```
 
-- `lastAssociationTime`: 入力IDが最後にこのIDに関連付けられた時のタイムスタンプ。
-- `regions`: IDが表示され `regionId` た場所 `lastAssociationTime` のANDを提供します。
+- `lastAssociationTime`：入力 ID がこの ID に最後に関連付けられたときのタイムスタンプ。
+- `regions`：ID が見つかった場所の `regionId` と `lastAssociationTime` を示します。
 
 ## 次の手順
 
-次のチュートリアルに進み、使用可能な [名前空間のリスト](./list-namespaces.md)。
+次のチュートリアルに進み、[利用可能な名前空間のリストを表示](./list-namespaces.md)します。
