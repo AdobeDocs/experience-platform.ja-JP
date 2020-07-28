@@ -1,96 +1,96 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
 solution: Experience Platform
-title: ノートブックを使用してデータを分析する
+title: ノートブックを使用したデータの分析
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
-ht-degree: 0%
+ht-degree: 84%
 
 ---
 
 
-# ノートブックを使用してデータを分析する
+# ノートブックを使用したデータの分析
 
-このチュートリアルでは、Data Science Workspaceに組み込まれたJupyterノートブックを使用して、データにアクセス、調査、視覚化する方法に焦点を当てます。 このチュートリアルを終えるまでに、データをよりよく理解するために、Jupyterのノートブックオファーの機能の一部を理解しておく必要があります。
+このチュートリアルでは、Data Science Workspace に組み込まれている Jupyter ノートブックを使用してデータへのアクセス、データの調査、データの視覚化をおこなう方法について説明します。このチュートリアルを完了すると、Jupyter ノートブックで提供される機能の一部を把握でき、データへの理解を深めることができます。
 
-次の概念について説明します。
+次の概念が導入されています。
 
 - **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)は、Project Jupyter向けの次世代のWebベースのインターフェースで、と緊密に統合されてい[!DNL Adobe Experience Platform]ます。
-- **バッチ：** データセットはバッチで構成されます。 バッチとは、ある期間に収集され、1つの単位として一緒に処理される一連のデータです。 データセットにデータが追加されると、新しいバッチが作成されます。
-- **Data Access SDK（非推奨）:** データアクセスSDKは廃止されました。 ガイドをご利用くだ [!DNL Platform SDK](../authoring/platform-sdk.md) さい。
+- **バッチ**：データセットはいくつかのバッチで構成されます。バッチとは、一定期間に収集され 1 つの単位として一緒に処理される一連のデータです。データセットにデータが追加されると、新しいバッチが作成されます。
+- **データアクセス SDK（廃止）**：データアクセス SDK は廃止されました。Please use the [!DNL Platform SDK](../authoring/platform-sdk.md) guide.
 
-## Data Science Workspaceのノートブックの参照
+## Data Science Workspace でのノートブックの調査
 
-この節では、以前小売販売スキーマに取り込まれたデータについて説明します。
+この節では、既に小売販売スキーマに取り込まれているデータを調査します。
 
-Data Science Workspaceを使用すると、ユーザーは、機械学習ワークフロー [!DNL Jupyter Notebooks] を作成および編集できる [!DNL JupyterLab] プラットフォームを使用して作成できます。 [!DNL JupyterLab] は、Webブラウザーを使用してノートブックドキュメントを編集できるサーバークライアントコラボレーションツールです。 これらのノートブックには、実行可能コードとリッチテキストの両方の要素を含めることができます。 当社の目的では、分析の説明と実行可能な [!DNL Python] コードにMarkdownを使用して、データの調査と分析を行います。
+Data Science Workspace allows users to create [!DNL Jupyter Notebooks] through the [!DNL JupyterLab] platform where they can create and edit machine learning workflows. [!DNL JupyterLab] は、Web ブラウザーでノートブックドキュメントを編集できるサーバー／クライアント型のコラボレーションツールです。これらのノートブックには、実行可能コードとリッチテキスト要素の両方を含めることができます。For our purposes, we will use Markdown for analysis description and executable [!DNL Python] code to perform data exploration and analysis.
 
 ### ワークスペースの選択
 
-起動時 [!DNL JupyterLab]に、Jupter Notebooks用のWebベースのインターフェースが表示されます。 どの種類のノートブックを選ぶかによって、対応するカーネルが起動します。
+When launching [!DNL JupyterLab], we are presented with a web-based interface for Jupyter Notebooks. 選択するノートブックタイプに応じて、対応するカーネルが起動します。
 
-どの環境を使用するかを比較する際には、各サービスの制限事項を考慮する必要があります。 例えば、 [pandas](https://pandas.pydata.org/) libraryをと共に使用する場合、通常のユーザー [!DNL Python]としてRAMの上限は2 GBです。 パワーユーザーの場合でも、20 GBのRAMに制限されます。 より大きな計算を扱う場合は、すべてのノートブックインスタンスで共有されるオファー1.5 TB [!DNL Spark] を使用すると効果的です。
+使用する環境を比較する際には、各サービスの制限事項を考慮する必要があります。例えば、 で [pandas](https://pandas.pydata.org/) ライブラリを使用する場合、通常のユーザーであれば、RAM の上限は 2 GB です。[!DNL Python]パワーユーザーの場合でも、20 GB の RAM に制限されます。If dealing with larger computations, it would make sense to use [!DNL Spark] which offers 1.5 TB that is shared with all notebook instances.
 
-デフォルトでは、TensorflowレシピはGPUクラスタで動作し、PythonはCPUクラスタ内で動作します。
+デフォルトでは、Tensorflow レシピは GPU クラスターで動作し、Python は CPU クラスター内で動作します。
 
-### 新しいノートブックを作成する
+### ノートコンピューターの新規作成
 
-UIで、上部メニューの「データサイエンス」タブをクリックして、データサイエンスワークスペースに移動します。 [!DNL Adobe Experience Platform] このページで、ランチャーを開く [!DNL JupyterLab] タブをクリックし [!DNL JupyterLab] ます。 次のようなページが表示されます。
+In the [!DNL Adobe Experience Platform] UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. 次のようなページが表示されます。
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
-チュートリアルでは、「Jupyter Notebook」の [!DNL Python] 3を使用して、データにアクセスして調査する方法を示します。 ランチャーページには、サンプルノートブックが用意されています。 小売売上のレシピを [!DNL Python] 3に使用します。
+In our tutorial, we will be using [!DNL Python] 3 in the Jupyter Notebook to show how to access and explore the data. ランチャーページには、サンプルのノートブックが用意されています。We will be using the Retail Sales recipe for [!DNL Python] 3.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
-小売売上のレシピは、同じ小売売上データセットを使用して、ジュピター・ノートブックでデータをどのように検証、視覚化できるかを示す、独立した例です。 さらに、トレーニングと検証に関してさらに深く掘り下げています。 このノートブックの詳細については、この [チュートリアルを参照してください](../walkthrough.md)。
+Retail Sales レシピは、同じ Retail Sales データセットを使用して、Jupyter ノートブックでデータを調査し視覚化する方法を示すスタンドアロンの例です。さらに、このノートブックでは、トレーニングと検証をさらに進めます。このノートブックについて詳しくは、[こちらの説明](../walkthrough.md)を参照してください。
 
 ### データへのアクセス
 
 >[!NOTE]
 >
->は非推奨 `data_access_sdk_python` で、推奨されなくなりました。 コードを変換するには、「 [PlatformSDKへのデータアクセスSDKの](../authoring/platform-sdk.md) 変換」チュートリアルを参照してください。 このチュートリアルでは、次と同じ手順を引き続き使用します。
+> `data_access_sdk_python` は廃止されているので、お勧めしません。コードを変換する場合は、[データアクセス SDK の Platform SDK への変換](../authoring/platform-sdk.md)チュートリアルを参照してください。このチュートリアルでも、以下と同じ手順を使用します。
 
-内部からのデータおよび外部からのデータへのアクセス [!DNL Adobe Experience Platform] を調べます。 このライブラリを使用して、データセットやXDMスキーマなどの内部データにアクセスします。 `data_access_sdk_python` 外部データの場合は、pandas [!DNL Python] ライブラリを使用します。
+We will go over accessing data internally from [!DNL Adobe Experience Platform] and data externally. `data_access_sdk_python` ライブラリを使用して、データセットや XDM スキーマなどの内部データにアクセスします。For external data, we will use the pandas [!DNL Python] library.
 
 #### 外部データ
 
-小売売上ノートブックを開き、「Load Data」ヘッダーを探します。 次の [!DNL Python] コードは、pandasの `DataFrame` データ構造と [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv)[!DNL Github] 関数を使用して、DataFrameでホストされるCSVを読み込みます。
+Retail Sales ノートブックを開き、「Load Data」ヘッダーを探します。The following [!DNL Python] code uses pandas&#39; `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on [!DNL Github] into the DataFrame:
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
-PandasのDataFrameデータ構造は、2次元のラベル付きデータ構造です。 データの次元をすばやく見るために、を使用でき `df.shape`ます。 次に、DataFrameの次元を表すタプルを返します。
+pandas の DataFrame データ構造は、2 次元のラベル付きデータ構造です。データの次元をすばやく確認するには、`df.shape` を使用します。DataFrame の次元を表すタプルが返されます。
 
 ![](../images/jupyterlab/analyze-data/df_shape.png)
 
-最後に、データがどのように表示されるかを試すことができます。 を使用して、DataFrame `df.head(n)` の最初の `n` 行を表示できます。
+最後に、どのようなデータであるかを見てみましょう。`df.head(n)` を使用して、DataFrame の最初の `n` 行を表示できます。
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
 #### [!DNL Experience Platform]data
 
-次に、 [!DNL Experience Platform] データへのアクセスについて説明します。
+Now, we will go over accessing [!DNL Experience Platform] data.
 
-##### データセットID別
+##### データセット ID 別
 
-この節では、小売売上データセットを使用します。これは、小売売上サンプルノートブックで使用されているものと同じデータセットです。
+この節では、Retail Sales データセットを使用します。これは、Retail Sales サンプルノートブックで使用されているのと同じデータセットです。
 
-「Jupyter Notebook」で、左側の「 **Data** 」タブからデータにアクセスできます。 タブをクリックすると、データセットのリストを表示できます。
+Jupyter ニートブックで、左側の「**Data**」タブからデータにアクセスできます。このタブをクリックすると、データセットのリストが表示されます。
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-Datasetsディレクトリで、取り込まれたすべてのデータセットを確認できます。 ディレクトリにデータセットが大量に格納されている場合は、すべてのエントリの読み込みに1分かかる場合があります。
+これで、Datasets ディレクトリで、取り込まれたすべてのデータセットを確認できます。ディレクトリにデータセットが大量に入力されている場合は、すべてのエントリの読み込みに 1 分程度かかる場合があります。
 
-データセットは同じなので、前の節で外部データを使用した読み込みデータを置き換えます。 「 **データを読み込み** 」でコードブロックを選択し、キーボードの **** Dキーを2回押します。 フォーカスがテキスト内ではなく、ブロック内にあることを確認します。 2回押す前に、 **Escキーを押し** てテキストフォーカスをエスケープ **でき** ます。
+データセットは同じなので、外部データを使用した前の節の読み込みデータを置き換えます。「**Load Data**」の下のコードブロックを選択し、キーボードの **D** キーを 2 回押します。フォーカスがテキスト内ではなく、ブロック上にあることを確認します。**D** キーを 2 回押す前に、**Esc** キーを押してテキストフォーカスをエスケープすることができます。
 
-これで、データセットを右クリックし、ドロップダウンの「Explore Data in Notebook」オプションを選択でき `Retail-Training-<your-alias>` ます。 実行可能なコードエントリがノートブックに表示されます。
+これで、`Retail-Training-<your-alias>` データセットを右クリックし、ドロップダウンの「Explore Data in Notebook」オプションを選択できます。実行可能コードエントリがノートブックに表示されます。
 
 >[!TIP]
 >
->コードを変換するには、 [!DNL Platform SDK](../authoring/platform-sdk.md) ガイドを参照してください。
+>refer to the [!DNL Platform SDK](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -100,20 +100,20 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-以外のカーネルで作業している場合は [!DNL Python]、 [このページを参照して](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) 、のデータにアクセスしてくだ [!DNL Adobe Experience Platform]さい。
+If you are working on other kernels other than [!DNL Python], please refer to [this page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) to access data on the [!DNL Adobe Experience Platform].
 
-実行可能セルを選択し、ツールバーの再生ボタンを押すと、実行可能コードが実行されます。 の出力は、データセットのキー `head()` を列、データセット内の最初のn行に含むテーブルになります。 `head()` 出力する行数を指定する整数引数を受け取ります。 デフォルトは5です。
+実行可能なセルを選択し、ツールバーの再生ボタンを押すと、実行可能コードが実行されます。`head()` の出力は、データセットのキーを列にした、データセットの最初の n 行分のテーブルです。`head()` では、出力する行数を指定する整数の引数を受け取ります。デフォルトでは、これは 5 です。
 
 ![](../images/jupyterlab/analyze-data/datasetreader_head.png)
 
-カーネルを再起動して、すべてのセルを再び実行した場合は、以前と同じ出力を得る必要があります。
+カーネルを再起動し、すべてのセルを再実行した場合は、前回と同じ出力が得られるはずです。
 
 ![](../images/jupyterlab/analyze-data/restart_kernel_run.png)
 
 
 ### データの調査
 
-データにアクセスできるようになったので、統計と視覚化を使用して、データ自体に焦点を当ててみましょう。 使用しているデータセットは、ある特定の日に45の店舗に関するその他の情報を提供する小売データセットです。 特定のオブジェクトのいくつかの特性 `date` と、次 `store` のものがあります。
+これでデータにアクセスできるようになったので、統計と視覚化を使用して、データそのものに焦点を当てましょう。使用するデータセットは、45 箇所の異なる店舗に関するある日の各種情報を提供する小売データセットです。特定の `date` および `store` の特性の一部を次に示します。
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -126,7 +126,7 @@ df.head()
 
 #### 統計概要
 
-各属性のデータタイプを取得するために、 [!DNL Python's] pandasライブラリを利用できます。 次の呼び出しの出力は、各列のエントリ数とデータタイプに関する情報を提供します。
+We can leverage [!DNL Python's] pandas library to get the data type of each attribute. 以下の呼び出しの出力では、各列のエントリ数とデータタイプに関する情報が得られます。
 
 ```PYTHON
 df.info()
@@ -134,9 +134,9 @@ df.info()
 
 ![](../images/jupyterlab/analyze-data/df_info.png)
 
-この情報は、各列のデータタイプを知ることで、データの処理方法を知ることができるので役立ちます。
+各列のデータタイプを知ることで、データの処理方法がわかるので、この情報は役に立ちます。
 
-統計的概要を見てみましょう。 数値データ型のみが表示され、そ `date`の、 `storeType`および `isHoliday` は出力されません。
+次に、統計概要を見てみましょう。数値データタイプのみが表示されるので、`date`、`storeType`、`isHoliday` は出力されません。
 
 ```PYTHON
 df.describe()
@@ -144,59 +144,59 @@ df.describe()
 
 ![](../images/jupyterlab/analyze-data/df_describe.png)
 
-これにより、各特性に対して6435個のインスタンスが存在することがわかります。 また、平均、標準偏差(std)、最小、最大、四分位数などの統計情報も提供されます。 これにより、データの偏差に関する情報が得られます。 次の節では、ビジュアライゼーションについて説明します。ビジュアライゼーションは、この情報と組み合わせて、データに関する十分な理解を得るために役立ちます。
+これにより、特性ごとに 6435 個のインスタンスが存在することがわかります。また、平均、標準偏差（std）、最小、最大、四分位数などの統計情報も提供されます。これにより、データの偏差に関する情報が得られます。次の節では、視覚化について説明します。視覚化では、これらの情報を総合してデータの理解を深めることができます。
 
-の最小値と最大値を調べると `store`、データが表す一意のストアが45個あることがわかります。 店とは何かを区別する `storeTypes` ものもある。 の配布は、次の手順を実行す `storeTypes` ると確認できます。
+`store` の最小値と最大値を見ると、データが表す 45 箇所の一意の店舗があることがわかります。店舗の種類を識別する `storeTypes` もあります。次の方法で `storeTypes` の分布を確認できます。
 
 ![](../images/jupyterlab/analyze-data/df_groupby.png)
 
-これは、22店舗が、17店舗 `storeType` 、 `A`6店舗であるこ `storeType` とを意味する `B``storeType``C`。
+つまり、22 店舗が `storeType` `A`、17 店舗が `storeType` `B`、6 店舗が `storeType``C` です。
 
 #### データの視覚化
 
-データフレームの値がわかったので、ビジュアライゼーションを使用してこれを補足し、パターンをより明確にし、より簡単に識別できるようにします。 グラフは、結果をオーディエンスに伝える場合にも便利です。 視覚化に役立つ [!DNL Python] ライブラリをいくつか挙げます。
+データフレームの値がわかったので、これに視覚化を補って、情報をより明確にし、パターンを識別しやすくしたいと思います。結果をオーディエンスに伝える場合はグラフも便利です。Some [!DNL Python] libraries which are useful for visualization include:
 - [Matplotlib](https://matplotlib.org/)
-- [パンダ](https://pandas.pydata.org/)
-- [海辺](https://seaborn.pydata.org/)
+- [pandas](https://pandas.pydata.org/)
+- [seaborn](https://seaborn.pydata.org/)
 - [ggplot](https://ggplot2.tidyverse.org/)
 
-この節では、各ライブラリの使用に関する利点を簡単に説明します。
+この節では、各ライブラリを使用する利点を簡単に説明します。
 
-[Matplotlib](https://matplotlib.org/) は、最も古い [!DNL Python] ビジュアライゼーションパッケージです。 彼らの目標は、「簡単で難しいことを可能にする」ことだ。 これは非常に強力なパッケージであり、複雑さも伴うためです。 相当な時間と労力をかけずに合理的なグラフを得るのは、必ずしも簡単ではない。
+[Matplotlib](https://matplotlib.org/)[!DNL Python] は、最も古くからある 視覚化パッケージです。「容易なことを容易に、難しいことを可能に」することを目的にしています。このパッケージはきわめて強力ですが、同時に複雑でもあるので、その傾向はあります。相当な時間と労力をかけなければ、見栄えのまずまず良いグラフを得るのは必ずしも容易ではありません。
 
-[Pandas](https://pandas.pydata.org/) は主にDataFrameオブジェクトに使用され、統合インデックスを使用したデータ操作が可能です。 ただし、pandasにはmatplotlibに基づく組み込みの印刷機能も含まれています。
+[pandas](https://pandas.pydata.org/) は、統合インデックス付けを使用したデータ操作が可能な DataFrame オブジェクトに主に使用されます。ただし、pandas には、Matplotlib をベースにしたプロット機能も組み込まれています。
 
-[seaborn](https://seaborn.pydata.org/) は、matplotlibの上に構築されたパッケージです。 主な目的は、デフォルトのグラフをより視覚的に訴えるようにし、複雑なグラフを簡単に作成することです。
+[seaborn](https://seaborn.pydata.org/) は、Matplotlib の上に構築されたパッケージです。デフォルトのグラフをより視覚に訴えるものにし、複雑なグラフを簡単に作成できるようにすることが主な目的です。
 
-[ggplot](https://ggplot2.tidyverse.org/) はmatplotlibの上にも構築されたパッケージです。 ただし、主な違いは、ツールがR用のggplot2のポートであることです。seabornと同様に、matplotlibを使用して改善することです。 R向けのggplot2に詳しいユーザは、このライブラリを検討する必要があります。
+[ggplot](https://ggplot2.tidyverse.org/) は、Matplotlib の上に構築されたパッケージです。ただし、主な違いは、このツールが R の ggplot2 を移植したものであることです。seaborn と同様に、Matplotlib を改良することが目的です。R の ggplot2 を使い慣れたユーザーは、このライブラリの使用を検討してください。
 
 
-##### 一変グラフ
+##### 単一変量グラフ
 
-単変数グラフは、個々の変数をグラフ化したものです。 一般的な単変量グラフを使用してデータを視覚化するのは、ボックスとウィスカーのプロットです。
+単一変量グラフは、個々の変数のグラフです。データの視覚化に使用される一般的な単一変量グラフは、ボックスウィスカープロットです。
 
-以前の小売データセットを使って、45店舗とその週間売上高のそれぞれに対するボックスとウィスカープロットを生成できます。 プロットは、この `seaborn.boxplot` 関数を使用して生成されます。
+以前の小売データセットを使って、45 店舗とその週間売上高ごとにボックスウィスカープロットを作成できます。プロットは、`seaborn.boxplot` 関数を使用して生成されます。
 
 ![](../images/jupyterlab/analyze-data/box_whisker.png)
 
-ボックスとウィスカープロットは、データの分布を示すのに使用されます。 プロットの外側の線は上下の四分位数を示し、ボックスは四分位数の範囲に及びます。 ボックス内の行は中央値を示しています。 四分位数または四分位数の1.5を超えるデータポイントは、すべて円としてマークされます。 これらの点は外れ値と見なされます。
+ボックスウィスカープロットは、データの分布を示すのに使用されます。プロットの外側の線は上下の四分位数を示し、ボックスは四分位数の範囲に広がります。ボックス内の行は中央値を示します。上四分位数または下四分位数の 1.5 倍以上のデータポイントは、円としてマークされます。これらの点は外れ値と見なされます。
 
-##### 多変量分析グラフ
+##### 多変量グラフ
 
-多変量分析プロットは、変数間の相互作用を確認するために使用されます。 このビジュアライゼーションを使用すると、データ科学者は変数間に相関関係やパターンがあるかどうかを確認できます。 一般的な多変量分析グラフは相関行列です。 相関行列を用いて、相関係数を用いて、複数の変数間の依存関係を定量化する。
+多変量プロットは、変数間の相互作用を確認するために使用されます。この視覚化手法を使用すると、データサイエンティストは変数間に相関関係やパターンがあるかどうかを確認できます。一般的に使用される多変量グラフは相関行列です。多変数間の依存関係が相関係数で定量化されます。
 
 同じ小売データセットを使用して、相関行列を生成できます。
 
 ![](../images/jupyterlab/analyze-data/correlation_1.png)
 
-中心から斜めの1が下にあることに注目してください。 これは、変数をそれ自体と比較する場合、変数に完全な正の相関関係があることを示しています。 強い正の相関関係は1に近い大きさになり、弱い相関関係は0に近い大きさになります。 負の相関は、逆の傾向を示す負の係数と共に表示されます。
+対角線上に 1 が並んでいることに注目してください。これは、変数をそれ自身と比較する場合、完全に正の相関関係があることを示しています。強い正の相関は 1 に近い大きさになり、弱い相関は 0 に近い大きさになります。負の相関は、逆の傾向を示す負の係数で示されます。
 
 
 ## 次の手順
 
-このチュートリアルでは、Data Science Workspaceで新しいジャプターノートブックを作成する方法、およびから外部のデータにアクセスする方法について説明し [!DNL Adobe Experience Platform]ました。 具体的には、次の手順に従いました。
-- 新しいジュピターノートブックを作成する
+This tutorial went over how to create a new Jupyter notebook in the Data Science Workspace and how to access data externally as well as from [!DNL Adobe Experience Platform]. 特に、次の手順を詳しく説明しました。
+- Jupyter ノートブックの新規作成
 - データセットとスキーマへのアクセス
 - データセットの調査
 
-これで、 [次のセクションに進んで、レシピをパッケージ化し](../models-recipes/package-source-files-recipe.md) 、Data Science Workspaceにインポートする準備が整いました。
+これで、[次の手順](../models-recipes/package-source-files-recipe.md)に進んで、レシピをパッケージ化し Data Science Workspace にインポートする準備が整いました。
