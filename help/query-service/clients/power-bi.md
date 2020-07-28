@@ -1,34 +1,34 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Power BIに接続
+title: Power BI との接続
 topic: connect
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 0%
+ht-degree: 61%
 
 ---
 
 
 # 接続先 [!DNL Power BI] (PC)
 
-PCユーザーは、https://powerbi.microsoft.com/en-us/desktop/ [!DNL Power BI] からインストールでき [ます](https://powerbi.microsoft.com/en-us/desktop/)。
+PC users can install [!DNL Power BI] from [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/ja-jp/desktop/).
 
 ## 設定 [!DNL Power BI]
 
-をインストールした後、PostgreSQLコネクタをサポートするために必要なコンポーネントを設定する必要があり [!DNL Power BI] ます。 次の手順に従います。
+After you have [!DNL Power BI] installed, you need to set up the necessary components to support the PostgreSQL connector. 次の手順に従います。
 
-- PowerBIが接続する正式な方法 `npgsql`である、PostgreSQL用の.NETドライバパッケージを探し出してインストールします。
+- `npgsql`（PowerBI の公式な接続方法である PostgreSQL 用 .NET ドライバパッケージ）を見つけてインストールします。
 
-- v4.0.10を選択します（現在、新しいバージョンではエラーが発生します）。
+- V4.0.10 を選択します（現在、新しいバージョンではエラーが発生します）。
 
-- カスタム設定画面の「Npgsql GAC Installation」で、「 **[!UICONTROL Will be installed on local hard drive]**」を選択します。 GACをインストールしないと、Power BIが後で失敗します。
+- カスタムセットアップ画面の「Npgsql GAC インストール」で、「**[!UICONTROL ハードドライブ上にインストール]**」を選択します。GAC をインストールしないと、後で Power BI に不具合が発生します。
 
-- Windowsを再起動します。
+- Windows を再起動します。
 
-- デスクトップ評価版 [!DNL PowerBI] を見つけます。
+- Find the [!DNL PowerBI] Desktop evaluation version.
 
 ## 接続 [!DNL Power BI] 先 [!DNL Query Service]
 
@@ -36,19 +36,19 @@ PCユーザーは、https://powerbi.microsoft.com/en-us/desktop/ [!DNL Power BI]
 
 - Open [!DNL Power BI].
 
-- 上部のメニューリボンで **[!UICONTROL 「データの取得]** 」をクリックします。
+- 上部のメニューリボンで「**[!UICONTROL データを取得]**」をクリックします。
 
-- 「 **[!UICONTROL PostgreSQLデータベース]**」を選択し、「 **[!UICONTROL 接続]**」をクリックします。
+- **[!UICONTROL PostgreSQL データベース]**&#x200B;を選択し、「**[!UICONTROL 接続]**」をクリックします。
 
-- サーバーとデータベースの値を入力します。 **[!UICONTROL サーバ]** ：接続の詳細で見つかったホストです。 実稼動環境の場合、ホスト文字列 `:80` の末尾にポートを追加します。 **[!UICONTROL Database]** には、「all」またはデータセットテーブル名を指定できます。 （CTASから派生したデータセットの1つを試してみてください）。
+- サーバーとデータベースの値を入力します。**[!UICONTROL サーバー]**&#x200B;は、接続の詳細で見つかったホストです。実稼動環境の場合は、ホスト文字列の末尾にポート `:80` を追加します。**[!UICONTROL データベース]**&#x200B;には、「すべて」またはデータセットテーブル名を指定できます。（CTAS から派生したデータセットの 1 つを試してみてください）
 
-- [ **[!UICONTROL 詳細オプション]**]をクリックし、[関係列を **[!UICONTROL 含める]**]のチェックを外します。 完全な階層を使用した **[!UICONTROL ナビゲーションをチェックしない]**。
+- 「**[!UICONTROL 詳細オプション]**」をクリックし、「**[!UICONTROL 関係列を含める]**」のチェックを外します。「**[!UICONTROL 完全な階層を使用したナビゲーション]**」は選択しないでください。
 
-- *（オプションですが、データベースに対して「all」が宣言されている場合に推奨されます）* SQL文を入力します。
+- *（オプションですが、データベースで「すべて」が宣言されている場合に推奨されます）* SQL 文を入力します。
 
 >[!NOTE]
 >
->SQLステートメントを指定しない場合は、データベース内のすべてのテーブル [!DNL Power BI] をプレビューします。 階層データの場合は、カスタムSQLステートメントを使用する必要があります。 テーブルスキーマがフラットな場合は、カスタムSQLステートメントを使用するか、使用しないかを指定します。 複合型はまだでサポートされていません。複合型からプリミティブ型を取得するに [!DNL Power BI] は、SQL文を記述して派生させる必要があります。
+>If a SQL statement is not provided, then [!DNL Power BI] will preview all of the tables in database. 階層データの場合は、カスタム SQL ステートメントを使用する必要があります。テーブルスキーマがフラットな場合は、カスタム SQL ステートメントを使用するか否かに関わらず機能します。Compound types are yet not supported by [!DNL Power BI] - to get primitive types from compound types, you will need to write SQL statements to derive them.
 
 ```sql
 SELECT web.webPageDetails.name AS Page_Name, 
@@ -60,8 +60,8 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ```
 
-- 「DirectQuery **[!UICONTROL 」または「]** インポート **** 」モードを選択します。 **[!UICONTROL 読み込み]** モードでは、データはで読み込まれ [!DNL Power BI]ます。 DirectQuery **[!UICONTROL モードでは]** 、すべてのクエリがに送信され、実行 [!DNL Query Service] されます。
+- 「**[!UICONTROL DirectQuery]**」または「**[!UICONTROL 読み込み]**」モードを選択します。**[!UICONTROL 読み込み]** モードでは、データはで読み込まれ [!DNL Power BI]ます。 In **[!UICONTROL DirectQuery]** mode, all the queries will be sent to [!DNL Query Service] for execution.
 
-- **[!UICONTROL OK]** をクリックします。では、に [!DNL Power BI] 接続し、エラーがない場合 [!DNL Query Service] はプレビューを生成します。 プレビューレンダリングの数値列に関する既知の問題があります。 次の手順に進みます。
+- 「**[!UICONTROL OK]**」をクリックします。Now, [!DNL Power BI] connects to the [!DNL Query Service] and produces a preview if there are no errors. 数値列の「プレビュー」レンダリングには、既知の問題があります。次の手順に進みます。
 
-- 「 **[!UICONTROL Load]** 」をクリックして、データセットをに取り込み [!DNL Power BI]ます。
+- Click **[!UICONTROL Load]** to bring the dataset into [!DNL Power BI].
