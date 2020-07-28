@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Data Science Workspaceのチュートリアル
+title: Data Science Workspace のチュートリアル
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
 source-wordcount: '1171'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
 
 # [!DNL Data Science Workspace] チュートリアル
 
-Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習と人工知能を使用して、データからインサイトを作成します。 Adobe Experience Platformに統合され [!DNL Data Science Workspace] 、アドビのソリューション全体でコンテンツやデータアセットを使用して予測を行うのに役立ちます。 すべてのスキルレベルのデータ科学者は、機械学習レシピの迅速な開発、トレーニング、調整をサポートする高度で使いやすいツールを備えています。AIテクノロジーのすべてのメリットを、複雑さを伴うことなくサポートします。
+Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions. あらゆるスキルレベルのデータサイエンティストは、マシンラーニングレシピの迅速な開発、トレーニング、チューニングをサポートする高度で使いやすいツールを活用できるほか、複雑な操作が不要な AI テクノロジーのすべてのメリットを享受できます。
 
-詳しくは、 [Data Science Workspaceの概要を読むことから始めてください](../data-science-workspace/home.md)。
+詳細につては、最初に「[Data Science Workspace の概要](../data-science-workspace/home.md)」を参照してください。
 
 ## [!DNL Sensei Machine Learning] API
 
-この [!DNL Sensei Machine Learning] APIは、データ科学者が機械学習サービスを、アルゴリズムのオンボーディングから実験まで、サービスの展開まで、整理および管理するためのメカニズムを提供します。
+The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
 **以下のAPI開発ガイドを利用できます。**
-- [エンジン](../data-science-workspace/api/engines.md) — レジストリの検索、 [!DNL Docker] エンジンの作成、機能パイプラインエンジンの作成、エンジンの情報の取得、エンジンの更新、およびエンジンの削除の方法について説明します。
+- [エンジン](../data-science-workspace/api/engines.md) — レジストリの検索、 [!DNL Docker] エンジンの作成、機能パイプラインの作成、エンジンの情報の取得、エンジンの更新、およびエンジンの削除の方法を学びます。
 - [MLInstances（レシピ）](../data-science-workspace/api/mlinstances.md) - MLInstanceの作成、MLInstanceの情報の取得、MLInstanceの更新、MLInstanceの削除の方法について説明します。
 - [実験](../data-science-workspace/api/experiments.md) — テストの作成、テストまたはテストの実行、テストの更新、テストの削除の方法を学びます。
 - [モデル](../data-science-workspace/api/models.md) — 独自のモデルの登録、モデルの情報の取得、モデルの更新、モデルの削除、モデルの新しいトランスコードの作成、トランスコードされたモデルの詳細の取得の方法を学習します。
@@ -34,7 +34,7 @@ Senesi Machine Learning APIを使用してCRUD操作を実行する際に必要�
 
 ## How to use [!DNL JupyterLab] Notebooks
 
-[!DNL JupyterLab] は、Adobe Experience Platform用のWebベースのユーザーインターフェイスで [!DNL Project Jupyter] あり、緊密に統合されています。 データサイエンティストが、データ、コード、およびデータを操作できるように、インタラクティブな開発環境 [!DNL Jupyter notebooks]を提供します。 このドキュメントでは、とその機能の概要 [!DNL JupyterLab] と、一般的なアクションを実行する手順を説明します。
+[!DNL JupyterLab] は、Adobe Experience Platform用のWebベースのユーザーインターフェイスで [!DNL Project Jupyter] あり、緊密に統合されています。 It provides an interactive development environment for data scientists to work with [!DNL Jupyter notebooks], code, and data. This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 
 **このガイドは次の目的に役立ちます。**
 - インター [!DNL JupyterLab] フェイスにアクセスし、理解します。
@@ -64,7 +64,7 @@ Senesi Machine Learning APIを使用してCRUD操作を実行する際に必要�
 >
 >このチュートリアルでは、 [!DNL Docker] ソースファイルのURLが必要です。 ソースファイルの [URLがない場合は、](../data-science-workspace/models-recipes/package-source-files-recipe.md) パッケージソースファイルをレシピチュートリアル [!DNL Docker] にアクセスしてください。
 
-読み込みレシピのチュートリアルでは、パッケージ化されたレシピを設定および読み込む方法に関するインサイトを提供します。 このチュートリアルを終了すると、Adobe Experience Platformでモデルを作成、トレーニング、評価でき [!DNL Data Science Workspace]ます。
+読み込みレシピのチュートリアルでは、パッケージ化されたレシピを設定および読み込む方法に関するインサイトを提供します。 By the end of this tutorial, you can create, train, and evaluate a Model in Adobe Experience Platform [!DNL Data Science Workspace].
 
 **このチュートリアルは、次の作業を行う場合に役立ちます。**
 - レシピ用の設定のセットを作成します。
@@ -74,7 +74,7 @@ Senesi Machine Learning APIを使用してCRUD操作を実行する際に必要�
 
 ## モデルのトレーニングと評価
 
-Adobe Experience Platform [!DNL Data Science Workspace]では、機械学習モデルは、モデルの意図に適した既存のレシピを組み込むことで作成されます。 次に、モデルのトレーニングと評価を行い、関連するハイパーパラメーターを微調整して、その動作効率と有効性を最適化します。 レシピは再利用可能です。つまり、複数のモデルを作成し、1つのレシピで特定の目的に合わせてカスタマイズできます。
+In Adobe Experience Platform [!DNL Data Science Workspace], a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model&#39;s intent. 次に、モデルに関連するハイパーパラメーターを微調整することで、モデルの動作効率と有効性を最適化するようにトレーニングおよび評価します。レシピは再利用可能で、複数のモデルを作成し、単一のレシピで特定の目的に合わせてカスタマイズできます。
 
 **このチュートリアルは、次の作業を行う場合に役立ちます。**
 - 新しいモデルを作成します。
@@ -85,7 +85,7 @@ Adobe Experience Platform [!DNL Data Science Workspace]では、機械学習モ�
 
 ## モデルインサイトフレームワークを使用したモデルの最適化
 
-Model Insights Frameworkは、データサイエンティストに、実験に基づく最適な機械学習モデルに対して迅速かつ十分な情報に基づく選択を行うAdobe Experience Platformのツールを提供します。 [!DNL Data Science Workspace] フレームワークは、機械学習ワークフローの速度と効果を向上させるとともに、データ科学者にとっての使いやすさを改善します。 これは、モデルの調整に役立つように、機械学習アルゴリズムのタイプごとにデフォルトのテンプレートを指定することで行います。 その結果、データ科学者と市民データ科学者は、エンドユーザーに対してより良いモデル最適化の判断を行うことができます。
+The Model Insights Framework provides the data scientist with tools in Adobe Experience Platform [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. このフレームワークにより、機械学習ワークフローの速度と効果だけでなく、データサイエンティストによる使いやすさも向上します。これは、モデルの調整を支援するために、機械学習アルゴリズムのタイプごとにデフォルトのテンプレートを提供することによっておこなわれます。結果的に、データサイエンティストと市民データサイエンティストは、エンドカスタマーに対してより適切なモデル最適化の決定をおこなうことができます。
 
 **このチュートリアルは、次の作業を行う場合に役立ちます。**
 - レシピコードを設定します。
@@ -96,31 +96,31 @@ Model Insights Frameworkは、データサイエンティストに、実験に�
 
 ## モデルにスコアを付ける
 
-Adobe Experience Platformのスコアは、既存のトレーニングを受けたモデルに入力データを入力することで達成 [!DNL Data Science Workspace] できます。 次に、スコアリング結果が新しいバッチとして指定した出力データセットに保存され、表示可能になります。
+Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. 次に、スコアリング結果が保存され、新しいバッチとして指定した出力データセットで表示可能になります。
 
 **このチュートリアルは、次の作業を行う場合に役立ちます。**
-- 新しいスコアリング実行を作成します。
+- 新しいスコアリングの実行の作成.
 - スコアリング結果の表示。
 
-開始するには、モデル [APIチュートリアル](../data-science-workspace/models-recipes/score-model-api.md) 、または [UIチュートリアルのスコアに従います](../data-science-workspace/models-recipes/score-model-ui.md)。
+To get started, follow the score a model [API tutorial](../data-science-workspace/models-recipes/score-model-api.md) or the [UI tutorial](../data-science-workspace/models-recipes/score-model-ui.md).
 
-## モデルをサービスとして発行
+## サービスとしてのモデルの公開
 
-Adobe Experience Platform [!DNL Data Science Workspace] を使用すると、モデルをサービスとして公開でき、IMS組織内のユーザーは、独自のモデルを作成することなく、データにスコアを付けることができます。 これは、ユー [!DNL Platform] ザーインターフェイスまたは [!DNL Sensei Machine Learning] APIを使用して行うことができます。
+Adobe Experience Platform [!DNL Data Science Workspace] allows you to publish your Model as a service, enabling users within your IMS Organization to score data without the need for creating their own Models. This can be done using the [!DNL Platform] user interface or the [!DNL Sensei Machine Learning] API.
 
 **このチュートリアルは、次の作業を行う場合に役立ちます。**
 - モデルをサービスとして発行します。
 - サービスギャラリーを介したサービスを使用した [!DNL Platform] スコア [!UICONTROL データ]。
 
-開始するには、「モデルをサービス [APIとして公開](../data-science-workspace/models-recipes/publish-model-service-api.md) 」チュートリアル [、または](../data-science-workspace/models-recipes/publish-model-service-ui.md)UIチュートリアルに従ってください。
+開始するには、モデルをサービスとして公開するための [API のチュートリアル](../data-science-workspace/models-recipes/publish-model-service-api.md)または [UI のチュートリアル](../data-science-workspace/models-recipes/publish-model-service-ui.md)に従ってください。
 
 ## モデルのトレーニングとスコアリングのスケジュール設定
 
-Adobe Experience Platform [!DNL Data Science Workspace] を使用すると、機械学習サービスでのスケジュール済みスコアおよびトレーニングの実行を設定できます。 トレーニングとスコアリングプロセスを自動化すると、データ内のパターンに対応し、時間をかけてサービスの効率性を維持、向上させるのに役立ちます。
+Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning service. トレーニングとスコアリングプロセスを自動化すると、データ内のパターンに対応し、時間をかけてサービスの効率性を維持、向上させるのに役立ちます。
 
 **このチュートリアルは、次の作業を行う場合に役立ちます。**
-- スケジュール済みスコアの設定
-- 予定されたトレーニングの設定
+- スコアリングののスケジュール設定
+- スケジュール済みトレーニングの設定
 
 開始するには、モデルUIのチュートリアル [のスケジュールに従い](../data-science-workspace/models-recipes/schedule-models-ui.md)ます。
 
