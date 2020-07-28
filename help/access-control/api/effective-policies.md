@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 表示効果の高いポリシー
+title: 有効なポリシーの表示
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '265'
-ht-degree: 1%
+ht-degree: 75%
 
 ---
 
 
-# 表示効果の高いポリシー
+# 有効なポリシーの表示
 
-現在のユーザーに対して有効なポリシーを表示するには、 `/acl/effective-policies`[!DNL Access Control] APIのエンドポイントにPOSTリクエストを行います。 取得する権限とリソースタイプは、配列の形式で要求ペイロードに指定する必要があります。 これは、以下のAPI呼び出しの例で示されます。
+現在のユーザーに有効なポリシーを表示するには、 API で `/acl/effective-policies` エンドポイントに POST リクエストを実行します。[!DNL Access Control]取得する権限とリソースの種類は、リクエストペイロードに配列の形式で指定する必要があります。これは、以下の API 呼び出し例に示されています。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /acl/effective-policies
@@ -24,7 +24,7 @@ POST /acl/effective-policies
 
 **リクエスト**
 
-次のリクエストは、「データセットを[!UICONTROL 管理]」権限に関する情報を取得し、現在のユーザーの「[!UICONTROL スキーマ]」リソースタイプにアクセスします。
+The following requests retrieves information about the &quot;[!UICONTROL Manage Datasets]&quot; permission and access to the &quot;[!UICONTROL schemas]&quot; resource type for the current user.
 
 ```shell
 curl -X POST \
@@ -42,11 +42,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->ペイロード配列で提供できる権限とリソースタイプの完全なリストについては、 [許可された権限とリソースタイプに関する付録の節を参照してください](#accepted-permissions-and-resource-types)。
+>ペイロードの配列で指定できる権限とリソースの種類のリストについては、[許可された権限とリソースの種類](#accepted-permissions-and-resource-types)に関する付録の節を参照してください。
 
 **応答**
 
-成功した応答は、要求で提供された権限とリソースタイプに関する情報を返します。 この応答には、現在のユーザーが、要求で指定されたリソースタイプに対して持つアクティブな権限が含まれます。 要求ペイロードに含まれる権限が現在のユーザーに対してアクティブな場合、APIは、その権限がアクティブであることを示すアストリック(`*`)と共に権限を返します。 要求で指定された権限のうち、ユーザーに対してアクティブでないものは、応答ペイロードに含まれません。
+リクエストが成功した場合は、リクエストで指定した権限とリソースの種類に関する情報が返されます。このレスポンスには、リクエストで指定したリソースの種類に対して現在のユーザーが持っているアクティブな権限が含まれます。リクエストペイロードに含まれる権限が現在のユーザーに対してアクティブな場合、API は、権限とその権限がアクティブであることを示すアスタリスク（`*`）を返します。リクエストで指定した権限がそのユーザーに対してアクティブでない場合は、レスポンスのペイロードから除外されます。
 
 ```json
 {
@@ -65,17 +65,17 @@ curl -X POST \
 
 ## 次の手順
 
-このドキュメントでは、アクティブな権限とリソースタイプの関連ポリシーに関する情報を返すために [!DNL Access Control] APIを呼び出す方法について説明しました。 のアクセス制御について詳し [!DNL Experience Platform]くは、 [アクセス制御の概要](../home.md)を参照してください。
+This document covered how to make calls to the [!DNL Access Control] API to return information on active permissions and related policies for resource types. For more information about access control for [!DNL Experience Platform], see the [access control overview](../home.md).
 
 ## 付録
 
-この節では、 [!DNL Access Control] APIの使用に関する補足情報を提供します。
+This section provides supplemental information for using the [!DNL Access Control] API.
 
 ### 許可された権限とリソースの種類
 
-次に、エンドポイントへのPOST要求のペイロードに含めることができる権限とリソースタイプのリストを示し `/acl/active-permissions` ます。
+次のリストは、`/acl/active-permissions` エンドポイントに対する POST リクエストのペイロードに含めることができる権限とリソースの種類を示しています。
 
-**Permissions**
+**権限**
 
 ```plaintext
 "permissions/activate-destinations"
@@ -96,7 +96,7 @@ curl -X POST \
 "permissions/view-schemas"
 ```
 
-**リソースタイプ**
+**リソースの種類**
 
 ```plaintext
 "resource-types/classes"
