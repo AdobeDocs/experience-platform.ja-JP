@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: リストクラスターID
+title: クラスター ID のリスト
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# クラスター内のすべてのIDのリスト
+# クラスター内のすべての ID のリスト
 
-IDグラフで関連付けられるIDは、名前空間に関係なく、そのIDグラフでは同じ「クラスター」の一部と見なされます。 以下のオプションは、すべてのクラスターメンバーにアクセスする手段を提供します。
+ID グラフで関連付けられている ID は、名前空間に関係なく、その ID グラフでは同じ「クラスター」の一部と見なされます。以下のオプションは、すべてのクラスターメンバーにアクセスする手段を提供します。
 
-## 単一のIDに関連付けられたIDの取得
+## 単一の ID に関連付けられた ID の取得
 
-1つのIDに対するすべてのクラスターメンバーを取得します。
+単一の ID のすべてのクラスターメンバーを取得します。
 
-オプションの `graph-type` パラメーターを使用して、クラスターの取得元のIDグラフを示すことができます。 オプションは次のとおりです。
+オプションの `graph-type` パラメーターを使用して、クラスターの取得元の ID グラフを示すことができます。オプションは次のとおりです。
 
-- None - IDのステッチを実行しません。
-- プライベートグラフ — プライベートIDグラフに基づいてIDの切り替えを実行します。 値が指定され `graph-type` ていない場合、これがデフォルトです。
+- なし — ID を結合しません。
+- プライベートグラフ — プライベート ID グラフに基づいて ID を結合します。`graph-type` を指定しない場合、これがデフォルトです。
 
-**API形式**
+**API 形式**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAMETERS}
@@ -33,7 +33,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/members?{PARAM
 
 **リクエスト**
 
-オプション1: IDを名前空間(`nsId`、ID)およびID値(`id`)として指定します。
+オプション 1：ID を名前空間（ID 別 `nsId`）および ID 値（`id`）として指定します。
 
 ```shell
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-オプション2: IDを名前空間(名前`ns`別)およびID値(`id`)として指定します。
+オプション 2：ID を名前空間（`ns`名前別）と ID 値（`id`）として指定します。
 
 ```shell
 curl -X GET \
@@ -55,7 +55,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-オプション3: IDをXID (`xid`)として指定します。 IDのXIDを取得する方法について詳しくは、IDのXIDの [取得について説明しているこのドキュメントの節を参照してください](./list-native-id.md)。
+オプション 3：ID を XID（`xid`）として指定します。ID の XID を取得する方法について詳しくは、このドキュメントの [ID の XID の取得](./list-native-id.md)に関する節を参照してください。
 
 ```shell
 curl -X GET \
@@ -66,15 +66,15 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-## 複数のIDに関連付けられたIDの取得
+## 複数の ID に関連付けられた ID の取得
 
-複数のID `POST` のクラスター内のIDを返すには、上記の `GET` メソッドと同じバッチとして使用します。
+`POST` を上記の `GET` メソッドと同等のバッチとして使用して、複数の ID のクラスター内の ID を返します。
 
 >[!NOTE]
 >
->要求は、IDの数が最大1000個に達することを示す必要があります。 IDが1000個を超える要求は、400個のステータスコードになります。
+> リクエストで使用できる ID 数の上限は 1000 です。ID 数が 1000 を超えるリクエストに対しては、ステータスコード 400 が発生します。
 
-**API形式**
+**API 形式**
 
 ```http
 POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
@@ -82,11 +82,11 @@ POST https://platform-{REGION}.adobe.io/data/core/identity/clusters/members
 
 **リクエスト**
 
-次の要求では、クラスターメンバーを取得するXIDのリストを提供する方法を示します。
+次のリクエストは、クラスターメンバーを取得する XID のリストの提供を示しています。
 
-**スタブ要求**
+**スタブリクエスト**
 
-ヘッダーを使用すると、スタブ化された応答が返され `x-uis-cst-ctx: stub` ます。 これは、サービスの完了中に、初期の統合開発の進展を容易にする一時的なソリューションです。 これは不要になった時点で廃止されます。
+`x-uis-cst-ctx: stub` ヘッダーを使用すると、スタブ化された応答が返されます。これは、サービスが完了している間、早期の統合開発の進行を容易にするための一時的なソリューションです。これは不要になった時点で廃止されます。
 
 ```shell
 curl -X POST \
@@ -102,7 +102,7 @@ curl -X POST \
 }'
 ```
 
-**XIDを使用した呼び出し**
+**XID を使用した呼び出し**
 
 ```shell
 curl -X POST \
@@ -118,7 +118,7 @@ curl -X POST \
 }' | json_pp
 ```
 
-**UIDを使用した呼び出し**
+**UID を使用した呼び出し**
 
 ```shell
 curl -X POST \
@@ -144,7 +144,7 @@ curl -X POST \
 
 **応答**
 
-**&#39;スタブ&#39;応答**
+**「スタブ」応答**
 
 ```json
 {
@@ -238,8 +238,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->要求のXIDが同じクラスターに属しているか、1つ以上のXIDにクラスターが関連付けられているかに関係なく、要求で提供される各XIDに対して、応答には常に1つのエントリが存在します。
+> リクエストの XID が同じクラスターに属しているかどうか、または 1 つ以上にクラスターが関連付けられているかどうかに関係なく、応答には、リクエストで提供された XID ごとに 1 つのエントリがあります。
 
 ## 次の手順
 
-次のチュートリアルに進み、IDのクラスタ履歴を [リストします](./list-cluster-history.md)
+次のチュートリアルに進み、[ID のクラスター履歴をリスト](./list-cluster-history.md)します。
