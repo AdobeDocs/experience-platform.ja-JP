@@ -7,18 +7,18 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
-ht-degree: 0%
+ht-degree: 89%
 
 ---
 
 
-# モデルインサイトフレームワークを使用したモデルの最適化
+# モデルの最適化 モデルインサイトフレームワークの使用
 
-Model Insights Frameworkは、データサイエンティストに、実験に基づく最適な機械学習モデルに対して迅速かつ十分な情報に基づく選択を行うためのツールを提供します。 [!DNL Data Science Workspace] フレームワークは、機械学習ワークフローの速度と効果を向上させるとともに、データ科学者にとっての使いやすさを改善します。 これは、モデルの調整に役立つように、機械学習アルゴリズムのタイプごとにデフォルトのテンプレートを指定することで行います。 その結果、データ科学者と市民データ科学者は、エンドユーザーに対してより良いモデル最適化の判断を行うことができます。
+The Model Insights Framework provides the data scientist with tools in [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. このフレームワークにより、機械学習ワークフローの速度と効果だけでなく、データサイエンティストによる使いやすさも向上します。これは、モデルの調整を支援するために、機械学習アルゴリズムのタイプごとにデフォルトのテンプレートを提供することによっておこなわれます。結果的に、データサイエンティストと市民データサイエンティストは、エンドカスタマーに対してより適切なモデル最適化の決定をおこなうことができます。
 
 ## 指標とは
 
-モデルの実装とトレーニングの後、データサイエンティストが行う次の手順は、モデルのパフォーマンスを見つけることです。 様々な指標を使用して、モデルが他のモデルと比較してどの程度効果的かを見つけます。 使用される指標の例を以下に示します。
+モデルの実装とトレーニングの後、データサイエンティストが実行する次の手順は、モデルのパフォーマンスを確認することです。様々な指標を使用して、モデルが他のモデルと比較してどの程度効果的かが確認されます。使用される指標の例を次に示します。
 - 分類の正確性
 - カーブ下の領域
 - 混同行列
@@ -26,20 +26,20 @@ Model Insights Frameworkは、データサイエンティストに、実験に�
 
 ## レシピコードの設定
 
-現在、Model Insights Frameworkは、次のランタイムをサポートしています。
-- [スカラ](#scala)
+現在、モデルインサイトフレームワークは次のランタイムをサポートしています。
+- [Scala](#scala)
 - [!DNL Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
-レシピのサンプルコードは、 [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) リポジトリの下にあ `recipes`ります。 このリポジトリの特定のファイルは、このチュートリアル全体で参照されます。
+レシピのコード例は、`recipes` の [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) リポジトリーにあります。このリポジトリーの特定のファイルは、このチュートリアル全体で参照されます。
 
-### スカラ {#scala}
+### Scala {#scala}
 
-指標をレシピに取り込む方法は2つあります。 1つはSDKが提供するデフォルトの評価指標を使用すること、もう1つはカスタム評価指標を作成することです。
+指標をレシピに取り込む方法は 2 つあります。1 つは SDK が提供するデフォルトの評価指標を使用すること、もう 1 つはカスタム評価指標を作成することです。
 
-#### Scalaのデフォルトの評価指標
+#### Scala のデフォルト評価指標
 
-デフォルトの評価は、分類アルゴリズムの一部として計算されます。 現在実装されている評価基準のデフォルト値を次に示します。
+デフォルトの評価は、分類アルゴリズムの一部として計算されます。現在実装されている評価演算子のデフォルト値を次に示します。
 
 | エバリュエータークラス | `evaluation.class` |
 --- | ---
@@ -47,7 +47,7 @@ Model Insights Frameworkは、データサイエンティストに、実験に�
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
 
-評価基準は、フ [ォルダー内の](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) application.properties `recipe` ファイルのレシピで定義できます。 を有効にするサンプルコード `DefaultBinaryClassificationEvaluator` を以下に示します。
+エバリュエーターは、`recipe` フォルダー内の [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) ファイルのレシピで定義できます。`DefaultBinaryClassificationEvaluator` を有効にするコード例を以下に示します。
 
 ```scala
 evaluation.class=com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator
@@ -56,7 +56,7 @@ evaluation.predictionColumn=prediction
 training.evaluate=true
 ```
 
-評価基準クラスを有効にした後、デフォルトでは、トレーニング中に多数の指標が計算されます。 デフォルトの指標は、次の行を `application.properties`
+エバリュエータークラスが有効になると、トレーニング中に多数の指標がデフォルトで計算されます。デフォルトの指標は、`application.properties` に次の行を追加して宣言できます。
 
 ```scala
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
@@ -64,64 +64,64 @@ evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 
 >[!NOTE]
 >
->指標が定義されていない場合、デフォルトの指標がアクティブになります。
+> 指標が定義されていない場合、デフォルトの指標がアクティブになります。
 
-特定の指標は、の値を変更することで有効にでき `evaluation.metrics.com`ます。 次の例では、F-Score指標が有効です。
+特定の指標は、`evaluation.metrics.com` の値を変更することで有効にできます。次の例では、F-Score 指標が有効になっています。
 
 ```scala
 evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 ```
 
-次の表に、各クラスのデフォルト指標を示します。 ユーザーは、 `evaluation.metric` 列の値を使用して特定の指標を有効にすることもできます。
+次の表に、各クラスのデフォルト指標を示します。また、`evaluation.metric` 列の値を使用して、特定の指標を有効にすることもできます。
 
 | `evaluator.class` | デフォルトの指標 | `evaluation.metric` |
 --- | --- | ---
-| `DefaultBinaryClassificationEvaluator` | ・レシ <br>ーバー動作特性下の精度・リコール・ <br>混同行列 <br>-Fスコア・ <br>精度・レシーバー動作特性 <br><br>領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `DefaultMultiClassificationEvaluator` | ・レシ <br>ーバー動作特性下の精度・リコール・ <br>混同行列 <br>-Fスコア・ <br>精度・レシーバー動作特性 <br><br>領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `RecommendationsEvaluator` |  — 平均平均精度(MAP) <br>— 正規化割引累積ゲイン <br>平均逆数ランク <br>指標K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
+| `DefaultBinaryClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultMultiClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `RecommendationsEvaluator` |  - MAP（Mean Average Precision）<br>- 正規割引累積利益<br>- 平均逆数ランク<br>- 指標 K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 
-#### Scalaのカスタム評価指標
+#### Scala のカスタム評価指標
 
-カスタム評価基準は、フ `MLEvaluator.scala``Evaluator.scala` ァイル内のののインターフェイスを拡張することで提供できます。 例の [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) ファイルでは、カスタム `split()` および `evaluate()` 関数を定義します。 この `split()``evaluate()` 関数は、データをランダムに8:2の比率で分割し、3つの指標を定義して返します。 MAPE、MAE、RMSE。
+カスタムエバリュエーターは、`Evaluator.scala` ファイルで `MLEvaluator.scala` のインターフェイスを拡張することで提供できます。この例の [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) ファイルで 、カスタム `split()` と `evaluate()` 関数を定義します。`split()` 関数は、データをランダムに 8:2 の比率で分割し、`evaluate()` 関数は、MAPE、MAE、RMSE の 3 つの指標を定義して返します。
 
 >[!IMPORTANT]
 >
->このクラスの場合は、新しい評価指標を作成する `MLMetric` 際には使用しないでください。作成し `"measures"``valueType``MLMetric` ない場合は、指標がカスタム評価指標テーブルに入力されません。
+> `MLMetric` クラスの場合は、新しい `"measures"` を作成する際に `valueType` に `MLMetric` を使用しないでください。さもないと、指標はカスタム評価指標のテーブルに入力されません。
 >  
-> 実行する手順： `metrics.add(new MLMetric("MAPE", mape, "double"))`\
-> 次の条件を満たさない： `metrics.add(new MLMetric("MAPE", mape, "measures"))`
+> 以下を実行してください。 `metrics.add(new MLMetric("MAPE", mape, "double"))`\
+> 以下は実行しないでください。 `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
-レシピで定義した後は、次のステップでレシピで有効にします。 これは、プロジェクトの [フォルダー内の](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) application.properties `resources` ファイルで行います。 ここ `evaluation.class``Evaluator` で、は `Evaluator.scala`
+レシピで定義した後は、レシピで有効にします。これは、プロジェクトの `resources` フォルダーの [ application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) ファイルで実行されます。ここでは、`evaluation.class` が `Evaluator.scala` で定義された `Evaluator` に設定されます。
 
 ```properties
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-で [!DNL Data Science Workspace]は、テストページの「評価指標」タブにインサイトが表示されます。
+In the [!DNL Data Science Workspace], the user would be able to see the insights in the &quot;Evaluation Metrics&quot; tab in the experiment page.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-現在のところ、 [!DNL Python] またはにデフォルトの評価指標はありません [!DNL Tensorflow]。 したがって、またはの評価指標を取得するに [!DNL Python] は、カスタム評価指標を作成する必要があり [!DNL Tensorflow]ます。 これは、 `Evaluator` クラスを実装することで実行できます。
+As of now, there are no default evaluation metrics for [!DNL Python] or [!DNL Tensorflow]. Thus, to get the evaluation metrics for [!DNL Python] or [!DNL Tensorflow], you will need to create a custom evaluation metric. これは、`Evaluator` クラスを実装することで実行できます。
 
-#### カスタム評価指標 [!DNL Python]
+####  のカスタム評価指標[!DNL Python]
 
-カスタム評価指標の場合、評価基準に実装する必要がある主なメソッドは2つあります。 `split()` と `evaluate()`。
+カスタム評価指標の場合、評価基準に実装する必要がある主なメソッドは `split()` と `evaluate()` の 2 つです。
 
-例え [!DNL Python]ば、これらのメソッドは、 [クラスの](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) evaluator.pyで定義され `Evaluator` ます。 の例については、 [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) リンクに従ってく `Evaluator`ださい。
+For [!DNL Python], these methods would be defined in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) for the `Evaluator` class. `Evaluator` の例については、[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) リンクを参照してください。
 
-で評価指標を作成するに [!DNL Python] は、およ `evaluate()` び `split()` メソッドをユーザーが実装する必要があります。
+Creating evaluation metrics in [!DNL Python] requires the user to implement the `evaluate()` and `split()` methods.
 
-この `evaluate()` メソッドは、、、およびのプロパティを持つ指標オブジェクトの配列を含む指標オブジェクトを返し `name`ま `value``valueType`す。
+`evaluate()` メソッドは、`name`、`value`、`valueType` プロパティを持つ指標オブジェクトの配列を含む指標オブジェクトを返します。
 
-この `split()` 方法の目的は、データの入力、トレーニングとテストのデータセットの出力を行うことです。 この例では、この `split()` メソッドは `DataSetReader` SDKを使用してデータを入力し、関連のない列を削除してデータをクリーンアップします。 データ内の既存の生のフィーチャから追加のフィーチャが作成されます。
+`split()` メソッドの目的は、データを入力し、トレーニングとテスト用のデータセットを出力することです。この例では、`split()` メソッドは `DataSetReader` SDK を使用してデータを入力し、関連のない列を削除してデータをクリーンアップします。ここから、データ内既存の生の特徴から追加の特徴が作成されます。
 
-この `split()` メソッドは、トレーニングとテストのデータフレームを返す必要があります。このデータフレームは、MLモデルのトレーニングとテスト `pipeline()` のための方法で使用されます。
+`split()` メソッドは、トレーニングとテストのデータフレームを返します。これは、`pipeline()` メソッドで、ML モデルのトレーニングとテストで使用されます。
 
-#### テンソーフローのカスタム評価指標
+#### Tensorflow のカスタム評価指標
 
-の場合 [!DNL Tensorflow]と同様 [!DNL Python]に、クラス内のメソッド `evaluate()` とメソッド `split()``Evaluator` を実装する必要があります。 例え `evaluate()`ば、トレインおよびテストのデータセットを返す際に、指標 `split()` を返す必要があります。
+For [!DNL Tensorflow], similar to [!DNL Python], the methods `evaluate()` and `split()` in the `Evaluator` class will need to be implemented. `evaluate()` については指標を返し、`split()` はトレーニングとテストのデータセットを返す必要があります。
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -141,30 +141,30 @@ class Evaluator(AbstractEvaluator):
 
 ### R {#r}
 
-現在のところ、Rにはデフォルトの評価指標はありません。したがって、Rの評価指標を取得するには、 `applicationEvaluator` クラスをレシピの一部として定義する必要があります。
+現時点では、R のデフォルトの評価指標はありません。したがって、R の評価指標を取得するには、レシピの一部として `applicationEvaluator` クラスを定義する必要があります。
 
-#### Rのカスタム評価指標
+#### R のカスタム評価指標
 
-の主な目的 `applicationEvaluator` は、指標のキーと値のペアを含むJSONオブジェクトを返すことです。
+`applicationEvaluator` の主な目的は、指標のキーと値のペアを含む JSON オブジェクトを返すことです。
 
-この [applicationEvaluator.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) は、例として使用できます。 この例では、は3つのよくあるセクション `applicationEvaluator` に分かれています。
+この [applicationEvaluator.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) は、例として使用できます。この例では、`applicationEvaluator` が 3 つのよく知られたセクションに分かれています。
 - データの読み込み
-- データの準備/機能のエンジニアリング
-- 保存されたモデルを検索して評価
+- データの準備と特徴量エンジニアリング
+- 保存されたモデルの取得と評価
 
-データは、 [retail.config.jsonで定義されているソースからデータセットに最初に読み込まれます](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json)。 そこから、機械学習モデルに合わせてデータがクリーニングされ、エンジニアリングされます。 最後に、このモデルを使用してデータセットを使用して予測を行い、予測値と実際の値から指標を計算します。 この場合、MAPE、MAE、RMSEが定義され、 `metrics` オブジェクト内で返されます。
+データは、まず、[retail.config.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json) で定義されているようにソースからデータセットに読み込まれます。その後、データが消去され、機械学習モデルに合わせて設計されます。最後に、モデルはデータセットを使用して予測をおこなうために使用され、予測値と実際の値から指標が計算されます。この場合、MAPE、MAE、RMSE が定義され、`metrics` オブジェクト内で返されます。
 
-## 事前ビルド指標とビジュアライゼーショングラフの使用
+## 事前に作成された指標とビジュアライゼーショングラフの使用
 
-は、機械学習アルゴリズムのタイプご [!DNL Sensei Model Insights Framework] とに1つのデフォルトテンプレートをサポートします。 次の表に、一般的な高レベルの機械学習アルゴリズムクラスと、対応する評価指標およびビジュアライゼーションを示します。
+The [!DNL Sensei Model Insights Framework] will support one default template for each type of machine learning algorithm. 次の表に、一般的な高レベルの機械学習アルゴリズムクラスと、対応する評価指標およびビジュアライゼーションを示します。
 
-| MLアルゴリズムの種類 | 評価指標 | ビジュアライゼーション |
+| ML アルゴリズムの種類 | 評価指標 | ビジュアライゼーション |
 --- | --- | ---
 | 回帰 | - RMSE<br>- MAPE<br>- MASE<br>- MAE | 予測値と実際の値のオーバーレイ曲線 |
-| バイナリ分類 |  — 混同行列<br>— 精度再現<br>— 精度<br>- F — スコア（特にF1、F2）<br>- AUC<br>- ROC | ROC曲線と混同行列 |
-| 複数クラスの分類 |  — 混同行列 <br>— 各クラス： <br>— 精度再現精度 <br>- Fスコア（特にF1、F2） | ROC曲線と混同行列 |
-| クラスタリング（真実を含む） | ・NMI（正規化相互情報スコア）、AMI（調整相互情報スコア）<br>- RI（ランド指数）、ARI（調整ランド指数）<br>— 等質スコア、完全性スコア、V-measure<br>- FMI（フォールケス — マローズ指数）<br>— 純度<br>— ジャカード指数 | クラスタ内にあるデータポイントを反映した相対クラスタサイズを持つクラスタと図心を示すクラスタプロット |
-| クラスタリング（実例を除く） |  — 慣性<br>— シルエット係数<br>- CHI （カリンスキー — ハラバズ指数）<br>- DBI （デイビス — ブルディン指数）<br>— ダン指数 | クラスタ内にあるデータポイントを反映した相対クラスタサイズを持つクラスタと図心を示すクラスタプロット |
-| 推奨 |  — 平均平均精度(MAP) <br>— 正規化割引累積ゲイン <br>平均逆数ランク <br>指標K | TBD |
-| TensorFlowの使用例 | TensorFlowモデル分析(TFMA) | ニューラルネットワークモデルの比較/視覚化の詳細比較 |
-| その他/エラーのキャプチャメカニズム | モデル作成者が定義したカスタム指標ロジック（および対応する評価グラフ）。 テンプレートが一致しない場合の正常なエラー処理 | 評価指標のキーと値のペアを含む表 |
+| バイナリ分類 |  — 混同行列<br>- Precision-recall<br>- 精度<br>- F　スコア（具体的にはF1、F2）<br>- AUC<br>- ROC | ROC 曲線と混同行列 |
+| 複数クラスの分類 |  — 混同行列<br>— 各クラス：<br>— precision-recall accuracy <br>- Fスコア（特にF1、F2） | ROC 曲線と混同行列 |
+| クラスタリング（グラウンドトゥルースあり） | - NMI（正規化相互情報量スコア）、AMI（調整相互情報量スコア）<br>- RI（ランド指数）、ARI（調整ランド指数）<br>— 均質性スコア、完全性スコア、V-measure<br>-FMI（Fowlkes-Mallows 指数） — <br>純度<br>— Jaccard 係数 | クラスタ内のデータポイントを反映した相対クラスタサイズのクラスタと図心を示すクラスタプロット |
+| クラスタリング（グラウンドトゥルースなし） |  — 慣性<br>— シルエット係数<br>- CHI（Calinski-Harabaz 係数）<br>- DBI（Davies–Bouldin 係数）<br>— ダンインデックス | クラスタ内のデータポイントを反映した相対クラスタサイズのクラスタと図心を示すクラスタプロット |
+| 推奨 |  - MAP（Mean Average Precision）<br>- 正規割引累積利益<br>- 平均逆数ランク<br>- 指標 K | 未定 |
+| TensorFlow の使用例 | TensorFlow モデル分析（TFMA） | ニューラルネットワークモデルの比較と視覚化の詳細化 |
+| その他／エラーのキャプチャメカニズム | モデル作成者が定義したカスタム指標ロジック（および対応する評価グラフ）。テンプレートが一致しない場合のグレースフルなエラー処理 | 評価指標のキーと値のペアを含む表 |
