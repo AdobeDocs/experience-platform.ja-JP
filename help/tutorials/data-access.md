@@ -7,19 +7,19 @@ translation-type: tm+mt
 source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
 source-wordcount: '102'
-ht-degree: 0%
+ht-degree: 61%
 
 ---
 
 
-# Experience Platformデータへのアクセス
+# Experience Platform データへのアクセス
 
-Adobe Experience Platformを使用すると、ユーザはData Access APIを使用して、取り込まれたデータセットを検出し、アクセスで [!DNL Experience Platform] きます。
+Adobe Experience Platform enables users to discover and access ingested datasets within [!DNL Experience Platform] using the Data Access API.
 
-## APIを使用したデータへのアクセス
+## API を使用したデータへのアクセス
 
-Adobe Experience PlatformのData Access APIを使用して、データセット内に保存されたデータの検索、アクセス、ダウンロードの方法、およびページングや部分的なダウンロードなどData Access APIの独自の機能について説明します。 使用を開始するには、「 [データアクセスAPI」チュートリアルに従ってください](../data-access/tutorials/dataset-data.md)。
+Adobe Experience Platform のデータアクセス API を使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする方法に加えて、ページングや部分的なダウンロードなど、データアクセス API のいくつかの固有の機能について説明します。使用を開始するには、[データアクセス API のチュートリアル](../data-access/tutorials/dataset-data.md)に従ってください。
 
 ## データセットの作成
 
-APIを使用してデータセットを作成し、データセットの作成のチュートリアルに記載されているファイルを使用してそのデータセットにデータセットを [!DNL Platform] 埋め込む手順を順を追って説明し [](../catalog/datasets/create.md)ます。
+Follow step-by-step instructions for creating a dataset using [!DNL Platform] APIs and populating that dataset using a file in the [create a dataset tutorial](../catalog/datasets/create.md).
