@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
 source-wordcount: '1138'
-ht-degree: 2%
+ht-degree: 47%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、 [入門ガイドを参照して](./getting-started.md) 、必要なヘッダーやAPI呼び出し例を読む方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 「はじめに」の節で説明されている必須ヘッダーに加えて、セグメント検索エンドポイントへのすべてのリクエストには、次の追加ヘッダーが必要です。
 
@@ -28,9 +28,9 @@ ht-degree: 2%
 
 ### 複数の名前空間に対する検索
 
-この検索エンドポイントは、様々な名前空間を対象に検索を行い、検索数の結果のリストを返すのに使用できます。 複数のパラメーターを使用でき、アンパサンド(&amp;)で区切ります。
+この検索エンドポイントは、様々な名前空間を対象に検索を行い、検索数の結果のリストを返すのに使用できます。 複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /search/namespaces?schema.name={SCHEMA}
@@ -39,8 +39,8 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必須）** {スキーマ}は、検索オブジェクトに関連付けられたスキーマクラス値を表します。 現在、のみがサポートさ `_xdm.context.segmentdefinition` れています。 |
-| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM}は、Microsoftによる [Luceneの検索構文の実装に準拠するクエリを表します](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 検索語句を指定しない場合、に関連付けられているすべてのレコード `schema.name` が返されます。 詳しくは、このドキュメントの [付録](#appendix) 「」を参照してください。 |
+| `schema.name={SCHEMA}` | **（必須）** {スキーマ}は、検索オブジェクトに関連付けられたスキーマクラス値を表します。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
+| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM}は、Microsoftによる [Luceneの検索構文の実装に準拠するクエリを表します](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)。 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 
 **リクエスト**
 
@@ -55,9 +55,9 @@ curl -X GET \
     -H 'x-ups-search-version: 1.0' 
 ```
 
-**応答**
+**応答** 
 
-応答が成功すると、HTTPステータス200が次の情報と共に返されます。
+正常な応答は、HTTP ステータス 200 と次の情報を返します。
 
 ```json
 {
@@ -87,9 +87,9 @@ curl -X GET \
 
 ### 個々のエンティティの検索
 
-この検索エンドポイントは、指定した名前空間内にあるすべてのフルテキストインデックス付きオブジェクトのリストを取得するために使用できます。 複数のパラメーターを使用でき、アンパサンド(&amp;)で区切ります。
+この検索エンドポイントは、指定した名前空間内にあるすべてのフルテキストインデックス付きオブジェクトのリストを取得するために使用できます。 複数のパラメーターを使用する場合は、アンパサンド（&amp;）で区切ります。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}
@@ -99,9 +99,9 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在、のみがサポートさ `_xdm.context.segmentdefinition` れています。 |
+| `schema.name={SCHEMA}` | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
 | `namespace={NAMESPACE}` | **（必須）** {名前空間}には、検索対象の名前空間が含まれています。 |
-| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM}には、Microsoftによる [Luceneの検索構文の実装に準拠するクエリが含まれています](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 検索語句を指定しない場合、に関連付けられているすべてのレコード `schema.name` が返されます。 詳しくは、このドキュメントの [付録](#appendix) 「」を参照してください。 |
+| `s={SEARCH_TERM}` | *（オプション）* {SEARCH_TERM}には、Microsoftによる [Luceneの検索構文の実装に準拠するクエリが含まれています](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)。 検索語句が指定されていない場合、`schema.name` に関連付けられているすべてのレコードが返されます。A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 | `entityId={ENTITY_ID}` | *（オプション）* {ENTITY_ID}で指定した指定フォルダー内での検索を制限します。 |
 | `limit={LIMIT}` | *（オプション）* {LIMIT}は、返す検索結果の数を表します。 デフォルト値は 50 です。 |
 | `page={PAGE}` | *（オプション）* {PAGE}は、検索したクエリのページ番号の結果を示すページ番号です。 ページ番号の開始は **0にあることに注意してください**。 |
@@ -120,7 +120,7 @@ curl -X GET \
     -H 'x-ups-search-version: 1.0' 
 ```
 
-**応答**
+**応答** 
 
 応答が成功すると、検索クエリに一致する結果のHTTPステータス200が返されます。
 
@@ -162,7 +162,7 @@ curl -X GET \
 
 この検索エンドポイントは、要求された検索オブジェクトに関する構造情報を取得するために使用できます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY_ID}
@@ -170,7 +170,7 @@ GET /search/taxonomy?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 
 | パラメーター | 説明 |
 | ---------- | ----------- | 
-| `schema.name={SCHEMA}` | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在、のみがサポートさ `_xdm.context.segmentdefinition` れています。 |
+| `schema.name={SCHEMA}` | **（必須）** {スキーマ}には、検索オブジェクトに関連付けられたスキーマクラス値が含まれます。 現在は、`_xdm.context.segmentdefinition` のみがサポートされています。 |
 | `namespace={NAMESPACE}` | **（必須）** {名前空間}には、検索対象の名前空間が含まれています。 |
 | `entityId={ENTITY_ID}` | **（必須）** {ENTITY_ID}で指定された、構造情報を取得する検索オブジェクトのID。 |
 
@@ -187,7 +187,7 @@ curl -X GET \
     -H 'x-ups-search-version: 1.0' 
 ```
 
-**応答**
+**応答** 
 
 応答が成功すると、HTTPステータス200が返され、要求された検索オブジェクトに関する詳細な構造情報が返されます。
 
@@ -225,7 +225,7 @@ curl -X GET \
 
 ## 付録 {#appendix}
 
-以下の節では、検索用語の仕組みについて詳しく説明します。 検索クエリは、次の方法で書き込まれます。 `s={FieldName}:{SearchExpression}`. したがって、AAMという名前のセグメントを検索する場合や、次の検索クエリ [!DNL Platform]を使用する場合などが考えられます。 `s=segmentName:AAM%20OR%20Platform`.
+以下の節では、検索用語の仕組みについて詳しく説明します。 検索クエリは、次の方法で書き込まれます。 `s={FieldName}:{SearchExpression}`. したがって、AAMやという名前のセグメントを検索するに [!DNL Platform]は、次の検索クエリを使用します。 `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] ベストプラクティスとして、上の例のように、検索式はHTMLエンコードする必要があります。
 
@@ -250,16 +250,16 @@ curl -X GET \
 
 | 検索式の例 | 説明 |
 | ------------------------- | ----------- |
-| ～を食べる | 任意の単語を検索します。 これは、検索可能なフィールドのいずれかで「foo」という単語が見つかった場合に結果を返します。 |
-| fooとbar | ブール検索。 「foo」と「bar」の **両方が検索可能なフィールドのいずれかで見つかった場合** 、結果が返されます。 |
-| foo OR bar | ブール検索。 「foo」という単語 **または** 「bar」という単語が検索可能なフィールドのいずれかに見つかった場合、結果が返されます。 |
-| foo NOTバー | ブール検索。 「foo」という単語が見つかったが、「bar」という単語が検索可能なフィールドのどれにも見つからない場合、結果が返されます。 |
-| name: fooとbar | ブール検索。 「foo」と「bar」 **の両方が** 「name」フィールドに見つかる場合、結果が返されます。 |
-| run* | ワイルドカード検索。 アスタリスク(*)を使用すると、0文字以上の任意の文字と一致します。つまり、検索可能なフィールドのコンテンツに「run」という開始を含む単語が含まれている場合、結果が返されます。 例えば、「runs」、「running」、「runner」または「runt」という語が表示された場合に結果が返されます。 |
-| カム？ | ワイルドカード検索。 疑問符(?)の使用 は1文字のみに一致します。つまり、「cam」と追加の文字を含む検索可能なフィールドの開始の内容がある場合、結果が返されます。 例えば、「camp」または「cams」という語が表示される場合は結果が返され、「camera」または「campfire」という語が表示される場合は結果が返されません。 |
-| &quot;blue abrasor&quot; | フレーズ検索。 検索可能なフィールドのコンテンツに「blue abrasor（青いかさ）」という完全なフレーズが含まれている場合、結果が返されます。 |
-| blue\～ | あいまい検索。 必要に応じて、チルダ(～)の後に0 ～ 2の数値を入力し、編集距離を指定できます。 例えば、「blue\～1」は、「blue」、「blues」または「glue」を返します。 あいまい検索 **は用語にのみ適用でき** 、語句には適用できません。 ただし、1つのフレーズ内の各単語の末尾にチルダを追加することはできます。 例えば、「camping\～ in\～ the\～ summer\～」は「camping in the summer」と一致します。 |
-| &quot;ホテルエアポート&quot;\\～5 | 近接検索。 このタイプの検索は、ドキュメント内でお互いに近い用語を検索するために使用されます。 例えば、このフレーズ `"hotel airport"~5` では、ドキュメント内の5語以内に「hotel」と「airport」という用語があります。 |
-| `/a[0-9]+b$/` | 正規式検索。 このタイプの検索では、RegExpクラスで説明されているように、スラッシュ「/」の間の内容に基づいて一致を見つけます。 例えば、「motel」または「hotel」を含むドキュメントを検索するには、を指定し `/[mh]otel/`ます。 正規式検索は、単一の単語に対して一致します。 |
+| foo | 任意の単語を検索します。検索可能なフィールドのいずれかで「foo」という単語が見つかった場合、結果が返されます。 |
+| foo AND bar | ブール値検索。検索可能なフィールドのいずれかで「foo」という単語と「bar」という単語の&#x200B;**両方**&#x200B;が見つかった場合、結果が返されます。 |
+| foo OR bar | ブール値検索。検索可能なフィールドのいずれかで「foo」という単語と「bar」という単語の&#x200B;**いずれか**&#x200B;が見つかった場合、結果が返されます。 |
+| foo NOT bar | ブール値検索。「foo」という単語が見つかり、「bar」という単語が検索可能なフィールドのいずれにも見つからない場合、結果が返されます。 |
+| name: foo AND bar | ブール値検索。「name」フィールドに「foo」と「bar」の&#x200B;**両方**&#x200B;が見つかった場合、結果が返されます。 |
+| run* | ワイルドカード検索。アスタリスク（*）の使用は、0 文字以上と一致します。つまり、検索可能なフィールドのコンテンツに「run」で開始する単語が含まれている場合、結果が返されます。例えば、「runs」、「running」、「runner」または「runt」という単語が表示された場合、結果が返されます。 |
+| cam? | ワイルドカード検索。疑問符（?）は 1 文字のみに一致します。つまり、検索可能なフィールドに、「cam」で開始し、追加の文字（1 文字）が含まれるコンテンツがある場合、結果が返されます。例えば、「camp」または「cams」という単語が表示される場合は結果を返し、「camera」または「campfire」という単語が表示される場合は結果を返しません。 |
+| 「blue umbrella」 | フレーズ検索。検索可能なフィールドのコンテンツに「blue umbrella」という完全なフレーズが含まれている場合、結果が返されます。 |
+| blue\~ | あいまい検索。必要に応じて、チルダ（～）の後に 0 ～ 2 の数値を入力し、編集距離を指定できます。例えば、「blue\～1」は、「blue」、「blues」または「glue」を返します。あいまい検索は用語に **のみ**&#x200B;適用でき、フレーズには適用されません。ただし、フレーズ内の各単語の末尾にチルダを追加することはできます。例えば、「camping\～ in\～ the\～ summer\～」は「camping in the summer」と一致します。 |
+| &quot;hotel airport&quot;\~5 | 近接検索。このタイプの検索は、ドキュメント内で互いに近接している単語を検索するために使用されます。例えば、フレーズ `"hotel airport"~5` では、ドキュメント内で互いに 5 語以内に近接する「hotel」と「airport」という単語を見つけます。 |
+| `/a[0-9]+b$/` | 正規表現検索。このタイプの検索では、RegExp クラスで説明されているように、スラッシュ「/」の間の内容に基づいて一致を見つけます。例えば、「motel」または「hotel」を含むドキュメントを検索するには、`/[mh]otel/` と指定します。正規表現検索は、単一の単語に対して照合されます。 |
 
-クエリ構文に関する詳細なドキュメントについては、 [Luceneクエリ構文ドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。
+クエリ構文に関する詳細なドキュメントについては、[Lucene クエリ構文のドキュメント](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)をお読みください。
