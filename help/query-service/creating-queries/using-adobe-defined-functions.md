@@ -7,23 +7,23 @@ translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '287'
-ht-degree: 6%
+ht-degree: 71%
 
 ---
 
 
 # アドビ定義関数の使用
 
-アドビの大きな差別化要因の1つは、エクスペリエンスデータを理解し、そのデータを使用して顧客が何を行う必要があるかを把握できることです。 この理解を活用して、ジョブを簡単にするヘルパー関数を作成できます。
+アドビの大きな差別化要因の 1 つは、エクスペリエンスデータについて、およびそのデータを使用して顧客が何をする必要があるかを把握しているということです。お客様はこの理解に基づいて、業務を容易におこなえるようヘルパー関数を作成できます。
 
-このドキュメントでは、3つの主要な [!DNL Analytics] アクティビティをサポートするAdobe定義関数(ADF)について説明します。
+This document covers Adobe-defined functions (ADFs) to support three key [!DNL Analytics] activities:
 - [セッション化](#sessionization)
-- [帰属](#attribution)
+- [アトリビューション](#attribution)
 - [パス](#pathing)
 
 ## セッション化
 
-は、アドビのAnalyticsで見つかった訪問のグループを再現し `SESS_TIMEOUT()` ます。 時間ベースのグループ化と同様の動作をしますが、パラメーターはカスタマイズ可能です。
+`SESS_TIMEOUT()` は、Adobe Analytics で見つかった訪問のグループ化を再現します。時間ベースのグループ化と同様の動作を実行しますが、パラメーターはカスタマイズ可能です。
 
 **構文：**
 
@@ -31,9 +31,9 @@ ht-degree: 6%
 
 **戻り値：**
 
-フィールドを持つ構造 `(timestamp_diff, num, is_new, depth)`
+フィールドを含む構造`(timestamp_diff, num, is_new, depth)`
 
-### 行レベル `SESS_TIMEOUT()` と出力の調査
+### 行レベルの `SESS_TIMEOUT()` と出力の参照
 
 ```sql
 SELECT analyticsVisitor,
@@ -56,7 +56,7 @@ LIMIT 100;
 
 ![画像](../images/queries/adobe-functions/sess-timeout.png)
 
-### 訪問者、セッションおよびページ表示を含む新しいトレンドレポートを作成します
+### 訪問者、セッションおよびページビューを使用して新しいトレンドレポートを作成する
 
 ```sql
 SELECT
@@ -85,19 +85,19 @@ LIMIT 31;
 
 ![画像](../images/queries/adobe-functions/trended-report.png)
 
-## 帰属
+## アトリビューション
 
-アトリビューションとは、売上高、注文、サインアップなどの指標やコンバージョンをマーケティング活動に割り当てる方法です。
+アトリビューションとは、売上高、注文、新規登録などの指標やコンバージョンをマーケティング活動に割り当てる方法です。
 
-アドビAnalyticsでは、アトリビューション設定はeVarなどの変数を使用して設定され、データが取り込まれると生成されます。
+Adobe Analytics では、アトリビューション設定は eVar などの変数を使用して設定され、データの取り込み時に生成されます。
 
-にあるアトリビューションADFは、クエリ時にこれらの割り当てを定義して生成するのを [!DNL Query Service] 許可します。
+The Attribution ADFs found in [!DNL Query Service] allow those allocations to be defined and generated at query time.
 
-この例では、ラストタッチアトリビューションに焦点を当てていますが、アドビではファーストタッチアトリビューションもオファーしています。
+この例では、ラストタッチアトリビューションに焦点を当てますが、アドビではファーストタッチオファーのアトリビューションも提供しています。
 
 >[!NOTE]
 >
->タイムアウトおよびイベントベースの有効期限が設定されたその他のオプションは、の今後のバージョンで利用できるようにな [!DNL Query Service]ります。
+>Other options with timeouts and event-based expiration will be available in future versions of [!DNL Query Service].
 
 **構文：**
 
@@ -105,9 +105,9 @@ LIMIT 31;
 
 **戻り値：**
 
-フィールド付き構造 `(value)`
+フィールドを含む構造`(value)`
 
-### 行レベルのアトリビューションの調査
+### 行レベルのアトリビューションの参照
 
 ```sql
 SELECT
@@ -126,7 +126,7 @@ LIMIT 50;
 
 ![画像](../images/queries/adobe-functions/row-level-attribution.png)
 
-### 最後のメンバーレベル別注文の分類の作成(eVar10)
+### 注文の内訳（最後のメンバーレベル別）を作成する（eVar10）
 
 ```sql
 SELECT
@@ -152,7 +152,7 @@ LIMIT 25;
 
 ## パス
 
-パスは、顧客がサイトをどのようにナビゲートしているかを理解するのに役立ちます。 これ `NEXT()` は、ADF `PREVIOUS()` とADFによって可能となる。
+パスは、顧客がサイトをどのように移動したかを理解するのに役立ちます。`NEXT()` および `PREVIOUS()` ADF を使用することでこれが可能となります。
 
 **構文：**
 
@@ -163,9 +163,9 @@ PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 
 **戻り値：**
 
-フィールド付き構造 `(value)`
+フィールドを含む構造`(value)`
 
-### 現在のページと次のページを選択
+### 現在のページと次のページを選択する
 
 ```sql
 SELECT 
@@ -184,7 +184,7 @@ LIMIT 10;
 
 ![画像](../images/queries/adobe-functions/select-current-page.png)
 
-### セッションの入口時に上位5ページの名前を示す内訳レポートを作成する
+### セッション開始時の上位 5 ページの名前に対する内訳レポートを作成する
 
 ```sql
   SELECT 
@@ -243,7 +243,7 @@ LIMIT 10;
 
 ## その他のリソース
 
-次のビデオでは、Adobe Experience PlatformインターフェイスとPSQLクライアントでクエリを実行する方法を示します。 また、このビデオでは、XDMオブジェクト内の個々のプロパティ、Adobe定義の関数、CREATE TABLE AS SELECT(CTAS)の使用に関する例も使用しています。
+次のビデオでは、Adobe Experience PlatformインターフェイスとPSQLクライアントでクエリを実行する方法を示します。 また、このビデオでは、XDMオブジェクト内の個々のプロパティ、Adobe定義関数の使用、CREATE TABLE AS SELECT(CTAS)の使用に関する例も使用しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
