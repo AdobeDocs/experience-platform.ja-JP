@@ -1,33 +1,33 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ETL変換の例
+title: ETL 変換の例
 topic: overview
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 1%
+ht-degree: 90%
 
 ---
 
 
-# ETL変換の例
+# ETL 変換の例
 
-この記事では、抽出、変換、読み込み(ETL)開発者が発生する可能性のある変換の例を示します。
+この記事では、抽出、変換、読み込み（ETL）の開発者が経験する可能性がある変換の例を示します。
 
-## 階層へのフラットなCSV
+## フラット CSV から階層への変換
 
 ### サンプルファイル
 
-サンプルのCSVファイルとJSONファイルは、アドビが管理するパブリックETLリファレンス [!DNL GitHub] レポートから入手できます。
+Sample CSV and JSON files are available from the public ETL Reference [!DNL GitHub] repo maintained by Adobe:
 
-- [CRM_プロファイル.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_プロファイル.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### CSV の例
 
-次のCRMデータは、 `CRM_profiles.csv`
+次の CRM データは、`CRM_profiles.csv` として書き出されました。
 
 ```shell
 TITLE   F_NAME  L_NAME  GENDER  DOB EMAIL   CRMID   ECID    LOYALTYID   ECID2   PHONE   STREET  CITY    STATE   COUNTRY ZIP LAT LONG
@@ -42,36 +42,36 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 ### マッピング
 
-CRMデータのマッピング要件について、次の表に示す変換について説明します。
-- プロパティへのID列 `identityMap`
-- 生年月日(DOB)から年月日
-- 文字列を重複または短い整数に変換します。
+次の表に、CRM データのマッピング要件を示します。この中には、次の変換が含まれています。
+- ID 列から `identityMap` プロパティへの変換
+- 生年月日（DOB）から年、月、日への変換
+- 文字列から double または短整数への変換
 
-| CSV列 | XDM Path | データの形式設定 |
+| CSV 列 | XDM パス | データの書式設定 |
 | ---------- | -------- | --------------- |
-| タイトル | person.name.courtesyTitle | 文字列としてコピー |
+| TITLE | person.name.courtesyTitle | 文字列としてコピー |
 | F_NAME | person.name.firstName | 文字列としてコピー |
 | L_NAME | person.name.lastName | 文字列としてコピー |
-| 性別 | person.gender | 性別を対応するperson.gender列挙値に変換 |
-| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | Transform birthDayAndMonth as<br/><br/>stringTransform birthDate as stringTransform birthYear as short int |
+| GENDER | person.gender | 対応する person.gender 列挙値として性別を変換 |
+| DOB | person.birthDayAndMonth: &quot;MM-DD&quot;<br/>person.birthDate: &quot;YYYY-MM-DD&quot;<br/>person.birthYear: YYYY | birthDayAndMonth を文字列として変換<br/>birthDate を文字列として変換<br/>birthYear を短整数として変換 |
 | EMAIL | personalEmail.address | 文字列としてコピー |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | identityMapのCRMID配列に文字列としてコピーし、プライマリをfalseに設定 |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | identityMapのECID配列の最初のエントリに文字列としてコピーし、プライマリをfalseに設定します。 |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | identityMapのLOYALTYID配列に文字列としてコピーし、プライマリをtrueに設定します。 |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMapのECID配列の2番目のエントリに文字列としてコピーし、プライマリをfalseに設定します。 |
-| 電話 | homePhone.number | 文字列としてコピー |
-| 通り | homeAddress.street1 | 文字列としてコピー |
-| 市区町村 | homeAddress.city | 文字列としてコピー |
+| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | identityMap の CRMID 配列に文字列としてコピー、Primary を false に設定 |
+| ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | identityMap の ECID 配列の最初のエントリに文字列としてコピー、Primary を false に設定 |
+| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | identityMap の LOYALTYID 配列に文字列としてコピー、Primary を true に設定 |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | identityMap の ECID 配列の 2 番目のエントリに文字列としてコピー、Primary を false に設定 |
+| PHONE | homePhone.number | 文字列としてコピー |
+| STREET | homeAddress.street1 | 文字列としてコピー |
+| CITY | homeAddress.city | 文字列としてコピー |
 | STATE | homeAddress.stateProvince | 文字列としてコピー |
-| 国 | homeAddress.country | 文字列としてコピー |
+| COUNTRY | homeAddress.country | 文字列としてコピー |
 | ZIP | homeAddress.postalCode | 文字列としてコピー |
-| LAT | homeAddress.latitude | 重複に変換 |
-| LONG | homeAddress.longitude | 重複に変換 |
+| LAT | homeAddress.latitude | double に変換 |
+| LONG | homeAddress.longitude | double に変換 |
 
 
-### Output XDM
+### 出力 XDM
 
-次の例は、に示すように、CSVの最初の2行をXDMに変換したもので `CRM_profiles.json`す。
+次のサンプルは、CSV の最初の 2 行を XDM に変換したものです（`CRM_profiles.json` を参照）。
 
 ```json
 {
@@ -171,13 +171,13 @@ CRMデータのマッピング要件について、次の表に示す変換に�
 }
 ```
 
-## XDMへのデータフレームスキーマ
+## データフレームの XDM スキーマへの変換
 
-データ・フレーム（Parketファイルなど）の階層は、アップロード先のXDMスキーマの階層と一致する必要があります。
+データフレームの階層（Parket ファイルなど）は、アップロード先の XDM スキーマの階層と一致している必要があります。
 
 ### データフレームの例
 
-次の例のデータフレームの構造は、 [!DNL XDM Individual Profile] クラスを実装するスキーマにマップされており、その型のスキーマに関連付けられた最も一般的なフィールドが含まれています。
+The structure of the following example dataframe has been mapped to a schema that implements the [!DNL XDM Individual Profile] class, and contains the most common fields associated with schemas of that type.
 
 ```python
 [
@@ -250,11 +250,11 @@ CRMデータのマッピング要件について、次の表に示す変換に�
 ]
 ```
 
-Adobe Experience Platformで使用するデータフレームを作成する場合、フィールドを正しくマップするためには、階層構造が既存のXDMスキーマの階層構造と完全に一致していることを確認することが重要です。
+Adobe Experience Platform で使用するデータフレームを作成する場合は、フィールドが正しくマップされるように、階層構造が既存の XDM スキーマと完全に一致するようにすることが重要です。
 
-## IDをIDマップに変換
+## ID の ID マップへの変換
 
-### IDの配列
+### ID の配列
 
 ```json
 [
@@ -281,17 +281,17 @@ Adobe Experience Platformで使用するデータフレームを作成する場�
 
 ### マッピング
 
-IDの配列に対するマッピング要件を次の表に示します。
+次の表に、ID の配列のマッピング要件を示します。
 
-| IDフィールド | identityMapフィールド | データタイプ |
+| ID フィールド | identityMap フィールド | データタイプ |
 | -------------- | ----------------- | --------- |
-| identitys[0].id | [identityMapEmail][{"id"}] | 文字列としてコピー |
-| identitys[1].id | [identityMapCRMID][{"id"}] | 文字列としてコピー |
-| identitys[2].id | [identityMapLOYALTYID][{"id"}] | 文字列としてコピー |
+| identities[0].id | identityMap[Email][{"id"}] | 文字列としてコピー |
+| identities[1].id | identityMap[CRMID][{"id"}] | 文字列としてコピー |
+| identities[2].id | identityMap[LOYALTYID][{"id"}] | 文字列としてコピー |
 
-### Output XDM
+### 出力 XDM
 
-以下はXDMに変換されたIDの配列です。
+以下に、XDM に変換された ID の配列を示します。
 
 ```JSON
 "identityMap": {
