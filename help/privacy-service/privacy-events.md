@@ -1,39 +1,39 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: プライバシーイベントの購読
+title: プライバシーイベントへの購読
 topic: privacy events
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '843'
-ht-degree: 1%
+ht-degree: 31%
 
 ---
 
 
 # 購読する [!DNL Privacy Events]
 
-[!DNL Privacy Events] は、Adobe Experience Platformが提供するメッセージ [!DNL Privacy Service]です。これは、設定されたwebフックに送信されるAdobe I/Oイベントを利用して、効率的なジョブリクエストの自動化を促進します。 ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために、 [!DNL Privacy Service] APIをポーリングする必要が少なくなるか、不要になります。
+[!DNL Privacy Events] は、Adobe Experience Platformが提供するメッセージ [!DNL Privacy Service]です。これは、設定されたwebフックに送信されるAdobeI/Oイベントを利用して、効率的なジョブリクエストの自動化を促進します。 They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
-現在、プライバシージョブリクエストのライフサイクルに関連する通知には、次の4種類があります。
+現在、プライバシージョブリクエストのライフサイクルに関連する通知には、次の 4 種類があります。
 
 | タイプ | 説明 |
 --- | ---
-| ジョブ完了 | すべての [!DNL Experience Cloud] ソリューションがレポートバックし、ジョブの全体的なステータスまたはグローバルステータスが完了とマークされました。 |
-| ジョブエラー | 1つ以上のソリューションが、要求の処理中にエラーを報告しました。 |
-| 製品完了 | このジョブに関連付けられている解決策の1つが、作業を完了しました。 |
-| 製品エラー | いずれかのソリューションで、要求の処理中にエラーが報告されました。 |
+| ジョブ完了 | All [!DNL Experience Cloud] solutions have reported back and the overall or global status of the job has been marked as complete. |
+| ジョブエラー | リクエストの処理中に 1 つ以上のソリューションがエラーを報告しました。 |
+| 製品完了 | このジョブに関連付けられているソリューションの 1 つが、その作業を完了しました。 |
+| 製品エラー | リクエストの処理中に 1 つ以上のソリューションがエラーを報告しました。 |
 
-このドキュメントでは、Adobe I/O内の [!DNL Privacy Service] 通知の統合を設定する手順を説明します。 とその機能の概要については、 [!DNL Privacy Service] Privacy Serviceの概要を参照してください [](home.md)。
+This document provides steps for setting up an integration for [!DNL Privacy Service] notifications within Adobe I/O. For a high-level overview of [!DNL Privacy Service] and its features, see the [Privacy Service overview](home.md).
 
 ## はじめに
 
-このチュートリアルでは、 **ngrok**、セキュリティで保護されたトンネルを通してローカルサーバをパブリックインターネットに公開するソフトウェア製品を使用します。 このチュートリアルを開始する前に [、ngrokを](https://ngrok.com/download) インストールして、ローカルマシンにWebフックを作成してください。 また、このガイドでは、シンプルな [Node.js](https://nodejs.org/) サーバーを含むGITリポジトリをダウンロードする必要があります。
+このチュートリアルでは、セキュアなトンネルを通じてローカルサーバーをパブリックインターネットに公開するソフトウェア製品、**ngrok** を使用します。このチュートリアルを始めてローカルマシンに Webhook を作成する前に、[ngrok をインストール](https://ngrok.com/download)してください。This guide also requires you to have a GIT repository downloaded that contains a simple [Node.js](https://nodejs.org/) server.
 
 ## ローカルサーバーの作成
 
-Node.jsサーバーは、リクエストによってルート( `challenge``/`)エンドポイントに送信されたパラメーターを返す必要があります。 これを行うには、次のJavaScriptを使用して `index.js` ファイルを設定します。
+Node.js サーバーは、リクエストによってルート（`/`）エンドポイントに送信された `challenge` パラメーターを返す必要があります。これをおこなうには、次の JavaScript を使用して `index.js` ファイルを設定します。
 
 ```js
 var express = require('express')
@@ -51,14 +51,14 @@ app.listen(app.get('port'), function() {
 })
 ```
 
-コマンドラインを使用して、Node.jsサーバーのルートディレクトリに移動します。 次に、次のコマンドを入力します。
+コマンドラインを使用して、Node.js サーバーのルートディレクトリに移動します。次に、以下のコマンドを入力します。
 
 1. `npm install`
 1. `npm start`
 
-これらのコマンドは、すべての依存関係をインストールし、サーバーを初期化します。 正常に終了した場合は、サーバーがhttp://localhost:3000/で実行されていることを確認できます。
+これらのコマンドは、すべての依存関係をインストールし、サーバーを初期化します。成功した場合、サーバーが http://localhost:3000/ で実行されていることを確認できます。
 
-## ngrookを使用してWebフックを作成する
+## Ngrok を使用した Webhook の作成
 
 新しいコマンドラインウィンドウを開き、以前にngrookをインストールしたディレクトリに移動します。 ここから、次のコマンドを入力します。
 
@@ -66,15 +66,15 @@ app.listen(app.get('port'), function() {
 ./ngrok http -bind-tls=true 3000
 ```
 
-成功した場合の出力結果は次のようになります。
+出力が成功すると、次のようになります。
 
-![ngrook出力](images/privacy-events/ngrok-output.png)
+![Ngrok 出力](images/privacy-events/ngrok-output.png)
 
-次の手順でWebフックを識別するために使用される `Forwarding` URL(`https://212d6cd2.ngrok.io`)を控えておいてください。
+次の手順で Webhook を識別するために使用される `Forwarding` URL（`https://212d6cd2.ngrok.io`）を控えておきます。
 
-## Adobe Developer Consoleでの新しいプロジェクトの作成
+## Adobeデベロッパーコンソールでの新しいプロジェクトの作成
 
-Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](https://www.adobe.com/go/devs_console_ui) 。 次に、Adobe Developer Consoleドキュメントで空のプロジェクトの [作成に関するチュートリアルに概要を説明している手順に従い](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ます。
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. 次に、Adobeデベロッパーコンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
 ## プロジェクトの追加プライバシーイベント
 
@@ -82,7 +82,7 @@ Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](htt
 
 ![](./images/privacy-events/add-event-button.png)
 
-[ _イベント_ ]ダイアログが表示されます。 「 **[!UICONTROL Experience Cloud]** 」を選択して使用可能なイベントタイプのリストを絞り込み、「 **[!UICONTROL Privacy Serviceイベント]** 」を選択してから「 **[!UICONTROL 次へ]**」をクリックします。
+The _Add events_ dialog appears. 「 **[!UICONTROL Experience Cloud]** 」を選択して使用可能なイベントタイプのリストを絞り込み、「 **[!UICONTROL Privacy Serviceイベント]** 」を選択してから「 **[!UICONTROL 次へ]**」をクリックします。
 
 ![](./images/privacy-events/add-privacy-events.png)
 
@@ -112,13 +112,13 @@ Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](htt
 
 プロジェクトの詳細ページが再表示され、左のナビゲーションの [!DNL Privacy Events] イベント __の下に表示されます。
 
-## 表示イベントデータ
+## イベントデータの表示
 
-プロジェクトに登録し、プライバシージョブ [!DNL Privacy Events] が処理されると、その登録に関して受信した通知を表示できます。 デベロッパーコンソールの **[!UICONTROL プロジェクト]** タブで、リストからプロジェクトを選択し、 _製品概要_ ページを開きます。 画面左側のナビゲーションから「 **[!UICONTROL プライバシーイベント]** 」を選択します。
+プロジェクトに登録し、プライバシージョブ [!DNL Privacy Events] が処理されると、その登録に関して受信した通知を表示できます。 デベロッパーコンソールの「 **[!UICONTROL プロジェクト]** 」タブで、リストからプロジェクトを選択し、 _製品概要_ ページを開きます。 画面左側のナビゲーションから「 **[!UICONTROL プライバシーイベント]** 」を選択します。
 
 ![](./images/privacy-events/events-left-nav.png)
 
-「 _登録の詳細_ 」タブが表示され、登録の詳細表示、設定の編集、Webフックのアクティブ化後に受け取った実際のイベントの表示を行うことができます。
+The _Registration Details_ tab appears, allowing you to view more information about the registration, edit its configuration, or view the actual events that were received since activating your webhook.
 
 ![](./images/privacy-events/registration-details.png)
 
@@ -126,8 +126,8 @@ Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](htt
 
 ![](images/privacy-events/debug-tracing.png)
 
-「 _[!UICONTROL Payload]_」セクションには、上の例で強調表示されているイベントタイプ(`com.adobe.platform.gdpr.productcomplete`)を含む、選択したイベントに関する詳細が表示されます。
+「_[!UICONTROL ペイロード]_」セクションには、上の例で強調表示されているイベントタイプ（`com.adobe.platform.gdpr.productcomplete`）を含む、選択したイベントの詳細が表示されます。
 
 ## 次の手順
 
-必要に応じて、異なるWebフックアドレスに対して新しい統合を追加する場合、上記の手順を繰り返すことができます。
+必要に応じて、異なる Webhook アドレスに対して新しい統合を追加する場合に、上記の手順を繰り返すことができます。
