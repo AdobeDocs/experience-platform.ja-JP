@@ -7,32 +7,32 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 1%
+ht-degree: 50%
 
 ---
 
 
 # 複数のオブジェクトの検索
 
-1つのオブジェクトにつき1つのリクエストを行うのではなく、複数の特定のオブジェクトを表示したい場合は、同じ種類の複数のオブジェクトをリクエストするためのシンプルなショートカットを [!DNL Catalog] 提供します。 IDのカンマ区切りリストを含めることで、1つのGETリクエストを使用して、複数の特定のオブジェクトを返すことができます。
+If you wish to view several specific objects, rather than making one request per object, [!DNL Catalog] provides a simple shortcut for requesting multiple objects of the same type. 1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
 
 >[!NOTE]
 >
->特定の [!DNL Catalog] オブジェクトをリクエストする場合でも、 `properties` クエリパラメーターは必要なプロパティのみを返すことをお勧めします。
+>Even when requesting specific [!DNL Catalog] objects, it is still best practice to `properties` query parameter to return only the properties you need.
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` |取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{ID}` |取得する特定のオブジェクトの識別子。 |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{ID}` | 取得するいずれかのオブジェクトの識別子。|
 
 **リクエスト**
 
-次のリクエストには、データセットIDのカンマ区切りリストと、各データセットに対して返されるプロパティのカンマ区切りリストが含まれます。
+次のリクエストには、データセット ID のコンマ区切りリストと、各データセットに対して返されるプロパティのコンマ区切りリストが含まれています。
 
 ```shell
 curl -X GET \
@@ -45,11 +45,11 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、指定されたデータセットのリストを返します。このデータセットには、それぞれに対して要求されたプロパティ(`name`、 `description`および `files`)のみが含まれます。
+リクエストが成功した場合、指定したデータセットのリストと、それぞれに対して要求したプロパティ（`name`、`description` および `files`）が返されます。
 
 >[!NOTE]
 >
->返されるオブジェクトに、 `properties` クエリが示す要求されたプロパティが1つ以上含まれていない場合は、次に示すように、要求されたプロパティのみが返され ***`Sample Dataset 3`*** ま ***`Sample Dataset 4`*** す。
+>If a returned object does not contain one ore more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in ***`Sample Dataset 3`*** and ***`Sample Dataset 4`*** below.
 
 ```json
 {
