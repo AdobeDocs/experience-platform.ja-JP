@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Mixinの作成
+title: Mixin の作成
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '303'
-ht-degree: 0%
+ht-degree: 92%
 
 ---
 
 
-# Mixinの作成
+# Mixin の作成
 
-ミックスインは、「アドレス」や「プロファイルの環境設定」など、特定の概念を説明するために使用される一連のフィールドです。 多数の標準ミックスインを利用できます。また、組織に固有の情報を取り込む場合に独自のミックスインを定義することもできます。 各ミックスインには、ミックスインが互換性を持つクラスをリストする `meta:intendedToExtend` フィールドが含まれます。
+mixin は、「住所」や「プロファイル環境設定」など、特定の概念を説明するために使用される一連のフィールドです。多数の標準 mixin を使用できます。また、組織に固有の情報を取得する場合、独自の mixin を定義することもできます。各 mixin には、mixin と互換性があるクラスをリストする `meta:intendedToExtend` フィールドが含まれています。
 
-使用可能なすべてのミックスインを確認し、各ミックスに含まれるフィールドの内容を理解しておくと役に立ちます。 「グローバル」と「テナント」の各コンテナに対してリクエストを実行し、使用しているクラスと「meta:intendedToExtend」フィールドが一致するミックスインのみを返すことで、特定のクラスと互換性のあるすべてのミックスインをリスト(GET)できます。 以下の例は、クラスで使用できるすべてのミックスインを返し [!DNL XDM Individual Profile] ます。
+使用可能なすべての mixin を確認し、各 mixin に含まれるフィールドについて理解しておくと役に立ちます。「グローバル」および「テナント」コンテナのそれぞれに対してリクエストを実行し、&quot;meta:intendedToExtend&quot; フィールドが（使用中の）クラスと一致する mixin のみを返すことにより、特定のクラスと互換性のあるすべての mixin をリスト（GET）できます。The examples below will return all mixins that can be used with the [!DNL XDM Individual Profile] class:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
-以下のAPIリクエストの例では、テナントコンテナに新しいmixinが作成されています。
+以下の例の API リクエストは、テナントコンテナに新しい mixin を作成します。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /tenant/mixins
@@ -33,7 +33,7 @@ POST /tenant/mixins
 
 **リクエスト**
 
-新しいミックスインを定義する場合、ミックスインと互換性のあるクラス `meta:intendedToExtend``$id` のリストを含む属性を含める必要があります。 この例では、ミックスインは、以前に定義したプロパティクラスと互換性があります。 クラススキーマーの他のミックスインまたはフィールドとの衝突を回避するために、カスタムフィールドは `_{TENANT_ID}` （例に示すように）の下にネストする必要があります。 この `propertyConstruction` フィールドは、前の呼び出しで作成されたデータ型への参照です。
+新しい mixin を定義する場合は、`meta:intendedToExtend` 属性を含めて、その mixin と互換性があるクラスの `$id` をリストする必要があります。この例では、 mixin は、以前に定義した Property クラスと互換性があります。クラススキーマの他の mixin やフィールドとの競合を避けるために、カスタムフィールドは `_{TENANT_ID}` の下にネストする必要があります（例で示されているように）。`propertyConstruction` フィールドは、前の呼び出しで作成されたデータ型への参照であることに注意してください。
 
 ```SHELL
 curl -X POST \
@@ -102,7 +102,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、HTTPステータス201（作成済み）と、新しく作成されたミックスインの詳細（、、など）を含むペイロードを返し `$id`ま `meta:altId`す `version`。 これらの値は読み取り専用で、によって割り当てられ [!DNL Schema Registry]ます。
+成功した応答は、HTTP ステータス 201 （Created）と、新しく作成された mixin の詳細（`$id`、`meta:altId`、`version` など）を含むペイロードを返します。These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -186,4 +186,4 @@ curl -X POST \
 }
 ```
 
-テナントコンテナ内のすべてのミックスインをリストするためのGET要求を実行すると、車両の詳細ミックスインが含まれるようになりました。または、URLエンコードされた `$id` URIを使用して参照(GET)要求を実行し、新しいミックスインを直接表示できます。 すべてのルックアップリクエスト `version` のAcceptヘッダーにを必ず含めてください。
+GET リクエストを実行して、テナントコンテナ内のすべての mixin をリストすると、Vehicle Details mixin が含まれます。または、URL エンコードされた `$id` URI を使用してルックアップ（GET）リクエストを実行して、新しい mixin を直接表示できます。すべてのルックアップリクエストの Accept ヘッダーに `version` を必ず含めてください。
