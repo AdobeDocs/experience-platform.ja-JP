@@ -1,35 +1,35 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics
 solution: Experience Platform
-title: SDK開発者ガイド
+title: SDK 開発者ガイド
 topic: Overview
 translation-type: tm+mt
 source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
 source-wordcount: '930'
-ht-degree: 1%
+ht-degree: 74%
 
 ---
 
 
-# SDK開発者ガイド
+# SDK 開発者ガイド
 
-モデルオーサリングSDKを使用すると、Data Science Workspaceで使用できるカスタムの機械学習レシピおよび機能パイプラインを開発し、およびで実装可能なテンプレートを提供でき [!DNL Adobe Experience Platform][!DNL PySpark][!DNL Spark (Scala)]ます。
+The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in [!DNL Adobe Experience Platform] Data Science Workspace, providing implementable templates in [!DNL PySpark] and [!DNL Spark (Scala)].
 
 このドキュメントは、モデルオーサリングSDK内の様々なクラスに関する情報を提供します。
 
 ## DataLoader {#dataloader}
 
-DataLoaderクラスは、生の入力データの取得、フィルタリング、返信に関連するすべての要素をカプセル化します。 入力データの例としては、トレーニング、スコアリング、機能エンジニアリングなどがあります。 データローダは抽象クラスを拡張し、抽象メソッド `DataLoader` をオーバーライドする必要があり `load`ます。
+DataLoader クラスは、生の入力データを取得、フィルタリング、返す操作に関連するすべてをカプセル化します。入力データの例としては、トレーニング、スコアリング、特徴エンジニアリングなどがあります。データローダーは `DataLoader` 抽象クラスを拡張し、`load` 抽象メソッドをオーバーライドする必要があります。
 
 **PySpark**
 
-次の表は、PySpark Data Loaderクラスの抽象メソッドを説明しています。
+次の表に、PySpark データローダークラスの抽象メソッドを示します。
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -37,13 +37,13 @@ DataLoaderクラスは、生の入力データの取得、フィルタリング�
         <tr>
             <td>
                 <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
-                <p>PlatformデータをPandas DataFrameとして読み込んで返す</p>
+                <p>Pandas DataFrame として Platform データを読み込み、返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">spark</code>: Sparkセッション</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
+                    <li><code class=" language-undefined">spark</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -52,12 +52,12 @@ DataLoaderクラスは、生の入力データの取得、フィルタリング�
 
 **Spark**
 
-次の表に、 [!DNL Spark] Data Loaderクラスの抽象メソッドを示します。
+The following table describes the abstract methods of a [!DNL Spark] Data Loader class:
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -65,21 +65,21 @@ DataLoaderクラスは、生の入力データの取得、フィルタリング�
         <tr>
             <td>
                 <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
-                <p>PlatformデータをDataFrameとして読み込んで返す</p>
+                <p>Platform データを DataFrame として読み込み、返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Sparkセッション</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
+                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-### データセットからのデータの読み込み [!DNL Platform] {#load-data-from-a-platform-dataset}
+### Load data from a [!DNL Platform] dataset {#load-data-from-a-platform-dataset}
 
-次の例では、IDで [!DNL Platform] データを取得し、DataFrameを返します。この場合、データセットID(`datasetId`)は設定ファイル内で定義されたプロパティです。
+The following example retrieves [!DNL Platform] data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
 
 **PySpark**
 
@@ -194,16 +194,16 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-DataSaverクラスは、スコアリングや機能エンジニアリングの出力データなど、出力データの保存に関連するものをカプセル化します。 データ保存機能は抽象クラスを拡張し、抽象メソッド `DataSaver` をオーバーライドする必要があり `save`ます。
+DataSaver クラスは、スコアリングや特徴エンジニアリングの出力データなど、出力データの格納に関連するものをカプセル化します。データセーバーは `DataSaver` 抽象クラスを拡張し、`save` 抽象メソッドを上書きする必要があります。
 
 **PySpark**
 
-次の表に、 [!DNL PySpark] Data Saverクラスの抽象メソッドを示します。
+The following table describes the abstract methods of a [!DNL PySpark] Data Saver class:
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -211,13 +211,13 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
         <tr>
             <td>
                 <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
-                <p>出力データをDataFrameとして受け取り、Platformデータセットに格納する</p>
+                <p>出力データを DataFrame として受け取り、Platform データセットに保存します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">dataframe</code>: DataFrameの形式で保存するデータ</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
+                    <li><code class=" language-undefined">dataframe</code>：DataFrame の形式で保存するデータ</li>
                 </ul>
             </td>
         </tr>
@@ -226,12 +226,12 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
 
 **Spark (Scala)**
 
-次の表に、 [!DNL Spark] Data Saverクラスの抽象メソッドを示します。
+The following table describes the abstract methods of a [!DNL Spark] Data Saver class:
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -239,26 +239,26 @@ DataSaverクラスは、スコアリングや機能エンジニアリングの�
         <tr>
             <td>
                 <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
-                <p>出力データをDataFrameとして受け取り、Platformデータセットに格納する</p>
+                <p>出力データを DataFrame として受け取り、Platform データセットに保存します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">dataFrame</code>: DataFrameの形式で保存するデータ</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
+                    <li><code class=" language-undefined">dataFrame</code>：DataFrame の形式で保存するデータ</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-### データセットへのデータの [!DNL Platform] 保存 {#save-data-to-a-platform-dataset}
+### Save data to a [!DNL Platform] dataset {#save-data-to-a-platform-dataset}
 
-データセットにデータを格納するには、次のように設定ファイルでプロパティを指定するか、定義する必要があり [!DNL Platform] ます。
+In order to store data onto a [!DNL Platform] dataset, the properties must be either provided or defined in the configuration file:
 
-- データの格納先となる有効な [!DNL Platform] データセットID
-- 組織に属するテナントID
+- A valid [!DNL Platform] dataset ID to which data will be stored
+- 組織に属するテナント ID
 
-次の例では、データ(`prediction`)をデータセットに格納します。データセットID( [!DNL Platform] )とテナントID(`datasetId``tenantId`)は、設定ファイル内で定義されたプロパティです。
+次の例では、データ（`prediction`[!DNL Platform]）を データセットに格納します。データセット ID（`datasetId`）とテナント ID（`tenantId`）は、設定ファイル内で定義されたプロパティです。
 
 
 **PySpark**
@@ -394,18 +394,18 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-DatasetTransformerクラスは、データセットの構造を変更および変換します。 は、このコンポーネント [!DNL Sensei Machine Learning Runtime] を定義する必要はなく、要件に基づいて実装されます。
+DatasetTransformer クラスは、データセットの構造を変更および変換します。The [!DNL Sensei Machine Learning Runtime] does not require this component to be defined, and is implemented based on your requirements.
 
-フィーチャパイプラインに関しては、データセット変圧器をフィーチャパイプラインファクトリと共に使用して、フィーチャエンジニアリング用のデータを準備できます。
+特徴パイプラインに関しては、データセットトランスフォーマーを特徴パイプラインファクトリと協力して使用し、特徴エンジニアリングのためのデータを準備できます。
 
 **PySpark**
 
-次の表に、PySparkデータセットトランスフォームクラスのクラスメソッドを示します。
+次の表に、PySpark データセットトランスフォーマークラスのクラスメソッドを示します。
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -417,9 +417,9 @@ DatasetTransformerクラスは、データセットの構造を変更および�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">dataset</code>: 変換用の入力データセット</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
+                    <li><code class=" language-undefined">dataset</code>：変換される入力データセット</li>
                 </ul>
             </td>
         </tr>
@@ -428,12 +428,12 @@ DatasetTransformerクラスは、データセットの構造を変更および�
 
 **Spark (Scala)**
 
-次の表に、 [!DNL Spark] dataset transformerクラスの抽象メソッドを示します。
+The following table describes the abstract methods of a [!DNL Spark] dataset transformer class:
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -445,8 +445,8 @@ DatasetTransformerクラスは、データセットの構造を変更および�
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">dataset</code>: 変換用の入力データセット</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
+                    <li><code class=" language-undefined">dataset</code>：変換される入力データセット</li>
                 </ul>
             </td>
         </tr>
@@ -455,16 +455,16 @@ DatasetTransformerクラスは、データセットの構造を変更および�
 
 ## FeaturePipelineFactory {#featurepipelinefactory}
 
-FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズムが含まれており、フィーチャパイプラインのステージを開始から終了まで定義します。
+FeaturePipelineFactory クラスには、特徴抽出アルゴリズムが含まれ、特徴パイプラインのステージを開始から終了まで定義します。
 
 **PySpark**
 
-次の表に、PySpark FeaturePipelineFactoryのクラスメソッドを示します。
+次の表に、PySpark FeaturePipelineFactory のクラスメソッドを示します。
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -472,25 +472,25 @@ FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズム�
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">create_pipeline(self, configProperties)</code></p>
-                <p>一連のSpark変圧器を含むSparkパイプラインを作成して返す</p>
+                <p>一連の Spark トランスフォーマーを含む Spark パイプラインを作成して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティのマップ</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>設定プロパティからパラメーターマップを取得して返す</p>
+                <p>設定プロパティからパラメーターマップを取得して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Sparkセッション</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -499,12 +499,12 @@ FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズム�
 
 **Spark (Scala)**
 
-次の表に、FeaturePipelineFactoryのクラスメソッドを示し [!DNL Spark] ます。
+The following table describes the class methods of a [!DNL Spark] FeaturePipelineFactory:
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -512,23 +512,23 @@ FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズム�
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">createPipeline(configProperties)</code></p>
-                <p>一連の変圧器を含むパイプラインを作成して返す</p>
+                <p>一連のトランスフォーマーを含むパイプラインを作成して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティのマップ</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
-                <p>設定プロパティからパラメーターマップを取得して返す</p>
+                <p>設定プロパティからパラメーターマップを取得して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Sparkセッション</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -537,16 +537,16 @@ FeaturePipelineFactoryクラスには、フィーチャ抽出アルゴリズム�
 
 ## PipelineFactory {#pipelinefactory}
 
-PipelineFactoryクラスには、モデルトレーニングとスコアリングのメソッドと定義がカプセル化されています。この場合、トレーニングロジックとアルゴリズムは [!DNL Spark] パイプラインの形式で定義されます。
+The PipelineFactory class encapsulates methods and definitions for model training and scoring, where training logic and algorithms are defined in the form of a [!DNL Spark] Pipeline.
 
 **PySpark**
 
-次の表に、PySpark PipelineFactoryのクラスメソッドを示します。
+次の表に、PySpark PipelineFactory のクラスメソッドを示します。
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -554,52 +554,52 @@ PipelineFactoryクラスには、モデルトレーニングとスコアリン�
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">apply(self, configProperties)</code></p>
-                <p>モデルトレーニングとスコアリングのロジックとアルゴリズムを含むSparkパイプラインの作成と返却</p>
+                <p>モデルのトレーニングとスコアリングのロジックとアルゴリズムを含む Spark パイプラインを作成して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">train(self, configProperties, dataframe)</code></p>
-                <p>モデルをトレーニングするロジックとアルゴリズムを含むカスタムパイプラインを返します。 Sparkパイプラインを使用する場合は、このメソッドは不要です</p>
+                <p>モデルをトレーニングするロジックとアルゴリズムを含むカスタムパイプラインを返します。Spark パイプラインを使用する場合、このメソッドは不要です。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
-                    <li><code class=" language-undefined">dataframe</code>: トレーニング入力用の機能データセット</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code class=" language-undefined">dataframe</code>：トレーニング入力の特徴データセット</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">score(self, configProperties, dataframe, model)</code></p>
-                <p>トレーニングを受けたモデルを使用したスコア付けと結果の返却</p>
+                <p>訓練済みモデルを使用してスコアを付け、結果を返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
-                    <li><code class=" language-undefined">dataframe</code>: スコアリング用の入力データセット</li>
-                    <li><code class=" language-undefined">model</code>: スコアリングに使用されるトレーニングを受けたモデル</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code class=" language-undefined">dataframe</code>：スコアリング用の入力データセット</li>
+                    <li><code class=" language-undefined">model</code>：スコアリングに使用される訓練済みモデル</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>設定プロパティからパラメーターマップを取得して返す</p>
+                <p>設定プロパティからパラメーターマップを取得して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Sparkセッション</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -608,12 +608,12 @@ PipelineFactoryクラスには、モデルトレーニングとスコアリン�
 
 **Spark (Scala)**
 
-次の表に、PipelineFactoryのクラスメソッドを示し [!DNL Spark] ます。
+The following table describes the class methods of a [!DNL Spark] PipelineFactory:
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -621,23 +621,23 @@ PipelineFactoryクラスには、モデルトレーニングとスコアリン�
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">apply(configProperties)</code></p>
-                <p>モデルトレーニングとスコアリングのロジックとアルゴリズムを含むパイプラインの作成と返却</p>
+                <p>モデルのトレーニングとスコアリングのロジックとアルゴリズムを含むパイプラインを作成して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
-                <p>設定プロパティからパラメーターマップを取得して返す</p>
+                <p>設定プロパティからパラメーターマップを取得して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Sparkセッション</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -646,16 +646,16 @@ PipelineFactoryクラスには、モデルトレーニングとスコアリン�
 
 ## MLEvaluator {#mlevaluator}
 
-MLEvaluatorクラスは、評価指標を定義し、トレーニングおよびテストデータセットを決定するメソッドを提供します。
+MLEvaluator クラスは、評価指標を定義するメソッドと、トレーニングとテストデータセットを決定するためのメソッドを提供します。
 
 **PySpark**
 
-次の表は、PySpark MLEvaluatorのクラスメソッドを説明しています。
+次の表に、PySpark MLEvaluator のクラスメソッドを示します。
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -667,23 +667,23 @@ MLEvaluatorクラスは、評価指標を定義し、トレーニングおよび
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
-                    <li><code class=" language-undefined">dataframe</code>: 分割する入力データセット</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code class=" language-undefined">dataframe</code>：分割する入力データセット</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">evaluate(self, dataframe, model, configProperties)</code></p>
-                <p>トレーニングを受けたモデルを評価し、評価結果を返す</p>
+                <p>訓練済みモデルを評価し、評価結果を返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: 自己参照</li>
-                    <li><code class=" language-undefined">dataframe</code>: トレーニングデータとテストデータから成るDataFrame</li>
-                    <li><code class=" language-undefined">model</code>: 訓練を受けたモデル</li>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
+                    <li><code class=" language-undefined">self</code>：自己参照</li>
+                    <li><code class=" language-undefined">dataframe</code>:トレーニングデータとテストデータから成る DataFrame</li>
+                    <li><code class=" language-undefined">model</code>：訓練済みモデル</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
                 </ul>
             </td>
         </tr>
@@ -692,12 +692,12 @@ MLEvaluatorクラスは、評価指標を定義し、トレーニングおよび
 
 **Spark (Scala)**
 
-次の表に、 [!DNL Spark] MLEvaluatorのクラスメソッドを示します。
+The following table describes the class methods of a [!DNL Spark] MLEvaluator:
 
 <table>
     <thead>
         <tr>
-            <th>方法と説明</th>
+            <th>メソッドと説明</th>
             <th>パラメーター</th>
         </tr>
     </thead>
@@ -709,21 +709,21 @@ MLEvaluatorクラスは、評価指標を定義し、トレーニングおよび
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
-                    <li><code class=" language-undefined">data</code>: 分割する入力データセット</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code class=" language-undefined">data</code>：分割する入力データセット</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstract</i><br/><code class=" language-undefined">evaluate(configProperties, model, data)</code></p>
-                <p>トレーニングを受けたモデルを評価し、評価結果を返す</p>
+                <p>訓練済みモデルを評価し、評価結果を返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: 設定プロパティ</li>
-                    <li><code class=" language-undefined">model</code>: 訓練を受けたモデル</li>
-                    <li><code class=" language-undefined">data</code>: トレーニングデータとテストデータから成るDataFrame</li>
+                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code class=" language-undefined">model</code>：訓練済みモデル</li>
+                    <li><code class=" language-undefined">data</code>:トレーニングデータとテストデータから成る DataFrame</li>
                 </ul>
             </td>
         </tr>
