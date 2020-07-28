@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
 source-wordcount: '1226'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -18,12 +18,12 @@ ht-degree: 1%
 
 ## はじめに
 
-このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+* [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 また、このチュートリアルでは、クラウドストレージコネクタを既に作成済みである必要があります。 UIで異なるクラウドストレージコネクタを作成するためのチュートリアルのリストは、 [ソースコネクタの概要](../../../../home.md)。
 
@@ -60,13 +60,13 @@ ht-degree: 1%
 
 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
-**既存のデータセットの使用**
+**既存のデータセットを使用する**
 
 既存のデータセットにデータを取り込むには、「 **[!UICONTROL Use existing dataset]**」を選択し、データセットアイコンをクリックします。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-existing-data.png)
 
-[ _データセットの選択_ ]ダイアログが表示されます。 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
+The _Select dataset_ dialog appears. 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-existing-data.png)
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-schema.png)
 
-[ _スキーマの_ 選択]ダイアログが表示されます。 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
+The _Select schema_ dialog appears. 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
@@ -132,7 +132,7 @@ ht-degree: 1%
 このチュートリアルに従うと、外部のクラウドストレージからデータを取り込むためのデータフローが正しく作成され、データセットの監視に関する洞察が得られます。 データフローの作成について詳しくは、以下のビデオを参照して学習を補うことができます。 また、入力データは、やなどの下流の [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../../profile/home.md)
-* [Data Science Workspaceの概要](../../../../../data-science-workspace/home.md)
+* [Data Science ワークスペースの概要](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
