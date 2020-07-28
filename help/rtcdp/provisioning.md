@@ -28,4 +28,4 @@ ht-degree: 100%
 
 >[!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-何かをおこなうには、編集／[!UICONTROL 処理ルール]を選択します。  [!DNL Microsoft Visual Code].を使用します。
+何かをおこなうには、編集／[!UICONTROL 処理ルール]を選択します。[!DNL Microsoft Visual Code].を使用します。
