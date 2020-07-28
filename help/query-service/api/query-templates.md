@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: クエリサービス開発ガイド
+title: クエリサービス開発者ガイド
 topic: query templates
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '639'
-ht-degree: 3%
+ht-degree: 94%
 
 ---
 
 
 # クエリテンプレート
 
-## サンプルAPI呼び出し
+## API 呼び出しの例
 
-これで、使用するヘッダーが分かったので、 [!DNL Query Service] APIの呼び出しを開始する準備が整いました。 以下の節では、 [!DNL Query Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### クエリテンプレートのリストの取得
 
-エンドポイントにGETリクエストを行うと、IMS組織のすべてのクエリテンプレートのリストを取得でき `/query-templates` ます。
+`/query-templates` エンドポイントに GET リクエストを実行することで、IMS 組織のすべてのクエリテンプレートのリストを取得できます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /query-templates
@@ -31,22 +31,22 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*オプション*)リクエストパスに追加されるパラメーター。応答で返される結果を設定します。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。 使用可能なパラメーターを以下に示します。 |
+| `{QUERY_PARAMETERS}` | （*オプション*）リクエストパスに追加されるパラメーター。このリクエストパスは応答で返される結果を設定します。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。使用できるパラメーターは以下のとおりです。 |
 
 **クエリパラメーター**
 
-次に、クエリテンプレートのリストを表示する際に使用できるクエリパラメータのリストを示します。 これらのパラメーターはすべてオプションです。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべてのクエリテンプレートが取得されます。
+次に、クエリテンプレートを一覧表示するために使用可能なクエリパラメータ－のリストを示します。これらのパラメーターはすべてオプションです。パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべてのクエリテンプレートが取得されます。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `orderby` | 結果の並べ替えに使用するフィールドを指定します。 サポートされているフィールドは `created` とで `updated`す。 例えば、 `orderby=created` は、作成された結果を昇順で並べ替えます。 作成 `-` 前(`orderby=-created`)を追加すると、作成されたアイテムを降順で並べ替えます。 |
-| `limit` | ページに含める結果の数を制御するためのページサイズ制限を指定します。 (*Default value: 20*) |
-| `start` | 0から始まる番号を使用して、応答のリストをオフセットします。 例えば、3番目 `start=2` にリストされたクエリから開始するリストが返されます。 (*Default value: 0*) |
-| `property` | フィールドに基づいて結果をフィルターします。 フィルター **は** 、HTMLエスケープする必要があります。 複数のフィルターセットを組み合わせる場合は、コンマを使用します。 サポートされているフィールドは `name` とで `userId`す。 サポートされている演算子は `==` （等しい）だけです。 例えば、 `name==my_template` は、名前が付いたすべてのクエリテンプレートを返し `my_template`ます。 |
+| `orderby` | 結果の並べ替えに使用するフィールドを指定します。サポートされているフィールドは `created` と `updated` です。例えば、`orderby=created` は、昇順で結果を並べ替えます。作成前に `-` を追加する（`orderby=-created`）と、項目が作成日の降順で並べ替えられます。 |
+| `limit` | ページサイズの制限を指定して、ページに含める結果の数を制御します。（*デフォルト値：20*） |
+| `start` | ゼロベースのナンバリングを使用して、応答リストをオフセットします。例えば、`start=2` は、3 番目のクエリから開始するリストを返します。（*デフォルト値：0*） |
+| `property` | フィールドに基づいて結果をフィルタリングします。フィルターは HTML エスケープする&#x200B;**必要があります**。複数のコンマを使用して、複数のフィルターを組み合わせます。サポートされているフィールドは `name` と `userId` です。サポートされている演算子は `==`（等しい）だけです。例えば、`name==my_template` は、`my_template` という名前を持つすべてのクエリテンプレートを返します。 |
 
 **リクエスト**
 
-次のリクエストは、IMS組織用に作成された最新のクエリテンプレートを取得します。
+次のリクエストは、IMS 組織用に作成された最新のクエリテンプレートを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **応答**
 
-成功した応答は、指定したIMS組織のクエリテンプレートのリストを含むHTTPステータス200を返します。 次の応答は、IMS組織用に作成された最新のクエリテンプレートを返します。
+正常な応答は、HTTP ステータス 200 と指定された IMS 組織のクエリテンプレートのリストを返します。次の応答は、IMS 組織用に作成された最新のクエリテンプレートを返します。
 
 ```json
 {
@@ -107,13 +107,13 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 >[!NOTE]
 >
->の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
+>`_links.delete` の値を使用して、[テンプレートを削除](#delete-a-specified-query-template)できます。
 
 ### クエリテンプレートの作成
 
-エンドポイントにPOSTリクエストを作成して、クエリテンプレートを作成でき `/query-templates` ます。
+`/query-templates` エンドポイントに POST リクエストを実行することで、クエリテンプレートを作成できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /query-templates
@@ -135,12 +135,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `sql` | 作成するSQLクエリ。 |
-| `name` | クエリテンプレートの名前。 |
+| `sql` | 作成する SQL クエリ。 |
+| `name` | テンプレートのクエリ名。 |
 
 **応答**
 
-正常に応答すると、新しく作成したクエリテンプレートの詳細と共に、HTTPステータス202（受け入れ済み）が返されます。
+正常な応答は、HTTP ステータス 202（受け入れ済み）と、新しく作成されたクエリテンプレートの詳細を返します。
 
 ```json
 {
@@ -170,13 +170,13 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 >[!NOTE]
 >
->の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
+>`_links.delete` の値を使用して、[テンプレートを削除](#delete-a-specified-query-template)できます。
 
-### 指定したクエリテンプレートの取得
+### 指定されたクエリテンプレートの取得
 
-特定のクエリテンプレートを取得するには、エンドポイントにGETリクエストを送信し、リクエストパスにクエリテンプレートのIDを指定し `/query-templates/{TEMPLATE_ID}` ます。
+`/query-templates/{TEMPLATE_ID}` エンドポイントに GET リクエストを実行して、リクエストパスにクエリテンプレートの ID を指定することで、特定のクエリテンプレートを取得できます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /query-templates/{TEMPLATE_ID}
@@ -198,7 +198,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 **応答**
 
-正常に応答すると、指定したクエリテンプレートの詳細と共にHTTPステータス200が返されます。
+正常な応答は、HTTP ステータス 200 と指定されたクエリテンプレートの詳細を返します。
 
 ```json
 {
@@ -228,13 +228,13 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
+>`_links.delete` の値を使用して、[テンプレートを削除](#delete-a-specified-query-template)できます。
 
-### 指定したクエリテンプレートの更新
+### 指定されたクエリテンプレートの更新
 
-エンドポイントにPUT要求を行い、要求パスにクエリテンプレートのIDを指定することで、特定のクエリテンプレートを更新でき `/query-templates/{TEMPLATE_ID}` ます。
+`/query-templates/{TEMPLATE_ID}` エンドポイントに PUT リクエストを実行して、リクエストパスにクエリテンプレートの ID を指定することで、特定のクエリテンプレートを更新できます。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /query-templates/{TEMPLATE_ID}
@@ -248,7 +248,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->PUT要求では、sqlとnameの両方のフィールドに値を入力する必要があり、そのクエリテンプレートの現在の内容が **上書きされます** 。
+> PUT リクエストでは、sql と name の両方のフィールドに入力する必要があり、そのクエリテンプレートの現在の内容が&#x200B;**上書き**&#x200B;されます。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -264,12 +264,12 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `sql` | 更新するSQLクエリ。 |
+| `sql` | 更新する SQL クエリ。 |
 | `name` | スケジュールされたクエリの名前。 |
 
 **応答**
 
-正常に応答すると、指定したクエリテンプレートに対して更新された情報と共に、HTTPステータス202（受け入れ済み）が返されます。
+正常な応答は、HTTP ステータス 202（受け入れ済み）と、指定されたクエリテンプレートの更新された情報を返します。
 
 ```json
 {
@@ -300,13 +300,13 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 >[!NOTE]
 >
->の値を使用して、クエリテンプレート `_links.delete` を [削除できます](#delete-a-specified-query-template)。
+>`_links.delete` の値を使用して、[テンプレートを削除](#delete-a-specified-query-template)できます。
 
-### 指定したクエリテンプレートの削除
+### 指定されたクエリテンプレートの削除
 
-特定のクエリテンプレートを削除するには、にDELETEリクエストを送信し、そのクエリテンプレートのIDをリクエストパス `/query-templates/{TEMPLATE_ID}` に指定します。
+`/query-templates/{TEMPLATE_ID}` に DELETE リクエストを実行して、リクエストパスにクエリテンプレートの ID を指定することで、特定のクエリテンプレートを削除できます。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /query-templates/{TEMPLATE_ID}
@@ -328,7 +328,7 @@ curl -X DELETE https://platform.adobe.io/data/foundation/query/query-templates/0
 
 **応答**
 
-応答が成功すると、次のメッセージと共にHTTPステータス202（受け入れ済み）が返されます。
+成功応答は、HTTP ステータス 202（許可済み）とともに次のメッセージを返します。
 
 ```json
 {
