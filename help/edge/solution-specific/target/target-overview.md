@@ -61,7 +61,7 @@ alloy
 
 ## フォームベースのコンポーザーの使用
 
-フォームベースのExperience Composerは、JSON、HTML、画像などの応答タイプごとに異なるA/Bテスト、 [!DNL Experience Targeting]自動パーソナライゼーション、Recommendationsの各アクティビティを設定するのに役立つ、非視覚的なインターフェイスです。 Adobe Targetが返す応答のタイプや決定に応じて、コアビジネスロジックを実行できます。 フォームベースのComposerアクティビティの判断を取得するには、決定を取得するすべての「decisionScopes」と共にイベントを送信します。
+フォームベースのExperience Composerは、JSON、HTML、画像など、様々な応答タイプを持つA/Bテスト、 [!DNL Experience Targeting]Automated Personalization、Recommendationsのアクティビティを設定するのに役立つ、非視覚的なインターフェイスです。 Adobe Targetが返す応答のタイプや決定に応じて、コアビジネスロジックを実行できます。 フォームベースのComposerアクティビティの判断を取得するには、決定を取得するすべての「decisionScopes」と共にイベントを送信します。
 
 ```javascript
 alloy
@@ -118,7 +118,7 @@ Targetアクティビティに、カスタムパラメーターまたはユー�
 * ターゲットライブラリ
 * 地域
 * ネットワーク
-* Operating System
+* オペレーティングシステム
 * サイトのページ
 * Browser
 * トラフィックソース
