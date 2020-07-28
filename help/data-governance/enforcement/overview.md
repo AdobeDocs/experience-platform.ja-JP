@@ -7,22 +7,22 @@ translation-type: tm+mt
 source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
 source-wordcount: '201'
-ht-degree: 0%
+ht-degree: 21%
 
 ---
 
 
 # ポリシー適用の概要
 
-データ使用ラベルがデータ [!DNL Platform] セットに適用され、これらのラベルに対するマーケティングアクションに対してデータ使用ポリシーが定義されると、 [!DNL Data Governance] 機能により、これらのポリシーを適用し、ポリシー違反を構成するデータ操作を防ぐことができます。
+Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, [!DNL Data Governance] capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
 ポリシーの適用には、次の2つの方法があります。この2つの方法は、 [!DNL Data Governance] 機能によって提供され [!DNL Platform]ます。 **APIベースの強制** と **自動強制**。
 
 ## APIベースの強制
 
-この [!DNL Policy Service] APIは、ポリシー違反が発生したかどうかを確認するために、データセットやデータ使用ラベルの任意の組み合わせに対するマーケティングアクションをテストできるエンドポイントを提供します。 API応答に基づいて、エクスペリエンスアプリケーション内でプロトコルを設定し、データ使用ポリシーのコンプライアンスを適切に実施できます。
+The [!DNL Policy Service] API provides endpoints that allow you to test marketing actions against datasets or arbitrary combinations of data usage labels in order to check if any policy violations occur. その後、API 応答に基づいて、エクスペリエンスアプリケーション内でプロトコルを設定し、データ使用ポリシーのコンプライアンスを適切に実施できます。
 
-APIを使用してポリシーを評価する手順については、 [ポリシーの適用に関するチュートリアルを参照してください](api-enforcement.md) 。
+API を使用してポリシーを評価する手順については、[ポリシーの適用](api-enforcement.md)に関するチュートリアルを参照してください。
 
 ## 自動強制
 
