@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: リアルタイムのお客様プロファイルトラブルシューティングガイド
+title: リアルタイム顧客プロファイルトラブルシューティングガイド
 topic: guide
 translation-type: tm+mt
 source-git-commit: 94fd6ee324b35acb7ef1185f7851d76d76f3e91c
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
 
-# リアルタイムのお客様プロファイルトラブルシューティングガイド
+# リアルタイム顧客プロファイルトラブルシューティングガイド
 
-このドキュメントでは、リアルタイム顧客プロファイルに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。 Adobe Experience Platform中の他のサービスに関する質問とトラブルシューティングについては、 [Experience Platformトラブルシューティングガイドを参照してください](../landing/troubleshooting.md)。
+このドキュメントでは、リアルタイム顧客プロファイルに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。 Adobe Experience Platform の他のサービスに関する質問やトラブルシューティングについては、[Experience Platform のトラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
-リアルタイム顧客プロファイルは、様々な企業データアセットからのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形式でそのデータへのアクセスを提供する、汎用の参照エンティティストアです。 この機能により、マーケターは、複数のチャネルにわたるオーディエンスに対して、調整され、一貫性のある、関連性のあるエクスペリエンスを提供できます。
+リアルタイム顧客プロファイルは、様々な企業データアセットのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形でそのデータにアクセスできる汎用参照エンティティストアです。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 
 ## FAQ
 
@@ -44,15 +44,15 @@ XDMに慣れていない場合は、 [XDMの概要に関する開始を参照し
 
 APIとUIのどちらを使用しているかに応じて、プロファイルデータを表示する方法は複数あります。
 
-#### APIの使用
+#### API の使用
 
 アクセスするプロファイルエンティティのIDがわかっている場合は、プロファイルAPIの `/entities` (プロファイルアクセス)エンドポイントを使用して、これらのエンティティを検索できます。 詳しくは、『開発者ガイド』の [entitiesに関する節を参照してください](./api/entities.md) 。
 
 また、Adobe Experience PlatformセグメントサービスAPIを使用して、セグメントのメンバーシップの資格を持つ顧客の個々のプロファイルにアクセスすることもできます。 See the [Segmentation Service overview](../segmentation/home.md) for more information.
 
-#### UIの使用
+#### UI の使用
 
-Experience PlatformUIの「 **[!UICONTROL 参照]** 」タブ( **[!UICONTROL プロファイル]** ワークスペース)では、プロファイルの合計数を表示し、個々のプロファイルをそのID値で検索できます。 詳しくは、『 [プロファイルユーザガイド](./ui/user-guide.md) 』を参照してください。
+Experience PlatformUIの「 **[!UICONTROL 参照]** 」タブ( **[!UICONTROL プロファイル]** ワークスペース)では、プロファイルの合計数を表示し、個々のプロファイルをそのID値で検索できます。 See the [Profile user guide](./ui/user-guide.md) for more information.
 
 セグメントワークスペースの「 **[!UICONTROL 参照]** 」タブで、セグメントのリストを表示することもでき **[!UICONTROL ます]** 。 セグメントを選択すると、そのセグメントに適したプロファイルのサンプルが表示されます。 その後、リストに表示された任意のプロファイルを選択して、詳細を表示できます。 See the [Segmentation UI overview](../segmentation/ui/overview.md) for more information.
 
@@ -146,7 +146,7 @@ Experience PlatformUIの「 **[!UICONTROL 参照]** 」タブ( **[!UICONTROL プ
 }
 ```
 
-このエラーは、無効なContent-Typeヘッダーを持つPOSTまたはPUT要求を送信する場合に発生します。 使用するエンドポイントに対して有効なContent-Type値を指定していることを重複が確認します。
+このエラーは、無効なContent-Typeヘッダーを含むPOSTまたはPUT要求を送信するときに発生します。 使用するエンドポイントに対して有効なContent-Type値を指定していることを重複が確認します。
 
 ほとんどのプロファイルエンドポイントでは、Content-Typeヘッダーに「application/json」を使用できますが、以下の例外があります。
 
