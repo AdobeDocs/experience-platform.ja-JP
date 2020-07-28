@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: プロファイルクエリ言語(PQL)の概要
+title: プロファイルクエリ言語（PQL）の概要
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
 source-wordcount: '670'
-ht-degree: 3%
+ht-degree: 94%
 
 ---
 
@@ -16,23 +16,23 @@ ht-degree: 3%
 
 [!DNL Profile Query Language] (PQL)は [!DNL Experience Data Model] (XDM)準拠のクエリ言語で、 [!DNL Real-time Customer Profile] データに対するセグメントクエリの定義と実行をサポートするように設計されています。
 
-このガイドでは、PQLの一般的な概要を説明し、フォーマットのガイドラインとPQL式の例を示します。
+このガイドでは、PQL の全般的な概要と、形式についてのガイドライン、PQL 式の例を示します。
 
-## PQLクエリのフォーマット
+## PQL クエリの形式
 
-PQLクエリには次のシグネチャがあります。
+PQL クエリのシグネチャは次のとおりです。
 
 ```sql
 ({INPUT_PARAMETER_1}, {INPUT_PARAMETER_2}, ...) => {RESULT_TYPE}
 ```
 
-入力パラメーターは、ブール値や文字列などの単純なプリミティブ、またはオブジェクト、配列、マップなどのより複雑な型にすることができます。
+入力パラメータは、ブールや文字列などの単純なプリミティブ、またはオブジェクト、配列、マップなどのより複雑な型にすることができます。
 
-PQL式の本体内で入力パラメータを参照する方法は **3通り** あります。
+PQL 式の本文内で入力パラメーターを参照する方法は、次の **3** とおりあります。
 
 ### 最初のパラメーターへの暗黙の参照
 
-次の例では、最初のパラメーターは常にコンテキスト内にあるので、プロパティ参照(`homeAddress`)を直接作成できます。
+次の例では、最初のパラメーターは常にコンテキスト内にあるので、直接それを指すプロパティ参照（`homeAddress`）を作成できます。
 
 ```sql
 homeAddress.stateProvince = workAddress.stateProvince
@@ -40,53 +40,53 @@ homeAddress.stateProvince = workAddress.stateProvince
 
 ### 最初のパラメーターへの明示的な参照
 
-次の例では、は最初のパラメーター `$1` を参照します。 その結果、は2番目 `$2` のパラメーターなどを参照します。
+次の例では、`$1` は最初のパラメーターを参照しています。したがって、`$2` は 2 番目のパラメータを参照することになります。
 
 ```sql
 $1.homeAddress.stateProvince = $1.homeAddress.stateProvince
 ```
 
-### 名前付き変数の使用（ラムダ表記を使用）
+### 名前付き変数の使用（ラムダ表記）
 
-次の例では、 `Profile` は変数名で、クエリの作成者が選択できます。
+次の例では、`Profile` は変数名で、クエリの作成者が選択できます。
 
 ```sql
 (Profile) => Profile.homeAddress.stateProvince = Profile.workAddress.stateProvince
 ```
 
-## PQLリテラル
+## PQL リテラル
 
-PQLでは、次のリテラル型がサポートされます。
+PQL では次のリテラル型をサポートしています。
 
 | リテラル | 定義 | 例 |
 | ------- | ---------- | ------- |
-| 文字列 | 重複の引用符で囲まれた文字で構成されるデータ型です。 | `"pizza"`、`"jobs"`、`"antidisestablishmentarianism"` |
-| Boolean | trueまたはfalseのデータ型です。 | `true`、`false` |
-| 整数 | 整数を表すデータ型です。 正、負、またはゼロのいずれかです。 | `-201`、`0`、`412` |
-| 重複 | 任意の実数を表すデータ型です。 正、負、またはゼロのいずれかです。 | `-51.24`、`3.14`、`0.6942058` |
-| 日付 | 年、月、日に基づく日付を整数のパラメーターとして作成するために使用できるデータ型です。 It is formatted as `date(year, month, day)` | `date(2020, 3, 14)` |
-| 配列 | 他のリテラル値のグループとして構成されるデータ型です。 異なる値を区切るために、角括弧で囲み、カンマを使用します。 <br> **注意：** 配列内の項目のプロパティに直接アクセスすることはできません。 したがって、配列内のプロパティにアクセスする必要がある場合は、次のメソッドがサポートされ `select X from array where X.item = ...`ます。 <br> PQLは、プロファイルにリンクされた一連のエクスペリエンスイベント `xEvent` を参照する単語を予約します。 | `[1, 4, 7]`、`["US", "CA"]` |
-| 相対時間参照 | タイムスタンプと時間間隔の参照を形成するために使用できる予約語です。 <ul><li>今日昨日明日</li><li>これ、最後、次</li><li>前、後、後</li><li>ミリ秒、秒、分、時間、日、週、月、年、10年、世紀/世紀、ミレニアム/ミレニアム</li></ul> | `X.timestamp occurs before today`、`X.timestamp occurs last month`、`X.timestamp occurs <= 3 days before now` |
+| 文字列 | 1 つ以上の文字で構成され、二重引用符で囲まれたデータタイプです。 | `"pizza"`、`"jobs"`、`"antidisestablishmentarianism"` |
+| ブール | true か false のいずれかであるデータタイプです。 | `true`、`false` |
+| 整数 | 整数を表すデータタイプです。正、負、ゼロのいずれかです。 | `-201`、`0`、`412` |
+| 倍精度実数 | 任意の実数を表すデータ型です。正、負、ゼロのいずれかです。 | `-51.24`、`3.14`、`0.6942058` |
+| 日付 | 年、月、日（整数パラメーター）に基づいて日付を作成するために使用できるデータ型です。`date(year, month, day)` という形式で記述します。 | `date(2020, 3, 14)` |
+| 配列 | 他のリテラル値のグループとして構成されるデータ型です。複数の値を区切る場合は、角括弧で囲んでグループ化し、カンマで区切ります。<br> **注意**：配列内の項目のプロパティに直接アクセスすることはできません。したがって、配列内のプロパティにアクセスする必要がある場合、サポートされているメソッドは `select X from array where X.item = ...` です。<br> PQL には、プロファイルにリンクされたエクスペリエンスイベントの配列を指す予約語 `xEvent` があります。 | `[1, 4, 7]`、`["US", "CA"]` |
+| 相対時間参照 | タイムスタンプおよび時間間隔の参照の形式設定に使用できる予約語。 <ul><li>now、today、yesterday、tomorrow</li><li>this、last、next</li><li>before、after、from</li><li>millisecond／milliseconds、second／seconds、minute／minutes、hour／hours、day／days、week／weeks、month／months、year／years、decade／decades、century／centuries、millennium／millennia</li></ul> | `X.timestamp occurs before today`、`X.timestamp occurs last month`、`X.timestamp occurs <= 3 days before now` |
 
 
-## PQL関数
+## PQL 関数
 
-次の表に、サポートされるPQL関数の各カテゴリの概要を示します。詳細については、その他のドキュメントへのリンクも含まれています。
+サポートされている PQL 関数の各種カテゴリを次の表に示します。詳細を説明するドキュメントへのリンクも含まれています。
 
 | カテゴリ | 定義 |
 | -------- | ---------- |
-| Boolean | PQL内にブール代数を実装するために使用します。 これらの関数について詳しくは、 [boolean functionsドキュメントーを参照してください](./boolean-functions.md)。 |
-| 比較 | 異なるPQL要素間の比較に使用します。 これらの関数の詳細については、「 [比較関数」ドキュメントを参照してください](./comparison-functions.md)。 |
-| アレイ、リスト、セット | 配列、リスト、セットの操作に使用します。 これらの関数の詳細は、 [配列、リスト、set functionsドキュメントに記載されています](./array-functions.md)。 |
-| マップ | マップの操作に使用します。 これらの関数の詳細については、「 [map functionsドキュメント](./map-functions.md)」を参照してください。 |
-| 文字列 | 文字列を操作するために使用します。 これらの関数について詳しくは、 [文字列関数ドキュメントーを参照してください](./string-functions.md)。 |
-| 演算 | PQL要素に対して基本的な演算を実行するために使用します。 これらの関数の詳細については、 [演算関数ドキュメントを参照してください](./arithmetic-functions.md) |
-| 集計 | 配列の結果を単数の結果に結合するために使用します。 集計関数の詳細は、 [集計関数ドキュメントを参照してください](./aggregation-functions.md)。 |
-| 日時 | date、time、datetimeの各オブジェクトと組み合わせて使用します。 これらの関数について詳しくは、 [日付/時間関数ドキュメントを参照してください](./datetime-functions.md)。 |
-| フィルター | 配列内のデータをフィルタするために使用します。 これらの関数の詳細については、「 [filter functionsドキュメント](./filter-functions.md)」を参照してください。 |
-| 論理量指定子 | 配列内の条件をアサートするために使用します。 詳細は、 [論理量指定子のドキュメントで確認できます](./logical-quantifiers.md)。 |
-| その他 | 上記のカテゴリのいずれにも当てはまらない関数は、 [その他の関数ドキュメントにあります](./misc-functions.md)。 |
+| ブール | PQL 内にブール代数を実装するために使用します。これらの関数について詳しくは、[ブール関数のドキュメント](./boolean-functions.md)を参照してください。 |
+| 比較 | 異なる PQL 要素間の比較に使用します。これらの関数について詳しくは、[比較関数のドキュメント](./comparison-functions.md)を参照してください。 |
+| 配列、リスト、セット | 配列、リスト、セットの操作に使用されます。これらの関数について詳しくは、[配列関数、リスト関数、セット関数のドキュメント](./array-functions.md)を参照してください。 |
+| マップ | マップの操作に使用します。これらの関数について詳しくは、[マップ関数のドキュメント](./map-functions.md)を参照してください。 |
+| 文字列 | 文字列の操作に使用します。これらの関数について詳しくは、[文字列関数のドキュメント](./string-functions.md)を参照してください。 |
+| 算術演算 | PQL 要素に対して基本的な算術演算を実行するために使用します。これらの関数について詳しくは、[算術演算関数のドキュメント](./arithmetic-functions.md)を参照してください |
+| 集計 | 配列の結果を 1 つの結果に組み合わせるために使用します。これらの関数について詳しくは、[集計関数のドキュメント](./aggregation-functions.md)を参照してください。 |
+| 日時 | 日付、時刻、日時の各オブジェクトと組み合わせて使用します。これらの関数について詳しくは、[日付／時刻関数のドキュメント](./datetime-functions.md)を参照してください。 |
+| フィルター | 配列内のデータのフィルタリングに使用します。これらの関数について詳しくは、[フィルター関数のドキュメント](./filter-functions.md)を参照してください。 |
+| 論理量指定子 | 配列内の条件をアサートするために使用します。詳しくは、[論理量指定子のドキュメント](./logical-quantifiers.md)を参照してください。 |
+| その他 | 上記カテゴリのいずれにも当てはまらない関数は、[その他の関数のドキュメント](./misc-functions.md)を参照してください。 |
 
 ## 次の手順
 
-使い方を習得したので、セグメントの作成 [!DNL Profile Query Language]と変更時にPQLを使用できます。 セグメント化について詳しくは、 [セグメント化の概要を参照してください](../home.md)。
+Now that you&#39;ve learned how to use [!DNL Profile Query Language], you can use PQL when creating and modifying segments. セグメント化について詳しくは、[セグメント化の概要](../home.md)を参照してください。
