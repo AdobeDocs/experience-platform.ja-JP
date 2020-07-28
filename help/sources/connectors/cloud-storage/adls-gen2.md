@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 4d3899e8a91d15da7e40523a03285f3ccec27191
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platformは、AWS、 [!DNL Google Cloud Platform]およびなどのクラウドプロバイダーに対してネイティブの接続を提供し、これらのシステムからデータを取得でき [!DNL Azure]ます。
 
-Cloudストレージソースからは、ダウンロード、フォーマット、アップロードを行う [!DNL Platform] ことなく、独自のデータをに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] (ADLS-Gen2)から [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2)のデータをバッチに取り込むことができます。
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] (ADLS-Gen2)から [!DNL Azure Data Lake Storage Gen2] (ADLS-Gen2)のデータをバッチに取り込むことができます。
 
 ## IPアドレス許可リスト
 
@@ -60,7 +60,7 @@ Cloudストレージソースからは、ダウンロード、フォーマット
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
-## UIの使用
+## UI の使用
 
 - [UIでADLS-Gen2ソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
