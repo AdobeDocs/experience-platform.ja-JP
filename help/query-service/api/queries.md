@@ -1,52 +1,52 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: クエリサービス開発ガイド
+title: クエリサービス開発者ガイド
 topic: queries
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '645'
-ht-degree: 2%
+ht-degree: 97%
 
 ---
 
 
 # クエリ
 
-## サンプルAPI呼び出し
+## サンプル API 呼び出し
 
-以下の節では、 `/queries`[!DNL Query Service] APIのエンドポイントを使用して行う呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
+The following sections walk through calls you can make using the `/queries` endpoint in the [!DNL Query Service] API. 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### クエリのリストの取得
 
-エンドポイントにGETリクエストを行うと、IMS組織のすべてのクエリのリストを取得でき `/queries` ます。
+IMS 組織に対するすべてのクエリのリストを取得するには、`/queries` エンドポイントへの GET リクエストをおこないます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /queries
 GET /queries?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*オプション*)リクエストパスに追加されるパラメーター。応答で返される結果を設定します。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。 使用可能なパラメーターを以下に示します。
+- `{QUERY_PARAMETERS}`：（*オプション*）応答に返される結果を設定するリクエストパスに追加されるパラメーター。複数のパラメーターを含め、アンパサンド（`&`）で区切ることができます。使用できるパラメーターは以下のとおりです。
 
-**クエリパラメーター**
+**クエリパラメータ**
 
-クエリを一覧表示する際に使用できるクエリパラメーターのリストを次に示します。 これらのパラメーターはすべてオプションです。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべてのクエリが取得されます。
+次に、クエリの一覧表示に使用可能なクエリパラメーターのリストを示します。これらのパラメーターはすべてオプションです。パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべてのクエリが取得されます。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `orderby` | 結果の並べ替えに使用するフィールドを指定します。 サポートされているフィールドは `created` とで `updated`す。 例えば、 `orderby=created` は、作成された結果を昇順で並べ替えます。 作成 `-` 前(`orderby=-created`)を追加すると、作成されたアイテムを降順で並べ替えます。 |
-| `limit` | ページに含める結果の数を制御するためのページサイズ制限を指定します。 (*Default value: 20*) |
-| `start` | 0から始まる番号を使用して、応答のリストをオフセットします。 例えば、3番目 `start=2` にリストされたクエリから開始するリストが返されます。 (*Default value: 0*) |
-| `property` | フィールドに基づいて結果をフィルターします。 フィルター **は** 、HTMLエスケープする必要があります。 複数のフィルターセットを組み合わせる場合は、コンマを使用します。 サポートされているフィールドは、、、、 `created`および `updated``state``id`です。 サポートされる演算子は、 `>` （より大きい）、 `<` （より小さい）、 `>=` （より大きいか等しい）、 `<=` （より小さいか等しい）、（等しい）、 `==` （等しくない）、 `!=``~` （より小さい）の各リストです。 例えば、 `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` は指定したIDを持つすべてのクエリを返します。 |
-| `excludeSoftDeleted` | ソフト削除されたクエリを含める必要があるかどうかを示します。 例えば、 `excludeSoftDeleted=false` は、ソフト削除されたクエリを **含めます** 。 (*ブール値、デフォルト値： true*) |
-| `excludeHidden` | ユーザー主導以外のクエリを表示する必要があるかどうかを示します。 この値をfalseに設定すると **、CURSOR定義、FETCH、メタデータクエリなど** 、ユーザ主導以外のクエリが含まれます。 (*ブール値、デフォルト値： true*) |
+| `orderby` | 結果の並べ替えに使用するフィールドを指定します。サポートされているフィールドは `created` と `updated` です。例えば、`orderby=created` は、昇順で結果を並べ替えます。作成前に `-` を追加する（`orderby=-created`）と、項目が作成日の降順で並べ替えられます。 |
+| `limit` | ページサイズの制限を指定して、ページに含める結果の数を制御します。（*デフォルト値：20*） |
+| `start` | ゼロベースのナンバリングを使用して、応答リストをオフセットします。例えば、`start=2` は、3 番目のクエリから開始するリストを返します。（*デフォルト値：0*） |
+| `property` | フィールドに基づいて結果をフィルタリングします。フィルターは HTML エスケープする&#x200B;**必要があります**。複数のフィルターのセットを組み合わせるには、コンマを使用します。サポートされているフィルターは `created`、`updated`、`state`、および `id` です。サポートされる演算子のリストは、`>`（次より大きい）、`<`（次より小さい）、`>=`（次よりも大きいか等しい）、`<=`（次よりも小さいか等しい）、`==`（等しい）、`!=`（次と等しくない）、`~`（次を含む）です。例えば、`id==6ebd9c2d-494d-425a-aa91-24033f3abeec` は指定した ID を持つすべてのクエリを返します。 |
+| `excludeSoftDeleted` | ソフト削除されたクエリを含める必要があるかどうかを示します。例えば、`excludeSoftDeleted=false` はソフト削除クエリを&#x200B;**含みます**。（*ブール値、デフォルト値：true*） |
+| `excludeHidden` | ユーザー主導でないクエリを表示するかどうかを示します。この値を false に設定すると、CURSOR 定義、FETCH、メタデータクエリなど、ユーザ主導でないクエリが&#x200B;**含まれます**。（*ブール値、デフォルト値：true*） |
 
 **リクエスト**
 
-次のリクエストは、IMS組織用に作成された最新のクエリを取得します。
+次のリクエストで、IMS 組織用に作成された最新のクエリを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **応答**
 
-成功した応答は、指定したIMS組織のクエリのリストを持つHTTPステータス200をJSONとして返します。 次の応答は、IMS組織用に作成された最新のクエリを返します。
+成功応答は、HTTP ステータス 200 とともに、JSON として指定した IMS 組織のクエリのリストを返します。次の応答は、IMS 組織用に作成された最新のクエリを返します。
 
 ```json
 {
@@ -119,9 +119,9 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 ### クエリの作成
 
-エンドポイントにPOSTリクエストを作成して、新しいクエリを作成でき `/queries` ます。
+`/queries` エンドポイントに POST リクエストをおこなうことで、新しいクエリを作成できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /queries
@@ -148,14 +148,14 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `dbName` | SQLクエリを作成する対象のデータベースの名前。 |
-| `sql` | 作成するSQLクエリ。 |
-| `name` | SQLクエリの名前。 |
-| `description` | SQLクエリの説明。 |
+| `dbName` | SQL データベースを作成する対象のクエリの名前。 |
+| `sql` | 作成する SQL クエリ。 |
+| `name` | SQL クエリの名前。 |
+| `description` | SQL クエリの説明。 |
 
 **応答**
 
-正常に応答すると、新しく作成したクエリの詳細と共に、HTTPステータス202（受け入れ済み）が返されます。 クエリのアクティブ化が完了し、正常に実行されると、がからに変更 `state` さ `SUBMITTED` れ `SUCCESS`ます。
+成功応答は HTTP ステータス（許可済み）とともに、作成したクエリの詳細を返します。クエリのアクティブ化が完了し、正常に実行されたら、`state` が `SUBMITTED` から `SUCCESS` に変更されます。
 
 ```json
 {
@@ -198,13 +198,13 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 >[!NOTE]
 >
->の値を使用して、作成したクエリ `_links.cancel` を [キャンセルできます](#cancel-a-query)。
+> `_links.cancel` の値を使用して、[作成したクエリをキャンセル](#cancel-a-query)できます。
 
-### IDによるクエリの取得
+### ID によるクエリの取得
 
-エンドポイントにGETリクエストを送信し、リクエストパスにクエリの `/queries``id` 値を指定することで、特定のクエリに関する詳細な情報を取得できます。
+特定のクエリに関する詳細な情報を取得するには、`/queries` エンドポイントに GET リクエストを送信し、リクエストパスにクエリの `id` の値を指定します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /queries/{QUERY_ID}
@@ -226,7 +226,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 **応答**
 
-成功した応答は、指定されたクエリに関する詳細情報と共にHTTPステータス200を返します。
+成功応答は、HTTP ステータス 200 とともに、指定された応答に関する詳細な情報を返します。
 
 ```json
 {
@@ -269,13 +269,13 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 >[!NOTE]
 >
->の値を使用して、作成したクエリ `_links.cancel` を [キャンセルできます](#cancel-a-query)。
+> `_links.cancel` の値を使用して、[作成したクエリをキャンセル](#cancel-a-query)できます。
 
 ### クエリのキャンセル
 
-エンドポイントにPATCHリクエストを送信し、要求パスにクエリの `/queries``id` 値を指定することで、指定したクエリを削除するようにリクエストできます。
+`/queries` エンドポイントに PATCH リクエストを送信し、リクエストパスでクエリの `id` 値を指定することで、指定したクエリを削除するようリクエストできます。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /queries/{QUERY_ID}
@@ -288,7 +288,7 @@ PATCH /queries/{QUERY_ID}
 
 **リクエスト**
 
-このAPIリクエストは、ペイロードにJSONパッチ構文を使用します。 JSONパッチの機能について詳しくは、APIの基本ドキュメントを参照してください。
+この API リクエストは、ペイロードに JSON パッチ構文を使用します。JSON パッチの仕組みについて詳しくは、API の基本ドキュメントを参照してください。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
@@ -304,11 +304,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `op` | クエリをキャンセルするには、opパラメーターに値を設定する必要があり `cancel `ます。 |
+| `op` | クエリをキャンセルするには、op パラメーターに値 `cancel ` を設定する必要があります。 |
 
 **応答**
 
-応答が成功すると、HTTPステータス202（受け入れ済み）が次のメッセージと共に返されます。
+成功応答は、HTTP ステータス 202（許可済み）とともに次のメッセージを返します。
 
 ```json
 {
