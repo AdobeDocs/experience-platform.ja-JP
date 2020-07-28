@@ -7,24 +7,24 @@ translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 1%
+ht-degree: 89%
 
 ---
 
 
 # リソースの置換
 
-では、PUT操作を使用してリソース全体を置き換えることがで [!DNL Schema Registry] きます。 この操作は基本的にリソースを書き直すので、リクエスト本文には、POSTリクエストを使用して新しいリソースを作成する際に必要となるフィールドをすべて含める必要があります。
+The [!DNL Schema Registry] allows you to replace an entire resource through a PUT operation. この操作は基本的にリソースを書き換えるので、リクエスト本文には、POST リクエストを使用して新しいリソースを作成する際に必要となるフィールドをすべて含める必要があります。
 
 この方法は、リソース内の多くの情報を一度に更新する場合に特に便利です。
 
 >[!NOTE]
 >
->リソース全体を置き換えるのではなく、リソースの一部だけを更新したい場合は、PATCH操作を使ってリソースを [更新するドキュメントを参照してください](update-resource.md)。
+>リソース全体を置換するのではなく、リソースの一部のみを更新する場合は、[PATCH 操作を使用したリソースの更新](update-resource.md)に関するドキュメントを参照してください。
 
-**API形式**
+**API 形式**
 
-PUT要求は、テナントコンテナで定義したリソースに対してのみ実行できます。
+PUT リクエストは、テナントコンテナで定義したリソースに対してのみ実行できます。
 
 ```http
 PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -32,12 +32,12 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | から更新するリソースのタイプ [!DNL Schema Library]。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
-| `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. 有効なタイプは、`datatypes`、`mixins`、`schemas` および `classes` です。 |
+| `{RESOURCE_ID}` | リソースの URL エンコードされた `$id` URI または `meta:altId`。 |
 
 **リクエスト**
 
-このサンプル要求は、前の例で作成されたプロパティ構築データ型を置き換えます。 リクエスト本文は、データ型の作成に使用されるPOSTリクエストと似ていますが、以前に定義した値に代わる新しい値を持つ更新済みのフィールドセットが含まれる点が異なります。
+このサンプルリクエストでは、前の例で作成したプロパティ構築データイプが置換されます。リクエスト本文は、データタイプの作成に使用される POST リクエストに似ていますが、以前に定義された値に代わる新しい値を持つ更新済みのフィールドが含まれているという点が異なります。
 
 ```SHELL
 curl -X PUT \
@@ -89,7 +89,7 @@ curl -X PUT \
 
 **応答**
 
-成功した応答は、データ型の詳細を返し、更新されたフィールドと値がリクエストに指定されたとおりに表示されます。
+リクエストが成功した場合、データタイプの詳細が返され、リクエストで指定された更新済みフィールドと値が示されます。
 
 ```JSON
 {
