@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
 workflow-type: tm+mt
 source-wordcount: '1614'
-ht-degree: 2%
+ht-degree: 15%
 
 ---
 
@@ -24,32 +24,32 @@ ht-degree: 2%
 
 また、このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
 
-* [Experience Data Model(XDM)System](../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
-   * [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
+* [エクスペリエンスデータモデルl（XDM）システム](../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+   * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
+   * [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 * [カタログサービス](../../../../catalog/home.md): カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
 * [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md): Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
 * [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-次の節では、 [!DNL Flow Service] APIを使用して支払い申し込みに正常に接続するために知っておく必要がある追加情報について説明します。
+The following sections provide additional information that you will need to know in order to successfully connect to a payments application using the [!DNL Flow Service] API.
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-### 必要なヘッダーの値の収集
+### 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* 認証： 無記名 `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-ペイロード(POST、PUT、PATCH)を含むすべての要求には、追加のメディアタイプヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
 * Content-Type: `application/json`
 
@@ -63,7 +63,7 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 ## ソース接続の作成 {#source}
 
-アドホックXDMスキーマを作成した場合、APIへのPOSTリクエストを使用してソース接続を作成できるようになりました [!DNL Flow Service] 。 ソース接続は、接続ID、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
+アドホックXDMスキーマを作成した場合、 [!DNL Flow Service] APIへのPOSTリクエストを使用してソース接続を作成できるようになりました。 ソース接続は、接続ID、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
 
 ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
@@ -77,7 +77,7 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 すべての **テーブルベースのコネクタに** 、列挙値を使用します。 `tabular`.
 
-**API形式**
+**API 形式**
 
 ```https
 POST /sourceConnections
@@ -121,7 +121,7 @@ curl -X POST \
 | `params.path` | ソースファイルのパス。 |
 | `connectionSpec.id` | 支払い申請の接続仕様ID。 |
 
-**応答**
+**応答** 
 
 正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 このIDは、後の手順でターゲット接続を作成する際に必要となります。
 
@@ -136,9 +136,9 @@ curl -X POST \
 
 以前の手順では、ソースデータを構造化するためにアドホックXDMスキーマを作成しました。 でソースデータを使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマも作成する必要があり [!DNL Platform]ます。 次に、このターゲットスキーマを使用して、ソースデータが含まれる [!DNL Platform] データセットを作成します。 このターゲットXDMスキーマはXDM [!DNL Individual Profile] クラスも拡張します。
 
-ターゲットXDMスキーマは、 [スキーマレジストリAPIに対してPOST要求を実行することで作成できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 でユーザインターフェイスを使用する場合は、「 [!DNL Experience Platform]スキーマエディタ [](https://docs.adobe.com/content/help/en/experience-platform/xdm/tutorials/create-schema-ui.html) 」チュートリアルで、スキーマエディタで同様の操作を実行するための手順を順を追って説明します。
+ターゲットXDMスキーマは、 [スキーマレジストリAPIに対するPOST要求を実行することで作成できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](https://docs.adobe.com/content/help/en/experience-platform/xdm/tutorials/create-schema-ui.html) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
-**API形式**
+**API 形式**
 
 ```https
 POST /tenant/schemas
@@ -181,9 +181,9 @@ curl -X POST \
 }'
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を含む)を返します。 このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となります。
+A successful response returns details of the newly created schema including its unique identifier (`$id`). このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となります。
 
 ```json
 {
@@ -251,7 +251,7 @@ curl -X POST \
 
 ターゲットデータセットは、 [カタログサービスAPIに対してPOSTリクエストを実行し](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)、ペイロード内のターゲットスキーマのIDを提供することで作成できます。
 
-**API形式**
+**API 形式**
 
 ```https
 POST /dataSets
@@ -280,9 +280,9 @@ curl -X POST \
 | -------- | ----------- |
 | `schemaRef.id` | ターゲット `$id` のXDMスキーマ。 |
 
-**応答**
+**応答** 
 
-正常に完了すると、新しく作成されたデータセットのIDを含む配列が形式で返され `"@/datasets/{DATASET_ID}"`ます。 データセットIDは、API呼び出しでデータセットを参照するために使用される、読み取り専用の、システム生成の文字列です。 後の手順でターゲットデータセット接続とデータフローを作成する際に必要なターゲットデータセットIDを保存します。
+A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順でターゲットデータセット接続とデータフローを作成する際に必要なターゲットデータセットIDを保存します。
 
 ```json
 [
@@ -296,7 +296,7 @@ curl -X POST \
 
 ターゲットスキーマ、ターゲットデータセット、データレークへの接続仕様IDに固有の識別子が追加されました。 これらの識別子を使用して、 [!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
 
-**API形式**
+**API 形式**
 
 ```https
 POST /targetConnections
@@ -336,7 +336,7 @@ curl -X POST \
 | `params.dataSetId` | ターゲットデータセットのID。 |
 | `connectionSpec.id` | Data Lakeへの固定接続仕様ID。 このIDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
-**応答**
+**応答** 
 
 正常な応答は、新しいターゲット接続の固有な識別子(`id`)を返します。 この値は、後の手順でデータフローを作成する際に必要になります。
 
@@ -349,9 +349,9 @@ curl -X POST \
 
 ## マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、リクエストペイロード内で定義されたデータマッピングを使用して [Conversion Service APIに対してPOSTリクエストを実行することで達成されます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) 。
+ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、リクエストペイロード内で定義されたデータマッピングを使用して [Conversion Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) POSTリクエストを実行することで達成されます。
 
-**API形式**
+**API 形式**
 
 ```https
 POST /mappingSets
@@ -413,7 +413,7 @@ curl -X POST \
 | -------- | ----------- |
 | `xdmSchema` | ターゲット `$id` のXDMスキーマ。 |
 
-**応答**
+**応答** 
 
 正常な応答は、新たに作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 このIDは、後の手順でデータフローを作成する際に必要です。
 
@@ -430,9 +430,9 @@ curl -X POST \
 
 ## データフロー仕様の検索 {#specs}
 
-データフローは、ソースからデータを収集し、それらをに取り込む役割を持ち [!DNL Platform]ます。 データフローを作成するには、まず、 [!DNL Flow Service] APIに対してGET要求を実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を持ちます。
+データフローは、ソースからデータを収集し、それらをに取り込む役割を持ち [!DNL Platform]ます。 データフローを作成するには、まず [!DNL Flow Service] APIに対してGETリクエストを実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を持ちます。
 
-**API形式**
+**API 形式**
 
 ```https
 GET /flowSpecs?property=name=="CRMToAEP"
@@ -449,7 +449,7 @@ curl -X GET \
 ```
 
 
-**応答**
+**応答** 
 
 「正常な応答」は、支払い申込書のデータを取り込む役割を持つデータ・フロー仕様の詳細を返し [!DNL Platform]ます。 このIDは、次の手順で新しいデータフローを作成する際に必要です。
 
@@ -582,11 +582,11 @@ curl -X GET \
 * [マッピング ID](#mapping)
 * [データフロー仕様ID](#specs)
 
-データフローは、ソースからのデータのスケジュールおよび収集を担当します。 データフローを作成するには、ペイロード内で前述の値を指定しながらPOSTリクエストを実行します。
+データフローは、ソースからのデータのスケジュールおよび収集を担当します。 POST内で前述の値を提供しながらペイロードリクエストを実行すると、データフローを作成できます。
 
 取り込みのスケジュールを設定するには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 interval値は、2つの連続したインジェスションの間の期間を指定し、1回限りのインジェストを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の場合、間隔の値は次の値と等しいかそれ以上に設定する必要があり `15`ます。
 
-**API形式**
+**API 形式**
 
 ```https
 POST /flows
@@ -651,9 +651,9 @@ curl -X POST \
 | `scheduleParams.frequency` | 選択可能な頻度の値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
 | `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があ `15` ります。 |
 
-**応答**
+**応答** 
 
-正常な応答は、新しく作成されたデータフロー `id` のIDを返します。
+A successful response returns the ID `id` of the newly created dataflow.
 
 ```json
 {
@@ -667,4 +667,4 @@ curl -X POST \
 このチュートリアルに従って、ソースコネクタを作成し、支払い申請から予定通りにデータを収集します。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
-* [Data Science Workspaceの概要](../../../../data-science-workspace/home.md)
+* [Data Science ワークスペースの概要](../../../../data-science-workspace/home.md)
