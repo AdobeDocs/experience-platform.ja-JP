@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Amazon Redshiftコネクタ
+title: Amazon赤方偏移コネクタ
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 0%
+ht-degree: 12%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 0%
 >[!NOTE]
 >コネクタ [!DNL Amazon Redshift] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 [!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートには以下が含まれ [!DNL Amazon Redshift]ます。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートには以下が含まれ [!DNL Amazon Redshift]ます。
 
 ## IPアドレス許可リスト
 
@@ -57,11 +57,11 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 ## API [!DNL Amazon Redshift] を [!DNL Platform] 使用した接続
 
-- [Flow Service APIを使用してAmazon Redshiftコネクタを作成する](../../tutorials/api/create/databases/redshift.md)
+- [フローサービスAPIを使用して、AmazonRedshiftコネクタを作成する](../../tutorials/api/create/databases/redshift.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UI [!DNL Amazon Redshift] を [!DNL Platform] 使用して接続
 
-- [UIでのAmazon Redshiftソースコネクタの作成](../../tutorials/ui/create/databases/redshift.md)
+- [UIでのAmazonRedshiftソースコネクタの作成](../../tutorials/ui/create/databases/redshift.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
