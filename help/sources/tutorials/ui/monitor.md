@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: f08ad2c9cc48c08bcdc0e278481992e8789000b5
 workflow-type: tm+mt
 source-wordcount: '640'
-ht-degree: 1%
+ht-degree: 12%
 
 ---
 
@@ -18,12 +18,12 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ## はじめに
 
-このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [Experience Data Model(XDM)System](../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   - [スキーマ構成の基本](../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+- [エクスペリエンスデータモデルl（XDM）システム](../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+   - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [リアルタイム顧客プロファイル](../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 ## アカウントの監視
 
@@ -91,7 +91,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![アカウントを選択](../../images/tutorials/monitor/accounts-sort.png)
 
-[ *[!UICONTROL アカウント]* ]ページが表示されます。 削除するデータフローを選択し、プロパティ・パネルから **[!UICONTROL 「削除]** 」を選択してプロセスを完了します。
+The *[!UICONTROL Accounts]* page appears. 削除するデータフローを選択し、プロパティ・パネルから **[!UICONTROL 「削除]** 」を選択してプロセスを完了します。
 
 ![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
 
@@ -102,4 +102,4 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 このチュートリアルに従うと、 *[!UICONTROL Sources]* ワークスペースから既存のアカウントおよびデータフローに正常にアクセスできます。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../profile/home.md)
-- [Data Science Workspaceの概要](../../../data-science-workspace/home.md)
+- [Data Science ワークスペースの概要](../../../data-science-workspace/home.md)
