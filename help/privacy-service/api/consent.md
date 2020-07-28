@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 1%
 
 ## 顧客の同意要求の処理
 
-同意要求は、エンドポイントに対してPOST要求を行うことで処理され `/consent` ます。
+同意要求は、エンドポイントに対してPOST要求を行うことによって処理され `/consent` ます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /consent
@@ -70,6 +70,6 @@ curl -X POST \
 >
 >送信先の顧客ID値を決定する方法について詳し [!DNL Privacy Service]くは、IDデータの [提供に関するガイドを参照してください](../identity-data.md)。
 
-**応答**
+**応答** 
 
 正常な応答が返されると、ペイロードのないHTTPステータス202(Accepted)が返され、その要求がによって受け入れられ、処理中であるこ [!DNL Privacy Service] とを示します。
