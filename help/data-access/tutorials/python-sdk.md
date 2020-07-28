@@ -24,18 +24,18 @@ Secure [SDKを呼び出すための値にアクセスするには、次の](../.
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 SDKを使用するには、操作を実行するサンドボックスの名前とIDが必要です。 [!DNL Python]
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. SDKを使用するには、操作を実行するサンドボックスの名前とIDが必要です。 [!DNL Python]
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
 
-のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 ## 環境設定
 
 デフォルトでは、サービスエンドポイントは統合環境エンドポイントに設定されます。 その結果、実稼働環境を指すようにするには、次の環境変数を次の値に設定します。
 
-| Variable | エンドポイント |
+| 変数 | エンドポイント |
 | -------- | -------- |
 | `ENV_CATALOG_URL` | `https://platform.adobe.io/data/foundation/catalog/` |
 | `ENV_QUERY_SERVICE_URL` | `https://platform.adobe.io/data/foundation/query` |
@@ -44,7 +44,7 @@ Secure [SDKを呼び出すための値にアクセスするには、次の](../.
 
 また、資格情報を環境変数として追加できます。
 
-| Variable | 値 |
+| 変数 | 値 |
 | -------- | ----- |
 | `ORG_ID` | ID。 `{IMS_ORG}` |
 | `SERVICE_API_KEY` | あなたの `{API_KEY}` 価値。 |
@@ -53,7 +53,7 @@ Secure [SDKを呼び出すための値にアクセスするには、次の](../.
 | `SANDBOX_ID` | サンドボックスの `{SANDBOX_ID}` 値。 |
 | `SANDBOX_NAME` | サンドボックスの `{SANDBOX_NAME}` 値。 |
 
-## 設置
+## インストール
 
 すべてのパッケージは、構築 `./dist` 後に出力されます。
 
