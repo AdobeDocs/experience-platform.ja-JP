@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3311'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -54,7 +54,7 @@ Dockerイメージを構築する前に、以下の節に示す、 [!DNL Platfor
 
 #### データセットの読み取り
 
-この節では、データセットの読み取りに必要な変更点について説明し、アドビから提供される [helper.scalaの例を使用し](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) ます。
+この節では、Adobeが提供する [helper.scalaの例を使用して、データセットの読み取りに必要な変更点について説明します](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) 。
 
 **データセットを読み取る古い方法**
 
@@ -88,7 +88,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 
 #### データセットへの書き込み
 
-この節では、アドビが提供するScoringDataSaver.scalaの [例を使用してデータセットを書き込む際に必要な変更点について説明します](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) 。
+ここでは、Adobeが提供するScoringDataSaver.scalaの [例を使用してデータセットを書き込む際に必要な変更点について説明します](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) 。
 
 **データセットの従来の書き方**
 
@@ -168,7 +168,7 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 
 次の手順は、 [パッケージソースファイルをレシピチュートリアルに従って操作します](./models-recipes/package-source-files-recipe.md) 。 このチュートリアルには、Scala(Spark)レシピ用のドッカー画像の作成について概説した節があります。 完了すると、対応するイメージURLと共にAzureコンテナレジストリにDockerイメージが提供されます。
 
-### レシピの作成([!DNL Spark]) {#create-recipe-spark}
+### レシピの作成 ([!DNL Spark]) {#create-recipe-spark}
 
 レシピを作成するには、まず [パッケージソースファイルのチュートリアルを完了し](./models-recipes/package-source-files-recipe.md) 、ドッカーイメージのURLを準備する必要があります。 UIまたはAPIを使用してレシピを作成できます。
 
@@ -190,7 +190,7 @@ Dockerイメージを構築する前に、以下の節に示す、 [!DNL Platfor
 
 #### データセットの読み取り
 
-ここでは、アドビが提供する [helper.pyの例を使用してデータセットを読み取る際に必要な変更点について説明します](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) 。
+この節では、Adobeが提供する [helper.pyの例を使用してデータセットを読み取る際に必要な変更点について説明します](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) 。
 
 **データセットを読み取る古い方法**
 
@@ -225,7 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 
 #### データセットへの書き込み
 
-この節では、アドビが提供する [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) （例）を使用してデータセットを書き込む際に必要な変更点について説明します。
+この節では、Adobeが提供する [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) の例を使ってデータセットを書き込む際に必要な変更点について説明します。
 
 **データセットの従来の書き方**
 
@@ -620,7 +620,7 @@ Scala (Spark 2.4)ノートブックの場合は、Scalaカーネルを選択し�
   <tr>
   <th>カーネル</th>
   <td align="center">[!DNL Spark]</td>
-  <td align="center">スカラ</td>
+  <td align="center">Scala</td>
   </tr>
   <tr>
   <th>code</th>
@@ -667,7 +667,7 @@ Scala([!DNL Spark] 2.4)の `%%` sparkmagicはサポートされなくなりま�
   <tr>
   <th>カーネル</th>
   <td align="center">[!DNL Spark]</td>
-  <td align="center">スカラ</td>
+  <td align="center">Scala</td>
   </tr>
   <tr>
   <th>code</th>
@@ -717,7 +717,7 @@ Scalaカーネルは、 `%%sql` sparkmagicをサポートしなくなりまし�
 
 ## データセットの読み取り {#notebook-read-dataset-spark}
 
-[!DNL Spark] 2.3では、データの読み取りやコードセルでの生の値の使用に使用する `option` 値に対して変数を定義する必要がありました。 Scalaでは、を使用して値を宣言して返すこ `sys.env("PYDASDK_IMS_USER_TOKEN")` とができるので、などの変数を定義する必要がありません `var userToken`。 以下のScala(Spark 2.4)の例では、データセットの読み取りに必要なすべての値を定義して返すために `sys.env` 使用されています。
+2. [!DNL Spark] 3では、データの読み取りやコードセルでの生の値の使用に使用する `option` 値に対して変数を定義する必要がありました。 Scalaでは、を使用して値を宣言して返すこ `sys.env("PYDASDK_IMS_USER_TOKEN")` とができるので、などの変数を定義する必要がありません `var userToken`。 以下のScala(Spark 2.4)の例では、データセットの読み取りに必要なすべての値を定義して返すために `sys.env` 使用されています。
 
 **Using[!DNL Spark]([!DNL Spark]2.3 — 非推奨) -[!DNL Spark]Kernel**
 
