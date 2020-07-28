@@ -28,7 +28,7 @@ ht-degree: 0%
 
 Adobe Experience Platform [!DNL Web SDK] では、SyncIdentity [](../../fundamentals/identity.md) コマンドを使用して顧客IDとその認証状態を宣言する機能をサポートしています。
 
-syncIdentityメソッドは、 [IDサービス名前空間](../../../identity/../identity-service/namespaces.md) (ID)を使用して、IDが関連付けられるコンテキストを示します。 顧客として、 [!DNL Audience Manager] IDタイプを使用するすべての既存のデータソース： デバイス間では、自動的に対応する [!DNL Identity Namespace]。 対応するのが見つか [!DNL Identity Namespace] るに [!DNL Audience Manager Data Source]は、Adobe Experience Platformにログインし、その [!DNL Identities] セクションに移動します。
+syncIdentityメソッドは、 [IDサービス名前空間](../../../identity/../identity-service/namespaces.md) (ID)を使用して、IDが関連付けられるコンテキストを示します。 お客様は、 [!DNL Audience Manager] IDタイプを使用するすべての既存のデータソースを次のように指定します。 デバイス間では、自動的に対応する [!DNL Identity Namespace]。 対応するのが見つか [!DNL Identity Namespace] るに [!DNL Audience Manager Data Source]は、Adobe Experience Platformにログインし、その [!DNL Identities] セクションに移動します。
 
 ![名前空間UIの表示](../../../assets/edge_configuration_identity.png)
 
