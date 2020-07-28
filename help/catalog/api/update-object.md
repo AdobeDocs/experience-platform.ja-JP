@@ -7,27 +7,27 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '313'
-ht-degree: 3%
+ht-degree: 89%
 
 ---
 
 
 # オブジェクトの更新
 
-PATCHリクエストのパスにIDを含めることで、 [!DNL Catalog] オブジェクトの一部を更新できます。 このドキュメントでは、カタログ・オブジェクトに対してPATCH操作を実行する2つの方法を説明します。
+You can update part of a [!DNL Catalog] object by including its ID in the path of a PATCH request. このドキュメントでは、カタログオブジェクトに対して PATCH 操作を実行する次の 2 つの方法について説明します。
 
-* フィールドの使用
-* JSONパッチ表記の使用
+* フィールドを使用する
+* JSON パッチ表記を使用する
 
 >[!NOTE]
 >
->オブジェクトに対するPATCH操作では、拡大可能なフィールドを変更できません。これは、相互に関連するオブジェクトを表します。  相互に関連するオブジェクトに対する変更は、直接行う必要があります。
+>オブジェクトに対して PATCH 操作を実行しても、相互に関連するオブジェクトを表す拡張可能フィールドは変更されません。相互に関連するオブジェクトは、直接変更する必要があります。
 
 ## フィールドを使用した更新
 
 次の呼び出し例は、フィールドと値を使用してオブジェクトを更新する方法を示しています。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /{OBJECT_TYPE}/{OBJECT_ID}
@@ -35,12 +35,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 更新する [!DNL Catalog] オブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
-次のリクエストでは、データセットの各 `name``description` フィールドを、ペイロードに指定された値に更新します。 更新しないオブジェクトフィールドは、ペイロードから除外できます。
+次のリクエストでは、データセットの `name` フィールドと `description` フィールドが、ペイロードで指定された値に更新されます。更新しないオブジェクトフィールドは、ペイロードから除外できます。
 
 ```shell
 curl -X PATCH \
@@ -58,7 +58,7 @@ curl -X PATCH \
 
 **応答**
 
-正常に完了すると、更新されたデータセットのIDを含む配列が返されます。 このIDは、PATCH要求で送信されたIDと一致する必要があります。 このデータセットに対してGETリクエストを実行すると、およ `name` びが更新され、その他すべての値は変更されないことが示され `description` るようになりました。
+リクエストが成功した場合、更新されたデータセットの ID を含む配列が返されます。この ID は、PATCH リクエストで送信された ID と一致します。このデータセットに対して GET リクエストを実行すると、`name` および `description` のみが更新され、他の値は変更されていないことが示されるようになりました。
 
 ```json
 [
@@ -66,9 +66,9 @@ curl -X PATCH \
 ]
 ```
 
-## JSONパッチ表記を使用した更新
+## JSON パッチ表記法を使用した更新
 
-次の呼び出し例は、 [RFC-6902で概要を説明しているJSONパッチを使用してオブジェクトを更新する方法を示しています](https://tools.ietf.org/html/rfc6902)。
+次の呼び出し例は、[RFC-6902](https://tools.ietf.org/html/rfc6902) で説明されている JSON パッチを使用してオブジェクトを更新する方法を示しています。
 
 <!-- (Include once API fundamentals guide is published) 
 
@@ -76,7 +76,7 @@ For more information on JSON Patch syntax, see the [API fundamentals guide]().
 
 -->
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /{OBJECT_TYPE}/{OBJECT_ID}
@@ -84,12 +84,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 更新する [!DNL Catalog] オブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
-次のリクエストでは、データセットのフィールド `name``description` とフィールドを、各JSONパッチオブジェクトに指定された値に更新します。 JSONパッチを使用する場合は、Content-Typeヘッダーもに設定する必要があり `application/json-patch+json`ます。
+次のリクエストでは、データセットの `name` フィールドと `description` フィールドが、各 JSON パッチオブジェクトで指定された値に更新されます。JSON パッチを使用する場合は、Content-Type ヘッダーも `application/json-patch+json` に設定する必要があります。
 
 ```shell
 curl -X PATCH \
@@ -107,7 +107,7 @@ curl -X PATCH \
 
 **応答**
 
-正常に応答すると、更新されたオブジェクトのIDを含む配列が返されます。 このIDは、PATCH要求で送信されたIDと一致する必要があります。 このオブジェクトに対してGETリクエストを実行すると、およ `name` びが更新され、その他すべての値は変更されないことが示され `description` るようになりました。
+リクエストが成功した場合、更新されたオブジェクトの ID を含む配列が返されます。この ID は、PATCH リクエストで送信された ID と一致します。このオブジェクトに対して GET リクエストを実行すると、`name` および `description` のみが更新され、他の値は変更されていないことが示されるようになりました。
 
 ```json
 [
