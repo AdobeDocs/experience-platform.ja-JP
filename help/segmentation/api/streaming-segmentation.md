@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ストリーミングセグメント
+title: ストリーミングセグメント化
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
 source-wordcount: '1364'
-ht-degree: 1%
+ht-degree: 43%
 
 ---
 
@@ -18,45 +18,45 @@ ht-degree: 1%
 >
 >次のドキュメントでは、APIを使用したストリーミングセグメントの使用方法を説明します。 UIを使用したストリーミングセグメントの使用について詳しくは、『 [セグメントビルダー](../ui/overview.md#streaming-segmentation)』ガイドを参照してください。
 
-セグメント化のストリーミング [!DNL Adobe Experience Platform] により、お客様はデータの豊富性に重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、データが到着する際にセグメントの認定が行われ、セグメント化ジョブのスケジュール [!DNL Platform]や実行の必要性が軽減されました。 この機能を使用すると、ほとんどのセグメントルールをデータが渡されると評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメントジョブを実行しなくても最新の状態に維持されます。 [!DNL Platform]
+セグメント化のストリーミング [!DNL Adobe Experience Platform] により、お客様はデータの豊富性に重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、データが到着する際にセグメントの認定が行われ、セグメント化ジョブのスケジュール [!DNL Platform]や実行の必要性が軽減されました。 With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 ## はじめに
 
-この開発者ガイドでは、ストリーミングセグメント化に関連する様々な [!DNL Adobe Experience Platform] サービスについて、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
 - [!DNL Segmentation](../home.md): データからセグメントやオーディエンスを作成する機能を提供し [!DNL Real-time Customer Profile] ます。
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
-以下の節では、APIの呼び出しを正常に行うために知っておく必要がある追加情報について説明し [!DNL Platform] ます。
+The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-この開発者ガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+この開発者ガイドは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。これには、パス、必須ヘッダー、適切にフォーマットされたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-### 必要なヘッダーの値の収集
+### 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- 認証： 無記名 `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 - Content-Type: application/json
 
-特定のリクエストを完了するには、追加のヘッダーが必要になる場合があります。 このドキュメントの各例には、正しいヘッダーが表示されます。 必要なヘッダーがすべて含まれていることを確認するため、サンプルリクエストには特に注意してください。
+特定のリクエストを完了するには、追加のヘッダーが必要な場合があります。このドキュメントの各例では、正しいヘッダーが表示されます。必要なヘッダーがすべて含まれるように、リクエスト例に特に注意してください。
 
 ### ストリーミングセグメント化が有効なクエリタイプ {#streaming-segmentation-query-types}
 
@@ -66,7 +66,7 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 ストリーミングセグメントを使用してセグメントを評価するには、クエリが次のガイドラインに従う必要があります。
 
-| クエリ型 | 詳細 |
+| クエリタイプ | 詳細 |
 | ---------- | ------- |
 | 受信ヒット | 時間制限のない、単一の着信イベントを参照するセグメント定義。 |
 | 相対時間枠内での着信ヒット | 過去7日間に発生した単一のイベントを参照す **るセグメント定義**。 |
@@ -76,7 +76,7 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 次の節では、ストリーミングセグメントに対して **有効にしないリストセグメント定義の例を示します** 。
 
-| クエリ型 | 詳細 |
+| クエリタイプ | 詳細 |
 | ---------- | ------- | 
 | 相対時間枠内での着信ヒット | セグメント定義が、 **過去7日間** 以内でない着信イベントを参照する場合 ****。 例えば、 **過去2週間以内の場合**。 |
 | 相対的なウィンドウ内のプロファイルを参照する着信ヒット | 次のオプションは、ストリーミングセグメントをサポートし **ません** 。<ul><li>過去7日間 **以** 内の着信イベント ****。</li><li>Adobe Audience Manager(AAM)のセグメントまたは特性を含むセグメント定義。</li></ul> |
@@ -85,7 +85,7 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 さらに、ストリーミングセグメント化を行う際には、次のようなガイドラインが適用されます。
 
-| クエリ型 | ガイドライン |
+| クエリタイプ | ガイドライン |
 | ---------- | -------- |
 | 単一イベントクエリ | ルックバックウィンドウは **7日間に制限されています**。 |
 | イベント履歴のあるクエリ | <ul><li>ルックバックウィンドウは **1日に制限されます**。</li><li>イベント間に厳密な時間順序条件 **が存在する** 。</li><li>イベント間の単純な時間順（前後）のみが許可されます。</li><li>個々のイベント **を無効にすることはできません** 。 ただし、クエリ全体を無効にす **ることはできます** 。</li></ul> |
@@ -94,9 +94,9 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 エンドポイントにGETリクエストを行うことで、IMS組織内でストリーミングセグメント化が有効になっているすべてのセグメントのリストを取得でき `/segment/definitions` ます。
 
-**API形式**
+**API 形式**
 
-ストリーミングが有効なセグメントを取得するには、リクエストパスにクエリパラメーター `evaluationInfo.continuous.enabled=true` を含める必要があります。
+ストリーミングが対応セグメントを取得するには、リクエストパスに `evaluationInfo.continuous.enabled=true` クエリパラメーターを含める必要があります。
 
 ```http
 GET /segment/definitions?evaluationInfo.continuous.enabled=true
@@ -114,9 +114,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、ストリーミングセグメント化が有効なIMS組織内のセグメントの配列を返します。
+正常な応答は、ストリーミングセグメント化対応 IMS 組織内セグメントの配列を返します。
 
 ```json
 {
@@ -203,11 +203,11 @@ curl -X GET \
 }
 ```
 
-## ストリーミングが有効なセグメントの作成
+## ストリーミング対応セグメントの作成
 
 上記のいずれかのストリー [ミングセグメントタイプと一致する場合、セグメントは自動的にストリーミングが有効になります](#streaming-segmentation-query-types)。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /segment/definitions
@@ -240,11 +240,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->これは、標準の「セグメントの作成」リクエストです。 セグメント定義の作成の詳細については、セグメントの [作成に関するチュートリアルを参照してください](../tutorials/create-a-segment.md)。
+>これは、標準の「セグメントの作成」リクエストです。 For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
 
-**応答**
+**応答** 
 
-正常に応答すると、新たに作成されたストリーミングが有効なセグメント定義の詳細が返されます。
+正常な応答は、新たに作成されたストリーミング対応セグメント定義の詳細を返します。
 
 ```json
 {
@@ -286,17 +286,17 @@ curl -X POST \
 
 ## スケジュールされた評価の有効化 {#enable-scheduled-segmentation}
 
-ストリーミング評価を有効にしたら、ベースラインを作成する必要があります（ベースラインを作成した後、セグメントは常に最新の状態になります）。 システムが自動的にベースライン設定を実行するには、スケジュールされた評価（「スケジュールされたセグメント化」とも呼ばれます）を有効にする必要があります。 スケジュール済みセグメントを使用すると、IMS組織は繰り返しのスケジュールに従って、セグメントを評価するために書き出しジョブを自動的に実行できます。
+ストリーミング評価が有効になったら、ベースラインを作成する必要があります（ベースラインの作成後、セグメントは常に最新の状態になります）。システムが自動的にベースライン設定を実行するには、スケジュールされた評価（「スケジュールされたセグメント化」とも呼ばれます）を有効にする必要があります。 スケジュール済みセグメントを使用すると、IMS組織は繰り返しのスケジュールに従って、セグメントを評価するために書き出しジョブを自動的に実行できます。
 
 >[!NOTE]
 >
->スケジュールされた評価は、最大5つのマージポリシーを持つサンドボックスに対して有効にでき [!DNL XDM Individual Profile]ます。 1つのSandbox環境内に5つを超えるマージポリシーがある場合、 [!DNL XDM Individual Profile] 予定された評価を使用できません。
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
 
 ### スケジュールの作成
 
-エンドポイントにPOSTリクエストを行うことで、スケジュールを作成し、スケジュールをトリガーする特定の時間を含めることがで `/config/schedules` きます。
+`/config/schedules` エンドポイントに対して POST リクエストを実行することにより、スケジュールを作成し、スケジュールをトリガーする必要がある特定の時間を指定することができます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /config/schedules
@@ -327,16 +327,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | **（必須）** 、スケジュールの名前。 文字列である必要があります。 |
-| `type` | **（必須）** 。文字列形式のジョブタイプ。 サポートされているタイプは `batch_segmentation` およびで `export`す。 |
-| `properties` | **（必須）** 、集計表に関連する追加のプロパティを含むオブジェクト。 |
-| `properties.segments` | **(`type`等しい場合に必須)を`batch_segmentation`使用すると**`["*"]` 、すべてのセグメントが確実に含まれます。 |
-| `schedule` | **（必須）** 、ジョブスケジュールを含む文字列。 ジョブは、1日に1回しか実行するようにスケジュールできません。つまり、24時間にジョブを2回以上実行するようにスケジュールすることはできません。 次の例(`0 0 1 * * ?`)は、ジョブが毎日1:00:00 UTCでトリガーされることを意味します。 詳しくは、 [cron式形式のドキュメントを参照してください](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) 。 |
-| `state` | *（オプション）* 、スケジュールの状態を含む文字列。 使用可能な値： `active` と `inactive`。 デフォルト値は `inactive` です。IMS組織で作成できるスケジュールは1つだけです。 スケジュールを更新する手順は、このチュートリアルの後半で説明します。 |
+| `name` | **（必須）**&#x200B;スケジュールの名前。文字列である必要があります。 |
+| `type` | **（必須）**&#x200B;文字列形式のジョブタイプ。サポートされているタイプは `batch_segmentation` と `export` です。 |
+| `properties` | **（必須）**&#x200B;スケジュールに関連する追加のプロパティを含むオブジェクト。 |
+| `properties.segments` | **（`type`が`batch_segmentation`と等しい場合は必須）**`["*"]` を使用すると、すべてのセグメントが含まれます。 |
+| `schedule` | **（必須）**&#x200B;ジョブスケジュールを含む文字列。ジョブは 1 日に 1 回のみ実行するようにスケジュールできます。つまり、24 時間の間に 2 回以上実行するようにジョブをスケジュールすることはできません。例（`0 0 1 * * ?`）は、ジョブが毎日1:00:00 UTC にトリガーされることを示しています。詳しくは、[CRON 式形式](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)のドキュメントを参照してください。 |
+| `state` | *（オプション）*&#x200B;スケジュールの状態を含む文字列。使用可能な値は `active` と `inactive` です。デフォルト値は `inactive` です。IMS 組織で作成できるスケジュールは 1 つだけです。スケジュールを更新する手順は、このチュートリアルの後半で説明します。 |
 
-**応答**
+**応答** 
 
-正常に応答すると、新たに作成されたスケジュールの詳細が返されます。
+成功した応答は、新しく作成したスケジュールの詳細を返します。
 
 ```json
 {
@@ -364,9 +364,9 @@ curl -X POST \
 
 ### スケジュールの有効化
 
-デフォルトでは、スケジュールは作成時(POST)のリクエスト本文で `state` プロパティがに設定されていない限り、作成時 `active` には非アクティブになります。 エンドポイントにPATCHリクエストを行い、 `state` パスにスケジュールのIDを含めることで、スケジュールを有効にする( `active`toに設定する `/config/schedules` )ことができます。
+デフォルトでは、作成（POST）リクエスト本文で `state` プロパティが `active` に設定されていない限り、スケジュールは作成時に非アクティブになります。`/config/schedules` エンドポイントに対して PATCH リクエストを実行し、パスにスケジュールの ID を含めることで、スケジュールを有効にする（`state` を `active` に設定する）ことができます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /config/schedules/{SCHEDULE_ID}
@@ -374,7 +374,7 @@ POST /config/schedules/{SCHEDULE_ID}
 
 **リクエスト**
 
-次の要求では、 [JSONパッチの形式設定を使用して](http://jsonpatch.com/) 、スケジュール `state` の更新先を指定し `active`ます。
+次のリクエストでは、スケジュールの `state` を `active` に更新するために、[JSON パッチの形式](http://jsonpatch.com/)を使用しています。
 
 ```shell
 curl -X POST \
@@ -393,14 +393,14 @@ curl -X POST \
       ]'
 ```
 
-**応答**
+**応答** 
 
-更新が成功すると、空の応答本文とHTTPステータス204（コンテンツなし）が返されます。
+更新が成功すると、空の応答本文と HTTP ステータス 204（No Content）が返されます。
 
 同じ操作を使用して、前のリクエストの「値」を「inactive」に置き換えることで、スケジュールを無効にできます。
 
 ## 次の手順
 
-これで、新しいセグメントと既存のセグメントの両方をストリーミングセグメント用に有効にし、スケジュール済みのセグメントを有効にしてベースラインを作成し、定期的な評価を実行できるようになりました。
+新しいセグメントと既存のセグメントの両方でストリーミングセグメント化を有効にし、スケジュールされたセグメント化を有効にしてベースラインを開発し、定期評価を実行したので、組織のセグメントの作成を開始できます。
 
-Adobe Experience Platformのユーザーインターフェイスを使用して、同様の操作を実行し、セグメントを操作する方法については、 [セグメントビルダーユーザーガイドを参照してください](../ui/overview.md)。
+Adobe Experience Platform ユーザーインターフェイスを使用して同様のアクションを実行し、セグメントを操作する方法については、『[セグメントビルダーユーザーガイド](../ui/overview.md)』を参照してください。
