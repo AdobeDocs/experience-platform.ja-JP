@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: IDのネイティブIDの取得
+title: ID のネイティブ ID の取得
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 1%
+ht-degree: 73%
 
 ---
 
 
-# IDのXIDの取得
+# ID の XID の取得
 
-IDデータは、通常、取り込まれるXDMデータのID文字列値およびID名前空間として提供され、API呼び出しで使用するIDを指定する際に使用されます。 IDがで保持され [!DNL Identity Service]る場合、IDが生成され、ネイティブXIDと呼ばれるIDに割り当てられます。 [!DNL Platform] 集計されたIDと名前空間に対して、よりコンパクトなフォームを使用するIDデータのサポートが必要なAPI。 XIDは、base64エンコードされた文字列です。
+ID データは、通常、取得される XDM データの ID 文字列値および ID 名前空間として提供され、API 呼び出しで使用する ID を指定する際に使用されます。When identities are persisted in [!DNL Identity Service], an ID is generated and assigned to that identity, called the native XID. [!DNL Platform]集約された ID と名前空間にこのよりコンパクトなフォームを使用して ID データのサポートを必要とする API。XID は base64 エンコードされた文字列です。
 
 >[!NOTE]
 >
->この形式は主にアドビ内部での使用を目的としています。 単数値としてのネイティブXIDは、スペース効率が高く、ストレージとシリアル化のための [!DNL Platform] ソリューション内で内部的に使用されるものです。 ただし、読み取り専用ではなく不透明で、使用するには別の呼び出しが必要です。
+> この形式は主にアドビ内部での使用を目的としています。Native XID as a singular value is more space efficient and is what is used internally within [!DNL Platform] solutions for storage and serialization. しかし、人間が読み取れるわけではなく、不透明で、使用するために別の呼び出しが必要です。
 
-この節で説明するサービスを使用して、特定のID値と名前空間のXIDを取得します。
+この節で説明するサービスを使用して、指定した ID 値と名前空間の XID を取得します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/identity?namespace={NAMESPACE}&id={ID_VALUE}
@@ -39,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```json
 {
