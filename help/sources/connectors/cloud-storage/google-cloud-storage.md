@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
 workflow-type: tm+mt
 source-wordcount: '370'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platformは、AWS、 [!DNL Google Cloud Platform]およびなどのクラウドプロバイダーに対してネイティブの接続を提供し、これらのシステムからデータを取得でき [!DNL Azure]ます。
 
-Cloudストレージソースからは、ダウンロード、フォーマット、アップロードを行う [!DNL Platform] ことなく、独自のデータをに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] バッチを使用してデータを取り込むこ [!DNL Google Cloud Storage] とができます。
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] バッチを使用してデータを取り込むこ [!DNL Google Cloud Storage] とができます。
 
 ## IPアドレス許可リスト
 
@@ -56,7 +56,7 @@ Cloudストレージソースからは、ダウンロード、フォーマット
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-[ **[!UICONTROL 設定]** ]ページが表示されます。 ここから、 [!DNL Google] プロジェクトIDに関する情報とアカウントに関する詳細を確認でき [!DNL Google Cloud Storage] ます。 相互運用性設定にアクセスするには、上部のヘッダーで **[!UICONTROL 「Interoperability]** 」を選択します。
+The **[!UICONTROL Settings]** page appears. ここから、 [!DNL Google] プロジェクトIDに関する情報とアカウントに関する詳細を確認でき [!DNL Google Cloud Storage] ます。 相互運用性設定にアクセスするには、上部のヘッダーで **[!UICONTROL 「Interoperability]** 」を選択します。
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
@@ -78,7 +78,7 @@ Cloudストレージソースからは、ダウンロード、フォーマット
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
-### UIの使用
+### UI の使用
 
-- [UIでのGoogle Cloudストレージソースコネクタの作成](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [UI での Google Cloud ストレージソースコネクタの作成](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
 - [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
