@@ -7,53 +7,53 @@ translation-type: tm+mt
 source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
 source-wordcount: '428'
-ht-degree: 0%
+ht-degree: 72%
 
 ---
 
 
 # インテリジェントサービスの概要
 
-インテリジェントサービスは、マーケティングアナリストや実務者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用するよう強化します。 これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。 さらに、マーケティング担当者は、 [!DNL Adobe Experience Cloud]、 [!DNL Adobe Experience Platform]およびサードパーティのアプリケーションで予測をアクティブ化できます。
+マーケティングアナリストや担当者は、インテリジェントサービスを使用することで、人工知能と機械学習の能力を顧客体験の使用事例で活用できます。これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。Additionally, marketing practitioners can activate predictions in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], and 3rd party applications.
 
-次のビデオは、インテリジェントサービスに関する理解を深めるためのものです。 このビデオでは、ビジネス用途の例を使用して、高度なワークフローと、アトリビューションAIと顧客AIの両方の機能の概要を説明します。
+次のビデオは、インテリジェントサービスに関する理解を深めるためのものです。 このビデオでは、ビジネス用途の例を使用して、高レベルのワークフローと、Attribution AIAIとお客様AIの機能の概要を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
-## インテリジェント・サービスのメリット
+## インテリジェントサービスのメリット
 
-インテリジェントサービスは、AI-as-a-serviceへの顧客体験のアクセスを担当するマーケティング担当者に対して提供され [!DNL Adobe Experience Platform]るため、誰でも簡単に顧客行動を予測し、キャンペーンの影響を測定したり、すべての投資に対するより良いROIを確保できます。 以下に、インテリジェントサービスが提供する利点の一部を示します。
+Intelligent Services, built on [!DNL Adobe Experience Platform], gives marketers responsible for customer experience access to AI-as-a-service, making it easy for anyone to predict customer behavior, measure the impact of a campaign, or ensure better return on every investment. 以下に、インテリジェントサービスの利点の一部を示します。
 
 ### コスト効率に優れた市場投入速度
 
-アドビは、AI/MLに関する専門知識と深いCXM経験を組み合わせてAI/MLに関する知識を持ち、マーケター向けに特別に設計されており、稀少で高価なデータ科学者を雇う必要がなく、市場投入の迅速化と対応性が向上しています。
+アドビは、AI／ML の専門知識と CXM の豊富な経験を組み合わせて、マーケティング担当者向けのインテリジェントサービスを設計しました。このため、引く手あまたのデータサイエンティストを雇用する費用がなくても、マーケティングの一般的な使用事例に AI／ML を即座に導入でき、市場に投入するまでの時間を短縮することができます。
 
 ### 予測インサイトの精度の向上
 
-高度なアルゴリズムのAI/MLモデルを採用することで、最高の精度で開発。 深さと精度を備えた共通のデータセットに対してAI/MLを実行し、予測の切り分けと分割を可能にする機能。 および予測顧客の洞察を得るための情報です。
+高度なアルゴリズム的 AI／ML モデルを採用し、最高レベルの精度で開発されています。深度と精度を持つ共通のデータセット上で AI／ML を実行することで、予測の分析が可能になります。また、予測顧客インサイトの裏側にある動機や理由を示す能力もあります。
 
-### 洞察とROIに要する時間を短縮
+### インサイトと ROI を高速に取得
 
-マーケティング担当者は、新しいセルフサービスワークフロー、カスタム設定、柔軟なオプションにより、AI/MLをすぐに使い始め、マーケティングROIを向上させる開始を強化して、予測インサイトを操作できます。
+マーケティング担当者は AI／ML をすぐに使い始めることができます。また、新しいセルフサービスワークフロー、カスタム設定、柔軟なオプションを使用してマーケティングの ROI を向上させ、予測インサイトを運用可能にすることができます。
 
-## インテリジェントサービスワークフロー
+## インテリジェントサービスのワークフロー
 
-### インゲスト
+### 取り込み
 
-顧客データは、エクスペリエンスデータモデル(XDM)がオンの状態で取り込まれ、変換され [!DNL Adobe Experience Platform]ます。 XDMの詳細については、 [XDMの概要を参照してください](../xdm/home.md)。
+Customer data is ingested and transformed with the Experience Data Model (XDM) on [!DNL Adobe Experience Platform]. XDM について詳しくは、[XDM の概要](../xdm/home.md)を参照してください。
 
-### メッセージの
+### 設定
 
-マーケティングアナリストは、ビジネスルールを指定し、関連データを特定することで、期待される予測を設定します。
+マーケティングアナリストは、ビジネスルールを指定し、関連データを識別して、目的の予測を設定します。
 
 ### 予測
 
-モデルがトレーニングとスコアリングを終了すると、スコアがプラットフォームに書き戻されます。
+モデルのトレーニングとスコア測定が完了すると、スコアが Platform にもう一度書き込まれます。
 
-### 対策を講じる
+### 行動の決定
 
-最後に、インサイトの消費、全体でのアプリのアクティブ化、カスタムダッシュボードの作成など、予測に対して実行するアクションを決定でき [!DNL Adobe Experience Cloud]ます。
+Lastly, you can decide what actions to take with the predictions, such as consuming insights, activating applications across the [!DNL Adobe Experience Cloud], and building custom dashboards.
 
 ## 次の手順
 
-現在、インテリジェントサービスオファーアトリビューションAIとお客様向けAIです。 アトリビューションAIを使用すると、チャネルやキャンペーン全体でマーケティング効果をインテリジェントに推進できます。 アトリビューションAIについて詳しくは、 [アトリビューションAIの概要を参照してください](./attribution-ai/overview.md)。 顧客AIを使用すると、マーケティング担当者は顧客体験を過度にパーソナライズできます。 顧客AIについて詳しくは、 [顧客AIの概要を参照してください](./customer-ai/overview.md)。
+現在、インテリジェントサービスには Attribution AI と顧客 AI が用意されています。Attribution AI を使用すると、マーケティング担当者は様々なチャネルやキャンペーンを通して、マーケティングの効果を効率的に高めることができます。Attribution AI について詳しくは、「[Attribution AI の概要](./attribution-ai/overview.md)」を参照してください。マーケティング担当者は、顧客 AI を使用して顧客体験を高度にパーソナライズできます。顧客 AI について詳しくは、「[Customer AI overview](./customer-ai/overview.md)」を参照してください。
