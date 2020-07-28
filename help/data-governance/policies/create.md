@@ -7,44 +7,44 @@ translation-type: tm+mt
 source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
 source-wordcount: '1186'
-ht-degree: 3%
+ht-degree: 82%
 
 ---
 
 
-# APIでのデータ使用ポリシーの作成
+# データ使用ポリシーの作成 (API)
 
-Data Usage Labeling and Enforcement(DULE)は、Adobe Experience Platformの中核的なメカニズム [!DNL Data Governance]です。 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) (DULE Policy Service API)を使用すると、DULEポリシーを作成および管理して、特定のDULEラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. [データポリシーサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) を使用すると 、データポリシーを作成および管理して、特定のデータラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
 
-このドキュメントでは、 [!DNL Policy Service] APIを使用してDULEポリシーを作成するための、手順を追ったチュートリアルを提供します。 APIで利用可能な様々な操作の詳細なガイドについては、 [Policy Service開発者ガイドを参照してください](../api/getting-started.md)。
+This document provides a step-by-step tutorial for creating a DULE policy using the [!DNL Policy Service] API. API で利用可能な様々な操作についての詳しいガイドは、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。
 
 ## はじめに
 
-このチュートリアルでは、DULEポリシーの作成と評価に関する次の主要概念について、十分に理解している必要があります。
+このチュートリアルでは、データポリシーの作成と評価に関わる次の主要概念に関する十分な知識が必要です。 
 
 * [!DNL Data Governance](../home.md): データ使用のコンプライアンスを [!DNL Platform] 適用するフレームワーク。
-* [データ使用ラベル](../labels/overview.md): データ使用ラベルは、XDMデータフィールドに適用され、そのデータへのアクセス方法に関する制限を指定します。
+* [データ使用ラベル](../labels/overview.md)：データ使用ラベルは、XDM データフィールドに適用され、そのデータのアクセス方法に関する制限を指定します。
 * [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 * [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-このチュートリアルを開始する前に、 [開発者ガイドを参照して](../api/getting-started.md) 、必要なヘッダーやAPI呼び出し例の読み方など、DULE [!DNL Policy Service] APIを正しく呼び出すために必要な重要な情報を確認してください。
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE [!DNL Policy Service] API, including required headers and how to read example API calls.
 
 ## マーケティングアクションの定義 {#define-action}
 
-この [!DNL Data Governance] フレームワークでは、マーケティングアクションとは、 [!DNL Experience Platform] データ消費者が行うアクションのことで、データ使用ポリシーの違反を確認する必要があります。
+In the [!DNL Data Governance] framework, a marketing action is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
-DULEポリシーを作成する最初の手順は、ポリシーが評価するマーケティングアクションを決定することです。 これは、次のいずれかのオプションを使用して行うことができます。
+データポリシーを作成する最初の手順は、ポリシーが評価するマーケティングアクションを決定することです。これは、次のいずれかのオプションを使用しておこなうことができます。
 
 * [既存のマーケティングアクションの検索](#look-up)
 * [新しいマーケティングアクションの作成](#create-new)
 
 ### 既存のマーケティングアクションの検索 {#look-up}
 
-GETリクエストをエンドポイントの1つに作成することで、DULEポリシーで評価される既存のマーケティングアクションを検索でき `/marketingActions` ます。
+いずれかの `/marketingActions` エンドポイントに GET リクエストを実行することで、既存のマーケティングアクションを検索して、データポリシーで評価することができます。
 
-**API形式**
+**API 形式**
 
-組織が提供するマーケティングアクションを検索するか、組織が作成したカスタムマーケティングアクション [!DNL Experience Platform] を検索するかに応じて、それぞれ `marketingActions/core` のエンドポイントを使用し `marketingActions/custom` ます。
+Depending on whether you are looking up a marketing action provided by [!DNL Experience Platform] or a custom marketing action created by your organization, use the `marketingActions/core` or `marketingActions/custom` endpoints, respectively.
 
 ```http
 GET /marketingActions/core
@@ -53,7 +53,7 @@ GET /marketingActions/custom
 
 **リクエスト**
 
-次のリクエストは、エンドポイントを使用します。 `marketingActions/custom` エンドポイントは、IMS組織によって定義されているすべてのマーケティングアクションのリストを取得します。
+次のリクエストは、`marketingActions/custom` エンドポイントを使用して、IMS 組織で定義されているすべてのマーケティングリストのアクションを取得します。
 
 ```shell
 curl -X GET \
@@ -64,9 +64,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、検出されたマーケティングアクションの総数(`count`)と、配列内のマーケティングアクション自体の詳細をリストに返し `children` ます。
+正常な応答は、検出されたマーケティングアクションの総数（`count`）と、`children` 配列内のマーケティングアクション自体の詳細をリストに返します。
 
 ```json
 {
@@ -119,15 +119,15 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `_links.self.href` | 配列内の各項目には、一覧表示されたマーケティングアクションのURI IDが含まれ `children` ます。 |
+| `_links.self.href` | `children` 配列内の各項目には、一覧表示されたマーケティングアクションの URI ID が含まれます。 |
 
-使用するマーケティングアクションが見つかったら、その `href` プロパティの値を記録します。 この値は、DULEポリシーを [作成する次の手順で使用されます](#create-policy)。
+使用するマーケティングアクションが見つかったら、その `href` プロパティの値を記録します。この値は、次の手順で[データポリシーを作成する](#create-policy)際に使用されます。
 
 ### 新しいマーケティングアクションの作成 {#create-new}
 
-エンドポイントにPUTリクエストを作成し、リクエストパスの最後にマーケティングアクションの名前を指定することで、新しいマーケティングアクションを作成でき `/marketingActions/custom/` ます。
+`/marketingActions/custom/` エンドポイントに PUT リクエストを実行して、リクエストパスの最後にマーケティングアクションの名前を指定することで、新しいマーケティングアクションを作成できます。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
@@ -135,11 +135,11 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 作成する新しいマーケティングアクションの名前。 この名前はマーケティングアクションの主な識別子として機能するので、一意である必要があります。 マーケティングアクションにわかりやすいが簡潔な名前を付けることをお勧めします。 |
+| `{MARKETING_ACTION_NAME}` | 作成する新しいマーケティングアクションの名前。この名前はマーケティングアクションの主識別子として機能するので、一意である必要があります。ベストプラクティスは、マーケティングアクションに説明的で簡潔な名前を付けることです。 |
 
 **リクエスト**
 
-次のリクエストは、「exportToThirdParty」という新しいカスタムマーケティングアクションを作成します。 リクエストペイロード `name` 内のは、リクエストパスで指定された名前と同じであることに注意してください。
+次のリクエストでは、「exportToThirdParty」という新しいカスタムマーケティングアクションが作成されます。リクエストペイロード内の `name` は、リクエストパスで指定された名前と同じであることに注意してください。
 
 ```shell
 curl -X PUT \  
@@ -157,12 +157,12 @@ curl -X PUT \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | 作成するマーケティングアクションの名前。 この名前は、要求パスに指定された名前と一致する必要があります。一致しないと、400(Bad Request)エラーが発生します。 |
-| `description` | マーケティングアクションに関する人間が読める説明です。 |
+| `name` | 作成するマーケティングアクションの名前。この名前は、リクエストパスで指定された名前と一致する必要があります。一致しないと、400（不正なリクエスト）エラーが発生します。 |
+| `description` | マーケティングアクションのわかりやすい説明。 |
 
-**応答**
+**応答** 
 
-正常な応答が返されると、HTTPステータス201（作成済み）と、新しく作成されたマーケティングアクションの詳細が返されます。
+正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたマーケティングアクションの詳細を返します。
 
 ```json
 {
@@ -185,15 +185,15 @@ curl -X PUT \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `_links.self.href` | マーケティングアクションのURI ID。 |
+| `_links.self.href` | マーケティングアクションの URI ID。 |
 
-新しく作成したマーケティングアクションのURI IDを記録します。URI IDは、DULEポリシーを作成する次の手順で使用します。
+新しく作成したマーケティングアクションの URI ID を記録します。これは、データポリシーの作成の次の手順で使用されます。
 
-## SCHEDULEポリシーの作成 {#create-policy}
+## データポリシーの作成 {#create-policy}
 
-新しいポリシーを作成するには、マーケティングアクションのURI IDと、そのマーケティングアクションを禁止するDULEラベルの式を指定する必要があります。
+新しいポリシーを作成するには、マーケティングアクションの URI ID と、そのマーケティングアクションを禁止するデータラベルの式を指定する必要があります。
 
-この式は **ポリシー式と呼ばれ** 、(A) DULEラベル、または(B)演算子と演算値のどちらかを含むオブジェクトですが、両方を含むわけではありません。 また、各オペランドもポリシー式オブジェクトです。 例えば、データのサードパーティへのエクスポートに関するポリシーは、ラベルが存在する場合は禁止され `C1 OR (C3 AND C7)` る可能性があります。 この式は次のように指定します。
+この式は&#x200B;**ポリシー式**&#x200B;と呼ばれ、（A）データラベル、または（B）演算子と演算値のどちらか 1 つのみを含むオブジェクトです。また、各演算値もポリシー式オブジェクトです。例えば、`C1 OR (C3 AND C7)` ラベルが存在する場合、サードパーティへのデータの書き出しに関するポリシーは禁止される可能性があります。この式は次のように指定します。
 
 ```json
 "deny": {
@@ -219,11 +219,11 @@ curl -X PUT \
 
 >[!NOTE]
 >
->ORおよびAND演算子のみがサポートされます。
+> OR および AND 演算子のみがサポートされます。
 
-ポリシー式を設定したら、エンドポイントにPOSTリクエストを行って、新しいDULEポリシーを作成でき `/policies/custom` ます。
+ポリシー式を設定したら、`/policies/custom` エンドポイントに POST リクエストを実行して、新しいデータポリシーを作成できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /policies/custom
@@ -231,7 +231,7 @@ POST /policies/custom
 
 **リクエスト**
 
-次のリクエストは、リクエストペイロードにマーケティングアクションとポリシーの式を指定して、「Export Data to Third Party」というDULEポリシーを作成します。
+次のリクエストは、リクエストペイロードにマーケティングアクションとポリシー式を指定することで、「Export Data to Third Party」と呼ばれるデータポリシーを作成します。
 
 ```shell
 curl -X POST \
@@ -266,12 +266,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `marketingActionRefs` | `href` 前の手順で取得したマーケティングアクションの [値を含む配列](#define-action)。 上記の例では、1つのマーケティングリストのみが行われますが、複数のアクションを指定することもできます。 |
-| `deny` | ポリシー式オブジェクトです。 で参照されるマーケティングアクションをポリシーが拒否する原因となるDULEのラベルと条件を定義し `marketingActionRefs`ます。 |
+| `marketingActionRefs` | [前の手順](#define-action)で取得したマーケティングアクションの `href` 値を含む配列。上記の例では、1 つのリストのみがマーケティングアクションとして扱われますが、複数のアクションを指定することもできます。 |
+| `deny` | ポリシー式オブジェクト。`marketingActionRefs` で参照されているマーケティングアクションをポリシーが拒否する原因となるデータのラベルと条件を定義します。 |
 
-**応答**
+**応答** 
 
-正常に応答すると、HTTPステータス201（作成済み）と、新しく作成されたポリシーの詳細が返されます。
+正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたポリシーの詳細を返します。
 
 ```json
 {
@@ -318,19 +318,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | DULEポリシーを一意に識別する、読み取り専用の、システム生成値。 |
+| `id` | データポリシーを一意に識別する、読み取り専用のシステム生成値。 |
 
-次の手順でポリシーを有効にする際に使用する、新しく作成したDULEポリシーのURI IDを記録します。
+次の手順でポリシーを有効にする際に使用する、新しく作成したデータポリシーの URI ID を記録します。
 
-## DULEポリシーの有効化
+## データポリシーの有効化
 
 >[!NOTE]
 >
->この手順はオプションですが、SCHEDULEポリシーのステータスを変更しない場合は、デフォルトで、評価に参加するにはポリシーのステータスがに設定され `DRAFT``ENABLED` ている必要があります。 ステータスのポリシーに対して例外を行う方法については、 [DULEポリシーの](../enforcement/api-enforcement.md) 適用に関するチュートリアルを参照してく `DRAFT` ださい。
+> この手順はオプションですが、データポリシーを `DRAFT` ステータスのままにする場合は、評価に参加するためにはデフォルトでポリシーのステータスが「`ENABLED`」に設定されている必要があることに注意してください。`DRAFT` ステータスのポリシーに対する例外を作成する方法については、[データポリシーの実施](../enforcement/api-enforcement.md)に関するチュートリアルを参照してください。
 
-デフォルトでは、プロパティが「 `status` 」に設定されているSCHEDULEポリシーは評価に `DRAFT` 関与しません。 エンドポイントにPATCH要求を行い、要求パスの最後にポリシーの一意の識別子を指定することで、評価用のポリシーを有効にすることがで `/policies/custom/` きます。
+デフォルトでは、`status` プロパティが `DRAFT` に設定されたデータポリシーは評価に参加しません。`/policies/custom/` エンドポイントに PATCH リクエストを実行して、リクエストパスの最後にそのポリシーの一意の識別子を指定することで、ポリシーの評価を有効にできます。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /policies/custom/{POLICY_ID}
@@ -342,7 +342,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **リクエスト**
 
-次の要求は、DULEポリシーの `status` プロパティに対してPATCH操作を実行し、値をからに変更 `DRAFT` し `ENABLED`ます。
+次のリクエストは、データポリシーの `status` プロパティに対して PATCH 操作を実行し、値を `DRAFT` から `ENABLED` に変更します 。
 
 ```shell
 curl -X PATCH \
@@ -363,13 +363,13 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `op` | 実行するPATCH操作のタイプ。 このリクエストは「置換」操作を実行します。 |
-| `path` | 更新するフィールドへのパス。 ポリシーを有効にする場合、値を「/status」に設定する必要があります。 |
-| `value` | で指定したプロパティに割り当てる新しい値 `path`。 この要求では、ポリシーのプロパティが「ENABLED」に設定され `status` ます。 |
+| `op` | 実行する PATCH 操作のタイプ。このリクエストは「置換」操作を実行します。 |
+| `path` | 更新するフィールドへのパス。ポリシーを有効にする場合は、値を「/status」に設定する必要があります。 |
+| `value` | `path` で指定したプロパティに割り当てる新しい値。このリクエストでは、ポリシーの `status` プロパティが「有効」に設定されます。 |
 
-**応答**
+**応答** 
 
-正常に応答すると、HTTPステータス200 (OK)と、更新されたポリシーの詳細が返されます。 `status` 現在は、に設定されて `ENABLED`います。
+正常な応答は、HTTP ステータス 200（OK）と、更新されたポリシーの詳細を返します。`status` は `ENABLED` に設定されています。
 
 ```json
 {
@@ -416,8 +416,8 @@ curl -X PATCH \
 
 ## 次の手順
 
-このチュートリアルに従うと、マーケティングアクションのデータ使用ポリシーが正しく作成されました。 データ使用ポリシーの [](../enforcement/api-enforcement.md) 適用に関するチュートリアルを続行して、ポリシー違反を確認し、エクスペリエンスアプリケーションでそれらを処理する方法を学ぶことができます。
+このチュートリアルでは、マーケティングアクションのデータ使用ポリシーを作成しました。[データ使用ポリシーの実施](../enforcement/api-enforcement.md)に関するチュートリアルを続けて、ポリシー違反を確認し、エクスペリエンスアプリケーションでそれらを処理する方法を学ぶことができます。
 
-APIで使用可能な様々な操作について詳しくは、 [!DNL Policy Service] Policy Service開発者ガイドを参照してください [](../api/getting-started.md)。 データに対してポリシーを適用する方法については、オーディエンスセグメントに対するデータの使用に対するコンプライアンスの [!DNL Real-time Customer Profile] 適用に関するチュートリアル [](../../segmentation/tutorials/governance.md)を参照してください。
+For more information on the different available operations in the [!DNL Policy Service] API,  see the [Policy Service developer guide](../api/getting-started.md). For information on how to enforce policies for [!DNL Real-time Customer Profile] data, see the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md).
 
-ユーザーインターフェイスで使用ポリシーを管理する方法については、「 [!DNL Experience Platform][ポリシーユーザーガイド](user-guide.md)」を参照してください。
+To learn how to manage usage policies in the [!DNL Experience Platform] user interface, see the [policy user guide](user-guide.md).
