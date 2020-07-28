@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: カフカコネクタ
+title: Kafka コネクタ
 topic: overview
 translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 0%
+ht-degree: 36%
 
 ---
 
 
-# [!DNL Kafka] Adobe Experience Platform用コネクタ
+# [!DNL Kafka]Adobe Experience Platform 用 コネクタ
 
-Adobe Experience Platform用ストリームコネクタは、に基づいてい [!DNL Apache Kafka Connect]ます。 このライブラリは、データセンターのトピックからJSONイベントを直接リアルタイムにストリーミングするため [!DNL Kafka][!DNL Experience Platform] に使用できます。
+The stream connector for Adobe Experience Platform is based on [!DNL Apache Kafka Connect]. This library can be used to stream JSON events from [!DNL Kafka] topics in your data center directly to [!DNL Experience Platform] in real-time.
 
-ストリームコネクタはシンク（一方向）コネクタで、トピックからのデータを上の登録されたエンドポイントに配信 [!DNL Kafka] し [!DNL Experience Platform]ます。 このコネクタを使用するには、ライブラリをダウンロードし、既存の [!DNL Kafka] デプロイメントに追加して、Adobe Streaming HTTP URLにト [!DNL Kafka] ピックを設定する必要があります。 追加のコードは **不要です** 。 コネクタは、次の機能をサポートしています。
+The stream connector is a sink (one-way) connector, delivering data from [!DNL Kafka] topics to a registered endpoint on [!DNL Experience Platform]. To use this connector, you must download the library, add it to your existing [!DNL Kafka] deployment, and configure the [!DNL Kafka] topic(s) to the Adobe Streaming HTTP URL. 追加のコードは必要&#x200B;**ありません**。コネクタでは、次の機能がサポートされています。
 
 - 認証済みのデータ収集
 - メッセージのバッチ処理によるネットワーク呼び出しの削減とスループットの向上
 
-コネクタの設定手順など、 [!DNL Kafka] コネクタの詳細については、『 [はじめに](https://github.com/adobe/experience-platform-streaming-connect)』を参照してください。 ワークフローについて詳しくは、 [開発者ガイドを参照してください](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md)。
+For more information on the [!DNL Kafka] connector, including instructions on how to set up the connector, please read the [getting started guide](https://github.com/adobe/experience-platform-streaming-connect). ワークフローについて詳しくは、「[Developer Guide](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md)」を参照してください。
