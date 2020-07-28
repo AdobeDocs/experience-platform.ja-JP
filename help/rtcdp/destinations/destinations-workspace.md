@@ -7,16 +7,16 @@ translation-type: tm+mt
 source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 workflow-type: tm+mt
 source-wordcount: '609'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
 
 # 宛先ワークスペース {#destinations-workspace}
 
-アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択して、宛先ワークスペースにアクセスします。
+アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択して、[!UICONTROL 宛先]ワークスペースにアクセスします。
 
-The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL Catalog]**, **[!UICONTROL Browse]**, **[!UICONTROL Accounts]**, and **[!UICONTROL System View]**, which are described in the sections below.
+[!UICONTROL 宛先]ワークスペースは、「**[!UICONTROL カタログ]**」、「**[!UICONTROL 参照]**」、「**[!UICONTROL アカウント]**」、「**[!UICONTROL システム表示]**」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 
 ![宛先 — 概要](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -24,9 +24,9 @@ The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL
 
 「**[!UICONTROL カタログ]**」タブには、アドビが提供するすべての宛先のリストが表示されます。このリストには、データを送信できます。
 
-ページの検索機能を使用して、 **[!UICONTROL カテゴリ]** ・コントロールを使用して特定の宛先を見つけたり、宛先をフィルターしたりします。
+ページ上の検索機能を使用して、**[!UICONTROL カテゴリ]**&#x200B;コントロールを使用して、特定の宛先を見つけたり、宛先をフィルターしたりします。
 
-カタログ内の宛先を選択して、右側のレールを開きます。Here, you can set up a connection to the destination (**[!UICONTROL Connect destination]**), view existing destination connections (**[!UICONTROL Browse destinations]**) or learn more detailed information about each destination by viewing the documentation (**[!UICONTROL View documentation]**).
+カタログ内の宛先を選択して、右側のレールを開きます。ここでは、宛先への接続を設定する（**[!UICONTROL 宛先の接続]**）、既存の宛先の接続を表示する（**[!UICONTROL 宛先の閲覧]**）、ドキュメントを参照して各宛先に関する詳細情報を確認（**[!UICONTROL ドキュメントを表示]**）できます。
 
 ![宛先カタログオプション](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
@@ -34,7 +34,7 @@ The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL
 
 ## [!UICONTROL 参照] {#browse}
 
-「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。Destinations with the **[!UICONTROL enabled]** toggle turned on set the destination to active and vice-versa. また、**[!UICONTROL セグメント／参照]**&#x200B;を選択し、検査するセグメントを選択すると、データのフロー先を表示することもできます。「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
+「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。切り替えを&#x200B;**[!UICONTROL 有効]**&#x200B;にした宛先はアクティブに設定し、逆も同様に設定します。また、**[!UICONTROL セグメント／参照]**&#x200B;を選択し、検査するセグメントを選択すると、データのフロー先を表示することもできます。「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
 
 ![「参照」タブ](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -42,11 +42,11 @@ The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL
 ---------|----------
 | 名前 | この宛先へのアクティベーションフローに指定した名前。 |
 | [!UICONTROL 宛先] | アクティベーションフローに対して選択した宛先プラットフォームです。 |
-| [!UICONTROL 接続タイプ] | ストレージグループまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合： S3またはFTPを使用できます。</li><li>リアルタイム広告の送信先の場合： サーバー間</li></ul> |
+| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3 または FTP</li><li>リアルタイム広告の宛先の場合：サーバー間</li></ul> |
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
 | [!UICONTROL セグメント] | この宛先に対してアクティブ化されているセグメントの数。 |
-| [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）です。 |
-| [!UICONTROL Status] | `Active` または `Inactive`.データが現在この宛先に対してアクティブ化されているかどうかを示します。ステータスを編集するには、「[アクティベーションの無効化](/help/rtcdp/destinations/activate-destinations.md#disable-activation)」を参照してください。 |
+| [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）。 |
+| [!UICONTROL ステータス] | `Active` または `Inactive`.データが現在この宛先に対してアクティブ化されているかどうかを示します。ステータスを編集するには、「[アクティベーションの無効化](/help/rtcdp/destinations/activate-destinations.md#disable-activation)」を参照してください。 |
 
 目的の行をクリックすると、目的の行に関する詳細情報が右側のレールに表示されます。
 
@@ -63,18 +63,18 @@ The [!UICONTROL Destinations] workspace consists of four sections, **[!UICONTROL
 | 要素 | 説明 |
 ---------|----------
 | [!UICONTROL プラットフォーム] | 接続を設定した宛先。 |
-| [!UICONTROL 接続タイプ] | ストレージグループまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合： S3またはFTPを使用できます。</li><li>リアルタイム広告の送信先の場合： サーバー間</li><li>Amazon S3クラウドストレージの宛先の場合： アクセスキー </li><li>SFTPクラウドストレージの宛先の場合： SFTPの基本認証</li></ul> |
+| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3 または FTP</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3 クラウドストレージの宛先：アクセスキー </li><li>SFTP クラウドストレージの宛先：SFTP の基本認証</li></ul> |
 | [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)で選択したユーザー名。 |
 | [!UICONTROL データフロー] | 宛先に対して作成された基本情報に接続された、一意に成功した宛先フローの数を表します。 |
 | [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
-| [!UICONTROL Status] | `Active` または `Inactive`.データが現在この宛先に対してアクティブ化されているかどうかを示します。ステータスを編集するには、「[アクティベーションの無効化](/help/rtcdp/destinations/activate-destinations.md#disable-activation)」を参照してください。 |
+| [!UICONTROL ステータス] | `Active` または `Inactive`.データが現在この宛先に対してアクティブ化されているかどうかを示します。ステータスを編集するには、「[アクティベーションの無効化](/help/rtcdp/destinations/activate-destinations.md#disable-activation)」を参照してください。 |
 
-## [!UICONTROL システム表示] {#system-view}
+## [!UICONTROL システム表示]{#system-view}
 
-The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
+「**[!UICONTROL システム表示]**」タブには、リアルタイム顧客データプラットフォームで設定したアクティベーションフローの図が表示されます。
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
-Select any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see information on all the connections you have set up for each destination.
+ページに表示される任意の宛先を選択し、「**[!UICONTROL フローを表示]**」を押して、各宛先に設定したすべての接続に関する情報を表示します。
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
