@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
 source-wordcount: '467'
-ht-degree: 0%
+ht-degree: 6%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 ## ジョブの書き出し
 
-書き出しジョブは、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 エンドポイントを使用して、すべての書き出しジョブの取得、新しい書き出しジョブの作成、特定の書き出しジョブの詳細の取得または特定の書き出しジョブのキャンセルを行うことができます。 `/export/jobs`
+ジョブの書き出し は、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 エンドポイントを使用して、すべての書き出しジョブの取得、新しい書き出しジョブの作成、特定の書き出しジョブの詳細の取得または特定の書き出しジョブのキャンセルを行うことができます。 `/export/jobs`
 
-このエンドポイントの使用方法の詳細については、『 [書き出しジョブエンドポイントガイド](./export-jobs.md)』を参照してください。
+For more information on using this endpoint, please read the [export jobs endpoint guide](./export-jobs.md).
 
 ## プレビューと予測
 
@@ -38,19 +38,19 @@ ht-degree: 0%
 
 スケジュールは、バッチセグメントジョブを1日1回自動的に実行するために使用できるツールです。 エンドポイントを使用して、スケジュールのリストの取得、新しいスケジュールの作成、特定のスケジュールの詳細の取得、特定のスケジュールの更新または特定のスケジュールの削除を行うことができます。 `/config/schedules`
 
-このエンドポイントの使用に関する詳細は、エンドポイントの [スケジュールのガイドを参照してください](./schedules.md)。
+For more information on using this endpoint, please read the [schedules endpoint guide](./schedules.md).
 
-## セグメント定義
+## セグメントの定義
 
 セグメント定義は、どのプロファイルがどのオーディエンスセグメントに含まれるかを定義します。 エンドポイントを使用して、セグメント定義を管理でき `/segment/definitions` ます。
 
-このエンドポイントの使用方法の詳細については、『 [セグメント定義エンドポイントガイド](./segment-definitions.md)』を参照してください。
+For more information on using this endpoint, please read the [segment definitions endpoint guide](./segment-definitions.md).
 
 ## セグメントジョブ
 
-セグメントジョブは、以前に確立されたセグメント定義を処理して、オーディエンスセグメントを生成します。 エンドポイントを使用して、セグメントジョブを管理でき `/segment/jobs` ます。
+セグメントジョブでは、以前に確立されたセグメント定義が処理され、オーディエンスセグメントが生成されます。エンドポイントを使用して、セグメントジョブを管理でき `/segment/jobs` ます。
 
-このエンドポイントの使用方法の詳細については、『 [セグメントジョブエンドポイントガイド](./segment-jobs.md)』を参照してください。
+For more information on using this endpoint, please read the [segment jobs endpoint guide](./segment-jobs.md).
 
 ## セグメント検索
 
@@ -58,4 +58,4 @@ ht-degree: 0%
 
 ## 次の手順
 
-APIの使用を開始するには、様々なエンドポイントガイドを参照して、サービスの様々なエンドポイントを呼び出す方法に関する詳細な手順を確認してください。 [!DNL Segmentation Service] UIを使用したセグメントの操作について詳しくは、 [!DNL Platform] セグメン [ト化ユーザーガイドを参照してください](../ui/overview.md)。
+APIの使用を開始するには、様々なエンドポイントガイドを参照して、サービスの様々なエンドポイントを呼び出す方法に関する詳細な手順を確認してください。 [!DNL Segmentation Service] To learn more about working with segments using the [!DNL Platform] UI, see the [Segmentation user guide](../ui/overview.md).
