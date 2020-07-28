@@ -1,41 +1,41 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: クエリ結果からデータセットを生成する
+title: データセットをクエリ結果から生成する
 topic: queries
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '270'
-ht-degree: 0%
+ht-degree: 56%
 
 ---
 
 
-# クエリ結果からデータセットを生成する
+# データセットをクエリ結果から生成する
 
 の真の力 [!DNL Query Service] は、クエリを使用してデータセットを生成し、より多くのクエリへの入力として、または [!DNL Data Lake] 、 [!DNL Data Science Workspace]、などの他のサービスで使用する場合に明らかになり [!DNL Real-time Customer Profile][!DNL Analysis Workspace]ます。
 
 [!DNL Query Service] UIからデータセットを作成できます。 次の手順に従います。
 
-1. 接続されたクライアントを使用してクエリを書き込み、出力を検証します。
-2. UIにログインし、 [!DNL Platform] クエリに移動します。
-3. リスト内のクエリを見つけ、行の上にカーソルを置きます。
-4. 「データセット **[!UICONTROL を作成]**」をクリックします。 ![画像](../images/queries/create-datasets/click-create-dataset.png)
-5. LDAP IDの前に付けたデータセット名を入力します（一意である必要もSQLセーフでない場合もあります）。 システムは、ここで与えられた名前に基づいて「テーブル名」を生成します)。
-6. データセットの説明を入力し、「 **[!UICONTROL クエリを実行]**」をクリックします。![画像](../images/queries/create-datasets/run-query.png)
-7. クエリの完了を確認し、データセットリストページに移動して、先ほど作成したデータセットを確認します。
+1. 接続されたクライアントを使用してクエリを記述し、出力を検証します。
+2. Log in to the [!DNL Platform] UI and go to Queries.
+3. リストでクエリを探し、その行にカーソルを合わせます。
+4. 「**[!UICONTROL データセットを作成]**」をクリックします。![画像](../images/queries/create-datasets/click-create-dataset.png)
+5. LDAP ID の後にデータセット名を入力します（一意である必要も、SQL セーフである必要もありません。システムは、ここで指定した名前に基づいて「テーブル名」を生成します）。
+6. データセットの説明を入力し、「**[!UICONTROL クエリを実行]**」をクリックします。![画像](../images/queries/create-datasets/run-query.png)
+7. クエリの完了を確認し、データセットのリストページに移動して、作成したデータセットを確認します。
 
-作成したデータセットは、内の他のデータセットと同様にアクセスでき、様々な使用例 [!DNL Data Lake] に使用できます。
+After a dataset is created, it can be accessed like any other dataset in the [!DNL Data Lake] and used for a variety of use cases.
 
 >[!NOTE]
 >
->実稼動環境での導入では、データセットの作成後に [!DNL Data Governance] ラベルを適用する必要があります。
+>In a live implementation, you must apply [!DNL Data Governance] labels after the dataset is created.
 
-## 事前定義された [!DNL Experience Data Model] スキーマを使用したデータセットの生成
+## Generate datasets with a pre-defined [!DNL Experience Data Model] schema
 
-事前定義 [!DNL Experience Data Model] (XDM)スキーマを使用してデータセットを生成するには、SQL構文を使用する必要があります。 使用する構文の詳細については、『 [SQL構文』ガイドを参照してください](../sql/syntax.md#create-table-as-select)。
+In order to generate a dataset with a pre-defined [!DNL Experience Data Model] (XDM) schema, you will have to use the SQL syntax. 使用する構文について詳しくは、[SQL 構文のガイド](../sql/syntax.md#create-table-as-select)を参照してください。
 
-## 出力データセット
+## データセットを出力する
 
-この機能を使用して作成されたデータセットは、SQLステートメントで定義された出力データの構造と一致するアドホックスキーマで生成されます。 一部のダウンストリームサービスでは、特定の [!DNL Experience Data Model] (XDM)スキーマを持つデータセットが必要です。 クエリを書き込む前に、ダウンストリームサービスのデータフォーマット要件を確認します。
+この機能を使用して作成されるデータセットは、SQL 文で定義されているように、出力データの構造と一致するアドホックスキーマを使用して生成されます。Some downstream services require datasets with particular [!DNL Experience Data Model] (XDM) schemas. ダウンストリームサービスのデータ形式設定要件を確認してから、クエリを記述してください。
