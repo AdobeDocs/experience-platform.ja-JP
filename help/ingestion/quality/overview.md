@@ -7,52 +7,52 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 6%
+ht-degree: 80%
 
 ---
 
 
-# Adobe Experience Platformのデータ品質
+# Adobe Experience Platform のデータ品質
 
-Adobe Experience Platformは、バッチまたはストリーミング取り込みを通じてアップロードされたデータの完全性、正確性、一貫性に関して、明確な保証を提供します。 次のドキュメントに、でのバッチおよびストリーミング取り込みでサポートされているチェックおよび検証動作の概要を示 [!DNL Experience Platform]します。
+Adobe Experience Platform では、バッチまたはストリーミングの取り込みによりアップロードされたすべてのデータの完全性、正確性、一貫性が保証されています。The following document provides a summary of the supported checks and validation behaviors for batch and streaming ingestion in [!DNL Experience Platform].
 
 ## サポートされるチェック
 
-|   | バッチ取り込み | ストリーミング取り込み |
+|   | バッチの取り込み | ストリーミングの取り込み |
 | ------ | --------------- | ------------------- |
-| データタイプの確認 | ○ | ○ |
-| 列挙チェック | ○ | ○ |
-| 範囲チェック（最小、最大） | ○ | ○ |
-| 必須フィールドの確認 | ○ | はい |
-| パターンチェック | × | ○ |
-| 形式チェック | × | ○ |
+| データタイプのチェック | ○ | ○ |
+| 列挙のチェック | ○ | ○ |
+| 範囲のチェック（最小、最大） | ○ | ○ |
+| 必須フィールドのチェック | ○ | ○ |
+| パターンのチェック | × | ○ |
+| 書式のチェック | × | ○ |
 
-## サポートされる検証動作
+## サポートされる検証ビヘイビアー
 
-バッチとストリーミングの取り込みの両方で、失敗したデータがダウンストリームに行かないように、取得およびでの分析のために不正なデータを移動 [!DNL Data Lake]します。 データ取り込みでは、バッチおよびストリーミングの取り込みに関して次の検証を行うことができます。
+Both batch and streaming ingestion prevent failed data from going downstream by moving bad data for retrieval and analysis in [!DNL Data Lake]. バッチおよびストリーミングの取り込みでは、データに対して次の検証が実行されます。
 
-### バッチ取り込み
+### バッチの取り込み
 
-バッチ取り込みに関しては、次の検証が行われます。
-
-| 検証領域 | 説明 |
-| --------------- | ----------- |
-| スキーマ | 次のように、スキーマが **空ではなく** 、和集合スキーマへの参照が含まれていることを確認します。 `"meta:immutableTags": ["union"]` |
-| `identityField` | すべての有効なID記述子が定義されていることを確認します。 |
-| `createdUser` | バッチを取り込んだユーザーがバッチを取り込めるようにします。 |
-
-### ストリーミング取り込み
-
-ストリーミング取り込みに関しては、次の検証が行われます。
+バッチの取り込みでは、次の検証が実行されます。
 
 | 検証領域 | 説明 |
 | --------------- | ----------- |
-| スキーマ | 次のように、スキーマが **空ではなく** 、和集合スキーマへの参照が含まれていることを確認します。 `"meta:immutableTags": ["union"]` |
-| `identityField` | すべての有効なID記述子が定義されていることを確認します。 |
-| JSON | JSONが有効であることを確認します。 |
-| IMS組織 | 表示されるIMS組織が有効な組織であることを確認します。 |
+| スキーマ | スキーマが空&#x200B;**ではなく**、`"meta:immutableTags": ["union"]` のように union スキーマへの参照が含まれていることを確認します。 |
+| `identityField` | 有効な ID 記述子がすべて定義されていることを確認します。 |
+| `createdUser` | バッチを取り込んだユーザーにバッチの取り込みが許可されていることを確認します。 |
+
+### ストリーミングの取り込み
+
+ストリーミングの取り込みでは、次の検証が実行されます。
+
+| 検証領域 | 説明 |
+| --------------- | ----------- |
+| スキーマ | スキーマが空&#x200B;**ではなく**、`"meta:immutableTags": ["union"]` のように union スキーマへの参照が含まれていることを確認します。 |
+| `identityField` | 有効な ID 記述子がすべて定義されていることを確認します。 |
+| JSON | JSON が有効であることを確認します。 |
+| IMS 組織 | 表示される IMS 組織が有効な組織であることを確認します。 |
 | ソース名 | データソースの名前が指定されていることを確認します。 |
-| データセット | データセットが指定され、有効になっており、削除されていないことを確認します。 |
-| Header | ヘッダーが指定され、有効であることを確認します。 |
+| データセット | データセットが指定され有効になっていること、さらに削除されていないことを確認します。 |
+| ヘッダー | ヘッダーが指定され、有効になっていることを確認します。 |
 
-データの [!DNL Platform] 監視と検証の方法について詳しくは、「 [監視データ・フロー」のドキュメントを参照してください](./monitor-data-flows.md)。
+More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-flows.md).
