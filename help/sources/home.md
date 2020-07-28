@@ -1,48 +1,48 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platformソースコネクタの概要
+title: Adobe Experience Platform ソースコネクタの概要
 topic: overview
 translation-type: tm+mt
 source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
 source-wordcount: '800'
-ht-degree: 1%
+ht-degree: 59%
 
 ---
 
 
 # ソースコネクタの概要
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] には、様々なデータプロバイダーへのソース接続を簡単に設定できる、RESTful APIとインタラクティブUIが用意されています。 これらのソース接続を使用すると、サードパーティ製システムの認証、インジェストの実行時間の設定、データインジェストのスループットの管理を行うことができます。
+[!DNL Experience Platform] は、様々なデータプロバイダーへのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を提供します。これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
-こ [!DNL Experience Platform]れにより、異なるソースから収集したデータを一元管理し、得られた洞察を利用してより多くの作業を行うことができます。
+With [!DNL Experience Platform], you can centralize data you collect from disparate sources and use the insights gained from it to do more.
 
 ## ソースのタイプ
 
-のソース [!DNL Experience Platform] は、次のカテゴリにグループ化されます。
+Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 ### アドビアプリケーション
 
-[!DNL Experience Platform] アドビのAnalytics、Adobe Audience Manager、その他のアドビアプリケーションなど、他のアドビアプリケーションからデータを取り込むことができ [!DNL Experience Platform Launch]ます。 詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] Adobe Analytics、Adobe Audience Manager、などの他のAdobeアプリケーションからデータを取り込むことがで [!DNL Experience Platform Launch]きます。 詳しくは、次の関連ドキュメントを参照してください。
 
-- [Adobe Audience Managerコネクタの概要](connectors/adobe-applications/audience-manager.md)
-- [UIでのAdobe Audience Managerソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Data Connectorの概要](connectors/adobe-applications/analytics.md)
-- [UIでのAdobeAnalyticsソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Adobe Audience Manager コネクタの概要](connectors/adobe-applications/audience-manager.md)
+- [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Adobe Analytics Data コネクタの概要](connectors/adobe-applications/analytics.md)
+- [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
 - [UIでの顧客属性ソースコネクタの作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### 広告
 
-[!DNL Experience Platform] は、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [!DNL Google AdWords](connectors/advertising/ads.md) コネクタ
 
 ### クラウドストレージ
 
-Cloudストレージソースからは、ダウンロード、フォーマット、アップロードを行う [!DNL Platform] ことなく、独自のデータをに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、ユーザーインターフェイスを使用してSourcesワークフローに統合されます。 詳しくは、次の関連ドキュメントを参照してください。
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) コネクタ
 - [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) コネクタ
@@ -55,21 +55,21 @@ Cloudストレージソースからは、ダウンロード、フォーマット
 
 ### 顧客関係管理（CRM）
 
-CRMシステムは、顧客との関係の構築に役立つデータを提供し、顧客の忠誠度を高め、顧客の定着を促進します。 [!DNL Experience Platform] とからCRMデータを取り込むためのサポート [!DNL Microsoft Dynamics 365] を提供 [!DNL Salesforce]します。 詳しくは、次の関連ドキュメントを参照してください。
+CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。[!DNL Experience Platform] とからCRMデータを取り込むためのサポート [!DNL Microsoft Dynamics 365] を提供 [!DNL Salesforce]します。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [!DNL Microsoft Dynamics](connectors/crm/ms-dynamics.md) コネクタ
 - [!DNL Salesforce](connectors/crm/salesforce.md) コネクタ
 
 ### 顧客の成功
 
-[!DNL Experience Platform] は、サードパーティの顧客成功アプリケーションからデータを取り込むためのサポートを提供します。 詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
 
 - [!DNL Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md) コネクタ
 - [!DNL ServiceNow](connectors/customer-success/servicenow.md) コネクタ
 
 ### データベース
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [!DNL Amazon Redshift](connectors/databases/redshift.md) コネクタ
 - [!DNL Apache Hive on Azure HDInsights](connectors/databases/hive.md) コネクタ
@@ -89,44 +89,44 @@ CRMシステムは、顧客との関係の構築に役立つデータを提供�
 - [!DNL Phoenix](connectors/databases/phoenix.md) コネクタ
 - [!DNL PostgreSQL](connectors/databases/postgres.md) コネクタ
 
-### マーケティングの自動化
+### マーケティングの自動処理
 
-[!DNL Experience Platform] は、サードパーティのマーケティング自動化システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [!DNL HubSpot](connectors/marketing-automation/hubspot.md) コネクタ
 
 ### 支払い
 
-[!DNL Experience Platform] は、サードパーティの支払いシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティの支払いシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [!DNL PayPal](connectors/payments/paypal.md) コネクタ
 
 ### プロトコル
 
-[!DNL Experience Platform] は、サードパーティのプロトコルシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタについて詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] は、サードパーティのプロトコルシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [!DNL Generic OData](connectors/protocols/odata.md) コネクタ
 
-## データ取り込み時のソースのアクセス制御
+## データ取得におけるソースのアクセス制御
 
-データ取り込みのソースに対する権限は、アドビのAdmin Console内で管理できます。 権限には、特定の製品プロファイルの「 *[!UICONTROL 権限]* 」タブからアクセスできます。 権限を **[!UICONTROL 編集パネルから]** 、 *[!UICONTROL データ取り込み]* メニューのエントリを使用して、ソースに関する権限にアクセスできます。 「 **[!UICONTROL 表示ソース]***[!UICONTROL 」権限は「]* カタログ *[!UICONTROL 」タブの使用可能なソースおよび「認証されたソース」タブの読み取り専用アクセス権を付与し、「ソースの]***** 管理」権限は「ソースの作成」、「編集」、「無効化」の各ソースに対する完全なアクセス権を付与します。
+データ取得元に対する権限は、Adobe Admin Console で管理できます。権限には、特定の製品プロファイルの「*[!UICONTROL 権限]*」タブからアクセスできます。**[!UICONTROL 権限を編集]**&#x200B;パネルから、*[!UICONTROL データ取得]*&#x200B;メニューのエントリを使用して、ソースに関連する権限にアクセスできます 。「**[!UICONTROL ソースの表示]**」権限は、「*[!UICONTROL カタログ]*」タブの使用可能なソースと「*[!UICONTROL 参照]*」タブの認証済みのソースへの読み取り専用アクセス権を付与する一方、「**[!UICONTROL ソースの管理]**」権限は、ソースの作成、編集および無効化に対するフルアクセス権を付与します。
 
-次の表に、権限の様々な組み合わせに基づくUIの動作を示します。
+次の表に、これらの権限の様々な組み合わせに基づく UI の動作の概要を示します。
 
 | 権限レベル | 説明 |
 | ---- | ----|
-| **[!UICONTROL 表示ソース]** ：オン | 「 *カタログ* 」タブの各ソースタイプのソースに対して、「 *参照*」、「 **** アカウント」、「DataFlowAccounts」の各タブと共に読み取り専用アクセス権を付与します。 |
-| **[!UICONTROL ソースの管理]** : | **[!UICONTROL 表示ソースに含まれる機能に加えて、]**&#x200B;ソースに含まれる機能に加えて、Connect Source *[!UICONTROL option Catalog内の]* Connect Source *[!UICONTROL option Catalogへのアクセス権を付与し、Select Data Option]* Browse *[!UICONTROL Not Browse]*** Notにアクセス権を付与します。 **[!UICONTROL また、「ソースの管理]** 」では、DataFlowsを有効または無効にしたり ** 、スケジュールを編集したりできます。 |
-| **[!UICONTROL 表示ソース]** ：オフおよび **[!UICONTROL 管理ソース]** ：オフ | ソースへのアクセスをすべて取り消します。 |
+| **[!UICONTROL ソースの表示]**&#x200B;オン | 「*カタログ*」タブの各ソースタイプ、および「*参照*」、「*アカウント*」、「*データフロー*」タブの各ソースタイプのソースに読み取り専用アクセス権を付与します。 |
+| **[!UICONTROL ソースの管理]**&#x200B;オン | 「**[!UICONTROL ソースの表示]**」に含まれる機能に加えて、「*[!UICONTROL カタログ]*」の「*[!UICONTROL ソースの接続]*」オプションおよび「*[!UICONTROL 参照]*」の「*[!UICONTROL データを選択]*」オプションへのアクセス権を付与します。また、「**[!UICONTROL ソースの管理]**」では、*[!UICONTROL データフロー]*&#x200B;の有効/無効を切り替えたり、スケジュールを編集したりできます。 |
+| 「**[!UICONTROL ソースの表示]**」オフおよび「**[!UICONTROL ソースの管理]**」オフ | ソースへのすべてのアクセスを取り消します。 |
 
-Admin Consoleを通じて付与される権限（これら4つのソースを含む）の詳細については、 [アクセス制御の概要を参照してください](../access-control/home.md)。
+Admin Console から付与される使用可能な権限（これら 4 つのソースを含む）の詳細については、「[アクセス制御の概要](../access-control/home.md)」を参照してください。
 
 ## Terms and conditions {#terms-and-conditions}
 
 ベータ版（「ベータ版」）と表示されたソースのいずれかを使用することにより、お客様は、いかなる種類の保証もなく、ベータ版が「現状のまま」提供され ***ることを本書で認めます***。
 
-アドビは、ベータ版を保守、修正、更新、変更、変更、またはその他のサポートする義務はありません。 ベータ版および/または付属のマテリアルの正しい機能やパフォーマンスに一切依存しないように注意し、注意が必要です。 ベータ版はアドビの機密情報と見なされます。
+Adobeは、ベータ版を保守、修正、更新、変更、またはその他の方法でサポートする義務はありません。 ベータ版および/または付属のマテリアルの正しい機能やパフォーマンスに一切依存しないように注意し、注意が必要です。 ベータ版はAdobeの機密情報と見なされます。
 
-お客様からアドビに提供される「フィードバック」（ベータ版の使用中に発生した問題や欠陥、提案、改善点、推奨事項を含む、ただしこれに限定しない、ベータ版に関する情報）は、すべての権利、役職、およびそのフィードバックに対する関心を含むアドビに割り当てられます。
+お客様がAdobeに提供する「フィードバック」（ベータ版の使用中に発生した問題や欠陥、提案、改善点、推奨事項を含む、ただしこれに限定しない、ベータ版に関する情報）は、本書により、そのフィードバックに対するすべての権利、役職、関心を含むAdobeに割り当てられます。
 
 Open Feedbackを送信するか、サポートチケットを作成して、ご提案を共有したり、バグを報告したり、機能強化を求めたりします。
