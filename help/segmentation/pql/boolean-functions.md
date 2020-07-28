@@ -20,7 +20,7 @@ Boolean functions are used to perform boolean logic on different elements in [!D
 
 `and` 関数は、論理積を作成するために使用されます。
 
-**書式**
+**形式**
 
 ```sql
 {QUERY} and {QUERY}
@@ -38,7 +38,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 `or` 関数は、論理和を作成するために使用されます。
 
-**書式**
+**形式**
 
 ```sql
 {QUERY} or {QUERY}
@@ -56,7 +56,7 @@ homeAddress.countryISO = "CA" or person.birthYear = 1985
 
 `not`（または `!`）関数は、論理否定を作成するために使用されます。
 
-**書式**
+**形式**
 
 ```sql
 not ({QUERY})
@@ -75,7 +75,7 @@ not (homeAddress.countryISO = "CA")
 
 `if` 関数は、指定した条件が true かどうかに応じて式を解決するために使用されます。
 
-**書式**
+**形式**
 
 ```sql
 if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
