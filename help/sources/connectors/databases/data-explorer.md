@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Azure Data Explorerコネクタ
+title: AzureData Explorerコネクタ
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
@@ -57,11 +57,11 @@ Adobe Experience Platformは、 [!DNL Microsoft]、MySQL、などのデータベ
 
 ## API [!DNL Azure Data Explorer] を [!DNL Platform] 使用した接続
 
-- [Flow Service APIを使用してAzure Data Explorerコネクタを作成する](../../tutorials/api/create/databases/data-explorer.md)
+- [Flow Service APIを使用してAzureData Explorerコネクタを作成する](../../tutorials/api/create/databases/data-explorer.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UI [!DNL Azure Data Explorer] を [!DNL Platform] 使用して接続
 
-- [UIにAzure Data Explorerソースコネクタを作成する](../../tutorials/ui/create/databases/data-explorer.md)
+- [UIでAzureData Explorerソースコネクタを作成する](../../tutorials/ui/create/databases/data-explorer.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
