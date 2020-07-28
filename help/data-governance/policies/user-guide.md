@@ -1,87 +1,87 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Data usage policiesユーザーガイド
+title: データ使用ポリシーユーザガイド
 topic: policies
 translation-type: tm+mt
 source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
 source-wordcount: '725'
-ht-degree: 0%
+ht-degree: 39%
 
 ---
 
 
-# Data usage policiesユーザーガイド
+# データ使用ポリシーユーザガイド
 
-Adobe Experience Platform [!DNL Data Governance] には、データ使用ポリシーの作成と管理を可能にするユーザーインターフェイスが用意されています。 このドキュメントでは、ユーザーインター _フェイスのポリシー_[!DNL Experience Platform] ワークスペースで実行できるアクションの概要を説明します。
+Adobe Experience Platform [!DNL Data Governance] provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
->すべてのデータ使用ポリシー（アドビが提供するコアポリシーを含む）は、デフォルトで無効になっています。 個々のポリシーを適用対象と見なすには、そのポリシーを手動で有効にする必要があります。 UIでこれを行う方法については、ポリシー [の有効化の節を参照してください](#enable) 。
+>すべてのデータ使用ポリシー(Adobeが提供するコアポリシーを含む)は、デフォルトで無効になっています。 個々のポリシーを適用対象と見なすには、そのポリシーを手動で有効にする必要があります。 UIでこれを行う方法については、ポリシー [の有効化の節を参照してください](#enable) 。
 
 ## 前提条件
 
-このガイドでは、次の [!DNL Experience Platform] 概念について、十分に理解している必要があります。
+This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
 - [!DNL Data Governance](../home.md)
 - [データ使用ポリシー](./overview.md)
 
-## 表示データ使用ポリシー {#view-policies}
+## データ使用ポリシーの表示 {#view-policies}
 
-UIで、「 [!DNL Experience Platform] ポリシー **[!UICONTROL 」をクリックして]** ポリシー ** ワークスペースを開きます。 「 **[!UICONTROL 参照]** 」タブには、関連付けられたラベル、マーケティングアクション、ステータスなど、使用可能なポリシーのリストが表示されます。
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. 「**[!UICONTROL 参照]**」タブには、使用可能なポリシー（関連するラベル、マーケティングアクション、ステータスなど）が一覧表示されます。
 
 ![](../images/policies/browse-policies.png)
 
-表示されたポリシーをクリックして、その説明とタイプを表示します。 カスタムポリシーを選択すると、そのポリシーを編集、削除、 [有効/無効にするための追加のコントロールが表示されます](#enable)。
+ポリシーをクリックすると、説明と種類が表示されます。カスタムポリシーを選択すると、ポリシーを編集、削除、[有効／無効にする](#enable)ための追加のコントロールが表示されます。
 
 ![](../images/policies/policy-details.png)
 
 ## カスタムデータ使用ポリシーの作成 {#create-policy}
 
-新しいカスタムデータ使用ポリシーを作成するには、ポリシー **[!UICONTROL ワークスペースの「]** 参照 ****** 」タブの右上隅にある「ポリシーを作成」をクリックします。
+To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the *[!UICONTROL Policies]* workspace.
 
 ![](../images/policies/create-policy-button.png)
 
-「 *[!UICONTROL ポリシーの作成]* 」ワークフローが表示されます。 新しいポリシーの名前と説明を入力して開始します。
+*[!UICONTROL ポリシーの作成]*&#x200B;ワークフローが表示されます。まず、新しいポリシーの名前と説明を指定します。
 
 ![](../images/policies/create-policy-description.png)
 
-次に、ポリシーの基にするデータ使用ラベルを選択します。 複数のラベルを選択する場合、ポリシーを適用するために、データにすべてのラベルを含めるか、ラベルの1つだけを含めるかを選択できます。 終了したら「**[!UICONTROL 次へ]**」をクリックします。
+次に、ポリシーの基にするデータ使用ラベルを選択します。複数のラベルを選択する場合は、ポリシーが適用するために、データにすべてのラベルを含めるか、1 つのラベルのみを含めるかを選択できます。終了したら「**[!UICONTROL 次へ]**」をクリックします。
 
 ![](../images/policies/add-labels.png)
 
-「マーケティングアクション *[!UICONTROL の選択]* 」手順が表示されます。 表示されたリストから適切なマーケティングアクションを選択し、「 **[!UICONTROL 次へ]** 」をクリックして続行します。
+「*[!UICONTROL マーケティングアクションの選択]*」手順が表示されます。表示されたリストから適切なマーケティングアクションを選択し、「**[!UICONTROL 次へ]**」をクリックして続行します。
 
 >[!NOTE]
 >
->複数のマーケティングアクションを選択する場合、ポリシーはそれらを「OR」ルールとして解釈します。 つまり、選択したい _ずれかのマーケティング操作が実行された場合_ 、ポリシーが適用されます。
+> 複数のマーケティングアクションを選択する場合、ポリシーはそれらを「OR」ルールとして解釈します。つまり、選択したマーケティングアクションの&#x200B;_いずれか_&#x200B;が実行された場合に、ポリシーが適用されます。
 
 ![](../images/policies/add-marketing-actions.png)
 
-「 *[!UICONTROL レビュー]* 」手順が表示され、新しいポリシーを作成する前にその詳細を確認できます。 問題が解決したら、「 **[!UICONTROL 完了]** 」をクリックしてポリシーを作成します。
+「*[!UICONTROL 確認]*」手順が表示され、新しいポリシーを作成する前にその詳細を確認できます。確認したら、「**[!UICONTROL 完了]**」をクリックして、ポリシーを作成します。
 
 ![](../images/policies/policy-review.png)
 
-「 *[!UICONTROL 参照]* 」タブが再び表示され、新しく作成したポリシーが「ドラフト」ステータスでリストされます。 ポリシーを有効にするには、次のセクションを参照してください。
+「*[!UICONTROL 参照]*」タブが再び表示され 、新しく作成したポリシーが「草案」ステータスでリストに表示されるようになります。ポリシーを有効にするには、次の節を参照してください。
 
 ![](../images/policies/created-policy.png)
 
 ## データ使用ポリシーの有効化または無効化 {#enable}
 
-すべてのデータ使用ポリシー（アドビが提供するコアポリシーを含む）は、デフォルトで無効になっています。 個々のポリシーの適用が考慮されるようにするには、APIまたはUIを使用して手動でそのポリシーを有効にする必要があります。
+すべてのデータ使用ポリシー(Adobeが提供するコアポリシーを含む)は、デフォルトで無効になっています。 個々のポリシーの適用が考慮されるようにするには、APIまたはUIを使用して手動でそのポリシーを有効にする必要があります。
 
-ポリシーは、ポリシーワークス *[!UICONTROL ペースの「]* 参照 ** 」タブで有効または無効にできます。 リストからカスタムポリシーを選択し、詳細を右側に表示します。 「 *[!UICONTROL ステータス]*」で、切り替えボタンを選択してポリシーを有効または無効にします。
+You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. リストからカスタムポリシーを選択して、右側に詳細を表示します。「*[!UICONTROL ステータス]*」で、ポリシーを有効または無効にする切り替えボタンを選択します。
 
 ![](../images/policies/enable-policy.png)
 
 ## 表示マーケティングのアクション {#view-marketing-actions}
 
-「 **[!UICONTROL ポリシー]** 」ワークスペースで、「 **[!UICONTROL マーケティングアクション]** 」タブを選択して、アドビおよび自分の組織が定義した使用可能なマーケティングアクションのリストを表示します。
+「 **[!UICONTROL ポリシー]** 」ワークスペースで「 **[!UICONTROL マーケティングアクション]** 」タブを選択し、Adobeや自分の組織が定義した、使用可能なマーケティングアクションのリストを表示します。
 
 ![](../images/policies/marketing-actions.png)
 
-## マーケティングアクションの作成 {#create-marketing-action}
+## Create a marketing action {#create-marketing-action}
 
 新しいカスタムマーケティングアクションを作成するには、「 **[!UICONTROL ポリシー]****[!UICONTROL 」ワークスペースの「マーケティングアクション]**** 」タブの右上隅にある「マーケティングアクションを作成」をクリックします。
 
@@ -99,9 +99,9 @@ UIで、「 [!DNL Experience Platform] ポリシー **[!UICONTROL 」をクリ�
 
 >[!NOTE]
 >
->編集できるのは、組織で定義されたカスタムマーケティングアクションのみです。 アドビが定義するマーケティングアクションは、変更または削除できません。
+>編集できるのは、組織で定義されたカスタムマーケティングアクションのみです。 Adobeによって定義されたマーケティングアクションは、変更または削除できません。
 
-「 **[!UICONTROL ポリシー]** 」ワークスペースで、「 **[!UICONTROL マーケティングアクション]** 」タブを選択して、アドビおよび自分の組織が定義した使用可能なマーケティングアクションのリストを表示します。 リストからカスタムマーケティングアクションを選択し、右側のセクションに表示されるフィールドを使用して、マーケティングアクションの詳細を編集します。
+「 **[!UICONTROL ポリシー]** 」ワークスペースで「 **[!UICONTROL マーケティングアクション]** 」タブを選択し、Adobeや自分の組織が定義した、使用可能なマーケティングアクションのリストを表示します。 リストからカスタムマーケティングアクションを選択し、右側のセクションに表示されるフィールドを使用して、マーケティングアクションの詳細を編集します。
 
 ![](../images/policies/edit-marketing-action.png)
 
@@ -115,7 +115,7 @@ UIで、「 [!DNL Experience Platform] ポリシー **[!UICONTROL 」をクリ�
 
 ## 次の手順
 
-このドキュメントでは、 [!DNL Experience Platform] UIでデータ使用ポリシーを管理する方法の概要を説明しました。 DULE Policy APIを使用してポリシーを管理する手順については、 [開発者ガイドを参照してください](../api/getting-started.md)。 データ使用ポリシーの適用方法について詳しくは、「 [ポリシー適用の概要](../enforcement/overview.md)」を参照してください。
+This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). データ使用ポリシーの適用方法について詳しくは、「[ポリシー実施の概要](../enforcement/overview.md)」を参照してください。
 
 次のビデオでは、 [!DNL Experience Platform] UIで使用ポリシーを使用する方法のデモを示します。
 
