@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
 solution: Experience Platform
-title: モデルにスコアを付ける(API)
+title: モデルのスコアリング（API）
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '508'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# モデルにスコアを付ける(API)
+# モデルのスコアリング（API）
 
-このチュートリアルでは、APIを利用してテストとテストの実行を作成する方法を示します。 APIドキュメントの詳細なリストについては、 [このドキュメントを参照してください](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html)。
+このチュートリアルでは、API を活用して実験を作成し、実行する方法を示します。API ドキュメントの詳細なリストについては、[このドキュメント](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html)を参照してください。
 
-## スコアリング用の予定されたテストの作成
+## スコアリングのためのスケジュールされた実験の作成
 
-スケジュールされたトレーニングのテストと同様に、スコアリングのためのスケジュールされたテストの作成も、bodyパラメーターの `template` セクションを含めることで行います。 また、本文の下の `name` フィールド `tasks` はに設定され `score`ます。
+トレーニングのためのスケジュールされた実験と同様に、スコアリングのためのスケジュールされた実験の作成も、ボディパラメーターに `template` セクションを含めることでおこなわれます。また、本文の `tasks` の下の `name` フィールドは `score` に設定されます。
 
-次の例は、開始から20分ごとに実行し、終了まで実行するテスト `startTime` を作成する場合の例で `endTime`す。
+以下は、`startTime` に開始してから 20 分ごとに実行し、`endTime` まで実行する実験を作成する例です。
 
 **リクエスト**
 
@@ -34,10 +34,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
-`{JSON_PAYLOAD}`: 送信する実行オブジェクトをテストします。 チュートリアルで使用する例を次に示します。
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{API_KEY}`：固有の Adobe Experience Platform 統合での特定の API キーの値。\
+`{JSON_PAYLOAD}`：送信する実験実行オブジェクト。このチュートリアルで使用する例を次に示します。
 
 ```JSON
 {
@@ -67,10 +67,10 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`: MLInstanceを表すID。\
-`{MODEL_ID}`: トレーニングを受けたモデルを表すID。
+`{INSTANCE_ID}`：MLInstance を表す ID。\
+`{MODEL_ID}`：トレーニング済みモデルを表す ID。
 
-以下は、予定されたテストの作成後の応答です。
+次に、スケジュールされた実験を作成した後の応答を示します。
 
 **応答**
 
@@ -102,13 +102,13 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`: テストを表すID。\
-`{INSTANCE_ID}`: MLInstanceを表すID。
+`{EXPERIMENT_ID}`：Experiment を表す ID。\
+`{INSTANCE_ID}`：MLInstance を表す ID。
 
 
-### スコアリング用のテスト実行の作成
+### スコアリングのための実験実行の作成
 
-トレーニングを受けたモデルを使用して、スコアリング用のテスト実行を作成できます。 パラメーターの値は、 `modelId` 上のGET Modelリクエストで返される `id` パラメーターです。
+トレーニング済みモデルを使って、スコアリングのための実験実行を作成できます。`modelId` パラメーターの値は、上記の GET モデルリクエストで返される `id` パラメーターです。
 
 **リクエスト**
 
@@ -122,11 +122,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
-`{EXPERIMENT_ID}`: ターゲットするテストに対応するID。 これは、テストの作成時の応答に含まれます。\
-`{JSON_PAYLOAD}`: 投稿するデータ。 チュートリアルで使用する例は次のとおりです。
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{API_KEY}`：固有の Adobe Experience Platform 統合での特定の API キーの値。\
+`{EXPERIMENT_ID}`：ターゲットする実験に対応する ID。これは、実験を作成する際の応答に含まれています。\
+`{JSON_PAYLOAD}`：投稿するデータ。このチュートリアルで使用する例を次に示します。
 
 ```JSON
 {
@@ -145,9 +145,9 @@ curl -X POST \
 }
 ```
 
-`{MODEL_ID}`: モデルに対応するID。
+`{MODEL_ID}`：モデルに対応する ID。
 
-テスト実行の作成からの応答を次に示します。
+実験実行の作成からの応答を次に示します。
 
 **応答**
 
@@ -168,13 +168,13 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`:  実行するテストに対応するID。\
-`{EXPERIMENT_RUN_ID}`: 先ほど作成したテスト実行に対応するID。
+`{EXPERIMENT_ID}`：実行する実験に対応する ID。\
+`{EXPERIMENT_RUN_ID}`：作成した実験実行に対応する ID。
 
 
-### 予定されているテスト実行のテスト実行ステータスの取得
+### スケジュールされた実験実行の実験実行ステータスの取得
 
-スケジュール設定した実験のテストを実行するには、クエリを次に示します。
+スケジュールされた実験の実験実行を取得するためのクエリを次に示します。
 
 **リクエスト**
 
@@ -185,11 +185,11 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  実行するテストに対応するID。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
+`{EXPERIMENT_ID}`：実行する実験に対応する ID。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合での IMS 組織の資格情報。
 
-特定のテストに対して複数のテスト実行があるので、返される応答には実行IDの配列が含まれます。
+特定のテストに対して複数の実験実行があるので、返される応答には実行 ID の配列が含まれます。
 
 **応答**
 
@@ -212,12 +212,12 @@ curl -X GET \
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: テスト実行に対応するID。\
-`{EXPERIMENT_ID}`:  実行するテストに対応するID。
+`{EXPERIMENT_RUN_ID}`：実験実行に対応する ID。\
+`{EXPERIMENT_ID}`：実行する実験に対応する ID。
 
-### スケジュールされたテストの停止と削除
+### スケジュールされた実験の停止と削除
 
-スケジュールされたテストの実行をその前に停止する場合 `endTime`は、DELETEリクエストを `{EXPERIMENT_ID}`
+`endTime` よりも前に、スケジュールに沿った Experiment の実行を停止する場合は、`{EXPERIMENT_ID}` に DELETE リクエストを実行します。
 
 **リクエスト**
 
@@ -228,15 +228,15 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  テストに対応するID。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
+`{EXPERIMENT_ID}`：Experiment に対応する ID。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
 
 >[!NOTE]
 >
->API呼び出しは、新しいテスト実行の作成を無効にします。 ただし、既に実行中のテスト実行の実行は停止しません。
+>API 呼び出しを実行すると、新しい Experiment Run の作成が無効になります。ただし、既に実行中の Experiment Run は停止されません。
 
-次に、テストが正常に削除されたことを通知する応答を示します。
+次に、Experiment が正常に削除されたことを通知するレスポンスを示します。
 
 **応答**
 
