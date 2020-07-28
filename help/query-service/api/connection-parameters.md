@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: クエリサービス開発ガイド
+title: クエリサービス開発者ガイド
 topic: connection parameters
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 1%
+ht-degree: 72%
 
 ---
 
 
-# 接続パラメータ
+# 接続パラメーター
 
-## サンプルAPI呼び出し
+## サンプル API 呼び出し
 
-これで、使用するヘッダーが分かったので、 [!DNL Query Service] APIの呼び出しを開始する準備が整いました。 以下の節では、 [!DNL Query Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しには、一般的なAPI形式、必要なヘッダーを表示するサンプルリクエスト、サンプルレスポンスが含まれます。
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
-### インタラクティブサービスの接続パラメーターを要求します
+### インタラクティブサービスの接続パラメーターの要求
 
-エンドポイントにGET要求を行うと、イン [タラクティブサービスを使用するための接続パラメーターを取得でき](../creating-queries/writing-queries.md)`/connection_parameters` ます。 接続パラメーターを使用してインタラクティブサービスを介して接続するクライアントの詳細については、 [クエリサービスクライアントに関するドキュメントを参照してください](../clients/overview.md)。
+`/connection_parameters` エンドポイントに GET リクエストを実行することで、[インタラクティブサービス](../creating-queries/writing-queries.md)を使用するための接続パラメーターを取得できます。インタラクティブサービスを介した接続に接続パラメーターを使用するクライアントについては、[クエリサービスクライアント](../clients/overview.md)に関するドキュメントを参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /connection_parameters
@@ -40,7 +40,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/connection_parameter
 
 **応答**
 
-正常に応答すると、接続パラメーターと共にHTTPステータス200が返されます。
+リクエストが成功した場合、HTTP ステータス 200 と接続パラメーターが返されます。
 
 ```json
 {
