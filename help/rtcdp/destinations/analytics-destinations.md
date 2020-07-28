@@ -1,39 +1,39 @@
 ---
-title: Analyticsの宛先
-seo-title: Analyticsの宛先
-description: Analyticsのリンク先は、訪問者がサイト上のコンテンツとやり取りし、データを収集する方法を追跡して、オーディエンスの行動を把握します。 これらのプラットフォームは、最も価値ある訪問者の関与とコンバージョンに関する独自のインサイトを提供します。
-seo-description: Analyticsのリンク先は、訪問者がサイト上のコンテンツとやり取りし、データを収集する方法を追跡して、オーディエンスの行動を把握します。 これらのプラットフォームは、最も価値ある訪問者の関与とコンバージョンに関する独自のインサイトを提供します。
+title: Analytics の宛先
+seo-title: Analytics の宛先
+description: Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
+seo-description: Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 translation-type: tm+mt
 source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 
-# Analyticsの宛先 {#analytics-destinations}
+# Analytics の宛先 {#analytics-destinations}
 
-Analyticsのリンク先は、訪問者がサイト上のコンテンツとやり取りし、データを収集する方法を追跡して、オーディエンスの行動を把握します。 これらのプラットフォームは、最も価値ある訪問者の関与とコンバージョンに関する独自のインサイトを提供します。
+Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 
-現在、Adobe Real-time Customer Data Platformは、以下に示す解析用の宛先をサポートしています。 これらのリンク先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、アドビのリアルタイム顧客データプラットフォームは、以下に示す Analytics の宛先をサポートしています。これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
-* [Adform Webサイトトラッキング拡張機能](/help/rtcdp/destinations/adform-extension.md)
+* [Adform Web サイトトラッキング拡張機能](/help/rtcdp/destinations/adform-extension.md)
 * [Adobe Analytics 拡張機能](/help/rtcdp/destinations/adobe-analytics-extension.md)
 * [Adobe Media Analytics for Audio and Video 拡張機能](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
-* [Clicktale拡張機能](/help/rtcdp/destinations/clicktale-extension.md)
-* [Contentsquare拡張子](/help/rtcdp/destinations/contentsquare-extension.md)
-* [デシベル拡張子](/help/rtcdp/destinations/decibel-extension.md)
-* [Demandbase拡張](/help/rtcdp/destinations/demandbase-extension.md)
-* [Dialogtechの拡張機能](/help/rtcdp/destinations/dialogtech-extension.md)
-* [Googleグローバルサイトタグ分析の拡張](/help/rtcdp/destinations/gtag-analytics-extension.md)
-* [Google Universal Analyticsの拡張機能](/help/rtcdp/destinations/google-universal-analytics-extension.md)
-* [JW Player Analytics（ベータ）拡張機能](/help/rtcdp/destinations/jw-player-analytics-extension.md)
-* [Nielsen BSDK拡張](nielsen-bsdk-extension.md)
-* [Nielsen IMAハンドラー拡張](nielsen-ima-extension.md)
-* [Nielsen VideoJSプレイヤーハンドラーの拡張](nielsen-videojs-extension.md)
-* [Parse.ly Analytics拡張機能](parsely-extension.md)
-* [量子指標拡張](quantum-metric-extension.md)
-* [SessionCam拡張](sessioncam-extension.md)
-* [TMMData拡張](tmmdata-extension.md)
-* [Yext Conversion Tracking拡張](yext-extension.md)
+* [Clicktale 拡張機能](/help/rtcdp/destinations/clicktale-extension.md)
+* [Contentsquare 拡張機能](/help/rtcdp/destinations/contentsquare-extension.md)
+* [Decibel 拡張機能](/help/rtcdp/destinations/decibel-extension.md)
+* [Demandbase 拡張機能](/help/rtcdp/destinations/demandbase-extension.md)
+* [Dialogtech 拡張機能](/help/rtcdp/destinations/dialogtech-extension.md)
+* [Google Global Site Tag 分析拡張機能](/help/rtcdp/destinations/gtag-analytics-extension.md)
+* [Google Universal Analytics 拡張機能](/help/rtcdp/destinations/google-universal-analytics-extension.md)
+* [JW Player Analytics（ベータ版）拡張機能](/help/rtcdp/destinations/jw-player-analytics-extension.md)
+* [Nielsen BSDK 拡張機能](nielsen-bsdk-extension.md)
+* [Nielsen IMA Handler 拡張機能](nielsen-ima-extension.md)
+* [Nielsen VideoJS プレイヤーハンドラー拡張機能](nielsen-videojs-extension.md)
+* [Parse.ly Analytics 拡張機能](parsely-extension.md)
+* [Quantum Metric 拡張機能](quantum-metric-extension.md)
+* [SessionCam 拡張機能](sessioncam-extension.md)
+* [TMMData 拡張機能](tmmdata-extension.md)
+* [Yext コンバージョントラッキング拡張機能](yext-extension.md)
