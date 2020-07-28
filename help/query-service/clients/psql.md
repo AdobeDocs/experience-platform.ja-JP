@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: PSQLとの接続
+title: PSQL との接続
 topic: connect
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 1%
+ht-degree: 71%
 
 ---
 
 
-# PSQLとの接続
+# PSQL との接続
 
-PSQLは、をマシンにインストールする際に提供されるコマンドラインインターフェイス [!DNL Postgres] です。 以下の手順に従って、インストールできます。
+PSQL is a command-line interface that comes when you install [!DNL Postgres] on your machine. 次の手順に従ってインストールできます。
 
-## MacでのPostgresのインストール
+## Mac での Postgres のインストール
 
-ターミナルウィンドウを開き、次の3つのコマンドを実行します。
+ターミナルウィンドウを開き、次の 3 つのコマンドを実行します。
 
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -32,29 +32,29 @@ brew install postgres
 which psql
 ```
 
-これらのコマンドを発行すると、次のように表示されます。
+これらのコマンドを発行すると、次の内容が表示されます。
 
 ```shell
 /usr/local/bin/psql
 ```
 
-## PC [!DNL Postgres] にインストールする
+## Install [!DNL Postgres] on a PC
 
-この [!DNL Postgres] 場所からダウンロードしてインストール [します](https://www.postgresql.org/download/windows/)。
+Download and install [!DNL Postgres] from this [location](https://www.postgresql.org/download/windows/).
 
 パス変数を編集します。
 
 ![画像](../images/clients/psql/path.png)
 
-表示さ追加れている2つの行には「[!DNL Postgres]」が含まれます。
+Add the two lines shown that include &quot;[!DNL Postgres].&quot;
 
-更新を保存し、コマンドプロンプトを開いて次のように入力します。
+更新を保存し、コマンドプロンプトを開いて、次のように入力します。
 
 ```shell
 psql -V
 ```
 
-次のように表示されます。
+例えば、以下が表示されます。
 
 ```shell
 psql (PostgreSQL) 9.5.14
@@ -62,17 +62,17 @@ psql (PostgreSQL) 9.5.14
 
 ## PSQLの接続と [!DNL Query Service]
 
-[ [!DNL Platform] Connect BI Tools ** ]ページのUIに戻ります。
+Return to the [!DNL Platform] UI on the *[!UICONTROL Connect BI Tools]* page.
 
-「 **[!UICONTROL PSQLコマンドの]** コピー *[!UICONTROL 」をクリックし]*&#x200B;ます。
+Click **[!UICONTROL copy]** for *[!UICONTROL PSQL Command]*.
 
 ![画像](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]: PCを使用している場合は、テキストエディタを使用してコマンド文字列の改行を削除し、文字列をコピーします。
+>[!IMPORTANT]：PC の場合は、テキストエディターを使用してコマンド文字列の改行を削除し、文字列をコピーします。
 
-コマンド文字列をターミナルまたはコマンドウィンドウに貼り付け、Enterキーを押します。
+コマンド文字列をターミナルまたはコマンドウィンドウにペーストし、Enter キーを押します。
 
-次のような結果になります。
+次のような結果が表示されます。
 
 ```shell
 psql (10.5, server 0.1.0)
@@ -81,4 +81,4 @@ Type "help" for help.
 all=>
 ```
 
-バージョン10.5が表示されない場合は、そのバージョン以降をダウンロードする必要があります。
+バージョン 10.5 以降が表示されない場合は、バージョン 10.5 以降をダウンロードする必要があります。
