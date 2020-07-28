@@ -7,21 +7,21 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 1%
+ht-degree: 38%
 
 ---
 
 
 # アクセス制御ユーザーガイド
 
-Adobe Experience Platformでのアクセス制御では、 [!DNL Platform] AdobeAdmin Consoleを使用して、様々な [機能のロールと権限を管理できます](https://adminconsole.adobe.com)。 このドキュメントは、アクセス制御の管理対象をナビゲートする方法 [!DNL Admin Console] のガイドとして機能し [!DNL Platform]ます。 のアクセス制御の概要については、 [!DNL Experience Platform]アクセス制御の概要を参照してください [](./../home.md)。
+Access control in Adobe Experience Platform allows you to manage roles and permissions for various [!DNL Platform] capabilities by using the [Adobe Admin Console](https://adminconsole.adobe.com). This document serves as a guide for how to navigate the [!DNL Admin Console] to manage access control for [!DNL Platform]. For a high-level overview of access control in [!DNL Experience Platform], see the [access control overview](./../home.md).
 
-対象となるタスクは次のとおりです。
+以下のタスクについて説明します。
 
-- [Admin Consoleへのアクセス](./browse.md)
+- [Admin Console へのアクセス](./browse.md)
 - [新しい製品プロファイルの作成](./create-profile.md)
 - [製品プロファイルの権限の管理](./permissions.md)
-- [製品プロファイルの詳細および追加のサービスの管理](./details-and-services.md)
+- [製品プロファイルの詳細と追加のサービスの管理](./details-and-services.md)
 - [製品プロファイルのユーザーの管理](./users.md)
 
-必要に応じてユーザーの追加を続行するには、上記の手順を繰り返します。 で [!DNL Platform] 機能へのアクセスを制御する方法を学んだので、 [!DNL Admin Console]アクセス制御の概要の付録の節を参照して、個々の権限とアクセス権を付与した [](../home.md)[!DNL Platform] 機能についての詳細を確認してください。
+必要に応じて、上記の手順を繰り返してユーザーを追加します。Now that you have learned how to control access to [!DNL Platform] features through the [!DNL Admin Console], see the appendix section in the [access control overview](../home.md) to learn more about each individual permission and the [!DNL Platform] functionalities they grant access to.
