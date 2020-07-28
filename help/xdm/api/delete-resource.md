@@ -7,16 +7,16 @@ translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '133'
-ht-degree: 7%
+ht-degree: 63%
 
 ---
 
 
 # リソースの削除
 
-リソースをから削除(DELETE)する必要がある場合があり [!DNL Schema Registry]ます。 テナントコンテナで作成したリソースのみを削除できます。 これは、削除するリソースを使用してDELETEリクエスト `$id` を実行することで行われます。
+It may occasionally be necessary to remove (DELETE) a resource from the [!DNL Schema Registry]. 削除できるのは、テナントコンテナで作成したリソースのみです。これは、削除するリソースの `$id` を使用して DELETE リクエストを実行することでおこなわれます。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -24,12 +24,12 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | から削除するリソースの種類で [!DNL Schema Library]す。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
-| `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
+| `{RESOURCE_TYPE}` | The type of resource to be deleted from the [!DNL Schema Library]. 有効なタイプは、`datatypes`、`mixins`、`schemas` および `classes` です。 |
+| `{RESOURCE_ID}` | リソースの URL エンコードされた `$id` URI または `meta:altId`。 |
 
 **リクエスト**
 
-DELETE要求にはAcceptヘッダーは必要ありません。
+DELETE リクエストには、Accept ヘッダーは不要です。
 
 ```SHELL
 curl -X DELETE \
@@ -42,6 +42,6 @@ curl -X DELETE \
 
 **応答**
 
-応答が成功すると、HTTPステータス204（コンテンツなし）と空白の本文が返されます。
+正常な応答は、HTTP ステータス 204（コンテンツなし）と空白の本文を返します。
 
-リソースに対してルックアップ(GET)要求を試行すると、削除を確認できます。 要求にはAcceptヘッダーを含める必要がありますが、リソースがリソースから削除されたので、HTTPステータス404 （見つかりません）を受け取る必要があり [!DNL Schema Registry]ます。
+リソースに対してルックアップ（GET）リクエストを試行すると、削除を確認できます。You will need to include an Accept header in the request, but should receive an HTTP status 404 (Not Found) because the resource has been removed from the [!DNL Schema Registry].
