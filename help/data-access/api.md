@@ -7,35 +7,35 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 5%
+ht-degree: 85%
 
 ---
 
 
 # データアクセス開発ガイド
 
-Data Access APIは、内に取り込まれたデータセットの検出性とアクセス性に重点を置いたRESTfulインターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートし [!DNL Experience Platform]ます。
+The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
 
-![Experience Platformのデータアクセス](images/Data_Access_Experience_Platform.png)
+![Experience Platform でのデータアクセス](images/Data_Access_Experience_Platform.png)
 
-## API仕様リファレンス
+## API 仕様リファレンス
 
-Swagger APIリファレンスドキュメントは [こちら](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)。
+Swagger API リファレンスドキュメントは、[こちら](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)を参照してください。
 
 ## 用語
 
-このドキュメントでよく使用される用語の一部を紹介します。
+このドキュメントでよく使用される用語の説明。
 
 | 用語 | 説明 |
 | ----- | ------------ |
-| データセット | スキーマとフィールドを含むデータのコレクションです。 |
-| バッチ | 一定期間に収集され、1つのユニットとして一緒に処理される一連のデータ。 |
+| データセット | スキーマとフィールドを含むデータのコレクション。 |
+| バッチ | 一定期間に収集され、1 つの単位として処理される一連のデータ。 |
 
-## バッチ内のファイルのリストを取得
+## バッチ内のファイルのリストの取得
 
-バッチ識別子(batchID)を使用すると、Data Access APIは特定のバッチに属するファイルのリストを取得できます。
+バッチ識別子（batchID）を使用すると、データアクセス API は特定のバッチに属するファイルのリストを取得できます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /batches/{BATCH_ID}/files
@@ -94,20 +94,20 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-この `"data"` 配列には、指定したバッチ内のすべてのファイルのリストが含まれます。 返される各ファイルには、フィールド内に含まれる固有のID(`{FILE_ID}`)があり `"dataSetFileId"` ます。 その後、この一意のIDを使用して、ファイルにアクセスしたり、ダウンロードしたりできます。
+`"data"` 配列には、指定したバッチ内のすべてのファイルのリストが含まれています。返されるファイルごとに、`"dataSetFileId"` フィールド内に固有の ID（`{FILE_ID}`）が含まれています。この一意のIDを使用して、ファイルにアクセスしたり、ダウンロードしたりできます。
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.dataSetFileId` | 指定したバッチ内の各ファイルのファイルID。 |
-| `data._links.self.href` | ファイルにアクセスするURLです。 |
+| `data.dataSetFileId` | 指定したバッチ内の各ファイルのファイル ID。 |
+| `data._links.self.href` | ファイルにアクセスするための URL。 |
 
 ## バッチ内のファイルへのアクセスとダウンロード
 
-ファイル識別子(`{FILE_ID}`)を使用すると、Data Access APIを使用して、ファイル名、バイト単位のサイズ、ダウンロードするリンクなど、ファイルの特定の詳細にアクセスできます。
+ファイル識別子（`{FILE_ID}`）を使用すると、データアクセス API で、ファイルの名前、バイト単位のサイズ、ダウンロードするためのリンクなど、ファイルの詳細にアクセスできます。
 
-応答にはデータ配列が含まれます。 IDで指すファイルが個別のファイルかディレクトリかに応じて、返されるデータ配列には、そのディレクトリに属するファイルのリストが1つだけ含まれる場合もあります。 各ファイル要素には、ファイルの詳細が含まれます。
+応答にはデータ配列が含まれています。ID で指すファイルが個々のファイルかディレクトリかに応じて、返されるデータ配列には、1 つのエントリか、そのディレクトリに属するファイルのリストが含まれます。各ファイル要素には、ファイルの詳細が含まれています。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /files/{FILE_ID}
@@ -115,7 +115,7 @@ GET /files/{FILE_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{FILE_ID}` | に等し `"dataSetFileId"`い。アクセスするファイルのID。 |
+| `{FILE_ID}` | アクセスするファイルの ID です（`"dataSetFileId"` に等しい）。 |
 
 **リクエスト**
 
@@ -127,7 +127,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**単一ファイルの応答**
+**単一ファイル応答**
 
 ```JSON
 {
@@ -151,9 +151,9 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.name` | ファイルの名前(例：プロファイル.csv)。 |
-| `data.length` | ファイルのサイズ（バイト単位）。 |
-| `data._links.self.href` | ファイルをダウンロードするURLです。 |
+| `data.name` | ファイルの名前（profiles.csv など）です。 |
+| `data.length` | ファイルのサイズ（バイト単位）です。 |
+| `data._links.self.href` | ファイルをダウンロードするための URL です。 |
 
 **ディレクトリ応答**
 
@@ -194,18 +194,18 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 }
 ```
 
-ディレクトリが返されると、そのディレクトリ内のすべてのファイルの配列が含まれます。
+ディレクトリが返される場合、そのディレクトリ内のすべてのファイルの配列が含まれています。
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.name` | ファイルの名前(例：プロファイル.csv)。 |
-| `data._links.self.href` | ファイルをダウンロードするURLです。 |
+| `data.name` | ファイルの名前（profiles.csv など）です。 |
+| `data._links.self.href` | ファイルをダウンロードするための URL です。 |
 
 ## ファイルのコンテンツへのアクセス
 
-また、 [!DNL Data Access] APIを使用してファイルのコンテンツにアクセスすることもできます。 これを使用して、コンテンツを外部ソースにダウンロードできます。
+The [!DNL Data Access] API can also be used to access the contents of a file. これを使用して、コンテンツを外部ソースにダウンロードできます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /files/{dataSetFileId}?path={FILE_NAME}
@@ -213,7 +213,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{FILE_NAME}` | アクセスしようとしているファイルの名前。 |
+| `{FILE_NAME}` | アクセスしようとしているファイルの名前です。 |
 
 **リクエスト**
 
@@ -227,8 +227,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{FILE_ID}` | データセット内のファイルのID。 |
-| `{FILE_NAME}` | ファイルのフルネーム(例：プロファイル.csv)。 |
+| `{FILE_ID}` | データセット内のファイルの ID です。 |
+| `{FILE_NAME}` | ファイルの完全名（例：profiles.csv）。 |
 
 **応答**
 
@@ -238,8 +238,8 @@ Contents of the file
 
 ## その他のコードサンプル
 
-その他のサンプルについては、 [データアクセスのチュートリアルを参照してください](tutorials/dataset-data.md)。
+その他のサンプルについては、[データアクセスのチュートリアル](tutorials/dataset-data.md)を参照してください。
 
-## データ取り込みイベントのサブスクライブ
+## データ取り込みイベントへの登録
 
-[!DNL Platform] は、 [Adobe Developer Consoleを通じて特定の高価値イベントを購読用に使用できるようにします](https://www.adobe.com/go/devs_console_ui)。 例えば、データ取り込みイベントを登録して、遅延や失敗の可能性を通知することができます。 詳しくは、データインジェスト通知の [サブスクライブに関するチュートリアル](../ingestion/quality/subscribe-events.md) を参照してください。
+[!DNL Platform] は、 [Adobeデベロッパーコンソールを通じて特定の高価値イベントを購読用に使用できるようにします](https://www.adobe.com/go/devs_console_ui)。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、データインジェスト通知の [サブスクライブに関するチュートリアル](../ingestion/quality/subscribe-events.md) を参照してください。
