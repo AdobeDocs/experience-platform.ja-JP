@@ -7,22 +7,22 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
-ht-degree: 5%
+ht-degree: 76%
 
 ---
 
 
 # カスタム名前空間の作成
 
-この [!DNL Identity Namespace] APIを使用して、自分の組織だけが利用できるカスタムID名前空間を作成できます。
+Using the [!DNL Identity Namespace] API, you can create a custom identity namespace that will be available only to your organization.
 
-カスタム名前空間の作成に関する推奨事項については、「IDサービス [に関するFAQドキュメント](../troubleshooting-guide.md)」を参照してください。
+カスタム名前空間の作成に関する推奨事項については、[ID サービスに関する FAQ ドキュメント](../troubleshooting-guide.md)を参照してください。
 
 >[!NOTE]
 >
->名前空間はIDの限定子です。 したがって、一度名前空間を作成すると、削除できなくなります。
+> 名前空間は ID の修飾子です。したがって、一度作成した名前空間は削除できません。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /idnamespace/identities
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## 次の手順
 
-次のチュートリアルに進み、IDのネイティブIDを [リストします](./list-native-id.md)
+次のチュートリアルに進み、[ID のネイティブ ID をリストします](./list-native-id.md)。
