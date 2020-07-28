@@ -7,20 +7,20 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 2%
+ht-degree: 70%
 
 ---
 
 
 # データセットの作成
 
-APIを使用してデータセットを作成するには、データセットの基となる [!DNL Catalog] (XDM)スキーマの `$id`[!DNL Experience Data Model] 値を把握しておく必要があります。 スキーマIDを取得したら、APIでエンドポイントにPOSTリクエストを行って、データセットを作成 `/datasets` でき [!DNL Catalog] ます。
+In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
 
 >[!NOTE]
 >
->このドキュメントでは、でデータセットオブジェクトを作成する方法についてのみ説明 [!DNL Catalog]します。 データセットの作成、設定、監視の手順について詳しくは、次の [チュートリアルを参照してください](../datasets/create.md)。
+>This document only covers how to create a dataset object in [!DNL Catalog]. データセットの作成、設定、監視の手順について詳しくは、次の[チュートリアル](../datasets/create.md)を参照してください。
 
-**API形式**
+**API 形式**
 
 ```HTTP
 POST /dataSets
@@ -28,7 +28,7 @@ POST /dataSets
 
 **リクエスト**
 
-次のリクエストは、以前に定義したスキーマーを参照するデータセットを作成します。
+次のリクエストは、以前に定義されたスキーマを参照するデータセットを作成します。
 
 ```SHELL
 curl -X POST \
@@ -55,15 +55,15 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | 作成するデータセットの名前。 |
-| `schemaRef.id` | データセットの基となるXDMスキーマのURI `$id` 値。 |
+| `schemaRef.id` | データセットの基になる XDM スキーマの URI `$id` 値。 |
 
 >[!NOTE]
 >
->次の例では、 [パーケット](https://parquet.apache.org/documentation/latest/) ・ファイル形式を `containerFormat` プロパティに使用します。 JSONファイル形式の使用例については、『 [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md)』を参照してください。
+> この例では、[ プロパティに ](https://parquet.apache.org/documentation/latest/) parquet `containerFormat` ファイル形式を使用しています。JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](../../ingestion/batch-ingestion/api-overview.md)』を参照してください。
 
 **応答**
 
-正常に完了すると、HTTPステータス201（作成済み）と、新たに作成されたデータセットのIDを形式で含む配列で構成される応答オブジェクトが返され `"@/datasets/{DATASET_ID}"`ます。 データセットIDは、API呼び出しでデータセットを参照するために使用される、読み取り専用の、システム生成の文字列です。
+成功した応答は、HTTP Status 201（作成済み）と、新しく作成されたデータセットの ID を `"@/datasets/{DATASET_ID}"` 形式で含む配列で構成される応答オブジェクトを返します。データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。
 
 ```JSON
 [
