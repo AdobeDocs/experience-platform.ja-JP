@@ -1,42 +1,42 @@
 ---
 keywords: Experience Platform;attribution ai;access scores;popular topics
 solution: Experience Platform
-title: アトリビューションAIのスコアへのアクセス
+title: Attribution AI のスコアへのアクセス
 topic: Accessing scores
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 2%
+ht-degree: 74%
 
 ---
 
 
-# アトリビューションAIでのスコアのダウンロード
+# Attribution AI内のスコアのダウンロード
 
-このドキュメントは、アトリビューションAIのスコアをダウンロードする際のガイドとして機能します。
+このドキュメントは、Attribution AIのスコアをダウンロードする際のガイドとして機能します。
 
 ## はじめに
 
-アトリビューションAIを使用すると、スコアをパーケファイル形式でダウンロードできます。 このチュートリアルでは、はじめに [](./getting-started.md) 「」のAttribution AIスコアのダウンロードの節を読み終えている必要があります。
+Attribution AIを使用すると、パーケーファイル形式のスコアをダウンロードできます。 This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
 
-さらに、アトリビューションAIのスコアにアクセスするには、実行が成功したステータスを持つサービスインスタンスが使用可能になっている必要があります。 新しいサービスインスタンスを作成するには、 [アトリビューションAIユーザーガイドを参照してください](./user-guide.md)。 最近サービスインスタンスを作成したが、まだトレーニングとスコアリングを受けている場合は、24時間待ってから実行を終了してください。
+また、Attribution AIのスコアにアクセスするには、正常な実行ステータスのサービスインスタンスを使用できる状態にする必要があります。 To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
 
-## Find your dataset ID {#dataset-id}
+## データセット ID を見つける {#dataset-id}
 
-アトリビューションAIインサイトのサービスインスタンス内で、右上のナビゲーションの「 *その他のアクション* 」ドロップダウンをクリックし、「 **[!UICONTROL アクセススコア]**」を選択します。
+Within your service instance for Attribution AI insights, click the *More actions* dropdown in the top-right navigation then select **[!UICONTROL Access scores]**.
 
 ![その他のアクション](./images/download-scores/more-actions.png)
 
-新しいダイアログが表示され、ダウンロードスコアに関するドキュメントへのリンクと現在のインスタンスのデータセットIDが含まれます。 データセットIDをクリップボードにコピーし、次の手順に進みます。
+新しいダイアログが表示され、スコアのダウンロードに関するドキュメントへのリンクと、現在のインスタンスのデータセット ID が示されます。データセット ID をクリップボードにコピーして、次の手順に進みます。
 
-![データセットID](../customer-ai/images/download-scores/access-scores.png)
+![データセット ID](../customer-ai/images/download-scores/access-scores.png)
 
-## バッチIDの取得 {#retrieve-your-batch-id}
+## バッチ ID を取得する {#retrieve-your-batch-id}
 
-前の手順のデータセットIDを使用して、バッチIDを取得するには、カタログAPIを呼び出す必要があります。 組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、 `limit` クエリパラメーターの数値を、返す金額に増やします。 使用可能なクエリパラメーターのタイプの詳細については、クエリパラメーターを使用したカタログデータの [フィルタリングに関するガイドを参照してください](../../catalog/api/filter-data.md)。
+前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、 `limit` クエリパラメーターの数値を、返す金額に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1
@@ -44,7 +44,7 @@ GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=succ
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DATASET_ID}` | データセットIDは、「アクセススコア」ダイアログで使用できます。 |
+| `{DATASET_ID}` | アクセススコアダイアログで使用できるデータセット ID です。 |
 
 **リクエスト**
 
@@ -56,9 +56,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチIDで `01E5QSWCAASFQ054FNBKYV6TIQ`す。 バッチIDをコピーして、次のAPI呼び出しで使用します。
+成功した応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチIDで `01E5QSWCAASFQ054FNBKYV6TIQ`す。 バッチ ID をコピーして、次の API 呼び出しで使用します。
 
 >[!NOTE]
 > 次の応答では、読みやすさを考慮して `tags` オブジェクトの形式を変更しました。
@@ -110,11 +110,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 }
 ```
 
-## バッチIDを使用した次のAPI呼び出しを取得する {#retrieve-the-next-api-call-with-your-batch-id}
+## バッチ ID を使用して次の API 呼び出しを取得する {#retrieve-the-next-api-call-with-your-batch-id}
 
-バッチIDを取得すると、に新しいGETリクエストを作成でき `/batches`ます。 リクエストは、次のAPIリクエストとして使用されるリンクを返します。
+バッチ ID を取得したら、`/batches` に対して新しい GET リクエストを実行できます。リクエストを実行すると、次の API リクエストとして使用するリンクが返されます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET batches/{BATCH_ID}/files
@@ -122,11 +122,11 @@ GET batches/{BATCH_ID}/files
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 前の手順で取得したバッチIDは、バッチID [を取得します](#retrieve-your-batch-id)。 |
+| `{BATCH_ID}` | 前の手順（[バッチ ID の取得](#retrieve-your-batch-id)）で取得したバッチ ID です。 |
 
 **リクエスト**
 
-独自のバッチIDを使用して、次のリクエストを行います。
+独自のバッチ ID を使用して、次のリクエストを実行します。
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAASFQ054FNBKYV6TIQ/files' \
@@ -138,7 +138,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 
 **応答**
 
-成功した応答は、 `_links` オブジェクトを含むペイロードを返します。 オブジェクト内 `_links` には、新しいAPI呼び出し `href` を値として含むが、 この値をコピーして、次の手順に進みます。
+リクエストが成功した場合は、`_links` オブジェクトを含むペイロードが返されます。`_links` オブジェクト内には、新しい API 呼び出しが値として付加された `href` があります。この値をコピーして、次の手順に進みます。
 
 ```json
 {
@@ -164,11 +164,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 }
 ```
 
-## ファイルの取得 {#retrieving-your-files}
+## ファイルを取得する {#retrieving-your-files}
 
-前の手順で取得した `href` 値をAPI呼び出しとして使用し、新しいGETリクエストを作成してファイルディレクトリを取得します。
+前の手順で取得した `href` 値を API 呼び出しとして使用して、新しい GET リクエストを実行し、ファイルディレクトリを取得します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET files/{DATASETFILE_ID}
@@ -176,7 +176,7 @@ GET files/{DATASETFILE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | dataSetFile IDは、 `href` 前の手順の [値で返されます](#retrieve-the-next-api-call-with-your-batch-id)。 また、オブジェクトタイプの `data` 配列でもアクセスでき `dataSetFileId`ます。 |
+| `{DATASETFILE_ID}` | dataSetFile ID は、[前の手順](#retrieve-the-next-api-call-with-your-batch-id)で取得した `href` 値にあります。また、オブジェクトタイプ `dataSetFileId` 下の `data` 配列からもアクセスできます。 |
 
 **リクエスト**
 
@@ -190,7 +190,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 **応答**
 
-応答には、1つのエントリを持つデータ配列、またはそのディレクトリに属するファイルのリストが含まれます。 次の例は、ファイルのリストを示しており、読みやすくまとめられています。 このシナリオでは、各ファイルにアクセスするには、各ファイルのURLに従う必要があります。
+レスポンスには、データ配列（単一のエントリが存在する可能性があります）、またはそのディレクトリに属するファイルのリストが含まれます。次の例にはファイルのリストが含まれています。また、読みやすくするために簡略化されています。このシナリオの場合、ファイルにアクセスするには各ファイルの URL をたどる必要があります。
 
 ```json
 {
@@ -214,20 +214,20 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `_links.self.href` | ディレクトリ内のファイルのダウンロードに使用するGET要求URLです。 |
+| `_links.self.href` | ディレクトリ内のファイルのダウンロードに使用する GET 要求の URL です。 |
 
 
-アレイ内の任意のファイルオブジェクトの `href` 値をコピーし、 `data` 次の手順に進みます。
+`data` 配列内のファイルオブジェクトの `href` 値をコピーして、次の手順に進みます。
 
-## ファイルデータのダウンロード
+## ファイルデータをダウンロードする
 
-ファイルデータをダウンロードするには、前の手順でコピーした `"href"` 値にGETリクエストを行い、ファイル [を取得します](#retrieving-your-files)。
+ファイルデータをダウンロードするには、前の手順（[ファイルの取得](#retrieving-your-files)）でコピーした `"href"` 値に対して GET リクエストを実行します。
 
 >[!NOTE]
 >
->この要求をコマンドラインで直接行う場合、要求ヘッダーの後に出力を追加するよう求められる場合があります。 次のリクエストの例は、を使用してい `--output {FILENAME.FILETYPE}`ます。
+>このリクエストをコマンドラインで直接おこなう場合、要求ヘッダーの後に出力を追加するように求められる場合があります。次のリクエストの例では `--output {FILENAME.FILETYPE}` を使用しています。
 
-**API形式**
+**API 形式**
 
 ```http
 GET files/{DATASETFILE_ID}?path={FILE_NAME}
@@ -235,8 +235,8 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | dataSetFile IDは、 `href` 前の手順の [値で返されます](#retrieve-the-next-api-call-with-your-batch-id)。 |
-| `{FILE_NAME}` | ファイルの名前。 |
+| `{DATASETFILE_ID}` | dataSetFile ID は、[前の手順](#retrieve-the-next-api-call-with-your-batch-id)で取得した `href` 値にあります。 |
+| `{FILE_NAME}` | ファイルの名前です。 |
 
 **リクエスト**
 
@@ -251,54 +251,54 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 >[!TIP]
 >
->GETリクエストを行う前に、ファイルを保存するディレクトリまたはフォルダーが正しいことを確認してください。
+>GET リクエストを実行する前に、ファイルを保存するディレクトリまたはフォルダーが正しいことを確認してください。
 
 **応答**
 
-応答によって、現在のディレクトリで要求したファイルがダウンロードされます。 この例では、ファイル名は「file.parket」です。
+現在のディレクトリにある、要求したファイルがダウンロードされます。この例では、ファイル名は「file.parket」です。
 
-![ターミナル](./images/download-scores/terminal-output.png)
+![端末](./images/download-scores/terminal-output.png)
 
 ## 次の手順
 
-このドキュメントでは、アトリビューションAIスコアのダウンロードに必要な手順を説明しています。 提供される他の [インテリジェントサービス](../home.md) 、ガイドを引き続き参照できるようになりました。
+このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順を説明しています。 これで、提供されているその他の[インテリジェントサービス](../home.md)とガイドを参照できます。
 
-## スノーフレークを使用したスコアへのアクセス
+## Snowflakeを使用したスコアへのアクセス
 
 >[!IMPORTANT]
 >
->SnowFlakeを使用したスコアへのアクセスについて詳しくは、attributionai-support@adobe.comにお問い合わせください。
+>Snowflakeを使用したスコアへのアクセスについて詳しくは、attributionai-support@adobe.comにお問い合わせください。
 
-集計されたアトリビューションAIスコアには、Snowflakeを使用してアクセスできます。 現在、Snowflakeの読者アカウントに資格情報を設定して受け取るには、アドビサポート(attributionai-support@adobe.com)に電子メールでお問い合わせいただく必要があります。
+Snowflakeを使用して、集計Attribution AIスコアにアクセスできます。 現在、Snowflake のリーダーアカウントを設定して、その資格情報を受け取るには、アドビサポート（attributionai-support@adobe.com）に電子メールでお問い合わせいただく必要があります。
 
-アドビサポートがリクエストを処理すると、Snowflakeの読者アカウントのURLと、次の対応する資格情報が提供されます。
+アドビサポートがリクエストを処理すると、Snowflake のリーダーアカウントの URL と、それに対応する資格情報が提供されます（以下を参照）。
 
-- 雪片URL
+- Snowflake URL
 - ユーザー名
 - パスワード
 
 >[!NOTE]
 >
->Readerアカウントは、JDBC ConnectorをサポートするSQLクライアント、WorksheetおよびBIソリューションを使用して、データに対するクエリーを行います。
+>リーダーアカウントは、JDBC コネクタをサポートする SQL クライアント、ワークシート、BI ソリューションを使用してデータを照会するためのアカウントです。
 
 資格情報とURLを取得したら、モデル表をクエリし、タッチポイント日またはコンバージョン日別に集計できます。
 
-### Snowflakeでスキーマを見つける
+### Snowflake でスキーマを探す
 
-提供された資格情報を使用してSnowflakeにログインします。 左上のメインナビゲーションで「 **ワークシート** 」タブをクリックし、左側のパネルでデータベースディレクトリに移動します。
+提供された資格情報を使用して、Snowflake にログインします。左上のメインナビゲーションの「**Worksheets**」タブをクリックし、左パネルのデータベースディレクトリに移動します。
 
-![ワークシートと移動](./images/download-scores/edited_snowflake_1.png)
+![「Worksheets」のデータベースディレクトリに移動](./images/download-scores/edited_snowflake_1.png)
 
-次に、画面の右上隅にある **「スキーマを選択** 」をクリックします。 表示されるプローバーで、適切なデータベースが選択されていることを確認します。 次に、[ *スキーマ* ]ドロップダウンをクリックし、表示されたスキーマの1つを選択します。 選択したスキーマの下にリストされたスコアテーブルから直接クエリできます。
+次に、画面右上の「**Select Schema**」をクリックします。表示されるポップオーバーで、適切なデータベースが選択されていることを確認します。次に、「*スキーマ*」ドロップダウンをクリックし、リストからいずれかのスキーマを選択します。選択したスキーマの下に表示されるスコアテーブルから直接照会できます。
 
-![スキーマを見つける](./images/download-scores/edited_snowflake_2.png)
+![スキーマの選択](./images/download-scores/edited_snowflake_2.png)
 
-## PowerBIとSnowflakeの接続（オプション）
+## PowerBI を Snowflake に接続する（オプション）
 
-雪片資格情報は、PowerBIデスクトップと雪片データベースの間の接続を設定するために使用できます。
+Snowflake の資格情報を使用して、PowerBI Desktop と Snowflake データベース間の接続を設定できます。
 
-まず、「 *Server* 」ボックスの下で、雪片URLを入力します。 次に、「 *Warehouse*」で、「XSMALL」と入力します。 次に、ユーザ名とパスワードを入力します。
+まず、「*サーバー*」ボックスに、Snowflake の URL を入力します。次に、「*Warehouse*」に「XSMALL」と入力します。ユーザー名とパスワードを入力します。
 
-![POWERBIの例](./images/download-scores/powerbi-snowflake.png)
+![POWERBI の例](./images/download-scores/powerbi-snowflake.png)
 
-接続が確立されたら、雪片データベースを選択し、適切なスキーマを選択します。 これで、すべてのテーブルを読み込むことができます。
+接続が確立されたら、Snowflake データベースを選択し、適切なスキーマを選択します。これで、すべてのテーブルを読み込むことができます。
