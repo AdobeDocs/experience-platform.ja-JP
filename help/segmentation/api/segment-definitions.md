@@ -1,49 +1,49 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: セグメント定義
+title: セグメントの定義
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
 source-wordcount: '1041'
-ht-degree: 4%
+ht-degree: 52%
 
 ---
 
 
 # セグメント定義エンドポイント
 
-Adobe Experience Platformを使用すると、プロファイルのグループから、特定の属性または行動のグループを定義するセグメントを作成できます。 セグメント定義は、 [!DNL Profile Query Language] (PQL)に書き込まれたクエリをカプセル化するオブジェクトです。 このオブジェクトは、PQL述語とも呼ばれます。 PQL述語は、指定するレコードまたは時系列データに関連する条件に基づいて、セグメントの規則を定義し [!DNL Real-time Customer Profile]ます。 PQLクエリの記述の詳細については、 [PQLガイド](../pql/overview.md) を参照してください。
+Adobe Experience Platform を使用すると、プロファイルのグループから特定の属性やビヘイビアーのグループを定義するセグメントを作成できます。A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). このオブジェクトは PQL 述語とも呼ばれます。PQL predicates define the rules for the segment based on conditions related to any record or time-series data you supply to [!DNL Real-time Customer Profile]. PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
 このガイドは、セグメント定義をより深く理解するのに役立つ情報を提供し、APIを使用して基本的なアクションを実行するためのサンプルAPI呼び出しを含みます。
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、 [入門ガイドを参照して](./getting-started.md) 、必要なヘッダーやAPI呼び出し例を読む方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 ## セグメント定義のリストの取得 {#list}
 
-エンドポイントにGETリクエストを作成して、IMS組織のすべてのセグメント定義のリストを取得でき `/segment/definitions` ます。
+IMS 組織の全セグメント定義のリストを取得するには、`/segment/definitions` エンドポイントへの GET リクエストを実行します。
 
-**API形式**
+**API 形式**
 
-エンドポイントでは、結果のフィルタリングに役立ついくつかのクエリパラメーターが `/segment/definitions` サポートされています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべてのセグメント定義が取得されます。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。
+エンドポイントでは、結果のフィルタリングに役立ついくつかのクエリパラメーターが `/segment/definitions` サポートされています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントに呼び出しを実行すると、組織で使用可能なセグメント定義がすべて取得されます。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /segment/definitions
 GET /segment/definitions?{QUERY_PARAMETERS}
 ```
 
-**クエリパラメーター**
+**クエリパラメータ**
 
 | パラメーター | 説明 | 例 |
 | --------- | ----------- | ------- |
 | `start` | 返されるセグメント定義の開始オフセットを指定します。 | `start=4` |
-| `limit` | 1ページに返されるセグメント定義の数を指定します。 | `limit=20` |
-| `page` | セグメント定義の結果の開始元となるページを指定します。 | `page=5` |
-| `sort` | 結果を並べ替える基準となるフィールドを指定します。 は次の形式で書き込まれます。 `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
-| `evaluationInfo.continuous.enabled` | セグメント定義がストリーミングを有効にするかどうかを指定します。 | `evaluationInfo.continuous.enabled=true` |
+| `limit` | 返される、1 ページあたりのセグメント定義の数を指定します。 | `limit=20` |
+| `page` | どのページからセグメント定義の結果を表示するかを指定します。 | `page=5` |
+| `sort` | 結果を並べ替える基準となるフィールドを指定します。 Is written in the following format: `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
+| `evaluationInfo.continuous.enabled` | セグメント定義でストリーミングを有効にするかどうかを指定します。 | `evaluationInfo.continuous.enabled=true` |
 
 **リクエスト**
 
@@ -59,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 **応答**
 
-正常な応答が返されると、指定したIMS組織のセグメント定義のリストを持つHTTPステータス200がJSONとして返されます。
+リクエストが成功した場合は、指定した IMS 組織のセグメント定義のリスト（JSON 形式）と HTTP ステータス 200 が返されます。
 
 ```json
 {
@@ -153,9 +153,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 
 ## 新しいセグメント定義の作成 {#create}
 
-エンドポイントにPOSTリクエストを作成して、新しいセグメント定義を作成でき `/segment/definitions` ます。
+新しいセグメント定義を作成するには、`/segment/definitions` エンドポイントに POST リクエストを実行します。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /segment/definitions
@@ -189,17 +189,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | **必須。** セグメントを参照する一意の名前。 |
-| `schema` | **必須。** セグメント内のエンティティに関連付けられているスキーマ。 またはフィールドで構成され `id``name` ます。 |
-| `expression` | **必須。** セグメント定義に関するフィールド情報を含むエンティティ。 |
-| `expression.type` | 式タイプを指定します。 現在、「PQL」のみがサポートされています。 |
-| `expression.format` | 式の構造を値で示します。 現在、次の形式がサポートされています。 <ul><li>`pql/text`: パブリッシュされたPQL文法に従った、セグメント定義のテキスト表現。  例：`workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
-| `expression.value` | に示す種類に適合する式 `expression.format`。 |
+| `name` | **必須**。セグメントを参照する際に使用される一意の名前です。 |
+| `schema` | **必須**。セグメント内のエンティティに関連付けられているスキーマです。`id` か `name` のどちらかのフィールドで構成されます。 |
+| `expression` | **必須**。セグメント定義に関するフィールド情報を含んだエンティティです。 |
+| `expression.type` | 式タイプを指定します。現時点では、「PQL」のみサポートされています。 |
+| `expression.format` | 値内の式の構造を示します。現時点では、次の形式がサポートされています。 <ul><li>`pql/text`：セグメント定義のテキスト表現で、公開された PQL 文法に従っている必要があります。例：`workAddress.stateProvince = homeAddress.stateProvince`</li></ul> |
+| `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
 | `description` | 定義の人間が読み取り可能な説明。 |
 
 **応答**
 
-正常に応答すると、新しく作成したセグメント定義の詳細を含むHTTPステータス200が返されます。
+リクエストが成功した場合は、新しく作成したセグメント定義の詳細と HTTP ステータス 200 が返されます。
 
 ```json
 {
@@ -250,9 +250,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ## 特定のセグメント定義の取得 {#get}
 
-エンドポイントにGETリクエストを送信し、取得するセグメント定義のIDをリクエストパスに指定することで、特定のセグメント定義に関する詳細な情報を取得でき `/segment/definitions` ます。
+You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to retrieve in the request path.
 
-**API形式**
+**API 形式**
 
 ```http
 GET /segment/definitions/{SEGMENT_ID}
@@ -260,7 +260,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | 取得するセグメント定義の `id` 値。 |
+| `{SEGMENT_ID}` | The `id` value of the segment definition you want to retrieve. |
 
 **リクエスト**
 
@@ -274,7 +274,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 
 **応答**
 
-正常に応答すると、HTTPステータス200が返され、指定したセグメント定義に関する詳細情報が返されます。
+リクエストが成功した場合は、特定のセグメント定義についての詳細情報と HTTP ステータス 200 が返されます。
 
 ```json
 {
@@ -321,20 +321,20 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | システム生成のセグメント定義の読み取り専用ID。 |
-| `name` | セグメントを参照する一意の名前。 |
-| `schema` | セグメント内のエンティティに関連付けられているスキーマ。 またはフィールドで構成され `id``name` ます。 |
-| `expression` | セグメント定義に関するフィールド情報を含むエンティティ。 |
-| `expression.type` | 式タイプを指定します。 現在、「PQL」のみがサポートされています。 |
-| `expression.format` | 式の構造を値で示します。 現在、次の形式がサポートされています。 <ul><li>`pql/text`: パブリッシュされたPQL文法に従った、セグメント定義のテキスト表現。  例：`workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
-| `expression.value` | に示す種類に適合する式 `expression.format`。 |
-| `description` | 定義の人間が読み取り可能な説明。 |
+| `name` | 。セグメントを参照する際に使用される一意の名前です。 |
+| `schema` | 。セグメント内のエンティティに関連付けられているスキーマです。`id` か `name` のどちらかのフィールドで構成されます。 |
+| `expression` | 。セグメント定義に関するフィールド情報を含んだエンティティです。 |
+| `expression.type` | 式タイプを指定します。現時点では、「PQL」のみサポートされています。 |
+| `expression.format` | 値内の式の構造を示します。現時点では、次の形式がサポートされています。 <ul><li>`pql/text`：セグメント定義のテキスト表現で、公開された PQL 文法に従っている必要があります。例：`workAddress.stateProvince = homeAddress.stateProvince`</li></ul> |
+| `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
+| `description` | 人間にとってわかりやすい、定義の説明。 |
 | `evaluationInfo` | システム生成オブジェクト。評価、バッチ、連続（ストリーミングとも呼ばれます）または同期のタイプを指定し、セグメント定義が実行されます。 |
 
 ## 一括取得セグメント定義 {#bulk-get}
 
-エンドポイントにPOSTリクエストを送信し、リクエスト本文にセグメント定義の `/segment/definitions/bulk-get``id` 値を指定することで、指定した複数のセグメント定義に関する詳細な情報を取得できます。
+エンドポイントにPOSTリクエストを送信し、リクエスト本文にセグメント定義の `/segment/definitions/bulk-get``id` 値を入力することで、指定した複数のセグメント定義に関する詳細な情報を取得できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /segment/definitions/bulk-get
@@ -361,7 +361,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
-**応答**
+**応答** 
 
 正常な応答が返されると、HTTPステータス207が返され、このステータスには要求されたセグメント定義が含まれます。
 
@@ -454,20 +454,20 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | システム生成のセグメント定義の読み取り専用ID。 |
-| `name` | セグメントを参照する一意の名前。 |
-| `schema` | セグメント内のエンティティに関連付けられているスキーマ。 またはフィールドで構成され `id``name` ます。 |
-| `expression` | セグメント定義に関するフィールド情報を含むエンティティ。 |
-| `expression.type` | 式タイプを指定します。 現在、「PQL」のみがサポートされています。 |
-| `expression.format` | 式の構造を値で示します。 現在、次の形式がサポートされています。 <ul><li>`pql/text`: パブリッシュされたPQL文法に従った、セグメント定義のテキスト表現。  例：`workAddress.stateProvince = homeAddress.stateProvince`。</li></ul> |
-| `expression.value` | に示す種類に適合する式 `expression.format`。 |
-| `description` | 定義の人間が読み取り可能な説明。 |
+| `name` | 。セグメントを参照する際に使用される一意の名前です。 |
+| `schema` | 。セグメント内のエンティティに関連付けられているスキーマです。`id` か `name` のどちらかのフィールドで構成されます。 |
+| `expression` | 。セグメント定義に関するフィールド情報を含んだエンティティです。 |
+| `expression.type` | 式タイプを指定します。現時点では、「PQL」のみサポートされています。 |
+| `expression.format` | 値内の式の構造を示します。現時点では、次の形式がサポートされています。 <ul><li>`pql/text`：セグメント定義のテキスト表現で、公開された PQL 文法に従っている必要があります。例：`workAddress.stateProvince = homeAddress.stateProvince`</li></ul> |
+| `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
+| `description` | 人間にとってわかりやすい、定義の説明。 |
 | `evaluationInfo` | システム生成オブジェクト。評価、バッチ、連続（ストリーミングとも呼ばれます）または同期のタイプを指定し、セグメント定義が実行されます。 |
 
 ## 特定のセグメント定義の削除 {#delete}
 
-エンドポイントにDELETEリクエストを送信し、削除するセグメント定義のIDをリクエストパスに指定することで、特定のセグメント定義を削除するようにリクエストでき `/segment/definitions` ます。
+You can request to delete a specific segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to delete in the request path.
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /segment/definitions/{SEGMENT_ID}
@@ -475,7 +475,7 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | 削除するセグメント定義の `id` 値。 |
+| `{SEGMENT_ID}` | ：削除するセグメント定義の `id` 値。 |
 
 **リクエスト**
 
@@ -489,13 +489,13 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 
 **応答**
 
-応答が成功すると、メッセージなしのHTTPステータス200が返されます。
+リクエストが成功した場合、HTTP ステータス 200 が返され、メッセージは返されません。
 
 ## 特定のセグメント定義の更新
 
-特定のセグメント定義を更新するには、エンドポイントにPATCHリクエストを作成し、更新するセグメント定義のIDをリクエストパスに指定します。 `/segment/definitions`
+エンドポイントにPATCHリクエストを送信し、更新するセグメント定義のIDをリクエストパスに指定することで、特定のセグメント定義を更新でき `/segment/definitions` ます。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /segment/definitions/{SEGMENT_ID}
@@ -503,7 +503,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | 更新するセグメント定義の `id` 値。 |
+| `{SEGMENT_ID}` | The `id` value of the segment definition you want to update. |
 
 **リクエスト**
 
@@ -538,9 +538,9 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }'
 ```
 
-**応答**
+**応答** 
 
-正常に応答すると、HTTPステータス200が返され、新たに更新されたセグメント定義の詳細が返されます。 勤務先住所の国が米国からカナダ(CA)に更新されたことに注目してください。
+リクエストが成功した場合は、更新したセグメント定義の詳細と HTTP ステータス 200 が返されます。勤務先住所の国が米国からカナダ(CA)に更新されたことに注目してください。
 
 ```json
 {
