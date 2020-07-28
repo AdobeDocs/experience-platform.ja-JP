@@ -1,38 +1,38 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: データ取り込みの監視
+title: データ取得の監視
 topic: overview
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '519'
-ht-degree: 0%
+ht-degree: 68%
 
 ---
 
 
-# データ取り込みの監視
+# データ取得の監視
 
-データ取り込みを使用すると、Adobe Experience Platformにデータを取り込むことができます。 バッチインジェストを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングインジェストを使用すると、データをリアルタイムでストリーミングエンドポイントを使用して取り込むことができます。 [!DNL Platform]
+データ取得を使用すると、Adobe Experience Platform でデータを取得できます。You can either use batch ingestion, which allows you to insert your data using various file types (such as CSVs), or streaming ingestion, which allows you to ingest your data to [!DNL Platform] using streaming endpoints in real-time.
 
-このユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内のデータを監視する手順を説明します。 このガイドを使用するには、Adobe IDとAdobe Experience Platformへのアクセス権が必要です。
+このユーザーガイドでは、Adobe Experience Platform ユーザーインターフェイス内でデータを監視する方法の手順を説明します。このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 
-## ストリーミングのエンド・ツー・エンドのデータ取り込みの監視
+## ストリーミングエンドツーエンドデータの取得の監視
 
-[Experience PlatformUIで、左側のナビゲーションメニューの「](https://platform.adobe.com)監視 **[!UICONTROL 」をクリックし、「]** Streaming end-to-end ****」をクリックします。
+[Experience Platform UI](https://platform.adobe.com) で、左側のナビゲーションメニューの「**[!UICONTROL 監視]**」をクリックしてから、「**[!UICONTROL ストリーミングエンドツーエンド]**」をクリックします。
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-[ *[!UICONTROL ストリーミングエンドツーエンドの監視]* ]ページが表示されます。 このワークスペースには、受信したストリームイベントの割合を示すグラフ [!DNL Platform]、によって正常に処理されたストリームイベントの割合を示すグラフ、 [!DNL Real-time Customer Profile](../../profile/home.md)および入力データの詳細リストが表示されます。
+「*[!UICONTROL ストリーミングエンドツーエンド]*」の監視ページが表示されます。このワークスペースには、受信したストリームイベントの割合を示すグラフ [!DNL Platform]、によって正常に処理されたストリームイベントの割合を示すグラフ、 [!DNL Real-time Customer Profile](../../profile/home.md)および入力データの詳細リストが表示されます。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-デフォルトで、上のグラフには、過去7日間の摂取率が表示されます。 この日付範囲は、強調表示されたボタンをクリックすると、様々な期間を表示するように調整できます。
+デフォルトで、上のグラフには、過去7日間の摂取率が表示されます。 ハイライト表示されたボタンをクリックして、この日付範囲を調整し、様々な期間を表示できます。
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-下のグラフには、過去7日間で正常に処理されたストリームイベントの割合 [!DNL Profile] が表示されます。 この日付範囲は、強調表示されたボタンをクリックすると、様々な期間を表示するように調整できます。
+下のグラフには、過去7日間で正常に処理されたストリームイベントの割合 [!DNL Profile] が表示されます。 ハイライト表示されたボタンをクリックして、この日付範囲を調整し、様々な期間を表示できます。
 
 >[!NOTE]
 >
@@ -40,13 +40,13 @@ ht-degree: 0%
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
-グラフの下には、上に示した日付範囲に対応するすべてのストリーミング取り込みレコードがリストされています。 一覧に表示される各バッチには、ID、データセット名、最終更新時点、バッチ内のレコード数、エラー数（存在する場合）が表示されます。 任意のレコードをクリックすると、そのレコードに関する詳細情報を表示できます。
+グラフの下には、上に示した日付範囲に対応するすべてのストリーミング取り込みレコードがリストされています。 リストの各バッチには、ID、データセット名、最終アップデート日時、バッチ内のレコード数、エラー数（エラーがある場合）が表示されます。任意のレコードをクリックして、そのレコードに関する詳細情報を表示できます。
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 
 ### ストリーミングレコードの表示
 
-ストリーミングされたレコードの詳細を表示すると、取り込まれたレコード数、ファイルサイズ、取り込み開始、終了時間などの情報が表示されます。
+正常にストリーミングされたレコードの詳細には、取得されたレコードの数、ファイルサイズ、取得の開始時刻および終了時刻などの情報が表示されます。
 
 ![](../images/quality/monitor-data-flows/successful-streaming-record.png)
 
@@ -54,30 +54,30 @@ ht-degree: 0%
 
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
-また、失敗したレコードは、バッチの処理中に発生したエラーの詳細を提供します。 次の例では、カタログからのdatasetIdの検証中にシステムエラーが発生しました。
+また、失敗したレコードは、バッチの処理中に発生したエラーの詳細を提供します。次の例では、カタログの datasetId の検証中にシステムエラーが発生しています。
 
 ![](../images/quality/monitor-data-flows/failed-batch-details.png)
 
-## バッチのエンドツーエンドのデータ取り込みの監視
+## バッチエンドツーエンドデータの取得の監視
 
-で、左側のナビゲ [!DNL Experience Platform UI](https://platform.adobe.com)ーションメニューの[ **[!UICONTROL 監視]** ]をクリックします。
+In the [!DNL Experience Platform UI](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-「 **[!UICONTROL バッチエンドツーエンドの監視]** 」ページが表示され、以前に取り込んだバッチのリストが表示されます。 任意のバッチをクリックすると、そのレコードに関する詳細情報を表示できます。
+「**[!UICONTROL バッチエンドツーエンド]**」の監視ページが開き、以前に取得したバッチのリストが表示されます。任意のバッチをクリックして、そのレコードに関する詳細情報を表示できます。
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 
 ### バッチの表示
 
-正常に完了したバッチの詳細を表示すると、取り込まれたレコード数、ファイルサイズ、取り込み開始、終了時間などの情報が表示されます。
+成功したバッチの詳細には、取得されたレコードの数、ファイルサイズ、取得の開始時刻および終了時刻などの情報が表示されます。
 
 ![](../images/quality/monitor-data-flows/successful-batch.png)
 
-失敗したバッチの詳細には、成功したバッチと同じ情報が表示され、レコード数の追加に失敗しました。
+失敗したバッチの詳細には、成功したバッチと同じ情報に加えて、失敗したレコードの数が表示されます。
 
 ![](../images/quality/monitor-data-flows/failed-streaming-record.png)
 
-また、失敗したバッチは、バッチの処理中に発生したエラーの詳細を提供します。 以下の例では、不明なフィールドのを使用しているので、取り込んだバッチにエラーが発生しました `_experience`。
+また、失敗したバッチは、バッチの処理中に発生したエラーの詳細を提供します。次の例では、`_experience` の不明なフィールドを使用したため、取得したバッチでエラーが発生しています。
 
 ![](../images/quality/monitor-data-flows/failed-streaming-record-details.png)
