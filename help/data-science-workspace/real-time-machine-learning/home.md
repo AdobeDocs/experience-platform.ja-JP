@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 ### データの取り込みと準備
 
-データはAdobe Experience Platform時に( [!DNL Experience Data Model] XDM)と共に取り込まれ、変換されます。 このデータは、モデルトレーニングに使用されます。 XDMの詳細については、 [XDMの概要を参照してください](../../xdm/home.md)。
+Data is ingested and transformed with the [!DNL Experience Data Model] (XDM) on Adobe Experience Platform. このデータは、モデルトレーニングに使用されます。 XDM について詳しくは、[XDM の概要](../../xdm/home.md)を参照してください。
 
 ### オーサリング
 
@@ -77,5 +77,5 @@ ht-degree: 1%
 
 ## 次の手順
 
-はじめに、はじめに [](./getting-started.md) . このガイドでは、リアルタイム機械学習モデルを作成するために必要な前提条件をすべて設定する手順を説明します。
+『[始める前に](./getting-started.md)』に従って、作業を開始できます。このガイドでは、リアルタイム機械学習モデルを作成するために必要な前提条件をすべて設定する手順を説明します。
 
