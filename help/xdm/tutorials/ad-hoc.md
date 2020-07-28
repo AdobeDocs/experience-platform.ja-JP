@@ -7,31 +7,31 @@ translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '724'
-ht-degree: 2%
+ht-degree: 79%
 
 ---
 
 
 # アドホックスキーマの作成
 
-特定の状況では、1つのデータセットでのみ使用できるように名前が付けられたフィールドを持つ [!DNL Experience Data Model] (XDM)スキーマを作成する必要が生じる場合があります。 これは「アドホック」スキーマと呼ばれます。 アドホックスキーマは、CSVファイルの取り込みや特定の種類のソース接続の作成な [!DNL Experience Platform]ど、の様々なデータ取り込みワークフローで使用されます。
+In specific circumstances, it may be necessary to create an [!DNL Experience Data Model] (XDM) schema with fields that are namespaced for usage only by a single dataset. これは「アドホック」スキーマと呼ばれます。Ad-hoc schemas are used in various data ingestion workflows for [!DNL Experience Platform], including ingesting CSV files and creating certain kinds of source connections.
 
-このドキュメントでは、 [スキーマレジストリAPIを使用してアドホックスキーマを作成する一般的な手順を説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 ワークフローの一部としてアドホックスキーマを作成する必要がある他の [!DNL Experience Platform] チュートリアルと組み合わせて使用することを目的としています。 各ドキュメントには、特定の使用事例に合わせてアドホックスキーマを適切に設定する方法に関する詳細情報が記載されています。
+このドキュメントでは、[スキーマレジストリ API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) を使用してアドホックスキーマを作成する一般的な手順を示します。It is intended to be used in conjunction with other [!DNL Experience Platform] tutorials that require creating an ad-hoc schema as part of their workflow. これらの各ドキュメントには、特定の使用例に合わせてアドホックスキーマを適切に設定する方法に関する詳細が記載されています。
 
 ## はじめに
 
-このチュートリアルでは、 [!DNL Experience Data Model] (XDM)システムに関する十分な理解が必要です。 このチュートリアルを開始する前に、次のXDMドキュメントを確認してください。
+This tutorial requires a working understanding of [!DNL Experience Data Model] (XDM) System. このチュートリアルを開始する前に、次の XDM ドキュメントを確認してください。
 
 - [XDMシステムの概要](../home.md): XDMとその実装に関する概要を、で説明し [!DNL Experience Platform]ます。
-- [スキーマ構成の基本](../schema/composition.md): XDMスキーマの基本的なコンポーネントの概要を示します。
+- [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの基本的なコンポーネントの概要。
 
-このチュートリアルを開始する前に、 [開発者ガイドを参照して](../api/getting-started.md) 、 [!DNL Schema Registry] APIの呼び出しを正常に行うために知っておく必要がある重要な情報を確認してください。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 
 ## アドホッククラスの作成
 
-XDMスキーマのデータ動作は、基になるクラスによって決まります。 アドホックスキーマを作成する最初の手順は、その `adhoc` 動作に基づいてクラスを作成することです。 これは、エンドポイントにPOSTリクエストを行うことで行われ `/tenant/classes` ます。
+XDM データの動作は、基になるスキーマによって決まります。アドホックスキーマを作成する最初の手順は、`adhoc` 動作に基づいてクラスを作成することです。これは、`/tenant/classes` エンドポイントに POST リクエストを送信することでおこなわれます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /tenant/classes
@@ -39,11 +39,11 @@ POST /tenant/classes
 
 **リクエスト**
 
-次のリクエストは、ペイロードで指定された属性で設定された新しいXDMクラスを作成します。 に `$ref` プロパティセットを指定す `https://ns.adobe.com/xdm/data/adhoc` ると、 `allOf` このクラスは `adhoc` 動作を継承します。 リクエストは、クラスのカスタムフィールドを含む `_adhoc` オブジェクトも定義します。
+次のリクエストは、ペイロードで指定された属性で設定された新しい XDM クラスを作成します。`allOf` 配列内で `https://ns.adobe.com/xdm/data/adhoc` に設定された `$ref` プロパティを指定することで、このクラスは `adhoc` 動作を継承します。リクエストは、クラスのカスタムフィールドを含む `_adhoc` オブジェクトも定義します。
 
 >[!NOTE]
 >
->の下に定義されるカスタムフィールドは、アドホックスキーマの使用例によって `_adhoc` 異なります。 使用事例に基づく必須カスタムフィールドについては、該当するチュートリアルの特定のワークフローを参照してください。
+> `_adhoc` の下に定義されるカスタムフィールドは、アドホックスキーマの使用例によって異なります。使用例に基づく必須のカスタムフィールドについては、該当するチュートリアルの特定のワークフローを参照してください。
 
 ```shell
 curl -X POST \
@@ -82,12 +82,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `$ref` | 新しいクラスのデータ動作。 アドホッククラスの場合、この値をに設定する必要があり `https://ns.adobe.com/xdm/data/adhoc`ます。 |
+| `$ref` | 新しいクラスのデータの動作。アドホッククラスの場合、この値を `https://ns.adobe.com/xdm/data/adhoc` に設定する必要があります。 |
 | `properties._adhoc` | クラスのカスタムフィールドを含むオブジェクトで、フィールド名とデータ型のキーと値のペアとして表現されます。 |
 
 **応答**
 
-正常に応答すると、新しいクラスの詳細が返され、 `properties._adhoc` オブジェクトの名前が、そのクラスに対してシステム生成の読み取り専用の一意の識別子であるGUIDに置き換えられます。 この `meta:datasetNamespace` 属性も自動的に生成され、応答に含められます。
+成功した応答は、新しいクラスの詳細を返し、`properties._adhoc` オブジェクトの名前を、システムで生成された読み取り専用クラスの一意の識別子である GUID に置き換えます。`meta:datasetNamespace` 属性も自動的に生成され、応答に含まれます。
 
 ```json
 {
@@ -144,13 +144,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `$id` | 読み取り専用の、新しいアドホッククラスに対してシステムで生成される一意の識別子として機能するURI。 この値は、アドホックスキーマを作成する次の手順で使用されます。 |
+| `$id` | 読み取り専用の、新しいアドホッククラスに対してシステムによって生成された一意の識別子として機能する URI。この値は、アドホックスキーマ作成の次の手順で使用されます。 |
 
 ## アドホックスキーマの作成
 
-アドホッククラスを作成したら、エンドポイントにPOSTリクエストを作成して、そのクラスを実装する新しいスキーマを作成でき `/tenant/schemas` ます。
+アドホッククラスを作成したら、`/tenant/schemas` エンドポイントに対する POST リクエストを作成することで、そのクラスを実装する新しいスキーマを作成できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /tenant/schemas
@@ -158,7 +158,7 @@ POST /tenant/schemas
 
 **リクエスト**
 
-次のリクエストは、新しいスキーマを作成し、そのペイロード内で以前に作成したアドホッククラス`$ref`の参照( `$id` )を提供します。
+次のリクエストは、新しいスキーマを作成し、前に作成したアドホッククラスの `$id` に対する参照（`$ref`）をペイロードに提供します。
 
 ```shell
 curl -X POST \
@@ -182,7 +182,7 @@ curl -X POST \
 
 **応答**
 
-正常に完了すると、新たに作成されたスキーマの詳細（システム生成の読み取り専用情報を含む）が返され `$id`ます。
+成功応答は、新たに作成されたスキーマの詳細（システム生成の読み取り専用 `$id` を含む）を返します。
 
 ```json
 {
@@ -219,15 +219,15 @@ curl -X POST \
 }
 ```
 
-## 完全なアドホックスキーマの表示
+## 完全なアドホックスキーマを表示する
 
 >[!NOTE]
 >
->この手順はオプションです。アドホックスキーマのフィールド構造を調べたくない場合は、このチュートリアルの最後にある [次の手順](#next-steps) 「」の節に進んでください。
+>この手順はオプションです。アドホックスキーマのフィールド構造を調べたくない場合は、このチュートリアルの最後にある[次の手順](#next-steps)の節に進んでください。
 
-アドホックスキーマが作成されたら、拡張されたフォームでスキーマを表示するための参照(GET)リクエストを作成できます。 これは、以下に示すように、GET要求で適切なAcceptヘッダーを使用して行います。
+アドホックスキーマが作成されたら、拡張されたフォームでスキーマを表示するための参照（GET）リクエストを作成できます。これは、以下に示すように、GET リクエストで適切な Accept ヘッダーを使用しておこないます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /tenant/schemas/{SCHEMA_ID}
@@ -235,11 +235,11 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | アクセスするアドホック `$id` スキーマ `meta:altId` のURLエンコードURI。 |
+| `{SCHEMA_ID}` | アクセスするアドホックスキーマの URL エンコード `$id` URI または `meta:altId`。 |
 
 **リクエスト**
 
-次の要求では、Acceptヘッダーを使用します。このヘッダー `application/vnd.adobe.xed-full+json; version=1`は、スキーマの拡張されたフォームを返します。 から特定のリソースを取得する場合 [!DNL Schema Registry]、要求のAcceptヘッダーには、該当するリソースのメジャーバージョンが含まれている必要があります。
+次のリクエストでは、Accept ヘッダー`application/vnd.adobe.xed-full+json; version=1`を使用して、拡張形式のスキーマを返します。Note that when retrieving a specific resource from the [!DNL Schema Registry], the request&#39;s Accept header must include major version of the resource in question.
 
 ```shell
 curl -X GET \
@@ -253,7 +253,7 @@ curl -X GET \
 
 **応答**
 
-「正常に応答」は、スキーマの詳細（下にネストされたすべてのフィールドを含む）を返 `properties`します。
+成功応答は、スキーマの詳細（`properties` の下にネストされたすべてのフィールドを含む）を返します。
 
 ```json
 {
@@ -303,6 +303,6 @@ curl -X GET \
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従って、新しいアドホックスキーマを正常に作成しました。 別のチュートリアルでこのドキュメントに導かれた場合は、アドホックスキーマ `$id` のを使用して、指示に従ってワークフローを完了できます。
+このチュートリアルに従い、新しいアドホックスキーマを作成しました。別のチュートリアルの一部としてこのドキュメントにたどり着いた場合は、アドホックスキーマの `$id` を使用し、指示に従ってワークフローを完了することができるようになりました。
 
-この [!DNL Schema Registry] APIの使用について詳しくは、 [開発者ガイドを参照してください](../api/getting-started.md)。
+For more information on working with the [!DNL Schema Registry] API, please refer to the [developer guide](../api/getting-started.md).
