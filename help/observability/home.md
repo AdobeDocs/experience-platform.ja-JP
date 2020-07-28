@@ -1,42 +1,42 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platformの観察性インサイト
+title: Adobe Experience Platform 観察性インサイト
 topic: overview
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '396'
-ht-degree: 2%
+ht-degree: 73%
 
 ---
 
 
-# Adobe Experience Platformの観察性インサイトの概要
+# Adobe Experience Platform 観察性インサイトの概要
 
-観察性インサイトは、主要な観察性指標をAdobe Experience Platformに公開できるRESTful APIです。 これらの指標は、使用状況の統計、サー [!DNL Platform] ビスの正常性チェック、各種 [!DNL Platform][!DNL Platform] 機能の過去の傾向、およびパフォーマンス指標に関する洞察を提供します。
+観察性インサイトは、Adobe Experience Platform で主要な観察性指標を公開するための RESTful API です。These metrics provide insights into [!DNL Platform] usage statistics, health-checks for [!DNL Platform] services, historical trends, and performance indicators for various [!DNL Platform] functionalities.
 
-このドキュメントは、Obsermability Insights APIの呼び出し例を示します。 監視性エンドポイントの完全なリストについては、『 [Observatibility Insights API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)』を参照してください。
+このドキュメントでは、観察性インサイト API の呼び出し例を示します。観察性エンドポイントの完全なリストについては、『[観察性インサイト API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)』を参照してください。
 
 ## はじめに
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* 認証： 無記名 `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。 のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../sandboxes/home.md)。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../sandboxes/home.md).
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 ## 観察性指標の取得
 
-Obsermability Insights APIでエンドポイントにGETリクエストを行うことで、観察性指標を取得できます。 `/metrics`
+観察性インサイト API で `/metrics` エンドポイントに GET リクエストを送信することで、観察性指標を取得できます。
 
-**API形式**
+**API 形式**
 
-エンドポイントを使用する場合は、少なくとも1つの指標リクエストパラメーターを指定する必要があり `/metrics` ます。 その他のクエリパラメーターは、結果をフィルタリングする場合はオプションです。
+`/metrics` エンドポイントを使用する場合は、1 つ以上の指標リクエストパラメーターを指定する必要があります。その他のクエリパラメーターはオプションで、結果をフィルタリングするためのものです。
 
 ```http
 GET /metrics?metric={METRIC}
@@ -48,9 +48,9 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{METRIC}` | 公開する指標。 1回の呼び出しで複数の指標を組み合わせる場合、アンパサンド(`&`)を使用して個々の指標を区切る必要があります。 例：`metric={METRIC_1}&metric={METRIC_2}`。 |
-| `{ID}` | 指標を公開する特定の [!DNL Platform] リソースの識別子。 このIDは、使用する指標に応じて、オプション、必須、または適用されない場合があります。 使用可能な指標のリスト、および各指標でサポートされるID（必須と任意の両方）については、 [使用可能な指標に関するリファレンスドキュメントを参照してください](metrics.md)。 |
-| `{DATE_RANGE}` | ISO 8601形式(例： `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`)で公開する指標の日付範囲。 |
+| `{METRIC}` | 表示する指標。1 回の呼び出しで複数の指標を組み合わせる場合、アンパサンド（`&`）を使用して個々の指標を区切る必要があります。例：`metric={METRIC_1}&metric={METRIC_2}`。 |
+| `{ID}` | The identifier for a particular [!DNL Platform] resource whose metrics you want to expose. この ID は、使用する指標に応じて、オプション/必須/該当しない場合があります。使用可能な指標のリスト、および各指標でサポートされる ID（必須とオプションの両方）については、[使用可能な指標](metrics.md)に関するリファレンスドキュメントを参照してください。 |
+| `{DATE_RANGE}` | ISO 8601 形式（例：`2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`）で公開する指標の日付範囲。 |
 
 **リクエスト**
 
@@ -65,7 +65,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、指定された値内のタイムスタンプと、リクエストパスで指定された指標に対応する値を含むオブジェクトのリスト `dateRange` を返します。 リソース `id`[!DNL Platform] の要求が要求パスに含まれる場合、結果はその特定のリソースにのみ適用されます。 を省略 `id` すると、結果はIMS組織内の該当するすべてのリソースに適用されます。
+正常な応答は、オブジェクトのリストを返します。各オブジェクトには、指定された `dateRange` 内のタイムスタンプと、リクエストパスで指定された指標に対応する値が含まれます。 リソースの `id` がリクエストパスに含まれる場合、結果はその特定のリソースにのみ適用されます。[!DNL Platform]`id` を省略すると、結果は IMS 組織内の該当するすべてのリソースに適用されます。
 
 ```json
 {
@@ -119,4 +119,4 @@ curl -X GET \
 
 ## 次の手順
 
-このドキュメントでは、Observability Insights APIの概要を提供しました。 APIで使用できる指標の完全なリストについては、 [利用可能な指標](metrics.md) （英語）のドキュメントを参照してください。
+このドキュメントでは、観察性インサイト API の概要を提供しました。API で使用できる指標の完全なリストについては、[利用可能な指標](metrics.md)に関するドキュメントを参照してください。
