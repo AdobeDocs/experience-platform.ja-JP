@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: UIでのAmazon Kinesisソースコネクタの作成
+title: UIでAmazonKinesisソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
 source-wordcount: '431'
-ht-degree: 1%
+ht-degree: 17%
 
 ---
 
 
-# UIで [!DNL Amazon Kinesis] ソースコネクタを作成する
+# Create an [!DNL Amazon Kinesis] source connector in the UI
 
 >[!NOTE]
 >コネクタ [!DNL Amazon Kinesis] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
@@ -21,12 +21,12 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ## はじめに
 
-このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [Experience Data Model(XDM)System](../../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+- [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 既に [!DNL Kinesis] アカウントをお持ちの場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/streaming/cloud-storage.md)。
 
@@ -48,11 +48,11 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 「 *カタログ* 」タブには、接続可能な様々なソースが表示され [!DNL Platform]ます。 各ソースには、関連付けられた既存のアカウントの数が表示されます。
 
-「 *[!UICONTROL クラウドストレージ]* 」カテゴリで、「 **[!UICONTROL Amazon Kinesis]** 」を選択し、「+」アイコン(+) **をクリックして新しい**[!DNL Kinesis] コネクタを作成します。
+*[!UICONTROL クラウドストレージ]* カテゴリの下で、 **[!UICONTROL AmazonKinesisを選択し、+アイコン(+)]** をクリックして新しい ****[!DNL Kinesis] コネクタを作成します。
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-[ *[!UICONTROL Amazon Kinesisに]* 接続]ダイアログが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+[ *[!UICONTROL AmazonKinesisに]* 接続]ダイアログが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
