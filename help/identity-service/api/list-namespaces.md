@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: リストで使用できる名前空間
+title: 名前空間のリスト
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '68'
-ht-degree: 5%
+ht-degree: 63%
 
 ---
 
 
-# リストで使用できる名前空間
+# 名前空間のリスト
 
-**API形式**
+**API 形式**
 
 ```http
 GET /idnamespace/identities
@@ -33,11 +33,11 @@ curl -X GET \
 
 **応答**
 
-応答は、オブジェクトの配列を含み、各オブジェクトは使用可能な名前空間を表します。 「[!UICONTROL custom]」値が「[!UICONTROL false」の名前空間は標準名前空間ですが、「]custom[!UICONTROL 」値が「]true」の名前空間は組織が作成したです。
+応答には、各オブジェクトが使用可能な名前空間を表すオブジェクトの配列が含まれます。Namespaces with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL false]&quot; are standard namespaces, while those with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL true]&quot; are namespaces that your organization has created.
 
 >[!NOTE]
 >
->この応答は領域のために切り捨てられました。
+>この応答はスペースを節約するために切り捨てられています。
 
 ```json
 [
@@ -79,4 +79,4 @@ curl -X GET \
 
 ## 次の手順
 
-カスタム名前空間を [作成するには、次のチュートリアルに進みます](./create-custom-namespace.md)
+次のチュートリアルに進み、[カスタム名前空間を作成](./create-custom-namespace.md)します。
