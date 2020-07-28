@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;publish a model;Data Science Workspace;popular topics
 solution: Experience Platform
-title: モデルをサービスとして公開(API)
+title: モデルをサービスとして公開する（API）
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
-ht-degree: 1%
+ht-degree: 49%
 
 ---
 
 
-# モデルをサービスとして公開(API)
+# モデルをサービスとして公開する（API）
 
 このチュートリアルでは、を使用して、モデルをサービスとしてパブリッシュするプロセスについて説明 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)します。
 
@@ -28,7 +28,7 @@ ht-degree: 1%
 - `{IMS_ORG}`
 - `{API_KEY}`
 
-すべてのPOST、PUT、およびPATCHリクエストには、次の追加のヘッダーが必要です。
+すべての POST、PUT、および PATCH リクエストには、次の追加ヘッダーが必要です。
 
 - Content-Type: application/json
 
@@ -38,19 +38,19 @@ ht-degree: 1%
 
 | 用語 | 定義 |
 --- | ---
-| **機械学習インスタンス（MLインスタンス）** | 特定のデータ、パラメーター、および [!DNL Sensei][!DNL Sensei] コードを含む、特定のテナント用のエンジンのインスタンス。 |
-| **テスト** | トレーニングテストの実行、テストの実行のスコアリング、またはその両方を保持するための傘のエンティティ。 |
-| **予定された実験** | テストの実行のトレーニングまたはスコアリングの自動化を表す用語で、ユーザー定義のスケジュールによって制御されます。 |
-| **テストの実行** | トレーニングまたはスコアリングの実験の特定の例。 特定のテストからの複数のテストの実行では、トレーニングやスコアリングに使用するデータセットの値が異なる場合があります。 |
-| **トレーニングモデル** | 検証、評価、確定されたモデルに到達する前に、エンジニアリングの実験と機能を試すプロセスによって作成された機械学習モデル。 |
-| **発行済みモデル** | トレーニング、検証、評価の後、最終的でバージョン管理されたモデルが届きました。 |
-| **機械学習サービス（MLサービス）** | APIエンドポイントを使用したトレーニングとスコアリングのオンデマンドリクエストをサポートするために、サービスとしてデプロイされたMLインスタンス。 MLサービスは、トレーニングを受けた既存のテストの実行を使用して作成することもできます。 |
+| **機械学習インスタンス（ML インスタンス）** | 特定のデータ、パラメーター、および [!DNL Sensei][!DNL Sensei] コードを含む、特定のテナント用のエンジンのインスタンス。 |
+| **Experiment** | トレーニング Experiment Run、スコアリングExperiment Run、またはその両方を保持するための包括的なエンティティ。 |
+| **スケジュールに沿った Experiment** | トレーニング Experiment Run またはスコアリング Experiment Run の自動化を表す用語。これらの実験は、ユーザー定義のスケジュールに従って実行されます。 |
+| **Experiment Run** | トレーニング Experiment やスコアリング Experiment の特定のインスタンス。特定の Experiment から複数の Experiment Run をおこなう場合、トレーニングやスコアリングに使用されるデータセット値が異なる場合があります。 |
+| **トレーニング済みモデル** | モデルを検証、評価、および確定する前に、実験と機能の設計プロセスから作成された機械学習モデル。 |
+| **公開済みモデル** | トレーニング、検証、および評価を経て確定された、バージョン管理されたモデル。 |
+| **機械学習サービス（ML サービス）** | APIエンドポイントを使用したトレーニングとスコアリングのオンデマンドリクエストをサポートするために、サービスとしてデプロイされたMLインスタンス。 MLサービスは、トレーニングを受けた既存のテストの実行を使用して作成することもできます。 |
 
 ## 既存のトレーニングテストの実行とスケジュール済みスコアを含むMLサービスの作成
 
-トレーニングテスト実行をMLサービスとして発行する場合、スコアリングテストの詳細を入力し、スコアリングをスケジュールできます。POSTリクエストのペイロードを実行します。 これにより、スコアリング用にスケジュールされたテストエンティティが作成されます。
+トレーニングテスト実行をMLサービスとして発行する場合、スコアリングテストの詳細を入力し、POSTリクエストのペイロードを実行することで、スコアリングをスケジュールできます。 こうすると、スケジュールに沿ったスコアリング Experiment エンティティが作成されます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /mlServices
@@ -85,14 +85,14 @@ curl -X POST
 | `mlInstanceId` | 既存のMLインスタンスのID。MLサービスの作成に使用するトレーニング・テストの実行は、この特定のMLインスタンスに対応する必要があります。 |
 | `trainingExperimentId` | MLインスタンスの識別に対応するテストの識別。 |
 | `trainingExperimentRunId` | MLサービスの公開に使用するトレーニング実験の実行。 |
-| `scoringDataSetId` | スケジュール済みスコアリングテストの実行に使用される特定のデータセットを参照する識別。 |
-| `scoringTimeframe` | テストの実行のスコアリングに使用するデータをフィルタリングする時間（分）を表す整数値です。 例えば、値が、過去10080分または168時間のデータが、スケジュールされた各スコアリングテストの実行に使用されます。 `10080` の値ではデータがフィルターされ `0` ず、データセット内のすべてのデータがスコアリングに使用されます。 |
-| `scoringSchedule` | スケジュール済みスコアリングテストの実行に関する詳細が含まれます。 |
+| `scoringDataSetId` | スケジュールに沿ったスコアリング Experiment Run に使用する特定のデータセットを表す ID。 |
+| `scoringTimeframe` | 分数を表す整数値。スコアリング Experiment Run に使用するデータをフィルタリングします。例えば、値 `10080` を指定すると、過去 10,080 分（168 時間）のデータが、スケジュールに沿ったスコアリング Experiment Run に使用されます。値 `0` を指定すると、データはフィルタリングされず、データセット内のすべてのデータがスコアリングに使用されます。 |
+| `scoringSchedule` | スケジュールに沿ったスコアリング Experiment Run に関する詳細が含まれます。 |
 | `scoringSchedule.startTime` | 開始スコアリングを行うタイミングを示す日時。 |
 | `scoringSchedule.endTime` | 開始スコアリングを行うタイミングを示す日時。 |
 | `scoringSchedule.cron` | テストの実行にスコアを付ける間隔を示すCron値。 |
 
-**応答**
+**応答** 
 
 成功した応答は、新たに作成されたMLサービスの詳細を返します。この詳細には、その独自の値と、対応するスコアリングテスト `id` の値 `scoringExperimentId` が含まれます。
 
@@ -122,16 +122,16 @@ curl -X POST
 
 具体的な使用事例や要件に応じて、MLインスタンスを使用したMLサービスの作成は、トレーニングのスケジュール設定とテストの実行のスコアリングの観点から柔軟に行うことができます。 このチュートリアルでは、次のような特定のケースについて説明します。
 
-- [スケジュールされたトレーニングは必要ありませんが、スケジュールされたスコアリングは必要です。](#ml-service-with-scheduled-experiment-for-scoring)
-- [トレーニングとスコアリングの両方で、予定されたテストの実行が必要です。](#ml-service-with-scheduled-experiments-for-training-and-scoring)
+- [スケジュールに沿ったトレーニングは必要ない一方で、スケジュールに沿ったスコアリングは必要な場合。](#ml-service-with-scheduled-experiment-for-scoring)
+- [トレーニングとスコアの両方で、スケジュールに沿った Experiment Run が必要な場合。](#ml-service-with-scheduled-experiments-for-training-and-scoring)
 
 MLサービスは、トレーニングやスコアリングの実験をスケジュールせずに、MLインスタンスを使用して作成できます。 このようなMLサービスは、通常のテストエンティティと、トレーニングとスコアリングのための1つのテスト実行を作成します。
 
-### スコアリングのための予定されたテストを含むMLサービス {#ml-service-with-scheduled-experiment-for-scoring}
+### スケジュールに沿ったスコアリング Experiment を含む ML サービス {#ml-service-with-scheduled-experiment-for-scoring}
 
-MLサービスを作成するには、スコアリングのために予定されたテスト実行を含むMLインスタンスを発行します。これにより、トレーニング用の通常のテストエンティティが作成されます。 トレーニングテストの実行が生成され、スケジュールされたすべてのスコアリングテストの実行に使用されます。 MLサービスの作成に必要な、 `mlInstanceId`、 `trainingDataSetId`および `scoringDataSetId` があり、それらが存在し、有効な値であることを確認します。
+MLサービスを作成するには、スコアリングのために予定されたテスト実行を含むMLインスタンスを発行します。これにより、トレーニング用の通常のテストエンティティが作成されます。 トレーニングテストの実行が生成され、スケジュールされたすべてのスコアリングテストの実行に使用されます。 MLサービスの作成に必要な `mlInstanceId`、`trainingDataSetId` および `scoringDataSetId` があること、これらが存在し、有効な値であることを確認します。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /mlServices
@@ -162,19 +162,19 @@ curl -X POST
       }'
 ```
 
-| JSONキー | 説明 |
+| JSON キー | 説明 |
 | --- | --- |
-| `mlInstanceId` | MLサービスの作成に使用されるMLインスタンスを表す、既存のMLインスタンスの識別。 |
-| `trainingDataSetId` | トレーニングテストに使用する特定のデータセットを参照する識別。 |
-| `trainingTimeframe` | トレーニングテストに使用するデータをフィルターする時間（分）を表す整数値です。 例えば、の値は、過去10080分または168時間のデータがトレーニング・テスト・ランに使用されることを `"10080"` 意味します。 の値ではデータがフィルタリングされないので、データセット内のすべてのデータがトレーニングに使用されます。 `"0"` |
-| `scoringDataSetId` | スケジュール済みスコアリングテストの実行に使用される特定のデータセットを参照する識別。 |
-| `scoringTimeframe` | テストの実行のスコアリングに使用するデータをフィルタリングする時間（分）を表す整数値です。 例えば、値が、過去10080分または168時間のデータが、スケジュールされた各スコアリングテストの実行に使用されます。 `"10080"` の値ではデータがフィルターされ `"0"` ず、データセット内のすべてのデータがスコアリングに使用されます。 |
-| `scoringSchedule` | スケジュール済みスコアリングテストの実行に関する詳細が含まれます。 |
+| `mlInstanceId` | 既存の ML インスタンスの ID。ML サービスの作成に使用する ML インスタンスを表します。 |
+| `trainingDataSetId` | トレーニング Experiment に使用する特定のデータセットを表す ID。 |
+| `trainingTimeframe` | 分数を表す整数値。トレーニング Experiment に使用するデータをフィルタリングします。例えば、値 `"10080"` を指定すると、過去 10,080 分（168 時間）のデータがトレーニング Experiment Run に使用されます。値 `"0"` を指定すると、データはフィルタリングされず、データセット内のすべてのデータがトレーニングに使用されます。 |
+| `scoringDataSetId` | スケジュールに沿ったスコアリング Experiment Run に使用する特定のデータセットを表す ID。 |
+| `scoringTimeframe` | 分数を表す整数値。スコアリング Experiment Run に使用するデータをフィルタリングします。例えば、値 `"10080"` を指定すると、過去 10,080 分（168 時間）のデータが、スケジュールに沿ったスコアリング Experiment Run に使用されます。値 `"0"` を指定すると、データはフィルタリングされず、データセット内のすべてのデータがスコアリングに使用されます。 |
+| `scoringSchedule` | スケジュールに沿ったスコアリング Experiment Run に関する詳細が含まれます。 |
 | `scoringSchedule.startTime` | 開始スコアリングを行うタイミングを示す日時。 |
 | `scoringSchedule.endTime` | 開始スコアリングを行うタイミングを示す日時。 |
 | `scoringSchedule.cron` | テストの実行にスコアを付ける間隔を示すCron値。 |
 
-**応答**
+**応答** 
 
 正常に応答すると、新しく作成されたMLサービスの詳細が返されます。 これには、サービス独自のもの `id`に加え、対応するトレーニング `trainingExperimentId` とスコアリングの実験が含ま `scoringExperimentId` れます。
 
@@ -200,11 +200,11 @@ curl -X POST
 }
 ```
 
-### トレーニングとスコアリングのための予定された実験を含むMLサービス {#ml-service-with-scheduled-experiments-for-training-and-scoring}
+### スケジュールに沿ったトレーニングおよびスコアリング Experiment を含む ML サービス {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
-既存のMLインスタンスをMLサービスとして発行し、スケジュールされたトレーニングとスコアリングテストの実行を行うには、トレーニングとスコアリングの両方のスケジュールを指定する必要があります。 この設定のMLサービスが作成されると、トレーニングとスコアリングの両方に対してスケジュールされたテストエンティティも作成されます。 トレーニングとスコアリングのスケジュールは同じである必要はありません。 スコアリング・ジョブの実行中に、予定されたトレーニング・テストの実行によって生成された最新のトレーニング・モデルが取得され、スケジュールされたスコアリングの実行に使用されます。
+既存のMLインスタンスをMLサービスとして発行し、スケジュールされたトレーニングとスコアリングテストの実行を行うには、トレーニングとスコアリングの両方のスケジュールを指定する必要があります。 この設定のMLサービスが作成されると、トレーニングとスコアリングの両方に対してスケジュールされたテストエンティティも作成されます。 トレーニングとスコアリングのスケジュールが同じである必要はありません。スコアリングジョブの実行中に、スケジュールに沿ったトレーニング Experiment Run によって生成された最新のトレーニング済みモデルが取得され、スケジュールに沿ったスコアリングの実行に使用されます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /mlServices
@@ -239,20 +239,20 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
       }'
 ```
 
-| JSONキー | 説明 |
+| JSON キー | 説明 |
 | --- | --- |
-| `mlInstanceId` | MLサービスの作成に使用されるMLインスタンスを表す、既存のMLインスタンスの識別。 |
-| `trainingDataSetId` | トレーニングテストに使用する特定のデータセットを参照する識別。 |
-| `trainingTimeframe` | トレーニングテストに使用するデータをフィルターする時間（分）を表す整数値です。 例えば、の値は、過去10080分または168時間のデータがトレーニング・テスト・ランに使用されることを `"10080"` 意味します。 の値ではデータがフィルタリングされないので、データセット内のすべてのデータがトレーニングに使用されます。 `"0"` |
-| `scoringDataSetId` | スケジュール済みスコアリングテストの実行に使用される特定のデータセットを参照する識別。 |
-| `scoringTimeframe` | テストの実行のスコアリングに使用するデータをフィルタリングする時間（分）を表す整数値です。 例えば、値が、過去10080分または168時間のデータが、スケジュールされた各スコアリングテストの実行に使用されます。 `"10080"` の値ではデータがフィルターされ `"0"` ず、データセット内のすべてのデータがスコアリングに使用されます。 |
-| `trainingSchedule` | 予定されているトレーニングテストの実行に関する詳細が含まれます。 |
-| `scoringSchedule` | スケジュール済みスコアリングテストの実行に関する詳細が含まれます。 |
+| `mlInstanceId` | 既存の ML インスタンスの ID。ML サービスの作成に使用する ML インスタンスを表します。 |
+| `trainingDataSetId` | トレーニング Experiment に使用する特定のデータセットを表す ID。 |
+| `trainingTimeframe` | 分数を表す整数値。トレーニング Experiment に使用するデータをフィルタリングします。例えば、値 `"10080"` を指定すると、過去 10,080 分（168 時間）のデータがトレーニング Experiment Run に使用されます。値 `"0"` を指定すると、データはフィルタリングされず、データセット内のすべてのデータがトレーニングに使用されます。 |
+| `scoringDataSetId` | スケジュールに沿ったスコアリング Experiment Run に使用する特定のデータセットを表す ID。 |
+| `scoringTimeframe` | 分数を表す整数値。スコアリング Experiment Run に使用するデータをフィルタリングします。例えば、値 `"10080"` を指定すると、過去 10,080 分（168 時間）のデータが、スケジュールに沿ったスコアリング Experiment Run に使用されます。値 `"0"` を指定すると、データはフィルタリングされず、データセット内のすべてのデータがスコアリングに使用されます。 |
+| `trainingSchedule` | スケジュールに沿ったトレーニング Experiment Run に関する詳細が含まれます。 |
+| `scoringSchedule` | スケジュールに沿ったスコアリング Experiment Run に関する詳細が含まれます。 |
 | `scoringSchedule.startTime` | 開始スコアリングを行うタイミングを示す日時。 |
 | `scoringSchedule.endTime` | 開始スコアリングを行うタイミングを示す日時。 |
 | `scoringSchedule.cron` | テストの実行にスコアを付ける間隔を示すCron値。 |
 
-**応答**
+**応答** 
 
 正常に応答すると、新しく作成されたMLサービスの詳細が返されます。 これには、サービス独自のトレーニング `id`とスコアリングの実験が含まれ `trainingExperimentId` 、それぞれ `scoringExperimentId` に対応するトレーニングとスコアリングの実験が含まれます。 以下の応答例では、の存在 `trainingSchedule` と `scoringSchedule` 示唆に基づいて、トレーニングとスコアリングのテストエンティティが「Everiments」というスケジュールに従っています。
 
@@ -287,7 +287,7 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 
 既存のMLサービスを検索するには、に `GET` リクエストを作成し、パスに一意のMLサービス `/mlServices``id` を提供します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /mlServices/{SERVICE_ID}
@@ -307,7 +307,7 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 正常な応答は、MLサービスの詳細を返します。
 
@@ -340,14 +340,14 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!NOTE]
 >
->異なるMLサービスを取得すると、キーと値のペアの数が多いか少ない応答が返される場合があります。 上記の回答は、スケジュールされたトレーニングとスコアリングテストの実行の両方を含む [MLサービスを表したものです](#ml-service-with-scheduled-experiments-for-training-and-scoring)。
+>異なるMLサービスを取得すると、キーと値のペアの数が多いか少ない応答が返される場合があります。 上記のレスポンスは、[スケジュールに沿ったトレーニング Experiment Run とスコアリング Experiment Run の両方を含む ML サービス](#ml-service-with-scheduled-experiments-for-training-and-scoring)を表したものです。
 
 
-## トレーニングまたはスコアリングのスケジュール設定
+## トレーニングまたはスコアリングのスケジュール
 
-既に発行済みのMLサービスに対するスコアリングとトレーニングをスケジュールする場合は、既存のMLサービスを、に対する `PUT` 要求で更新することで実行でき `/mlServices`ます。
+If you want to schedule scoring and training on an ML Service that has already been published, you can do so by updating the existing ML Service with a `PUT` request on `/mlServices`.
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /mlServices/{SERVICE_ID}
@@ -392,9 +392,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->既存のスケジュール済みトレーニングジョブとスコアリングジョブ `startTime` に対して、変更を行わないでください。 を変更する `startTime` 必要がある場合は、同じモデルを公開し、トレーニングおよびスコアリングジョブを再スケジュールすることを検討します。
+>Do not attempt to modify the `startTime` on existing scheduled training and scoring jobs. `startTime` を変更する必要がある場合は、同じモデルを公開して、トレーニングジョブとスコアリングジョブのスケジュールを再設定することを検討してください。
 
-**応答**
+**応答** 
 
 正常に応答すると、更新されたMLサービスの詳細が返されます。
 
