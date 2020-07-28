@@ -17,7 +17,7 @@ ht-degree: 28%
 このガイドでは、起動時にAdobe Experience PlatformWeb SDKを設定する様々な方法の手順を説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動する場合は、CSMに連絡してください。
 
 - [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。開発でのテストはCNAMEを使用しなくても機能しますが、実稼働環境に移行する前に必要になります。
-- Adobe Experience Platform　を使用する資格がある. Platformを購入していない場合は、Adobeは、Experience PlatformData Services Foundationをご利用いただけるよう、SDKでの利用を制限し、無償で提供します。
+- Adobe Experience Platform　を使用する資格がある. Platformを購入していない場合、AdobeはData Services Foundationでの利用を制限した方法で、SDKを無料で提供します。
 - 訪問者 ID サービスの最新バージョンを使用している.
 
 ## 設定IDの作成
@@ -32,7 +32,7 @@ Launchの [エッジ設定ツールを使用して、設定IDを作成できま�
 
 Experience Platformエッジネットワークは、データをXDMとして受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、Edge Networkでデータの形式設定方法を定義します。 データを送信するには、スキーマを定義する必要があります。
 
-1. [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
+1. [スキーマ](../../xdm/tutorials/create-schema-ui.md)
 2. 作追加成したスキーマに対するAEP Mixin。 [!DNL Web SDK ExperienceEvent]
 3. 作成したスキーマからデータセットを作成します。
 
@@ -51,7 +51,7 @@ Launch にログインし、`AEP Web SDK` 拡張機能をインストールし�
 
 ## イベントの送信
 
-After the extension is installed, start sending events by adding a `sendEvent` action from the AEP Web SDK extension to a rule. 先追加ほど作成したデータ要素をXDMデータとしてイベントに送信します。 ページが読み込まれるたびに、少なくとも1つのイベントを送信することをお勧めします。
+After the extension is installed, start sending events by adding a `sendEvent` action from the AEP Web SDK extension to a rule. 先追加ほど作成したデータ要素をXDMデータとしてイベントに送信します。 Adobeでは、ページが読み込まれるたびに少なくとも1つのイベントを送信することをお勧めします。
 
 イベントの追跡方法について詳しくは、[イベントのトラッキング](../fundamentals/tracking-events.md)を参照してください。
 
