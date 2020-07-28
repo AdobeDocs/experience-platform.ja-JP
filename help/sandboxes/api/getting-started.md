@@ -1,47 +1,47 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Sandbox API開発ガイド
+title: サンドボックス API 開発者ガイド
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
 workflow-type: tm+mt
 source-wordcount: '337'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Sandbox API開発ガイド
+# サンドボックス API 開発者ガイド
 
-Adobe Experience Platformのサンドボックスは、実稼働環境に影響を与えることなく、機能のテスト、実験の実行、カスタム設定を行える、独立した開発環境を提供します。
+Adobe Experience Platform のサンドボックスは、独立した開発環境を提供し、実稼働環境に影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。
 
-この開発者ガイドでは、Sandbox APIを使用してExperience Platformのサンドボックスを管理する手順を説明し、様々な操作を実行するためのサンプルAPI呼び出しを含めます。
+この開発者ガイドでは、サンドボックス API を使用して Experience Platform のサンドボックスを管理する手順を説明し、様々な操作を実行するための API 呼び出し例を含んでいます。
 
-## Sandbox APIの使い始めに
+## サンドボックス API - はじめに
 
-IMS組織のサンドボックスを管理するには、Sandboxの管理権限が必要です。 アクセス権限を持たないユーザーは、エンドポイントを使用して、現在のユーザーのアクティブなサンドボックスの [リストを表示することのみができます](./list-active-sandboxes.md)。 Experience PlatformのSandbox権限を割り当てる方法について詳しくは、 [アクセス制御の概要](../../access-control/home.md) （英語）を参照してください。
+IMS 組織のサンドボックスを管理するには「サンドボックス管理」権限が必要です。アクセス権限のないユーザーは、[現在のユーザーのアクティブなサンドボックスを一覧表示するための ](./list-active-sandboxes.md) エンドポイントのみを使用できます。Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される表記について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例の読み [方に関する節を参照してください](../../landing/troubleshooting.md#how-do-i-format-an-api-request) 。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。API 呼び出し例のドキュメントで使用される表記について詳しくは、『Experience Platform トラブルシューティングガイド』の [API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必要なヘッダーの値の収集
 
-このガイドでは、プラットフォームAPIの呼び出しを正常に行うために、 [認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があります。 次に示すように、認証チュートリアルで、すべてのExperience Platform API呼び出しに必要な各ヘッダーの値を指定します。
+このガイドでは、Platform API を正しく呼び出すために[認証に関するチュートリアル](../../tutorials/authentication.md)を完了している必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
-* 認証： 無記名 `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-認証ヘッダーに加えて、すべての要求には、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+認証ヘッダーに加えて、すべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-ペイロード（POST、PUT、およびPATCH）を含むすべてのリクエストには、次の追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、次の追加のヘッダーが必要です。
 
 * Content-Type: application/json
 
 ## 次の手順
 
-必要な資格情報を収集したら、残りの開発者ガイドを読み続けることができます。 各節では、エンドポイントに関する重要な情報を提供し、CRUD操作を実行するためのAPI呼び出しの例を示します。 各呼び出しには、一般的な **API形式**、必要なヘッダーと適切にフォーマットされたペイロードを示すサンプル **リクエスト** 、および正常な呼び出しのためのサンプル **応答** が含まれます。
+必要な資格情報を収集したので、開発者ガイドの残りをお読みください。各節では、エンドポイントに関する重要な情報を提供し、CRUD 操作を実行するための API 呼び出しの例を示します。各呼び出しには、一般的な **API 形式**、必要なヘッダーと適切な形式のペイロードを示すサンプル&#x200B;**リクエスト**、および正常な呼び 出しのサンプル&#x200B;**応答**&#x200B;が含まれます。
