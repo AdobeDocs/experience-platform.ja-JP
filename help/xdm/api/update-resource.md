@@ -1,32 +1,32 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: リソースの更新
+title: リソースのアップデート
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '373'
-ht-degree: 2%
+ht-degree: 91%
 
 ---
 
 
-# リソースの更新
+# リソースのアップデート
 
-PATCH要求を使用して、テナントコンテナ内のリソースを変更または更新できます。 は、追加、削除、置換を含む、すべての標準的なJSONパッチ操作を [!DNL Schema Registry] サポートします。
+PATCH リクエストを使用して、テナントコンテナ内のリソースを変更またはアップデートできます。The [!DNL Schema Registry] supports all standard JSON Patch operations, including add, remove, and replace.
 
-使用可能な操作を含むJSONパッチについて詳しくは、公式の [JSONパッチドキュメントを参照してください](http://jsonpatch.com/)。
+使用可能な操作など、JSON パッチの詳細については、[JSON パッチの公式ドキュメント](http://jsonpatch.com/)を参照してください。
 
 >[!NOTE]
 >
->個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、「PUT操作を使用したリソースの [置き換えに関するドキュメント](replace-resource.md)」を参照してください。
+>個々のフィールドをアップデートする代わりに、リソース全体を新しい値に置き換える場合は、[PUT 操作を使用したリソースの置き換え](replace-resource.md)に関するドキュメントを参照してください。
 
-## スキーマ追加へのミックスイン
+## スキーマへの mixin の追加
 
-最も一般的なPATCH操作の1つは、以下の例に示すように、XDMスキーマに以前に定義したミックスインを追加することです。
+最も一般的な PATCH 操作の 1 つでは、以下の例で示すように、以前に定義した mixin を XDM スキーマに追加します。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -34,14 +34,14 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | から更新するリソースのタイプ [!DNL Schema Library]。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
-| `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. 有効なタイプは、`datatypes`、`mixins`、`schemas` および `classes` です。 |
+| `{RESOURCE_ID}` | リソースの URL エンコードされた `$id` URI または `meta:altId`。 |
 
 **リクエスト**
 
-PATCH操作を使用すると、スキーマを更新して、以前に作成したMixinで定義されたフィールドを含めることができます。 これを行うには、スキーマまたはURLエンコードされた `meta:altId``$id` URIを使用して、に対してPATCHリクエストを実行する必要があります。
+PATCH 操作を使用すると、スキーマをアップデートして、以前に作成した mixin で定義されたフィールドを含めることができます。この操作を行うには、`meta:altId` または URL エンコードされた `$id` URI を使用して、スキーマに対して PATCH リクエストを実行する必要があります。
 
-リクエスト本体には、実行する操作(`op`)、操作を実行する操作(`path`)、操作に含める情報(`value`)が含まれます。 この例では、ターゲットスキーマのとの両方のフィールドにmixinの `$id` 値が追加され `meta:extends``allOf` ています。
+リクエスト本文には、実行する操作（`op`）、操作を実行する場所（`path`）、操作に含める情報（`value`）が含まれます。この例では、 mixin の `$id` 値がターゲットスキーマの `meta:extends` フィールドと `allOf` フィールドの両方に追加されます。
 
 ```SHELL
 curl -X PATCH\
@@ -59,7 +59,7 @@ curl -X PATCH\
 
 **応答**
 
-この応答は、両方の操作が正常に実行されたことを示します。 mixin `$id` が配列に追加され、mixinへの参照( `meta:extends` )が`$ref`配列に表示され `$id``allOf` ます。
+応答には、両方の操作が正常に実行されたことが示されます。Mixin `$id` が `meta:extends` 配列に追加され、mixin `$id` への参照（`$ref`）が `allOf` 配列に表示されます。
 
 ```JSON
 {
@@ -98,11 +98,11 @@ curl -X PATCH\
 }
 ```
 
-## リソースの個々のフィールドを更新する
+## リソースの個々のフィールドのアップデート
 
-また、スキーマレジストリリソース内の個々のフィールドに複数の変更を加えるPATCH要求を送信することもできます。
+また、PATCH リクエストを送信して、スキーマレジストリリソース内の個々のフィールドに複数の変更を加えることができます。
 
-**API形式**
+**API 形式**
 
 ```SHELL
 PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -110,12 +110,12 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{RESOURCE_TYPE}` | から更新するリソースのタイプ [!DNL Schema Library]。 有効なタイプは、 `datatypes`、、、お `mixins`よび `schemas``classes`です。 |
-| `{RESOURCE_ID}` | URLエンコードされた `$id` URIまたはリソース `meta:altId` のURIです。 |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. 有効なタイプは、`datatypes`、`mixins`、`schemas` および `classes` です。 |
+| `{RESOURCE_ID}` | リソースの URL エンコードされた `$id` URI または `meta:altId`。 |
 
 **リクエスト**
 
-リクエスト本体には、ミックスインの更新に必要な操作(`op`)、場所(`path`)、および情報(`value`)が含まれます。 この要求は、「プロパティの詳細」ミックスインを更新して「propertyCity」フィールドを削除し、住所情報を含む標準データ型を参照する新しい「propertyAddress」フィールドを追加します。 また、電子メール情報を含む標準データ型を参照する新しい「emailAddress」フィールドも追加します。
+リクエスト本文には、操作（`op`）、場所（`path`）、 mixin のアップデートに必要な情報（`value`）が含まれます。このリクエストは、プロパティ詳細の mixin をアップデートして &quot;propertyCity&quot; フィールドを削除し、住所情報を含む標準のデータ型を参照する新しい &quot;propertyAddress&quot; フィールドを追加します。また、電子メール情報を含む標準のデータ型を参照する新しい &quot;emailAddress&quot; フィールドも追加します。
 
 ```SHELL
 curl -X PATCH \
@@ -146,7 +146,7 @@ curl -X PATCH \
 
 **応答**
 
-正常に完了した場合は、新しいフィールドが存在し、「propertyCity」フィールドが削除されたので、操作が正常に完了したことが示されます。
+新しいフィールドが追加され、&quot;propertyCity&quot; フィールドが削除されたため、成功した応答には、操作が正常に完了したことが示されます。
 
 ```JSON
 {
