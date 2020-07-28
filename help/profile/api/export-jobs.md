@@ -7,42 +7,42 @@ translation-type: tm+mt
 source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
 workflow-type: tm+mt
 source-wordcount: '1494'
-ht-degree: 2%
+ht-degree: 65%
 
 ---
 
 
 # ジョブエンドポイントの書き出し
 
-[!DNL Real-time Customer Profile] 属性データと行動データの両方を含む複数のソースからのデータを統合することで、個々の顧客の単一の表示を構築できます。 その後、内で利用できるデータ [!DNL Profile] をデータセットにエクスポートして、さらに処理することができます。 例えば、データのオーディエンスセグメントをアクティベーション用に書き出したり、プロファイル属性をレポート用に書き出したりでき [!DNL Profile] ます。
+[!DNL Real-time Customer Profile] 属性データと行動データの両方を含む複数のソースからのデータを統合することで、個々の顧客の単一の表示を構築できます。 Data available within [!DNL Profile] can then be exported to a dataset for further processing. 例えば、データのオーディエンスセグメントをアクティベーション用に書き出したり、プロファイル属性をレポート用に書き出したりでき [!DNL Profile] ます。
 
-このドキュメントでは、 [プロファイルAPIを使用して書き出しジョブを作成し管理する手順を順を追って説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
+This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
 
 >[!NOTE]
 >
 >このガイドでは、の書き出しジョブの使用について説明し [!DNL Profile API]ます。 Adobe Experience Platformセグメントサービス用の書き出しジョブを管理する方法について詳しくは、Segmentation APIの [書き出しジョブに関するガイドを参照してください](../../profile/api/export-jobs.md)。
 
-書き出しジョブの作成に加えて、 [!DNL Profile] エンドポイント(「 `/entities`[!DNL Profile Access]」とも呼ばれます)を使用してデータにアクセスすることもできます。 詳しくは、 [エンティティエンドポイントガイド](./entities.md) を参照してください。 UIを使用して [!DNL Profile] データにアクセスする手順については、 [ユーザガイドを参照してください](../ui/user-guide.md)。
+書き出しジョブの作成に加えて、 [!DNL Profile] エンドポイント(「 `/entities`[!DNL Profile Access]」とも呼ばれます)を使用してデータにアクセスすることもできます。 See the [entities endpoint guide](./entities.md) for more information. UIを使用して [!DNL Profile] データにアクセスする手順については、 [ユーザガイドを参照してください](../ui/user-guide.md)。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、 [!DNL Real-time Customer Profile] APIの一部です。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+The API endpoints used in this guide are part of the [!DNL Real-time Customer Profile] API. 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
-## 書き出しジョブの作成
+## エクスポートジョブの作成
 
-データのエクスポート [!DNL Profile] を行うには、まずデータのエクスポート先となるデータセットを作成し、新しいエクスポートジョブを開始する必要があります。 これらの手順はどちらも、Experience PlatformAPIを使用して行うことができます。前者はCatalog Service APIを使用し、後者はReal-time Customer Commentation APIを使用します。 各手順の詳細な手順については、以降の節で説明します。
+Exporting [!DNL Profile] data requires first creating a dataset into which the data will be exported, then initiating a new export job. これらの両方の手順は、Experience Platform API を使用して実行できます。前者はカタログサービス API を使用し、後者はリアルタイム顧客プロファイル API を使用します。各手順を完了するための詳細な手順については、以下の節で説明しています。
 
 ### ターゲットデータセットの作成
 
-データを書き出す場合は、 [!DNL Profile] ターゲットデータセットを最初に作成する必要があります。 データセットを正しく設定して、エクスポートが正常に完了するようにすることが重要です。
+When exporting [!DNL Profile] data, a target dataset must first be created. データセットを正しく設定して、エクスポートが正常に行われるようにすることが重要です。
 
-重要な考慮事項の1つは、データセットのベースとなるスキーマです(以下のAPIサンプルリクエスト`schemaRef.id` を参照)。 プロファイルデータをエクスポートするには、データセットが [!DNL XDM Individual Profile] 和集合スキーマ(`https://ns.adobe.com/xdm/context/profile__union`)に基づいている必要があります。 和集合スキーマは、同じクラスを共有するスキーマのフィールドを集計する、システム生成の読み取り専用スキーマです。 この場合、それが [!DNL XDM Individual Profile] クラスです。 和集合表示のスキーマについて詳しくは、『スキーマ構成の基本』ガイドの [和集合の節を参照してください](../../xdm/schema/composition.md#union)。
+重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。プロファイルデータをエクスポートするには、データセットが [!DNL XDM Individual Profile] 和集合スキーマ(`https://ns.adobe.com/xdm/context/profile__union`)に基づいている必要があります。 和集合スキーマは、同じクラスを共有するスキーマのフィールドを集計する、システム生成の読み取り専用スキーマです。 この場合、それが [!DNL XDM Individual Profile] クラスです。 和集合表示のスキーマについて詳しくは、『スキーマ構成の基本』ガイドの [和集合の節を参照してください](../../xdm/schema/composition.md#union)。
 
-このチュートリアルで説明する手順は、 [!DNL XDM Individual Profile] APIを使用して [!DNL Catalog] 和集合スキーマを参照するデータセットを作成する方法を示しています。 和集合スキーマを参照するデータセットは、 [!DNL Platform] ユーザーインターフェイスを使用して作成することもできます。 UIの使用手順は、セグメントの書き出しに関する [このUIチュートリアルで説明しています](../../segmentation/tutorials/create-dataset-export-segment.md) 。ここでも説明します。 完了したら、このチュートリアルに戻って、新しい書き出しジョブを [開始する手順に進むことができます](#initiate)。
+The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile] Union Schema using the [!DNL Catalog] API. You may also use the [!DNL Platform] user interface to create a dataset that references the union schema. UI を使用するための手順に関しては、[この UI チュートリアルでセグメントのエクスポート](../../segmentation/tutorials/create-dataset-export-segment.md)について説明されていますが、UI の使用手順についても当てはまります。完了したら、このチュートリアルに戻り、[新しいエクスポートジョブを開始する](#initiate)手順に進むことができます。
 
-互換性のあるデータセットが既に存在し、そのIDがわかっている場合は、新しい書き出しジョブを [開始するための手順に直接進むことができます](#initiate)。
+互換性のあるデータセットが既に存在し、その ID がわかっている場合は、[新しいエクスポートジョブを開始する](#initiate)手順に直接進むことができます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /dataSets
@@ -50,7 +50,7 @@ POST /dataSets
 
 **リクエスト**
 
-次のリクエストは、ペイロードに設定パラメーターを提供する新しいデータセットを作成します。
+次のリクエストは、新しいデータセットを作成し、ペイロードに設定パラメーターを提供します。
 
 ```shell
 curl -X POST \
@@ -76,13 +76,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `name` | データセットを説明する名前。 |
-| `schemaRef.id` | データセットが関連付けられる和集合表示(スキーマ)のID。 |
-| `fileDescription.persisted` | に設定した場合、和集合セットが表示内で保持され `true`るようにするBoolean値です。 |
+| `name` | データセットのわかりやすい名前。 |
+| `schemaRef.id` | データセットが関連付けられる和集合表示（スキーマ）の ID。 |
+| `fileDescription.persisted` | ブール値。`true` に設定した場合、データセットが和集合表示に保持されます。 |
 
-**応答**
+**応答** 
 
-正常に完了すると、新たに作成されたデータセットの読み取り専用、システム生成、一意のIDを含む配列が返されます。 プロファイルデータを正常にエクスポートするには、適切に設定されたデータセットIDが必要です。
+応答に成功した場合、新しく作成されたデータセットの読み取り専用のシステム生成された一意の ID を含む配列が返されます。プロファイルデータを正常にエクスポートするには、適切に設定されたデータセット ID が必要です。
 
 ```json
 [
@@ -90,11 +90,11 @@ curl -X POST \
 ] 
 ```
 
-### 書き出しジョブの開始 {#initiate}
+### エクスポートジョブの開始 {#initiate}
 
-和集合持続性データセットを取得したら、リアルタイム顧客プロファイルAPIのエンドポイントにPOSTリクエストを送信し、リクエストの本文でエクスポートするデータの詳細を提供することで、プロファイルデータをデータセットに永続化するエクスポートジョブを作成できます。 `/export/jobs`
+和集合保持データセットを取得したら、リアルタイム顧客プロファイル API の `/export/jobs` エンドポイントに対して POST リクエストを実行し、エクスポートするデータの詳細をリクエストの本文で提供することにより、データセットにプロファイルデータを保持するためのエクスポートジョブを作成できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /export/jobs
@@ -102,7 +102,7 @@ POST /export/jobs
 
 **リクエスト**
 
-次のリクエストは、ペイロードに設定パラメーターを提供する、新しい書き出しジョブを作成します。
+次のリクエストは、新しいエクスポートジョブを作成し、ペイロードに設定パラメーターを提供します。
 
 ```shell
 curl -X POST \
@@ -138,19 +138,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `fields` | *（オプション）* 、エクスポートに含めるデータフィールドを、このパラメーターで指定されたデータフィールドのみに制限します。 この値を省略すると、書き出されたデータにすべてのフィールドが含まれます。 |
-| `mergePolicy` | *（オプション）* 、エクスポートされたデータを管理するマージポリシーを指定します。 複数のセグメントを書き出す場合は、このパラメーターを含めます。 |
-| `mergePolicy.id` | マージポリシーのID。 |
-| `mergePolicy.version` | 使用するマージポリシーの特定のバージョンです。 この値を省略すると、デフォルトで最新バージョンが使用されます。 |
-| `additionalFields.eventList` | *（オプション）* 次の設定を1つ以上指定して、子オブジェクトまたは関連付けられたオブジェクト用に書き出す時系列イベントフィールドを制御します。<ul><li>`eventList.fields`: 書き出すフィールドを制御します。</li><li>`eventList.filter`: 関連するオブジェクトから含まれる結果を制限する基準を指定します。 エクスポートに必要な最小値（通常は日付）。</li><li>`eventList.filter.fromIngestTimestamp`: 指定されたタイムスタンプの後に取り込まれたものへの時系列イベントのフィルター。 これは、イベント時間そのものではなく、イベントの取り込み時間です。</li></ul> |
-| `destination` | **（必須）** 書き出すデータの保存先情報：<ul><li>`destination.datasetId`: **（必須）** 、データをエクスポートするデータセットのID。</li><li>`destination.segmentPerBatch`: *（オプション）* Boolean値。指定しなかった場合のデフォルト値は `false`です。 値を指定すると、すべてのセグメントIDが1つのバッチIDに `false` エクスポートされます。 値として、1つのセグメントIDを1つのバッチIDに `true` エクスポートします。 この値を設定すると、バッチエクスポートのパフォーマンスに影響を与える `true` 場合があります。</li></ul> |
-| `schema.name` | **（必須）** 、データをエクスポートするデータセットに関連付けられているスキーマの名前。 |
+| `fields` | *（オプション）*&#x200B;エクスポートに含めるデータフィールドを、このパラメーターで指定されたデータフィールドのみに制限します。この値を省略すると、エクスポートされるデータにすべてのフィールドが含まれます。 |
+| `mergePolicy` | *（オプション）*&#x200B;エクスポートされるデータを管理する結合ポリシーを指定します。複数のセグメントがエクスポートされる場合は、このパラメーターを含めます。 |
+| `mergePolicy.id` | 結合ポリシーの ID。 |
+| `mergePolicy.version` | 使用する結合ポリシーの特定のバージョンです。この値を省略すると、デフォルトで最新バージョンが使用されます。 |
+| `additionalFields.eventList` | *（オプション）* 次の設定を1つ以上指定して、子オブジェクトまたは関連付けられたオブジェクト用に書き出す時系列イベントフィールドを制御します。<ul><li>`eventList.fields`：エクスポートするフィールドを制御します。</li><li>`eventList.filter`：関連オブジェクトから取得される結果を制限する基準を指定します。エクスポートに必要な最小値（通常は日付）が基準として予期されます。</li><li>`eventList.filter.fromIngestTimestamp`: 指定されたタイムスタンプの後に取り込まれたものへの時系列イベントのフィルター。 これは、イベント時間自体ではなく、イベントの取得時間です。</li></ul> |
+| `destination` | **（必須）**&#x200B;エクスポートするデータの宛先情報：<ul><li>`destination.datasetId`：**（必須）**&#x200B;データのエクスポート先のデータセットの ID。</li><li>`destination.segmentPerBatch`：*（オプション）*&#x200B;指定しない場合、ブール値はデフォルトで `false` になります。値が `false` の場合、すべてのセグメント ID が単一のバッチ ID にエクスポートされます。値が `true` の場合、1 つのセグメント ID が 1 つのバッチ ID にエクスポートされます。値を `true` に設定すると、バッチエクスポートのパフォーマンスに影響を与える場合があることに注意してください。</li></ul> |
+| `schema.name` | **（必須）**&#x200B;データのエクスポート先のデータセットに関連付けられているスキーマの名前。 |
 
 >[!NOTE] プロファイルデータのみをエクスポートし、時系列関連のデータを含めない場合は、「additionalFields」オブジェクトをリクエストから削除します。
 
-**応答**
+**応答** 
 
-成功した場合は、リクエストで指定されたプロファイルデータが入力されたデータセットが返されます。
+成功した応答では、リクエストで指定したプロファイルデータが含まれるデータセットが返されます。
 
 ```json
 {
@@ -183,11 +183,11 @@ curl -X POST \
 }
 ```
 
-## すべての書き出しジョブのリスト
+## すべてのエクスポートジョブのリスト
 
-エンドポイントに対してGET要求を実行すると、特定のIMS組織のすべての書き出しジョブのリストを返すことができ `export/jobs` ます。 このリクエストでは、以下に示すように、クエリパラメーター `limit` と `offset`もサポートされます。
+`export/jobs` エンドポイントに対して GET リクエストを実行して、特定の IMS 組織のすべてのエクスポートジョブのリストを返すことができます。リクエストは、以下に示すように、クエリパラメーター `limit` および `offset` もサポートします。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /export/jobs
@@ -196,10 +196,10 @@ GET /export/jobs?{QUERY_PARAMETERS}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `start` | リクエストの作成時間に従って、返される結果のページをオフセットします。 例: `start=4` |
-| `limit` | 返す結果の数を制限する。 例: `limit=10` |
-| `page` | リクエストの作成時刻に従って、特定のページの結果を返します。 例: `page=2` |
-| `sort` | 特定のフィールドによる結果の昇順( **`asc`** )または降順( **`desc`** )で並べ替えます。 結果の複数ページを返す場合、並べ替えパラメーターは機能しません。 例: `sort=updateTime:asc` |
+| `start` | リクエストの作成時刻に従って、返された結果のページをオフセットします。例：`start=4` |
+| `limit` | 返す結果の数を制限します。例：`limit=10` |
+| `page` | リクエストの作成時刻に従って、特定のページの結果を返します。例：`page=2` |
+| `sort` | 特定のフィールドで結果を昇順（**`asc`**）または降順（**`desc`**）で並べ替えます。結果の複数ページを返す場合、並べ替えパラメーターは機能しません。例：`sort=updateTime:asc` |
 
 **リクエスト**
 
@@ -212,9 +212,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**応答**
+**応答** 
 
-応答には、IMS組織によって作成された書き出しジョブを含む `records` オブジェクトが含まれます。
+応答には、IMS 組織が作成したエクスポートジョブを含む `records` オブジェクトが含まれます。
 
 ```json
 {
@@ -329,11 +329,11 @@ curl -X GET \
 }
 ```
 
-## 書き出しの進行状況の監視
+## エクスポートの進行状況の監視
 
-特定の書き出しジョブの詳細を表示したり、処理中にそのステータスを監視したりするには、 `/export/jobs` エンドポイントにGETリクエストを行い、書き出しジョブ `id` のパスを含めます。 エクスポートジョブは、 `status` フィールドが値「SUCCEEDEDED」を返すと完了します。
+特定のエクスポートジョブの詳細を表示したり、処理中のステータスを監視したりするには、`/export/jobs` エンドポイントに対して GET リクエストを実行し、エクスポートジョブの `id` をパスを含めます。`status` フィールドによって値「SUCCEEDED」が返されると、エクスポートジョブが完了します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /export/jobs/{EXPORT_JOB_ID}
@@ -341,7 +341,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | アクセス `id` する書き出しジョブの名前。 |
+| `{EXPORT_JOB_ID}` | アクセスするエクスポートジョブの `id`。 |
 
 **リクエスト**
 
@@ -354,7 +354,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```json
 {
@@ -404,13 +404,13 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `batchId` | プロファイルデータを読み取る際に参照用に使用される、成功したエクスポートから作成されたバッチの識別子。 |
+| `batchId` | 成功したエクスポートから作成されるバッチの識別子。プロファイルデータを読み取る際に参照目的で使用されます。 |
 
-## 書き出しジョブのキャンセル
+## エクスポートジョブのキャンセル
 
-Experience Platformを使用すると、既存の書き出しジョブをキャンセルできます。これは、書き出しジョブが完了しなかったか、処理段階で停止した場合など、様々な理由で役立ちます。 書き出しジョブをキャンセルするには、エンドポイントに対してDELETE要求を実行し、 `/export/jobs` キャンセルする書き出しジョブ `id` を要求パスに含めます。
+Experience Platform では、既存のエクスポートジョブをキャンセルできます。この機能は、エクスポートジョブが完了しなかったか、処理段階で停止した場合など、様々な理由で役立つ場合があります。エクスポートジョブをキャンセルするには、`/export/jobs` エンドポイントに対して DELETE リクエストを実行し、キャンセルするエクスポートジョブの `id` をリクエストパスに含めます。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /export/jobs/{EXPORT_JOB_ID}
@@ -418,7 +418,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | パラメーター | 説明 |
 | -------- | ----------- |
-| `{EXPORT_JOB_ID}` | アクセス `id` する書き出しジョブの名前。 |
+| `{EXPORT_JOB_ID}` | アクセスするエクスポートジョブの `id`。 |
 
 **リクエスト**
 
@@ -431,19 +431,19 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-削除要求が成功すると、HTTPステータス204（コンテンツなし）と空の応答本文が返され、キャンセル操作が成功したことを示します。
+削除リクエストが成功すると、HTTP ステータス 204（コンテンツなし）と空の応答本文が返され、キャンセル操作が成功したことを示します。
 
 ## 次の手順
 
-エクスポートが正常に完了すると、Experience Platformのデータレーク内でデータを使用できます。 その後、 [データアクセスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) (Data Access API)を使用して `batchId` 、エクスポートに関連付けられたを使用してデータにアクセスできます。 エクスポートのサイズに応じて、データはチャンクになり、バッチは複数のファイルで構成される場合があります。
+エクスポートが正常に完了すると、データは Experience Platform のデータレイク内で使用できます。その後、エクスポートに関連付けられた `batchId` を使用して、[データアクセス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) でデータにアクセスできます。エクスポートのサイズに応じて、データがチャンクに格納され、バッチが複数のファイルで構成される場合があります。
 
-Data Access APIを使用してバッチファイルにアクセスし、ダウンロードする手順については、「 [データアクセス](../../data-access/tutorials/dataset-data.md)」チュートリアルに従ってください。
+データアクセス API を使用してバッチファイルにアクセスしてダウンロードする手順については、[データアクセスのチュートリアル](../../data-access/tutorials/dataset-data.md)を参照してください。
 
-また、Adobe Experience Platformクエリサービスを使用して、正常にエクスポートされたリアルタイム顧客プロファイルデータにアクセスすることもできます。 クエリサービスでは、UIまたはRESTful APIを使用して、データレーク内のデータに対してクエリの書き込み、検証、および実行を行うことができます。
+また、Adobe Experience Platform クエリサービスを使用して、正常にエクスポートされたリアルタイム顧客プロファイルデータにアクセスすることもできます。クエリサービスでは、UI または RESTful API を使用して、クエリの書き込みと検証を行い、データレイク内のデータに対してクエリを実行することができます。
 
-オーディエンスデータのクエリ方法の詳細については、 [クエリサービスのドキュメントを参照してください](../../query-service/home.md)。
+オーディエンスデータに対してクエリを実行する方法ついて詳しくは、[クエリサービスのドキュメント](../../query-service/home.md)を参照してください。
 
 ## 付録
 
