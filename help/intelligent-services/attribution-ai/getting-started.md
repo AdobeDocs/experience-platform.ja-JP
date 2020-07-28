@@ -1,57 +1,57 @@
 ---
 keywords: Experience Platform;getting started;attribution ai;popular topics
 solution: Experience Platform
-title: Attribution AIの概要
+title: Attribution AI の概要
 topic: Getting started
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 0%
+ht-degree: 76%
 
 ---
 
 
-# Attribution AIの概要
+# Attribution AI の概要
 
-以下のガイドでは、Attribution AIの使用に関連する様々な [!DNL Adobe Experience Platform] サービスについて理解している必要があります。 チュートリアルを開始する前に、次のドキュメントを確認してください。
+The following guides require an understanding of the various [!DNL Adobe Experience Platform] services involved with using Attribution AI. このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-- [Experience Data Model(XDM)システム概要](../../xdm/home.md): XDMは、Experience Platformを利用し [!DNL Adobe Experience Cloud]て適切なメッセージを適切な人に、適切なチャネルに、ちょうど適切なタイミングで配信できる基本的なフレームワークです。 Experience Platformを構築する方法論、XDM Systemは、Platformサービスで使用するExperience Data Modelスキーマを運用します。
+- [Experience Data Model(XDM)システム概要](../../xdm/home.md): XDMは、Experience Platformを利用し [!DNL Adobe Experience Cloud]て適切なメッセージを適切な人に、適切なチャネルに、ちょうど適切なタイミングで配信できる基本的なフレームワークです。 Experience Platform を構築する方法論である XDM システムによって、Platform サービスでエクスペリエンスデータモデルスキーマを操作できるようになります。
 - [スキーマ構成の基本](../../xdm/schema/composition.md): このドキュメントでは、Experience Data Model(XDM)スキーマと、で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介 [!DNL Adobe Experience Platform]します。
-- [スキーマの作成](../../xdm/tutorials/create-schema-ui.md): このチュートリアルでは、Experience Platform内でスキーマエディタを使用してスキーマを作成する手順を説明します。
+- [スキーマ](../../xdm/tutorials/create-schema-ui.md)：このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順について説明します。
 
-アトリビューションAIの場合、データセットは、 [Experience Data Model](../../xdm/home.md) (XDM)のミックスインであるConsumer Experience Data Model(CEE)スキーマに準拠する必要があります。 このデータを実装または変更するには、アドビサポート(attributionai-support@adobe.com)にお問い合わせください。 メディア支出データが存在する場合は、売上の増加やROI（投資収益率）など、さらに分析を行うことができます。 顧客プロファイルデータが使用可能な場合は、クレジットを顧客プロファイルレベルに関連付けることができます。
+Attribution AI では、データセットが[エクスペリエンスデータモデル](../../xdm/home.md)（XDM）の Mixin である消費者エクスペリエンスデータモデル（CEE）スキーマに準拠している必要があります。このデータを実装または変更するには、アドビサポート（attributionai-support@adobe.com）にお問い合わせください。メディア支出データが存在する場合は、売上高や ROI の増分など、さらに分析することができます。顧客プロファイルデータが使用可能な場合、クレジットを顧客プロファイルレベルに属性付けできます。
 
 ## 用語
 
-- **コンバージョンイベント:** 会議の登録など、目標に向けたマイルストーンを示すために顧客が行うデジタルイベントまたはデジタルインタラクション。 その他の例としては、有料コンバージョン、無料アカウントのサインアップ、特性の見極めなどがあります。
+- **コンバージョンイベント：**&#x200B;目標に向けたマイルストーンを示すために顧客が実行するデジタルイベントまたはデジタルインタラクション（会議の登録など）。その他の例としては、有料コンバージョン、無料アカウントの新規登録、特性の認定などがあります。
 
-- **タッチポイント：** 顧客が目標に向かって行うデジタルイベントまたはデジタルインタラクション。 購入前関連のマーケティング活動、表示された広告インプレッションの表示、有料検索クリックなどが例です。
+- **タッチポイント：**&#x200B;目標に向けたパスにおいて顧客が実行するデジタルイベントまたはデジタルインタラクション。例としては、購入前のマーケティング活動、ディスプレイ広告インプレッションの表示、有料検索のクリックなどがあります。
 
-## アトリビューションAIスコアのダウンロード
+## Attribution AIスコアのダウンロード
 
 >[!NOTE]
 >
->生のスコアをダウンロードする必要がない場合は、この手順をスキップして [次の手順に進みます](#next-steps)。
+>If you do not need to download raw scores, you can skip this step and proceed to the [next steps](#next-steps).
 
-アトリビューションAIスコアのダウンロードは、API呼び出しの組み合わせを通じて行われます。 PlatformAPIを呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。 次に示すように、Experience PlatformAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+Attribution AIスコアのダウンロードは、API呼び出しの組み合わせによって行われます。 Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](../../tutorials/authentication.md)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
-- 認証： 無記名 `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 PlatformAPIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+Experience Platform のすべてのリソースは、特定の仮想サンドボックスに分離されています。Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Platform内のサンドボックスについて詳しくは、「 [Sandboxの概要に関するドキュメント](../../sandboxes/home.md)」を参照してください。
+>Platform のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、Experience PlatformトラブルシューティングガイドのAPI呼び出し例 [の読み方に関する節](../../landing/troubleshooting.md) を参照してください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md)に関する節を参照してください。
 
 ## 次の手順 {#next-steps}
 
-準備が整い、すべての資格情報とスキーマが整ったら、『 [アトリビューションAIユーザーインターフェイスガイド](./user-guide.md)』に従って開始します。 このガイドでは、インスタンスの作成、およびトレーニングとスコアリングのための送信に関する手順を説明します。
+準備が整い、すべての資格情報とスキーマが整ったら、[Attribution AI ユーザーインターフェイスガイド](./user-guide.md)に従って開始します。このガイドでは、インスタンスを作成し、トレーニングおよびスコア付け用に送信する手順を説明します。
