@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 0%
+ht-degree: 17%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 0%
 >[!NOTE]
 >コネクタ [!DNL MariaDB] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-Experience Platformは、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 [!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートには以下が含まれ [!DNL MariaDB]ます。
+Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートには以下が含まれ [!DNL MariaDB]ます。
 
 ## IPアドレス許可リスト
 
@@ -63,5 +63,5 @@ Experience Platformは、サードパーティのデータベースからデー�
 
 ## UI [!DNL MariaDB] を [!DNL Platform] 使用して接続
 
-- [UIでのMariaDBソースコネクタの作成](../../tutorials/ui/create/databases/mariadb.md)
+- [UI での MariaDB ソースコネクタの作成](../../tutorials/ui/create/databases/mariadb.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
