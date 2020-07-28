@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics
 solution: Experience Platform
-title: 機械学習インサイトによるリアルタイムの顧客プロファイルの強化
+title: 機械学習の洞察によるリアルタイム顧客プロファイルの強化
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
 source-wordcount: '1179'
-ht-degree: 0%
+ht-degree: 71%
 
 ---
 
 
 # 機械学習 [!DNL Real-time Customer Profile] のインサイトの拡充
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] は、機械学習モデルを作成、評価、利用してデータ予測とインサイトを生成するためのツールとリソースを提供します。 機械学習インサイトが [!DNL Profile]有効なデータセットに取り込まれると、同じデータもレコードとして取り込まれ、レコードはを使用して関連する要素のサブセットに分類でき [!DNL Profile][!DNL Experience Platform Segmentation Service]ます。
+[!DNL Adobe Experience Platform][!DNL Data Science Workspace] は、マシンラーニングモデルを作成、評価、利用してデータ予測とインサイトを生成するためのツールとリソースを提供します。When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented into subsets of related elements by using [!DNL Experience Platform Segmentation Service].
 
-このドキュメントでは、機械学習の洞察を強化するための手順を説明するチュートリアル [!DNL Real-time Customer Profile] を順を追って説明します。手順は次のセクションに分かれています。
+This document provides a step-by-step tutorial to enrich [!DNL Real-time Customer Profile] with machine learning insights, steps are broken into the following sections:
 
 1. [出力スキーマとデータセットの作成](#create-an-output-schema-and-dataset)
 2. [出力スキーマとデータセットの設定](#configure-an-output-schema-and-dataset)
@@ -24,103 +24,103 @@ ht-degree: 0%
 
 ## はじめに
 
-このチュートリアルでは、 [!DNL Adobe Experience Platform][!DNL Profile] データの取り込みとセグメントの作成に関わる様々な側面について、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+This tutorial requires a working understanding of the various aspects of [!DNL Adobe Experience Platform] involved in ingesting [!DNL Profile] data and creating segments. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 * [!DNL Real-time Customer Profile](../../rtcdp/overview.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [!DNL Identity Service](../../identity-service/home.md): Platform [!DNL Real-time Customer Profile] に取り込まれる異なるデータソースのIDをブリッジ化することで有効にします。
 * [!DNL Experience Data Model (XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 
-上記のドキュメントに加え、スキーマおよびスキーマエディターに関する次のガイドも参照することを強くお勧めします。
+上記のドキュメントに加え、スキーマおよびスキーマエディターに関する次のガイドも確認することを強くお勧めします。
 
 * [スキーマ構成の基本](../../xdm/schema/composition.md): で使用するスキーマを構成するためのXDMスキーマ、構築ブロック、原則、ベストプラクティスについて説明 [!DNL Experience Platform]します。
 * [スキーマエディタのチュートリアル](../../xdm/tutorials/create-schema-ui.md): 内のスキーマエディタを使用してスキーマを作成する詳細な手順を説明 [!DNL Experience Platform]します。
 
 ## 出力スキーマとデータセットの作成 {#create-an-output-schema-and-dataset}
 
-スコアリングインサイト [!DNL Real-time Customer Profile] を活用するための最初のステップは、データが定義する現実世界のオブジェクト（人物など）を把握することです。 データに関する理解を得ることで、リレーショナルデータベースの設計と同様、データに意味を持つ構造を記述し、設計できます。
+The first step towards enriching [!DNL Real-time Customer Profile] with scoring insights is knowing what real-world object (such as a person) your data defines. データを理解することで、リレーショナルデータベースのデザインと同様に、データに意味を持つ構造を説明し、設計できます。
 
-スキーマの構成は、クラスの割り当てから始まります。 スキーマに格納されるデータ（レコードまたは時系列）の行動面を定義するクラスです。 この節では、スキーマビルダーを使用してスキーマを作成する基本的な手順を説明します。 詳細なチュートリアルについては、スキーマエディタを使用したスキーマの [作成に関するチュートリアルを参照してください](../../xdm/tutorials/create-schema-ui.md)。
+クラスを割り当てることで、スキーマの構成が開始されます。クラスは、スキーマに含まれるデータ（レコードまたは時系列）の行動面を定義します。ここでは、スキーマビルダーを使用してスキーマを作成する基本手順を説明します。詳しいチュートリアルについては、[スキーマエディターを使用したスキーマの作成](../../xdm/tutorials/create-schema-ui.md)に関するチュートリアルを参照してください。
 
-1. Adobe Experience Platformで、「 **[!UICONTROL スキーマ]** 」タブをクリックしてスキーマブラウザにアクセスします。 「 **[!UICONTROL スキーマを]** 作成 *」をクリックして*スキーマエディタにアクセスし、スキーマをインタラクティブに作成できます。
+1. Adobe Experience Platform で、「**[!UICONTROL スキーマ]** 」タブをクリックしてスキーマブラウザーにアクセスします。「**[!UICONTROL スキーマ作成]**」をクリックして、*スキーマエディター*にアクセスします。このエディターで、インタラクティブにスキーマを作成できます。
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. 「 *組版* 」ウィンドウで「 **[!UICONTROL 割り当て]** 」をクリックし、使用可能なクラスを参照します。
-   * 既存のクラスを割り当てるには、をクリックして目的のクラスを選択し、「 **[!UICONTROL Assign Class]**」をクリックします。
+2. *構成*&#x200B;ウィンドウで、「**[!UICONTROL 割り当て]**」をクリックし、使用可能なクラスを参照します。
+   * 既存のクラスを割り当てるには、目的のクラスをクリックしてハイライト表示し、「**[!UICONTROL クラスを割り当て]**」をクリックします。
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
-   * カスタムクラスを作成するには、ブラウザーウィンドウの中央上部近くにある **[!UICONTROL 新しいクラスを作成]** (Create New Class)をクリックします。 クラス名と説明を入力し、クラスの動作を選択します。 終了したら、「 **[!UICONTROL クラスを割り当て]** 」をクリックします。
+   * カスタムクラスを作成するには、ブラウザーウィンドウの中央上部近くにある「**[!UICONTROL 新規クラスを作成]**」をクリックします。クラス名と説明を入力し、クラスの動作を選択します。完了したら「**[!UICONTROL 、クラスの割り当て]**」をクリックします。
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
 
-   この時点で、スキーマの構造にはいくつかのクラスフィールドが含まれている必要があり、ミックスインを割り当てる準備が整います。 ミックスインは、特定の概念を説明する1つ以上のフィールドのグループです。
+   この時点で、スキーマの構造にいくつかのクラスフィールドが含まれ、mixin を割り当てる準備が整います。Mixin は、特定の概念を説明する 1 つ以上のフィールドのグループです。
 
-3. 「 *コンポジション* 」ウィンドウで、「 **[!UICONTROL Mixins]**** 」サブセクションのをクリックします。
-   * 既存のMixinを割り当てるには、目的のMixinをクリックしてハイライト表示し、「 **[!UICONTROL 追加Mixin]**」をクリックします。 クラスとは異なり、複数のミックスインを1つのスキーマに割り当てるのは、割り当てる必要がある限り可能です。
+3. *構成*&#x200B;ウィンドウの「*Mixins*」サブセクションで「**[!UICONTROL 追加]**」をクリックします。
+   * 既存の mixin を割り当てるには、目的の mixin をクリックしてハイライト表示し、「**[!UICONTROL Mixin を追加]**」をクリックします。クラスとは異なり、適切な場合、複数の mixin を 1 つのスキーマに割り当てられます。
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
-   * 新しいMixinを作成するには、ブラウザウィンドウの中央上部近くにある **** 「新しいMixinを作成」をクリックします。 ミックスインの名前と説明を入力し、完了したら「Mixinを **[!UICONTROL 割り当て]** 」をクリックします。
+   * 新しい mixin を作成するには、ブラウザーウィンドウの中央上付近にある「**[!UICONTROL 新規 mixin を作成]**」をクリックします。Mixin の名前と説明を入力し、完了したら「**[!UICONTROL Mixin を割り当て]**」をクリックします。
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * Mixinフィールドを追加するには、 *コンポジション* (Composition)ウィンドウ内でMixinの名前をクリックします。 次に、「構造 **[!UICONTROL 」(]** Structure *)ウィンドウ内の「* 追加フィールド」(Field)をクリックして、Mixinフィールドを追加するオプションを提供します。 それに応じて、mixinプロパティを必ず指定してください。
+   * Mixin フィールドを追加するには、*構成*&#x200B;ウィンドウ内で mixin の名前をクリックします。次に、*構造*&#x200B;ウィンドウ内の「**[!UICONTROL フィールドを追加]**」をクリックすると、mixin フィールドを追加するオプションが提供されます。それに応じて、mixin プロパティを指定します。
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. スキーマの構築が完了したら、「 *構造* 」ウィンドウ内でスキーマの最上位フィールドをクリックし、スキーマのプロパティを右側の「プロパティー」ウィンドウに表示します。 名前と説明を入力し、「 **[!UICONTROL 保存]** 」をクリックしてスキーマを作成します。
+4. スキーマの作成が完了したら、*構造*&#x200B;ウィンドウ内のスキーマの最上位フィールドをクリックすると、スキーマのプロパティが右側のプロパティウィンドウに表示されます。名前と説明を入力し、「**[!UICONTROL 保存]**」をクリックして、スキーマを作成します。
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
-5. 新しく作成したスキーマを使用して出力データセットを作成するには、左のナビゲーション列で **[!UICONTROL 「Datasets]** 」をクリックし、「データセットを **[!UICONTROL 作成]**」をクリックします。 次の画面で、「スキーマからデータセットを **[!UICONTROL 作成]**」を選択します。
+5. 左側のナビゲション列で「**[!UICONTROL データセット]**」をクリックしてから、「**[!UICONTROL データセットを作成]**」をクリックして、新しく作成したスキーマを使用して出力データセットを作成します。次の画面で、「**[!UICONTROL スキーマからデータセットを作成]**」を選択します。
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
-6. スキーマブラウザーを使用して、新しく作成したスキーマを探して選択し、「 **[!UICONTROL 次へ]**」をクリックします。
+6. スキーマブラウザーを使用して、新しく作成したスキーマを探して選択し、「**[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/enrich-rtcdp/choose_schema.png)
 
-7. 名前と説明（オプション）を入力し、「 **[!UICONTROL 完了]** 」をクリックしてデータセットを作成します。
+7. 名前と説明（オプション）を入力し、「**[!UICONTROL 完了]**」をクリックして、データセットを作成します。
    ![](../images/models-recipes/enrich-rtcdp/configure_dataset.png)
 
-出力スキーマデータセットを作成したら、次のセクションに進み、プロファイルエンリッチメントの設定と有効化を行う準備が整いました。
+出力スキーマデータセットを作成したので、次の節に進んで、プロファイルエンリッチメントを設定し有効にする準備が整いました。
 
 ## 出力スキーマとデータセットの設定 {#configure-an-output-schema-and-dataset}
 
-のデータセットを有効にする前に、データセットのスキーマ [!DNL Profile]にプライマリIDフィールドが設定され、そのスキーマを有効にする必要があり [!DNL Profile]ます。 新しいスキーマを作成して有効にする場合は、スキーマエディタを使用したスキーマの [作成に関するチュートリアルを参照してください](../../xdm/tutorials/create-schema-ui.md)。 それ以外の場合は、次の手順に従って既存のスキーマとデータセットを有効にします。
+Before you can enable a dataset for [!DNL Profile], you need to configure the dataset&#39;s schema to having a primary identity field and then enable the schema for [!DNL Profile]. 新しいスキーマを作成して有効にする場合は、[スキーマエディターを使用したスキーマの作成](../../xdm/tutorials/create-schema-ui.md)に関するチュートリアルを参照してください。それ以外の場合は、次の手順に従って既存のスキーマとデータセットを有効にします。
 
-1. Adobe Experience Platform時に、スキーマブラウザを使用して有効にする出力スキーマを探し、その名前をクリックし [!DNL Profile] て構成を表示します。
+1. On Adobe Experience Platform, use the schema browser to find the output schema you wish to enable [!DNL Profile] on and click its name to view its composition.
    ![](../images/models-recipes/enrich-rtcdp/schemas.png)
 
-2. スキーマ構造を展開し、主識別子として設定する適切なフィールドを探します。 目的のフィールドをクリックして、そのプロパティを表示します。
+2. スキーマ構造を展開し、主識別子として設定する適切なフィールドを探します。目的のフィールドをクリックして、そのプロパティを表示します。
    ![](../images/models-recipes/enrich-rtcdp/schema_structure.png)
 
-3. フィールドの **[!UICONTROL Identity]** プロパティ、 **[!UICONTROL プライマリのIdentity]** プロパティを有効にし、適切な **[!UICONTROL Identity名前空間を選択して、フィールドを主IDとして設定します]**。 変更を行ったら、 **[!UICONTROL 「適用]** 」をクリックします。
+3. フィールドの **[!UICONTROL ID]** プロパティ、**[!UICONTROL プライマリ ID]**&#x200B;プロパティを有効にし、適切な **[!UICONTROL ID 名前空間]**&#x200B;を選択して、フィールドをプライマリ ID として設定します。変更を加えたら、「**[!UICONTROL 適用]**」をクリックします。
    ![](../images/models-recipes/enrich-rtcdp/set_identity.png)
 
-4. スキーマ構造の最上位のオブジェクトをクリックしてスキーマのプロパティを表示し、 **[!UICONTROL プロファイル]** スイッチを切り替えてスキーマのプロファイルを有効にします。 「 **[!UICONTROL 保存]** 」をクリックして変更を確定すると、このスキーマを使用して作成されたデータセットをプロファイル可能にできます。
+4. スキーマ構造の最上位オブジェクトをクリックしてスキーマのプロパティを表示し、**[!UICONTROL プロファイルスイッチ]**&#x200B;を切り替えてプロファイルのスキーマを有効にします。「**[!UICONTROL 保存]**」をクリックして変更を確定すると、このスキーマを使用して作成されたデータセットがプロファイルに対して有効になります。
    ![](../images/models-recipes/enrich-rtcdp/enable_schema.png)
 
-5. 有効にするデータセットを見つけるには、データセットブラウザーを使用し [!DNL Profile] 、その名前をクリックして詳細を表示します。
+5. Use the dataset browser to find the dataset you wish to enable [!DNL Profile] on and click its name to access its details.
    ![](../images/models-recipes/enrich-rtcdp/datasets.png)
 
-6. 右側の情報列にある [!DNL Profile] プロファイル **** ・スイッチを切り替えて、のデータセットを有効にします。
+6. Enable the dataset for [!DNL Profile] by toggling the **[!UICONTROL Profile]** switch found in the right information column.
    ![](../images/models-recipes/enrich-rtcdp/enable_dataset.png)
 
-データを [!DNL Profile]有効なデータセットに取り込むと、同じデータもレコードとして取り込まれ [!DNL Profile] ます。 スキーマとデータセットを準備したら、適切なモデルを使用してスコアリング実行を実行し、データセットに含まれるデータを生成し、このチュートリアルでセグメントビルダーを使用してインサイトセグメントを作成します。
+When data is ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records. スキーマとデータセットの準備が整ったら、適切なモデルを使用してスコアリングを実行することによりデータセットにデータを生成し、このチュートリアルを続行して、セグメントビルダーを使用して洞察セグメントを作成します。
 
 ## セグメントビルダーを使用したセグメントの作成 {#create-segments-using-the-segment-builder}
 
-インサイトを生成し、 [!DNL Profile]有効なデータセットに取り込んだので、セグメントビルダーを使用して関連要素のサブセットを識別し、データを管理できます。 独自のセグメントを作成するには、次の手順に従います。
+Now that you have generated and ingested insights into your [!DNL Profile]-enabled dataset, you can manage that data by identifying subsets of related elements using the Segment Builder. 次の手順に従って、独自のセグメントを作成します。
 
-1. Adobe Experience Platformで、「 **[!UICONTROL セグメント]** 」タブをクリックし、「セグメントを **[!UICONTROL 作成]** 」をクリックしてセグメントビルダーにアクセスします。
+1. Adobe Experience Platform で、「**[!UICONTROL セグメント]**」タブをクリックし、「**[!UICONTROL セグメントを作成]**」をクリックして、セグメントビルダーにアクセスします。
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
-2. セグメントビルダー内で、左側のレールから、セグメントの主要な構成要素にアクセスできます。 属性、イベントおよび既存のセグメント。 各文書パーツは、それぞれのタブに表示されます。 有効にしたスキーマを拡張するクラスを選択し、セグメントの構築ブロックを参照して探します。 [!DNL Profile]
+2. セグメントビルダー内で、左のパネルから、セグメントの主要な構成要素（属性、イベント、既存のセグメント）にアクセスできます。各構成要素はそれぞれのタブに表示されます。Select the class to which your [!DNL Profile]-enabled schema extends then browse and find the building blocks for your segment.
    ![](../images/models-recipes/enrich-rtcdp/segment_builder.png)
 
-3. 構築ブロックをルールビルダーのキャンバスにドラッグ&amp;ドロップし、比較文を指定して作成を完了します。
+3. 構成要素をルールビルダーキャンバスにドラッグ&amp;ドロップし、比較文を指定して完成させます。
    ![](../images/models-recipes/enrich-rtcdp/drag_fill.gif)
 
-4. セグメントを作成する際に、 *セグメントのプロパティ* パネルを観察することで、セグメントの結果の予測をプレビューできます。
+4. セグメントを作成する際に、*セグメントプロパティ*パネルを見て、セグメントの結果の予測をプレビューできます。
    ![](../images/models-recipes/enrich-rtcdp/preview_segment.gif)
 
-5. 適切な「 **[!UICONTROL 結合ポリシー]**」を選択し、名前とオプションの説明を入力し、「 **[!UICONTROL 保存]** 」をクリックして新しいセグメントを完成させます。
+5. 適切な「**[!UICONTROL 結合ポリシー]**」を選択し、名前とオプションの説明を入力し、「**[!UICONTROL 保存]**」をクリックして、新しいセグメントを完了します。
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、のスキーマとデータセットを有効にするために必要な手順を順を追って説明し、セグメントビルダーを使用し [!DNL Profile]たインサイトセグメントの作成ワークフローを簡単に紹介しました。 セグメントとセグメントビルダーについて詳しくは、 [Segmentationサービスの概要を参照してください](../../segmentation/home.md)。
+This document walked you through the steps required to enable a schema and dataset for [!DNL Profile], and briefly demonstrated the workflow for creating insight segments using the Segment Builder. セグメントとセグメントビルダーについて詳しくは、「[セグメント化サービスの概要](../../segmentation/home.md)」を参照してください。
