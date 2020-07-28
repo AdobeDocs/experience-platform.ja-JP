@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: XDMスキーマと記述子
+title: XDM スキーマおよび記述子
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
 source-wordcount: '407'
-ht-degree: 0%
+ht-degree: 54%
 
 ---
 
 
 # (XDM) [!DNL Experience Data Model] スキーマと関係記述子を使用する
 
-標準化と相互運用性は、Adobe Experience Platformの背後にある重要な概念です。 [!DNL Experience Data Model] (XDM)は、アドビが推進する機能で、カスタマーエクスペリエンスデータを標準化し、カスタマーエクスペリエンス管理のスキーマを定義するための取り組みです。 スキーマはのデータを記述する標準的な方法で [!DNL Experience Platform]あり、スキーマに準拠するすべてのデータを組織間で競合なく再利用可能にし、複数の組織間で共有可能にすることができます。 XDMスキーマの詳細は、 [XDMシステムの概要を読んで開始してください](../xdm/home.md)。
+標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。[!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。 Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reusable without conflicts across an organization and even to be sharable between multiple organizations. XDM スキーマについて詳しくは、まず、[XDM 体系の概要](../xdm/home.md)を参照してください。
 
 ## スキーマレジストリを使用したスキーマの作成
 
-スキーマレジストリには、Adobe Experience Platformスキーマライブラリ内のすべてのリソースを表示および管理できるユーザーインターフェイスとRESTful APIが用意されています。 スキーマライブラリには、アドビ、パートナー、および使用するベンダーが提供するリソースと、定義してスキーマレジストリに保存するリソースが含まれています。 [!DNL Experience Platform] 組織のスキーマを作成する方法については、スキーマレジストリAPIを使用したスキーマの [作成](../xdm/tutorials/create-schema-api.md) 、またはスキーマエディターユーザーインターフェイスを使用したスキーマの [作成のチュートリアルに従ってください](../xdm/tutorials/create-schema-ui.md)。
+スキーマレジストリは、Adobe Experience Platform スキーマライブラリのすべてのリソースを表示および管理できるユーザーインターフェイスと RESTful API を提供します。The Schema Library contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use, as well as resources that you define and save to the Schema Registry. 組織のスキーマの作成方法については、[スキーマレジストリ API を使用してスキーマを作成する方法](../xdm/tutorials/create-schema-api.md)と、[スキーマエディターのユーザーインターフェイスを使用してスキーマを作成する方法](../xdm/tutorials/create-schema-ui.md)のチュートリアルに従ってください。
 
-## 2つのスキーマ間の関係の定義
+## 2 つのスキーマ間の関係の定義
 
-様々なチャネルにわたる顧客とブランドとの関係を理解する能力は、Adobe Experience Platformの重要な部分です。 これらの関係を [!DNL Experience Data Model] (XDM)スキーマの構造内で定義すると、顧客データに対する複雑な洞察を得ることができます。 これらの関係記述子は、スキーマレジストリAPIとスキーマエディタUIを使用して定義できます。 詳しくは、API [を使用して2つのスキーマ間の関係を定義するためのチュートリアル](../xdm/tutorials/relationship-api.md) 、またはUI [を使用する方法を参照してください](../xdm/tutorials/relationship-ui.md)。
+様々なチャネルでの顧客とブランドとのやり取りと顧客との関係を把握する機能は、Adobe Experience Platform の重要な要素です。Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data. これらの関係記述子は、スキーマレジストリ API とスキーマエディター UI を使用して定義できます。詳しくは、[API](../xdm/tutorials/relationship-api.md) または [UI](../xdm/tutorials/relationship-ui.md) を使用して 2 つのスキーマ間の関係を定義する方法に関するチュートリアルを参照してください。
 
 ## アドホックスキーマの作成
 
-特定の状況では、1つのデータセットでのみ使用できるように名前が付けられたフィールドを持つ [!DNL Experience Data Model] (XDM)スキーマを作成する必要が生じる場合があります。 これは「アドホック」スキーマと呼ばれます。 CSVファイルの取り込みや特定の種類の [ソース接続の作成](../ingestion/home.md) など、アドホックスキーマは様々な [!DNL Experience Platform]データ取り込み [ワークフローで使用され](../sources/home.md)ます。 アドホックスキーマの作成は、スキーマレジストリAPIを使用して行います。このワークフローの一部としてアドホックスキーマを作成する必要がある他の [!DNL Experience Platform] チュートリアルとの併用を意図しています。 アドホックスキーマの作成を開始するには、APIを使用したアドホックスキーマの [作成に関するチュートリアルを参照してください](../xdm/tutorials/ad-hoc.md)。
+In specific circumstances, it may be necessary to create an [!DNL Experience Data Model] (XDM) schema with fields that are namespaced for usage only by a single dataset. これは「アドホック」スキーマと呼ばれます。Ad-hoc schemas are used in various [data ingestion](../ingestion/home.md) workflows for [!DNL Experience Platform], including ingesting CSV files and creating certain kinds of [source connections](../sources/home.md). Creating an ad-hoc schema is done using the Schema Registry API and is intended to be used in conjunction with other [!DNL Experience Platform] tutorials that require creating an ad-hoc schema as part of their workflow. アドホックスキーマの作成を開始するには、[API を使用してアドホックスキーマを作成する方法](../xdm/tutorials/ad-hoc.md)に関するチュートリアルを参照してください。
 
 ## 次の手順
 
-組織のスキーマを定義したら、データを取り込むデータセットの作成を開始できます。 開始するには、次のドキュメントを参照してください。
+組織のスキーマを定義したら、データを取り込むデータセットの作成を開始できます。作業を開始する場合は、次のドキュメントを参照してください。
 
 * [データセットの概要](../catalog/datasets/overview.md)
-* [データ取り込みの概要](../ingestion/home.md)
+* [データ取得の概要](../ingestion/home.md)
