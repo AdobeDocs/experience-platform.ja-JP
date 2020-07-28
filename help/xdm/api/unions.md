@@ -7,46 +7,46 @@ translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '788'
-ht-degree: 1%
+ht-degree: 84%
 
 ---
 
 
 # 和集合
 
-和集合(または和集合表示)は、同じクラス([!DNL XDM ExperienceEvent] または [!DNL XDM Individual Profile])を共有し、有効になっているすべてのスキーマのフィールドを集計する、システム生成の読み取り専用スキーマ [!DNL Real-time Customer Profile](../../profile/home.md)です。
+Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [!DNL Real-time Customer Profile](../../profile/home.md).
 
-このドキュメントでは、様々な操作のサンプル呼び出しを含む、スキーマレジストリAPIの和集合を操作するための基本的な概念について説明します。 XDMの和集合に関する一般的な情報については、スキーマ構成の [基本の和集合に関する節を参照してください](../schema/composition.md#union)。
+このドキュメントでは、Schema Registry API で和集合を操作するための基本的な概念と、様々な操作のサンプル呼び出しを示しています。XDM の和集合に関する一般的な情報については、「[Basics of schema composition](../schema/composition.md#union)」の和集合に関する節を参照してください。
 
-## 和集合ミックスイン
+## 和集合 Mixin
 
-和集合スキーマ内に3つのミックスインが [!DNL Schema Registry] 自動的に含まれます。 `identityMap`、 `timeSeriesEvents`および `segmentMembership`。
+The [!DNL Schema Registry] automatically includes three mixins within the union schema: `identityMap`, `timeSeriesEvents`, and `segmentMembership`.
 
-### IDマップ
+### ID マップ
 
-和集合スキーマ `identityMap` とは、和集合の関連レコードスキーマ内の既知のIDを表します。 IDマップは、IDを名前空間でキー設定された異なるアレイに分割します。 リストに表示される各IDは、それ自体に一意の `id` 値を含むオブジェクトです。
+和集合スキーマの `identityMap` は、和集合に関連付けられているレコードスキーマ内の既知の ID を表します。ID マップは、名前空間で特定された異なる配列に ID を分離します。リストされる ID 自体は、一意の `id` 値を含むオブジェクトです。
 
-See the [Identity Service documentation](../../identity-service/home.md) for more information.
+詳しくは、[ID サービスに関するドキュメント](../../identity-service/home.md)を参照してください。
 
 ### 時系列イベント
 
-この `timeSeriesEvents` 配列は、和集合に関連付けられているレコードスキーマに関連する時系列イベントのリストです。 データをデータセットにエクスポートする場合、この配列は各レコードに含まれます。 [!DNL Profile] これは、機械学習など、モデルが記録属性に加えてプロファイルの行動履歴全体を必要とする様々な使用例に役立ちます。
+`timeSeriesEvents` 配列は、和集合に関連付けられているレコードスキーマに関連する時系列イベントのリストです。When [!DNL Profile] data is exported to datasets, this array is included for each record. これは、様々な使用事例に役立ちます。例えば、モデルがレコード属性に加えてプロファイルの行動履歴全体を必要とする機械学習などに役立ちます。
 
-### セグメントのメンバーシップマップ
+### セグメントメンバーシップマップ
 
-この `segmentMembership` マップには、セグメントの評価結果が格納されます。 セグメント化APIを使用してセグメントジョブが正常に実行されると [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)、マップが更新されます。 `segmentMembership` また、評価済みのオーディエンスセグメントをPlatformに取り込んで保存し、Adobe Audience Managerなどの他のソリューションと統合することもできます。
+`segmentMembership` マップには、セグメント評価の結果が格納されます。[Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。また、`segmentMembership` には、Platform に取り込まれた評価済みのオーディエンスセグメントも格納されます。このため、Adobe Audience Manager などの他のソリューションと統合することができます。
 
-詳しくは、APIを使用したセグメントの [作成に関するチュートリアルを参照してください](../../segmentation/tutorials/create-a-segment.md) 。
+詳しくは、[API を使用したセグメ ントの作成](../../segmentation/tutorials/create-a-segment.md)に関するチュートリアルを参照してください。
 
-## スキーマの和集合メンバーシップの有効化
+## 和集合メンバーシップのスキーマを有効にする
 
-結合された和集合表示にスキーマを含めるには、スキーマの `meta:immutableTags` 属性に「和集合」タグを追加する必要があります。 これは、PATCHリクエストを通じて行われ、スキーマを更新し、「和集合」の値を持つ `meta:immutableTags` 配列を追加します。
+結合された和集合表示にスキーマを含めるには、スキーマの `meta:immutableTags` 属性に「union」タグを追加する必要があります。これは、PATCH リクエストを通じてスキーマを更新し、「和集合」の値を持つ `meta:immutableTags` 配列を追加することによっておこなわれます。
 
 >[!NOTE]
 >
->不変タグとは、設定を意図したが削除されなかったタグです。
+>Immutable タグは、設定を目的としたもので、削除には使用できません。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /tenant/schemas/{SCHEMA_ID}
@@ -54,7 +54,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | での使用を有効にする、URLエンコードされた `$id` URI `meta:altId` またはスキーマの [!DNL Profile]URI。 |
+| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to enable for use in [!DNL Profile]. |
 
 **リクエスト**
 
@@ -73,7 +73,7 @@ curl -X PATCH \
 
 **応答**
 
-正常に応答すると、更新されたスキーマの詳細が返されます。この詳細には、文字列値「和集合」を含む `meta:immutableTags` 配列が含まれます。
+リクエストが成功した場合は、更新されたスキーマの詳細が返されます。この中には、文字列値「union」を含む `meta:immutableTags` 配列があります。
 
 ```JSON
 {
@@ -115,13 +115,13 @@ curl -X PATCH \
 }
 ```
 
-## リスト和集合
+## 和集合をリストする
 
-スキーマに「和集合」タグを設定すると、は、スキーマの基となるクラスの和集合を [!DNL Schema Registry] 自動的に作成し、維持します。 この和集合 `$id` の値は、クラスの標準 `$id` に似ていますが、2つのアンダースコアと「和集合」(`"__union"`)という単語が付加されるのが唯一の違いです。
+When you set the &quot;union&quot; tag on a schema, the [!DNL Schema Registry] automatically creates and maintains a union for the class upon which the schema is based. 和集合の `$id` は、クラスの標準 `$id` に似ていますが、2 個のアンダースコアと単語「union」（`"__union"`）が付加されるという点が異なります。
 
-使用可能な和集合のリストを表示するには、エンドポイントに対してGETリクエストを実行でき `/unions` ます。
+使用可能な和集合のリストを表示するには、`/unions` エンドポイントに GET リクエストを実行します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /tenant/unions
@@ -141,7 +141,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、HTTPステータス200(OK)と `results` 配列を応答本文に返します。 和集合を定義した場合、各和集合の、、、 `title`、およびは、配列内 `$id``meta:altId``version` のオブジェクトとして提供されます。 和集合が定義されていない場合、HTTPステータス200 (OK)は引き続き返されますが、 `results` 配列は空になります。
+リクエストが成功した場合は、HTTP ステータス 200（OK）、およびレスポンス本文に `results` 配列が返されます。和集合が定義されている場合、各和集合の `title`、`$id`、`meta:altId` および `version` が、配列内にオブジェクトとして表示されます。和集合が定義されていない場合も、HTTP ステータス 200（OK）が返されますが、`results` 配列は空になります。
 
 ```JSON
 {
@@ -164,13 +164,13 @@ curl -X GET \
 
 ## 特定の和集合の検索
 
-特定の和集合を表示するには、Acceptヘッダーに応じて、和集合の一部またはすべての詳細を含むGET要求 `$id` を実行します。
+特定の和集合を表示するには、`$id` と、和集合の詳細の一部またはすべて（Accept ヘッダーにより異なる）を含む GET リクエストを実行します。
 
 >[!NOTE]
 >
->和集合検索は、エンドポイント `/unions` とエンドポイントを使用して使用でき、データセットへの `/schemas`[!DNL Profile] エクスポートで使用できます。
+>Union lookups are available using the `/unions` and `/schemas` endpoint to enable them for use in [!DNL Profile] exports into a dataset.
 
-**API形式**
+**API 形式**
 
 ```http
 GET /tenant/unions/{UNION_ID}
@@ -179,7 +179,7 @@ GET /tenant/schemas/{UNION_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{UNION_ID}` | 参照する和集合のURLエンコードされた `$id` URI。 和集合スキーマのURIには「__和集合」が付加されます。 |
+| `{UNION_ID}` | 検索する和集合の URL エンコードされた `$id` URI。和集合スキーマの URI には「__union」が追加されます。 |
 
 **リクエスト**
 
@@ -193,20 +193,20 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-和集合参照の要求では、Acceptヘッダーに含める必要 `version` があります。
+和集合の検索リクエストでは、Accept ヘッダーに `version` を含める必要があります。
 
-和集合スキーマの検索には、次のAcceptヘッダーを使用できます。
+和集合スキーマの検索では、次の Accept ヘッダーを使用できます。
 
-| 同意 | 説明 |
+| Accept | 説明 |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | ANDを使用し `$ref` たRAW `allOf`。 タイトルと説明が含まれます。 |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` 属性を `allOf` 解決します。 タイトルと説明が含まれます。 |
+| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | `$ref` と `allOf` を含む未処理の和集合。タイトルと説明が含まれます。 |
+| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` 属性と `allOf` が解決されます。タイトルと説明が含まれます。 |
 
 **応答**
 
-成功した応答は、要求パスで指定されたクラスを実装するすべてのスキーマの和集合表示 `$id` を返します。
+リクエストが成功した場合は、リクエストパスで指定した `$id` のクラスを実装するすべてのスキーマの和集合表示が返されます。
 
-応答の形式は、要求で送信されるAcceptヘッダーによって異なります。 様々なAcceptヘッダーを使用してテストし、応答を比較し、使用事例に最適なヘッダーを判断します。
+レスポンスの形式は、リクエストで送信した Accept ヘッダーにより異なります。異なる Accept ヘッダーを試して、応答を比較し、使用事例に最適なヘッダーを判断します。
 
 ```JSON
 {
@@ -247,13 +247,13 @@ curl -X GET \
 }
 ```
 
-## 和集合内のリストスキーマ
+## 和集合内のスキーマをリストする
 
-特定の和集合に属するスキーマを確認するには、クエリパラメーターを使用してGET要求を実行し、テナントコンテナ内のスキーマをフィルタリングします。
+特定の和集合に含まれるスキーマを確認するには、クエリパラメーターを使用して GET リクエストを実行し、テナントコンテナ内のスキーマをフィルタリングします。
 
-クエリパラメーターを使用して、スキーマにアクセスしている和集合と同じフィールドと `property` 等しいフィールドを含むのみを返すよう `meta:immutableTags``meta:class` に応答を設定できます。
+`property` クエリパラメーターを使用すると、アクセス先の和集合があるクラスと同等の `meta:immutableTags` フィールドおよび `meta:class` を含むスキーマのみを返すようにレスポンスを設定できます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLASS_ID}
@@ -261,11 +261,11 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CLASS_ID}` | 和集合 `$id` にアクセスするクラスの名前。 |
+| `{CLASS_ID}` | アクセス先の和集合があるクラスの `$id`。 |
 
 **リクエスト**
 
-次のリクエストは、 [!DNL XDM Individual Profile] クラス和集合に含まれるすべてのスキーマを検索します。
+The following request looks up all schemas that are part of the [!DNL XDM Individual Profile] class union.
 
 ```SHELL
 curl -X GET \
@@ -279,7 +279,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、フィルターされたリストのスキーマを返します。この中には、両方の要件を満たす要素のみが含まれます。 複数のクエリパラメーターを使用する場合は、AND関係が想定されます。 応答の形式は、要求で送信されるAcceptヘッダーによって異なります。
+リクエストが成功した場合は、フィルタリングされたスキーマのリストが返されます。この中には、両方の要件を満たすスキーマのみが含まれます。複数のクエリパラメーターを使用する場合は、AND 関係であると見なされることに注意してください。レスポンスの形式は、リクエストで送信した Accept ヘッダーにより異なります。
 
 ```JSON
 {
