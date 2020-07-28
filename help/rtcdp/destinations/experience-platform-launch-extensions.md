@@ -1,66 +1,67 @@
 ---
-title: エクスペリエンスプラットフォーム起動拡張
-seo-title: エクスペリエンスプラットフォーム起動拡張
-description: ' Launch は、アドビが提供する次世代タグ管理機能です。Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
-seo-description: ' Launch は、アドビが提供する次世代タグ管理機能です。Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
+title: Experience Platform Launch の拡張機能
+seo-title: Experience Platform Launch の拡張機能
+description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
+seo-description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
 translation-type: tm+mt
 source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 workflow-type: tm+mt
 source-wordcount: '622'
-ht-degree: 22%
+ht-degree: 100%
 
 ---
 
 
-# Experience Platform Launch extensions {#experience-platform-launch-extensions}
+# Experience Platform Launch の拡張機能 {#experience-platform-launch-extensions}
 
-Experience Platform Launch は、アドビが提供する次世代タグ管理機能です。Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。Adobe Experience Cloudのお客様に対して、付加価値機能の提供を開始します。
+Experience Platform Launch は、アドビが提供する次世代タグ管理機能です。
+Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。Launch は、Adobe Experience Cloud に付属の付加価値機能として提供されています。
 
-エクスペリエンスプラットフォームの起動機能の概要については、次のリソースを参照してください。
-* Experience Platform Launch [documentation](https://docs.adobe.com/content/help/ja-JP/launch/using/overview.html)
-* エクスペリエンスプラットフォーム起動 [のクイック開始ビデオ](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html)。 エクスペリエンスプラットフォームの起動 [](https://www.youtube.com/embed/rwqqkG1SERU) / [公開プロセスの概要に関する開始を参照して](https://helpx.adobe.com/jp/analytics/how-to/adobe-launch-publishing-process.html)、次の概念に進みます。
+Experience Platform Launch の機能の概要については、以下のリソースを参照してください。
+* Experience Platform Launch の[ドキュメント](https://docs.adobe.com/content/help/ja-JP/launch/using/overview.html)。
+* Experience Platform Launch の[クイックスタートビデオ](https://docs.adobe.com/content/help/ja-JP/launch/using/intro/get-started/videos.html)。[Experience Platform Launch の紹介](https://www.youtube.com/embed/rwqqkG1SERU)と[公開プロセスの概要](https://helpx.adobe.com/jp/analytics/how-to/adobe-launch-publishing-process.html)を視聴してから、次のビデオに進んでください。
 
-## Adobe Real-time CDPインターフェイスでのLaunch拡張機能の検索方法 {#how-to-find-extensions-in-interface}
+## アドビのリアルタイム CDP インターフェイスで Launch の拡張機能を探す {#how-to-find-extensions-in-interface}
 
-Adobe Real-time CDPインターフェイスでLaunch拡張機能を探すには、 **[!UICONTROL Destinations/Catalog]** を選択し、 **[!UICONTROL Types]** フィルタで「Extensions **** 」を選択します。
+アドビのリアルタイム CDP インターフェイスで Launch の拡張機能を見つけるには、**[!UICONTROL 宛先／カタログ]**&#x200B;に移動して、「**[!UICONTROL タイプ]**」フィルターで「**[!UICONTROL 拡張機能]**」を選択します。
 
-![インターフェイスの拡張フィルター](/help/rtcdp/destinations/assets/extensions-filter.png)
+![インターフェイスの「拡張機能」フィルター](/help/rtcdp/destinations/assets/extensions-filter.png)
 
-## 起動の拡張機能の仕組み {#how-extensions-work}
+## Launch の拡張機能の仕組み {#how-extensions-work}
 
-起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 拡張機能は、宛先の **イベント転送** (Destination)タイプと考えてください。 これは、生のイベントデータのみを転送する、宛先プラットフォームとの統合のよりシンプルなタイプです。 例えば、 [Gainsightパーソナライゼーション拡張機能](/help/rtcdp/destinations/gainsight-extension.md) 、またはCustomer拡張機能の [Confirmit Voice](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
+Launch の拡張機能は、イベントの生データを複数の種類の宛先に転送します。この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](/help/rtcdp/destinations/gainsight-extension.md)や [Confirmit Voice of the Customer 拡張機能](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)などがあります。
 
-**Adobe Real-time Customer Data Platformのプロファイル/セグメントエクスポート** :イベントデータの取得、他のデータソースとの組み合わせ、セグメント化の適用、セグメント化の適用、および条件を満たすプロファイルのエクスポートを行います。 例えば、 [Amazon S3クラウドのストレージ先](/help/rtcdp/destinations/amazon-s3-destination.md) 、 [Google Display &amp; Video 360の広告先などがあります](/help/rtcdp/destinations/google-dv360-destination.md)。
+アドビリアルタイム顧客データプラットフォームの&#x200B;**プロファイル／セグメント書き出し**&#x200B;の宛先では、イベントデータの取得と他のデータソースとの結合、セグメント化の適用、セグメントと認定プロファイルの宛先への書き出しが実行されます。例としては、[Amazon S3 クラウドストレージの宛先](/help/rtcdp/destinations/amazon-s3-destination.md)や [Google Display &amp; Video 360 の広告の宛先](/help/rtcdp/destinations/google-dv360-destination.md)などがあります。
 
-![他の宛先と比較したエクスペリエンスプラットフォーム起動の拡張](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+![Experience Platform Launch の拡張機能と他の宛先との比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## 起動拡張機能を使用する利点 {#extensions-benefits}
+## Launch の拡張機能を使用するメリット {#extensions-benefits}
 
-エクスペリエンスプラットフォームの発売は、既存のExperience Cloudのお客様は無料です。 「起動」を使用すると、インストール、設定、更新、削除が可能な使いやすい拡張機能により、Webサイトでのタグの導入が簡単になります。 Launchは、Webサイトの設置面積が小さく、ページの読み込みを素早く維持できます。
+Experience Cloud のお客様は、Experience Platform Launch を無料でご利用になれます。Launch では、使いやすい拡張機能を使用して、web サイト上にタグを簡単に導入できます。この拡張機能は、インストール、設定、更新および削除できます。Launch は、ｗeb サイト上に小さな足跡を残します。このため、ページをすばやく読み込むことができます。
 
 >[!IMPORTANT]
 >
->セグメントをアクティブ化して拡張機能を起動することはできませんが、特定の状況でイベントデータを転送するだけのルールを設定できます。 詳しくは、以下を参照してください。
+>Launch の拡張機能に対してセグメントをアクティブ化することはできませんが、特定の状況でのみイベントデータを転送するルールを設定できます。詳しくは、以下を参照してください。
 
-イベントデータをいつ拡張に転送するかを決定する *ルール* を作成できます。 この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。 For more information, read about rules in the [Launch documentation](https://docs.adobe.com/help/ja-JP/launch/using/reference/manage-resources/rules.html).
+イベントデータを拡張機能に転送するタイミングを指定する&#x200B;*ルール*&#x200B;を作成できます。この強力な機能により、すべてのインタラクションでイベントデータを送信するのではなく、特定の状況でのみイベントデータを転送できます。詳しくは、[Launch ドキュメント](https://docs.adobe.com/help/ja-JP/launch/using/reference/manage-resources/rules.html)のルールに関するページを参照してください。
 
-## 起動拡張機能の使用例の例 {#extensions-use-cases}
+## Launch の拡張機能の使用事例 {#extensions-use-cases}
 
-起動拡張機能を使用すると、様々な顧客の使用例を満たすことができます。 Launch拡張機能の使用例を以下に示します。
+Launch の拡張機能を使用すると、様々な顧客の使用事例に対応できます。Launch の拡張機能の使用事例を以下に示します。
 
-* Facebookピクセル拡張子を使用して、WebサイトまたはネイティブのアプリケーションデータをFacebookに送信できます。 Facebookピクセルは、訪問者がナビゲートしたサイトまたはアプリのどの部分にその情報を転送したかを示し、Facebookに転送します。Facebookを使用して訪問者のターゲットを再設定できます。
-* WebサイトやアプリのイベントデータをGoogle Analyticsに転送して、そのデータに基づいて分析や意思決定を行うことができます。
-* 「起動」で設定したルールに従って、ユーザーがページとどのようにやり取りしているかに基づいて、適切なタイミングでクライアント側のchatboxアプリをオンにすることができます。
+* Facebook ピクセル拡張機能を使用して、web サイトまたはネイティブのアプリケーションデータを Facebook に送信できます。Facebook ピクセルでは、訪問者がサイトまたはアプリケーションのどの部分にアクセスしたかを把握したり、その情報を Facebook に転送したりすることができます。また、Facebook を介して、訪問者を再ターゲティングすることができます。
+* web サイトやアプリケーションのイベントデータを Google Analytics に転送してそのデータを分析し、それに基づいて決定を下すことができます。
+* Launch で設定したルールに従い、ユーザーがページとどのようにやり取りしているかに基づいて、クライアントサイドの Chatbox アプリを適切なタイミングで有効にすることができます。
 
 
-## 拡張カテゴリ {#extension-categories}
+## 拡張機能のカテゴリ {#extension-categories}
 
-Launch extensionsは、Adobe Real-time CDPでは次のカテゴリに該当する場合があります。
+アドビのリアルタイム CDP では、Launch の拡張機能は次のカテゴリに該当します。
 
 * [広告](/help/rtcdp/destinations/advertising-destinations.md)
-* [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
+* [分析](/help/rtcdp/destinations/analytics-destinations.md)
 * [データ管理プラットフォーム](/help/rtcdp/destinations/dmp-destinations.md)
-* [電子メールマーケティングの宛先 ](/help/rtcdp/destinations/email-marketing-destinations.md)
+* [電子メールマーケティングの宛先](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [パーソナライズ機能](/help/rtcdp/destinations/personalization-destinations.md)
 * [調査](/help/rtcdp/destinations/survey-destinations.md)
-* [お客様の声](/help/rtcdp/destinations/voice-of-customer-destinations.md)
+* [顧客の声](/help/rtcdp/destinations/voice-of-customer-destinations.md)
