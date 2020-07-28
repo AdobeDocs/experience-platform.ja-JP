@@ -7,14 +7,14 @@ translation-type: tm+mt
 source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
 workflow-type: tm+mt
 source-wordcount: '181'
-ht-degree: 0%
+ht-degree: 10%
 
 ---
 
 
 # [!DNL Salesforce] コネクタ
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
 [!DNL Experience Platform] は、サードパーティのCRMシステムからデータを取り込むためのサポートを提供します。 CRMプロバイダのサポートには以下が含まれ [!DNL Salesforce]ます。
 
