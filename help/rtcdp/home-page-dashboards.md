@@ -7,20 +7,20 @@ translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
 source-wordcount: '634'
-ht-degree: 92%
+ht-degree: 94%
 
 ---
 
 
 # [!DNL Real-time Customer Data Platform] 指標の概要
 
-Real-time CDP にログインすると、指標ダッシュボードを含むアドビリアルタイム顧客データプラットフォーム（Real-time CDP）ホームページが表示されます。
+リアルタイム CDP にログインすると、指標ダッシュボードを含むアドビリアルタイム顧客データプラットフォーム（リアルタイム CDP）のホームページが表示されます。
 
-ホームページは、指標カードが表示される場所の 1 つに過ぎません。Real-time CDP は、ユーザーの経験を通じて指標カードを提供します。これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
+ホームページは、指標カードが表示される場所の 1 つに過ぎません。リアルタイム CDP は、ユーザーの経験を通じて指標カードを提供します。これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
 
 ![画像](assets/home2.jpg)
 
-Real-time CDP にログインしたときにシステムにデータがない場合、ホームページのダッシュボードは表示されません。この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると（つまり、<!--sources-->データセット、プロファイル、セグメント、宛先が作成され、データがシステムにフローされると）、ダッシュボードは自動的に更新され、そのデータに関する情報が表示されます <!-- in metric cards-->。
+リアルタイム CDP にログインしたときにシステムにデータがない場合、ホームページのダッシュボードは表示されません。この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると（つまり、<!--sources-->データセット、プロファイル、セグメント、宛先が作成され、データがシステムにフローされると）、ダッシュボードは自動的に更新され、そのデータに関する情報が表示されます <!-- in metric cards-->。
 
 ## ホームページのダッシュボードビュー
 
@@ -45,7 +45,7 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. このカウンターは、データセットの作成時に更新されます。
 
-データセットの詳細については、「 [データセットの概要](../catalog/datasets/overview.md)」を参照してください。
+データセットの詳細については、「[データセットの概要](../catalog/datasets/overview.md)」を参照してください。
 
 ### プロファイル
 
@@ -55,7 +55,7 @@ The **[!UICONTROL Datasets]** counter shows the number of datasets in the system
 
 プロファイルの数は 24 時間ごとに更新されます。
 
-プロファイルの詳細については、「[Real-time CDP での顧客の統合ビュー](profile/profile-overview.md)」を参照してください。
+プロファイルの詳細については、「[リアルタイム CDP での顧客の統合ビュー](profile/profile-overview.md)」を参照してください。
 
 ### セグメント
 
@@ -109,7 +109,7 @@ The number of failed profile records is updated hourly. -->
 
 データセットをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてデータセットのリストを表示します。ここからは、特定のソースをクリックして詳細を表示できます。
 
-データセットの詳細については、「 [データセットの概要](../catalog/datasets/overview.md)」を参照してください。
+データセットの詳細については、「[データセットの概要](../catalog/datasets/overview.md)」を参照してください。
 
 ### 最近のソース
 
