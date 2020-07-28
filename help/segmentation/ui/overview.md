@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: セグメントビルダーのUIガイド
+title: セグメントビルダー UI ガイド
 topic: ui guide
 translation-type: tm+mt
 source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
 source-wordcount: '2745'
-ht-degree: 0%
+ht-degree: 54%
 
 ---
 
@@ -18,98 +18,98 @@ ht-degree: 0%
 
 ## はじめに
 
-セグメントの定義を使用するには、セグメント化に関連する様々な [!DNL Experience Platform] サービスについて理解しておく必要があります。 このユーザーガイドを読む前に、次のサービスのドキュメントを確認してください。
+Working with segment definitions requires an understanding of the various [!DNL Experience Platform] services involved with segmentation. このユーザガイドを読む前に、次のサービスのドキュメントを確認してください。
 
 - [!DNL Segmentation Service](../home.md): [!DNL Segmentation Service] 個人(顧客、見込み客、ユーザー、組織など) [!DNL Experience Platform] に関連付けて保存されたデータを、類似した特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割できます。
 - [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 - [!DNL Identity Service](../../identity-service/home.md): 取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
-また、このドキュメントを通じて使用される2つの主要用語を知り、それらの違いを理解することも重要です。
-- **セグメント定義**: ターゲットオーディエンスの主な特性や動作を記述するために使用されるルールセット。
-- **オーディエンス**: セグメント定義の条件を満たすプロファイルの結果セット。
+また、このドキュメントを通して使用される次の 2 つの重要用語を知り、その違いを理解することも重要です。
+- **セグメント定義**：ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用されるルールセットです。
+- **オーディエンス**：セグメント定義の条件を満たす一連のプロファイルです。
 
 ## セグメント定義へのアクセス
 
-でセグメント定義の操作を開始するに [!DNL Adobe Experience Platform]は、左側のナビゲーションで **[!UICONTROL 「セグメント]** 」をクリックします。 組織のすべてのセグメント定義を表示するには、「 *[!UICONTROL 参照]* 」タブをクリックします。 この表示リストでは、評価方法、作成日、最終変更日など、セグメント定義に関する情報を説明します。
+To begin working with segment definitions in [!DNL Adobe Experience Platform], click **[!UICONTROL Segments]** in the left navigation. 組織のすべてのセグメント定義を表示するには、「*[!UICONTROL 参照]*」タブをクリックします。このビューには、評価方法、作成日、最終変更日など、セグメント定義に関する情報が表示されます。
 
-評価方法は、ストリーミングまたはバッチのいずれかです。 ストリーミングセグメントは、データがシステムに入るに従って常に評価されます。 バッチセグメントは、設定されたスケジュールに従って評価されます。
+評価方法は、ストリーミングまたはバッチのいずれかです。ストリーミングセグメントは、データがシステムに入力されるたびに評価されます。バッチセグメントは、設定されたスケジュールに従って評価されます。
 
-バッチセグメントには、最終評価日と次のバッチ評価日の両方を示す追加情報が表示されます。
+バッチセグメントには、バッチの最終評価日と次の評価日の両方を示す追加情報が表示されます。
 
-右上隅の **[!UICONTROL 「セグメントを]** 作成」をクリックすると、セグメントビルダーワークスペースが開き、セグメント定義の作成を開始できます。
+右上隅の「**[!UICONTROL セグメントを作成]**」をクリックすると、セグメントビルダーのワークスペースが開き、セグメント定義の作成を開始できます。
 
 ![](../images/segment-builder/segment-browse.png)
 
 ## [!DNL Segment Builder] ワークスペース
 
-[!DNL Segment Builder] は、データ要素を操作できるリッチワークスペースを提供し [!DNL Profile] ます。 ワークスペースには、ルールを作成および編集するための直感的なコントロールが用意されています。例えば、データプロパティを表すために使用するドラッグ&amp;ドロップタイルを編集できます。
+[!DNL Segment Builder] は、データ要素を操作できるリッチワークスペースを提供し [!DNL Profile] ます。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 
 ![](../images/segment-builder/segment-builder.png)
 
-## セグメント定義構築ブロック
+## セグメント定義の構成要素
 
-セグメント定義の基本構成要素は、 **[!UICONTROL 属性]** と **[!UICONTROL イベントです]**。 また、既存の **[!UICONTROL オーディエンスに含まれる属性とイベントを、新しい定義のコンポーネントとして使用することもできます]** 。
+セグメント定義の基本的な構成要素は&#x200B;**[!UICONTROL 属性]**&#x200B;と&#x200B;**[!UICONTROL イベント]**&#x200B;です。また、既存の&#x200B;**[!UICONTROL オーディエンス]**&#x200B;に含まれる属性とイベントも、新しい定義のコンポーネントとして使用できます。
 
-これらの構築ブロックは、ワークス *[!UICONTROL ペースの左側の「]* フィールド [!DNL Segment Builder] 」セクションに表示されます。 *[!UICONTROL フィールド]* には、主要構築ブロックのそれぞれに対するタブが含まれます。 **[!UICONTROL 属性]**、 **[!UICONTROL イベント]**、 **[!UICONTROL オーディエンス]**。
+You can see these building blocks in the *[!UICONTROL Fields]* section on the left side of the [!DNL Segment Builder] workspace. 「*[!UICONTROL フィールド]*」には、主要な構成要素（**[!UICONTROL 属性]**、**[!UICONTROL イベント]**、**[!UICONTROL オーディエンス]**）のタブが含まれています。
 
 ![](../images/segment-builder/segment-fields.png)
 
 ### 属性
 
-「 **[!UICONTROL 属性]** 」タブでは、 [!DNL Profile] クラスに属する [!DNL XDM Individual Profile] 属性を参照できます。 各フォルダーを展開して、追加の属性を表示できます。各属性は、ワークスペースの中央にあるルールビルダーキャンバスにドラッグできるタイルです。 ル [ールビルダーキャンバスについては](#rule-builder-canvas) 、このガイドで後述します。
+The **[!UICONTROL Attributes]** tab allows you to browse [!DNL Profile] attributes belonging to the [!DNL XDM Individual Profile] class. 各フォルダーを展開して、追加の属性を表示できます。各属性はタイルで表されており、ワークスペースの中央にあるルールビルダーキャンバスにドラッグすることができます。[ルールビルダーキャンバス](#rule-builder-canvas)の詳細については、このガイドで後述します。
 
 ![](../images/segment-builder/attributes.png)
 
 ### イベント
 
-「 **[!UICONTROL イベント]** 」タブでは、データ要素を使用して行われたイベントまたはアクションに基づいてオーディエンスを作成でき [!DNL XDM ExperienceEvent] ます。 また、セグメントをより迅速に作成できるようにするためによく使用される **[!UICONTROL イベントの集まりである「イベント]** 」タブにイベントタイプが表示されます。
+「**[!UICONTROL イベント]**」タブでは、 のデータ要素を使用して実行されたイベントまたはアクションに基づいてオーディエンスを作成できます。[!DNL XDM ExperienceEvent]また、「**[!UICONTROL イベント]**」タブではイベントタイプを検索できます。イベントタイプは一般的に使用されるイベントの集まりで、これを使用するとセグメントをより迅速に作成することができます。
 
-要素を参照できるだけでなく、 [!DNL ExperienceEvent] イベントタイプを検索することもできます。 イベントタイプはと同じコーディングロジックを使用し [!DNL ExperienceEvents]ます。クラス内を検索して正しいイベントを探す必要はありません [!DNL XDM ExperienceEvent] 。 例えば、検索バーを使用して「cart」を検索すると、「AddCart[!UICONTROL 」と「RemoveCart]」というイベントタイプが返されます。これは、セグメント定義の作成時に非常に一般的に使用される2つの買い物かごアクションです。
+In addition to being able to browse for [!DNL ExperienceEvent] elements, you can also search for Event Types. Event Types use the same coding logic as [!DNL ExperienceEvents], without requiring you to search through the [!DNL XDM ExperienceEvent] class looking for the correct event. For example, using the search bar to search &quot;cart&quot; returns the Event Types &quot;[!UICONTROL AddCart]&quot; and &quot;[!UICONTROL RemoveCart]&quot;, which are two very commonly used cart actions when building segment definitions.
 
-検索バーに名前を入力すると、どのようなタイプのコンポーネントでも検索できます。 [Luceneの検索構文が使用されます](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 単語全体が入力されると、検索結果が入力され始めます。 例えば、XDMフィールドに基づくルールを作成するに `ExperienceEvent.commerce.productViews`は、開始が検索フィールドに「product product表示」と入力します。 「product」という語を入力すると、検索結果が表示され始めます。 各結果には、その結果が属するオブジェクト階層が含まれます。
+任意のタイプのコンポーネントを検索するには、[Lucene の検索構文](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax)を使用して、検索バーにその名前を入力します。単語を完全に入力すると、検索結果が表示され始めます。例えば、XDM フィールド `ExperienceEvent.commerce.productViews` に基づくルールを作成するには、検索フィールドに「product views」と入力します。「product」という単語の入力が終わると同時に、検索結果が表示され始めます。検索結果には、それが属するオブジェクト階層も表示されます。
 
 >[!NOTE]
 >
->組織で定義したカスタムスキーマフィールドが表示され、ルールの作成で使用できるようになるまでに最大24時間かかる場合があります。
+>組織で定義されたカスタムスキーマフィールドが表示され、ルールの作成に使用できるようになるまでに、最長で 24 時間かかる場合があります。
 
-セグメント定義に簡単に [!DNL ExperienceEvents] イベントタイプをドラッグ&amp;ドロップできます  。
+You can then easily drag and drop [!DNL ExperienceEvents] and [!UICONTROL Event Types] into your segment definition.
 
 ![](../images/segment-builder/events-eventTypes.png)
 
-デフォルトでは、データストアから入力されたスキーマフィールドのみが表示されます。 これには [!UICONTROL イベントタイプが含まれます]。 イベントタイプ [!UICONTROL リストが表示されない場合、または「Any] 」を[!UICONTROL イベントタイプとして選択できる場合は、]Gearアイコンをクリックし、次に [!UICONTROL Gear Iconをクリックして、Gearをクリックし、次に]Select Fields ******** Full Folls Exdm and Available Fieldsをクリックします。 歯車アイコンを再度クリックして「 *[!UICONTROL フィールド]* 」タブに戻り、データが含まれているかどうかに関係なく、複数の [!UICONTROL イベントタイプ] およびスキーマフィールドを表示できるようになります。
+デフォルトでは、データストアから入力されたスキーマフィールドのみが表示されます。This includes [!UICONTROL Event Types]. If the [!UICONTROL Event Types] list is not visible, or you are only able to select &quot;[!UICONTROL Any]&quot; as an [!UICONTROL Event Type], click the gear icon next to *[!UICONTROL Fields]*, then select **[!UICONTROL Show full XDM schema]** under *[!UICONTROL Available Fields]*. 歯車アイコンをもう一度クリックすると、「*[!UICONTROL フィールド]*」タブに戻ります。データが含まれているかどうかに関係なく、複数のイベントタイプとスキーマフィールドが表示されます。
 
 ![](../images/segment-builder/show-populated.png)
 
 ### オーディエンス
 
-「 **[!UICONTROL オーディエンス]** 」タブでは、Adobe Audience Managerなどの外部ソースから読み込んだすべてのオーディエンスと、内で作成したオーディエンスをリスト [!DNL Experience Platform]します。
+The **[!UICONTROL Audiences]** tab lists all audiences imported from external sources, such as Adobe Audience Manager, as well as audiences created within [!DNL Experience Platform].
 
-「 [!UICONTROL オーディエンス] 」タブでは、使用可能なすべてのソースをフォルダーのグループとして表示できます。 これらのフォルダをクリックすると、使用可能なサブフォルダやオーディエンスが表示されます。 また、フォルダアイコン（右端の画像）をクリックしてフォルダ構造を表示し（チェックマークは現在のフォルダを示します）、ツリー内のフォルダ名をクリックすると、簡単にフォルダ間を戻ることができます。
+On the [!UICONTROL Audiences] tab, you can see all of the available sources as a group of folders. これらのフォルダーをクリックすると、使用可能なサブフォルダーとオーディエンスが表示されます。また、フォルダー構造を表示するには、フォルダーアイコンをクリックします（右端の画像を参照）。チェックマークは、現在のフォルダーを表しています。また、ツリー内のフォルダーの名前をクリックすることで、フォルダー間を簡単に移動できます。
 
-オーディエンスのⓘ横にマウスポインターを置くと、ID、説明、オーディエンスの階層など、オーディエンスに関する表示情報を参照し、を見つけることができます。
+オーディエンス横の ⓘ にカーソルを置くと、そのオーディエンスに関する情報が表示されます。例えば、ID、説明、そのオーディエンスが存在するフォルダーの階層などです。
 
 ![](../images/segment-builder/audience-folder-structure.png)
 
-また、 [!UICONTROL Luceneの検索構文を利用した検索バーを使用して] オーディエンス [を検索することもできます](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)。 「 *[!UICONTROL オーディエンス]* 」タブで最上位フォルダを選択すると、検索バーが表示され、そのフォルダ内を検索できます。 検索結果の入力は、単語全体が入力された場合にのみ開始されます。 例えば、という [!UICONTROL オーディエンスを検索するには] 、開始 `Online Shoppers`が検索バーに「Online」と入力します。 「オンライン」という単語を完全に入力すると、「オンライン」という単語を含む検索結果が表示されます。
+You can also search for [!UICONTROL Audiences] using the search bar, which utilizes [Lucene&#39;s search syntax](https://docs.microsoft.com/ja-JP/azure/search/query-lucene-syntax). 「*[!UICONTROL オーディエンス]*」タブで最上位のフォルダーを選択すると、検索バーが表示され、そのフォルダー内を検索することができます。検索結果は、単語の入力が終わると同時に表示され始めます。For example, to find an [!UICONTROL Audience] named `Online Shoppers`, start typing &quot;Online&quot; in the search bar. 「Online」という単語を完全に入力すると、「Online」という単語を含む検索結果が表示されます。
 
 ## ルールビルダーキャンバス {#rule-builder-canvas}
 
-セグメント定義とは、ターゲットオーディエンスの主な特性や動作を記述するために使用されるルールの集まりです。 これらのルールは、の中央にある *[!UICONTROL ルールビルダーキャンバスを使用して作成され]*&#x200B;ま [!DNL Segment Builder]す。
+セグメント定義は、ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用される一連のルールです。These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!DNL Segment Builder].
 
-セグメント定義に新しいルールを追加するには、「 *[!UICONTROL フィールド]* 」タブからタイルをドラッグし、ルールビルダーキャンバスにドロップします。 次に、追加するデータのタイプに応じて、コンテキスト固有のオプションが表示されます。 次のようなデータタイプを使用できます。 文字列、日付、 [!DNL ExperienceEvents][!UICONTROL イベントタイプ]、 [!UICONTROL オーディエンス]。
+セグメント定義に新しいルールを追加するには、タイルを「*[!UICONTROL フィールド]*」タブからルールビルダーキャンバスにドラッグ＆ドロップします。追加するデータのタイプに応じて、コンテキスト固有のオプションが表示されます。Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences].
 
 ![](../images/segment-builder/rule-builder-canvas.png)
 
 ### オーディエンスの追加
 
-オーディエンスを「 *[!UICONTROL オーディエンス]* 」タブからルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義のオーディエンスのメンバーシップを参照できます。 これにより、オーディエンスのメンバーシップを属性として新しいセグメントルールに含めたり除外したりできます。
+オーディエンスを「*[!UICONTROL オーディエンス]*」タブからルールビルダーキャンバスにドラッグ＆ドロップすることで、新しいセグメント定義でオーディエンスのメンバーシップを参照できます。これで、オーディエンスのメンバーシップを新しいセグメントルールの属性として含めたり除外したりできます。
 
-を使用して作成された [!DNL Platform] オーディエンスに [!DNL Segment Builder]は、そのオーディエンスのセグメント定義で使用された一連のルールにオーディエンスを変換するオプションが与えられます。 この変換により、ルールロジックのコピーが作成され、元のセグメント定義に影響を与えることなく変更できます。 セグメント定義をルールロジックに変換する前に、セグメント定義に対する最新の変更を保存していることを確認してください。
+For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. このように変換するとルールロジックのコピーが作成されます。このコピーを使用することで、元のセグメント定義に影響を与えることなくルールを変更できます。セグメント定義をルールロジックに変換する前に、セグメント定義に対する最新の変更を保存していることを確認してください。
 
 >[!NOTE]
 >
->外部ソースからオーディエンスを追加する場合、オーディエンスのメンバーシップのみが参照されます。 このオーディエンスをルールに変換することはできないので、元のオーディエンスの作成に使用されたルールは、新しいセグメント定義で変更できません。
+>外部ソースからオーディエンスを追加した場合、オーディエンスのメンバーシップのみが参照されます。このオーディエンスをルールに変換することはできません。このため、元のオーディエンスの作成に使用されたルールを新しいセグメント定義で変更することはできません。
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
@@ -127,75 +127,75 @@ ht-degree: 0%
 
 ## コンテナ
 
-セグメントルールは、リストに表示された順序で評価されます。 コンテナを使用すると、ネストされたクエリを使用して実行順序を制御できます。
+セグメントルールは、リストでの表示順に従って評価されます。コンテナでは、ネストされたクエリを使用して、評価の順序を制御できます。
 
-ルールビルダーキャンバスに少なくとも1つのタイルを追加すると、コンテナの追加を開始できます。 新しいコンテナを作成するには、タイルの右上隅にある三点リーダー(...)をクリックし、「 **[!UICONTROL コンテナ]**」をクリックします。
+ルールビルダーキャンバスにタイルを 1 つ以上追加したら、コンテナの追加を開始できます。新しいコンテナを作成するには、タイルの右上隅にある省略記号（...）をクリックし、「**[!UICONTROL コンテナを追加]**」をクリックします。
 
 ![](../images/segment-builder/add-container.png)
 
-新しいコンテナが最初のコンテナの子として表示されますが、コンテナをドラッグ&amp;移動して階層を調整できます。 コンテナのデフォルトの動作は、提供された属性、イベント、またはオーディエンスを「[!UICONTROL 含める]」ことです。 ルールを「[!UICONTROL 除外]」プロファイルに設定するには、タイルの左上隅にある「 **[!UICONTROL 含める]** 」をクリックし、「除外する」を選択します。
+新しいコンテナが最初のコンテナの子として表示されますが、コンテナをドラッグして移動することで、階層を調整することができます。The default behavior of a container is to &quot;[!UICONTROL Include]&quot; the attribute, event, or audience provided. You can set the rule to &quot;[!UICONTROL Exclude]&quot; profiles that match the container criteria by clicking **[!UICONTROL Include]** in the top-left corner of the tile and selecting &quot;[!UICONTROL Exclude]&quot;.
 
-子コンテナの「コンテナを解除」をクリックして、子コンテナを抽出し、親コンテナにインラインで追加することもできます。 子コンテナの右上隅にある三点リーダー(...)をクリックして、このオプションにアクセスします。
+子コンテナを抜き出して、親コンテナに直列で追加することもできます。それには、子コンテナの「コンテナを展開」をクリックします。このオプションにアクセスするには、子コンテナの右上隅にある省略記号（...）をクリックします。
 
 ![](../images/segment-builder/include-exclude.png)
 
-「 **[!UICONTROL コンテナを解除]** 」をクリックすると、子コンテナが削除され、条件がインラインで表示されます。
+「**[!UICONTROL コンテナを展開]**」をクリックすると、子コンテナが削除され、条件が直列的に表示されます。
 
 >[!NOTE]
 >
->コンテナのラッピングを解除する場合、ロジックが引き続き目的のセグメント定義を満たすように注意してください。
+>コンテナを展開する場合には、ロジックが引き続き目的のセグメント定義を満たすようにしてください。
 
 ![](../images/segment-builder/unwrapped-container-inline.png)
 
 ## 結合ポリシー
 
-[!DNL Experience Platform] を使用すると、複数のソースからのデータをまとめ、それを組み合わせて個々の顧客の完全な表示を確認できます。 When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a profile.
+[!DNL Experience Platform] では、複数のソースのデータを統合して、個々の顧客の全体像を把握できます。When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a profile.
 
-このオーディエンスのマーケティング目的に一致するマージポリシーを選択するか、またはが提供するデフォルトのマージポリシーを使用でき [!DNL Platform]ます。 独自のデフォルトの結合ポリシーの作成など、組織固有の複数の結合ポリシーを作成できます。 組織の結合ポリシーを作成する手順については、UIを使用した結合ポリシーの [操作に関するチュートリアルを参照してください](../../profile/ui/merge-policies.md)。
+You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. デフォルトの結合ポリシーを作成できるほか、組織に固有の複数の結合ポリシーを作成できます。組織の結合ポリシーを作成する手順については、[UI を使用した結合ポリシーの操作](../../profile/ui/merge-policies.md)に関するチュートリアルを参照してください。
 
-セグメント定義の結合ポリシーを選択するには、「 *[!UICONTROL フィールド]* 」タブの歯車アイコンをクリックし、 *[!UICONTROL 結合ポリシー](Merge Policy *)ドロップダウンメニューを使用して、使用する結合ポリシーを選択します。
+セグメント定義の結合ポリシーを選択するには、「*[!UICONTROL フィールド]*」タブの歯車アイコンをクリックし、「*結合ポリシー&#x200B;*」ドロップダウンメニューを使って、使用する結合ポリシーを選択します。
 
 ![](../images/segment-builder/merge-policy-selector.png)
 
 ## セグメントのプロパティ
 
-セグメント定義を作成すると、ワークスペースの右側の「 *[!UICONTROL セグメントプロパティ]* 」セクションに結果のセグメントのサイズの予測が表示され、オーディエンス自体を作成する前に、必要に応じてセグメント定義を調整できます。
+セグメント定義を作成する際には、作成されるセグメントの推定サイズがワークスペース右側の「*[!UICONTROL セグメントのプロパティ]*」セクションに表示されるので、オーディエンス自体を作成する前にセグメントの定義を必要に応じて調整できます。
 
-「 *[!UICONTROL セグメントプロパティ]* 」セクションでは、セグメント定義に関する重要な情報( *[!UICONTROL 名前]* 、 **&#x200B;説明など)を指定することもできます。 セグメント定義名は、組織で定義されたセグメントの中でセグメントを識別するために使用されます。したがって、説明的、簡潔、一意である必要があります。
+「*[!UICONTROL セグメントのプロパティ]*」セクションでは、セグメント定義に関する重要な情報（*[!UICONTROL 名前]*、*[!UICONTROL 説明]*&#x200B;など）を指定することもできます。セグメント定義名は、組織で定義されたものの中から目的のセグメントを識別する際に使用されます。このため、セグメント定義名は、内容がわかりやすく簡潔、かつ一意である必要があります。
 
-セグメント定義を作成し続ける際に、 **[!UICONTROL 表示プロファイルを選択して、オーディエンスのページ分割プレビューを表示できます]**。
+セグメント定義の作成中、「**[!UICONTROL プロファイルを表示]**」を選択することで、オーディエンスのプレビューをページ別に表示できます。
 
 ![](../images/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
->オーディエンスの見積もりは、その日のサンプルデータのサンプルサイズを使用して生成されます。 プロファイルストア内のエンティティが100万エンティティ未満の場合は、フルデータセットが使用されます。 100万から2000万のエンティティに対しては、100万のエンティティが使用されます。 2,000万以上のエンティティに対しては全体の5%が使用されます セグメント予測の生成に関する詳細は、セグメント作成チュートリアルの [予測生成セクション](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) を参照してください。
+>オーディエンスの予測値は、その日のサンプルデータのサンプルサイズを使用して生成されます。プロファイルストアのエンティティ数が 100 万個未満の場合は、データセット全体が使用されます。100 万個から 2,000 万個のエンティティがある場合は、100 万個のエンティティが使用されます。2,000 万個を超えるエンティティがある場合は、合計エンティティ数の 5％が使用されます。セグメントの推定サイズを生成する方法について詳しくは、セグメントの作成に関するチュートリアルの[予測値の生成に関する節](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)を参照してください。
 
-## スケジュール済みセグメントの有効化 {#enable-scheduled-segmentation}
+## スケジュールに沿ったセグメント化を有効にする {#enable-scheduled-segmentation}
 
-セグメント定義を作成したら、オンデマンドまたは予定（継続的）な評価を通じて、セグメント定義を評価できます。 評価手段は、対応するオーディエンスを生成するために、セグメント定義を介して [!DNL Real-time Customer Profile] データを移動させる。 作成したオーディエンスは保存、保存され、APIを使用して書き出せるようにな [!DNL Experience Platform] ります。
+セグメント定義を作成したら、オンデマンドで、またはスケジュールに沿って（継続的に）セグメント定義を評価することができます。Evaluation means moving [!DNL Real-time Customer Profile] data through segment definitions in order to produce corresponding audiences. Once created, the audiences are saved and stored so that they can be exported using [!DNL Experience Platform] APIs.
 
-オンデマンド評価では、APIを使用して評価を実行し、必要に応じてオーディエンスを作成します。一方、予定評価（「予定セグメント化」とも呼ばれます）では、特定の時間（最大1日に1回）にセグメント定義を評価する定期的なスケジュールを作成できます。
+オンデマンド評価では、API を使用して評価を実行し、必要に応じてオーディエンスを作成します。一方、スケジュールに沿った評価（「スケジュールに沿ったセグメント化」とも言います）では、特定の時間（最大 1 日に 1 回）にセグメント定義を評価する反復スケジュールを作成できます。
 
-スケジュールされた評価に対するセグメント定義の有効化は、UIまたはAPIを使用して行うことができます。 UIで、「 *[!UICONTROL セグメント」内の「]* 参照 **[!UICONTROL 」タブに戻り、「すべてのセグメントを]** 評価 **[!UICONTROL 」を切り替えます]**。 これにより、組織が設定したスケジュールに基づいてすべてのセグメントが評価されます。
+セグメント定義でスケジュールに沿った評価を有効にするには、UI または API を使用します。UI で、「**[!UICONTROL セグメント]**」内の「*[!UICONTROL 参照]*」タブに戻り、「**[!UICONTROL すべてのセグメントを評価]**」を切り替えます。これで、すべてのセグメントが組織で設定したスケジュールに沿って評価されます。
 
 >[!NOTE]
 >
->スケジュールされた評価は、最大5つのマージポリシーを持つサンドボックスに対して有効にでき [!DNL XDM Individual Profile]ます。 1つのSandbox環境内に5つを超えるマージポリシーがある場合、 [!DNL XDM Individual Profile] 予定された評価を使用できません。
+>Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
 
-スケジュールは現在、APIを使用してのみ作成できます。 APIを使用してスケジュールを作成、編集、および操作する詳細な手順については、APIを使用したスケジュールされた評価の節を含む、セグメント結果の評価とアクセスに関するチュートリアルを参照して [ください](../tutorials/evaluate-a-segment.md#scheduled-evaluation)。
+現在、スケジュールを作成するには API を使用する必要があります。API を使用してスケジュールを作成、編集および操作する手順について詳しくは、セグメント結果の評価とアクセスに関するチュートリアル（特に、[API を使用した、スケジュールに沿った評価](../tutorials/evaluate-a-segment.md#scheduled-evaluation)に関する節）を参照してください。
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## ストリーミングセグメント {#streaming-segmentation}
+## ストリーミングセグメント化 {#streaming-segmentation}
 
 >[!NOTE]
 >
->ストリーミングセグメントを機能させるには、お客様が組織でスケジュール済みのセグメントを有効にする必要があります。 スケジュールされたセグメント化を有効にする方法の詳細については、このユーザーガイド [の前の節を参照してください](#enable-scheduled-segmentation)。
+>ストリーミングセグメントを機能させるには、お客様が組織でスケジュール済みのセグメントを有効にする必要があります。 スケジュールに沿ったセグメント化を有効にする方法について詳しくは、[このユーザガイドの前の節](#enable-scheduled-segmentation)を参照してください。
 
 次のいずれかの条件を満たす場合、クエリはストリーミングセグメント化によって自動的に評価されます。
 
-| クエリ型 | 詳細 | 例 |
+| クエリタイプ | 詳細 | 例 |
 | ---------- | ------- | ------- |
 | 受信ヒット | 時間制限のない、単一の着信イベントを参照するセグメント定義。 | ![](../images/segment-builder/incoming-hit.png) |
 | 相対時間枠内での着信ヒット | 過去7日間に発生した単一のイベントを参照す **るセグメント定義**。 | ![](../images/segment-builder/relative-hit-success.png) |
@@ -205,7 +205,7 @@ ht-degree: 0%
 
 次の節では、ストリーミングセグメントに対して **有効にしないリストセグメント定義の例を示します** 。
 
-| クエリ型 | 詳細 |
+| クエリタイプ | 詳細 |
 | ---------- | ------- | 
 | 相対時間枠内での着信ヒット | セグメント定義が、 **過去7日間** 以内でない着信イベントを参照する場合 ****。 例えば、 **過去2週間以内の場合**。 | ![](../images/segment-builder/relative-hit-failure.png) |
 | 相対的なウィンドウ内のプロファイルを参照する着信ヒット | 次のオプションは、ストリーミングセグメントをサポートし **ません** 。<ul><li>過去7日間 **以** 内の着信イベント ****。</li><li>セグメントまたは特性を含む [!DNL Adobe Audience Manager (AAM)] セグメント定義。</li></ul> | ![](../images/segment-builder/profile-relative-failure.png) |
@@ -214,7 +214,7 @@ ht-degree: 0%
 
 さらに、ストリーミングセグメント化を行う際には、次のようなガイドラインが適用されます。
 
-| クエリ型 | ガイドライン |
+| クエリタイプ | ガイドライン |
 | ---------- | -------- |
 | 単一イベントクエリ | ルックバックウィンドウは **7日間に制限されています**。 |
 | イベント履歴のあるクエリ | <ul><li>ルックバックウィンドウは **1日に制限されます**。</li><li>イベント間に厳密な時間順序条件 **が存在する** 。</li><li>イベント間の単純な時間順（前後）のみが許可されます。</li><li>個々のイベント **を無効にすることはできません** 。 ただし、クエリ全体を無効にす **ることはできます** 。</li></ul> |
@@ -239,33 +239,33 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
-## ポリシー違反のスケジュール
+## DULE ポリシーの違反
 
 >[!NOTE]
 >
->SCHEDULEポリシー違反は、宛先に割り当てられたセグメントを作成する場合にのみ適用されます。
+>DULE ポリシーの違反は、宛先に割り当てられたセグメントを作成する場合にのみ適用されます。
 
-セグメントの作成が完了すると、セグメントが分析され、セグメント内にポリシー違反がないこ [!DNL Data Governance] とが確認されます。 DULEとポリシー違反の詳細については、「 [データ使用ラベルの概要](../../data-governance/labels/overview.md)」を参照してください。
+Once you are done creating your segment, the segment will be analyzed by [!DNL Data Governance] to ensure there are no policy violations within the segment. DULE とポリシー違反について詳しくは、[データ使用ラベルの概要](../../data-governance/labels/overview.md)を参照してください。
 
 ![](../images/segment-builder/segment-dule-policy-violations.png)
 
-## 次の手順とその他のリソース {#next-steps}
+## 次の手順 およびその他のリソース {#next-steps}
 
-セグメントビルダーは、マーケティング可能なオーディエンスをデータから分離できる豊富なワークフローを提供し [!DNL Real-time Customer Profile] ます。 このガイドを読むと、次のことができるようになります。
+Segment Builder provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data. このガイドをお読みになると、次のことができるようになります。
 
-- 属性、イベント、および既存のオーディエンスの組み合わせを構成要素として使用して、セグメント定義を作成します。
-- [ルールビルダ]キャンバスとコンテナを使用して、セグメントルールの実行順序を制御します。
-- 見込みオーディエンスの表示予測。必要に応じてセグメント定義を調整できます。
-- スケジュール済みセグメントのすべてのセグメント定義を有効にします。
-- ストリーミングセグメントに対して、指定したセグメント定義を有効にします。
+- 属性、イベントおよび既存のオーディエンスの組み合わせを構成要素として使用して、セグメント定義を作成する。
+- ルールビルダーキャンバスとコンテナを使用して、セグメントルールの実行順を制御する。
+- 見込みオーディエンスの予測値を表示する。必要に応じてセグメント定義を調整できます。
+- スケジュールに沿ったセグメント化に対してすべてのセグメント定義を有効にする。
+- ストリーミングによるセグメント化に対して、特定のセグメント定義を有効にする。
 
-詳しくは、ドキュメントを読み続け [!DNL Segmentation Service]て、以下のビデオを参照して学習内容を補ってください。 APIを使用した作業手順については、APIを使用した [!DNL Segmentation Service] オーディエンスセグメントの [!DNL Segmentation Service] 作成のチュートリアルを参照してください [](../tutorials/create-a-segment.md) 。
+詳しくは、ドキュメントを読み続け [!DNL Segmentation Service]て、以下のビデオを参照して学習内容を補ってください。 For step-by-step instructions on working with [!DNL Segmentation Service] using the [!DNL Segmentation Service] API, see the [creating audience segments using APIs](../tutorials/create-a-segment.md) tutorial.
 
 >[!WARNING]
 >
 > 次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
 
-**セグメントの作成：**
+**セグメントの作成:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
 
