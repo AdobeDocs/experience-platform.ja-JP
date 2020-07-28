@@ -7,75 +7,75 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 1%
+ht-degree: 69%
 
 ---
 
 
-# ID名前空間の概要
+# ID 名前空間の概要
 
-ID名前空間は、IDが関連付けら [!DNL Identity Service](./home.md) れるコンテキストのインジケータとして機能するコンポーネントです。 例えば、「name<span>@email.com」の値は電子メールアドレスとして、または「443522」は数値のCRM IDとして区別されます。
+Identity namespaces are a component of [!DNL Identity Service](./home.md) that serve as indicators of the context to which an identity relates. 例えば、「name<span>@email.com」の値を電子メールアドレスとして、または「443522」を数値 CRM ID として区別します。
 
 ## はじめに
 
-ID名前空間を使用するには、関連する様々なAdobe Experience Platformサービスについて理解しておく必要があります。 名前空間の操作を開始する前に、次のサービスに関するドキュメントを確認してください。
+ID 名前空間を使用するには、関連する様々な Adobe Experience Platform サービスについて理解している必要があります。名前空間の使用を開始する前に、次のサービスのドキュメントを確認してください。
 
 - [!DNL Real-time Customer Profile](../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
 - [!DNL Identity Service](./home.md): デバイスとシステム間でIDをブリッジ化することで、個々の顧客とその行動をより良く表示できます。
-- [!DNL Privacy Service](../privacy-service/home.md): ID名前空間は、GDPR(General Data Protection Regulation)に準拠するために使用されます。GDPRは、名前空間に対してGDPR要求を行うことができます。
+- [!DNL Privacy Service](../privacy-service/home.md)：ID 名前空間を使用して、EU 一般データ保護規則（GDPR）に準拠します。名前空間には、GDPR リクエストを実行できます。
 
-## ID名前空間について
+## ID 名前空間について
 
-完全修飾IDには、ID値と名前空間が含まれます。 プロファイルフラグメント間でレコードデータを一致させる場合は、プロファイルデータを [!DNL Real-time Customer Profile] 結合する場合と同様に、ID値と名前空間の両方を一致させる必要があります。
+完全修飾 ID には、ID 値と名前空間が含まれます。When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
-例えば、2つのプロファイルフラグメントに異なるプライマリIDが含まれていても、それらが「電子メール」名前空間と同じ値を共有している場合、Platformは、これらのフラグメントが実際には同じ個人であることを確認し、個々のIDグラフにデータをまとめることができます。
+例えば、2 つのプロファイルフラグメントには別のプライマリ ID を含めることができますが、それらは「電子メール」名前空間の同じ値を共有します。このため、Platform は、これらのフラグメントが実際には同じ個人であることを確認し、個人の ID グラフにデータをまとめることができます。
 
 ![](images/identity-service-stitching.png)
 
-### IDタイプ
+### ID タイプ
 
-データは、複数の異なるIDタイプで識別できます。 IDタイプは、ID名前空間の作成時に指定され、データがIDグラフに保持されるかどうかと、そのデータの処理方法に関する特別な指示を制御します。
+データは、複数の異なる ID タイプで識別できます。ID タイプは、ID 名前空間の作成時に指定されます。この ID タイプによって、データを ID グラフに保持するかどうか、およびそのデータの処理方法の手順が決まります。
 
-では、次のIDタイプを使用でき [!DNL Platform]ます。
+The following identity types are available within [!DNL Platform]:
 
-| IDタイプ | 説明 |
+| ID タイプ | 説明 |
 | --- | --- |
-| Cookie | これらのIDは拡張に不可欠で、IDグラフの大部分を占めます。 しかし、自然によって、彼らは急速に衰え、時間と共に価値を失います。 Cookieの削除は、IDグラフで特別に処理されます。 |
-| デバイス間 | これは、これが強力な人々の識別子であると考え [!DNL Identity Service] るべきであり、その識別子を永遠に保持すべきであることを示しています。 ログインID、CRM ID、忠誠度IDなどがあります。 |
-| デバイス | IDFA、GAID、その他のIOT IDが含まれます。 家庭の人が共有できます。 |
-| 電子メール | このタイプのIDには、個人識別情報(PII)が含まれます。 これは、値を慎重に処理す [!DNL Identity Service] ることを示します。 |
-| Mobile | このタイプのIDにはPIIが含まれます。 これは、値を慎重に処理す [!DNL Identity Service] ることを示します。 |
-| 非ユーザー | 名前空間を必要とするが、個人クラスターには結び付けられていないIDを格納するために使用します。 次に、これらの識別子は、アイデンティティグラフからフィルタリングされる。 使用例としては、製品、組織、店舗などに関連するデータが挙げられます。 （製品のSKUなど）。 |
-| 電話番号 | このタイプのIDにはPIIが含まれます。 これは、値を慎重に処理す [!DNL Identity Service] ることを示しています。 |
+| cookie | この ID は拡張に不可欠で、ID グラフの大部分を占めます。ただし、cookie は、その性質上急速に劣化し、時間の経過と共にその価値が失われます。cookie の削除は、特に ID グラフでおこなわれます。 |
+| クロスデバイス | This indicates that [!DNL Identity Service] should consider this to be a strong people identifier and hence preserve it forever. 例えば、ログイン ID、CRM ID、ロイヤルティ ID などがあります。 |
+| デバイス | IDFA、GAID、その他の IOT の IDが含まれます。これは、家庭内の人々が共有できます。 |
+| 電子メール | このタイプの ID には、個人を特定できる情報（PII）が含まれています。This is an indication to [!DNL Identity Service] to handle the value sensitively. |
+| モバイル | このタイプの ID には PII が含まれます。This is an indication to [!DNL Identity Service] to handle the value sensitively. |
+| 人以外 | 名前空間を必要とする一方で、個人のクラスターに関連付けられていない識別子を格納するために使用されます。その後、これらの識別子は、ID グラフからフィルタリングされます。使用事例としては、製品、組織、店舗などに関連するデータが考えられます（製品 SKUなど）。 |
+| 電話番号 | このタイプの ID には PII が含まれます。This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
 ### 標準名前空間
 
-Adobe Experience Platformには、すべての組織で使用できるID名前空間がいくつか用意されています。 これらは標準名前空間と呼ばれ、 [!DNL Identity Service] APIを使用して、または [!DNL Platform] UIを通して表示されます。
+Adobe Experience Platform には、すべての組織で使用できる ID 名前空間が複数用意されています。These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
-UIで標準名前空間を表示するには、左側のナビゲーションバーの「 **[!UICONTROL ID]** 」をクリックし、「 *[!UICONTROL 参照]* 」タブをクリックします。 組織がアクセスできるすべてのID名前空間が表示されますが、「[!UICONTROL Standard]」を「[!UICONTROL Owner]」として持つID名前空間は、アドビが提供するStandardです。
+UI で標準名前空間を表示するには、左側のパネルの「**[!UICONTROL ID]**」をクリックして、「*[!UICONTROL 参照]*」タブをクリックします。All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
 
-その後、表示の詳細に表示された名前空間の1つをクリックします。
+次に、表示された名前空間の 1 つをクリックすると詳細が表示されます。
 
 ![](./images/standard-namespace-detail.png)
 
 ## 組織の名前空間の管理
 
-組織のデータや使用例に応じて、カスタム名前空間が必要になる場合があります。
+組織のデータや使用事例によっては、カスタム名前空間が必要な場合があります。
 
-これらは、「[!UICONTROL Custom]」を「[!UICONTROL Owner]」として持つ名前空間としてUIに表示されます。 カスタム名前空間は、 [!DNL Identity Service] APIを使用して、またはユーザーインターフェイスを通じて作成できます。
+These are visible in the UI as those namespaces with &quot;[!UICONTROL Custom]&quot; as the &quot;[!UICONTROL Owner]&quot;. Custom namespaces can be created using the [!DNL Identity Service] API or through the user interface.
 
-UIを使用してカスタム名前空間を作成するには、「ID名前空間を **[!UICONTROL 作成」をクリックし]**、ダイアログボックスに情報を入力して「 **[!UICONTROL 作成]**」をクリックします。
+UI を使用してカスタム名前空間を作成するには、「**[!UICONTROL ID 名前空間を作成]**」をクリックし、ダイアログに情報を入力してから「**[!UICONTROL 作成]**」をクリックします。
 
-定義した名前空間は組織に対して非公開で、正常に作成するために一意の「[!UICONTROL IDシンボル]」（APIを使用している場合は「コード」）が必要です。
+Namespaces that you define are private to your organization and require a unique &quot;[!UICONTROL Identity Symbol]&quot; (or &quot;code&quot; if you are using the API) in order to be created successfully.
 
 ![](./images/create-identity-namespace.png)
 
-標準名前空間と同様に、「 *[!UICONTROL 参照]* 」タブでカスタム名前空間をクリックして詳細を表示できますが、カスタム名前空間では、詳細領域から表示名と説明を編集することもできます。
+標準名前空間と同様に、「*[!UICONTROL 参照]*」タブのカスタム名前空間をクリックすると、その詳細が表示されます。ただし、カスタム名前空間では、詳細領域で表示名と説明を編集することができます。
 
 >[!NOTE]
 >
->名前空間を作成すると、そのシンボルを削除できなくなり、「IDシンボル」（APIでは「コード」）と「タイプ」は変更できなくなります。
+>作成した名前空間は削除できません。また、その「ID 記号（API の場合は「コード」）」と「タイプ」を変更することはできません。
 
-## IDデータの名前空間
+## ID データの名前空間
 
-IDの名前空間の入力は、IDデータの提供に使用する方法に応じて異なります。 データIDデータの提供について詳しくは、 [概要のIDデータの](./home.md#supplying-identity-data-to-identity-service) 供給に関する節を参照してください [!DNL Identity Service] 。
+ID の名前空間をどのように指定するかは、ID データの提供方法によって異なります。ID データの提供方法について詳しくは、「 overview」の [ID データの提供](./home.md#supplying-identity-data-to-identity-service)に関する節を参照してください。[!DNL Identity Service]
