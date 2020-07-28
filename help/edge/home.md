@@ -4,17 +4,42 @@ seo-title: Adobe Experience Platform Web SDK のヘルプ
 description: Adobe Experience Platform Web SDK の概要と、その使用方法を説明します。
 seo-description: Adobe Experience Cloud のお客様が　Experience Cloud　の様々なサービスを利用できるようにします 
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 31%
+source-wordcount: '702'
+ht-degree: 21%
 
 ---
 
 
 # Adobe Experience PlatformWeb SDKとは
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network].
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network]. JavaScriptライブラリに加え、Web SDKの設定を支援する [Launch拡張機能](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) があります。
+
+## エクスペリエンスエッジ
+
+[!DNL Adobe Experience Platform Web SDK] は、Experience Edgeを構成するコレクションの一部です。 Experience Edgeは、次の3つのテクノロジーで構成されています。
+
+* **[!DNL Adobe Experience Platform Web SDK]:**テクノロジーの導入を大幅にシンプル化するJavaScript SDKと[!DNL Launch][!DNL Adobe]拡張機能
+* **Adobe Experience PlatformモバイルSDK:** v5モバイルSDKの拡張機能により、お客様は新しい導入方法を使用できます。
+* **[!DNL Adobe Experience Platform Edge Network]:**サーバのグローバルな分散ネットワーク。製品の導入に関する新しい方法論を可能にし[!DNL Adobe]ます。
+
+The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.
+
+[!DNL Adobe Experience Edge] は、すべてのチャネル（JavaScript、モバイル、サーバー側）に対して単一の統合SDKを提供します。このSDKは、共通のAdobeドメイン(`adobedc.net`)にデータを送信し、データとエクスペリエンスの配信に対して単一のペイロードを受け取ります。
+
+サーバ側では、統合エッジゲートウェイと共通プラットフォームサービスフレームワークを使用して、新しい機能をこのリアルタイムコンピューティング環境に容易にプラグインおよび導入できます。  このアーキテクチャには次の特長があります。
+
+* 顧客の価値までの時間を短縮
+* 「ポイント」統合の必要性を終了
+* 古いライブラリと比較してパフォーマンスが向上
+* コストの削減
+* 革新のスピードを上げる
+* Adobeのお客様にとって、継続的な競争優位性を提供
+
+統合されたエッジシステムを1つ使用することで、顧客は広告、マーケティング、パーソナライズの各キャンペーンを、統合されたエクスペリエンスとしてすべてのチャネルにわたって管理できます。  TCO（総所有コスト） [!DNL Adobe] の低いサービスをお客様に提供できます。  また、リアルタイムエッジをプラグ可能にし、お客様が新しい機能やお客様定義のロジックをより迅速にそのリアルタイムシステムに追加できるようにすることで、製品の革新の迅速化にも役立ちます。 [!DNL Adobe]
+
+## ビデオの概要
 
 次のビデオでは、Adobe Experience Platform [!DNL Web SDK] との概要を説明し [!DNL Edge Network]ます。
 
@@ -37,14 +62,13 @@ Adobe Experience Platform Web SDK は、次の SDK の代わりとなります�
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-
 ## はじめに
 
 Adobe起動の使用を開始する方法に関するクイックチュートリアルについては、「はじめに [」ガイドを](getting-started/quick-start-with-launch.md) 参照することを強くお勧めします。
 
 この製品は、ますます多くの使用事例をサポートするように、常に進化し、成長しています。 最新のバージョンに対応するために、 [サポートされているユースケースボードをご覧ください](https://github.com/adobe/alloy/projects/5)。 現在サポートしている使用事例や、可能な限り最適な判断を下すために取り組んでいる使用事例について、この情報を最新の状態に保ちます。
 
-* __使用事例未サポート__ — これらは、将来サポートされる予定のロードマップ上の使用例です。
-* __使用事例が進行中__ — チームが現在リリースのために完了している使用例です。
-* __サポートされる使用例__ — 現在サポートされ、機能する使用例です。
-* __使用例サポートしない使用例__ — サポートしないと判断した使用例です。
+* **まだサポートされていない使用例：** これらは、将来サポートされる予定の使用例です。
+* **使用事例が進行中：** これらは、チームが現在リリースに向けて完了している使用例です。
+* **サポートされる使用例：** これらは、現在サポートされていて機能する使用例です。
+* **サポートしない使用例：** これらは、サポートしないと決めた使用例です。
