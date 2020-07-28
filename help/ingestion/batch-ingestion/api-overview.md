@@ -1,110 +1,110 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platformバッチ取り込み開発ガイド
+title: Adobe Experience Platform バッチ取得開発者ガイド
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '2552'
-ht-degree: 6%
+ht-degree: 94%
 
 ---
 
 
-# バッチインジェスト開発者ガイド
+# バッチ取得開発者ガイド
 
-このドキュメントでは、 [バッチ取り込みAPIの使用に関する包括的な概要を説明し](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)ます。
+このドキュメントでは、[バッチ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) の使用に関する包括的な概要を説明します。
 
-このドキュメントの付録では、サンプルのCSVデータファイルやJSONデータファイルなど [、取り込みに使用するデータの](#data-transformation-for-batch-ingestion)形式設定について説明します。
+このドキュメントの付録では、CSV 例や JSON データファイル例など、[取得に使用するデータの形式設定](#data-transformation-for-batch-ingestion)に関する情報を提供します。
 
 ## はじめに
 
-データ取り込みにはRESTful APIが用意されており、サポートされるオブジェクトタイプに対して基本的なCRUD操作を実行できます。
+データ取得では、RESTful API を使用して、サポートされるオブジェクトタイプに対して基本的な CRUD 操作を実行できます。
 
-以下の節では、バッチインジェストAPIの呼び出しを正常に行うために知っておく必要がある、または手元に置く必要がある追加情報について説明します。
+次の節では、バッチ取得 API を正しく呼び出すために知っておく必要がある、または手元に置く必要がある追加情報を示します。
 
-このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
-- [バッチインジェスト](./overview.md): データをバッチファイルとしてAdobe Experience Platformに取り込むことができます。
+- [バッチ取得](./overview.md)：データをバッチファイルとして Adobe Experience Platform に取得することができます。
 - [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
 - [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-### 必要なヘッダーの値の収集
+### 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- 認証： 無記名 `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード(POST、PUT、PATCH)を含む要求には、追加の `Content-Type` ヘッダーが必要な場合があります。 各呼び出しに固有の受け入れられた値は、呼び出しパラメーターに提供されます。 このガイドでは、次のコンテンツタイプを使用します。
+ペイロード（POST、PUT、PATCH）を含むリクエストには、追加の `Content-Type` ヘッダーが必要な場合があります。各呼び出しに固有の受け入れられた値は、呼び出しパラメーターで提供されます。このガイドでは、次のコンテンツタイプを使用します。
 
 - Content-Type: application/json
 - Content-Type: application/octet-stream
 
 ## タイプ
 
-データを取り込む際は、 [!DNL Experience Data Model] (XDM)スキーマの動作を理解することが重要です。 XDMフィールドの型を異なる形式にマップする方法について詳しくは、『 [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
+When ingesting data, it is important to understand how [!DNL Experience Data Model] (XDM) schemas work. XDM のフィールドタイプを様々な形式にマップする方法について詳しくは、『[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
 
-データを取り込む際には、柔軟性があります。ターゲットスキーマ内のデータと一致しない場合、データは表示されるターゲットタイプに変換されます。 できない場合は、バッチはaで失敗し `TypeCompatibilityException`ます。
+データ取得には柔軟性があります。ターゲットスキーマ内のデータとタイプが一致しない場合、データは表現されたターゲットタイプに変換されます。  できない場合は、バッチが `TypeCompatibilityException` で失敗します。
 
-例えば、JSONもCSVも、日付や日付時間タイプを持ちません。 その結果、これらの値は、 [ISO 8061形式の文字列](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;)またはUNIX時間(153126395)を使用して表されます。9000)に変換され、取り込み時にターゲットXDMタイプに変換されます。
+例えば、JSON も CSV も日付や時刻のタイプを持ちません。その結果、これらの値は [ISO 8061 形式の文字列](https://www.iso.org/iso-8601-date-and-time-format.html)（「2018-07-10T15:05:59.000-08:00」）または Unix 時間形式のミリ秒（1531263959000）を使用して表され、取得時にターゲット XDM タイプに変換されます。
 
-次の表に、データを取り込む際にサポートされる変換を示します。
+次の表に、データの取得時にサポートされる変換を示します。
 
-| 受信（行）とTarget（列） | 文字列 | バイト | Short | 整数 | ロング | 重複 | 日付 | 日時 | オブジェクト | マップ |
+| 受信（行）とターゲット（列） | String | Byte | Short | Integer | Long | Double | Date | Date-Time | Object | Map |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 文字列 | X | X | X | X | X | X | X | X |  |  |
-| バイト | X | X | X | X | X | X |  |  |  |  |
+| String | X | X | X | X | X | X | X | X |  |  |
+| Byte | X | X | X | X | X | X |  |  |  |  |
 | Short | X | X | X | X | X | X |  |  |  |  |
-| 整数 | X | X | X | X | X | X |  |  |  |  |
-| ロング | X | X | X | X | X | X | X | X |  |  |
-| 重複 | X | X | X | X | X | X |  |  |  |  |
-| 日付 |  |  |  |  |  |  | X |  |  |  |
-| 日時 |  |  |  |  |  |  |  | X |  |  |
-| オブジェクト |  |  |  |  |  |  |  |  | X | X |
-| マップ |  |  |  |  |  |  |  |  | X | X |
+| Integer | X | X | X | X | X | X |  |  |  |  |
+| Long | X | X | X | X | X | X | X | X |  |  |
+| Double | X | X | X | X | X | X |  |  |  |  |
+| Date |  |  |  |  |  |  | X |  |  |  |
+| Date-Time |  |  |  |  |  |  |  | X |  |  |
+| Object |  |  |  |  |  |  |  |  | X | X |
+| Map |  |  |  |  |  |  |  |  | X | X |
 
 >[!NOTE]
 >
->ブール値と配列は、他の型に変換できません。
+> ブール値と配列は他の型に変換できません。
 
-## 取り込みの制約
+## 取得の制約
 
-バッチデータ取り込みには、いくつかの制約があります。
-- バッチあたりの最大ファイル数： 1500
-- 最大バッチサイズ： 100 GB
-- 1行あたりのプロパティまたはフィールドの最大数： 10000
-- 1ユーザーあたりの1分あたりの最大バッチ数： 138
+バッチデータ取得には、いくつかの制約があります。
+- バッチあたりの最大ファイル数：1500
+- 最大バッチサイズ：100GB
+- 1 行あたりのプロパティまたはフィールドの最大数：10000
+- 1 ユーザーあたりの 1 分あたりの最大バッチ数：138
 
-## 取り込みJSONファイル
+## JSON ファイルの取得
 
 >[!NOTE]
 >
->以下の手順は、小さいファイル（256 MB以下）に適用されます。 ゲートウェイのタイムアウトまたは要求本文のサイズのエラーが発生した場合は、大きいファイルのアップロードに切り替える必要があります。
+> 次の手順は、小さいファイル（256MB 以下）に適用されます。ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
 
 ### バッチの作成
 
-まず、入力形式としてJSONを含むバッチを作成する必要があります。 バッチを作成する場合は、データセットIDを指定する必要があります。 また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされたXDMスキーマに準拠していることを確認する必要もあります。
+まず、JSON を入力形式としてバッチを作成する必要があります。バッチを作成する場合は、データセット ID を指定する必要があります。また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされた XDM スキーマに適合していることを確認する必要があります。
 
 >[!NOTE]
 >
->以下に、1行JSONの例を示します。 複数行のJSONを取り込むには、 `isMultiLineJson` フラグを設定する必要があります。 詳しくは、 [バッチインジェストのトラブルシューティングガイドを参照してください](./troubleshooting.md)。
+> 以下に、1 行の JSON の例を示します。複数行の JSON を取得するには、`isMultiLineJson` フラグを設定する必要があります。詳しくは、『[バッチ取得トラブルシューティングガイド](./troubleshooting.md)』を参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches
@@ -129,9 +129,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DATASET_ID}` | 参照データセットのID。 |
+| `{DATASET_ID}` | 参照データセットの ID。 |
 
-**応答**
+**応答** 
 
 ```json
 {
@@ -155,18 +155,18 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 新しく作成されたバッチのID。 |
-| `{DATASET_ID}` | 参照先のデータセットのID。 |
+| `{BATCH_ID}` | 新しく作成されたバッチの ID。 |
+| `{DATASET_ID}` | 参照先のデータセットの ID。 |
 
 ### ファイルのアップロード
 
-これでバッチが作成されたので、前の `batchId` からを使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
+これでバッチが作成され、前の `batchId` を使用してファイルをバッチにアップロードできます。複数のファイルをバッチにアップロードできます。
 
 >[!NOTE]
 >
->適切にフォーマットされたJSONデータファイルの [例については、付録の節を参照してください](#data-transformation-for-batch-ingestion)。
+>付録の[適切に書式設定された JSON データファイルの例](#data-transformation-for-batch-ingestion)についての節を参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -174,15 +174,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | アップロード先のバッチのID。 |
-| `{DATASET_ID}` | バッチの参照データセットのID。 |
+| `{BATCH_ID}` | アップロード先のバッチの ID。 |
+| `{DATASET_ID}` | バッチの参照データセットの ID。 |
 | `{FILE_NAME}` | アップロードするファイルの名前。 |
 
 **リクエスト**
 
 >[!NOTE]
 >
->このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
+> API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -198,17 +198,17 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 | --------- | ----------- |
 | `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
 
-**応答**
+**応答** 
 
 ```http
 200 OK
 ```
 
-### 完了バッチ
+### バッチの完了
 
-ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチをプロモーションできる状態になったことを伝える必要があります。
+ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチがプロモーションの準備ができたことを伝える必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches/{BATCH_ID}?action=COMPLETE
@@ -216,7 +216,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | アップロード先のバッチのID。 |
+| `{BATCH_ID}` | アップロード先のバッチの ID。 |
 
 **リクエスト**
 
@@ -228,21 +228,21 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```http
 200 OK
 ```
 
-## インジェストパーケファイル
+## Parquet ファイルの取得
 
 >[!NOTE]
 >
->以下の手順は、小さいファイル（256 MB以下）に適用されます。 ゲートウェイのタイムアウトまたは要求本文のサイズのエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
+> 次の手順は、小さいファイル（256MB 以下）に適用されます。ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
 
 ### バッチの作成
 
-まず、Parketを入力形式としてバッチを作成する必要があります。 バッチを作成する場合は、データセットIDを指定する必要があります。 また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされたXDMスキーマに準拠していることを確認する必要もあります。
+まず、Parquet を入力形式としてバッチを作成する必要があります。バッチを作成する場合は、データセット ID を指定する必要があります。また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされた XDM スキーマに適合していることを確認する必要があります。
 
 **リクエスト**
 
@@ -263,9 +263,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | パラメーター | 説明 |
 | --------- | ------------ |
-| `{DATASET_ID}` | 参照データセットのID。 |
+| `{DATASET_ID}` | 参照データセットの ID。 |
 
-**応答**
+**応答** 
 
 ```http
 201 Created
@@ -293,15 +293,15 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 新しく作成されたバッチのID。 |
-| `{DATASET_ID}` | 参照先のデータセットのID。 |
-| `{USER_ID}` | バッチを作成したユーザーのID。 |
+| `{BATCH_ID}` | 新しく作成されたバッチの ID。 |
+| `{DATASET_ID}` | 参照先のデータセットの ID。 |
+| `{USER_ID}` | バッチを作成したユーザーの ID。 |
 
 ### ファイルのアップロード
 
-これでバッチが作成されたので、前の `batchId` からを使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
+これでバッチが作成され、前の `batchId` を使用してファイルをバッチにアップロードできます。複数のファイルをバッチにアップロードできます。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -309,15 +309,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | アップロード先のバッチのID。 |
-| `{DATASET_ID}` | バッチの参照データセットのID。 |
+| `{BATCH_ID}` | アップロード先のバッチの ID。 |
+| `{DATASET_ID}` | バッチの参照データセットの ID。 |
 | `{FILE_NAME}` | アップロードするファイルの名前。 |
 
 **リクエスト**
 
 >[!CAUTION]
 >
->このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
+> この API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -333,17 +333,17 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 | --------- | ----------- |
 | `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
 
-**応答**
+**応答** 
 
 ```http
 200 OK
 ```
 
-### 完了バッチ
+### バッチの完了
 
-ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチをプロモーションできる状態になったことを伝える必要があります。
+ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチがプロモーションの準備ができたことを伝える必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches/{BATCH_ID}?action=complete
@@ -351,7 +351,7 @@ POST /batches/{BATCH_ID}?action=complete
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | シグナルを送信するバッチのIDが、完了する準備が整っています。 |
+| `{BATCH_ID}` | シグナルを送信するバッチの ID は、完了の準備が整っています。 |
 
 **リクエスト**
 
@@ -363,23 +363,23 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**応答**
+**応答** 
 
 ```http
 200 OK
 ```
 
-## 大きなパーケファイルを取り込む
+## 大きな Parquet ファイルの取得
 
 >[!NOTE]
 >
->この節では、256 MBを超えるファイルをアップロードする方法について説明します。 大きなファイルはチャンクでアップロードされ、API信号を介して繋ぎ合わされます。
+> この節では、256MB を超えるファイルをアップロードする方法について説明します。大きなファイルはチャンク単位でアップロードされ、API 信号を介して繋ぎ合わされます。
 
 ### バッチの作成
 
-まず、Parketを入力形式としてバッチを作成する必要があります。 バッチを作成する場合は、データセットIDを指定する必要があります。 また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされたXDMスキーマに準拠していることを確認する必要もあります。
+まず、Parquet を入力形式としてバッチを作成する必要があります。バッチを作成する場合は、データセット ID を指定する必要があります。また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされた XDM スキーマに適合していることを確認する必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches
@@ -404,9 +404,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DATASET_ID}` | 参照データセットのID。 |
+| `{DATASET_ID}` | 参照データセットの ID。 |
 
-**応答**
+**応答** 
 
 ```http
 201 Created
@@ -434,15 +434,15 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 新しく作成されたバッチのID。 |
-| `{DATASET_ID}` | 参照先のデータセットのID。 |
-| `{USER_ID}` | バッチを作成したユーザーのID。 |
+| `{BATCH_ID}` | 新しく作成されたバッチの ID。 |
+| `{DATASET_ID}` | 参照先のデータセットの ID。 |
+| `{USER_ID}` | バッチを作成したユーザーの ID。 |
 
-### 大きいファイルを初期化
+### 大きいファイルの初期化
 
-バッチを作成した後、大きなファイルを初期化してから、チャンクをバッチにアップロードする必要があります。
+バッチを作成した後、大きなファイルを初期化してから、バッチにチャンクをアップロードする必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -450,9 +450,9 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 新しく作成されたバッチのID。 |
-| `{DATASET_ID}` | 参照先のデータセットのID。 |
-| `{FILE_NAME}` | 初期化するファイルの名前。 |
+| `{BATCH_ID}` | 新しく作成されたバッチの ID。 |
+| `{DATASET_ID}` | 参照先のデータセットの ID。 |
+| `{FILE_NAME}` | 初期化されるファイルの名前。 |
 
 **リクエスト**
 
@@ -464,17 +464,17 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**応答**
+**応答** 
 
 ```http
 201 Created
 ```
 
-### 大きいファイルチャンクのアップロード
+### 大きなファイルチャンクのアップロード
 
-ファイルが作成されたので、後続のすべてのチャンクは、ファイルの各セクションに対して1つずつ、PATCHリクエストを繰り返し行うことでアップロードできます。
+ファイルが作成されたので、以降のすべてのチャンクは、ファイルの各セクションに対して 1 つずつ、繰り返し PATCH リクエストを実行することでアップロードできます。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -482,15 +482,15 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | アップロード先のバッチのID。 |
-| `{DATASET_ID}` | バッチの参照データセットのID。 |
+| `{BATCH_ID}` | アップロード先のバッチの ID。 |
+| `{DATASET_ID}` | バッチの参照データセットの ID。 |
 | `{FILE_NAME}` | アップロードするファイルの名前。 |
 
 **リクエスト**
 
 >[!CAUTION]
 >
->このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
+> この API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -505,11 +505,11 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONTENT_RANGE}` | 整数で、要求された範囲の開始と終了を指定します。 |
+| `{CONTENT_RANGE}` | 指定した範囲の開始と終了を整数で指定します。 |
 | `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
 
 
-**応答**
+**応答** 
 
 ```http
 200 OK
@@ -517,9 +517,9 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### 完全な大きいファイル
 
-これでバッチが作成されたので、前の `batchId` からを使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
+これでバッチが作成され、前の `batchId` を使用してファイルをバッチにアップロードできます。複数のファイルをバッチにアップロードできます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -527,8 +527,8 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 完了を伝えるバッチのID。 |
-| `{DATASET_ID}` | バッチの参照データセットのID。 |
+| `{BATCH_ID}` | 完了を伝えるバッチの ID。 |
+| `{DATASET_ID}` | バッチの参照データセットの ID。 |
 | `{FILE_NAME}` | 完了を伝えるファイルの名前。 |
 
 **リクエスト**
@@ -541,17 +541,17 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**応答**
+**応答** 
 
 ```http
 201 Created
 ```
 
-### 完了バッチ
+### バッチの完了
 
-ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチをプロモーションできる状態になったことを伝える必要があります。
+ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチがプロモーションの準備ができたことを伝える必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches/{BATCH_ID}?action=COMPLETE
@@ -559,7 +559,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | シグナルを送信するバッチのIDが完了した。 |
+| `{BATCH_ID}` | シグナルを送信するバッチの ID が完了しました。 |
 
 
 **リクエスト**
@@ -572,25 +572,25 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**応答**
+**応答** 
 
 ```http
 200 OK
 ```
 
-## CSVファイルを取り込む
+## CSV ファイルの取得
 
-CSVファイルを取り込むには、CSVをサポートするクラス、スキーマ、データセットを作成する必要があります。 必要なクラスとスキーマを作成する方法について詳しくは、「 [ad hocスキーマの作成」チュートリアルに記載されている手順に従ってください](../../xdm/api/ad-hoc.md)。
+CSV ファイルを取得するには、CSV をサポートするクラス、スキーマ、データセットを作成する必要があります。必要なクラスとスキーマの作成方法について詳しくは、『[アドホックスキーマの作成チュートリアル](../../xdm/api/ad-hoc.md)』の手順に従ってください。
 
 >[!NOTE]
 >
->以下の手順は、小さいファイル（256 MB以下）に適用されます。 ゲートウェイのタイムアウトまたは要求本文のサイズのエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
+> 次の手順は、小さいファイル（256MB 以下）に適用されます。ゲートウェイのタイムアウトまたは陸エスト本文のサイズエラーが発生した場合は、大きなファイルのアップロードに切り替える必要があります。
 
 ### データセットの作成
 
-上記の手順に従って必要なクラスとスキーマを作成した後、CSVをサポートできるデータセットを作成する必要があります。
+上記の手順に従って必要なクラスとスキーマを作成した後、CSV サポートするデータセットを作成する必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /catalog/dataSets
@@ -624,10 +624,10 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{TENANT_ID}` | このIDは、作成するリソースの名前が適切に指定され、IMS組織内に含まれていることを確認するために使用されます。 |
-| `{SCHEMA_ID}` | 作成したスキーマのID。 |
+| `{TENANT_ID}` | この ID を使用すると、作成したリソースの名前空間が適切に付けられ、IMS 組織内に含まれるようになります |
+| `{SCHEMA_ID}` | 作成したスキーマの ID。 |
 
-JSON本文の「fileDescription」セクションの各部分の説明を以下に示します。
+JSON 本文の「fileDescription」セクションの異なる部分の説明を以下に示します。
 
 ```json
 {
@@ -644,20 +644,20 @@ JSON本文の「fileDescription」セクションの各部分の説明を以下�
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `format` | マスターファイルの形式。入力ファイルの形式ではありません。 |
-| `delimiters` | 区切り文字として使用する文字です。 |
+| `format` | 入力ファイルの形式ではなく、マスターファイルの形式です。 |
+| `delimiters` | 区切り文字として使用する文字。 |
 | `quotes` | 引用符に使用する文字。 |
-| `escapes` | エスケープ文字として使用する文字です。 |
-| `header` | アップロードしたファイルにはヘッダー **が含まれている必要があります** 。 スキーマの検証が行われるので、この値をtrueに設定する必要があります。 また、ヘッダーにスペースを含め **ることはできません** 。ヘッダーにスペースが含まれている場合は、代わりにアンダースコアに置き換えてください。 |
-| `charset` | オプションのフィールドです。 その他のサポートされている文字セットには、「US-ASCII」と「ISO-8869-1」があります。 空白のままにすると、デフォルトでUTF-8が使用されます。 |
+| `escapes` | エスケープ文字として使用する文字。 |
+| `header` | アップロードするファイルにはヘッダーが含まれている&#x200B;**必要**&#x200B;があります。スキーマの検証が行われるので、この値を true に設定する必要があります。また、ヘッダーにスペースを含めることは&#x200B;**できません**。ヘッダーにスペースが含まれている場合は、アンダースコアで置き換えてください。 |
+| `charset` | オプションのフィールド。その他のサポートされている文字セットには、「US-ASCII」と「ISO-8869-1」があります。空のままにすると、デフォルトで UTF-8 が使用されます。 |
 
-参照するデータセットには、上記のファイル記述ブロックが含まれ、レジストリ内の有効なスキーマを指す必要があります。 そうしないと、ファイルはパーケーにマスターされません。
+参照するデータセットには、上記のファイル記述ブロックが含まれ、レジストリ内の有効なスキーマを指す必要があります。そうしないと、ファイルは parquet にマスターされません。
 
 ### バッチの作成
 
-次に、入力形式としてCSVを含むバッチを作成する必要があります。 バッチを作成する場合は、データセットIDを指定する必要があります。 また、バッチの一部としてアップロードされたすべてのファイルが、提供されたデータセットにリンクされたスキーマに適合していることを確認する必要もあります。
+次に、CSV を入力形式としてバッチを作成する必要があります。バッチを作成する場合は、データセット ID を指定する必要があります。また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされたスキーマに適合していることを確認する必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches
@@ -682,9 +682,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{DATASET_ID}` | 参照データセットのID。 |
+| `{DATASET_ID}` | 参照データセットの ID。 |
 
-**応答**
+**応答** 
 
 ```http
 201 Created
@@ -712,19 +712,19 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 新しく作成されたバッチのID。 |
-| `{DATASET_ID}` | 参照先のデータセットのID。 |
-| `{USER_ID}` | バッチを作成したユーザーのID。 |
+| `{BATCH_ID}` | 新しく作成されたバッチの ID。 |
+| `{DATASET_ID}` | 参照先のデータセットの ID。 |
+| `{USER_ID}` | バッチを作成したユーザーの ID。 |
 
 ### ファイルのアップロード
 
-これでバッチが作成されたので、前の `batchId` からを使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
+これでバッチが作成され、前の `batchId` を使用してファイルをバッチにアップロードできます。複数のファイルをバッチにアップロードできます。
 
 >[!NOTE]
 >
->適切にフォーマットされたCSVデータファイルの [例については、付録の節を参照してください](#data-transformation-for-batch-ingestion)。
+>付録の[適切に書式設定された CSV データファイルの例](#data-transformation-for-batch-ingestion)についての節を参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -732,15 +732,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | アップロード先のバッチのID。 |
-| `{DATASET_ID}` | バッチの参照データセットのID。 |
+| `{BATCH_ID}` | アップロード先のバッチの ID。 |
+| `{DATASET_ID}` | バッチの参照データセットの ID。 |
 | `{FILE_NAME}` | アップロードするファイルの名前。 |
 
 **リクエスト**
 
 >[!CAUTION]
 >
->このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。
+> この API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -757,17 +757,17 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 | `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
 
 
-**応答**
+**応答** 
 
 ```http
 200 OK
 ```
 
-### 完了バッチ
+### バッチの完了
 
-ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチをプロモーションできる状態になったことを伝える必要があります。
+ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチがプロモーションの準備ができたことを伝える必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches/{BATCH_ID}?action=COMPLETE
@@ -783,7 +783,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```http
 200 OK
@@ -791,9 +791,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## バッチのキャンセル
 
-バッチの処理中も、キャンセルは可能です。 ただし、バッチが確定されると（成功または失敗の状態など）、バッチはキャンセルできません。
+バッチの処理中は、キャンセルすることができます。ただし、バッチが確定されると（成功または失敗の状態など）、バッチはキャンセルできません。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches/{BATCH_ID}?action=ABORT
@@ -801,7 +801,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | キャンセルするバッチのID。 |
+| `{BATCH_ID}` | キャンセルするバッチの ID。 |
 
 **リクエスト**
 
@@ -813,7 +813,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**応答**
+**応答** 
 
 ```http
 200 OK
@@ -821,9 +821,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## バッチの削除 {#delete-a-batch}
 
-バッチは、削除するバッチのIDに対する `action=REVERT` クエリパラメーターを指定して、次のPOSTリクエストを実行することで削除できます。 バッチは「非アクティブ」としてマークされ、ガベージコレクションの対象となります。 バッチは非同期で収集され、その時点で「削除済み」とマークされます。
+`action=REVERT` クエリパラメーターを使用して、削除するバッチの ID に対して次の POST リクエストを実行すると、バッチを削除できます。バッチは「非アクティブ」と指定され、ガベージコレクションの対象となります。バッチは非同期で収集され、その時点で「削除済み」と指定されます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches/{BATCH_ID}?action=REVERT
@@ -831,7 +831,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 削除するバッチのID。 |
+| `{BATCH_ID}` | 削除するバッチの ID。 |
 
 **リクエスト**
 
@@ -843,7 +843,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
-**応答**
+**応答** 
 
 ```http
 200 OK
@@ -851,13 +851,13 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## バッチの再生
 
-既に取り込んでいるバッチを置き換える場合は、「バッチ再生」を使用して置き換えることができます。この操作は、古いバッチを削除し、代わりに新しいバッチを取り込む操作と同じです。
+既に取得したバッチを置き換える場合は、「バッチ再生」を使用できます。この操作は、古いバッチを削除し、代わりに新しいバッチを取得する操作と同じです。
 
 ### バッチの作成
 
-まず、入力形式としてJSONを含むバッチを作成する必要があります。 バッチを作成する場合は、データセットIDを指定する必要があります。 また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされたXDMスキーマに準拠していることを確認する必要もあります。 また、リプレイ・セクションで参照する古いバッチを指定する必要があります。 次の例では、IDとを持つバッチを再生し `batchIdA` てい `batchIdB`ます。
+まず、JSON を入力形式としてバッチを作成する必要があります。バッチを作成する場合は、データセット ID を指定する必要があります。また、バッチの一部としてアップロードされるすべてのファイルが、提供されたデータセットにリンクされた XDM スキーマに適合していることを確認する必要があります。また、再生セクションで参照として古いバッチを指定する必要があります。次の例では、`batchIdA` ID と `batchIdB` ID を使用してバッチを再生します 。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches
@@ -886,9 +886,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | パラメーター | 説明 |
 | --------- | ----------- | 
-| `{DATASET_ID}` | 参照データセットのID。 |
+| `{DATASET_ID}` | 参照データセットの ID。 |
 
-**応答**
+**応答** 
 
 ```http
 201 Created
@@ -922,16 +922,16 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 新しく作成されたバッチのID。 |
-| `{DATASET_ID}` | 参照先のデータセットのID。 |
-| `{USER_ID}` | バッチを作成したユーザーのID。 |
+| `{BATCH_ID}` | 新しく作成されたバッチの ID。 |
+| `{DATASET_ID}` | 参照先のデータセットの ID。 |
+| `{USER_ID}` | バッチを作成したユーザーの ID。 |
 
 
 ### ファイルのアップロード
 
-これでバッチが作成されたので、前の `batchId` からを使用して、ファイルをバッチにアップロードできます。 複数のファイルをバッチにアップロードできます。
+これでバッチが作成され、前の `batchId` を使用してファイルをバッチにアップロードできます。複数のファイルをバッチにアップロードできます。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -939,15 +939,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | アップロード先のバッチのID。 |
-| `{DATASET_ID}` | バッチの参照データセットのID。 |
+| `{BATCH_ID}` | アップロード先のバッチの ID。 |
+| `{DATASET_ID}` | バッチの参照データセットの ID。 |
 | `{FILE_NAME}` | アップロードするファイルの名前。 |
 
 **リクエスト**
 
 >[!CAUTION]
 >
->このAPIは、シングルパートのアップロードをサポートしています。 コンテンツタイプがapplication/octet-streamであることを確認します。 APIと互換性のないマルチパートリクエストがデフォルトの設定になるので、curl -Fオプションは使用しないでください。
+> この API は、シングルパートのアップロードをサポートします。content-type が application/octet-stream であることを確認します。API と互換性のないマルチパートリクエストがデフォルトで設定されるので、curl -F オプションは使用しないでください。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -963,17 +963,17 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 | --------- | ----------- |
 | `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
 
-**応答**
+**応答** 
 
 ```http
 200 OK
 ```
 
-### 完了バッチ
+### バッチの完了
 
-ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチをプロモーションできる状態になったことを伝える必要があります。
+ファイルの様々な部分のアップロードが完了したら、データが完全にアップロードされ、バッチがプロモーションの準備ができたことを伝える必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /batches/{BATCH_ID}?action=COMPLETE
@@ -981,7 +981,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{BATCH_ID}` | 完了するバッチのID。 |
+| `{BATCH_ID}` | 完了するバッチの ID。 |
 
 **リクエスト**
 
@@ -993,7 +993,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```http
 200 OK
@@ -1001,11 +1001,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## 付録
 
-### バッチ取り込み用のデータ変換
+### バッチ取得用のデータ変換
 
-データファイルをに取り込むために [!DNL Experience Platform]は、ファイルの階層構造が、アップロード先のデータセットに関連付けられた [Experience Data Model(XDM)](../../xdm/home.md) スキーマに準拠している必要があります。
+In order to ingest a data file into [!DNL Experience Platform], the hierarchical structure of the file must comply with the [Experience Data Model (XDM)](../../xdm/home.md) schema associated with the dataset being uploaded to.
 
-XDMスキーマに準拠するためのCSVファイルのマッピング方法に関する情報は、 [サンプルのtransformations](../../etl/transformations.md) ドキュメントに記載されています。また、適切にフォーマットされたJSONデータファイルの例も含まれています。 ドキュメントーに用意されているサンプルファイルは次の場所にあります。
+XDM スキーマに準拠する CSV ファイルのマッピング方法に関する情報は、[サンプル変換](../../etl/transformations.md)ドキュメントに記載されている情報と、適切に書式設定された JSON データファイルの例を参照してください。このドキュメントのサンプルファイルは、次の場所にあります。
 
-- [CRM_プロファイル.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_プロファイル.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
