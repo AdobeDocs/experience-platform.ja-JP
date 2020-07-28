@@ -1,88 +1,88 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: CCPA FAQ
+title: CCPA に関する FAQ
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 0%
+ht-degree: 79%
 
 ---
 
 
-# CCPA FAQ
+# CCPA に関する FAQ
 
-このドキュメントでは、Adobe Experience Cloudでの [!DNL California Consumer Protection Act] (CCPA)とその導入に関するよくある質問に対する回答を示します。
+This document provides answers to frequently asked questions about the [!DNL California Consumer Protection Act] (CCPA) and its implementation in Adobe Experience Cloud.
 
-## CCPAとは
+## CCPA とは
 
-CCPA [!DNL California Consumer Privacy Act] はカリフォルニア州の新しいプライバシー法で、住民に個人情報に関する新しい権利を与え、カリフォルニア州で事業を行う特定の企業に対してデータ保護の責任を負います。
+The [!DNL California Consumer Privacy Act] (CCPA) is California’s new privacy law that provides its residents with new rights regarding their personal information, and imposes data protection responsibilities on certain entities who conduct business in California.
 
 >[!NOTE]
 >
->2020年1月には技術面での効果があるが、CCPAは依然として法律メーカーの調整を受けている。 また、カリフォルニア州の規制当局がまだ書かれていない規則には、重要な実施やその他のガイダンスの詳細が含まれています。
+> CCPA は技術的には 2020 年 1 月に有効になっていますが、依然として立法者によって微調整されています。さらに、重要な実装やその他のガイダンスの詳細は、カリフォルニアの規制当局によってまだ記述されていないルールで将来公開されます。
 
-CCPAは、個人の個人情報へのアクセス権や削除権など、欧州和集合のGDPR(General Data Protection Regulation)に基づいて提供される概念を共有していますが、CCPAとGDPRが異なる主な方法はいくつかあります。 例えば、CCPAは、事前の同意を必要とする代わりに、個人アクティビティを第三者に「販売」する」と認める特定のデータ共有情報のオプトアウト権を消費者に提供します。
+CCPA は、個人情報にアクセスして削除する個人の権利など、EU の一般データ保護規則（GDPR）に基づいて提供されるいくつかの概念を共有していますが、CCPA が GDPR と異なる点はいくつかあります。例えば、CCPA は、個人情報を第三者に「販売」すると見なされる特定のデータ共有アクティビティの事前の同意を必要とする代わりに、オプトアウト権を消費者に提供します。
 
-## CCPAの個人情報の定義は何ですか。
+## CCPA の個人情報の定義は何ですか。
 
-個人情報とは、「消費者や家庭に対して、直接、間接的に、消費者や家庭を識別し、関連付け、説明し、関連付けることができる、または合理的に関連付けることができる」情報です。
+個人情報は、「消費者又は世帯を、識別し、関連し、叙述し、関連付けることができ、又は直接的に若しくは間接的に合理的にリンクさせることのできる情報」です。
 
-## Adobe Experience Cloudで使用される個人情報や識別子のタイプは、これらの新しい要件の対象となりますか？
+## Adobe Experience Cloud で使用される、どの種類の個人情報または識別情報に、これらの新しい要件が適用されますか。
 
-次のIDは、 [!DNL Experience Cloud] アプリケーションでよく使用され、CCPAの要件に従う場合があります。
+The following identifiers are commonly used in [!DNL Experience Cloud] applications and could be subject to CCPA requirements:
 
 - 名前
 - 住所
-- 一意の個人ID
+- 一意の個人識別子
 - オンライン識別子
-- IPアドレス
+- IP アドレス
 - 電子メールアドレス
 - アカウント名
 
-個人情報は、インターネットまたはその他の電子ネットワークアクティビティ情報を含むこともできる。 これには、以下が含まれます。
+個人情報には、インターネットやその他の電子ネットワークアクティビティ情報も含まれます。これには、以下が含まれます。
 
-- 閲覧の履歴
+- 閲覧履歴
 - 検索履歴
-- Webサイト、アプリケーションまたは広告との消費者のインタラクションに関する情報
+- Web サイト、アプリケーションまたは広告との消費者のインタラクションに関する情報
 
-CCPAが個人情報の多くを対象とする場合でも、アドビの標準の契約条件では、機密性の高い個人情報（SSN、運転免許証情報、金融口座情報、生体認証データなど）は、通常、 [!DNL Experience Cloud] アプリケーションでの読み込みや使用を禁止しています。
+Even though CCPA covers a wide set of personal information, Adobe’s standard contract terms dictate that sensitive personal information (such as SSN, driver’s license information, financial account information, and biometric data) is generally prohibited from import and use in [!DNL Experience Cloud] applications.
 
-## CCPAの役割や責任は、どのように適用され [!DNL Experience Cloud]ますか。
+## How do CCPA&#39;s different roles and responsibilities apply to [!DNL Experience Cloud]?
 
-CCPAの定義に従って、次の役割がアドビとそのお客様に適用されます。
+CCPA の定義に従って、次の役割がアドビとその顧客に適用されます。
 
-- アドビの顧客（カリフォルニア在住者からの個人情報の収集と使用をリクエストする当事者）は、 **ビジネスと見なされます**。
-- アドビは、サービスを提供する役割を果たしており、 **サービスプロバイダーと見なされます**。
+- アドビの顧客（カリフォルニア在住者の個人情報の収集と使用を要求する当事者）は、**ビジネス**&#x200B;と見なされます。
+- アドビは、サービスを提供する役割を果たしており、**サービスプロバイダー**&#x200B;と見なされます。
 
 この関係とアドビの契約言語を考えると、アドビへの開示は、ビジネスが通知やオファーにオプトアウトを提供する必要がある「販売」とは見なされません。
 
-ただし、アドビのサービスを使用して、特定のデータ共有を有効にし、第三者に転送することができます。 これらのサードパーティの転送は「販売」と見なされ、法的に開示やオプトアウトを義務付けられます。  お客様は、該当する要件を評価する特定の使用例を評価するために、弁護士と協力する必要があります。
+ただし、アドビのサービスを使用して、特定のデータ共有を有効にし、サードパーティに転送することができます。これらのサードパーティの転送は「販売」と見なされ、法的に開示やオプトアウトを義務付けられます。  顧客は、適切な要件を評価する特定の使用事例を評価するために、弁護士と協力する必要があります。
 
-## 個人情報にアクセスしたり削除したりするために、顧客の要求に対して何日間対応する必要がありますか。
+## 顧客の個人情報のアクセスや削除をおこなう要求に対して何日で応答する必要がありますか。
 
-ビジネスが個人情報を収集し、特定のカリフォルニア州の消費者のIDを認証または検証できると仮定し、CCPAでは、45日以内に（一部の例外を除き）コンシューマ要求を処理できます。
+ビジネスが個人情報を収集し、特定のカリフォルニア州の消費者の ID を認証または検証できると仮定すると、CCPA では、（一部の例外を除き）45 日以内に消費者要求を満たすことを許可します。
 
-## CCPAにおけるアドビの役割とは何ですか。
+## CCPA の下でのアドビの役割とは何ですか。
 
-サービスプロバイダーとして、アドビはビジネスの代わりに個人情報を収集し処理し、契約上、その情報を契約に設定された特定の目的のみに使用する義務があります。
+サービスプロバイダーとして、アドビは、ビジネスの代わりに個人情報を収集し、処理し、契約上、契約に基づき、契約で設定された特定の目的のみにその情報を使用する義務があります。
 
-この関係とアドビの契約言語を考えると、アドビに対する開示はサービスプロバイダーに関する法律の規定に該当し、企業が通知やオファーにオプトアウトを提供する必要がある「販売」とは見なされません。
+この関係とアドビの契約言語を考えると、アドビへの開示は、サービスプロバイダーに関する法律の規定の範囲内に含まれ、無事ネスが通知やオファーにオプトアウトを提供する必要がある「販売」とは見なされません。
 
-アドビのサービスを使用して、特定のデータ共有を有効にし、第三者に転送することができます。 これらのサードパーティの転送は「販売」と見なされ、法的に開示やオプトアウトを義務付けられます。  お客様は、該当する要件を評価する特定の使用例を評価するために、弁護士と協力する必要があります。
+アドビのサービスを使用して、特定のデータ共有を有効にし、サードパーティに転送することができます。これらのサードパーティの転送は「販売」と見なされ、法的に開示やオプトアウトを義務付けられます。顧客は、適切な要件を評価する特定の使用事例を評価するために、弁護士と協力する必要があります。
 
-## 要件に対応する特定の種類のデータを維持する場合、CCPAの下で消費者のプライバシー要件をサポートするにはどうすればよいですか。
+## 要件の対象となる特定の種類のデータを維持している場合、CCPA の下で消費者のプライバシー要件をどのようにサポートできますか。
 
-CAのコンシューマを認証するために必要な手順を実行すると、Adobe Experience Platformによって、互換性のある [!DNL Privacy Service][!DNL Experience Cloud] アプリケーションにコンシューマプライバシー要求を送信できます。 See the [Privacy Service overview](../home.md) for more information. お使いのアプリケーションがプライバシーリクエストを順守する方法について詳しくは、 [!DNL Experience Cloud] Privacy ServiceおよびExperience Cloudアプリケーションに関するガイドを参照してください [](../experience-cloud-apps.md)。
+Once you have taken the necessary steps to authenticate CA consumers, Adobe Experience Platform [!DNL Privacy Service] allows you to submit consumer privacy requests to compatible [!DNL Experience Cloud] applications. 詳しくは、「[Privacy Service の概要](../home.md)」を参照してください。For information on how your particular [!DNL Experience Cloud] applications can honor privacy requests, please refer to the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
->California Regulatorのさらなるガイダンスは、どのタイプのデータが消費者のプライバシーリクエストに適格かについて、今後も提供されます。
+> カリフォルニア州の規制当局からの詳細なガイダンスは、消費者のプライバシーリクエストに適したデータの種類に関して、今後も発表され続けます。
 
-## CCPAの要件に対処する上で役立つその他のツールがAdobeオファーにあるか。
+## アドビは、CCPA の要件に対処するのに役立つその他のツールを提供しますか。
 
-Adobe Experience Cloudアプリケーションは、会社のプライバシーニーズに役立つデータ管理機能とガバナンス機能を提供します。 データ使用のラベル付け、ロールベースのアクセス制御、IPの不明化、ハッシュ機能などがツールに含まれます。
+Adobe Experience Cloud アプリケーションは、企業のプライバシーニーズに役立つデータ管理およびガバナンス機能を提供します。これらのツールの中には、データ使用のラベル付け、役割ベースのアクセス制御、IP 難読化、ハッシュ機能があります。
 
-アドビは、ISO 27001の認証やTrustArc GDPR検証など、プライバシーとセキュリティの慣行に関する様々な証明を受けています。
+アドビは、ISO 27001 認定制度や TrustArc GDPR 検証など、プライバシーとセキュリティの実践に関するさまざまな認定を受けています。
