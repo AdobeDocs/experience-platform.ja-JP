@@ -1,56 +1,56 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 準備済み明細書
+title: 準備済み文
 topic: prepared statements
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '340'
-ht-degree: 9%
+ht-degree: 96%
 
 ---
 
 
-# 準備済み明細書
+# 準備済み文
 
-SQLでは、準備された文を使用して、類似したクエリや更新をテンプレート化します。 Adobe Experience Platform [!DNL Query Service] は、パラメータ化クエリを使用して準備された文をサポートします。 クエリを何度も再解析する必要がなくなるので、これを使用してパフォーマンスを最適化できます。
+SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。Adobe Experience Platform [!DNL Query Service] supports prepared statements by using a parameterized query. クエリを何度も再解析する必要がなくなるため、これを使用してパフォーマンスを最適化できます。
 
-## 準備文の使用
+## 準備済み文の使用
 
-準備文を使用する場合、次の構文がサポートされます。
+準備済み文を使用する場合、次の構文がサポートされます。
 
 - [PREPARE](#prepare)
 - [EXECUTE](#execute)
-- [割り当て解除](#deallocate)
+- [DEALLOCATE](#deallocate)
 
-### 準備済みの文の準備 {#prepare}
+### 準備済み文の準備 {#prepare}
 
-このSQLクエリは、書き込まれたSELECTクエリを、として指定された名前で保存し `PLAN_NAME`ます。 実際の値の代わりに、などの変数 `$1` を使用できます。 この準備された文は、現在のセッション中に保存されます。 プラン名では大文字と小文字が区別され **ないことに注意してください** 。
+この SQL クエリは、書き込まれた SELECT クエリを、`PLAN_NAME` として指定された名前で保存します。実際の値の代わりに、`$1` などの変数を使用できます。この準備済み文は、現在のセッション中に保存されます。プラン名では大文字と小文字が区別&#x200B;**されない**&#x200B;ことに注意してください。
 
-#### SQL形式
+#### SQL 形式
 
 ```sql
 PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 ```
 
-#### サンプルSQL
+#### サンプル SQL
 
 ```sql
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
 ```
 
-### 準備された文を実行する {#execute}
+### 準備済み文の実行 {#execute}
 
-このSQLクエリは、以前に作成されたプリペアドステートメントを使用します。
+この SQL クエリは、前に作成した準備済み文を使用します。
 
-#### SQL形式
+#### SQL 形式
 
 ```sql
 EXECUTE {PLAN_NAME}('{PARAMETERS}')
 ```
 
-#### サンプルSQL
+#### サンプル SQL
 
 ```sql
 EXECUTE test('canada', 'vancouver');
@@ -58,63 +58,63 @@ EXECUTE test('canada', 'vancouver');
 
 ### 準備済み文の割り当て解除 {#deallocate}
 
-このSQLクエリは、名前付きのプリペアドステートメントを削除するために使用します。
+この SQL クエリは、名前の付いた準備済み文を削除するために使用されます。
 
-#### SQL形式
+#### SQL 形式
 
 ```sql
 DEALLOCATE {PLAN_NAME}
 ```
 
-#### サンプルSQL
+#### サンプル SQL
 
 ```sql
 DEALLOCATE test;
 ```
 
-## 準備文を使用したフローの例
+## 準備済み文を使用したフローの例
 
-最初は、次のようなSQLクエリを使用できます。
+最初は、次のような SQL クエリを使用できます。
 
 ```sql
 SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 ```
 
-上記のSQLクエリは、次の応答を返します。
+上記の SQL クエリは、次の応答を返します。
 
-| id | 名 | lastname | 誕生日 | 電子メール | city | country |
+| ID | 名 | 姓 | 生年月日 | 電子メール | 都市 | 国 |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | アレクサン | デイビス | 1993-09-15 | example@example.com | バンクーバー | カナダ |
-| 10001 | アントイン | ダボイ | 1967-03-14 | example2@example.com | パリ | フランス |
-| 10002 | 恭子 | 桜 | 1999-11-26 | example3@example.com | 東京 | 日本 |
-| 10003 | 亜麻 | ペターソン | 1982-06-03 | example4@example.com | ストックホルム | スウェーデン |
-| 10004 | aasir | ワイタカ | 1976-12-17 | example5@example.com | ナイロビ | ケニア |
-| 10005 | フェルナン | rios | 2002-07-30 | example6@example.com | サンティアゴ | チリ |
+| 10000 | alexander | davis | 1993-09-15 | example@example.com | バンクーバー | カナダ |
+| 10001 | antoine | dubois | 1967-03-14 | example2@example.com | パリ | フランス |
+| 10002 | 京子 | 桜 | 1999-11-26 | example3@example.com | 東京 | 日本 |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | ストックホルム | スウェーデン |
+| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | ナイロビ | ケニア |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | サンティアゴ | チリ |
 
-このSQLクエリは、次のプリペアド文を使用してパラメータ化できます。
+この SQL クエリは、次の準備済み文を使用してパラメータ-化できます。
 
 ```sql
 PREPARE getIdRange AS SELECT * FROM table WHERE id >= $1 AND id <= $2; 
 ```
 
-これで、次の呼び出しを使用して、プリペアドステートメントを実行できます。
+これで、次の呼び出しを使用して、準備済み文を実行できます。
 
 ```sql
 EXECUTE getIdRange(10000, 10005);
 ```
 
-これを呼び出すと、以前と同じ結果が表示されます。
+呼び出すと、以前と同じ結果が表示されます。
 
-| id | 名 | lastname | 誕生日 | 電子メール | city | country |
+| ID | 名 | 姓 | 生年月日 | 電子メール | 都市 | 国 |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | アレクサン | デイビス | 1993-09-15 | example@example.com | バンクーバー | カナダ |
-| 10001 | アントイン | ダボイ | 1967-03-14 | example2@example.com | パリ | フランス |
-| 10002 | 恭子 | 桜 | 1999-11-26 | example3@example.com | 東京 | 日本 |
-| 10003 | 亜麻 | ペターソン | 1982-06-03 | example4@example.com | ストックホルム | スウェーデン |
-| 10004 | aasir | ワイタカ | 1976-12-17 | example5@example.com | ナイロビ | ケニア |
-| 10005 | フェルナン | rios | 2002-07-30 | example6@example.com | サンティアゴ | チリ |
+| 10000 | alexander | davis | 1993-09-15 | example@example.com | バンクーバー | カナダ |
+| 10001 | antoine | dubois | 1967-03-14 | example2@example.com | パリ | フランス |
+| 10002 | 京子 | 桜 | 1999-11-26 | example3@example.com | 東京 | 日本 |
+| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | ストックホルム | スウェーデン |
+| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | ナイロビ | ケニア |
+| 10005 | fernando | rios | 2002-07-30 | example6@example.com | サンティアゴ | チリ |
 
-準備文の使用が終了したら、次の呼び出しを使用して、割り当てを解除できます。
+準備済み文の使用が終了したら、次の呼び出しを使用して、その文の割り当てを解除できます。
 
 ```sql
 DEALLOCATE getIdRange;
