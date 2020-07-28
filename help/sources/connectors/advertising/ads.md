@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
 workflow-type: tm+mt
 source-wordcount: '200'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 >コネクタ [!DNL Google AdWords] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
 [!DNL Experience Platform] は、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 広告プロバイダーのサポートには以下が含まれ [!DNL Google AdWords]ます。
 
