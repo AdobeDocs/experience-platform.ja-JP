@@ -1,12 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Source Connectorsヘルプ
+user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 translation-type: tm+mt
 source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
 workflow-type: tm+mt
 source-wordcount: '594'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -16,20 +16,20 @@ ht-degree: 1%
 - [ソースコネクタの概要](home.md)
 - 使用可能なソースコネクタ {#connectors}
    - アドビアプリケーション {#adobe-applications}
-      - [Analyticsデータコネクタ](connectors/adobe-applications/analytics.md)
-      - [オーディエンスマネージャコネクタ](connectors/adobe-applications/audience-manager.md)
+      - [Analytics コネクタ](connectors/adobe-applications/analytics.md)
+      - [Audience Manager コネクタ](connectors/adobe-applications/audience-manager.md)
       - [顧客属性コネクタ](connectors/adobe-applications/customer-attributes.md)
       - Adobeアプリケーションフィールドのマッピング {#mapping}
-         - [Analyticsマッピングフィールド](connectors/adobe-applications/mapping/analytics.md)
-         - [オーディエンスマネージャーのマッピングフィールド](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Analytics マッピングフィールド](connectors/adobe-applications/mapping/analytics.md)
+         - [Audience Managerマッピングフィールド](connectors/adobe-applications/mapping/audience-manager.md)
          - [ターゲットマッピングフィールド](connectors/adobe-applications/mapping/target.md)
    - 広告 {#advertising}
       - [Google AdWordsコネクタ](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
-      - [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
+      - [AmazonKinesisコネクタ](connectors/cloud-storage/kinesis.md)
       - [Apache HDFSコネクタ](connectors/cloud-storage/hdfs.md)
       - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
-      - [Azure BlobおよびAmazon S3コネクタ](connectors/cloud-storage/blob-s3.md)
+      - [Azure BlobとAmazonS3コネクタ](connectors/cloud-storage/blob-s3.md)
       - [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
       - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
@@ -37,15 +37,15 @@ ht-degree: 1%
    - CRM {#crm}
       - [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforceコネクタ](connectors/crm/salesforce.md)
-   - お客様の成功 {#customer-success}
+   - Customer success {#customer-success}
       - [Salesforce Service Cloudコネクタ](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNowコネクタ](connectors/customer-success/servicenow.md)
    - データベース {#databases}
-      - [Amazon Redshiftコネクタ](connectors/databases/redshift.md)
+      - [Amazon赤方偏移コネクタ](connectors/databases/redshift.md)
       - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
       - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
-      - [Azure Data Explorerコネクタ](connectors/databases/data-explorer.md)
-      - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
+      - [AzureData Explorerコネクタ](connectors/databases/data-explorer.md)
+      - [Azure SynapseAnalyticsコネクタ](connectors/databases/synapse-analytics.md)
       - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
       - [Couchbaseコネクタ](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
@@ -58,19 +58,19 @@ ht-degree: 1%
       - [Oracleコネクタ](connectors/databases/oracle.md)
       - [フェニックスコネクタ](connectors/databases/phoenix.md)
       - [PostgreSQLコネクタ](connectors/databases/postgres.md)
-   - マーケティングの自動化 {#marketing-automation}
+   - Marketing automation {#marketing-automation}
       - [HubSpotコネクタ](connectors/marketing-automation/hubspot.md)
    - 支払い {#payments}
       - [PayPalコネクタ](connectors/payments/paypal.md)
    - プロトコル {#protocols}
       - [汎用ODataコネクタ](connectors/protocols/odata.md)
-- APIチュートリアル {#api-tutorials}
+- API チュートリアル {#api-tutorials}
    - ソースコネクタを作成する {#create}
       - 広告 {#advertising}
          - [Google AdWordsコネクタ](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
-         - [Amazon S3コネクタ](tutorials/api/create/cloud-storage/s3.md)
+         - [AmazonKinesis](tutorials/api/create/cloud-storage/kinesis.md)
+         - [AmazonS3コネクタ](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFSコネクタ](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure BLOBコネクタ](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data LakeストレージGen2コネクタ](tutorials/api/create/cloud-storage/adls-gen2.md)
@@ -82,15 +82,15 @@ ht-degree: 1%
          - [HubSpotコネクタ](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamicsコネクタ](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforceコネクタ](tutorials/api/create/crm/salesforce.md)
-      - お客様の成功 {#customer-success}
+      - Customer success {#customer-success}
          - [Salesforce Service Cloudコネクタ](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNowコネクタ](tutorials/api/create/customer-success/servicenow.md)
       - データベース {#databases}
-         - [Amazon Redshiftコネクタ](tutorials/api/create/databases/redshift.md)
+         - [Amazon赤方偏移コネクタ](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsightsコネクタのApache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/api/create/databases/spark.md)
-         - [Azure Data Explorerコネクタ](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse Analyticsコネクタ](tutorials/api/create/databases/synapse-analytics.md)
+         - [AzureData Explorerコネクタ](tutorials/api/create/databases/data-explorer.md)
+         - [Azure SynapseAnalyticsコネクタ](tutorials/api/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/api/create/databases/ats.md)
          - [Couchbaseコネクタ](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
@@ -103,7 +103,7 @@ ht-degree: 1%
          - [フェニックスコネクタ](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQLコネクタ](tutorials/api/create/databases/postgres.md)
          - [SQL Serverコネクタ](tutorials/api/create/databases/sql-server.md)
-      - マーケティングの自動化 {#marketing-automation}
+      - Marketing automation {#marketing-automation}
          - [HubSpotコネクタ](tutorials/api/create/marketing-automation/hubspot.md)
       - 支払い {#payments}
          - [PayPalコネクタ](tutorials/api/create/payments/paypal.md)
@@ -132,16 +132,16 @@ ht-degree: 1%
 - UIチュートリアル {#ui-tutorials}
    - ソースコネクタを作成する {#create}
       - アドビアプリケーション {#adobe-applications}
-         - [Adobe Analytics Connector](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Adobeオーディエンスマネージャーコネクタ](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Adobe Analytics コネクタ](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Adobe Audience Manager コネクタ](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [顧客属性コネクタ](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - 広告 {#create}
          - [Google AdWordsコネクタ](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [Amazon Kinesisコネクタ](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [AmazonKinesisコネクタ](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Apache HDFSコネクタ](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data LakeストレージGen2コネクタ](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Azure BlobおよびAmazon S3コネクタ](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Azure BlobとAmazonS3コネクタ](tutorials/ui/create/cloud-storage/blob-s3.md)
          - [Azureイベントハブコネクタ](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure Fileストレージコネクタ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTPおよびSFTPコネクタ](tutorials/ui/create/cloud-storage/ftp-sftp.md)
@@ -149,15 +149,15 @@ ht-degree: 1%
       - CRM {#crm}
          - [Microsoft Dynamicsコネクタ](tutorials/ui/create/crm/dynamics.md)
          - [Salesforceコネクタ](tutorials/ui/create/crm/salesforce.md)
-      - 顧客の成功 {#customer-success}
+      - Customer Success {#customer-success}
          - [Salesforce Service Cloudコネクタ](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNowコネクタ](tutorials/ui/create/customer-success/servicenow.md)
       - データベース {#databases}
-         - [Amazon Redshiftコネクタ](tutorials/ui/create/databases/redshift.md)
+         - [Amazon赤方偏移コネクタ](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsightsコネクタのApache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/ui/create/databases/spark.md)
-         - [Azure Data Explorerコネクタ](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analyticsコネクタ](tutorials/ui/create/databases/synapse-analytics.md)
+         - [AzureData Explorerコネクタ](tutorials/ui/create/databases/data-explorer.md)
+         - [Azure SynapseAnalyticsコネクタ](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/ui/create/databases/ats.md)
          - [Couchbaseコネクタ](tutorials/ui/create/databases/couchbase.md)
          - [Google Bigクエリコネクタ](tutorials/ui/create/databases/bigquery.md)
@@ -170,7 +170,7 @@ ht-degree: 1%
          - [Oracleコネクタ](tutorials/ui/create/databases/oracle.md)
          - [フェニックスコネクタ](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQLコネクタ](tutorials/ui/create/databases/postgres.md)
-      - マーケティングの自動化 {#marketing-automation}
+      - Marketing automation {#marketing-automation}
          - [HubSpotコネクタ](tutorials/ui/create/marketing-automation/hubspot.md)
       - 支払い {#payments}
          - [PayPalコネクタ](tutorials/ui/create/payments/paypal.md)
@@ -188,4 +188,4 @@ ht-degree: 1%
       - [プロトコルコネクタのデータフローの設定](tutorials/ui/dataflow/protocols.md)
    - [受信データをアクティブ化して顧客プロファイルを入力します](tutorials/ui/profile.md)
    - [アカウントとデータセットフローの監視](tutorials/ui/monitor.md)
-- [プラットフォームのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
+- [Platformのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
