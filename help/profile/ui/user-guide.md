@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: リアルタイム顧客プロファイルユーザーガイド
+title: リアルタイム顧客プロファイルユーザガイド
 topic: guide
 translation-type: tm+mt
 source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
 source-wordcount: '1147'
-ht-degree: 0%
+ht-degree: 11%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 [!DNL Real-time Customer Profile] オンライン、オフライン、CRM、サードパーティなどの複数のチャネルのデータを組み合わせて、各顧客の全体的な表示を作成します。
 
-このドキュメントは、Adobe Experience Platformユーザーインターフェイスでの対話操作のため [!DNL Real-time Customer Profile] のガイドとして機能します。
+This document serves as a guide for interacting with [!DNL Real-time Customer Profile] in the Adobe Experience Platform user interface.
 
 ## はじめに
 
-このユーザーガイドでは、管理に関連する様々な [!DNL Experience Platform] サービスについて理解している必要があり [!DNL Real-time Customer Profiles]ます。 このユーザーガイドを読む前に、次のサービスのドキュメントを確認してください。
+This user guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-time Customer Profiles]. このユーザガイドを読む前に、次のサービスのドキュメントを確認してください。
 
 * [!DNL Real-time Customer Profile](../home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [!DNL Identity Service](../../identity-service/home.md): 異なるデータソース [!DNL Real-time Customer Profile] に取り込まれる際に、アイデンティティを別々のデータソースからブリッジすることで有効に [!DNL Platform]します。
@@ -50,9 +50,9 @@ ht-degree: 0%
 
 ### プロファイル数 {#profile-count}
 
-プロファイル数には、組織のデフォルトの結合ポリシーがプロファイルフラグメントを結合して個々の顧客 [!DNL Experience Platform]に対して1つのプロファイルを形成した後に、組織が持つプロファイルの合計数が表示されます。 つまり、様々なチャネルでブランドとやり取りする1人の顧客に関連する複数のプロファイルフラグメントを組織内に持つことができますが、これらのフラグメントは（デフォルトの結合ポリシーに従って）結合され、「1」プロファイルの数が返されます。
+The profile count displays the total number of profiles your organization has within [!DNL Experience Platform], after your organization&#39;s default merge policy has merged together profile fragments to form a single profile for each individual customer. つまり、様々なチャネルでブランドとやり取りする 1 人の顧客に関連する複数のプロファイルフラグメントが組織に存在する場合でも、これらのフラグメントは、1 個人に関連しているため（デフォルトの結合ポリシーに従って）結合され、プロファイルの数が「1」として返されます。
 
-また、プロファイル数には、属性（レコードデータ）を持つプロファイルと、時系列(イベント)データのみを含むプロファイル(アドビのAnalyticsプロファイルなど)が含まれます。 プロファイル数は定期的に更新され、Platform内のプロファイルの総数が最新の状態になります。
+プロファイル数には、属性（レコードデータ）を持つプロファイルと、Adobe Analyticsプロファイルなどの時系列(イベント)データのみを含むプロファイルの両方が含まれます。 プロファイル数は定期的に更新され、Platform内のプロファイルの総数が最新の状態になります。
 
 レコードの取り込みによってカウントが5%以上増加または減少すると、ジョブがトリガされ、カウントが更新されます。 [!DNL Profile Store] ストリーミングデータワークフローの場合、5%増減のしきい値に達したかどうかを判断するために、1時間ごとにチェックが行われます。 ジョブが存在する場合は、プロファイル数を更新するためにジョブが自動的にトリガされます。 バッチ取り込みの場合、バッチをプロファイルストアに正常に取り込んでから15分以内に、5%の増減のしきい値に達すると、ジョブが実行され、プロファイル数が更新されます。
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 ## 結合ポリシー
 
-「 *[!UICONTROL マージポリシー]* 」タブを選択して、組織に属するマージポリシーのリストを表示します。 表示される各ポリシーは、名前、既定の結合ポリシーかどうか、および適用先のスキーマを表示します。
+Select the *[!UICONTROL Merge Policies]* tab to view a list of merge policies belonging to your organization. 表示される各ポリシーの名前、デフォルトの結合ポリシーかどうか、および適用先のスキーマが表示されます。
 
 For more information on merge policies, see the [Merge Policies user guide](merge-policies.md).
 
@@ -108,14 +108,14 @@ For more information on merge policies, see the [Merge Policies user guide](merg
 
 ## 和集合スキーマ
 
-「 *和集合スキーマ* 」タブを選択して、の和集合スキーマを表示し [!DNL Profile Store]ます。 和集合スキーマとは、同じクラスに属するすべての [!DNL Experience Data Model] (XDM)フィールドを結合したもので、そのスキーマはで使用可能になって [!DNL Real-time Customer Profile]います。 左側のリストでクラスを選択し、キャンバス内の和集合スキーマの構造を表示します。
+「 *和集合スキーマ* 」タブを選択して、の和集合スキーマを表示し [!DNL Profile Store]ます。 A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. 左側のリストでクラスを選択し、キャンバス内の和集合スキーマの構造を表示します。
 
 例えば、「[!DNL XDM Profile]」を選択すると、ク [!DNL XDM Individual Profile] ラスの和集合スキーマが表示されます。
 
-和集合のスキーマとその役割について詳しくは、『 [スキーマ構成ガイド](../../xdm/schema/composition.md) 』の「和集合のスキーマ」の節を参照してくだ [!DNL Real-time Customer Profile]さい。
+See the section on union schemas in the [schema composition guide](../../xdm/schema/composition.md) for more information on union schemas and their role in [!DNL Real-time Customer Profile].
 
 ![](../images/user-guide/profiles-union-schema.png)
 
 ## 次の手順
 
-このガイドを読むと、UIを使用した [!DNL Profile][!DNL Experience Platform] データの表示と管理の方法がわかります。 データを活用してオーディエンスセグメントを生成する方法について詳しくは、セグメント化ドキュメントを参照してください [!DNL Real-time Customer Profile][](../../segmentation/home.md)。
+By reading this guide, you now know how to view and manage your [!DNL Profile] data using the [!DNL Experience Platform] UI. For information on how to leverage [!DNL Real-time Customer Profile] data to generate audience segments, see the [Segmentation documentation](../../segmentation/home.md).
