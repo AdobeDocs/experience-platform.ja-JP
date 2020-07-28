@@ -7,20 +7,20 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '173'
-ht-degree: 2%
+ht-degree: 50%
 
 ---
 
 
 # オブジェクトの削除
 
-DELETEリクエストのパスにIDを指定すると、 [!DNL Catalog] オブジェクトを削除できます。
+You can delete a [!DNL Catalog] object by providing its ID in the path of a DELETE request.
 
 >[!WARNING]
 >
->オブジェクトの削除は元に戻せず、のどこかで改行の変更が行われる場合があるので、注意が必要 [!DNL Experience Platform]です。
+>Take extra care when deleting objects, as this cannot be undone and may produce breaking changes elsewhere in [!DNL Experience Platform].
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
@@ -32,12 +32,12 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 削除する [!DNL Catalog] オブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be deleted. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
-次のリクエストでは、リクエストパスでIDが指定されているデータセットを削除します。
+次のリクエストを実行すると、リクエストパスで ID が指定されたデータセットが削除されます。
 
 ```shell
 curl -X DELETE \
@@ -50,7 +50,7 @@ curl -X DELETE \
 
 **応答**
 
-正常に応答すると、HTTPステータス200(OK)と、削除されたデータセットのIDを含む配列が返されます。 このIDは、DELETE要求で送信されたIDと一致する必要があります。 削除したオブジェクトに対してGETリクエストを実行すると、データセットが正常に削除されたことを確認するHTTPステータス404（見つかりません）が返されます。
+リクエストが成功した場合は、削除したデータセットの ID を含む配列と HTTP ステータス 200（OK）が返されます。この ID は、DELETE リクエストで送信された ID と一致します。削除したオブジェクトに対して GET リクエストを実行すると、HTTP ステータス 404（Not Found）が返され、データセットが正常に削除されたことがわかります。
 
 ```json
 [
@@ -60,4 +60,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->リクエストで指定されたIDに一致する [!DNL Catalog] オブジェクトがない場合、HTTPステータスコード200を引き続き受け取ることができますが、応答配列は空になります。
+>If no [!DNL Catalog] objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.
