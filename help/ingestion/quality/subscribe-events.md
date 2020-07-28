@@ -1,61 +1,61 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: データ取り込みイベントのサブスクライブ
+title: データ取得イベントへのサブスクライブ
 topic: overview
 translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '832'
-ht-degree: 2%
+ht-degree: 38%
 
 ---
 
 
-# データ取り込み通知
+# データ取得通知
 
-データをAdobe Experience Platformに取り込むプロセスは、複数のステップで構成されます。 取り込む必要のあるデータファイルを特定したら、取り込みプロセスが開始され [!DNL Platform]、データが正常に取り込まれるか、取り込まれなくなるまで各ステップが連続して実行されます。 インジェスト処理は、 [Adobe Experience Platformデータ取り込みAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) 、または [!DNL Experience Platform] ユーザーインターフェイスを使用して開始できます。
+Adobe Experience Platform でデータを取得するプロセスは、複数の手順で構成されます。Once you identify data files that need to be ingested into [!DNL Platform], the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. 取得処理は、[Adobe データ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) を使用するか、Experience Platform のユーザーインターフェイスを使用して開始することができます。[!DNL Experience Platform]
 
-に読み込まれたデータ [!DNL Platform] は、読み込み先、またはデータストアに到達するために複数の手順を経る必要 [!DNL Data Lake][!DNL Real-time Customer Profile] があります。 各手順では、データの処理、データの検証、データの格納、データの次の手順への渡しを行います。 取り込まれるデータ量に応じて、この処理は時間がかかる場合があり、検証、セマンティック、または処理エラーが原因でプロセスが失敗する可能性が常にあります。 エラーがイベントした場合は、データの問題を修正し、修正したデータファイルを使用してインジェストプロセス全体を再起動する必要があります。
+Data loaded into [!DNL Platform] must go through multiple steps in order to reach its destination, the [!DNL Data Lake] or the [!DNL Real-time Customer Profile] data store. 各手順では、データの処理やデータの検証が行われ、データが次の手順に渡される前にデータが保存されます。取得されるデータの量によっては、この処理に時間がかかる場合があり、検証、セマンティクスまたは処理エラーが原因でプロセスが失敗する可能性が常にあります。失敗した場合は、データの問題を修正し、修正したデータファイルを使用して取得プロセス全体を再開する必要があります。
 
-取り込みプロセスの監視を支援するため [!DNL Experience Platform] に、プロセスの各ステップで公開された一連のイベントをサブスクライブし、取り込まれたデータの状態と発生し得るエラーを通知する。
+To assist in monitoring the ingestion process, [!DNL Experience Platform] makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures.
 
-## 使用可能な状態通知イベント
+## 使用可能なステータス通知イベント
 
-以下に、サブスクライブ可能なデータ取り込みステータス通知のリストを示します。
+サブスクライブできる使用可能なデータ取得ステータス通知のリストを以下に示しています。
 
 >[!NOTE]
 >
->すべてのデータ取り込み通知に対して1つのイベントトピックのみが提供されます。 異なるステータスを区別するために、イベントコードを使用できます。
+> すべてのデータ取得通知に対して 1 つのイベントトピックのみが提供されます。異なるステータスを区別するために、イベントコードを使用できます。
 
-| Platformサービス | Status | イベントの説明 | イベントコード |
+| プラットフォームサービス | ステータス | イベントの説明 | イベントコード |
 | ---------------- | ------ | ----------------- | ---------- |
-| データのランディング | success | 取り込み — バッチが成功しました | ing_load_success |
-| データのランディング | 失敗 | 取り込み — バッチが失敗しました | ing_load_failure |
-| リアルタイム顧客プロファイル | success | プロファイルサービス — データ読み込みバッチが成功しました | ps_load_success |
-| リアルタイム顧客プロファイル | 失敗 | プロファイルサービス — データ読み込みバッチが失敗しました | ps_load_failure |
-| 識別グラフ | success | IDグラフ — データ読み込みバッチが成功しました | ig_load_success |
-| 識別グラフ | 失敗 | IDグラフ — データの読み込みバッチに失敗しました | ig_load_failure |
+| データランディング | 成功 | 取得 - バッチが成功しました | ing_load_success |
+| データランディング | 失敗 | 取得 - バッチが失敗しました | ing_load_failure |
+| リアルタイム顧客プロファイル | 成功 | プロファイルサービス - データの読み込みバッチが成功しました | ps_load_success |
+| リアルタイム顧客プロファイル | 失敗 | プロファイルサービス - データの読み込みバッチが失敗しました | ps_load_failure |
+| ID グラフ | 成功 | ID グラフ - データの読み込みバッチが成功しました | ig_load_success |
+| ID グラフ | 失敗 | ID グラフ - データの読み込みバッチが失敗しました | ig_load_failure |
 
 ## 通知ペイロードスキーマ
 
-データ取り込み通知イベントスキーマは、取り込まれるデータの状態に関する詳細を提供するフィールドと値を含む [!DNL Experience Data Model] (XDM)スキーマです。 最新の [!DNL GitHub] 通知ペイロードスキーマを表示するには、パブリックXDM [レポートを参照してください](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)。
+The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json).
 
 ## データ取り込みステータス通知のサブスクライブ
 
-Adobe I/O [イベントを通じて](https://www.adobe.io/apis/experienceplatform/events.html)、Webフックを使用して複数の通知タイプをサブスクライブできます。 以下の節では、Adobe Developer Consoleを使用してデータ取り込みイベントの通知をサブスクライブする手順を説明します。 [!DNL Platform]
+[Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) を使用すると、Web フックで複数の通知タイプにサブスクライブできます。以下の節では、Adobeデベロッパーコンソールを使用してデータ取り込みイベントの [!DNL Platform] 通知をサブスクライブする手順を説明します。
 
-### Adobe Developer Consoleでの新しいプロジェクトの作成
+### Adobeデベロッパーコンソールでの新しいプロジェクトの作成
 
-Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](https://www.adobe.com/go/devs_console_ui) 。 次に、Adobe Developer Consoleドキュメントで空のプロジェクトの [作成に関するチュートリアルに概要を説明している手順に従い](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ます。
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. 次に、Adobeデベロッパーコンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
 ### プロジェクトへの追加イベント [!DNL Experience Platform]
 
-新しいプロジェクトを作成したら、そのプロジェクトの概要画面に移動します。 ここから、 **[!UICONTROL イベントをクリックします]**。
+新しいプロジェクトを作成したら、そのプロジェクトの概要画面に移動します。 From here, click **[!UICONTROL Add event]**.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-[ _[!UICONTROL イベント]_]ダイアログが表示されます。 「**[!UICONTROL  Experience Platform ]**」をクリックして利用可能なオプションのリストをフィルターし、「**[!UICONTROL &#x200B;次へ&#x200B;]**」をクリックする前に**[!UICONTROL  Platform通知&#x200B;]**をクリックします。
+The _[!UICONTROL Add events]_dialog appears. 「**[!UICONTROL  Experience Platform ]**」をクリックして利用可能なオプションのリストをフィルターし、「**[!UICONTROL &#x200B;次へ&#x200B;]**」をクリックする前に**[!UICONTROL  Platform通知&#x200B;]**をクリックします。
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
@@ -79,7 +79,7 @@ Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](htt
 
 ![](../images/quality/subscribe-events/registration-details.png)
 
-同じ画面の下で、イベントの受信方法をオプションで設定できます。 **[!UICONTROL Webhook]** では、イベントを受け取るカスタムWebフックアドレスを指定できますが、 **[!UICONTROL Runtime action]** では、 [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+同じ画面の下で、イベントの受信方法をオプションで設定できます。 **[!UICONTROL Webhook]** では、イベントを受け取るカスタムWebフックアドレスを指定できますが、 **[!UICONTROL Runtime action]** では [Adobe I/O Runtimeを使用して同じことを行えます](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)。
 
 このチュートリアルでは、このオプションの設定手順は省略します。 完了したら、「設定済みのイベントを **[!UICONTROL 保存]** 」をクリックしてイベントの登録を完了します。
 
@@ -91,4 +91,4 @@ Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](htt
 
 ## 次の手順
 
-プロジェクトに [!DNL Platform] 通知を登録すると、プロジェクトダッシュボードから受信したイベントを表示できます。 イベントをトレースする方法の詳細な手順については、『 [Adobe I/Oイベントのトレース](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) 』ガイドを参照してください。
+プロジェクトに [!DNL Platform] 通知を登録すると、プロジェクトダッシュボードから受信したイベントを表示できます。 イベントのトレース方法の詳細については、「[Adobe I/O Events のトレース](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)」に関するガイドを参照してください。
