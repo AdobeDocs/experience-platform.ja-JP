@@ -1,43 +1,43 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: データ重複排除 - 重複
+title: データ重複排除
 topic: queries
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 1%
+ht-degree: 75%
 
 ---
 
 
 # データ重複排除 - 重複 [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] では、行全体を重複から削除する必要がある場合や、行のデータの一部だけが計算に含まれるので、特定のフィールドのセットを無視する場合に、データ重複排除 - 重複がサポートされます。 重複排除 - 重複の一般的なパターンでは、ウィンドウ全体でID `ROW_NUMBER()` 関数、またはIDのペアを順番に(XDM [!DNL Experience Data Model]`timestamp` フィールドを使用して)使用し、重複が検出された回数を表す新しいフィールドを返します。 この値がの場合、は元のインスタンス `1`を参照し、ほとんどの場合は使用するインスタンスを参照します。他のインスタンスはすべて無視します。 これは、多くの場合、集計カウントの実行のように高いレベルで重複排除 - 重複が行われる下位選択の中で行われ `SELECT` ます。
+Adobe Experience Platform [!DNL Query Service] supports data deduplication when it may be required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is a duplicate. The common pattern for deduplication involves using the `ROW_NUMBER()` function across a window for an ID, or pair of IDs, over ordered time (using the [!DNL Experience Data Model] (XDM) `timestamp` field) to return a new field that represents the number of times a duplicate has been detected. この値が `1` の場合は元のインスタンスを参照します。ほとんどの場合は、使用したいインスタンスを参照し、他のすべてのインスタンスを無視します。多くの場合、集計カウントの実行など、上位の `SELECT` で重複排除が実行されるサブ選択内でおこなわれます。
 
 ## 使用例
 
-重複排除 - 重複の使用例の中には、日付範囲全体でグローバルなものや、内の単一の訪問者またはエンドユーザーIDに制限されるものもあり `identityMap`ます。
+重複排除の使用例の中には、日付範囲全体でグローバルなものや、`identityMap` 内の単一の訪問者またはエンドユーザー ID に制限されるものもあります。
 
-次のドキュメントでは、3つの一般的な使用例の重複を除外するための、下位選択と完全なサンプルクエリの例を概説します。
+次のドキュメントでは、3 つの一般的な使用例の重複を除外するための、サブ選択と完全なサンプルクエリの例について説明します。
 - [ExperienceEvents](#experienceevents)
 - [購入](#purchases)
 - [指標](#metrics)
 
 ### ExperienceEvents {#experienceevents}
 
-重複のExperienceEventsの場合は、行全体を無視するとよいでしょう。
+ExperienceEvents が重複した場合、行全体を無視する可能性が高くなります。
 
 >[!CAUTION]
 >
->の多くのデータセット [!DNL Experience Platform]（Adobe Data Connectorで作成されたものを含む）には、既にExperienceEventレベルの重複排除 - 重複が適用されています。 したがって、このレベルの重複排除 - 重複を再適用する必要がなく、クエリが遅くなります。 DataSetのソースを理解し、ExperienceEventレベルでの重複排除 - 重複が既に適用されているかどうかを知ることが重要です。 ストリーム化されるすべてのデータセット(例えば、Adobe Targetからのデータセット)に対しては、「少なくとも1回」のセマンティックがあるので、ExperienceEventレベルの重複排除 - 重複を適用する必要があります。
+>Many DataSets in [!DNL Experience Platform], including those produced by the Adobe Analytics Data Connector, already have ExperienceEvent-level deduplication applied. したがって、このレベルの重複排除を再適用する必要はなく、最適用するとクエリの速度が低下します。データセットのソースを理解し、ExperienceEvent レベルで重複排除が既に適用されているかどうかを把握することが重要です。ストリーミングされるすべてのデータセット（例：Adobe Target からのデータセット）に対して、ExperienceEvent レベルで重複排除を適用する必要があります。これらのデータソースには「1 回以上」のセマンティクスが含まれているためです。
 
-**範囲：** グローバル
+**範囲：**&#x200B;グローバル
 
 **ウィンドウキー：** id
 
-#### 下位選択
+#### サブ選択
 
 ```sql
 SELECT *,
@@ -63,13 +63,13 @@ SELECT COUNT(*) AS num_events FROM (
 
 ### 購入 {#purchases}
 
-重複の購入がある場合は、ExperienceEvent行のほとんどをそのまま残し、購入に結び付けられたフィールド（指標など）は無視するとよいでしょう。 `commerce.orders` 購入の場合、購入IDには特別なフィールドがあります。 このフィールドは `commerce.order.purchaseID`です。
+重複の購入がある場合は、ExperienceEvent 行のほとんどを残しておき、購入に関連付けられたフィールド（`commerce.orders` 指標など）は無視することができます。購入の場合、購入 ID 用の特別なフィールドがあります。このフィールドは `commerce.order.purchaseID` です。
 
-**範囲：** 訪問者
+**範囲：**&#x200B;訪問者
 
-**ウィンドウキー：** identityMap[$名前空間].id &amp; commerce.order.purchaseID
+**ウィンドウキー：** identityMap[$NAMESPACE].id &amp; commerce.order.purchaseID
 
-#### 下位選択
+#### サブ選択
 
 ```sql
 SELECT *,
@@ -103,13 +103,13 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 
 ### 指標 {#metrics}
 
-オプションの一意のIDを使用する指標があり、そのIDの重複が表示される場合は、その指標値を無視して、ExperienceEventの残りの部分を保持する必要があります。 XDMでは、ほとんどすべての指標で、重複排除 - 重複に使用できるオプションの `Measure``id` フィールドを含むデータ型が使用されます。
+オプションの一意の ID を使用する指標があり、その ID の重複が表示される場合は、その指標値を無視して、残りの ExperienceEvent を保持する必要があります。XDM では、ほとんどすべての指標で、重複排除に使用できるオプションの `Measure` フィールドを含む `id` データ型を使用します。
 
-**範囲：** 訪問者
+**範囲：**&#x200B;訪問者
 
-**ウィンドウキー：** identityMap[$名前空間].idおよび測定オブジェクトのID
+**ウィンドウキー：** identityMap[$NAMESPACE].id および測定オブジェクトの ID
 
-#### 下位選択
+#### サブ選択
 
 ```sql
 SELECT *,
