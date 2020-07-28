@@ -7,16 +7,16 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 4%
+ht-degree: 73%
 
 ---
 
 
 # バッチの作成
 
-データセットがデータを取り込むには、データセットにバッチが関連付けられている必要があります。 既存のデータセットの `id` 値を使用して、 `/batches`[!DNL Catalog] APIのエンドポイントにPOSTリクエストを行うことで、バッチを作成できます。
+データセットがデータを取得するには、バッチが関連付けられている必要があります。Using the `id` value of an existing dataset, you can create a batch by making a POST request to the `/batches` endpoint in the [!DNL Catalog] API.
 
-**API形式**
+**API 形式**
 
 ```HTTP
 POST /batches
@@ -39,11 +39,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `datasetId` | バッチ `id` が関連付けられるデータセットの名前。 |
+| `datasetId` | バッチが関連付けられるデータセットの `id`。 |
 
 **応答**
 
-正常な応答は、HTTPステータス201（作成済み）と、新しく作成されたバッチの詳細（読み取り専用の、システムで生成された文字列を含む） `id`を含む応答オブジェクトを返します。
+正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたバッチの詳細（読み取り専用の、システムで生成された `id` 文字列を含む）を含む応答オブジェクトを返します。
 
 ```JSON
 {
