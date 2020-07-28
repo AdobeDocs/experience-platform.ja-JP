@@ -1,24 +1,24 @@
 ---
 title: 宛先のタイプとカテゴリ
 seo-title: 宛先のタイプとカテゴリ
-description: 'アドビのリアルタイム顧客データPlatformでは、プロファイル/セグメントエクスポート先は、イベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先にエクスポートします。 起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 '
-seo-description: アドビのリアルタイム顧客データPlatformでは、プロファイル/セグメントエクスポート先は、イベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先にエクスポートします。 起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。
+description: 'アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 '
+seo-description: アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
 source-wordcount: '580'
-ht-degree: 7%
+ht-degree: 93%
 
 ---
 
 
 # 宛先のタイプとカテゴリ
 
-このページを読んで、アドビのリアルタイム顧客データPlatform先の様々なタイプとカテゴリについて理解してください。
+このページを読んで、アドビのリアルタイム顧客データプラットフォームの様々なタイプとカテゴリについて理解してください。
 
-## 送信先のタイプ
+## 宛先のタイプ
 
-アドビのリアルタイム顧客データPlatformでは、接続と拡張の2種類の宛先を区別します。 接続先には、プロファイルエクスポート先とセグメントエクスポート先の2種類があります。
+アドビのリアルタイム顧客データプラットフォームには、接続と拡張機能という 2 つのタイプの宛先があります。接続の宛先には、プロファイルの書き出しの宛先と、セグメントの書き出しの宛先があります。
 
 ![宛先のタイプ](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -26,21 +26,21 @@ ht-degree: 7%
 
 ### 接続
 
-**[!UICONTROL Adobe Real-time Customer]** DataPlatform取得イベントデータのプロファイルエクスポート **[!UICONTROL および]** セグメントエクスポートの宛先 [](/help/profile/home.md)。他のデータソースと組み合わせて、リアルタイム顧客プロファイルを形成し、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先に適用します。
+アドビのリアルタイム顧客データプラットフォームのキャプチャイベントデータでは、**[!UICONTROL プロファイル書き出し]**&#x200B;および&#x200B;**[!UICONTROL セグメント書き出し]**&#x200B;の宛先は、イベントデータを取り込み、他のデータソースと組み合わせて[リアルタイム顧客プロファイル](/help/profile/home.md)を形成、セグメント化を適用し、セグメントと適格なプロファイルを宛先に適用します。
 
 <br> 
 
 #### プロファイルの書き出し先
 
-プロファイル書き出し先は、プロファイルや属性を含むファイルを生成します。これらの宛先は生データを使用し、多くの場合、電子メールアドレスを主キーとして使用します。宛先は [Amazon S3クラウドストレージ](/help/rtcdp/destinations/amazon-s3-destination.md) 、プロファイルエクスポートを含むファイルをデポジットできる宛先の例です。
+プロファイル書き出し先は、プロファイルや属性を含むファイルを生成します。これらの宛先は生データを使用し、多くの場合、電子メールアドレスを主キーとして使用します。[Amazon S3 クラウドストレージの宛先](/help/rtcdp/destinations/amazon-s3-destination.md)は、プロファイルの書き出しを含むファイルを配置できる、宛先の一例です。
 
 #### セグメントの書き出し先
 
-セグメントのエクスポート先は、プロファイルと、それらが資格を得たセグメントを宛先プラットフォームに送信します。 これらの宛先では、セグメント ID またはユーザー ID を使用します。例えば、 [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) やなどの広告先 [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) があります。
+セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。Advertising destinations such as [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) or [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
 
-#### プロファイルのエクスポート先とセグメントのエクスポート先 — ビデオの概要
+#### プロファイルの書き出しとセグメントの書き出し先 - ビデオの概要
 
-次のビデオでは、2種類の宛先に関する特別な点を説明しています。
+次のビデオでは、2 種類の宛先の詳細について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
@@ -48,31 +48,31 @@ ht-degree: 7%
 
 ### 拡張機能
 
-Adobe Real-time CDPは、Adobe Real-time CDPインターフェイスにLaunch拡張機能を組み込むためのExperience Platform Launchの力と柔軟性を活用します。
+アドビのリアルタイム CDP は、Experience Platform Launch の機能と柔軟性を活用して、アドビのリアルタイム CDP インターフェイスに Launch 拡張機能を組み込みます。
 
 >[!TIP]
 >
 >使用事例やインターフェイス内での使用事例を含むExperience Platform Launch拡張機能について詳しくは、 [起動拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
-起動拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 拡張機能は、宛先の **イベント転送** (Destination)タイプと考えてください。 これは、生のイベントデータのみを転送する、宛先プラットフォームとの統合のよりシンプルなタイプです。 例えば、 [Gainsightパーソナライゼーション拡張機能](/help/rtcdp/destinations/gainsight-extension.md) 、またはCustomer拡張機能の [Confirmit Voice](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)。
+Launch の拡張機能は、イベントの生データを複数の種類の宛先に転送します。この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](/help/rtcdp/destinations/gainsight-extension.md)や [Confirmit Voice of the Customer 拡張機能](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)などがあります。
 
-![他の宛先と比較したExperience Platform Launch拡張](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+![Experience Platform Launch 拡張機能と他の宛先との比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
 <br> 
 
-### 接続と拡張を使用するタイミング
+### 接続と拡張機能を使用するタイミング
 
-マーケティング担当者は、接続と拡張の組み合わせを使用して、使用事例に対処できます。
+マーケターは、接続と拡張機能の組み合わせを使用して、お客様の使用例に対処できます。
 
-接続は、アクティベーションのために完全な一元化された顧客プロファイルまたは顧客セグメントを活用する必要がある場合に役立ちます。 例えば、パーソナライズされたメッセージをそのユーザーに配信する前に、Analyticsシステムの行動データとアップロードされたCRMデータを結合して、特定のセグメントのユーザーを絞り込む場合は、接続を使用します。
+接続は、完全な一元化された顧客プロファイルまたは顧客セグメントをアクティベーションに活用する必要がある場合に役立ちます。例えば、アップロードされた CRM データを含む Analytics システムの行動データを結合して、ユーザーにパーソナライズされたメッセージを配信する前に、特定のセグメントに対してそのユーザーを評価する場合、接続を使用します。
 
-拡張機能は、イベントデータを使用してアクションをトリガーしたり、外部環境でセグメント化を行う場合に便利です。 例えば、行動データを外部システムに転送する必要がある場合、特定のユーザーのファイル上の他のデータソースに結合する必要はありません。
+拡張機能は、イベントデータを使用してアクションをトリガーしたり、外部環境でセグメント化をおこなう場合に役立ちます。例えば、特定のユーザーについて、行動データをファイル上の他のデータソースと結合せずに、外部システムに転送する必要がある場合です。
 
 <br> 
 
 ## 宛先カテゴリ
 
-リンク先カタログのカテゴリと拡張 [子は、目的のマーケティングの用途に応じて、リンク先のストレージ(](https://platform.adobe.com/destination/catalog) Advertising ****、 **Cloudプラットフォーム、調査プラットフォーム、電子メールマーケティング**********、email marketingなど)別にグループ化されます。 各カテゴリおよび各カテゴリに含まれる宛先について詳しくは、 [Destinationsカタログドキュメントを参照してください](/help/rtcdp/destinations/destinations-catalog.md)。
+[宛先カテゴリ](https://platform.adobe.com/destination/catalog)内の接続と拡張機能は、達成できるよう、マーケティングの使用例に応じて、宛先カテゴリ（**広告**、**クラウドストレージ**、**調査プラットフォーム**、**電子メールマーケティング**&#x200B;など）でグループ化されます。各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](/help/rtcdp/destinations/destinations-catalog.md)を参照してください。
 
 ![宛先カテゴリ](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
