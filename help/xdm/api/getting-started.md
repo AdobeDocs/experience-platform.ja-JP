@@ -1,67 +1,67 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: スキーマレジストリAPI開発者ガイド
+title: Schema Registry API 開発者ガイド
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
 source-wordcount: '1195'
-ht-degree: 0%
+ht-degree: 71%
 
 ---
 
 
 # [!DNL Schema Registry] API開発者ガイド
 
-は、Adobe Experience Platform内のスキーマライブラリにアクセスするために使用 [!DNL Schema Registry] され、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスとRESTful APIを提供します。
+The [!DNL Schema Registry] is used to access the Schema Library within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
 
-スキーマレジストリAPIを使用して、Adobe Experience Platform内で使用できるすべてのスキーマおよび関連リソースを表示および管理するために、基本的なCRUD操作を実行できます。 これには、アドビ、 [!DNL Experience Platform] パートナー、および使用するアプリケーションのベンダーが定義するものも含まれます。 また、API呼び出しを使用して、組織の新しいスキーマやリソース、既に定義した表示や編集のリソースを作成することもできます。
+Schema Registry API を使用すると、基本的な CRUD 操作を実行して、Adobe Experience Platform 内で使用可能なすべてのスキーマと関連リソースを表示および管理できます。This includes those defined by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. また、API 呼び出しを使用して、組織の新しいスキーマやリソースを作成したり、定義済みリソースの表示や編集をおこなうこともできます。
 
-この開発者ガイドでは、 [!DNL Schema Registry] APIを使用する開始に役立つ手順を説明します。 次に、を使用して主要な操作を実行するためのサンプルAPI呼び出しを提供し [!DNL Schema Registry]ます。
+This developer guide provides steps to help you start using the [!DNL Schema Registry] API. The guide then provides sample API calls for performing key operations using the [!DNL Schema Registry].
 
 ## 前提条件
 
-このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
+このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [!DNL Experience Data Model (XDM) System](../home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   * [スキーマ構成の基本](../schema/composition.md): XDMスキーマの基本的な構成要素について説明します。
+   * [Basics of schema composition](../schema/composition.md)：XDM スキーマの基本的な構成要素について説明しています。
 * [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-以下の節では、 [!DNL Schema Registry] APIを正しく呼び出すために知る必要がある追加情報について説明します。
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Schema Registry] API.
 
-## サンプルAPI呼び出しの読み取り
+## API 呼び出し例の読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-## 必要なヘッダーの値の収集
+## 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* 認証： 無記名 `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Schema Registry]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-に対するすべてのルックアップ(GET)リクエストには、追加のAcceptヘッダーが [!DNL Schema Registry] 必要です。このヘッダーの値によって、APIから返される情報の形式が決まります。 詳細については、下の「 [承認ヘッダー](#accept) 」セクションを参照してください。
+All lookup (GET) requests to the [!DNL Schema Registry] require an additional Accept header, whose value determines the format of information returned by the API. 詳しくは、この後の [Accept ヘッダー](#accept)の節を参照してください。
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 * Content-Type: application/json
 
-## TENANT_IDの確認 {#know-your-tenant_id}
+## 使用する TENANT_ID {#know-your-tenant_id}
 
-このガイド全体で、に関するリファレンスを確認でき `TENANT_ID`ます。 このIDは、作成するリソースの名前が適切に指定され、IMS組織内に含まれていることを確認するために使用されます。 IDがわからない場合は、次のGETリクエストを実行してIDにアクセスできます。
+このガイド全体を通して、`TENANT_ID` への参照が使用されます。この ID は、作成したリソースに名前空間が適切に設定されていること、またそのリソースが IMS 組織内に格納されていることを確認するために使用されます。ID が不明な場合は、次の GET リクエストを実行して ID にアクセスします。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /stats
@@ -78,9 +78,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-「正常に完了」と表示されると、組織でのの使用に関する情報が返され [!DNL Schema Registry]ます。 属性が含まれ、その値がお客様の `tenantId` 属性で `TENANT_ID`す。
+A successful response returns information regarding your organization&#39;s use of the [!DNL Schema Registry]. この中には `TENANT_ID` の値である `tenantId` 属性が含まれています。
 
 ```JSON
 {
@@ -157,63 +157,63 @@ curl -X GET \
  }
 ```
 
-* `tenantId`: IMS組織の `TENANT_ID` 値。
+* `tenantId`：IMS組織の `TENANT_ID` 値。
 
-## 詳しくは、 `CONTAINER_ID` {#container}
+## `CONTAINER_ID` について {#container}
 
-APIの呼び出しには、 [!DNL Schema Registry] APIの使用が必要で `CONTAINER_ID`す。 API呼び出しは次の2つのコンテナに対して実行できます。 グ **ローバルコンテナ** と **テナントコンテナ**。
+Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. API 呼び出しを実行できるコンテナには、**グローバル**&#x200B;コンテナと **テナント**&#x200B;コンテナの 2 つがあります。
 
 ### グローバルコンテナ
 
-グローバルコンテナは、すべての標準的なアドビと [!DNL Experience Platform] パートナーが提供するクラス、ミックスイン、データ型、スキーマを保持します。 リストおよびルックアップ(GET)リクエストは、グローバルコンテナに対してのみ実行できます。
+The global container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, mixins, data types, and schemas. リストリクエストと検索（GET）リクエストを実行できるのは、グローバルコンテナに対してのみです。
 
 ### テナントコンテナ
 
-独自のクラス、ミックスイン、データ型、スキーマ `TENANT_ID`、およびIMS組織で定義されている記述子は、テナントコンテナにすべて保持されています。 これらは各組織に固有のものであり、他のIMS組織では表示されず、管理もできません。 テナントコンテナで作成するリソースに対して、すべてのCRUD操作(GET、POST、PUT、PATCH、DELETE)を実行できます。
+固有の `TENANT_ID` と混同しないでください。テナントコンテナには、IMS 組織が定義したすべてのクラス、Mixin、データタイプ、スキーマ、および記述子が格納されます。これらは各組織に固有のもので、他の IMS 組織では表示も管理もできません。テナントコンテナで作成したリソースに対して、すべての CRUD 操作（GET、POST、PUT、PATCH、DELETE）を実行できます。
 
-テナントコンテナでクラス、ミックスイン、スキーマ、またはデータ型を作成すると、そのクラスはに保存され、のを含む [!DNL Schema Registry] URIが割り当てられ `$id``TENANT_ID`ます。 これ `$id` は、特定のリソースを参照するためにAPI全体で使用されます。 値の例については、次の節で説明します。 `$id`
+When you create a class, mixin, schema or data type in the tenant container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. この `$id` は、API 全体で特定のリソースを参照する際に使用されます。`$id` 値の例については、次の節で説明します。
 
-## スキーマ同定 {#schema-identification}
+## スキーマの識別 {#schema-identification}
 
-スキーマは、次のようなURIの形式で `$id` 属性によって識別されます。
+スキーマは、次のような URI 形式の `$id` 属性で識別されます。
 * `https://ns.adobe.com/xdm/context/profile`
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421`
 
-URIをRESTに対応させるために、スキーマは、次のようなプロパティにURIのドット表記エンコードを含めることもでき `meta:altId`ます。
+URI をより REST に適したものにするために、スキーマでは、`meta:altId` と呼ばれるプロパティで、ドット表記でエンコードされた URI を使用できます。
 * `_xdm.context.profile`
 * `_{TENANT_ID}.schemas.7442343-abs2343-21232421`
 
-スキーマレジストリAPIの呼び出しは、URLエンコードされた `$id` URIまたは `meta:altId` （ドット表記の形式）をサポートします。 ベストプラクティスは、APIに対して次のようにREST呼び出しを行う場合に、URLエンコードされた `$id` URIを使用することです。
+Schema Registry API への呼び出しでは、URL エンコードされた `$id` URI または `meta:altId`（ドット表記の形式）がサポートされています。API への REST 呼び出しを実行する際には、URL エンコードされた `$id` URI を使用することをお勧めします。
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
-## ヘッダーを受け入れる {#accept}
+## Accept ヘッダー {#accept}
 
-APIでリストと参照(GET)操作を実行する場合、APIから返されるデータの形式を決定するためにAcceptヘッダーが必要です。 [!DNL Schema Registry] 特定のリソースを検索する場合は、Acceptヘッダーにバージョン番号も含める必要があります。
+When performing list and lookup (GET) operations in the [!DNL Schema Registry] API, an Accept header is required to determine the format of the data returned by the API. 特定のリソースを検索する場合は、Accept ヘッダーにバージョン番号も含める必要があります。
 
-次の表に示す互換性のあるリストーのうち、バージョン番号を持つヘッダー値を受け入れる方法と、ヘッダー値を使用した場合にAPIが返す内容を説明します。
+次の表に、互換性のある Accept ヘッダー値（バージョン番号を持つヘッダー値を含む）と、そのヘッダー値を使用したときに API が返す内容の説明を示します。
 
-| 同意 | 説明 |
+| Accept | 説明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed-id+json` | IDのみのリストを返します。 これは、リソースのリスト表示に最も一般的に使用されます。 |
-| `application/vnd.adobe.xed+json` | 元の値を含め、完全なJSONスキーマのリスト `$ref` を返 `allOf` します。 これは、完全なリソースのリストを返すために使用されます。 |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | ANDを使用したRaw XDM `$ref` で `allOf`す。 タイトルと説明があります。 |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 属性を `allOf` 解決します。 タイトルと説明があります。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | ANDを使用したRaw XDM `$ref` で `allOf`す。 タイトルや説明はありません。 |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 属性を `allOf` 解決します。 タイトルや説明はありません。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 属性を `allOf` 解決します。 記述子が含まれます。 |
+| `application/vnd.adobe.xed-id+json` | ID のリストのみを返します。これは、リソースを一覧表示する際に最も使用される値です。 |
+| `application/vnd.adobe.xed+json` | 元の `$ref` および `allOf` を含むフル JSON スキーマのリストを返します。これは、全リソースのリストを返す際に使用されます。 |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | `$ref` と `allOf` を含む未処理の XDM です。タイトルと説明があります。 |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 属性と解決された `allOf`。タイトルと説明があります。 |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | `$ref` と `allOf` を含む未処理の XDM です。タイトルや説明はありません。 |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 属性と解決された `allOf`。タイトルや説明はありません。 |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 属性と解決された `allOf`。記述子が含まれます。 |
 
 >[!NOTE]
 >
->バージョンのみを指定する場合( `major` 例： 1、2、3)、レジストリは最新 `minor` バージョン(例： .1、.2、.3)が自動的に更新されます。
+>`major` バージョン（1、2、3 など）のみを指定した場合、レジストリは最新の `minor` バージョン（.1、.2、.3 など）を自動的に返します。
 
-## XDMフィールドの制約とベストプラクティス
+## XDM フィールドの制約とベストプラクティス
 
-スキーマのフィールドは、その `properties` オブジェクト内に一覧表示されます。 各フィールドはオブジェクトであり、フィールドに格納できるデータを記述し、制約する属性を含みます。
+スキーマのフィールドは、その `properties` オブジェクト内にリストされます。各フィールド自体はオブジェクトで、フィールドに格納できるデータを記述および制約する属性を含みます。
 
-APIでのフィールドタイプの定義について詳しくは、 [付録](appendix.md) （最も一般的に使用されるデータタイプのコードサンプルやオプションの制約事項を含む）を参照してください。
+API でのフィールドの種類の定義について詳しくは、このガイドの[付録](appendix.md)を参照してください。この付録には、最も一般的に使用されるデータタイプ用のコードサンプルとオプションの制約が示されています。
 
-以下のサンプルフィールドは、適切に形式設定されたXDMフィールドを示しています。このフィールドには、命名の制約とベストプラクティスに関する詳細が以下に示されています。 これらの慣行は、類似の属性を含む他のリソースを定義する場合にも適用できます。
+以下のサンプルフィールドは、適切に形式が設定された XDM フィールドを表しています。サンプルコードの下に、命名時の制約とベストプラクティスが示されています。これらのベストプラクティスは、同様の属性を含むその他のリソースを定義する際にも適用できます。
 
 ```JSON
 "fieldName": {
@@ -227,19 +227,19 @@ APIでのフィールドタイプの定義について詳しくは、 [付録](a
 }
 ```
 
-* フィールドオブジェクトの名前には、英数字、ダッシュ、アンダースコアを含めることができますが、アンダースコアを含む **開始は使用できません** 。
-   * **正しい構文：** `fieldName`, `field_name2`, `Field-Name``field-name_3`
-   * **誤った構文：**`_fieldName`
-* fieldオブジェクトの名前にはcamelCaseをお勧めします。 例: `fieldName`
-* フィールドには、「単語の先頭のみ大文字」 `title`で記述された「名称」を含める必要があります。 例: `Field Name`
-* フィールドにはが必要で `type`す。
-   * 特定の型を定義するには、オプションが必要な場合があり `format`ます。
-   * 特定のデータのフォーマットが必要な場合は、配列として追加 `examples` できます。
-   * フィールドの種類は、レジストリ内の任意のデータ型を使用して定義することもできます。 詳しくは、このガイドのデータ型の [作成に関する節](create-data-type.md) を参照してください。
-* は、フィールド `description` とフィールドデータに関する関連情報を説明します。 スキーマにアクセスした人がフィールドの意図を理解できるように、明確な言葉で全文書に記述する必要があります。
+* フィールドオブジェクトの名前には、英数字、ダッシュ、アンダースコアの各文字を使用できますが、先頭にアンダースコアを配置することは&#x200B;**できません**。
+   * **正しい：**`fieldName`、`field_name2`、`Field-Name`、`field-name_3`
+   * **誤り：**`_fieldName`
+* フィールドオブジェクトの名前には、キャメルケースを使用することをお勧めします。例：`fieldName`
+* フィールドには `title` が必要です。これは、単語の先頭のみ大文字で記述します。例：`Field Name`
+* フィールドには `type` が必要です。
+   * 特定のタイプを定義する場合、オプションの `format` が必要なことがあります。
+   * データに特定の形式を設定する必要がある場合は、`examples` を配列として追加できます。
+   * フィールドの種類は、レジストリで任意のデータタイプを使用して定義することもできます。詳しくは、このガイドの[データタイプの作成](create-data-type.md)に関する節を参照してください。
+* `description` では、フィールドとフィールドデータについての関連情報を表します。スキーマにアクセスした人が誰でもフィールドの意図を理解できるように、明確な言葉で記述する必要があります。
 
-APIでフィールドタイプを定義する方法について詳しくは、 [付録](appendix.md) を参照してください。
+API でフィールドの種類を定義する方法について詳しくは、[付録](appendix.md)を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、必要な認証資格情報を含む、 [!DNL Schema Registry] APIを呼び出すために必要な前提条件に関する知識を説明します。 これで、この開発者ガイドに記載されているサンプル呼び出しに進み、それらの指示に従うことができます。 APIでのスキーマの作成方法に関する詳しい手順説明については、次の [チュートリアルを参照してください](../tutorials/create-schema-api.md)。
+This document covered the prerequisite knowledge required to make calls to the [!DNL Schema Registry] API, including required authentication credentials. これで、この開発者ガイドに記載されているサンプル呼び出しに進み、その手順に従うことができます。API でのスキーマの作成手順について詳しくは、[こちら](../tutorials/create-schema-api.md)のチュートリアルを参照してください。
