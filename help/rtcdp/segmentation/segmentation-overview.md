@@ -28,4 +28,4 @@ Real-time CDP is built on top of Adobe Experience Platform and utilizes many of 
 
 ## 次の手順
 
-After reading this overview, you should now understand how Real-time CDP utilizes [!DNL Segmentation Service] to enhance customization and personalization of marketing campaigns. の詳細については、「 [!DNL Segmentation Service]セグメント化ドキュメント [](../../segmentation/home.md)」を参照してください。
+After reading this overview, you should now understand how Real-time CDP utilizes [!DNL Segmentation Service] to enhance customization and personalization of marketing campaigns. For more information about the [!DNL Segmentation Service], please read the [Segmentation documentation](../../segmentation/home.md).
