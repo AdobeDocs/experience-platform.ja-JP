@@ -18,7 +18,7 @@ Adobe Experience Platformの設定 [!DNL Web SDK] は2か所に分かれます�
 
 ## エッジ設定IDの作成
 
-エッジ設定IDは、Adobeでエッジ設定ツールを [!DNL Launch] 使用して作成できます。 このツールを使用すると、エッジ設定と、それらの設定内の環境の両方を作成できます。
+エッジ設定IDは、エッジ設定ツールを使用してAdobe [!DNL Launch] で作成できます。 このツールを使用すると、エッジ設定と、それらの設定内の環境の両方を作成できます。
 
 ![エッジ設定ツールのナビゲーション](../../assets/edge_configuration_nav.png)
 
@@ -98,13 +98,13 @@ Adobe Targetを設定するには、クライアントコードを指定する�
 
 [Adobe Targetの環境](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) は、開発のすべての段階を通じて実装を管理するのに役立ちます。 この設定は、各環境で使用する環境を指定します。
 
-簡単な設定にするために、 `dev`、 `stage``prod` エッジ設定環境ごとに異なる設定を行うことをお勧めします。 ただし、既に [!UICONTROL Adobe Target環境が定義されている場合は] 、それらを使用できます。
+Adobeでは、この設定を簡単にするために、 `dev`、、 `stage`および `prod` エッジ設定環境ごとに異なる方法で行うことをお勧めします。 ただし、既に [!UICONTROL Adobe Target環境が定義されている場合は] 、それらを使用できます。
 
 #### Adobe Audience Manager
 
 Adobe Audience Managerにデータを送信する際に必要なのは、このセクションを有効にすることだけです。 その他の設定はオプションですが、推奨されています。
 
-![Adobeオーディエンス管理設定ブロック](../../assets/edge_configuration_aam.png)
+![Adobeオーディエンス設定の管理ブロック](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Cookieの宛先が有効]
 
@@ -116,10 +116,10 @@ SDKが [URLの宛先を介してセグメント情報を共有できるように
 
 #### Adobe Analytics
 
-データをアドビのAnalyticsに送信するかどうかを制御します。 詳細は [Analytics概要](../solution-specific/analytics/analytics-overview.md)。
+データをAdobe Analyticsに送信するかどうかを制御します。 詳細は [Analytics概要](../solution-specific/analytics/analytics-overview.md)。
 
-![AdobeAnalytics設定ブロック](../../assets/edge_configuration_aa.png)
+![Adobe Analytics設定ブロック](../../assets/edge_configuration_aa.png)
 
 ##### [!UICONTROL レポートスイート ID]
 
-レポートスイートは、アドビのAnalytics管理者セクションの [!UICONTROL 管理者/レポートスイートからアクセスできます]。 複数のレポートスイートを指定した場合は、各レポートスイートにデータがコピーされます。
+レポートスイートは、Adobe Analytics管理者/ [!UICONTROL 管理者/レポートスイートの下にある[管理者]]セクションにあります。 複数のレポートスイートを指定した場合は、各レポートスイートにデータがコピーされます。
