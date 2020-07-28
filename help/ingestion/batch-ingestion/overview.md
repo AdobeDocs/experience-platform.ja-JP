@@ -1,77 +1,77 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platformバッチ取り込みの概要
+title: Adobe Experience Platform バッチインジェストの概要
 topic: overview
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '1144'
-ht-degree: 2%
+ht-degree: 83%
 
 ---
 
 
-# [!DNL Batch Ingestion]概要
+# [!DNL Batch Ingestion] 概要
 
-この [!DNL Batch Ingestion] APIを使用すると、データをバッチファイルとしてAdobe Experience Platformに取り込むことができます。 取り込まれるデータは、CRMシステムのフラットファイル（パーケファイルなど）のプロファイルデータ、または [!DNL Experience Data Model] (XDM)レジストリの既知のスキーマに適合するデータです。
+The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
-[データ取り込みAPIリファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) は、これらのAPI呼び出しに関する追加情報を提供します。
+[データ取得 API のリファレンスは](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)では、これらの API 呼び出しに関する追加情報が提供されています。
 
-次の図に、バッチインジェスト処理の概要を示します。
+次の図に、バッチインジェストプロセスの概要を示します。
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
-## APIの使用
+## API の使用
 
-この [!DNL Data Ingestion] APIを使用すると、次の3つの基本的な手順でデータをバッチ（1つのユニットとして取り込む1つ以上のファイルで構成されるデータの単位） [!DNL Experience Platform] として取り込むことができます。
+The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of data that consists of one or more files to be ingested as a single unit) into [!DNL Experience Platform] in three basic steps:
 
 1. 新しいバッチを作成します。
-2. データのXDMスキーマに一致する指定したデータセットにファイルをアップロードします。
-3. バッチの終わりを伝えます。
+2. データの XDM スキーマと一致する、指定したデータセットにファイルをアップロードします。
+3. バッチの終了を示します。
 
 
 ### [!DNL Data Ingestion] 前提条件
 
-- アップロードするデータは、ParketまたはJSON形式である必要があります。
+- アップロードするデータは、Parquet 形式または JSON 形式である必要があります。
 - で作成されたデータセット [!DNL Catalog services](../../catalog/home.md)。
-- パーケットファイルの内容は、アップロード先のデータセットのスキーマのサブセットと一致する必要があります。
-- 認証後に固有のアクセストークンを持つ。
+- Parquet ファイルの内容は、アップロード先のデータセットのスキーマのサブセットと一致している必要があります。
+- 認証後に固有のアクセストークンを取得する必要があります。
 
-### バッチ取り込みのベストプラクティス
+### バッチインジェストのベストプラクティス
 
-- 推奨されるバッチサイズは256 MB ～ 100 GBです。
-- 各バッチには、最大1500個のファイルを含める必要があります。
+- 推奨されるバッチサイズは 256 MB～100 GB です。
+- 各バッチには、最大 1,500 個のファイルを含めることができます。
 
-512 MBを超えるファイルをアップロードするには、ファイルをより小さなチャンクに分割する必要があります。 大きなファイルのアップロード手順は、 [こちらを参照してください](#large-file-upload---create-file)。
+512 MB を超えるファイルをアップロードする場合は、ファイルを小さなチャンクに分割する必要があります。サイズの大きなファイルをアップロードする手順については、[こちら](#large-file-upload---create-file)を参照してください。
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-### 必要なヘッダーの値の収集
+### 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- 認証： 無記名 `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 - Content-Type: application/json
 
 ### バッチの作成
 
-データをデータセットに追加する前に、データをバッチにリンクする必要があります。バッチは後で指定したデータセットにアップロードされます。
+データをデータセットに追加するには、データをバッチにリンクする必要があります。その後、バッチは、指定したデータセットにアップロードされます。
 
 ```http
 POST /batches
@@ -93,7 +93,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `datasetId` | ファイルのアップロード先のデータセットのID。 |
+| `datasetId` | ファイルのアップロード先のデータセットの ID。 |
 
 **レポンス**
 
@@ -119,22 +119,22 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | 作成されたばかりのバッチのID（以降のリクエストで使用）。 |
-| `relatedObjects.id` | ファイルのアップロード先のデータセットのID。 |
+| `id` | 作成されたバッチの ID（後続のリクエストで使用します）。 |
+| `relatedObjects.id` | ファイルのアップロード先のデータセットの ID。 |
 
 ## ファイルのアップロード
 
 アップロード用の新しいバッチが正常に作成されたら、ファイルを特定のデータセットにアップロードできます。
 
-ファイルは、 **小さいファイルアップロードAPIを使用してアップロードできます**。 ただし、ファイルが大きすぎて、ゲートウェイの制限を超えている場合（拡張タイムアウト、本文のサイズの要求の超過、その他の制限など）は、 **Large File Upload API**（大きいファイルアップロードAPI）に切り替えることができます。 このAPIは、ファイルをチャンク単位でアップロードし、 **Large File Upload Complete API** 呼び出しを使用してデータをまとめます。
+ファイルをアップロードするには、**Small File Upload API** を使用します。ただし、ファイルのサイズが大きすぎて、ゲートウェイの制限（拡張タイムアウト、リクエストの本文のサイズ、その他の制限）を超える場合は、**Large File Upload API** に切り替えることができます。この API は、ファイルをチャンク単位でアップロードし、その後 **Large File Upload Complete API** 呼び出しを使用してデータを統合します。
 
 >[!NOTE]
 >
->次の例では、パーケット [ファイル形式を使用し](https://parquet.apache.org/documentation/latest/) ます。 JSONファイル形式の使用例については、『 [batch ingestion developer guide](./api-overview.md)』を参照してください。
+>次の例では、[Parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を使用しています。JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](./api-overview.md)』を参照してください。
 
-### 小さいファイルのアップロード
+### サイズの小さなファイルのアップロード
 
-バッチを作成すると、データを既存のデータセットにアップロードできます。  アップロードするファイルは、参照されているXDMスキーマと一致する必要があります。
+バッチを作成したら、データを既存のデータセットにアップロードできます。アップロードするファイルは、参照されている XDM スキーマに一致している必要があります。
 
 ```http
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -142,9 +142,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{BATCH_ID}` | バッチのID。 |
-| `{DATASET_ID}` | ファイルをアップロードするデータセットのID。 |
-| `{FILE_NAME}` | データセットに表示されるファイルの名前。 |
+| `{BATCH_ID}` | バッチの ID。 |
+| `{DATASET_ID}` | ファイルをアップロードするデータセットの ID。 |
+| `{FILE_NAME}` | データセットに表示される際のファイルの名前。 |
 
 **リクエスト**
 
@@ -162,15 +162,15 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 | -------- | ----------- |
 | `{FILE_PATH_AND_NAME}` | データセットにアップロードするファイルのパスとファイル名。 |
 
-**レポンス**
+**レスポンス**
 
 ```JSON
 #Status 200 OK, with empty response body
 ```
 
-### 大きいファイルのアップロード — ファイルの作成
+### サイズの大きなファイルのアップロード - ファイルの作成
 
-大きなファイルをアップロードするには、ファイルを小さなチャンクに分割し、一度に1つずつアップロードする必要があります。
+サイズの大きなファイルをアップロードするには、ファイルを小さなチャンクに分割し、一度に 1 つずつアップロードする必要があります。
 
 ```http
 POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initialize
@@ -178,9 +178,9 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{BATCH_ID}` | バッチのID。 |
-| `{DATASET_ID}` | ファイルを取り込むデータセットのID。 |
-| `{FILE_NAME}` | データセットに表示されるファイルの名前。 |
+| `{BATCH_ID}` | バッチの ID。 |
+| `{DATASET_ID}` | ファイルを取り込むデータセットの ID。 |
+| `{FILE_NAME}` | データセットに表示される際のファイルの名前。 |
 
 **リクエスト**
 
@@ -192,15 +192,15 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
   -H "x-api-key: {API_KEY}"
 ```
 
-**レポンス**
+**レスポンス**
 
 ```JSON
 #Status 201 CREATED, with empty response body
 ```
 
-### 大きいファイルのアップロード — 後続のパーツをアップロード
+### サイズの大きなファイルのアップロード - 後続チャンクのアップロード
 
-ファイルの作成後は、PATCHリクエストを繰り返し行うことで、以降のすべてのチャンクをアップロードできます。このリクエストは、ファイルの各セクションに対して1つずつ行われます。
+ファイルを作成したら、ファイルの各セクションに対して 1 回ずつ、PATCH リクエストを繰り返しおこなうことで、以降のすべてのチャンクをアップロードできます。
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -208,9 +208,9 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{BATCH_ID}` | バッチのID。 |
-| `{DATASET_ID}` | ファイルのアップロード先のデータセットのID。 |
-| `{FILE_NAME}` | データセットに表示されるファイルの名前。 |
+| `{BATCH_ID}` | バッチの ID。 |
+| `{DATASET_ID}` | ファイルのアップロード先のデータセットの ID。 |
+| `{FILE_NAME}` | データセットに表示される際のファイルの名前。 |
 
 **リクエスト**
 
@@ -229,15 +229,15 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 | -------- | ----------- |
 | `{FILE_PATH_AND_NAME}` | データセットにアップロードするファイルのパスとファイル名。 |
 
-**レポンス**
+**レスポンス**
 
 ```JSON
 #Status 200 OK, with empty response
 ```
 
-## シグナルバッチ完了
+## バッチ完了を示す
 
-すべてのファイルがバッチにアップロードされた後、バッチは完了を示すために署名できます。 これにより、完了したファイルに対してDataSetFile [!DNL Catalog]**** エントリが作成され、上記で生成したバッチに関連付けられます。 次に、 [!DNL Catalog] バッチが成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータが取り込まれます。
+すべてのファイルをバッチにアップロードしたら、バッチの完了を示すことができます。By doing this, the [!DNL Catalog] **DataSetFile** entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
 **リクエスト**
 
@@ -247,7 +247,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{BATCH_ID}` | データセットにアップロードするバッチのID。 |
+| `{BATCH_ID}` | データセットにアップロードするバッチの ID。 |
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -257,17 +257,17 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 -H "x-api-key : {API_KEY}"
 ```
 
-**レポンス**
+**レスポンス**
 
 ```JSON
 #Status 200 OK, with empty response
 ```
 
-## バッチ状態の確認
+## バッチステータスの確認
 
-バッチにファイルがアップロードされるのを待つ間、バッチのステータスをチェックして進行状況を確認できます。
+バッチにファイルがアップロードされるのを待つ間、バッチのステータスを確認して進行状況を確認できます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /batch/{BATCH_ID}
@@ -275,7 +275,7 @@ GET /batch/{BATCH_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{BATCH_ID}` | チェックするバッチのID。 |
+| `{BATCH_ID}` | 確認するバッチの ID。 |
 
 **リクエスト**
 
@@ -287,7 +287,7 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
   -H "x-api-key: {API_KEY}"
 ```
 
-**レポンス**
+**レスポンス**
 
 ```JSON
 {
@@ -379,23 +379,23 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{USER_ID}` | バッチを作成または更新したユーザーのID。 |
+| `{USER_ID}` | バッチを作成または更新したユーザーの ID。 |
 
-この `"status"` フィールドには、要求されたバッチの現在のステータスが表示されます。 バッチは、次のいずれかの状態にできます。
+`"status"` フィールドに、リクエストしたバッチの現在のステータスが示されます。バッチの状態は次のいずれかです。
 
-## バッチ取り込みのステータス
+## バッチインジェストのステータス
 
-| Status | 説明 |
+| ステータス | 説明 |
 | ------ | ----------- |
-| 破棄 | バッチは、期待された時間枠内に完了していません。 |
-| 中止 | 中止操作が、指定されたバッチに対して **明示的に** （バッチ取り込みAPIを介して）呼び出されました。 バッチが **Loaded** 状態になると、中止できなくなります。 |
-| アクティブ | バッチは正常にプロモートされ、ダウンストリーム消費に使用できます。 このステータスは、 **成功と同じように使用できます**。 |
-| 削除済み | バッチのデータは完全に削除されました。 |
-| 失敗 | 不正な構成または不正なデータ、あるいはその両方から生じる端末状態。 失敗したバッチのデータは **表示されません** 。 このステータスは、 **失敗と同じ意味で使用できます**。 |
-| 非アクティブ | バッチは正常にプロモートされましたが、元に戻されたか、期限が切れています。 バッチは、下流消費には使用できなくなります。 |
-| ロード済み | バッチのデータが完了し、バッチはプロモーションの準備ができています。 |
-| ロード中 | このバッチのデータはアップロード中で、バッチは現在 **** 、昇格する準備ができていません。 |
-| 再試行中 | このバッチのデータは処理中です。 ただし、システムまたは一時的なエラーが原因で、バッチが失敗しました。その結果、このバッチは再試行中です。 |
-| 段階的 | バッチのプロモーションプロセスのステージング段階が完了し、インジェストジョブが実行されました。 |
-| ステージング | バッチのデータは処理中です。 |
-| 停止 | バッチのデータを処理中です。 ただし、バッチプロモーションは、多数の再試行の後に停止しています。 |
+| Abandoned | バッチは、予想期間内に完了しませんでした。 |
+| Aborted | 指定したバッチに対して、中止操作が&#x200B;**明示的に**（Batch Ingest API を介して）呼び出されました。バッチの状態が「**Loaded**」の場合、バッチを中止することはできません。 |
+| アクティブ | バッチは正常に昇格しており、ダウンストリームで使用することができます。このステータスは、**Success** と同じ意味で使用できます。 |
+| Deleted | バッチのデータは完全に削除されました。 |
+| Failed | 設定またはデータ、あるいはその両方が不正なために発生した、失敗の状態。失敗したバッチのデータは、表示&#x200B;**されません**。このステータスは、**Failure** と同じ意味で使用できます。 |
+| Inactive | バッチは正常に昇格しましたが、元に戻されたか、有効期限が切れています。バッチは、ダウンストリームで使用できません。 |
+| Loaded | バッチのデータのアップロードが完了し、バッチ昇格の準備ができています。 |
+| Loading | このバッチのデータはアップロード中です。現在、バッチ昇格の準備はできて&#x200B;**いません**。 |
+| Retrying | このバッチのデータは処理中です。ただし、システムエラーまたは一時的なエラーが原因でバッチが失敗しました。その結果、このバッチは再試行中です。 |
+| Staged | バッチの昇進プロセスのステージング段階が完了し、インジェストジョブが実行されました。 |
+| Staging | バッチのデータは処理中です。 |
+| Stalled | バッチのデータは処理中です。ただし、バッチの昇進は、数回再試行した後に停止されました。 |
