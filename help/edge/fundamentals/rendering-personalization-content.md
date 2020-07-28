@@ -14,7 +14,7 @@ ht-degree: 24%
 
 # パーソナライゼーションオプションの概要
 
-Adobe Experience Platformでは、Adobe Targetを含むアドビのパーソナライゼーションソリューションのクエリをサポートしています。 [!DNL Web SDK] パーソナライゼーションには2つのモードがあります。 自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 SDKは、ちらつきを [管理する機能も提供します](../../edge/solution-specific/target/flicker-management.md)。
+Adobe Experience Platformでは、Adobe時(Adobe Targetを含む)のパーソナライゼーションソリューションのクエリをサポートしています。 [!DNL Web SDK] パーソナライゼーションには2つのモードがあります。 自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 SDKは、ちらつきを [管理する機能も提供します](../../edge/solution-specific/target/flicker-management.md)。
 
 ## コンテンツを自動的にレンダリング
 
