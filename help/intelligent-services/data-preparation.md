@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -26,16 +26,16 @@ ht-degree: 1%
 
 データをの外部に保存する場合 [!DNL Experience Platform]は、次の手順に従います。
 
-1. 専用のAzure BLOBストレージコンテナのアクセス資格情報を要求するには、Adobe Consulting Servicesにお問い合わせください。
+1. 専用のAzure BLOBストレージコンテナのアクセス資格情報を要求するには、Adobeコンサルティングサービスに問い合わせてください。
 1. アクセス資格情報を使用して、データをBlobコンテナにアップロードします。
-1. アドビのコンサルティングサービスと連携して、データを [Consumer ExperienceEventスキーマにマッピングし](#cee-schema) 、Intelligent Servicesに取り込みます。
+1. Adobeコンサルティングサービスを利用して、 [Consumer ExperienceEventスキーマにデータをマッピングし](#cee-schema) 、インテリジェントサービスに取り込みます。
 
 ### [!DNL Experience Platform] データ準備
 
 データが既ににに保存されている場合 [!DNL Platform]は、次の手順に従います。
 
 1. Consumer ExperienceEventスキーマの構造を確認し、 [Consumer ExperienceEvent](#cee-schema) のフィールドにデータをマッピングできるかどうかを確認します。
-1. アドビのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、Intelligent Servicesに取り込む方法についてお問い合わせください。または、自分でデータをマッピングする場合は、このガイド [](#mapping) の手順に従ってください。
+1. Adobeのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、Intelligent Servicesに取り込むか、自分でデータをマッピングする場合は [](#mapping) 、このガイドの手順に従ってください。
 
 ## CEEスキーマについて {#cee-schema}
 
@@ -61,7 +61,7 @@ CEEミックスインには、インテリジェントサービスが有用な�
 
 * [プライマリIDフィールド](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:チャネル](#channel) （Attribution AIの場合のみ必須）
+* [xdm:チャネル](#channel) (Attribution AIの場合のみ必須)
 
 #### プライマリ同一性 {#identity}
 
@@ -72,19 +72,19 @@ CEEミックスインには、インテリジェントサービスが有用な�
 * &quot;電子メール&quot;
 * &quot;phone&quot;
 * &quot;mcid&quot;(Adobe Audience ManagerID用)
-* &quot;aid&quot;(AdobeAnalyticsID用)
+* &quot;aid&quot;(Adobe AnalyticsID用)
 
-どのフィールドを主IDとして使用すべきかがわからない場合は、アドビのコンサルティングサービスに問い合わせて、最適なソリューションを決定してください。
+どのフィールドを主IDとして使用すべきかがわからない場合は、Adobeコンサルティングサービスに問い合わせて、最適なソリューションを決定してください。
 
 #### xdm:timestamp {#timestamp}
 
 このフィールドは、イベントが発生した日時を表します。 この値は、ISO 8601規格に従って、文字列として指定する必要があります。
 
-#### xdm:チャネル {#channel}
+#### xdm:channel {#channel}
 
 >[!NOTE]
 >
->このフィールドは、アトリビューションAIを使用する場合にのみ必須です。
+>このフィールドは、Attribution AIを使用する場合にのみ必須です。
 
 このフィールドは、ExperienceEventに関連するマーケティングチャネルを表します。 このフィールドには、チャネルのタイプ、メディアのタイプ、場所のタイプに関する情報が含まれます。
 
@@ -112,7 +112,7 @@ CEEミックスインには、インテリジェントサービスが有用な�
 | 有料検索 | https:/<span>/ns.adobe | 支払った | clicks |
 | Social - Marketing | https:/<span>/ns.adobe | 獲得した | clicks |
 | 表示 | https:/<span>/ns.adobe | 支払った | clicks |
-| 電子メール | https:/<span>/ns.adobe | 支払った | clicks |
+| Email | https:/<span>/ns.adobe | 支払った | clicks |
 | 内部転送者 | https:/<span>/ns.adobe | 所有 | clicks |
 | Display ViewThrough | https:/<span>/ns.adobe | 支払った | インプレッション |
 | QRコードのリダイレクト | https:/<span>/ns.adobe | 所有 | clicks |
@@ -241,7 +241,7 @@ CEEミックスインには、インテリジェントサービスが有用な�
 
 マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、次の手順は、インテリジェントサービスに取り込むデータを決定することです。 Intelligent Servicesで使用されるすべての履歴データは、4か月のデータの最小期間に加え、ルックバック期間として予定されている日数に該当する必要があります。
 
-送信するデータの範囲を決定したら、Adobe Consulting Servicesに連絡して、データをスキーマにマッピングし、サービスに取り込む方法についてお問い合わせください。
+送信するデータの範囲を決定したら、Adobeコンサルティングサービスに連絡して、データをスキーマにマッピングし、サービスに取り込む方法についてお問い合わせください。
 
 購読があり、自分でデータをマッピングおよび取り込む場合は、次の節に示す手順に従ってください。 [!DNL Adobe Experience Platform]
 
@@ -281,13 +281,13 @@ CEEミックスインをスキーマに追加した後、データ内の追加�
 >
 >今後のリリースのIntelligent Servicesでは、 [Adobe Experience PlatformIDサービス](../identity-service/home.md) をお客様の識別機能に統合する予定です。 したがって、次の手順は変更される場合があります。
 
-、などの外部ソースからデータを取り込む場合 [!DNL Adobe Audience Manager]は、データセットに [!DNL Adobe Analytics]`primaryIdentityNameSpace` タグを追加する必要があります。 これは、カタログサービスAPIにPATCHリクエストを行うことで行うことができます。
+、などの外部ソースからデータを取り込む場合 [!DNL Adobe Audience Manager]は、データセットに [!DNL Adobe Analytics]`primaryIdentityNameSpace` タグを追加する必要があります。 これは、Catalog Service APIにPATCHリクエストを行うことで行うことができます。
 
 ローカルCSVファイルからデータを取り込む場合は、データの [マッピングと取り込みに関する次の節に進むことができます](#ingest)。
 
 以下のAPI呼び出しの例に従う前に、カタログ開発ガイドの [はじめにの節](../catalog/api/getting-started.md) 、必要なヘッダーに関する重要な情報を参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /dataSets/{DATASET_ID}
@@ -339,11 +339,11 @@ curl -X PATCH \
 
 >[!NOTE]
 >
->PlatformでのID名前空間の操作について詳しくは、「 [ID名前空間の概要](../identity-service/namespaces.md)」を参照してください。
+>For more information on working with identity namespaces in Platform, see the [identity namespace overview](../identity-service/namespaces.md).
 
 **応答**
 
-正常に完了すると、更新されたデータセットのIDを含む配列が返されます。 このIDは、PATCH要求で送信されたIDと一致する必要があります。
+リクエストが成功した場合、更新されたデータセットの ID を含む配列が返されます。この ID は、PATCH リクエストで送信された ID と一致する必要があります。
 
 ```json
 [
@@ -359,9 +359,9 @@ CEEスキーマとデータセットを作成したら、データテーブル�
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、インテリジェントサービスで使用するデータを準備する際の一般的なガイダンスを提供しました。 使用事例に基づく追加のコンサルティングが必要な場合は、アドビのコンサルティングサポートにお問い合わせください。
+このドキュメントでは、インテリジェントサービスで使用するデータを準備する際の一般的なガイダンスを提供しました。 使用事例に基づく追加のコンサルティングが必要な場合は、Adobeコンサルティングサポートにお問い合わせください。
 
 顧客体験データのデータセットへの入力が完了すると、インテリジェントサービスを使用してインサイトを生成できます。 開始するには、次のドキュメントを参照してください。
 
-* [アトリビューションAIの概要](./attribution-ai/overview.md)
+* [Attribution AI の概要](./attribution-ai/overview.md)
 * [顧客 AI の概要](./customer-ai/overview.md)
