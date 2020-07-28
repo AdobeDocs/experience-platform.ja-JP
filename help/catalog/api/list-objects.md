@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: リストオブジェクト
+title: オブジェクトリスト
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 2%
+ht-degree: 51%
 
 ---
 
 
-# リストオブジェクト
+# オブジェクトリスト
 
-1回のAPI呼び出しで、特定のタイプの使用可能なすべてのオブジェクトのリストを取得できます。ベストプラクティスは、応答のサイズを制限するフィルターを含めることです。
+1 回の API 呼び出しで、特定のタイプの使用可能なすべてのオブジェクトのリストを取得できます。ベストプラクティスは、応答のサイズを制限するフィルターを含めることです。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}
@@ -25,12 +25,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 表示する [!DNL Catalog] オブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | 応答で返される結果をフィルターするために使用するクエリパラメーター。 複数のパラメーターは、アンパサンド(`&`)で区切られます。 詳しくは、カタログデータの [フィルタリングに関するガイド](filter-data.md) を参照してください。 |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be listed. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{FILTER}` | 応答で返された結果をフィルターするために使用されるクエリパラメーター。複数のパラメーターはアンパサンド（`&`）で区切られます。詳しくは、[カタログデータのフィルタリング](filter-data.md)に関するガイドを参照してください。 |
 
 **リクエスト**
 
-以下のサンプルリクエストでは、データセットのリストを取得します。5つの結果に対する応答を減らす `limit` フィルターと、各データセットに対して表示されるプロパティを制限する `properties` フィルターが用意されています。
+以下のリクエスト例では、データセットのリストを取得し、応答を 5 つの結果に減らす `limit` フィルターと、各データセットに対して表示されるプロパティを制限する `properties` フィルターを使用しています。
 
 ```shell
 curl -X GET \
@@ -43,11 +43,11 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、キーと値のペアの形式で、リクエストに指定されたクエリパラメーターでフィルタリングされた [!DNL Catalog] オブジェクトのリストを返します。 キーと値のペアごとに、キーは対象の [!DNL Catalog] オブジェクトの固有な識別子を表します。この識別子は、特定のオブジェクトを [表示する別の呼び出しで使用して、詳細を確認できます](look-up-object.md) 。
+A successful response returns a list of [!DNL Catalog] objects in the form of key-value pairs, filtered by the query parameters provided in the request. For each key-value pair, the key represents a unique identifier for the [!DNL Catalog] object in question, which can then be used in another call to [view that specific object](look-up-object.md) for more details.
 
 >[!NOTE]
 >
->返されるオブジェクトに、 `properties` クエリが示す要求されたプロパティが1つ以上含まれていない場合は、次に示すように、要求されたプロパティのみが返され ***`Sample Dataset 3`*** ま ***`Sample Dataset 4`*** す。
+>If a returned object does not contain one or more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in ***`Sample Dataset 3`*** and ***`Sample Dataset 4`*** below.
 
 ```json
 {
