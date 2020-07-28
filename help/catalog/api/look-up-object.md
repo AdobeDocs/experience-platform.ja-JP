@@ -7,20 +7,20 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 3%
+ht-degree: 78%
 
 ---
 
 
 # オブジェクトの検索
 
-特定の [!DNL Catalog] オブジェクトの固有な識別子がわかっている場合は、GETリクエストを実行して、そのオブジェクトの詳細を表示できます。
+If you know the unique identifier for a specific [!DNL Catalog] object, you can perform a GET request to view that object&#39;s details.
 
 >[!NOTE]
 >
->特定のオブジェクトを表示する場合は、プロパティで [フィルタし](filter-data.md) 、目的のプロパティのみを返すことをお勧めします。
+> 特定のオブジェクトを表示する場合も、[プロパティでフィルター](filter-data.md)し、目的のプロパティのみを返すのがベストプラクティスです。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}/{OBJECT_ID}
@@ -29,12 +29,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 取得する特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
-次のリクエストでは、IDを使用してデータセットを取得し、 `name`、、、、、および `description`各プ `state``tags``files` ロパティを返します。
+次のリクエストでは、ID でデータセットを取得し、その `name`、`description`、`state`、`tags`、`files`プロパティを返します。
 
 ```shell
 curl -X GET \
@@ -47,7 +47,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、本文にリクエストされたデータセットのみを含む指定されたデータセット `properties` を返します。
+正常な応答は、指定されたデータセッを返します。本文にはリクエストされた `properties` のみが含まれます。
 
 ```json
 {
@@ -67,4 +67,4 @@ curl -X GET \
 
 >[!NOTE]
 >
->値のプリフィックスが付けられたプロパティは、相互に関連するオブジェクトを `@` 表します。 これらのオブジェクトの詳細を表示する手順については、 [相互に関連するオブジェクトの表示に関する付録の節を参照してください](appendix.md#view-interrelated-objects) 。
+>値の前に `@` が付いているプロパティは、相互に関連するオブジェクトを表します。これらのオブジェクトの詳細を表示する手順については、付録の「[相互関連オブジェクトの表示](appendix.md#view-interrelated-objects)」の節を参照してください。
