@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
 source-wordcount: '371'
-ht-degree: 16%
+ht-degree: 20%
 
 ---
 
@@ -51,14 +51,14 @@ XDMデータが自動的にマッピングされない場合 [!DNL Analytics]は
 
 All data collected by the edge network can be accessed via [processing rules](https://docs.adobe.com/content/help/ja-JP/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). では、処理ルールを使用 [!DNL Analytics]して、コンテキストデータを [!DNL Analytics] 変数に組み込むことができます。
 
-例えば、次のルールでは、Analyticsを設定して **内部検索用語(eVar2)に** a.x_atag.search.term(Context Data)に関連付けられたデータ **を入力します**。
+例えば、次のルールでは、Analyticsを設定して、 **内部検索用語(eVar2)に** a.x_atag.search.term（コンテキストデータ）に関連付けられたデータ **を入力しま**&#x200B;す。
 
 ![](assets/examplerule.png)
 
 
 ## XDMスキーマ
 
-[!DNL Experience Platform] では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。 システム間で一貫したデータを定義することで、意味を保持しやすくなり、データから価値を得ることができます。 [!DNL Analytics] コンテキストデータは、スキーマで定義された構造と連携します。
+[!DNL Experience Platform] では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。システム間で一貫したデータを定義することで、意味を保持しやすくなり、データから価値を得ることができます。 [!DNL Analytics] コンテキストデータは、スキーマで定義された構造と連携します。
 
 次の例は、AEPでデータを送信および取得する [`event` オプションと共にこのコマンドを使用する方法を示し](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html)`xdm`[!DNL Web SDK]ます。 この例では、 `event` コマンドはExperienceEvent Commerce Detailsスキーマに一致し [、productListItems](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) と `name``SKU` 値が追跡されるようにします。
 
