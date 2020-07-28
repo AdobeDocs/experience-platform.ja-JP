@@ -1,48 +1,48 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: スキーマレジストリAPIを使用して2つのスキーマ間の関係を定義する
+title: レジストリ API を使用した 2 つのスキーマ間の関係の定義
 topic: tutorials
 translation-type: tm+mt
 source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
 workflow-type: tm+mt
 source-wordcount: '1274'
-ht-degree: 1%
+ht-degree: 48%
 
 ---
 
 
-# APIを使用して2つのスキーマ間の関係を定義する [!DNL Schema Registry]
+# Define a relationship between two schemas using the [!DNL Schema Registry] API
 
 
-様々なチャネルにわたる顧客とブランドとの関係を理解する能力は、Adobe Experience Platformの重要な部分です。 これらの関係を [!DNL Experience Data Model] (XDM)スキーマの構造内で定義すると、顧客データに対する複雑な洞察を得ることができます。
+様々なチャネルでの顧客とブランドとの関係を理解する能力は、Adobe Experience Platform の重要な部分です。Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
 スキーマの関係は、和集合スキーマを使用して推論できますが、 [!DNL Real-time Customer Profile]これは同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する2つのスキーマ間の関係を確立するには、目的のスキーマのIDを参照するソーススキーマに、専用の **関係フィールド** を追加する必要があります。
 
-このドキュメントでは、を使用して、組織で定義されている2つのスキーマ間の1対1の関係を定義するためのチュートリアルを提供し [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)ます。
+This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [!DNL Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 ## はじめに
 
-このチュートリアルでは、 [!DNL Experience Data Model] (XDM)との詳細を理解している必要があり [!DNL XDM System]ます。 このチュートリアルを開始する前に、次のドキュメントを確認してください。
+このチュートリアルでは、 [!DNL Experience Data Model] (XDM)との詳細を理解している必要があり [!DNL XDM System]ます。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
 * [Experience PlatformのXDMシステム](../home.md): XDMとその実装の概要を、で説明し [!DNL Experience Platform]ます。
-   * [スキーマ構成の基本](../schema/composition.md): XDMスキーマの構築ブロックの紹介。
+   * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
 * [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-このチュートリアルを開始する前に、 [開発者ガイドを参照して](../api/getting-started.md) 、 [!DNL Schema Registry] APIの呼び出しを正常に行うために知っておく必要がある重要な情報を確認してください。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行うために必要なヘッダー(ヘッダーと可能な値に特に注意して [!DNL Accept] ください)が含まれます。
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（ ヘッダーとその可能な値に特に注意）が含まれます。[!DNL Accept]
 
-## ソースと宛先のスキーマの定義 {#define-schemas}
+## ソースと宛先スキーマの定義 {#define-schemas}
 
-この関係で定義される2つのスキーマを既に作成済みであることが想定されます。 このチュートリアルでは、組織の現在の忠誠度プログラム(「[!DNL Loyalty Members][!DNL Hotels]」スキーマで定義)のメンバーと、お気に入りのホテル(「」スキーマで定義)との間に関係を作成します。
+この関係で定義される 2 つのスキーマが既に作成されていると想定されます。This tutorial creates a relationship between members of an organization&#39;s current loyalty program (defined in a &quot;[!DNL Loyalty Members]&quot; schema) and their favorite hotels (defined in a &quot;[!DNL Hotels]&quot; schema).
 
-スキーマ関係は、 **ソーススキーマ** ( **ソーススキーマ**)が表し、ターゲット内の別のフィールドを参照するフィールドを持ちます。 次の手順では、「[!DNL Loyalty Members]」がソーススキーマ、「[!DNL Hotels]」がターゲットスキーマとして機能します。
+スキーマ関係は、**宛先スキーマ**&#x200B;内の別のフィールドを参照するフィールドを有する&#x200B;**ソーススキーマ**&#x200B;で表されます。In the steps that follow, &quot;[!DNL Loyalty Members]&quot; will be the source schema, while &quot;[!DNL Hotels]&quot; will act as the destination schema.
 
 >[!IMPORTANT] 関係を確立するには、両方のスキーマがプライマリIDを定義し、有効にする必要があり [!DNL Real-time Customer Profile]ます。 スキーマをそれに応じて設定する方法のガイダンスが必要な場合は、「プロファイルの作成」チュートリアルの「スキーマをスキーマで使用できるようにする」のセクションを参照して [](./create-schema-api.md#profile) ください。
 
-2つのスキーマ間の関係を定義するには、まず両方のスキーマの `$id` 値を取得する必要があります。 スキーマの表示名(`title`)がわかっている場合は、 `$id` APIの `/tenant/schemas`[!DNL Schema Registry] エンドポイントにGETリクエストを行うと、その値を見つけることができます。
+2 つのスキーマ間の関係を定義するには、まず両方のスキーマの `$id` 値を取得する必要があります。If you know the display names (`title`) of the schemas, you can find their `$id` values by making a GET request to the `/tenant/schemas` endpoint in the [!DNL Schema Registry] API.
 
-**API形式**
+**API 形式**
 
 ```http
 GET /tenant/schemas
@@ -62,11 +62,11 @@ curl -X GET \
 
 >[!NOTE]
 >
->この [!DNL Accept]`application/vnd.adobe.xed-id+json` ヘッダーは、結果のスキーマのタイトル、IDおよびバージョンのみを返します。
+>The [!DNL Accept] header `application/vnd.adobe.xed-id+json` returns only the titles, IDs, and versions of the resulting schemas.
 
-**応答**
+**応答** 
 
-成功した場合は、組織で定義されたスキーマ（ユーザー、ユーザー、ユーザー、およびなど）のリストが返され `name``$id``meta:altId``version`ます。
+正常な応答は、組織が定義したスキーマのリスト（組織の `name`、`$id`、`meta:altId`、`version` を含む）を返します。
 
 ```json
 {
@@ -104,11 +104,11 @@ curl -X GET \
 }
 ```
 
-関係を定義する2つのスキーマの `$id` 値を記録します。 これらの値は、後の手順で使用します。
+関係を定義する 2 つのスキーマの `$id` 値を記録します。これらの値は、後の手順で使用します。
 
 ## ソーススキーマの参照フィールドの定義
 
-リレーショナル・データベース・テーブル内で [!DNL Schema Registry]は、リレーショナル・ディスクリプタは、リレーショナル・データベース・テーブル内の外部キーと同様に機能します。 ソーススキーマ内のフィールドは、宛先スキーマの **主なidentity** フィールドへの参照として機能します。 ソーススキーマにこの目的のフィールドがない場合は、新しいフィールドを使用してミックスインを作成し、スキーマに追加する必要があります。 この新しいフィールドの `type` 値は「[!DNL string]」にする必要があります。
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the **primary identity** field of a destination schema. ソーススキーマにこの目的のフィールドがない場合は、新しいフィールドを使用してミックスインを作成し、スキーマに追加する必要があります。 This new field must have a `type` value of &quot;[!DNL string]&quot;.
 
 >[!IMPORTANT]
 >
@@ -118,11 +118,11 @@ curl -X GET \
 
 >[!NOTE] ソーススキーマに、参照フィールドとして使用する専用のフィールドが既に存在する場合は、参照記述子の [作成の手順に進むことができます](#reference-identity)。
 
-### 新しいミックスインの作成
+### 新しい mixin の作成
 
-スキーマに新しいフィールドを追加するには、まずmixinで定義する必要があります。 エンドポイントにPOSTリクエストを作成して、新しいミックスインを作成でき `/tenant/mixins` ます。
+スキーマに新しいフィールドを追加するには、まず mixin で定義する必要があります。`/tenant/mixins` エンドポイントに対して POST リクエストを作成することで、新しい mixin を作成できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /tenant/mixins
@@ -130,7 +130,7 @@ POST /tenant/mixins
 
 **リクエスト**
 
-次の要求は、新しいミックスインを作成し、追加先のスキーマの `favoriteHotel``_{TENANT_ID}` 名前空間の下にフィールドを追加します。
+次のリクエストでは、新しい mixin を作成し、追加先の任意のスキーマの `_{TENANT_ID}` 名前空間の下に `favoriteHotel` フィールドを追加します。
 
 ```shell
 curl -X POST\
@@ -169,9 +169,9 @@ curl -X POST\
       }'
 ```
 
-**応答**
+**応答** 
 
-正常に完了した応答は、新たに作成されたmixinの詳細を返します。
+正常な応答は、新しく作成された mixin の詳細を返します。
 
 ```json
 {
@@ -224,15 +224,15 @@ curl -X POST\
 
 | プロパティ | 説明 |
 | --- | --- |
-| `$id` | 読み取り専用で、システムが生成した新しいミックスインの一意の識別子。 URIの形式を取ります。 |
+| `$id` | 新しい mixin の一意の識別子（システムで生成され、読み取り専用）。URI の形式を取ります。 |
 
-mixinをソーススキーマに追加する次の手順で使用するmixinの `$id` URIを記録します。
+次の手順で mixin をソーススキーマに追加する際に使用する、mixin の `$id` URI を記録します。
 
-### ソーススキーマ追加へのミックスイン
+### ソーススキーマへの mixin の追加
 
-ミックスインを作成したら、エンドポイントにPATCHリクエストを作成して、そのミックスインをソーススキーマに追加でき `/tenant/schemas/{SCHEMA_ID}` ます。
+Mixin を作成したら、`/tenant/schemas/{SCHEMA_ID}` エンドポイントに対して PATCH リクエストを作成して、その mixin をソーススキーマに追加できます。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /tenant/schemas/{SCHEMA_ID}
@@ -240,11 +240,11 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | URLエンコードされた `$id` URIまたはソーススキーマ `meta:altId` のURLです。 |
+| `{SCHEMA_ID}` | URL エンコードされた `$id` URI またはソーススキーマの `meta:altId`。 |
 
 **リクエスト**
 
-次のリクエストは、「[!DNL Favorite Hotel]」ミックスインを「[!DNL Loyalty Members]」スキーマに追加します。
+The following request adds the &quot;[!DNL Favorite Hotel]&quot; mixin to the &quot;[!DNL Loyalty Members]&quot; schema.
 
 ```shell
 curl -X PATCH \
@@ -267,13 +267,13 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `op` | 実行するPATCH操作。 このリクエストでは、 `add` 操作が使用されます。 |
-| `path` | 新しいリソースを追加するスキーマフィールドへのパスです。 スキーマにミックスインを追加する場合、値は「/allOf/ — 」にする必要があります。 |
-| `value.$ref` | 追加 `$id` するミックスインの名前。 |
+| `op` | 実行する PATCH 操作。このリクエストでは、`add` 操作が使用されます。 |
+| `path` | 新しいリソースを追加するスキーマフィールドへのパス。スキーマにミックスインを追加する場合、値は「/allOf/ — 」にする必要があります。 |
+| `value.$ref` | 追加する mixin の `$id`。 |
 
-**応答**
+**応答** 
 
-正常に応答すると、更新されたスキーマの詳細が返されます。これには、追加されたmixinの `$ref` 値が配列に含まれ `allOf` ます。
+正常な応答は、更新されたスキーマの詳細を返します。これには、追加された mixin の `$ref` 値が `allOf` 配列に含まれます。
 
 ```json
 {
@@ -332,13 +332,13 @@ curl -X PATCH \
 }
 ```
 
-## 参照ID記述子の作成 {#reference-identity}
+## 参照 ID 記述子の作成 {#reference-identity}
 
-スキーマフィールドは、リレーションシップ内の他のスキーマからの参照として使用される場合、参照ID記述子を適用する必要があります。 「」内の `favoriteHotel` フィールドは「」内の[!DNL Loyalty Members]フィールドを参照するので、参照ID記述子 `email`[!DNL Hotels]`email` を与える必要があります。
+スキーマフィールドは、関係内の他の要素からの参照として使用される場合、参照 ID 記述子を適用する必要があります。Since the `favoriteHotel` field in &quot;[!DNL Loyalty Members]&quot; will refer to the `email` field in &quot;[!DNL Hotels]&quot;, `email` must be given a reference identity descriptor.
 
-エンドポイントにPOSTリクエストを行って、宛先スキーマの参照記述子を作成し `/tenant/descriptors` ます。
+`/tenant/descriptors` エンドポイントに対して POST リクエストをおこなって、宛先スキーマの参照記述子を作成します。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /tenant/descriptors
@@ -346,7 +346,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストは、宛先スキーマ「 `email`[!DNL Hotels]」のフィールドの参照記述子を作成します。
+The following request creates a reference descriptor for the `email` field in the destination schema &quot;[!DNL Hotels]&quot;.
 
 ```shell
 curl -X POST \
@@ -367,15 +367,15 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --- | --- |
-| `@type` | 定義する記述子の型。 参照記述子の場合、値は&quot;xdm:descriptorReferenceIdentity&quot;でなければなりません。 |
-| `xdm:sourceSchema` | リンク先スキーマの `$id` URL。 |
+| `@type` | 定義する記述子のタイプ。参照記述子の場合、値は&quot;xdm:descriptorReferenceIdentity&quot;でなければなりません。 |
+| `xdm:sourceSchema` | 宛先スキーマの `$id` URL。 |
 | `xdm:sourceVersion` | 宛先スキーマのバージョン番号。 |
-| `sourceProperty` | 宛先スキーマのプライマリIDフィールドへのパス。 |
-| `xdm:identityNamespace` | 参照フィールドのID名前空間。 この名前空間は、フィールドをスキーマのプライマリIDとして定義する場合と同じにする必要があります。 See the [identity namespace overview](../../identity-service/home.md) for more information. |
+| `sourceProperty` | 宛先スキーマのプライマリ ID フィールドへのパス。 |
+| `xdm:identityNamespace` | 参照フィールドの ID 名前空間。この名前空間は、フィールドをスキーマのプライマリIDとして定義する場合と同じにする必要があります。 詳しくは、「[ID 名前空間の概要](../../identity-service/home.md)」を参照してください。 |
 
-**応答**
+**応答** 
 
-正常な応答は、新たに作成された宛先スキーマの参照記述子の詳細を返します。
+正常な応答は、宛先スキーマの新しく作成された参照記述子の詳細を返します。
 
 ```json
 {
@@ -391,9 +391,9 @@ curl -X POST \
 
 ## 関係記述子の作成 {#create-descriptor}
 
-関係記述子は、ソース・スキーマと宛先スキーマの間に1対1の関係を確立します。 宛先スキーマの参照記述子を定義すると、エンドポイントにPOSTリクエストを作成して、新しい関係記述子を作成でき `/tenant/descriptors` ます。
+関係記述子は、ソース記述子と宛先スキーマとの間に 1 対 1 の関係を確立します。宛先スキーマの参照記述子を定義すると、エンドポイントにPOSTリクエストを作成して、新しい関係記述子を作成でき `/tenant/descriptors` ます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /tenant/descriptors
@@ -401,7 +401,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストは、新しい関係記述子を作成します。この関係記述子は、ソーススキーマ[!DNL Loyalty Members]として「」を、宛先スキーマとして「[!DNL Legacy Loyalty Members]」を持ちます。
+The following request creates a new relationship descriptor, with &quot;[!DNL Loyalty Members]&quot; as the source schema and &quot;[!DNL Legacy Loyalty Members]&quot; as the destination schema.
 
 ```shell
 curl -X POST \
@@ -424,17 +424,17 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --- | --- |
-| `@type` | 作成する記述子の型です。 関係記述子の `@type` 値は&quot;xdm:descriptorOneToOne&quot;です。 |
+| `@type` | 作成する記述子のタイプ。The `@type` value for relationship descriptors is &quot;xdm:descriptorOneToOne&quot;. |
 | `xdm:sourceSchema` | ソーススキーマの `$id` URL。 |
 | `xdm:sourceVersion` | ソーススキーマのバージョン番号。 |
 | `xdm:sourceProperty` | ソーススキーマの参照フィールドへのパス。 |
-| `xdm:destinationSchema` | リンク先スキーマの `$id` URL。 |
+| `xdm:destinationSchema` | 宛先スキーマの `$id` URL。 |
 | `xdm:destinationVersion` | 宛先スキーマのバージョン番号。 |
 | `xdm:destinationProperty` | コピー先スキーマの参照フィールドへのパス。 |
 
 ### 応答
 
-正常な応答は、新たに作成された関係記述子の詳細を返します。
+正常な応答は、宛先スキーマの新しく作成された関係記述子の詳細を返します。
 
 ```json
 {
@@ -452,4 +452,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、2つのスキーマ間に1対1の関係が正しく作成されます。 APIを使用した記述子の操作について詳しくは、『 [!DNL Schema Registry] スキーマレジストリ開発者ガイド [](../api/descriptors.md)』を参照してください。 UIでスキーマの関係を定義する手順については、スキーマエディタを使用したスキーマの関係の [定義に関するチュートリアルを参照してください](relationship-ui.md)。
+このチュートリアルでは、2 つのスキーマ間に 1 対 1 の関係を作成しました。For more information on working with descriptors using the [!DNL Schema Registry] API, see the [Schema Registry developer guide](../api/descriptors.md). UI でスキーマの関係を定義する手順については、[スキーマエディタを使用したスキーマの関係の定義](relationship-ui.md)に関するチュートリアルを参照してください。
