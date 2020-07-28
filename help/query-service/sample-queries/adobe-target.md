@@ -1,43 +1,43 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: サンプルクエリ
+title: クエリ例
 topic: queries
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 3%
+ht-degree: 79%
 
 ---
 
 
-# Adobe Targetデータのサンプルクエリ
+# Adobe Target データのサンプルクエリ
 
-Adobe TargetのデータはエクスペリエンスイベントXDMスキーマに変換され、データセット [!DNL Experience Platform] としてユーザー用に取り込まれます。 このデータの使用例は多くあ [!DNL Query Service] り、次のサンプルクエリはAdobe Targetデータセットと連携する必要があります。
+Data from Adobe Target is transformed into Experience Event XDM schema and ingested into [!DNL Experience Platform] as datasets for you. There are many use cases for [!DNL Query Service] with this data, and the following sample queries should work with your Adobe Target datasets.
 
 >[!NOTE]
->次の例では、SQLを編集し、評価したいデータセット、変数、または時間枠に基づいて、クエリに期待されるパラメーターを設定する必要があります。 SQLで表示される任意の場所にパラメーター `{ }` を指定します。
+>次の例では、SQL を編集し、評価するデータセット、変数、または期間に基づいて、クエリに必要なパラメーターを入力する必要があります。SQL の `{ }` が表示される場所にパラメーターを入力します。
 
-## Targetデータソースの標準データセット名 [!DNL Platform]:
+## Standard dataset name for Target data source on [!DNL Platform]:
 
-Adobe Targetエクスペリエンスイベント（わかりやすい名前） <br>`adobe_target_experience_events` (クエリで使用する名前)
+Adobe Target エクスペリエンスイベント（わかりやすい名前）<br>`adobe_target_experience_events`（クエリで使用する名前）
 
-## 高レベルの部分XDMフィールドマッピング
+## 高レベルの XDM フィールド部分マッピング
 
-配列を `[ ]` 表す
+`[ ]` は配列を表します
 
-| 名前 | XDMフィールド | メモ |
+| 名前 | XDM フィールド | メモ |
 | ---- | --------- | ----- |
 | mboxName | `_experience.target.mboxname` |  |
 | アクティビティ ID | `_experience.target.activities.activityID` |  |
 | エクスペリエンス ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
-| Segment ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
+| セグメント ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
 | イベント範囲 | `_experience.target.activities[].activityEvents[].eventScope` | 新しい訪問者と訪問の追跡 |
-| ステップID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | キャンペーンのカスタムステップID |
+| 手順 ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | キャンペーンのカスタム手順 ID |
 | 価格合計 | `commerce.order.priceTotal` |  |
 
-## 特定の日の時間別アクティビティカウント
+## 指定した日の時間別アクティビティ数
 
 ```sql
 SELECT
@@ -61,7 +61,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-## 特定の日の特定のアクティビティの時間別詳細
+## 指定した日の特定のアクティビティの時間別の詳細
 
 ```sql
 SELECT
@@ -80,7 +80,7 @@ ORDER BY Hour DESC
 LIMIT 24
 ```
 
-## 特定の日の特定のアクティビティのエクスペリエンスID
+## 指定した日の特定のアクティビティのエクスペリエンス ID
 
 ```sql
 SELECT
@@ -113,7 +113,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-## 特定の日のイベントIDごとのインスタンス別のアクティビティ範囲(訪問者、訪問、インプレッション)のリストを返す
+## 指定した日のアクティビティ ID ごとのインスタンス別イベント範囲（訪問者、訪問、インプレッション）のリストを返す
 
 ```sql
 SELECT
@@ -145,7 +145,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 30
 ```
 
-## ある特定の日の訪問者数、訪問数、アクティビティごとのインプレッション数の再訪
+## 指定した日のアクティビティごとの訪問者数、訪問数、インプレッション数を返す
 
 ```sql
 SELECT
@@ -171,7 +171,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-## 特定の日のリターン訪問者、訪問回数、エクスペリエンスIDのインプレッション数、セグメントID、EventScope
+## 指定した日の訪問者数、訪問数、エクスペリエンス ID のインプレッション数、セグメント ID、イベント範囲を返す
 
 ```sql
 SELECT
@@ -218,7 +218,7 @@ ORDER BY Day DESC, Activities.activityID, ExperienceID ASC, SegmentID._id ASC, V
 LIMIT 20
 ```
 
-## 指定した日のmbox名とレコード数を返す
+## 指定した日の mbox 名とレコード数を返す
 
 ```sql
 SELECT
