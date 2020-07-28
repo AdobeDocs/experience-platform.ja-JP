@@ -16,11 +16,11 @@ ht-degree: 56%
 
 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。アドビのリアルタイム顧客データプラットフォームは、電子メールマーケティングの宛先に対するセグメントをアクティブ化できるようにすることで、ESP と統合されます。
 
-キャンペーンの電子メールマーケティングの宛先にセグメントを送信するには、まず Adobe Real-time CDP が宛先に接続する必要があります。
+キャンペーンの電子メールマーケティングの宛先にセグメントを送信するには、まず アドビのリアルタイム CDP が宛先に接続する必要があります。
 
 電子メールマーケティングの宛先への接続は、3 つの手順で行います。各手順について、このページで詳しく説明します。
 
-次の節で説明する接続フローで、Amazon S3 または SFTP に接続します。Real-time CDP は、セグメントを `.csv` または `.txt` ファイルとして書き出し、希望の場所に配信します。Real-time CDP で有効になっているストレージの場所から、電子メールマーケティングプラットフォームにデータのインポートをスケジュールします。データをインポートするプロセスは、パートナーごとに異なります。詳しくは、個々の宛先に関する記事を参照してください。
+次の節で説明する接続フローで、Amazon S3 または SFTP に接続します。リアルタイム CDP は、セグメントを `.csv` または `.txt` ファイルとして書き出し、希望の場所に配信します。リアルタイム CDP で有効になっているストレージの場所から、電子メールマーケティングプラットフォームにデータのインポートをスケジュールします。データをインポートするプロセスは、パートナーごとに異なります。詳しくは、個々の宛先に関する記事を参照してください。
 
 ## 手順 1 — 宛先の接続 {#connect-destination}
 
@@ -28,7 +28,7 @@ ht-degree: 56%
 
    ![宛先に接続](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. 「 **[!UICONTROL Connection type]** 」セレクターで、 **Amazon S3**、 **SFTP with Password**、 **SFTP with SSH Key**、SFTP with SSH Key editorのいずれかを選択できます。 接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. 「 **[!UICONTROL Connection type]** 」セレクターで、 **AmazonS3**、SFTP with Password **、****** SFTP with SSH Keyを選択できます。 接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
 
    **S3接続の場合**、AmazonアクセスキーIDとシークレットアクセスキーを指定する必要があります。
 
@@ -37,8 +37,8 @@ ht-degree: 56%
    For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
 3. 「 **[!UICONTROL 設定]** 」( **[!UICONTROL Setup]** )手順で、新しい保存先の **[!UICONTROL 名前と説明(Description]** )を入力し、書き出したファイルのファイル形式( **** File format)を入力します。 <br>
-前の手順でストレージとしてAmazon S3を選択した場合は、 **[!UICONTROL バケット名]** と **[!UICONTROL フォルダーパス]** を、ファイルの配信先となるクラウドストレージーに挿入します。 「SFTPストレージ」オプションで、ファイルが配信される **[!UICONTROL フォルダパス]** (Folder path)を挿入します。 <br>
-また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 アドビ定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 アドビが定義した個々のマーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>
+前の手順でストレージとしてAmazonS3を選択した場合は、ファイルが配信されるクラウドストレージーに、 **[!UICONTROL バケット名]** と **[!UICONTROL フォルダーパス]** を挿入します。 For the SFTP storage option, insert the **[!UICONTROL Folder path]** where the files will be delivered. <br>
+また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>
    ![電子メールの設定手順](/help/rtcdp/destinations/assets/email-setup-step.png)
 
 ## 手順2 — エクスポート先に含めるセグメントメンバーを選択します。 {#select-segments}
