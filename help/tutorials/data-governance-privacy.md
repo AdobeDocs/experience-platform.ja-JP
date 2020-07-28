@@ -7,33 +7,33 @@ translation-type: tm+mt
 source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
 source-wordcount: '470'
-ht-degree: 0%
+ht-degree: 53%
 
 ---
 
 
-# [!DNL Data Governance] および [!DNL Privacy] チュートリアル
+# [!DNL Data Governance] および [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE)は、Adobe Experience Platform [!DNL Data Governanc]eの中核的なメカニズムです。 DULE機能を使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従ってそれぞれを分類できます。 ラベルの使用を開始する前に、「 [データ管理の概要](../data-governance/home.md) 」を参照して、のDULEフレームワークのより強力な紹介を確認してくだ [!DNL Platform]さい。
+[!DNL Data Usage Labeling and Enforcement] (DULE)は、Adobe Experience Platform [!DNL Data Governanc]eの中核的なメカニズムです。 DULE機能を使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従ってそれぞれを分類できます。 Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
 
-Adobe Experience Platform [!DNL Privacy Service] は、RESTful APIとユーザーインターフェイスを提供し、各種ソリューション間でプライバシーとコンプライアンスの要求を調整できます。 詳しくは、 [Privacy Serviceの概要から始めてください](../privacy-service/home.md)。
+Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. 詳しくは、「[Privacy Service の概要](../privacy-service/home.md)」を参照してください。
 
-## データ使用ラベル
+## データ使用ラベルの追加
 
-データ使用ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。 ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。 ベストプラクティスでは、データがに取り込まれるとすぐに、 [!DNL Experience Platform]またはデータがで使用可能になるとすぐに、データのラベル付けを推奨 [!DNL Platform]します。 データセットレベルで適用されるデータ使用量ラベルは、データセット内のすべてのフィールドに反映されます。 ラベルは、データセット内の個々のフィールド（列ヘッダー）に、伝播せずに直接適用することもできます。 データ使用ラベルをデータに適用する方法については、 [データ使用ラベルの概要を参照してください](../data-governance/labels/overview.md)。
+データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットを分類できます。ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform]. データセットレベルで適用されるデータ使用量ラベルは、データセット内のすべてのフィールドに反映されます。ラベルは、データセット内の個々のフィールド（列ヘッダー）に、伝播せずに直接適用することもできます。データ使用ラベルをデータに適用する方法については、「[データ使用ラベルの概要](../data-governance/labels/overview.md)」を参照してください。
 
 ## データ使用ポリシーの作成
 
-DULE [!DNL Policy Service] APIを使用すると、DULEポリシーを作成および管理して、特定のDULEラベルを含むデータに対して実行できるマーケティングアクションを決定できます。 使用を開始するには、 [データ使用ポリシーの概要を読みます](../data-governance/policies/overview.md)。
+The DULE [!DNL Policy Service] API allows you to create and manage DULE policies to determine what marketing actions can be taken against data that contains certain DULE labels. 開始する前に、「[データ使用ポリシーの概要](../data-governance/policies/overview.md)」をお読みください。
 
-## データ使用ポリシーの適用
+## データ使用ポリシーの作成
 
-データ用のData Usage Labeling and Enforcement(DULE)ラベルを作成し、これらのラベルに対するマーケティングアクション用のDULEポリシーを作成したら、DULE [!DNL Policy Service] APIを使用して、マーケティングアクションがデータセット上で実行されたか、またはDULEラベルの任意のグループがポリシー違反を構成するかを評価できます。 その後、独自の内部プロトコルを設定し、API応答に基づくポリシー違反を処理できます。 開始するには、 [ポリシー実施の概要](../data-governance/enforcement/overview.md)。
+Once you have created Data Usage Labeling and Enforcement (DULE) labels for your data, and have created DULE policies for marketing actions against those labels, you can use the DULE [!DNL Policy Service] API to evaluate whether a marketing action performed on a dataset, or an arbitrary group of DULE labels, constitutes a policy violation. その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。開始するには、「[ポリシー実施の概要](../data-governance/enforcement/overview.md)」にアクセスします。
 
-## オーディエンスセグメントのデータ使用コンプライアンスの実施
+## データセグメントのデータ使用コンプライアンスのオーディエンスを実施する
 
-で使用できるセグメントは、セグメント定義内にマージポリシーIDを [!DNL Real-time Customer Profile] 含みます。 このマージポリシーには、セグメントに含めるデータセットに関する情報が含まれ、そのデータセットには該当するデータ使用ラベルが含まれます。 オーディエンスセグメントに対するデータ使用量の準拠の適用に関する具体的な手順については、セグメントの [データ使用量準拠の実施チュートリアルに従ってください](../segmentation/tutorials/governance.md)。
+Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. この結合ポリシーには、セグメントに含めるデータセットに関する情報があります。さらに、データセットには適用可能なデータ使用ラベルが含まれています。オーディエンスセグメントでデータ使用のコンプライアンスを徹底するための具体的な手順については、[セグメントでデータ使用のコンプライアンスを徹底するためのチュートリアル](../segmentation/tutorials/governance.md)を参照してください。
 
 ## Get started with [!DNL Privacy Service]
 
-[!DNL Privacy Service] は、RESTful APIとユーザーインターフェイスを提供し、Adobe Experience Cloudアプリケーション全体でデータサブジェクト（お客様）の個人データを管理できます。 [!DNL Privacy Service] また、中央の監査とログのメカニズムも提供します。このメカニズムを使用すると、 [!DNL Experience Cloud] アプリケーションに関連するジョブのステータスと結果にアクセスできます。 ジョブの作成および監視方法の手順については、『 [!DNL Privacy Service] Privacy Service開発者ガイド [』または『](../privacy-service/api/getting-started.md) Privacy Serviceユーザガイド [](../privacy-service/ui/overview.md)』に記載されている手順に従ってください。
+[!DNL Privacy Service] は、Adobe Experience Cloud アプリケーション全体でデータのサブジェクト（顧客）の個人データを管理する RESTful API とユーザーインターフェイスを提供します。[!DNL Privacy Service]また、 は、 アプリケーションに関連するジョブのステータスと結果にアクセスできる、中央監査とログのメカニズムも提供します。[!DNL Experience Cloud]For instructions showing how to create and monitor [!DNL Privacy Service] jobs, follow the steps provided in the [Privacy Service developer guide](../privacy-service/api/getting-started.md) or the [Privacy Service user guide](../privacy-service/ui/overview.md).
