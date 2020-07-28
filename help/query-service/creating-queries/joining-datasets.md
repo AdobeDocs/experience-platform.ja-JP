@@ -7,20 +7,20 @@ translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 workflow-type: tm+mt
 source-wordcount: '53'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 
 # データセットの結合
 
-データセットを結合すると、クエリに他のデータセットのデータを含めることができます。 次の例では、カスタムのオペレーティングシステムデータセットを使用して、を `operatingsystemID``operatingsystem` 値にマッピングします。
+データセットを結合すると、他のデータセットのデータをクエリに含めることができます。この例では、カスタムのオペレーティングシステムデータセットを使用して、`operatingsystemID` を `operatingsystem` 値にマッピングしています。
 
-データセット:
+データセット：
 - your_analytics_table
 - custom_operating_system_lookup
 
-上位50オペレーティングシステムに関する `SELECT` 文を、ページ表示数別に作成します。
+上位 50 のオペレーティングシステムに関する `SELECT` 文をページ表示数別に作成します。
 
 ```sql
 SELECT 
