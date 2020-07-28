@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 52a01c5f90a9643691a25e2d0a5f03a7f0334a7d
 workflow-type: tm+mt
 source-wordcount: '201'
-ht-degree: 0%
+ht-degree: 13%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!NOTE]
 >コネクタ [!DNL PayPal] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
 [!DNL Experience Platform] は、サードパーティ支払い申込書からデータを取り込むためのサポートを提供します。 支払いプロバイダのサポートは以下のとおりで [!DNL PayPal]す。
 
@@ -63,5 +63,5 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 ## UI [!DNL PayPal] を [!DNL Platform] 使用して接続
 
-- [UIでのPayPalソースコネクタの作成](../../tutorials/ui/create/payments/paypal.md)
+- [UI での PayPal ソースコネクタの作成](../../tutorials/ui/create/payments/paypal.md)
 - [UIで支払コネクタのデータフローを構成します](../../tutorials/ui/dataflow/payments.md)
