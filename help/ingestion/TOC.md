@@ -1,43 +1,43 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Data Ingestion Help
+user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 workflow-type: tm+mt
 source-wordcount: '108'
-ht-degree: 7%
+ht-degree: 97%
 
 ---
 
 
-# Adobe Experience Platform Data Ingestion {#ingestion}
+# Adobe Experience Platformでのデータ取得 {#ingestion}
 
-- [データ取り込みの概要](home.md)
-- ストリーミング取り込み {#streaming}
+- [データ取得の概要](home.md)
+- ストリーミング取得 {#streaming}
    - [概要](streaming-ingestion/overview.md)
-   - [カフカコネクタ](streaming-ingestion/kafka.md)
+   - [Kafka コネクタ](streaming-ingestion/kafka.md)
    - [トラブルシューティング](streaming-ingestion/troubleshooting.md)
-- バッチ取り込み{#batch}
+- バッチ取得 {#batch}
    - [概要](batch-ingestion/overview.md)
-   - [バッチ取り込みAPI](batch-ingestion/api-overview.md)
-   - [部分的なバッチ取り込み](batch-ingestion/partial.md)
+   - [バッチ取得 API](batch-ingestion/api-overview.md)
+   - [部分的なバッチ取得](batch-ingestion/partial.md)
    - [トラブルシューティング](batch-ingestion/troubleshooting.md)
 - チュートリアル {#tutorials}
-   - [CSVファイルのXDMへのマップ](tutorials/map-a-csv-file.md)
-   - [UIを使用したバッチデータの取り込み](tutorials/ingest-batch-data.md)
+   - [XDM への CSV ファイルのマッピング](tutorials/map-a-csv-file.md)
+   - [UI を使用したバッチデータ取得](tutorials/ingest-batch-data.md)
    - [認証済みストリーミング接続の作成](tutorials/create-authenticated-streaming-connection.md)
-   - [ストリーミング接続の作成(API)](tutorials/create-streaming-connection.md)
-   - [ストリーミング接続の作成(UI)](tutorials/create-streaming-connection-ui.md)
-   - [ストリーミングレコードデータ](tutorials/streaming-record-data.md)
+   - [ストリーミング接続の作成（API）](tutorials/create-streaming-connection.md)
+   - [ストリーミング接続の作成（UI）](tutorials/create-streaming-connection-ui.md)
+   - [レコードデータのストリーミング](tutorials/streaming-record-data.md)
    - [時系列データのストリーミング](tutorials/streaming-time-series-data.md)
    - [複数のメッセージのストリーミング](tutorials/streaming-multiple-messages.md)
-- データ取り込みの品質と監視{#quality}
+- データ取得の品質と監視 {#quality}
    - [概要](quality/overview.md)
    - [データフローの監視](quality/monitor-data-flows.md)
    - [失敗したバッチの取得](quality/retrieve-failed-batches.md)
-   - [ストリーミング取り込みの検証](quality/streaming-validation.md)
-   - [データ取り込みイベントのサブスクライブ](quality/subscribe-events.md)
+   - [ストリーミング取得の検証](quality/streaming-validation.md)
+   - [データ取得イベントへのサブスクリプション](quality/subscribe-events.md)
 - [ソースコネクタ](source-connectors.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
-- [プラットフォームのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
+- [Platformのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
