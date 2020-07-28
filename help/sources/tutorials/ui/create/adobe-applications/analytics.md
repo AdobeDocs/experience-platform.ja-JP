@@ -1,42 +1,42 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: UIでのAdobeAnalyticsソースコネクタの作成
+title: UI での Adobe Analytics ソースコネクタの作成
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
 source-wordcount: '769'
-ht-degree: 2%
+ht-degree: 15%
 
 ---
 
 
-# UIでのAdobeAnalyticsソースコネクタの作成
+# UI での Adobe Analytics ソースコネクタの作成
 
-このチュートリアルでは、UIでコンシューマーデータをAdobe Experience Platformに導くためのAdobeAnalyticsソースコネクタを作成する手順を説明します。
+このチュートリアルでは、ユーザーデータをAdobe Experience Platformに取り込むためのUIでAdobe Analyticsソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [サンドボックス](../../../../../sandboxes/home.md): Experience Platformは、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [エクスペリエンスデータモデル（XDM）システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準化されたフレームワーク。
+* [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムのプロファイルを顧客に提供します。
+* [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-## アドビAnalyticsとのソース接続の作成
+## Adobe Analyticsとのソース接続の作成
 
 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platformにログインし</a> 、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択してソースワークスペースにアクセスします。 カ *タログ* 画面には、受信接続を作成するために利用できるソースが表示され、各ソースには、それらに関連付けられた既存のアカウント数とデータセットフローが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 *Adobe applications* 」カテゴリの下で、「 **[!UICONTROL AdobeAnalytics]** 」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 既存のアカウントを表示するには、「 **[!UICONTROL アカウント]**」を選択します。
+[ *Adobeアプリ* ]カテゴリの下で、[ **[!UICONTROL Adobe Analytics]** ]を選択して情報バーを画面の右側に表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 既存のアカウントを表示するには、「 **[!UICONTROL アカウント]**」を選択します。
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### データの選択
 
-「 *アドビAnalytics* 」のステップが表示されます。 この画面には、Analyticsの事前に確立されたデータセットフローが表示されます。 「データの **[!UICONTROL 選択]**」をクリックして、新しいデータセットフローを作成できます。
+*Adobe Analyticsのステップが表示されます* 。 この画面には、Analyticsの事前に確立されたデータセットフローが表示されます。 「データの **[!UICONTROL 選択]**」をクリックして、新しいデータセットフローを作成できます。
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ ht-degree: 2%
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-「 *Edit governance labels* 」パネルが表示されます。 この画面では、データセットフローの契約、ID、機密ラベルにアクセスして編集できます。
+The *Edit governance labels* panel appears. この画面では、データセットフローの契約、ID、機密ラベルにアクセスして編集できます。
 
 Analyticsからのデータにラベルを付ける方法の詳細については、『 [data usage labels guide](../../../../../data-governance/labels/user-guide.md)』を参照してください。
 
@@ -101,10 +101,10 @@ Analyticsからのデータにラベルを付ける方法の詳細について�
 
 * [リアルタイム顧客プロファイルの概要](../../../../../profile/home.md)
 * [セグメント化サービスの概要](../../../../../segmentation/home.md)
-* [Data Science Workspaceの概要](../../../../../data-science-workspace/home.md)
+* [Data Science ワークスペースの概要](../../../../../data-science-workspace/home.md)
 * [クエリサービスの概要](../../../../../query-service/home.md)
 
-次のビデオは、AdobeAnalyticsソースコネクタを使用したデータの取り込みについて理解を深めることを目的としています。
+次のビデオは、Adobe Analyticsソースコネクタを使用した取り込みデータについて理解を深めることを目的としています。
 
 >[!WARNING]
 >
