@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy ServiceUIの概要
+title: Privacy Service サービス UI の概要
 topic: UI guide
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '167'
-ht-degree: 1%
+ht-degree: 52%
 
 ---
 
 
-# [!DNL Privacy Service] UIの概要
+# [!DNL Privacy Service] UI の概要
 
-Adobe Experience Platform [!DNL Privacy Service] は、RESTful APIとユーザーインターフェイスを提供し、各種ソリューション間でプライバシーとコンプライアンスの要求を調整できます。 このドキュメントは、 [!DNL Privacy Service] UIを調べます。 APIの使用について詳しくは、 [Privacy Service開発ガイドを参照してください](../api/getting-started.md)。
+Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. This document explores the [!DNL Privacy Service] UI. API の使用について詳しくは、[Privacy Service 開発者ガイド](../api/getting-started.md)を参照してください。
 
 ## Log in to the [!DNL Privacy Service] UI
 
-UIに対して認証を行うには、Adobe IDが必要で [!DNL Privacy Service] す。 また、Adobe IDが関連付けられている組織内でのシステム管理者権限が必要です。
+You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. また、Adobe ID が関連付けられている組織内のシステム管理者権限が必要です。
 
-Adobe Experience Cloudのサインインページ(https://experience.adobe.com)に移動します。 「 **[!UICONTROL Adobe IDでサインイン]** 」をクリックし、プロンプトが表示されたらAdobe IDの資格情報を入力します。
+Adobe Experience Cloud のログインページ（https://experience.adobe.com）に移動します。 「**[!UICONTROL Adobe ID でログイン]**」をクリックし、指示に従って Adobe ID の資格情報を入力します。
 
-サインインしたら、「 **[!UICONTROL プライバシーUI]**」をクリックします。
+Once you are signed in, click **[!UICONTROL Privacy UI]**.
 
 ![](../images/ui-overview/quick-access.png)
 
@@ -34,4 +34,4 @@ Adobe Experience PlatformUIにアクセスできる場合は、左側のナビ�
 
 ## 次の手順
 
-これで正常にログインできたので、 [UIを使用した様々な操作の実行手順については、](user-guide.md) ユーザガイド [!DNL Privacy Service] を参照してください。
+これで正常にログインできました。 UI を使用して様々な操作を実行する手順については、[ユーザーガイド](user-guide.md)を参照してください。[!DNL Privacy Service]
