@@ -1,49 +1,49 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Senesi Machine Learning API開発者ガイド
+title: Senesi 機械学習 API 開発者ガイド
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
 source-wordcount: '196'
-ht-degree: 3%
+ht-degree: 65%
 
 ---
 
 
 # [!DNL Sensei Machine Learning] API開発者ガイド
 
-この [!DNL Sensei Machine Learning] APIは、データ科学者が機械学習サービスを、アルゴリズムのオンボーディングから実験まで、サービスの展開まで、整理および管理するためのメカニズムを提供します。
+The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
-この開発者ガイドでは、 [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Senesi Machine Learning APIを使用する開始を支援する手順を説明し、様々なData Science Workspaceリソースに対してCRUD操作を実行するAPI呼び出しの例を示します。
+この開発者ガイドは、[Sensei 機械学習 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) の使用を開始する際に役立つ手順を提供し、様々な Data Science Workspace リソースに対して CRUD 操作を実行するための API 呼び出しの例を示します。
 
 ## はじめに
 
-APIを呼び出すために次のリクエストヘッダーにアクセスするには、 [認証](../../tutorials/authentication.md)[!DNL Adobe Experience Platform] のチュートリアルを完了している必要があります。
+次のリクエストヘッダーにアクセスして API を呼び出すには、[認証](../../tutorials/authentication.md)チュートリアルを完了しておく必要があります。[!DNL Adobe Experience Platform]
 
-* 認証： 無記名 `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 * Content-Type: application/json
 
 ## 次の手順
 
-必要な認証資格情報を収集したら、次のエンドポイントグループへのサンプルAPI呼び出しについて、この開発者ガイドの後続の節に進むことができます。
+必要な認証資格情報を収集したら、この開発者ガイドの後続の節に進んで、次のエンドポイントグループに属するサンプル API 呼び出しを参照することができます。
 
 * [エンジン](./engines.md)
 * [実験](./experiments.md)
 * [インサイト](./insights.md)
-* [MLInstances（レシピ）](./mlinstances.md)
-* [MLServices](./mlservices.md)
+* [MLInstance（レシピ）](./mlinstances.md)
+* [MLService](./mlservices.md)
 * [モデル](./models.md)
 * [付録](./appendix.md)
