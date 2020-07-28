@@ -1,69 +1,69 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Catalog Service開発ガイド
+title: カタログサービス開発者ガイド
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '558'
-ht-degree: 0%
+ht-degree: 44%
 
 ---
 
 
 # [!DNL Catalog Service] 開発ガイド
 
-[!DNL Catalog Service] は、Adobe Experience Platform内のデータの場所と系列のレコードシステムです。 [!DNL Catalog] は、データ自体にアクセスすることなく、データに関する情報を検索できるメタデータストア（「カタログ」） [!DNL Experience Platform]として機能します。 See the [Catalog overview](../home.md) for more information.
+[!DNL Catalog Service] は、Adobe Experience Platform内のデータの場所と系列のレコードシステムです。 [!DNL Catalog] は、データ自体にアクセスすることなく、データに関する情報を検索できるメタデータストア（「カタログ」） [!DNL Experience Platform]として機能します。 詳しくは、「[カタログの概要](../home.md)」を参照してください。
 
-この開発者ガイドでは、 [!DNL Catalog] APIを使用する開始に役立つ手順を説明します。 次に、を使用して主要な操作を実行するためのサンプルAPI呼び出しを提供 [!DNL Catalog]します。
+This developer guide provides steps to help you start using the [!DNL Catalog] API. The guide then provides sample API calls for performing key operations using [!DNL Catalog].
 
 ## 前提条件
 
-[!DNL Catalog] では、様々な種類のリソースおよび操作のメタデータを追跡 [!DNL Experience Platform]します。 この開発者ガイドでは、以下のリソースの作成と管理に関連する様々な [!DNL Experience Platform] サービスについて、十分に理解している必要があります。
+[!DNL Catalog] では、様々な種類のリソースおよび操作のメタデータを追跡 [!DNL Experience Platform]します。 This developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with creating and managing these resources:
 
 * [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
-* [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): CSVやParketなどのデータファイルからデータを取り込んで保存する方法。 [!DNL Experience Platform]
-* [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md): クライアント側とサーバ側のデバイスからデータをリアルタイムで取り込み、保存する方法。 [!DNL Experience Platform]
+* [バッチ取得](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]： が CSV や Parket などのデータファイルからデータを取得して保存する方法。
+* [ストリーミング取得](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform]： がクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
 
-以下の節では、 [!DNL Catalog Service] APIを正しく呼び出すために知る必要がある、または手元にある情報について説明します。
+The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Catalog Service] API.
 
-## サンプルAPI呼び出しの読み取り
+## API 呼び出し例の読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-## 必要なヘッダーの値の収集
+## 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* 認証： 無記名 `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 * Content-Type: application/json
 
-## API呼び出しのベストプラクティス [!DNL Catalog]
+## Best practices for [!DNL Catalog] API calls
 
-APIへのGETリクエストを実行する場合、最良の方法は、必要なオブジェクトとプロパティのみを返すために、リクエストにクエリパラメーターを含めることです。 [!DNL Catalog] フィルターを適用しない要求は、応答ペイロードのサイズが過去3 GBに達する可能性があり、全体のパフォーマンスが低下する可能性があります。
+When performing GET requests to the [!DNL Catalog] API, best practice is to include query parameters in your requests in order to return only the objects and properties that you need. フィルターを適用しないリクエストの応答ペイロードのサイズは 3 GB に達っすることがあり、全体的なパフォーマンスが低下する可能性があります。
 
-リクエストパスにIDを含めることで特定のオブジェクトを表示したり、 `properties` やなどのクエリパラメーターを使用して応答をフィルターしたりでき `limit` ます。 フィルターーは、ヘッダーとして、またはクエリーパラメーターとして渡すことができます。クエリーパラメーターとして渡されるパラメーターは、優先されます。 詳しくは、カタログデータの [フィルタリングに関するドキュメント](filter-data.md) を参照してください。
+特定のオブジェクトを表示するには、リクエストパスに ID を含めるか、または `properties` や `limit` などのクエリーパラメーターを使用して応答をフィルターします。フィルターは、ヘッダーおよびクエリーパラメーターとして渡すことができ、クエリーパラメーターとして渡されたフィルターが優先されます。詳しくは、[カタログデータのフィルター](filter-data.md)に関するドキュメントを参照してください。
 
-一部のクエリではAPIに大きな負荷がかかる場合があるので、ベストプラクティスをさらにサポートするために、 [!DNL Catalog] クエリにグローバル制限が実装されています。
+Since some queries can put a heavy load on the API, global limits have been implemented on [!DNL Catalog] queries to further support best practices.
 
 ## 次の手順
 
-このドキュメントでは、 [!DNL Catalog] APIを呼び出すために必要な前提条件に関する知識を説明しました。 これで、この開発者ガイドに記載されているサンプル呼び出しに進み、それらの指示に従うことができます。
+This document covered the prerequisite knowledge required to make calls to the [!DNL Catalog] API. 次に、この開発者ガイドに記載されているサンプル呼び出しに進み、その手順に従うことができます。
 
-このガイドの例のほとんどはエンドポイントを使用していますが、 `/dataSets` 原則は内部の他のエンドポイント [!DNL Catalog] ( `/batches` や `/accounts`など)に適用できます。 各エンドポイントで使用可能なすべての呼び出しと操作の完全なリストについては、 [カタログサービスAPIリファレンスを参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) 。
+Most of the examples in this guide use the `/dataSets` endpoint, but the principles can be applied to other endpoints within [!DNL Catalog] (such as `/batches` and `/accounts`). 各エンドポイントで使用できるすべての呼び出しと操作の完全なリストについては、『[カタログサービス API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)』を参照してください。
 
-データ取り込みと [!DNL Catalog] APIの関係を示すワークフローについては、データセットの [作成に関するチュートリアルを参照してください](../datasets/create.md)。
+For a step-by-step workflow that demonstrates how the [!DNL Catalog] API is involved with data ingestion, see the tutorial on [creating a dataset](../datasets/create.md).
