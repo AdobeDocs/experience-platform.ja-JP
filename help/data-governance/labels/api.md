@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
 source-wordcount: '967'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -28,9 +28,9 @@ ht-degree: 4%
 
 ## すべてのラベルをリスト {#list-labels}
 
-APIを使用して、すべてのラベルまたは [!DNL Policy Service] ラベルをリストするには、それぞれGETリクエストを作成す `core` るか、またはGETリクエストを作成 `custom``/labels/core``/labels/custom`します。
+APIを使用して、またはに対してそれぞれGETリクエストを行うことで、すべての [!DNL Policy Service] ラベルまたは `core` ラベルをリストでき `custom``/labels/core``/labels/custom`ます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /labels/core
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 正常に応答すると、システムから取得されたカスタムラベルのリストが返されます。 上の例のリクエストはに対して行われたので `/labels/custom`、以下の応答にはカスタムラベルのみが表示されています。
 
@@ -110,9 +110,9 @@ curl -X GET \
 
 ## ラベルを検索 {#look-up-label}
 
-APIへのGET要求のパスにラベルのプロパティを含めると、特定のラベルを検索でき `name`[!DNL Policy Service] ます。
+特定のラベルを検索するには、そのラベルの `name` プロパティを [!DNL Policy Service] APIへのGET要求のパスに含めます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /labels/core/{LABEL_NAME}
@@ -121,7 +121,7 @@ GET /labels/custom/{LABEL_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LABEL_NAME}` | 検索するカスタムラベルの `name` プロパティです。 |
+| `{LABEL_NAME}` | The `name` property of the custom label you want to look up. |
 
 **リクエスト**
 
@@ -136,7 +136,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 正常に応答すると、カスタムラベルの詳細が返されます。
 
@@ -164,9 +164,9 @@ curl -X GET \
 
 ## カスタムラベルの作成または更新 {#create-update-label}
 
-カスタムラベルを作成または更新するには、 [!DNL Policy Service] APIにPUTリクエストを行う必要があります。
+カスタムラベルを作成または更新するには、 [!DNL Policy Service] APIに対してPUTリクエストを行う必要があります。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /labels/custom/{LABEL_NAME}
@@ -202,7 +202,7 @@ curl -X PUT \
 | `friendlyName` | ラベルのわかりやすい名前。表示目的で使用されます。 |
 | `description` | （オプション）詳細なコンテキストを提供するラベルの説明です。 |
 
-**応答**
+**応答** 
 
 正常な応答は、カスタムラベルの詳細を返します。既存のラベルが更新された場合はHTTPコード200(OK)、新しいラベルが作成された場合は201（作成済み）を返します。
 
@@ -232,7 +232,7 @@ curl -X PUT \
 
 APIにGETリクエストを行うことで、既存のデータセットに適用されているデータ使用量ラベルを調べることができ [!DNL Dataset Service] ます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /datasets/{DATASET_ID}/labels
@@ -253,7 +253,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 成功した場合は、データセットに適用されたデータ使用量ラベルが返されます。
 
@@ -283,9 +283,9 @@ curl -X GET \
 
 ## データセットへのラベルの適用 {#apply-dataset-labels}
 
-APIへのPOSTまたはPUT要求のペイロードにラベルを提供することで、データセット用の一連のラベルを作成でき [!DNL Dataset Service] ます。 これらのいずれかの方法を使用すると、既存のラベルが上書きされ、ペイロードに指定されたラベルに置き換えられます。
+POSTまたはPUTリクエストのペイロードにラベルを指定すると、データセット用の一連のラベルを作成でき [!DNL Dataset Service] ます。 これらのいずれかの方法を使用すると、既存のラベルが上書きされ、ペイロードに指定されたラベルに置き換えられます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /datasets/{DATASET_ID}/labels
@@ -298,7 +298,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **リクエスト**
 
-次のPOSTリクエストでは、一連のラベルと、そのデータセット内の特定のフィールドを追加します。 ペイロードに指定されるフィールドは、PUT要求に必要なフィールドと同じです。
+次のPOSTリクエストでは、一連のラベルと、そのデータセット内の特定のフィールドをデータセットに追加します。 ペイロードに指定されるフィールドは、PUT要求に必要なフィールドと同じです。
 
 ```shell
 curl -X POST \
@@ -328,7 +328,7 @@ curl -X POST \
 | `labels` | データセットに追加するデータ使用ラベルのリストです。 |
 | `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。 <br/><br/>`option`: フィールドの [!DNL Experience Data Model] (XDM)属性を含むオブジェクトです。 次の3つのプロパティが必要です。<ul><li>id</code>: フィールドに関連付けられているスキーマのURI $id</code> 。</li><li>contentType</code>: スキーマのコンテンツタイプとバージョン番号。 これは、XDMルックアップ要求に対して有効な <a href="../../xdm/api/look-up-resource.md">Acceptヘッダーの1つの形式にする必要があります</a> 。</li><li>schemaPath</code>: データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`: フィールドに追加するデータ使用ラベルのリストです。 |
 
-**応答**
+**応答** 
 
 正常に完了すると、データセットに追加されたラベルが返されます。
 
@@ -352,7 +352,7 @@ curl -X POST \
 
 APIにDELETEリクエストを行うことで、データセットに適用されたラベルを削除でき [!DNL Dataset Service] ます。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /datasets/{DATASET_ID}/labels
@@ -373,7 +373,7 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 成功した応答HTTPステータス200 (OK)。ラベルが削除されたことを示します。 別の呼び出しで、データセットの既存のラベルを [調べて](#look-up-dataset-labels) 、これを確認できます。
 
@@ -381,8 +381,8 @@ curl -X DELETE \
 
 このドキュメントを読むことで、APIを使用したデータ使用ラベルの管理方法を学びました。
 
-データセットレベルとフィールドレベルでデータ使用量ラベルを追加したら、にデータを取り込み始めることができ [!DNL Experience Platform]ます。 詳しくは、 [データ取り込みに関するドキュメントを参照して開始](../../ingestion/home.md)。
+Once you have added data usage labels at the dataset- and field-level, you can begin to ingest data into [!DNL Experience Platform]. 詳しくは、[データ取得ドキュメント](../../ingestion/home.md)を参照してください。
 
-適用したラベルに基づいてデータ使用ポリシーを定義できるようになりました。 詳しくは、「 [データ使用ポリシーの概要](../policies/overview.md)」を参照してください。
+適用したラベルに基づいてデータ使用状況ポリシーを定義することもできます。詳しくは、「[データ使用状況ポリシーの概要](../policies/overview.md)」を参照してください。
 
 でのデータセットの管理について詳し [!DNL Experience Platform]くは、「 [データセットの概要](../../catalog/datasets/overview.md)」を参照してください。
