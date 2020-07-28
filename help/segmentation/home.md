@@ -1,162 +1,162 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platformセグメントサービス
+title: Adobe Experience Platform セグメント化サービス
 topic: overview
 translation-type: tm+mt
 source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
 source-wordcount: '1974'
-ht-degree: 4%
+ht-degree: 73%
 
 ---
 
 
 # Adobe Experience Platform [!DNL Segmentation Service] overview
 
-Adobe Experience Platform [!DNL Segmentation Service][!DNL Real-time Customer Profile] には、セグメントを作成してデータからオーディエンスを生成するためのユーザーインターフェイスとRESTful APIが用意されています。 これらのセグメントは一元的に設定され、管理され [!DNL Platform]、どのアドビソリューションでも簡単にアクセスできます。
+Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution.
 
-このドキュメントでは、の概要とAdobe Experience Platformで果たす役割 [!DNL Segmentation Service] を説明します。
+This document provides an overview of [!DNL Segmentation Service] and the role it plays in Adobe Experience Platform.
 
 ## Getting started with [!DNL Segmentation Service]
 
-このドキュメント全体で使用される主な用語は、次のとおりです。
+このドキュメント全体で使用される以下の主要用語を理解しておくことが重要です。
 
-- **セグメント**: 大きな個人(顧客、見込み客、ユーザーまたは組織など)を、類似した特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割します。
-- **セグメント定義**: ターゲットオーディエンスの主な特性や動作を記述するために使用されるルールセット。 概念化された後は、セグメント定義で説明されているルールを使用して、セグメントの適格なオーディエンスメンバーが決定されます。
-- **オーディエンス**: セグメント定義の条件を満たすプロファイルの結果セット。
+- **セグメント**：多数の個人（顧客、見込み客、ユーザーまたは組織など）を、類似の特性を共有しマーケティング戦略に対して同様の対応をする小さなグループに分割します。
+- **セグメント定義**：ターゲットオーディエンスの主要な特性や動作を記述するルールセットです。概念化が完了すると、セグメント定義で記述されているルールを使用して、セグメントの適格なオーディエンスメンバーが決定されます。
+- **オーディエンス**：セグメント定義の条件を満たすプロファイルの結果セットです。
 
-## セグメントの仕組み
+## セグメント化の仕組み
 
 セグメント化とは、プロファイルストアにあるプロファイルのサブセットによって共有される特定の属性や行動を定義し、マーケティング可能な人々のグループを顧客ベースから選別するプロセスです。例えば、「スニーカーを購入し忘れましたか？」という電子メールキャンペーンでは、過去 30 日間にランニングシューズを検索したが購入を完了しなかったすべてのユーザーのオーディエンスが必要な場合があります。
 
-概念的に定義されたセグメントは、で構築され [!DNL Experience Platform]ます。 通常、セグメントはマーケティング担当者またはオーディエンススペシャリストが作成しますが、一部の組織では、データアナリストとのコラボレーションのために、マーケティング部門が作成することを好みます。 送信先のデータを確認すると [!DNL Platform]、データアナリストは、セグメントのルールや条件の作成に使用するフィールドや値を選択して、セグメント定義を構成します。 これは、UIまたはAPIを使用して行います。
+Once a segment has been conceptually defined it is built in [!DNL Experience Platform]. セグメントは通常、マーケターまたはオーディエンススペシャリストが作成しますが、データアナリストと協力してマーケティング部門が作成することを望む組織もあります。Upon reviewing the data being sent to [!DNL Platform], the data analyst composes the segment definition by selecting which fields and values will be used to build the rules or conditions of the segment. これは、UI または API を使用しておこないます。
 
 ## セグメントの作成
 
-APIを使用して作成する場合も、を使用する場合も、最終的に [!DNL Segment Builder]は [!DNL Profile Query Language] (PQL)を使用して定義されます。 ここで、条件を満たすプロファイルを取得するために作成された言語で概念的なセグメント定義を説明します。 詳しくは、「 [PQLの概要](./pql/overview.md)」を参照してください。
+APIを使用して作成する場合も、を使用する場合も、最終的に [!DNL Segment Builder]は [!DNL Profile Query Language] (PQL)を使用して定義されます。 ここでは、条件を満たすプロファイルを取得するために設計された言語で概念セグメント定義を記述します。詳しくは、[PQL の概要](./pql/overview.md)を参照してください。
 
-（のUI実装）でセグメントを作成して使用する方法について詳し [!DNL Segment Builder] くは、『 [!DNL Segmentation Service]セグメントビルダー [』ガイドを参照してください](./ui/overview.md)。
+To learn how to create and use segments in the [!DNL Segment Builder] (the UI implementation of [!DNL Segmentation Service]), see the [Segment Builder guide](./ui/overview.md).
 
-APIを使用したセグメント定義の作成について詳しくは、APIを使用したオーディエンスセグメントの [作成に関するチュートリアルを参照してください](./tutorials/create-a-segment.md)。
+API を使用したセグメント定義の作成について詳しくは、[API を使用したオーディエンスセグメントの作成](./tutorials/create-a-segment.md)に関するチュートリアルを参照してください。
 
 >[!NOTE]
 >
->スキーマが拡張されるイベントでは、以降のすべてのアップロードで、新しく追加されたフィールドをそれに応じて更新する必要があります。 カスタマイズ [!DNL Experience Data Model] (XDM)の詳細については、 [スキーマエディタのチュートリアルを参照してください](../xdm/tutorials/create-schema-ui.md)。
+> イベントでは、スキーマが拡張され、以降のすべてのアップロードで、新しく追加されたフィールドを適宜更新する必要があります。For more information on customizing [!DNL Experience Data Model] (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
 
 ## セグメントの評価
 
-### ストリーミングセグメント
+### ストリーミングセグメント化
 
-ストリーミングセグメント化は、継続的なデータ選択プロセスで、ユーザのアクティビティに応じてセグメントを更新します。 セグメントを作成して保存すると、に入力するデータに対してセグメント定義が適用され [!DNL Real-time Customer Profile]ます。 セグメントの追加と削除は定期的に処理され、ターゲットオーディエンスとの関連性が維持されます。
+ストリーミングセグメント化は、ユーザーのアクティビティに応じてセグメントを更新する継続的なデータ選択プロセスです。Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-time Customer Profile]. セグメントの追加と削除は定期的に処理され、ターゲットオーディエンスの関連性が維持されます。
 
-ストリーミングセグメント化の詳細については、 [ストリーミングセグメントに関するドキュメントを参照してください](./api/streaming-segmentation.md)。
+ストリーミングセグメント化について詳しくは、[ストリーミングセグメント化のドキュメント](./api/streaming-segmentation.md)を参照してください。
 
-### バッチセグメント
+### バッチセグメント化
 
-継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一度に移動し、対応するオーディエンスを生成します。 作成したセグメントは保存および保存され、エクスポートして使用できるようになります。
+継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したセグメントは保存されて、使用時にエクスポートできるようになります。
 
-セグメントの評価方法については、「 [セグメント評価のチュートリアル](./tutorials/evaluate-a-segment.md)」を参照してください。
+セグメントの評価方法については、[セグメント評価のチュートリアル](./tutorials/evaluate-a-segment.md)を参照してください。
 
-## セグメント結果へのアクセス
+## セグメント化の結果へのアクセス
 
-書き出したセグメントにアクセスする方法については、「 [セグメント評価チュートリアル](./tutorials/evaluate-a-segment.md)」を参照してください。
+エクスポートしたセグメントにアクセスする方法については、[セグメント評価のチュートリアル](./tutorials/evaluate-a-segment.md)を参照してください。
 
 ## セグメントメタデータ
 
-セグメントメタデータは、イベントでのインデックス作成を容易にし、セグメントを再利用または組み合わせることができます。
+セグメントメタデータを使用すると、イベント内でのインデックス作成が容易になり、セグメントの再利用や組み合わせが可能になります。
 
-セグメントを(APIまたは [!DNL Segment Builder])構成するには、セグメント名と結合ポリシーを定義する必要があります。
+Composing your segments (through either the API or [!DNL Segment Builder]) requires that you to define a segment name and merge policy.
 
 ### セグメント名
 
-新しいセグメントを作成する場合は、セグメント名を指定する必要があります。 セグメント名は、によって作成されたコレクションの中の特定のセグメントを識別するために使用され [!DNL Segmentation Service]ます。 したがって、セグメント名は説明的で簡潔で一意なものにする必要があります。
+新しいセグメントを作成する場合は、セグメント名を指定する必要があります。The segment name is used to identify a particular segment amongst the collection built by [!DNL Segmentation Service]. したがって、セグメント名は説明的で簡潔かつ一意である必要があります。
 
 >[!NOTE]
 >
->セグメントを計画する際、セグメントは他のセグメントから参照したり、他のセグメントと組み合わせたりできることに注意してください。 名前を選択する際は、セグメントに再利用可能な部分が含まれている可能性があることを考慮してください。
+> セグメントを計画する際、セグメントを他のセグメントから参照したり、他のセグメントと組み合わせたりできます。名前を選択する際は、セグメントに再利用可能な部分が含まれている可能性を考慮してください。
 
 ### 結合ポリシー
 
-マージポリシーは、特定の条件下で、データの優先順位付けと統合表示 [!DNL Profile] への組み合わせ方法を決定するために使用されるルールです。
-マージポリシーを定義しない場合は、デフォルトの [!DNL Platform] マージポリシーが使用されます。 組織に固有のマージポリシーを使用する場合は、独自のマージポリシーを作成し、組織のデフォルトとしてマークすることができます。
+Merge policies are rules used by [!DNL Profile] to determine how data will be prioritized and combined into a unified view under certain conditions.
+If a merge policy is not defined, the default [!DNL Platform] merge policy is used. 組織に固有の結合ポリシーを使用する場合は、独自の結合ポリシーを作成し、組織のデフォルトとすることができます。
 
 結合ポリシーの詳細については、 [結合ポリシーガイドを参照してください](../profile/api/merge-policies.md)。
 
 >[!NOTE]
 >
->オーディエンスのサイズの見積もりは、組織の既定のプロファイル結合ポリシーに基づいて行われます。
+> オーディエンスサイズの推定は、組織のデフォルトのプロファイル結合ポリシーに基づいておこなわれます。
 
 ### その他のセグメントメタデータ
 
-セグメント名と結合ポリシーに加えて、 [!DNL Segment Builder] オファーには、追加の「セグメントの説明」メタデータフィールドがあり、ここでセグメント定義の目的を要約できます。
+In addition to segment name and merge policy, [!DNL Segment Builder] offers you an additional &quot;segment description&quot; metadata field where you can summarize your segment definition&#39;s purpose.
 
-## アドバンスセグメント機能
+## 高度なセグメント化機能
 
-セグメントは、 [ストリーミングデータ取り込みと](../ingestion/streaming-ingestion/overview.md) 、次の高度なセグメント機能のいずれかを組み合わせることで、継続的にオーディエンスを生成するように設定できます。
+セグメントは、[ストリーミングデータの取り込み](../ingestion/streaming-ingestion/overview.md)と以下の高度なセグメント化機能のいずれかを組み合わせることで、継続的にオーディエンスを生成するように設定できます。
 - [順次セグメント化](#sequential)
-- [動的分類](#dynamic)
-- [マルチエンティティセグメント](#multi-entity)
+- [動的セグメント化](#dynamic)
+- [マルチエンティティセグメント化](#multi-entity)
 
-これらの高度な機能については、以降の節で詳しく説明します。
+これらの高度な機能について、以降の節で詳しく説明します。
 
 ## 順次セグメント化 {#sequential}
 
-標準的なユーザーの遍歴は、本来は連続しています。 Adobe Experience Platformを使用すると、一連のセグメントを定義してこの遍歴を反映させ、発生するイベントのシーケンスをキャプチャできます。 のビジュアルイベントタイムラインを使用して、イベントを希望の順序に並べ替えることができ [!DNL Segment Builder]ます。
+標準的なユーザージャーニーは、本質的に順次的です。Adobe Experience Platform では、一連のセグメントを定義してこのジャーニーを反映させ、発生したイベントのシーケンスをキャプチャできます。You can arrange events into their desired order by using the visual event timeline in the [!DNL Segment Builder].
 
-順次セグメント化を必要とする顧客の遍歴の例として、製品表示/製品追加/チェックアウト/購入なしがあります。
+順次セグメント化を必要とする顧客のジャーニーの例としては、製品表示／製品追加／チェックアウト／購入なしがあります。
 
-## 動的分類 {#dynamic}
+## 動的セグメント化 {#dynamic}
 
-動的セグメント化は、マーケティングキャンペーン向けのセグメントを構築する際に、マーケティング担当者が従来直面していた拡張性の問題を解決します。
+動的セグメント化は、マーケティングキャンペーンのセグメントを作成する際に従来マーケターが直面していたスケーラビリティの問題を解決します。
 
-静的セグメント化は、可能なすべての使用例を明示的に繰り返しキャプチャする必要があるのとは異なり、動的セグメントでは変数を使用してルールロジックを作成し、関係を動的に表します。
+すべての可能なユースケースを明示的に繰り返しキャプチャする必要がある静的セグメント化とは異なり、動的セグメント化では変数を使用してルールロジックを作成し、関係を動的に表現します。
 
-### 使用例： 自宅以外で買い物をする顧客の探し
+### ユースケース：自宅以外で購入する顧客を探す
 
-この高度なセグメント機能の価値を理解するために、データアーキテクトがマーケティング担当者と連携して、自宅以外の州で購入した顧客を特定することを検討します。
+この高度なセグメント化機能の有用性を説明するために、ここでは、データアーキテクトがマーケターの協力を得て、自宅以外で購入した顧客を特定するとしましょう。
 
 **問題**
 
-静的セグメント化では、個々のセグメントを固有のホーム状態属性を持つように定義してから、ホーム状態と等しくない購入イベントをフィルタリングする必要があります。 このタイプの明示的なセグメントは、「ユタ州で購入の状態がユタではない人を探しています」と読みます。 この方法を使用してオーディエンスを作成するには、米国の州ごとに1つのセグメントを定義し、合計50個のセグメントを定義する必要があります。
+静的セグメント化では、一意の「自宅の州」属性を持つ個々のセグメントを定義してから、「自宅の州」に一致しない購入イベントをフィルタリングで特定する必要があります。このタイプの明示的なセグメントは、例えば、「ユタ州在住で購入の州がユタでない人を探しています」となるでしょう。この方法を使用してオーディエンスを作成するには、米国の州ごとに 1 つのセグメントを定義し、合計 50 個のセグメントを定義する必要があります。
 
-スケールする際に必然的に生じる様々なセグメントの組み合わせの結果、静的セグメント化に必要な手動のプロセスは時間がかかり、全体的な効率が低下します。
+拡張するにつれて様々なセグメントの組み合わせが必然的に発生する結果、静的セグメント化に必要な手動プロセスにますます時間がかかり、全体の効率が低下します。
 
 **解決策**
 
-動的なセグメントでは、購入状態属性に変数を割り当てることで、「購入の状態が顧客の自宅の状態と異なる購入を見つける」のが簡単になります。 これにより、50個の静的セグメントを1つの動的セグメントに統合できます。
+動的セグメント化では、購入州属性に変数を割り当てることで、「購入の州が顧客の自宅の州と異なる購入を見つける」ことが簡単になります。これにより、50 個の静的セグメントを 1 つの動的セグメントに統合できます。
 
-## マルチエンティティセグメント {#multi-entity}
+## マルチエンティティセグメント化 {#multi-entity}
 
-高度なマルチエンティティセグメント化機能を使用すると、複数のXDMクラスを使用してセグメントを作成でき、その結果、個人スキーマに拡張子を追加できます。 その結果、は、プロファイルデータストアにネイティブであるかのように、セグメント定義中に追加のフィールドにアクセスでき [!DNL Segmentation Service] ます。
+高度なマルチエンティティセグメント化機能を使用すると、複数の XDM クラスを使用してセグメントを作成し、個人のスキーマに拡張機能を追加できます。As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the profile data store.
 
-複数エンティティのセグメント化は、ビジネスニーズに関連するデータに基づいてオーディエンスを特定するために必要な柔軟性を提供します。 このプロセスは、データベースのクエリに関する専門知識を必要とせずに、すばやく簡単に実行できます。 これにより、データストリームにコストをかけずに、またはバックエンドのデータの結合を待たずに、セグメントに主要データを追加できます。
+マルチエンティティセグメント化は、ビジネスニーズに関係のあるデータに基づいてオーディエンスを特定する場合に必要な柔軟性を提供します。このプロセスは、データベースのクエリに関する専門知識がなくても、すばやく簡単に実行できます。これにより、データストリームにコストの高い変更を加えたり、バックエンドでのデータ結合を待機したりしなくても、セグメントに主要なデータを追加できます。
 
 次のビデオでは、マルチエンティティのセグメント化について理解を深めることを目的としており、マルチエンティティのセグメント化とセグメントのコンテキスト（セグメントのペイロード）の概要を説明しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
-### 使用例： 価格主導型プロモーション
+### ユースケース：価格主導型プロモーション
 
-この高度なセグメント機能の価値を理解するために、マーケティング担当者と連携するデータアーキテクトを考えてみましょう。
+この高度なセグメント機能の有用性を説明するために、データアーキテクトがマーケターと協力するとしましょう。
 
-この例では、データアーキテクトは、個々の(およびを基本クラスとするスキーマで構成される)データを、キーを使用して別のクラスに結合し [!DNL XDM Individual Profile] て [!DNL XDM ExperienceEvent] います。 結合すると、データアーキテクトまたはマーケティング担当者は、セグメント定義時に、これらの新しいフィールドを基本クラススキーマにネイティブであるかのように使用できます。
+In this example, the data architect is joining data for an individual (made up of schemas with [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] as their base classes) to another class using a key. 結合後、データアーキテクトまたはマーケターは、セグメント定義時に、これらの新しいフィールドを基本クラスのスキーマ本来の方法と同じように使用できます。
 
 **問題**
 
-データアーキテクトとマーケティング担当者は、どちらも同じ衣料品店で働きます。 その小売店は、北米全土に1,000以上の店舗を持ち、ライフサイクル全体を通じて定期的に製品価格を引き下げている。 その結果、マーケティング担当者は、これらの商品を買い物かごした顧客に割引価格で購入する機会を与えるために特別なキャンペーンを実施したいと考えています。
+データアーキテクトとマーケターのクライアントは同じ衣料品店です。その小売店は、北米全域で 1,000 店を超える店舗を持ち、ライフサイクル全体で定期的に製品価格を引き下げます。そのため、マーケターは、特別なキャンペーンを実施して、同店で買い物をした客に、割引価格で買い物ができるチャンスを提供したいと考えています。
 
-データアーキテクトのリソースには、顧客の閲覧からのWebデータへのアクセス、および製品のSKU識別子を含む買い物かごへの追加データへのアクセスが含まれます。 また、別の「products」クラスにアクセスでき、そこに追加の製品情報（製品価格を含む）が保存されます。 ガイダンスは、過去14日間に買い物かごに製品を追加したが、購入しなかった顧客に焦点を当て、価格が下がったことを示します。
+データアーキテクトのリソースには、顧客の Web 閲覧データへのアクセス、および製品の SKU 識別子を含んだ買い物かごの追加データへのアクセスが含まれています。また、別の「products」クラスにもアクセスできます。このクラスには、追加の製品情報（製品価格など）が格納されています。アドバイスとしては、過去 14 日間に製品を買い物かごに追加したが購入に至らなかった顧客に注目することです。この製品の価格は現在下がっています。
 
 **解決策**
 
 >[!NOTE]
 >
->この例では、データアーキテクトが既にID名前空間を確立していると仮定します。
+> この例では、データアーキテクトが既に ID 名前空間を確立しているとします。
 
-APIを使用して、データアーキテクトは、 [!DNL ExperienceEvent] スキーマのキーを「products」クラスと関連付けます。 これにより、データアーキテクトは、「products」クラスの追加のフィールドを、 [!DNL ExperienceEvent] スキーマにネイティブであるかのように使用できます。 設定作業の最後の手順として、データアーキテクトは適切なデータをに取り込む必要があり [!DNL Real-time Customer Profile]ます。 これは、で使用する「products」データセットを有効にすることで行い [!DNL Profile]ます。 設定作業が完了したら、データアーキテクトまたはマーケティング担当者がでターゲットセグメントを構築でき [!DNL Segment Builder]ます。
+Using the API, the data architect relates the key from the [!DNL ExperienceEvent] schema with the &quot;products&quot; class. Doing so allows the data architect to make use of the additional fields from the &quot;products&quot; class as if they are native to the [!DNL ExperienceEvent] schema. As the final step of the configuration work, the data architect needs to bring the appropriate data into [!DNL Real-time Customer Profile]. This is done by enabling the &quot;products&quot; dataset for use with [!DNL Profile]. With the configuration work complete, either the data architect or the marketer can build the target segment in [!DNL Segment Builder].
 
-XDMクラス間の関係を定義する方法については、 [スキーマ構成の概要](../xdm/schema/composition.md#union) （英語）を参照してください。
+XDM クラス間の関係を定義する方法については、[スキーマ構成の概要](../xdm/schema/composition.md#union)を参照してください。
 
 <!-- ## Personalization payload
 
@@ -177,38 +177,38 @@ While this solution does not change the binary nature of segment membership, it 
 
 Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
 
-### 使用例
+### ユースケース
 
-この高度なセグメント機能の価値を理解するために、セグメントペイロードの機能強化の前にマーケティングアプリケーションで発生していた課題を示す3つの標準的な使用例を考えてみましょう。
-- 電子メールのパーソナライゼーション
-- 電子メールの再ターゲティング
-- 広告の再ターゲット設定
+この高度なセグメント機能の有用性を説明するために、セグメントペイロードの機能強化がおこなわれる以前にマーケティングアプリケーションが抱えていた課題を示す 3 つの標準的なユースケースを検討しましょう。
+- E メールのパーソナライゼーション
+- E メールのリターゲティング
+- 広告のリターゲティング
 
-**電子メールのパーソナライゼーション**
+**E メールのパーソナライゼーション**
 
-電子メールキャンペーンを作成したマーケティング担当者が、過去3か月間の最近の顧客ストアでの購入を使用して、ターゲットオーディエンスのセグメントを作成しようとした可能性があります。 このセグメントには、商品名と購入が行われた店舗の名前の両方が必要であるのが理想的です。 機能強化の前は、購入イベントからストアIDを取り込み、その顧客のプロファイルに割り当てていました。
+E メールキャンペーンを作成しているマーケターは、過去 3 ヶ月間における店舗での顧客の購入履歴を使用して、ターゲットオーディエンスのセグメントを作成しようとしたかもしれません。理想的には、商品名と購入がおこなわれた店舗の名前の両方がこのセグメントに必要です。機能強化がおこなわれる前は、購入イベントからストア ID を取り込み、それをその顧客のプロファイルに割り当てていました。
 
-**電子メールの再ターゲティング**
+**E メールのリターゲティング**
 
-「買い物かごの放棄」をターゲットにした電子メールキャンペーンのセグメントを作成し、資格を得るのは複雑な場合が多くあります。 機能強化の前は、パーソナライズされたメッセージに含める商品を把握するのは、必要なデータが利用できるため困難でした。 製品が破棄されたデータは、以前はデータの監視と抽出が困難だったエクスペリエンスイベントと結び付けられます。
+多くの場合、「買い物かごの放棄」をターゲットとする E メールキャンペーンのセグメントを作成し認定するのは複雑な作業です。この機能強化の前は、必要なデータが利用できないため、パーソナライズされたメッセージに含める製品を把握するのは困難でした。製品が破棄された場合のデータは、以前はデータの監視と抽出が困難だったエクスペリエンスイベントに結び付けられます。
 
-**広告の再ターゲット設定**
+**広告のリターゲティング**
 
-マーケターにとってのもう1つの従来の課題は、広告を作成して、買い物かごの項目を破棄した顧客を再ターゲット化することです。 セグメント定義はこの課題に取り組みましたが、機能強化の前は、購入した製品と破棄した製品を区別する正式な方法はありませんでした。 セグメントの定義中に、特定のデータセットをターゲットできるようになりました。
+マーケターにとって、従来のもう 1 つの課題は、買い物かごの品目を破棄した顧客を再度ターゲットにする広告を作成することでした。セグメント定義はこの課題に対応しましたが、機能強化の前は、購入した製品と破棄した製品を区別する系統的な方法はありませんでした。セグメントの定義中に、特定のターゲットセットを定義できるようになりました。
 
 ## [!DNL Segmentation Service] データ型
 
 [!DNL Segmentation Service] は、次のような様々なデータ型をサポートしています。
 
 - 文字列
-- Uniform Resource Identifier
+- URI（統一リソース識別子）
 - 列挙
 - 数値
-- ロング
+- 長整数
 - 整数
-- Short
+- 短整数
 - バイト
-- Boolean
+- ブール値
 - 日付
 - 日時
 - 配列
@@ -225,8 +225,8 @@ Adding this specific data to the segment itself allows execution engines to pers
 [!DNL Segmentation Service] は、データからセグメントを作成するための統合的なワークフローを提供し [!DNL Real-time Customer Profile] ます。 まとめ：
 
 - [!DNL Segmentation] は、プロファイルストアからプロファイルのサブセットを定義するプロセスで、目的のマーケティング可能なグループの行動や属性を特徴付けることができます。 [!DNL Segmentation Service] このプロセスを可能にします。
-- セグメントを計画する際、セグメントは他の任意のセグメントから参照したり、他のセグメントと組み合わせたりできることに注意してください。
+- セグメントを計画する際、セグメントを他のセグメントから参照したり、他のセグメントと組み合わせたりできます。
 - セグメントは、プロファイルデータ、関連する時系列データ、またはその両方に基づくルールから作成できます。
-- セグメントは、オンデマンドで評価することも、継続的に評価することもできます。 オンデマンドで評価されると、すべてのプロファイルデータがセグメント定義に一度に渡されます。 連続的に評価される場合、データは、入力されたセグメント定義に従ってストリーミングされ [!DNL Platform]ます。
+- セグメントは、オンデマンドで評価することも継続的に評価することもできます。オンデマンドで評価する場合は、すべてのプロファイルデータがセグメント定義を一度に通過します。When evaluated continuously, data streams through segment definitions as it enters [!DNL Platform].
 
-UIでセグメントを定義する方法については、『 [セグメントビルダーガイド](./ui/overview.md)』を参照してください。 APIを使用したセグメント定義の作成について詳しくは、APIを使用したセグメントの [作成に関するチュートリアルを参照してください](./tutorials/create-a-segment.md)。
+UI でセグメントを定義する方法については、[セグメントビルダーガイド](./ui/overview.md)を参照してください。API を使用したセグメント定義の作成について詳しくは、[API を使用したセグメントの作成](./tutorials/create-a-segment.md)に関するチュートリアルを参照してください。
