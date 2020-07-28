@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: RStudioに接続
+title: RStudio との接続
 topic: connect
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 2%
+ht-degree: 61%
 
 ---
 
 
-# 接続先 [!DNL RStudio]
+# Connect with [!DNL RStudio]
 
-このドキュメントでは、R StudioとAdobe Experience Platformを接続する手順について説明 [!DNL Query Service]します。
+This document walks through the steps for connecting R Studio with Adobe Experience Platform [!DNL Query Service].
 
-インストール後 [!DNL RStudio]、表示される *コンソール画面で* 、使用するRスクリプトを準備する必要があり [!DNL PostgreSQL]ます。
+After installing [!DNL RStudio], on the *Console* screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -25,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-使用するRスクリプトを準備したら、 [!DNL PostgreSQL]ドライバを読み込むことで、に接続できるようにな [!DNL RStudio] り [!DNL Query Service][!DNL PostgreSQL] ます。
+Once you have prepared your R script to use [!DNL PostgreSQL], you can now connect [!DNL RStudio] to [!DNL Query Service] by loading the [!DNL PostgreSQL] driver.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -40,18 +40,18 @@ con <- dbConnect(drv,
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `{DATABASE_NAME}` | 使用するデータベースの名前。 |
-| `{HOST_NUMBER` および `{PORT_NUMBER}` | クエリサービス用のホストエンドポイントとそのポートです。 |
-| `{USERNAME}` および `{PASSWORD}` | 使用するログイン資格情報。 ユーザー名は、の形式をとり `ORG_ID@AdobeOrg`ます。 |
+| `{HOST_NUMBER` および `{PORT_NUMBER}` | ホストエンドポイントと、そのクエリサービス用のポート。 |
+| `{USERNAME}` および `{PASSWORD}` | 使用されるログイン資格情報。ユーザー名の形式は `ORG_ID@AdobeOrg` となります。 |
 
 >[!NOTE]
 >
->データベース名、ホスト、ポート、ログインの資格情報の検索について詳しくは、Platformの [資格情報ページを参照してください](https://platform.adobe.com/query/configuration)。 資格情報を探すには、にログインし、「 [!DNL Platform]クエリ **[!UICONTROL 」をクリックし、「]**&#x200B;資格情報 ****」をクリックします。
+>データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
 
 ## 次の手順
 
-に接続したら、SQL文を実行 [!DNL Query Service]および編集するクエリを作成できます。 たとえば、を使用してクエリ `dbGetQuery(con, sql)` を実行できます。ここで、 `sql` は実行するSQLクエリです。
+Now that you have connected to [!DNL Query Service], you can write queries to execute and edit SQL statements. たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
 
-次のクエリでは、ExperienceEventsを含むデータセットを使用し [て](../creating-queries/experience-event-queries.md) 、デバイスの画面の高さが決まると、Webサイトのページ表示のヒストグラムを作成します。
+次のクエリでは、[ExperienceEvents](../creating-queries/experience-event-queries.md) を含むデータセットを使用し、デバイスの画面の高さを指定して、Web サイトのページビューのヒストグラムを作成します。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -72,7 +72,7 @@ ORDER BY buckets
 LIMIT 1000000")
 ```
 
-成功した応答は、クエリの結果を返します。
+成功応答は、クエリの結果を返します。
 
 ```r
 df_pageviews
@@ -86,4 +86,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-クエリの書き込みおよび実行方法の詳細については、『 [実行中のクエリ』ガイドを参照してください](../creating-queries/creating-queries.md)。
+クエリの書き込みおよび実行方法の詳細については、[クエリの実行ガイド](../creating-queries/creating-queries.md)を参照してください。
