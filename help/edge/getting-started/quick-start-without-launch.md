@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
 workflow-type: tm+mt
 source-wordcount: '517'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 14%
 このガイドでは、Adobe Experience PlatformWeb SDKの様々な設定方法を順を追って説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動したい場合は、CSMに連絡してください。
 
 - [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。CNAMEを使用しない開発環境でのテストは可能ですが、実稼働環境に移行する前に必要です。
-- Adobe Experience Platform　を使用する資格がある.  Platformを購入していない場合は、Adobeは、Experience PlatformData Services Foundationをご利用いただけるよう、SDKでの利用を制限し、無償で提供します。
+- Adobe Experience Platform　を使用する資格がある.  Platformを購入していない場合、AdobeはData Services Foundationでの利用を制限した方法で、SDKを無料で提供します。
 - 訪問者 ID サービスの最新バージョンを使用している.
 
 ## 設定IDの作成
 
-Adobe Launchの [エッジ設定ツールを使用して設定IDを作成できます](../fundamentals/edge-configuration.md) （tag management機能を使用していない場合も含む）。 これにより、様々なソリューション [!DNL Edge Network] にデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
+tag managementの機能を使用していない場合でも、Adobe起動の [エッジ設定ツール](../fundamentals/edge-configuration.md) (Edge Configuration Tool)を使用して設定IDを作成できます。 これにより、様々なソリューション [!DNL Edge Network] にデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Adobe Launchの [エッジ設定ツールを使用して設定IDを作成でき�
 
 はXDMとしてデータを [!DNL Experience Platform Edge Network] 受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、データの形式設定方法 [!DNL Edge Network] を定義します。 データを送信するには、スキーマを定義する必要があります。
 
-- [スキーマの作成](../../xdm/tutorials/create-schema-ui.md)
+- [スキーマ](../../xdm/tutorials/create-schema-ui.md)
 - Add the Adobe Experience Platform [!DNL Web SDK] mixin to the schema you created
 
 次のビデオでは、データ用のスキーマ、データセット、ストリーミングソースコネクタの作成をサポートします。 [!DNL Web SDK]
