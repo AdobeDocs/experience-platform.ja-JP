@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 権限とリソースタイプのリスト名
+title: 権限名とリソースタイプのリスト
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# 権限とリソースタイプのリスト名
+# 権限名とリソースタイプのリスト
 
-エンドポイントにGETリクエストを行うことで、すべての権限とリソースの種類の名前をリストでき `/acl/reference` ます。 これらの名前は、現在のユーザーに対して有効なポリシーを [表示するためのAPI呼び出しで使用でき](./effective-policies.md) ます。
+`/acl/reference` エンドポイントに GET リクエストをおこなうことで、すべての権限とリソースタイプの名前をリストできます。これらの名前は、現在のユーザーに対する[有効なポリシーを表示する](./effective-policies.md) API 呼び出しで使用できます。
 
-「 **権限** 」とは、AdobeAdmin Consoleを介して管理され、0個以上のリソースタイプポリシーに対応付けられるポリシーです。 リ **ソースタイプ**[!DNL Platform] とは、特定の種類のリソース(データセットやスキーマなど)に対して読み取り、書き込み、削除の機能を有効にするポリシーです。
+**権限**&#x200B;とは、Adobe Admin Console で管理され、0 個以上のリソースタイプポリシーにマッピングされるポリシーです。**リソースタイプ**&#x200B;は、特定の種類の リソース（データセットやスキーマなど）の読み取り、書き込み、削除の機能を有効にするポリシーです。[!DNL Platform]
 
-**API形式**
+**API 形式**
 
 ```http
 GET /acl/reference
@@ -36,7 +36,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、それぞれアクセス権限またはリソースタイプの名前の完全なリストを含む `permissions` オブジェクトと `resource-types` オブジェクトを返します。
+正常な応答は、`permissions` オブジェクトと `resource-types` オブジェクトを返します。前者にはアクセス権限の完全なリスト、後者にはリソースタイプの名前の完全なリストが含まれます。
 
 ```json
 {
