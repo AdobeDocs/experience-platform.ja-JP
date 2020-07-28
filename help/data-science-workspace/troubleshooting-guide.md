@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;troubleshooting;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Data Science Workspaceトラブルシューティングガイド
+title: Data Science Workspace トラブルシューティングガイド
 topic: Troubleshooting
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '665'
-ht-degree: 0%
+ht-degree: 39%
 
 ---
 
 
 # [!DNL Data Science Workspace] トラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platformに関するよくある質問に対する回答を示 [!DNL Data Science Workspace]します。 APIに関する一般的な質問とトラブルシューティングについては、 [!DNL Platform] Adobe Experience PlatformAPIトラブルシューティングガイドを参照してください [](../landing/troubleshooting.md)。
+This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Data Science Workspace]. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
 ## [!DNL JupyterLab] 環境が [!DNL Google Chrome]
 
@@ -22,37 +22,37 @@ ht-degree: 0%
 >
 >この問題は解決しましたが、Google Chrome 80.xブラウザーには引き続き存在する可能性があります。 Chromeブラウザーが最新の状態であることを確認してください。
 
-ブラウザーバージョン80.xでは、 [!DNL Google Chrome] サードパーティCookieはすべてデフォルトでブロックされます。 このポリシーは、Adobe Experience Platform内での読み込み [!DNL JupyterLab] を妨げる可能性があります。
+ブラウザーバージョン80.xでは、 [!DNL Google Chrome] サードパーティCookieはすべてデフォルトでブロックされます。 This policy can prevent [!DNL JupyterLab] from loading within Adobe Experience Platform.
 
 この問題を修正するには、次の手順を実行します。
 
-ブラウザーで [!DNL Chrome] 右上に移動し、「 **設定** 」を選択します(または、アドレスバーに「chrome://settings/」をコピーして貼り付けることができます)。 次に、ページの下部までスクロールし、「 **詳細** 」ドロップダウンをクリックします。
+In your [!DNL Chrome] browser, navigate to the top-right and select **Settings** (alternatively you can copy and paste &quot;chrome://settings/&quot; in the address bar). 次に、ページの下部までスクロールし、**詳細設定**&#x200B;ドロップダウンをクリックします。
 
-![chrome advanced](./images/faq/chrome-advanced.png)
+![Chrome の詳細設定](./images/faq/chrome-advanced.png)
 
-「 *プライバシーとセキュリティ* 」セクションが表示されます。 次に、「 **サイト設定** 」をクリックし、「 **Cookie」とサイトデータをクリックします**。
+「*プライバシーとセキュリティ*」セクションが表示されます。次に、「**サイトの設定**」をクリックし、「**Cookie とサイトデータ**」をクリックします。
 
-![chrome advanced](./images/faq/privacy-security.png)
+![Chrome の詳細設定](./images/faq/privacy-security.png)
 
-![chrome advanced](./images/faq/cookies.png)
+![Chrome の詳細設定](./images/faq/cookies.png)
 
-最後に、「サードパーティcookieをブロック」を「オフ」に切り替えます。
+最後に、「サードパーティCookieのブロック」を「オフ」に切り替えます。
 
-![chrome advanced](./images/faq/toggle-off.png)
+![Chrome の詳細設定](./images/faq/toggle-off.png)
 
 >[!NOTE]
 >
->または、サードパーティCookieを無効にして、 [*を追加します。]ds.adobe.netを許可リストに追加します。
+>Alternatively, you could disable third-party cookies and add [*.]ds.adobe.netを許可リストに追加します。
 
-アドレスバーの「chrome://flags/」に移動します。 右側のドロップダウンメニューを使用して、「SameSite by default cookies」という名前のフラグを検索して無効に *し* ます。
+アドレスバーの「chrome://flags/」に移動します。右側のドロップダウンメニューを使用して、「*SameSite by default cookies*」というフラグを探して無効にします。
 
-![samesiteフラグを無効にする](./images/faq/samesite-flag.png)
+![SameSite フラグを無効化](./images/faq/samesite-flag.png)
 
-手順2の後、ブラウザーを再起動するように求められます。 再起動後は、アクセス [!DNL Jupyterlab] 可能にする必要があります。
+手順 2 の後、ブラウザーを再起動するように求められます。After you relaunch, [!DNL Jupyterlab] should be accessible.
 
-## Safariでアクセスできないのはなぜ [!DNL JupyterLab] ですか。
+## Why am I unable to access [!DNL JupyterLab] in Safari?
 
-Safariでは、Safari &lt; 12で、デフォルトでサードパーティcookieが無効になっています。 仮想マシンインスタンスは親フレームとは異なるドメインに存在するため、現在、Adobe Experience Platformではサードパーティcookieが有効になっている必要があります。 [!DNL Jupyter] サードパーティCookieを有効にするか、などの別のブラウザーに切り替えてくだ [!DNL Google Chrome]さい。
+Safariでは、Safari &lt; 12で、デフォルトでサードパーティcookieが無効になっています。 Because your [!DNL Jupyter] virtual machine instance resides on a different domain than its parent frame, Adobe Experience Platform currently requires that third-party cookies be enabled. Please enable third-party cookies or switch to a different browser such as [!DNL Google Chrome].
 
 Safari 12の場合は、ユーザーエージェントを「[!DNL Chrome]」または「[!DNL Firefox]」に切り替える必要があります。 ユーザーエージェントを切り替えるには、 *Safari* 開始を開いて「 **環境設定**」を選択します。 プリファレンスウィンドウが表示されます。
 
@@ -66,35 +66,35 @@ Safariの環境設定ウィンドウで、「 **詳細」を選択します**。
 
 ![開発メニュー](./images/faq/user-agent.png)
 
-## でファイルをアップロードまたは削除しようとすると「403 Forbidden」というメッセージが表示されるのはなぜで [!DNL JupyterLab]すか。
+## Why am I seeing a &#39;403 Forbidden&#39; message when trying to upload or delete a file in [!DNL JupyterLab]?
 
-ブラウザーが、 [!DNL Ghostery] または [!DNL AdBlock] Plusなどの広告ブロックソフトウェアで有効になっている場合、通常どおりに動作するには、各広告ブロックソフトウェアでドメイン「\*.adobe.net」を許可する必要 [!DNL JupyterLab] があります。 これは、 [!DNL JupyterLab] 仮想マシンがドメインとは異なるドメインで実行されるため [!DNL Experience Platform] です。
+If your browser is enabled with advertisement blocking software such as [!DNL Ghostery] or [!DNL AdBlock] Plus, the domain &quot;\*.adobe.net&quot; must be allowed in each advertisement blocking software for [!DNL JupyterLab] to operate normally. This is because [!DNL JupyterLab] virtual machines run on a different domain than the [!DNL Experience Platform] domain.
 
-## 見た目の一部がスクランブルしているか、コードとしてレンダリングされないのはなぜですか。 [!DNL Jupyter Notebook]
+## Why do some parts of my [!DNL Jupyter Notebook] look scrambled or do not render as code?
 
-これは、問題のセルが誤って「コード」から「マークダウン」に変更された場合に発生する可能性があります。 コードセルにフォーカスがある状態で、キーの組み合わせ **ESC+M** を押すと、セルの種類がMarkdownに変わります。 セルの種類は、選択したセルのノートブックの上部にあるドロップダウンインジケーターで変更できます。 セルの種類をコードに変更するには、変更するセルを開始します。 次に、セルの現在のタイプを示すドロップダウンをクリックし、「コード」を選択します。
+これは、問題のセルが誤って「Code」から「Markdown」に変更された場合に発生する可能性があります。コードセルにフォーカスがある間に **Esc + M** キーを押すと、セルの種類が Markdown に変更されます。セルの種類は、選択したセルのノートブックの上部にあるドロップダウンインジケーターで変更できます。セルの種類をコードに変更するには、まず、変更するセルを選択します。次に、セルの現在の種類を示すドロップダウンをクリックし、「Code」を選択します。
 
 ![](./images/faq/code_type.png)
 
-## カスタム [!DNL Python] ライブラリのインストール方法
+## How do I install custom [!DNL Python] libraries?
 
-この [!DNL Python] カーネルは、多くの一般的な機械学習ライブラリと共にプリインストールされています。 ただし、追加のカスタムライブラリは、コードセル内で次のコマンドを実行することでインストールできます。
+The [!DNL Python] kernel comes pre-installed with many popular machine learning libraries. ただし、コードセル内で次のコマンドを実行すると、追加のカスタムライブラリをインストールできます。
 
 ```shell
 !pip install {LIBRARY_NAME}
 ```
 
-プリインストールされた [!DNL Python] ライブラリの完全なリストについては、『JupyterLab User Guide [』の](./jupyterlab/overview.md#supported-libraries)付録の節を参照してください。
+For a complete list of pre-installed [!DNL Python] libraries, see the [appendix section of the JupyterLab User Guide](./jupyterlab/overview.md#supported-libraries).
 
-## カスタムPySparkライブラリをインストールできますか。
+## カスタム PySparkライブラリをインストールできますか？
 
-残念ながら、PySparkカーネル用の追加のライブラリはインストールできません。 ただし、アドビのカスタマーサービス担当者に連絡して、カスタムPySparkライブラリをインストールしてもらうことができます。
+残念ながら、PySpark カーネルの追加ライブラリはインストールできません。ただし、アドビのカスタマーサービス担当者に連絡して、カスタム PySpark ライブラリをインストールしてもらうことができます。
 
-PySparkの事前インストールされたライブラリのリストについては、『JupyterLab User Guide [』の](./jupyterlab/overview.md#supported-libraries)付録の節を参照してください。
+事前インストールされている PySpark ライブラリのリストについては、[JupyterLab ユーザーガイドの付録の節](./jupyterlab/overview.md#supported-libraries)を参照してください。
 
-## PySparkカーネル用に [!DNL Spark] クラスタリソースを設定でき [!DNL JupyterLab] ま [!DNL Spark] すか。
+## Is it possible to configure [!DNL Spark] cluster resources for [!DNL JupyterLab] [!DNL Spark] or PySpark kernel?
 
-ノートブックの最初のセルに次のブロックを追加して、リソースを構成できます。
+ノートブックの最初のセルに次のブロックを追加することで、リソースを設定できます。
 
 ```python
 %%configure -f 
@@ -110,4 +110,4 @@ PySparkの事前インストールされたライブラリのリストについ�
 }
 ```
 
-構成可能なプロパティの完全なリストなど、 [!DNL Spark] クラスタリソースの構成の詳細については、『 [JupyterLab User Guide](./jupyterlab/overview.md#kernels)』を参照してください。
+For more information on [!DNL Spark] cluster resource configuration, including the complete list of configurable properties, see the [JupyterLab User Guide](./jupyterlab/overview.md#kernels).
