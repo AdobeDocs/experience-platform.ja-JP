@@ -1,34 +1,34 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: クエリパラメーターを使用したカタログデータのフィルター
+title: クエリパラメータ－を使用したカタログデータのフィルター
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '2033'
-ht-degree: 1%
+ht-degree: 86%
 
 ---
 
 
-# クエリパラメーターを使用した [!DNL Catalog] データのフィルター
+# Filter [!DNL Catalog] data using query parameters
 
-この [!DNL Catalog Service] APIを使用すると、リクエストクエリパラメーターを使用して応答データをフィルタリングできます。 のベストプラクティスの一部 [!DNL Catalog] は、すべてのAPI呼び出しでフィルターを使用することです。これらのメソッドを使用すると、APIの負荷が軽減され、全体的なパフォーマンスが向上します。
+The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
 
-このドキュメントでは、APIで [!DNL Catalog] オブジェクトをフィルタリングする最も一般的な方法について説明します。 この [APIの使い方について詳しくは、](getting-started.md) カタログ開発者ガイドを読みながらこのドキュメントを参照することをお勧めします [!DNL Catalog] 。 詳しくは、 [!DNL Catalog Service]カタログの概要を参照してください [](../home.md)。
+This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the [!DNL Catalog] API. For more general information on [!DNL Catalog Service], see the [Catalog overview](../home.md).
 
 ## 返されるオブジェクトの制限
 
-応答で返されるオブジェクトの数は、 `limit` クエリパラメーターによって制限されます。 [!DNL Catalog] 次の制限に従って、応答は自動的に課金されます。
+`limit` クエリパラメーターは、応答で返されるオブジェクトの数を制限します。[!DNL Catalog] 次の制限に従って、応答は自動的に課金されます。
 
-* パラメーターが指定されていない場合、応答ペイロードあたりのオブジェクトの最大数は20です。 `limit`
-* データセットクエリの場合、 `observableSchema` クエリパラメーターを使用してリクエスト `properties` が行われると、返されるデータセットの最大数は20です。
-* 他のすべてのCatalogクエリのグローバル制限は、100オブジェクトです。
-* 無効な `limit``limit=0`パラメーター（含む）は、適切な範囲を示す400レベルのエラー応答になります。
-* クエリパラメータとして渡される制限やオフセットは、ヘッダとして渡される制限やオフセットよりも優先されます。
+* `limit` パラメーターが指定されていない場合、応答ペイロードあたりのオブジェクトの最大数は 20 です。
+* データセットクエリの場合、`properties` クエリパラメーターを使用して `observableSchema` がリクエストされた場合、返されるデータセットの最大数は 20 です。
+* その他のすべてのカタログクエリのグローバル制限は 100 オブジェクトです。
+* 無効な `limit` パラメーター（`limit=0` を含む）を使用すると、適切な範囲を示す 400 レベルのエラー応答が発生します。
+* クエリパラメータとして渡される制限またはオフセットは、ヘッダーとして渡される制限またはオフセットよりも優先されます
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}?limit={LIMIT}
@@ -36,12 +36,12 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{LIMIT}` | 返すオブジェクトの数を示す1 ～ 100の整数です。 |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{LIMIT}` | 返すオブジェクトの数を 1 ～ 100 の範囲で示す整数。 |
 
 **リクエスト**
 
-次のリクエストでは、データセットのリストを取得しながら、応答を3つのオブジェクトに制限します。
+次のリクエストでは、データセットのリストを取得し、応答を 3 つのオブジェクトに制限します。
 
 ```shell
 curl -X GET \
@@ -52,9 +52,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-正常な応答は、クエリパラメーターで示される数に制限されたデータセットのリストを返し `limit` ます。
+正常な応答は、データセットのパラメーターを返します。この値は、`limit` クエリパラメーターで示される数に制限されます。
 
 ```json
 {
@@ -74,13 +74,13 @@ curl -X GET \
 }
 ```
 
-## 表示プロパティの制限
+## 表示するプロパティの制限
 
-パラメーターを使用して返されたオブジェクトの数をフィルタリングする場合でも、返されるオブジェクト自体には、実際に必要とする以上の情報が含まれる場合があります。 `limit` システムの負荷をさらに軽減するには、応答をフィルタリングして、必要なプロパティのみを含めることをお勧めします。
+`limit` パラメーターを使用して返されたオブジェクトの数をフィルタリングする場合でも、返されるオブジェクト自体には、実際に必要な情報よりも多くの情報が含まれることがあります。システムの負荷をさらに減らすには、ベストプラクティスは必要なプロパティのみを含めるように応答をフィルタリングすることです。
 
-パラメーター `properties` フィルターは、指定されたプロパティのセットのみを返すようにオブジェクトに応答します。 このパラメーターは、1つ以上のプロパティを返すように設定できます。
+`properties`パラメーターフィルターは、指定されたプロパティのセットのみを返すようにオブジェクトに応答します。このパラメーターは、1 つ以上のプロパティを返すように設定できます。
 
-この `properties` パラメーターは最上位レベルのオブジェクトプロパティのみを受け入れます。つまり、次のサンプルオブジェクトでは、、、およ `name`びのフィルターを適用できますが、には適用できません `description``subItem``sampleKey`。
+`properties` パラメーターは、最上位レベルのオブジェクトプロパティのみを受け入れます。つまり、次のオブジェクト例では、`name`、`description`、`subItem` に対してフィルターを適用できますが、`sampleKey` に対してはできません。
 
 ```json
 {
@@ -94,7 +94,7 @@ curl -X GET \
 }
 ```
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}?properties={PROPERTY}
@@ -104,13 +104,13 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 応答本文に含める属性の名前。 |
-| `{OBJECT_ID}` | 取得する特定の [!DNL Catalog] オブジェクトの固有な識別子。 |
+| `{OBJECT_ID}` | The unique identifier of a specific [!DNL Catalog] object being retrieved. |
 
 **リクエスト**
 
-次のリクエストは、データセットのリストを取得します。 パラメーターの下に指定されたプロパティ名のコンマ区切りリストは、応答で返されるプロパティを示します。 `properties` また、返されるデータセットの数を制限する `limit` パラメータも含まれます。 リクエストに `limit` パラメーターが含まれていない場合、応答には最大20個のオブジェクトが含まれます。
+次のリクエストは、データセットのリストを取得します。`properties` パラメーターの下に指定されたプロパティ名のコンマ区切りリストは、応答で返されるプロパティを示します。また、返されるデータセットの数を制限する `limit` パラメーターも含まれます。リクエストに `limit` パラメーターが含まれていない場合、応答には最大 20 個のオブジェクトが含まれます。
 
 ```shell
 curl -X GET \
@@ -121,9 +121,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-正常に応答すると、要求されたプロパティのみが表示された [!DNL Catalog] オブジェクトのリストが返されます。
+A successful response returns a list of [!DNL Catalog] objects with only the requested properties displayed.
 
 ```json
 {
@@ -148,20 +148,20 @@ curl -X GET \
 }
 ```
 
-上記の回答に基づき、以下を推定できます。
+上記の回答に基づいて、以下を推論できます。
 
-* 要求されたプロパティがオブジェクトにない場合は、要求されたプロパティのみが表示されます。 (`Dataset1`)
-* 要求されたプロパティがオブジェクトに含まれていない場合は、空のオブジェクトとして表示されます。 (`Dataset2`)
-* データセットは、要求されたプロパティがそのプロパティを含み、値がない場合、そのプロパティを空のオブジェクトとして返すことがあります。 (`Dataset3`)
-* それ以外の場合は、リクエストされたすべてのプロパティの完全な値がデータセットに表示されます。 (`Dataset4`)
+* リクエストされたプロパティがオブジェクトにない場合は、そのオブジェクトに含まれているリクエストされたプロパティのみが表示されます（`Dataset1`）。
+* リクエストされたプロパティが 1 つもオブジェクトに含まれていない場合は、空のオブジェクトとして表示されます（`Dataset2`）。
+* データセットは、リクエストされたプロパティがそのプロパティを含むが値がない場合、そのプロパティを空のオブジェクトとして返すことがあります（`Dataset3`）。
+* それ以外の場合は、リクエストされたすべてのプロパティの完全な値がデータセットに表示されます（`Dataset4`）。
 
 ## 応答リストのオフセット開始インデックス
 
-クエリパラメーターは、0から始まる番号を使用して、指定した数だけ応答リストを前にオフセットします。 `start` 例えば、3番目にリストされ `start=2` たオブジェクトの開始に対する応答をオフセットします。
+`start` クエリパラメーターは、0 から始まる番号付けを使用して、応答リストを指定された数だけ前方にオフセットします。例えば、`start=2` は、リストされた 3 番目のオブジェクトで開始するように応答をオフセットします。
 
-パラメーターとパラメーターが対になっていない場合、返されるオブジェクトの最大数は20です。 `start``limit`
+`start` パラメーターと `limit` パラメーターがペアでない場合、返されるオブジェクトの最大数は 20 です。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}?start={OFFSET}
@@ -169,12 +169,12 @@ GET /{OBJECT_TYPE}?start={OFFSET}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するCatalogオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OFFSET}` | 応答をオフセットするオブジェクトの数を示す整数です。 |
+| `{OBJECT_TYPE}` | 取得するカタログオブジェクトのタイプ。有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OFFSET}` | 応答をオフセットするオブジェクトの数を示す整数。 |
 
 **リクエスト**
 
-次のリクエストは、データセットのリストを取得し、5番目のオブジェクト(`start=4`)にオフセットし、応答を2つの返されるデータセット(`limit=2`)に制限します。
+次のリクエストは、データセットのリストを取得し、5 番目のオブジェクト（`start=4`）にオフセットし、応答を 2 つの戻りデータセット（`limit=2`）に制限します。
 
 ```shell
 curl -X GET \
@@ -185,9 +185,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-この応答には、2つの最上位レベルの項目(`limit=2`)が含まれるJSONオブジェクトが含まれ、各データセットとその詳細情報が含まれます（この例では詳細をまとめています）。 応答は4時間ずつ移動します(`start=4`)。つまり、表示されるデータセットは5番目と6番目です。
+応答には、各データセットに対して 1 つずつ、2 つの最上位項目（`limit=2`）とその詳細（この例で詳細をまとめたもの）を含む JSON オブジェクトが含まれます。応答が 4 ずつシフトされます（`start=4`）。つまり、表示されるデータセットは時系列で 5 と 6 です。
 
 ```json
 {
@@ -196,20 +196,20 @@ curl -X GET \
 }
 ```
 
-## タグでフィルター
+## タグによるフィルター
 
-一部のCatalogオブジェクトでは、 `tags` 属性の使用がサポートされています。 タグを使用して、オブジェクトに情報を付加し、後でそのオブジェクトを取得できます。 使用するタグの選択方法と適用方法は、組織のプロセスに応じて異なります。
+一部のカタログオブジェクトは、`tags` 属性の使用をサポートしています。タグは、オブジェクトに情報を付加し、後でそのオブジェクトを取得するために使用できます。使用するタグと適用方法の選択は、組織のプロセスによって異なります。
 
 タグを使用する場合は、いくつかの制限が考慮されます。
 
-* 現在タグをサポートしているCatalogオブジェクトは、データセット、バッチ、接続のみです。
-* タグ名はIMS組織に固有です。
-* アドビのプロセスでは、特定の動作に対してタグが使用される場合があります。 これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。 したがって、タグ名を宣言する際は、このような表記規則は避ける必要があります。
-* 次のタグ名は、全体で使用するために予約されてい [!DNL Experience Platform]るので、貴社のタグ名として宣言することはできません。
+* 現在タグをサポートしているカタログオブジェクトは、データセット、バッチ、接続のみです。
+* タグ名は IMS 組織に固有です。
+* アドビのプロセスは、特定の動作にタグを活用する場合があります。これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。したがって、タグ名を宣言する際は、このような規則を避ける必要があります。
+* The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
    * `unifiedProfile`: このタグ名は、で取り込むデータセット用に予約されてい [!DNL Real-time Customer Profile](../../profile/home.md)ます。
    * `unifiedIdentity`: このタグ名は、で取り込むデータセット用に予約されてい [!DNL Identity Service](../../identity-service/home.md)ます。
 
-次に、 `tags` プロパティを含むデータセットの例を示します。 このプロパティ内のタグは、キーと値のペアの形式をとります。各タグ値は、1つの文字列を含む配列として表示されます。
+次に、`tags` プロパティを含むデータセットの例を示します。このプロパティ内のタグは、キーと値のペアの形式をとり、各タグ値は 1 つの文字列を含む配列として表示されます。
 
 ```json
 {
@@ -246,11 +246,11 @@ curl -X GET \
 }
 ```
 
-**API形式**
+**API 形式**
 
-パラメーターの値は、 `tags` 形式を使用して、キーと値のペアの形式を取り `{TAG_NAME}:{TAG_VALUE}`ます。 複数のキーと値のペアは、カンマ区切りのリストの形式で指定できます。 複数のタグを指定する場合、AND関係が想定されます。
+`tags` パラメーターの値は、`{TAG_NAME}:{TAG_VALUE}` 形式を使用して、キーと値のペアの形式を取ります。複数のキーと値のペアは、コンマ区切りのリスト形式で提供できます。複数のタグを指定する場合、AND 関係が想定されます。
 
-このパラメーターでは、タグ値にワイルドカード文字(`*`)を使用できます。 例えば、の検索文字列は、タグ値が「test」で始まる任意のオブジェクトを `test*` 返します。 ワイルドカードのみから成る検索文字列は、値に関係なく、特定のタグが含まれているかどうかに基づいてオブジェクトをフィルタリングする場合に使用できます。
+このパラメーターでは、タグ値にワイルドカード文字（`*`）を使用できます。例えば、`test*` の検索文字列は、タグ値が「test」で始まる任意のオブジェクトを返します。ワイルドカードのみで構成される検索文字列を使用すると、値に関係なく、特定のタグが含まれているかどうかに基づいてオブジェクトをフィルタリングできます。
 
 ```http
 GET /{OBJECT_TYPE}?tags={TAG_NAME}:{TAG_VALUE}
@@ -261,13 +261,13 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | フィルターに使用するタグの名前。 |
-| `{TAG_VALUE}` | フィルターに使用するタグの値。 ワイルドカード文字(`*`)をサポートします。 |
+| `{TAG_VALUE}` | フィルターに使用するタグの値。ワイルドカード文字（`*`）をサポートします。 |
 
 **リクエスト**
 
-次のリクエストは、データセットのリストを取得し、特定の値を持つ1つのタグと、2つ目のタグが存在することでフィルタリングします。
+次のリクエストは、データセットのリストを取得し、特定の値を持つ 1 つのタグと、2 番目のタグが存在することでフィルタリングします。
 
 ```shell
 curl -X GET \
@@ -278,9 +278,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、「123456」と「AND」の値を含むデータセット `sampleTag` のリスト `secondTag` を返します。 制限も指定しない限り、応答には最大20個のオブジェクトが含まれます。
+正常な応答は、値が「123456」である `sampleTag`、および、任意の値を持つ `secondTag` を含むデータセットのリストを返します。制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
@@ -330,11 +330,11 @@ curl -X GET \
 }
 ```
 
-## 日付範囲でフィルター
+## 日付範囲によるフィルター
 
-APIの一部のエンドポイントには、幅のあるクエリを許可するクエリパラメーターがあります。ほとんどの場合、日付が使用されます。 [!DNL Catalog]
+Some endpoints in the [!DNL Catalog] API have query parameters that allow for ranged queries, most often in the case of dates.
 
-**API形式**
+**API 形式**
 
 ```http
 GET /batches?createdAfter={TIMESTAMP_1}&createdBefore={TIMESTAMP_2}
@@ -342,11 +342,11 @@ GET /batches?createdAfter={TIMESTAMP_1}&createdBefore={TIMESTAMP_2}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{TIMESTAMP }` | UNIXエポック時間のdatetime整数。 |
+| `{TIMESTAMP }` | UNIX エポック時間の datetime 整数。 |
 
 **リクエスト**
 
-次のリクエストは、2019年4月の月に作成されたバッチのリストを取得します。
+次のリクエストは、2019 年 4 月に作成されたバッチのリストを取得します。
 
 ```shell
 curl -X GET \
@@ -357,9 +357,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答には、指定した日付範囲に該当する [!DNL Catalog] オブジェクトのリストが含まれます。 制限も指定しない限り、応答には最大20個のオブジェクトが含まれます。
+A successful response contains a list of [!DNL Catalog] objects that fall within the specified date range. 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
@@ -390,16 +390,16 @@ curl -X GET \
 }
 ```
 
-## プロパティで並べ替え
+## プロパティによる並べ替え
 
-クエリ `orderBy` パラメーターを使用すると、指定したプロパティ値に基づいて応答データを並べ替え（並べ替え）できます。 このパラメーターには、「方向」(昇順または降順`asc` の場合) `desc` と、その後にコロン(`:`)が続き、結果を並べ替えるプロパティが必要です。 方向を指定しない場合、デフォルトの方向は昇順です。
+`orderBy` クエリパラメーターを使用すると、指定したプロパティ値に基づいて応答データを並べ替え（順序付け）できます。このパラメーターには、「方向」(昇順：`asc`、降順：`desc`)、コロン（`:`）、結果を並べ替えるプロパティの順に並べ替える必要があります。方向を指定しない場合、デフォルトの方向は昇順です。
 
-複数の並べ替えプロパティは、カンマで区切ったリストで指定できます。 最初の並べ替えプロパティで、そのプロパティに対して同じ値を持つ複数のオブジェクトが生成される場合は、2番目の並べ替えプロパティを使用して、一致するオブジェクトをさらに並べ替えます。
+複数の並べ替えプロパティは、コンマで区切ったリストで指定できます。最初の並べ替えプロパティで、そのプロパティが同じ値を含む複数のオブジェクトが生成される場合、2 番目の並べ替えプロパティを使用して、一致するオブジェクトをさらに並べ替えます。
 
-例えば、次のクエリを考えてみましょう。 `orderBy=name,desc:created`. 結果は、最初の並べ替えプロパティに基づいて昇順で並べ替えられ `name`ます。 複数のレコードが同じ `name` プロパティを共有する場合、一致するレコードは、2番目のsortingプロパティ()で並べ替えられ `created`ます。 返されたレコードが同じレコードを持たない場合 `name`、この `created` プロパティは並べ替えの要素になりません。
+例えば、クエリ「`orderBy=name,desc:created`」について考えます。結果は、最初の並べ替えプロパティ（`name`）に基づいて昇順で並べ替えられます。複数のレコードが同じ `name` プロパティを共有している場合、一致するレコードは 2 番目の並べ替えプロパティ（`created`）で並べ替えられます。返されたレコードが同じ `name` を共有しない場合、`created` プロパティは並べ替えで考慮されません。
 
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}?orderBy=asc:{PROPERTY_NAME}
@@ -409,12 +409,12 @@ GET /{OBJECT_TYPE}?orderBy={PROPERTY_NAME_1},desc:{PROPERTY_NAME_2}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得するCatalogオブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得するカタログオブジェクトのタイプ。有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 結果の並べ替えに使用するプロパティの名前。 |
 
 **リクエスト**
 
-次の要求は、プロパティで並べ替えられたデータセットのリストを取得し `name` ます。 データセットが同じものを共有している場合 `name`、それらのデータセットは、その `updated` プロパティに基づいて降順に並べ替えられます。
+次のリクエストは、`name` プロパティで並べ替えられたリストセットのデータセットを取得します。同じ `name` を共有するデータセットがある場合、そのデータセットは `updated` プロパティによって降順で並べ替えられます。
 
 ```shell
 curl -X GET \
@@ -425,9 +425,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答には、パラメーターに従って並べ替えられた [!DNL Catalog] オブジェクトのリストが含まれ `orderBy` ます。 制限も指定しない限り、応答には最大20個のオブジェクトが含まれます。
+A successful response contains a list of [!DNL Catalog] objects that are sorted according to the `orderBy` parameter. 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
@@ -470,22 +470,22 @@ curl -X GET \
 }
 ```
 
-## プロパティでフィルタ
+## プロパティによるフィルター
 
 [!DNL Catalog] プロパティでフィルタリングする方法は2つあり、以下の節で詳しく説明します。
 
-* [単純なフィルターの使用](#using-simple-filters): 特定のプロパティが特定の値と一致するかどうかでフィルタします。
-* [プロパティパラメーターの使用](#using-the-property-parameter): 条件付き式を使用して、プロパティが存在するかどうか、またはプロパティの値が別の指定した値や正規式と一致、近似、比較するかどうかを基にフィルタリングします。
+* [単純なフィルターの使用](#using-simple-filters)：特定のプロパティが特定の値と一致するかどうかでフィルタリングします。
+* [プロパティパラメーターの使用](#using-the-property-parameter)：条件付き式を使用して、プロパティが存在するかどうか、またはプロパティの値が別の指定した値や正規式と一致、近似、比較するかどうかを基にフィルタリングします。
 
 ### 単純なフィルターの使用 {#using-simple-filters}
 
-単純なフィルターを使用すると、特定のプロパティ値に基づいて応答をフィルタリングできます。 単純なフィルターは、の形式をとり `{PROPERTY_NAME}={VALUE}`ます。
+単純なフィルターを使用すると、特定のプロパティ値に基づいて応答をフィルタリングできます。単純なフィルターは、`{PROPERTY_NAME}={VALUE}` の形式をとります。
 
-例えば、このクエリは、 `name=exampleName``name` プロパティに「exampleName」という値が含まれているオブジェクトのみを返します。 一方、このクエリは、 `name=!exampleName` プロパティが「exampleName `name` 」で **** ないオブジェクトのみを返します。
+例えば、クエリ「`name=exampleName`」は、`name` プロパティに「exampleName」という値が含まれているオブジェクトのみを返します。これに対し、クエリ「`name=!exampleName`」は、`name` プロパティが「exampleName」で&#x200B;**ない**&#x200B;オブジェクトのみを返します。
 
-また、単純なフィルターでは、単一のプロパティに対して複数の値をクエリする機能もサポートされています。 複数の値が指定された場合、指定されたリスト内の値のい **ずれかに一致するプロパティを持つオブジェクトが返されます** 。 リストに `!` 文字をプリフィックスすると、指定したクエリにプロパティ値がな **いオブジェクト(例えば**`name=!exampleName,anotherName`)のみが返され、複数値のリストを反転できます。
+また、単純なフィルターは、単一のプロパティに対して複数の値をクエリする機能をサポートしています。複数の値が指定された場合、応答は指定されたリスト内の値の&#x200B;**いずれかに**&#x200B;プロパティが一致するオブジェクトを返します。複数値のクエリを反転するには、リストの冒頭に `!` 文字を追加し、指定したリストにプロパティ値が含まれて&#x200B;**いない**（例えば、`name=!exampleName,anotherName`）オブジェクトのみを返します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}?{PROPERTY_NAME}={VALUE}
@@ -496,13 +496,13 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 値のフィルターに使用するプロパティの名前です。 |
-| `{VALUE}` | 含める（または除外する）結果をクエリに応じて決定するプロパティ値です。 |
+| `{VALUE}` | クエリに応じて含めるまたは除外する結果を決定するプロパティ値。 |
 
 **リクエスト**
 
-次のリクエストは、データセットのリストを取得します。データセットは、プ `name` ロパティの値が「exampleName」または「anotherName」であるデータセットのみが含まれるようにフィルタリングされます。
+次のリクエストは、データセットのリストを取得し、`name` プロパティの値が「exampleName」または「anotherName」であるデータセットのみを含めるようにフィルタリングします。
 
 ```shell
 curl -X GET \
@@ -513,9 +513,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答には、「exampleName」または「anotherName」のデータセットを除くデータセットのリストが含ま `name` れます。 制限も指定しない限り、応答には最大20個のオブジェクトが含まれます。
+正常な応答は、`name` が「exampleName」または「anotherName」のデータセットを除く、データセットのリストを含みます。制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
@@ -546,11 +546,11 @@ curl -X GET \
 }
 ```
 
-### パラメーターの使用 `property` {#using-the-property-parameter}
+### `property` パラメータの使用 {#using-the-property-parameter}
 
-この `property` クエリパラメーターは、単純なフィルターーよりも柔軟に、プロパティベースのフィルタリングを行えます。 プロパティに特定の値が含まれるかどうかに基づいてフィルタリングするだけでなく、この `property` 式では、他の比較演算子(「より大きい」(`>`)や「より小さい」(`<`)など)を使用したり、プロパティ値でフィルタリングしたりできます。 また、値に関係なく、プロパティが存在するかどうかでフィルタリングすることもできます。
+`property` クエリパラメーターは、単純なパラメーターよりも柔軟にプロパティベースのフィルタリングをおこなえます。プロパティに特定の値が含まれるかどうかに基づいてフィルタリングする以外に、`property` パラメーターは他の比較演算子（「より大きい」（`>`）や「より小さい」（`<`）など）を正規式としてプロパティ値によるフィルタリングに使用できます。また、値に関係なく、プロパティが存在するかどうかでフィルタリングすることもできます。
 
-この `property` パラメーターは最上位レベルのオブジェクトプロパティのみを受け入れます。つまり、次のサンプルオブジェクトでは、、、およ `name`びのプロパティでフィルタリングできますが、のプロパティではフィルタリングできま `description`せん `subItem``sampleKey`。
+`property` パラメーターは、最上位レベルのオブジェクトプロパティのみを受け入れます。つまり、次のオブジェクト例では、`name`、`description`、`subItem` プロパティでフィルタリングできますが、`sampleKey` プロパティではフィルタリングできません。
 
 ```json
 {
@@ -564,7 +564,7 @@ curl -X GET \
 }
 ```
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}?property={CONDITION}
@@ -572,30 +572,30 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 取得する [!DNL Catalog] オブジェクトの型。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{CONDITION}` | クエリするプロパティとその値の評価方法を示す条件付き式。 以下に例を示します。 |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{CONDITION}` | クエリするプロパティ、およびその値の評価方法を示す条件式。以下に例を示します。 |
 
-この `property` パラメーターの値は、複数の異なる種類の条件式をサポートします。 次の表に、サポートされる式の基本的な構文を示します。
+`property` パラメーターの値は、複数の異なる種類の条件付き式をサポートします。次の表に、サポートされる式の基本構文を示します。
 
 | シンボル | 説明 | 例 |
 | --- | --- | --- |
-| (None) | プロパティ名に演算子を指定しないと、値に関係なく、プロパティが存在するオブジェクトのみが返されます。 | `property=name` |
-| ! | パラメーターの値に「`!`」をプリフィックスすると、プロパティが `property` 存在しないオブジェクトのみが返され **ます** 。 | `property=!name` |
-| ~ | チルダ(`~`)記号の後に指定した正規式とプロパティ値（文字列）が一致するオブジェクトのみを返します。 | `property=name~^example` |
-| == | 重複と等しい記号(`==`)の後に指定した文字列と完全に一致するプロパティ値を持つオブジェクトのみを返します。 | `property=name==exampleName` |
-| != | 等しくない記号( ****`!=`)の後に指定された文字列とプロパティ値が一致しないオブジェクトのみを返します。 | `property=name!=exampleName` |
-| &lt; | プロパティ値が指定した金額より小さい（ただし、等しくない）オブジェクトのみを返します。 | `property=version<1.0.0` |
-| &lt;= | プロパティ値が指定した金額より小さい（または等しい）オブジェクトのみを返します。 | `property=version<=1.0.0` |
-| > | プロパティ値が指定した金額より大きい（ただし、等しくない）オブジェクトのみを返します。 | `property=version>1.0.0` |
-| >= | プロパティ値が指定した金額より大きい（または等しい）オブジェクトのみを返します。 | `property=version>=1.0.0` |
+| なし | プロパティ名を演算子なしで指定すると、値に関係なく、プロパティが存在するオブジェクトのみが返されます。 | `property=name` |
+| ! | `property` パラメーターの値に「`!`」を接頭辞として付けると、プロパティが存在&#x200B;**しない**&#x200B;オブジェクトのみが返されます。 | `property=!name` |
+| ~ | チルダ（`~`）記号の後に指定された正規式に一致するプロパティ値（文字列）を持つオブジェクトのみを返します。 | `property=name~^example` |
+| == | プロパティ値が`==`記号の後に指定した文字列と完全に一致する重複のみを返します。 | `property=name==exampleName` |
+| ! = | プロパティ値が不等号（`!=`）の後に指定された文字列と一致&#x200B;**しない**&#x200B;オブジェクトのみを返します。 | `property=name!=exampleName` |
+| &lt; | プロパティ値が指定した値未満のオブジェクトのみを返します。 | `property=version<1.0.0` |
+| &lt;= | プロパティ値が指定した値以下のオブジェクトのみを返します。 | `property=version<=1.0.0` |
+| > | プロパティ値が指定した値より大きい（ただし、等しくない）オブジェクトのみを返します。 | `property=version>1.0.0` |
+| >= | プロパティ値が指定した値以上のオブジェクトのみを返します。 | `property=version>=1.0.0` |
 
 >[!NOTE]
 >
->この `name` プロパティでは、検索文字列全体またはワイルドカードの一部 `*`として、ワイルドカードの使用がサポートされています。 ワイルドカードは、検索文字列が値「test」と一致するよう `te*st` に、空の文字に一致します。 アスタリスクは2倍にすることでエスケープされる(`**`)。 検索文字列内の重複アスタリスクは、リテラル文字列としての1つのアスタリスクを表します。
+> `name` プロパティでは、検索文字列全体またはその一部として、ワイルドカード `*` の使用がサポートされています。ワイルドカードは空の文字に一致するので、検索文字列 `te*st` は「test」に一致します。アスタリスクは繰り返す（`**`）ことでエスケープされます。検索文字列内のダブルアスタリスクは、リテラル文字列として 1 つのアスタリスクを表します。
 
 **リクエスト**
 
-次の要求は、1.0.3より大きいバージョン番号を持つデータセットを返します。
+次のリクエストは、1.0.3 より大きいバージョン番号を持つデータセットを返します。
 
 ```shell
 curl -X GET \
@@ -606,9 +606,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答には、バージョン番号が1.0.3を超えるデータセットのリストが含まれます。制限を指定しない限り、応答には最大20個のオブジェクトが含まれます。
+正常な応答は、バージョン番号が 1.0.3 よりも大きいデータセットのリストを含みます。制限が指定されていない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
@@ -651,11 +651,11 @@ curl -X GET \
 }
 ```
 
-## 複数のフィルターの結合
+## 複数のフィルターの組み合わせ
 
-アンパサンド(`&`)を使用すると、複数のフィルターを1つのリクエストで結合できます。 リクエストに追加の条件が追加されると、AND関係が想定されます。
+アンパサンド（`&`）を使用すると、複数のフィルターを 1 つのリクエストで結合できます。リクエストに追加の条件が追加されると、AND 関係が想定されます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /{OBJECT_TYPE}?{FILTER_1}={VALUE}&{FILTER_2}={VALUE}&{FILTER_3}={VALUE}
