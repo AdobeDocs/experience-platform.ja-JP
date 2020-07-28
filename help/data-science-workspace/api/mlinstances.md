@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
 solution: Experience Platform
-title: MLInstances
+title: MLInstance
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 
-# MLInstances
+# MLInstance
 
-MLInstanceは、既存の [エンジン](./engines.md) 、トレーニングパラメーター、スコアリングパラメーターまたはハードウェアリソース設定を定義する適切な設定セットとのペアです。
+MLInstance は、既存の[エンジン](./engines.md)と適切な設定セット（トレーニングパラメーター、スコアリングパラメーター、またはハードウェアリソース設定を定義する）とのペアリングです。
 
-## MLInstanceの作成 {#create-an-mlinstance}
+## MLInstance の作成 {#create-an-mlinstance}
 
-MLInstanceを作成するには、有効なエンジンID(`{ENGINE_ID}`)と適切なデフォルト設定のセットから成るリクエストペイロードを提供しながら、POSTリクエストを実行します。
+MLInstance を作成するには、有効なエンジン ID（`{ENGINE_ID}`）と適切なデフォルト設定セットで構成されるリクエストペイロードを指定して POST リクエストを実行します。
 
-Engine IDがPySparkまたはSpark Engineを参照する場合は、コア数やメモリ量などの計算リソースの量を設定できます。 Pythonエンジンを参照する場合は、トレーニングとスコアリングの目的でCPUまたはGPUを使用するかを選択できます。 詳細は、PySparkとSparkのリソース設定 [、](./appendix.md#resource-config) Python CPUとGPUの設定に関する付録の節を参照してください [](./appendix.md#cpu-gpu-config) 。
+エンジン ID が PySpark エンジンや Spark エンジンを参照する場合は、コア数やメモリ量など、計算リソースの量を設定できます。Python エンジンが参照される場合は、トレーニングとスコアリングのために、CPU と GPU のいずれかの使用を選択できます。詳しくは、「[PySpark と Spark のリソース設定](./appendix.md#resource-config)」と「[Python CPU と GPU の設定](./appendix.md#cpu-gpu-config)」の付録の節を参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /mlInstances
@@ -76,14 +76,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | MLInstanceに必要な名前。 このMLInstanceに対応するモデルは、この値を継承し、UIにモデル名として表示されます。 |
-| `description` | MLInstanceのオプションの説明です。 このMLInstanceに対応するモデルは、この値を継承し、モデルの説明としてUIに表示されます。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `engineId` | 既存のエンジンのID。 |
-| `tasks` | トレーニング、スコアリング、またはフィーチャパイプラインの設定のセット。 |
+| `name` | MLInstance の任意の名前。この MLInstance に対応するモデルは、この値を継承し、UI にモデルの名前として表示されます。 |
+| `description` | MLInstance のオプションの説明。この MLInstance に対応するモデルは、この値を継承し、UI にモデルの説明として表示されます。このプロパティは必須です。説明を指定しない場合は、その値を空の文字列に設定します。 |
+| `engineId` | 既存のエンジンの ID。 |
+| `tasks` | トレーニング、スコアリング、または機能のパイプラインの一連の設定。 |
 
 **応答**
 
-成功した応答は、新たに作成されたMLInstanceの詳細を含むペイロードを返します。この詳細には、固有な識別子(`id`)が含まれます。
+成功した応答は、一意の識別子（`id`）など、新たに作成された MLInstance の詳細が含まれるペイロードを返します。
 
 ```json
 {
@@ -128,11 +128,11 @@ curl -X POST \
 }
 ```
 
-## MLInstancesのリストを取得する
+## MLInstance のリストの取得
 
-単一のGETリクエストを実行して、MLInstancesのリストを取得できます。 結果をフィルターするのに役立つように、リクエストパスでクエリパラメーターを指定できます。 使用可能なクエリのリストについては、付録の「アセット取得の [クエリパラメータ」の節を参照してください](./appendix.md#query)。
+MLInstance のリストは、単一の GET リクエストを実行することで取得できます。結果のフィルター処理を支援するために、リクエストパスでクエリーパラメーターを指定できます。使用可能なクエリのリストについては、「[アセット取得のためのクエリーパラメーター](./appendix.md#query)」の付録の節を参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /mlInstances
@@ -142,8 +142,8 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 結果のフィルタリングに [使用できるクエリパラメーターの1つ](./appendix.md#query) 。 |
-| `{VALUE}` | 前のクエリパラメーターの値。 |
+| `{QUERY_PARAMETER}` | 結果のフィルタリングに[使用可能なクエリパラメーター](./appendix.md#query)の 1 つです。 |
+| `{VALUE}` | 上記クエリパラメーターの値です。 |
 
 **リクエスト**
 
@@ -158,7 +158,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、MLInstancesとその詳細のリストを返します。
+成功した応答は、MLInstance のリストとその詳細を返します。
 
 ```json
 {
@@ -196,11 +196,11 @@ curl -X GET \
 }
 ```
 
-## 特定のMLInstanceの取得 {#retrieve-specific}
+## 特定の MLInstance の取得 {#retrieve-specific}
 
-特定のMLInstanceの詳細を取得するには、目的のMLInstanceのIDをリクエストパスに含むGETリクエストを実行します。
+特定の MLInstance の詳細を取得するには、リクエストパスに目的の MLInstance の ID を含む GET リクエストを実行します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /mlInstances/{MLINSTANCE_ID}
@@ -208,7 +208,7 @@ GET /mlInstances/{MLINSTANCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MLINSTANCE_ID}` | 目的のMLInstanceのID。 |
+| `{MLINSTANCE_ID}` | 目的の MLInstance の ID。 |
 
 **リクエスト**
 
@@ -223,7 +223,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、MLInstanceの詳細を返します。
+成功した応答は、MLInstance の詳細を返します。
 
 ```json
 {
@@ -269,15 +269,15 @@ curl -X GET \
 }
 ```
 
-## MLInstanceの更新
+## MLInstance の更新
 
-既存のMLInstanceを更新するには、要求パスにターゲットMLInstanceのIDが含まれるPUT要求を介してプロパティを上書きし、更新されたプロパティを含むJSONペイロードを提供します。
+既存の MLInstance を更新するには、リクエストパスにターゲット MLInstance の ID を含む PUT リクエストを実行してプロパティを上書きし、更新されたプロパティを含む JSON ペイロードを指定します。
 
 >[!TIP]
 >
->このPUTリクエストを確実に成功させるために、まずGETリクエストを実行し、IDでMLInstanceを [取得することをお勧めします](#retrieve-specific)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
+> この PUT リクエストを確実に成功させるために、まず GET リクエストを実行し、[ID で MLInstance を取得する](#retrieve-specific)ことをお勧めします。次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
 
-以下のサンプルAPI呼び出しは、MLInstanceのトレーニングパラメーターとスコアリングパラメーターを更新し、これらのプロパティを最初に持つようにします。
+以下のサンプル API 呼び出しは、MLInstance のトレーニングパラメーターとスコアリングパラメーターを更新し、これらのプロパティを最初に次のように設定します。
 
 ```json
 {
@@ -312,7 +312,7 @@ curl -X GET \
 }
 ```
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /mlInstances/{MLINSTANCE_ID}
@@ -320,7 +320,7 @@ PUT /mlInstances/{MLINSTANCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MLINSTANCE_ID}` | 有効なMLInstance IDです。 |
+| `{MLINSTANCE_ID}` | 有効な MLInstance ID です。 |
 
 **リクエスト**
 
@@ -366,7 +366,7 @@ curl -X PUT \
 
 **応答**
 
-成功した応答は、MLInstanceの更新された詳細を含むペイロードを返します。
+成功した応答は、MLInstance の更新された詳細を含むペイロードを返します。
 
 ```json
 {
@@ -403,11 +403,11 @@ curl -X PUT \
 }
 ```
 
-## エンジンIDによるMLInstancesの削除
+## エンジン ID による MLInstance の削除
 
-エンジンIDをクエリパラメーターとして含むDELETEリクエストを実行すると、同じエンジンを共有するすべてのMLInstanceを削除できます。
+エンジン ID をクエリーパラメーターとして含む DELETE リクエストを実行すると、同じエンジンを共有するすべての MLInstance を削除できます。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /mlInstances?engineId={ENGINE_ID}
@@ -415,7 +415,7 @@ DELETE /mlInstances?engineId={ENGINE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{ENGINE_ID}` | 有効なエンジンID。 |
+| `{ENGINE_ID}` | 有効なエンジン ID。 |
 
 **リクエスト**
 
@@ -438,11 +438,11 @@ curl -X DELETE \
 }
 ```
 
-## MLInstanceの削除
+## MLInstance の削除
 
-1つのMLInstanceを削除するには、リクエストパスにターゲットMLInstanceのIDを含むDELETEリクエストを実行します。
+リクエストパスにターゲット MLInstance の ID を含む DELETE リクエストを実行すると、1 つの MLInstance を削除できます。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /mlInstances/{MLINSTANCE_ID}
@@ -450,7 +450,7 @@ DELETE /mlInstances/{MLINSTANCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MLINSTANCE_ID}` | 有効なMLInstance IDです。 |
+| `{MLINSTANCE_ID}` | 有効な MLInstance ID です。 |
 
 **リクエスト**
 
@@ -463,7 +463,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```json
 {
