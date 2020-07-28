@@ -7,52 +7,52 @@ translation-type: tm+mt
 source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
 source-wordcount: '456'
-ht-degree: 6%
+ht-degree: 68%
 
 ---
 
 
 # Adobe Experience Platform [!DNL Segmentation Service] でサポートされるデータ型
 
-では、すべてのXDMデータ型がサポートされてい [!DNL Segmentation Service]ます。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
+All XDM data types are supported within [!DNL Segmentation Service]. セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 
 ## 文字列データ
 
-セグメント定義では、文字列データを使用して、「国名」や「忠誠度プログラムレベル」など、セグメントオーディエンスの数値以外の制約を定義します。
+セグメント定義では、文字列データを使用して、「国名」や「ロイヤルティプログラムレベル」など、セグメントオーディエンスの数値以外の制約を定義します。
 
-文字列データは、論理、包含/排他および比較文を使用して、セグメント定義に含めます。 セグメント定義に文字列属性が追加されたら、文字列に関連するステートメントを使用して、他の文字列フィールドと比較して評価できます。
+文字列データは、論理ステートメント、包含／排他ステートメント、比較ステートメントを使用して、セグメント定義に含まれます。文字列属性をセグメント定義に追加したら、文字列関連ステートメントを使用して、他の文字列フィールドと比較して評価できます。
 
-| 明細書タイプ | 例 |
+| ステートメントのタイプ | 例 |
 | -------------- | -------- |
 | 論理 | `and`、`or`、`not` |
-| 包括的/排他的 | `include`, `must` `exist`, `exclude`, `must not exist` |
+| 包含／排他 | `include`, `must` `exist`, `exclude`, `must not exist` |
 | 比較 | `equals`、`does not equal`、`contains`、`starts with` |
 
 ## 日付データ
 
-日付データを使用すると、特定の開始/終了日を使用するか、次の表に示す日付に関連する文を使用して、時間に基づくコンテキストをセグメント定義に割り当てることができます。 1つの実装は、 *今年のいつでもブランドとの関わりを示し、過去数日間* にわたってアクティブだった顧客のオーディエンスを作成することが考えられます ** 。
+日付データを使用すると、特定の開始／終了日を使用するか、以下の表に示す日付関連ステートメントを使用して、セグメント定義に時間ベースのコンテキストを割り当てることができます。*今年*&#x200B;いつもブランドとの関わりを持ち、過去数日&#x200B;*以内*&#x200B;もアクティブであった顧客オーディエンスを作成するといった場合が 1 つの実装例です。
 
-| サンプルフィールド | 日付に関連する明細書 | タイムライン |
+| フィールドの例 | 日付関連ステートメント | タイムライン |
 | ------------- | ------------------------ | --------- |
 | person.firstPurchase | `today`、`yesterday`、`this month`、`this year` | セグメントが作成された日に関連します。 |
-| person.lastPurchase | `in last`、`during`、`before`、`after`、`within` | 任意の週/月内で関連性があります。 |
+| person.lastPurchase | `in last`、`during`、`before`、`after`、`within` | 任意の週内／月内に関連します。 |
 
 ## エクスペリエンスイベント
 
-Adobe Experience Platformスキーマとして、インタラクションが発生した時点のシステムのスナップショットを含む、 [!DNL XDM ExperienceEvents][!DNL Platform]統合アプリケーションを使用した明示的および暗黙的な顧客インタラクションを記録します。 [!DNL ExperienceEvents] は事実の記録です したがって、これらはセグメント定義時に使用できるデータソースです。
+As an Adobe Experience Platform schema, [!DNL XDM ExperienceEvents] record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. [!DNL ExperienceEvents] は事実の記録です したがって、セグメント定義時に使用できるデータソースになります。
 
-次の表に示すように、イベントデータは、イベントの動作を絞り込み、イベント属性を指定するのに役立つキーワードを使用してレンダリングされます。
+次の表に示すように、イベントデータは、イベント動作の絞り込みやイベント属性の指定に役立つキーワードを使用して表現されます。
 
-| キーワード | 使用方法 |
+| キーワード | 用途 |
 | ------- | --- |
-| 含む/除外する | データの組み込みまたは欠落によるイベントの動作を説明します。 |
-| 任意/すべて | 条件を満たすセグメントの数の判断に役立ちます。 |
-| 「タイムルールを適用」切り替えボタン | 日付データを組み込みます。 |
-| 等しい、等しくない、開始、次の値を含まない、次の値を含む、次の値を含まない、次の値で終わらない、次の値を含まない、次の値を含まない、次の値を含まない、が存在しない | 文字列データを組み込みます。 |
+| 含む／除く | データを含めるまたは省略してイベントの動作を記述します。 |
+| 任意／すべて | 適格なセグメントの数の判断に役立ちます。 |
+| 「時間ルールを適用」切り替えボタン | 日付データを組み込みます。 |
+| 等しい、等しくない、～で開始する、～で開始しない、～で終わる、～で終わらない、含む、含まない、存在する、存在しない | 文字列データを組み込みます。 |
 
 ### オーディエンスの共有
 
-外部オーディエンスは、新しいセグメント定義のコンポーネントとして使用し、新しいセグメントに属性ルールを追加することもできます。
+外部オーディエンスは、新しいセグメント定義のコンポーネントとしても使用でき、属性ルールを新しいセグメントに追加できます。
 
 現在、外部オーディエンスとしてAdobe Audience Managerのみがサポートされ、今後、追加のソースが有効になります。 PlatformでのAdobe Audience Managerオーディエンスの使用について詳しくは、Adobe Audience Managerドキュメント内の [オーディエンス共有ガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)。
 
@@ -67,11 +67,11 @@ Platformで作成されたセグメントは、他の [Adobe Experience Cloudコ
 - Uniform Resource Identifier(URI)
 - 列挙
 - 数値
-- ロング
+- 長整数
 - 整数
-- Short
+- 短整数
 - バイト
 - Boolean
 - 配列
 - オブジェクト
-- マップ
+- Map
