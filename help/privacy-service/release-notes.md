@@ -1,95 +1,95 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Serviceのリリースノート
+title: Privacy Service のリリースノート
 topic: release notes
 translation-type: tm+mt
 source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
 workflow-type: tm+mt
 source-wordcount: '511'
-ht-degree: 5%
+ht-degree: 64%
 
 ---
 
 
 # [!DNL Privacy Service] リリースノート
 
-このドキュメントには、Adobe Experience Platformの新機能、拡張機能、重要なバグ修正 [!DNL Privacy Service]に関する情報が含まれています。
+This document contains information about new features for Adobe Experience Platform [!DNL Privacy Service], as well as enhancements and significant bug fixes.
 
 >[!NOTE]
 >
 >その他の [!DNL Experience Platform] サービスの最新のリリースノートは、 [こちらを参照してください](../release-notes/latest/latest.md)。
 
-## 2020 年 4 月 9 日
+## 2020年4月8日
 
 ### 新機能
 
 | 機能 | 説明 |
 | --- | --- |
-| PDPAのサポート | [!DNL Privacy] タイのPersonal Data Protection Act(PDPA)に基づいて、リクエストを作成し、追跡できるようになりました。 APIでプライバシーリクエストを行う場合、 `regulation` 配列は値「pdpa_tha」を受け入れます。 |
-| UIの名前空間タイプ | UIのリクエストビルダーで異なる名前空間タイプを指定できるようになり [!DNL Privacy Service] ました。 詳しくは、 [ユーザガイド](ui/user-guide.md) を参照してください。 |
-| 古いエンドポイントの廃止 | 古いAPIエンドポイント(`data/privacy/gdpr`)は非推奨となりました。 |
+| PDPA のサポート | [!DNL Privacy] タイのPersonal Data Protection Act(PDPA)に基づいて、リクエストを作成し、追跡できるようになりました。 API でプライバシーリクエストを実行する場合、`regulation` 配列は「pdpa_tha」の値を受け取ります。 |
+| UI の名前空間タイプ | You can now specify different namespace types in the Request Builder in the [!DNL Privacy Service] UI. 詳しくは、[ユーザガイド](ui/user-guide.md)を参照してください。 |
+| 古いエンドポイントの廃止 | 古い API エンドポイント（`data/privacy/gdpr`）は非推奨となりました。 |
 
-## 2020 年 1 月 14 日
+## 2020年1月14日
 
 ### 新機能
 
 | 機能 | 説明 |
 | --- | --- |
-| [!DNL Privacy Service] 商標変更 | GDPRに加え、他の規制をサポートするようになったため、従来の「GDPRサービス」 [!DNL Privacy Service] の名称を変更。 |
-| 新しいAPIエンドポイント | APIのベースパスが、からに更新さ [!DNL Privacy Service]`/data/privacy/gdpr` れました `/data/core/privacy/jobs` |
-| 新しい必須 `regulation` プロパティ | APIで新しいジョブを作成する場合、要求ペイロードで [!DNL Privacy Service]`regulation` プロパティを指定して、ジョブを追跡する規則を示す必要があります。 指定できる値は `gdpr` とで `ccpa`す。 詳しくは、 [開発者ガイドの](api/privacy-jobs.md)[!DNL Privacy Service] プライバシージョブに関するドキュメントを参照してください。 |
-| Adobe Primetime認証のサポート | [!DNL Privacy Service] 製品の値としてを使用し、Adobe Primetime Authenticationからのアクセス/削除要求 `primetimeAuthentication` を受け入れるようになりました。 See the [Primetime Authentication documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request) for more information. |
+| [!DNL Privacy Service] 商標変更 | The formerly named &quot;GDPR Service&quot; has been rebranded to [!DNL Privacy Service] as the service has grown to support other regulations in addition to GDPR. |
+| 新しい API エンドポイント | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs` |
+| 新しい必須の `regulation` プロパティ | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. 指定できる値は、`gdpr` および `ccpa` です。詳しくは、『 開発者ガイド』の[プライバシージョブ](api/privacy-jobs.md)に関するドキュメントを参照してください。[!DNL Privacy Service] |
+| Adobe Primetime Authentication のサポート | [!DNL Privacy Service] では、製品の値として `primetimeAuthentication` を使用して、Adobe Primetime Authentication からのアクセス / 削除リクエストを受け入れるようになりました。詳しくは、[Primetime 認証のドキュメント](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)を参照してください。 |
 
 ### 強化された機能
 
 * [!DNL Privacy Service] UIの強化：
-   * GDPRおよびCCPA規制に関する個別のジョブトラッキングページ。
-   * GDPRとCCPAのトラッキングデータを切り替えるための新しい _Regulation Type_ （規則タイプ）ドロップダウン。
+   * GDPR 規制と CCPA 規制下でのジョブトラッキングに関するページが分離されました。
+   * GDPR と CCPA 下でのトラッキングデータを切り替えるための「_規制の種類_」ドロップダウンが新しく追加されました。
 
-## 2019 年 7 月 25 日
+## 2019年7月25日
 
 ### 新機能
 
 | 機能 | 説明 |
 | --- | --- |
-| リクエスト指標ダッシュボード | UIの新しい指標ダッシュボードは、送信されたGDPRリクエスト、エラー・リクエスト、完了したGDPRリクエストを表示します。 [!DNL Privacy Service] |
-| リクエストビルダー | GDPR要求を提出する技術的なユーザーと技術的でないユーザーの両方を持つ組織に対して、UIに「リクエストの作成」機能が追加されました。 JSONファイル送信機能は、引き続き使用したい組織の [!DNL Privacy Service] UIでも使用できます。 |
-| GDPRジョブイベント通知 | GDPRジョブのステータスに関するイベント通知は、多くのワークフローにとって重要な要素です。 以前は個々の電子メール通知を使用して通知が提供されていましたが、GDPRイベント通知はAdobe I/Oイベントを利用するメッセージで、設定済みのWebフックに送信され、ジョブリクエストの自動化が容易になります。 [!DNL Privacy Service] UIユーザーは、Adobe I/O GDPRイベントに登録して、製品またはGDPRジョブが完了したときに更新を受け取ることができます。 |
+| リクエスト指標ダッシュボード | The new metrics dashboard in the [!DNL Privacy Service] UI provides visibility into submitted, errored, and completed GDPR requests. |
+| リクエストビルダー | サービス組織の技術ユーザーとそれ以外のユーザーの両方が GDPR リクエストを送信する場合、UI にリクエストを作成する機能が追加されます。The JSON file submission capability is still available in the [!DNL Privacy Service] UI for those organizations who prefer to continue using it. |
+| GDPR ジョブイベントの通知 | GDPR ジョブのステータスに関するイベント通知は、多くのワークフローにとって重要な要素です。これまで、通知は個々の電子メール通知を使用して提供されていましたが、GDPR イベント通知は Adobe I/O イベントを活用するメッセージです。このメッセージは、設定済みの Webhook に送信されるので、ジョブリクエストの自動化が容易になります。[!DNL Privacy Service] UI ユーザーは、Adobe I/O GDPR イベントを登録することで、製品のジョブまたは GDPR ジョブが完了したときに更新を受け取ることができます。 |
 
-## 2019 年 18 月 5 日
+## 2019年4月18日
 
 ### 強化された機能
 
-* UI内のステータステーブルのデフォルトの範囲が7日間に変更されました。 [!DNL Privacy Service]
-* 内部例外処理の改善。
-* データ変更率が低い一般的な内部呼び出しのキャッシュを導入することで、パフォーマンスが向上しました。
+* Default range for the status table in the [!DNL Privacy Service] UI modified to a 7-day span.
+* 内部例外の処理が改良されました。
+* データ変更率が低い一般的な内部呼び出しにキャッシュを導入することで、パフォーマンスが向上しました。
 
 ### バグの修正
 
-* APIのエンドポイントに、フィルターを適用したクエリに関する見つからない `GET /` ログ情報を追加しました [!DNL Privacy Service] 。
+*  API の `GET /` エンドポイント向けに、フィルターされたクエリの不足ログ情報を追加しました。[!DNL Privacy Service]
 
-## 2019 年 4 月 12 日
-
-### 強化された機能
-
-* ベータ版のお客様向けの新機能をサポートするUIを更新
-* ベータ版のUI 2.0機能をサポートする新しい指標API
-
-## 2019 年 4 月 10 日
+## 2019年4月11日
 
 ### 強化された機能
 
-* すべてのルックアップ(GET) API呼び出しを、デフォルトの30日のルックバック範囲に更新しました。
-* APIの使用が制限され、最大45日のルックバック範囲を持つようになりました。
+* UI が更新され、ベータ版の顧客向けの新機能がサポートされました。
+* ベータ版の UI 2.0 機能をサポートする新しい指標 API
 
-## 2019 年 14 月 3 日
+## 2019年4月9日
 
 ### 強化された機能
 
-* 各POST送信でこの `include` フィールドを強制します。
-* JSONのアップロード時にこの `include` フィールドを強制的に設定します。
+* すべての検索（GET）API 呼び出しが更新され、30 日間のルックバック範囲がデフォルトに設定されました。
+* API の使用が制限され、ルックバックの最大範囲が 45 日間になりました。
+
+## 2019年2月14日
+
+### 強化された機能
+
+* すべての POST 送信において、`include` フィールドが強制的に使用されます。
+* JSON のアップロード時に、`include` フィールドが強制的に使用されます。
 
 ### バグの修正
 
-* ユーザーが [!DNL Privacy Service] UIを読み込めない問題を修正しました。
+* Fixed an issue where customers could not load the [!DNL Privacy Service] UI.
