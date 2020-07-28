@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: リストがサポートするサンドボックスの種類
+title: サポートされるサンドボックスタイプのリスト
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
 workflow-type: tm+mt
 source-wordcount: '47'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 
-# リストがサポートするサンドボックスの種類
+# サポートされるサンドボックスタイプのリスト
 
-エンドポイントにGET要求を行うことで、組織でサポートされているサンドボックスの種類のリストを取得でき `/sandboxTypes` ます。
+`/sandboxTypes` エンドポイントに対して GET リクエストを実行すると、組織でサポートされているサンドボックスタイプのリストを取得できます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /sandboxTypes
@@ -35,7 +35,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、貴社でサポートされているサンドボックスタイプのリストを返します。
+成功した応答は、組織でサポートされているサンドボックスタイプのリストを返します。
 
 ```json
 {
