@@ -1,39 +1,39 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: データセットとテーブルとスキーマ
+title: データセットとテーブルおよびスキーマ
 topic: queries
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '181'
-ht-degree: 1%
+ht-degree: 92%
 
 ---
 
 
-# データセットとテーブルとスキーマ
+# データセットとテーブルおよびスキーマ
 
-Adobe Experience PlatformUIで使用できるデータセットのリストを確認し [](https://platform.adobe.com/datasets)、データセット名を確認してください。
+[Adobe Experience Platform UI](https://platform.adobe.com/datasets) で使用できるデータセットのリストのレビューを実施し、データセット名を必ず確認してください。
 >[!NOTE]
 >
->一部のデータセット名にはスペースが含まれ、スペースが含まれていない場合はSQLセーフでないことがあります。
+>一部のデータセット名にはスペースが含まれており、スペースが含まれていない場合は SQL に対応しない可能性があります。
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
 
-データセットテーブル内のスキーマ名をクリックして、UIのデータセットスキーマの階層構造を確認します。
+データセットテーブル内のスキーマ名をクリックして、UI でデータセットスキーマの階層構造を確認します。
 
 ![](../images/queries/datasets-and-tables/schema-information.png)
 
-PSQLコマンドラインを開き、次の場所から接続の詳細を使用します。 [https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration).
+PSQL コマンドラインを開き、次の場所に記載されている接続の詳細を使用します。[https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration)
 
 ![](../images/clients/psql/connect-bi.png)
 
-SQLで使用可能なテーブルを表示す [!DNL Platform] るには、またはを使用でき `\d` ま `SHOW TABLES;`す。
+To view the available tables on [!DNL Platform] with SQL, you can use either `\d` or `SHOW TABLES;`.
 
 
-`\d` 標準のPostgreSQL表示を表示します。
+`\d` は、標準の PostgreSQL ビューを表示します
 
 ```
              List of relations
@@ -44,7 +44,7 @@ SQLで使用可能なテーブルを表示す [!DNL Platform] るには、また
 (2 rows)
 ```
 
-`SHOW TABLES;` は、より詳細な表示を提供し、テーブルと [!DNL Platform] UIにあるデータセット名を表示するカスタムコマンドです。
+`SHOW TABLES;`[!DNL Platform] は、より詳細なビューを提供し、テーブルと、 UI にあるデータセット名を表示するカスタムコマンドです。
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -54,11 +54,11 @@ SQLで使用可能なテーブルを表示す [!DNL Platform] るには、また
 (2 rows)
 ```
 
-テーブルのルートスキーマを表示するには、 `\d table_name` コマンドを使用します。
+テーブルのルートスキーマを表示するには、`\d table_name` コマンドを使用します。
 
 >[!NOTE]
 >
->表示されるスキーマは、ルートフィールドを示しています。ルートフィールドのほとんどは複雑で、データセットスキーマUIのオブジェクトタイプを指します。
+> 表示されたスキーマは、ルートフィールドを示し、そのほとんどが複雑で、データセットスキーマ　UI　のオブジェクトタイプを参照します。
 
 `\d luma_midvalues`
 
@@ -83,7 +83,7 @@ SQLで使用可能なテーブルを表示す [!DNL Platform] るには、また
  search            | search                      |           |          | 
 ```
 
-スキーマをさらに進めるには、アンダースコア(`_`)を使用して、説明するテーブルの列を宣言します。 例：`\d table_name_column`。
+さらに詳細なスキーマを表示するには、アンダースコア（`_`）を使用して、説明するテーブルの列を宣言します。例：`\d table_name_column`。
 
 `\d luma_midvalues_web`
 
