@@ -1,8 +1,8 @@
 ---
-title: Amazon Kinesisの宛先
-seo-title: Amazon Kinesisの宛先
-description: Amazon Kinesisストレージへのリアルタイムのアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングします。
-seo-description: Amazon Kinesisストレージへのリアルタイムのアウトバウンド接続を作成して、Adobe Experience Platformからデータをストリーミングします。
+title: AmazonKinesis駅
+seo-title: AmazonKinesis駅
+description: Adobe Experience Platformからデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの送信接続を作成します。
+seo-description: Adobe Experience Platformからデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの送信接続を作成します。
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->Adobe Real-time CDPの [!DNL Amazon Kinesis] 宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>AdobeReal-time CDPの [!DNL Amazon Kinesis] 宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 ## 概要 {#overview}
 
@@ -27,9 +27,9 @@ Adobe Experience Platformからデータをストリーミングするために�
 
 * 詳しくは、 [!DNL Amazon Kinesis]Amazonのドキュメント [を参照してください](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
 * API呼び出しを [!DNL Amazon Kinesis] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)。
-* Adobe Real-time CDPユーザーインターフェイス [!DNL Amazon Kinesis] を使用して接続するには、以下のセクションを参照してください。
+* AdobeのReal-time CDPユーザー・インターフェイスを [!DNL Amazon Kinesis] 使用して接続するには、以下のセクションを参照してください。
 
-![UIでのAmazon Kinesis](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
+![AmazonKinesisUI](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
 
 
 ## 使用例 {#use-cases}
@@ -46,7 +46,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### 認証手順の {#authentication-step}
 
-* **[!DNL Amazon Web Services]アクセスキーと秘密鍵&#x200B;**: で、アクセスキー — 秘密アクセスキーペアを生成[!DNL Amazon Web Services]して、アドビのリアルタイムCDPアクセスを[!DNL Amazon Kinesis]アカウントに付与します。 詳しくは、[アマゾンウェブサービスドキュメントを参照してください](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **[!DNL Amazon Web Services]アクセスキーと秘密鍵&#x200B;**: では、アクセス・キー — シークレット・アクセス・キー・ペアを生成[!DNL Amazon Web Services]して、Adobeに対してリアルタイムCDPアクセスを[!DNL Amazon Kinesis]アカウントに付与します。 詳しくは、[Amazonウェブサービスのドキュメントを参照してください](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
 * **region**: データをストリーミングする [!DNL Amazon Web Services] 領域を指定します。
 
 ![アカウント手順の入力フィールド](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -55,7 +55,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 * **名前**: 接続先の名前を指定 [!DNL Amazon Kinesis]
 * **説明**: への接続の説明を入力し [!DNL Amazon Kinesis]ます。
-* **stream**: アカウント内の既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 Adobe Real-time CDPは、このストリームにデータをエクスポートします。
+* **stream**: アカウント内の既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 AdobeReal-time CDPは、このストリームにデータをエクスポートします。
 
 ![認証手順の入力フィールド](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
@@ -117,7 +117,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 >[!MORELIKETHIS]
 >
->* [Amazon Kinesisに接続し、API呼び出しを使用してデータをアクティブにする](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+>* [AmazonKinesisに接続し、API呼び出しを使用してデータをアクティブにする](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Azureイベントハブの宛先](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [宛先のタイプとカテゴリ](/help/rtcdp/destinations/destination-types.md)
 
