@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
@@ -24,8 +24,8 @@ SFTP サーバーへのライブアウトバウンド接続を作成し、区切
 
 SFTP を含むクラウドストレージの宛先への接続方法については、「[クラウドストレージの宛先のワークフロー](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)」を参照してください。
 
-SFTP送信先の場合は、送信先の作成ワークフローの **認証** 手順で次の情報を入力します。
+SFTP の宛先については、宛先の作成ワークフローの&#x200B;**認証**&#x200B;手順で次の情報を入力します 。
 
-* **ホスト**: SFTPストレージの場所のアドレス
-* **ユーザー名**: SFTPストレージの場所にログインするためのユーザー名。
-* **パスワード**: SFTPストレージの場所にログインするためのパスワード
+* **Host**：SFTP ストレージ場所のアドレス
+* **Username**：SFTP ストレージの場所にログインするユーザー名
+* **Password**：SFTP ストレージの場所にログインするパスワード
