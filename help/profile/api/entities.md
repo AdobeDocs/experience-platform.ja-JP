@@ -7,26 +7,26 @@ translation-type: tm+mt
 source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
 source-wordcount: '1671'
-ht-degree: 1%
+ht-degree: 89%
 
 ---
 
 
 # エンティティエンドポイント(プロファイルアクセス)
 
-Adobe Experience Platformを使用すると、RESTful APIまたはユーザーインターフェイスを使用して [!DNL Real-time Customer Profile] データにアクセスできます。 このガイドでは、APIを使用して、一般に「プロファイル」と呼ばれるエンティティにアクセスする方法について概説します。 UIを使用したプロファイルへのアクセスについて詳しくは、『 [!DNL Platform] プロファイルユーザガイド [](../ui/user-guide.md)』を参照してください。
+Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile] data using RESTful APIs or the user interface. このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。For more information on accessing profiles using the [!DNL Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、に含まれてい [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)ます。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
-## ID別のプロファイルデータへのアクセス
+## ID によるプロファイルデータへのアクセス
 
-エン [!DNL Profile]`/access/entities` ティティにアクセスするには、エンドポイントにGETリクエストを送信し、一連のクエリパラメーターとしてエンティティのIDを指定します。 このIDは、ID値(`entityId`)とID名前空間(`entityIdNS`)で構成されます。
+You can access a [!DNL Profile] entity by making a GET request to the `/access/entities` endpoint and providing the entity&#39;s identity as a series of query parameters. この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
 
-リクエストパスで指定されるクエリパラメーターで、アクセスするデータを指定します。 複数のパラメーターを含めることができ、アンパサンド(&amp;)で区切って指定できます。 有効なパラメーターの完全なリストは、付録の「 [クエリパラメーター](#query-parameters) 」セクションに記載されています。
+クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /access/entities?{QUERY_PARAMETERS}
@@ -34,7 +34,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストは、IDを使用して顧客の電子メールと名前を取得します。
+次のリクエストでは、顧客の電子メールと名前を ID を使用して取得します。
 
 ```shell
 curl -X GET \
@@ -45,7 +45,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```json
 {
@@ -115,13 +115,13 @@ curl -X GET \
 ```
 
 >[!NOTE]
->関連するグラフが50個を超えるIDをリンクしている場合、このサービスはHTTPステータス422と「関連IDが多すぎます」というメッセージを返します。 このエラーが表示される場合は、検索を絞り込むためにクエリパラメーターを追加することを検討してください。
+>関連するグラフが 50 個を超える ID をリンクする場合、このサービスは HTTP ステータス 422（処理できないエンティティ）と「関連 ID が多すぎます」というメッセージを返します。このエラーが表示される場合は、検索を絞り込むためにクエリパラメータを追加することを検討してください。
 
-## IDのリストによるプロファイルデータへのアクセス
+## ID リストによるプロファイルデータへのアクセス
 
-エンドポイントにPOSTリクエストを送信し、ペイロードにIDを提供することで、IDによって複数のプロファイルエンティティにアクセスでき `/access/entities` ます。 これらのIDは、ID値(`entityId`)とID名前空間(`entityIdNS`)で構成されます。
+`/access/entities` エンドポイントに対して POST リクエストを送信し、ペイロードに ID を提供することで、ID によって複数のプロファイルエンティティにアクセスできます。これらの ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）で構成されます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /access/entities
@@ -129,7 +129,7 @@ POST /access/entities
 
 **リクエスト**
 
-次のリクエストは、IDのリストによって複数の顧客の名前と電子メールアドレスを取得します。
+次のリクエストでは、複数の顧客の名前と電子メールアドレスを ID のリストで取得します。
 
 ```shell
 curl -X POST \
@@ -180,18 +180,18 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `schema.name` | ***（必須）*** エンティティが属するXDMスキーマの名前。 |
-| `fields` | 返すXDMフィールドを文字列の配列として指定します。 デフォルトでは、すべてのフィールドが返されます。 |
-| `identities` | ***（必須）*** アクセスするエンティティのIDのリストを含む配列。 |
-| `identities.entityId` | アクセスするエンティティのID。 |
-| `identities.entityIdNS.code` | アクセスするエンティティIDの名前空間。 |
-| `timeFilter.startTime` | 時間範囲フィルターの開始時間（含む）。 精度はミリ秒にする必要があります。 指定しなかった場合、デフォルトは使用可能な時間の開始です。 |
-| `timeFilter.endTime` | 時間範囲フィルターの終了時間、除外。 精度はミリ秒にする必要があります。 指定しなかった場合、デフォルトは使用可能な時間の終わりです。 |
-| `limit` | 返すレコード数。 返されるエクスペリエンスイベントの数にのみ適用されます。 デフォルト： 1,000。 |
-| `orderby` | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序で、デフォルト値 `(+/-)timestamp` と同様に記述され `+timestamp`ます。 |
-| `withCA` | 参照用に計算済み属性を有効にする機能フラグ。 デフォルト： false。 |
+| `schema.name` | ***（必須）*** エンティティが属する XDM スキーマの名前。 |
+| `fields` | 返される XDM フィールド（文字列の配列）。デフォルトでは、すべてのフィールドが返されます。 |
+| `identities` | ***（必須）*** アクセスするエンティティの ID のリストを含む配列。 |
+| `identities.entityId` | アクセスするエンティティの ID。 |
+| `identities.entityIdNS.code` | アクセスするエンティティ ID の名前空間。 |
+| `timeFilter.startTime` | 範囲フィルターの開始時間（含む）。精度はミリ秒にする必要があります。指定しなかった場合、デフォルトは使用可能な時間の始まりです。 |
+| `timeFilter.endTime` | 範囲フィルターの終了時間（除外）。精度はミリ秒にする必要があります。指定しなかった場合、デフォルトは使用可能な時間の終わりです。 |
+| `limit` | 返すレコードの数。返されたエクスペリエンスのイベント数にのみ適用。デフォルトは 1,000 です。 |
+| `orderby` | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序です。デフォルトは `+timestamp` で、`(+/-)timestamp` として記述されます。 |
+| `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 |
 
-**応答**&#x200B;成功応答は、要求本文に指定されたエンティティの要求されたフィールドを返します。
+**応答**&#x200B;正常な応答は、リクエスト本文で指定されたエンティティのリクエストされたフィールドを返します。
 
 ```json
 {
@@ -330,13 +330,13 @@ curl -X POST \
 }
 ```
 
-## ID別のプロファイルの時系列イベントへのアクセス
+## ID によるプロファイルの時系列イベントへのアクセス
 
-エンドポイントにGET要求を行うと、関連するプロファイルエンティティのIDで時系列イベントにアクセスでき `/access/entities` ます。 このIDは、ID値(`entityId`)とID名前空間(`entityIdNS`)で構成されます。
+`/access/entities` エンドポイントに対して GET リクエストを実行すると、関連するプロファイルイベントの ID で時系列エンティティにアクセスできます。この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
 
-リクエストパスで指定されるクエリパラメーターで、アクセスするデータを指定します。 複数のパラメーターを含めることができ、アンパサンド(&amp;)で区切って指定できます。 有効なパラメーターの完全なリストは、付録の「 [クエリパラメーター](#query-parameters) 」セクションに記載されています。
+クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /access/entities?{QUERY_PARAMETERS}
@@ -344,7 +344,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次の要求では、IDでプロファイルエンティティを検索し、そのエンティティに関連付けられているすべての時系列イベントのプロパティ `endUserIDs`、 `web`および値 `channel` を取得します。
+次のリクエストでは、ID でプロファイルエンティティを検索し、エンティティに関連付けられているすべての時系列イベントの `endUserIDs`、`web`、`channel` プロパティの値を取得します。
 
 ```shell
 curl -X GET \
@@ -355,12 +355,12 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-正常な応答は、リクエストクエリーのパラメーターで指定された時系列イベントおよび関連するフィールドのページ分割リストを返します。
+正常な応答は、リクエストクエリパラメーターで指定された時系列イベントと関連フィールドのページ付けされたリストを返します。
 
 >[!NOTE]
->リクエストで制限が1(`limit=1`)に指定されているので、以下の応答 `count` 内のエンティティは1で、1つのエンティティのみが返されます。
+>リクエストで上限の 1 が指定（`limit=1`）されたので、以下の応答の `count` は 1 で、1 つのエンティティのみが返されます。
 
 ```json
 {
@@ -409,14 +409,14 @@ curl -X GET \
 }
 ```
 
-### 結果の後続のページにアクセスする
+### 結果の後続ページへのアクセス
 
-時系列のイベントを取得すると、結果がページ分割されます。 結果の後続のページがある場合、 `_page.next` プロパティにはIDが含まれます。 また、この `_links.next.href` プロパティは次のページを取得するための要求URIを提供します。 結果を取得するには、別のGETリクエストを `/access/entities` エンドポイントに対して行いますが、必ず、指定したURIの値 `/entities` に置き換える必要があります。
+時系列イベントを取得すると、結果はページ付けされます。結果の後続のページがある場合、`_page.next` プロパティには ID が含まれます。また、`_links.next.href` プロパティは次のページを取得するためのリクエスト URI を提供します。結果を取得するには、別の GET リクエストを `/access/entities` エンドポイントに対しておこないますが、必ず `/entities` を指定した URI の値に置き換える必要があります。
 
 >[!NOTE]
->リクエストパスで誤って繰り返しを行わないよう `/entities/` にしてください。 このように見えるのは一度だけ `/access/entities?start=...`
+>リクエストパスで誤って `/entities/` を繰り返さないようにしてください。これは一度だけ `/access/entities?start=...` のように存在するべきです。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /access/{NEXT_URI}
@@ -424,11 +424,11 @@ GET /access/{NEXT_URI}
 
 | パラメーター | 説明 |
 |---|---|
-| `{NEXT_URI}` | から取得されるURI値 `_links.next.href`。 |
+| `{NEXT_URI}` | `_links.next.href` から取得した URI 値。 |
 
 **リクエスト**
 
-次のリクエストは、 `_links.next.href` URIをリクエストパスとして使用して、次のページの結果を取得します。
+次のリクエストでは、`_links.next.href` URI をリクエストパスとして使用して、次のページの結果を取得します。
 
 ```shell
 curl -X GET \
@@ -439,9 +439,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、結果の次のページを返します。 この応答には、 `_page.next` およびの空の文字列値で示されるように、後続のページの結果はありません `_links.next.href`。
+正常な応答は、結果の次のページを返します。この応答には、`_page.next` および `_links.next.href` の空の文字列値で示される結果の後続ページはありません。
 
 ```json
 {
@@ -490,11 +490,11 @@ curl -X GET \
 }
 ```
 
-## ID別の複数のプロファイルの時系列イベントへのアクセス
+## ID による複数プロファイルの時系列イベントへのアクセス
 
-エンドポイントにPOSTリクエストを行い、ペイロードでプロファイルIDを提供することで、複数の関連プロファイルから時系列イベントにアクセスでき `/access/entities` ます。 これらのIDは、それぞれID値(`entityId`)とID名前空間(`entityIdNS`)で構成されます。
+`/access/entities` エンドポイントに対して POST リクエストを実行し、ペイロードでプロファイル ID を提供することで、複数の関連するプロファイルから時系列イベントにアクセスできます。これらの ID は、それぞれ ID 値（`entityId`）と ID 名前空間（`entityIdNS`）で構成されます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /access/entities
@@ -502,7 +502,7 @@ POST /access/entities
 
 **リクエスト**
 
-次のリクエストは、プロファイルIDのリストに関連付けられた時系列イベントのユーザーID、ローカル時間、および国コードを取得します。
+次のリクエストでは、プロファイル ID のリストに関連付けられた時系列イベントのユーザー ID、現地時間、国コードを取得します。
 
 ```shell
 curl -X POST \
@@ -543,20 +543,20 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `schema.name` | **（必須）** 取得するエンティティのXDMスキーマ |
-| `relatedSchema.name` | が `schema.name``_xdm.context.experienceevent` この値の場合は、時系列イベントが関連付けられるプロファイルエンティティのスキーマを指定する必要があります。 |
-| `identities` | **（必須）** 関連する時系列イベントを取得するプロファイルの配列。 配列の各エントリは、次の2つの方法のいずれかで設定されます。 (1) XIDを提供するID値と名前空間、または2)から成る完全修飾IDを使用する。 |
-| `fields` | 指定した一連のフィールドに返されたデータを抽出します。 取得したデータに含まれるスキーマフィールドをフィルタリングする場合に使用します。 例： personalEmail,person.name,person.gender |
-| `mergePolicyId` | 返されるデータを制御するマージポリシーを指定します。 サービス呼び出しで指定されていない場合は、そのスキーマのデフォルトが使用されます。 デフォルトの結合ポリシーが設定されていない場合、デフォルトでは、プロファイルの結合とIDのステッチは行われません。 |
-| `orderby` | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序で、デフォルト値 `(+/-)timestamp` と同様に記述され `+timestamp`ます。 |
-| `timeFilter.startTime` | 時系列オブジェクトをフィルターする開始時間を指定します（ミリ秒）。 |
-| `timeFilter.endTime` | 時系列オブジェクトをフィルターする終了時間を指定します（ミリ秒）。 |
-| `limit` | 返すオブジェクトの最大数を指定する数値。 デフォルト： 1000 |
-| `withCA` | 参照用に計算済み属性を有効にする機能フラグ。 デフォルト： false |
+| `schema.name` | **（必須）** 取得するエンティティの XDM スキーマ。 |
+| `relatedSchema.name` | `schema.name` が `_xdm.context.experienceevent` の場合、この値は、時系列イベントが関連するプロファイルエンティティのスキーマを指定する必要があります。 |
+| `identities` | **（必須）** 関連する時系列イベントを取得するプロファイルの配列リスト。配列内の各エントリは、1)ID 値と名前空間で構成される完全修飾 ID を使用する、または 2) XID を提供するという 2 つの方法のいずれかで設定されます。 |
+| `fields` | 指定したフィールドのセットに返されたデータを分離します。取得したデータに含まれるスキーマフィールドをフィルターする場合に使用します。例：personalEmail,person.name,person.gender |
+| `mergePolicyId` | 返されるデータを制御する結合ポリシーを指定します。サービス呼び出しで指定されていない場合は、組織のデフォルトのスキーマが使用されます。デフォルトの結合ポリシーが設定されていない場合、デフォルトでは、プロファイルの結合と ID の結合はおこなわれません。 |
+| `orderby` | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序です。デフォルトは `+timestamp` で、`(+/-)timestamp` として記述されます。 |
+| `timeFilter.startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 |
+| `timeFilter.endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 |
+| `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 |
+| `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 |
 
-**応答**
+**応答** 
 
-成功した応答は、リクエストで指定された複数のプロファイルに関連付けられた時系列イベントのページ分割リストを返します。
+正常な応答は、リクエストクエリパラメータで指定された時系列イベントと関連フィールドのページ付けされたリストを返します。
 
 ```json
 {
@@ -764,21 +764,21 @@ curl -X POST \
 }`
 ```
 
-この例の応答では、最初にリストされたプロファイル(「GkouAW-yD9aoRCPhRYROJ-TetAFW」)がの値を提供します。つまり、このプロファイルには他のページも結果が存在します。 `_links.next.payload`その他の結果へのアクセス方法の詳細については、 [追加の結果へのアクセスに関する次の節を参照してください](#access-additional-results) 。
+この例の応答では、最初にリストされたプロファイル（「GkouAW-yD9aoRCPhRYROJ-TetAFW」）が `_links.next.payload` の値を提供します。つまり、このプロファイルの結果には他のページが含まれます。その他の結果へのアクセス方法について詳しくは、次の「[その他の結果へのアクセス](#access-additional-results)」の節を参照してください。
 
 ### その他の結果へのアクセス {#access-additional-results}
 
-時系列のイベントを取得する場合、多くの結果が返される可能性があるので、結果は多くの場合ページ分割されます。 特定のプロファイルの結果の後続のページがある場合、そのプロファイルの `_links.next.payload` 値にはペイロードオブジェクトが含まれます。
+時系列のイベントを取得すると、多くの結果が返される場合があるので、結果はページ付けされることがよくあります。特定のプロファイルの結果の後続のページがある場合、そのプロファイルの `_links.next.payload` 値にはペイロードオブジェクトが含まれます。
 
-リクエスト本文でこのペイロードを使用して、エンドポイントに対して追加のPOSTリクエストを実行し、そのプロファイルの時系列データの後続のページを取得でき `access/entities` ます。
+リクエスト本文でこのペイロードを使用して、追加の POST リクエストを `access/entities` エンドポイントに対して実行し、そのプロファイルの時系列データの後続のページを取得できます。
 
-## 複数のスキーマエンティティの時系列イベントへのアクセス
+## 複数スキーマエンティティの時系列イベントへのアクセス
 
-関係記述子を介して接続された複数のエンティティにアクセスできます。 次のAPI呼び出しの例では、2つのスキーマ間で既に関係が定義されていると仮定しています。 関係記述子の詳細については、『 [!DNL Schema Registry] API開発者ガイド [記述子エンドポイントガイド』を参照してください](../../xdm/api/descriptors.md)。
+関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、『 [!DNL Schema Registry] API開発者ガイド [記述子エンドポイントガイド』を参照してください](../../xdm/api/descriptors.md)。
 
-リクエストパスにクエリパラメーターを含めて、アクセスするデータを指定できます。 複数のパラメーターを含めることができ、アンパサンド(&amp;)で区切って指定できます。 有効なパラメーターの完全なリストは、付録の「 [クエリパラメーター](#query-parameters) 」セクションに記載されています。
+リクエストパスにクエリパラメーターを含めて、アクセスするデータを指定できます。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /access/entities?{QUERY_PARAMETERS}
@@ -786,7 +786,7 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストは、異なるスキーマ間で情報にアクセスするために、以前に確立された関係記述子を含むエンティティを取得します。
+次のリクエストは、異なるエンティティ間の情報にアクセスするために、以前に確立された関係記述子を含むスキーマを取得します。
 
 ```shell
 curl -X GET \
@@ -797,9 +797,9 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、複数のエンティティに関連付けられた時系列イベントのページ分割リストを返します。
+正常な応答は、複数のエンティティに関連付けられた時系列イベントのページ付けされたリストを返します。
 
 ```json
 {
@@ -878,34 +878,34 @@ curl -X GET \
 }
 ```
 
-### 結果の後続のページにアクセスする
+### 結果の後続ページへのアクセス
 
-時系列のイベントを取得すると、結果がページ分割されます。 結果の後続のページがある場合、 `_page.next` プロパティにはIDが含まれます。 さらに、この `_links.next.href` プロパティは、エンドポイントに追加のGET要求を行って後続のページを取得するための要求URIを提供し `access/entities` ます。
+時系列イベントを取得すると、結果はページ付けされます。結果の後続のページがある場合、`_page.next` プロパティには ID が含まれます。また、`_links.next.href` プロパティは、`access/entities` エンドポイントに対して追加の GET リクエストを実行することで後続のページを取得するためのリクエスト URI を提供します。
 
 ## 次の手順
 
-このガイドに従うと、データフィールド、 [!DNL Real-time Customer Profile] プロファイル、および時系列データに正常にアクセスできます。 に保存されているその他のデータリソースへのアクセス方法につ [!DNL Platform]いては、「 [データアクセスの概要](../../data-access/home.md)」を参照してください。
+By following this guide you have successfully accessed [!DNL Real-time Customer Profile] data fields, profiles, and time series data. To learn how to access other data resources stored in [!DNL Platform], see the [Data Access overview](../../data-access/home.md).
 
 ## 付録 {#appendix}
 
-次の節では、APIを使用した [!DNL Profile] データへのアクセスに関する補足情報を説明します。
+The following section provides supplemental information regarding accessing [!DNL Profile] data using the API.
 
 ### クエリパラメーター {#query-parameters}
 
-エンドポイントへのGET要求のパスには、次のパラメーターが使用され `/access/entities` ます。 アクセスするプロファイルエンティティを識別し、応答で返されるデータをフィルタリングします。 必須のパラメーターにはラベルが付けられますが、残りのパラメーターはオプションです。
+次のパラメーターは、`/access/entities` エンドポイントに対する GET リクエストのパスで使用されます。アクセスするプロファイルエンティティを識別し、応答で返されるデータをフィルターします。必須パラメーターはラベル付けされますが、残りはオプションです。
 
 | パラメーター | 説明 | 例 |
 |---|---|---|
-| `schema.name` | **（必須）** 取得するエンティティのXDMスキーマ | `schema.name=_xdm.context.experienceevent` |
-| `relatedSchema.name` | が「_xdm.context.experienceevent」 `schema.name` の場合、この値では、時系列イベントが関連付けられているプロファイルエンティティのスキーマを指定する必要があります。 | `relatedSchema.name=_xdm.context.profile` |
-| `entityId` | **（必須）** エンティティのID。 このパラメーターの値がXIDでない場合は、ID名前空間パラメーターも指定する必要があります(以下を参照 `entityIdNS` )。 | `entityId=janedoe@example.com` |
-| `entityIdNS` | がXIDとして指定され `entityId` ない場合は、ID名前空間を指定する必要があります。 | `entityIdNE=email` |
-| `relatedEntityId` | が「_xdm.context.experienceevent」の場合、この値 `schema.name` には、関連するプロファイルエンティティのID名前空間を指定する必要があります。 この値は、と同じ規則に従い `entityId`ます。 | `relatedEntityId=69935279872410346619186588147492736556` |
-| `relatedEntityIdNS` | が&quot;_xdm.context.experienceevent&quot;の場合、この値 `schema.name` にはで指定したエンティティのID名前空間を指定する必要があり `relatedEntityId`ます。 | `relatedEntityIdNS=CRMID` |
-| `fields` | 応答で返されるデータをフィルターします。 取得したデータに含めるスキーマフィールドの値を指定する場合に使用します。 複数のフィールドの場合、値をコンマで区切り、間にスペースを入れません | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | 返されるデータを制御するマージポリシーを指定します。 呼び出しで指定されていない場合は、そのスキーマのデフォルトが使用されます。 デフォルトの結合ポリシーが設定されていない場合、デフォルトでは、プロファイルの結合とIDのステッチは行われません。 | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
-| `orderBy` | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序で、デフォルト値 `(+/-)timestamp` と同様に記述され `+timestamp`ます。 | `orderby=-timestamp` |
-| `startTime` | 時系列オブジェクトをフィルターする開始時間を指定します（ミリ秒）。 | `startTime=1539838505` |
-| `endTime` | 時系列オブジェクトをフィルターする終了時間を指定します（ミリ秒）。 | `endTime=1539838510` |
-| `limit` | 返すオブジェクトの最大数を指定する数値。 デフォルト： 1000 | `limit=100` |
-| `withCA` | 参照用に計算済み属性を有効にする機能フラグ。 デフォルト： false | `withCA=true` |
+| `schema.name` | **（必須）** 取得するエンティティの XDM スキーマ。 | `schema.name=_xdm.context.experienceevent` |
+| `relatedSchema.name` | `schema.name` が「_xdm.context.experienceevent」の場合、この値は時系列イベントが関連するプロファイルエンティティのスキーマを指定する必要があります。 | `relatedSchema.name=_xdm.context.profile` |
+| `entityId` | **（必須）** エンティティの ID。このパラメーターの値が XID でない場合は、ID 名前空間パラメーターも指定する必要があります（以下の `entityIdNS` 参照）。 | `entityId=janedoe@example.com` |
+| `entityIdNS` | `entityId` が XID として指定されていない場合、このフィールドで ID 名前空間の指定が必要です。 | `entityIdNE=email` |
+| `relatedEntityId` | `schema.name` が「_xdm.context.experienceevent」の場合、この値は関連するプロファイルエンティティの ID 名前空間を指定する必要があります。この値は、`entityId` と同じ規則に従います 。 | `relatedEntityId=69935279872410346619186588147492736556` |
+| `relatedEntityIdNS` | `schema.name` が「_xdm.context.experienceevent」の場合、この値は `relatedEntityId` で指定したエンティティの ID 名前空間を指定する必要があります。 | `relatedEntityIdNS=CRMID` |
+| `fields` | 応答で返されるデータをフィルターします。取得したデータに含めるスキーマフィールドの値を指定します。複数のフィールドの場合、値はコンマで区切り、間にスペースは入れません | `fields=personalEmail,person.name,person.gender` |
+| `mergePolicyId` | 返されるデータを制御する結合ポリシーを指定します。呼び出しで指定されていない場合は、組織のデフォルトのスキーマが使用されます。デフォルトの結合ポリシーが設定されていない場合、デフォルトでは、プロファイルの結合と ID の結合はおこなわれません。 | `mergePoilcyId=5aa6885fcf70a301dabdfa4a` |
+| `orderBy` | 取得したエクスペリエンスイベントをタイムスタンプ別に並べ替える順序です。デフォルトは `+timestamp` で、`(+/-)timestamp` として記述されます。 | `orderby=-timestamp` |
+| `startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 | `startTime=1539838505` |
+| `endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 | `endTime=1539838510` |
+| `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 | `limit=100` |
+| `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 | `withCA=true` |
