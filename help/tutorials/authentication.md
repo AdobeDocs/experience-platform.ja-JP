@@ -1,79 +1,79 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Experience PlatformAPIの認証とアクセス
+title: Experience Platform API の認証とアクセス
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
 source-wordcount: '850'
-ht-degree: 3%
+ht-degree: 42%
 
 ---
 
 
-# 認証およびアクセス [!DNL Experience Platform] API
+# Authenticate and access [!DNL Experience Platform] APIs
 
-このドキュメントでは、APIを呼び出すためのAdobe Experience Platform開発者アカウントへのアクセス権を取得するためのチュートリアルを順を追って説明し [!DNL Experience Platform] ます。
+This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to [!DNL Experience Platform] APIs.
 
-## API呼び出しを行うための認証
+## API を呼び出すための認証
 
-アプリケーションとユーザーのセキュリティを維持するには、Adobe I/O APIへのすべての要求が、OAuthやJSON Web Tokens(JWT)などの標準を使用して認証され、承認される必要があります。 次に、JWTをクライアント固有の情報と共に使用して個人アクセストークンを生成します。
+アプリケーションとユーザーのセキュリティを維持するには、Adobe I/O API へのすべてのリクエストが、OAuth や JSON Web Tokens（JWT）などの標準を使用して認証され、承認される必要があります。次に、JWTをクライアント固有の情報と共に使用して個人アクセストークンを生成します。
 
-このチュートリアルでは、次のフローチャートで概要を説明するアクセストークンを作成する際の認証手順について説明します。
+このチュートリアルでは、次のフローチャートに概要が示されているアクセストークンの作成による認証の手順について説明します。
 ![](images/authentication/authentication-flowchart.png)
 
 ## 前提条件
 
-APIの呼び出しを正常に行うには、次の [!DNL Experience Platform] 情報が必要です。
+In order to successfully make calls to [!DNL Experience Platform] APIs, you require the following:
 
-* Adobe Experience Platformへのアクセス権を持つIMS組織
-* 登録されたAdobe IDアカウント
-* Admin Console管理者がユーザーを **開発者** および製品 **** のユーザーとして追加します。
+* Adobe Experience Platform へのアクセス権を持つ IMS 組織
+* 登録済みの Adobe ID アカウント
+* ユーザーを製品の&#x200B;**開発者**&#x200B;および&#x200B;**ユーザー**&#x200B;として追加できる Admin Console 管理者です。
 
-次の各節では、Adobe IDを作成し、組織の開発者およびユーザーになるための手順について説明します。
+次の節では、Adobe ID を作成し、組織の開発者およびユーザーになる手順について説明します。
 
-### Adobe IDの作成
+### Adobe ID の作成
 
-Adobe IDがない場合は、次の手順を使用して作成できます。
+Adobe ID をお持ちでない場合は、次の手順で作成できます。
 
-1. Adobe Developer Console [に移動](https://console.adobe.io)
-2. 「新規アカウントを **[!UICONTROL 作成」をクリックします]**
-3. 入会プロセスの完了
+1. [ [Adobe開発者コンソール]に移動します。](https://console.adobe.io)
+2. 「**[!UICONTROL 新規アカウントを作成]**」をクリックします
+3. サインアッププロセスの完了
 
-## 組織の開発者およびユーザー [!DNL Experience Platform] になる
+## Become a developer and user for [!DNL Experience Platform] for an organization
 
-Adobe I/Oで統合を作成する前に、IMS組織の製品に対する開発者権限をアカウントに持っている必要があります。 Admin Consoleの開発者アカウントに関する詳細は、開発者管理の [サポートドキュメント](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html) を参照してください。
+Adobe I/O で統合を作成する前に、IMS 組織の製品の開発者権限を持つアカウントが必要です。Admin Console の開発者アカウントに関する詳しい情報については、開発者管理用の[サポートドキュメント](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)を参照してください。
 
-**開発者アクセスの取得**
+**開発者アクセスの獲得**
 
-組織の [!DNL Admin Console] 管理者に問い合わせて、を使用して組織の製品の開発者として追加し [!DNL Admin Console](https://adminconsole.adobe.com/)ます。
+Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization&#39;s products using the [!DNL Admin Console](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
-先に進むには、管理者が開発者として少なくとも1つの製品プロファイルに割り当てる必要があります。
+先に進むには、管理者が開発者を 1 つ以上の製品プロファイルに割り当てる必要があります。
 
 ![](images/authentication/add-developer.png)
 
-開発者として割り当てられたら、 [Adobe I/O上で統合を作成するためのアクセス権が与えられます](https://www.adobe.com/go/devs_console_ui)。 これらの統合は、外部のアプリケーションやサービスからAdobe APIへのパイプラインとなります。
+開発者として割り当てられると、[Adobe I/O](https://www.adobe.com/go/devs_console_ui) 上で統合を作成するためのアクセス権が与えられます。これらの統合は、外部のアプリケーションやサービスから Adobe API へのパイプラインです。
 
 **ユーザーアクセスの取得**
 
-また、 [!DNL Admin Console] 管理者がユーザを製品に追加する必要があります。
+Your [!DNL Admin Console] administrator must also add you to the product as a user.
 
 ![](images/authentication/assign-users.png)
 
-開発者を追加するプロセスと同様に、先に進むには、管理者が少なくとも1つの製品プロファイルを割り当てる必要があります。
+開発者を追加するプロセスと同様に、先に進むには、管理者が少なくとも 1 つの製品プロファイルを割り当てる必要があります。
 
 ![](images/authentication/assign-user-details.png)
 
-## Adobe Developer Consoleでのアクセス資格情報の生成
+## Adobeデベロッパーコンソールでのアクセス資格情報の生成
 
 >[!NOTE]
 >
 >『 [Privacy Service開発者ガイド](../privacy-service/api/getting-started.md)』からこのドキュメントをフォローしている場合は、このガイドに戻って、に固有のアクセス資格情報を生成でき [!DNL Privacy Service]ます。
 
-Adobe Developer Consoleを使用して、次の3つのアクセス資格情報を生成する必要があります。
+AdobeDeveloper Consoleを使用して、次の3つのアクセス資格情報を生成する必要があります。
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -85,7 +85,7 @@ Adobe Developer Consoleを使用して、次の3つのアクセス資格情報�
 
 ### 1回限りのセットアップ
 
-Adobe Developer Consoleに移動し、 [Adobe IDでサインインします](https://www.adobe.com/go/devs_console_ui) 。 次に、Adobe Developer Consoleドキュメントで空のプロジェクトの [作成に関するチュートリアルに概要を説明している手順に従い](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) ます。
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. 次に、Adobeデベロッパーコンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
 新しいプロジェクトを作成したら、プ **[!UICONTROL ロジェクト概要]** 画面の「 _API_ 」をクリックします。
 
@@ -114,7 +114,7 @@ APIがプロジェクトに追加されると、 _プロジェクトの概要_ �
 
 3つの必要な資格情報をすべて収集したら、以下のAPI呼び出しを行うことができます。 この呼び出しは、スキーマレジストリの [!DNL Experience Data Model]`global` コンテナ内のすべての(XDM)クラスをリストします。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /global/classes
@@ -130,9 +130,9 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-**応答**
+**応答** 
 
-応答が以下に示す応答と類似している場合は、資格情報が有効で、機能しています。 （この応答は領域のために切り捨てられました。）
+応答が以下に示す応答と類似している場合は、資格情報が有効で、機能しています。 （スペース節約のために応答は部分的に表示されています。）
 
 ```JSON
 {
@@ -153,12 +153,12 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 }
 ```
 
-## JWT認証およびAPI呼び出しにPostmanを使用
+## JWT 認証および API 呼び出しでの Postman の使用
 
-[Postman](https://www.getpostman.com/) は、RESTful APIを操作するための一般的なツールです。 この [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) （中）では、JWT認証を自動的に実行し、それをAdobe Experience PlatformAPIの使用に使用するようにpostmanを設定する方法について説明します。
+[Postman](https://www.getpostman.com/) は、RESTful API を使用するための一般的なツールです。この [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) では 、JWT 認証を自動的に実行し、それを使用して Adobe Experience Platform API を使用するように Postman を設定する方法について説明します。
 
 ## 次の手順
 
 このドキュメントを読むと、APIのアクセス資格情報を収集し、テストに成功し [!DNL Platform] ます。 ドキュメント全体で提供されているAPI呼び出しの例に従うことができ [ます](../landing/documentation/overview.md)。
 
-このチュートリアルで収集した認証値に加えて、多くのAPIでは、有効な認証値をヘッダーとして指定す [!DNL Platform]`{SANDBOX_NAME}` る必要もあります。 See the [sandboxes overview](../sandboxes/home.md) for more information.
+このチュートリアルで収集した認証値に加えて、多くのAPIでは、有効な認証値をヘッダーとして指定す [!DNL Platform]`{SANDBOX_NAME}` る必要もあります。 詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
