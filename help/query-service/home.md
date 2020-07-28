@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platformクエリサービス
+title: Adobe Experience Platform クエリサービス
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 0%
+ht-degree: 25%
 
 ---
 
 
-# [!DNL Query Service]概要
+# [!DNL Query Service] 概要
 
-Adobe Experience Platformは様々なソースからデータを取り込みます。 マーケターにとっての大きな課題は、顧客に関するインサイトを得るために、このデータを理解することです。 Adobe Experience Platform [!DNL Query Service] は、でのクエリデータに標準のSQLを使用できるようにすることで、それを容易に [!DNL Platform]します。 を使用 [!DNL Query Service]すると、任意のデータセットをに組み込んで、レポート、機械学習、またはに取り込むための新しいクエリセットとして結果を取り込むことができ [!DNL Data Lake][!DNL Real-time Customer Profile]ます。 このドキュメントでは、の役割の概要を説明 [!DNL Query Service] し [!DNL Experience Platform]ます。
+Adobe Experience Platform は様々なソースからデータを取得します。マーケターにとっての主要な課題は、このデータの意味を理解して、顧客に関するインサイトを得ることです。Adobe Experience Platform [!DNL Query Service] facilitates that by allowing you to use standard SQL to query data in [!DNL Platform]. Using [!DNL Query Service], you can join any dataset in the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into [!DNL Real-time Customer Profile]. This document provides an overview of the role of [!DNL Query Service] within [!DNL Experience Platform].
 
 [!DNL Query Service] ブランドがオンラインからオフラインへの顧客の遍歴を結びつけ、オムニチャネルアトリビューションを理解できるようになります。 次のビデオでは、エクスペリエンスビジネスが主要な使用例 [!DNL Query Service] にどのように対処し、どのように [!DNL Query Service] 機能するかを示します。
 
@@ -22,19 +22,19 @@ Adobe Experience Platformは様々なソースからデータを取り込みま�
 
 ## 使用 [!DNL Query Service]
 
-[!DNL Query Service] には、データをより良く分析するためのSQLクエリを作成できるユーザーインターフェイスとRESTful APIが用意されています。 ユーザーインターフェイスを使用して、クエリの書き込みと実行、表示が以前に実行したクエリの作成と実行、およびIMS組織内のユーザーによって保存されたクエリへのアクセスを行うことができます。 ユーザーインターフェイスは、より広いデータセットでクエリを実行する前にユーザーをテストするサンドボックスとして使用することを目的としています。 内でのインタラクティブサービスの使用について詳し [!DNL Platform] くは、『 [クエリサービスユーザーインターフェイスガイド](ui/overview.md)』を参照してください。 RESTful APIも同様の経験を提供し、クエリの書き込みと実行、将来の使用と繰り返しに関するクエリのスケジュール設定、および書き込むクエリ用のテンプレートの作成をプログラムによって行うことができます。 この [!DNL Query Service] APIの使用について詳しくは、 [クエリサービス開発者ガイドを参照してください](api/getting-started.md)。
+[!DNL Query Service] には、データをより良く分析するためのSQLクエリを作成できるユーザーインターフェイスとRESTful APIが用意されています。 ユーザーインターフェイスを使用すると、クエリの記述と実行、以前に実行されたクエリの表示、IMS 組織内のユーザーによって保存されたクエリへのアクセスをおこなうことができます。ユーザーインターフェイスは、より広範なデータセットに対してクエリを実行する前に、クエリをテストするためのサンドボックスとして使用されます。More information on using the interactive service within [!DNL Platform] can be found in the [Query Service user interface guide](ui/overview.md). RESTful API も同様のエクスペリエンスを提供し、クエリの記述と実行、将来の使用と繰り返しに備えたクエリのスケジュール、記述するクエリのテンプレートの作成をプログラムで行えるようにします。More information on using the [!DNL Query Service] API can be found in the [Query Service developer guide](api/getting-started.md).
 
 ## [!DNL Query Service] および [!DNL Experience Platform] サービス
 
-[!DNL Query Service] が相互に作用し、複数のサー [!DNL Experience Platform] ビスと組み合わせて使用できます。 機能を最大限に活用するために、これらのサービスとのやり取りについて理解することをお勧めし [!DNL Query Service's][!DNL Query Service]ます。
+[!DNL Query Service] が相互に作用し、複数のサー [!DNL Experience Platform] ビスと組み合わせて使用できます。 In order to make the most out of [!DNL Query Service's] capabilities, it is recommended that you become familiar with these services and how they interact with [!DNL Query Service].
 
 ### [!DNL Data Science Workspace]
 
-Adobe Experience Platform [!DNL Data Science Workspace] は、機械学習と人工知能を使用して、に保存されたデータからの洞察を得 [!DNL Experience Platform]ます。 [!DNL Data Science Workspace] データ科学者は、顧客とそのアクティビティに関する記録と時系列のデータに基づいてレシピを作成でき、購入傾向や、個人が認識し、使用する可能性が高い推奨オファーなどの予測を容易にできます。 に統合するこ [!DNL Data Science Workspace] とで、内でSQLを使用 [!DNL Query Service] でき [!DNL JupyterLab]ます。これにより、アドビのAnalyticsデータを調査、変換、分析できます。 との対話方法の詳細については、 [!DNL Data Science Workspace] 概要をお読みください。詳しく [!DNL Data Science Workspace]は、 [!DNL Query Service] 統合ガイドを参照し [!DNL Data Science Workspace] てくだ [!DNL Query Service]さい。
+Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to gain insights from data stored within [!DNL Experience Platform]. [!DNL Data Science Workspace] を使用すると、データサイエンティストは、顧客とそのアクティビティに関するレコードと時系列データに基づいてレシピを作成できるため、購入傾向やユーザーが評価して使用する可能性の高い推奨オファーなどの予測が容易になります。You can use SQL within [!DNL Data Science Workspace] by integrating [!DNL Query Service] into [!DNL JupyterLab], allowing you to explore, transform, and analyze Adobe Analytics data. との対話方法の詳細については、 [!DNL Data Science Workspace] 概要をお読みください。詳しく [!DNL Data Science Workspace]は、 [!DNL Query Service] 統合ガイドを参照し [!DNL Data Science Workspace] てくだ [!DNL Query Service]さい。
 
 ### [!DNL Segmentation Service]
 
-Adobe Experience Platform [!DNL Segmentation Service] により、同様の特性を共有する小さなグループに顧客を分割できます。 その後、これらのセグメントを評価して、 [!DNL Real-time Customer Profile] データの分析を改善できます。 [!DNL Query Service] を使用して、内のこのセグメントデータに対してクエリを実行することで、この分析を提供でき [!DNL Data Lake]ます。 セグメント化の詳細については、 [!DNL Segmentation Service] 概要をお読みください。セグメントの分析方法の詳細については、 [!DNL Profile Query Language] (PQL)ガイドを参照してください。
+Adobe Experience Platform [!DNL Segmentation Service] allows users to divide their customers into smaller groups that share similar traits. These segments can subsequently be evaluated to provide better analysis on your [!DNL Real-time Customer Profile] data. [!DNL Query Service] を使用して、内のこのセグメントデータに対してクエリを実行することで、この分析を提供でき [!DNL Data Lake]ます。 Please read the [!DNL Segmentation Service] overview for more information about segmentation, and the [!DNL Profile Query Language] (PQL) guide for more information on how to analyze segments.
 
 ### Looker BIの使用例
 
@@ -44,7 +44,7 @@ Adobe Experience Platformにより、行動、CRM、POS（販売時点管理）�
 
 ## 次の手順とその他のリソース
 
-このドキュメントを読むことで、様々な範囲での機能 [!DNL Query Service] と機能についての説明を受け [!DNL Experience Platform]ました。 API内の様々なエンドポイントとの対話について詳しくは、『 [!DNL Query Service] クエリサービス開発者ガイド [](api/getting-started.md)』を参照してください。 内でのインタラクティブサービスの使用について詳し [!DNL Platform]くは、『 [クエリサービスユーザーインターフェイスガイド](ui/overview.md)』を参照してください。 外部クライアントとの接続に関する包括的なリストにつ [!DNL Query Service]いては、 [クエリサービスクライアントの概要を参照してください](clients/overview.md)。
+By reading this document, you have been introduced to [!DNL Query Service] and how it functions within the greater scope of [!DNL Experience Platform]. For more information on interacting with various endpoints within the [!DNL Query Service] API, please read the [Query Service developer guide](api/getting-started.md). For more information on using the interactive service within [!DNL Platform], please read the [Query Service user interface guide](ui/overview.md). For a comprehensive list on connecting external clients with [!DNL Query Service], please read the [Query Service clients overview](clients/overview.md).
 
 クエリを実行する準備を整えるために、次のビデオをご覧ください。 このビデオでは、クエリエディタインターフェイス、PSQLクライアント、ビジネスインテリジェンス(BI)ソリューション、およびHTTP APIでのクエリの実行に関するヒントとベストプラクティスを紹介します。
 
