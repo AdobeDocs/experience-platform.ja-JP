@@ -7,16 +7,16 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '188'
-ht-degree: 5%
+ht-degree: 21%
 
 ---
 
 
-# [!DNL Data Access]概要
+# [!DNL Data Access] 概要
 
 [!DNL Data Access] で取り込まれたデータセットの検出性とアクセス性に重点を置いたツールをユーザに提供し、Adobe Experience Platformをサポート [!DNL Experience Platform]します。
 
-![Experience Platformのデータアクセス](images/Data_Access_Experience_Platform.png)
+![Experience Platform でのデータアクセス](images/Data_Access_Experience_Platform.png)
 
 ## [!DNL Data Access] API
 
@@ -34,6 +34,6 @@ SDKを使用して、データセットを使用して読み取りと書き込�
 
 [!DNL Data Science Workspace] は、ノートブックとレシピ内で [!DNL Spark] SDKを使用します。 詳細については、「 [!DNL Data Science Workspace]Data Science Workspaceの概要」を読んで開始してください [](../data-science-workspace/home.md)。
 
-## データ取り込みイベントのサブスクライブ
+## データ取得イベントへのサブスクライブ
 
-[!DNL Platform] は、 [Adobe Developer Consoleを通じて特定の高価値イベントを購読用に使用できるようにします](https://www.adobe.com/go/devs_console_ui)。 例えば、データ取り込みイベントを登録して、遅延や失敗の可能性を通知することができます。 詳しくは、データインジェスト通知の [サブスクライブに関するチュートリアル](../ingestion/quality/subscribe-events.md) を参照してください。
+[!DNL Platform] は、 [Adobeデベロッパーコンソールを通じて特定の高価値イベントを購読用に使用できるようにします](https://www.adobe.com/go/devs_console_ui)。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、データインジェスト通知の [サブスクライブに関するチュートリアル](../ingestion/quality/subscribe-events.md) を参照してください。
