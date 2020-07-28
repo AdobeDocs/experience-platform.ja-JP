@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Experience Platformリリースノート（2020年3月12日）
+description: Experience Platform リリースノート（2020年3月11日）
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
@@ -9,14 +9,14 @@ translation-type: tm+mt
 source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
 workflow-type: tm+mt
 source-wordcount: '848'
-ht-degree: 8%
+ht-degree: 64%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 3 月 11 日**
+**リリース日：2020年3月11日**
 
 Adobe Experience Platform内の既存の機能の更新：
 
@@ -28,97 +28,97 @@ Adobe Experience Platform内の既存の機能の更新：
 
 ## [!DNL Data Governance] {#governance}
 
-[!DNL Experience Platform] 会社は、複数のエンタープライズシステムからのデータを統合し、マーケティング担当者が顧客を特定、理解、関与できるようにします。 [!DNL Experience Platform] には、システム間でデータを適切に使用し、システム間で共有する場合に、データの適切な使用を保証するための、Data Usage Labeling and Enforcement(DULE)など、エンドツーエンドのデータ管理インフラストラクチャが含ま [!DNL Platform] れます。
+[!DNL Experience Platform] を使用すると、会社は複数のエンタープライズシステムからデータを統合し、マーケティング担当者が顧客をより良く識別、理解し、惹きつけることができるようになります。[!DNL Experience Platform] には、Data Usage Labeling and Enforcement（DULE）を含むエンドツーエンドのデータガバナンスインフラストラクチャが含まれており、 内でのデータの適切な使用と、システム間での共有を保証します。[!DNL Platform]
 
-Adobe Experience Platform [!DNL Data Governance] は、お客様のデータを管理し、データの使用に適用される規制、制限、ポリシーの遵守を確保するために使用される一連の戦略とテクノロジーです。 カタログ化、データ系列、データ使用状況のラベル付け、データアクセスポリシー、マーケティング活動 [!DNL Experience Platform] のためのデータに関するアクセス制御など、様々なレベルで重要な役割を果たします。
+Adobe Experience Platform [!DNL Data Governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
 **新機能**
 
 >[!NOTE]
 >
->次の新機能の一部は現在ベータ版であり、一部のユーザーはご利用いただけません。 ベータ版の機能は変更される可能性があります。
+>現在、次の新機能の一部はベータ版です。このため、一部のユーザーにはご利用いただけません。ベータ版の機能は変更されることがあります。
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| データ使用ポリシーの自動適用 [!DNL Real-time Customer Data Platform] | データ使用ポリシーは、宛先に対するデータのアクティブ化のワークフローに適用されるようになりました。 [!DNL Data Governance] は、既存のアクティベーションに影響を与える変更（データセットのラベル、結合ポリシー、セグメント定義などの変更）を行う場合にも埋め込まれ、適用されます。 |
-| 強制のデータ系列 | リアルタイムCDPでデータ使用ポリシーに違反した場合、UIは、データ系列情報を含む通知を表示し、ポリシーが違反された理由と、違反を解決するためにユーザーが実行できる操作を理解します。 |
+| データ使用ポリシーの自動適用 [!DNL Real-time Customer Data Platform] | 宛先に対してデータをアクティブ化するワークフローにデータ使用ポリシーが適用されるようになりました。[!DNL Data Governance] は、既存のアクティベーションに影響を与える変更（データセットのラベル、結合ポリシー、セグメント定義などの変更）を行う場合にも埋め込まれ、適用されます。 |
+| データリネージの適用 | リアルタイム CDP でデータ使用ポリシーが侵された場合、UI にはデータリネージ情報を含む通知が表示されます。このため、ユーザーは、ポリシー違反の理由と、違反を解決するために必要な操作を理解できます。 |
 
 
 **既知の問題**
 
-* None
+* なし
 
-詳細については、「 [!DNL Data Governance]Data Governance overview [](../../data-governance/home.md)」を参照してください。
+For more information about [!DNL Data Governance], see the [Data Governance overview](../../data-governance/home.md).
 
-## データ収集 {#ingestion}
+## データ取得 {#ingestion}
 
-Adobe Experience Platformは、あらゆる種類のデータや遅延を取り込むための豊富な機能セットを提供します。 Adobe Experience Platform [!DNL Data Ingestion] は、Batch API、Streaming API、ネイティブのAdobe Connectors、Data Integrationパートナー、Adobe Experience PlatformUIなど、データを取り込むための複数の代替手段を提供します。
+Adobe Experience Platform には、あらゆる種類のデータやデータのレイテンシを取り込むための豊富な機能が用意されています。Adobe Experience Platform [!DNL Data Ingestion] provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
 
 **新機能**
 
 | 機能 | 説明 |
 |------- | -----------|
-| 部分的なバッチ取り込み | 部分的なバッチ取り込みとは、エラーを含むデータを特定のしきい値まで取り込む機能です。 この機能を使用すると、ユーザーは正しいデータをすべてAdobe Experience Platformに取り込み、誤ったデータはすべて個別にバッチ処理できます。 失敗したバッチに、検証に合格しなかった理由を説明する詳細が追加されます。 部分的なバッチ取り込みについて詳しくは、 [部分的なバッチ取り込みドキュメントを参照してください](../../ingestion/batch-ingestion/partial.md)。 |
+| バッチの部分取り込み | バッチの部分取り込みは、エラーを含むデータを特定のしきい値まで取り込む機能です。この機能を使用すると、ユーザーは正しいデータをすべて Adobe Experience Platform に取り込める一方で、不正なデータはすべて別々にバッチ処理できます。失敗したバッチには、検証に合格しなかった理由を示す詳細が追加されます。バッチの部分取り込みについて詳しくは、[バッチの部分取り込みに関するドキュメント](../../ingestion/batch-ingestion/partial.md)を参照してください。 |
 
 **既知の問題**
 
-* None
+* なし
 
-データをPlatformに取り込む方法の詳細については、『 [データ取り込みドキュメント](../../ingestion/home.md)』を参照してください。
+データを Platform に取り込む方法については、[データ取得に関するドキュメント](../../ingestion/home.md)を参照してください。
 
 
 ## 宛先 {#destinations}
 
-ア [ドビのリアルタイム顧客データPlatformでは](../../rtcdp/overview.md)、宛先は、目的のプラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータをアクティブ化します。
+[アドビのリアルタイム顧客データプラットフォーム](../../rtcdp/overview.md) において、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータを活用します。
 
 **新しい宛先**
 
-Adobe Experience Platformデータをアクティブ化できる新しい宛先が利用できます。 詳しくは、以下を参照してください。
+新しい宛先は、Adobe Experience Platform データをアクティブ化する際に使用できます。詳しくは、以下を参照してください。
 
 | 宛先 | 説明 |
 |--- | ---|
 | クラウドストレージの宛先 | Adobe Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. これにより、オーディエンスとそのプロファイル属性を CSV またはタブ区切りファイル経由で内部システムに送信できます。 |
-| 広告の宛先 | 現在は、 [!DNL Google] Adobe Real-time CDPで現在サポートされている3つの異なる [!DNL Google] プラットフォーム用に、デスティネーションカードが3つのデスティネーションカードに分割されます。 [!DNL Google Ads]、 [!DNL Google Ad Manager]、 [!DNL Google] 表示、ビデオ360。 |
+| 広告の宛先 | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
-詳しくは、 [宛先の概要を参照してください](../../rtcdp/destinations/destinations-overview.md)
+詳しくは、[宛先の概要](../../rtcdp/destinations/destinations-overview.md)を参照してください。
 
 ## [!DNL Identity Service] {#identity}
 
-関連するデジタルエクスペリエンスを提供するには、顧客に関する完全な理解が必要です。 これは、お客様のデータが異なる複数のシステムに断片化されている場合に、より難しくなり、個々のお客様が複数の「アイデンティティ」を持っているように見える原因となります。
+関連するデジタルエクスペリエンスを提供するには、顧客を完全に理解する必要があります。顧客データが異なる複数のシステムに断片化されており、そのため各顧客が複数の「ID」を持つと考えられる場合、顧客を理解するのはさらに困難になります。
 
-Adobe Experience Platform [!DNL Identity Service] を使用すると、デバイスやシステム間でIDをつなぐことで、顧客とその行動をより良く表示でき、効果的な個人のデジタルエクスペリエンスをリアルタイムで提供できます。
+Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 強化されたプライベートグラフ | プライベートグラフ機能が強化され、週別のバッチ処理から日別に更新されたグラフへのグラフ生成待ち時間が短縮され、 [!DNL Identity Service] 顧客は最新のIDのグラフやリンクにアクセスできるようになりました。 |
+| 強化されたプライベートグラフ | Private Graph functionality has been enhanced to reduce graph generation latency from a weekly batch process to a daily refreshed graph, allowing [!DNL Identity Service] customers to access more up-to-date identity graphs and linkages. |
 
 **既知の問題**
 
-* None
+* なし
 
-詳しくは、「 [!DNL Identity Service]IDサービスの概要 [](../../identity-service/home.md)」を参照してください。
+For more information about [!DNL Identity Service], see the [Identity Service overview](../../identity-service/home.md).
 
 ## ソース {#sources}
 
-Adobe Experience Platformは、外部ソースからデータを取り込みながら、サー [!DNL Platform] ビスを使用してデータの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRMシステムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Experience Platform] には、様々なデータプロバイダーのソース接続を簡単に設定できる、RESTful APIとインタラクティブUIが用意されています。 これらのソース接続を使用すると、外部のストレージシステムやCRMサービスの認証と接続、取り込みの実行時間の設定、データ取り込みスループットの管理を行うことができます。
+[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できるようにする RESTful API とインタラクティブな UI を提供します。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| Adobe Audience Managerコネクタの非推奨シグナル | オーディエンスマネージャーからの信号レベルのデータは送信されなくなります。 特性とセグメントのセグメントのメンバーシップは、引き続き含まれます。 この変更の結果、受信データセットは生成されなくなります。 |
-| 名前が変更されたデータセット | オーディエンスマネージャーコネクタによって生成されるデータセットには、名前と説明が更新されます。 |
-| オーディエンスマネージャーで [!DNL Profile] 切り替えを有効にする | [!DNL Profile] の切り替えを有効または無効にして、データセットをにプロモートすることができ [!DNL Real-time Customer Profile]ます。 切り替えはデフォルトで有効になります。 |
-| クラウドストレージシステムのUIのサポート | UIで使用する新しいソースコネクタ [!DNL Azure Data Lake Storage Gen2] です。 |
-| CRMシステムのUIのサポート | UIの、、 [!DNL HubSpot]およびの新しいソースコネクタ [!DNL Salesforce Service Cloud][!DNL ServiceNow] 。 |
-| データベースシステムのUIのサポート | UIの、、、、 [!DNL AWS Redshift]およびの新しいソースコネクタ [!DNL Google BigQuery][!DNL MariaDB][!DNL Microsoft SQL Server][!DNL MySQL] 。 |
+| Adobe Audience Manager コネクタの廃止された信号 | Audience Manager から信号レベルのデータは送信されなくなります。特性とセグメントのセグメントメンバーシップは、引き続き送信されることに注意してください。この変更の結果、受信データセットは生成されなくなります。 |
+| データセット名の変更 | Audience Manager コネクタで生成されたデータセットの名前と説明が更新されます。 |
+| Enable [!DNL Profile] toggle in Audience Manger | [!DNL Profile] の切り替えを有効または無効にして、データセットをにプロモートすることができ [!DNL Real-time Customer Profile]ます。 デフォルトでは、切り替えが有効になっています。 |
+| クラウドストレージシステムの UI のサポート | New source connector for [!DNL Azure Data Lake Storage Gen2] in the UI. |
+| CRM システムの UI のサポート | New source connector for [!DNL HubSpot], [!DNL Salesforce Service Cloud], and [!DNL ServiceNow] in the UI. |
+| データベースシステムの UI のサポート | New source connector for [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL Microsoft SQL Server], and [!DNL MySQL] in the UI. |
 
 **既知の問題**
 
-* None
+* なし
 
-ソースについて詳しくは、 [ソースの概要を参照してください](../../sources/home.md)。
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
