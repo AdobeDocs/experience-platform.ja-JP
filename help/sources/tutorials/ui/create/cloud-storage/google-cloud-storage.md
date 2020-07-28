@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: UIでのGoogle Cloudストレージソースコネクタの作成
+title: UI での Google Cloud ストレージソースコネクタの作成
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
 source-wordcount: '540'
-ht-degree: 1%
+ht-degree: 16%
 
 ---
 
 
-# UIで [!DNL Google Cloud Storage] ソースコネクタを作成する
+# Create a [!DNL Google Cloud Storage] source connector in the UI
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ユー [!DNL Google Cloud Storage] ザインターフェイスを使用してソースコネクタ [!DNL Platform] （以下「GCS」と呼ばれます）を作成する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+* [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準化されたフレームワークです。
+   * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 GCSベースの接続が既にある場合は、このドキュメントの残りの部分をスキップし、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/batch/cloud-storage.md)。
 
