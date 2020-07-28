@@ -7,20 +7,20 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 2%
+ht-degree: 63%
 
 ---
 
 
 # オブジェクトの置換
 
-PUTリクエストを使用して、 [!DNL Catalog] オブジェクトの内容を上書きできます。この場合、リソース全体がリクエストペイロードに置き換えられます。
+You can overwrite the contents of a [!DNL Catalog] object using a PUT request, wherein the entire resource is replaced with the request payload.
 
 >[!NOTE]
 >
->オブジェクト内のいくつかの特定のフィールドの更新のみが必要な場合は、PATCHリクエストを使用する方が効率的な場合があり [!DNL Catalog] ます。
+>If you only need to update a few specific fields within a [!DNL Catalog] object, using a PATCH request may be more efficient.
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /{OBJECT_TYPE}/{OBJECT_ID}
@@ -28,12 +28,12 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | 置き換える [!DNL Catalog] オブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be replaced. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
 
-次のリクエストは、ペイロードに指定された値でデータセットを上書きします。
+次のリクエストは、ペイロードで指定された値でデータセットを上書きします。
 
 ```shell
 curl -X PUT \
@@ -58,7 +58,7 @@ curl -X PUT \
 
 **応答**
 
-正常に応答すると、上書きされたオブジェクトのIDを含む配列が返されます。 このIDは、PUT要求で送信されたIDと一致する必要があります。 このオブジェクトに対してGETリクエストを実行すると、その詳細が以前のPUTリクエストのペイロードで提供された詳細に置き換えられたことが示されます。
+成功した場合は、上書きされたオブジェクトの ID を含む配列が返されます。この ID は、PUT リクエストで送信された ID と一致する必要があります。このオブジェクトに対して GET リクエストを実行すると、その詳細が以前の PUT リクエストのペイロードで提供された詳細に置き換えられたことが示されます。
 
 ```json
 [
