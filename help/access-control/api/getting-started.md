@@ -1,54 +1,54 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: アクセス制御開発ガイド
+title: アクセス制御開発者ガイド
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '329'
-ht-degree: 1%
+ht-degree: 62%
 
 ---
 
 
 # [!DNL Access control] 開発ガイド
 
-[!DNL Access control] の管理 [!DNL Experience Platform] には、 [AdobeAdmin Consoleを使用します](https://adminconsole.adobe.com)。 この機能は、Admin Consoleの製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。 See the [access control overview](../home.md) for more information.
+[!DNL Access control] というの [!DNL Experience Platform] は、 [Adobe Admin Consoleを通して投与されるからだ](https://adminconsole.adobe.com)。 この機能は、Admin Console の製品プロファイルを利用して、権限およびサンドボックスを持つユーザーをリンクします。詳しくは、「[アクセス制御の概要](../home.md)」を参照してください。
 
-この開発者ガイドでは、にリクエストをフォーマットする方法について説明し [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)、以下の操作について説明します。
+This developer guide provides information on how to format your requests to the [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml), and covers the following operations:
 
-- [権限とリソースタイプのリスト名](./permissions-and-resource-types.md)
-- [現在のユーザーに対して有効な表示ポリシー](./effective-policies.md)
+- [権限名とリソースタイプの一覧表示](./permissions-and-resource-types.md)
+- [現在のユーザーに対して効果の高いポリシーの表示](./effective-policies.md)
 
 ## はじめに
 
-以下の節では、 [!DNL Schema Registry] APIを正しく呼び出すために知る必要がある追加情報について説明します。
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Schema Registry] API.
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-### 必要なヘッダーの値の収集
+### 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- 認証： 無記名 `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 - Content-Type: application/json
 
 ## 次の手順
 
-必要な資格情報を収集したら、残りの開発者ガイドを読み続けることができます。 各節では、エンドポイントに関する重要な情報を提供し、CRUD操作を実行するためのAPI呼び出しの例を示します。 各呼び出しには、一般的な **API形式**、必要なヘッダーと適切にフォーマットされたペイロードを示すサンプル **リクエスト** 、および正常な呼び出しのためのサンプル **応答** が含まれます。
+必要な資格情報を収集したので、開発者ガイドの残りをお読みください。各節では、エンドポイントに関する重要な情報を提供し、CRUD 操作を実行するための API 呼び出しの例を示します。各呼び出しには、一般的な **API 形式**、必要なヘッダーと適切な形式のペイロードを示すサンプル&#x200B;**リクエスト**、および正常な呼び 出しのサンプル&#x200B;**応答**&#x200B;が含まれます。
