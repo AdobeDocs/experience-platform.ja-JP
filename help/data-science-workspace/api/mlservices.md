@@ -7,22 +7,22 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '811'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# MLServices
+# MLService
 
-MLServiceは、事前に開発されたモデルにアクセスして再利用する機能を組織に提供する、トレーニングを受けた公開モデルです。 MLServicesの主な特徴は、トレーニングとスコアリングをスケジュールに基づいて自動化する機能です。 予定されたトレーニングの実行は、モデルの効率と正確性を維持するのに役立ちますが、予定されたスコアリングの実行は、新しいインサイトが一貫して生成されるようにします。
+MLService は、組織が開発済みのモデルにアクセスし再利用できるようにするための、公開されているトレーニング済みモデルです。MLService の主要な特長は、トレーニングとスコアリングをスケジュールに従って自動化できる点です。スケジュールされたトレーニングの実行は、モデルの効率と精度を維持するのに役立ちます。また、スケジュールされたスコアリングの実行で、新しいインサイトを一貫して生成できるようになります。
 
-自動トレーニングおよびスコアリングスケジュールは、開始タイムスタンプ、終了タイムスタンプおよび [cron式として表される頻度で定義されます](https://en.wikipedia.org/wiki/Cron)。 スケジュールは、MLServiceを [作成する際に、または既存のMLServiceを](#create-an-mlservice) 更新することによって適用する際に定義できます [](#update-an-mlservice)。
+自動トレーニングおよびスコアリングのスケジュールは、開始タイムスタンプ、終了タイムスタンプおよび頻度を使用して [cron 式](https://jp.wikipedia.org/wiki/Cron)として定義します。スケジュールは、[MLService の作成](#create-an-mlservice)時に定義できますし、[既存の MLService の更新](#update-an-mlservice)で適用することもできます。
 
-## MLServiceの作成 {#create-an-mlservice}
+## MLService の作成 {#create-an-mlservice}
 
-MLServiceは、POST要求と、サービスの名前と有効なMLInstance IDを提供するペイロードを実行して作成できます。 MLServiceの作成に使用するMLInstanceは、既存のトレーニング実験を行う必要はありませんが、対応するテストIDとトレーニング実行IDを指定することで、既存のトレーニングモデルを使用してMLServiceを作成できます。
+MLService を作成するには、サービスの名前と有効な MLInstance ID を指定するペイロードを含んだ POST リクエストを実行します。MLService の作成に使用する MLInstance には、既存のトレーニング実験は必要ありませんが、対応する実験 ID とトレーニング実行 ID を指定することで、既存のトレーニング済みモデルを使用して MLService を作成することもできます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /mlServices
@@ -60,24 +60,24 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | MLServiceに必要な名前。 このMLServiceに対応するサービスは、この値を継承し、サービスの名前としてサービスギャラリーUIに表示されます。 |
-| `description` | MLServiceのオプションの説明。 このMLServiceに対応するサービスは、サービスの説明として[サービスギャラリー] UIに表示されるこの値を継承します。 |
-| `mlInstanceId` | 有効なMLInstance IDです。 |
-| `trainingDataSetId` | トレーニングデータセットIDを指定すると、MLInstanceのデフォルトのデータセットIDが上書きされます。 MLServiceの作成に使用されるMLInstanceでトレーニングデータセットが定義されていない場合は、適切なトレーニングデータセットIDを指定する必要があります。 |
-| `trainingExperimentId` | テストID。オプションで指定できます。 この値を指定しない場合、MLServiceを作成すると、MLInstanceのデフォルト設定を使用して新しいテストも作成されます。 |
-| `trainingExperimentRunId` | オプションで指定できるトレーニング実行ID。 この値を指定しない場合、MLServiceを作成すると、MLInstanceのデフォルトのトレーニングパラメータを使用して、トレーニングの実行も作成および実行されます。 |
-| `trainingSchedule` | 自動トレーニング実行のスケジュール。 このプロパティを定義すると、MLServiceは、スケジュールに基づいて自動的にトレーニングを実行します。 |
-| `trainingSchedule.startTime` | スケジュールされたトレーニングの実行が開始されるタイムスタンプ。 |
-| `trainingSchedule.endTime` | スケジュールされたトレーニングの実行が終了するタイムスタンプ。 |
-| `trainingSchedule.cron` | 自動トレーニングの実行頻度を定義するcron式。 |
-| `scoringSchedule` | 自動スコアリング実行のスケジュール。 このプロパティを定義すると、MLServiceはスケジュールに基づいて自動的にスコアリングの実行を実行します。 |
-| `scoringSchedule.startTime` | スケジュール済みスコアの実行が開始されるタイムスタンプ。 |
-| `scoringSchedule.endTime` | スケジュールされたスコアリングの実行が終了するタイムスタンプ。 |
-| `scoringSchedule.cron` | 自動スコアリング実行の頻度を定義するcron式。 |
+| `name` | 希望する MLService 名です。この MLService に対応するサービスはこの値を継承するので、サービスギャラリー UI にこの値がサービスの名前として表示されます。 |
+| `description` | MLService の説明です（省略可能）。この MLService に対応するサービスはこの値を継承するので、サービスギャラリー UI にこの値がサービスの説明として表示されます。 |
+| `mlInstanceId` | 有効な MLInstance ID です。 |
+| `trainingDataSetId` | トレーニングデータセット ID で、これを指定すると、MLInstance のデフォルトのデータセット ID が上書きされます。MLService の作成に使用する MLInstance にトレーニングデータセットが定義されていない場合は、適切なトレーニングデータセット ID を指定する必要があります。 |
+| `trainingExperimentId` | 任意で指定可能な実験 ID です。この値を指定しない場合は、MLService を作成すると、MLInstance のデフォルト設定を使用して新しい実験も作成されます。 |
+| `trainingExperimentRunId` | 任意で指定可能なトレーニング実行 ID です。この値を指定しない場合は、MLService を作成すると、MLInstance のデフォルトのトレーニングパラメーターを使用して、トレーニング実行も作成および実行されます。 |
+| `trainingSchedule` | 自動トレーニング実行スケジュールです。このプロパティを定義すると、MLService はスケジュールに従って自動的にトレーニングを実行します。 |
+| `trainingSchedule.startTime` | スケジュールされたトレーニング実行の開始時点を示すタイムスタンプです。 |
+| `trainingSchedule.endTime` | スケジュールされたトレーニング実行の終了時点を示すタイムスタンプです。 |
+| `trainingSchedule.cron` | 自動トレーニング実行の頻度を定義する cron 式です。 |
+| `scoringSchedule` | 自動スコアリング実行のスケジュールです。このプロパティを定義すると、MLService はスケジュールに従って自動的にスコアリングを実行します。 |
+| `scoringSchedule.startTime` | スケジュールされたスコアリング実行の開始時点を示すタイムスタンプです。 |
+| `scoringSchedule.endTime` | スケジュールされたスコアリング実行の終了時点を示すタイムスタンプです。 |
+| `scoringSchedule.cron` | 自動スコアリング実行の頻度を定義する cron 式です。 |
 
 **応答**
 
-成功した応答は、新たに作成されたMLServiceの詳細を含むペイロードを返します。このペイロードには、一意の識別子(`id`)、トレーニングのテストID(`trainingExperimentId`)、スコアリングのテストID(`scoringExperimentId`)、入力トレーニングデータセットID(`trainingDataSetId`)が含まれます。
+成功時の応答は、新規作成された MLService の詳細を格納したペイロードを返します。この詳細には、一意の識別子（`id`）、トレーニングの実験 ID（`trainingExperimentId`）、スコアリングの実験 ID（`scoringExperimentId`）、入力トレーニングデータセット ID（`trainingDataSetId`）などが含まれます。
 
 ```json
 {
@@ -106,11 +106,11 @@ curl -X POST \
 }
 ```
 
-## MLServicesのリストの取得 {#retrieve-a-list-of-mlservices}
+## MLService のリストの取得 {#retrieve-a-list-of-mlservices}
 
-MLServicesのリストは、1つのGET要求を実行することで取得できます。 結果をフィルターするのに役立つように、リクエストパスでクエリパラメーターを指定できます。 使用可能なクエリのリストについては、付録の「アセット取得の [クエリパラメータ」の節を参照してください](./appendix.md#query)。
+MLService のリストを取得するには、GET リクエストを 1 回実行します。結果のフィルタリングに役立つように、リクエストパスでクエリパラメーターを指定できます。使用可能なクエリのリストについては、「[アセット取得のためのクエリーパラメーター](./appendix.md#query)」の付録の節を参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /mlServices
@@ -120,12 +120,12 @@ GET /mlServices?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{QUERY_PARAMETER}` | 結果のフィルタリングに [使用できるクエリパラメーターの1つ](./appendix.md#query) 。 |
-| `{VALUE}` | 前のクエリパラメーターの値。 |
+| `{QUERY_PARAMETER}` | 結果のフィルタリングに[使用可能なクエリパラメーター](./appendix.md#query)の 1 つです。 |
+| `{VALUE}` | 上記クエリパラメーターの値です。 |
 
 **リクエスト**
 
-次の要求は、クエリを含み、同じMLInstance ID(`{MLINSTANCE_ID}`)を共有するMLServicesのリストを取得します。
+以下のリクエストは、クエリを含んでおり、同じ MLInstance ID（`{MLINSTANCE_ID}`）を共有する MLService のリストを取得します。
 
 ```shell
 curl -X GET \
@@ -138,7 +138,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、MLServicesとその詳細(MLService ID (`{MLSERVICE_ID}`)、トレーニングのテストID (`{TRAINING_ID}`)、スコアリングのテストID (`{SCORING_ID}`)、入力トレーニングデータセットID (`{DATASET_ID}`)など)のリストを返します。
+成功時の応答は、MLService のリストと詳細を返します。この詳細には、MLService ID（`{MLSERVICE_ID}`）、トレーニングの実験 ID（`{TRAINING_ID}`）、スコアリングの実験 ID（`{SCORING_ID}`）、入力トレーニングデータセット ID（`{DATASET_ID}`）などが含まれます。
 
 ```json
 {
@@ -165,17 +165,17 @@ curl -X GET \
 }
 ```
 
-## 特定のMLServiceの取得 {#retrieve-a-specific-mlservice}
+## 特定の MLService の取得 {#retrieve-a-specific-mlservice}
 
-リクエストパスに目的のMLServiceのIDを含むGETリクエストを実行すると、特定のテストの詳細を取得できます。
+特定の実験の詳細を取得するには、目的の MLService の ID をリクエストパスに含んだ GET リクエストを実行します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`: 有効なMLService ID。
+* `{MLSERVICE_ID}`：有効な MLService ID です。
 
 **リクエスト**
 
@@ -190,7 +190,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、要求されたMLServiceの詳細を含むペイロードを返します。
+成功時の応答は、要求された MLService の詳細を格納したペイロードを返します。
 
 ```json
 {
@@ -209,21 +209,21 @@ curl -X GET \
 }
 ```
 
-## MLServiceの更新 {#update-an-mlservice}
+## MLService の更新 {#update-an-mlservice}
 
-既存のMLServiceを更新するには、リクエストパスにターゲットMLServiceのIDが含まれるPUT要求を介してプロパティを上書きし、更新されたプロパティを含むJSONペイロードを提供します。
+既存の MLService を更新するには、対象となる MLService の ID をリクエストパスに含め、更新後のプロパティを JSON ペイロードで指定した PUT リクエストを実行して、プロパティを上書きします。
 
 >[!TIP]
 >
->このPUT要求を確実に行うためには、まずGET要求を実行し、ID別にMLServiceを [取得することをお勧めします](#retrieve-a-specific-mlservice)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
+> この PUT リクエストを確実に成功させるために、まず GET リクエストを実行して、[対象となる MLService を ID で取得](#retrieve-a-specific-mlservice)することをお勧めします。次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして指定します。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /mlServices/{MLSERVICE_ID}
 ```
 
-* `{MLSERVICE_ID}`: 有効なMLService ID。
+* `{MLSERVICE_ID}`：有効な MLService ID です。
 
 **リクエスト**
 
@@ -257,7 +257,7 @@ curl -X PUT \
 
 **応答**
 
-正常な応答は、MLServiceの更新された詳細を含むペイロードを返します。
+成功時の応答は、MLService の更新された詳細を格納したペイロードを返します。
 
 ```json
 {
@@ -286,11 +286,11 @@ curl -X PUT \
 }
 ```
 
-## MLServiceの削除
+## MLService の削除
 
-リクエストパスにターゲットMLServiceのIDを含むDELETEリクエストを実行すると、1つのMLServiceを削除できます。
+1 つのMLService を削除するには、対象となる MLService の ID をリクエストパスに含んだ DELETE リクエストを実行します。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /mlServices/{MLSERVICE_ID}
@@ -298,7 +298,7 @@ DELETE /mlServices/{MLSERVICE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MLSERVICE_ID}` | 有効なMLService ID。 |
+| `{MLSERVICE_ID}` | 有効な MLService ID です。 |
 
 **リクエスト**
 
@@ -321,11 +321,11 @@ curl -X DELETE \
 }
 ```
 
-## MLInstance IDによるMLServicesの削除
+## MLInstance ID による MLService の削除
 
-MLInstance IDをクエリパラメータとして指定するDELETE要求を実行すると、特定のMLInstanceに属するすべてのMLServicesを削除できます。
+特定の MLInstance に属するすべての MLService を削除するには、MLInstance ID をクエリパラメーターとして指定した DELETE リクエストを実行します。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /mlServices?mlInstanceId={MLINSTANCE_ID}
@@ -333,7 +333,7 @@ DELETE /mlServices?mlInstanceId={MLINSTANCE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MLINSTANCE_ID}` | 有効なMLInstance IDです。 |
+| `{MLINSTANCE_ID}` | 有効な MLInstance ID です。 |
 
 **リクエスト**
 
@@ -346,7 +346,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```json
 {
