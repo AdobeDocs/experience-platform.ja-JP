@@ -1,89 +1,89 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: オプトアウトの実行
+title: オプトアウトの遵守
 topic: overview
 translation-type: tm+mt
 source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
 source-wordcount: '945'
-ht-degree: 0%
+ht-degree: 64%
 
 ---
 
 
-# セグメントでのオプトアウトリクエストの実行
+# セグメントでのオプトアウトリクエストの遵守
 
-[!DNL Experience Platform] 顧客が内部でのデータの使用状況およびストレージに関するオプトアウトリクエストを送信でき [!DNL Real-time Customer Profile]ます。 これらのオプトアウト要求は [!DNL California Consumer Privacy Act] (CCPA)の一部であり、カリフォルニア州の住民は、自分の個人データにアクセスして削除する権利を持ち、自分の個人データが販売されているか、また誰に開示されているかを知ることができます。
+[!DNL Experience Platform] 顧客が内部でのデータの使用状況およびストレージに関するオプトアウトリクエストを送信でき [!DNL Real-time Customer Profile]ます。 These opt-out requests are part of the [!DNL California Consumer Privacy Act] (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom).
 
-顧客がオプトアウトしたら、マーケティングアクティビティ用のオーディエンスを生成する際に、組織がそれらのオプトアウトに従うことが重要です。 このドキュメントでは、オプトアウトリクエストの実行に関する重要な詳細について説明します。
+顧客がオプトアウトしたら、組織はマーケティング活動のオーディエンスを生成する際に、これらのオプトアウトを遵守する必要があります。このドキュメントでは、オプトアウトリクエストの遵守に関する重要な詳細について説明します。
 
 ## はじめに
 
-オプトアウト要求を実行するには、関連する様々な [!DNL Adobe Experience Platform] サービスについての理解が必要です。 オプトアウト要求を処理する前に、次のサービスに関するドキュメントを確認してください。
+Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. オプトアウトリクエストを処理する前に、次のサービスのドキュメントを確認してください。
 
 - [!DNL Real-time Customer Profile](../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
 - [!DNL Adobe Experience Platform Segmentation Service](./home.md): データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
 - [!DNL Experience Data Model (XDM)](../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 - [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): 組織が、内部の顧客データに関するデータのプライバシー規制へのコンプライアンスを自動化できるよう支援 [!DNL Platform]します。
 
-## オプトアウトミックスイン
+## オプトアウト mixin 
 
-CCPAオプトアウト要求を受け入れるために、和集合スキーマの一部であるスキーマの1つに、必要な [!DNL Experience Data Model] (XDM)オプトアウトフィールドが含まれている必要があります。 スキーマにオプトアウトフィールドを追加するために使用できるミックスインが2つあります。それぞれのミックスインについて詳しくは、以下の節で説明します。
+In order to honor CCPA opt-out requests, one of the schemas that is a part of the union schema must contain the necessary [!DNL Experience Data Model] (XDM) opt-out fields. スキーマにオプトアウトフィールドを追加するために使用できる mixin が 2 つあります。それぞれの mixin については、以下の節で詳しく説明します。
 
-- [プロファイルのプライバシー](#profile-privacy): 様々なオプトアウトタイプ（一般または販売/共有）を取り込むために使用します。
-- [プロファイル環境設定の詳細](#profile-preferences-details): 特定のXDMチャネルのオプトアウト要求を取り込むために使用します。
+- [プロファイルプライバシー](#profile-privacy)：様々なオプトアウトタイプ（一般または販売 / 共有）を取得するために使用します。
+- [プロファイル環境設定の詳細](#profile-preferences-details)：特定の XDM チャネルのオプトアウトリクエストを取得するために使用します。
 
-スキーマにmixinを追加する手順については、次のXDMドキュメントの「mixin」追加の節を参照してください。
-- [スキーマレジストリAPIのチュートリアル](../xdm/api/getting-started.md)。: スキーマレジストリAPIを使用したスキーマの構築
-- [スキーマエディタのチュートリアル](../xdm/tutorials/create-schema-ui.md): Platformユーザーインターフェイスを使用したスキーマの作成。
+スキーマに mixin を追加するための詳細な手順については、次の XDM ドキュメントの「mixin の追加」の節を参照してください。
+- [スキーマレジストリ API のチュートリアル](../xdm/api/getting-started.md)：スキーマレジストリ API を使用したスキーマの構築。
+- [スキーマエディタのチュートリアル](../xdm/tutorials/create-schema-ui.md)：Platform のユーザーインターフェイスを使用したスキーマの構築。
 
-ユーザーインターフェイスのスキーマに追加されたオプトアウトミックスインの例を次に示します。
+ユーザーインターフェイスでオプトアウト mixin をスキーマに追加した例を次に示します。
 
 ![](images/opt-outs/opt-out-mixins-user-interface.png)
 
-各ミックスインの構造と、各ミックスインがスキーマに貢献するフィールドの説明を、以下の節で詳しく説明します。
+各 mixin の構造と、スキーマに寄与するフィールドについては、以下の節で概要を説明します。
 
 ### [!DNL Profile Privacy]
 
-Mixinを使用すると、次の2種類のCCPAオプトアウトリクエストを顧客から取得できます。 [!DNL Profile Privacy]
+The [!DNL Profile Privacy] mixin allows you to capture two kinds of CCPA opt-out requests from customers:
 
 1. 一般的なオプトアウト
-2. 販売/共有のオプトアウト
+2. 販売 / 共有のオプトアウト
 
 ![](images/opt-outs/profile-privacy.png)
 
 この [!DNL Profile Privacy] ミックスインには次のフィールドが含まれています。
 
-- プライバシーオプトアウト(`privacyOptOuts`): オプトアウトオブジェクトのリストを含む配列。
-- オプトアウトのタイプ(`optOutType`): オプトアウトのタイプ。 このフィールドは列挙型で、2つの値を指定できます。
-   - 一般的なオプトアウト(`general_opt_out`)
-   - 販売共有オプトアウト(`sales_sharing_opt_out`)
-- オプトアウト値(`optOutValue`): 指定したオプトアウトタイプに基づくオプトアウトのアクティブ状態（オプトアウト信号の値とも呼ばれます）。 このフィールドは、4つの値を持つ列挙です。
-   - 提供なし(`not_provided`): オプトアウト要求が提供されていません。
-   - 保留中の検証(`pending`): オプトアウト要求は、検証待ちです。
-   - オプトアウト(`out`): 顧客がオプトアウトしました。
-   - オプトイン(`in`): 顧客がオプトインしました。
-- オプトアウトタイムスタンプ(`timestamp`): 受信したオプトアウト信号のタイムスタンプ。
+- プライバシーオプトアウト（`privacyOptOuts`）：オプトアウトオブジェクトのリストを含む配列。
+- オプトアウトタイプ（`optOutType`）：オプトアウトのタイプ。このフィールドは、次の 2 つの値を持つ可能性がある列挙型です。
+   - 一般的なオプトアウト（`general_opt_out`）
+   - 販売 / 共有のオプトアウト（`sales_sharing_opt_out`）
+- オプトアウト値（`optOutValue`）：指定したオプトアウトタイプに基づいた、オプトアウトのアクティブ状態（オプトアウト信号の値とも呼ばれる）。このフィールドは、次の 4 つの値を持つ可能性がある列挙型です。
+   - 指定なし（`not_provided`）：オプトアウトリクエストが指定されていません。
+   - 保留中の検証（`pending`）：オプトアウトリクエストが検証待ちです。
+   - オプトアウト（`out`）：顧客がオプトアウトしました。
+   - オプトイン（`in`）：顧客がオプトインしました。
+- オプトアウトタイムスタンプ（`timestamp`）：受信したオプトアウト信号のタイムスタンプ。
 
-Mixinの完全な構造を表示するには、 [!DNL Profile Privacy] XDMのパブリックGitHubリポジトリ [](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) 、またはPlatformUIを使用してMixinをプレビューする方法を参照してください。
+To view the full structure of the [!DNL Profile Privacy] mixin, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the mixin using the Platform UI.
 
 ### [!DNL Profile Preferences Details]
 
-mixinは、顧客プロファイルに対する環境設定を表すいくつかのフィールドを提供します(E メールフォーマット、優先言語、タイムゾーンなど)。 [!DNL Profile Preferences Details] このミックスインに含まれるフィールドの1つであるOptInOut (`optInOut`)を使用すると、個々のチャネルに対してオプトアウト値を設定できます。
+The [!DNL Profile Preferences Details] mixin provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). この mixin に含まれるフィールドの 1 つである OptInOut （`optInOut`）を使用すると、個々のチャネルに対してオプトアウト値を設定できます。
 
 ![](images/opt-outs/profile-preferences-details.png)
 
 ミックスインには、オプトアウトに関連する次のフィールドが含まれ [!DNL Profile Preferences Details] ます。
 
-- OptInOut (`optInOut`): 各キーが通信チャネルの有効で既知のURIを表すオブジェクトで、各チャネルのオプトアウトのアクティブ状態が表します。 各チャネルには、次の4つの値のいずれかを指定できます。
-   - 提供なし(`not_provided`): このチャネルのオプトアウト要求は提供されていません。
-   - 保留中の検証(`pending`): このチャネルのオプトアウト要求は、検証待ちです。
-   - オプトアウト(`out`): お客様はこのチャネルをオプトアウトしました。
-   - オプトイン(`in`): お客様はこのチャネルにオプトインしました。
-- グローバルオプトアウト(`globalOptout`): boolean値です。trueに設定した場合、プロファイルのグローバルオプトアウトの上書きを設定します。 このフィールドのデフォルト値はfalseです。
+- OptInOut （`optInOut`）：各キーが通信チャネルの有効な既知の URI と、各チャネルのオプトアウトのアクティブ状態を表しているオブジェクト。各チャネルには、次の 4 つの値のいずれかを指定できます。
+   - 指定なし（`not_provided`）：このチャネルにオプトアウトリクエストが指定されていません。
+   - 保留中の検証（`pending`）：このチャネルのオプトアウトリクエストが検証待ちです。
+   - オプトアウト（`out`）：顧客がこのチャネルをオプトアウトしました。
+   - オプトイン（`in`）：顧客がこのチャネルをオプトインしました。
+- グローバルオプトアウト（`globalOptout`）：true に設定されている場合、プロファイルのグローバルオプトアウトの上書きを設定するブール値です。このフィールドのデフォルト値は false です。
 
-次の例のJSONは、OptInOutオブジェクトが様々な通信チャネル用に複数のオプトアウト信号を取り込む方法を示しています。
+次の例の JSON は、OptInOut オブジェクトが様々な通信チャネルの複数のオプトアウト信号を取得する方法を示しています。
 
 ```json
 {
@@ -99,27 +99,27 @@ mixinは、顧客プロファイルに対する環境設定を表すいくつか
 }
 ```
 
-プロファイル環境設定の詳細Mixinの完全な構造を表示するには、 [XDMパブリックGitHubリポジトリ](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) 、または [!DNL Platform] UIを使用してMixinをプレビューしてください。
+プロファイル環境設定の詳細の mixin の完全な構造を把握するには、[XDM パブリック GitHub リポジトリー](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json)を参照するか、 UI を使用した mixin を確認してください。[!DNL Platform]
 
-## セグメントでのオプトアウトの処理
+## セグメント化でのオプトアウトの処理
 
-CCPAオプトアウトフラグが付いたプロファイルをセグメントに含めないようにするには、セグメントの作成時に、既存のセグメントに特別なフィールドを追加するか、セグメントの作成時に含める必要があります。
+CCPA オプトアウトフラグが付いたプロファイルをセグメントに含めないようにするには、特別なフィールドを既存のセグメントに追加するか、セグメントの作成時に含める必要があります。
 
-以下の節では、2種類のオプトアウトフラグに対して適切なフィールドを追加する方法を示します。
+以下の節では、2 種類のオプトアウトフラグ用に適切なフィールドを追加する方法を示します。
 1. 一般的なオプトアウト
-2. 販売/共有のオプトアウト
+2. 販売 / 共有のオプトアウト
 
 ### 一般的なオプトアウト
 
-[!DNL Segmentation] は、「[!UICONTROL 一般的なオプトアウト]」フラグを含むすべてのプロファイルに対して自動的に優先します。つまり、これらのプロファイルは、デフォルトでオーディエンスやエクスポートに含まれません。 ただし、オプトアウトプロファイルがオーディエンスやマーケティングアクティビティに含まれないように、適切なフィールドを追加することをお勧めします。
+[!DNL Segmentation] は、「[!UICONTROL 一般的なオプトアウト]」フラグを含むすべてのプロファイルに対して自動的に優先します。つまり、これらのプロファイルは、デフォルトでオーディエンスやエクスポートに含まれません。 ただし、オプトアウトプロファイルがオーディエンスやマーケティング活動に含まれないようにするために、適切なフィールドを追加することをお勧めします。
 
-これは、ユーザーインターフェイスを使用して、 **[!UICONTROL プライバシーオプトアウト]** 属性を追加することで行うことができます。 この場合、セグメントには、オプトインしたユーザーのみが含まれるように設定されます(つまり、プロファイルに一般的なオプトアウトフラグが設定されていません)。 これは、「[!UICONTROL オプトアウトタイプ]」が「[!UICONTROL 一般的なオプトアウト」、「]オプトアウト値[!UICONTROL 」が「]オプトイン宣言」に等しいことで行われます。
+This can be done using the user interface by adding **[!UICONTROL Privacy Opt-Outs]** attributes. この場合、セグメントには、オプトインしたユーザーのみが含まれるように設定されます(つまり、プロファイルに一般的なオプトアウトフラグが設定されていません)。 This is done by declaring that the &quot;[!UICONTROL Opt-Out Type]&quot; equals &quot;[!UICONTROL General Opt-Out]&quot; and the &quot;[!UICONTROL Opt-Out Value]&quot; equals &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
-### 販売/共有のオプトアウト
+### 販売 / 共有のオプトアウト
 
-ユーザーのプロファイルに販売/共有のオプトアウトフラグが設定されている場合、このプロファイルはセグメントの作成やマーケティングのアクティビティには使用できません。 このフラグが確実に適用されるように、「[!UICONTROL Opt-Out Type]」が「[!UICONTROL Sales Sharing Opt-Out]」、「[!UICONTROL Opt-Out Value]」が「Opt-in Opt-in Pont-in Type」と等しい必要があります。
+ユーザーがプロファイルに販売 / 共有のオプトアウトフラグを設定している場合、このプロファイルは、セグメントの作成やマーケティング活動に使用できなくなります。To ensure this flag is honored, the &quot;[!UICONTROL Opt-Out Type]&quot; must equal &quot;[!UICONTROL Sales Sharing Opt-Out]&quot; and the &quot;[!UICONTROL Opt-Out Value]&quot; must equal &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
@@ -129,6 +129,6 @@ In some instances, such as building a segment of people who have opted out, it m
 
 ## 次の手順
 
-APIとユーザーインターフェイスを使用したセグメント定義やオーディエンスの操作を含む、セグメント化について詳しくは、 [セグメント化の概要を読んでください](./home.md)。
+API やユーザーインターフェイスを使用したセグメント定義やオーディエンスの操作など、セグメント化の詳細については、最初に[セグメント化の概要](./home.md)に関するドキュメントを参照してください。
 
-プライバシーに関する法的規制や組織のプライバシー規制への自動コンプライアンスを容易にする方法など、内部のデータのプライバシーに関する詳細は、に関するドキュメントを参照して [!DNL Platform]ください [!DNL Privacy Service][!DNL Privacy Service](../privacy-service/home.md)。
+To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [!DNL Privacy Service](../privacy-service/home.md).
