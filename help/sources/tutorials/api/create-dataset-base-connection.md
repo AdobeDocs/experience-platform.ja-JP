@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
 source-wordcount: '690'
-ht-degree: 1%
+ht-degree: 25%
 
 ---
 
@@ -22,34 +22,34 @@ ht-degree: 1%
 
 ## はじめに
 
-このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [Experience Data Model(XDM)System](../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   * [スキーマ構成の基本](../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
-   * [スキーマレジストリ開発ガイド](../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 例えば、ユーザー `{TENANT_ID}`、「コンテナ」の概念、リクエストを行う際に必要なヘッダー（Acceptヘッダーとその可能な値に特に注意）などがあります。
+* [エクスペリエンスデータモデルl（XDM）システム](../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+   * [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
+   * [スキーマレジストリ開発ガイド](../../../xdm/api/getting-started.md): スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 * [カタログサービス](../../../catalog/home.md): カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
 * [バッチインジェスト](../../../ingestion/batch-ingestion/overview.md): バッチ取り込みAPIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
 * [サンドボックス](../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-次の節では、 [!DNL Flow Service] APIを使用してData Lakeに正常に接続するために知っておく必要がある追加情報について説明します。
+The following sections provide additional information that you will need to know in order to successfully connect to Data Lake using the [!DNL Flow Service] API.
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-### 必要なヘッダーの値の収集
+### 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* 認証： 無記名 `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Flow Service]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-ペイロード(POST、PUT、PATCH)を含むすべての要求には、追加のメディアタイプヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
 * Content-Type: `application/json`
 
@@ -57,11 +57,11 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 
 データセットベースの接続を作成する最初の手順は、内から一連の接続仕様を取得すること [!DNL Flow Service]です。
 
-**API形式**
+**API 形式**
 
 使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GETリクエストを実行し、クエリパラメーターを使用して、データセットベースの接続の接続仕様を調べることができます。
 
-クエリパラメータを指定せずにGET要求を送信すると、使用可能なすべてのソースの接続仕様が返されます。 クエリを組み込むと、データセットベース `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` の接続に関する情報を取得できます。
+クエリパラメーターを指定しないでGETリクエストを送信すると、使用可能なすべてのソースの接続仕様が返されます。 クエリを組み込むと、データセットベース `property=id=="c604ff05-7f1a-43c0-8e18-33bf874cb11c"` の接続に関する情報を取得できます。
 
 ```http
 GET /connectionSpecs
@@ -81,7 +81,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 正常な応答は、接続仕様と、ベース接続の作成に必要な固有識別子(`id`)を返します。
 
@@ -139,7 +139,7 @@ curl -X GET \
 
 ベース接続はソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクターを作成する場合に使用できるので、必要なデータセットベース接続は1つだけです。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /connections
@@ -169,7 +169,7 @@ curl -X POST \
 | ------------- | --------------- |
 | `connectionSpec.id` | 前の手順で取得 `id` した接続仕様。 |
 
-**応答**
+**応答** 
 
 正常な応答は、新たに作成されたベース接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、ターゲット接続を作成し、サードパーティのソースコネクタからデータを取り込むために必要です。
 
