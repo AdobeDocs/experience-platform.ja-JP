@@ -7,23 +7,23 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1118'
-ht-degree: 3%
+ht-degree: 70%
 
 ---
 
 
 # エンジン
 
-エンジンは、Data Science Workspaceの機械学習モデルの基礎です。 特定の問題を解決する機械学習アルゴリズムや、フィーチャエンジニアリングを実行するパイプラインをフィーチャします。
+エンジンは、Data Science Workspace　での機械学習モデルの基礎です。特定の問題を解決する機械学習アルゴリズム、特徴エンジニアリングを実行する特徴パイプライン、またはその両方が含まれます。
 
-## Dockerレジストリの検索
+## Docker レジストリの検索
 
 >[!TIP]
 >Docker URLがない場合は、 [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorialを参照し、DockerホストURLの作成に関する手順を説明します。
 
-パッケージ化されたレシピファイルをアップロードするには、DockerホストのURL、ユーザー名、パスワードなど、Dockerレジストリ資格情報が必要です。 この情報は、次のGETリクエストを実行することで検索できます。
+パッケージ化されたレシピファイル（Docker ホストの URL、ユーザー名、パスワードなど）をアップロードするには、Docker レジストリ資格情報が必要です。この情報は、次の GET リクエストを実行することで調べることができます。
 
-**API形式**
+**API 形式**
 
 ```https
 GET /engines/dockerRegistry
@@ -39,14 +39,14 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-正常な応答は、Docker URL(`host`)、ユーザー名(`username`)、パスワード(`password`)を含むDockerレジストリの詳細を含むペイロードを返します。
+正常な応答は、Docker URL（`host`）、ユーザー名（`username`）、パスワード（`password`）を含む Docker レジストリの詳細を含むペイロードを返します。
 
 >[!NOTE]
 >
 >
->Dockerのパスワードは、が更新されるたびに変更 `{ACCESS_TOKEN}` されます。
+> Docker のパスワードは、`{ACCESS_TOKEN}` が更新するたびに変更されます。
 
 ```json
 {
@@ -56,11 +56,11 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 }
 ```
 
-## ドッカーURLを使用したエンジンの作成 {#docker-image}
+## Docker URL を使用したエンジンの作成 {#docker-image}
 
-マルチパートフォームでDocker画像を参照するメタデータとDocker URLを提供しながらPOSTリクエストを実行すると、エンジンを作成できます。
+エンジンを作成するには、メタデータと、マルチパートフォームの Docker 画像を参照する Docker URL を提供しながら、POST リクエストを実行します。
 
-**API形式**
+**API 形式**
 
 ```https
 POST /engines
@@ -95,12 +95,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | エンジンの名前。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピ名として継承します。 |
-| `description` | エンジンのオプションの説明。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピの説明として継承します。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `type` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応し、「Python」、「R」、「Tensorflow」のいずれかを指定できます。 |
-| `algorithm` | 機械学習アルゴリズムのタイプを指定する文字列です。 サポートされるアルゴリズムのタイプは、「分類」、「回帰」または「カスタム」です。 |
-| `artifacts.default.image.location` | Docker URLによってリンクされているDockerイメージの場所。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応し、「Python」、「R」、「Tensorflow」のいずれかを指定できます。 |
+| `name` | エンジンの名前。このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
+| `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
+| `type` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応し、「Python」、「R」、「Tensorflow」のいずれかを指定できます。 |
+| `algorithm` | 機械学習アルゴリズムのタイプを指定する文字列。サポートされるアルゴリズムのタイプには、「分類」、「回帰」、「カスタム」があります。 |
+| `artifacts.default.image.location` | Docker URL によってリンクされた Docker イメージの場所。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Docker イメージの構築元の言語に対応し、「Python」、「R」、「Tensorflow」のいずれかを指定できます。 |
 
 **PySpark/Scalaの要求**
 
@@ -134,16 +134,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | エンジンの名前。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピ名として継承します。 |
-| `description` | エンジンのオプションの説明。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピの説明として継承します。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `type` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
+| `name` | エンジンの名前。このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
+| `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
+| `type` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
 | `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する場合に必要なフィールドです。 このフィールドはに設定する必要があり `databricks-spark`ます。 |
 | `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
 
-**応答**
+**応答** 
 
-成功した応答は、新たに作成されたエンジンの詳細(一意の識別子(`id`)を含むペイロードを返します。 次に示すのは、Pythonエンジンの応答例です。 すべてのエンジンの応答は次の形式に従います。
+正常な応答は、新たに作成されたエンジンの一意の識別子（`id`）を含む詳細を含むペイロードを返します。次に示すのは、Pythonエンジンの応答例です。 すべてのエンジンの応答は次の形式に従います。
 
 ```json
 {
@@ -172,9 +172,9 @@ curl -X POST \
 
 ## ドックURLを使用してフィーチャパイプラインエンジンを作成する {#feature-pipeline-docker}
 
-フィーチャーパイプラインエンジンを作成するには、メタデータとDockerイメージを参照するDocker URLを指定しながらPOSTリクエストを実行します。
+フィーチャパイプラインエンジンは、メタデータとDockerPOSTを参照するDocker URLを提供しながらイメージリクエストを実行することで作成できます。
 
-**API形式**
+**API 形式**
 
 ```https
 POST /engines
@@ -213,19 +213,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `type` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
+| `type` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
 | `algorithm` | 使用するアルゴリズムで、この値を `fp` （フィーチャパイプライン）に設定します。 |
-| `name` | フィーチャーパイプラインエンジンの名前。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピ名として継承します。 |
-| `description` | エンジンのオプションの説明。 このエンジンに対応するレシピは、UIに表示されるこの値をレシピの説明として継承します。 このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
+| `name` | フィーチャーパイプラインエンジンの名前。 このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
+| `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
 | `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する場合に必要なフィールドです。 このフィールドはに設定する必要があり `databricks-spark`ます。 |
 | `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
-| `artifacts.default.image.executionType` | エンジンの実行タイプ。 この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
+| `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
 | `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値はに設定する必要があり `docker`ます。 |
 | `artifacts.default.defaultMLInstanceConfigs` | 設定ファイルの `pipeline.json` パラメーター。 |
 
-**応答**
+**応答** 
 
-成功した応答は、新たに作成されたフィーチャーパイプラインエンジンの詳細を含むペイロードを返します。この詳細には、一意の識別子(`id`)が含まれます。 次に示すのは、PySpark機能のパイプラインエンジンの応答例です。
+A successful response returns a payload containing the details of the newly created feature pipeline Engine including its unique identifier (`id`). 次に示すのは、PySpark機能のパイプラインエンジンの応答例です。
 
 ```json
 {
@@ -254,9 +254,9 @@ curl -X POST \
 
 ## エンジンのリストの取得
 
-単一のGETリクエストを実行することで、リストのエンジンを取得できます。 結果をフィルターするのに役立つように、リクエストパスでクエリパラメーターを指定できます。 使用可能なクエリのリストについては、付録の「アセット取得の [クエリパラメータ」の節を参照してください](./appendix.md#query)。
+エンジンのリストは、1 回の GET リクエストを実行することで取得できます。結果のフィルタリングに役立つように、リクエストパスでクエリパラメーターを指定できます。使用可能なクエリのリストについては、「[アセット取得のためのクエリーパラメーター](./appendix.md#query)」の付録の節を参照してください。
 
-**API形式**
+**API 形式**
 
 ```https
 GET /engines
@@ -275,9 +275,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した場合は、エンジンとその詳細のリストが返されます。
+正常な応答は、エンジンのリストとその詳細を返します。
 
 ```json
 {
@@ -329,9 +329,9 @@ curl -X GET \
 
 ### 特定のエンジンの取得 {#retrieve-specific}
 
-特定のエンジンの詳細を取得するには、目的のエンジンのIDをリクエストパスに含むGETリクエストを実行します。
+特定のエンジンの詳細を取得するには、目的のエンジンの ID をリクエストパスに含む GET リクエストを実行します。
 
-**API形式**
+**API 形式**
 
 ```https
 GET /engines/{ENGINE_ID}
@@ -339,7 +339,7 @@ GET /engines/{ENGINE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{ENGINE_ID}` | 既存のエンジンのID。 |
+| `{ENGINE_ID}` | 既存のエンジンの ID。 |
 
 **リクエスト**
 
@@ -352,9 +352,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、目的のエンジンの詳細を含むペイロードを返します。
+正常な応答は、目的のエンジンの詳細を含むペイロードを返します。
 
 ```json
 {
@@ -383,13 +383,13 @@ curl -X GET \
 
 ## エンジンの更新
 
-リクエストパスにターゲットエンジンのIDを含むPUT要求を介してプロパティを上書きし、更新されたプロパティを含むJSONペイロードを提供することで、既存のエンジンを変更および更新できます。
+既存のエンジンを変更して更新するには、リクエストパスにターゲットエンジンの ID を含む PUT リクエストを使用してプロパティを上書きし、更新されたプロパティを含む JSON ペイロードを提供します。
 
 >[!NOTE]
 >
->このPUT要求を確実に成功させるために、最初にGET要求を実行し、IDでエンジンを [取得することをお勧めします](#retrieve-specific)。 次に、返されたJSONオブジェクトを変更および更新し、変更されたJSONオブジェクト全体をPUT要求のペイロードとして適用します。
+>この PUT リクエストを確実に成功させるために、まず GET リクエストを実行して、[ID でエンジンを取得](#retrieve-specific)することをお勧めします。次に、返された JSON オブジェクトを変更および更新し、変更された JSON オブジェクト全体を PUT リクエストのペイロードとして適用します。
 
-以下のサンプルAPI呼び出しは、以下のプロパティを最初に持つと同時に、エンジンの名前と説明を更新します。
+以下の API 呼び出し例を使用すると、これらのプロパティを最初に持つ間に、エンジンの名前と説明が更新されます。
 
 ```json
 {
@@ -408,7 +408,7 @@ curl -X GET \
 }
 ```
 
-**API形式**
+**API 形式**
 
 ```https
 PUT /engines/{ENGINE_ID}
@@ -416,7 +416,7 @@ PUT /engines/{ENGINE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{ENGINE_ID}` | 既存のエンジンのID。 |
+| `{ENGINE_ID}` | 既存のエンジンの ID。 |
 
 **リクエスト**
 
@@ -444,7 +444,7 @@ curl -X PUT \
     }'
 ```
 
-**応答**
+**応答** 
 
 正常な応答は、エンジンの更新された詳細を含むペイロードを返します。
 
@@ -474,9 +474,9 @@ curl -X PUT \
 
 ## エンジンの削除
 
-エンジンを削除するには、リクエストパスでターゲットエンジンのIDを指定しながらDELETEリクエストを実行します。 エンジンを削除すると、そのエンジンを参照するすべてのMLInstancesがカスケード削除されます。MLInstanceに属するExperiments and Experimentの実行も含まれます。
+エンジンを削除するには、リクエストパスにターゲットエンジンの ID を含む DELETE リクエストを実行します。エンジンを削除すると、そのエンジンを参照するすべての MLInstances が、それらの MLInstance に属する実験と実験の実行も含めて削除されます。
 
-**API形式**
+**API 形式**
 
 ```https
 DELETE /engines/{ENGINE_ID}
@@ -484,7 +484,7 @@ DELETE /engines/{ENGINE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{ENGINE_ID}` | 既存のエンジンのID。 |
+| `{ENGINE_ID}` | 既存のエンジンの ID。 |
 
 **リクエスト**
 
@@ -497,7 +497,7 @@ curl -X DELETE \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```json
 {
