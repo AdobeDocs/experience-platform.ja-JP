@@ -1,48 +1,48 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platformデータ取り込みの概要
+title: Adobe Experience Platform のデータ取り込みの概要
 topic: overview
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '417'
-ht-degree: 10%
+ht-degree: 52%
 
 ---
 
 
 # データ取り込みの概要
 
-Adobe Experience Platformは、複数のソースからのデータを統合して、マーケティング担当者が顧客の行動をより深く理解できるようにします。 Adobe Experience Platformデータ取り込みは、これらのソースからデータを [!DNL Platform] 取り込む複数の方法、およびダウンストリームサー [!DNL Platform] ビスで使用するデータレーク内でのデータの保持方法を表します。
+Adobe Experience Platform では、複数のソースからのデータを統合し、マーケターが顧客の行動をより深く理解できるようにします。Adobe Experience Platform Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform] services.
 
-このドキュメントでは、データを取り込む主な3つの方法について説明し [!DNL Platform]、詳細については、それぞれの概要ドキュメントへのリンクを示します。
+This document introduces the three main ways in which data is ingested into [!DNL Platform], with links to their respective overview documentation for more detailed information.
 
-## バッチ取り込み
+## バッチ取得
 
-バッチ取り込みを使用すると、データをバッチファイル [!DNL Experience Platform] として取り込むことができます。 バッチとは、1 つの単位として取り込まれる 1 つ以上のファイルで構成されるデータの単位です。取り込まれたバッチには、正常に取り込まれたレコードの数と、失敗したレコードの数、および関連するエラーメッセージを示すメタデータが提供されます。
+Batch ingestion allows you to ingest data into [!DNL Experience Platform] as batch files. バッチとは、1 つの単位として取り込まれる 1 つ以上のファイルで構成されるデータの単位です。取り込まれたバッチには、正常に取り込まれたレコードの数と、失敗したレコードの数、および関連するエラーメッセージを示すメタデータが提供されます。
 
-フラットなCSVファイル(XDMスキーマにマップ)やParketデータフレームなど、手動でアップロードしたデータファイルは、この方法を使用して取り込む必要があります。
+フラットな CSV ファイル（XDM スキーマにマッピングされる）や Parket データフレームなど、手動でアップロードしたデータファイルは、この方法を使用して取り込む必要があります。
 
-See the [batch ingestion overview](./batch-ingestion/overview.md) for more information.
+詳しくは、[バッチ取り込みの概要](./batch-ingestion/overview.md)を参照してください。
 
 ## ストリーミング取り込み
 
-ストリーミング取り込みを使用すると、クライアントおよびサーバ側のデバイスからデータをリアルタイム [!DNL Experience Platform] に送信できます。 [!DNL Platform] は、受信したエクスペリエンスデータをストリーミングするデータ入力の使用をサポートしています。このデータ入力は、Data Lake内のストリーミング対応データセット内で保持されます。 データ入力は、収集したデータを自動的に認証するように設定でき、信頼できるソースからのデータであることを確認できます。
+Streaming ingestion allows you to send data from client- and server-side devices to [!DNL Experience Platform] in real-time. [!DNL Platform] では、受信したエクスペリエンスデータをストリーミングするためのデータインレットの使用をサポートしています。このデータインレットは、データレイク内のストリーミング対応データセットで保持されます。データインレットは、収集したデータを自動的に認証するように設定でき、信頼できるソースからのデータであることを確認できます。
 
-See the [streaming ingestion overview](./streaming-ingestion/overview.md) for more information.
+詳しくは、[ストリーミング取り込みの概要](./streaming-ingestion/overview.md)を参照してください。
 
 ## ソース
 
-[!DNL Experience Platform] 様々なデータプロバイダーへのソース接続を設定できます。 これらの接続を使用すると、外部データソースの認証、インジェストの実行時間の設定、インジェストスループットの管理を行うことができます。
+[!DNL Experience Platform] では、様々なデータプロバイダーへのソース接続を設定できます。これらの接続を使用すると、外部データソースの認証、取り込みの実行時間の設定、取り込みスループットの管理をおこなうことができます。
 
-ソース接続は、他のアドビアプリケーション(アドビのAnalyticsやAdobe Audience Managerなど)、サードパーティのクラウドストレージソース( [!DNL Azure Blob]S3、FTPサーバー、SFTPサーバーなど)、およびサードパーティのCRMシステム( [!DNL Amazon] と [!DNL Microsoft Dynamics][!DNL Salesforce]など)からデータを収集するように設定できます。
+Source connections can be configured to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon] S3, FTP servers, and SFTP servers), and third-party CRM systems (such as [!DNL Microsoft Dynamics] and [!DNL Salesforce]).
 
-See the [Sources overview](../sources/home.md) for more information.
+詳しくは、[ソースの概要](../sources/home.md)を参照してください。
 
-## 次の手順とその他のリソース
+## 次の手順 およびその他のリソース
 
-このドキュメントでは、の様々な側面について簡単に説明し [!DNL Data Ingestion] ま [!DNL Experience Platform]した。 各取り込み方法の概要に関するドキュメントを引き続き読み、それぞれの機能、使用例、ベストプラクティスについて理解してください。 また、以下のインジェストの概要ビデオを見て、学習内容を伝えることもできます。 取り込んだレコードのメタデータを [!DNL Experience Platform] 追跡する方法について詳しくは、 [Catalog Serviceの概要を参照してください](../catalog/home.md)。
+This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. 各取り込み方法の概要ドキュメントを引き続き参照して、それぞれの機能、ユースケース、ベストプラクティスをよく理解してください。また、以下のインジェストの概要ビデオを見て、学習内容を伝えることもできます。 For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).
 
 >[!WARNING]
 >
