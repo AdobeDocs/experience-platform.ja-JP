@@ -7,29 +7,29 @@ translation-type: tm+mt
 source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
 source-wordcount: '1420'
-ht-degree: 2%
+ht-degree: 66%
 
 ---
 
 
 # プロファイルシステムジョブエンドポイント（削除要求）
 
-Adobe Experience Platformを使用すると、複数のソースからデータを取り込み、個々の顧客に対して堅牢なプロファイルを構築できます。 に取り込ま [!DNL Platform] れたデータは、データストアと共 [!DNL Data Lake] に [!DNL Real-time Customer Profile] データストアに保存されます。 不要になった、または誤って追加されたデータを削除するために、プロファイルストアからデータセットまたはバッチを削除する必要が生じる場合があります。 これには、 [!DNL Real-time Customer Profile] APIを使用して [!DNL Profile][!DNL delete request]「」とも呼ばれるシステムジョブを作成する必要があります。このジョブは、必要に応じて変更、監視または削除することもできます。
+Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。に取り込ま [!DNL Platform] れたデータは、データストアと共 [!DNL Data Lake] に [!DNL Real-time Customer Profile] データストアに保存されます。 不要になった、または誤って追加されたデータを削除するために、プロファイルストアからデータセットまたはバッチを削除する必要が生じる場合があります。 This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, also known as a &quot;[!DNL delete request]&quot;, that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
->からデータセットまたはバッチを削除する場合 [!DNL Data Lake]は、 [Catalog Serviceの概要](../../catalog/home.md) を参照してください。
+>If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、に含まれてい [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)ます。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
-## 表示の削除要求
+## 削除リクエストの表示
 
-削除リクエストは、長時間にわたる非同期プロセスです。つまり、組織で複数の削除リクエストを一度に実行している場合があります。 組織が現在実行しているすべての削除要求を表示するには、エンドポイントに対してGET要求を実行し `/system/jobs` ます。
+削除リクエストは長時間実行される非同期プロセスです。つまり、組織が複数の削除リクエストを一度に実行している場合があります。組織で現在実行中のすべての削除リクエストを表示するには、`/system/jobs` エンドポイントに対して GET リクエストを実行できます。
 
-また、オプションのクエリパラメーターを使用して、応答で返される削除要求のリストをフィルタリングすることもできます。 複数のパラメーターを使用する場合は、各パラメーターをアンパサンド(&amp;)で区切ります。
+また、オプションのクエリーパラメーターを使用して、応答で返される削除リクエストのリストをフィルタリングすることもできます。複数のパラメーターを使用する場合は、各パラメーターをアンパサンド（&amp;）で区切ります。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /system/jobs
@@ -38,10 +38,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | パラメーター | 説明 |
 |---|---|
-| `start` | リクエストの作成時間に従って、返される結果のページをオフセットします。 例: *`start=4`* |
-| `limit` | 返す結果の数を制限する。 例: *`limit=10`* |
-| `page` | リクエストの作成時刻に従って、特定のページの結果を返します。 例: ***`page=2`*** |
-| `sort` | 特定のフィールドによる結果の昇順(*`asc`*)または降順(**`desc`**)での並べ替え。 結果の複数ページを返す場合、並べ替えパラメーターは機能しません。 例: `sort=batchId:asc` |
+| `start` | リクエストの作成時刻に従って、返された結果のページをオフセットします。例：*`start=4`* |
+| `limit` | 返す結果の数を制限します。例：*`limit=10`* |
+| `page` | リクエストの作成時刻に従って、特定のページの結果を返します。例: ***`page=2`*** |
+| `sort` | 特定のフィールドで結果を昇順（*`asc`*）または降順（**`desc`**）で並べ替えます。結果の複数ページを返す場合、並べ替えパラメーターは機能しません。例：`sort=batchId:asc` |
 
 **リクエスト**
 
@@ -54,9 +54,9 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**応答**
+**応答** 
 
-応答には、「子」配列が含まれ、各削除リクエストに対して、そのリクエストの詳細を含むオブジェクトが1つずつ含まれます。
+応答には、各削除リクエストのオブジェクトを持つ「子」配列が含まれ、そのリクエストの詳細が含まれます。
 
 ```json
 {
@@ -91,24 +91,24 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `_page.count` | 要求の合計数。 この応答は領域のために切り捨てられました。 |
-| `_page.next` | 検索結果のページが別に存在する場合は、 [参照リクエストのID値を指定した値に置き換えて](#view-a-specific-delete-request)`"next"` 、次の検索結果ページを表示します。 |
-| `jobType` | 作成するジョブのタイプ。 この場合、常に戻り `"DELETE"`ます。 |
-| `status` | 削除リクエストのステータス。 Possible values are `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | 処理されたレコードの数(`"recordsProcessed"`)と、リクエストの処理が完了した秒数、またはリクエストの完了に要した時間(`"timeTakenInSec"`)を含むオブジェクト。 |
+| `_page.count` | リクエストの合計数。この応答はスペースを節約するために切り捨てられています。 |
+| `_page.next` | If an additional page of results exists, view the next page of results by replacing the ID value in a [lookup request](#view-a-specific-delete-request) with the `"next"` value provided. |
+| `jobType` | 作成されるジョブのタイプ。In this case, it will always return `"DELETE"`. |
+| `status` | 削除リクエストのステータス。Possible values are `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | An object that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
 
-## Create a delete request {#create-a-delete-request}
+## 削除リクエストの作成 {#create-a-delete-request}
 
-新しい削除リクエストを開始するには、エンドポイントへのPOSTリクエストを使用します。このリクエストでは、削除するデータセットまたはバッチのIDがリクエストの本文に含まれています。 `/systems/jobs`
+新しい削除リクエストの開始は、`/systems/jobs` エンドポイントへの POST リクエストを通じて行われます。このエンドポイントでは、削除するデータセットまたはバッチの ID がリクエストの本文に表示されます。 
 
 ### データセットの削除
 
-データセットを削除するには、データセットIDをPOSTリクエストの本文に含める必要があります。 この操作により、特定のデータセットのALLデータが削除されます。 [!DNL Experience Platform] レコードと時系列の両方のスキーマに基づいてデータセットを削除できます。
+データセットを削除するには、データセット ID を POST リクエストの本文に含める必要があります。この操作により、特定のデータセットのすべてのデータが削除されます。[!DNL Experience Platform] では、レコードスキーマと時系列スキーマの両方に基づいたデータセットを削除できます。
 
 >[!CAUTION]
-> UIを使用して [!DNL Profile][!DNL Experience Platform] 有効なデータセットを削除しようとすると、データセットの取り込みは無効になりますが、削除は、APIを使用して削除リクエストを作成するまで行われません。 詳しくは、このドキュメントの [付録](#appendix) を参照してください。
+> When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. 詳しくは、このドキュメントの[付録](#appendix)を参照してください。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /system/jobs
@@ -131,11 +131,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `dataSetId` | **（必須）** 削除するデータセットのID。 |
+| `dataSetId` | **（必須）**&#x200B;削除するデータセットの ID。 |
 
-**応答**
+**応答** 
 
-正常に完了すると、新たに作成された削除要求の詳細が返されます。この詳細には、その要求に対して、一意の、システム生成の、読み取り専用のIDが含まれます。 これは、リクエストを検索し、そのステータスを確認するために使用できます。 作成時 **`status`** のリクエストは、処理が開始され *`"NEW"`* るまでです。 応答 **`dataSetId`** 内のは、要求で ***`dataSetId`*** 送信されたものと一致する必要があります。
+正常な応答は、新しく作成された削除リクエストの詳細を返します。この詳細には、システムで生成された一意の読み取り専用 ID が含まれます。これは、リクエストを検索し、そのステータスを確認するために使用できます。作成時のリクエストの **`status`** は、処理が開始されるまで *`"NEW"`* です。応答内の **`dataSetId`** は、リクエストで送信された ***`dataSetId`*** と一致する必要があります。
 
 ```json
 {
@@ -151,19 +151,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `id` | 削除要求の一意の、システム生成の読み取り専用ID。 |
-| `dataSetId` | POSTリクエストで指定された、データセットのID。 |
+| `id` | システムによって生成された、削除リクエストの一意の読み取り専用 ID。 |
+| `dataSetId` | POST リクエストで指定されたデータセットの ID。 |
 
 ### バッチの削除
 
-バッチを削除するには、バッチIDをPOSTリクエストの本文に含める必要があります。 レコードスキーマに基づくデータセットのバッチは削除できないことをお勧めします。 時系列スキーマに基づくデータセットのバッチのみを削除できます。
+バッチを削除するには、バッチ ID を POST リクエストの本文に含める必要があります。レコードスキーマに基づくデータセットのバッチは削除できません。時系列スキーマに基づくデータセットのバッチのみが削除できます。
 
 >[!NOTE]
-> レコードのスキーマに基づいてデータセットのバッチを削除できないのは、レコードタイプのデータセットバッチによって以前のレコードが上書きされるので、「元に戻す」や削除を行うことができないためです。 レコードのスキーマに基づいてデータセットに誤ったバッチが及ぼす影響を取り除く唯一の方法は、誤ったレコードを上書きするために、バッチを正しいデータで再取り込みすることです。
+> レコードスキーマに基づくデータセットのバッチを削除できないのは、レコードタイプのデータセットバッチが以前のレコードを上書きするため、「取り消し」または削除できないためです。レコードのスキーマに基づいてデータセットに誤ったバッチが及ぼす影響を取り除く唯一の方法は、誤ったレコードを上書きするために、バッチを正しいデータで再取り込みすることです。
 
-レコードと時系列の動作について詳しくは、 [概要の「XDMデータ動作](../../xdm/home.md#data-behaviors) 」の [!DNL XDM System] 節を参照してください。
+For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the [!DNL XDM System] overview.
 
-**API形式**
+**API 形式**
 
 ```http
 POST /system/jobs
@@ -186,11 +186,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `batchId` | **（必須）** 削除するバッチのID。 |
+| `batchId` | **（必須）**&#x200B;削除するバッチの ID。 |
 
-**応答**
+**応答** 
 
-正常に完了すると、新たに作成された削除要求の詳細が返されます。この詳細には、その要求に対して、一意の、システム生成の、読み取り専用のIDが含まれます。 これは、リクエストを検索し、そのステータスを確認するために使用できます。 作成時 `"status"` のリクエストは、処理が開始され `"NEW"` るまでです。 応答 `"batchId"` 内のは、要求で `"batchId"` 送信されたものと一致する必要があります。
+正常な応答は、新しく作成された削除リクエストの詳細を返します。この詳細には、システムで生成された一意の読み取り専用 ID が含まれます。これは、リクエストを検索し、そのステータスを確認するために使用できます。作成時のリクエストの `"status"` は、処理が開始されるまで `"NEW"` です。応答内の `"batchId"` は、リクエストで送信された `"batchId"` と一致する必要があります。
 
 ```json
 {
@@ -206,10 +206,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `id` | 削除要求の一意の、システム生成の読み取り専用ID。 |
-| `batchId` | POSTリクエストで指定された、バッチのID。 |
+| `id` | システムによって生成された、削除リクエストの一意の読み取り専用 ID。 |
+| `batchId` | POST リクエストで指定されたバッチの ID。 |
 
-Recordデータセットバッチの削除リクエストを開始しようとすると、次のような400レベルのエラーが発生します。
+レコードデータセットバッチの削除リクエストを開始しようとすると、次のような 400 レベルのエラーが発生します。
 
 ```json
 {
@@ -227,9 +227,9 @@ Recordデータセットバッチの削除リクエストを開始しようと�
 
 ## 特定の削除リクエストの表示 {#view-a-specific-delete-request}
 
-特定の削除リクエスト（そのステータスなどの詳細を含む）を表示するには、エンドポイントに対してルックアップ(GET)リクエストを実行し、削除リクエストのIDをパスに含めます。 `/system/jobs`
+特定の削除リクエスト（ステータスなどの詳細を含む）を表示するには、`/system/jobs` エンドポイントに対してルックアップ（GET）リクエストを実行し、削除リクエストの ID をパスに含めることができます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /system/jobs/{DELETE_REQUEST_ID}
@@ -237,7 +237,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 | パラメーター | 説明 |
 |---|---|
-| `{DELETE_REQUEST_ID}` | **（必須）** 表示する削除リクエストのID。 |
+| `{DELETE_REQUEST_ID}` | **（必須）**&#x200B;表示する削除リクエストの ID。 |
 
 **リクエスト**
 
@@ -250,9 +250,9 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**応答**
+**応答** 
 
-応答には、更新されたステータスなど、削除リクエストの詳細が表示されます。 応答内の削除要求のIDは、要求パスで送信されるIDと一致する必要があります。
+応答には、更新されたステータスを含む、削除リクエストの詳細が表示されます。応答の削除リクエストの ID は、リクエストパスで送信された ID と一致する必要があります。
 
 ```json
 {
@@ -269,17 +269,17 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `jobType` | 作成中のジョブのタイプ。この場合は常に返され `"DELETE"`ます。 |
-| `status` | 削除リクエストのステータス。 Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | 処理されたレコードの数(`"recordsProcessed"`)と、リクエストの処理が完了した秒数、またはリクエストの完了に要した時間(`"timeTakenInSec"`)を含む配列。 |
+| `jobType` | The type of job being created, in this case it will always return `"DELETE"`. |
+| `status` | 削除リクエストのステータス。Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | An array that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
 
-削除要求のステータスが表示され `"COMPLETED"` たら、データアクセスAPIを使用して削除したデータにアクセスしようとすることで、そのデータが削除されたことを確認できます。 データアクセスAPIを使用してデータセットやバッチにアクセスする方法については、 [データアクセスに関するドキュメントを参照してください](../../data-access/home.md)。
+Once the delete request status is `"COMPLETED"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. データアクセス API を使用してデータセットやバッチにアクセスする手順については、[データアクセスのドキュメント](../../data-access/home.md)を参照してください。
 
-## 削除要求の削除
+## 削除リクエストの削除
 
-[!DNL Experience Platform] 以前のリクエストを削除できます。削除ジョブが完了しなかった場合や、処理段階で停止した場合など、様々な理由で役立つ場合があります。 削除要求を削除するには、エンドポイントに対してDELETE要求を実行し、削除する削除要求のIDを要求パスに含め `/system/jobs` ます。
+[!DNL Experience Platform] では、以前のリクエストを削除できます。これは、削除ジョブが完了しなかった、処理段階で停止したなど、様々な理由で役立つ場合があります。削除リクエストを削除するには、`/system/jobs` エンドポイントに対して DELETE リクエストを実行し、削除する削除リクエストの ID をリクエストパスに含めます。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /system/jobs/{DELETE_REQUEST_ID}
@@ -287,7 +287,7 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 
 | パラメーター | 説明 |
 |---|---|
-| {DELETE_要求_ID} | 削除する削除リクエストのID。 |
+| {DELETE_REQUEST_ID} | 削除する削除リクエストの ID。 |
 
 **リクエスト**
 
@@ -300,26 +300,26 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**応答**
+**応答** 
 
-削除が成功すると、HTTPステータス200(OK)と空の応答本文が返されます。 削除リクエストが削除されたことを確認するには、IDに基づいて削除リクエストを表示するGETリクエストを実行します。 削除要求が削除されたことを示すHTTPステータス404 （見つかりません）が返されます。
+削除リクエストが成功すると、HTTP ステータス 200（OK）と空の応答本文が返されます。GET リクエストを実行して ID で削除リクエストを表示すると、リクエストが削除されたことを確認できます。削除リクエストが削除されたことを示す HTTP ステータス 404（不検知）が返されます。
 
 ## 次の手順
 
-データセットやバッチの削除手順が [!DNL Profile Store] 内からわかったので、誤って追加されたデータや組織で不要になったデータを安全に削除でき [!DNL Experience Platform]ます。 削除のリクエストは元に戻せないので、今は不要であり、将来は不要になると確信しているデータのみを削除するようにしてください。
+Now that you know the steps involved in deleting datasets and batches from the [!DNL Profile Store] within [!DNL Experience Platform], you can safely delete data that has been added erroneously or that your organization no longer needs. 削除リクエストは元に戻せないので、今は不要で将来は不要になると確信しているデータのみを削除するようにしてください。
 
 ## 付録 {#appendix}
 
-次の情報は、からデータセットを削除する操作の補足情報で [!DNL Profile Store]す。
+The following information is supplemental to the act of deleting a dataset from the [!DNL Profile Store].
 
-### UIを使用したデータセットの削除 [!DNL Experience Platform]
+### Deleting a dataset using the [!DNL Experience Platform] UI
 
-ユーザーインターフェイスを使用して有効になっているデータセットを削除する [!DNL Experience Platform][!DNL Profile][!DNL Experience Data Lake]と、「このデータセットを &#39;p[!DNL rofile systems jobs]&#39; APIを使用して、このデータセットをから削除 [!DNL Profile Service]します。」
+When using the [!DNL Experience Platform] user interface to delete a dataset that has been enabled for [!DNL Profile], a dialog opens asking, &quot;Are you sure you want to delete this dataset from the [!DNL Experience Data Lake]? &#39;p[!DNL rofile systems jobs]&#39; APIを使用して、このデータセットをから削除 [!DNL Profile Service]します。」
 
-UIの「 **[!UICONTROL 削除]** 」をクリックすると、データセットの取り込みが無効になりますが、バックエンドのデータセットは自動的に削除されません。 データセットを完全に削除するには、このガイドの手順に従って、削除リクエストを手動で作成し、削除リクエストを [作成する必要があります](#create-a-delete-request)。
+UI の「**[!UICONTROL 削除]**」をクリックすると、データセットの取得は無効になりますが、バックエンドのデータセットは自動的には削除されません。データセットを完全に削除するには、このガイドにある[削除リクエストの作成](#create-a-delete-request)手順を使用して、削除リクエストを手動で作成する必要があります。
 
-次の図に、UIを使用して [!DNL Profile]有効なデータセットを削除しようとした場合の警告を示します。
+The following image shows the warning when attempting to delete a [!DNL Profile]-enabled dataset using the UI.
 
 ![](../images/delete-profile-dataset.png)
 
-データセットの操作の詳細については、まず [データセットの概要を読んでください](../../catalog/datasets/overview.md)。
+データセットの操作の詳細については、まず「[データセットの概要](../../catalog/datasets/overview.md)」を読んでください。
