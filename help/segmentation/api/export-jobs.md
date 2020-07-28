@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 2%
+ht-degree: 38%
 
 ---
 
@@ -22,15 +22,15 @@ ht-degree: 2%
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、 [入門ガイドを参照して](./getting-started.md) 、必要なヘッダーやAPI呼び出し例を読む方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
 ## 書き出しジョブのリストの取得 {#retrieve-list}
 
-エンドポイントにGETリクエストを作成して、IMS組織のすべてのエクスポートジョブのリストを取得でき `/export/jobs` ます。
+IMS 組織のすべての書き出しジョブのリストを取得するには、`/export/jobs` エンドポイントに GET リクエストを実行します。
 
-**API形式**
+**API 形式**
 
-エンドポイントでは、結果のフィルタリングに役立ついくつかのクエリパラメーターが `/export/jobs` サポートされています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。
+エンドポイントでは、結果のフィルタリングに役立ついくつかのクエリパラメーターが `/export/jobs` サポートされています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /export/jobs
@@ -43,7 +43,7 @@ GET /export/jobs?status={STATUS}
 | --------- | ----------- |
 | `{LIMIT}` | 返される書き出しジョブの数を指定します。 |
 | `{OFFSET}` | 結果のページのオフセットを指定します。 |
-| `{STATUS}` | ステータスに基づいて結果をフィルターします。 サポートされる値は、「NEW」、「SUCCEEDED」および「FAILED」です。 |
+| `{STATUS}` | ステータスに基づいて結果をフィルターします。サポートされる値は、「NEW」、「SUCCEEDED」および「FAILED」です。 |
 
 **リクエスト**
 
@@ -57,7 +57,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 次の応答は、要求パスに指定されたクエリパラメーターに基づいて、正常に完了した書き出しジョブのリストを持つHTTPステータス200を返します。
 
@@ -199,9 +199,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `destination` | エクスポートされたデータのエクスポート先情報：<ul><li>`datasetId`: データがエクスポートされたデータセットのID。</li><li>`segmentPerBatch`: セグメントIDが統合されているかどうかを示すBoolean値。 値が「false」の場合は、すべてのセグメントIDが1つのバッチIDにエクスポートされることを意味します。 値が「true」の場合は、1つのセグメントIDが1つのバッチIDにエクスポートされることを意味します。 **注意：** この値をtrueに設定すると、バッチエクスポートのパフォーマンスに影響する場合があります。</li></ul> |
-| `fields` | カンマで区切った、書き出されたフィールドのリスト。 |
+| `fields` | コンマで区切った、書き出すフィールドのリスト。 |
 | `schema.name` | データをエクスポートするデータセットに関連付けられているスキーマの名前。 |
-| `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`: プロファイルのエクスポート先のセグメントID。</li><li>`segmentNs`: 指定したのセグメント名前空間 `segmentID`。</li><li>`status`: のステータスフィルターを提供する文字列の配列で `segmentID`す。 デフォルトでは、 `status` は、現在の時間にセグメントに含まれるすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。 使用できる値は次のとおりです。 「reliated」、「existing」および「exited」。</li></ul> |
+| `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`: プロファイルのエクスポート先のセグメントID。</li><li>`segmentNs`: 指定したのセグメント名前空間 `segmentID`。</li><li>`status`: のステータスフィルターを提供する文字列の配列で `segmentID`す。 デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。使用できる値は次のとおりです。 「reliated」、「existing」および「exited」。</li></ul> |
 | `mergePolicy` | エクスポートしたデータのポリシー情報をマージします。 |
 | `metrics.totalTime` | 書き出しジョブの実行に要した合計時間を示すフィールドです。 |
 | `metrics.profileExportTime` | プロファイルの書き出しに要した時間を示すフィールドです。 |
@@ -210,9 +210,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 
 ## 新しい書き出しジョブの作成 {#create}
 
-エンドポイントにPOSTリクエストを作成して、新しい書き出しジョブを作成でき `/export/jobs` ます。
+`/export/jobs` エンドポイントに POST リクエストを実行することで、新しい書き出しジョブを作成できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /export/jobs
@@ -274,22 +274,22 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `fields` | カンマで区切った、書き出されたフィールドのリスト。 空白の場合、すべてのフィールドが書き出されます。 |
-| `mergePolicy` | 書き出されたデータを管理するマージポリシーを指定します。 複数のセグメントを書き出す場合は、このパラメーターを含めます。 指定しなかった場合、エクスポートは指定したセグメントと同じマージポリシーを使用します。 |
-| `filter` | 以下に示すサブプロパティに応じて、ID、認定時間、または取り込み時間で、書き出しジョブに含めるセグメントを指定するオブジェクト。 空白の場合、すべてのデータがエクスポートされます。 |
-| `filter.segments` | 書き出すセグメントを指定します。 この値を省略すると、すべてのプロファイルのすべてのデータがエクスポートされます。 次のフィールドを含むセグメントオブジェクトの配列を受け入れます。<ul><li>`segmentId`: **(使用する場合は必須`segments`)** プロファイルのセグメントIDをエクスポートします。</li><li>`segmentNs` *（オプション）* 指定したのセグメント名前空間 `segmentID`。</li><li>`status` *（オプション）* 、のステータスフィルタを提供する文字列の配列 `segmentID`。 デフォルトでは、 `status` は、現在の時間にセグメントに含まれるすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。 使用できる値は次のとおりです。 `"realized"`、 `"existing"`および `"exited"`。</li></ul> |
-| `filter.segmentQualificationTime` | セグメントクオリフィケーション時間に基づいてフィルターします。 開始時間及び/又は終了時間を提供することができる。 |
-| `filter.segmentQualificationTime.startTime` | 特定のステータスのセグメントIDに対するセグメントクオリフィケーション開始時間。 これは指定されていません。セグメントID資格の開始時間に対するフィルターはありません。 タイムスタンプは、 [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
-| `filter.segmentQualificationTime.endTime` | 特定のステータスのセグメントIDに対するセグメントクオリフィケーションの終了時間。 これは指定されていません。セグメントID資格の終了時間にフィルターは適用されません。 タイムスタンプは、 [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
-| `filter.fromIngestTimestamp ` | 書き出したプロファイルを、このタイムスタンプの後に更新されたアイテムのみに制限します。 タイムスタンプは、 [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 <ul><li>`fromIngestTimestamp` を **プロファイルに対して設定する場合**、次の条件を満たします。 マージされた更新されたプロファイルが指定されたタイムスタンプより大きい場合に、マージされたすべてのタイムスタンプを含めます。 オペランドをサポート `greater_than` します。</li><li>`fromIngestTimestamp` の **イベント**: このタイムスタンプの後に取り込まれるすべてのイベントは、結果のプロファイル結果に応じて書き出されます。 これは、イベント時間そのものではなく、イベントの取り込み時間です。</li> |
-| `filter.emptyProfiles` | 空のプロファイルをフィルタリングするかどうかを示すboolean値です。 プロファイルには、プロファイルレコード、ExperienceEventレコード、またはその両方を含めることができます。 プロファイルレコードがなく、ExperienceEventレコードのみのプロファイルは、「emptyProfiles」と呼ばれます。 プロファイルストア内のすべてのプロファイル（「emptyProfiles」も含む）を書き出すには、の値をに設定 `emptyProfiles` し `true`ます。 をに設定 `emptyProfiles``false`すると、ストア内のプロファイルレコードを持つプロファイルのみがエクスポートされます。 デフォルトでは、 `emptyProfiles` 属性が含まれていない場合、プロファイルレコードを含むプロファイルのみがエクスポートされます。 |
-| `additionalFields.eventList` | 次の1つ以上の設定を指定して、子オブジェクトまたは関連オブジェクト用に書き出す時系列イベントフィールドを制御します。<ul><li>`fields`: 書き出すフィールドを制御します。</li><li>`filter`: 関連するオブジェクトから含まれる結果を制限する基準を指定します。 エクスポートに必要な最小値（通常は日付）。</li><li>`filter.fromIngestTimestamp`: 指定されたタイムスタンプの後に取り込まれたものへの時系列イベントのフィルター。 これは、イベント時間そのものではなく、イベントの取り込み時間です。</li><li>`filter.toIngestTimestamp`: 指定したタイムスタンプより前に取り込まれたタイムスタンプにフィルターします。 これは、イベント時間そのものではなく、イベントの取り込み時間です。</li></ul> |
-| `destination` | **（必須）** 、書き出されたデータに関する情報：<ul><li>`datasetId`: **（必須）** 、データをエクスポートするデータセットのID。</li><li>`segmentPerBatch`: *（オプション）* Boolean値。指定しなかった場合のデフォルト値は「false」です。 値が「false」の場合、すべてのセグメントIDが1つのバッチIDにエクスポートされます。 値が「true」の場合、1つのセグメントIDが1つのバッチIDにエクスポートされます。 値を「true」に設定すると、バッチエクスポートのパフォーマンスに影響する場合があります。</li></ul> |
-| `schema.name` | **（必須）** 、データをエクスポートするデータセットに関連付けられているスキーマの名前。 |
+| `fields` | コンマで区切った、書き出すフィールドのリスト。空白の場合、すべてのフィールドが書き出されます。 |
+| `mergePolicy` | 書き出されたデータを管理するマージポリシーを指定します。 複数のセグメントがエクスポートされる場合は、このパラメーターを含めます。指定されなかった場合、書き出しは指定されたセグメントと同じ結合ポリシーを使用します。 |
+| `filter` | 以下に示すサブプロパティに応じて、ID、認定時間、または取り込み時間で、書き出しジョブに含めるセグメントを指定するオブジェクト。 空白の場合、すべてのデータが書き出しされます。 |
+| `filter.segments` | 書き出すセグメントを指定します。 この値を省略すると、すべてのプロファイルのすべてのデータがエクスポートされます。次のフィールドを含むセグメントオブジェクトの配列を受け入れます。<ul><li>`segmentId`：**（`segments`を使用する場合は必須）**&#x200B;エクスポートするプロファイルのセグメント ID。</li><li>`segmentNs` *（オプション）*&#x200B;指定した `segmentID` のセグメント名前空間。</li><li>`status` *（オプション）*`segmentID` のステータスフィルターを提供する文字列の配列。デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。`"realized"`、`"existing"`、`"exited"` などの値が使用されます。</li></ul> |
+| `filter.segmentQualificationTime` | セグメントクオリフィケーション時間に基づいてフィルターします。 開始時間および/または終了時間を指定できます。 |
+| `filter.segmentQualificationTime.startTime` | 特定のステータスのセグメントIDに対するセグメントクオリフィケーション開始時間。 指定されていない場合、セグメント ID 認定の開始時間にフィルターは適用されません。タイムスタンプは [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
+| `filter.segmentQualificationTime.endTime` | 特定のステータスのセグメントIDに対するセグメントクオリフィケーションの終了時間。 指定されていない場合、セグメント ID 認定の終了時間にフィルターは適用されません。タイムスタンプは [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
+| `filter.fromIngestTimestamp ` | 書き出したプロファイルを、このタイムスタンプの後に更新されたアイテムのみに制限します。 タイムスタンプは [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 <ul><li>**プロファイル**&#x200B;の `fromIngestTimestamp`（指定されている場合）：更新された結合タイムスタンプが指定タイムスタンプよりも大きいすべての結合プロファイルが含まれます。`greater_than` オペランドがサポートされます。</li><li>**イベント**&#x200B;の `fromIngestTimestamp`：このタイムスタンプの後に取り込まれるすべてのイベントは、プロファイルの結果に応じてエクスポートされます。これは、イベント時間自体ではなく、イベントの取得時間です。</li> |
+| `filter.emptyProfiles` | 空のプロファイルをフィルタリングするかどうかを示すboolean値です。 プロファイルには、プロファイルレコード、ExperienceEventレコード、またはその両方を含めることができます。 プロファイルレコードがなく、ExperienceEventレコードのみのプロファイルは、「emptyProfiles」と呼ばれます。 To export all profiles in the profile store, including the &quot;emptyProfiles&quot;, set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing profile records are exported. |
+| `additionalFields.eventList` | 次の1つ以上の設定を指定して、子オブジェクトまたは関連オブジェクト用に書き出す時系列イベントフィールドを制御します。<ul><li>`fields`：エクスポートするフィールドを制御します。</li><li>`filter`：関連オブジェクトから取得される結果を制限する基準を指定します。エクスポートに必要な最小値（通常は日付）が基準として予期されます。</li><li>`filter.fromIngestTimestamp`: 指定されたタイムスタンプの後に取り込まれたものへの時系列イベントのフィルター。 これは、イベント時間自体ではなく、イベントの取得時間です。</li><li>`filter.toIngestTimestamp`: 指定したタイムスタンプより前に取り込まれたタイムスタンプにフィルターします。 これは、イベント時間自体ではなく、イベントの取得時間です。</li></ul> |
+| `destination` | **（必須）** 、書き出されたデータに関する情報：<ul><li>`datasetId`：**（必須）**&#x200B;データのエクスポート先のデータセットの ID。</li><li>`segmentPerBatch`: *（オプション）* Boolean値。指定しなかった場合のデフォルト値は「false」です。 値が「false」の場合、すべてのセグメントIDが1つのバッチIDにエクスポートされます。 値が「true」の場合、1つのセグメントIDが1つのバッチIDにエクスポートされます。 値を「true」に設定すると、バッチエクスポートのパフォーマンスに影響する場合があります。</li></ul> |
+| `schema.name` | **（必須）**&#x200B;データのエクスポート先のデータセットに関連付けられているスキーマの名前。 |
 
-**応答**
+**応答** 
 
-正常に応答すると、新しく作成した書き出しジョブの詳細と共に、HTTPステータス200が返されます。
+正常な応答は、HTTP ステータス 200 と、新しく作成された書き出しジョブの詳細を返します。
 
 ```json
 {
@@ -379,9 +379,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 ## 特定の書き出しジョブの取得 {#get}
 
-エンドポイントにGETリクエストを送信し、取得するエクスポートジョブのIDをリクエストパスに指定することで、特定のエクスポートジョブに関する詳細な情報を取得でき `/export/jobs` ます。
+You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the ID of the export job you wish to retrieve in the request path.
 
-**API形式**
+**API 形式**
 
 ```http
 GET /export/jobs/{EXPORT_JOB_ID}
@@ -389,7 +389,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{EXPORT_JOB_ID}` | アクセス `id` する書き出しジョブの名前。 |
+| `{EXPORT_JOB_ID}` | アクセスするエクスポートジョブの `id`。 |
 
 **リクエスト**
 
@@ -403,7 +403,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 
 **応答**
 
-正常に応答すると、指定された書き出しジョブに関する詳細情報と共に、HTTPステータス200が返されます。
+正常な応答は、HTTP ステータス 200 と、指定された書き出しジョブに関する詳細情報を返します。
 
 ```json
 {
@@ -464,10 +464,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `destination` | エクスポートされたデータのエクスポート先情報：<ul><li>`datasetId`: データがエクスポートされたデータセットのID。</li><li>`segmentPerBatch`: セグメントIDが統合されているかどうかを示すBoolean値。 値がの場合は、すべてのセグメントIDが単一のバッチIDになったことを `false` 意味します。 値がの場合、1つのセグメントIDが1つのバッチIDにエクスポートされます。 `true`</li></ul> |
-| `fields` | カンマで区切った、書き出されたフィールドのリスト。 |
+| `destination` | エクスポートされたデータのエクスポート先情報：<ul><li>`datasetId`: データがエクスポートされたデータセットのID。</li><li>`segmentPerBatch`: セグメントIDが統合されているかどうかを示すBoolean値。 A value of `false` means all the segment IDs were into a single batch ID. 値がの場合、1つのセグメントIDが1つのバッチIDにエクスポートされます。 `true`</li></ul> |
+| `fields` | コンマで区切った、書き出すフィールドのリスト。 |
 | `schema.name` | データをエクスポートするデータセットに関連付けられているスキーマの名前。 |
-| `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`: エクスポートするプロファイルのセグメントID。</li><li>`segmentNs`: 指定したのセグメント名前空間 `segmentID`。</li><li>`status`: のステータスフィルターを提供する文字列の配列で `segmentID`す。 デフォルトでは、 `status` は、現在の時間にセグメントに含まれるすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。 使用できる値は次のとおりです。 「reliated」、「existing」および「exited」。</li></ul> |
+| `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`: エクスポートするプロファイルのセグメントID。</li><li>`segmentNs`: 指定したのセグメント名前空間 `segmentID`。</li><li>`status`: のステータスフィルターを提供する文字列の配列で `segmentID`す。 デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。使用できる値は次のとおりです。 「reliated」、「existing」および「exited」。</li></ul> |
 | `mergePolicy` | エクスポートしたデータのポリシー情報をマージします。 |
 | `metrics.totalTime` | 書き出しジョブの実行に要した合計時間を示すフィールドです。 |
 | `metrics.profileExportTime` | プロファイルの書き出しに要した時間を示すフィールドです。 |
@@ -475,9 +475,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 
 ## 特定の書き出しジョブのキャンセルまたは削除 {#delete}
 
-エンドポイントにDELETEリクエストを送信し、削除するエクスポートジョブのIDをリクエストパスに指定することで、指定したエクスポートジョブを削除するようにリクエストでき `/export/jobs` ます。
+You can request to delete the specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the ID of the export job you wish to delete in the request path.
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /export/jobs/{EXPORT_JOB_ID}
@@ -485,7 +485,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{EXPORT_JOB_ID}` | 削除する書き出しジョブ `id` の名前。 |
+| `{EXPORT_JOB_ID}` | The `id` of the export job you want to delete. |
 
 **リクエスト**
 
@@ -497,9 +497,9 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-正常に応答すると、HTTPステータス204が返され、次のメッセージが表示されます。
+正常な応答は、HTTP ステータス 204 と次のメッセージを返します。
 
 ```json
 {
