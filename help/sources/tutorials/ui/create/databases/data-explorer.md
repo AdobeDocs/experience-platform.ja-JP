@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: UIにAzure Data Explorerソースコネクタを作成する
+title: UIでAzureData Explorerソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
@@ -42,7 +42,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 | `servicePrincipalId` | Data Explorerデータベースへの接続に使用する一意のサービスプリンシパルID。 |
 | `servicePrincipalKey` | Data Explorerデータベースへの接続に使用する一意のサービスプリンシパルキーです。 |
 
-使い始める前に、 [このData Explorerドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)。
+使い始める前に詳しくは、 [このData Explorerドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/management/access-control/how-to-authenticate-with-aad)。
 
 ## アカウントに接続 [!DNL Azure Data Explorer] する
 
@@ -52,15 +52,15 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-[ *[!UICONTROL Databases]* ]カテゴリの下で、[ **[!UICONTROL Azure Data Explorer]** ]を選択し、[+]アイコン(+) **** をクリックして新しいData Explorerコネクタを作成します。
+[ *[!UICONTROL Databases]* ] **[!UICONTROL カテゴリで[]** AzureData Explorer **]を選択し、[+]アイコン(+)** をクリックして新しいData Explorerコネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/data-explorer/catalog.png)
 
-[ *[!UICONTROL Azure Data Explorerに]* 接続]ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+[ *[!UICONTROL AzureData Explorerに]* 接続]ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明および [!DNL Data Explorer] 資格情報を入力します。 完了したら、「 **[!UICONTROL 接続]** 」を選択し、新しいアカウントが確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明および [!DNL Data Explorer] 資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
 
 ![connect](../../../../images/tutorials/create/data-explorer/new.png)
 
