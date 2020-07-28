@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
 source-wordcount: '462'
-ht-degree: 87%
+ht-degree: 95%
 
 ---
 
@@ -26,12 +26,11 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
    ![Adobe Campaign への接続](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. In the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. Adobe Campaign の場合は、**[!UICONTROL Amazon S3]**、**[!UICONTROL SFTP（パスワード）]**、**[!UICONTROL SFTP（SSH キー）]**&#x200B;のいずれかを選択できます。接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
+1. 「宛先の接続」ワークフローで、ストレージの場所の&#x200B;**[!UICONTROL 接続タイプ]**&#x200B;を選択します。Adobe Campaign の場合は、**[!UICONTROL Amazon S3]**、**[!UICONTROL SFTP（パスワード）]**、**[!UICONTROL SFTP（SSH キー）]**&#x200B;のいずれかを選択できます。接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
 
    ![Campaign ウィザードの設定](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   **[!UICONTROL Amazon S3]** 接続の場合は、アクセスキーIDとシークレットアクセスキーを指定する必要があります。
-**[!UICONTROL SFTP（パスワード）]** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
+   **[!UICONTROL AmazonS3 接続]**&#x200B;の場合、アクセスキー ID とシークレットアクセスキーを指定する必要があります。**[!UICONTROL SFTP（パスワード）]** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
 **[!UICONTROL SFTP（SSH キー）]** で接続する場合は、ドメイン、ポート、ユーザー名、SSH キーを指定する必要があります。
 
    ![Campaign 情報の入力](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
@@ -39,13 +38,13 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 1. 「**[!UICONTROL 基本情報]**」で、目的の宛先に関する情報を次のように入力します。
    * **[!UICONTROL 名前]**：宛先の名前を選択します。
    * **[!UICONTROL 説明]**：宛先の説明を入力します。
-   * **[!UICONTROL バケット名]**：*S3 接続用*。Real-time CDP が書き出しデータを CSV またはタブ区切りファイルとして収納する S3 バケットの場所を入力します。
-   * **[!UICONTROL フォルダーパス]**：Real-time CDP が書き出しデータを CSV またはタブ区切りファイルとして格納するストレージの場所へのパスを指定します。
+   * **[!UICONTROL バケット名]**：*S3 接続用*。リアルタイム CDP が書き出しデータを CSV またはタブ区切りファイルとして収納する S3 バケットの場所を入力します。
+   * **[!UICONTROL フォルダーパス]**：リアルタイム CDP が書き出しデータを CSV またはタブ区切りファイルとして格納するストレージの場所へのパスを指定します。
    * **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
 
    ![Campaign の基本情報](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
-1. 上のフィールドに入力したら、 **[!UICONTROL 「作成]** 」をクリックします。 これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
+1. 上記のフィールドに入力した後、「**[!UICONTROL 作成]**」をクリックします。これで宛先が接続され、宛先への[セグメントをアクティブ化](/help/rtcdp/destinations/activate-destinations.md)できます。
 
 ## 宛先属性 {#destination-attributes}
 
@@ -54,4 +53,4 @@ Adobe Campaign の宛先に対して[セグメントをアクティブ化する]
 
 ## Adobe Campaign へのデータインポートの設定 {#import-data-into-campaign}
 
-After connecting Real-time CDP to your [!DNL Amazon S3] or SFTP storage, you must set up the data import from your storage location into Adobe Campaign. これをおこなう方法については、Adobe Campaign ヘルプドキュメントの「[データのインポート](https://docs.adobe.com/content/help/en/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html)」を参照してください。
+After connecting Real-time CDP to your [!DNL Amazon S3] or SFTP storage, you must set up the data import from your storage location into Adobe Campaign. これをおこなう方法については、Adobe Campaign ヘルプドキュメントの「[データのインポート](https://docs.adobe.com/content/help/ja-JP/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html)」を参照してください。
