@@ -7,20 +7,20 @@ translation-type: tm+mt
 source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
 source-wordcount: '742'
-ht-degree: 2%
+ht-degree: 28%
 
 ---
 
 
 # エンドポイントのプレビューと予測
 
-セグメント定義を作成する際に、の見積もりツールとプレビューツールを使用して、表示の概要レベルの情報 [!DNL Adobe Experience Platform] を得ることで、期待されるオーディエンスを確実に分離できます。 **プレビューには** 、セグメント定義の条件を満たすプロファイルのページ分割リストが用意されており、期待どおりの結果と比較できます。 **予測は** 、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報を提供します。
+As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **プレビューは、セグメント定義に適格なプロファイルのページ分割リストを表示するので、結果を予想と比較できます。****予測は** 、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報を提供します。
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、 [入門ガイドを参照して](./getting-started.md) 、必要なヘッダーやAPI呼び出し例を読む方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-## 予測の生成方法
+## 推定の生成方法
 
 データサンプリングがトリガされる方法は、取り込み方法によって異なります。
 
@@ -28,23 +28,23 @@ ht-degree: 2%
 
 ストリーミング取り込みの場合、プロファイルストアは1時間ごとに自動的にスキャンされ、レコード数に少なくとも5%の変更があったかどうかが確認されます。 この条件が満たされると、新しいサンプリングジョブがトリガされます。
 
-スキャンのサンプルサイズは、プロファイルストアのエンティティの全体数によって異なります。 次の表に、これらのサンプルサイズを示します。
+スキャンのサンプルサイズは、プロファイルストアのエンティティの全体数によって異なります。 これらのサンプルサイズを次の表に示します。
 
-| プロファイルストア内のエンティティ | サンプルサイズ |
+| プロファイルストア内のエンティティ数 | サンプルサイズ |
 | ------------------------- | ----------- |
-| 100万未満 | フルデータセット |
-| 1～2千万 | 100万 |
-| 2千万以上 | 合計5% |
+| 100 万未満 | フルデータセット |
+| 100 万～2000 万 | 100 万 |
+| 2000 万以上 | 全体の 5% |
 
 >[!NOTE] 推定値は通常、10 ～ 15秒かかります。まず、記録の数が増えるので、概算と精製から始まります。
 
-## Create a new preview {#create-preview}
+## プレビューの新規作成 {#create-preview}
 
-エンドポイントにPOSTリクエストを作成して、新しいプレビューを作成でき `/preview` ます。
+新しいプレビューを作成するには、`/preview` エンドポイントに POST リクエストを送信します。
 
 >[!NOTE] プレビュージョブが作成されると、予測ジョブが自動的に作成されます。 これら2つのジョブは同じIDを共有します。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /preview
@@ -69,13 +69,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `predicateExpression` | データをクエリするPQL式。 |
+| `predicateExpression` | データのクエリに使用する PQL 式です。 |
 | `predicateType` | の下にあるクエリ式の述語の種類 `predicateExpression`です。 現在、このプロパティに指定できる値は `pql/text`です。 |
-| `predicateModel` | プロファイルデータの基になる [!DNL Experience Data Model] (XDM)スキーマの名前。 |
+| `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema the profile data is based on. |
 
 **応答**
 
-正常に応答すると、新しく作成したプレビューの詳細と共に、HTTPステータス201（作成済み）が返されます。
+成功時の応答は、HTTP ステータス 201（Created）と共に、新しく作成されたプレビューの詳細を返します。
 
 ```json
 {
@@ -89,14 +89,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `state` | プレビュージョブの現在の状態。 最初に作成されたときは、「NEW」状態になります。 次に、処理が完了するまで「実行中」の状態になり、その時点で「RESULT_READY」または「FAILED」になります。 |
+| `state` | プレビュージョブの現在の状態です。最初に作成されたときは、「NEW」状態になります。 次に、処理が完了するまで「実行中」の状態になり、その時点で「RESULT_READY」または「FAILED」になります。 |
 | `previewId` | 次の節で説明するように、予測またはプレビューを表示する際に参照用に使用されるプレビュージョブのID。 |
 
 ## 特定のプレビューの結果を取得する {#get-preview}
 
-エンドポイントにGETリクエストを送信し、リクエストパスにプレビューIDを指定することで、特定のプレビューに関する詳細な情報を取得でき `/preview` ます。
+You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview ID in the request path.
 
-**API形式**
+**API 形式**
 
 ```http
 GET /preview/{PREVIEW_ID}
@@ -104,7 +104,7 @@ GET /preview/{PREVIEW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 取得するプレビューの `previewId` 値。 |
+| `{PREVIEW_ID}` | The `previewId` value of the preview you want to retrieve. |
 
 **リクエスト**
 
@@ -118,7 +118,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 **応答**
 
-成功した応答は、指定されたプレビューに関する詳細情報と共にHTTPステータス200を返します。
+成功時の応答は、HTTP ステータス 200 と共に、指定されたプレビューに関する詳細な情報を返します。
 
 ```json
 {
@@ -169,11 +169,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 | -------- | ----------- |
 | `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、を使用して、指定されたエンティティを検索するために使用でき [!DNL Profile Access API](../../profile/api/entities.md)ます。 |
 
-## 特定の見積ジョブの結果を取得します {#get-estimate}
+## 特定の見積ジョブの結果の取得 {#get-estimate}
 
-プレビュージョブを作成したら、そのジョブをエンドポイント `previewId``/estimate` へのGETリクエストのパスで使用して、セグメント定義に関する表示の統計情報(予測オーディエンスサイズ、信頼区間、エラー標準偏差など)を取得できます。
+プレビュージョブを作成したら、そのジョブをエンドポイント `previewId``/estimate` へのGETリクエストのパスで使用して、予測されるオーディエンスサイズ、信頼区間、および表示標準偏差など、セグメント定義に関する統計情報を取得できます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /estimate/{PREVIEW_ID}
@@ -197,7 +197,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 **応答**
 
-正常な応答は、予測ジョブの詳細と共にHTTPステータス200を返します。
+成功した応答は、見積ジョブの詳細を含む HTTP ステータス 200 を返します。
 
 ```json
 {
@@ -221,8 +221,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `state` | プレビュージョブの現在の状態。 処理が完了するまで「実行中」になり、その時点で「RESULT_READY」または「FAILED」になります。 |
-| `_links.preview` | プレビュージョブの現在の状態が「RESULT_READY」の場合、この属性は予測を表示するためのURLを提供します。 |
+| `state` | プレビュージョブの現在の状態です。処理が完了するまでは「RUNNING」で、完了した時点で「RESULT_READY」または「FAILED」になります。 |
+| `_links.preview` | プレビュージョブの現在の状態が「RESULT_READY」の場合、この属性は推定を表示するための URL を提供します。 |
 
 ## 次の手順
 
