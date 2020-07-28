@@ -1,58 +1,58 @@
 ---
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
 solution: Experience Platform
-title: モデル(API)のトレーニングと評価
+title: モデルのトレーニングと評価（API）
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1191'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# モデル(API)のトレーニングと評価
+# モデルのトレーニングと評価（API）
 
 
-このチュートリアルでは、API呼び出しを使用してモデルを作成、トレーニング、評価する方法を示します。 APIドキュメントの詳細なリストにつ [いては、このドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) を参照してください。
+このチュートリアルでは、API 呼び出しを使用してモデルを作成、トレーニング、評価する方法を示します。API ドキュメントの詳しいリストについては、[こちらのドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)を参照してください。
 
 ## 前提条件
 
-APIを使用してモデルのトレーニングと評価を行うために必要な、API [](./import-packaged-recipe-api.md) （パッケージ化されたレシピをAPIを使用して読み込む）に従います。
+API を使用したモデルのトレーニングと評価に必要なエンジンを作成するには、[API を使用してパッケージ化されたレシピをインポート](./import-packaged-recipe-api.md)します。
 
-API呼び出しを行う開始の認証については、この [チュートリアル](../../tutorials/authentication.md) に従ってください。
+API 呼び出しの開始時に必要な認証については、[こちら](../../tutorials/authentication.md)のチュートリアルを参照してください。
 
-チュートリアルでは、次の値を使用する必要があります。
+このチュートリアルから、次の値を入手できます。
 
-- `{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。
-- `{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
-- `{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。
+- `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
+- `{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
+- `{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。
 
-- インテリジェントサービスのDockerイメージへのリンク
+- インテリジェントサービスの Docker イメージへのリンク
 
-## APIワークフロー
+## API ワークフロー
 
-このAPIを使用して、トレーニング用のテスト実行を作成します。 このチュートリアルでは、 **エンジン**、 **MLInstances**、 **Experiments** エンドポイントについて説明します。 次の表は、3つの関係の概要と、実行とモデルの概念を示しています。
+この API を使用して、トレーニング用の Experiment Run を作成します。このチュートリアルでは、**エンジン**、**MLInstance** および **Experiment** の各エンドポイントに重点を置いています。次の図に、これら 3 つのエンドポイントの関係を示し、Run とモデルの概念を示します。
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
 >[!NOTE]
 >
->UIでは、「Engine」、「MLInstance」、「MLService」、「Estript」、「Model」という用語は別の用語と呼ばれます。 UIからアクセスしている場合、次の表に相違点を示します。
+>「エンジン」、「MLInstance」、「MLService」、「Experiment」、「モデル」という用語は、UI では別の用語になります。次の表に、UI から見た場合の違いを示します。
 > 
-> | UI用語 | API用語 |
+> | UI 用語 | API 用語 |
 > --- | ---
 > | レシピ | エンジン |
 > | モデル | MLInstance |
-> | トレーニングの実施 | テスト |
+> | トレーニングの実行 | Experiment |
 > | サービス | MLService |
 
 
 
-### MLInstanceの作成
+### MLInstance の作成
 
-MLInstanceの作成は、次のリクエストを使用して行うことができます。 API `{ENGINE_ID}` チュートリアルの「パッケージ化されたレシピの [](./import-packaged-recipe-ui.md) 読み込み」からエンジンを作成する際に返されたものを使用します。
+MLInstance を作成するには、次のリクエストを使用します。[API を使用してパッケージ化されたレシピをインポートする](./import-packaged-recipe-ui.md)チュートリアルで、エンジンを作成した際に返された `{ENGINE_ID}` を使用します。
 
 **リクエスト**
 
@@ -66,10 +66,10 @@ curl -X POST \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
-`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
-`{JSON_PAYLOAD}`: MLInstanceの設定。 チュートリアルで使用する例を次に示します。
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
+`{JSON_PAYLOAD}`：MLInstance の設定。次に、このチュートリアルで使用する例を示します。
 
 ```JSON
 {
@@ -124,11 +124,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->で `{JSON_PAYLOAD}`は、アレイ内のトレーニングとスコアリングに使用するパラメーターを定義し `tasks` ます。 は使用するエンジンのID `{ENGINE_ID}` で、 `tag` フィールドはインスタンスの識別に使用されるオプションのパラメータです。
+>`{JSON_PAYLOAD}` では、トレーニングとスコアリングに使用するパラメーターを `tasks` 配列で定義します。`{ENGINE_ID}` は使用するエンジンの ID で、`tag` フィールドはインスタンスの識別に使用するオプションのパラメーターです。
 
-応答には、作成されたMLInstance `{INSTANCE_ID}` を表すが含まれます。 異なる設定の複数のモデルMLInstanceを作成できます。
+レスポンスには、作成された MLInstance を表す `{INSTANCE_ID}` が含まれます。設定が異なる複数のモデル MLInstance を作成できます。
 
-**応答**
+**応答** 
 
 ```JSON
 {
@@ -159,12 +159,12 @@ curl -X POST \
 }
 ```
 
-`{ENGINE_ID}`: MLInstanceが作成されるエンジンを表すこのID。\
-`{INSTANCE_ID}`: MLInstanceを表すID。
+`{ENGINE_ID}`：MLInstance が作成されるエンジンを表す ID。\
+`{INSTANCE_ID}`：MLInstance を表す ID。
 
-### テストの作成
+### Experiment の作成
 
-テストは、データサイエンティストがトレーニング中にパフォーマンスの高いモデルに到達するために使用します。 複数の実験には、データセット、機能、学習パラメータ、ハードウェアの変更が含まれます。 次に、テストの作成例を示します。
+データサイエンティストは、トレーニング中に高性能モデルに到達するために、Experiment を使用します。各 Experiment では、データセット、機能、学習パラメーター、ハードウェアが変更されます。次に、Experiment の作成例を示します。
 
 **リクエスト**
 
@@ -178,10 +178,10 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
-`{JSON_PAYLOAD}`: 作成されたテストオブジェクト。 チュートリアルで使用する例を次に示します。
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
+`{JSON_PAYLOAD}`：作成する Experiment オブジェクト。次に、このチュートリアルで使用する例を示します。
 
 ```JSON
 {
@@ -193,11 +193,11 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`: MLInstanceを表すID。
+`{INSTANCE_ID}`：MLInstance を表す ID。
 
-テストの作成からの応答は次のようになります。
+Experiment の作成リクエストを実行すると、次のようなレスポンスが返されます。
 
-**応答**
+**応答** 
 
 ```JSON
 {
@@ -213,14 +213,13 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`: 作成したテストを表すID。
-`{INSTANCE_ID}`: MLInstanceを表すID。
+`{EXPERIMENT_ID}`：作成した Experiment を表す ID。`{INSTANCE_ID}`：MLInstance を表す ID。
 
-### トレーニング用の予定されたテストの作成
+### スケジュールに沿ったトレーニング Experimentの作成
 
-スケジュールされた実験は、API呼び出しを使用して1回のテスト実行を作成する必要がないように使用されます。 代わりに、テストの作成時に必要なすべてのパラメーターを指定します。各実行は定期的に作成されます。
+スケジュールに沿った Experiment を使用すると、Experiment Run を作成するたびに、毎回 API 呼び出しを実行する必要がなくなります。Experiment の作成に必要なパラメーターはすべて用意されており、各 Run は定期的に作成されます。
 
-スケジュールされたテストの作成を示すには、リクエストの本文に `template` セクションを追加する必要があります。 では、実行のスケジュールに必要なすべてのパラメーター( `template`アクションを示すパラメーター、スケジュールされた実行のタイミング `tasks``schedule`を示すパラメーターなど)が含まれます。
+スケジュールに沿った Experiment の作成を指定するには、リクエストの本文に `template` セクションを追加する必要があります。スケジュールに沿った Run に必要なパラメーターは、すべて `template` に含まれています。たとえば、実行するアクションを示す `tasks`、スケジュールに沿った Run の実行予定を示す `schedule` などです。
 
 **リクエスト**
 
@@ -234,10 +233,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
-`{JSON_PAYLOAD}`: 転記するデータセット。 チュートリアルで使用する例を次に示します。
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
+`{JSON_PAYLOAD}`：使用するデータセット。次に、このチュートリアルで使用する例を示します。
 
 ```JSON
 {
@@ -267,9 +266,9 @@ curl -X POST \
 }
 ```
 
-テストを作成する場合、本体 `{JSON_PAYLOAD}`には、またはのいずれかの `mlInstanceId` パラメータ `mlInstanceQuery` を含める必要があります。 この例では、スケジュール設定されたテストは、パラメーターに設定された20分ごとに実行を呼び出します。この `cron` パラメーターは、の最初 `startTime` からがに至るまでとなります `endTime`。
+Experiment を作成する際、本文の `{JSON_PAYLOAD}` には `mlInstanceId` パラメーターまたは `mlInstanceQuery` パラメーターを含める必要があります。この例では、スケジュールに沿った Experiment により、`startTime` から `endTime` までの間、`cron` パラメーターに設定されたとおり 20 分ごとに Run が呼び出されます。
 
-**応答**
+**応答** 
 
 ```JSON
 {
@@ -301,13 +300,13 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_ID}`: テストを表すID。\
-`{INSTANCE_ID}`: MLInstanceを表すID。
+`{EXPERIMENT_ID}`：Experiment を表す ID。\
+`{INSTANCE_ID}`：MLInstance を表す ID。
 
 
-### トレーニング用のテスト実行の作成
+### トレーニング用の Experiment Run の作成
 
-テストエンティティを作成した場合、トレーニング実行は以下の呼び出しを使用して作成し、実行できます。 リクエスト本文でトリガ `{EXPERIMENT_ID}` ーす `mode` る対象を、および表示する必要があります。
+Experiment エンティティを作成したら、以下の呼び出しを使用して、トレーニング Run を作成および実行できます。リクエスト本文で、`{EXPERIMENT_ID}` と、トリガーする `mode` を指定する必要があります。
 
 **リクエスト**
 
@@ -321,11 +320,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{EXPERIMENT_ID}`: ターゲットするテストに対応するID。 これは、テストの作成時の応答に含まれます。\
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。\
-`{JSON_PAYLOAD}`: トレーニングの実行を作成するには、本文に次の内容を含める必要があります。
+`{EXPERIMENT_ID}`：目的の Experiment に対応する ID。これは、Experiment を作成した際のレスポンスに含まれています。\
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。\
+`{JSON_PAYLOAD}`：トレーニング Run を作成するには、本文に次の内容を含める必要があります。
 
 ```JSON
 {
@@ -333,7 +332,7 @@ curl -X POST \
 }
 ```
 
-配列を含めることで、設定パラメーターを上書きすることもで `tasks` きます。
+また、`tasks` 配列を含めることで、設定パラメーターを上書きすることもできます。
 
 ```JSON
 {
@@ -352,9 +351,9 @@ curl -X POST \
 }
 ```
 
-以下の応答が表示され、の設定と内容がわかり `{EXPERIMENT_RUN_ID}``tasks`ます。
+次のレスポンスが返され、`{EXPERIMENT_RUN_ID}` と設定（`tasks` の下）が示されます。
 
-**応答**
+**応答** 
 
 ```JSON
 {
@@ -373,12 +372,12 @@ curl -X POST \
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  テスト実行を表すID。\
-`{EXPERIMENT_ID}`: テストの実行が含まれるテストを表すID。
+`{EXPERIMENT_RUN_ID}`：Experiment Run を表す ID。\
+`{EXPERIMENT_ID}`：Experiment Run が含まれる Experiment を表す ID。
 
-### テストの実行ステータスの取得
+### Experiment Run のステータスの取得
 
-テスト実行のステータスをに照会でき `{EXPERIMENT_RUN_ID}`ます。
+Experiment Run のステータスを照会するには、`{EXPERIMENT_RUN_ID}` を使用します。
 
 **リクエスト**
 
@@ -390,15 +389,15 @@ curl -X GET \
   -H 'x-api-key: {API_KEY}'
 ```
 
-`{EXPERIMENT_ID}`: テストを表すID。\
-`{EXPERIMENT_RUN_ID}`: テスト実行を表すID。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。\
-`{API_KEY}`: 固有のAdobe Experience Platform統合で見つかった特定のAPIキー値。
+`{EXPERIMENT_ID}`：Experiment を表す ID。\
+`{EXPERIMENT_RUN_ID}`：Experiment Run を表す ID。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。\
+`{API_KEY}`：固有の Adobe Experience Platform 統合にある特定の API キー値。
 
-**応答**
+**応答** 
 
-GET呼び出しは、次のように、パラメーター内のステータスを `state` 提供します。
+GET 呼び出しを実行すると、次に示すように、`state` にス テータスが示されます。
 
 ```JSON
 {
@@ -431,19 +430,19 @@ GET呼び出しは、次のように、パラメーター内のステータス�
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  テスト実行を表すID。\
-`{EXPERIMENT_ID}`: テストの実行が含まれるテストを表すID。
+`{EXPERIMENT_RUN_ID}`：Experiment Run を表す ID。\
+`{EXPERIMENT_ID}`：Experiment Run が含まれる Experiment を表す ID。
 
-状態に加えて、 `DONE` 次の状態もあります。
+`DONE` の状態意外に、次の状態も示されます。
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-詳細を取得するには、詳細なログを `tasklogs` パラメーターの下に表示します。
+詳細については、`tasklogs` パラメーターの下の詳細ログを確認してください。
 
-### トレーニングを受けたモデルの取得
+### トレーニング済みモデルの取得
 
-トレーニング中に上記のトレーニングモデルを作成するために、次のリクエストを行います。
+トレーニング中に、前述の手順で作成したトレーニング済みモデルを取得するには、次のリクエストを実行します。
 
 **リクエスト**
 
@@ -454,13 +453,13 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_RUN_ID}`: ターゲットするテスト実行に対応するID。 これは、テスト実行の作成時の応答に含まれています。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
+`{EXPERIMENT_RUN_ID}`：目的の Experiment Run に対応する ID。これは、Experiment Run を作成した際のレスポンスに含まれています。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
 
-応答は、作成されたトレーニングを受けたモデルを表します。
+レスポンスは、作成されたトレーニング済みモデルを表します。
 
-**応答**
+**応答** 
 
 ```JSON
 {
@@ -484,13 +483,13 @@ curl -X GET \
 }
 ```
 
-`{MODEL_ID}`: モデルに対応するID。\
-`{EXPERIMENT_ID}`:  テスト実行のテストに対応するID。\
-`{EXPERIMENT_RUN_ID}`: テスト実行に対応するID。
+`{MODEL_ID}`：モデルに対応する ID。\
+`{EXPERIMENT_ID}`：Experiment Run が含まれる Experiment に対応する ID。\
+`{EXPERIMENT_RUN_ID}`：Experiment Run に対応する ID。
 
-### スケジュールされたテストの停止と削除
+### スケジュールに沿った Experiment の停止と削除
 
-スケジュールされたテストの実行をその前に停止する場合 `endTime`は、DELETEリクエストを `{EXPERIMENT_ID}`
+`endTime` よりも前に、スケジュールに沿った Experiment の実行を停止する場合は、`{EXPERIMENT_ID}` に DELETE リクエストを実行します。
 
 **リクエスト**
 
@@ -501,17 +500,17 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  テストに対応するID。\
-`{ACCESS_TOKEN}`: 認証後に指定された特定のベアラトークン値。\
-`{IMS_ORG}`: IMS組織の資格情報が固有のAdobe Experience Platform統合で見つかりました。
+`{EXPERIMENT_ID}`：Experiment に対応する ID。\
+`{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。\
+`{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
 
 >[!NOTE]
 >
->API呼び出しは、新しいテスト実行の作成を無効にします。 ただし、既に実行中のテスト実行の実行は停止しません。
+>API 呼び出しを実行すると、新しい Experiment Run の作成が無効になります。ただし、既に実行中の Experiment Run は停止されません。
 
-次に、テストが正常に削除されたことを通知する応答を示します。
+次に、Experiment が正常に削除されたことを通知するレスポンスを示します。
 
-**応答**
+**応答** 
 
 ```JSON
 {
@@ -523,4 +522,4 @@ curl -X DELETE \
 
 ## 次の手順
 
-このチュートリアルでは、APIを使用してエンジン、テスト、予定されたテストの実行、トレーニングを受けたモデルを作成する方法について説明しました。 次の練習 [では](./score-model-api.md)、最もパフォーマンスの高いトレーニングモデルを使用して新しいデータセットをスコアリングし、予測を行います。
+このチュートリアルでは、API を使用してエンジン、Experiment、スケジュールに沿った Experiment Run およびトレーニング済みモデルを作成する方法について説明しました。次の[演習](./score-model-api.md)では、最もパフォーマンスの高いトレーニング済みモデルを使用して新しいデータセットをスコアリングし、予測を行います。
