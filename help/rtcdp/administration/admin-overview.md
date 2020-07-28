@@ -22,12 +22,12 @@ The following sections provide introductions to the central components of [!DNL 
 
 ## アクセス制御
 
-アクセス制御は、[Adobe Admin Console](http://adminconsole.adobe.com) でおこないます。This functionality leverages product profiles in [!DNL Admin Console], allowing you to link users with permissions and sandboxes. この機能を使用すると、管理者は、定義されたユーザのセットに対して、特定のリアルタイム CDP 機能に対するアクセスを許可または制限できます。
+アクセス制御は、[Adobe Admin Console](http://adminconsole.adobe.com) でおこないます。This functionality leverages product profiles in [!DNL Admin Console], allowing you to link users with permissions and sandboxes. この機能を使用すると、管理者は、定義されたユーザーのセットに対して、特定のリアルタイム CDP 機能に対するアクセスを許可または制限できます。
 
 アクセス制御について詳しくは、 ドキュメントの「[アクセス制御の概要](../../access-control/home.md)」を参照してください。[!DNL Experience Platform]
 
 >[!IMPORTANT]
->UI での表示を可能にするなど、リアルタイム CDP 機能へのアクセス権付与の詳細なガイドについては、[アクセス制御ユーザーガイド](../../access-control/ui/overview.md)（特に製品プロファイルの詳細と追加サービスを管理する手順）に従ってください。
+>UI での表示を可能にするなど、リアルタイム CDP 機能へのアクセス権付与の詳細なガイドについては、[アクセス制御ユーザガイド](../../access-control/ui/overview.md)（特に製品プロファイルの詳細と追加サービスを管理する手順）に従ってください。
 
 ## サンドボックス
 
