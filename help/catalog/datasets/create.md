@@ -1,70 +1,70 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: APIを使用したデータセットの作成
+title: API を使用したデータセットの作成
 topic: datasets
 translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '1234'
-ht-degree: 1%
+ht-degree: 82%
 
 ---
 
 
-# APIを使用したデータセットの作成
+# API を使用したデータセットの作成
 
-このドキュメントでは、Adobe Experience PlatformAPIを使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順について説明します。
+このドキュメントでは、Adobe Experience Platform API を使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順を説明します。
 
 ## はじめに
 
-このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] データをバッチファイルとして取り込むことができます。
 * [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-以下の節では、APIを正しく呼び出すために知る必要がある追加情報について説明し [!DNL Platform] ます。
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-### 必要なヘッダーの値の収集
+### 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* 認証： 無記名 `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 * Content-Type: application/json
 
 ## チュートリアル
 
-データセットを作成するには、まずスキーマを定義する必要があります。 スキーマは、データを表すのに役立つ一連のルールです。 スキーマは、データの構造を説明するだけでなく、制約や期待を設け、システム間を移動する際にデータを適用して検証できるようにします。
+データセットを作成するには、まずスキーマを定義する必要があります。スキーマは、データを表すのに役立つ一連のルールです。スキーマは、データの構造を説明するだけでなく、システム間を移動するデータを検証するために適用および使用できる制約と期待を提供します。
 
-これらの標準の定義により、接触チャネルに関係なく一貫した形でデータを解釈でき、複数のアプリケーション間での翻訳を必要としなくなります。 スキーマの構成について詳しくは、スキーマ構成の [基本に関するガイドを参照してください](../../xdm/schema/composition.md)
+これらの標準的な定義により、タッチチャネルに関係なくデータを一貫して解釈でき、アプリケーション間での翻訳の必要性を排除できます。スキーマの構成について詳しくは、[基本的なスキーマ構成のガイド](../../xdm/schema/composition.md)を参照してください。
 
 ## データセットスキーマの検索
 
-このチュートリアルは、 [スキーマレジストリAPIのチュートリアルが終了した時点で開始され](../../xdm/tutorials/create-schema-api.md) 、そのチュートリアルで作成したロイヤルティメンバーのスキーマを利用します。
+このチュートリアルは、[スキーマレジストリ API チュートリアル](../../xdm/tutorials/create-schema-api.md)が終わったところから始まり、チュートリアルの中で作成したロイヤルティメンバースキーマを利用します。
 
-この [!DNL Schema Registry] チュートリアルを完了していない場合は、開始を進め、必要なスキーマを構成した後で、このデータセットのチュートリアルを続けてください。
+If you have not completed the [!DNL Schema Registry] tutorial, please start there and continue with this dataset tutorial only once you have composed the necessary schema.
 
-次の呼び出しを使用して、 [!DNL Schema Registry] APIチュートリアルで作成した忠誠度メンバースキーマを表示できます。
+The following call can be used to view the Loyalty Members schema you created during the [!DNL Schema Registry] API tutorial:
 
-**API形式**
+**API 形式**
 
 ```HTTP
 GET /tenant/schemas/{schema meta:altId or URL encoded $id URI}
@@ -82,9 +82,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-応答オブジェクトの形式は、リクエストで送信されるAcceptヘッダーによって異なります。 この応答内の個々のプロパティが最小化され、領域が確保されました。
+応答オブジェクトの形式は、リクエストで送信される Accept ヘッダーによって異なります。この応答の個々のプロパティは、スペースを節約するために最小化にされました。
 
 ```JSON
 {
@@ -180,9 +180,9 @@ curl -X GET \
 
 ## データセットの作成
 
-Loyality Membersスキーマを配置した状態で、スキーマを参照するデータセットを作成できるようになりました。
+「ロイヤルティメンバー」スキーマが完成したら、そのスキーマを参照するデータセットを作成できます。
 
-**API形式**
+**API 形式**
 
 ```HTTP
 POST /dataSets
@@ -214,11 +214,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->このチュートリアルでは、 [parket](https://parquet.apache.org/documentation/latest/) file形式を使用してそのすべての例を示します。 JSONファイル形式の使用例については、『 [batch ingestion developer guide』を参照してください](../../ingestion/batch-ingestion/api-overview.md)
+> このチュートリアルの全例では、 [parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を使用します。JSON ファイル形式の使用例については、[バッチ取得開発ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。
 
-**応答**
+**応答** 
 
-正常に完了すると、HTTPステータス201（作成済み）と、新たに作成されたデータセットのIDを形式で含む配列で構成される応答オブジェクトが返され `"@/datasets/{DATASET_ID}"`ます。 データセットIDは、API呼び出しでデータセットを参照するために使用される、読み取り専用の、システム生成の文字列です。
+成功した応答は、HTTP Status 201（作成済み）と、新しく作成されたデータセットの ID を `"@/datasets/{DATASET_ID}"` 形式で含む配列で構成される応答オブジェクトを返します。データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。
 
 ```JSON
 [
@@ -228,9 +228,9 @@ curl -X POST \
 
 ## バッチの作成
 
-データセットにデータを追加する前に、データセットにリンクするバッチを作成する必要があります。 このバッチがアップロードに使用されます。
+データセットにデータを追加する前に、データセットにリンクするバッチを作成する必要があります。その後、バッチがアップロードに使用されます。
 
-**API形式**
+**API 形式**
 
 ```HTTP
 POST /batches
@@ -238,7 +238,7 @@ POST /batches
 
 **リクエスト**
 
-リクエスト本文には「datasetId」フィールドが含まれ、その値は前の手順で `{DATASET_ID}` 生成された値です。
+リクエスト本文には、前の手順で生成された `{DATASET_ID}` の値を示す「datasetId」フィールドが含まれています。
 
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
@@ -253,9 +253,9 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
       }'
 ```
 
-**応答**
+**応答** 
 
-正常な応答は、HTTPステータス201（作成済み）と、新しく作成されたバッチの詳細（読み取り専用の、システムで生成された文字列を含む） `id`を含む応答オブジェクトを返します。
+成功した応答は、HTTP ステータス 201（作成済み）と、新しく作成されたバッチの詳細を含む応答オブジェクトを返します。これには、読み取り専用のシステム生成文字列である `id` が含まれます。
 
 ```JSON
 {
@@ -292,15 +292,15 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 }
 ```
 
-## ファイルをバッチにアップロード
+## ファイルのバッチへのアップロード
 
-アップロード用の新しいバッチが正常に作成された後に、特定のデータセットにファイルをアップロードできるようになりました。 データセットを定義する際、ファイル形式をパーケットとして指定したことを忘れないでください。 したがって、アップロードするファイルはその形式にする必要があります。
+アップロード用の新しいバッチが正常に作成されたら、特定のデータセットにファイルをアップロードできるようになりました。データセットを定義する際に、ファイル形式を parquet として指定したことを忘れないでください。したがって、アップロードするファイルはその形式である必要があります。
 
 >[!NOTE]
 >
->サポートされるデータアップロードファイルのサイズは512 MBです。 データファイルのサイズがこれより大きい場合は、512 MB以下のチャンクに分割し、一度に1つずつアップロードする必要があります。 同じバッチIDを使用して、各ファイルに対してこの手順を繰り返すことで、同じバッチ内の各ファイルをアップロードできます。 ファイルをバッチの一部としてアップロードできる場合、数に制限はありません。
+> サポートされるデータアップロードファイルの最大サイズは 512 MB です。データファイルのサイズがこれより大きい場合は、512 MB 以下のチャンクに分割し、一度に 1 つずつアップロードする必要があります。同じバッチ ID を使用して、各ファイルに対してこの手順を繰り返すことで、各ファイルを同じバッチにアップロードできます。ファイルをバッチの一部としてアップロードできる場合、数に制限はありません。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -308,8 +308,8 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{BATCH_ID}` | アップロード `id` するバッチの名前。 |
-| `{DATASET_ID}` | バッチ `id` が保持されるデータセットの名前。 |
+| `{BATCH_ID}` | アップロード先のバッチの `id`。 |
+| `{DATASET_ID}` | バッチを保持するデータセットの `id`。 |
 | `{FILE_NAME}` | アップロードするファイルの名前。 |
 
 **リクエスト**
@@ -323,15 +323,15 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
   --data-binary '@{FILE_PATH_AND_NAME}.parquet'
 ```
 
-**応答**
+**応答** 
 
-正常にアップロードされたファイルは、空の応答本文とHTTPステータス200(OK)を返します。
+正常にアップロードされたファイルは、空の応答本文と HTTP ステータス 200（OK）を返します。
 
 ## シグナルバッチ完了
 
-すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。 シグナリングの完了により、サービスはアップロードされたファイルの [!DNL Catalog]`DataSetFile` エントリを作成し、以前に生成されたバッチに関連付けます。 バッチは成功とマークされ、ダウンストリームフローがトリガーされ、使用可能なデータに対して使用できるようになります。 [!DNL Catalog]
+すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。Signaling completion causes the service to create [!DNL Catalog] `DataSetFile` entries for the uploaded files and associate them with the batch generated previously. The [!DNL Catalog] batch is marked successful, which triggers any downstream flows that can then work on the now available data.
 
-**API形式**
+**API 形式**
 
 ```HTTP
 POST /batches/{BATCH_ID}?action=COMPLETE
@@ -339,7 +339,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{BATCH_ID}` | 完了 `id` としてマークするバッチの名前。 |
+| `{BATCH_ID}` | 完了としてマークするバッチの `id`。 |
 
 **リクエスト**
 
@@ -350,15 +350,15 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-**応答**
+**応答** 
 
-正常に完了したバッチは、空の応答本文とHTTPステータス200(OK)を返します。
+正常に完了したバッチは、空の応答本文と HTTP ステータス 200（OK）を返します。
 
-## モニターの取り込み
+## 取得の監視
 
-データのサイズに応じて、バッチの取り込みには様々な時間がかかります。 バッチのIDを含むリクエストパラメーターをリクエストに追加することで、バッチのステータスを監視でき `batch``GET /batches` ます。 APIはデータセットをポーリングし、取り込みから、応答内のが完了（「成功」または「失敗」） `status` を示すまで、バッチのステータスを調べます。
+データのサイズに応じて、バッチ取得には様々な時間がかかります。バッチの ID を含む `batch` リクエストパラメーターを `GET /batches` リクエストに追加することで、バッチのステータスを監視できます。API は、データセットをポーリングし、バッチの取得から、応答内の `status` が完了（「成功」または「失敗」）を示すまでの状態を調べます。
 
-**API形式**
+**API 形式**
 
 ```HTTP
 GET /batches?batch={BATCH_ID}
@@ -366,7 +366,7 @@ GET /batches?batch={BATCH_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{BATCH_ID}` | 監視 `id` するバッチの名前。 |
+| `{BATCH_ID}` | 監視するバッチの `id`。 |
 
 **リクエスト**
 
@@ -379,9 +379,9 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-**応答**
+**応答** 
 
-正の応答は、次の値を含む `status` 属性を持つオブジェクトを返し `success`ます。
+正の応答は、`success` の値を含む `status` 属性を持つオブジェクトを返しま す。
 
 ```JSON
 {
@@ -413,7 +413,7 @@ curl -X GET \
 }
 ```
 
-負の応答は、属性にの値を持つオブジェクトを返し `"failed"``"status"` 、関連するエラーメッセージが含まれます。
+負の応答は、`"status"` 属性に `"failed"` の値を持つオブジェクトを返し、次の関連するエラーメッセージが含まれます。
 
 ```JSON
 {
@@ -457,22 +457,22 @@ curl -X GET \
 
 >[!NOTE]
 >
->推奨されるポーリング間隔は2分です。
+> 推奨されるポーリング間隔は 2 分です。
 
 ## データセットからのデータの読み取り
 
-バッチIDを使用すると、Data Access APIを使用して、バッチにアップロードされたすべてのファイルを読み取り、検証できます。 この応答は、ファイルIDのリストを含む配列を返し、各要素はバッチ内のファイルを参照します。
+バッチ ID を使用すると、データアクセス API を使用して、バッチにアップロードされたすべてのファイルを読み戻し、確認できます。応答は、ファイル ID のリストを含む配列を返し、それぞれがバッチ内のファイルを参照します。
 
-また、Data Access APIを使用して、名前、サイズ（バイト単位）、ファイルまたはフォルダーをダウンロードするためのリンクを返すこともできます。
+また、データアクセス API を使用して、名前、サイズ（バイト）、ファイルまたはフォルダーをダウンロードするためのリンクを返すこともできます。
 
-Data Access APIを使用する詳細な手順については、 [データアクセス開発ガイドを参照してください](../../data-access/home.md)。
+データアクセス API を使用する詳細な手順は、『[データアクセス開発ガイド](../../data-access/home.md)』を参照してください。
 
 ## データセットスキーマの更新
 
-フィールドを追加し、作成したデータセットに追加のデータを取り込むことができます。 これを行うには、最初に、新しいデータを定義するプロパティを追加してスキーマを更新する必要があります。 これは、PATCH操作やPUT操作を使用して既存のスキーマを更新することで可能です。
+フィールドを追加し、作成したデータセットに追加のデータを取得することができます。これをおこなうには、まず、新しいデータを定義する追加のスキーマを追加して、データを更新する必要があります。これは、PATCH 操作や PUT 操作を使用して、既存のスキーマを更新することができます。
 
-スキーマの更新について詳しくは、『 [スキーマレジストリAPI開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
+スキーマの更新について詳しくは、『[スキーマレジストリ API 開発者ガイド](../../xdm/api/getting-started.md)を参照してください』。
 
-スキーマを更新したら、このチュートリアルの手順に従って、変更後のスキーマに合致する新しいデータを取り込みます。
+スキーマを更新したら、このチュートリアルの手順に従って、変更後のスキーマに合う新しいデータを取得します。
 
-スキーマの進化は純粋に付加的なものであり、レジストリに保存されてデータ取り込みに使用された後は、スキーマに中断点の変更を加えることはできません。 Adobe Experience Platformで使用するスキーマを構成するためのベストプラクティスについて詳しくは、スキーマ構成の [基本に関するガイドを参照してください](../../xdm/schema/composition.md)。
+スキーマの進化は純粋に付加的なものであることを覚えておくことが重要です。つまり、スキーマをレジストリに保存してデータの取得に使用すると、スキーマに重大な変更を加えることはできません。Adobe Experience Platform で使用するスキーマを構成するためのベストプラクティスについて詳しくは、[スキーマ構成の基本に関するガイド](../../xdm/schema/composition.md)を参照してください。
