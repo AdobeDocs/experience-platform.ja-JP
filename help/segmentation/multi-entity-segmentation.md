@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: マルチエンティティセグメント
+title: 複数エンティティのセグメント化
 topic: overview
 translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '372'
-ht-degree: 0%
+ht-degree: 33%
 
 ---
 
 
-# マルチエンティティセグメント
+# 複数エンティティのセグメント化
 
-複数エンティティのセグメント化は、プロファイル、店舗またはその他の非製品クラスに基づいて、追加のデータを使用して [!DNL Profile] データを拡張する機能です。 接続すると、追加のクラスのデータは、 [!DNL Profile] スキーマにネイティブであるかのように使用できるようになります。
+Multi-entity segmentation is the ability to extend [!DNL Profile] data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the [!DNL Profile] schema.
 
 マルチエンティティのセグメント化の詳細については、以下のビデオを見て、ドキュメントを読み、学習を補完してください。また、 [セグメント化の概要を調べてください](./home.md)。]
 
@@ -22,26 +22,26 @@ ht-degree: 0%
 
 ## はじめに
 
-このチュートリアルでは、セグメント化の使用に関連する様々なAdobe Experience Platformサービスについて、十分な理解が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、セグメント化の使用に関わる様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [!DNL Real-time Customer Profile](../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
-- [Adobe Experience Platformセグメントサービス](./home.md): リアルタイム顧客プロファイルからセグメントを作成できます。
+- [Adobe Experience Platform セグメント化サービス](./home.md)：リアルタイム顧客プロファイルからセグメントを作成できます、
 - [!DNL Experience Data Model (XDM)](../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
-## XDMの関係を定義する方法
+## XDM の関係の定義方法
 
-(XDM)スキーマの構造との関係の定義は、セグメント作成の重要で不可欠な部分です。 [!DNL Experience Data Model]
+Defining relationships with the structure of your [!DNL Experience Data Model] (XDM) schemas is an important and integral part of segment creation.
 
-このプロセスは、 [!DNL Schema Registry][!DNL Schema Editor]APIまたは APIを使用して2つのスキーマ間の関係を定義する詳細なガイドについては、APIを使用して2つのスキーマ間 [の関係を定義するチュートリアルをお読みください](../xdm/tutorials/relationship-api.md)。 を使用して2つのスキーマ間の関係を定義する方法の詳細なガイドにつ [!DNL Schema Editor] いては、スキーマエディタ [を使用して2つのスキーマ間の関係を定義する方法のチュートリアルを参照してください](../xdm/tutorials/relationship-ui.md)。
+このプロセスは、 [!DNL Schema Registry][!DNL Schema Editor]APIまたは API を使用した 2 つのスキーマ間の関係の定義についての詳細なガイドは、[API を使用した 2 つのスキーマ間の関係の定義についてのチュートリアル](../xdm/tutorials/relationship-api.md)をお読みください。For a detailed guide on using the [!DNL Schema Editor] to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the Schema Editor](../xdm/tutorials/relationship-ui.md).
 
 ## XDM関係を使用するセグメントの作成方法
 
-XDMの関係を定義したら、 [!DNL Segmentation Service] APIを使用してセグメントを作成できます。
+Once you have defined your XDM relationships, you can use the [!DNL Segmentation Service] API to build a segment.
 
-このプロセスは、 [!DNL Segmentation] APIまたは [!DNL Segment Builder] ユーザーインターフェイスを使用して実行できます。 APIを使用してセグメントを作成する方法の詳細なガイドについては、セグメント化API [を使用したセグメントの作成に関するチュートリアルをお読みください](./tutorials/create-a-segment.md)。 セグメントビルダーを使用したセグメントの作成に関する詳細なガイドについては、『セグメントビルダーユーザーガイド [』](./ui/overview.md)を参照してください。
+このプロセスは、 [!DNL Segmentation] APIまたは [!DNL Segment Builder] ユーザーインターフェイスを使用して実行できます。 For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). セグメントビルダーを使用したセグメント作成についての詳しいガイドは、『[セグメントビルダーユーザガイド](./ui/overview.md)』を参照してください。
 
-## マルチエンティティセグメントのセグメントの評価およびアクセス方法
+## 複数エンティティセグメントの評価方法とアクセス方法
 
-セグメントを作成した後、APIを使用してセグメントの結果を評価し、アクセスでき [!DNL Segmentation Service] ます。 マルチエンティティセグメントの評価は、通常のセグメントの評価と非常に似ています。
+After creating a segment, you can evaluate and access the segment results using the [!DNL Segmentation Service] API. 複数エンティティセグメントの評価は、通常のセグメントの評価と非常に似ています。
 
-このプロセスは、 [!DNL Segmentation Service] APIを使用してのみ実行できます。 APIを使用してセグメントを評価し、セグメントにアクセスする詳細なガイドについては、セグメントの [評価とアクセスに関するチュートリアルをお読みください](./tutorials/evaluate-a-segment.md)。
+This process can only be done using the [!DNL Segmentation Service] API. For a detailed guide on using the API to evaluate and access segments, please read the tutorial on [evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
