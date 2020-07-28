@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 0d6f5776fef93b3d96461fc18c8818231e4c2e44
 workflow-type: tm+mt
 source-wordcount: '1204'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 ## はじめに
 
-このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [Experience Data Model(XDM)System](../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+- [エクスペリエンスデータモデルl（XDM）システム](../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+   - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [リアルタイム顧客プロファイル](../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 また、このチュートリアルでは、既に支払勘定を作成している必要があります。 UIで異なる支払いコネクタを作成するためのチュートリアルのリストは、 [source connectorsの概要](../../../home.md)。
 
@@ -44,13 +44,13 @@ ht-degree: 0%
 
 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
-### 既存のデータセットの使用
+### 既存のデータセットを使用する
 
 既存のデータセットにデータを取り込むには、「 **[!UICONTROL Use existing dataset]**」を選択し、データセットアイコンをクリックします。
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/payments/existing-dataset.png)
 
-[ *[!UICONTROL データセットの選択]* ]ダイアログが表示されます。 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
+The *[!UICONTROL Select dataset]* dialog appears. 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/payments/select-dataset.png)
 
@@ -64,7 +64,7 @@ ht-degree: 0%
 
 ![create-new-dataset](../../../images/tutorials/dataflow/payments/new-dataset.png)
 
-[ *[!UICONTROL スキーマの]* 選択]ダイアログが表示されます。 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
+The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
 
 ![select-スキーマ](../../../images/tutorials/dataflow/payments/select-schema.png)
 
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 ## データフローに名前を付ける
 
-「 *[!UICONTROL Dataflow detail]* 」ステップが表示されます。このステップでは、データフローの名前とオプションの説明を指定する必要があります。 終了したら **[!UICONTROL 「次へ]** 」を選択します。
+「 *[!UICONTROL Dataflow detail]* 」ステップが表示されます。このステップでは、データフローの名前とオプションの説明を指定する必要があります。 Select **[!UICONTROL Next]** when finished.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
 
@@ -133,7 +133,7 @@ ht-degree: 0%
 このチュートリアルに従うと、マーケティング自動化システムからデータを取り込むためのデータフローが正しく作成され、監視データセットに関する洞察が得られます。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
-- [Data Science Workspaceの概要](../../../../data-science-workspace/home.md)
+- [Data Science ワークスペースの概要](../../../../data-science-workspace/home.md)
 
 ## 付録
 
