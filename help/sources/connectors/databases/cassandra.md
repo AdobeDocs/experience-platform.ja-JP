@@ -7,16 +7,16 @@ translation-type: tm+mt
 source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 0%
+ht-degree: 22%
 
 ---
 
 
 # [!DNL Apache Cassandra ]コネクタ
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取り込むためのサポートを提供します。 [!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートには、が含まれ [!DNL Apache Cassandra]ます。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートには、が含まれ [!DNL Apache Cassandra]ます。
 
 次のドキュメントは、APIを使用して接続する方法に関する情報 [!DNL Apache Cassandra] を提供 [!DNL Platform] します。
 
