@@ -1,13 +1,13 @@
 ---
-title: InMoment拡張
-seo-title: InMoment拡張
-description: InMoment拡張機能は、Adobe Real-time Customer DataPlatformの調査先です。 拡張機能の詳細については、Adobe Exchangeの拡張機能ページを参照してください。
+title: InMoment 拡張機能
+seo-title: InMoment 拡張機能
+description: InMoment 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: null
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 5%
+ht-degree: 93%
 
 ---
 
@@ -16,47 +16,47 @@ ht-degree: 5%
 
 ## 概要 {#overview}
 
-Launch Integrationを使用すると、Digital Intercept製品を介したオンラインフィードバックをすばやく簡単に有効にできます。 [!DNL InMoment] CXI Cloud管理者を介してインターセプトを構成および管理することで、CXマネージャはプログラムをより詳細に制御できます。
+The [!DNL InMoment] Launch Integration allows you to quickly and easily enable online feedback via the Digital Intercept product. このアプリでは、CXI Cloud Admin を介してインターセプトの設定と管理を行い、CX マネージャーがプログラムをより詳細に制御できるようにします。
 
-[!DNL InMoment] は、アドビのリアルタイム顧客データPlatformの調査拡張機能です。 拡張機能の詳細については、 [Adobe Exchangeの拡張機能ページを参照してください](https://exchange.adobe.com/experiencecloud.details.100847.html)。
+[!DNL InMoment] は、アドビのリアルタイム顧客データプラットフォームの調査拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html) の拡張機能のページを参照してください。
 
-この宛先はExperience Platform Launchの拡張です。 Adobe Real-time CDPでのLaunch拡張機能の動作について詳しくは、 [Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
+この宛先は、Experience Platform Launch 拡張機能です。アドビのリアルタイム CDP の Launch の拡張機能について詳しくは、[Experience Platform Launch 拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)を参照してください。
 
-![Inment延長](/help/rtcdp/destinations/assets/inmoment-extension.png)
+![InMoment 拡張機能](/help/rtcdp/destinations/assets/inmoment-extension.png)
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、Adobe Real-time CDPを購入したすべてのお客様の [!DNL Destinations] カタログで入手できます。
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
-この拡張機能を使用するには、Experience Platform Launchにアクセスする必要があります。 Adobe Experience Cloudのお客様には、付加価値機能としてExperience Platform Launchが提供されます。 Launchへのアクセス権を取得するには、組織管理者に連絡して、拡張機能をインストールできるように **[!UICONTROL manage_properties]** 権限を付与するように依頼します。
+この拡張機能を使用するには、Experience Platform Launch にアクセスする必要があります。Experience Platform Launch は、Adobe Experience Cloud に付属の付加価値機能として提供されています。組織の管理者に問い合わせて Launch へのアクセス権を取得し、拡張機能のインストールに必要な **[!UICONTROL manage_properties]** 権限を付与するよう管理者に依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
 拡張機能をインストールするに [!DNL InMoment] は：
 
-1. [Adobe Real-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations/Catalogに移動します]**。
-2. カタログから拡張子を選択するか、検索バーを使用します。
-3. リンク先をクリックしてハイライト表示し、右側のレールで「 **[!UICONTROL Install Extension]** 」を選択します。 「 **[!UICONTROL Install Extension]** 」コントロールが灰色表示になっている場合は、 **[!UICONTROL manage_properties]** 権限がありません。 「 [前提条件](#prerequisites)」を参照してください。
-4. 「使用可能な起動プロパティ **[!UICONTROL を選択]** 」ウィンドウで、拡張機能をインストールするLaunchプロパティを選択します。 また、「起動」で新しいプロパティを作成するオプションもあります。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、起動ドキュメントの [プロパティページセクション](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) で説明します。
-5. ワークフローが起動し、インストールが完了します。
+1. [アドビのリアルタイム CDP インターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先／カタログ]**&#x200B;に移動します。
+2. カタログから拡張機能を選択するか、検索バーを使用します。
+3. 宛先をクリックしてハイライトし、右側のパネルで「**[!UICONTROL 拡張機能のインストール]**」を選択します。「**[!UICONTROL 拡張機能のインストール]**」コントロールが灰色表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。[前提条件](#prerequisites)を確認してください。
+4. **[!UICONTROL 使用可能な Launch プロパティを選択]**&#x200B;ウィンドウで、拡張機能をインストールする Launch プロパティを選択します。また、Launch で新しいプロパティを作成することもできます。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、Launch ドキュメントの[「プロパティ」ページに関する節](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html#プロパティページ)を参照してください。
+5. ワークフローに従って、Launch でインストールを完了します。
 
-拡張機能の設定オプションについて詳しくは、Adobe Exchangeの [Google UniversalAnalytics拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.100847.html) を参照してください。
+拡張機能の設定オプションについて詳しくは、Adobe Exchange の [Google Universal Analytics 拡張機能に関するページ](https://exchange.adobe.com/experiencecloud.details.100847.html)を参照してください。
 
-拡張機能は、 [Experience Platform Launchインターフェイスに直接インストールすることもできます](https://launch.adobe.com/)。 Launchドキュメ [ントで新しい拡張機能を追加参照してください](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) 。
+拡張機能は、[Experience Platform Launch インターフェイス](https://launch.adobe.com/)に直接インストールすることもできます。Launch ドキュメントの[新しい拡張機能の追加](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension)に関するページを参照してください。
 
 
 ## 拡張機能の使用方法 {#how-to-use}
 
-拡張機能をインストールすると、「起動」で直接、拡張機能のルール設定を開始できます。
+拡張機能をインストールしたら、その拡張機能のルールを Launch で直接設定できます。
 
-「起動」では、特定の状況でのみイベントデータを拡張子の宛先に送信するように、インストール済みの拡張子のルールを設定できます。 拡張機能のルールの設定について詳しくは、「ルール [ドキュメント](https://docs.adobe.com/help/ja-JP/launch/using/reference/manage-resources/rules.html)」を参照してください。
+Launch では、特定の状況でのみ拡張機能の宛先にイベントデータを送信するように、インストール済みの拡張機能のルールを設定できます。拡張機能のルールの設定について詳しくは、[ルールに関するドキュメント](https://docs.adobe.com/help/ja-JP/launch/using/reference/manage-resources/rules.html)を参照してください。
 
 ## 拡張機能の設定、アップグレード、削除 {#configure-upgrade-delete}
 
-起動インターフェイスでは、拡張機能の設定、アップグレードおよび削除が可能です。
+Launch インターフェイスで、拡張機能の設定、アップグレードおよび削除をおこなうことができます。
 
 >[!TIP]
 >
->拡張機能が既にいずれかのプロパティにインストールされている場合、Adobe Real-time CDP UIには、拡張機能の **[!UICONTROL Install]** と表示されます。 「 [Install extension](#install-extension) 」の説明に従ってインストールワークフローを開始し、拡張機能を起動して設定または削除します。
+>拡張機能が既にいずれかのプロパティにインストールされている場合、アドビのリアルタイム CDP UI には、拡張機能に対して「**[!UICONTROL インストール]**」が表示されます。「[拡張機能のインストール](#install-extension)」の説明にしたがってインストールワークフローを開始し、Launch に移動して拡張機能を設定または削除します。
 
-拡張機能をアップグレードするには、Launchドキュメントの [Extensionアップグレード](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) を参照してください。
+拡張機能をアップグレードするには、Launch ドキュメントの「[拡張機能のアップグレード](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/extension-upgrade.html)」を参照してください。
