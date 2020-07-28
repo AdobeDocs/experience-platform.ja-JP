@@ -33,14 +33,14 @@ Adobe Experience Platform Web SDK は、次の SDK の代わりとなります�
 
 新しいライブラリに加えて、アドビのソリューションに対する HTTP 要求を整理する新しいエンドポイントが追加されました。以前は、Visitor.js は訪問者 ID サービスに対してブロック呼び出しを送信した後、AT.js は Adobe Target に呼び出しを送信、DIL.js は Adobe Audience Manager に呼び出しを送信、最後に AppMeasurement.js は Adobe Analytics に呼び出しを送信していました。This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to the Adobe Experience Platform in a single call.
 
-次のビデオでは、Adobe Experience Platform [!DNL Web SDK] と実行中の動作 [!DNL Edge Network] を示します。 このビデオの例では、Adobeへの1回の呼び出しを使用して、 [!DNL Experience Platform]、、 [!DNL Analytics]、 [!DNL Audience Manager]およびにデータを送信し [!DNL Target]ます。
+次のビデオでは、Adobe Experience Platform [!DNL Web SDK] と実行中の動作 [!DNL Edge Network] を示します。 このビデオの例では、 [!DNL Experience Platform]、、、およびにデータを送信する、Adobeへの1回の呼び出しを使用し [!DNL Analytics][!DNL Audience Manager][!DNL Target]ます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
 
 ## はじめに
 
-Adobe Launchの使い始め方に関するクイックチュートリアルについては、「はじめに [」ガイドを](getting-started/quick-start-with-launch.md) 参照することを強くお勧めします。
+Adobe起動の使用を開始する方法に関するクイックチュートリアルについては、「はじめに [」ガイドを](getting-started/quick-start-with-launch.md) 参照することを強くお勧めします。
 
 この製品は、ますます多くの使用事例をサポートするように、常に進化し、成長しています。 最新のバージョンに対応するために、 [サポートされているユースケースボードをご覧ください](https://github.com/adobe/alloy/projects/5)。 現在サポートしている使用事例や、可能な限り最適な判断を下すために取り組んでいる使用事例について、この情報を最新の状態に保ちます。
 
