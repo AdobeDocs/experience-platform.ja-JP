@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: UIにAzure BlobまたはAmazon S3ソースコネクタを作成する
+title: UI での Azure Blob または Amazon S3 ソースコネクタの作成
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
 source-wordcount: '631'
-ht-degree: 1%
+ht-degree: 15%
 
 ---
 
 
-# UIで [!DNL Azure Blob] または [!DNL Amazon] S3ソースコネクタを作成する
+# Create an [!DNL Azure Blob] or [!DNL Amazon] S3 source connector in the UI
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ユー [!DNL Azure Blob] ザーインターフェイスを使用して、S3または [!DNL Amazon][!DNL Platform] S3 （以下「Blob」と呼びます）ソースコネクタを作成する手順について説明します。
 
 ## はじめに
 
-このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [Experience Data Model(XDM)System](../../../../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成の主な原則とベストプラクティスが含まれます。
+- [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準化されたフレームワークです。
+   - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 既にBlobまたはS3ベースの接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/batch/cloud-storage.md)。
 
@@ -62,7 +62,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 *[!UICONTROL Databases]***[!UICONTROL カテゴリ」で、「]** Azure Databasesストレージ **[!UICONTROL 」または「]** Amazon Amazon Amazon3 ****[!DNL Blob] 」を選択し、「+」アイコン(+)をクリックして、新しいDatabasesまたはAmazon s3コネクタを作成します。
+[ *[!UICONTROL Databases]* ] **[!UICONTROL カテゴリで、[]** Azure Databases **ストレージを選択します。[]** Azure Databases]Amazon[ **S3**[!DNL Blob] ]を選択し、[+]アイコン(+)新しいBlobまたはS3コネクタを作成する]をクリックします。
 
 ![カタログ](../../../../images/tutorials/create/blob/catalog.png)
 
