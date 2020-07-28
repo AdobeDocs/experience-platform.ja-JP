@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Azure BlobおよびAmazon S3コネクタ
+title: Azure BlobとAmazonS3コネクタ
 topic: overview
 translation-type: tm+mt
 source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
 workflow-type: tm+mt
 source-wordcount: '228'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
 
-# Azure BlobおよびAmazon S3コネクタ
+# Azure BlobとAmazonS3コネクタ
 
 Adobe Experience Platformは、AWS、 [!DNL Google Cloud Platform]およびなどのクラウドプロバイダーに対してネイティブの接続を提供 [!DNL Azure]します。 これらのシステムのデータをに取り込むことができ [!DNL Platform]ます。
 
-Cloudストレージソースからは、ダウンロード、フォーマット、アップロードを行う [!DNL Platform] ことなく、独自のデータをに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] とS3のデータをバッチ [!DNL Azure Blob] で取り込むことができます。
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] とS3のデータをバッチ [!DNL Azure Blob] で取り込むことができます。
 
 ## IPアドレス許可リスト
 
@@ -61,5 +61,5 @@ Cloudストレージソースからは、ダウンロード、フォーマット
 
 ## UI [!DNL Blob] を使用してS3 [!DNL Platform] に接続
 
-- [UIにAzure BlobまたはAmazon S3ソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/blob-s3.md)
+- [UI での Azure Blob または Amazon S3 ソースコネクタの作成](../../tutorials/ui/create/cloud-storage/blob-s3.md)
 - [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
