@@ -7,16 +7,16 @@ translation-type: tm+mt
 source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
 source-wordcount: '364'
-ht-degree: 0%
+ht-degree: 30%
 
 ---
 
 
-# APIの概要 [!DNL Real-time Customer Profile] {#getting-started}
+# Getting started with the [!DNL Real-time Customer Profile] API {#getting-started}
 
-APIを使用すると、計算済み属性の設定、エンティティへのアクセス、プロファイルデータの書き出し、不要なプロファイルセットやバッチの削除など、リソースに対する基本的なCRUD操作を実行できます。 [!DNL Real-time Customer Profile]
+Using the [!DNL Real-time Customer Profile] API, you can perform basic CRUD operations against Profile resources, such as configuring computed attributes, accessing entities, exporting Profile data, and deleting unneeded datasets or batches.
 
-開発者ガイドを使用するには、データの操作に関係する様々なAdobe Experience Platformサービスについて、作業を理解しておく必要があり [!DNL Profile] ます。 APIの使用を開始する前に、次のサービスのドキュメントを確認して [!DNL Real-time Customer Profile] ください。
+Using the developer guide requires a working understanding of the various Adobe Experience Platform services involved in working with [!DNL Profile] data. Before beginning to work with the [!DNL Real-time Customer Profile] API, please review the documentation for the following services:
 
 * [!DNL Real-time Customer Profile](../home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
 * [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md): デバイスとシステム間でIDをブリッジ化することで、顧客と行動をより良く表示できます。
@@ -24,27 +24,27 @@ APIを使用すると、計算済み属性の設定、エンティティへの�
 * [!DNL Experience Data Model (XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-以下の節では、 [!DNL Profile] APIエンドポイントの呼び出しを正常に行うために知っておく必要がある追加情報について説明します。
+The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Profile] API endpoints.
 
-## サンプルAPI呼び出しの読み取り
+## API 呼び出し例の読み取り
 
-APIドキュメントには、リクエストを正しくフォーマットする方法を示すAPI呼び出しの例が含まれています。 [!DNL Real-time Customer Profile] 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+The [!DNL Real-time Customer Profile] API documentation provides example API calls to demonstrate how to properly format requests. この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
 ## 必須ヘッダー
 
-また、APIドキュメントでは、エンドポイントの呼び出しを正常に行うために、 [認証のチュートリアル](../../tutorials/authentication.md) を完了している必要があり [!DNL Platform] ます。 次に示すように、認証チュートリアルで、 [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+また、API ドキュメントでは、 エンドポイントを正しく呼び出すために、[認証に関するチュートリアル](../../tutorials/authentication.md)を完了している必要があります。[!DNL Platform]Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
-* 認証： 無記名 `{ACCESS_TOKEN}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへの要求には、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-リクエスト本文のペイロードを含むすべてのリクエスト（POST、PUT、PATCH呼び出しなど）には、 `Content-Type` ヘッダーが必要です。 各呼び出しに固有の受け入れられた値は、呼び出しパラメーターに提供されます。
+リクエスト本文にペイロードを持つすべてのリクエスト（POST、PUT、PATCH 呼び出しなど）には、`Content-Type` ヘッダーが含まれている必要があります。各呼び出しに固有の受け入れられた値は、呼び出しパラメーターに指定されます。
 
 ## 次の手順
 
