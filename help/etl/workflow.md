@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ETLワークフロー
+title: ETL ワークフロー
 topic: overview
 translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 0%
+ht-degree: 88%
 
 ---
 
 
-# ETLワークフロー
+# ETL ワークフロー
 
-様々な抽出、変換、読み込み(ETL)ツールの形式が異なる場合がありますが、ほとんどの場合、類似した機能が公開され、複数のデータソースの組み合わせに役立ちます。
+様々な抽出、変換、読み込み（ETL）ツールの形式は異なることがありますが、ほとんどのツールでは、複数のデータソースを組み合わせる際に役立つ類似した機能が公開されています。
 
-## ETLツールの例
+## ETL ツールの例
 
-次の図は、一般的なETLアクションのモックアップと、標準的なインタラクションに基づく一般的なユーザーエクスペリエンスを示しています。 これらの画像は、特定のETLユーザーエクスペリエンスに容易に適用できます。
+次の図は、一般的な ETL アクションと、標準的なインタラクションにおける一般的なユーザーエクスペリエンスを示しています。これらの画像は、特定の ETL ユーザーエクスペリエンスで容易に活用することができます。
 
-以下に示すアクションは、『 [ETL統合ガイド](home.md)』で概要を説明しています。 特定の「図」を参照する手順と、ここに示すワークフローと同様の操作を説明する手順があります。
+以下に示すアクションの手順については、[ETL 統合ガイド](home.md)で説明しています。一部の手順では特定の「図」を参照しています。その他の手順では、ここに示したワークフローと同様のアクションについて説明しています。
 
-### 図1 — 新しいAdobe Experience Platformコネクタの設定：
+### 図 1 - 新しい Adobe Experience Platform コネクタの設定：
 
 ![](images/image2.png)
 
@@ -30,42 +30,42 @@ ht-degree: 0%
 
 ![](images/image3.png)
 
-### 図3 - ETL変換管理UI:
+### 図 3 - ETL 変換管理 UI：
 
 ![](images/image4.png)
 
-### 図4 — 新しい変換UI、「 [!DNL Experience Platform] Connection」を選択します。
+### Figure 4 - New Transformation UI, selecting [!DNL Experience Platform] Connection:
 
 ![](images/image5.png)
 
-### 図5 — ソース [!DNL Experience Platform] データセットの参照：
+### Figure 5 - Browsing for source [!DNL Experience Platform] Datasets:
 
 ![](images/image6.png)
 
-### 図6 - ETL UIのデータセットからのメタデータとサンプルデータ：
+### 図 6 - データセットのメタデータとサンプルデータ（ETL UI）：
 
 ![](images/image7.png)
 
-### 図7 — データセットからのフィールドスキーマ情報の表示：
+### 図 7 - データセットのフィールドスキーマ情報の表示：
 
 ![](images/image8.png)
 
-### 図8 — データセットからのデータのプレビュー：
+### 図 8 - データセットのデータのプレビュー：
 
 ![](images/image9.png)
 
-### 図9 — 変換の操作に使用するデータ同期パラメータの定義：
+### 図 9 - 変換の操作のためのデータ同期パラメーターの定義：
 
 ![](images/image10.png)
 
-### 図10 - [!DNL Experience Data Model] (XDM)ターゲットデータセットの定義：
+### Figure 10 - Defining the [!DNL Experience Data Model] (XDM) target Dataset:
 
 ![](images/image11.png)
 
-### 図11 - XDM階層スキーマとメタデータを表示して、マッピング/変換をサポートする：
+### 図 11 - マッピング／変換のために XDM 階層スキーマとメタデータを表示する：
 
 ![](images/image12.png)
 
-### 図12 — 変換を保存して実行/スケジュールする：
+### 図 12 - 保存して変換を実行する／変換のスケジュールを設定する：
 
 ![](images/image13.png)
