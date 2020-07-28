@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: フィールドをIDとしてラベル付けする
+title: フィールドを ID としてラベル付け
 topic: api guide
 translation-type: tm+mt
 source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 1%
+ht-degree: 91%
 
 ---
 
 
-# フィールドをIDとしてラベル付けする
+# フィールドを ID としてラベル付け
 
-個人識別情報(PII)を含むフィールドは、識別情報フィールドとしてラベル付けできます。 IDフィールドに指定された値は、によってIDとして解釈され [!DNL Identity Service]ます。 IDの名前空間は、フィールドのラベル付けの一部として指定されます。
+個人を特定できる情報（PII）を含むフィールドは、ID フィールドとしてラベル付けできます。A value provided in an identity field is interpreted as an identity by [!DNL Identity Service]. ID の名前空間は、フィールドのラベル付けの一部として指定されます。
 
-フィールドにIDのラベルを付けるには、次の条件を満たす必要があります。
+フィールドを ID としてラベル付けするには、次の条件が満たされている必要があります。
 
-- IDに使用できるのは、文字列タイプのフィールドのみです
-- IDは、レコードと時系列データでのみ認識されます。
-- PIIフィールドのみをIDとしてマークする必要があります。 より一般的なデータを表すフィールドを選択すると、関係があまり正確でなくなり、IDグラフから関連IDにアクセスする際にエラーが発生する可能性があります
+- ID に使用できるのは、文字列型のフィールドのみです。
+- ID は、レコードと時系列データのみで認識されます。
+- PII フィールドのみを ID としてマークする必要があります。より一般的なデータを表すフィールドを選択すると、関係の精度が低下し、ID グラフから関連 ID にアクセスする際にエラーが発生する可能性があります。
 
-スキーマレジストリAPIを使用してフィールドにIDのラベルを付ける方法については、 [Create a descriptor](../../xdm/api/descriptors.md).を参照してください。
+スキーマレジストリ API を使用してフィールドを ID としてラベル付けする方法については、[記述子の作成](../../xdm/api/descriptors.md)を参照してください。
 
 ## 次の手順
 
-次のチュートリアルに進み、 [リストクラスタIDを確認します。](./list-cluster-identites.md)
+次のチュートリアルに進み、[クラスターの ID をリスト](./list-cluster-identites.md)します。
