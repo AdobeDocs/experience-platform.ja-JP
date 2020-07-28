@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Experience Platformリリースノート（2019年9月11日）
+description: Experience Platform リリースノート 2019 年 9 月 10 日
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '532'
-ht-degree: 5%
+ht-degree: 44%
 
 ---
 
@@ -25,49 +25,49 @@ Adobe Experience Platform内の既存の機能の更新：
 
 ## [!DNL Data Ingestion] {#ingestion}
 
-Adobe Experience Platformは、あらゆる種類のデータや遅延を取り込むための豊富な機能セットを提供します。 Adobe Experience Platform [!DNL Data Ingestion] は、Batch API、Streaming API、ネイティブのAdobe Connectors、Data Integrationパートナー、Adobe Experience PlatformUIなど、データを取り込むための複数の代替手段を提供します。
+Adobe Experience Platform には、あらゆる種類のデータやデータのレイテンシを取り込むための豊富な機能が用意されています。Adobe Experience Platform [!DNL Data Ingestion] provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
 
 **新機能**
 
 | 機能 | 説明 |
 | ----------- | ---------- |
-| ストリーミング取り込み用の新しいドメイン | ドメインは、新しい共通データ収集ドメインに移動され `dcs.data.adobe.net``dcs.adobedc.net`ました。 Adobe Experience Platformストリーミングの取り込みに関するドキュメントに従って、ユーザーは実装を更新する必要があります。 Adobe Experience Platformストリーミングの取り込みに関連するすべてのドキュメントが、新しいドメインを使用するように更新されました。 |
+| ストリーミング取得用の新しいドメイン | `dcs.data.adobe.net` ドメインは、新しい共通データ収集ドメイン `dcs.adobedc.net` に移動しました。ユーザーは、Adobe Experience Platform の改訂されたストリーミング取得ドキュメントに従って、実装を更新する必要があります。Adobe Experience Platform のストリーミング取得に関連するすべてのドキュメントは、新しいドメインを使用するように更新されています。 |
 
-詳しくは、 [データ収集ドキュメントを参照してください](../../ingestion/home.md)。
+詳しくは、[データ取得ドキュメント](../../ingestion/home.md)を参照してください。
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace][!DNL Experience Platform] は、機械学習モデルの構築と運用により、データ科学者がアドビのソリューションやサードパーティ製システムのデータやコンテンツからの洞察をシームレスに生み出せるようにする、内部で完全に管理されたサービスです。 [!DNL Data Science Workspace] は、XDMデータの調査と準備を含む、エンドツーエンドのデータ科学ライフサイクルと緊密に統合され、さらにモデルの開発と運用を強化して、機械学習インサイトを自動的に強化 [!DNL Platform][!DNL Real-time Customer Profile] します。
+Adobe Experience Platform [!DNL Data Science Workspace] is a fully managed service within [!DNL Experience Platform] that enables data scientists to seamlessly generate insights from data and content across Adobe solutions and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] は、XDMデータの調査と準備を含む、エンドツーエンドのデータ科学ライフサイクルと緊密に統合され、さらにモデルの開発と運用を強化して、機械学習インサイトを自動的に強化 [!DNL Platform][!DNL Real-time Customer Profile] します。
 
 **新機能**
 
 | 機能 | 説明 |
 | -----------| ---------- |
-| UIを介したサービスのスケジュール | Orchestration Serviceと統合され、UIを使用してユーザー定義のスケジュールによるモデルのトレーニングとスコアリングを自動化します。 [!DNL Platform] |
-| [!DNL Service Gallery] | 機械学習サービスを参照、監視、アクセスし、自動トレーニングとスコアリングのジョブをスケジュールできます。これらはすべて再設計された環境で行い [!DNL Service Gallery]ます。 |
+| UI を介したサービスのスケジュール | Integrated with [!DNL Platform] Orchestration Service to automate Model training and scoring with user-defined schedules using the UI. |
+| [!DNL Service Gallery] | Browse, monitor, and access machine learning Services with the ability to schedule automated training and scoring jobs, all within the redesigned [!DNL Service Gallery]. |
 | [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] UIの改善。 |
 
 **既知の問題**
 
-* 現在、既存のサービスを削除するアクセス方法 [!DNL Service Gallery] はありません。 それまでの間、API呼び出しを使用して既存のサービスを削除するには、 [Senesi Machine Learning APIリファレンスを参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) 。
-* サービスのトレーニングとスコアリングの実行をフィルターするためのページネーションはサポートされていません。 [!DNL Service Gallery]
-* スケジュール済みのトレーニングまたはスコアリングの実行を設定する場合 [!DNL Service Gallery]、頻度を時間別に設定すると、スケジュールが適用されなくなります。
+* There is currently no accessible way in the [!DNL Service Gallery] to delete an existing Service. 当面は、[Senesi の機械学習 API リファレンスを](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)参照して、API 呼び出しを通じて既存のサービスを削除してください。
+* The [!DNL Service Gallery] does not have pagination support to filter a Service&#39;s training and scoring runs.
+* When configuring scheduled training or scoring runs through the [!DNL Service Gallery], setting the frequency to hourly prevents the schedule from being applied.
 
-詳しくは、 [Data Science Workspaceの概要を参照してください](../../data-science-workspace/home.md)。
+詳しくは、「[Data Science Workspace の概要](../../data-science-workspace/home.md)」を参照してください。
 
 ## [!DNL Query Service] {#query}
 
 [!DNL Query Service] 標準のSQLからクエリデータへのAdobe Experience Platformを使用して、様々な分析やデータ管理の使用例をサポートする機能を提供します。 It is a serverless tool that allows you to join datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or for ingestion into [!DNL Real-time Customer Profile].
 
-You can use [!DNL Query Service] to build data analysis ecosystems, creating a picture of customers across their various interaction channels. これらのチャネルには、POS（販売時点管理システム）、Web、モバイル、CRMなどが含まれます。
+You can use [!DNL Query Service] to build data analysis ecosystems, creating a picture of customers across their various interaction channels. これらのチャネルには、POS（販売時点管理システム）、web、モバイル、CRM システムなどが含まれます。
 
 **新機能**
 
 | 機能 | 説明 |
 | -----------| ---------- |
-| 改善点 [!DNL Query Editor] | クエリを保存して後で操作できる保存関数が追加されました。 Adobe Experience Platform上のユーザーインターフェイスに「参照」タブが追加され、組織内のユーザーが保存したクエリを表示できるようになりました。 [!DNL Query Service] 表示中のクエリに関する有用なメタデータを表示する「クエリの詳細」パネルを実装しました。 |
-| 新しいアトリビューション関数 | 有効期限パラメーターを使用したチャネル属性 [!DNL Query Service] のための、クエリへのアドビ定義関数。 |
-| SQL構文の改良 | iLike構文のサポート。 |
-| 定義済みのXDMスキーマを使用したデータセットの生成 | ターゲットスキーマを指定できる新しい句を、選択としてテーブルを作成(CTAS)クエリに追加しました。 |
+| 改善点 [!DNL Query Editor] | 保存関数が追加され、クエリを保存して後で使用できるようになりました。Added a &quot;Browse&quot; tab to the [!DNL Query Service] user interface on Adobe Experience Platform that shows queries saved by users in your organization. 表示中のクエリに関する有用なメタデータを表示する「クエリの詳細」パネルが実装されました。 |
+| 新しい属性関数 | Adobe-defined functions in [!DNL Query Service] to query for channel attribution with expiration parameters. |
+| SQL 構文の強化 | iLike 構文のサポート。 |
+| 定義済みの XDM スキーマを使用してデータセットを生成 | Create Table as Select（CTAS）クエリの新しい句が追加され、ターゲットスキーマを指定できるようになりました。 |
 
-For more information, refer to the [Query Service documentation](../../query-service/home.md).
+詳しくは、[クエリサービスのドキュメント](../../query-service/home.md)を参照してください。
