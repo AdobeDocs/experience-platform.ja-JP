@@ -1,30 +1,30 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy ServiceFAQ
+title: Privacy Service に関する FAQ
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '856'
-ht-degree: 0%
+ht-degree: 46%
 
 ---
 
 
 # [!DNL Privacy Service] トラブルシューティングガイド
 
-Adobe Experience Platform [!DNL Privacy Service] は、会社が顧客データのプライバシーリクエストを管理するのに役立つRESTful APIおよびユーザーインターフェイスを提供します。 ま [!DNL Privacy Service]た、個人または個人の顧客データにアクセスして削除する要求を送信でき、組織や法的プライバシーに関する規制への自動コンプライアンスが容易になります。
+Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help companies manage customer data privacy requests. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.
 
-このドキュメントでは、に関するよくある質問 [!DNL Privacy Service]と、APIでよく発生するエラーに関する情報を提供します。
+このドキュメントでは、に関するよくある質問 [!DNL Privacy Service]と、APIでよく発生するエラーに関する情報に回答します。
 
-## APIでプライバシーリクエストを行う場合、ユーザーとユーザーIDの違いは何ですか。 {#user-ids}
+## API でプライバシーリクエストをおこなう場合、ユーザーとユーザー ID の違いは何ですか？ {#user-ids}
 
-APIで新しいプライバシージョブを作成するには、リクエストのJSONペイロードに、プライバシーリクエストが適用される各ユーザーに対して特定のリストを含む `users` 配列を含める必要があります。 配列内の各項目は、 `users` 値で識別される特定のユーザーを表すオブジェクトで `key` す。
+API で新しいプライバシージョブを作成するには、リクエストの JSON ペイロードに、プライバシーリクエストが適用される、各リストに固有の情報をする `users` 配列を含める必要があります。`users` 配列内の各項目は、`key` 値で識別される特定のユーザーを表すオブジェクトです。
 
-次に、各ユーザーオブジェクト(または `key`)には、それぞれ独自の `userIDs` 配列が含まれます。 この配列は、その特定 **のユーザーに固有のID値をリストします**。
+次に、各ユーザーオブジェクト（または `key`）には独自の `userIDs` 配列が含まれます。この配列は、**その1 人のユーザーのために**&#x200B;特定の ID 値をリストします。
 
-Consider the following example `users` array:
+以下の `users` 配列の例について考えてみましょう。
 
 ```json
 "users": [
@@ -59,42 +59,42 @@ Consider the following example `users` array:
 ]
 ```
 
-この配列には2つのオブジェクトが含まれ、それぞれの `key` 値で識別される個々のユーザー（「DavidSmith」と「user12345」）を表します。 「DavidSmith」には1つのリストID（電子メールアドレス）しかありませんが、「user12345」には2つのID（電子メールアドレスとECID）があります。
+この配列には 2 つのオブジェクトが含まれ、それぞれの `key` 値（「DavidSmith」と「user12345」）で識別される個々のユーザーを表します。「DavidSmith」には 1 つの ID（電子メールアドレス）しかありませんが、「user12345」には 2 つ（電子メールアドレスと ECID）があります。
 
-ユーザーID情報の提供について詳しくは、プライバシー要求の [IDデータに関するガイドを参照してください](identity-data.md)。
+ユーザID情報の提供について詳しくは、[プライバシーリクエストの ID データ](identity-data.md)に関するガイドを参照してください。
 
 
-## を使用して、誤って送信 [!DNL Privacy Service] されたデータをクリーンアップできま [!DNL Platform]すか。
+## Can I use [!DNL Privacy Service] to clean up data that was accidentally sent to [!DNL Platform]?
 
-誤って製品に送信されたデータ [!DNL Privacy Service] の消去の使用は、アドビではサポートしていません。 [!DNL Privacy Service] は、データ件名（または消費者）へのアクセスや削除の要求に対する義務を満たすのに役立つように設計されています。 これらの要求は時間に依存し、適用されるプライバシー法に関するものです。 データの件名/コンシューマーアクセスまたは削除のリクエスト以外のリクエストの送信は、すべての [!DNL Privacy Service] お客様に影響を与え、の適切な法的日程 [!DNL Privacy Service] をサポートする機能に影響します。
+Adobe does not support using [!DNL Privacy Service] for clearing out data that was accidentally submitted to a product. [!DNL Privacy Service] は、お客様が、データ主体（または消費者）のアクセスや削除のリクエストに対する義務を果たすのを支援するよう設計されています。これらのリクエストは時間に依存し、該当するプライバシー法に従っておこなわれます。Submission of requests which are not data-subject/consumer access or delete requests impacts all [!DNL Privacy Service] customers and the ability for [!DNL Privacy Service] to support the appropriate legal timelines.
 
-PIIやデータの問題を取り除くための作業レベルを、アカウントマネージャ(CDM)に問い合わせて調整し、ご連絡ください。
+PII やデータの問題をなくすための取り組みのレベルを調整および提供するには、担当のアカウントマネージャー（CDM）にお問い合わせください。
 
-## プライバシーの要請や仕事の状態に関する情報を取得する方法を教えてください。
+## プライバシーリクエストやジョブのステータスに関する情報び取得方法を教えてください。
 
-特定のジョブに関する詳細を取得するには、 [!DNL Privacy Service] APIまたはユーザーインターフェイスを使用します。
+You can retrieve details about a particular job by using the [!DNL Privacy Service] API or user interface.
 
-### APIの使用
+### API の使用
 
-APIを使用して特定のジョブのステータスを取得するには、リクエストパスでジョブのIDを使用して、ルート( [!DNL Privacy Service]`GET /`)エンドポイントにリクエストを行います。 詳しくは、『 [開発者ガイド』のジョブのステータスの](api/privacy-jobs.md#check-the-status-of-a-job) チェックに関する節を参照してください [!DNL Privacy Service] 。
+To retrieve the status of a particular job using the [!DNL Privacy Service] API, make a request to the root (`GET /`) endpoint, using the job&#39;s ID in the request path. 詳しくは、『 開発者ガイド』で、[ジョブのステータスの確認](api/privacy-jobs.md#check-the-status-of-a-job)に関する節を参照してください。[!DNL Privacy Service]
 
-### UIの使用
+### UI の使用
 
-すべてのアクティブなジョブ要求は、 **[!UICONTROL UIダッシュボードの]** ジョブ要求 [!DNL Privacy Service] Widgetに一覧表示されます。 各ジョブリクエストのステータスが「 **[!UICONTROL ステータス]** 」列に表示されます。 UIでのジョブ要求の表示について詳しくは、 [Privacy Serviceユーザーガイドを参照してください](ui/user-guide.md)。
+All active job requests are listed in the **[!UICONTROL Job Requests]** widget on the [!DNL Privacy Service] UI dashboard. 各ジョブリクエストのステータスが「**[!UICONTROL ステータス]**」列に表示されます。UI でのジョブリクエストの表示について詳しくは、[Privacy Service のユーザーガイド](ui/user-guide.md)を参照してください。
 
-## 完了したプライバシージョブの結果をダウンロードするにはどうしますか？
+## 完了したプライバシージョブの結果をダウンロードする方法を教えてください。
 
-APIとユーザーインターフェイスは共に、完了したジョブの結果をZIP形式でダウンロードする方法を提供します。 [!DNL Privacy Service]
+The [!DNL Privacy Service] API and user interface both provide methods for downloading the results of completed jobs in ZIP format.
 
-### APIの使用
+### API の使用
 
-結果を要求パスでダウンロードするジョブのIDを使用して、`GET /`APIのルート( [!DNL Privacy Service] )エンドポイントにリクエストを行います。 ジョブのステータスが完了した場合、APIは応答本文に `downloadURL` 属性を含めます。 この属性にはURLが含まれ、このURLをブラウザーのアドレスバーに貼り付けてZIPファイルをダウンロードできます。
+リクエストパスで結果をダウンロードするジョブの ID を使用して、 API のルート（`GET /`）エンドポイントにリクエストを送信します。[!DNL Privacy Service]ジョブのステータスが完了した場合、API は応答本文に `downloadURL` 属性を含めます。この属性には、ブラウザーのアドレスバーに貼り付けて ZIP ファイルをダウンロードできる URL が含まれます。
 
-詳しくは、 [開発者ガイドのIDによるジョブの](api/privacy-jobs.md#check-the-status-of-a-job)[!DNL Privacy Service] 検索に関する節を参照してください。
+詳しくは、『 開発者ガイド』で、[ID によるジョブの検索](api/privacy-jobs.md#check-the-status-of-a-job)に関する節を参照してください。[!DNL Privacy Service]
 
-### UIの使用
+### UI の使用
 
-UI [!DNL Privacy Service] ダッシュボードで、 **ジョブ要求ウィジェットからダウンロードするジョブを探します** 。 ジョブのIDをクリックして、 _ジョブの詳細_ ページを開きます。 ここから、右上隅の「 **ダウンロード** 」をクリックしてZIPファイルをダウンロードします。 詳細な手順については、『 [Privacy Serviceユーザガイド](ui/user-guide.md) 』を参照してください。
+On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. ジョブの ID をクリックして、_ジョブの詳細ページ_&#x200B;を開きます。右上隅の「**ダウンロード**」をクリックして、ZIP ファイルをダウンロードします。詳細な手順については、『[Privacy Service ユーザーガイド](ui/user-guide.md)』を参照してください。
 
 ## 一般的なエラーメッセージ
 
