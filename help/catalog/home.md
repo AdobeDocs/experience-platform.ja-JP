@@ -7,60 +7,60 @@ translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '732'
-ht-degree: 6%
+ht-degree: 39%
 
 ---
 
 
-# [!DNL Catalog Service]概要
+# [!DNL Catalog Service] 概要
 
-[!DNL Catalog Service] は、Adobe Experience Platform内のデータの場所と系列のレコードシステムです。 に取り込まれるすべてのデータ [!DNL Experience Platform] は、ファイルとディレクトリ [!DNL Data Lake] としてに保存されますが、では、参照と監視のために、これらのファイルとディレクトリのメタデータと説明が [!DNL Catalog] 保持されます。
+[!DNL Catalog Service] は、Adobe Experience Platform内のデータの場所と系列のレコードシステムです。 While all data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
-簡単に言うと、メタデータストア [!DNL Catalog] または「[!UICONTROL カタログ]」の役割を果たします。ここで、内のデータに関する情報を見つけることができ [!DNL Experience Platform]ます。 を使用して、次 [!DNL Catalog] の質問に答えることができます。
+Simply put, [!DNL Catalog] acts as a metadata store or &quot;[!UICONTROL catalog]&quot; where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
 
 * データの場所
-* このデータは処理のどの段階ですか。
-* データに対してどのようなシステムまたはプロセスが作用したか。
-* 正常に処理されたデータ量。
+* データが処理のどの段階であるか。
+* データに対してどのようなシステムまたはプロセスが作用しているか。
+* 正常に処理されたデータの量
 * 処理中に発生したエラー
 
-[!DNL Catalog] には、基本的なCRUD操作を使用してメタデータをプログラムで管理できるRESTful APIが用意されています。 [!DNL Platform] 詳しくは、 [カタログ開発ガイド](api/getting-started.md) を参照してください。
+[!DNL Catalog] には、基本的なCRUD操作を使用してメタデータをプログラムで管理できるRESTful APIが用意されています。 [!DNL Platform] 詳しくは、『[カタログ開発者ガイド](api/getting-started.md)』を参照してください。
 
 ## [!DNL Catalog] および [!DNL Experience Platform] サービス
 
-追跡するリソースは、複数のサー [!DNL Catalog Service][!DNL Experience Platform] ビスで使用されます。 機能を最大限に活用するために、これらのサービスとのやり取りについて理解することをお勧めし [!DNL Catalog's][!DNL Catalog]ます。
+The resources that [!DNL Catalog Service] tracks are used by multiple [!DNL Experience Platform] services. In order to make the most of [!DNL Catalog's] capabilities, it is recommended that you become familiar with these services and how they interact with [!DNL Catalog].
 
 ### [!DNL Experience Data Model] (XDM)システム
 
-[!DNL Experience Data Model] (XDM)システムは、顧客体験データを [!DNL Platform] 編成する標準化されたフレームワークです。 [!DNL Experience Platform] XDMスキーマを利用して、一貫した再利用可能な方法でデータの構造を記述します。
+[!DNL Experience Data Model] (XDM)システムは、顧客体験データを [!DNL Platform] 編成する標準化されたフレームワークです。 [!DNL Experience Platform] は、XDM スキーマを活用して、一貫した再利用可能な方法でデータの構造を記述します。
 
-データがに取り込まれ [!DNL Platform]ると、そのデータの構造がXDMスキーマにマッピングされ、 [!DNL Data Lake] データセットの一部とし **てに格納されます**。 各データセットのメタデータは、データセットが適合するXDMスキーマへの参照を含む、 [!DNL Catalog Service]によって追跡されます。
+When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a **dataset**. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to.
 
-XDMシステムの一般情報について詳しくは、 [XDMシステムの概要を参照してください](../xdm/home.md)。
+XDM システムの一般的な情報については、「[XDM システムの概要](../xdm/home.md)」を参照してください。
 
 ### [!DNL Data Ingestion]
 
 [!DNL Experience Platform] 複数のソースからデータを取り込み、レコードをデータセットとして内に保持 [!DNL Data Lake]します。 [!DNL Catalog] 取り込み元や取り込み方法に関係なく、これらのデータセットのメタデータを追跡します。
 
-バッチ取り込み方法を使用する場合は、バッ [!DNL Catalog] チ **** ファイルの追加のメタデータも追跡します。 バッチとは、1 つの単位として取り込まれる 1 つ以上のファイルで構成されるデータの単位です。[!DNL Catalog] これらのバッチファイルのメタデータと、取り込み後に保持されるデータセットを追跡します。 バッチメタデータには、正常に取り込まれたレコードの数、失敗したレコードおよび関連するエラーメッセージに関する情報が含まれます。
+When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for **batch** files. バッチとは、単一の単位として取得される 1 つ以上のファイルで構成されるデータの単位です。[!DNL Catalog] これらのバッチファイルのメタデータと、取り込み後に保持されるデータセットを追跡します。 バッチメタデータには、正常に取得されたレコードの数、失敗したレコードおよび関連するエラーメッセージに関する情報が含まれます。
 
-See the [data ingestion overview](../ingestion/home.md) for more information.
+詳しくは、「[データ取得の概要](../ingestion/home.md)」を参照してください。
 
 ## [!DNL Catalog] オブジェクト
 
-前の節で説明したように、他のサー [!DNL Catalog][!DNL Platform] ビスで使用される複数の種類のリソースおよび操作のメタデータを追跡します。 [!DNL Catalog] は、このメタデータをカプセル化する「オブジェクト」の独自のストアを維持します。 [!DNL Catalog] オブジェクトは [!DNL Platform] データをクエリー可能に表したもので、データ自体にアクセスする必要なく、データの検索、監視、ラベル付けを行うことができます。
+As outlined in the previous section, [!DNL Catalog] tracks metadata for several kinds of resources and operations that are used by other [!DNL Platform] services. [!DNL Catalog] は、このメタデータをカプセル化する「オブジェクト」の独自のストアを維持します。 [!DNL Catalog] オブジェクトは [!DNL Platform] データをクエリー可能に表したもので、データ自体にアクセスする必要なく、データの検索、監視、ラベル付けを行うことができます。
 
-次の表に、でサポートされる各種オブジェクトの概要を示し [!DNL Catalog]ます。
+The following table outlines the different object types supported by [!DNL Catalog]:
 
-| オブジェクト | APIエンドポイント | 定義 |
+| オブジェクト | API エンドポイント | 定義 |
 |---|---|---|
-| アカウント | `/accounts` | ソース接続を作成する場合は、認証資格情報を指定する必要があります。 アカウントは、特定の種類の接続の作成に使用された認証資格情報のコレクションを表します。 各接続には、によって保持され、に保護される一意のパラメーターのセット [!DNL Catalog] があり [!DNL Azure Key Vault]ます。 |
-| バッチ | `/batches` | バッチとは、1 つの単位として取り込まれる 1 つ以上のファイルで構成されるデータの単位です。バッチオブジェクトには、バッチの取り込み指標（ディスク上の処理済みレコード数やサイズなど）の概要が [!DNL Catalog] 記載され、バッチ処理の影響を受けたデータセット、表示、その他のリソースへのリンクが含まれる場合があります。 |
-| 接続 | `/connections` | 接続とは、組織に固有で、コネクタタイプに対して適切な認証資格情報を使用して設定された、ソースコネクタの単一のインスタンスです。 |
-| コネクタ | `/connectors` | コネクターは、他のアドビアプリケーション(アドビのAnalyticsやAdobe Audience Managerなど)、サードパーティのクラウドストレージソース( [!DNL Azure Blob]、 [!DNL Amazon S3]、FTPサーバー、SFTPサーバーなど)、およびサードパーティのCRMシステム( [!DNL Microsoft Dynamics] となど [!DNL Salesforce])からデータを収集するソース接続の方法を定義します。 |
-| データセット | `/dataSets` | データセットは、スキーマ（列）とフィールド（行）を含むデータ（通常はテーブル）の収集に使用されるストレージと管理の構成体です。 See the [datasets overview](./datasets/overview.md) for more information. |
-| データセットファイル | `/datasetFiles` | データセットファイルは、保存されたデータのブロックを表し [!DNL Platform]ます。 リテラルファイルの記録として、ファイルのサイズ、ファイルに含まれるレコード数、ファイルを取り込んだバッチへの参照を確認できます。 |
+| アカウント | `/accounts` | ソース接続を作成する場合は、認証資格情報を指定する必要があります。アカウントは、特定の種類の接続の作成に使用された認証資格情報のコレクションを表します。Each connection has a set of unique parameters that are persisted by [!DNL Catalog] and secured in an [!DNL Azure Key Vault]. |
+| バッチ | `/batches` | バッチとは、単一の単位として取得される 1 つ以上のファイルで構成されるデータの単位です。A batch object in [!DNL Catalog] outlines the batch&#39;s ingestion metrics (such as the number of records processed or size on disk) and may also include links to datasets, views, and other resources that were affected by the batch operation. |
+| 接続 | `/connections` | 接続はソースコネクタの単一インスタンスです。接続は組織に固有で、コネクタの種類に適した認証資格情報を使用して構成されます。 |
+| コネクタ | `/connectors` | Connectors define how source connections are to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon S3], FTP servers, and SFTP servers), and third-party CRM systems (such as [!DNL Microsoft Dynamics] and [!DNL Salesforce]). |
+| データセット | `/dataSets` | データセットは、スキーマ（列）とフィールド（行）を含むデータ（通常はテーブル）の収集に使用されるストレージと管理の構成体です。See the [datasets overview](./datasets/overview.md) for more information. |
+| データセットファイル | `/datasetFiles` | Dataset files represent blocks of data that has been saved on [!DNL Platform]. リテラルファイルのレコードについては、ファイルのサイズ、ファイルに含まれるレコードの数、およびファイルを取得したバッチへの参照を見つけることができます。 |
 
 ## 次の手順
 
-このドキュメントでは、のより広い範囲での機能 [!DNL Catalog Service] と機能についての紹介を行い [!DNL Experience Platform]ました。 その [APIの異なるエンドポイントとの対話手順については、](api/getting-started.md)[!DNL Catalog] カタログ開発者ガイドを参照してください。 API応答で返されるデータを制限するベストプラクティスに従うため、カタログデータの [フィルタリングに関するガイドも参照することをお勧めします](api/filter-data.md) 。
+This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. See the [Catalog developer guide](api/getting-started.md) for steps on interacting with the different endpoints of that [!DNL Catalog] API. API 応答で返されるデータを制限するベストプラクティスに従うために、[カタログデータのフィルタリング](api/filter-data.md)に関するガイドも参照することをお勧めします。
