@@ -24,18 +24,18 @@ Secure [SDKを呼び出すための値にアクセスするには、次の](../.
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 SDKを使用するには、操作を実行するサンドボックスの名前とIDが必要です。 [!DNL Spark]
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. SDKを使用するには、操作を実行するサンドボックスの名前とIDが必要です。 [!DNL Spark]
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
 
-のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 ## 環境設定
 
 SDKでは、環境変数またはデータソースオプションで資格情報が提供されることを期待しています。 [!DNL Spark]
 
-| Variable | 値 |
+| 変数 | 値 |
 | -------- | ----- | 
 | `SERVICE_TOKEN` | サービス認証トークン。 |
 | `SERVICE_API_KEY` | サービスAPIキー。 これは、通常、IMSクライアントIDと同じです。 |
@@ -44,7 +44,7 @@ SDKでは、環境変数またはデータソースオプションで資格情�
 
 その他の設定パラメーターは次のとおりです。
 
-| Variable | 値 |
+| 変数 | 値 |
 | -------- | ----- |
 | `ENVIRONMENT_NAME` | 接続しようとしている環境。 「dev」、「stage」、「prod」のいずれかです。 |
 | `SANDBOX_NAME` | 接続先のサンドボックスの名前です。 |
@@ -62,7 +62,7 @@ val df = spark.read
     .load()
 ```
 
-## 設置
+## インストール
 
 SDKを使用するには、パフォーマンスの最適化をに追加する必要があり [!DNL Spark]`SparkSession`ます。 次のいずれかの方法を使用して、適用できます。
 
