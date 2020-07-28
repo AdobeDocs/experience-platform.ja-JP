@@ -1,13 +1,13 @@
 ---
-title: Facebookのリンク先
-seo-title: Facebookのリンク先
-description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するFacebookキャンペーンのプロファイルをアクティブにします。
-seo-description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するFacebookキャンペーンのプロファイルをアクティブにします。
+title: Facebook の宛先
+seo-title: Facebook の宛先
+description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
+seo-description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
 source-wordcount: '652'
-ht-degree: 25%
+ht-degree: 33%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 25%
 
 ## 概要 {#overview}
 
-ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制のために、 [!DNL Facebook] キャンペーンのプロファイルをアクティブにします。
+Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
 ![Real-time CDP UI内のFacebookの宛先](/help/rtcdp/destinations/assets/facebook-destination.png)
 
@@ -28,7 +28,7 @@ To help you better understand how and when you should use the [!DNL Facebook] de
 ### ユースケース 1
 
 
-オンライン小売業者は、ソーシャルプラットフォームを通じて既存の顧客にリーチし、以前の注文に基づいてパーソナライズされたオファーを表示したいと願っています。オンライン小売業者は、自社のCRMからAdobe Real-time CDPに電子メールアドレスを取り込み、自社のオフラインデータからセグメントを構築し、これらのセグメントを [!DNL Facebook] ソーシャルプラットフォームに送信して、広告費用を最適化できます。
+オンライン小売業者は、ソーシャルプラットフォームを通じて既存の顧客にリーチし、以前の注文に基づいてパーソナライズされたオファーを表示したいと願っています。オンライン小売業者は、自社のCRMからAdobeのリアルタイムCDPにEメールアドレスを取り込み、自社のオフラインデータからセグメントを構築し、これらのセグメントを [!DNL Facebook] ソーシャルプラットフォームに送信して、広告費用を最適化できます。
 
 
 ### ユースケース 2
@@ -36,7 +36,7 @@ To help you better understand how and when you should use the [!DNL Facebook] de
 
 航空会社には異なる顧客階層（ブロンズ、シルバー、ゴールド）があり、ソーシャルプラットフォームを通じてパーソナライズされたオファーを各層に提供したいと考えています。ただし、航空会社のモバイルアプリを使用していない顧客や、会社のWebサイトにログオンしていない顧客もいます。 会社がこれらの顧客に関して持っている識別子は、メンバーシップ ID と電子メールアドレスのみです。
 
-ソーシャルメディアを介してターゲットするには、電子メールアドレスを識別子として使用し、CRMの顧客データをAdobe Real-time CDPにオンボードできます。
+ソーシャルメディアを介してターゲットするために、CRMの顧客データをAdobeリアルタイムCDPにオンボードし、電子メールアドレスを識別子として使用できます。
 
 次に、関連するメンバーシップIDや顧客層を含むオフラインデータを使用して、新しいオーディエンスセグメントを作成し、 [!DNL Facebook] 宛先を通じてターゲットできるようにします。
 
@@ -54,7 +54,7 @@ To help you better understand how and when you should use the [!DNL Facebook] de
 
 ### Facebookアカウントの前提条件 {#facebook-account-prerequisites}
 
-Before you can send your audience segments to [!DNL Facebook], make sure you meet the following requirements:
+オーディエンスセグメントを [!DNL Facebook] に送信する前に、次の要件を満たしていることを確認してください。
 
 1. Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
 2. **Adobe Experience Cloud** ビジネスアカウントを [!DNL Facebook Ad Account] の広告パートナーとして追加します。`business ID=206617933627973`.を使用します。詳しくは、Facebookのドキュメントの「 [Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) 」を参照してください。
@@ -80,14 +80,14 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
 
 >[!IMPORTANT]
 >
->電子メールアドレスをハッシュしないように選択した場合、にセグメントをアクティブ化する際に、Adobe Real-time CDPがその処理を行い [!DNL Facebook]ます。 [アクティベーションワークフロー](/help/rtcdp/destinations/activate-destinations.md#activate-data) （手順5を参照）で、 `Email` 生の電子メールアドレスの場合は次に示す *オプションを選択し、ハッシュされた電子メールアドレスの場合は次* の `Email_LC_SHA256`**&#x200B;オプションを選択します。
+>Eメールアドレスをハッシュしない場合は、にセグメントをアクティブ化する際に、AdobeReal-time CDPがその処理を行い [!DNL Facebook]ます。 [アクティベーションワークフロー](/help/rtcdp/destinations/activate-destinations.md#activate-data) （手順5を参照）で、 `Email` 生の電子メールアドレスの場合は次に示す *オプションを選択し、ハッシュされた電子メールアドレスの場合は次* の `Email_LC_SHA256`**&#x200B;オプションを選択します。
 
 
 ![アクティベーションのハッシュ](/help/rtcdp/destinations/assets/identity-mapping.png)
 
 ## 宛先に接続 {#connect-destination}
 
-宛先に接続するには、 [!DNL Facebook] ソーシャルネット [ワーク宛先の認証ワークフローを参照してください](/help/rtcdp/destinations/social-network-destinations-workflow.md)。
+To connect to the [!DNL Facebook] destination, see [Social network destinations authentication workflow](/help/rtcdp/destinations/social-network-destinations-workflow.md).
 
 
 ## Activate segments to [!DNL Facebook] {#activate-segments}
