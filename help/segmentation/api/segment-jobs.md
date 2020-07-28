@@ -7,43 +7,43 @@ translation-type: tm+mt
 source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
 source-wordcount: '993'
-ht-degree: 3%
+ht-degree: 38%
 
 ---
 
 
 # セグメントジョブエンドポイント
 
-セグメントジョブは、新しいオーディエンスセグメントを作成する非同期プロセスです。 これは [セグメント定義](./segment-definitions.md)、およびプロファイルフラグメント間で重なり合う属性を [](../../profile/api/merge-policies.md)[!DNL Real-time Customer Profile] 結合する方法を制御する結合ポリシーを参照します。 セグメントジョブが正常に完了したら、処理中に発生した可能性のあるエラーやオーディエンスの最大サイズなど、セグメントに関する様々な情報を収集できます。
+セグメントジョブは、新しいオーディエンスセグメントを作成する非同期プロセスです。It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
 
-このガイドは、セグメントのジョブをより深く理解するのに役立つ情報を提供し、APIを使用して基本的なアクションを実行するためのサンプルAPI呼び出しを含みます。
+このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、 [!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、 [入門ガイドを参照して](./getting-started.md) 、必要なヘッダーやAPI呼び出し例を読む方法など、APIを正しく呼び出すために必要な重要な情報を確認してください。
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-## セグメントジョブのリストの取得 {#retrieve-list}
+## セグメントジョッブリストの取得 {#retrieve-list}
 
-エンドポイントにGETリクエストを作成して、IMS組織のすべてのセグメントジョブのリストを取得でき `/segment/jobs` ます。
+IMS 組織のすべてのセグメントジョッブリストを取得するには、`/segment/jobs` エンドポイントに GET リクエストをします。
 
-**API形式**
+**API 形式**
 
-エンドポイントでは、結果のフィルタリングに役立ついくつかのクエリパラメーターが `/segment/jobs` サポートされています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 パラメーターを指定せずにこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。 複数のパラメーターを含める場合は、アンパサンド(`&`)で区切ります。
+エンドポイントでは、結果のフィルタリングに役立ついくつかのクエリパラメーターが `/segment/jobs` サポートされています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべての書き出しジョブが取得されます。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-**クエリパラメーター**
+**クエリパラメータ**
 
 | パラメーター | 説明 | 例 |
 | --------- | ----------- | ------- |
 | `start` | 返されるセグメントジョブの開始オフセットを指定します。 | `start=1` |
-| `limit` | 1ページに返されるセグメントジョブの数を指定します。 | `limit=20` |
-| `status` | ステータスに基づいて結果をフィルターします。 サポートされる値は、NEW、QUEUED、PROCESSING、SUCCEEDEDED、FAILED、CANCELLING、CANCELLEDです | `status=NEW` |
-| `sort` | 返されたセグメントジョブの順序。 は、形式で書き込まれ `[attributeName]:[desc|asc]`ます。 | `sort=creationTime:desc` |
-| `property` | フィルターは、ジョブをセグメント化し、指定されたフィルターに完全一致を取得します。 次のいずれかの形式で書き込むことができます。 <ul><li>`[jsonObjectPath]==[value]`  — オブジェクトキーに対するフィルタリング</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]`  — 配列内のフィルタ</li></ul> | `property=segments~segmentId==workInUS` |
+| `limit` | 1 ページに返されるセグメントジョブの数を指定します。 | `limit=20` |
+| `status` | ステータスに基づいて結果をフィルターします。サポートされる値は、NEW、QUEUED、PROCESSING、SUCCEEDED、FAILED、CANCELLING、CANCELLED です。 | `status=NEW` |
+| `sort` | 返されたセグメントジョブを並べ替えます。`[attributeName]:[desc|asc]` の形式で書き込まれます。 | `sort=creationTime:desc` |
+| `property` | セグメントジョブをフィルターし、指定されたフィルターへの完全一致を取得します。次のいずれかの形式で書き込むことができます。 <ul><li>`[jsonObjectPath]==[value]` — オブジェクトキーに対するフィルター</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` — 配列内のフィルタ－</li></ul> | `property=segments~segmentId==workInUS` |
 
 **リクエスト**
 
@@ -57,11 +57,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **応答**
 
-正常な応答は、指定したIMS組織のセグメントジョブのリストを持つHTTPステータス200をJSONとして返します。 次の応答は、IMS組織の成功したすべてのセグメントジョブのリストを返します。
+正常な応答は、HTTP ステータス 200 と、指定した IMS 組織のセグメントジョブのリストを JSON として返します。次の応答は、IMS 組織の成功したすべてのリストセグメントジョブのジョブを返します。
 
 >[!NOTE]
 >
->次の応答は領域に対して切り捨てられ、最初に返されたジョブのみを表示します。
+> 次の応答はスペースを節約するために切り捨てられ、最初に返されたジョブのみが表示されます。
 
 ```json
 {
@@ -164,9 +164,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 ## 新しいセグメントジョブの作成 {#create}
 
-新しいセグメントオーディエンスを作成するセグメント定義のIDを本文に含め、エンドポイントへのPOSTリクエストを作成することで、新しいセグメントジョブを作成でき `/segment/jobs` ます。
+エンドポイントへのPOSTリクエストを作成し、本文に新しいオーディエンスの作成元のセグメント定義のIDを含めることで、新しいセグメントを作成できます。 `/segment/jobs`
 
-**API形式**
+**API 形式**
 
 ```http
 POST /segment/jobs
@@ -195,7 +195,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 **応答**
 
-正常に応答すると、新しく作成したセグメントジョブの詳細と共に、HTTPステータス200が返されます。
+正常な応答は、HTTP ステータス 200 と、新しく作成したセグメントジョブの詳細を返します。
 
 ```json
 {
@@ -258,9 +258,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 ## 特定のセグメントジョブの取得 {#get}
 
-エンドポイントにGETリクエストを送信し、取得するセグメントジョブのIDをリクエストパスに指定することで、特定のセグメントジョブに関する詳細な情報を取得でき `/segment/jobs` ます。
+You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to retrieve in the request path.
 
-**API形式**
+**API 形式**
 
 ```http
 GET /segment/jobs/{SEGMENT_JOB_ID}
@@ -282,7 +282,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **応答**
 
-正常な応答は、指定されたセグメントジョブに関する詳細情報と共に、HTTPステータス200を返します。
+正常な応答は、HTTP ステータス 200 と、指定したセグメントジョブに関する詳細情報を返します。
 
 ```json
 {
@@ -355,9 +355,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 ## セグメントの一括取得ジョブ {#bulk-get}
 
-エンドポイントにPOSTリクエストを送信し、リクエスト本文にセグメントジョブの `/segment/jobs/bulk-get``id` 値を指定することで、複数のセグメントジョブに関する詳細な情報を取得できます。
+エンドポイントにPOSTリクエストを送信し、リクエスト本文にセグメントジョブの `/segment/jobs/bulk-get``id` 値を入力することで、複数のセグメントジョブに関する詳細な情報を取得できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /segment/jobs/bulk-get
@@ -384,7 +384,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
     }'
 ```
 
-**応答**
+**応答** 
 
 正常な応答が返されると、HTTPステータス207が返され、要求されたセグメントジョブが返されます。
 
@@ -461,13 +461,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 ## 特定のセグメントジョブのキャンセルまたは削除 {#delete}
 
-エンドポイントにDELETEリクエストを送信し、削除するセグメントジョブのIDをリクエストパスに指定することで、特定のセグメントジョブを削除でき `/segment/jobs` ます。
+You can delete a specific segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to delete in the request path.
 
 >[!NOTE]
 >
 >削除リクエストに対するAPIの応答は直ちに行われます。 ただし、実際にセグメントジョブを削除するのは非同期的です。 つまり、セグメントジョブに対する削除リクエストが行われた時点と適用された時点との間に時間差があります。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /segment/jobs/{SEGMENT_JOB_ID}
@@ -489,7 +489,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **応答**
 
-正常に応答すると、HTTPステータス204が次の情報と共に返されます。
+正常な応答は、HTTP ステータス 204 と次の情報を返します。
 
 ```json
 {
@@ -500,4 +500,4 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 ## 次の手順
 
-このガイドを読むと、セグメントジョブの動作についての理解が深まります。
+このガイドを読むと、セグメントジョブの動作をより深く理解できます。
