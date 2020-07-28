@@ -7,51 +7,51 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '598'
-ht-degree: 2%
+ht-degree: 75%
 
 ---
 
 
-# APIを使用した失敗したバッチの取得
+# API を使用した失敗したバッチの取得
 
-Adobe Experience Platformには、データのアップロードと取り込みに2つの方法が用意されています。 バッチ取り込みを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミング取り込みを使用すると、データをリアルタイムでストリーミングエンドポイントを使用してデータを挿入できます。 [!DNL Platform]
+Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。You can either use batch ingestion, which allows you to insert their data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real-time.
 
-このチュートリアルでは、APIを使用して、失敗したバッチに関する情報を取得する手順を説明し [!DNL Data Ingestion] ます。
+This tutorial covers steps for retrieving information about a failed batch using [!DNL Data Ingestion] APIs.
 
 ## はじめに
 
-このガイドでは、次のAdobe Experience Platformのコンポーネントについて、十分に理解している必要があります。
+このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 - [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
 - [!DNL Data Ingestion](../home.md): データの送信先のメソッド [!DNL Experience Platform]。
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このチュートリアルでは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-### 必要なヘッダーの値の収集
+### 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- 認証： 無記名 `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-に属するリソース [!DNL Experience Platform]を含む、のすべてのリソースは、特定の仮想サンドボックスに分離され [!DNL Schema Registry]ます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 - Content-Type: `application/json`
 
-### 失敗したバッチのサンプル
+### 失敗したバッチの例
 
-このチュートリアルでは、サンプルデータを使用し、タイムスタンプの形式が不適切で、月の値を **00に設定します**。以下に例を示します。
+このチュートリアルでは、次のように、月の値を **00** に設定する、誤った形式のタイムスタンプを持つデータ例を使用します。
 
 ```json
 {
@@ -76,11 +76,11 @@ APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを
 }
 ```
 
-タイムスタンプの形式が正しくないため、上記のペイロードはXDMスキーマに対して正しく検証されません。
+タイムスタンプの形式が正しくないため、上記のペイロードは XDM スキーマに対して正しく検証されません。
 
-## 失敗したバッチを取得します
+## 失敗したバッチの取得
 
-**API形式**
+**API 形式**
 
 ```http
 GET /batches/{BATCH_ID}/failed
@@ -88,7 +88,7 @@ GET /batches/{BATCH_ID}/failed
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{BATCH_ID}` | 検索するバッチのID。 |
+| `{BATCH_ID}` | 検索するバッチの ID。 |
 
 **リクエスト**
 
@@ -133,13 +133,13 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-上記の応答を使用すると、成功したバッチと失敗したバッチのチャンクを確認できます。 この応答から、失敗したバッチがファイルに含まれているこ `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` とがわかります。
+上記の応答で、成功したバッチと失敗したバッチのチャンクを確認できます。この応答から、失敗したバッチが `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` ファイルに含まれていることがわかります。
 
 ## 失敗したバッチのダウンロード
 
-失敗したバッチ内のファイルを特定したら、失敗したファイルをダウンロードして、エラーメッセージを確認できます。
+バッチで失敗したファイルがわかったら、失敗したファイルをダウンロードして、エラーメッセージを確認できます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
@@ -147,12 +147,12 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{BATCH_ID}` | 失敗したファイルを含むバッチのID。 |
-| `{FAILED_FILE}` | フォーマットに失敗したファイルの名前。 |
+| `{BATCH_ID}` | 失敗したファイルを含むバッチの ID。 |
+| `{FAILED_FILE}` | 形式設定に失敗したファイルの名前。 |
 
 **リクエスト**
 
-次の要求を実行すると、インジェストエラーが発生したファイルをダウンロードできます。
+次のリクエストを実行すると、取得エラーが発生したファイルをダウンロードできます。
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path={FAILED_FILE}' \
@@ -166,7 +166,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 **応答**
 
-以前に取り込んだバッチに無効な日時が含まれていたので、次の検証エラーが表示されます。
+以前に取得したバッチの日時が無効なので、次の検証エラーが表示されます。
 
 ```json
 {
@@ -184,19 +184,19 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ## 次の手順
 
-このチュートリアルを読み終えた後、失敗したバッチからエラーを取得する方法を学びました。 バッチインジェストの詳細については、『 [バッチインジェスト開発者ガイド](../batch-ingestion/overview.md)』を参照してください。 ストリーミング取り込みの詳細については、「ストリーミング接続の [作成」のチュートリアルを参照してください](../tutorials/create-streaming-connection.md)。
+このチュートリアルでは、失敗したバッチからエラーを取得する方法を説明しました。バッチ取得の詳細については、『[バッチ取得開発者ガイド](../batch-ingestion/overview.md)』を参照してください。ストリーミング取得の詳細については、「[ストリーミング接続の作成チュートリアル](../tutorials/create-streaming-connection.md)」を参照してください。
 
 ## 付録
 
-このセクションでは、発生する可能性がある他のインジェストエラータイプに関する情報を説明します。
+この節では、発生する可能性のあるその他の取得エラータイプに関する情報を説明します。
 
-### XDMが正しくフォーマットされていません
+### XDM の形式が正しくありません
 
-前の例のフローのタイムスタンプエラーと同様、これらのエラーは、XDMが正しくフォーマットされていないことが原因です。 これらのエラーメッセージは、問題の性質に応じて異なります。 その結果、特定のエラー例は表示されません。
+前述の例のフローのタイムスタンプエラーと同様に、これらのエラーの原因は XDM の形式が正しくないことです。これらのエラーメッセージは、問題の性質によって異なります。その結果、特定のエラー例は表示されません。
 
-### IMS組織IDがないか、無効です
+### IMS 組織 ID が見つからないか、無効です
 
-このエラーは、IMS組織IDがペイロードにないか、無効な場合に表示されます。
+このエラーは、IMS 組織 ID がペイロードにないか、無効な場合に表示されます。
 
 ```json
 {
@@ -209,9 +209,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-### XDMスキーマがありません
+### XDM スキーマがありません
 
-このエラーは、のがない場合 `schemaRef` に表示 `xdmMeta` されます。
+このエラーは、`xdmMeta` の `schemaRef` が見つからない場合に表示されます。
 
 ```json
 {
@@ -224,9 +224,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-### ソース名がありません
+### ソース名が見つかりません
 
-このエラーは、ヘッダー `source` 内のが見つからない場合に表示され `name`ます。
+このエラーは、ヘッダー内の `source` に `name` がない場合に表示されます。
 
 ```json
 {
@@ -240,9 +240,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-### XDMエンティティがありません
+### XDM エンティティが見つかりません
 
-このエラーは、存在しない場合に表示され `xdmEntity` ます。
+このエラーは、`xdmEntity` が存在しない場合に表示されます。
 
 ```json
 {
