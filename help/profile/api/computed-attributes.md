@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
 source-wordcount: '2404'
-ht-degree: 1%
+ht-degree: 83%
 
 ---
 
@@ -15,104 +15,104 @@ ht-degree: 1%
 # （アルファ）計算済み属性の端点
 
 >[!IMPORTANT]
->このドキュメントで説明されている計算済み属性機能は、現在アルファベットで表示されており、すべてのユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+>このドキュメントで説明されている計算済み属性機能は、現在アルファ段階であり、すべてのユーザーが使用できるわけではありません。ドキュメントと機能は変更される場合があります。
 
-計算済み属性を使用すると、他の値、計算、式に基づいてフィールドの値を自動的に計算できます。 計算済み属性は、プロファイルレベルで機能します。つまり、すべてのレコードとイベントに対して集計値を実行できます。
+計算済み属性を使用すると、他の値、計算および式に基づいてフィールドの値を自動計算できます。計算済み属性は、プロファイルレベルで機能します。つまり、すべてのレコードとイベントをまたいで値を集計できます。
 
-計算済みの各属性には、受信データを評価し、結果の値をプロファイル属性またはイベントに格納する式(「rule」)が含まれます。 これらの計算により、ライフタイム購入値、購入間隔、アプリケーション開封回数などに関する質問に簡単に回答できます。情報が必要になるたびに複雑な計算を手動で実行する必要はありません。
+各計算済み属性には、受信データを評価し、結果の値をプロファイル属性またはイベントに格納する式（ルール）が含まれます。これらの計算により、ライフタイム購入値、購入間隔、アプリケーション開封数などに関する質問に簡単に答えることができます。情報が必要になるたびに複雑な計算を手動で実行する必要はありません。
 
-このガイドは、Adobe Experience Platform内の計算済み属性をより深く理解するのに役立ち、エンドポイントを使用して基本的なCRUD操作を実行するためのサンプルAPI呼び出しを含み `/config/computedAttributes` ます。
+このガイドは、Adobe Experience Platform 内の計算済み属性をより深く理解するのに役立ちます。また、`/config/computedAttributes` エンドポイントを使用して基本的な CRUD 操作を実行するためのサンプル API 呼び出しを提供します。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、 [リアルタイム顧客プロファイルAPIの一部](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)です。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
 ## 計算済み属性について
 
-Adobe Experience Platformを使用すると、複数のソースからデータを簡単に読み込んで結合し、生成でき [!DNL Real-time Customer Profiles]ます。 各プロファイルには、個人に関する重要な情報（連絡先情報、好み、購入履歴など）が含まれ、360度の表示を顧客に提供します。
+Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. 各プロファイルには、顧客の連絡先情報、好み、購入履歴など、顧客に関する重要な情報が含まれ、顧客の全体像を把握することができます。
 
-データフィールドを直接読み取る場合（「名」など）は、プロファイルで収集される情報の一部がわかりやすくなります。一方、情報を生成するには、複数の計算を行うか、他のフィールドや値に依存する必要があります（「全期間購入合計」など）。 このデータを一目で理解しやすくするために、を使用すると、これらの参照と計算を自動的に実行する [!DNL Platform] 計算済み属性を作成し **** 、適切なフィールドに値を返すことができます。
+プロファイルで収集された情報には、データフィールドを直接読み取る場合にわかりやすい（「名」など）ものや、情報を生成するために複数の計算を実施するもの、他のフィールドの値に依存するもの（「ライフタイム購入合計」など）があります。To make this data easier to understand at a glance, [!DNL Platform] allows you to create **[!UICONTROL computed attributes]** that automatically perform these references and calculations, returning the value in the appropriate field.
 
-計算済みの属性には、受信データに対して動作し、結果の値をプロファイルの属性またはイベントに格納する式（「ルール」）の作成が含まれます。 式は複数の異なる方法で定義できます。ルールでは、受信イベントのみ、受信イベントとプロファイルデータ、または受信イベント、プロファイルデータ、履歴イベントを評価するよう指定できます。
+計算済み属性には、受信データ上で操作し、結果の値をプロファイル属性またはイベントに格納する式（ルール）の作成が含まれます。式は複数の異なる方法で定義でき、「受信イベントのみ」、「受信イベントとプロファイルデータ」、または「受信イベント、プロファイルデータ、および履歴イベント」を評価するルールを指定できます。
 
 ### 使用例
 
-計算済み属性の使用例は、単純な計算から非常に複雑な参照まで様々です。 次に、計算済み属性の使用例をいくつか示します。
+計算済み属性の使用例は、単純な計算から非常に複雑な参照まで多岐にわたります。次に、計算済み属性の使用例をいくつか示します。
 
-1. **[!UICONTROL 割合]:**単純な計算済み属性には、レコード上の2つの数値フィールドを取り、それらを分割して割合を作成することが含まれます。 例えば、1人の個人に送信された電子メールの合計数を取得し、その電子メール数を個人が開く電子メールの数で割ることができます。 結果の計算済み属性フィールドを調べると、個人が開封した電子メールの合計の割合がすばやく表示されます。
-1. **[!UICONTROL アプリケーションの使用]:**別の例としては、ユーザーがアプリを開いた回数を集計する機能もあります。 申し込みを開いた回数の合計を個々のオープンイベントに基づいて追跡することで、100回目のオープン時に特別なオファーやメッセージをユーザーに提供でき、ブランドに対するより深い関与を促すことができます。
-1. **[!UICONTROL ライフタイム値]:**顧客の全期間購入値など、現在の合計を収集するのは非常に困難な場合があります。 これには、新しい購入イベントが発生するたびに履歴の合計を更新する必要があります。 計算済みの属性を使用すると、顧客に関連する購入イベントが成功するたびに自動的に更新される単一のフィールドにライフタイム値を保持することで、この作業をより簡単に行うことができます。
+1. **[!UICONTROL 割合]:**単純な計算済み属性には、レコード上の2つの数値フィールドを取り、それらを分割して割合を作成することが含まれます。 例えば、ある人物に送信された電子メールの合計数を、その人物が開封した電子メールの数で割ることができます。結果の計算済み属性フィールドを見ると、その人物による電子メールの開封率合がすばやく表示されます。
+1. **[!UICONTROL アプリケーションの使用]:**別の例としては、ユーザーがアプリを開いた回数を集計する機能もあります。 個人のオープンイベントに基づいてアプリケーションを開いた合計回数を追跡し、ユーザーが 100 回目に開いた際に特別なオファーやメッセージを配信し、ブランドとのエンゲージメントを高めるよう促すことができます。
+1. **[!UICONTROL ライフタイム値]:**顧客の全期間購入値など、現在の合計を収集するのは非常に困難な場合があります。 これには、新しい購入イベントが発生するたびに履歴合計を更新する必要があります。計算済みの属性を使用すると、顧客に関連する購入イベントが成功するたびに自動的に更新される、単一のフィールドにライフタイム値を保持することで、この処理をより簡単におこなうことができます。
 
 ## 計算済み属性の設定
 
-計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを指定する必要があります。 このフィールドは、ミックスインを使用して作成し、既存のスキーマにフィールドを追加するか、スキーマ内で既に定義済みのフィールドを選択することで作成できます。
+計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、Mixin を使用して、既存のスキーマにフィールドを追加するか、スキーマ内で既に定義されているフィールドを選択することで作成できます。
 
 >[!NOTE]
->計算済み属性は、アドビ定義ミックスイン内のフィールドに追加できません。 フィールドは `tenant` 名前空間内にある必要があります。つまり、定義してスキーマに追加するフィールドである必要があります。
+>計算済み属性は、アドビ定義の Mixin 内のフィールドに追加することはできません。フィールドは、`tenant` 名前空間内に存在する、つまり、定義してスキーマに追加するフィールドである必要があります。
 
-計算済み属性フィールドを正しく定義するには、スキーマが有効になっ [!DNL Profile] ており、スキーマの基となるクラスの和集合スキーマの一部として表示されている必要があります。 有効なスキーマと和集合の詳細については、『開発者ガイド』の「のプロファイルと和集合スキーマの表示に関するスキーマ [!DNL Profile]の有効化 [!DNL Schema Registry][](../../xdm/api/getting-started.md)」の節を参照してください。 また、スキーマ構成の基本ドキュメントの和集合に関する [節を確認することをお勧めします](../../xdm/schema/composition.md) 。
+In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). また、構成の基本ドキュメントの[和集合に関する節](../../xdm/schema/composition.md)を確認することをお勧めします。
 
-このチュートリアルのワークフローでは、 [!DNL Profile]有効なスキーマを使用し、計算済み属性フィールドを含む新しいミックスインを定義し、正しい名前空間であることを確認する手順に従います。 プロファイル対応スキーマ内に、既に正しい名前空間のフィールドが存在する場合は、直接、計算済み属性を [作成する手順に進むことができます](#create-a-computed-attribute)。
+The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows the steps for defining a new mixin containing the computed attribute field and ensuring it is the correct namespace. プロファイル対応スキーマ内の適切な名前空間に、既にフィールドがある場合は、[計算済み属性を作成する](#create-a-computed-attribute)手順に直接進むことができます。
 
 ### スキーマの表示
 
-以下の手順では、Adobe Experience Platformのユーザーインターフェイスを使用してスキーマを検索し、Mixinを追加し、フィールドを定義します。 この [!DNL Schema Registry] APIを使用したい場合は、『 [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md) 』を参照して、mixinの作成、スキーマへのmixinの追加、およびで使用するスキーマの有効化の手順を確認してください [!DNL Real-time Customer Profile]。
+次の手順では、Adobe Experience Platform のユーザーインターフェイスを使用してスキーマを検索し、Mixin を追加してし、フィールドを定義します。If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
 
-ユーザーインターフェイスで、左側のパネルの **[!UICONTROL スキーマ]** ( ** )をクリックし、「参照」タブの検索バーを使用して、更新するスキーマをすばやく見つけます。
+ユーザインターフェイスで、左側のパネルの「**[!UICONTROL スキーマ]**」をクリックし、「*[!UICONTROL 参照]*」タブの検索バーを使用して、更新するスキーマをすばやく見つけます。
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-スキーマを見つけたら、その名前をクリックしてスキーマに編集を加え [!DNL Schema Editor] るためのフォルダを開きます。
+Once you have located the schema, click its name to open the [!DNL Schema Editor] where you can make edits to the schema.
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
-### Mixinの作成
+### Mixin の作成
 
-新しいMixinを作成するには、エディターの左側にある **[!UICONTROL Composition]***(コンポジション*** )セクションのMixinsの横にあるをクリックします。 これにより、 **[!UICONTROL ミックスイン]** ダイアログが開き、既存のミックスインを表示できます。 新しいミックスインを定義するには、[新しいミックスインを **[!UICONTROL 作成]** ]のラジオボタンをクリックします。
+新しい Mixin を作成するには、エディターの左側にある「**[!UICONTROL コンポジション]**」セクションで、「*Mixins*」の隣にある「*[!UICONTROL 追加]*」をクリックします。「**[!UICONTROL Mixin を追加]**」ダイアログが開き、既存の Mixin を確認できます。新しい Mixin を定義するには、「**[!UICONTROL 新しい Mixin を作成]**」のラジオボタンをクリックします。
 
-mixinに名前と説明を入力し、完了したら **[!UICONTROL 追加「]** mixin」をクリックします。
+Mixin に名前と説明を入力し、完了したら「**[!UICONTROL Mixin を追加]**」をクリックします。
 
 ![](../images/computed-attributes/Add-mixin.png)
 
-### スキーマ追加の計算済み属性フィールド
+### 追加スキーマ
 
-これで、「 *[!UICONTROL 組版」の下の「]* Mixins *[!UICONTROL 」セクションに新しいMixinが表示されます]*。 Mixinの名前をクリックすると、エディタの **[!UICONTROL 構造]***[!UICONTROL (]* Structure)セクションに複数のフィールド(Mixin)ボタンが表示されます。
+これで、新しい Mixin が「*[!UICONTROL コンポジション]*」の下の「*[!UICONTROL Mixins]*」セクションに表示されます。Mixin の名前をクリックすると、エディターの「*[!UICONTROL 構造]*」セクションに、「**[!UICONTROL フィールドを追加]**」ボタンが複数表示されます。
 
-最上位 **[!UICONTROL フィールドを追加するには、スキーマ名の横にある]** フィールドを選択します。スキーマ内の任意の場所にフィールドを追加することもできます。
+上位のフィールドを追加するには、スキーマ名の隣にある「**[!UICONTROL フィールドを追加]**」を選択するか、お好きなスキーマ内の任意の場所にフィールドを追加するよう選択することもできます。
 
-フィー **** ルドを追加クリックすると、テナントIDという名前の新しいオブジェクトが開き、フィールドが正しい名前空間にあることが示されます。 そのオブジェクト内に *[!UICONTROL 新規フィールド]* が表示されます。 計算済み属性を定義するフィールドの場合。
+「**[!UICONTROL フィールドを追加]**」をクリックすると、テナント ID の名前を付けた新しいオブジェクトが開き、フィールドが正しい名前空間にあることが示されます。そのオブジェクト内に、「*[!UICONTROL 新規フィールド]*」が表示されます。計算済み属性を定義するフィールドの場合。
 
 ![](../images/computed-attributes/New-field.png)
 
 ### フィールドの設定
 
-エディターの右側にある「 *[!UICONTROL フィールドプロパティ]* 」セクションを使用して、名前、表示名、タイプなど、新しいフィールドに必要な情報を入力します。
+エディターの右側にある「*[!UICONTROL フィールドプロパティ]*」セクションを使用して、新しいフィールドの名前、表示名、タイプなど、必要な情報を指定します。
 
 >[!NOTE]
->フィールドの型は、計算済み属性値と同じ型である必要があります。 例えば、計算された属性値が文字列の場合、スキーマで定義するフィールドは文字列である必要があります。
+>フィールドのタイプは、計算済みの属性値と同じタイプである必要があります。例えば、計算済み属性の値が文字列の場合、スキーマで定義するフィールドは文字列にする必要があります。
 
-完了したら、 **[!UICONTROL 適用]** (Apply *[!UICONTROL )をクリックし、フィールドの名前とタイプがエディタの]* 構造(Structure)セクションに表示されます。
+完了したら、「**[!UICONTROL 適用]**」をクリックし、フィールドの名前とタイプがエディターの「*[!UICONTROL 構造]*」セクションに表示されます。
 
 ![](../images/computed-attributes/Apply.png)
 
 ### スキーマの有効化 [!DNL Profile]
 
-先に進む前に、スキーマがに対して有効になっていることを確認してくだ [!DNL Profile]さい。 エディタの「 *[!UICONTROL 構造]* 」セクションでスキーマ名をクリックし、「 *[!UICONTROL スキーマのプロパティ]* 」タブが表示されるようにします。 **[!UICONTROL プロファイル]** ・スライダが青の場合は、スキーマが有効になってい [!DNL Profile]ます。
+Before continuing, ensure that the schema has been enabled for [!DNL Profile]. エディターの「*[!UICONTROL 構造]*」セクションでスキーマ名をクリックすると、「*[!UICONTROL スキーマプロパティ]*」タブが表示されます。**[!UICONTROL プロファイル]** ・スライダが青の場合は、スキーマが有効になってい [!DNL Profile]ます。
 
 >[!NOTE]
->スキーマの有効化を元に戻すこ [!DNL Profile] とはできません。そのため、一度有効にした後スライダをクリックした場合は、スライダを無効にするリスクはありません。
+>Enabling a schema for [!DNL Profile] cannot be undone, so if you click on the slider once it has been enabled, you do not have to risk disabling it.
 
 ![](../images/computed-attributes/Profile.png)
 
-「 **[!UICONTROL 保存]** 」をクリックして、更新したスキーマを保存し、APIを使用して残りのチュートリアルに進むことができるようになりました。
+これで、「**[!UICONTROL 保存]**」をクリックして、更新したスキーマを保存し、API を使用して残りのチュートリアルに進むことができるようになりました。
 
 ### 計算済み属性の作成 {#create-a-computed-attribute}
 
-計算済み属性フィールドを識別し、スキーマが有効になっていることを確認したら、計算済み属性を設定でき [!DNL Profile]ます。
+With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute.
 
-まず、作成する計算済み属性の詳細を含むリクエスト本文を使用して、 `/config/computedAttributes` エンドポイントにPOSTリクエストを行います。
+まず、作成する計算済み属性の詳細を含むリクエスト本文を使用して、`/config/computedAttributes` エンドポイントに POST リクエストを送信します。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /config/computedAttributes
@@ -147,16 +147,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `name` | 文字列としての計算済み属性フィールドの名前。 |
-| `path` | 計算済み属性を含むフィールドへのパス。 このパスはスキーマの `properties` 属性内にあり、パスにフィールド名を含めないでください。 パスを書き込む場合は、複数レベルの `properties` 属性を省略します。 |
-| `{TENANT_ID}` | テナントIDに慣れていない場合は、『 [スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md#know-your-tenant_id)』で、テナントIDを探す手順を参照してください。 |
-| `description` | 計算済み属性の説明。 これは特に、複数の計算済み属性が定義された場合に役立ちます。これは、IMS組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
-| `expression.value` | 有効な [!DNL Profile Query Language] (PQL)式。 PQLの詳細およびサポートされるクエリへのリンクについては、 [PQLの概要を参照してください](../../segmentation/pql/overview.md)。 |
-| `schema.name` | 計算済み属性フィールドを含むスキーマが基になるクラス。 例： `_xdm.context.experienceevent` の値は、XDM ExperienceEventクラスに基づくスキーマに対して設定されます。 |
+| `name` | 計算済み属性フィールドの名前（文字列）。 |
+| `path` | 計算済み属性を含むフィールドへのパス。このパスは、スキーマの `properties` 属性内にあり、パスにフィールド名を含めないでください。パスを書き込む場合は、複数レベルの `properties` 属性を省略します。 |
+| `{TENANT_ID}` | テナント ID に慣れていない場合は、[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md#know-your-tenant_id)で、テナント ID を見つける手順を参照してください。 |
+| `description` | 計算済み属性の説明。複数の計算済み属性を定義した場合は特に便利です。IMS 組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
+| `expression.value` | 有効な [!DNL Profile Query Language] (PQL)式。 PQL の詳細とサポートされるクエリへのリンクについては、[PQL の概要](../../segmentation/pql/overview.md)を参照してください。 |
+| `schema.name` | 計算済み属性フィールドを含むスキーマの基となるクラス。例：XDM ExperienceEvent クラスに基づくスキーマの場合 `_xdm.context.experienceevent`。 |
 
-**応答**
+**応答** 
 
-正常に作成された計算済み属性は、HTTPステータス200(OK)と、新しく作成された計算済み属性の詳細を含む応答本体を返します。 これらの詳細には、読み取り専用のシステム生成の一意の情報が含まれ `id` 、これは他のAPI操作中に計算済みの属性を参照するのに使用できます。
+正常に作成された計算済み属性は、HTTP ステータス 200（OK）と、新しく作成された計算済み属性の詳細を含む応答本文を返します。これらの詳細には、他の API 操作中に計算済み属性を参照するために使用できる、システムで生成された一意の読み取り専用 `id` が含まれます。
 
 ```json
 {
@@ -204,28 +204,28 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `id` | 他のAPI操作中に計算済み属性を参照するために使用できる、一意の読み取り専用のシステム生成ID。 |
-| `imsOrgId` | 計算済み属性に関連するIMS組織は、要求で送信される値と一致する必要があります。 |
-| `sandbox` | sandboxオブジェクトには、計算済み属性が設定されたサンドボックスの詳細が含まれます。 この情報は、リクエストで送信されるサンドボックスのヘッダーから取得されます。 詳しくは、 [サンドボックスの概要を参照してください](../../sandboxes/home.md)。 |
-| `positionPath` | リクエストで送信されたフィールド `path` に分解された、要素を含む配列。 |
-| `returnSchema.meta:xdmType` | 計算済み属性が格納されるフィールドのタイプ。 |
-| `definedOn` | 計算済み属性が定義された和集合スキーマを示す配列。 和集合スキーマごとに1つのオブジェクトが含まれます。つまり、異なるクラスに基づいて計算済みの属性が複数のスキーマに追加された場合、配列内に複数のオブジェクトが存在する可能性があります。 |
-| `active` | 計算済み属性が現在アクティブかどうかを示すboolean値。 By default the value is `true`. |
+| `id` | 他の API 操作中に計算済み属性を参照するために使用できる、システムで生成された一意の読み取り専用 ID が含まれます。 |
+| `imsOrgId` | 計算済み属性に関連する IMS 組織は、要求で送信される値と一致する必要があります。 |
+| `sandbox` | サンドボックスオブジェクトには、計算済み属性が設定されたサンドボックスの詳細が含まれます。この情報は、リクエストで送信されるサンドボックスヘッダーから取得されます。詳しくは、[サンドボックスの概要](../../sandboxes/home.md)を参照してください。 |
+| `positionPath` | リクエストで送信されたフィールドに分解された `path` を含む配列。 |
+| `returnSchema.meta:xdmType` | 計算済み属性が保存されるフィールドのタイプ。 |
+| `definedOn` | 計算済み属性が定義された和集合スキーマを示す配列。和集合スキーマごとに 1 つのオブジェクトを含みます。つまり、異なるクラスに基づいて計算された属性が複数のスキーマに追加された場合、配列内に複数のオブジェクトが存在する可能性があります。 |
+| `active` | 計算済み属性が現在アクティブかどうかを示すブール値。デフォルト値は `true` です。 |
 | `type` | 作成されるリソースのタイプ。この場合は「ComputedAttribute」がデフォルト値です。 |
 | `createEpoch` および `updateEpoch` | 計算済み属性が作成された時刻と最後に更新された時刻。 |
 
 
 ## 計算済み属性へのアクセス
 
-APIを使用して計算済み属性を操作する場合、組織で定義されている計算済み属性にアクセスするための2つのオプションがあります。 1つ目は、すべての計算済み属性をリストすること、2つ目は、固有の計算済み属性を表示することで `id`す。
+API を使用して計算済み属性を操作する場合、組織で定義された計算済み属性にアクセスするためのオプションは 2 つあります。1 つ目は、すべての計算済み属性をリストする方法、もう 1 つは、一意の `id` によって固有の計算済み属性を表示する方法です。
 
-すべての計算済み属性のリストと、特定の計算済み属性の表示の両方の手順を、以下の節で説明します。
+すべての計算済み属性をリストする手順と、特定の計算済み属性の表示手順については、以降の節で説明します。
 
-### リスト計算済み属性 {#list-computed-attributes}
+### リストの計算済み属性 {#list-computed-attributes}
 
-IMS組織は、複数の計算済み属性を作成できます。エンドポイントに対してGETリクエストを実行すると、組織の既存の計算済み属性をすべてリストでき `/config/computedAttributes` ます。
+IMS 組織は複数の計算済み属性を作成できます。`/config/computedAttributes` エンドポイントに対して GET リクエストを実行すると、組織の既存計算済み属性をすべてリストできます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /config/computedAttributes
@@ -242,11 +242,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**応答**
+**応答** 
 
-成功した応答には、計算済み属性の総数( `_page` )と、ページ上の計算済み属性の数(`totalCount``pageSize`)を提供する属性が含まれます。
+成功応答には、`_page` 属性が含まれ、計算済み属性（`totalCount`）の数とページ上の計算済み属性の数（`pageSize`）を提供します。
 
-この応答には、1つ以上のオブジェクトから成る `children` 配列も含まれ、それぞれに計算済みの1つの属性の詳細が含まれます。 組織に計算済みの属性がない場合、 `totalCount` およびは0 （ゼロ） `pageSize` になり、 `children` 配列は空になります。
+応答には、1 つ以上のオブジェクトで構成される `children` 配列も含まれ、それぞれに 1 つの計算済み属性の詳細が含まれます。組織に計算済みの属性がない場合、`totalCount` と `pageSize` は「0」（ゼロ）で、`children` 配列は空白になります。
 
 ```json
 {
@@ -353,17 +353,17 @@ curl -X GET \
 
 | プロパティ | 説明 |
 |---|---|
-| `_page.totalCount` | IMS組織で定義された計算済み属性の合計数です。 |
-| `_page.pageSize` | 結果のこのページで返される計算済み属性の数。 がと等し `pageSize``totalCount`い場合、結果のページが1ページのみで、計算済み属性がすべて返されたことを意味します。 同じでない場合は、アクセスできる結果のページが他にもあります。 See `_links.next` for details. |
-| `children` | 1つ以上のオブジェクトで構成される配列。それぞれ計算済みの単一の属性の詳細が含まれます。 計算済み属性が定義されていない場合、 `children` 配列は空です。 |
-| `id` | 計算済み属性の作成時に自動的に割り当てられる、一意の読み取り専用のシステム生成値。 計算済み属性オブジェクトのコンポーネントの詳細については、このチュートリアルで前述した、計算済み属性の [作成に関する節を参照してください](#create-a-computed-attribute) 。 |
-| `_links.next` | 計算済み属性のページが1ページだけ返された場合、 `_links.next` は空のオブジェクトです。上記の応答例を参照してください。 組織に多数の計算済み属性がある場合、それらの属性は、値に対してGETリクエストを行うことでアクセスできる複数のページに返され `_links.next` ます。 |
+| `_page.totalCount` | IMS 組織で定義された計算済み属性の合計数です。 |
+| `_page.pageSize` | 結果のこのページで返された計算済み属性の数。`pageSize` が `totalCount` と等しい場合、結果のページが 1 ページのみで、計算済みの属性がすべて返されたことを意味します。等しくない場合は、アクセス可能な結果のページが他にあります。詳細は、`_links.next` を参照してください。 |
+| `children` | 1 つ以上のオブジェクトで構成される配列。各オブジェクトには、1 つの計算済み属性の詳細が含まれます。計算済みの属性が定義されていない場合、`children` 配列は空になります。 |
+| `id` | 計算済み属性の作成時に自動的に割り当てられる、システムで生成された読み取り専用の一意の値。計算済み属性オブジェクトのコンポーネントの詳細については、このチュートリアルで既に説明した[計算済み属性の作成](#create-a-computed-attribute)の節を参照してください。 |
+| `_links.next` | 1 ページの計算済み属性が返される場合、前述の応答例のように、`_links.next` は空のオブジェクトになります。組織に多数の計算済み属性がある場合、`_links.next` 値に対して GET リクエストを送信することでアクセスできる、複数のページで返されます。 |
 
 ### 計算済み属性の表示 {#view-a-computed-attribute}
 
-エンドポイントにGETリクエストを作成し、計算済みの属性IDをリクエストパスに含めることで、特定の計算済み属性を表示することも `/config/computedAttributes` できます。
+特定の計算済み属性を表示するには、`/config/computedAttributes` エンドポイントに GET リクエストを送信し、計算済み属性 ID をリクエストパスに含めます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /config/computedAttributes/{ATTRIBUTE_ID}
@@ -371,7 +371,7 @@ GET /config/computedAttributes/{ATTRIBUTE_ID}
 
 | パラメーター | 説明 |
 |---|---|
-| `{ATTRIBUTE_ID}` | 表示する計算済み属性のID。 |
+| `{ATTRIBUTE_ID}` | 表示する計算済み属性の ID。 |
 
 **リクエスト**
 
@@ -384,7 +384,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**応答**
+**応答** 
 
 ```json
 {
@@ -432,9 +432,9 @@ curl -X GET \
 
 ## 計算済み属性の更新
 
-既存の計算済み属性を更新する必要がある場合、これを行うには、エンドポイントにPATCHリクエストを作成し、更新する計算済み属性のIDをリクエストパスに含め `/config/computedAttributes` ます。
+既存の計算済み属性を更新する必要がある場合、これをおこなうには、`/config/computedAttributes` エンドポイントに PATCH リクエストを作成し、更新する計算済みの属性の ID をリクエストパスに含めます。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /config/computedAttributes/{ATTRIBUTE_ID}
@@ -442,11 +442,11 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 | パラメーター | 説明 |
 |---|---|
-| `{ATTRIBUTE_ID}` | 更新する計算済み属性のID。 |
+| `{ATTRIBUTE_ID}` | 更新する計算済み属性の ID。 |
 
 **リクエスト**
 
-このリクエストでは、 [JSONパッチの形式設定を使用して](http://jsonpatch.com/) 、「式」フィールドの「値」を更新します。
+このリクエストでは、[JSON パッチのフォーマット設定](http://jsonpatch.com/)を使用して、「式」フィールドの「値」を更新します。
 
 ```shell
 curl -X PATCH \
@@ -472,22 +472,22 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | 有効な [!DNL Profile Query Language] (PQL)式。 PQLの詳細およびサポートされるクエリへのリンクについては、 [PQLの概要を参照してください](../../segmentation/pql/overview.md)。 |
+| `{NEW_EXPRESSION_VALUE}` | 有効な [!DNL Profile Query Language] (PQL)式。 PQL の詳細とサポートされるクエリへのリンクについては、[PQL の概要](../../segmentation/pql/overview.md)を参照してください。 |
 
-**応答**
+**応答** 
 
-更新が成功すると、HTTPステータス204（コンテンツなし）と空の応答本文が返されます。 更新が成功したことを確認する場合は、GETリクエストを実行して、計算済み属性をIDで表示できます。
+成功応答は、HTTP ステータス 204（コンテンツなし）と空の応答本文が返されます。削除が成功したことを確認するには、GET リクエストを実行して、計算済み属性を ID で参照できます。
 
 ## 計算済み属性の削除
 
-APIを使用して、計算済み属性を削除することもできます。 これは、削除する計算済み属性のIDを要求パスに含め、 `/config/computedAttributes` エンドポイントにDELETE要求を行うことで行われます。
+API を使用して、計算済み属性を削除することもできます。これには、`/config/computedAttributes` エンドポイントに DELETE リクエストを送信し、削除する計算済み属性の ID をリクエストパスに含めます。
 
 >[!N注意]
 >
 >
->計算済み属性を削除する場合は、注意が必要です。計算済み属性が複数のスキーマで使用されている可能性があり、DELETE操作を元に戻すことはできません。
+>計算済み属性を削除する場合は、複数のスキーマで使用されている可能性があるので注意が必要です。また、DELETE 操作を元に戻すことはできません。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /config/computedAttributes/{ATTRIBUTE_ID}
@@ -495,7 +495,7 @@ DELETE /config/computedAttributes/{ATTRIBUTE_ID}
 
 | パラメーター | 説明 |
 |---|---|
-| `{ATTRIBUTE_ID}` | 削除する計算済み属性のID。 |
+| `{ATTRIBUTE_ID}` | 削除する計算済み属性の ID。 |
 
 **リクエスト**
 
@@ -508,10 +508,10 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \ 
 ```
 
-**応答**
+**応答** 
 
-削除が成功すると、HTTPステータス200(OK)と空の応答本文が返されます。 削除が成功したことを確認するために、GETリクエストを実行し、計算済み属性をそのIDで参照できます。 属性が削除された場合は、HTTPステータス404（見つかりません）エラーが発生します。
+削除リクエストが成功すると、HTTP ステータス 200（OK）と空の応答本文が返されます。削除が成功したことを確認するために、GET リクエストを実行して、計算済み属性を ID で参照できます。属性が削除された場合は、HTTP ステータス 404（見つかりません）エラーが表示されます。
 
 ## 次の手順
 
-計算済み属性の基本を学んだので、組織に合わせて定義を開始する準備が整いました。
+これで、計算済み属性の基本について学び、組織に合わせて定義を開始する準備が整いました。
