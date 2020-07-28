@@ -7,29 +7,29 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 0%
+ht-degree: 70%
 
 ---
 
 
 # アクセス制御トラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platformでのアクセス制御に関するよくある質問に対する回答を示します。 他の [!DNL Platform] サービスに関する質問とトラブルシューティングについては、 [Experience Platformトラブルシューティングガイドを参照してください](../landing/troubleshooting.md)。
+このドキュメントでは、Adobe Experience Platform のアクセス制御に関するよくある質問に対する回答を示します。For questions and troubleshooting related to other [!DNL Platform] services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] ユーザーを権限およびサンドボックスにリンクする、 [AdobeAdmin Consoleの製品プロファイルを活用して、ロールベースの](http://adminconsole.adobe.com) アクセス制御 ****（ユーザーを権限およびサンドボックスにリンク）を提供します。  See the [access control overview](home.md) for more information.
+[!DNL Experience Platform] は、[Adobe Admin Console](http://adminconsole.adobe.com) の製品プロファイルを活用して、役割ベースの&#x200B;**アクセス制御**&#x200B;を提供し、ユーザーを権限およびサンドボックスにリンクします。  詳しくは、「[アクセス制御の概要](home.md)」を参照してください。
 
-## 現在のアクセス権限はどこにありますか。
+## 現在のアクセス権限はどこで確認できますか。
 
-IMS組織のシステム管理者、製品管理者または製品プロファイル管理者は、割り当てられた製品プロファイルとAdobeAdmin Console内で提供される権限を表示できます。 製品プロファイルの権限を表示に移動する方法については、 [アクセス制御ユーザーガイド](./ui/overview.md)[!DNL Admin Console] を参照してください。
+IMS 組織のシステム管理者、製品管理者、製品プロファイル管理者は、割り当てられた製品プロファイルと提供される権限を Adobe Admin Console で表示できます。 を使用して製品プロファイルの権限を表示する方法については、『[アクセス制御ユーザガイド](./ui/overview.md)』を参照してください。[!DNL Admin Console]
 
-管理者でない場合でも、アクセス制御APIのエンドポイントにリクエストを送信することで、現在のアクセス権限を表示でき `/acl/effective-policies` ます。 詳しくは、 [アクセス制御開発者ガイドの「表示効果の高いポリシー」の節を参照してください](./api/effective-policies.md) 。
+管理者以外の場合でも、アクセス制御 API の `/acl/effective-policies` エンドポイントにリクエストを送信することで、現在のアクセス権限を表示することができます。詳しくは、『[アクセス制御開発者ガイド](./api/effective-policies.md)』の「有効ポリシーの表示」の節を参照してください。
 
-## UIの一部の機能は使用できません [!DNL Platform] 。 権限によって制御されるこれらの機能へのアクセス方法
+## Some features in the [!DNL Platform] UI are not available. これらの機能へのアクセスは、権限によってどのように制御されますか。
 
-特定の [!DNL Platform] 機能に対するアクセス権限を持っていない場合、その機能は [!DNL Experience Platform] UIで非表示または灰色表示になります。 例えば、「[!UICONTROL プロファイル]」タブを表示するには、「[!UICONTROL 表示プロファイル]」または「プロファイル[!UICONTROL の管理]」権限が必要です。 機能に対する追加の権限が必要な場合は、管理者に問い合わせて [!DNL Experience Platform] ください。
+If you do not have access permissions for a particular [!DNL Platform] feature, that feature will be hidden or greyed-out in the [!DNL Experience Platform] UI. For example, in order to view the &quot;[!UICONTROL Profiles]&quot; tab, you must have either the &quot;[!UICONTROL View Profiles]&quot; or &quot;[!UICONTROL Manage Profiles]&quot; permissions. Contact your administrator if you require additional permissions for [!DNL Experience Platform] capabilities.
 
-## 権限のグループ化方法、および使用する権限が含まれるグループ
+## 権限はどのようにグループ化されていますか。使用したい権限を含むグループはどれですか。
 
-権限は、適用する [!DNL Platform] 機能( [!DNL Data Management] および [!DNL Profile Management]など)によってグループ化され、分類されます。 使用可能な権限とその権限が属するグループの完全なリストについては、アクセス制御の概要の [権限の節](home.md#permissions) を参照してください。
+Permissions are grouped and categorized by the [!DNL Platform] capabilities they apply to (such as [!DNL Data Management] and [!DNL Profile Management]). 使用可能な権限とその属するグループの完全なリストについては、「アクセス制御の概要」の「[権限](home.md#permissions)」の節を参照してください。
 
-ロールベースのアクセス制御の提供について詳しくは、 [アクセス制御の概要](home.md) （英語）を参照してください。
+役割ベースのアクセス制御の提供について詳しくは、「[アクセス制御の概要](home.md)」を参照してください。
