@@ -6,7 +6,7 @@ translation-type: tm+mt
 source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
 workflow-type: tm+mt
 source-wordcount: '94'
-ht-degree: 62%
+ht-degree: 67%
 
 ---
 
@@ -44,4 +44,4 @@ ht-degree: 62%
 * リファレンス {#ref}
    * [自動的に収集された値](reference/automatic-information.md)
    * [ライブラリ情報の取得](reference/retrieving-library-information.md)
-* [Platformのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
+* [Platformのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
