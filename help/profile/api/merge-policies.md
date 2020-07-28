@@ -7,28 +7,28 @@ translation-type: tm+mt
 source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
 source-wordcount: '2035'
-ht-degree: 1%
+ht-degree: 83%
 
 ---
 
 
 # ポリシーエンドポイントの結合
 
-Adobe Experience Platformを使用すると、複数のソースからデータを統合し、それを組み合わせて、個々の顧客の完全な表示を確認できます。 When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. RESTful APIまたはユーザーインターフェイスを使用して、新しい結合ポリシーを作成し、既存のポリシーを管理し、組織のデフォルトの結合ポリシーを設定できます。 このガイドでは、APIを使用した結合ポリシーの操作手順を示します。 UIを使用してマージポリシーを操作するには、 [マージポリシーユーザーガイドを参照してください](../ui/merge-policies.md)。
+Adobe Experience Platform では、複数のソースからデータを組み合わせて、個々の顧客の全体像を把握できます。When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。このガイドでは、API を使用して結合ポリシーを操作する手順を示します。UI を使用して結合ポリシーを使用するには、『[結合ポリシーのユーザーガイド](../ui/merge-policies.md)』を参照してください。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、に含まれてい [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)ます。 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
 ## 結合ポリシーのコンポーネント {#components-of-merge-policies}
 
-マージポリシーはIMS組織に対して非公開であり、異なるポリシーを作成して、スキーマを必要に応じて結合できます。 データにアクセスするAPIにはマージポリシーが必要ですが、明示的に指定されない場合はデフォルトが使用されます。 [!DNL Profile] [!DNL Platform] では、既定の結合ポリシーを使用できます。また、特定のスキーマ用に結合ポリシーを作成し、それを組織の既定としてマークすることもできます。 各組織は、スキーマごとに複数の結合ポリシーを持つことができますが、各スキーマは、1つのデフォルトの結合ポリシーしか持つことができません。 デフォルトとして設定されたマージポリシーは、スキーマ名が指定され、マージポリシーが必須で指定されていない場合に使用されます。 マージポリシーをデフォルトとして設定すると、以前にデフォルトとして設定された既存のマージポリシーは自動的に更新され、デフォルトとして使用されなくなります。
+結合ポリシーは IMS 組織外には非公開であり、必要に応じてスキーマを結合するために異なるポリシーを作成できます。Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] では、既定の結合ポリシーを使用できます。また、特定のスキーマ用に結合ポリシーを作成し、それを組織の既定としてマークすることもできます。 各組織はスキーマごとに複数のマージポリシーを持つことができますが、各スキーマは 1 つのデフォルト結合ポリシーしか持つことができません。デフォルトとして設定された結合ポリシーは、スキーマ名が指定され、結合ポリシーが必要であるが指定されていない場合に使用されます。結合ポリシーをデフォルトとして設定すると、以前にデフォルトとして設定された既存の結合ポリシーは自動的にデフォルトとして使用されなくなります。
 
-### マージポリシーオブジェクトの完了
+### 完全な結合ポリシーオブジェクト
 
-complete merge policyオブジェクトは、プロファイルフラグメントのマージ側面を制御する一連の環境設定を表します。
+完全な結合ポリシーオブジェクトは、プロファイルフラグメントの結合の側面を制御する一連の設定を表します。
 
-**Merge policyオブジェクト**
+**結合ポリシーオブジェクト**
 
 ```json
     {
@@ -52,17 +52,17 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
 
 | プロパティ | 説明 |
 |---|---|
-| `id` | 作成時に割り当てられた、システムで生成された一意の識別子 |
-| `name` | 結合ポリシーをリスト表示で識別できるわかりやすい名前。 |
-| `imsOrgId` | このマージポリシーが属する組織ID |
-| `identityGraph` | [関連するIDの取得元となるIDグラフを示すIDグラフ](#identity-graph) ・オブジェクト。 すべての関連IDで見つかったプロファイルフラグメントは結合されます。 |
-| `attributeMerge` | [データの競合が発生した場合にマージポリシーがプロファイル属性値に優先順位を付ける方法を示す属性マージ](#attribute-merge) ・オブジェクト。 |
-| `schema` | マージポリシーを使用できる [スキーマ](#schema) ・オブジェクト。 |
-| `default` | このマージポリシーが指定したスキーマのデフォルトであるかどうかを示すブール値です。 |
-| `version` | [!DNL Platform] マージポリシーのバージョンを維持しました。 この読み取り専用の値は、マージポリシーが更新されるたびに増加します。 |
-| `updateEpoch` | マージポリシーの最後の更新日。 |
+| `id` | 作成時に割り当てられる、システムで生成された一意の識別子 |
+| `name` | リスト表示で結合ポリシーを識別できるわかりやすい名前。 |
+| `imsOrgId` | この結合ポリシーが属する組織 ID |
+| `identityGraph` | 関連 ID の取得元（ID）の ID グラフを示す [ID グラフ](#identity-graph)オブジェクト。関連するすべての ID で見つかったプロファイルフラグメントが結合されます。 |
+| `attributeMerge` | データの競合時に結合ポリシーがプロファイル属性値に優先順位を付ける方法を示す[属性結合](#attribute-merge)オブジェクト。 |
+| `schema` | 結合ポリシーを使用できる[スキーマ](#schema)オブジェクト。 |
+| `default` | この結合ポリシーが指定されたスキーマのデフォルトかどうかを示すブール値。 |
+| `version` | [!DNL Platform] マージポリシーのバージョンを維持しました。 この読み取り専用の値は、結合ポリシーが更新されるたびに増加します。 |
+| `updateEpoch` | 結合ポリシーの最後の更新日。 |
 
-**マージポリシーの例**
+**結合ポリシーの例**
 
 ```json
     {
@@ -84,11 +84,11 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
     }
 ```
 
-### 識別グラフ {#identity-graph}
+### ID グラフ {#identity-graph}
 
-[Adobe Experience PlatformIDサービス](../../identity-service/home.md) は、グローバルに、およびの各組織で使用されるIDグラフを管理 [!DNL Experience Platform]します。 マージポリシーの `identityGraph` 属性は、ユーザーの関連IDの決定方法を定義します。
+[Adobe Experience PlatformIDサービス](../../identity-service/home.md) は、グローバルに、およびの各組織で使用されるIDグラフを管理 [!DNL Experience Platform]します。 結合ポリシーの `identityGraph` 属性は、ユーザーの関連 ID の決定方法を定義します。
 
-**identityGraphオブジェクト**
+**ID グラフオブジェクト**
 
 ```json
     "identityGraph": {
@@ -96,10 +96,10 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
     }
 ```
 
-は、次のい `{IDENTITY_GRAPH_TYPE}` ずれかの値です。
+ここで、`{IDENTITY_GRAPH_TYPE}` は次のいずれかです。
 
-* **&quot;none&quot;:** IDの切り替えを実行しません。
-* **&quot;pdg&quot;:** プライベートIDグラフに基づいてIDの切り替えを実行します。
+* **none**：ID を結合しません。
+* **pdg：**&#x200B;個人の ID グラフに基づいて ID を結合します。
 
 **例`identityGraph`**
 
@@ -111,9 +111,9 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
 
 ### 属性の結合 {#attribute-merge}
 
-プロファイルフラグメントとは、特定のユーザーに対して存在するIDのリストのうち、1つのIDに対するプロファイル情報のことです。 使用するIDグラフのタイプが複数のIDになる場合、プロファイルのプロパティと優先度の値が競合する可能性があります。 を使用 `attributeMerge`すると、結合の競合のイベント時に優先順位を付けるデータセットプロファイルの値を指定できます。
+プロファイルフラグメントとは、特定のユーザーに存在する ID のリストからの 1 つの ID のプロファイル情報のことです。使用された ID グラフタイプが複数の ID になる場合、プロファイルプロパティの値が競合する可能性があり、優先順位を指定する必要があります。`attributeMerge` を使用すると、結合の競合が発生した場合に優先するデータセットプロファイル値を指定できます。
 
-**attributeMergeオブジェクト**
+**attributeMerge オブジェクト**
 
 ```json
     "attributeMerge": {
@@ -121,13 +121,13 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
     }
 ```
 
-は、次のい `{ATTRIBUTE_MERGE_TYPE}` ずれかの値です。
+ここで、`{ATTRIBUTE_MERGE_TYPE}` は次のいずれかです。
 
-* **&quot;timestampOrdered&quot;**: （デフォルト）競合が発生した場合に最後に更新されたプロファイルを優先します。 このマージ・タイプを使用する場合、 `data` 属性は不要です。
-* **&quot;dataSetPrecedence&quot;** : プロファイルフラグメントの送信元のデータセットに基づいて、そのフラグメントを優先します。 これは、あるデータセットに存在する情報が、別のデータセットのデータよりも優先されたり、信頼されたりする場合に使用できます。 このマージ・タイプを使用する場合、属性は必須です。属性は優先順にデータセットをリストするために必要です。 `order`
-   * **&#39;&#39;order&#39;**: &quot;dataSetPrecedence&quot;を使用する場合は、配列にデータセットのリストを指定する必要があり `order` ます。 リストに含まれていないデータセットはマージされません。 つまり、プロファイルに統合するデータセットは、明示的にリストする必要があります。 アレイは、優先順にデータセットのIDをリストします。 `order`
+* **timestampOrdered**：（デフォルト）競合が発生した場合に最後に更新されたプロファイルを優先します。この結合タイプを使用する場合、`data` 属性は不要です。
+* **dataSetPrecedence**：元のデータセットに基づいてフラグメントプロファイルを優先します。これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
+   * **order**：「dataSetPrecedence」を使用する場合、`order` 配列にはデータセットのリストが必要です。データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
 
-**dataSetPrecedence型を使用するattributeMergeオブジェクトの例**
+**dataSetPrecedence 型を使用した attributeMerge オブジェクトの例**
 
 ```json
     "attributeMerge": {
@@ -141,7 +141,7 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
     }
 ```
 
-**timestampOrdered型を使用するattributeMergeオブジェクトの例**
+**timestampOrdered 型を使用した attributeMerge オブジェクトの例**
 
 ```json
     "attributeMerge": {
@@ -151,9 +151,9 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
 
 ### スキーマ {#schema}
 
-スキーマオブジェクトは、このマージポリシーを作成するXDMスキーマを指定します。
+スキーマオブジェクトは、この結合ポリシーを作成する XDM スキーマを指定します。
 
-**`schema`object **
+**`schema`オブジェクト&#x200B;**
 
 ```json
     "schema": {
@@ -161,7 +161,7 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
     }
 ```
 
-の値 `name` は、マージポリシーに関連付けられたスキーマが基になるXDMクラスの名前です。
+`name` の値は、結合ポリシーに関連付けられたスキーマの基となる XDM クラスの名前です。
 
 **例`schema`**
 
@@ -171,15 +171,15 @@ complete merge policyオブジェクトは、プロファイルフラグメン�
     }
 ```
 
-## アクセス結合ポリシー {#access-merge-policies}
+## 結合ポリシーへのアクセス {#access-merge-policies}
 
-エンドポイントでは [!DNL Real-time Customer Profile]`/config/mergePolicies` APIを使用して、ルックアップリクエストを実行し、特定のマージポリシーをIDで表示したり、特定の条件でフィルタリングしたIMS組織のすべてのマージポリシーにアクセスしたりできます。 また、エンドポイントを使用して、ID別に複数のマージポリシーを取得することもで `/config/mergePolicies/bulk-get` きます。 これらの各呼び出しを実行する手順を、以下の各節で説明します。
+Using the [!DNL Real-time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. また、エンドポイントを使用して、ID別に複数のマージポリシーを取得することもで `/config/mergePolicies/bulk-get` きます。 これらの各呼び出しを実行する手順を、以下の各節で説明します。
 
-### IDによる単一の結合ポリシーへのアクセス
+### ID による単一の結合ポリシーへのアクセス
 
-エンドポイントにGETリクエストを行い、リクエストパスにを含めることで、IDを使用して1つのマージポリシーにアクセ `/config/mergePolicies` ス `mergePolicyId` できます。
+`/config/mergePolicies` エンドポイントに GET リクエストを送信し、リクエストパスに `mergePolicyId` を含めることで、ID を使用して 1 つの結合ポリシーにアクセスすることができます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /config/mergePolicies/{mergePolicyId}
@@ -187,7 +187,7 @@ GET /config/mergePolicies/{mergePolicyId}
 
 | パラメーター | 説明 |
 |---|---|
-| `{mergePolicyId}` | 削除するマージポリシーの識別子。 |
+| `{mergePolicyId}` | 削除する結合ポリシーの識別子。 |
 
 **リクエスト**
 
@@ -200,9 +200,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}
 ```
 
-**応答**
+**応答** 
 
-正常に応答すると、マージポリシーの詳細が返されます。
+正常な応答は、結合ポリシーの詳細を返します。
 
 ```json
 {
@@ -223,13 +223,13 @@ curl -X GET \
 }
 ```
 
-結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [](#components-of-merge-policies) 結合ポリシーのコンポーネントに関する節を参照してください。
+結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初にある「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
 
 ### ID別に複数のマージポリシーを取得する
 
-エンドポイントにPOSTリクエストを行い、取得するマージポリシーのIDをリクエスト本文に含めることで、複数のマージポリシーを取得でき `/config/mergePolicies/bulk-get` ます。
+エンドポイントにPOSTリクエストを送信し、取得するマージポリシーのIDをリクエスト本文に含めることで、複数のマージポリシーを取得でき `/config/mergePolicies/bulk-get` ます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /config/mergePolicies/bulk-get
@@ -259,7 +259,7 @@ curl -X POST \
       }'
 ```
 
-**応答**
+**応答** 
 
 正常な応答は、HTTP Status 207(Multi-Status)と、POSTリクエストでIDが提供されたマージポリシーの詳細を返します。
 
@@ -320,13 +320,13 @@ curl -X POST \
 }
 ```
 
-結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [結合ポリシーのコンポーネントに関する節を参照してください](#components-of-merge-policies) 。
+結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初にある「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
 
 ### 条件別の複数の結合ポリシーのリスト
 
-エンドポイントにGETリクエストを発行し、オプションのクエリパラメーターを使用して応答のフィルタリング、順序付け、ページネーションを行うことで、IMS組織内で複数のマージポリシーをリストできます。 `/config/mergePolicies` 複数のパラメーターを含める場合は、アンパサンド(&amp;)で区切ります。 パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべての結合ポリシーが取得されます。
+`/config/mergePolicies` エンドポイントに GET リクエストを発行し、オプションのクエリーパラメーターを使用して応答をフィルター、並び替え、ページネートすることで、IMS 組織内で複数の結合ポリシーをリストできます。複数のパラメーターを含める場合は、アンパサンド（&amp;）で区切ります。パラメーターを指定しないでこのエンドポイントを呼び出すと、組織で使用可能なすべての結合ポリシーが取得されます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /config/mergePolicies?{QUERY_PARAMS}
@@ -334,21 +334,21 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 |---|---|
-| `default` | マージポリシーがスキーマクラスのデフォルトであるかどうかによってフィルターが結果を出すboolean値です。 |
-| `limit` | ページに含める結果の数を制御するためのページサイズ制限を指定します。 デフォルト値： 20 |
-| `orderBy` | 結果の並べ替えの基準となるフィールド `orderBy=name` または名前 `orderBy=+name` で昇順に並べ替えるか、降順に並べ替えるかを指定し `orderBy=-name`ます。 この値を省略すると、のデフォルトの並べ替え順が昇順 `name` になります。 |
-| `schema.name` | 使用可能なマージポリシーを取得するスキーマの名前。 |
-| `identityGraph.type` | フィルターは、IDグラフのタイプで結果を返します。 有効な値は、「none」と「pdg」（プライベートグラフ）です。 |
-| `attributeMerge.type` | 使用される属性結合タイプによってフィルターが結果が出ます。 指定可能な値には、「timestampOrdered」および「dataSetPrecedence」があります。 |
-| `start` | ページオフセット — 取得するデータの開始IDを指定します。 デフォルト値： 0 |
-| `version` | 特定のバージョンのマージポリシーを使用する場合は、これを指定します。 デフォルトでは、最新バージョンが使用されます。 |
+| `default` | 結合ポリシーがフィルタークラスのデフォルトであるかどうかによって結果をスキーマするブール値。 |
+| `limit` | ページに含める結果の数を制御するためのページサイズの制限を指定します。デフォルト値：20 |
+| `orderBy` | 名前を昇順で並べ替えるには `orderBy=name` または `orderBy=+name` のように結果を並べ替えるフィールドを指定し、降順で並べ替えるには `orderBy=-name` を指定します。この値を省略すると、`name` のデフォルトの並べ替え順が昇順になります。 |
+| `schema.name` | 使用可能な結合スキーマを取得するポリシーの名前。 |
+| `identityGraph.type` | フィルターは、ID グラフのタイプ別に表示されます。有効な値は、「none」と「pdg」（プライベートグラフ）です。 |
+| `attributeMerge.type` | フィルターは、使用される属性の結合タイプ別に結果を返します。指定できる値は、「timestampOrdered」と「dataSetPrecedence」です。 |
+| `start` | ページオフセット — 取得するデータの開始 ID を指定します。デフォルト値：0 |
+| `version` | 特定のバージョンの結合ポリシーを使用する場合に指定します。デフォルトでは、最新バージョンが使用されます。 |
 
-、、 `schema.name`およびに関する詳細は、このガイドで前述した結合ポリシーの `identityGraph.type`コンポー `attributeMerge.type`ネント [](#components-of-merge-policies) ・セクションを参照してください。
+`schema.name`、`identityGraph.type`、`attributeMerge.type` に関する詳細は、このガイドで前述した「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
 
 
 **リクエスト**
 
-次のリクエストリストは、特定のスキーマのすべてのマージポリシーを指定します。
+次のリクエストは、特定のスキーマのすべての統合ポリシーをリストします。
 
 ```shell
 curl -X GET \
@@ -359,9 +359,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、要求で送信されるクエリパラメーターで指定された条件を満たすマージポリシーのページ分割リストを返します。
+正常な応答は、リクエストで送信されたクエリーパラメーターで指定された基準を満たす結合ポリシーのページ付けされたリストを返します。
 
 ```json
 {
@@ -431,19 +431,20 @@ curl -X GET \
 
 | プロパティ | 説明 |
 |---|---|
-| `_links.next.href` | 結果の次のページのURIアドレス。 このURIを、ページを表示する同じエンドポイントへの別のAPI呼び出しのリクエストパラメーターとして使用します。 次のページが存在しない場合、この値は空の文字列になります。 |
+| `_links.next.href` | 結果の次のページの URI アドレス。この URI を、同じエンドポイントに対する別の API 呼び出しのリクエストパラメーターとして使用し、ページを表示します。次のページが存在しない場合、この値は空の文字列になります。 |
 
-## マージポリシーの作成
+## 結合ポリシーの作成
 
-エンドポイントにPOSTリクエストを作成して、組織の新しい結合ポリシーを作成でき `/config/mergePolicies` ます。
+`/config/mergePolicies`エンドポイントに POST リクエストをおこなうことで、組織の新しい結合ポリシーを作成できます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /config/mergePolicies
 ```
 
-**リクエスト**&#x200B;次のリクエストは、ペイロードで提供される属性値によって設定される新しい結合ポリシーを作成します。
+**リクエスト**
+次のリクエストは、ペイロードで指定された属性値によって設定される新しい結合ポリシーを作成します。
 
 ```shell
 curl -X POST \
@@ -474,17 +475,17 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `name` | マージポリシーをリスト表示で識別できるわかりやすい名前。 |
-| `identityGraph.type` | マージする関連IDを取得するIDグラフのタイプ。 可能な値： &quot;none&quot;または&quot;pdg&quot;（プライベートグラフ）。 |
-| `attributeMerge` | データの競合が発生した場合にプロファイル属性値に優先順位を付ける方法。 |
-| `schema` | マージポリシーに関連付けられているXDMスキーマクラスです。 |
-| `default` | このマージポリシーをスキーマの既定にするかどうかを指定します。 |
+| `name` | 結合ポリシーをリストビューで識別できる、わかりやすい名前。 |
+| `identityGraph.type` | 結合する関連 ID を取得する ID グラフのタイプ。可能な値：「none」または「pdg」（プライベートグラフ）。 |
+| `attributeMerge` | データの競合時にプロファイル属性値に優先順位を付ける方法。 |
+| `schema` | 結合ポリシーに関連付けられた XDM スキーマクラス。 |
+| `default` | この結合ポリシーがスキーマのデフォルトかどうかを指定します。 |
 
-詳細は、「 [components of merge policies](#components-of-merge-policies) 」の節を参照してください。
+詳細は、「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
 
-**応答**
+**応答** 
 
-正常に応答すると、新たに作成されたマージポリシーの詳細が返されます。
+正常な応答は、新しく作成された結合ポリシーの詳細を返します。
 
 ```json
 {
@@ -516,17 +517,17 @@ curl -X POST \
 }
 ```
 
-結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初の [](#components-of-merge-policies) 結合ポリシーのコンポーネントに関する節を参照してください。
+結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初にある「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
 
-## マージポリシーの更新 {#update}
+## 結合ポリシーの更新 {#update}
 
-既存のマージ・ポリシーを変更するには、個々の属性(PATCH)を編集するか、マージ・ポリシー全体を新しい属性(PUT)で上書きします。 それぞれの例を以下に示します。
+既存の結合ポリシーを変更するには、個々の属性を編集するか（PATCH）、結合ポリシー全体を新しい属性で上書きします（PUT）。それぞれの例を以下に示します。
 
 ### 個々の結合ポリシーフィールドの編集
 
-エンドポイントにPATCH要求を行うと、マージポリシー用の個々のフィールドを編集でき `/config/mergePolicies/{mergePolicyId}` ます。
+`/config/mergePolicies/{mergePolicyId}` エンドポイントに PATCH リクエストをおこなうことで、結合ポリシーの個々のフィールドを編集できます。
 
-**API形式**
+**API 形式**
 
 ```http
 PATCH /config/mergePolicies/{mergePolicyId}
@@ -534,11 +535,11 @@ PATCH /config/mergePolicies/{mergePolicyId}
 
 | パラメーター | 説明 |
 |---|---|
-| `{mergePolicyId}` | 削除するマージポリシーの識別子。 |
+| `{mergePolicyId}` | 削除する結合ポリシーの識別子。 |
 
 **リクエスト**
 
-次の要求は、指定されたマージポリシーを更新します。その `default` プロパティの値を次に変更しま `true`す。
+次のリクエストは、`default` プロパティの値を `true` に変更することで、指定した結合ポリシーを更新します。
 
 ```shell
 curl -X PATCH \
@@ -557,16 +558,16 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 |---|---|
-| `op` | 実行する操作を指定します。 その他のPATCH操作の例は、 [JSONパッチドキュメントを参照してください](http://jsonpatch.com) |
-| `path` | 更新するフィールドのパス。 指定できる値は次のとおりです。 &quot;/name&quot;、&quot;/identityGraph.type&quot;、&quot;/attributeMerge.type&quot;、&quot;/schema.name&quot;、&quot;/version&quot;、&quot;/default&quot; |
+| `op` | 操作を指定します。その他のパッチ操作の例については、 [JSON パッチのドキュメント](http://jsonpatch.com)を参照してください |
+| `path` | 更新するフィールドのパス。指定できる値は「/name」、「/identityGraph.type」、「/attributeMerge.type」、「/schema.name」、「/version」、「/default」です。 |
 | `value` | 指定したフィールドに設定する値。 |
 
-詳細は、「 [components of merge policies](#components-of-merge-policies) 」の節を参照してください。
+詳細は、「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
 
 
-**応答**
+**応答** 
 
-正常に応答すると、新たに更新されたマージポリシーの詳細が返されます。
+正常な応答は、新しく更新された結合ポリシーの詳細を返します。
 
 ```json
 {
@@ -598,11 +599,11 @@ curl -X PATCH \
 }
 ```
 
-### マージポリシーを上書きする
+### 結合ポリシーの上書き
 
-マージポリシーを変更する別の方法は、PUT要求を使用することです。PUT要求はマージポリシー全体を上書きします。
+結合ポリシーを変更する別の方法は、結合ポリシー全体を上書きする PUT リクエストを使用することです。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /config/mergePolicies/{mergePolicyId}
@@ -614,7 +615,7 @@ PUT /config/mergePolicies/{mergePolicyId}
 
 **リクエスト**
 
-次の要求は、指定されたマージポリシーを上書きし、属性値をペイロードで指定された属性値に置き換えます。 この要求は既存のマージポリシーを完全に置き換えるので、最初にマージポリシーを定義する際に必要だったのと同じフィールドをすべて指定する必要があります。 ただし、今回は、変更するフィールドに更新された値を指定します。
+次のリクエストは、指定された結合ポリシーを上書きし、その属性値をペイロードで提供されたものに置き換えます。このリクエストは既存の結合ポリシーを完全に置き換えるため、最初に結合ポリシーを定義するときに必要だったのと同じフィールドをすべて指定する必要があります。ただし、今回は、変更するフィールドの更新された値を指定します。
 
 ```shell
 curl -X PUT \
@@ -648,18 +649,18 @@ curl -X PUT \
 
 | プロパティ | 説明 |
 |---|---|
-| `name` | マージポリシーをリスト表示で識別できるわかりやすい名前。 |
-| `identityGraph` | 結合する関連IDの取得元となるIDグラフ。 |
-| `attributeMerge` | データの競合が発生した場合にプロファイル属性値に優先順位を付ける方法。 |
-| `schema` | マージポリシーに関連付けられているXDMスキーマクラスです。 |
-| `default` | このマージポリシーをスキーマの既定にするかどうかを指定します。 |
+| `name` | 結合ポリシーをリストビューで識別できる、わかりやすい名前。 |
+| `identityGraph` | 結合する関連 ID を取得する ID グラフ。 |
+| `attributeMerge` | データの競合時にプロファイル属性値に優先順位を付ける方法。 |
+| `schema` | 結合ポリシーに関連付けられた XDM スキーマクラス。 |
+| `default` | この結合ポリシーがスキーマのデフォルトかどうかを指定します。 |
 
-詳細は、「 [components of merge policies](#components-of-merge-policies) 」の節を参照してください。
+詳細は、「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
 
 
-**応答**
+**応答** 
 
-正常に応答すると、更新された結合ポリシーの詳細が返されます。
+正常な応答は、更新された結合ポリシーの詳細を返します。
 
 ```json
 {
@@ -691,11 +692,11 @@ curl -X PUT \
 }
 ```
 
-## マージポリシーの削除
+## 結合ポリシーの削除
 
-マージポリシーを削除するには、エンドポイントにDELETE要求を行い、削除するマージポリシーのIDを要求パスに含め `/config/mergePolicies` ます。
+結合ポリシーを削除するには、`/config/mergePolicies` エンドポイントに DELETE リクエストをおこない、削除する結合ポリシーの ID をリクエストパスに含めます。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /config/mergePolicies/{mergePolicyId}
@@ -703,11 +704,11 @@ DELETE /config/mergePolicies/{mergePolicyId}
 
 | パラメーター | 説明 |
 |---|---|
-| `{mergePolicyId}` | 削除するマージポリシーの識別子。 |
+| `{mergePolicyId}` | 削除する結合ポリシーの識別子。 |
 
 **リクエスト**
 
-次の要求は、マージポリシーを削除します。
+次のリクエストは、結合ポリシーを削除します。
 
 ```shell
 curl -X DELETE \
@@ -718,13 +719,13 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**応答**
+**応答** 
 
-削除が成功すると、HTTPステータス200(OK)と空の応答本文が返されます。 削除が成功したことを確認するために、GET要求を実行し、マージポリシーをIDで表示できます。 マージポリシーが削除された場合は、HTTPステータス404（見つかりません）エラーが表示されます。
+削除リクエストが成功すると、HTTP ステータス 200（OK）と空の応答本文が返されます。削除が成功したことを確認するには、GET リクエストを実行して、ID ごとに結合ポリシーを表示します。結合ポリシーが削除されている場合は、HTTP ステータス 404（不検知）エラーが表示されます。
 
 ## 次の手順
 
-これで、IMS組織の結合ポリシーを作成および設定する方法がわかり、それらを使用して [!DNL Real-time Customer Profile] データからオーディエンスセグメントを作成できます。 セグメントの定義と操作を開始するには、 [Adobe Experience Platformセグメントサービスのドキュメント](../../segmentation/home.md) を参照してください。
+Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. セグメントの定義と使用を開始するには、[Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)のドキュメントを参照してください。
 
 
 
