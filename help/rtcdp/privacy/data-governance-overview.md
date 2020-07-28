@@ -14,11 +14,11 @@ ht-degree: 55%
 
 # [!DNL Data Governance] リアルタイムCDP
 
-[!DNL Real-time Customer Data Platform] （リアルタイムCDP）は、複数のエンタープライズ・システムからのデータを統合し、マーケティング担当者が顧客をより良く識別、理解、関与できるようにします。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。したがって、Real-time CDP が使用ポリシーに準拠していることを確認し、データを処理することが重要です。
+[!DNL Real-time Customer Data Platform] （リアルタイムCDP）は、複数のエンタープライズ・システムからのデータを統合し、マーケティング担当者が顧客をより良く識別、理解、関与できるようにします。 このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。したがって、リアルタイム CDP が使用ポリシーに準拠していることを確認し、データを処理することが重要です。
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. データガバナンスは Real-time CDP 内で重要な役割を果たし、使用ポリシーの定義、それらのポリシーに基づくデータの分類、特定のマーケティングアクションの実行時のポリシー違反を確認できるようになります。
+Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. データガバナンスは リアルタイム CDP 内で重要な役割を果たし、使用ポリシーの定義、それらのポリシーに基づくデータの分類、特定のマーケティングアクションの実行時のポリシー違反を確認できるようになります。
 
-Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of [!DNL Data Governance] capabilities are covered in the [!DNL Experience Platform] documentation. 本書は、 の『[データガバナンスの概要](../../data-governance/home.md)』を補完するものであり、Real-time CDP で利用可能なガバナンス機能の概要を説明しています。[!DNL Experience Platform]以下のトピックを取り上げます。
+Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of [!DNL Data Governance] capabilities are covered in the [!DNL Experience Platform] documentation. 本書は、 の『[データガバナンスの概要](../../data-governance/home.md)』を補完するものであり、リアルタイム CDP で利用可能なガバナンス機能の概要を説明しています。[!DNL Experience Platform]以下のトピックを取り上げます。
 
 * [データへの使用状況ラベルの適用](#labels)
 * [データ使用ポリシーの管理](#policies)
@@ -45,7 +45,7 @@ Real-time CDP is built on top of Adobe Experience Platform, and therefore the ma
 
 ## データ使用ポリシーの管理 {#policies}
 
-データ使用状況ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを定義し、有効にする必要があります。データ使用ポリシーは、Real-time CDP 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するルールです詳しくは、 で『[!DNL Experience Platform][データガバナンスの概要](../../data-governance/home.md)』の「データ使用ポリシー」の節を参照してください。
+データ使用状況ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを定義し、有効にする必要があります。データ使用ポリシーは、リアルタイム CDP 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するルールです詳しくは、 で『[!DNL Experience Platform][データガバナンスの概要](../../data-governance/home.md)』の「データ使用ポリシー」の節を参照してください。
 
 Adobe Experience Platform では、一般的な顧客体験の使用例に対して、いくつかの&#x200B;**コアポリシー**&#x200B;があります。これらのポリシーは、「 **[!UICONTROL ポリシー]** 」ワークスペースに移動し、「 **[!UICONTROL 参照]** 」タブを選択すると、UIで表示できます。 独自のカスタムポリシーの作成方法など、UIでのポリシーの操作に関する詳細な手順については [、](../../data-governance/policies/user-guide.md) ドキュメントの「 [!DNL Experience Platform] policiesユーザーガイド」を参照してください。
 
