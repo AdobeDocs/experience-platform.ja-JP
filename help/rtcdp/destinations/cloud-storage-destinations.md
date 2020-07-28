@@ -1,8 +1,8 @@
 ---
 title: クラウドストレージの宛先
 seo-title: クラウドストレージの宛先
-description: Adobe Real-time CDPは、セグメントをデータファイルとしてAmazon S3、AWS Kinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
-seo-description: Adobe Real-time CDPは、セグメントをデータファイルとしてAmazon S3、AWS Kinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
+description: AdobeReal-time CDPは、セグメントをデータファイルとしてAmazonS3、AWSKinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
+seo-description: AdobeReal-time CDPは、セグメントをデータファイルとしてAmazonS3、AWSKinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 35%
 
 # クラウドストレージの宛先 {#cloud-storage-destinations}
 
-Adobe Real-time CDPは、セグメントをデータファイルとしてクラウドストレージの場所に配信できます。 This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for [!DNL Amazon S3] and SFTP. 宛先 [!DNL AWS Kinesis] と [!DNL Azure Event Hubs] 宛先の場合、データはJSON形式でExperience Platformからストリーミングされます。
+AdobeReal-time CDPは、セグメントをデータファイルとしてクラウドストレージの場所に配信できます。 This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for [!DNL Amazon S3] and SFTP. 宛先 [!DNL AWS Kinesis] と [!DNL Azure Event Hubs] 宛先の場合、データはJSON形式でExperience Platformからストリーミングされます。
 
 ![Adobe Cloud のストレージの保存先](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
 
@@ -31,5 +31,5 @@ Adobe Real-time CDPは、セグメントをデータファイルとしてクラ�
 
 ## 使用可能なクラウドストレージストリーミング先
 
-* [Amazon Kinesisの宛先](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+* [AmazonKinesis駅](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 * [Azureイベントハブの宛先](/help/rtcdp/destinations/azure-event-hubs-destination.md)
