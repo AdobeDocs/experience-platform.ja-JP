@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 52a01c5f90a9643691a25e2d0a5f03a7f0334a7d
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 0%
+ht-degree: 18%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 0%
 >[!NOTE]
 >コネクタ [!DNL HubSpot] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform ]は、サードパーティのマーケティング自動化システムからデータを取り込むためのサポートを提供します。 マーケティング自動化プロバイダーのサポートには以下が含まれ [!DNL HubSpot]ます。
+[!DNL Experience Platform ] は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。マーケティング自動化プロバイダーのサポートには以下が含まれ [!DNL HubSpot]ます。
 
 ## IPアドレス許可リスト
 
@@ -63,5 +63,5 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 ## UI [!DNL HubSpot] を [!DNL Platform] 使用して接続
 
-- [UIでのHubSpotソースコネクタの作成](../../tutorials/ui/create/marketing-automation/hubspot.md)
+- [UI での HubSpot ソースコネクタの作成](../../tutorials/ui/create/marketing-automation/hubspot.md)
 - [UIでのマーケティング自動化コネクタのデータフローの設定](../../tutorials/ui/dataflow/marketing-automation.md)
