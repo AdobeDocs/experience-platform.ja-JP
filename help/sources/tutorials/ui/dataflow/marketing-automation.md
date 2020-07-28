@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 3a1ecca49809a6ebbc94bbbef93eef56c8faf118
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -18,14 +18,14 @@ ht-degree: 1%
 
 ## はじめに
 
-このチュートリアルでは、次のAdobe Experience Platformのコンポーネントについて十分に理解している必要があります。
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [Experience Data Model(XDM)System](../../../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-   - [スキーマ構成の基本](../../../../xdm/schema/composition.md): XDMスキーマの基本構成要素について説明します。この基本構成要素には、スキーマ構成における主な原則とベストプラクティスが含まれます。
+- [エクスペリエンスデータモデルl（XDM）システム](../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+   - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [リアルタイム顧客プロファイル](../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
-さらに、このチュートリアルでは、既にMarketing Automationアカウントを作成している必要があります。 UIで様々なマーケティング自動化コネクタを作成するためのチュートリアルのリストは、 [ソースコネクタの概要](../../../home.md)。
+さらに、このチュートリアルでは、既にMarketing Automationアカウントを作成している必要があります。 UIで様々なマーケティング自動化コネクタを作成するためのチュートリアルのリストは、 [source connectorsの概要](../../../home.md)。
 
 ## データの選択
 
@@ -44,13 +44,13 @@ ht-degree: 1%
 
 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
-### 既存のデータセットの使用
+### 既存のデータセットを使用する
 
 既存のデータセットにデータを取り込むには、「 **[!UICONTROL Use existing dataset]**」を選択し、データセットアイコンをクリックします。
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/marketing-automation/use-existing-dataset.png)
 
-[ _データセットの選択_ ]ダイアログが表示されます。 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
+The _Select dataset_ dialog appears. 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/marketing-automation/select-existing-dataset.png)
 
@@ -64,11 +64,11 @@ ht-degree: 1%
 
 ![use-new-dataset](../../../images/tutorials/dataflow/marketing-automation/use-new-dataset.png)
 
-[ *[!UICONTROL スキーマの]* 選択]ダイアログが表示されます。 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
+The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
 
 ![select-スキーマ](../../../images/tutorials/dataflow/marketing-automation/select-schema.png)
 
-必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパーの機能について詳しくは、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../ingestion/tutorials/map-a-csv-file.md)。
+必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパー関数の詳細については、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
 ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」をクリックします。
 
@@ -125,7 +125,7 @@ ht-degree: 1%
 このチュートリアルに従うと、マーケティング自動化システムからデータを取り込むためのデータフローが正しく作成され、監視データセットに関する洞察が得られます。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
-- [Data Science Workspaceの概要](../../../../data-science-workspace/home.md)
+- [Data Science ワークスペースの概要](../../../../data-science-workspace/home.md)
 
 ## 付録
 
