@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Amazon Kinesisコネクタ
+title: AmazonKinesisコネクタ
 topic: overview
 translation-type: tm+mt
 source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Adobe Experience Platformは、AWS、 [!DNL Google Cloud Platform]およびなどのクラウドプロバイダーに対してネイティブの接続を提供 [!DNL Azure]します。 これらのシステムのデータをに取り込むことができ [!DNL Platform]ます。
 
-Cloudストレージソースからは、ダウンロード、フォーマット、アップロードを行う [!DNL Platform] ことなく、独自のデータをに取り込むことができます。 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] データをリアルタイムで取り込むこ [!DNL Amazon Kinesis] とができます。
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] データをリアルタイムで取り込むこ [!DNL Amazon Kinesis] とができます。
 
 ## IPアドレス許可リスト
 
@@ -57,11 +57,11 @@ Cloudストレージソースからは、ダウンロード、フォーマット
 
 ## API [!DNL Amazon Kinesis] を [!DNL Platform] 使用した接続
 
-- [Flow Service APIを使用してAmazon Kinesisコネクタを作成する](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Flow Service APIを使用してAmazonKinesisコネクタを作成する](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
 ## UI [!DNL Amazon Kinesis] を [!DNL Platform] 使用して接続
 
-- [UIでのAmazon Kinesisソースコネクタの作成](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [UIでAmazonKinesisソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
