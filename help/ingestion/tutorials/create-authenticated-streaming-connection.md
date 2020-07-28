@@ -7,57 +7,57 @@ translation-type: tm+mt
 source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
 source-wordcount: '624'
-ht-degree: 2%
+ht-degree: 68%
 
 ---
 
 
 # 認証済みストリーミング接続の作成
 
-認証済みデータ収集機能を使用すると、 [!DNL Real-time Customer Profile][!DNL Identity]やなどのAdobe Experience Platformサービスを使用して、信頼できるソースと信頼できないソースからのレコードを区別できます。 個人識別情報(PII)を送信したい顧客は、POSTリクエストの一環としてアクセストークンを送信することで、送信できます。
+Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and un-trusted sources. 個人を特定できる情報（PII）を送信するクライアントがレコードを区別するには、POST リクエストの一部としてアクセストークンを送信します。
 
 ## はじめに
 
-Adobe Experience Platformに対してストリーミングデータを開始するには、ストリーミング接続登録が必要です。 ストリーミング接続を登録する場合は、ストリーミングデータのソースなど、主な詳細情報を入力する必要があります。
+Adobe Experience Platform へのデータストリーミングを開始するには、ストリーミング接続を登録する必要があります。ストリーミング接続を登録する場合、ストリーミングデータのソースなど、重要な情報をいくつか指定する必要があります。
 
-ストリーミング接続を登録すると、データプロデューサーとして、一意のURLが割り当てられ、このURLを使用してデータをストリーミングでき [!DNL Platform]ます。
+After registering a streaming connection, you, as the data producer, will have a unique URL which can be used to stream data to [!DNL Platform].
 
-このチュートリアルでは、さまざまなAdobe Experience Platformサービスの実用的な知識も必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、様々な Adobe Experience Platform サービスに関する実用的な知識も必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [!DNL Experience Data Model (XDM)](../../xdm/home.md): エクスペリエンスデータを [!DNL Platform] 編成するための標準化されたフレームワーク。
 - [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
 
-以下の節では、ストリーミング取り込みAPIの呼び出しを正常に行うために知っておく必要がある追加情報について説明します。
+以下の節では、ストリーミング取得 API の呼び出しを正常におこなうために知っておく必要がある追加情報を示します。
 
-### サンプルAPI呼び出しの読み取り
+### API 呼び出し例の読み取り
 
-このガイドは、リクエストをフォーマットする方法を示すAPI呼び出しの例を提供します。 例えば、パス、必須のヘッダー、適切にフォーマットされた要求ペイロードなどです。 API応答で返されるサンプルJSONも提供されます。 サンプルAPI呼び出しのドキュメントで使用される規則について詳しくは、トラブルシューティングガイドのAPI呼び出し例 [を読む方法に関する節](../../landing/troubleshooting.md#how-do-i-format-an-api-request) を参照して [!DNL Experience Platform] ください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-### 必要なヘッダーの値の収集
+### 必須ヘッダーの値の収集
 
-APIを呼び出すには、まず [!DNL Platform] 認証チュートリアルを完了する必要があり [ます](../../tutorials/authentication.md)。 次に示すように、認証チュートリアルで、すべての [!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を指定する
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- 認証： 無記名 `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-内のすべてのリソース [!DNL Experience Platform] は、特定の仮想サンドボックスに分離されます。 APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要で [!DNL Platform] す。
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->のサンドボックスについて詳し [!DNL Platform]くは、 [Sandboxの概要ドキュメントを参照してください](../../sandboxes/home.md)。
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード(POST、PUT、PATCH)を含むすべてのリクエストには、次の追加のヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
 - Content-Type: application/json
 
 ## 接続の作成
 
-接続は、ソースを指定し、フローをストリーミング取り込みAPIと互換性を持たせるために必要な情報を含みます。
+接続ではソースを指定します。また、接続には、Streaming Ingestion API と互換性があるフローを作成するために必要な情報を含めます。
 
-**API形式**
+**API 形式**
 
 ```http
 POST /flowservice/connections
@@ -67,7 +67,7 @@ POST /flowservice/connections
 
 >[!NOTE]
 >
->例に示すように、リスト `providerId` ととの値を使用する `connectionSpec` 必要があります **** 。これは、ストリーミング取り込み用にストリーミング接続を作成するAPIに対して何が指定されているかを示す値です。
+>次の例に示すように、`providerId` と `connectionSpec` の値を使用する&#x200B;**必要があります**。これらの値により、ストリーミングインジェスト用のストリーミング接続を作成していることが API に示されます。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 **応答**
 
-正常に応答すると、新たに作成された接続の詳細と共にHTTPステータス201が返されます。
+リクエストが成功した場合は、新しく作成した接続の詳細と HTTP ステータス 201 が返されます。
 
 ```json
 {
@@ -109,14 +109,14 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `id` | 新しく作成 `id` した接続の。 これは、を参照してください `{CONNECTION_ID}`。 |
-| `etag` | 接続に割り当てられる識別子。接続のリビジョンを指定します。 |
+| `id` | 新しく作成した接続の `id`。ここでは、`{CONNECTION_ID}` を指します。 |
+| `etag` | 接続に割り当てられ、接続のリビジョンを指定する識別子。 |
 
-## データ収集URLの取得
+## データ収集 URL の取得
 
-作成した接続で、データ収集URLを取得できるようになります。
+接続が作成されたら、データ収集 URL を取得することができます。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /flowservice/connections/{CONNECTION_ID}
@@ -124,7 +124,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 前に作成した接続の `id` 値。 |
+| `{CONNECTION_ID}` | 以前に作成した接続の `id` 値。 |
 
 **リクエスト**
 
@@ -138,7 +138,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **応答**
 
-応答が成功すると、HTTPステータス200が返され、要求された接続に関する詳細情報が返されます。 データ収集URLは接続時に自動的に作成され、 `inletUrl` 値を使用して取得できます。
+リクエストが成功した場合は、リクエストした接続についての詳細情報と HTTP ステータス 200 が返されます。データ収集 URL は、接続を使用して自動的に作成されます。これは、`inletUrl` 値を使って取得できます。
 
 ```json
 {
@@ -177,17 +177,17 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 次の手順
 
-認証済みのストリーミング接続を作成したら、時系列またはデータを記録して、内のデータを取り込むことができ [!DNL Platform]ます。 時系列データをストリーミングする方法につ [!DNL Platform]いては、「 [ストリーミング時系列データのチュートリアル](./streaming-time-series-data.md)」を参照してください。 レコードデータをストリーミング再生する方法につ [!DNL Platform]いては、 [ストリーミングレコードデータのチュートリアル](./streaming-record-data.md)を参照してください。
+Now that you have created an authenticated streaming connection, you can stream either time series or record data, allowing you to ingest data within [!DNL Platform]. To learn how to stream time series data to [!DNL Platform], go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to [!DNL Platform], go to the [streaming record data tutorial](./streaming-record-data.md).
 
 ## 付録
 
-ここでは、認証済みストリーミング接続についての補足情報を説明します。
+この節では、認証済みのストリーミング接続に関する補足情報を示します。
 
-### 認証済みストリーミング接続へのメッセージの送信
+### 認証済みストリーミング接続にメッセージを送信する
 
-ストリーミング接続で認証が有効になっている場合、クライアントは要求に `Authorization` ヘッダーを追加する必要があります。
+ストリーミング接続で認証が有効になっている場合、クライアントはリクエストに `Authorization` ヘッダーを追加する必要があります。
 
-ヘッダーが存在しない場合、 `Authorization` または無効な/期限切れのアクセストークンが送信された場合、HTTP 401 Unauthorized responseが返され、次のような応答が返されます。
+`Authorization` ヘッダーがない場合、または無効な／期限切れのアクセストークンが送信された場合は、HTTP 401 Unauthorized と以下のようなレスポンスが返されます。
 
 **応答**
 
