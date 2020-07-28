@@ -1,8 +1,8 @@
 ---
 title: Experience CloudIDを取得しています
 seo-title: Experience CloudIDを取得するAdobe Experience PlatformWeb SDK
-description: Adobe Experience Cloud IDを取得する方法を説明します。
-seo-description: Adobe Experience Cloud IDを取得する方法を説明します。
+description: Adobe Experience CloudIDの取得方法を説明します。
+seo-description: Adobe Experience CloudIDの取得方法を説明します。
 translation-type: tm+mt
 source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
@@ -14,11 +14,11 @@ ht-degree: 10%
 
 # ID -Experience CloudIDの取得
 
-このAdobe Experience Platform [!DNL Web SDK] は、 [Adobe Identity Service](../../identity-service/ecid.md)を利用します。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
+Adobe Experience Platformは、 [!DNL Web SDK] AdobeIDサービスを [利用します](../../identity-service/ecid.md)。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
 
 ## ファーストパーティID
 
-は、そのIDをファーストパーティドメインのcookieに [!DNL Identity Service] 保存します。 は、ドメインのHTTPヘッダーを使用してcookieを設定しようとします。 [!DNL Identity Service] その場合、はJavaScriptを使用したCookieの設定に戻 [!DNL Identity Service] ります。 クライアント側のITP制限によってcookieが制限されないように、CNAMEを設定することをお勧めします。
+は、そのIDをファーストパーティドメインのcookieに [!DNL Identity Service] 保存します。 は、ドメインのHTTPヘッダーを使用してcookieを設定しようとします。 [!DNL Identity Service] その場合、はJavaScriptを使用したCookieの設定に戻 [!DNL Identity Service] ります。 Adobeでは、クライアント側のITP制限によってcookieが制限されないようにCNAMEを設定することをお勧めします。
 
 ## サードパーティID
 
