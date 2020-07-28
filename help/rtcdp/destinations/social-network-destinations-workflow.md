@@ -1,51 +1,51 @@
 ---
-title: ソーシャルネットワーク宛先のワークフロー
-seo-title: ソーシャルネットワーク宛先のワークフロー
+title: ソーシャルネットワークの宛先のワークフロー
+seo-title: ソーシャルネットワークの宛先のワークフロー
 description: ソーシャルネットワーク広告アカウントに接続する手順
 seo-description: ソーシャルネットワーク広告アカウントに接続する手順
 translation-type: tm+mt
 source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 11%
+ht-degree: 65%
 
 ---
 
 
-# ソーシャルネットワーク宛先の認証ワークフロー {#social-network-destinations-workflow}
+# Social Network destinations authentication workflow {#social-network-destinations-workflow}
 
 ## ソーシャルネットワークの宛先を作成するためのワークフロー
 
-このチュートリアルでは例 [!DNL Facebook] を使用しますが、Adobe Real-time Customer DataPlatformのワークフローは、すべてのソーシャルネットワークの宛先に対して同じになり、もう一度製品に追加されます。
+This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Real-time Customer Data Platform will be the same for all social network destinations, once more are added to the product.
 
-1. 「 **[!UICONTROL Destinations/Catalog]**」で、「 **[!UICONTROL Social]** 」カテゴリまでスクロールします。 希望するソーシャルネットワークの宛先を選択し、「 **[!UICONTROL 宛先に接続]**」を選択します。
+1. In **[!UICONTROL Destinations > Catalog]**, scroll to the **[!UICONTROL Social]** category. 目的のソーシャルネットワークの宛先を選択し、「**[!UICONTROL 宛先の接続]**」を選択します。
 
-   ![ソーシャルネットワークの宛先に接続](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
+   ![ソーシャルネットワークの宛先に接続する](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
-2. In the **Authentication** step, if you had previously set up a connection to your social network destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your social network destination. 「 **[!UICONTROL 接続先に接続]** 」を選択すると、選択したソーシャルネットワークの接続先にログインし、Adobe Experience Cloudをソーシャルネットワーク広告アカウントに接続します。
+2. ソーシャルネットワークの宛先への接続を既に設定している場合は、**認証**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新規アカウント]**」を選択して、ソーシャルネットワークの宛先への新しい接続を設定できます。「**[!UICONTROL 宛先に接続]**」を選択すると、選択したソーシャルネットワークの宛先に移動するので、ログインして Adobe Experience Cloud をソーシャルネットワーク広告アカウントに接続します。
 
    >[!NOTE]
    >
-   >Adobe Real-time CDPは、認証プロセスでの秘密鍵証明書の検証をサポートし、ソーシャルネットワークアカウントIDに誤った秘密鍵証明書を入力した場合にエラーメッセージを表示します。 これにより、間違った資格情報を使用してワークフローを完了できなくします。
+   >アドビのリアルタイム CDP は、認証プロセスでの資格情報の検証をサポートし、ソーシャルネットワークアカウント ID に誤った資格情報が入力されるとエラーメッセージを表示します。このため、間違った資格情報を使用すると、ワークフローを完了することができません。
 
-   ![ソーシャルネットワークの宛先に接続 — 認証手順](/help/rtcdp/destinations/assets/facebook-pre-connect-view.png)
+   ![ソーシャルネットワークの宛先に接続 - 認証手順](/help/rtcdp/destinations/assets/facebook-pre-connect-view.png)
 
-3. 資格情報が確認され、Adobe Experience Cloudがソーシャルネットワークに接続されたら、「 **[!UICONTROL 次へ]** 」を選択して **[!UICONTROL 設定]** 手順に進むことができます。
+3. 資格情報が確認され、Adobe Experience Cloud がソーシャルネットワークに接続されたら、「**[!UICONTROL 次へ]**」を選択して&#x200B;**[!UICONTROL 設定]**&#x200B;手順に進むことができます。
 
-   ![資格情報が確認されました](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+   ![資格情報の確認](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. 「 **[!UICONTROL 設定]** 」の手順で、アクティベーションフローの **[!UICONTROL 名前]** と説明を入力し、Social Network Adアカウントの ******** アカウントIDを入力します。 <br> また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 アドビ定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 アドビが定義した個々のマーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+4. **[!UICONTROL 設定]**&#x200B;手順で、アクティベーションフローの&#x200B;**[!UICONTROL 名前]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力し、ソーシャルネットワーク広告アカウントの&#x200B;**[!UICONTROL アカウント ID]** を入力します。<br> また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
    >[!IMPORTANT]
    >
    > * ソーシャルネットワークの宛先に対しては、 *単一IDパーソナライゼーション* (Single Identity Personalization)マーケティングの使用例がデフォルトで選択されており、削除できません。
-   > * 目的 [!DNL Facebook] 地用。 **[!UICONTROL アカウントID]** がお客様のアカウント [!DNL Facebook Ad Account ID]です。 このIDは、で確認でき [!DNL Facebook Ads Manager]ます。 IDの先頭に、次のよう `act_` に付けます。
+   > * 目的 [!DNL Facebook] 地用。 **[!UICONTROL アカウントID]** がお客様のアカウント [!DNL Facebook Ad Account ID]です。 このIDは、で確認でき [!DNL Facebook Ads Manager]ます。 以下に示すように、ID の前に `act_` を追加します。
 
 
    ![ソーシャルネットワークの宛先に接続 — 設定手順](/help/rtcdp/destinations/assets/social-networks-setup-step.png)
 
-5. これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択できます。または、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。In either case, see the next section, [Activate segments to social networks](#activate-segments), for the rest of the workflow.
+5. これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。いずれの場合も、ワークフローでのこの後の操作については、次の「[ソーシャルネットワークに対してセグメントをアクティブ化する](#activate-segments)」の節を参照してください。
 
-## ソーシャルネットワークへのセグメントのアクティブ化 {#activate-segments}
+## ソーシャルネットワークに対してセグメントをアクティブ化する {#activate-segments}
 
-For instructions on how to activate segments to social networks, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+ソーシャルネットワークに対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](/help/rtcdp/destinations/activate-destinations.md)」を参照してください。
