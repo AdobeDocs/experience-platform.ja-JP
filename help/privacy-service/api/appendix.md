@@ -1,67 +1,67 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 承認されたID名前空間と修飾子
+title: 使用可能な ID 名前空間と修飾子
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 9%
+ht-degree: 79%
 
 ---
 
 
 # 付録
 
-## 標準ID名前空間 {#standard-namespaces}
+## 標準 ID 名前空間 {#standard-namespaces}
 
-送信先のIDはすべて、特定のID名前空間の下で提供され [!DNL Privacy Service] る必要があります。 ID名前空間は、IDが関連付けられるコンテキストを示す [Adobe Experience PlatformIDサービス](../../identity-service/home.md) (Identity Service)のコンポーネントです。
+All identities that are sent to [!DNL Privacy Service] must be provided under a specific identity namespace. ID 名前空間は [Adobe Experience Platform ID サービス](../../identity-service/home.md)のコンポーネントで、ID が関連付けられているコンテキストを示します。
 
-次の表に、で使用可能な、一般的に使用される事前定義IDタイプと、それらに関連する [!DNL Experience Platform]`namespace` 値の概要を示します。
+The following table outlines several commonly used, pre-defined identity types made available by [!DNL Experience Platform], along with their associated `namespace` values:
 
-| IDタイプ | `namespace` | `namespaceId` |
+| ID タイプ | `namespace` | `namespaceId` |
 | --- | --- | --- |
 | 電子メール | 電子メール | 6 |
 | 電話番号 | 電話番号 | 7 |
-| AdobeAdvertising CloudID | AdCloud | 411 |
-| Adobe Audience ManagerUUID | コア | 0 |
+| Adobe Advertising Cloud ID | AdCloud | 411 |
+| Adobe Audience Manager UUID | CORE | 0 |
 | Adobe Experience Cloud ID | ECID | 4 |
-| Adobe TargetID | TNTID | 9 |
-| [!DNL Apple] 広告主のID | IDFA | 20915 |
-| [!DNL Google] 広告 ID | ガイド | 20914 |
+| Adobe Target ID | TNTID | 9 |
+| [!DNL Apple] 広告主の ID | IDFA | 20915 |
+| [!DNL Google] 広告 ID | GAID | 20914 |
 | [!DNL Windows] AID | WAID | 8 |
 
 >[!NOTE]
 >
->各IDタイプにも `namespaceId` 整数値があります。この値は、IDのプ `namespace``type` ロパティを「namespaceId」に設定する場合に、文字列の代わりに使用できます。 詳しくは、 [名前空間修飾子に関する節を参照してください](#namespace-qualifiers) 。
+> 各 ID タイプには整数値の `namespaceId` があります。これは、ID の `namespace` プロパティを「namespaceId」に設定する際に `type` 文字列の代わりに使用できます。詳しくは、[名前空間修飾子](#namespace-qualifiers)の節を参照してください。
 
-APIのエンドポイントにGETリクエストを行うことで、組織で使用しているID名前空間のリストを取得でき `idnamespace/identities` ま [!DNL Identity Service] す。 詳しくは、『 [IDサービス開発者ガイド](../../identity-service/api/getting-started.md) 』を参照してください。
+You can retrieve a list of identity namespaces in use by your organization by making a GET request to the `idnamespace/identities` endpoint in the [!DNL Identity Service] API. 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
 
 ## 名前空間修飾子
 
-APIで `namespace` 値を指定する場合、 [!DNL Privacy Service] 名前空間修飾子 **を対応する**`type` パラメーターに含める必要があります。 次の表に、使用できる様々な名前空間修飾子の概要を示します。
+ API で `namespace`[!DNL Privacy Service] 値を指定する場合、対応する **パラメーターに**&#x200B;名前空間修飾子`type`を含める必要があります。使用できる様々な名前空間修飾子の概要を次の表に示します。
 
-| 限定子 | 定義 |
+| 修飾子 | 定義 |
 | --------- | ---------- |
-| Standard | 個々の組織のデータセットに結び付けられず、グローバルに定義された標準名前空間の1つ（電子メール、電話番号など）。 名前空間IDが入力されます。 |
-| custom | 組織のコンテキストで作成され、組織全体で共有されるのではない一意の名前空間 [!DNL Experience Cloud]。 この値は、検索するフレンドリ名（「名前」フィールド）を表します。 名前空間IDが入力されます。 |
-| integrationCode | 統合コード — 「カスタム」に似ていますが、特に、検索対象のデータソースの統合コードとして定義されます。 名前空間IDが入力されます。 |
-| namespaceId | 値が、名前空間サービスを使用して作成またはマップされた名前空間の実際のIDであることを示します。 |
-| 未登録 | 名前空間サービスで定義されていない、「現状のまま」解釈されるフリーフォーム文字列。 この種の名前空間を処理するアプリケーションは、チェック対象の会社をチェックし、アプリケーションのコンテキストとデータセットに適している場合は処理します。 名前空間IDが指定されていません。 |
-| analytics | 名前空間サービスではなく、内部的にマッピングさ [!DNL Analytics]れるカスタム名前空間。 これは、元のリクエストで指定されたとおりに、名前空間IDなしで直接渡されます |
-| target | 名前空間サービスではなく、が内部的に理解 [!DNL Target]するカスタム名前空間です。 これは、元のリクエストで指定されたとおりに、名前空間IDなしで直接渡されます |
+| standard | 個々の組織データセット（E メールアドレス、電話番号など）に関連付けられていない、グローバルに定義された標準名前空間の 1 つです。名前空間 ID が指定されています。 |
+| custom | A unique namespace created in the context of an organization, not shared across the [!DNL Experience Cloud]. この値は、検索の対象となるわかりやすい名前（「name」フィールド）を表します。名前空間 ID が指定されています。 |
+| integrationCode | 「custom」に似ていますが、特に、検索対象となるデータソースの統合コードとして定義されています。名前空間 ID が指定されています。 |
+| namespaceId | 値が、名前空間サービスを通じて作成またはマッピングされた名前空間の実際の ID であることを示します。 |
+| unregistered | 名前空間サービスで定義されておらず、「現状のまま」解釈されるフリーフォーム文字列です。この種の名前空間を処理するアプリケーションは、名前空間をチェックし、会社のコンテキストおよびデータセットに適している場合は処理します。名前空間 IDが指定されていません。 |
+| analytics | A custom namespace that is mapped internally in [!DNL Analytics], not in the namespace service. これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
+| target | A custom namespace understood internally by [!DNL Target], not in the namespace service. これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
 
-## 指定可能な製品値
+## 使用可能な製品値
 
-次の表に、ジョブ作成リクエストの `include` 属性でAdobe製品を指定する際に使用できる値の概要を示します。
+ジョブ作成リクエストの `include` 属性でアドビ製品を指定するために使用できる値の概要を次の表に示します。
 
-| 製品 | 属性で使用する値 `include` です |
+| 製品 | `include` 属性で使用する値 |
 --- | ---
-| Adobe Advertizing Cloud | &quot;AdCloud&quot; |
+| Adobe Advertising Cloud | &quot;AdCloud&quot; |
 | Adobe Analytics | &quot;Analytics&quot; |
-| Adobe Audience Manager | 「AudienceManager」 |
-| Adobe Campaign | &quot;キャンペーン&quot; |
+| Adobe Audience Manager | &quot;AudienceManager&quot; |
+| Adobe Campaign | &quot;Campaign&quot; |
 | Adobe Experience Platform | &quot;aepDataLake&quot; |
 | Adobe Primetime Authentication | &quot;primetimeAuthentication&quot; |
 | Adobe Target | &quot;Target&quot; |
