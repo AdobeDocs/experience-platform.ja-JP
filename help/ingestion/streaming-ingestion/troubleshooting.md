@@ -7,72 +7,72 @@ translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '993'
-ht-degree: 0%
+ht-degree: 66%
 
 ---
 
 
 # ストリーミング取り込みのトラブルシューティングガイド
 
-このドキュメントでは、Adobe Experience Platformでのストリーミング取り込みに関するよくある質問と、その回答を示します。 すべてのAPIで遭遇する問題など、他の [!DNL Platform] サービスに関する質問やトラブルシューティングについては、 [!DNL Platform] Experience Platformのトラブルシューティングガイドを参照してください [](../../landing/troubleshooting.md)。
+このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).
 
-Adobe Experience Platform [!DNL Data Ingestion] は、データを取り込むために使用できるRESTful APIを提供し [!DNL Experience Platform]ます。 取り込んだデータを使用して個々の顧客プロファイルをほぼリアルタイムで更新し、パーソナライズされた関連性のあるエクスペリエンスを複数のチャネルにわたって配信できます。 サービスと様々な [取り込み方法の詳細については、](../home.md) データ取り込みの概要を参照してください。 ストリーミング取り込みAPIの使用方法に関する手順については、 [ストリーミング取り込みの概要を参照してください](../streaming-ingestion/overview.md)。
+Adobe Experience Platform [!DNL Data Ingestion] provides RESTful APIs that you can use to ingest data into [!DNL Experience Platform]. 取り込んだデータは、個々の顧客プロファイルをほぼリアルタイムで更新するために使用され、パーソナライズされた関連性の高いエクスペリエンスを複数のチャネルで配信できます。サービスと様々な 取り込み方法の詳細については、[データ取り込みの概要](../home.md)を参照してください。ストリーミング取り込み APIの使用方法に関する手順については、[ストリーミング取り込みの概要](../streaming-ingestion/overview.md)を参照してください。
 
 ## FAQ
 
-次に、ストリーミング取り込みに関するよくある質問に対する回答のリストを示します。
+次に、ストリーミング取り込みに関するよくある質問に対する回答の一覧を示します。
 
-### 送信するペイロードが正しくフォーマットされていることを知るにはどうしたらよいですか。
+### 送信するペイロードが正しくフォーマットされていることを確認する方法を教えてください。
 
-[!DNL Data Ingestion] ( [!DNL Experience Data Model] XDM)スキーマを活用して、入力データの形式を検証します。 事前定義されたXDMスキーマの構造に適合しないデータを送信すると、取り込みに失敗します。 XDMとでのその使用について詳し [!DNL Experience Platform]くは、「 [XDM System overview](../../xdm/home.md)」を参照してください。
+[!DNL Data Ingestion] ( [!DNL Experience Data Model] XDM)スキーマを活用して、入力データの形式を検証します。 事前に定義された XDM データの構造に準拠しないデータを送信すると、スキーマの取り込みに失敗します。For more information on XDM and its use in [!DNL Experience Platform], see the [XDM System overview](../../xdm/home.md).
 
-ストリーミング取り込みでは、次の2つの検証モードがサポートされます。 同期および非同期。 失敗したデータの処理は、検証方法ごとに異なります。
+ストリーミング取り込みでは、同期および非同期の 2 つの検証モードがサポートされます。それぞれの検証方法では、失敗したデータの処理方法が異なります。
 
-**同期検証は** 、開発プロセスで使用する必要があります。 検証に失敗したレコードは削除され、失敗した理由に関するエラーメッセージが返されます(例： &quot;XDMメッセージ形式が無効です&quot;)。
+開発プロセスでは、**同期検証**&#x200B;を使用する必要があります。検証に失敗したレコードは削除され、失敗理由を示すエラーメッセージが返されます（例：&quot;Invalid XDM Message Format&quot;）。
 
-**実稼働環境では非同期検証** (Asynchronous)を使用する必要があります。 検証に合格しない形式のデータは、失敗したバッチファイル [!DNL Data Lake] としてに送信され、後でそのデータを取得して、以降の分析を確保できます。
+実稼動環境では、**非同期検証**&#x200B;を使用する必要があります。Any malformed data that does not pass validation is sent to the [!DNL Data Lake] as a failed batch file, where it can be retrieved later for further analysis.
 
-同期検証と非同期検証について詳しくは、「 [ストリーミング検証の概要](../quality/streaming-validation.md)」を参照してください。 検証に失敗したバッチを表示する手順については、失敗したバッチの [取得に関するガイドを参照してください](../quality/retrieve-failed-batches.md)。
+同期検証と非同期検証について詳しくは、[ストリーミング検証の概要](../quality/streaming-validation.md)を参照してください。検証に失敗したバッチを表示する手順については、[失敗したバッチの取得](../quality/retrieve-failed-batches.md)に関するガイドを参照してください。
 
-### リクエストのペイロードをに送信する前に検証できま [!DNL Platform]すか。
+### Can I validate a request payload before sending it to [!DNL Platform]?
 
-リクエストペイロードは、に送信された後でのみ評価でき [!DNL Platform]ます。 同期検証を実行すると、有効なペイロードは入力されたJSONオブジェクトを返し、無効なペイロードはエラーメッセージを返します。 非同期検証中に、サービスは不正なデータを検出し、分析のために後で取得でき [!DNL Data Lake] る場所に送信します。 See the [streaming validation overview](../quality/streaming-validation.md) for more information.
+Request payloads can only be evaluated after they have been sent to [!DNL Platform]. 同期検証を実行すると、有効なペイロードは生成された JSON オブジェクト、無効なペイロードはエラーメッセージを返します。During asynchronous validation, the service detects and sends any malformed data to the [!DNL Data Lake] where it can later be retrieved for analysis. 詳しくは、[ストリーミング検証の概要](../quality/streaming-validation.md)を参照してください。
 
-### 同期検証がサポートされていないエッジで同期検証が要求された場合はどうなりますか？
+### サポートされていないエッジで同期検証がリクエストされた場合はどうなりますか？
 
-要求された場所で同期検証がサポートされていない場合、501エラー応答が返されます。 同期検証の詳細については、 [ストリーミング検証の概要](../quality/streaming-validation.md) を参照してください。
+リクエストされた場所で同期検証がサポートされていない場合、501 エラー応答が返されます。同期検証について詳しくは、[ストリーミング検証の概要](../quality/streaming-validation.md)を参照してください。
 
 ### データが信頼できるソースからのみ収集されるようにする方法
 
-[!DNL Experience Platform] 保護されたデータ収集をサポートします。 認証済みデータ収集が有効な場合、クライアントはJSON Web Token(JWT)とIMS組織IDをリクエストヘッダーとして送信する必要があります。 認証済みデータの送信先について詳しくは [!DNL Platform]、 [認証済みデータ収集に関するガイドを参照してください](../tutorials/create-authenticated-streaming-connection.md)。
+[!DNL Experience Platform] 保護されたデータ収集をサポートします。 認証済みのデータ収集が有効な場合、クライアントは JSON Web トークン（JWT）と IMS 組織 ID をリクエストヘッダーとして送信する必要があります。For more information on how to send authenticated data to [!DNL Platform], please see the guide on [authenticated data collection](../tutorials/create-authenticated-streaming-connection.md).
 
 ### データのストリーミングの遅延は何で [!DNL Real-time Customer Profile]すか。
 
-ストリーム化されたイベントは、通常、60秒未満 [!DNL Real-time Customer Profile] で反映されます。 実際の待ち時間は、データ量、メッセージサイズ、帯域幅の制限によって異なる場合があります。
+Streamed events are generally reflected in [!DNL Real-time Customer Profile] in under 60 seconds. 実際の待機時間は、データ量、メッセージサイズ、帯域幅の制限によって異なる場合があります。
 
-### 同じAPIリクエストに複数のメッセージを含めることはできますか。
+### 同じ API リクエストに複数のメッセージを含めることはできますか？
 
-1つのリクエストペイロード内で複数のメッセージをグループ化し、それらをにストリーミングでき [!DNL Platform]ます。 正しく使用すれば、1つのリクエスト内で複数のメッセージをグループ化することは、データ操作を最適化する優れた方法です。 詳細については、リクエスト内で複数のメッセージを [送信する方法のチュートリアルをお読みください](../tutorials/streaming-multiple-messages.md) 。
+You can group multiple messages within a single request payload and stream them to [!DNL Platform]. 正しく使用した場合、1 つのリクエスト内で複数のメッセージをグループ化すると、データ操作をうまく最適化できます。詳細については、[複数のメッセージを 1 件のリクエストで送信する方法](../tutorials/streaming-multiple-messages.md)のチュートリアルを参照してください。
 
-### 送信するデータが受信されているかどうかを知る方法
+### 自分が送信するデータが受信されたかどうかを確認する方法を教えてください。
 
-に送信されるすべてのデータ [!DNL Platform] （正常に送信されるか、その他の方法で送信される）は、データセットに保持される前にバッチファイルとして保存されます。 バッチの処理ステータスは、送信先のデータセット内に表示されます。
+All data that is sent to [!DNL Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. バッチの処理ステータスは、送信先のデータセット内に表示されます。
 
-データセットのアクティビティを確認するには、 [Experience Platformユーザーインターフェイスを使用して、データが正常に取り込まれたかどうかを確認します](https://platform.adobe.com)。 左側のナビゲーションで **[!UICONTROL 「Datasets]** 」をクリックして、データセットのリストを表示します。 表示されたリストからストリーミング先のデータセットを選択し、 *[!UICONTROL データセットアクティビティ]* ページを開き、選択した期間に送信されたすべてのバッチを表示します。 を使用してデータストリームを監視する方法 [!DNL Experience Platform] について詳しくは、ストリーミングデータフローの [監視に関するガイドを参照してください](../quality/monitor-data-flows.md)。
+[Experience Platform ユーザーインターフェイス](https://platform.adobe.com)でデータセットのアクティビティを確認することで、データが正常に取り込まれたかどうかを確認できます。左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックし、データセットのリストを表示します。表示されたリストからストリーミング先のアクティビティセットを選択すると、その&#x200B;*[!UICONTROL データセットアクティビティ]*&#x200B;ページを開き、選択した期間に送信されたすべてのバッチが表示されます。For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
 
-データの取り込みに失敗し、そのデータを復元する場合 [!DNL Platform]は、にIDを送信して、失敗したバッチを取得でき [!DNL Data Access API]ます。 詳しくは、失敗したバッチの [取得に関するガイド](../quality/retrieve-failed-batches.md) を参照してください。
+If your data failed to ingest and you want to recover it from [!DNL Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. 詳しくは、[失敗したバッチの取得](../quality/retrieve-failed-batches.md)に関するガイドを参照してください。
 
-### データレイクでストリーミングデータが利用できないのはなぜですか。
+### ストリーミングデータがデータレイクで使用できないのはなぜですか。
 
-バッチ取り込みが失敗する理由は、無効なフォーマット、データの欠落、システムエラーな [!DNL Data Lake]ど、様々です。 バッチが失敗した理由を判断するには、および表示を使用してバッチを取得する必要があり [!DNL Data Ingestion Service API] ます。 失敗したバッチを取得する手順について詳しくは、失敗したバッチの [取得に関するガイドを参照してください](../quality/retrieve-failed-batches.md)。
+There are a variety of reasons why batch ingestion may fail to reach the [!DNL Data Lake], such as invalid formatting, missing data, or system errors. To determine why your batch failed, you must retrieve the batch using the [!DNL Data Ingestion Service API] and view its details. 失敗したバッチを取得する手順について詳しくは、[失敗したバッチの取得](../quality/retrieve-failed-batches.md)に関するガイドを参照してください。
 
-### APIリクエストに対して返された応答を解析する方法を教えてください。
+### API リクエストに対して返された応答を解析する方法を教えてください。
 
-最初にサーバーの応答コードをチェックして、要求が受け入れられたかどうかを確認することで、応答を解析できます。 正常な応答コードが返された場合は、 `responses` 配列オブジェクトを確認して取り込みタスクのステータスを判断できます。
+応答を解析するには、最初にサーバー応答コードをチェックし、要求が受け入れられたかどうかを確認します。成功応答が返された場合は、`responses` 配列オブジェクトを確認して、取り込みタスクのステータスを判断します。
 
-成功した単一メッセージのAPIリクエストは、ステータスコード200を返します。 バッチ処理されたメッセージAPIリクエストが成功した（または一部成功した）場合は、ステータスコード207を返します。
+成功した単一のメッセージ API リクエストは、ステータスコード 200 を返します。バッチ処理されたメッセージ API リクエストが成功（または部分的に成功）すると、ステータスコード 207 が返されます。
 
-次のJSONは、2つのメッセージを持つAPIリクエストの応答オブジェクトの例です。 1つは成功し、1つは失敗しました。 プロパティを正常にストリーミング再生するメッセージ `xactionId` です。 プロパティと応答を返すストリーミングに失敗したメッセージで、 `statusCode` 詳細な情報 `message` が返されます。
+次の JSON は、2 つのメッセージを含む API リクエストの応答オブジェクトの例です。1 つは成功したもの、1 つは失敗したものです。正常にストリーミングされるメッセージは、`xactionId` プロパティを返します。ストリーミングに失敗したメッセージは、`statusCode` プロパティと応答 `message`、および詳細情報が返されます。
 
 ```JSON
 {
@@ -96,8 +96,8 @@ Adobe Experience Platform [!DNL Data Ingestion] は、データを取り込む�
 
 ### 送信メッセージが受信されないのはなぜで [!DNL Real-time Customer Profile]すか？
 
-メッセージを [!DNL Real-time Customer Profile] 拒否した場合は、ID情報が正しくないことが原因の可能性が高くなります。 これは、IDに対して無効な値または名前空間を指定した結果である可能性があります。
+If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to incorrect identity information. これは、ID に無効な値または名前空間を指定した結果です。
 
-ID名前空間には次の2種類があります。 defaultとcustom. カスタム名前空間を使用する場合は、名前空間がに登録されていることを確認してくだ [!DNL Identity Service]さい。 デフォルトおよびカスタム [名前空間の使用について詳しくは、「](../../identity-service/namespaces.md) ID名前空間の概要」を参照してください。
+ID 名前空間には、デフォルトとカスタムの 2 タイプがあります。When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. デフォルトおよびカスタム名前空間の使用について詳しくは、[ID 名前空間の概要](../../identity-service/namespaces.md)を参照してください。
 
-メッセージの取り込みに失敗した理由の詳細につ [!DNL Experience Platform UI](https://platform.adobe.com) いては、を参照してください。 左側のナビゲーションで **[!UICONTROL 「]** Monitoring _[!UICONTROL 」をクリックし、「]_Streaming end-to-end」タブを表示して、選択した期間にストリーミングされたメッセージバッチを表示します。
+[!DNL Experience Platform UI](https://platform.adobe.com) を使用して、メッセージの取り込みに失敗した理由の詳細を確認できます。左側のナビゲーションで「**[!UICONTROL 監視]**」をクリックし、「_[!UICONTROL エンドツーエンドのストリーミング]_」タブを表示して、選択した期間にストリーミングされたメッセージバッチを表示します。
