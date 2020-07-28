@@ -7,22 +7,22 @@ translation-type: tm+mt
 source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 1%
+ht-degree: 90%
 
 ---
 
 
 # マーケティングアクション
 
-マーケティングアクションは、Adobe Experience Platformの観点から見ると、デー [!DNL Data Governance][!DNL Experience Platform] タ消費者が行うアクションで、データ使用ポリシーの違反を確認する必要があります。
+A marketing action, in the context of the Adobe Experience Platform [!DNL Data Governance], is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
-APIでマーケティングアクションを使用するには、エンドポイントを使用する必要があり `/marketingActions` ます。
+API でマーケティングアクションを使用する場合は、`/marketingActions` エンドポイントを使用する必要があります。
 
-## すべてのマーケティングアクションのリスト
+## すべてのマーケティングアクションのリスト表示
 
-すべてのマーケティングアクションのリストを表示するために、指定したコンテナに対してGETリクエストを行う `/marketingActions/core` か、指定したのすべてのポリシー `/marketingActions/custom` を返すことができます。
+すべてのマーケティングアクションのリストを表示するには、指定されたコンテナのすべてのポリシーを返す `/marketingActions/core` または `/marketingActions/custom` に GET リクエストを送信します。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /marketingActions/core
@@ -31,7 +31,7 @@ GET /marketingActions/custom
 
 **リクエスト**
 
-次のリクエストは、IMS組織によって定義されたすべてのカスタムマーケティングアクションのリストを返します。
+次のリクエストでは、IMS 組織で定義されているすべてのカスタムマーケティングアクションのリストを返します。
 
 ```SHELL
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
 
 **応答**
 
-responseオブジェクトは、コンテナ内のマーケティングアクションの合計数を提供し`count`、配列には、マーケティングアクションの詳細（およびを含む） `children` が含まれ `name``href` ます。 このパス(`_links.self.href`)は、データ使用ポリシーの `marketingActionsRefs` 作成時に [アレイを完了するために使用されます](policies.md#create-policy)。
+応答オブジェクトは、コンテナ内のマーケティングアクションの合計数（`count`）を返します。また、`children` 配列には、各マーケティングアクションの詳細（`name` や `href` など）が含まれています。このパス（`_links.self.href`）は、[データ使用ポリシーの作成 ](policies.md#create-policy)時に `marketingActionsRefs` 配列を完成させるために使用されます。
 
 ```JSON
 {
@@ -97,9 +97,9 @@ responseオブジェクトは、コンテナ内のマーケティングアクシ
 
 ## 特定のマーケティングアクションの検索
 
-また、特定のマーケティングアクションの詳細を表示するためのルックアップ(GET)リクエストを実行することもできます。 これは、マーケティングアクション `name` のを使用して行います。 名前が不明な場合は、前述のリスト(GET)リクエストを使用して見つかります。
+また、検索（GET）リクエストを実行して、特定のマーケティングアクションの詳細を表示することもできます。これは、マーケティングアクションの `name` を使用しておこないます。名前が不明な場合は、前述のリスト表示（GET）リクエストを使用すれば見つかります。
 
-**API形式**
+**API 形式**
 
 ```http
 GET /marketingActions/core/{marketingActionName}
@@ -119,7 +119,7 @@ curl -X GET \
 
 **応答**
 
-responseオブジェクトには、マーケティングアクションの詳細が含まれます。この詳細には、データ使用ポリシーを定義する際のマーケティングアクションを参照するために必要なパス(`_links.self.href`)が含まれ`marketingActionsRefs`ます。
+応答オブジェクトには、マーケティングアクションの詳細が含まれています。これには、データ使用ポリシー（`marketingActionsRefs`）を定義する際にマーケティングアクションを参照するために必要なパス（`_links.self.href`）が含まれます。
 
 ```JSON
 {
@@ -142,9 +142,9 @@ responseオブジェクトには、マーケティングアクションの詳細
 
 ## マーケティングアクションの作成または更新
 
-この [!DNL Policy Service] APIを使用すると、既存のマーケティングアクションを更新するだけでなく、独自のマーケティングアクションを定義することもできます。 作成と更新は、どちらもマーケティングアクションの名前に対するPUT操作を使用して行います。
+The [!DNL Policy Service] API allows you to define your own marketing actions, as well as update existing ones. 作成と更新は、どちらも、マーケティングアクションの名前に対する PUT 操作でおこなわれます。
 
-**API形式**
+**API 形式**
 
 ```http
 PUT /marketingActions/custom/{marketingActionName}
@@ -152,11 +152,11 @@ PUT /marketingActions/custom/{marketingActionName}
 
 **リクエスト**
 
-後続のリクエストでは、リクエストペイロード `name` 内の値がAPI呼び出し内の値と同じであるこ `{marketingActionName}` とに注意してください。 読み取り専用でシステム生成 `id` のポリシーとは異なり、マーケティングアクションを作成するには、作成時にマーケティングアクションの __ 目的の名前を指定する必要があります。
+後続のリクエストでは、リクエストペイロード内の `name` が API 呼び出し内の `{marketingActionName}` と同じであることに注意してください。ポリシーの `id` は読み取り専用でシステムで生成されますが、それとは異なり、マーケティングアクションを作成するには、作成時にマーケティングアクションの&#x200B;_意図した_&#x200B;名前を指定する必要があります。
 
 >[!NOTE]
 >
->この呼び出しでPUTを指定し `{marketingActionName}` ないと、エンドポイントに対して直接PUTを実行できないので、405エラー(Method Not Allowed)が発生し `/marketingActions/custom` ます。 また、ペイロード `name` 内のがパス内のと一致しない場合 `{marketingActionName}` は、400エラー(Bad Request)が発生します。
+> この呼び出しで `{marketingActionName}` を指定できない場合、`/marketingActions/custom` エンドポイントに対して PUT を直接実行できないので、405 エラー（Method Not Allowed）が発生します。また、ペイロード内の `name` がパス内の `{marketingActionName}` と一致しない場合は、400 エラー（Bad Request）が発生します。
 
 ```SHELL
 curl -X PUT \
@@ -174,7 +174,7 @@ curl -X PUT \
 
 **応答**
 
-正常に作成されると、HTTPステータス201（作成済み）が返され、応答本文には、新しく作成されたマーケティングアクションの詳細が含まれます。 応答 `name` 内の値は、要求で送信された値と一致する必要があります。
+正常に作成された場合は、HTTP ステータス201（Created）が返され、応答本文に、新しく作成されたマーケティングアクションの詳細が含まれています。応答内の `name` は、リクエストで送信された内容と一致しているはずです。
 
 ```JSON
 {
@@ -197,13 +197,13 @@ curl -X PUT \
 
 ## マーケティングアクションの削除
 
-削除するマーケティングアクションのにDELETEリクエストを送信することで、マーケティングアクション `{marketingActionName}` を削除できます。
+削除するマーケティングアクションの `{marketingActionName}` に DELETE リクエストを送信して、マーケティングアクションを削除できます。
 
 >[!NOTE]
 >
->既存のポリシーで参照されているマーケティングアクションは削除できません。 そうすると、400エラー（NGリクエスト）が発生し、削除しようとしているマーケティングアクションへの参照を含むポリシー（またはポリシー）の( `id` または複数のID)が含まれるエラーメッセージが表示されます。
+> 既存のポリシーで参照されているマーケティングアクションを削除することはできません。削除しようとすると、400 エラー（Bad Request）が発生します。また、削除しようとしているマーケティングアクションへの参照を含んだポリシー（複数の場合あり）の `id`（または複数の ID）を明示したエラーメッセージが表示されます。
 
-**API形式**
+**API 形式**
 
 ```http
 DELETE /marketingActions/custom/{marketingActionName}
@@ -222,6 +222,6 @@ curl -X DELETE \
 
 **応答**
 
-マーケティングアクションが正常に削除されると、応答本文は空白になり、HTTPステータスは200(OK)になります。
+マーケティングアクションが正常に削除された場合、応答本文は空白になり、HTTP ステータス 200（OK）が表示されます。
 
-マーケティングアクションをルックアップ(GET)して、削除を確認できます。 マーケティングアクションが削除されたので、HTTPステータス404（見つかりません）と共に「見つかりません」というエラーメッセージが表示されます。
+マーケティングアクションを検索（GET）してみれば、削除を確認できます。このマーケティングアクションは既に削除されているので、HTTP ステータス 404（Not Found）が返され、「Not Found」というエラーメッセージが表示されます。
