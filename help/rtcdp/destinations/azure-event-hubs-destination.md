@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
 source-wordcount: '467'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->Adobe Real-time CDPの [!DNL Azure Event Hubs] 宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>AdobeReal-time CDPの [!DNL Azure Event Hubs] 宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 ## 概要 {#overview}
 
@@ -26,9 +26,9 @@ Adobe Experience Platformからデータをストリーミングするために�
 
 * 詳細については、 [!DNL Azure Event Hubs]Microsoftのマニュアルを参照してください [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)。
 * API呼び出しを [!DNL Azure Event Hubs] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)。
-* Adobe Real-time CDPユーザーインターフェイス [!DNL Azure Event Hubs] を使用して接続するには、以下のセクションを参照してください。
+* AdobeのReal-time CDPユーザー・インターフェイスを [!DNL Azure Event Hubs] 使用して接続するには、以下のセクションを参照してください。
 
-![AWS KinesisのUI](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
+![AWSKinesisのUI](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
 
 ## 使用例 {#use-cases}
 
@@ -108,5 +108,5 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 >[!MORELIKETHIS]
 >
 >* [Azureイベントハブに接続し、API呼び出しを使用してデータをアクティブにする](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
->* [AWS Kinesisの宛先](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+>* [AWSKinesisの宛先](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [宛先のタイプとカテゴリ](/help/rtcdp/destinations/destination-types.md)
