@@ -1,17 +1,17 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platformセグメントサービスヘルプ
+user-guide-title: Adobe Experience Platform セグメント化サービスのヘルプ
 translation-type: tm+mt
 source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
 workflow-type: tm+mt
 source-wordcount: '112'
-ht-degree: 10%
+ht-degree: 86%
 
 ---
 
 
-# Adobe Experience Platformセグメントサービスヘルプ {#segmentation}
+# Adobe Experience Platform セグメント化サービスのヘルプ {#segmentation}
 
 - [概要](home.md)
 - [セグメントデータタイプ](data-types.md)
@@ -21,14 +21,14 @@ ht-degree: 10%
    - [ジョブの書き出し](api/export-jobs.md)
    - [プレビューと予測](api/previews-and-estimates.md)
    - [スケジュール](api/schedules.md)
-   - [セグメント定義](api/segment-definitions.md)
+   - [セグメントの定義](api/segment-definitions.md)
    - [セグメントジョブ](api/segment-jobs.md)
    - [セグメント検索](api/segment-search.md)
-   - [ストリーミングセグメント](api/streaming-segmentation.md)
-- セグメントUI {#ui}
+   - [ストリーミングセグメント化](api/streaming-segmentation.md)
+- セグメント化 UI {#ui}
    - [概要](ui/overview.md)
 - [オプトアウトの実行](honoring-opt-outs.md)
-- [マルチエンティティセグメント](multi-entity-segmentation.md)
+- [マルチエンティティセグメント化](multi-entity-segmentation.md)
 - プロファイルクエリ言語 {#pql}
    - [概要](pql/overview.md)
    - [ブール関数](pql/boolean-functions.md)
@@ -45,7 +45,7 @@ ht-degree: 10%
 - チュートリアル {#tutorials}
    - [セグメントの作成](tutorials/create-a-segment.md)
    - [セグメントの評価](tutorials/evaluate-a-segment.md)
-   - [データセットを作成してデータをエクスポートする](tutorials/create-dataset-export-segment.md)
+   - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
    - [セグメントのデータ使用コンプライアンスの実施](tutorials/governance.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Platformのリリースノート](https://www.adobe.com/go/platform-release-notes-en)
+- [Platformのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
