@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: d4ed33ea4684049e8604ce214cb351d0cb949ed4
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 97%
+source-wordcount: '115'
+ht-degree: 92%
 
 ---
 
@@ -17,6 +17,8 @@ ht-degree: 97%
 * XDM スキーマ {#schema}
    * [スキーマ合成の基本](schema/composition.md)
    * [XDM フィールド辞書](schema/field-dictionary.md)
+   * スキーマの使用例
+      * [プライバシーの同意ミックスイン](schema/privacy-consent.md)
 * スキーマレジストリ API {#api}
    * [はじめに](api/getting-started.md)
    * [リソースの一覧](api/list-resources.md)
