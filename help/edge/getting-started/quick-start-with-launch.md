@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 28%
@@ -20,14 +20,6 @@ ht-degree: 28%
 - Adobe Experience Platform　を使用する資格がある. Platformを購入していない場合、AdobeはData Services Foundationでの利用を制限した方法で、SDKを無料で提供します。
 - 訪問者 ID サービスの最新バージョンを使用している.
 
-## 設定IDの作成
-
-Launchの [エッジ設定ツールを使用して、設定IDを作成できます](../fundamentals/edge-configuration.md) 。 これにより、Edge Networkで様々なソリューションにデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
-
->[!NOTE]
->
->この機能を使用するには、組織がホワイトリストに登録されている必要があります。 最終的なホワイトリスト登録のために、CSMにリストに登録するようにお問い合わせください。
-
 ## スキーマの準備
 
 Experience Platformエッジネットワークは、データをXDMとして受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、Edge Networkでデータの形式設定方法を定義します。 データを送信するには、スキーマを定義する必要があります。
@@ -42,6 +34,14 @@ Launch にログインし、`AEP Web SDK` 拡張機能をインストールし�
 
 
 様々な設定オプションについて詳しくは、[SDK の設定](../fundamentals/configuring-the-sdk.md)を参照してください。
+
+## 設定IDの作成
+
+Launchの [エッジ設定ツールを使用して、設定IDを作成できます](../fundamentals/edge-configuration.md) 。 これにより、Edge Networkで様々なソリューションにデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
+
+>[!NOTE]
+>
+>この機能を使用するには、組織がホワイトリストに登録されている必要があります。 最終的なホワイトリスト登録のために、CSMにリストに登録するようにお問い合わせください。
 
 ## スキーマに基づいたデータ要素の作成
 
