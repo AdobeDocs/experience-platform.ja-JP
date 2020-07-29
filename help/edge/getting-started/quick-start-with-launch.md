@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK：Launch のクイックスター�
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 28%
@@ -29,6 +29,9 @@ Experience Platformエッジネットワークは、データをXDMとして受�
 3. 作成したスキーマからデータセットを作成します。
 
 次のビデオでは、データ用のスキーマ、データセット、ストリーミングソースコネクタの作成をサポートします。 [!DNL Web SDK]
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 Launch にログインし、`AEP Web SDK` 拡張機能をインストールします。SDKをインストールすると、拡張機能を設定するように求められます。 上記で要求した設定 ID を入力します。拡張機能によって、組織の ID が自動的に入力されます。
 
