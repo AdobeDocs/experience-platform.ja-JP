@@ -4,7 +4,7 @@ seo-title: 'Adobe Experience PlatformWeb SDKのクイック開始 '
 description: Experience PlatformWeb SDKを使用してデータを収集するクイック開始ガイド
 seo-description: Experience PlatformWeb SDKを使用してデータを収集するクイック開始ガイド
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 15%
@@ -20,14 +20,6 @@ ht-degree: 15%
 - Adobe Experience Platform　を使用する資格がある.  Platformを購入していない場合、AdobeはData Services Foundationでの利用を制限した方法で、SDKを無料で提供します。
 - 訪問者 ID サービスの最新バージョンを使用している.
 
-## 設定IDの作成
-
-tag managementの機能を使用していない場合でも、Adobe起動の [エッジ設定ツール](../fundamentals/edge-configuration.md) (Edge Configuration Tool)を使用して設定IDを作成できます。 これにより、様々なソリューション [!DNL Edge Network] にデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
-
->[!NOTE]
->
->組織がこの機能を使用する許可リスト上に存在する必要があります。 許可リストを使用するには、CSMに問い合わせてください。
-
 ## スキーマの準備
 
 はXDMとしてデータを [!DNL Experience Platform Edge Network] 受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、データの形式設定方法 [!DNL Edge Network] を定義します。 データを送信するには、スキーマを定義する必要があります。
@@ -38,6 +30,14 @@ tag managementの機能を使用していない場合でも、Adobe起動の [�
 次のビデオでは、データ用のスキーマ、データセット、ストリーミングソースコネクタの作成をサポートします。 [!DNL Web SDK]
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
+## 設定IDの作成
+
+tag managementの機能を使用していない場合でも、Adobe起動の [エッジ設定ツール](../fundamentals/edge-configuration.md) (Edge Configuration Tool)を使用して設定IDを作成できます。 これにより、様々なソリューション [!DNL Edge Network] にデータを送信できるようになります。 各オプションの検索方法について詳しくは、「 [Edge Configuration Tool](../fundamentals/edge-configuration.md) 」ページを参照してください。
+
+>[!NOTE]
+>
+>組織がこの機能を使用する許可リスト上に存在する必要があります。 許可リストを使用するには、CSMに問い合わせてください。
 
 ## SDKのインストール
 
