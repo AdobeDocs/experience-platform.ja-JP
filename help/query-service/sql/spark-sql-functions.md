@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Spark SQL 関数
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
 workflow-type: tm+mt
 source-wordcount: '4900'
 ht-degree: 99%
