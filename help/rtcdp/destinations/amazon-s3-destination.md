@@ -4,10 +4,10 @@ seo-title: Amazon S3 の宛先
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 seo-description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 51%
+source-wordcount: '202'
+ht-degree: 42%
 
 ---
 
@@ -26,8 +26,26 @@ For [!DNL Amazon S3] destinations, enter the following information in the create
 
 * **[!DNL Amazon S3]アクセスキーと[!DNL Amazon S3]秘密鍵&#x200B;**: では、アクセス・キー — シークレット・アクセス・キー・ペアを生成[!DNL Amazon S3]して、Adobeに対してリアルタイムCDPアクセスを[!DNL Amazon S3]アカウントに付与します。
 
-
-
 >[!IMPORTANT]
 >
 >アドビのリアルタイム CDP には、書き出しファイルの配信先となるバケットオブジェクトに対する `write` 権限が必要です。
+
+## 書き出されたデータ {#exported-data}
+
+For [!DNL Amazon S3] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. これらのファイルについて詳しくは、セグメントアクティベーションチュートリアルの [電子メールマーケティングの宛先とクラウドストレージの宛先](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) （英語）を参照してください。
+
+<!--
+
+Expect a new file to be created in your storage location every day. The file format is:
+
+`amazon-s3_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
+
+```
+amazon-s3_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+amazon-s3_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+amazon-s3_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
+```
+
+The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
+
+-->
