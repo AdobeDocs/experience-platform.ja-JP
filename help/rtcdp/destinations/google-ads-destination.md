@@ -4,10 +4,10 @@ seo-title: Google 広告の宛先
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 seo-description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 37%
+source-wordcount: '598'
+ht-degree: 35%
 
 ---
 
@@ -67,3 +67,6 @@ AdobeReal-time CDPで [!DNL Google Ads][!DNL Google] 宛先を作成する前に
 
 For instructions on how to activate segments to [!DNL Google Ads], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
 
+## 書き出されたデータ
+
+データが正常に宛先にエクスポートされたかどうかを確認するには、アカウントを確認して [!DNL Google Ads] く [!DNL Google Ads] ださい。 アクティベーションに成功すると、オーディエンスがアカウントに入力されます。
