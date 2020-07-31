@@ -4,10 +4,10 @@ seo-title: Google Ad Manager の宛先
 description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 seo-description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: f23d7dae7883cc14dc8b54d8b1ba2d94f0786cbc
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 45%
+source-wordcount: '636'
+ht-degree: 43%
 
 ---
 
@@ -69,3 +69,7 @@ AdobeReal-time CDPで [!DNL Google Ad Manager][!DNL Google] 宛先を作成す�
 ## Activate segments to [!DNL Google Ad Manager]
 
 For instructions on how to activate segments to [!DNL Google Ad Manager], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## 書き出されたデータ
+
+データが正常に宛先にエクスポートされたかどうかを確認するには、アカウントを確認して [!DNL Google Ad Manager] く [!DNL Google Ad Manager] ださい。 アクティベーションに成功すると、オーディエンスがアカウントに入力されます。
