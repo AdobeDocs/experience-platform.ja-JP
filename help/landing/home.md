@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 概要
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c79d9690f5d1f6c199d0c0a74238225c5b6fd2c2
+source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
 workflow-type: tm+mt
 source-wordcount: '815'
-ht-degree: 32%
+ht-degree: 31%
 
 ---
 
@@ -36,11 +36,11 @@ Built on open APIs, [!DNL Experience Platform] exposes the full functionality of
 
 このAdobe Experience Platformは、 **最新バージョンのGoogle Chrome、Safari、Firefox** 、Microsoft Edgeで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
 
-| オペレーティングシステム | サポートされているブラウザー |  |  |
-|---|---|---|---|
-| Mac OS X | Google Chrome | Safari | Firefox |
-| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
-| Windows 7 | Google Chrome |  | Firefox |
+| オペレーティングシステム | サポートされているブラウザー |
+|---|---|
+| **Mac OS X** | Google Chrome、Safari、Firefox |
+| **Windows 10** | Google Chrome、Microsoft Edge、Firefox |
+| **Windows 7** | Google Chrome、Firefox |
 
 次のオペレーティングシステムおよびブラウザーはサポートされていません。
 
