@@ -4,10 +4,10 @@ seo-title: Google Display と Video 360 の宛先
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 seo-description: 'Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。 '
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 62%
+source-wordcount: '659'
+ht-degree: 59%
 
 ---
 
@@ -67,3 +67,7 @@ AdobeReal-time CDPで [!DNL Google Display & Video 360] 宛先を作成する前
 ## Activate segments to [!DNL Google Display & Video 360]
 
 For instructions on how to activate segments to [!DNL Google Display & Video 360], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## 書き出されたデータ
+
+データが正常に宛先にエクスポートされたかどうかを確認するには、アカウントを確認して [!DNL Google Display & Video 360] く [!DNL Google Display & Video 360] ださい。 アクティベーションに成功すると、オーディエンスがアカウントに入力されます。
