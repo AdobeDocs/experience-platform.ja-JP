@@ -4,10 +4,10 @@ seo-title: SFTP の宛先
 description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
 seo-description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 100%
+source-wordcount: '170'
+ht-degree: 77%
 
 ---
 
@@ -29,3 +29,7 @@ SFTP の宛先については、宛先の作成ワークフローの&#x200B;**�
 * **Host**：SFTP ストレージ場所のアドレス
 * **Username**：SFTP ストレージの場所にログインするユーザー名
 * **Password**：SFTP ストレージの場所にログインするパスワード
+
+## 書き出されたデータ {#exported-data}
+
+For [!SFTP] destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. これらのファイルについて詳しくは、セグメントアクティベーションチュートリアルの [電子メールマーケティングの宛先とクラウドストレージの宛先](/help/rtcdp/destinations/activate-destinations.md#esp-and-cloud-storage) （英語）を参照してください。
