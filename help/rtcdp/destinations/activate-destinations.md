@@ -4,10 +4,10 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '1013'
-ht-degree: 57%
+source-wordcount: '1036'
+ht-degree: 56%
 
 ---
 
@@ -93,19 +93,19 @@ ht-degree: 57%
 
 ## セグメントのアクティベーションが成功したことを確認します。 {#verify-activation}
 
-### 電子メールマーケティングの宛先およびクラウドストレージの宛先
+### 電子メールマーケティングの宛先およびクラウドストレージの宛先 {#esp-and-cloud-storage}
 
-電子メールマーケティングの宛先とクラウドストレージの宛先の場合、アドビのリアルタイム CDP はストレージの指定した場所に、タブ区切りの `.txt` または `.csv` ファイルを作成します。新しいファイルはストレージの場所に毎日作成されます。ファイル形式は、`<destination name>id<destination id><timestamp-yyyymmddhhmmss>` です。
+電子メールマーケティングの宛先とクラウドストレージの宛先の場合、アドビのリアルタイム CDP はストレージの指定した場所に、タブ区切りの `.txt` または `.csv` ファイルを作成します。新しいファイルはストレージの場所に毎日作成されます。ファイル形式は、`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv` です。
 
 3 日連続で受け取るファイルは次のようになります。
 
 ```
-Salesforce_id3544_20191120110000.csv
-Salesforce_id3544_20191121123000.csv
-Salesforce_id3544_20191122124530.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-これらのファイルがストレージの場所に存在すれば、アクティベーションは成功しています。
+これらのファイルがストレージの場所に存在すれば、アクティベーションは成功しています。書き出したファイルの構造を理解するには、サンプルの.csvファイルを [ダウンロードし](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv)ます。 このサンプルファイルには、プロファイル属性 `person.firstname`、、、、お `person.lastname`よびが含まれてい `person.gender``person.birthyear``personalEmail.address`ます。
 
 ### 広告の宛先
 
