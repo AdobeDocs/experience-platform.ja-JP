@@ -4,10 +4,10 @@ seo-title: Adobe Campaign
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 seo-description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
-ht-degree: 88%
+ht-degree: 86%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 ## 宛先の接続 {#connect-destination}
 
-1. **[!UICONTROL 接続／宛先]**&#x200B;で、「Adobe Campaign」を選択し、「**[!UICONTROL 宛先の接続]**」を選択します。
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Campaign, then select **[!UICONTROL Connect destination]**.
 
    ![Adobe Campaign への接続](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
