@@ -4,7 +4,7 @@ seo-title: Google Ad Manager の宛先
 description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 seo-description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 translation-type: tm+mt
-source-git-commit: f23d7dae7883cc14dc8b54d8b1ba2d94f0786cbc
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 43%
@@ -48,7 +48,7 @@ AdobeReal-time CDPで [!DNL Google Ad Manager][!DNL Google] 宛先を作成す�
 
 ## 宛先の作成
 
-1. **[!UICONTROL 接続/宛先]**&#x200B;を選択し、「宛先を [!DNL Google Ad Manager]作成 ****」を選択します。
+1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**、を選択し、「宛先を [!DNL Google Ad Manager]作成 ****」を選択します。
    ![Google Ad Manager の宛先の接続](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
