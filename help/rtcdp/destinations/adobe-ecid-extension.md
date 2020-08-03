@@ -4,10 +4,10 @@ seo-title: Experience Cloud ID サービス拡張機能
 description: Experience Cloud ID サービス拡張は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Experience Cloud ID サービス拡張は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '557'
-ht-degree: 74%
+ht-degree: 72%
 
 ---
 
@@ -35,7 +35,7 @@ To use this extension, you need access to [!DNL Experience Platform Launch]. [!D
 
 To install the [!DNL Experience Cloud] ID Service extension:
 
-1. [アドビのリアルタイム CDP インターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先／カタログ]**&#x200B;に移動します。
+1. [AdobeReal-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations]** / **[!UICONTROL Catalog]**&#x200B;に移動します。
 2. カタログから拡張機能を選択するか、検索バーを使用します。
 3. 宛先をクリックしてハイライトし、右側のパネルで「**[!UICONTROL 拡張機能のインストール]**」を選択します。「**[!UICONTROL 拡張機能のインストール]**」コントロールが灰色表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。[前提条件](#prerequisites)を確認してください。
 4. **[!UICONTROL 使用可能な プロパティを選択]**&#x200B;ウィンドウで、拡張機能をインストールする Launch プロパティを選択します。[!DNL Launch]You also have the option of creating a new property in [!DNL Launch]. プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、 ドキュメントの[「プロパティ」ページに関する節](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html#プロパティページ)を参照してください。[!DNL Launch]
