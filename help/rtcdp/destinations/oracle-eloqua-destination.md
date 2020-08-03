@@ -4,7 +4,7 @@ seo-title: Oracle Eloqua の宛先
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 seo-description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 71%
@@ -22,7 +22,7 @@ To send segment data to [!DNL Oracle Eloqua], you must first [connect the destin
 
 ## 宛先に接続 {#connect-destination}
 
-1. In **[!UICONTROL Connections > Destinations]**, select [!DNL Oracle Eloqua], then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Oracle Eloqua], then select **[!UICONTROL Connect destination]**.
 
    ![Eloqua に接続](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
