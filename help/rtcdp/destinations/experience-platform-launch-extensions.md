@@ -4,10 +4,10 @@ seo-title: Experience Platform Launch の拡張機能
 description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
 seo-description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
 translation-type: tm+mt
-source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '622'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ Experience Platform Launch の機能の概要については、以下のリソ�
 
 ## アドビのリアルタイム CDP インターフェイスで Launch の拡張機能を探す {#how-to-find-extensions-in-interface}
 
-アドビのリアルタイム CDP インターフェイスで Launch の拡張機能を見つけるには、**[!UICONTROL 宛先／カタログ]**&#x200B;に移動して、「**[!UICONTROL タイプ]**」フィルターで「**[!UICONTROL 拡張機能]**」を選択します。
+To find the Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter.
 
 ![インターフェイスの「拡張機能」フィルター](/help/rtcdp/destinations/assets/extensions-filter.png)
 
