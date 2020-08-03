@@ -4,10 +4,10 @@ seo-title: Audience Manager DIL 拡張機能
 description: Audience Manager DIL 拡張機能は、アドビのリアルタイム顧客データプラットフォームでのデータ管理プラットフォーム（DMP）の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Audience Manager DIL 拡張機能は、アドビのリアルタイム顧客データプラットフォームでのデータ管理プラットフォーム（DMP）の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '609'
-ht-degree: 76%
+ht-degree: 75%
 
 ---
 
@@ -34,7 +34,7 @@ To use this extension, you need access to [!DNL Experience Platform Launch]. [!D
 
 To install the [!DNL Audience Manager] DIL extension:
 
-1. [アドビのリアルタイム CDP インターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先／カタログ]**&#x200B;に移動します。
+1. [AdobeReal-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations]** / **[!UICONTROL Catalog]**&#x200B;に移動します。
 2. カタログから拡張機能を選択するか、検索バーを使用します。
 3. 宛先をクリックしてハイライトし、右側のパネルで「**[!UICONTROL 拡張機能のインストール]**」を選択します。「**[!UICONTROL 拡張機能のインストール]**」コントロールが灰色表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。[前提条件](#prerequisites)を確認してください。
 4. **[!UICONTROL 使用可能な プロパティを選択]**&#x200B;ウィンドウで、拡張機能をインストールする Launch プロパティを選択します。[!DNL Launch]また、Launch で新しいプロパティを作成することもできます。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、 ドキュメントの[「プロパティ」ページに関する節](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html#プロパティページ)を参照してください。[!DNL Launch]
