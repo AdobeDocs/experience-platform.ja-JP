@@ -4,10 +4,10 @@ seo-title: 電子メールマーケティングの宛先
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '731'
-ht-degree: 56%
+ht-degree: 54%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 56%
 
 ## 手順 1 — 宛先の接続 {#connect-destination}
 
-1. **[!UICONTROL 接続／宛先]**&#x200B;で、接続する電子メールマーケティングの宛先を選択し、「**[!UICONTROL 宛先の接続]**」を選択します。
+1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**&#x200B;で、接続先の電子メールマーケティング先を選択し、「接続先 ****」を選択します。
 
    ![宛先に接続](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
