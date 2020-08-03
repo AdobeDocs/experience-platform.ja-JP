@@ -4,7 +4,7 @@ seo-title: Google Display と Video 360 の宛先
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 seo-description: 'Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。 '
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 59%
@@ -46,7 +46,7 @@ AdobeReal-time CDPで [!DNL Google Display & Video 360] 宛先を作成する前
 
 ## 宛先の作成
 
-1. **[!UICONTROL 接続/宛先]**&#x200B;を選択し、「宛先を [!DNL Google Display & Video 360]作成 ****」を選択します。
+1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**、を選択し、「宛先を [!DNL Google Display & Video 360]作成 ****」を選択します。
    ![Google Display &amp; Video 360 の宛先への接続](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. 宛先を作成ワークフローの **セットアップ** 手順で、宛先の [!UICONTROL 基本情報] 、およびこの宛先に適用するマーケティングの使用例を入力します。 <br>
