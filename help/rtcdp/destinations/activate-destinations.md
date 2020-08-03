@@ -4,10 +4,10 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 56%
+source-wordcount: '1039'
+ht-degree: 55%
 
 ---
 
@@ -95,7 +95,7 @@ ht-degree: 56%
 
 ### 電子メールマーケティングの宛先およびクラウドストレージの宛先 {#esp-and-cloud-storage}
 
-電子メールマーケティングの宛先とクラウドストレージの宛先の場合、アドビのリアルタイム CDP はストレージの指定した場所に、タブ区切りの `.txt` または `.csv` ファイルを作成します。新しいファイルはストレージの場所に毎日作成されます。ファイル形式は、`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv` です。
+電子メールマーケティングの宛先とクラウドストレージの宛先の場合、アドビのリアルタイム CDP はストレージの指定した場所に、タブ区切りの `.csv` または `.txt` ファイルを作成します。新しいファイルはストレージの場所に毎日作成されます。ファイル形式は、`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt` です。
 
 3 日連続で受け取るファイルは次のようになります。
 
@@ -109,11 +109,11 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 ### 広告の宛先
 
-データをアクティブ化する対象の広告の宛先を確認します。アクティベーションに成功した場合、オーディエンスは広告プラットフォームに入力されます。
+データをアクティブ化するそれぞれの広告先のアカウントを確認します。 アクティベーションに成功した場合、オーディエンスは広告プラットフォームに入力されます。
 
 ### ソーシャルネットワークの宛先
 
-For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つかどうかによって、ユーザーのセグメントメンバーシップが追加および削除されます。
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つかどうかによって、ユーザーのセグメントメンバーシップが追加および削除されます。
 
 >[!TIP]
 >
