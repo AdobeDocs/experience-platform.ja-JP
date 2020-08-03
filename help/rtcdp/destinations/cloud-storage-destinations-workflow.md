@@ -4,10 +4,10 @@ seo-title: クラウドストレージの宛先ワークフロー
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 68%
+ht-degree: 65%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 68%
 
 このページでは、アドビのリアルタイム顧客データプラットフォームでクラウドストレージの場所に接続する方法について説明します。
 
-1. **[!UICONTROL 接続／宛先]**&#x200B;で、目的のクラウドストレージの宛先を選択してから、「**[!UICONTROL 宛先に接続]**」を選択します。
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Connect destination]**.
 
    ![クラウドストレージの宛先に接続](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
