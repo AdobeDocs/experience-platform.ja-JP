@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: サポートされているデータ使用ラベル
+title: コアデータの使用ラベル
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '1878'
-ht-degree: 95%
+source-wordcount: '1869'
+ht-degree: 93%
 
 ---
 
 
-# サポートされているデータ使用ラベル
+# コアデータの使用ラベル
 
-Adobe Experience Platform には、データ使用ラベルおよび実施（DULE）によるデータガバナンスのインフラストラクチャが組み込まれています。DULE 機能を使用すると、データ使用ラベルをデータセットやフィールドに適用して、データに適用される使用ポリシーのタイプに従ってデータを分類することができます。
+データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットを分類できます。Adobe Experience Platformデータガバナンスでは、データの分類を開始する際にすぐに使用できるコアデータ使用ラベルがいくつか用意されています。
 
-このドキュメントでは、で現在サポートされているすべてのデータ使用ラベルについて説明 [!DNL Experience Platform]します。 More information regarding [!DNL Data Governance] and DULE can be found in the [Data Governance overview](../home.md).
+このドキュメントでは、によって現在提供されているコアデータ使用ラベルについて説明 [!DNL Experience Platform]します。 詳細につ [!DNL Data Governance] いては、 [Data Governanceの概要を参照してください](../home.md)。
 
 ## 契約ラベル
 
