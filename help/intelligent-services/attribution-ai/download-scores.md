@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Attribution AI のスコアへのアクセス
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 74%
+source-wordcount: '1028'
+ht-degree: 70%
 
 ---
 
@@ -259,9 +259,11 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ![端末](./images/download-scores/terminal-output.png)
 
+ダウンロードされるスコアはパーケー形式で、スコアの表示には [!DNL Spark]シェルまたはパーケーリーダーが必要です。 生のスコア表示には、 [パーケツールを使用できます](https://github.com/apache/parquet-mr/tree/master/parquet-tools)。 パーケツールを使ってデータを分析でき [!DNL Spark]ます。
+
 ## 次の手順
 
-このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順を説明しています。 これで、提供されているその他の[インテリジェントサービス](../home.md)とガイドを参照できます。
+このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順を説明しています。 スコア出力の詳細については、 [Attribution AIのinput and output](./input-output.md) documentationを参照してください。
 
 ## Snowflakeを使用したスコアへのアクセス
 
