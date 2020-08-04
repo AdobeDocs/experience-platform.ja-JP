@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UIでの顧客成功コネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: 649ec680148417a718aa9be121de2336521a1791
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 7%
+source-wordcount: '1243'
+ht-degree: 6%
 
 ---
 
@@ -58,21 +58,19 @@ The *[!UICONTROL Select dataset]* dialog appears. 使用するデータセット
 
 データを新しいデータセットに取り込むには、「 **[!UICONTROL 新しいデータセットを]** 作成」を選択し、表示されるフィールドにデータセットの名前と説明を入力します。
 
-このプロセス中に、 *[!UICONTROL 部分的な取り込み]* 、 *[!UICONTROL エラー診断も有効にできます]*。 「 *[!UICONTROL 部分的な取り込み]* 」を有効にすると、エラーを含むデータを取り込むことができ、設定可能な特定のしきい値まで取り込むことができます。 エラー *[!UICONTROL 診断を有効にすると]* 、誤ったデータに関する詳細情報が別々にバッチ処理されます。 詳しくは、 [部分的なバッチインジェストの概要を参照してください](../../../../ingestion/batch-ingestion/partial.md)。
+スキーマフィールドを添付するには、[ **[!UICONTROL スキーマの]** 選択]検索バーにスキーマ名を入力します。 ドロップダウンアイコンを選択して、既存のスキーマのリストを表示することもできます。 または、「 **[!UICONTROL アドバンス検索]** 」を選択して、既存のスキーマの各詳細を含む画面にアクセスすることもできます。
 
-次に、スキーマアイコンをクリックします。
-
-![use-new-dataset](../../../images/tutorials/dataflow/customer-success/use-new-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
 The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
 
 ![select-スキーマ](../../../images/tutorials/dataflow/customer-success/select-schema.png)
 
-必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパー関数の詳細については、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../ingestion/tutorials/map-a-csv-file.md)。
+必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパーの機能について詳しくは、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
 ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」をクリックします。
 
-![マッピング](../../../images/tutorials/dataflow/customer-success/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## インジェストのスケジュール設定
 
@@ -80,10 +78,10 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 | フィールド | 説明 |
 | --- | --- |
-| 頻度 | 選択可能な頻度には、1回、分、時間、日、週があります。 |
+| 頻度 | 選択可能な周波数 `Once`には、、、、、、、、、、が含ま `Minute`れ `Hour``Day``Week`ます。 |
 | 間隔 | 選択した頻度の間隔を設定する整数。 |
 | 開始時間 | 最初の取り込みがいつ行われるかを示すUTCタイムスタンプ。 |
-| 埋め戻し | 最初に取り込まれるデータを決定するboolean値です。 [ *バックフィル* ]を有効にすると、指定したパスにある現在のファイルは、最初にスケジュールされた取り込み中にすべて取り込まれます。 [ *バックフィル* ]を無効にすると *、最初の取り込み実行から* 開始時間の間に読み込まれたファイルだけが取り込まれます。 *開始時間より前に読み込まれたファイルは取り込まれません* 。 |
+| 埋め戻し | 最初に取り込まれるデータを決定するboolean値です。 [ *[!UICONTROL バックフィル]* ]を有効にすると、指定したパスにある現在のファイルは、最初にスケジュールされた取り込み中にすべて取り込まれます。 [ *バックフィル* ]を無効にすると *[!UICONTROL 、最初の取り込み実行から]* 開始時間の間に読み込まれたファイルだけが取り込まれます。 *[!UICONTROL 開始時間より前に読み込まれたファイルは取り込まれません]* 。 |
 | 差分列 | タイプ、日付または時間のフィルターされたソーススキーマフィールドセットを含むオプションです。 このフィールドは、新規データと既存データを区別するために使用します。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 |
 
 データフローは、スケジュールに基づいてデータを自動的に取り込むように設計されています。 開始するには、取り込み頻度を選択します。 次に、2つのフローの実行間隔を指定する間隔を設定します。 間隔の値は、0以外の整数で、15以上に設定する必要があります。
@@ -100,9 +98,19 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 >[!TIP] **[!UICONTROL 1回限りの取り込みでは]** 、Intervalと **[!UICONTROL Backfill]** は表示されません。
 
+スケジュールに適切な値を入力したら、「 **[!UICONTROL 次へ]**」を選択します。
+
 ![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-スケジュールに適切な値を入力したら、「 **[!UICONTROL 次へ]**」を選択します。
+## データフローの詳細の指定
+
+[ *[!UICONTROL Dataflow detail]* ]ステップが表示され、新しいデータフローに名前を付け、簡単に説明を付けることができます。
+
+このプロセス中に、 *[!UICONTROL 部分的な取り込み]* 、 *[!UICONTROL エラー診断も有効にできます]*。 Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. [ *[!UICONTROL 部分的な取り込み]* ]が有効になったら *[!UICONTROL 、[]* エラーしきい値%]ダイヤルをドラッグして、バッチのエラーしきい値を調整します。 または、入力ボックスを選択して手動でしきい値を調整することもできます。 詳しくは、 [部分的なバッチインジェストの概要を参照してください](../../../../ingestion/batch-ingestion/partial.md)。
+
+データフローの値を指定し、「 **[!UICONTROL Next]**」を選択します。
+
+![データフローの詳細](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## データフローの確認
 
