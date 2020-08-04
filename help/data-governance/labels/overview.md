@@ -4,19 +4,19 @@ solution: Experience Platform
 title: データ使用ラベルの概要
 topic: labels
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 30%
+source-wordcount: '578'
+ht-degree: 16%
 
 ---
 
 
 # データ使用ラベルの概要
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. DULE 機能を使用すると、データセットとフィールドにデータ使用ラベルを付けて、関連するデータ使用ポリシーに従って各データを分類できます。
+Adobe Experience Platform [!DNL Data Governance] allows you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies.
 
-This document provides an overview of data usage labels (also known as DULE labels) in [!DNL Experience Platform]. DULE フレームワークのより詳しい紹介については、このガイドを読む前に、[データガバナンスの概要](../home.md)を参照してください。
+このドキュメントでは、のデータ使用ラベルの概要を説明 [!DNL Experience Platform]します。 Before reading this guide, please see the [Data Governance overview](../home.md) for a more robust introduction to the Data Governance framework.
 
 ## データ使用ラベルについて
 
@@ -26,7 +26,7 @@ This document provides an overview of data usage labels (also known as DULE labe
 
 [!DNL Platform] は、「コア」データ使用ラベルを標準搭載で提供しています。これは、データ管理に適用される様々な一般的な制限をカバーしています。 これらのラベルとそれらが表す使用ポリシーについて詳しくは、 [コアデータ使用ラベルのガイドを参照してください](reference.md)。
 
-Adobeが提供するラベルに加えて、独自のカスタムラベルを定義することもできます。 For steps on how to do this in the UI, see the [data usage labels user guide](./user-guide.md). API呼び出しを使用してこれを実行する手順については、『 [data usage labels API』ガイドを参照してください](./api.md)。
+Adobeが提供するラベルに加えて、組織に独自のカスタムラベルを定義することもできます。 詳細は、「ラベルの [管理](#manage-labels) 」の節を参照してください。
 
 ## オーディエンスセグメントのラベルの継承
 
@@ -34,7 +34,7 @@ Adobeが提供するラベルに加えて、独自のカスタムラベルを定
 
 データセットレベルのラベルを継承する以外に、デフォルトでは、セグメントは関連するデータセットからフィールドレベルのラベルをすべて継承します。 ベースのアプリケーションがセグメントをどのように消費するかに応じて、使用するフィールドを指定できるので、除外されたフィールドのラベルをセグメントが継承できない場合があります。 [!DNL Platform]
 
-Real-time CDPでの自動強制の動作方法の詳細については、 [AdobeReal-time CDP Data Governanceの概要を参照してください](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)。
+リアルタイムCDPでの自動強制の動作方法の詳細については、Real-time CDPでの [Data Governanceの概要を参照してください](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)。
 
 ### Adobe Audience Managerデータエクスポートコントロールからの継承
 
@@ -42,7 +42,20 @@ Real-time CDPでの自動強制の動作方法の詳細については、 [Adobe
 
 特定のデータエクスポートコントロールとのデータ使用ラベルとの対応付けにつ [!DNL Platform]いては、 [Audience Managerのドキュメントを参照してください](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。
 
+## データ使用ラベルの管理 [!DNL Experience Platform] {#manage-labels}
+
+データ使用ラベルは、APIまたはユーザーインターフェイスを使用して管理でき [!DNL Experience Platform] ます。 それぞれの詳細については、以下のサブセクションを参照してください。
+
+### UI の使用
+
+UIの **[!UICONTROL ポリシー]**[!DNL Experience Platform] ・ワークスペースでは、組織のコア・ラベルとカスタム・ラベルの表示と管理が可能です。 ワークスペースでは、データセットとフィールドにラベルを適用できます。 **[!DNL Datasets]** For more information, refer to the [labels user guide](user-guide.md).
+
+### APIの使用
+
+`/labels` Policy Service APIの [エンドポイントを使用すると](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 、カスタムラベルの作成を含む、データ使用ラベルをプログラムで管理できます。 詳しくは、『 [ラベルエンドポイントガイド](../api/labels.md) 』を参照してください。
+
+データセッ [トとフィールドのラベルの管理には](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) 、Dataset Service APIを使用します。 詳しくは、データセットラベルの [管理に関するガイド](./dataset-api.md) を参照してください。
 
 ## 次の手順
 
-これで、データ使用ラベルの概要がわかったので、引き続き[ユーザーガイド](user-guide.md)を読んで、 UI でラベルを管理する方法を学ぶことができます。[!DNL Experience Platform]APIを使用してラベルを管理する手順については、『 [使用ラベルAPIガイド](./api.md)』を参照してください。
+このドキュメントでは、データ使用ラベルと、データ管理フレームワーク内でのラベルの役割について説明しました。 でのラベルの管理方法の詳細については、このガイド全体にリンクされたドキュメントを参照してくだ [!DNL Experience Platform]さい。
