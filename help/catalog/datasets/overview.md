@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データセットの概要
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 38%
 
 ---
@@ -47,7 +47,7 @@ Adobe Experience Platform [!DNL Data Governance] allows you to manage customer d
 このサービスについて詳しくは、「[データガバナンスの概要](../../data-governance/home.md)」を参照してください。で使用状況ラベルを使用する手順については、次のガイドを参照し [!DNL Platform]てください。
 
 * [UIでのラベルの管理](../../data-governance/labels/user-guide.md)
-* [APIでのラベルの管理](../../data-governance/labels/api.md)
+* [APIでのデータセットラベルの管理](../../data-governance/labels/dataset-api.md)
 
 ## Datasets in downstream [!DNL Platform] services
 
