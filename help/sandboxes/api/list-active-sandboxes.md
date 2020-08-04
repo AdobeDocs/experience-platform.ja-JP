@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 現在のユーザーのアクティブなサンドボックスを一覧表示
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 07ff49c74ea05f84d5c7cf9a3f44e7300f0b39b8
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 100%
@@ -30,7 +30,7 @@ GET /
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management \
+  https://platform.adobe.io/data/foundation/sandbox-management/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
