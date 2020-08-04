@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform データガバナンスのヘルプ
 translation-type: tm+mt
-source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 83%
+source-wordcount: '106'
+ht-degree: 74%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 83%
 * [データガバナンスの概要](home.md)
 * データ使用ラベル {#labels}
    * [データ使用ラベルの概要](labels/overview.md)
+   * [コアデータの使用ラベル](labels/reference.md)
    * [UIでのデータ使用量ラベルの管理](labels/user-guide.md)
-   * [APIでのデータ使用ラベルの管理](labels/api.md)
-   * [サポートされているデータ使用ラベル](labels/reference.md)
+   * [APIを使用したデータセットとフィールドのラベルの管理](labels/dataset-api.md)
 * データ使用ポリシー {#policies}
    * [データ使用ポリシーの概要](policies/overview.md)
    * [データ使用ポリシーユーザガイド](policies/user-guide.md)
@@ -26,8 +26,9 @@ ht-degree: 83%
 * ポリシーの適用 {#enforcement}
    * [ポリシー適用の概要](enforcement/overview.md)
    * [Policy Service API を使用してデータ使用ポリシーを適用する](enforcement/api-enforcement.md)
-* DULE Policy Service API {#api}
+* Policy Service API developer guide {#api}
    * [はじめに](api/getting-started.md)
+   * [ラベル](api/labels.md)
    * [ポリシー](api/policies.md)
    * [マーケティングアクション](api/marketing-actions.md)
    * [評価](api/evaluation.md)
