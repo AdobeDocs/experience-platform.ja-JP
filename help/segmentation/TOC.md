@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform セグメント化サービスのヘルプ
 translation-type: tm+mt
-source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 86%
+source-wordcount: '116'
+ht-degree: 87%
 
 ---
 
@@ -27,6 +27,8 @@ ht-degree: 86%
    - [ストリーミングセグメント化](api/streaming-segmentation.md)
 - セグメント化 UI {#ui}
    - [概要](ui/overview.md)
+   - [セグメントビルダー](ui/segment-builder.md)
+   - [ストリーミングセグメント化](ui/streaming-segmentation.md)
 - [オプトアウトの実行](honoring-opt-outs.md)
 - [マルチエンティティセグメント化](multi-entity-segmentation.md)
 - プロファイルクエリ言語 {#pql}
@@ -48,4 +50,4 @@ ht-degree: 86%
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
    - [セグメントのデータ使用コンプライアンスの実施](tutorials/governance.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Platformのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+- [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
