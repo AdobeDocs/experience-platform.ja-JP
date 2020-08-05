@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ストリーミングセグメント化
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 43%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->次のドキュメントでは、APIを使用したストリーミングセグメントの使用方法を説明します。 UIを使用したストリーミングセグメントの使用について詳しくは、『 [セグメントビルダー](../ui/overview.md#streaming-segmentation)』ガイドを参照してください。
+>次のドキュメントでは、APIを使用したストリーミングセグメントの使用方法を説明します。 UIを使用したストリーミングセグメントの使用について詳しくは、『ストリー [ミングセグメント化UI』ガイドを参照してください](../ui/streaming-segmentation.md)。
 
 セグメント化のストリーミング [!DNL Adobe Experience Platform] により、お客様はデータの豊富性に重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、データが到着する際にセグメントの認定が行われ、セグメント化ジョブのスケジュール [!DNL Platform]や実行の必要性が軽減されました。 With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
@@ -403,4 +403,4 @@ curl -X POST \
 
 新しいセグメントと既存のセグメントの両方でストリーミングセグメント化を有効にし、スケジュールされたセグメント化を有効にしてベースラインを開発し、定期評価を実行したので、組織のセグメントの作成を開始できます。
 
-Adobe Experience Platform ユーザーインターフェイスを使用して同様のアクションを実行し、セグメントを操作する方法については、『[セグメントビルダーユーザーガイド](../ui/overview.md)』を参照してください。
+Adobe Experience Platform ユーザーインターフェイスを使用して同様のアクションを実行し、セグメントを操作する方法については、『[セグメントビルダーユーザーガイド](../ui/segment-builder.md)』を参照してください。
