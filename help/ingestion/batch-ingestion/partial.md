@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 部分取得の概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
 workflow-type: tm+mt
-source-wordcount: '1237'
-ht-degree: 56%
+source-wordcount: '1420'
+ht-degree: 42%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 56%
 このチュートリアルでは、部分バッチ取得に関わる様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [バッチインジェスト](./overview.md): CSVやParketなどのデータファイルからデータを [!DNL Platform] 取り込んで保存する方法。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+- [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
@@ -58,14 +58,12 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 部分的な取り込みが有効な新しいバッチを作成できます。
 
-新しいバッチを作成するには、『 [バッチインジェスト開発者ガイド](./api-overview.md)』の手順に従います。 Once you reach the *Create batch* step, add the following field within the request body:
+新しいバッチを作成するには、『 [バッチインジェスト開発者ガイド](./api-overview.md)』の手順に従います。 Once you reach the **[!UICONTROL Create batch]** step, add the following field within the request body:
 
 ```json
 {
-    ...
     "enableErrorDiagnostics": true,
     "partialIngestionPercentage": 5
-    ...
 }
 ```
 
@@ -85,17 +83,17 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 ### 新しいソース接続の作成 {#new-source}
 
-新しいソース接続を作成するには、 [ソースの概要に記載されている手順に従います](../../sources/home.md)。 Once you reach the *[!UICONTROL Dataflow detail]* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
+新しいソース接続を作成するには、 [ソースの概要に記載されている手順に従います](../../sources/home.md)。 Once you reach the **[!UICONTROL Dataflow detail]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-「*[!UICONTROL 部分取得]*」切り替えを使用すると、部分バッチ取得の使用を有効または無効にできます。
+「**[!UICONTROL 部分取得]**」切り替えを使用すると、部分バッチ取得の使用を有効または無効にできます。
 
-The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
+The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-*[!UICONTROL エラーしきい値]*&#x200B;を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。デフォルトでは、この値は 5% に設定されています。
+**[!UICONTROL エラーしきい値]**&#x200B;を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。デフォルトでは、この値は 5% に設定されています。
 
 ### 既存のデータセットを使用する {#existing-dataset}
 
@@ -103,29 +101,103 @@ The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL P
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-「*[!UICONTROL 部分取得]*」切り替えを使用すると、部分バッチ取得の使用を有効または無効にできます。
+「**[!UICONTROL 部分取得]**」切り替えを使用すると、部分バッチ取得の使用を有効または無効にできます。
 
-The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
+The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-*[!UICONTROL エラーしきい値]*&#x200B;を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。デフォルトでは、この値は 5% に設定されています。
+**[!UICONTROL エラーしきい値]**&#x200B;を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。デフォルトでは、この値は 5% に設定されています。
 
 これで、 **追加「** data」ボタンを使用してデータをアップロードでき、部分的な取り込みを使用して取り込むことができます。
 
 ### 「[!UICONTROL Map CSV to XDMスキーマ]」フローの使用 {#map-flow}
 
-「[!UICONTROL CSVをXDMスキーマに]マップ [」のフローを使用するには、「CSVファイルを](../tutorials/map-a-csv-file.md)マップ」のチュートリアルに示されている手順に従います。 Once you reach the *[!UICONTROL Add data]* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
+「[!UICONTROL CSVをXDMスキーマに]マップ [」のフローを使用するには、「CSVファイルを](../tutorials/map-a-csv-file.md)マップ」のチュートリアルに示されている手順に従います。 Once you reach the **[!UICONTROL Add data]** step, take note of the **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]** fields.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-「*[!UICONTROL 部分取得]*」切り替えを使用すると、部分バッチ取得の使用を有効または無効にできます。
+「**[!UICONTROL 部分取得]**」切り替えを使用すると、部分バッチ取得の使用を有効または無効にできます。
 
-The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
+The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTROL Partial ingestion]** toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the **[!UICONTROL Partial ingestion]** toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-*[!UICONTROL エラーしきい値]*&#x200B;を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。デフォルトでは、この値は 5% に設定されています。
+**[!UICONTROL エラーしきい値]**&#x200B;を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。デフォルトでは、この値は 5% に設定されています。
+
+## ファイルレベルのメタデータのダウンロード {#download-metadata}
+
+Adobe Experience Platformでは、入力ファイルのメタデータのダウンロードが許可されます。 メタデータは30日以内に保持 [!DNL Platform] されます。
+
+### リスト入力ファイル {#list-files}
+
+次の要求を行うと、ファイナライズされたバッチで提供されるすべてのファイルのリストを表示できます。
+
+**リクエスト**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**応答** 
+
+正常に応答すると、メタデータが保存された場所を詳細に示すパスオブジェクトが含まれたJSONオブジェクトを持つHTTPステータス200が返されます。
+
+```json
+{
+    "_page": {
+        "count": 1,
+        "limit": 100
+    },
+    "data": [
+        {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json"
+                }
+            },
+            "length": "1337",
+            "name": "fileMetaData1.json"
+        },
+                {
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData2.json"
+                }
+            },
+            "length": "1042",
+            "name": "fileMetaData2.json"
+        }
+    ]
+}
+```
+
+### 入力ファイルのメタデータを取得 {#retrieve-metadata}
+
+すべての様々な入力ファイルのリストを取得したら、次のエンドポイントを使用して、個々のファイルのメタデータを取得できます。
+
+**リクエスト**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=input_files/fileMetaData1.json \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**応答** 
+
+正常に応答すると、メタデータが保存された場所を詳細に示すパスオブジェクトが含まれたJSONオブジェクトを持つHTTPステータス200が返されます。
+
+```json
+{"path": "F1.json"}
+{"path": "etc/F2.json"}
+```
 
 ## 部分バッチ取得エラーの獲得 {#retrieve-errors}
 
@@ -155,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**エラーのない応答**
 
 正常な応答は、HTTP ステータス 200 とバッチのステータスに関する詳細情報を返します。
 
@@ -164,10 +236,8 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
-            ...
             "acp_enableErrorDiagnostics": true,
             "acp_partialIngestionPercent": 5
-            ...
         },
         "relatedObjects": [
             {
@@ -186,7 +256,8 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
             "inputByteSize": 568,
             "inputFileCount": 4,
             "inputRecordCount": 519,
-            "outputRecordCount": 497
+            "outputRecordCount": 497,
+            "failedRecordCount": 0
         },
         "completed": 1576741722026,
         "created": 1576741597205,
@@ -199,7 +270,86 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 }
 ```
 
-バッチにエラーがあり、エラー診断が有効になっている場合、ステータスは「成功」になり、ダウンロード可能なエラーファイルで提供されたエラーの詳細が表示されます。
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | 解析、変換、または検証の結果、処理できなかった行の数です。 この値は、から値を引くことで得ら `inputRecordCount` れ `outputRecordCount`ます。 この値は、有効になっている場合に関係なく、すべてのバッチで生成 `errorDiagnostics` されます。 |
+
+**エラーのある応答**
+
+バッチに1つ以上のエラーがあり、エラー診断が有効になっている場合、ステータスには、応答内とダウンロード可能なエラーファイル内の両方で提供されるエラーに関する詳細情報が表示されます。 `success`
+
+```json
+{
+    "01E8043CY305K2MTV5ANH9G1GC": {
+        "status": "success",
+        "tags": {
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
+        },
+        "relatedObjects": [
+            {
+                "type": "dataSet",
+                "id": "5deac2648a19d218a888d2b1"
+            }
+        ],
+        "id": "01E8043CY305K2MTV5ANH9G1GC",
+        "externalId": "01E8043CY305K2MTV5ANH9G1GC",
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "{IMS_ORG}",
+        "started": 1576741718543,
+        "metrics": {
+            "inputByteSize": 568,
+            "inputFileCount": 4,
+            "inputRecordCount": 519,
+            "outputRecordCount": 514,
+            "failedRecordCount": 5
+        },
+        "completed": 1576741722026,
+        "created": 1576741597205,
+        "createdClient": "{API_KEY}",
+        "createdUser": "{USER_ID}",
+        "updatedUser": "{USER_ID}",
+        "updated": 1576741722644,
+        "version": "1.0.5",
+        "errors": [
+           {
+             "code": "INGEST-1212-400",
+             "description": "Encountered 5 errors in the data. Successfully ingested 514 rows. Please review the associated diagnostic files for more details."
+           },
+           {
+             "code": "INGEST-1401-400",
+             "description": "The row has corrupted data and cannot be read or parsed. Fix the corrupted data and try again.",
+             "recordCount": 2
+           },
+           {
+             "code": "INGEST-1555-400",
+             "description": "A required field is either missing or has a value of null. Add the required field to the input row and try again.",
+             "recordCount": 3
+           }
+        ]
+    }
+}
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `metrics.failedRecordCount` | 解析、変換、または検証の結果、処理できなかった行の数です。 この値は、から値を引くことで得ら `inputRecordCount` れ `outputRecordCount`ます。 この値は、有効になっている場合に関係なく、すべてのバッチで生成 `errorDiagnostics` されます。 |
+| `errors.recordCount` | 指定したエラーコードが失敗した行数です。 この値は **、が有効な場合**`errorDiagnostics` にのみ生成されます。 |
+
+>[!NOTE]
+>
+>エラー診断が使用できない場合は、代わりに次のエラーメッセージが表示されます。
+> 
+```json
+> {
+>         "errors": [{
+>                 "code": "INGEST-1211-400",
+>                 "description": "Encountered errors while parsing, converting or otherwise validating the data. Please resend the data with error diagnostics enabled to collect additional information on failure types"
+>         }]
+> }
+> ```
 
 ## 次の手順 {#next-steps}
 
@@ -207,12 +357,11 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 ## 部分バッチ取得エラータイプ {#appendix}
 
-部分バッチ取得では、データを取得する際に発生するエラータイプは 4 つあります。
+部分的なバッチ取り込みでは、データを取り込むときに3つの異なるエラータイプがあります。
 
 - [読み取り不能なファイル](#unreadable)
 - [無効なスキーマまたはヘッダー](#schemas-headers)
 - [解析不可の行](#unparsable)
-- [無効な XDM 変換](#conversion)
 
 ### 読み取り不能なファイル {#unreadable}
 
@@ -229,7 +378,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 **API 形式**
 
 ```http
-GET /export/batches/{BATCH_ID}/failed?path=parse_errors
+GET /export/batches/{BATCH_ID}/meta?path=row_errors
 ```
 
 | パラメーター | 説明 |
@@ -239,7 +388,7 @@ GET /export/batches/{BATCH_ID}/failed?path=parse_errors
 **リクエスト**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=parse_errors \
+curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/meta?path=row_errors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -252,68 +401,11 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 ```json
 {
-    "_corrupt_record":"{missingQuotes:"v1"}",
+    "_corrupt_record": "{missingQuotes:"v1"}",
     "_errors": [{
-         "code":"1401",
-         "message":"Row is corrupted and cannot be read, please fix and resend."
+         "code": "1401",
+         "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
     "_filename": "a1.json"
-}
-```
-
-### 無効な XDM 変換 {#conversion}
-
-取得されたバッチに無効な XDM 変換が含まれている場合、バッチのエラーはファイルに保存され、次のエンドポイントを使用してアクセスできます。
-
-**API 形式**
-
-```http
-GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `{BATCH_ID}` | エラー情報を取得するバッチの `id` 値。 |
-
-**リクエスト**
-
-```shell
-curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path=conversion_errors \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答** 
-
-正常な応答は、HTTP ステータス 200 と XDM 変換の失敗の詳細を返します。
-
-```json
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col3",
-        "code":"123",
-        "message":"Cannot convert array element from Object to String"
-    }],
-    "_filename":"a1.json"
-},
-{
-    "col1":"v1",
-    "col2":"v2",
-    "col3":[{
-        "g1":"h1"
-    }],
-    "_errors":[{
-        "column":"col1",
-        "code":"100",
-        "message":"Cannot convert string to float"
-    }],
-    "_filename":"a2.json"
 }
 ```
