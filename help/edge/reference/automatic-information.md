@@ -4,9 +4,9 @@ seo-title: Adobe Experience Platform Web SDK で自動的に収集される情�
 description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
 seo-description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 100%
 
 ---
@@ -91,6 +91,13 @@ Adobe Experience Cloud SDK は、特別な設定をしなくても、多数の�
 | **ペイロード内のパス：** | **例：** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
+
+### 環境
+
+| **ペイロード内のパス：** | **例：** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser` |
+
 
 ## 場所コンテキスト（`placeContext`）
 
