@@ -3,15 +3,15 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience PlatformWeb SDKヘルプ
 translation-type: tm+mt
-source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
+source-git-commit: c12d854f272c6775ae940b7a4056d0f527c5dd01
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '96'
 ht-degree: 67%
 
 ---
 
 
-# Adobe Experience PlatformWeb SDK {#edge}
+# Adobe Experience PlatformウェブSDK {#edge}
 
 * [Web SDKの概要](home.md)
 * はじめに {#get-started}
@@ -44,4 +44,5 @@ ht-degree: 67%
 * リファレンス {#ref}
    * [自動的に収集された値](reference/automatic-information.md)
    * [ライブラリ情報の取得](reference/retrieving-library-information.md)
-* [Platformのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [リリースノート](release-notes.md)
+* [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
