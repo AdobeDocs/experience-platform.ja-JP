@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK：同意設定のサポート
 description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 seo-description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 0869c6c54e8936a1ac1225cf6510f7139dce1936
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 96%
+source-wordcount: '756'
+ht-degree: 62%
 
 ---
 
@@ -39,17 +39,17 @@ alloy("configure", {
 
 この時点で、ユーザーインターフェイス内のどこかでユーザーにオプトインを求めることをお勧めします。ユーザーの環境設定を収集した後、これらの環境設定を SDK に伝えます。
 
-## 同意設定の連絡
+## 同意設定の連絡 Adobe標準を通じて
 
 ユーザーがオプトインした場合は、次のように、`general` オプションを `in` に設定して `setConsent` コマンドを実行します。
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "in" 
+      value: {
+        general: "in"
       }
     }]
 });
@@ -61,11 +61,11 @@ alloy("setConsent", {
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "out" 
+      value: {
+        general: "out"
       }
     }]
 });
@@ -81,6 +81,49 @@ alloy("setConsent", {
 >
 >現在、SDK は `general` 目的のみをサポートしています。アドビでは、様々な機能や製品に対応する、さらに堅牢な目的やカテゴリのセットを構築する予定ですが、現在の実装アプリーチでは、すべてをオプトインするか、すべてをオプトインしないかのいずれかです。This only applies to the Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
 
-## 同意設定の保持
+## IAB TCF Standardを使用して同意の環境設定を伝える
 
-`setConsent` コマンドを使用してユーザー設定を SDK に伝えた後、SDK はユーザー設定を Cookie に保持します。次回ユーザーがブラウザーに We bサイトを読み込むと、SDK はこれらの永続的な環境設定を取得して使用します。`setConsent` コマンドを再び実行する必要はありません。ただし、ユーザーの環境設定に変更を加えた場合は伝える必要があります（変更はいつでも加えることができます）。
+SDKは、Interactive Advertising Bureau(IAB)Transparency and Consent Framework(TCF)標準を通じて提供されるユーザーの同意の環境設定の記録をサポートしています。 同意文字列は、上記と同じsetConsentコマンドを使用して次のように設定できます。
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
+このようにして同意が設定されると、統合プロファイルは同意情報で更新される。 これを機能させるには、プロファイルXDMスキーマに [プロファイルプライバシーミックスインが含まれている必要があります](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)。 イベントを送信する場合は、IABの同意情報をイベントxdmオブジェクトに手動で追加する必要があります。 SDKは、イベントに同意情報を自動的に含めません。 同意情報をイベントに送信するには、エクスペリエンスイベント [のプライバシーMixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) をエクスペリエンスイベントスキーマに追加する必要があります。
+
+## 両方の標準を1回の要求で送信する
+
+また、SDKは、リクエスト内での複数の同意オブジェクトの送信もサポートしています。
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "Adobe",
+      version: "1.0",
+      value: {
+        general: "in"
+      }
+    },{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
+## 同意の趣旨の持続
+
+`setConsent` コマンドを使用してユーザー設定を SDK に伝えた後、SDK はユーザー設定を Cookie に保持します。次回ユーザーがWebサイトをブラウザーに読み込むと、SDKは、これらの永続的な環境設定を取得して使用し、イベントをAdobeに送信できるかどうかを決定します。 `setConsent` コマンドを再び実行する必要はありません。ただし、ユーザーの環境設定に変更を加えた場合は伝える必要があります（変更はいつでも加えることができます）。
+
+## 同意の設定時のIDの同期
+
+デフォルトの同意が保留中の場合、「setConsent」は、最初に送信され、IDを確立する要求です。 このため、最初の要求時にIDを同期することが重要な場合があります。 IDマップは、「sendEvent」コマンドと同様に、「setConsent」コマンドに追加できます。 Experience CloudIDの [取得を参照してください。](./identity.md)
+
