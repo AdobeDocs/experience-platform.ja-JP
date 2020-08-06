@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK のイベントのトラッキン�
 description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 87%
+source-wordcount: '688'
+ht-degree: 79%
 
 ---
 
@@ -79,6 +79,24 @@ alloy("sendEvent", {
   "type": "commerce.purchases"
 });
 ```
+
+### データセットIDの上書き
+
+場合によっては、設定UIで設定されたデータセット以外のデータセットにイベントを送信する必要があります。 その場合は、 `datasetId``sendEvent` コマンドでオプションを設定する必要があります。
+
+```javascript
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### ID情報の追加
+
+カスタムID情報をイベントに追加することもできます。 Experience CloudIDの [取得を参照してください。](./identity.md)
 
 ## sendBeacon API の使用
 
