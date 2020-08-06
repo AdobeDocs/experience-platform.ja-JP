@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK の設定
 description: Experience Platform Web SDK の設定方法について説明します
 seo-description: Experience Platform Web SDK の設定方法について説明します
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 86%
+source-wordcount: '749'
+ht-degree: 78%
 
 ---
 
@@ -146,21 +146,13 @@ Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the 
 
 ## ID オプション
 
-### `idSyncContainerId`
+### `idMigrationEnabled`
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
-| 数値 | × | なし |
+| Boolean | × | true |
 
-呼び出す ID 同期を指定するコンテナ ID。コンサルタントから取得できる、負でない整数です。
-
-### `idSyncEnabled`
-
-| **タイプ** | **必須** | **デフォルト値** |
-| -------- | ------------ | ----------------- |
-| Boolean | × | `true` |
-
-ID 同期機能を有効にします。URL を呼び出すことで、アドビの一意のユーザー ID とサードパーティのデータソースの一意のユーザー ID を同期できます。
+trueの場合、SDKは古いAMCV cookieを読み取って設定します。 これは、サイトの一部で訪問者.jsを使用している可能性があるのに、AEP Web SDKの使用に移行する際に役立ちます。 また、訪問者APIがページで定義されている場合、SDKはECIDのクエリ訪問者APIを使用します。 これにより、AEP Web SDKを使用して2つのタグページを作成でき、同じECIDを保持できます。
 
 ### `thirdPartyCookiesEnabled`
 
