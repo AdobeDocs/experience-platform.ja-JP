@@ -1,20 +1,20 @@
 ---
 title: Experience CloudIDを取得しています
-seo-title: Experience CloudIDを取得するAdobe Experience PlatformWeb SDK
+seo-title: Adobe Experience PlatformWeb SDKによるExperience CloudIDの取得
 description: Adobe Experience CloudIDの取得方法を説明します。
 seo-description: Adobe Experience CloudIDの取得方法を説明します。
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: d2870df230811486c09ae29bf9f600beb24fe4f8
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 10%
+source-wordcount: '730'
+ht-degree: 6%
 
 ---
 
 
 # ID -Experience CloudIDの取得
 
-Adobe Experience Platformは、 [!DNL Web SDK] AdobeIDサービスを [利用します](../../identity-service/ecid.md)。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
+Adobe Experience Platformは、 [!DNL Web SDK] Adobe・アイデンティティ・サービスを [利用します](../../identity-service/ecid.md)。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
 
 ## ファーストパーティID
 
@@ -23,6 +23,14 @@ Adobe Experience Platformは、 [!DNL Web SDK] AdobeIDサービスを [利用し
 ## サードパーティID
 
 ID [!DNL Identity Service] をサードパーティドメイン(demdex.net)と同期して、サイト間の追跡を有効にする機能があります。 これが有効な場合、訪問者の最初のリクエスト（ECIDのないユーザーなど）は、demdex.netに対して行われます。 これは、Chromeなどを許可するブラウザーでのみ実行され、設定の `thirdPartyCookiesEnabled` パラメーターで制御されます。 この機能をすべて同時に無効にする場合は、false `thirdPartyCookiesEnabled` に設定します。
+
+## IDの移行
+
+訪問者APIを使用して移行する場合は、既存のAMCV cookieを移行することもできます。 ECIDの移行を有効にするには、設定で `idMigrationEnabled` パラメーターを設定します。 IDの移行は、次のような使用事例を有効にするように設定されています。
+
+* ドメインの一部のページが訪問者APIを使用している場合と、他のページがこのSDKを使用している場合。 この場合、SDKは、既存のAMCV cookieを読み取り、既存のECIDを持つ新しいcookieを書き込みます。 また、SDKはAEP Web SDKが実装されたページでECIDが最初に取得された場合に、訪問者APIが実装された後続のページで同じECIDを持つように、AMCV cookieを書き込みます。
+* 訪問者APIも持つページでAEP Web SDKを設定する場合。 このケースをサポートするために、AMCV cookieが設定されていない場合、SDKはページ上で訪問者APIを探し、それを呼び出してECIDを取得します。
+* サイト全体でAEP Web SDKを使用し、訪問者APIを持たない場合は、返される訪問者情報を保持できるように、ECIDを移行すると便利です。 でのSDKのデプロイ後、訪問者ーのCookie `idMigrationEnabled` のほとんどが移行されるまでの時間が経過すると、設定を無効にできます。
 
 ## 訪問者IDの取得
 
@@ -45,20 +53,34 @@ alloy("getIdentity")
 
 ## IDの同期
 
+>[!NOTE]
+>
+>この `syncIdentity` メソッドは、ハッシュ機能に加えて、バージョン2.1.0で削除されました。 バージョン2.1.0以降を使用し、IDを同期する場合は、フ `xdm` ィールドの `sendEvent``identityMap` 下にあるコマンドのオプションでIDを直接送信できます。
+
 また、コマンド [!DNL Identity Service] を使用して、独自のIDをECIDと同期でき `syncIdentity` ます。
 
+>[!NOTE]
+>
+>使用可能なすべてのIDをすべての `sendEvent` コマンドで渡すことを強くお勧めします。 これにより、パーソナライゼーションを含む様々な使用例がロック解除されます。 これで、これらのIDを `sendEvent` コマンドに渡すことができるので、DataLayerに直接配置できます。
+
+IDを同期すると、複数のIDを使用するデバイス/ユーザーを識別し、認証状態を設定して、どのIDを主要IDと見なすかを決定できます。 IDがに設定されていない場合 `primary`、主なデフォルトはになり `ECID`ます。
+
 ```javascript
-alloy("syncIdentity",{
-    identity:{
-      "AppNexus":{
-        "id":"123456,
-        "authenticationState":"ambiguous",
-        "primary":false,
-        "hashEnabled": true,
-      }
+alloy("sendEvent", {
+  xdm: {
+    "identityMap": {
+      "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
+        {
+          "id": "1234",
+          "authenticatedState": "ambiguous",
+          "primary": true
+        }
+      ]
     }
+  }
 })
 ```
+
 
 ### IDの同期オプション
 
@@ -68,7 +90,7 @@ alloy("syncIdentity",{
 | -------- | ------------ | ----------------- |
 | 文字列 | ○ | なし |
 
-オブジェクトのキーは、 [ID名前空間](../../identity-service/namespaces.md) (Identity Symbol)です。 これは、「 [!UICONTROL ID]」のAdobe Experience Platformユーザーインターフェイスに表示されます。
+オブジェクトのキーは、 [ID名前空間](../../identity-service/namespaces.md) (Identity Symbol)です。 これは、「 [!UICONTROL ID]」のAdobe Experience Platformユーザーインターフェイスに表示されています。
 
 #### `id`
 
