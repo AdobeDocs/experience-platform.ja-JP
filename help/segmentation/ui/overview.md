@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentation Serviceユーザーガイド
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1365'
 ht-degree: 29%
 
 ---
@@ -47,7 +47,7 @@ Working with segment definitions requires an understanding of the various [!DNL 
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
-ページの上部には、スケジュールする **[!UICONTROL すべてのセグメントに対するオプション]** 、 **[!UICONTROL およびセグメントを]**&#x200B;作成するオプションがあります。
+ページの上部には、すべてのセグメントをスケジュールに追加したり、新しいセグメントを作成したりするためのオプションがあります。
 
 す **[!UICONTROL べてのセグメントをスケジュールに切り替えると]** 、スケジュール済みのセグメント化が有効になります。 スケジュール済みセグメントの詳細については、このユーザガイドの「 [スケジュール済みセグメント」の節を参照してください](#scheduled-segmentation)。
 
@@ -73,7 +73,7 @@ Working with segment definitions requires an understanding of the various [!DNL 
 
 ### セグメントサマリ
 
-「 *[!UICONTROL セグメントサマリ]* 」セクションには、ID、名前、説明、属性の詳細などの情報が表示されます。
+「 **[!UICONTROL セグメントサマリ]** 」セクションには、ID、名前、説明、属性の詳細などの情報が表示されます。
 
 また、セグメントを編集するオプションも与えられます。 「 **[!UICONTROL セグメントを編集]** 」を選択すると [!DNL Segment Builder]、が表示されます。 Workspaceの使用に関する詳細は、 [!DNL Segment Builder] ユーザーガイドを参照してください [[!DNL Segment Builder] ](./segment-builder.md)。
 
