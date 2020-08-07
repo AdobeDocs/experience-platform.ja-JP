@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: ジョブの書き出し — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 65%
@@ -20,7 +20,7 @@ This document provides step-by-step instructions for creating and managing expor
 
 >[!NOTE]
 >
->このガイドでは、の書き出しジョブの使用について説明し [!DNL Profile API]ます。 Adobe Experience Platformセグメントサービス用の書き出しジョブを管理する方法について詳しくは、Segmentation APIの [書き出しジョブに関するガイドを参照してください](../../profile/api/export-jobs.md)。
+>このガイドでは、の書き出しジョブの使用について説明し [!DNL Profile API]ます。 Adobe Experience Platformセグメントサービスの書き出しジョブを管理する方法について詳しくは、Segmentation API [の書き出しジョブに関するガイドを参照してください](../../profile/api/export-jobs.md)。
 
 書き出しジョブの作成に加えて、 [!DNL Profile] エンドポイント(「 `/entities`[!DNL Profile Access]」とも呼ばれます)を使用してデータにアクセスすることもできます。 See the [entities endpoint guide](./entities.md) for more information. UIを使用して [!DNL Profile] データにアクセスする手順については、 [ユーザガイドを参照してください](../ui/user-guide.md)。
 
@@ -146,7 +146,9 @@ curl -X POST \
 | `destination` | **（必須）**&#x200B;エクスポートするデータの宛先情報：<ul><li>`destination.datasetId`：**（必須）**&#x200B;データのエクスポート先のデータセットの ID。</li><li>`destination.segmentPerBatch`：*（オプション）*&#x200B;指定しない場合、ブール値はデフォルトで `false` になります。値が `false` の場合、すべてのセグメント ID が単一のバッチ ID にエクスポートされます。値が `true` の場合、1 つのセグメント ID が 1 つのバッチ ID にエクスポートされます。値を `true` に設定すると、バッチエクスポートのパフォーマンスに影響を与える場合があることに注意してください。</li></ul> |
 | `schema.name` | **（必須）**&#x200B;データのエクスポート先のデータセットに関連付けられているスキーマの名前。 |
 
->[!NOTE] プロファイルデータのみをエクスポートし、時系列関連のデータを含めない場合は、「additionalFields」オブジェクトをリクエストから削除します。
+>[!NOTE]
+>
+>プロファイルデータのみをエクスポートし、時系列関連のデータを含めない場合は、「additionalFields」オブジェクトをリクエストから削除します。
 
 **応答** 
 
