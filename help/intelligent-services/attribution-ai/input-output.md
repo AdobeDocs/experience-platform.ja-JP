@@ -5,7 +5,7 @@ title: Attribution AIの入出力
 topic: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入出力の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 5126ef74330d9cee7234ccd1ee7260b09db9e78c
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '2174'
 ht-degree: 14%
@@ -85,7 +85,7 @@ Attribution AIは次のように出力します。
 以下の例では、例示用にサンプルのCSV出力を使用しています。 サンプルファイルの特性を次に示します。
 
 - トークン化されたイベントがファイルに含まれていません。
-- ファイルに変換のみのイベントが含まれていませんでした（0の余白スコアを持つスコア行は含まれていません）。
+- ファイルに変換のみのイベントが含まれていませんでした（小さなスコアとして0のスコア行は含まれていません）。
 - データの特性：
    - 合計368行のサンプル行
    - 8個以上のコンバージョンと3個の異なるチャネル。
@@ -147,7 +147,7 @@ Attribution AI出力のアトリビューションスコアは、可能な限り
 
 ### 生のスコアパスの表示(UI) {#raw-score-path}
 
-生のスコアへのパスをUIで表示できます。 開始するには、PlatformUIで **[!UICONTROL スキーマ]** を選択し、「 *[!UICONTROL 参照]* 」タブからアトリビューションAIスコアスキーマを検索して選択します。
+生のスコアへのパスをUIで表示できます。 開始するには、プラットフォームUIで **[!UICONTROL スキーマを選択し]** 、「 *[!UICONTROL 参照]* 」タブからアトリビューションAIスコアスキーマを検索して選択します。
 
 ![スキーマの選択](./images/input-output/schemas_browse.png)
 
@@ -158,13 +158,13 @@ Attribution AI出力のアトリビューションスコアは、可能な限り
 
 ### 集計されたアトリビューションスコア {#aggregated-attribution-scores}
 
-日付範囲が30日未満の場合は、集計スコアをPlatformUIからCSV形式でダウンロードできます。
+集計スコアは、日付範囲が30日未満の場合は、プラットフォームUIからCSV形式でダウンロードできます。
 
 Attribution AI は、アトリビューションスコアの 2 つのカテゴリ（アルゴリズムスコアとルールベーススコア）をサポートしています。
 
 Attribution AI では、増分スコアと影響スコアの 2 種類のアルゴリズムスコアを生成します。影響スコアは、各マーケティングタッチポイントがコンバージョンに寄与している割合です。増分スコアは、マーケティングタッチポイントで直接引き起こされたわずかな影響の量です。増分スコアと影響スコアの主な違いは、増分スコアがベースライン効果を考慮に入れていることです。コンバージョンが、先行するマーケティングタッチポイントによってのみ生じるとは考えられません。
 
-Adobe Experience PlatformUIからのAttribution AIスキーマ出力例を簡単に見ると、次のようになります。
+Adobe Experience PlatformのUIからAttribution AIスキーマ出力例を簡単に見てみましょう。
 
 ![](./images/input-output/schema_screenshot.png)
 
@@ -196,7 +196,7 @@ Adobe Experience PlatformUIからのAttribution AIスキーマ出力例を簡単
 
 ### 集計スコア {#aggregated-scores}
 
-日付範囲が30日未満の場合は、集計スコアをPlatformUIからCSV形式でダウンロードできます。 これらの各集計列の詳細については、次の表を参照してください。
+集計スコアは、日付範囲が30日未満の場合は、プラットフォームUIからCSV形式でダウンロードできます。 これらの各集計列の詳細については、次の表を参照してください。
 
 | 列名 | 制約 | Null許容 | 説明 |
 | --- | --- | --- | --- |
