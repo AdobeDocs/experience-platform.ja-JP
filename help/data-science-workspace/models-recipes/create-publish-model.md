@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 機械学習モデルの作成および公開手順
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 81%
@@ -117,7 +117,9 @@ The second component of the [!DNL Data Science Workspace] lifecycle involves aut
 
    ハイパーパラメーターは学習できないので、トレーニングを実行する前に割り当てる必要があります。ハイパーパラメーターを調整すると、トレーニングモデルの精度が変わる場合があります。モデルの最適化は反復的なプロセスなので、満足のいく評価を得るには複数のトレーニング実行が必要となる場合があります。
 
-   >[!TIP]**[!UICONTROL num_recommendations]** を 10 に設定します。
+   >[!TIP]
+   >
+   >**[!UICONTROL num_recommendations]** を 10 に設定します。
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. 新しいトレーニング実行が完了すると、モデル評価グラフに追加のデータポイントが表示されます。この処理には数分かかる場合があります。
