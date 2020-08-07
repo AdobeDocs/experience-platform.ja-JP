@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;intelligent services;popular topics
+keywords: Experience Platform;home;Intelligent Services;popular topics
 solution: Experience Platform
 title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 88e4a183422dd1bc625fd842e24c2604fb249c91
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1924'
 ht-degree: 3%
 
 ---
 
 
-# Intelligent Servicesで使用するデータの準備
+# データを [!DNL Intelligent Services]
 
-インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、インテリジェントサービスで使用されるすべてのデータセットは、 **Consumer ExperienceEvent(CEE)** XDMスキーマに準拠している必要があります。
+マーケティングイベントデータからインサイト [!DNL Intelligent Services] を見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 [!DNL Intelligent Services] これを達成するた [!DNL Experience Data Model] めに、(XDM)スキーマを活用します。 特に、で使用するすべてのデータセットは、 [!DNL Intelligent Services] Consumer ExperienceEvent(CEE) **** XDMスキーマに準拠している必要があります。
 
 このドキュメントでは、複数のチャネルからこのスキーマへのマーケティングイベントデータのマッピング、スキーマ内の重要なフィールドの概要を説明し、データを構造に効果的にマッピングする方法を判断する際の一般的な手引きを示します。
 
@@ -28,36 +28,36 @@ ht-degree: 3%
 
 1. 専用のAzure BLOBストレージコンテナのアクセス資格情報を要求するには、Adobeコンサルティングサービスに問い合わせてください。
 1. アクセス資格情報を使用して、データをBlobコンテナにアップロードします。
-1. Adobeコンサルティングサービスを利用して、 [Consumer ExperienceEventスキーマにデータをマッピングし](#cee-schema) 、インテリジェントサービスに取り込みます。
+1. Adobeコンサルティングサービスに相談して、 [Consumer ExperienceEventスキーマにマッピングされたデータをに取り込み](#cee-schema) 、取り込み [!DNL Intelligent Services]ます。
 
 ### [!DNL Experience Platform] データ準備
 
 データが既ににに保存されている場合 [!DNL Platform]は、次の手順に従います。
 
 1. Consumer ExperienceEventスキーマの構造を確認し、 [Consumer ExperienceEvent](#cee-schema) のフィールドにデータをマッピングできるかどうかを確認します。
-1. Adobeのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、Intelligent Servicesに取り込むか、自分でデータをマッピングする場合は [](#mapping) 、このガイドの手順に従ってください。
+1. Adobeのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、それに取り込む方法についてお問い合わせください。 [!DNL Intelligent Services]また、データを自分でマッピングする場合は、このガイド [](#mapping) の手順に従ってください。
 
 ## CEEスキーマについて {#cee-schema}
 
-Consumer ExperienceEventスキーマでは、デジタルマーケティングイベント（Webまたはモバイル）、オンラインまたはオフラインのコマースアクティビティに関する個人の行動を説明します。 このスキーマの使用は、Intelligent Servicesで必要となるのは、意味的に適切に定義されたフィールド（列）であるためです。そうしないとデータが明確にならなくなる不明な名前は一切避けられます。
+Consumer ExperienceEventスキーマでは、デジタルマーケティングイベント（Webまたはモバイル）、オンラインまたはオフラインのコマースアクティビティに関する個人の行動を説明します。 このスキーマは、意味的に適切に定義されたフィールド（列）があ [!DNL Intelligent Services] るので、このメソッドを使用する必要があります。そうしないとデータが明確にならなくなる不明な名前は避けられます。
 
 CEEスキーマは、すべてのXDM ExperienceEventスキーマと同様に、ポイントインタイムや関係する件名のIDなど、イベント(またはイベントのセット)が発生したときのシステムの時系列ベースの状態を取り込みます。 エクスペリエンスイベントは、何が起こったかの実際の記録であり、そのため、集約や解釈なしに起こったことを不変で、表します。
 
-インテリジェントサービスは、このスキーマ内の複数の主要フィールドを利用してマーケティングイベントデータからインサイトを生成します。これらのすべてはルートレベルで見つかり、展開して必須サブフィールドを表示できます。
+[!DNL Intelligent Services] このスキーマ内のいくつかの主要フィールドを利用して、マーケティングイベントデータからインサイトを生成します。これらのすべてはルートレベルにあり、展開して必須サブフィールドを表示できます。
 
 ![](./images/data-preparation/schema-expansion.gif)
 
 すべてのXDMスキーマと同様、CEEミックスインも拡張可能です。 つまり、CEEミックスインにはフィールドを追加でき、必要に応じて複数のスキーマに異なるバリエーションを含めることができます。
 
-Mixinの完全な例は、 [public XDM repositoryにあります](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)。以下の節で説明するキーフィールドの参照として使用してください。
+mixinの完全な例は、 [public XDM repositoryにあります](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)。 さらに、以下の [JSONファイルを表示してコピーし](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 、CEEスキーマに準拠するようにデータを構造化する方法の例を示します。 独自のデータをスキーマにマップする方法を決定するには、次の節で説明する主要フィールドについて学習する際に、これらの例を両方参照してください。
 
 ## キーフィールド
 
-CEEミックスインには、インテリジェントサービスが有用なインサイトを生成するために使用する必要がある主なフィールドがいくつかあります。 この節では、これらのフィールドの使用事例と期待されるデータについて説明し、その他の例に関するリファレンスドキュメントへのリンクを示します。
+CEEミックスインには、有用なインサイトを生成するために使用する必要がある主なフィールドがいくつかあ [!DNL Intelligent Services] ります。 この節では、これらのフィールドの使用事例と期待されるデータについて説明し、その他の例に関するリファレンスドキュメントへのリンクを示します。
 
 ### 必須フィールド
 
-すべての主要フィールドの使用を強くお勧めしますが、インテリジェントサービスが動作するために **必須のフィールドは** 2つあります。
+すべての主要フィールドの使用を強くお勧めしますが、 **動作させるには** 2つのフィールドが [!DNL Intelligent Services] 必須です。
 
 * [プライマリIDフィールド](#identity)
 * [xdm:timestamp](#timestamp)
@@ -65,7 +65,7 @@ CEEミックスインには、インテリジェントサービスが有用な�
 
 #### プライマリ同一性 {#identity}
 
-スキーマ内の1つのフィールドを主要なIDフィールドとして設定する必要があります。これにより、インテリジェントサービスは、時系列データの各インスタンスを個々の人にリンクできます。
+スキーマ内の1つのフィールドを主なIDフィールドとして設定する必要があります。これにより、時系列データの各インスタンス [!DNL Intelligent Services] を個々の人にリンクできます。
 
 データのソースと特性に基づいて、主IDとして使用する最適なフィールドを決定する必要があります。 IDフィールドには、フィールドが値として期待するIDデータの種類を示す **ID名前空間** (identity)を含める必要があります。 有効な名前空間値には次のものがあります。
 
@@ -107,7 +107,7 @@ CEEミックスインには、インテリジェントサービスが有用な�
 
 次の表に、 `xdm:channel` スキーマにマッピングされたマーケティングチャネルの例を示します。
 
-| チャネル | `@type` | `mediaType` | `mediaAction` |
+| Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | 有料検索 | https:/<span>/ns.adobe | 支払った | clicks |
 | Social - Marketing | https:/<span>/ns.adobe | 獲得した | clicks |
@@ -120,7 +120,7 @@ CEEミックスインには、インテリジェントサービスが有用な�
 
 ### 推奨フィールド
 
-この節では、その他の主要フィールドについて説明します。 これらのフィールドは、必ずしもインテリジェントサービスが動作するために必要なわけではありませんが、より豊富なインサイトを得るために、できる限り多くのフィールドを使用することを強くお勧めします。
+この節では、その他の主要フィールドについて説明します。 これらのフィールドは必ずしも機能するために必要なものではありませんが、より豊富なインサイトを得るために、できる限り多くのフィールドを使用することを強くお勧めします。 [!DNL Intelligent Services]
 
 #### xdm:productListItems
 
@@ -239,19 +239,19 @@ CEEミックスインには、インテリジェントサービスが有用な�
 
 ## データのマッピングと取り込み(#mapping)
 
-マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、次の手順は、インテリジェントサービスに取り込むデータを決定することです。 Intelligent Servicesで使用されるすべての履歴データは、4か月のデータの最小期間に加え、ルックバック期間として予定されている日数に該当する必要があります。
+マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、次の手順はどのデータを取り込むかを決定することで [!DNL Intelligent Services]す。 で使用されるすべての履歴データは、4か月のデータの最小期間に加えて、ルックバック期間として使用される日数に該当する [!DNL Intelligent Services] 必要があります。
 
 送信するデータの範囲を決定したら、Adobeコンサルティングサービスに連絡して、データをスキーマにマッピングし、サービスに取り込む方法についてお問い合わせください。
 
-購読があり、自分でデータをマッピングおよび取り込む場合は、次の節に示す手順に従ってください。 [!DNL Adobe Experience Platform]
+購読があり、自分でデータをマッピングおよび取り込む場合は、次の節に示す手順に従います。 [!DNL Adobe Experience Platform]
 
 ### Adobe Experience Platformの使用
 
 >[!NOTE]
 >
->以下の手順では、Experience Platformを購読する必要があります。 Platformにアクセスできない場合は、 [次の手順](#next-steps) 。
+>以下の手順では、Experience Platformを購読する必要があります。 プラットフォームにアクセスできない場合は、 [次の手順](#next-steps) 「」セクションに進みます。
 
-この節では、詳細な手順のチュートリアルへのリンクを含む、Intelligent Servicesで使用するデータをマッピングし、Experience Platformに取り込むためのワークフローについて説明します。
+この節では、で使用するデータをマッピングし、Experience Platformに取り込むためのワークフローについて説明します。詳細手順のチュートリアルへのリンク [!DNL Intelligent Services]も含まれます。
 
 #### CEEスキーマとデータセットの作成
 
@@ -271,7 +271,7 @@ CEEミックスインをスキーマに追加した後、データ内の追加�
 * [UIでのデータセットの作成](../catalog/datasets/user-guide.md#create) (既存のスキーマを使用する場合のワークフローに従います)
 * [APIでのデータセットの作成](../catalog/datasets/create.md)
 
-データセットの作成後は、 *[!UICONTROL Datasets]* ワークスペース内のPlatformUIでそのデータセットを確認できます。
+データセットの作成後は、 *[!UICONTROL Datasets]* ワークスペース内のプラットフォームUIで見つけることができます。
 
 ![](images/data-preparation/dataset-location.png)
 
@@ -279,7 +279,7 @@ CEEミックスインをスキーマに追加した後、データ内の追加�
 
 >[!NOTE]
 >
->今後のリリースのIntelligent Servicesでは、 [Adobe Experience PlatformIDサービス](../identity-service/home.md) をお客様の識別機能に統合する予定です。 したがって、次の手順は変更される場合があります。
+>の今後のリリースで [!DNL Intelligent Services] は、 [Adobe Experience Platform・アイデンティティ・サービスがお客様の識別機能に統合される予定です](../identity-service/home.md) 。 したがって、次の手順は変更される場合があります。
 
 、などの外部ソースからデータを取り込む場合 [!DNL Adobe Audience Manager]は、データセットに [!DNL Adobe Analytics]`primaryIdentityNameSpace` タグを追加する必要があります。 これは、Catalog Service APIにPATCHリクエストを行うことで行うことができます。
 
@@ -319,7 +319,7 @@ curl -X PATCH \
       }'
 ```
 
-次のリクエストは、Analyticsに適切なタグ値を追加します。
+次のリクエストによって、Analyticsに適したタグ値が追加されます。
 
 ```shell
 curl -X PATCH \
@@ -353,15 +353,17 @@ curl -X PATCH \
 
 #### データのマッピングと取り込み {#ingest}
 
-CEEスキーマとデータセットを作成したら、データテーブルをスキーマに開始マッピングし、そのデータをPlatformに取り込むことができます。 UIでCSVファイルを実行する方法については、CSVファイルのXDMスキーマ [への](../ingestion/tutorials/map-a-csv-file.md) マッピングに関するチュートリアルを参照してください。 データセットを取り込むと、同じデータセットを使用して他のデータファイルを取り込むことができます。
+CEEスキーマとデータセットを作成したら、データテーブルをスキーマに開始マッピングし、そのデータをプラットフォームに取り込むことができます。 UIでCSVファイルを実行する方法については、CSVファイルのXDMスキーマ [への](../ingestion/tutorials/map-a-csv-file.md) マッピングに関するチュートリアルを参照してください。 独自のデータを使用する前に、以下の [サンプルJSONファイルを使用して](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 、インジェストプロセスをテストできます。
 
-サポートされるサードパーティアプリケーションにデータが格納されている場合は、 [ソースコネクタを作成してマーケティングイベントのデータをリアルタイムでPlatformに取り込むこともできます](../sources/home.md) 。
+データセットを取り込むと、同じデータセットを使用して他のデータファイルを取り込むことができます。
+
+サポートされるサードパーティアプリケーションにデータが保存されている場合は、 [ソースコネクタを作成してマーケティングイベントのデータをリアルタイムで取り込むこ](../sources/home.md)[!DNL Platform] ともできます。
 
 ## 次の手順 {#next-steps}
 
-このドキュメントでは、インテリジェントサービスで使用するデータを準備する際の一般的なガイダンスを提供しました。 使用事例に基づく追加のコンサルティングが必要な場合は、Adobeコンサルティングサポートにお問い合わせください。
+このドキュメントでは、で使用するデータの準備に関する一般的なガイダンスを提供し [!DNL Intelligent Services]ました。 使用事例に基づく追加のコンサルティングが必要な場合は、Adobeコンサルティングサポートにお問い合わせください。
 
-顧客体験データのデータセットへの入力が完了すると、インテリジェントサービスを使用してインサイトを生成できます。 開始するには、次のドキュメントを参照してください。
+顧客体験データをデータセットに正しく埋め込むと、を使用してインサイト [!DNL Intelligent Services] を生成できます。 開始するには、次のドキュメントを参照してください。
 
 * [Attribution AI の概要](./attribution-ai/overview.md)
 * [顧客 AI の概要](./customer-ai/overview.md)
