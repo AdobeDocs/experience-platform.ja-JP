@@ -4,15 +4,15 @@ solution: Experience Platform
 title: ストリーミング送信先への接続とデータのアクティブ化
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1809'
 ht-degree: 61%
 
 ---
 
 
-# APIを使用して、ストリーミング送信先に接続し、Adobeのリアルタイム顧客データPlatformでデータをアクティブ化
+# APIを使用して、ストリーミング送信先に接続し、Adobeのリアルタイム顧客データプラットフォームでデータをアクティブ化
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ If you prefer to use the user interface in Adobe&#39;s Real-time CDP to connect 
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] は、Experience Platform内のデータの場所と系列のレコードシステムです。
 * [サンドボックス](../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
@@ -59,7 +59,8 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!N注意]
+>[!NOTE]
+>
 >Experience Platform のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメ ント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
@@ -260,7 +261,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
-* `{AUTHENTICATION_CREDENTIALS}`: ストリーミング先の名前を入力します。例： `Amazon Kinesis authentication credentials` または `Azure Event Hubs authentication credentials`。
+* `{AUTHENTICATION_CREDENTIALS}`:ストリーミング先の名前を入力します。例： `Amazon Kinesis authentication credentials` または `Azure Event Hubs authentication credentials`。
 * `{ACCESS_ID}`: *接続[!DNL Amazon Kinesis]の場合。* AmazonKinesisストレージの場所のアクセスID。
 * `{SECRET_KEY}`: *接続[!DNL Amazon Kinesis]の場合。* AmazonKinesisストレージの場所の秘密キー。
 * `{REGION}`: *接続[!DNL Amazon Kinesis]の場合。* AdobeReal-time CDPがデータをストリーミングする [!DNL Amazon Kinesis] アカウント内の領域。
@@ -374,9 +375,9 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: プロファイルベースの宛先のフロー仕様IDはで `71471eba-b620-49e4-90fd-23f1fa0174d8`す。 この値は呼び出しで使用します。
+* `{FLOW_SPEC_ID}`:プロファイルベースの宛先のフロー仕様IDはで `71471eba-b620-49e4-90fd-23f1fa0174d8`す。 この値は呼び出しで使用します。
 * `{SOURCE_CONNECTION_ID}`：手順「[Experience Platform データへの接続](#connect-to-your-experience-platform-data)」で取得したソース接続 ID を使用します。
-* `{TARGET_CONNECTION_ID}`: 「ストリーミング宛先への [接続」の手順で取得したターゲット接続IDを使用します](#connect-to-streaming-destination)。
+* `{TARGET_CONNECTION_ID}`:「ストリーミング宛先への [接続」の手順で取得したターゲット接続IDを使用します](#connect-to-streaming-destination)。
 
 **応答** 
 
@@ -468,7 +469,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`：前述の手順で取得したデータフローを使用します。
 * `{ETAG}`：前述の手順で取得した ETag を使用します。
 * `{SEGMENT_ID}`：この宛先に書き出すセグメント ID を指定します。アクティブ化するセグメントのセグメントIDを取得するには、https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/にアクセスし、左側のナビゲーションメニューで **[!UICONTROL Segmentation Service API]** (Segmentation Service API `GET /segment/jobs` )を選択して、操作を探します。
-* `{PROFILE_ATTRIBUTE}`: 例えば、 `personalEmail.address` または `person.lastName`
+* `{PROFILE_ATTRIBUTE}`:例えば、 `personalEmail.address` または `person.lastName`
 
 **応答** 
 
