@@ -4,7 +4,7 @@ solution: Experience Platform
 title: モデル（UI）のトレーニングと評価
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 93%
@@ -36,7 +36,10 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. モデルの名前を指定し、デフォルトのモデル設定を確認します。レシピの作成中にデフォルトの設定が適用されています。値をダブルクリックして設定値を確認および変更します。新しい設定のセットを指定するには、「**[!UICONTROL 新しい設定をアップロード]**」をクリックし、モデル構成を含む JSON ファイルをブラウザーウィンドウにドラッグします。「**[!UICONTROL 完了]**」をクリックして、モデルを作成します。
-   >[!NOTE]設定は、意図されたレシピに固有です。例えば、「小売販売レシピ」の設定は、「製品レコメンデーションレシピ」に対しては機能しません。小売販売レシピ設定のリストについては「[リファレンス](#reference)」の節を照してください。
+
+   >[!NOTE]
+   >
+   >設定は、意図されたレシピに固有です。例えば、「小売販売レシピ」の設定は、「製品レコメンデーションレシピ」に対しては機能しません。小売販売レシピ設定のリストについては「[リファレンス](#reference)」の節を照してください。
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +58,10 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. モデルの作成時に提供されたデフォルトの設定が表示されるので、値をダブルクリックして変更および修正します。「**[!UICONTROL 完了]**」をクリックして、トレーニング実行を作成し、実行します。
-   >[!NOTE]設定は、意図されたレシピに固有です。例えば、「小売販売レシピ」の設定は、「製品レコメンデーションレシピ」に対しては機能しません。小売販売レシピ設定のリストについては「[リファレンス](#reference)」の節を照してください。
+
+   >[!NOTE]
+   >
+   >設定は、意図されたレシピに固有です。例えば、「小売販売レシピ」の設定は、「製品レコメンデーションレシピ」に対しては機能しません。小売販売レシピ設定のリストについては「[リファレンス](#reference)」の節を照してください。
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
