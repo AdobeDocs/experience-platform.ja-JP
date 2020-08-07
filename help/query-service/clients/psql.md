@@ -4,10 +4,10 @@ solution: Experience Platform
 title: PSQL との接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 71%
+ht-degree: 58%
 
 ---
 
@@ -68,7 +68,9 @@ Click **[!UICONTROL copy]** for *[!UICONTROL PSQL Command]*.
 
 ![画像](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT]：PC の場合は、テキストエディターを使用してコマンド文字列の改行を削除し、文字列をコピーします。
+>[!IMPORTANT]
+>
+>PCを使用している場合は、テキストエディタを使用してコマンド文字列の改行を削除し、文字列をコピーします。
 
 コマンド文字列をターミナルまたはコマンドウィンドウにペーストし、Enter キーを押します。
 
