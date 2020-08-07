@@ -4,7 +4,7 @@ solution: Experience Platform
 title: セキュアPythonデータアクセスSDK
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 1%
@@ -128,7 +128,9 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 SDKは、データセットのフィルタリングに役立つ特定の演算子をサポートしています。 [!DNL Python]
 
->[!NOTE] フィルタリングに使用される関数は、大文字と小文字が区別されます。
+>[!NOTE]
+>
+>フィルタリングに使用される関数は、大文字と小文字が区別されます。
 
 ```python
 eq() = '='
