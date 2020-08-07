@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 電子メールマーケティングの宛先の作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: accc94ae8f19ca3a1575b4408f85155a17741335
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 81%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 81%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] は、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
@@ -55,7 +55,8 @@ Resources in [!DNL Experience Platform] can be isolated to specific virtual sand
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!N注意]
+>[!NOTE]
+>
 >For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
@@ -270,7 +271,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}`：前述の手順で取得した ID を使用します。
-* `{CONNECTION_SPEC_ID}`: 接続仕様IDを — に使用 [!DNL Unified Profile Service] し `8a9c3494-9708-43d7-ae3f-cda01e5030e1`ます。
+* `{CONNECTION_SPEC_ID}`:接続仕様IDを — に使用 [!DNL Unified Profile Service] し `8a9c3494-9708-43d7-ae3f-cda01e5030e1`ます。
 
 **応答** 
 
