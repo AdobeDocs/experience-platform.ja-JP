@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでのプロトコルコネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 7%
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # UIでのプロトコルコネクタのデータフローの設定
 
-データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みのタスクです。 このチュートリアルでは、プロトコルアカウントを使用して新しいデータフローを構成する手順を説明します。
+データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みタスクです。 このチュートリアルでは、プロトコルアカウントを使用して新しいデータフローを構成する手順を説明します。
 
 ## はじめに
 
@@ -40,7 +40,7 @@ ht-degree: 7%
 
 ## データフィールドのXDMスキーマへのマッピング
 
-「 *[!UICONTROL マッピング]* 」手順が表示され、ソースデータを  Platformデータセットにマッピングするインタラクティブなインターフェイスが提供されます。
+「 *[!UICONTROL マッピング]* 」手順が表示され、ソースデータをプラットフォーム  データセットにマッピングするインタラクティブなインターフェイスが提供されます。
 
 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
@@ -96,7 +96,9 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 1回のみの取り込みを設定するには、頻度ドロップダウン矢印を選択し、「 **[!UICONTROL 1回]**」を選択します。
 
->[!TIP] **[!UICONTROL 1回限りの取り込みでは]** 、Intervalと **[!UICONTROL Backfill]** は表示されません。
+>[!TIP]
+>
+>**[!UICONTROL 1回限りの取り込みでは]** 、Intervalと **[!UICONTROL Backfill]** は表示されません。
 
 スケジュールに適切な値を入力したら、「 **[!UICONTROL 次へ]**」を選択します。
 
