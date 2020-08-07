@@ -4,7 +4,7 @@ solution: Experience Platform
 title: スケジュール
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 47%
@@ -55,7 +55,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 正常な応答では、JSON として指定された IMS 組織のスケジュールのリストと共に HTTP ステータス 200 が返されます。
 
->[!NOTE] 次の応答は領域のために切り捨てられ、最初に返されたスケジュールのみを表示します。
+>[!NOTE]
+>
+>次の応答は領域のために切り捨てられ、最初に返されたスケジュールのみを表示します。
 
 ```json
 {
