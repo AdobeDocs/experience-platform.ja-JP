@@ -4,7 +4,7 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 53%
@@ -58,7 +58,7 @@ ht-degree: 53%
    ![IDとしての忠誠度ID](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   データ取り込み時 `Email_LC_SHA256` にターゲットの電子メールアドレスをAdobe Experience Platformにハッシュ化する場合は、電子メールのハッシュ要件に従って、 [!DNL Facebook] IDとして選択します [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 AdobeReal-time CDPは、 [!DNL Facebook] 要件を満たすためにEメールアドレスをハッシュ化します。
+   Adobe Experience Platformへのデータ取り込み時に、電子メールのハッシュ要件に従って顧客の電子メールアドレスをハッシュ化した場合は、ターゲットID `Email_LC_SHA256` として選択し [!DNL Facebook] ます [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 AdobeReal-time CDPは、 [!DNL Facebook] 要件を満たすためにEメールアドレスをハッシュ化します。
 
    ![フィールドへの入力後のIDマッピング](/help/rtcdp/destinations/assets/identity-mapping.png)
 
