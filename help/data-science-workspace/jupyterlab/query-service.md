@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupyter ノートブックのクエリサービス
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 69%
@@ -38,13 +38,17 @@ This tutorial demonstrates sample SQL queries for common use cases to explore, t
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   >[!NOTE] 新しい「ランチャー」タブが自動的に表示されなかった場合は、「 **[!UICONTROL ファイル]** 」をクリックして新しい「ランチャー」タブを開き、「 **[!UICONTROL 新規ランチャー」を選択します]**。
+   >[!NOTE]
+   >
+   >If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **[!UICONTROL File]** then select **[!UICONTROL New Launcher]**.
 
 2. 「ランチャー」タブで、Python 3 環境の「**[!UICONTROL 空白]**」アイコンをクリックして、空のノートブックを開きます。
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   >[!NOTE] 現在、ノートブックのクエリサービスでサポートされている環境は Python 3 のみです。
+   >[!NOTE]
+   >
+   > 現在、ノートブックのクエリサービスでサポートされている環境は Python 3 のみです。
 
 3. 左側の選択パネルで、**[!UICONTROL データ]**&#x200B;アイコンをクリックし、「**[!UICONTROL データセット]**」ディレクトリをダブルクリックして、すべてのデータセットをリストします。
 
@@ -86,7 +90,9 @@ This tutorial demonstrates sample SQL queries for common use cases to explore, t
    - `target_month`：ターゲットデータの元の月。
    - `target_day`：ターゲットデータの元の日。
 
-   >[!NOTE] これらの値はいつでも変更できます。値を変更する場合は、変数セルを実行して、変更を適用する必要があります。
+   >[!NOTE]
+   >
+   > これらの値はいつでも変更できます。値を変更する場合は、変数セルを実行して、変更を適用する必要があります。
 
 ## データのクエリ {#query-your-data}
 
