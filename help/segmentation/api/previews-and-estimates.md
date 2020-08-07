@@ -4,7 +4,7 @@ solution: Experience Platform
 title: エンドポイントのプレビューと予測
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 28%
@@ -36,13 +36,17 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 | 100 万～2000 万 | 100 万 |
 | 2000 万以上 | 全体の 5% |
 
->[!NOTE] 推定値は通常、10 ～ 15秒かかります。まず、記録の数が増えるので、概算と精製から始まります。
+>[!NOTE]
+>
+>推定値は通常、10 ～ 15秒かかります。まず、記録の数が増えるので、概算と精製から始まります。
 
 ## プレビューの新規作成 {#create-preview}
 
 新しいプレビューを作成するには、`/preview` エンドポイントに POST リクエストを送信します。
 
->[!NOTE] プレビュージョブが作成されると、予測ジョブが自動的に作成されます。 これら2つのジョブは同じIDを共有します。
+>[!NOTE]
+>
+>プレビュージョブが作成されると、予測ジョブが自動的に作成されます。 これら2つのジョブは同じIDを共有します。
 
 **API 形式**
 
