@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 小売販売スキーマとデータセットの作成
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 68%
@@ -98,7 +98,9 @@ This tutorial provides you with the prerequisites and assets required for all ot
    python bootstrap.py
    ```
 
-   >[!NOTE] スクリプトの完了には数分かかる場合があります。
+   >[!NOTE]
+   >
+   > スクリプトの完了には数分かかる場合があります。
 
 ## 次の手順
 
