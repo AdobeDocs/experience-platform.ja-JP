@@ -4,20 +4,26 @@ seo-title: Adobe Experience Platform Web SDK：SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します
 seo-description: Experience Platform Web SDK のインストール方法について説明します
 translation-type: tm+mt
-source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
+source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 70%
+source-wordcount: '623'
+ht-degree: 66%
 
 ---
 
 
 # SDK のインストール {#installing-the-sdk}
 
-このAdobe Experience Platform [!DNL Web SDK] は、コンテンツ配信ネットワーク(CDN)上で使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
+Adobe Experience PlatformWeb SDKの使用は、 [起動を使用して行うことをお勧めします](http://launch.adobe.com/)。 拡張機能カタログ `AEP Web SDK` 内でを検索し、インストールしてから、拡張機能を設定します。
 
-* 縮小バージョン： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
-* 縮小されていないバージョン： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
+AEP Web SDKは、CDNでも使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
+
+URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまたはalloy.js（縮小されていないバージョン用）
+
+以下に例を示します。
+
+* 縮小： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)
+* 縮小解除： [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
 ## コードの追加 {#adding-the-code}
 
