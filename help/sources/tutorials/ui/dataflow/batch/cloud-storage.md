@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでのクラウドストレージバッチコネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 6%
@@ -115,7 +115,9 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 1回のみの取り込みを設定するには、頻度ドロップダウン矢印を選択し、「 **[!UICONTROL 1回]**」を選択します。 1回限りの頻度で取り込むためのデータフローセットに対する編集は、開始時間が将来的に残る限り継続して行うことができます。 開始時間が経過すると、1回限りの頻度の値は編集できなくなります。
 
->[!TIP] **[!UICONTROL 1回限りの取り込みでは]** 、Intervalと **[!UICONTROL Backfill]** は表示されません。
+>[!TIP]
+>
+>**[!UICONTROL 1回限りの取り込みでは]** 、Intervalと **[!UICONTROL Backfill]** は表示されません。
 
 スケジュールに適切な値を入力したら、「 **[!UICONTROL 次へ]**」を選択します。
 
