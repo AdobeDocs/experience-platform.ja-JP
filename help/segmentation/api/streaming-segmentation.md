@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ストリーミングセグメント化
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 43%
+source-wordcount: '1377'
+ht-degree: 42%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 43%
 
 This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
-- [!DNL Segmentation](../home.md): データからセグメントやオーディエンスを作成する機能を提供し [!DNL Real-time Customer Profile] ます。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+- [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
+- [!DNL Segmentation](../home.md):データからセグメントやオーディエンスを作成する機能を提供し [!DNL Real-time Customer Profile] ます。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
@@ -70,6 +70,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 | ---------- | ------- |
 | 受信ヒット | 時間制限のない、単一の着信イベントを参照するセグメント定義。 |
 | 相対時間枠内での着信ヒット | 過去7日間に発生した単一のイベントを参照す **るセグメント定義**。 |
+| プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 |
 | プロファイルを参照する着信ヒット | 時間制限のない、1つの着信イベント、および1つ以上のプロファイル属性を参照するセグメント定義。 |
 | 相対的な時間枠内のプロファイルを参照する着信ヒット | 過去7日間の、1つの着信イベントと1つ以上のプロファイル属性を参照す **るセグメント定義**。 |
 | プロファイルを参照する複数のイベント | 過去24時間以内に複数のイベントを参照するセグメント定義 **には** 、1つ以上のプロファイル属性が含まれます。 |
