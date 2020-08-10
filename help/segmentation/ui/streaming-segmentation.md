@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ストリーミングセグメント化
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '668'
 ht-degree: 2%
 
 ---
@@ -32,6 +32,7 @@ ht-degree: 2%
 | ---------- | ------- | ------- |
 | 受信ヒット | 時間制限のない、単一の着信イベントを参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | 相対時間枠内での着信ヒット | 過去7日間に発生した単一のイベントを参照す **るセグメント定義**。 | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 |  |
 | プロファイルを参照する着信ヒット | 時間制限のない、1つの着信イベント、および1つ以上のプロファイル属性を参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | 相対的な時間枠内のプロファイルを参照する着信ヒット | 過去7日間の、1つの着信イベントと1つ以上のプロファイル属性を参照す **るセグメント定義**。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | プロファイルを参照する複数のイベント | 過去24時間以内に複数のイベントを参照するセグメント定義 **には** 、1つ以上のプロファイル属性が含まれます。 | ![](../images/ui/streaming-segmentation/event-history-success.png) |
