@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI での PayPal ソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 17%
@@ -25,7 +25,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 * [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+   * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 既に [!DNL PayPal] ベース接続がある場合は、このドキュメントの残りの部分をスキップし、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/payments.md)
@@ -46,9 +46,9 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 必要な資格情報を収集したら、次の手順に従って新しい受信ベース接続を作成し、ア [!DNL PayPal] カウントをリンクし [!DNL Platform]ます。
 
-「 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 [ *[!UICONTROL カタログ]* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 [ *[!UICONTROL カタログ]* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
 
-「 *[!UICONTROL CRM]* カテゴリ」の下で、「 **[!UICONTROL PayPal]** 」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、「 **[!UICONTROL 接続ソース]**」を選択します。
+「 *[!UICONTROL CRM]* カテゴリ」の下で、「 **[!UICONTROL PayPal]** 」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、 **[!UICONTROL 追加「]** data」を選択します。
 
 ![カタログ](../../../../images/tutorials/create/paypal/catalog.png)
 
@@ -68,4 +68,4 @@ PayPalに *[!UICONTROL 接続]* ページが表示されます。 このペー�
 
 ## 次の手順
 
-このチュートリアルに従って、ア [!DNL PayPal] カウントへの基本的な接続を確立しました。 次のチュートリアルに進み、CRMデータをPlatformに導くためのデータフローを [設定できるようになりました](../../dataflow/payments.md)。
+このチュートリアルに従って、ア [!DNL PayPal] カウントへの基本的な接続を確立しました。 次のチュートリアルに進み、CRMデータをプラットフォームに取り込むためのデータフローを [設定できるようになりました](../../dataflow/payments.md)。
