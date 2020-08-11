@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI での PostgreSQL ソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 18%
@@ -25,7 +25,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 * [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+   * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 PSQLベースの接続が既に存在する場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/databases.md)。
@@ -44,9 +44,9 @@ PSQLベースの接続が既に存在する場合は、このドキュメント�
 
 必要な資格情報を収集したら、次の手順に従って、PSQLアカウントをリンクする新しい受信ベース接続を作成でき [!DNL Platform]ます。
 
-「 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 [ *[!UICONTROL カタログ]* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 [ *[!UICONTROL カタログ]* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
 
-「 *[!UICONTROL Databases]* 」カテゴリの下で、「 **[!UICONTROL PostgreSQL DB]** 」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、**[!UICONTROL 「Connect source]**」を選択します。
+「 *[!UICONTROL Databases]* 」カテゴリの下で、「 **[!UICONTROL PostgreSQL DB]** 」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、 **[!UICONTROL 追加「]** data」を選択します。
 
 ![](../../../../images/tutorials/create/psql/catalog.png)
 
@@ -66,4 +66,4 @@ PSQLベースの接続が既に存在する場合は、このドキュメント�
 
 ## 次の手順
 
-このチュートリアルに従って、PSQLアカウントへの基本接続を確立しました。 次のチュートリアルに進み、データをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/databases.md)。
+このチュートリアルに従って、PSQLアカウントへの基本接続を確立しました。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/databases.md)。
