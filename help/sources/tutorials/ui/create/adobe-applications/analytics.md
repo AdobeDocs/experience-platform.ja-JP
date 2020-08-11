@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI での Adobe Analytics ソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 15%
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # UI での Adobe Analytics ソースコネクタの作成
 
-このチュートリアルでは、ユーザーデータをAdobe Experience Platformに取り込むためのUIでAdobe Analyticsソースコネクタを作成する手順を説明します。
+このチュートリアルでは、UIで消費者データをAdobe Experience Platformに取り込むためのAdobe Analyticsソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -26,7 +26,7 @@ ht-degree: 15%
 
 ## Adobe Analyticsとのソース接続の作成
 
-<a href="https://platform.adobe.com" target="_blank">Adobe Experience Platformにログインし</a> 、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択してソースワークスペースにアクセスします。 カ *タログ* 画面には、受信接続を作成するために利用できるソースが表示され、各ソースには、それらに関連付けられた既存のアカウント数とデータセットフローが表示されます。
+[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) ソース **** 」を選択してソースワークスペースにアクセスします。 カ *タログ* 画面には、受信接続を作成するために利用できるソースが表示され、各ソースには、それらに関連付けられた既存のアカウント数とデータセットフローが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
@@ -36,7 +36,7 @@ ht-degree: 15%
 
 ### データの選択
 
-*Adobe Analyticsのステップが表示されます* 。 この画面には、Analyticsの事前に確立されたデータセットフローが表示されます。 「データの **[!UICONTROL 選択]**」をクリックして、新しいデータセットフローを作成できます。
+*Adobe Analyticsのステップが表示されます* 。 この画面には、Analyticsで事前に設定されたデータセットフローが表示されます。 「データの **[!UICONTROL 選択]**」をクリックして、新しいデータセットフローを作成できます。
 
 >[!NOTE]
 >
@@ -46,13 +46,13 @@ ht-degree: 15%
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-使用可能なレポートスイートのリストから、Platformに含めるレポートスイートを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
+使用可能なレポートスイートのリストから、プラットフォームに取り込むレポートスイートを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
 ### データセットフローの名前を指定する
 
-デー *タセットフローの詳細* （オプション）が表示されます。データセットフローの名前と説明を入力する必要があります。 「 **[UICONTROL! 終了したら次]** 。
+データセットフローの詳細 *(* データセットフローの名前と説明)を入力する必要がある手順が表示されます。 「 **[UICONTROL! 終了したら次]** 。
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
@@ -60,14 +60,14 @@ ht-degree: 15%
 
 「 *レビュー* 」の手順が表示され、作成前に新しいAnalyticsのインバウンドデータセットフローを確認できます。 接続の詳細は、次のようなカテゴリ別にグループ化されます。
 
-* *接続*: ソース接続のタイプと選択したレポートスイートが表示されます。
-* *データセットとマップのフィールドの割り当て*: その他のソースコネクタを作成する場合、このコンテナには、データセットが適用するスキーマなど、ソースデータが取り込むデータセットが表示されます。 出力スキーマとデータセットは、Analyticsのデータセットフローに対して自動的に設定されます。
+* *接続*:ソース接続のタイプと選択したレポートスイートが表示されます。
+* *データセットとマップのフィールドの割り当て*:その他のソースコネクタを作成する場合、このコンテナには、データセットが適用するスキーマなど、ソースデータが取り込むデータセットが表示されます。 出力スキーマとデータセットは、Analyticsデータセットフローに対して自動的に設定されます。
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### データセットフローの監視
 
-データセットフローが作成されたら、データを通じて取り込まれるデータを監視できます。 「 *カタログ* 」画面で、「 *データセットフロー* 」を選択して、Analyticsアカウントに関連付けられた確立されたフローのリストを表示します。
+データセットフローが作成されたら、データを通じて取り込まれるデータを監視できます。 カタ *ログ* 画面で、「 *データセットフロー* 」を選択して、Analyticsアカウントに関連付けられている確立済みフローのリストを表示します。
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
@@ -75,7 +75,7 @@ ht-degree: 15%
 
 コネクタは、2つのデータセットフローをインスタンス化します。 一方のフローはバックフィルデータを表し、もう一方のフローはライブデータを表します。 埋め戻しデータはプロファイル用に設定されていませんが、分析およびデータ科学の使用例のためにデータレークに送信されます。
 
-バックフィル、ライブデータ、およびそれぞれの待ち時間について詳しくは、 [Analyticsデータコネクタの概要を参照してください](../../../../connectors/adobe-applications/analytics.md)。
+バックフィル、ライブデータおよびそれぞれの待ち時間について詳しくは、 [Analytics Data Connectorの概要を参照してください](../../../../connectors/adobe-applications/analytics.md)。
 
 リストから表示するデータセットフローを選択します。
 
@@ -91,13 +91,13 @@ ht-degree: 15%
 
 The *Edit governance labels* panel appears. この画面では、データセットフローの契約、ID、機密ラベルにアクセスして編集できます。
 
-Analyticsからのデータにラベルを付ける方法の詳細については、『 [data usage labels guide](../../../../../data-governance/labels/user-guide.md)』を参照してください。
+Analyticsからのデータにラベルを付ける方法について詳しくは、『 [データ使用ラベルガイド](../../../../../data-governance/labels/user-guide.md)』を参照してください。
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
 ## 次の手順とその他のリソース
 
-接続が作成されると、ターゲットスキーマとデータセットフローが自動的に作成され、受信データが格納されます。 さらに、データのバックフィルが発生し、最大 13 か月の履歴データが取り込まれます。初回取り込みが完了すると、Analyticsのデータが、リアルタイムの顧客プロファイルやセグメント化サービスなどの下流のPlatformサービスで使用されます。 詳しくは、次のドキュメントを参照してください。
+接続が作成されると、ターゲットスキーマとデータセットフローが自動的に作成され、受信データが格納されます。 さらに、データのバックフィルが発生し、最大 13 か月の履歴データが取り込まれます。初回取り込みが完了すると、Analyticsデータが使用され、リアルタイム顧客プロファイルやセグメント化サービスなどの下流のプラットフォームサービスで使用されます。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../../profile/home.md)
 * [セグメント化サービスの概要](../../../../../segmentation/home.md)
