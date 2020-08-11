@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UIにAzureイベントハブのソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '448'
 ht-degree: 16%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 - [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+   - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 既に [!DNL Event Hubs] アカウントをお持ちの場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/streaming/cloud-storage.md)。
@@ -46,9 +46,9 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 必要な資格情報を収集したら、次の手順に従って [!DNL Event Hubs] アカウントをにリンクでき [!DNL Platform]ます。
 
-「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」タブには、接続可能な様々なソースが表示され [!DNL Platform]ます。 各ソースには、関連付けられた既存のアカウントの数が表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」タブには、接続可能な様々なソースが表示され [!DNL Platform]ます。 各ソースには、関連付けられた既存のアカウントの数が表示されます。
 
-[ *[!UICONTROL Cloudストレージ]***カテゴリで、[]** Azureイベントハブ]を選択し、[+]アイコン(+) **** をクリックして新しいイベントハブコネクタを作成します。
+[ *[!UICONTROL Cloudストレージ]***カテゴリで、[]** Azureイベントハブ **を選択し、次に[]** Azureイベントハブ]を選択して、新しいハブコネクタを作成します。
 
 ![](../../../../images/tutorials/create/eventhub/catalog.png)
 
@@ -68,4 +68,4 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ## 次の手順
 
-このチュートリアルに従って、イベントハブアカウントをに接続し [!DNL Platform]ました。 次のチュートリアルに進み、クラウドストレージのデータをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/streaming/cloud-storage.md)。
+このチュートリアルに従って、イベントハブアカウントをに接続し [!DNL Platform]ました。 次のチュートリアルに進み、クラウドストレージのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/streaming/cloud-storage.md)。
