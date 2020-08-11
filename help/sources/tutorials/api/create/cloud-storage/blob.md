@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzure BLOBコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '582'
 ht-degree: 20%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 20%
 
 # APIを使用した [!DNL Azure Blob][!DNL Flow Service] コネクタの作成
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、ストレージに接続する手順 [!DNL Experience Platform] を順を追って説明します(以下「BLOB」と呼び [!DNL Azure Blob] ます)。
 
-でユーザーインターフェイスを使用する場合 [!DNL Experience Platform]は、 [Azure BlobまたはAmazonS3ソースコネクタUIのチュートリアル](../../../ui/create/cloud-storage/blob-s3.md) で、同様の操作を実行するための手順を順を追って説明します。
+でユーザーインターフェイスを使用する場合 [!DNL Experience Platform]は、 [Azure BlobソースコネクタUIのチュートリアル](../../../ui/create/cloud-storage/blob.md) で、同様の操作を実行するための手順を順を追って説明します。
 
 ## はじめに
 
