@@ -4,10 +4,10 @@ seo-title: 宛先ワークスペース
 description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 seo-description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 96%
+source-wordcount: '807'
+ht-degree: 61%
 
 ---
 
@@ -22,15 +22,34 @@ ht-degree: 96%
 
 ## [!UICONTROL カタログ] {#catalog}
 
-「**[!UICONTROL カタログ]**」タブには、アドビが提供するすべての宛先のリストが表示されます。このリストには、データを送信できます。
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Adobe Real-time CDP, that you can send data to.
 
-ページ上の検索機能を使用して、**[!UICONTROL カテゴリ]**&#x200B;コントロールを使用して、特定の宛先を見つけたり、宛先をフィルターしたりします。
+AdobeReal-time CDPユーザー・インターフェースは、宛先カタログ・ページに多数の検索およびフィルタ・オプションを提供します。
 
-カタログ内の宛先を選択して、右側のレールを開きます。ここでは、宛先への接続を設定する（**[!UICONTROL 宛先の接続]**）、既存の宛先の接続を表示する（**[!UICONTROL 宛先の閲覧]**）、ドキュメントを参照して各宛先に関する詳細情報を確認（**[!UICONTROL ドキュメントを表示]**）できます。
+* ページの検索機能を使用して、特定の行き先を見つけます。
+* **[!UICONTROL カテゴリコントロールを使用した宛先のフィルタリング]** 。
+* 「す **[!UICONTROL べての宛先]** 」と「 **[!UICONTROL 自分の宛先]**」を切り替えます。 [ **[!UICONTROL All destinations]** ]を選択すると、使用可能なAdobeReal-time CDPの宛先がすべて表示されます。 「 **[!UICONTROL 自分の宛先]** 」を選択すると、接続を確立した宛先のみが表示されます。
+* 「表示 **[!UICONTROL 接続]** 」または「 **[!UICONTROL 拡張子]**」を選択します。 この2つのカテゴリの違いについて詳しくは、 [宛先のタイプとカテゴリを参照してください](/help/rtcdp/destinations/destination-types.md)。
 
-![宛先カタログオプション](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+![リンク先のフィルタリングと検索デモ](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
 
-宛先カテゴリと各宛先の情報について詳しくは、[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)を参照してください。
+ターゲット・カードには、 **[!UICONTROL Configure]** ( **[!UICONTROL 設定)または]** Activate（アクティブ化）コントロールと、より多くのオプションを表示するセカンダリ・コントロールが含まれます。 これらはすべて次のとおりです。
+
+| 制御 | 説明 |
+---------|----------
+| [!UICONTROL 設定] | 宛先への接続を作成できます。 |
+| [!UICONTROL アクティブ化] | 宛先への接続を確立すると、セグメントをアクティブ化できます。 |
+| [!UICONTROL 表示勘定] | 宛先に接続したアカウントの表示。 |
+| [!UICONTROL 表示データフロー] | 宛先に存在するデータアクティベーションフローの表示 |
+| [!UICONTROL 表示ドキュメント] | 特定のドキュメントページへのリンクを開き、そのドキュメントページの詳細と設定に役立ちます。 |
+
+![宛先カードの制御](/help/rtcdp/destinations/assets/destination-card-options.png)
+
+カタログ内で目的のカードを選択し、右側のパネルを開きます。  ここで、宛先の説明を確認できます。 右側のレールには、上の表で説明したのと同じコントロール、宛先の説明、宛先のカテゴリとタイプの表示が表示されます。
+
+![宛先カタログオプション](/help/rtcdp/destinations/assets/destination-right-rail.png)
+
+リンク先のカテゴリと各リンク先の情報について詳しくは、「 [リンク先カタログ](/help/rtcdp/destinations/destinations-catalog.md) 」および「 [リンク先のタイプとカテゴリ」を参照してください](/help/rtcdp/destinations/destination-types.md)。
 
 ## [!UICONTROL 参照] {#browse}
 
