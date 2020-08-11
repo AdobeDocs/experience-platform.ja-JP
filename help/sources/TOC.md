@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 translation-type: tm+mt
-source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
+source-git-commit: b019b6b8b69e0bfac6fc8840da350d92733dc97c
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 7%
+source-wordcount: '606'
+ht-degree: 6%
 
 ---
 
@@ -27,13 +27,15 @@ ht-degree: 7%
       - [Google AdWordsコネクタ](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
       - [AmazonKinesisコネクタ](connectors/cloud-storage/kinesis.md)
+      - [AmazonS3コネクタ](connectors/cloud-storage/s3.md)
       - [Apache HDFSコネクタ](connectors/cloud-storage/hdfs.md)
       - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
-      - [Azure BlobとAmazonS3コネクタ](connectors/cloud-storage/blob-s3.md)
+      - [Azure BLOBコネクタ](connectors/cloud-storage/blob.md)
       - [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
       - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
       - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
+      - [AmazonS3およびAzure Blobコネクタ](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforceコネクタ](connectors/crm/salesforce.md)
@@ -139,13 +141,15 @@ ht-degree: 7%
          - [Google AdWordsコネクタ](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
          - [AmazonKinesisコネクタ](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [AmazonS3コネクタ](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFSコネクタ](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data LakeストレージGen2コネクタ](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Azure BlobとAmazonS3コネクタ](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Azure BLOBコネクタ](tutorials/ui/create/cloud-storage/blob.md)
          - [Azureイベントハブコネクタ](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure Fileストレージコネクタ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTPおよびSFTPコネクタ](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Google Cloudストレージコネクタ](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [AmazonS3およびBLOBコネクタ](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamicsコネクタ](tutorials/ui/create/crm/dynamics.md)
          - [Salesforceコネクタ](tutorials/ui/create/crm/salesforce.md)
