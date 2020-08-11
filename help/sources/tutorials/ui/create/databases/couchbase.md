@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでCouchbaseソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 13%
@@ -25,7 +25,7 @@ This tutorial requires a working understanding of the following components of [!
 
 * [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+   * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 既に有効な [!DNL Couchbase] 接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/databases.md)。
@@ -42,11 +42,11 @@ This tutorial requires a working understanding of the following components of [!
 
 必要な資格情報を収集したら、次の手順に従って、接続する新しい [!DNL Couchbase] アカウントを作成でき [!DNL Platform]ます。
 
-「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには既存のアカウントの数と関連するデータセットフローが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには既存のアカウントの数と関連するデータセットフローが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 *[!UICONTROL Databases]* 」 **[!UICONTROL カテゴリで、「]** Couchbase **」を選択し、「+」アイコン(+)** をクリックして新しい [!DNL Couchbase] コネクタを作成します。
+「 *[!UICONTROL Databases]* 」 **[!UICONTROL カテゴリで、「]** Couchbase **[!UICONTROL 」を選択し、次に「]** 追加Data [!DNL Couchbase] 」を選択して、新しいコネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/couchbase/catalog.png)
 
@@ -66,4 +66,4 @@ Couchbase *[!UICONTROL に接続]* ページが表示されます。 このペ�
 
 ## 次の手順
 
-このチュートリアルに従って、ア [!DNL Couchbase] カウントへの接続を確立しました。 次のチュートリアルに進み、データをPlatformに取り込むようにデータフローを [設定できます](../../dataflow/databases.md)。
+このチュートリアルに従って、ア [!DNL Couchbase] カウントへの接続を確立しました。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/databases.md)。
