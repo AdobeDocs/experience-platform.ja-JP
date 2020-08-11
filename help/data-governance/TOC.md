@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform データガバナンスのヘルプ
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: de79706be6303f82c6d0e68cdf2c9d389f23d9a8
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '107'
 ht-degree: 74%
 
 ---
@@ -27,10 +27,11 @@ ht-degree: 74%
    * [ポリシー適用の概要](enforcement/overview.md)
    * [Policy Service API を使用してデータ使用ポリシーを適用する](enforcement/api-enforcement.md)
 * Policy Service API developer guide {#api}
+   * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
    * [ラベル](api/labels.md)
    * [ポリシー](api/policies.md)
    * [マーケティングアクション](api/marketing-actions.md)
    * [評価](api/evaluation.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [Platformのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
