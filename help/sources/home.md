@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform ソースコネクタの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '801'
 ht-degree: 59%
 
 ---
@@ -26,7 +26,7 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 ### アドビアプリケーション
 
-[!DNL Experience Platform] Adobe Analytics、Adobe Audience Manager、などの他のAdobeアプリケーションからデータを取り込むことがで [!DNL Experience Platform Launch]きます。 詳しくは、次の関連ドキュメントを参照してください。
+[!DNL Experience Platform] adobe analytics、Adobe Audience Manager、その他のAdobeアプリケーションからデータを取り込むことがで [!DNL Experience Platform Launch]きます。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Manager コネクタの概要](connectors/adobe-applications/audience-manager.md)
 - [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -45,8 +45,9 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) コネクタ
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) コネクタ
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) コネクタ
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) コネクタ
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) コネクタ
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) コネクタ
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) コネクタ
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) コネクタ
