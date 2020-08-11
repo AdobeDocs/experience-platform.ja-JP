@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; monitor accounts; monitor dataflows
+description: Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ソース・ワークスペースから既存のアカウントとデータ・フローを表示する手順を説明します。
 solution: Experience Platform
-title: データフローの監視と削除
+title: アカウントとデータフローの監視
 topic: overview
 translation-type: tm+mt
-source-git-commit: f08ad2c9cc48c08bcdc0e278481992e8789000b5
+source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 12%
+source-wordcount: '893'
+ht-degree: 8%
 
 ---
 
 
-# データフローの監視と削除
+# UIでのアカウントとデータの監視
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、 *[!UICONTROL ソース]* ・ワークスペースから既存のアカウントとデータ・フローを表示する手順を説明します。 また、 *[!UICONTROL ソース]* ・ワークスペースからデータ・フローを削除する手順も示します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、 *[!UICONTROL ソース]* ・ワークスペースから既存のアカウントとデータ・フローを表示する手順を説明します。
 
 ## はじめに
 
@@ -22,16 +23,16 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 - [エクスペリエンスデータモデルl（XDM）システム](../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
    - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+   - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [リアルタイム顧客プロファイル](../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 ## アカウントの監視
 
-「 [Adobe Experience Platform](https://platform.adobe.com) 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には、アカウントおよびデータフローを作成できる様々なソースが表示されます。 各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には、アカウントおよびデータフローを作成できる様々なソースが表示されます。 各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
 
 上部のヘッダーから「 *[!UICONTROL アカウント]* 」を選択して、既存のアカウントを表示します。
 
-![カタログ](../../images/tutorials/monitor/catalog.png)
+![カタログ](../../images/tutorials/monitor/catalog-accounts.png)
 
 [ *[!UICONTROL アカウント]* ]ページが表示されます。 このページには、ソース、ユーザー名、データ・フロー数、作成日など、表示可能なアカウントのリストが表示されます。
 
@@ -43,13 +44,9 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![アカウントを選択](../../images/tutorials/monitor/accounts-sort.png)
 
-「 *[!UICONTROL アカウント]* 」ページから、アクセスしたアカウントに関連付けられた既存のデータフローのリストを表示できます。 表示するデータフローを選択します。
+「 *[!UICONTROL アカウント]* 」ページから、アクセスしたアカウントに関連付けられた既存のデータフローまたはターゲットデータセットのリストを表示できます。
 
-![accounts-page](../../images/tutorials/monitor/dataflows.png)
-
-「 *[!UICONTROL Dataflowアクティビティ]* 」画面が表示されます。 このページには、グラフの形式で消費されるメッセージの割合が表示されます。
-
-![dataset-flow-アクティビティ](../../images/tutorials/monitor/dataflow-activity.png)
+![データフロー](../../images/tutorials/monitor/dataflows.png)
 
 ## データフローの監視
 
@@ -65,37 +62,53 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![並べ替えデータフロー](../../images/tutorials/monitor/dataflows-sort.png)
 
-「 *[!UICONTROL Dataflowアクティビティ]* 」画面が表示されます。 このページには、グラフの形式で消費されるメッセージの割合が表示されます。
+[ *[!UICONTROL Dataflowアクティビティ]* ]ページには、取り込まれたレコードと失敗したレコードの数、およびデータフローの状態と処理時間に関する情報が含まれます。 データフローの上にあるカレンダーアイコンを選択して、インジェストレコードの時間枠を調整します。
 
-![dataset-flow-アクティビティ](../../images/tutorials/monitor/dataflow-activity.png)
+![dataflow-アクティビティ](../../images/tutorials/monitor/dataflow-activity.png)
+
+カレンダーを使用すると、取り込むレコードに応じて異なる時間枠を表示できます。 「 *[!UICONTROL 過去7日間]* 」と「過去30日間」の2つの事前設定済みオプションのいずれかを選択できます **。 または、カレンダーを使用してカスタムの期間を設定できます。 選択した期間を選択し、「 **[!UICONTROL 適用]** 」を選択して続行します。
+
+![フローカレンダー](../../images/tutorials/monitor/flow-calendar.png)
+
+デフォルトでは、 *[!UICONTROL Dataflowアクティビティ]* には、データフローに関連付けられた *[!UICONTROL プロパティ]* ・パネルが表示されます。 リストからフロー実行を選択し、固有の実行IDに関する情報を含む、関連するメタデータを表示します。
+
+「 **[!UICONTROL Dataflow実行開始]** 」を選択して、 *[!UICONTROL Dataflow実行の概要にアクセスします]*。
+
+![runs](../../images/tutorials/monitor/run-metadata.png)
+
+デ *[!UICONTROL ータフロー実行の概要]* ：メタデータ、 *[!UICONTROL 部分的なインジェスト]* ・ステータス、割り当てられた **&#x200B;エラーしきい値など、データフローに関する情報が表示されます。 上部のヘッダーには、 *[!UICONTROL エラーの概要も含まれます]*。 エラ *[!UICONTROL ーの概要]* には、インジェストプロセスでエラーが発生したステップを示す、特定の最上位レベルのエラーが含まれます。
+
+![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
+
+次の表に、 *[!UICONTROL エラーの概要に表示されるエラーコードを示します]*。
+
+| エラーコード | エラーメッセージ |
+| ---------- | ----------- |
+| `CONNECTOR-1001-500` | &quot;コピーアクティビティに問題が発生しました。&quot; |
+| `CONNECTOR-2001-500` | 「Experience Platformソースからデータセットへのコピーで問題が発生しました。」 |
+| `CONNECTOR-3001-500` | &quot;一括取り込みAPIを使用したバッチの作成中に、フロープロバイダーで問題が発生しました。&quot; |
+
+画面の下半分には、 *[!UICONTROL Dataflow実行エラーに関する情報が含まれています]*。 ここから、取り込んだファイルの表示、プレビューおよびダウンロードのエラー診断、またはファイルマニフェストのダウンロードを行うこともできます。
+
+「 *[!UICONTROL Dataflow run errors]* 」セクションには、 *[!UICONTROL エラー・コード]*、失敗したレコード数、エラーを説明する情報が表示されます。
+
+インジェストエラーの詳細を表示するには、 **[!UICONTROL プレビューエラー診断]** (Ingestion Error Diagnostics)を選択します。
+
+![データフロー実行エラー](../../images/tutorials/monitor/dataflow-run-errors.png)
+
+[ *[!UICONTROL エラー診断プレビュー]* ]パネルが表示されます。 この画面には、 *[!UICONTROL ファイル名]*、 *[!UICONTROL エラーコード]*、エラーが発生した列の名前、エラーの説明など、インジェストエラーに関する具体的な情報が表示されます。
+
+この節では、エラーを含む列のプレビューも説明します。
+
+> [!IMPORTANT] エラー診断プレビューを有効にするには *[!UICONTROL 、データフローを構成する際に]* Partial ingestion *[!UICONTROL and]* Error diagnostics ** をアクティブにする必要があります。 これを行うと、フローの実行中に取り込まれたすべてのレコードをスキャンできます。
+
+![プレビューエラー診断](../../images/tutorials/monitor/preview-error-diagnostics.png)
+
+エラーをプレビューした後、 **[!UICONTROL UICONTROL dataflow runs overview]** パネルで「 *[Download]* from」を選択して、完全なエラー診断にアクセスし、ファイルマニフェストをダウンロードできます。 詳しくは、 [エラー診断とメタデータの](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) ダウンロードのドキュメントを参照してください [](../../../ingestion/batch-ingestion/partial.md#download-metadata) 。
+
+![プレビューエラー診断](../../images/tutorials/monitor/download.png)
 
 データフローの監視と取り込みの詳細については、ストリーミングデータフローの [監視に関するチュートリアルを参照してください](../../../ingestion/quality/monitor-data-flows.md)。
-
-## データフローの削除
-
-誤って作成されたデータフローや不要になったデータフローは、データフロー画面にアクセスして削除できます。 並べ替えファネルアイコンを使用して削除するデータフローを見つけ、データフローを選択して **[!UICONTROL プロパティ]** ・パネルを開きます。
-
-データフローを削除するには、右上のプロパティから **[!UICONTROL 「削除]** 」を選択します。
-
-![delete-dataflows](../../images/tutorials/monitor/dataflows-sort-delete.png)
-
-最終確認メッセージが表示されます。 「 **[!UICONTROL 削除]** 」を選択して確認します。
-
-![confirm-delete](../../images/tutorials/monitor/confirm-delete.png)
-
-しばらくすると、削除が成功したことを確認する緑の確認ボックスが画面の下部に表示されます。
-
-![削除に成功した](../../images/tutorials/monitor/deletion-confirmed.png)
-
-または、 *[!UICONTROL アカウント]* 画面からデータフローを削除できます。 並べ替えファネルアイコンを使用してアクセスするアカウントを見つけ、リストからアカウントを選択します。
-
-![アカウントを選択](../../images/tutorials/monitor/accounts-sort.png)
-
-The *[!UICONTROL Accounts]* page appears. 削除するデータフローを選択し、プロパティ・パネルから **[!UICONTROL 「削除]** 」を選択してプロセスを完了します。
-
-![accounts-delete](../../images/tutorials/monitor/accounts-delete.png)
-
-上記の確認手順に従って、プロセスを完了します。
 
 ## 次の手順
 
