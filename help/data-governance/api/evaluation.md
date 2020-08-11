@@ -4,44 +4,55 @@ solution: Experience Platform
 title: ポリシー
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 95%
+source-wordcount: '1472'
+ht-degree: 14%
 
 ---
 
 
-# ポリシー評価
+# ポリシー評価 エンドポイント
 
 Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. 返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反するポリシーのセットの形をとります。
 
-デフォルトでは、**ステータスが「ENABLED」に設定されたポリシーのみが評価に含まれます**。ただし、`?includeDraft=true`クエリーパラメーターを使用して、評価に「DRAFT」ポリシーを含めることができます。
+By default, only policies whose status is set to `ENABLED` participate in evaluation. ただし、クエリパラメーターを使用して、評価に `?includeDraft=true``DRAFT` ポリシーを含めることはできます。
 
 評価のリクエストは、次の 3 つの方法のいずれかでおこなうことができます。
 
-1. 一連のデータ使用ラベルとマーケティングアクションが指定された場合、アクションはポリシーに違反していますか。
-1. 1 つ以上のデータセットとマーケティングアクションが指定された場合、そのアクションはポリシーに違反していますか。
-1. 1 つ以上のデータセットと、各データセット内の 1 つ以上のフィールドのサブセットを指定した場合、アクションはポリシーに違反していますか。
+1. マーケティングアクションとデータ使用ラベルのセットが指定されている場合、そのアクションはポリシーに違反していますか。
+1. マーケティングアクションと1つ以上のデータセットが指定された場合、そのアクションはポリシーに違反していますか。
+1. マーケティングアクション、1つ以上のデータセット、およびそれらの各データセット内の1つ以上のフィールドのサブセットを指定した場合、アクションはポリシーに違反しますか。
 
-## データ使用ラベルとマーケティングアクションを使用したポリシーの評価
+## はじめに
 
-データ使用ラベルの存在に基づいてポリシー違反を評価するには、リクエスト時にデータに存在するラベルのセットを指定する必要があります。これは、次の例に示すように、クエリーパラメーターを使用しておこないます。このパラメーターでは、データ使用ラベルは値のコンマ区切りリストとして提供されます。
+The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). 先に進む前に、 [はじめに](./getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+
+## データ使用ラベルを使用してポリシー違反を評価します {#labels}
+
+GET要求で `duleLabels` クエリパラメーターを使用することで、特定のデータ使用ラベルのセットの存在に基づいてポリシー違反を評価できます。
 
 **API 形式**
 
 ```http
-GET /marketingActions/core/{marketingActionName}/constraints?duleLabels={value1},{value2}
-GET /marketingActions/custom/{marketingActionName}/constraints?duleLabels={value1},{value2}
+GET /marketingActions/core/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
+GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
 ```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | 一連のデータ使用ラベルに対してテストするマーケティングアクションの名前。 マーケティングアクションのエンドポイントに [GETリクエストを行うことで、使用可能なマーケティングアクションのリストを取得できます](./marketing-actions.md#list)。 |
+| `{LABELS_LIST}` | マーケティングアクションをテストするためのデータ使用ラベル名のコンマ区切りリスト。 次に例を示します。 `duleLabels=C1,C2,C3`<br><br>ラベル名では大文字と小文字が区別されます。 パラメーターにリストする際は、大文字と小文字を正しく指定していることを確認してく `duleLabels` ださい。 |
 
 **リクエスト**
 
-次の例のリクエストは、ラベル C1 および C3 に対するマーケティングアクションを評価します。データ使用ラベルを使用してポリシーを評価する場合は、次の点に注意してください。
-* **データ使用ラベルでは大文字と小文字が区別されます。** 上に示したリクエストは違反ポリシーを返しますが、同じリクエストを小文字のラベル（`"c1,c3"`、`"C1,c3"`、`"c1,C3"`）は含まれません。
-* **ポリシーでの表現における`AND`および`OR`演算子に注意してください。**&#x200B;この例では、いずれかのラベル（`C1`または`C3`）がリクエスト内で単独で表示された場合、マーケティングアクションはこのポリシーに違反していません。両方のラベル（`C1 AND C3`）を使用して、違反ポリシーを返します。ポリシーを慎重に評価し、ポリシー式を十分に定義します。
+次の例のリクエストは、ラベル C1 および C3 に対するマーケティングアクションを評価します。
 
-```SHELL
+>[!IMPORTANT]
+>
+>ポリシーでの表現における`AND`および`OR`演算子に注意してください。In the example below, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1` and `C3`) to return the violated policy. ポリシーを慎重に評価し、ポリシー式を十分に定義します。
+
+```sh
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -52,7 +63,7 @@ curl -X GET \
 
 **応答**
 
-応答オブジェクトには、リクエストで送信されるラベルと一致する`duleLabels`配列が含まれます。データ使用ラベルに対して指定したマーケティングアクションを実行すると、ポリシーに違反する場合、`violatedPolicies`配列には影響を受けるポリシー（複数可）の詳細が含まれます。ポリシーに違反しない場合は、`violatedPolicies` 配列は空（`[]`）です。
+成功した応答には `violatedPolicies` 配列が含まれます。配列には、指定されたラベルに対するマーケティングアクションの実行結果として違反されたポリシーの詳細が含まれます。 If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -110,29 +121,33 @@ curl -X GET \
 }
 ```
 
-## データセットとマーケティングアクションを使用したポリシーの評価
+## データセットを使用したポリシー違反の評価 {#datasets}
 
-また、データ使用ラベルを収集できる 1 つ以上のデータセットの ID を指定することで、ポリシー違反を評価することもできます。これは、以下に示すように、マーケティングアクションのコアエンドポイントまたはカスタム `/constraints` エンドポイントに対して POST リクエストを実行し、リクエスト本文内でデータセット ID を指定することで行われます。
+データ使用ラベルを収集できる1つ以上のデータセットのセットに基づいて、ポリシー違反を評価できます。 これは、特定のマーケティングアクションに対してエンドポイントに対してPOSTリクエストを実行し、リクエスト本文内でデータセットIDのリストを提供することで行います。 `/constraints`
 
 **API 形式**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | 1つ以上のデータセットに対してテストするマーケティングアクションの名前。 マーケティングアクションのエンドポイントに [GETリクエストを行うことで、使用可能なマーケティングアクションのリストを取得できます](./marketing-actions.md#list)。 |
 
 **リクエスト**
 
-リクエスト本文には、各データセット ID のオブジェクトを持つ配列が含まれています。リクエストの本文を送信するので、「Content-Type:application/json」リクエストヘッダーは必須です。次に例を示します。
+次のリクエストは、3つのデータセットのセットに対して `crossSiteTargeting` マーケティングアクションを実行し、ポリシー違反の有無を評価します。
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '[
         {
             "entityType": "dataSet",
@@ -149,13 +164,14 @@ curl -X POST \
       ]'
 ```
 
-**応答**
+| プロパティ | 説明 |
+| --- | --- |
+| `entityType` | IDが兄弟 `entityId` プロパティで示されるエンティティのタイプ。 現在、指定できる値は `dataSet`です。 |
+| `entityId` | マーケティングアクションをテストするデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ます [!DNL Catalog Service] 。 詳細については、 [ [!DNL Catalog] listingobjectsのガイドを参照してください](../../catalog/api/list-objects.md) 。 |
 
-応答オブジェクトには、指定したデータセット内のすべてのラベルの統合リストを含む`duleLabels`配列が含まれます。このリストには、データセット内のすべてのフィールドにデータセットレベルおよびフィールドレベルのラベルが含まれます。
+**応答** 
 
-この応答には、各データセットのオブジェクトを含む`discoveredLabels`配列も含まれ、`datasetLabels`がデータセットレベルおよびフィールドレベルのラベルに分類されて表示されます。各フィールドレベルのラベルには、そのラベルを持つ特定のフィールドへのパスが表示されます。
-
-指定したマーケティングアクションがデータセット内の`duleLabels`のポリシーに違反する場合、影響を受けるポリシー（複数可）の詳細が`violatedPolicies`配列に含まれます。ポリシーに違反しない場合は、`violatedPolicies` 配列は空（`[]`）です。
+成功した応答には `violatedPolicies` 配列が含まれます。配列には、指定されたデータセットに対するマーケティングアクションの実行の結果として違反されたポリシーの詳細が含まれます。 If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -326,27 +342,36 @@ curl -X POST \
 }
 ```
 
-## データセット、フィールド、およびマーケティングアクションを使用したポリシーの評価
+| プロパティ | 説明 |
+| --- | --- |
+| `duleLabels` | 応答オブジェクトには、指定したデータセット内のすべてのラベルの統合リストを含む`duleLabels`配列が含まれます。このリストには、データセット内のすべてのフィールドにデータセットレベルおよびフィールドレベルのラベルが含まれます。 |
+| `discoveredLabels` | この応答には、各データセットのオブジェクトを含む`discoveredLabels`配列も含まれ、`datasetLabels`がデータセットレベルおよびフィールドレベルのラベルに分類されて表示されます。各フィールドレベルのラベルには、そのラベルを持つ特定のフィールドへのパスが表示されます。 |
 
-データセット ID を 1 つ以上指定する以外に、各データセット内のフィールドのサブセットも指定できます。これは、これらのフィールドのデータ使用ラベルのみが評価されることを示します。データセットのみを含む POST リクエストと同様に、このリクエストは各データセットの特定のフィールドをリクエスト本文に追加します。
+## 特定のデータセットフィールドを使用してポリシー違反を評価します {#fields}
+
+1つ以上のデータセット内のフィールドのサブセットに基づいてポリシー違反を評価できるので、これらのフィールドに適用されたデータ使用ラベルのみが評価されます。
 
 データセットフィールドを使用してポリシーを評価する場合は、次の点に注意してください。
 
-* **フィールド名では大文字と小文字が区別されます。**&#x200B;フィールドを指定する場合は、データセットに表示されるとおりに記述する必要があります（例：`firstName` vs `firstname`）。
-* **データセットラベルの継承。**&#x200B;データ使用ラベルは複数のレベルで適用でき、下方向に継承されます。ポリシーの評価が期待どおりの結果を返さない場合は、フィールドレベルで適用されるラベルに加えて、データセットからフィールドに継承されるラベルを確認してください。
+* **フィールド名では大文字と小文字が区別されます**。フィールドを指定する場合は、データセットに表示されるとおりに記述する必要があります(例： `firstName` vs `firstname`)。
+* **データセットラベルの継承**:データセット内の個々のフィールドは、データセットレベルで適用されたラベルを継承します。 ポリシーの評価が期待どおりに返されない場合は、フィールドレベルで適用されるラベルに加え、データセットレベルからフィールドに継承されたラベルがないかどうかを確認してください。
 
 **API 形式**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | データセットフィールドのサブセットに対してテストするマーケティングアクションの名前。 マーケティングアクションのエンドポイントに [GETリクエストを行うことで、使用可能なマーケティングアクションのリストを取得できます](./marketing-actions.md#list)。 |
 
 **リクエスト**
 
-リクエスト本文には、各データセット ID オブジェクトと、評価に使用するデータセット内のフィールドのサブセットを含む配列が含まれています。リクエストの本文を送信するので、「Content-Type:application/json」リクエストヘッダーは必須です。次に例を示します。
+次のリクエストは、3つのデータセットに属する特定のフィールドセット `crossSiteTargeting` に対するマーケティングアクションをテストします。 ペイロードは、データセットのみを含む [評価要求に似ており](#datasets)、ラベルを収集する各データセットに対して特定のフィールドを追加します。
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -387,13 +412,17 @@ curl -X POST \
       ]'
 ```
 
-**応答**
+| プロパティ | 説明 |
+| --- | --- |
+| `entityType` | IDが兄弟 `entityId` プロパティで示されるエンティティのタイプ。 現在、指定できる値は `dataSet`です。 |
+| `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ます [!DNL Catalog Service] 。 詳細については、 [ [!DNL Catalog] listingobjectsのガイドを参照してください](../../catalog/api/list-objects.md) 。 |
+| `entityMeta.fields` | データセットのスキーマ内の特定のフィールドへのパスの配列。JSONポインター文字列の形式で提供されます。 これらの文字列に許可された構文の詳細については、『API基本ガイド [』の「](../../landing/api-fundamentals.md#json-pointer) JSONポインター」の節を参照してください。 |
 
-応答オブジェクトには、指定したフィールドで見つかったラベルの統合リストを含む`duleLabels`配列が含まれます。データセットラベルも含まれ、フィールドに継承されます。
+**応答** 
 
-指定されたフィールドのデータに対して指定されたマーケティングアクションを実行することでポリシーに違反した場合、影響を受けるポリシー（複数可）の詳細が`violatedPolicies`配列に含まれます。ポリシーに違反しない場合は、`violatedPolicies` 配列は空（`[]`）です。
+成功した応答には `violatedPolicies` 配列が含まれます。配列には、指定されたデータセットフィールドに対するマーケティングアクションの実行結果として違反されたポリシーの詳細が含まれます。 If no policies are violated, the `violatedPolicies` array will be empty.
 
-以下の応答では、`duleLabels`のリストが現在は短くなっています。リクエスト本文に指定されたフィールドのみが含まれるので、これは、各データセットの`discoveredLabels`と同様です。また、以前に違反したポリシー「広告またはコンテンツのターゲット設定」には両方の`C4 AND C6`ラベルが必要なので、違反はなくなり、`violatedPolicies`配列は空になって表示されます。
+以下の例の応答とデータセットのみを含む [応答を比較すると](#datasets)、収集されたラベルのリストが短いことに注意してください。 また、各データセット `discoveredLabels` の値は、リクエスト本文で指定されたフィールドのみが含まれるので、減らされています。 また、以前に違反したポリシーでは両方の `Targeting Ads or Content` ラベルを表示する必要があるため、空の `C4 AND C6``violatedPolicies` 配列で示されるように違反することはありません。
 
 ```JSON
 {
@@ -491,6 +520,166 @@ curl -X POST \
     ],
     "violatedPolicies": []
 }
+```
+
+## ポリシーを一括で評価 {#bulk}
+
+エンドポイントでは、1回のAPI呼び出しで複数の評価ジョブを実行できます。 `/bulk-eval`
+
+**API 形式**
+
+```http
+POST /bulk-eval
+```
+
+**リクエスト**
+
+一括評価要求のペイロードは、オブジェクトの配列でなければなりません。実行する評価ジョブごとに1つずつ。 データセットとフィールドに基づいて評価されるジョブの場合は、 `entityList` 配列を指定する必要があります。 データ使用ラベルに基づいて評価されるジョブの場合は、 `labels` 配列を指定する必要があります。
+
+>[!WARNING]
+>
+>一覧に表示されている評価ジョブに、との両方が含まれ `entityList` る場合、 `labels` と配列が含まれる場合は、エラーが発生します。 データセットとラベルの両方に基づいて同じマーケティングアクションを評価する場合は、そのマーケティングアクションに対して別々の評価ジョブを含める必要があります。
+
+```sh
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "labels": [
+            "C1",
+            "C2",
+            "C3"
+          ]
+        },
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "entityList": [
+            {
+              "entityType": "dataSet",
+              "entityId": "5b67f4dd9f6e710000ea9da4",
+              "entityMeta": {
+                "fields": [
+                  "address"
+                ]
+              }
+            }
+          ]
+        }
+      ]'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `evalRef` | ポリシー違反のラベルまたはデータセットに対してテストするマーケティングアクションのURIです。 |
+| `includeDraft` | デフォルトでは、有効なポリシーのみが評価に参加します。 をに設定 `includeDraft` すると、ステータス `true`のポリシーも参加 `DRAFT` します。 |
+| `labels` | マーケティングアクションをテストするための一連のデータ使用ラベル。<br><br>**重要&#x200B;**:このプロパティを使用する場合、`entityList`プロパティを同じオブジェクトに含めないでください。 データセットやフィールドを使用して同じマーケティングアクションを評価するには、`entityList`配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
+| `entityList` | 一連のデータセットと、それらのデータセット内の（オプションで）特定のフィールドに対して、マーケティングアクションをテストします。<br><br>**重要&#x200B;**:このプロパティを使用する場合、`labels`プロパティを同じオブジェクトに含めないでください。 特定のデータ使用ラベルを使用して同じマーケティングアクションを評価するには、`labels`配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
+| `entityType` | マーケティングアクションをテストするエンティティのタイプ。 現在は、`dataSet` のみがサポートされています。 |
+| `entityId` | マーケティングアクションをテストするデータセットのID。 |
+| `entityMeta.fields` | （オプション）マーケティングアクションをテストするデータセット内の特定のフィールドのリスト。 |
+
+**応答** 
+
+成功した応答は、評価結果の配列を返します。リクエストで送信されたポリシー評価ジョブごとに1つ。
+
+```json
+[
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "violatedPolicies": []
+    }
+  },
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2"
+      ],
+      "discoveredLabels": [
+        {
+          "entityType": "dataset",
+          "entityId": "5b67f4dd9f6e710000ea9da4",
+          "dataSetLabels": {
+            "connection": {
+              "labels": [
+
+              ]
+            },
+            "dataset": {
+              "labels": [
+                "C1",
+                "C2"
+              ]
+            },
+            "fields": []
+          }
+        }
+      ],
+      "violatedPolicies": [
+        {
+          "name": "Email Policy",
+          "status": "DRAFT",
+          "marketingActionRefs": [
+            "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting"
+          ],
+          "description": "Conditions under which we won't send marketing-based email",
+          "deny": {
+            "label": "C1",
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C1"
+              },
+              {
+                "label": "C3"
+              }
+            ]
+          },
+          "id": "76131228-7654-11e8-adc0-fa7ae01bbebc",
+          "imsOrg": "{IMS_ORG}",
+          "created": 1529696681413,
+          "createdClient": "{CLIENT_ID}",
+          "createdUser": "{USER_ID}",
+          "updated": 1529697651972,
+          "updatedClient": "{CLIENT_ID}",
+          "updatedUser": "{USER_ID}",
+          "_links": {
+            "self": {
+              "href": "./76131228-7654-11e8-adc0-fa7ae01bbebc"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
 ```
 
 ## ポリシー評価 [!DNL Real-time Customer Profile]
