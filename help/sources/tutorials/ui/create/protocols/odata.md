@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIで汎用ODataソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 15%
@@ -25,7 +25,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 * [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+   * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
 既に有効なOData接続がある場合は、このドキュメントの残りの部分をスキップし、プロトコルデータセットフローの [設定に関するチュートリアルに進むことができます](../../dataflow/protocols.md)
@@ -44,11 +44,11 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 必要な資格情報を収集したら、次の手順に従って、接続する新しい [!DNL OData] アカウントを作成でき [!DNL Platform]ます。
 
-「 <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> 」にログインし、左のナビゲーションバーで「 **[!UICONTROL ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースから受信アカウントを作成できます。 各ソースには、既存のアカウントの数と、それらに関連付けられたデータセットフローが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースから受信アカウントを作成できます。 各ソースには、既存のアカウントの数と、それらに関連付けられたデータセットフローが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 *[!UICONTROL プロトコル]* 」カテゴリの下で、「 **[!UICONTROL 汎用OData]** 」を選択して、情報バーを画面の右側に表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信接続を作成するには、「 **[!UICONTROL 接続ソース]**」を選択します。
+「 *[!UICONTROL プロトコル]* 」カテゴリの下で、「 **[!UICONTROL 汎用OData]** 」を選択して、情報バーを画面の右側に表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信接続を作成するには、 **[!UICONTROL 追加「]** data」を選択します。
 
 ![カタログ](../../../../images/tutorials/create/odata/catalog.png)
 
@@ -68,4 +68,4 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ## 次の手順
 
-このチュートリアルに従って、ア [!DNL OData] カウントへの接続を確立しました。 次のチュートリアルに進み、プロトコルのデータをPlatformに送り込むためのデータセットフローを [設定できるようになりました](../../dataflow/protocols.md)。
+このチュートリアルに従って、ア [!DNL OData] カウントへの接続を確立しました。 次のチュートリアルに進み、プロトコルデータをプラットフォームに取り込むためのデータセットフローを [設定できるようになりました](../../dataflow/protocols.md)。
