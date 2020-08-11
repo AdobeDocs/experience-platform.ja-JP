@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 translation-type: tm+mt
-source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
+source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 7%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 7%
    - CRM {#crm}
       - [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforceコネクタ](connectors/crm/salesforce.md)
-   - Customer success {#customer-success}
+   - お客様の成功 {#customer-success}
       - [Salesforce Service Cloudコネクタ](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNowコネクタ](connectors/customer-success/servicenow.md)
    - データベース {#databases}
@@ -45,7 +45,7 @@ ht-degree: 7%
       - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
       - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
       - [AzureData Explorerコネクタ](connectors/databases/data-explorer.md)
-      - [Azure SynapseAnalyticsコネクタ](connectors/databases/synapse-analytics.md)
+      - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
       - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
       - [Couchbaseコネクタ](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
@@ -82,7 +82,7 @@ ht-degree: 7%
          - [HubSpotコネクタ](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamicsコネクタ](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforceコネクタ](tutorials/api/create/crm/salesforce.md)
-      - Customer success {#customer-success}
+      - お客様の成功 {#customer-success}
          - [Salesforce Service Cloudコネクタ](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNowコネクタ](tutorials/api/create/customer-success/servicenow.md)
       - データベース {#databases}
@@ -90,7 +90,7 @@ ht-degree: 7%
          - [Azure HDInsightsコネクタのApache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/api/create/databases/spark.md)
          - [AzureData Explorerコネクタ](tutorials/api/create/databases/data-explorer.md)
-         - [Azure SynapseAnalyticsコネクタ](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analyticsコネクタ](tutorials/api/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/api/create/databases/ats.md)
          - [Couchbaseコネクタ](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
@@ -149,7 +149,7 @@ ht-degree: 7%
       - CRM {#crm}
          - [Microsoft Dynamicsコネクタ](tutorials/ui/create/crm/dynamics.md)
          - [Salesforceコネクタ](tutorials/ui/create/crm/salesforce.md)
-      - Customer Success {#customer-success}
+      - 顧客の成功 {#customer-success}
          - [Salesforce Service Cloudコネクタ](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNowコネクタ](tutorials/ui/create/customer-success/servicenow.md)
       - データベース {#databases}
@@ -157,7 +157,7 @@ ht-degree: 7%
          - [Azure HDInsightsコネクタのApache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/ui/create/databases/spark.md)
          - [AzureData Explorerコネクタ](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure SynapseAnalyticsコネクタ](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analyticsコネクタ](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/ui/create/databases/ats.md)
          - [Couchbaseコネクタ](tutorials/ui/create/databases/couchbase.md)
          - [Google Bigクエリコネクタ](tutorials/ui/create/databases/bigquery.md)
@@ -187,5 +187,6 @@ ht-degree: 7%
       - [支払コネクタのデータフローの構成](tutorials/ui/dataflow/payments.md)
       - [プロトコルコネクタのデータフローの設定](tutorials/ui/dataflow/protocols.md)
    - [受信データをアクティブ化して顧客プロファイルを入力します](tutorials/ui/profile.md)
-   - [アカウントとデータセットフローの監視](tutorials/ui/monitor.md)
-- [Platformのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+   - [アカウントとデータフローの監視](tutorials/ui/monitor.md)
+   - [データフローの削除](tutorials/ui/delete.md)
+- [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
