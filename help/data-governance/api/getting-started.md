@@ -1,54 +1,45 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: データポリシーサービス API 開発者ガイド
+title: Policy Service APIの使い始めに
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 56%
+source-wordcount: '398'
+ht-degree: 28%
 
 ---
 
 
-# モジュール [!DNL Policy Service] API開発者ガイド
+# Getting started with the [!DNL Policy Service] API
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. The DULE [!DNL Policy Service] provides a RESTful API that allows you to create and manage data usage policies to determine what marketing actions can be taken against data that has been labeled with certain data usage labels.
-
-This document provides instructions for performing the key operations available in the [!DNL Policy Service] API. まだデータフレームワークに慣れていない場合は、まず「[データガバナンスの概要](../home.md)」を確認し、データフレームワークに慣れてください。データポリシーの作成と適用の手順については、「[データポリシーのチュートリアル](../policies/create.md)」を参照してください。
-
-This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Policy Service] API.
-
-## Getting started with DULE [!DNL Policy Service]
-
-Before beginning to work with the [!DNL Policy Service], data on [!DNL Experience Platform] must have appropriate DULE labels applied. データ使用ラベルをデータセットおよびフィールドに適用する手順については、『[データラベルユーザーガイド](../labels/user-guide.md)』を参照してください。
+この [!DNL Policy Service] APIを使用すると、Adobe Experience Platformに関連する様々なリソースを作成および管理でき [!DNL Data Governance]ます。 This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Policy Service] API.
 
 ## 前提条件
 
-このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+開発者ガイドを使用するには、データガバナンス機能の操作に関わる様々な [!DNL Experience Platform] サービスについて、十分な理解が必要です。 Before beginning to work with the [!DNL Policy Service API], please review the documentation for the following services:
 
-* [!DNL Data Governance](../home.md): データ使用のコンプライアンスを [!DNL Experience Platform] 適用するフレームワーク。
-   * [ラベルの集計](../labels/overview.md): データ使用ラベルは、 [!DNL Experience Data Model] (XDM)データフィールドに適用され、そのデータへのアクセス方法に関する制限を指定します。
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-* [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Data Governance]](../home.md):データ使用のコンプライアンスを [!DNL Experience Platform] 適用するフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ## API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+The [!DNL Policy Service] API documentation provides example API calls to demonstrate how to format your requests. この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
-## 必須ヘッダーの値の収集
+## 必須ヘッダー
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+また、API ドキュメントでは、 エンドポイントを正しく呼び出すために、[認証に関するチュートリアル](../../tutorials/authentication.md)を完了している必要があります。[!DNL Platform]Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Data Governance], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
@@ -56,31 +47,14 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
-* Content-Type: application/json
+* `Content-Type: application/json`
 
 ## コアリソースとカスタムリソース
 
 Within the [!DNL Policy Service] API, all policies and marketing actions are referred to as either `core` or `custom` resources.
 
-`core` リソースはアドビが定義および管理するものですが、`custom` リソースは個々の顧客が作成および管理するものなので、作成した IMS 組織のみに表示され、一意のものです。このため、`core` リソースに対して許可される操作は、リストと参照の操作（`GET`）のみです。一方、`custom` リソースに対しては、リスト、参照、および更新の操作（`POST`、`PUT`、`PATCH`、`DELETE`）を使用できます。
-
-## ポリシーステータス
-
-データ使用ポリシーには、`DRAFT`、`ENABLED`、`DISABLED`の 3 つのステータスのいずれかを設定できます。 
-
-デフォルトでは、「有効」ポリシーのみがポリシー評価に関与します。
-
-「ドラフト」ポリシーは、`?includeDraft=true` クエリパラメーターを設定してのみ、ポリシー評価でも考慮できます。ポリシー評価の詳細については、本文書末尾にある「[ポリシーの適用](../enforcement/overview.md) 」の節を参照してください。
-
-## マーケティングアクション名 {#marketing-actions}
-
-マーケティングアクション名は、マーケティングアクションの一意の識別子です。各 `core` マーケティングアクションには、すべての IMS 組織に適用される一意の名前が付けられます。これらの名前はアドビによって定義および管理されます。一方、顧客が定義したマーケティングアクション（`custom` リソース）はすべて、個々の組織内で一意であり、他の IMS 組織で表示されたり他の IMS 組織と共有されることはありません。
-
-Steps for working with marketing actions in the [!DNL Policy Service] API are outlined in the [Marketing Actions](#marketing-actions) section later in this document.
+`core` リソースとは、Adobeが定義および保守するものです。 `custom` リソースとは、組織が作成および保守するものであり、したがって、IMS組織に対してのみ一意で表示されます。 このため、`core` リソースに対して許可される操作は、リストと参照の操作（`GET`）のみです。一方、`custom` リソースに対しては、リスト、参照、および更新の操作（`POST`、`PUT`、`PATCH`、`DELETE`）を使用できます。
 
 ## 次の手順
 
-前提条件となる知識と認証情報を取得したので、この開発者ガイドで提供されている API 呼び出し例をお読みください。
-
-* [マーケティングアクション](marketing-actions.md)
-* [ポリシー](policies.md)
+Policy Service APIを使用した呼び出しを開始するには、使用可能なエンドポイントガイドの1つを選択します。
