@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ソースファイルのレシピへのパッケージ化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 47%
@@ -38,7 +38,7 @@ Docker イメージを使用すると、開発者は、ライブラリや他の�
 
 作成されたDockerイメージは、レシピ作成ワークフローで指定された資格情報を使用してAzureコンテナレジストリにプッシュされます。
 
-Azure Container Registry の資格情報を取得するには、<a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> にログインします。左側のナビゲーション列で、「**[!UICONTROL Workflows]**」に移動します。「 **[!UICONTROL レシピの]** 読み込み **[!UICONTROL 」を選択し、「]**&#x200B;開始」を選択します。 以下のスクリーンショットを参照してください。
+Azure Container Registry の資格情報を取得するには、[Adobe Experience Platform](https://platform.adobe.com) にログインします。左側のナビゲーション列で、「**[!UICONTROL Workflows]**」に移動します。「 **[!UICONTROL レシピの]** 読み込み **[!UICONTROL 」を選択し、「]**&#x200B;開始」を選択します。 以下のスクリーンショットを参照してください。
 
 ![](../images/models-recipes/package-source-files/import.png)
 
