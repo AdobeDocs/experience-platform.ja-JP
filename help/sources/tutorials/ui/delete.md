@@ -1,0 +1,69 @@
+---
+keywords: Experience Platform;home;popular topics; delete dataflows
+description: Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ソース・ワークスペースからデータ・フローを削除する手順を説明します。
+solution: Experience Platform
+title: データフローの削除
+topic: overview
+translation-type: tm+mt
+source-git-commit: ccbf9de6b64ecc4595ea455374f81bb5520d7b83
+workflow-type: tm+mt
+source-wordcount: '460'
+ht-degree: 17%
+
+---
+
+
+# データフローの削除
+
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、 *[!UICONTROL Sources]* Workspaceからデータフローを削除する手順を説明します。
+
+## はじめに
+
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+
+- [エクスペリエンスデータモデルl（XDM）システム](../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+   - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
+   - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+- [リアルタイム顧客プロファイル](../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+
+## UIを使用したデータフローの削除
+
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には、アカウントおよびデータフローを作成できる様々なソースが表示されます。 各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
+
+「 **[!UICONTROL Dataflows]** 」を選択して、 *[!UICONTROL Dataflows]* ページにアクセスします。
+
+![dataset-flow-アクティビティ](../../images/tutorials/delete/dataflows.png)
+
+既存のデータフローのリストが表示されます。 このページには、ソース、ユーザー名、実行ステータス、最終実行日など、既存のデータフローの並べ替え可能なリストが表示されます。 左上の **ファネルアイコン** を選択して並べ替えます。
+
+![データフローリスト](../../images/tutorials/delete/dataflows-list.png)
+
+並べ替えパネルは、画面の左側に表示され、使用可能なソースのリストが含まれます。
+並べ替え機能を使用して、複数のソースを選択できます。
+
+アクセスするソースを選択し、メイン・インタフェースのデータ・フローのリストから削除するデータ・フローを見つけます。 この例では、選択されたソースは **Azure Blobストレージ** 、データフロー名は **顧客プロファイルdataflowです**。 並べ替えパネルから複数のソースを選択する場合、リストは作成日順に並べ替えられるので、最も新しく作成されたデータフローが最初に表示されます。
+
+削除するデータフローを選択します。
+
+![データフロー並べ替え](../../images/tutorials/delete/dataflows-sort.png)
+
+[ *[!UICONTROL プロパティ]* ]パネルが画面の右側に表示され、選択したデータフローに関する情報と、[ *[!UICONTROL 編集]スケジュールのオプションが含まれます]*。
+
+データ・フローを削除するには、「 **[!UICONTROL 削除]**」を選択します。
+
+![データフロー並べ替え](../../images/tutorials/delete/dataflows-properties.png)
+
+最後の確認ダイアログボックスが表示されます。「 **[!UICONTROL 削除]** 」を選択してプロセスを完了します。
+
+![次を削除します。](../../images/tutorials/delete/delete.png)
+
+しばらくすると、削除が成功したことを確認する緑の確認ボックスが画面の下部に表示されます。
+
+![確認された](../../images/tutorials/delete/confirmed.png)
+
+## 次の手順
+
+このチュートリアルに従うと、 *[!UICONTROL Sources]* ワークスペースから既存のアカウントおよびデータフローに正常にアクセスできます。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
+
+- [リアルタイム顧客プロファイルの概要](../../../profile/home.md)
+- [Data Science ワークスペースの概要](../../../data-science-workspace/home.md)
