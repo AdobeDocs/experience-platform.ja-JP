@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 translation-type: tm+mt
-source-git-commit: b019b6b8b69e0bfac6fc8840da350d92733dc97c
+source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '613'
 ht-degree: 6%
 
 ---
@@ -131,6 +131,7 @@ ht-degree: 6%
       - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
    - [サードパーティのクラウドストレージシステムからのパーケーデータの取り込み](tutorials/api/cloud-storage-parquet.md)
    - [Flow Service APIを使用したデータセットベースの接続の作成](tutorials/api/create-dataset-base-connection.md)
+   - [Flow Service APIを使用してデータフローを監視する](tutorials/api/monitor.md)
 - UIチュートリアル {#ui-tutorials}
    - ソースコネクタを作成する {#create}
       - アドビアプリケーション {#adobe-applications}
