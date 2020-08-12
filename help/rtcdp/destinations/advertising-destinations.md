@@ -4,10 +4,10 @@ seo-title: 広告の宛先
 description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 seo-description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 89%
+source-wordcount: '183'
+ht-degree: 87%
 
 ---
 
@@ -33,7 +33,8 @@ Connect your [!DNL Real-time Customer Data Platform] to a 3rd-party advertising 
 * [Google 広告](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google 広告拡張機能](/help/rtcdp/destinations/google-ads-extension.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-* [Google gtag 拡張機能](/help/rtcdp/destinations/gtag-advertising-extension.md)
+* [Googleの顧客一致](/help/rtcdp/destinations/google-customer-match-destination.md)
+* [Google タグ拡張機能](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [LinkedIn Insight タグ拡張機能](linkedin-extension.md)
 * [Pinterest Conversion Tracking 拡張機能](pinterest-extension.md)
 * [Twitter Universal Website Tag 拡張機能](twitter-uwt-extension.md)
