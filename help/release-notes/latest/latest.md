@@ -1,67 +1,38 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Experience Platformに関する最新のリリースノート
+description: Experience Platformリリースノート（2020年8月11日）
 doc-type: release notes
-last-update: July 15, 2020
-author: crhoades, ens25212
+last-update: August 10, 2020
+author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 30%
+source-wordcount: '296'
+ht-degree: 33%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 7 月 15 日**
+**リリース日：2020 年 12 月 8 日**
 
-Adobe Experience Platform内の既存の機能の更新：
+Experience Platformに関する最新のリリースノート
 
-- [データガバナンス](#governance)
-- [リアルタイム顧客プロファイル](#profile)
-- [セグメント化サービス](#segmentation)
-- [ソース](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNLソース]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform データガバナンスは、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへの準拠を確保するために使用される一連の戦略とテクノロジーです。It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
-
-**新機能**
-
-| 機能 | 説明 |
-| -----------| ---------- |
-| ポリシーの自動適用 [!DNL Real-time Customer Data Platform] | データ使用ポリシーは、違反アクションが発生した場合に、宛先へのセグメントのアクティブ化など、自動的に適用されるようになりました。 [!DNL Real-time CDP] ポリシー違反がトリガーされると、アクティベーションワークフロー内の使用制限をリアルタイムで表示し、使用できないデータとその理由を示すことができます。<br><br>詳細については、の概要で、「データの使用 [に関するコンプライアンスの](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) 適用 [!DNL Data Governance] 」 [!DNL Real-time CDP] の節を参照してください。 |
-| Adobe Audience Manager統合 | 共有されるセグメントは、適用され [!DNL Audience Manager] たデータ使用ラベルを [!DNL Platform] 継承します。また、適用されたデータ使用ラベルも継承 [!DNL Data Export Controls]します。 使用ラベルとデータエクスポートコントロールの間の特定の [!DNL Audience Manager] マッピングについては、ドキュメントを参照してください [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)。 |
-| カスタムデータ使用ラベル | Policy Service APIまたはUIを使用して、カスタムデータ使用ラベルを作成できるようになりました。 See the [labels overview](../../data-governance/labels/overview.md) for more information. |
-
-このサービスについて詳しくは、「[データガバナンスの概要](../../data-governance/home.md)」を参照してください。
-
-## [!DNL Real-time Customer Profile] {#profile}
-
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
+[!DNL Data Science Workspace] 機械学習と人工知能を使用して、データから洞察を引き出します。 Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| データ使用ポリシーの適用 | で [!DNL Real-time Customer Data Platform]は、  プロファイルワークスペース内の違反操作が試行されると、データ使用ポリシー違反が自動的に表示されます。 自動ポリシー適用の詳細については、「Data Governance [のリリースノート](#governance) 」を参照してください。 |
+| VMの強化 [!DNL JupyterLab] | 長時間稼働する [!DNL JupyterLab notebook] 仮想マシンの安定性が向上しました。 |
 
-## [!DNL Segmentation Service] {#segmentation}
-
-Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
-
-[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。 セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
-
-**新機能**
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| ストリーミングセグメント化 | ストリーミングセグメントは、ユーザーをデータの到着地としてセグメントに分類できるようになり、セグメントの認定時間を大幅に短縮で [!DNL Platform]きます。 また、セグメントのストリーミングは、セグメント化ジョブを手動で実行する必要がなくなります。 |
-| データ使用ポリシーの適用 | で [!DNL Real-time Customer Data Platform]は、 [!UICONTROL Segments] Workspaceで違反操作が実行されると、データ使用ポリシー違反が自動的に表示されます。 自動ポリシー適用の詳細については、「Data Governance [のリリースノート](#governance) 」を参照してください。 |
-
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
+詳細については、『 [!DNL JupyterLab]ユーザガイド [[!DNL JupyterLab] ](../../data-science-workspace/jupyterlab/overview.md)』を参照してください。
 
 ## ソース {#sources}
 
@@ -73,7 +44,9 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| データフローの削除に対するUIのサポート | エラーが発生した、または不要になったデータフローは、UIを使用して削除できるようになりました。 |
-| 1回の取り込みでのAPIとUIのサポート | 開始日のみが提供され、将来のインジェストがスケジュールされないデータフローの1回限りのインジェストは、APIまたはUIを使用して実行できるようになりました。 |
+| フロー実行の監視 | すべてのフローの実行を監視し、完了ステータス、実行期間、処理されたファイルのリスト、エラー、指標など、各実行の詳細表示を確認できます。 詳細は、 [監視データフロー](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
+| アカウントの更新 | ユーザーは、既存のアカウントの資格情報、名前および説明を更新して、より意味のある情報を提供し、作成された可能性のあるエラーを修正できます。 |
+| フロー実行通知 | イベントを登録し、Webフックを登録して、フローの実行に関するステータス、指標、エラーに関するリアルタイム通知を受信できます。 |
+| UIカタログの改善 | ソースカタログ画面が更新され、選択したオブジェクトの主なアクションに簡単にアクセスできるようになりました。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
