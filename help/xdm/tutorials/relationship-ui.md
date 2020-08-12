@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマエディターを使用した 2 つのスキーマ間の関係の定義
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 6d291ac9a8c194dd63e411e4d064492c38412749
+source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '911'
 ht-degree: 44%
 
 ---
@@ -48,7 +48,7 @@ This tutorial requires a working understanding of [!DNL XDM System] and the Sche
 
 ### Hotels スキーマ
 
-行き先のスキーマ「[!UICONTROL Hotels]」は、カスタムの「[!UICONTROL Hotels]」クラスに基づいており、ホテルを説明するフィールドが含まれています。 The &quot;[!UICONTROL email]&quot; field serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. 「[!UICONTROL 忠誠度メンバー]」と同様、このスキーマも有効になってい [!DNL Real-time Customer Profile]ます。
+行き先のスキーマ「[!UICONTROL Hotels]」は、カスタムの「[!UICONTROL Hotels]」クラスに基づいており、ホテルを説明するフィールドが含まれています。 The &quot;[!DNL hotelId]&quot; field serves as the primary identity for the schema under a custom &quot;[!DNL hotelId]&quot; namespace. 「[!UICONTROL 忠誠度メンバー]」と同様、このスキーマも有効になってい [!DNL Real-time Customer Profile]ます。
 
 ![](../images/tutorials/relationship/hotels.png)
 
