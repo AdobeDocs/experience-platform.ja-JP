@@ -5,10 +5,10 @@ title: Attribution AIの入出力
 topic: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入出力の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
 workflow-type: tm+mt
-source-wordcount: '2174'
-ht-degree: 14%
+source-wordcount: '2075'
+ht-degree: 15%
 
 ---
 
@@ -58,7 +58,7 @@ Attribution AIの場合は、 [!DNL Consumer Experience Event] (CEE)スキーマ
 > - 少なくとも1000のコンバージョンが必要です。
 
 
-Attribution AIには、モデルトレーニングの入力として履歴データが必要です。 必要なデータの期間は、主に次の2つの主な要因によって決まります。 トレーニングウィンドウとルックバックウィンドウ トレーニング期間が短い入力は、最近の傾向に対してより敏感になり、トレーニング期間が長い入力は、より安定した正確なモデルを生成するのに役立ちます。 ビジネス目標を最も効果的に表す履歴データを使用して目標をモデル化することが重要です。
+Attribution AIには、モデルトレーニングの入力として履歴データが必要です。 必要なデータの期間は、主に次の2つの主な要因によって決まります。トレーニングウィンドウとルックバックウィンドウ トレーニング期間が短い入力は、最近の傾向に対してより敏感になり、トレーニング期間が長い入力は、より安定した正確なモデルを生成するのに役立ちます。 ビジネス目標を最も効果的に表す履歴データを使用して目標をモデル化することが重要です。
 
 トレー [ニングウィンドウ設定](./user-guide.md#training-window) フィルターコンバージョンイベントは、発生時間に基づいてモデルトレーニングに含めるように設定されています。 現在、最小トレーニング期間は1四半期（90日）です。 The [lookback window](./user-guide.md#lookback-window) provides a time frame indicating how many days prior to the conversion event touchpoints related to this conversion event should be included. これら2つの概念を組み合わせて、1つのアプリケーションに必要な入力データの量（日数で測定）を決定します。
 
@@ -69,7 +69,7 @@ Attribution AIには、モデルトレーニングの入力として履歴デー
 必要なデータの最小長=トレーニングウィンドウ+ルックバックウィンドウ
 
 >[!TIP]
-> デフォルト設定のアプリケーションに必要なデータの最小長は次のとおりです。 2四半期（180日）+ 56日= 236日。
+> デフォルト設定のアプリケーションに必要なデータの最小長は次のとおりです。2四半期（180日）+ 56日= 236日。
 
 例：
 
@@ -81,18 +81,6 @@ Attribution AIは次のように出力します。
 
 - [生の詳細なスコア](#raw-granular-scores)
 - [集計スコア](#aggregated-attribution-scores)
-
-以下の例では、例示用にサンプルのCSV出力を使用しています。 サンプルファイルの特性を次に示します。
-
-- トークン化されたイベントがファイルに含まれていません。
-- ファイルに変換のみのイベントが含まれていませんでした（小さなスコアとして0のスコア行は含まれていません）。
-- データの特性：
-   - 合計368行のサンプル行
-   - 8個以上のコンバージョンと3個の異なるチャネル。
-   - 151コンバージョンタイプのコンバージョン `“Digital_Product_Purchase”`。
-   - 10個の独自のタッチポイント、電子メール、SOCIAL_LINKEDIN、ADS_GOOGLE、SOCIAL_OTHER、ADS_OTHER、SOCIAL_TWITTER、LANDINGPAGE、SOCIAL_FB、ADS_BING、印刷。
-   - コンバージョンおよびタッチポイントは、それぞれ8 ～ 9か月に及びます。
-   - 行の並び順は、 `id`および `conversion_timestamp` です `touchpoint_timestamp`。
 
 **出力スキーマの例：**
 
@@ -135,7 +123,7 @@ Attribution AI出力のアトリビューションスコアは、可能な限り
 | skuId（文字列） | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **例：** MJ-03-XS-Black |
 | timestamp (DateTime) | True | 変換のタイムスタンプ。 <br> **例：** 2020-06-09T00:01:51.000Z |
 | passThrough （オブジェクト）#passThroughオブジェクト# | True | モデルの設定時にユーザーが指定した追加のスコアデータセット列。 |
-| commerce_order_purchaseCity （文字列） | True | 追加のスコアデータセット列。 <br> **例：** city : サンノゼ |
+| commerce_order_purchaseCity （文字列） | True | 追加のスコアデータセット列。 <br> **例：** city :サンノゼ |
 | customerProfile （オブジェクト）#customerProfileオブジェクト# | False | モデルの構築に使用されるユーザーのIDの詳細。 |
 | identity（オブジェクト） | False | モデルの構築に使用されたユーザーの詳細( `id` およびなど)が含まれ `namespace`ます。 |
 | id（文字列） | True | cookie IDやAID、MCIDなど、ユーザーのID <br> **例：** 17348762725408656344688320891369597404 |
@@ -200,20 +188,20 @@ Adobe Experience PlatformのUIからAttribution AIスキーマ出力例を簡単
 
 | 列名 | 制約 | Null許容 | 説明 |
 | --- | --- | --- | --- |
-| customerevents_date (DateTime) | ユーザー定義および固定形式 | False | YYYY-MM-DD形式の顧客イベント日。 <br> **例**: 2016-05-02 |
-| mediatouchpoints_date (DateTime) | ユーザー定義および固定形式 | True | YYYY-MM-DD形式のメディアタッチポイント日付 <br> **例**: 2017-04-21 |
-| segment（文字列） | 計算済み | False | モデルが構築される地域分類などのコンバージョンセグメント。 セグメントがない場合、セグメントはconversion_scopeと同じです。 <br> **例**: ORDER_AMER |
-| conversion_scope （文字列） | ユーザー定義 | False | ユーザーが設定した変換の名前。 <br> **例**: 注文 |
-| touchpoint_scope（文字列） | ユーザー定義 | True | ユーザーが設定したタッチポイントの名前 <br> **例**: PAID_SEARCH_CLICK |
-| product（文字列） | ユーザー定義 | True | The XDM identifier of the product. <br> **例**: CC |
-| product_type（文字列） | ユーザー定義 | True | この製品表示に対してユーザーに提示される、製品の表示名。 <br> **例**: gpu、ラップトップ |
-| geo（文字列） | ユーザー定義 | True | The geographic location where the conversion was delivered (placeContext.geo.countryCode) <br> **例**: US |
-| イベントタイプ（文字列） | ユーザー定義 | True | The primary event type for this time-series record <br> **例**: 有料コンバージョン |
-| media_type（文字列） | ENUM | False | メディアの種類が有料、所有、または獲得のいずれであるかを示します。 <br> **例**: 有料、所有 |
-| チャネル（文字列） | ENUM | False | XDMで類似のプロパティを持つチャネルの大まかな分類を行うために使用される `channel._type` プロパティ [!DNL Consumer Experience Event] です。 <br> **例**: 検索 |
-| action（文字列） | ENUM | False | この `mediaAction` プロパティは、エクスペリエンスイベントメディアアクションのタイプを提供するために使用されます。 <br> **例**: CLICK |
-| キャンペーングループ（文字列） | ユーザー定義 | True | 複数のキャンペーンが&#39;50%_DISCOUNT&#39;のようにグループ化されているキャンペーングループの名前。 <br> **例**: 商業 |
-| キャンペーン名（文字列） | ユーザー定義 | True | &#39;50%_DISCOUNT_USA&#39;や&#39;50%_DISCOUNT_ASIA&#39;のような、マーケティングキャンペーンの識別に使用するキャンペーンの名前です。 <br> **例**: 感謝祭セール |
+| customerevents_date (DateTime) | ユーザー定義および固定形式 | False | YYYY-MM-DD形式の顧客イベント日。 <br> **例**:2016-05-02 |
+| mediatouchpoints_date (DateTime) | ユーザー定義および固定形式 | True | YYYY-MM-DD形式のメディアタッチポイント日付 <br> **例**:2017-04-21 |
+| segment（文字列） | 計算済み | False | モデルが構築される地域分類などのコンバージョンセグメント。 セグメントがない場合、セグメントはconversion_scopeと同じです。 <br> **例**:ORDER_AMER |
+| conversion_scope （文字列） | ユーザー定義 | False | ユーザーが設定した変換の名前。 <br> **例**:注文 |
+| touchpoint_scope（文字列） | ユーザー定義 | True | ユーザーが設定したタッチポイントの名前 <br> **例**:PAID_SEARCH_CLICK |
+| product（文字列） | ユーザー定義 | True | The XDM identifier of the product. <br> **例**:CC |
+| product_type（文字列） | ユーザー定義 | True | この製品表示に対してユーザーに提示される、製品の表示名。 <br> **例**:gpu、ラップトップ |
+| geo（文字列） | ユーザー定義 | True | The geographic location where the conversion was delivered (placeContext.geo.countryCode) <br> **例**:US |
+| イベントタイプ（文字列） | ユーザー定義 | True | The primary event type for this time-series record <br> **例**:有料コンバージョン |
+| media_type（文字列） | ENUM | False | メディアの種類が有料、所有、または獲得のいずれであるかを示します。 <br> **例**:有料、所有 |
+| チャネル（文字列） | ENUM | False | XDMで類似のプロパティを持つチャネルの大まかな分類を行うために使用される `channel._type` プロパティ [!DNL Consumer Experience Event] です。 <br> **例**:検索 |
+| action（文字列） | ENUM | False | この `mediaAction` プロパティは、エクスペリエンスイベントメディアアクションのタイプを提供するために使用されます。 <br> **例**:CLICK |
+| キャンペーングループ（文字列） | ユーザー定義 | True | 複数のキャンペーンが&#39;50%_DISCOUNT&#39;のようにグループ化されているキャンペーングループの名前。 <br> **例**:商業 |
+| キャンペーン名（文字列） | ユーザー定義 | True | &#39;50%_DISCOUNT_USA&#39;や&#39;50%_DISCOUNT_ASIA&#39;のような、マーケティングキャンペーンの識別に使用するキャンペーンの名前です。 <br> **例**:感謝祭セール |
 
 **生のスコア参照（集計）**
 
