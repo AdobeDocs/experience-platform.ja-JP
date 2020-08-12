@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Audience Manager コネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 92%
+source-wordcount: '643'
+ht-degree: 88%
 
 ---
 
@@ -17,10 +17,9 @@ ht-degree: 92%
 Adobe Audience Manager データコネクタは、Adobe Audience Manager で収集されたファーストパーティデータを Adobe Experience Platform にストリーミングします。Audience Manager コネクタは、次の 3 つのカテゴリのデータを Platform に取り込みます。
 
 - **リアルタイムデータ**：Audience Manager のデータ収集サーバーでリアルタイムにキャプチャされるデータです。このデータは、Audience Manager でルールベースの特性に入力するために使用され、最短の待ち時間で Platform に表示されます。
-- **オンボード（インバウンド）データ**：Audience Manager でホストされている Amazon S3 ロケーションにユーザーがアップロードするファイルです。Audience Manager は、このデータを使用して、受信ファイルメソッドでオンボードの特性に入力します。このデータには、若干の遅延があります。
 - **プロファイルデータ**：Audience Manager では、リアルタイムのオンボードデータを使用して、顧客プロファイルを導き出します。これらのプロファイルは、セグメント認識で ID グラフと特性への入力に使用されます。
 
-Audience Manager コネクタは、これらのデータカテゴリをエクスペリエンスデータモデル（XDM）スキーマにマッピングし、プラットフォームに送信します。リアルタイムデータとオンボードデータは XDM ExperienceEvent データとして送信されます。一方、プロファイルデータは XDM 個別プロファイルとして送信されます。
+Audience Manager コネクタは、これらのデータカテゴリをエクスペリエンスデータモデル（XDM）スキーマにマッピングし、プラットフォームに送信します。リアルタイムデータはXDM ExperienceEventデータとして送信され、プロファイルデータはXDM Individualプロファイルとして送信されます。
 
 Platform UI を使用して Adobe Platform Manager との接続を作成する手順については、[Audience Manager コネクタのチュートリアル](../../tutorials/ui/create/adobe-applications/audience-manager.md)を参照してください。
 
@@ -64,8 +63,6 @@ Audience Managerデータセットはデフォルトでプロファイルに対�
 | Audience Manager デバイスプロファイルデータ | Audience Manager コネクタの診断に使用されます。 |
 | Audience Manager 認証済みプロファイル | このデータセットには、Audience Manager で認証されたプロファイルが含まれています。 |
 | Audience Manager 認証済みプロファイルメタデータ | Audience Manager コネクタの診断に使用されます。 |
-| Audience Manager インバウンド {データソース ID} **（廃止）** | このデータセットは、受信ファイルメソッドを使用して Audience Manager にオンボードされたレコードを表します。このデータフローは廃止されており、今後のリリースで削除されます。 |
-| Audience Manager インバウンドメタデータ **（廃止）** | Audience Manager コネクタの診断に使用されます。このデータフローは廃止されており、今後のリリースで削除されます。 |
 
 ### 接続
 
