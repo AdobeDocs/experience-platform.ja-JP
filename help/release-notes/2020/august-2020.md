@@ -5,47 +5,48 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 52%
+source-wordcount: '297'
+ht-degree: 33%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 6 月 10 日**
+**リリース日：2020 年 12 月 8 日**
 
-Adobe Experience Platform の新機能：
+Adobe Experience Platformの既存の機能の更新：
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNLソース]](#sources)
 
-## [!DNL Access control] {#access-control}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Experience Platform] は、[Adobe Admin Console](https://adminconsole.adobe.com) 製品プロファイルを活用し、ユーザーを権限とサンドボックスにリンクします。権限は、データモデリング、プロファイル管理、サンドボックス管理など、さまざまな Platform 機能へのアクセスを制御します。
+[!DNL Data Science Workspace] 機械学習と人工知能を使用して、データから洞察を引き出します。 Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
 
-**主な特長**
-
-| 機能 | 説明 |
-|--- | ---|
-| 権限 | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Available permission categories include: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources]. |
-| サンドボックスへのアクセス |  製品プロファイル内の「[!UICONTROL _権限&#x200B;_]」タブでは、特定のサンドボックスへのアクセス権をユーザーに付与できます。[!DNL Platform]詳しくは、以下の「[サンドボックス](#sandboxes)」の節を参照してください。 |
-
-詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
-
-## [!DNL Sandboxes] {#sandboxes}
-
-[!DNL Experience Platform] は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。In order to address this need, [!DNL Experience Platform] provides sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
-
-**主な特長**
+**新機能**
 
 | 機能 | 説明 |
-|--- | ---|
-| 実稼働用サンドボックス | [!DNL Experience Platform] は、1 つの実稼動用サンドボックスを提供します。このサンドボックスは、削除またはリセットすることはできません。 |
-| 非実稼働用サンドボックス | Multiple non-production sandboxes can be created for a single [!DNL Platform] instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox. |
-| サンドボックス切り替えボタン | In the [!DNL Experience Platform] user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu. |
-| `x-sandbox-name` ヘッダー | All calls to [!DNL Experience Platform] APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in. |
+| ------- | ----------- |
+| VMの強化 [!DNL JupyterLab] | 長時間稼働する [!DNL JupyterLab notebook] 仮想マシンの安定性が向上しました。 |
 
-詳しくは、[サンドボックスの概要](../../sandboxes/home.md)を参照してください。
+詳細については、『 [!DNL JupyterLab]ユーザガイド [[!DNL JupyterLab] ](../../data-science-workspace/jupyterlab/overview.md)』を参照してください。
+
+## ソース {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+
+[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できるようにする RESTful API とインタラクティブな UI を提供します。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| フロー実行の監視 | すべてのフローの実行を監視し、完了ステータス、実行期間、処理されたファイルのリスト、エラー、指標など、各実行の詳細表示を確認できます。 詳細は、 [監視データフロー](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
+| アカウントの更新 | ユーザーは、既存のアカウントの資格情報、名前および説明を更新して、より意味のある情報を提供し、作成された可能性のあるエラーを修正できます。 |
+| フロー実行通知 | イベントを登録し、Webフックを登録して、フローの実行に関するステータス、指標、エラーに関するリアルタイム通知を受信できます。 |
+| UIカタログの改善 | ソースカタログ画面が更新され、選択したオブジェクトの主なアクションに簡単にアクセスできるようになりました。 |
+
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
