@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c64d4cc01b5125fad5f7c75914dfc1e4b20bc069
+source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 33%
+source-wordcount: '480'
+ht-degree: 31%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 33%
 Adobe Experience Platformの既存の機能の更新：
 
 - [[!DNL Data Science Workspace]](#dsw)
+- [!DNL Destinations](#destinations)
 - [[!DNLソース]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -33,6 +34,25 @@ Adobe Experience Platformの既存の機能の更新：
 | VMの強化 [!DNL JupyterLab] | 長時間稼働する [!DNL JupyterLab notebook] 仮想マシンの安定性が向上しました。 |
 
 詳細については、『 [!DNL JupyterLab]ユーザガイド [[!DNL JupyterLab] ](../../data-science-workspace/jupyterlab/overview.md)』を参照してください。
+
+## 宛先 {#destinations}
+
+[アドビのリアルタイム顧客データプラットフォーム](../../rtcdp/overview.md) において、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータを活用します。
+
+**新しい宛先**
+
+新しい宛先は、Adobe Experience Platform データをアクティブ化する際に使用できます。詳しくは、以下を参照してください。
+
+| 宛先 | 説明 |
+|--- | ---|
+| [!DNL Google Customer Match] | Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営する次のようなプロパティを通じて顧客に連絡し、顧客と再び関与させることができます。 [!DNL Search]、 [!DNL Shopping]、Gmail、YouTubeの3つを追加しました。 宛先カタログの [!DNL Google Customer Match][ページにアクセスし](/help/rtcdp/destinations/google-customer-match-destination.md) 、AdobeReal-time CDPでの宛先とその設定方法の詳細を確認します。 |
+
+**新機能**
+
+| 機能 | 説明 |
+|------- | -----------|
+| カスタムファイル名エディタ | 電子メールマーケティングの宛先と、エクスポートされたファイルの名前を編集できるクラウドストレージの宛先に関するデータアクティベーションワークフローに更新します。 詳しくは、アクティベーションワークフローの [ 設定手順](/help/rtcdp/destinations/activate-destinations.md#configure) を参照してください。 |
+| 推奨属性 | 電子メールマーケティングの宛先および推奨属性を表示するクラウドのストレージ先のデータアクティベーションワークフローを更新し、書き出されたファイルに追加します。 詳しくは、アクティベーションワークフローの「属性を [選択](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 」の手順を参照してください。 |
 
 ## ソース {#sources}
 
