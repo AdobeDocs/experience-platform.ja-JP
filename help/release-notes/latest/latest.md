@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
+source-git-commit: c64d4cc01b5125fad5f7c75914dfc1e4b20bc069
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '297'
 ht-degree: 33%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 33%
 
 **リリース日：2020 年 12 月 8 日**
 
-Experience Platformに関する最新のリリースノート
+Adobe Experience Platformの既存の機能の更新：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNLソース]](#sources)
