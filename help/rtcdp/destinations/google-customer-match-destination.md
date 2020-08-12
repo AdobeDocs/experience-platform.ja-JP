@@ -4,9 +4,9 @@ seo-title: Googleの顧客一致先
 description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 seo-description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 translation-type: tm+mt
-source-git-commit: 31eb03c6625f820c9729caf5181c56e748e853a5
+source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1517'
 ht-degree: 12%
 
 ---
@@ -118,7 +118,9 @@ Links to be added when activation based on phone number and device IDs becomes a
 
    >[!IMPORTANT]
    >
-   > 目的 [!DNL Google Customer Match] 地用。 **[!UICONTROL アカウントID]** は、Googleを使用する顧客のクライアントIDです。 IDの形式はxxx-xxx-xxxxです。
+   > * 「 **[!UICONTROL PIIと]** 組み合わせ [!DNL Google Customer Match] 」マーケティングの使用例は、デフォルトで宛先に対して選択されており、削除できません。
+   > * 目的 [!DNL Google Customer Match] 地用。 **[!UICONTROL アカウントID]** は、Googleを使用する顧客のクライアントIDです。 IDの形式はxxx-xxx-xxxxです。
+
 
    ![Google Customer Matchの接続 — 認証手順](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
@@ -171,3 +173,7 @@ Insert in Step 6 when mobile device ID activation is available
 ## セグメントのアクティベーションが成功したことを確認します。 {#verify-activation}
 
 アクティベーションのフローが完了したら、 **[!UICONTROL Google Ads]** アカウントに切り替えます。 アクティブ化されたセグメントは、Googleアカウントに顧客リストとして表示されます。 セグメントサイズに応じて、提供するアクティブなオーディエンスが100人を超えない限り、一部のユーザーは入力されないことに注意してください。
+
+## その他のリソース {#additional-resources}
+
+* [Google顧客マッチの統合 — ビデオチュートリアル](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
