@@ -3,17 +3,18 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform リリースノート
 translation-type: tm+mt
-source-git-commit: c59acbe9acce65ab81a53cfe8f8f3373cf9ae388
+source-git-commit: 3a650d8a6553cd313f49423a2280a89e5b5785fc
 workflow-type: tm+mt
-source-wordcount: '24'
-ht-degree: 100%
+source-wordcount: '25'
+ht-degree: 96%
 
 ---
 
 
 # Adobe Experience Platform リリースノート {#release-notes}
 
-* [2020 年 7 月](latest/latest.md)
+* [2020年8月](latest/latest.md)
+* [2020 年 7 月](2020/july-2020.md)
 * [2020 年 6 月](2020/june-2020.md)
 * [2020 年 5 月](2020/may-2020.md)
 * [2020 年 4 月](2020/april-2020.md)
@@ -27,6 +28,3 @@ ht-degree: 100%
    * [2019 年 7 月](2019/july-2019.md)
    * [2019 年 6 月](2019/june-2019.md)
    * [2019 年 5 月](2019/may-2019.md)
-
-
-
