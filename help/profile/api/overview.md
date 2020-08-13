@@ -4,17 +4,17 @@ solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイル API 開発者ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 26%
+source-wordcount: '796'
+ht-degree: 23%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] API開発者ガイド
 
-[!DNL Real-time Customer Profile] Adobe Experience Platform内の各顧客の全体的な表示を確認できます。 [!DNL Profile] オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルから個別の顧客データを統合表示に統合し、各顧客インタラクションに関する実用的なタイムスタンプのあるアカウントを提供できます。
+[!DNL Real-time Customer Profile] adobe experience platform内の個々の顧客の全体的な表示を確認できます。 [!DNL Profile] オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルから個別の顧客データを統合表示に統合し、各顧客インタラクションに関する実用的なタイムスタンプのあるアカウントを提供できます。
 
 この [!DNL Real-time Customer Profile] APIには複数のエンドポイントが含まれ、以下に概要を示します。 詳しくは、個々のエンドポイントガイドを参照してください。また、 [入門ガイドを参照し](getting-started.md) 、必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み取りなどを確認してください。
 
@@ -46,7 +46,11 @@ Through Adobe Experience Platform you can access [!DNL Real-time Customer Profil
 
 When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To learn more about working with merge policies using the API, please visit the [merge policies endpoint guide](merge-policies.md).
 
-For a guide to working with merge policies using the [!DNL Platform] UI, please see the [Merge Policies user guide](../ui/merge-policies.md).
+For a guide to working with merge policies using the [!DNL Platform] UI, please see the [merge policies user guide](../ui/merge-policies.md).
+
+## プレビューサンプルの状態([!DNL Profile] プレビュー) {#profile-preview}
+
+プロファイルが可能なデータがExperience Platformに取り込まれると、プロファイルデータストア内に格納される。 プロファイルストアのレコード数が増減すると、データストア内のプロファイルフラグメントと結合プロファイルの数に関する情報を含むサンプルジョブが実行されます。 プロファイルAPIを使用して、最新の成功したサンプルや、データセット別、ID名前空間別にリストプロファイルの配布をプレビューできます。 エンドポイントの使用を開始するには、『 `/profilepreviewstatus` プレビューサンプルステータスエンドポイントガイド [](preview-sample-status.md)』を参照してください。
 
 ## プロファイルシステムジョブ {#profile-system-jobs}
 
