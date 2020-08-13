@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: リアルタイム顧客データプラットフォームのヘルプ
 translation-type: tm+mt
-source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
+source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 88%
+source-wordcount: '460'
+ht-degree: 85%
 
 ---
 
@@ -132,6 +132,9 @@ ht-degree: 88%
 * プライバシーとデータガバナンス {#privacy}
    * [プライバシーの概要](privacy/privacy-overview.md)
    * [データガバナンスの概要](privacy/data-governance-overview.md)
+   * （IAB TCF 2.0のサポート） {#iab}
+      * [リアルタイムCDPでのIAB TCF 2.0のサポート](./privacy/iab/overview.md)
+      * [IAB TCF 2.0の同意データを取り込むためのデータセットの作成](./privacy/iab/dataset-preparation.md)
 * プロファイル {#profile}
    * [プロファイルの概要](profile/profile-overview.md)
    * [ID と ID 名前空間](profile/identities-overview.md)
