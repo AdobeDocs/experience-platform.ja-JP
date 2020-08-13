@@ -4,10 +4,10 @@ solution: Experience Platform
 title: スキーマ合成の基本
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
 workflow-type: tm+mt
-source-wordcount: '2628'
-ht-degree: 59%
+source-wordcount: '2782'
+ht-degree: 55%
 
 ---
 
@@ -59,13 +59,52 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 
 ### [!UICONTROL ID]
 
-Schemas are used for ingesting data into [!DNL Experience Platform]. このデータは、複数のサービスで使用して、個々のエンティティの単一の統合表示を作成できます。Therefore, it is important when thinking about schemas to think about &quot;[!UICONTROL Identity]&quot; and which fields can be used to identify a subject regardless of where the data may be coming from.
+Schemas are used for ingesting data into [!DNL Experience Platform]. このデータは、複数のサービスで使用して、個々のエンティティの単一の統合表示を作成できます。したがって、顧客のIDについて考える際は、スキーマの場所に関係なく、どのフィールドを使用して対象を識別できるかを考慮する必要があります。
 
-To help with this process, key fields can be marked as &quot;[!UICONTROL Identity]&quot;. Upon data ingestion, the data in those fields will be inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
+この処理を行うために、スキーマ内の主要フィールドをIDとしてマークすることができます。 Upon data ingestion, the data in those fields is inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
 
 Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good &quot;[!UICONTROL Identity]&quot; fields as well.
 
-スキーマ計画段階で顧客の ID を考慮し、可能な限り堅牢なプロファイルを構築するためにデータを統合できるようにすることが重要です。ID 情報で顧客にデジタルエクスペリエンスを提供する方法について詳しくは、「[ID サービスの概要](../../identity-service/home.md)」を参照してください。
+スキーマ計画段階で顧客の ID を考慮し、可能な限り堅牢なプロファイルを構築するためにデータを統合できるようにすることが重要です。See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
+
+#### xdm:identityMap
+
+`xdm:identityMap` は、個人の様々なID値と関連する名前空間を説明するmap-typeフィールドです。 このフィールドは、スキーマ自体の構造内でidentity値を定義する代わりに、スキーマの識別情報を提供するために使用できます。
+
+単純なIDマップの例を次に示します。
+
+```json
+"identityMap": {
+  "email": [
+    {
+      "id": "jsmith@example.com",
+      "primary": false
+    }
+  ],
+  "ECID": [
+    {
+      "id": "87098882279810196101440938110216748923",
+      "primary": false
+    },
+    {
+      "id": "55019962992006103186215643814973128178",
+      "primary": false
+    }
+  ],
+  "loyaltyId": [
+    {
+      "id": "2e33192000007456-0365c00000000000",
+      "primary": true
+    }
+  ]
+}
+```
+
+上の例が示すように、 `identityMap` オブジェクトの各キーはID名前空間を表します。 各キーの値はオブジェクトの配列で、各名前空間のID値(`id`)を表します。 Adobeアプリケーションで認識される標準ID名前空間の [!DNL Identity Service] リストについては、 [ドキュメントを参照してください](../../identity-service/troubleshooting-guide.md#standard-namespaces) 。
+
+>[!NOTE]
+>
+>値がプライマリID(`primary`)であるかどうかを表すboolean値を、各ID値に対して指定することもできます。 プライマリIDは、で使用するスキーマに対してのみ設定する必要があり [!DNL Real-time Customer Profile]ます。 詳しくは、 [和集合スキーマの節を参照してください](#union) 。
 
 ### スキーマ進化の原理 {#evolution}
 
