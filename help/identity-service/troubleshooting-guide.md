@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform ID サービストラブルシューティングガイド
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 82%
@@ -72,7 +72,7 @@ ID フィールドは、作成時に既存の ID 名前空間に関連付ける�
 
 API を使用して ID 記述子を作成する際に名前空間を定義する手順については、『スキーマレジストリ開発者ガイド』の「[記述子の作成](../xdm/tutorials/create-schema-ui.md)」の節を参照してください。UI でスキーマフィールドを ID としてマークする場合は、『[スキーマエディタのチュートリアル](../xdm/tutorials/create-schema-api.md)』の手順に従います。
 
-## Experience Platform が提供する標準 ID 名前空間は何ですか。
+## Experience Platform が提供する標準 ID 名前空間は何ですか。 {#standard-namespaces}
 
 次の標準名前空間は、Experience Platform 内のすべての組織で使用できます。
 
