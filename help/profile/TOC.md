@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: リアルタイム顧客プロファイルのヘルプ
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 64%
+source-wordcount: '84'
+ht-degree: 59%
 
 ---
 
@@ -22,6 +22,7 @@ ht-degree: 64%
    * [エンティティ([!DNLプロファイル]アクセス)](api/entities.md)
    * [書き出しジョブ([!DNLプロファイル]書き出し)](api/export-jobs.md)
    * [結合ポリシー](api/merge-policies.md)
+   * [プレビューサンプルの状態([!DNLプロファイル]プレビュー)](api/preview-sample-status.md)
    * [[!DNL Profile] システムジョブ（削除要求）](api/profile-system-jobs.md)
 * UIガイド {#ui}
    * [[!DNL Profile] ユーザーガイド](ui/user-guide.md)
