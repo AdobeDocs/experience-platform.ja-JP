@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience PlatformWeb SDKヘルプ
 translation-type: tm+mt
-source-git-commit: c12d854f272c6775ae940b7a4056d0f527c5dd01
+source-git-commit: 3a0ef81980910cedcec69a2a53bcf270b8d12d00
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 67%
+source-wordcount: '101'
+ht-degree: 69%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 67%
       * [Analytics の概要](solution-specific/analytics/analytics-overview.md)
       * [Analyticsでの変数の手動マッピング](solution-specific/analytics/manually-mapping-variables.md)
       * [自動的にマッピングされた変数](solution-specific/analytics/automatically-mapped-vars.md)
+      * [Adobe Analytics へのデータの送信](solution-specific/analytics/link-tracking.md)
    * Audience Manager {#aam}
       * [Audience Manager の概要](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
