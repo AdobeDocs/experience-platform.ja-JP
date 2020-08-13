@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK コマンドの実行
 description: Experience Platform Web SDK コマンドの実行方法について説明します
 seo-description: Experience Platform Web SDK コマンドの実行方法について説明します
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 79%
@@ -28,7 +28,7 @@ alloy("commandName", options);
 
 [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) は、SDK が Web ページ上のコードと通信する際の基本です。Promise は一般的なプログラミング構造であり、この SDK や JavaScript に固有のものではありません。ある Promise は、promise の作成時に不明な値のプロキシとしての役割を果たします。値が判明すると、その値を使用して promise が「解決」されます。ハンドラー関数を promise に関連付けると、promise が解決されたときや、promise の解決中にエラーが発生したときに通知を受け取ることができます。Promise の詳細については、[このチュートリアル](https://javascript.info/promise-basics)や、Web 上の他のリソースをお読みください。
 
-## 成功または失敗の処理
+## 成功または失敗の処理 {#handling-success-or-failure}
 
 コマンドが実行されるたびに、promise が返されます。promise は、コマンドの最終的な完了を表します。次の例では、`then` および `catch` メソッドを使用して、コマンドが成功したか失敗したかを判断できます。
 
@@ -76,4 +76,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 ### 同意
 
-ユーザーが特定の目的に対して同意を示さなかった場合、約束は解決されます。 ただし、responseオブジェクトには、ユーザーが同意した内容のコンテキストで提供できる情報のみが含まれます。
+ユーザーが特定の目的に対して同意を示さなかった場合、約束は解決されます。ただし、responseオブジェクトには、ユーザーが同意した内容のコンテキストで提供できる情報のみが含まれます。
