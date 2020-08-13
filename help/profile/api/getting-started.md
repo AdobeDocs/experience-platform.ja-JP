@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルAPIの概要
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 6df3e6579139f01d9877c1f033ea7721ca78118c
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 30%
+source-wordcount: '359'
+ht-degree: 29%
 
 ---
 
@@ -18,10 +18,10 @@ Using the [!DNL Real-time Customer Profile] API, you can perform basic CRUD oper
 
 Using the developer guide requires a working understanding of the various Adobe Experience Platform services involved in working with [!DNL Profile] data. Before beginning to work with the [!DNL Real-time Customer Profile] API, please review the documentation for the following services:
 
-* [!DNL Real-time Customer Profile](../home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-* [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md): デバイスとシステム間でIDをブリッジ化することで、顧客と行動をより良く表示できます。
-* [!DNL Adobe Experience Platform Segmentation Service](../../segmentation/home.md): リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [!DNL Real-time Customer Profile](../home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+* [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md):デバイスとシステム間でIDをブリッジ化することで、顧客と行動をより良く表示できます。
+* [!DNL Adobe Experience Platform Segmentation Service](../../segmentation/home.md):リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Profile] API endpoints.
@@ -34,13 +34,13 @@ The [!DNL Real-time Customer Profile] API documentation provides example API cal
 
 また、API ドキュメントでは、 エンドポイントを正しく呼び出すために、[認証に関するチュートリアル](../../tutorials/authentication.md)を完了している必要があります。[!DNL Platform]Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
