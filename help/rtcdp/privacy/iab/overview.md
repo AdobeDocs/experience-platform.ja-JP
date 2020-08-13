@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイム顧客データプラットフォームでのIAB TCF 2.0のサポート
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 67c598000cec36a170e7324877d4d9f2db9453a4
+source-git-commit: 350526e172b4ec3cf3b8cbe4d96f7b771aa1d669
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 3%
@@ -150,7 +150,7 @@ SDKがデータを送信する先として、 [!DNL Experience Platform]最初�
 ```js
 alloy("setConsent", {
   consent: [{
-    standard: "IAB",
+    standard: "IAB TCF",
     version: "2.0",
     value: "CLcVDxRMWfGmWAVAHCENAXCkAKDAADnAABRgA5mdfCKZuYJez-NQm0TBMYA4oCAAGQYIAAAAAAEAIAEgAA.argAC0gAAAAAAAAAAAA",
     gdprApplies: "true"
