@@ -4,10 +4,10 @@ seo-title: 電子メールマーケティングの宛先
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 54%
+source-wordcount: '800'
+ht-degree: 48%
 
 ---
 
@@ -47,15 +47,21 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ![セグメントの選択](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## 手順 3 — 書き出したファイルの宛先属性として使用するスキーマフィールドの選択 {#destination-attributes}
+## 手順3 — ファイル名を設定する
+
+ファイル名の編集オプションの詳細については、チュートリアルの「 [Activate destinations](/help/rtcdp/destinations/activate-destinations.md#configure) 」の設定手順を参照してください。
+
+## Step 4 - Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
 この手順では、電子メールマーケティングの宛先に書き出しするフィールドを選択します。
 
-![宛先属性](/help/rtcdp/destinations/assets/destination-attributes.png)
+![宛先属性](/help/rtcdp/destinations/assets/recommended-attributes.png)
+
+この手順の詳細については、チュートリアルの「属性を [選択](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 」の手順を参照してください。
 
 ### ID {#identity}
 
-[ユニオンスキーマ](../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。これは、ユーザーの ID をキーオフにするフィールドです。最も一般的に、このフィールドは電子メールアドレスですが、ロイヤリティープログラム ID や電話番号を指定することもできます。和集合スキーマの最も一般的な一意のIDとそのXDMフィールドについては、次の表を参照してください。
+[ユニオンスキーマ](../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。これは、ユーザーの ID をキーオフにするフィールドです。最も一般的に、このフィールドは電子メールアドレスですが、ロイヤリティープログラム ID や電話番号を指定することもできます。スキーマ内で最も一般的な一意のIDとそのXDMフィールドについては、次の表を参照してください。
 
 | 一意の識別子 | 統合スキーマの XDM フィールド |
 ---------|----------
@@ -76,8 +82,9 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 | 住所（都道府県） | `homeAddress.stateProvince` |
 | 住所（郵便番号） | `homeAddress.postalCode` |
 | 誕生日 | `person.birthDayAndMonth` |
+| セグメントのメンバーシップ | `segmentMembership.status` |
 
-## 手順 3 — ストレージの場所からインポート先にデータをインポートひます
+## 手順 5 — ストレージの場所からインポート先にデータをインポートひます
 
 ストレージの場所から宛先にデータをインポートする方法については、個々の電子メールマーケティングの宛先に関する記事を参照してください。
 
@@ -89,3 +96,8 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 ## 電子メールマーケティングの宛先へのセグメントのアクティブ化
 
 電子メールマーケティングの宛先に対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](/help/rtcdp/destinations/activate-destinations.md)」を参照してください。
+
+## その他のリソース
+
+* [宛先へのデータのアクティブ化](/help/rtcdp/destinations/activate-destinations.md)
+* [Flow Service APIを使用して、電子メールマーケティングの宛先を作成し、データをアクティブ化する](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
