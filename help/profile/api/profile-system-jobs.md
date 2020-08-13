@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: プロファイルシステムジョブ — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 66%
@@ -46,7 +46,7 @@ GET /system/jobs?{QUERY_PARAMETERS}
 **リクエスト**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
