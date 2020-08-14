@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: リアルタイム顧客データプラットフォームのヘルプ
 translation-type: tm+mt
-source-git-commit: 5802c05ce166f0b355b17a28655ff2f18f7cd0c4
+source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 83%
+source-wordcount: '460'
+ht-degree: 85%
 
 ---
 
@@ -128,7 +128,7 @@ ht-degree: 83%
       * [宛先へのプロファイルとセグメントのアクティブ化](destinations/activate-destinations.md)
    * Destination APIチュートリアル {#api-tutorials}
       * [ストリーミング先(AWSKinesisおよびAzureイベントハブ)に接続し、データをアクティブにする](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [電子メールマーケティングの宛先に接続し、データをアクティブにする](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
+      * [電子メールマーケティングの宛先に接続し、データをアクティブにする](/help/rtcdp/destinations/email-marketing-api.md)
 * プライバシーとデータガバナンス {#privacy}
    * [プライバシーの概要](privacy/privacy-overview.md)
    * [データガバナンスの概要](privacy/data-governance-overview.md)
