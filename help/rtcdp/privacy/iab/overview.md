@@ -4,9 +4,9 @@ solution: Experience Platform
 title: リアルタイム顧客データプラットフォームでのIAB TCF 2.0のサポート
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 350526e172b4ec3cf3b8cbe4d96f7b771aa1d669
+source-git-commit: 28106d5db179e71f47b7e071b359ffe4934a3bbe
 workflow-type: tm+mt
-source-wordcount: '2373'
+source-wordcount: '2388'
 ht-degree: 3%
 
 ---
@@ -42,6 +42,7 @@ ht-degree: 3%
 * [Adobe Experience Platform・アイデンティティ・サービス](../../../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
 * [リアルタイム顧客プロファイル](../../../profile/home.md):を活用 [!DNL Identity Service] して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 [!DNL Real-time Customer Profile] data Lakeからデータを取り込み、顧客プロファイルを個別のデータストアに維持します。
 * [Adobe Experience PlatformウェブSDK](../../../edge/home.md):様々な [!DNL Platform] サービスを顧客と直接やり取りするWebサイトに統合できるクライアント側のJavaScriptライブラリ。
+   * [SDKの同意コマンド](../../../edge/fundamentals/supporting-consent.md):このガイドに示す同意関連のSDKコマンドの使用例の概要です。
 * [Adobe Experience Platform分類サービス](../../../segmentation/home.md):同様の特性を共有し、マーケティング戦略と同様に対応する個人のグループに [!DNL Real-time Customer Profile] データを分割できます。
 
 上記の [!DNL Platform] サービスに加えて、 [目的地](../../destinations/destinations-overview.md) 、およびその使用に関する知識も必要 [!DNL Real-time CDP]です。
