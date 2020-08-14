@@ -5,7 +5,7 @@ solution: Experience Platform
 title: アカウントとデータフローの監視
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
+source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 8%
@@ -100,7 +100,9 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 この節では、エラーを含む列のプレビューも説明します。
 
-> [!IMPORTANT] エラー診断プレビューを有効にするには *[!UICONTROL 、データフローを構成する際に]* Partial ingestion *[!UICONTROL and]* Error diagnostics ** をアクティブにする必要があります。 これを行うと、フローの実行中に取り込まれたすべてのレコードをスキャンできます。
+>[!IMPORTANT]
+>
+>エラー診断プレビューを有効にするには *[!UICONTROL 、データフローを構成する際に]* Partial ingestion *[!UICONTROL and]* Error diagnostics ** をアクティブにする必要があります。 これを行うと、フローの実行中に取り込まれたすべてのレコードをスキャンできます。
 
 ![プレビューエラー診断](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
