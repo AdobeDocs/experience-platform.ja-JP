@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
+source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 31%
+source-wordcount: '452'
+ht-degree: 32%
 
 ---
 
@@ -65,7 +65,6 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | 機能 | 説明 |
 | ------- | ----------- |
 | フロー実行の監視 | すべてのフローの実行を監視し、完了ステータス、実行期間、処理されたファイルのリスト、エラー、指標など、各実行の詳細表示を確認できます。 詳細は、 [監視データフロー](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
-| アカウントの更新 | ユーザーは、既存のアカウントの資格情報、名前および説明を更新して、より意味のある情報を提供し、作成された可能性のあるエラーを修正できます。 |
 | フロー実行通知 | イベントを登録し、Webフックを登録して、フローの実行に関するステータス、指標、エラーに関するリアルタイム通知を受信できます。 |
 | UIカタログの改善 | ソースカタログ画面が更新され、選択したオブジェクトの主なアクションに簡単にアクセスできるようになりました。 |
 
