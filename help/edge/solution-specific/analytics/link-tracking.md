@@ -4,7 +4,7 @@ seo-title: Adobe Experience PlatformWeb SDKを使用したAdobe Analyticsへの�
 description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
 seo-description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
 translation-type: tm+mt
-source-git-commit: ab73e4d793cf39c29ddca385487bf027002db883
+source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 2%
@@ -33,7 +33,7 @@ alloy("sendEvent", {
 });
 ```
 
-Analyticsでは、この変数が設定されていない場合でもページ表示を技術的に記録しますが、ページ表示をデータに明示的に記録し、導入を後で実行する場合は常に、この変数を設定することをお勧めします。
+Analyticsでは、この変数が設定されていない場合でもページ表示が技術的に記録されますが、ページ表示をデータに明示的に記録し、導入を後で実行する場合は常に、この変数を設定することをお勧めします。
 
 ## リンクの追跡
 
