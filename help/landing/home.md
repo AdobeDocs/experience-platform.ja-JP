@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
 solution: Experience Platform
 title: Adobe Experience Platform 概要
 topic: getting started
+description: Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。Experience Platform を使用すると、顧客データとコンテンツを任意のシステムから一元管理し、データサイエンスと機械学習を適用して、パーソナライズされた豊富なエクスペリエンスのデザインと配信を大幅に改善できます。
 translation-type: tm+mt
-source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 31%
+source-wordcount: '872'
+ht-degree: 35%
 
 ---
 
@@ -34,7 +35,7 @@ Built on open APIs, [!DNL Experience Platform] exposes the full functionality of
 
 ## ブラウザーのサポート
 
-このAdobe Experience Platformは、 **最新バージョンのGoogle Chrome、Safari、Firefox** 、Microsoft Edgeで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
+Adobe Experience Platformは、Google Chrome、Safari、Firefox **、Microsoft Edgeの** 最新バージョンで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
 
 | オペレーティングシステム | サポートされているブラウザー |
 |---|---|
@@ -50,7 +51,7 @@ Built on open APIs, [!DNL Experience Platform] exposes the full functionality of
 
 ## 言語サポート
 
-Adobe Experience Platformのユーザーインターフェイスとドキュメントは、複数の言語で提供されています。
+Adobe Experience Platformのユーザーインターフェイスとドキュメントは、複数の言語でご利用いただけます。
 
 ### ユーザーインターフェイス言語
 
@@ -73,7 +74,7 @@ Adobe Experience Platformのユーザーインターフェイスとドキュメ�
 
 ### ドキュメントの言語
 
-Adobe Experience Platformドキュメントは複数の言語で提供されています。 言語を変更するには、言語ドロップダウンをクリックし、目的の言語を選択します。
+Adobe Experience Platformのドキュメントは複数の言語で提供されています。 言語を変更するには、言語ドロップダウンをクリックし、目的の言語を選択します。
 
 ![画像](assets/lang.jpg)
 
@@ -110,15 +111,18 @@ Get started with [!DNL Platform] quickly and easily by following along with step
 
 ## 参照ドキュメントとリソース
 
-* [**リリースノート&#x200B;**](../release-notes/latest/latest.md)<br/>最新のリリースに関する情報を確認し、過去の[!DNL Experience Platform]リリースを確認します。
+* [**リリースノート**](../release-notes/latest/latest.md)<br/>&#x200B;最新のリリースに関する情報を確認し、過去の [!DNL Experience Platform] リリースを確認します。
 
-* [**用語集&#x200B;**](glossary.md)<br/>Adobe Experience Platform の用語を確認します。
+* [**用語集**](glossary.md)<br/>
+Adobe Experience Platform の用語を確認します。
 
-* [**トラブルシューティングガイド&#x200B;**](troubleshooting.md)<br/>よくあるエラーの解決方法と、よくある質問への回答を見つけます。
+* [**トラブルシューティングガイド**](troubleshooting.md)<br/>&#x200B;よくあるエラーの解決方法と、よくある質問への回答を見つけます。
 
-* [**API の基本&#x200B;**](api-fundamentals.md)<br/>[!DNL Platform]API の操作の基本について説明します。
+* [**API の基本**](api-fundamentals.md)<br/>[!DNL Platform]
+ API の操作の基本について説明します。
 
-* [**API リファレンス&#x200B;**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>[!DNL Experience Platform]API（ヘッダー、パラメーター、サンプルリクエスト、応答を含む）を発見します。*これらのドキュメントは Adobe I/O でホストされます。*
+* [**API リファレンス**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>[!DNL Experience Platform]
+ API（ヘッダー、パラメーター、サンプルリクエスト、応答を含む）を発見します。*これらのドキュメントは Adobe I/O でホストされます。*
 
 ## Adobe Experience Platform統合ビデオリソース
 
@@ -126,11 +130,11 @@ Get started with [!DNL Platform] quickly and easily by following along with step
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-Adobe Experience Platformが提供する主なメリットの1つは、他の既存のAdobeサービスと統合できる点です。 次のビデオでは、サー [!DNL Experience Platform] ビスが、Adobe Analytics、Adobe Target、Adobe Campaign、Adobe Experience Manager、 [!DNL Experience Cloud] 、などのアプリケーションや機能と統合される方法の概要を説明 [!DNL Customer Attributes]しま [!DNL Audience Library][!DNL Experience Platform Launch]す。
+Adobe Experience Platformが提供する主な利点の1つは、他の既存のAdobeサービスと統合できる点です。 次のビデオでは、サー [!DNL Experience Platform] ビスが、Adobe Analytics、Adobe Target、Adobe Campaign、Adobe Experience Manager、 [!DNL Experience Cloud][!DNL Customer Attributes]、などのアプリケーションや機能とどのように統合されているかについて概要を説明 [!DNL Audience Library][!DNL Experience Platform Launch]します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-Adobe Experience Platformを強化するアーキテクチャについて詳しくは、次のビデオを参照してください。
+Adobe Experience Platformのパワーを持つ建築に関する詳細は、以下のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
