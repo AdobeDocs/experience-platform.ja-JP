@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
 solution: Experience Platform
 title: データタイプの作成
 topic: developer guide
+description: '組織が複数の方法で使用する一般的なデータ構造がある場合は、データタイプを定義します。データ型を使用すると、複数フィールド構造を一貫して使用でき、ミックスインよりも柔軟に使用できます。これは、データ型をフィールドの「型」として追加することで、スキーマ内のどこにでも含めることができるからです。 '
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 95%
+source-wordcount: '256'
+ht-degree: 83%
 
 ---
 
