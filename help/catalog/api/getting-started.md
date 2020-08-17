@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
 title: カタログサービス開発者ガイド
 topic: developer guide
+description: この開発者ガイドでは、カタログ API の使用を始める手順を説明します。次に、カタログを使用して主要な操作を実行するためのサンプル API 呼び出しを提供します。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 44%
+source-wordcount: '584'
+ht-degree: 46%
 
 ---
 
 
 # [!DNL Catalog Service] 開発ガイド
 
-[!DNL Catalog Service] は、Adobe Experience Platform内のデータの場所と系列のレコードシステムです。 [!DNL Catalog] は、データ自体にアクセスすることなく、データに関する情報を検索できるメタデータストア（「カタログ」） [!DNL Experience Platform]として機能します。 詳しくは、「[カタログの概要](../home.md)」を参照してください。
+[!DNL Catalog Service] は、Adobe Experience Platform内のデータの位置と系統に関する記録システムです。 [!DNL Catalog] は、データ自体にアクセスすることなく、データに関する情報を検索できるメタデータストア（「カタログ」） [!DNL Experience Platform]として機能します。 詳しくは、「[カタログの概要](../home.md)」を参照してください。
 
 This developer guide provides steps to help you start using the [!DNL Catalog] API. The guide then provides sample API calls for performing key operations using [!DNL Catalog].
 
@@ -22,7 +23,7 @@ This developer guide provides steps to help you start using the [!DNL Catalog] A
 
 [!DNL Catalog] では、様々な種類のリソースおよび操作のメタデータを追跡 [!DNL Experience Platform]します。 This developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with creating and managing these resources:
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 * [バッチ取得](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]： が CSV や Parket などのデータファイルからデータを取得して保存する方法。
 * [ストリーミング取得](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform]： がクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
 
