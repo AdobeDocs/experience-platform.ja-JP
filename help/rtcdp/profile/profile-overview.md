@@ -1,10 +1,11 @@
 ---
+keywords: rtcdp profile;real-time customer profile
 title: リアルタイム顧客プロファイルの概要
 seo-title: リアルタイムの顧客データプラットフォームでのリアルタイム顧客プロファイル
 description: リアルタイムの顧客データプラットフォームを使用して、顧客に対して一貫性のある連携した関連性のあるエクスペリエンスをリアルタイム顧客プロファイルを介して提供する方法の概要を説明します。
 seo-description: リアルタイムの顧客データプラットフォーム，プロファイル，データ，エクスペリエンス，チャネル
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 43%
