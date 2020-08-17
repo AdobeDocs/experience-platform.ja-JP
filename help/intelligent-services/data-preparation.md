@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;Intelligent Services;popular topics
+keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform
 title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
+description: 'インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。 '
 translation-type: tm+mt
-source-git-commit: 88e4a183422dd1bc625fd842e24c2604fb249c91
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1980'
 ht-degree: 3%
 
 ---
@@ -35,7 +36,7 @@ ht-degree: 3%
 データが既ににに保存されている場合 [!DNL Platform]は、次の手順に従います。
 
 1. Consumer ExperienceEventスキーマの構造を確認し、 [Consumer ExperienceEvent](#cee-schema) のフィールドにデータをマッピングできるかどうかを確認します。
-1. Adobeのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、それに取り込む方法についてお問い合わせください。 [!DNL Intelligent Services]また、データを自分でマッピングする場合は、このガイド [](#mapping) の手順に従ってください。
+1. Adobeのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、それに取り込む方法について問い合わ [!DNL Intelligent Services]せます。または、データを自分でマッピングする場合は、このガイド [](#mapping) の手順に従ってください。
 
 ## CEEスキーマについて {#cee-schema}
 
