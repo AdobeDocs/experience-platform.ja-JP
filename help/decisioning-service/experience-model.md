@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: エクスペリエンス判定ドメインモデル
 topic: overview
+description: この節では、判定サービスのコンポーネントと、それらのコンポーネントの相互作用の詳細について説明します。概念とその関係は、判定の問題の「ドメイン」を形成します。 これらの基本コンポーネントは、Decisioningサービスの使用方法に関係なく機能します。
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 91%
+source-wordcount: '1412'
+ht-degree: 90%
 
 ---
 
@@ -18,9 +19,9 @@ In this section, the components of [!DNL Decisioning Service] are explained and 
 
 ## 判定オプション
 
-エクスペリエンス&#x200B;*判定オプション*&#x200B;は、特定の顧客に提示できる潜在的なエクスペリエンスです。オプションは、選択肢または代替とも呼ばれます。When deciding on the next best option for a customer, [!DNL Decisioning Service] considers options ***d<sub>1</sub>***to*** d<sub>N</sub>*** from amongst a finite set of options **`D`**.
+エクスペリエンス&#x200B;*判定オプション*&#x200B;は、特定の顧客に提示できる潜在的なエクスペリエンスです。オプションは、選択肢または代替とも呼ばれます。When deciding on the next best option for a customer, [!DNL Decisioning Service] considers options ***d<sub>1</sub>*** to ***d<sub>N</sub>*** from amongst a finite set of options **`D`**.
 
-判定は、利用可能な一連のオプションの中で最適なオプションを特定することでおこなわれます。1 つのアプローチは、いずれか 1 つだけが残るまでセット&#x200B;***d*** から&#x200B;*判定オプション****d<sub>i</sub>***を連続的に削除し、残りのセットから「勝者」をランダムに選択することです。もう 1 つの意思決定方法は、残りの（適格な）判定オプションを、期待される結果に従ってランク付けすることです。
+判定は、利用可能な一連のオプションの中で最適なオプションを特定することでおこなわれます。1 つのアプローチは、いずれか 1 つだけが残るまでセット&#x200B;***d*** から&#x200B;*判定オプション****d<sub>i</sub>*** を連続的に削除し、残りのセットから「勝者」をランダムに選択することです。もう 1 つの意思決定方法は、残りの（適格な）判定オプションを、期待される結果に従ってランク付けすることです。
 
 ### 判定オプションの有限セット
 
