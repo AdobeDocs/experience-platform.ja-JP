@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Adobe Experience Platform のデータガバナンス
 topic: overview
+description: Adobe Experience Platform データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。カタログ化、データ系列、データ使用のラベル付け、データ使用ポリシー、マーケティング活動のためのデータ使用の制御など、様々なレベルでExperience Platform内の主な役割を果たします。
 translation-type: tm+mt
-source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 71%
+source-wordcount: '1394'
+ht-degree: 70%
 
 ---
 
@@ -94,7 +95,7 @@ This document provided a high-level introduction to [!DNL Data Governance] and t
 
 The following section provides additional information regarding [!DNL Data Governance].
 
-### [!DNL Data Governance] 用語
+### [!DNL Data Governance] terminology
 
 The following table outlines key terms related to [!DNL Data Governance] and the DULE framework.
 
