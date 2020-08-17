@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;opt-out
 solution: Experience Platform
 title: オプトアウトの遵守
 topic: overview
+description: 'Experience Platformを使用すると、顧客は、データの使用状況やストレージに関するオプトアウトリクエストをリアルタイム顧客プロファイル内で送信できます。 これらのオプトアウトリクエストは、カリフォルニア州消費者プライバシー法（CCPA）に含まれています。CCPA は、カリフォルニア州の在住者に対して、個人データにアクセスし削除する権利や、個人データが販売または開示されたか（そして誰に対して）を知る権利を付与しています。 '
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '1006'
 ht-degree: 64%
 
 ---
@@ -22,10 +23,10 @@ ht-degree: 64%
 
 Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. オプトアウトリクエストを処理する前に、次のサービスのドキュメントを確認してください。
 
-- [!DNL Real-time Customer Profile](../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md): データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): 組織が、内部の顧客データに関するデータのプライバシー規制へのコンプライアンスを自動化できるよう支援 [!DNL Platform]します。
+- [!DNL Real-time Customer Profile](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [!DNL Adobe Experience Platform Segmentation Service](./home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+- [!DNL Experience Data Model (XDM)](../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md):組織が、内部の顧客データに関するデータのプライバシー規制へのコンプライアンスを自動化できるよう支援 [!DNL Platform]します。
 
 ## オプトアウト mixin 
 
