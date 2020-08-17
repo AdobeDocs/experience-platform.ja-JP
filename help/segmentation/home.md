@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
 title: Adobe Experience Platform セグメント化サービス
 topic: overview
+description: このドキュメントでは、セグメント化サービスの概要と Adobe Experience Platform での役割について説明します。
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1991'
 ht-degree: 73%
 
 ---
