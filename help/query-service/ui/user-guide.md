@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query editor;query editor
 solution: Experience Platform
-title: Adobe Experience Platform クエリサービス クエリエディターガイド
+title: クエリエディターユーザガイド
 topic: query editor
+description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内で顧客体験データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 55%
+source-wordcount: '1086'
+ht-degree: 58%
 
 ---
 
 
 # [!DNL Query Editor] ユーザーガイド
 
-[!DNL Query Editor] は、Adobe Experience Platformが提供するインタラクティブなツール [!DNL Query Service][!DNL Experience Platform] です。ユーザーインターフェイス内で顧客体験データのクエリを作成、検証および実行できます。 [!DNL Query Editor] は、分析およびデータ探索用の開発クエリをサポートし、開発目的でインタラクティブクエリを実行できるほか、でデータセットを設定する非インタラクティブクエリも実行でき [!DNL Experience Platform]ます。
+[!DNL Query Editor] はAdobe Experience Platformが提供するインタラクティブなツール [!DNL Query Service][!DNL Experience Platform] です。ユーザーインターフェイス内で顧客体験データのクエリを作成、検証および実行できます。 [!DNL Query Editor] は、分析およびデータ探索用の開発クエリをサポートし、開発目的でインタラクティブクエリを実行できるほか、でデータセットを設定する非インタラクティブクエリも実行でき [!DNL Experience Platform]ます。
 
 For more information about the concepts and features of [!DNL Query Service], see the [Query Service overview][query-service-overview]. To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview][query-service-ui].
 
@@ -36,7 +37,7 @@ For more information about the concepts and features of [!DNL Query Service], se
 
 Using [!DNL Query Editor], you can write, execute, and save queries for customer experience data. All queries executed in [!DNL Query Editor], or saved, are available to all users in your organization with access to [!DNL Query Service].
 
-### Accessing [!DNL Query Editor]
+### [!DNL Query Editor] へのアクセス
 
 In the [!DNL Experience Platform] UI, click **[!UICONTROL Queries]** in the left navigation menu to open the [!DNL Query Service] workspace. 次に、画面の右上にある「**[!UICONTROL クエリを作成]**」をクリックして、クエリの記述を開始します。This link is available from any of the pages in the [!DNL Query Service] workspace.
 
