@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 translation-type: tm+mt
-source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
+source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '616'
 ht-degree: 6%
 
 ---
@@ -194,4 +194,5 @@ ht-degree: 6%
    - [受信データをアクティブ化して顧客プロファイルを入力します](tutorials/ui/profile.md)
    - [アカウントとデータフローの監視](tutorials/ui/monitor.md)
    - [データフローの削除](tutorials/ui/delete.md)
+- [フロー実行通知](notifications.md)
 - [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
