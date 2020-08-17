@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset
 solution: Experience Platform
 title: Adobe Experience Platform バッチインジェストの概要
 topic: overview
+description: Batch Ingestion API を使用すると、データをバッチファイルとして Adobe Experience Platform に取り込むことができます。CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model（XDM）レジストリの既知のスキーマに適合するデータを取り込むことができます。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1196'
 ht-degree: 83%
 
 ---
