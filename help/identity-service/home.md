@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Adobe Experience Platform ID サービス
 topic: overview
+description: Adobe Experience Platform ID サービスを使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客と行動をより良く表示できます。これによって、インパクトのある個人のデジタルエクスペリエンスをリアルタイムで提供できます。
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1707'
 ht-degree: 69%
 
 ---
@@ -131,7 +132,7 @@ During the streaming ingestion process, [!DNL Identity Service ]automatically ex
 
 [!DNL Identity Service] は、バッチ取り込み [!DNL Experience Platform] またはストリーミング取り込みによって送信され [るXDM準拠のデータを使用し](../ingestion/batch-ingestion/overview.md) ます [](../ingestion/streaming-ingestion/overview.md)。
 
-次のビデオは、IDサービスについての理解を深めるためのものです。 このビデオでは、データフィールドにIDとしてラベルを付け、IDデータを取り込んで、データがAdobe Experience PlatformIDサービスのプライベートグラフに送信されたことを確認する方法を示します。
+次のビデオは、IDサービスについての理解を深めるためのものです。 このビデオでは、データフィールドにIDとしてラベルを付け、IDデータを取り込み、データがAdobe Experience PlatformIDサービスのプライベートグラフに送信されたことを確認する方法を示します。
 
 >[!WARNING]
 >
