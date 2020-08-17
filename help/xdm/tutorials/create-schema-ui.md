@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: スキーマエディターを使用したスキーマの作成
 topic: tutorials
+description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '3376'
-ht-degree: 56%
+source-wordcount: '3392'
+ht-degree: 57%
 
 ---
 
@@ -24,9 +25,9 @@ This tutorial covers the steps for creating a schema using the Schema Editor wit
 
 このチュートリアルでは、スキーマエディターの使用に関わる Adobe Experience Platform の様々な側面について、十分に理解しておく必要があります。このチュートリアルを始める前に、次の概念に関するドキュメントを確認してください。
 
-* [!DNL Experience Data Model (XDM)](../home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [!DNL Experience Data Model (XDM)](../home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 * [スキーマ合成の基本](../schema/composition.md)：XDM スキーマとその構築ブロック（クラス、mixin、データ型、フィールドなど）の概要です。
-* [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 This tutorial requires you to have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
@@ -172,10 +173,10 @@ The changes are applied and the newly created &quot;[!UICONTROL loyalty]&quot; o
 
 各フィールドには、次の情報が必要です。
 
-* **[!UICONTROL フィールド名]:**フィールドの名前。キャメルケースで書かれます。 例：loyaltyLevel
-* **[!UICONTROL 表示名]:**フィールドの名前。タイトルの場合は大文字で記述されます。 例：Loyalty Level
-* **[!UICONTROL タイプ]:**フィールドのデータ型です。 This includes basic scalar types and any data types defined in the[!DNL Schema Registry]. 例：文字列、整数、ブール値、人、住所、電話番号など
-* **[!UICONTROL 説明]:**フィールドのオプションの説明を文頭の場合と同様に記述します。 （最大 200 文字）
+* **[!UICONTROL フィールド名]:** フィールドの名前。キャメルケースで書かれます。 例：loyaltyLevel
+* **[!UICONTROL 表示名]:** フィールドの名前。タイトルの場合は大文字で記述されます。 例：Loyalty Level
+* **[!UICONTROL タイプ]:** フィールドのデータ型です。 This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. 例：文字列、整数、ブール値、人、住所、電話番号など
+* **[!UICONTROL 説明]:** フィールドのオプションの説明を文頭の場合と同様に記述します。 （最大 200 文字）
 
 The first field for the Loyalty object will be a string called &quot;[!UICONTROL loyaltyId]&quot;. When setting the new field&#39;s type to &quot;[!UICONTROL String]&quot;, the *[!UICONTROL Field Properties]* window becomes populated with several options for applying constraints, including **[!UICONTROL Default Value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum Length]**.
 
@@ -214,10 +215,10 @@ When you have completed all field properties, click **[!UICONTROL Apply]** and t
 
 利用可能な追加の制約に関する詳細情報：
 
-* **[!UICONTROL 必須]:**フィールドがデータ取り込みに必要であることを示します。 このフィールドを含まないデータセットに基づいてスキーマセットにアップロードされたデータの取得は失敗します。
-* **[!UICONTROL 配列]:**フィールドに値の配列が含まれ、各値は指定されたデータ型になっていることを示します。 例えば、「String」データ型を選択し、「Array」チェックボックスをオンにすると、フィールドに文字列の配列が含まれます。
-* **[!UICONTROL 列挙]:**このフィールドに、可能な値の列挙リストの値の1つを含める必要があることを示します。
-* **[!UICONTROL ID]:**このフィールドがIDフィールドであることを示します。 ID フィールドの詳細については、[このチュートリアルの後半](#identity-field)で説明します。
+* **[!UICONTROL 必須]:** フィールドがデータ取り込みに必要であることを示します。 このフィールドを含まないデータセットに基づいてスキーマセットにアップロードされたデータの取得は失敗します。
+* **[!UICONTROL 配列]:** フィールドに値の配列が含まれ、各値は指定されたデータ型になっていることを示します。 例えば、「String」データ型を選択し、「Array」チェックボックスをオンにすると、フィールドに文字列の配列が含まれます。
+* **[!UICONTROL 列挙]:** このフィールドに、可能な値の列挙リストの値の1つを含める必要があることを示します。
+* **[!UICONTROL ID]:** このフィールドがIDフィールドであることを示します。 ID フィールドの詳細については、[このチュートリアルの後半](#identity-field)で説明します。
 
 ## 複数フィールドオブジェクトのデータ型への変換 {#datatype}
 
@@ -317,7 +318,7 @@ The &quot;[!UICONTROL Loyalty Members]&quot; schema is also available to be view
 
 [!DNL Experience Platform] は、組織に固有のクラスに基づいてスキーマを定義する柔軟性を提供します。
 
-*[!UICONTROL クラスの割り当て]*&#x200B;ダイアログを開くには、スキーマエディターの「*[!UICONTROL クラス]*」セクションで、「**[!UICONTROL 割り当て]**」をクリックします。Within the dialog, select **C[!UICONTROL reate New Class ]**.
+*[!UICONTROL クラスの割り当て]*&#x200B;ダイアログを開くには、スキーマエディターの「*[!UICONTROL クラス]*」セクションで、「**[!UICONTROL 割り当て]**」をクリックします。Within the dialog, select **C[!UICONTROL reate New Class]**.
 
 You can then give your new class a **[!UICONTROL Display Name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** (&quot;[!UICONTROL Record]&quot; or &quot;[!UICONTROL Time Series]&quot;) for the data the schema will define.
 
