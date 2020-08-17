@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
 solution: Experience Platform
 title: API を使用したデータセットの作成
 topic: datasets
+description: このドキュメントでは、Adobe Experience Platform API を使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順を説明します。
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1251'
 ht-degree: 82%
 
 ---
@@ -21,7 +22,7 @@ ht-degree: 82%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] データをバッチファイルとして取り込むことができます。
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
@@ -34,9 +35,9 @@ The following sections provide additional information that you will need to know
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
