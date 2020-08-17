@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルの概要
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 44%
 
 ---
@@ -77,7 +77,8 @@ This section introduces the components that allow [!DNL Real-time Customer Profi
 
 [!DNL Platform] を設定して、にレコードと時系列のデータを送信できます。これにより、リアルタイムストリーミングの取り込みとバッチ取り込みがサポートされ [!DNL Profile]ます。 詳しくは、[リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md)方法を概要するチュートリアルを参照してください。
 
->[!N注意]
+>[!NOTE]
+>
 >Adobeソリューションで収集されたデータ( [!DNL Analytics Cloud]、、、 [!DNL Marketing Cloud]およびなど)は、に流れ込み、 [!DNL Advertising Cloud]に取り込まれ [!DNL Experience Platform][!DNL Profile]ます。
 
 ### [!DNL Profile] 摂取指標
