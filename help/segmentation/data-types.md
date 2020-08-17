@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Adobe Experience Platformセグメントサービスのデータタイプ
 topic: overview
+description: すべての XDM データ型がセグメント化サービス内でサポートされています。セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 68%
+source-wordcount: '479'
+ht-degree: 69%
 
 ---
 
@@ -54,11 +55,11 @@ As an Adobe Experience Platform schema, [!DNL XDM ExperienceEvents] record expli
 
 外部オーディエンスは、新しいセグメント定義のコンポーネントとしても使用でき、属性ルールを新しいセグメントに追加できます。
 
-現在、外部オーディエンスとしてAdobe Audience Managerのみがサポートされ、今後、追加のソースが有効になります。 PlatformでのAdobe Audience Managerオーディエンスの使用について詳しくは、Adobe Audience Managerドキュメント内の [オーディエンス共有ガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)。
+現在、外部オーディエンスとしてサポートされているのはAdobe Audience Managerのみです。今後、追加のソースが有効になる予定です。 プラットフォームでのAdobe Audience Managerオーディエンスの使用について詳しくは、Adobe Audience Managerのドキュメント内の [オーディエンス共有ガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)。
 
 ### セグメントの共有
 
-Platformで作成されたセグメントは、他の [Adobe Experience Cloudコアサービス内で使用できます](https://docs.adobe.com/content/help/ja-JP/core-services/interface/experience-cloud.html)。 この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントに連絡する必要があります。
+プラットフォームで作成したセグメントは、他の [Adobe Experience Cloudコアサービス内で使用できます](https://docs.adobe.com/content/help/ja-JP/core-services/interface/experience-cloud.html)。 この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントに連絡する必要があります。
 
 ## その他のデータタイプ
 
