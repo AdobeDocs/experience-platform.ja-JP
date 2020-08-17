@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: クエリパラメータ－を使用したカタログデータのフィルター
 topic: developer guide
+description: カタログサービス API を使用すると、応答データをリクエストパラメーターを使用してフィルタリングするクエリができます。カタログについてのベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを改善するのに役立ちます。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2033'
-ht-degree: 86%
+source-wordcount: '2078'
+ht-degree: 87%
 
 ---
 
@@ -206,8 +207,8 @@ curl -X GET \
 * タグ名は IMS 組織に固有です。
 * アドビのプロセスは、特定の動作にタグを活用する場合があります。これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。したがって、タグ名を宣言する際は、このような規則を避ける必要があります。
 * The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
-   * `unifiedProfile`: このタグ名は、で取り込むデータセット用に予約されてい [!DNL Real-time Customer Profile](../../profile/home.md)ます。
-   * `unifiedIdentity`: このタグ名は、で取り込むデータセット用に予約されてい [!DNL Identity Service](../../identity-service/home.md)ます。
+   * `unifiedProfile`:このタグ名は、で取り込むデータセット用に予約されてい [!DNL Real-time Customer Profile](../../profile/home.md)ます。
+   * `unifiedIdentity`:このタグ名は、で取り込むデータセット用に予約されてい [!DNL Identity Service](../../identity-service/home.md)ます。
 
 次に、`tags` プロパティを含むデータセットの例を示します。このプロパティ内のタグは、キーと値のペアの形式をとり、各タグ値は 1 つの文字列を含む配列として表示されます。
 
