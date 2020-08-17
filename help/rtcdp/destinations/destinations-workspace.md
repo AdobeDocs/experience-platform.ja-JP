@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: 宛先ワークスペース
 seo-title: 宛先ワークスペース
 description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 seo-description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 61%
