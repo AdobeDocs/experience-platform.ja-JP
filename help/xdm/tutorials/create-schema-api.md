@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: スキーマレジストリ API を使用したスキーマの作成
 topic: tutorials
+description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2343'
 ht-degree: 80%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 80%
 
 # Create a schema using the [!DNL Schema Registry] API
 
-は、 [!DNL Schema Registry] Adobe Experience Platform内のにアクセスするた [!DNL Schema Library] めに使用されます。 The [!DNL Schema Library] contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
+は、Adobe Experience Platform [!DNL Schema Registry] 内の人々にアクセスする [!DNL Schema Library] ために使用されます。 The [!DNL Schema Library] contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
 
 This tutorial uses the [!DNL Schema Registry] API to walk you through the steps to compose a schema using a standard class. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor Tutorial](create-schema-ui.md) provides step-by-step instructions for performing similar actions in the schema editor.
 
@@ -22,9 +23,9 @@ This tutorial uses the [!DNL Schema Registry] API to walk you through the steps 
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [!DNL Experience Data Model (XDM) System](../home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Experience Data Model (XDM) System](../home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-* [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
