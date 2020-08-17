@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
 title: Adobe Experience Platform のデータ取り込みの概要
 topic: overview
+description: このドキュメントでは、データをプラットフォームに取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 52%
+source-wordcount: '442'
+ht-degree: 55%
 
 ---
 
@@ -42,7 +43,7 @@ Source connections can be configured to gather data from other Adobe application
 
 ## 次の手順 およびその他のリソース
 
-This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. 各取り込み方法の概要ドキュメントを引き続き参照して、それぞれの機能、ユースケース、ベストプラクティスをよく理解してください。また、以下のインジェストの概要ビデオを見て、学習内容を伝えることもできます。 For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).
+This document provided a brief introduction to the different aspects of [!DNL Data Ingestion] in [!DNL Experience Platform]. 各取り込み方法の概要ドキュメントを引き続き参照して、それぞれの機能、ユースケース、ベストプラクティスをよく理解してください。また、次のインジェストの概要ビデオを見ることで、学習を補うこともできます。 For information on how [!DNL Experience Platform] tracks the metadata for ingested records, see the [Catalog Service overview](../catalog/home.md).
 
 >[!WARNING]
 >
