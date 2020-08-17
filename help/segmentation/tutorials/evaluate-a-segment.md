@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment evaluation
 solution: Experience Platform
 title: セグメントの評価
 topic: tutorial
+description: このドキュメントでは、セグメント化 API を使用してセグメントを評価したり、セグメント結果にアクセスしたりするためのチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 62%
+source-wordcount: '1535'
+ht-degree: 63%
 
 ---
 
@@ -20,9 +21,9 @@ This document provides a tutorial for evaluating segments and accessing segment 
 
 This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md): データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [!DNL Adobe Experience Platform Segmentation Service](../home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 - [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### 必須ヘッダー
