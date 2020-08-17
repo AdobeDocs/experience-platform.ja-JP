@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Sandbox;sandbox
 solution: Experience Platform
 title: サンドボックスの作成
 topic: developer guide
+description: '''/sandboxs''エンドポイントにPOSTリクエストを作成することで、新しいサンドボックスを作成できます。'
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 100%
+source-wordcount: '151'
+ht-degree: 90%
 
 ---
 
