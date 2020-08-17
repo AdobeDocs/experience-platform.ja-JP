@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: 判定サービス
 topic: overview
+description: 意思決定サービスは、Adobe Experience Platform 上で実行されるアプリケーションで、パーソナライズされた最適な調整済みのエクスペリエンスを作成する機能を提供します。意思決定サービスを使用すると、利用可能な一連の選択肢の中から最適なオプションを決定できます。これらのオプションは代替オプションとも呼ばれ、オファー、お勧め製品、web エクスペリエンスのコンテンツコンポーネント、会話スクリプト、実行するアクションなどがあります。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1592'
+source-wordcount: '1648'
 ht-degree: 77%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 77%
 
 # 判定サービスの概要
 
-[!DNL Decisioning Service] は、Adobe Experience Platform上で実行されるアプリケーションで、パーソナライズされた、最適化された、調整されたエクスペリエンスを作成する機能を提供します。 Using [!DNL Decisioning Service], you can determine the best *option* from a set of available choices. これらのオプションは代替オプションとも呼ばれ、オファー、お勧め製品、web エクスペリエンスのコンテンツコンポーネント、会話スクリプト、実行するアクションなどがあります。現在、*オファー判定*&#x200B;の使用事例と領域がサポートされています。ここでは、判定オプションは特にオファーとしてモデル化されています。また、今後はほかの使用事例もサポートされる予定です。
+[!DNL Decisioning Service] は、Adobe Experience Platform上で実行するアプリケーションで、パーソナライズされた、最適化された、調整されたエクスペリエンスを作成する機能を提供します。 Using [!DNL Decisioning Service], you can determine the best *option* from a set of available choices. これらのオプションは代替オプションとも呼ばれ、オファー、お勧め製品、web エクスペリエンスのコンテンツコンポーネント、会話スクリプト、実行するアクションなどがあります。現在、*オファー判定*&#x200B;の使用事例と領域がサポートされています。ここでは、判定オプションは特にオファーとしてモデル化されています。また、今後はほかの使用事例もサポートされる予定です。
 
 With [!DNL Decisioning Service], customers can reuse business logic as well as share a catalog of options across channels and applications. アプリケーション内で判定オプション（およびそれを選択するための戦略）を徹底的に管理する代わりに、顧客は、エンドユーザーが取引先や組織とやり取りするタイミング、方法、チャネルに関係なく、判定オプションを活用できるようになりました。
 
