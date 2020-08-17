@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 solution: Adobe Experience Platform
 title: API を使用したプロファイルおよび ID サービスのデータセットの設定
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 56%
@@ -27,10 +27,10 @@ This tutorial covers the process of enabling a dataset for use in [!DNL Real-tim
 
 This tutorial requires a working understanding of the various Adobe Experience Platform services involved in managing [!DNL Profile]-enabled datasets. Before beginning this tutorial, please review the documentation for these related [!DNL Platform] services:
 
-- [!DNL Real-time Customer Profile](../home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-- [!DNL Identity Service](../../identity-service/home.md): 取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
-- [!DNL Catalog Service](../../catalog/home.md): および用のデータセットの作成と設定を可能にするRESTful API [!DNL Real-time Customer Profile] で [!DNL Identity Service]す。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+- [!DNL Real-time Customer Profile](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [!DNL Identity Service](../../identity-service/home.md):取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
+- [!DNL Catalog Service](../../catalog/home.md):および用のデータセットの作成と設定を可能にするRESTful API [!DNL Real-time Customer Profile] で [!DNL Identity Service]す。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
 以下の節では、Platform API を正しく呼び出すために知っておく必要がある追加情報を示します。
 
