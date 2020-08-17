@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: JupyterLab ユーザーガイド
 topic: Overview
+description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '3647'
-ht-degree: 54%
+source-wordcount: '3684'
+ht-degree: 55%
 
 ---
 
 
 # [!DNL JupyterLab] ユーザーガイド
 
-[!DNL JupyterLab] は、 <a href="https://jupyter.org/" target="_blank">Project Jupyter向けのWebベースのユーザインターフェイスで</a> 、に緊密に統合されて [!DNL Adobe Experience Platform]います。 これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。
+[!DNL JupyterLab] は、[プロジェクト Jupyter](https://jupyter.org/) の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。
 
 This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 
@@ -28,7 +29,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 | --- | --- |
 | **カーネル** | Kernels provide notebook and other [!DNL JupyterLab] front-ends the ability to execute and introspect code in different programming languages. [!DNL Experience Platform] は、 [!DNL Python]、R、PySpark、およびでの開発をサポートする追加カーネルを提供 [!DNL Spark]します。 詳しくは「[カーネル](#kernels)」の節を参照してください。 |
 | **データアクセス** | Access existing datasets directly from within [!DNL JupyterLab] with full support for read and write capabilities. |
-| **[!DNL Platform]サービス統合&#x200B;** | Built-in integrations allows you to utilize other [!DNL Platform] services directly from within [!DNL JupyterLab]. サポートされる統合の完全なリストは、「[他の Platform サービスとの統合](#service-integration)」の節に記載されています。 |
+| **[!DNL Platform]サービス統合** | Built-in integrations allows you to utilize other [!DNL Platform] services directly from within [!DNL JupyterLab]. サポートされる統合の完全なリストは、「[他の Platform サービスとの統合](#service-integration)」の節に記載されています。 |
 | **認証** | <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab の組み込みのセキュリティモデル</a>に加えて、Platform のサービス間通信を含む、アプリケーションと Experience Platform の間のすべてのやり取りは、<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System]（IMS）</a>を通じて暗号化され、認証されます。 |
 | **開発ライブラリ** | では、 [!DNL Experience Platform]、R、PySpark用に事前にインストールされたライブラリを [!DNL JupyterLab][!DNL Python]提供します。 サポートされているライブラリの完全なリストについては、[付録](#supported-libraries)を参照してください。 |
 | **ライブラリコントローラー** | When the the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. 詳しくは「[カーネル](#kernels)」の節を参照してください。 |
@@ -41,10 +42,10 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 Standardization and interoperability are key concepts behind [!DNL Experience Platform]. The integration of [!DNL JupyterLab] on [!DNL Platform] as an embedded IDE allows it to interact with other [!DNL Platform] services, enabling you to utilize [!DNL Platform] to its full potential. The following [!DNL Platform] services are available in [!DNL JupyterLab]:
 
-* **[!DNL Catalog Service]:**読み取り/書き込み機能を備えたデータセットへのアクセスと調査
-* **[!DNL Query Service]:**SQLを使用してデータセットにアクセスし、データセットを調査します。大量のデータを処理する際に、データ・アクセスのオーバーヘッドが低くなります。
-* **[!DNL Sensei ML Framework]:**データのトレーニングとスコア機能を備えたモデル開発と、1回のクリックでレシピを作成。
-* **[!DNL Experience Data Model (XDM)]:**標準化と相互運用性は、Adobe Experience Platformの背後にある重要な概念です。[Adobeに基づくExperience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
+* **[!DNL Catalog Service]:** 読み取り/書き込み機能を備えたデータセットへのアクセスと調査
+* **[!DNL Query Service]:** SQLを使用してデータセットにアクセスし、データセットを調査します。大量のデータを処理する際に、データ・アクセスのオーバーヘッドが低くなります。
+* **[!DNL Sensei ML Framework]:** データのトレーニングとスコア機能を備えたモデル開発と、1回のクリックでレシピを作成。
+* **[!DNL Experience Data Model (XDM)]:** 標準化と相互運用性は、Adobe Experience Platformの主な概念です。 [Adobeに基づくExperience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 
 >[!NOTE]
 >
@@ -136,7 +137,7 @@ The main work area in [!DNL JupyterLab] enables you to arrange documents and oth
 
 ### カーネルセッション {#kernel-sessions}
 
-Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session. すべてのアクティブなセッションは、左側のサイドバーから「**実行中の端末とカーネル**」タブを展開すると見つかります。ノートブックのカーネルのタイプと状態は、ノートブックのインターフェースの右上を見ることで識別できます。下の図では、ノートブックに関連するカーネルは **[!DNL Python]3 **で、現在の状態は右側に灰色の円で表されています。中空の円はアイドルカーネルを意味し、実円はビジーカーネルを意味します。
+Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session. すべてのアクティブなセッションは、左側のサイドバーから「**実行中の端末とカーネル**」タブを展開すると見つかります。ノートブックのカーネルのタイプと状態は、ノートブックのインターフェースの右上を見ることで識別できます。下の図では、ノートブックに関連するカーネルは **[!DNL Python]3** で、現在の状態は右側に灰色の円で表されています。中空の円はアイドルカーネルを意味し、実円はビジーカーネルを意味します。
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
@@ -438,12 +439,12 @@ dataFrame.show()
 
 ノートブック( [!DNL Data Science Workspace][!DNL Python][!DNL Python] 3カーネル)からデータセットを読み取ったり書き込んだりするためのカスタムマジックコマンド。
 
-* **{action}**: データセットに対して実行するアクションのタイプ。 「読み取り」と「書き込み」の2つのアクションを使用できます。
-* **—datasetId {id}**: 読み取りまたは書き込みを行うデータセットのIDを指定するために使用します。 これは必須の引数です。
-* **—dataFrame {df}**: パンダのデータフレーム。 これは必須の引数です。
+* **{action}**:データセットに対して実行するアクションのタイプ。 「読み取り」と「書き込み」の2つのアクションを使用できます。
+* **—datasetId {id}**:読み取りまたは書き込みを行うデータセットのIDを指定するために使用します。 これは必須の引数です。
+* **—dataFrame {df}**:パンダのデータフレーム。 これは必須の引数です。
    * アクションが「read」の場合、{df}は、データセット読み取り操作の結果を利用できる変数です。
    * アクションが「書き込み」の場合、このデータフレーム{df}はデータセットに書き込まれます。
-* **—mode（オプション）**: 使用できるパラメーターは、「batch」および「interactive」です。 デフォルトでは、モードは「interactive」に設定されています。 大量のデータを読み取る場合は、「バッチ」モードを使用することをお勧めします。
+* **—mode（オプション）**:使用できるパラメーターは、「batch」および「interactive」です。 デフォルトでは、モードは「interactive」に設定されています。 大量のデータを読み取る場合は、「バッチ」モードを使用することをお勧めします。
 
 **例**
 
