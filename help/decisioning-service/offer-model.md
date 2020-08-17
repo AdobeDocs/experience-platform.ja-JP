@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management
 solution: Experience Platform
 title: オファー判定ドメインモデル
 topic: overview
+description: オファーの判定とは、顧客をオファーに誘導するためのルールや予測を正式に策定し、一元管理する判定サービスの使用事例です。
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '2614'
+source-wordcount: '2640'
 ht-degree: 97%
 
 ---
