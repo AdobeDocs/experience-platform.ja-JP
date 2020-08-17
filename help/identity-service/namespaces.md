@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
 title: Adobe Experience Platform ID サービス
 topic: overview
+description: 'ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name<span>@email.com」の値を電子メールアドレスとして、または「443522」を数値のCRM IDとして区別します。 '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 69%
+source-wordcount: '761'
+ht-degree: 68%
 
 ---
 
@@ -20,8 +21,8 @@ Identity namespaces are a component of [!DNL Identity Service](./home.md) that s
 
 ID 名前空間を使用するには、関連する様々な Adobe Experience Platform サービスについて理解している必要があります。名前空間の使用を開始する前に、次のサービスのドキュメントを確認してください。
 
-- [!DNL Real-time Customer Profile](../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [!DNL Identity Service](./home.md): デバイスとシステム間でIDをブリッジ化することで、個々の顧客とその行動をより良く表示できます。
+- [!DNL Real-time Customer Profile](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [!DNL Identity Service](./home.md):デバイスとシステム間でIDをブリッジ化することで、個々の顧客とその行動をより良く表示できます。
 - [!DNL Privacy Service](../privacy-service/home.md)：ID 名前空間を使用して、EU 一般データ保護規則（GDPR）に準拠します。名前空間には、GDPR リクエストを実行できます。
 
 ## ID 名前空間について
