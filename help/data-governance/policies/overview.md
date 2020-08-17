@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dule;DULE
 solution: Experience Platform
 title: データ使用ポリシーの概要
 topic: policies
+description: データ使用状況ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実施する必要があります。データ使用ポリシーは、Experience Platform 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 14%
+source-wordcount: '1007'
+ht-degree: 18%
 
 ---
 
