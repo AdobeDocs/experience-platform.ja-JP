@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルユーザガイド
 topic: guide
+description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1147'
-ht-degree: 11%
+source-wordcount: '1191'
+ht-degree: 14%
 
 ---
 
@@ -22,9 +23,9 @@ This document serves as a guide for interacting with [!DNL Real-time Customer Pr
 
 This user guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-time Customer Profiles]. このユーザガイドを読む前に、次のサービスのドキュメントを確認してください。
 
-* [!DNL Real-time Customer Profile](../home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [!DNL Identity Service](../../identity-service/home.md): 異なるデータソース [!DNL Real-time Customer Profile] に取り込まれる際に、アイデンティティを別々のデータソースからブリッジすることで有効に [!DNL Platform]します。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Real-time Customer Profile](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [!DNL Identity Service](../../identity-service/home.md):異なるデータソース [!DNL Real-time Customer Profile] に取り込まれる際に、アイデンティティを別々のデータソースからブリッジすることで有効に [!DNL Platform]します。
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
 ## 概要
 
@@ -58,7 +59,7 @@ The profile count displays the total number of profiles your organization has wi
 
 ### 名前空間別プロファイル数 {#profiles-by-namespace}
 
-名前空間別 *[!UICONTROL プロファイル数指標は]* 、プロファイルストア内の結合されたすべてのプロファイルにおける名前空間の合計数および分類を表示します。 1つのプロファイルに複数の名前空間が関連付けられている場合があるので、名前空間別のプロファイルの合計数(つまり、各名前空間に表示される値を合計した数)は、常にプロファイル数指標より多くなります。 例えば、ある顧客が複数のチャネルで自社のブランドとやり取りした場合、複数の名前空間がその個々の顧客に関連付けられます。
+名前空間別 *[!UICONTROL プロファイル数指標は]* 、プロファイルストア内の結合されたすべてのプロファイルにおける名前空間の合計数および分類を表示します。 1つのプロファイルに複数の名前空間が関連付けられている場合があるので、名前空間別のプロファイルの合計数(つまり、各名前空間に表示される値を合計した数)は、常にプロファイル数指標より多くなります。 例えば、ある顧客が複数の顧客で自社のブランドとやり取りした場合、複数の名前空間がそのチャネルに関連付けられます。
 
 プロファイル数指標と同様に [、レコードの](#profile-count)[!DNL Profile Store] 取り込み先のカウントが5%以上増減すると、名前空間指標の更新を求めるジョブがトリガされます。 ストリーミングデータワークフローの場合、5%増減のしきい値に達したかどうかを判断するために、1時間ごとにチェックが行われます。 ジョブが存在する場合は、プロファイル数を更新するためにジョブが自動的にトリガされます。 バッチ取り込みの場合、5%の増減のしきい値に達した場合は、バッチを正常に取り込んで15分以内に [!DNL Profile Store]、ジョブが実行されて指標が更新されます。
 
@@ -90,7 +91,7 @@ The profile count displays the total number of profiles your organization has wi
 
 ### プロファイルの詳細 {#profile-detail}
 
-**[!UICONTROL プロファイルIDを選択すると]**、「 _[!UICONTROL 詳細]_」タブが開きます。 このページには、基本属性、リンクされたID、使用可能な連絡先チャネルなど、選択したプロファイルに関する情報が表示されます。 表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、個々の顧客の単一の表示を形成しています。
+**[!UICONTROL プロファイルIDを選択すると]**、「 _[!UICONTROL 詳細]_」タブが開きます。 表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、個々の顧客の単一の表示を形成しています。
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
