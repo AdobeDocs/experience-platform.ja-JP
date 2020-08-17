@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics
+keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Data Science Workspace の概要
 topic: overview
+description: このガイドでは、Data Science Workspaceに関連する主要な概念の概要を説明します。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2584'
 ht-degree: 74%
 
 ---
@@ -20,7 +21,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning an
 
 With [!DNL Data Science Workspace], data scientists can easily create intelligent services APIs - powered by machine learning. これらのサービスは、Adobe Target や Adobe Analytics Cloud などの他のアドビサービスと連携して、web、デスクトップ、およびモバイルアプリでパーソナライズされたターゲットデジタルエクスペリエンスを自動化することに役立ちます。
 
-This guide provides an overview the key concepts related to [!DNL Data Science Workspace].
+This guide provides an overview of the key concepts related to [!DNL Data Science Workspace].
 
 ## 概要
 
