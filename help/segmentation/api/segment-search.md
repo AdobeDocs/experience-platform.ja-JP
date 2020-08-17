@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
 solution: Adobe Experience Platform
 title: セグメント検索エンドポイント
 topic: guide
+description: セグメント検索は、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返す場合に使用します。 このガイドは、セグメント検索をより深く理解するのに役立つ情報を提供し、APIを使用して基本的なアクションを実行するためのサンプルAPI呼び出しを含みます。
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 47%
+source-wordcount: '1179'
+ht-degree: 45%
 
 ---
 
@@ -24,7 +25,7 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 
 「はじめに」の節で説明されている必須ヘッダーに加えて、セグメント検索エンドポイントへのすべてのリクエストには、次の追加ヘッダーが必要です。
 
-- x-ups-search-version: &quot;1.0&quot;
+- x-ups-search-version:&quot;1.0&quot;
 
 ### 複数の名前空間に対する検索
 
