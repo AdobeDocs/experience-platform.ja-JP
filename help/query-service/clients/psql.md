@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql
 solution: Experience Platform
 title: PSQL との接続
 topic: connect
+description: 'PSQL は、Postgres をマシンにインストールする際に提供されるコマンドラインインターフェイスです。次の手順に従ってインストールできます。 '
 translation-type: tm+mt
-source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 58%
+source-wordcount: '192'
+ht-degree: 63%
 
 ---
 
