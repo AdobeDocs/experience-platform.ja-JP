@@ -1,10 +1,11 @@
 ---
+keywords: web sdk;SDK;web SDK;Launch;launch
 title: Adobe Experience Platform Web SDK のヘルプ
 seo-title: Adobe Experience Platform Web SDK のヘルプ
 description: Adobe Experience Platform Web SDK の概要と、その使用方法を説明します。
 seo-description: Adobe Experience Cloud のお客様が　Experience Cloud　の様々なサービスを利用できるようにします 
 translation-type: tm+mt
-source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 21%
@@ -20,9 +21,9 @@ Adobe Experience Platform Web SDK is a client-side JavaScript library that allow
 
 [!DNL Adobe Experience Platform Web SDK] は、Experience Edgeを構成するコレクションの一部です。 Experience Edgeは、次の3つのテクノロジーで構成されています。
 
-* **[!DNL Adobe Experience Platform Web SDK]:**テクノロジーの導入を大幅にシンプル化するJavaScript SDKと[!DNL Launch][!DNL Adobe]拡張機能
+* **[!DNL Adobe Experience Platform Web SDK]:** テクノロジーの導入を大幅にシンプル化するJavaScript SDKと [!DNL Launch][!DNL Adobe] 拡張機能
 * **Adobe Experience PlatformモバイルSDK:** v5モバイルSDKの拡張機能により、お客様は新しい導入方法を使用できます。
-* **[!DNL Adobe Experience Platform Edge Network]:**サーバのグローバルな分散ネットワーク。製品の導入に関する新しい方法論を可能にし[!DNL Adobe]ます。
+* **[!DNL Adobe Experience Platform Edge Network]:** サーバのグローバルな分散ネットワーク。製品の導入に関する新しい方法論を可能にし [!DNL Adobe] ます。
 
 The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.
 
@@ -41,7 +42,7 @@ The [!DNL Adobe Experience Edge] is a new framework for low-latency data collect
 
 ## ビデオの概要
 
-次のビデオでは、Adobe Experience Platform [!DNL Web SDK] との概要を説明し [!DNL Edge Network]ます。
+以下のビデオでは、Adobe Experience Platformとの概要を説明 [!DNL Web SDK] し [!DNL Edge Network]ます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -58,7 +59,7 @@ Adobe Experience Platform Web SDK は、次の SDK の代わりとなります�
 
 新しいライブラリに加えて、アドビのソリューションに対する HTTP 要求を整理する新しいエンドポイントが追加されました。以前は、Visitor.js は訪問者 ID サービスに対してブロック呼び出しを送信した後、AT.js は Adobe Target に呼び出しを送信、DIL.js は Adobe Audience Manager に呼び出しを送信、最後に AppMeasurement.js は Adobe Analytics に呼び出しを送信していました。This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to the Adobe Experience Platform in a single call.
 
-次のビデオでは、Adobe Experience Platform [!DNL Web SDK] と実行中の動作 [!DNL Edge Network] を示します。 このビデオの例では、 [!DNL Experience Platform]、、、およびにデータを送信する、Adobeへの1回の呼び出しを使用し [!DNL Analytics][!DNL Audience Manager][!DNL Target]ます。
+次のビデオでは、Adobe Experience Platformの動作 [!DNL Web SDK] を実演 [!DNL Edge Network] します。 このビデオの例では、 [!DNL Experience Platform]、、、およびにデータを送信する、Adobeへの1回の呼び出しを使用し [!DNL Analytics][!DNL Audience Manager][!DNL Target]ます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
