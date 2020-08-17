@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Flow Service APIを使用して、サードパーティのクラウドストレージシステムからパーケーデータを取り込む
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムからパーケーデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1092'
 ht-degree: 17%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 17%
 
 # APIを使用して、サードパーティのクラウドストレージシステムからパーケーデータを取り込む [!DNL Flow Service]
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、サードパーティのクラウドストレージシステムからパーケーデータを取り込む手順を順を追って説明します。
 
@@ -51,7 +52,7 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 APIを使用してパーケットデータを取り込むには、アクセスするサードパーティのクラウドストレージソースに対して有効な接続が存在する必要があり [!DNL Platform] ます。 操作するストレージにまだ接続していない場合は、次のチュートリアルを使用して接続を作成できます。
 
-- [AmazonS3](./create/cloud-storage/s3.md)
+- [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure BLOB](./create/cloud-storage/blob.md)
 - [Azure Data LakeストレージGen2](./create/cloud-storage/adls-gen2.md)
 - [Google Cloud Store](./create/cloud-storage/google.md)
@@ -372,7 +373,7 @@ curl -X POST \
 サードパーティのクラウドストレージからパーケットデータを取り込む最後の手順は、データフローを作成することです。 現時点では、次の必須の値を用意しておきます。
 
 - [ソース接続ID](#source)
-- [Target接続ID](#target)
+- [ターゲット接続ID](#target)
 
 データフローは、ソースからのデータのスケジュールおよび収集を担当します。 POST内で前述の値を提供しながらペイロードリクエストを実行すると、データフローを作成できます。
 
