@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
 title: データセットの概要
 topic: datasets
+description: このドキュメントでは、Experience Platform のデータセットのおおまかな概要を説明します。
 translation-type: tm+mt
-source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 38%
+source-wordcount: '723'
+ht-degree: 39%
 
 ---
 
@@ -20,7 +21,7 @@ This document provides a high-level overview of datasets in [!DNL Experience Pla
 
 ## データセットの作成とメタデータの追跡
 
-[!DNL Catalog Service] は、内のデータの場所と系列の記録システムで [!DNL Experience Platform]、データセットの作成と管理に使用されます。 [!DNL Catalog] 各データセットのメタデータを追跡します。このメタデータには、データセットが準拠する [!DNL Experience Data Model] (XDM)スキーマへの参照（次の節で説明）と、そのデータセットに取り込まれるレコード数が含まれます。
+[!DNL Catalog Service] is the system of record for data location and lineage within [!DNL Experience Platform], and is used to create and manage datasets. [!DNL Catalog] 各データセットのメタデータを追跡します。このメタデータには、データセットが準拠する [!DNL Experience Data Model] (XDM)スキーマへの参照（次の節で説明）と、そのデータセットに取り込まれるレコード数が含まれます。
 
 詳しくは、「[カタログサービスの概要](../home.md)」を参照してください。
 
@@ -55,13 +56,13 @@ Once datasets have been used to store ingested data, those datasets are then use
 
 様々な操作にデータセットを使用するダウンストリームサービスのリストを次に示します。詳しくは、各サービスのドキュメントを参照してください。
 
-* [!DNL Data Access API](../../data-access/home.md): データセットに保存されたファイルの内容にアクセスし、ダウンロードできます。
+* [!DNL Data Access API](../../data-access/home.md):データセットに保存されたファイルの内容にアクセスし、ダウンロードできます。
 * [Adobe Experience Platform ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID をブリッジし、準拠する XDM スキーマで定義された ID フィールドに基づいてデータセットをリンクします。
-* [!DNL Real-time Customer Profile](../../profile/home.md): を活用 [!DNL Identity Service] して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 [!DNL Real-time Customer Profile] 顧客プロファイルを個別のデータストアから取り込 [!DNL Data Lake] み、引き続き顧客データを保持します。
-* [Adobe Experience Platformセグメントサービス](../../segmentation/home.md): セグメントを作成し、 [!DNL Real-time Customer Profile] データからオーディエンスを生成できます。 These audiences can then be exported to their own datasets within the [!DNL Data Lake].
+* [!DNL Real-time Customer Profile](../../profile/home.md):を活用 [!DNL Identity Service] して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 [!DNL Real-time Customer Profile] 顧客プロファイルを個別のデータストアから取り込 [!DNL Data Lake] み、引き続き顧客データを保持します。
+* [Adobe Experience Platform分類サービス](../../segmentation/home.md):セグメントを作成し、 [!DNL Real-time Customer Profile] データからオーディエンスを生成できます。 These audiences can then be exported to their own datasets within the [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md)：機械学習と人工知能を使用して、大規模なデータセットからインサイトを引き出します。
-* [Adobe Experience Platformクエリサービス](../../query-service/home.md): で標準のSQLからクエリへのデータ送信を使用でき [!DNL Experience Platform]ます。クエリ内の任意のデータセットを結合し、レポート、 [!DNL Data Lake] またはで使用する新しいデータセットとして結果を取得でき [!DNL Data Science Workspace][!DNL Real-time Customer Profile]ます。
-* [Adobe Experience Platform判定サービス](../../decisioning-service/home.md): 有効 [!DNL Real-time Customer Profile] なデータセットから取り込む行動データに基づいて、一連のオプションから顧客が最も可能性の高い選択肢を決定す [!DNL Profile] るために活用します。
+* [Adobe Experience Platformクエリサービス](../../query-service/home.md):で標準のSQLからクエリへのデータ送信を使用でき [!DNL Experience Platform]ます。クエリ内の任意のデータセットを結合し、レポート、 [!DNL Data Lake] またはで使用する新しいデータセットとして結果を取得でき [!DNL Data Science Workspace][!DNL Real-time Customer Profile]ます。
+* [Adobe Experience Platform判定サービス](../../decisioning-service/home.md):有効 [!DNL Real-time Customer Profile] なデータセットから取り込む行動データに基づいて、一連のオプションから顧客が最も可能性の高い選択肢を決定す [!DNL Profile] るために活用します。
 
 ## 次の手順
 
