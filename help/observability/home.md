@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
 title: Adobe Experience Platform 観察性インサイト
 topic: overview
+description: 観察性インサイトは、Adobe Experience Platform で主要な観察性指標を公開するための RESTful API です。これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 73%
+source-wordcount: '435'
+ht-degree: 76%
 
 ---
 
