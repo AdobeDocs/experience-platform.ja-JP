@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Adobe Experience Platform クエリサービス
 topic: overview
+description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 25%
+source-wordcount: '627'
+ht-degree: 26%
 
 ---
 
@@ -38,7 +39,7 @@ Adobe Experience Platform [!DNL Segmentation Service] allows users to divide the
 
 ### Looker BIの使用例
 
-Adobe Experience Platformにより、行動、CRM、POS（販売時点管理）データを含むすべての保存済みデータセットを取り込み、保存、構造化、取り込みできます。 を使用 [!DNL Experience Platform's Query Service]すると、これらのデータセットにクエリを付け、ビジネスに関する特定の質問に答え、開始がインパクトなインサイトを生み出すことができます。 次のビデオでは、を使用してビジネスインテリジェンス(BI)ツールでダッシュボードを作成する価値を示し [!DNL Query Service]ます。
+Adobe Experience Platformでは、行動、CRM、POS（販売時点情報）データを含むすべての保存済みデータセットを取り込み、保存、構造化、取り込みできます。 を使用 [!DNL Experience Platform's Query Service]すると、これらのデータセットにクエリを付け、ビジネスに関する特定の質問に答え、開始がインパクトなインサイトを生み出すことができます。 次のビデオでは、を使用してビジネスインテリジェンス(BI)ツールでダッシュボードを作成する価値を示し [!DNL Query Service]ます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28981?quality=12&learn=on)
 
