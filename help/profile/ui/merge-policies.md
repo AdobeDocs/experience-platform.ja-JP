@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 結合ポリシーユーザーガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 83%
 
 ---
@@ -24,9 +24,9 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 This guide requires a working understanding of the various [!DNL Experience Platform] services involved with merge policies. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-* [!DNL Real-time Customer Profile](../home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [!DNL Identity Service](../../identity-service/home.md): 取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+* [!DNL Real-time Customer Profile](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [!DNL Identity Service](../../identity-service/home.md):取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
 ## 結合ポリシーの表示
 
@@ -80,7 +80,8 @@ Within the [!DNL Experience Platform] user interface, you can begin to work with
 
 「*[!UICONTROL 結合ポリシーの編集]*」画面が表示されたら、「*[!UICONTROL 名前]*」、「*[!UICONTROL スキーマ]*」、「*[!UICONTROL ID ステッチ]*」タイプおよび「*[!UICONTROL 属性マージ]*」タイプに変更を加え、このポリシーを組織の&#x200B;*[!UICONTROL デフォルトの結合ポリシー]*&#x200B;にするかどうかを選択できます。
 
->[!N注意]
+>[!NOTE]
+>
 >結合ポリシー ID は編集できません。この ID は編集画面の上部に表示されます。これはシステムによって生成された読み取り専用の ID で、変更できません。
 
 ![](../images/merge-policies/edit-screen.png)
