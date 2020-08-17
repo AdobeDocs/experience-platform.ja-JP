@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr
 solution: Experience Platform
 title: GDPR 関連の用語
 topic: troubleshooting
+description: 以下は、一般データ保護規則（GDPR）に関する主な用語の定義リストです。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 94%
+source-wordcount: '1084'
+ht-degree: 95%
 
 ---
 
