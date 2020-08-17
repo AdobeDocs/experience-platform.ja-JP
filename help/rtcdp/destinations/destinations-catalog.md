@@ -1,10 +1,11 @@
 ---
+keywords: Catalog;catalog
 title: 宛先カタログ
 seo-title: 宛先カタログ
 description: 宛先カタログは、データを受け取る準備ができた、使用可能な宛先のリストを提供します。これらの宛先には、アドビソリューション、広告プラットフォーム、調査プラットフォーム、E メールマーケティングプラットフォームなどが含まれます。
 seo-description: 宛先カタログは、データを受け取る準備ができた、使用可能な宛先のリストを提供します。これらの宛先には、アドビソリューション、広告プラットフォーム、調査プラットフォーム、E メールマーケティングプラットフォームなどが含まれます。
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 91%
