@@ -4,10 +4,10 @@ seo-title: Google 広告の宛先
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 seo-description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 35%
+source-wordcount: '635'
+ht-degree: 33%
 
 ---
 
@@ -44,15 +44,19 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 AdobeReal-time CDPで [!DNL Google Ads][!DNL Google] 宛先を作成する前に、Adobeを許可されたデータプロバイダのリストに置くため、およびアカウントを許可リストに追加するために、に連絡する必要があります。 Contact [!DNL Google] and provide the following information:
 
-* **アカウントID** : これは、AdobeのアカウントID [!DNL Google]です。 アドビカスタマーケアまたは Adobe 担当者に問い合わせて、この ID を取得してください。
-* **顧客ID** : これは、Adobeの顧客アカウントID [!DNL Google]です。 この ID を取得するには、アドビカスタマーケアまたはアドビの担当者に問い合わせてください。
+* **アカウントID** :これは、AdobeのアカウントID [!DNL Google]です。 アドビカスタマーケアまたは Adobe 担当者に問い合わせて、この ID を取得してください。
+* **顧客ID** :これは、Adobeの顧客アカウントID [!DNL Google]です。 この ID を取得するには、アドビカスタマーケアまたはアドビの担当者に問い合わせてください。
 * アカウントのタイプ：**AdWords**
-* **Google AdWords ID** : これはお客様のIDで [!DNL Google]す。 通常、ID の形式は 123-456-7890 です。
+* **Google AdWords ID** :これはお客様のIDで [!DNL Google]す。 通常、ID の形式は 123-456-7890 です。
 
-## 宛先の作成
+## 宛先の設定
 
-1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**、を選択し、「宛先を [!DNL Google Ads]作成 ****」を選択します。
+1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**、を選択し、「 [!DNL Google Ads]設定 ****」を選択します。
    ![Google 広告の宛先への接続](/help/rtcdp/destinations/assets/google-2-destination.png)
+
+   >[!NOTE]
+   >
+   >このリンク先との接続が既に存在する場合は、リンク先のカードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
 
@@ -60,8 +64,8 @@ AdobeReal-time CDPで [!DNL Google Ads][!DNL Google] 宛先を作成する前に
 * **[!UICONTROL 名前]**：この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントのタイプ]**：AdWords は利用可能な唯一のオプションです。
-* **[!UICONTROL アカウントID]**: アカウントIDをに入力し [!DNL Google Ads]ます。 通常、ID の形式は 123-456-7890 です。
-* **[!UICONTROL マーケティングの使用例]**: マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。
+* **[!UICONTROL アカウントID]**:アカウントIDをに入力し [!DNL Google Ads]ます。 通常、ID の形式は 123-456-7890 です。
+* **[!UICONTROL マーケティングの使用例]**:マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。
 
 ## Activate segments to [!DNL Google Ads]
 
