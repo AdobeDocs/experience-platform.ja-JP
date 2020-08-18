@@ -5,7 +5,7 @@ seo-title: 宛先ワークスペース
 description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 seo-description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 61%
@@ -41,7 +41,7 @@ AdobeReal-time CDPユーザー・インターフェースは、宛先カタロ�
 | [!UICONTROL 設定] | 宛先への接続を作成できます。 |
 | [!UICONTROL アクティブ化] | 宛先への接続を確立すると、セグメントをアクティブ化できます。 |
 | [!UICONTROL 表示勘定] | 宛先に接続したアカウントの表示。 |
-| [!UICONTROL 表示データフロー] | 宛先に存在するデータアクティベーションフローの表示 |
+| [!UICONTROL 表示データフロー] | 宛先に存在するデータアクティベーションフローの表示。 |
 | [!UICONTROL 表示ドキュメント] | 特定のドキュメントページへのリンクを開き、そのドキュメントページの詳細と設定に役立ちます。 |
 
 ![宛先カードの制御](/help/rtcdp/destinations/assets/destination-card-options.png)
