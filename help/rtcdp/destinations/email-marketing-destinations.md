@@ -4,10 +4,10 @@ seo-title: 電子メールマーケティングの宛先
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 48%
+source-wordcount: '799'
+ht-degree: 47%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 48%
 
 次の節で説明する接続フローで、Amazon S3 または SFTP に接続します。リアルタイム CDP は、セグメントを `.csv` または `.txt` ファイルとして書き出し、希望の場所に配信します。リアルタイム CDP で有効になっているストレージの場所から、電子メールマーケティングプラットフォームにデータのインポートをスケジュールします。データをインポートするプロセスは、パートナーごとに異なります。詳しくは、個々の宛先に関する記事を参照してください。
 
-## 手順 1 — 宛先の接続 {#connect-destination}
+## 手順1 — 宛先の設定 {#connect-destination}
 
-1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**&#x200B;で、接続先の電子メールマーケティング先を選択し、「接続先 ****」を選択します。
+1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**&#x200B;で、接続先の電子メールマーケティング先を選択し、「 **[!UICONTROL 設定]**」を選択します。
 
    ![宛先に接続](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
