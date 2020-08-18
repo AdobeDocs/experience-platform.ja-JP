@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UIでのGoogle AdWordsソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 14%
+source-wordcount: '482'
+ht-degree: 9%
 
 ---
 
@@ -23,12 +23,12 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に接続している場合は、このドキュメントの残りの部分をスキップして、データフローの [!DNL Google AdWords][設定に関するチュートリアルに進むことができます](../../dataflow/payments.md)
+既に有効な [!DNL Google AdWords] 接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/payments.md)
 
 ### 必要な資格情報の収集
 
@@ -36,29 +36,31 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `clientCustomerId` | AdWordsアカウントのクライアント顧客ID。 |
+| `clientCustomerId` | アカウントのクライアント顧客ID [!DNL AdWords] 。 |
 | `developerToken` | マネージャーアカウントに関連付けられている開発者トークン。 |
-| `refreshToken` | AdWordsへのアクセスを許可す [!DNL Google] るために取得した更新トークン。 |
+| `refreshToken` | に対するアクセスを許可す [!DNL Google] るために得られるリフレッシュ・トークン [!DNL AdWords]。 |
 | `clientId` | 更新トークンの取得に使用される [!DNL Google] アプリケーションのクライアントID。 |
 | `clientSecret` | 更新トークンの取得に使用される [!DNL Google] アプリケーションのクライアントシークレット。 |
 
-使い始める前に、この [Google AdWordsドキュメントを参照してください](https://developers.google.com/adwords/api/docs/guides/authentication)。
+使い始める前に、この [[!DNL Google AdWords] ドキュメントを参照してください](https://developers.google.com/adwords/api/docs/guides/authentication)。
 
 ## アカウントに接続 [!DNL Google AdWords] する
 
-必要な資格情報を収集したら、次の手順に従って新しい受信ベース接続を作成し、ア [!DNL Google AdWords] カウントをリンクし [!DNL Platform]ます。
+必要な資格情報を収集したら、次の手順に従って [!DNL Google AdWords] アカウントをにリンクでき [!DNL Platform]ます。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 [ *[!UICONTROL カタログ]* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 [ **[!UICONTROL カタログ]** ]画面には、アカウントを作成する際に使用できる様々なソースが表示されます。
 
-「 *[!UICONTROL 広告]* 」カテゴリの下で「 **[!UICONTROL Google AdWords]** 」を選択し、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、 **[!UICONTROL 追加「]** data」を選択します。
+画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
+
+「 **[!UICONTROL 広告]** 」カテゴリで、「 **[!UICONTROL Google AdWords]**」を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **[!UICONTROL 追加]** データ [!DNL Google AdWords] を選択して新しいコネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/ads/catalog.png)
 
-「Google AdWords *[!UICONTROL に接続]* 」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+「Google AdWords **[!UICONTROL に接続]** 」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、基本接続に名前、オプションの説明および [!DNL Google AdWords] 資格情報を指定します。 終了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいベース接続が確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明および [!DNL Google AdWords] 資格情報を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
 
 ![connect](../../../../images/tutorials/create/ads/connect.png)
 
@@ -70,4 +72,4 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ## 次の手順
 
-このチュートリアルに従って、ア [!DNL Google AdWords] カウントへの基本的な接続を確立しました。 次のチュートリアルに進み、広告データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/advertising.md)。
+このチュートリアルに従って、ア [!DNL Google AdWords] カウントへの接続を確立しました。 次のチュートリアルに進み、広告データを取り込むデータフローを [設定できるようになりました [!DNL Platform]](../../dataflow/advertising.md)。
