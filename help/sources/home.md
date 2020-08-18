@@ -5,10 +5,10 @@ title: Adobe Experience Platform ソースコネクタの概要
 topic: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '846'
-ht-degree: 61%
+source-wordcount: '863'
+ht-degree: 60%
 
 ---
 
@@ -31,6 +31,8 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 - [Adobe Audience Manager コネクタの概要](connectors/adobe-applications/audience-manager.md)
 - [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Adobe Analytics分類データコネクタの概要](connectors/adobe-applications/classifications.md)
+- [UIでのAdobe Analytics分類データソースコネクタの作成](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics Data コネクタの概要](connectors/adobe-applications/analytics.md)
 - [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
 - [UIでの顧客属性ソースコネクタの作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
