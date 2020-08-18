@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UIでApache HDFSソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 12%
+source-wordcount: '470'
+ht-degree: 6%
 
 ---
 
@@ -23,12 +23,12 @@ ht-degree: 12%
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
-- [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+- [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+- [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-HDFS接続が既にある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/batch/cloud-storage.md)。
+既に有効なHDFS接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/batch/cloud-storage.md)。
 
 ### 必要な資格情報の収集
 
@@ -40,21 +40,21 @@ HDFSソースコネクタを認証するには、次の接続プロパティの�
 
 ## HDFSアカウントの接続
 
-必要な資格情報を収集したら、次の手順に従って、接続する新しいHDFSアカウントを作成でき [!DNL Platform]ます。
+必要な資格情報を収集したら、次の手順に従ってHDFSアカウントをにリンクでき [!DNL Platform]ます。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 [ **[!UICONTROL カタログ]** ]画面には、アカウントを作成する際に使用できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 *[!UICONTROL クラウドストレージ]***[!UICONTROL 」カテゴリで、「]** Apache HDFS **[!UICONTROL 」を選択し、次に]** データを選択して新しいHDFSコネクタを作成します。
+「 **[!UICONTROL クラウドストレージ]** 」カテゴリで、「 **[!UICONTROL Apache HDFS]**」を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **[!UICONTROL 追加data]** （データ）を選択して新しいHDFSコネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/hdfs/catalog.png)
 
-「 *[!UICONTROL HDFSに]* 接続」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+「 **[!UICONTROL HDFSに]** 接続」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明、およびファイルストレージの資格情報を入力します。 完了したら、「 **[!UICONTROL Connect to source]** 」を選択し、新しいアカウントが確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明、およびHDFS証明書を入力します。 完了したら、「 **[!UICONTROL Connect to source]** 」を選択し、新しい接続が確立されるまでの時間を許可します。
 
 ![connect](../../../../images/tutorials/create/hdfs/new.png)
 
@@ -66,4 +66,4 @@ HDFSソースコネクタを認証するには、次の接続プロパティの�
 
 ## 次の手順
 
-このチュートリアルに従って、HDFSアカウントへの接続を確立しました。 次のチュートリアルに進み、クラウドストレージのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/batch/cloud-storage.md)。
+このチュートリアルに従って、HDFSアカウントへの接続を確立しました。 次のチュートリアルに進み、クラウドストレージのデータをに取り込むようにデータフローを [設定できます [!DNL Platform]](../../dataflow/batch/cloud-storage.md)。
