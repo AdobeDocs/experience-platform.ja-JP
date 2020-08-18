@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UIにAzureイベントハブのソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 16%
+source-wordcount: '472'
+ht-degree: 9%
 
 ---
 
@@ -23,12 +23,12 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+- [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+- [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に [!DNL Event Hubs] アカウントをお持ちの場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/streaming/cloud-storage.md)。
+既に有効な [!DNL Event Hubs] 接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/streaming/cloud-storage.md)。
 
 ### 必要な資格情報の収集
 
@@ -40,32 +40,34 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 | `sasKey` | 生成された共有アクセス署名です。 |
 | `namespace` | アクセスしているユーザの名前空間 [!DNL Event Hubs] です。 |
 
-これらの値の詳細については、 [次の「イベントハブのドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)」を参照してください。
+これらの値の詳細については、 [ [!DNL Event Hubs] このドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
 
 ## アカウントに接続 [!DNL Event Hubs] する
 
 必要な資格情報を収集したら、次の手順に従って [!DNL Event Hubs] アカウントをにリンクでき [!DNL Platform]ます。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *ソース* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」タブには、接続可能な様々なソースが表示され [!DNL Platform]ます。 各ソースには、関連付けられた既存のアカウントの数が表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 「 **[!UICONTROL カタログ]** 」タブには、アカウントを作成するための様々なソースが表示されます。
 
-[ *[!UICONTROL Cloudストレージ]***カテゴリで、[]** Azureイベントハブ **を選択し、次に[]** Azureイベントハブ]を選択して、新しいハブコネクタを作成します。
+画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
+
+[ **[!UICONTROL クラウドストレージ]** ]カテゴリで、[ **[!UICONTROL Azureイベントハブ]**]を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **[!UICONTROL データ]** 追加を選択して新しいイベントハブコネクタを作成します。
 
 ![](../../../../images/tutorials/create/eventhub/catalog.png)
 
-[ *[!UICONTROL Azureイベントハブに]* 接続]ダイアログが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+[ **[!UICONTROL Azureイベントハブに]** 接続]ダイアログが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明、イベントハブの資格情報を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明および [!DNL Event Hubs] 資格情報を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
 
 ![](../../../../images/tutorials/create/eventhub/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続するイベントハブアカウントを選択し、[ **[!UICONTROL 次へ]** ]を選択して次に進みます。
+既存のアカウントに接続するには、接続する [!DNL Event Hubs] アカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
 
 ![](../../../../images/tutorials/create/eventhub/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、イベントハブアカウントをに接続し [!DNL Platform]ました。 次のチュートリアルに進み、クラウドストレージのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/streaming/cloud-storage.md)。
+このチュートリアルに従って、ア [!DNL Event Hubs] カウントをに接続し [!DNL Platform]ました。 次のチュートリアルに進み、クラウドストレージのデータをに取り込むようにデータフローを [設定できます [!DNL Platform]](../../dataflow/streaming/cloud-storage.md)。
