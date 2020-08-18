@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '619'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,8 @@ ht-degree: 6%
 - [ソースコネクタの概要](home.md)
 - 使用可能なソースコネクタ {#connectors}
    - アドビアプリケーション {#adobe-applications}
-      - [Analytics コネクタ](connectors/adobe-applications/analytics.md)
+      - [Analytics分類データコネクタ](connectors/adobe-applications/classifications.md)
+      - [Analyticsデータコネクタ](connectors/adobe-applications/analytics.md)
       - [Audience Manager コネクタ](connectors/adobe-applications/audience-manager.md)
       - [顧客属性コネクタ](connectors/adobe-applications/customer-attributes.md)
       - Adobeアプリケーションフィールドのマッピング {#mapping}
@@ -133,6 +134,7 @@ ht-degree: 6%
 - UIチュートリアル {#ui-tutorials}
    - ソースコネクタを作成する {#create}
       - アドビアプリケーション {#adobe-applications}
+         - [Adobe Analytics分類データコネクタ](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Analytics コネクタ](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Audience Manager コネクタ](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [顧客属性コネクタ](tutorials/ui/create/adobe-applications/customer-attributes.md)
