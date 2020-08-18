@@ -4,10 +4,10 @@ seo-title: クラウドストレージの宛先ワークフロー
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 65%
+source-wordcount: '530'
+ht-degree: 60%
 
 ---
 
@@ -18,9 +18,13 @@ ht-degree: 65%
 
 このページでは、アドビのリアルタイム顧客データプラットフォームでクラウドストレージの場所に接続する方法について説明します。
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Connect destination]**.
+1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**&#x200B;で、目的のクラウドストレージの宛先を選択し、「 **[!UICONTROL 設定]**」を選択します。
 
    ![クラウドストレージの宛先に接続](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
+
+   >[!NOTE]
+   >
+   >このリンク先との接続が既に存在する場合は、リンク先のカードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
 
 2. クラウドストレージの宛先への接続を既に設定している場合は、**[!UICONTROL 認証]**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新しいアカウント]**」を選択して、クラウドストレージの宛先への新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。<br> 認証手順の秘密鍵証明書の入力について詳しくは、 [AmazonS3](/help/rtcdp/destinations/amazon-s3-destination.md) 宛先、宛先、 [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) 宛先、 [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) SFTP [宛先を参照して](/help/rtcdp/destinations/sftp-destination.md)**** ください。
 
