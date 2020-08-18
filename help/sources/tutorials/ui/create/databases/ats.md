@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UIにAzureテーブルストレージソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 14%
+source-wordcount: '472'
+ht-degree: 9%
 
 ---
 
@@ -23,10 +23,10 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 既に有効なATS接続がある場合は、このドキュメントの残りの部分をスキップし、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/databases.md)。
 
@@ -38,25 +38,25 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 | ---------- | ----------- |
 | `connectionString` | インスタンスに接続する接続文字列 [!DNL Azure Table Storage] です。 ATSインスタンスに接続する接続文字列です。 ATSの接続文字列パターンはで `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`す。 |
 
-開始方法の詳細については、 [このAzureテーブルストレージドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)。
+使い始める方法の詳細については、 [ [!DNL Azure Table Storage] このドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)。
 
 ## アカウントに接続 [!DNL Azure Table Storage] する
 
-必要な資格情報を収集したら、次の手順に従って、接続先の新しいATSアカウントを作成でき [!DNL Platform]ます。
+必要な資格情報を収集したら、次の手順に従ってATSアカウントをにリンクでき [!DNL Platform]ます。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースから受信アカウントを作成できます。各ソースには既存のアカウントの数と関連するデータセットフローが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 [ **[!UICONTROL カタログ]** ]画面には、アカウントを作成する際に使用できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-[ *[!UICONTROL Databases]* ]カテゴリの下で、[ **** Azure Table]ストレージを選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信接続を作成するには、 **[!UICONTROL 追加「]** data」を選択します。
+[ **[!UICONTROL Databases]** ]カテゴリの下で、[ **[!UICONTROL Azure Table]**]ストレージを選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **** デー追加タを選択して新しいATSコネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/ats/catalog.png)
 
-[ *[!UICONTROL Azureテーブルストレージに]* 接続]ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+[ **[!UICONTROL Azureテーブルストレージに]** 接続]ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明、およびATS秘密鍵証明書を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明およびATS秘密鍵証明書を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
 
 ![connect](../../../../images/tutorials/create/ats/new.png)
 
@@ -68,4 +68,4 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ## 次の手順
 
-このチュートリアルに従って、ATSアカウントへの接続を確立しました。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/databases.md)。
+このチュートリアルに従って、ATSアカウントへの接続を確立しました。 次のチュートリアルに進み、データを取り込むデータフローを [設定できます [!DNL Platform]](../../dataflow/databases.md)。
