@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 受信ソースデータをアクティブ化して顧客プロファイルを入力します
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 22%
+source-wordcount: '476'
+ht-degree: 15%
 
 ---
 
@@ -20,10 +20,10 @@ ht-degree: 22%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [エクスペリエンスデータモデルl（XDM）システム](../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+- [[!DNL Experience Data Model] (XDM)システム](../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+   - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+- [[!DNLリアルタイム顧客プロファイル]](../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 また、このチュートリアルでは、ソースコネクタを既に作成し、設定している必要があります。  UIで異なるコネクタを作成するためのチュートリアルのリストは、 [ソースコネクタの概要](../../home.md)。
 
@@ -39,23 +39,23 @@ ht-degree: 22%
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-接続の *[!UICONTROL ソースアクティビティ]* 画面が表示され、接続がソースデータを取り込むデータセットが表示されます。 有効にするデータセットの名前をクリックし [!DNL Profile]ます。
+接続の **[!UICONTROL ソースアクティビティ]** 画面が表示され、接続がソースデータを取り込むデータセットが表示されます。 有効にするデータセットの名前をクリックし [!DNL Profile]ます。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/dataset-dataflow.png)
 
-[ *[!UICONTROL データセットアクティビティ]* ]画面が表示されます。 画面の右側の *[!UICONTROL プロパティ]* 列には、データセットの詳細が表示され、 **** プロファイルスイッチとデータセットが属するスキーマへのリンクが含まれています。 スキーマの名前をクリックして、構成を表示します。
+[ **[!UICONTROL データセットアクティビティ]** ]画面が表示されます。 画面の右側の **[!UICONTROL プロパティ]** 列には、データセットの詳細が表示され、 **** プロファイルスイッチとデータセットが属するスキーマへのリンクが含まれています。 スキーマの名前をクリックして、構成を表示します。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-*[!UICONTROL スキーマエディタ]* (Editor)が表示され、中央のキャンバスにスキーマの構造が表示されます。 キャンバス内で、プライマリIDとして設定するフィールドを選択します。 表示される「 *[!UICONTROL フィールドプロパティ]* 」タブで、「 **[!UICONTROL ID]** 」チェックボックスを選択し、 **[!UICONTROL プライマリID]**&#x200B;を選択します。 最後に、適切な **[!UICONTROL ID名前空間を選択し]**、「 **[!UICONTROL Apply]**」をクリックします。
+**[!UICONTROL スキーマエディタ]** (Editor)が表示され、中央のキャンバスにスキーマの構造が表示されます。 キャンバス内で、プライマリIDとして設定するフィールドを選択します。 表示される「 *[!UICONTROL フィールドプロパティ]* 」タブで、「 **[!UICONTROL ID]** 」チェックボックスを選択し、 **[!UICONTROL プライマリID]**&#x200B;を選択します。 最後に、適切な **[!UICONTROL ID名前空間を選択し]**、「 **[!UICONTROL Apply]**」をクリックします。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
-スキーマの構造の最上位のオブジェクトをクリックすると、 *[!UICONTROL スキーマプロパティ]* 列が表示されます。 プロファイルスイッチを切り替え [!DNL Profile] て、のスキーマを有効にし **[!UICONTROL ます]** 。 「 **[!UICONTROL 保存]** 」をクリックして変更を確定します。
+スキーマの構造の最上位のオブジェクトをクリックすると、 **[!UICONTROL スキーマプロパティ]** 列が表示されます。 プロファイルスイッチを切り替え [!DNL Profile] て、のスキーマを有効にし **[!UICONTROL ます]** 。 「 **[!UICONTROL 保存]** 」をクリックして変更を確定します。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-profile.png)
 
-スキーマが有効になったら、データセットアクティビティ [!DNL Profile]画面に戻り、「プ *[!UICONTROL ロパティ]* 」列内でプロファイル [!DNL Profile] の切り替えをクリックして、データセットを有効に ****** します。
+スキーマが有効になったら、データセットアクティビティ [!DNL Profile]画面に戻り、「プ **[!UICONTROL ロパティ]** 」列内でプロファイル [!DNL Profile] の切り替えをクリックして、データセットを有効に ******** します。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/enable-dataset-profile.png)
 
@@ -63,8 +63,8 @@ ht-degree: 22%
 
 >[!NOTE]
 >
->最近有効にしたデータセット内の既存のデータは、 [!DNL Profile]
+>最近有効にしたデータセット内の既存のデータは、で消費されません [!DNL Profile]。
 
 ## 次の手順
 
-このチュートリアルに従うと、 [!DNL Profile] 母集団の受信データを正常にアクティブ化できます。 詳しくは、「[リアルタイム顧客プロファイルの概要](../../../profile/home.md)」を参照してください。
+このチュートリアルに従うと、 [!DNL Profile] 母集団の受信データを正常にアクティブ化できます。 詳しくは、[[!DNL Real-time Customer Profile]  の概要](../../../profile/home.md)を参照してください。
