@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UIでのマーケティング自動化コネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '1293'
-ht-degree: 6%
+source-wordcount: '1284'
+ht-degree: 3%
 
 ---
 
@@ -20,10 +20,10 @@ ht-degree: 6%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [エクスペリエンスデータモデルl（XDM）システム](../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+- [[!DNL Experience Data Model] (XDM)システム](../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+- [[!DNLリアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 さらに、このチュートリアルでは、既にMarketing Automationアカウントを作成している必要があります。 UIで様々なマーケティング自動化コネクタを作成するためのチュートリアルのリストは、 [source connectorsの概要](../../../home.md)。
 
@@ -40,7 +40,7 @@ ht-degree: 6%
 
 ## データフィールドのXDMスキーマへのマッピング
 
-「 *[!UICONTROL マッピング]* 」の手順が表示され、ソースデータをデータセットにマッピングするインタラクティブなインターフェイスが提供され [!DNL Platform] ます。
+「 **[!UICONTROL マッピング]** 」の手順が表示され、ソースデータをデータセットにマッピングするインタラクティブなインターフェイスが提供され [!DNL Platform] ます。
 
 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
@@ -50,7 +50,7 @@ ht-degree: 6%
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/marketing-automation/use-existing-dataset.png)
 
-The _Select dataset_ dialog appears. 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
+The **[!UICONTROL Select dataset]** dialog appears. 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/marketing-automation/select-existing-dataset.png)
 
@@ -62,11 +62,11 @@ The _Select dataset_ dialog appears. 使用するデータセットを見つけ�
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
+The **[!UICONTROL Select schema]** dialog appears. 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
 
 ![select-スキーマ](../../../images/tutorials/dataflow/marketing-automation/select-schema.png)
 
-必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパー関数の詳細については、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../ingestion/tutorials/map-a-csv-file.md)。
+必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパーの機能について詳しくは、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
 ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」をクリックします。
 
@@ -74,14 +74,14 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 ## インジェストのスケジュール設定
 
-[ *[!UICONTROL スケジュール]* ]ステップが表示され、設定済みのマッピングを使用して選択したソースデータを自動的に取り込むように取り込みスケジュールを設定できます。 次の表に、スケジュール設定用の様々な設定可能フィールドの概要を示します。
+[ **[!UICONTROL スケジュール]** ]ステップが表示され、設定済みのマッピングを使用して選択したソースデータを自動的に取り込むように取り込みスケジュールを設定できます。 次の表に、スケジュール設定用の様々な設定可能フィールドの概要を示します。
 
 | フィールド | 説明 |
 | --- | --- |
 | 頻度 | 選択可能な周波数 `Once`には、、、、、、、、、、が含ま `Minute`れ `Hour``Day``Week`ます。 |
 | 間隔 | 選択した頻度の間隔を設定する整数。 |
 | 開始時間 | 最初の取り込みがいつ行われるかを示すUTCタイムスタンプ。 |
-| 埋め戻し | 最初に取り込まれるデータを決定するboolean値です。 [ *[!UICONTROL バックフィル]* ]を有効にすると、指定したパスにある現在のファイルは、最初にスケジュールされた取り込み中にすべて取り込まれます。 [ *バックフィル* ]を無効にすると *[!UICONTROL 、最初の取り込み実行から]* 開始時間の間に読み込まれたファイルだけが取り込まれます。 *[!UICONTROL 開始時間より前に読み込まれたファイルは取り込まれません]* 。 |
+| 埋め戻し | 最初に取り込まれるデータを決定するboolean値です。 [ **[!UICONTROL バックフィル]** ]を有効にすると、指定したパスにある現在のファイルは、最初にスケジュールされた取り込み中にすべて取り込まれます。 [ **[!UICONTROL バックフィル]** ]を無効にすると **[!UICONTROL 、最初の取り込み実行から]** 開始時間の間に読み込まれたファイルだけが取り込まれます。 **[!UICONTROL 開始時間より前に読み込まれたファイルは取り込まれません]** 。 |
 | 差分列 | タイプ、日付または時間のフィルターされたソーススキーマフィールドセットを含むオプションです。 このフィールドは、新規データと既存データを区別するために使用します。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 |
 
 データフローは、スケジュールに基づいてデータを自動的に取り込むように設計されています。 開始するには、取り込み頻度を選択します。 次に、2つのフローの実行間隔を指定する間隔を設定します。 間隔の値は、0以外の整数で、15以上に設定する必要があります。
@@ -106,9 +106,9 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 ## データフローの詳細の指定
 
-[ *[!UICONTROL Dataflow detail]* ]ステップが表示され、新しいデータフローに名前を付け、簡単に説明を付けることができます。
+[ **[!UICONTROL Dataflow detail]** ]ステップが表示され、新しいデータフローに名前を付け、簡単に説明を付けることができます。
 
-このプロセス中に、 *[!UICONTROL 部分的な取り込み]* 、 *[!UICONTROL エラー診断も有効にできます]*。 Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. [ *[!UICONTROL 部分的な取り込み]* ]が有効になったら *[!UICONTROL 、[]* エラーしきい値%]ダイヤルをドラッグして、バッチのエラーしきい値を調整します。 または、入力ボックスを選択して手動でしきい値を調整することもできます。 詳しくは、 [部分的なバッチインジェストの概要を参照してください](../../../../ingestion/batch-ingestion/partial.md)。
+このプロセス中に、 **[!UICONTROL 部分的な取り込み]** 、 **[!UICONTROL エラー診断も有効にできます]**。 Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. [ **[!UICONTROL 部分的な取り込み]** ]が有効になったら *[!UICONTROL 、[]* エラーしきい値%]ダイヤルをドラッグして、バッチのエラーしきい値を調整します。 または、入力ボックスを選択して手動でしきい値を調整することもできます。 詳しくは、 [部分的なバッチインジェストの概要を参照してください](../../../../ingestion/batch-ingestion/partial.md)。
 
 データフローの値を指定し、「 **[!UICONTROL Next]**」を選択します。
 
@@ -116,11 +116,11 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 ## データフローの確認
 
-「 *[!UICONTROL レビュー]* 」ステップが表示され、新しいデータフローを作成前に確認できます。 詳細は次のカテゴリに分類されます。
+「 **[!UICONTROL レビュー]** 」ステップが表示され、新しいデータフローを作成前に確認できます。 詳細は次のカテゴリに分類されます。
 
-- *[!UICONTROL 接続]*:ソースの種類、選択したソースファイルの関連パス、およびそのソースファイル内の列数が表示されます。
-- *[!UICONTROL データセットとマップのフィールドの割り当て]*:ソースデータが取り込まれるデータセット(データセットに従うスキーマなど)を示します。
-- *[!UICONTROL スケジュール]*:取り込みスケジュールの有効期間、頻度、間隔を表示します。
+- **[!UICONTROL 接続]**:ソースの種類、選択したソースファイルの関連パス、およびそのソースファイル内の列数が表示されます。
+- **[!UICONTROL データセットとマップのフィールドの割り当て]**:ソースデータが取り込まれるデータセット(データセットに従うスキーマなど)を示します。
+- **[!UICONTROL スケジュール]**:取り込みスケジュールの有効期間、頻度、間隔を表示します。
 
 データフローをレビューしたら、 **[!UICONTROL 「Finish]** 」をクリックし、データフローを作成するまでの時間を設定します。
 
@@ -132,14 +132,14 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 ## データフローの削除
 
-不要になったデータフローや誤って作成されたデータフローは、 *[!UICONTROL データフロー]* ・ワークスペースで使用可能な *[!UICONTROL 削除]* 機能を使用して削除できます。 データフローの削除方法の詳細については、UIでのデータフローの [削除に関するチュートリアルを参照してください](../delete.md)。
+不要になったデータフローや誤って作成されたデータフローは、 **[!UICONTROL データフロー]** ・ワークスペースで使用可能な **[!UICONTROL 削除]** 機能を使用して削除できます。 データフローの削除方法の詳細については、UIでのデータフローの [削除に関するチュートリアルを参照してください](../delete.md)。
 
 ## 次の手順
 
 このチュートリアルに従うと、マーケティング自動化システムからデータを取り込むためのデータフローが正しく作成され、監視データセットに関する洞察が得られます。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
 
-- [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
-- [Data Science ワークスペースの概要](../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] 概要](../../../../profile/home.md)
+- [[!DNL Data Science Workspace] 概要](../../../../data-science-workspace/home.md)
 
 ## 付録
 
@@ -149,11 +149,11 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 データフローが作成されると、そのデータはすぐにアクティブになり、指定されたスケジュールに従ってデータを取り込みます。 アクティブなデータフローは、次の手順に従っていつでも無効にできます。
 
-[ *[!UICONTROL 認証]* ]画面で、無効にするデータフローに関連付けられているベース接続の名前を選択します。
+[ **[!UICONTROL 認証]** ]画面で、無効にするデータフローに関連付けられている接続の名前を選択します。
 
 ![](../../../images/tutorials/dataflow/marketing-automation/monitor.png)
 
-「 _ソースアクティビティ_ 」ページが表示されます。 リストからアクティブなデータフローを選択し、画面の右側に *[!UICONTROL 「Properties]* 」列を開きます。この列には「 **[!UICONTROL Enabled]** 」トグル・ボタンが含まれています。 切り替えボタンをクリックして、データフローを無効にします。 同じ切り替えを使用して、データフローを無効にした後で再び有効にできます。
+「 **[!UICONTROL ソースアクティビティ]** 」ページが表示されます。 リストからアクティブなデータフローを選択し、画面の右側に **[!UICONTROL 「Properties]** 」列を開きます。この列には「 **[!UICONTROL Enabled]** 」トグル・ボタンが含まれています。 切り替えボタンをクリックして、データフローを無効にします。 同じ切り替えを使用して、データフローを無効にした後で再び有効にできます。
 
 ![disable](../../../images/tutorials/dataflow/marketing-automation/disable.png)
 
