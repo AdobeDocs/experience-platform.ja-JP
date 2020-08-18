@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UIでのクラウドストレージストリーミングコネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 12%
+source-wordcount: '667'
+ht-degree: 7%
 
 ---
 
@@ -20,10 +20,10 @@ ht-degree: 12%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+- [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md): スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+   - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
+- [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 また、このチュートリアルでは、クラウドストレージコネクタを既に作成済みである必要があります。 UIで異なるクラウドストレージコネクタを作成するためのチュートリアルのリストは、 [ソースコネクタの概要](../../../../home.md)。
 
@@ -35,7 +35,7 @@ ht-degree: 12%
 
 ## データフィールドのXDMスキーマへのマッピング
 
-「 *マッピング* 」の手順が表示され、ソースデータをデータセットにマッピングするインタラクティブなインターフェイスが提供され [!DNL Platform] ます。
+「 **[!UICONTROL マッピング]** 」の手順が表示され、ソースデータをデータセットにマッピングするインタラクティブなインターフェイスが提供され [!DNL Platform] ます。
 
 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
@@ -45,7 +45,7 @@ ht-degree: 12%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-existing-data.png)
 
-The _Select dataset_ dialog appears. 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
+The **[!UICONTROL Select dataset]** dialog appears. 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-existing-data.png)
 
@@ -57,7 +57,7 @@ The _Select dataset_ dialog appears. 使用するデータセットを見つけ�
 
 ## データフローに名前を付ける
 
-[ *[!UICONTROL Dataflow detail]* ]ステップが表示され、新しいデータフローに名前を付け、簡単に説明を付けることができます。
+[ **[!UICONTROL Dataflow detail]** ]ステップが表示され、新しいデータフローに名前を付け、簡単に説明を付けることができます。
 
 データフローの値を指定し、「 **[!UICONTROL 次へ]**」をクリックします。
 
@@ -65,10 +65,10 @@ The _Select dataset_ dialog appears. 使用するデータセットを見つけ�
 
 ### データフローの確認
 
-「 *レビュー* 」ステップが表示され、新しいデータフローを作成前に確認できます。 詳細は次のカテゴリに分類されます。
+「 **[!UICONTROL レビュー]** 」ステップが表示され、新しいデータフローを作成前に確認できます。 詳細は次のカテゴリに分類されます。
 
-- *[!UICONTROL ソースの詳細]*: ソースのタイプおよびソースに関するその他の関連詳細を表示します。
-- *[!UICONTROL Targetの詳細]*: ソースデータが取り込まれるデータセット(データセットに従うスキーマなど)を示します。
+- **[!UICONTROL ソースの詳細]**:ソースのタイプおよびソースに関するその他の関連詳細を表示します。
+- **[!UICONTROL ターゲットの詳細]**:ソースデータが取り込まれるデータセット(データセットに従うスキーマなど)を示します。
 
 データフローをレビューしたら、 **[!UICONTROL 「Finish]** 」をクリックし、データフローを作成するまでの時間を設定します。
 
@@ -82,8 +82,8 @@ The _Select dataset_ dialog appears. 使用するデータセットを見つけ�
 
 このチュートリアルに従うと、外部のクラウドストレージからデータを取り込むためのデータフローが正しく作成され、データセットの監視に関する洞察が得られます。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
 
-- [リアルタイム顧客プロファイルの概要](../../../../../profile/home.md)
-- [Data Science ワークスペースの概要](../../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] 概要](../../../../../profile/home.md)
+- [[!DNL Data Science Workspace] 概要](../../../../../data-science-workspace/home.md)
 
 ## 付録
 
@@ -93,11 +93,11 @@ The _Select dataset_ dialog appears. 使用するデータセットを見つけ�
 
 データフローが作成されると、そのデータはすぐにアクティブになり、指定されたスケジュールに従ってデータを取り込みます。 アクティブなデータフローは、次の手順に従っていつでも無効にできます。
 
-「 *[!UICONTROL ソース]* 」ワークスペース内で、「 **[!UICONTROL 参照]** 」タブをクリックします。 次に、無効にするアクティブなデータフローに関連付けられているベース接続の名前をクリックします。
+「 **[!UICONTROL ソース]** 」ワークスペース内で、「 **[!UICONTROL 参照]** 」タブをクリックします。 次に、無効にするアクティブなデータフローに関連付けられている接続の名前をクリックします。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/browse.png)
 
-「 *[!UICONTROL ソースアクティビティ]* 」ページが表示されます。 リストからアクティブなデータフローを選択し、画面の右側に *「Properties* 」列を開きます。この列には「 **[!UICONTROL Enabled]** 」トグル・ボタンが含まれています。 切り替えボタンをクリックして、データフローを無効にします。 同じ切り替えを使用して、データフローを無効にした後で再び有効にできます。
+「 **[!UICONTROL ソースアクティビティ]** 」ページが表示されます。 リストからアクティブなデータフローを選択し、画面の右側に **[!UICONTROL 「Properties]** 」列を開きます。この列には「 **[!UICONTROL Enabled]** 」トグル・ボタンが含まれています。 切り替えボタンをクリックして、データフローを無効にします。 同じ切り替えを使用して、データフローを無効にした後で再び有効にできます。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/disable-source.png)
 
