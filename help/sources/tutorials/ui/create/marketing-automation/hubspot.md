@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI での HubSpot ソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 598b29f681ac930a4e1781f7f298608c8344d807
+source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 16%
+source-wordcount: '468'
+ht-degree: 11%
 
 ---
 
@@ -23,12 +23,12 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に [!DNL HubSpot] 基本接続をお持ちの場合は、このドキュメントの残りの部分をスキップして、マーケティング自動化データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/marketing-automation.md)。
+既に接続している場合は、このドキュメントの残りの部分をスキップして、データフローの [!DNL HubSpot] 設定に関するチュートリアルに進むことができます [](../../dataflow/marketing-automation.md)。
 
 ### 必要な資格情報の収集
 
@@ -41,23 +41,25 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 | `accessToken` | OAuth統合を最初に認証する際に取得されるアクセストークン。 |
 | `refreshToken` | OAuth統合を最初に認証する際に取得される更新トークン。 |
 
-使い始める前に、このHubSpotドキュメントを参照して [ください](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview)。
+使い始める前に、この [[!DNL HubSpot] ドキュメントを参照してください](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview)。
 
 ## アカウントに接続 [!DNL HubSpot] する
 
-必要な資格情報を収集したら、次の手順に従って新しい受信ベース接続を作成し、ア [!DNL HubSpot] カウントをリンクし [!DNL Platform]ます。
+必要な資格情報を収集したら、次の手順に従って [!DNL HubSpot] アカウントをにリンクでき [!DNL Platform]ます。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 [ *[!UICONTROL カタログ]* ]画面には、様々なソースが表示され、このソースを使用して受信ベース接続を作成できます。各ソースには、それらに関連付けられた既存のベース接続の数が表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 [ **[!UICONTROL カタログ]** ]画面には、アカウントを作成する際に使用できる様々なソースが表示されます。
 
-「 *[!UICONTROL Marketing automation]* 」カテゴリの下で「 **[!UICONTROL HubSpot]** 」を選択し、情報バーを画面の右側に表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しい受信ベース接続を作成するには、 **[!UICONTROL 追加「]** data」を選択します。
+画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
+
+「 **[!UICONTROL Marketing Automation]** 」カテゴリで、「 **[!UICONTROL HubSpot]**」を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **[!UICONTROL 追加]** データ [!DNL HubSpot] を選択して新しいコネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/hubspot/catalog.png)
 
-HubSpot *[!UICONTROL に接続]* ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+HubSpot **[!UICONTROL に接続]** ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、基本接続に名前、オプションの説明および [!DNL HubSpot] 資格情報を指定します。 終了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいベース接続が確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明および [!DNL HubSpot] 資格情報を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
 
 ![connect](../../../../images/tutorials/create/hubspot/connect.png)
 
@@ -69,4 +71,4 @@ HubSpot *[!UICONTROL に接続]* ページが表示されます。 このペー�
 
 ## 次の手順
 
-このチュートリアルに従って、ア [!DNL HubSpot] カウントへの基本的な接続を確立しました。 次のチュートリアルに進み、マーケティング自動化システムのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/marketing-automation.md)。
+このチュートリアルに従って、ア [!DNL HubSpot] カウントへの接続を確立しました。 次のチュートリアルに進み、マーケティング自動化システムデータを取り込むためのデータフローを [設定できるようになりました [!DNL Platform]](../../dataflow/marketing-automation.md)。
