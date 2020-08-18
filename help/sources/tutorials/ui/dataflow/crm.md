@@ -5,10 +5,10 @@ title: UIでのCRMコネクタのデータフローの設定
 topic: overview
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、CRMアカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 6%
+source-wordcount: '1353'
+ht-degree: 4%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 6%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [エクスペリエンスデータモデルl（XDM）システム](../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+* [[!DNL Experience Data Model] (XDM)システム](../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [リアルタイム顧客プロファイル](../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 さらに、このチュートリアルでは、CRMアカウントを既に作成済みである必要があります。 UIで異なるCRMコネクタを作成するためのチュートリアルのリストは、 [ソースコネクタの概要](../../../home.md)。
 
@@ -156,7 +156,7 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 データフローが作成されると、そのデータはすぐにアクティブになり、指定されたスケジュールに従ってデータを取り込みます。 アクティブなデータフローは、次の手順に従っていつでも無効にできます。
 
-認証 *[!UICONTROL 画面で]* 、無効にするデータフローに関連付けられているベース接続の名前を選択します。
+認証 *[!UICONTROL 画面で]* 、無効にするデータフローに関連付けられている接続の名前を選択します。
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 
