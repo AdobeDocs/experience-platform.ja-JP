@@ -4,10 +4,10 @@ seo-title: Invoca Tags 拡張機能
 description: Invoca Tags 拡張機能は、アドビのリアルタイム顧客データプラットフォームの顧客の宛先を示すボイスです。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: null
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 90%
+ht-degree: 85%
 
 ---
 
@@ -22,6 +22,8 @@ ht-degree: 90%
 
 この宛先は、Experience Platform Launch 拡張機能です。アドビのリアルタイム CDP の Launch の拡張機能について詳しくは、[Experience Platform Launch 拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)を参照してください。
 
+![インボカ拡張](assets/invoca-extension.png)
+
 ## 前提条件 {#prerequisites}
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
@@ -34,7 +36,7 @@ This extension is available in the [!DNL Destinations] catalog for all customers
 
 1. [AdobeReal-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations]** / **[!UICONTROL Catalog]**&#x200B;に移動します。
 2. カタログから拡張機能を選択するか、検索バーを使用します。
-3. 宛先をクリックしてハイライトし、右側のパネルで「**[!UICONTROL 拡張機能のインストール]**」を選択します。「**[!UICONTROL 拡張機能のインストール]**」コントロールが灰色表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。[前提条件](#prerequisites)を確認してください。
+3. Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. **[!UICONTROL Configure]** コントロールが灰色表示になっている場合は、 **[!UICONTROL manage_properties]** 権限がありません。 [前提条件](#prerequisites)を確認してください。
 4. **[!UICONTROL 使用可能な Launch プロパティを選択]**&#x200B;ウィンドウで、拡張機能をインストールする Launch プロパティを選択します。また、Launch で新しいプロパティを作成することもできます。プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、Launch ドキュメントの[「プロパティ」ページに関する節](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html#プロパティページ)を参照してください。
 5. ワークフローに従って、Launch でインストールを完了します。
 
