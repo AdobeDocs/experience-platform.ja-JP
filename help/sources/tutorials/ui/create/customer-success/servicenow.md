@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI での ServiceNow ソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 16%
+source-wordcount: '457'
+ht-degree: 11%
 
 ---
 
@@ -23,12 +23,12 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に接続している場合は、このドキュメントの残りの部分をスキップして、データフローの [!DNL ServiceNow][設定に関するチュートリアルに進むことができます](../../dataflow/customer-success.md)
+既に有効な [!DNL ServiceNow] 接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/customer-success.md)
 
 ### 必要な資格情報の収集
 
@@ -36,29 +36,29 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `endpoint` | サー [!DNL ServiceNow] バーのエンドポイント。 |
+| `endpoint` | The endpoint of the [!DNL ServiceNow] server. |
 | `username` | 認証のためにサー [!DNL ServiceNow] バーに接続するために使用するユーザー名です。 |
 | `password` | 認証用に [!DNL ServiceNow] サーバーに接続するためのパスワードです。 |
 
-使い始める方法の詳細については、 [このServiceNowドキュメントを参照してください](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)。
+使い始める方法の詳細については、 [ [!DNL ServiceNow] このドキュメントを参照してください](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)。
 
 ## アカウントに接続 [!DNL ServiceNow] する
 
-必要な資格情報を収集したら、次の手順に従って、接続する新しい [!DNL ServiceNow] アカウントを作成でき [!DNL Platform]ます。
+必要な資格情報を収集したら、次の手順に従って [!DNL ServiceNow] アカウントをにリンクでき [!DNL Platform]ます。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 カ *[!UICONTROL タログ]* 画面には様々なソースが表示され、このソースからアカウントを作成できます。各ソースには既存のアカウントの数と、それらに関連付けられたデータセットフローが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 [ **[!UICONTROL カタログ]** ]画面には、アカウントを作成する際に使用できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 *[!UICONTROL Customer Success]* ( **[!UICONTROL 顧客成功]** )」カテゴリの下で「ServiceNow（サービス提供）」を選択して、画面の右側に情報バーを表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 新しいアカウントを作成するには、「 **[!UICONTROL 接続元]**」を選択します。
+「 **[!UICONTROL Customer Success]** 」カテゴリで、「 **[!UICONTROL ServiceNow]**」を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、[ **[!UICONTROL 接続元]** ]を選択して新しい [!DNL ServiceNow] コネクタを作成します。
 
 ![](../../../../images/tutorials/create/servicenow/catalog.png)
 
-「ServiceNow *[!UICONTROL に接続]* 」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+「ServiceNow **[!UICONTROL に接続]** 」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明および [!DNL ServiceNow] 資格情報を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明および [!DNL ServiceNow] 資格情報を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
 
 ![](../../../../images/tutorials/create/servicenow/new.png)
 
@@ -70,4 +70,4 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ## 次の手順
 
-このチュートリアルに従って、ア [!DNL ServiceNow] カウントへの接続を確立しました。 次のチュートリアルに進み、データをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/customer-success.md)。
+このチュートリアルに従って、ア [!DNL ServiceNow] カウントへの接続を確立しました。 次のチュートリアルに進み、データを取り込むデータフローを [設定できます [!DNL Platform]](../../dataflow/customer-success.md)。
