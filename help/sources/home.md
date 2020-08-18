@@ -5,9 +5,9 @@ title: Adobe Experience Platform ソースコネクタの概要
 topic: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '846'
 ht-degree: 61%
 
 ---
@@ -84,7 +84,6 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 - [!DNL GreenPlum](connectors/databases/greenplum.md) コネクタ
 - [!DNL HP Vertica](connectors/databases/hp-vertica.md) コネクタ
 - [!DNL IBM DB2](connectors/databases/ibm-db2.md) コネクタ
-- [!DNL MariaDB](connectors/databases/mariadb.md) コネクタ
 - [!DNL Microsoft SQL Server](connectors/databases/sql-server.md) コネクタ
 - [!DNL MySQL](connectors/databases/mysql.md) コネクタ
 - [!DNL Oracle](connectors/databases/oracle.md) コネクタ
