@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UI での Google Cloud ストレージソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 16%
+source-wordcount: '537'
+ht-degree: 10%
 
 ---
 
@@ -20,12 +20,12 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)：Experience Platform が顧客体験データを整理するための標準化されたフレームワークです。
+* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-GCSベースの接続が既にある場合は、このドキュメントの残りの部分をスキップし、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/batch/cloud-storage.md)。
+既に有効なGCS接続がある場合は、このドキュメントの残りの部分をスキップし、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/batch/cloud-storage.md)。
 
 ### サポートされているファイル形式
 
@@ -37,25 +37,32 @@ GCSベースの接続が既にある場合は、このドキュメントの残�
 
 ### 必要な資格情報の収集
 
-上のGCSデータにアクセスするに [!DNL Platform]は、有効なGCS **アクセスキーID** と ****&#x200B;シークレットを指定する必要があります。 これらの値の取得方法について詳しくは、の <a href="https://cloud.google.com/docs/authentication/production" target="_blank">サーバー間認証ガイド</a> を参照してくだ [!DNL Google Cloud]さい。
+上のGCSデータにアクセスするに [!DNL Platform]は、次の値を指定する必要があります。
 
-## GCSアカウントの接続
+| Credential | 説明 |
+| ---------- | ----------- |
+| アクセスキーID | アカウントのアクセスキーID [!DNL Google Cloud Storage] 。 |
+| 秘密アクセスキー | アカウントのクライアントシークレット [!DNL Google Cloud Storage] 。 |
 
-必要な資格情報を収集したら、次の手順に従って、接続先の新しいGCSアカウントを作成でき [!DNL Platform]ます。
+使用の開始方法の詳細については、『 [サーバ間認証ガイド](https://cloud.google.com/docs/authentication/production) 』の「 」を参照してくだ [!DNL Google Cloud Storage]さい。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 *[!UICONTROL ソース]* 」ワークスペースにアクセスします。 「 *[!UICONTROL カタログ]* 」画面には様々なソースが表示され、このソースを使用してインバウンドアカウントを作成できます。各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
+## アカウントに接続 [!DNL Google Cloud Storage] する
+
+必要な資格情報を収集したら、次の手順に従ってGCSアカウントをにリンクでき [!DNL Platform]ます。
+
+[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 [ **[!UICONTROL カタログ]** ]画面には、アカウントを作成する際に使用できる様々なソースが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 *[!UICONTROL Databases]* 」 **[!UICONTROL カテゴリで、「]** Google Cloudストレージ **[!UICONTROL 」を選択し、次に「]** データ」を選択して、新しいGCSコネクタを作成します。
+「 **[!UICONTROL Databases]** 」カテゴリで、「 **[!UICONTROL Google Cloudストレージ]**」を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **** デー追加タを選択して新しいGCSコネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-「Google Cloud *[!UICONTROL ストレージに]* 接続」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+「Google Cloud **[!UICONTROL ストレージに]** 接続」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、接続に名前、オプションの説明およびGCS秘密鍵証明書を入力します。 完了したら、[ **[!UICONTROL 接続]** ]を選択し、新しいアカウントが確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明およびGCS秘密鍵証明書を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
 
 ![connect](../../../../images/tutorials/create/google-cloud-storage/connect.png)
 
@@ -67,4 +74,4 @@ GCSベースの接続が既にある場合は、このドキュメントの残�
 
 ## 次の手順
 
-このチュートリアルに従って、GCSアカウントへの接続を確立しました。 次のチュートリアルに進み、クラウドストレージのデータをプラットフォームに取り込むようにデータフローを [設定できるようになりました](../../dataflow/batch/cloud-storage.md)。
+このチュートリアルに従って、GCSアカウントへの接続を確立しました。 次のチュートリアルに進み、クラウドストレージのデータをに取り込むようにデータフローを [設定できます [!DNL Platform]](../../dataflow/batch/cloud-storage.md)。
