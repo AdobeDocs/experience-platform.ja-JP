@@ -4,10 +4,10 @@ solution: Experience Platform
 title: UIで顧客属性ソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 10%
+source-wordcount: '352'
+ht-degree: 9%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 10%
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-利用可能な顧客属性プロファイルデータセットのリストから、プラットフォームに取り込むデータセットを選択し、「 **次へ**」をクリックします。
+利用可能な顧客属性プロファイルデータセットのリストから、に取り込むデータセットを選択し、「 [!DNL Platform] Next ****」をクリックします。
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ ht-degree: 10%
 
 ## 次の手順
 
-接続が作成されると、ターゲットスキーマとデータセットが自動的に作成され、受信データが格納されます。初回取り込みが完了すると、顧客属性プロファイルデータは、リアルタイム顧客プロファイルやSegmentation Serviceなどのダウンストリームプラットフォームサービスで使用できます。 詳しくは、次のドキュメントを参照してください。
+接続が作成されると、ターゲットスキーマとデータセットが自動的に作成され、受信データが格納されます。初回取り込みが完了すると、およ [!DNL Platform] びなどのダウンストリームサービスで顧客属性プロファイルデータを使用でき [!DNL Real-time Customer Profile][!DNL Segmentation Service]ます。 詳しくは、次のドキュメントを参照してください。
 
-* [リアルタイム顧客プロファイルの概要](../../../../../profile/home.md)
-* [セグメント化サービスの概要](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] 概要](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] 概要](../../../../../segmentation/home.md)
