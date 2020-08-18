@@ -4,10 +4,10 @@ seo-title: Adobe Media Analytics for Audio and Video 拡張機能
 description: Adobe Media Analytics for Audio and Video 拡張機能は、アドビリアルタイム顧客データプラットフォームの分析の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Adobe Media Analytics for Video 拡張機能は、アドビリアルタイム顧客データプラットフォームの分析の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 71%
+source-wordcount: '585'
+ht-degree: 66%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Media Analytics for Audio and Video は、アドビリアルタイム顧�
 
 This destination is an [!DNL Experience Platform Launch] extension. For more information about how [!DNL Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Adobe Media Analytics for Audio and Video 拡張機能](/help/rtcdp/destinations/assets/adobe-analytics-extension.png)
+![Adobe Media Analytics for Audio and Video 拡張機能](/help/rtcdp/destinations/assets/adobe-video-analytics-extension.png)
 
 ## 前提条件 {#prerequisites}
 
@@ -36,7 +36,7 @@ Adobe Analytics for Video 拡張機能をインストールするには：
 
 1. [AdobeReal-time CDPインターフェイスで](http://platform.adobe.com/)、 **[!UICONTROL Destinations]** / **[!UICONTROL Catalog]**&#x200B;に移動します。
 2. カタログから拡張機能を選択するか、検索バーを使用します。
-3. 宛先をクリックしてハイライトし、右側のパネルで「**[!UICONTROL 拡張機能のインストール]**」を選択します。「**[!UICONTROL 拡張機能のインストール]**」コントロールが灰色表示になっている場合は、**[!UICONTROL manage_properties]** 権限がありません。[前提条件](#prerequisites)を確認してください。
+3. Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. **[!UICONTROL Configure]** コントロールが灰色表示になっている場合は、 **[!UICONTROL manage_properties]** 権限がありません。 [前提条件](#prerequisites)を確認してください。
 4. **[!UICONTROL 使用可能な プロパティを選択]**&#x200B;ウィンドウで、拡張機能をインストールする Launch プロパティを選択します。[!DNL Launch]You also have the option of creating a new property in [!DNL Launch]. プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、 ドキュメントの[「プロパティ」ページに関する節](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html#プロパティページ)を参照してください。[!DNL Launch]
 5. The workflow takes you to [!DNL Launch] to complete the installation.
 
