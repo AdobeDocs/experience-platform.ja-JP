@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 translation-type: tm+mt
-source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '610'
 ht-degree: 6%
 
 ---
@@ -54,7 +54,6 @@ ht-degree: 6%
       - [GreenPlumコネクタ](connectors/databases/greenplum.md)
       - [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
       - [IBM DB2コネクタ](connectors/databases/ibm-db2.md)
-      - [MariaDBコネクタ](connectors/databases/mariadb.md)
       - [Microsoft SQL Serverコネクタ](connectors/databases/sql-server.md)
       - [MySQLコネクタ](connectors/databases/mysql.md)
       - [Oracleコネクタ](connectors/databases/oracle.md)
@@ -99,7 +98,6 @@ ht-degree: 6%
          - [GreenPlumコネクタ](tutorials/api/create/databases/greenplum.md)
          - [HP Verticaコネクタ](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2コネクタ](tutorials/api/create/databases/ibm-db2.md)
-         - [MariaDBコネクタ](tutorials/api/create/databases/mariadb.md)
          - [MySQLコネクタ](tutorials/api/create/databases/mysql.md)
          - [Oracleコネクタ](tutorials/api/create/databases/oracle.md)
          - [フェニックスコネクタ](tutorials/api/create/databases/phoenix.md)
@@ -169,7 +167,6 @@ ht-degree: 6%
          - [GreenPlumコネクタ](tutorials/ui/create/databases/greenplum.md)
          - [HP Verticaコネクタ](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2コネクタ](tutorials/ui/create/databases/ibm-db2.md)
-         - [MariaDBコネクタ](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Serverコネクタ](tutorials/ui/create/databases/sql-server.md)
          - [MySQLコネクタ](tutorials/ui/create/databases/mysql.md)
          - [Oracleコネクタ](tutorials/ui/create/databases/oracle.md)
