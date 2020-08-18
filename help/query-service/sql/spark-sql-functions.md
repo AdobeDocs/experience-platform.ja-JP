@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Spark SQL 関数
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 99%
+source-wordcount: '4996'
+ht-degree: 97%
 
 ---
 
@@ -24,17 +24,18 @@ The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to exte
 
 ## カテゴリ
 
-- [数学および統計の演算子と関数](#math-and-statistical-operators-and-functions)
+- [数学および統計の演算子と関数](#math)
 - [論理演算子](#logical-operators)
-- [日付／時間関数](#date/time-functions)
+- [日付／時間関数](#datetime-functions)
 - [集計関数](#aggregate-functions)
 - [配列](#arrays)
-- [データタイプキャスト関数](#datatype-casting-functions)
-- [変換関数と書式設定関数](#conversion-and-formatting-functions)
+- [データタイプキャスト関数](#datatype-casting)
+- [変換関数と書式設定関数](#conversion)
 - [データ評価](#data-evaluation)
 - [現在の情報](#current-information)
+- [上位関数](#higher-order)
 
-### 数学および統計の演算子と関数
+### 数学および統計の演算子と関数 {#math}
 
 #### 剰余
 
@@ -744,7 +745,7 @@ The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to exte
 
 `variance(expr)`：グループの値から計算された標本分散を戻します。
 
-### 論理演算子
+### 論理演算子 {#logical-operators}
 
 #### 論理否定（not）
 
@@ -1007,7 +1008,7 @@ The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to exte
  true
 ```
 
-### 日付/時間関数
+### 日付/時間関数 {#datetime-functions}
 
 #### add_months
 
@@ -1425,13 +1426,13 @@ The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to exte
 
 バージョン 1.5.0 以降
 
-### 集計関数
+### 集計関数 {#aggregate-functions}
 
 #### approx_count_distinct
 
 `approx_count_distinct(expr[, relativeSD])`：HyperLogLog++ による推定基数を戻します。`relativeSD`：許可される最大推定誤差を定義します。
 
-### 配列
+### 配列 {#arrays}
 
 #### array
 
@@ -1809,7 +1810,7 @@ The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to exte
 
 バージョン 2.4.0 以降
 
-### データタイプキャスト関数
+### データタイプキャスト関数 {#datatype-casting}
 
 #### bigint
 
@@ -1894,7 +1895,7 @@ The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to exte
 
 `tinyint(expr)`：`expr` 値をデターゲットデータタイプ `tinyint` にキャストします。
 
-### 変換関数と書式設定関数
+### 変換関数と書式設定関数 {#conversion}
 
 #### ascii
 
@@ -2403,7 +2404,7 @@ The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to exte
 >
 > 関数は非決定的です。
 
-### データ評価
+### データ評価 {#data-evaluation}
 
 #### coalesce
 
@@ -2996,7 +2997,7 @@ byte、short、integer、long、date、timestamp がサポートされていま�
  cc
 ```
 
-### 現在の情報
+### Current information {#current-information}
 
 #### current_database
 
@@ -3026,3 +3027,65 @@ byte、short、integer、long、date、timestamp がサポートされていま�
 `now()`：クエリ評価の開始時の現在のタイムスタンプを戻します。
 
 バージョン 1.5.0 以降
+
+### 上位関数 {#higher-order}
+
+#### 変換
+
+`transform(array, lambdaExpression): array`
+
+関数を使用して配列内の要素を変換します。
+
+ラムダ関数に2つの引数がある場合、2番目の引数は要素のインデックスを意味します。
+
+例：
+
+```
+> SELECT transform(array(1, 2, 3), x -> x + 1);
+  [2,3,4]
+> SELECT transform(array(1, 2, 3), (x, i) -> x + i);
+  [1,3,5]
+```
+
+
+#### 存在する
+
+`exists(array, lambdaExpression returning Boolean): Boolean`
+
+アレイ内の1つ以上の要素に対して述語が保持されているかどうかをテストします。
+
+例：
+
+```
+> SELECT exists(array(1, 2, 3), x -> x % 2 == 0);
+  true
+```
+
+#### filter
+
+`filter(array, lambdaExpression returning Boolean): array`
+
+指定した述語を使用して入力配列をフィルタします。
+
+例：
+
+```
+> SELECT filter(array(1, 2, 3), x -> x % 2 == 1);
+ [1,3]
+```
+
+
+#### 集計
+
+`aggregate(array, <initial accumulator value>, lambdaExpression to accumulate the value): array`
+
+初期状態と配列内のすべての要素にバイナリ演算子を適用し、これを単一の状態に減らします。 仕上げ関数を適用して、最終状態を最終結果に変換する。
+
+例：
+
+```
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x);
+  6
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x, acc -> acc * 10);
+  60
+```
