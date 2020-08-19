@@ -1,28 +1,28 @@
 ---
 title: Analyticsでの変数の手動マッピング
-seo-title: Web SDKを使用したAnalyticsの変数の手動マッピング
-description: 処理ルールを使用して、変数を手動でAnalyticsにマッピングする方法
+seo-title: Analyticsの変数とWeb SDKの手動マッピング
+description: 処理ルールを使用して変数をAnalyticsに手動でマッピングする方法
 seo-description: Web SDKの処理ルールを使用して、変数を手動でAnalyticsにマッピングする
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '371'
-ht-degree: 20%
+ht-degree: 47%
 
 ---
 
 
 # Analyticsでの変数の手動マッピング
 
-Adobe Experience Platform(AEP)は、特定の変数を自動的にマッピングで [!DNL Web SDK] きますが、カスタム変数は手動でマッピングする必要があります。
+Adobe Experience Platform(AEP)は、特定の変数を自動的にマッピングできますが、カスタム変数は手動でマッピングする必要があります。 [!DNL Web SDK]
 
-XDMデータが自動的にマッピングされない場合 [!DNL Analytics]は、コン [テキストデータを使用して](https://docs.adobe.com/content/help/ja-JP/analytics/implementation/vars/page-vars/contextdata.html) スキーマと一致させることができます [](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/schema/composition.html)。 その後、 [!DNL Analytics] 処理ルールを使用してにマッピングし [、](https://docs.adobe.com/content/help/ja-JP/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)[!DNL Analytics] 変数を設定できます。
+For XDM data that is not automatically mapped to [!DNL Analytics], you can use [context data](https://docs.adobe.com/content/help/ja-JP/analytics/implementation/vars/page-vars/contextdata.html) to match your [schema](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/schema/composition.html). その後、 [!DNL Analytics] 処理ルールを使用してにマッピングし [、](https://docs.adobe.com/content/help/ja-JP/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)[!DNL Analytics] 変数を設定できます。
 
-また、デフォルトのアクションと製品リストのセットを使用して、AEPと共にデータを送信または取得でき [!DNL Web SDK]ます。 これを行うには、「 [製品](https://docs.adobe.com/content/help/en/experience-platform/edge/implement/commerce.html)」を参照してください。
+Also, you can use a default set of actions and product lists to send or retrieve data with the AEP [!DNL Web SDK]. これをおこなうには、「[製品](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/implement/commerce.html)」を参照してください。
 
 ## コンテキストデータ
 
-で使用するに [!DNL Analytics]は、XDMデータをドット表記を使用してフラット化し、として使用できるようにし `contextData`ます。 次の値のペアのリストは、次の例を示していま `context data`す。
+To be used by [!DNL Analytics], XDM data is flattened using dot notation and made available as `contextData`. 次の値のペアのリストは、`context data` の例を示しています。
 
 ```javascript
 {
@@ -49,21 +49,21 @@ XDMデータが自動的にマッピングされない場合 [!DNL Analytics]は
 
 ## 処理ルール
 
-All data collected by the edge network can be accessed via [processing rules](https://docs.adobe.com/content/help/ja-JP/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). では、処理ルールを使用 [!DNL Analytics]して、コンテキストデータを [!DNL Analytics] 変数に組み込むことができます。
+エッジネットワークによって収集されたすべてのデータへは、[処理ルール](https://docs.adobe.com/content/help/ja-JP/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)を介してアクセスできます。In [!DNL Analytics], you can use processing rules to incorporate context data into [!DNL Analytics] variables.
 
-例えば、次のルールでは、Analyticsを設定して、 **内部検索用語(eVar2)に** a.x_atag.search.term（コンテキストデータ）に関連付けられたデータ **を入力しま**&#x200B;す。
+例えば、次のルールでは、Analytics を設定して&#x200B;**内部検索用語（eVar2）** に **a.x_atag.search.term（コンテキストデータ）**&#x200B;に関連付けられたデータを入力します。
 
 ![](assets/examplerule.png)
 
 
-## XDMスキーマ
+## XDM スキーマ
 
 [!DNL Experience Platform] では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。システム間で一貫したデータを定義することで、意味を保持しやすくなり、データから価値を得ることができます。 [!DNL Analytics] コンテキストデータは、スキーマで定義された構造と連携します。
 
-次の例は、AEPでデータを送信および取得する [`event` オプションと共にこのコマンドを使用する方法を示し](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html)`xdm`[!DNL Web SDK]ます。 この例では、 `event` コマンドはExperienceEvent Commerce Detailsスキーマに一致し [、productListItems](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) と `name``SKU` 値が追跡されるようにします。
+The following example shows how the [`event` command](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/fundamentals/tracking-events.html) can be used with the `xdm` option to send and retrieve data with the AEP [!DNL Web SDK]. この例では、`event` コマンドは [ExperienceEvent Commerce 詳細スキーマ](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md)に一致し、productListItems の `name` と `SKU` 値が追跡されるようにします。
 
 
-```
+```javascript
 alloy("event",{
   "xdm":{
     "commerce":{
@@ -85,4 +85,4 @@ alloy("event",{
 });
 ```
 
-AEPを使用したイベントの追跡について詳し [!DNL Web SDK]くは、「イベントの [追跡](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html)」を参照してください。
+For more information on tracking events with the AEP [!DNL Web SDK], see [Tracking events](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/fundamentals/tracking-events.html).
