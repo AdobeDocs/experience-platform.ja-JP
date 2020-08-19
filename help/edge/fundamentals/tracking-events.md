@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK のイベントのトラッキン�
 description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 translation-type: tm+mt
-source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 79%
@@ -43,6 +43,7 @@ alloy("sendEvent", {
 ```
 
 >[!NOTE]
+>
 >XDMフィールド内の各イベントで送信できるデータには、32 KBの制限があります。
 
 ### XDM　以外のデータの送信
