@@ -1,10 +1,11 @@
 ---
+keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Twitter ユニバーサルウェブサイトタグ拡張
 seo-title: Twitter ユニバーサルウェブサイトタグ拡張
 description: Twitter ユニバーサルウェブサイトタグ拡張は、Adobe リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Twitter ユニバーサルウェブサイトタグ拡張は、Adobe リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 87%
