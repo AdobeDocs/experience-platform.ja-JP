@@ -1,10 +1,11 @@
 ---
+keywords: contentsquare extension;contentsquare destination;contentsquare
 title: Contentsquare 拡張機能
 seo-title: Contentsquare 拡張機能
 description: Contentsquare 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける分析の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Contentsquare 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける分析の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 88%
