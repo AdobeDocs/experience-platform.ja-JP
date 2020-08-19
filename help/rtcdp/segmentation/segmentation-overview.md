@@ -2,13 +2,12 @@
 keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: セグメント化サービスの概要
 seo-title: アドビのリアルタイム顧客データプラットフォームでのセグメント化サービス
-description: セグメント化サービスについて説明する概要です。
-seo-description: アドビのリアルタイム顧客データプラットフォームでのセグメント化サービスとセグメントについて説明する概要です。
+description: リアルタイム CDP は Adobe Experience Platform をベースに構築され、多くの Experience Platform サービスと機能を利用します。セグメント化サービスを使用すると、顧客を類似の特徴を持つ小さなグループに分けて、独自のマーケティングを提供できます。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 52%
+source-wordcount: '275'
+ht-degree: 56%
 
 ---
 
