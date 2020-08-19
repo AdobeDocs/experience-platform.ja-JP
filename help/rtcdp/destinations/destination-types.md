@@ -1,10 +1,11 @@
 ---
+keywords: destinations;destination;destination types
 title: 宛先のタイプとカテゴリ
 seo-title: 宛先のタイプとカテゴリ
 description: 'アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 '
 seo-description: アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 93%
