@@ -1,10 +1,11 @@
 ---
+keywords: Nielsen IMA Handler;nielsen ima handler;nielsen ima;Nielsen ima;Nielsen IMA
 title: Nielsen IMA Handler 拡張機能
 seo-title: Nielsen IMA Handler 拡張機能
 description: Nielsen IMA Handler 拡張機能は、アドビのリアルタイム顧客データプラットフォームの解析先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Nielsen IMA Handler 拡張機能は、アドビのリアルタイム顧客データプラットフォームの解析先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 88%
