@@ -1,10 +1,11 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: クラウドストレージの宛先
 seo-title: クラウドストレージの宛先
 description: AdobeReal-time CDPは、セグメントをデータファイルとしてAmazonS3、AWSKinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
 seo-description: AdobeReal-time CDPは、セグメントをデータファイルとしてAmazonS3、AWSKinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 35%
