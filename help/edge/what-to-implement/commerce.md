@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK での製品のサポート
 description: Experience Platform Web SDK で製品または買い物かごを使用している場合に、データを追加する方法について説明します。
 seo-description: Experience Platform Web SDK で製品または買い物かごを使用している場合に、データを追加する方法について説明します。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 100%
@@ -28,7 +28,6 @@ ht-degree: 100%
 以下に、`commerce` オブジェクトで使用可能な `measures` のリストを示します。
 
 >[!Tip]
->
 >
 >測定には、2 つのフィールド（`id` と `value`）があります。ほとんどの場合、`value` フィールドのみを使用します（例：`'value':1`）。この `id` フィールドでは、測定が送信されたタイミングを追跡可能な一意の ID を設定できます。[測定](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md)については、XDM のドキュメントを参照してください。
 
