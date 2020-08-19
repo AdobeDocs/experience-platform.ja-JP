@@ -1,10 +1,11 @@
 ---
+keywords: media analytics extension;media analytics;audio and video extension
 title: Adobe Media Analytics for Audio and Video 拡張機能
 seo-title: Adobe Media Analytics for Audio and Video 拡張機能
 description: Adobe Media Analytics for Audio and Video 拡張機能は、アドビリアルタイム顧客データプラットフォームの分析の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Adobe Media Analytics for Video 拡張機能は、アドビリアルタイム顧客データプラットフォームの分析の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 33eba9e3f2e993c6958480b091ff004dc057f438
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 66%
