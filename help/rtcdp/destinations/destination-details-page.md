@@ -1,10 +1,11 @@
 ---
+keywords: destinations;destination;destinations detail page;destinations details page
 title: 宛先の詳細ページ
 seo-title: 宛先の詳細ページ
 description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 seo-description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 100%
