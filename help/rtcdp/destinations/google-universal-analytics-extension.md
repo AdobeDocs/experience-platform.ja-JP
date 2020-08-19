@@ -1,10 +1,11 @@
 ---
+keywords: google universal analytics;Google Universal Analytics;Google universal analytics
 title: Google Universal Analytics 拡張機能
 seo-title: Google Universal Analytics 拡張機能
 description: Google Universal Analytics 拡張機能は、アドビリアルタイム顧客データプラットフォームの分析機能です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Google Universal Analytics 拡張機能は、アドビリアルタイム顧客データプラットフォームの分析機能です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 89%
