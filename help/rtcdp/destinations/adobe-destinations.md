@@ -1,10 +1,11 @@
 ---
+keywords: destinations;experience cloud solutions
 title: アドビの宛先
 seo-title: アドビの宛先
 description: アドビのリアルタイム CDP 内のデータを他の Adobe Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などをおこない、顧客体験を管理します。
 seo-description: アドビのリアルタイム CDP 内のデータを他の Adobe Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などをおこない、顧客体験を管理します。
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 100%
