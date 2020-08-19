@@ -1,10 +1,11 @@
 ---
+keywords: advertising destinations;destinations;rtcdp destinations
 title: 広告の宛先
 seo-title: 広告の宛先
 description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 seo-description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 translation-type: tm+mt
-source-git-commit: 875430cdbd80025fc3f0de2664f9b55db0debe53
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 87%
