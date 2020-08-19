@@ -1,13 +1,12 @@
 ---
-title: ID と ID 名前空間
-seo-title: Adobe Experience Platform ID サービス
-description: 説明
-seo-description: SEO 説明
+keywords: identities rtcdp;rtcdp identities;real-time cdp identities
+title: リアルタイム CDP での ID
+description: Adobe Experience Platform ID サービスは、デバイスとシステム間で ID を結合することで、顧客とその行動をより良く把握できるようにします。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 62%
+source-wordcount: '424'
+ht-degree: 64%
 
 ---
 
