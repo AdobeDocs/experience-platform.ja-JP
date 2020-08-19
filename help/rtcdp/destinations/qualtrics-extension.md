@@ -1,10 +1,11 @@
 ---
+keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Qualtrics Website Feedback 拡張機能
 seo-title: Qualtrics Website Feedback 拡張機能
 description: Qualtrics Website Feedback 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Qualtrics Website Feedback 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 87%
