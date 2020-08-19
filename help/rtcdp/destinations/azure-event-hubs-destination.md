@@ -1,10 +1,11 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: （ベータ版）Azureイベントハブの宛先
 seo-title: （ベータ版）Azureイベントハブの宛先
 description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 seo-description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -22,7 +23,7 @@ ht-degree: 7%
 
 [!DNL Azure Event Hubs] は、大規模なデータストリーミングプラットフォームおよびイベント取り込みサービスです。 1秒あたり数百万個のイベントを受信し、処理できます。 イベントハブに送信されたデータは、任意のリアルタイム分析プロバイダーまたはバッチ/ストレージアダプターを使用して、変換および保存できます。
 
-Adobe Experience Platformからデータをストリーミングするために、 [!DNL Azure Event Hubs] ストレージへのリアルタイムの送信接続を作成できます。
+Adobe Experience Platformからのデータをストリーミングするために、 [!DNL Azure Event Hubs] ストレージへのリアルタイムの送信接続を作成できます。
 
 * 詳細については、 [!DNL Azure Event Hubs]Microsoftのマニュアルを参照してください [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)。
 * API呼び出しを [!DNL Azure Event Hubs] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)。
@@ -44,16 +45,16 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 
 ### 認証手順の {#authentication-step}
 
-* **[!UICONTROL SASキー名]** と **[!UICONTROL SASキー]**: SASキーの名前とキーを入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* **[!UICONTROL 名前空間]**: 名前空間を入力し [!DNL Azure Event Hubs] ます。 [!DNL Azure Event Hubs] Microsoftのドキュメントで [名前空間について説明します](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
+* **[!UICONTROL SASキー名]** と **[!UICONTROL SASキー]**:SASキーの名前とキーを入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* **[!UICONTROL 名前空間]**:名前空間を入力し [!DNL Azure Event Hubs] ます。 [!DNL Azure Event Hubs] Microsoftのドキュメントで [名前空間について説明します](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
 
 ![認証手順で必要な入力](/help/rtcdp/destinations/assets/event-hubs-authentication.png)
 
 ### 設定手順で {#setup-step}
 
-* **[!UICONTROL 名前]**: 接続先の名前を入力し [!DNL Azure Event Hubs]ます。
-* **[!UICONTROL 説明]**: 接続の説明を入力します。  例： 「Premium tier customers」、「Osins in kitesurfing」
-* **[!UICONTROL eventHubName]**: 目的のストリームの名前を指定し [!DNL Azure Event Hubs] ます。
+* **[!UICONTROL 名前]**:接続先の名前を入力し [!DNL Azure Event Hubs]ます。
+* **[!UICONTROL 説明]**:接続の説明を入力します。  例：「Premium tier customers」、「Osins in kitesurfing」
+* **[!UICONTROL eventHubName]**:目的のストリームの名前を指定し [!DNL Azure Event Hubs] ます。
 
 ![設定手順で必要なデータ](/help/rtcdp/destinations/assets/event-hubs-setup-step.png)
 
