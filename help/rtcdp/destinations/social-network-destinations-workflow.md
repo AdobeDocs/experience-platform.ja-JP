@@ -1,10 +1,11 @@
 ---
+keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
 title: ソーシャルネットワークの宛先のワークフロー
 seo-title: ソーシャルネットワークの宛先のワークフロー
 description: ソーシャルネットワーク広告アカウントに接続する手順
 seo-description: ソーシャルネットワーク広告アカウントに接続する手順
 translation-type: tm+mt
-source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 58%
