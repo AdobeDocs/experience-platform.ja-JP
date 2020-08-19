@@ -1,10 +1,11 @@
 ---
+keywords: dialogtech extension;dialogtech;dialogtech destination;DialogTech;DialogTech SourceTrak
 title: DialogTech 拡張機能
 seo-title: DialogTech 拡張機能
 description: DialogTech 拡張機能は、アドビのリアルタイム顧客データプラットフォームの Analytics の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: DialogTech 拡張機能は、アドビのリアルタイム顧客データプラットフォームの Analytics の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '506'
 ht-degree: 90%
