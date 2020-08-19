@@ -1,10 +1,11 @@
 ---
+keywords: Quantum Metric Extension;Quantum Metric;quantum metric;Quantum metric
 title: Quantum Metric 拡張機能
 seo-title: Quantum Metric 拡張機能
 description: Quantum Metric 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける分析の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 seo-description: Quantum Metric 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける分析の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 84%
