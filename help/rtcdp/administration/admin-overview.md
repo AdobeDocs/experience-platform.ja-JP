@@ -1,13 +1,14 @@
 ---
+keywords: rtcdp administration overview;administration overview
 title: 管理の概要
 seo-title: リアルタイム CDP 管理の概要
-description: 説明
+description: 'このドキュメントでは、Adobe Experience Platform によるリアルタイム顧客データプロファイルの管理機能の概要を説明します。 '
 seo-description: SEO 説明
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 67%
+source-wordcount: '277'
+ht-degree: 69%
 
 ---
 
