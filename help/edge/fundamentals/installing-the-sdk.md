@@ -4,7 +4,7 @@ seo-title: Adobe Experience Platform Web SDK：SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します
 seo-description: Experience Platform Web SDK のインストール方法について説明します
 translation-type: tm+mt
-source-git-commit: 12cbcc26956cba2e14d64734c9210fa79bcc70b9
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 66%
@@ -54,6 +54,7 @@ The first step in implementing the Adobe Experience Platform [!DNL Web SDK] is t
 この例では、グローバル関数の名前が `alloy` から `mycustomname` に変更されています。
 
 >[!IMPORTANT]
+>
 >潜在的な問題を回避するため、1 文字以上の文字を含み、この名前は、`window` で既に見つかったプロパティの名前と競合しない名前を使用してください。
 
 このベースコードは、グローバル関数を作成するだけでなく、サーバ上でホストされる外部ファイル（`alloy.js`）に含まれる追加のコードも読み込みます。デフォルトでは、このコードは非同期で読み込まれ、Web ページのパフォーマンスを可能な限り高めます。これは推奨される実装です。
