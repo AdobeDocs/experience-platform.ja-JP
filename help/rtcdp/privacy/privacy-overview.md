@@ -1,10 +1,11 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
 title: リアルタイム顧客データプロファイルでのプライバシー
 seo-title: リアルタイム顧客データプロファイルでのプライバシー
 description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 61%
@@ -20,7 +21,7 @@ ht-degree: 61%
 
 ## [!DNL Privacy Service]
 
-Adobe Experience Platform [!DNL Privacy Service] により、GDPR [!DNL General Data Protection Regulation] や [!DNL California Consumer Privacy Act] CCPAなどのプライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。 Since Real-time CDP leverages [!DNL Experience Platform] capabilities for data collection and storage, the access and delete requests for GDPR and CCPA should be managed within [!DNL Platform]. このサービスの概要について詳しくは、『[Privacy Service の概要](../../privacy-service/home.md)』ドキュメントを参照してください。
+Adobe Experience Platform [!DNL Privacy Service] では、GDPRやCCPAなどのプライバシー規制に準拠したデータ操作を維持するプロセスを合理化でき [!DNL General Data Protection Regulation] ま [!DNL California Consumer Privacy Act] す。 Since Real-time CDP leverages [!DNL Experience Platform] capabilities for data collection and storage, the access and delete requests for GDPR and CCPA should be managed within [!DNL Platform]. このサービスの概要について詳しくは、『[Privacy Service の概要](../../privacy-service/home.md)』ドキュメントを参照してください。
 
 個々の GDPR および CCPA データ主体アクセス要求を送信して顧客データにアクセスし、削除する方法は 2 つあります。
 
