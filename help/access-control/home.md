@@ -4,10 +4,10 @@ solution: Experience Platform
 title: アクセス制御の概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: e66fd20eb7a153e556a3716bb255af084e52292e
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 68%
+source-wordcount: '1103'
+ht-degree: 66%
 
 ---
 
@@ -26,7 +26,7 @@ In order to configure access control for [!DNL Experience Platform], you must ha
 
 アクセス権限を取得し、割り当てるための高度なワークフローを、次のように要約できます。
 
-- Adobe Experience Platform を購読すると、登録フォームで指定された管理者に電子メールが送信されます。
+- Adobe Experience Platformのライセンス認証、またはExperience Platformを使用するアプリケーション/アプリケーションサービスのライセンス認証が完了すると、ライセンス認証時に指定した管理者に電子メールが送信されます。
 - 管理者は [Adobe Admin Console](#adobe-admin-console) にログインし、概要ページの製品のリストから **Adobe Experience Platform** を選択します。
 - 管理者は、必要に応じて、デフォルトの[製品プロファイル](#product-profiles)を表示、または新しい顧客製品プロファイルを作成できます。
 - 管理者は、既存の製品プロファイルの権限とユーザーを編集できます。
