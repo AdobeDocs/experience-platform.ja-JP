@@ -1,11 +1,11 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: アドビのリアルタイム顧客データプラットフォーム - はじめに
 seo-title: アドビのリアルタイム顧客データプラットフォーム - はじめに
 description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
 seo-description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 87%
