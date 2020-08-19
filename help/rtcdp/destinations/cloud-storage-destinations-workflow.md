@@ -1,10 +1,11 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: クラウドストレージの宛先ワークフロー
 seo-title: クラウドストレージの宛先ワークフロー
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 60%
