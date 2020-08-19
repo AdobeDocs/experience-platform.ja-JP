@@ -1,10 +1,11 @@
 ---
+keywords: google customer match;Google customer match;Google Customer Match
 title: Googleの顧客一致先
 seo-title: Googleの顧客一致先
 description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 seo-description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 11%
@@ -118,7 +119,7 @@ Links to be added when activation based on phone number and device IDs becomes a
 
    ![資格情報の確認](/help/rtcdp/destinations/assets/google-customer-match-connection-success.png)
 
-4. 「 **[!UICONTROL Authentication]** ( **[!UICONTROL 認証]** )」手順で、アクティベーションフローの **[!UICONTROL 名前と説明を入力し、Googleに]****** Account IDを入力します。 <br> また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+4. Authentication **[!UICONTROL 手順で、]** アクティベーションフローの **[!UICONTROL 名前]** と説明を入力し、Googleに ******** Accountアカウントを入力します。 <br> また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
    >[!IMPORTANT]
    >
