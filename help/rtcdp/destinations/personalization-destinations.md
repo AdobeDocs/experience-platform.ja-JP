@@ -1,10 +1,11 @@
 ---
+keywords: personalization;Personalization
 title: パーソナライズ機能の宛先
 seo-title: パーソナライズ機能の宛先
 description: パーソナライズ機能プラットフォームは、個々の行動からデータとインサイトを収集します。これらのプラットフォームは、マーケターが匿名データをナビゲートし、以前のアクティビティに基づいてオファーや広告を見込み客に提供したり、類似した習慣を持つオーディエンスセグメントの一部として提供する際に役立ちます。
 seo-description: パーソナライズ機能プラットフォームは、個々の行動からデータとインサイトを収集します。これらのプラットフォームは、マーケターが匿名データをナビゲートし、以前のアクティビティに基づいてオファーや広告を見込み客に提供したり、類似した習慣を持つオーディエンスセグメントの一部として提供する際に役立ちます。
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 100%
