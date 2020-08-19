@@ -1,10 +1,11 @@
 ---
+keywords: website tags;web tags;launch tutorial
 title: チュートリアル：Adobe Launch を使用した Web サイトタグの実装
 seo-title: Adobe Launch を使用した Web サイトタグの実装
 description: Adobe Launch を使用した Adobe Experience Platform での Web サイトタグの実装
 seo-description: Adobe Launch を使用した Adobe Experience Platform での Web サイトタグの実装
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '475'
 ht-degree: 70%
