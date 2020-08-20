@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1882'
 ht-degree: 70%
 
 ---
@@ -53,7 +53,7 @@ Adobe Experience Cloud とのネイティブな統合に加え、アドビはパ
 | ホームページの指標ダッシュボード | アドビのリアルタイム顧客データプラットフォーム（リアルタイム CDP）のホームページには、プロファイルとセグメントに関する情報を表示する指標ダッシュボードが含まれています。このホームページには、学習教材へのリンクも含まれています。以下の「[リアルタイム顧客データプラットフォームの指標](#real-time-customer-data-platform-metrics)」の節を参照してください。 |
 | ソース | アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取り込むことができます。詳しくは、以下の「[ソース](#sources)」の節を参照してください。 |
 
-**[!DNL Real-time Customer Data Platform]指標&#x200B;**
+**[!DNL Real-time Customer Data Platform]指標**
 
 リアルタイム CDP にログインすると、指標ダッシュボードを含むアドビリアルタイム顧客データプラットフォーム（リアルタイム CDP）のホームページが表示されます。
 
@@ -65,15 +65,16 @@ Adobe Experience Cloud とのネイティブな統合に加え、アドビはパ
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] は、Adobeのリアルタイム顧客データPlatformがサポートする目的のプラットフォームとの事前に構築された統合です。これにより、これらのパートナーに対してシームレスにデータをアクティブ化できます。 詳しくは、「[宛先の概要](../../rtcdp/destinations/destinations-overview.md)」の記事を参照してください。
+[!DNL Destinations] は、Adobeのリアルタイム顧客データプラットフォームがサポートする目的のプラットフォームとの事前に構築された統合です。この統合により、パートナーに対するデータのアクティブ化がシームレスに行われます。 詳しくは、「[宛先の概要](../../rtcdp/destinations/destinations-overview.md)」の記事を参照してください。
 
 **使用可能な宛先**
 
 11 月のリリースでは、アドビのリアルタイム顧客データプラットフォームは次の宛先をサポートします。
 
 * 広告: [!DNL Google]
-* 電子メールマーケティング： Adobe Campaign、 [!DNL Salesforce Marketing Cloud]、 [!DNL Responsys]、 [!DNL Oracle Eloqua
-   ]各宛先について詳しくは、「[宛先カタログ](../../rtcdp/destinations/destinations-catalog.md)」を参照してください。
+* 電子メールマーケティング：Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
+
+各宛先について詳しくは、「[宛先カタログ](../../rtcdp/destinations/destinations-catalog.md)」を参照してください。
 
 **既知の制限事項**
 
@@ -130,7 +131,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 | ExperienceEvent の実装の詳細 Mixin | イベントの収集に使用するソフトウェアに関する情報を保存するための標準フィールドを追加する新しい ExperienceEvent Mixin。 |
 | [!DNL Profile Privacy] ミックスイン | New profile mixin that adds fields to accept general out-out and sales/sharing opt-out signals for [!DNL Real-time Customer Profile]. |
 | `xdm:alternateDisplayInfo` の形式制限 | `xdm:alternateDisplayInfo` の「タイトル」フィールドと「説明」フィールドは、両方とも検証に合格する文字列である必要があります。 |
-| 名前の変更： XDM [!DNL Individual Profile] | The &quot;title&quot; of the &quot;XDM [!DNL Profile]&quot; class has been updated to &quot;XDM [!DNL Individual Profile]&quot;. クラスの公式 `$id` は変更されていません。 |
+| 名前の変更：XDM [!DNL Individual Profile] | The &quot;title&quot; of the &quot;XDM [!DNL Profile]&quot; class has been updated to &quot;XDM [!DNL Individual Profile]&quot;. クラスの公式 `$id` は変更されていません。 |
 
 **既知の問題**
 
@@ -168,7 +169,7 @@ Adobe Experience Platform [!DNL Segmentation Service] provides a user interface 
 
 | 機能 | 説明 |
 | -----------| ---------- |
-| スケジュールされたセグメント化 | ユーザーは、UI と API を使用して、すべてのセグメントに対して、スケジュールされたセグメント評価を有効にできるようになりました。有効にすると、すべてのセグメントが 1 日に 1 回評価されます。この機能は、オンデマンドのセグメント化機能には影響しません。オンデマンドのセグメント化機能は以前と同じように引き続き機能します。<br/><br/>注意： 5つを超えるマージポリシーを持つサンドボックスでは、スケジュール済みセグメント機能を使用でき [!DNL XDM Individual Profile]ません。 |
+| スケジュールされたセグメント化 | ユーザーは、UI と API を使用して、すべてのセグメントに対して、スケジュールされたセグメント評価を有効にできるようになりました。有効にすると、すべてのセグメントが 1 日に 1 回評価されます。この機能は、オンデマンドのセグメント化機能には影響しません。オンデマンドのセグメント化機能は以前と同じように引き続き機能します。<br/><br/>注意：5つを超えるマージポリシーを持つサンドボックスでは、スケジュール済みセグメント機能を使用でき [!DNL XDM Individual Profile]ません。 |
 | ストリーミングセグメント化 | Support for continuous evaluation of segments (streaming segmentation) allows most segment rules to be evaluated as the data is passing into [!DNL Platform]. この機能を使用すると、セグメントメンバーシップは、スケジュールされたセグメント化ジョブを実行しなくても最新の状態になります。複数エンティティの関係を使用するセグメントや強化ペイロードを含むセグメントなど、一部の例外が存在します。 |
 | 構成ブロックとしてのセグメント | セグメントビルダー UI を使用してセグメントを作成する場合、以前に定義したセグメントを、追加セグメントの構成ブロックとして使用できるようになりました。 <ul><li>現在のオーディエンスメンバーシップの参照：ユーザーがオーディエンスになったり、オーディエンスでなくなったりしたときに更新されます。</li><li>ロジックのコピー：選択したセグメント定義を新しいセグメントにコピーします。</li></ul> |
 | ID 名前空間ごとにセグメントメンバーシップを表示 | セグメントメンバーシップを ID 名前空間（電子メール、ECID、合計数）ごとに表示できるようになりました。 |
