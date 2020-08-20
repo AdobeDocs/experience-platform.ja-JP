@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform バッチ取得トラブルシューティングガイド
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 91%
+source-wordcount: '1389'
+ht-degree: 88%
 
 ---
 
@@ -56,6 +56,18 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
                 "format": "json"
            }
     }'
+```
+
+### アップロードしたデータがデータセットに表示されないのはなぜですか。
+
+データセットにデータを表示するには、バッチに完了とマークを付ける必要があります。 取り込むすべてのファイルをアップロードしてから、バッチを完了とマークする必要があります。 バッチを完了とマークする例を次に示します。
+
+```shell
+curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key : {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ### 複数行の JSON はどのように取得されますか？
