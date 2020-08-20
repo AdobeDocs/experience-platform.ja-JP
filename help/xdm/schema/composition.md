@@ -5,7 +5,7 @@ title: スキーマ合成の基本
 topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
 workflow-type: tm+mt
 source-wordcount: '2811'
 ht-degree: 55%
@@ -68,7 +68,7 @@ Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: em
 
 スキーマ計画段階で顧客の ID を考慮し、可能な限り堅牢なプロファイルを構築するためにデータを統合できるようにすることが重要です。See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
-#### xdm:identityMap
+#### xdm:identityMap {#identityMap}
 
 `xdm:identityMap` は、個人の様々なID値と関連する名前空間を説明するmap-typeフィールドです。 このフィールドは、スキーマ自体の構造内でidentity値を定義する代わりに、スキーマの識別情報を提供するために使用できます。
 
