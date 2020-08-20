@@ -3,8 +3,9 @@ title: Analytics で自動的にマッピングされる変数
 seo-title: Adobe Experience Platform Web SDK を使用して Analytics で自動的にマッピングされる変数
 description: Adobe Experience Platform Web SDK を使用して Analytics で自動的にマッピングされる変数について説明します
 seo-description: Adobe Experience Platform Web SDK を使用して Analytics で自動的にマッピングされる変数について説明します
+keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 55%
