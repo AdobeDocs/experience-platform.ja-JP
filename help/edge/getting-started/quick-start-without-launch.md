@@ -1,10 +1,11 @@
 ---
 title: プレーンJavaScriptを使用したクイック開始
-seo-title: 'Adobe Experience PlatformWeb SDKのクイック開始 '
+seo-title: 'Adobe Experience PlatformWeb SDKクイック開始 '
 description: Experience PlatformWeb SDKを使用してデータを収集するクイック開始ガイド
 seo-description: Experience PlatformWeb SDKを使用してデータを収集するクイック開始ガイド
+keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 15%
@@ -17,7 +18,7 @@ ht-degree: 15%
 このガイドでは、Adobe Experience PlatformWeb SDKの様々な設定方法を順を追って説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動したい場合は、CSMに連絡してください。
 
 - [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。CNAMEを使用しない開発環境でのテストは可能ですが、実稼働環境に移行する前に必要です。
-- Adobe Experience Platform　を使用する資格がある.  Platformを購入していない場合、AdobeはData Services Foundationでの利用を制限した方法で、SDKを無料で提供します。
+- Adobe Experience Platform　を使用する資格がある.  プラットフォームを購入していない場合、Adobeは、限られた方法でPlatform Data Services Foundationを提供し、SDKを使用して無償で利用できます。
 - 訪問者 ID サービスの最新バージョンを使用している.
 
 ## スキーマの準備
