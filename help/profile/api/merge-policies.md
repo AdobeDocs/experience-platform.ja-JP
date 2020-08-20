@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: マージポリシー — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
 workflow-type: tm+mt
-source-wordcount: '2035'
-ht-degree: 83%
+source-wordcount: '2381'
+ht-degree: 66%
 
 ---
 
@@ -56,7 +56,7 @@ The API endpoint used in this guide is part of the [!DNL Real-time Customer Prof
 | `name` | リスト表示で結合ポリシーを識別できるわかりやすい名前。 |
 | `imsOrgId` | この結合ポリシーが属する組織 ID |
 | `identityGraph` | 関連 ID の取得元（ID）の ID グラフを示す [ID グラフ](#identity-graph)オブジェクト。関連するすべての ID で見つかったプロファイルフラグメントが結合されます。 |
-| `attributeMerge` | データの競合時に結合ポリシーがプロファイル属性値に優先順位を付ける方法を示す[属性結合](#attribute-merge)オブジェクト。 |
+| `attributeMerge` | [データの競合が発生した場合に、マージポリシーがプロファイル属性に優先順位を付ける方法を示す属性マージ](#attribute-merge) ・オブジェクト。 |
 | `schema` | 結合ポリシーを使用できる[スキーマ](#schema)オブジェクト。 |
 | `default` | この結合ポリシーが指定されたスキーマのデフォルトかどうかを示すブール値。 |
 | `version` | [!DNL Platform] マージポリシーのバージョンを維持しました。 この読み取り専用の値は、結合ポリシーが更新されるたびに増加します。 |
@@ -86,7 +86,7 @@ The API endpoint used in this guide is part of the [!DNL Real-time Customer Prof
 
 ### ID グラフ {#identity-graph}
 
-[Adobe Experience PlatformIDサービス](../../identity-service/home.md) は、グローバルに、およびの各組織で使用されるIDグラフを管理 [!DNL Experience Platform]します。 結合ポリシーの `identityGraph` 属性は、ユーザーの関連 ID の決定方法を定義します。
+[Adobe Experience Platformアイデンティティサービス](../../identity-service/home.md) は、グローバルに、およびの各組織で使用されるIDグラフを管理 [!DNL Experience Platform]します。 結合ポリシーの `identityGraph` 属性は、ユーザーの関連 ID の決定方法を定義します。
 
 **ID グラフオブジェクト**
 
@@ -111,7 +111,7 @@ The API endpoint used in this guide is part of the [!DNL Real-time Customer Prof
 
 ### 属性の結合 {#attribute-merge}
 
-プロファイルフラグメントとは、特定のユーザーに存在する ID のリストからの 1 つの ID のプロファイル情報のことです。使用された ID グラフタイプが複数の ID になる場合、プロファイルプロパティの値が競合する可能性があり、優先順位を指定する必要があります。`attributeMerge` を使用すると、結合の競合が発生した場合に優先するデータセットプロファイル値を指定できます。
+プロファイルフラグメントとは、特定のユーザーに存在する ID のリストからの 1 つの ID のプロファイル情報のことです。使用するIDグラフのタイプが複数のIDになる場合、プロファイル属性と優先度が競合する可能性があります。 を使用 `attributeMerge`すると、キー値（レコードデータ）型のデータセット間の結合の競合をイベントする際に、優先順位を付けるプロファイル属性を指定できます。
 
 **attributeMerge オブジェクト**
 
@@ -123,11 +123,11 @@ The API endpoint used in this guide is part of the [!DNL Real-time Customer Prof
 
 ここで、`{ATTRIBUTE_MERGE_TYPE}` は次のいずれかです。
 
-* **timestampOrdered**：（デフォルト）競合が発生した場合に最後に更新されたプロファイルを優先します。この結合タイプを使用する場合、`data` 属性は不要です。
-* **dataSetPrecedence**：元のデータセットに基づいてフラグメントプロファイルを優先します。これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
-   * **order**：「dataSetPrecedence」を使用する場合、`order` 配列にはデータセットのリストが必要です。データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
+* **`timestampOrdered`**:（デフォルト）競合が発生した場合に最後に更新されたプロファイルを優先します。 この結合タイプを使用する場合、`data` 属性は不要です。`timestampOrdered` また、データセット内またはデータセット間でプロファイルフラグメントを結合する場合に優先されるカスタムタイムスタンプもサポートします。 詳しくは、カスタムタイムスタンプの [使用に関する付録の節を参照してください](#custom-timestamps)。
+* **`dataSetPrecedence`** :プロファイルフラグメントの送信元のデータセットに基づいて、そのフラグメントを優先します。 これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
+   * **`order`**:&quot;dataSetPrecedence&quot;を使用する場合は、配列にデータセットのリストを指定する必要があり `order` ます。 データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
 
-**dataSetPrecedence 型を使用した attributeMerge オブジェクトの例**
+**`dataSetPrecedence`型を使用した attributeMerge オブジェクトの例**
 
 ```json
     "attributeMerge": {
@@ -141,7 +141,7 @@ The API endpoint used in this guide is part of the [!DNL Real-time Customer Prof
     }
 ```
 
-**timestampOrdered 型を使用した attributeMerge オブジェクトの例**
+**`timestampOrdered`型を使用した attributeMerge オブジェクトの例**
 
 ```json
     "attributeMerge": {
@@ -151,9 +151,9 @@ The API endpoint used in this guide is part of the [!DNL Real-time Customer Prof
 
 ### スキーマ {#schema}
 
-スキーマオブジェクトは、この結合ポリシーを作成する XDM スキーマを指定します。
+スキーマオブジェクトは、この結合ポリシーを作成するExperience Data Model(XDM)スキーマを指定します。
 
-**`schema`オブジェクト&#x200B;**
+**`schema`オブジェクト**
 
 ```json
     "schema": {
@@ -170,6 +170,8 @@ The API endpoint used in this guide is part of the [!DNL Real-time Customer Prof
         "name": "_xdm.context.profile"
     }
 ```
+
+XDMの詳細とExperience Platformでのスキーマの使い方については、 [XDM Systemの概要を読んでください](../../xdm/home.md)。
 
 ## 結合ポリシーへのアクセス {#access-merge-policies}
 
@@ -726,6 +728,41 @@ curl -X DELETE \
 ## 次の手順
 
 Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. セグメントの定義と使用を開始するには、[Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)のドキュメントを参照してください。
+
+## 付録
+
+### カスタムタイムスタンプの使用 {#custom-timestamps}
+
+プロファイルレコードをExperience Platformに取り込むと、取り込み時にシステムタイムスタンプを取得し、記録に追加する。 マージポリシーの `timestampOrdered``attributeMerge` 種類としてを選択すると、プロファイルはシステムのタイムスタンプに基づいてマージされます。 つまり、記録がプラットフォームに取り込まれた時のタイムスタンプに基づいて結合が行われます。
+
+場合によっては、データのバックフィルや、レコードが順番に取り込まれない場合のイベントの正しい順序の確認など、カスタムタイムスタンプを指定し、マージポリシーでシステムタイムスタンプではなくカスタムタイムスタンプが適用される場合があります。
+
+カスタムタイムスタンプを使用するには、 [External Source System Audit Details Mixinをプロファイルスキーマに追加する必要があります](#mixin-details) 。 追加したカスタムタイムスタンプは、この `xdm:lastUpdatedDate` フィールドを使用して入力できます。 レコードを取り込むときに `xdm:lastUpdatedDate` フィールドに値が入力され、Experience Platformはそのフィールドを使用して、データセット内およびデータセット間でレコードまたはプロファイルフラグメントを結合します。 が存在しな `xdm:lastUpdatedDate` い場合、または入力されない場合、プラットフォームはシステムタイムスタンプを引き続き使用します。
+
+>[!NOTE]
+>
+>同じレコード上でPATCHを送信する場合は、タイム `xdm:lastUpdatedDate` スタンプが設定されていることを確認する必要があります。
+
+スキーマレジストリAPIを使用してスキーマを操作する手順(スキーマにミックスインを追加する方法など)については、APIを使用したスキーマの作成に関する [チュートリアルを参照してください](../../xdm/tutorials/create-schema-api.md)。
+
+UIを使用してカスタムタイムスタンプを操作するには、 [マージポリシーユーザーガイドのカスタムタイムスタンプの](../ui/merge-policies.md#custom-timestamps) 使用に関する節を参照してください [](../ui/merge-policies.md)。
+
+#### 外部ソースシステム監査詳細ミックスインの詳細 {#mixin-details}
+
+次の例は、「外部ソースシステム監査詳細」ミックスインのフィールドに正しく入力されていることを示しています。 完全なミックスインJSONは、GitHubの [パブリックエクスペリエンスデータモデル(XDM)レポートでも表示できます](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) 。
+
+```json
+{
+  "xdm:createdBy": "{CREATED_BY}",
+  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
+  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
+  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
+ }
+```
+
 
 
 
