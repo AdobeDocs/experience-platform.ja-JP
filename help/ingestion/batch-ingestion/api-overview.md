@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform バッチ取得開発者ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 94%
+source-wordcount: '2670'
+ht-degree: 89%
 
 ---
 
@@ -27,8 +27,8 @@ ht-degree: 94%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 - [バッチ取得](./overview.md)：データをバッチファイルとして Adobe Experience Platform に取得することができます。
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [[!DNL Experience Data Model] (XDM)システム](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+- [[!DNLサンドボックス]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### API 呼び出し例の読み取り
 
@@ -38,22 +38,19 @@ ht-degree: 94%
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-ペイロード（POST、PUT、PATCH）を含むリクエストには、追加の `Content-Type` ヘッダーが必要な場合があります。各呼び出しに固有の受け入れられた値は、呼び出しパラメーターで提供されます。このガイドでは、次のコンテンツタイプを使用します。
-
-- Content-Type: application/json
-- Content-Type: application/octet-stream
+ペイロード（POST、PUT、PATCH）を含むリクエストには、追加の `Content-Type` ヘッダーが必要な場合があります。各呼び出しに固有の受け入れられた値は、呼び出しパラメーターで提供されます。
 
 ## タイプ
 
@@ -176,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
 
 **リクエスト**
 
@@ -196,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
 
 **応答** 
 
@@ -311,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
 
 **リクエスト**
 
@@ -331,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
 
 **応答** 
 
@@ -484,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
 
 **リクエスト**
 
@@ -506,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 指定した範囲の開始と終了を整数で指定します。 |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
 
 
 **応答** 
@@ -734,7 +731,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
 
 **リクエスト**
 
@@ -754,7 +751,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
 
 
 **応答** 
@@ -941,7 +938,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
 
 **リクエスト**
 
@@ -961,7 +958,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
 
 **応答** 
 
