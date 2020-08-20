@@ -3,8 +3,9 @@ title: Launch のクイックスタート
 seo-title: Adobe Experience Platform Web SDK：Launch のクイックスタート
 description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
+keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: bc18ca26da37ecfca2ade9403be22d7de222facb
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 28%
@@ -14,10 +15,10 @@ ht-degree: 28%
 
 # ようこそ
 
-このガイドでは、起動時にAdobe Experience PlatformWeb SDKを設定する様々な方法の手順を説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動する場合は、CSMに連絡してください。
+このガイドでは、開始時にAdobe Experience PlatformWeb SDKを設定する様々な方法の手順を説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動する場合は、CSMに連絡してください。
 
 - [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。開発でのテストはCNAMEを使用しなくても機能しますが、実稼働環境に移行する前に必要になります。
-- Adobe Experience Platform　を使用する資格がある. Platformを購入していない場合、AdobeはData Services Foundationでの利用を制限した方法で、SDKを無料で提供します。
+- Adobe Experience Platform　を使用する資格がある. プラットフォームを購入していない場合、Adobeは、限られた方法でPlatform Data Services Foundationを提供し、SDKを使用して無償で利用できます。
 - 訪問者 ID サービスの最新バージョンを使用している.
 
 ## スキーマの準備
