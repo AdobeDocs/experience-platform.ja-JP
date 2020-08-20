@@ -5,7 +5,7 @@ title: マルチエンティティのセグメント化
 topic: overview
 description: 複数エンティティのセグメント化は、製品、店舗または他の非プロファイルクラスに基づいて、プロファイルデータを拡張する機能です。接続されると、追加のクラスのデータは、プロファイルスキーマにネイティブであるかのように使用できるようになります。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 39%
@@ -17,7 +17,7 @@ ht-degree: 39%
 
 Multi-entity segmentation is the ability to extend [!DNL Profile] data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the [!DNL Profile] schema.
 
-マルチエンティティのセグメント化の詳細については、以下のビデオを見て、ドキュメントを読み、学習を補完してください。また、 [セグメント化の概要を調べてください](./home.md)。]
+マルチエンティティのセグメント化の詳細については、以下のビデオを見て、ドキュメントを読み、学習を補完してください。また、 [セグメント化の概要を調べてください](./home.md)。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
