@@ -3,8 +3,9 @@ title: 複数のプロパティの操作
 seo-title: Adobe Experience Platform Web SDK：複数のプロパティの操作
 description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します
 seo-description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します
+keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 87%
