@@ -3,8 +3,9 @@ title: ライブラリ情報の取得
 seo-title: Adobe Experience Platform Web SDK を使用したライブラリ情報の取得
 description: Web　サイトに読み込まれたライブラリに関する情報を取得する方法について説明します
 seo-description: Adobe Experience Cloud SDK　が自動的に収集する、Web　サイトに読み込まれたライブラリに関する情報を取得する方法について説明します
+keywords: library; library information;getLibraryInfo;libraryInfo;
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 100%
