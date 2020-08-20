@@ -3,8 +3,9 @@ title: Analyticsでの変数の手動マッピング
 seo-title: Analyticsの変数とWeb SDKの手動マッピング
 description: 処理ルールを使用して変数をAnalyticsに手動でマッピングする方法
 seo-description: Web SDKの処理ルールを使用して、変数を手動でAnalyticsにマッピングする
+keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 47%
