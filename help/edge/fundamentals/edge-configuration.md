@@ -3,8 +3,9 @@ title: エッジ設定
 seo-title: Experience PlatformWeb SDKのエッジ設定
 description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 seo-description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
+keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 3%
