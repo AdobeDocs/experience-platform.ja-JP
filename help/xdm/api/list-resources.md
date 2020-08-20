@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リソースのリスト
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 30%
@@ -31,7 +31,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | リソースが配置されるコンテナ（「グローバル」または「テナント」）。 |
 | `{RESOURCE_TYPE}` | The type of resource to retrieve from the [!DNL Schema Library]. Valid types are `classes`, `mixins`, `schemas`, `datatypes`, and `descriptors`. |
-| `{QUERY_PARAMS`} | 結果をフィルターするオプションのクエリパラメーター。 詳しくは、 [クエリパラメーターの節を参照してください](#query) 。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 詳しくは、 [クエリパラメーターの節を参照してください](#query) 。 |
 
 **リクエスト**
 
@@ -49,8 +49,8 @@ curl -X GET \
 
 | Accept ヘッダー | 説明 |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | 各リソースの短い概要を返します。 リソースのリストを表示する際に推奨されるヘッダーです。 (制限： 300) |
-| application/vnd.adobe.xed+json | 各リソースの完全な JSON スキーマを、元の `$ref` と `allOf` を含めて返します。。(制限： 300) |
+| application/vnd.adobe.xed-id+json | 各リソースの短い概要を返します。 リソースのリストを表示する際に推奨されるヘッダーです。 (制限：300) |
+| application/vnd.adobe.xed+json | 各リソースの完全な JSON スキーマを、元の `$ref` と `allOf` を含めて返します。。(制限：300) |
 | application/vnd.adobe.xdm-v2+json | エンドポイントを使用する場合、ページング機能を利用するために、このAcceptヘッダーを使用する必要があります。 `/descriptors` |
 
 **応答**
