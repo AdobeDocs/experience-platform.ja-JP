@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID サービス
 topic: overview
 description: 'ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name<span>@email.com」の値を電子メールアドレスとして、または「443522」を数値のCRM IDとして区別します。 '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 68%
@@ -49,7 +49,7 @@ The following identity types are available within [!DNL Platform]:
 | 人以外 | 名前空間を必要とする一方で、個人のクラスターに関連付けられていない識別子を格納するために使用されます。その後、これらの識別子は、ID グラフからフィルタリングされます。使用事例としては、製品、組織、店舗などに関連するデータが考えられます（製品 SKUなど）。 |
 | 電話番号 | このタイプの ID には PII が含まれます。This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
-### 標準名前空間
+### 標準名前空間 {#standard}
 
 Adobe Experience Platform には、すべての組織で使用できる ID 名前空間が複数用意されています。These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
