@@ -5,10 +5,10 @@ solution: Experience Platform
 title: UIでのAdobe Analytics分類データコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: abb15e3daac4aebd46012822c790b056d0b3d2c1
+source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 5%
+source-wordcount: '624'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 5%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 * [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [[!DNLサンドボックス]](../../../../../sandboxes/home.md):Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
@@ -57,7 +57,7 @@ ht-degree: 5%
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
-## 分類のデータフローの監視と削除
+## 分類のデータフローの監視
 
 データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 「 **[!UICONTROL カタログ]** 」画面で、「 **[!UICONTROL データフロー]**[!DNL Classifications] 」を選択して、アカウントに関連付けられた確立済みフローのリストを表示します。
 
@@ -69,13 +69,13 @@ ht-degree: 5%
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-「 **[!UICONTROL データセットアクティビティ]** 」ページには、選択したターゲットデータセットに関する情報(バッチステータス、データセットID、スキーマなど)が表示されます。 削除するデータセット **[!UICONTROL を削除]** (Delete dataset)を選択します。
+「 **[!UICONTROL データセットアクティビティ]** 」ページには、選択したターゲットデータセットに関する情報(バッチステータス、データセットID、スキーマなど)が表示されます。
 
-![](../../../../images/tutorials/create/classifications/batch-screen.png)
+>[!IMPORTANT]
+>他のソースコネクターではデータセットの削除は可能ですが、現在、Analytics分類データコネクターではサポートされていません。 誤ってデータセットを削除した場合は、Adobeカスタマーケアにお問い合わせください。
 
-削除の確認を求めるダイアログボックスが表示されます。 「 **[!UICONTROL 削除]** 」を選択して完了します。
+![](../../../../images/tutorials/create/classifications/dataset.png)
 
-![](../../../../images/tutorials/create/classifications/delete-confirm.png)
 
 ## 次の手順
 
