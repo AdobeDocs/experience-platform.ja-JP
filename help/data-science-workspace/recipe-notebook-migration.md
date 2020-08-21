@@ -452,7 +452,7 @@ PySpark 3 (Spark 2.4) `sc = spark.sparkContext` はロード時に定義され�
 
 **PySpark 2.4での[!DNL Experience Cloud Platform]データのロード**
 
-PySpark 3 ([!DNL Spark] 2.4)では、とを定義する必要はありま `org_id``dataset_id` せん。 また、データセット `df = spark.read.format` の読み取りと書き込みを容易にするカスタムマジック [`%dataset`](#magic) に置き換えられました。
+PySpark 3 ([!DNL Spark] 2.4)では、とを定義する必要はありま `org_id`&#x200B;`dataset_id` せん。 また、データセット `df = spark.read.format` の読み取りと書き込みを容易にするカスタムマジック [`%dataset`](#magic) に置き換えられました。
 
 ![負荷2](./images/migration/pyspark-migration/2.4-load-alt.png)
 
