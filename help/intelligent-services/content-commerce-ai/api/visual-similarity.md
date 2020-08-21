@@ -5,9 +5,9 @@ title: 視覚的類似性
 topic: Developer guide
 description: 視覚類似性サービスは、画像を指定すると、カタログから視覚的に類似した画像を自動的に見つけ出します。
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '497'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 このドキュメントのリクエスト例では、次の画像が使用されています。
 
-![テスト画像](../images/test_image.jpeg)
+![テスト画像](../images/Query_Image.jpeg)
 
 **API 形式**
 
@@ -37,7 +37,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。 リクエストを行う前に、適切な情報があることを確認し `analyzer_id` てください。
+>`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。 リクエストを行う前に、適切な情報があることを確認し `analyzer_id` てください。 本サービスのご利用を受けるには、コンテンツおよびコマースAIベータチームにお問い合わせ `analyzer_id` ください。
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,7 +76,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | プロパティ | 説明 | 必須 |
 | --- | --- | --- |
-| `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 | ○ |
+| `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
 | `application-id` | 作成したアプリケーションのID。 | ○ |
 | `data` | 画像を表す配列内の各オブジェクトを持つJSONオブジェクトを含む配列。 この配列の一部として渡されたパラメータは、配列の外部で指定されたグローバルパラメータよりも優先され `data` ます。 次の表に示す残りのプロパティは、内で上書きでき `data`ます。 | ○ |
 | `content-id` | 応答で返されるデータ要素の一意のID。 この値が渡されない場合は、自動生成IDが割り当てられます。 | × |
@@ -91,6 +91,10 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 **応答** 
 
 正常な応答を返すと、カタログ内の視覚的に類似した各画像に対し `response` てandが含まれ `feature_value``feature_name` る配列が返されます。
+
+次の例の応答では、視覚的に類似した画像が返されています。
+
+![類似画像](../images/results.jpg)
 
 ```json
 {
@@ -156,3 +160,4 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
   "error": []
 }
 ```
+
