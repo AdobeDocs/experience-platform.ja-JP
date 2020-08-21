@@ -5,10 +5,10 @@ title: カラー抽出
 topic: Developer guide
 description: カラー抽出サービスは、画像を与えられると、ピクセル色のヒストグラムを計算して、主色でグループに分けることができます。
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 3%
+source-wordcount: '689'
+ht-degree: 2%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 3%
 
 このドキュメントの例では、次の画像が使用されています。
 
-![テスト画像](../images/test_image.jpeg)
+![テスト画像](../images/QQAsset1.jpg)
 
 **API 形式**
 
@@ -47,7 +47,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。 リクエストを行う前に、適切な情報があることを確認し `analyzer_id` てください。
+>`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。 リクエストを行う前に、適切な情報があることを確認し `analyzer_id` てください。 カラー抽出サービスの場合、 `analyzer_id` IDは： `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -86,7 +86,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | プロパティ | 説明 | 必須 |
 | --- | --- | --- |
-| `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 | ○ |
+| `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
 | `application-id` | 作成したアプリケーションのID。 | ○ |
 | `data` | JSONオブジェクトを含む配列。 配列内の各オブジェクトは、イメージを表します。 この配列の一部として渡されたパラメータは、配列の外部で指定されたグローバルパラメータよりも優先され `data` ます。 次の表に示す残りのプロパティは、内で上書きでき `data`ます。 | ○ |
 | `content-id` | 応答で返されるデータ要素の一意のID。 この値が渡されない場合は、自動生成IDが割り当てられます。 | × |
@@ -106,7 +106,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 - この色が画像に対して表示される割合
 - カラーのRGB値
 
-下の最初の例のオブジェクト `feature_value` の「 `White,0.82,239,239,239` オブジェクト」は、見つかった色が白で、画像の82 %に白が含まれ、RGB値は239,239,239です。
+下の最初の例のオブジェクト `feature_value` の「 `White,0.59,251,251,243` of」は、見つかった色が白で、画像の59 %が白で、RGB値は251,251,243であることを意味します。
 
 ```json
 {
@@ -124,15 +124,19 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
             "feature_value": [
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "White,0.82,239,239,239"
+                "feature_value": "White,0.59,251,251,243"
               },
               {
-                "feature_value": "Dark_Blue,0.11,41,60,86",
+                "feature_value": "Orange,0.30,248,169,48",
                 "feature_name": "color_name_and_rgb"
               },
               {
                 "feature_name": "color_name_and_rgb",
-                "feature_value": "Royal_Blue,0.08,63,91,123"
+                "feature_value": "Mustard,0.08,251,199,77"
+              },
+              {
+                "feature_name": "color_name_and_rgb",
+                "feature_value": "Gold,0.02,250,191,55"
               }
             ],
             "feature_name": "color"
