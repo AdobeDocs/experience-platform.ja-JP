@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタとAPIを使用してプロトコルデータを収集する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1669'
 ht-degree: 14%
 
 ---
@@ -645,11 +645,11 @@ curl -X POST \
 | `sourceConnectionIds` | 前の手順で取得した [ソース接続ID](#source) 。 |
 | `targetConnectionIds` | 前の手順で取得した [ターゲット接続ID](#target-connection) 。 |
 | `transformations.params.mappingId` | 前の手順で取得した [マッピングID](#mapping) 。 |
-| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 |
+| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 汎用ODataを使用する `deltaColumn` 場合にサポートされる形式は `yyyy-MM-ddTHH:mm:ssZ`です。 |
 | `transformations.params.mappingId` | データベースに関連付けられているマッピングID。 |
 | `scheduleParams.startTime` | エポック時間のデータフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
-| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があ `15` ります。 |
+| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があり `15` ます。 |
 
 **応答** 
 
