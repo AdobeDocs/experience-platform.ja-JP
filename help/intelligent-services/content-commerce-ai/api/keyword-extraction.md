@@ -5,10 +5,10 @@ title: カラー抽出
 topic: Developer guide
 description: キーワード抽出サービスは、テキストドキュメントを指定すると、ドキュメントの主題を最も記述したキーワードまたはキーパースを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識(NER)と監視されていないキーワード抽出アルゴリズムの組み合わせが使用されます。
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 4%
+source-wordcount: '742'
+ht-degree: 3%
 
 ---
 
@@ -84,7 +84,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。 リクエストを行う前に、適切な情報があることを確認し `analyzer_id` てください。
+>`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。 リクエストを行う前に、適切な情報があることを確認し `analyzer_id` てください。 キーワード抽出サービスの場合、 `analyzer_id` IDは： `Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -119,7 +119,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | プロパティ | 説明 | 必須 |
 | --- | --- | --- |
-| `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 | ○ |
+| `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
 | `application-id` | 作成されたアプリケーションのID。 | ○ |
 | `data` | ドキュメントを表す配列内の各オブジェクトを持つJSONオブジェクトを含む配列。 この配列の一部として渡されたパラメータは、配列の外部で指定されたグローバルパラメータよりも優先され `data` ます。 次の表に示す残りのプロパティは、内で上書きでき `data`ます。 | ○ |
 | `language` | 入力テキストの言語。 デフォルト値は `en` です。 | × |
