@@ -3,12 +3,12 @@ keywords: Flashtalking OneTag extensions;Flashtalking OneTag extension;Flashtalk
 title: Flashtalking OneTag 拡張機能
 seo-title: Flashtalking OneTag 拡張機能
 description: Flashtalking OneTag 拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: null
+seo-description: Flashtalking OneTag 拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 83%
+source-wordcount: '557'
+ht-degree: 84%
 
 ---
 
