@@ -3,12 +3,12 @@ keywords: target extension;target
 title: Adobe Target 拡張機能
 seo-title: Adobe Target 拡張機能
 description: Adobe Target 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: null
+seo-description: Adobe Target 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 66%
+source-wordcount: '556'
+ht-degree: 68%
 
 ---
 
