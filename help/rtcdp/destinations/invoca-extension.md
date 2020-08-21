@@ -3,11 +3,11 @@ keywords: Invoca;invoca
 title: Invoca Tags 拡張機能
 seo-title: Invoca Tags 拡張機能
 description: Invoca Tags 拡張機能は、アドビのリアルタイム顧客データプラットフォームの顧客の宛先を示すボイスです。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: null
+seo-description: Invoca Tags 拡張機能は、アドビのリアルタイム顧客データプラットフォームの顧客の宛先を示すボイスです。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '569'
 ht-degree: 85%
 
 ---
