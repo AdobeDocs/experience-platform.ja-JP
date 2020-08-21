@@ -5,9 +5,9 @@ title: ストリーミングセグメント化
 topic: ui guide
 description: Adobe Experience Platformでのセグメント化のストリーミングにより、データの豊富性に重点を置き、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性が軽減され、データがプラットフォームに到着するとセグメントの認定が行われるようになりました。 この機能を使用すると、ほとんどのセグメントルールを、データがプラットフォームに渡される際に評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメント化ジョブを実行せずに最新の状態に維持されます。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '767'
 ht-degree: 2%
 
 ---
@@ -60,7 +60,9 @@ ht-degree: 2%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-特に、条件を満たした **[!UICONTROL オーディエンスの合計サイズ]** の詳細が表示されます。 ジョブが過去24時間以内に実行された場合は、追加されたオーディエンスの折れ線グラフに加えて、ジョブからの **[!UICONTROL 合計修飾オーディエンスサイズ]** (Total qualified Size)が表示されます。 そうでない場合は、ビジュアライゼーションのトレンドラインに加えて、 **[!UICONTROL 合計予想オーディエンスサイズ]** (Total estimated Size)が表示されます。
+特に、条件を満たした **[!UICONTROL オーディエンスの合計サイズ]** の詳細が表示されます。 「 **[!UICONTROL 条件付き]** オーディエンスの合計サイズ」には、最後に完了したセグメントジョブの実行からの条件付きオーディエンスの合計数が表示されます。 過去24時間以内にセグメントジョブが完了しなかった場合、オーディエンス数は予測から取得されます。
+
+下に示す折れ線グラフは、過去24時間に修飾および欠格されたセグメントの数を示しています。 ドロップダウンは、過去24時間、先週または過去30日間を表示するように調整できます。
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
