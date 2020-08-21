@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタとAPIを使用して支払データを収集する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1702'
 ht-degree: 14%
 
 ---
@@ -136,7 +136,7 @@ curl -X POST \
 
 以前の手順では、ソースデータを構造化するためにアドホックXDMスキーマを作成しました。 でソースデータを使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマも作成する必要があり [!DNL Platform]ます。 次に、このターゲットスキーマを使用して、ソースデータが含まれる [!DNL Platform] データセットを作成します。 このターゲットXDMスキーマはXDM [!DNL Individual Profile] クラスも拡張します。
 
-ターゲットXDMスキーマは、 [スキーマレジストリAPIに対するPOST要求を実行することで作成できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](https://docs.adobe.com/content/help/en/experience-platform/xdm/tutorials/create-schema-ui.html) provides step-by-step instructions for performing similar actions in the Schema Editor.
+ターゲットXDMスキーマは、 [スキーマレジストリAPIに対するPOST要求を実行することで作成できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。 If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/tutorials/create-schema-ui.html) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **API 形式**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `sourceConnectionIds` | 前の手順で取得した [ソース接続ID](#source) 。 |
 | `targetConnectionIds` | 前の手順で取得した [ターゲット接続ID](#target-connection) 。 |
 | `transformations.params.mappingId` | 前の手順で取得した [マッピングID](#mapping) 。 |
-| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 |
+| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 でサポートされている日付形式 `deltaColumn` はで `yyyy-MM-dd HH:mm:ss`す。 |
 | `transformations.params.mappingId` | データベースに関連付けられているマッピングID。 |
 | `scheduleParams.startTime` | エポック時間のデータフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
