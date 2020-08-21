@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクターとAPIを使用して顧客成功システムからデータを収集する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1703'
 ht-degree: 14%
 
 ---
@@ -604,7 +604,9 @@ curl -X POST \
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "date-time"
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
                     }
                 }
             },
@@ -631,7 +633,7 @@ curl -X POST \
 | `sourceConnectionIds` | 前の手順で取得した [ソース接続ID](#source) 。 |
 | `targetConnectionIds` | 前の手順で取得した [ターゲット接続ID](#target-connection) 。 |
 | `transformations.params.mappingId` | 前の手順で取得した [マッピングID](#mapping) 。 |
-| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 |
+| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 でサポートされている日付形式 `deltaColumn` はで `yyyy-MM-dd HH:mm:ss`す。 |
 | `transformations.params.mappingId` | データベースに関連付けられているマッピングID。 |
 | `scheduleParams.startTime` | エポック時間のデータフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
