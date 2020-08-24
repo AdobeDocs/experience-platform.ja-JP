@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 集計関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 91%
+source-wordcount: '205'
+ht-degree: 85%
 
 ---
 
 
 # 集計関数
 
-Aggregation functions are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. その他の PQL 関数の詳細については、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
+Aggregation functions are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Count
 
