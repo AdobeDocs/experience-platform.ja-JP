@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 文字列関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 98%
+source-wordcount: '754'
+ht-degree: 97%
 
 ---
 
 
 # 文字列関数
 
-[!DNL Profile Query Language] (PQL)オファーは、文字列とのやり取りを簡単にするための機能です。 その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
+[!DNL Profile Query Language] (PQL)オファーは、文字列とのやり取りを簡単にするための機能です。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## like
 
