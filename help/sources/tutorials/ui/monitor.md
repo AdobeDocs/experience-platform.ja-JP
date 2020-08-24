@@ -5,9 +5,9 @@ solution: Experience Platform
 title: アカウントとデータフローの監視
 topic: overview
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '890'
 ht-degree: 5%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model] (XDM)システム](../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+- [[!DNL Experience Data Model] (XDM)システム](../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNLリアルタイム顧客プロファイル]](../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
@@ -66,7 +66,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![dataflow-アクティビティ](../../images/tutorials/monitor/dataflow-activity.png)
 
-カレンダーを使用すると、取り込むレコードに応じて異なる時間枠を表示できます。 「 **[!UICONTROL 過去7日間]** 」と「過去30日間」の2つの事前設定済みオプションのいずれかを選択できます ****。 または、カレンダーを使用してカスタムの期間を設定できます。 選択した期間を選択し、「 **[!UICONTROL 適用]** 」を選択して続行します。
+カレンダーを使用すると、取り込むレコードに応じて異なる時間枠を表示できます。 「 **[!UICONTROL 過去7日間」と「過去30日間]** 」の2つの事前設定済みオプションのいずれかを選択できます ****。 または、カレンダーを使用してカスタムの期間を設定できます。 選択した期間を選択し、「 **[!UICONTROL 適用]** 」を選択して続行します。
 
 ![フローカレンダー](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![プレビューエラー診断](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-エラーをプレビューした後、 **[!UICONTROL UICONTROL dataflow runs overview]** パネルで「 **[Download]** from」を選択して、完全なエラー診断にアクセスし、ファイルマニフェストをダウンロードできます。 詳しくは、 [エラー診断とメタデータの](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) ダウンロードのドキュメントを参照してください [](../../../ingestion/batch-ingestion/partial.md#download-metadata) 。
+エラーをプレビューした後、「 **[!UICONTROL Dataflow runs overview]** 」パネルで「 **[!UICONTROL Download]** from the dataflow runs overview」を選択して、完全なエラー診断にアクセスし、ファイルマニフェストをダウンロードできます。 詳しくは、 [エラー診断とメタデータの](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) ダウンロードのドキュメントを参照してください [](../../../ingestion/batch-ingestion/partial.md#download-metadata) 。
 
 ![プレビューエラー診断](../../images/tutorials/monitor/download.png)
 
