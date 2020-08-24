@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analytics コネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 42%
@@ -51,7 +51,9 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 | データレイクの新しいデータ | &lt; 45 分 |
 | データのバックフィル（13 か月分のデータまたは 100 億イベントのデータのいずれか低い方） | &lt; 4 週間 |
 
->[!NOTE] 遅延は、顧客の構成、データ量、消費者のアプリケーションによって異なります。例えば、Analytics の実装が `A4T` で設定されている場合、パイプラインの遅延が 5 ～ 10 分に増えます。
+>[!NOTE]
+>
+> 遅延は、顧客の構成、データ量、消費者のアプリケーションによって異なります。例えば、Analytics の実装が `A4T` で設定されている場合、パイプラインの遅延が 5 ～ 10 分に増えます。
 
 ## Analyticsデータのプライマリ識別子
 
