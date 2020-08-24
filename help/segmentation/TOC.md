@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform セグメント化サービスのヘルプ
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '118'
 ht-degree: 87%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 87%
    - [配列、リスト、セット関数](pql/array-functions.md)
    - [マップ関数](pql/map-functions.md)
    - [文字列関数](pql/string-functions.md)
+   - [オブジェクト関数](pql/object-functions.md)
    - [演算関数](pql/arithmetic-functions.md)
    - [集計関数](pql/aggregation-functions.md)
    - [日付と時間関数](pql/datetime-functions.md)
