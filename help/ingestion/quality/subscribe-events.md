@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ取得イベントへのサブスクライブ
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '831'
 ht-degree: 38%
 
 ---
@@ -39,7 +39,7 @@ To assist in monitoring the ingestion process, [!DNL Experience Platform] makes 
 
 ## 通知ペイロードスキーマ
 
-The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json).
+The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
 
 ## データ取り込みステータス通知のサブスクライブ
 
@@ -47,7 +47,7 @@ The data ingestion notification event schema is an [!DNL Experience Data Model] 
 
 ### Adobeデベロッパーコンソールでの新しいプロジェクトの作成
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. 次に、Adobeデベロッパーコンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
+[Adobeデベロッパーコンソールに移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe開発者コンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
 ### プロジェクトへの追加イベント [!DNL Experience Platform]
 
@@ -55,7 +55,7 @@ Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and si
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-The _[!UICONTROL Add events]_dialog appears. 「**[!UICONTROL  Experience Platform ]**」をクリックして利用可能なオプションのリストをフィルターし、「**[!UICONTROL &#x200B;次へ&#x200B;]**」をクリックする前に**[!UICONTROL  Platform通知&#x200B;]**をクリックします。
+The _[!UICONTROL Add events]_ dialog appears. 「 **[!UICONTROL Experience Platform]** 」をクリックして使用可能なオプションのリストをフィルターし、「 **[!UICONTROL プラットフォーム通知]** 」をクリックしてから「 **[!UICONTROL 次へ]**」をクリックします。
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
