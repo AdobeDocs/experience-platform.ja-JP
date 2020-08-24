@@ -5,17 +5,17 @@ title: セグメントの作成
 topic: tutorial
 description: このドキュメントでは、Adobe Experience PlatformセグメントサービスAPIを使用したセグメント定義の開発、テスト、プレビュー、保存に関するチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 56%
+source-wordcount: '894'
+ht-degree: 57%
 
 ---
 
 
 # セグメントの作成
 
-This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md).
+This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [!DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md).
 
 ユーザーインターフェイスを使用したセグメントの作成方法について詳しくは、[セグメントビルダーガイド](../ui/overview.md)を参照してください。
 
@@ -25,7 +25,7 @@ This tutorial requires a working understanding of the various [!DNL Adobe Experi
 
 - [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 - [!DNL Adobe Experience Platform Segmentation Service](../home.md):リアルタイム顧客プロファイルデータからオーディエンスセグメントを作成できます。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
