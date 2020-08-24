@@ -5,10 +5,10 @@ title: プロファイルクエリ言語（PQL）の概要
 topic: developer guide
 description: このガイドでは、PQL の全般的な概要と、形式についてのガイドライン、PQL 式の例を示します。
 translation-type: tm+mt
-source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '686'
-ht-degree: 94%
+source-wordcount: '705'
+ht-degree: 91%
 
 ---
 
@@ -81,6 +81,7 @@ PQL では次のリテラル型をサポートしています。
 | 配列、リスト、セット | 配列、リスト、セットの操作に使用されます。これらの関数について詳しくは、[配列関数、リスト関数、セット関数のドキュメント](./array-functions.md)を参照してください。 |
 | マップ | マップの操作に使用します。これらの関数について詳しくは、[マップ関数のドキュメント](./map-functions.md)を参照してください。 |
 | 文字列 | 文字列の操作に使用します。これらの関数について詳しくは、[文字列関数のドキュメント](./string-functions.md)を参照してください。 |
+| オブジェクト | オブジェクトとの対話に使用します。 More information about these functions can be found in the [object functions document](./object-functions.md). |
 | 算術演算 | PQL 要素に対して基本的な算術演算を実行するために使用します。これらの関数について詳しくは、[算術演算関数のドキュメント](./arithmetic-functions.md)を参照してください |
 | 集計 | 配列の結果を 1 つの結果に組み合わせるために使用します。これらの関数について詳しくは、[集計関数のドキュメント](./aggregation-functions.md)を参照してください。 |
 | 日時 | 日付、時刻、日時の各オブジェクトと組み合わせて使用します。これらの関数について詳しくは、[日付／時刻関数のドキュメント](./datetime-functions.md)を参照してください。 |
