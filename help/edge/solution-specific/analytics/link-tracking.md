@@ -5,7 +5,7 @@ description: Experience PlatformWeb SDKを使用してリンクデータをAdobe
 seo-description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: ef01c258cb9ac72f0912d17dcd113c1baa2a5b5e
+source-git-commit: c6b572f8757e46ccb22ccea326a7537747f81893
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 4%
@@ -25,9 +25,10 @@ ht-degree: 4%
 alloy("sendEvent", {
   "xdm": {
     "web": {
-      "webPageDetailsr": {
+      "webPageDetails": {
         "pageViews": {
             "value":1
+         }
       }
     }
   }
@@ -51,6 +52,7 @@ alloy("sendEvent", {
       "name":"My Custom Link", //Name that shows up in the custom links report
       "URL":"https://myurl.com", //the URL of the link
       "type":"other", // values: other, download, exit
+      }
     }
   }
 });
