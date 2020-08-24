@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 日付および時間関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 97%
+source-wordcount: '465'
+ht-degree: 94%
 
 ---
 
 
 # 日付および時間関数
 
-日付および時間関数 は、 [!DNL Profile Query Language] (PQL)内の値に対する日付と時間の操作を実行するために使用します。 その他の PQL 関数について詳しくは、「[プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+日付および時間関数 は、 [!DNL Profile Query Language] (PQL)内の値に対する日付と時間の操作を実行するために使用します。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Current month
 
