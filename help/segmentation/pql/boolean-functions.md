@@ -4,17 +4,17 @@ solution: Experience Platform
 title: ブール関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 94%
+source-wordcount: '220'
+ht-degree: 88%
 
 ---
 
 
 # ブール関数
 
-Boolean functions are used to perform boolean logic on different elements in [!DNL Profile Query Language] (PQL).  その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
+Boolean functions are used to perform boolean logic on different elements in [!DNL Profile Query Language] (PQL).  More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## And
 
