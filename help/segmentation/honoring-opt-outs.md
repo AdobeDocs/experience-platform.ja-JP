@@ -5,7 +5,7 @@ title: オプトアウトの遵守
 topic: overview
 description: 'Experience Platformを使用すると、顧客は、データの使用状況やストレージに関するオプトアウトリクエストをリアルタイム顧客プロファイル内で送信できます。 これらのオプトアウトリクエストは、カリフォルニア州消費者プライバシー法（CCPA）に含まれています。CCPA は、カリフォルニア州の在住者に対して、個人データにアクセスし削除する権利や、個人データが販売または開示されたか（そして誰に対して）を知る権利を付与しています。 '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 64%
@@ -15,7 +15,7 @@ ht-degree: 64%
 
 # セグメントでのオプトアウトリクエストの遵守
 
-[!DNL Experience Platform] 顧客が内部でのデータの使用状況およびストレージに関するオプトアウトリクエストを送信でき [!DNL Real-time Customer Profile]ます。 These opt-out requests are part of the [!DNL California Consumer Privacy Act] (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom).
+[!DNL Experience Platform] 顧客が内部でのデータの使用状況やストレージに関するオプトアウトリクエストを送信でき [!DNL Real-time Customer Profile]ます。 These opt-out requests are part of the [!DNL California Consumer Privacy Act] (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom).
 
 顧客がオプトアウトしたら、組織はマーケティング活動のオーディエンスを生成する際に、これらのオプトアウトを遵守する必要があります。このドキュメントでは、オプトアウトリクエストの遵守に関する重要な詳細について説明します。
 
@@ -45,7 +45,7 @@ In order to honor CCPA opt-out requests, one of the schemas that is a part of th
 
 各 mixin の構造と、スキーマに寄与するフィールドについては、以下の節で概要を説明します。
 
-### [!DNL Profile Privacy]
+### [!DNL Profile Privacy] {#profile-privacy}
 
 The [!DNL Profile Privacy] mixin allows you to capture two kinds of CCPA opt-out requests from customers:
 
@@ -69,7 +69,7 @@ The [!DNL Profile Privacy] mixin allows you to capture two kinds of CCPA opt-out
 
 To view the full structure of the [!DNL Profile Privacy] mixin, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the mixin using the Platform UI.
 
-### [!DNL Profile Preferences Details]
+### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
 The [!DNL Profile Preferences Details] mixin provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). この mixin に含まれるフィールドの 1 つである OptInOut （`optInOut`）を使用すると、個々のチャネルに対してオプトアウト値を設定できます。
 
