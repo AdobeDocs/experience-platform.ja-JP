@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 比較関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 100%
+source-wordcount: '292'
+ht-degree: 95%
 
 ---
 
 
 # 比較関数
 
-比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。その他の PQL 関数について詳しくは、「[プロファイルクエリ言語の概要](./overview.md)」を参照してください。
+比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Equals
 
