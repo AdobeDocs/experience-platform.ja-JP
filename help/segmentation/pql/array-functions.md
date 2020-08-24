@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 配列、リスト、およびセットの関数
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 98%
+source-wordcount: '734'
+ht-degree: 96%
 
 ---
 
 
 # 配列、リスト、およびセットの関数
 
-[!DNL Profile Query Language] (PQL)オファーは、配列、リスト、文字列とのやり取りを容易にするために機能します。 その他の PQL 関数の詳細については、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
+[!DNL Profile Query Language] (PQL)オファーは、配列、リスト、文字列とのやり取りを容易にするために機能します。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## In
 
@@ -228,7 +228,7 @@ array.map(expression)
 numbers.map(square)
 ```
 
-## First `n` in array
+## First `n` in array {#first-n}
 
 `topN` 関数は、指定した数値式に基づいて昇順で並べ替えられた場合、配列の最初の `N` 項目を返すために使用します。
 
@@ -288,7 +288,7 @@ orders.bottomN(price, 5)
 
 **例**
 
-次の PQL クエリは、最も金額が高い注文上位 5 件の最初の項目を返します。`topN` 関数の詳細については、[first `n` in array](#first-n-in-array) の節を参照してください 。
+次の PQL クエリは、最も金額が高い注文上位 5 件の最初の項目を返します。`topN` 関数の詳細については、[first `n` in array](#first-n) の節を参照してください 。
 
 ```sql
 orders.topN(price, 5).head()
