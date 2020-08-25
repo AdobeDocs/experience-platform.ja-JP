@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データアクセス開発ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 85%
@@ -232,9 +232,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 **応答**
 
-```
-Contents of the file
-```
+`Contents of the file`
 
 ## その他のコードサンプル
 
