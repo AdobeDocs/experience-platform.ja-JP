@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: エッジ予測 — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 86%
@@ -147,7 +147,7 @@ curl -X POST \
 | `type` **(必須)** | 作成する宛先のタイプ。 受け入れられる唯一の値「EDGE」は、エッジの宛先を作成します。 |
 | `dataCenters` **(必須)** | 投影の方向を向くエッジをリストする文字列配列。 次の値を 1 つ以上含むことができます。「OR1」- 米国西部、「VA5」- 米国東部、「NLD1」- EMEA。 |
 | `ttl` **(必須)** | 投影の有効期限を指定します。 許容値の範囲：600～604800。デフォルト値：3600。 |
-| `replicationPolicy` **(必須)** | ハブからエッジへのデータ複製の動作を定義します。  サポートされる値：PROACTIVE、REACTIVE。デフォルト値： 反応性。 |
+| `replicationPolicy` **(必須)** | ハブからエッジへのデータ複製の動作を定義します。  サポートされる値：PROACTIVE、REACTIVE。デフォルト値：反応性。 |
 
 **応答** 
 
@@ -231,7 +231,7 @@ curl -X GET \
 
 **API 形式**
 
-```
+```http
 PUT /config/destinations/{DESTINATION_ID}
 ```
 
@@ -299,7 +299,7 @@ curl -X PUT \
 
 **API 形式**
 
-```
+```http
 DELETE /config/destinations/{DESTINATION_ID}
 ```
 
