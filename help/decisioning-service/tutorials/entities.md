@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API を使用した判定サービスエンティティの管理
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 95%
@@ -26,9 +26,9 @@ This document provides a tutorial for working with the business entities of [!DN
 
 This tutorial requires a working understanding of the [!DNL Experience Platform] services and the API conventions. The [!DNL Platform] repository is a service used by several other [!DNL Platform] services to store business objects and various types of metadata. これらのオブジェクトを管理およびクエリして、いくつかのランタイムサービスで使用するための安全で柔軟な方法を提供します。そ [!DNL Decisioning Service] の一つ。 このチュートリアルを開始する前に、次のドキュメントを確認してください。
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [!DNL Decisioning Service](./../home.md): Experience Decisioningの一般的な方法と、特にオファー判定に使用される概念とコンポーネントについて説明します。 顧客のエクスペリエンスで提示する最適なオプションを選択するために使用される戦略を示します。
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQLはXDMインスタンスを使って式を書く強力な言語です。 PQL は、判定ルールの定義に使用されます。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [!DNL Decisioning Service](./../home.md):Experience Decisioningの一般的な方法と、特にオファー判定に使用される概念とコンポーネントについて説明します。 顧客のエクスペリエンスで提示する最適なオプションを選択するために使用される戦略を示します。
+- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):PQLはXDMインスタンスを使って式を書く強力な言語です。 PQL は、判定ルールの定義に使用されます。
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
@@ -94,7 +94,7 @@ API ペイロード形式は、`Accept` または `Content-Type` ヘッダーで
 
 ## コンテナへのアクセスの管理
 
-管理者は、類似したプリンシパル、リソースおよびアクセス権限をプロファイルにグループ化できます。 これにより、管理の負担が軽減され、[アドビの Admin Console UI](https://adminconsole.adobe.com) でサポートされます。プロファイルを作成し、ユーザーを割り当てるには、組織のAdobe Experience Platformの製品管理者である必要があります。
+管理者は、類似したプリンシパル、リソースおよびアクセス権限をプロファイルにグループ化できます。 これにより、管理の負担が軽減され、[アドビの Admin Console UI](https://adminconsole.adobe.com) でサポートされます。プロファイルを作成し、ユーザを割り当てるには、組織内のAdobe Experience Platformの製品管理者である必要があります。
 
 1 回限りの手順で特定の権限に一致する製品プロファイルを作成し、その後、それらのユーザーにプロファイルを追加するだけで十分です。プロファイルは、権限が付与されたグループとして機能し、そのグループ内のすべての実際のユーザーまたは技術ユーザーは、権限を継承します。
 
@@ -777,7 +777,7 @@ curl -X DELETE {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
 
 ルールの追加と削除は、次の PATCH 操作でも実行できます。
 
-```
+```json
 [
   {
     "op":   "replace",
