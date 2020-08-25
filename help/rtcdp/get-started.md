@@ -5,7 +5,7 @@ seo-title: アドビのリアルタイム顧客データプラットフォーム
 description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
 seo-description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 87%
@@ -216,7 +216,7 @@ Luma データサイエンスチームは、購入傾向に関するモデルを
 
 ギフトの購入過程にあるように見える買い物かごの放棄者を表すセグメントを変更または作成します。
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
