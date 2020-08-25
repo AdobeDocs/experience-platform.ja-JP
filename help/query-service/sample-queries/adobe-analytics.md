@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリ例
 topic: queries
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 89%
@@ -135,7 +135,7 @@ Here are the XDM fields to access the merchandising variables in your [!DNL Anal
 
 ### eVar
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -143,7 +143,7 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 
 ### カスタムイベント
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
@@ -189,7 +189,7 @@ LIMIT 20
 
 現在のデータセットに存在しないフィールドを取得しようとすると、「No such struct field」エラーが発生します。エラーメッセージに返された理由を評価して使用可能なフィールドを特定し、クエリを更新して再実行します。
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -220,7 +220,7 @@ Here are the XDM fields to produce the Conversion Syntax in your [!DNL Analytics
 
 ### eVar
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -228,7 +228,7 @@ _experience.analytics.customDimensions.evars.evar#
 
 ### 製品
 
-```
+```console
 productListItems[#].sku
 ```
 
