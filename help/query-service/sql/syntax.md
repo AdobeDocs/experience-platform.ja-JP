@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SQL 構文
 topic: syntax
 translation-type: tm+mt
-source-git-commit: a10508770a862621403bad94c14db4529051020c
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1973'
 ht-degree: 94%
@@ -20,7 +20,7 @@ ht-degree: 94%
 
 The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
 
-```
+```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
@@ -37,7 +37,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
 
 ここで、`from_item` は以下のいずれかを指定できます。
 
-```
+```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
     [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
     with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -46,7 +46,7 @@ table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 
 `grouping_element` は以下のいずれかを指定できます。
 
-```
+```sql
 ( )
     expression
     ( expression [, ...] )
@@ -57,7 +57,7 @@ table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 
 `with_query` は以下になります。
 
-```
+```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
  
 TABLE [ ONLY ] table_name [ * ]
@@ -67,7 +67,7 @@ TABLE [ ONLY ] table_name [ * ]
 
 SELECT クエリの WHERE 句で LIKE キーワードの代わりに ILIKE を使用して、大文字と小文字を区別せずに一致させることができます。
 
-```
+```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
 ```
 
@@ -80,7 +80,7 @@ LIKE 句と ILIKE 句のロジックは次のとおりです。
 
 #### 例
 
-```
+```sql
 SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
@@ -91,7 +91,7 @@ WHERE CustomerName ILIKE 'a%';
 
 JOIN を使用する `SELECT` クエリの構文は次のとおりです。
 
-```
+```sql
 SELECT statement
 FROM statement
 [JOIN | INNER JOIN | LEFT JOIN | LEFT OUTER JOIN | RIGHT JOIN | RIGHT OUTER JOIN | FULL JOIN | FULL OUTER JOIN]
@@ -103,7 +103,7 @@ ON join condition
 
 `UNION`、`INTERSECT`、`EXCEPT`句は、複数のテーブルから同様の行を結合または除外するためのものです。
 
-```
+```sql
 SELECT statement 1
 [UNION | UNION ALL | UNION DISTINCT | INTERSECT | EXCEPT | MINUS]
 SELECT statement 2
@@ -113,7 +113,7 @@ SELECT statement 2
 
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
 
-```
+```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
 ```
 
@@ -124,7 +124,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query
 
 ### 例
 
-```
+```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 ```
@@ -138,7 +138,7 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 
 The following syntax defines an `INSERT INTO` query supported by [!DNL Query Service]:
 
-```
+```sql
 INSERT INTO table_name select_query
 ```
 
@@ -146,7 +146,7 @@ INSERT INTO table_name select_query
 
 ### 例
 
-```
+```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 ```
 
@@ -159,7 +159,7 @@ INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 テーブルが EXTERNAL テーブルでない場合は、テーブルを削除し、テーブルに関連付けられたディレクトリーをファイルシステムから削除します。削除するテーブルが存在しない場合は、例外が発生します。
 
-```
+```sql
 DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 ```
 
@@ -172,7 +172,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 The following syntax defines a `CREATE VIEW` query supported by [!DNL Query Service]:
 
-```
+```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
 ```
 
@@ -180,7 +180,7 @@ CREATE [ OR REPLACE ] VIEW view_name AS select_query
 
 例：
 
-```
+```sql
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
@@ -189,7 +189,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 The following syntax defines a `DROP VIEW` query supported by [!DNL Query Service]:
 
-```
+```sql
 DROP VIEW [IF EXISTS] view_name
 ```
 
@@ -197,7 +197,7 @@ DROP VIEW [IF EXISTS] view_name
 
 例：
 
-```
+```sql
 DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
@@ -208,7 +208,7 @@ DROP VIEW IF EXISTS v1
 
 プロパティを設定するか、既存プロパティの値を返すか、すべての既存プロパティをリストします。既存プロパティのキーに値が指定された場合、古い値が上書きされます。
 
-```
+```sql
 SET property_key [ To | =] property_value
 ```
 
@@ -220,7 +220,7 @@ SET property_key [ To | =] property_value
 
 このコマンドは解析され、完了したコマンドがクライアントに送り返されます。これは `START TRANSACTION` コマンドと同じです。
 
-```
+```sql
 BEGIN [ TRANSACTION ]
 ```
 
@@ -232,7 +232,7 @@ BEGIN [ TRANSACTION ]
 
 `CLOSE` は、開いたカーソルに関連付けられたリソースを解放します。カーソルを閉じた後の操作は許可されません。不要になったカーソルは閉じる必要があります。
 
-```
+```sql
 CLOSE { name }
 ```
 
@@ -244,7 +244,7 @@ CLOSE { name }
 
 No action is taken in [!DNL Query Service] as a response to the commit transaction statement.
 
-```
+```sql
 COMMIT [ WORK | TRANSACTION ]
 ```
 
@@ -257,7 +257,7 @@ COMMIT [ WORK | TRANSACTION ]
 
 `DEALLOCATE` は、事前に準備された SQL 文の割り当てを解除する場合に使用します。準備された文の割り当てを明示的に解除しない場合は、セッションが終了すると割り当てが解除されます。
 
-```
+```sql
 DEALLOCATE [ PREPARE ] { name | ALL }
 ```
 
@@ -271,7 +271,7 @@ DEALLOCATE [ PREPARE ] { name | ALL }
 
 `DECLARE` を使用するとカーソルを作成できます。これは、大きなクエリ一から一度に少数の行を取得するために使用できます。カーソルが作成された後、`FETCH` を使用して行がカーソルから取得されます。
 
-```
+```sql
 DECLARE name CURSOR [ WITH  HOLD ] FOR query
 ```
 
@@ -287,7 +287,7 @@ DECLARE name CURSOR [ WITH  HOLD ] FOR query
 
 `PREPARE` 文を作成した文が一部のパラメーターを指定した場合は、互換性のある一連のパラメーターを `EXECUTE` 文に渡す必要があります。そうしないと、エラーが発生します。関数とは異なり、準備済み文は、パラメーターの型や数に基づいてオーバーロードされません。準備済み文の名前は、データベースセッション内で一意である必要があります。
 
-```
+```sql
 EXECUTE name [ ( parameter [, ...] ) ]
 ```
 
@@ -304,7 +304,7 @@ EXECUTE name [ ( parameter [, ...] ) ]
 
 `ANALYZE` オプションを使用すると、文は計画されるだけでなく、実行されます。次に、各計画ノード内で費やされた合計経過時間（ミリ秒）と、返された合計行数を含む、実際の実行時間統計が表示に追加されます。これは、プランナーの予測が現実に近いかどうかを調べるのに役立ちます。
 
-```
+```sql
 EXPLAIN [ ( option [, ...] ) ] statement
 EXPLAIN [ ANALYZE ] statement
 
@@ -328,7 +328,7 @@ where option can be one of:
 
 以下は、単一の `integer` 列と 10000 行のテーブルに、単純なクエリの計画を表示します。
 
-```
+```sql
 EXPLAIN SELECT * FROM foo;
 
                        QUERY PLAN
@@ -343,7 +343,7 @@ EXPLAIN SELECT * FROM foo;
 
 カーソルには関連付けられている位置があり、これは `FETCH` によって使用されます。カーソル位置は、クエリ一結果の最初の行の前、特定の行の前、または最後の行の後に設定できます。作成時のカーソル位置は、最初の行の前です。行を取得すると、カーソル位置は最も最近取得した行になります。`FETCH` が使用可能な行の末尾を越えた場合、カーソル位置は最後の行の後のままです。該当する行がない場合は、空の結果が返され、必要に応じて、カーソル位置は最初の行の前または最後の行の後になります。
 
-```
+```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
@@ -362,7 +362,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 準備済み文は、1 つのセッションを使用して多数の類似の文を実行する場合、パフォーマンスが最も高くなる可能性があります。パフォーマンスの違いは、クエリが多数のテーブルの結合を含む場合や、複数のルールの適用を必要とする場合など、文が計画や書き換えを複雑におこなう場合に特に重要です。計画と書き換えが比較的簡単で、実行に費やすコストが比較的高い文の場合、準備済み文のパフォーマンス上の利点は目立ちません。
 
-```
+```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
@@ -376,7 +376,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 `ROLLBACK` は、現在のトランザクションをロールバックし、トランザクションによって行われたすべての更新を破棄します。
 
-```
+```sql
 ROLLBACK [ WORK ]
 ```
 
@@ -388,7 +388,7 @@ ROLLBACK [ WORK ]
 
 `SELECT INTO` は新しいテーブルを作成し、クエリで計算されたデータで埋めます。通常の `SELECT` の場合とは異なり、データはクライアントに返されません 。新しいテーブルの列には、`SELECT` の出力列に関連付けられた名前とデータ型が含まれます。
 
-```
+```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
 SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     * | expression [ [ AS ] output_name ] [, ...]
@@ -416,7 +416,7 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 `films` テーブルの最近のエントリのみから構成される新しい `films_recent` テーブルを作成します。
 
-```
+```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 ```
 
@@ -424,7 +424,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 `SHOW` は実行時パラメーターの現在の設定を表示します。これらの変数は、`SET` 文を使用して、postgresql.conf 設定ファイルを編集するか、`PGOPTIONS` 環境変数を介して（libpq または libpq ベースのアプリケーションを使用している場合）、または postgres サーバーを起動する際にコマンドラインフラグを使用して設定できます。
 
-```
+```sql
 SHOW name
 ```
 
@@ -442,7 +442,7 @@ SHOW name
 
 `DateStyle` パラメーターの現在の設定を表示します
 
-```
+```sql
 SHOW DateStyle;
  DateStyle
 -----------
@@ -454,7 +454,7 @@ SHOW DateStyle;
 
 このコマンドは解析され、完了したコマンドがクライアントに返されます。これは `BEGIN` コマンドと同じです。
 
-```
+```sql
 START TRANSACTION [ transaction_mode [, ...] ]
 
 where transaction_mode is one of:
@@ -467,7 +467,7 @@ where transaction_mode is one of:
 
 このコマンドは、任意のSELECTクエリの出力を指定された場所にダンプします。 このコマンドを正常に実行するには、ユーザーがこの場所にアクセスできる必要があります。
 
-```
+```sql
 COPY  query
     TO '%scratch_space%/folder_location'
     [  WITH FORMAT 'format_name']
