@@ -4,7 +4,7 @@ solution: Experience Platform
 title: マーケティングアクション
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 6%
@@ -37,7 +37,7 @@ GET /marketingActions/custom
 
 次のリクエストは、組織が管理するカスタムマーケティングアクションのリストを取得します。
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -124,7 +124,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 次のリクエストは、という名前のカスタムマーケティングアクションを取得し `combineData`ます。
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -174,7 +174,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 次のリクエストでは、同じ名前のマーケティングアクションがシステムにまだ存在しない場合 `crossSiteTargeting`、という名前の新しいマーケティングアクションが作成されます。 マーケティングアクションが存在する場合、代わりに、この呼び出しによって、ペイロードで提供されたプロパティに基づいて、そのマーケティングアクションが更新されます。 `crossSiteTargeting`
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | 作成または更新するマーケティングアクションの名前。 <br><br>**重要&#x200B;**:このプロパティはパス`{MARKETING_ACTION_NAME}`内のものと一致する必要があります。一致しない場合は、HTTP 400(Bad Request)エラーが発生します。 つまり、マーケティングアクションが作成されると、その`name`プロパティを変更できません。 |
+| `name` | 作成または更新するマーケティングアクションの名前。 <br><br>**重要**:このプロパティはパス `{MARKETING_ACTION_NAME}` 内のものと一致する必要があります。一致しない場合は、HTTP 400(Bad Request)エラーが発生します。 つまり、マーケティングアクションが作成されると、その `name` プロパティを変更できません。 |
 | `description` | マーケティングアクションの詳細なコンテキストを提供する説明です（オプション）。 |
 
 **応答** 
@@ -236,7 +236,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **リクエスト**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
