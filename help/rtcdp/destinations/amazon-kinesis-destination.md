@@ -5,7 +5,7 @@ seo-title: AmazonKinesis駅
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 seo-description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 7%
@@ -22,7 +22,7 @@ ht-degree: 7%
 
 ## 概要 {#overview}
 
-によるこの [!DNL Kinesis Data Streams][!DNL Amazon Web Services] サービスでは、大量のデータレコードのストリームをリアルタイムで収集して処理できます。
+による [!DNL Kinesis Data Streams][!DNL Amazon Web Services] サービスでは、大量のデータレコードのストリームをリアルタイムで収集して処理できます。
 
 Adobe Experience Platformからのデータをストリーミングするために、 [!DNL Amazon Kinesis] ストレージへのリアルタイムの送信接続を作成できます。
 
@@ -76,7 +76,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 書き出された [!DNL Experience Platform] データはJSON形式 [!DNL Amazon Kinesis] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
