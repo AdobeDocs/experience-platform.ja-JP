@@ -5,7 +5,7 @@ title: JupyterLab ユーザーガイド
 topic: Overview
 description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 55%
@@ -425,7 +425,7 @@ dataFrame.show()
 ```
 
 >[!TIP]
->Scalaでは、を使用して、内部から値 `sys.env()` を宣言して返すことができ `option`ます。
+>Scalaでは、を使用して、内から値 `sys.env()` を宣言して返すことができ `option`ます。
 
 ### PySpark 3 ([!DNL Spark] 2.4)ノートブックで%dataset magicを使う {#magic}
 
@@ -605,7 +605,8 @@ timedf.show()
 >[!TIP]
 >
 >
->Scalaでは、を使用して、内部から値 `sys.env()` を宣言して返すことができ `option`ます。 これにより、変数が1回しか使用されないことがわかっている場合に、変数を定義する必要がなくなります。 次の例は、上記の例 `val userToken` から取り出し、インライン内で代替として宣言 `option` します。
+>Scalaでは、を使用して、内から値 `sys.env()` を宣言して返すことができ `option`ます。 これにより、変数が1回しか使用されないことがわかっている場合に、変数を定義する必要がなくなります。 次の例は、上記の例 `val userToken` から取り出し、インライン内で代替として宣言 `option` します。
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
