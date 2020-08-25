@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ポリシー
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 14%
@@ -52,7 +52,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 >
 >ポリシーでの表現における`AND`および`OR`演算子に注意してください。In the example below, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1` and `C3`) to return the violated policy. ポリシーを慎重に評価し、ポリシー式を十分に定義します。
 
-```sh
+```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -140,7 +140,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 次のリクエストは、3つのデータセットのセットに対して `crossSiteTargeting` マーケティングアクションを実行し、ポリシー違反の有無を評価します。
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -167,7 +167,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `entityType` | IDが兄弟 `entityId` プロパティで示されるエンティティのタイプ。 現在、指定できる値は `dataSet`です。 |
-| `entityId` | マーケティングアクションをテストするデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ます [!DNL Catalog Service] 。 詳細については、 [ [!DNL Catalog] listingobjectsのガイドを参照してください](../../catalog/api/list-objects.md) 。 |
+| `entityId` | マーケティングアクションをテストするデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ま [!DNL Catalog Service] す。 詳細については、 [ [!DNL Catalog] listingobjectsのガイドを参照してください](../../catalog/api/list-objects.md) 。 |
 
 **応答** 
 
@@ -371,7 +371,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 次のリクエストは、3つのデータセットに属する特定のフィールドセット `crossSiteTargeting` に対するマーケティングアクションをテストします。 ペイロードは、データセットのみを含む [評価要求に似ており](#datasets)、ラベルを収集する各データセットに対して特定のフィールドを追加します。
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -415,7 +415,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `entityType` | IDが兄弟 `entityId` プロパティで示されるエンティティのタイプ。 現在、指定できる値は `dataSet`です。 |
-| `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ます [!DNL Catalog Service] 。 詳細については、 [ [!DNL Catalog] listingobjectsのガイドを参照してください](../../catalog/api/list-objects.md) 。 |
+| `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ま [!DNL Catalog Service] す。 詳細については、 [ [!DNL Catalog] listingobjectsのガイドを参照してください](../../catalog/api/list-objects.md) 。 |
 | `entityMeta.fields` | データセットのスキーマ内の特定のフィールドへのパスの配列。JSONポインター文字列の形式で提供されます。 これらの文字列に許可された構文の詳細については、『API基本ガイド [』の「](../../landing/api-fundamentals.md#json-pointer) JSONポインター」の節を参照してください。 |
 
 **応答** 
@@ -540,7 +540,7 @@ POST /bulk-eval
 >
 >一覧に表示されている評価ジョブに、との両方が含まれ `entityList` る場合、 `labels` と配列が含まれる場合は、エラーが発生します。 データセットとラベルの両方に基づいて同じマーケティングアクションを評価する場合は、そのマーケティングアクションに対して別々の評価ジョブを含める必要があります。
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -580,8 +580,8 @@ curl -X POST \
 | --- | --- |
 | `evalRef` | ポリシー違反のラベルまたはデータセットに対してテストするマーケティングアクションのURIです。 |
 | `includeDraft` | デフォルトでは、有効なポリシーのみが評価に参加します。 をに設定 `includeDraft` すると、ステータス `true`のポリシーも参加 `DRAFT` します。 |
-| `labels` | マーケティングアクションをテストするための一連のデータ使用ラベル。<br><br>**重要&#x200B;**:このプロパティを使用する場合、`entityList`プロパティを同じオブジェクトに含めないでください。 データセットやフィールドを使用して同じマーケティングアクションを評価するには、`entityList`配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
-| `entityList` | 一連のデータセットと、それらのデータセット内の（オプションで）特定のフィールドに対して、マーケティングアクションをテストします。<br><br>**重要&#x200B;**:このプロパティを使用する場合、`labels`プロパティを同じオブジェクトに含めないでください。 特定のデータ使用ラベルを使用して同じマーケティングアクションを評価するには、`labels`配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
+| `labels` | マーケティングアクションをテストするための一連のデータ使用ラベル。<br><br>**重要**:このプロパティを使用する場合、 `entityList` プロパティを同じオブジェクトに含めないでください。 データセットやフィールドを使用して同じマーケティングアクションを評価するには、 `entityList` 配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
+| `entityList` | 一連のデータセットと、それらのデータセット内の（オプションで）特定のフィールドに対して、マーケティングアクションをテストします。<br><br>**重要**:このプロパティを使用する場合、 `labels` プロパティを同じオブジェクトに含めないでください。 特定のデータ使用ラベルを使用して同じマーケティングアクションを評価するには、 `labels` 配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
 | `entityType` | マーケティングアクションをテストするエンティティのタイプ。 現在は、`dataSet` のみがサポートされています。 |
 | `entityId` | マーケティングアクションをテストするデータセットのID。 |
 | `entityMeta.fields` | （オプション）マーケティングアクションをテストするデータセット内の特定のフィールドのリスト。 |
