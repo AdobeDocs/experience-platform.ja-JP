@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ポリシー
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7bc7050d64727f09d3a13d803d532a9a3ba5d1a7
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1756'
 ht-degree: 8%
@@ -22,7 +22,7 @@ The API endpoint used in this guide is part of the [[!DNL Policy Service] API](h
 
 ## Retrieve a list of policies {#list}
 
-すべてのまたは `core` ポリシーをリストするには、それぞれに対してGETリクエストを行う `custom` か、ポリシーを要求 `/policies/core``/policies/custom`します。
+すべてのまたは `core` ポリシーをリストするには、それぞれに対してGETリクエストを行う `custom` か、ポリシーをリクエスト `/policies/core``/policies/custom`します。
 
 **API 形式**
 
@@ -35,7 +35,7 @@ GET /policies/custom
 
 次のリクエストは、組織で定義されたカスタムポリシーのリストを取得します。
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -163,7 +163,7 @@ GET /policies/custom/{POLICY_ID}
 
 **リクエスト**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -282,7 +282,7 @@ POST /policies/custom
 
 次のリクエストは、ラベルを含むデータに対するマーケティング操作の実行を制限する新しいポリシー `exportToThirdParty` を作成 `C1 OR (C3 AND C7)`します。
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -396,7 +396,7 @@ PUT /policies/custom/{POLICY_ID}
 
 次の要求は、既存のポリシーを更新して新しいポリシー式を含めます。 このリクエストは基本的にポリシーを書き換えるので、値の一部が更新されていない場合でも、すべてのフィールドをペイロードに含める必要があります。
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -590,7 +590,7 @@ DELETE /policies/custom/{POLICY_ID}
 
 **リクエスト**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -617,7 +617,7 @@ GET /enabledCorePolicies
 
 **リクエスト**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -675,7 +675,7 @@ PUT /enabledCorePolicies
 
 次のリクエストは、ペイロードで提供されたIDに基づいて、有効なコアポリシーのリストを更新します。
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
