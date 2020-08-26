@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Couchbaseコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
@@ -15,9 +15,10 @@ ht-degree: 0%
 # （ベータ版） [!DNL Couchbase] コネクタ
 
 >[!NOTE]
+>
 >コネクタ [!DNL Couchbase] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
-Adobe Experience Platformは、 [!DNL Microsoft]、MySQLなどのデータベースプロバイダに対してネイティブの接続を提供し、これらのシステムからデータを取り込むこ [!DNL Azure]とができます。 リレーショナル、NoSQL、data warehouseなど、サードパーティのデータベースは、それぞれ異なる種類がサポートされます。 データベースプロバイダーのサポートには、が含まれ [!DNL Couchbase]ます。
+Adobe Experience Platformは、 [!DNL Microsoft]、MySQLなどのデータベースプロバイダに対してネイティブの接続を提供し [!DNL Azure]、これらのシステムからデータを取り込むことができます。 リレーショナル、NoSQL、データ・ウェアハウスなど、サード・パーティのデータベースは、サポートされるタイプが異なります。 データベースプロバイダーのサポートには、が含まれ [!DNL Couchbase]ます。
 
 ## IPアドレス許可リスト
 
@@ -51,7 +52,7 @@ Adobe Experience Platformは、 [!DNL Microsoft]、MySQLなどのデータベー
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Couchbase] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Couchbase] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
 ## API [!DNL Couchbase] を [!DNL Platform] 使用した接続
 
