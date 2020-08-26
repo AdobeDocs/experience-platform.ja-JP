@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ヘルプのサンドボックス
+user-guide-description: Adobe Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications. Using sandboxes, you can run multiple digital experience applications in parallel and cater to the development, testing, and deployment of these applications while ensuring operational compliance.
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 95%
@@ -29,4 +30,4 @@ ht-degree: 95%
    * [サンドボックスの削除](api/delete-sandbox.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
-* [Platformのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
