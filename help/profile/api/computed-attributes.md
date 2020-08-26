@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: 計算済み属性 — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 83%
@@ -15,6 +15,7 @@ ht-degree: 83%
 # （アルファ）計算済み属性の端点
 
 >[!IMPORTANT]
+>
 >このドキュメントで説明されている計算済み属性機能は、現在アルファ段階であり、すべてのユーザーが使用できるわけではありません。ドキュメントと機能は変更される場合があります。
 
 計算済み属性を使用すると、他の値、計算および式に基づいてフィールドの値を自動計算できます。計算済み属性は、プロファイルレベルで機能します。つまり、すべてのレコードとイベントをまたいで値を集計できます。
@@ -48,6 +49,7 @@ Adobe Experience Platform enables you to easily import and merge data from multi
 計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、Mixin を使用して、既存のスキーマにフィールドを追加するか、スキーマ内で既に定義されているフィールドを選択することで作成できます。
 
 >[!NOTE]
+>
 >計算済み属性は、アドビ定義の Mixin 内のフィールドに追加することはできません。フィールドは、`tenant` 名前空間内に存在する、つまり、定義してスキーマに追加するフィールドである必要があります。
 
 In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). また、構成の基本ドキュメントの[和集合に関する節](../../xdm/schema/composition.md)を確認することをお勧めします。
@@ -89,6 +91,7 @@ Mixin に名前と説明を入力し、完了したら「**[!UICONTROL Mixin を
 エディターの右側にある「*[!UICONTROL フィールドプロパティ]*」セクションを使用して、新しいフィールドの名前、表示名、タイプなど、必要な情報を指定します。
 
 >[!NOTE]
+>
 >フィールドのタイプは、計算済みの属性値と同じタイプである必要があります。例えば、計算済み属性の値が文字列の場合、スキーマで定義するフィールドは文字列にする必要があります。
 
 完了したら、「**[!UICONTROL 適用]**」をクリックし、フィールドの名前とタイプがエディターの「*[!UICONTROL 構造]*」セクションに表示されます。
@@ -100,6 +103,7 @@ Mixin に名前と説明を入力し、完了したら「**[!UICONTROL Mixin を
 Before continuing, ensure that the schema has been enabled for [!DNL Profile]. エディターの「*[!UICONTROL 構造]*」セクションでスキーマ名をクリックすると、「*[!UICONTROL スキーマプロパティ]*」タブが表示されます。**[!UICONTROL プロファイル]** ・スライダが青の場合は、スキーマが有効になってい [!DNL Profile]ます。
 
 >[!NOTE]
+>
 >Enabling a schema for [!DNL Profile] cannot be undone, so if you click on the slider once it has been enabled, you do not have to risk disabling it.
 
 ![](../images/computed-attributes/Profile.png)
