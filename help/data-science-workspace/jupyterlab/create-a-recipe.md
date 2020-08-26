@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jupyter ノートブックを使用したレシピの作成
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 85%
@@ -25,12 +25,11 @@ ht-degree: 85%
 
 ## Get started with the [!DNL JupyterLab] notebook environment
 
-Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. 開始するには、 [Adobe Experience Platformに移動し](https://platform.adobe.com) 、左側の「 **[!UICONTROL ノートブック]** 」タブをクリックします。 新しいノートブックを作成するには、からレシピビルダーテンプレートを選択し [!DNL JupyterLab Launcher]ます。
+Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. 開始するには、 [Adobe Experience Platformに移動し](https://platform.adobe.com) 、左の[ **[!UICONTROL ノートブック]** ]タブをクリックします。 新しいノートブックを作成するには、からレシピビルダーテンプレートを選択し [!DNL JupyterLab Launcher]ます。
 
 The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring runs inside the notebook. これにより、トレーニングデータとスコアリングデータで実験を実行する間に、`train()` メソッドと `score()` メソッドを柔軟に変更できます。Once you are happy with the outputs of the training and scoring, you can create a recipe to be used in [!DNL Data Science Workspace] using the notebook to recipe functionality built in to the Recipe Builder notebook.
 
 >[!NOTE]
->
 >
 >The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports [!DNL Python].
 
@@ -78,7 +77,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 > 追加したライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。
 
 ### 設定ファイル {#configuration-files}
@@ -122,7 +120,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 > Recipe Builder ノートブックでは、データは `platform_sdk` データローダーを介して読み込まれます。
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -153,7 +150,6 @@ df = pd.read_json(data)
 
 >[!CAUTION]
 >
->
 > `data_access_sdk_python`   が推奨されなくなりました。[ データローダーの使用に関するガイドについては、「](../authoring/platform-sdk.md)データアクセスコードの Platform SDK への変換`platform_sdk`」を参照してください。
 
 データアクセス SDK を使用してデータを読み込むことができます。ライブラリは、次の行を含めることで、ページの上部にインポートできます。
@@ -172,7 +168,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
@@ -304,7 +299,6 @@ df.dropna(0, inplace=True)
 トレーニングの目的は、トレーニングデータセットの特徴とラベルを使用してモデルを作成することです。
 
 >[!NOTE]
->
 > 
 >_特徴_&#x200B;とは、機械学習モデルが&#x200B;_ラベル_&#x200B;を予測するために使用する入力変数を指します。
 
