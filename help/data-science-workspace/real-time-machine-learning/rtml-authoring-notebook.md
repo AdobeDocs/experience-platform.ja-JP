@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Real-time Machine Learningノートブックユーザーガイド
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -15,13 +15,14 @@ ht-degree: 0%
 # Real-time Machine Learning notebookユーザーガイド（アルファ）
 
 >[!IMPORTANT]
+>
 >リアルタイム機械学習は、まだすべてのユーザーが利用できるわけではありません。 この機能はアルファベットで、まだテスト中です。 このドキュメントは変更される可能性があります。
 
 次のガイドでは、リアルタイム機械学習アプリケーションを作成するために必要な手順について説明します。 Adobeが提供する **[!UICONTROL Real-time ML]** Pythonノートブックテンプレートを使用して、このガイドでは、モデルのトレーニング、DSLの作成、DSLからEdgeへの公開、リクエストのスコアリングを行います。 リアルタイム機械学習モデルの導入に進むにつれて、データセットのニーズに合わせてテンプレートを変更することが期待されます。
 
 ## リアルタイム機械学習ノートブックの作成
 
-[Adobe Experience PlatformUI]で、[ **[!UICONTROL Data Science]** ]から[ノートブック **]を選択します。 次に、 **[!UICONTROL JupyterLabを選択し]** 、環境の読み込みに時間をかけます。
+[Adobe Experience PlatformUI]で、[ **[!UICONTROL Data Science]** ]から[ *Notebooks*]を選択します。 次に、 **[!UICONTROL JupyterLabを選択し]** 、環境の読み込みに時間をかけます。
 
 ![JupyterLabを開く](../images/rtml/open-jupyterlab.png)
 
@@ -34,6 +35,7 @@ ht-degree: 0%
 モデルに必要なすべてのパッケージを読み込むことで開始します。 ノードのオーサリングに使用する予定のパッケージが読み込まれていることを確認します。
 
 >[!NOTE]
+>
 >インポートのリストは、作成するモデルによって異なる場合があります。 新しいノードが時間の経過と共に追加されるので、このリストは変更されます。 使用可能なノードの完全なリストについては、『 [node reference guide](./node-reference.md) 』を参照してください。
 
 ```python
@@ -80,6 +82,7 @@ pprint(nf.discover_nodes())
 開始を設定します。
 
 >[!NOTE]
+>
 >リアルタイム **ML** テンプレートでは、 [自動車保険のCSVデータセット](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) が取得され [!DNL Github]ます。
 
 ![トレーニングデータの読み込み](../images/rtml/load_training.png)
@@ -116,6 +119,7 @@ config_properties = {
 リアルタイムML *[!UICONTROL Templatesの]* Data Transformations ** セルは、独自のデータセットを使用できるように変更する必要があります。 通常は、列名の変更、データのロールアップ、データの準備/機能の設計に関係します。
 
 >[!NOTE]
+>
 >次の例は、を使用して読みやすくしたもので `[ ... ]`す。 完全なコードセルの「 *Real-time XML* templates data transformations」セクションを表示して展開してください。
 
 ```python
@@ -240,6 +244,7 @@ model.generate_onnx_resources()
 ```
 
 >[!NOTE]
+>
 >文字 `model_path` 列値(`model.onnx`)を変更して、モデルの名前を変更します。
 
 ```python
@@ -247,6 +252,7 @@ model_path = "model.onnx"
 ```
 
 >[!NOTE]
+>
 >次のセルは編集も削除もできず、Real-time Machine Learningアプリケーションが動作するために必要です。
 
 ```python
@@ -275,12 +281,12 @@ print("Model ID : ", model_id)
 
 >[!IMPORTANT]
 >
->
 >ONNXノードの使用は必須です。 ONNXノードがないと、アプリケーションは失敗します。
 
 ### ノードオーサリング
 
 >[!NOTE]
+>
 > 使用するデータのタイプに基づいて複数のノードを持つ場合があります。 次の例は、 *リアルタイムML* テンプレート内の1つのノードのみを示しています。 完全なコードセルの「 *Real-time ML* templates *Node Authoring* 」セクションを表示してください。
 
 以下のPandasノードでは、を使用 `"import": "map"` してメソッド名をパラメーター内の文字列として読み込み、続いてパラメーターをmap関数として入力します。 次の例では、を使用してこれを行い `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`ます。 マップを配置した後、またはとして設定するオプション `inplace` があり `True` ま `False`す。 変換 `inplace` をインプレイスで適用するかどうかを、に `True``False` 基づいて設定します。 デフォルトでは、新しい列 `"inplace": False` が作成されます。 新しい列名の提供のサポートは、以降のリリースで追加されるように設定されています。 最後の行 `cols` は、1つの列名または列のリストにすることができます。 変換を適用する列を指定します。 この例では、を指定し `leasing` ます。 使用可能なノードとその使用方法の詳細については、 [ノードリファレンスガイドを参照してください](./node-reference.md)。
@@ -326,6 +332,7 @@ nodes = [json_df_node,
 次に、ノードをエッジで接続します。 各タプルは [!DNL Edge] 接続です。
 
 >[!TIP]
+>
 > ノードは互いに線形的に依存しているので（各ノードは前のノードの出力に依存しています）、単純なPythonリストの理解を使ってリンクを作成できます。 ノードが複数の入力に依存する場合は、独自の接続を追加してください。
 
 ```python
@@ -346,11 +353,13 @@ pprint(json.loads(dsl))
 ## Edgeに公開（ハブ）
 
 >[!NOTE]
->リアルタイム機械学習は、AdobeエクスペリエンスPlatformハブに一時的に導入され、管理されます。 詳しくは、 [リアルタイム機械学習アーキテクチャの概要セクションを参照してください](./home.md#architecture)。
+>
+>リアルタイム機械学習は、Adobeエクスペリエンスプラットフォームハブに一時的に導入され、管理されます。 詳しくは、 [リアルタイム機械学習アーキテクチャの概要セクションを参照してください](./home.md#architecture)。
 
 DSLグラフを作成したら、にグラフを配信でき [!DNL Edge]ます。
 
 >[!IMPORTANT]
+>
 >頻繁に発行しないで [!DNL Edge] ください。これは、ノードに大きな負荷がかかる場合があり [!DNL Edge] ます。 同じモデルを複数回パブリッシュすることはお勧めしません。
 
 ```python
@@ -365,6 +374,7 @@ print(f'Service ID: {service_id}')
 DSLを更新する必要がない場合は、 [スコアリングにスキップできます](#scoring)。
 
 >[!NOTE]
+>
 >次のセルは、Edgeに公開された既存のDSLを更新する場合にのみ必要です。
 
 モデルは開発を続ける可能性が高い。 新しいサービスを作成する代わりに、既存のサービスを新しいモデルで更新できます。 更新するノードを定義し、新しいIDを割り当ててから、に新しいDSLを再度アップロードでき [!DNL Edge]ます。
@@ -402,6 +412,7 @@ print(f'Updated dsl: {updated_dsl}')
 に投稿した後 [!DNL Edge]、スコアリングはクライアントからのPOSTリクエストによって行われます。 通常、これはMLスコアを必要とするクライアントアプリケーションから実行できます。 ポストマンからもできる。 リアルタイム *[!UICONTROL ML]* テンプレートは、EdgeUtilsを使用してこのプロセスを示します。
 
 >[!NOTE]
+>
 >スコアリング開始の前に、少しの処理時間が必要です。
 
 ```python
@@ -448,6 +459,7 @@ print(services)
 ## デプロイ済みのアプリまたはサービスIDを [!DNL Edge]
 
 >[!CAUTION]
+>
 >このセルは、デプロイ済みのEdgeアプリケーションを削除するために使用します。 デプロイ済みのアプリケーションを削除する必要がある場合を除き、次のセルは使用しないでくだ [!DNL Edge] さい。
 
 ```python
