@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 顧客 AI によるインサイトの獲得
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 89%
@@ -112,6 +112,7 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 傾向が「低」、「中」、「高」の任意のバケットで「**[!UICONTROL セグメントを作成]**」ボタンをクリックすると、セグメントビルダーにリダイレクトされます。
 
 >[!NOTE]
+>
 >「 **[!UICONTROL セグメントを]** 作成」ボタンは、データセットに対してリアルタイム顧客プロファイルが有効になっている場合にのみ使用できます。 リアルタイム顧客プロファイルを有効にする方法の詳細については、 [リアルタイム顧客プロファイルの概要](../../../rtcdp/overview.md)を参照してください。
 
 ![「セグメントを作成」をクリックする](../images/insights/influential-factors-create-segment.png)
