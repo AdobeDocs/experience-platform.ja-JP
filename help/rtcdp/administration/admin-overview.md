@@ -5,7 +5,7 @@ seo-title: リアルタイム CDP 管理の概要
 description: 'このドキュメントでは、Adobe Experience Platform によるリアルタイム顧客データプロファイルの管理機能の概要を説明します。 '
 seo-description: SEO 説明
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 69%
@@ -28,6 +28,7 @@ The following sections provide introductions to the central components of [!DNL 
 アクセス制御について詳しくは、 ドキュメントの「[アクセス制御の概要](../../access-control/home.md)」を参照してください。[!DNL Experience Platform]
 
 >[!IMPORTANT]
+>
 >UI での表示を可能にするなど、リアルタイム CDP 機能へのアクセス権付与の詳細なガイドについては、[アクセス制御ユーザガイド](../../access-control/ui/overview.md)（特に製品プロファイルの詳細と追加サービスを管理する手順）に従ってください。
 
 ## サンドボックス
