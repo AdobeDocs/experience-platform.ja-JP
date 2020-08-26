@@ -4,9 +4,9 @@ solution: Experience Platform
 title: モデルの最適化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1221'
 ht-degree: 89%
 
 ---
@@ -28,7 +28,7 @@ The Model Insights Framework provides the data scientist with tools in [!DNL Dat
 
 現在、モデルインサイトフレームワークは次のランタイムをサポートしています。
 - [Scala](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python／Tensorflow](#pythontensorflow)
 - [R](#r)
 
 レシピのコード例は、`recipes` の [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) リポジトリーにあります。このリポジトリーの特定のファイルは、このチュートリアル全体で参照されます。
