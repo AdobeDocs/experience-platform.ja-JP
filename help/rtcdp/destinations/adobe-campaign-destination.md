@@ -5,10 +5,10 @@ seo-title: Adobe Campaign
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 seo-description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: e5a3539c8be8b7424f4965c7ab43d4260e39b380
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 86%
+source-wordcount: '580'
+ht-degree: 76%
 
 ---
 
@@ -77,4 +77,11 @@ The presence of these files in your storage location is confirmation of successf
 
 ## Adobe Campaign へのデータインポートの設定 {#import-data-into-campaign}
 
-After connecting Real-time CDP to your [!DNL Amazon S3] or SFTP storage, you must set up the data import from your storage location into Adobe Campaign. これをおこなう方法については、Adobe Campaign ヘルプドキュメントの「[データのインポート](https://docs.adobe.com/content/help/ja-JP/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html)」を参照してください。
+>[!IMPORTANT]
+>
+>* この統合を実行する際は、Adobe Campaign契約に従って、SFTPストレージの制限、データベースストレージの制限およびアクティブなプロファイルの制限に注意してください。
+>* ワークフローを使用して、Adobe Campaignでエクスポートしたセグメントのスケジュール、インポート、およびマッピングを行う必要があり [!DNL Campaign] ます。 Adobe Campaignドキュメントの [定期インポートの](https://docs.adobe.com/content/help/ja-JP/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html#setting-up-a-recurring-import) 設定を参照してください。
+
+
+
+After connecting Real-time CDP to your [!DNL Amazon S3] or SFTP storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, refer to [Importing data](https://docs.adobe.com/content/help/ja-JP/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html) in the Adobe Campaign documentation.
