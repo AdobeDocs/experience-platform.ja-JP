@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzure HDInsights ConnectorでApache Sparkを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 21%
@@ -15,9 +15,10 @@ ht-degree: 21%
 # [!DNL Apache Spark] APIを使用したHDInsightsコネクター [!DNL Azure][!DNL Flow Service] 上での作成
 
 >[!NOTE]
+>
 >オン [!DNL Apache Spark] の [!DNL Azure HDInsights] コネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順 [!DNL Apache Spark] (以下「 [!DNL Azure HDInsights] 」と呼ばれる)を順を追って説明し[!DNL Spark][!DNL Experience Platform]ます。
 
@@ -105,7 +106,7 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | サー [!DNL Spark] バーのホスト。 |
+| `auth.params.host` | The host of the [!DNL Spark] server. |
 | `auth.params.username` | 接続に関連付けられているユーザー名 [!DNL Spark] 。 |
 | `auth.params.password` | 接続に関連付けられているパスワードで [!DNL Spark] す。 |
 | `connectionSpec.id` | 接続 [!DNL Spark] 指定ID: `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
