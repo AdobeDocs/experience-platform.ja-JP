@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 時系列データのストリーミング
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 75%
+source-wordcount: '1126'
+ht-degree: 74%
 
 ---
 
@@ -20,9 +20,9 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 
 このチュートリアルでは、Adobe Experience Platform の各種サービスに関する実用的な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): エクスペリエンスデータを [!DNL Platform] 編成するための標準化されたフレームワーク。
-- [!DNL Real-time Customer Profile](../../profile/home.md): 複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [スキーマレジストリ開発ガイド](../../xdm/api/getting-started.md): APIの使用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法をカバーする包括的なガイドです。 [!DNL Schema Registry] これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md):エクスペリエンスデータを [!DNL Platform] 編成するための標準化されたフレームワーク。
+- [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [スキーマレジストリ開発ガイド](../../xdm/api/getting-started.md):APIの使用可能な各エンドポイントと、それらのエンドポイントへの呼び出し方法をカバーする包括的なガイドです。 [!DNL Schema Registry] これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
 
 また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
 
@@ -405,7 +405,7 @@ To validate the previously ingested records, you can use the [!DNL Profile Acces
 
 >[!NOTE]
 >
->結合ポリシー ID が定義されておらず、schema.</span>nameまたはrelatedSchema</span>.nameは `_xdm.context.profile`、 [!DNL Profile Access] す **べての** 関連IDを取得します。
+>マージポリシーIDが定義されておらず、またはが定義されていない場合、 `schema.name` はす `relatedSchema.name` べての `_xdm.context.profile`関連IDを取得し [!DNL Profile Access]**** ます。
 
 **API 形式**
 
