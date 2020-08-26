@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI での MySQL ソースコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 12%
@@ -15,6 +15,7 @@ ht-degree: 12%
 # Create a [!DNL MySQL] source connector in the UI
 
 >[!NOTE]
+>
 > コネクタ [!DNL MySQL] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用して [!DNL MySQL] ソースコネクタを作成する手順を説明します。
@@ -26,7 +27,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 * [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL リアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 既に接続している場合は、このドキュメントの残りの部分をスキップして、データフローの [!DNL MySQL] 設定に関するチュートリアルに進むことができます [](../../dataflow/databases.md)。
 
