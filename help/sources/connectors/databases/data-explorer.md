@@ -4,7 +4,7 @@ solution: Experience Platform
 title: AzureData Explorerコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%
@@ -15,11 +15,12 @@ ht-degree: 0%
 # （ベータ版） [!DNL Azure Data Explorer] コネクタ
 
 >[!NOTE]
+>
 >コネクタ [!DNL Azure Data Explorer] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
 Adobe Experience Platformは、 [!DNL Microsoft]、MySQL、などのデータベースプロバイダに対してネイティブの接続を提供 [!DNL Azure]します。 これらのシステムのデータをに取り込むことができ [!DNL Platform]ます。
 
-リレーショナル、NoSQL、data warehouseなど、サードパーティのデータベースは、それぞれ異なる種類がサポートされます。 データベースプロバイダーのサポートには、が含まれ [!DNL Azure Data Explorer]ます。
+リレーショナル、NoSQL、データ・ウェアハウスなど、サード・パーティのデータベースは、サポートされるタイプが異なります。 データベースプロバイダーのサポートには、が含まれ [!DNL Azure Data Explorer]ます。
 
 ## IPアドレス許可リスト
 
@@ -53,7 +54,7 @@ Adobe Experience Platformは、 [!DNL Microsoft]、MySQL、などのデータベ
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Azure Data Explorer] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Azure Data Explorer] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
 ## API [!DNL Azure Data Explorer] を [!DNL Platform] 使用した接続
 
