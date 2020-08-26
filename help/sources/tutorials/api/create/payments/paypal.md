@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用してPayPalコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 21%
@@ -15,9 +15,10 @@ ht-degree: 21%
 # APIを使用して [!DNL PayPal][!DNL Flow Service] コネクタを作成する
 
 >[!NOTE]
+>
 >コネクタ [!DNL PayPal] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用してExperience Platformに接続する手順を順を追って説明 [!DNL PayPal] します。
 
@@ -26,7 +27,7 @@ ht-degree: 21%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つのPlatformインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] 単一のプラットフォームインスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL PayPal] using the [!DNL Flow Service] API.
 
@@ -36,7 +37,7 @@ The following sections provide additional information that you will need to know
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| ホスト | インスタンスのURL [!DNL PayPal] 。 (デフォルト： api.sandbox.paypal.com)。 |
+| ホスト | The URL of the [!DNL PayPal] instance. (デフォルト：api.sandbox.paypal.com)。 |
 | クライアントID | アプリケーションに関連付けられているクライアントID [!DNL PayPal] 。 |
 | クライアントシークレット | アプリケーションに関連付けられているクライアントシークレット [!DNL PayPal] です。 |
 | 接続指定ID | 接続を作成するために必要な一意の識別子。 の接続指定ID [!DNL PayPal] は次のとおりです。 `221c7626-58f6-4eec-8ee2-042b0226f03b` |
@@ -105,7 +106,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | インスタンスのURL [!DNL PayPal] 。 |
+| `auth.params.host` | The URL of the [!DNL PayPal] instance. |
 | `auth.params.clientId` | インスタンスに関連付けられているクライアントID [!DNL PayPal] 。 |
 | `auth.params.clientSecret` | インスタンスに関連付けられているクライアントシークレット [!DNL PayPal] 。 |
 | `connectionSpec.id` | 接続 [!DNL PayPal] 指定ID: `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
