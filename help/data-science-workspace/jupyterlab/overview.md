@@ -5,7 +5,7 @@ title: JupyterLab ユーザーガイド
 topic: Overview
 description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 55%
@@ -172,7 +172,7 @@ Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session.
         <th><strong>スターター</strong></th>
         <th><strong>小売売上</strong></th>
         <th><strong>レシピビルダー</strong></th>
-        <th><strong>[!DNL クエリサービス]</strong></th>
+        <th><strong>[!DNLクエリサービス]</strong></th>
         <th><strong>XDM イベント</strong></th>
         <th><strong>XDM クエリ</strong></th>
         <th><strong>集計</strong></th>
@@ -237,6 +237,7 @@ Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session.
 で、右上隅の歯車アイコンを [!DNL JupyterLab] 選択して、 *ノートブックサーバー設定を開きます*。 GPUのオン/オフを切り替え、スライダーを使用して必要なメモリ量を割り当てることができます。 割り当て可能なメモリの量は、組織でプロビジョニングされているメモリの量によって異なります。 「 **[!UICONTROL 設定を更新]** 」を選択して保存します。
 
 >[!NOTE]
+>
 >1つの組織でノートブック用にプロビジョニングされるGPUは1つだけです。 GPUが使用中の場合は、現在GPUを予約しているユーザーがGPUを解放するのを待つ必要があります。 これは、GPUをログアウトするか、4時間以上アイドル状態のままにすることで実行できます。
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
@@ -425,6 +426,7 @@ dataFrame.show()
 ```
 
 >[!TIP]
+>
 >Scalaでは、を使用して、内から値 `sys.env()` を宣言して返すことができ `option`ます。
 
 ### PySpark 3 ([!DNL Spark] 2.4)ノートブックで%dataset magicを使う {#magic}
@@ -604,9 +606,7 @@ timedf.show()
 
 >[!TIP]
 >
->
 >Scalaでは、を使用して、内から値 `sys.env()` を宣言して返すことができ `option`ます。 これにより、変数が1回しか使用されないことがわかっている場合に、変数を定義する必要がなくなります。 次の例は、上記の例 `val userToken` から取り出し、インライン内で代替として宣言 `option` します。
->
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
