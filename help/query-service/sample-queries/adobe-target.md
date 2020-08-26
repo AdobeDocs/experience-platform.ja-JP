@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリ例
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 79%
@@ -17,6 +17,7 @@ ht-degree: 79%
 Data from Adobe Target is transformed into Experience Event XDM schema and ingested into [!DNL Experience Platform] as datasets for you. There are many use cases for [!DNL Query Service] with this data, and the following sample queries should work with your Adobe Target datasets.
 
 >[!NOTE]
+>
 >次の例では、SQL を編集し、評価するデータセット、変数、または期間に基づいて、クエリに必要なパラメーターを入力する必要があります。SQL の `{ }` が表示される場所にパラメーターを入力します。
 
 ## Standard dataset name for Target data source on [!DNL Platform]:
