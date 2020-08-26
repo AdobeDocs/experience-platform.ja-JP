@@ -19,10 +19,10 @@ ht-degree: 59%
    * [はじめに](api/getting-started.md)
    * [（アルファ）計算済み属性](api/computed-attributes.md)
    * [エッジ投影](api/edge-projections.md)
-   * [エンティティ([!DNLプロファイル]アクセス)](api/entities.md)
-   * [書き出しジョブ([!DNLプロファイル]書き出し)](api/export-jobs.md)
+   * [エンティティ([!DNL プロファイル]アクセス)](api/entities.md)
+   * [書き出しジョブ([!DNL プロファイル]書き出し)](api/export-jobs.md)
    * [結合ポリシー](api/merge-policies.md)
-   * [プレビューサンプルの状態([!DNLプロファイル]プレビュー)](api/preview-sample-status.md)
+   * [プレビューサンプルの状態([!DNL プロファイル]プレビュー)](api/preview-sample-status.md)
    * [[!DNL Profile] システムジョブ（削除要求）](api/profile-system-jobs.md)
 * UIガイド {#ui}
    * [[!DNL Profile] ユーザーガイド](ui/user-guide.md)

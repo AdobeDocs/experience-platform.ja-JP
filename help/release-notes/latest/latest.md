@@ -21,7 +21,7 @@ Adobe Experience Platformの既存の機能の更新：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [!DNL Destinations](#destinations)
-- [[!DNLソース]](#sources)
+- [[!DNL ソース]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 

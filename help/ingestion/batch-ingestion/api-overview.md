@@ -28,7 +28,7 @@ ht-degree: 89%
 
 - [バッチ取得](./overview.md)：データをバッチファイルとして Adobe Experience Platform に取得することができます。
 - [[!DNL Experience Data Model] (XDM)システム](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-- [[!DNLサンドボックス]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [[!DNL サンドボックス]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### API 呼び出し例の読み取り
 

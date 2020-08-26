@@ -17,7 +17,7 @@ ht-degree: 4%
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[[!DNLAdobe Experience Platformフローサービス]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) は、社内のさまざまなソースから顧客データを収集し、一元管理するために使用 [!DNL Platform]します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[[!DNL Adobe Experience Platformフローサービス]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) は、社内のさまざまなソースから顧客データを収集し、一元管理するために使用 [!DNL Platform]します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 AdobeI/Oイベントを使用すると、イベントをサブスクライブし、Webフックを使用して、フロー実行の状態に関する通知を受信できます。 これらの通知には、フローの実行の成功に関する情報や、実行の失敗に貢献したエラーに関する情報が含まれます。
 
@@ -28,8 +28,8 @@ AdobeI/Oイベントを使用すると、イベントをサブスクライブし
 このドキュメントでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-* [[!DNLリアルタイム顧客プロファイル]](../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNLAdobe Experience Platformデータインジェスト]](../ingestion/home.md): [!DNL Data Ingestion] は、これらのソースからデータを [!DNL Platform] 取り込む複数のメソッド、およびダウンストリーム [!DNL Data Lake][!DNL Platform] サービスで使用するために、そのデータがそのソース内でどのように保持されるかを表します。
+* [[!DNL リアルタイム顧客プロファイル]](../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Adobe Experience Platformデータインジェスト]](../ingestion/home.md): [!DNL Data Ingestion] は、これらのソースからデータを [!DNL Platform] 取り込む複数のメソッド、およびダウンストリーム [!DNL Data Lake][!DNL Platform] サービスで使用するために、そのデータがそのソース内でどのように保持されるかを表します。
 
 また、このドキュメントでは、Webフックに関する実際の理解と、あるアプリケーションから別のアプリケーションへのWebフックの接続方法についても理解している必要があります。 Webhookの詳細については、次の [ドキュメント](https://requestbin.com/blog/working-with-webhooks/) を参照してください。
 

@@ -21,8 +21,8 @@ ht-degree: 29%
 Working with segment definitions requires an understanding of the various [!DNL Experience Platform] services involved with segmentation. このユーザガイドを読む前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 個人(顧客、見込み客、ユーザー、組織など) [!DNL Experience Platform] に関連付けて保存されているデータを、より小さなグループに分割できます。
-- [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-- [[!DNLAdobe Experience PlatformIDサービス]](../../identity-service/home.md): 取り込まれる異なるデータソースのIDをブリッジ化して、顧客プロファイルを作成でき [!DNL Platform]ます。
+- [[!DNL リアルタイム顧客プロファイル]](../../profile/home.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [[!DNL Adobe Experience PlatformIDサービス]](../../identity-service/home.md): 取り込まれる異なるデータソースのIDをブリッジ化して、顧客プロファイルを作成でき [!DNL Platform]ます。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
 
 また、このドキュメントを通して使用される次の 2 つの重要用語を知り、その違いを理解することも重要です。

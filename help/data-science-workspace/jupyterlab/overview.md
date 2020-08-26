@@ -172,7 +172,7 @@ Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session.
         <th><strong>スターター</strong></th>
         <th><strong>小売売上</strong></th>
         <th><strong>レシピビルダー</strong></th>
-        <th><strong>[!DNLクエリサービス]</strong></th>
+        <th><strong>[!DNL クエリサービス]</strong></th>
         <th><strong>XDM イベント</strong></th>
         <th><strong>XDM クエリ</strong></th>
         <th><strong>集計</strong></th>
