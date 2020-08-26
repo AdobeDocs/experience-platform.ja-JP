@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用してAzureData Explorerコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 19%
@@ -15,11 +15,12 @@ ht-degree: 19%
 # APIを使用した [!DNL Azure Data Explorer][!DNL Flow Service] コネクタの作成
 
 >[!NOTE]
+>
 >コネクタ [!DNL Azure Data Explorer] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順 [!DNL Azure Data Explorer] (以下「Data Explorer」と呼びます)を順を追って説明 [!DNL Experience Platform]します。
+このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順(以下「Data Explorer」と呼ばれ [!DNL Azure Data Explorer] る)について説明 [!DNL Experience Platform]します。
 
 ## はじめに
 
@@ -36,7 +37,7 @@ The following sections provide additional information that you will need to know
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `endpoint` | サー [!DNL Data Explorer] バーのエンドポイント。 |
+| `endpoint` | The endpoint of the [!DNL Data Explorer] server. |
 | `database` | The name of the [!DNL Data Explorer] database. |
 | `tenant` | データベースへの接続に使用する一意のテナントID [!DNL Data Explorer] です。 |
 | `servicePrincipalId` | データベースへの接続に使用する一意のサービスプリンシパルID [!DNL Data Explorer] です。 |
@@ -109,7 +110,7 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.endpoint` | サー [!DNL Data Explorer] バーのエンドポイント。 |
+| `auth.params.endpoint` | The endpoint of the [!DNL Data Explorer] server. |
 | `auth.params.database` | The name of the [!DNL Data Explorer] database. |
 | `auth.params.tenant` | データベースへの接続に使用する一意のテナントID [!DNL Data Explorer] です。 |
 | `auth.params.servicePrincipalId` | データベースへの接続に使用する一意のサービスプリンシパルID [!DNL Data Explorer] です。 |
