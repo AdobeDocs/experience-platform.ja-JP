@@ -4,7 +4,7 @@ solution: Experience Platform
 title: レシピとノートブックの移行ガイド
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 1%
@@ -452,7 +452,7 @@ PySpark 3 (Spark 2.4) `sc = spark.sparkContext` はロード時に定義され�
 
 **PySpark 2.4での[!DNL Experience Cloud Platform]データのロード**
 
-PySpark 3 ([!DNL Spark] 2.4)では、とを定義する必要はありま `org_id` `dataset_id` せん。 また、データセット `df = spark.read.format` の読み取りと書き込みを容易にするカスタムマジック [`%dataset`](#magic) に置き換えられました。
+PySpark 3 ([!DNL Spark] 2.4)では、とを定義する必要はありま `org_id``dataset_id` せん。 また、データセット `df = spark.read.format` の読み取りと書き込みを容易にするカスタムマジック [`%dataset`](#magic) に置き換えられました。
 
 ![負荷2](./images/migration/pyspark-migration/2.4-load-alt.png)
 
@@ -769,11 +769,7 @@ Scala ([!DNL Spark] 2.4)ノートブックはScalaカーネルを使用します
 >[!TIP]
 >
 >Scalaでは、を使用して、内から値 `sys.env()` を宣言して返すことができ `option`ます。 これにより、変数が1回しか使用されないことがわかっている場合に、変数を定義する必要がなくなります。 次の例では、上の例 `val userToken` を取り込み、インラインで宣言し `option`ます。
->
-> 
-```scala
-> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-> ```
+> `.option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))`
 
 ## データセットへの書き込み
 
