@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用してServiceNowコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 18%
@@ -15,9 +15,10 @@ ht-degree: 18%
 # APIを使用して [!DNL ServiceNow][!DNL Flow Service] コネクタを作成する
 
 >[!NOTE]
+>
 >コネクタ [!DNL ServiceNow] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、サー [!DNL Experience Platform][!DNL ServiceNow] バーへの接続手順を順を追って説明します。
 
@@ -36,7 +37,7 @@ The following sections provide additional information that you will need to know
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `endpoint` | サー [!DNL ServiceNow] バーのエンドポイント。 |
+| `endpoint` | The endpoint of the [!DNL ServiceNow] server. |
 | `username` | 認証のためにサー [!DNL ServiceNow] バーに接続するために使用するユーザー名です。 |
 | `password` | 認証用に [!DNL ServiceNow] サーバーに接続するためのパスワードです。 |
 
