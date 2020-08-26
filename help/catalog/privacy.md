@@ -4,17 +4,17 @@ solution: Experience Platform
 title: データレイクでのプライバシーリクエストの処理
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1187'
-ht-degree: 30%
+source-wordcount: '1189'
+ht-degree: 27%
 
 ---
 
 
 # プライバシーリクエストの処理( [!DNL Data Lake]
 
-Adobe Experience Platform [!DNL Privacy Service] は、法的および組織のプライバシーに関する規則に基づいて説明された個人データにアクセス、販売、または削除するように顧客の要求を処理します。
+Adobe Experience Platform [!DNL Privacy Service] は、法的および組織のプライバシーに関する規則に従って、個人データにアクセス、販売、または削除するように顧客の要求を処理します。
 
 This document covers essential concepts related to processing privacy requests for customer data stored in the [!DNL Data Lake].
 
@@ -23,9 +23,9 @@ This document covers essential concepts related to processing privacy requests f
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
 * [!DNL Privacy Service](../privacy-service/home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
-* [!DNL Catalog Service](home.md): データの場所と内の系列のレコードのシステム [!DNL Experience Platform]。 データセットメタデータの更新に使用できる API を提供します。
-* [!DNL Experience Data Model (XDM) System](../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-* [!DNL Identity Service](../identity-service/home.md): デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
+* [!DNL Catalog Service](home.md):データの場所と内の系列のレコードのシステム [!DNL Experience Platform]。 データセットメタデータの更新に使用できる API を提供します。
+* [!DNL Experience Data Model (XDM) System](../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+* [!DNL Identity Service](../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
 
 ## ID 名前空間について {#namespaces}
 
@@ -56,7 +56,7 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ### UI の使用 {#identity-ui}
 
-ユー [!DNL Experience Platform ]ザーインターフェイスでは、 __スキーマワークスペースを使用して、既存のXDMスキーマを編集できます。 ID記述子をスキーマに追加するには、リストからスキーマを選択し、チュートリアルのIDフィールドとしてスキーマフィールドを[設定する手順に従い](../xdm/tutorials/create-schema-ui.md#identity-field)[!DNL Schema Editor]ます。
+ユー [!DNL Experience Platform ]ザーインターフェイスでは、 __ スキーマワークスペースを使用して、既存のXDMスキーマを編集できます。 ID記述子をスキーマに追加するには、リストからスキーマを選択し、チュートリアルのIDフィールドとしてスキーマフィールドを [設定する手順に従い](../xdm/tutorials/create-schema-ui.md#identity-field)[!DNL Schema Editor] ます。
 
 スキーマ内の適切なフィールドをIDフィールドとして設定したら、次のセクションに進んで、プライバシー [要求の送信に関するセクション](#submit)。
 
@@ -132,13 +132,13 @@ curl -X POST \
 
 >[!NOTE]
 >
->This section covers how to format privacy requests for the [!DNL Data Lake]. リクエストペイロードで送信されたユーザー ID データを適切にフォーマットする方法など、プライバシージョブの送信方法に関する完全な手順については、[!DNL Privacy Service UI](../privacy-service/ui/overview.md) または [!DNL Privacy Service API](../privacy-service/api/getting-started.md) のドキュメントを確認することを強くお勧めします。
+>This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 次の節では、 [!DNL Data Lake][!DNL Privacy Service] UIまたはAPIを使用してプライバシーをリクエストする方法について概説します。
 
 ### UI の使用
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_in order to process jobs for data stored in the[!DNL Data Lake]or[!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_ in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
