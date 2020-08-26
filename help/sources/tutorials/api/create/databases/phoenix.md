@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用してPhoenixコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 19%
@@ -15,9 +15,10 @@ ht-degree: 19%
 # APIを使用して [!DNL Phoenix][!DNL Flow Service] コネクタを作成する
 
 >[!NOTE]
+>
 >コネクタ [!DNL Phoenix] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、データベースの接続手順を順を追って説明し [!DNL Phoenix] ま [!DNL Experience Platform]す。
 
@@ -111,7 +112,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | サー [!DNL Phoenix] バーのホスト。 |
+| `auth.params.host` | The host of the [!DNL Phoenix] server. |
 | `auth.params.username` | 接続に関連付けられているユーザー名 [!DNL Phoenix] 。 |
 | `auth.params.password` | 接続に関連付けられているパスワードで [!DNL Phoenix] す。 |
 | `auth.params.port` | 接続用のTCPポート [!DNL Phoenix] 。 |
