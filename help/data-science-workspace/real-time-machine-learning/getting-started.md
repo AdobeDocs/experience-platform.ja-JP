@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイム機械学習の概要
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 1%
@@ -15,9 +15,10 @@ ht-degree: 1%
 # Real-time Machine Learning(Alpha)の概要
 
 >[!IMPORTANT]
+>
 >リアルタイム機械学習は、まだすべてのユーザーが利用できるわけではありません。 この機能はアルファベットで、まだテスト中です。 このドキュメントは変更される可能性があります。
 
-リアルタイム機械学習を利用するには、Adobe Experience Platformおよびを使用してプロビジョニングされた組織にアクセスする必要があり [!DNL Data Science Workspace]ます。 さらに、トレーニングとスコアリングに使用する完全なデータセットが必要です。
+リアルタイム機械学習を利用するには、Adobe Experience Platformととのプロビジョニングを受けた組織にアクセスできる必要があり [!DNL Data Science Workspace]ます。 さらに、トレーニングとスコアリングに使用する完全なデータセットが必要です。
 
 Real-time Machine Learningのガイドでは、Python 3、 [Jupyterノートブック](../jupyterlab/overview.md)、データサイエンス、および機械学習に関する作業を理解する必要があります。
 
@@ -30,14 +31,15 @@ Real-time Machine Learningのガイドでは、Python 3、 [Jupyterノートブ�
 
 ## Adobe Experience Platformのデータセット
 
-Real-time Machine Learningを使用した開始を行うには、データセットにアクセスできる必要があります。 外部データセットを使用して [!DNL JupyterLab] 環境にアップロードするか、Platform内で新しいデータセットを作成するかを選択できます（まだ作成していない場合）。
+Real-time Machine Learningを使用した開始を行うには、データセットにアクセスできる必要があります。 外部データセットを使用して [!DNL JupyterLab] 環境にアップロードするか、まだ作成していない場合はPlatform内で新しいデータセットを作成するかを選択できます。
 
 >[!NOTE]
+>
 >使用するデータセットが既にある場合は、 [次の手順に進みます](#next-steps)。
 
 ### 外部データセットの使用
 
-データを [!DNL JupyterLab] 環境にアップロードするなど、外部データセットの使用について詳しくは、ノートブックを使用したデータの [分析に関するチュートリアルを参照してください](../jupyterlab/analyze-your-data.md#external-data)。
+データを [!DNL JupyterLab] 環境にアップロードするなど、外部データセットの使用について詳しくは、ノートブックを使用したデータ [分析のチュートリアルを参照してください](../jupyterlab/analyze-your-data.md#external-data)。
 
 ### 新しいデータセットの作成
 
