@@ -4,7 +4,7 @@ solution: Experience Platform
 title: エンジン
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 70%
@@ -44,7 +44,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 正常な応答は、Docker URL（`host`）、ユーザー名（`username`）、パスワード（`password`）を含む Docker レジストリの詳細を含むペイロードを返します。
 
 >[!NOTE]
->
 >
 > Docker のパスワードは、`{ACCESS_TOKEN}` が更新するたびに変更されます。
 
