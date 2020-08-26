@@ -4,7 +4,7 @@ solution: Adobe Experience Platform Data Science Workspace
 title: フィーチャパイプラインの作成
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 30%
@@ -15,16 +15,17 @@ ht-degree: 30%
 # フィーチャパイプラインの作成
 
 >[!IMPORTANT]
+>
 > 機能のパイプラインは現在、APIからのみ使用できます。
 
-Adobe Experience Platformを使用すると、Sensei Machine Learning Framework Runtime（以下「Runtime」と呼ぶ）を通じて、カスタムフィーチャパイプラインを作成し、スケールでフィーチャエンジニアリングを実行できます。
+Adobe Experience Platformでは、Sensei Machine Learning Framework Runtime（以下「Runtime」と呼ぶ）を使用して、カスタムフィーチャパイプラインを作成し、スケールでフィーチャエンジニアリングを実行できます。
 
 This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the [Model Authoring SDK](./sdk.md) in PySpark.
 
 フィーチャパイプラインを実行すると、次のワークフローが実行されます。
 
 1. レシピはデータセットをパイプラインに読み込みます。
-2. 機能の変換はデータセットに対して行われ、Adobe Experience Platformに書き戻されます。
+2. データセット上で機能の変換が行われ、Adobe Experience Platformに書き戻されます。
 3. 変換されたデータは、トレーニング用に読み込まれます。
 4. フィーチャーパイプラインは、選択したモデルとしてグラデーション倍力回帰を使用してステージを定義します。
 5. パイプラインはトレーニングデータのフィットに使用され、トレーニングされたモデルが作成されます。
@@ -390,6 +391,7 @@ scoring.dataSaver: MyDatasetSaver
 フィーチャーパイプラインを作成したら、Dockerイメージを作成して、 [!DNL Sensei Machine Learning] APIのフィーチャーパイプラインエンドポイントを呼び出す必要があります。 フィーチャパイプラインエンドポイントを呼び出すには、DockerイメージURLが必要です。
 
 >[!TIP]
+>
 >Docker URLがない場合は、 [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorialを参照し、DockerホストURLの作成に関する手順を説明します。
 
 オプションで、次のPostmanコレクションを使用して、機能のパイプラインAPIワークフローの完了を支援することもできます。
@@ -423,6 +425,7 @@ Dockerイメージの場所を特定したら、に対するPOSTを実行して 
 ### テストの実行スコアタスクの指定 {#scoring}
 
 >[!NOTE]
+>
 > この手順を完了するには、テストに関連したトレーニングを1回以上実行する必要があります。
 
 トレーニングの実行が成功したら、スコアリングの実行タスクを [指定する必要があります](../api/experiments.md#experiment-training-scoring)。 本文にPOST `experiments/{EXPERIMENT_ID}/runs` を行い、本文で `mode` 属性を「スコア」に設定します。 この開始は、スコアリングテストの実行です。
