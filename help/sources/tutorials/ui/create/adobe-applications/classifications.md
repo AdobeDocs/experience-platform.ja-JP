@@ -5,7 +5,7 @@ solution: Experience Platform
 title: UIでのAdobe Analytics分類データコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
@@ -22,8 +22,8 @@ ht-degree: 4%
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [[!DNL リアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNL サンドボックス]](../../../../../sandboxes/home.md):Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNLサンドボックス]](../../../../../sandboxes/home.md):Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ## 分類の選択
 
@@ -72,6 +72,7 @@ ht-degree: 4%
 「 **[!UICONTROL データセットアクティビティ]** 」ページには、選択したターゲットデータセットに関する情報(バッチステータス、データセットID、スキーマなど)が表示されます。
 
 >[!IMPORTANT]
+>
 >他のソースコネクターではデータセットの削除は可能ですが、現在、Analytics分類データコネクターではサポートされていません。 誤ってデータセットを削除した場合は、Adobeカスタマーケアにお問い合わせください。
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)
