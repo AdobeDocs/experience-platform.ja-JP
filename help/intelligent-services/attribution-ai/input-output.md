@@ -5,7 +5,7 @@ title: Attribution AIの入出力
 topic: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入出力の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 15%
@@ -69,6 +69,7 @@ Attribution AIには、モデルトレーニングの入力として履歴デー
 必要なデータの最小長=トレーニングウィンドウ+ルックバックウィンドウ
 
 >[!TIP]
+>
 > デフォルト設定のアプリケーションに必要なデータの最小長は次のとおりです。2四半期（180日）+ 56日= 236日。
 
 例：
@@ -219,10 +220,10 @@ Adobe Experience PlatformのUIからAttribution AIスキーマ出力例を簡単
 | 地域 | _tenantID.your_tenant_name.conversion.geo |
 | イベントタイプ | eventType |
 | media_type | _tenantID.your_tenant_name.touchpointsDetail.element.touchpoint.mediaType |
-| channel | _tenantID.your_スキーマ_名.touchpointsDetail.element.touchpoint.mediaChannel |
+| チャネル | _tenantID.your_スキーマ_名.touchpointsDetail.element.touchpoint.mediaChannel |
 | action | _tenantID.your_tenant_name.touchpointsDetail.element.touchpoint.mediaAction |
 | キャンペーン_グループ | _tenantID.your_tenant_name.touchpointsDetail.element.touchpoint.campaignGroup |
-| キャンペーン名 | _tenantID.your_tenant_name.touchpointsDetail.element.touchpoint.campaignName |
+| キャンペーン名 | _tenantID.your_スキーマ_名.touchpointsDetail.element.touchpoint.campaignName |
 
 
 ## 次の手順 {#next-steps}
