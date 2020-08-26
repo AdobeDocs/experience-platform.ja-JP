@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gitを使用したJupyterLabでのコラボレーション
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -19,6 +19,7 @@ ht-degree: 1%
 ## 前提条件
 
 >[!NOTE]
+>
 > 使用するGitサーバーは、インターネット経由でアクセスできる必要があります。
 
 この [!DNL Data Science Workspace JupyterLab] 環境はホスト環境で、会社のファイアウォール内に展開されていないため、接続先のGitサーバーはパブリックインターネットからアクセスできる必要があります。 これは、GitHub上のパブリックまたはプライベートのリポジトリ [、または自分自身をホストすることに決定した](https://github.com/)[!DNL Git] サーバーの別のインスタンスである可能性があります。
@@ -36,6 +37,7 @@ ht-degree: 1%
 ![cdワークスペース](../images/jupyterlab/tutorials/find-workspace.png)
 
 >[!TIP]
+>
 > 使用可能なgitコマンドのリストを確認するには、次のコマンドを発行します。 `git -help` 」と入力します。
 
 次に、 `git clone` コマンドを使用して、使用するリポジトリをコピーします。 ではなく、 `https://` URLを使用してプロジェクトのコピーを作成し `ssh://`ます。
@@ -47,6 +49,7 @@ ht-degree: 1%
 ![clone](../images/jupyterlab/tutorials/git-collaboration.png)
 
 >[!NOTE]
+>
 > 書き込み操作(例えば`git push` )を実行するには、新しいセッションごとに次の設定コマンドを実行する必要があります。 また、プッシュコマンドによって、ユーザー名とパスワードの入力が求められる場合もあります。
 >
 >`git config --global user.email "you@example.com"`
