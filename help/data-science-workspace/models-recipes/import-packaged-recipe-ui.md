@@ -4,7 +4,7 @@ solution: Experience Platform
 title: パッケージ化されたレシピのインポート（UI）
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 41%
@@ -131,12 +131,14 @@ For the purpose of this tutorial, you can leave the default configuration files 
 ![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > 『[ソースファイルをレシピにパッケージ化](./package-source-files-recipe.md)』チュートリアルでは、Python ソースファイルを使用して Retail Sales レシピを作成する最後に Docker URL が提供されていました。
 
 「 *Select source* (ソースを [!DNL Python] 選択)」ページに移動したら、「 **[!UICONTROL Source URL]** （ソースURL）」フィールドに、ソースファイルを使用して作成したパッケージレシピに対応するDocker URLを貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/python/retail/retail.config.json` にあります。「 **[!UICONTROL Runtime]** 」ドロップダウンで「 *Python* 」を選択し、「 **[!UICONTROL Type」ドロップダウンで「]** Classification ** 」を選択します。 すべての情報が入力されたら、右上隅の **[!UICONTROL 「次へ]** 」をクリックして「スキーマの *管理*」に進みます。
 
 >[!NOTE]
-> *タイプは&#x200B;*、**[!UICONTROL 分類]**と&#x200B;**[!UICONTROL 回帰をサポートします]**。 モデルがこれらのタイプのいずれにも該当しない場合は、「**[!UICONTROL カスタム]**」(Custom)を選択します。
+>
+> *タイプは* 、 **[!UICONTROL 分類]** と **[!UICONTROL 回帰をサポートします]**。 モデルがこれらのタイプのいずれにも該当しない場合は、「 **[!UICONTROL カスタム]**」(Custom)を選択します。
 
 ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
 
@@ -163,12 +165,14 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in [!
 ![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > 「[ソースファイルをレシピにパッケージ化](./package-source-files-recipe.md)」チュートリアルでは、R ソースファイルを使用して Retail Sales レシピを作成する最後に Docker URL が提供されていました。
 
-「 *Select source* （ソースを選択）」ページに移動したら、「Source URL **[!UICONTROL (ソースURL]** )」フィールドに、Rソースファイルを使用して作成したパッケージ化レシピに対応するDocker URLを貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json` にあります。「 **[!UICONTROL 実行時]** 」ドロップダウンで「 *R* 」を選択し、「 **[!UICONTROL タイプ]** 」ドロップダウンで「分類 ** 」を選択します。 すべての情報が入力されたら、右上隅の **[!UICONTROL 「次へ]** 」をクリックして「スキーマの *管理*」に進みます。
+「 *Select source* 」ページに移動したら、「 **[!UICONTROL Source URL]** 」フィールドに、Rソースファイルを使用して作成したパッケージ化レシピに対応するDocker URLを貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json` にあります。「 **[!UICONTROL 実行時]** 」ドロップダウンで「 *R* 」を選択し、「 **[!UICONTROL タイプ]** 」ドロップダウンで「分類 ** 」を選択します。 すべての情報が入力されたら、右上隅の **[!UICONTROL 「次へ]** 」をクリックして「スキーマの *管理*」に進みます。
 
 >[!NOTE]
-> *タイプは&#x200B;*、**[!UICONTROL 分類]**と&#x200B;**[!UICONTROL 回帰をサポートします]**。 モデルがこれらのタイプのいずれにも該当しない場合は、「**[!UICONTROL カスタム]**」(Custom)を選択します。
+>
+> *タイプは* 、 **[!UICONTROL 分類]** と **[!UICONTROL 回帰をサポートします]**。 モデルがこれらのタイプのいずれにも該当しない場合は、「 **[!UICONTROL カスタム]**」(Custom)を選択します。
 
 ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
 
@@ -195,12 +199,14 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in [!
 ![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using PySpark source files.
 
 「 *Select source* 」ページに移動したら、PySparkソースファイルを使用して作成したパッケージレシピに対応するDocker URLを「 **[!UICONTROL Source URL]** 」フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json` にあります。「 **[!UICONTROL Runtime]** 」ドロップダウンで「PySpark ** 」を選択します。 PySparkランタイムが選択されると、デフォルトのアーティファクトが **[!UICONTROL Dockerに自動入力されます]**。 次に、「 **[!UICONTROL タイプ]** 」ドロップダウンで「 *分類* 」を選択します。 すべての情報が入力されたら、右上隅の **[!UICONTROL 「次へ]** 」をクリックして「スキーマの *管理*」に進みます。
 
 >[!NOTE]
-> *タイプは&#x200B;*、**[!UICONTROL 分類]**と&#x200B;**[!UICONTROL 回帰をサポートします]**。 モデルがこれらのタイプのいずれにも該当しない場合は、「**[!UICONTROL カスタム]**」(Custom)を選択します。
+>
+> *タイプは* 、 **[!UICONTROL 分類]** と **[!UICONTROL 回帰をサポートします]**。 モデルがこれらのタイプのいずれにも該当しない場合は、「 **[!UICONTROL カスタム]**」(Custom)を選択します。
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
@@ -227,12 +233,14 @@ Proceed to the [next steps](#next-steps) to find out how to create a Model in [!
 ![ワークフローの設定](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
+>
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using Scala ([!DNL Spark]) source files.
 
 「 *Select source* （ソースを選択）」ページに移動したら、「 *Source URL* （ソースURL）」フィールドに、Scalaソースファイルを使用して作成したパッケージレシピに対応するDocker URLを貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json` にあります。「 **[!UICONTROL Runtime]** 」ドロップダウンで「 *Spark* 」を選択します。 ラン [!DNL Spark] タイムが選択されると、デフォルトのアーチファクトが **[!UICONTROL Dockerに自動入力されます]**。 次に、「 **[!UICONTROL タイプ]** 」ドロップダウンから「 *回帰* 」を選択します。 すべての情報が入力されたら、右上隅の **[!UICONTROL 「次へ]** 」をクリックして「スキーマの *管理*」に進みます。
 
 >[!NOTE]
-> *タイプは&#x200B;*、**[!UICONTROL 分類]**と&#x200B;**[!UICONTROL 回帰をサポートします]**。 モデルがこれらのタイプのいずれにも該当しない場合は、「**[!UICONTROL カスタム]**」(Custom)を選択します。
+>
+> *タイプは* 、 **[!UICONTROL 分類]** と **[!UICONTROL 回帰をサポートします]**。 モデルがこれらのタイプのいずれにも該当しない場合は、「 **[!UICONTROL カスタム]**」(Custom)を選択します。
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
