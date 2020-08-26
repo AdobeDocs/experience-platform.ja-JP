@@ -4,7 +4,7 @@ solution: Experience Platform
 title: パッケージ化されたレシピ（API）の読み込み
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 62%
@@ -50,6 +50,7 @@ Before getting started, it is important to note that Adobe Experience Platform [
 パッケージ化されたレシピファイルを Docker コンテナに格納してエンジンを作成するには、パッケージ化されたレシピファイルの Docker URL を指定する必要があります。
 
 >[!CAUTION]
+>
 > またはRを使用している場合は、以下のリクエストを使用し [!DNL Python] てください。 PySparkまたはScalaを使用している場合は、Python/Rの例の下にあるPySpark/Scalaリクエストの例を使用してください。
 
 **API 形式**
