@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用して汎用ODataコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 23%
@@ -15,9 +15,10 @@ ht-degree: 23%
 # APIを使用して [!DNL Generic OData][!DNL Flow Service] コネクタを作成する
 
 >[!NOTE]
+>
 >コネクタ [!DNL Generic OData] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順を順を追って説明 [!DNL Generic OData] し [!DNL Experience Platform]ます。
 
@@ -101,7 +102,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.url` | サー [!DNL OData] バーのホスト。 |
+| `auth.params.url` | The host of the [!DNL OData] server. |
 | `connectionSpec.id` | 接続 [!DNL OData] 指定ID: `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
 **応答** 
