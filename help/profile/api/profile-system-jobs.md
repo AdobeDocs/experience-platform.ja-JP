@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: プロファイルシステムジョブ — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 66%
@@ -17,6 +17,7 @@ ht-degree: 66%
 Adobe Experience Platform を使用すると、複数のソースからデータを取得し、個々の顧客に対して堅牢なプロファイルを構築できます。に取り込ま [!DNL Platform] れたデータは、データストアと共 [!DNL Data Lake] に [!DNL Real-time Customer Profile] データストアに保存されます。 不要になった、または誤って追加されたデータを削除するために、プロファイルストアからデータセットまたはバッチを削除する必要が生じる場合があります。 This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, also known as a &quot;[!DNL delete request]&quot;, that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
+>
 >If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
 
 ## はじめに
@@ -106,6 +107,7 @@ curl -X GET \
 データセットを削除するには、データセット ID を POST リクエストの本文に含める必要があります。この操作により、特定のデータセットのすべてのデータが削除されます。[!DNL Experience Platform] では、レコードスキーマと時系列スキーマの両方に基づいたデータセットを削除できます。
 
 >[!CAUTION]
+>
 > When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. 詳しくは、このドキュメントの[付録](#appendix)を参照してください。
 
 **API 形式**
@@ -159,6 +161,7 @@ curl -X POST \
 バッチを削除するには、バッチ ID を POST リクエストの本文に含める必要があります。レコードスキーマに基づくデータセットのバッチは削除できません。時系列スキーマに基づくデータセットのバッチのみが削除できます。
 
 >[!NOTE]
+>
 > レコードスキーマに基づくデータセットのバッチを削除できないのは、レコードタイプのデータセットバッチが以前のレコードを上書きするため、「取り消し」または削除できないためです。レコードのスキーマに基づいてデータセットに誤ったバッチが及ぼす影響を取り除く唯一の方法は、誤ったレコードを上書きするために、バッチを正しいデータで再取り込みすることです。
 
 For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the [!DNL XDM System] overview.
