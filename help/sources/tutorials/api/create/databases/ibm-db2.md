@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用してIBM DB2コネクターを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 20%
@@ -15,9 +15,10 @@ ht-degree: 20%
 # APIを使用したIBM DB2 Connectorの作成 [!DNL Flow Service]
 
 >[!NOTE]
+>
 >IBM DB2 Connectorはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用してIBM DB2（以下「DB2」と呼ばれる）をに接続する手順を順を追って説明 [!DNL Experience Platform]します。
 
@@ -32,7 +33,7 @@ The following sections provide additional information that you will need to know
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `server` | DB2サーバーの名前。 サーバー名の後に、コロンで区切ったポート番号を指定できます。 次に例を示します。 server:port. |
+| `server` | DB2サーバーの名前。 サーバー名の後に、コロンで区切ったポート番号を指定できます。 次に例を示します。server:port. |
 | `database` | DB2データベースの名前。 |
 | `username` | DB2データベースへの接続に使用するユーザー名。 |
 | `password` | ユーザー名に指定したユーザーアカウントのパスワード。 |
