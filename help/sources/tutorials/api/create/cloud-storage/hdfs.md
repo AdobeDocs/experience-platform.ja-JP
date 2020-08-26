@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用してApache HDFSコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 22%
@@ -15,9 +15,10 @@ ht-degree: 22%
 # APIを使用して [!DNL Apache][!DNL Flow Service] HDFSコネクタを作成する
 
 >[!NOTE]
+>
 >Apache HDFSコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] 様々な異なるソースから顧客データを収集および一元化してAdobe Experience Platformに導くために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] 様々な異なるソースから顧客データを収集して一元化し、Adobe Experience Platformに持ち込むために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用してApache Hadoop Distributed File System（以下「HDFS」と呼ばれる）をに接続する手順を順を追って説明 [!DNL Experience Platform]します。
 
