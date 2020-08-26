@@ -4,15 +4,15 @@ seo-title: Adobe Experience PlatformWeb SDK FAQ
 description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 seo-description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 translation-type: tm+mt
-source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
+source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
 workflow-type: tm+mt
-source-wordcount: '1684'
-ht-degree: 3%
+source-wordcount: '1679'
+ht-degree: 4%
 
 ---
 
 
-# Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
+# よくある質問
 
 このFAQには、AdobeWeb SDK/
 
