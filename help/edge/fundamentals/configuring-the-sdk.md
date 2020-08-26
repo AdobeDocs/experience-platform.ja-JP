@@ -5,7 +5,7 @@ description: Experience Platform Web SDK の設定方法について説明しま
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -107,9 +107,9 @@ Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で�
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
-| オブジェクト | × | `{"general": "in"}` |
+| オブジェクト | × | `"in"` |
 
-ユーザーのデフォルトの同意を設定します。これは、ユーザーに対して同意設定が保存されていない場合に使用されます。もう 1 つの有効な値は `{"general": "pending"}` です。この設定をおこなうと、ユーザーが同意設定を提供するまで作業はキューに登録されます。ユーザーの環境設定を指定した後、作業を続行するか、ユーザーの環境設定に基づいて中止します。詳しくは、[同意のサポート](supporting-consent.md)を参照してください。
+ユーザーのデフォルトの同意を設定します。これは、ユーザーに対して同意設定が保存されていない場合に使用されます。もう 1 つの有効な値は `"pending"` です。この設定をおこなうと、ユーザーが同意設定を提供するまで作業はキューに登録されます。ユーザーの環境設定を指定した後、作業を続行するか、ユーザーの環境設定に基づいて中止します。詳しくは、[同意のサポート](supporting-consent.md)を参照してください。
 
 ## パーソナライゼーションオプション
 
@@ -153,7 +153,7 @@ Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the 
 | -------- | ------------ | ----------------- |
 | Boolean | × | true |
 
-trueの場合、SDKは古いAMCV cookieを読み取って設定します。 これは、サイトの一部で訪問者.jsを使用している可能性があるのに、AEP Web SDKの使用に移行する際に役立ちます。 また、訪問者APIがページで定義されている場合、SDKはECIDのクエリ訪問者APIを使用します。 これにより、AEP Web SDKを使用して2つのタグページを作成でき、同じECIDを保持できます。
+trueの場合、SDKは古いAMCV cookieを読み取って設定します。 これは、サイトの一部で訪問者.jsを使用している可能性があるのに、AEP Web SDKの使用に移行する際に役立ちます。 また、ページで訪問者APIが定義されている場合、SDKはECIDのクエリ訪問者APIを使用します。 これにより、AEP Web SDKを使用して2つのタグページを作成でき、同じECIDを保持できます。
 
 ### `thirdPartyCookiesEnabled`
 
