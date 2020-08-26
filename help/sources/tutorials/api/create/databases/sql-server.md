@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用してSQL Serverコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 20%
@@ -15,9 +15,10 @@ ht-degree: 20%
 # APIを使用した [!DNL Microsoft][!DNL Flow Service] SQL Serverコネクタの作成
 
 >[!NOTE]
+>
 >SQL Serverコネクタはベータ版です。 [!DNL Microsoft] ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、 [!DNL Experience Platform] SQL Server（以下「SQL Server」と呼ばれる） [!DNL Microsoft] に接続する手順を順を追って説明します。
 
