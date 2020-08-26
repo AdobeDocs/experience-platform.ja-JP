@@ -4,7 +4,7 @@ solution: Experience Platform
 title: FTPおよびSFTPコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 4%
@@ -15,6 +15,7 @@ ht-degree: 4%
 # （ベータ版）FTPおよびSFTPコネクタ
 
 >[!NOTE]
+>
 >FTPおよびSFTPコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
 Adobe Experience Platformは、AWS、 [!DNL Google Cloud Platform]およびなどのクラウドプロバイダーに対してネイティブの接続を提供し、これらのシステムからデータを取得でき [!DNL Azure]ます。
