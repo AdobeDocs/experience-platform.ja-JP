@@ -5,7 +5,7 @@ seo-title: アドビのリアルタイム顧客データプラットフォーム
 description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
 seo-description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 87%
@@ -258,6 +258,7 @@ Adobe Real-time CDP では、Luma はオーディエンスセグメントにシ�
 また、特定の時刻に開始または終了するようにセグメントをスケジュールすることもできます。セグメントが投稿され、スケジュールされた日付に設定済みのプラットフォームで自動的に更新されます。
 
 >[!NOTE]
+>
 >必要に応じて、日付フィールドをクリックすると、90 日後に自動的にスケジュールされます。
 
 「**[!UICONTROL 保存]**」をクリックし 、次のページに移動します。
