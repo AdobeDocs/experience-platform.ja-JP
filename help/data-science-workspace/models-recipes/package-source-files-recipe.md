@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ソースファイルのレシピへのパッケージ化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 47%
@@ -49,9 +49,11 @@ Azure Container Registry の資格情報を取得するには、[Adobe Experienc
 Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** for *Type*. Azureコンテナレジストリ資格情報は、完了すると生成されます。
 
 >[!NOTE]
->*Type *is the class of machine learning problem the recipe is designed for and is used after training to help tailor evaluating the training run.
+>
+>*「タイプ* 」は、レシピが設計する機械学習の問題のクラスで、トレーニングの後に使用され、トレーニングの実施状況をカスタマイズするのに役立ちます。
 
 >[!TIP]
+>
 >- レシピの場合 [!DNL Python] は、 **[!UICONTROL Python]** ランタイムを選択します。
 >- Rレシピの場合は、 **[!UICONTROL R]** runtimeを選択します。
 >- PySparkレシピの場合は、 **[!UICONTROL PySpark]** ランタイムを選択します。 アーティファクトタイプが自動入力されます。
@@ -63,6 +65,7 @@ Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** 
 「*Docker Host*」、「*Username*」、「*Password*」の値をメモします。これらは、以下に説明するワークフローで [!DNL Docker] 画像を作成およびプッシュするために使用されます。
 
 >[!NOTE]
+>
 >ソースURLは、次の手順を完了した後に提供されます。 設定ファイルについては、 [次の手順で説明する後続のチュートリアルで説明します](#next-steps)。
 
 ### ソースファイルのパッケージ化
@@ -180,6 +183,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
 >[!TIP]
+>
 >スクリプトを使用してDockerにログインしようとする際にアクセス許可エラーが発生した場合は、 `login.sh` コマンドを使用してみ `bash login.sh`ます。
 
 ログインスクリプトを実行する場合、Dockerホスト、ユーザー名、パスワードを指定する必要があります。 イメージの作成時には、Docker ホストとビルドのバージョンタグを入力する必要があります。
