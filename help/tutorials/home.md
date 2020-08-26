@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform クエリサービス
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 75%
@@ -15,6 +15,7 @@ ht-degree: 75%
 # Adobe Experience Platform チュートリアルの概要
 
 >[!NOTE]
+>
 >Adobe Experience Platform のチュートリアルが最近移行されました。To find a tutorial, select the correct [!DNL Platform] area from the left-navigation. 既存のブックマークを更新してください。
 
 Adobe Experience Platform は、目的に合わせて構築された初めての顧客体験管理プラットフォームです。リアルタイム顧客プロファイル、継続的なインテリジェンス、オープンで拡張可能なアーキテクチャにより、パーソナライズされたエクスペリエンスを実現し、規模を大きく変えることができます。Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms.
