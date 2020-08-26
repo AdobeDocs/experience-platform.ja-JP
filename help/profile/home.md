@@ -5,7 +5,7 @@ title: リアルタイム顧客プロファイルの概要
 topic: guide
 description: リアルタイム顧客プロファイルは、様々な企業データアセットのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形でそのデータにアクセスできる汎用参照エンティティストアです。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 translation-type: tm+mt
-source-git-commit: 05032ba72afd5224e33cb4fdc93c97ba6ec6f8e8
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1718'
 ht-degree: 46%
@@ -58,6 +58,7 @@ When bringing data together from multiple sources and combining it in order to s
 ### （アルファ）計算済み属性の設定
 
 >[!IMPORTANT]
+>
 >このドキュメントで概要を説明する計算済み属性機能はアルファです。ドキュメントと機能は変更される場合があります。
 
 計算済み属性を使用すると、他の値、計算、式に基づいてフィールドの値を自動的に計算できます。計算済み属性は、プロファイルレベルで機能します。つまり、すべてのレコードとイベントの値を集計できます。各計算済み属性には、受信データを評価し、結果の値をプロファイル属性またはイベントに格納する式（「ルール」）が含まれます。これらの計算により、ライフタイム購入値、購入間隔、アプリケーションを開いた数などに関する質問に簡単に答えることができます。情報が必要になるたびに複雑な計算を手動で実行する必要はありません。計算済み属性の詳細、および [!DNL Real-time Customer Profile] APIを使用して計算済み属性を操作する手順については、 [計算済み属性エンドポイントガイドを参照してください](api/computed-attributes.md)。 このガイドは、計算された属性がAdobe Experience Platform内で果たす役割をより深く理解するのに役立ちます。また、基本的なCRUD操作を実行するためのサンプルAPI呼び出しが含まれています。
@@ -132,7 +133,6 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 >[!NOTE]
 >
->
 >非人物エンティティは、に含ま **れないXDMクラスを参照**[!DNL Profile]します。
 
 ## 次の手順とその他のリソース
@@ -140,6 +140,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 To learn more about [!DNL Real-time Customer Profile], please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
 
 >[!WARNING]
+>
 >次のビデオに表示される [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、 [リアルタイム顧客プロファイルユーザーガイド](ui/user-guide.md) (Real-time Customer User Guide)を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
