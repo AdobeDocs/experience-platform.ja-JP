@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: エッジ予測 — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 86%
@@ -21,6 +21,7 @@ ht-degree: 86%
 The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
 >[!NOTE]
+>
 >Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. このドキュメントでは、複数 `Content-Type` が使用されています。 サンプル呼び出しのヘッダーには特に注意を払い、各リクエストで正しいヘッダーが使用されていることを確認して `Content-Type` ください。
 
 ## 投影先
@@ -53,6 +54,7 @@ curl -X GET \
 応答には、各宛先の詳細が配列内の個々のオブジェクトとして表示される`projectionDestinations`配列が含まれます。投影が設定されていない場合、`projectionDestinations`配列は空を返します。
 
 >[!NOTE]
+>
 >この応答はスペースを節約し、2 つの宛先のみを表示します。
 
 ```json
@@ -122,6 +124,7 @@ POST /config/destinations
 次のリクエストは、新しいエッジの宛先を作成します。
 
 >[!NOTE]
+>
 >宛先を作成する POST リクエストには、次に示すように、特定の`Content-Type`ヘッダーが必要です。正しくない`Content-Type`ヘッダーを使用すると、HTTP ステータス 415（サポートされていないメディアタイプ）エラーが発生します。
 
 ```shell
@@ -227,6 +230,7 @@ curl -X GET \
 既存の宛先は、`/config/destinations`エンドポイントに PUT リクエストをおこない、更新対象の宛先の ID をリクエストパスに含めることで更新できます。この操作は基本的に宛先の&#x200B;_書き換え_&#x200B;なので、リクエストの本文には、新しい宛先を作成する際に指定するのと同じ属性を指定する必要があります。
 
 >[!CAUTION]
+>
 >更新リクエストに対する API 応答は直ちに行われますが、投影に対する変更は非同期で適用されます。つまり、宛先の定義を更新するタイミングと適用するタイミングに時間差があります。
 
 **API 形式**
@@ -244,6 +248,7 @@ PUT /config/destinations/{DESTINATION_ID}
 次のリクエストは、2 つ目の場所（`dataCenters`）を含むように既存の宛先を更新します。
 
 >[!IMPORTANT]
+>
 >PUT リクエストには、次に示すように特定の`Content-Type`ヘッダーが必要です。正しくない`Content-Type`ヘッダーを使用すると、HTTP ステータス 415（サポートされていないメディアタイプ）エラーが発生します。
 
 ```shell
@@ -295,6 +300,7 @@ curl -X PUT \
 組織で投影先が不要になった場合は、`/config/destinations`エンドポイントに DELETE リクエストを送信し、削除する宛先の ID をリクエストパスに含めることで、投影先を削除できます。 
 
 >[!CAUTION]
+>
 >削除リクエストに対する API の応答は直ちにおこなわれますが、エッジ上のデータに対する実際の変更は非同期で実施されます。つまり、プロファイルデータはすべてのエッジ（投影先で指定された`dataCenters`）から削除されますが、処理の完了には時間がかかります。
 
 **API 形式**
@@ -345,7 +351,8 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 | `{PROJECTION_NAME}` | アクセスする投影設定の名前。 |
 
 >[!NOTE]
->`schemaName` 投影設定名は、スキーマクラスのコンテキストでのみ一意であるため、`name`パラメーターを使用する場合は必須です。
+>
+>`schemaName`投影設定名は、スキーマクラスのコンテキストでのみ一意であるため、`name`パラメーターを使用する場合は必須です。
 
 **リクエスト**
 
@@ -429,6 +436,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **リクエスト**
 
 >[!NOTE]
+>
 >The POST request to create a configuration requires a specific `Content-Type` header, as shown below. 正しくない`Content-Type`ヘッダーを使用すると、HTTP ステータス 415（サポートされていないメディアタイプ）エラーが発生します。
 
 ```shell
@@ -506,6 +514,7 @@ curl -X POST \
    * 上記の例は`addresses.type,addresses.city.country`と同じです。
 
 >[!NOTE]
+>
 >サブフィールドの参照には、ドット表記と括弧の両方がサポートされています。ただし、ドット表記を使用する方がより簡潔で、フィールド階層のより良い説明を提供するため、この方法をお勧めします。
 
 * セレクター内の各フィールドは、応答のルートを基準に指定します。
@@ -610,6 +619,7 @@ curl -X POST \
 ```
 
 >[!NOTE]
+>
 >ネストされたフィールドが返されるたびに、それを含む親オブジェクトが投影に含まれます。親フィールドも明示的に選択されていない限り、他の子フィールドは含まれません。
 
 **addresses(type,city)**
