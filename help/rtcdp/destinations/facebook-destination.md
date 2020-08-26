@@ -5,7 +5,7 @@ seo-title: Facebook の宛先
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 seo-description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 33%
@@ -60,6 +60,7 @@ To help you better understand how and when you should use the [!DNL Facebook] de
 1. Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
 2. **Adobe Experience Cloud** ビジネスアカウントを [!DNL Facebook Ad Account] の広告パートナーとして追加します。`business ID=206617933627973`.を使用します。詳しくは、Facebookのドキュメントの「 [Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) 」を参照してください。
    >[!IMPORTANT]
+   >
    > Adobe Experience Cloud の権限を設定する場合は、**キャンペーンの管理**&#x200B;権限を有効にする必要があります。これは、[!DNL Adobe Real-time CDP] 統合に必要です。
 3. [!DNL Facebook Custom Audiences] 利用規約を読み、署名します。これをおこなうには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` に進みます（`accountID` は [!DNL Facebook Ad Account ID] です）。
 
