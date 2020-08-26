@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Flow Service APIを使用してAzure SynapseAnalyticsコネクタを作成する
+title: Flow Service APIを使用してAzure Synapse Analyticsコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 21%
@@ -15,9 +15,10 @@ ht-degree: 21%
 # APIを使用した [!DNL Azure Synapse Analytics][!DNL Flow Service] コネクタの作成
 
 >[!NOTE]
->Azure SynapseAnalyticsコネクタはベータ中です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>
+>Azure Synapse Analyticsコネクタはベータ段階です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、Flow Service APIを使用して、に接続する手順 [!DNL Azure Synapse Analytics] (以下「[!DNL Synapse]」と呼ばれます)について説明し [!DNL Experience Platform]ます。
 
