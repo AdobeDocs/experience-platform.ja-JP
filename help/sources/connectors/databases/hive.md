@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Azure HDInsightsコネクタのApache Hive
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 11%
@@ -15,11 +15,12 @@ ht-degree: 11%
 # （ベータ版） [!DNL Apache Hive] on [!DNL Azure HDInsights] connector
 
 >[!NOTE]
+>
 >Azure HDInsightsコネクターのApache Hiveはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダのサポートには、が含 [!DNL Apache Hive] まれ [!DNL Azure HDInsights]ます。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダのサポートには、が含 [!DNL Apache Hive] まれ [!DNL Azure HDInsights]ます。
 
 ## IPアドレス許可リスト
 
