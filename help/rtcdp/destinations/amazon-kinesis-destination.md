@@ -5,10 +5,10 @@ seo-title: AmazonKinesis駅
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 seo-description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 7%
+source-wordcount: '437'
+ht-degree: 8%
 
 ---
 
@@ -47,7 +47,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### 認証手順の {#authentication-step}
 
-* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:では、アクセス・キー — シークレット・アクセス・キー・ペアを生成 [!DNL Amazon Web Services]して、Adobeに対してリアルタイムCDPアクセスを [!DNL Amazon Kinesis] アカウントに付与します。 詳しくは、 [Amazonウェブサービスのドキュメントを参照してください](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:で、 [!DNL Amazon Web Services]ペアを生成して、Adobeに対してリアルタイムCDPアクセスを `access key - secret access key`[!DNL Amazon Kinesis] アカウントに付与します。 詳しくは、 [Amazonウェブサービスのドキュメントを参照してください](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
 * **region**:データをストリーミングする [!DNL Amazon Web Services] 領域を指定します。
 
 ![アカウント手順の入力フィールド](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
