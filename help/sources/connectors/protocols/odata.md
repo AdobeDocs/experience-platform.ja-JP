@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 汎用ODataコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 52a01c5f90a9643691a25e2d0a5f03a7f0334a7d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 9%
@@ -15,6 +15,7 @@ ht-degree: 9%
 # （ベータ版） [!DNL Generic OData] コネクタ
 
 >[!NOTE]
+>
 >コネクタ [!DNL Generic OData] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
@@ -53,7 +54,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Generic OData] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Generic OData] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
 ## API [!DNL Generic OData] を [!DNL Platform] 使用した接続
 
@@ -64,4 +65,4 @@ Adobe Experience Platform allows data to be ingested from external sources while
 ## UI [!DNL Generic OData] を [!DNL Platform] 使用して接続
 
 - [UIで汎用ODataソースコネクタを作成する](../../tutorials/ui/create/protocols/odata.md)
-- [UIでのプロトコルコネクタ用のデータフローの設定](../../tutorials/ui/dataflow/protocols.md)
+- [UIでのプロトコルコネクタのデータフローの設定](../../tutorials/ui/dataflow/protocols.md)
