@@ -4,7 +4,7 @@ solution: Experience Platform
 title: IBM DB2コネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
@@ -15,11 +15,12 @@ ht-degree: 0%
 # （ベータ版）IBM DB2 Connector
 
 >[!NOTE]
+>
 >IBM DB2 Connectorはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
 Adobe Experience Platformは、 [!DNL Microsoft]、MySQL、などのデータベースプロバイダに対してネイティブの接続を提供 [!DNL Azure]します。 これらのシステムのデータをに取り込むことができ [!DNL Platform]ます。
 
-リレーショナル、NoSQL、data warehouseなど、サードパーティのデータベースは、それぞれ異なる種類がサポートされます。 データベースプロバイダーのサポートには、IBM DB2が含まれます。
+リレーショナル、NoSQL、データ・ウェアハウスなど、サード・パーティのデータベースは、サポートされるタイプが異なります。 データベースプロバイダーのサポートには、IBM DB2が含まれます。
 
 ## IPアドレス許可リスト
 
