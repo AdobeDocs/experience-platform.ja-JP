@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: エンティティ — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 89%
@@ -115,6 +115,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >関連するグラフが 50 個を超える ID をリンクする場合、このサービスは HTTP ステータス 422（処理できないエンティティ）と「関連 ID が多すぎます」というメッセージを返します。このエラーが表示される場合は、検索を絞り込むためにクエリパラメータを追加することを検討してください。
 
 ## ID リストによるプロファイルデータへのアクセス
@@ -360,6 +361,7 @@ curl -X GET \
 正常な応答は、リクエストクエリパラメーターで指定された時系列イベントと関連フィールドのページ付けされたリストを返します。
 
 >[!NOTE]
+>
 >リクエストで上限の 1 が指定（`limit=1`）されたので、以下の応答の `count` は 1 で、1 つのエンティティのみが返されます。
 
 ```json
@@ -414,6 +416,7 @@ curl -X GET \
 時系列イベントを取得すると、結果はページ付けされます。結果の後続のページがある場合、`_page.next` プロパティには ID が含まれます。また、`_links.next.href` プロパティは次のページを取得するためのリクエスト URI を提供します。結果を取得するには、別の GET リクエストを `/access/entities` エンドポイントに対しておこないますが、必ず `/entities` を指定した URI の値に置き換える必要があります。
 
 >[!NOTE]
+>
 >リクエストパスで誤って `/entities/` を繰り返さないようにしてください。これは一度だけ `/access/entities?start=...` のように存在するべきです。
 
 **API 形式**
