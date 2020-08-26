@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MariaDBコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 17%
@@ -15,11 +15,12 @@ ht-degree: 17%
 # （ベータ版） [!DNL MariaDB] コネクタ
 
 >[!NOTE]
+>
 >コネクタ [!DNL MariaDB] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートには以下が含まれ [!DNL MariaDB]ます。
+Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには以下が含まれ [!DNL MariaDB]ます。
 
 ## IPアドレス許可リスト
 
@@ -53,7 +54,7 @@ Experience Platform は、サードパーティのデータベースからデー
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL MariaDB] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL MariaDB] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
 ## API [!DNL MariaDB] を [!DNL Platform] 使用した接続
 
