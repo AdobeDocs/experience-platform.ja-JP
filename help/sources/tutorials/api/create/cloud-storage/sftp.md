@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用したSFTPコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 23%
@@ -15,13 +15,14 @@ ht-degree: 23%
 # APIを使用したSFTPコネクタの作成 [!DNL Flow Service]
 
 >[!NOTE]
+>
 >SFTPコネクタはベータ版です。 機能とドキュメントは変更される場合があります。ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用してSFTP（セキュアファイル転送プロトコル）サーバー [!DNL Experience Platform] への接続手順を順を追って説明します。
 
-でユーザインターフェイスを使用したい場合は、 [!DNL Experience Platform]UIチュートリアル [](../../../ui/create/cloud-storage/ftp-sftp.md) に、同様の操作を実行するための手順が説明されています。
+でユーザインターフェイスを使用したい場合は、 [!DNL Experience Platform]UIチュートリアル [で、同様の操作を実行するための手順を順を追って説明します](../../../ui/create/cloud-storage/ftp-sftp.md) 。
 
 ## はじめに
 
