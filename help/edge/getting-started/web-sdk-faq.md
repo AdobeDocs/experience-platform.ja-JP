@@ -4,7 +4,7 @@ seo-title: Adobe Experience PlatformWeb SDK FAQ
 description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 seo-description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 translation-type: tm+mt
-source-git-commit: 87669db063781750097057463536723274eb0b4f
+source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
 workflow-type: tm+mt
 source-wordcount: '1684'
 ht-degree: 3%
@@ -48,7 +48,7 @@ Adobe Experience Platform Launchではこれらのライブラリの展開と管
 
 ### Adobe Experience PlatformWeb SDKを使用する
 
-新しいWeb SDKは、以下のソリューションのデータを1つの宛先(AEP Edge Network)に送信し、前述のソリューションの最も一般的な使用例を解決します。
+新しいWeb SDKは、以下のソリューションのデータを1つの送信先(AEP Edge Network)に送信し、前述のソリューションの最も一般的な使用例を解決します。
 
 * Adobe Analytics
 * Adobe Audience Manager
