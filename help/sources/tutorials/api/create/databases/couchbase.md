@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Flow Service APIを使用してCouchbaseコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 23%
@@ -15,9 +15,10 @@ ht-degree: 23%
 # APIを使用して [!DNL Couchbase][!DNL Flow Service] コネクタを作成する
 
 >[!NOTE]
+>
 >コネクタ [!DNL Couchbase] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
 
-[!DNL Flow Service] 様々な異なるソースから顧客データを収集および一元化してAdobe Experience Platformに導くために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] 様々な異なるソースから顧客データを収集して一元化し、Adobe Experience Platformに持ち込むために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、Flow Service APIを使用して、に接続する手順を順を追って説明 [!DNL Couchbase] し [!DNL Experience Platform]ます。
 
