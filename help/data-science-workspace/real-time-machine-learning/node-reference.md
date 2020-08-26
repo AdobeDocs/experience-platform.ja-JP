@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Real-time Machine Learningノードリファレンスガイド
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Real-time Machine Learning nodesリファレンスガイド（アルファ）
 
 >[!IMPORTANT]
+>
 >リアルタイム機械学習は、まだすべてのユーザーが利用できるわけではありません。 この機能はアルファベットで、まだテスト中です。 このドキュメントは変更される可能性があります。
 
 ノードは、グラフを形成する基本単位です。 各ノードは特定のタスクを実行し、リンクを使用してMLパイプラインを表すグラフを形成して、互いにチェーンできます。 タスクは、データやスキーマの変換、機械学習推論などの入力データに対する操作を表す。 ノードは、変換された値または推定された値を次のノードに出力します。
@@ -72,6 +73,7 @@ model_id = msg_model.model['model_id']
 ONXNodeは、モデルIDを使用して事前にトレーニングを受けたONNXモデルを引き出し、それを使用して受信データのスコアを算出する内部Adobeノードです。
 
 >[!TIP]
+>
 >ONNXモデルにデータを送信してスコアを求めるのと同じ順序で列を指定します。
 
 ```python
@@ -121,7 +123,7 @@ msg6 = model_train.process(msg5)
 | 値 | 説明 |
 | --- | --- |
 | features | モデルに入力フィーチャを追加します(文字列のリスト)。 <br> 次に例を示します。 `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Targetの列名（文字列） |
+| label | ターゲットの列名（文字列） |
 | mode | トレーニング/テスト（文字列） |
 | model_path | onnx形式でローカルに保存したモデルのパス。 |
 | params.model | モデルへの絶対インポートパス（文字列）: `sklearn.linear_model.LogisticRegression`. |
