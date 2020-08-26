@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Data Science Workspace のチュートリアル
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 16%
@@ -23,18 +23,18 @@ Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning an
 The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
 **以下のAPI開発ガイドを利用できます。**
-- [エンジン](../data-science-workspace/api/engines.md) — レジストリの検索、 [!DNL Docker] エンジンの作成、機能パイプラインの作成、エンジンの情報の取得、エンジンの更新、およびエンジンの削除の方法を学びます。
+- [エンジン](../data-science-workspace/api/engines.md) — レジストリの検索、 [!DNL Docker] エンジンの作成、機能パイプラインエンジンの作成、エンジンの情報の取得、エンジンの更新、およびエンジンの削除の方法について説明します。
 - [MLInstances（レシピ）](../data-science-workspace/api/mlinstances.md) - MLInstanceの作成、MLInstanceの情報の取得、MLInstanceの更新、MLInstanceの削除の方法について説明します。
 - [実験](../data-science-workspace/api/experiments.md) — テストの作成、テストまたはテストの実行、テストの更新、テストの削除の方法を学びます。
 - [モデル](../data-science-workspace/api/models.md) — 独自のモデルの登録、モデルの情報の取得、モデルの更新、モデルの削除、モデルの新しいトランスコードの作成、トランスコードされたモデルの詳細の取得の方法を学習します。
 - [MLServices](../data-science-workspace/api/mlservices.md) - MLServiceの作成、MLServiceの情報の取得、MLServiceの更新、MLServiceの削除の方法を学びます。
 - [インサイト](../data-science-workspace/api/insights.md) — インサイトの情報を取得する方法、新しいモデルインサイトを追加する方法、アルゴリズムのデフォルト指標のリストを取得する方法について説明します。
 
-Senesi Machine Learning APIを使用してCRUD操作を実行する際に必要な値の詳細と入手方法については、 [入門ガイドを参照してください](../data-science-workspace/api/getting-started.md)。
+Senesi Machine Learning APIを使用してCRUD操作を実行する際に必要な値の詳細と入手方法については、はじ [めにガイドを参照してください](../data-science-workspace/api/getting-started.md)。
 
 ## How to use [!DNL JupyterLab] Notebooks
 
-[!DNL JupyterLab] は、Adobe Experience Platform用のWebベースのユーザーインターフェイスで [!DNL Project Jupyter] あり、緊密に統合されています。 It provides an interactive development environment for data scientists to work with [!DNL Jupyter notebooks], code, and data. This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
+[!DNL JupyterLab] は、のWebベースのユーザーインターフェイスで、Adobe Experience Platform [!DNL Project Jupyter] と緊密に統合されています。 It provides an interactive development environment for data scientists to work with [!DNL Jupyter notebooks], code, and data. This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 
 **このガイドは次の目的に役立ちます。**
 - インター [!DNL JupyterLab] フェイスにアクセスし、理解します。
@@ -60,7 +60,6 @@ Senesi Machine Learning APIを使用してCRUD操作を実行する際に必要�
 ## レシピの読み込み
 
 >[!NOTE]
->
 >
 >このチュートリアルでは、 [!DNL Docker] ソースファイルのURLが必要です。 ソースファイルの [URLがない場合は、](../data-science-workspace/models-recipes/package-source-files-recipe.md) パッケージソースファイルをレシピチュートリアル [!DNL Docker] にアクセスしてください。
 
@@ -127,9 +126,10 @@ Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up sch
 ## フィーチャパイプラインの作成
 
 >[!NOTE]
+>
 >現在、機能のパイプラインはAPIを介してのみ使用できます。
 
-Adobe Experience Platformを使用すると、カスタムフィーチャパイプラインを作成して作成し、を尺度に基づいてフィーチャエンジニアリングを実行でき [!DNL Sensei Machine Learning Framework Runtime]ます。
+Adobe Experience Platformでは、カスタムフィーチャパイプラインを作成して作成し、を尺度に基づいてフィーチャエンジニアリングを実行で [!DNL Sensei Machine Learning Framework Runtime]きます。
 
 **このガイドは次の目的に役立ちます。**
 - フィーチャパイプラインクラスを実装します。
