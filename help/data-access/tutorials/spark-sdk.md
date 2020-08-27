@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api
 solution: Experience Platform
 title: Secure Spark Data Access SDK
 topic: tutorial
+description: Secure Spark Data Access SDKは、Adobe Experience Platformからのデータセットの読み取りと書き込みを可能にするソフトウェア開発キットです。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -35,7 +36,7 @@ For more information on sandboxes in [!DNL Platform], see the [sandbox overview 
 
 SDKでは、環境変数またはデータソースオプションで資格情報が提供されることを期待しています。 [!DNL Spark]
 
-| 変数 | 値 |
+| Variable | 値 |
 | -------- | ----- | 
 | `SERVICE_TOKEN` | サービス認証トークン。 |
 | `SERVICE_API_KEY` | サービスAPIキー。 これは、通常、IMSクライアントIDと同じです。 |
@@ -44,7 +45,7 @@ SDKでは、環境変数またはデータソースオプションで資格情�
 
 その他の設定パラメーターは次のとおりです。
 
-| 変数 | 値 |
+| Variable | 値 |
 | -------- | ----- |
 | `ENVIRONMENT_NAME` | 接続しようとしている環境。 「dev」、「stage」、「prod」のいずれかです。 |
 | `SANDBOX_NAME` | 接続先のサンドボックスの名前です。 |
