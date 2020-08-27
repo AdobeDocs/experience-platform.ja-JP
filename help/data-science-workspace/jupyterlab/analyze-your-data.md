@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ノートブックを使用したデータの分析
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1702'
-ht-degree: 84%
+source-wordcount: '1710'
+ht-degree: 83%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 84%
 
 次の概念が導入されています。
 
-- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)は、Project Jupyter向けの次世代のWebベースのインターフェースで、と緊密に統合されてい[!DNL Adobe Experience Platform]ます。
+- **[!DNL JupyterLab]:**[[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、ジュピタープロジェクトの次世代Webベースのインターフェイスで、に緊密に統合されてい [!DNL Adobe Experience Platform]ます。
 - **バッチ**：データセットはいくつかのバッチで構成されます。バッチとは、一定期間に収集され 1 つの単位として一緒に処理される一連のデータです。データセットにデータが追加されると、新しいバッチが作成されます。
-- **データアクセス SDK（廃止）**：データアクセス SDK は廃止されました。Please use the [!DNL Platform SDK](../authoring/platform-sdk.md) guide.
+- **データアクセス SDK（廃止）**：データアクセス SDK は廃止されました。Please use the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide.
 
 ## Data Science Workspace でのノートブックの調査
 
@@ -70,7 +70,7 @@ pandas の DataFrame データ構造は、2 次元のラベル付きデータ構
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### [!DNL Experience Platform]data
+#### [!DNL Experience Platform] data
 
 Now, we will go over accessing [!DNL Experience Platform] data.
 
@@ -90,7 +90,7 @@ Jupyter ニートブックで、左側の「**Data**」タブからデータに�
 
 >[!TIP]
 >
->refer to the [!DNL Platform SDK](../authoring/platform-sdk.md) guide to convert your code.
+>refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
