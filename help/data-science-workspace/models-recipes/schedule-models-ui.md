@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics
+keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics;schedule scoring;schedule training
 solution: Experience Platform
 title: モデルのスケジュール設定（UI）
 topic: Tutorial
+description: Adobe Experience Platformデータサイエンスワークスペースでは、機械学習サービスでのスケジュール済みスコアおよびトレーニングの実行を設定できます。 トレーニングとスコアリングを自動処理すると、データ内のパターンに追いつくことで、サービスの効率を時間をかけて維持および改善できます。
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 82%
+source-wordcount: '533'
+ht-degree: 79%
 
 ---
 
