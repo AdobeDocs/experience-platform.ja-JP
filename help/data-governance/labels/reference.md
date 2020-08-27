@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
 title: コアデータの使用ラベル
 topic: labels
+description: このドキュメントでは、Adobe Experience Platformが現在サポートしているすべてのデータ使用ラベルについて概説します。
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1869'
-ht-degree: 93%
+source-wordcount: '1882'
+ht-degree: 92%
 
 ---
 
