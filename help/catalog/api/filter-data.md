@@ -5,9 +5,9 @@ title: クエリパラメータ－を使用したカタログデータのフィ�
 topic: developer guide
 description: カタログサービス API を使用すると、応答データをリクエストパラメーターを使用してフィルタリングするクエリができます。カタログについてのベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを改善するのに役立ちます。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2084'
 ht-degree: 86%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 86%
 
 The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
 
-This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the [!DNL Catalog] API. For more general information on [!DNL Catalog Service], see the [Catalog overview](../home.md).
+This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the [!DNL Catalog] API. について詳しくは、 [!DNL Catalog Service]概要を参照してください [[!DNL Catalog] ](../home.md)。
 
 ## 返されるオブジェクトの制限
 
