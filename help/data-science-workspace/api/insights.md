@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
 solution: Experience Platform
 title: Insights
 topic: Developer guide
+description: インサイトには、関連する評価指標を表示することにより、データサイエンティストが最適な ML モデルを評価および選択できるようにするための指標が含まれています。
 translation-type: tm+mt
-source-git-commit: 7bd6807e620febe134f8c75e67c0f723850e49c1
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '497'
 ht-degree: 100%
 
 ---
