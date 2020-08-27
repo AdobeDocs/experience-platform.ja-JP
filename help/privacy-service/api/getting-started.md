@@ -5,10 +5,10 @@ title: Privacy Service 開発者ガイド
 description: RESTful API を使用して、Adobe Experience Cloud アプリケーション全体でデータサブジェクトの個人データを管理します。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 30%
+source-wordcount: '762'
+ht-degree: 27%
 
 ---
 
@@ -23,7 +23,7 @@ This guide covers how to use the [!DNL Privacy Service] API. UI の使用方法�
 
 This guide requires a working understanding the following [!DNL Experience Platform] features:
 
-* [!DNL Privacy Service](../home.md)：Adobe Experience Cloud アプリケーション全体でデータサブジェクト（顧客）からのアクセスリクエストと削除リクエストを管理するための RESTful API とユーザーインターフェイスが用意されていまます。
+* [[!DNLPrivacy Service]](../home.md):RESTful APIとユーザーインターフェイスを提供します。このインターフェイスを使用すると、Adobe Experience Cloudのアプリケーション全体で、データサブジェクト（お客様）からのアクセスおよび削除のリクエストを管理できます。
 
 以下の節では、Privacy Service API への呼び出しを正常に実行するために必要な追加情報を示しています。
 
@@ -59,17 +59,17 @@ AdobeDeveloper Consoleを使用して、次の3つのアクセス資格情報を
 
 #### 1回限りのセットアップ
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. 次に、Adobeデベロッパーコンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
+[Adobeデベロッパーコンソールに移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe開発者コンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
-新しいプロジェクトを作成したら、プ **[!UICONTROL ロジェクト概要]** 画面の「 _[!UICONTROL API]_」をクリックします。
+新しいプロジェクトを作成したら、プ **[!UICONTROL ロジェクト概要]** 画面の「 _[!UICONTROL API]_ 」をクリックします。
 
 ![](../images/api/getting-started/add-api-button.png)
 
-API __追加画面が表示されます。 「**[!UICONTROL &#x200B;次へ&#x200B;]**」をクリックする前に、利用可能なAPIのリストから**[!UICONTROL  Privacy ServiceAPIを選択します&#x200B;]**。
+API __ 追加画面が表示されます。 「 **[!UICONTROL 次へ]** 」をクリックする前に、利用可能なAPIのリストから **[!UICONTROL Privacy ServiceAPIを選択します]**。
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-The _[!UICONTROL Configure API]_screen appears. 「キーペアを**[!UICONTROL &#x200B;生成する」オプションを選択し&#x200B;]**、右下隅の「キーペアを**[!UICONTROL &#x200B;生成&#x200B;]**」をクリックします。
+The _[!UICONTROL Configure API]_ screen appears. 「キーペアを **[!UICONTROL 生成する」オプションを選択し]**、右下隅の「キーペアを **[!UICONTROL 生成]** 」をクリックします。
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
@@ -77,10 +77,10 @@ The _[!UICONTROL Configure API]_screen appears. 「キーペアを**[!UICONTROL 
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-APIがプロジェクトに追加されると、 _Privacy ServiceAPIの概要_ ページにプロジェクトページが再び表示されます。 ここから、「 _[!UICONTROL サービスアカウント(JWT)]_」セクションまで下にスクロールします。このセクションには、[!DNL Privacy Service]APIへのすべての呼び出しに必要な次のアクセス資格情報が表示されます。
+APIがプロジェクトに追加されると、 _Privacy ServiceAPIの概要_ ページにプロジェクトページが再び表示されます。 ここから、「 _[!UICONTROL サービスアカウント(JWT)]_ 」セクションまで下にスクロールします。このセクションには、 [!DNL Privacy Service] APIへのすべての呼び出しに必要な次のアクセス資格情報が表示されます。
 
-* **[!UICONTROL クライアントID]**: クライアントIDは、x-api-keyヘッダー `{API_KEY}` で指定する必要があるクライアントIDです。
-* **[!UICONTROL 組織ID]**: 組織IDは、x-gw-ims-org-idヘッダーで使用する必要がある `{IMS_ORG}` 値です。
+* **[!UICONTROL クライアントID]**:クライアントIDは、x-api-keyヘッダー `{API_KEY}` で指定する必要があるクライアントIDです。
+* **[!UICONTROL 組織ID]**:組織IDは、x-gw-ims-org-idヘッダーで使用する必要がある `{IMS_ORG}` 値です。
 
 ![](../images/api/getting-started/jwt-credentials.png)
 
@@ -88,7 +88,7 @@ APIがプロジェクトに追加されると、 _Privacy ServiceAPIの概要_ �
 
 収集する必要がある最後の必要な秘密鍵証明書 `{ACCESS_TOKEN}`は、「認証」ヘッダーで使用される、自分の秘密鍵証明書です。 との値とは異なり、APIを使用し続け `{API_KEY}` るに `{IMS_ORG}`は、新しいトークンを24時間ごとに生成する必要があり [!DNL Platform] ます。
 
-新しい秘密鍵を生成するに `{ACCESS_TOKEN}`は、「トークンの生成」をクリックする前に、以前にダウンロードした秘密鍵を開き、「 _[!UICONTROL アクセストークンの]_生成**[!UICONTROL 」の横のテキストボックスにその内容を貼り付けます&#x200B;]**。
+新しい秘密鍵を生成するに `{ACCESS_TOKEN}`は、「トークンの生成」をクリックする前に、以前にダウンロードした秘密鍵を開き、「 _[!UICONTROL アクセストークンの]_ 生成 **[!UICONTROL 」の横のテキストボックスにその内容を貼り付けます]**。
 
 ![](../images/api/getting-started/paste-private-key.png)
 
