@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データレイクでのプライバシーリクエストの処理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 27%
+source-wordcount: '1204'
+ht-degree: 25%
 
 ---
 
@@ -22,10 +22,10 @@ This document covers essential concepts related to processing privacy requests f
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [!DNL Privacy Service](../privacy-service/home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
-* [!DNL Catalog Service](home.md):データの場所と内の系列のレコードのシステム [!DNL Experience Platform]。 データセットメタデータの更新に使用できる API を提供します。
-* [!DNL Experience Data Model (XDM) System](../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-* [!DNL Identity Service](../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
+* [[!DNLPrivacy Service]](../privacy-service/home.md):Adobe Experience Cloudのアプリケーション間での個人データへのアクセス、販売中止、削除に関する顧客の要求を管理します。
+* [[!DNLカタログサービス]](home.md):データの場所と内の系列のレコードのシステム [!DNL Experience Platform]。 データセットメタデータの更新に使用できる API を提供します。
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+* [[!DNL IDサービス]](../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
 
 ## ID 名前空間について {#namespaces}
 
