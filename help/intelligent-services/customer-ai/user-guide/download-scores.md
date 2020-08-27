@@ -3,11 +3,12 @@ keywords: Experience Platform;download scores;customer ai;popular topics
 solution: Experience Platform
 title: 顧客 AI でのスコアのダウンロード
 topic: Downloading scores
+description: 顧客 AI では、Parquet ファイル形式でスコアをダウンロードできます。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 90%
+source-wordcount: '945'
+ht-degree: 91%
 
 ---
 
