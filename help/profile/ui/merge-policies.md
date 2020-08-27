@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: 結合ポリシーユーザーガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 98be95e0a6e0661dcddf2db1cf6993b643d4df2b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1433'
 ht-degree: 44%
 
 ---
@@ -24,9 +24,9 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 This guide requires a working understanding of the various [!DNL Experience Platform] services involved with merge policies. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-* [!DNL Real-time Customer Profile](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [!DNL Identity Service](../../identity-service/home.md):取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+* [[!DNLリアルタイム顧客プロファイル]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL IDサービス]](../../identity-service/home.md):取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
 
 ## 結合ポリシーの表示
 
