@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Schema Registry API 開発者ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f7fe8f9ac8d6f0e2eaec53d96f2ced0904061c89
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 71%
+source-wordcount: '1237'
+ht-degree: 69%
 
 ---
 
@@ -167,9 +167,21 @@ Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. API
 
 The global container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, mixins, data types, and schemas. リストリクエストと検索（GET）リクエストを実行できるのは、グローバルコンテナに対してのみです。
 
+グローバルコンテナを使用した呼び出しの例を次に示します。
+
+```http
+GET /global/classes
+```
+
 ### テナントコンテナ
 
 固有の `TENANT_ID` と混同しないでください。テナントコンテナには、IMS 組織が定義したすべてのクラス、Mixin、データタイプ、スキーマ、および記述子が格納されます。これらは各組織に固有のもので、他の IMS 組織では表示も管理もできません。テナントコンテナで作成したリソースに対して、すべての CRUD 操作（GET、POST、PUT、PATCH、DELETE）を実行できます。
+
+テナントコンテナを使用する呼び出しの例を次に示します。
+
+```http
+POST /tenant/mixins
+```
 
 When you create a class, mixin, schema or data type in the tenant container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. この `$id` は、API 全体で特定のリソースを参照する際に使用されます。`$id` 値の例については、次の節で説明します。
 
