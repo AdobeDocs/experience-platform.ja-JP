@@ -3,11 +3,12 @@ keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science W
 solution: Experience Platform
 title: SDK 開発者ガイド
 topic: Overview
+description: モデルオーサリングSDKを使用すると、PySparkとSpark (Scala)で実装可能なテンプレートを提供する、Adobe Experience Platformデータサイエンスワークスペースで使用できるカスタム機械学習レシピと機能パイプラインを開発できます。
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 74%
+source-wordcount: '964'
+ht-degree: 71%
 
 ---
 
