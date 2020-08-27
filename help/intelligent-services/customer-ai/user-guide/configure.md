@@ -3,11 +3,12 @@ keywords: Experience Platform;user guide;customer ai;popular topics;configure in
 solution: Experience Platform
 title: 顧客AIインスタンスの設定
 topic: Instance creation
+description: インテリジェントサービスは、様々な用途に設定できる、使いやすい Adobe Sensei サービスとして顧客 AI を提供します。次の節では、顧客 AI のインスタンスを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 89%
+source-wordcount: '746'
+ht-degree: 90%
 
 ---
 
