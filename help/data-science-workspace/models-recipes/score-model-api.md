@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: モデルのスコアリング（API）
 topic: Tutorial
+description: このチュートリアルでは、Senesie Machine Learning APIを使用して、テストとテストの実行を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 100%
+source-wordcount: '529'
+ht-degree: 96%
 
 ---
 
