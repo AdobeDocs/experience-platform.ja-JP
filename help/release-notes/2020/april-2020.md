@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '975'
-ht-degree: 60%
+source-wordcount: '993'
+ht-degree: 59%
 
 ---
 
@@ -19,14 +19,14 @@ ht-degree: 60%
 **リリース日：2020 年 4 月 8 日**
 
 Adobe Experience Platform の新機能：
-* [!DNL Intelligent Services](#intelligent)
+* [[!DNLインテリジェントサービス]](#intelligent)
 
 既存の機能の更新：
-* [!DNL Experience Data Model (XDM)](#xdm)
-* [!DNL Data Governance](#governance)
-* [!DNL Destinations](#destinations)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
+* [[!DNL Experience Data Model (XDM)]](#xdm)
+* [[!DNLデータガバナンス]](#governance)
+* [[!DNL宛先]](#destinations)
+* [[!DNLPrivacy Service]](#privacy)
+* [[!DNLソース]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 
