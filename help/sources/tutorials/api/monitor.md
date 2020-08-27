@@ -4,10 +4,10 @@ solution: Experience Platform
 title: フローと実行の監視
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bdc45f6e51f1a140da503ac36355619300cedd2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 19%
+source-wordcount: '597'
+ht-degree: 18%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、を使用して、完全性、エラー、指標に関するフロー実行データを監視する手順について説明し [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)ます。
+このチュートリアルでは、 [[!DNL Flow Service API]を使用して、完全性、エラー、指標のフロー実行データを監視する手順を説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
 
 ## はじめに
 
