@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: 製品プロファイルのユーザーの管理
 topic: user guide
+description: このドキュメントでは、Adobe Experience PlatformのUIで製品プロファイルのユーザーを管理する方法を示します。
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 80%
+source-wordcount: '199'
+ht-degree: 72%
 
 ---
 
