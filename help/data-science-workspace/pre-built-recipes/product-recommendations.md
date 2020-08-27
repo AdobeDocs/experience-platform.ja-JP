@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: 製品レコメンデーションレシピ
 topic: overview
+description: 製品レコメンデーションレシピを使用すると、顧客のニーズや関心に合わせてカスタマイズした製品レコメンデーションを提供できます。正確な予測モデルを使用すると、顧客の購入履歴から、興味を持つ可能性のある製品に関するインサイトを得ることができます。
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '463'
 ht-degree: 93%
 
 ---
