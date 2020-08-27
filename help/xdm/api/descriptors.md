@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 記述子
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1481'
 ht-degree: 81%
 
 ---
@@ -300,7 +300,7 @@ An identity descriptor signals that the &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | ID となる特定のプロパティへのパス。パスは、「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。 |
-| `xdm:namespace` | ID 名前空間の `id` または `code`。A list of namespaces can be found using the [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | ID 名前空間の `id` または `code`。A list of namespaces can be found using the [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | `xdm:id` または `xdm:code`（使用されている `xdm:namespace` に応じる）。 |
 | `xdm:isPrimary` | オプションのブール値。true の場合、フィールドがプライマリ ID であることを示します。スキーマには、1 つのプライマリ ID のみを含めることができます。 |
 
