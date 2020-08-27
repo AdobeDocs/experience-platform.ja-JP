@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Policy Service API開発者ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 15%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 15%
 
 Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
-この [!DNL Policy Service] APIは複数のエンドポイントを提供し、データ使用ラベルとポリシーをプログラム的に管理したり、ポリシー違反のマーケティングアクションを評価したりできます。 これらのエンドポイントの概要を以下に示します。 詳しくは、個々のエンドポイントガイドを参照してください。また、 [入門ガイドを参照し](./getting-started.md) 、必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み取りなどを確認してください。
+この [!DNL Policy Service] APIは複数のエンドポイントを提供し、データ使用ラベルとポリシーをプログラム的に管理したり、ポリシー違反のマーケティングアクションを評価したりできます。 これらのエンドポイントの概要を以下に示します。 詳しくは、個々のエンドポイントのガイドを参照してください。必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み方などについては、 [はじめに](./getting-started.md) 「はじめに」のガイドを参照してください。
 
-使用可能なすべてのエンドポイントとCRUD操作を表示するには、 [Policy Service APIスウォッガーにアクセスします](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)。
+使用可能なすべてのエンドポイントとCRUD操作を表示するには、 [[!DNL Policy Service] APIスウォッガーにアクセスします](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)。
 
 ## ラベル
 
