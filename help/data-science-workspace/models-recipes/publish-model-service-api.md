@@ -4,9 +4,9 @@ solution: Experience Platform
 title: モデルをサービスとして公開する（API）
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1483'
 ht-degree: 49%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 49%
 
 # モデルをサービスとして公開する（API）
 
-このチュートリアルでは、を使用して、モデルをサービスとしてパブリッシュするプロセスについて説明 [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)します。
+このチュートリアルでは、 [[!DNL Sensei Machine Learning API]を使用して、サービスとしてモデルを公開するプロセスについて説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
 
 ## はじめに
 
