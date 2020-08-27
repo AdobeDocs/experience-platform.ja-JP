@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 小売販売スキーマとデータセットの作成
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 68%
+source-wordcount: '502'
+ht-degree: 67%
 
 ---
 
@@ -33,7 +33,7 @@ This tutorial provides you with the prerequisites and assets required for all ot
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - 次の概念に関する十分な知識（このチュートリアルで使用）：
-   - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
    - [スキーマ構成の基本](../../xdm/schema/field-dictionary.md)
 
 ## 小売販売スキーマとデータセットの作成
