@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 44%
+source-wordcount: '542'
+ht-degree: 43%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 44%
 
 **リリース日：2019 年 9 月 10 日**
 
-Adobe Experience Platform内の既存の機能の更新：
+Adobe Experience Platformの既存の機能の更新：
 
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Query Service](#query)
+* [[!DNLデータ取り込み]](#ingestion)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNLクエリサービス]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
@@ -57,7 +57,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] is a fully managed servi
 
 ## [!DNL Query Service] {#query}
 
-[!DNL Query Service] 標準のSQLからクエリデータへのAdobe Experience Platformを使用して、様々な分析やデータ管理の使用例をサポートする機能を提供します。 It is a serverless tool that allows you to join datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or for ingestion into [!DNL Real-time Customer Profile].
+[!DNL Query Service] は、Adobe Experience Platformの標準的なSQLからクエリデータへの使用を可能にし、様々な分析およびデータ管理の使用例をサポートします。 It is a serverless tool that allows you to join datasets from the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or for ingestion into [!DNL Real-time Customer Profile].
 
 You can use [!DNL Query Service] to build data analysis ecosystems, creating a picture of customers across their various interaction channels. これらのチャネルには、POS（販売時点管理システム）、web、モバイル、CRM システムなどが含まれます。
 
