@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 73%
+source-wordcount: '894'
+ht-degree: 72%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 73%
 
 **リリース日：2020 年 1 月 15 日**
 
-Adobe Experience Platform内の既存の機能の更新：
+Adobe Experience Platformの既存の機能の更新：
 
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
-* [!DNL Destinations](#destinations)
+* [[!DNL Experience Data Model (XDM)システム]](#xdm)
+* [[!DNLPrivacy Service]](#privacy)
+* [[!DNLソース]](#sources)
+* [[!DNL宛先]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM)システム {#xdm}
 
@@ -105,7 +105,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | カテゴリ | 権限 | 説明 |
 |--- | --- | ---|
 | 宛先 | 宛先の管理 | 宛先の読み取り、作成、編集、および無効化へのアクセス。 |
-| 宛先 | 宛先の表示 | 「[!UICONTROL _カタログ&#x200B;_]」タブの使用可能な宛先と「_&#x200B;参照&#x200B;_」タブの認証済みの宛先への読み取り専用アクセス。 |
+| 宛先 | 宛先の表示 | 「[!UICONTROL _カタログ_]」タブの使用可能な宛先と「_参照_」タブの認証済みの宛先への読み取り専用アクセス。 |
 | 宛先 | 宛先のアクティブ化 | 宛先に対してデータをアクティブ化する機能。この権限では、製品プロファイルに「宛先の管理」または「宛先の表示」を追加する必要があります。 |
 
 **既知の問題**
