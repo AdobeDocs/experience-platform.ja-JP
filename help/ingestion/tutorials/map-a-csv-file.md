@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM スキーマへの CSV ファイルのマッピング
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 57%
+source-wordcount: '1371'
+ht-degree: 56%
 
 ---
 
@@ -22,14 +22,14 @@ In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
-- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
-- [!DNL Batch ingestion](../batch-ingestion/overview.md): ユーザーが指定したデータファイルからデータを [!DNL Platform] 取り込む方法。
+- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
+- [[!DNLバッチインジェスト]](../batch-ingestion/overview.md):ユーザーが指定したデータファイルからデータを [!DNL Platform] 取り込む方法。
 
 また、このチュートリアルでは、CSV データの取り込み先のデータセットを既に作成している必要があります。UI でデータセットを作成する手順については、[データ取得のチュートリアル](./ingest-batch-data.md)を参照してください。
 
 ## 宛先の選択
 
-にログインし [!DNL Adobe Experience Platform](https://platform.adobe.com) 、左のナビゲーションバーから **[!UICONTROL ワークフローを選択して]** ワークフロー ** ワークスペースにアクセスします。
+[!DNL [Adobe Experience Platform]](https://platform.adobe.com) にログインし、左のナビゲーションバーから **[!UICONTROL ワークフローを選択して]** ワークフロー ** ワークスペースにアクセスします。
 
 **[!UICONTROL ワークフロー]** 画面の「 **[!UICONTROL Data ingestion]** 」セクションで「 **[!UICONTROL CSVをXDMスキーマにマップ」を選択し、「]** Launch **** Launch」を選択します。
 
@@ -85,7 +85,7 @@ If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the
 
 ### 追加計算フィールド
 
-計算済みフィールドでは、入力スキーマーの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して、参照しやすくすることができます。
+計算済みフィールドでは、入力スキーマーの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して参照しやすくすることができます。
 
 先に進むには、 **[!UICONTROL 追加]** 計算フィールドボタンを選択します。
 
@@ -117,7 +117,7 @@ CSVファイルをマッピングして作成したら、ファイルを介し�
 
 ## 次の手順
 
-By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Platform]. このデータは、などのダウンストリーム [!DNL Platform] サービスで使用できるようになり [!DNL Real-time Customer Profile]ました。 詳しくは、概要を参照し [!DNL Real-time Customer Profile](../../profile/home.md) てください。
+By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Platform]. このデータは、などのダウンストリーム [!DNL Platform] サービスで使用できるようになり [!DNL Real-time Customer Profile]ました。 詳細については、 [[!DNLリアルタイム顧客プロファイル]の概要を参照してください](../../profile/home.md) 。
 
 ## 付録
 
