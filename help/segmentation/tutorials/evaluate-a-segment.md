@@ -5,25 +5,25 @@ title: セグメントの評価
 topic: tutorial
 description: このドキュメントでは、セグメント化 API を使用してセグメントを評価したり、セグメント結果にアクセスしたりするためのチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1535'
-ht-degree: 63%
+source-wordcount: '1560'
+ht-degree: 62%
 
 ---
 
 
 # セグメント結果の評価とアクセス
 
-This document provides a tutorial for evaluating segments and accessing segment results using the [!DNL Segmentation API](../api/getting-started.md).
+This document provides a tutorial for evaluating segments and accessing segment results using the [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## はじめに
 
 This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [!DNL Adobe Experience Platform Segmentation Service](../home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [[!DNLAdobe Experience Platformセグメントサービス]](../home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 - [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### 必須ヘッダー
@@ -229,10 +229,10 @@ Once you have a union-persisting dataset, you can create an export job to persis
 
 ## 次の手順
 
-Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. セグメントのサイズに応じて、データがチャンクに格納され、バッチが複数のファイルで構成される場合があります。
+Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. セグメントのサイズに応じて、データがチャンクに格納され、バッチが複数のファイルで構成される場合があります。
 
 For step-by-step instructions on how to use the [!DNL Data Access] API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 
 また、を使用して、正常にエクスポートされたセグメントデータにアクセスすることもでき [!DNL Adobe Experience Platform Query Service]ます。 Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the [!DNL Data Lake].
 
-For more information on how to query audience data, please review the documentation on [!DNL Query Service](../../query-service/home.md).
+For more information on how to query audience data, please review the documentation on [[!DNL Query Service]](../../query-service/home.md).
