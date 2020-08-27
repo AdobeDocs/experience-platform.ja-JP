@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics
+keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
 solution: Experience Platform
 title: 顧客AIの入出力
 topic: Getting started
+description: 次のドキュメントでは、Customer AIで使用される様々な入力と出力の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 34%
+source-wordcount: '841'
+ht-degree: 33%
 
 ---
 
