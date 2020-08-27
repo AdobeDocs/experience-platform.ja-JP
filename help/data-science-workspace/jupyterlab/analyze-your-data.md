@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;analyze data notebooks
 solution: Experience Platform
 title: ノートブックを使用したデータの分析
 topic: Tutorial
+description: このチュートリアルでは、Data Science Workspace に組み込まれている Jupyter ノートブックを使用してデータへのアクセス、データの調査、データの視覚化をおこなう方法について説明します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1731'
 ht-degree: 83%
 
 ---
