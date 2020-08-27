@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage policy
 solution: Experience Platform
 title: データ使用ポリシーの作成
 topic: policies
+description: Data Usage Labeling and Enforcement（DULE）は、Adobe Experience Platform データガバナンスの中核的なメカニズムです。DULE Policy Service API を使用すると、DULE ポリシーを作成および管理して、特定の DULE ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。このドキュメントでは、ポリシーサービス API を使用してデータポリシーを作成する順を追ったチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1254'
 ht-degree: 81%
 
 ---
 
 
-# データ使用ポリシーの作成 (API)
+# APIでのデータ使用ポリシーの作成
 
 Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. [データポリシーサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) を使用すると 、データポリシーを作成および管理して、特定のデータラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
 
