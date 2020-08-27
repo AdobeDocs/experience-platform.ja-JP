@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 失敗したバッチの取得
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 75%
+source-wordcount: '607'
+ht-degree: 74%
 
 ---
 
@@ -22,8 +22,8 @@ This tutorial covers steps for retrieving information about a failed batch using
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): 顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-- [!DNL Data Ingestion](../home.md): データの送信先のメソッド [!DNL Experience Platform]。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+- [[!DNLデータ取り込み]](../home.md):データの送信先のメソッド [!DNL Experience Platform]。
 
 ### API 呼び出し例の読み取り
 
