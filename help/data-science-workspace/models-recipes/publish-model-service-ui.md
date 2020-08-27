@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;publish a model;Data Science Workspace;popular topics
+keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;score a service
 solution: Experience Platform
 title: モデルのサービスとしての公開（UI）
 topic: Tutorial
+description: Adobe Experience Platform Data Science Workspace　を使用すると、訓練を受けた評価済みのモデルをサービスとして公開でき、IMS 組織内のユーザーは、独自のモデルを作成する必要なくデータをスコアリングできます。
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 92%
+source-wordcount: '453'
+ht-degree: 93%
 
 ---
 
