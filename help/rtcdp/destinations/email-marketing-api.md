@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 電子メールマーケティングの宛先の作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1610'
-ht-degree: 81%
+source-wordcount: '1621'
+ht-degree: 80%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 81%
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] は、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+* [[!DNLカタログサービス]](../../catalog/home.md): [!DNL Catalog] は、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
+* [[!DNLサンドボックス]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 以下の節では、アドビのリアルタイム CDP で電子メールマーケティングの宛先に対してデータをアクティブ化するために必要な追加情報を示しています。
 
