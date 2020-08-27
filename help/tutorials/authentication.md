@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Experience Platform API の認証とアクセス
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 42%
+source-wordcount: '853'
+ht-degree: 41%
 
 ---
 
@@ -47,7 +47,7 @@ Adobe I/O で統合を作成する前に、IMS 組織の製品の開発者権限
 
 **開発者アクセスの獲得**
 
-Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization&#39;s products using the [!DNL Admin Console](https://adminconsole.adobe.com/).
+Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization&#39;s products using the [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -85,13 +85,13 @@ AdobeDeveloper Consoleを使用して、次の3つのアクセス資格情報を
 
 ### 1回限りのセットアップ
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. 次に、Adobeデベロッパーコンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
+[Adobeデベロッパーコンソールに移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe開発者コンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
 新しいプロジェクトを作成したら、プ **[!UICONTROL ロジェクト概要]** 画面の「 _API_ 」をクリックします。
 
 ![](images/authentication/add-api-button.png)
 
-API __ 追加画面が表示されます。 Adobe Experience Platformの製品アイコンをクリックし、「 **[!UICONTROL Experience PlatformAPI]** 」を選択してから、「 **[!UICONTROL 次へ]**」をクリックします。
+API __ 追加画面が表示されます。 Adobe Experience Platformの製品アイコンをクリックし、「 **[!UICONTROL Experience PlatformAPI]** 」を選択してから「 **[!UICONTROL 次へ]**」をクリックします。
 
 ![](images/authentication/add-platform-api.png)
 
