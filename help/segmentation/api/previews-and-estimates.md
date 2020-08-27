@@ -4,9 +4,9 @@ solution: Experience Platform
 title: エンドポイントのプレビューと予測
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 28%
 
 ---
@@ -171,7 +171,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、を使用して、指定されたエンティティを検索するために使用でき [!DNL Profile Access API](../../profile/api/entities.md)ます。 |
+| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、 [[!DNLプロファイルアクセスAPI]を使用して、指定されたエンティティを検索するために使用でき](../../profile/api/entities.md)ます。 |
 
 ## 特定の見積ジョブの結果の取得 {#get-estimate}
 
