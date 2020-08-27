@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics
+keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
 solution: Experience Platform
 title: モデルの最適化
 topic: Tutorial
+description: モデルインサイトフレームワークは、Data Science Workspace　のツールをデータサイエンティストに提供し、実験に基づく最適な機械学習モデルのための迅速で十分な情報に基づいた選択を可能にします。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1249'
 ht-degree: 89%
 
 ---
 
 
-# モデルの最適化 モデルインサイトフレームワークの使用
+# モデルインサイトフレームワークを使用したモデルの最適化
 
 The Model Insights Framework provides the data scientist with tools in [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. このフレームワークにより、機械学習ワークフローの速度と効果だけでなく、データサイエンティストによる使いやすさも向上します。これは、モデルの調整を支援するために、機械学習アルゴリズムのタイプごとにデフォルトのテンプレートを提供することによっておこなわれます。結果的に、データサイエンティストと市民データサイエンティストは、エンドカスタマーに対してより適切なモデル最適化の決定をおこなうことができます。
 
