@@ -5,10 +5,10 @@ seo-title: リアルタイム顧客データプロファイルでのプライバ
 description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 61%
+source-wordcount: '312'
+ht-degree: 60%
 
 ---
 
@@ -25,8 +25,8 @@ Adobe Experience Platform [!DNL Privacy Service] では、GDPRやCCPAなどの�
 
 個々の GDPR および CCPA データ主体アクセス要求を送信して顧客データにアクセスし、削除する方法は 2 つあります。
 
-* Use the [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. 手順については、『[Privacy Service の UI チュートリアル](../../privacy-service/ui/overview.md)』を参照してください。
-* Use the [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. 手順については、『[Privacy Service API のチュートリアル](../../privacy-service/api/getting-started.md)』を参照してください。
+* Use the [[!DNL Privacy Service UI]](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. 手順については、『[Privacy Service の UI チュートリアル](../../privacy-service/ui/overview.md)』を参照してください。
+* Use the [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. 手順については、『[Privacy Service API のチュートリアル](../../privacy-service/api/getting-started.md)』を参照してください。
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
