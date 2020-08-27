@@ -4,10 +4,10 @@ solution: Experience Platform
 title: エクスペリエンスデータモデル（XDM）システムのトラブルシューティングガイド
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 66%
+source-wordcount: '1839'
+ht-degree: 65%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 66%
 
 This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) System, as well as a troubleshooting guide for common errors. Adobe Experience Platform の他のサービスに関する質問やトラブルシューティングについては、[Experience Platform のトラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
-**[!DNL Experience Data Model](XDM)**は、顧客体験管理のための標準化されたスキーマを定義するオープンソース仕様です。 The methodology on which[!DNL Experience Platform]is built,**XDM System **, operationalizes[!DNL Experience Data Model]schemas for use by[!DNL Platform]services. に&#x200B;**[!DNL Schema Registry]**は、ユーザーインターフェイスと、内部にアクセスするRESTful APIが用意さ&#x200B;**[!DNL Schema Library]**れてい[!DNL Experience Platform]ます。 詳しくは、[XDM のドキュメント](home.md)を参照してください。
+**[!DNL Experience Data Model](XDM)** は、顧客体験管理のための標準化されたスキーマを定義するオープンソース仕様です。 The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services. に **[!DNL Schema Registry]** は、ユーザーインターフェイスと、内部にアクセスするRESTful APIが用意さ **[!DNL Schema Library]** れてい [!DNL Experience Platform]ます。 詳しくは、[XDM のドキュメント](home.md)を参照してください。
 
 ## FAQ
 
@@ -42,7 +42,7 @@ For more information, see the [schema identification](api/getting-started.md#sch
 
 ### スキーマでは重大な変更をいつ回避し始めますか？
 
-Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [!DNL Real-time Customer Profile](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
+Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
 
 ### 長いフィールドタイプの最大サイズはどれくらいですか？
 
@@ -52,7 +52,7 @@ For more information on field types, see the [Defining XDM field types](api/appe
 
 ### スキーマの ID を定義するには、どうすればよいですか？
 
-In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. キーフィールドを「ID」としてマークすることで、スキーマで ID が定義されます。Commonly used fields for identity include email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html), CRM ID, and other unique ID fields.
+In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. キーフィールドを「ID」としてマークすることで、スキーマで ID が定義されます。Commonly used fields for identity include email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html), CRM ID, and other unique ID fields.
 
 フィールドは、API またはユーザーインターフェイスを使用して ID としてマークできます。
 
@@ -76,7 +76,7 @@ UI で ID を管理する方法について詳しくは、スキーマエディ�
 
 ### で使用するスキーマを有効にする方法を教えてく [!DNL Real-time Customer Profile]ださい。
 
-Schemas are enabled for use in [!DNL Real-time Customer Profile](../profile/home.md) through the addition of a &quot;union&quot; tag, located in the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
+Schemas are enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md) through the addition of a &quot;union&quot; tag, located in the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
 
 #### Enabling an existing schema for [!DNL Profile] using the API
 
