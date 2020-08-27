@@ -5,10 +5,10 @@ title: オプトアウトの遵守
 topic: overview
 description: 'Experience Platformを使用すると、顧客は、データの使用状況やストレージに関するオプトアウトリクエストをリアルタイム顧客プロファイル内で送信できます。 これらのオプトアウトリクエストは、カリフォルニア州消費者プライバシー法（CCPA）に含まれています。CCPA は、カリフォルニア州の在住者に対して、個人データにアクセスし削除する権利や、個人データが販売または開示されたか（そして誰に対して）を知る権利を付与しています。 '
 translation-type: tm+mt
-source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 64%
+source-wordcount: '1030'
+ht-degree: 63%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 64%
 
 Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. オプトアウトリクエストを処理する前に、次のサービスのドキュメントを確認してください。
 
-- [!DNL Real-time Customer Profile](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
-- [!DNL Experience Data Model (XDM)](../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md):組織が、内部の顧客データに関するデータのプライバシー規制へのコンプライアンスを自動化できるよう支援 [!DNL Platform]します。
+- [[!DNLリアルタイム顧客プロファイル]](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [[!DNLAdobe Experience Platformセグメントサービス]](./home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [[!DNLAdobe Experience Platform Privacy Service]](../privacy-service/home.md):組織が、内部の顧客データに関するデータのプライバシー規制へのコンプライアンスを自動化できるよう支援 [!DNL Platform]します。
 
 ## オプトアウト mixin 
 
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 API やユーザーインターフェイスを使用したセグメント定義やオーディエンスの操作など、セグメント化の詳細については、最初に[セグメント化の概要](./home.md)に関するドキュメントを参照してください。
 
-To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [!DNL Privacy Service](../privacy-service/home.md).
+To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [[!DNL Privacy Service]](../privacy-service/home.md).
