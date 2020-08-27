@@ -5,7 +5,7 @@ title: ノートブックを使用したデータの分析
 topic: Tutorial
 description: このチュートリアルでは、Data Science Workspace に組み込まれている Jupyter ノートブックを使用してデータへのアクセス、データの調査、データの視覚化をおこなう方法について説明します。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 83%
@@ -91,7 +91,7 @@ Jupyter ニートブックで、左側の「**Data**」タブからデータに�
 
 >[!TIP]
 >
->refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
+>Refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
