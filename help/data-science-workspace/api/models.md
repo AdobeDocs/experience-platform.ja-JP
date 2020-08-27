@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
 solution: Experience Platform
 title: モデル
 topic: Developer guide
+description: モデルは、履歴データと構成を使用してビジネス使用例を解決するために訓練される機械学習レシピのインスタンスです。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '821'
-ht-degree: 66%
+source-wordcount: '846'
+ht-degree: 67%
 
 ---
 
