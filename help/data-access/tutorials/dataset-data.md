@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: データアクセスの概要
 topic: tutorial
+description: このドキュメントでは、Adobe Experience Platform のデータアクセス API を使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする手順を説明するチュートリアルを紹介します。また、ページングや部分的なダウンロードなど、データアクセス API の固有の機能の一部も紹介します。
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1332'
-ht-degree: 74%
+source-wordcount: '1384'
+ht-degree: 73%
 
 ---
 
@@ -18,7 +19,7 @@ This document provides a step-by-step tutorial that covers how to locate, access
 
 ## はじめに
 
-このチュートリアルでは、データセットの作成方法と設定方法について説明します。詳しくは、「[データセ ット作成のチュートリアル](../../catalog/datasets/create.md)」を参照してください。
+このチュートリアルでは、データセットの作成方法と設定方法について、十分な理解を得ている必要があります。 詳しくは、「[データセ ット作成のチュートリアル](../../catalog/datasets/create.md)」を参照してください。
 
 以下の節では、Platform API を正しく呼び出すために知っておく必要がある追加情報を示します。
 
