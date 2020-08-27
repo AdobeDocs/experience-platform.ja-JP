@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 単一の HTTP リクエストで複数のメッセージをストリーミング
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1459'
-ht-degree: 74%
+source-wordcount: '1466'
+ht-degree: 73%
 
 ---
 
@@ -22,8 +22,8 @@ This document provides a tutorial for sending multiple messages to [!DNL Experie
 
 This tutorial requires a working understanding of Adobe Experience Platform [!DNL Data Ingestion]. このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-- [データ取り込みの概要](../home.md): 取り込みメソッドやData Connectorsを含む、のコアコンセプト [!DNL Experience Platform Data Ingestion]について説明します。
-- [ストリーミング取り込みの概要](../streaming-ingestion/overview.md): ストリーミング接続、データセット、およびなど、ストリーミング取り込みのワークフローと構築ブロック [!DNL XDM Individual Profile]で [!DNL XDM ExperienceEvent]す。
+- [データ取り込みの概要](../home.md):取り込みメソッドやData Connectorsを含む、のコアコンセプト [!DNL Experience Platform Data Ingestion]について説明します。
+- [ストリーミング取り込みの概要](../streaming-ingestion/overview.md):ストリーミング接続、データセット、およびなど、ストリーミング取り込みのワークフローと構築ブロック [!DNL XDM Individual Profile]で [!DNL XDM ExperienceEvent]す。
 
 また、このチュートリアルでは、 API を正しく呼び出すために、[Adobe Experience Platform に対する認証](../../tutorials/authentication.md)のチュートリアルを完了していることが求められます。[!DNL Platform]認証に関するチュートリアルを完了すると、このチュートリアルで必要な認証ヘッダーの値が提供されます。このヘッダーは、サンプル呼び出しで次のように示されます。
 
@@ -508,7 +508,7 @@ The first message was successfully sent to [!DNL Platform] and is not affected b
     },
 ```
 
-3 番目のメッセージは、ヘッダーで無効な IMS 組織 ID が使用されているため失敗しました。IMS 組織は、投稿先の {CONNECTION_ID} と一致する必要があります。To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). 以前に作成したストリーミング接続の取得方法の例については、[ストリーミング接続の取得](./create-streaming-connection.md#get-data-collection-url)に関する節を参照してください。
+3 番目のメッセージは、ヘッダーで無効な IMS 組織 ID が使用されているため失敗しました。IMS 組織は、投稿先の {CONNECTION_ID} と一致する必要があります。To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). 以前に作成したストリーミング接続の取得方法の例については、[ストリーミング接続の取得](./create-streaming-connection.md#get-data-collection-url)に関する節を参照してください。
 
 4 番目のメッセージは、予期された XDM スキーマに従わなかったため失敗しました。リクエストのヘッダーと本文に含まれる `xdmSchema` が、`{DATASET_ID}` の XDM スキーマと一致していません。Correcting the schema in the message header and body allows it to pass DCCS validation and be successfully sent to [!DNL Platform]. The message body must also be updated to match the XDM schema of the `{DATASET_ID}` for it to pass streaming validation on [!DNL Platform]. Platform に正常にストリーミングされるメッセージに対する影響の詳細については、このチュートリアルの「[取得したメッセージの確認](#confirm-messages-ingested)」の節を参照してください。
 
@@ -528,7 +528,7 @@ Batch messages that pass streaming validation on [!DNL Platform] are ingested in
 
 ## 次の手順
 
-Now that you know how to send multiple messages in a single request and verify when messages are successfully ingested into the target dataset, you can start streaming your own data to [!DNL Platform]. For an overview of how to query and retrieve ingested data from [!DNL Platform], see the [!DNL Data Access](../../data-access/tutorials/dataset-data.md) guide.
+Now that you know how to send multiple messages in a single request and verify when messages are successfully ingested into the target dataset, you can start streaming your own data to [!DNL Platform]. For an overview of how to query and retrieve ingested data from [!DNL Platform], see the [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) guide.
 
 ## 付録
 
