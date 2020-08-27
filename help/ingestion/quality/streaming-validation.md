@@ -5,10 +5,10 @@ title: ストリーミング取り込みの検証
 topic: overview
 description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データを Adobe Experience Platform にアップロードできます。ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 85%
+source-wordcount: '852'
+ht-degree: 84%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 85%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md):データの送信先のメソッドの1つ [!DNL Experience Platform]。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+- [[!DNLストリーミング取り込み]](../streaming-ingestion/overview.md):データの送信先のメソッドの1つ [!DNL Experience Platform]。
 
 ### API 呼び出し例の読み取り
 
