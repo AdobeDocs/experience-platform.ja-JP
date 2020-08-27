@@ -3,11 +3,11 @@ keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popula
 solution: Experience Platform
 title: JupyterLab ユーザーガイド
 topic: Overview
-description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。
+description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。このドキュメントでは、JupyterLab とその機能の概要と、一般的なアクションを実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3684'
+source-wordcount: '3702'
 ht-degree: 55%
 
 ---
