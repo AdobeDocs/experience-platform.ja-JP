@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ストリーミング送信先への接続とデータのアクティブ化
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1809'
-ht-degree: 61%
+source-wordcount: '1818'
+ht-degree: 60%
 
 ---
 
@@ -30,8 +30,8 @@ If you prefer to use the user interface in Adobe&#39;s Real-time CDP to connect 
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] は、Experience Platform内のデータの場所と系列のレコードシステムです。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [[!DNLカタログサービス]](../../catalog/home.md): [!DNL Catalog] は、Experience Platform内のデータの場所と系列のレコードシステムです。
 * [サンドボックス](../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 次のセクションでは、AdobeReal-time CDPでストリーミング宛先に対してデータをアクティブ化する際に知っておく必要がある追加情報について説明します。
