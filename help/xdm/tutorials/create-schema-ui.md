@@ -5,9 +5,9 @@ title: スキーマエディターを使用したスキーマの作成
 topic: tutorials
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: ed100e2acfcfc3dfabef6ccfbe88e98489193567
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '3512'
+source-wordcount: '3528'
 ht-degree: 21%
 
 ---
@@ -27,9 +27,9 @@ If you prefer to compose a schema using the [!DNL Schema Registry] API instead, 
 
 このチュートリアルでは、スキーマの作成に関わるAdobe Experience Platformのさまざまな側面について、十分に理解する必要があります。 このチュートリアルを始める前に、次の概念に関するドキュメントを確認してください。
 
-* [!DNL Experience Data Model (XDM)](../home.md):顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
    * [スキーマ合成の基本](../schema/composition.md)：XDM スキーマとその構築ブロック（クラス、mixin、データ型、フィールドなど）の概要です。
-* [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 ## Browse existing schemas in the [!UICONTROL Schemas] workspace {#browse}
 
@@ -245,11 +245,11 @@ Now all data ingested into the &quot;[!DNL loyaltyId]&quot; field will be used t
 >
 > スキーマフィールドをプライマリ ID として設定した場合、後でスキーマ内の別のフィールドをプライマリとして設定しようとすると、エラーメッセージが表示されます。各スキーマには、1 つのプライマリ ID フィールドのみを含めることができます。
 
-To learn more about working with identities in [!DNL Experience Platform], please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
+To learn more about working with identities in [!DNL Experience Platform], please review the [[!DNL Identity Service]](../../identity-service/home.md) documentation.
 
 ## スキーマを [!DNL Real-time Customer Profile] {#profile}
 
-[!DNL Real-time Customer Profile](../../profile/home.md) でアイデンティティデータ [!DNL Experience Platform] を活用して、各顧客の全体的な表示を提供します。 このサービスは、堅牢で360°の顧客属性プロファイルを構築し、お客様がと統合されたあらゆるシステムにわたって持つすべてのインタラクション顧客のタイムスタンプのあるアカウントを作成 [!DNL Experience Platform]します。
+[[!DNLリアルタイム顧客プロファイル]](../../profile/home.md) 。個々の顧客の全体的な表示を提供するために、でIDデータ [!DNL Experience Platform] を利用します。 このサービスは、堅牢で360°の顧客属性プロファイルを構築し、お客様がと統合されたあらゆるシステムにわたって持つすべてのインタラクション顧客のタイムスタンプのあるアカウントを作成 [!DNL Experience Platform]します。
 
 In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. 最初にプライマリIDを定義せずにスキーマを有効にしようとすると、エラーメッセージが表示されます。
 
@@ -277,7 +277,7 @@ Select **[!UICONTROL Profile]** and a popover appears, asking you to confirm tha
 
 これで、新しいスキーマを使用してにデータを取り込むことができ [!DNL Platform]ます。 データの取得にスキーマを使用した後は、追加的な変更のみがおこなわれる場合があります。スキーマバージョン管理について詳しくは、「[スキーマ合成の基本](../schema/composition.md)」を参照してください。
 
-これで、UIでスキーマの関係を [定義するチュートリアルに従って、「Loyality Members](./relationship-ui.md) 」スキーマに新しい関係フィールドを追加できます。
+これで、UIでスキーマの関係を [定義するチュートリアルに従って、「Loyalty Members](./relationship-ui.md) 」スキーマに新しい関係フィールドを追加できます。
 
 The &quot;Loyalty Members&quot; schema is also available to be viewed and managed using the [!DNL Schema Registry] API. To begin working with the API, start by reading the [[!DNL Schema Registry API] developer guide](../api/getting-started.md).
 
