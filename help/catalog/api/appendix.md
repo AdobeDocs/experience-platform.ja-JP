@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
 solution: Experience Platform
 title: カタログサービス開発者ガイドの付録
 topic: developer guide
+description: このドキュメントでは、Adobe Experience PlatformのカタログAPIを使用する際に役立つ追加情報を説明します。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 78%
+source-wordcount: '910'
+ht-degree: 77%
 
 ---
 
