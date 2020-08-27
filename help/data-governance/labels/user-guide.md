@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
 solution: Experience Platform
 title: データ使用状況ラベルのユーザーガイド
 topic: labels
+description: このユーザガイドでは、Adobe Experience Platformのユーザインターフェイス内でデータ使用ラベル（DULEラベルとも呼ばれます）を使用する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '1109'
-ht-degree: 81%
+source-wordcount: '1132'
+ht-degree: 79%
 
 ---
 
@@ -30,15 +31,15 @@ This user guide covers steps for working with data usage labels (also known as D
 >
 >In this example, a dataset is created using a pre-configured [!DNL Experience Data Model] (XDM) schema. XDM スキーマについて詳しくは、「[XDM システムの概要](../../xdm/home.md)」と「[スキーマ構成の基本](../../xdm/schema/composition.md)」を参照してください。
 
-新しいデータセットを作成するには、「_[!UICONTROL データセット]_」ワークスペースの右上にある「**[!UICONTROL &#x200B;データセットを作成&#x200B;]**」をクリックします。
+新しいデータセットを作成するには、「_[!UICONTROL データセット]_」ワークスペースの右上にある「**[!UICONTROL データセットを作成]**」をクリックします。
 
 ![](../images/labels/create_dataset.png)
 
-「_[!UICONTROL データセットを作成]_」画面が表示されます。ここで、「**[!UICONTROL &#x200B;スキーマからデータセットを作成&#x200B;]**」をクリックします。
+「_[!UICONTROL データセットを作成]_」画面が表示されます。ここで、「**[!UICONTROL スキーマからデータセットを作成]**」をクリックします。
 
 ![スキーマからデータセットを作成](../images/labels/dataset_create.png)
 
-「_[!UICONTROL スキーマを選択]_」画面が表示され、データセットの作成に使用できるすべてのスキーマが示されます。スキーマの横にあるラジオボタンをクリックして、スキーマを選択します。右側の「_[!UICONTROL &#x200B;スキーマ]_」セクションには、選択したスキーマの追加の詳細が表示されます。スキーマを選択したら、「**[!UICONTROL 次へ]**」をクリックします。
+「_[!UICONTROL スキーマを選択]_」画面が表示され、データセットの作成に使用できるすべてのスキーマが示されます。スキーマの横にあるラジオボタンをクリックして、スキーマを選択します。右側の「_[!UICONTROL スキーマ]_」セクションには、選択したスキーマの追加の詳細が表示されます。スキーマを選択したら、「**[!UICONTROL 次へ]**」をクリックします。
 
 ![データセットスキーマの選択](../images/labels/dataset_schema.png)
 
@@ -46,13 +47,13 @@ This user guide covers steps for working with data usage labels (also known as D
 
 ![データセットの名前と説明を設定](../images/labels/dataset_configure.png)
 
-「_[!UICONTROL データセットアクティビティ]_」ページが開き、新しく作成したデータセットに関する情報が表示されます。この例では、データセットの名前は「ロイヤルティーメンバー」なので、トップナビゲーションには_&#x200B;データセット／ロイヤルティーメンバー&#x200B;_と表示されます。
+「_[!UICONTROL データセットアクティビティ]_」ページが開き、新しく作成したデータセットに関する情報が表示されます。この例では、データセットの名前は「ロイヤルティーメンバー」なので、トップナビゲーションには&#x200B;_データセット／ロイヤルティーメンバー_&#x200B;と表示されます。
 
 ![「データセットアクティビティ」ページ](../images/labels/dataset_activity.png)
 
 ### データセットへのデータ使用状況ラベルの追加 {#add-labels}
 
-「_[!UICONTROL データセット]_」ワークスペースで新しいデータセットを作成するか、リストから既存のデータセットを選択したら、「**[!UICONTROL &#x200B;データガバナンス&#x200B;]**」をクリックして「_[!UICONTROL &#x200B;データガバナンス]_」ワークスペースを開きます。ワークスペースでは、データセットレベルとフィールドレベルでデータ使用状況ラベルを管理できます。
+「_[!UICONTROL データセット]_」ワークスペースで新しいデータセットを作成するか、リストから既存のデータセットを選択したら、「**[!UICONTROL データガバナンス]**」をクリックして「_[!UICONTROL データガバナンス]_」ワークスペースを開きます。ワークスペースでは、データセットレベルとフィールドレベルでデータ使用状況ラベルを管理できます。
 
 ![データセットの「データガバナンス」タブ](../images/labels/dataset_data_governance.png)
 
@@ -60,7 +61,7 @@ This user guide covers steps for working with data usage labels (also known as D
 
 ![データセットレベルでラベルを編集](../images/labels/dataset_labels_edit_button.png)
 
-「_[!UICONTROL ガバナンスラベルを編集]_」ダイアログが開きます。ダイアログ内で、データセットに適用するラベルの横にあるボックスをオンにします。これらのラベルは、データセット内のすべてのフィールドに継承されることに注意してください。各ボックスをオンにすると、「_[!UICONTROL &#x200B;適用されたラベル]_」ヘッダーが更新され、選択したラベルが表示されます。目的のラベルを選択したら、「**[!UICONTROL 変更を保存]**」をクリックします。
+「_[!UICONTROL ガバナンスラベルを編集]_」ダイアログが開きます。ダイアログ内で、データセットに適用するラベルの横にあるボックスをオンにします。これらのラベルは、データセット内のすべてのフィールドに継承されることに注意してください。各ボックスをオンにすると、「_[!UICONTROL 適用されたラベル]_」ヘッダーが更新され、選択したラベルが表示されます。目的のラベルを選択したら、「**[!UICONTROL 変更を保存]**」をクリックします。
 
 <img alt="データセットレベルでガバナンスラベルを適用" src="../images/labels/apply-labels-dataset.png" width="700"><br>
 
@@ -86,7 +87,7 @@ This user guide covers steps for working with data usage labels (also known as D
 
 <img alt="個々のフィールドのガバナンスラベルの編集" src="../images/labels/field-label-inheritance.png" width="700"><br>
 
-使用する各ラベルの横にあるチェックボックスをオンにして、フィールドレベルのラベルを選択します。ラベルを選択すると、「_[!UICONTROL 適用されたラベル]_」ヘッダーが更新され、「_[!UICONTROL &#x200B;選択されたフィールド]_」ヘッダーに表示されるフィールドに適用されるラベルが表示されます。フィールドレベルのラベルの選択が完了したら、「**[!UICONTROL 変更を保存]**」をクリックします。
+使用する各ラベルの横にあるチェックボックスをオンにして、フィールドレベルのラベルを選択します。ラベルを選択すると、「_[!UICONTROL 適用されたラベル]_」ヘッダーが更新され、「_[!UICONTROL 選択されたフィールド]_」ヘッダーに表示されるフィールドに適用されるラベルが表示されます。フィールドレベルのラベルの選択が完了したら、「**[!UICONTROL 変更を保存]**」をクリックします。
 
 <img alt="フィールドレベルのラベルの適用" src="../images/labels/apply-labels-field.png" width="700"><br>
 
@@ -108,9 +109,9 @@ UIの「 *[!UICONTROL ポリシー]* 」ワークスペース内に、独自の�
 
 [ *[!UICONTROL ラベルを作成]* ]ダイアログが表示されます。 ここから、新しいラベルに次の情報を入力します。
 
-* **[!UICONTROL 識別子]**: ラベルの一意の識別子。 この値は参照用に使用するので、短く簡潔にする必要があります。
-* **[!UICONTROL 名前]**: ラベルのわかりやすい表示名。
-* **[!UICONTROL 説明]**: （オプション）詳細なコンテキストを提供するためのラベルの説明。
+* **[!UICONTROL 識別子]**:ラベルの一意の識別子。 この値は参照用に使用するので、短く簡潔にする必要があります。
+* **[!UICONTROL 名前]**:ラベルのわかりやすい表示名。
+* **[!UICONTROL 説明]**:（オプション）詳細なコンテキストを提供するためのラベルの説明。
 
 完了したら、「**[!UICONTROL Create]**」をクリックします。
 
