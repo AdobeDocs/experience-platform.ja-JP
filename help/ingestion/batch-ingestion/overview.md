@@ -5,9 +5,9 @@ title: Adobe Experience Platform バッチインジェストの概要
 topic: overview
 description: Batch Ingestion API を使用すると、データをバッチファイルとして Adobe Experience Platform に取り込むことができます。CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model（XDM）レジストリの既知のスキーマに適合するデータを取り込むことができます。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1199'
 ht-degree: 83%
 
 ---
@@ -35,7 +35,7 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 ### [!DNL Data Ingestion] 前提条件
 
 - アップロードするデータは、Parquet 形式または JSON 形式である必要があります。
-- で作成されたデータセット [!DNL Catalog services](../../catalog/home.md)。
+- A dataset created in the [[!DNL Catalog services]](../../catalog/home.md).
 - Parquet ファイルの内容は、アップロード先のデータセットのスキーマのサブセットと一致している必要があります。
 - 認証後に固有のアクセストークンを取得する必要があります。
 
