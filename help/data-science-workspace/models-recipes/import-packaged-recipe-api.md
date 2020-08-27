@@ -4,9 +4,9 @@ solution: Experience Platform
 title: パッケージ化されたレシピ（API）の読み込み
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '960'
 ht-degree: 62%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 62%
 
 # パッケージ化されたレシピ（API）の読み込み
 
-This tutorial uses the [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface.
+This tutorial uses the [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface.
 
 Before getting started, it is important to note that Adobe Experience Platform [!DNL Data Science Workspace] uses different terms to refer to similar elements within the API and UI. API の用語はこのチュートリアル全体で使用され、次の表に、関連する用語の概要を示します。
 
