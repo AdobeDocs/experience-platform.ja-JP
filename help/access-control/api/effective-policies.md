@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;effective policies;access control api
 solution: Experience Platform
 title: 有効なポリシーの表示
 topic: developer guide
+description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントは、Adobe Experience Platform向けアクセス制御APIを使用して効果的なポリシーを表示する方法のガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 75%
+source-wordcount: '309'
+ht-degree: 72%
 
 ---
 
