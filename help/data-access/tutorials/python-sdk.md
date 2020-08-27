@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;python sdk;data access api
 solution: Experience Platform
 title: セキュアPythonデータアクセスSDK
 topic: tutorial
+description: Secure Python Data Access SDKは、Adobe Experience Platformからのデータセットの読み取りと書き込みを可能にするソフトウェア開発キットです。
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '500'
 ht-degree: 1%
 
 ---
@@ -35,7 +36,7 @@ For more information on sandboxes in [!DNL Platform], see the [sandbox overview 
 
 デフォルトでは、サービスエンドポイントは統合環境エンドポイントに設定されます。 その結果、実稼働環境を指すようにするには、次の環境変数を次の値に設定します。
 
-| 変数 | エンドポイント |
+| Variable | エンドポイント |
 | -------- | -------- |
 | `ENV_CATALOG_URL` | `https://platform.adobe.io/data/foundation/catalog/` |
 | `ENV_QUERY_SERVICE_URL` | `https://platform.adobe.io/data/foundation/query` |
@@ -44,7 +45,7 @@ For more information on sandboxes in [!DNL Platform], see the [sandbox overview 
 
 また、資格情報を環境変数として追加できます。
 
-| 変数 | 値 |
+| Variable | 値 |
 | -------- | ----- |
 | `ORG_ID` | ID。 `{IMS_ORG}` |
 | `SERVICE_API_KEY` | あなたの `{API_KEY}` 価値。 |
