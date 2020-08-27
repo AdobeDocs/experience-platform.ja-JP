@@ -5,10 +5,10 @@ title: データ取得の監視
 topic: overview
 description: このユーザーガイドでは、Adobe Experience Platform ユーザーインターフェイス内でデータを監視する方法の手順を説明します。このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 70%
+source-wordcount: '560'
+ht-degree: 69%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 70%
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-「*[!UICONTROL ストリーミングエンドツーエンド]*」の監視ページが表示されます。このワークスペースには、受信したストリームイベントの割合を示すグラフ [!DNL Platform]、によって正常に処理されたストリームイベントの割合を示すグラフ、 [!DNL Real-time Customer Profile](../../profile/home.md)および入力データの詳細リストが表示されます。
+「*[!UICONTROL ストリーミングエンドツーエンド]*」の監視ページが表示されます。このワークスペースには、受信したストリームイベントの割合を示すグラフ [!DNL Platform]と、[!DNL Real-time Customer Customerプロファイル]によって正常に処理されたストリームイベントの割合 [](../../profile/home.md)、および入力データの詳細なリストが表示されます。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,7 +61,7 @@ ht-degree: 70%
 
 ## バッチエンドツーエンドデータの取得の監視
 
-In the [!DNL Experience Platform UI](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu.
+In the [[!DNL Experience Platform UI]](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
