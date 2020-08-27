@@ -4,10 +4,10 @@ solution: Adobe Experience Platform Data Science Workspace
 title: フィーチャパイプラインの作成
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 30%
+source-wordcount: '1372'
+ht-degree: 29%
 
 ---
 
@@ -438,4 +438,4 @@ Dockerイメージの場所を特定したら、に対するPOSTを実行して 
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-このドキュメントを読むと、Model Authoring SDKを使用してフィーチャパイプラインを作成し、Dockerイメージを作成し、DockerイメージURLを使用して、 [!DNL Sensei Machine Learning] APIを使用してフィーチャパイプラインモデルを作成します。 これで、を使用して、データセットの変換とデータ機能の抽出をスケール設定で続行する準備が整い [!DNL Sensei Machine Learning API](../api/getting-started.md)ました。
+このドキュメントを読むと、Model Authoring SDKを使用してフィーチャパイプラインを作成し、Dockerイメージを作成し、DockerイメージURLを使用して、 [!DNL Sensei Machine Learning] APIを使用してフィーチャパイプラインモデルを作成します。 これで、[!DNL Sensei Machine Learning API]を使用して、データセットの変換とデータ機能の抽出をスケール設定で続行する準備が整いました [](../api/getting-started.md)。
