@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile;manage permissions
 solution: Experience Platform
 title: 製品プロファイルに対する権限の管理
 topic: user guide
+description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントは、Platformの製品プロファイルの権限を管理する方法のガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 100%
+source-wordcount: '319'
+ht-degree: 94%
 
 ---
 
