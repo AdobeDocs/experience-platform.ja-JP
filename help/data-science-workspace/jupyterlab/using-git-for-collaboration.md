@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gitを使用したJupyterLabでのコラボレーション
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '255'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 1%
 
 ## 環境 [!DNL Git] に接続し [!DNL Data Science Workspace JupyterLab Notebooks] ます
 
-環境を起動 [!DNL Adobe Experience Platform] し、 [!DNL JupyterLabs Notebooks](https://platform.adobe.com/notebooks/jupyterLab) 開始に移動する。
+[!DNL JupterLabs Notebooks]環境 [!DNL Adobe Experience Platform] を起動し、 [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) 開始に移動して、ノートブックを作成します。
 
 内 [!DNL JupyterLab]で、「 **[!UICONTROL ファイル]** 」を選択し、「 **[!UICONTROL 新規」の上にマウスポインターを置きます]**。 表示されるドロップダウンで[ **[!UICONTROL ターミナル]**]を選択します。
 
@@ -58,4 +58,4 @@ ht-degree: 1%
 
 ## 次の手順
 
-リポジトリの複製が完了したら、通常はローカルコンピューター上で行うのと同じようにGitを使用して、ノートブック上の他のユーザーと共同作業できます。 内で実行できる操作の詳細については、を参照し [!DNL JupyterLab]てくだ [!DNL JupyterLab user guide](./overview.md)さい。
+リポジトリの複製が完了したら、通常はローカルコンピューター上で行うのと同じようにGitを使用して、ノートブック上の他のユーザーと共同作業できます。 内で実行できる操作の詳細につ [!DNL JupyterLab]いては、 [[!DNL JupyterLab user guide]を参照してください](./overview.md)。
