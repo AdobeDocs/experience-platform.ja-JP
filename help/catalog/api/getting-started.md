@@ -5,17 +5,17 @@ title: カタログサービス開発者ガイド
 topic: developer guide
 description: この開発者ガイドでは、カタログ API の使用を始める手順を説明します。次に、カタログを使用して主要な操作を実行するためのサンプル API 呼び出しを提供します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 46%
+source-wordcount: '588'
+ht-degree: 45%
 
 ---
 
 
 # [!DNL Catalog Service] 開発ガイド
 
-[!DNL Catalog Service] は、Adobe Experience Platform内のデータの位置と系統に関する記録システムです。 [!DNL Catalog] は、データ自体にアクセスすることなく、データに関する情報を検索できるメタデータストア（「カタログ」） [!DNL Experience Platform]として機能します。 詳しくは、「[カタログの概要](../home.md)」を参照してください。
+[!DNL Catalog Service] は、Adobe Experience Platform内のデータの位置と系統に関する記録システムです。 [!DNL Catalog] は、データ自体にアクセスすることなく、データに関する情報を検索できるメタデータストア（「カタログ」） [!DNL Experience Platform]として機能します。 See the [[!DNL Catalog] overview](../home.md) for more information.
 
 This developer guide provides steps to help you start using the [!DNL Catalog] API. The guide then provides sample API calls for performing key operations using [!DNL Catalog].
 
