@@ -5,10 +5,10 @@ title: Adobe Experience Platform ソースコネクタの概要
 topic: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 53%
+source-wordcount: '866'
+ht-degree: 60%
 
 ---
 
@@ -47,68 +47,68 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
 
-- [[!DNL Azure Data LakeストレージGen2]](connectors/cloud-storage/adls-gen2.md) コネクタ
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) コネクタ
-- [[!DNLAmazonKinesis]](connectors/cloud-storage/kinesis.md) connector
-- [[!DNLAmazonS3]](connectors/cloud-storage/s3.md) コネクタ
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) コネクタ
-- [[!DNL Azureイベントハブ]](connectors/cloud-storage/eventhub.md) コネクタ
-- [[!DNL Azure Fileストレージ]](connectors/cloud-storage/azure-file-storage.md) コネクタ
-- [[!DNL FTPおよびSFTP]](connectors/cloud-storage/ftp-sftp.md) コネクタ
-- [[!DNL Google Cloudストレージ]](connectors/cloud-storage/google-cloud-storage.md) connector
+- [[!DNL Azure Data Lake Storage Gen2] コネクタ](connectors/cloud-storage/adls-gen2.md)
+- [[!DNL Azure Blob] コネクタ](connectors/cloud-storage/blob.md)
+- [[!DNL Amazon Kinesis] コネクタ](connectors/cloud-storage/kinesis.md)
+- [[!DNL Amazon S3] コネクタ](connectors/cloud-storage/s3.md)
+- [[!DNL Apache HDFS] コネクタ](connectors/cloud-storage/hdfs.md)
+- [[!DNL Azure Event Hubs] コネクタ](connectors/cloud-storage/eventhub.md)
+- [[!DNL Azure File Storage] コネクタ](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL FTP and SFTP] コネクタ](connectors/cloud-storage/ftp-sftp.md)
+- [[!DNL Google Cloud Storage] コネクタ](connectors/cloud-storage/google-cloud-storage.md)
 
 ### 顧客関係管理（CRM）
 
 CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。[!DNL Experience Platform] とからCRMデータを取り込むためのサポート [!DNL Microsoft Dynamics 365] を提供 [!DNL Salesforce]します。 詳しくは、次の関連ドキュメントを参照してください。
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) コネクタ
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) コネクタ
+- [[!DNL Microsoft Dynamics] コネクタ](connectors/crm/ms-dynamics.md)
+- [[!DNL Salesforce] コネクタ](connectors/crm/salesforce.md)
 
 ### 顧客の成功
 
 [!DNL Experience Platform] は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) コネクタ
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) コネクタ
+- [[!DNL Salesforce Service Cloud] コネクタ](connectors/customer-success/salesforce-service-cloud.md)
+- [[!DNL ServiceNow] コネクタ](connectors/customer-success/servicenow.md)
 
 ### データベース
 
 [!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
-- [[!DNLAmazon赤方偏移]](connectors/databases/redshift.md) コネクタ
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) コネクタ
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) コネクタ
-- [[!DNL AzureData Explorer]](connectors/databases/data-explorer.md) コネクタ
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) コネクタ
-- [[!DNL Azure Tableストレージ]](connectors/databases/ats.md) コネクタ
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) コネクタ
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) connector
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) コネクタ
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) connector
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) Connector
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) コネクタ
-- [[!DNL MySQL]](connectors/databases/mysql.md) connector
-- [[!DNL Oracle]](connectors/databases/oracle.md) connector
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) コネクタ
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) コネクタ
+- [[!DNL Amazon Redshift] コネクタ](connectors/databases/redshift.md)
+- [[!DNL Apache Hive on Azure HDInsights] コネクタ](connectors/databases/hive.md)
+- [[!DNL Apache Spark on Azure HDInsights] コネクタ](connectors/databases/spark.md)
+- [[!DNL Azure Data Explorer] コネクタ](connectors/databases/data-explorer.md)
+- [[!DNL Azure Synapse Analytics] コネクタ](connectors/databases/synapse-analytics.md)
+- [[!DNL Azure Table Storage] コネクタ](connectors/databases/ats.md)
+- [[!DNL Couchbase] コネクタ](connectors/databases/couchbase.md)
+- [[!DNL Google BigQuery] コネクタ](connectors/databases/bigquery.md)
+- [[!DNL GreenPlum] コネクタ](connectors/databases/greenplum.md)
+- [[!DNL HP Vertica] コネクタ](connectors/databases/hp-vertica.md)
+- [[!DNL IBM DB2] コネクタ](connectors/databases/ibm-db2.md)
+- [[!DNL Microsoft SQL Server] コネクタ](connectors/databases/sql-server.md)
+- [[!DNL MySQL] コネクタ](connectors/databases/mysql.md)
+- [[!DNL Oracle] コネクタ](connectors/databases/oracle.md)
+- [[!DNL Phoenix] コネクタ](connectors/databases/phoenix.md)
+- [[!DNL PostgreSQL] コネクタ](connectors/databases/postgres.md)
 
 ### マーケティングの自動処理
 
 [!DNL Experience Platform] は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) コネクタ
+- [[!DNL HubSpot] コネクタ](connectors/marketing-automation/hubspot.md)
 
 ### 支払い
 
 [!DNL Experience Platform] は、サードパーティの支払いシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) コネクタ
+- [[!DNL PayPal] コネクタ](connectors/payments/paypal.md)
 
 ### プロトコル
 
 [!DNL Experience Platform] は、サードパーティのプロトコルシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) コネクタ
+- [[!DNL Generic OData] コネクタ](connectors/protocols/odata.md)
 
 ## データ取得におけるソースのアクセス制御
 
