@@ -5,9 +5,9 @@ title: スキーマ合成の基本
 topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
-source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2811'
+source-wordcount: '2839'
 ht-degree: 55%
 
 ---
@@ -62,9 +62,9 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. このデータは、複数のサービスで使用して、個々のエンティティの単一の統合表示を作成できます。したがって、顧客のIDについて考える際は、スキーマの場所に関係なく、どのフィールドを使用して対象を識別できるかを考慮する必要があります。
 
-この処理を行うために、スキーマ内の主要フィールドをIDとしてマークすることができます。 Upon data ingestion, the data in those fields is inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
+この処理を行うために、スキーマ内の主要フィールドをIDとしてマークすることができます。 Upon data ingestion, the data in those fields is inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
 
-Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good &quot;[!UICONTROL Identity]&quot; fields as well.
+Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good &quot;[!UICONTROL Identity]&quot; fields as well.
 
 スキーマ計画段階で顧客の ID を考慮し、可能な限り堅牢なプロファイルを構築するためにデータを統合できるようにすることが重要です。See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
@@ -123,7 +123,7 @@ Since maintaining backwards compatibility is crucial for schema evolution, [!DNL
 
 ### スキーマとデータの取得
 
-In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Datasets are the building blocks for data transformation and tracking for [!DNL Catalog Service](../../catalog/home.md), and generally represent tables or files that contain ingested data. すべてのデータセットは既存の XDM スキーマに基づいており、取得するデータの内容と構造の制約を提供します。詳しくは、「[Adobe Experience Platform でのデータ取得の概要](../../ingestion/home.md)」を参照してください。
+In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Datasets are the building blocks for data transformation and tracking for [[!DNL Catalog Service]](../../catalog/home.md), and generally represent tables or files that contain ingested data. すべてのデータセットは既存の XDM スキーマに基づいており、取得するデータの内容と構造の制約を提供します。詳しくは、「[Adobe Experience Platform でのデータ取得の概要](../../ingestion/home.md)」を参照してください。
 
 ## スキーマの構成要素
 
@@ -194,11 +194,11 @@ For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and 
 
 ダウンストリームサービスやアプリケーションで使用される一部のデータ操作では、特定のフィールドタイプに制約が適用されます。影響を受けるサービスには、次のものが含まれます。
 
-* [!DNL Real-time Customer Profile](../../profile/home.md)
-* [!DNL Identity Service](../../identity-service/home.md)
-* [!DNL Segmentation](../../segmentation/home.md)
-* [!DNL Query Service](../../query-service/home.md)
-* [!DNL Data Science Workspace](../../data-science-workspace/home.md)
+* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md)
+* [[!DNL IDサービス]](../../identity-service/home.md)
+* [[!DNLセグメント]](../../segmentation/home.md)
+* [[!DNLクエリサービス]](../../query-service/home.md)
+* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
 ダウンストリームサービスで使用するスキーマを作成する前に、スキーマが意図するデータ操作のフィールド要件と制約をより深く理解するために、これらのサービスに関する適切なドキュメントを確認してください。
 
