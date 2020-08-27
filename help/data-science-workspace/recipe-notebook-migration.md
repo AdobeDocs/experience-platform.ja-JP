@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;Data Science Workspace;popular topics
+keywords: Experience Platform;Data Science Workspace;popular topics;Recipe migration guides;Notebook migration guide
 solution: Experience Platform
 title: レシピとノートブックの移行ガイド
 topic: Tutorial
+description: 次のガイドは、Data Science Workspaceの既存のレシピとノートブックを移行するために必要な手順と情報を示しています。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '3311'
+source-wordcount: '3330'
 ht-degree: 1%
 
 ---
