@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 64%
+source-wordcount: '682'
+ht-degree: 63%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 64%
 
 **リリース日：2019 年 12 月 12 日**
 
-Adobe Experience Platform内の既存の機能の更新：
+Adobe Experience Platformの既存の機能の更新：
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[!DNL Segmentation Service]](#segmentation)
+* [[!DNL Decisioningサービス]](#decisioning)
+* [[!DNLソース]](#sources)
+* [[!DNL Experience Data Model (XDM)システム]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -34,8 +34,8 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 
 | 機能 | 説明 |
 |--- | ---|
-| 結合されたオーディエンスタブ( [!DNL Segment Builder] | The [!UICONTROL _Segments _]and[!UICONTROL _Audiences_] tabs in the [!DNL Segment Builder] have been combined into a single [!UICONTROL _Audiences _]tab. このタブでは、既存のオーディエンスを参照して検索し、ルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義を作成できます。オーディエンスを参照すると、ルールとしてのオーディエンスのメンバーシップ、または参照先のメンバーシップを定義したルールロジックの完全なオーディエンスのルールロジックのセットのいずれかを新しいセグメント定義に追加できます。 |
-| 結合ポリシーセレクターの新しい場所 | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. セグメント定義の結合ポリシーを選択するには、「[!UICONTROL _フィールド&#x200B;_]」タブの歯車アイコンをクリックし、_[!UICONTROL &#x200B;結合ポリシー]_ドロップダウンメニューを使用して、使用する結合ポリシーを選択します。 |
+| 結合されたオーディエンスタブ( [!DNL Segment Builder] | The [!UICONTROL _Segments_] and [!UICONTROL _Audiences_] tabs in the [!DNL Segment Builder] have been combined into a single [!UICONTROL _Audiences_] tab. このタブでは、既存のオーディエンスを参照して検索し、ルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義を作成できます。オーディエンスを参照すると、ルールとしてのオーディエンスのメンバーシップ、または参照先のメンバーシップを定義したルールロジックの完全なオーディエンスのルールロジックのセットのいずれかを新しいセグメント定義に追加できます。 |
+| 結合ポリシーセレクターの新しい場所 | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. セグメント定義の結合ポリシーを選択するには、「[!UICONTROL _フィールド_]」タブの歯車アイコンをクリックし、_[!UICONTROL 結合ポリシー]_&#x200B;ドロップダウンメニューを使用して、使用する結合ポリシーを選択します。 |
 
 **既知の問題**
 
