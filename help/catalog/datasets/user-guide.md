@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データセットユーザガイド
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 73%
+source-wordcount: '1148'
+ht-degree: 72%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 73%
 このユーザガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。 
 
 * [Datasets](overview.md):でのデータ永続性のストレージと管理の構成体 [!DNL Experience Platform]。
-* [!DNL Experience Data Model (XDM) System](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタ](../../xdm/tutorials/create-schema-ui.md):ユーザーインターフェイス [!DNL Schema Editor] 内で独自のカスタムXDMスキーマを作成する方法を説明し [!DNL Platform] ます。
-* [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [!DNL Data Governance](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
+* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Data Governance]](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
 
 ## データセットの表示
 
