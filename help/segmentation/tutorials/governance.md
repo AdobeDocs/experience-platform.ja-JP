@@ -4,10 +4,10 @@ solution: Experience Platform
 title: オーディエンスセグメントでデータ使用のコンプライアンスを徹底する
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 43%
+source-wordcount: '1335'
+ht-degree: 42%
 
 ---
 
@@ -20,13 +20,13 @@ This tutorial covers the steps for enforcing data usage compliance for [!DNL Rea
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] は汎用の参照エンティティストアで、内で [!DNL Experience Data Model] (XDM)データを管理するために使用され [!DNL Platform]ます。 プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
-   - [ポリシーの結合](../../profile/api/merge-policies.md): 特定の条件下で統合表示 [!DNL Real-time Customer Profile] に統合できるデータを決定するためにに使用されるルール。 Merge policies can be configured for [!DNL Data Governance] purposes.
-- [!DNL Segmentation](../home.md): プロファイルストアに含まれる多数の個人を、同じ特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割する方法を [!DNL Real-time Customer Profile] 説明します。
-- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] 次のコンポーネントを使用して、データ使用のラベル付けと実施(DULE)のインフラストラクチャを提供します。
+- [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md): [!DNL Real-time Customer Profile] は汎用の参照エンティティストアで、内で [!DNL Experience Data Model] (XDM)データを管理するために使用され [!DNL Platform]ます。 プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
+   - [ポリシーの結合](../../profile/api/merge-policies.md):特定の条件下で統合表示 [!DNL Real-time Customer Profile] に統合できるデータを決定するためにに使用されるルール。 Merge policies can be configured for [!DNL Data Governance] purposes.
+- [[!DNLセグメント]](../home.md):プロファイルストアに含まれる多数の個人を、同じ特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割する方法を [!DNL Real-time Customer Profile] 説明します。
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] 次のコンポーネントを使用して、データ使用のラベル付けと実施(DULE)のインフラストラクチャを提供します。
    - [データ使用ラベル](../../data-governance/labels/user-guide.md)：データセットとフィールドを、それぞれのデータを処理する際に適用する機密性のレベルの観点から説明する際に使用されるラベルです。
    - [データ使用ポリシー](../../data-governance/policies/overview.md)：特定のデータ使用ラベルで分類されたデータで、どのマーケティングアクションが許可されるかを示す設定です。
-   - [ポリシーの適用](../../data-governance/enforcement/overview.md): データ使用ポリシーを適用し、ポリシー違反を構成するデータ操作を防止できます。
+   - [ポリシーの適用](../../data-governance/enforcement/overview.md):データ使用ポリシーを適用し、ポリシー違反を構成するデータ操作を防止できます。
 - [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
@@ -383,4 +383,4 @@ When exporting a segment to a dataset using the [!DNL Segmentation] API, you can
 
 ## 次の手順
 
-このチュートリアルでは、オーディエンスセグメントに関連付けられているデータ使用ラベルを検索し、特定のマーケティングアクションに対してポリシー違反の有無をテストしました。の詳細については、の概要 [!DNL Data Governance] を参照し [!DNL Experience Platform]てくだ [!DNL Data Governance](../../data-governance/home.md)さい。
+このチュートリアルでは、オーディエンスセグメントに関連付けられているデータ使用ラベルを検索し、特定のマーケティングアクションに対してポリシー違反の有無をテストしました。の詳細については、 [!DNL Data Governance] [!DNL Data Governance]の概要を参照してください [!DNL Experience Platform][](../../data-governance/home.md)。
