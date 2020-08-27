@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'APIを使用したデータセットのデータ使用ラベルの管理 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '916'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # APIを使用したデータセットのデータ使用ラベルの管理
 
-では、データセットの使用状況ラベルを適用および編集できます。 [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] APIとは別のものです。
+[ [[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) ：データセットの使用ラベルを適用および編集できます。 これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] APIとは別のものです。
 
 このドキュメントでは、を使用してデータセットとフィールドのラベルを管理する方法について説明 [!DNL Dataset Service API]します。 API呼び出しを使用してデータ使用ラベル自体を管理する手順については、『 [ラベルエンドポイントガイド](../api/labels.md) 』を参照してくだ [!DNL Policy Service API]さい。
 
@@ -127,7 +127,7 @@ curl -X PUT \
 | プロパティ | 説明 |
 | --- | --- |
 | `labels` | データセットに追加するデータ使用ラベルのリストです。 |
-| `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。 <br/><br/>`option`: フィールドの [!DNL Experience Data Model] (XDM)属性を含むオブジェクトです。 次の3つのプロパティが必要です。<ul><li>id</code>: フィールドに関連付けられているスキーマのURI $id</code> 。</li><li>contentType</code>: スキーマのコンテンツタイプとバージョン番号。 これは、XDMルックアップ要求に対して有効な <a href="../../xdm/api/look-up-resource.md">Acceptヘッダーの1つの形式にする必要があります</a> 。</li><li>schemaPath</code>: データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`: フィールドに追加するデータ使用ラベルのリストです。 |
+| `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。 <br/><br/>`option`:フィールドの [!DNL Experience Data Model] (XDM)属性を含むオブジェクトです。 次の3つのプロパティが必要です。<ul><li>id</code>:フィールドに関連付けられているスキーマのURI $id</code> 。</li><li>contentType</code>:スキーマのコンテンツタイプとバージョン番号。 これは、XDMルックアップ要求に対して有効な <a href="../../xdm/api/look-up-resource.md">Acceptヘッダーの1つの形式にする必要があります</a> 。</li><li>schemaPath</code>:データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`:フィールドに追加するデータ使用ラベルのリストです。 |
 
 **応答** 
 
@@ -201,7 +201,7 @@ Dataset Service APIを使用したラベルの操作について詳しくは、�
 
 ### [!DNL If-Match] ヘッダー {#if-match}
 
-データセットの既存のラベル(PUTおよびDELETE)を更新するAPI呼び出しを行う場合は、Dataset Serviceのデータセットラベルエンティティの現在のバージョンを示す `If-Match` ヘッダーを含める必要があります。 データの競合を防ぐため、含まれる `If-Match` 文字列がそのデータセットのシステムで生成された最新のバージョンタグと一致する場合にのみ、データセットエンティティが更新されます。
+データセットの既存のラベル(PUTおよびDELETE)を更新するAPI呼び出しを行う場合は、Dataset Serviceのデータセットラベルエンティティの現在のバージョンを示す `If-Match` ヘッダーを含める必要があります。 データの競合を防ぐため、含まれる `If-Match` 文字列がそのデータセットのシステムで生成される最新のバージョンタグと一致する場合にのみ、データセットエンティティが更新されます。
 
 >[!NOTE]
 >
