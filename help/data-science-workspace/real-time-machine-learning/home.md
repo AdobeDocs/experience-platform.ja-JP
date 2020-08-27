@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: リアルタイム機械学習の概要
 topic: Overview
+description: リアルタイム機械学習は、エンドユーザーに対するデジタルエクスペリエンスコンテンツの関連性を大幅に向上させます。 これは、Experience Edgeでリアルタイムの会議と継続的な学習を活用することで可能になります。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '535'
 ht-degree: 5%
 
 ---
