@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ソースファイルのレシピへのパッケージ化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 47%
+source-wordcount: '1107'
+ht-degree: 46%
 
 ---
 
@@ -23,10 +23,10 @@ This tutorial provides instructions on how you can package the provided Retail S
 
 ## 前提条件
 
-- [!DNL Docker](https://docs.docker.com/install/#supported-platforms)
-- [!DNL Python 3 and pip](https://docs.conda.io/en/latest/miniconda.html)
-- [!DNL Scala](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
-- [!DNL Maven](https://maven.apache.org/install.html)
+- [[!DNLドッカー]](https://docs.docker.com/install/#supported-platforms)
+- [[!DNL Python 3 and pip]](https://docs.conda.io/en/latest/miniconda.html)
+- [[!DNL Scala]](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
+- [[!DNL Maven]](https://maven.apache.org/install.html)
 
 ## レシピの作成
 
