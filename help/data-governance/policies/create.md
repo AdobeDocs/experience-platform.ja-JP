@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ使用ポリシーの作成
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 82%
+source-wordcount: '1194'
+ht-degree: 81%
 
 ---
 
@@ -22,9 +22,9 @@ This document provides a step-by-step tutorial for creating a DULE policy using 
 
 このチュートリアルでは、データポリシーの作成と評価に関わる次の主要概念に関する十分な知識が必要です。 
 
-* [!DNL Data Governance](../home.md): データ使用のコンプライアンスを [!DNL Platform] 適用するフレームワーク。
+* [[!DNL Data Governance]](../home.md):データ使用のコンプライアンスを [!DNL Platform] 適用するフレームワーク。
 * [データ使用ラベル](../labels/overview.md)：データ使用ラベルは、XDM データフィールドに適用され、そのデータのアクセス方法に関する制限を指定します。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): 顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
 * [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE [!DNL Policy Service] API, including required headers and how to read example API calls.
