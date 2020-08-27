@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: データ使用ラベルの概要
 topic: labels
+description: Data Usage Labeling and Enforcement（DULE）は、Adobe Experience Platform データガバナンスの中核的なメカニズムです。DULE 機能を使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従って各データを分類できます。このドキュメントでは、Experience Platform のデータ使用ラベル（DULE ラベルとも呼ばれます）の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 16%
+source-wordcount: '632'
+ht-degree: 23%
 
 ---
 
@@ -36,7 +37,7 @@ Adobeが提供するラベルに加えて、組織に独自のカスタムラベ
 
 リアルタイムCDPでの自動強制の動作方法の詳細については、Real-time CDPでの [Data Governanceの概要を参照してください](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)。
 
-### Adobe Audience Managerデータエクスポートコントロールからの継承
+### Adobe Audience Managerデータエクスポート管理からの継承
 
 [!DNL Experience Platform] には、Adobe Audience Managerとセグメントを共有する機能があります。 Audience Managerセグメントに適用されたデータエクスポートコントロールは、で認識される同等のラベルおよびマーケティングアクションに変換され [!DNL Experience Platform][!DNL Data Governance]ます。
 
@@ -52,7 +53,7 @@ UIの **[!UICONTROL ポリシー]**[!DNL Experience Platform] ・ワークスペ
 
 ### APIの使用
 
-`/labels` Policy Service APIの [エンドポイントを使用すると](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 、カスタムラベルの作成を含む、データ使用ラベルをプログラムで管理できます。 詳しくは、『 [ラベルエンドポイントガイド](../api/labels.md) 』を参照してください。
+`/labels` Policy Service APIの [エンドポイントを使用すると](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 、カスタムラベルの作成を含むデータ使用ラベルをプログラムで管理できます。 詳しくは、『 [ラベルエンドポイントガイド](../api/labels.md) 』を参照してください。
 
 データセッ [トとフィールドのラベルの管理には](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) 、Dataset Service APIを使用します。 詳しくは、データセットラベルの [管理に関するガイド](./dataset-api.md) を参照してください。
 
