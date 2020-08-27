@@ -5,9 +5,9 @@ title: API を使用した判定サービスランタイムの操作
 topic: tutorial
 description: 'このドキュメントでは、Adobe Experience Platform API を使用した判定サービスのランタイムサービスの操作に関するチュートリアルを提供します。 '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2017'
 ht-degree: 82%
 
 ---
@@ -21,9 +21,9 @@ This document provides a tutorial for working with the runtime services of [!DNL
 
 This tutorial requires a working understanding of the [!DNL Experience Platform] services involved in decisioning and determining the next best offer to present during customer experiences. このチュートリアルを開始する前に、次のドキュメントを確認してください。
 
-- [!DNL Decisioning Service](./../home.md):オファーの追加と削除のフレームワークを提供し、顧客のエクスペリエンスに最適なアルゴリズムを作成して、提示するためのアルゴリズムを作成します。
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md):PQLは、ルールとフィルターを定義するために使用します。
+- [[!DNL Decisioning Service]](./../home.md):オファーの追加と削除のフレームワークを提供し、顧客のエクスペリエンスに最適なアルゴリズムを作成して、提示するためのアルゴリズムを作成します。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+- [[!DNLプロファイルクエリ言語(PQL)]](../../segmentation/pql/overview.md):PQLは、ルールとフィルターを定義するために使用します。
 - [API を使用して判定オブジェクトおよびルールを管理](./entities.md)：判定サービスランタイムを使用する前に、関連エンティティを設定する必要があります。
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
