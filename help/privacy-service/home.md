@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1498'
-ht-degree: 15%
+source-wordcount: '1502'
+ht-degree: 14%
 
 ---
 
@@ -61,9 +61,9 @@ Adobe Experience Platform [!DNL Privacy Service] was developed in response to a 
 
 顧客からのプライバシー要求 [!DNL Privacy Service] を処理するには、その顧客の一意のID値をリクエスト自体に少なくとも1つ指定する必要があります。 一意のID値とは、個々の人物と、その人物が保存する個人データを識別するために使用できる [!DNL Experience Cloud] データの一部です。 [!DNL Privacy Service] この識別情報を使用して、要求（アクセス、削除またはオプトアウト）の性質に従って顧客の個人データを検索し、処理します。
 
-CRMシステムが利用する [!DNL Experience Cloud] アプリケーションによって、各顧客に指定する必要のあるIDのタイプと数は異なります。 一部のアプリケーションは、独自の内部顧客ID値(Adobe TargetIDなど)を使用し、他のソリューションは、すべてのアプリケーションで顧客のアクティビティを追跡するAdobe [!DNL Experience Cloud Identity Service] (ECID)のグローバルIDに依存して [!DNL Experience Cloud] います。 また、電子メールアドレスや電話番号などの一般的な個人情報も有効なIDデータとして機能します。
+CRMシステムが利用する [!DNL Experience Cloud] アプリケーションによって、各顧客に指定する必要のあるIDのタイプと数は異なります。 一部のアプリケーションは、独自の内部顧客ID値(Adobe TargetIDなど)を使用し、他のソリューションはAdobe [!DNL Experience Cloud Identity Service] (ECID)のグローバルIDに依存しており、すべての [!DNL Experience Cloud] アプリケーションで顧客のアクティビティを追跡します。 また、電子メールアドレスや電話番号などの一般的な個人情報も有効なIDデータとして機能します。
 
-プライバシー要求の [IDデータに関するドキュメント](./identity-data.md) （Idデータに関する情報）には、で受け入れられるID情報のタイプに関する詳細が記載されてい [!DNL Privacy Service]ます。 また、ドキュメントは、Adobeテクノロジーを利用して、Webサイトとやり取りする際に顧客から適切なID情報を効果的に取得し、そのデータをAPIリクエストに送信する方法に関するガイダンスも提供し [!DNL Privacy Service] ます。
+プライバシー要求の [IDデータに関するドキュメント](./identity-data.md) （Idデータに関する情報）には、で受け入れられるID情報のタイプに関する詳細が記載されてい [!DNL Privacy Service]ます。 また、ドキュメントは、Adobeテクノロジーを利用して、Webサイトとのやり取りに応じて顧客から適切なID情報を効果的に取得し、そのデータをAPIリクエストに送信する方法に関するガイダンスも提供し [!DNL Privacy Service] ます。
 
 ### プライバシーリクエストの開始 {#requests}
 
@@ -77,7 +77,7 @@ CRMシステムが利用する [!DNL Experience Cloud] アプリケーション�
 
 #### API の使用
 
-には、RESTful API呼び出しを使用してプライバシージョブを作成および管理するための様々なエンドポイントが [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 用意されています。これにより、アプリ [!DNL Experience Cloud] ケーションのプライバシー規制への準拠をプログラム的にアプローチできます。 API の使用方法に関する詳細な手順については、「[Privacy Service API 開発者ガイド](api/getting-started.md)」を参照してください。
+[ [[!DNLPrivacy ServiceAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) は、RESTful API呼び出しを使用してプライバシージョブを作成および管理するためのエンドポイントをいくつか備えており、アプリ [!DNL Experience Cloud] ケーションのプライバシー規制への準拠をプログラム的にアプローチできます。 API の使用方法に関する詳細な手順については、「[Privacy Service API 開発者ガイド](api/getting-started.md)」を参照してください。
 
 #### UI の使用
 
