@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;api;getting started
 solution: Experience Platform
 title: アクセス制御開発者ガイド
 topic: developer guide
+description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。以下の節では、Schema Registry API への呼び出しを正常に実行するために必要な追加情報を示しています。
 translation-type: tm+mt
-source-git-commit: d059f48a2a3ba6398418fd3d5b0b3fd837ff69a2
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 61%
+source-wordcount: '379'
+ht-degree: 66%
 
 ---
 
