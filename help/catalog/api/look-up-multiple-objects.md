@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
 solution: Experience Platform
 title: 複数のオブジェクトの検索
 topic: developer guide
+description: オブジェクトごとに 1 つのリクエストを実行する代わりに、複数のオブジェクトを表示する場合、カタログには同じ種類のオブジェクトを複数リクエストするためのシンプルなショートカットが用意されています。1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 50%
+source-wordcount: '223'
+ht-degree: 60%
 
 ---
 
