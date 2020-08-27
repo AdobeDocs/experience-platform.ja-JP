@@ -4,10 +4,10 @@ solution: Experience Platform
 title: クライアントのクエリサービスへの接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 21%
+source-wordcount: '75'
+ht-degree: 16%
 
 ---
 
@@ -18,10 +18,10 @@ This section explains how to connect to [!DNL Query Service] from a variety of d
 
 手順は、次のクライアントに対して提供されます。
 
-- [!DNL Aqua Data Studio](./aqua-data-studio.md)
-- [!DNL Looker](./looker.md)
-- [!DNL Postico (Mac)](./postico.md)
-- [!DNL Power BI (PC)](./power-bi.md)
-- [!DNL PSQL](./psql.md)
-- [!DNL RStudio](./rstudio.md)
-- [!DNL Tableau](./tableau.md)
+- [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
+- [[!DNLルッカー]](./looker.md)
+- [[!DNLポスティコ(Mac)]](./postico.md)
+- [[!DNLPower BI(PC)]](./power-bi.md)
+- [[!DNL PSQL]](./psql.md)
+- [[!DNL RStudio]](./rstudio.md)
+- [[!DNL Tableau]](./tableau.md)
