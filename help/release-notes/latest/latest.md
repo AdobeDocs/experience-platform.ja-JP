@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '454'
 ht-degree: 32%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 32%
 Adobe Experience Platformの既存の機能の更新：
 
 - [[!DNL Data Science Workspace]](#dsw)
-- [!DNL Destinations](#destinations)
-- [[!DNL ソース]](#sources)
+- [[!DNL宛先]](#destinations)
+- [[!DNLソース]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 
