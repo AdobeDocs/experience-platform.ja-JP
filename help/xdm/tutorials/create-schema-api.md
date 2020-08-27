@@ -5,10 +5,10 @@ title: スキーマレジストリ API を使用したスキーマの作成
 topic: tutorials
 description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2343'
-ht-degree: 80%
+source-wordcount: '2368'
+ht-degree: 79%
 
 ---
 
@@ -23,10 +23,10 @@ This tutorial uses the [!DNL Schema Registry] API to walk you through the steps 
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [!DNL Experience Data Model (XDM) System](../home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-* [!DNL Real-time Customer Profile](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNLサンドボックス]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 
@@ -955,9 +955,9 @@ GET 要求を実行してスキーマを参照すると、次に示すように�
 
 ### ID 記述子の定義
 
-Schemas are used for ingesting data into [!DNL Experience Platform]. このデータは、最終的に複数のサービスで使用され、個人の単一の統合表示を作成します。この処理を支援するために、主要フィールドを「ID」としてマークし、データ取得時に、これらのフィールド内のデータをその個人の「ID グラフ」に挿入できます。The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched together view of each individual customer.
+Schemas are used for ingesting data into [!DNL Experience Platform]. このデータは、最終的に複数のサービスで使用され、個人の単一の統合表示を作成します。この処理を支援するために、主要フィールドを「ID」としてマークし、データ取得時に、これらのフィールド内のデータをその個人の「ID グラフ」に挿入できます。The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched together view of each individual customer.
 
-Fields that are commonly marked as &quot;Identity&quot; include: email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html), CRM ID, or other unique ID fields.
+Fields that are commonly marked as &quot;Identity&quot; include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html), CRM ID, or other unique ID fields.
 
 組織に固有の識別子は、適切な ID フィールドである場合もあるので、それらを考慮します。
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->You can list available &quot;xdm:namespace&quot; values, or create new ones, using the [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). 「xdm:property」の値は、使用する「xdm:namespace」によって「xdm:code」または「xdm:id」になります。
+>You can list available &quot;xdm:namespace&quot; values, or create new ones, using the [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). 「xdm:property」の値は、使用する「xdm:namespace」によって「xdm:code」または「xdm:id」になります。
 
 **応答** 
 
