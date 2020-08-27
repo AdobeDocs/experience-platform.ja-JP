@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: ポリシー
 topic: developer guide
+description: データ使用ポリシーは組織が導入するルールで、Experience Platform 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するものです。/policiesエンドポイントは、データ使用ポリシーの表示、作成、更新または削除に関連するすべてのAPI呼び出しに使用されます。
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 8%
+source-wordcount: '1804'
+ht-degree: 9%
 
 ---
 
 
-# ポリシー endpoint
+# ポリシーエンドポイント
 
 Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. の `/policies` エンドポイント [!DNL Policy Service API] を使用すると、組織のデータ使用ポリシーをプログラムで管理できます。
 
