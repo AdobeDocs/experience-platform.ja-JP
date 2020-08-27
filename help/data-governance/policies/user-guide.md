@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage policy user guide
 solution: Experience Platform
 title: データ使用ポリシーユーザガイド
 topic: policies
+description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platformユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要を説明します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '768'
 ht-degree: 39%
 
 ---
