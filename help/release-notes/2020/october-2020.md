@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e9d7a045a88e0126549adcfa6136684e7b933b71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 51%
+source-wordcount: '307'
+ht-degree: 50%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 51%
 
 Adobe Experience Platform の新機能：
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[!DNLアクセス制御]](#access-control)
+- [[!DNLサンドボックス]](#sandboxes)
 
 ## [!DNL Access control] {#access-control}
 
@@ -31,7 +31,7 @@ Adobe Experience Platform の新機能：
 | 機能 | 説明 |
 |--- | ---|
 | 権限 | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Available permission categories include: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources]. |
-| サンドボックスへのアクセス |  製品プロファイル内の「[!UICONTROL _権限&#x200B;_]」タブでは、特定のサンドボックスへのアクセス権をユーザーに付与できます。[!DNL Platform]詳しくは、以下の「[サンドボックス](#sandboxes)」の節を参照してください。 |
+| サンドボックスへのアクセス |  製品プロファイル内の「[!UICONTROL _権限_]」タブでは、特定のサンドボックスへのアクセス権をユーザーに付与できます。[!DNL Platform]詳しくは、以下の「[サンドボックス](#sandboxes)」の節を参照してください。 |
 
 詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
 
