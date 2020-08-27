@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 機械学習の洞察によるリアルタイム顧客プロファイルの強化
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 71%
+source-wordcount: '1191'
+ht-degree: 70%
 
 ---
 
@@ -26,14 +26,14 @@ This document provides a step-by-step tutorial to enrich [!DNL Real-time Custome
 
 This tutorial requires a working understanding of the various aspects of [!DNL Adobe Experience Platform] involved in ingesting [!DNL Profile] data and creating segments. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-* [!DNL Real-time Customer Profile](../../rtcdp/overview.md): 複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [!DNL Identity Service](../../identity-service/home.md): Platform [!DNL Real-time Customer Profile] に取り込まれる異なるデータソースのIDをブリッジ化することで有効にします。
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [[!DNLリアルタイム顧客プロファイル]](../../rtcdp/overview.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL IDサービス]](../../identity-service/home.md):プラットフォーム [!DNL Real-time Customer Profile] に取り込まれる異なるデータソースのIDをブリッジ化することで有効にします。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 
 上記のドキュメントに加え、スキーマおよびスキーマエディターに関する次のガイドも確認することを強くお勧めします。
 
-* [スキーマ構成の基本](../../xdm/schema/composition.md): で使用するスキーマを構成するためのXDMスキーマ、構築ブロック、原則、ベストプラクティスについて説明 [!DNL Experience Platform]します。
-* [スキーマエディタのチュートリアル](../../xdm/tutorials/create-schema-ui.md): 内のスキーマエディタを使用してスキーマを作成する詳細な手順を説明 [!DNL Experience Platform]します。
+* [スキーマ構成の基本](../../xdm/schema/composition.md):で使用するスキーマを構成するためのXDMスキーマ、構築ブロック、原則、ベストプラクティスについて説明 [!DNL Experience Platform]します。
+* [スキーマエディタのチュートリアル](../../xdm/tutorials/create-schema-ui.md):内のスキーマエディタを使用してスキーマを作成する詳細な手順を説明 [!DNL Experience Platform]します。
 
 ## 出力スキーマとデータセットの作成 {#create-an-output-schema-and-dataset}
 
