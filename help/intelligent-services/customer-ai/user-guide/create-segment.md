@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: 予測スコアを使用した顧客セグメントの作成
 topic: Create a segment
+description: 予測の実行が完了すると、予測された傾向スコアはプロファイルによって自動的に使用されます。顧客 AI スコアによるプロファイルの強化により、傾向スコアに基づくオーディエンスを発見するための顧客セグメントを作成できます。ここでは、セグメントビルダーを使用してセグメントを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 87%
+source-wordcount: '317'
+ht-degree: 88%
 
 ---
 
@@ -40,4 +41,4 @@ Above the left-hand *Fields* column, click the **gear** icon and select a *Merge
 
 ## 次の手順
 
-このチュートリアルに従うと、セグメントビルダーを使用して、その傾向スコアに基づくオーディエンスを正しく見つけることができました。 これで、オーディエンスを宛先にアクティブ化することでターゲットに設定できます。詳しくは、「[宛先の概要](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/destinations/destinations-overview.html)」を参照してください。
+このチュートリアルに従うと、セグメントビルダーを使用して、傾向スコアに基づくオーディエンスを正しく見つけることができました。 これで、オーディエンスを宛先にアクティブ化することでターゲットに設定できます。詳しくは、「[宛先の概要](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/destinations/destinations-overview.html)」を参照してください。
