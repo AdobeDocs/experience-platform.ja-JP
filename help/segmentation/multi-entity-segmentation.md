@@ -5,10 +5,10 @@ title: マルチエンティティのセグメント化
 topic: overview
 description: 複数エンティティのセグメント化は、製品、店舗または他の非プロファイルクラスに基づいて、プロファイルデータを拡張する機能です。接続されると、追加のクラスのデータは、プロファイルスキーマにネイティブであるかのように使用できるようになります。
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 39%
+source-wordcount: '418'
+ht-degree: 38%
 
 ---
 
@@ -25,9 +25,9 @@ Multi-entity segmentation is the ability to extend [!DNL Profile] data with addi
 
 このチュートリアルでは、セグメント化の使用に関わる様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [!DNL Real-time Customer Profile](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
+- [[!DNLリアルタイム顧客プロファイル]](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
 - [Adobe Experience Platform セグメント化サービス](./home.md)：リアルタイム顧客プロファイルからセグメントを作成できます、
-- [!DNL Experience Data Model (XDM)](../xdm/home.md):顧客体験データを [!DNL Platform] 整理するための標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
 
 ## XDM の関係の定義方法
 
