@@ -5,7 +5,7 @@ title: JupyterLab ユーザーガイド
 topic: Overview
 description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。このドキュメントでは、JupyterLab とその機能の概要と、一般的なアクションを実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '3702'
 ht-degree: 55%
@@ -155,8 +155,8 @@ Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session.
 | --- | --- |
 | 空白 | 空のノートブックファイル。 |
 | スターター | サンプルデータを使用したデータ調査を示す、事前入力済みのノートブック。 |
-| 小売売上 | サンプルデータを使用した<a href="https://docs.adobe.com/content/help/ja-JP/experience-platform/data-science-workspace/home.translate.html#!api-specification/markdown/narrative/technical_overview/data_science_workspace_overview/dsw_prebuilt_recipes/retail_sales_recipe/retail_sales_recipe.md" target="_blank">小売販売のレシピ</a>を含む事前入力済みのノートブック。 |
-| レシピビルダー | A notebook template for creating a recipe in [!DNL JupyterLab]. レシピの作成プロセスを示し、説明するコードとコメントが事前に記入されています。詳細な順を追った説明については、『<a href="https://docs.adobe.com/content/help/ja-JP/experience-platform/data-science-workspace/jupyterlab/create-a-recipe.html" target="_blank">ノートブックのレシピチュートリアル</a>』を参照してください。 |
+| 小売売上 | A pre-filled notebook featuring the [retail sales recipe](https://docs.adobe.com/content/help/ja-JP/experience-platform/data-science-workspace/home.translate.html#!api-specification/markdown/narrative/technical_overview/data_science_workspace_overview/dsw_prebuilt_recipes/retail_sales_recipe/retail_sales_recipe.md) using sample data. |
+| レシピビルダー | A notebook template for creating a recipe in [!DNL JupyterLab]. レシピの作成プロセスを示し、説明するコードとコメントが事前に記入されています。詳細な順を追った説明については、『[ノートブックのレシピチュートリアル](https://docs.adobe.com/content/help/ja-JP/experience-platform/data-science-workspace/jupyterlab/create-a-recipe.html)』を参照してください。 |
 | [!DNL Query Service] | A pre-filled notebook demonstrating the usage of [!DNL Query Service] directly in [!DNL JupyterLab] with provided sample workflows that analyzes data at scale. |
 | XDM イベント | データ構造全体に共通の機能に焦点を当てた、ポストバリューエクスペリエンスイベントデータのデータ探索を示す、事前入力済みのノートブック。 |
 | XDM クエリ | エクスペリエンスのイベントデータに関するサンプルのビジネスクエリを示す、事前入力済みのノートブック。 |
@@ -455,9 +455,9 @@ dataFrame.show()
 
 ### で使用するクエリデ [!DNL Query Service] ータ [!DNL Python]
 
-[!DNL JupyterLab][!DNL Platform][!DNL Python] で を使用すると、 ノートブックで SQL を使用して、<a href="https://docs.adobe.com/content/help/ja-JP/experience-platform/query/home.html" target="_blank">Adobe Experience Platform クエリサービス</a>を通じてデータにアクセスできます。Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
+[!DNL JupyterLab][!DNL Platform][!DNL Python] で を使用すると、 ノートブックで SQL を使用して、[Adobe Experience Platform クエリサービス](https://docs.adobe.com/content/help/ja-JP/experience-platform/query/home.html)を通じてデータにアクセスできます。Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
 
-Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the <a href="https://docs.adobe.com/content/help/ja-JP/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md" target="_blank">[!DNL Query Service] SQL syntax</a>.
+Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the [[!DNL Query Service] SQL syntax](https://docs.adobe.com/content/help/ja-JP/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
 
 Querying data using [!DNL Query Service] requires you to provide the name of the target dataset. 必要なコードセルを生成するには、**データエクスプローラー**&#x200B;を使用して目的のデータセットを見つけます。データセットの一覧を右クリックし、「**ノートブック内のデータをクエリ** 」をクリックすると、ノートブックに次の 2 つのコードセルが生成されます。
 
