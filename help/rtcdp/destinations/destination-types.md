@@ -5,10 +5,10 @@ seo-title: 宛先のタイプとカテゴリ
 description: 'アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 '
 seo-description: アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 93%
+source-wordcount: '587'
+ht-degree: 92%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 93%
 
 #### セグメントの書き出し先
 
-セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。Advertising destinations such as [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) or [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
+セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。Advertising destinations such as [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) or [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
 
 #### プロファイルの書き出しとセグメントの書き出し先 - ビデオの概要
 
