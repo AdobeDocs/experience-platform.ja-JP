@@ -4,10 +4,10 @@ solution: Experience Platform
 title: アクセス制御開発者ガイド
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: d059f48a2a3ba6398418fd3d5b0b3fd837ff69a2
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 62%
+source-wordcount: '333'
+ht-degree: 61%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 62%
 
 [!DNL Access control] というの [!DNL Experience Platform] は、 [Adobe Admin Consoleを通して投与されるからだ](https://adminconsole.adobe.com)。 この機能は、Admin Console の製品プロファイルを利用して、権限およびサンドボックスを持つユーザーをリンクします。詳しくは、「[アクセス制御の概要](../home.md)」を参照してください。
 
-This developer guide provides information on how to format your requests to the [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml), and covers the following operations:
+This developer guide provides information on how to format your requests to the [[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml), and covers the following operations:
 
 - [権限名とリソースタイプの一覧表示](./permissions-and-resource-types.md)
 - [現在のユーザーに対して効果の高いポリシーの表示](./effective-policies.md)
