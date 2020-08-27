@@ -4,9 +4,9 @@ solution: Experience Platform
 title: ソースコネクタとAPIを使用して、サードパーティのデータベースからデータを収集する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1745'
 ht-degree: 14%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 # ソースコネクタとAPIを使用して、サードパーティのデータベースからデータを収集する
 
-[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) は、Adobe Experience Platform内のさまざまなソースから顧客データを収集し、一元管理するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、サードパーティのデータベースからデータを取得し、ソースコネクタとAPIを使用してデータを取り込む手順 [!DNL Platform] について説明します。
 
@@ -31,7 +31,7 @@ ht-degree: 14%
 * [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
 * [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to a third-parry database using the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+次の節では、 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してサードパーティのデータベースに正常に接続するために知っておく必要がある追加情報について説明します。
 
 ### API 呼び出し例の読み取り
 
@@ -285,7 +285,7 @@ A successful response returns an array containing the ID of the newly created da
 
 ## ターゲット接続の作成 {#target-connection}
 
-これで、データセットベースの接続、ターゲットスキーマ、ターゲットデータセットに対して一意のIDを割り当てることができます。 これらの識別子を使用して、 [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
+これで、データセットベースの接続、ターゲットスキーマ、ターゲットデータセットに対して一意のIDを割り当てることができます。 これらの識別子を使用して、 [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
 
 **API 形式**
 
@@ -414,7 +414,7 @@ curl -X POST \
 
 ## データフロー仕様の取得 {#specs}
 
-データフローは、ソースからデータを収集し、それらをに取り込む役割を持ち [!DNL Platform]ます。 データフローを作成するには、まず [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIに対してGETリクエストを実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を持ちます。
+データフローは、ソースからデータを収集し、それらをに取り込む役割を持ち [!DNL Platform]ます。 データフローを作成するには、まず [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIに対するGET要求を実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を持ちます。
 
 **API 形式**
 
@@ -635,7 +635,7 @@ curl -X POST \
 | `transformations.params.mappingId` | データベースに関連付けられているマッピングID。 |
 | `scheduleParams.startTime` | エポック時間のデータフローの開始時間。 |
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
-| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があ `15` ります。 |
+| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があり `15` ます。 |
 
 **応答** 
 
