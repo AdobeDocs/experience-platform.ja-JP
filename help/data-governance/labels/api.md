@@ -5,9 +5,9 @@ title: 'APIを使用したデータ使用ラベルの管理 '
 topic: developer guide
 description: Dataset Service APIを使用すると、データセットの使用ラベルを適用および編集できます。 これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理するCatalog Service APIとは別のものです。
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1007'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 このドキュメントでは、 [!DNL Policy Service] APIと [!DNL Dataset Service] APIを使用してデータ使用ラベルを管理する方法について手順を説明します。
 
-には、組織のデータ使用ラベルを作成および管理するための複数のエンドポイントが [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 用意されています。
+[ [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) は、組織のデータ使用ラベルを作成および管理できる複数のエンドポイントを提供します。
 
 この [!DNL Dataset Service] APIを使用すると、データセットの使用ラベルを適用および編集できます。 これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] APIとは別のものです。
 
