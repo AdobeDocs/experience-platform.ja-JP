@@ -5,9 +5,9 @@ title: カタログサービスの概要
 topic: overview
 description: カタログサービスは、Adobe Experience Platform 内のデータの場所と系列のレコードのシステムです。Experience Platform に取得されるすべてのデータはファイルとディレクトリとしてデータレイクに保存されますが、カタログには、参照や監視のために、これらのファイルとディレクトリのメタデータと説明が保持されます。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '782'
 ht-degree: 43%
 
 ---
@@ -64,4 +64,4 @@ The following table outlines the different object types supported by [!DNL Catal
 
 ## 次の手順
 
-This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. See the [Catalog developer guide](api/getting-started.md) for steps on interacting with the different endpoints of that [!DNL Catalog] API. API 応答で返されるデータを制限するベストプラクティスに従うために、[カタログデータのフィルタリング](api/filter-data.md)に関するガイドも参照することをお勧めします。
+This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. See the [[!DNL Catalog] developer guide](api/getting-started.md) for steps on interacting with the different endpoints of that [!DNL Catalog] API. API 応答で返されるデータを制限するベストプラクティスに従うために、[カタログデータのフィルタリング](api/filter-data.md)に関するガイドも参照することをお勧めします。
