@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
 title: 製品プロファイルの新規作成
 topic: user guide
+description: このドキュメントでは、Adobe Admin Consoleで新しい商品プロファイルを作成する際に必要な手順を説明します。 新しいプロファイルの作成を開始するには、「製品プロファイル」タブに移動し、「新しいプロファイル」をクリックします。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 93%
+source-wordcount: '246'
+ht-degree: 86%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 93%
 
 ![プロファイル新規作成ボタン](../images/new-profile-button.png)
 
-_[!UICONTROL 新規プロファイルを作成]_ダイアログが表示され、新しいプロファイルの「**[!UICONTROL &#x200B;プロファイル名&#x200B;]**」と「**[!UICONTROL &#x200B;説明&#x200B;]**」を入力するよう求められます。プロファイルの表示名を変更する場合は、「**[!UICONTROL &#x200B;プロファイル名と同じ&#x200B;]**」チェックボックスをオフにし、表示されるテキストボックスに表示名を入力します。「*[!UICONTROL &#x200B;ユーザー通知&#x200B;]*」では、ユーザーが追加または削除されたときに E メールで通知を受け取るかどうかを切り替えることができます。
+_[!UICONTROL 新規プロファイルを作成]_&#x200B;ダイアログが表示され、新しいプロファイルの「**[!UICONTROL プロファイル名]**」と「**[!UICONTROL 説明]**」を入力するよう求められます。プロファイルの表示名を変更する場合は、「**[!UICONTROL プロファイル名と同じ]**」チェックボックスをオフにし、表示されるテキストボックスに表示名を入力します。「*[!UICONTROL ユーザー通知]*」では、ユーザーが追加または削除されたときに E メールで通知を受け取るかどうかを切り替えることができます。
 
 終了したら、「**[!UICONTROL 次へ]**」をクリックします。
 
