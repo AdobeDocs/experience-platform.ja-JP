@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: データセットユーザガイド
 topic: datasets
+description: このdatasetsユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内でデータセットを操作する際に、一般的な操作を実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1148'
-ht-degree: 72%
+source-wordcount: '1168'
+ht-degree: 71%
 
 ---
 
