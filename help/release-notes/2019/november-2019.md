@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 70%
+source-wordcount: '1908'
+ht-degree: 69%
 
 ---
 
@@ -18,15 +18,15 @@ ht-degree: 70%
 **リリース日：2019 年 11 月 18 日**
 
 Adobe Experience Platform の新機能：
-* [!DNL Real-time Customer Data Platform](#rtcdp)
-* [!DNL Destinations](#destinations)
-* [!DNL Sources](#sources)
+* [[!DNLリアルタイム顧客データプラットフォーム]](#rtcdp)
+* [[!DNL宛先]](#destinations)
+* [[!DNLソース]](#sources)
 
 既存の機能の更新：
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Real-time Customer Profile](#profile)
-* [!DNL Segmentation Service](#segmentation)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Experience Data Model (XDM)システム]](#xdm)
+* [[!DNLリアルタイム顧客プロファイル]](#profile)
+* [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
