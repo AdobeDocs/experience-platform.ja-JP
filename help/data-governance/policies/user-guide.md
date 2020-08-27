@@ -4,9 +4,9 @@ solution: Experience Platform
 title: データ使用ポリシーユーザガイド
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '728'
 ht-degree: 39%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Data Governance] provides a user interface that 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-- [!DNL Data Governance](../home.md)
+- [[!DNLデータガバナンス]](../home.md)
 - [データ使用ポリシー](./overview.md)
 
 ## データ使用ポリシーの表示 {#view-policies}
