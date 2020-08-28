@@ -5,7 +5,7 @@ title: Adobe Experience Platform のデータ取り込みの概要
 topic: overview
 description: このドキュメントでは、データをプラットフォームに取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 55%
@@ -47,6 +47,6 @@ This document provided a brief introduction to the different aspects of [!DNL Da
 
 >[!WARNING]
 >
-> 次のビデオで使用されている「統合プロファイル」という用語は古いです。 ドキュメントで使用され [!DNL "Profile"] る用語または [!DNL "Real-time Customer Profile"] 正しい用語 [!DNL Experience Platform] です。 最新の機能については、ドキュメントを参照してください。
+>次のビデオで使用されている「統合プロファイル」という用語は古いです。 ドキュメントで使用され [!DNL "Profile"] る用語または [!DNL "Real-time Customer Profile"] 正しい用語 [!DNL Experience Platform] です。 最新の機能については、ドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
