@@ -5,7 +5,7 @@ title: 顧客 AI によるインサイトの獲得
 topic: Discovering insights
 description: 顧客 AI は、Intelligent Services の一部として Adobe Sensei を活用し、顧客の次の行動を予測する力をマーケターに提供します。顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイメントは必要ありません。
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 89%
@@ -122,7 +122,9 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 セグメントビルダーを使用して、セグメントを定義します。 インサイトページから「セグメント **[!UICONTROL を作成]** 」を選択すると、顧客AIは、選択したグループ情報を自動的にセグメントに追加します。 セグメントの作成を完了するには、セグメントビルダーのユーザーインターフェイスの右側パネルにある「*名前*」コンテナと「*説明*」パラメーターを入力します。セグメントに名前と説明を付けたら、右上の「**[!UICONTROL 保存]**」をクリックします。
 
->!![NOTE] 傾向スコアは個々のプロファイルに書き込まれるので、他のプロファイル属性と同様に、セグメントビルダーで使用できます。セグメントビルダーに移動して新しいセグメントを作成すると、名前空間顧客 AI の下に様々な傾向スコアが表示されます。
+>[!NOTE]
+>
+> 傾向スコアは個々のプロファイルに書き込まれるので、他のプロファイル属性と同様に、セグメントビルダーで使用できます。セグメントビルダーに移動して新しいセグメントを作成すると、名前空間顧客 AI の下に様々な傾向スコアが表示されます。
 
 ![セグメントの入力](../images/insights/segment-saving.png)
 
