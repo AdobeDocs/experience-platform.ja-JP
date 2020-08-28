@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID サービス
 topic: overview
 description: Adobe Experience Platform ID サービスを使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客と行動をより良く表示できます。これによって、インパクトのある個人のデジタルエクスペリエンスをリアルタイムで提供できます。
 translation-type: tm+mt
-source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 69%
@@ -136,7 +136,7 @@ During the streaming ingestion process, [!DNL Identity Service ]automatically ex
 
 >[!WARNING]
 >
-> 次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、ドキュメントを参照してください。
+>次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、ドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
