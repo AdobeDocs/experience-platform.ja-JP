@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでAmazonKinesisソースコネクタを作成する
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 9%
@@ -29,7 +29,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に有効な [!DNL Kinesis] 接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/streaming/cloud-storage.md)。
+既に有効な [!DNL Kinesis] 接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/streaming/cloud-storage-streaming.md)。
 
 ### 必要な資格情報の収集
 
@@ -71,4 +71,4 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ## 次の手順
 
-このチュートリアルに従って、に [!DNL Kinesis] アカウントに接続し [!DNL Platform]ました。 次のチュートリアルに進み、クラウドストレージのデータをに取り込むようにデータフローを [設定できます [!DNL Platform]](../../dataflow/streaming/cloud-storage.md)。
+このチュートリアルに従って、に [!DNL Kinesis] アカウントに接続し [!DNL Platform]ました。 次のチュートリアルに進み、クラウドストレージのデータをに取り込むようにデータフローを [設定できます [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md)。
