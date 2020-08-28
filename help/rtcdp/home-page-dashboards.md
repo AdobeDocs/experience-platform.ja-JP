@@ -5,7 +5,7 @@ seo-title: リアルタイム顧客データプラットフォームのホーム
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 94%
@@ -19,7 +19,7 @@ ht-degree: 94%
 
 ホームページは、指標カードが表示される場所の 1 つに過ぎません。リアルタイム CDP は、ユーザーの経験を通じて指標カードを提供します。これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
 
-![画像](assets/home2.jpg)
+![画像](assets/home.png)
 
 リアルタイム CDP にログインしたときにシステムにデータがない場合、ホームページのダッシュボードは表示されません。この場合、ホームページでは初めて使用するユーザーのための学習教材を提供します。データが収集されると（つまり、<!--sources-->データセット、プロファイル、セグメント、宛先が作成され、データがシステムにフローされると）、ダッシュボードは自動的に更新され、そのデータに関する情報が表示されます <!-- in metric cards-->。
 
@@ -31,14 +31,14 @@ ht-degree: 94%
 
 * **リーダーボード**&#x200B;は、ダッシュボードの上部に表示されます。リーダーボードには、システム内のデータセット、プロファイル、セグメント、宛先の数が表示されます。
 
-   ![画像](assets/home-leaderboard2.jpg)
+   ![画像](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * **最近の項目**&#x200B;には、システムに追加された最新の 5 つのデータセット、ソース、セグメント、宛先が表示されます。
 
-   ![画像](assets/home-recent.jpg)
+   ![画像](assets/recent.png)
 
 追加の指標（プロファイルやセグメントなど）は、リアルタイム顧客データプラットフォームの他の部分で使用できます。
 
