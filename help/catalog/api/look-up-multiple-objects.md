@@ -5,10 +5,10 @@ title: 複数のオブジェクトの検索
 topic: developer guide
 description: オブジェクトごとに 1 つのリクエストを実行する代わりに、複数のオブジェクトを表示する場合、カタログには同じ種類のオブジェクトを複数リクエストするためのシンプルなショートカットが用意されています。1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 60%
+source-wordcount: '225'
+ht-degree: 55%
 
 ---
 
@@ -28,8 +28,10 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
+| パラメーター | 説明 |
+| -------- | ----------- |
 | `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{ID}` | 取得するいずれかのオブジェクトの識別子。|
+| `{ID}` | 取得する特定のオブジェクトの1つを表す識別子。 |
 
 **リクエスト**
 
