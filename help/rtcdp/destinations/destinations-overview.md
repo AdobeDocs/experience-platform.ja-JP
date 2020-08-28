@@ -5,9 +5,9 @@ seo-title: 宛先の概要
 description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
 seo-description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '528'
 ht-degree: 72%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 72%
 データ・ガバナンスは、次を通じて、リアルタイムCDPの宛先に適用されます。
 
 * *マーケティングの使用例* 。
-* *特定の使用ラベルを含むデータを、特定のマーケティング用途の宛先に対してアクティブ化できないように制限するデータ使用ポリシー* 。
+* *特定の使用ラベルを含むデータを、特定のマーケティング使用例のある宛先に対してアクティブ化できないように制限するデータ使用ポリシー* 。
 
 マー [!DNL Data Governance] ケティングの使用事例 [とデータ・ポリシー違反の](/help/rtcdp/privacy/data-governance-overview.md#destinations) 解決についての詳細は、「 Real-time CDP 」のドキュメントを参照してください [](/help/rtcdp/privacy/data-governance-overview.md#enforcement)。
 
@@ -67,4 +67,4 @@ ht-degree: 72%
 * [電子メールマーケティングの宛先](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [ソーシャルネットワークの宛先](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-セグメントアクティベーションワークフローでのデータポリシー違反の詳細については、「宛先へのプロファイルとセグメントの [アクティブ化](/help/rtcdp/destinations/activate-destinations.md)」の手順7を参照してください。
+セグメントアクティベーションワークフローでのデータポリシー違反の詳細については、「宛先へのプロファイルとセグメントの [アクティブ化](/help/rtcdp/destinations/activate-destinations.md#review)」の確認手順を参照してください。
