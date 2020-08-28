@@ -5,7 +5,7 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 28%
@@ -51,9 +51,9 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 ### **[!UICONTROL IDマッピング]** 手順 {#identity-mapping}
 
-![IDマッピング手順](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
-
 適用先：ソーシャルリンク先とGoogle Customer Matchの広告先
+
+![IDマッピング手順](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
 
 *ソーシャル宛先の場合*、 **[!UICONTROL IDマッピング手順で]** 、宛先のターゲットIDとしてマッピングするソース属性を選択できます。 この手順は、スキーマで使用しているプライマリIDに応じて、オプションまたは必須です。 <br> 
 
