@@ -5,10 +5,10 @@ title: ストリーミングセグメント化
 topic: ui guide
 description: Adobe Experience Platformでのセグメント化のストリーミングにより、データの豊富性に重点を置き、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性が軽減され、データがプラットフォームに到着するとセグメントの認定が行われるようになりました。 この機能を使用すると、ほとんどのセグメントルールを、データがプラットフォームに渡される際に評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメント化ジョブを実行せずに最新の状態に維持されます。
 translation-type: tm+mt
-source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
+source-git-commit: d35d598b2ae8b46f53a20d41770b21ceeeafcce8
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 2%
+source-wordcount: '805'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +19,11 @@ ht-degree: 2%
 >
 >次のドキュメントでは、UIを使用したストリーミングセグメントの使用方法を説明します。 APIを使用したストリーミングセグメントの使用について詳しくは、『 [ストリーミングセグメントAPI』ガイドを参照してください](../api/streaming-segmentation.md)。
 
-セグメント化のストリーミング [!DNL Adobe Experience Platform] により、お客様はデータの豊富性に重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、データが到着する際にセグメントの認定が行われ、セグメント化ジョブのスケジュール [!DNL Platform]や実行の必要性が軽減されました。 With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+セグメント化のストリーミング [!DNL Adobe Experience Platform] により、お客様はデータの豊富性に重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性を軽減し、データのストリーミング到着時にセグメントの認定が行わ [!DNL Platform]れるようになりました。 With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+
+>[!NOTE]
+>
+>ストリーミングセグメントは、プラットフォームにストリーミングされるデータを評価する場合にのみ使用できます。 つまり、バッチ取り込みによって取り込まれたデータは、ストリーミングセグメント化によって評価されず、バッチ評価をトリガする必要があります。
 
 ## ストリーミングセグメントクエリタイプ
 
