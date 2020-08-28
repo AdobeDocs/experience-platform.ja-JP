@@ -5,7 +5,7 @@ title: Jupyter ノートブックを使用したレシピの作成
 topic: Tutorial
 description: このチュートリアルでは、2 つの主なセクションについて説明します。まず、JupyterLab ノートブック内のテンプレートを使用して機械学習モデルを作成します。次に、JupyterLab 内でノートブックをレシピワークフローに導き、Data Science Workspace 内でレシピを作成します。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '2336'
 ht-degree: 85%
@@ -475,6 +475,7 @@ When you are done editing the recipe and satisfied with the training/scoring out
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - ファイルのセルを削除しないでください
 > - ファイルのセルの先頭の `%%writefile` 行を編集しないでください
 > - 異なるノートブックに同時にレシピを作成しないでください
