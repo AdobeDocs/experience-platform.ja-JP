@@ -5,7 +5,7 @@ title: レシピとノートブックの移行ガイド
 topic: Tutorial
 description: 次のガイドは、Data Science Workspaceの既存のレシピとノートブックを移行するために必要な手順と情報を示しています。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '3330'
 ht-degree: 1%
@@ -16,6 +16,7 @@ ht-degree: 1%
 # レシピとノートブックの移行ガイド
 
 >[!NOTE]
+>
 >ノートブックと [!DNL Python]/Rを使用したレシピは影響を受けません。 移行は、PySpark/[!DNL Spark] (2.3)のレシピとノートブックにのみ適用されます。
 
 次のガイドは、既存のレシピとノートブックの移行に必要な手順と情報を示しています。
@@ -85,6 +86,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > クエリが10分を超えて実行されている場合、インタラクティブモードはタイムアウトします。 数ギガバイトを超えるデータを取り込む場合は、「バッチ」モードに切り替えることをお勧めします。 バッチモードでは、開始までに時間がかかりますが、大きなデータセットを処理できます。
 
 #### データセットへの書き込み
@@ -138,6 +140,7 @@ Scalaレシピは次のディレクトリにあり `experience-platform-dsw-refe
 ドッカーベースのワークフローを使用するには、レシピフォルダーに新しいファイルが必要です。 にあるrecipesフォルダからDockerファイルをコピーして貼り付け `experience-platform-dsw-reference/recipes/scala/Dockerfile`ます。 必要に応じて、以下のコードをコピーして、という名前の新しいファイルに貼り付けることもでき `Dockerfile`ます。
 
 >[!IMPORTANT]
+>
 > 以下に示すjarファイルの例 `ml-retail-sample-spark-*-jar-with-dependencies.jar` は、レシピのjarファイルの名前に置き換える必要があります。
 
 ```scala
@@ -222,6 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > クエリが10分を超えて実行されている場合、インタラクティブモードはタイムアウトします。 数ギガバイトを超えるデータを取り込む場合は、「バッチ」モードに切り替えることをお勧めします。 バッチモードでは、開始までに時間がかかりますが、大きなデータセットを処理できます。
 
 #### データセットへの書き込み
@@ -275,6 +279,7 @@ PySparkレシピは次のディレクトリにあり `experience-platform-dsw-re
 ドッカーベースのワークフローを使用するには、レシピフォルダーに新しいファイルが必要です。 にあるrecipesフォルダからDockerファイルをコピーして貼り付け `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`ます。 必要に応じて、下のコードをコピー&amp;ペーストし、という名前の新しいファイルを作成することもでき `Dockerfile`ます。
 
 >[!IMPORTANT]
+>
 > 次に示す例のeggファイル `pysparkretailapp-*.egg` は、レシピのeggファイルの名前に置き換えてください。
 
 ```scala
