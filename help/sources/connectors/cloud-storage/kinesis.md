@@ -4,7 +4,7 @@ solution: Experience Platform
 title: AmazonKinesisコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
@@ -65,4 +65,4 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 ## UI [!DNL Amazon Kinesis] を [!DNL Platform] 使用して接続
 
 - [UIでAmazonKinesisソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
+- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
