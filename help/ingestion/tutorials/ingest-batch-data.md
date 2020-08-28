@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform へのデータの取得
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 65%
@@ -148,6 +148,6 @@ Now that you have created a dataset and successfully ingested data into [!DNL Ex
 
 >[!WARNING]
 >
-> 次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
+>次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
