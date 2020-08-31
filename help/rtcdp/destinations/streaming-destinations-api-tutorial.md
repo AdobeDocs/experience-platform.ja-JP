@@ -4,15 +4,15 @@ solution: Experience Platform
 title: ストリーミング送信先への接続とデータのアクティブ化
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 60%
 
 ---
 
 
-# APIを使用して、ストリーミング送信先に接続し、Adobeのリアルタイム顧客データプラットフォームでデータをアクティブ化
+# Adobeのリアルタイム顧客データプラットフォームでAPI呼び出しを使用して、ストリーミング送信先に接続し、データをアクティブにします。
 
 >[!NOTE]
 >
