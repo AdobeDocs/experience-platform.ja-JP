@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service ユーザーガイド
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 85%
