@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイム顧客プロファイルでのプライバシーリクエストの処理
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 35%
