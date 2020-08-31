@@ -4,15 +4,15 @@ solution: Experience Platform
 title: 電子メールマーケティングの宛先の作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1624'
 ht-degree: 80%
 
 ---
 
 
-# 電子メールマーケティングの宛先を作成し、Adobeの [!DNL Real-time Customer Data Platform]
+# Adobeの [!DNL Real-time Customer Data Platform]
 
 このチュートリアルでは、API 呼び出しを使用して Adobe Experience Platform のデータに接続する方法、[電子メールマーケティングの宛先](../../rtcdp/destinations/email-marketing-destinations.md)を作成する方法、新しく作成した宛先へのデータフローを作成する方法および新しく作成した宛先へのデータをアクティブ化する方法を説明します。
 
