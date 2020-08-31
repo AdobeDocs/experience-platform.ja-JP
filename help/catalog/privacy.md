@@ -5,7 +5,7 @@ title: データレイクでのプライバシーリクエストの処理
 topic: overview
 description: Adobe Experience Platform Privacy Serviceは、法的および組織のプライバシーに関する規則に基づオプトアウトいて記述された個人データにアクセス、販売、または削除するように顧客の要求を処理します。 このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 26%
