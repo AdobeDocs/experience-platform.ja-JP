@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; advertising; google adwords
 solution: Experience Platform
 title: ソースコネクターとAPIを使用した広告データの収集
 topic: overview
+description: このチュートリアルでは、サードパーティの広告アプリケーションからデータを取得し、ソースコネクタとFlow Service APIを使用してプラットフォームに取り込む手順について説明します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 13%
+source-wordcount: '1561'
+ht-degree: 14%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 13%
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、サードパーティの広告アプリケーションからデータを取得し、ソースコネクタとAPIを使用してデータを取得する手順につ [!DNL Platform] いて説明します。
+このチュートリアルでは、サードパーティの広告アプリケーションからデータを取得し、ソースコネクタと [!DNL Platform] [!DNL Flow Service] [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを介してデータを取り込む手順について説明します。
 
 ## はじめに
 
@@ -41,29 +42,21 @@ The following sections provide additional information that you will need to know
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
-
-## アドホックXDMクラスとスキーマの作成
-
-外部データをソースコネクタを [!DNL Platform] 介してに取り込むには、生のソースデータ用にアドホックXDMクラスとスキーマを作成する必要があります。
-
-アドホッククラスとスキーマを作成するには、 [アドホックスキーマチュートリアルで概要を説明している手順に従い](../../../../xdm/tutorials/ad-hoc.md)ます。 アドホッククラスを作成する場合、ソースデータ内のすべてのフィールドをリクエスト本文内で記述する必要があります。
-
-開発ガイドに説明されている手順に従って、アドホックスキーマを作成してから、続行します。 このチュートリアルの次の手順に進むには、アドホックスキーマの固有な識別子(`$id`)が必要です。
+* `Content-Type: application/json`
 
 ## ソース接続の作成 {#source}
 
-アドホックXDMスキーマを作成した場合、 [!DNL Flow Service] APIへのPOSTリクエストを使用してソース接続を作成できるようになりました。 ソース接続は、ベース接続、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. ソース接続は、接続ID、ソースデータファイルのパス、および接続仕様IDで構成されます。
 
 ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
@@ -99,10 +92,6 @@ curl -X POST \
         "description": "Advertising source connection",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9056f97e74edfa68ccd811380ed6c108028dcb344168746d",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "v201809.AD_PERFORMANCE_REPORT"
@@ -117,7 +106,6 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `baseConnectionId` | アクセスするサードパーティ広告アプリケーションの一意の接続ID。 |
-| `data.schema.id` | アドホックXDMスキーマ `$id` の |
 | `params.path` | ソースファイルのパス。 |
 | `connectionSpec.id` | 特定のサードパーティ広告アプリケーションに関連付けられている接続仕様ID。 |
 
