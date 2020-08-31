@@ -4,7 +4,7 @@ audience: user
 user-guide-title: リアルタイム顧客データプラットフォームのヘルプ
 user-guide-description: Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 85%
@@ -127,7 +127,7 @@ ht-degree: 85%
    * リンク先UIチュートリアル {#dest-tutorials}
       * [宛先に接続](/help/rtcdp/destinations/connect-destination.md)
       * [宛先へのプロファイルとセグメントのアクティブ化](destinations/activate-destinations.md)
-   * Destination APIチュートリアル {#api-tutorials}
+   * Destinations APIチュートリアル {#api-tutorials}
       * [ストリーミング先(AWSKinesisおよびAzureイベントハブ)に接続し、データをアクティブにする](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
       * [電子メールマーケティングの宛先に接続し、データをアクティブにする](/help/rtcdp/destinations/email-marketing-api.md)
 * プライバシーとデータガバナンス {#privacy}
