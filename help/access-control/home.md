@@ -5,10 +5,10 @@ topic: overview
 title: アクセス制御の概要
 description: Adobe Experience Platformのアクセス制御はAdobe Admin Consoleを通じて提供される。 この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '1131'
-ht-degree: 65%
+source-wordcount: '1162'
+ht-degree: 63%
 
 ---
 
@@ -57,7 +57,7 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 ## サンドボックスと権限
 
-[!DNL Experience Platform] は、1 つの実稼働サンドボックスへのアクセスを提供し、非実稼働&#x200B;**サンドボックス**&#x200B;を作成できます。非実稼働サンドボックスは、他のサンドボックスからデータを分離できるデータ仮想化の一種で、通常は開発実験、テストまたは試用に使用されます。製品プロファイルの&#x200B;**[!UICONTROL 権限]**&#x200B;は、プロファイルがアクセス権を付与されたサンドボックス環境内の 機能に対するユーザーのアクセスを提供します。[!DNL Platform]
+非実稼働サンドボックスは、他のサンドボックスからデータを分離できるデータ仮想化の一種で、通常は開発実験、テストまたは試用に使用されます。製品プロファイルの&#x200B;**[!UICONTROL 権限]**&#x200B;は、プロファイルがアクセス権を付与されたサンドボックス環境内の 機能に対するユーザーのアクセスを提供します。[!DNL Platform]デフォルトのExperience Platformライセンスでは、5つのサンドボックス（1つの実稼働環境と4つの非実稼働環境）が許可されます。 10個の非実稼動用サンドボックス（合計75個まで）のパックを追加できます。 詳しくは、IMS組織管理者またはAdobeのセールス担当者にお問い合わせください。
 
 For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
 
