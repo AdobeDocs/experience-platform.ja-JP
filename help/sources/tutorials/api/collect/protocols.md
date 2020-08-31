@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; protocol; generic odata
 solution: Experience Platform
 title: ソースコネクタとAPIを使用してプロトコルデータを収集する
 topic: overview
+description: このチュートリアルでは、サードパーティのプロトコルプロバイダーからデータを取得し、ソースコネクターとフローサービスAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1591'
 ht-degree: 14%
 
 ---
@@ -16,17 +17,17 @@ ht-degree: 14%
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、プロトコルアプリケーションからデータを取得し、ソースコネクタとAPIを使用してデータを取り込む手順 [!DNL Platform] について説明します。
+このチュートリアルでは、サードパーティのプロトコルアプリケーションからデータを取得し、ソースコネクタと [!DNL Platform] [!DNL Flow Service] [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを介してデータを取り込む手順について説明します。
 
 ## はじめに
 
 このチュートリアルでは、有効な基本接続を通じてプロトコルシステムにアクセスし、テーブルのパスや構造など、に取り込むファイルに関する情報を得る必要があ [!DNL Platform]ります。 この情報がない場合は、このチュートリアルを試す前に、Flow Service APIを使用したプロトコル・システムの [詳細に関するチュートリアルを参照してください](../explore/protocols.md) 。
 
-* [エクスペリエンスデータモデルl（XDM）システム](../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md):スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-* [カタログサービス](../../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
-* [バッチインジェスト](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
+* [[!DNLカタログサービス]](../../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
+* [[!DNLバッチインジェスト]](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
 * [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 The following sections provide additional information that you will need to know in order to successfully connect to a protocols application using the [!DNL Flow Service] API.
@@ -39,29 +40,21 @@ The following sections provide additional information that you will need to know
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
-
-## アドホックXDMクラスとスキーマの作成
-
-外部データをソースコネクタを [!DNL Platform] 介してに取り込むには、生のソースデータ用にアドホックXDMクラスとスキーマを作成する必要があります。
-
-アドホッククラスとスキーマを作成するには、 [アドホックスキーマチュートリアルで概要を説明している手順に従い](../../../../xdm/tutorials/ad-hoc.md)ます。 アドホッククラスを作成する場合、ソースデータ内のすべてのフィールドをリクエスト本文内で記述する必要があります。
-
-開発ガイドに説明されている手順に従って、アドホックスキーマを作成してから、続行します。 アドホックスキーマの固有な識別子(`$id`)を取得して保存し、次の手順に進みます。
+* `Content-Type: application/json`
 
 ## ソース接続の作成 {#source}
 
-アドホックXDMスキーマを作成した場合、 [!DNL Flow Service] APIへのPOSTリクエストを使用してソース接続を作成できるようになりました。 ソース接続は、接続ID、ソースデータファイル、およびソースデータを記述するスキーマへの参照で構成されます。
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. ソース接続は、接続ID、ソースデータファイルのパス、および接続仕様IDで構成されます。
 
 ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
@@ -97,10 +90,6 @@ curl -X POST \
         "description": "Protocols source connection to ingest Orders",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9e800522521c1ed7d05d3782897f6bd78ee8c2302169bc19",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "Orders"
@@ -115,7 +104,6 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `baseConnectionId` | プロトコルアプリケーションの接続ID |
-| `data.schema.id` | アドホックXDMスキーマ `$id` の |
 | `params.path` | ソースファイルのパス。 |
 | `connectionSpec.id` | プロトコルアプリケーションの接続仕様ID。 |
 
