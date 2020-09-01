@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql
+keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
 title: PSQL との接続
 topic: connect
 description: 'PSQL は、Postgres をマシンにインストールする際に提供されるコマンドラインインターフェイスです。次の手順に従ってインストールできます。 '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 63%
