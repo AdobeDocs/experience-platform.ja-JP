@@ -5,7 +5,7 @@ title: PSQL との接続
 topic: connect
 description: 'PSQL は、Postgres をマシンにインストールする際に提供されるコマンドラインインターフェイスです。次の手順に従ってインストールできます。 '
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 63%
@@ -63,9 +63,9 @@ psql (PostgreSQL) 9.5.14
 
 ## PSQLの接続と [!DNL Query Service]
 
-Return to the [!DNL Platform] UI on the *[!UICONTROL Connect BI Tools]* page.
+Return to the [!DNL Platform] UI on the **[!UICONTROL Connect BI Tools]** page.
 
-Click **[!UICONTROL copy]** for *[!UICONTROL PSQL Command]*.
+Click **[!UICONTROL copy]** for **[!UICONTROL PSQL Command]**.
 
 ![画像](../images/clients/psql/connect-bi.png)
 
