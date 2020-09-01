@@ -5,7 +5,7 @@ title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 description: 'インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。 '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 3%
@@ -36,7 +36,7 @@ ht-degree: 3%
 データが既ににに保存されている場合 [!DNL Platform]は、次の手順に従います。
 
 1. Consumer ExperienceEventスキーマの構造を確認し、 [Consumer ExperienceEvent](#cee-schema) のフィールドにデータをマッピングできるかどうかを確認します。
-1. Adobeのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、それに取り込む方法について問い合わ [!DNL Intelligent Services]せます。または、データを自分でマッピングする場合は、このガイド [](#mapping) の手順に従ってください。
+1. Adobeのコンサルティングサービスに問い合わせて、データをスキーマにマッピングし、それに取り込む方法についてお問い合わせください。 [!DNL Intelligent Services]また、データを自分でマッピングする場合は、このガイド [](#mapping) の手順に従ってください。
 
 ## CEEスキーマについて {#cee-schema}
 
@@ -50,7 +50,7 @@ CEEスキーマは、すべてのXDM ExperienceEventスキーマと同様に、�
 
 すべてのXDMスキーマと同様、CEEミックスインも拡張可能です。 つまり、CEEミックスインにはフィールドを追加でき、必要に応じて複数のスキーマに異なるバリエーションを含めることができます。
 
-mixinの完全な例は、 [public XDM repositoryにあります](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)。 さらに、以下の [JSONファイルを表示してコピーし](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 、CEEスキーマに準拠するようにデータを構造化する方法の例を示します。 独自のデータをスキーマにマップする方法を決定するには、次の節で説明する主要フィールドについて学習する際に、これらの例を両方参照してください。
+mixinの完全な例は、 [public XDM repositoryにあります](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)。 さらに、以下の [JSONファイルを表示してコピーし](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) 、CEEスキーマに準拠するようにデータを構造化する方法の例を示します。 独自のデータをスキーマにマップする方法を決定するには、次の節で説明する主なフィールドについて学習する際に、これらの例を両方参照してください。
 
 ## キーフィールド
 
@@ -244,7 +244,7 @@ CEEミックスインには、有用なインサイトを生成するために�
 
 送信するデータの範囲を決定したら、Adobeコンサルティングサービスに連絡して、データをスキーマにマッピングし、サービスに取り込む方法についてお問い合わせください。
 
-購読があり、自分でデータをマッピングおよび取り込む場合は、次の節に示す手順に従います。 [!DNL Adobe Experience Platform]
+購読があり、自分でデータをマッピングおよび取り込む場合は、次の節に示す手順に従ってください。 [!DNL Adobe Experience Platform]
 
 ### Adobe Experience Platformの使用
 
@@ -272,7 +272,7 @@ CEEミックスインをスキーマに追加した後、データ内の追加�
 * [UIでのデータセットの作成](../catalog/datasets/user-guide.md#create) (既存のスキーマを使用する場合のワークフローに従います)
 * [APIでのデータセットの作成](../catalog/datasets/create.md)
 
-データセットの作成後は、 *[!UICONTROL Datasets]* ワークスペース内のプラットフォームUIで見つけることができます。
+データセットの作成後は、 **[!UICONTROL Datasets]** ワークスペース内のプラットフォームUIで見つけることができます。
 
 ![](images/data-preparation/dataset-location.png)
 
