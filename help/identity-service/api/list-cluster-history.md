@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identities;cluster history
 solution: Experience Platform
 title: ID のクラスター履歴の取得
 topic: API guide
+description: ID を使用して、様々なデバイスグラフの実行中にクラスターを移動できます。ID サービスは、特定の ID のクラスター関連付けを経時的に表示します。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '329'
 ht-degree: 96%
 
 ---
