@@ -5,7 +5,7 @@ title: モデルのスケジュール設定（UI）
 topic: Tutorial
 description: Adobe Experience Platformデータサイエンスワークスペースでは、機械学習サービスでのスケジュール済みスコアおよびトレーニングの実行を設定できます。 トレーニングとスコアリングを自動処理すると、データ内のパターンに追いつくことで、サービスの効率を時間をかけて維持および改善できます。
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 79%
@@ -17,7 +17,7 @@ ht-degree: 79%
 
 Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning Service. トレーニングとスコアリングを自動処理すると、データ内のパターンに追いつくことで、サービスの効率を時間をかけて維持および改善できます。
 
-このチュートリアルでは、*[!UICONTROL サービスギャラリー]*&#x200B;を通じて、既存のサービスに対するトレーニングとスコアリングのスケジュールを設定する手順について説明します。チュートリアルは以下の主な節に分かれています。
+このチュートリアルでは、**[!UICONTROL サービスギャラリー]**&#x200B;を通じて、既存のサービスに対するトレーニングとスコアリングのスケジュールを設定する手順について説明します。チュートリアルは以下の主な節に分かれています。
 
 - [スコアリングのスケジュール設定](#configure-scheduled-scoring)
 - [スケジュール済みトレーニングの設定](#configure-scheduled-training)
@@ -51,7 +51,7 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
 
 サービスを作成したら、次の手順に従ってトレーニングスケジュールを設定および適用できます。
 
-1. Adobe Experience Platform で、左側のナビゲーション列にある「**[!UICONTROL サービス]**」タブをクリックして、*[!UICONTROL サービスギャラリー]*&#x200B;にアクセスします。トレーニング実行のスケジュールを設定するサービスを探し、「**[!UICONTROL 開く]**」をクリックして、その&#x200B;*概要*ページを表示します。
+1. Adobe Experience Platform で、左側のナビゲーション列にある「**[!UICONTROL サービス]**」タブをクリックして、**[!UICONTROL サービスギャラリー]**&#x200B;にアクセスします。トレーニング実行のスケジュールを設定するサービスを探し、「**[!UICONTROL 開く]**」をクリックして、その&#x200B;*概要*ページを表示します。
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. 概要ページには、サービスのトレーニング情報が表示されます。「**[!UICONTROL スケジュールの更新]**」リンクをクリックして、トレーニングスケジュールを設定します。
