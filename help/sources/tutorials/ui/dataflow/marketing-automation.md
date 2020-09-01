@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: UIでのマーケティング自動化コネクタのデータフローの設定
 topic: overview
+description: データフローは、データを取得し、ソースからデータセットに取り込む、スケジュール済みのタスク [!DNL Platform] です。 このチュートリアルでは、マーケティング自動化アカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1315'
 ht-degree: 3%
 
 ---
