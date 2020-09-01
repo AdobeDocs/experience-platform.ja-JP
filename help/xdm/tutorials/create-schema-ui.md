@@ -5,7 +5,7 @@ title: スキーマエディターを使用したスキーマの作成
 topic: tutorials
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '3528'
 ht-degree: 21%
@@ -113,7 +113,7 @@ Similar to the &quot;[!UICONTROL name]&quot; field, the fields you just added re
 
 The &quot;[!UICONTROL Loyalty Members]&quot; schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. 必要なフィールドを含む標準 mixin がないので、新しい mixin を定義する必要があります。
 
-今回は、*[!UICONTROL Mixin の追加]*&#x200B;ダイアログを開いたときに、「**[!UICONTROL 新規 mixin の作成]**」を選択します。その後、mixin の&#x200B;**[!UICONTROL 表示名]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力するよう求められます。
+今回は、**[!UICONTROL Mixin の追加]**&#x200B;ダイアログを開いたときに、「**[!UICONTROL 新規 mixin の作成]**」を選択します。その後、mixin の&#x200B;**[!UICONTROL 表示名]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力するよう求められます。
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
