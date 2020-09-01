@@ -4,7 +4,7 @@ solution: Experience Platform
 title: プライバシーイベントへの購読
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 31%
@@ -14,7 +14,7 @@ ht-degree: 31%
 
 # 購読する [!DNL Privacy Events]
 
-[!DNL Privacy Events] は、Adobe Experience Platformが提供するメッセージ [!DNL Privacy Service]です。これは、設定されたwebフックに送信されるAdobeI/Oイベントを利用して、効率的なジョブリクエストの自動化を促進します。 They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Events] は、構成されたwebフックに送信されるAdobeI/Oイベントを活用して、効率的なジョブリクエストの自動化を促進する、Adobe Experience Platformが提供するメッセージです。 [!DNL Privacy Service]They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 現在、プライバシージョブリクエストのライフサイクルに関連する通知には、次の 4 種類があります。
 
@@ -74,7 +74,7 @@ app.listen(app.get('port'), function() {
 
 ## Adobeデベロッパーコンソールでの新しいプロジェクトの作成
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. 次に、Adobeデベロッパーコンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
+[Adobeデベロッパーコンソールに移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe開発者コンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
 ## プロジェクトの追加プライバシーイベント
 
@@ -86,7 +86,7 @@ The _Add events_ dialog appears. 「 **[!UICONTROL Experience Cloud]** 」を選
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-[ _イベント登録の_ 設定]ダイアログが表示されます。 対応するチェックボックスをオンにして、受け取るイベントを選択します。 選択したイベントは、左の列の「 _[!UICONTROL 購読済みイベント]_」の下に表示されます。 終了したら、「**[!UICONTROL &#x200B;次へ&#x200B;]**」をクリックします。
+[ _イベント登録の_ 設定]ダイアログが表示されます。 対応するチェックボックスをオンにして、受け取るイベントを選択します。 選択したイベントは、左の列の「 **[!UICONTROL 購読済みイベント]** 」の下に表示されます。 終了したら、「**[!UICONTROL 次へ]**」をクリックします。
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -106,11 +106,11 @@ The _Add events_ dialog appears. 「 **[!UICONTROL Experience Cloud]** 」を選
 
 ![](./images/privacy-events/event-details.png)
 
-同じ画面の下に、イベントの受信方法を設定する2つのオプションが表示されます。 「 **[!UICONTROL Webhook]** 」を選択し、「 `Forwarding` Webhook URL _[!UICONTROL 」で前に作成したNgrook Webフックの]_URLを指定します。 次に、「設定済みのイベントを**[!UICONTROL &#x200B;保存」をクリックする前に、希望の配信スタイル（単一またはバッチ）を選択し、イベントの登録を完了します&#x200B;]**。
+同じ画面の下に、イベントの受信方法を設定する2つのオプションが表示されます。 「 **[!UICONTROL Webhook]** 」を選択し、「 `Forwarding` Webhook URL **[!UICONTROL 」で前に作成したNgrook Webフックの]** URLを指定します。 次に、「設定済みのイベントを **[!UICONTROL 保存」をクリックする前に、希望の配信スタイル（単一またはバッチ）を選択し、イベントの登録を完了します]** 。
 
 ![](./images/privacy-events/webhook-details.png)
 
-プロジェクトの詳細ページが再表示され、左のナビゲーションの [!DNL Privacy Events] イベント __の下に表示されます。
+プロジェクトの詳細ページが再表示され、左のナビゲーションの [!DNL Privacy Events] イベント **** の下に表示されます。
 
 ## イベントデータの表示
 
@@ -126,7 +126,7 @@ The _Registration Details_ tab appears, allowing you to view more information ab
 
 ![](images/privacy-events/debug-tracing.png)
 
-「_[!UICONTROL ペイロード]_」セクションには、上の例で強調表示されているイベントタイプ（`com.adobe.platform.gdpr.productcomplete`）を含む、選択したイベントの詳細が表示されます。
+「**[!UICONTROL ペイロード]**」セクションには、上の例で強調表示されているイベントタイプ（`com.adobe.platform.gdpr.productcomplete`）を含む、選択したイベントの詳細が表示されます。
 
 ## 次の手順
 
