@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: AmazonKinesisコネクタ
 topic: overview
+description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用して、AmazonKinesisをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
