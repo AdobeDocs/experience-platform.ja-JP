@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;
 solution: Experience Platform
 title: アドホックスキーマ
+description: 状況によっては、単一のデータセットでのみ使用することを目的として名前空間が設定されたフィールドを含む Experience Data Model（XDM）スキーマを作成する必要があります。これは「アドホック」スキーマと呼ばれます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '76'
-ht-degree: 68%
+source-wordcount: '111'
+ht-degree: 78%
 
 ---
 
