@@ -1,10 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide
 solution: Experience Platform
 title: はじめに
 topic: API guide
+description: null
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 64%
