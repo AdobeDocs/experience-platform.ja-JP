@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure;azure blob;blob;Blob
 solution: Experience Platform
 title: Flow Service APIを使用してAzure BLOBコネクタを作成する
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをAzure Blob （以下「Blob」）ストレージに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 20%
+source-wordcount: '609'
+ht-degree: 19%
 
 ---
 
@@ -116,4 +117,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、APIを使用してBlob接続を作成し、一意のIDを応答本文の一部として取得できます。 この接続IDを使用して、Flow Service APIを使用してクラウドストレージを [調べたり、Flow Service APIを使用してパーケーデータを](../../explore/cloud-storage.md) 取り込んだりできます [](../../cloud-storage-parquet.md)。
+このチュートリアルに従うと、APIを使用してBlob接続を作成し、応答本文の一部として一意のIDを取得できます。 この接続IDを使用して、Flow Service APIを使用してクラウドストレージを [調べたり、Flow Service APIを使用してパーケーデータを](../../explore/cloud-storage.md) 取り込んだりできます [](../../cloud-storage-parquet.md)。
