@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage connector;cloud storage
 solution: Experience Platform
 title: UIでのクラウドストレージストリーミングコネクタのデータフローの設定
 topic: overview
+description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージベースのコネクタを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: c1b493de7374cbd1c916d90f9382574f831e11e3
 workflow-type: tm+mt
-source-wordcount: '667'
-ht-degree: 7%
+source-wordcount: '700'
+ht-degree: 6%
 
 ---
 
