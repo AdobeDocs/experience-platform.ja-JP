@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
 solution: Adobe Experience Platform
 title: プライバシーミックスインの概要
+description: プライバシー/マーケティング環境設定（同意）ミックスインは、CMPや他の顧客から生成されるユーザー権限や環境設定の収集をサポートするExperience Data Model(XDM)ミックスインです。 このドキュメントでは、ミックスインが提供する様々なフィールドの構造と使用方法を説明します。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 02014c503dc9d4597e1129cafe3ba86f4abe37e9
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
@@ -254,11 +255,11 @@ Mixinを含むスキーマーを作成したら、既存のスキーマーでデ
 
 | 値 | 説明 |
 | --- | --- |
-| `general_opt_out` | データはどの目的にも使用できません。 これは通常、処理の基本が「同意」でない場合を除き、データ収集をブロックします。<br><br>このオプトアウトタイプを使用する場合、受け入れられる値 `in` を使用し、次のコンテキスト的な意味 `out` を取得します。<ul><li>`in`: ユーザ **** は、一般処理に使用するデータに対して同意を与えた。</li><li>`out`: ユーザ **は、一般処理に使用されるデータに同意しない** 。</li></ul>詳しくは、xdm:optOutValueに [指定できる値の表を参照してください](#choice-optOutValue-values) 。 |
+| `general_opt_out` | データはどの目的にも使用できません。 これは通常、処理の基本が「同意」でない場合を除き、データ収集をブロックします。<br><br>このオプトアウトタイプを使用する場合、受け入れられる値 `in` を使用し、次のコンテキスト的な意味 `out` を取得します。<ul><li>`in`:ユーザ **** は、一般処理に使用するデータに対して同意を与えた。</li><li>`out`:ユーザ **は、一般処理に使用されるデータに同意しない** 。</li></ul>詳しくは、xdm:optOutValueに [指定できる値の表を参照してください](#choice-optOutValue-values) 。 |
 | `anonymous_analysis` | 特定のページが表示された回数など、ユーザーIDの種類を必要としない汎用Web指標には、このデータを使用できません。 |
 | `device_linking` | 訪問者が使用する1つのデバイスのデータを、同じ訪問者が使用する別のデバイスのデータと組み合わせることはできません。 デバイスは、一般的なユーザー名や電子メールアドレスなどのテクニックを使用してリンクされ、多くの場合、AdobeデバイスのCo-opやプライベートデバイスグラフを介してリンクされます。 |
 | `pseudonymous_analysis` | このデータは、Adobe Analyticsが提供するWeb指標には使用できません。偽名のIDを必要とする場合は、Webサイトを経由するパス（フォールアウトレポートなど）を識別し、セッションを確立したり、アトリビューションを目的として使用します。 |
-| `sales_sharing_opt_out` | このデータは、販売目的や第三者との共有には使用できません。<br><br>このオプトアウトタイプを使用する場合、受け入れられる値 `in` を使用し、次のコンテキスト的な意味 `out` を取得します。<ul><li>`in`: ユーザー **は、販売および共有の目的で使用するデータに関して同意を示しました** 。</li><li>`out`: ユーザー **は、販売および共有の目的で使用されるデータに同意しません** 。</li></ul>詳しくは、xdm:optOutValueに [指定できる値の表を参照してください](#choice-optOutValue-values) 。 |
+| `sales_sharing_opt_out` | このデータは、販売目的や第三者との共有には使用できません。<br><br>このオプトアウトタイプを使用する場合、受け入れられる値 `in` を使用し、次のコンテキスト的な意味 `out` を取得します。<ul><li>`in`:ユーザー **は、販売および共有の目的で使用するデータに関して同意を示しました** 。</li><li>`out`:ユーザー **は、販売および共有の目的で使用されるデータに同意しません** 。</li></ul>詳しくは、xdm:optOutValueに [指定できる値の表を参照してください](#choice-optOutValue-values) 。 |
 
 ### xdm:basisOfProcessingに指定できる値 {#basisOfProcessing-values}
 
@@ -266,7 +267,7 @@ Mixinを含むスキーマーを作成したら、既存のスキーマーでデ
 
 | 値 | 説明 |
 | --- | --- |
-| `consent` **（デフォルト）** | 個人が明示的な権限を与えている場合、指定した目的のデータ収集が許可されます。 他の値を指定しない `xdm:basisOfProcessing` 場合は、これがデフォルト値のです。 <br><br>**重要&#x200B;**: との値は、に設定した場合`xdm:choice`にのみ使用され`xdm:optOutValue``xdm:basisOfProcessing``consent`ます。 代わりに、この表に示す他の値のいずれかが使用される場合`xdm:basisOfProcessing`は、そのユーザーの同意の選択は無視されます。 |
+| `consent` **（デフォルト）** | 個人が明示的な権限を与えている場合、指定した目的のデータ収集が許可されます。 他の値を指定しない `xdm:basisOfProcessing` 場合は、これがデフォルト値のです。 <br><br>**重要**:との値は、に設定した場合 `xdm:choice` にのみ使用され `xdm:optOutValue``xdm:basisOfProcessing``consent`ます。 代わりに、この表に示す他の値のいずれかが使用される場合 `xdm:basisOfProcessing` は、そのユーザーの同意の選択は無視されます。 |
 | `compliance` | 特定の目的に対するデータの収集は、ビジネスの法的義務を満たすために必要です。 |
 | `contract` | 特定の目的に応じたデータの収集は、個人との契約上の義務を満たすために必要です。 |
 | `legitimate_interest` | 特定の目的でこのデータを収集して処理する正当なビジネス上の関心事は、個人に与える潜在的な損害を上回ります。 |
