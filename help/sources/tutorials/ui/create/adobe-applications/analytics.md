@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
 solution: Experience Platform
 title: UI での Adobe Analytics ソースコネクタの作成
 topic: overview
+description: このチュートリアルでは、UIで消費者データをAdobe Experience Platformに取り込むためのAdobe Analyticsソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 16%
+source-wordcount: '790'
+ht-degree: 15%
 
 ---
 
@@ -52,7 +53,7 @@ ht-degree: 16%
 
 ### データセットフローの名前を指定する
 
-デー **[!UICONTROL タセットフローの詳細]** （オプション）が表示されます。データセットフローの名前と説明を入力する必要があります。 Select **[!UICONTROL Next]** when finished.
+データセットフローの詳細 **[!UICONTROL (]** データセットフローの名前と説明)を入力する必要がある手順が表示されます。 Select **[!UICONTROL Next]** when finished.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
