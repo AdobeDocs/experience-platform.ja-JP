@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データ取得イベントへのサブスクライブ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 38%
@@ -55,7 +55,7 @@ The data ingestion notification event schema is an [!DNL Experience Data Model] 
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-The _[!UICONTROL Add events]_ dialog appears. 「 **[!UICONTROL Experience Platform]** 」をクリックして使用可能なオプションのリストをフィルターし、「 **[!UICONTROL プラットフォーム通知]** 」をクリックしてから「 **[!UICONTROL 次へ]**」をクリックします。
+The **[!UICONTROL Add events]** dialog appears. 「 **[!UICONTROL Experience Platform]** 」をクリックして使用可能なオプションのリストをフィルターし、「 **[!UICONTROL プラットフォーム通知]** 」をクリックしてから「 **[!UICONTROL 次へ]**」をクリックします。
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
