@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql
 solution: Experience Platform
 title: PostgreSQLコネクタ
 topic: overview
+description: 以下のドキュメントは、APIやユーザインターフェースを使ってPostgreSQLをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 29%
+source-wordcount: '232'
+ht-degree: 27%
 
 ---
 
