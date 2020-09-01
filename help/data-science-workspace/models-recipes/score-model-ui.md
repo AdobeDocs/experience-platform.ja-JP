@@ -5,7 +5,7 @@ title: モデルのスコアリング（UI）
 topic: Tutorial
 description: 'Adobe Experience Platform Data Science Workspace　でのスコアリングは、既存のトレーニング済みモデルに入力データを送ることで達成できます。次に、スコアリング結果が保存され、新しいバッチとして指定した出力データセットで表示可能になります。 '
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 87%
@@ -43,7 +43,7 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
 5. ワークフローの最後の手順で、スコアリングの実行を設定するよう求められます。これらの設定は、スコアリングの実行にモデルで使用されます。
 モデルの作成時に設定された継承パラメーターは削除できないことに注意してください。継承されていないパラメーターは、値をダブルクリックするか、エントリにカーソルを合わせて元に戻すアイコンをクリックすると編集するまたは元に戻すことができます。
    ![](../images/models-recipes/score/configuration.png)
-スコアリング設定を確認して、「**[!UICONTROL 完了]**」をクリックし、スコアリングの実行を作成して実行します。「*スコアリングの実行*」タブに移動すると、新しいスコアリングの実行にステータスが表示されます。
+スコアリング設定を確認して、「**[!UICONTROL 完了]**」をクリックし、スコアリングの実行を作成して実行します。「**[!UICONTROL スコアリングの実行]**」タブに移動すると、新しいスコアリングの実行にステータスが表示されます。
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 スコアリングの実行には、「保留中」、「完了」、「失敗」、「実行中」の 4 つのステータスのいずれかが表示され、自動的に更新されます。ステータスが「完了」または「失敗」の場合は、次の手順に進みます。
 
