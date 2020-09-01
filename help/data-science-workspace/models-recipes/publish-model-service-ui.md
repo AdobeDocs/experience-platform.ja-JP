@@ -5,7 +5,7 @@ title: モデルのサービスとしての公開（UI）
 topic: Tutorial
 description: Adobe Experience Platform Data Science Workspace　を使用すると、訓練を受けた評価済みのモデルをサービスとして公開でき、IMS 組織内のユーザーは、独自のモデルを作成する必要なくデータをスコアリングできます。
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 93%
@@ -40,7 +40,7 @@ Sensei 機械学習 API を使用してモデルを公開する場合は、[API 
 
 ## サービスを使用したスコア {#access-a-service}
 
-1. Adobe Experience Platform で、左側のナビゲーション列にある「**[!UICONTROL サービス]**」タブをクリックして、*[!UICONTROL サービスギャラリー]*&#x200B;にアクセスします。使用するサービスを見つけ、「**[!UICONTROL スコア]**」をクリックします。
+1. Adobe Experience Platform で、左側のナビゲーション列にある「**[!UICONTROL サービス]**」タブをクリックして、**[!UICONTROL サービスギャラリー]**&#x200B;にアクセスします。使用するサービスを見つけ、「**[!UICONTROL スコア]**」をクリックします。
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. スコアリング実行に適した入力データセットを選択し、「**[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -53,4 +53,4 @@ Sensei 機械学習 API を使用してモデルを公開する場合は、[API 
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、*[!UICONTROL サービスギャラリー]*&#x200B;を通じてアクセス可能なサービスとしてモデルを公開し、新しいサービスを使用してデータをスコアリングしました。次のチュートリアルに進み、[サービスで自動トレーニングとスコアリングの実行をスケジュールする](./schedule-models-ui.md)方法を学びます。
+このチュートリアルでは、**[!UICONTROL サービスギャラリー]**&#x200B;を通じてアクセス可能なサービスとしてモデルを公開し、新しいサービスを使用してデータをスコアリングしました。次のチュートリアルに進み、[サービスで自動トレーニングとスコアリングの実行をスケジュールする](./schedule-models-ui.md)方法を学びます。
