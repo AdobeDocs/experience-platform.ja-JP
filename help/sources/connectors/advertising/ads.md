@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google AdWords;google adwords
 solution: Experience Platform
 title: Google AdWordsコネクタ
 topic: overview
+description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle AdWordsをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 9%
+source-wordcount: '219'
+ht-degree: 8%
 
 ---
 
