@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: データガバナンスとプライバシーのチュートリアル
 topic: tutorial
+description: データ使用ラベルおよび実施（DULE）は、Adobe Experience Platform のデータガバナンスの中核的なメカニズムです。DULE 機能を使用すると、データセットとフィールドにデータ使用ラベルを付けて、関連するデータ使用ポリシーに従って各データを分類できます。
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 53%
+source-wordcount: '506'
+ht-degree: 60%
 
 ---
 
 
 # [!DNL Data Governance] および [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE)は、Adobe Experience Platform [!DNL Data Governanc]eの中核的なメカニズムです。 DULE機能を使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従ってそれぞれを分類できます。 Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
+[!DNL Data Usage Labeling and Enforcement] (DULE)はAdobe Experience Platformの中核機構 [!DNL Data Governance]です。 DULE 機能を使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従って各データを分類できます。Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. 詳しくは、「[Privacy Service の概要](../privacy-service/home.md)」を参照してください。
 
