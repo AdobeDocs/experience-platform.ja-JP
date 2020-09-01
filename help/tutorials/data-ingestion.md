@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: データ取得のチュートリアル
 topic: tutorial
+description: データ取得には、バッチ取得、ストリーミング取得、ソースコネクタを使用した取得が含まれます。
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 40%
+source-wordcount: '492'
+ht-degree: 42%
 
 ---
 
