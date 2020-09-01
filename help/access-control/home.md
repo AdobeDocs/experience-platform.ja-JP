@@ -5,7 +5,7 @@ topic: overview
 title: アクセス制御の概要
 description: Adobe Experience Platformのアクセス制御はAdobe Admin Consoleを通じて提供される。 この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 translation-type: tm+mt
-source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 63%
@@ -32,7 +32,7 @@ In order to configure access control for [!DNL Experience Platform], you must ha
 - 管理者は、必要に応じて、デフォルトの[製品プロファイル](#product-profiles)を表示、または新しい顧客製品プロファイルを作成できます。
 - 管理者は、既存の製品プロファイルの権限とユーザーを編集できます。
 - When creating or editing a product profile, the administrator adds users to the profile using the **[!UICONTROL users]** tab, and grants permissions to these users (such as &quot;[!UICONTROL Read Datasets]&quot; or &quot;[!UICONTROL Manage Schemas]&quot;) by accessing the **[!UICONTROL permissions]** tab. 同様に、管理者は同じ「権限」タブを使用してサンドボックスにアクセス権を割り当てることができます。
-- When users log in to the [!DNL Experience Platform] user interface, their access to [!DNL Platform] capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the &quot;[!UICONTROL View Datasets]&quot; permission, the *[!UICONTROL Datasets]* tab in the side menu will not be visible to that user.
+- When users log in to the [!DNL Experience Platform] user interface, their access to [!DNL Platform] capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the &quot;[!UICONTROL View Datasets]&quot; permission, the **[!UICONTROL Datasets]** tab in the side menu will not be visible to that user.
 
 For more detailed steps on how to manage access control in [!DNL Experience Platform], see the [access control user guide](./ui/overview.md).
 
@@ -95,10 +95,10 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの表示] | 組織に属するサンドボックスへの読み取り専用アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスのリセット] | サンドボックスをリセットする機能 |
 | [!DNL Destinations] | [!UICONTROL 宛先の管理] | 宛先への読み取り、作成、編集、無効化アクセス* |
-| [!DNL Destinations] | [!UICONTROL 宛先の表示] | 「*[!UICONTROL カタログ]*」タブでの使用可能な宛先および「*[!UICONTROL 参照]*」タブでの認証済みの宛先への読み取り専用アクセス* |
+| [!DNL Destinations] | [!UICONTROL 宛先の表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能な宛先および「**[!UICONTROL 参照]**」タブでの認証済みの宛先への読み取り専用アクセス* |
 | [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | 作成済みのアクティブな宛先に対するデータのアクティブ化機能This permission requires either “View Destinations” or “Manage [!UICONTROL Destinations”] to be granted to the user who will activate destinations.* |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |
-| [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「*[!UICONTROL カタログ]*」タブでの使用可能なソースおよび「*[!UICONTROL 参照]*」タブでの認証済みのソースへの読み取り専用アクセス |
+| [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
 | [!DNL Data Science Workspace] | [!UICONTROL Data Science Workspace の管理] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
 
 _(*)この許可には，に対する規定が必要[!DNL Real-time Customer Data Platform]である。 リアルタイム CDP の詳細については、まず「[リアルタイム CDP の概要](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/overview.html)」を参照してください。_
