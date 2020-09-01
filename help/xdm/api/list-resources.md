@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;list;List;get;GET
 solution: Experience Platform
 title: リソースのリスト
+description: 1つのGET要求を実行することで、コンテナ内の特定の種類(クラス、ミックスイン、スキーマ、データ型、または記述子)のすべてのスキーマレジストリリソースのリストを表示できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 30%
+source-wordcount: '538'
+ht-degree: 28%
 
 ---
 
@@ -86,7 +87,7 @@ curl -X GET \
 
 ### ページング {#paging}
 
-ページングに最も一般的なクエリパラメーターは次のとおりです。
+The most common query parameters for paging include:
 
 | パラメーター | 説明 |
 | --- | --- |
