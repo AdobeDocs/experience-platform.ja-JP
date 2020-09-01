@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; payment; paypal
+keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
 title: ソースコネクタとAPIを使用して支払データを収集する
 topic: overview
-description: このチュートリアルでは、サードパーティの支払アプリケーションからデータを取得し、ソースコネクタとフローサービスAPIを使用してプラットフォームに取り込む手順を説明します。
+description: このチュートリアルでは、支払い申込書からデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1743'
 ht-degree: 13%
 
 ---
