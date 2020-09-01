@@ -5,7 +5,7 @@ seo-title: リアルタイム顧客データプラットフォームにおける
 description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 seo-description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 55%
@@ -76,7 +76,7 @@ When a segment is first activated, DULE [!DNL Policy Service] checks for policy 
 
 ![](assets/violation-popover.png)
 
-ポップオーバーの「*[!UICONTROL 詳細]*」タブには、違反をトリガーしたアクションと違反が発生した理由、および問題を解決できる可能性がある方法の案が表示されます。
+ポップオーバーの「**[!UICONTROL 詳細]**」タブには、違反をトリガーしたアクションと違反が発生した理由、および問題を解決できる可能性がある方法の案が表示されます。
 
 「**[!UICONTROL データ系列]**」をクリックして、違反をトリガーしたデータラベルが付けられた宛先、セグメント、結合ポリシーまたはデータセットを追跡します。
 
