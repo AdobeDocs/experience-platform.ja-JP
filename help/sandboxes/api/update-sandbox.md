@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: サンドボックスの更新
 topic: developer guide
+description: 要求パスにサンドボックスの名前を含むPATCH要求を作成し、要求ペイロードに更新するプロパティを含めることで、サンドボックス内の1つ以上のフィールドを更新できます。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 100%
+source-wordcount: '120'
+ht-degree: 72%
 
 ---
 
