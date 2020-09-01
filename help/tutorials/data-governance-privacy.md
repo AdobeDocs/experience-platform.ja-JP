@@ -3,19 +3,19 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: データガバナンスとプライバシーのチュートリアル
 topic: tutorial
-description: データ使用ラベルおよび実施（DULE）は、Adobe Experience Platform のデータガバナンスの中核的なメカニズムです。DULE 機能を使用すると、データセットとフィールドにデータ使用ラベルを付けて、関連するデータ使用ポリシーに従って各データを分類できます。
+description: このドキュメントでは、Adobe Experience PlatformデータガバナンスとAdobe Experience Platform Privacy Serviceに関する各種チュートリアルの概要を説明します。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 60%
+source-wordcount: '496'
+ht-degree: 50%
 
 ---
 
 
 # [!DNL Data Governance] および [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE)はAdobe Experience Platformの中核機構 [!DNL Data Governance]です。 DULE 機能を使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従って各データを分類できます。Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
+Adobe Experience Platform・データ・ガバナンスを使用すると、データセットやフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従って各項目を分類し、それらのデータセットやフィールドに対して特定のアクションが実行された場合にポリシー違反を評価できます。 このドキュメントに示すチュートリアルを使い始める前に、フレームワークのより強力な概要について [[!DNL Data Governance] 概要](../data-governance/home.md) を参照してください。
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. 詳しくは、「[Privacy Service の概要](../privacy-service/home.md)」を参照してください。
 
@@ -25,11 +25,11 @@ Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user
 
 ## データ使用ポリシーの作成
 
-The DULE [!DNL Policy Service] API allows you to create and manage DULE policies to determine what marketing actions can be taken against data that contains certain DULE labels. 開始する前に、「[データ使用ポリシーの概要](../data-governance/policies/overview.md)」をお読みください。
+The [!DNL Policy Service] API allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain usage labels. 開始する前に、「[データ使用ポリシーの概要](../data-governance/policies/overview.md)」をお読みください。
 
 ## データ使用ポリシーの作成
 
-Once you have created Data Usage Labeling and Enforcement (DULE) labels for your data, and have created DULE policies for marketing actions against those labels, you can use the DULE [!DNL Policy Service] API to evaluate whether a marketing action performed on a dataset, or an arbitrary group of DULE labels, constitutes a policy violation. その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。開始するには、「[ポリシー実施の概要](../data-governance/enforcement/overview.md)」にアクセスします。
+データに使用ラベルを追加し、それらのラベルに対するマーケティングアクションに関するポリシーを作成したら、を使用して、データセットまたは使用ラベルの任意のグループに対してマーケティングアクションがポリシー違反と見なされるかを評価できます。 [!DNL Policy Service API] その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。開始するには、「[ポリシー実施の概要](../data-governance/enforcement/overview.md)」にアクセスします。
 
 ## データセグメントのデータ使用コンプライアンスのオーディエンスを実施する
 
