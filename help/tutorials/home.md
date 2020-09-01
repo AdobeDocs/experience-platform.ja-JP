@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Experience Platform クエリサービス
 topic: overview
+description: これらのチュートリアルは、Experience Platform のドキュメントに記載されている情報を補完する目的で設計されているので、最良の結果を得るために、チュートリアルを完了する際にドキュメントを手元に置いておくことをお勧めします。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 75%
+source-wordcount: '175'
+ht-degree: 79%
 
 ---
 
