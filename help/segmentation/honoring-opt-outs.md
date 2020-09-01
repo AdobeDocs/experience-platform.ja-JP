@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;opt-out
+keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;
 solution: Experience Platform
 title: オプトアウトの遵守
 topic: overview
 description: 'Experience Platformを使用すると、顧客は、データの使用状況やストレージに関するオプトアウトリクエストをリアルタイム顧客プロファイル内で送信できます。 これらのオプトアウトリクエストは、カリフォルニア州消費者プライバシー法（CCPA）に含まれています。CCPA は、カリフォルニア州の在住者に対して、個人データにアクセスし削除する権利や、個人データが販売または開示されたか（そして誰に対して）を知る権利を付与しています。 '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1030'
 ht-degree: 63%
