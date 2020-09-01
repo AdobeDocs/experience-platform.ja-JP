@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: クラスの作成
+description: スキーマの主な構成要素はクラスです。クラスには、スキーマのコアデータをキャプチャするために定義する必要があるフィールドの最小セットが含まれています。例えば、車やトラック用のスキーマをデザインしている場合、すべての車の基本的な共通の特性を説明した Vehicle クラスを使用することがよくあります。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 89%
+source-wordcount: '539'
+ht-degree: 90%
 
 ---
 
