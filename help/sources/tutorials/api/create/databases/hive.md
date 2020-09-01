@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache hive;hive;Hive
 solution: Experience Platform
 title: Flow Service APIを使用してAzure HDInsights ConnectorでApache Hiveを作成する
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、Azure HDInsights上のApache HiveをExperience Platformに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 21%
+source-wordcount: '569'
+ht-degree: 20%
 
 ---
 
