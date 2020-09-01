@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation
 solution: Experience Platform
 title: Flow Service APIを使用したマーケティング自動化システムの調査
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、マーケティング自動化システムを調査します。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 20%
+source-wordcount: '608'
+ht-degree: 19%
 
 ---
 
 
 # APIを使用したマーケティング自動化システムの調査 [!DNL Flow Service]
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用してマーケティング自動化システムを調査します。
 
@@ -29,7 +30,7 @@ The following sections provide additional information that you will need to know
 
 ### 必要な資格情報の収集
 
-このチュートリアルでは、データを取り込むサードパーティのマーケティング自動化アプリケーションとの有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様IDと接続IDが含まれます。 Marketing Automation接続の作成とこれらの値の取得について詳しくは、「Marketing Automationソースの [Platformへの接続](../../api/create/marketing-automation/hubspot.md) 」チュートリアルを参照してください。
+このチュートリアルでは、データを取り込むサードパーティのマーケティング自動化アプリケーションとの有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様IDと接続IDが含まれます。 マーケティング自動化接続の作成とこれらの値の取得について詳しくは、「マーケティング自動化ソースのプラットフォームへの [接続](../../api/create/marketing-automation/hubspot.md) 」チュートリアルを参照してください。
 
 ### API 呼び出し例の読み取り
 
