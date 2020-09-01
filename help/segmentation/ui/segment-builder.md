@@ -5,7 +5,7 @@ title: Segmentation Service Segment Builderユーザーガイド
 topic: ui guide
 description: 'セグメントビルダーのワークスペースには、プロファイルのデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。 '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 55%
@@ -131,7 +131,7 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 ## セグメントのプロパティ
 
-セグメント定義を作成する際には、作成されるセグメントの推定サイズがワークスペース右側の「*[!UICONTROL セグメントのプロパティ]*」セクションに表示されるので、オーディエンス自体を作成する前にセグメントの定義を必要に応じて調整できます。
+セグメント定義を作成する際には、作成されるセグメントの推定サイズがワークスペース右側の「**[!UICONTROL セグメントのプロパティ]**」セクションに表示されるので、オーディエンス自体を作成する前にセグメントの定義を必要に応じて調整できます。
 
 「**[!UICONTROL セグメントのプロパティ]**」セクションでは、セグメント定義に関する重要な情報（**[!UICONTROL 名前]**、**[!UICONTROL 説明]**&#x200B;など）を指定することもできます。セグメント定義名は、組織で定義されたものの中から目的のセグメントを識別する際に使用されます。このため、セグメント定義名は、内容がわかりやすく簡潔、かつ一意である必要があります。
 
