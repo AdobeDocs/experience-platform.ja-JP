@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion notifications;notifications;subscribe events;data ingestion status events;status events;subscribe;status notifications;
 solution: Experience Platform
 title: データ取得イベントへのサブスクライブ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 38%
