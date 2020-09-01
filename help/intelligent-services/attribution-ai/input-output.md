@@ -5,7 +5,7 @@ title: Attribution AIの入出力
 topic: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入出力の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 15%
@@ -136,11 +136,11 @@ Attribution AI出力のアトリビューションスコアは、可能な限り
 
 ### 生のスコアパスの表示(UI) {#raw-score-path}
 
-生のスコアへのパスをUIで表示できます。 開始するには、プラットフォームUIで **[!UICONTROL スキーマを選択し]** 、「 *[!UICONTROL 参照]* 」タブからアトリビューションAIスコアスキーマを検索して選択します。
+生のスコアへのパスをUIで表示できます。 開始するには、プラットフォームUIで **[!UICONTROL スキーマを選択し]** 、「 **[!UICONTROL 参照]** 」タブからアトリビューションAIスコアスキーマを検索して選択します。
 
 ![スキーマの選択](./images/input-output/schemas_browse.png)
 
-次に、UIの *[!UICONTROL 構造]* ウィンドウ内のフィールドを選択し、「 *[!UICONTROL フィールドプロパティ]* 」タブが開きます。 「 *[!UICONTROL Field」プロパティ内に]* 、生のスコアにマップする「 *[!UICONTROL Path]* 」フィールドがあります。
+次に、UIの **[!UICONTROL 構造]** ウィンドウ内のフィールドを選択し、「 **[!UICONTROL フィールドプロパティ]** 」タブが開きます。 「 **[!UICONTROL Field」プロパティ内に]** 、生のスコアにマップする「 **[!UICONTROL Path]** 」フィールドがあります。
 
 ![スキーマを選択](./images/input-output/field_properties.png)
 
