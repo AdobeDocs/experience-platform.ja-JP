@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでのマーケティング自動化コネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 3%
@@ -20,10 +20,10 @@ ht-degree: 3%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model] (XDM)システム](../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+- [[!DNL Experience Data Model] (XDM)システム](../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL リアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [[!DNLリアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 さらに、このチュートリアルでは、既にMarketing Automationアカウントを作成している必要があります。 UIで様々なマーケティング自動化コネクタを作成するためのチュートリアルのリストは、 [source connectorsの概要](../../../home.md)。
 
@@ -108,7 +108,7 @@ The **[!UICONTROL Select schema]** dialog appears. 新しいデータセット�
 
 [ **[!UICONTROL Dataflow detail]** ]ステップが表示され、新しいデータフローに名前を付け、簡単に説明を付けることができます。
 
-このプロセス中に、 **[!UICONTROL 部分的な取り込み]** 、 **[!UICONTROL エラー診断も有効にできます]**。 Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. [ **[!UICONTROL 部分的な取り込み]** ]が有効になったら *[!UICONTROL 、[]* エラーしきい値%]ダイヤルをドラッグして、バッチのエラーしきい値を調整します。 または、入力ボックスを選択して手動でしきい値を調整することもできます。 詳しくは、 [部分的なバッチインジェストの概要を参照してください](../../../../ingestion/batch-ingestion/partial.md)。
+このプロセス中に、 **[!UICONTROL 部分的な取り込み]** 、 **[!UICONTROL エラー診断も有効にできます]**。 Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. [ **[!UICONTROL 部分的な取り込み]** ]が有効になったら **[!UICONTROL 、[]** エラーしきい値%]ダイヤルをドラッグして、バッチのエラーしきい値を調整します。 または、入力ボックスを選択して手動でしきい値を調整することもできます。 詳しくは、 [部分的なバッチインジェストの概要を参照してください](../../../../ingestion/batch-ingestion/partial.md)。
 
 データフローの値を指定し、「 **[!UICONTROL Next]**」を選択します。
 
