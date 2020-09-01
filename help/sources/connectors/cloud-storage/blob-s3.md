@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Blob;Amazon S3;blob;Blob;S3;s3
 solution: Experience Platform
 title: Azure BlobとAmazonS3コネクタ
 topic: overview
+description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure BlobとAmazonS3をプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 3cee9b2515d833a640b091a90cd2152f0c1b1e64
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
