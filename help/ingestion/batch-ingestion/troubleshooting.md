@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics;ingested data
+keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
 solution: Experience Platform
 title: Adobe Experience Platform バッチ取得トラブルシューティングガイド
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 9766cadee83e81bacc2abe6b13342ac95aae19a9
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '1389'
 ht-degree: 88%
