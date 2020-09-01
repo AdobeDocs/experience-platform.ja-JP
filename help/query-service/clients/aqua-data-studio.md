@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aqua Data Studio との接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 70%
@@ -20,12 +20,12 @@ After installing [!DNL Aqua Data Studio], you must first register the server. �
 
 ![](../images/clients/aqua-data-studio/register-server.png)
 
-*[!UICONTROL サーバーを登録]*&#x200B;ダイアログが表示されます。「*[!UICONTROL 一般]*」タブで、左側のリストから「**[!UICONTROL PostgreSQL]**」を選択します。表示されるダイアログで、サーバー設定の次の詳細を指定します。
+**[!UICONTROL サーバーを登録]**&#x200B;ダイアログが表示されます。「**[!UICONTROL 一般]**」タブで、左側のリストから「**[!UICONTROL PostgreSQL]**」を選択します。表示されるダイアログで、サーバー設定の次の詳細を指定します。
 
 - **[!UICONTROL Name]**：接続の名前。
 - **[!UICONTROL Login Name and Password]**：使用されるログイン資格情報。ユーザー名は、`ORG_ID@AdobeOrg` の形式をとります。
-- **[!UICONTROL ホストとポート]**: のホストエンドポイントとそのポート [!DNL Query Service]。
-- **[!UICONTROL データベース]:**使用するデータベースです。
+- **[!UICONTROL ホストとポート]**:のホストエンドポイントとそのポート [!DNL Query Service]。
+- **[!UICONTROL データベース]:** 使用するデータベースです。
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ After installing [!DNL Aqua Data Studio], you must first register the server. �
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
-「**[!UICONTROL ドライバー]**」タブを選択します。「*[!UICONTROL パラメーター]*」で、値を `?sslmode=require` に設定します。
+「**[!UICONTROL ドライバー]**」タブを選択します。「**[!UICONTROL パラメーター]**」で、値を `?sslmode=require` に設定します。
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
@@ -41,4 +41,4 @@ After installing [!DNL Aqua Data Studio], you must first register the server. �
 
 ## 次の手順
 
-Now that you have connected to [!DNL Query Service], you can use the *[!UICONTROL Query Analyzer]* within [!DNL Aqua Data Studio] to execute and edit SQL statements. クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../creating-queries/creating-queries.md)』を参照してください。
+Now that you have connected to [!DNL Query Service], you can use the **[!UICONTROL Query Analyzer]** within [!DNL Aqua Data Studio] to execute and edit SQL statements. クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../creating-queries/creating-queries.md)』を参照してください。
