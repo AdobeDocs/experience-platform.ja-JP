@@ -5,7 +5,7 @@ title: データ使用ポリシーユーザガイド
 topic: policies
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platformユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要を説明します。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 39%
@@ -30,7 +30,7 @@ This guide requires a working understanding of the following [!DNL Experience Pl
 
 ## データ使用ポリシーの表示 {#view-policies}
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. 「**[!UICONTROL 参照]**」タブには、使用可能なポリシー（関連するラベル、マーケティングアクション、ステータスなど）が一覧表示されます。
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the **[!UICONTROL Policies]** workspace. 「**[!UICONTROL 参照]**」タブには、使用可能なポリシー（関連するラベル、マーケティングアクション、ステータスなど）が一覧表示されます。
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,11 +40,11 @@ In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open th
 
 ## カスタムデータ使用ポリシーの作成 {#create-policy}
 
-To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the *[!UICONTROL Policies]* workspace.
+To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace.
 
 ![](../images/policies/create-policy-button.png)
 
-*[!UICONTROL ポリシーの作成]*&#x200B;ワークフローが表示されます。まず、新しいポリシーの名前と説明を指定します。
+**[!UICONTROL ポリシーの作成]**&#x200B;ワークフローが表示されます。まず、新しいポリシーの名前と説明を指定します。
 
 ![](../images/policies/create-policy-description.png)
 
@@ -52,7 +52,7 @@ To create a new custom data usage policy, click **[!UICONTROL Create policy]** i
 
 ![](../images/policies/add-labels.png)
 
-「*[!UICONTROL マーケティングアクションの選択]*」手順が表示されます。表示されたリストから適切なマーケティングアクションを選択し、「**[!UICONTROL 次へ]**」をクリックして続行します。
+「**[!UICONTROL マーケティングアクションの選択]**」手順が表示されます。表示されたリストから適切なマーケティングアクションを選択し、「**[!UICONTROL 次へ]**」をクリックして続行します。
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ To create a new custom data usage policy, click **[!UICONTROL Create policy]** i
 
 ![](../images/policies/add-marketing-actions.png)
 
-「*[!UICONTROL 確認]*」手順が表示され、新しいポリシーを作成する前にその詳細を確認できます。確認したら、「**[!UICONTROL 完了]**」をクリックして、ポリシーを作成します。
+「**[!UICONTROL 確認]**」手順が表示され、新しいポリシーを作成する前にその詳細を確認できます。確認したら、「**[!UICONTROL 完了]**」をクリックして、ポリシーを作成します。
 
 ![](../images/policies/policy-review.png)
 
-「*[!UICONTROL 参照]*」タブが再び表示され 、新しく作成したポリシーが「草案」ステータスでリストに表示されるようになります。ポリシーを有効にするには、次の節を参照してください。
+「**[!UICONTROL 参照]**」タブが再び表示され 、新しく作成したポリシーが「草案」ステータスでリストに表示されるようになります。ポリシーを有効にするには、次の節を参照してください。
 
 ![](../images/policies/created-policy.png)
 
@@ -72,7 +72,7 @@ To create a new custom data usage policy, click **[!UICONTROL Create policy]** i
 
 すべてのデータ使用ポリシー(Adobeが提供するコアポリシーを含む)は、デフォルトで無効になっています。 個々のポリシーの適用が考慮されるようにするには、APIまたはUIを使用して手動でそのポリシーを有効にする必要があります。
 
-You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. リストからカスタムポリシーを選択して、右側に詳細を表示します。「*[!UICONTROL ステータス]*」で、ポリシーを有効または無効にする切り替えボタンを選択します。
+You can enable or disable policies from the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace. リストからカスタムポリシーを選択して、右側に詳細を表示します。「**[!UICONTROL ステータス]**」で、ポリシーを有効または無効にする切り替えボタンを選択します。
 
 ![](../images/policies/enable-policy.png)
 
@@ -84,15 +84,15 @@ You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!
 
 ## Create a marketing action {#create-marketing-action}
 
-新しいカスタムマーケティングアクションを作成するには、「 **[!UICONTROL ポリシー]****[!UICONTROL 」ワークスペースの「マーケティングアクション]**** 」タブの右上隅にある「マーケティングアクションを作成」をクリックします。
+新しいカスタムマーケティングアクションを作成するには、「 **[!UICONTROL ポリシー]****[!UICONTROL 」ワークスペースの「マーケティングアクション]****** 」タブの右上隅にある「マーケティングアクションを作成」をクリックします。
 
 ![](../images/policies/create-marketing-action.png)
 
-マーケティングアクション *[!UICONTROL の作成]* ダイアログが表示されます。 マーケティングアクションの名前と説明を入力し、「 **[!UICONTROL 作成]**」をクリックします。
+マーケティングアクション **[!UICONTROL の作成]** ダイアログが表示されます。 マーケティングアクションの名前と説明を入力し、「 **[!UICONTROL 作成]**」をクリックします。
 
 ![](../images/policies/create-marketing-action-details.png)
 
-新しく作成したアクションが「 *[!UICONTROL マーケティングアクション]* 」タブに表示されます。 新しいデータ使用ポリシーを [作成する際に、マーケティングアクションを使用できるようになりました](#create-policy)。
+新しく作成したアクションが「 **[!UICONTROL マーケティングアクション]** 」タブに表示されます。 新しいデータ使用ポリシーを [作成する際に、マーケティングアクションを使用できるようになりました](#create-policy)。
 
 ![](../images/policies/created-marketing-action.png)
 
