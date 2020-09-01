@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;payment
 solution: Experience Platform
 title: Flow Service APIを使用して支払システムを調査します。
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して支払い申請を調べます。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '587'
 ht-degree: 20%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 20%
 
 # APIを使用した支払いシステムの調査 [!DNL Flow Service]
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して支払い申請を調査します。
 
@@ -29,7 +30,7 @@ The following sections provide additional information that you will need to know
 
 ### 必要な資格情報の収集
 
-このチュートリアルでは、データを取り込むサードパーティの支払い申し込みとの有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様IDと接続IDが含まれます。 支払い接続の作成とこれらの値の取得の詳細については、「支払い元の [Platformへの接続](../../api/create/payments/paypal.md) 」チュートリアルを参照してください。
+このチュートリアルでは、データを取り込むサードパーティの支払い申し込みとの有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様IDと接続IDが含まれます。 支払接続の作成とこれらの値の取得について詳しくは、「支払ソースのプラットフォームへの [接続](../../api/create/payments/paypal.md) 」チュートリアルを参照してください。
 
 ### API 呼び出し例の読み取り
 
