@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;reset sandbox
 solution: Experience Platform
 title: サンドボックスのリセット
 topic: developer guide
+description: 開発サンドボックスには「出荷時リセット」機能があり、この機能によりサンドボックスからデフォルト以外のすべてのリソースが削除されます。サンドボックスの名前を要求パスに含むPUT要求を行うことで、サンドボックスをリセットできます。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 100%
+source-wordcount: '156'
+ht-degree: 87%
 
 ---
 
