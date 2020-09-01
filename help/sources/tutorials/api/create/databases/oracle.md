@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: フロー・サービスAPIを使用したOracleコネクタの作成
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、OracleをExperience Platformに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 22%
+source-wordcount: '535'
+ht-degree: 21%
 
 ---
 
