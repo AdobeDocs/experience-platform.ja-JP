@@ -3,19 +3,19 @@ keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic e
 solution: Experience Platform
 title: ポリシーサービス API を使用したデータ使用ポリシーの適用
 topic: enforcement
-description: データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、データポリシーサービス API を使用して、データセットまたはラベルの任意のグループに対して実行されたマーケティングアクションがポリシー違反を構成するかどうかを評価します。その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
+description: データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、Policy Service APIを使用して、データセットまたは任意のラベルグループに対するマーケティングアクションがポリシー違反かどうかを評価できます。 その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '941'
-ht-degree: 83%
+source-wordcount: '936'
+ht-degree: 43%
 
 ---
 
 
 # Enforce data usage policies using the [!DNL Policy Service] API
 
-Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [[!DNL DULE Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
+Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
 
 >[!NOTE]
 >
@@ -25,18 +25,18 @@ This document provides steps on how to use the [!DNL Policy Service] API to chec
 
 ## はじめに
 
-このチュートリアルでは、データポリシーの適用に関わる次の主要概念に関する十分な知識が必要です。 
+このチュートリアルでは、データ使用ポリシーの適用に関連する以下の主要概念について、十分に理解している必要があります。
 
 * [データガバナンス](../home.md)[!DNL Platform]： がデータ使用のコンプライアンスを強制するフレームワーク。
    * [データ使用ラベル](../labels/overview.md)：データ使用ラベルは、データセット（や、データセット内の個々のフィールド）に適用され、そのデータの使用方法に関する制限を指定します。
-   * [データ使用ポリシー](../policies/overview.md)：データ使用ポリシーは、特定のデータラベルのセットに対して許可または制限されるマーケティングアクションの種類を記述するルールです。
+   * [データ使用ポリシー](../policies/overview.md):データ使用ポリシーは、特定のデータセットのデータ使用ラベルに対して許可または制限されるマーケティングアクションの種類を記述するルールです。
 * [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE [!DNL Policy Service] API, including required headers and how to read example API calls.
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Policy Service] API, including required headers and how to read example API calls.
 
-## データラベルとマーケティングアクションを使用した評価
+## ラベルとマーケティングアクションを使用して評価
 
-データセット内に仮定的に存在するデータラベルのセットに対してマーケティングアクションをテストすることで、ポリシーを評価できます。これは、次の例に示すように、`duleLabels` クエリパラメータを使用しておこないます。データラベルは、値のコンマ区切りリストとして提供されます。
+データセット内に仮定的に存在する一連のデータ使用ラベルに対してマーケティングアクションをテストすることで、ポリシーを評価できます。 This is done through the use of the `duleLabels` query parameter, where labels are provided as a comma-separated list of values, as shown in the example below.
 
 **API 形式**
 
@@ -47,7 +47,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 評価するデータポリシーに関連付けられたマーケティングアクションの名前。 |
+| `{MARKETING_ACTION_NAME}` | 評価するデータ使用ポリシーに関連付けられているマーケティングアクションの名前。 |
 | `{LABEL_1}` | マーケティングアクションをテストするデータ使用ラベル。少なくとも 1 つのラベルを指定する必要があります。複数のラベルを指定する場合は、コンマで区切る必要があります。 |
 
 **リクエスト**
@@ -69,7 +69,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、マーケティングアクションの URL、テスト対象のデータラベル、およびこれらのラベルに対するアクションのテストの結果として違反されたデータポリシーのリストを返します。この例では、「サードパーティへのデータ書き出し」ポリシーが `violatedPolicies` 配列に表示され、マーケティングアクションによって予期されるポリシー違反がトリガーされたことが示されています。
+正常な応答は、マーケティングアクションのURL、テストされた使用状況ラベル、およびこれらのラベルに対するアクションのテストの結果として違反されたポリシーのリストを返します。 この例では、「サードパーティへのデータ書き出し」ポリシーが `violatedPolicies` 配列に表示され、マーケティングアクションによって予期されるポリシー違反がトリガーされたことが示されています。
 
 ```json
 {
@@ -129,11 +129,11 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `violatedPolicies` | 提供された `duleLabels` に対して（`marketingActionRef` で指定された）マーケティングアクションのテストに違反したデータポリシーをリストする配列です。 |
+| `violatedPolicies` | An array listing any policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
 
 ## データセットを使用した評価
 
-データポリシーを評価するには、データラベルを収集できる 1 つ以上のデータセットに対してマーケティングアクションをテストします。これは、次の例に示すように、リクエスト本文内にデータセット ID を指定して `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` に POST リクエストを実行することでおこなわれます。
+ラベルを収集できる1つ以上のデータセットに対してマーケティングアクションをテストすることで、データ使用ポリシーを評価できます。 これは、次の例に示すように、リクエスト本文内にデータセット ID を指定して `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` に POST リクエストを実行することでおこなわれます。
 
 **API 形式**
 
@@ -144,7 +144,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 評価するデータポリシーに関連付けられたマーケティングアクションの名前。 |
+| `{MARKETING_ACTION_NAME}` | 評価するポリシーに関連付けられているマーケティングアクションの名前です。 |
 
 **リクエスト**
 
@@ -181,7 +181,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、マーケティングアクションの URL、提供されたデータセットから収集されたデータラベル、およびこれらのラベルに対するアクションのテストの結果として違反されたデータポリシーのリストを返します。この例では、「サードパーティへのデータ書き出し」ポリシーが `violatedPolicies` 配列に表示され、マーケティングアクションによって予期されるポリシー違反がトリガーされたことが示されています。
+正常な応答は、マーケティングアクションのURL、指定されたデータセットから収集された使用ラベル、およびこれらのラベルに対するアクションのテストの結果として違反されたポリシーのリストを返します。 この例では、「サードパーティへのデータ書き出し」ポリシーが `violatedPolicies` 配列に表示され、マーケティングアクションによって予期されるポリシー違反がトリガーされたことが示されています。
 
 ```json
 {
@@ -362,12 +362,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `duleLabels` | リクエストペイロードで提供されるデータセットから抽出されたデータラベルのリスト。 |
-| `discoveredLabels` | リクエストペイロードで提供されたデータセットのリスト。それぞれに見つかったデータセットレベルとフィールドレベルのデータラベルを表示します。 |
-| `violatedPolicies` | 提供された `duleLabels` に対して（`marketingActionRef` で指定された）マーケティングアクションのテストに違反したデータポリシーをリストする配列です。 |
+| `duleLabels` | 要求ペイロードで提供されたデータセットから抽出されたデータ使用ラベルのリスト。 |
+| `discoveredLabels` | リクエストペイロードで提供されたデータセットのリスト。各ペイロードで見つかったデータセットレベルとフィールドレベルのラベルが表示されます。 |
+| `violatedPolicies` | An array listing any policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
 
 ## 次の手順
 
-このドキュメントでは、データセットまたは一連のデータラベルに対してマーケティングアクションを実行する際に、ポリシー違反の有無が正しく確認しました。API 応答で返されたデータを使用して、エクスペリエンスアプリケーション内でプロトコルを設定し、ポリシー違反が発生した場合に適切にポリシー違反を実施することができます。
+このドキュメントを読むと、データセットまたは一連のデータ使用ラベルに対するマーケティングアクションの実行時に、ポリシー違反がないかどうかが正しく確認されます。 API 応答で返されたデータを使用して、エクスペリエンスアプリケーション内でプロトコルを設定し、ポリシー違反が発生した場合に適切にポリシー違反を実施することができます。
 
 For steps on how to enforce data usage policies for audience segments in [!DNL Real-time Customer Profile], please refer to the following [tutorial](../../segmentation/tutorials/governance.md).
