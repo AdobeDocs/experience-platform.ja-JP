@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Explorer;data explorer;Data Explorer
 solution: Experience Platform
 title: Flow Service APIを使用してAzureData Explorerコネクタを作成する
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、AzureData Explorer(以下「Data Explorer」と呼ばれます)をExperience Platformに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 19%
+source-wordcount: '632'
+ht-degree: 18%
 
 ---
 
