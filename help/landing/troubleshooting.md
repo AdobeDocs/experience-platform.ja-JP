@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform に関する FAQ とトラブルシューティングガイド
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 9eeddfaf3e704d66b81f983afcdf5ef3c45c6075
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1962'
-ht-degree: 80%
+source-wordcount: '1951'
+ht-degree: 76%
 
 ---
 
@@ -238,16 +238,15 @@ All API calls in [!DNL Platform] require specific request headers. 個々のサ�
 The following is a list of troubleshooting guides and API reference documentation for [!DNL Experience Platform] APIs. Each troubleshooting guide provides answers to frequently asked questions and solutions to problems that are specific to individual [!DNL Platform] services. API リファレンスドキュメントは、各サービスで使用可能なすべてのエンドポイントの包括的なガイドを提供し、受け取る可能性のあるリクエストの本文、応答、エラーコードのサンプルを示します。
 
 | サービス | API リファレンス | トラブルシューティング |
---- | --- | ---
+| --- | --- | --- |
 | アクセス制御 | [アクセス制御 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [アクセス制御トラブルシューティングガイド](../access-control/troubleshooting-guide.md) |
-| カタログ | [カタログサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
-| データ取得（バッチ） | [データ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [バッチ取得トラブルシューティングガイド](../ingestion/batch-ingestion/troubleshooting.md) |
-| データ取得（ストリーミング） | [データ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [ストリーミング取得トラブルシューティングガイド](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Data Science Workspace | [Sensei 機械学習 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [Data Science Workspace　トラブルシューティングガイド](../data-science-workspace/troubleshooting-guide.md) |
-| データ使用のラベル付けと実施（DULE） | [DULE ポリシーサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
-| エクスペリエンスデータモデル（XDM） | [スキーマレジストリ API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [XDM システムに関する FAQ とトラブルシューティングガイド](../xdm/troubleshooting-guide.md) |
-| ID サービス | [ID サービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [ID サービストラブルシューティングガイド](../identity-service/troubleshooting-guide.md) |
-| クエリサービス | [クエリサービス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [クエリサービストラブルシューティングガイド](../query-service/troubleshooting-guide.md) |
-| リアルタイム顧客プロファイル | [リアルタイム顧客プロファイル API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [プロファイルトラブルシューティングガイド](../profile/troubleshooting.md) |
+| Adobe Experience Platformでのデータ取得 | [[!DNLデータ取り込みAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Batch Ingestionのトラブルシューティング](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[ガイドストリーミング取り込みのトラブルシューティングガイド](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Adobe Experience Platformデータサイエンスワークスペース | [[!DNL先生機械学習API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] トラブルシューティングガイド](../data-science-workspace/troubleshooting-guide.md) |
+| Adobe Experience Platform のデータガバナンス | [[!DNLポリシーサービスAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
+| Adobe Experience Platform ID サービス | [[!DNL IDサービスAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] トラブルシューティングガイド](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform クエリサービス | [[!DNLクエリサービスAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] トラブルシューティングガイド](../query-service/troubleshooting-guide.md) |
+| Adobe Experience Platform分類 | [[!DNLセグメントAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| [!DNL Catalog Service] | [[!DNLカタログサービスAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
+| [!DNL Experience Data Model] (XDM) | [[!DNLスキーマレジストリAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] FAQとトラブルシューティングガイド](../xdm/troubleshooting-guide.md) |
+| [!DNL Real-time Customer Profile] | [[!DNLリアルタイム顧客プロファイルAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] トラブルシューティングガイド](../profile/troubleshooting.md) |
 | サンドボックス | [サンドボックス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [サンドボックストラブルシューティングガイド](../sandboxes/troubleshooting-guide.md) |
-| セグメント化 | [セグメント化 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
