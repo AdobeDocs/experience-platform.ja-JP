@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
 solution: Experience Platform
 title: Analytics マッピングフィールド
 topic: overview
+description: Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）を介して Adobe Analytics データを取り込むことができます。ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '3328'
+source-wordcount: '3378'
 ht-degree: 100%
 
 ---
