@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Microsoft Dynamicsコネクタ
 topic: overview
+description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してMicrosoft Dynamicsをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 10%
+source-wordcount: '205'
+ht-degree: 9%
 
 ---
 
@@ -50,7 +51,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Microsoft Dynamics] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Microsoft Dynamics] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
 ## API [!DNL Microsoft Dynamics] を [!DNL Platform] 使用した接続
 
