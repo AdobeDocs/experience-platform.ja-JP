@@ -5,7 +5,7 @@ title: クエリエディターユーザガイド
 topic: query editor
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内で顧客体験データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 58%
@@ -77,19 +77,19 @@ In the [!DNL Experience Platform] UI, click **[!UICONTROL Queries]** in the left
 
 ### クエリの詳細
 
-While you are viewing a query in [!DNL Query Editor], the *[!UICONTROL Query Details]* panel provides tools to manage the selected query.
+While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query Details]** panel provides tools to manage the selected query.
 
 ![画像](../images/queries/query-editor-overview/query-details.png)
 
-このパネルでは、UI から出力データセットを直接生成したり、表示されたクエリを削除したり、クエリに名前を付けたりすることができます。また、「*[!UICONTROL SQL クエリ]*」タブには、SQL コードが簡単にコピーできる形式で表示されます。このパネルには、クエリの最終変更日時や最終変更者（該当する場合）などの有効なメタデータも表示されます。データセットを生成するには、「**[!UICONTROL データセットを出力]**」をクリックします。*[!UICONTROL データセットを出力]*&#x200B;ダイアログが表示されます。名前と説明を入力し、「**[!UICONTROL クエリを実行]**」をクリックします。The new dataset is displayed in the *[!UICONTROL Datasets]* tab on the [!DNL Query Service] user interface on [!DNL Platform].
+このパネルでは、UI から出力データセットを直接生成したり、表示されたクエリを削除したり、クエリに名前を付けたりすることができます。また、「**[!UICONTROL SQL クエリ]**」タブには、SQL コードが簡単にコピーできる形式で表示されます。このパネルには、クエリの最終変更日時や最終変更者（該当する場合）などの有効なメタデータも表示されます。データセットを生成するには、「**[!UICONTROL データセットを出力]**」をクリックします。**[!UICONTROL データセットを出力]**&#x200B;ダイアログが表示されます。名前と説明を入力し、「**[!UICONTROL クエリを実行]**」をクリックします。The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
 
 ### クエリの保存
 
-[!DNL Query Editor] には、クエリを保存して後で操作できる保存関数があります。 To save a query, click **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. クエリを保存する前に、*[!UICONTROL クエリの詳細]*&#x200B;パネルを使用してクエリに名前を付ける必要があります。
+[!DNL Query Editor] には、クエリを保存して後で操作できる保存関数があります。 To save a query, click **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. クエリを保存する前に、**[!UICONTROL クエリの詳細]**&#x200B;パネルを使用してクエリに名前を付ける必要があります。
 
 ### 以前のクエリを検索する方法
 
-All queries executed from [!DNL Query Editor] are captured in the Log table. 「*[!UICONTROL ログ]*」タブの検索機能を使用して、クエリの実行を検索できます。保存したクエリは「*[!UICONTROL 参照]*」タブに表 示されます。
+All queries executed from [!DNL Query Editor] are captured in the Log table. 「**[!UICONTROL ログ]**」タブの検索機能を使用して、クエリの実行を検索できます。保存したクエリは「**[!UICONTROL 参照]**」タブに表 示されます。
 
 詳しくは、[クエリサービス UI の概要][query-service-ui]を参照してください。
 
@@ -99,7 +99,7 @@ All queries executed from [!DNL Query Editor] are captured in the Log table. 「
 
 ## クエリエディターを使用してクエリを実行する
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or *[!UICONTROL Browse]* tab, and click **Play**. クエリ実行のステータスは下の「*[!UICONTROL コンソール]*」タブに表示され、出力データは「*[!UICONTROL 結果]*」タブに表示されます。
+To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or **[!UICONTROL Browse]** tab, and click **Play**. クエリ実行のステータスは下の「**[!UICONTROL コンソール]**」タブに表示され、出力データは「**[!UICONTROL 結果]**」タブに表示されます。
 
 ### コンソール
 
@@ -113,7 +113,7 @@ The console provides information on the status and operation of [!DNL Query Serv
 
 ### クエリの結果
 
-クエリが完了すると、結果が「*[!UICONTROL コンソール]*」タブの横の「*[!UICONTROL 結果]*」タブに表示されます。このビューには、クエリの出力が表形式で出力され、最大 100 行まで表示されます。このビューを使用すると、クエリが目的どおりの出力を生成することを確認できます。クエリでデータセットを生成するには、返される行の制限を解除し、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行します。See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
+クエリが完了すると、結果が「**[!UICONTROL コンソール]**」タブの横の「**[!UICONTROL 結果]**」タブに表示されます。このビューには、クエリの出力が表形式で出力され、最大 100 行まで表示されます。このビューを使用すると、クエリが目的どおりの出力を生成することを確認できます。クエリでデータセットを生成するには、返される行の制限を解除し、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行します。See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
 
 ![画像](../images/queries/query-editor-overview/query-results.png)
 
