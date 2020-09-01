@@ -5,7 +5,7 @@ title: アクセス制御ワークスペースの参照
 topic: user guide
 description: このドキュメントでは、アクセス制御ワークスペースを参照するために必要な手順について説明します。 Adobe Admin Console を使用して Experience Platform のアクセス制御を設定するには、Experience Platform のサブスクリプションを取得している IMS 組織の管理者である必要があります。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 77%
@@ -19,11 +19,11 @@ In order to configure access control for [!DNL Experience Platform] through the 
 
 管理者権限がない場合は、システム管理者に問い合わせてアクセス権を取得してください。
 
-管理者権限を取得したら、[Adobe Admin Console](https://adminconsole.adobe.com) に移動し、アドビの資格情報を使用してログインします。ログインすると、管理権限を持つ IMS 組織の「*[!UICONTROL 概要]*」ページが表示されます。このページには、IMS 組織がサブスクリプションを取得している製品と、IMS 組織全体にユーザーおよび管理者を追加するための、そのほかのコントロールが表示されます。「**[!UICONTROL Adobe Experience]**」をクリックして、Platform 統合用のアクセス制御ワークスペースを開きます。[!DNL Platform]
+管理者権限を取得したら、[Adobe Admin Console](https://adminconsole.adobe.com) に移動し、アドビの資格情報を使用してログインします。ログインすると、管理権限を持つ IMS 組織の「**[!UICONTROL 概要]**」ページが表示されます。このページには、IMS 組織がサブスクリプションを取得している製品と、IMS 組織全体にユーザーおよび管理者を追加するための、そのほかのコントロールが表示されます。「**[!UICONTROL Adobe Experience]**」をクリックして、Platform 統合用のアクセス制御ワークスペースを開きます。[!DNL Platform]
 
 ![「概要」ページ](../images/overview-page.png)
 
-Adobe Experience Platform のアクセス制御ワークスペースが開き、「*[!UICONTROL 製品のプロファイル]*」タブが表示されます。このタブでは、すべての製品プロファイルを表示したり、このドキュメントで説明されている様々な設定を管理したりすることができます。
+Adobe Experience Platform のアクセス制御ワークスペースが開き、「**[!UICONTROL 製品のプロファイル]**」タブが表示されます。このタブでは、すべての製品プロファイルを表示したり、このドキュメントで説明されている様々な設定を管理したりすることができます。
 
 ![プラットフォームのアクセス制御](../images/platform-access-control.png)
 
