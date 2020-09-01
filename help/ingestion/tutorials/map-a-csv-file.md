@@ -4,7 +4,7 @@ solution: Experience Platform
 title: XDM スキーマへの CSV ファイルのマッピング
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 56%
@@ -29,13 +29,13 @@ This tutorial requires a working understanding of the following components of [!
 
 ## 宛先の選択
 
-[!DNL [Adobe Experience Platform]](https://platform.adobe.com) にログインし、左のナビゲーションバーから **[!UICONTROL ワークフローを選択して]** ワークフロー ** ワークスペースにアクセスします。
+[!DNL [Adobe Experience Platform]](https://platform.adobe.com) にログインし、左のナビゲーションバーから **[!UICONTROL ワークフローを選択して]** ワークフロー **** ワークスペースにアクセスします。
 
 **[!UICONTROL ワークフロー]** 画面の「 **[!UICONTROL Data ingestion]** 」セクションで「 **[!UICONTROL CSVをXDMスキーマにマップ」を選択し、「]** Launch **** Launch」を選択します。
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-The *[!UICONTROL Map CSV to XDM schema]* workflow appears, starting on the *[!UICONTROL Destination]* step. 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
+The **[!UICONTROL Map CSV to XDM schema]** workflow appears, starting on the **[!UICONTROL Destination]** step. 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
 **既存のデータセットを使用する**
 
@@ -49,27 +49,27 @@ CSVデータを新しいデータセットに取り込むには、「新しい�
 
 ## データの追加
 
-「*[!UICONTROL データ追加]*」手順が表示されます。CSVファイルを用意されているスペースにドラッグ&amp;ドロップするか、「ファイルを **[!UICONTROL 選択]** 」を選択してCSVファイルを手動で入力します。
+「**[!UICONTROL データ追加]**」手順が表示されます。CSVファイルを用意されているスペースにドラッグ&amp;ドロップするか、「ファイルを **[!UICONTROL 選択]** 」を選択してCSVファイルを手動で入力します。
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-The *[!UICONTROL Sample data]* section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
+The **[!UICONTROL Sample data]** section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## XDM スキーマフィールドへの CSV フィールドのマッピング
 
-「*[!UICONTROL マッピング]*」手順が表示されます。CSV ファイルの列は「*[!UICONTROL ソースフィールド]*」の下にリストされ、対応する XDM スキーマフィールドが「*[!UICONTROL ターゲットフィールド]*」の下にリストされます。未選択のターゲットフィールドは赤で囲まれます。フィルターフィールドオプションを使用して、使用可能なソースフィールドのリストを絞り込むことができます。
+「**[!UICONTROL マッピング]**」手順が表示されます。CSV ファイルの列は「**[!UICONTROL ソースフィールド]**」の下にリストされ、対応する XDM スキーマフィールドが「**[!UICONTROL ターゲットフィールド]**」の下にリストされます。未選択のターゲットフィールドは赤で囲まれます。フィルターフィールドオプションを使用して、使用可能なソースフィールドのリストを絞り込むことができます。
 
 CSV列をXDMフィールドにマップするには、列の対応するターゲットフィールドの横にあるスキーマアイコンを選択します。
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-*[!UICONTROL スキーマフィールドの選択]*&#x200B;ウィンドウが表示されます。ここで、XDM スキーマの構造をナビゲートし、CSV 列のマッピング先のフィールドを探します。XDM フィールドをクリックして選択してから、「**[!UICONTROL 選択]**」をクリックします。
+**[!UICONTROL スキーマフィールドの選択]**&#x200B;ウィンドウが表示されます。ここで、XDM スキーマの構造をナビゲートし、CSV 列のマッピング先のフィールドを探します。XDM フィールドをクリックして選択してから、「**[!UICONTROL 選択]**」をクリックします。
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-「*[!UICONTROL マッピング]*」画面が再び表示され、選択した XDM フィールドが「*[!UICONTROL ターゲットフィールド]*」の下に表示されます。
+「**[!UICONTROL マッピング]**」画面が再び表示され、選択した XDM フィールドが「**[!UICONTROL ターゲットフィールド]**」の下に表示されます。
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -77,7 +77,7 @@ CSV列をXDMフィールドにマップするには、列の対応するター�
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the top of the *[!UICONTROL Source Field]* list.
+If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the top of the **[!UICONTROL Source Field]** list.
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -125,7 +125,7 @@ By following this tutorial, you have successfully mapped a flat CSV file to an X
 
 ### マッピング関数
 
-特定のマッピング関数を使用して、ソースフィールドに入力した内容に基づいて値を計算できます。関数を使用するには、「*[!UICONTROL ソースフィールド]*」の下に適切な構文で関数を入力します。
+特定のマッピング関数を使用して、ソースフィールドに入力した内容に基づいて値を計算できます。関数を使用するには、「**[!UICONTROL ソースフィールド]**」の下に適切な構文で関数を入力します。
 
 例えば、**市区町村**&#x200B;と&#x200B;**国**&#x200B;の CSV フィールドを連結し、**市区町村** XDM フィールドに割り当てるには、ソースフィールドを「`concat(city, ", ", county)`」と設定します。
 
