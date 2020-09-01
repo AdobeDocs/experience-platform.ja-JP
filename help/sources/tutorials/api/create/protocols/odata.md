@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Generic OData;generic odata
 solution: Experience Platform
 title: Flow Service APIを使用して汎用ODataコネクタを作成する
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、汎用ODataをExperience Platformに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 23%
+source-wordcount: '545'
+ht-degree: 22%
 
 ---
 
