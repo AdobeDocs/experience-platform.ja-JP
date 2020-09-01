@@ -3,19 +3,19 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: データ使用状況ラベルのユーザーガイド
 topic: labels
-description: このユーザガイドでは、Adobe Experience Platformのユーザインターフェイス内でデータ使用ラベル（DULEラベルとも呼ばれます）を使用する手順を説明します。
+description: このユーザガイドでは、Adobe Experience Platformユーザインターフェイス内でデータ使用ラベルを使用する手順を説明します。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1132'
-ht-degree: 79%
+source-wordcount: '1119'
+ht-degree: 78%
 
 ---
 
 
 # データ使用状況ラベルのユーザーガイド
 
-This user guide covers steps for working with data usage labels (also known as DULE labels) within the [!DNL Experience Platform] user interface. このガイドを使用する前に、「[データガバナンスの概要](../home.md)」で DULE フレームワークの詳細を参照してください。
+このユーザーガイドでは、ユーザーインターフェイス内でデータ使用ラベルを操作する手順を説明し [!DNL Experience Platform] ます。 Before using the guide, please see the [[!DNL Data Governance] overview](../home.md) for a more robust introduction to the [!DNL Data Governance] framework.
 
 ## データセットレベルでのデータ使用状況ラベルの管理
 
