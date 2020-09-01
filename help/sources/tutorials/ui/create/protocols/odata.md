@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;OData;odata;Generic Open Data Protocol
 solution: Experience Platform
 title: UIで汎用ODataソースコネクタを作成する
 topic: overview
+description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用して汎用オープンデータプロトコル（以下「OData」という）ソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 10%
+source-wordcount: '468'
+ht-degree: 9%
 
 ---
 
