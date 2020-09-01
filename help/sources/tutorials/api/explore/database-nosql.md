@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;third party database;database flow service
 solution: Experience Platform
 title: Flow Service APIを使用したデータベースの調査
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのデータベースのコンテンツとファイル構造を調べます。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 21%
+source-wordcount: '585'
+ht-degree: 20%
 
 ---
 
 
 # APIを使用したデータベースの調査 [!DNL Flow Service]
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、サードパーティのデータベースのコンテンツとファイル構造を調べます。
 
@@ -155,4 +156,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、データベースを調べ、取り込むテーブルのパスを見つけ、その構造に関する情報を得 [!DNL Platform]ました。 次のチュートリアルでこの情報を使用して、データベースからデータを [収集し、Platformに取り込むことができます](../collect/database-nosql.md)。
+このチュートリアルに従って、データベースを調べ、取り込むテーブルのパスを見つけ、その構造に関する情報を得 [!DNL Platform]ました。 次のチュートリアルでこの情報を使用して、データベースからデータを [収集し、プラットフォームに取り込むことができます](../collect/database-nosql.md)。
