@@ -5,7 +5,7 @@ title: データ取得の監視
 topic: overview
 description: このユーザーガイドでは、Adobe Experience Platform ユーザーインターフェイス内でデータを監視する方法の手順を説明します。このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 69%
@@ -25,7 +25,7 @@ ht-degree: 69%
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-「*[!UICONTROL ストリーミングエンドツーエンド]*」の監視ページが表示されます。このワークスペースには、受信したストリームイベントの割合を示すグラフ [!DNL Platform]と、[!DNL Real-time Customer Customerプロファイル]によって正常に処理されたストリームイベントの割合 [](../../profile/home.md)、および入力データの詳細なリストが表示されます。
+「**[!UICONTROL ストリーミングエンドツーエンド]**」の監視ページが表示されます。このワークスペースには、受信したストリームイベントの割合を示すグラフ [!DNL Platform]と、[!DNL Real-time Customer Customerプロファイル]によって正常に処理されたストリームイベントの割合 [](../../profile/home.md)、および入力データの詳細なリストが表示されます。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
