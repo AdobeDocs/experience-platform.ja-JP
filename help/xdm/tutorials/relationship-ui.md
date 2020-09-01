@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create;relationship;Relationship;reference;Reference;
 solution: Experience Platform
 title: スキーマエディターを使用した 2 つのスキーマ間の関係の定義
+description: このドキュメントでは、Experience Platformユーザーインターフェイスのスキーマエディタを使用して、2つのスキーマ間の関係を定義するためのチュートリアルを提供します。
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 44%
+source-wordcount: '933'
+ht-degree: 43%
 
 ---
 
@@ -42,7 +43,7 @@ This tutorial requires a working understanding of [!DNL XDM System] and the Sche
 
 ### [!UICONTROL Loyalty Members スキーマ]
 
-ソーススキーマ「[!UICONTROL Loyality Members]」はXDM [!DNL Individual Profile] クラスに基づいており、UIでスキーマを [作成するためのチュートリアルで構築されたスキーマです](create-schema-ui.md)。 It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in[!DNL Real-time Customer Profile].
+ソーススキーマ「[!UICONTROL Loyality Members]」はXDM [!DNL Individual Profile] クラスに基づいており、UIでスキーマを [作成するためのチュートリアルで構築されたスキーマです](create-schema-ui.md)。 It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under _[!UICONTROL Schema Properties]_, this schema has been enabled for use in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -60,15 +61,15 @@ This tutorial requires a working understanding of [!DNL XDM System] and the Sche
 
 2 つのスキーマ間の関係を定義するには、ソーススキーマに、ターゲットスキーマへの参照として使用する専用のフィールドが必要です。新しい mixin を作成して、このフィールドをソーススキーマに追加することができます。
 
-まず、「_[!UICONTROL Mixins]_」セクションの「**[!UICONTROL &#x200B;追加&#x200B;]**」をクリックします。
+まず、「_[!UICONTROL Mixins]_」セクションの「**[!UICONTROL 追加]**」をクリックします。
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-_[!UICONTROL Mixin を追加]_ダイアログが表示されます。ここから、「**[!UICONTROL &#x200B;新規 mixin を作成&#x200B;]**」をクリックします。表示されるテキストフィールドに、新しい mixin の表示名と説明を入力します。終了したら「**[!UICONTROL  mixin を追加&#x200B;]**」をクリックします。
+_[!UICONTROL Mixin を追加]_&#x200B;ダイアログが表示されます。ここから、「**[!UICONTROL 新規 mixin を作成]**」をクリックします。表示されるテキストフィールドに、新しい mixin の表示名と説明を入力します。終了したら「**[!UICONTROL mixin を追加]**」をクリックします。
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the _[!UICONTROL Mixins]_section. Click the mixin name, then click**[!UICONTROL  Add Field ]**next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
+The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the _[!UICONTROL Mixins]_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -88,7 +89,7 @@ The updated &quot;[!UICONTROL favoriteHotel]&quot; field appears in the canvas. 
 
 ソーススキーマに専用の参照フィールドが定義されたら、それを関係フィールドとして指定できます。
 
-Select the reference field in the canvas, then scroll down under _[!UICONTROL Field Properties]_until the**[!UICONTROL  Relationship ]**checkbox appears. このチェックボックスを選択すると、関係フィールドを設定するために必要なパラメーターが表示されます。
+Select the reference field in the canvas, then scroll down under _[!UICONTROL Field Properties]_ until the **[!UICONTROL Relationship]** checkbox appears. このチェックボックスを選択すると、関係フィールドを設定するために必要なパラメーターが表示されます。
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
