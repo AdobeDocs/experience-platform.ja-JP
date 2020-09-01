@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 意思決定のチュートリアル
 topic: tutorial
+description: 判定サービスには、Adobe Experience Platform 上で実行されているアプリケーションにおいて、パーソナライズ、最適化、さらに調整されたエクスペリエンスを作成する機能があります。意思決定サービスを使用すると、利用可能な一連の選択肢の中から最適なオプションを決定できます。
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 27%
+source-wordcount: '152'
+ht-degree: 43%
 
 ---
 
 
 # Get started with [!DNL Decisioning Service]
 
-[!DNL Decisioning Service] は、Adobe Experience Platform上で実行されるアプリケーションで、パーソナライズされた、最適化された、調整されたエクスペリエンスを作成する機能を提供します。 Using [!DNL Decisioning Service], you can determine the best option from a set of available choices. これらのオプションは、代替候補とも呼ばれ、オファー、製品推奨、web エクスペリエンスのコンテンツコンポーネント、会話スクリプト、実行するアクションなどである場合があります。詳細については、「[意思決定サービスの概要](../decisioning-service/home.md)」を参照してください。
+[!DNL Decisioning Service] は、Adobe Experience Platform上で実行するアプリケーションで、パーソナライズされた、最適化された、調整されたエクスペリエンスを作成する機能を提供します。 Using [!DNL Decisioning Service], you can determine the best option from a set of available choices. これらのオプションは、代替候補とも呼ばれ、オファー、製品推奨、web エクスペリエンスのコンテンツコンポーネント、会話スクリプト、実行するアクションなどである場合があります。詳細については、「[意思決定サービスの概要](../decisioning-service/home.md)」を参照してください。
 
 ## ラン [!DNL Decisioning Service] タイムの操作
 
