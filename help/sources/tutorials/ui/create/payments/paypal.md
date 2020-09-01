@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;paypal;Paypal
 solution: Experience Platform
 title: UI での PayPal ソースコネクタの作成
 topic: overview
+description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してPayPalソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 12%
+source-wordcount: '464'
+ht-degree: 11%
 
 ---
 
