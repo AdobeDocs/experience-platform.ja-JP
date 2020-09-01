@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
 solution: Experience Platform
 title: Flow Service APIを使用したクラウドストレージシステムの調査
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムを調査します。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 18%
+source-wordcount: '697'
+ht-degree: 17%
 
 ---
 
 
 # APIを使用したクラウドストレージシステムの調査 [!DNL Flow Service]
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用してサードパーティのクラウドストレージシステムを調査します。
 
@@ -31,7 +32,7 @@ The following sections provide additional information that you will need to know
 
 APIを使用してサードパーティのクラウドストレージを調査するに [!DNL Platform] は、有効なベース接続IDが必要です。 操作するストレージの基本接続がまだない場合は、次のチュートリアルを使用して作成できます。
 
-* [AmazonS3](../create/cloud-storage/s3.md)
+* [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure BLOB](../create/cloud-storage/blob.md)
 * [Azure Data LakeストレージGen2](../create/cloud-storage/adls-gen2.md)
 * [Google Cloud Store](../create/cloud-storage/google.md)
@@ -63,7 +64,7 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `objectType` | 調査するオブジェクトのタイプ。 この値は次のいずれかに設定します。 <ul><li>`folder`: 特定のディレクトリの参照</li><li>`root`: ルートディレクトリを調べます。</li></ul> |
+| `objectType` | 調査するオブジェクトのタイプ。 この値は次のいずれかに設定します。 <ul><li>`folder`:特定のディレクトリの参照</li><li>`root`:ルートディレクトリを調べます。</li></ul> |
 | `object` | このパラメーターは、特定のディレクトリを表示する場合にのみ必要です。 この値は、調査するディレクトリのパスを表します。 |
 
 次の呼び出しを使用して、に取り込むファイルのパスを探しま [!DNL Platform]す。
@@ -124,7 +125,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}
 | --- | --- |
 | `{BASE_CONNECTION_ID}` | クラウドストレージベースの接続のID。 |
 | `{FILE_PATH}` | ファイルへのパス。 |
-| `{FILE_TYPE}` | ファイルの種類です。 次のファイルタイプがサポートされています。<ul><li>区切り文字</code>: 区切り文字区切り値。 DSVファイルはコンマで区切る必要があります。</li><li>JSON</code>: JavaScriptオブジェクト表記を参照してください。 JSONファイルはXDMに準拠している必要があります</li><li>パーケ</code>: Apacheパーケー。 パーケファイルはXDMに準拠している必要があります。</li></ul> |
+| `{FILE_TYPE}` | ファイルの種類です。 次のファイルタイプがサポートされています。<ul><li>区切り文字</code>:区切り文字区切り値。 DSVファイルはコンマで区切る必要があります。</li><li>JSON</code>:JavaScriptオブジェクト表記を参照してください。 JSONファイルはXDMに準拠している必要があります</li><li>パーケ</code>:Apacheパーケー。 パーケファイルはXDMに準拠している必要があります。</li></ul> |
 
 **リクエスト**
 
