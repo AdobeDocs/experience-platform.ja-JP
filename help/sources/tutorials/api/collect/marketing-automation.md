@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; marketing automation; hubspot
+keywords: Experience Platform;home;popular topics;marketing automation system;Collect marketing automation data
 solution: Experience Platform
 title: ソースコネクターとAPIを使用してマーケティング自動化データを収集する
 topic: overview
-description: このチュートリアルでは、サードパーティのマーケティング自動化システムからデータを取得し、ソースコネクタとフローサービスAPIを使用してプラットフォームに取り込む手順を説明します。
+description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1587'
+source-wordcount: '1584'
 ht-degree: 14%
 
 ---
