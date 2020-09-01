@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Segmentation Serviceユーザーガイド
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 29%
+source-wordcount: '1359'
+ht-degree: 27%
 
 ---
 
@@ -155,17 +155,17 @@ Workspaceの使用に関する詳細は、 [!DNL Segment Builder] ユーザー�
 >
 >ストリーミングセグメントを機能させるには、組織でスケジュール済みのセグメント化を有効にする必要があります。 For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in this user guide](#scheduled-segmentation).
 
-## DULE ポリシーの違反
+## ポリシー違反
 
 >[!NOTE]
 >
->DULE ポリシーの違反は、宛先に割り当てられたセグメントを作成する場合にのみ適用されます。
+>ポリシー違反は、宛先に割り当てられたセグメントを作成している場合にのみ適用されます。
 
-Once you are done creating your segment, the segment will be analyzed by [!DNL Data Governance] to ensure there are no policy violations within the segment. DULE とポリシー違反について詳しくは、[データ使用ラベルの概要](../../data-governance/labels/overview.md)を参照してください。
+セグメントの作成が完了すると、そのセグメントがAdobe Experience Platformデータガバナンスによって分析され、そのセグメント内にポリシー違反がないことを確認します。 See the [[!DNL Data Governance] overview](../../data-governance/home.md) for more information.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
-## 次の手順 およびその他のリソース {#next-steps}
+## 次の手順とその他のリソース {#next-steps}
 
 UIは、マーケティング可能なオーディエンスをデータから分離できる豊富なワークフローを提供 [!DNL Segmentation Service][!DNL Real-time Customer Profile] します。
 
