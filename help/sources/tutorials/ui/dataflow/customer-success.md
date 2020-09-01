@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;configure dataflow;customer success connector
 solution: Experience Platform
 title: UIでの顧客成功コネクタのデータフローの設定
 topic: overview
+description: データフローは、データを取得し、ソースからデータセットに取り込む、スケジュール済みのタスク [!DNL Platform] です。 このチュートリアルでは、顧客成功アカウントを使用して新しいデータフローを構成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1321'
 ht-degree: 4%
 
 ---
@@ -20,10 +21,10 @@ ht-degree: 4%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model] (XDM)システム](../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+- [[!DNL Experience Data Model] (XDM)システム](../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL リアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [[!DNLリアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 さらに、このチュートリアルでは、既に顧客成功アカウントを作成済みである必要があります。 UIで様々な顧客成功コネクタを作成するためのチュートリアルのリストは、 [source connectorsの概要](../../../home.md)。
 
