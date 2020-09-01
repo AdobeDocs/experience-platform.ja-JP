@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
 title: Salesforce Service Cloudコネクタ
 topic: overview
+description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してSalesforce Service Cloudをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 13%
+source-wordcount: '231'
+ht-degree: 12%
 
 ---
 
