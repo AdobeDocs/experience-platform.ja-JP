@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access data sources
 solution: Experience Platform
 title: データアクセスのチュートリアル
 topic: tutorial
+description: Adobe Experience Platform では、データアクセス API を使用して、Experience Platform 内で取り込んだデータセットを検出してアクセスできます。
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '102'
-ht-degree: 61%
+source-wordcount: '121'
+ht-degree: 67%
 
 ---
 
