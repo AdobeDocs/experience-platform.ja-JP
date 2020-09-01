@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
 title: Flow Service APIを使用してGoogle BigQueryコネクタを作成する
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle BigQuery（以下「BigQuery」と呼ばれる）に接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 17%
+source-wordcount: '721'
+ht-degree: 16%
 
 ---
 
