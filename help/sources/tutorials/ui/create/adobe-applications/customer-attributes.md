@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;customer attributes
 solution: Experience Platform
 title: UIで顧客属性ソースコネクタを作成する
 topic: overview
+description: このチュートリアルでは、顧客属性プロファイルデータをAdobe Experience Platformに収集するためのソースコネクタをUIで作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 9%
+source-wordcount: '374'
+ht-degree: 8%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 9%
 
 ## ソース接続の作成
 
-[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) ソース **** 」を選択してソースワークスペースにアクセスします。 カ **[!UICONTROL タログ]** 画面には、受信接続を作成するために使用できるソースが表示され、各ソースには、それらに関連付けられた既存の接続数が表示されます。 「 **[!UICONTROL Customer Attributes]** 」のオプションを選択し、「 **[!UICONTROL Data]**」を選択します。 接続が確立されるまでしばらく時間をおくと、接続が正常に確立された場合にリダイレクトされます。
+[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) ソース **** 」を選択してソースワークスペースにアクセスします。 カ **[!UICONTROL タログ]** 画面には、受信接続を作成するために使用できるソースが表示され、各ソースには、それらに関連付けられた既存の接続数が表示されます。 「 **[!UICONTROL Customer Attributes]** 」のオプションを選択し、「 **[!UICONTROL 追加data]**」を選択します。 接続が確立されるまでしばらく時間をおくと、接続が正常に確立された場合にリダイレクトされます。
 
 >[!NOTE]
 >
