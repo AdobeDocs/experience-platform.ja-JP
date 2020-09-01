@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform へのデータの取得
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 65%
@@ -26,7 +26,7 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
 
 The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックして、「データセット」ワークスペースを表示します。「データセット」ワークスペースには、_[!UICONTROL 名前]_、_[!UICONTROL 作成日時]_、_[!UICONTROL ソース]_、_[!UICONTROL スキーマ]_、_[!UICONTROL 最終バッチステータス]_&#x200B;を示す列、および&#x200B;_[!UICONTROL 最終更新日時]_&#x200B;を含むデータセットのリストが含まれています。
+左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックして、「データセット」ワークスペースを表示します。「データセット」ワークスペースには、**[!UICONTROL 名前]**、**[!UICONTROL 作成日時]**、**[!UICONTROL ソース]**、**[!UICONTROL スキーマ]**、**[!UICONTROL 最終バッチステータス]**&#x200B;を示す列、および&#x200B;**[!UICONTROL 最終更新日時]**&#x200B;を含むデータセットのリストが含まれています。
 
 >[!NOTE]
 >
@@ -70,9 +70,9 @@ On the **[!UICONTROL Create Dataset]** screen, select whether you would like to 
 
 空のデータセットが作成され、データセットワークスペースの「**[!UICONTROL データセットアクティビティ]**」タブに戻りました。ワークスペースの左上隅にデータセットの名前と、「バッチが追加されていません」という通知が表示されます。このデータセットにバッチをまだ追加していないので、これは期待通りです。
 
-「データセット」ワークスペースの右側に「**[!UICONTROL 情報]**」タブがあり、新しいデータセットに関した「_[!UICONTROL データセット ID]_」、「_[!UICONTROL 名前]_」、「_[!UICONTROL 説明]_」、「_[!UICONTROL テーブル名]_」、「_[!UICONTROL スキーマ]_」、「_[!UICONTROL ストリーミング]_」「_[!UICONTROL ソース]_」などの情報が含まれます。また、「情報」タブには、データセットの&#x200B;_[!UICONTROL 作成日]_&#x200B;と&#x200B;_[!UICONTROL 最終変更日]_&#x200B;に関する情報も含まれます。
+「データセット」ワークスペースの右側に「**[!UICONTROL 情報]**」タブがあり、新しいデータセットに関した「**[!UICONTROL データセット ID]**」、「**[!UICONTROL 名前]**」、「**[!UICONTROL 説明]**」、「**[!UICONTROL テーブル名]**」、「**[!UICONTROL スキーマ]**」、「**[!UICONTROL ストリーミング]**」「**[!UICONTROL ソース]**」などの情報が含まれます。また、「情報」タブには、データセットの&#x200B;**[!UICONTROL 作成日]**&#x200B;と&#x200B;**[!UICONTROL 最終変更日]**&#x200B;に関する情報も含まれます。
 
-Also in the Info tab is a  _[!UICONTROL Profile]_ toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
+Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
 ![データセットアクティビティ](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
@@ -116,19 +116,19 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 ## データセット指標
 
-ファイルのアップロードが完了すると、「**[!UICONTROL データセットのアクティビティ]** 」タブに「バッチが追加されていません」と表示されることはなくなります。Instead, the *[!UICONTROL Dataset Activity]* tab now shows dataset metrics. バッチがまだ読み込まれていないので、すべての指標はこの段階で「0」と表示されます。
+ファイルのアップロードが完了すると、「**[!UICONTROL データセットのアクティビティ]** 」タブに「バッチが追加されていません」と表示されることはなくなります。Instead, the **[!UICONTROL Dataset Activity]** tab now shows dataset metrics. バッチがまだ読み込まれていないので、すべての指標はこの段階で「0」と表示されます。
 
-タブの下部には、「[データセットへのデータ追加](#add-data-to-dataset)」処理で取得されたデータの&#x200B;_[!UICONTROL バッチ ID]_ を示す追加リストが表示されます。また、_[!UICONTROL 取得]_&#x200B;された日付、取得された&#x200B;_[!UICONTROL レコード数]_、現在のバッチ&#x200B;_[!UICONTROL 状態]_&#x200B;など、バッチに関する情報も含まれます 。
+タブの下部には、「[データセットへのデータ追加](#add-data-to-dataset)」処理で取得されたデータの&#x200B;**[!UICONTROL バッチ ID]** を示す追加リストが表示されます。また、**[!UICONTROL 取得]**&#x200B;された日付、取得された&#x200B;**[!UICONTROL レコード数]**、現在のバッチ&#x200B;**[!UICONTROL 状態]**&#x200B;など、バッチに関する情報も含まれます 。
 
 ![データセット指標](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## バッチの詳細
 
-**[!UICONTROL バッチの概要]**&#x200B;でバッチに関する追加の詳細を表示するには「_[!UICONTROL バッチ ID]_」をクリックします。バッチの読み込みが完了すると、バッチに関する情報が更新され、_[!UICONTROL 取得されたレコード数]_&#x200B;と&#x200B;_[!UICONTROL ファイルサイズ]_&#x200B;が表示されます。「 _[!UICONTROL ステータス]_」も「成功」または「失敗」に変更されます。バッチが失敗した場合は、取得中に「_[!UICONTROL エラーコード]_」セクションに、エラーに関する詳細が含まれます。
+**[!UICONTROL バッチの概要]**&#x200B;でバッチに関する追加の詳細を表示するには「**[!UICONTROL バッチ ID]**」をクリックします。バッチの読み込みが完了すると、バッチに関する情報が更新され、**[!UICONTROL 取得されたレコード数]**&#x200B;と&#x200B;**[!UICONTROL ファイルサイズ]**&#x200B;が表示されます。「 **[!UICONTROL ステータス]**」も「成功」または「失敗」に変更されます。バッチが失敗した場合は、取得中に「**[!UICONTROL エラーコード]**」セクションに、エラーに関する詳細が含まれます。
 
 バッチ取得に関する詳細とよくある質問については、『[バッチ取得のトラブルシューティングガイド](../batch-ingestion/troubleshooting.md)』を参照してください。
 
-**[!UICONTROL データセットアクティビティ]**&#x200B;画面に戻るには 、階層リンクでデータセットの名前（_[!UICONTROL Loyalty Details]_）をクリックします。
+**[!UICONTROL データセットアクティビティ]**&#x200B;画面に戻るには 、階層リンクでデータセットの名前（**[!UICONTROL Loyalty Details]**）をクリックします。
 
 ![バッチの概要](../images/tutorials/ingest-batch-data/batch_overview.png)
 
