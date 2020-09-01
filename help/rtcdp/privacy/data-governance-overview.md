@@ -5,9 +5,9 @@ seo-title: リアルタイム顧客データプラットフォームにおける
 description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 seo-description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 55%
 
 ---
@@ -58,7 +58,7 @@ Adobe Experience Platform では、一般的な顧客体験の使用例に対し
 
 ![](assets/enforcement-flow.png)
 
-When a segment is first activated, DULE [!DNL Policy Service] checks for policy violations based on the following factors:
+When a segment is first activated, [!DNL Policy Service] checks for policy violations based on the following factors:
 
 * アクティブ化するセグメント内のフィールドおよびデータセットに適用される、データ使用ラベル。
 * 宛先のマーケティングの目的。
