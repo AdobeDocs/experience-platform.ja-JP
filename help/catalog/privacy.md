@@ -5,7 +5,7 @@ title: データレイクでのプライバシーリクエストの処理
 topic: overview
 description: Adobe Experience Platform Privacy Serviceは、法的および組織のプライバシーに関する規則に基づオプトアウトいて記述された個人データにアクセス、販売、または削除するように顧客の要求を処理します。 このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 26%
@@ -57,7 +57,7 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ### UI の使用 {#identity-ui}
 
-ユー [!DNL Experience Platform ]ザーインターフェイスでは、 __ スキーマワークスペースを使用して、既存のXDMスキーマを編集できます。 ID記述子をスキーマに追加するには、リストからスキーマを選択し、チュートリアルのIDフィールドとしてスキーマフィールドを [設定する手順に従い](../xdm/tutorials/create-schema-ui.md#identity-field)[!DNL Schema Editor] ます。
+ユー [!DNL Experience Platform ]ザーインターフェイスでは、 **** スキーマワークスペースを使用して、既存のXDMスキーマを編集できます。 ID記述子をスキーマに追加するには、リストからスキーマを選択し、チュートリアルのIDフィールドとしてスキーマフィールドを [設定する手順に従い](../xdm/tutorials/create-schema-ui.md#identity-field)[!DNL Schema Editor] ます。
 
 スキーマ内の適切なフィールドをIDフィールドとして設定したら、次のセクションに進んで、プライバシー [要求の送信に関するセクション](#submit)。
 
@@ -139,7 +139,7 @@ curl -X POST \
 
 ### UI の使用
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_ in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
