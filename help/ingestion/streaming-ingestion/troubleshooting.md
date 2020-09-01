@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming
+keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;troubleshooting;streaming ingestion troubleshooting;streaming ingestion faq;faq;
 solution: Experience Platform
 title: ストリーミング取り込みのトラブルシューティング
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 65%
