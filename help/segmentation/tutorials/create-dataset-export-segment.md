@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;Segmentation;create a dataset;export audience segment;export segment;
 solution: Experience Platform
 title: オーディエンスセグメントをエクスポートするためのデータセットの作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 68%
