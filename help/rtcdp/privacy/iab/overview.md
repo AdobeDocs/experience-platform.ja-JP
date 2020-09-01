@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイム顧客データプラットフォームでのIAB TCF 2.0のサポート
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 06eda1502d34da1caeebbe9b753dd437bbd9d6ab
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 3%
@@ -93,7 +93,7 @@ IABの同意データが正常に取り込まれると、ダウンストリー�
 
 TCF仕様では、ポリシーおよびベンダーの定義に従って、顧客の同意設定に関する関連する詳細を特定のマーケティング目的の観点からエンコードする際に、同意文字列を使用します。 [!DNL Real-time CDP] これらの文字列を使用して各顧客の同意設定を保存します。したがって、これらの設定が変更されるたびに新しい同意文字列を作成する必要があります。
 
-同意文字列は、IAB TCFに登録されたCMPによってのみ作成できます。 特定のCMPを使用して同意文字列を生成する方法の詳細については、IAB TCF GitHubリポジトリの [同意文字列フォーマットガイド](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) を参照してください。
+同意文字列は、IAB TCFに登録されたCMPによってのみ作成できます。 特定のCMPを使用して同意文字列を生成する方法の詳細については、IAB TCF GitHubリポジトリの [同意文字列書式化ガイド](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20Consent%20string%20and%20vendor%20list%20formats%20v2.md) を参照してください。
 
 ## IABの同意フィールドを使用してデータセットを作成する {#datasets}
 
@@ -121,7 +121,7 @@ TCF仕様では、ポリシーおよびベンダーの定義に従って、顧�
 
 SDKがデータを送信する先として、 [!DNL Experience Platform]最初にでの新しいエッジ設定を作成する必要 [!DNL Platform] があり [!DNL Adobe Experience Platform Launch]ます。 新しい設定を作成する方法に関する具体的な手順は、 [SDKドキュメントで説明し](../../../edge/fundamentals/edge-configuration.md)ます。
 
-設定に一意の名前を指定した後、 *[!UICONTROL Adobe Experience Platformの横にある切り替えボタンを選択します]*。 次に、次の値を使用してフォームの残りの部分を完成させます。
+設定に一意の名前を指定した後、 **[!UICONTROL Adobe Experience Platformの横にある切り替えボタンを選択します]**。 次に、次の値を使用してフォームの残りの部分を完成させます。
 
 | エッジ設定フィールド | 値 |
 | --- | --- |
