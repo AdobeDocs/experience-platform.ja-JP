@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list sandboxes
 solution: Experience Platform
 title: サンドボックスのリスト
 topic: developer guide
+description: IMS組織に属するすべてのサンドボックス（アクティブな場合もその他の場合も）をリストするには、/sandboxsエンドポイントにGETリクエストを行います。
 translation-type: tm+mt
-source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 100%
+source-wordcount: '205'
+ht-degree: 90%
 
 ---
 
