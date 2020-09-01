@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;azure synapse analytics;Synapse;synapse
 solution: Experience Platform
-title: Azure SynapseAnalyticsコネクタ
+title: Azure Synapse Analyticsコネクタ
 topic: overview
+description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure Synapse Analyticsをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 13%
+source-wordcount: '223'
+ht-degree: 12%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 13%
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、data warehouseなど、様々な種類のデータベースに接続できます。 データベースプロバイダーのサポートには以下が含まれ [!DNL Azure Synapse Analytics]ます。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには以下が含まれ [!DNL Azure Synapse Analytics]ます。
 
 ## IPアドレス許可リスト
 
@@ -50,15 +51,15 @@ Adobe Experience Platform allows data to be ingested from external sources while
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Azure Synapse Analytics] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Azure Synapse Analytics] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
 ## API [!DNL Azure Synapse Analytics] を [!DNL Platform] 使用した接続
 
-- [Flow Service APIを使用してAzure SynapseAnalyticsコネクタを作成する](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Flow Service APIを使用してAzure Synapse Analyticsコネクタを作成する](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UI [!DNL Azure Synapse Analytics] を [!DNL Platform] 使用して接続
 
-- [UIにAzure SynapseAnalyticsソースコネクタを作成する](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [UIにAzure Synapse Analyticsソースコネクタを作成する](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
