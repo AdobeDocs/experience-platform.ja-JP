@@ -5,7 +5,7 @@ title: Adobe Experience Platform クエリサービス UI ガイド
 topic: guide
 description: Adobe Experience Platform クエリサービスは、クエリの書き込みと実行、以前に実行したクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 61%
@@ -19,17 +19,17 @@ The Adobe Experience Platform [!DNL Query Service] provides a user interface tha
 
 ## [!DNL Query Editor]
 
-The [!DNL Query Editor] enables you to write and execute queries without using an external client. Click **[!UICONTROL Create Query]** to open the [!DNL Query Editor] and create a new query. You can also access the [!DNL Query Editor] by selecting a query from the *[!UICONTROL Log]* or *[!UICONTROL Browse]* tabs. Selecting a previously executed or saved query will open the [!DNL Query Editor] and display the SQL for the selected query.
+The [!DNL Query Editor] enables you to write and execute queries without using an external client. Click **[!UICONTROL Create Query]** to open the [!DNL Query Editor] and create a new query. You can also access the [!DNL Query Editor] by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Browse]** tabs. Selecting a previously executed or saved query will open the [!DNL Query Editor] and display the SQL for the selected query.
 
 ![画像](../images/queries/ui-overview/overview.png)
 
-[!DNL Query Editor] クエリの入力を開始できる編集領域を提供します。 ユーザーが入力すると、エディターによって、テーブル内の SQL 予約語、テーブル、およびフィールド名が自動入力されます。When finished writing your query, click the **Play** button to run the query. The *[!UICONTROL Console]* tab below the editor shows what [!DNL Query Service] is currently doing, indicating when a query has been returned. コンソールの横にある「*[!UICONTROL 結果]*」タブには、クエリ結果が表示されます。See the [Query Editor guide][query-editor] for more information on using the [!DNL Query Editor].
+[!DNL Query Editor] クエリの入力を開始できる編集領域を提供します。 ユーザーが入力すると、エディターによって、テーブル内の SQL 予約語、テーブル、およびフィールド名が自動入力されます。When finished writing your query, click the **Play** button to run the query. The **[!UICONTROL Console]** tab below the editor shows what [!DNL Query Service] is currently doing, indicating when a query has been returned. コンソールの横にある「**[!UICONTROL 結果]**」タブには、クエリ結果が表示されます。See the [Query Editor guide][query-editor] for more information on using the [!DNL Query Editor].
 
 ![画像](../images/queries/ui-overview/query-editor.png)
 
 ## 参照
 
-「*[!UICONTROL 参照]*」タブには、組織のユーザーによって保存されたクエリが表示されます。これらをクエリプロジェクトと考えると便利です。ここで保存したクエリは、まだ作成中の可能性があります。Queries displayed on the *[!UICONTROL Browse]* tab also display as run queries in the *[!UICONTROL Log]* tab if they have been previously executed by [!DNL Query Service].
+「**[!UICONTROL 参照]**」タブには、組織のユーザーによって保存されたクエリが表示されます。これらをクエリプロジェクトと考えると便利です。ここで保存したクエリは、まだ作成中の可能性があります。Queries displayed on the **[!UICONTROL Browse]** tab also display as run queries in the **[!UICONTROL Log]** tab if they have been previously executed by [!DNL Query Service].
 
 ![画像](../images/queries/ui-overview/browse.png)
 
@@ -42,7 +42,7 @@ The [!DNL Query Editor] enables you to write and execute queries without using a
 
 ## ログ
 
-「*[!UICONTROL ログ]*」タブには、以前に実行されたクエリのリストが表示されます。デフォルトでは、ログはクエリを逆年代順にリストします。
+「**[!UICONTROL ログ]**」タブには、以前に実行されたクエリのリストが表示されます。デフォルトでは、ログはクエリを逆年代順にリストします。
 
 ![画像](../images/queries/ui-overview/log.png)
 
@@ -58,7 +58,7 @@ The [!DNL Query Editor] enables you to write and execute queries without using a
 
 ## 資格情報
 
-「*[!UICONTROL 資格情報]*」タブには、 の資格情報が表示されます。[!DNL Postgres]任意のフィールド 横にある「**[!UICONTROL コピー]**」アイコンをクリックして、その内容をキーボードバッファに保存します。これらの資格情報を使用して外部クライアントと接続する方法の詳細については、[クライアントとの接続ガイド][connect-clients]を参照してください。
+「**[!UICONTROL 資格情報]**」タブには、 の資格情報が表示されます。[!DNL Postgres]任意のフィールド 横にある「**[!UICONTROL コピー]**」アイコンをクリックして、その内容をキーボードバッファに保存します。これらの資格情報を使用して外部クライアントと接続する方法の詳細については、[クライアントとの接続ガイド][connect-clients]を参照してください。
 
 ![画像](../images/queries/ui-overview/credentials.png)
 
