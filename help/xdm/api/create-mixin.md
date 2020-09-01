@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
 title: Mixin の作成
 topic: developer guide
+description: mixin は、「住所」や「プロファイル環境設定」など、特定の概念を説明するために使用される一連のフィールドです。多数の標準 mixin を使用できます。また、組織に固有の情報を取得する場合、独自の mixin を定義することもできます。
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 92%
+source-wordcount: '345'
+ht-degree: 93%
 
 ---
 
