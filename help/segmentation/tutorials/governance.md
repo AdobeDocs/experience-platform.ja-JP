@@ -4,9 +4,9 @@ solution: Experience Platform
 title: オーディエンスセグメントでデータ使用のコンプライアンスを徹底する
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1335'
+source-wordcount: '1333'
 ht-degree: 42%
 
 ---
@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the following components of [!
 - [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md): [!DNL Real-time Customer Profile] は汎用の参照エンティティストアで、内で [!DNL Experience Data Model] (XDM)データを管理するために使用され [!DNL Platform]ます。 プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
    - [ポリシーの結合](../../profile/api/merge-policies.md):特定の条件下で統合表示 [!DNL Real-time Customer Profile] に統合できるデータを決定するためにに使用されるルール。 Merge policies can be configured for [!DNL Data Governance] purposes.
 - [[!DNLセグメント]](../home.md):プロファイルストアに含まれる多数の個人を、同じ特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割する方法を [!DNL Real-time Customer Profile] 説明します。
-- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] 次のコンポーネントを使用して、データ使用のラベル付けと実施(DULE)のインフラストラクチャを提供します。
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] は、次のコンポーネントを使用して、データ使用のラベル付けと実行のためのインフラストラクチャを提供します。
    - [データ使用ラベル](../../data-governance/labels/user-guide.md)：データセットとフィールドを、それぞれのデータを処理する際に適用する機密性のレベルの観点から説明する際に使用されるラベルです。
    - [データ使用ポリシー](../../data-governance/policies/overview.md)：特定のデータ使用ラベルで分類されたデータで、どのマーケティングアクションが許可されるかを示す設定です。
    - [ポリシーの適用](../../data-governance/enforcement/overview.md):データ使用ポリシーを適用し、ポリシー違反を構成するデータ操作を防止できます。
@@ -187,7 +187,7 @@ curl -X GET \
 >
 > この手順では、特定のラベルを含むデータに対して特定のマーケティング操作が実行されないようにする、アクティブなデータ使用ポリシーが少なくとも1つあることを前提としています。 評価対象のデータセットに対して適切な使用ポリシーがない場合は、 [ポリシーの作成のチュートリアル](../../data-governance/policies/create.md) に従って使用ポリシーを作成してから、この手順に進んでください。
 
-マージポリシーのソースデータセットのIDを取得したら、 [DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) (DOCULE Policy Service)を使用して、データ使用ポリシーの違反を確認するために、特定のマーケティングアクションに対するデータセットを評価できます。
+マージポリシーのソースデータセットのIDを取得したら、 [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) （ポリシーサービスAPI）を使用して、データ使用ポリシーの違反を確認するために、特定のマーケティングアクションに対するデータセットを評価できます。
 
 データセットを評価するには、次の例に示すように、POSTリクエストのパスにマーケティングアクションの名前を指定し、リクエスト本文内にデータセットIDを指定する必要があります。
 
