@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dsw;DSW
 solution: Experience Platform
 title: Data Science Workspace のチュートリアル
 topic: tutorial
+description: Adobe Experience Platformデータサイエンスワークスペースでは、機械学習と人工知能を使用して、データからインサイトを作成します。 Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測をおこなうことを支援します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '1171'
-ht-degree: 16%
+source-wordcount: '1210'
+ht-degree: 17%
 
 ---
 
