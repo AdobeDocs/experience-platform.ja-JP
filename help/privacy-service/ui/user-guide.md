@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service ユーザーガイド
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 85%
@@ -70,7 +70,7 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 ![ジョブリクエストの検索オプション](../images/user-guide/job-search.png)
 
-特定のジョブリクエストの詳細を表示するには、リストでリクエストのジョブ ID をクリックして、*[!UICONTROL Job Details]* ページを開きます。
+特定のジョブリクエストの詳細を表示するには、リストでリクエストのジョブ ID をクリックして、**[!UICONTROL Job Details]** ページを開きます。
 
 ![GDPR UI のジョブ詳細](../images/user-guide/job-details.png)
 
@@ -101,7 +101,7 @@ The [!DNL Privacy Service] UI provides two methods to create new job requests:
 
 ![「Create Request」のクリック](../images/user-guide/create-request.png)
 
-*[!UICONTROL Create Request]* ダイアログが開き、現在選択されている規制タイプのプライバシージョブリクエストを送信するために使用できるオプションが表示されます。
+**[!UICONTROL Create Request]** ダイアログが開き、現在選択されている規制タイプのプライバシージョブリクエストを送信するために使用できるオプションが表示されます。
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
@@ -109,7 +109,7 @@ The [!DNL Privacy Service] UI provides two methods to create new job requests:
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Under *[!UICONTROL Namespace type]*, select the appropriate namespace type for the customer IDs being sent to [!DNL Privacy Service].
+Under **[!UICONTROL Namespace type]**, select the appropriate namespace type for the customer IDs being sent to [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -135,7 +135,7 @@ _custom_ タイプの名前空間を使用する場合は、名前空間を手�
 
 ![リクエスト作成オプション](../images/user-guide/create-options.png)
 
-*[!UICONTROL Upload JSON]* ダイアログが開き、JSON ファイルをドラッグ＆ドロップできるウィンドウが表示されます。
+**[!UICONTROL Upload JSON]** ダイアログが開き、JSON ファイルをドラッグ＆ドロップできるウィンドウが表示されます。
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
