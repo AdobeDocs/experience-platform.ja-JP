@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;target mapping;Target mapping
 solution: Experience Platform
 title: Target マッピングフィールド
 topic: overview
+description: 次の表に、エクスペリエンスイベントスキーマ（*XDM ExperienceEventフィールド*）のフィールドと、マップする必要がある対応するターゲットフィールド(ターゲットリクエストフィールド)の概要を示します。 一部のマッピングに関する追加のメモも示します。
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '427'
-ht-degree: 99%
+source-wordcount: '462'
+ht-degree: 93%
 
 ---
 
