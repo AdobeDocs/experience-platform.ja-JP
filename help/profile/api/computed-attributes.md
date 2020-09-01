@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: 計算済み属性 — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2403'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
@@ -60,7 +60,7 @@ The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows t
 
 次の手順では、Adobe Experience Platform のユーザーインターフェイスを使用してスキーマを検索し、Mixin を追加してし、フィールドを定義します。If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
 
-ユーザインターフェイスで、左側のパネルの「**[!UICONTROL スキーマ]**」をクリックし、「*[!UICONTROL 参照]*」タブの検索バーを使用して、更新するスキーマをすばやく見つけます。
+ユーザインターフェイスで、左側のパネルの「**[!UICONTROL スキーマ]**」をクリックし、「**[!UICONTROL 参照]**」タブの検索バーを使用して、更新するスキーマをすばやく見つけます。
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
@@ -70,7 +70,7 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ### Mixin の作成
 
-新しい Mixin を作成するには、エディターの左側にある「**[!UICONTROL コンポジション]**」セクションで、「*Mixins*」の隣にある「*[!UICONTROL 追加]*」をクリックします。「**[!UICONTROL Mixin を追加]**」ダイアログが開き、既存の Mixin を確認できます。新しい Mixin を定義するには、「**[!UICONTROL 新しい Mixin を作成]**」のラジオボタンをクリックします。
+新しい Mixin を作成するには、エディターの左側にある「**[!UICONTROL コンポジション]**」セクションで、「*Mixins*」の隣にある「**[!UICONTROL 追加]**」をクリックします。「**[!UICONTROL Mixin を追加]**」ダイアログが開き、既存の Mixin を確認できます。新しい Mixin を定義するには、「**[!UICONTROL 新しい Mixin を作成]**」のラジオボタンをクリックします。
 
 Mixin に名前と説明を入力し、完了したら「**[!UICONTROL Mixin を追加]**」をクリックします。
 
@@ -78,29 +78,29 @@ Mixin に名前と説明を入力し、完了したら「**[!UICONTROL Mixin を
 
 ### 追加スキーマ
 
-これで、新しい Mixin が「*[!UICONTROL コンポジション]*」の下の「*[!UICONTROL Mixins]*」セクションに表示されます。Mixin の名前をクリックすると、エディターの「*[!UICONTROL 構造]*」セクションに、「**[!UICONTROL フィールドを追加]**」ボタンが複数表示されます。
+これで、新しい Mixin が「**[!UICONTROL コンポジション]**」の下の「**[!UICONTROL Mixins]**」セクションに表示されます。Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the *[!UICONTROL Structure]** section of the editor.
 
 上位のフィールドを追加するには、スキーマ名の隣にある「**[!UICONTROL フィールドを追加]**」を選択するか、お好きなスキーマ内の任意の場所にフィールドを追加するよう選択することもできます。
 
-「**[!UICONTROL フィールドを追加]**」をクリックすると、テナント ID の名前を付けた新しいオブジェクトが開き、フィールドが正しい名前空間にあることが示されます。そのオブジェクト内に、「*[!UICONTROL 新規フィールド]*」が表示されます。計算済み属性を定義するフィールドの場合。
+「**[!UICONTROL フィールドを追加]**」をクリックすると、テナント ID の名前を付けた新しいオブジェクトが開き、フィールドが正しい名前空間にあることが示されます。そのオブジェクト内に、「**[!UICONTROL 新規フィールド]**」が表示されます。計算済み属性を定義するフィールドの場合。
 
 ![](../images/computed-attributes/New-field.png)
 
 ### フィールドの設定
 
-エディターの右側にある「*[!UICONTROL フィールドプロパティ]*」セクションを使用して、新しいフィールドの名前、表示名、タイプなど、必要な情報を指定します。
+エディターの右側にある「**[!UICONTROL フィールドプロパティ]**」セクションを使用して、新しいフィールドの名前、表示名、タイプなど、必要な情報を指定します。
 
 >[!NOTE]
 >
 >フィールドのタイプは、計算済みの属性値と同じタイプである必要があります。例えば、計算済み属性の値が文字列の場合、スキーマで定義するフィールドは文字列にする必要があります。
 
-完了したら、「**[!UICONTROL 適用]**」をクリックし、フィールドの名前とタイプがエディターの「*[!UICONTROL 構造]*」セクションに表示されます。
+完了したら、「**[!UICONTROL 適用]**」をクリックし、フィールドの名前とタイプがエディターの「**[!UICONTROL 構造]**」セクションに表示されます。
 
 ![](../images/computed-attributes/Apply.png)
 
 ### スキーマの有効化 [!DNL Profile]
 
-Before continuing, ensure that the schema has been enabled for [!DNL Profile]. エディターの「*[!UICONTROL 構造]*」セクションでスキーマ名をクリックすると、「*[!UICONTROL スキーマプロパティ]*」タブが表示されます。**[!UICONTROL プロファイル]** ・スライダが青の場合は、スキーマが有効になってい [!DNL Profile]ます。
+Before continuing, ensure that the schema has been enabled for [!DNL Profile]. エディターの「**[!UICONTROL 構造]**」セクションでスキーマ名をクリックすると、「**[!UICONTROL スキーマプロパティ]**」タブが表示されます。**[!UICONTROL プロファイル]** ・スライダが青の場合は、スキーマが有効になってい [!DNL Profile]ます。
 
 >[!NOTE]
 >
