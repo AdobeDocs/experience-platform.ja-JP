@@ -5,7 +5,7 @@ title: Data Science Workspace の概要
 topic: overview
 description: このガイドでは、Data Science Workspaceに関連する主要な概念の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '2584'
 ht-degree: 74%
@@ -132,7 +132,7 @@ Access control for [!DNL Experience Platform] is administered through the [Adobe
 
 | 権限 | 有効 | 無効 |
 |---|---|---|
-| [!DNL Manage Data Science Workspace] | Provides access to all services in [!DNL Data Science Workspace]. | API and UI access to all services within [!DNL Data Science Workspace] are disabled. While disabled, routing to the [!DNL Data Science Workspace] *[!UICONTROL Models]* and *[!UICONTROL Services]* pages are prevented. |
+| [!DNL Manage Data Science Workspace] | Provides access to all services in [!DNL Data Science Workspace]. | API and UI access to all services within [!DNL Data Science Workspace] are disabled. While disabled, routing to the [!DNL Data Science Workspace] **[!UICONTROL Models]** and **[!UICONTROL Services]** pages are prevented. |
 
 ### セキュリティと安全
 
