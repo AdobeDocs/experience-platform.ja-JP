@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイム顧客データプラットフォームでのIAB TCF 2.0のサポート
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e7cbbd2e376ab109367d1d16cb9e033202866a6f
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 3%
@@ -71,7 +71,7 @@ TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2
 
 ## 顧客の同意スキーマの作成 {#create-schemas}
 
-プラットフォームUIで、左側のナビゲーションの **[!UICONTROL スキーマ]** をクリックし、 *[!UICONTROL スキーマ]ワークスペースを開きます&#x200B;*。 次のセクションの手順に従って、必要な各スキーマを作成します。
+プラットフォームUIで、左側のナビゲーションの **[!UICONTROL スキーマ]** をクリックし、 *[!UICONTROL スキーマ]ワークスペースを開きます*。 次のセクションの手順に従って、必要な各スキーマを作成します。
 
 >[!NOTE]
 >
@@ -79,11 +79,11 @@ TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2
 
 ### レコードベースの同意スキーマの作成 {#profile-schema}
 
-**[!UICONTROL スキーマ]** ワークスペースの「 *[!UICONTROL 参照]」タブで、*クラスに基づいて新しいスキーマを作成します**[!DNL XDM Individual Profile]**。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある&#x200B;**[!UICONTROL Mixins]***[!UICONTROL (]*ミックスイン)セクションの下のをクリックします。
+**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照]」タブで、**&#x200B;クラスに基づいて新しいスキーマを作成します **[!DNL XDM Individual Profile]**。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
 
 ![](../assets/iab/add-mixin-profile.png)
 
-*[!UICONTROL Mixin]* ダイアログが表示されます。 ここから、リストから **[!UICONTROL プロファイルのプライバシー]** を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、 **[!UICONTROL 追加「ミックスイン]**」をクリックします。
+**[!UICONTROL Mixin]** ダイアログが表示されます。 ここから、リストから **[!UICONTROL プロファイルのプライバシー]** を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、 **[!UICONTROL 追加「ミックスイン]**」をクリックします。
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -112,7 +112,7 @@ TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2
 >
 >スキーマのプライマリIDフィールドを設定する手順については、 [スキーマ作成のチュートリアルを参照してください](../../../xdm/tutorials/create-schema-ui.md#identity-field)。
 
-スキーマを有効にするに [!DNL Profile]は、左側のパネルでスキーマの名前をクリックし、右側のパネルで *[!UICONTROL スキーマのプロパティ]* ダイアログを開きます。 ここから、 **[!UICONTROL プロファイル]** 切り替えボタンをクリックします。
+スキーマを有効にするに [!DNL Profile]は、左側のパネルでスキーマの名前をクリックし、右側のパネルで **[!UICONTROL スキーマのプロパティ]** ダイアログを開きます。 ここから、 **[!UICONTROL プロファイル]** 切り替えボタンをクリックします。
 
 ![](../assets/iab/profile-enable-profile.png)
 
@@ -126,11 +126,11 @@ TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2
 
 ### 時系列ベースの同意スキーマの作成 {#event-schema}
 
-**[!UICONTROL スキーマ]** ワークスペースの「 *[!UICONTROL 参照]」タブで、*クラスに基づいて新しいスキーマを作成します**[!DNL XDM ExperienceEvent]**。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある&#x200B;**[!UICONTROL Mixins]***[!UICONTROL (]*ミックスイン)セクションの下のをクリックします。
+**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照]」タブで、**&#x200B;クラスに基づいて新しいスキーマを作成します **[!DNL XDM ExperienceEvent]**。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
 
 ![](../assets/iab/add-mixin-event.png)
 
-*[!UICONTROL Mixin]* ダイアログが表示されます。 ここから、リストから **[!UICONTROL エクスペリエンスイベントのプライバシーミックスイン]** を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、 **[!UICONTROL 追加「ミックスイン]**」をクリックします。
+**[!UICONTROL Mixin]** ダイアログが表示されます。 ここから、リストから **[!UICONTROL エクスペリエンスイベントのプライバシーミックスイン]** を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、 **[!UICONTROL 追加「ミックスイン]**」をクリックします。
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -161,11 +161,11 @@ On the next page, select **[!UICONTROL Create dataset from schema]**.
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-「 _[!UICONTROL スキーマからデータセットを]_作成_[!UICONTROL 」ワークフローが表示されます。このワークフローは、]_ スキーマを選択手順から開始します。 提供されたリストで、前に作成した同意スキーマの1つを探します。 オプションで検索を使用して結果を絞り込み、スキーマを見つけやすくできます。 スキーマの横にあるラジオボタンをクリックして選択し、「 **[!UICONTROL 次へ]** 」をクリックして続行します。
+「 **[!UICONTROL スキーマからデータセットを]** 作成 **[!UICONTROL 」ワークフローが表示されます。このワークフローは、]** スキーマを選択手順から開始します。 提供されたリストで、前に作成した同意スキーマの1つを探します。 オプションで検索を使用して結果を絞り込み、スキーマを見つけやすくできます。 スキーマの横にあるラジオボタンをクリックして選択し、「 **[!UICONTROL 次へ]** 」をクリックして続行します。
 
 ![](../assets/iab/dataset-select-schema.png)
 
-_[!UICONTROL データセットの設定]_手順が表示されます。「**[!UICONTROL &#x200B;完了」をクリックする前に、データセットの一意でわかりやすい名前と説明を入力します&#x200B;]**。
+**[!UICONTROL データセットの設定]**&#x200B;手順が表示されます。「 **[!UICONTROL 完了」をクリックする前に、データセットの一意でわかりやすい名前と説明を入力します]**。
 
 ![](../assets/iab/dataset-configure.png)
 
