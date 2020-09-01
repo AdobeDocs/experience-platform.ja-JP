@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Flow Service APIを使用してMicrosoft Dynamics Connectorを作成する
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、CRMデータを収集するためのMicrosoft Dynamics（以下「Dynamics」と呼ばれる）アカウントにプラットフォームを接続する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '709'
 ht-degree: 18%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 18%
 
 # APIを使用して [!DNL Microsoft Dynamics][!DNL Flow Service] コネクタを作成する
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、CRMデータを収集するため [!DNL Platform] の [!DNL Microsoft Dynamics] （以下「Dynamics」と呼ばれる）アカウントに接続する手順を順を追って説明します。
 
@@ -25,7 +26,7 @@ ht-degree: 18%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): E[!DNL xperience Platform] は、1つのインスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスのアプリケーションを開発および発展させる仮想 [!DNL Platform] サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md):E[!DNL xperience Platform] は、1つのインスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスのアプリケーションを開発および発展させる仮想 [!DNL Platform] サンドボックスを提供します。
 
 The following sections provide additional information that you will need to know in order to successfully connect [!DNL Platform] to a Dynamics account using the [!DNL Flow Service] API.
 
