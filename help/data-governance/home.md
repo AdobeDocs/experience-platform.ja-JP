@@ -5,10 +5,10 @@ title: Adobe Experience Platform のデータガバナンス
 topic: overview
 description: Adobe Experience Platform データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。カタログ化、データ系列、データ使用のラベル付け、データ使用ポリシー、マーケティング活動のためのデータ使用の制御など、様々なレベルでExperience Platform内の主な役割を果たします。
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1394'
-ht-degree: 70%
+source-wordcount: '1326'
+ht-degree: 69%
 
 ---
 
@@ -43,11 +43,11 @@ Adobe Experience Platform [!DNL Data Governance] allows you to manage customer d
 * マーケティングスペシャリストとエクスペリエンスデザイナーは、データを使用して新しい顧客体験を設計します。
 
 
-## DULE フレームワーク
+## [!DNL Data Governance] 枠組み
 
-Data Usage Labeling and Enforcement(DULE)は、の中核的なフレームワーク [!DNL Experience Platform][!DNL Data Governance]です。 DULE は、データの分類プロセスやデータ使用ポリシーの作成プロセスを簡素化して効率化します。データラベルが適用され、データ使用ポリシーが設定されたら、マーケティングアクションを評価して、データが正しく使用されていることを確認できます。
+The [!DNL Data Governance] framework simplifies and streamlines the process of categorizing data and creating data usage policies. データラベルが適用され、データ使用ポリシーが設定されたら、マーケティングアクションを評価して、データが正しく使用されていることを確認できます。
 
-DULE フレームワークには、ラベル、ポリシーおよび実施という 3 つの主要な要素があります。
+There are three key elements to the [!DNL Data Governance] framework: Labels, Policies, and Enforcement.
 
 1. **ラベル：**&#x200B;プライバシーに関する考慮事項や契約条件を反映したデータを分類し、規制や組織のポリシーに準拠するようにします。
 1. **ポリシー：**&#x200B;特定のデータに対して許可されるマーケティングアクションや許可されないマーケティングアクションの種類について説明します。
@@ -57,7 +57,7 @@ DULE フレームワークには、ラベル、ポリシーおよび実施とい
 
 [!DNL Data Governance] 適用されるポリシーのタイプに従ってデータを分類するために、データセットおよびフィールドレベルで使用量ラベルをデータステッダーに適用できるようにします。
 
-DULEフレームワークには、次の3つの方法でデータを分類するために使用できる事前定義のデータ使用ラベルが含まれています。
+The [!DNL Data Governance] framework includes predefined data usage labels that can be used to categorize data in three ways:
 
 ![データ使用ラベルのカテゴリ](./images/overview/label-categories.png)
 
@@ -79,7 +79,7 @@ DULEフレームワークには、次の3つの方法でデータを分類する
 
 マーケティングアクションの例としては、データセットをサードパーティのサービスにエクスポートする場合などがあります。If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an &quot;I&quot; label (Identity data) has been applied to the dataset, you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
 
-Once data usage labels have been applied, data stewards can create policies using the DULE [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
+Once data usage labels have been applied, data stewards can create policies using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
@@ -89,15 +89,15 @@ Once data usage labels have been applied, data stewards can create policies usin
 
 ## 次の手順
 
-This document provided a high-level introduction to [!DNL Data Governance] and the DULE framework. これで、[データ使用状況ラベルのユーザーガイド](labels/user-guide.md)に進み、エクスペリエンスデータへの使用状況ラベルの追加を開始できます。
+This document provided a high-level introduction to [!DNL Data Governance] and the[!DNL Data Governance] framework. これで、[データ使用状況ラベルのユーザーガイド](labels/user-guide.md)に進み、エクスペリエンスデータへの使用状況ラベルの追加を開始できます。
 
 ## 付録
 
 The following section provides additional information regarding [!DNL Data Governance].
 
-### [!DNL Data Governance] terminology
+### [!DNL Data Governance] 用語
 
-The following table outlines key terms related to [!DNL Data Governance] and the DULE framework.
+The following table outlines key terms related to [!DNL Data Governance] and the[!DNL Data Governance] framework.
 
 | 用語 | 定義 |
 |---|---|
@@ -107,7 +107,6 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 | **データ管理人** | データ管理者とは、組織のデータアセットの管理、監視、および実施を担当する人物です。また、データガバナンスポリシーは、政府の規制や組織のポリシーに準拠するよう、保護および管理されます。 |
 | **データ使用ラベル** | データ使用ラベルを使用すると、規制や企業のポリシーに準拠するためにプライバシー関連の注意事項や契約条件を反映したデータを分類できます。 |
 | **データセットラベル** | データセットにはラベルを追加できます。データセット内のすべてのフィールドは、データセットのラベルを継承します。 |
-| **DULE** | DULE は、「Data Usage Labeling and Enforcement」の略語です。データガバナンスの重要な要素である DULE は、データ使用のラベル付けを可能にし、組織内のガバナンスニーズに対してデータアクセスポリシーを適用する機能の集まりです。 |
 | **フィールドラベル** | フィールドラベルは、データセットから継承されるデータガバナンスラベル、またはフィールドに直接適用されるデータガバナンスラベルです。フィールドに適用したデータガバナンスラベルは、データセットに継承されません。 |
 | **ジオフェンス** | ジオフェンスは、GPS または RFID テクノロジーによって定義される仮想的な地理的境界で、モバイルデバイスが特定の領域に入る、または領域から離れるときにソフトウェアが応答をトリガーできるようにします。 |
 | **ID ラベル** | 識別の「I」ラベルは、個人を特定できるデータまたは個人に連絡できるデータの分類に使用されます。 |
@@ -118,6 +117,6 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 
 ## その他のリソース
 
-The following video is intended to support your understanding of [!DNL Data Governance], and outlines the key aspects of the Data Usage Labeling and Enforcement (DULE) framework.
+次のビデオは、フレーム [!DNL Data Governance] ワークについての理解を深めることを目的としています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
