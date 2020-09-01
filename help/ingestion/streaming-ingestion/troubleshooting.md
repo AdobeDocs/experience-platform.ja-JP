@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ストリーミング取り込みのトラブルシューティング
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 65%
@@ -58,7 +58,7 @@ You can group multiple messages within a single request payload and stream them 
 
 All data that is sent to [!DNL Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. バッチの処理ステータスは、送信先のデータセット内に表示されます。
 
-[Experience Platform ユーザーインターフェイス](https://platform.adobe.com)でデータセットのアクティビティを確認することで、データが正常に取り込まれたかどうかを確認できます。左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックし、データセットのリストを表示します。表示されたリストからストリーミング先のアクティビティセットを選択すると、その&#x200B;*[!UICONTROL データセットアクティビティ]*&#x200B;ページを開き、選択した期間に送信されたすべてのバッチが表示されます。For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
+[Experience Platform ユーザーインターフェイス](https://platform.adobe.com)でデータセットのアクティビティを確認することで、データが正常に取り込まれたかどうかを確認できます。左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックし、データセットのリストを表示します。表示されたリストからストリーミング先のアクティビティセットを選択すると、その&#x200B;**[!UICONTROL データセットアクティビティ]**&#x200B;ページを開き、選択した期間に送信されたすべてのバッチが表示されます。For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
 
 If your data failed to ingest and you want to recover it from [!DNL Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. 詳しくは、[失敗したバッチの取得](../quality/retrieve-failed-batches.md)に関するガイドを参照してください。
 
@@ -100,4 +100,4 @@ If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to
 
 ID 名前空間には、デフォルトとカスタムの 2 タイプがあります。When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. デフォルトおよびカスタム名前空間の使用について詳しくは、[ID 名前空間の概要](../../identity-service/namespaces.md)を参照してください。
 
-You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. 左側のナビゲーションで「**[!UICONTROL 監視]**」をクリックし、「_[!UICONTROL エンドツーエンドのストリーミング]_」タブを表示して、選択した期間にストリーミングされたメッセージバッチを表示します。
+You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. 左側のナビゲーションで「**[!UICONTROL 監視]**」をクリックし、「**[!UICONTROL エンドツーエンドのストリーミング]**」タブを表示して、選択した期間にストリーミングされたメッセージバッチを表示します。
