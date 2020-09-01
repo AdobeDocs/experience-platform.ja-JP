@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;protocol
 solution: Experience Platform
 title: Flow Service APIを使用したプロトコルシステムの調査
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用してプロトコルアプリケーションを調べます。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '578'
 ht-degree: 20%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 20%
 
 # APIを使用したプロトコル・システムの調査 [!DNL Flow Service]
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用してプロトコルアプリケーションを調べます。
 
