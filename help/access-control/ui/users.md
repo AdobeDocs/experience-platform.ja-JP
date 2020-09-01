@@ -5,7 +5,7 @@ title: 製品プロファイルのユーザーの管理
 topic: user guide
 description: このドキュメントでは、Adobe Experience PlatformのUIで製品プロファイルのユーザーを管理する方法を示します。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 72%
@@ -15,11 +15,11 @@ ht-degree: 72%
 
 # 製品プロファイルのユーザーの管理
 
-製品プロファイルにユーザーを割り当てたり、製品プロファイルからユーザーを削除したりするには、プロファイルの詳細ページを開き、「*[!UICONTROL ユーザー]*」タブに移動します。このタブで、「**[!UICONTROL ユーザーの追加]**」をクリックします。
+製品プロファイルにユーザーを割り当てたり、製品プロファイルからユーザーを削除したりするには、プロファイルの詳細ページを開き、「**[!UICONTROL ユーザー]**」タブに移動します。このタブで、「**[!UICONTROL ユーザーの追加]**」をクリックします。
 
 ![add-users-button](../images/add-users-button.png)
 
-「*[!UICONTROL ユーザーの追加]*」ダイアログが表示されます。検索フィールドを使用して、名前または電子メールでユーザーを検索し、追加できます。入力を始めると、テキストボックスの下のオートコンプリートウィンドウに一致するユーザーが表示されます。
+「**[!UICONTROL ユーザーの追加]**」ダイアログが表示されます。検索フィールドを使用して、名前または電子メールでユーザーを検索し、追加できます。入力を始めると、テキストボックスの下のオートコンプリートウィンドウに一致するユーザーが表示されます。
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
@@ -31,7 +31,7 @@ ht-degree: 72%
 
 ![add-user-save](../images/add-user-save.png)
 
-製品プロファイルの「*[!UICONTROL ユーザー]*」タブが再び表示されます。このタブに追加したユーザーがリストされています。
+製品プロファイルの「**[!UICONTROL ユーザー]**」タブが再び表示されます。このタブに追加したユーザーがリストされています。
 
 ![user-added](../images/user-added.png)
 
