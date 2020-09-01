@@ -1,12 +1,12 @@
 ---
-keywords: keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 solution: Adobe Experience Platform
 title: Adobe Experience Platformセグメントサービス開発ガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0783979afa63890c77fd08f2d2ace4e141f59395
 workflow-type: tm+mt
-source-wordcount: 467
+source-wordcount: '467'
 ht-degree: 6%
 
 ---
