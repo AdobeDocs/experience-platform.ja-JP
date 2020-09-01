@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでの広告コネクタのデータフローの設定
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 4%
@@ -20,16 +20,16 @@ ht-degree: 4%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model] (XDM)システム](../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+- [[!DNL Experience Data Model] (XDM)システム](../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL リアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [[!DNLリアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 さらに、このチュートリアルでは、既に広告アカウントを作成している必要があります。 UIで異なる支払いコネクタを作成するためのチュートリアルのリストは、 [source connectorsの概要](../../../home.md)。
 
 ## データの選択
 
-広告アカウントを作成すると、 *[!UICONTROL データの選択]* 手順が表示され、ファイル階層を調べるためのインタラクティブインターフェイスが提供されます。
+広告アカウントを作成すると、 **[!UICONTROL データの選択]** 手順が表示され、ファイル階層を調べるためのインタラクティブインターフェイスが提供されます。
 
 - インターフェイスの左半分はディレクトリブラウザーで、サーバーのファイルとディレクトリが表示されます。
 - インターフェイスの右半分を使用すると、互換性のあるファイルから最大100行のデータをプレビューできます。
@@ -40,7 +40,7 @@ ht-degree: 4%
 
 ## データフィールドのXDMスキーマへのマッピング
 
-「 *[!UICONTROL マッピング]* 」の手順が表示され、ソースデータをデータセットにマッピングするインタラクティブなインターフェイスが提供され [!DNL Platform] ます。
+「 **[!UICONTROL マッピング]** 」の手順が表示され、ソースデータをデータセットにマッピングするインタラクティブなインターフェイスが提供され [!DNL Platform] ます。
 
 取り込む受信データのデータセットを選択します。 既存のデータセットを使用することも、新しいデータセットを作成することもできます。
 
@@ -50,7 +50,7 @@ ht-degree: 4%
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/advertising/use-existing-target-dataset.png)
 
-The *[!UICONTROL Select dataset]* dialog appears. 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
+The **[!UICONTROL Select dataset]** dialog appears. 使用するデータセットを見つけて選択し、「 **[!UICONTROL 続行]**」をクリックします。
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/advertising/select-existing-dataset.png)
 
@@ -62,7 +62,7 @@ The *[!UICONTROL Select dataset]* dialog appears. 使用するデータセット
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに適用するスキーマを選択し、をクリックし **[!DNL Done]**&#x200B;ます。
+The **[!UICONTROL Select schema]** dialog appears. 新しいデータセットに適用するスキーマを選択し、をクリックし **[!DNL Done]**&#x200B;ます。
 
 ![select-スキーマ](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
 
@@ -74,14 +74,14 @@ The *[!UICONTROL Select schema]* dialog appears. 新しいデータセットに�
 
 ## インジェストのスケジュール設定
 
-[ *[!UICONTROL スケジュール]* ]ステップが表示され、設定済みのマッピングを使用して選択したソースデータを自動的に取り込むように取り込みスケジュールを設定できます。 次の表に、スケジュール設定用の様々な設定可能フィールドの概要を示します。
+[ **[!UICONTROL スケジュール]** ]ステップが表示され、設定済みのマッピングを使用して選択したソースデータを自動的に取り込むように取り込みスケジュールを設定できます。 次の表に、スケジュール設定用の様々な設定可能フィールドの概要を示します。
 
 | フィールド | 説明 |
 | --- | --- |
 | 頻度 | 選択可能な周波数 `Once`には、、、、、、、、、、が含ま `Minute`れ `Hour``Day``Week`ます。 |
 | 間隔 | 選択した頻度の間隔を設定する整数。 |
 | 開始時間 | 最初の取り込みがいつ行われるかを示すUTCタイムスタンプ。 |
-| 埋め戻し | 最初に取り込まれるデータを決定するboolean値です。 [ *[!UICONTROL バックフィル]* ]を有効にすると、指定したパスにある現在のファイルは、最初にスケジュールされた取り込み中にすべて取り込まれます。 [ *バックフィル* ]を無効にすると *[!UICONTROL 、最初の取り込み実行から]* 開始時間の間に読み込まれたファイルだけが取り込まれます。 *[!UICONTROL 開始時間より前に読み込まれたファイルは取り込まれません]* 。 |
+| 埋め戻し | 最初に取り込まれるデータを決定するboolean値です。 [ **[!UICONTROL バックフィル]** ]を有効にすると、指定したパスにある現在のファイルは、最初にスケジュールされた取り込み中にすべて取り込まれます。 [ **[!UICONTROL バックフィル]** ]を無効にすると **[!UICONTROL 、最初の取り込み実行から]** 開始時間の間に読み込まれたファイルだけが取り込まれます。 **[!UICONTROL 開始時間より前に読み込まれたファイルは取り込まれません]** 。 |
 | 差分列 | タイプ、日付または時間のフィルターされたソーススキーマフィールドセットを含むオプションです。 このフィールドは、新規データと既存データを区別するために使用します。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 |
 
 データフローは、スケジュールに基づいてデータを自動的に取り込むように設計されています。 開始するには、取り込み頻度を選択します。 次に、2つのフローの実行間隔を指定する間隔を設定します。 間隔の値は、0以外の整数で、15以上に設定する必要があります。
