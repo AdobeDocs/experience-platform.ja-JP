@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql
+keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
 solution: Experience Platform
 title: メタデータコマンド
 topic: metadata
 description: メタデータのクエリに現在サポートされているPSQLコマンドのリストです。
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 90%
