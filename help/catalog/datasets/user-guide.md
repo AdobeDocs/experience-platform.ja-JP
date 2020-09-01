@@ -5,9 +5,9 @@ title: データセットユーザガイド
 topic: datasets
 description: このdatasetsユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内でデータセットを操作する際に、一般的な操作を実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1159'
 ht-degree: 71%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 71%
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタ](../../xdm/tutorials/create-schema-ui.md):ユーザーインターフェイス [!DNL Schema Editor] 内で独自のカスタムXDMスキーマを作成する方法を説明し [!DNL Platform] ます。
 * [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNL Data Governance]](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
+* [[!DNLAdobe Experience Platformデータガバナンス]](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
 
 ## データセットの表示
 
@@ -114,7 +114,7 @@ If a dataset already contains data and is then enabled for [!DNL Profile], the e
 
 ## データセットのデータガバナンスの管理と実施
 
-Data Usage Labeling and Enforcement (DULE) is the core data governance mechanism for [!DNL Experience Platform]. データラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。ラベルについて詳しくは、『[データガバナンスの概要](../../data-governance/home.md)』を参照してください。また、データセットにラベルを適用する方法については、『[データ使用レベルユーザガイド](../../data-governance/labels/overview.md)』を参照してください。
+データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットを分類できます。ラベルについて詳しくは、『[データガバナンスの概要](../../data-governance/home.md)』を参照してください。また、データセットにラベルを適用する方法については、『[データ使用レベルユーザガイド](../../data-governance/labels/overview.md)』を参照してください。
 
 ## データセットの削除
 
