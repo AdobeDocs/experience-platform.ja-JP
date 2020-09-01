@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;segment;Segment;segment builder;Segment builder
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Segmentation Service Segment Builderユーザーガイド
 topic: ui guide
 description: 'セグメントビルダーのワークスペースには、プロファイルのデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。 '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
 source-wordcount: '1723'
 ht-degree: 55%
