@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform 製品ドキュメント
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 18ea9482b9c6691c6326d91b2d0d3da9a8dc7195
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '7187'
+source-wordcount: '7145'
 ht-degree: 59%
 
 ---
@@ -217,8 +217,6 @@ ht-degree: 59%
 **ダイレクト型ルール：** で [!DNL Experience Platform Launch]は、 [!UICONTROL 直接呼び出しをページから直接呼び出すと実行される] ダイレクト型ルー  ルを設定できます。 ページの読み込みやサイトでの操作が非常に簡単な場合、またはそれが一意で、（Xに設定され、毎回トリガーされる）特定の命令セットを毎回実行できる場合は、 [!DNL eVar4] 直接呼び出し [!DNL event2][!UICONTROL ルールを使用できます]。 ダイレク [!DNL Launch] ト型ルールの作成に関する [!UICONTROL ドキュメントを参照してくだ] さい 。
 
 **表示名：**&#x200B;表示名は、UI に表示されるフィールドのわかりやすい名前です。
-
-**データ：**&#x200B;データは、*Data Usage Labeling and Enforcement* の略語です。データは、データガバナンスの重要な部分であり、組織内のガバナンスニーズに対してデータ使用のラベル付けやデータアクセスポリシーの適用を可能にする主な機能のコレクションです。
 
 [トップに戻る](#adobe-experience-platform-glossary)
 
