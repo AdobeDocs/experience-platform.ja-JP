@@ -5,9 +5,9 @@ title: データ使用ポリシーユーザガイド
 topic: policies
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platformユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要を説明します。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '765'
 ht-degree: 39%
 
 ---
@@ -116,7 +116,7 @@ You can enable or disable policies from the **[!UICONTROL Browse]** tab in the *
 
 ## 次の手順
 
-This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). データ使用ポリシーの適用方法について詳しくは、「[ポリシー実施の概要](../enforcement/overview.md)」を参照してください。
+This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. を使用してポリシーを管理する手順については、『 [!DNL Policy Service API]開発者ガイド [](../api/getting-started.md)』を参照してください。 データ使用ポリシーの適用方法について詳しくは、「[ポリシー実施の概要](../enforcement/overview.md)」を参照してください。
 
 次のビデオでは、 [!DNL Experience Platform] UIで使用ポリシーを使用する方法のデモを示します。
 
