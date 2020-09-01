@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;crm schema;crm;CRM
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Salesforceコネクタ
 topic: overview
 description: Experience Platformは、サードパーティのCRMシステムからデータを取り込むためのサポートを提供します。 CRMプロバイダのサポートにはSalesforceが含まれます。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 9%
@@ -51,7 +51,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Salesforce] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Salesforce] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
 ## API [!DNL Salesforce] を [!DNL Platform] 使用した接続
 
