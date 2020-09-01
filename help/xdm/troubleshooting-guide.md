@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;
 solution: Experience Platform
 title: エクスペリエンスデータモデル（XDM）システムのトラブルシューティングガイド
+description: このドキュメントでは、エクスペリエンスデータモデル（XDM）システムに関するよくある質問の回答に加えて、一般的なエラーのトラブルシューティングガイドを提供します。
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1839'
-ht-degree: 65%
+source-wordcount: '1862'
+ht-degree: 66%
 
 ---
 
