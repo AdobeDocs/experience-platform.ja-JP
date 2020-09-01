@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cs;CS;customer success system
 solution: Experience Platform
 title: Flow Service APIを使用した顧客成功システムの調査
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して顧客成功(CS)システムを調べます。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '582'
 ht-degree: 20%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 20%
 
 # APIを使用した顧客成功システムの調査 [!DNL Flow Service]
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して顧客成功(CS)システムを調べます。
 
@@ -29,7 +30,7 @@ The following sections provide additional information that you will need to know
 
 ### ベース接続の取得
 
-APIを使用してCSシステムを調査するには、有効なベース接続IDが必要 [!DNL Platform] です。 作業対象のCSシステムに対する基本的な接続がまだない場合は、次のチュートリアルを使用して作成できます。
+APIを使用してCSシステムを調査するには、有効なベース接続IDが必要 [!DNL Platform] です。 操作するCSシステムの基本接続がまだない場合は、次のチュートリアルを使用して作成できます。
 
 * [Salesforceサービスクラウド](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
