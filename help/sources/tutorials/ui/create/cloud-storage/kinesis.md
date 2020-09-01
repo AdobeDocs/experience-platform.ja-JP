@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: UIでAmazonKinesisソースコネクタを作成する
 topic: overview
+description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用して、AmazonKinesis(以下「Kinesis」と呼ばれる)ソースコネクタを認証する手順を説明します。
 translation-type: tm+mt
-source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '482'
 ht-degree: 9%
 
 ---
