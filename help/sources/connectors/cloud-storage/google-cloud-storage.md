@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Google Cloudストレージコネクタ
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 3%
@@ -60,7 +60,7 @@ The **[!UICONTROL Settings]** page appears. ここから、 [!DNL Google] プロ
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-[ **[!UICONTROL 相互運用性]** ]ページには、認証、アクセスキー、およびユーザアカウントに関連付けられた既定のプロジェクトに関する情報が含まれます。 相互運用可能アクセス用の既定のプロジェクトをまだ確立していない場合は、[相互運用可能アクセス用の *[!UICONTROL 既定のプロジェクト]* ]セクションで設定できます。 既定のプロジェクトが既に確立されている場合は、このセクションに、プロジェクトが既定として設定されていることを確認するメッセージが表示されます。
+[ **[!UICONTROL 相互運用性]** ]ページには、認証、アクセスキー、およびユーザアカウントに関連付けられた既定のプロジェクトに関する情報が含まれます。 相互運用可能アクセス用の既定のプロジェクトをまだ確立していない場合は、[相互運用可能アクセス用の **[!UICONTROL 既定のプロジェクト]** ]セクションで設定できます。 既定のプロジェクトが既に確立されている場合は、このセクションに、プロジェクトが既定として設定されていることを確認するメッセージが表示されます。
 
 ユーザーアカウントの新しいアクセスキーIDと秘密鍵を生成するには、「キーを **[!UICONTROL 作成]**」を選択します。
 
@@ -70,7 +70,7 @@ The **[!UICONTROL Settings]** page appears. ここから、 [!DNL Google] プロ
 
 ## 接続 [!DNL Google Cloud Storage] 先 [!DNL Platform]
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Google Cloud Storage] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Google Cloud Storage] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
 ### APIの使用
 
