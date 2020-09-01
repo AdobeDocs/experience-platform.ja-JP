@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 受信ソースデータをアクティブ化して顧客プロファイルを入力します
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 15%
@@ -20,10 +20,10 @@ ht-degree: 15%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model] (XDM)システム](../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+- [[!DNL Experience Data Model] (XDM)システム](../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL リアルタイム顧客プロファイル]](../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 また、このチュートリアルでは、ソースコネクタを既に作成し、設定している必要があります。  UIで異なるコネクタを作成するためのチュートリアルのリストは、 [ソースコネクタの概要](../../home.md)。
 
@@ -47,7 +47,7 @@ ht-degree: 15%
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-**[!UICONTROL スキーマエディタ]** (Editor)が表示され、中央のキャンバスにスキーマの構造が表示されます。 キャンバス内で、プライマリIDとして設定するフィールドを選択します。 表示される「 *[!UICONTROL フィールドプロパティ]* 」タブで、「 **[!UICONTROL ID]** 」チェックボックスを選択し、 **[!UICONTROL プライマリID]**&#x200B;を選択します。 最後に、適切な **[!UICONTROL ID名前空間を選択し]**、「 **[!UICONTROL Apply]**」をクリックします。
+**[!UICONTROL スキーマエディタ]** (Editor)が表示され、中央のキャンバスにスキーマの構造が表示されます。 キャンバス内で、プライマリIDとして設定するフィールドを選択します。 表示される「 **[!UICONTROL フィールドプロパティ]** 」タブで、「 **[!UICONTROL ID]** 」チェックボックスを選択し、 **[!UICONTROL プライマリID]**&#x200B;を選択します。 最後に、適切な **[!UICONTROL ID名前空間を選択し]**、「 **[!UICONTROL Apply]**」をクリックします。
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
