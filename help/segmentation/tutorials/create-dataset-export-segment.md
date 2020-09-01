@@ -4,7 +4,7 @@ solution: Experience Platform
 title: オーディエンスセグメントをエクスポートするためのデータセットの作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 68%
@@ -33,7 +33,7 @@ UI で和集合スキーマを表示するには、左側のナビゲーショ�
 
 The datasets workspace within the [!DNL Experience Platform] UI allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-データセットワークスペースを表示するには、左側のナビゲーションで「**[!UICONTROL Datasets]**」をクリックし、「*[!UICONTROL Browse]*」タブをクリックします。データセットワークスペースには、*[!UICONTROL 名前]*、*[!UICONTROL 作成日時]*（日付と時刻）、*[!UICONTROL ソース]*、*[!UICONTROL スキーマ]*、*[!UICONTROL 最終バッチステータス]*&#x200B;を示す列、および&#x200B;*[!UICONTROL 最終更新日時]*&#x200B;を含むデータセットのリストが含まれています。各列の幅によっては、すべての列を表示するには、左または右にスクロールする必要があります。
+データセットワークスペースを表示するには、左側のナビゲーションで「**[!UICONTROL Datasets]**」をクリックし、「**[!UICONTROL Browse]**」タブをクリックします。データセットワークスペースには、**[!UICONTROL 名前]**、**[!UICONTROL 作成日時]**（日付と時刻）、**[!UICONTROL ソース]**、**[!UICONTROL スキーマ]**、**[!UICONTROL 最終バッチステータス]**&#x200B;を示す列、および&#x200B;**[!UICONTROL 最終更新日時]**&#x200B;を含むデータセットのリストが含まれています。各列の幅によっては、すべての列を表示するには、左または右にスクロールする必要があります。
 
 >[!NOTE]
 >
@@ -47,13 +47,13 @@ The datasets workspace within the [!DNL Experience Platform] UI allows you to vi
 
 ![「データセットを作成」のクリック](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
-*[!UICONTROL Create Dataset]* 画面で、「**[!UICONTROL Create Dataset from Schema]**」をクリックして続行します。
+**[!UICONTROL Create Dataset]** 画面で、「**[!UICONTROL Create Dataset from Schema]**」をクリックして続行します。
 
 ![データソースの選択](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 ## XDM 個別プロファイル和集合スキーマの選択
 
-To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset, find the &quot;[!UICONTROL XDM Individual Profile]&quot; schema with a type of &quot;[!UICONTROL Union]&quot; on the *[!UICONTROL Select Schema]* screen.
+To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset, find the &quot;[!UICONTROL XDM Individual Profile]&quot; schema with a type of &quot;[!UICONTROL Union]&quot; on the **[!UICONTROL Select Schema]** screen.
 
 「**[!UICONTROL XDM Individual Profile]**」の横のラジオボタンを選択し、右上隅の「**[!UICONTROL Next]**」をクリックします。
 
@@ -61,7 +61,7 @@ To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset
 
 ## データセットの設定
 
-**[!UICONTROL データセットの設定]**&#x200B;画面で、データセットの&#x200B;*[!UICONTROL 名前]*&#x200B;を指定し、データセットの&#x200B;*[!UICONTROL 説明]*&#x200B;も入力できます。
+**[!UICONTROL データセットの設定]**&#x200B;画面で、データセットの&#x200B;**[!UICONTROL 名前]**&#x200B;を指定し、データセットの&#x200B;**[!UICONTROL 説明]**&#x200B;も入力できます。
 
 **データセット名に関する注意事項：**
 - 後でライブラリ内で簡単に見つけられるように、データセット名は短く、わかりやすい名前にする必要があります。
@@ -74,9 +74,9 @@ To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset
 
 ## データセットアクティビティ
 
-空のデータセットが作成され、データセットワークスペースの「*[!UICONTROL データセットアクティビティ]*」タブに戻りました。ワークスペースの左上隅にデータセットの名前と、「バッチが追加されていません」という通知が表示されます。このデータセットにバッチをまだ追加していないので、これは期待通りです。
+空のデータセットが作成され、データセットワークスペースの「**[!UICONTROL データセットアクティビティ]**」タブに戻りました。ワークスペースの左上隅にデータセットの名前と、「バッチが追加されていません」という通知が表示されます。このデータセットにバッチをまだ追加していないので、これは期待通りです。
 
-「データセット」ワークスペースの右側に「**[!UICONTROL 情報]**」タブがあり、新しいデータセットに関した「*[!UICONTROL データセット ID]*」、「*[!UICONTROL 名前]*」、「*[!UICONTROL 説明]*」、「*[!UICONTROL テーブル名]*」、「*[!UICONTROL スキーマ]*」、「*[!UICONTROL ストリーミング]*」「*[!UICONTROL ソース]*」などの情報が含まれます。The [!UICONTROL Info] tab also includes information about when the dataset was *[!UICONTROL Created]* and its *[!UICONTROL Last Modified]* date.
+「データセット」ワークスペースの右側に「**[!UICONTROL 情報]**」タブがあり、新しいデータセットに関した「**[!UICONTROL データセット ID]**」、「**[!UICONTROL 名前]**」、「**[!UICONTROL 説明]**」、「**[!UICONTROL テーブル名]**」、「**[!UICONTROL スキーマ]**」、「**[!UICONTROL ストリーミング]**」「**[!UICONTROL ソース]**」などの情報が含まれます。The [!UICONTROL Info] tab also includes information about when the dataset was **[!UICONTROL Created]** and its **[!UICONTROL Last Modified]** date.
 
 **[!UICONTROL データセット ID]** は、オーディエンスセグメントのエクスポートワークフローを完了するために必要になるので、メモしておいてください。
 
