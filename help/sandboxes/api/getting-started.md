@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: サンドボックス API 開発者ガイド
 topic: developer guide
+description: この開発者ガイドでは、サンドボックス API を使用して Experience Platform のサンドボックスを管理する手順を説明し、様々な操作を実行するための API 呼び出し例を含んでいます。
 translation-type: tm+mt
-source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '364'
 ht-degree: 100%
 
 ---
