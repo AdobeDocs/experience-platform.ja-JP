@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics; analytics; classifications
+keywords: Experience Platform;home;popular topics; analytics;classifications
 description: このチュートリアルでは、UIで分類データをAdobe Experience Platformに取り込むためのAdobe Analytics分類データコネクタを作成する手順を説明します。
 solution: Experience Platform
 title: UIでのAdobe Analytics分類データコネクタの作成
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
