@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID サービス
 topic: overview
 description: 'ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name<span>@email.com」の値を電子メールアドレスとして、または「443522」を数値のCRM IDとして区別します。 '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 64%
@@ -53,7 +53,7 @@ The following identity types are available within [!DNL Platform]:
 
 Adobe Experience Platform には、すべての組織で使用できる ID 名前空間が複数用意されています。These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
-UI で標準名前空間を表示するには、左側のパネルの「**[!UICONTROL ID]**」をクリックして、「*[!UICONTROL 参照]*」タブをクリックします。All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
+UI で標準名前空間を表示するには、左側のパネルの「**[!UICONTROL ID]**」をクリックして、「**[!UICONTROL 参照]**」タブをクリックします。All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
 
 次に、表示された名前空間の 1 つをクリックすると詳細が表示されます。
 
@@ -71,7 +71,7 @@ Namespaces that you define are private to your organization and require a unique
 
 ![](./images/create-identity-namespace.png)
 
-標準名前空間と同様に、「*[!UICONTROL 参照]*」タブのカスタム名前空間をクリックすると、その詳細が表示されます。ただし、カスタム名前空間では、詳細領域で表示名と説明を編集することができます。
+標準名前空間と同様に、「**[!UICONTROL 参照]**」タブのカスタム名前空間をクリックすると、その詳細が表示されます。ただし、カスタム名前空間では、詳細領域で表示名と説明を編集することができます。
 
 >[!NOTE]
 >
