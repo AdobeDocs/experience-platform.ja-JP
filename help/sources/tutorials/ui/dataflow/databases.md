@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;database connector
 solution: Experience Platform
 title: UIでのデータベースコネクタのデータフローの設定
 topic: overview
+description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、データベースアカウントを使用して新しいデータフローを構成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1282'
 ht-degree: 3%
 
 ---
@@ -23,7 +24,7 @@ ht-degree: 3%
 - [[!DNL Experience Data Model] (XDM)システム](../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL リアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [[!DNLリアルタイム顧客プロファイル]](../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 また、このチュートリアルでは、データベースアカウントを既に作成済みである必要があります。 UIで異なるデータベースコネクタを作成するためのチュートリアルのリストは、 [ソースコネクタの概要](../../../home.md)。
 
