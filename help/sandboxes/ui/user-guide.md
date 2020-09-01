@@ -4,7 +4,7 @@ solution: Experience Platform
 title: サンドボックスユーザーガイド
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 80%
@@ -18,7 +18,7 @@ ht-degree: 80%
 
 ## サンドボックスの表示
 
-Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL サンドボックス]**」をクリックし、「_[!UICONTROL サンドボックス]_」ダッシュボードを開きます。ダッシュボードには、組織で使用可能なすべてのサンドボックスがリストされます。これには、サンドボックスのタイプ（実稼動または開発）や状態（アクティブ、作成、削除、失敗）が含まれます。
+Experience Platform UI で、左側のナビゲーションの「**[!UICONTROL サンドボックス]**」をクリックし、「**[!UICONTROL サンドボックス]**」ダッシュボードを開きます。ダッシュボードには、組織で使用可能なすべてのサンドボックスがリストされます。これには、サンドボックスのタイプ（実稼動または開発）や状態（アクティブ、作成、削除、失敗）が含まれます。
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,7 +46,7 @@ UI で新しいサンドボックスを作成するには、左側のナビゲ�
 
 ![](../images/ui/create-sandbox-button.png)
 
-_[!UICONTROL サンドボックスを作成]_&#x200B;ダイアログが表示され、サンドボックスの表示タイトルと名前を指定するよう求められます。**表示タイトル**&#x200B;は、人間が読み取り可能なもので、簡単に識別できる説明的なタイトルにする必要があります。The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
+**[!UICONTROL サンドボックスを作成]**&#x200B;ダイアログが表示され、サンドボックスの表示タイトルと名前を指定するよう求められます。**表示タイトル**&#x200B;は、人間が読み取り可能なもので、簡単に識別できる説明的なタイトルにする必要があります。The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
 
 完了したら、「**[!UICONTROL Create]**」をクリックします。
 
@@ -56,7 +56,7 @@ _[!UICONTROL サンドボックスを作成]_&#x200B;ダイアログが表示さ
 >
 > あなたが作成できるのは非実稼動のサンドボックスタイプのみ制限されているので、**[!UICONTROL タイプ]**&#x200B;オプションは「非実稼動」でロックされ、操作できません。
 
-Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _[!UICONTROL Sandboxes]_ dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
+Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
 
 ![](../images/ui/sandbox-created.png)
 
@@ -96,7 +96,7 @@ UI でサンドボックスを削除するには、左側のナビゲーショ�
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-確認メッセージが表示され、_[!UICONTROL サンドボックス]_&#x200B;ワークスペースからサンドボックスが削除されます。
+確認メッセージが表示され、**[!UICONTROL サンドボックス]**&#x200B;ワークスペースからサンドボックスが削除されます。
 
 ## 次の手順
 
