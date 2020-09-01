@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Azure Data LakeストレージGen2コネクタ
 topic: overview
+description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure Data LakeストレージGen2をプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 4d3899e8a91d15da7e40523a03285f3ccec27191
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '224'
 ht-degree: 1%
 
 ---
@@ -52,7 +53,7 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 
 ## 接続 [!DNL Azure Data Lake Storage Gen2] 先 [!DNL Platform]
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Azure Data Lake Storage Gen2] を [!DNL Platform] 使用した接続方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Azure Data Lake Storage Gen2] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
 ### APIの使用
 
