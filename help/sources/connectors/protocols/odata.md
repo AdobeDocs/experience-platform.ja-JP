@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
 title: 汎用ODataコネクタ
 topic: overview
+description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用して汎用ODataをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 9%
+source-wordcount: '223'
+ht-degree: 8%
 
 ---
 
