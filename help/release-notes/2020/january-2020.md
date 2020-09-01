@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 72%
@@ -82,7 +82,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | カテゴリ | 権限 | 説明 |
 |--- | --- | ---|
 | データ取得 | ソースの管理 | ソースへの読み取り、作成、編集、無効化アクセス |
-| データ取得 | ソースの表示 | 「*[!UICONTROL カタログ]*」タブでの使用可能なソースおよび「*[!UICONTROL 参照]*」タブでの認証済みのソースへの読み取り専用アクセス |
+| データ取得 | ソースの表示 | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
 
 **既知の問題**
 
