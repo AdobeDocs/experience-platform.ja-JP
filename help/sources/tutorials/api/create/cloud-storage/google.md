@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;google;Google
 solution: Experience Platform
 title: Flow Service APIを使用してGoogle Cloudストレージコネクタを作成する
 topic: overview
+description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle Cloudストレージアカウントに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 23%
+source-wordcount: '520'
+ht-degree: 22%
 
 ---
 
 
 # APIを使用して [!DNL Google Cloud Storage][!DNL Flow Service] コネクタを作成する
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して、アカウントに接続する手順を順を追っ [!DNL Experience Platform] て説明し [!DNL Google Cloud Storage] ます。
 
@@ -25,7 +26,7 @@ ht-degree: 23%
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-次の節では、 [!DNL Flow Service] APIを使用してGoogle Cloudストレージアカウントに正しく接続するために知っておく必要がある追加情報について説明します。
+以下の節では、 [!DNL Flow Service] APIを使用してGoogle Cloudストレージアカウントに正しく接続するために知っておく必要がある追加情報について説明します。
 
 ### 必要な資格情報の収集
 
