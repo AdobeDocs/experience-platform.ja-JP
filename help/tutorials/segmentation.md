@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: セグメント化のチュートリアル
 topic: tutorial
+description: Adobe Experience Platform セグメント化サービスは、セグメントを作成し、リアルタイム顧客プロファイルデータからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、プラットフォーム上で一元的に設定および管理され、アドビのどのソリューションからでも簡単にアクセスできます。
 translation-type: tm+mt
-source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 52%
+source-wordcount: '584'
+ht-degree: 56%
 
 ---
 
@@ -38,7 +39,7 @@ Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a
 
 ## ストリーミングセグメント化
 
-ストリーミングセグメント化機能は、イベントが特定のセグメントグループに入った直後に顧客を即座に評価する機能です。 この機能を使用すると、ほとんどのセグメントルールをAdobe Experience Platformに渡す際に評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメント化ジョブを実行せずに最新の状態に維持されます。 詳しくは、[ストリーミングによるセグメント化の概 要](../segmentation/api/streaming-segmentation.md)を参照してください。
+ストリーミングセグメント化機能は、イベントが特定のセグメントグループに入った直後に顧客を即座に評価する機能です。 この機能を使用すると、ほとんどのセグメントルールを、データがAdobe Experience Platformに渡される際に評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメント化ジョブを実行せずに最新の状態に維持されます。 詳しくは、[ストリーミングによるセグメント化の概 要](../segmentation/api/streaming-segmentation.md)を参照してください。
 
 ## マルチエンティティのセグメント化
 
