@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;segment evaluation
+keywords: Experience Platform;home;popular topics;segment evaluation;Segmentation Service;segmentation;Segmentation;evaluate a segment;access segment results;evaluate and access segment;
 solution: Experience Platform
 title: セグメントの評価
 topic: tutorial
 description: このドキュメントでは、セグメント化 API を使用してセグメントを評価したり、セグメント結果にアクセスしたりするためのチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 62%
