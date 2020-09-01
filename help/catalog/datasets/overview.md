@@ -5,10 +5,10 @@ title: データセットの概要
 topic: datasets
 description: このドキュメントでは、Experience Platform のデータセットのおおまかな概要を説明します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 38%
+source-wordcount: '722'
+ht-degree: 39%
 
 ---
 
@@ -41,7 +41,7 @@ Adobe Experience Platform Data Ingestion represents the multiple methods by whic
 
 ## データセットへの使用状況ラベルの適用
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. Using Data Usage Labeling and Enforcement (DULE) as its core framework, [!DNL Data Governance] allows you to apply usage labels to categorize data according to the usage policies that apply to that data.
+Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. フレーム [!DNL Data Governance] ワークを使用すると、使用状況ラベルを適用して、そのデータに適用される使用状況ポリシーに従ってデータを分類できます。
 
 データ使用状況ラベルは、データセット全体または個々のデータセットフィールドに適用できます。データセットレベルで追加されたラベルは、そのデータセット内のすべてのフィールドに継承されます。
 
