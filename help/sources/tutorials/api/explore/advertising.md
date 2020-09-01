@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;advertising system;Advertising system
 solution: Experience Platform
 title: Flow Service APIを使用して広告システムを調査する
 topic: overview
+description: フローサービスは、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元管理するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。 このチュートリアルでは、Flow Service APIを使用して広告システムを調査します。
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 20%
+source-wordcount: '626'
+ht-degree: 19%
 
 ---
 
 
 # APIを使用した広告システムの調査 [!DNL Flow Service]
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、 [!DNL Flow Service] APIを使用して広告システムを調査します。
 
@@ -29,7 +30,7 @@ The following sections provide additional information that you will need to know
 
 ### 必要な資格情報の収集
 
-このチュートリアルでは、データを取り込むサードパーティの広告アプリケーションとの有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様IDと接続IDが含まれます。 advertising connectionの作成とこれらの値の取得について詳しくは、「advertising sourceのPlatformへの [接続](../../api/create/advertising/ads.md) 」チュートリアルを参照してください。
+このチュートリアルでは、データを取り込むサードパーティの広告アプリケーションとの有効な接続が必要です。 有効な接続には、アプリケーションの接続仕様IDと接続IDが含まれます。 広告接続の作成とこれらの値の取得について詳しくは、「広告ソースのプラットフォームへの [接続](../../api/create/advertising/ads.md) 」チュートリアルを参照してください。
 
 ### API 呼び出し例の読み取り
 
