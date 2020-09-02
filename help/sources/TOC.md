@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
+source-git-commit: 1292e39ea7682b839ea75dd069ce32f1591345b8
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '627'
 ht-degree: 6%
 
 ---
@@ -132,6 +132,7 @@ ht-degree: 6%
    - [サードパーティのクラウドストレージシステムからのパーケーデータの取り込み](tutorials/api/cloud-storage-parquet.md)
    - [Flow Service APIを使用したデータセットベースの接続の作成](tutorials/api/create-dataset-base-connection.md)
    - [Flow Service APIを使用してデータフローを監視する](tutorials/api/monitor.md)
+   - [Flow Service APIを使用して接続情報を更新する](tutorials/api/update.md)
 - UIチュートリアル {#ui-tutorials}
    - ソースコネクタを作成する {#create}
       - アドビアプリケーション {#adobe-applications}
