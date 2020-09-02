@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: 結合ポリシーユーザーガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '1433'
-ht-degree: 44%
+source-wordcount: '1440'
+ht-degree: 36%
 
 ---
 
@@ -55,16 +55,16 @@ Details for each merge policy available to your organization are visible on the 
 * **[!UICONTROL ID ステッチ]**：このフィールドでは、顧客の関連 ID を特定する方法を定義します。次の 2 つの値を使用できます。
    * **[!UICONTROL なし]**：ID ステッチを実行しない。
    * **[!UICONTROL 非公開グラフ]**：非公開の ID グラフに基づいて ID ステッチを実行します。
-* **[!UICONTROL 属性の結合]**：プロファイルフラグメントとは、1 人の顧客に存在する ID のリストのうち、1 つの ID のみに関するプロファイル情報を表します。使用するIDグラフのタイプが複数のIDになる場合、プロファイル属性と優先度が競合する可能性があります。 「 [!UICONTROL 属性の結合] 」を使用すると、キー値（レコードデータ）タイプのデータセット間で結合の競合が発生した場合に、優先順位を付けるデータセットプロファイル値を指定できます。 次の 2 つの値を使用できます。
-   * **[!UICONTROL 順序付きタイムスタンプ]**：競合が発生した場合は、最近更新されたプロファイルを優先します。[!UICONTROL また、同じデータセット(複数のID] )内のデータを結合する場合やデータセットをまたがる場合に、システムのタイムスタンプよりも優先されるカスタムタイムスタンプもサポートされます。 詳しくは、次の [timestamp ordered](#timestamp-ordered) （タイムスタンプの順序）の節を参照してください。
-   * **[!UICONTROL データセットの優先順位]**：訪問者のデータセットに基づいて、プロファイルフラグメントの優先順位を指定します。このオプションを選択する場合は、関連するデータセットと優先順位を選択する必要があります。詳しくは、以下に示す[データセットの優先順位](#dataset-precedence)を参照してください。
+* **[!UICONTROL 属性の結合]**:プロファイルフラグメントには、個々の顧客のIDのリストのうち、1つのIDに関する情報のみが含まれます。 使用するIDグラフのタイプが複数のIDになる場合、プロファイル属性と優先度が競合する可能性があります。 Using [!UICONTROL Attribute merge] allows you to specify which dataset profile values to prioritize if a merge conflict occurs between key-value (record data) type datasets. 次の 2 つの値を使用できます。
+   * **[!UICONTROL 順番に並べられたタイムスタンプ]**:競合がイベントすると、最近更新されたプロファイルが優先されます。 [!UICONTROL また、同じデータセット(複数のID] )内のデータを結合する場合やデータセットをまたがる場合に、システムのタイムスタンプよりも優先されるカスタムタイムスタンプもサポートされます。 詳しくは、次の [timestamp ordered](#timestamp-ordered) （タイムスタンプの順序）の節を参照してください。
+   * **[!UICONTROL データセットの優先順位]** :競合をイベントする際、プロファイルフラグメントの到着元のデータセットに基づいて、そのフラグメントを優先します。 このオプションを選択する場合は、関連するデータセットと優先順位を選択する必要があります。 詳しくは、以下に示す[データセットの優先順位](#dataset-precedence)を参照してください。
 * **[!UICONTROL 既定の結合ポリシー]**：組織のデフォルトとしてこの結合ポリシーを使用するかどうかを選択するトグルボタン。セレクターをオンに切り替えて新しいポリシーを保存すると、以前のデフォルトのポリシーが自動的に更新され、デフォルトのポリシーが無効になります。
 
 ### 順序付きタイムスタンプ {#timestamp-ordered}
 
 プロファイルレコードをExperience Platformに取り込むと、取り込み時にシステムタイムスタンプを取得し、記録に追加する。 マージポリシーの [!UICONTROL 属性マージ] ・タイプとして「順序付き [!UICONTROL タイムスタンプ] 」が選択されている場合、プロファイルはシステムのタイムスタンプに基づいてマージされます。 つまり、記録がプラットフォームに取り込まれた時のタイムスタンプに基づいて結合が行われます。
 
-場合によっては、データのバックフィルや、レコードが順番に取り込まれない場合のイベントの正しい順序の確認など、カスタムタイムスタンプを指定し、マージポリシーでシステムタイムスタンプではなくカスタムタイムスタンプが適用される場合があります。
+場合によっては、カスタムタイムスタンプを指定し、マージポリシーでシステムタイムスタンプではなくカスタムタイムスタンプが適用される必要がある場合があります。 例えば、データのバックフィルや、レコードが不適切に取り込まれた場合のイベントの正しい順序の確保などがあります。
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ Details for each merge policy available to your organization are visible on the 
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
-APIを使用してカスタムタイムスタンプを操作するには、 [マージポリシーエンドポイントガイドの付録](../api/merge-policies.md) 、カスタムタイムスタンプ [の使用に関する節を参照してください](../api/merge-policies.md#custom-timestamps)。
+APIを使用してカスタムタイムスタンプを操作するには、 [マージポリシーエンドポイントガイドの付録](../api/merge-policies.md) 、およびカスタムタイムスタンプ [の使用に関する節を参照してください](../api/merge-policies.md#custom-timestamps)。
 
 ### データセットの優先順位 {#dataset-precedence}
 
@@ -92,7 +92,7 @@ APIを使用してカスタムタイムスタンプを操作するには、 [マ
 
 例えば、あるデータセットに情報が存在し、他のデータセットのデータよりも優先度や信頼度が高い場合などに使用できます。
 
-「[!UICONTROL データセットの優先順位]」を選択すると、別のパネルが開き、データセットが含まれる「[!UICONTROL 使用可能なデータセット]」から選択する（またはチェックボックスを使用してすべて選択する）必要があります。その後、これらのデータセットを「[!UICONTROL 選択したデータセット]」パネルにドラッグ＆ドロップし、正しい優先順位にドラッグできます。最上位のデータセットには最も高い優先順位が付けられ、2 番目のデータセットには 2 番目の優先順位が付けられます。
+「 [!UICONTROL データセットの優先順位]」を選択すると、別のパネルが開き、「 [!UICONTROL 使用可能なデータセット] 」からデータセットを選択する必要があります（または、チェックボックスを使用してすべてを選択します）。 その後、これらのデータセットを「[!UICONTROL 選択したデータセット]」パネルにドラッグ＆ドロップし、正しい優先順位にドラッグできます。最上位のデータセットには最も高い優先順位が付けられ、2番目のデータセットには2番目に高い優先順位が付けられます。
 
 ![](../images/merge-policies/dataset-precedence.png)
 
@@ -100,11 +100,11 @@ Once you have finished creating the merge policy, select **[!UICONTROL Save]** t
 
 ## 結合ポリシーの編集
 
-You can modify an existing merge policy through the [!UICONTROL Merge policies] tab by clicking on the [!UICONTROL Policy name]* for the merge policy you wish to edit.
+You can modify an existing merge policy through the [!UICONTROL Merge policies] tab by selecting the **[!UICONTROL Policy name]** for the merge policy you wish to edit.
 
 ![ポリシーの結合ランディングページ](../images/merge-policies/select-edit.png)
 
-「[!UICONTROL 結合ポリシーの編集]」画面が表示されたら、「[!UICONTROL 名前]」、「[!UICONTROL スキーマ]」、「[!UICONTROL ID ステッチ]」タイプおよび「[!UICONTROL 属性マージ]」タイプに変更を加え、このポリシーを組織の[!UICONTROL デフォルトの結合ポリシー]にするかどうかを選択できます。
+「**[!UICONTROL 結合ポリシーの編集]**」画面が表示されたら、「[!UICONTROL 名前]」、「[!UICONTROL スキーマ]」、「[!UICONTROL ID ステッチ]」タイプおよび「[!UICONTROL 属性マージ]」タイプに変更を加え、このポリシーを組織の[!UICONTROL デフォルトの結合ポリシー]にするかどうかを選択できます。
 
 >[!NOTE]
 >
