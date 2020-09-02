@@ -5,10 +5,10 @@ title: Azure Data LakeストレージGen2コネクタ
 topic: overview
 description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure Data LakeストレージGen2をプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 1%
+source-wordcount: '388'
+ht-degree: 3%
 
 ---
 
@@ -50,6 +50,17 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 - `20.37.198.224/29`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
+
+## ファイルとディレクトリの命名規則
+
+次に、クラウドストレージのファイルやディレクトリに名前を付ける際に考慮する必要がある制約のリストを示します。
+
+- ディレクトリ名とファイルコンポーネント名は255文字以内にする必要があります。
+- ディレクトリ名とファイル名の末尾にスラッシュ(`/`)を付けることはできません。 指定した場合は、自動的に削除されます。
+- 次の予約済みURL文字は、適切にエスケープする必要があります。 `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- 次の文字は使用できません。 `" \ / : | < > * ?`.
+- 無効なURLパス文字は使用できません。 NTFSファイル名で有効なコードポイント `\uE000`は、有効なUnicode文字ではありません。 また、制御文字（0x00 ～ 0x1F、\u0081など）のようなASCII文字やUnicode文字も使用できません。 HTTP/1.1でUnicode文字列を扱うルールについては、 [RFC 2616, Section 2.2を参照してください。基本規則](https://www.ietf.org/rfc/rfc2616.txt) と [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
+- 次のファイル名は使用できません。LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、prn、AUX、NUL、CON、CLOCK$、ドット文字(.)および2つのドット文字(..)。
 
 ## 接続 [!DNL Azure Data Lake Storage Gen2] 先 [!DNL Platform]
 
