@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: マージポリシー — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '2397'
-ht-degree: 65%
+source-wordcount: '2382'
+ht-degree: 66%
 
 ---
 
@@ -123,7 +123,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 ここで、`{ATTRIBUTE_MERGE_TYPE}` は次のいずれかです。
 
-* **`timestampOrdered`**:（デフォルト）競合が発生した場合に最後に更新されたプロファイルを優先します。 この結合タイプを使用する場合、`data` 属性は不要です。`timestampOrdered` また、データセット内またはデータセット間でプロファイルフラグメントを結合する場合に優先されるカスタムタイムスタンプもサポートします。 詳しくは、カスタムタイムスタンプの [使用に関する付録の節を参照してください](#custom-timestamps)。
+* **`timestampOrdered`**:（デフォルト）最後に更新されたプロファイルを優先します。 この結合タイプを使用する場合、`data` 属性は不要です。`timestampOrdered` また、データセット内またはデータセット間でプロファイルフラグメントを結合する場合に優先されるカスタムタイムスタンプもサポートします。 詳しくは、カスタムタイムスタンプの [使用に関する付録の節を参照してください](#custom-timestamps)。
 * **`dataSetPrecedence`** :プロファイルフラグメントの送信元のデータセットに基づいて、そのフラグメントを優先します。 これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
    * **`order`**:&quot;dataSetPrecedence&quot;を使用する場合は、配列にデータセットのリストを指定する必要があり `order` ます。 データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
 
@@ -735,11 +735,11 @@ Now that you know how to create and configure merge policies for your IMS Organi
 
 ### カスタムタイムスタンプの使用 {#custom-timestamps}
 
-プロファイルレコードをExperience Platformに取り込むと、取り込み時にシステムタイムスタンプを取得し、記録に追加する。 マージポリシーの `timestampOrdered``attributeMerge` 種類としてを選択すると、プロファイルはシステムのタイムスタンプに基づいてマージされます。 つまり、記録がプラットフォームに取り込まれた時のタイムスタンプに基づいて結合が行われます。
+記録をExperience Platformに取り込むと、取り込み時にシステムタイムスタンプを取得し、記録に追加する。 マージポリシーの `timestampOrdered``attributeMerge` 種類としてを選択すると、プロファイルはシステムのタイムスタンプに基づいてマージされます。 つまり、記録がプラットフォームに取り込まれた時のタイムスタンプに基づいて結合が行われます。
 
 場合によっては、データのバックフィルや、レコードが順番に取り込まれない場合のイベントの正しい順序の確認など、カスタムタイムスタンプを指定し、マージポリシーでシステムタイムスタンプではなくカスタムタイムスタンプが適用される場合があります。
 
-カスタムタイムスタンプを使用するには、 [External Source System Audit Details Mixinをプロファイルスキーマに追加する必要があります](#mixin-details) 。 追加したカスタムタイムスタンプは、この `xdm:lastUpdatedDate` フィールドを使用して入力できます。 レコードを取り込むときに `xdm:lastUpdatedDate` フィールドに値が入力され、Experience Platformはそのフィールドを使用して、データセット内およびデータセット間でレコードまたはプロファイルフラグメントを結合します。 が存在しな `xdm:lastUpdatedDate` い場合、または入力されない場合、プラットフォームはシステムタイムスタンプを引き続き使用します。
+カスタムタイムスタンプを使用するには、 [[!DNL External Source System Audit Details Mixin]](#mixin-details) をプロファイルスキーマに追加する必要があります。 追加したカスタムタイムスタンプは、この `xdm:lastUpdatedDate` フィールドを使用して入力できます。 レコードを取り込むときに `xdm:lastUpdatedDate` フィールドに値が入力され、Experience Platformはそのフィールドを使用して、データセット内およびデータセット間でレコードまたはプロファイルフラグメントを結合します。 が存在しな `xdm:lastUpdatedDate` い場合、または入力されない場合、プラットフォームはシステムタイムスタンプを引き続き使用します。
 
 >[!NOTE]
 >
@@ -749,9 +749,9 @@ Now that you know how to create and configure merge policies for your IMS Organi
 
 UIを使用してカスタムタイムスタンプを操作するには、 [マージポリシーユーザーガイドのカスタムタイムスタンプの](../ui/merge-policies.md#custom-timestamps) 使用に関する節を参照してください [](../ui/merge-policies.md)。
 
-#### 外部ソースシステム監査詳細ミックスインの詳細 {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
 
-次の例は、「外部ソースシステム監査詳細」ミックスインのフィールドに正しく入力されていることを示しています。 完全なミックスインJSONは、GitHubの [パブリックエクスペリエンスデータモデル(XDM)レポートでも表示できます](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) 。
+次の例は、に正しく入力されたフィールドを示してい [!DNL External Source System Audit Details Mixin]ます。 完全なミックスインJSONは、GitHubの [パブリックエクスペリエンスデータモデル(XDM)レポートでも表示できます](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) 。
 
 ```json
 {
