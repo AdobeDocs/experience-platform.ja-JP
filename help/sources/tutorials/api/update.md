@@ -5,9 +5,9 @@ title: Flow Service APIを使用して接続情報を更新する
 topic: overview
 description: このチュートリアルでは、Flow Service APIを使用して、名前、説明、秘密鍵証明書など、接続情報を更新する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 1292e39ea7682b839ea75dd069ce32f1591345b8
+source-git-commit: 81ce43bf705bea65b523ac612fae5961e8eeb322
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '713'
 ht-degree: 17%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、を使用して名前、説明、秘密鍵証明書などの接続情報を更新する手順を説明し [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)ます。
+このチュートリアルでは、 [[!DNL Flow Service API]を使用して、名前、説明、資格情報などの接続情報を更新する手順を説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
 
 ## はじめに
 
