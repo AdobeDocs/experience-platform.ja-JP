@@ -5,10 +5,10 @@ title: Azureイベントハブコネクタ
 topic: overview
 description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzureイベントハブをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '241'
+ht-degree: 1%
 
 ---
 
@@ -55,15 +55,17 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## 接続 [!DNL Azure Event Hubs] 先 [!DNL Platform]
+
 次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Azure Event Hubs] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
-## API [!DNL Azure Event Hubs] を [!DNL Platform] 使用した接続
+### APIの使用
 
 - [Flow Service APIを使用してAzureイベントハブコネクタを作成する](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
-## UI [!DNL Azure Event Hubs] を [!DNL Platform] 使用して接続
+### UI の使用
 
 - [UIにAzureイベントハブのソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
