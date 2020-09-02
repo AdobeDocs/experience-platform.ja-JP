@@ -5,10 +5,10 @@ title: Google Cloudストレージコネクタ
 topic: overview
 description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle Cloudストレージをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 3%
+source-wordcount: '554'
+ht-degree: 4%
 
 ---
 
@@ -68,6 +68,17 @@ The **[!UICONTROL Settings]** page appears. ここから、 [!DNL Google] プロ
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
 新しく生成したアクセスキーIDと秘密鍵を使用して、 [!DNL Google Cloud Storage] アカウントをに接続でき [!DNL Platform]ます。
+
+## ファイルとディレクトリの命名規則
+
+次に、クラウドストレージのファイルやディレクトリに名前を付ける際に考慮する必要がある制約のリストを示します。
+
+- ディレクトリ名とファイルコンポーネント名は255文字以内にする必要があります。
+- ディレクトリ名とファイル名の末尾にスラッシュ(`/`)を付けることはできません。 指定した場合は、自動的に削除されます。
+- 次の予約済みURL文字は、適切にエスケープする必要があります。 `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- 次の文字は使用できません。 `" \ / : | < > * ?`.
+- 無効なURLパス文字は使用できません。 NTFSファイル名で有効なコードポイント `\uE000`は、有効なUnicode文字ではありません。 また、制御文字（0x00 ～ 0x1F、\u0081など）のようなASCII文字やUnicode文字も使用できません。 HTTP/1.1でUnicode文字列を扱うルールについては、 [RFC 2616, Section 2.2を参照してください。基本規則](https://www.ietf.org/rfc/rfc2616.txt) と [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
+- 次のファイル名は使用できません。LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、prn、AUX、NUL、CON、CLOCK$、ドット文字(.)および2つのドット文字(..)。
 
 ## 接続 [!DNL Google Cloud Storage] 先 [!DNL Platform]
 
