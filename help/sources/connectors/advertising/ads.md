@@ -5,10 +5,10 @@ title: Google AdWordsコネクタ
 topic: overview
 description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle AdWordsをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: ca3084a9c30cc2dd9e0ebc9cef5ae630cbe47b98
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 8%
+source-wordcount: '217'
+ht-degree: 10%
 
 ---
 
@@ -55,15 +55,17 @@ Adobe Experience Platform allows data to be ingested from external sources while
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## 接続 [!DNL Google AdWords] 先 [!DNL Platform]
+
 次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Google AdWords] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
-## API [!DNL Google AdWords] を [!DNL Platform] 使用した接続
+### APIの使用
 
 - [Flow Service APIを使用してGoogle AdWordsコネクタを作成する](../../tutorials/api/create/advertising/ads.md)
 - [Flow Service APIを使用して広告システムを調査する](../../tutorials/api/explore/advertising.md)
 - [Flow Service APIを使用して広告データを収集する](../../tutorials/api/collect/advertising.md)
 
-## UI [!DNL Google AdWords] を [!DNL Platform] 使用して接続
+### UI の使用
 
 - [UIでのGoogle AdWordsソースコネクタの作成](../../tutorials/ui/create/advertising/ads.md)
 - [UIでの広告コネクタのデータフローの設定](../../tutorials/ui/dataflow/advertising.md)
