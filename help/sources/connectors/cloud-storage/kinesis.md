@@ -5,10 +5,10 @@ title: AmazonKinesisコネクタ
 topic: overview
 description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用して、AmazonKinesisをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 0%
+source-wordcount: '231'
+ht-degree: 1%
 
 ---
 
@@ -55,15 +55,17 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## 接続 [!DNL Amazon Kinesis] 先 [!DNL Platform]
+
 次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Amazon Kinesis] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
 
-## API [!DNL Amazon Kinesis] を [!DNL Platform] 使用した接続
+### APIの使用
 
 - [Flow Service APIを使用してAmazonKinesisコネクタを作成する](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
-## UI [!DNL Amazon Kinesis] を [!DNL Platform] 使用して接続
+### UI の使用
 
 - [UIでAmazonKinesisソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
