@@ -4,10 +4,10 @@ audience: user
 user-guide-title: リアルタイム顧客プロファイルのヘルプ
 user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 31166ddf8afbe13874be66b29c89501bd6ce1e51
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 59%
+source-wordcount: '86'
+ht-degree: 58%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 59%
    * [[!DNL Profile] システムジョブ（削除要求）](api/profile-system-jobs.md)
 * UIガイド {#ui}
    * [[!DNL Profile] ユーザーガイド](ui/user-guide.md)
+   * [[!DNL Profile] 詳細カスタマイズ](ui/profile-customization.md)
    * [結合ポリシーユーザーガイド](ui/merge-policies.md)
 * チュートリアル {#tutorials}
    * [～へ追加のデータ [!DNL Profile]](tutorials/add-profile-data.md)
