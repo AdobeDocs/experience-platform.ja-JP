@@ -5,44 +5,58 @@ title: マルチエンティティのセグメント化
 topic: overview
 description: 複数エンティティのセグメント化は、製品、店舗または他の非プロファイルクラスに基づいて、プロファイルデータを拡張する機能です。接続されると、追加のクラスのデータは、プロファイルスキーマにネイティブであるかのように使用できるようになります。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '418'
-ht-degree: 38%
+source-wordcount: '605'
+ht-degree: 17%
 
 ---
 
 
 # マルチエンティティのセグメント化
 
-Multi-entity segmentation is the ability to extend [!DNL Profile] data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the [!DNL Profile] schema.
-
-マルチエンティティのセグメント化の詳細については、以下のビデオを見て、ドキュメントを読み、学習を補完してください。また、 [セグメント化の概要を調べてください](./home.md)。
-
->[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
+マルチエンティティセグメントは、Adobe Experience Platformの一部として利用できる高度な機能 [!DNL Segmentation Service]です。 この機能を使用すると、製品や店舗に関連するデータなど、組織が定義できる追加の「非人」データ（「ディメンションエンティティ」とも呼ばれます）を使用して、 [!DNL Real-time Customer Profile] データを拡張できます。 マルチエンティティのセグメント化は、お客様固有のビジネスニーズに関連するデータに基づいてオーディエンスセグメントを定義する際に柔軟性を提供し、データベースのクエリーに関する専門知識を持たなくても実行できます。 マルチエンティティセグメント化を使用すると、データストリームにコストをかけずにセグメントに主要データを追加したり、バックエンドのデータが結合されるのを待つ必要がありません。
 
 ## はじめに
 
-このチュートリアルでは、セグメント化の使用に関わる様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+マルチエンティティのセグメント化では、セグメント化に関わる様々なAdobe Experience Platformのサービスについて、十分に理解する必要があります。 このガイドを続行する前に、次のドキュメントを参照してください。
 
-- [[!DNLリアルタイム顧客プロファイル]](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
-- [Adobe Experience Platform セグメント化サービス](./home.md)：リアルタイム顧客プロファイルからセグメントを作成できます、
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
+* [!DNL Real-time Customer Profile](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
+   * [プロファイルガードレール](../profile/guardrails.md):でサポートされるデータモデル作成のベストプラクティスで [!DNL Profile]す。
+* [!DNL Adobe Experience Platform Segmentation Service](./home.md):データからセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+* [!DNL Experience Data Model (XDM)](../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+   * [スキーマ構成の基本](../xdm/schema/composition.md#union):Experience Platformで使用するスキーマを構成するためのベストプラクティスを学びます。
 
-## XDM の関係の定義方法
+## 使用例
 
-Defining relationships with the structure of your [!DNL Experience Data Model] (XDM) schemas is an important and integral part of segment creation.
+マルチエンティティセグメント化の価値を理解するために、ほとんどのマーケティングアプリケーションに存在する課題を説明する3つの標準的なマーケティングの使用例を考えてみましょう。
 
-このプロセスは、 [!DNL Schema Registry][!DNL Schema Editor]APIまたは API を使用した 2 つのスキーマ間の関係の定義についての詳細なガイドは、[API を使用した 2 つのスキーマ間の関係の定義についてのチュートリアル](../xdm/tutorials/relationship-api.md)をお読みください。For a detailed guide on using the [!DNL Schema Editor] to define a relationship between two schemas, please read [the tutorial on defining a relationship between two schemas using the Schema Editor](../xdm/tutorials/relationship-ui.md).
+### オンラインとオフラインの購入データの組み合わせ
 
-## XDM関係を使用するセグメントの作成方法
+E メールキャンペーンを作成しているマーケターは、過去 3 ヶ月間における店舗での顧客の購入履歴を使用して、ターゲットオーディエンスのセグメントを作成しようとしたかもしれません。理想的には、商品名と購入がおこなわれた店舗の名前の両方がこのセグメントに必要です。以前は、購入イベントからストアIDを取り込み、個々の顧客プロファイルに割り当てていたことが課題でした。
 
-Once you have defined your XDM relationships, you can use the [!DNL Segmentation Service] API to build a segment.
+### 買い物かごの放棄の電子メールリターゲティング
 
-このプロセスは、 [!DNL Segmentation] APIまたは [!DNL Segment Builder] ユーザーインターフェイスを使用して実行できます。 For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). セグメントビルダーを使用したセグメント作成についての詳しいガイドは、『[セグメントビルダーユーザガイド](./ui/overview.md)』を参照してください。
+多くの場合、買い物かごの放棄をターゲットにしたセグメントを作成し、ユーザーを絞り込むのは複雑です。 パーソナライズされたリターゲティングキャンペーンに含める商品を知るには、個々の商品が放棄した商品に関するデータが必要です。 このデータは、以前はデータの監視と抽出が困難だったコマースイベントと結び付いています。
 
-## 複数エンティティセグメントの評価方法とアクセス方法
+## マルチエンティティセグメントの作成
 
-After creating a segment, you can evaluate and access the segment results using the [!DNL Segmentation Service] API. 複数エンティティセグメントの評価は、通常のセグメントの評価と非常に似ています。
+マルチエンティティセグメントを作成するには、まず、 [!DNL Segmentation] APIまたはセグメントビルダーのUIを使用してセグメント定義を作成する前に、スキーマ間の関係を定義する必要があります。
 
-This process can only be done using the [!DNL Segmentation Service] API. For a detailed guide on using the API to evaluate and access segments, please read the tutorial on [evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
+### 関係の定義
+
+エクスペリエンスデータモデル(XDM)スキーマの構造内で関係を定義することは、マルチエンティティセグメント作成の不可欠な要素です。 このプロセスは、スキーマレジストリ API またはスキーマエディターを使用して実行できます。2つのスキーマ間の関係を定義する方法を示す詳細な手順については、次のチュートリアルから選択してください。
+
+* [APIを使用した2つのスキーマ間の関係の定義](../xdm/tutorials/relationship-api.md)
+* [スキーマエディタのUIを使用した2つのスキーマ間の関係の定義](../xdm/tutorials/relationship-ui.md)
+
+### マルチエンティティセグメントの作成
+
+必要なXDM関係を定義したら、マルチエンティティセグメントの構築を開始できます。 このプロセスは、セグメント化APIまたはセグメントビルダーのUIを使用して実行できます。 詳しくは、次のガイドから選択してください。
+
+* [セグメントAPIを使用したセグメントの作成](./tutorials/create-a-segment.md)
+* [セグメントビルダーのUIを使用したセグメントの作成](./ui/overview.md)
+
+## マルチエンティティセグメントの評価とアクセス
+
+セグメントを作成したら、セグメントAPIを使用してセグメントの結果を評価し、アクセスできます。 マルチエンティティセグメントの評価は、標準セグメントの評価と非常に似ています。 このプロセスは、Segmentation APIを使用してのみ実行できます。 APIを使用してセグメントを評価し、セグメントにアクセスする方法に関する詳細なガイドについては、チュートリアル「 [評価とアクセス](./tutorials/evaluate-a-segment.md) 」を参照してください。
