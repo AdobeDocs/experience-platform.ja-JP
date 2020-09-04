@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
 solution: Experience Platform
 title: Adobe Experience Platform 概要
 topic: getting started
 description: Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。Experience Platform を使用すると、顧客データとコンテンツを任意のシステムから一元管理し、データサイエンスと機械学習を適用して、パーソナライズされた豊富なエクスペリエンスのデザインと配信を大幅に改善できます。
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '936'
 ht-degree: 35%
 
 ---
@@ -82,6 +82,13 @@ Adobe Experience Platformのドキュメントは複数の言語で提供され�
 
 [!DNL Experience Platform] ドキュメントは、様々な機能やサービスのために複数の形式で提供されています。To learn more about the types of documentation that are available, as well as to read brief descriptions of each of the [!DNL Platform] services, please visit the [Experience Platform documentation overview](documentation/overview.md). Or, to begin learning more about a specific [!DNL Platform] service right away, select a guide from the alphabetical list in the left navigation.
 
+### 上に構築されたアプリケーションサービスに関するドキュメント [!DNL Experience Platform]
+
+左側のナビゲーションのサービスに加えて、AdobeはExperience Platform上に他のアプリケーションサービスを構築しています。 これらのサービスのドキュメントは、次にリンクする独自のドキュメントリポジトリにあります。
+
+* [[!DNLCustomer Journey Analytics]](https://docs.adobe.com/content/help/ja-JP/analytics-platform/using/cja-landing.html)
+* [[!DNLJourney Orchestration]](https://docs.adobe.com/content/help/ja-JP/journeys/using/journey-orchestration-home.html)
+
 >[!NOTE]
 >
 >2020年5月より、Adobeは、すべてのExperience Cloudアプリケーションでエクスペリエンスを統合し、向上させるために、ドメインとヘッダーバーの更新を展開しています。 これには、新しいヘルプメニューが含まれます。 新しいヘルプメニューには、次の機能が含まれます。
@@ -134,7 +141,7 @@ Adobe Experience Platformが提供する主な利点の1つは、他の既存の
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-Adobe Experience Platformのパワーを持つ建築に関する詳細は、以下のビデオをご覧ください。
+Adobe Experience Platformを動かすアーキテクチャの詳細については、以下のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
@@ -149,11 +156,6 @@ Adobe Experience Platformのパワーを持つ建築に関する詳細は、以�
 **使用例:**
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
-
-
-
-
-
 
 
 
