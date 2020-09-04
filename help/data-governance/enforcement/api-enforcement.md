@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance;testing
 solution: Experience Platform
 title: ポリシーサービス API を使用したデータ使用ポリシーの適用
 topic: enforcement
 description: データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、Policy Service APIを使用して、データセットまたは任意のラベルグループに対するマーケティングアクションがポリシー違反かどうかを評価できます。 その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: d99a0a9211b5384b96e959d36f414cae47ab5f4e
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 43%
