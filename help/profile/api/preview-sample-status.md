@@ -5,9 +5,9 @@ title: プロファイルプレビュー — リアルタイム顧客プロフ�
 description: Adobe Experience Platformでは、複数のソースから顧客データを取り込んで、個々の顧客に対して堅牢な統合プロファイルを構築できます。 リアルタイム顧客プロファイルを有効にしたデータは、プラットフォームに取り込まれると、プロファイルのデータストア内に保存されます。 プロファイルストアのレコード数が増減すると、データストア内のプロファイルフラグメントと結合プロファイルの数に関する情報を含むサンプルジョブが実行されます。 プロファイルAPIを使用して、最新の成功したサンプルや、データセット別、ID名前空間別にリストプロファイルの配布をプレビューできます。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 75a07abd27f74bcaa2c7348fcf43820245b02334
+source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1478'
 ht-degree: 6%
 
 ---
@@ -59,6 +59,10 @@ curl -X GET \
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -75,6 +79,7 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `numRowsToRead` | サンプル内のマージされたプロファイルの合計数。 |
+| `sampleJobRunning` | サンプルジョブが進行中 `true` の場合に返すboolean値です。 バッチファイルがアップロードされた時点からプロファイルストアに実際に追加された時点までの待ち時間に対して、透明度を提供します。 |
 | `cosmosDocCount` | Cosmosでのドキュメントの合計数です。 |
 | `totalFragmentCount` | プロファイルストア内のプロファイルフラグメントの合計数です。 |
 | `lastSuccessfulBatchTimestamp` | 前回成功したバッチ取り込みのタイムスタンプ。 |
@@ -187,7 +192,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->1つのプロファイルが複数の名前空間に関連付けられる可能性があるので、名前空間別のプロファイルの合計数(各名前空間に表示される値を合計)は、常にプロファイル数指標より多くなります。 例えば、ある顧客が複数の顧客で自社のブランドとやり取りした場合、複数の名前空間がそのチャネルに関連付けられます。
+>1つのプロファイルが複数の名前空間に関連付けられる可能性があるので、名前空間別のプロファイルの合計数(各名前空間に表示される値を合計)は、常にプロファイル数指標より多くなります。 例えば、ある顧客が複数のチャネルで自社のブランドとやり取りした場合、複数の名前空間がその個々の顧客に関連付けられます。
 
 **API 形式**
 
@@ -206,7 +211,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
