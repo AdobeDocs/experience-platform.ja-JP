@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;consent;Consent
 solution: Experience Platform
 title: CCPA に関する FAQ
 topic: troubleshooting
+description: このドキュメントでは、カリフォルニア州消費者プライバシー法（CCPA）と Adobe Experience Cloud での実装に関するよくある質問に対する回答を示します。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '787'
-ht-degree: 79%
+source-wordcount: '809'
+ht-degree: 80%
 
 ---
 
