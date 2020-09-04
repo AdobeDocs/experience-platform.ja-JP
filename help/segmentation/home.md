@@ -5,10 +5,10 @@ title: Adobe Experience Platform セグメント化サービス
 topic: overview
 description: このドキュメントでは、セグメント化サービスの概要と Adobe Experience Platform での役割について説明します。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
 workflow-type: tm+mt
-source-wordcount: '1991'
-ht-degree: 73%
+source-wordcount: '1387'
+ht-degree: 68%
 
 ---
 
@@ -129,97 +129,11 @@ In addition to segment name and merge policy, [!DNL Segment Builder] offers you 
 
 ## マルチエンティティセグメント化 {#multi-entity}
 
-高度なマルチエンティティセグメント化機能を使用すると、複数の XDM クラスを使用してセグメントを作成し、個人のスキーマに拡張機能を追加できます。As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the profile data store.
-
-マルチエンティティセグメント化は、ビジネスニーズに関係のあるデータに基づいてオーディエンスを特定する場合に必要な柔軟性を提供します。このプロセスは、データベースのクエリに関する専門知識がなくても、すばやく簡単に実行できます。これにより、データストリームにコストの高い変更を加えたり、バックエンドでのデータ結合を待機したりしなくても、セグメントに主要なデータを追加できます。
-
-次のビデオでは、マルチエンティティのセグメント化について理解を深めることを目的としており、マルチエンティティのセグメント化とセグメントのコンテキスト（セグメントのペイロード）の概要を説明しています。
-
->[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
-
-### ユースケース：価格主導型プロモーション
-
-この高度なセグメント機能の有用性を説明するために、データアーキテクトがマーケターと協力するとしましょう。
-
-In this example, the data architect is joining data for an individual (made up of schemas with [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] as their base classes) to another class using a key. 結合後、データアーキテクトまたはマーケターは、セグメント定義時に、これらの新しいフィールドを基本クラスのスキーマ本来の方法と同じように使用できます。
-
-**問題**
-
-データアーキテクトとマーケターのクライアントは同じ衣料品店です。その小売店は、北米全域で 1,000 店を超える店舗を持ち、ライフサイクル全体で定期的に製品価格を引き下げます。そのため、マーケターは、特別なキャンペーンを実施して、同店で買い物をした客に、割引価格で買い物ができるチャンスを提供したいと考えています。
-
-データアーキテクトのリソースには、顧客の Web 閲覧データへのアクセス、および製品の SKU 識別子を含んだ買い物かごの追加データへのアクセスが含まれています。また、別の「products」クラスにもアクセスできます。このクラスには、追加の製品情報（製品価格など）が格納されています。アドバイスとしては、過去 14 日間に製品を買い物かごに追加したが購入に至らなかった顧客に注目することです。この製品の価格は現在下がっています。
-
-**解決策**
-
->[!NOTE]
->
-> この例では、データアーキテクトが既に ID 名前空間を確立しているとします。
-
-Using the API, the data architect relates the key from the [!DNL ExperienceEvent] schema with the &quot;products&quot; class. Doing so allows the data architect to make use of the additional fields from the &quot;products&quot; class as if they are native to the [!DNL ExperienceEvent] schema. As the final step of the configuration work, the data architect needs to bring the appropriate data into [!DNL Real-time Customer Profile]. This is done by enabling the &quot;products&quot; dataset for use with [!DNL Profile]. With the configuration work complete, either the data architect or the marketer can build the target segment in [!DNL Segment Builder].
-
-XDM クラス間の関係を定義する方法については、[スキーマ構成の概要](../xdm/schema/composition.md#union)を参照してください。
-
-<!-- ## Personalization payload
-
-Segments can now carry a payload of contextual details to enable deep personalization of Adobe Solutions as well as external non-Adobe applications. These payloads can be added while defining your target segment.
-
-With contextual data built into the segment itself, this advanced Segmentation Service feature allows you to better connect with your customer.
-
-Segment Payload helps you answer questions surrounding your customer’s frame of reference such as:
-- What: What product was purchased? What product should be recommended next?
-- When: At what time and date did the purchase occur?
-- Where: In which store or city did the customer make their purchase?
-
-While this solution does not change the binary nature of segment membership, it does add additional context to each profile through an associated segment membership object. Each segment membership object has the capacity to include three kinds of contextual data:
-
-- **Identifier**: this is the ID for the segment 
-- **Attributes**: this would include information about the segment ID such as last qualification time, XDM version, status and so on.
-- **Event data**: Specific aspects of experience events which resulted in the profile qualifying for the segment
-
-Adding this specific data to the segment itself allows execution engines to personalize the experience for the customers in their target audience. -->
-
-### ユースケース
-
-この高度なセグメント機能の有用性を説明するために、セグメントペイロードの機能強化がおこなわれる以前にマーケティングアプリケーションが抱えていた課題を示す 3 つの標準的なユースケースを検討しましょう。
-- E メールのパーソナライゼーション
-- E メールのリターゲティング
-- 広告のリターゲティング
-
-**E メールのパーソナライゼーション**
-
-E メールキャンペーンを作成しているマーケターは、過去 3 ヶ月間における店舗での顧客の購入履歴を使用して、ターゲットオーディエンスのセグメントを作成しようとしたかもしれません。理想的には、商品名と購入がおこなわれた店舗の名前の両方がこのセグメントに必要です。機能強化がおこなわれる前は、購入イベントからストア ID を取り込み、それをその顧客のプロファイルに割り当てていました。
-
-**E メールのリターゲティング**
-
-多くの場合、「買い物かごの放棄」をターゲットとする E メールキャンペーンのセグメントを作成し認定するのは複雑な作業です。この機能強化の前は、必要なデータが利用できないため、パーソナライズされたメッセージに含める製品を把握するのは困難でした。製品が破棄された場合のデータは、以前はデータの監視と抽出が困難だったエクスペリエンスイベントに結び付けられます。
-
-**広告のリターゲティング**
-
-マーケターにとって、従来のもう 1 つの課題は、買い物かごの品目を破棄した顧客を再度ターゲットにする広告を作成することでした。セグメント定義はこの課題に対応しましたが、機能強化の前は、購入した製品と破棄した製品を区別する系統的な方法はありませんでした。セグメントの定義中に、特定のターゲットセットを定義できるようになりました。
+高度なマルチエンティティセグメント機能を使用すると、製品、店舗、または他の非人物（「ディメンション」エンティティとも呼ばれる）に基づいて、追加のデータを使用して [!DNL Real-time Customer Profile] データを拡張できます。 As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the [!DNL Profile] data store. マルチエンティティのセグメント化は、お客様固有のビジネスニーズに関連するデータに基づいてオーディエンスを識別する際に柔軟性を提供します。 使用事例やワークフローなどの詳細については、『 [マルチエンティティセグメント化ガイド](multi-entity-segmentation.md)』を参照してください。
 
 ## [!DNL Segmentation Service] データ型
 
-[!DNL Segmentation Service] は、次のような様々なデータ型をサポートしています。
-
-- 文字列
-- URI（統一リソース識別子）
-- 列挙
-- 数値
-- 長整数
-- 整数
-- 短整数
-- バイト
-- ブール値
-- 日付
-- 日時
-- 配列
-- オブジェクト
-- マップ
-- イベント
-- 外部オーディエンス
-- セグメント
-
-サポートされるこれらのデータ型について詳しくは、 [サポートされるデータ型のドキュメントを参照してください](./data-types.md)。
+[!DNL Segmentation Service] は、様々なプリミティブデータ型と複雑なデータ型をサポートしています。 サポートされるデータタイプのリストなど、詳細な情報については、 [サポートされるデータタイプガイドを参照してください](./data-types.md)。
 
 ## 次の手順
 
