@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide
+keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide;region
 solution: Experience Platform
 title: はじめに
 topic: API guide
-description: null
+description: 'Adobe Experience Platform ID サービスは、Adobe Experience Platform 内の ID グラフと呼ばれる、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理します。 '
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 64%
+source-wordcount: '754'
+ht-degree: 65%
 
 ---
 
