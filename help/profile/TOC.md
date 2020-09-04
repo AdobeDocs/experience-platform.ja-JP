@@ -4,10 +4,10 @@ audience: user
 user-guide-title: リアルタイム顧客プロファイルのヘルプ
 user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 translation-type: tm+mt
-source-git-commit: 31166ddf8afbe13874be66b29c89501bd6ce1e51
+source-git-commit: 16f2bd7c650c5fbb09066940a730fa9dc768b261
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 58%
+source-wordcount: '89'
+ht-degree: 56%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 58%
 # [!DNL Real-time Customer Profile] {#profile}
 
 * [[!DNL Profile] 概要](home.md)
+* [[!DNL Profile] ガードレール](guardrails.md)
 * [!DNL Profile] API開発者ガイド {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
@@ -31,7 +32,7 @@ ht-degree: 58%
    * [結合ポリシーユーザーガイド](ui/merge-policies.md)
 * チュートリアル {#tutorials}
    * [～へ追加のデータ [!DNL Profile]](tutorials/add-profile-data.md)
-   * [データセットの設定( [!DNL Profile] &amp; [!DNL Identity]](tutorials/dataset-configuration.md)
+   * [サービスのデータセットの [!DNL Profile] & [!DNL Identity] 設定](tutorials/dataset-configuration.md)
    * [その他のチュートリアル](https://docs.adobe.com/content/help/ja-JP/experience-platform/tutorials/home.html)
 * [プライバシーリクエストの処理](privacy.md)
 * [[!DNL Profile] トラブルシューティングガイド](troubleshooting.md)
