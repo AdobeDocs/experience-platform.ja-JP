@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;
+keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: SQL 構文
 topic: syntax
+description: このドキュメントは、クエリサービスでサポートされる SQL 構文を示します。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 041165f501d35b811202362b524523b103d18113
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1982'
 ht-degree: 94%
 
 ---
