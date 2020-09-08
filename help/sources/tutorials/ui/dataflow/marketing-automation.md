@@ -5,9 +5,9 @@ title: UIでのマーケティング自動化コネクタのデータフロー�
 topic: overview
 description: データフローは、データを取得し、ソースからデータセットに取り込む、スケジュール済みのタスク [!DNL Platform] です。 このチュートリアルでは、マーケティング自動化アカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1360'
 ht-degree: 3%
 
 ---
@@ -35,9 +35,15 @@ ht-degree: 3%
 - インターフェイスの左半分はディレクトリブラウザーで、サーバーのファイルとディレクトリが表示されます。
 - インターフェイスの右半分を使用すると、互換性のあるファイルから最大100行のデータをプレビューできます。
 
-使用するディレクトリを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
+ページ上部の **[!UICONTROL 検索]** ・オプションを使用すると、使用するソース・データをすばやく特定できます。
 
-![select-data](../../../images/tutorials/dataflow/marketing-automation/select-data.png)
+>[!NOTE]
+>
+>「ソースデータの検索」オプションは、Analytics、分類、イベントハブおよびKinesisのコネクタを除く、すべての表形式ベースのソースコネクタで使用できます。
+
+ソースデータを見つけたら、ディレクトリを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
 
 ## データフィールドのXDMスキーマへのマッピング
 
