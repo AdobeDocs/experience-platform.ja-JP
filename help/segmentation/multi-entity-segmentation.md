@@ -5,9 +5,9 @@ title: マルチエンティティのセグメント化
 topic: overview
 description: 複数エンティティのセグメント化は、製品、店舗または他の非プロファイルクラスに基づいて、プロファイルデータを拡張する機能です。接続されると、追加のクラスのデータは、プロファイルスキーマにネイティブであるかのように使用できるようになります。
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '620'
 ht-degree: 17%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 17%
 
 マルチエンティティのセグメント化では、セグメント化に関わる様々なAdobe Experience Platformのサービスについて、十分に理解する必要があります。 このガイドを続行する前に、次のドキュメントを参照してください。
 
-* [!DNL Real-time Customer Profile](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
    * [プロファイルガードレール](../profile/guardrails.md):でサポートされるデータモデル作成のベストプラクティスで [!DNL Profile]す。
-* [!DNL Adobe Experience Platform Segmentation Service](./home.md):データからセグメントを作成でき [!DNL Real-time Customer Profile] ます。
-* [!DNL Experience Data Model (XDM)](../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [[!DNLAdobe Experience Platformセグメントサービス]](./home.md):データからセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../xdm/schema/composition.md#union):Experience Platformで使用するスキーマを構成するためのベストプラクティスを学びます。
 
 ## 使用例
