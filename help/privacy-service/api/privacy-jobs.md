@@ -4,10 +4,10 @@ solution: Experience Platform
 title: ジョブ
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 78%
+source-wordcount: '1782'
+ht-degree: 76%
 
 ---
 
@@ -33,7 +33,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{REGULATION}` | クエリする規制の種類。指定できる値は、`gdpr`、`ccpa`、`pdpa_tha` です。 |
+| `{REGULATION}` | クエリする規制の種類。Accepted values are `gdpr`, `ccpa`, `lgpd_bra`, and `pdpa_tha`. |
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。デフォルトは `1` で、最大は `100` です。最大値を超えると、API は 400 コードエラーを返します。 |
 
@@ -153,7 +153,7 @@ curl -X POST \
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). 省略した場合、この値はデフォルトで `false` になります。 |
 | `priority` | リクエストの処理の優先度を設定する、Adobe Analytics で使用されるオプションのプロパティです。指定できる値は、`normal` および `low` です。`priority` を省略した場合のデフォルトの動作は `normal` です。 |
 | `analyticsDeleteMethod` | Adobe Analytics での個人データの処理方法を指定するオプションのプロパティです。この属性には、次の 2 つの値を指定できます。 <ul><li>`anonymize`：特定のユーザー ID のコレクションによって参照されるすべてのデータは匿名になります。`analyticsDeleteMethod` を省略した場合のデフォルトの動作です。</li><li>`purge`：すべてのデータが完全に削除されます。</li></ul> |
-| `regulation` **(必須)** | リクエストの規則。次の 3 つの値のいずれかである必要があります。 <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(必須)** | リクエストの規則。次の4つの値のいずれかにする必要があります。 <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **応答** 
 
@@ -286,7 +286,7 @@ curl -X POST \
 | `expandIDs` | An optional property that, when set to `true`, represents an optimization for processing the IDs in the applications (currently only supported by [!DNL Analytics]). 省略した場合、この値はデフォルトで `false` になります。 |
 | `priority` | リクエストの処理の優先度を設定する、Adobe Analytics で使用されるオプションのプロパティです。指定できる値は、`normal` および `low` です。`priority` を省略した場合のデフォルトの動作は `normal` です。 |
 | `analyticsDeleteMethod` | Adobe Analytics での個人データの処理方法を指定するオプションのプロパティです。この属性には、次の 2 つの値を指定できます。 <ul><li>`anonymize`：特定のユーザー ID のコレクションによって参照されるすべてのデータは匿名になります。`analyticsDeleteMethod` を省略した場合のデフォルトの動作です。</li><li>`purge`：すべてのデータが完全に削除されます。</li></ul> |
-| `regulation` **(必須)** | リクエストの規則。次の 3 つの値のいずれかである必要があります。 <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(必須)** | リクエストの規則。次の4つの値のいずれかにする必要があります。 <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **応答** 
 
@@ -449,14 +449,14 @@ curl -X GET \
 
 | ステータスカテゴリ | 意味 |
 | -------------- | -------- |
-| Complete | ジョブが完了し、（必要に応じて）すべてのアプリケーションからファイルがアップロードされます。 |
-| Processing | アプリケーションはジョブを確認し、現在処理中です。 |
-| Submitted | ジョブは、該当するすべてのアプリケーションに送信されます。 |
-| Error | ジョブを処理できませんでした。個々のジョブの詳細を取得することで、より具体的な情報を取得できます。 |
+| `complete` | ジョブが完了し、（必要に応じて）すべてのアプリケーションからファイルがアップロードされます。 |
+| `processing` | アプリケーションはジョブを確認し、現在処理中です。 |
+| `submitted` | ジョブは、該当するすべてのアプリケーションに送信されます。 |
+| `error` | ジョブを処理できませんでした。個々のジョブの詳細を取得することで、より具体的な情報を取得できます。 |
 
 >[!NOTE]
 >
-> 依存する子ジョブがまだ処理中の場合、送信済みのジョブは処理状態のままになる可能性があります。
+>A submitted job might remain in a `processing` state if it has a dependent child job that is still processing.
 
 ## 次の手順
 
