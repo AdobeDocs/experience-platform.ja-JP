@@ -5,10 +5,10 @@ title: テキスト分類APIエンドポイント
 topic: Developer guide
 description: テキスト分類サービスは、テキストフラグメントを指定した場合、1つ以上のラベルに分類できます。 分類は、単一のラベル、複数のラベル、階層のいずれかです。
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 4%
+source-wordcount: '431'
+ht-degree: 5%
 
 ---
 
@@ -20,8 +20,6 @@ ht-degree: 4%
 >コンテンツとコマースAIはベータ版です。 このドキュメントは変更されることがあります。
 
 テキスト分類サービスは、テキストフラグメントを指定した場合、1つ以上のラベルに分類できます。 分類は、単一のラベル、複数のラベル、階層のいずれかです。
-
-テキストの分類では、カスタムデータを使用してトレーニングを受けたFastText [](https://fasttext.cc/) ベースのモデルを使用します。
 
 **API 形式**
 
