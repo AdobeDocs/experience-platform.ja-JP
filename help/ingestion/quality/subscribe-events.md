@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データ取得イベントへのサブスクライブ
 topic: overview
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 38%
+source-wordcount: '621'
+ht-degree: 32%
 
 ---
 
@@ -20,75 +20,77 @@ Data loaded into [!DNL Platform] must go through multiple steps in order to reac
 
 To assist in monitoring the ingestion process, [!DNL Experience Platform] makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures.
 
-## 使用可能なステータス通知イベント
+## データインジェスト通知用のWebフックの登録
 
-サブスクライブできる使用可能なデータ取得ステータス通知のリストを以下に示しています。
+データインジェスト通知を受け取るには、 [Adobeデベロッパーコンソール](https://www.adobe.com/go/devs_console_ui) (DDC)を使用してWebフックをExperience Platform統合に登録する必要があります。
+
+これを行う方法について詳しくは、 [購読に関するチュートリアルに従って [!DNL Adobe I/O Event] 通知を行います](../../observability/notifications/subscribe.md) 。
+
+>[!IMPORTANT]
+>
+>購読プロセス中に、イベントプロバイダーとして **[!UICONTROL プラットフォーム通知]** (Platform notifications **[!UICONTROL )を選択し、プロンプトが表示されたら]** Data ingestion notificationイベント購読を選択します。
+
+## データ取り込み通知の受信
+
+Webフックの登録が完了し、新しいデータが取り込まれると、イベント通知の受信開始を設定できます。 これらのイベントは、Webフック自体を使用して表示するか、Adobe開発者コンソールでプロジェクトのイベント登録の概要にある[ **[!UICONTROL デバッグトレース]** ]タブを選択して表示できます。
+
+以下のJSONは、バッチインジェストイベントが失敗した場合にWebフックに送信される通知ペイロードの例です。
+
+```json
+{
+  "event_id": "93a5b11a-b0e6-4b29-ad82-81b1499cb4f2",
+  "event": {
+    "xdm:ingestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:customerIngestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:imsOrg": "{IMS_ORG}",
+    "xdm:completed": 1598374341560,
+    "xdm:datasetId": "5e55b556c2ae4418a8446037",
+    "xdm:eventCode": "ing_load_failure",
+    "xdm:sandboxName": "prod",
+    "sentTime": "1598374341595",
+    "processStartTime": 1598374342614,
+    "transformedTime": 1598374342621,
+    "header": {
+      "_adobeio": {
+        "imsOrgId": "{IMS_ORG}",
+        "providerMetadata": "aep_observability_catalog_events",
+        "eventCode": "platform_event"
+      }
+    }
+  }
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `event_id` | 通知用の、システム生成の一意のID。 |
+| `event` | 通知をトリガーしたイベントの詳細を含むオブジェクトです。 |
+| `event.xdm:datasetId` | インジェストイベントが適用されるデータセットのID。 |
+| `event.xdm:eventCode` | データセットに対してトリガーされたイベントのタイプを示すステータスコード。 具体的な値とその定義については、 [付録](#event-codes) を参照してください。 |
+
+イベント通知の完全なスキーマを表示するには、 [パブリックGitHubリポジトリを参照してください](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)。
+
+## 次の手順
+
+プロジェクトに [!DNL Platform] 通知を登録すると、 [!UICONTROL プロジェクトの概要からイベントを受け取った表示を表示できます]。 Refer to the guide on [tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) for detailed instructions on how to trace your events.
+
+## 付録
+
+次の節では、データインジェスト通知ペイロードの解釈に関する追加情報を説明します。
+
+### 使用可能なステータス通知イベント {#event-codes}
+
+次の表に、サブスクライブ可能なデータインジェストステータス通知をリストします。
+
+| イベントコード | プラットフォームサービス | ステータス | イベントの説明 |
+| --- | ---------------- | ------ | ----------------- |
+| `ing_load_success` | [!DNL Data Ingestion] | 成功 | バッチが内のデータセットに正常に取り込まれました [!DNL Data Lake]。 |
+| `ing_load_failure` | [!DNL Data Ingestion] | 失敗 | バッチを内のデータセットに取り込めませんでした [!DNL Data Lake]。 |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | 成功 | バッチが正常に [!DNL Profile] データストアに取り込まれました。 |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | 失敗 | バッチをデータストアに取り込めませんでした [!DNL Profile] 。 |
+| `ig_load_success` | [!DNL Identity Service] | 成功 | データが正常にIDグラフに読み込まれました。 |
+| `ig_load_failure` | [!DNL Identity Service] | 失敗 | データをIDグラフに読み込めませんでした。 |
 
 >[!NOTE]
 >
 > すべてのデータ取得通知に対して 1 つのイベントトピックのみが提供されます。異なるステータスを区別するために、イベントコードを使用できます。
-
-| プラットフォームサービス | ステータス | イベントの説明 | イベントコード |
-| ---------------- | ------ | ----------------- | ---------- |
-| データランディング | 成功 | 取得 - バッチが成功しました | ing_load_success |
-| データランディング | 失敗 | 取得 - バッチが失敗しました | ing_load_failure |
-| リアルタイム顧客プロファイル | 成功 | プロファイルサービス - データの読み込みバッチが成功しました | ps_load_success |
-| リアルタイム顧客プロファイル | 失敗 | プロファイルサービス - データの読み込みバッチが失敗しました | ps_load_failure |
-| ID グラフ | 成功 | ID グラフ - データの読み込みバッチが成功しました | ig_load_success |
-| ID グラフ | 失敗 | ID グラフ - データの読み込みバッチが失敗しました | ig_load_failure |
-
-## 通知ペイロードスキーマ
-
-The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
-
-## データ取り込みステータス通知のサブスクライブ
-
-[Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html) を使用すると、Web フックで複数の通知タイプにサブスクライブできます。以下の節では、Adobeデベロッパーコンソールを使用してデータ取り込みイベントの [!DNL Platform] 通知をサブスクライブする手順を説明します。
-
-### Adobeデベロッパーコンソールでの新しいプロジェクトの作成
-
-[Adobeデベロッパーコンソールに移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe開発者コンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
-
-### プロジェクトへの追加イベント [!DNL Experience Platform]
-
-新しいプロジェクトを作成したら、そのプロジェクトの概要画面に移動します。 From here, click **[!UICONTROL Add event]**.
-
-![](../images/quality/subscribe-events/add-event-button.png)
-
-The **[!UICONTROL Add events]** dialog appears. 「 **[!UICONTROL Experience Platform]** 」をクリックして使用可能なオプションのリストをフィルターし、「 **[!UICONTROL プラットフォーム通知]** 」をクリックしてから「 **[!UICONTROL 次へ]**」をクリックします。
-
-![](../images/quality/subscribe-events/select-platform-events.png)
-
-次の画面には、登録するイベントタイプのリストが表示されます。 「 **[!UICONTROL データ取り込み通知]**」を選択し、「 **[!UICONTROL 次へ]**」をクリックします。
-
-![](../images/quality/subscribe-events/choose-event-subscriptions.png)
-
-次の画面では、JSON Web Token(JWT)の作成を求めるプロンプトが表示されます。 自動的にキーペアを生成するか、端末で生成した独自の公開鍵をアップロードするかを選択できます。
-
-このチュートリアルでは、最初のオプションに従います。 「キーペアを **[!UICONTROL 生成」のオプションボックスをクリックし]**、右下隅の「キーペアを **[!UICONTROL 生成]** 」ボタンをクリックします。
-
-![](../images/quality/subscribe-events/generate-keypair.png)
-
-キーペアが生成されると、ブラウザーによって自動的にダウンロードされます。 このファイルは開発者コンソールで保持されないので、自分で保存する必要があります。
-
-次の画面では、新しく生成されたキーペアの詳細を確認できます。 「**[!UICONTROL 次へ]**」をクリックして次に進みます。
-
-![](../images/quality/subscribe-events/keypair-generated.png)
-
-次の画面で、イベント登録の名前と説明を入力します。 ベストプラクティスは、同じプロジェクト内の他のユーザーとこのイベントの登録を区別できるように、一意で、簡単に識別できる名前を作成することです。
-
-![](../images/quality/subscribe-events/registration-details.png)
-
-同じ画面の下で、イベントの受信方法をオプションで設定できます。 **[!UICONTROL Webhook]** では、イベントを受け取るカスタムWebフックアドレスを指定できますが、 **[!UICONTROL Runtime action]** では [Adobe I/O Runtimeを使用して同じことを行えます](https://www.adobe.io/apis/experienceplatform/runtime/docs.html)。
-
-このチュートリアルでは、このオプションの設定手順は省略します。 完了したら、「設定済みのイベントを **[!UICONTROL 保存]** 」をクリックしてイベントの登録を完了します。
-
-![](../images/quality/subscribe-events/receive-events.png)
-
-新しく作成されたイベント登録の詳細ページが表示され、受信したイベントを確認し、デバッグトレースを実行して設定を編集できます。
-
-![](../images/quality/subscribe-events/registration-complete.png)
-
-## 次の手順
-
-プロジェクトに [!DNL Platform] 通知を登録すると、プロジェクトダッシュボードから受信したイベントを表示できます。 イベントのトレース方法の詳細については、「[Adobe I/O Events のトレース](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)」に関するガイドを参照してください。
