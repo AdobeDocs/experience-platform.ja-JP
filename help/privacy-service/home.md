@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1565'
 ht-degree: 14%
 
 ---
@@ -47,7 +47,8 @@ Adobe Experience Platform [!DNL Privacy Service] was developed in response to a 
 | --- | --- |
 | CCPA（カリフォルニア） | The [!DNL California Consumer Privacy Act] (CCPA) enhances privacy rights and consumer protection for residents of California, United States. CCPA は、自分の個人データにアクセスして削除する権利、自分の個人データが販売または開示されているかどうか（および誰に）を知る権利、第三者へのデータの販売をオプトアウトする権利など、カリフォルニア在住者に新しいデータのプライバシー権を提供します。<br/><br/>その他のドキュメントへのリンク： <ul><li>[法的概要](https://oag.ca.gov/privacy/ccpa)</li><li>[CCPA FAQ](ccpa/faq.md)</li></ul> |
 | GDPR(ヨーロッパ和集合) | The [!DNL General Data Protection Regulation] (GDPR) introduced several new data privacy rights for members of the European Union, including the **Right to Access** and the **Right to be Forgotten**. つまり、企業が収集した個人データに対して EU 市民は、いつでもデータのアクセスや削除を要求できます。<br/><br/>その他のドキュメントへのリンク： <ul><li>[法的概要](https://gdpr-info.eu/)</li><li>[GDPR に関するよくある質問](gdpr/faq.md)</li><li>[GDPR 関連の用語](gdpr/terminology.md)</li></ul> |
-| PDPA_THA（タイ） | タイの個人データ保護法(PDPA)は、タイのデータ所有者を、個人データの不正な収集、使用、開示から守るために導入された。 欧州和集合のGDPRに刺激され、この規制は、タイ国民に対し、保存された個人データへのアクセスを要求し、あるいは削除する権利を与える。<br/><br/>その他のドキュメントへのリンク： <ul><li>[法的概要](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDFA_THA FAQ](pdpa-tha/faq.md)</li><li>[PDPA_THAの用語](pdpa-tha/terminology.md)</li></ul> |
+| LGPD（ブラジル） | LGPD [!DNL Lei Geral de Proteção de Dados] は、ブラジルの個人または自然人の個人データの扱いを規制することを目的としている。 LGPDは、ブラジル国民に対し、個人データの閲覧・削除、個人データの販売・公開（および公開）、データの第三者へオプトアウトの販売権を与える。<br/><br/>その他のドキュメントへのリンク： <ul><li>[法的概要](https://gdpr.eu/gdpr-vs-lgpd/)</li></ul> |
+| PDPA（タイ） | タイ [!DNL Personal Data Protection Act] のデータ所有者は、個人データの不正な収集、使用、開示から守るため、PDPAが導入されました。 欧州和集合のGDPRに刺激され、この規制は、タイ国民に対し、保存された個人データへのアクセスを要求し、あるいは削除する権利を与える。<br/><br/>その他のドキュメントへのリンク： <ul><li>[法的概要](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDPA FAQ](pdpa-tha/faq.md)</li><li>[PDPAの用語](pdpa-tha/terminology.md)</li></ul> |
 
 データ操作が上記の規制のいずれかに該当する場合は、お客様に提供する特定のプライバシー権限や、プライバシー要求を守るためのコンプライアンス・ウィンドウなど、重要な情報について、ドキュメントを確認します。 この情報は、CRMシステムへの統合方法を決定する際、およびプライバシーリクエストを行うため [!DNL Privacy Service] に顧客がWebサイトとどのようにやり取りするかを考慮する必要があります。
 
