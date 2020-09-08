@@ -5,9 +5,9 @@ title: リアルタイム顧客プロファイルの概要
 topic: guide
 description: リアルタイム顧客プロファイルは、様々な企業データアセットのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形でそのデータにアクセスできる汎用参照エンティティストアです。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: cef27082fec97530031061476b46f60859717825
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 47%
 
 ---
@@ -90,7 +90,7 @@ This section introduces the components that allow [!DNL Real-time Customer Profi
 
 ### [!DNL Profile] 摂取指標
 
-観察性インサイトを使用すると、Adobe Experience Platform で主要指標を公開できます。In addition to [!DNL Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific [!DNL Profile]-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights overview](../observability/home.md), and for a complete list of [!DNL Profile] metrics, see the documentation on [available metrics](../observability/metrics.md).
+観察性インサイトを使用すると、Adobe Experience Platform で主要指標を公開できます。In addition to [!DNL Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific [!DNL Profile]-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights API overview](../observability/api/overview.md), and for a complete list of [!DNL Profile] metrics, see the documentation on [available metrics](../observability/api/metrics.md#available-metrics).
 
 ## [!DNL Data governance] および [!DNL Privacy]
 
