@@ -5,10 +5,10 @@ title: カラー抽出
 topic: Developer guide
 description: キーワード抽出サービスは、テキストドキュメントを指定すると、ドキュメントの主題を最も記述したキーワードまたはキーパースを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識(NER)と監視されていないキーワード抽出アルゴリズムの組み合わせが使用されます。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 3%
+source-wordcount: '625'
+ht-degree: 4%
 
 ---
 
@@ -20,14 +20,6 @@ ht-degree: 3%
 >[!DNL Content and Commerce AI] はベータ版です。 このドキュメントは変更されることがあります。
 
 キーワード抽出サービスは、テキストドキュメントを指定すると、ドキュメントの主題を最も記述したキーワードまたはキーパースを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識(NER)と監視されていないキーワード抽出アルゴリズムの組み合わせが使用されます。
-
-**監視なしのキーワード抽出**
-
-監視されていないキーワード抽出の場合は、 [[!DNL YAKE]](http://yake.inesctec.pt/) が使用されます。 [!DNL YAKE] は、監視を受けていない、高速で正確な自動キーワード抽出方式で、ドキュメントから最も重要なキーワードを選択するのに使用します。 次に、キーワード [!DNL YAKE] 抽出をフィルタリングして名詞句のみを選択する。
-
-**名前付きエンティティの認識**
-
-名前付きエンティティの認識には、 [[!DNL spaCy]](https://spacy.io/)のOntoNotesモデルが使用されます。 このモデルは、コンテキスト固有のトークンベクトル、品詞(POS)タグ、依存関係解析、名前付きエンティティを割り当てます。 OntoNotesモデルは、主要な [!DNL spaCy] モデルの1つです。 OntoNotesモデルの詳細については、 [こちらを参照してください](https://spacy.io/models/en)。
 
 で認識される名前付きエンティティ [!DNL Content and Commerce AI] を次の表に示します。
 
@@ -44,8 +36,6 @@ ht-degree: 3%
 | WORK_OF_ART | 書名、歌名等 |
 | LAW | ドキュメントを法にした。 |
 | 言語 | 任意の名前付き言語。 |
-
-の結果 [!DNL OntoNotes] は、のキーワードと組み合わされ [!DNL YAKE]、その重要度に応じてランク順に返されます。
 
 **API 形式**
 
