@@ -1,133 +1,78 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: プライバシーイベントへの購読
+title: Privacy Serviceイベントの購読
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 31%
+source-wordcount: '420'
+ht-degree: 7%
 
 ---
 
 
-# 購読する [!DNL Privacy Events]
+# 購読する [!DNL Privacy Service Events]
 
-[!DNL Privacy Events] は、構成されたwebフックに送信されるAdobeI/Oイベントを活用して、効率的なジョブリクエストの自動化を促進する、Adobe Experience Platformが提供するメッセージです。 [!DNL Privacy Service]They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Service Events] は、構成されたwebフックに送信されるAdobeI/Oイベントを活用して、効率的なジョブリクエストの自動化を促進する、Adobe Experience Platformが提供するメッセージです。 [!DNL Privacy Service]They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 現在、プライバシージョブリクエストのライフサイクルに関連する通知には、次の 4 種類があります。
 
 | タイプ | 説明 |
---- | ---
-| ジョブ完了 | All [!DNL Experience Cloud] solutions have reported back and the overall or global status of the job has been marked as complete. |
-| ジョブエラー | リクエストの処理中に 1 つ以上のソリューションがエラーを報告しました。 |
-| 製品完了 | このジョブに関連付けられているソリューションの 1 つが、その作業を完了しました。 |
-| 製品エラー | リクエストの処理中に 1 つ以上のソリューションがエラーを報告しました。 |
+| --- | --- |
+| ジョブ完了 | All [!DNL Experience Cloud] applications have reported back and the overall or global status of the job has been marked as complete. |
+| ジョブエラー | 1つ以上のアプリケーションが、要求の処理中にエラーを報告しました。 |
+| 製品完了 | このジョブに関連付けられているアプリの1つが作業を完了しました。 |
+| 製品エラー | いずれかのアプリケーションが、要求の処理中にエラーを報告しました。 |
 
-This document provides steps for setting up an integration for [!DNL Privacy Service] notifications within Adobe I/O. For a high-level overview of [!DNL Privacy Service] and its features, see the [Privacy Service overview](home.md).
+このドキュメントでは、通知のイベント登録を設定する手順と、通知ペイロードを解釈する方法について説明し [!DNL Privacy Service] ます。
 
 ## はじめに
 
-このチュートリアルでは、セキュアなトンネルを通じてローカルサーバーをパブリックインターネットに公開するソフトウェア製品、**ngrok** を使用します。このチュートリアルを始めてローカルマシンに Webhook を作成する前に、[ngrok をインストール](https://ngrok.com/download)してください。This guide also requires you to have a GIT repository downloaded that contains a simple [Node.js](https://nodejs.org/) server.
+このチュートリアルを開始する前に、次のPrivacy Serviceドキュメントを確認してください。
 
-## ローカルサーバーの作成
+* [Privacy Service の概要](./home.md)
+* [Privacy ServiceAPI開発者ガイド](./api/getting-started.md)
 
-Node.js サーバーは、リクエストによってルート（`/`）エンドポイントに送信された `challenge` パラメーターを返す必要があります。これをおこなうには、次の JavaScript を使用して `index.js` ファイルを設定します。
+## Webフックの登録先 [!DNL Privacy Service Events]
 
-```js
-var express = require('express')
-var app = express()
+を受け取るに [!DNL Privacy Service Events]は、Adobeデベロッパーコンソールを使用してWebフックを [!DNL Privacy Service] 統合に登録する必要があります。
 
-app.set('port', (process.env.PORT || 3000))
-app.use(express.static(__dirname + '/public'))
+これを行う方法について詳しくは、 [購読に関するチュートリアルに従って [!DNL I/O Event] 通知を行います](../observability/notifications/subscribe.md) 。 上記のイベントにアクセスするには、 **[!UICONTROL Privacy Serviceイベント]** (イベントプロバイダー)を選択していることを確認してください。
 
-app.get('/', function(request, response) {
-  response.send(request.originalUrl.split('?challenge=')[1]);
-})
+## 通知の受信 [!DNL Privacy Service Event]
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
-```
-
-コマンドラインを使用して、Node.js サーバーのルートディレクトリに移動します。次に、以下のコマンドを入力します。
-
-1. `npm install`
-1. `npm start`
-
-これらのコマンドは、すべての依存関係をインストールし、サーバーを初期化します。成功した場合、サーバーが http://localhost:3000/ で実行されていることを確認できます。
-
-## Ngrok を使用した Webhook の作成
-
-新しいコマンドラインウィンドウを開き、以前にngrookをインストールしたディレクトリに移動します。 ここから、次のコマンドを入力します。
-
-```shell
-./ngrok http -bind-tls=true 3000
-```
-
-出力が成功すると、次のようになります。
-
-![Ngrok 出力](images/privacy-events/ngrok-output.png)
-
-次の手順で Webhook を識別するために使用される `Forwarding` URL（`https://212d6cd2.ngrok.io`）を控えておきます。
-
-## Adobeデベロッパーコンソールでの新しいプロジェクトの作成
-
-[Adobeデベロッパーコンソールに移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe開発者コンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
-
-## プロジェクトの追加プライバシーイベント
-
-コンソールで新しいプロジェクトの作成が完了したら、「プ **[!UICONTROL ロジェクト概要]** 」画面の「 _イベント_ 」をクリックします。
-
-![](./images/privacy-events/add-event-button.png)
-
-The _Add events_ dialog appears. 「 **[!UICONTROL Experience Cloud]** 」を選択して使用可能なイベントタイプのリストを絞り込み、「 **[!UICONTROL Privacy Serviceイベント]** 」を選択してから「 **[!UICONTROL 次へ]**」をクリックします。
-
-![](./images/privacy-events/add-privacy-events.png)
-
-[ _イベント登録の_ 設定]ダイアログが表示されます。 対応するチェックボックスをオンにして、受け取るイベントを選択します。 選択したイベントは、左の列の「 **[!UICONTROL 購読済みイベント]** 」の下に表示されます。 終了したら、「**[!UICONTROL 次へ]**」をクリックします。
-
-![](./images/privacy-events/choose-subscriptions.png)
-
-次の画面では、イベント登録用の公開鍵を入力するように求められます。 自動的にキーペアを生成するか、端末で生成した独自の公開鍵をアップロードするかを選択できます。
-
-このチュートリアルでは、最初のオプションに従います。 「キーペアを **[!UICONTROL 生成」のオプションボックスをクリックし]**、右下隅の「キーペアを **[!UICONTROL 生成]** 」ボタンをクリックします。
-
-![](./images/privacy-events/generate-key-value.png)
-
-キーペアが生成されると、ブラウザーによって自動的にダウンロードされます。 このファイルは開発者コンソールで保持されないので、自分で保存する必要があります。
-
-次の画面では、新しく生成されたキーペアの詳細を確認できます。 「**[!UICONTROL 次へ]**」をクリックして次に進みます。
-
-![](./images/privacy-events/keypair-generated.png)
-
-次の画面で、イベント登録の名前と説明を入力します。 ベストプラクティスは、同じプロジェクト内の他のユーザーとこのイベントの登録を区別できるように、一意で、簡単に識別できる名前を作成することです。
-
-![](./images/privacy-events/event-details.png)
-
-同じ画面の下に、イベントの受信方法を設定する2つのオプションが表示されます。 「 **[!UICONTROL Webhook]** 」を選択し、「 `Forwarding` Webhook URL **[!UICONTROL 」で前に作成したNgrook Webフックの]** URLを指定します。 次に、「設定済みのイベントを **[!UICONTROL 保存」をクリックする前に、希望の配信スタイル（単一またはバッチ）を選択し、イベントの登録を完了します]** 。
-
-![](./images/privacy-events/webhook-details.png)
-
-プロジェクトの詳細ページが再表示され、左のナビゲーションの [!DNL Privacy Events] イベント **** の下に表示されます。
-
-## イベントデータの表示
-
-プロジェクトに登録し、プライバシージョブ [!DNL Privacy Events] が処理されると、その登録に関して受信した通知を表示できます。 デベロッパーコンソールの「 **[!UICONTROL プロジェクト]** 」タブで、リストからプロジェクトを選択し、 _製品概要_ ページを開きます。 画面左側のナビゲーションから「 **[!UICONTROL プライバシーイベント]** 」を選択します。
-
-![](./images/privacy-events/events-left-nav.png)
-
-The _Registration Details_ tab appears, allowing you to view more information about the registration, edit its configuration, or view the actual events that were received since activating your webhook.
-
-![](./images/privacy-events/registration-details.png)
-
-[ **[!UICONTROL デバッグトレース]** ]タブをクリックして、受信したイベントのリストを表示します。 表示されたイベントをクリックして詳細を表示します。
+Webフックの登録とプライバシージョブの実行が完了すると、イベント通知の受信開始を設定できます。 これらのイベントは、Webフック自体を使用して表示するか、Adobe開発者コンソールでプロジェクトのイベント登録の概要にある[ **[!UICONTROL デバッグトレース]** ]タブを選択して表示できます。
 
 ![](images/privacy-events/debug-tracing.png)
 
-「**[!UICONTROL ペイロード]**」セクションには、上の例で強調表示されているイベントタイプ（`com.adobe.platform.gdpr.productcomplete`）を含む、選択したイベントの詳細が表示されます。
+次のJSONは、プライバシージョブに関連付けられたアプリケーションの1つがその作業を完了した場合にWebフックに送信される [!DNL Privacy Service Event] 通知ペイロードの例です。
+
+```json
+{
+  "id":"b472e249-368b-4706-90f3-1d774713f827",
+  "event_id":"b116f797-e50b-432e-9c65-189106a34820",
+  "specversion":"0.2",
+  "type":"com.adobe.platform.gdpr.productcomplete",
+  "source":"https://ns.adobe.com/platform/gdpr",
+  "time":"Wed Oct 23 18:52:32 GMT 2019",
+  "data":{
+    "imsOrg":"{IMS_ORG}",
+    "value":{
+      "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
+      "message":"analytics.access.complete"
+    }
+  }
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `id` | 通知用の、システム生成の一意のID。 |
+| `type` | 送信される通知のタイプ。で提供される情報にコンテキストを与え `data`ます。 有効な値は次のとおりです。 <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
+| `time` | イベントが発生した日時のタイムスタンプ。 |
+| `data.value` | 通知のトリガー元に関する追加情報が含まれます。 <ul><li>`jobId`:通知をトリガーしたプライバシージョブのID。</li><li>`message`:ジョブの特定のステータスに関するメッセージです。 通知の場合 `productcomplete` または `producterror` 通知の場合、このフィールドには問題のExperience Cloudアプリケーションが示されます。</li></ul> |
 
 ## 次の手順
 
-必要に応じて、異なる Webhook アドレスに対して新しい統合を追加する場合に、上記の手順を繰り返すことができます。
+このドキュメントでは、設定済みのWebフックにPrivacy Serviceイベントを登録する方法、および通知ペイロードを解釈する方法について説明します。 ユーザーインターフェイスを使用してプライバシージョブを追跡する方法については、 [Privacy Serviceユーザーガイドを参照してください](./ui/user-guide.md)。
