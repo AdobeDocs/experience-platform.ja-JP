@@ -5,10 +5,10 @@ solution: Experience Platform
 title: フロー実行通知
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 4%
+source-wordcount: '787'
+ht-degree: 5%
 
 ---
 
@@ -25,34 +25,23 @@ AdobeI/Oイベントを使用すると、イベントをサブスクライブし
 
 ## はじめに
 
-このドキュメントでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+このチュートリアルでは、フローを監視するソース接続が既に1つ以上作成済みであることを前提としています。 ソース接続をまだ設定していない場合は、 [ソースの概要にアクセスし、選択したソースを設定してから](./home.md) 、このガイドに戻ってください。
 
-* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-* [[!DNLリアルタイム顧客プロファイル]](../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNLAdobe Experience Platformデータインジェスト]](../ingestion/home.md): [!DNL Data Ingestion] は、これらのソースからデータを [!DNL Platform] 取り込む複数のメソッド、およびダウンストリーム [!DNL Data Lake][!DNL Platform] サービスで使用するために、そのデータがそのソース内でどのように保持されるかを表します。
+また、このドキュメントでは、Webフックに関する実際の理解と、あるアプリケーションから別のアプリケーションへのWebフックの接続方法に関する知識も必要です。 Webhooksの概要については、 [[!DNL I/O Events] ドキュメント](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) を参照してください。
 
-また、このドキュメントでは、Webフックに関する実際の理解と、あるアプリケーションから別のアプリケーションへのWebフックの接続方法に関する知識も必要です。 Webhookの詳細については、次の [ドキュメント](https://requestbin.com/blog/working-with-webhooks/) を参照してください。
+## Webフックのフロー実行通知の登録
 
-## Webフックの登録
+フロー実行通知を受け取るには、Adobeデベロッパーコンソールを使用してWebフックを [!DNL Experience Platform] 統合に登録する必要があります。
 
-フローの実行状況に関する通知を受け取るには、イベント登録の詳細の一部として一意のWebフックURLを指定して、Webフックを登録する必要があります。 Webフックを [!DNL I/O Events] 購読に接続するには、 [Webフックサービスにアクセスし](https://webhook.site/) 、提供された一意のURLをコピーします。
-
-![WebHook](./images/notifications/webhook-url.png)
-
-## イベントの購読
-
-一意のWebフックURLを取得したら、 [AdobeI/Oイベントに移動し](https://www.adobe.io/apis/experienceplatform/events.html) 、イベントをサブスクライブする開始への [データインジェスト通知](../ingestion/quality/subscribe-events.md) ドキュメントに示されている手順に従います。
+これを行う方法について詳しくは、 [購読に関するチュートリアルに従って [!DNL I/O Event] 通知を行います](../observability/notifications/subscribe.md) 。
 
 >[!IMPORTANT]
 >
->購読プロセス中に、イベントプロバイダーとして [!DNL Platform] 通知を選択し、次のイベント購読を選択します。
+>購読プロセス中に、イベントプロバイダーとして「 **[!UICONTROL Platform notifications]** 」を必ず選択し、次のイベント購読を選択します。
 >
 >* **[!UICONTROL Experience Platformソースのフローの実行に成功しました]**
 >* **[!UICONTROL Experience Platformソースのフローの実行に失敗しました]**
 
->
->
-Webフックアドレスの入力を求めるプロンプトが表示されたら、以前に取得したWebフックURLを使用します。
 
 ## フロー実行通知の受信
 
@@ -339,7 +328,7 @@ Webフックが接続され、イベント購読が完了すると、Webフッ�
 
 取り込みエラーは、データがソースからコピーされている場合や、コピーされたデータがに処理されている場合に発生する可能性があり [!DNL Platform]ます。 特定のエラーについて詳しくは、次の表を参照してください。
 
-| Error | 説明 |
+| エラー | 説明 |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | ソースからデータをコピー中にエラーが発生しました。 |
 | `CONNECTOR-2001-500` | コピーされたデータの処理中にエラーが発生し [!DNL Platform]ました。 このエラーは、解析、検証または変換に関するものです。 |
