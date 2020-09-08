@@ -5,9 +5,9 @@ solution: Experience Platform
 title: アカウントとデータフローの監視
 topic: overview
 translation-type: tm+mt
-source-git-commit: e5898da7d25a708f3431b251f1cfa620b943e9a5
+source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '971'
 ht-degree: 5%
 
 ---
@@ -42,15 +42,25 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 並べ替えパネルを使用すると、特定のソースのアカウントにアクセスできます。 操作するソースを選択し、右側のリストからアカウントを選択します。
 
+>[!TIP]
+>
+> 「 ![名前](../../images/tutorials/monitor/spectrum-control.png) 」列の「 **[!UICONTROL スペクトル制御]** 」ボタンを使用して、選択したアカウントの新しいソースデータフローを作成します。
+
 ![アカウントを選択](../../images/tutorials/monitor/accounts-sort.png)
 
-「 **[!UICONTROL アカウント]** 」ページから、アクセスしたアカウントに関連付けられた既存のデータフローまたはターゲットデータセットのリストを表示できます。
+「 **[!UICONTROL アカウント]** 」ページから、アクセスしたアカウントに関連付けられた既存のデータフローまたはターゲットデータセットのリストを表示できます。 「三点リーダー(`...`)」ボタンを選択し、選択したデータフローで使用可能なオプションを表示します。 これらのオプションについては、以下で詳しく説明します。
+
+| 制御 | 説明 |
+| ------- | ----------- |
+| [!UICONTROL スケジュールの編集] | データフローのインジェストスケジュールを編集できます。 |
+| [!UICONTROL データフローの無効化] | 選択したデータフローのデータ取り込みを無効にできます。 |
+| [!UICONTROL Delete] | 選択したデータフローを削除できます。 |
 
 ![データフロー](../../images/tutorials/monitor/dataflows.png)
 
 ## データフローの監視
 
-データ・フローは、 **[!UICONTROL アカウントを表示せずに、]** カタログ **[!UICONTROL ・ページから直接アクセスできます]**。 上部ヘッダーから **[!UICONTROL データフローを選択し]** 、既存のデータフローのリストを表示します。
+データ・フローは、 **[!UICONTROL アカウントを表示せずに、]** カタログ **[!UICONTROL ・ページから直接アクセスできます]**。 上部ヘッダーから **[!UICONTROL データフローを選択し]** 、データフローのリストを表示します。
 
 ![カタログ・データ・フロー](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -58,7 +68,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![データフローリスト](../../images/tutorials/monitor/dataflows-list.png)
 
-並べ替えパネルが表示されます。 スクロール・メニューからアクセスするソースを選択し、右側のリストからデータ・フローを選択します。
+並べ替えパネルが表示されます。 スクロール・メニューからアクセスするソースを選択し、右側のリストからデータ・フローを選択します。 「三点リーダー(`...`)」ボタンを選択して、選択したデータフローに対して利用可能なオプションを表示することもできます。
 
 ![並べ替えデータフロー](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -80,13 +90,12 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
-次の表に、 **[!UICONTROL エラーの概要に表示されるエラーコードを示します]**。
+次の表に、 **[!UICONTROL エラーの概要に表示されるエラーを示します]**。
 
-| エラーコード | エラーメッセージ |
+| エラー | 説明 |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | &quot;コピーアクティビティに問題が発生しました。&quot; |
-| `CONNECTOR-2001-500` | 「Experience Platformソースからデータセットへのコピーで問題が発生しました。」 |
-| `CONNECTOR-3001-500` | &quot;一括取り込みAPIを使用したバッチの作成中に、フロープロバイダーで問題が発生しました。&quot; |
+| `CONNECTOR-1001-500` | ソースからデータをコピー中にエラーが発生しました。 |
+| `CONNECTOR-2001-500` | コピーされたデータの処理中にエラーが発生し [!DNL Platform]ました。 このエラーは、解析、検証または変換に関するものです。 |
 
 画面の下半分には、 **[!UICONTROL Dataflow実行エラーに関する情報が含まれています]**。 ここから、取り込んだファイルの表示、プレビューおよびダウンロードのエラー診断、またはファイルマニフェストのダウンロードを行うこともできます。
 
