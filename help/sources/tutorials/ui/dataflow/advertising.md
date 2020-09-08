@@ -5,9 +5,9 @@ title: UIでの広告コネクタのデータフローの設定
 topic: overview
 description: データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みタスクです。 このチュートリアルでは、広告アカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1350'
 ht-degree: 4%
 
 ---
@@ -35,9 +35,16 @@ ht-degree: 4%
 - インターフェイスの左半分はディレクトリブラウザーで、サーバーのファイルとディレクトリが表示されます。
 - インターフェイスの右半分を使用すると、互換性のあるファイルから最大100行のデータをプレビューできます。
 
-使用するディレクトリを選択し、「 **[!UICONTROL 次へ]**」を選択します。
+ページ上部の **[!UICONTROL 検索]** ・オプションを使用すると、使用するソース・データをすばやく特定できます。
 
-![add-data](../../../images/tutorials/dataflow/advertising/add-data.png)
+>[!NOTE]
+>
+>「ソースデータの検索」オプションは、Analytics、分類、イベントハブおよびKinesisのコネクタを除く、すべての表形式ベースのソースコネクタで使用できます。
+
+ソースデータを見つけたら、ディレクトリを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
+
+![select-data](../../../images/tutorials/dataflow/all-tabular/select-data.png)
+
 
 ## データフィールドのXDMスキーマへのマッピング
 
