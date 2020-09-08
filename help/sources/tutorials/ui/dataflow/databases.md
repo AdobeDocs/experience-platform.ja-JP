@@ -5,9 +5,9 @@ title: UIでのデータベースコネクタのデータフローの設定
 topic: overview
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、データベースアカウントを使用して新しいデータフローを構成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1328'
 ht-degree: 3%
 
 ---
@@ -35,9 +35,16 @@ ht-degree: 3%
 - インターフェイスの左半分はブラウザーで、アカウントのデータベースリストが表示されます。
 - インターフェイスの右半分を使用すると、最大100行のデータをプレビューできます。
 
-使用するデータベースを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
+ページ上部の **[!UICONTROL 検索]** ・オプションを使用すると、使用するソース・データをすばやく特定できます。
 
-![](../../../images/tutorials/dataflow/databases/add-data.png)
+>[!NOTE]
+>
+>「ソースデータの検索」オプションは、Analytics、分類、イベントハブおよびKinesisのコネクタを除く、すべての表形式ベースのソースコネクタで使用できます。
+
+ソースデータを見つけたら、ディレクトリを選択し、「 **[!UICONTROL 次へ]**」をクリックします。
+
+![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
+
 
 ## データフィールドのXDMスキーマへのマッピング
 
