@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy Service ユーザーガイド
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1059'
 ht-degree: 85%
 
 ---
@@ -24,11 +24,12 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 ### 規則の種類
 
-[!DNL Privacy Service] は、次の3種類の規則に関するジョブ要求をサポートします。
+[!DNL Privacy Service] は、次の4種類の規則タイプに対するジョブ要求をサポートします。
 
-* 欧州和集合 [!DNL General Data Protection Regulation] (GDPR)
-* The [!DNL California Consumer Privacy Act] (CCPA)
-* タイ [!DNL Personal Data Protection Act] (PDPA_THA)
+* 欧州和集合 [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
+* The [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
+* ブラジル [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* タイ [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
 
 それぞれの規制タイプのジョブは、別々に追跡されます。規制タイプを切り替えるには、**[!UICONTROL Regulation Type]** ドロップダウンメニューをクリックし、リストから目的の規制を選択します。
 
@@ -56,7 +57,7 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 >[!NOTE]
 >
-> フィルターがジョブリクエストウィジェットに適用されている場合は、フィルターピルの「**[!UICONTROL X]**」をクリックしてフィルターを削除できます。そうすれば、ジョブリクエストはデフォルトの追跡リストに戻ります。
+> フィルターがジョブリクエストウィジェットに適用されている場合は、フィルターピルの「**X**」をクリックしてフィルターを削除できます。そうすれば、ジョブリクエストはデフォルトの追跡リストに戻ります。
 
 ### ジョブリクエスト
 
