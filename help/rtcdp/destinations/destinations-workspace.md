@@ -5,10 +5,10 @@ seo-title: 宛先ワークスペース
 description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 seo-description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 61%
+source-wordcount: '825'
+ht-degree: 56%
 
 ---
 
@@ -52,9 +52,31 @@ AdobeReal-time CDPユーザー・インターフェースは、宛先カタロ�
 
 リンク先のカテゴリと各リンク先の情報について詳しくは、「 [リンク先カタログ](/help/rtcdp/destinations/destinations-catalog.md) 」および「 [リンク先のタイプとカテゴリ」を参照してください](/help/rtcdp/destinations/destination-types.md)。
 
+## [!UICONTROL アカウント] {#accounts}
+
+「**[!UICONTROL アカウント]**」タブでは、様々な宛先との接続を確立した場合の詳細を確認できます。各宛先について取得できるすべての情報については、次の表を参照してください。
+
+>[!TIP]
+>
+>「 ![Platform](/help/rtcdp/destinations/assets/add-data-symbol.png) （プラットフォーム） **[!UICONTROL 」列の]** 「Data（データ）」ボタンを使用して、そのアカウントの新しい宛先接続を作成します。
+
+![「アカウント」タブ](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+| 要素 | 説明 |
+---------|----------
+| [!UICONTROL プラットフォーム] | 接続を設定した宛先。 |
+| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3 または FTP</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3 クラウドストレージの宛先：アクセスキー </li><li>SFTP クラウドストレージの宛先：SFTP の基本認証</li></ul> |
+| [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)で選択したユーザー名。 |
+| [!UICONTROL 宛先] | 宛先に対して作成された基本情報に接続された、一意に成功した宛先フローの数を表します。 |
+| [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
+
 ## [!UICONTROL 参照] {#browse}
 
-「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。切り替えを&#x200B;**[!UICONTROL 有効]**&#x200B;にした宛先はアクティブに設定し、逆も同様に設定します。You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. 「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
+「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. 「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
+
+>[!TIP]
+>
+>「 ![名前](/help/rtcdp/destinations/assets/add-data-symbol.png)**[!UICONTROL 」列の]** データボタンを使用して、目的のセグメントに追加するセグメントをアクティブ化します。
 
 ![「参照」タブ](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -73,21 +95,6 @@ AdobeReal-time CDPユーザー・インターフェースは、宛先カタロ�
 ![宛先行をクリック](/help/rtcdp/destinations/assets/click-destination-row.png)
 
 宛先名を選択して、この宛先に対してアクティブ化されたセグメントに関する情報を表示します。「**[!UICONTROL アクティベーションの編集]**」をクリックして、この宛先に送信されるセグメントを変更または追加します。
-
-## [!UICONTROL アカウント] {#accounts}
-
-「**[!UICONTROL アカウント]**」タブでは、様々な宛先との接続を確立した場合の詳細を確認できます。各宛先について取得できるすべての情報については、次の表を参照してください。
-
-![「アカウント」タブ](/help/rtcdp/destinations/assets/accounts-tab.png)
-
-| 要素 | 説明 |
----------|----------
-| [!UICONTROL プラットフォーム] | 接続を設定した宛先。 |
-| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3 または FTP</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3 クラウドストレージの宛先：アクセスキー </li><li>SFTP クラウドストレージの宛先：SFTP の基本認証</li></ul> |
-| [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)で選択したユーザー名。 |
-| [!UICONTROL データフロー] | 宛先に対して作成された基本情報に接続された、一意に成功した宛先フローの数を表します。 |
-| [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
-| [!UICONTROL ステータス] | `Active` または `Inactive`.データが現在この宛先に対してアクティブ化されているかどうかを示します。ステータスを編集するには、「[アクティベーションの無効化](/help/rtcdp/destinations/activate-destinations.md#disable-activation)」を参照してください。 |
 
 ## [!UICONTROL システム表示]{#system-view}
 
