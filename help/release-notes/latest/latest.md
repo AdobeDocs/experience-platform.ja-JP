@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 32%
+source-wordcount: '597'
+ht-degree: 25%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platformの既存の機能の更新：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL宛先]](#destinations)
+- [[!DNLリアルタイム顧客データプラットフォーム]](#rtcdp)
 - [[!DNLソース]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -53,6 +54,18 @@ Adobe Experience Platformの既存の機能の更新：
 |------- | -----------|
 | カスタムファイル名エディタ | 電子メールマーケティングの宛先と、エクスポートされたファイルの名前を編集できるクラウドストレージの宛先に関するデータアクティベーションワークフローに更新します。 詳しくは、アクティベーションワークフローの [ 設定手順](/help/rtcdp/destinations/activate-destinations.md#configure) を参照してください。 |
 | 推奨属性 | 電子メールマーケティングの宛先および推奨属性を表示するクラウドのストレージ先のデータアクティベーションワークフローを更新し、書き出されたファイルに追加します。 詳しくは、アクティベーションワークフローの「属性を [選択](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 」の手順を参照してください。 |
+
+## [!DNL Real-time Customer Data Platform] {#rtcdp}
+
+Built on Experience Platform, Adobe Real-time Customer Data Platform ([!DNL Real-time CDP]) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. [!DNL Real-time CDP] 複数のエンタープライズデータソースを組み合わせて、顧客プロファイルをリアルタイムで作成します。 これらのプロファイルから作成されたセグメントは、その後、すべてのチャネルとデバイスで1対1のパーソナライズ顧客エクスペリエンスを提供するために、ダウンストリームの宛先に送信できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| （IAB TCF 2.0のサポート） | [!DNL Real-time CDP] は、 [!DNL Transparency & Consent Framework] (IAB)で概要を説明しているように、2.0バージョンの [!DNL Interactive Advertising Bureau] (TCF)に登録されたベンダーになりました。 CMPによって生成された顧客の同意データを受け入れるようにデータ操作やプロファイルスキーマを設定し、下流の宛先に対するセグメントをアクティブ化する際に、顧客の同意を得るための好みを強制できます。 詳細は、Real-time CDPの [IAB TCF 2.0サポートの概要を参照してください](../../rtcdp/privacy/iab/overview.md) 。 |
+
+For more information on [!DNL Real-time CDP], see the [[!DNL Real-time CDP] overview](../../rtcdp/overview.md).
 
 ## ソース {#sources}
 
