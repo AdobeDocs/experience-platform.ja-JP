@@ -3,12 +3,12 @@ title: Adobe Experience Platform リリースノート
 description: Experience Platform リリースノート 2020 年 9 月 9 日
 doc-type: release notes
 last-update: September 8, 2020
-author: crhoades, ens28527
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 23c7a0d82cb849568d6411c1a09c7a16b86d4954
+source-git-commit: 9a9b1294507986723c1e4d1230a854630131be3a
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 36%
+source-wordcount: '805'
+ht-degree: 30%
 
 ---
 
@@ -19,10 +19,12 @@ ht-degree: 36%
 
 Adobe Experience Platformの既存の機能の更新：
 
-* [[!DNLデータガバナンス]](#governance)
-* [[!DNL宛先]](#destinations)
-* [[!DNLPrivacy Service]](#privacy)
-* [[!DNLソース]](#sources)
+- [[!DNLデータガバナンス]](#governance)
+- [[!DNL宛先]](#destinations)
+- [[!DNLPrivacy Service]](#privacy)
+- [[!DNLリアルタイム顧客プロファイル]](#profile)
+- [[!DNL Segmentation Service]](#segmentation)
+- [[!DNLソース]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -31,7 +33,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 **新機能**
 
 | 機能 | 説明 |
-| --- | --- |
+| ------- | ----------- |
 | データセットのラベル付けUIの強化 | 大規模なスキーマでの作業を容易にするため、データセットのラベル付けUIに、新しい並べ替えとフィルタリングのコントロールがいくつか追加されました。 <ul><li>フルスキーマパスに基づいて、フィールドをアルファベット順に並べ替えます。</li><li>フィールドパス名に対して部分的な検索を実行します。</li><li>ラベル、選択したラベルまたはラベルカテゴリのないフィルタフィールド</li></ul> |
 
 このサービスについて詳しくは、「[データガバナンスの概要](../../data-governance/home.md)」を参照してください。
@@ -48,6 +50,31 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 詳しくは、[宛先の概要](../../rtcdp/destinations/destinations-overview.md)を参照してください。
 
+## リアルタイム顧客プロファイル {#profile}
+
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| プロファイルビューアー | プラットフォームUIのプロファイルビューアが、完全なカスタマイズが可能なダッシュボードに更新されました。 ユーザーは、次のタスクを行うことができます。 <ul><li>基本情報ウィジェットで、選択した標準属性とカスタマイズした属性を更新します。</li><li>カスタムウィジェットの作成、編集、削除</li><li>ウィジェットのサイズ変更と並べ替え</li></ul> |
+
+For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
+
+## セグメント化サービス {#segmentation}
+
+Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+
+[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。 セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| ジョブの書き出し | セグメントを書き出しジョブの一部として評価できるフラグが追加されました。 その結果、セグメント化と書き出しの両方を1つのジョブで実行できます。 |
+| 結合ポリシー | 単一のバッチセグメントジョブには、複数のマージポリシーを含めることができます。 |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
+
 ## [!DNL Privacy Service] {#privacy}
 
 法的規制や組織的規制の中には、ユーザーが要求に応じて、データストアから個人データにアクセスしたり削除したりする権利を与えるものもあります。 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
@@ -55,7 +82,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 **新機能**
 
 | 機能 | 説明 |
-| --- | --- |
+| ------- | ----------- |
 | LGPDのサポート（ブラジル） | ブラジル [!DNL Lei Geral de Proteção de Dados] (LGPD)の規制に基づき、プライバシー・ジョブを作成できるようになった。 これらのジョブは、規制コードの下で追跡され `lgpd_bra`ます。 |
 
 See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
