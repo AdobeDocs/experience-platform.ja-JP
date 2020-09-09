@@ -5,7 +5,7 @@ title: スキーマ合成の基本
 topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
-source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
+source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 55%
@@ -173,7 +173,7 @@ For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and 
 
 * 文字列
 * 整数
-* 数値
+* Double
 * Boolean
 * 配列
 * オブジェクト
