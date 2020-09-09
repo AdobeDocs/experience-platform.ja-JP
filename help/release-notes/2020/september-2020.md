@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9a9b1294507986723c1e4d1230a854630131be3a
+source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 30%
+source-wordcount: '883'
+ht-degree: 28%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platformの既存の機能の更新：
 
 - [[!DNLデータガバナンス]](#governance)
 - [[!DNL宛先]](#destinations)
+- [[!DNL監視性インサイト]](#observability)
 - [[!DNLPrivacy Service]](#privacy)
 - [[!DNLリアルタイム顧客プロファイル]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
@@ -50,6 +51,30 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 詳しくは、[宛先の概要](../../rtcdp/destinations/destinations-overview.md)を参照してください。
 
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] 統計指標とイベント通知を使用して、Adobe Experience Platformのアクティビティを監視できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| AdobeI/Oイベント通知 | [!DNL Observability Insights] adobeI/Oイベントを利用して、いくつかのExperience Platformサービスのイベント通知を作成します。 通知ペイロードは、設定済みのWebフックに送信され、このフックを使用して、下流のプロセスをさらに自動化できます。 See the [notifications overview](../../observability/notifications/overview.md) for more information. |
+
+See the [[!DNL Observability Insights] overview](../../observability/home.md) for more information on the service.
+
+## [!DNL Privacy Service] {#privacy}
+
+法的規制や組織的規制の中には、ユーザーが要求に応じて、データストアから個人データにアクセスしたり削除したりする権利を与えるものもあります。 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| LGPDのサポート（ブラジル） | ブラジル [!DNL Lei Geral de Proteção de Dados] (LGPD)の規制に基づき、プライバシー・ジョブを作成できるようになった。 これらのジョブは、規制コードの下で追跡され `lgpd_bra`ます。 |
+
+See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
+
 ## リアルタイム顧客プロファイル {#profile}
 
 Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
@@ -74,18 +99,6 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 | 結合ポリシー | 単一のバッチセグメントジョブには、複数のマージポリシーを含めることができます。 |
 
 For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
-
-## [!DNL Privacy Service] {#privacy}
-
-法的規制や組織的規制の中には、ユーザーが要求に応じて、データストアから個人データにアクセスしたり削除したりする権利を与えるものもあります。 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
-
-**新機能**
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| LGPDのサポート（ブラジル） | ブラジル [!DNL Lei Geral de Proteção de Dados] (LGPD)の規制に基づき、プライバシー・ジョブを作成できるようになった。 これらのジョブは、規制コードの下で追跡され `lgpd_bra`ます。 |
-
-See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
 
 ## ソース {#sources}
 
