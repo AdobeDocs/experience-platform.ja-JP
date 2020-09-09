@@ -5,7 +5,7 @@ title: Experience Platform API の認証とアクセス
 topic: tutorial
 description: 'このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。 '
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 43%
@@ -156,7 +156,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## JWT 認証および API 呼び出しでの Postman の使用
 
-[Postman](https://www.getpostman.com/) は、RESTful API を使用するための一般的なツールです。この [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) では 、JWT 認証を自動的に実行し、それを使用して Adobe Experience Platform API を使用するように Postman を設定する方法について説明します。
+[Postman](https://www.postman.com/) は、RESTful API を使用するための一般的なツールです。この [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) では 、JWT 認証を自動的に実行し、それを使用して Adobe Experience Platform API を使用するように Postman を設定する方法について説明します。
 
 ## 次の手順
 
