@@ -5,7 +5,7 @@ title: フィーチャパイプラインの作成
 topic: Tutorial
 description: Adobe Experience Platformでは、カスタムフィーチャパイプラインを作成して作成し、Senei Machine Learning Framework Runtimeを通じて尺度を変更してフィーチャエンジニアリングを実行できます。 このドキュメントでは、フィーチャパイプラインにある各種クラスについて説明し、PySparkのModel Authoring SDKを使用してカスタムフィーチャパイプラインを作成するための手順を説明します。
 translation-type: tm+mt
-source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
+source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 28%
@@ -397,7 +397,7 @@ scoring.dataSaver: MyDatasetSaver
 
 オプションで、次のPostmanコレクションを使用して、機能のパイプラインAPIワークフローの完了を支援することもできます。
 
-https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
+https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### フィーチャパイプラインエンジンを作成する {#create-engine-api}
 
