@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service のリリースノート
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
+source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 64%
+source-wordcount: '538'
+ht-degree: 62%
 
 ---
 
@@ -19,6 +19,14 @@ This document contains information about new features for Adobe Experience Platf
 >[!NOTE]
 >
 >その他の [!DNL Experience Platform] サービスの最新のリリースノートは、 [こちらを参照してください](../release-notes/latest/latest.md)。
+
+## 2020年9月9日
+
+### 新機能
+
+| 機能 | 説明 |
+| --- | --- |
+| LGPDのサポート（ブラジル） | ブラジル [!DNL Lei Geral de Proteção de Dados] (LGPD)の規制に基づき、プライバシー・ジョブを作成できるようになった。 これらのジョブは、規制コードの下で追跡され `lgpd_bra`ます。 |
 
 ## 2020年4月8日
 
