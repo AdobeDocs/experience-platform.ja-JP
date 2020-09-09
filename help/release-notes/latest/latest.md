@@ -1,71 +1,104 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Experience Platformリリースノート（2020年8月11日）
+description: Experience Platform リリースノート 2020 年 9 月 9 日
 doc-type: release notes
-last-update: August 10, 2020
-author: crhoades, ens28527
+last-update: September 8, 2020
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
+source-git-commit: 312794af2cdb111fb81c0aa226dec68db2cbc374
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 25%
+source-wordcount: '883'
+ht-degree: 28%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 12 月 8 日**
+**リリース日：2020 年 9 月 9 日**
 
 Adobe Experience Platformの既存の機能の更新：
 
-- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNLデータガバナンス]](#governance)
 - [[!DNL宛先]](#destinations)
-- [[!DNLリアルタイム顧客データプラットフォーム]](#rtcdp)
+- [[!DNL監視性インサイト]](#observability)
+- [[!DNLPrivacy Service]](#privacy)
+- [[!DNLリアルタイム顧客プロファイル]](#profile)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNLソース]](#sources)
 
-## [!DNL Data Science Workspace] {#dsw}
+## [!DNL Data Governance] {#governance}
 
-[!DNL Data Science Workspace] 機械学習と人工知能を使用して、データから洞察を引き出します。 Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
+Adobe Experience Platform データガバナンスは、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへの準拠を確保するために使用される一連の戦略とテクノロジーです。It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| VMの強化 [!DNL JupyterLab] | 長時間稼働する [!DNL JupyterLab notebook] 仮想マシンの安定性が向上しました。 |
+| データセットのラベル付けUIの強化 | 大規模なスキーマでの作業を容易にするため、データセットのラベル付けUIに、新しい並べ替えとフィルタリングのコントロールがいくつか追加されました。 <ul><li>フルスキーマパスに基づいて、フィールドをアルファベット順に並べ替えます。</li><li>フィールドパス名に対して部分的な検索を実行します。</li><li>ラベル、選択したラベルまたはラベルカテゴリのないフィルタフィールド</li></ul> |
 
-詳細については、『 [!DNL JupyterLab]ユーザガイド [[!DNL JupyterLab] ](../../data-science-workspace/jupyterlab/overview.md)』を参照してください。
+このサービスについて詳しくは、「[データガバナンスの概要](../../data-governance/home.md)」を参照してください。
 
 ## 宛先 {#destinations}
 
 [アドビのリアルタイム顧客データプラットフォーム](../../rtcdp/overview.md) において、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータを活用します。
 
-**新しい宛先**
+**新機能**
 
-新しい宛先は、Adobe Experience Platform データをアクティブ化する際に使用できます。詳しくは、以下を参照してください。
+| 機能 | 説明 |
+| ------- | ----------- |
+| UXの強化 | ユーザーはインラインテーブルアクションにアクセスでき、データの追加、スケジュールの編集、セグメントの追加などの主なアクションに簡単にアクセスできます。 See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
 
-| 宛先 | 説明 |
-|--- | ---|
-| [!DNL Google Customer Match] | Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営する次のようなプロパティを通じて顧客に連絡し、顧客と再び関与させることができます。 [!DNL Search]、 [!DNL Shopping]、Gmail、YouTubeの3つを追加しました。 <br><br> 宛先カタログの [!DNL Google Customer Match][ページにアクセスし](/help/rtcdp/destinations/google-customer-match-destination.md) 、AdobeReal-time CDPでの宛先とその設定方法の詳細を確認します。 |
+詳しくは、[宛先の概要](../../rtcdp/destinations/destinations-overview.md)を参照してください。
+
+## [!DNL Observability Insights] {#observability}
+
+[!DNL Observability Insights] 統計指標とイベント通知を使用して、Adobe Experience Platformのアクティビティを監視できます。
 
 **新機能**
 
 | 機能 | 説明 |
-|------- | -----------|
-| カスタムファイル名エディタ | 電子メールマーケティングの宛先と、エクスポートされたファイルの名前を編集できるクラウドストレージの宛先に関するデータアクティベーションワークフローに更新します。 詳しくは、アクティベーションワークフローの [ 設定手順](/help/rtcdp/destinations/activate-destinations.md#configure) を参照してください。 |
-| 推奨属性 | 電子メールマーケティングの宛先および推奨属性を表示するクラウドのストレージ先のデータアクティベーションワークフローを更新し、書き出されたファイルに追加します。 詳しくは、アクティベーションワークフローの「属性を [選択](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 」の手順を参照してください。 |
+| --- | --- |
+| AdobeI/Oイベント通知 | [!DNL Observability Insights] adobeI/Oイベントを利用して、いくつかのExperience Platformサービスのイベント通知を作成します。 通知ペイロードは、設定済みのWebフックに送信され、このフックを使用して、下流のプロセスをさらに自動化できます。 See the [notifications overview](../../observability/notifications/overview.md) for more information. |
 
-## [!DNL Real-time Customer Data Platform] {#rtcdp}
+See the [[!DNL Observability Insights] overview](../../observability/home.md) for more information on the service.
 
-Built on Experience Platform, Adobe Real-time Customer Data Platform ([!DNL Real-time CDP]) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. [!DNL Real-time CDP] 複数のエンタープライズデータソースを組み合わせて、顧客プロファイルをリアルタイムで作成します。 これらのプロファイルから作成されたセグメントは、その後、すべてのチャネルとデバイスで1対1のパーソナライズ顧客エクスペリエンスを提供するために、ダウンストリームの宛先に送信できます。
+## [!DNL Privacy Service] {#privacy}
+
+法的規制や組織的規制の中には、ユーザーが要求に応じて、データストアから個人データにアクセスしたり削除したりする権利を与えるものもあります。 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| （IAB TCF 2.0のサポート） | [!DNL Real-time CDP] は、 [!DNL Transparency & Consent Framework] (IAB)で概要を説明しているように、2.0バージョンの [!DNL Interactive Advertising Bureau] (TCF)に登録されたベンダーになりました。 CMPによって生成された顧客の同意データを受け入れるようにデータ操作やプロファイルスキーマを設定し、下流の宛先に対するセグメントをアクティブ化する際に、顧客の同意を得るための好みを強制できます。 詳細は、Real-time CDPの [IAB TCF 2.0サポートの概要を参照してください](../../rtcdp/privacy/iab/overview.md) 。 |
+| LGPDのサポート（ブラジル） | ブラジル [!DNL Lei Geral de Proteção de Dados] (LGPD)の規制に基づき、プライバシー・ジョブを作成できるようになった。 これらのジョブは、規制コードの下で追跡され `lgpd_bra`ます。 |
 
-For more information on [!DNL Real-time CDP], see the [[!DNL Real-time CDP] overview](../../rtcdp/overview.md).
+See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
+
+## リアルタイム顧客プロファイル {#profile}
+
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| プロファイルビューアー | プラットフォームUIのプロファイルビューアが、完全なカスタマイズが可能なダッシュボードに更新されました。 ユーザーは、次のタスクを行うことができます。 <ul><li>基本情報ウィジェットで、選択した標準属性とカスタマイズした属性を更新します。</li><li>カスタムウィジェットの作成、編集、削除</li><li>ウィジェットのサイズ変更と並べ替え</li></ul> |
+
+For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
+
+## セグメント化サービス {#segmentation}
+
+Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+
+[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。 セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| ジョブの書き出し | セグメントを書き出しジョブの一部として評価できるフラグが追加されました。 その結果、セグメント化と書き出しの両方を1つのジョブで実行できます。 |
+| 結合ポリシー | 単一のバッチセグメントジョブには、複数のマージポリシーを含めることができます。 |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
 
 ## ソース {#sources}
 
@@ -77,8 +110,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| フロー実行の監視 | すべてのフローの実行を監視し、完了ステータス、実行期間、処理されたファイルのリスト、エラー、指標など、各実行の詳細表示を確認できます。 詳細は、 [監視データフロー](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
-| フロー実行通知 | イベントを登録し、Webフックを登録して、フローの実行に関するステータス、指標、エラーに関するリアルタイム通知を受信できます。 |
-| UIカタログの改善 | ソースカタログ画面が更新され、選択したオブジェクトの主なアクションに簡単にアクセスできるようになりました。 |
+| 自動マッピング | [!DNL Platform] は、ユーザーが選択したターゲットスキーマーまたはデータセットに基づいて、データ取り込みワークフロー中の自動マッピングに関するインテリジェントな推奨事項を提供します。 柔軟な自動マッピングルールを手動で調整して、使用事例に合わせることができます。 |
+| UXの強化 | ユーザーはインラインテーブルアクションにアクセスでき、データの追加、スケジュールの編集、セグメントの追加などの主なアクションに簡単にアクセスできます。 詳細は、 [監視データフロー](../../sources/tutorials/ui/monitor.md) ドキュメントを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
