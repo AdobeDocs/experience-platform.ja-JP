@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform へのデータの取得
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 0816781620ca73a0511290d8d04b8f1a96db8a11
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 65%
+source-wordcount: '1279'
+ht-degree: 64%
 
 ---
 
@@ -32,17 +32,19 @@ The Datasets workspace within [!DNL Experience Platform] allows you to view and 
 >
 >Click on the filter icon next to the Search bar to use filtering capabilities to view only those datasets enabled for [!DNL Profile].
 
-![すべてのデータセットの表示](../images/tutorials/ingest-batch-data/datasets_workspace.png)
+![すべてのデータセットの表示](../images/tutorials/ingest-batch-data/datasets-overview.png)
 
 ## データセットの作成
 
 データセットを作成するには、「データセット」ワークスペースの右上隅にある「**[!UICONTROL データセットを作成]**」をクリックします。
 
+![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
+
 On the **[!UICONTROL Create Dataset]** screen, select whether you would like to &quot;[!UICONTROL Create Dataset from Schema]&quot; or &quot;[!UICONTROL Create Dataset from CSV File]&quot;.
 
 このチュートリアルでは、スキーマを使用してデータセットを作成します。続行するには、「**[!UICONTROL スキーマからデータセットを作成]**」をクリックします。
 
-![データソースの選択](../images/tutorials/ingest-batch-data/create_dataset.png)
+![データソースの選択](../images/tutorials/ingest-batch-data/create-dataset.png)
 
 ## データセットスキーマの選択
 
@@ -50,7 +52,7 @@ On the **[!UICONTROL Create Dataset]** screen, select whether you would like to 
 
 使用するスキーマの横のラジオボタンを選択したら、「**[!UICONTROL 次へ]**」をクリックします。
 
-![スキーマの選択](../images/tutorials/ingest-batch-data/select_schema.png)
+![スキーマの選択](../images/tutorials/ingest-batch-data/select-schema.png)
 
 ## データセットの設定
 
@@ -64,7 +66,7 @@ On the **[!UICONTROL Create Dataset]** screen, select whether you would like to 
 
 データセットに名前と説明が付いたら、「**[!UICONTROL 完了]**」をクリックします。
 
-![データセットの設定](../images/tutorials/ingest-batch-data/configure_dataset.png)
+![データセットの設定](../images/tutorials/ingest-batch-data/configure-dataset.png)
 
 ## データセットアクティビティ
 
@@ -74,7 +76,7 @@ On the **[!UICONTROL Create Dataset]** screen, select whether you would like to 
 
 Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
-![データセットアクティビティ](../images/tutorials/ingest-batch-data/dataset_activity.png)
+![データセットアクティビティ](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
 ## データセットの有効化 [!DNL Real-time Customer Profile]
 
@@ -86,15 +88,15 @@ To learn more about [!DNL Real-time Customer Profile] and working with identitie
 
 To enable the dataset for [!DNL Real-time Customer Profile], click the **[!UICONTROL Profile]** toggle in the **[!UICONTROL Info]** tab.
 
-![プロファイル切り替え](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
+![プロファイル切り替え](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
 A dialog will appear asking you to confirm that you want to enable the dataset for [!DNL Real-time Customer Profile].
 
-![プロファイル有効ダイアログ](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
+![プロファイル有効ダイアログ](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
 「**[!UICONTROL 有効]**」をクリックすると、切り替えが青に変わり、オンになっていることを示します。
 
-![プロファイルで有効](../images/tutorials/ingest-batch-data/dataset_enabled.png)
+![プロファイルで有効](../images/tutorials/ingest-batch-data/profile-enabled-dataset.png)
 
 ## データセットへのデータの追加
 
@@ -106,13 +108,13 @@ A dialog will appear asking you to confirm that you want to enable the dataset f
 >
 > Platform では、データ取得用に 2 種類のファイル（parquet、JSON）がサポートされています。一度に 5 個までのファイルを追加でき、各ファイルの最大ファイルサイズは 10GB です。
 
-![「データを追加」タブ](../images/tutorials/ingest-batch-data/add_data.png)
+![「データを追加」タブ](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## ファイルのアップロード
 
 Once you drag and drop (or browse and select) a parquet or JSON file that you wish to upload, [!DNL Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
 
-![アップロードダイアログ](../images/tutorials/ingest-batch-data/uploading.png)
+![アップロードダイアログ](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## データセット指標
 
@@ -120,7 +122,7 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 タブの下部には、「[データセットへのデータ追加](#add-data-to-dataset)」処理で取得されたデータの&#x200B;**[!UICONTROL バッチ ID]** を示す追加リストが表示されます。また、**[!UICONTROL 取得]**&#x200B;された日付、取得された&#x200B;**[!UICONTROL レコード数]**、現在のバッチ&#x200B;**[!UICONTROL 状態]**&#x200B;など、バッチに関する情報も含まれます 。
 
-![データセット指標](../images/tutorials/ingest-batch-data/batch_loading.png)
+![データセット指標](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## バッチの詳細
 
@@ -130,7 +132,7 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 **[!UICONTROL データセットアクティビティ]**&#x200B;画面に戻るには 、階層リンクでデータセットの名前（**[!UICONTROL Loyalty Details]**）をクリックします。
 
-![バッチの概要](../images/tutorials/ingest-batch-data/batch_overview.png)
+![バッチの概要](../images/tutorials/ingest-batch-data/batch-details.png)
 
 ## データセットのプレビュー
 
@@ -138,7 +140,7 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 「**[!UICONTROL プレビューデータセット]**」をクリックすると、データセット内のサンプルデータを示すダイアログが開きます。データセットがスキーマを使用して作成された場合は、データセットスキーマの詳細がプレビューの左側に表示されます。矢印を使用してスキーマを展開し、構造を確認できます。データセット内の各列見出しは、プレビューセット内の 1 つのフィールドを表します。
 
-![データセットの詳細](../images/tutorials/ingest-batch-data/dataset_details.png)
+![データセットの詳細](../images/tutorials/ingest-batch-data/dataset-preview.png)
 
 ## 次の手順 およびその他のリソース
 
@@ -151,3 +153,4 @@ Now that you have created a dataset and successfully ingested data into [!DNL Ex
 >次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+drag
