@@ -5,38 +5,36 @@ seo-title: リアルタイム顧客データプロファイルでのプライバ
 description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 translation-type: tm+mt
-source-git-commit: f9b21ee51d6246dbdae4500aad050b200539ff88
+source-git-commit: 1eaadb1877cc5221bf6b0b8eed042287e59155bf
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 57%
+source-wordcount: '361'
+ht-degree: 21%
 
 ---
 
 
-# リアルタイム CDP のプライバシー
+# プライバシー [!DNL Real-time CDP]
 
-[!DNL Real-time Customer Data Platform] （リアルタイムCDP）は、マーケティング担当者が複数のエンタープライズ・システムからデータを統合し、顧客の識別、理解、関与性を高めるのに役立ちます。 アドビでは、基本的なデザイン原則として消費者データのプライバシーを保持し、マーケティング担当者が顧客のデータのプライバシーを管理するのに役立つ様々なコントロールを提供しています。
+[!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP])マーケティング担当者が複数のエンタープライズシステムからのデータを統合し、顧客の識別、把握、関与をより的確に行えるようにします。 アドビでは、基本的なデザイン原則として消費者データのプライバシーを保持し、マーケティング担当者が顧客のデータのプライバシーを管理するのに役立つ様々なコントロールを提供しています。
 
-ほとんどのリアルタイム CDP 機能は、Adobe Experience Platform によって動作します。This document provides information about the various privacy enhancement technologies supported by Real-time CDP, with links to [!DNL Experience Platform] documentation for more information.
+The majority of [!DNL Real-time CDP] capabilities are powered by Adobe Experience Platform. This document provides information about the various privacy enhancement technologies supported by [!DNL Real-time CDP], with links to [!DNL Experience Platform] documentation for more information.
 
-## [!DNL Privacy Service]
+## 顧客のアクセスおよび削除要求の実行
 
-Adobe Experience Platform [!DNL Privacy Service] では、GDPRやCCPAなどのプライバシー規制に準拠したデータ操作を維持するプロセスを合理化でき [!DNL General Data Protection Regulation] ま [!DNL California Consumer Privacy Act] す。 Since Real-time CDP leverages [!DNL Experience Platform] capabilities for data collection and storage, the access and delete requests for GDPR and CCPA should be managed within [!DNL Platform]. このサービスの概要について詳しくは、『[Privacy Service の概要](../../privacy-service/home.md)』ドキュメントを参照してください。
+(GDPR)や [!DNL General Data Protection Regulation][!DNL California Consumer Privacy Act] (CCPA)などの法的プライバシー規制により、お客様は、お客様から収集した個人データへのアクセスを要求したり、そのデータを削除したりする権利を得ることができます。 データの収集とストレージに [!DNL Real-time CDP] 機能を活用するため、個人データのアクセスと削除を求める顧客の要求は、内で管理する必要があり [!DNL Experience Platform][!DNL Platform]ます。 See the overview on [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) for more information.
 
-個々の GDPR および CCPA データ主体アクセス要求を送信して顧客データにアクセスし、削除する方法は 2 つあります。
+## オプトアウト機能
 
-* Use the [[!DNL Privacy Service UI]](https://privacyui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. See the [Privacy Service user guide](../../privacy-service/ui/overview.md) for step-by-step instructions.
-* Use the [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. 手順については、『[Privacy Service API のチュートリアル](../../privacy-service/api/getting-started.md)』を参照してください。
+[!DNL Real-time CDP] セグメント化の使用例に個人データオプトアウトを含めることができます。 顧客のオプトアウトプリファレンスは、によってキャプチャおよび保存され [!DNL Real-time Customer Profile]、セグメントの述語にBooleanロジック(「AND NOT」)を使用してセグメントからオプトアウトしたユーザーを除外すると、適用できます。
 
-<!-- (Capability will not be available for November GA) 
-## Opt-out capabilities
+詳しくは、Adobe Experience Platform Segmentation Serviceドキュメントで、オプトアウトリクエストの [実行に関するドキュメントを参照してください](../../segmentation/honoring-opt-outs.md) 。
 
-Real-time CDP provides two types of consumer opt-out capabilities:
+## （IAB TCF 2.0のサポート）
 
-1. **General opt-out**: (Waiting on info)
-1. **Segment-level opt-out of sale**: Opt-out of sale requests are captured using the Profile Privacy mixin (see the section on "Handling opt-out requests" in the [Real-time Customer Profile overview](../../profile/home.md) for more information). Using this, you can exclude users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
--->
+[!DNL Real-time CDP] は、( [IAB)で概要を説明しているように、](https://iabeurope.eu/vendor-list-tcf-v2-0/) (TCF)の登録ベンダーリスト [!DNL Transparency & Consent Framework][!DNL Interactive Advertising Bureau] (TCF)の一部です。 TCF 2.0の要件に準拠して、詳細な顧客の同意データを収集 [!DNL Real-time CDP] し、それを保存されている顧客プロファイルに統合できます。 その後、この同意データは、使用事例に応じて、特定のプロファイルが書き出されたオーディエンスセグメントに含まれているかどうかに織り込まれます。
+
+詳細については、 [IAB TCF 2.0サポートの概要 [!DNL Real-time CDP]](./iab/overview.md) ()を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、リアルタイム CDP のプライバシー機能について簡単に説明します。アクセス要求や削除要求を送信する際のベストプラクティスと手順について詳しくは、[Privacy Service のドキュメント](../../privacy-service/home.md)を参照してください。
+This document provided a brief introduction to the privacy capabilities of [!DNL Real-time CDP]. 各機能の詳細については、本ガイド全体にリンクされたドキュメントを参照してください。
