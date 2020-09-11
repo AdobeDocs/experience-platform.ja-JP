@@ -5,10 +5,10 @@ title: スキーマエディターを使用した 2 つのスキーマ間の関�
 description: このドキュメントでは、Experience Platformユーザーインターフェイスのスキーマエディタを使用して、2つのスキーマ間の関係を定義するためのチュートリアルを提供します。
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
+source-git-commit: 348ac63c0b13ddf87bf786a42688962b0b220ded
 workflow-type: tm+mt
-source-wordcount: '933'
-ht-degree: 43%
+source-wordcount: '910'
+ht-degree: 33%
 
 ---
 
@@ -27,29 +27,29 @@ This tutorial requires a working understanding of [!DNL XDM System] and the Sche
 
 * [Experience PlatformのXDMシステム](../home.md):XDMとその実装の概要を、で説明し [!DNL Experience Platform]ます。
 * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
-* [スキーマエディターを使用したスキーマの作成](create-schema-ui.md):を使用する基本的な作業に関するチュートリアル [!DNL Schema Editor]です。
+* [次を使用してスキーマを作成します [!DNL Schema Editor]](create-schema-ui.md)。を使用する基本的な作業に関するチュートリアル [!DNL Schema Editor]です。
 
 ## ソースと宛先のスキーマの定義
 
-この関係で定義される 2 つのスキーマが既に作成されていると想定されます。For demonstration purposes, this tutorial creates a relationship between members of an organization&#39;s loyalty program (defined in a &quot;[!UICONTROL Loyalty Members]&quot; schema) and their favorite hotels (defined in a &quot;[!DNL Hotels]&quot; schema).
+この関係で定義される 2 つのスキーマが既に作成されていると想定されます。For demonstration purposes, this tutorial creates a relationship between members of an organization&#39;s loyalty program (defined in a &quot;[!DNL Loyalty Members]&quot; schema) and their favorite hotel (defined in a &quot;[!DNL Hotels]&quot; schema).
 
 >[!IMPORTANT]
 >
 >関係を確立するには、両方のスキーマがプライマリIDを定義し、有効にする必要があり [!DNL Real-time Customer Profile]ます。 スキーマをそれに応じて設定する方法のガイダンスが必要な場合は、「プロファイルの作成」チュートリアルの「スキーマをスキーマで使用できるようにする」のセクションを参照して [](./create-schema-ui.md#profile) ください。
 
-スキーマの関係は、 **ソーススキーマ内の、** 宛先スキーマ内の別のフィールドを参照する専用のフィールドで表されます ****。 In the steps that follow, &quot;[!UICONTROL Loyalty Members]&quot; will be the source schema, while &quot;[!DNL Hotels]&quot; will act as the destination schema.
+スキーマの関係は、 **ソーススキーマ内の、** 宛先スキーマ内の別のフィールドを参照する専用のフィールドで表されます ****。 In the steps that follow, &quot;[!DNL Loyalty Members]&quot; will be the source schema, while &quot;[!DNL Hotels]&quot; will act as the destination schema.
 
 以下の節では、関係が定義される前に、このチュートリアルで使用する各スキーマの構造について説明します。
 
-### [!UICONTROL Loyalty Members スキーマ]
+### [!DNL Loyalty Members] schema
 
-ソーススキーマ「[!UICONTROL Loyality Members]」はXDM [!DNL Individual Profile] クラスに基づいており、UIでスキーマを [作成するためのチュートリアルで構築されたスキーマです](create-schema-ui.md)。 It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. As seen under **[!UICONTROL Schema Properties]**, this schema has been enabled for use in [!DNL Real-time Customer Profile].
+The source schema &quot;[!DNL Loyalty Members]&quot; is based on the [!DNL XDM Individual Profile] class, and is the schema that was constructed in the tutorial for [creating a schema in the UI](create-schema-ui.md). It includes a `loyalty` object under its `_tenantId` namespace, which includes several loyalty-specific fields. One of these fields, `loyaltyId`, serves as the primary identity for the schema under the [!UICONTROL Email] namespace. As seen under **[!UICONTROL Schema Properties]**, this schema has been enabled for use in [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
-### Hotels スキーマ
+### [!DNL Hotels] schema
 
-行き先のスキーマ「[!UICONTROL Hotels]」は、カスタムの「[!UICONTROL Hotels]」クラスに基づいており、ホテルを説明するフィールドが含まれています。 The &quot;[!DNL hotelId]&quot; field serves as the primary identity for the schema under a custom &quot;[!DNL hotelId]&quot; namespace. 「[!UICONTROL 忠誠度メンバー]」と同様、このスキーマも有効になってい [!DNL Real-time Customer Profile]ます。
+宛先スキーマ「[!DNL Hotels]」は、カスタムの「[!DNL Hotels]」クラスに基づいており、ホテルを説明するフィールドが含まれています。 The `hotelId` field serves as the primary identity for the schema under a custom `hotelId` namespace. スキーマと同様に、 [!DNL Loyalty Members] このスキーマもに対して有効になってい [!DNL Real-time Customer Profile]ます。
 
 ![](../images/tutorials/relationship/hotels.png)
 
@@ -57,31 +57,31 @@ This tutorial requires a working understanding of [!DNL XDM System] and the Sche
 
 >[!NOTE]
 >
-> この手順は、ソーススキーマに別のスキーマへの参照として使用する専用の文字列型フィールドがない場合にのみ必要です。このフィールドがソーススキーマで既に定義されている場合は、次の[関係フィールドを定義](#relationship-field)する手順に進んでください。
+>この手順は、ソーススキーマに、ターゲットスキーマへの参照として使用する専用の文字列型フィールドがない場合にのみ必要です。 このフィールドがソーススキーマで既に定義されている場合は、次の[関係フィールドを定義](#relationship-field)する手順に進んでください。
 
 2 つのスキーマ間の関係を定義するには、ソーススキーマに、ターゲットスキーマへの参照として使用する専用のフィールドが必要です。新しい mixin を作成して、このフィールドをソーススキーマに追加することができます。
 
-まず、「**[!UICONTROL Mixins]**」セクションの「**[!UICONTROL 追加]**」をクリックします。
+Start by selecting **[!UICONTROL Add]** in the **[!UICONTROL Mixins]** section.
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-**[!UICONTROL Mixin を追加]**&#x200B;ダイアログが表示されます。ここから、「**[!UICONTROL 新規 mixin を作成]**」をクリックします。表示されるテキストフィールドに、新しい mixin の表示名と説明を入力します。終了したら「**[!UICONTROL mixin を追加]**」をクリックします。
+[!UICONTROL Mixin を追加]ダイアログが表示されます。From here, select **[!UICONTROL Create new mixin]**. 表示されるテキストフィールドに、新しい mixin の表示名と説明を入力します。Select **[!UICONTROL Add mixin]** when finished.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the **[!UICONTROL Mixins]** section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
+The canvas reappears with &quot;[!DNL Favorite Hotel]&quot; appearing in the **[!UICONTROL Mixins]** section. Select the mixin name, then select **[!UICONTROL Add field]** next to the root-level `Loyalty Members` field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-キャンバスの「\_tenantId」名前空間の下に新しいフィールドが表示されます。Under **[!UICONTROL Field Properties]**, provide a field name and display name for the field, and set its type to &quot;[!UICONTROL String]&quot;.
+A new field appears in the canvas under the `_tenantId` namespace. Under **[!UICONTROL Field properties]**, provide a field name and display name for the field, and set its type to &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-完了したら、「**[!UICONTROL 適用]**」をクリックします。
+When finished, select **[!UICONTROL Apply]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-The updated &quot;[!UICONTROL favoriteHotel]&quot; field appears in the canvas. 「**[!UICONTROL 保存]**」をクリックし、変更をスキーマに確定します。
+The updated `favoriteHotel` field appears in the canvas. Select **[!UICONTROL Save]** to finalize your changes to the schema.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
@@ -89,15 +89,15 @@ The updated &quot;[!UICONTROL favoriteHotel]&quot; field appears in the canvas. 
 
 ソーススキーマに専用の参照フィールドが定義されたら、それを関係フィールドとして指定できます。
 
-Select the reference field in the canvas, then scroll down under **[!UICONTROL Field Properties]** until the **[!UICONTROL Relationship]** checkbox appears. このチェックボックスを選択すると、関係フィールドを設定するために必要なパラメーターが表示されます。
+Select the `favoriteHotel` field in the canvas, then scroll down under **[!UICONTROL Field properties]** until the **[!UICONTROL Relationship]** checkbox appears. このチェックボックスを選択すると、関係フィールドを設定するために必要なパラメーターが表示されます。
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
-Select the dropdown for **[!UICONTROL Reference Schema]** and select the destination schema for the relationship (&quot;[!UICONTROL Hotels]&quot; in this example). If the destination schema is enabled for Profile, the **[!UICONTROL Reference Identity Namespace]** field is automatically set to the namespace of the destination schema&#39;s primary identity. スキーマにプライマリ ID が定義されていない場合は、使用する名前空間をドロップダウンメニューから手動で選択する必要があります。終了したら「**[!UICONTROL 適用]**」をクリックします。
+Select the dropdown for **[!UICONTROL Reference schema]** and select the destination schema for the relationship (&quot;[!DNL Hotels]&quot; in this example). If the destination schema is enabled for [!DNL Profile], the **[!UICONTROL Reference identity namespace]** field is automatically set to the namespace of the destination schema&#39;s primary identity. スキーマにプライマリ ID が定義されていない場合は、使用する名前空間をドロップダウンメニューから手動で選択する必要があります。Select **[!UICONTROL Apply]** when finished.
 
 ![](../images/tutorials/relationship/reference-schema-id-namespace.png)
 
-フィールドは、キャンバスに関係として表示され、宛先スキーマの名前と参照 ID 名前空間が表示されます。「**[!UICONTROL 保存]**」をクリックし 、変更を保存し、ワークフローを完了します。
+The `favoriteHotel` field is now highlighted as a relationship in the canvas, displaying the name and reference identity namespace of the destination schema. Select **[!UICONTROL Save]** to save your changes and complete the workflow.
 
 ![](../images/tutorials/relationship/relationship-save.png)
 
