@@ -2,9 +2,10 @@
 product: experience-platform
 audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
+breadcrumb-title: Data Model (XDM) Guide
 user-guide-description: Experience Data Model (XDM) is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to use to communicate with Adobe Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that can deliver insights in a faster, more integrated way.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 92%
