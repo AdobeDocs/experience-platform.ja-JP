@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: カタログとデータセットのヘルプ
+user-guide-title: カタログとデータセットガイド
 user-guide-description: Catalog Service is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the Data Lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '93'
-ht-degree: 96%
+ht-degree: 92%
 
 ---
 
