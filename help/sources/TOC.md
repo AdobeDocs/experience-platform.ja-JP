@@ -2,9 +2,10 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
+breadcrumb-title: Source Connectors Guide
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: 1292e39ea7682b839ea75dd069ce32f1591345b8
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 6%
