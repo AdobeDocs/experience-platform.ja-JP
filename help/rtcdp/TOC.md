@@ -1,13 +1,13 @@
 ---
 product: adobe experience platform
 audience: user
-user-guide-title: リアルタイム顧客データプラットフォームのヘルプ
+user-guide-title: リアルタイム顧客データプラットフォームガイド
 user-guide-description: Built on Adobe Experience Platform, Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
 workflow-type: tm+mt
 source-wordcount: '460'
-ht-degree: 85%
+ht-degree: 84%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 85%
          * [Google 広告](/help/rtcdp/destinations/google-ads-destination.md)
          * [Google 広告拡張機能](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-         * [Googleの顧客一致](/help/rtcdp/destinations/google-customer-match-destination.md)
+         * [Google カスタマーマッチ](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display と Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Google タグ拡張機能](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn Insight タグ拡張機能](/help/rtcdp/destinations/linkedin-extension.md)
