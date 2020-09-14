@@ -5,9 +5,9 @@ solution: Experience Platform
 title: アカウントとデータフローの監視
 topic: overview
 translation-type: tm+mt
-source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
+source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1014'
 ht-degree: 5%
 
 ---
@@ -47,6 +47,14 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 > 「 ![名前](../../images/tutorials/monitor/spectrum-control.png) 」列の「 **[!UICONTROL スペクトル制御]** 」ボタンを使用して、選択したアカウントの新しいソースデータフローを作成します。
 
 ![アカウントを選択](../../images/tutorials/monitor/accounts-sort.png)
+
+また、既存のアカウント情報を編集し、アカウント資格情報を更新することもできます。 編集するアカウント情報の鉛筆アイコンを選択します。
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+「アカウントの **[!UICONTROL 詳細を編集]** 」モーダルが表示されます。 このページから、既存のアカウントの詳細と認証資格情報を更新できます。
+
+![](../../images/tutorials/monitor/edit-account.png)
 
 「 **[!UICONTROL アカウント]** 」ページから、アクセスしたアカウントに関連付けられた既存のデータフローまたはターゲットデータセットのリストを表示できます。 「三点リーダー(`...`)」ボタンを選択し、選択したデータフローで使用可能なオプションを表示します。 これらのオプションについては、以下で詳しく説明します。
 
