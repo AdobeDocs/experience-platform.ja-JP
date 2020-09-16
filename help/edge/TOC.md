@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience PlatformWeb SDKヘルプ
 breadcrumb-title: Web SDK Guide
-user-guide-description: The Adobe Experience Platform Web SDK is a client-side JavaScript library that allows you to interact with various Adobe Experience Cloud services through the Adobe Experience Platform Edge Network.
+user-guide-description: Interact with Adobe Experience Cloud services through the Adobe Experience Platform Edge Network.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: 8ecb33f39578f13f2f3fe19bc1f274b89edfba9e
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 70%
