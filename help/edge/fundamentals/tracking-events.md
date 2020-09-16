@@ -5,10 +5,10 @@ description: Experience Platform Web SDK のイベントのトラッキング方
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 79%
+source-wordcount: '1116'
+ht-degree: 56%
 
 ---
 
@@ -27,6 +27,7 @@ Adobe Experience Cloud に送信されるデータは、次の 2 つのカテゴ
 XDM データは、Adobe Experience Platform 内で作成したスキーマとコンテンツと同じ構造を持つオブジェクトです。[スキーマの作成方法の詳細について説明します。](../../xdm/tutorials/create-schema-ui.md)
 
 Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
+
 
 ```javascript
 alloy("sendEvent", {
@@ -53,7 +54,37 @@ alloy("sendEvent", {
 
 ### `eventType` の設定
 
-XDM エクスペリエンスイベントには、`eventType` フィールドがあります。ここには、レコードのプライマリイベントタイプが表示されます。これは、`xdm` オプションの一部として渡すことができます。
+In an XDM experience event, there is an optional `eventType` field. ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信するイベントを区別するのに役立ちます。 XDMには、ユーザが使用できる定義済みのイベントタイプがいくつか用意されています。また、ユースケースに合わせて独自のカスタムイベントタイプを常に作成することもできます。 以下は、XDMが提供するあらかじめ定義されたイベントタイプのリストです。
+
+
+| **イベントタイプ:** | **定義:** |
+| ---------------------------------- | ------------ |
+| advertising.completes | 時間指定メディアアセットが視聴され、完了したかどうかを示します。これは、ビデオ全体が視聴されたことを意味するわけではありません。閲覧者は先にスキップした可能性があります |
+| advertising.timePlayed | 特定の時間指定メディアアセットに対するユーザーの滞在時間を示します。 |
+| advertising.federated | エクスペリエンスイベントがデータフェデレーション（顧客間のデータ共有）を通じて作成されたかどうかを示します。 |
+| advertising.clicks | 広告に対するクリック操作 |
+| advertising.conversions | パフォーマンス評価のイベントをトリガーする、お客様が事前に定義したアクション |
+| advertising.firstQuartiles | デジタルビデオ広告が通常の速度で25%再生されました |
+| advertising.impressions | エンドユーザーに対する広告のインプレッション（複数可）で、閲覧可能性がある |
+| advertising.midpoints | デジタルビデオ広告が通常の速度で50%再生されました |
+| advertising.starts | デジタルビデオ広告の再生が開始されました |
+| advertising.thirdQuartiles | デジタルビデオ広告が通常の速度で75%再生されました |
+| web.webpagedetails.pageViews | Webページの表示が発生しました |
+| web.webinteraction.linkClicks | Webリンクのクリックが発生しました |
+| commerce.checkouts | 製品リストのチェックアウトプロセス中のイベント。チェックアウトプロセスに複数のステップがある場合は、複数のチェックアウトアクションが存在する可能性があります。複数のステップがある場合、イベント時間の情報と参照先のページまたはエクスペリエンスが使用され、個々のイベントが順番に表すステップが識別されます。 |
+| commerce.productListAdds | 製品の製品リストへの追加。買い物かごに商品を追加する例 |
+| commerce.productListOpens | 新しい製品リストの初期化。例：買い物かごが作成される場合 |
+| commerce.productListRemovals | 製品エントリの製品リストからの削除例えば、製品が買い物かごから削除される場合 |
+| commerce.productListReopens | アクセスできなくなった（破棄された）製品リストが、ユーザーによって再度アクティブ化されました。リマーケティングアクティビティを使用した例 |
+| commerce.productListViews | 製品リストの表示が発生しました |
+| commerce.productViews | 製品の表示が発生しました |
+| commerce.purchases | 注文が受け入れられました。コマースコンバージョンで必要なアクションは購入のみです。購入では、商品リストが参照されている必要があります |
+| commerce.saveForLaters | 製品のリストは、今後の使用のために保存されます。product wishリストの例 |
+| delivery.feedback | 配信のフィードバックイベント。 電子メール配信用のフィードバックイベントの例 |
+
+
+これらのイベントタイプは、Launch拡張機能を使用する場合や、Launchを使用せずに常に渡すことができる場合は、ドロップダウンに表示されます。 They can be passed in as part of the `xdm` option.
+
 
 ```javascript
 alloy("sendEvent", {
@@ -73,6 +104,7 @@ alloy("sendEvent", {
 
 または、`eventType` オプションを使用して、`type` をイベントコマンドに渡すことができます。これはバックグラウンドで XDM データに追加されます。`type` をオプションとして指定すると、XDM ペイロードを変更しなくても、より簡単に `eventType` を設定できるようになります。
 
+
 ```javascript
 var myXDMData = { ... };
 
@@ -85,6 +117,7 @@ alloy("sendEvent", {
 ### データセットIDの上書き
 
 場合によっては、設定UIで設定されたデータセット以外のデータセットにイベントを送信する必要があります。 その場合は、 `datasetId``sendEvent` コマンドでオプションを設定する必要があります。
+
 
 ```javascript
 var myXDMData = { ... };
@@ -103,6 +136,7 @@ alloy("sendEvent", {
 ## sendBeacon API の使用
 
 Web ページのユーザーが離脱する直前にイベントデータを送信するのは、困難な場合があります。リクエストに時間がかかりすぎると、ブラウザーによってリクエストがキャンセルされる場合があります。一部のブラウザーではこの間に、データを簡単に収集できるよう、`sendBeacon` と呼ばれる Web 標準 API が実装されています。`sendBeacon` を使用する場合、ブラウザーはグローバルブラウジングコンテキストで Web リクエストをおこないます。これは、ブラウザーがバックグラウンドでビーコンリクエストをおこない、ページナビゲーションを保持しないことを意味します。To tell Adobe Experience Platform [!DNL Web SDK] to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  次に例を示します。
+
 
 ```javascript
 alloy("sendEvent", {
@@ -125,6 +159,7 @@ alloy("sendEvent", {
 ## イベントからの応答の処理
 
 イベントからの応答を処理する場合は、次のように成功または失敗の通知を受け取ることができます。
+
 
 ```javascript
 alloy("sendEvent", {
@@ -150,6 +185,7 @@ alloy("sendEvent", {
 ## イベントのグローバルな変更 {#modifying-events-globally}
 
 イベントのフィールドをグローバルに追加、削除、または変更する場合は、`onBeforeEventSend` コールバックを設定できます。このコールバックは、イベントが送信されるたびに呼び出されます。このコールバックは、`xdm` フィールドを含むイベントオブジェクトで渡されます。イベントで送信されるデータを変更する場合は、`event.xdm` を変更します。
+
 
 ```javascript
 alloy("configure", {
