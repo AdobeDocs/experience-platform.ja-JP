@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 電子メールマーケティングの宛先の作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
 workflow-type: tm+mt
-source-wordcount: '1624'
-ht-degree: 80%
+source-wordcount: '1636'
+ht-degree: 78%
 
 ---
 
@@ -599,7 +599,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`：前述の手順で取得したデータフローを使用します。
 * `{ETAG}`：前述の手順で取得した ETag を使用します。
-* `{SEGMENT_ID}`：この宛先に書き出すセグメント ID を指定します。アクティブ化するセグメントのセグメント ID の取得方法を確認するには、https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/ にアクセスして、`GET /segment/jobs` 操作を探します。
+* `{SEGMENT_ID}`：この宛先に書き出すセグメント ID を指定します。アクティブ化するセグメントのセグメントIDを取得するには、https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/ **に移動し**、左側のナビゲーションメニューで **[!UICONTROL Segmentation Service API]** ( `GET /segment/definitions` Segment Definitions **[!UICONTROL )を選択し、「]** Segment Definitions」で操作を探します。
 * `{PROFILE_ATTRIBUTE}`：例えば、`"person.lastName"` などです。
 
 **応答** 
