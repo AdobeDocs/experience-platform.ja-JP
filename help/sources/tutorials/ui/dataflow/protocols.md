@@ -5,9 +5,9 @@ title: UIでのプロトコルコネクタのデータフローの設定
 topic: overview
 description: データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みタスクです。 このチュートリアルでは、プロトコルアカウントを使用して新しいデータフローを構成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1370'
 ht-degree: 3%
 
 ---
@@ -75,9 +75,13 @@ The **[!UICONTROL Select schema]** dialog appears. 新しいデータセット�
 
 必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパーの機能について詳しくは、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../ingestion/tutorials/map-a-csv-file.md)。
 
-ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」をクリックします。
+>[!TIP]
+>
+>[!DNL Platform] 選択したターゲットスキーマまたはデータセットに基づいて、自動マップされたフィールドに高度な推奨機能を提供します。 使用事例に合わせて手動でマッピングルールを調整できます。
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」を選択します。
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
 ## インジェストのスケジュール設定
 
