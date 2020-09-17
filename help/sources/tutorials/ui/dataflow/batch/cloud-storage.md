@@ -5,9 +5,9 @@ title: UIでのクラウドストレージバッチコネクタのデータフ�
 topic: overview
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
 workflow-type: tm+mt
-source-wordcount: '1584'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -93,9 +93,15 @@ The **[!UICONTROL Select schema]** dialog appears. 新しいデータセット�
 >
 >[!DNL Platform] 選択したターゲットスキーマまたはデータセットに基づいて、自動マップされたフィールドに高度な推奨機能を提供します。 使用事例に合わせて手動でマッピングルールを調整できます。
 
-ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」を選択します。
-
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+選択したデータセットから最大100行のサンプルデータのマッピング結果を表示するには、 **[!UICONTROL プレビューデータ]** (Data Select Data)を選択します。
+
+マッピング結果を検証する際に必要な重要な情報なので、プレビュー時に、ID列が最初のフィールドとして優先付けされます。
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
+
+ソースデータがマッピングされたら、「 **[!UICONTROL 閉じる]**」を選択します。
 
 ## インジェストのスケジュール設定
 
