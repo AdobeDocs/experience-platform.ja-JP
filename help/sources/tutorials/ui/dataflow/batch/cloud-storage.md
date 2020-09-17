@@ -5,9 +5,9 @@ title: UIでのクラウドストレージバッチコネクタのデータフ�
 topic: overview
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1584'
 ht-degree: 3%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 3%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
+* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-* [[!DNL リアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 さらに、このチュートリアルでは、クラウドストレージアカウントを確立している必要があります。 UIで異なるクラウドストレージアカウントを作成するためのチュートリアルのリストは、 [source connectorsの概要に記載されています](../../../../home.md)。
 
@@ -88,6 +88,10 @@ The **[!UICONTROL Select schema]** dialog appears. 新しいデータセット�
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
 必要に応じて、フィールドを直接マップするか、マッパー関数を使用してソースデータを変換し、計算値や計算値を抽出することができます。 データマッピングおよびマッパーの機能について詳しくは、CSVデータのXDMスキーマフィールドへの [マッピングに関するチュートリアルを参照してください](../../../../../ingestion/tutorials/map-a-csv-file.md)。
+
+>[!TIP]
+>
+>[!DNL Platform] 選択したターゲットスキーマまたはデータセットに基づいて、自動マップされたフィールドに高度な推奨機能を提供します。 使用事例に合わせて手動でマッピングルールを調整できます。
 
 ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」を選択します。
 
