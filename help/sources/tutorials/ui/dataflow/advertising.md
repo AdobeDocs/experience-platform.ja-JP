@@ -5,9 +5,9 @@ title: UIでの広告コネクタのデータフローの設定
 topic: overview
 description: データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みタスクです。 このチュートリアルでは、広告アカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: 33b0f69c1552957984c131c72a13e88167211295
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1418'
 ht-degree: 4%
 
 ---
@@ -80,9 +80,15 @@ The **[!UICONTROL Select schema]** dialog appears. 新しいデータセット�
 >
 >[!DNL Platform] 選択したターゲットスキーマまたはデータセットに基づいて、自動マップされたフィールドに高度な推奨機能を提供します。 使用事例に合わせて手動でマッピングルールを調整できます。
 
-ソースデータがマッピングされたら、「 **[!UICONTROL 次へ]**」を選択します。
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+選択したデータセットから最大100行のサンプルデータのマッピング結果を表示するには、 **[!UICONTROL プレビューデータ]** (Data Select Data)を選択します。
+
+マッピング結果を検証する際に必要な重要な情報なので、プレビュー時に、ID列が最初のフィールドとして優先付けされます。
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+ソースデータがマッピングされたら、「 **[!UICONTROL 閉じる]**」を選択します。
 
 ## インジェストのスケジュール設定
 
