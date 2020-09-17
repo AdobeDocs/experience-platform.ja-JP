@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ExperienceEvent queries
 topic: queries
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 69%
@@ -36,7 +36,7 @@ SUM(
     ELSE 0 
     END) as viewedParkas
 FROM your_analytics_table 
-WHERE _ACP_YEAR = 2019 AND _ACP_MONTH = 3 
+WHERE TIMESTAMP >= to_timestamp('2019-03-01') AND TIMESTAMP <= to_timestamp('2019-03-31')
 GROUP BY Day 
 ORDER BY Day ASC, pageViews DESC;
 ```
