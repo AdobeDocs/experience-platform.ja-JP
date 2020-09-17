@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Data Science ワークスペース�
 breadcrumb-title: Data Science Workspace Guide
 user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: 638a7ea607ffe269b2c6788324860f3a25f43727
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 88%
+source-wordcount: '204'
+ht-degree: 87%
 
 ---
 
@@ -19,9 +19,10 @@ ht-degree: 88%
 * [Data Science ワークスペースのチュートリアル](walkthrough.md)
 * JupyterLab ノートブック {#jupyterlab}
    * [JupyterLab ユーザガイド](jupyterlab/overview.md)
-   * [ノートブックを使用してデータを分析する](jupyterlab/analyze-your-data.md)
-   * [Jupyter ノートブックでのクエリサービス](jupyterlab/query-service.md)
-   * [Jupyter ノートブックを使用してレシピを作成する](jupyterlab/create-a-recipe.md)
+   * [データアクセス](jupyterlab/access-notebook-data.md)
+   * [データの分析](jupyterlab/analyze-your-data.md)
+   * [クエリサービス](jupyterlab/query-service.md)
+   * [レシピの作成](jupyterlab/create-a-recipe.md)
    * [Gitを使用したJupyterLabでのコラボレーション](jupyterlab/using-git-for-collaboration.md)
 * Senesi Machine Learning API {#api}
    * [はじめに](api/getting-started.md)
@@ -61,7 +62,6 @@ ht-degree: 88%
    * [モデルをサービスとして公開（UI）](models-recipes/publish-model-service-ui.md)
    * [モデルをサービスとして公開（API）](models-recipes/publish-model-service-api.md)
    * [サービス（UI）の自動トレーニングとスコアリングのスケジュール設定](models-recipes/schedule-models-ui.md)
-* [レシピとノートブックの移行ガイド](recipe-notebook-migration.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
 * [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
