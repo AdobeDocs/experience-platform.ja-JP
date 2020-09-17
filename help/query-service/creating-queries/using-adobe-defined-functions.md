@@ -4,7 +4,7 @@ solution: Experience Platform
 title: アドビ定義関数
 topic: queries
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 71%
@@ -49,7 +49,7 @@ FROM  (
         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
         AS session
         FROM your_analytics_table
-        WHERE _ACP_YEAR = 2018
+        WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
       )
 LIMIT 100;
 ```
@@ -76,7 +76,7 @@ FROM
       AS session,
           web.webPageDetails.pageviews.value as PageViews
       FROM your_analytics_table
-      WHERE _ACP_YEAR = 2018
+      WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
     )
 GROUP BY Day 
 ORDER BY Day DESC 
@@ -120,7 +120,7 @@ SELECT
       AS LastMemberLevel,
   commerce.purchases.value as Orders
 FROM your_analytics_table 
-WHERE _ACP_YEAR=2018 AND _ACP_MONTH=4
+WHERE TIMESTAMP >= to_timestamp('2018-04-01') AND TIMESTAMP <= to_timestamp('2018-04-30')
 LIMIT 50;
 ```
 
@@ -141,7 +141,7 @@ FROM
       AS LastMemberLevel,
   commerce.purchases.value as Orders
 FROM your_analytics_table 
-WHERE _ACP_YEAR=2018 AND _ACP_MONTH=4
+WHERE TIMESTAMP >= to_timestamp('2018-04-01') AND TIMESTAMP <= to_timestamp('2018-04-30')
 )
 GROUP BY LastMemberLevel 
 ORDER BY MemberLevelOrders DESC
@@ -178,7 +178,7 @@ SELECT
               ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING).value
           AS next_pagename
 FROM your_analytics_table
-WHERE _ACP_YEAR=2018 
+WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31') 
 LIMIT 10;
 ```
 
@@ -231,7 +231,7 @@ LIMIT 10;
                 ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) 
         AS session
       FROM your_analytics_table
-      WHERE _ACP_YEAR=2018)
+      WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
     )
   WHERE SessionPageDepth=1
   GROUP BY PageName, PageName_2, PageName_3, PageName_4, PageName_5
