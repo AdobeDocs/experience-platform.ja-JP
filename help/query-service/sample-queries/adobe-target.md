@@ -4,7 +4,7 @@ solution: Experience Platform
 title: クエリ例
 topic: queries
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 79%
@@ -51,10 +51,7 @@ FROM
     date_format(from_utc_timestamp(timestamp, 'America/New_York'), 'yyyy-MM-dd HH') AS Hour,
     EXPLODE(_experience.target.activities.activityID) AS ActivityID
   FROM adobe_target_experience_events
-  WHERE
-    _ACP_YEAR = {target_year} AND 
-    _ACP_MONTH = {target_month} AND 
-    _ACP_DAY = {target_day} AND 
+  WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
     _experience.target.activities IS NOT NULL
 )
 GROUP BY Hour, ActivityID
@@ -72,9 +69,7 @@ SELECT
 FROM adobe_target_experience_events
 WHERE
   array_contains( _experience.target.activities.activityID, {Activity ID} ) AND 
-  _ACP_YEAR = {target_year} AND 
-  _ACP_MONTH = {target_month} AND 
-  _ACP_DAY = {target_day} AND 
+    TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
   _experience.target.activities IS NOT NULL
 GROUP BY Hour, ActivityID
 ORDER BY Hour DESC
@@ -102,9 +97,7 @@ FROM
       EXPLODE(_experience.target.activities) AS Activities
     FROM adobe_target_experience_events
     WHERE 
-      _ACP_YEAR = {target_year} AND 
-      _ACP_MONTH = {target_month} AND 
-      _ACP_DAY = {target_day} AND 
+      TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
       _experience.target.activities IS NOT NULL
   )
   WHERE Activities.activityID = {activity_id}
@@ -135,9 +128,7 @@ FROM
       EXPLODE(_experience.target.activities) AS Activities
     FROM adobe_target_experience_events
     WHERE 
-      _ACP_YEAR = {target_year} AND 
-      _ACP_MONTH = {target_month} AND 
-      _ACP_DAY = {target_day} AND 
+      TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
       _experience.target.activities IS NOT NULL
   )
 )
@@ -162,9 +153,7 @@ FROM
     EXPLODE(_experience.target.activities) AS Activities
   FROM adobe_target_experience_events
   WHERE
-    _ACP_YEAR = {target_year} AND 
-    _ACP_MONTH = {target_month} AND 
-    _ACP_DAY = {target_day} AND 
+    TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
     _experience.target.activities IS NOT NULL
 )
 GROUP BY Hour, Activities.activityid
@@ -204,9 +193,7 @@ FROM
         EXPLODE(_experience.target.activities) AS Activities
       FROM adobe_target_experience_events
       WHERE 
-        _ACP_YEAR = {target_year} AND
-        _ACP_MONTH = {target_month} AND 
-        _ACP_DAY = {target_day} AND 
+        TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
         _experience.target.activities IS NOT NULL
       LIMIT 1000000
     )
@@ -228,9 +215,7 @@ SELECT
 FROM
   adobe_target_experience_events
 WHERE
-  _ACP_YEAR= {target_year} AND 
-  _ACP_MONTH= {target_month} AND 
-  _ACP_DAY= {target_day}
+  TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
   GROUP BY _experience.target.mboxname ORDER BY records DESC
 LIMIT 100
 ```
