@@ -4,10 +4,10 @@ solution: Experience Platform
 title: XDM スキーマへの CSV ファイルのマッピング
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 56%
+source-wordcount: '1350'
+ht-degree: 54%
 
 ---
 
@@ -61,6 +61,10 @@ The **[!UICONTROL Sample data]** section appears once the file is uploaded, show
 
 「**[!UICONTROL マッピング]**」手順が表示されます。CSV ファイルの列は「**[!UICONTROL ソースフィールド]**」の下にリストされ、対応する XDM スキーマフィールドが「**[!UICONTROL ターゲットフィールド]**」の下にリストされます。未選択のターゲットフィールドは赤で囲まれます。フィルターフィールドオプションを使用して、使用可能なソースフィールドのリストを絞り込むことができます。
 
+>[!TIP]
+>
+>[!DNL Platform] 選択したターゲットスキーマまたはデータセットに基づいて、自動マップされたフィールドに高度な推奨機能を提供します。 使用事例に合わせて手動でマッピングルールを調整できます。
+
 CSV列をXDMフィールドにマップするには、列の対応するターゲットフィールドの横にあるスキーマアイコンを選択します。
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -69,17 +73,9 @@ CSV列をXDMフィールドにマップするには、列の対応するター�
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-「**[!UICONTROL マッピング]**」画面が再び表示され、選択した XDM フィールドが「**[!UICONTROL ターゲットフィールド]**」の下に表示されます。
+マッピングされていない残りのソースフィールドの手順を完了すると、 **[!UICONTROL マッピング]** 画面が再表示され、選択したXDMフィールドが **[!UICONTROL ターゲットフィールドの下に表示されます]**。
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-特定の CSV 列をマッピングしない場合は、ターゲットフィールドの横にある&#x200B;**削除アイコン**&#x200B;をクリックして、マッピングを削除できます。「すべてのマッピングを **[!UICONTROL クリア」ボタンを選択して、すべてのマッピングを削除することもできます]**。
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the top of the **[!UICONTROL Source Field]** list.
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 フィールドをマッピングする際に、入力ソースフィールドに基づいて値を計算する関数を含めることもできます。詳しくは、付録の「[マッピング関数](#mapping-functions)」の節を参照してください。
 
@@ -89,7 +85,7 @@ If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the
 
 先に進むには、 **[!UICONTROL 追加]** 計算フィールドボタンを選択します。
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 計算済みフィールド **[!UICONTROL を作成]** パネルが表示されます。 左側のダイアログボックスには、計算フィールドでサポートされるフィールド、関数、演算子が含まれています。 いずれかのタブを選択して、式エディタに関数、フィールドまたは演算子を追加する開始を行います。
 
