@@ -4,7 +4,7 @@ solution: Experience Platform
 title: データセットの結合
 topic: queries
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 100%
@@ -29,7 +29,7 @@ SELECT
 FROM your_analytics_table a 
      JOIN custom_operating_system_lookup b 
       ON a._experience.analytics.environment.operatingsystemID = b.operatingsystemid 
-WHERE _ACP_YEAR=2018 
+WHERE TIMESTAMP >= ('2018-01-01') AND TIMESTAMP <= ('2018-12-31')
 GROUP BY OperatingSystem 
 ORDER BY PageViews DESC
 LIMIT 50;
