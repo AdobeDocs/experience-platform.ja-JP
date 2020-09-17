@@ -5,7 +5,7 @@ title: ノートブックを使用したデータの分析
 topic: Tutorial
 description: このチュートリアルでは、Data Science Workspace に組み込まれている Jupyter ノートブックを使用してデータへのアクセス、データの調査、データの視覚化をおこなう方法について説明します。
 translation-type: tm+mt
-source-git-commit: 33b14fed0d52792de0486897c11dd86c1ea2dd45
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '1731'
 ht-degree: 83%
@@ -41,7 +41,7 @@ When launching [!DNL JupyterLab], we are presented with a web-based interface fo
 
 In the [!DNL Adobe Experience Platform] UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. 次のようなページが表示されます。
 
-![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
+![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
 In our tutorial, we will be using [!DNL Python] 3 in the Jupyter Notebook to show how to access and explore the data. ランチャーページには、サンプルのノートブックが用意されています。We will be using the Retail Sales recipe for [!DNL Python] 3.
 
