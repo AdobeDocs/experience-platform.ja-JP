@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Segmentation Serviceユーザーガイド
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 27%
+source-wordcount: '1452'
+ht-degree: 24%
 
 ---
 
@@ -41,7 +41,19 @@ Working with segment definitions requires an understanding of the various [!DNL 
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-このビューには、評価方法、作成日、最終変更日など、セグメント定義に関する情報が表示されます。
+この表示リストでは、分類、切り捨て、プロファイル数、評価方法、作成日、最終変更日など、セグメント定義に関する情報を説明します。
+
+内訳には、次の各ステータスに属するプロファイルの割合を示す棒グラフが表示されます。 [!UICONTROL 入力]、 [!UICONTROL 実現]、 [!UICONTROL 終了]。
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| ステータス | 説明 |
+| ------ | ----------- |
+| 入力済み | セグメント内の新しいプロファイル。 |
+| 実現 | セグメント内に残った既存のプロファイル。 |
+| 終了 | セグメントから離れる既存のプロファイル。 |
+
+チャーンは、セグメント定義内でセグメントジョブを最後に実行した時と比較して変化するプロファイルの割合を表し、プロファイル数は、そのセグメントに該当するプロファイルの合計数を表します。
 
 評価方法は、ストリーミングまたはバッチのいずれかです。ストリーミングセグメントは、データがシステムに入力されるたびに評価されます。バッチセグメントは、設定されたスケジュールに従って評価されます。
 
