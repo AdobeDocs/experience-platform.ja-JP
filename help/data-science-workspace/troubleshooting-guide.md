@@ -5,10 +5,10 @@ title: Data Science Workspace トラブルシューティングガイド
 topic: Troubleshooting
 description: このドキュメントでは、Adobe Experience Platform Data Science Workspace に関するよくある質問に対する回答を示します。
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 41%
+source-wordcount: '750'
+ht-degree: 37%
 
 ---
 
@@ -112,3 +112,7 @@ For a complete list of pre-installed [!DNL Python] libraries, see the [appendix 
 ```
 
 For more information on [!DNL Spark] cluster resource configuration, including the complete list of configurable properties, see the [JupyterLab User Guide](./jupyterlab/overview.md#kernels).
+
+## 大きなデータセットに対して特定のタスクを実行しようとするとエラーが発生するのはなぜですか。
+
+例えば、 `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` This is the driver or a executor is running of memory. データ制限の詳細および大きなデータセットでタスクを実行する方法については、JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md) documentationを参照してください。 通常、このエラーは、をからに変更することで解決でき `mode` ま `interactive``batch`す。
