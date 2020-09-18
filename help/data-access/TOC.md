@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform データアクセス
 breadcrumb-title: Data Access Guide
-user-guide-description: Data Access supports Adobe Experience Platform by providing user tools focused on the discoverability and accessibility of ingested datasets within Experience Platform.
+user-guide-description: Discover and access ingested datasets within Platform.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: d7b9d2e78273999432355006dff25af6ecfabc25
 workflow-type: tm+mt
 source-wordcount: '31'
 ht-degree: 67%
