@@ -5,7 +5,7 @@ title: Jupyter ノートブックのクエリサービス
 topic: Tutorial
 description: Adobe Experience Platform を使用すると、クエリサービスを標準機能として JupyterLab に統合することにより、Data Science Workspace で構造化照会言語（SQL）を使用できます。このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例のサンプルSQLクエリを示します。
 translation-type: tm+mt
-source-git-commit: 69c466658e1cb41f4da957148e63b962ad975a21
+source-git-commit: f1af460ca139d6105e8e6bbbf62809d72ef730ee
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 65%
@@ -31,7 +31,7 @@ This tutorial demonstrates sample SQL queries for common use cases to explore, t
    - [[!DNL Experience Data Model (XDM)とXDM System]](../../xdm/home.md)
    - [[!DNLクエリサービス]](../../query-service/home.md)
    - [[!DNLクエリサービスSQL構文]](../../query-service/sql/overview.md)
-   - [Adobe Analytics]
+   - Adobe Analytics
 
 ## アクセス [!DNL JupyterLab] および [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
