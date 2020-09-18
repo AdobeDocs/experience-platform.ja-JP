@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: Query Service Guide
-user-guide-description: Adobe Experience Platform Query Service allows you to use standard SQL to query data in Experience Platform. Using Query Service, you can join any dataset in the Data Lake and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into Real-time Customer Profile.
+user-guide-description: Use standard SQL to query data in Platform, letting you join datasets in the Data Lake and capture results for use in reporting, machine learning, or ingestion into Real-time Customer Profile.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: dfe87a0d3989c4f977afa1a03d437f07bfe15dc5
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 97%
