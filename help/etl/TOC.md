@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform ETL
+user-guide-title: Adobe Experience PlatformETLガイド
 breadcrumb-title: ETL Guide
-user-guide-description: The ETL (Extract, Transform, Load) integration guide outlines general steps for creating secure, high-performance connectors for ingesting data.
+user-guide-description: Learn the general steps for creating secure, high-performance connectors for ingesting data into Platform.
 translation-type: tm+mt
-source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
+source-git-commit: ab90919bcc478eac9fce02f5a4104cc251035b1a
 workflow-type: tm+mt
-source-wordcount: '26'
-ht-degree: 88%
+source-wordcount: '27'
+ht-degree: 70%
 
 ---
 
