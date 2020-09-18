@@ -5,10 +5,10 @@ title: Data Science Workspace の概要
 topic: overview
 description: このガイドでは、Data Science Workspaceに関連する主要な概念の概要を説明します。
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
 workflow-type: tm+mt
-source-wordcount: '2584'
-ht-degree: 74%
+source-wordcount: '2578'
+ht-degree: 73%
 
 ---
 
@@ -196,7 +196,7 @@ You can also import a recipe in to [!DNL Data Science Workspace] and take advant
 
 ![](./images/home/evaluation_metrics.png)
 
-Visit [this section](https://docs.adobe.com/content/help/ja-JP/experience-platform/data-science-workspace/home.html) for tutorials on how to train and evaluate models in [!DNL Data Science Workspace].
+でのモデルのトレーニングと評価方法については、 [API](./models-recipes/train-evaluate-model-api.md) または [UI](./models-recipes/train-evaluate-model-ui.md) チュートリアルを参照してく [!DNL Data Science Workspace]ださい。
 
 ### モデルの運用
 
@@ -206,7 +206,7 @@ When you&#39;ve selected the best trained recipe to address your business needs,
 
 ## 次の手順
 
-[!DNL Data Science Workspace] は、あらゆるスキルレベルのデータサイエンティストのために、データ収集からアルゴリズムやインテリジェントサービスに至るまでのデータサイエンスワークフローを合理化および簡素化します。With the sophisticated tools [!DNL Data Science Workspace] provides, you can significantly shorten the time from data to insights.
+[!DNL Data Science Workspace] データ収集からアルゴリズム、あらゆるスキルレベルのデータ科学者向けのインテリジェントサービスまで、データ科学ワークフローを合理化し、シンプル化します。 With the sophisticated tools [!DNL Data Science Workspace] provides, you can significantly shorten the time from data to insights.
 
 More importantly, [!DNL Data Science Workspace] puts the data science and algorithmic optimization capabilities of Adobe&#39;s leading marketing platform in the hands of enterprise data scientists. 企業は初めて、独自のアルゴリズムを Platform に取り入れ、アドビの強力な機械学習機能と AI 機能を利用して、高度にパーソナライズされた顧客体験を大規模に提供できるようになりました。
 
