@@ -5,7 +5,7 @@ title: Jupyter ノートブックを使用したレシピの作成
 topic: Tutorial
 description: このチュートリアルでは、2 つの主なセクションについて説明します。まず、JupyterLab ノートブック内のテンプレートを使用して機械学習モデルを作成します。次に、JupyterLab 内でノートブックをレシピワークフローに導き、Data Science Workspace 内でレシピを作成します。
 translation-type: tm+mt
-source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 84%
@@ -38,7 +38,7 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 
 ランチャーからRecipe Builderノートブックをクリックすると、タブにノートブックが開きます。 ノートブックで使用されるテンプレートは、[こちらのパブリックリポジトリー](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)にもある Python 小売売上予測レシピです。
 
-ツールバーには、「**[!UICONTROL トレーニング]**」、「**[!UICONTROL スコアリング]**」、「**[!UICONTROL レシピの作成]**」の 3 つのアクションがあります。These icons only appear in the [!UICONTROL Recipe Builder] notebook. これらのアクションに関する詳細は、ノートブックでレシピを作成した後に、[トレーニングとスコアリング](#training-and-scoring)の節で説明します。
+You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. これらのアクションに関する詳細は、ノートブックでレシピを作成した後に、[トレーニングとスコアリング](#training-and-scoring)の節で説明します。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
