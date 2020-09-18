@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform セグメント化サービスのヘルプ
 breadcrumb-title: Segmentation Service Guide
-user-guide-description: Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your Real-time Customer Profile data. These segments are centrally configured and maintained on Platform, and are readily accessible by any Adobe application.
+user-guide-description: Build segments and generate audiences from your Real-time Customer Profile data.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: d7b9d2e78273999432355006dff25af6ecfabc25
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 87%
