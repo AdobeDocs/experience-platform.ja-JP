@@ -5,9 +5,9 @@ title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 description: 'インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。 '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
 workflow-type: tm+mt
-source-wordcount: '1980'
+source-wordcount: '1979'
 ht-degree: 3%
 
 ---
@@ -238,7 +238,7 @@ CEEミックスインには、有用なインサイトを生成するために�
 
 の必須サブフィールドの詳細については、 `xdm:productListItems`marketing sechma [](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) 仕様を参照してください。
 
-## データのマッピングと取り込み(#mapping)
+## データのマッピングと取り込み {#mapping}
 
 マーケティングイベントのデータをCEEスキーマにマッピングできるかどうかを判断したら、次の手順はどのデータを取り込むかを決定することで [!DNL Intelligent Services]す。 で使用されるすべての履歴データは、4か月のデータの最小期間に加えて、ルックバック期間として使用される日数に該当する [!DNL Intelligent Services] 必要があります。
 
