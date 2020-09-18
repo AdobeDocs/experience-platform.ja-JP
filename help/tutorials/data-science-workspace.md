@@ -5,10 +5,10 @@ title: Data Science Workspace のチュートリアル
 topic: tutorial
 description: Adobe Experience Platformデータサイエンスワークスペースでは、機械学習と人工知能を使用して、データからインサイトを作成します。 Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測をおこなうことを支援します。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 10c9ce66b0fb3b5d1be931f37d95d283673bef15
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 17%
+source-wordcount: '1297'
+ht-degree: 18%
 
 ---
 
@@ -41,10 +41,18 @@ Senesi Machine Learning APIを使用してCRUD操作を実行する際に必要�
 - インター [!DNL JupyterLab] フェイスにアクセスし、理解します。
 - コードセルと内の利用可能なカーネルを理解し [!DNL JupyterLab]ます。
 - GPUとメモリサーバーの設定を [!DNL Python]/Rで理解します。
-- ノートブックを使用してデータを読み取り、クエリ [!DNL Platform] します。
-- ノートブックのデータ制限を理解します。
 
 詳細については、 [JupyterLabユーザーガイドを参照してください](../data-science-workspace/jupyterlab/overview.md)。
+
+## JupterLabノートブックでのデータアクセス
+
+現在、Data Science WorkspaceのJupyterLabは、 [!DNL Python]、R、PySpark、およびScala用のノートブックをサポートしています。 サポートされる各カーネルは、ノートブック内のデータセットから Platform データを読み取るための組み込み機能を備えてます。However, support for paginating data is limited to [!DNL Python] and R notebooks. このガイドでは、JupyterLabノートブックを使用してデータにアクセスする方法について説明します。
+
+**このガイドは次の目的に役立ちます。**
+- Python、R、PySpark、またはScalaノートブックを使用して、Platformのデータを読み取り、書き込み、クエリします。
+- 各ノートブックタイプの読み取り制限事項を理解します。
+
+詳細については、 [JupterLab Notebookデータアクセス開発者ガイドを参照してください](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## レシピオーサリング用のパッケージ [!DNL Docker] ソースファイル
 
