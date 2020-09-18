@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 判定サービス
 breadcrumb-title: Decisioning Service Guide
-user-guide-description: Decisioning Service provides the capability to create personalized, optimized, and orchestrated experiences in applications running on Adobe Experience Platform. Using Decisioning Service, you can determine the best option from a set of available choices. These options, also called alternatives, can be offers, product recommendations, content components for a web experience, conversation scripts, and actions to take.
+user-guide-description: Create personalized, optimized, and orchestrated experiences in Adobe applications by determining the best option from a set of available choices.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 94%
