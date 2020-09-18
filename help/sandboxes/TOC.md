@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ヘルプのサンドボックス
 breadcrumb-title: Sandoxes Guide
-user-guide-description: Adobe Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications. Using sandboxes, you can run multiple digital experience applications in parallel and cater to the development, testing, and deployment of these applications while ensuring operational compliance.
+user-guide-description: Partition a single Platform instance into separate virtual environments for development, testing, and deployment of applications.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 95%
