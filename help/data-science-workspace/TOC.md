@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science ワークスペースヘルプ
 breadcrumb-title: Data Science Workspace Guide
-user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.
+user-guide-description: Use machine learning to develop, train, and score models and recipes with Adobe Sensei and JupyterLab Notebooks.
 translation-type: tm+mt
-source-git-commit: 638a7ea607ffe269b2c6788324860f3a25f43727
+source-git-commit: 53137238022a08e38bc00888c1b9df53ff911271
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 87%
