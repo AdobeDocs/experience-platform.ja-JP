@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: Data Ingestion Guide
-user-guide-description: Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services.
+user-guide-description: Bring in your data to Platform through batch or streaming ingestion.
 translation-type: tm+mt
-source-git-commit: 2a5d6a9462950007d00f321ca9f3a3c457a3243e
+source-git-commit: d7b9d2e78273999432355006dff25af6ecfabc25
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 94%
