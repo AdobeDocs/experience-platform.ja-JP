@@ -2,9 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
-user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+user-guide-description: Merge customer data from multiple sources to create individual profiles which offer a single, unified view of customer interactions across channels.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: f0c158364b5547e7ed755823f672cc54b58f0573
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 51%
