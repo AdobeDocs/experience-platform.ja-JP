@@ -5,10 +5,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Data Model (XDM) Guide
 user-guide-description: Use standard classes and mixins to build a robust schema-based data model, standardizing your experience data into a common representation for use in all downstream Platform services.
 translation-type: tm+mt
-source-git-commit: c7a614dd0e51b13bb9df725ec811c4bc860116eb
+source-git-commit: dde48bb5d8c77757e726abb62d0c74e96955c5a7
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 92%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 92%
 * [XDM システムの概要](home.md)
 * XDM スキーマ {#schema}
    * [スキーマ合成の基本](schema/composition.md)
+   * [XDMフィールド型の制約](schema/field-constraints.md)
    * [XDM フィールド辞書](schema/field-dictionary.md)
    * スキーマの使用例 {#use-cases}
       * [プライバシーの同意ミックスイン](schema/privacy-consent.md)
