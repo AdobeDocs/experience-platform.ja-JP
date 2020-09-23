@@ -5,9 +5,9 @@ title: UIでのデータベースコネクタのデータフローの設定
 topic: overview
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、データベースアカウントを使用して新しいデータフローを構成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1445'
 ht-degree: 3%
 
 ---
@@ -68,7 +68,11 @@ The **[!UICONTROL Select dataset]** dialog appears. 使用するデータセッ�
 
 スキーマフィールドを添付するには、[ **[!UICONTROL スキーマの]** 選択]検索バーにスキーマ名を入力します。 ドロップダウンアイコンを選択して、既存のスキーマのリストを表示することもできます。 または、「 **[!UICONTROL アドバンス検索]** 」を選択して、既存のスキーマの各詳細を含む画面にアクセスすることもできます。
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+この手順では、データセットを有効にし、エンティティの属性 [!DNL Real-time Customer Profile] と行動を総合的に表示できます。 すべての有効なデータセットのデータはに含まれ、データフローを保存する際 [!DNL Profile] に変更が適用されます。
+
+ターゲットデータセットを有効にするには、 **[!UICONTROL プロファイルデータセット]** ボタンを切り替え [!DNL Profile]ます。
+
+![create-new-dataset](../../../images/tutorials/dataflow/databases/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」をクリックします。
 
