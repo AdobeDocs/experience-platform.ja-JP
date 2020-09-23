@@ -5,10 +5,10 @@ title: UIでの広告コネクタのデータフローの設定
 topic: overview
 description: データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みタスクです。 このチュートリアルでは、広告アカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 33b0f69c1552957984c131c72a13e88167211295
+source-git-commit: e504e0be465c755a77aa30589731941ca50426d2
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 4%
+source-wordcount: '1467'
+ht-degree: 3%
 
 ---
 
@@ -68,7 +68,11 @@ The **[!UICONTROL Select dataset]** dialog appears. 使用するデータセッ�
 
 スキーマフィールドを添付するには、[ **[!UICONTROL スキーマの]** 選択]検索バーにスキーマ名を入力します。 ドロップダウンアイコンを選択して、既存のスキーマのリストを表示することもできます。 または、「 **[!UICONTROL アドバンス検索]** 」を選択して、既存のスキーマの各詳細を含む画面にアクセスすることもできます。
 
-![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
+この手順では、データセットを有効にし、エンティティの属性 [!DNL Real-time Customer Profile] と行動を総合的に表示できます。 すべての有効なデータセットのデータはに含まれ、データフローを保存する際 [!DNL Profile] に変更が適用されます。
+
+ターゲットデータセットを有効にするには、 **[!UICONTROL プロファイルデータセット]** ボタンを切り替え [!DNL Profile]ます。
+
+![create-new-dataset](../../../images/tutorials/dataflow/advertising/target-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. 新しいデータセットに適用するスキーマを選択し、をクリックし **[!DNL Done]**&#x200B;ます。
 
