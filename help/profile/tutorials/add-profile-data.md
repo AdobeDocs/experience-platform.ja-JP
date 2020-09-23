@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
-solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルへのデータの追加
 topic: tutorial
 description: このチュートリアルでは、リアルタイム顧客プロファイルにデータを追加するために必要な手順について説明します。
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 53%
