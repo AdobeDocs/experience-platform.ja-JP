@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
-solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルの概要
 topic: guide
 description: リアルタイム顧客プロファイルは、様々な企業データアセットのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形でそのデータにアクセスできる汎用参照エンティティストアです。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 translation-type: tm+mt
-source-git-commit: cef27082fec97530031061476b46f60859717825
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 47%
@@ -13,7 +12,7 @@ ht-degree: 47%
 ---
 
 
-# [!DNL Real-time Customer Profile] 概要
+# [!DNL Real-time Customer Profile]概要
 
 Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。 この概要は、の役割と使用方法を理解するのに役立ち [!DNL Real-time Customer Profile] ま [!DNL Experience Platform]す。
 
@@ -54,7 +53,7 @@ Adobe Experience Platform [!DNL Segmentation Service] produces the audiences nee
 
 ### プロファイルフラグメントと和集合スキーマ {#profile-fragments-and-union-schemas}
 
-One of the key features of [!DNL Real-time Customer Profile] is the ability to unify multi-channel data. When [!DNL Real-time Customer Profile] is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. [!DNL Real-time Customer Profile] データは、エンティティやプロファイルがIDでアクセスされたり、セグメントとしてエクスポートされたりすると、ソース間でマージされます。 APIを使用したプロファイルおよび和集合表示へのアクセスについて詳しくは、 [!DNL Real-time Customer Profile] Entitiesエンドポイントガイドを参照して [ください](api/entities.md)。
+One of the key features of [!DNL Real-time Customer Profile] is the ability to unify multi-channel data. When [!DNL Real-time Customer Profile] is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. [!DNL Real-time Customer Profile] データは、エンティティやプロファイルがIDでアクセスされたり、セグメントとしてエクスポートされたりすると、ソース間でマージされます。 APIを使用したプロファイルおよび和集合表示へのアクセスについて詳しくは、 [!DNL Real-time Customer Profile] Entitiesエンドポイントガイドを参照してください [](api/entities.md)。
 
 ### 結合ポリシー
 
