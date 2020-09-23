@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイルトラブルシューティングガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 94fd6ee324b35acb7ef1185f7851d76d76f3e91c
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 9%
@@ -26,15 +25,15 @@ ht-degree: 9%
 
 プロファイルは、 **レコード** と **** 時系列の両方のデータを受け取ります。ただし、対象のデータに、データを一意の個人に関連付ける1つ以上の識別値が含まれている場合に限ります。
 
-すべてのPlatformサービスと同様、プロファイルは、エクスペリエンスデータモデル(XDM)スキーマ下でデータをセマンティックに構造化する必要があります。 そのため、このスキーマは **プライマリID** を定義し、プロファイルでの使用を有効にする必要があります。
+すべてのプラットフォームサービスと同様に、プロファイルのデータは、エクスペリエンスデータモデル(XDM)スキーマ下でセマンティックに構造化される必要があります。 そのため、このスキーマは **プライマリID** を定義し、プロファイルでの使用を有効にする必要があります。
 
 XDMに慣れていない場合は、 [XDMの概要に関する開始を参照し](../xdm/home.md) 、詳細を確認してください。 次に、XDMプロファイルガイドを参照して、IDフィールドの [設定とスキーマの](../xdm/tutorials/create-schema-ui.md#identity-field) 有効化の手順を確認します [](../xdm/tutorials/create-schema-ui.md#profile)。
 
 ### プロファイルデータはどこに保存されますか。
 
-リアルタイムのお客様のプロファイルは、取り込んだ他のPlatformデータを含むData Lakeとは別に、独自のデータストア(「プロファイルストア」と呼ばれる)を維持します。
+リアルタイムのお客様のプロファイルは、取り込んだ他のプラットフォームデータを含むData Lakeとは別に、独自のデータストア(「プロファイルストア」と呼ばれます)を維持します。
 
-### データを既にPlatformに取り込んでいる場合は、プロファイルストアで入手できますか。
+### データを既にプラットフォームに取り込んでいる場合は、プロファイルストアで入手できますか。
 
 データがプロファイル以外のデータセットに取り込まれた場合は、プロファイルストアでデータを利用できるように、そのデータをプロファイル対応のデータセットに再度取り込む必要があります。 既存のデータセットのプロファイルを有効にすることはできますが、その設定より前に取り込まれたデータはプロファイルストアには表示されません。
 
@@ -58,7 +57,7 @@ Experience PlatformUIの「 **[!UICONTROL 参照]** 」タブ( **[!UICONTROL プ
 
 ## エラーコード
 
-以下は、リアルタイム顧客プロファイルAPIを使用する際に発生する可能性があるエラーメッセージのリストです。 発生したエラーがここに表示されない場合は、代わりに一般的な [Platformトラブルシューティングガイド](../landing/troubleshooting.md) （英語）に記載されている可能性があります。
+以下は、リアルタイム顧客プロファイルAPIを使用する際に発生する可能性があるエラーメッセージのリストです。 発生したエラーがここに記載されていない場合は、代わりに [Platformの一般的なトラブルシューティングガイド](../landing/troubleshooting.md) （英語）に記載されている可能性があります。
 
 ### 指定されたパスの計算済み属性のスキーマを参照できませんでした
 
@@ -152,5 +151,5 @@ Experience PlatformUIの「 **[!UICONTROL 参照]** 」タブ( **[!UICONTROL プ
 
 | エンドポイント | Content-Type |
 | --- | --- |
-| `/config/projections` | application/vnd.adobe.platform.projectionConfig+json; version=1 |
-| `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json; version=1 |
+| `/config/projections` | application/vnd.adobe.platform.projectionConfig+json;version=1 |
+| `/config/destinations` | application/vnd.adobe.platform.projectionDestination+json;version=1 |
