@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
-solution: Adobe Experience Platform
 title: API を使用したプロファイルおよび ID サービスのデータセットの設定
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1035'
 ht-degree: 55%
