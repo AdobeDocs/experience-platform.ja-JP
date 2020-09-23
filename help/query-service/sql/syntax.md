@@ -5,10 +5,10 @@ title: SQL 構文
 topic: syntax
 description: このドキュメントは、クエリサービスでサポートされる SQL 構文を示します。
 translation-type: tm+mt
-source-git-commit: 041165f501d35b811202362b524523b103d18113
+source-git-commit: 2672d0bdf1f34deb715415e7b660a35076edb06b
 workflow-type: tm+mt
-source-wordcount: '1982'
-ht-degree: 94%
+source-wordcount: '2004'
+ht-degree: 92%
 
 ---
 
@@ -115,10 +115,11 @@ SELECT statement 2
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-ここで、`target_schema_title` は XDM スキーマのタイトルです。この句は、CTAS クエリで作成された新しいデータセットに対して既存の XDM スキーマを使用する場合にのみ使用します。
+where,
+`target_schema_title` is the title of XDM schema. この句は、CTASクエリが作成した新しいデータセットに対して既存のXDMスキーマを使用する場合に限り、新しいデータセットに対してインジェストされたすべての新しいバッチの行レベルの検証を必要とするかどうかを指定します。`rowvalidation` デフォルト値は「false」です。
 
 `select_query` は `SELECT` 文で、その構文は上述されています。
 
