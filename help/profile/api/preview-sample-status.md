@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
-solution: Adobe Experience Platform
 title: プロファイルプレビュー — リアルタイム顧客プロファイルAPI
 description: Adobe Experience Platformでは、複数のソースから顧客データを取り込んで、個々の顧客に対して堅牢な統合プロファイルを構築できます。 リアルタイム顧客プロファイルを有効にしたデータは、プラットフォームに取り込まれると、プロファイルのデータストア内に保存されます。 プロファイルストアのレコード数が増減すると、データストア内のプロファイルフラグメントと結合プロファイルの数に関する情報を含むサンプルジョブが実行されます。 プロファイルAPIを使用して、最新の成功したサンプルや、データセット別、ID名前空間別にリストプロファイルの配布をプレビューできます。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 6%
