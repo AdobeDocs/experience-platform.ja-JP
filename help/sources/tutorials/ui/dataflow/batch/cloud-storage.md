@@ -5,9 +5,9 @@ title: UIでのクラウドストレージバッチコネクタのデータフ�
 topic: overview
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1674'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,11 @@ The **[!UICONTROL Select dataset]** dialog appears. 使用するデータセッ�
 
 データを新しいデータセットに取り込むには、「 **[!UICONTROL 新しいデータセット]** 」を選択し、表示されるフィールドにデータセットの名前と説明を入力します。 スキーマを追加するには、 **[!UICONTROL スキーマの選択]** ダイアログボックスで既存のスキーマ名を入力します。 または、 **[!UICONTROL スキーマのアドバンス検索を選択して、適切なスキーマを検索することもできます]** 。
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+この手順では、データセットを有効にし、エンティティの属性 [!DNL Real-time Customer Profile] と行動を総合的に表示できます。 すべての有効なデータセットのデータはに含まれ、データフローを保存する際 [!DNL Profile] に変更が適用されます。
+
+ターゲットデータセットを有効にするには、 **[!UICONTROL プロファイルデータセット]** ボタンを切り替え [!DNL Profile]ます。
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. 新しいデータセットに適用するスキーマを選択し、「 **[!UICONTROL 完了]**」を選択します。
 
