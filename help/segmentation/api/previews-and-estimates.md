@@ -4,7 +4,7 @@ solution: Experience Platform
 title: エンドポイントのプレビューと予測
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 69d173e163720c962d910fa4c1e2491fb1262251
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 28%
@@ -154,14 +154,14 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
         },
         "XID_ADOBE-MARKETING-CLOUD-ID-3": {
             "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1000"
-        },
-        "state": "RESULT_READY",
-        "links": {
-            "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
-            "next": "",
-            "prev": ""
         }
     }],
+    "state": "RESULT_READY",
+    "links": {
+        "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
+        "next": "",
+        "prev": ""
+    },
     "page": {
         "offset": 0,
         "size": 3
