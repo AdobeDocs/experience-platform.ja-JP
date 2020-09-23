@@ -8,10 +8,14 @@ getting-started-title: ドキュメント
 getting-started-url: https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/documentation/overview.html
 tutorials-title: チュートリアル
 tutorials-url: https://docs.adobe.com/content/help/ja-JP/experience-platform/tutorials/home.html
-git-repo: https://github.com/AdobeDocs/experience-platform.en
+git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.ja-JP
+solution: Experience Platform
 index: true
-translation-type: ht
-source-git-commit: d16d13fdec107d3654ff2ef5c8e18661763470f0
+translation-type: tm+mt
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+workflow-type: tm+mt
+source-wordcount: '145'
+ht-degree: 100%
 
 ---
 
