@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
-solution: Adobe Experience Platform
 title: リアルタイム顧客プロファイル API 開発者ガイド
 topic: guide
 description: リアルタイム顧客プロファイルAPIには、複数のエンドポイントが含まれています。エンドポイントの概要を以下に示します。
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '806'
 ht-degree: 23%
@@ -17,7 +16,7 @@ ht-degree: 23%
 
 [!DNL Real-time Customer Profile] adobe experience platform内の個々の顧客の全体的な表示を確認できます。 [!DNL Profile] オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルから個別の顧客データを統合表示に統合し、各顧客インタラクションに関する実用的なタイムスタンプのあるアカウントを提供できます。
 
-この [!DNL Real-time Customer Profile] APIには複数のエンドポイントが含まれ、以下に概要を示します。 詳しくは、個々のエンドポイントガイドを参照してください。また、 [入門ガイドを参照し](getting-started.md) 、必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み取りなどを確認してください。
+この [!DNL Real-time Customer Profile] APIには複数のエンドポイントが含まれ、以下に概要を示します。 詳しくは、個々のエンドポイントのガイドを参照してください。必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み方などについては、 [はじめに](getting-started.md) 「はじめに」のガイドを参照してください。
 
 使用可能なすべてのエンドポイントとCRUD操作を表示するには、 [リアルタイムプロファイルAPIリファレンススウォッチガーを参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)。
 
@@ -41,7 +40,7 @@ Through Adobe Experience Platform you can access [!DNL Real-time Customer Profil
 
 ## 書き出しジョブ([!DNL Profile] 書き出し) {#profile-export}
 
-[!DNL Real-time Customer Profile] アクティベーション用のオーディエンスセグメントの書き出しや、レポート用のプロファイル属性の書き出しなど、データをデータセットに書き出して追加の処理を行うことができます。 オーディエンスセグメント用の書き出しジョブは [!DNL Adobe Experience Platform Segmentation Service] APIの一部です。詳しくは、 [セグメント書き出しジョブエンドポイントガイド](../../profile/api/export-jobs.md) を参照してください。 プロファイル属性の書き出しジョブを作成および管理する手順については、『 [書き出しジョブエンドポイントガイド](export-jobs.md)』を参照してください。
+[!DNL Real-time Customer Profile] アクティベーション用のオーディエンスセグメントのエクスポートや、レポート用のプロファイル属性のエクスポートなど、データをデータセットにエクスポートして追加の処理を行うことができます。 オーディエンスセグメント用の書き出しジョブは [!DNL Adobe Experience Platform Segmentation Service] APIの一部です。詳しくは、 [セグメント書き出しジョブエンドポイントガイド](../../profile/api/export-jobs.md) を参照してください。 プロファイル属性の書き出しジョブを作成および管理する手順については、『 [書き出しジョブエンドポイントガイド](export-jobs.md)』を参照してください。
 
 ## 結合ポリシー {#merge-policies}
 
