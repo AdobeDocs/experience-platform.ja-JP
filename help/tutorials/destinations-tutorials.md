@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;destinations tutorial
 solution: Experience Platform
 title: API による宛先の作成とデータのアクティブ化
 topic: tutorial
+type: Tutorial
 description: 様々なタイプの宛先を作成し、データをアクティブ化する方法を説明します。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 85%
