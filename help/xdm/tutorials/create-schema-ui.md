@@ -5,10 +5,10 @@ title: スキーマエディターを使用したスキーマの作成
 topic: tutorials
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
+source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 18%
+source-wordcount: '3835'
+ht-degree: 17%
 
 ---
 
@@ -143,7 +143,7 @@ To begin, select the mixin name in the **[!UICONTROL Mixins]** section. Once you
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Select **[!UICONTROL Add field]** next to &quot;[!DNL Loyalty Members]&quot; to create a new node in the structure. このノード（この例では「_tenantId」と呼ばれます）は、IMS 組織のテナント ID を表し、前にアンダースコアが付いています。テナント ID の存在は、追加するフィールドが組織の名前空間に限られていることを示しています。
+Select **[!UICONTROL Add field]** next to &quot;[!DNL Loyalty Members]&quot; to create a new node in the structure. This node (called `_tenantId` in this example) represents your IMS Organization&#39;s tenant ID, preceded by an underscore. テナント ID の存在は、追加するフィールドが組織の名前空間に限られていることを示しています。
 
 つまり、追加するフィールドは組織に固有のものであり、組織にのみアクセス可能な特定の領域 [!DNL Schema Registry] に保存されます。 定義するフィールドは、他の標準クラス、ミックスイン、データ型、およびフィールドの名前との競合を防ぐために、常にテナント名前空間に追加する必要があります。
 
@@ -236,6 +236,10 @@ In a future schema, you could now assign a field the **[!UICONTROL Type]** of &q
 スキーマ内で特定のフィールドを探している場合は、検索バーを使用して、表示されるフィールドを、どのミックスインがどの下に提供されているかに関係なく、名前でフィルターすることもできます。
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>検索機能は、一致するフィールドを表示する際に、選択したミックスインフィルターを考慮に入れます。 検索クエリに期待した結果が表示されない場合は、関連するミックスインがフィルターで除外されていないことを重複チェックが必要になる場合があります。
 
 ## ID フィールドとしてのスキーマフィールドの設定 {#identity-field}
 
