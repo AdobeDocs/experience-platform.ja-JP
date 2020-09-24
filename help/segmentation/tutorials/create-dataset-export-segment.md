@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;Segmentation Service;segmentat
 solution: Experience Platform
 title: オーディエンスセグメントをエクスポートするためのデータセットの作成
 topic: tutorial
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 68%
