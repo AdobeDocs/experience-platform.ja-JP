@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 電子メールマーケティングの宛先の作成
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
+source-git-commit: bde86cc835c2bd579404480ece8e850fbef8a9b2
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 78%
@@ -426,7 +426,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --data-raw '{
     "name": "TargetConnection for Adobe Campaign",
     "description": "Connection to Adobe Campaign",
-    "baseConnection": "{BASE_CONNECTION_ID}",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
         "version": "1.0"
