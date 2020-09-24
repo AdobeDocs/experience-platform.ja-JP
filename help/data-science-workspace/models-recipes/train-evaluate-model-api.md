@@ -2,10 +2,11 @@
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
 title: モデルのトレーニングと評価（API）
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: このチュートリアルでは、Senesie Machine Learning API呼び出しを使用して、モデルを作成、トレーニング、評価する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 98%
