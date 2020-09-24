@@ -2,8 +2,9 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 title: API を使用したプロファイルおよび ID サービスのデータセットの設定
 topic: tutorial
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1035'
 ht-degree: 55%
