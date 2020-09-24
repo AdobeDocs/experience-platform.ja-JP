@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Authenticate;access
 solution: Experience Platform
 title: Experience Platform API の認証とアクセス
 topic: tutorial
+type: Tutorial
 description: 'このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。 '
 translation-type: tm+mt
-source-git-commit: 76e6e1a5484dce0a4640c2ce1f43cf7d84e049bf
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 43%
