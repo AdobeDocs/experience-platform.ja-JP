@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 意思決定のチュートリアル
 topic: tutorial
+type: Tutorial
 description: 判定サービスには、Adobe Experience Platform 上で実行されているアプリケーションにおいて、パーソナライズ、最適化、さらに調整されたエクスペリエンスを作成する機能があります。意思決定サービスを使用すると、利用可能な一連の選択肢の中から最適なオプションを決定できます。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 43%
