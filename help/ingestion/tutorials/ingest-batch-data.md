@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;ingestion;ingest batch data;tu
 solution: Experience Platform
 title: Adobe Experience Platform へのデータの取得
 topic: tutorial
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2eef47cd4afe8c6dfd71d7b78035861ba1b368f7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 65%
