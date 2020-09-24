@@ -5,7 +5,7 @@ title: SDK 開発者ガイド
 topic: Overview
 description: モデルオーサリングSDKを使用すると、PySparkとSpark (Scala)で実装可能なテンプレートを提供する、Adobe Experience Platformデータサイエンスワークスペースで使用できるカスタム機械学習レシピと機能パイプラインを開発できます。
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e1b8bc378c2f72862c0c28e44dceb8a35e44a29e
 workflow-type: tm+mt
 source-wordcount: '964'
 ht-degree: 71%
@@ -37,14 +37,14 @@ DataLoader クラスは、生の入力データを取得、フィルタリング
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
+                <p><code>load(self, configProperties, spark)</code></p>
                 <p>Pandas DataFrame として Platform データを読み込み、返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">spark</code>：Spark セッション</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティのマップ</li>
+                    <li><code>spark</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -65,13 +65,13 @@ The following table describes the abstract methods of a [!DNL Spark] Data Loader
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
+                <p><code>load(configProperties, sparkSession)</code></p>
                 <p>Platform データを DataFrame として読み込み、返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
+                    <li><code>configProperties</code>：設定プロパティのマップ</li>
+                    <li><code>sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -211,14 +211,14 @@ The following table describes the abstract methods of a [!DNL PySpark] Data Save
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
+                <p><code>save(self, configProperties, dataframe)</code></p>
                 <p>出力データを DataFrame として受け取り、Platform データセットに保存します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">dataframe</code>：DataFrame の形式で保存するデータ</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティのマップ</li>
+                    <li><code>dataframe</code>：DataFrame の形式で保存するデータ</li>
                 </ul>
             </td>
         </tr>
@@ -239,13 +239,13 @@ The following table describes the abstract methods of a [!DNL Spark] Data Saver 
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
+                <p><code>save(configProperties, dataFrame)</code></p>
                 <p>出力データを DataFrame として受け取り、Platform データセットに保存します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">dataFrame</code>：DataFrame の形式で保存するデータ</li>
+                    <li><code>configProperties</code>：設定プロパティのマップ</li>
+                    <li><code>dataFrame</code>：DataFrame の形式で保存するデータ</li>
                 </ul>
             </td>
         </tr>
@@ -413,14 +413,14 @@ DatasetTransformer クラスは、データセットの構造を変更および�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">transform(self, configProperties, dataset)</code></p>
+                <p><i>abstract</i><br/><code>transform(self, configProperties, dataset)</code></p>
                 <p>データセットを入力として受け取り、新しい派生データセットを出力します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">dataset</code>：変換される入力データセット</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティのマップ</li>
+                    <li><code>dataset</code>：変換される入力データセット</li>
                 </ul>
             </td>
         </tr>
@@ -441,13 +441,13 @@ The following table describes the abstract methods of a [!DNL Spark] dataset tra
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">transform(configProperties, dataset)</code></p>
+                <p><code>transform(configProperties, dataset)</code></p>
                 <p>データセットを入力として受け取り、新しい派生データセットを出力します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
-                    <li><code class=" language-undefined">dataset</code>：変換される入力データセット</li>
+                    <li><code>configProperties</code>：設定プロパティのマップ</li>
+                    <li><code>dataset</code>：変換される入力データセット</li>
                 </ul>
             </td>
         </tr>
@@ -472,26 +472,26 @@ FeaturePipelineFactory クラスには、特徴抽出アルゴリズムが含ま
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">create_pipeline(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>create_pipeline(self, configProperties)</code></p>
                 <p>一連の Spark トランスフォーマーを含む Spark パイプラインを作成して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティのマップ</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>設定プロパティからパラメーターマップを取得して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
-                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
+                    <li><code>sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -512,24 +512,24 @@ The following table describes the class methods of a [!DNL Spark] FeaturePipelin
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">createPipeline(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>createPipeline(configProperties)</code></p>
                 <p>一連のトランスフォーマーを含むパイプラインを作成して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティのマップ</li>
+                    <li><code>configProperties</code>：設定プロパティのマップ</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>設定プロパティからパラメーターマップを取得して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
-                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
+                    <li><code>sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -554,53 +554,53 @@ The PipelineFactory class encapsulates methods and definitions for model trainin
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(self, configProperties)</code></p>
                 <p>モデルのトレーニングとスコアリングのロジックとアルゴリズムを含む Spark パイプラインを作成して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">train(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>train(self, configProperties, dataframe)</code></p>
                 <p>モデルをトレーニングするロジックとアルゴリズムを含むカスタムパイプラインを返します。Spark パイプラインを使用する場合、このメソッドは不要です。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
-                    <li><code class=" language-undefined">dataframe</code>：トレーニング入力の特徴データセット</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
+                    <li><code>dataframe</code>：トレーニング入力の特徴データセット</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">score(self, configProperties, dataframe, model)</code></p>
+                <p><i>abstract</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
                 <p>訓練済みモデルを使用してスコアを付け、結果を返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
-                    <li><code class=" language-undefined">dataframe</code>：スコアリング用の入力データセット</li>
-                    <li><code class=" language-undefined">model</code>：スコアリングに使用される訓練済みモデル</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
+                    <li><code>dataframe</code>：スコアリング用の入力データセット</li>
+                    <li><code>model</code>：スコアリングに使用される訓練済みモデル</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>設定プロパティからパラメーターマップを取得して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
-                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
+                    <li><code>sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -621,24 +621,24 @@ The following table describes the class methods of a [!DNL Spark] PipelineFactor
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(configProperties)</code></p>
                 <p>モデルのトレーニングとスコアリングのロジックとアルゴリズムを含むパイプラインを作成して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>設定プロパティからパラメーターマップを取得して返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
-                    <li><code class=" language-undefined">sparkSession</code>：Spark セッション</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
+                    <li><code>sparkSession</code>：Spark セッション</li>
                 </ul>
             </td>
         </tr>
@@ -663,28 +663,28 @@ MLEvaluator クラスは、評価指標を定義するメソッドと、トレ�
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>split(self, configProperties, dataframe)</code></p>
                 <p>入力データセットをトレーニングサブセットとテストサブセットに分割します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
-                    <li><code class=" language-undefined">dataframe</code>：分割する入力データセット</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
+                    <li><code>dataframe</code>：分割する入力データセット</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(self, dataframe, model, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
                 <p>訓練済みモデルを評価し、評価結果を返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>：自己参照</li>
-                    <li><code class=" language-undefined">dataframe</code>:トレーニングデータとテストデータから成る DataFrame</li>
-                    <li><code class=" language-undefined">model</code>：訓練済みモデル</li>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
+                    <li><code>self</code>：自己参照</li>
+                    <li><code>dataframe</code>:トレーニングデータとテストデータから成る DataFrame</li>
+                    <li><code>model</code>：訓練済みモデル</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
                 </ul>
             </td>
         </tr>
@@ -705,26 +705,26 @@ The following table describes the class methods of a [!DNL Spark] MLEvaluator:
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(configProperties, data)</code></p>
+                <p><i>abstract</i><br/><code>split(configProperties, data)</code></p>
                 <p>入力データセットをトレーニングサブセットとテストサブセットに分割します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
-                    <li><code class=" language-undefined">data</code>：分割する入力データセット</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
+                    <li><code>data</code>：分割する入力データセット</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(configProperties, model, data)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(configProperties, model, data)</code></p>
                 <p>訓練済みモデルを評価し、評価結果を返します。</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>：設定プロパティ</li>
-                    <li><code class=" language-undefined">model</code>：訓練済みモデル</li>
-                    <li><code class=" language-undefined">data</code>:トレーニングデータとテストデータから成る DataFrame</li>
+                    <li><code>configProperties</code>：設定プロパティ</li>
+                    <li><code>model</code>：訓練済みモデル</li>
+                    <li><code>data</code>:トレーニングデータとテストデータから成る DataFrame</li>
                 </ul>
             </td>
         </tr>
