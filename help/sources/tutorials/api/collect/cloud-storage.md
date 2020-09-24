@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
 title: ソースコネクターとAPIを使用したクラウドストレージデータの収集
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1581'
 ht-degree: 14%
