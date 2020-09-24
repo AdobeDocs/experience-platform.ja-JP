@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ge
 solution: Experience Platform
 title: データセットをクエリ結果から生成する
 topic: queries
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 56%
