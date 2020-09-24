@@ -2,10 +2,11 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: 機械学習の洞察によるリアルタイム顧客プロファイルの強化
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: このドキュメントでは、リアルタイム顧客プロファイルに機械学習の洞察を与えるためのチュートリアルを順を追って説明します。手順は以下の節に分かれています。出力スキーマー/データセットの作成、出力スキーマ/データセットの設定、セグメントビルダーを使用したセグメントの作成
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 68%
