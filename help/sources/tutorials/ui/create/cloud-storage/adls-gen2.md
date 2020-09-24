@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;A
 solution: Experience Platform
 title: UI での Azure データレイクストレージ Gen2 ソースコネクタの作成
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、Azure Data LakeストレージGen2 （以下「ADLS Gen2」と呼ばれる）ソースコネクタをプラットフォームユーザーインターフェイスを使用して認証する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 12%
