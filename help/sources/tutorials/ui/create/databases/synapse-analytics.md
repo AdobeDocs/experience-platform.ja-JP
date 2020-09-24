@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synaps
 solution: Experience Platform
 title: UIにAzure Synapse Analyticsソースコネクタを作成する
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してAzure Synapse Analytics（以下「シナプス」と呼ばれる）ソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 9%
@@ -40,7 +41,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 | ---------- | ----------- |
 | `connectionString` | 認証に関連付けられている接続文字列 [!DNL Synapse] です。 接続文字 [!DNL Synapse] 列パターンはで `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`す。 |
 
-この値の詳細については、 [ [!DNL Synapse] このドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse)。
+For more information about this value, refer to [this [!DNL Synapse] document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
 
 ## アカウントに接続 [!DNL Synapse] する
 
