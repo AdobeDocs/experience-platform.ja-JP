@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Azure Blob;azure blob;Azure bl
 solution: Experience Platform
 title: UIにAzure BLOBソースコネクタを作成する
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してAzure BLOB （以下、「BLOB」と呼ばれる）を作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 9%
