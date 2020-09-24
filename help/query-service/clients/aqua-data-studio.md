@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Aqua Data Studio との接続
 topic: connect
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 106d5150371a890e2d4c295bf5d12c110c593568
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 70%
+source-wordcount: '245'
+ht-degree: 68%
 
 ---
 
@@ -24,7 +24,7 @@ After installing [!DNL Aqua Data Studio], you must first register the server. �
 
 - **[!UICONTROL Name]**：接続の名前。
 - **[!UICONTROL Login Name and Password]**：使用されるログイン資格情報。ユーザー名は、`ORG_ID@AdobeOrg` の形式をとります。
-- **[!UICONTROL ホストとポート]**:のホストエンドポイントとそのポート [!DNL Query Service]。
+- **[!UICONTROL ホストとポート]**:のホストエンドポイントとそのポート [!DNL Query Service]。 に接続するには、ポート80を使用する必要があり [!DNL Query Service]ます。
 - **[!UICONTROL データベース]:** 使用するデータベースです。
 
 >[!NOTE]
