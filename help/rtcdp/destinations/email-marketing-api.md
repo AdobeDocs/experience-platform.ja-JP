@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: 電子メールマーケティングの宛先の作成
 topic: tutorial
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: bde86cc835c2bd579404480ece8e850fbef8a9b2
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 78%
