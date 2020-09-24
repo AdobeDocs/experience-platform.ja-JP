@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;
 solution: Experience Platform
 title: 時系列データのストリーミング
 topic: tutorial
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 73%
