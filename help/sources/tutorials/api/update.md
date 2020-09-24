@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics; flow service; update connecti
 solution: Experience Platform
 title: Flow Service APIを使用して接続情報を更新する
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、名前、説明、秘密鍵証明書など、接続情報を更新する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 81ce43bf705bea65b523ac612fae5961e8eeb322
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 17%
