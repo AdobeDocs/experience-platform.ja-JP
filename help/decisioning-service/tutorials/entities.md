@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;manage decisioning;decisioning
 solution: Experience Platform
 title: API を使用した判定サービスエンティティの管理
 topic: tutorial
+type: Tutorial
 description: 'このドキュメントでは、Adobe Experience Platform API を使用して判定サービスのビジネスエンティティを操作するためのチュートリアルを提供します。 '
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '7239'
 ht-degree: 95%
