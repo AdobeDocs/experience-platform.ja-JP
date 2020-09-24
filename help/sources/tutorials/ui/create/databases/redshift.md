@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Amazon Redshift;amazon redshif
 solution: Experience Platform
 title: UIでのAmazonRedshiftソースコネクタの作成
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用して、AmazonRedshift（以下「Redshift」と呼ばれる）ソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 9%
