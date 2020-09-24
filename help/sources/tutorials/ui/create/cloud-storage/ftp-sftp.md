@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;SFTP;FTP;ftp;sftp
 solution: Experience Platform
 title: UI での FTP または SFTP ソースコネクタの作成
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してFTPまたはSFTPソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 12%
