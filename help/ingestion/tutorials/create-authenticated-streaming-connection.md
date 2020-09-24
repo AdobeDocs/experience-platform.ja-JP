@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;authenticated streaming connec
 solution: Experience Platform
 title: 認証済みストリーミング接続の作成
 topic: tutorial
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 67%
