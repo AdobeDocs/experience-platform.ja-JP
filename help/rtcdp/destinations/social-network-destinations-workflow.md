@@ -1,11 +1,12 @@
 ---
 keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
 title: ソーシャルネットワークの宛先のワークフロー
+type: Tutorial
 seo-title: ソーシャルネットワークの宛先のワークフロー
 description: ソーシャルネットワーク広告アカウントに接続する手順
 seo-description: ソーシャルネットワーク広告アカウントに接続する手順
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 120ba866cf6e6509c51a29cb07e73550006fe5eb
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 58%
@@ -25,7 +26,7 @@ This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Real
 
    >[!NOTE]
    >
-   >このリンク先との接続が既に存在する場合は、リンク先のカードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
+   >この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
 
 2. ソーシャルネットワークの宛先への接続を既に設定している場合は、**認証**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新規アカウント]**」を選択して、ソーシャルネットワークの宛先への新しい接続を設定できます。「**[!UICONTROL 宛先に接続]**」を選択すると、選択したソーシャルネットワークの宛先に移動するので、ログインして Adobe Experience Cloud をソーシャルネットワーク広告アカウントに接続します。
 
@@ -43,7 +44,7 @@ This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Real
 
    >[!IMPORTANT]
    >
-   > * ソーシャルネットワークの宛先に対しては、 *単一IDパーソナライゼーション* (Single Identity Personalization)マーケティングの使用例がデフォルトで選択されており、削除できません。
+   > * ソーシャルネットワークの宛先に対しては、 *単一IDパーソナライゼーション* マーケティングの使用例がデフォルトで選択されており、削除できません。
    > * 目的 [!DNL Facebook] 地用。 **[!UICONTROL アカウントID]** がお客様のアカウント [!DNL Facebook Ad Account ID]です。 このIDは、で確認でき [!DNL Facebook Ads Manager]ます。 以下に示すように、ID の前に `act_` を追加します。
 
 
