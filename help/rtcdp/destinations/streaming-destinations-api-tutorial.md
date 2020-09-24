@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ストリーミング送信先への接続とデータのアクティブ化
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
+source-git-commit: bde86cc835c2bd579404480ece8e850fbef8a9b2
 workflow-type: tm+mt
 source-wordcount: '1822'
 ht-degree: 60%
@@ -298,7 +298,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --data-raw '{
     "name": "Amazon Kinesis/ Azure Event Hubs target connection",
     "description": "Connection to Amazon Kinesis/ Azure Event Hubs",
-    "baseConnection": "{BASE_CONNECTION_ID}",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
     "connectionSpec": {
         "id": "{CONNECTION_SPEC_ID}",
         "version": "1.0"
