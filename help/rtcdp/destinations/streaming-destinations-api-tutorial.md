@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics; API tutorials; streaming dest
 solution: Experience Platform
 title: ストリーミング送信先への接続とデータのアクティブ化
 topic: tutorial
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: bde86cc835c2bd579404480ece8e850fbef8a9b2
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1822'
 ht-degree: 60%
