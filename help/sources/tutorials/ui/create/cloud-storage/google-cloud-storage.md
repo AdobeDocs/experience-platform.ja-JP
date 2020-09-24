@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cl
 solution: Experience Platform
 title: Google Cloudストレージソースコネクタ(UI)
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してGoogle Cloudストレージ（以下「GCS」と呼ばれる）ソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 8%
