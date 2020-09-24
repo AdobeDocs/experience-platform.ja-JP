@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;configure dataflow;customer su
 solution: Experience Platform
 title: UIでの顧客成功コネクタのデータフローの設定
 topic: overview
+type: Tutorial
 description: データフローは、データを取得し、ソースからデータセットに取り込む、スケジュール済みのタスク [!DNL Platform] です。 このチュートリアルでは、顧客成功アカウントを使用して新しいデータフローを構成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1483'
 ht-degree: 3%
