@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;query service;Query service;jo
 solution: Experience Platform
 title: データセットの結合
 topic: queries
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 100%
