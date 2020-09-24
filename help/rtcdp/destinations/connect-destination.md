@@ -2,9 +2,10 @@
 keywords: connect destination;destination connect;how to connect destination
 title: アドビのリアルタイム顧客データプラットフォームにおける宛先への接続
 seo-title: アドビのリアルタイム顧客データプラットフォームにおける宛先への接続
+type: Tutorial
 description: このチュートリアルでは、アドビのリアルタイム顧客データプラットフォームで宛先に接続する手順を示します
 translation-type: tm+mt
-source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 100%
