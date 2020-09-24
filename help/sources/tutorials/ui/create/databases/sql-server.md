@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Microsoft SQL Server;SQL Serve
 solution: Experience Platform
 title: UI での Microsoft SQL Server ソースコネクタの作成
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してMicrosoft SQL Server（以下「SQL Server」と呼ばれる）ソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 11%
