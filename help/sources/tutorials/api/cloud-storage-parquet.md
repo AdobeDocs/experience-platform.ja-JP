@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Flow Service APIを使用して、サードパーティのクラウドストレージシステムからパーケーデータを取り込む
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムからパーケーデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1088'
 ht-degree: 17%
 
 ---
@@ -36,17 +37,17 @@ ht-degree: 17%
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: `{SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-- Content-Type: `application/json`
+- `Content-Type: application/json`
 
 ## 接続の作成
 
