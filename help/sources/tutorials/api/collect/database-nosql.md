@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;third-party database;third par
 solution: Experience Platform
 title: ソースコネクタとAPIを使用して、サードパーティのデータベースからデータを収集する
 topic: overview
+type: Tutorial
 description: このチュートリアルでは、サードパーティのデータベースからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1650'
 ht-degree: 13%
