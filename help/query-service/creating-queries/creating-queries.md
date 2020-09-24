@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;query service;Query service;cr
 solution: Experience Platform
 title: クエリの作成
 topic: queries
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 17%
