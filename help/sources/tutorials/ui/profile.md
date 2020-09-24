@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;activate inbound data;populate
 solution: Experience Platform
 title: 受信ソースデータをアクティブ化して顧客プロファイルを入力します
 topic: overview
+type: Tutorial
 description: ソースコネクタから受信するデータは、リアルタイム顧客プロファイルデータの強化と埋め込みに使用できます。
 translation-type: tm+mt
-source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 15%
