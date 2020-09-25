@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをSFTP(Secure File Transfer Protocol)サーバーに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 781a26486a42f304308f567284cef53d591aa124
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 22%
+source-wordcount: '793'
+ht-degree: 16%
 
 ---
 
@@ -44,6 +44,8 @@ SFTPに接続 [!DNL Flow Service] するには、次の接続プロパティの�
 | `host` | SFTPサーバーに関連付けられている名前またはIPアドレス。 |
 | `username` | SFTPサーバーへのアクセス権を持つユーザー名。 |
 | `password` | SFTPサーバーのパスワードです。 |
+| `privateKeyContent` | Base64エンコードされたSSH秘密鍵のコンテンツ。 SSH秘密鍵のOpenSSH(RSA/DSA)形式。 |
+| `passPhrase` | 鍵ファイルや鍵の内容がパスフレーズで保護されている場合に、秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContentがパスワードで保護されている場合は、PrivateKeyContentのパスフレーズを値として使用する必要があります。 |
 
 ### API 呼び出し例の読み取り
 
@@ -68,6 +70,10 @@ All resources in [!DNL Experience Platform], including those belonging to the [!
 ## 接続の作成
 
 接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、SFTPアカウントごとに必要な接続は1つだけです。
+
+### 基本認証を使用したSFTP接続の作成
+
+基本的な認証を使用してSFTP接続を作成するには、接続の、およびに値を指定しながら、 [!DNL Flow Service] APIにPOSTリクエストを行い `host`ま `userName`す `password`。
 
 **API 形式**
 
@@ -105,7 +111,62 @@ curl -X POST \
 | `auth.params.host` | SFTPサーバーのホスト名です。 |
 | `auth.params.username` | SFTPサーバーに関連付けられているユーザー名です。 |
 | `auth.params.password` | SFTPサーバーに関連付けられているパスワードです。 |
-| `connectionSpec.id` | STFPサーバー接続仕様ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `connectionSpec.id` | SFTPサーバー接続仕様ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+
+**応答** 
+
+正常な応答は、新たに作成された接続の固有な識別子(`id`)を返します。 このIDは、次のチュートリアルでSFTPサーバーを調べるために必要です。
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
+### SSH公開鍵認証を使用したSFTP接続の作成
+
+SSH公開鍵認証を使用してSFTPPOSTを作成するには、接続の [!DNL Flow Service] 、 `host`、およびに値を指定しながら、 `userName`APIに接続リクエストを行いま `privateKeyContent``passPhrase`す。
+
+**API 形式**
+
+```http
+POST /connections
+```
+
+**リクエスト**
+
+```shell
+curl -X POST \
+    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d  "auth": {
+        "specName": "SSH PublicKey Authentication for sftp",
+        "params": {
+            "host": "{HOST_NAME}",
+            "userName": "{USER_NAME}",
+            "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+            "passPhrase": "{PASS_PHRASE}"
+        }
+    },
+    "connectionSpec": {
+        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+        "version": "1.0"
+    }
+}
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `auth.params.host` | SFTPサーバーのホスト名です。 |
+| `auth.params.username` | SFTPサーバーに関連付けられているユーザー名です。 |
+| `auth.params.privateKeyContent` | base64エンコードされたSSH秘密鍵のコンテンツ。 SSH秘密鍵のOpenSSH(RSA/DSA)形式。 |
+| `auth.params.passPhrase` | 鍵ファイルや鍵の内容がパスフレーズで保護されている場合に、秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContentがパスワードで保護されている場合は、PrivateKeyContentのパスフレーズを値として使用する必要があります。 |
+| `connectionSpec.id` | SFTPサーバー接続仕様ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **応答** 
 
