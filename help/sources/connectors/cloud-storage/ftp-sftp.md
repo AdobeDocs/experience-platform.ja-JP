@@ -5,10 +5,10 @@ title: FTPおよびSFTPコネクタ
 topic: overview
 description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してFTPまたはSTFPサーバーをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
+source-git-commit: 2aa6ef66444dbcd397e91e6f3075e020ba963579
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 5%
+source-wordcount: '476'
+ht-degree: 4%
 
 ---
 
@@ -67,6 +67,8 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 - 次のファイル名は使用できません。LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、prn、AUX、NUL、CON、CLOCK$、ドット文字(.)および2つのドット文字(..)。
 
 ## FTPとSFTPの接続先 [!DNL Platform]
+
+> [!IMPORTANT]:ユーザーは、接続前にSFTPサーバー設定でキーボードインタラクティブ認証を無効にする必要があります。 この設定を無効にすると、サービスやプログラムを通じて入力するのではなく、手動でパスワードを入力できます。 Keyboard Interactive Authenticationについて詳しくは、 [Component Proドキュメント](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) （英語）を参照してください。
 
 次のドキュメントは、APIまたはユーザーインターフェイスを [!DNL Platform] 使用してFTPまたはSFTPサーバーに接続する方法に関する情報を提供しています。
 
