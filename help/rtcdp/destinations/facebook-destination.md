@@ -1,14 +1,14 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook
+keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
 title: Facebook の宛先
 seo-title: Facebook の宛先
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 seo-description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 33%
+source-wordcount: '758'
+ht-degree: 34%
 
 ---
 
@@ -19,7 +19,10 @@ ht-degree: 33%
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
+このリンク先を、、、およびなど、によってサポートされる [!DNL Facebook’s] ファミリーアプリでのオーディエンスのターゲティングに使用でき [!DNL Custom Audiences]ます [!DNL Facebook][!DNL Instagram][!DNL Audience Network][!DNL Messenger]。 キャンペーンを実行するアプリの選択範囲が、[!DNL Facebook Ads Manager] の配置レベルで示されます。
+
 ![Real-time CDP UI内のFacebookの宛先](/help/rtcdp/destinations/assets/facebook-destination.png)
+
 
 ## 使用例
 
