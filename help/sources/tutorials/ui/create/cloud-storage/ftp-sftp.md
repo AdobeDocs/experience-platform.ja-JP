@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してFTPまたはSFTPソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 12%
+source-wordcount: '702'
+ht-degree: 9%
 
 ---
 
@@ -61,9 +61,24 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明、およびFTPまたはSFTPの資格情報を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明および資格情報を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
 
-![connect](../../../../images/tutorials/create/sftp/new.png)
+SFTPコネクタは、アクセスに使用できる様々な認証タイプを提供します。 「 **[!UICONTROL アカウント認証]** 」で、「 **[!UICONTROL パスワード]** 」を選択して、パスワードベースの秘密鍵証明書を使用します。
+
+![connect-password](../../../../images/tutorials/create/sftp/password.png)
+
+または、 **[SSH公開鍵を選択し]** 、秘密鍵の内容 **[!UICONTROL と]** パスフレーズの組み合わせを使用してSFTPアカウントに接続できます ****。
+
+>[!IMPORTANT]
+>
+>SFTPコネクタは、RSA/DSA OpenSSHキーをサポートします。 主なファイルコンテンツの開始をに確認し `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`ます。 秘密鍵ファイルがPPK形式のファイルの場合は、PuTTYツールを使用してPPK形式からOpenSSH形式に変換します。
+
+![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
+
+| Credential | 説明 |
+| ---------- | ----------- |
+| 秘密鍵の内容 | Base64エンコードされたSSH秘密鍵のコンテンツ。 SSH秘密鍵はOpenSSH形式にする必要があります。 |
+| Passphrase | キーファイルまたはキーの内容がパスフレーズで保護されている場合に、秘密鍵を復号化するためのパスフレーズまたはパスワードを指定します。 PrivateKeyContentがパスワードで保護されている場合は、PrivateKeyContentのパスフレーズを値として使用する必要があります。 |
 
 ### 既存のアカウント
 
