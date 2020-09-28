@@ -4,7 +4,7 @@ audience: user
 user-guide-title: リアルタイム顧客データプラットフォームガイド
 user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 84%
