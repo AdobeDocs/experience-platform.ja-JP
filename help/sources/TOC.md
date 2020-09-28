@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: Source Connectors Guide
 user-guide-description: Structure, label, and enhance ingested data or ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
+source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 6%
