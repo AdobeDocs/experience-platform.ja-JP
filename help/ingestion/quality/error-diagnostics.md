@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform 部分取得の概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
+source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 34%
+source-wordcount: '881'
+ht-degree: 33%
 
 ---
 
@@ -292,7 +292,15 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 >}
 >```
 
-## 部分バッチ取得エラータイプ {#appendix}
+## 次の手順 {#next-steps}
+
+このチュートリアルでは、部分的なバッチ取り込みエラーを監視する方法について説明しました。 バッチ取得について詳しくは、『[バッチ取得開発者ガイド](../batch-ingestion/api-overview.md)』を参照してください。
+
+## 付録 {#appendix}
+
+ここでは、取り込みエラータイプに関する補足情報を提供します。
+
+### 部分バッチ取得エラータイプ {#partial-ingestion-types}
 
 部分的なバッチ取り込みでは、データを取り込む際に次の3つの異なるエラータイプが発生します。
 
@@ -379,7 +387,3 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
     "_filename": "parsing_errors_0.json"
 }
 ```
-
-## 次の手順 {#next-steps}
-
-このチュートリアルでは、部分的なバッチ取り込みエラーを監視する方法について説明しました。 バッチ取得について詳しくは、『[バッチ取得開発者ガイド](../batch-ingestion/api-overview.md)』を参照してください。
