@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics;Query service;query service;co
 solution: Experience Platform
 title: クライアントのクエリサービスへの接続
 topic: connect
+description: このドキュメントでは、様々なデスクトップクライアントアプリケーションからクエリサービスに接続する方法と、それらの接続を検証する方法について説明します。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '75'
-ht-degree: 16%
+source-wordcount: '97'
+ht-degree: 12%
 
 ---
 
 
 # クライアントの接続先 [!DNL Query Service]
 
-This section explains how to connect to [!DNL Query Service] from a variety of desktop client applications, and how to verify those connections. [!DNL Query Service] は [!DNL Postgres] プロトコルを使用するので、この節の説明では、クエリを接続および書き込むための [!DNL Postgres] ツールとドライバの使用方法を説明します。
+This section explains how to connect to [!DNL Query Service] from a variety of desktop client applications and how to verify those connections. [!DNL Query Service] は [!DNL Postgres] プロトコルを使用するので、この節の説明では、クエリを接続および書き込むための [!DNL Postgres] ツールとドライバの使用方法を説明します。
 
 手順は、次のクライアントに対して提供されます。
 
