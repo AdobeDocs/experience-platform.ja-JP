@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: Data Ingestion Guide
-user-guide-description: Bring in your data to Platform through batch or streaming ingestion.
+user-guide-description: Bring your data into Platform through batch or streaming ingestion.
 translation-type: tm+mt
-source-git-commit: 1bfb876dc1665ebef4450a6f5363fba1ea1b7c61
+source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 94%
