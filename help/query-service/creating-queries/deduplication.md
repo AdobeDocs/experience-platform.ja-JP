@@ -4,11 +4,12 @@ solution: Experience Platform
 title: データ重複排除
 topic: queries
 type: Tutorial
+description: このドキュメントでは、ExperienceEvents、購入、指標の3つの一般的な使用例を重複排除するための、下位選択と完全なサンプルクエリの例を概説します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 75%
+source-wordcount: '424'
+ht-degree: 71%
 
 ---
 
