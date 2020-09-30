@@ -2,13 +2,13 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: 宛先の概要
 seo-title: 宛先の概要
-description: Adobe Experience Platformの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など多くの使用例に関する既知または不明なデータをアクティブ化します。
+description: チャネル間のマーケティングキャンペーン、電子メール、ターゲットを絞った広告などの目的地に対するプラットフォームデータをアクティブ化します。
 seo-description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: 5c3016e822ea23407af5de525c27785df8e2f795
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 65%
+source-wordcount: '491'
+ht-degree: 67%
 
 ---
 
