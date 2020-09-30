@@ -4,11 +4,12 @@ solution: Experience Platform
 title: データセットとテーブルおよびスキーマ
 topic: queries
 type: Tutorial
+description: このドキュメントでは、データセットスキーマ構造内でのデータセットの表示、およびPostgreSQLコマンドの使用に関する情報を説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 92%
+source-wordcount: '198'
+ht-degree: 84%
 
 ---
 
