@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 演算関数
 topic: developer guide
+description: 演算関数 は、プロファイルクエリ言語(PQL)の値に対して基本的な計算を実行するために使用します。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 89%
+source-wordcount: '242'
+ht-degree: 85%
 
 ---
 
 
 # 演算関数
 
-Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+演算関数 は、 [!DNL Profile Query Language] (PQL)の値に対して基本的な計算を実行するために使用します。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## 加算
 
