@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: Query Service Guide
-user-guide-description: Use standard SQL to query data in Platform, letting you join datasets in the Data Lake and capture results for use in reporting, machine learning, or ingestion into Real-time Customer Profile.
+user-guide-description: Use standard SQL to query data in Platform Data Lake.
 translation-type: tm+mt
-source-git-commit: dfe87a0d3989c4f977afa1a03d437f07bfe15dc5
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 97%
