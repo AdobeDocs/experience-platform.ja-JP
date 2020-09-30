@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 文字列関数
 topic: developer guide
+description: プロファイルクエリ言語（PQL）には、文字列の操作が簡単になる関数が用意されています。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '766'
 ht-degree: 97%
 
 ---
