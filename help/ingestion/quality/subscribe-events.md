@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;data ingestion notifications;n
 solution: Experience Platform
 title: データ取得イベントへのサブスクライブ
 topic: overview
+description: Adobe Experience Platformは、取り込みプロセスの監視を支援するため、プロセスの各ステップで公開された一連のイベントを登録し、取り込まれたデータの状態と発生し得る障害を通知する。
 translation-type: tm+mt
-source-git-commit: 80a1694f11cd2f38347989731ab7c56c2c198090
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '621'
-ht-degree: 32%
+source-wordcount: '663'
+ht-degree: 30%
 
 ---
 
