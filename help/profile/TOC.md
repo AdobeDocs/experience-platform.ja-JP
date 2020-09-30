@@ -2,9 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
-user-guide-description: Merge customer data from multiple sources to create individual profiles which offer a single, unified view of customer interactions across channels.
+user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
 translation-type: tm+mt
-source-git-commit: f0c158364b5547e7ed755823f672cc54b58f0573
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 51%
