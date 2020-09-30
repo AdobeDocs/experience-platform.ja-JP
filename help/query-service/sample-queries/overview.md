@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sa
 solution: Experience Platform
 title: クエリ例
 topic: queries
+description: このドキュメントには、Adobe Analyticsおよびターゲットのサンプルクエリへのリンクが記載されています。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 77%
+source-wordcount: '131'
+ht-degree: 70%
 
 ---
 
