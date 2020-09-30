@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;Query service;query service;Lo
 solution: Experience Platform
 title: Looker との接続
 topic: connect
+description: このドキュメントでは、LookerとAdobe Experience Platformクエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 71%
+source-wordcount: '217'
+ht-degree: 66%
 
 ---
 
