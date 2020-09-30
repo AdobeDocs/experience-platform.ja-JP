@@ -4,11 +4,12 @@ solution: Experience Platform
 title: データセットをクエリ結果から生成する
 topic: queries
 type: Tutorial
+description: 'クエリサービスを使用すると、UI からデータセットを作成できます。作成したデータセットは、Data Lake内の他のデータセットと同様にアクセスでき、様々な使用例で使用できます。 '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 56%
+source-wordcount: '305'
+ht-degree: 53%
 
 ---
 
