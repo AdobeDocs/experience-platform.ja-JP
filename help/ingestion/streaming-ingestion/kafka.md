@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;kafka;kafka connector;Kafka;
 solution: Experience Platform
 title: Kafka コネクタ
 topic: overview
+description: Adobe Experience Platform のストリームコネクタは、Apache Kafka Connect をベースにしています。このライブラリを使用して、データセンターの Kafka トピックから Experience Platform に JSON イベントを直接リアルタイムにストリーミングできます。
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 36%
+source-wordcount: '181'
+ht-degree: 48%
 
 ---
 
