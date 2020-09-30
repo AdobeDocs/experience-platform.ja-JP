@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: フィルター関数
 topic: developer guide
+description: フィルター関数 は、プロファイルクエリ言語(PQL)でアレイ内のデータをフィルタするために使用します。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 87%
+source-wordcount: '202'
+ht-degree: 83%
 
 ---
 
 
 # フィルター関数
 
-Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+フィルター関数 は、 [!DNL Profile Query Language] (PQL)のアレイ内のデータをフィルタするために使用します。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## フィルター
 
