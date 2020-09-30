@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sq
 solution: Experience Platform
 title: SQL リファレンス
 topic: reference
+description: クエリサービスは、SELECTステートメントや他の制限付きコマンドに標準のANSI SQLを使用する機能を提供します。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 9%
+source-wordcount: '59'
+ht-degree: 6%
 
 ---
 
