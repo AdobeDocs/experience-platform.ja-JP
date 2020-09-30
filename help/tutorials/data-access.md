@@ -1,27 +1,58 @@
 ---
-keywords: Experience Platform;home;popular topics;access data sources
+keywords: Experience Platform;home;popular topics;access data sources;data access;spark sdk;python sdk
 solution: Experience Platform
 title: データアクセスのチュートリアル
 topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform では、データアクセス API を使用して、Experience Platform 内で取り込んだデータセットを検出してアクセスできます。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 0ec93ef44facc725e22547d002de677d93f3bd1f
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 67%
+source-wordcount: '274'
+ht-degree: 29%
 
 ---
 
 
-# Experience Platform データへのアクセス
+# データアクセスのチュートリアル
 
-Adobe Experience Platform enables users to discover and access ingested datasets within [!DNL Experience Platform] using the Data Access API.
+Data Accessは、Experience Platform内で取り込まれたデータセットの検出性とアクセス性に重点を置いたツールをユーザーに提供することで、Adobe Experience Platformをサポートします。
 
-## API を使用したデータへのアクセス
+To learn more, begin by reading the [Data Access overview](../data-access/home.md).
 
-Adobe Experience Platform のデータアクセス API を使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする方法に加えて、ページングや部分的なダウンロードなど、データアクセス API のいくつかの固有の機能について説明します。使用を開始するには、[データアクセス API のチュートリアル](../data-access/tutorials/dataset-data.md)に従ってください。
+## データアクセスAPIを使用したデータセットデータのクエリ
 
-## データセットの作成
+データアクセス API では、Experience Platform 内に取り込んだデータセットの検出性とアクセス性に重点を置いた RESTful インターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートしています。
 
-Follow step-by-step instructions for creating a dataset using [!DNL Platform] APIs and populating that dataset using a file in the [create a dataset tutorial](../catalog/datasets/create.md).
+**このチュートリアルは、次の作業を行う場合に役立ちます。**
+- プラットフォーム内でデータを検索します。
+- ファイル ID を使用したファイルへのアクセス.
+- ファイルのメタデータの取得.
+- ファイルのコンテンツへのアクセス.
+- ファイルの一部コンテンツのダウンロード.
+- API 応答のページネーションの設定.
+
+To get started, follow the [Data Access API tutorial](../data-access/tutorials/dataset-data.md).
+
+## セキュアPython SDKを使用したデータアクセス
+
+Secure Python Data Access SDKは、Pythonを使用してExperience Platformからデータセットを読み取り、書き込むことを可能にするソフトウェア開発キットです。
+
+**このガイドは次の目的に役立ちます。**
+- 環境ーを設定し、正しいパッケージをインストールします。
+- データセットから読み取ります。
+- データセットに書き込みます。
+- ユーザ空間のディレクトリを読み書きする。
+
+開始するには、 [Python Data Access SDKドキュメントを表示](../data-access/tutorials/python-sdk.md)。
+
+## Secure Spark SDKを使用したデータアクセス
+
+Secure Spark Data Access SDKは、Sparkを使用してAdobe Experience Platformからデータセットの読み取りと書き込みを可能にするソフトウェア開発キットです。
+
+**このガイドは次の目的に役立ちます。**
+- 環境ーを設定し、正しいパッケージをインストールします。
+- データセットから読み取ります。
+- データセットに書き込みます。
+
+開始するには、 [Spark Data Access SDKドキュメントを表示します](../data-access/tutorials/spark-sdk.md)。
