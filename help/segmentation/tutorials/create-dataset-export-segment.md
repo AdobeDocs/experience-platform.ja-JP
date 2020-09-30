@@ -4,11 +4,12 @@ solution: Experience Platform
 title: オーディエンスセグメントをエクスポートするためのデータセットの作成
 topic: tutorial
 type: Tutorial
+description: このチュートリアルでは、Experience Platform UI で、オーディエンスセグメントのエクスポートに使用できるデータセットを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 68%
+source-wordcount: '758'
+ht-degree: 69%
 
 ---
 
