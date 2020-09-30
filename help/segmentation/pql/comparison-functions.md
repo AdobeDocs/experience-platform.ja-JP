@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: 比較関数
 topic: developer guide
+description: 比較関数 は、異なる式と値を比較するために使用され、それに応じて「true」または「false」が返されます。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 95%
+source-wordcount: '308'
+ht-degree: 91%
 
 ---
 
