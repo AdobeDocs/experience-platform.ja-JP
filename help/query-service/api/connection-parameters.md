@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;api guide;connec
 solution: Experience Platform
 title: クエリサービス開発者ガイド
 topic: connection parameters
+description: /connection_parametersエンドポイントにGET要求を行うことで、インタラクティブサービスを使用するための接続パラメーターを取得できます。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 72%
+source-wordcount: '143'
+ht-degree: 62%
 
 ---
 
