@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;api guide;querie
 solution: Experience Platform
 title: クエリサービス開発者ガイド
 topic: queries
+description: 以下の節では、クエリサービスAPIの/クエリエンドポイントを使用して行う呼び出しについて説明します。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 97%
+source-wordcount: '663'
+ht-degree: 95%
 
 ---
 
