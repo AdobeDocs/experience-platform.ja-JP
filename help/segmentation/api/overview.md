@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 title: Adobe Experience Platformセグメントサービス開発ガイド
 topic: guide
+description: この概要ドキュメントでは、Segmentation Service APIの各エンドポイントの概要を説明し、詳しくは関連するエンドポイントガイドへのリンクを示します。
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '490'
 ht-degree: 6%
 
 ---
