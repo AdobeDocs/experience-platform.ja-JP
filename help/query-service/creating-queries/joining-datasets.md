@@ -4,11 +4,12 @@ solution: Experience Platform
 title: データセットの結合
 topic: queries
 type: Tutorial
+description: データセットを結合すると、他のデータセットのデータをクエリに含めることができます。次の例では、カスタムのオペレーティングシステムデータセットを使用して、operatingsystemIDをoperatingsystem値にマップします。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 100%
+source-wordcount: '82'
+ht-degree: 80%
 
 ---
 
