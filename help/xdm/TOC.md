@@ -3,12 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
 breadcrumb-title: Data Model (XDM) Guide
-user-guide-description: Use standard classes and mixins to build a robust schema-based data model, standardizing your experience data into a common representation for use in all downstream Platform services.
+user-guide-description: Use Experience Data Model (XDM) classes and mixins to standardize experience data.
 translation-type: tm+mt
-source-git-commit: dde48bb5d8c77757e726abb62d0c74e96955c5a7
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '119'
+ht-degree: 89%
 
 ---
 
