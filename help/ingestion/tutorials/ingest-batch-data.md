@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Adobe Experience Platform へのデータの取得
 topic: tutorial
 type: Tutorial
+description: Adobe Experience Platformでは、既知のエクスペリエンスデータモデル(XDM)スキーマに準拠するパーケットファイルやデータの形式で、データをバッチファイルとして簡単に読み込むことができます。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 65%
+source-wordcount: '1308'
+ht-degree: 63%
 
 ---
 
