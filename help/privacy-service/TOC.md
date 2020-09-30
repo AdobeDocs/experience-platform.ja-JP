@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Privacy Service ヘルプ
 breadcrumb-title: Privacy Service Guide
-user-guide-description: Manage customer requests to access, delete, or provide consent for the use of their personal data, facilitating automated compliance with legal privacy regulations like GDPR and CCPA.
+user-guide-description: Manage customer data requests to comply with legal privacy regulations like GDPR and CCPA.
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 83%
