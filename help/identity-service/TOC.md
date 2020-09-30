@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ID サービス
 breadcrumb-title: Platform Identity Service Guide
-user-guide-description: Understand your customers and their behavior by bridging identities across devices and systems, to deliver impactful, personal digital experiences in real time.
+user-guide-description: Bridge customer identities across devices and systems to deliver personalized digital experiences.
 translation-type: tm+mt
-source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 95%
