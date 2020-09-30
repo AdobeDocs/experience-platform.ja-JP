@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestio
 solution: Experience Platform
 title: Adobe Experience Platform 部分取得の概要
 topic: overview
+description: このドキュメントでは、バッチ取り込みの監視、部分的なバッチ取り込みエラーの管理、および部分的なバッチ取り込みタイプの参照に関する情報を提供します。
 translation-type: tm+mt
-source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '904'
 ht-degree: 33%
 
 ---
