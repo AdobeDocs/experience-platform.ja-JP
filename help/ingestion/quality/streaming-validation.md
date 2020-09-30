@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;streaming ingestion validation;validation;Streaming ingestion validation;validate;Synchronous validation;synchronous validation;Asynchronous validation;asynchronous validation;
 solution: Experience Platform
 title: ストリーミング取り込みの検証
-topic: overview
+topic: tutorial
+type: Tutorial
 description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データを Adobe Experience Platform にアップロードできます。ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 translation-type: tm+mt
-source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
 source-wordcount: '852'
 ht-degree: 84%
