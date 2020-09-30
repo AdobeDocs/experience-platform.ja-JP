@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Experience Platform ソースコネクタ
 topic: overview
+description: ソース接続を使用すると、ストレージシステムとCRMサービスの認証、インジェスト実行の時間設定、データインジェストスループットの管理を行うことができます。
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 76%
+source-wordcount: '133'
+ht-degree: 63%
 
 ---
 
