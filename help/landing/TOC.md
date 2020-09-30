@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ヘルプ
 breadcrumb-title: Experience Platform Guide
-user-guide-description: Centralize and standardize customer data and content and apply data science and machine learning to improve the design and delivery of rich, personalized experiences.
+user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 translation-type: tm+mt
-source-git-commit: df881ceaeab7b5e51e1574b6487c3a8368c5c596
+source-git-commit: bafc3265a808871912949409228625fc828cbbb1
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 95%
