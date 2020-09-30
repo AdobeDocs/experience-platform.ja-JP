@@ -2,9 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: カタログとデータセットガイド
-user-guide-description: The system of record for data location and lineage with Platform, allowing you to explore metadata, file descriptions, directories, and datasets within the Data Lake.
+user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake.
 translation-type: tm+mt
-source-git-commit: dfe87a0d3989c4f977afa1a03d437f07bfe15dc5
+source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 92%
