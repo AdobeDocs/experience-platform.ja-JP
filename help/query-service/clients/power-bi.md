@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;Query service;Po
 solution: Experience Platform
 title: Power BI との接続
 topic: connect
+description: このドキュメントでは、Power BIとAdobe Experience Platformクエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: f9749dbc5f2e3ac15be50cc5317ad60586b2c07e
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 61%
+source-wordcount: '349'
+ht-degree: 59%
 
 ---
 
