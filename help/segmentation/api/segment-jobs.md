@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: セグメントジョブ
 topic: developer guide
+description: このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 translation-type: tm+mt
-source-git-commit: 3926c989a05ee97f2a09c0ab38d6a444674563cb
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 38%
+source-wordcount: '1025'
+ht-degree: 39%
 
 ---
 
