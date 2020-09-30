@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;query service;Query service;ad
 solution: Experience Platform
 title: アドビ定義関数
 topic: functions
+description: このドキュメントでは、クエリサービスで使用できるアドビ定義の関数について説明します。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '2156'
+source-wordcount: '2167'
 ht-degree: 82%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 82%
 
 # アドビ定義関数
 
-Adobe-defined functions (ADFs) are prebuilt functions in [!DNL Query Service] that help perform common business related tasks on [!DNL ExperienceEvent] data. これには、Adobe Analytics のようなセッション化および属性の関数が含まれます。Adobe Analytics と、このページで定義されている ADF の概念について詳しくは、[Adobe Analytics のドキュメント](https://docs.adobe.com/content/help/ja-JP/analytics/landing/home.html)を参照してください。This document provides information for Adobe-defined functions available in [!DNL Query Service].
+アドビ定義関数 (ADFs) are prebuilt functions in [!DNL Query Service] that help perform common business related tasks on [!DNL ExperienceEvent] data. これには、Adobe Analytics のようなセッション化および属性の関数が含まれます。Adobe Analytics と、このページで定義されている ADF の概念について詳しくは、[Adobe Analytics のドキュメント](https://docs.adobe.com/content/help/ja-JP/analytics/landing/home.html)を参照してください。This document provides information for Adobe-defined functions available in [!DNL Query Service].
 
 ## 窓関数
 
