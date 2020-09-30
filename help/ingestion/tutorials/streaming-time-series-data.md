@@ -4,10 +4,11 @@ solution: Experience Platform
 title: 時系列データのストリーミング
 topic: tutorial
 type: Tutorial
+description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1163'
 ht-degree: 73%
 
 ---
