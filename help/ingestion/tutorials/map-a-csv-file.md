@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformのユーザーインターフェイスを使用してCSVファイルをXDMスキーマにマップする方法について説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
 workflow-type: tm+mt
-source-wordcount: '1370'
-ht-degree: 53%
+source-wordcount: '886'
+ht-degree: 25%
 
 ---
 
@@ -113,50 +113,16 @@ CSV列をXDMフィールドにマップするには、列の対応するター�
 
 CSVファイルをマッピングして作成したら、ファイルを介して取り込まれるデータを監視できます。 データフローの監視の詳細については、「ストリーミングデータフローの [監視に関するチュートリアル](../../ingestion/quality/monitor-data-flows.md)」を参照してください。
 
-## 次の手順
+## マッピング関数の使用
 
-By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Platform]. このデータは、などのダウンストリーム [!DNL Platform] サービスで使用できるようになり [!DNL Real-time Customer Profile]ました。 詳細については、 [[!DNLリアルタイム顧客プロファイル]の概要を参照してください](../../profile/home.md) 。
-
-## 付録
-
-次の節では、CSV 列を XDM フィールドにマッピングするための追加情報を提供します。
-
-### マッピング関数
-
-特定のマッピング関数を使用して、ソースフィールドに入力した内容に基づいて値を計算できます。関数を使用するには、「**[!UICONTROL ソースフィールド]**」の下に適切な構文で関数を入力します。
+関数を使用するには、「**[!UICONTROL ソースフィールド]**」の下に適切な構文で関数を入力します。
 
 例えば、**市区町村**&#x200B;と&#x200B;**国**&#x200B;の CSV フィールドを連結し、**市区町村** XDM フィールドに割り当てるには、ソースフィールドを「`concat(city, ", ", county)`」と設定します。
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
-次の表に、サポートされているすべてのマッピング関数、サンプル式、およびその結果の出力を示します。
+XDMフィールドへの列のマッピングについて詳しくは、データ準備（マッパー）関数の [使用に関するガイドを参照してください](../../data-prep/functions.md)。
 
-| 関数 | 説明 | サンプル式 | サンプル出力 |
-| -------- | ----------- | ----------------- | ------------- |
-| concat | 指定された文字列を連結します。 | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| explode | 正規表現に基づいて文字列を分割し、部分の配列を返します。 | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
-| instr | サブ文字列の場所/インデックスを返します。 | instr(&quot;adobe<span>.com&quot;, &quot;com&quot;) | 6 |
-| replacestr | 元の文字列に検索文字列が存在する場合は、その文字列を置き換えます。 | replacestr(&quot;This is a string re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;This is a string replace test&quot; |
-| substr | 指定された長さのサブ文字列を返します。 | substr(&quot;This is a substring test&quot;, 7, 8) | &quot;サブセット&quot; |
-| lower /<br>lcase | 文字列を小文字に変換します。 | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
-| upper /<br>ucase | 文字列を大文字に変換します。 | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
-| split | 区切り記号で入力文字列を分割します。 | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | 区切り記号を使用してオブジェクトのリストを結合します。 | `join(" ", ["Hello", "world"]`) | &quot;Hello world&quot; |
-| coalesce | 指定されたリスト内の最初の null 以外のオブジェクトを返します。 | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
-| decode | キーと、キーと値のペアのリストが配列としてフラット化されている場合、この関数は、キーが見つかった場合は値を返し、デフォルト値が配列に存在する場合はデフォルト値を返します。 | decode(&quot;k2&quot;, &quot;k1&quot;, &quot;v1&quot;, &quot;k2&quot;, &quot;v2&quot;, &quot;default&quot;) | &quot;v2&quot; |
-| iif | 指定されたブール式を評価し、結果に基づいて指定された値を返します。 | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
-| min | 指定された引数の最小値を返します。自然な順序を使用します。 | min(3, 1, 4) | 1 |
-| max | 指定された引数の最大値を返します。自然な順序を使用します。 | max(3, 1, 4) | 4 |
-| first | 最初の指定された引数を取得します。 | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
-| last | 最後の指定された引数を取得します。 | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
-| uuid /<br>guid | 擬似ランダム ID を生成します。 | uuid()<br>guid() | {UNIQUE_ID} |
-| now | 現在の時刻を取得します。 | now() | `2019-10-23T10:10:24.556-07:00[America/Los_Angeles]` |
-| timestamp | 現在の Unix 時間を取得します。 | timestamp() | 1571850624571 |
-| format | 指定された形式に従って入力日をフォーマットします。 | format({DATE}, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-Oct-2019 11:24&quot; |
-| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | date(&quot;23-Oct-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date_part | 日付の一部を取得します。次のコンポーネント値がサポートされています。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;millisecond&quot;<br>&quot;ms&quot; | date_part(date(&quot;2019-10-17 11:55:12&quot;), &quot;MM&quot;) | 10 |
-| set_date_part | 指定された日付のコンポーネントを置き換えます。次のコンポーネントが受け入れられます。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
-| make_date_time /<br>make_timestamp | 部分から日付を作成します。 | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
-| current_timestamp | 現在のタイムスタンプを返します。 | current_timestamp() | 1571850624571 |
-| current_date | 時間のコンポーネントなしで現在の日付を返します。 | current_date() | &quot;18-Nov-2019&quot; |
+## 次の手順
+
+By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into [!DNL Platform]. このデータは、などのダウンストリーム [!DNL Platform] サービスで使用できるようになり [!DNL Real-time Customer Profile]ました。 詳細については、 [[!DNLリアルタイム顧客プロファイル]の概要を参照してください](../../profile/home.md) 。
