@@ -5,15 +5,20 @@ description: Adobe Experience PlatformWeb SDKのリリースノート
 seo-description: Adobe Experience PlatformWeb SDKのリリースノート
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '108'
 ht-degree: 3%
 
 ---
 
 
 # リリースノート
+
+## バージョン 2.2.0
+
+* バグ修正：オプトインオブジェクトが、Allyがを呼び出すのをブロックし `idMigrationEnabled` ていました `true`。
+* バグ修正：ちらつきの問題を防ぐために、パーソナライズオファーが返される必要がある要求をAllyに認識させます。
 
 ## バージョン 2.1.0
 
