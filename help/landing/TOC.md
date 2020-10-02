@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform ヘルプ
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 translation-type: tm+mt
-source-git-commit: bafc3265a808871912949409228625fc828cbbb1
+source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 95%
+source-wordcount: '319'
+ht-degree: 92%
 
 ---
 
@@ -24,6 +24,7 @@ ht-degree: 95%
    * [カタログとデータセット](https://docs.adobe.com/content/help/ja-JP/experience-platform/catalog/home.html)
    * [データアクセス](https://docs.adobe.com/content/help/ja-JP/experience-platform/data-access/home.html)
    * [データガバナンス](https://docs.adobe.com/content/help/ja-JP/experience-platform/data-governance/home.html)
+   * [データ準備](https://docs.adobe.com/content/help/en/experience-platform/data-prep/home.html)
    * [データ取得](https://docs.adobe.com/content/help/ja-JP/experience-platform/ingestion/home.html)
    * [Data Science Workspace](https://docs.adobe.com/content/help/ja-JP/experience-platform/data-science-workspace/home.html)
    * [デバッガー](https://docs.adobe.com/content/help/ja-JP/debugger/using/experience-cloud-debugger.html)
