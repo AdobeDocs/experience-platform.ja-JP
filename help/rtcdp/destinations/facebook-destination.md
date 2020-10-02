@@ -5,7 +5,7 @@ seo-title: Facebook の宛先
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 seo-description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: 72ceb747bd4b278afc51dfb5ab6d6386d7b05c82
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 34%
@@ -52,7 +52,7 @@ To help you better understand how and when you should use the [!DNL Facebook] de
 >
 >宛先に送信されるデータには、ステッチIDが含ま [!DNL Facebook] れてはなりません。 お客様は、この義務を守る責任があります。アクティベーション用に選択したセグメントが、マージポリシーでステッチオプションを使用しないようにすることで、義務を守ることができます。 マー [ジポリシーの詳細](/help/profile/ui/merge-policies.md)。
 
-### アクティベーションタイプ {#activation-type}
+### 書き出しタイプ {#export-type}
 
 **セグメントエクスポート** — セグメント(オーディエンス)のすべてのメンバーを、識別子（名前、電話番号など）と共にエクスポートします。 Facebookのリンク先で使用されます。
 
