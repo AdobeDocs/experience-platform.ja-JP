@@ -5,10 +5,10 @@ seo-title: AmazonKinesis駅
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 seo-description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 translation-type: tm+mt
-source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 8%
+source-wordcount: '475'
+ht-degree: 7%
 
 ---
 
@@ -38,6 +38,10 @@ Adobe Experience Platformからのデータをストリーミングするため�
 などのストリーミング送信先を使用すると [!DNL Amazon Kinesis]、高価値のセグメントイベントや関連するプロファイル属性を、選択したシステムに簡単にフィードできます。
 
 例えば、見込み客が、「コンバージョンする傾向が高い」セグメントに該当するホワイトペーパーをダウンロードしたとします。 見込み客が属するセグメントを [!DNL Amazon Kinesis] 宛先にマッピングすると、このイベントがに表示され [!DNL Amazon Kinesis]ます。 企業のITシステムで最も効果的に機能すると考えられるように、Do-It-Yoursenアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
+
+## 書き出しタイプ {#export-type}
+
+**プロファイルエクスポート** — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。
 
 ## 宛先の接続 {#connect-destination}
 
