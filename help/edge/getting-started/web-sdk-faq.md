@@ -4,9 +4,9 @@ seo-title: Adobe Experience PlatformWeb SDK FAQ
 description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 seo-description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 translation-type: tm+mt
-source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1683'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # よくある質問
 
-このFAQには、AdobeWeb SDK/
+このFAQには、AdobeWeb SDKに関するよくある質問が含まれています。
 
 ## Adobe Experience PlatformWeb SDKとは
 
@@ -105,7 +105,7 @@ Adobe Experience PlatformウェブSDKは、以下のユーザーを対象に開�
 
 ## Adobe Experience PlatformWeb SDKを使用して開始にアクセスする方法を教えてください。
 
-Web SDKは、現在一般向けに提供されており、Adobe Experience Cloud製品にデータを送信する際に使用できます。 サードパーティのソリューションにデータを送信する機能は、近い将来に提供される予定です。 Web SDKにアクセスする場合は、CSMに問い合わせて、要求プロセスを開始します。
+Web SDKは、現在一般向けに提供されており、Adobe Experience Cloud製品にデータを送信する際に使用できます。 サードパーティのソリューションにデータを送信する機能は、近い将来に提供される予定です。 Web SDKにアクセスする場合は、Certified Software Manager(CSM)に問い合わせて、要求プロセスを開始します。
 
 ## Web SDKが現在サポートしている使用例を教えてください。
 
