@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: マッピング関数
+title: データ準備関数
 topic: overview
 description: このドキュメントでは、データ準備で使用するマッピング関数を紹介します。
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: d47410106a6d3955cc9af78e605c893f08185ffa
 workflow-type: tm+mt
-source-wordcount: '3288'
-ht-degree: 18%
+source-wordcount: '3432'
+ht-degree: 20%
 
 ---
 
 
-# マッピング関数
+# データ準備関数
 
-マッピング関数を使用して、ソースフィールドに入力した値に基づいて値を計算および計算できます。
+データ準備関数を使用して、ソースフィールドに入力した値に基づいて値を計算および計算できます。
 
 ## フィールド
 
@@ -37,6 +37,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 文字列関数
 
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | 渡された文字列を連結します。 | <ul><li>文字列：連結する文字列です。</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
@@ -47,7 +51,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | lower /<br>lcase | 文字列を小文字に変換します。 | <ul><li>入力： **必須** ：小文字に変換する文字列です。</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | upper /<br>ucase | 文字列を大文字に変換します。 | <ul><li>入力： **必須** ：大文字に変換する文字列です。</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
 | split | 区切り記号で入力文字列を分割します。 | <ul><li>入力： **必須** ：分割する入力文字列です。</li><li>区切り文字： **必須** ：入力を分割するために使用する文字列です。</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | 区切り記号を使用してオブジェクトのリストを結合します。 | <ul><li>区切り文字： **必須** ：オブジェクトを結合するために使用する文字列です。</li><li>オブジェクト： **必須** ：結合する文字列の配列です。</li></ul> | join(SEPARATOR, [OBJECTS]) | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| join | 区切り記号を使用してオブジェクトのリストを結合します。 | <ul><li>区切り文字： **必須** ：オブジェクトを結合するために使用する文字列です。</li><li>オブジェクト： **必須** ：結合する文字列の配列です。</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
 | lpad | 文字列の左側を、もう1つの指定した文字列で埋めます。 | <ul><li>入力： **必須** ：埋め込む文字列です。 この文字列はnullにできます。</li><li>カウント： **必須** ：埋め込む文字列のサイズです。</li><li>パディング： **必須** ：入力に埋め込む文字列です。 nullまたは空の場合は、1つのスペースとして扱われます。</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzybat&quot; |
 | rpad | 文字列の右側をもう1つの指定された文字列で埋めます。 | <ul><li>入力： **必須** ：埋め込む文字列です。 この文字列はnullにできます。</li><li>カウント： **必須** ：埋め込む文字列のサイズです。</li><li>パディング： **必須** ：入力に埋め込む文字列です。 nullまたは空の場合は、1つのスペースとして扱われます。</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | 渡された文字列の最初の&quot;n&quot;文字を取得します。 | <ul><li>文字列： **必須** ：最初の&quot;n&quot;文字を取得する文字列。</li><li>カウント： ****&#x200B;必須：文字列から取得する&quot;n&quot;文字。</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -60,15 +64,23 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### ハッシュ関数
 
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| sha1 | 入力を受け取り、Secure Hash Algorithm 1(SHA-1)を使用してハッシュ値を生成します。 | <ul><li>入力： **必須** ：ハッシュするプレーンテキストです。</li><li>CHARSET: *オプション* ：文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a2448690840c5dfcce3c80 |
-| sha256 | 入力を受け取り、Secure Hash Algorithm 256(SHA-256)を使用してハッシュ値を生成します。 | <ul><li>入力： **必須** ：ハッシュするプレーンテキストです。</li><li>CHARSET: *オプション* ：文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | 入力を受け取り、Secure Hash Algorithm 512(SHA-512)を使用してハッシュ値を生成します。 | <ul><li>入力： **必須** ：ハッシュするプレーンテキストです。</li><li>CHARSET: *オプション* ：文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | 入力を受け取り、MD5を使用してハッシュ値を生成します。 | <ul><li>入力： **必須** ：ハッシュするプレーンテキストです。</li><li>CHARSET: *オプション* ：文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。 </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| sha1 | 入力を受け取り、Secure Hash Algorithm 1(SHA-1)を使用してハッシュ値を生成します。 | <ul><li>入力： **必須** ：ハッシュするプレーンテキストです。</li><li>CHARSET: *オプション* ：文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
+| sha256 | 入力を受け取り、Secure Hash Algorithm 256(SHA-256)を使用してハッシュ値を生成します。 | <ul><li>入力： **必須** ：ハッシュするプレーンテキストです。</li><li>CHARSET: *オプション* ：文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B;ee6a39af698154a83a586ee270a0d372104 |
+| sha512 | 入力を受け取り、Secure Hash Algorithm 512(SHA-512)を使用してハッシュ値を生成します。 | <ul><li>入力： **必須** ：ハッシュするプレーンテキストです。</li><li>CHARSET: *オプション* ：文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cd7b367dd078a89 a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | 入力を受け取り、MD5を使用してハッシュ値を生成します。 | <ul><li>入力： **必須** ：ハッシュするプレーンテキストです。</li><li>CHARSET: *オプション* ：文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。 </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | 入力でCyclic Redundancy Check（CRC；巡回冗長検査）アルゴリズムを使用し、32ビットの循環コードを生成します。 | <ul><li>入力： **必須** ：ハッシュするプレーンテキストです。</li><li>CHARSET: *オプション* ：文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
 ### URL関数
+
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -79,6 +91,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_クエリ_str | 渡されたURLのクエリ文字列を返します。 | <ul><li>URL: **必須** :クエリ文字列の取得元のURL。</li><li>アンカー： **必須** :クエリ文字列内のアンカーを使用して何を行うかを決定します。 次の3つの値のいずれかになります。&quot;retain&quot;、&quot;remove&quot;または&quot;append&quot;。<br><br>値が「retain」の場合、返される値にアンカーが割り当てられます。<br>値が「remove」の場合、返される値からアンカーが削除されます。<br>値が「append」の場合、アンカーは別の値として返されます。</li></ul> | get_url_クエリ_str(URL, ANCHOR) | get_url_クエリ_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;retain&quot;)<br>get_url_クエリ_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;remove&quot;)<br>get_url_クエリ_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### 日付および時間関数
+
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -97,6 +113,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 階層 — オブジェクト
 
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | 入力のサイズを返します。 | <ul><li>入力： **必須** ：サイズを調べるオブジェクトです。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
@@ -108,6 +128,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 階層 — 配列
 
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | 渡された配列の最初のnull以外のオブジェクトを返します。 | <ul><li>入力： **必須** :nullでない最初のオブジェクトを探す配列。</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
@@ -117,6 +141,10 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 論理演算子
 
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decode | キーと、キーと値のペアのリストが配列としてフラット化されている場合、この関数は、キーが見つかった場合は値を返し、デフォルト値が配列に存在する場合はデフォルト値を返します。 | <ul><li>キー： **必須** ：一致するキー。</li><li>OPTIONS: **必須** ：キー/値のペアのフラットな配列。 オプションで、デフォルト値を末尾に配置できます。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 渡されたstateCodeが「ca」、「California」の場合。<br>指定されたstateCodeが「pa」、「Pennsylvania」の場合。<br>stateCodeが次の値と一致しない場合は、「N/A」となります。 |
@@ -124,12 +152,20 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### 集計
 
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | 指定された引数の最小値を返します。自然な順序を使用します。 | <ul><li>OPTIONS: **必須** ：互いに比較できる1つ以上のオブジェクト。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 指定された引数の最大値を返します。自然な順序を使用します。 | <ul><li>OPTIONS: **必須** ：互いに比較できる1つ以上のオブジェクト。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 ### 型変換
+
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -140,17 +176,29 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 ### JSON関数
 
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | 渡された文字列からJSONコンテンツを逆シリアル化します。 | <ul><li>文字列： **必須** ：デシリアライズするJSON文字列。</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}}) | JSONを表すオブジェクト。 |
 
 ### 特別な操作
 
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
+
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 擬似ランダム ID を生成します。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c20633 |
 
 ### ユーザーエージェント機能
+
+>[!NOTE]
+>
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
