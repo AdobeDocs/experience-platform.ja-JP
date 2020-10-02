@@ -5,17 +5,17 @@ description: Experience Platform Web SDK 拡張機能を使用してデータを
 seo-description: Experience Platform Web SDK 拡張機能を使用してデータを収集するためのクイックスタートガイド
 keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a9c45aed92dc7c7148db7c9383060bbeab763447
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 28%
+source-wordcount: '566'
+ht-degree: 27%
 
 ---
 
 
-# ようこそ
+# Adobe Experience PlatformWeb SDKの起動のクイック開始ガイド
 
-このガイドでは、開始時にAdobe Experience PlatformWeb SDKを設定する様々な方法の手順を説明します。 この機能を使用するには、ホワイトリストに登録する必要があります。 待機中のリストに移動する場合は、CSMに連絡してください。
+このガイドでは、開始時にAdobe Experience PlatformWeb SDKを設定する様々な方法の手順を説明します。 この機能を使用するには、許可リスト上にいる必要があります。 待機中のリストに移動する場合は、Certified Software Manager(CSM)に連絡してください。
 
 - [ファーストパーティドメイン（CNAME）](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)が有効になっている。既に Analytics 用 CNAME をお持ちの場合は、その CNAME を使用する必要があります。開発でのテストはCNAMEを使用しなくても機能しますが、実稼働環境に移行する前に必要になります。
 - Adobe Experience Platform　を使用する資格がある. プラットフォームを購入していない場合、Adobeは、限られた方法でPlatform Data Services Foundationを提供し、SDKを使用して無償で利用できます。
@@ -23,7 +23,7 @@ ht-degree: 28%
 
 ## スキーマの準備
 
-Experience Platformエッジネットワークは、データをXDMとして受け取ります。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、Edge Networkでデータの形式設定方法を定義します。 データを送信するには、スキーマを定義する必要があります。
+Experience Platformエッジネットワークは、Experience Data Model(XDM)を使用します。 XDMは、スキーマを定義できるデータ形式です。 スキーマは、Edge Networkでデータの形式設定方法を定義します。 データを送信するには、スキーマを定義する必要があります。
 
 1. [スキーマ](../../xdm/tutorials/create-schema-ui.md)
 2. 作追加成したスキーマに対するAEP Mixin。 [!DNL Web SDK ExperienceEvent]
@@ -45,7 +45,7 @@ Launchの [エッジ設定ツールを使用して、設定IDを作成できま�
 
 >[!NOTE]
 >
->この機能を使用するには、組織がホワイトリストに登録されている必要があります。 最終的なホワイトリスト登録のために、CSMにリストに登録するようにお問い合わせください。
+>この機能を使用するには、組織が許可リスト上に存在する必要があります。 許可リストを使用するには、Certified Software Manager(CSM)に問い合わせてください。
 
 ## スキーマに基づいたデータ要素の作成
 
@@ -66,6 +66,7 @@ After the extension is installed, start sending events by adding a `sendEvent` a
 - [スキーマの構築](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/schema/composition.html)
 - [デバッグについて](../fundamentals/debugging.md)
 - エクスペリエンスを [パーソナライズする方法を説明します。](../fundamentals/rendering-personalization-content.md)
+- Adobe Experience Platform Launchで [IAB Transparency &amp; Consent Framework 2.0](../solution-specific/iab-tcf/with-launch.md) を統合します。
 - 複数のソリューションにデータを送信する方法について説明します。
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
