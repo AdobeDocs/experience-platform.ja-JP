@@ -5,10 +5,10 @@ seo-title: （ベータ版）Azureイベントハブの宛先
 description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 seo-description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 7%
+source-wordcount: '505'
+ht-degree: 6%
 
 ---
 
@@ -36,6 +36,10 @@ Adobe Experience Platformからのデータをストリーミングするため�
 などのストリーミング送信先を使用すると [!DNL Azure Event Hubs]、高価値のセグメントイベントや関連するプロファイル属性を、選択したシステムに簡単にフィードできます。
 
 例えば、見込み客が、「コンバージョンする傾向が高い」セグメントに該当するホワイトペーパーをダウンロードしたとします。 見込み客が属するセグメントを [!DNL Azure Event Hubs] 宛先にマッピングすると、このイベントがに表示され [!DNL Azure Event Hubs]ます。 企業のITシステムで最も効果的に機能すると考えられるように、Do-It-Yoursenアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
+
+## 書き出しタイプ {#export-type}
+
+**プロファイルエクスポート** — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面から選択し](/help/rtcdp/destinations/activate-destinations.md#select-attributes)ます。\
 
 ## 宛先の接続 {#connect-destination}
 
