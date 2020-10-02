@@ -5,7 +5,7 @@ description: Experience Platform Web SDK の設定方法について説明しま
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
+source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -103,7 +103,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で�
 
 ## プライバシーオプション
 
-### `defaultConsent`
+### `defaultConsent` {#default-consent}
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
