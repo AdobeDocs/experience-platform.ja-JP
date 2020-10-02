@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience PlatformWeb SDKヘルプ
 breadcrumb-title: Web SDK Guide
 user-guide-description: Interact with Experience Cloud services through the Edge Network.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 67928b35416928947a4b288d9aea92a065f080f6
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 70%
+source-wordcount: '116'
+ht-degree: 63%
 
 ---
 
@@ -41,6 +41,10 @@ ht-degree: 70%
       * [Adobe Analytics へのデータの送信](solution-specific/analytics/link-tracking.md)
    * Audience Manager {#aam}
       * [Audience Manager の概要](solution-specific/audience-manager/audience-manager-overview.md)
+   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
+      * [概要](solution-specific/iab-tcf/overview.md)
+      * [開始と統合](solution-specific/iab-tcf/with-launch.md)
+      * [開始しない統合](solution-specific/iab-tcf/without-launch.md)
    * Target {#target}
       * [Target の概要](solution-specific/target/target-overview.md)
       * [ちらつき管理](solution-specific/target/flicker-management.md)
