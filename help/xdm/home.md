@@ -5,7 +5,7 @@ title: エクスペリエンスデータモデル（XDM）システム
 topic: overview
 description: '標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。 '
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d49bbc91b67dec0468b46d165521c7d097a801ee
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 50%
@@ -56,7 +56,7 @@ Although you are able to define your own classes within the [!DNL Schema Registr
 
 消費者プロファイルが増え続けるにつれ、ある人物の個人情報、識別情報、連絡先の詳細、コミュニケーションの環境設定を含む堅牢なリポジトリーとなります。
 
-### [!DNL XDM ExperienceEvent]
+### [!DNL XDM ExperienceEvent] {#xdm-experience-event}
 
 XDM ExperienceEvent は、イベント（または一連のイベント）が発生したときのシステムの状態（サブジェクトが関与する時点や ID など）を取り込むために使用される、時系列ベースのクラスです。エクスペリエンスイベントは、何が発生したかに関する事実の記録なので、不変であり、何が発生したかを集計や解釈を加えずに表します。特定の時間枠内で発生した変更を分析し、複数の時間枠を比較してトレンドを追跡するために使用できるので、時間ドメイン分析には非常に重要です。
 
