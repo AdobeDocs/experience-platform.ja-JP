@@ -5,10 +5,10 @@ seo-title: Amazon S3 の宛先
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 seo-description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 translation-type: tm+mt
-source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 39%
+source-wordcount: '256'
+ht-degree: 33%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 39%
 ## 概要
 
 Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
+
+## 書き出しタイプ {#export-type}
+
+**プロファイルエクスポート** — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。
+
+![AmazonS3プロファイルベースの書き出しタイプ](/help/rtcdp/destinations/assets/aws-export-type.png)
 
 ## 宛先の接続 {#connect-destination}
 
