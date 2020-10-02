@@ -5,10 +5,10 @@ seo-title: SFTP の宛先
 description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
 seo-description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 77%
+source-wordcount: '206'
+ht-degree: 60%
 
 ---
 
@@ -19,7 +19,11 @@ ht-degree: 77%
 
 SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
 
-データを書き出すには、次の手順を実行します。
+## 書き出しタイプ {#export-type}
+
+**プロファイルエクスポート** — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](/help/rtcdp/destinations/activate-destinations.md#select-attributes)。
+
+![SFTPプロファイルベースのエクスポートタイプ](/help/rtcdp/destinations/assets/sftp-export-type.png)
 
 ## 宛先の接続 {#connect-destination}
 
