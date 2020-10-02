@@ -5,10 +5,10 @@ seo-title: Google Ad Manager の宛先
 description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 seo-description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 41%
+source-wordcount: '690'
+ht-degree: 40%
 
 ---
 
@@ -30,6 +30,10 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 >[!IMPORTANT]
 >
 >If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/ja-JP/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
+
+### 書き出しタイプ {#export-type}
+
+**セグメントエクスポート** — セグメント(オーディエンス)のすべてのメンバーをGoogleのエクスポート先にエクスポートします。
 
 ## 前提条件
 
@@ -54,7 +58,7 @@ AdobeReal-time CDPで [!DNL Google Ad Manager][!DNL Google] 宛先を作成す�
 
    >[!NOTE]
    >
-   >このリンク先との接続が既に存在する場合は、リンク先のカードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
+   >この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
 
 2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
 
