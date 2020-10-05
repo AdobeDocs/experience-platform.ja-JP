@@ -2,11 +2,12 @@
 keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: Adobe Experience Platform に関する FAQ とトラブルシューティングガイド
+description: このドキュメントは、Adobe Experience Platform に関するよくある質問に回答するとともに、Experience Platform API で発生する可能性のある一般的なエラーの高度なトラブルシューティングガイドです。
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 3798e687da07dee7336121c203948158523de5bd
+source-git-commit: ed0bbe1017790cd0b01757a2e43c0040a125be18
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '1996'
 ht-degree: 76%
 
 ---
