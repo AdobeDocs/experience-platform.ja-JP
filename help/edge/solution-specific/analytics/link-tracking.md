@@ -5,9 +5,9 @@ description: Experience PlatformWeb SDKを使用してリンクデータをAdobe
 seo-description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: c6b572f8757e46ccb22ccea326a7537747f81893
+source-git-commit: 8840e00ec3aa28d43c371b793da4a4b9bfc8d259
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # Adobe Analytics へのデータの送信
 
-以前は、ページ表示とリンク(例えば `s.t(), s.tl()`)の間で識別する関数が異なっていましたが、Web SDKでは、 `sendEvent` コマンドしかありません。 イベントと共に送信するデータによって、ページ表示とリンクのどちらにするかが決まります。
+以前は、ページ表示とリンク(例えば `s.t(), s.tl()`)を区別する機能が異なっていましたが、Web SDKでは、 `sendEvent` コマンドのみが存在しました。 イベントと共に送信するデータによって、ページ表示とリンクのどちらにするかが決まります。
 
 ## ページ表示の送信
 
@@ -35,7 +35,7 @@ alloy("sendEvent", {
 });
 ```
 
-Analyticsでは、この変数が設定されていない場合でもページ表示が技術的に記録されますが、ページ表示をデータに明示的に記録し、導入を後で実行する場合は常に、この変数を設定することをお勧めします。
+Analyticsでは、この変数が設定されていない場合でもページ表示が技術的に記録されますが、ページ表示を記録してデータに明示的に含めたり、将来の配達確認に導入する場合は、常にこの変数を設定することをお勧めします。
 
 ## リンクの追跡
 
