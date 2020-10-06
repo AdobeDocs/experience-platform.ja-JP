@@ -5,9 +5,9 @@ title: テキスト分類APIエンドポイント
 topic: Developer guide
 description: テキスト分類サービスは、テキストフラグメントを指定した場合、1つ以上のラベルに分類できます。 分類は、単一のラベル、複数のラベル、階層のいずれかです。
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 5%
 
 ---
@@ -63,7 +63,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | プロパティ | 説明 | 必須 |
 | --- | --- | --- |
 | `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
-| `application-id` | 作成されたアプリケーションのID。 | ○ |
+| `application-id` | 作成したアプリケーションのID。 | ○ |
 | `data` | ドキュメントを表す配列内の各オブジェクトを持つJSONオブジェクトを含む配列。 この配列の一部として渡されたパラメータは、配列の外部で指定されたグローバルパラメータよりも優先され `data` ます。 次の表に示す残りのプロパティは、内で上書きでき `data`ます。 | ○ |
 | `language` | 入力テキストの言語。 デフォルト値は `en` です。 | × |
 | `content-type` | 入力が要求本文の一部であるか、S3バケットの署名済みURLであるかを示すために使用されます。 このプロパティのデフォルトはで `inline`す。 | × |
