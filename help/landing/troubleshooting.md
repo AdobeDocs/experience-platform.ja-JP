@@ -4,8 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform に関する FAQ とトラブルシューティングガイド
 description: このドキュメントは、Adobe Experience Platform に関するよくある質問に回答するとともに、Experience Platform API で発生する可能性のある一般的なエラーの高度なトラブルシューティングガイドです。
 topic: getting started
+user-guide-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed0bbe1017790cd0b01757a2e43c0040a125be18
+source-git-commit: 9981c5e34d675f7fcb767a097af3b2d3c56ec091
 workflow-type: tm+mt
 source-wordcount: '1996'
 ht-degree: 76%
