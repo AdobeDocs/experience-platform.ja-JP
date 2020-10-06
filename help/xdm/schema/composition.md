@@ -5,7 +5,7 @@ title: スキーマ合成の基本
 topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
-source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 55%
@@ -58,7 +58,7 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 
 レコードと時系列の両方のスキーマには、ID のマップ（`xdm:identityMap`）が含まれます。このフィールドには、次の節で説明する「ID」とマークされたフィールドから作成された、主体の ID 表現が含まれます。
 
-### [!UICONTROL ID]
+### [!UICONTROL ID] {#identity}
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. このデータは、複数のサービスで使用して、個々のエンティティの単一の統合表示を作成できます。したがって、顧客のIDについて考える際は、スキーマの場所に関係なく、どのフィールドを使用して対象を識別できるかを考慮する必要があります。
 
@@ -195,7 +195,7 @@ For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and 
 ダウンストリームサービスやアプリケーションで使用される一部のデータ操作では、特定のフィールドタイプに制約が適用されます。影響を受けるサービスには、次のものが含まれます。
 
 * [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md)
-* [[!DNL IDサービス]](../../identity-service/home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
 * [[!DNLセグメント]](../../segmentation/home.md)
 * [[!DNLクエリサービス]](../../query-service/home.md)
 * [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
