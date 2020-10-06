@@ -5,9 +5,9 @@ seo-title: （ベータ版）Azureイベントハブの宛先
 description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 seo-description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '504'
 ht-degree: 6%
 
 ---
@@ -39,7 +39,7 @@ Adobe Experience Platformからのデータをストリーミングするため�
 
 ## 書き出しタイプ {#export-type}
 
-**プロファイルエクスポート** — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面から選択し](/help/rtcdp/destinations/activate-destinations.md#select-attributes)ます。\
+**プロファイルベース** — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面から選択し](/help/rtcdp/destinations/activate-destinations.md#select-attributes)ます。\
 
 ## 宛先の接続 {#connect-destination}
 
