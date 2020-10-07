@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 59%
@@ -79,7 +79,7 @@ The [!DNL Data Governance] framework simplifies and streamlines the process of c
 
 | 機能 | 説明 |
 | -----------| ---------- |
-| UI でのデータ使用ポリシーの管理 | データ使用ポリシーは、 UI の&#x200B;_ポリシー_&#x200B;ワークスペース内で管理できるようになっています。[!DNL Experience Platform]詳しくは、『[ポリシーユーザガイド](../../data-governance/policies/user-guide.md)』を参照してください。 |
+| UI でのデータ使用ポリシーの管理 | データ使用ポリシーは、 UI の&#x200B;**ポリシー**&#x200B;ワークスペース内で管理できるようになっています。[!DNL Experience Platform]詳しくは、『[ポリシーユーザガイド](../../data-governance/policies/user-guide.md)』を参照してください。 |
 
 **既知の問題**
 
