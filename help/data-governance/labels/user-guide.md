@@ -5,7 +5,7 @@ title: データ使用状況ラベルのユーザーガイド
 topic: labels
 description: このユーザガイドでは、Adobe Experience Platformユーザインターフェイス内でデータ使用ラベルを使用する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 78%
@@ -19,7 +19,7 @@ ht-degree: 78%
 
 ## データセットレベルでのデータ使用状況ラベルの管理
 
-データセットレベルでデータ使用状況ラベルを管理するには、既存のデータセットを選択するか、新しいデータセットを作成する必要があります。Adobe Experience Platform にログインした後、左側のナビゲーションで「**[!UICONTROL データセット]**」を選択し、「_データセット_」ワークスペースを開きます。このページには、組織に属するすべての作成済みデータセットと、各データセットに関する有用な詳細情報がリストされます。
+データセットレベルでデータ使用状況ラベルを管理するには、既存のデータセットを選択するか、新しいデータセットを作成する必要があります。Adobe Experience Platform にログインした後、左側のナビゲーションで「**[!UICONTROL データセット]**」を選択し、「**[!UICONTROL データセット]**」ワークスペースを開きます。このページには、組織に属するすべての作成済みデータセットと、各データセットに関する有用な詳細情報がリストされます。
 
 ![データワークスペース内の「データセット」タブ](../images/labels/datasets.png)
 
@@ -43,7 +43,7 @@ ht-degree: 78%
 
 ![データセットスキーマの選択](../images/labels/dataset_schema.png)
 
-「**[!UICONTROL データセットを設定]**」画面が表示されます。新しいデータセットの&#x200B;**名前**（必須）と&#x200B;**説明**（任意ですが推奨）を指定し、「**[!UICONTROL 完了]**」をクリックします。
+「**[!UICONTROL データセットを設定]**」画面が表示されます。新しいデータセットの名前（必須）と説明（任意ですが推奨）を指定し、「**[!UICONTROL 完了]**」をクリックします。
 
 ![データセットの名前と説明を設定](../images/labels/dataset_configure.png)
 
