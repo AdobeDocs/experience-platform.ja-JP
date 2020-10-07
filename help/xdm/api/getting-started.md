@@ -5,7 +5,7 @@ title: Schema Registry API 開発者ガイド
 description: スキーマレジストリは、Adobe Experience Platform 内のスキーマライブラリへのアクセスに使用され、使用可能なすべてのライブラリリソースにアクセスするためのユーザーインターフェイスと RESTful API を提供します。Schema Registry API を使用すると、基本的な CRUD 操作を実行して、Adobe Experience Platform 内で使用可能なすべてのスキーマと関連リソースを表示および管理できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 70%
@@ -162,7 +162,7 @@ A successful response returns information regarding your organization&#39;s use 
 
 ## `CONTAINER_ID` について {#container}
 
-Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. API 呼び出しを実行できるコンテナには、**グローバル**&#x200B;コンテナと **テナント**&#x200B;コンテナの 2 つがあります。
+Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. API 呼び出しを実行できるコンテナには、グローバル コンテナと テナントコンテナの 2 つがあります。
 
 ### グローバルコンテナ
 
