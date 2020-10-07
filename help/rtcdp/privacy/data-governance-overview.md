@@ -5,7 +5,7 @@ seo-title: リアルタイム顧客データプラットフォームにおける
 description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 seo-description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 55%
@@ -48,7 +48,7 @@ Real-time CDP is built on top of Adobe Experience Platform, and therefore the ma
 
 データ使用状況ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを定義し、有効にする必要があります。データ使用ポリシーは、リアルタイム CDP 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するルールです詳しくは、 で『[!DNL Experience Platform][データガバナンスの概要](../../data-governance/home.md)』の「データ使用ポリシー」の節を参照してください。
 
-Adobe Experience Platform では、一般的な顧客体験の使用例に対して、いくつかの&#x200B;**コアポリシー**&#x200B;があります。これらのポリシーは、「 **[!UICONTROL ポリシー]** 」ワークスペースに移動し、「 **[!UICONTROL 参照]** 」タブを選択すると、UIで表示できます。 独自のカスタムポリシーの作成方法など、UIでのポリシーの操作に関する詳細な手順については [、](../../data-governance/policies/user-guide.md) ドキュメントの「 [!DNL Experience Platform] policiesユーザーガイド」を参照してください。
+Adobe Experience Platform では、一般的な顧客体験の使用例に対して、いくつかのコアポリシーがあります。これらのポリシーは、「 **[!UICONTROL ポリシー]** 」ワークスペースに移動し、「 **[!UICONTROL 参照]** 」タブを選択すると、UIで表示できます。 独自のカスタムポリシーの作成方法など、UIでのポリシーの操作に関する詳細な手順については [、](../../data-governance/policies/user-guide.md) ドキュメントの「 [!DNL Experience Platform] policiesユーザーガイド」を参照してください。
 
 ## データ使用コンプライアンスの実施 {#enforce-data-usage-compliance}
 
