@@ -6,7 +6,7 @@ topic: policies
 type: Tutorial
 description: Policy Service APIを使用すると、データ使用ポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。 このドキュメントでは、Policy Service APIを使用してポリシーを作成するための手順を説明するチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 49%
@@ -195,7 +195,7 @@ curl -X PUT \
 
 新しいポリシーを作成するには、マーケティングアクションのURI IDと、そのマーケティングアクションを禁止する使用ラベルの式を指定する必要があります。
 
-This expression is called a **policy expression** and is an object containing either (A) a label, or (B) an operator and operands, but not both. また、各演算値もポリシー式オブジェクトです。例えば、`C1 OR (C3 AND C7)` ラベルが存在する場合、サードパーティへのデータの書き出しに関するポリシーは禁止される可能性があります。この式は次のように指定します。
+この式はポリシー式と呼ばれ、(A)ラベル、または(B)演算子と演算値のどちらかを含むオブジェクトですが、両方を含むわけではありません。 また、各演算値もポリシー式オブジェクトです。例えば、`C1 OR (C3 AND C7)` ラベルが存在する場合、サードパーティへのデータの書き出しに関するポリシーは禁止される可能性があります。この式は次のように指定します。
 
 ```json
 "deny": {
