@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID サービストラブルシューティン�
 topic: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 82%
@@ -100,7 +100,7 @@ API を使用して ID 記述子を作成する際に名前空間を定義する
 
 ## 複合 ID と XID とは何ですか。
 
-ID は、API 呼び出しで複合 ID または XID によって参照されます。**複合 ID** は、ID 値と名前空間を含む ID を表します。**XID** は、複合 ID（ID および名前空間）と同じ構成を表す単一値 ID で、ID サービスによって永続化されると、新しい ID に自動的に割り当てられます。詳しくは、「[ID サービス API の概要](./home.md)」を参照してください。
+ID は、API 呼び出しで複合 ID または XID によって参照されます。複合 ID は、ID 値と名前空間を含む ID を表します。XID は、複合 ID（ID および名前空間）と同じ構成を表す単一値 ID で、ID サービスによって永続化されると、新しい ID に自動的に割り当てられます。詳しくは、「[ID サービス API の概要](./home.md)」を参照してください。
 
 ## ID サービスが個人を特定できる情報（PII）をどのように処理するのか教えてください。
 
