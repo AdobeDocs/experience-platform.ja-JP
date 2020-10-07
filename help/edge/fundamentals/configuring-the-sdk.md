@@ -5,7 +5,7 @@ description: Experience Platform Web SDK の設定方法について説明しま
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: d036595dc96af98fd53c7eb40162585bac48f05c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -135,7 +135,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で�
 | -------- | ------------ | ----------------- |
 | Boolean | × | `true` |
 
-[!DNL Audience Manager] Cookieの宛先を有効にします 。これにより、セグメントクオリフィケーションに基づいたCookieの設定が可能になります。
+Enables [!DNL Audience Manager] cookie destinations, which allows the setting of cookies based on segment qualification.
 
 ### `urlDestinationsEnabled`
 
@@ -143,7 +143,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で�
 | -------- | ------------ | ----------------- |
 | Boolean | × | `true` |
 
-Enables [!DNL Audience Manager] [!UICONTROL URL destinations], which allows the firing of URLs based on segment qualification.
+Enables [!DNL Audience Manager] URL destinations, which allows the firing of URLs based on segment qualification.
 
 ## ID オプション
 
