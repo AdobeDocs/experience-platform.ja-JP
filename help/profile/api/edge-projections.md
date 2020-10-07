@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: エッジ予測 — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 85%
@@ -226,7 +226,7 @@ curl -X GET \
 
 ### 宛先の更新
 
-既存の宛先は、`/config/destinations`エンドポイントに PUT リクエストをおこない、更新対象の宛先の ID をリクエストパスに含めることで更新できます。この操作は基本的に宛先の&#x200B;_書き換え_&#x200B;なので、リクエストの本文には、新しい宛先を作成する際に指定するのと同じ属性を指定する必要があります。
+既存の宛先は、`/config/destinations`エンドポイントに PUT リクエストをおこない、更新対象の宛先の ID をリクエストパスに含めることで更新できます。この操作は基本的に宛先の書き換えなので、リクエストの本文には、新しい宛先を作成する際に指定するのと同じ属性を指定する必要があります。
 
 >[!CAUTION]
 >
