@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、UIで消費者データをAdobe Experience Platformに取り込むためのAdobe Analyticsソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 15%
@@ -28,7 +28,7 @@ ht-degree: 15%
 
 ## Adobe Analyticsとのソース接続の作成
 
-[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) ソース **** 」を選択してソースワークスペースにアクセスします。 カ *タログ* 画面には、受信接続を作成するために利用できるソースが表示され、各ソースには、それらに関連付けられた既存のアカウント数とデータセットフローが表示されます。
+[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) ソース **** 」を選択してソースワークスペースにアクセスします。 カ **タログ** 画面には、受信接続を作成するために利用できるソースが表示され、各ソースには、それらに関連付けられた既存のアカウント数とデータセットフローが表示されます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
@@ -73,7 +73,7 @@ ht-degree: 15%
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-[ *データセットフロー* ]画面が表示されます。 このページには、名前、ソースデータ、作成時間およびステータスに関する情報を含むデータセットフローのペアが表示されます。
+[ **データセットフロー** ]画面が表示されます。 このページには、名前、ソースデータ、作成時間およびステータスに関する情報を含むデータセットフローのペアが表示されます。
 
 コネクタは、2つのデータセットフローをインスタンス化します。 一方のフローはバックフィルデータを表し、もう一方のフローはライブデータを表します。 埋め戻しデータはプロファイル用に設定されていませんが、分析およびデータ科学の使用例のためにデータレークに送信されます。
 
@@ -83,7 +83,7 @@ ht-degree: 15%
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-「 *データセットアクティビティ* 」ページが表示されます。 このページには、グラフの形式で消費されるメッセージの割合が表示されます。 上部のヘッダーから *データ管理* (Data Governance)を選択して、ラベル付けフィールドにアクセスします。
+「 **データセットアクティビティ** 」ページが表示されます。 このページには、グラフの形式で消費されるメッセージの割合が表示されます。 上部のヘッダーから *データ管理* (Data Governance)を選択して、ラベル付けフィールドにアクセスします。
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -91,7 +91,7 @@ ht-degree: 15%
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-The *Edit governance labels* panel appears. この画面では、データセットフローの契約、ID、機密ラベルにアクセスして編集できます。
+The **Edit governance labels** panel appears. この画面では、データセットフローの契約、ID、機密ラベルにアクセスして編集できます。
 
 Analyticsからのデータにラベルを付ける方法について詳しくは、『 [データ使用ラベルガイド](../../../../../data-governance/labels/user-guide.md)』を参照してください。
 
