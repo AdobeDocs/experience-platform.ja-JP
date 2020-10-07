@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、2 つの主なセクションについて説明します。まず、JupyterLab ノートブック内のテンプレートを使用して機械学習モデルを作成します。次に、JupyterLab 内でノートブックをレシピワークフローに導き、Data Science Workspace 内でレシピを作成します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 84%
@@ -302,7 +302,7 @@ df.dropna(0, inplace=True)
 
 >[!NOTE]
 > 
->_特徴_&#x200B;とは、機械学習モデルが&#x200B;_ラベル_&#x200B;を予測するために使用する入力変数を指します。
+>  特徴とは、機械学習モデルがラベルを予測するために使用する入力変数を指します。
 
 `train()` 関数には、トレーニングモデルを含め、トレーニング済みモデルを返す必要があります。様々なモデルの例は、[scikit-learn ユーザーガイドドキュメント](https://scikit-learn.org/stable/user_guide.html)に記載されています。
 
