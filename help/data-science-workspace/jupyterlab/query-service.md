@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform を使用すると、クエリサービスを標準機能として JupyterLab に統合することにより、Data Science Workspace で構造化照会言語（SQL）を使用できます。このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例のサンプルSQLクエリを示します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 65%
@@ -104,7 +104,7 @@ When a notebook is inactive for an extended period of time, the connection betwe
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-ノートブックのカーネルはリセットされますが、セルは保持され、**[!UICONTROL すべて]**&#x200B;のセルを再実行して、中断した場所から続行します。
+ノートブックのカーネルはリセットされますが、セルは保持され、**すべて**&#x200B;のセルを再実行して、中断した場所から続行します。
 
 ### 1 時間ごとの訪問者数 {#hourly-visitor-count}
 
