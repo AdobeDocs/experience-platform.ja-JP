@@ -4,7 +4,7 @@ seo-title: Adobe Experience PlatformWeb SDK FAQ
 description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 seo-description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1683'
 ht-degree: 4%
@@ -117,7 +117,7 @@ Web SDKは、急速に発展しています。 その他の使用例が検討中
 
 * **別のタグのみ：** サイトにソリューションのタグが付いていて、再タグ付けができないが、Experience Platformの使用例や今後のサーバー側の起動機能（以下を参照）のために、データをAdobe Experience Platformエッジネットワークに送信する場合は、タグをサイトに追加し、「別のタグのみ」として機能します。 `alloy.js`
 
-* **1つのみのタグ：** Experience CloudソリューションにWeb SDKを使用する場合は、そのページのす _べてのソリューションで使用する必要があります_ 。 例えば、サイトのタグが既にAnalytics用に付けられていて、ターゲットに使用する場合は、そのサイトを将来の他のユーザーと同様に、両方に使用する必要があります。
+* **1つのみのタグ：** Experience Cloudソリューション用のWeb SDKを使用する場合は、そのページのすべてのソリューションでWeb SDKを使用する必要があります。 例えば、サイトのタグが既にAnalytics用に付けられていて、ターゲットに使用する場合は、そのサイトを将来の他のユーザーと同様に、両方に使用する必要があります。
 
 つまり、ソリューション以外で使用する場合にAdobe Experience PlatformWeb SDKを使用する場合は、サイトにタグを付け、新しいソリューションであるかのようにタグを付け `alloy.js` て、先に進むことができます。 Adobe Analytics、ターゲット、Audience Manager、またはアプリケーションの用途に使用する場合は、ページ上のレガシーコードを削除する必要がある場合があります。
 
@@ -141,7 +141,7 @@ Web SDKは、急速に発展しています。 その他の使用例が検討中
 
 * Adobe Experience PlatformWeb SDKでは、エッジネットワークがストリームを識別してデータの処理を決定できるように、エクスペリエンスエッジ設定IDと呼ばれるものが必要です。 このIDは「起動」内で作成されます。 これは、「起動」を使用してプロパティを作成したり、JavaScriptコードをデプロイする必要がないという意味ではありませんが、「起動」を使用して設定IDを作成する必要はありません。
 
-* Adobe Experience Platform Launchは、最も使用可能なタグとSDK Managerだけでなく、XDMスキーマにデータを簡単にデプロイ `alloy.js` およびマッピングできます。 「Launch」を使用しない場合は、データを送信する前に、データのデプロイ、イベント、XDMへのマッピングを管理する必要があり `alloy.js`ます。 これは、「Launch」を使用するより _はるかに難しいプロセスです_ 。
+* Adobe Experience Platform Launchは、最も使用可能なタグとSDK Managerだけでなく、XDMスキーマにデータを簡単にデプロイ `alloy.js` およびマッピングできます。 「Launch」を使用しない場合は、データを送信する前に、データのデプロイ、イベント、XDMへのマッピングを管理する必要があり `alloy.js`ます。 これは、「起動」を使用するよりも、はるかに難しいプロセスです。
 
 * デプロイに使用するタグがLaunchのみであ `alloy.js`る場合でも、Launchを使用してデプロイすることをお勧めします。
 
