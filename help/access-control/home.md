@@ -5,10 +5,10 @@ topic: overview
 title: アクセス制御の概要
 description: Adobe Experience Platformのアクセス制御はAdobe Admin Consoleを通じて提供される。 この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 63%
+ht-degree: 61%
 
 ---
 
@@ -19,7 +19,7 @@ Access control for [!DNL Experience Platform] is provided through the [Adobe Adm
 
 ## アクセス制御階層とワークフロー
 
-In order to configure access control for [!DNL Experience Platform], you must have administrator privileges for an organization that has an [!DNL Experience Platform] product integration. 権限を付与または取り消す最小の役割は、**[!UICONTROL 製品プロファイル管理者]**&#x200B;です。権限を管理できる他の管理者の役割は、 **[!UICONTROL 製品管理者]**（製品内のすべてのプロファイルを管理）と&#x200B;**[!UICONTROL システム管理者]**（制限なし）です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関する Adobe Help Center の記事を参照してください。
+In order to configure access control for [!DNL Experience Platform], you must have administrator privileges for an organization that has an [!DNL Experience Platform] product integration. 権限を付与または取り消す最小の役割は、製品プロファイル管理者です。権限を管理できる他の管理者の役割は、 製品管理者（製品内のすべてのプロファイルを管理）とシステム管理者（制限なし）です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関する Adobe Help Center の記事を参照してください。
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 
 ### 製品プロファイル
 
-In the [!DNL Admin Console], permissions are assigned to users through the use of **[!UICONTROL product profiles]**. 製品プロファイルを使用すると、1 人または複数のユーザーに権限を付与でき、また、製品プロファイルを通じて割り当てられるサンドボックスの範囲に対するアクセス権を含めることができます。ユーザーは、組織に属する 1 つ以上の製品プロファイルに割り当てることができます。
+In the [!DNL Admin Console], permissions are assigned to users through the use of product profiles. 製品プロファイルを使用すると、1 人または複数のユーザーに権限を付与でき、また、製品プロファイルを通じて割り当てられるサンドボックスの範囲に対するアクセス権を含めることができます。ユーザーは、組織に属する 1 つ以上の製品プロファイルに割り当てることができます。
 
 ### デフォルトの製品プロファイル
 
@@ -57,7 +57,7 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 ## サンドボックスと権限
 
-非実稼働サンドボックスは、他のサンドボックスからデータを分離できるデータ仮想化の一種で、通常は開発実験、テストまたは試用に使用されます。製品プロファイルの&#x200B;**[!UICONTROL 権限]**&#x200B;は、プロファイルがアクセス権を付与されたサンドボックス環境内の 機能に対するユーザーのアクセスを提供します。[!DNL Platform]デフォルトのExperience Platformライセンスでは、5つのサンドボックス（1つの実稼働環境と4つの非実稼働環境）が許可されます。 10個の非実稼動用サンドボックス（合計75個まで）のパックを追加できます。 詳しくは、IMS組織管理者またはAdobeのセールス担当者にお問い合わせください。
+非実稼働サンドボックスは、他のサンドボックスからデータを分離できるデータ仮想化の一種で、通常は開発実験、テストまたは試用に使用されます。A product profile&#39;s permissions give the profile&#39;s users access to [!DNL Platform] features within the sandbox environments to which they&#39;ve been granted access to. デフォルトのExperience Platformライセンスでは、5つのサンドボックス（1つの実稼働環境と4つの非実稼働環境）が許可されます。 10個の非実稼動用サンドボックス（合計75個まで）のパックを追加できます。 詳しくは、IMS組織管理者またはAdobeのセールス担当者にお問い合わせください。
 
 For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
 
@@ -71,7 +71,7 @@ For more information about sandboxes in [!DNL Experience Platform], please refer
 
 ### 権限
 
-製品プロファイル内の「**権限**」タブには、そのプロファイル:に対してアクティブなサンドボックスと権限が表示されます。
+製品プロファイル内の「権限」タブには、そのプロファイル:に対してアクティブなサンドボックスと権限が表示されます。
 
 ![](./images/permissions-overview.png)
 
