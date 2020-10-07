@@ -5,7 +5,7 @@ title: アクセス制御開発者ガイド
 topic: developer guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。以下の節では、Schema Registry API への呼び出しを正常に実行するために必要な追加情報を示しています。
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 66%
@@ -52,4 +52,4 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 ## 次の手順
 
-必要な資格情報を収集したので、開発者ガイドの残りをお読みください。各節では、エンドポイントに関する重要な情報を提供し、CRUD 操作を実行するための API 呼び出しの例を示します。各呼び出しには、一般的な **API 形式**、必要なヘッダーと適切な形式のペイロードを示すサンプル&#x200B;**リクエスト**、および正常な呼び 出しのサンプル&#x200B;**応答**&#x200B;が含まれます。
+必要な資格情報を収集したので、開発者ガイドの残りをお読みください。各節では、エンドポイントに関する重要な情報を提供し、CRUD 操作を実行するための API 呼び出しの例を示します。各呼び出しには、一般的な API 形式、必要なヘッダーと適切な形式のペイロードを示すサンプルリクエスト、および正常な呼び 出しのサンプル応答が含まれます。
