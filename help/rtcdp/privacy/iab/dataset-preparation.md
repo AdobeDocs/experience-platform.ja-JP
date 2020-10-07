@@ -5,7 +5,7 @@ title: リアルタイム顧客データプラットフォームでのIAB TCF 2.
 topic: privacy events
 description: このドキュメントでは、IAB TCF 2.0の同意データを収集するために必要な2つのデータセットを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 3%
@@ -72,7 +72,7 @@ TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2
 
 ## 顧客の同意スキーマの作成 {#create-schemas}
 
-プラットフォームUIで、左側のナビゲーションの **[!UICONTROL スキーマ]** をクリックし、 *[!UICONTROL スキーマ]ワークスペースを開きます*。 次のセクションの手順に従って、必要な各スキーマを作成します。
+プラットフォームUIで、左側のナビゲーションの **[!UICONTROL スキーマ]** をクリックし、 **[!UICONTROL スキーマ]** ワークスペースを開きます。 次のセクションの手順に従って、必要な各スキーマを作成します。
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2
 
 ### レコードベースの同意スキーマの作成 {#profile-schema}
 
-**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照]」タブで、**&#x200B;クラスに基づいて新しいスキーマを作成します **[!DNL XDM Individual Profile]**。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
+**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照]」タブで、**[!DNL XDM Individual Profile] クラスに基づいて新しいスキーマを作成します。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
 
 ![](../assets/iab/add-mixin-profile.png)
 
@@ -127,7 +127,7 @@ TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2
 
 ### 時系列ベースの同意スキーマの作成 {#event-schema}
 
-**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照]」タブで、**&#x200B;クラスに基づいて新しいスキーマを作成します **[!DNL XDM ExperienceEvent]**。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
+**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照]** 」タブで、 [!DNL XDM ExperienceEvent] クラスに基づいて新しいスキーマを作成します。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
 
 ![](../assets/iab/add-mixin-event.png)
 
