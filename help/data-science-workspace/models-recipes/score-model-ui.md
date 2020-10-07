@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Adobe Experience Platform Data Science Workspace　でのスコアリングは、既存のトレーニング済みモデルに入力データを送ることで達成できます。次に、スコアリング結果が保存され、新しいバッチとして指定した出力データセットで表示可能になります。 '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 87%
@@ -32,7 +32,7 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
 
 1. 最も最適なトレーニング実行を見つけて、その設定をスコアリングに使用します。目的のトレーニング実行を開き、名前をクリックします。
 
-2. 「トレーニング実行の&#x200B;**[!UICONTROL 評価]**」タブで、画面右上の「**[!UICONTROL スコア]**」ボタンをクリックします。これにより、新しい&#x200B;*スコアリングの実行*ワークフローが開始されます。
+2. 「トレーニング実行の&#x200B;**[!UICONTROL 評価]**」タブで、画面右上の「**[!UICONTROL スコア]**」ボタンをクリックします。これにより、新しい&#x200B;**スコアリングの実行**ワークフローが開始されます。
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. 入力スコアリングデータセットを選択し、「**[!UICONTROL 次へ]**」をクリックします。
