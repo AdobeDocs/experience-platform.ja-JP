@@ -5,7 +5,7 @@ title: アクセス制御ワークスペースの参照
 topic: user guide
 description: このドキュメントでは、アクセス制御ワークスペースを参照するために必要な手順について説明します。 Adobe Admin Console を使用して Experience Platform のアクセス制御を設定するには、Experience Platform のサブスクリプションを取得している IMS 組織の管理者である必要があります。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 77%
@@ -15,7 +15,7 @@ ht-degree: 77%
 
 # アクセス制御ワークスペースの参照
 
-In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. アドビは IMS 組織に柔軟性のある管理者階層を提供していますが、アクセス制御を設定するには&#x200B;**[!UICONTROL システム管理者]**、**[!UICONTROL 製品管理者]**&#x200B;または&#x200B;**[!UICONTROL 製品プロファイル管理者]**&#x200B;の権限が必要です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関するアドビ ヘルプセンターの記事を参照してください。
+In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. アドビは IMS 組織に柔軟性のある管理者階層を提供していますが、アクセス制御を設定するにはシステム管理者、製品管理者または製品プロファイル管理者の権限が必要です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関するアドビ ヘルプセンターの記事を参照してください。
 
 管理者権限がない場合は、システム管理者に問い合わせてアクセス権を取得してください。
 
