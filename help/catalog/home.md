@@ -5,7 +5,7 @@ title: カタログサービスの概要
 topic: overview
 description: カタログサービスは、Adobe Experience Platform 内のデータの場所と系列のレコードのシステムです。Experience Platform に取得されるすべてのデータはファイルとディレクトリとしてデータレイクに保存されますが、カタログには、参照や監視のために、これらのファイルとディレクトリのメタデータと説明が保持されます。
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 43%
@@ -13,11 +13,11 @@ ht-degree: 43%
 ---
 
 
-# [!DNL Catalog Service] 概要
+# [!DNL Catalog Service]概要
 
 [!DNL Catalog Service] は、Adobe Experience Platform内のデータの位置と系統に関する記録システムです。 While all data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
-Simply put, [!DNL Catalog] acts as a metadata store or &quot;[!UICONTROL catalog]&quot; where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
+Simply put, [!DNL Catalog] acts as a metadata store or &quot;catalog&quot; where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
 
 * データの場所
 * データが処理のどの段階であるか。
@@ -35,7 +35,7 @@ The resources that [!DNL Catalog Service] tracks are used by multiple [!DNL Expe
 
 [!DNL Experience Data Model] (XDM)システムは、顧客体験データを [!DNL Platform] 編成する標準化されたフレームワークです。 [!DNL Experience Platform] は、XDM スキーマを活用して、一貫した再利用可能な方法でデータの構造を記述します。
 
-When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a **dataset**. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to.
+When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a dataset. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to.
 
 XDM システムの一般的な情報については、「[XDM システムの概要](../xdm/home.md)」を参照してください。
 
@@ -43,7 +43,7 @@ XDM システムの一般的な情報については、「[XDM システムの�
 
 [!DNL Experience Platform] 複数のソースからデータを取り込み、レコードをデータセットとして内に保持 [!DNL Data Lake]します。 [!DNL Catalog] 取り込み元や取り込み方法に関係なく、これらのデータセットのメタデータを追跡します。
 
-When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for **batch** files. バッチとは、単一の単位として取得される 1 つ以上のファイルで構成されるデータの単位です。[!DNL Catalog] これらのバッチファイルのメタデータと、取り込み後に保持されるデータセットを追跡します。 バッチメタデータには、正常に取得されたレコードの数、失敗したレコードおよび関連するエラーメッセージに関する情報が含まれます。
+When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for batch files. バッチとは、単一の単位として取得される 1 つ以上のファイルで構成されるデータの単位です。[!DNL Catalog] これらのバッチファイルのメタデータと、取り込み後に保持されるデータセットを追跡します。 バッチメタデータには、正常に取得されたレコードの数、失敗したレコードおよび関連するエラーメッセージに関する情報が含まれます。
 
 詳しくは、「[データ取得の概要](../ingestion/home.md)」を参照してください。
 
