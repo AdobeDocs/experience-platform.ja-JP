@@ -5,7 +5,7 @@ description: Experience Platform Web SDK を使用して同意設定をサポー
 seo-description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 62%
@@ -56,7 +56,7 @@ alloy("setConsent", {
 });
 ```
 
-ユーザーがオプトインしたので、SDK はその前にキューに追加されたすべてのコマンドを実行します。ユーザーのオプトインに依存する以降のコマンドは、キューに追加&#x200B;_されず_、即座に実行されます。
+ユーザーがオプトインしたので、SDK はその前にキューに追加されたすべてのコマンドを実行します。ユーザーのオプトインに依存する以降のコマンドは、キューに追加されず、即座に実行されます。
 
 ユーザーがオプトアウトを選択した場合は、次のように、`general` オプションを `out` に設定して `setConsent` コマンドを実行します。
 
