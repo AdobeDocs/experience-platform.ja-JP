@@ -4,7 +4,7 @@ title: リアルタイム顧客プロファイルユーザガイド
 topic: guide
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 11%
@@ -40,11 +40,11 @@ This user guide requires an understanding of the various [!DNL Experience Platfo
 
 ### プロファイル指標 {#profile-metrics}
 
-「 [!UICONTROL 参照] 」タブの右側には、プロファイルデータに関連するいくつかの重要な指標があります。この指標には、合計 [プロファイル数](#profile-count) 、名前空間別の [プロファイルのリストなどが含まれます](#profiles-by-namespace)。
+「 **[!UICONTROL 参照]** 」タブの右側には、プロファイルデータに関連するいくつかの重要な指標があります。この指標には、合計 [プロファイル数](#profile-count) 、名前空間別の [プロファイルのリストなどが含まれます](#profiles-by-namespace)。
 
 これらのプロファイル指標は、組織のデフォルトの結合ポリシーを使用して評価されます。 デフォルトのマージポリシーの定義方法など、マージポリシーの操作について詳しくは、 [Merge Policiesユーザーガイドを参照してください](merge-policies.md)。
 
-これらの指標に加えて、「プロファイル指標」セクションには [!UICONTROL 、指標が最後に評価された日時を示す] 最終更新日時も表示されます。
+これらの指標に加えて、「プロファイル指標」セクションには、指標が最後に評価された日時を示す最終更新日時も表示されます。
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -80,7 +80,7 @@ The profile count displays the total number of profiles your organization has wi
 
 ### ID値
 
-「 [!UICONTROL ID」名前空間を選択した後]、「 [!UICONTROL 参照] 」タブに戻り、 **[!UICONTROL IDの値を入力できます]**。 この値は個々の顧客プロファイルに固有の値で、提供される名前空間に対して有効なエントリである必要があります。 例えば、「 [!UICONTROL ID」名前空間] 「Email」を選択するには、有効な電子メールアドレスの形式で [!UICONTROL ID値が必要です] 。
+ID名前空間を選択した後、「 **[!UICONTROL 参照]** 」タブに戻り、 **[!UICONTROL ID値を入力できます]**。 この値は個々の顧客プロファイルに固有の値で、提供される名前空間に対して有効なエントリである必要があります。 例えば、「電子メール」というID名前空間を選択するには、有効な電子メールアドレスの形式のID値が必要です。
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -90,17 +90,17 @@ The profile count displays the total number of profiles your organization has wi
 
 ### プロファイルの詳細 {#profile-detail}
 
-[!UICONTROL プロファイルIDを選択すると]、「 **[!UICONTROL 詳細]** 」タブが開きます。 The profile information displayed on the [!UICONTROL Detail] tab has been merged together from multiple profile fragments to form a single view of the individual customer. 基本属性、リンクされたID、チャネル環境設定などの顧客の詳細情報も含まれます。 表示されるデフォルトのフィールドは、組織レベルで変更して、希望のプロファイル属性を表示することもできます。 属性の追加と削除、ダッシュボードパネルのサイズ変更の手順など、これらのフィールドのカスタマイズの詳細については、『 [プロファイルの詳細カスタマイズガイド](profile-customization.md)』を参照してください。
+**[!UICONTROL プロファイルIDを選択すると]**、「 **[!UICONTROL 詳細]** 」タブが開きます。 The profile information displayed on the **[!UICONTROL Detail]** tab has been merged together from multiple profile fragments to form a single view of the individual customer. 基本属性、リンクされたID、チャネル環境設定などの顧客の詳細情報も含まれます。 表示されるデフォルトのフィールドは、組織レベルで変更して、希望のプロファイル属性を表示することもできます。 属性の追加と削除、ダッシュボードパネルのサイズ変更の手順など、これらのフィールドのカスタマイズの詳細については、『 [プロファイルの詳細カスタマイズガイド](profile-customization.md)』を参照してください。
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-個々のプロファイルに関連する追加情報を表示するには、利用可能な別のタブを選択します。 これらのタブには、 [!UICONTROL 属性]、 [!UICONTROL イベント]、および [!UICONTROL セグメントのメンバーシップが含まれます。このメンバーシップは、プロファイルが現在資格を持つ] セグメントのメンバーシップを示します。
+個々のプロファイルに関連する追加情報を表示するには、利用可能な別のタブを選択します。 これらのタブには、属性、イベントおよびセグメントのメンバーシップが含まれ、プロファイルが現在資格を持っているセグメントを示します。
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## 結合ポリシー
 
-メイン [!UICONTROL プロファイル] (Merge Policies **[!UICONTROL )メニューで、「]** Merge Policies」タブを選択して、組織に属するマージポリシーのリストを表示します。 表示される各ポリシーの名前、デフォルトの結合ポリシーかどうか、および適用先のスキーマが表示されます。
+メイン **[!UICONTROL プロファイル]** (Merge Policies **[!UICONTROL )メニューで、「]** Merge Policies」タブを選択して、組織に属するマージポリシーのリストを表示します。 表示される各ポリシーの名前、デフォルトの結合ポリシーかどうか、および適用先のスキーマが表示されます。
 
 For more information on merge policies, see the [merge policies user guide](merge-policies.md).
 
@@ -108,7 +108,7 @@ For more information on merge policies, see the [merge policies user guide](merg
 
 ## 和集合スキーマ {#union-schema}
 
-メイン [!UICONTROL プロファイル] ・メニューから「 **[!UICONTROL 和集合スキーマ]** 」タブを選択し、プロファイル・データの和集合スキーマを表示します。 A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. 左側の [!UICONTROL Class] リストからクラスを選択すると、キャンバスにそのスキーマの構造を表示できます。 例えば、「[!DNL XDM Profile]」を選択すると、ク [!DNL XDM Individual Profile] ラスの和集合スキーマが表示されます。
+メイン **[!UICONTROL プロファイル]** ・メニューから「 **[!UICONTROL 和集合スキーマ]** 」タブを選択し、プロファイル・データの和集合スキーマを表示します。 A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. 左側の「[!UICONTROL クラス]」リストからクラスを選択すると、キャンバスにそのスキーマの構造を表示できます。 例えば、「[!DNL XDM Profile]」を選択すると、ク [!DNL XDM Individual Profile] ラスの和集合スキーマが表示されます。
 
 和集合スキーマとAdobe Experience Platform内でのその役割について詳しくは、『 [スキーマ構成ガイド』の和集合スキーマに関する節を参照してください](../../xdm/schema/composition.md)。
 
