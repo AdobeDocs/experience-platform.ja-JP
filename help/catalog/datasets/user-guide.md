@@ -5,10 +5,10 @@ title: データセットユーザガイド
 topic: datasets
 description: このdatasetsユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内でデータセットを操作する際に、一般的な操作を実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 71%
+source-wordcount: '1162'
+ht-degree: 70%
 
 ---
 
@@ -41,7 +41,7 @@ In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the lef
 
 ## データセットのプレビュー
 
-**[!UICONTROL データセットアクティビティ]**&#x200B;画面で、画面の右上隅近くにある「**[!UICONTROL データセットのプレビュー]** 」をクリックして、最大 100 行のデータをプレビューします。データセットが空の場合、プレビューリンクは非アクティブになり、代わりに&#x200B;**[!UICONTROL プレビューは使用できません]**&#x200B;と表示されます。
+**[!UICONTROL データセットアクティビティ]**&#x200B;画面で、画面の右上隅近くにある「**[!UICONTROL データセットのプレビュー]** 」をクリックして、最大 100 行のデータをプレビューします。データセットが空の場合、プレビューリンクは無効になり、プレビューは使用できないと表示されます。
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
