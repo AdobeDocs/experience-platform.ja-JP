@@ -6,7 +6,7 @@ title: UIでのAdobe Analytics分類データコネクタの作成
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 4%
@@ -38,7 +38,7 @@ Analytics Classifications Data Connectorは、使用前に、データをAdobe A
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-「 **[!UICONTROL Analyticsソースのデータを追加]** 」手順が表示されます。 上部のヘッダーから **[!UICONTROL 「]** Classifications [!DNL Classifications] 」を選択し、DimensionID、レポートスイート名、レポートスイートID ****、ID ********&#x200B;セットに関するリスト（ID、レポートスイートIDデータセットに関する情報など）を確認します。
+「 **[!UICONTROL Analyticsソースのデータを追加]** 」手順が表示されます。 上部のヘッダーで **[!UICONTROL 「]** 分類 [!DNL Classifications] 」を選択し、ディメンションID、レポートスイート名およびレポートスイートIDに関する情報など、データセットのリストを確認します。
 
 各ページには、選択可能な10個の [!DNL Classifications] データセットが表示されます。 ページ下部の **[!UICONTROL 「次へ]** 」を選択して、他のオプションを参照します。 右側のパネルには、選択した [!DNL Classifications] データセットの総数と名前が表示されます。 また、このパネルでは、誤って選択した [!DNL Classifications] データセットをすべて削除したり、1回の操作ですべての選択を解除したりできます。
 
