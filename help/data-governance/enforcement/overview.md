@@ -5,7 +5,7 @@ title: ポリシー適用の概要
 topic: enforcement
 description: データ使用ラベルがAdobe Experience Platformのデータセットに適用され、これらのラベルに対するマーケティング活動に対してデータ使用ポリシーが定義されると、データ管理機能により、これらのポリシーを適用し、ポリシー違反を構成するデータ操作を防ぐことができます。 Data Governance機能によって提供されるプラットフォームのポリシー適用には、APIベースの適用と自動適用の2つの方法があります。
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 16%
@@ -17,7 +17,7 @@ ht-degree: 16%
 
 Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, [!DNL Data Governance] capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
-ポリシーの適用には、次の2つの方法があります。この2つの方法は、 [!DNL Data Governance] 機能によって提供され [!DNL Platform]ます。 **APIベースの強制** と **自動強制**。
+ポリシーの適用には、次の2つの方法があります。この2つの方法は、 [!DNL Data Governance] 機能によって提供され [!DNL Platform]ます。APIベースの強制および自動強制。
 
 ## APIベースの強制
 
