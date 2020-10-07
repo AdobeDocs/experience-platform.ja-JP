@@ -5,7 +5,7 @@ title: スキーマ合成の基本
 topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 55%
@@ -54,7 +54,7 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 * **レコードデータ**：主体の属性に関する情報を提供します。主体は、組織または個人にすることができます。
 * **時系列データ**：レコードの主体によって直接または間接的にアクションが実行された時点のシステムのスナップショットを提供します。
 
-すべての XDM スキーマは、レコードまたは時系列として分類できるデータを記述します。スキーマのデータ動作は、スキーマの&#x200B;**クラス**&#x200B;によって定義され、スキーマの作成時に割り当てられます。XDM クラスについては、このドキュメントで後述します。
+すべての XDM スキーマは、レコードまたは時系列として分類できるデータを記述します。スキーマのデータ動作は、スキーマのクラスによって定義され、スキーマの作成時に割り当てられます。XDM クラスについては、このドキュメントで後述します。
 
 レコードと時系列の両方のスキーマには、ID のマップ（`xdm:identityMap`）が含まれます。このフィールドには、次の節で説明する「ID」とマークされたフィールドから作成された、主体の ID 表現が含まれます。
 
@@ -133,7 +133,7 @@ In order to ingest data into [!DNL Experience Platform], a dataset must first be
 
 **Class + Mixin&amp;ast; = XDM スキーマ**
 
-&amp;ast;スキーマは、クラスと _0 個以上_&#x200B;の Mixin で構成されます。つまり、Mixin を使用せずにデータセットスキーマを作成できます。
+&amp;ast;スキーマは、クラスと 0 個以上の Mixin で構成されます。つまり、Mixin を使用せずにデータセットスキーマを作成できます。
 
 ### クラス
 
