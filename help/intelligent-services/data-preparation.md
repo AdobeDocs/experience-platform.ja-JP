@@ -5,7 +5,7 @@ title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 description: 'インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。 '
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1979'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # データを [!DNL Intelligent Services]
 
-マーケティングイベントデータからインサイト [!DNL Intelligent Services] を見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 [!DNL Intelligent Services] これを達成するた [!DNL Experience Data Model] めに、(XDM)スキーマを活用します。 特に、で使用するすべてのデータセットは、 [!DNL Intelligent Services] Consumer ExperienceEvent(CEE) **** XDMスキーマに準拠している必要があります。
+マーケティングイベントデータからインサイト [!DNL Intelligent Services] を見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 [!DNL Intelligent Services] これを達成するた [!DNL Experience Data Model] めに、(XDM)スキーマを活用します。 特に、で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があり [!DNL Intelligent Services] ます。
 
 このドキュメントでは、複数のチャネルからこのスキーマへのマーケティングイベントデータのマッピング、スキーマ内の重要なフィールドの概要を説明し、データを構造に効果的にマッピングする方法を判断する際の一般的な手引きを示します。
 
