@@ -5,15 +5,15 @@ title: データアクセスの概要
 topic: overview
 description: Data Accessは、Experience Platform内で取り込まれたデータセットの検出性とアクセス性に重点を置いたツールをユーザーに提供することで、Adobe Experience Platformをサポートします。
 translation-type: tm+mt
-source-git-commit: 75e1d3c9912e54e925032bbc2ae4e984948a30eb
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 19%
+source-wordcount: '173'
+ht-degree: 21%
 
 ---
 
 
-# [!DNL Data Access] 概要
+# [!DNL Data Access]概要
 
 [!DNL Data Access] で取り込まれたデータセットの検出性とアクセス性に重点を置いたツールを提供することで、Adobe Experience Platformをサポート [!DNL Experience Platform]します。
 
@@ -23,17 +23,11 @@ ht-degree: 19%
 
 APIを使用してと接続する方法について詳し [!DNL Data Access] くは、 [!DNL Platform] データアクセス開発ガイドを参照してください [](api.md)。
 
-## [!DNL Python] SDK
+## Data Science Workspaceのデータへのアクセス
 
-SDKを使用して、データセットを使用して読み取りと書き込みを行うことができ [!DNL Python] ます。 SDKに関する詳細は、 [!DNL Python] Python SDKのチュートリアル [](./tutorials/python-sdk.md)を参照してください。
+Data Science Workspaceのレシピおよびモデル開発に [!DNL Python] おいて、およびを使用して、データセット [!DNL Spark] に対して読み取りと書き込みを行うことができます。 データへのアクセスについて詳しくは、 [Pythonデータアクセス](../data-science-workspace/authoring/python.md) 、または [Sparkデータアクセス](../data-science-workspace/authoring/spark.md) ドキュメントを参照してください。
 
-[!DNL Data Science Workspace] は、ノートブックとレシピ内で [!DNL Python] SDKを使用します。 詳細については、「 [!DNL Data Science Workspace]Data Science Workspaceの概要」を読んで開始してください [](../data-science-workspace/home.md)。
-
-## [!DNL Spark] SDK
-
-SDKを使用して、データセットを使用して読み取りと書き込みを行うことができ [!DNL Spark] ます。 SDKに関する詳細は、「 [!DNL Spark] Spark SDK [](./tutorials/spark-sdk.md)」チュートリアルを参照してください。
-
-[!DNL Data Science Workspace] は、ノートブックとレシピ内で [!DNL Spark] SDKを使用します。 詳細については、「 [!DNL Data Science Workspace]Data Science Workspaceの概要」を読んで開始してください [](../data-science-workspace/home.md)。
+詳しくは、 [!DNL Data Science Workspace]Data Science Workspaceの概要を読んで開始 [を参照してください](../data-science-workspace/home.md)。
 
 ## データ取得イベントへのサブスクライブ
 
