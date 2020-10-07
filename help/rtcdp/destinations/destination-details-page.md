@@ -5,7 +5,7 @@ seo-title: 宛先の詳細ページ
 description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 seo-description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 100%
@@ -53,8 +53,8 @@ ht-degree: 100%
 | プラットフォーム | オーディエンスの宛先プラットフォームを表します。詳しくは、「[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)」を参照してください。 |
 | 説明 | 宛先フローの説明を編集できます。 |
 | カテゴリ | 宛先のタイプを示します。詳しくは、「[宛先カタログ](/help/rtcdp/destinations/destinations-catalog.md)」を参照してください。 |
-| 接続タイプ | オーディエンスが宛先に送信される形式を示します。**[!UICONTROL Cookie]** または&#x200B;**[!UICONTROL プロファイルベース]**&#x200B;にできます 。 |
-| 頻度 | オーディエンスが宛先に送信される頻度を示します。**[!UICONTROL ストリーミング]**&#x200B;または&#x200B;**[!UICONTROL バッチ]**&#x200B;です。 |
+| 接続タイプ | オーディエンスが宛先に送信される形式を示します。[!UICONTROL Cookie] または[!UICONTROL プロファイルベース]にできます 。 |
+| 頻度 | オーディエンスが宛先に送信される頻度を示します。[!UICONTROL ストリーミング]または[!UICONTROL バッチ]です。 |
 | ID | 宛先で受け入れられる ID 名前空間を表します。例えば、「ID」フィールドは GAID、IDFA、電子メールにすることができます。受け入れられるすべての ID 名前空間については、[ID 名前空間の概要](../../identity-service/namespaces.md)の標準名前空間を参照してください。 |
 | 作成者 | この宛先フローを作成したユーザーを示します。 |
 | 作成 | この宛先フローが作成された UTC の日時を示します。 |
