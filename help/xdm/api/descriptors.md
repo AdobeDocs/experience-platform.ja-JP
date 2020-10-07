@@ -5,7 +5,7 @@ title: 記述子
 description: 'スキーマは、データエンティティの静的表示を定義しますが、これらのスキーマ（データセットなど）に基づくデータが相互にどのように関連付けられるかに関する具体的な詳細は提供しません。Adobe Experience Platform では、記述子を使用して、これらの関係や、記述子に関するその他の解釈的なメタスキーマを記述できます。 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 81%
@@ -200,7 +200,7 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **リクエスト**
 
-このリクエストは基本的に記述子を&#x200B;_書き換え_&#x200B;るので、リクエスト本体には、その型の記述子を定義するために必要なすべてのフィールドが含まれている必要があります。つまり、記述子を更新（PUT）するリクエストペイロードは、同じタイプの記述子を作成（POST）するペイロードと同じです。
+このリクエストは基本的に記述子を書き換えるので、リクエスト本体には、その型の記述子を定義するために必要なすべてのフィールドが含まれている必要があります。つまり、記述子を更新（PUT）するリクエストペイロードは、同じタイプの記述子を作成（POST）するペイロードと同じです。
 
 この例では、ID 記述子は別の `xdm:sourceProperty`（「携帯電話」）を参照するように更新され、`xdm:namespace` を「Phone」に変更しています。
 
