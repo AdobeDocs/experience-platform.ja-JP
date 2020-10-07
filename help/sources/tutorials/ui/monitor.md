@@ -6,7 +6,7 @@ title: アカウントとデータフローの監視
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 5%
@@ -96,7 +96,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![dataflow-アクティビティ](../../images/tutorials/monitor/dataflow-activity.png)
 
-カレンダーを使用すると、取り込むレコードに応じて異なる時間枠を表示できます。 「 **[!UICONTROL 過去7日間」と「過去30日間]** 」の2つの事前設定済みオプションのいずれかを選択できます ****。 または、カレンダーを使用してカスタムの期間を設定できます。 選択した期間を選択し、「 **[!UICONTROL 適用]** 」を選択して続行します。
+カレンダーを使用すると、取り込むレコードに応じて異なる時間枠を表示できます。 「[!UICONTROL 過去7日間]」または「[!UICONTROL 過去30日間]」の2つの事前設定されたオプションのいずれかを選択できます。 または、カレンダーを使用してカスタムの期間を設定できます。 選択した期間を選択し、「 **[!UICONTROL 適用]** 」を選択して続行します。
 
 ![フローカレンダー](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![runs](../../images/tutorials/monitor/run-metadata.png)
 
-デ **[!UICONTROL ータフロー実行の概要]** ：メタデータ、 **[!UICONTROL 部分的なインジェスト]** ・ステータス、割り当てられた ****&#x200B;エラーしきい値など、データフローに関する情報が表示されます。 上部のヘッダーには、 **[!UICONTROL エラーの概要も含まれます]**。 エラ **[!UICONTROL ーの概要]** には、インジェストプロセスでエラーが発生したステップを示す、特定の最上位レベルのエラーが含まれます。
+デ **[!UICONTROL ータフロー実行の概要]** ：メタデータ、部分的な取り込みステータス、割り当てられたエラーしきい値など、データフローに関する情報が表示されます。 上部のヘッダーには、エラーの概要も含まれます。 エラ **[!UICONTROL ーの概要]** には、インジェストプロセスでエラーが発生したステップを示す、特定の最上位レベルのエラーが含まれます。
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -119,13 +119,13 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 画面の下半分には、 **[!UICONTROL Dataflow実行エラーに関する情報が含まれています]**。 ここから、取り込んだファイルの表示、プレビューおよびダウンロードのエラー診断、またはファイルマニフェストのダウンロードを行うこともできます。
 
-「 **[!UICONTROL Dataflow run errors]** 」セクションには、 **[!UICONTROL エラー・コード]**、失敗したレコード数、エラーを説明する情報が表示されます。
+「 **[!UICONTROL Dataflow run errors]** 」セクションには、エラー・コード、失敗したレコード数、エラーを説明する情報が表示されます。
 
 インジェストエラーの詳細を表示するには、 **[!UICONTROL プレビューエラー診断]** (Ingestion Error Diagnostics)を選択します。
 
 ![データフロー実行エラー](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-[ **[!UICONTROL エラー診断プレビュー]** ]パネルが表示されます。 この画面には、 **[!UICONTROL ファイル名]**、 **[!UICONTROL エラーコード]**、エラーが発生した列の名前、エラーの説明など、インジェストエラーに関する具体的な情報が表示されます。
+[ **[!UICONTROL エラー診断プレビュー]** ]パネルが表示されます。 この画面には、ファイル名、エラーコード、エラーが発生した列の名前、エラーの説明など、インジェストエラーに関する具体的な情報が表示されます。
 
 この節では、エラーを含む列のプレビューも説明します。
 
