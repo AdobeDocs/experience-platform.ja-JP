@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformのユーザーインターフェイスを使用してCSVファイルをXDMスキーマにマップする方法について説明します。
 translation-type: tm+mt
-source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 25%
@@ -117,7 +117,7 @@ CSVファイルをマッピングして作成したら、ファイルを介し�
 
 関数を使用するには、「**[!UICONTROL ソースフィールド]**」の下に適切な構文で関数を入力します。
 
-例えば、**市区町村**&#x200B;と&#x200B;**国**&#x200B;の CSV フィールドを連結し、**市区町村** XDM フィールドに割り当てるには、ソースフィールドを「`concat(city, ", ", county)`」と設定します。
+例えば、市区町村と国の CSV フィールドを連結し、市区町村 XDM フィールドに割り当てるには、ソースフィールドを「`concat(city, ", ", county)`」と設定します。
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
