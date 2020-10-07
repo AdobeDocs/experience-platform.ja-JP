@@ -5,10 +5,10 @@ title: 権限名とリソースタイプのリスト
 topic: developer guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。/acl/referenceエンドポイントにGETリクエストを行うことで、すべての権限とリソースの種類の名前をリストできます。 これらの名前は、現在のユーザーに対する有効なポリシーを表示する API 呼び出しで使用できます。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '184'
-ht-degree: 88%
+ht-degree: 75%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 88%
 
 `/acl/reference` エンドポイントに GET リクエストをおこなうことで、すべての権限とリソースタイプの名前をリストできます。これらの名前は、現在のユーザーに対する[有効なポリシーを表示する](./effective-policies.md) API 呼び出しで使用できます。
 
-**権限**&#x200B;とは、Adobe Admin Console で管理され、0 個以上のリソースタイプポリシーにマッピングされるポリシーです。**リソースタイプ**&#x200B;は、特定の種類の リソース（データセットやスキーマなど）の読み取り、書き込み、削除の機能を有効にするポリシーです。[!DNL Platform]
+権限とは、Adobe Admin Console で管理され、0 個以上のリソースタイプポリシーにマッピングされるポリシーです。A resource type is a policy that enables read, write, and/or delete capabilities for a specific type of [!DNL Platform] resource (such as datasets or schemas).
 
 **API 形式**
 
