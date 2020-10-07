@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、ユーザーインターフェイスを使用してコンシューマーエクスペリエンスイベントデータをプラットフォームに取り込むための、Adobe Audience Manager用のソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 11%
@@ -20,9 +20,9 @@ ht-degree: 11%
 
 ## Adobe Audience Managerとのソース接続の作成
 
-[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) ソース **** 」を選択してソースワークスペースにアクセスします。 [ *カタログ* ]画面には、ソース接続を作成できる様々なソースが表示され、各ソースには、それらに関連付けられた既存の接続数が表示されます。
+[Adobe Experience Platformにログインし、左のナビゲーションバーで「](https://platform.adobe.com) ソース **** 」を選択してソースワークスペースにアクセスします。 [ **カタログ** ]画面には、ソース接続を作成できる様々なソースが表示され、各ソースには、それらに関連付けられた既存の接続数が表示されます。
 
-[ *Adobeアプリ* ]カテゴリの下で、[ **Adobe Audience Manager** ]を選択して情報バーを画面の右側に表示します。 情報バーには、選択したソースの簡単な説明と、ドキュメントの表示やソースへの接続に関するオプションが表示されます。
+[ **Adobeアプリ** ]カテゴリの下で、[ **Adobe Audience Manager** ]を選択して情報バーを画面の右側に表示します。 情報バーには、選択したソースの簡単な説明と、ドキュメントの表示やソースへの接続に関するオプションが表示されます。
 
 Adobe Audience Manager用の新しいソースコネクタを作成するには、 **追加data**.
 
@@ -32,7 +32,7 @@ Adobe Audience Manager用の新しいソースコネクタを作成するには�
 
 ![](../../../../images/tutorials/create/aam/connect_full.png)
 
-Adobe Audience Managerとのソース接続が確立されると、Audience Managerコネクタの *ソースアクティビティ* ページが表示されます。
+Adobe Audience Managerとのソース接続が確立されると、Audience Managerコネクタの **ソースアクティビティ** ページが表示されます。
 
 ![](../../../../images/tutorials/create/aam/flow.png)
 
