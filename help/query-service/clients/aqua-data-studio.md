@@ -5,7 +5,7 @@ title: Aqua Data Studio との接続
 topic: connect
 description: このドキュメントでは、Aqua Data Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 70%
@@ -38,7 +38,7 @@ After installing [!DNL Aqua Data Studio], you must first register the server. �
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-接続の詳細を入力したら、「**[!UICONTROL 接続をテスト]**」をクリックして、資格情報が正しく機能することを確認します。接続に成功した場合は、「**[!UICONTROL 保存]**」をクリックして、サーバーを登録します。登録が成功すると接続が&#x200B;*ダッシュボード*&#x200B;に表示され、サーバーに接続してそのスキーマオブジェクトを表示できることを確認できます。
+接続の詳細を入力したら、「**[!UICONTROL 接続をテスト]**」をクリックして、資格情報が正しく機能することを確認します。接続に成功した場合は、「**[!UICONTROL 保存]**」をクリックして、サーバーを登録します。登録が成功すると接続が&#x200B;**ダッシュボード**&#x200B;に表示され、サーバーに接続してそのスキーマオブジェクトを表示できることを確認できます。
 
 ## 次の手順
 
