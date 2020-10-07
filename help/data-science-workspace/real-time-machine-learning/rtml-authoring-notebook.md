@@ -5,7 +5,7 @@ title: Real-time Machine Learningノートブックユーザーガイド
 topic: Training and scoring a ML model
 description: 次のガイドは、JupterLabAdobe Experience PlatformでReal-time Machine Learningアプリケーションを構築するために必要な手順を説明しています。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## リアルタイム機械学習ノートブックの作成
 
-[Adobe Experience PlatformUI]で、[ **[!UICONTROL Data Science]** ]から[ *Notebooks*]を選択します。 次に、 **[!UICONTROL JupyterLabを選択し]** 、環境の読み込みに時間をかけます。
+[Adobe Experience PlatformUI]で、[ **[!UICONTROL Data Science]** ]から[ **Notebooks**]を選択します。 次に、 **[!UICONTROL JupyterLabを選択し]** 、環境の読み込みに時間をかけます。
 
 ![JupyterLabを開く](../images/rtml/open-jupyterlab.png)
 
@@ -117,7 +117,7 @@ config_properties = {
 
 **データ変換**
 
-リアルタイムML **[!UICONTROL Templatesの]** Data Transformations ** セルは、独自のデータセットを使用できるように変更する必要があります。 通常は、列名の変更、データのロールアップ、データの準備/機能の設計に関係します。
+リアルタイムML **[!UICONTROL Templatesの]** Data Transformations **** セルは、独自のデータセットを使用できるように変更する必要があります。 通常は、列名の変更、データのロールアップ、データの準備/機能の設計に関係します。
 
 >[!NOTE]
 >
@@ -355,7 +355,7 @@ pprint(json.loads(dsl))
 
 >[!NOTE]
 >
->リアルタイム機械学習は、Adobeエクスペリエンスプラットフォームハブに一時的に導入され、管理されます。 詳しくは、 [リアルタイム機械学習アーキテクチャの概要セクションを参照してください](./home.md#architecture)。
+>リアルタイム機械学習は、Adobe Experience Platformハブに一時的に導入され、管理されます。 詳しくは、 [リアルタイム機械学習アーキテクチャの概要セクションを参照してください](./home.md#architecture)。
 
 DSLグラフを作成したら、にグラフを配信でき [!DNL Edge]ます。
 
