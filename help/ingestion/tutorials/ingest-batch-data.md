@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platformでは、既知のエクスペリエンスデータモデル(XDM)スキーマに準拠するパーケットファイルやデータの形式で、データをバッチファイルとして簡単に読み込むことができます。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1308'
-ht-degree: 63%
+ht-degree: 51%
 
 ---
 
@@ -28,7 +28,7 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
 
 The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックして、「データセット」ワークスペースを表示します。「データセット」ワークスペースには、**[!UICONTROL 名前]**、**[!UICONTROL 作成日時]**、**[!UICONTROL ソース]**、**[!UICONTROL スキーマ]**、**[!UICONTROL 最終バッチステータス]**&#x200B;を示す列、および&#x200B;**[!UICONTROL 最終更新日時]**&#x200B;を含むデータセットのリストが含まれています。
+左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックして、「データセット」ワークスペースを表示します。データセットワークスペースには、名前、作成日時、ソース、スキーマ、最終バッチステータスを示す列や、データセットが最後に更新された日時など、データセットのリストが含まれます。
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ On the **[!UICONTROL Create Dataset]** screen, select whether you would like to 
 
 ## データセットの設定
 
-**[!UICONTROL データセットの設定]**&#x200B;画面で、データセットの&#x200B;**[!UICONTROL 名前]**&#x200B;を指定し、データセットの&#x200B;**[!UICONTROL 説明]**&#x200B;も入力できます。
+On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset as well.
 
 **データセット名に関する注意事項：**
 
@@ -74,7 +74,7 @@ On the **[!UICONTROL Create Dataset]** screen, select whether you would like to 
 
 空のデータセットが作成され、データセットワークスペースの「**[!UICONTROL データセットアクティビティ]**」タブに戻りました。ワークスペースの左上隅にデータセットの名前と、「バッチが追加されていません」という通知が表示されます。このデータセットにバッチをまだ追加していないので、これは期待通りです。
 
-「データセット」ワークスペースの右側に「**[!UICONTROL 情報]**」タブがあり、新しいデータセットに関した「**[!UICONTROL データセット ID]**」、「**[!UICONTROL 名前]**」、「**[!UICONTROL 説明]**」、「**[!UICONTROL テーブル名]**」、「**[!UICONTROL スキーマ]**」、「**[!UICONTROL ストリーミング]**」「**[!UICONTROL ソース]**」などの情報が含まれます。また、「情報」タブには、データセットの&#x200B;**[!UICONTROL 作成日]**&#x200B;と&#x200B;**[!UICONTROL 最終変更日]**&#x200B;に関する情報も含まれます。
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. 「情報」タブには、データセットの作成日時と最終変更日に関する情報も表示されます。
 
 Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
@@ -122,13 +122,13 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 ファイルのアップロードが完了すると、「**[!UICONTROL データセットのアクティビティ]** 」タブに「バッチが追加されていません」と表示されることはなくなります。Instead, the **[!UICONTROL Dataset Activity]** tab now shows dataset metrics. バッチがまだ読み込まれていないので、すべての指標はこの段階で「0」と表示されます。
 
-タブの下部には、「[データセットへのデータ追加](#add-data-to-dataset)」処理で取得されたデータの&#x200B;**[!UICONTROL バッチ ID]** を示す追加リストが表示されます。また、**[!UICONTROL 取得]**&#x200B;された日付、取得された&#x200B;**[!UICONTROL レコード数]**、現在のバッチ&#x200B;**[!UICONTROL 状態]**&#x200B;など、バッチに関する情報も含まれます 。
+タブの下部には、「[データセットへのデータ追加](#add-data-to-dataset)」処理で取得されたデータの&#x200B;**[!UICONTROL バッチ ID]** を示す追加リストが表示されます。また、取り込んだ日付、取り込んだ記録数、現在のバッチ状態など、バッチに関する情報も含まれます。
 
 ![データセット指標](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## バッチの詳細
 
-**[!UICONTROL バッチの概要]**&#x200B;でバッチに関する追加の詳細を表示するには「**[!UICONTROL バッチ ID]**」をクリックします。バッチの読み込みが完了すると、バッチに関する情報が更新され、**[!UICONTROL 取得されたレコード数]**&#x200B;と&#x200B;**[!UICONTROL ファイルサイズ]**&#x200B;が表示されます。「 **[!UICONTROL ステータス]**」も「成功」または「失敗」に変更されます。バッチが失敗した場合は、取得中に「**[!UICONTROL エラーコード]**」セクションに、エラーに関する詳細が含まれます。
+**[!UICONTROL バッチの概要]**&#x200B;でバッチに関する追加の詳細を表示するには「**[!UICONTROL バッチ ID]**」をクリックします。バッチの読み込みが完了すると、バッチに関する情報が更新され、取り込まれたレコード数とファイルサイズが表示されます。 ステータスも「成功」または「失敗」に変わります。 バッチが失敗した場合は、取得中に「**[!UICONTROL エラーコード]**」セクションに、エラーに関する詳細が含まれます。
 
 バッチ取得に関する詳細とよくある質問については、『[バッチ取得のトラブルシューティングガイド](../batch-ingestion/troubleshooting.md)』を参照してください。
 
