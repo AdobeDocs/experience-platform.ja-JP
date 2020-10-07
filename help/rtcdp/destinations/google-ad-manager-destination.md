@@ -5,7 +5,7 @@ seo-title: Google Ad Manager の宛先
 description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 seo-description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 40%
@@ -49,11 +49,11 @@ AdobeReal-time CDPで [!DNL Google Ad Manager][!DNL Google] 宛先を作成す�
 * **顧客ID** :これは、Adobeの顧客アカウントID [!DNL Google]です。 アドビカスタマーケアまたは Adobe 担当者に問い合わせて、この ID を取得してください。
 * **ネットワーク ID**：これは のアカウントです。[!DNL Google Ad Manager]
 * **オーディエンスリンク ID**：これは のアカウントです。[!DNL Google Ad Manager]
-* アカウントの種類。**Google DFP** または **AdX 購入者**。
+* アカウントの種類。Google DFP または AdX 購入者。
 
 ## 宛先の設定
 
-1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**、を選択し、「 [!DNL Google Ad Manager]設定 ****」を選択します。
+1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**、を選択し、「 **[!DNL Google Ad Manager]**&#x200B;設定 ****」を選択します。
    ![Google Ad Manager の宛先の接続](/help/rtcdp/destinations/assets/google-1-destination.png)
 
    >[!NOTE]
