@@ -5,7 +5,7 @@ title: 顧客 AI によるインサイトの獲得
 topic: Discovering insights
 description: 顧客 AI は、Intelligent Services の一部として Adobe Sensei を活用し、顧客の次の行動を予測する力をマーケターに提供します。顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイメントは必要ありません。
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 89%
@@ -98,7 +98,7 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ## スコアの配分
 
-「*スコアの配分*」カードには、スコアに基づいた訪問者の概要が視覚的に表示されます。「*スコアの配分*」カードに表示される色は、生成された傾向スコアのタイプを表します。
+「**[!UICONTROL スコアの配分]**」カードには、スコアに基づいた訪問者の概要が視覚的に表示されます。「*スコアの配分*」カードに表示される色は、生成された傾向スコアのタイプを表します。
 
 ![スコアの配分](../images/insights/distribution-of-scores.png)
 
@@ -128,7 +128,7 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![セグメントの入力](../images/insights/segment-saving.png)
 
-新しいセグメントを Platform UI に表示するには、左のナビゲーションで「**[!UICONTROL セグメント]**」をクリックします。*参照*&#x200B;ページが表示され、使用可能なセグメントがすべて表示されます。
+新しいセグメントを Platform UI に表示するには、左のナビゲーションで「**[!UICONTROL セグメント]**」をクリックします。**[!UICONTROL 参照]**&#x200B;ページが表示され、使用可能なセグメントがすべて表示されます。
 
 ![すべてのセグメント](../images/insights/Segments-dashboard.png)
 
