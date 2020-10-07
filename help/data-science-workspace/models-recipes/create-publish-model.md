@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace は、事前に作成された製品推奨レシピを使用して目標を達成する手段を提供します。このチュートリアルに従って、小売データにアクセスしてそれらを理解し、機械学習モデルを作成および最適化、Data Science Workspace でインサイトを生成する方法を確認します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1595'
-ht-degree: 82%
+ht-degree: 79%
 
 ---
 
@@ -85,7 +85,7 @@ The second component of the [!DNL Data Science Workspace] lifecycle involves aut
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. 提供された&#x200B;**[!UICONTROL Recommendations レシピ]**を探し、名前をクリックして開きます。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 右側パネルで、「**[!UICONTROL Recommendations 入力スキーマ]**」をクリックして、レシピを実行するスキーマを表示します。スキーマフィールド **[!UICONTROL itemId]** と **[!UICONTROL userId]** は、特定の時間（**[!UICONTROL timestamp]**）にその顧客が購入した製品（**[!UICONTROL interactionType]**）に対応します。同じ手順に従って、**[!UICONTROL Recommendations の出力スキーマ]**のフィールドを確認します。
+3. 右側パネルで、「**[!UICONTROL Recommendations 入力スキーマ]**」をクリックして、レシピを実行するスキーマを表示します。The schema fields &quot;[!UICONTROL itemId]&quot; and &quot;[!UICONTROL userId]&quot; correspond to a product purchased ([!UICONTROL interactionType]) by that customer at a specific time ([!UICONTROL timestamp]). 同じ手順に従って、**[!UICONTROL Recommendations の出力スキーマ]**のフィールドを確認します。
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 これで、商品 Recommendations のレシピで必要な入力および出力スキーマを確認しました。次のセクションに進み、製品レコメンデーションモデルの作成、トレーニング、および評価方法を見つけることができます。
@@ -113,9 +113,9 @@ The second component of the [!DNL Data Science Workspace] lifecycle involves aut
 
 ### カスタムのハイパーパラメータを使用してモデルをトレーニングする
 
-1. 「*モデルの概要*」ページで、右上付近にある「**[!UICONTROL トレーニング]**」をクリックして新しいトレーニング実行を作成します。モデルの作成時に使用したのと同じ入力データセットを選択し、「**[!UICONTROL 次へ]**」をクリックします。
+1. 「**モデルの概要**」ページで、右上付近にある「**[!UICONTROL トレーニング]**」をクリックして新しいトレーニング実行を作成します。モデルの作成時に使用したのと同じ入力データセットを選択し、「**[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. *設定*&#x200B;ページが表示されます。ここで、トレーニング実行の **[!UICONTROL num_recommendations]** （ハイパーパラメーター）値を設定できます。最適化されたトレーニング済みモデルは、トレーニング実行の結果に基づいて、パフォーマンスが最も高いハイパーパラメーターを利用します。
+2. **設定**&#x200B;ページが表示されます。Here you can configure the training run&#39;s &quot;[!UICONTROL num_recommendations]&quot; value, also known as a Hyperparameter. 最適化されたトレーニング済みモデルは、トレーニング実行の結果に基づいて、パフォーマンスが最も高いハイパーパラメーターを利用します。
 
    ハイパーパラメーターは学習できないので、トレーニングを実行する前に割り当てる必要があります。ハイパーパラメーターを調整すると、トレーニングモデルの精度が変わる場合があります。モデルの最適化は反復的なプロセスなので、満足のいく評価を得るには複数のトレーニング実行が必要となる場合があります。
 
@@ -159,7 +159,7 @@ Data Science ワークフローの最後の手順では、モデルを操作で�
 
 1. スコア付け実行ページで、完了したスコア付け実行をクリックし、右側パネルの「**[!UICONTROL スコア付けの結果データセットのプレビュー]**」をクリックします。
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. プレビューの表では、各行に特定の顧客に対する製品レコメンデーションが含まれ、それぞれに **[!UICONTROL recommendations]** および **[!UICONTROL userId]** というラベルが付けられます。サンプルスクリーンショットでは、**[!UICONTROL num_recommendations]** ハイパーパラメーターが「10」に設定されているので、レコメンデーションの各行には、最大 10 個の製品 ID を番号記号（#）で区切って含めることができます。
+2. プレビューの表では、各行に特定の顧客に対する製品レコメンデーションが含まれ、それぞれに [!UICONTROL recommendations] および [!UICONTROL userId] というラベルが付けられます。サンプルスクリーンショットでは、[!UICONTROL num_recommendations] ハイパーパラメーターが「10」に設定されているので、レコメンデーションの各行には、最大 10 個の製品 ID を番号記号（#）で区切って含めることができます。
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## 次の手順 {#next-steps}
