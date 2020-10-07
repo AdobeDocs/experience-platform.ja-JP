@@ -1,13 +1,13 @@
 ---
-keywords: text classification;Text classification
+keywords: OCR;text presence;optical character recognition
 solution: Experience Platform
-title: テキスト分類APIエンドポイント
+title: 光学式文字認識
 topic: Developer guide
-description: テキスト分類サービスは、テキストフラグメントを指定した場合、1つ以上のラベルに分類できます。 分類は、単一のラベル、複数のラベル、階層のいずれかです。
+description: テキストの存在/光学式文字認識(OCR)サービスは、画像を指定した場合、画像内にテキストが存在するかどうかを示すことができます。 テキストが存在する場合、OCRはテキストを返すことができます
 translation-type: tm+mt
-source-git-commit: d57d4412ffd8beccc529681db559007a14ff8120
+source-git-commit: 4d12caf949aeb6619cd27b55855014a61d4e54bb
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '512'
 ht-degree: 4%
 
 ---
