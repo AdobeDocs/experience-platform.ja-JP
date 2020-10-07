@@ -5,10 +5,10 @@ title: 製品プロファイルの新規作成
 topic: user guide
 description: このドキュメントでは、Adobe Admin Consoleで新しい商品プロファイルを作成する際に必要な手順を説明します。 新しいプロファイルの作成を開始するには、「製品プロファイル」タブに移動し、「新しいプロファイル」をクリックします。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '246'
-ht-degree: 86%
+ht-degree: 79%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 86%
 
 ![プロファイル新規作成ボタン](../images/new-profile-button.png)
 
-**[!UICONTROL 新規プロファイルを作成]**&#x200B;ダイアログが表示され、新しいプロファイルの「**[!UICONTROL プロファイル名]**」と「**[!UICONTROL 説明]**」を入力するよう求められます。プロファイルの表示名を変更する場合は、「**[!UICONTROL プロファイル名と同じ]**」チェックボックスをオフにし、表示されるテキストボックスに表示名を入力します。「**[!UICONTROL ユーザー通知]**」では、ユーザーが追加または削除されたときに E メールで通知を受け取るかどうかを切り替えることができます。
+The **[!UICONTROL Create New Profile]** dialog appears, prompting you to enter a profile name and description for the new profile. プロファイルの表示名を変更する場合は、「**[!UICONTROL プロファイル名と同じ]**」チェックボックスをオフにし、表示されるテキストボックスに表示名を入力します。「**[!UICONTROL ユーザー通知]**」では、ユーザーが追加または削除されたときに E メールで通知を受け取るかどうかを切り替えることができます。
 
 終了したら、「**[!UICONTROL 次へ]**」をクリックします。
 
