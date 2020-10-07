@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、用意されている Retail Sales サンプルソースファイルをアーカイブファイルにパッケージ化する方法について説明します。このアーカイブファイルは、UI のレシピインポートワークフローに従うか API を使用して、Adobe Experience Platform の Data Science Workspace でレシピを作成するのに使用できます。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1156'
-ht-degree: 49%
+ht-degree: 48%
 
 ---
 
@@ -44,7 +44,7 @@ Azure Container Registry の資格情報を取得するには、[Adobe Experienc
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-「 *設定* 」ページが開きます。 適切なレシピ名（「Retail Sales recipe」など）を「*Recipe name*」に入力し、オプションで説明やドキュメント URL を入力します。完了したら、「**[!UICONTROL Next]**」をクリックします。
+「 **[!UICONTROL 設定]** 」ページが開きます。 適切なレシピ名（「Retail Sales recipe」など）を「**[!UICONTROL Recipe name]**」に入力し、オプションで説明やドキュメント URL を入力します。完了したら、「**[!UICONTROL Next]**」をクリックします。
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -64,7 +64,7 @@ Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-「*Docker Host*」、「*Username*」、「*Password*」の値をメモします。これらは、以下に説明するワークフローで [!DNL Docker] 画像を作成およびプッシュするために使用されます。
+Dockerホスト、ユーザー名、パスワードの値をメモしておきます。 これらは、以下に説明するワークフローで [!DNL Docker] 画像を作成およびプッシュするために使用されます。
 
 >[!NOTE]
 >
