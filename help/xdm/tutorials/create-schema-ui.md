@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorials
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
 source-wordcount: '3835'
 ht-degree: 17%
@@ -126,7 +126,7 @@ Similar to the `name` field, the fields you just added represent multi-field con
 
 The &quot;[!UICONTROL Loyalty Members]&quot; schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. 必要なフィールドを含む標準 mixin がないので、新しい mixin を定義する必要があります。
 
-今回は、**[!UICONTROL Mixin の追加]**&#x200B;ダイアログを開いたときに、「**[!UICONTROL 新規 mixin の作成]**」を選択します。その後、mixin の&#x200B;**[!UICONTROL 表示名]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力するよう求められます。
+今回は、**[!UICONTROL Mixin の追加]**&#x200B;ダイアログを開いたときに、「**[!UICONTROL 新規 mixin の作成]**」を選択します。その後、ミックスインの表示名と説明を入力するように求められます。
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -167,7 +167,7 @@ The changes are applied and the newly created `loyalty` object appears. Select *
 * **[!UICONTROL タイプ]:** フィールドのデータ型です。 This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Examples: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], etc.
 * **[!UICONTROL 説明]:** フィールドのオプションの説明は、文頭の場合で記述し、最大200文字で入力します。
 
-The first field for the `Loyalty` object will be a string called `loyaltyId`. When setting the new field&#39;s type to &quot;[!UICONTROL String]&quot;, the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including **[!UICONTROL Default value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum length]**.
+The first field for the `Loyalty` object will be a string called `loyaltyId`. When setting the new field&#39;s type to &quot;[!UICONTROL String]&quot;, the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including default value, format, and maximum length.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
@@ -226,7 +226,7 @@ Now, when you look under **[!UICONTROL Structure]**, you can see that the `loyal
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-In a future schema, you could now assign a field the **[!UICONTROL Type]** of &quot;[!DNL Loyalty]&quot; and it would automatically include fields for ID, loyalty level, member since, and points.
+今後のスキーマでは、フィールドを「[!DNL Loyalty]」タイプとして割り当て、ID、忠誠度レベル、メンバーシンク、ポイントのフィールドが自動的に含まれるようになります。
 
 ## スキーマフィールドの検索とフィルター
 
@@ -336,7 +336,7 @@ The &quot;Loyalty Members&quot; schema is also available to be viewed and manage
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-使用可能なクラスのリストから選択できるダイアログが表示されます。 ダイアログの上部で、「 **[!UICONTROL 新しいクラスを作成]**」を選択します。 You can then give your new class a **[!UICONTROL Display name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** (&quot;[!UICONTROL Record]&quot; or &quot;[!UICONTROL Time Series]&quot;) for the data the schema will define.
+使用可能なクラスのリストから選択できるダイアログが表示されます。 ダイアログの上部で、「 **[!UICONTROL 新しいクラスを作成]**」を選択します。 You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior (&quot;[!UICONTROL Record]&quot; or &quot;[!UICONTROL Time Series]&quot;) for the data the schema will define.
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 
