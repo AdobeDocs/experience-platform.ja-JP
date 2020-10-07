@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 使用可能な指標
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: ae6f220cdec54851fb78b7ba8a8eb19f2d06b684
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 72%
+source-wordcount: '2007'
+ht-degree: 42%
 
 ---
 
@@ -22,11 +22,18 @@ The API endpoint used in this guide is part of the [[!DNL Observability Insights
 
 ## 観察性指標の取得
 
-You can retrieve observability metrics by making a GET request to the `/metrics` endpoint in the [!DNL Observability Insights] API.
+APIを使用して指標データを取得する方法は2つあります。
+
+* [バージョン1](#v1):クエリパラメーターを使用して指標を指定します。
+* [バージョン2](#v2):JSONペイロードを使用してフィルターを指定し、指標に適用します。
+
+### Version 1 {#v1}
+
+クエリパラメーターを使用して指標を指定し、エンドポイントにGETリクエストを行うことで、指標を取得できます。 `/metrics`
 
 **API 形式**
 
-`/metrics` エンドポイントを使用する場合は、1 つ以上の指標リクエストパラメーターを指定する必要があります。その他のクエリパラメーターはオプションで、結果をフィルタリングするためのものです。
+パラメーターに少なくとも1つの指標を指定する必要があり `metric` ます。 その他のクエリパラメーターはオプションで、結果をフィルタリングするためのものです。
 
 ```http
 GET /metrics?metric={METRIC}
@@ -39,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | パラメーター | 説明 |
 | --- | --- |
 | `{METRIC}` | 表示する指標。1 回の呼び出しで複数の指標を組み合わせる場合、アンパサンド（`&`）を使用して個々の指標を区切る必要があります。例：`metric={METRIC_1}&metric={METRIC_2}`。 |
-| `{ID}` | The identifier for a particular [!DNL Platform] resource whose metrics you want to expose. この ID は、使用する指標に応じて、オプション/必須/該当しない場合があります。使用可能な指標のリスト、および各指標でサポートされるID（必須とオプションの両方）については、 [付録](#available-metrics) を参照してください。 |
+| `{ID}` | The identifier for a particular [!DNL Platform] resource whose metrics you want to expose. この ID は、使用する指標に応じて、オプション/必須/該当しない場合があります。使用可能な指標のリストについては、 [付録](#available-metrics) を参照してください。各指標でサポートされているID（必須と任意の両方）も含まれます。 |
 | `{DATE_RANGE}` | ISO 8601 形式（例：`2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`）で公開する指標の日付範囲。 |
 
 **リクエスト**
@@ -59,53 +66,208 @@ curl -X GET \
 
 ```json
 {
-    "id": "5cf8ab4ec48aba145214abeb",
-    "imsOrgId": "{IMS_ORG}",
-    "timeseries": {
-        "granularity": "MONTH",
-        "items": [
-            {
-                "timestamp": "2019-06-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 1125,
-                    "timeseries.ingestion.dataset.size": 32320
-                }
-            },
-            {
-                "timestamp": "2019-05-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 1003,
-                    "timeseries.ingestion.dataset.size": 31409
-                }
-            },
-            {
-                "timestamp": "2019-04-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 740,
-                    "timeseries.ingestion.dataset.size": 25809
-                }
-            },
-            {
-                "timestamp": "2019-03-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 740,
-                    "timeseries.ingestion.dataset.size": 25809
-                }
-            },
-            {
-                "timestamp": "2019-02-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 390,
-                    "timeseries.ingestion.dataset.size": 16801
-                }
-            }
-        ],
-        "_page": null,
-        "_links": null
-    },
-    "stats": {}
+  "id": "5cf8ab4ec48aba145214abeb",
+  "imsOrgId": "{IMS_ORG}",
+  "timeseries": {
+    "granularity": "MONTH",
+    "items": [
+      {
+        "timestamp": "2019-06-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 1125,
+          "timeseries.ingestion.dataset.size": 32320
+        }
+      },
+      {
+        "timestamp": "2019-05-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 1003,
+          "timeseries.ingestion.dataset.size": 31409
+        }
+      },
+      {
+        "timestamp": "2019-04-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 740,
+          "timeseries.ingestion.dataset.size": 25809
+        }
+      },
+      {
+        "timestamp": "2019-03-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 740,
+          "timeseries.ingestion.dataset.size": 25809
+        }
+      },
+      {
+        "timestamp": "2019-02-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 390,
+          "timeseries.ingestion.dataset.size": 16801
+        }
+      }
+    ],
+    "_page": null,
+    "_links": null
+  },
+  "stats": {}
 }
 ```
+
+### Version 2 {#v2}
+
+ペイロードで取得する指標を指定して、 `/metrics` エンドポイントにPOSTリクエストを行うことで、指標データを取得できます。
+
+**API 形式**
+
+```http
+POST /metrics
+```
+
+**リクエスト**
+
+```sh
+curl -X POST \
+  https://platform.adobe.io/data/infrastructure/observability/insights/metrics \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "start": "2020-07-14T00:00:00.000Z",
+        "end": "2020-07-22T00:00:00.000Z",
+        "granularity": "day",
+        "metrics": [
+          {
+            "name": "timeseries.ingestion.dataset.recordsuccess.count",
+            "filters": [
+              {
+                "name": "dataSetId",
+                "value": "5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
+                "groupBy": true
+              }
+            ],
+            "aggregator": "sum",
+            "downsample": "sum"
+          },
+          {
+            "name": "timeseries.ingestion.dataset.dailysize",
+            "filters": [
+              {
+                "name": "dataSetId",
+                "value": "5eddb21420f516191b7a8dad",
+                "groupBy": false
+              }
+            ],
+            "aggregator": "sum",
+            "downsample": "sum"
+          }
+        ]
+      }'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `start` | 指標データを取得する最も早い日時。 |
+| `end` | 指標データを取得する最新の日時。 |
+| `granularity` | 指標データを分割する時間間隔を示すオプションのフィールドです。 例えば、という値を指定すると、指標の結果が月別にグループ化されるのに対して、 `DAY` という値を指定すると、指標の結果が日付 `start``end``MONTH` との間の日ごとに返されます。 このフィールドを使用する場合、データをグループ化する集計関数を示すために、対応する `downsample` プロパティも指定する必要があります。 |
+| `metrics` | 取得する指標ごとに1つずつ、オブジェクトの配列。 |
+| `name` | 観察性インサイトで認識される指標の名前。 受け入れられる指標名の完全なリストについては、 [付録](#available-metrics) を参照してください。 |
+| `filters` | 特定のデータセットで指標をフィルターできるオプションのフィールドです。 このフィールドはオブジェクトの配列（各フィルターに1つずつ）で、各オブジェクトには次のプロパティが含まれています。 <ul><li>`name`:指標をフィルターするエンティティのタイプ。 現在は、`dataSets` のみがサポートされています。</li><li>`value`:1つ以上のデータセットのID。 複数のデータセットIDを1つの文字列として指定できます。各IDは縦棒グラフ文字(`|`)で区切ります。</li><li>`groupBy`:trueに設定した場合、対応するデータセットが、指標の結果を別々に返す必要がある複数のデータセットを `value` 表すことを示します。 falseに設定した場合、これらのデータセットの指標結果はグループ化されます。</li></ul> |
+| `aggregator` | 複数の時系列レコードを単一の結果にグループ化するために使用する集計関数を指定します。 使用可能なアグリゲータの詳細については、OpenTSDBの [ドキュメントを参照してください](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html)。 |
+| `downsample` | フィールドを間隔（「グループ」）に分けて並べ替えることで、指標データのサンプリング率を減らす集計関数を指定できるオプションのフィールドです。 ダウンサンプリングの間隔は、 `granularity` プロパティによって決まります。 ダウンサンプリングの詳細については、OpenTSDBのドキュメントを参照して [ください](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html)。 |
+
+**応答** 
+
+成功した応答は、リクエストで指定された指標とフィルターの結果のデータポイントを返します。
+
+```json
+{
+  "metricResponses": [
+    {
+      "metric": "timeseries.ingestion.dataset.recordsuccess.count",
+      "filters": [
+        {
+          "name": "dataSetId",
+          "value": "5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
+          "groupBy": true
+        }
+      ],
+      "datapoints": [
+        {
+          "groupBy": {
+            "dataSetId": "5edcfb2fbb642119194c7d94"
+          },
+          "dps": {
+            "2020-07-14T00:00:00Z": 44.0,
+            "2020-07-15T00:00:00Z": 46.0,
+            "2020-07-16T00:00:00Z": 36.0,
+            "2020-07-17T00:00:00Z": 50.0,
+            "2020-07-18T00:00:00Z": 38.0,
+            "2020-07-19T00:00:00Z": 40.0,
+            "2020-07-20T00:00:00Z": 42.0,
+            "2020-07-21T00:00:00Z": 42.0,
+            "2020-07-22T00:00:00Z": 50.0
+          }
+        },
+        {
+          "groupBy": {
+            "dataSetId": "5eddb21420f516191b7a8dad"
+          },
+          "dps": {
+            "2020-07-14T00:00:00Z": 44.0,
+            "2020-07-15T00:00:00Z": 46.0,
+            "2020-07-16T00:00:00Z": 36.0,
+            "2020-07-17T00:00:00Z": 50.0,
+            "2020-07-18T00:00:00Z": 38.0,
+            "2020-07-19T00:00:00Z": 40.0,
+            "2020-07-20T00:00:00Z": 42.0,
+            "2020-07-21T00:00:00Z": 42.0,
+            "2020-07-22T00:00:00Z": 50.0
+          }
+        }
+      ],
+      "granularity": "DAY"
+    },
+    {
+      "metric": "timeseries.ingestion.dataset.dailysize",
+      "filters": [
+        {
+          "name": "dataSetId",
+          "value": "5eddb21420f516191b7a8dad",
+          "groupBy": false
+        }
+      ],
+      "datapoints": [
+        {
+          "groupBy": {},
+          "dps": {
+            "2020-07-14T00:00:00Z": 38455.0,
+            "2020-07-15T00:00:00Z": 40213.0,
+            "2020-07-16T00:00:00Z": 31476.0,
+            "2020-07-17T00:00:00Z": 43705.0,
+            "2020-07-18T00:00:00Z": 33227.0,
+            "2020-07-19T00:00:00Z": 34977.0,
+            "2020-07-20T00:00:00Z": 36735.0,
+            "2020-07-21T00:00:00Z": 36737.0,
+            "2020-07-22T00:00:00Z": 43715.0
+          }
+        }
+      ],
+      "granularity": "DAY"
+    }
+  ]
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `metricResponses` | オブジェクトが、リクエストで指定された各指標を表す配列。 各オブジェクトには、フィルター設定と返された指標データに関する情報が含まれます。 |
+| `metric` | リクエストで提供される指標の1つの名前。 |
+| `filters` | 指定した指標のフィルター設定。 |
+| `datapoints` | オブジェクトが指定した指標とフィルターの結果を表す配列。 配列内のオブジェクトの数は、リクエストで指定されたフィルタオプションに応じて異なります。 フィルターが指定されない場合、配列にはすべてのデータセットを表す1つのオブジェクトのみが含まれます。 |
+| `groupBy` | 指標の `filter` プロパティで複数のデータセットが指定され、リクエストで `groupBy` オプションがtrueに設定されていた場合、このオブジェクトには、対応する `dps` プロパティが適用されるデータセットのIDが含まれます。<br><br>このオブジェクトが応答で空の場合、対応する `dps` プロパティは、配列で指定されたすべてのデータセット(フィルターが指定されていない場合は、内のすべてのデータセット) `filters`[!DNL Platform] に適用されます。 |
+| `dps` | 指定した指標、フィルターおよび時間範囲に対して返されるデータ。 このオブジェクトの各キーは、指定した指標に対応する値を持つタイムスタンプを表します。 各データポイント間の時間は、リクエストで指定された `granularity` 値に応じて異なります。 |
 
 ## 付録
 
@@ -206,3 +368,46 @@ The following table outlines metrics for [!DNL Real-time Customer Profile].
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | データセットに対する最後のレコード更新要求のタイムスタンプ。 | データセット ID (**必須**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | 平均レコードサイズ。 | IMS 組織 (**必須**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | データセットに対して取得された更新要求の割合。 | データセット ID (**必須**) |
+
+### エラーメッセージ
+
+エンドポイントからの応答は、特定の条件下でエラーメッセージを返す場合があり `/metrics` ます。 これらのエラーメッセージは、次の形式で返されます。
+
+```json
+{
+    "type": "http://ns.adobe.com/aep/errors/INSGHT-1000-400",
+    "title": "Bad Request - Start date cannot be after end date.",
+    "status": 400,
+    "report": {
+        "tenantInfo": {
+            "sandboxName": "prod",
+            "sandboxId": "49f58060-5d47-34rd-aawf-a5384333ff12",
+            "imsOrgId": "{IMS_ORG}"
+        },
+        "additionalContext": null
+    },
+    "error-chain": [
+        {
+            "serviceId": "INSGHT",
+            "errorCode": "INSGHT-1000-400",
+            "invokingServiceId": "INSGHT",
+            "unixTimeStampMs": 1602095177129
+        }
+    ]
+}
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `title` | エラーメッセージと発生した可能性のある理由を含む文字列です。 |
+| `report` | エラーをトリガーした操作で使用されているサンドボックスやIMS組織など、エラーに関するコンテキスト情報が含まれます。 |
+
+次の表に、APIから返される可能性のある様々なエラーコードをリストします。
+
+| エラーコード | タイトル | 説明 |
+| --- | --- | --- |
+| `INSGHT-1000-400` | 不正な要求ペイロード | 要求のペイロードに問題がありました。 ペイロードの書式が [上記と完全に一致していることを確認します](#v2)。 考えられる理由のいずれかによって、このエラーが発生する可能性があります。<ul><li>必要なフィールド( `aggregator`</li><li>無効な指標</li><li>要求に無効なアグリゲータが含まれています</li><li>開始日は、終了日の後に発生します</li></ul> |
+| `INSGHT-1001-400` | 指標のクエリに失敗しました | リクエストが正しくないか、クエリ自体を解析できないため、指標データベースのクエリを試みたときにエラーが発生しました。 再試行する前に、リクエストの形式が正しく設定されていることを確認してください。 |
+| `INSGHT-1001-500` | 指標のクエリに失敗しました | サーバーエラーが原因で、指標データベースのクエリを試行中にエラーが発生しました。 もう一度要求してみて、問題が解決しない場合は、Adobeサポートに問い合わせてください。 |
+| `INSGHT-1002-500` | サービスエラー | 内部エラーが原因で要求を処理できませんでした。 もう一度要求してみて、問題が解決しない場合は、Adobeサポートに問い合わせてください。 |
+| `INSGHT-1003-401` | Sandbox検証エラー | サンドボックス検証エラーが原因で、要求を処理できませんでした。 要求を再試行する前に、 `x-sandbox-name` ヘッダーに入力したSandbox名が、IMS組織に対して有効な有効なSandboxであることを確認してください。 |
