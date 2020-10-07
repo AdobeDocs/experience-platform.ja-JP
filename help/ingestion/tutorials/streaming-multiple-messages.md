@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: このドキュメントでは、ストリーミング取り込みを使用して、1つのHTTPリクエスト内で複数のメッセージをAdobe Experience Platformに送信するためのチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1487'
-ht-degree: 72%
+ht-degree: 67%
 
 ---
 
@@ -45,7 +45,7 @@ You must first create a streaming connection before you can start streaming data
 
 次の例は、単一の HTTP リクエスト内で複数のメッセージを特定のデータセットに送信する方法を示しています。メッセージヘッダーにデータセット ID を挿入して、そのメッセージが直接取得されるようにします。
 
-You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. このデータセット ID は、[Experience Platform](https://platform.adobe.com) で、「**[!UICONTROL データセット]**」タブに移動し、ID が必要なデータセットをクリックして、「**[!UICONTROL 情報]**」タブの&#x200B;**[!UICONTROL データセット ID]** フィールドから文字列をコピーすると見つかります。API を使用してデータセットを取得する方法については、「[カタログサービスの概要](../../catalog/home.md)」を参照してください。
+You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the dataset ID field on the **[!UICONTROL Info]** tab. API を使用してデータセットを取得する方法については、「[カタログサービスの概要](../../catalog/home.md)」を参照してください。
 
 既存のデータセットを使用する代わりに、新しいデータセットを作成できます。API を使用してデータセットを作成する方法の詳細については、[API を使用したデータセットの作成](../../catalog/api/create-dataset.md)のチュートリアルを参照してください。
 
@@ -542,7 +542,7 @@ Now that you know how to send multiple messages in a single request and verify w
 
 | ステータスコード | 説明 |
 | :---: | --- |
-| 207 | 全体的な応答ステータスコードとして「207」が使用されますが、受信者は、メソッド実行の成功または失敗に関する詳細について、マルチステータス応答の本文の内容を調べる必要があります。この応答コードは、成功や部分的な成功のほか、失敗した状況でも使用されます。 |
+| 207 | 全体的な応答ステータスコードとして「207」が使用されていますが、受信者は、マルチステータス応答本体の内容を参照して、メソッドの実行の成功または失敗に関する詳細を確認する必要があります。 この応答コードは、成功や部分的な成功のほか、失敗した状況でも使用されます。 |
 | 400 | リクエストに問題がありました。より具体的なエラーメッセージ（例えば、メッセージペイロードに必須フィールドがなかった、またはメッセージが不明な XDM 形式だった）については、応答の本文を参照してください。 |
 | 401 | 未認証：リクエストに有効な認証ヘッダーがありません。このコードは、認証が有効になっているインレットのみに対して返されます。 |
 | 403 | 未認証：指定された認証トークンが無効か期限切れです。このコードは、認証が有効になっているインレットのみに対して返されます。 |
