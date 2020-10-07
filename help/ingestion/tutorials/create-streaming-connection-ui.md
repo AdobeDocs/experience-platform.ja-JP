@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: この UI ガイドは、Adobe Experience Platform を使用してストリーミング接続を作成する際に役立ちます。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '512'
-ht-degree: 77%
+ht-degree: 74%
 
 ---
 
@@ -36,7 +36,7 @@ After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sourc
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-「**[!UICONTROL HTTP に接続]**」画面が表示されます。「**[!UICONTROL サービスの詳細]**」で、新しいストリーミング接続の&#x200B;**[!UICONTROL 名前]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力します。
+「**[!UICONTROL HTTP に接続]**」画面が表示されます。「**[!UICONTROL サービスの詳細]**」で、新しいストリーミング接続の名前と説明を入力します。
 
 「**[!UICONTROL アカウント認証]**」で、ストリーミング接続の次の設定プロパティを選択します。
 
@@ -59,7 +59,7 @@ After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sourc
 
 ### 新しいデータセットを作成する
 
-新しいデータセットを作成するには、**[!UICONTROL 名前]**、**[!UICONTROL 説明]**&#x200B;およびデータセットのターゲット&#x200B;**[!UICONTROL スキーマ]**&#x200B;を指定します。
+新しいデータセットを作成するには、名前、説明、およびターゲットセットのスキーマを指定します。
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 
