@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してFTPまたはSFTPソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '701'
 ht-degree: 9%
 
 ---
@@ -43,7 +43,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ### 必要な資格情報の収集
 
-でFTPまたはSFTPサーバにアクセスするに [!DNL Platform]は、サーバの **ホスト名**、 **ユーザ名**、 **パスワードを指定する必要があります**。
+でFTPまたはSFTPサーバーにアクセスするに [!DNL Platform]は、サーバーのホスト名、ユーザー名、パスワードを指定する必要があります。
 
 ## FTPまたはSFTPサーバーに接続する
 
