@@ -5,7 +5,7 @@ title: プライバシーリクエストの ID データ
 topic: overview
 description: このドキュメントでは、データ操作を設定し、アドビのテクノロジーを活用して、顧客のプライバシー要求に適した ID 情報を効果的に取得する方法について、一般的なガイダンスを提供しています。
 translation-type: tm+mt
-source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '643'
 ht-degree: 45%
@@ -25,7 +25,7 @@ In order for Adobe Experience Platform [!DNL Privacy Service] to process custome
 
 For example, when handling customer data requests in [!DNL Privacy Service], an identity may represent a cookie value set under an Adobe-controlled domain, a cookie value under a third-party domain and shared with Adobe, or a custom identifier that you explicitly define within your IMS Organization.
 
-It is therefore required that each identity sent to [!DNL Privacy Service] is accompanied with a **namespace** that provides context by relating the identity value to its system of origin. 名前空間では、電子メールアドレス（「電子メール」）などの汎用概念を表したり、ID を特定のアプリケーションに関連付けたりすることができます（Adobe Advertising Cloud ID（「AdCloud」）、Adobe Target ID（「TNTID」）など）。
+It is therefore required that each identity sent to [!DNL Privacy Service] is accompanied with a namespace that provides context by relating the identity value to its system of origin. 名前空間では、電子メールアドレス（「電子メール」）などの汎用概念を表したり、ID を特定のアプリケーションに関連付けたりすることができます（Adobe Advertising Cloud ID（「AdCloud」）、Adobe Target ID（「TNTID」）など）。
 
 Adobe Experience Platform ID サービスは、グローバルに定義された、またユーザー定義の ID 名前空間を管理します。名前空間について詳しくは、[ID 名前空間の概要](../identity-service/namespaces.md)を参照してください。For a list of standard namespaces and namespace qualifiers that are commonly used in [!DNL Privacy Service], see the [appendix section](api/appendix.md) in the developer guide.
 
