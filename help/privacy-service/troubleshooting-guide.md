@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service に関する FAQ
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 46%
@@ -16,7 +16,7 @@ ht-degree: 46%
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help companies manage customer data privacy requests. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.
 
-このドキュメントでは、に関するよくある質問 [!DNL Privacy Service]と、APIでよく発生するエラーに関する情報に回答します。
+このドキュメントでは、に関するよくある質問 [!DNL Privacy Service]と、APIでよく発生するエラーに関する情報を提供します。
 
 ## API でプライバシーリクエストをおこなう場合、ユーザーとユーザー ID の違いは何ですか？ {#user-ids}
 
@@ -94,7 +94,7 @@ The [!DNL Privacy Service] API and user interface both provide methods for downl
 
 ### UI の使用
 
-On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. ジョブの ID をクリックして、_ジョブの詳細ページ_&#x200B;を開きます。右上隅の「**ダウンロード**」をクリックして、ZIP ファイルをダウンロードします。詳細な手順については、『[Privacy Service ユーザーガイド](ui/user-guide.md)』を参照してください。
+On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. ジョブの ID をクリックして、ジョブの詳細ページを開きます。右上隅の「**ダウンロード**」をクリックして、ZIP ファイルをダウンロードします。詳細な手順については、『[Privacy Service ユーザーガイド](ui/user-guide.md)』を参照してください。
 
 ## 一般的なエラーメッセージ
 
