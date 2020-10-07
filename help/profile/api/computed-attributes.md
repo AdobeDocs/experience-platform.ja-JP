@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 計算済み属性 — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2403'
-ht-degree: 82%
+ht-degree: 83%
 
 ---
 
@@ -31,7 +31,7 @@ The API endpoint used in this guide is part of the [Real-time Customer Profile A
 
 Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. 各プロファイルには、顧客の連絡先情報、好み、購入履歴など、顧客に関する重要な情報が含まれ、顧客の全体像を把握することができます。
 
-プロファイルで収集された情報には、データフィールドを直接読み取る場合にわかりやすい（「名」など）ものや、情報を生成するために複数の計算を実施するもの、他のフィールドの値に依存するもの（「ライフタイム購入合計」など）があります。To make this data easier to understand at a glance, [!DNL Platform] allows you to create **[!UICONTROL computed attributes]** that automatically perform these references and calculations, returning the value in the appropriate field.
+プロファイルで収集された情報には、データフィールドを直接読み取る場合にわかりやすい（「名」など）ものや、情報を生成するために複数の計算を実施するもの、他のフィールドの値に依存するもの（「ライフタイム購入合計」など）があります。To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
 
 計算済み属性には、受信データ上で操作し、結果の値をプロファイル属性またはイベントに格納する式（ルール）の作成が含まれます。式は複数の異なる方法で定義でき、「受信イベントのみ」、「受信イベントとプロファイルデータ」、または「受信イベント、プロファイルデータ、および履歴イベント」を評価するルールを指定できます。
 
@@ -69,7 +69,7 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ### Mixin の作成
 
-新しい Mixin を作成するには、エディターの左側にある「**[!UICONTROL コンポジション]**」セクションで、「*Mixins*」の隣にある「**[!UICONTROL 追加]**」をクリックします。「**[!UICONTROL Mixin を追加]**」ダイアログが開き、既存の Mixin を確認できます。新しい Mixin を定義するには、「**[!UICONTROL 新しい Mixin を作成]**」のラジオボタンをクリックします。
+新しい Mixin を作成するには、エディターの左側にある「**[!UICONTROL コンポジション]**」セクションで、「**[!UICONTROL Mixins]**」の隣にある「**[!UICONTROL 追加]**」をクリックします。「**[!UICONTROL Mixin を追加]**」ダイアログが開き、既存の Mixin を確認できます。新しい Mixin を定義するには、「**[!UICONTROL 新しい Mixin を作成]**」のラジオボタンをクリックします。
 
 Mixin に名前と説明を入力し、完了したら「**[!UICONTROL Mixin を追加]**」をクリックします。
 
@@ -77,7 +77,7 @@ Mixin に名前と説明を入力し、完了したら「**[!UICONTROL Mixin を
 
 ### 追加スキーマ
 
-これで、新しい Mixin が「**[!UICONTROL コンポジション]**」の下の「**[!UICONTROL Mixins]**」セクションに表示されます。Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the *[!UICONTROL Structure]** section of the editor.
+Your new mixin should now appear in the &quot;[!UICONTROL Mixins]&quot; section under &quot;[!UICONTROL Composition]&quot;. Mixin の名前をクリックすると、エディターの「**[!UICONTROL 構造]**」セクションに、「**[!UICONTROL フィールドを追加]**」ボタンが複数表示されます。
 
 上位のフィールドを追加するには、スキーマ名の隣にある「**[!UICONTROL フィールドを追加]**」を選択するか、お好きなスキーマ内の任意の場所にフィールドを追加するよう選択することもできます。
 
