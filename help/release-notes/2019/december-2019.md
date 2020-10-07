@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 63%
+ht-degree: 64%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 63%
 
 **リリース日：2019 年 12 月 12 日**
 
-Adobe Experience Platformの既存の機能の更新：
+Adobe Experience Platform の既存の機能のアップデート：
 
 * [[!DNL Segmentation Service]](#segmentation)
 * [[!DNL Decisioningサービス]](#decisioning)
@@ -34,7 +34,7 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 
 | 機能 | 説明 |
 |--- | ---|
-| 結合されたオーディエンスタブ( [!DNL Segment Builder] | The [!UICONTROL _Segments_] and [!UICONTROL _Audiences_] tabs in the [!DNL Segment Builder] have been combined into a single [!UICONTROL _Audiences_] tab. このタブでは、既存のオーディエンスを参照して検索し、ルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義を作成できます。オーディエンスを参照すると、ルールとしてのオーディエンスのメンバーシップ、または参照先のメンバーシップを定義したルールロジックの完全なオーディエンスのルールロジックのセットのいずれかを新しいセグメント定義に追加できます。 |
+| 結合されたオーディエンスタブ( [!DNL Segment Builder] | The [!UICONTROL Segments] and [!UICONTROL Audiences] tabs in the [!DNL Segment Builder] have been combined into a single [!UICONTROL Audiences] tab. このタブでは、既存のオーディエンスを参照して検索し、ルールビルダーキャンバスにドラッグ&amp;ドロップして、新しいセグメント定義を作成できます。オーディエンスを参照すると、ルールとしてのオーディエンスのメンバーシップ、または参照先のメンバーシップを定義したルールロジックの完全なオーディエンスのルールロジックのセットのいずれかを新しいセグメント定義に追加できます。 |
 | 結合ポリシーセレクターの新しい場所 | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. セグメント定義の結合ポリシーを選択するには、「**[!UICONTROL フィールド]**」タブの歯車アイコンをクリックし、**[!UICONTROL 結合ポリシー]**&#x200B;ドロップダウンメニューを使用して、使用する結合ポリシーを選択します。 |
 
 **既知の問題**
