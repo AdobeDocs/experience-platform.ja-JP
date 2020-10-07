@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Experience Platform UI で、オーディエンスセグメントのエクスポートに使用できるデータセットを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 69%
+source-wordcount: '756'
+ht-degree: 57%
 
 ---
 
@@ -35,7 +35,7 @@ UI で和集合スキーマを表示するには、左側のナビゲーショ�
 
 The datasets workspace within the [!DNL Experience Platform] UI allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-データセットワークスペースを表示するには、左側のナビゲーションで「**[!UICONTROL Datasets]**」をクリックし、「**[!UICONTROL Browse]**」タブをクリックします。データセットワークスペースには、**[!UICONTROL 名前]**、**[!UICONTROL 作成日時]**（日付と時刻）、**[!UICONTROL ソース]**、**[!UICONTROL スキーマ]**、**[!UICONTROL 最終バッチステータス]**&#x200B;を示す列、および&#x200B;**[!UICONTROL 最終更新日時]**&#x200B;を含むデータセットのリストが含まれています。各列の幅によっては、すべての列を表示するには、左または右にスクロールする必要があります。
+データセットワークスペースを表示するには、左側のナビゲーションで「**[!UICONTROL Datasets]**」をクリックし、「**[!UICONTROL Browse]**」タブをクリックします。データセットワークスペースには、名前、作成日時、ソース、スキーマ、最終バッチステータスを示す列、およびデータセットが最後に更新された日時など、データセットのリストが含まれます。 各列の幅によっては、すべての列を表示するには、左または右にスクロールする必要があります。
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ The datasets workspace within the [!DNL Experience Platform] UI allows you to vi
 
 ## データセットの作成
 
-データセットを作成するには、「データセット」ワークスペースの右上隅にある「**[!UICONTROL データセットを作成]**」をクリックします。
+データセットを作成するには、「データセット」ワークスペースの右上隅にある「**[!UICONTROL データセットを作成]**」をクリックします。****
 
 ![「データセットを作成」のクリック](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
@@ -63,7 +63,7 @@ To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset
 
 ## データセットの設定
 
-**[!UICONTROL データセットの設定]**&#x200B;画面で、データセットの&#x200B;**[!UICONTROL 名前]**&#x200B;を指定し、データセットの&#x200B;**[!UICONTROL 説明]**&#x200B;も入力できます。
+On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset.
 
 **データセット名に関する注意事項：**
 - 後でライブラリ内で簡単に見つけられるように、データセット名は短く、わかりやすい名前にする必要があります。
@@ -76,9 +76,9 @@ To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset
 
 ## データセットアクティビティ
 
-空のデータセットが作成され、データセットワークスペースの「**[!UICONTROL データセットアクティビティ]**」タブに戻りました。ワークスペースの左上隅にデータセットの名前と、「バッチが追加されていません」という通知が表示されます。このデータセットにバッチをまだ追加していないので、これは期待通りです。
+空のデータセットが作成され、データセットワークスペースの「**[!UICONTROL データセットアクティビティ]**」タブに戻りました。****&#x200B;ワークスペースの左上隅にデータセットの名前と、「バッチが追加されていません」という通知が表示されます。このデータセットにバッチをまだ追加していないので、これは期待通りです。
 
-「データセット」ワークスペースの右側に「**[!UICONTROL 情報]**」タブがあり、新しいデータセットに関した「**[!UICONTROL データセット ID]**」、「**[!UICONTROL 名前]**」、「**[!UICONTROL 説明]**」、「**[!UICONTROL テーブル名]**」、「**[!UICONTROL スキーマ]**」、「**[!UICONTROL ストリーミング]**」「**[!UICONTROL ソース]**」などの情報が含まれます。The [!UICONTROL Info] tab also includes information about when the dataset was **[!UICONTROL Created]** and its **[!UICONTROL Last Modified]** date.
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema], streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
 
 **[!UICONTROL データセット ID]** は、オーディエンスセグメントのエクスポートワークフローを完了するために必要になるので、メモしておいてください。
 
@@ -86,6 +86,6 @@ To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset
 
 ## 次の手順
 
-Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the **[!UICONTROL Dataset ID]** to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
+Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the dataset ID to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
 
 At this time, please return to the evaluating segment results tutorial and pick up from the [generating profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the exporting a segment workflow.
