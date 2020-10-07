@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace　を使用すると、訓練を受けた評価済みのモデルをサービスとして公開でき、IMS 組織内のユーザーは、独自のモデルを作成する必要なくデータをスコアリングできます。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 93%
+source-wordcount: '456'
+ht-degree: 90%
 
 ---
 
@@ -49,9 +49,9 @@ Sensei 機械学習 API を使用してモデルを公開する場合は、[API 
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. サービスを作成すると、デフォルトのスコア設定が継承されます。これらの設定を確認し、必要に応じて値をダブルクリックして調整できます。設定が完了したら、「**[!UICONTROL 完了]**」をクリックして、スコアリングの実行を開始します。
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. サービスの&#x200B;*概要*&#x200B;ページに、新しいスコアリングジョブとその進行状況の詳細が表示されます。ジョブが完了すると、**[!UICONTROL 最新]**のスコアリングジョブが更新されます。
+5. サービスの&#x200B;**概要**&#x200B;ページに、新しいスコアリングジョブとその進行状況の詳細が表示されます。ジョブが完了すると、スコアリング **[!UICONTROL コンテナ内の「]** 最新 **** 」ヘッダーが更新されます。
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、**[!UICONTROL サービスギャラリー]**&#x200B;を通じてアクセス可能なサービスとしてモデルを公開し、新しいサービスを使用してデータをスコアリングしました。次のチュートリアルに進み、[サービスで自動トレーニングとスコアリングの実行をスケジュールする](./schedule-models-ui.md)方法を学びます。
+このチュートリアルでは、[!UICONTROL サービスギャラリー]を通じてアクセス可能なサービスとしてモデルを公開し、新しいサービスを使用してデータをスコアリングしました。次のチュートリアルに進み、[サービスで自動トレーニングとスコアリングの実行をスケジュールする](./schedule-models-ui.md)方法を学びます。
