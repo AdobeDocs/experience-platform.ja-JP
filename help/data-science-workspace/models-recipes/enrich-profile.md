@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: このドキュメントでは、リアルタイム顧客プロファイルに機械学習の洞察を与えるためのチュートリアルを順を追って説明します。手順は以下の節に分かれています。出力スキーマー/データセットの作成、出力スキーマ/データセットの設定、セグメントビルダーを使用したセグメントの作成
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 68%
@@ -43,10 +43,10 @@ The first step towards enriching [!DNL Real-time Customer Profile] with scoring 
 
 クラスを割り当てることで、スキーマの構成が開始されます。クラスは、スキーマに含まれるデータ（レコードまたは時系列）の行動面を定義します。ここでは、スキーマビルダーを使用してスキーマを作成する基本手順を説明します。詳しいチュートリアルについては、[スキーマエディターを使用したスキーマの作成](../../xdm/tutorials/create-schema-ui.md)に関するチュートリアルを参照してください。
 
-1. Adobe Experience Platform で、「**[!UICONTROL スキーマ]** 」タブをクリックしてスキーマブラウザーにアクセスします。「**[!UICONTROL スキーマ作成]**」をクリックして、*スキーマエディター*にアクセスします。このエディターで、インタラクティブにスキーマを作成できます。
+1. Adobe Experience Platform で、「**[!UICONTROL スキーマ]** 」タブをクリックしてスキーマブラウザーにアクセスします。「**[!UICONTROL スキーマ作成]**」をクリックして、**スキーマエディター**にアクセスします。このエディターで、インタラクティブにスキーマを作成できます。
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. *構成*&#x200B;ウィンドウで、「**[!UICONTROL 割り当て]**」をクリックし、使用可能なクラスを参照します。
+2. **構成**&#x200B;ウィンドウで、「**[!UICONTROL 割り当て]**」をクリックし、使用可能なクラスを参照します。
    * 既存のクラスを割り当てるには、目的のクラスをクリックしてハイライト表示し、「**[!UICONTROL クラスを割り当て]**」をクリックします。
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -55,7 +55,7 @@ The first step towards enriching [!DNL Real-time Customer Profile] with scoring 
 
    この時点で、スキーマの構造にいくつかのクラスフィールドが含まれ、mixin を割り当てる準備が整います。Mixin は、特定の概念を説明する 1 つ以上のフィールドのグループです。
 
-3. *構成*&#x200B;ウィンドウの「*Mixins*」サブセクションで「**[!UICONTROL 追加]**」をクリックします。
+3. **構成**&#x200B;ウィンドウの「**Mixins**」サブセクションで「**[!UICONTROL 追加]**」をクリックします。
    * 既存の mixin を割り当てるには、目的の mixin をクリックしてハイライト表示し、「**[!UICONTROL Mixin を追加]**」をクリックします。クラスとは異なり、適切な場合、複数の mixin を 1 つのスキーマに割り当てられます。
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
