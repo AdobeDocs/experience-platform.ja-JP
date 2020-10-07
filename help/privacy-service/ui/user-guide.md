@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service ユーザーガイド
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1059'
-ht-degree: 85%
+ht-degree: 83%
 
 ---
 
@@ -18,7 +18,7 @@ This document provides steps for creating and managing privacy requests using th
 
 ## Browse the [!DNL Privacy Service] UI dashboard
 
-The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: **[!UICONTROL Status Report]** and **[!UICONTROL Job Requests]**. また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
+The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: &quot;[!UICONTROL Status Report]&quot; and &quot;[!UICONTROL Job Requests]&quot;. また、ダッシュボードには、表示されたジョブに対して現在選択されている規制も表示されます。
 
 ![UI ダッシュボード](../images/user-guide/dashboard.png)
 
@@ -106,7 +106,7 @@ The [!DNL Privacy Service] UI provides two methods to create new job requests:
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-リクエストの「**[!UICONTROL Job Type]**」（「Delete」または「Access」）を選択し、該当する製品を「**[!UICONTROL Products]**」のリストから 1 つ以上選択します。
+Select the **[!UICONTROL Job Type]** of the request (&quot;Delete&quot; or &quot;Access&quot;) and one or more available products from the list.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -114,11 +114,11 @@ Under **[!UICONTROL Namespace type]**, select the appropriate namespace type for
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-_standard_ タイプの名前空間を使用する場合は、ドロップダウンメニューから名前空間（E メール、ECID、AAID のいずれか）を選択し、右側のテキストボックスに ID 値を入力し、ID ごとに **Enter** キーを押してリストに追加します。
+standard タイプの名前空間を使用する場合は、ドロップダウンメニューから名前空間（E メール、ECID、AAID のいずれか）を選択し、右側のテキストボックスに ID 値を入力し、ID ごとに **Enter** キーを押してリストに追加します。
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-_custom_ タイプの名前空間を使用する場合は、名前空間を手動で入力してから、その下で ID 値を入力する必要があります。
+custom タイプの名前空間を使用する場合は、名前空間を手動で入力してから、その下で ID 値を入力する必要があります。
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -148,7 +148,7 @@ _custom_ タイプの名前空間を使用する場合は、名前空間を手�
 
 コンピューター上で JSON ファイルを探し、ダイアログウィンドウにドラッグします。アップロードが正常に完了すると、ダイアログにファイル名が表示されます。必要に応じて、引き続き JSON ファイルをダイアログにドラッグ＆ドロップして追加できます。
 
-完了したら、「**[!UICONTROL Create]**」をクリックします。ダイアログが閉じ、新しいジョブ（複数の場合あり）が現在の処理ステータスと共に&#x200B;_ジョブリクエスト_&#x200B;ウィジェットにリスト表示されます。
+完了したら、「**[!UICONTROL Create]**」をクリックします。ダイアログが閉じ、新しいジョブ（複数の場合あり）が現在の処理ステータスと共にジョブリクエストウィジェットにリスト表示されます。
 
 ### 次の手順
 
