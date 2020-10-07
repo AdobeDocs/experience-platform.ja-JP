@@ -5,7 +5,7 @@ title: Audience Manager コネクタ
 topic: overview
 description: Adobe Audience Manager データコネクタは、Adobe Audience Manager で収集されたファーストパーティデータを Adobe Experience Platform にストリーミングします。Audience Managerコネクタは、3つのカテゴリのデータをプラットフォームに取り込みます。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 87%
@@ -67,7 +67,7 @@ Audience Managerデータセットはデフォルトでプロファイルに対�
 
 ### 接続
 
-Adobe Audience Manager では、**Audience Manager 接続**&#x200B;という 1 つの接続をカタログに作成します。カタログは、Adobe Experience Platform におけるデータの場所と系列のレコード体系です。接続は、コネクタの顧客固有のインスタンスであるカタログオブジェクトです。カタログ、接続、コネクタについて詳しくは、[カタログサービスの概要](../../../catalog/home.md)を参照してください。
+Adobe Audience Manager では、Audience Manager 接続という 1 つの接続をカタログに作成します。カタログは、Adobe Experience Platform におけるデータの場所と系列のレコード体系です。接続は、コネクタの顧客固有のインスタンスであるカタログオブジェクトです。カタログ、接続、コネクタについて詳しくは、[カタログサービスの概要](../../../catalog/home.md)を参照してください。
 
 ## Platform 上で Audience Manager データに予想される遅延はどの程度ですか？
 
