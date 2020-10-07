@@ -5,7 +5,7 @@ title: データレイクでのプライバシーリクエストの処理
 topic: overview
 description: Adobe Experience Platform Privacy Serviceは、法的および組織のプライバシーに関する規則に基づオプトアウトいて記述された個人データにアクセス、販売、または削除するように顧客の要求を処理します。 このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 26%
@@ -30,7 +30,7 @@ It is recommended that you have a working understanding of the following [!DNL E
 
 ## ID 名前空間について {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] は、 **[!UICONTROL identity名前空間]** を使用して、identity値に対するコンテキストを、その接触チャネルのシステムに関連付けることで提供します。 名前空間では、電子メールアドレス（「電子メール」）などの汎用概念を表したり、ID を特定のアプリケーションに関連付けたりすることができます（Adobe Advertising Cloud ID（「AdCloud」）、Adobe Target ID（「TNTID」）など）。
+Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] identity名前空間を使用して、identity値を接触チャネルのシステムに関連付けることで、identity値のコンテキストを提供します。 名前空間では、電子メールアドレス（「電子メール」）などの汎用概念を表したり、ID を特定のアプリケーションに関連付けたりすることができます（Adobe Advertising Cloud ID（「AdCloud」）、Adobe Target ID（「TNTID」）など）。
 
 [!DNL Identity Service] グローバルに定義された（標準）ID名前空間とユーザー定義の（カスタム）IDユーザーのストアを維持します。 標準の名前空間はすべての組織（「電子メール」や「ECID」など）で使用できますが、組織は、特定のニーズに合わせてカスタム名前空間を作成することもできます。
 
@@ -38,7 +38,7 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## IDデータをデータセットに追加する
 
-のプライバシーリクエストを作成する場合 [!DNL Data Lake]、データを見つけて処理するために、有効なID値(および関連する名前空間)を各顧客に提供する必要があります。 したがって、プライバシー要求の対象となるすべてのデータセットには、関連するXDMスキーマに **[!UICONTROL ID記述子]** が含まれている必要があります。
+のプライバシーリクエストを作成する場合 [!DNL Data Lake]、データを見つけて処理するために、有効なID値(および関連する名前空間)を各顧客に提供する必要があります。 したがって、プライバシー要求の対象となるすべてのデータセットには、関連するXDMスキーマにID記述子が含まれている必要があります。
 
 >[!NOTE]
 >
