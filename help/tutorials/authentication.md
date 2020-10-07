@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。 '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 43%
@@ -89,17 +89,17 @@ AdobeDeveloper Consoleを使用して、次の3つのアクセス資格情報を
 
 [Adobeデベロッパーコンソールに移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe開発者コンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
 
-新しいプロジェクトを作成したら、プ **[!UICONTROL ロジェクト概要]** 画面の「 _API_ 」をクリックします。
+新しいプロジェクトを作成したら、プ **[!UICONTROL ロジェクト概要]** 画面の「 **API** 」をクリックします。
 
 ![](images/authentication/add-api-button.png)
 
-API __ 追加画面が表示されます。 Adobe Experience Platformの製品アイコンをクリックし、「 **[!UICONTROL Experience PlatformAPI]** 」を選択してから「 **[!UICONTROL 次へ]**」をクリックします。
+API **** 追加画面が表示されます。 Adobe Experience Platformの製品アイコンをクリックし、「 **[!UICONTROL Experience PlatformAPI]** 」を選択してから「 **[!UICONTROL 次へ]**」をクリックします。
 
 ![](images/authentication/add-platform-api.png)
 
 プロジェクトに追加するAPI [!DNL Experience Platform] を選択したら、サービスアカウント(JWT)を使用したプロジェクトへのAPIの [](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) 追加（「APIを設定」の手順から開始）のチュートリアルに示されている手順に従って、プロセスを完了します。
 
-APIがプロジェクトに追加されると、 _プロジェクトの概要_ ページに、すべてのAPI呼び出しで必要な次の資格情報が表示され [!DNL Experience Platform] ます。
+APIがプロジェクトに追加されると、 **プロジェクトの概要** ページに、すべてのAPI呼び出しで必要な次の資格情報が表示され [!DNL Experience Platform] ます。
 
 * `{API_KEY}` （クライアントID）
 * `{IMS_ORG}` (Organization ID)
