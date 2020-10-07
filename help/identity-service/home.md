@@ -5,7 +5,7 @@ title: Adobe Experience Platform ID サービス
 topic: overview
 description: Adobe Experience Platform ID サービスを使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客と行動をより良く表示できます。これによって、インパクトのある個人のデジタルエクスペリエンスをリアルタイムで提供できます。
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 69%
@@ -13,7 +13,7 @@ ht-degree: 69%
 ---
 
 
-# [!DNL Identity Service] 概要
+# [!DNL Identity Service]概要
 
 関連性のあるデジタルエクスペリエンスを提供するには、顧客を完全に理解しておく必要があります。これは、顧客データが異なる複数のシステムに断片化され、各顧客が複数の「ID」を持つように見える場合に、より難しくなります。Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
 
@@ -35,11 +35,11 @@ The identity relationships that [!DNL Identity Service] defines and maintains ar
 
 ### ID
 
-ID とは、エンティティ（通常は個人）に固有のデータです。ログイン ID、ECID、ロイヤリティ ID などの ID は、**既知の ID** と呼ばれます。
+ID とは、エンティティ（通常は個人）に固有のデータです。ログイン ID、ECID、ロイヤリティ ID などの ID は、既知の ID と呼ばれます。
 
 メールアドレスや電話番号などの PII は、顧客を直接識別する役割を果たします。その結果、PII は、システム間で顧客の複数の ID を照合するために使用されます。
 
-**不明または匿名の ID** は、実際に使用している人を特定せずにデバイスを特定します。このカテゴリには、訪問者の IP アドレスや cookie ID などの情報が含まれます。行動データは不明な ID を使用してデバイスから収集できますが、デバイスやメディア間での関連付けは、顧客がジャーニー中に PII を提供するまで制限されます。
+不明または匿名の ID は、実際に使用している人を特定せずにデバイスを特定します。このカテゴリには、訪問者の IP アドレスや cookie ID などの情報が含まれます。行動データは不明な ID を使用してデバイスから収集できますが、デバイスやメディア間での関連付けは、顧客がジャーニー中に PII を提供するまで制限されます。
 
 次の画像に示すように、既知の ID と匿名 ID は共に、[ID グラフ](#identity-graphs)の重要なコンポーネントです。これについては、このドキュメントで後述します。
 
