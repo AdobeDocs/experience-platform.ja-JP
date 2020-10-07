@@ -5,7 +5,7 @@ seo-title: 宛先ワークスペース
 description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 seo-description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 56%
@@ -17,7 +17,7 @@ ht-degree: 56%
 
 アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択して、[!UICONTROL 宛先]ワークスペースにアクセスします。
 
-[!UICONTROL 宛先]ワークスペースは、「**[!UICONTROL カタログ]**」、「**[!UICONTROL 参照]**」、「**[!UICONTROL アカウント]**」、「**[!UICONTROL システム表示]**」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
+[!UICONTROL 宛先]ワークスペースは、「[!UICONTROL カタログ]」、「[!UICONTROL 参照]」、「[!UICONTROL アカウント]」、「[!UICONTROL システム表示]」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 
 ![宛先 — 概要](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -28,8 +28,8 @@ The **[!UICONTROL Catalog]** tab displays a list of all destinations available i
 AdobeReal-time CDPユーザー・インターフェースは、宛先カタログ・ページに多数の検索およびフィルタ・オプションを提供します。
 
 * ページの検索機能を使用して、特定の行き先を見つけます。
-* **[!UICONTROL カテゴリコントロールを使用した宛先のフィルタリング]** 。
-* 「す **[!UICONTROL べての宛先]** 」と「 **[!UICONTROL 自分の宛先]**」を切り替えます。 [ **[!UICONTROL All destinations]** ]を選択すると、使用可能なAdobeReal-time CDPの宛先がすべて表示されます。 「 **[!UICONTROL 自分の宛先]** 」を選択すると、接続を確立した宛先のみが表示されます。
+* [!UICONTROL カテゴリコントロールを使用した宛先のフィルタリング] 。
+* 「す [!UICONTROL べての宛先] 」と「 [!UICONTROL 自分の宛先]」を切り替えます。 [ **[!UICONTROL All destinations]** ]を選択すると、使用可能なAdobeReal-time CDPの宛先がすべて表示されます。 「 **[!UICONTROL 宛先]** 」を選択すると、接続を確立した宛先のみが表示されます。
 * 「表示 **[!UICONTROL 接続]** 」または「 **[!UICONTROL 拡張子]**」を選択します。 この2つのカテゴリの違いについて詳しくは、 [宛先のタイプとカテゴリを参照してください](/help/rtcdp/destinations/destination-types.md)。
 
 ![リンク先のフィルタリングと検索デモ](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
