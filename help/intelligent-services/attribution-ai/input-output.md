@@ -5,7 +5,7 @@ title: Attribution AIの入出力
 topic: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入出力の概要を説明します。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 15%
@@ -140,7 +140,7 @@ Attribution AI出力のアトリビューションスコアは、可能な限り
 
 ![スキーマの選択](./images/input-output/schemas_browse.png)
 
-次に、UIの **[!UICONTROL 構造]** ウィンドウ内のフィールドを選択し、「 **[!UICONTROL フィールドプロパティ]** 」タブが開きます。 「 **[!UICONTROL Field」プロパティ内に]** 、生のスコアにマップする「 **[!UICONTROL Path]** 」フィールドがあります。
+次に、UIの **[!UICONTROL 構造]** ウィンドウ内のフィールドを選択し、「 **[!UICONTROL フィールドプロパティ]** 」タブが開きます。 「 **[!UICONTROL フィールドプロパティ]** 」内には、生のスコアに対応するパスフィールドがあります。
 
 ![スキーマを選択](./images/input-output/field_properties.png)
 
