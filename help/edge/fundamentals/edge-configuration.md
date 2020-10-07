@@ -5,7 +5,7 @@ description: 'Experience Platformエッジネットワークを構成する方�
 seo-description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 3%
@@ -41,7 +41,7 @@ SDKでとして使用されるID `edgeConfigId` は、設定と環境を指定�
 
 #### [!UICONTROL ID]
 
-IDセクションは、常にオンになる唯一のセクションです。 次の2つの設定を使用できます。 [!UICONTROL ID同期が有効] 、 [!UICONTROL ID同期コンテナID]。
+IDセクションは、常にオンになる唯一のセクションです。 次の2つの設定を使用できます。「[!UICONTROL ID同期が有効になりました]」および「[!UICONTROL ID同期コンテナID]」。
 
 ![設定UIの「ID」セクション](../../assets/edge_configuration_identity.png)
 
@@ -65,7 +65,7 @@ ID同期をコンテナにグループ化して、異なるID同期を異なる�
 
 ##### [!UICONTROL ストリーミングインレット]
 
-ストリーミングインレットは、Adobe Experience PlatformのHTTPソースです。 これらは、HTTP APIとしてAdobe Experience Platformの [!UICONTROL Sources] タブに作成されます。
+ストリーミングインレットは、Adobe Experience PlatformのHTTPソースです。 これらは、HTTP APIとしてAdobe Experience Platformの「[!UICONTROL ソース]」タブに作成されます。
 
 ##### [!UICONTROL イベントデータセット]
 
@@ -95,7 +95,7 @@ Adobe Targetを設定するには、クライアントコードを指定する�
 
 [Adobe Targetの環境](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) は、開発の全段階を通じて実装を管理するお手伝いをします。 この設定は、各環境で使用する環境を指定します。
 
-Adobeでは、この設定を簡単にするために、 `dev`、、 `stage`および `prod` エッジ設定環境ごとに異なる方法で行うことをお勧めします。 ただし、既に [!UICONTROL Adobe Target環境を定義している場合は] 、それらを使用できます。
+Adobeでは、この設定を簡単にするために、 `dev`、、 `stage`および `prod` エッジ設定環境ごとに異なる方法で行うことをお勧めします。 ただし、既にAdobe Target環境を定義している場合は、それらを使用できます。
 
 #### Adobe Audience Manager
 
