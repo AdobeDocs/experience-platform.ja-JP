@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 結合ポリシーユーザーガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 36%
+source-wordcount: '1441'
+ht-degree: 31%
 
 ---
 
@@ -33,7 +33,7 @@ Within the [!DNL Experience Platform] user interface, you can begin to work with
 
 ![ポリシーの結合ランディングページ](../images/merge-policies/landing.png)
 
-Details for each merge policy available to your organization are visible on the landing page, including the [!UICONTROL Policy Name], [!UICONTROL Default merge policy], and [!UICONTROL Schema].
+組織で使用できる各結合ポリシーの詳細は、ポリシー名、既定の結合ポリシー、スキーマなど、ランディングページに表示されます。
 
 表示する詳細を選択する場合、または表示する列を追加する場合は、列セレクターアイコンを選択し、列名をクリックして表示に追加または削除します。
 
@@ -54,14 +54,14 @@ Details for each merge policy available to your organization are visible on the 
 * **[!UICONTROL ID ステッチ]**：このフィールドでは、顧客の関連 ID を特定する方法を定義します。次の 2 つの値を使用できます。
    * **[!UICONTROL なし]**：ID ステッチを実行しない。
    * **[!UICONTROL 非公開グラフ]**：非公開の ID グラフに基づいて ID ステッチを実行します。
-* **[!UICONTROL 属性の結合]**:プロファイルフラグメントには、個々の顧客のIDのリストのうち、1つのIDに関する情報のみが含まれます。 使用するIDグラフのタイプが複数のIDになる場合、プロファイル属性と優先度が競合する可能性があります。 Using [!UICONTROL Attribute merge] allows you to specify which dataset profile values to prioritize if a merge conflict occurs between key-value (record data) type datasets. 次の 2 つの値を使用できます。
+* **[!UICONTROL 属性の結合]**:プロファイルフラグメントには、個々の顧客のIDのリストのうち、1つのIDに関する情報のみが含まれます。 使用するIDグラフのタイプが複数のIDになる場合、プロファイル属性と優先度が競合する可能性があります。 Using &quot;[!UICONTROL Attribute merge]&quot; allows you to specify which dataset profile values to prioritize if a merge conflict occurs between key-value (record data) type datasets. 次の 2 つの値を使用できます。
    * **[!UICONTROL 順番に並べられたタイムスタンプ]**:競合がイベントすると、最近更新されたプロファイルが優先されます。 [!UICONTROL また、同じデータセット(複数のID] )内のデータを結合する場合やデータセットをまたがる場合に、システムのタイムスタンプよりも優先されるカスタムタイムスタンプもサポートされます。 詳しくは、次の [timestamp ordered](#timestamp-ordered) （タイムスタンプの順序）の節を参照してください。
    * **[!UICONTROL データセットの優先順位]** :競合をイベントする際、プロファイルフラグメントの到着元のデータセットに基づいて、そのフラグメントを優先します。 このオプションを選択する場合は、関連するデータセットと優先順位を選択する必要があります。 詳しくは、以下に示す[データセットの優先順位](#dataset-precedence)を参照してください。
 * **[!UICONTROL 既定の結合ポリシー]**：組織のデフォルトとしてこの結合ポリシーを使用するかどうかを選択するトグルボタン。セレクターをオンに切り替えて新しいポリシーを保存すると、以前のデフォルトのポリシーが自動的に更新され、デフォルトのポリシーが無効になります。
 
 ### 順序付きタイムスタンプ {#timestamp-ordered}
 
-プロファイルレコードをExperience Platformに取り込むと、取り込み時にシステムタイムスタンプを取得し、記録に追加する。 マージポリシーの [!UICONTROL 属性マージ] ・タイプとして「順序付き [!UICONTROL タイムスタンプ] 」が選択されている場合、プロファイルはシステムのタイムスタンプに基づいてマージされます。 つまり、記録がプラットフォームに取り込まれた時のタイムスタンプに基づいて結合が行われます。
+プロファイルレコードをExperience Platformに取り込むと、取り込み時にシステムタイムスタンプを取得し、記録に追加する。 マージポリシーの「 **[!UICONTROL 属性のマージ]**[!UICONTROL 」タイプとして「順序付きタイムスタンプ]」が選択されている場合、プロファイルはシステムのタイムスタンプに基づいてマージされます。 つまり、記録がプラットフォームに取り込まれた時のタイムスタンプに基づいて結合が行われます。
 
 場合によっては、カスタムタイムスタンプを指定し、マージポリシーでシステムタイムスタンプではなくカスタムタイムスタンプが適用される必要がある場合があります。 例えば、データのバックフィルや、レコードが不適切に取り込まれた場合のイベントの正しい順序の確保などがあります。
 
@@ -71,7 +71,7 @@ Details for each merge policy available to your organization are visible on the 
 
 ### カスタムタイムスタンプの使用 {#custom-timestamps}
 
-カスタムタイムスタンプを使用するには、 [!UICONTROL External Source System Audit Details Mixinをプロファイルスキーマに追加する必要があります] 。 追加したカスタムタイムスタンプは、この `lastUpdatedDate` フィールドを使用して入力できます。
+カスタムタイムスタンプを使用するには、「[!UICONTROL External Source System Audit Details Mixin]」をプロファイルスキーマに追加する必要があります。 追加したカスタムタイムスタンプは、この `lastUpdatedDate` フィールドを使用して入力できます。
 
 フィールドに値が入力された状態でレコードを取り込むと、Experience Platformはその `lastUpdatedDate` フィールドを使用してデータセット間のレコードを結合します。 が存在しな `lastUpdatedDate` い場合、または入力されない場合、プラットフォームはシステムタイムスタンプを引き続き使用します。
 
@@ -79,7 +79,7 @@ Details for each merge policy available to your organization are visible on the 
 >
 >同じレコードに更新を取り込む場合は、 `lastUpdatedDate` タイムスタンプを必ず入力してください。
 
-次のスクリーンショットは、「 [!UICONTROL 外部ソースシステム監査詳細」ミックスインのフィールドを示しています]。 UIを使用してスキーマを操作する手順(スキーマにミックスインを追加する方法など)については、UIを使用したスキーマ作成の [チュートリアルを参照してください](../../xdm/tutorials/create-schema-ui.md)。
+次のスクリーンショットは、「[!UICONTROL External Source System Audit Details Mixin]」のフィールドを示しています。 UIを使用してスキーマを操作する手順(スキーマにミックスインを追加する方法など)については、UIを使用したスキーマ作成の [チュートリアルを参照してください](../../xdm/tutorials/create-schema-ui.md)。
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
@@ -87,15 +87,15 @@ APIを使用してカスタムタイムスタンプを操作するには、 [マ
 
 ### データセットの優先順位 {#dataset-precedence}
 
-[!UICONTROL 属性の結合]値を選択する際に、「[!UICONTROL データセットの優先順位]」を選択すると、プロファイルフラグメントをその値の元のデータセットに基づいて優先させることができます。
+**[!UICONTROL 属性の結合]**&#x200B;値を選択する際に、「**[!UICONTROL データセットの優先順位]**」を選択すると、プロファイルフラグメントをその値の元のデータセットに基づいて優先させることができます。
 
 例えば、あるデータセットに情報が存在し、他のデータセットのデータよりも優先度や信頼度が高い場合などに使用できます。
 
-「 [!UICONTROL データセットの優先順位]」を選択すると、別のパネルが開き、「 [!UICONTROL 使用可能なデータセット] 」からデータセットを選択する必要があります（または、チェックボックスを使用してすべてを選択します）。 その後、これらのデータセットを「[!UICONTROL 選択したデータセット]」パネルにドラッグ＆ドロップし、正しい優先順位にドラッグできます。最上位のデータセットには最も高い優先順位が付けられ、2番目のデータセットには2番目に高い優先順位が付けられます。
+「 **[!UICONTROL データセットの優先順位]**」を選択すると、別のパネルが開き、「 **[!UICONTROL 使用可能なデータセット]** 」からデータセットを選択する必要があります（または、チェックボックスを使用してすべてを選択します）。 You can then drag and drop those datasets into the [**!UICONTROL Selected Datasets]** panel and drag them into the correct order of priority. 最上位のデータセットには最も高い優先順位が付けられ、2番目のデータセットには2番目に高い優先順位が付けられます。
 
 ![](../images/merge-policies/dataset-precedence.png)
 
-Once you have finished creating the merge policy, select **[!UICONTROL Save]** to return to the [!UICONTROL Merge policies] tab where your new merge policy now appears in the list of policies.
+Once you have finished creating the merge policy, select **[!UICONTROL Save]** to return to the **[!UICONTROL Merge policies]** tab where your new merge policy now appears in the list of policies.
 
 ## 結合ポリシーの編集
 
@@ -103,7 +103,7 @@ You can modify an existing merge policy through the [!UICONTROL Merge policies] 
 
 ![ポリシーの結合ランディングページ](../images/merge-policies/select-edit.png)
 
-「**[!UICONTROL 結合ポリシーの編集]**」画面が表示されたら、「[!UICONTROL 名前]」、「[!UICONTROL スキーマ]」、「[!UICONTROL ID ステッチ]」タイプおよび「[!UICONTROL 属性マージ]」タイプに変更を加え、このポリシーを組織の[!UICONTROL デフォルトの結合ポリシー]にするかどうかを選択できます。
+When the **[!UICONTROL Edit merge policy]** screen appears, you can make changes to the name, schema, ID stitching type, and attribute merge type, as well as select whether or not this policy will be the default merge policy for your organization.
 
 >[!NOTE]
 >
@@ -111,7 +111,7 @@ You can modify an existing merge policy through the [!UICONTROL Merge policies] 
 
 ![](../images/merge-policies/edit-screen.png)
 
-Once you have made the necessary changes, select **[!UICONTROL Save]** to return to the [!UICONTROL Merge policies] tab where the updated merge policy information is now visible.
+Once you have made the necessary changes, select **[!UICONTROL Save]** to return to the **[!UICONTROL Merge policies]** tab where the updated merge policy information is now visible.
 
 ![](../images/merge-policies/edited.png)
 
@@ -119,7 +119,7 @@ Once you have made the necessary changes, select **[!UICONTROL Save]** to return
 
 結合ポリシーを作成または更新すると、結合ポリシーが組織で定義されたデータ使用ポリシーに違反しているかどうかを確認するチェックが実行されます。Data usage policies are part of Adobe Experience Platform [!DNL Data Governance] and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific [!DNL Platform] data. For example, if a merge policy was used to create a segment that activated to a third-party destination, and your organization had a data usage policy preventing the export of specific data to third parties, you would receive a &quot;[!UICONTROL Data governance policy violation detected]&quot; notification when attempting to save your merge policy.
 
-この通知には、違反したデータ使用ポリシーのリストが含まれ、リストから選択すると、違反の詳細を表示できます。Upon selecting a violated policy, the [!UICONTROL Data lineage] tab provides the reason for the violation and the [!UICONTROL Affected activations], each providing more detail into how the data usage policy has been violated.
+この通知には、違反したデータ使用ポリシーのリストが含まれ、リストから選択すると、違反の詳細を表示できます。Upon selecting a violated policy, the **[!UICONTROL Data lineage]** tab provides the reason for the violation and the affected activations], each providing more detail into how the data usage policy has been violated.
 
 Adobe Experience Platform 内でのデータガバナンスの実行方法について詳しくは、まず[データガバナンスの概要](../../data-governance/home.md)を読んでください。
 
