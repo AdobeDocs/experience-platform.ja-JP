@@ -4,7 +4,7 @@ title: プロファイルの詳細のカスタマイズ
 description: 'このガイドでは、Adobe Experience PlatformUI内でリアルタイム顧客プロファイルデータが表示される方法をカスタマイズする手順を順を追って説明します。 '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 Adobe Experience Platformのユーザーインターフェイス内では、顧客プロファイルの形で [!DNL Real-time Customer Profile] データを表示し、操作できます。 UIに表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、個々の顧客の1つの表示を形成しています。 基本属性、リンクされたID、チャネル環境設定などの詳細が含まれます。 プロファイルに表示されるデフォルトのフィールドは、組織レベルで変更して、優先 [!DNL Profile] 属性を表示することもできます。 このガイドでは、プラットフォームUI内での [!DNL Profile] データの表示方法をカスタマイズする手順を順を追って説明します。
 
-[!UICONTROL プロファイル] UIの完全なガイドについては、 [プロファイルユーザーガイドを参照してください](user-guide.md)。
+プロファイルUIの完全なガイドについては、 [プロファイルユーザガイドを参照してください](user-guide.md)。
 
 ## カードの順序の変更とサイズ変更 {#reorder-and-resize-cards}
 
-顧客プロファイルの「 [!UICONTROL 詳細] 」タブで、「ダッシュボードを **** 変更」を選択して、既存のカードのサイズ変更と並べ替えを行うことができます。
+顧客プロファイルの「 **[!UICONTROL 詳細]** 」タブで、「ダッシュボードを **** 変更」を選択して、既存のカードのサイズ変更と並べ替えを行うことができます。
 
 ![](../images/profile-customization/profiles-modify-dashboard.png)
 
@@ -28,7 +28,7 @@ Adobe Experience Platformのユーザーインターフェイス内では、顧�
 
 ![](../images/profile-customization/profiles-resize-cards.png)
 
-選択したカードは希望のサイズに調整され、周囲のカードは動的に再配置されます。 これにより、一部のカードが追加の行に移動する場合があり、すべてのカードを表示するには下にスクロールする必要があります。 例えば、 [!UICONTROL 基本属性カードのサイズが変更されると] 、 [!UICONTROL リンクされたID] カードは一番上の行に表示されなくなり、プロファイル内の新しい2行目に表示されます（図には示されていません）。 「 [!UICONTROL Linked identitys] 」カードを先頭行に戻すには、  チャネル環境設定カードの現在の位置にドラッグ&amp;ドロップします。
+選択したカードは希望のサイズに調整され、周囲のカードは動的に再配置されます。 これにより、一部のカードが追加の行に移動する場合があり、すべてのカードを表示するには下にスクロールする必要があります。 例えば、「[!UICONTROL 基本属性]」カードのサイズを変更すると、「[!UICONTROL リンクされたID]」カードは一番上の行に表示されなくなり、プロファイル内の新しい2行目に表示されます（図には示されていません）。 「[!UICONTROL Linked identitys]」カードを最上行に戻すには、「[!UICONTROL チャネル環境設定]」カードの現在の位置にドラッグ&amp;ドロップします。
 
 ![](../images/profile-customization/profiles-card-resized.png)
 
@@ -42,37 +42,37 @@ Adobe Experience Platformのユーザーインターフェイス内では、顧�
 
 ![](../images/profile-customization/profiles-edit-remove-resized.png)
 
-ドロップダウンで **[!UICONTROL 「編集]** 」を選択して、 **[!UICONTROL 編集ウィジェット]** ワークスペースを開きます。このワークスペースでは、カードタイトルの更新、表示属性の並べ替えや削除、 [!UICONTROL 属性] ボタンを使用した追加の属性の追加を行うことができます。
+ドロップダウンで **[!UICONTROL 「編集]** 」を選択して、 **[!UICONTROL 編集ウィジェット]** ワークスペースを開きます。このワークスペースでは、カードタイトルの更新、表示属性の並べ替えや削除、 **[!UICONTROL 属性]** ボタンを使用した追加の属性の追加を行うことができます。
 
 ![](../images/profile-customization/profiles-edit-widget-basic-attributes.png)
 
 ## 追加属性 {#add-attributes}
 
-[!UICONTROL 編集ウィジェット] 画面で、カードの右上隅にある **** 属性追加を選択し、カードへの属性の追加を開始します。
+**[!UICONTROL 編集ウィジェット]** 画面で、カードの右上隅にある **** 属性追加を選択し、カードへの属性の追加を開始します。
 
 ![](../images/profile-customization/profiles-edit-widget-basic-add-attributes.png)
 
-「 [!UICONTROL 和集合スキーマフィールドを選択」ダイアログが開くと] 、ダイアログの左側に「 [!UICONTROL XDM個別プロファイル] 和集合」スキーマが完全に表示され、その下にフィールドがネストされます。 和集合スキーマの詳細については、『ユーザガイド』の「 [和集合のスキーマ」の節を参照し [!DNL Profile] てください](user-guide.md#union-schema)。
+「 **[!UICONTROL 和集合スキーマフィールドを選択」ダイアログが開くと]** 、ダイアログの左側に「 [!UICONTROL XDM個別プロファイル] 和集合」スキーマが完全に表示され、その下にフィールドがネストされます。 和集合スキーマの詳細については、『ユーザガイド』の「 [和集合のスキーマ」の節を参照し [!DNL Profile] てください](user-guide.md#union-schema)。
 
 ダイアログの右側の **[!UICONTROL 選択した属性]** (Selected Attributes)セクションには、編集中のカードに現在含まれている属性が表示されます。 属性の削除や並べ替えはここでも行うことができます。 選択した属性の総数と、1つのカードに追加できる属性の最大数(20)が表示されます。
 
 ![](../images/profile-customization/profiles-select-field-before.png)
 
-使用可能な和集合スキーマフィールドのいずれかを選択して、編集するカードの属性をカスタマイズできます。 選択したフィールドの横にチェックマークが付き、選択した属性のリストに自動的に追加されます。 カードに表示したい属性をすべて追加したら、「 **[!UICONTROL 選択]** 」を選択して [!UICONTROL 編集ウィジェット] 画面に戻ります。
+使用可能な和集合スキーマフィールドのいずれかを選択して、編集するカードの属性をカスタマイズできます。 選択したフィールドの横にチェックマークが付き、選択した属性のリストに自動的に追加されます。 カードに表示したい属性をすべて追加したら、「 **[!UICONTROL 選択]** 」を選択して **[!UICONTROL 編集ウィジェット]** 画面に戻ります。
 
 ![](../images/profile-customization/profiles-select-field-after.png)
 
-Widgetを  編集画面に戻ると、選択内容を反映するように、カードの属性のリストが更新されます。 必要に応じて、カードの属性を削除または並べ替えたり、カードのタイトルを編集したりできます。 編集が完了したら、「 **[!UICONTROL 保存]** 」を選択して変更を保存します。
+Widgetを **** 編集画面に戻ると、選択内容を反映するように、カードの属性のリストが更新されます。 必要に応じて、カードの属性を削除または並べ替えたり、カードのタイトルを編集したりできます。 編集が完了したら、「 **[!UICONTROL 保存]** 」を選択して変更を保存します。
 
 ![](../images/profile-customization/profiles-edit-widget-new-attributes.png)
 
-保存すると、「 [!UICONTROL 詳細] 」タブに戻り、更新されたカードと属性が表示されます。
+保存すると、「 **[!UICONTROL 詳細]** 」タブに戻り、更新されたカードと属性が表示されます。
 
 ![](../images/profile-customization/profiles-resized-card-new-attributes.png)
 
 ## Add a new card {#add-a-new-card}
 
-Experience Platform内でのプロファイルの外観をさらにカスタマイズするには、ダッシュボードに新しいカードを追加して、それらのカードに表示する属性を選択します。 まず、「 **[!UICONTROL 詳細]** 」(Detail [!UICONTROL )タブの「ダッシュボードを修正] 」(Modify Modify Modify)を選択します。
+Experience Platform内でのプロファイルの外観をさらにカスタマイズするには、ダッシュボードに新しいカードを追加して、それらのカードに表示する属性を選択します。 まず、「 **[!UICONTROL 詳細]** 」(Detail **[!UICONTROL )タブの「ダッシュボードを修正]** 」(Modify Modify Modify)を選択します。
 
 ![](../images/profile-customization/profiles-modify-dashboard.png)
 
@@ -80,23 +80,23 @@ Experience Platform内でのプロファイルの外観をさらにカスタマ�
 
 ![](../images/profile-customization/profiles-add-widget.png)
 
-新しいカードを追加するよう選択すると、 [!UICONTROL 編集ウィジェット] 画面が開き、新しいカードのタイトルを指定したり、カードに表示する属性を選択したりできます。 カードへの属性の追加を開始するには、 **[!UICONTROL 追加属性を選択します]**。
+新しいカードを追加するよう選択すると、 **[!UICONTROL 編集ウィジェット]** 画面が開き、新しいカードのタイトルを指定したり、カードに表示する属性を選択したりできます。 カードへの属性の追加を開始するには、 **[!UICONTROL 追加属性を選択します]**。
 
 ![](../images/profile-customization/profiles-edit-new-widget.png)
 
 「 **[!UICONTROL 和集合スキーマフィールドを]** 選択」ダイアログが開くと、ダイアログの左側に「 [!UICONTROL XDM個別プロファイル] 和集合」スキーマ全体が表示され、ダイアログの右側の「 **[!UICONTROL 選択した属性]** 」セクションにカード用に選択した属性が表示されます。 属性の追加の詳細については、このドキュメントの前の [セクションで、属性の追加に関する節を参照してください](#add-attributes) 。
 
-選択した属性の総数と、1つのカードに追加できる属性の最大数(20)が表示されます。 また、この画面から選択した属性を削除し、並べ替えを行うこともできます。 カードに表示したい属性をすべて追加したら、「 **[!UICONTROL 選択]** 」を選択して [!UICONTROL 編集ウィジェット] 画面に戻ります。
+選択した属性の総数と、1つのカードに追加できる属性の最大数(20)が表示されます。 また、この画面から選択した属性を削除し、並べ替えを行うこともできます。 カードに表示したい属性をすべて追加したら、「 **[!UICONTROL 選択]** 」を選択して **[!UICONTROL 編集ウィジェット]** 画面に戻ります。
 
 ![](../images/profile-customization/profiles-add-fields-new-widget.png)
 
-Widgetを  編集画面に戻ると、カードの属性のリストには前の画面での選択が反映されます。 また、必要に応じてカード属性の順序を変更したり、削除したりすることもできます。
+Widgetを **** 編集画面に戻ると、カードの属性のリストには前の画面での選択が反映されます。 また、必要に応じてカード属性の順序を変更したり、削除したりすることもできます。
 
 新しいカードを保存するには、まず **[!UICONTROL カードタイトルを指定する必要があり]**、「 **[!UICONTROL 保存]** 」を選択してカード作成プロセスを完了できます。
 
 ![](../images/profile-customization/profiles-edit-new-widget-with-fields.png)
 
-保存すると、「 [!UICONTROL 詳細] 」タブに戻り、新しいカードと属性が表示されます。
+保存すると、「 **[!UICONTROL 詳細]** 」タブに戻り、新しいカードと属性が表示されます。
 
 ![](../images/profile-customization/profiles-detail-new-widget.png)
 
