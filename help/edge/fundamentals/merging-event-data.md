@@ -5,7 +5,7 @@ description: Experience Platform Web SDK イベントデータの結合方法に
 seo-description: Experience Platform Web SDK イベントデータの結合方法について説明します
 keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 42%
@@ -19,7 +19,7 @@ ht-degree: 42%
 >
 >この機能は現在開発中です。 このページで説明されているように、一部のソリューションでイベントデータを結合できるわけではありません。
 
-イベントが発生すると、一部のデータが利用できなくなる場合があります。ユーザーがブラウザーを閉じた場合などに、データが失われないよう、_取得した_&#x200B;データを取り込むことができます。一方、後で使用できるようデータも含めることができます。
+イベントが発生すると、一部のデータが利用できなくなる場合があります。ユーザーがブラウザーを閉じた場合などに、データが失われないよう、取得したデータを取り込むことができます。一方、後で使用できるようデータも含めることができます。
 
 このような場合、次のようにオプションとして `eventMergeId` を `event` コマンドに渡すことで、データを以前のイベントと結合できます。
 
