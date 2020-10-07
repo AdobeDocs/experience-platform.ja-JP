@@ -6,7 +6,7 @@ seo-title: ソーシャルネットワークの宛先のワークフロー
 description: ソーシャルネットワーク広告アカウントに接続する手順
 seo-description: ソーシャルネットワーク広告アカウントに接続する手順
 translation-type: tm+mt
-source-git-commit: 120ba866cf6e6509c51a29cb07e73550006fe5eb
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 58%
@@ -40,7 +40,7 @@ This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Real
 
    ![資格情報の確認](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
 
-4. **[!UICONTROL 設定]**&#x200B;手順で、アクティベーションフローの&#x200B;**[!UICONTROL 名前]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力し、ソーシャルネットワーク広告アカウントの&#x200B;**[!UICONTROL アカウント ID]** を入力します。<br> また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+4. **[!UICONTROL 設定]**&#x200B;手順で、アクティベーションフローの[!UICONTROL 名前]と[!UICONTROL 説明]を入力し、ソーシャルネットワーク広告アカウントの[!UICONTROL アカウント ID] を入力します。<br> また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
    >[!IMPORTANT]
    >
