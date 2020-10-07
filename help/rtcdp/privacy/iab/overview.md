@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイム顧客データプラットフォームでのIAB TCF 2.0のサポート
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 3%
@@ -89,7 +89,7 @@ IABの同意データが正常に取り込まれると、ダウンストリー�
 
 ### 同意文字列 {#consent-strings}
 
-データの収集方法に関係なく、目標は、顧客が選択した同意オプション( **同意文字列**)に基づいて文字列値を生成することです。
+データの収集方法に関係なく、目標は、顧客が選択した同意オプション（同意文字列）に基づいて文字列値を生成することです。
 
 TCF仕様では、ポリシーおよびベンダーの定義に従って、顧客の同意設定に関する関連する詳細を特定のマーケティング目的の観点からエンコードする際に、同意文字列を使用します。 [!DNL Real-time CDP] これらの文字列を使用して各顧客の同意設定を保存します。したがって、これらの設定が変更されるたびに新しい同意文字列を作成する必要があります。
 
