@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、支払い申込書からデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1743'
 ht-degree: 13%
@@ -69,7 +69,7 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
-フ **ァイルベースのコネクタの列挙値は、次のとおりです**。
+ファイルベースのコネクタの列挙値は、次のとおりです。
 
 | Data.format | 列挙値 |
 | ----------- | ---------- |
@@ -77,7 +77,7 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 | JSONファイル | `json` |
 | パーケファイル | `parquet` |
 
-すべての **テーブルベースのコネクタに** 、列挙値を使用します。 `tabular`.
+すべてのテーブルベースのコネクタで、列挙値を使用します。 `tabular`.
 
 **API 形式**
 
