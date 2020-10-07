@@ -5,7 +5,7 @@ description: Experience PlatformWeb SDKを使用してデータを収集する�
 seo-description: Experience PlatformWeb SDKを使用してデータを収集するクイック開始ガイド
 keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 14%
