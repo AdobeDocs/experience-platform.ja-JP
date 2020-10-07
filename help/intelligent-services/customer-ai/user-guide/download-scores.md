@@ -5,7 +5,7 @@ title: 顧客 AI でのスコアのダウンロード
 topic: Downloading scores
 description: 顧客 AI では、Parquet ファイル形式でスコアをダウンロードできます。
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 91%
