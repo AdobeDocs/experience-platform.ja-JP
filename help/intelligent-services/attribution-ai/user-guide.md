@@ -5,7 +5,7 @@ title: Attribution AI ユーザーガイド
 topic: User guide
 description: このドキュメントは、インテリジェントサービスユーザーインターフェイスの Attribution AI を操作するためのガイドとなります。
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 97%
@@ -21,7 +21,7 @@ Attribution AI はインテリジェントサービスの一部で、顧客と�
 
 ## インスタンスの作成
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. *Services* ブラウザーが開き、利用可能なアドビのインテリジェントサービスが表示されます。Attribution AI のコンテナで、「**Open**」をクリックします。
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. **[!UICONTROL Services]** ブラウザーが開き、利用可能なアドビのインテリジェントサービスが表示されます。Attribution AI のコンテナで、「**[!UICONTROL Open]**」をクリックします。
 
 ![インスタンスへのアクセス](./images/user-guide/open_Attribution_ai.png)
 
@@ -35,7 +35,7 @@ Attribution AI サービスページが表示されます。このページに�
 
 ### インスタンス名の設定
 
-「*Basic information*」で、サービスインスタンスの名前と説明（説明は省略可）を入力します。
+「**[!UICONTROL Basic information]**」で、サービスインスタンスの名前と説明（説明は省略可）を入力します。
 
 ![インスタンス名の設定](./images/user-guide/naming_instance.png)
 
@@ -67,15 +67,15 @@ Attribution AI サービスページが表示されます。このページに�
 
 ![ドロップダウンなし](./images/user-guide/conversion_event_1.png)
 
-コンバージョンをさらに詳しく定義するには、「*Add event*」ボタンと「*Add Group*」ボタンを使用します。定義するコンバージョンに応じて、場合によっては、「*Add event*」ボタンと「*Add Group*」ボタンを使用して詳細なコンテキストを指定する必要があります。
+コンバージョンをさらに詳しく定義するには、「**[!UICONTROL Add event]**」ボタンと「**[!UICONTROL Add Group]**」ボタンを使用します。定義するコンバージョンに応じて、場合によっては、「**[!UICONTROL Add event]**」ボタンと「**[!UICONTROL Add Group]**」ボタンを使用して詳細なコンテキストを指定する必要があります。
 
 ![イベントの追加](./images/user-guide/add_event.png)
 
-「**Add event**」をクリックすると、追加のフィールドが作成され、前述と同じ方法で入力できます。これにより、*コンバージョン名*&#x200B;の下の文字列定義に *AND* ステートメントが追加されます。「**x**」をクリックすると、追加したイベントが削除されます。
+「**[!UICONTROL Add event]**」をクリックすると、追加のフィールドが作成され、前述と同じ方法で入力できます。これにより、コンバージョン名の下の文字列定義に AND ステートメントが追加されます。「**x**」をクリックすると、追加したイベントが削除されます。
 
 ![イベント追加メニュー](./images/user-guide/add_event_result.png)
 
-「**Add Group**」をクリックすると、元のフィールドとは別に追加のフィールドを作成するためのオプションが表示されます。グループを追加すると、青い「*And*」ボタンが表示されます。「**And**」をクリックすると、「Or」を含むようにパラメーターを変更するためのオプションが表示されます。「Or」は、成功するコンバージョンパスを複数定義するために使用します。「And」は、コンバージョンパスを拡張して追加の条件を含めるために使用します。
+「**[!UICONTROL Add Group]**」をクリックすると、元のフィールドとは別に追加のフィールドを作成するためのオプションが表示されます。グループを追加すると、青い「*And*」ボタンが表示されます。「**And**」をクリックすると、「Or」を含むようにパラメーターを変更するためのオプションが表示されます。「Or」は、成功するコンバージョンパスを複数定義するために使用します。「And」は、コンバージョンパスを拡張して追加の条件を含めるために使用します。
 
 ![And と Or の使用](./images/user-guide/and_or.png)
 
@@ -157,7 +157,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 顧客の行動は、国や地域によって大きく異なる場合があります。グローバルビジネスの場合、国ベースまたは地域ベースのモデルを使用すると、アトリビューションの精度が向上する可能性があります。追加された地域ごとに、その地域のデータを使用して新しいモデルを作成します。
 
-新しい地域を定義するには、まず「**Add region**」をクリックします。表示されるコンテナで、地域の名前を入力します。*フィールド名を入力*&#x200B;ドロップダウンに表示される値は 1 つ（「placeContext.geo.countryCode」）だけです。この値を選択します。
+新しい地域を定義するには、まず「**[!UICONTROL Add region]**」をクリックします。表示されるコンテナで、地域の名前を入力します。**[!UICONTROL フィールド名を入力]**&#x200B;ドロップダウンに表示される値は 1 つ（「placeContext.geo.countryCode」）だけです。この値を選択します。
 
 ![地域属性の選択](./images/user-guide/select_region_att.png)
 
@@ -165,7 +165,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 ![地域の演算子](./images/user-guide/region_operators.png)
 
-最後に、*フィールド名を入力*&#x200B;ドロップダウンで国コードを選択します。
+最後に、**[!UICONTROL フィールド名を入力]**&#x200B;ドロップダウンで国コードを選択します。
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 ![トレーニング期間](./images/user-guide/training_window.png)
 
-トレーニング期間を選択したら、右上隅の「**Finish**」をクリックします。データの処理に多少時間がかかる場合があります。完了したら、インスタンスの設定が完了したことを確認するポップオーバーダイアログが表示されます。「**Ok**」をクリックすると、*Service instances* ページにリダイレクトされ、サービスインスタンスが表示されます。
+トレーニング期間を選択したら、右上隅の「**[!UICONTROL Finish]**」をクリックします。データの処理に多少時間がかかる場合があります。完了したら、インスタンスの設定が完了したことを確認するポップオーバーダイアログが表示されます。「**[!UICONTROL Ok]**」をクリックすると、**[!UICONTROL Service instances]** ページにリダイレクトされ、サービスインスタンスが表示されます。
 
 ![設定完了](./images/user-guide/instance_setup_complete.png)
 
