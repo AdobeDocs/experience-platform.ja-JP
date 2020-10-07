@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service のリリースノート
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 62%
@@ -20,7 +20,7 @@ This document contains information about new features for Adobe Experience Platf
 >
 >その他の [!DNL Experience Platform] サービスの最新のリリースノートは、 [こちらを参照してください](../release-notes/latest/latest.md)。
 
-## 2020年9月9日
+## 2020 年 9 月 9 日
 
 ### 新機能
 
@@ -53,7 +53,7 @@ This document contains information about new features for Adobe Experience Platf
 
 * [!DNL Privacy Service] UIの強化：
    * GDPR 規制と CCPA 規制下でのジョブトラッキングに関するページが分離されました。
-   * GDPR と CCPA 下でのトラッキングデータを切り替えるための「_規制の種類_」ドロップダウンが新しく追加されました。
+   * GDPR と CCPA 下でのトラッキングデータを切り替えるための「*規制の種類*」ドロップダウンが新しく追加されました。
 
 ## 2019年7月25日
 
