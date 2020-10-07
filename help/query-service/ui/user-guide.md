@@ -5,7 +5,7 @@ title: クエリエディターユーザガイド
 topic: query editor
 description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内で顧客体験データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 58%
@@ -99,7 +99,7 @@ All queries executed from [!DNL Query Editor] are captured in the Log table. 「
 
 ## クエリエディターを使用してクエリを実行する
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or **[!UICONTROL Browse]** tab, and click **Play**. クエリ実行のステータスは下の「**[!UICONTROL コンソール]**」タブに表示され、出力データは「**[!UICONTROL 結果]**」タブに表示されます。
+To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Browse]** tab, and click **Play**. クエリ実行のステータスは下の「**[!UICONTROL コンソール]**」タブに表示され、出力データは「**[!UICONTROL 結果]**」タブに表示されます。
 
 ### コンソール
 
