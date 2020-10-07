@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Senesie Machine Learning API呼び出しを使用して、モデルを作成、トレーニング、評価する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 98%
@@ -35,7 +35,7 @@ API 呼び出しの開始時に必要な認証については、[こちら](../.
 
 ## API ワークフロー
 
-この API を使用して、トレーニング用の Experiment Run を作成します。このチュートリアルでは、**エンジン**、**MLInstance** および **Experiment** の各エンドポイントに重点を置いています。次の図に、これら 3 つのエンドポイントの関係を示し、Run とモデルの概念を示します。
+この API を使用して、トレーニング用の Experiment Run を作成します。このチュートリアルでは、エンジン、MLInstance および Experiment の各エンドポイントに重点を置いています。次の図に、これら 3 つのエンドポイントの関係を示し、Run とモデルの概念を示します。
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
