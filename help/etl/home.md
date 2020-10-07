@@ -5,7 +5,7 @@ title: ETL 統合の作成
 topic: overview
 description: ETL 統合ガイドでは、Experience Platform 用の高パフォーマンスで安全なコネクタを作成し、データを Platform に取得するための一般的な手順について説明しています。
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '4173'
 ht-degree: 74%
@@ -95,7 +95,7 @@ Using the source of data for mapping, a list of all available datasets can be fe
 
 1 つの API リクエストを発行して、使用可能なすべてのデータセット（`GET /dataSets`）を表示することができます。ベストプラクティスは応答のサイズを制限するクエリパラメーターを含めることです。
 
-_完全な_&#x200B;データセット情報がリクエストされている場合、応答ペイロードのサイズが 3GB を超える可能性があり、全体的なパフォーマンスが低下する可能性があります。Therefore, using query parameters to filter only the information needed will make [!DNL Catalog] queries more efficient.
+完全なデータセット情報がリクエストされている場合、応答ペイロードのサイズが 3GB を超える可能性があり、全体的なパフォーマンスが低下する可能性があります。Therefore, using query parameters to filter only the information needed will make [!DNL Catalog] queries more efficient.
 
 #### フィルタリングのリスト
 
@@ -165,7 +165,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
 
 ### データセットスキーマの表示
 
-データセットの「schemaRef」プロパティには、データセットの基となる XDM スキーマを参照する URI が含まれます。XDM スキーマ（「schemaRef」）は、データセットで使用できる&#x200B;_可能性のある_&#x200B;すべてのフィールドを表し、必ずしも使用&#x200B;_されている_&#x200B;フィールドとは限りません（以下の「observableSchema」を参照）。
+データセットの「schemaRef」プロパティには、データセットの基となる XDM スキーマを参照する URI が含まれます。XDM スキーマ（「schemaRef」）は、データセットで使用できる可能性のあるすべてのフィールドを表し、必ずしも使用されているフィールドとは限りません（以下の「observableSchema」を参照）。
 
 XDM スキーマは、書き込み可能なすべての使用可能なフィールドのリストをユーザーに提示する必要がある場合に使用するスキーマです。
 
@@ -601,7 +601,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 ### データセットへの書き込み
 
-新しいバッチが正常に作成されたら、ファイルを特定のデータセットにアップロードできます。複数のファイルを 1 つのバッチで投稿して、プロモーションすることができます。ファイルは、_小ファイルアップロード API_ を使用してアップロードできます。ただし、ファイルが大きすぎてゲートウェイの制限を超えている場合は、_大ファイルアップロード API_ を使用できます。小ファイルアップロードと大ファイルアップロードの両方の使用について詳しくは、「[バッチ取得の概要](../ingestion/batch-ingestion/overview.md)」を参照してください。
+新しいバッチが正常に作成されたら、ファイルを特定のデータセットにアップロードできます。複数のファイルを 1 つのバッチで投稿して、プロモーションすることができます。ファイルは、小ファイルアップロード API を使用してアップロードできます。ただし、ファイルが大きすぎてゲートウェイの制限を超えている場合は、大ファイルアップロード API を使用できます。小ファイルアップロードと大ファイルアップロードの両方の使用について詳しくは、「[バッチ取得の概要](../ingestion/batch-ingestion/overview.md)」を参照してください。
 
 **リクエスト**
 
