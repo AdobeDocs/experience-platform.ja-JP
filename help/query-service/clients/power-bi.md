@@ -5,10 +5,10 @@ title: Power BI との接続
 topic: connect
 description: このドキュメントでは、Power BIとAdobe Experience Platformクエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '349'
-ht-degree: 59%
+ht-degree: 57%
 
 ---
 
@@ -61,7 +61,7 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ```
 
-- 「**[!UICONTROL DirectQuery]**」または「**[!UICONTROL 読み込み]**」モードを選択します。**[!UICONTROL 読み込み]** モードでは、データはで読み込まれ [!DNL Power BI]ます。 In **[!UICONTROL DirectQuery]** mode, all the queries will be sent to [!DNL Query Service] for execution.
+- Select either &quot;[!UICONTROL DirectQuery]&quot; or &quot;[!UICONTROL Import]&quot; mode. In [!UICONTROL DirectQuery] mode, all the queries will be sent to [!DNL Query Service] for execution. [!UICONTROL 読み込み] モードでは、データはで読み込まれ [!DNL Power BI]ます。
 
 - 「**[!UICONTROL OK]**」をクリックします。Now, [!DNL Power BI] connects to the [!DNL Query Service] and produces a preview if there are no errors. 数値列の「プレビュー」レンダリングには、既知の問題があります。次の手順に進みます。
 
