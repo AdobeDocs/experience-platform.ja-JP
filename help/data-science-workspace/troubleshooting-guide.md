@@ -5,7 +5,7 @@ title: Data Science Workspace トラブルシューティングガイド
 topic: Troubleshooting
 description: このドキュメントでは、Adobe Experience Platform Data Science Workspace に関するよくある質問に対する回答を示します。
 translation-type: tm+mt
-source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 37%
@@ -31,7 +31,7 @@ In your [!DNL Chrome] browser, navigate to the top-right and select **Settings**
 
 ![Chrome の詳細設定](./images/faq/chrome-advanced.png)
 
-「*プライバシーとセキュリティ*」セクションが表示されます。次に、「**サイトの設定**」をクリックし、「**Cookie とサイトデータ**」をクリックします。
+「**プライバシーとセキュリティ**」セクションが表示されます。次に、「**サイトの設定**」をクリックし、「**Cookie とサイトデータ**」をクリックします。
 
 ![Chrome の詳細設定](./images/faq/privacy-security.png)
 
@@ -63,7 +63,7 @@ Safariの環境設定ウィンドウで、「 **詳細」を選択します**。
 
 ![Safari advanced](./images/faq/advanced.png)
 
-次に、上部ナビゲーションバーで **開発** メニューを選択します。 「 *開発* 」ドロップダウンで、「 *ユーザーエージェント*」の上にカーソルを置きます。 使用する **[!DNL Chrome]** または **[!DNL Firefox]** ユーザエージェント文字列を選択できます。
+次に、上部ナビゲーションバーで **開発** メニューを選択します。 「 **開発** 」ドロップダウンで、「 **ユーザーエージェント**」の上にカーソルを置きます。 使用する **[!DNL Chrome]** または **[!DNL Firefox]** ユーザエージェント文字列を選択できます。
 
 ![開発メニュー](./images/faq/user-agent.png)
 
