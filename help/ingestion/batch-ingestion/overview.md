@@ -5,10 +5,10 @@ title: バッチインジェストの概要
 topic: overview
 description: Batch Ingestion API を使用すると、データをバッチファイルとして Adobe Experience Platform に取り込むことができます。CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model（XDM）レジストリの既知のスキーマに適合するデータを取り込むことができます。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1196'
-ht-degree: 83%
+ht-degree: 81%
 
 ---
 
@@ -127,7 +127,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 アップロード用の新しいバッチが正常に作成されたら、ファイルを特定のデータセットにアップロードできます。
 
-ファイルをアップロードするには、**Small File Upload API** を使用します。ただし、ファイルのサイズが大きすぎて、ゲートウェイの制限（拡張タイムアウト、リクエストの本文のサイズ、その他の制限）を超える場合は、**Large File Upload API** に切り替えることができます。この API は、ファイルをチャンク単位でアップロードし、その後 **Large File Upload Complete API** 呼び出しを使用してデータを統合します。
+ファイルをアップロードするには、Small File Upload API を使用します。ただし、ファイルのサイズが大きすぎて、ゲートウェイの制限（拡張タイムアウト、リクエストの本文のサイズ、その他の制限）を超える場合は、Large File Upload API に切り替えることができます。この API は、ファイルをチャンク単位でアップロードし、その後 Large File Upload Complete API 呼び出しを使用してデータを統合します。
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## バッチ完了を示す
 
-すべてのファイルをバッチにアップロードしたら、バッチの完了を示すことができます。By doing this, the [!DNL Catalog] **DataSetFile** entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
+すべてのファイルをバッチにアップロードしたら、バッチの完了を示すことができます。By doing this, the [!DNL Catalog] DataSetFile entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
 **リクエスト**
 
@@ -389,10 +389,10 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 | ステータス | 説明 |
 | ------ | ----------- |
 | Abandoned | バッチは、予想期間内に完了しませんでした。 |
-| Aborted | 指定したバッチに対して、中止操作が&#x200B;**明示的に**（Batch Ingest API を介して）呼び出されました。バッチの状態が「**Loaded**」の場合、バッチを中止することはできません。 |
-| アクティブ | バッチは正常に昇格しており、ダウンストリームで使用することができます。このステータスは、**Success** と同じ意味で使用できます。 |
+| Aborted | 指定したバッチに対して、中止操作が&#x200B;**明示的に**（Batch Ingest API を介して）呼び出されました。バッチが「ロード済み」状態になると、中止できません。 |
+| アクティブ | バッチは正常に昇格しており、ダウンストリームで使用することができます。このステータスは、「成功」と同じように使用できます。 |
 | Deleted | バッチのデータは完全に削除されました。 |
-| Failed | 設定またはデータ、あるいはその両方が不正なために発生した、失敗の状態。失敗したバッチのデータは、表示&#x200B;**されません**。このステータスは、**Failure** と同じ意味で使用できます。 |
+| Failed | 設定またはデータ、あるいはその両方が不正なために発生した、失敗の状態。失敗したバッチのデータは、表示&#x200B;**されません**。このステータスは、「Failure」と同じ意味で使用できます。 |
 | Inactive | バッチは正常に昇格しましたが、元に戻されたか、有効期限が切れています。バッチは、ダウンストリームで使用できません。 |
 | Loaded | バッチのデータのアップロードが完了し、バッチ昇格の準備ができています。 |
 | Loading | このバッチのデータはアップロード中です。現在、バッチ昇格の準備はできて&#x200B;**いません**。 |
