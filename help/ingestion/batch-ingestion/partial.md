@@ -5,10 +5,10 @@ title: 部分的なバッチ取り込みの概要
 topic: overview
 description: このドキュメントでは、部分バッチ取得を管理するためのチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 38%
+source-wordcount: '916'
+ht-degree: 36%
 
 ---
 
@@ -121,7 +121,7 @@ The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTRO
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL エラーしきい値]**&#x200B;を使用すると、バッチ全体が失敗する前に許容可能なエラーの割合を設定できます。デフォルトでは、この値は 5% に設定されています。
+**[!UICONTROL エラーしきい値]** ：バッチ全体が失敗する前に、許容できるエラーの割合を設定できます。 デフォルトでは、この値は 5% に設定されています。
 
 ## 次の手順 {#next-steps}
 
