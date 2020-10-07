@@ -5,7 +5,7 @@ title: プロファイルクエリ言語（PQL）の概要
 topic: developer guide
 description: このガイドでは、PQL の全般的な概要と、形式についてのガイドライン、PQL 式の例を示します。
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 91%
@@ -29,7 +29,7 @@ PQL クエリのシグネチャは次のとおりです。
 
 入力パラメータは、ブールや文字列などの単純なプリミティブ、またはオブジェクト、配列、マップなどのより複雑な型にすることができます。
 
-PQL 式の本文内で入力パラメーターを参照する方法は、次の **3** とおりあります。
+PQL 式の本文内で入力パラメーターを参照する方法は、次の 3 とおりあります。
 
 ### 最初のパラメーターへの暗黙の参照
 
