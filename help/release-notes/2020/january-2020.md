@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '894'
-ht-degree: 72%
+ht-degree: 71%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 72%
 
 **リリース日：2020 年 1 月 15 日**
 
-Adobe Experience Platformの既存の機能の更新：
+Adobe Experience Platform の既存の機能のアップデート：
 
 * [[!DNL Experience Data Model (XDM)システム]](#xdm)
 * [[!DNLPrivacy Service]](#privacy)
@@ -55,7 +55,7 @@ To learn more about working with XDM using the [!DNL Schema Registry] API and [!
 | 新しい API エンドポイント | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`. |
 | 新しい必須の `regulation` プロパティ | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. 指定できる値は、`gdpr` と `ccpa` です。 |
 | サポート対象 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] 製品の値としてを使用し、Adobe [!DNL Primetime Authentication]からアクセス/削除の要求 `primetimeAuthentication` を受け入れるようになりました。 |
-| Privacy Service UI の強化 | GDPR および CCPA 規制に関する個別のジョブトラッキングページ。GDPR と CCPA のトラッキングデータを切り替える新しい「_規制タイプ_」ドロップダウン。 |
+| Privacy Service UI の強化 | GDPR および CCPA 規制に関する個別のジョブトラッキングページ。新しい**Regulation Type **ドロップダウンを使用して、GDPRとCCPAのトラッキングデータを切り替えます。 |
 
 **既知の問題**
 
@@ -105,7 +105,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | カテゴリ | 権限 | 説明 |
 |--- | --- | ---|
 | 宛先 | 宛先の管理 | 宛先の読み取り、作成、編集、および無効化へのアクセス。 |
-| 宛先 | 宛先の表示 | 「[!UICONTROL _カタログ_]」タブの使用可能な宛先と「_参照_」タブの認証済みの宛先への読み取り専用アクセス。 |
+| 宛先 | 宛先の表示 | 「**[!UICONTROL カタログ]**」タブの使用可能な宛先と「**参照**」タブの認証済みの宛先への読み取り専用アクセス。 |
 | 宛先 | 宛先のアクティブ化 | 宛先に対してデータをアクティブ化する機能。この権限では、製品プロファイルに「宛先の管理」または「宛先の表示」を追加する必要があります。 |
 
 **既知の問題**
