@@ -5,7 +5,7 @@ description: Adobe Experience CloudIDの取得方法を説明します。
 seo-description: Adobe Experience CloudIDの取得方法を説明します。
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 6%
@@ -91,7 +91,7 @@ alloy("sendEvent", {
 | -------- | ------------ | ----------------- |
 | 文字列 | ○ | なし |
 
-オブジェクトのキーは、 [ID名前空間](../../identity-service/namespaces.md) (Identity Symbol)です。 これは、「 [!UICONTROL ID]」のAdobe Experience Platformユーザーインターフェイスに表示されています。
+オブジェクトのキーは、 [ID名前空間](../../identity-service/namespaces.md) (Identity Symbol)です。 これは、Adobe Experience Platformのユーザーインターフェイスの「[!UICONTROL ID]」の下に表示されています。
 
 #### `id`
 
