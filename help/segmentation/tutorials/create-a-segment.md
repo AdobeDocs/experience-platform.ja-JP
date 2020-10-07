@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: このドキュメントでは、Adobe Experience PlatformセグメントサービスAPIを使用したセグメント定義の開発、テスト、プレビュー、保存に関するチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 55%
@@ -56,7 +56,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 ## セグメント定義の作成
 
-セグメント化の最初の手順は、セグメントを定義することです。セグメントは、**セグメント定義**&#x200B;と呼ばれる構成体で表されます。A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). このオブジェクトは **PQL 述語**&#x200B;とも呼ばれます。PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to [!DNL Real-time Customer Profile]. PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
+セグメント化の最初の手順は、セグメントを定義することです。セグメントは、セグメント定義と呼ばれる構成体で表されます。A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). このオブジェクトは PQL 述語とも呼ばれます。PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to [!DNL Real-time Customer Profile]. PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
 You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the [!DNL Segmentation] API. 次の例では、セグメントを正しく定義するために必要な情報など、定義リクエストの形式について説明します。
 
