@@ -5,7 +5,7 @@ description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し�
 seo-description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 43a2074d4d1b9f642c3cbfb0c29217eb2fb112c3
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 3%
@@ -39,7 +39,7 @@ SDKを使用すると、次の1つの例外を除き、通常どおりVECを使�
 
 ## VECアクティビティを自動レンダリング
 
-AEP Web SDKは、Adobe TargetのWeb上でのVECを使用して定義したエクスペリエンスを、ユーザーに合わせて自動的にレンダリングする機能を備えています。 VECアクティビティを自動レンダリングするAEP Web SDKに通知するには、次のイベントを送信します `renderDecisions = true`。
+AEP Web SDKは、Adobe TargetのWeb上でのVECを使用して定義したエクスペリエンスを、ユーザーに合わせて自動的にレンダリングする機能を備えています。 VECアクティビティを自動レンダリングするAEP Web SDKに通知するには、次のイベントを送信し `renderDecisions = true`ます。
 
 ```javascript
 alloy
@@ -87,7 +87,7 @@ alloy
 
 `decisionScopes` パーソナライズされたエクスペリエンスをレンダリングするページのセクション、場所または部分を定義します。 これら `decisionScopes` はカスタマイズ可能で、ユーザー定義です。 現在の [!DNL Target] お客様 `decisionScopes` の場合は、「mbox」とも呼ばれます。 UIでは、「場所」と [!DNL Target]`decisionScopes` して表示されます。
 
-## __表示__ 範囲
+## 範囲 `__view__`
 
 AEP [!DNL Web SDK] は、VECアクションをレンダリングするAEPに依存せずにVECアクションを取得できる機能 [!DNL Web SDK] を提供します。 として `__view__` 定義されたイベントを送信し `decisionScopes`ます。
 
@@ -119,18 +119,18 @@ AEP Web SDKを介して配信されるターゲットアクティビティのオ
 * ターゲットライブラリ
 * 地域
 * ネットワーク
-* オペレーティングシステム
+* Operating System
 * サイトのページ
-* ブラウザー
+* Browser
 * トラフィックソース
 * 時間枠
 
 ## 用語
 
-__決定__ - [!DNL Target]では、アクティビティから選択したエクスペリエンスとの相関関係を示します。
+**決定** - [!DNL Target]では、アクティビティから選択したエクスペリエンスとの相関関係を示します。
 
-__範囲__ — 決定の範囲。 で [!DNL Target]は、mBoxです。 グローバルmBoxが `__view__` スコープです。
+**範囲** — 決定の範囲。 で [!DNL Target]は、mBoxです。 グローバルmBoxが `__view__` スコープです。
 
-__スキーマ__ — 決定のスキーマは、でのオファーのタイプ [!DNL Target]です。
+**スキーマ** — 決定のスキーマは、でのオファーのタイプ [!DNL Target]です。
 
-__XDM__ - XDMはドット表記にシリアライズされ、mBoxパラメーター [!DNL Target] として挿入されます。
+**XDM** - XDMはドット表記にシリアライズされ、mBoxパラメーター [!DNL Target] として挿入されます。
