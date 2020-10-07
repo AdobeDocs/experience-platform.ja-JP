@@ -5,10 +5,10 @@ title: 製品プロファイルの詳細と追加のサービスの管理
 topic: user guide
 description: このドキュメントでは、Adobe Admin Consoleの製品プロファイルの詳細や追加のサービスを管理するために必要な手順を説明します。 プロファイルの詳細を設定し、追加のサービスにアクセスするには、プロファイル設定メニューを使用します。
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 83%
+ht-degree: 68%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 83%
 
 ![profile-settings](../images/profile-settings.png)
 
-**[!UICONTROL プロファイルの設定]**&#x200B;メニューが表示され、「**[!UICONTROL 詳細]**」タブから開始します。このタブでは、**[!UICONTROL プロファイル名]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力、編集できます。また、アカウントの&#x200B;**[!UICONTROL 表示名]**&#x200B;や電子メール通知の設定を変更することもできます。
+**[!UICONTROL プロファイルの設定]**&#x200B;メニューが表示され、「**[!UICONTROL 詳細]**」タブから開始します。このタブでは、プロファイル名と説明を入力および編集できます。 表示名や、アカウントの電子メール通知設定を変更することもできます。
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
