@@ -5,10 +5,10 @@ title: Segmentation Service Segment Builderユーザーガイド
 topic: ui guide
 description: 'セグメントビルダーのワークスペースには、プロファイルのデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。 '
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 51%
+source-wordcount: '1774'
+ht-degree: 50%
 
 ---
 
@@ -72,6 +72,10 @@ You can also search for audiences using the search bar, which utilizes [Lucene&#
 セグメント定義に新しいルールを追加するには、タイルを「**[!UICONTROL フィールド]**」タブからルールビルダーキャンバスにドラッグ＆ドロップします。追加するデータのタイプに応じて、コンテキスト固有のオプションが表示されます。Available data types include: strings, dates, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot;, and audiences.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
+
+>[!IMPORTANT]
+>
+>最新のAdobe Experience Platformの変更により、イベント間の `OR``AND` 論理演算子と論理演算子の使用が更新されました。 これらの更新は、既存のセグメントには影響しません。 ただし、既存のセグメントおよび新しいセグメント作成に対するそれ以降の更新は、これらの変更の影響を受けます。 詳しくは、 [時間定数の更新](./segment-refactoring.md) を参照してください。
 
 ### オーディエンスの追加
 
