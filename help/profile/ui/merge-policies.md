@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 結合ポリシーユーザーガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
+source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
 workflow-type: tm+mt
-source-wordcount: '1441'
-ht-degree: 31%
+source-wordcount: '1440'
+ht-degree: 33%
 
 ---
 
@@ -91,7 +91,7 @@ APIを使用してカスタムタイムスタンプを操作するには、 [マ
 
 例えば、あるデータセットに情報が存在し、他のデータセットのデータよりも優先度や信頼度が高い場合などに使用できます。
 
-「 **[!UICONTROL データセットの優先順位]**」を選択すると、別のパネルが開き、「 **[!UICONTROL 使用可能なデータセット]** 」からデータセットを選択する必要があります（または、チェックボックスを使用してすべてを選択します）。 You can then drag and drop those datasets into the [**!UICONTROL Selected Datasets]** panel and drag them into the correct order of priority. 最上位のデータセットには最も高い優先順位が付けられ、2番目のデータセットには2番目に高い優先順位が付けられます。
+「 **[!UICONTROL データセットの優先順位]**」を選択すると、別のパネルが開き、「 **[!UICONTROL 使用可能なデータセット]** 」からデータセットを選択する必要があります（または、チェックボックスを使用してすべてを選択します）。 その後、これらのデータセットを「**[!UICONTROL 選択したデータセット]**」パネルにドラッグ＆ドロップし、正しい優先順位にドラッグできます。最上位のデータセットには最も高い優先順位が付けられ、2番目のデータセットには2番目に高い優先順位が付けられます。
 
 ![](../images/merge-policies/dataset-precedence.png)
 
