@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Experience Platform UI で、オーディエンスセグメントのエクスポートに使用できるデータセットを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 57%
@@ -78,7 +78,7 @@ On the **[!UICONTROL Configure Dataset]** screen, you will be required to give y
 
 空のデータセットが作成され、データセットワークスペースの「**[!UICONTROL データセットアクティビティ]**」タブに戻りました。****&#x200B;ワークスペースの左上隅にデータセットの名前と、「バッチが追加されていません」という通知が表示されます。このデータセットにバッチをまだ追加していないので、これは期待通りです。
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema], streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
 
 **[!UICONTROL データセット ID]** は、オーディエンスセグメントのエクスポートワークフローを完了するために必要になるので、メモしておいてください。
 
