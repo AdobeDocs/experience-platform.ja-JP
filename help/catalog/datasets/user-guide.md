@@ -5,7 +5,7 @@ title: データセットユーザガイド
 topic: datasets
 description: このdatasetsユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内でデータセットを操作する際に、一般的な操作を実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 70%
@@ -62,10 +62,10 @@ For more robust methods to access your data, [!DNL Experience Platform] provides
 
 次の画面に、新しいデータセットを作成するための次の 2 つのオプションが表示されます。
 
-* [スキーマからのデータセットの作成](#create-a-dataset-with-an-existing-schema)
-* [CSV ファイルからのデータセットの作成](#create-a-dataset-with-a-csv-file)
+* [スキーマからのデータセットの作成](#schema)
+* [CSV ファイルからのデータセットの作成](#csv)
 
-### 既存スキーマからのデータセットの作成
+### 既存スキーマからのデータセットの作成 {#schema}
 
 **[!UICONTROL データセット作成]**&#x200B;画面で、「**[!UICONTROL スキーマからデータセットを作成]**」をクリックし、新しい空のデータセットを作成します。
 
@@ -79,7 +79,7 @@ For more robust methods to access your data, [!DNL Experience Platform] provides
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### CSV ファイルを使用したデータセットの作成
+### CSV ファイルを使用したデータセットの作成 {#csv}
 
 CSV ファイルを使用してデータセットを作成する場合、アドホックスキーマが作成され、指定された CSV ファイルと一致する構造のデータセットが提供されます。**[!UICONTROL データセット作成]**&#x200B;画面で、「**[!UICONTROL CSV ファイルからデータセットを作成]**」というボックスをクリックします。
 
