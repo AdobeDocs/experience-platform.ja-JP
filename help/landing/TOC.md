@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ヘルプ
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 translation-type: tm+mt
-source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
+source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '323'
 ht-degree: 92%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 92%
 
 * [Experience Platform の概要](home.md)
 * [はじめに](get-started.md)
+* [Experience Platform ユーザーガイド](./ui-guide.md)
 * Experience Platform ドキュメント {#documentation}
    * [ドキュメントの概要](documentation/overview.md)
    * [アクセス制御](https://docs.adobe.com/content/help/ja-JP/experience-platform/access-control/home.html)
