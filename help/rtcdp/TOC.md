@@ -2,12 +2,12 @@
 product: adobe experience platform
 audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
-user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
+user-guide-description: 複数のエンタープライズソースから既知の匿名データを収集し、顧客プロファイルを作成し、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティのターゲットにアクティブ化します。
 translation-type: tm+mt
-source-git-commit: e3017744bfe35c6a60cf921121135352a1119bdd
+source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 85%
+source-wordcount: '489'
+ht-degree: 81%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 85%
       * [宛先の詳細ページ](destinations/destination-details-page.md)
    * 宛先カタログ {#destinations-cat}
       * [宛先カタログの概要](destinations/destinations-catalog.md)
+      * [HTTP宛先](/help/rtcdp/destinations/http-destination.md)
       * アドビの宛先 {#adobe-destinations}
          * [アドビの宛先の概要](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -148,4 +149,4 @@ ht-degree: 85%
    * [ソースの概要](sources/sources-overview.md)
    * [Adobe Launch での Web サイトタグの実装](sources/launch.md)
 * [Experience Platformリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
-* [Experience Platform用語集](https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/glossary.html)
+* [Experience Platform の用語](https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/glossary.html)
