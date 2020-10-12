@@ -5,7 +5,7 @@ seo-title: HTTPの宛先は、AdobeのリアルタイムCustomer Data Platform�
 description: HTTPの宛先は、AdobeのリアルタイムCustomer Data Platformの宛先で、プロファイルデータをサードパーティのHTTPエンドポイントに送信するのに役立ちます。
 seo-description: HTTPの宛先は、AdobeのリアルタイムCustomer Data Platformの宛先で、プロファイルデータをサードパーティのHTTPエンドポイントに送信するのに役立ちます。
 translation-type: tm+mt
-source-git-commit: cf100e8df225a665eade5ee6ddab071707e93f8b
+source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 7%
@@ -23,7 +23,7 @@ ht-degree: 7%
 
 宛先は、サードパーティのエンドポイントにプロファイルデータを送信するのに役立つ [!DNL HTTP] ストリーミング [!DNL Adobe Real-Time Customer Data Platform][!DNL HTTP] 宛先です。
 
-プロファイルデータをエンドポイントに送信するには、まず [!DNL HTTP] で宛先に接続する必要があり [!DNL Adobe Real-Time Customer Data Platform](#connect-destination)ます。
+プロファイルデータをエンドポイントに送信するには、まず [!DNL HTTP] で宛先に接続する必要があり [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination)ます。
 
 ## 使用例 {#use-cases}
 
@@ -33,14 +33,15 @@ ht-degree: 7%
 
 ## Connect to Destination {#connect-destination}
 
-1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**、を選択し、「 [!DNL  HTTP API]設定 ****」を選択します。
+1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**、を選択し、「 [!DNL HTTP API]設定 ****」を選択します。
 
    ![HTTP宛先をアクティブにする](assets/activate-http-destination.png)
 
    >[!NOTE]
    >
    >この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](../destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
-   ![HTTP宛先をアクティブにする](assets/connect-http-destination.png)
+   >
+   >![HTTP宛先をアクティブにする](assets/connect-http-destination.png)
 
 2. 「 [!UICONTROL アカウント] 」手順で、HTTPエンドポイント接続の詳細を定義する必要があります。 「 **[!UICONTROL 新規アカウント]** 」を選択し、接続先のHTTPエンドポイントの接続の詳細を入力します。
    * **[!UICONTROL httpEndpoint]**:プロファイルデータ [!DNL URL] の送信先のHTTPエンドポイントの完全な情報です。
