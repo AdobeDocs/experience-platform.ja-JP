@@ -1,13 +1,13 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; audience manager; audience manager destination
+keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
 title: アドビの宛先
 seo-title: アドビの宛先
 description: アドビのリアルタイム CDP 内のデータを他の Adobe Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などをおこない、顧客体験を管理します。
 seo-description: アドビのリアルタイム CDP 内のデータを他の Adobe Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などをおこない、顧客体験を管理します。
 translation-type: tm+mt
-source-git-commit: d1b87d696e113d229d69059a3a0f1b7786fa5add
+source-git-commit: e3e01474fcd6874f50b929116eff5bdfd4298f22
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '228'
 ht-degree: 61%
 
 ---
@@ -43,4 +43,4 @@ ht-degree: 61%
 
 Experience Platformセグメント共有機能を使用して、Experience Platformセグメントを他のAdobe先と共有します。 詳しくは、次のページを参照してください(Audience Managerドキュメントポータルで開きます)。
 
-* [コアサービスの統合を通じてAdobe Audience Manager、Ad CloudおよびターゲットとExperience Platformセグメントを共有](https://docs.adobe.com/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [コアサービスの統合を通じてAdobe Audience Manager、Adobe Advertising CloudおよびAdobe TargetとExperience Platformセグメントを共有](https://docs.adobe.com/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
