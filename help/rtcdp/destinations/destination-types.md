@@ -5,10 +5,10 @@ seo-title: 宛先のタイプとカテゴリ
 description: 'アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 '
 seo-description: アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 92%
+source-wordcount: '580'
+ht-degree: 93%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 92%
 
 <br> 
 
-### 接続
+### 接続 {#connections}
 
 アドビのリアルタイム顧客データプラットフォームのキャプチャイベントデータでは、**[!UICONTROL プロファイル書き出し]**&#x200B;および&#x200B;**[!UICONTROL セグメント書き出し]**&#x200B;の宛先は、イベントデータを取り込み、他のデータソースと組み合わせて[リアルタイム顧客プロファイル](/help/profile/home.md)を形成、セグメント化を適用し、セグメントと適格なプロファイルを宛先に適用します。
 
@@ -37,7 +37,7 @@ ht-degree: 92%
 
 #### セグメントの書き出し先
 
-セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。Advertising destinations such as [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) or [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
+セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。Advertising destinations such as [[!DNL Google Display & Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) or [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
 
 #### プロファイルの書き出しとセグメントの書き出し先 - ビデオの概要
 
@@ -47,7 +47,7 @@ ht-degree: 92%
 
 <br> 
 
-### 拡張機能
+### 拡張機能 {#extensions}
 
 アドビのリアルタイム CDP は、Experience Platform Launch の機能と柔軟性を活用して、アドビのリアルタイム CDP インターフェイスに Launch 拡張機能を組み込みます。
 
