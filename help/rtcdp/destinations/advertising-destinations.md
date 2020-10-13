@@ -5,10 +5,10 @@ seo-title: 広告の宛先
 description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 seo-description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 87%
+source-wordcount: '219'
+ht-degree: 75%
 
 ---
 
@@ -21,6 +21,21 @@ Connect your [!DNL Real-time Customer Data Platform] to a 3rd-party advertising 
 
 現在、リアルタイム CDP は、以下に示す広告の宛先をサポートしています。これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
+## 接続
+
+接続と拡張の違いについて詳しくは、宛先の種類とカテゴリページの [接続](/help/rtcdp/destinations/destination-types.md#connections) （英語）を参照してください。
+
+
+* [Google Display と Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+* [Google 広告](/help/rtcdp/destinations/google-ads-destination.md)
+* [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Google カスタマーマッチ](/help/rtcdp/destinations/google-customer-match-destination.md)
+
+
+## 拡張機能
+
+接続と拡張の違いについて詳しくは、宛先の種類とカテゴリページの [拡張](/help/rtcdp/destinations/destination-types.md#extensions) （英語）を参照してください。
+
 * [Adobe Advertising Cloud 拡張機能](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Awin Advertising Conversion Tag 拡張機能](/help/rtcdp/destinations/awin-conversiontag-extension.md)
 * [Awin Advertising Mastertag 拡張機能](/help/rtcdp/destinations/awin-mastertag-extension.md)
@@ -30,13 +45,8 @@ Connect your [!DNL Real-time Customer Data Platform] to a 3rd-party advertising 
 * [DoubleClick Floodlight 拡張機能](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
 * [Facebook ピクセル拡張機能](/help/rtcdp/destinations/facebook-pixel-extension.md)
 * [Flashtalking OneTag 拡張機能](/help/rtcdp/destinations/flashtalking-extension.md)
-* [Google Display と Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
-* [Google 広告](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google 広告拡張機能](/help/rtcdp/destinations/google-ads-extension.md)
-* [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-* [Googleの顧客一致](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Google タグ拡張機能](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [LinkedIn Insight タグ拡張機能](linkedin-extension.md)
 * [Pinterest Conversion Tracking 拡張機能](pinterest-extension.md)
 * [Twitter Universal Website Tag 拡張機能](twitter-uwt-extension.md)
-
