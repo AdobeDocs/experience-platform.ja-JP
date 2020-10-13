@@ -2,12 +2,12 @@
 product: adobe experience platform
 audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
-user-guide-description: 複数のエンタープライズソースから既知の匿名データを収集し、顧客プロファイルを作成し、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティのターゲットにアクティブ化します。
+user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
 translation-type: tm+mt
-source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
+source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 81%
+source-wordcount: '490'
+ht-degree: 86%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 81%
       * [宛先の詳細ページ](destinations/destination-details-page.md)
    * 宛先カタログ {#destinations-cat}
       * [宛先カタログの概要](destinations/destinations-catalog.md)
-      * [HTTP宛先](/help/rtcdp/destinations/http-destination.md)
+      * [ (Alpha) HTTP送信先](/help/rtcdp/destinations/http-destination.md)
       * アドビの宛先 {#adobe-destinations}
          * [アドビの宛先の概要](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
