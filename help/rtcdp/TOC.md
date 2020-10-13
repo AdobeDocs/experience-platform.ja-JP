@@ -4,10 +4,10 @@ audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
 translation-type: tm+mt
-source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
+source-git-commit: d9e9440bb8a7735aa8a5d24285c1fb56f32733cb
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 86%
+source-wordcount: '507'
+ht-degree: 85%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 86%
       * アドビの宛先 {#adobe-destinations}
          * [アドビの宛先の概要](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+         * [Experience Platformセグメントの共有(Audience Managerのドキュメントを開く)](https://docs.adobe.com/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * 広告の宛先 {#advertising-destinations}
          * [広告の宛先の概要](destinations/advertising-destinations.md)
          * [Adobe Advertising Cloud 拡張機能](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
