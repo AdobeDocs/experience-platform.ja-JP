@@ -1,14 +1,14 @@
 ---
-keywords: destinations;experience cloud solutions
+keywords: destinations;experience cloud solutions; target;target destination; ad cloud; audience manager; audience manager destination
 title: アドビの宛先
 seo-title: アドビの宛先
 description: アドビのリアルタイム CDP 内のデータを他の Adobe Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などをおこない、顧客体験を管理します。
 seo-description: アドビのリアルタイム CDP 内のデータを他の Adobe Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などをおこない、顧客体験を管理します。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: d1b87d696e113d229d69059a3a0f1b7786fa5add
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 100%
+source-wordcount: '226'
+ht-degree: 61%
 
 ---
 
@@ -17,9 +17,18 @@ ht-degree: 100%
 
 アドビのリアルタイム CDP 内のデータを他の Adobe Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などを行い、顧客体験を管理します。
 
+## 接続
+
+接続と拡張の違いについて詳しくは、宛先の種類とカテゴリページの [接続](/help/rtcdp/destinations/destination-types.md#connections) （英語）を参照してください。
+
+* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md)
+
+## 拡張機能
+
+接続と拡張の違いについて詳しくは、宛先の種類とカテゴリページの [拡張](/help/rtcdp/destinations/destination-types.md#extensions) （英語）を参照してください。
+
 * [Adobe Advertising Cloud 拡張機能](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Adobe Analytics 拡張機能](/help/rtcdp/destinations/adobe-analytics-extension.md)
-* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md)
 * [Adobe Livefyre 拡張機能](/help/rtcdp/destinations/adobe-livefyre-extension.md)
 * [Adobe Media Analytics for Audio and Video 拡張機能](/help/rtcdp/destinations/adobe-video-analytics-extension.md)
 * [Adobe Target 拡張機能](/help/rtcdp/destinations/adobe-target-extension.md)
@@ -29,3 +38,9 @@ ht-degree: 100%
 * [Marketo 拡張機能](/help/rtcdp/destinations/marketo-extension.md)
 * [Marketo Munchkin 拡張機能](/help/rtcdp/destinations/marketo-munchkin-extension.md)
 * [Marketto Web パーソナライゼーション拡張機能](/help/rtcdp/destinations/marketo-web-personalization-extension.md)
+
+## Experience Platformセグメントの共有
+
+Experience Platformセグメント共有機能を使用して、Experience Platformセグメントを他のAdobe先と共有します。 詳しくは、次のページを参照してください(Audience Managerドキュメントポータルで開きます)。
+
+* [コアサービスの統合を通じてAdobe Audience Manager、Ad CloudおよびターゲットとExperience Platformセグメントを共有](https://docs.adobe.com/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
