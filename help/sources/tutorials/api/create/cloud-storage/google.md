@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle Cloudストレージアカウントに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 22%
@@ -27,7 +27,7 @@ ht-degree: 22%
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-以下の節では、 [!DNL Flow Service] APIを使用してGoogle Cloudストレージアカウントに正しく接続するために知っておく必要がある追加情報について説明します。
+次の節では、 [!DNL Flow Service] APIを使用してGoogle Cloudストレージアカウントに正しく接続するために知っておく必要がある追加情報について説明します。
 
 ### 必要な資格情報の収集
 
@@ -74,7 +74,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
