@@ -5,10 +5,10 @@ title: SQL 構文
 topic: syntax
 description: このドキュメントは、クエリサービスでサポートされる SQL 構文を示します。
 translation-type: tm+mt
-source-git-commit: 2672d0bdf1f34deb715415e7b660a35076edb06b
+source-git-commit: 43bebfbe0c0fca57d6e1ed0116e317b03125f175
 workflow-type: tm+mt
-source-wordcount: '2004'
-ht-degree: 92%
+source-wordcount: '2067'
+ht-degree: 89%
 
 ---
 
@@ -483,3 +483,47 @@ where 'format_name' is be one of:
 >[!NOTE]
 >
 >完全な出力パスは、 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+
+
+### ALTER
+
+このコマンドは、主キー制約または外部キー制約をテーブルに追加または削除するのに役立ちます。
+
+```sql
+Alter TABLE table_name ADD ( column_name Primary key Namespace 'namespace')
+
+Alter TABLE table_name ADD ( column_name Foreign key references referenced_table_name Namespace 'namespace')
+
+Alter TABLE table_name DROP ( column_name Primary key)
+
+Alter TABLE table_name DROP ( column_name Foreign key)
+```
+
+>[!NOTE]
+>テーブルスキーマは一意であり、複数のテーブル間で共有されない必要があります。 また、この名前空間は必須です。
+
+
+### プライマリキーを表示
+
+このコマンドは、指定したデータベースのすべての主キー制約をリストします。
+
+```sql
+SHOW PRIMARY KEYS
+    tableName | columnName    | datatype | namespace
+------------------+----------------------+----------+-----------
+ table_name_1 | column_name1  | text     | "ECID"
+ table_name_2 | column_name2  | text     | "AAID"
+```
+
+
+### 外部キーを表示
+
+このコマンドは、指定したデータベースのすべての外部キー制約をリストします。
+
+```sql
+SHOW FOREIGN KEYS
+    tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
+------------------+---------------------+----------+---------------------+----------------------+-----------
+ table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
+ table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
