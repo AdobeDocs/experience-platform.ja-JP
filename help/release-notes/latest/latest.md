@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
+source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 29%
+source-wordcount: '591'
+ht-degree: 28%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 29%
 
 - [データ準備](#data-prep)
 - [リアルタイム顧客プロファイル](#profile)
+- [セグメント化サービス](#segmentation)
 - [ソース](#sources)
 
 ## データ準備 {#data-prep}
@@ -44,6 +45,20 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 | 和集合スキーマ表示の更新 | Experience PlatformUIでは、和集合スキーマに貢献するすべてのスキーマとデータセットに関する情報、およびIDや関係フィールドなどの表面キー属性を、より簡単に見つけることができます。 これらの更新により、トラブルシューティングおよび検証機能が向上し、プロファイルが正しく設定され、IDが正しく関連付けられ、データが正常に取り込まれたことを確認できます。 |
 
 For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
+
+## セグメント化サービス {#segmentation}
+
+Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+
+[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。 セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| ストリーミングセグメントの制限の削除 | ルックバック期間の7日間の制限は解除されました。 |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
 
 ## ソース {#sources}
 
