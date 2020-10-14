@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、CRMデータを収集するためのMicrosoft Dynamics（以下「Dynamics」と呼ばれる）アカウントにプラットフォームを接続する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '703'
 ht-degree: 18%
 
 ---
@@ -142,11 +142,9 @@ curl -X GET \
 }
 ```
 
-## ベース接続を作成する
+## API用の接続の作成
 
-ベース接続はソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するために使用できるので、 [!DNL Dynamics] アカウントごとに1つのベース接続が必要です。
-
-次のPOST要求を実行して、ベース接続を作成します。
+APIの接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するために使用できるので、APIは [!DNL Dynamics] アカウントごとに1つの接続のみ必要です。
 
 **API 形式**
 
@@ -158,7 +156,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -202,4 +200,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、APIを使用して [!DNL Dynamics] アカウントの基本接続を作成し、一意のIDを応答本文の一部として取得できます。 Flow Service APIを使用してCRMシステムを [調査する方法について学習する際に、次のチュートリアルでこの基本接続IDを使用できます](../../explore/crm.md)。
+このチュートリアルに従うと、APIを使用して [!DNL Dynamics] アカウントへの接続が作成され、一意のIDが応答本文の一部として取得されます。 Flow Service APIを使用してCRMシステムを [調査する方法について学習する際に、次のチュートリアルでこの接続IDを使用できます](../../explore/crm.md)。
