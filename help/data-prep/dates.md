@@ -5,10 +5,10 @@ title: 日付関数
 topic: overview
 description: このドキュメントでは、データ準備で使用する日付関数を紹介します。
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 17%
+source-wordcount: '384'
+ht-degree: 18%
 
 ---
 
@@ -80,4 +80,4 @@ ht-degree: 17%
 
 **例**
 
-式 `date(orderDate, 'yyyy-MM-dd')` は、値が「2020年12月31日」の場合、orderDateを値が「2020-12-31」の日付時刻に変換します。
+式 `date(orderDate, 'yyyy-MM-dd')` は、「December 31st, 2020」の `orderDate` 値を「2020-12-31」のdatetime値に変換します。
