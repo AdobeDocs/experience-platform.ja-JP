@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform リリースノート
-breadcrumb-title: Platform Release Notes
-user-guide-description: Monthly release notes for Adobe Experience Platform.
+breadcrumb-title: Platform リリースノート
+user-guide-description: Adobe Experience Platform の月次リリースノートです。
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
 workflow-type: tm+mt
-source-wordcount: '26'
+source-wordcount: '37'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,8 @@ ht-degree: 100%
 
 # Adobe Experience Platform リリースノート {#release-notes}
 
-* [2020 年 9 月](latest/latest.md)
+* [2020 年 10 月](latest/latest.md)
+* [2020 年 9 月](2020/september-2020.md)
 * [2020 年 8 月](2020/august-2020.md)
 * [2020 年 7 月](2020/july-2020.md)
 * [2020 年 6 月](2020/june-2020.md)
