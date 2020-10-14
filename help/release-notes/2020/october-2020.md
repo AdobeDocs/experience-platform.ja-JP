@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: ab87cac94ae69acde3be75ae95b11cf003a274e9
+source-git-commit: bf4271cec6126de3b5d9f98df280afdcc798589d
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 37%
+source-wordcount: '478'
+ht-degree: 28%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 37%
 **リリース日：2020年10月**
 
 - [データ準備](#data-prep)
+- [リアルタイム顧客プロファイル](#profile)
 - [ソース](#sources)
 
 ## データ準備 {#data-prep}
@@ -32,6 +33,17 @@ ht-degree: 37%
 | `get_values` 関数 | この `get_values` 関数を使用すると、任意のキーの入力マップから値を取得できます。 |
 
 For more information, please read the [Data Prep overview](../../data-prep/home.md).
+
+## リアルタイム顧客プロファイル {#profile}
+
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| プロファイルプレビューAPIの追加 | プロファイルプレビューAPI(`/previewsamplestatus`)には、IMS組織全体のプロファイルフラグメントの合計の内訳を表示する機能と、ID名前空間全体のプロファイルフラグメントの表示機能が含まれるようになりました。 |
+| 和集合スキーマ表示の更新 | Experience PlatformUIでは、和集合スキーマに貢献するすべてのスキーマとデータセットに関する情報、およびIDや関係フィールドなどの表面キー属性を、より簡単に見つけることができます。 これらの更新により、トラブルシューティングおよび検証機能が向上し、プロファイルが正しく設定され、IDが正しく関連付けられ、データが正常に取り込まれたことを確認できます。 |
+
+For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
 
 ## ソース {#sources}
 
