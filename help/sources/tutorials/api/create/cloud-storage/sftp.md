@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをSFTP(Secure File Transfer Protocol)サーバーに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 781a26486a42f304308f567284cef53d591aa124
+source-git-commit: 71653681a0f4b31319bd352202bf55fb3947a455
 workflow-type: tm+mt
 source-wordcount: '793'
 ht-degree: 16%
@@ -85,25 +85,28 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -d  "auth": {
-        "specName": "Basic Authentication for sftp",
-        "params": {
-            "host": "{HOST_NAME}",
-            "userName": "{USER_NAME}",
-            "password": "{PASSWORD}"
+    -d  '{
+        "name": "SFTP connector with password",
+        "description": "SFTP connector password",
+        "auth": {
+            "specName": "Basic Authentication for sftp",
+            "params": {
+                "host": "{HOST}",
+                "userName": "{USERNAME}",
+                "password": "{PASSWORD}"
+            }
+        },
+        "connectionSpec": {
+            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+            "version": "1.0"
         }
-    },
-    "connectionSpec": {
-        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-        "version": "1.0"
-    }
-}
+    }'
 ```
 
 | プロパティ | 説明 |
@@ -138,26 +141,29 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -d  "auth": {
-        "specName": "SSH PublicKey Authentication for sftp",
-        "params": {
-            "host": "{HOST_NAME}",
-            "userName": "{USER_NAME}",
-            "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
-            "passPhrase": "{PASS_PHRASE}"
+    -d '{
+        "name": "SFTP connector with SSH authentication",
+        "description": "SFTP connector with SSH authentication",
+        "auth": {
+            "specName": "SSH PublicKey Authentication for sftp",
+            "params": {
+                "host": "{HOST}",
+                "userName": "{USERNAME}",
+                "privateKeyContent": "{PRIVATE_KEY_CONTENT}",
+                "passPhrase": "{PASSPHRASE}"
+            }
+        },
+        "connectionSpec": {
+            "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
+            "version": "1.0"
         }
-    },
-    "connectionSpec": {
-        "id": "b7bf2577-4520-42c9-bae9-cad01560f7bc",
-        "version": "1.0"
-    }
-}
+    }'
 ```
 
 | プロパティ | 説明 |
