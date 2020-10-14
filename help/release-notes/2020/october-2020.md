@@ -5,17 +5,17 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: bf4271cec6126de3b5d9f98df280afdcc798589d
+source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 28%
+ht-degree: 29%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020年10月**
+**リリース日：2020 年 10 月 14 日**
 
 - [データ準備](#data-prep)
 - [リアルタイム顧客プロファイル](#profile)
