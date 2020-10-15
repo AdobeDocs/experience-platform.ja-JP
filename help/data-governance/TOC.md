@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform データガバナンスのヘルプ
-breadcrumb-title: Data Governance Guide
-user-guide-description: Enforce data usage restrictions through the use of labels, marketing actions, and policies.
+breadcrumb-title: データガバナンスガイド
+user-guide-description: ラベル、マーケティングアクション、ポリシーを使用して、データ使用に関する制限を実施します。
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 74%
+source-wordcount: '123'
+ht-degree: 78%
 
 ---
 
