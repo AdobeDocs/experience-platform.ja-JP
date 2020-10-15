@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 判定サービス
-breadcrumb-title: Decisioning Service Guide
-user-guide-description: Create personalized, optimized, and orchestrated experiences in Adobe applications by determining the best option from a set of available choices.
+breadcrumb-title: Decisioningサービスガイド
+user-guide-description: 利用可能な選択肢の中から最適な選択肢を決定することで、Adobeアプリケーションでパーソナライズされた、最適化された、調整されたエクスペリエンスを作成します。
 translation-type: tm+mt
 source-git-commit: ee0272c36259d5d6fcf7896e1cff166ebd404acd
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 94%
+source-wordcount: '76'
+ht-degree: 65%
 
 ---
 
