@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
-user-guide-description: Merge customer data to create a unified view of customer interactions across channels.
+user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 51%
+source-wordcount: '96'
+ht-degree: 65%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 51%
    * [はじめに](api/getting-started.md)
    * [（アルファ）計算済み属性](api/computed-attributes.md)
    * [エッジ投影](api/edge-projections.md)
-   * [エンティティ([!DNLプロファイル]アクセス)](api/entities.md)
-   * [書き出しジョブ([!DNLプロファイル]書き出し)](api/export-jobs.md)
+   * [エンティティ([!DNL Profile] アクセス)](api/entities.md)
+   * [書き出しジョブ([!DNL Profile] 書き出し)](api/export-jobs.md)
    * [結合ポリシー](api/merge-policies.md)
-   * [プレビューサンプルの状態([!DNLプロファイル]プレビュー)](api/preview-sample-status.md)
+   * [プレビューサンプルの状態([!DNL Profile] プレビュー)](api/preview-sample-status.md)
    * [[!DNL Profile] システムジョブ（削除要求）](api/profile-system-jobs.md)
 * UIガイド {#ui}
    * [[!DNL Profile] ユーザーガイド](ui/user-guide.md)
