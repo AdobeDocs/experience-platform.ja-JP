@@ -5,7 +5,7 @@ description: Experience Platform Web SDK の設定方法について説明しま
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -46,7 +46,7 @@ alloy("configure", {
 | ---------------- | ------------ | -------------------------------------------------- |
 | 文字列の配列 | × | `["web", "device", "environment", "placeContext"]` |
 
-「[自動情報](../reference/automatic-information.md)」の説明に従って、自動的に収集するコンテキストカテゴリを示します。この設定を指定しない場合、すべてのカテゴリがデフォルトで使用されます。
+「[自動情報](../data-collection/automatic-information.md)」の説明に従って、自動的に収集するコンテキストカテゴリを示します。この設定を指定しない場合、すべてのカテゴリがデフォルトで使用されます。
 
 ### `debugEnabled`
 
@@ -109,7 +109,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で�
 | -------- | ------------ | ----------------- |
 | オブジェクト | × | `"in"` |
 
-ユーザーのデフォルトの同意を設定します。これは、ユーザーに対して同意設定が保存されていない場合に使用されます。もう 1 つの有効な値は `"pending"` です。この設定をおこなうと、ユーザーが同意設定を提供するまで作業はキューに登録されます。ユーザーの環境設定を指定した後、作業を続行するか、ユーザーの環境設定に基づいて中止します。詳しくは、[同意のサポート](supporting-consent.md)を参照してください。
+ユーザーのデフォルトの同意を設定します。これは、ユーザーに対して同意設定が保存されていない場合に使用されます。もう 1 つの有効な値は `"pending"` です。この設定をおこなうと、ユーザーが同意設定を提供するまで作業はキューに登録されます。ユーザーの環境設定を指定した後、作業を続行するか、ユーザーの環境設定に基づいて中止します。詳しくは、[同意のサポート](../consent/supporting-consent.md)を参照してください。
 
 ## パーソナライゼーションオプション
 
