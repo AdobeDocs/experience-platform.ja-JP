@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ヘルプのアクセス制御
-breadcrumb-title: Access Control Guide
-user-guide-description: Leverage product profiles in Adobe Admin Console to link users with permissions and sandboxes.
+breadcrumb-title: アクセス制御ガイド
+user-guide-description: Adobe Admin Console の製品プロファイルを活用して、ユーザーを、権限やサンドボックスとリンクさせます。
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '82'
+source-wordcount: '99'
 ht-degree: 96%
 
 ---
