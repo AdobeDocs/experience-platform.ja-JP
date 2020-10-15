@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 translation-type: tm+mt
-source-git-commit: 67928b35416928947a4b288d9aea92a065f080f6
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 71%
+source-wordcount: '117'
+ht-degree: 52%
 
 ---
 
@@ -16,41 +16,37 @@ ht-degree: 71%
 # Adobe Experience Platform Web SDK {#edge}
 
 * [Web SDKの概要](home.md)
-* はじめに {#get-started}
-   * [Launch のクイックスタート](getting-started/quick-start-with-launch.md)
-   * [起動しないクイック開始](getting-started/quick-start-without-launch.md)
 * 基本 {#fundamentals}
-   * [SDK のインストール](fundamentals/installing-the-sdk.md)
-   * [コマンドの実行](fundamentals/executing-commands.md)
+   * [前提条件](fundamentals/prerequisite.md)
    * [エッジの設定](fundamentals/edge-configuration.md)
+   * [SDK のインストール](fundamentals/installing-the-sdk.md)
    * [SDK の設定](fundamentals/configuring-the-sdk.md)
+   * [コマンドの実行](fundamentals/executing-commands.md)
    * [イベントのトラッキング](fundamentals/tracking-events.md)
-   * [イベントデータの結合](fundamentals/merging-event-data.md)
    * [デバッグ](fundamentals/debugging.md)
+   * [イベントデータの結合](fundamentals/merging-event-data.md)
    * [複数のプロパティの操作](fundamentals/interacting-with-multiple-properties.md)
-   * [パーソナライズされたコンテンツのレンダリング](fundamentals/rendering-personalization-content.md)
-   * [同意のサポート](fundamentals/supporting-consent.md)
-   * [ID](fundamentals/identity.md)
-* 実装内容 {#implement}
-   * [製品](what-to-implement/commerce.md)
-* ソリューション固有の考慮事項 {#solutions}
-   * Analytics {#analytics}
-      * [Analytics の概要](solution-specific/analytics/analytics-overview.md)
-      * [Analyticsでの変数の手動マッピング](solution-specific/analytics/manually-mapping-variables.md)
-      * [自動的にマッピングされた変数](solution-specific/analytics/automatically-mapped-vars.md)
-      * [Adobe Analytics へのデータの送信](solution-specific/analytics/link-tracking.md)
-   * Audience Manager {#aam}
-      * [Audience Manager の概要](solution-specific/audience-manager/audience-manager-overview.md)
+* ID {#identity}
+   * [概要](identity/overview.md)
+* データ収集 {#data-collection}
+   * [自動的に収集された情報](data-collection/automatic-information.md)
+   * [リンクの追跡](data-collection/track-links.md)
+   * [コマースおよび製品データの収集](data-collection/collect-commerce-data.md)
+   * Adobe Analytics {#adobe-analytics}
+      * [Analytics の概要](data-collection/adobe-analytics/analytics-overview.md)
+      * [Adobe Analyticsでの変数の手動マッピング](data-collection/adobe-analytics/manually-mapping-variables.md)
+      * [自動的にマッピングされた変数](data-collection/adobe-analytics/automatically-mapped-vars.md)
+      * [データをAdobe Analyticsに送信中](data-collection/adobe-analytics/sending-data-to-analytics.md)
+* パーソナライズ機能 {#personalization}
+   * [パーソナライズされたコンテンツのレンダリング](personalization/rendering-personalization-content.md)
+   * [ちらつきの管理](personalization/manage-flicker.md)
+   * Adobe Target {#adobe-target}
+      * [Target の概要](personalization/adobe-target/target-overview.md)
+* 同意 {#consent}
+   * [同意のサポート](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
-      * [概要](solution-specific/iab-tcf/overview.md)
-      * [開始と統合](solution-specific/iab-tcf/with-launch.md)
-      * [開始しない統合](solution-specific/iab-tcf/without-launch.md)
-   * Target {#target}
-      * [Target の概要](solution-specific/target/target-overview.md)
-      * [ちらつき管理](solution-specific/target/flicker-management.md)
-* リファレンス {#ref}
-   * [自動的に収集された値](reference/automatic-information.md)
-   * [ライブラリ情報の取得](reference/retrieving-library-information.md)
+      * [概要](consent/iab-tcf/overview.md)
+      * [Adobe Experience Platform Launchとの統合](consent/iab-tcf/with-launch.md)
+      * [統合(Adobe Experience Platform Launchなし)](consent/iab-tcf/without-launch.md)
 * [リリースノート](release-notes.md)
-* [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
-* [よくある質問](getting-started/web-sdk-faq.md)
+* [よくある質問](web-sdk-faq.md)
