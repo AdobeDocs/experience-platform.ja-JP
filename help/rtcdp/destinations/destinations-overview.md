@@ -2,13 +2,13 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: 宛先の概要
 seo-title: 宛先の概要
-description: チャネル間のマーケティングキャンペーン、電子メール、ターゲットを絞った広告などの目的地に対するプラットフォームデータをアクティブ化します。
+description: クロスチャネルのマーケティングキャンペーン、電子メール、ターゲット広告などの宛先に対し、Platform データを活用します。
 seo-description: 宛先は、リアルタイム顧客データプラットフォームからのデータのシームレスなアクティベーションを可能にする、宛先プラットフォームとの事前定義済みの統合です。アドビのリアルタイム顧客データプラットフォームの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に既知および不明なデータをアクティブ化できます。
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '491'
-ht-degree: 67%
+ht-degree: 70%
 
 ---
 
