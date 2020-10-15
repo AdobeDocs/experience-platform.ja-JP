@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: カタログとデータセットガイド
-user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake.
+user-guide-title: カタログおよびデータセットガイド
+user-guide-description: データレイク内でデータ系列、メタデータ、ファイル記述、ディレクトリ、データセットを調べます。
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '93'
-ht-degree: 92%
+source-wordcount: '106'
+ht-degree: 97%
 
 ---
 
