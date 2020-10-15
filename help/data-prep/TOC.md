@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: データ準備ガイド
-user-guide-description: Prepare your data for ingestion into Adobe Experience Platform.
+user-guide-description: Adobe Experience Platform に取り込むデータを準備します。
 translation-type: tm+mt
 source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
 workflow-type: tm+mt
-source-wordcount: '20'
-ht-degree: 20%
+source-wordcount: '29'
+ht-degree: 62%
 
 ---
 
