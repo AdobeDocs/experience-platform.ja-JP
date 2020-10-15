@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience PlatformETLガイド
-breadcrumb-title: ETL Guide
-user-guide-description: Learn the general steps for creating secure, high-performance connectors for ingesting data into Platform.
+user-guide-title: Adobe Experience Platform ETL ガイド
+breadcrumb-title: ETL ガイド
+user-guide-description: データを Platform に取り込むための、安全な高性能コネクターを作成する一般的な手順について説明します。
 translation-type: tm+mt
 source-git-commit: ab90919bcc478eac9fce02f5a4104cc251035b1a
 workflow-type: tm+mt
-source-wordcount: '27'
-ht-degree: 70%
+source-wordcount: '43'
+ht-degree: 93%
 
 ---
 
