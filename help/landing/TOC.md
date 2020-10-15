@@ -1,24 +1,38 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform ヘルプ
-breadcrumb-title: Experience Platform Guide
-user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
+user-guide-title: Adobe Experience Platform 概要
+breadcrumb-title: Experience Platform の概要
+user-guide-description: Experience Platform が、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
+source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 92%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platform {#landing}
+# Adobe Experience Platform 概要 {#landing}
 
-* [Experience Platform の概要](home.md)
-* [はじめに](get-started.md)
-* [Experience Platform ユーザーガイド](./ui-guide.md)
-* Experience Platform ドキュメント {#documentation}
+* [プラットフォームの概要](home.md)
+* [プラットフォームの概要（ビデオ）](video/platform-overview.md)
+* [プラットフォーム（ビデオ）による顧客体験](video/customer-experience.md)
+* [プラットフォーム（ビデオ）による顧客体験の背後](video/customer-experience-bts.md)
+* はじめに {#getting-started}
+   * [主な機能（ビデオ）](video/key-capabilities.md)
+   * [主な使用例（ビデオ）](video/platform-use-cases.md)
+   * [プラットフォームアーキテクチャ（ビデオ）](video/platform-architecture.md)
+   * [役割とプロジェクトのフェーズ（ビデオ）](video/roles-project-phases.md)
+* Experience PlatformUI {#platform-ui}
+   * [プラットフォームUIガイド](ui-guide.md)
+   * [プラットフォームUIツアー（ビデオ）](video/platform-ui.md)
+   * [ブラウザーと言語のサポート](browser-language-support.md)
+* Experience PlatformAPI {#platform-apis}
+   * [API の基本事項](api-fundamentals.md)
+   * [Experience Platform API に対する認証](https://docs.adobe.com/content/help/en/platform-learn/tutorials/platform-api-authentication.html)
+   * [プラットフォームAPIリファレンスドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
+* プラットフォームドキュメント {#documentation}
    * [ドキュメントの概要](documentation/overview.md)
    * [アクセス制御](https://docs.adobe.com/content/help/ja-JP/experience-platform/access-control/home.html)
    * [Auditor](https://docs.adobe.com/content/help/ja-JP/auditor/using/overview.html)
@@ -30,7 +44,6 @@ ht-degree: 92%
    * [Data Science Workspace](https://docs.adobe.com/content/help/ja-JP/experience-platform/data-science-workspace/home.html)
    * [デバッガー](https://docs.adobe.com/content/help/ja-JP/debugger/using/experience-cloud-debugger.html)
    * [Debugger 2.0 (Beta)](https://docs.adobe.com/content/help/ja-JP/debugger/using-v2/experience-cloud-debugger.html)
-   * [判定サービス](https://docs.adobe.com/content/help/ja-JP/experience-platform/decisioning/home.html)
    * [宛先](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/destinations/destinations-overview.html)
    * [ETL（抽出、変換、読み込み）](https://docs.adobe.com/content/help/ja-JP/experience-platform/etl/home.html)
    * [ID サービス](https://docs.adobe.com/content/help/ja-JP/experience-platform/identity/home.html)
@@ -43,13 +56,14 @@ ht-degree: 92%
    * [リアルタイムの顧客データプラットフォーム](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/overview.html)
    * [サンドボックス](https://docs.adobe.com/content/help/ja-JP/experience-platform/sandbox/home.html)
    * [セグメント](https://docs.adobe.com/content/help/ja-JP/experience-platform/segmentation/home.html)
+   * [スキーマ](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/home.html)
    * [ソース（コネクタ）](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [Web SDK](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/home.html)
-   * [XDM（エクスペリエンスデータモデル）](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/home.html)
-* [Experience Platform チュートリアル](https://docs.adobe.com/content/help/ja-JP/experience-platform/tutorials/home.html)
-* [リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
-* [用語集](glossary.md)
+* Adobeエコシステムのプラットフォーム {#ecosystem}
+   * [アプリケーションサービス](application-services.md)
+   * [アプリケーションとインテリジェントサービス（ビデオ）](video/application-intelligent-services.md)
+   * [Experience Cloudとのプラットフォームの統合（ビデオ）](video/experience-cloud-integrations.md)
 * [トラブルシューティングガイド](troubleshooting.md)
 * [ADLS Gen2の移行](adls2-gen2-migration.md)
-* [API の基本事項](api-fundamentals.md)
-* [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
+* [用語集](glossary.md)
+* [リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
