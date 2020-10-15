@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Intelligent Services のヘルプ
-breadcrumb-title: Intelligent Services Guide
-user-guide-description: Utilize intelligent AI services to generate scores, discover insights, and create segments from your marketing events data.
+breadcrumb-title: インテリジェントサービスガイド
+user-guide-description: インテリジェントな AI サービスを利用して、スコアの生成、インサイトの発見、マーケティングイベントデータからのセグメントの作成をおこないます。
 translation-type: tm+mt
 source-git-commit: ada5a34ffa3ea9c90ff578ab27f425b82f7ed18c
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 48%
+source-wordcount: '114'
+ht-degree: 57%
 
 ---
 
