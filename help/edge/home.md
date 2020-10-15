@@ -5,9 +5,9 @@ description: Adobe Experience Platform Web SDK の概要と、その使用方法
 seo-description: Adobe Experience Cloud のお客様が　Experience Cloud　の様々なサービスを利用できるようにします 
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '708'
 ht-degree: 21%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 21%
 
 # Adobe Experience PlatformWeb SDKとは
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network]. JavaScriptライブラリに加え、Web SDKの設定を支援する [Launch拡張機能](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) があります。
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network]. JavaScriptライブラリに加え、Web SDKの設定を支援する [Experience Platform Launch拡張](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) 。
 
 ## エクスペリエンスエッジ
 
 [!DNL Adobe Experience Platform Web SDK] は、Experience Edgeを構成するコレクションの一部です。 Experience Edgeは、次の3つのテクノロジーで構成されています。
 
-* **[!DNL Adobe Experience Platform Web SDK]:** テクノロジーの導入を大幅にシンプル化するJavaScript SDKと [!DNL Launch][!DNL Adobe] 拡張機能
+* **[!DNL Adobe Experience Platform Web SDK]:** テクノロジーの導入を大幅にシンプル化するJavaScript SDKと [!DNL Experience Platform Launch][!DNL Adobe] 拡張機能
 * **Adobe Experience PlatformモバイルSDK:** v5モバイルSDKの拡張機能により、お客様は新しい導入方法を使用できます。
 * **[!DNL Adobe Experience Platform Edge Network]:** サーバのグローバルな分散ネットワーク。製品の導入に関する新しい方法論を可能にし [!DNL Adobe] ます。
 
@@ -65,7 +65,7 @@ Adobe Experience Platform Web SDK は、次の SDK の代わりとなります�
 
 ## はじめに
 
-Adobe起動の使用を開始する方法に関するクイックチュートリアルについては、「はじめに [」ガイドを](getting-started/quick-start-with-launch.md) 参照することを強くお勧めします。
+Adobe Experience Platform Launchの使い始め方の簡単なチュートリアルについては、はじめに [（英語）を](consent/iab-tcf/with-launch.md) 参照することを強くお勧めします。
 
 この製品は、ますます多くの使用事例をサポートするように、常に進化し、成長しています。 最新のバージョンに対応するために、 [サポートされているユースケースボードをご覧ください](https://github.com/adobe/alloy/projects/5)。 現在サポートしている使用事例や、可能な限り最適な判断を下すために取り組んでいる使用事例について、この情報を最新の状態に保ちます。
 
