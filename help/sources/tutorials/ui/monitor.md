@@ -6,9 +6,9 @@ title: アカウントとデータフローの監視
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2514c282d16a1b6ddb2232e46e6283ab2ab3d356
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1103'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 - [[!DNL Experience Data Model] (XDM)システム](../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNLリアルタイム顧客プロファイル]](../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 ## アカウントの監視
 
@@ -55,6 +55,10 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 「アカウントの **[!UICONTROL 詳細を編集]** 」モーダルが表示されます。 このページから、既存のアカウントの詳細と認証資格情報を更新できます。
 
+>[!NOTE]
+>
+> アカウントの詳細の編集は、すべてのバッチソースコネクタで可能です。
+
 ![](../../images/tutorials/monitor/edit-account.png)
 
 「 **[!UICONTROL アカウント]** 」ページから、アクセスしたアカウントに関連付けられた既存のデータフローまたはターゲットデータセットのリストを表示できます。 「三点リーダー(`...`)」ボタンを選択し、選択したデータフローで使用可能なオプションを表示します。 これらのオプションについては、以下で詳しく説明します。
@@ -63,7 +67,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 | ------- | ----------- |
 | [!UICONTROL スケジュールを編集] | データフローのインジェストスケジュールを編集できます。 |
 | [!UICONTROL データフローの無効化] | 選択したデータフローのデータ取り込みを無効にできます。 |
-| [!UICONTROL Delete] | 選択したデータフローを削除できます。 |
+| [!UICONTROL 削除] | 選択したデータフローを削除できます。 |
 
 ![データフロー](../../images/tutorials/monitor/dataflows.png)
 
