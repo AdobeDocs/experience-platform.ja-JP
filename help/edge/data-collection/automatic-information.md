@@ -1,0 +1,151 @@
+---
+title: 自動的に収集される情報
+seo-title: Adobe Experience Platform Web SDK で自動的に収集される情報
+description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
+seo-description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
+keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+translation-type: tm+mt
+source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 100%
+
+---
+
+
+# 自動的に収集される情報
+
+Adobe Experience Cloud SDK は、特別な設定をしなくても、多数の情報を自動的に収集します。ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
+
+## デバイス（`device`）
+
+デバイスに関する情報。ユーザーエージェント文字列からサーバサイドを参照できるデータは含みません。
+
+### 画面の高さ
+
+| **ペイロード内のパス：** | **例：** |
+| ---------------------------------- | ------------ |
+| `events[].xdm.device.screenHeight` | `900` |
+
+画面の高さをピクセル単位で指定します。
+
+### 画面の向き
+
+| **ペイロード内のパス：** | **可能な値：** |
+| --------------------------------------- | ------------------------- |
+| `events[].xdm.device.screenOrientation` | `landscape` または `portrait` |
+
+画面の向き。
+
+### 画面の幅
+
+| **ペイロード内のパス：** | **例：** |
+| --------------------------------- | ------------ |
+| `events[].xdm.device.screenWidth` | `1440` |
+
+画面の幅をピクセル単位で指定します。
+
+## 環境（`environment`）
+
+ブラウザー環境の詳細。
+
+### 環境タイプ
+
+ブラウザー
+
+| **ペイロード内のパス：** | **例：** |
+| ------------------------------- | ------------ |
+| `events[].xdm.environment.type` | `browser` |
+
+エクスペリエンスが表示された環境のタイプ。JavaScript 版 Adobe Experience Platform SDK では、常に `browser` が設定されます。
+
+### ビューポートの高さ
+
+| **ペイロード内のパス：** | **例：** |
+| -------------------------------------------------------- | ------------ |
+| `events[].xdm.environment.browserDetails.viewportHeight` | `679` |
+
+ブラウザーのコンテンツ領域の高さをピクセル単位で指定します。
+
+### ビューポートの幅
+
+| **ペイロード内のパス：** | **例：** |
+| ------------------------------------------------------- | ------------ |
+| `events[].xdm.environment.browserDetails.viewportWidth` | `642` |
+
+ブラウザーのコンテンツ領域の幅をピクセル単位で指定します。
+
+## 実装の詳細
+
+イベントの収集に使用した SDK に関する情報です。
+
+### 名前
+
+| **ペイロード内のパス：** | **例：** |
+| ----------------------------------------- | --------------------------------------- |
+| `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
+
+ソフトウェア開発キット（SDK）の ID。このフィールドでは、URI を使用で、異なるソフトウェアライブラリで提供される ID 間の一意性を改善します。
+
+### バージョン
+
+| **ペイロード内のパス：** | **例：** |
+| -------------------------------------------- | ------------ |
+| `events[].xdm.implementationDetails.version` | `0.11.0` |
+
+### 環境
+
+| **ペイロード内のパス：** | **例：** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser` |
+
+
+## 場所コンテキスト（`placeContext`）
+
+エンドユーザーの場所に関する限定的な情報。
+
+### 現地時間
+
+| **ペイロード内のパス：** | **例：** |
+| ------------------------------------- | ------------------------------- |
+| `events[].xdm.placeContext.localTime` | `2019-08-07T15:47:17.129-07:00` |
+
+エンドユーザーのローカルタイムスタンプ（簡易拡張 ISO 形式 [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6) のエンドユーザーのローカルタイムスタンプを使用）。
+
+### ローカルタイムゾーンのオフセット
+
+| **ペイロード内のパス：** | **例：** |
+| ----------------------------------------------- | ------------ |
+| `events[].xdm.placeContext.localTimezoneOffset` | `360` |
+
+ユーザーが GMT からオフセットする時間（分）。
+
+## タイムスタンプ
+
+| **ペイロード内のパス：** | **例：** |
+| ------------------------ | -------------------------- |
+| `events[].xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+
+イベントのタイムスタンプ。コンテキストのこの部分は削除できません。
+
+エンドユーザーの UTC タイムスタンプ（簡易拡張 ISO 形式 [ISO 8601](https://tools.ietf.org/html/rfc3339#section-5.6) のエンドユーザーのローカルタイムスタンプを使用）。
+
+## Web の詳細（`web`）
+
+ユーザーが閲覧しているページの詳細。
+
+### 現在のページ URL
+
+| **ペイロード内のパス：** | **例：** |
+| ------------------------------------- | ------------------------------------ |
+| `events[].xdm.web.webPageDetails.URL` | `https://somesite.com/somepage.html` |
+
+現在のページの URL。
+
+### リファラー URL
+
+| **ペイロード内のパス：** | **例：** |
+| ---------------------------------- | ----------------------------------------- |
+| `events[].xdm.web.webReferrer.URL` | `http://somereferrer.com/linkedpage.html` |
+
+前に訪問したページの URL。
