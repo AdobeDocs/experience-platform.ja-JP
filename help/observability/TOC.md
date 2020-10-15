@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: 観察性インサイトガイド
-user-guide-description: Monitor Platform activities through the use of statistical metrics and event notifications.
+user-guide-title: Observability Insights ガイド
+user-guide-description: 統計指標とイベント通知を使用して、Platform アクティビティを監視します。
 translation-type: tm+mt
 source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 60%
+source-wordcount: '55'
+ht-degree: 74%
 
 ---
 
