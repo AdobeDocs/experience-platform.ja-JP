@@ -5,10 +5,10 @@ description: Experience Platform Web SDK のイベントのトラッキング方
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 56%
+source-wordcount: '1139'
+ht-degree: 54%
 
 ---
 
@@ -54,7 +54,7 @@ alloy("sendEvent", {
 
 ### `eventType` の設定
 
-In an XDM experience event, there is an optional `eventType` field. ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信するイベントを区別するのに役立ちます。 XDMには、ユーザが使用できる定義済みのイベントタイプがいくつか用意されています。また、ユースケースに合わせて独自のカスタムイベントタイプを常に作成することもできます。 以下は、XDMが提供するあらかじめ定義されたイベントタイプのリストです。
+In an XDM experience event, there is an optional `eventType` field. ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信するイベントを区別するのに役立ちます。 XDMには、ユーザが使用できる定義済みのイベントタイプがいくつか用意されています。また、ユースケースに合わせて独自のカスタムイベントタイプを常に作成することもできます。 以下は、XDMが提供するあらかじめ定義されたイベントタイプのリストです。 [XDMの公開レポートで詳しく読む](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
 
 
 | **イベントタイプ:** | **定義:** |
@@ -83,7 +83,7 @@ In an XDM experience event, there is an optional `eventType` field. ここには
 | delivery.feedback | 配信のフィードバックイベント。 電子メール配信用のフィードバックイベントの例 |
 
 
-これらのイベントタイプは、Launch拡張機能を使用する場合や、Launchを使用せずに常に渡すことができる場合は、ドロップダウンに表示されます。 They can be passed in as part of the `xdm` option.
+これらのイベントタイプは、Adobe Experience Platform Launchの拡張機能を使用している場合や、Experience Platform Launchなしでいつでも渡すことができる場合は、ドロップダウンに表示されます。 They can be passed in as part of the `xdm` option.
 
 
 ```javascript
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### ID情報の追加
 
-カスタムID情報をイベントに追加することもできます。 Experience CloudIDの [取得を参照してください。](./identity.md)
+カスタムID情報をイベントに追加することもできます。 Experience CloudIDの [取得を参照してください。](../identity/overview.md)
 
 ## sendBeacon API の使用
 
@@ -205,7 +205,7 @@ alloy("configure", {
 `xdm` フィールドは次の順序で設定されます。
 
 1. イベントコマンド　`alloy("sendEvent", { xdm: ... });`　にオプションとして渡される値
-2. 自動的に収集された値（[自動情報](../reference/automatic-information.md)を参照）
+2. 自動的に収集された値（[自動情報](../data-collection/automatic-information.md)を参照）
 3. `onBeforeEventSend` コールバックで加えられた変更です。
 
 `onBeforeEventSend` コールバックでが例外をスローしてもイベントは送信されますが、コールバック内で加えられ変更は、最終的なイベントには適用されません。
