@@ -5,9 +5,9 @@ description: 'Experience Platformエッジネットワークを構成する方�
 seo-description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '891'
 ht-degree: 3%
 
 ---
@@ -17,21 +17,23 @@ ht-degree: 3%
 
 Adobe Experience Platformの構成 [!DNL Web SDK] は2か所に分かれている。 SDKの [configureコマンド](configuring-the-sdk.md) は `edgeDomain`、クライアントで処理する必要のある操作（例：）を制御します。 エッジ設定は、SDKのその他すべての設定を処理します。 リクエストがAdobe Experience Platformに送信されると、 [!DNL Edge Network]がサーバ側の設定 `edgeConfigId` の参照に使用されます。 これにより、Webサイトでコードを変更することなく、設定を更新できます。
 
+この機能を使用するには、組織がプロビジョニングされている必要があります。 許可リストを使用するには、Certified Software Manager(CSM)に問い合わせてください。
+
 ## エッジ設定IDの作成
 
-エッジ設定IDは、エッジ設定ツールを使用してAdobe [!DNL Launch] で作成できます。 このツールを使用すると、エッジ設定と、それらの設定内の環境の両方を作成できます。
+エッジ設定IDは、エッジ設定ツールを使用してAdobe [!DNL Experience Platform Launch] で作成できます。 このツールを使用すると、エッジ設定と、それらの設定内の環境の両方を作成できます。
 
 ![エッジ設定ツールのナビゲーション](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
 >
->エッジ設定ツールは、タグマネージャーとして使用しているかどうかに関係なく、許可リスト [!DNL Launch] 上で利用できます。 また、での開発権限も必要で [!DNL Launch]す。 詳しくは、ドキュメントの「 [ユーザー権限](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/user-permissions.html) 」 [!DNL Launch] の記事を参照してください。
+>エッジ設定ツールは、タグマネージャーとして使用しているかどうかに関係なく、許可リスト [!DNL Experience Platform Launch] 上で利用できます。 また、での開発権限も必要で [!DNL Experience Platform Launch]す。 詳しくは、ドキュメントの「 [ユーザー権限](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/user-permissions.html) 」 [!DNL Experience Platform Launch] の記事を参照してください。
 
 エッジ設定を作成するには、画面の右上領域にある **[!UICONTROL 新規エッジ設定]** (New Edge Configuration)をクリックします。 名前と説明を指定すると、各環境のデフォルト設定が求められます。
 
 ### デフォルトの環境設定
 
-これらのデフォルト設定は、同じ設定で最初の3つの環境を作成する場合に使用します。 これらの3つの環境は、 *dev*、 *stage*、 *prod*&#x200B;です。 これらは、の3つのデフォルト環境に一致し [!DNL Launch]ます。 開発環境への [!DNL Launch] ライブラリを構築する場合、ライブラリは設定の開発環境を自動的に使用します。 個々の環境の設定を必要に応じて編集できます。
+これらのデフォルト設定は、同じ設定で最初の3つの環境を作成する場合に使用します。 これらの3つの環境は、 *dev*、 *stage*、 *prod*&#x200B;です。 これらは、の3つのデフォルト環境に一致し [!DNL Experience Platform Launch]ます。 開発環境への [!DNL Experience Platform Launch] ライブラリを構築する場合、ライブラリは設定の開発環境を自動的に使用します。 個々の環境の設定を必要に応じて編集できます。
 
 SDKでとして使用されるID `edgeConfigId` は、設定と環境を指定する複合IDです。 環境が存在しない場合は、実稼働環境が使用されます。
 
@@ -113,7 +115,7 @@ SDKが [URLの宛先を介してセグメント情報を共有できるように
 
 #### Adobe Analytics
 
-データをAdobe Analyticsに送信するかどうかを制御します。 詳しくは、 [Analyticsの概要を参照してください](../solution-specific/analytics/analytics-overview.md)。
+データをAdobe Analyticsに送信するかどうかを制御します。 詳しくは、 [Analyticsの概要を参照してください](../data-collection/adobe-analytics/analytics-overview.md)。
 
 ![Adobe Analytics設定ブロック](../../assets/edge_configuration_aa.png)
 
