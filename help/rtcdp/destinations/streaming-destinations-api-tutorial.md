@@ -5,9 +5,9 @@ title: ストリーミング送信先への接続とデータのアクティブ�
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: 65ad4d09d95cdd52e75221e6646a684bab3c277d
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1813'
 ht-degree: 60%
 
 ---
@@ -32,7 +32,7 @@ If you prefer to use the user interface in Adobe&#39;s Real-time CDP to connect 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [[!DNLカタログサービス]](../../catalog/home.md): [!DNL Catalog] は、Experience Platform内のデータの場所と系列のレコードシステムです。
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] は、Experience Platform内のデータの場所と系列のレコードシステムです。
 * [サンドボックス](../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 次のセクションでは、AdobeReal-time CDPでストリーミング宛先に対してデータをアクティブ化する際に知っておく必要がある追加情報について説明します。
@@ -166,7 +166,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }
 ```
 
-### Experience Platform データへの接続 
+### Experience Platform データへの接続  {#connect-to-platform-data}
 
 **API 形式**
 
@@ -263,12 +263,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
 * `{AUTHENTICATION_CREDENTIALS}`:ストリーミング先の名前を入力します。例： `Amazon Kinesis authentication credentials` または `Azure Event Hubs authentication credentials`。
-* `{ACCESS_ID}`: *接続[!DNL Amazon Kinesis]の場合。* AmazonKinesisストレージの場所のアクセスID。
-* `{SECRET_KEY}`: *接続[!DNL Amazon Kinesis]の場合。* AmazonKinesisストレージの場所の秘密キー。
-* `{REGION}`: *接続[!DNL Amazon Kinesis]の場合。* AdobeReal-time CDPがデータをストリーミングする [!DNL Amazon Kinesis] アカウント内の領域。
-* `{SAS_KEY_NAME}`: *接続[!DNL Azure Event Hubs]の場合。* SASキー名を入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* `{SAS_KEY}`: *接続[!DNL Azure Event Hubs]の場合。* SASキーを入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
-* `{EVENT_HUB_NAMESPACE}`: *接続[!DNL Azure Event Hubs]の場合。* AdobeReal-time CDPがデータをストリーミングする [!DNL Azure Event Hubs] 名前空間を入力します。 詳しくは、ドキュメントの「イベントハブの [作成」名前空間](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照して [!DNL Microsoft] ください。
+* `{ACCESS_ID}`: *接続 [!DNL Amazon Kinesis] の場合。* AmazonKinesisストレージの場所のアクセスID。
+* `{SECRET_KEY}`: *接続 [!DNL Amazon Kinesis] の場合。* AmazonKinesisストレージの場所の秘密キー。
+* `{REGION}`: *接続 [!DNL Amazon Kinesis] の場合。* AdobeReal-time CDPがデータをストリーミングする [!DNL Amazon Kinesis] アカウント内の領域。
+* `{SAS_KEY_NAME}`: *接続 [!DNL Azure Event Hubs] の場合。* SASキー名を入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* `{SAS_KEY}`: *接続 [!DNL Azure Event Hubs] の場合。* SASキーを入力します。 SASキーを使用し [!DNL Azure Event Hubs] たときの認証については、 [Microsoftのドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)。
+* `{EVENT_HUB_NAMESPACE}`: *接続 [!DNL Azure Event Hubs] の場合。* AdobeReal-time CDPがデータをストリーミングする [!DNL Azure Event Hubs] 名前空間を入力します。 詳しくは、ドキュメントの「イベントハブの [作成」名前空間](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) を参照して [!DNL Microsoft] ください。
 
 **応答** 
 
@@ -319,9 +319,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`：前述の手順で取得したベース接続 ID を使用します。
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
-* `{NAME_OF_DATA_STREAM}`: *接続[!DNL Amazon Kinesis]の場合。* アカウント内の既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 AdobeReal-time CDPは、このストリームにデータをエクスポートします。
-* `{REGION}`: *接続[!DNL Amazon Kinesis]の場合。* AdobeReal-time CDPがをストリーミングする、AmazonKinesisアカウント内の領域。
-* `{EVENT_HUB_NAME}`: *接続[!DNL Azure Event Hubs]の場合。* AdobeReal-time CDPがデータをストリーミングする [!DNL Azure Event Hub] 名前を入力します。 詳しくは、ドキュメントの「イベントハブの [作成](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 」を参照して [!DNL Microsoft] ください。
+* `{NAME_OF_DATA_STREAM}`: *接続 [!DNL Amazon Kinesis] の場合。* アカウント内の既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 AdobeReal-time CDPは、このストリームにデータをエクスポートします。
+* `{REGION}`: *接続 [!DNL Amazon Kinesis] の場合。* AdobeReal-time CDPがをストリーミングする、AmazonKinesisアカウント内の領域。
+* `{EVENT_HUB_NAME}`: *接続 [!DNL Azure Event Hubs] の場合。* AdobeReal-time CDPがデータをストリーミングする [!DNL Azure Event Hub] 名前を入力します。 詳しくは、ドキュメントの「イベントハブの [作成](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) 」を参照して [!DNL Microsoft] ください。
 
 **応答** 
 
