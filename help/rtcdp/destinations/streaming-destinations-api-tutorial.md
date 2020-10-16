@@ -5,7 +5,7 @@ title: ストリーミング送信先への接続とデータのアクティブ�
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 65ad4d09d95cdd52e75221e6646a684bab3c277d
+source-git-commit: 51dd255156229adcb80c2a04aa1ccd5b01208a66
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 60%
@@ -141,7 +141,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {IMS_ORG}' \
---header 'x-sandbox-name: {SANDBOX_NAME} \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
             "name": "Base connection to Experience Platform",
