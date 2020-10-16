@@ -5,9 +5,9 @@ title: Adobe Experience PlatformUIガイド
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
+source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 「 **[!UICONTROL ホーム]** 」セクションでは、プラットフォームUIのホームページに戻ることができます。
 
-「 **[!UICONTROL ワークフロー]** 」セクションには、プラットフォーム内で操作を実行するための複数手順のワークフローのリストが表示されます。
+「 **[!UICONTROL ワークフロー]** 」セクションには、プラットフォーム内で操作を実行するための複数手順のワークフローのリストが表示されます。 ワークフローの詳細については、 [ワークフローの概要を参照してください](./workflows.md)。
 
 ### [!UICONTROL 接続]
 
