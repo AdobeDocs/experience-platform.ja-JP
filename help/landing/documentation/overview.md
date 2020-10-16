@@ -5,10 +5,10 @@ title: Adobe Experience Platform ドキュメントの概要
 topic: overview
 description: Adobe Experience Platformのドキュメントは、ユーザーインターフェイスと API の両方の概要、チュートリアル、ガイドなど、複数の形式で提供されています。Experience Platformサービスで使用できる最も一般的なドキュメントの種類を簡単に説明します。
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1035'
+ht-degree: 44%
 
 ---
 
@@ -31,7 +31,7 @@ Adobe Experience Platformのドキュメントは、ユーザーインターフ�
 
 * **チュートリアル：**&#x200B;チュートリアルは、UI、API、またはその両方を順に示し、特定の結果へと導きます。開発者ガイドとは異なり、API チュートリアルは 1 つまたは 2 つのエンドポイントのみに焦点を当てている可能性があり、完全な API リソースではありません。同様に、UI チュートリアルでは、そのサービスで使用できる完全なユーザインターフェイスではなく、特定の手順にのみ焦点を当てる場合があります。チュートリアルは、多くの場合、より大規模なワークフローの一部であり、次に試すチュートリアルを説明する「次のステップ」を示しています。
 
-* **ユーザーガイド：**[!DNL Platform]ユーザーガイドでは、特定のサービスの UI で使用できるアクションの概要を説明しています。これらのドキュメントには、ユーザーインターフェイスを介した Platform の操作に焦点を当てたスクリーンショットと手順が含まれています。開発者ガイドと同様に、ユーザーガイドでは、回避べき「了解事項」を含む、使用可能なすべてのアクションとオプションの概要を説明しています。これは、UI を操作する際の最も詳細なリソースです。
+* **UIガイド：** UIガイドでは、特定のサービスに対してユー [!DNL Platform] ザーインターフェイスで使用できるアクションについて概説します。 これらのドキュメントには、UIを使用したプラットフォームとの対話に重点を置いたスクリーンショットと手順が含まれています。 開発者ガイドと同様に、UIガイドでは、回避する「了解事項」など、使用可能なすべてのアクションとオプションについて概説します。 これは、UI を操作する際の最も詳細なリソースです。
 
 ## ドキュメントの言語サポート
 
@@ -39,7 +39,7 @@ Experience Platformのドキュメントは複数の言語で提供されてい�
 
 ![画像](../images/overview/lang.jpg)
 
-## [!DNL Experience Platform]ドキュメント
+## [!DNL Experience Platform] ドキュメント
 
 現在、以下に示す Adobe Experience Platform のサービスおよび機能に関するドキュメントが提供されています。ここで説明する簡単な説明を通して、サービスの詳細を学び、左側のナビゲーションにあるアルファベット順のリストから選択して、さらに深く理解することができます。
 
@@ -63,6 +63,6 @@ Experience Platformのドキュメントは複数の言語で提供されてい�
 * **[!DNL Query Service]:** SQLクエリを使用して、Adobeソリューションデータ、お客様のファーストパーティデータ、その他のプラットフォームデータなど、Adobe Experience Platformからデータを取得します。
 * **[!DNL Real-time Customer Data Platform]:** リアルタイムCDPは、複数のエンタープライズ・データ・ソースを組み合わせて、1対1のパーソナライズされた顧客体験をすべてのチャネルとデバイスに提供するために、リアルタイムで統合プロファイルを作成します。
 * **[!DNL Sandboxes]:** サンドボックスでは、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立ちます。
+* **スキーマ**:Adobe主導のExperience Data Model(XDM)は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。 XDM schemas support the interoperability of data across [!DNL Experience Platform] components.
 * **[!DNL Segmentation]:** リアルタイム顧客プロファイルデータに基づいてセグメントを作成し、オーディエンスや電力消費者エクスペリエンスを生み出します。
 * **[!DNL Sources]（接続）:**{#sources} Adobeアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからAdobe Experience Platformにデータを取り込みます。
-* **スキーマ**:Adobe主導のExperience Data Model(XDM)は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。 XDM schemas support the interoperability of data across [!DNL Experience Platform] components.
