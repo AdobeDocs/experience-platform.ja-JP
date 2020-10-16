@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
@@ -20,5 +20,10 @@ ht-degree: 0%
 # Experience PlatformUIツアー
 
 このビデオでは、Experience CloudからExperience Platformに移動する方法、ホームページの操作方法、サンドボックスの切り替え方法、UI内の様々なナビゲーション要素の使用方法など、Adobe Experience Platformのユーザーインターフェイス(UI)の概要を簡単に説明します。
+
+>[!NOTE]
+>
+>Experience Platformのユーザーインターフェイスは頻繁に更新され、このビデオの録画以降に変更された可能性があります。
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
