@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform が、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
 translation-type: tm+mt
-source-git-commit: e36a6be43bffa90ce707933c5f9407fade0b6474
+source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 72%
@@ -26,13 +26,13 @@ ht-degree: 72%
    * [役割とプロジェクトのフェーズ（ビデオ）](video/roles-project-phases.md)
 * Experience PlatformUI {#platform-ui}
    * [プラットフォームUIガイド](ui-guide.md)
-   * [プラットフォームワークフローガイド](workflows.md)
    * [プラットフォームUIツアー（ビデオ）](video/platform-ui.md)
+   * [ワークフローUIガイド](workflows.md)
    * [ブラウザーと言語のサポート](browser-language-support.md)
 * Experience PlatformAPI {#platform-apis}
    * [API の基本事項](api-fundamentals.md)
+   * [APIリファレンスドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
    * [Experience Platform API に対する認証](https://docs.adobe.com/content/help/en/platform-learn/tutorials/platform-api-authentication.html)
-   * [プラットフォームAPIリファレンスドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
 * プラットフォームドキュメント {#documentation}
    * [ドキュメントの概要](documentation/overview.md)
    * [アクセス制御](https://docs.adobe.com/content/help/ja-JP/experience-platform/access-control/home.html)
@@ -56,8 +56,8 @@ ht-degree: 72%
    * [クエリサービス](https://docs.adobe.com/content/help/ja-JP/experience-platform/query/home.html)
    * [リアルタイムの顧客データプラットフォーム](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/overview.html)
    * [サンドボックス](https://docs.adobe.com/content/help/ja-JP/experience-platform/sandbox/home.html)
+   * [スキーマ(XDM)](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/home.html)
    * [セグメント](https://docs.adobe.com/content/help/ja-JP/experience-platform/segmentation/home.html)
-   * [スキーマ](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/home.html)
    * [ソース（コネクタ）](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [Web SDK](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/home.html)
 * Adobeエコシステムのプラットフォーム {#ecosystem}
