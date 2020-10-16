@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
-solution: Adobe Experience Platform
 title: アプリケーションサービスドキュメント
 topic: overview
 description: Adobe Experience Platformのドキュメントは、ユーザーインターフェイスと API の両方の概要、チュートリアル、ガイドなど、複数の形式で提供されています。Experience Platformサービスで使用できる最も一般的なドキュメントの種類を簡単に説明します。
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 65ad4d09d95cdd52e75221e6646a684bab3c277d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '85'
+ht-degree: 45%
 
 ---
 
