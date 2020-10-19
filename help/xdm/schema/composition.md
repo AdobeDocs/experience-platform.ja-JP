@@ -5,9 +5,9 @@ title: スキーマ合成の基本
 topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '2839'
+source-wordcount: '2834'
 ht-degree: 55%
 
 ---
@@ -194,10 +194,10 @@ For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and 
 
 ダウンストリームサービスやアプリケーションで使用される一部のデータ操作では、特定のフィールドタイプに制約が適用されます。影響を受けるサービスには、次のものが含まれます。
 
-* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md)
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNLセグメント]](../../segmentation/home.md)
-* [[!DNLクエリサービス]](../../query-service/home.md)
+* [[!DNL Segmentation]](../../segmentation/home.md)
+* [[!DNL Query Service]](../../query-service/home.md)
 * [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
 
 ダウンストリームサービスで使用するスキーマを作成する前に、スキーマが意図するデータ操作のフィールド要件と制約をより深く理解するために、これらのサービスに関する適切なドキュメントを確認してください。
@@ -238,7 +238,12 @@ All datafiles that are ingested into [!DNL Experience Platform] must conform to 
 
 ## 次の手順
 
-Now that you understand the basics of schema composition, you are ready to begin building schemas using the [!DNL Schema Registry].
+Now that you understand the basics of schema composition, you are ready to begin exploring and building schemas using the [!DNL Schema Registry].
+
+2つのコアXDMクラスの構造と、それらの一般的に使用される互換性のあるミックスインを確認するには、次のリファレンスドキュメントを参照してください。
+
+* [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
+* [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
 The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. The [!DNL Schema Library] contains Industry resources defined by Adobe, Vendor resources defined by [!DNL Experience Platform] partners, and classes, mixins, data types, and schemas that have been composed by members of your organization.
 
