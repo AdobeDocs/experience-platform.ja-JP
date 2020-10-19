@@ -220,7 +220,7 @@ alloy("sendEvent", {
 | `consentStringValue` | CMPによって生成された、Base-64エンコードされた同意文字列。 |
 | `gdprApplies` | GDPRが現在ログインしている顧客に適用されるかどうかを示すBoolean値。 TCF 2.0をこのお客様に適用するには、値を「true」に設定する必要があります。 |
 
-### SDKレスポンスの処理
+### SDKレスポンスの処理 {#sdk-1}
 
 すべての [!DNL Platform SDK] コマンドは、呼び出しが成功したか失敗したかを示すプロミスを返します。 その後、これらの応答を、確認メッセージを顧客に表示するなどの追加のロジックに使用できます。 特定の例については、SDKコマンドの実行に関するガイドの成功または失敗の [処理に関する節を参照してください](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) 。
 
