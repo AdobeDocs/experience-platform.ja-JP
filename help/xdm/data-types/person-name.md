@@ -1,0 +1,36 @@
+---
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;fullName;xdm:fullName;person name;name;datatype;data-type;data type;
+solution: Experience Platform
+title: 個人名データ型
+topic: overview
+description: このドキュメントでは、Person Name XDMデータ型の概要を説明します。
+translation-type: tm+mt
+source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 23%
+
+---
+
+
+# [!UICONTROL 個人名] 、データ型
+
+[!UICONTROL Person name] （個人名）は、個人のフルネームを記述する標準のXDMデータ型です。 名前構造の表記は言語や文化によって大きく異なるので、名前は常にこのデータ型を使ってモデル化する必要があります。
+
+また、データ型には、正式な挨拶や非公式のあいさつ文の作成など、フルネームのフラグメントのみを使用する必要がある状況で使用できる多数のオプションのプロパティが用意されています。
+
+<img src="../images/data-types/person-name.png" width="500" /><br />
+
+| プロパティ | 説明 |
+| --- | --- |
+| `courtesyTitle` | 敬称、敬称（敬称、敬称など）の省略形( `Mr.`、 `Miss.`、 `Dr.`など)。 |
+| `firstName` | 名前の言語で最も一般的に受け入れられる、書き込み順の名前の最初のセグメント。 |
+| `fullName` | 名前の言語で最も一般的に受け入れられる、書き方の順での人のフルネーム。 |
+| `lastName` | 名前の言語で最も一般的に受け入れられる、書き込み順序の名前の最後のセグメント。 |
+| `middleName` | 姓と名の間に付けられたミドルネーム、代替ネームまたは追加ネーム。 |
+| `suffix` | 追加情報( `Jr.`、、、、 `Sr.`、 `M.D.`、 `PhD`、 `I``II``III`など)を提供するために、人名の後に提供されるレターのグループ。 |
+
+個人名データ型の詳細については、パブリックXDMリポジトリを参照してください。
+
+* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.example.1.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.schema.json)
