@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorials
 description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
 workflow-type: tm+mt
-source-wordcount: '2368'
-ht-degree: 79%
+source-wordcount: '2343'
+ht-degree: 80%
 
 ---
 
@@ -26,8 +26,8 @@ This tutorial uses the [!DNL Schema Registry] API to walk you through the steps 
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNLサンドボックス]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 
@@ -1614,7 +1614,7 @@ The schema implements the [!DNL XDM Individual Profile] class and combines multi
                 "stateProvince": {
                     "title": "State or province",
                     "type": "string",
-                    "description": "The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)][http://www.unece.org/cefact/locode/subdivisions.html] standard.",
+                    "description": "The state, or province portion of the observation. The format follows the ISO 3166-2 (country and subdivision) standard.",
                     "examples": [
                         "US-CA",
                         "DE-BB",
