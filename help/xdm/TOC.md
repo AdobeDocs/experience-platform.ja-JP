@@ -5,10 +5,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 90%
+source-wordcount: '194'
+ht-degree: 72%
 
 ---
 
@@ -16,12 +16,43 @@ ht-degree: 90%
 # エクスペリエンスデータモデル（XDM）システム {#xdm}
 
 * [XDM システムの概要](home.md)
-* XDM スキーマ {#schema}
-   * [スキーマ合成の基本](schema/composition.md)
+* スキーマ {#schema}
+   * [スキーマ構成の基本](schema/composition.md)
    * [XDMフィールド型の制約](schema/field-constraints.md)
    * [XDM フィールド辞書](schema/field-dictionary.md)
    * スキーマの使用例 {#use-cases}
       * [プライバシーの同意ミックスイン](schema/privacy-consent.md)
+* クラス {#classes}
+   * [XDM 個人プロファイル](./classes/individual-profile.md)
+   * [XDM ExperienceEvent](./classes/experienceevent.md)
+* ミックスイン {#mixins}
+   * プロファイルミックスイン {#profile}
+      * [IdentityMap](./mixins/profile/identitymap.md)
+      * [プロファイル担当者の詳細](./mixins/profile/person-details.md)
+      * [プロファイルの個人情報](./mixins/profile/personal-details.md)
+      * [プロファイル分類](./mixins/profile/segmentation.md)
+      * [プロファイル作業の詳細](./mixins/profile/work-details.md)
+   * イベントミックスイン {#event}
+      * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
+      * [ExperienceEvent環境の詳細](./mixins/event/environment-details.md)
+* データタイプ {#data-types}
+   * [Beacon](./data-types/beacon.md)
+   * [ブラウザーの詳細](./data-types/browser-details.md)
+   * [デバイス](./data-types/device.md)
+   * [電子メールアドレス](./data-types/email-address.md)
+   * [環境](./data-types/environment.md)
+   * [地域](./data-types/geo.md)
+   * [地域サークル](./data-types/geo-circle.md)
+   * [地域座標](./data-types/geo-coordinates.md)
+   * [地域とのやり取りの詳細](./data-types/geo-interaction-details.md)
+   * [ジオシェイプ](./data-types/geo-shape.md)
+   * [ID](./data-types/identity.md)
+   * [個人名](./data-types/person-name.md)
+   * [電話番号](./data-types/phone-number.md)
+   * [配置コンテキスト](./data-types/place-context.md)
+   * [POIの詳細](./data-types/poi-details.md)
+   * [POI相互作用](./data-types/poi-interaction.md)
+   * [住所](./data-types/postal-address.md)
 * スキーマレジストリ API {#api}
    * [はじめに](api/getting-started.md)
    * [リソースの一覧](api/list-resources.md)
