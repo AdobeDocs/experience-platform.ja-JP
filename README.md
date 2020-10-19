@@ -1,9 +1,16 @@
 ---
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: e647db615371f5a153e180e5a0d06fd7439a45c6
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '643'
+ht-degree: 66%
 
 ---
 # 貢献しているコンテンツ
+
+| EXL-PR | EXL | プレビュー | アクティブ化 | 公開日 | ヘルプ |
+|--- |--- |--- |--- |--- |--- |
+| [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [プレビューURL](https://experienceleague.corp.adobe.com/docs/experience-platform/using/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [ライブURL](https://experienceleague.adobe.com/docs/experience-platform/using/home.html?lang=en) | [オーサリングガイド](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 | 実稼動 | ステージ |
 |---|---|
@@ -16,7 +23,7 @@ translation-type: tm+mt
 
 このプロジェクトでは、[Adobe Open Source Code of Actions](code-of-conduct.md) または. NET Foundation [Code の実施を採用してい](https://dotnetfoundation.org/code-of-conduct)ます。詳しくは、[投稿](contributing.md)の記事を参照してください。
 
-## アドビのコンテンツに貢献する方法
+## Adobeコンテンツへの貢献方法
 
 「[Adobe Docs寄稿者ガイド](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)」を参照してください。
 
@@ -38,15 +45,15 @@ translation-type: tm+mt
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### アドビの従業員による主な変更または新しい記事
+### Adobeの従業員による主な変更または新規記事
 
-Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャーまたは開発者が、業務として技術記事の執筆やコントリビューションをする場合は、`https://git.corp.adobe.com/AdobeDocs` にあるプライベートリポジトリを使用する必要があります。詳細については、『 [内部コラボレーションガイド](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) 』を参照してください。
+Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャーまたは開発者が、業務として技術記事の執筆やコントリビューションをする場合は、`https://git.corp.adobe.com/AdobeDocs` にあるプライベートリポジトリを使用する必要があります。See the [Internal Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) for more information.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## Experience Platformドキュメントチームへの連絡
+## Experience Platformドキュメントチームへの問い合わせ
 
-上記のとおり、アドビコミュニティのメンバーは、適切な作成者に割り当てられる雑誌号を送信できます。 アドビの従業員は、問題を送信するか、エクスペリエンスプラットフォームのドキュメントチームに直接問い合わせることができます。 特定のプラットフォーム領域のリードライターを探すには、 [Adobe Experience Platform Documentation wikiを参照してください](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
+上述の通り、Adobeコミュニティのメンバーは、適切な作者に割り当てられる問題を提出できます。 Adobeの従業員は、雑誌号を送信するか、Experience Platformのドキュメントチームに直接問い合わせることができます。 特定のプラットフォーム領域のリードライターを見つけるには、 [Adobe Experience PlatformドキュメントWikiを参照してください](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
 
 ## ツールとセットアップ
 
