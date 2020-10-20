@@ -5,10 +5,10 @@ title: ジョブエンドポイントの書き出し
 topic: developer guide
 description: 書き出しジョブは、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 Adobe Experience PlatformセグメントAPIの/export/jobsエンドポイントを使用すると、エクスポートジョブをプログラムによって取得、作成およびキャンセルできます。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 783fa7ff0c22143a21c4f666c956c8b4d956189e
 workflow-type: tm+mt
-source-wordcount: '1561'
-ht-degree: 37%
+source-wordcount: '1666'
+ht-degree: 34%
 
 ---
 
@@ -202,7 +202,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
 | `destination` | エクスポートされたデータのエクスポート先情報：<ul><li>`datasetId`:データがエクスポートされたデータセットのID。</li><li>`segmentPerBatch`:セグメントIDが統合されているかどうかを示すBoolean値。 値が「false」の場合は、すべてのセグメントIDが1つのバッチIDにエクスポートされることを意味します。 値が「true」の場合は、1つのセグメントIDが1つのバッチIDにエクスポートされることを意味します。 **注意：** この値をtrueに設定すると、バッチエクスポートのパフォーマンスに影響する場合があります。</li></ul> |
 | `fields` | コンマで区切った、書き出すフィールドのリスト。 |
 | `schema.name` | データをエクスポートするデータセットに関連付けられているスキーマの名前。 |
-| `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`:プロファイルのエクスポート先のセグメントID。</li><li>`segmentNs`:指定したのセグメント名前空間 `segmentID`。</li><li>`status`:のステータスフィルターを提供する文字列の配列で `segmentID`す。 デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。使用できる値は次のとおりです。「reliated」、「existing」および「exited」。</li></ul> |
+| `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`:プロファイルのエクスポート先のセグメントID。</li><li>`segmentNs`:指定したのセグメント名前空間 `segmentID`。</li><li>`status`:のステータスフィルターを提供する文字列の配列で `segmentID`す。 デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。使用できる値は次のとおりです。「reliated」、「existing」および「exited」。 値が「realized」の場合は、プロファイルがセグメントに入っていることを意味します。 「既存」の値は、プロファイルが引き続きセグメント内にあることを意味します。 値が「exiting」の場合は、プロファイルがセグメントを終了していることを意味します。</li></ul> |
 | `mergePolicy` | エクスポートしたデータのポリシー情報をマージします。 |
 | `metrics.totalTime` | 書き出しジョブの実行に要した合計時間を示すフィールドです。 |
 | `metrics.profileExportTime` | プロファイルの書き出しに要した時間を示すフィールドです。 |
@@ -281,7 +281,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | コンマで区切った、書き出すフィールドのリスト。空白の場合、すべてのフィールドが書き出されます。 |
 | `mergePolicy` | 書き出されたデータを管理するマージポリシーを指定します。 複数のセグメントがエクスポートされる場合は、このパラメーターを含めます。指定されなかった場合、書き出しは指定されたセグメントと同じ結合ポリシーを使用します。 |
 | `filter` | 以下に示すサブプロパティに応じて、ID、認定時間、または取り込み時間で、書き出しジョブに含めるセグメントを指定するオブジェクト。 空白の場合、すべてのデータが書き出しされます。 |
-| `filter.segments` | 書き出すセグメントを指定します。 この値を省略すると、すべてのプロファイルのすべてのデータがエクスポートされます。次のフィールドを含むセグメントオブジェクトの配列を受け入れます。<ul><li>`segmentId`：**（`segments`を使用する場合は必須）**&#x200B;エクスポートするプロファイルのセグメント ID。</li><li>`segmentNs` *（オプション）*&#x200B;指定した `segmentID` のセグメント名前空間。</li><li>`status` *（オプション）*`segmentID` のステータスフィルターを提供する文字列の配列。デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。`"realized"`、`"existing"`、`"exited"` などの値が使用されます。</li></ul> |
+| `filter.segments` | 書き出すセグメントを指定します。 この値を省略すると、すべてのプロファイルのすべてのデータがエクスポートされます。次のフィールドを含むセグメントオブジェクトの配列を受け入れます。<ul><li>`segmentId`：**（`segments` を使用する場合は必須）**&#x200B;エクスポートするプロファイルのセグメント ID。</li><li>`segmentNs` *（オプション）*&#x200B;指定した `segmentID` のセグメント名前空間。</li><li>`status` *（オプション）*`segmentID` のステータスフィルターを提供する文字列の配列。デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。`"realized"`、`"existing"`、`"exited"` などの値が使用されます。値が「realized」の場合は、プロファイルがセグメントに入っていることを意味します。 「既存」の値は、プロファイルが引き続きセグメント内にあることを意味します。 値が「exiting」の場合は、プロファイルがセグメントを終了していることを意味します。</li></ul> |
 | `filter.segmentQualificationTime` | セグメントクオリフィケーション時間に基づいてフィルターします。 開始時間および/または終了時間を指定できます。 |
 | `filter.segmentQualificationTime.startTime` | 特定のステータスのセグメントIDに対するセグメントクオリフィケーション開始時間。 指定されていない場合、セグメント ID 認定の開始時間にフィルターは適用されません。タイムスタンプは [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
 | `filter.segmentQualificationTime.endTime` | 特定のステータスのセグメントIDに対するセグメントクオリフィケーションの終了時間。 指定されていない場合、セグメント ID 認定の終了時間にフィルターは適用されません。タイムスタンプは [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
@@ -472,7 +472,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
 | `destination` | エクスポートされたデータのエクスポート先情報：<ul><li>`datasetId`:データがエクスポートされたデータセットのID。</li><li>`segmentPerBatch`:セグメントIDが統合されているかどうかを示すBoolean値。 A value of `false` means all the segment IDs were into a single batch ID. 値がの場合、1つのセグメントIDが1つのバッチIDにエクスポートされます。 `true`</li></ul> |
 | `fields` | コンマで区切った、書き出すフィールドのリスト。 |
 | `schema.name` | データをエクスポートするデータセットに関連付けられているスキーマの名前。 |
-| `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`:エクスポートするプロファイルのセグメントID。</li><li>`segmentNs`:指定したのセグメント名前空間 `segmentID`。</li><li>`status`:のステータスフィルターを提供する文字列の配列で `segmentID`す。 デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。使用できる値は次のとおりです。「reliated」、「existing」および「exited」。</li></ul> |
+| `filter.segments` | 書き出されるセグメント。 次のフィールドが含まれます。<ul><li>`segmentId`:エクスポートするプロファイルのセグメントID。</li><li>`segmentNs`:指定したのセグメント名前空間 `segmentID`。</li><li>`status`:のステータスフィルターを提供する文字列の配列で `segmentID`す。 デフォルトでは、`status` は、現在の時刻にセグメントに含まれているすべてのプロファイルを表す値 `["realized", "existing"]` を持ちます。使用できる値は次のとおりです。「reliated」、「existing」および「exited」。  値が「realized」の場合は、プロファイルがセグメントに入っていることを意味します。 「既存」の値は、プロファイルが引き続きセグメント内にあることを意味します。 値が「exiting」の場合は、プロファイルがセグメントを終了していることを意味します。</li></ul> |
 | `mergePolicy` | エクスポートしたデータのポリシー情報をマージします。 |
 | `metrics.totalTime` | 書き出しジョブの実行に要した合計時間を示すフィールドです。 |
 | `metrics.profileExportTime` | プロファイルの書き出しに要した時間を示すフィールドです。 |
