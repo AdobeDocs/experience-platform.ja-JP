@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
 solution: Experience Platform
 title: Segmentation Serviceユーザーガイド
 topic: ui guide
 description: Adobe Experience Platformセグメントサービスは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 23%
+source-wordcount: '1449'
+ht-degree: 24%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 23%
 Working with segment definitions requires an understanding of the various [!DNL Experience Platform] services involved with segmentation. このユーザガイドを読む前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 個人(顧客、見込み客、ユーザー、組織など) [!DNL Experience Platform] に関連付けて保存されているデータを、より小さなグループに分割できます。
-- [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-- [[!DNLAdobe Experience PlatformIDサービス]](../../identity-service/home.md):取り込まれる異なるデータソースのIDをブリッジ化して、顧客プロファイルを作成でき [!DNL Platform]ます。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):取り込まれる異なるデータソースのIDをブリッジ化して、顧客プロファイルを作成でき [!DNL Platform]ます。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
 
 また、このドキュメントを通して使用される次の 2 つの重要用語を知り、その違いを理解することも重要です。
