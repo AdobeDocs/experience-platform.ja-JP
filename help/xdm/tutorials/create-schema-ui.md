@@ -8,7 +8,7 @@ description: このチュートリアルでは、Experience Platform 内でス�
 translation-type: tm+mt
 source-git-commit: 9c7119ad836007af3437dc2e938b68aff3ca0f56
 workflow-type: tm+mt
-source-wordcount: '3835'
+source-wordcount: '3819'
 ht-degree: 17%
 
 ---
@@ -30,7 +30,7 @@ If you prefer to compose a schema using the [!DNL Schema Registry] API instead, 
 
 * [[!DNL Experience Data Model (XDM)]](../home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
    * [スキーマ合成の基本](../schema/composition.md)：XDM スキーマとその構築ブロック（クラス、mixin、データ型、フィールドなど）の概要です。
-* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 ## Browse existing schemas in the [!UICONTROL Schemas] workspace {#browse}
 
@@ -278,7 +278,7 @@ Now all data ingested into the `loyaltyId` field will be used to help identify t
 
 ## スキーマを [!DNL Real-time Customer Profile] {#profile}
 
-[[!DNLリアルタイム顧客プロファイル]](../../profile/home.md) 。個々の顧客の全体的な表示を提供するために、でIDデータ [!DNL Experience Platform] を利用します。 このサービスは、堅牢で360°の顧客属性プロファイルを構築し、お客様がと統合されたあらゆるシステムにわたって持つすべてのインタラクション顧客のタイムスタンプのあるアカウントを作成 [!DNL Experience Platform]します。
+[[!DNL Real-time Customer Profile]](../../profile/home.md) でアイデンティティデータ [!DNL Experience Platform] を活用して、各顧客の全体的な表示を提供します。 このサービスは、堅牢で360°の顧客属性プロファイルを構築し、お客様がと統合されたあらゆるシステムにわたって持つすべてのインタラクション顧客のタイムスタンプのあるアカウントを作成 [!DNL Experience Platform]します。
 
 In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. 最初にプライマリIDを定義せずにスキーマを有効にしようとすると、エラーメッセージが表示されます。
 
