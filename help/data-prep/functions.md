@@ -5,10 +5,10 @@ title: データ準備関数
 topic: overview
 description: このドキュメントでは、データ準備で使用するマッピング関数を紹介します。
 translation-type: tm+mt
-source-git-commit: d47410106a6d3955cc9af78e605c893f08185ffa
+source-git-commit: 16c718c7c653a0cfe4c3dcefddfc5472525e1828
 workflow-type: tm+mt
 source-wordcount: '3432'
-ht-degree: 20%
+ht-degree: 19%
 
 ---
 
@@ -102,9 +102,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | timestamp | 現在の Unix 時間を取得します。 |  | timestamp() | timestamp() | 1571850624571 |
 | format | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付： **必須** ：書式を設定するZonedDateTimeオブジェクトとしての入力日付。</li><li>形式： **必須** ：日付を変更する形式を指定します。</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
 | dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>TIMESTAMP: **必須** ：形式を設定するタイムスタンプ。 これはミリ秒で書き込まれます。</li><li>形式： **必須** ：タイムスタンプを変更する形式です。</li></ul> | dformat(TIMESTAMP, FORMAT) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-Oct-2019 11:24&quot; |
-| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** ：日付を表す文字列です。</li><li>形式： **必須** ：日付の形式を表す文字列です。</li><li>DEFAULT_DATE: **必須** ：指定した日付がnullの場合にデフォルトで返される日付です。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;23-Oct-2019 11:24&quot;, &quot;yyyy/MM/dd&quot;, now()) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** ：日付を表す文字列です。</li><li>形式： **必須** ：日付の形式を表す文字列です。</li></ul> | date(DATE, FORMAT) | date(&quot;23-Oct-2019 11:24&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
-| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** ：日付を表す文字列です。</li></ul> | date(DATE) | date(&quot;23-Oct-2019 11:24&quot;, &quot;yyyy/MM/dd&quot;) | &quot;2019-10-23T11:24:00+00:00&quot; |
+| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** ：日付を表す文字列です。</li><li>形式： **必須** ：日付の形式を表す文字列です。</li><li>DEFAULT_DATE: **必須** ：指定した日付がnullの場合にデフォルトで返される日付です。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
+| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** ：日付を表す文字列です。</li><li>形式： **必須** ：日付の形式を表す文字列です。</li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
+| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付： **必須** ：日付を表す文字列です。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | date_part | 日付の一部を取得します。次のコンポーネント値がサポートされています。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;millisecond&quot;<br>&quot;ms&quot; | <ul><li>コンポーネント： **必ず指定します** 。日付の一部を表す文字列です。 </li><li>日付： **必須** ：標準形式の日付です。</li></ul> | date_part(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
 | set_date_part | 指定された日付のコンポーネントを置き換えます。次のコンポーネントが受け入れられます。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>コンポーネント： **必ず指定します** 。日付の一部を表す文字列です。 </li><li>値： **必須** ：指定した日付のコンポーネントに設定する値です。</li><li>日付： **必須** ：標準形式の日付です。</li></ul> | set_date_part(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
 | make_date_time | 部分から日付を作成します。この関数は、make_timestampを使用して誘導することもできます。 | <ul><li>年： **必須** ：年を4桁で表します。</li><li>MONTH: **必須** ：月 指定できる値は1 ～ 12です。</li><li>DAY: **必須** ：日 指定できる値は1 ～ 31です。</li><li>HOUR: **必須** ：時間 指定できる値は0 ～ 23です。</li><li>分： **必須** ：分 指定できる値は0 ～ 59です。</li><li>ナノ秒： **必須** ：ナノ秒の値です。 指定できる値は0 ～ 99999999です。</li><li>TIMEZONE: **必須** ：日付時刻のタイムゾーンです。</li></ul> | make_date_time(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
