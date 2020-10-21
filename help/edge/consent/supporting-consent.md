@@ -5,9 +5,9 @@ description: Experience Platform Web SDK を使用して同意設定をサポー
 seo-description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '753'
 ht-degree: 63%
 
 ---
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-このように同意が設定されると、リアルタイム顧客プロファイルは同意情報で更新されます。 これを機能させるには、プロファイルXDMスキーマに [プロファイルプライバシーミックスインが含まれている必要があります](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md)。 イベントを送信する場合、IABの同意情報をイベントXDMオブジェクトに手動で追加する必要があります。 SDKは、イベントに同意情報を自動的に含めません。 同意情報をイベントに送信するには、エクスペリエンスイベント [のプライバシーMixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) をエクスペリエンスイベントスキーマに追加する必要があります。
+このように同意が設定されると、リアルタイム顧客プロファイルは同意情報で更新されます。 これを機能させるには、プロファイルXDMスキーマに [プロファイルプライバシーミックスインが含まれている必要があります](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)。 イベントを送信する場合、IABの同意情報をイベントXDMオブジェクトに手動で追加する必要があります。 SDKは、イベントに同意情報を自動的に含めません。 同意情報をイベントに送信するには、エクスペリエンスイベント [のプライバシーMixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) をエクスペリエンスイベントスキーマに追加する必要があります。
 
 ## 両方の標準を1回の要求で送信する
 
