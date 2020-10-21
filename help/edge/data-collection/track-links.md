@@ -5,10 +5,10 @@ description: Experience PlatformWeb SDKを使用してリンクデータをAdobe
 seo-description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: ab1618a9d8c6cc60407d301dad03983ce432bbbe
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -46,7 +46,7 @@ alloy("sendEvent", {
 
 ## 自動リンクトラッキング {#automaticLinkTracking}
 
-デフォルトでは、Web SDKは、 [該当する](#labelingLinks)リンクタグのクリックをキャプチャ、 [ラベル](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) 、 [](#qualifyingLinks) 記録します。 クリック数は、ドキュメントに接続された [キャプチャ](https://www.w3.org/TR/uievents/#capture-phase) ・クリックイベント・リスナーを使用してキャプチャされます。
+デフォルトでは、Web SDKは、 [該当する](#labelingLinks)リンクタグのクリックをキャプチャ、 [ラベル](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) 、 [](#qualifyingLinks) 記録します。 クリック数は、ドキュメントに接続された [キャプチャ](https://www.w3.org/TR/uievents/#capture-phase) ・クリックイベント・リスナーを使用してキャプチャされます。
 
 自動リンクトラッキングを無効にするには、Web SDKを [設定します](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) 。
 
