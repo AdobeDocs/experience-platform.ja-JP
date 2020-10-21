@@ -5,7 +5,7 @@ description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動�
 seo-description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 46%
@@ -18,7 +18,7 @@ ht-degree: 46%
 Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
 
 | XDM フィールドパス | [!DNL Analytics Query String] / HTTP ヘッダー | 説明 |
-| ---------- | ------------------------- | -------- |
+| ---------- | ------------------------- | ----------------------------------------- |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement クエリパラメーター PURCHASEID のマッピング。 |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement クエリパラメーター CURRENCY のマッピング。 |
 | `commerce.purchases.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのを、区切り文字を使用して、コンバージョンCOMMERCE_PURCHASEとマッピング `,`します。 |
