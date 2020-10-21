@@ -1,5 +1,5 @@
 ---
-source-git-commit: e647db615371f5a153e180e5a0d06fd7439a45c6
+source-git-commit: 87d46c0d813cd31408eaed8331677b74fc42dd38
 workflow-type: tm+mt
 translation-type: tm+mt
 source-wordcount: '643'
@@ -10,7 +10,7 @@ ht-degree: 66%
 
 | EXL-PR | EXL | プレビュー | アクティブ化 | 公開日 | ヘルプ |
 |--- |--- |--- |--- |--- |--- |
-| [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [プレビューURL](https://experienceleague.corp.adobe.com/docs/experience-platform/using/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [ライブURL](https://experienceleague.adobe.com/docs/experience-platform/using/home.html?lang=en) | [オーサリングガイド](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
+| [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![ビルドの状態](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [プレビューURL](https://experienceleague.corp.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [ライブURL](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [オーサリングガイド](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 | 実稼動 | ステージ |
 |---|---|
