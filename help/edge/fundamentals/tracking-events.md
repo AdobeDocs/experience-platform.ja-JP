@@ -5,7 +5,7 @@ description: Experience Platform Web SDK のイベントのトラッキング方
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 14b10aeeb382e9d638cf9fdf62deddbee3e72600
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 54%
@@ -54,7 +54,7 @@ alloy("sendEvent", {
 
 ### `eventType` の設定
 
-In an XDM experience event, there is an optional `eventType` field. ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信するイベントを区別するのに役立ちます。 XDMには、ユーザが使用できる定義済みのイベントタイプがいくつか用意されています。また、ユースケースに合わせて独自のカスタムイベントタイプを常に作成することもできます。 以下は、XDMが提供するあらかじめ定義されたイベントタイプのリストです。 [XDMの公開レポートで詳しく読む](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
+In an XDM experience event, there is an optional `eventType` field. ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信するイベントを区別するのに役立ちます。 XDMには、ユーザが使用できる定義済みのイベントタイプがいくつか用意されています。また、ユースケースに合わせて独自のカスタムイベントタイプを常に作成することもできます。 以下は、XDMが提供するあらかじめ定義されたイベントタイプのリストです。 [詳しくは、XDMの公開リポートを参照してください](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)。
 
 
 | **イベントタイプ:** | **定義:** |
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 ### ID情報の追加
 
-カスタムID情報をイベントに追加することもできます。 Experience CloudIDの [取得を参照してください。](../identity/overview.md)
+カスタムID情報をイベントに追加することもできます。 Experience CloudIDの [取得を参照してください](../identity/overview.md)。
 
 ## sendBeacon API の使用
 
