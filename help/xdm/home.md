@@ -5,10 +5,10 @@ title: エクスペリエンスデータモデル（XDM）システム
 topic: overview
 description: '標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。 '
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: 1aceddc02a5120b0bf7413db33c2c03d0ab2948c
 workflow-type: tm+mt
-source-wordcount: '1639'
-ht-degree: 49%
+source-wordcount: '1638'
+ht-degree: 50%
 
 ---
 
@@ -48,7 +48,7 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 
 Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time series data, respectively. これらのクラスの詳細については、以下で説明します。
 
-### [!DNL XDM Individual Profile] (#xdm-individual-individual-プロファイル)
+### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
 [!DNL XDM Individual Profile] は、特定された対象と部分的に識別された対象の両方の属性の単数形式の表現を形成する、レコードベースのクラスです。 高度に識別されるプロファイルには、個人的なコミュニケーションやターゲットを絞ったエンゲージメントに使用したり、詳細な個人情報（名前、性別、生年月日、場所など）および連絡先情報（電話番号や電子メールアドレスなど）を含めたりできます。
 
