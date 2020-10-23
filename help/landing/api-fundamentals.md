@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform API の基本
 topic: getting started
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: fac4b3d02a6e58a9d2c298f9b849fa7345e4fa93
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 66%
+source-wordcount: '483'
+ht-degree: 56%
 
 ---
 
@@ -22,63 +22,74 @@ JSON ポインターは、JSON ドキュメント内の特定の値を識別す�
 
 ### JSON スキーマオブジェクトの例
 
+以下のJSONは、JSONポインタ文字列を使用して参照できるフィールドを持つシンプルなXDMスキーマを表しています。 カスタムミックスインを使用して追加されたすべてのフィールド( `loyaltyLevel`など)は、 `_{TENANT_ID}` オブジェクトの下に名前が付けられますが、コアミックスインを使用して追加されたフィールド( `fullName`など)は、そうではありません。
+
 ```json
 {
-    "type": "object",
-    "title": "Loyalty Member Details",
-    "meta:intendedToExtend": [
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "description": "Loyalty Program Mixin.",
-    "definitions": {
-        "loyalty": {
-            "properties": {
-                "_{TENANT_ID}": {
-                    "type": "object",
-                    "properties": {
-                        "loyaltyId": {
-                            "title": "Loyalty Identifier",
-                            "type": "string",
-                            "description": "Loyalty Identifier.",
-                            "meta:xdmType": "string"
-                        },
-                        "loyaltyLevel": {
-                            "title": "Loyalty Level",
-                            "description": "The current loyalty program level to which the individual member belongs.",
-                            "type": "string",
-                            "enum": [
-                                "platinum",
-                                "gold",
-                                "silver",
-                                "bronze"
-                            ],
-                            "meta:enum": {
-                                "platinum": "Platinum",
-                                "gold": "Gold",
-                                "silver": "Silver",
-                                "bronze": "Bronze"
-                            },
-                            "meta:xdmType": "string"
-                        }
-                    },
-                    "meta:xdmType": "object"
-                }
-            },
-            "type": "object",
-            "meta:xdmType": "object"
+  "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:altId": "_{TENANT_ID}.schemas.85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "Example schema",
+  "type": "object",
+  "description": "This is an example schema.",
+  "properties": {
+    "_{TENANT_ID}": {
+      "type": "object",
+      "properties": {
+        "loyaltyLevel": {
+          "title": "Loyalty Level",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "enum": [
+            "platinum",
+            "gold",
+            "silver",
+            "bronze"
+          ]
         }
+      }
+    },
+    "person": {
+      "title": "Person",
+      "description": "An individual actor, contact, or owner.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Full name",
+          "description": "The person's full name.",
+          "type": "object",
+          "properties": {
+            "fullName": {
+              "title": "Full name",
+              "type": "string",
+              "description": "The full name of the person, in writing order most commonly accepted in the language of the name.",
+            },
+            "suffix": {
+              "title": "Suffix",
+              "type": "string",
+              "description": "A group of letters provided after a person's name to provide additional information. The `suffix` is used at the end of someones name. For example Jr., Sr., M.D., PhD, I, II, III, etc.",
+            }
+          },
+          "meta:referencedFrom": "https://ns.adobe.com/xdm/context/person-name",
+          "meta:xdmField": "xdm:name"
+        }
+      }
     }
+  }
 }
 ```
 
 ### スキーマオブジェクトに基づいた JSON ポインターの例
 
 | JSON ポインター | 解決先 |
-|--- | ---|
-| `"/title"` | &quot;ロイヤリティーメンバーの詳細&quot; |
-| `"/definitions/loyalty"` | （`loyalty` オブジェクトのコンテンツを返します） |
-| `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
-| `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
+| --- | --- |
+| `"/title"` | `"Example schema"` |
+| `"/properties/person/properties/name/properties/fullName"` | (コアミックスインによって提供される `fullName` フィールドへの参照を返します)。 |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (カスタムMixinで提供される `loyaltyLevel` フィールドへの参照を返します)。 |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
