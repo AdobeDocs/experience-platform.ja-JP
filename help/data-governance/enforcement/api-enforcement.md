@@ -6,10 +6,10 @@ topic: enforcement
 type: Tutorial
 description: データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、Policy Service APIを使用して、データセットまたは任意のラベルグループに対するマーケティングアクションがポリシー違反かどうかを評価できます。 その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 43%
+source-wordcount: '993'
+ht-degree: 41%
 
 ---
 
@@ -170,7 +170,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -179,8 +185,9 @@ curl -X POST \
 | --- | --- |
 | `entityType` | ペイロード配列の各項目は、定義するエンティティのタイプを示す必要があります。この使用例では、値は常に「dataSet」になります。 |
 | `entityId` | ペイロード配列の各項目は、データセットの一意の ID を提供する必要があります。 |
+| `entityMeta.fields` | （オプション）データセットのスキーマー内の特定のフィールドを参照する [JSONポインタ](../../landing/api-fundamentals.md#json-pointer) 文字列の配列。 この配列を含めると、配列に含まれるフィールドのみが評価に使用されます。 アレイに含まれていないスキーマフィールドは評価に関与しません。<br><br>このフィールドを含めない場合は、データセットスキーマ内のすべてのフィールドが評価対象に含まれます。 |
 
-**応答**
+**応答** 
 
 正常な応答は、マーケティングアクションのURL、指定されたデータセットから収集された使用ラベル、およびこれらのラベルに対するアクションのテストの結果として違反されたポリシーのリストを返します。 この例では、「サードパーティへのデータ書き出し」ポリシーが `violatedPolicies` 配列に表示され、マーケティングアクションによって予期されるポリシー違反がトリガーされたことが示されています。
 
@@ -304,13 +311,13 @@ curl -X POST \
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
