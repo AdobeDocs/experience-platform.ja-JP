@@ -5,10 +5,10 @@ title: データレイクでのプライバシーリクエストの処理
 topic: overview
 description: Adobe Experience Platform Privacy Serviceは、法的および組織のプライバシーに関する規則に基づオプトアウトいて記述された個人データにアクセス、販売、または削除するように顧客の要求を処理します。 このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 26%
+source-wordcount: '1272'
+ht-degree: 27%
 
 ---
 
@@ -23,10 +23,10 @@ This document covers essential concepts related to processing privacy requests f
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [[!DNLPrivacy Service]](../privacy-service/home.md):Adobe Experience Cloudのアプリケーション間での個人データへのアクセス、販売中止、削除に関する顧客の要求を管理します。
-* [[!DNLカタログサービス]](home.md):データの場所と内の系列のレコードのシステム [!DNL Experience Platform]。 データセットメタデータの更新に使用できる API を提供します。
+* [[!DNL Privacy Service]](../privacy-service/home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
+* [[!DNL Catalog Service]](home.md):データの場所と内の系列のレコードのシステム [!DNL Experience Platform]。 データセットメタデータの更新に使用できる API を提供します。
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-* [[!DNL IDサービス]](../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
+* [[!DNL Identity Service]](../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
 
 ## ID 名前空間について {#namespaces}
 
@@ -136,6 +136,10 @@ curl -X POST \
 >This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 次の節では、 [!DNL Data Lake][!DNL Privacy Service] UIまたはAPIを使用してプライバシーをリクエストする方法について概説します。
+
+>[!IMPORTANT]
+>
+>プライバシー要求が完了するまでに要する時間を保証することはできません。 要求の処理中にデータレーク内で変更が発生した場合、それらのレコードが処理されるかどうかも保証できません。
 
 ### UI の使用
 
