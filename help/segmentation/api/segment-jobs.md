@@ -5,10 +5,10 @@ title: セグメントジョブ
 topic: developer guide
 description: このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 39%
+source-wordcount: '1153'
+ht-degree: 35%
 
 ---
 
@@ -96,9 +96,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
                             "format": "pql/json",
                             "value": "{PQL_EXPRESSION}"
                         },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                         "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                             "version": 1
                         }
                     }
@@ -115,14 +115,25 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
                     "endTimeInMs": 1573204395655,
                     "totalTimeInMs": 128928
                 },
-                "totalProfiles": 0,
-                "segmentedProfileCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": 0,
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": 0
+                "totalProfiles":13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
                 },
-                "segmentedProfileByNamespaceCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": {},
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": {}
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
                 }
             },
             "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
@@ -162,6 +173,12 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `segments.segment.id` | セグメント定義のID。 |
 | `segments.segment.expression` | PQLで記述される、セグメント定義の式に関する情報を含むオブジェクト。 |
 | `metrics` | セグメントジョブに関する診断情報を含むオブジェクト。 |
+| `metrics.totalTime` | セグメント化ジョブの開始および終了の時間と合計所要時間に関する情報を含むオブジェクトです。 |
+| `metrics.profileSegmentationTime` | セグメントの評価が開始および終了した時間と合計所要時間に関する情報を含むオブジェクトです。 |
+| `metrics.segmentProfileCounter` | セグメントごとに資格を得たプロファイルの数。 |
+| `metrics.segmentedProfileByNamespaceCounter` | 各ID名前空間に対してセグメント単位で資格を持つプロファイルの数。 |
+| `metrics.segmentProfileByStatusCounter` | 各ステータスに対する **プロファイルフラグメントの数** 。 次の3つのステータスがサポートされています。 <ul><li>「realized」 — セグメントに入力された新しいプロファイルの数。</li><li>「existing」 — セグメント内に存在し続けるプロファイルの数。</li><li>「出口」 — セグメント内に存在しなくなったプロファイルセグメントの数。</li></ul> |
+| `metrics.totalProfilesByMergePolicy` | マージポリシーごとのマージされたプロファイルの合計数です。 |
 
 ## 新しいセグメントジョブの作成 {#create}
 
