@@ -5,7 +5,7 @@ title: SQL 構文
 topic: syntax
 description: このドキュメントは、クエリサービスでサポートされる SQL 構文を示します。
 translation-type: tm+mt
-source-git-commit: 43bebfbe0c0fca57d6e1ed0116e317b03125f175
+source-git-commit: c044194ed22b5e6fcd5e2e2102f3cd4eda45aa84
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 89%
@@ -119,7 +119,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 ```
 
 where,
-`target_schema_title` is the title of XDM schema. この句は、CTASクエリが作成した新しいデータセットに対して既存のXDMスキーマを使用する場合に限り、新しいデータセットに対してインジェストされたすべての新しいバッチの行レベルの検証を必要とするかどうかを指定します。`rowvalidation` デフォルト値は「false」です。
+`target_schema_title` is the title of XDM schema. この句は、CTASクエリが作成した新しいデータセットに対して既存のXDMスキーマを使用する場合に限り、新しいデータセットに対してインジェストされたすべての新しいバッチの行レベルの検証を必要とするかどうかを指定します。`rowvalidation` デフォルト値は「true」です。
 
 `select_query` は `SELECT` 文で、その構文は上述されています。
 
