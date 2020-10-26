@@ -5,10 +5,10 @@ title: スキーマ合成の基本
 topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: 7aac7b717b47466527434024e40d19ae70296e55
 workflow-type: tm+mt
-source-wordcount: '2834'
-ht-degree: 55%
+source-wordcount: '3099'
+ht-degree: 47%
 
 ---
 
@@ -29,7 +29,7 @@ This document provides an introduction to [!DNL Experience Data Model] (XDM) sch
 
 リレーショナルデータベースを使用する場合のベストプラクティスには、データの正規化、またはエンティティを取得してそれを個別のピースに分割し、複数のテーブルに表示することが含まれます。データ全体の読み取りやエンティティの更新を行うには、JOIN を使用して、多くの個々のテーブルに対して読み取りおよび書き込み操作をおこなう必要があります。
 
-XDM スキーマは、埋め込みオブジェクトを使用することで、複雑なデータを直接表現し、階層構造を持つ独立したドキュメントに格納できます。この構造の主な利点の 1 つは、複数の非正規化テーブルへの高価な結合によってエンティティを再構築しなくても、データをクエリできる点です。
+XDMスキーマは、埋め込みオブジェクトを使用することで、複雑なデータを直接表現し、階層構造を持つ独立したドキュメントに格納できます。 この構造の主な利点の 1 つは、複数の非正規化テーブルへの高価な結合によってエンティティを再構築しなくても、データをクエリできる点です。スキーマ階層のレベル数に対して、厳密な制限はありません。
 
 ### スキーマとビッグデータ
 
@@ -42,6 +42,8 @@ XDM スキーマは、埋め込みオブジェクトを使用することで、�
 Standardization is a key concept behind [!DNL Experience Platform]. アドビが推進する XDM は、顧客エクスペリエンスデータを標準化し、顧客エクスペリエンス管理の標準スキーマを定義する取り組みです。
 
 The infrastructure on which [!DNL Experience Platform] is built, known as [!DNL XDM System], facilitates schema-based workflows and includes the [!DNL Schema Registry], [!DNL Schema Editor], schema metadata, and service consumption patterns. 詳しくは、「[XDM システムの概要](../home.md)」を参照してください。
+
+には、スキーマを作成して利用する場合に、いくつかの重要なメリットがあり [!DNL Experience Platform]ます。 第1に、スキーマは、より優れたデータ管理とデータ最小化を可能にします。これは、プライバシー規制では特に重要です。 第2に、Adobeの標準コンポーネントを使用してスキーマを構築することで、最小限のカスタマイズで、すぐに使える洞察とAI/MLサービスの使用が可能になります。 最後に、スキーマは、データ共有インサイトと効率的な調整のためのインフラストラクチャを提供します。
 
 ## スキーマの計画
 
@@ -135,19 +137,13 @@ In order to ingest data into [!DNL Experience Platform], a dataset must first be
 
 &amp;ast;スキーマは、クラスと 0 個以上の Mixin で構成されます。つまり、Mixin を使用せずにデータセットスキーマを作成できます。
 
-### クラス
+### クラス {#class}
 
 クラスを割り当てることで、スキーマの構成が開始されます。クラスは、スキーマに含まれるデータ（レコードまたは時系列）の行動面を定義します。これに加えて、クラスは、そのクラスに基づくすべてのスキーマに含める必要のある共通のプロパティの最小数を記述し、複数の互換性のあるデータセットを結合する方法を提供します。
 
-クラスは、どの Mixin をスキーマで使用できるかを決定します。これについては、後述の「[Mixin](#mixin)」の節で詳しく説明します。
+スキーマのクラスは、そのスキーマで使用できるミックスインを決定します。 この点については、 [次の節で詳しく説明します](#mixin)。
 
-There are standard classes provided with every integration of [!DNL Experience Platform], known as &quot;Industry&quot; classes. 業界クラスは、一般的に認められる業界標準で、幅広い使用例に適用されます。Examples of Industry classes include the [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] classes provided by Adobe.
-
-[!DNL Experience Platform] また、「Vendor」クラスも使用できます。これは、パートナーによって定義され、内でそのベンダーサービスまたはアプリケーションを使用するすべての顧客が利用でき [!DNL Experience Platform][!DNL Platform]ます。
-
-There are also classes used to describe more specific use cases for individual organizations within [!DNL Platform], called &quot;Customer&quot; classes. 顧客クラスは、一意の使用例を説明するために使用できる業界クラスまたはベンダークラスがない場合、組織によって定義されます。
-
-For example, a schema representing members of a Loyalty program describes record data about an individual and therefore can be based on the [!DNL XDM Individual Profile] class, a standard Industry class defined by Adobe.
+Adobeは、2つの標準（「コア」）XDMクラスを提供します。 [!DNL XDM Individual Profile] と [!DNL XDM ExperienceEvent]。 これらのコアクラスに加えて、独自のカスタムクラスを作成して、貴社の具体的な使用例を説明することもできます。 カスタムクラスは、一意の使用例を説明するためのAdobe定義のコアクラスがない場合、組織によって定義されます。
 
 ### Mixin {#mixin}
 
@@ -155,15 +151,21 @@ Mixin は、個人の詳細、ホテルの環境設定、住所などの特定�
 
 Mixin は、表すデータ（レコードまたは時系列）の動作に基づいて、互換性のあるクラスを定義します。つまり、すべての Mixin がすべてのクラスで使用できるわけではありません。
 
-Mixins have the same scope and definition as classes: there are Industry mixins, Vendor mixins, and Customer mixins that are defined by individual organizations using [!DNL Platform]. [!DNL Experience Platform] には多くの標準的な業界 Mixin が含まれていますが、ベンダーはユーザーの Mixin を定義し、個々のユーザーは独自の概念の Mixin を定義できます。
+[!DNL Experience Platform] には多くの標準Adobeミックスインが含まれていますが、ベンダーはユーザーのミックスインを定義でき、個々のユーザーは独自の概念のミックスインを定義できます。
 
 For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and &quot;[!UICONTROL Home Address]&quot; for your &quot;[!UICONTROL Loyalty Members]&quot; schema, you would be able to use standard mixins that define those common concepts. However, concepts that are specific to less-common use cases (such as &quot;[!UICONTROL Loyalty Program Level]&quot;) often do not have a pre-defined mixin. この場合、この情報を取り込むには、独自の Mixin を定義する必要があります。
 
 スキーマは「0 個以上」の Mixin で構成されているので、Mixin を一切使用しないでも有効なスキーマを作成できます。
 
+現在のすべての標準ミックスインのリストについては、 [公式XDMリポジトリを参照してください](https://github.com/adobe/xdm/tree/master/components/mixins)。
+
 ### データタイプ {#data-type}
 
 データタイプは、基本リテラルフィールドと同様に、クラスやスキーマの参照フィールド型として使用されます。主な違いは、データタイプが複数のサブフィールドを定義できる点です。Mixin と同様に、データタイプはマルチフィールド構造の一貫した使用を可能にしますが、データタイプはフィールドの「データタイプ」として追加することでスキーマ内の任意の場所に含めることができるので、Mixin よりも柔軟性が高くなります。
+
+>[!NOTE]
+>
+>ミックスインとデータ型の違い、および類似の使用例については、 [付録](#mixins-v-datatypes) を参照してください。
 
 [!DNL Experience Platform] には、一般的なデータ構造を記述するための標準パターンの使用をサポートするため [!DNL Schema Registry] の一部として、多くの共通データ型が用意されています。 This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become more clear as you walk through the steps to define data types.
 
@@ -177,6 +179,10 @@ For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and 
 * Boolean
 * 配列
 * オブジェクト
+
+>[!TIP]
+>
+>オブジェクトタイプフィールドに対する自由形式フィールドの使用の長所と短所については、 [付録](#objects-v-freeform) を参照してください。
 
 これらのスカラー型の有効な範囲は、特定のパターン、形式、最小値や最大値、事前定義値にさらに制限できます。これらの制約を使用すると、以下のような、より詳細なフィールドタイプを幅広く表すことができます。
 
@@ -250,3 +256,44 @@ The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Ad
 UI を使用してスキーマの構成を開始するには、[スキーマエディターのチュートリアル](../tutorials/create-schema-ui.md)を参照しながら、このドキュメントで取り上げる「ロイヤルティメンバー」スキーマを作成します。
 
 To begin using the [!DNL Schema Registry] API, start by reading the [Schema Registry API developer guide](../api/getting-started.md). 開発者ガイドを読んだ後、[スキーマレジストリ API を使用したスキーマの作成](../tutorials/create-schema-api.md)に関するチュートリアルで説明されている手順に従います。
+
+## 付録
+
+次の節では、スキーマ構成の原則に関する追加情報を記載します。
+
+### オブジェクトとフリーフォームフィールド {#objects-v-freeform}
+
+スキーマをデザインする際に、フリーフォームフィールドの上にオブジェクトを選択する際には、考慮すべき主な要因がいくつかあります。
+
+| オブジェクト | フリーフォームフィールド |
+| --- | --- |
+| ネストの増加 | 入れ子が少ない、またはない |
+| 論理フィールドのグループ化を作成します | フィールドはアドホックな場所に配置されます |
+
+#### オブジェクト
+
+自由形式のフィールドに対するオブジェクトの使用の長所と短所を次に示します。
+
+**長所**:
+
+* オブジェクトは、特定のフィールドを論理的にグループ化する場合に最適です。
+* オブジェクトは、スキーマをより構造化された方法で編成します。
+* オブジェクトは、セグメントビルダーのUIで適切なメニュー構造を作成する際に間接的に役立ちます。 スキーマ内のグループ化されたフィールドは、セグメントビルダーのUIに用意されているフォルダー構造に直接反映されます。
+
+**短所**:
+
+* フィールドがネストされます。
+* [Adobe Experience Platformクエリサービスを使用する場合](../../query-service/home.md)、オブジェクトにネストされたクエリフィールドに、より長い参照文字列を指定する必要があります。
+
+#### フリーフォームフィールド
+
+オブジェクトに対するフリーフォームフィールドの使用の長所と短所を以下に示します。
+
+**長所**:
+
+* フリーフォームフィールドは、スキーマのルートオブジェクトの直下(`_tenantId`)に作成され、視認性が高まります。
+* クエリサービスを使用する場合、フリーフォームフィールドの参照文字列が短くなる傾向があります。
+
+**短所**:
+
+* スキーマ内のフリーフォームフィールドの場所はアドホックです。つまり、スキーマエディター内でフリーフォームフィールドがアルファベット順に表示されます。 これにより、スキーマの構造が小さくなり、類似のフリーフォームフィールドが名前に応じて大きく区切られる場合があります。
