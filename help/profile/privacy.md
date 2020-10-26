@@ -4,10 +4,10 @@ solution: Experience Platform
 title: リアルタイム顧客プロファイルでのプライバシーリクエストの処理
 topic: overview
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 14%
+source-wordcount: '1058'
+ht-degree: 16%
 
 ---
 
@@ -22,9 +22,9 @@ This document covers essential concepts related to processing privacy requests f
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [[!DNLPrivacy Service]](home.md):Adobe Experience Cloudのアプリケーション間での個人データへのアクセス、販売中止、削除に関する顧客の要求を管理します。
-* [[!DNL IDサービス]](../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
-* [[!DNLリアルタイム顧客プロファイル]](../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Privacy Service]](home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
+* [[!DNL Identity Service]](../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
+* [[!DNL Real-time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 ## ID 名前空間について {#namespaces}
 
@@ -43,6 +43,8 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 >Privacy Serviceは、IDのステッチを実行しないマージポリシーを使用した [!DNL Profile] データのみを処理できます。 UIを使用してプライバシー要求が処理されているかどうかを確認する場合は、[!DNL None]IDの切り替えのタイプとして「  」を持つポリシーを使用していることを確認してください。 つまり、 [!UICONTROL IDの切り替えが「] Private graph」に設定されているマージポリシーは使用できません。
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>また、プライバシー要求が完了するまでに要する時間を保証できないことにも注意する必要があります。 リクエストの処理中に [!DNL Profile] データに変更が発生した場合、それらのレコードが処理されるかどうかも保証できません。
 
 ### API の使用
 
