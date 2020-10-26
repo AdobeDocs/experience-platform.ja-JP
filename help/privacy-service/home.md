@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
+source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 14%
+source-wordcount: '1627'
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform [!DNL Privacy Service] was developed in response to a 
    * を最大限に活用するに [!DNL Privacy Service]は、顧客から収集するデータのタイプと、どのデータがプライバシー規制の対象となるかについて、詳細に理解する必要があります。 詳しくは、プライバシー要件の [決定に関する節を参照してください](#requirements) 。
 1. **データに正しいラベルを付けているか。**
    * サービスがプライバシージョブ中にアクセスまたは削除するフィールドを決定するには、データに適切なラベルを付ける必要があります。 詳しくは、「データの [ラベル付け](#label) 」の項を参照してください。
-1. **送信先のIDがわかり[!DNL Privacy Service]ますか。**
+1. **送信先のIDがわかり [!DNL Privacy Service]ますか。**
    * プライバシーリクエストを送信する際は、特定のAdobeアプリケーションに固有の個々の顧客IDを提供する必要があります。 詳しくは、IDデータの [提供とプライバシーリクエストの作成に関する節を参照してください](#identity)[](#requests) 。
 1. **プライバシー業務の追跡方法**
    * プライバシーリクエストを行った後、そのステータスと結果を追跡するためのオプションがいくつか用意されています。 詳しくは、「プライバシージョブ [の監視](#monitor) 」の節を参照してください。
@@ -75,10 +75,12 @@ CRMシステムが利用する [!DNL Experience Cloud] アプリケーション�
 >以下の節では、APIまたはUIで一般的なプライバシーリクエストを行う方法を説明するドキュメントへのリンクを提供します。 ただし、使用している [!DNL Experience Cloud] アプリケーションによっては、リクエストペイロードで送信する必要があるフィールドが、これらのガイドに示す例と異なる場合があります。
 >
 >APIまたはUIガイドに従う場合は、 [](./experience-cloud-apps.md)[!DNL Experience Cloud] Privacy ServiceおよびExperience Cloudアプリケーションに関するドキュメントを参照して、特定のアプリケーションに対するプライバシー要求の形式を設定する方法に関する詳細なドキュメントを参照してください。
+>
+>また、プライバシー要求は、Experience Cloudアプリケーション間で非同期に処理される点にも注意してください。 Privacy Serviceがリクエストを受け取ると、各アプリケーションは、リクエストを完了するのに数分から数週間かかる場合があります。 各リクエストの完了に要する時間は、操作しているアプリケーションと、処理する必要があるデータの量に応じて異なります。
 
 #### API の使用
 
-[ [[!DNLPrivacy ServiceAPI]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) は、RESTful API呼び出しを使用してプライバシージョブを作成および管理するためのエンドポイントをいくつか備えており、アプリ [!DNL Experience Cloud] ケーションのプライバシー規制への準拠をプログラム的にアプローチできます。 API の使用方法に関する詳細な手順については、「[Privacy Service API 開発者ガイド](api/getting-started.md)」を参照してください。
+には、RESTful API呼び出しを使用してプライバシージョブを作成および管理するための様々なエンドポイントが [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) 用意されています。これにより、アプリ [!DNL Experience Cloud] ケーションのプライバシー規制への準拠をプログラム的にアプローチできます。 API の使用方法に関する詳細な手順については、「[Privacy Service API 開発者ガイド](api/getting-started.md)」を参照してください。
 
 #### UI の使用
 
