@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
+source-git-commit: 8f646c26ce73671ef4e427d8cba51091a8884795
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 16%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 16%
 - [リアルタイム顧客プロファイル](#profile)
 - [セグメント化サービス](#segmentation)
 - [ソース](#sources)
+- [Time to Value](#time-to-value)
 
 ## データ準備 {#data-prep}
 
@@ -76,7 +77,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
 
-## Time to Value
+## Time to Value {#time-to-value}
 
 Adobe Experience Platformは、マーケティング・オペレーションズ・チームが、広範なデータ・エンジニアリングの専門知識を必要とせずに、顧客の360度の表示を完全に構築できるようにします。 目標は、データ速度を通じてチームや価値を加速させることです。
 
