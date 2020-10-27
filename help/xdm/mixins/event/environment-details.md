@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
 solution: Experience Platform
-title: ExperienceEvent環境の詳細ミックスイン
+title: 環境の詳細ミックスイン
 topic: overview
 description: このドキュメントでは、ExperienceEvent環境の詳細ミックスインの概要を説明します。
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '179'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL ExperienceEvent環境の詳細] Mixin
+# [!UICONTROL 環境の詳細] mixin
 
-[!UICONTROL ExperienceEvent環境の詳細] は、デバイスの詳細、ブラウザーの情報、ローカル時間、その他の地理的な情報など、エクスペリエンスイベントに関連する環境の詳細に関する情報を取得するために使用される、 [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) クラスの標準ミックスインです。
+>[!NOTE]
+>
+>いくつかのミックスインの名前が変更されました。 詳しくは、 [mixin名の更新に関するドキュメントを参照してください](../name-updates.md) 。
+
+[!UICONTROL 環境の詳細] は、環境の詳細、ブラウザーの情報、ローカル時間、その他の地理的イベントなど、エクスペリエンス情報に関連するの詳細に関する情報を取得するために使用される、 [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) クラスの標準ミックスインです。
 
 <img src="../../images/mixins/environment-details.png" width="500" /><br />
 
