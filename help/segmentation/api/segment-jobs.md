@@ -5,9 +5,9 @@ title: セグメントジョブ
 topic: developer guide
 description: このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 translation-type: tm+mt
-source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
+source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1152'
 ht-degree: 35%
 
 ---
@@ -177,7 +177,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | `metrics.profileSegmentationTime` | セグメントの評価が開始および終了した時間と合計所要時間に関する情報を含むオブジェクトです。 |
 | `metrics.segmentProfileCounter` | セグメントごとに資格を得たプロファイルの数。 |
 | `metrics.segmentedProfileByNamespaceCounter` | 各ID名前空間に対してセグメント単位で資格を持つプロファイルの数。 |
-| `metrics.segmentProfileByStatusCounter` | 各ステータスに対する **プロファイルフラグメントの数** 。 次の3つのステータスがサポートされています。 <ul><li>「realized」 — セグメントに入力された新しいプロファイルの数。</li><li>「existing」 — セグメント内に存在し続けるプロファイルの数。</li><li>「出口」 — セグメント内に存在しなくなったプロファイルセグメントの数。</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | 各ステータスのプロファイル数。 次の3つのステータスがサポートされています。 <ul><li>「realized」 — セグメントに入力された新しいプロファイルの数。</li><li>「existing」 — セグメント内に存在し続けるプロファイルの数。</li><li>「出口」 — セグメント内に存在しなくなったプロファイルセグメントの数。</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | マージポリシーごとのマージされたプロファイルの合計数です。 |
 
 ## 新しいセグメントジョブの作成 {#create}
