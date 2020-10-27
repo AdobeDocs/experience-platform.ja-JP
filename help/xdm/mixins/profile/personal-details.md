@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
 solution: Experience Platform
-title: プロファイルの個人情報ミックスイン
+title: 個人の連絡先の詳細ミックスイン
 topic: overview
-description: このドキュメントでは、XDM Individualプロファイルクラスの概要を説明します。
+description: このドキュメントでは、個人の連絡先の詳細ミックスインの概要を説明します。
 translation-type: tm+mt
-source-git-commit: e58c669b5542453b7fbf6d90deedcd2cf349c0b6
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 11%
+source-wordcount: '133'
+ht-degree: 10%
 
 ---
 
 
-# [!UICONTROL プロファイルの個人情報] Mixin
+# [!UICONTROL 個人連絡先の詳細] Mixin
 
-[!UICONTROL プロファイルの個人の詳細] は、 [[!DNL XDM Individual Profile] クラスの標準ミックスインです](../../classes/individual-profile.md)。 ミックスインは、ルートレベルの `person` オブジェクトを提供します。このオブジェクトのサブフィールドは、個々の人に関する連絡先情報を記述します。
+>[!NOTE]
+>
+>いくつかのミックスインの名前が変更されました。 詳しくは、 [mixin名の更新に関するドキュメントを参照してください](../name-updates.md) 。
+
+[!UICONTROL 個人連絡先の詳細] は、 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) クラスの標準ミックスインです。このミックスインは、個人の連絡先情報を示します。
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
