@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
 solution: Experience Platform
-title: プロファイル担当者の詳細ミックスイン
+title: 人口統計詳細ミックスイン
 topic: overview
-description: このドキュメントでは、XDM Individualプロファイルクラスの概要を説明します。
+description: このドキュメントでは、人口統計の詳細ミックスインの概要を説明します。
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 26%
+source-wordcount: '241'
+ht-degree: 24%
 
 ---
 
 
-# [!UICONTROL プロファイル担当者の詳細] Mixin
+# [!UICONTROL 人口統計詳細] ミックスイン
 
-[!UICONTROL プロファイル担当者の詳細] は、 [[!DNL XDM Individual Profile] クラスの標準ミックスインです](../../classes/individual-profile.md)。 ミックスインは、ルートレベルの `person` オブジェクトを提供します。このオブジェクトのサブフィールドは、個々の人に関する情報を記述します。
+>[!NOTE]
+>
+>いくつかのミックスインの名前が変更されました。 詳しくは、 [mixin名の更新に関するドキュメントを参照してください](../name-updates.md) 。
+
+[!UICONTROL 「人口統計詳細] 」は [[!DNL XDM Individual Profile] クラスの標準ミックスインです](../../classes/individual-profile.md)。 ミックスインは、ルートレベルの `person` オブジェクトを提供します。このオブジェクトのサブフィールドは、個々の人に関する情報を記述します。
 
 <img src="../../images/mixins/profile-person-details.png" width="600" /><br />
 
@@ -33,4 +37,4 @@ ht-degree: 26%
 Mixinの詳細については、パブリックXDMリポジトリを参照してください。
 
 * [入力済みの例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)オングストローム
