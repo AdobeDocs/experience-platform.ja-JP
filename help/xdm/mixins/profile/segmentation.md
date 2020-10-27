@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
-title: プロファイルセグメントミックスイン
+title: セグメントメンバーシップの詳細ミックスイン
 topic: overview
-description: このドキュメントでは、XDM Individualプロファイルクラスの概要を説明します。
+description: このドキュメントでは、セグメントメンバーシップの詳細ミックスインの概要を説明します。
 translation-type: tm+mt
-source-git-commit: 53575488c08f73a65a7f1cc5f803f9ead707ae48
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '385'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL プロファイル分類] mixin
+# [!UICONTROL セグメントメンバーシップの詳細] mixin
 
-[!UICONTROL プロファイルセグメント] は、 [[!DNL XDM Individual Profile] クラスの標準ミックスインです](../../classes/individual-profile.md)。 mixinは、個人が属するセグメント、最後の資格日時、およびメンバーシップが有効になるまでの期間など、セグメントのメンバーシップに関する情報をキャプチャする単一のマップフィールドを提供します。
+>[!NOTE]
+>
+>いくつかのミックスインの名前が変更されました。 詳しくは、 [mixin名の更新に関するドキュメントを参照してください](../name-updates.md) 。
+
+[!UICONTROL セグメントのメンバーシップの詳細] は、 [[!DNL XDM Individual Profile] クラスの標準ミックスインです](../../classes/individual-profile.md)。 mixinは、個人が属するセグメント、最後の資格日時、およびメンバーシップが有効になるまでの期間など、セグメントのメンバーシップに関する情報をキャプチャする単一のマップフィールドを提供します。
 
 >[!WARNING]
 >
