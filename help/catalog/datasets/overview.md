@@ -5,10 +5,10 @@ title: データセットの概要
 topic: datasets
 description: このドキュメントでは、Experience Platform のデータセットのおおまかな概要を説明します。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 39%
+source-wordcount: '683'
+ht-degree: 41%
 
 ---
 
@@ -58,11 +58,10 @@ Once datasets have been used to store ingested data, those datasets are then use
 
 * [[!DNL Data Access API]](../../data-access/home.md):データセットに保存されたファイルの内容にアクセスし、ダウンロードできます。
 * [Adobe Experience Platform ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID をブリッジし、準拠する XDM スキーマで定義された ID フィールドに基づいてデータセットをリンクします。
-* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):を活用 [!DNL Identity Service] して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 [!DNL Real-time Customer Profile] 顧客プロファイルを個別のデータストアから取り込 [!DNL Data Lake] み、引き続き顧客データを保持します。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):を活用 [!DNL Identity Service] して、データセットから詳細な顧客プロファイルをリアルタイムで作成します。 [!DNL Real-time Customer Profile] 顧客プロファイルを個別のデータストアから取り込 [!DNL Data Lake] み、引き続き顧客データを保持します。
 * [Adobe Experience Platform分類サービス](../../segmentation/home.md):セグメントを作成し、 [!DNL Real-time Customer Profile] データからオーディエンスを生成できます。 These audiences can then be exported to their own datasets within the [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md)：機械学習と人工知能を使用して、大規模なデータセットからインサイトを引き出します。
 * [Adobe Experience Platformクエリサービス](../../query-service/home.md):で標準のSQLからクエリへのデータ送信を使用でき [!DNL Experience Platform]ます。クエリ内の任意のデータセットを結合し、レポート、 [!DNL Data Lake] またはで使用する新しいデータセットとして結果を取得でき [!DNL Data Science Workspace][!DNL Real-time Customer Profile]ます。
-* [Adobe Experience Platform判定サービス](../../decisioning-service/home.md):有効 [!DNL Real-time Customer Profile] なデータセットから取り込む行動データに基づいて、一連のオプションから顧客が最も可能性の高い選択肢を決定す [!DNL Profile] るために活用します。
 
 ## 次の手順
 
