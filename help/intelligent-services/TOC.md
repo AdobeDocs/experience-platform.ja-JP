@@ -1,11 +1,12 @@
 ---
 product: experience-platform
+solution: Experience Platform, Intelligent Services
 audience: user
 user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、スコアの生成、インサイトの発見、マーケティングイベントデータからのセグメントの作成をおこないます。
 translation-type: tm+mt
-source-git-commit: ada5a34ffa3ea9c90ff578ab27f425b82f7ed18c
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 57%
