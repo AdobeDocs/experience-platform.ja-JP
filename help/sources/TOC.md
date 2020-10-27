@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '654'
 ht-degree: 8%
 
 ---
@@ -134,6 +134,7 @@ ht-degree: 8%
    - [Flow Service APIを使用したデータセットベースの接続の作成](tutorials/api/create-dataset-base-connection.md)
    - [Flow Service APIを使用してデータフローを監視する](tutorials/api/monitor.md)
    - [Flow Service APIを使用して接続情報を更新する](tutorials/api/update.md)
+   - [Flow Service APIを使用した接続の削除](tutorials/api/delete.md)
 - UIチュートリアル {#ui-tutorials}
    - ソースコネクタを作成する {#create}
       - アドビアプリケーション {#adobe-applications}
@@ -195,6 +196,7 @@ ht-degree: 8%
       - [プロトコルコネクタのデータフローの設定](tutorials/ui/dataflow/protocols.md)
    - [受信データをアクティブ化して顧客プロファイルを入力します](tutorials/ui/profile.md)
    - [アカウントとデータフローの監視](tutorials/ui/monitor.md)
+   - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローの削除](tutorials/ui/delete.md)
 - [フロー実行通知](notifications.md)
 - [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
