@@ -1,21 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
 solution: Experience Platform
-title: ExperienceEvent EndUserIDs mixin
+title: エンドユーザーIDの詳細Mixin
 topic: overview
-description: このドキュメントでは、ExperienceEvent EndUserIDsミックスインの概要を説明します。
+description: このドキュメントでは、エンドユーザーIDの詳細ミックスインの概要を説明します。
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 8%
+source-wordcount: '175'
+ht-degree: 6%
 
 ---
 
 
-# [!UICONTROL ExperienceEvent EndUserIDs] mixin
+# [!UICONTROL エンドユーザーIDの詳細] mixin
 
-[!UICONTROL ExperienceEvent EndUserIDs] (EndUserIDs [[!DNL XDM ExperienceEvent] )は、](../../classes/individual-profile.md)クラスの標準ミックスインです。複数のAdobeアプリケーションで個人のID情報を記述するのに使用されます。 ミックスインは、ルートレベルの `endUserIDs` オブジェクトを提供します。ルートレベルのオブジェクト自体には読み取り専用の `_experience` フィールドが含まれ、データが取り込まれると自動的に値が更新されます。
+>[!NOTE]
+>
+>いくつかのミックスインの名前が変更されました。 詳しくは、 [mixin名の更新に関するドキュメントを参照してください](../name-updates.md) 。
+
+[!UICONTROL End User ID Details] (エンドユーザーIDの詳細 [[!DNL XDM ExperienceEvent] )は、](../../classes/individual-profile.md)クラスの標準ミックスインです。複数のAdobeアプリケーションにわたって個人のID情報を記述するのに使用されます。 ミックスインは、ルートレベルの `endUserIDs` オブジェクトを提供します。ルートレベルのオブジェクト自体には読み取り専用の `_experience` フィールドが含まれ、データが取り込まれると自動的に値が更新されます。
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
