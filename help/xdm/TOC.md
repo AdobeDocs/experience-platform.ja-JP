@@ -5,9 +5,9 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: a091acf1cfc572df7b300a7be6a673b1e7469be5
+source-git-commit: 6c52998421b6a5d9719f287ec8cb7099780cb1ff
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '198'
 ht-degree: 71%
 
 ---
@@ -28,13 +28,13 @@ ht-degree: 71%
 * ミックスイン {#mixins}
    * プロファイルミックスイン {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
-      * [プロファイル担当者の詳細](./mixins/profile/person-details.md)
-      * [プロファイルの個人情報](./mixins/profile/personal-details.md)
-      * [プロファイル分類](./mixins/profile/segmentation.md)
-      * [プロファイル作業の詳細](./mixins/profile/work-details.md)
+      * [人口統計の詳細](./mixins/profile/person-details.md)
+      * [個人の連絡先の詳細](./mixins/profile/personal-details.md)
+      * [セグメントのメンバーシップの詳細](./mixins/profile/segmentation.md)
+      * [勤務先担当者の詳細](./mixins/profile/work-details.md)
    * イベントミックスイン {#event}
-      * [ExperienceEvent EndUserIDs](./mixins/event/enduserids.md)
-      * [ExperienceEvent環境の詳細](./mixins/event/environment-details.md)
+      * [エンドユーザーIDの詳細](./mixins/event/enduserids.md)
+      * [環境の詳細](./mixins/event/environment-details.md)
    * [Mixin名の更新](./mixins/name-updates.md)
 * データタイプ {#data-types}
    * [Beacon](./data-types/beacon.md)
