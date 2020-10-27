@@ -5,10 +5,10 @@ title: データセットユーザガイド
 topic: datasets
 description: このdatasetsユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内でデータセットを操作する際に、一般的な操作を実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 70%
+source-wordcount: '1146'
+ht-degree: 71%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 70%
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタ](../../xdm/tutorials/create-schema-ui.md):ユーザーインターフェイス [!DNL Schema Editor] 内で独自のカスタムXDMスキーマを作成する方法を説明し [!DNL Platform] ます。
-* [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNLAdobe Experience Platformデータガバナンス]](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
 
 ## データセットの表示
 
@@ -122,7 +122,7 @@ If a dataset already contains data and is then enabled for [!DNL Profile], the e
 
 >[!NOTE]
 >
->Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Decisioning Service]) cannot be deleted.
+>Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
