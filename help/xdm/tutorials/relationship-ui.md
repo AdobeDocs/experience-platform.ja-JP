@@ -4,9 +4,9 @@ solution: Experience Platform
 title: スキーマエディターを使用した 2 つのスキーマ間の関係の定義
 description: このドキュメントでは、Experience Platformユーザーインターフェイスのスキーマエディタを使用して、2つのスキーマ間の関係を定義するためのチュートリアルを提供します。
 topic: tutorial
-type: Tutorials
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 33%
