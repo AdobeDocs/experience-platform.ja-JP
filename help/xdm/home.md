@@ -5,9 +5,9 @@ title: エクスペリエンスデータモデル（XDM）システム
 topic: overview
 description: '標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。 '
 translation-type: tm+mt
-source-git-commit: 1aceddc02a5120b0bf7413db33c2c03d0ab2948c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1586'
 ht-degree: 50%
 
 ---
@@ -110,15 +110,7 @@ With [!DNL Data Science Workspace], data scientists can easily create intelligen
 
 For more information on using [!DNL Experience Platform] data to power insights, see the [Data Science Workspace overview](../data-science-workspace/home.md).
 
-### [!DNL Decisioning Service]
-
-[!DNL Decisioning Service] は、 [!DNL Platform]統合されたアプリケーションでパーソナライズされたオファー判定を設定する機能を提供します。 オファーには、商品のレコメンデーション、Web エクスペリエンスのコンテンツコンポーネント、会話スクリプト、実行するアクションなどがあります。
-
-[!DNL Decisioning Service] データ [!DNL Real-time Customer Profile] を活用するため、またはクラスを実装するスキーマに基づくデータセットとのみ互換性があり [!DNL XDM Individual Profile] ま [!DNL XDM ExperienceEvent] す。
-
-詳しくは、[判定サービスの概要](../decisioning-service/home.md)を参照してください。
-
-## 次の手順 およびその他のリソース
+## 次の手順とその他のリソース
 
 Now that you better understand the role of schemas throughout [!DNL Experience Platform], you are ready to start composing your own. 学習内容の補足を続けるには、推奨ドキュメントを読み、次のビデオをご覧ください。
 
