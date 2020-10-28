@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Mixin名の更新
 topic: overview
 description: 最近のXDMミックスイン名の変更のリストです。
 translation-type: tm+mt
-source-git-commit: 0f36cf30e94c53aad8cdd11174a3656fda32d961
+source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '251'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 2%
 
 | 以前の名前 | 更新された名前 |
 | --- | --- |
-| [!UICONTROL コンシューマーエクスペリエンスイベントミックスイン] | [!UICONTROL コンテンツ消費の詳細] |
 | [!UICONTROL エクスペリエンスイベントのプライバシーミックスイン] | [!UICONTROL プライバシーの詳細] |
 | [!UICONTROL ExperienceEventアプリケーションの詳細] | [!UICONTROL 申し込みの詳細] |
 | [!UICONTROL ExperienceEventチャネルの詳細] | [!UICONTROL チャネルの詳細] |
@@ -44,7 +43,7 @@ ht-degree: 2%
 | [!UICONTROL プロファイル電話] | [!UICONTROL 電話番号の詳細] |
 | [!UICONTROL プロファイル環境設定の詳細] | [!UICONTROL 環境設定の詳細] |
 | [!UICONTROL プロファイルプライバシー] | [!UICONTROL プライバシーの詳細] |
-| [!UICONTROL プロファイルのプッシュの詳細] | [!UICONTROL プッシュ通知の詳細] |
+| [!UICONTROL プロファイルのプッシュの詳細] | [!UICONTROL プッシュ通知トークンの詳細] |
 | [!UICONTROL プロファイル分類] | [!UICONTROL セグメントのメンバーシップの詳細] |
 | [!UICONTROL プロファイル購読] | [!UICONTROL 購読の詳細] |
 | [!UICONTROL プロファイル作業の詳細] | [!UICONTROL 勤務先担当者の詳細] |
