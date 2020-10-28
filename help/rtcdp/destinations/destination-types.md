@@ -2,13 +2,13 @@
 keywords: destinations;destination;destination types
 title: 宛先のタイプとカテゴリ
 seo-title: 宛先のタイプとカテゴリ
-description: 'アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。 '
-seo-description: アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Launch 拡張機能は、生のイベントデータを複数のタイプの宛先に転送します。
+description: 'アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Experience Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 '
+seo-description: アドビのリアルタイム顧客データプラットフォームでは、プロファイル／セグメントの書き出し先はイベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメントと適格なプロファイルを宛先へと書き出します。Experience Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 93%
+source-wordcount: '591'
+ht-degree: 82%
 
 ---
 
@@ -49,13 +49,13 @@ ht-degree: 93%
 
 ### 拡張機能 {#extensions}
 
-アドビのリアルタイム CDP は、Experience Platform Launch の機能と柔軟性を活用して、アドビのリアルタイム CDP インターフェイスに Launch 拡張機能を組み込みます。
+AdobeReal-time CDPは、AdobeReal-time CDPインターフェイスにPlatform Launch拡張機能を組み込むため、Adobe Experience Platform Launchの機能と柔軟性を活用します。
 
 >[!TIP]
 >
->使用事例やインターフェイス内での使用事例を含むExperience Platform Launch拡張機能について詳しくは、 [起動拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
+>使用例やインターフェイス内での検索方法など、Adobe Experience Platform Launch拡張機能について詳しくは、 [Adobe Experience Platform Launch拡張機能の概要を参照してください](/help/rtcdp/destinations/experience-platform-launch-extensions.md)。
 
-Launch の拡張機能は、イベントの生データを複数の種類の宛先に転送します。この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](/help/rtcdp/destinations/gainsight-extension.md)や [Confirmit Voice of the Customer 拡張機能](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)などがあります。
+Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](/help/rtcdp/destinations/gainsight-extension.md)や [Confirmit Voice of the Customer 拡張機能](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)などがあります。
 
 ![Experience Platform Launch 拡張機能と他の宛先との比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
