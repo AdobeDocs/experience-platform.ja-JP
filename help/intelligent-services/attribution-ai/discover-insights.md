@@ -5,10 +5,10 @@ title: Attribution AI でのインサイトの調査
 topic: Attribution AI insights
 description: このドキュメントは、アドビインテリジェントサービスのユーザーインターフェイスでサービスインスタンスのインサイトを操作する際のガイドとして提供されています。
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 69c27fc45aa9d9acaaed29c2324d02ebd471d63d
 workflow-type: tm+mt
-source-wordcount: '1183'
-ht-degree: 93%
+source-wordcount: '1646'
+ht-degree: 50%
 
 ---
 
@@ -25,11 +25,11 @@ Attribution AI のインサイトを利用するには、正常に実行され�
 
 ## サービスインスタンスのインサイトの概要
 
-In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. 「**[!UICONTROL サービス]**」ブラウザーが表示され、利用可能なアドビインテリジェントサービスが示されます。Attribution AI のコンテナで、「**[!UICONTROL 開く]**」をクリックします。
+In the [!DNL Adobe Experience Platform] UI, select **[!UICONTROL Services]** in the left navigation. 「**[!UICONTROL サービス]**」ブラウザーが表示され、利用可能なアドビインテリジェントサービスが示されます。In the container for Attribution AI, select **[!UICONTROL Open]**.
 
 ![インスタンスへのアクセス](./images/insights/open_Attribution_ai.png)
 
-Attribution AI サービスページが表示されます。このページには、Attribution AI のサービスインスタンスがリストされ、インスタンスに関する情報が表示されます。例えば、インスタンスの名前、コンバージョンイベント、インスタンスが実行される頻度、最終更新時のステータスなどです。開始するサービスインスタンスの名前をクリックします。
+Attribution AI サービスページが表示されます。このページには、Attribution AI のサービスインスタンスが一覧表示され、インスタンスの名前、コンバージョンイベント、インスタンスの実行頻度、最後の更新のステータスなど、インスタンスに関する情報が表示されます。開始するサービスインスタンス名を選択します。
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Attribution AI サービスページが表示されます。このページに�
 
 ### サービスインスタンスの詳細
 
-サービスインスタンスのその他の情報を表示するには、右上の「**[!UICONTROL 詳細を表示]**」をクリックします。
+To view additional details for a service instance, select **[!UICONTROL Show more]** in the top-right.
 
 ![「詳細を表示」](./images/insights/show-more.png)
 
@@ -53,31 +53,28 @@ Attribution AI サービスページが表示されます。このページに�
 
 ### インスタンスの編集
 
-インスタンスを編集するには、右上のナビゲーションの「**[!UICONTROL 編集]**」をクリックします。
+To edit an instance, select **[!UICONTROL Edit]** in the top-right navigation.
 ![「編集」ボタンをクリック](./images/insights/edit-button.png)
 
-編集ダイアログボックスが表示され、インスタンスの説明とスコアリング頻度を編集できます。変更を確認してダイアログを閉じるには、右下隅の「**[!UICONTROL 編集]**」をクリックします。
+編集ダイアログボックスが表示され、インスタンスの名前、説明、スコアリング頻度を編集できます。 インスタンスのステータスが無効の場合、スコアリング頻度を編集できません。 To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
 
 ![編集ポップオーバー](./images/insights/edit-popover.png)
 
 ### その他のアクション {#more-actions}
 
-右上のナビゲーションの「*編集*」の横に「**[!UICONTROL その他のアクション]**」ボタンがあります。「**[!UICONTROL その他のアクション]**」をクリックするとドロップダウンが開き、次の操作のいずれかを選択できます。
+右上のナビゲーションの「**[!UICONTROL 編集]**」の横に「**[!UICONTROL その他のアクション]**」ボタンがあります。Selecting **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
 
-- **削除**：インスタンスを削除します。
-- **概要データをダウンロード**：概要データを含む CSV ファイルをダウンロードします。
-- **アクセススコア**：「**アクセススコア**」をクリックすると、[Attribution AI チュートリアルのアクセススコア](./download-scores.md)にリダイレクトされます。
-- **実行履歴を表示**：サービスインスタンスに関連付けられたすべてのスコアリング実行のリストを含むポップオーバーが表示されます。
+- **[!UICONTROL クローン]**:インスタンスをコピーします。
+- **[!UICONTROL 削除]**：インスタンスを削除します。
+- **[!UICONTROL 概要データをダウンロード]**：概要データを含む CSV ファイルをダウンロードします。
+- **[!UICONTROL アクセススコア]**:「 **[!UICONTROL アクセススコア]** 」を選択すると、Attribution AIチュートリアルの [アクセススコアにリダイレクトされます](./download-scores.md)。
+- **[!UICONTROL 実行履歴を表示]**：サービスインスタンスに関連付けられたすべてのスコアリング実行のリストを含むポップオーバーが表示されます。
 
 ![その他のアクション](./images/insights/more-actions.png)
 
 ## データのフィルタリング
 
 Attribution AI のインサイトでは、データをフィルタリングしたり、選択したフィルターに基づいて UI のビジュアルを自動的に更新したりすることができます。
-
->[!NOTE]
->
->By default, every filter is set to &quot;All&quot; except the &quot;[!UICONTROL Attribution Model]&quot; filter which is set to &quot;Incremental and Influenced attributed conversions&quot;.
 
 ### コンバージョンイベント
 
@@ -89,23 +86,9 @@ Attribution AI で新しいインスタンスを作成する場合、必須フ�
 
 ### アトリビューションモデル
 
-Clicking **[!UICONTROL Attribution Model]** opens a dropdown with all of the different attribution models available. 複数のモデルを選択して、結果を比較できます。様々なアトリビューションモデルとその仕組みについて詳しくは、[Attribution AI](./overview.md) の概要を参照してください。このページの表に、各モデルに関する情報が示されています。
+Selecting **[!UICONTROL Attribution Model]** opens a dropdown with all of the different attribution models available. 複数のモデルを選択して、結果を比較できます。様々なアトリビューションモデルとその仕組みについて詳しくは、[Attribution AI](./overview.md) の概要を参照してください。このページの表に、各モデルに関する情報が示されています。
 
 ![アトリビューションモデル](./images/insights/attribution-model.png)
-
-### 製品
-
-「**[!UICONTROL 製品]**」フィルターを使用すると 、インスタンスの作成時に最初に取り込まれた製品の中から選択できます。ドロップダウンをクリックし、検索機能を使用して、比較するすべての製品をすばやく選択します。
-
-![「製品」フィルター](./images/insights/product-filter.png)
-
-### 地域
-
-「**[!UICONTROL 地域]**」フィルターを指定すると、地域ベースのモデルに基づいて国コードが入力されます。データによっては、このフィルターが表示されない場合があります。
-
->[!NOTE]
->
-> 国コードの長さは 2 文字です。すべての国コードのリストについては、[ISO 3166-1 alpha-2](https://datahub.io/core/country-list) を参照してください。
 
 ### 領域
 
@@ -115,15 +98,22 @@ Clicking **[!UICONTROL Attribution Model]** opens a dropdown with all of the dif
 
 このフィルターを使用すると、インスタンス作成プロセスで設定した地域を選択できます。
 
-### チャネル
+### 追加フィルター
 
-「**[!UICONTROL チャネル]**」フィルターをクリックすると、使用可能なマーケティングチャネルがすべて含まれたドロップダウンが表示されます。複数のチャネルを選択して比較できます。
+追加のフィルターを追加するには、 **フィルター** アイコンを選択して **[!UICONTROL 追加、フィルター]** ポーバーを開きます。 **** フィルタープロバーを使用すると、チャネル、地域、メディアタイプ、および製品でフィルタリングできます。 サービスインスタンスに適用できるフィルターのみが、ポーバーによって入力されます。 例えば、地理的なデータやメディアタイプを指定しなかった場合、これらのフィルター属性はインスタンスで使用できません。
 
-![チャネル](./images/insights/channel.png)
+![追加フィルター](./images/insights/additional-filters.png)
+
+![フィルターポーバー](./images/insights/filter-popover.png)
+
+- **[!UICONTROL チャネル]:** 「チャネル」属性を選択すると、使用可能なマーケティングチャネルをフィルターできます。 複数のチャネルを選択して比較できます。
+- **[!UICONTROL 地域]:** 地域属性を選択すると、地域ベースのモデルに基づいて国コードをフィルターできます。 データに応じて、このフィルターが存在する場合と存在しない場合があります。  国コードの長さは 2 文字です。完全な国コードのリストは [こちら](https://datahub.io/core/country-list)。
+- **[!UICONTROL メディアの種類]:** メディアタイプ属性を選択すると、定義したメディアタイプのいずれかをフィルタリングできます。
+- **[!UICONTROL 製品]:** 製品属性を選択すると、インスタンスの作成時に最初に取り込まれた製品からフィルタできます。
 
 ### 日付範囲
 
-カレンダーアイコンをクリックすると、日付範囲ポップオーバーが開きます。コンバージョンイベントの開始日と終了日によって、UI に入力されるデータの量が変わります。日付範囲を調整することで、入力されるデータの量を変更することができます。
+カレンダーアイコンを選択して、日付範囲プロバーを開きます。 コンバージョンイベントの開始日と終了日によって、UI に入力されるデータの量が変わります。日付範囲を調整することで、入力されるデータの量を変更することができます。
 
 ![日付範囲](./images/insights/display-date-range.png)
 
@@ -137,29 +127,65 @@ Clicking **[!UICONTROL Attribution Model]** opens a dropdown with all of the dif
 
 「**[!UICONTROL 週別トレンド]**」カードでは、フィルタリング処理中に設定した日付範囲の合計コンバージョン数が表示されます。
 
-![トレンド](./images/insights/weekly-trends.png)
-
-「*週別トレンド*」カードの右上にある省略記号をクリックすると、ドロップダウンが表示され、日別、週別、または月別のトレンドを選択できます。
+Selecting the ellipses in the top-right of the **Weekly trends** card displays a drop down allowing you to select daily, weekly, or monthly trends.
 
 特定のアトリビューションモデルのデータ線の上にカーソルを置くと、その日のコンバージョンの合計数を示すポップオーバーが作成されます。
 
-![トレンドにカーソルを合わせる](./images/insights/weekly-trend-hover.png)
+![トレンド](./images/insights/weekly-trends.png)
 
 ## チャネル別コンバージョン数
 
 「**[!UICONTROL チャネル別コンバージョン数]**」カードを使用して、各チャネルに関連するコンバージョンの合計数を確認できます。このカードは、各チャネルの効果と投資回収率に関する意思決定に役立ちます。
 
+Selecting the ellipses in the top-right of the **[!UICONTROL Breakdown by channel]** card opens a dropdown allowing you to populate data based on touchpoints.
+
 ![チャネル別コンバージョン数](./images/insights/channel-breakdown.png)
-
-「**[!UICONTROL チャネル別コンバージョン数]**」カードの右上にある省略記号をクリックすると、ドロップダウンが開き、タッチポイントに基づいたデータを表示できます。
-
-![タッチポイント](./images/insights/breakdown-by-touchpoints.png)
 
 ## 上位キャンペーン
 
-「**[!UICONTROL 上位キャンペーン]**」カードには、キャンペーンの概要と、各チャネルにおけるキャンペーンの実績が表示されます。このカードは、指定したチャネルにおける特定のキャンペーンの効果をチームに知らせ、投資を増額すべき場所についての情報を提供します。
+「**[!UICONTROL 上位キャンペーン]**」カードには、キャンペーンの概要と、各チャネルにおけるキャンペーンの実績が表示されます。このカードは、特定のチャネルに対する特定のキャンペーンの有効性をチームに知らせるのに役立ち、さらに投資すべきキャンペーンなどのインサイトを提供します。
 
 ![上位キャンペーン](./images/insights/top-campaigns.png)
+
+## タッチポイントの位置で分類
+
+「 **[!UICONTROL パス分析]** 」タブを選択すると、タッチポイント位置別 **[!UICONTROL 分類]** 、トップコンバージョンパス **** のグラフが読み込まれます。
+
+タッチポイント別 **[!UICONTROL 分類位置]** グラフは、すべてのコンバージョンパスにわたって比較した、タッチポイントの位置別に、関連付けられたコンバージョンを分類したものです。 このグラフを使用すると、コンバージョンパスの様々な段階でタッチポイントがどれだけ効果的かを把握できます。 ステージはスターター、プレーヤーおよびクローザーです。
+
+- **スターター：** タッチポイントがコンバージョンパスの最初のタッチであったことを示します。
+- **プレイヤ：** タッチポイントが、コンバージョンを導く最初または最後のタッチではなかったことを示します。
+- **クローザー：** タッチポイントがコンバージョン前の最後のタッチであることを示します。
+
+>!![NOTE]
+すべてのタッチポイントおよび位置にわたるアトリビューションモデルの貢献度の合計は、100に等しくする必要があります。
+
+![ユーザーパス分類タッチポイント](./images/insights/user-paths.png)
+
+## トップコンバージョンパス
+
+上位のコンバージョンパス **[!UICONTROL (]** Top conversion paths)グラフには、選択した地域の上位のコンバージョンパスに関して、影響を受けたスコアとアルゴリズムのスコアが表示されます。 このグラフでは、コンバージョンに貢献するタッチポイントと、各タッチポイントのアトリビューションスコアを視覚化できます。 この情報を使用して、特定の領域で最も頻繁に発生するパスを表示し、様々なタッチポイントの間にパターンが現れるかどうかを確認できます。
+
+![最も一般的なユーザーパス](./images/insights/Touchpoint-paths.png)
+
+## タッチポイントの効果
+
+「 **[!UICONTROL タッチポイントの効果]** 」タブを選択すると、タッチポイントの効果 **[!UICONTROL (]** タッチポイントの効果)カードが読み込まれます。 このカードは、Attribution AIのデータ配布を使用して、各タッチポイントの情報を表示します。 このテーブルのデータは、カードの右上にある **[!UICONTROL 基準日で示される特定の期間のみ生成されます]** 。
+
+![タッチポイントの効果を選択](./images/insights/Touchpoint-effectiveness.png)
+
+タッチポイントの効果 **[!UICONTROL (]** タッチポイントの効果)カード情報を使用して、タッチポイントがコンバージョンにどのように貢献するかを把握できます。 次のパフォーマンス指標を使用すると、各タッチポイントの効果を確認することもできます。
+
+**タッチされたパス**:この指標は、タッチポイントのコンバージョンを達成している/達成していないパスの割合を表示します。 コンバージョンを達成しているパス（割合）と、コンバージョンを達成していないパスの比率が高い場合は、アトリビュートの高いコンバージョンが表示されます。
+
+![タッチされたパス指標](./images/insights/Touchpoint-metrics.png)
+
+**効率性の測定**:この指標では、星が1 ～ 5のスケールで表示されます。 スケールは、コンバージョンを行う際のタッチポイントの相対的な重要性を示します。
+
+>[!NOTE]
+タッチポイントのボリュームが高いと、効率性の高い測定が保証されません。
+
+**総容量**:タッチポイントがユーザーによってタッチされた回数の集計です。 変換を達成するパス上に表示されるタッチポイントや、変換に結びつかないパスなどがこれに含まれます。
 
 ## 次の手順
 
