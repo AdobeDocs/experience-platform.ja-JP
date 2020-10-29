@@ -5,7 +5,7 @@ title: 電子メールマーケティングの宛先の作成
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 51dd255156229adcb80c2a04aa1ccd5b01208a66
+source-git-commit: 34bf1c8aba555c5c8a527f4c0162cec4535b1dcf
 workflow-type: tm+mt
 source-wordcount: '1625'
 ht-degree: 78%
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'Content-Type: application/json' \
 --data-raw '{
     "name": "S3 Connection for Adobe Campaign",
-    "description": "your company's holiday campaign",
+    "description": "summer advertising campaign",
     "connectionSpec": {
         "id": "{_CONNECTION_SPEC_ID}",
         "version": "1.0"
