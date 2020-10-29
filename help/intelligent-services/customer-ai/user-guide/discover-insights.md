@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform
 title: 顧客 AI によるインサイトの獲得
 topic: Discovering insights
-description: 顧客 AI は、Intelligent Services の一部として Adobe Sensei を活用し、顧客の次の行動を予測する力をマーケターに提供します。顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイメントは必要ありません。
+description: このドキュメントは、Intelligent Services 顧客 AI ユーザーインターフェイスのサービスインスタンスインサイトを操作するためのガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
 workflow-type: tm+mt
-source-wordcount: '1125'
-ht-degree: 89%
+source-wordcount: '1389'
+ht-degree: 55%
 
 ---
 
@@ -48,15 +48,22 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ### サービスインスタンスの詳細
 
-サービスインスタンスの詳細を表示する方法は 2 つあります。1 つ目はダッシュボードから、もう 1 つはサービスインスタンス内からです。
+サービスインスタンスの詳細を表示するには、2つの方法があります。をダッシュボードから、またはサービスインスタンス内から呼び出します。
 
-ダッシュボード内から詳細を表示するには、名前に接続されているハイパーリンクを回避し、サービスインスタンスコンテナをクリックします。右側のパネルが開き、説明、スコア付け頻度、予測目標、対象母集団などの追加の詳細が表示されます。さらに、「**[!UICONTROL 編集]**」または「**[!UICONTROL 削除]**」をクリックして、インスタンスの編集と削除を選択できます。
+ダッシュボード内のサービスインスタンスの詳細の概要を表示するには、サービスインスタンスのコンテナを選択し、名前に付けられるハイパーリンクを避けます。 右側のパネルが開き、詳細情報が表示されます。 コントロールには、次の項目が含まれます。
 
-![右パネル](../images/insights/success-run.png)
+- **[!UICONTROL 編集]**:「 **[!UICONTROL 編集]** 」を選択すると、既存のサービスインスタンスを変更できます。 インスタンスの名前、説明およびスコアリング頻度を編集できます。
+- **[!UICONTROL クローン]**:「 **[!UICONTROL Clone]** 」を選択すると、現在選択されているサービス・インスタンスが設定済みでコピーされます。 その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
+- **[!UICONTROL 削除]**:過去の実行を含むサービスインスタンスを削除できます。
+- **[!UICONTROL データソース]**:このインスタンスで使用されるデータセットへのリンク。
+- **[!UICONTROL 実行頻度]**:スコアリングの実行頻度と実行日時。
+- **[!UICONTROL スコアの定義]**:このインスタンスに対して設定した目標の概要を簡単に示します。
+
+![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->スコア付け実行が失敗したイベントには、エラーメッセージが表示されます。エラーメッセージは、右側パネル の「*最後の実行の詳細*」の下に表示され、失敗した実行に対してのみ表示されます。
+>スコア付け実行が失敗したイベントには、エラーメッセージが表示されます。エラーメッセージは、右側パネル の「**最後の実行の詳細**」の下に表示され、失敗した実行に対してのみ表示されます。
 
 ![失敗した実行メッセージ](../images/insights/failed-run.png)
 
@@ -72,7 +79,7 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![編集ボタンをクリックする](../images/insights/edit-button.png)
 
-編集ダイアログボックスが表示され、インスタンスの&#x200B;*説明*&#x200B;と&#x200B;*スコア付けの頻度*&#x200B;を編集できます。変更を確認してダイアログを閉じるには、右下隅の「**[!UICONTROL 編集]**」をクリックします。
+編集ダイアログボックスが表示され、インスタンスの名前、説明、ステータス、スコアリング頻度を編集できます。 To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
 
 ![編集ポップオーバー](../images/insights/edit-instance.png)
 
@@ -80,15 +87,16 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 右上のナビゲーションの「**[!UICONTROL 編集]**」の横に「**[!UICONTROL その他のアクション]**」ボタンがあります。「**[!UICONTROL その他のアクション]**」をクリックするとドロップダウンが開き、次の操作のいずれかを選択できます。
 
+- **[!UICONTROL クローン]**:「 **[!UICONTROL Clone]** 」を選択すると、設定されたサービスインスタンスがコピーされます。 その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
 - **[!UICONTROL 削除]**：インスタンスを削除します。
-- **[!UICONTROL アクセススコア]**:「*アクセススコア*」をクリックすると、ダイアログが開き、[顧客 AI のスコアのダウンロード](./download-scores.md)チュートリアルへのリンクが表示されます。このダイアログには、API 呼び出しの作成に必要なデータセット ID も表示されます。
+- **[!UICONTROL アクセススコア]**:「 **[!UICONTROL アクセススコア]** 」を選択すると、ダイアログが開き、Customer AI [Tutorialの](./download-scores.md) ダウンロードスコアへのリンクが提供されます。このダイアログには、API呼び出しの作成に必要なデータセットIDも表示されます。
 - **[!UICONTROL 実行履歴の表示]**：ダイアログが開き、サービスインスタンスに関連付けられたすべてのスコア付け実行のリストが表示されます。
 
 ![その他のアクション](../images/insights/more-actions.png)
 
-## スコア付けの概要 {#scoring-summary}
+## Scoring summary {#scoring-summary}
 
-スコア付けの概要には、スコア付けされたプロファイルの合計数が表示され、傾向（高、中、低）を含むグループに分類されます。傾向バケットは、スコア範囲に基づいて決定され、「低」は 24 未満、「中」は 25 ～ 74、「高」は 74 を超える値になります。各バケットには、凡例に対応する色があります。
+スコアリングの概要には、スコア対象プロファイルの合計数が表示され、高、中、低の傾向を含むグループに分類されます。 傾向バケットは、スコア範囲に基づいて決定され、「低」は 24 未満、「中」は 25 ～ 74、「高」は 74 を超える値になります。各バケットには、凡例に対応する色があります。
 
 >[!NOTE]
 >
@@ -96,9 +104,13 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![スコア付けの概要](../images/insights/scoring-summary.png)
 
+リング上の色の上にマウスポインターを置くと、表示の追加情報(割合や、グループに属するプロファイルの合計数など)を表示できます。
+
+![](../images/insights/scoring-ring.png)
+
 ## スコアの配分
 
-「**[!UICONTROL スコアの配分]**」カードには、スコアに基づいた訪問者の概要が視覚的に表示されます。「*スコアの配分*」カードに表示される色は、生成された傾向スコアのタイプを表します。
+「**[!UICONTROL スコアの配分]**」カードには、スコアに基づいた訪問者の概要が視覚的に表示されます。「[!UICONTROL スコアの配分]」カードに表示される色は、生成された傾向スコアのタイプを表します。スコアリング分布の上にカーソルを置くと、その分布に属する正確な数が示されます。
 
 ![スコアの配分](../images/insights/distribution-of-scores.png)
 
@@ -108,9 +120,21 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![影響を与える要因](../images/insights/influential-factors.png)
 
+### 影響力のある要因の詳細表示
+
+影響力の高い任意の要因の上にマウスポインターを置くと、データがさらに分類されます。 特定のプロファイルが傾向バケットに属する理由の概要が表示されます。 係数に応じて、number、categoryまたはboolean値を指定できます。 以下の例では、地域別の分類値が表示されています。
+
+![drilldownスクリーンショット](../images/insights/drilldown.png)
+
+さらに、ドリルダウンを使用すると、2つ以上の傾向グループに発生した場合に配分要因を比較し、これらの値を使用してより具体的なセグメントを作成できます。 次の例は、最初の使用例を示しています。
+
+![](../images/insights/drilldown-compare.png)
+
+コンバージョンの傾向が低いプロファイルは、adobe.comのWebページを最近訪問した可能性が低いことがわかります。 「前回のweb訪問からの日数」要因の対象範囲は、中程度の傾向プロファイルの26%に対してわずか8%です。 この数値を使用して、各バケット内の分布をファクタと比較できます。 この情報を使用して、Web訪問の最新性は、中型の傾向バケットと同様に、低型の傾向バケットではあまり影響力がないと推測できます。
+
 ### セグメントの作成
 
-傾向が「低」、「中」、「高」の任意のバケットで「**[!UICONTROL セグメントを作成]**」ボタンをクリックすると、セグメントビルダーにリダイレクトされます。
+Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for low, medium, and high propensity redirects you to the segment builder.
 
 >[!NOTE]
 >
