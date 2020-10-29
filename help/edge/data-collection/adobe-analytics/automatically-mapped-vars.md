@@ -5,10 +5,10 @@ description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動�
 seo-description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 8e3bef77b84e40c836a6279a9a3e3901565c9920
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 46%
+source-wordcount: '681'
+ht-degree: 36%
 
 ---
 
@@ -28,11 +28,12 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | `commerce.checkouts.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLとコンバージョンCOMMERCE_SC_CHECKOUTとのマッピング（区切り文字を使用） `,`。 |
 | `commerce.productListAdds.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのマッピング(コンバージョンCOMMERCE_SC_追加とのマッピング)。区切り文字を使用 `,`します。 |
 | `commerce.productListRemovals.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのマッピングとコンバージョンCOMMERCE_SC_REMOVEとの対応付け（区切り文字を使用） `,`。 |
-| `commerce.productViews.id` | `events` | `prodView` イベントのシリアル化. |
-| `commerce.productListOpens.id` | `events` | `scOpen` イベントのシリアル化. |
-| `commerce.productListViews.id` | `events` | `scView` イベントのシリアル化. |
-| `commerce.productListAdds.id` | `events` | `scAdd` イベントのシリアル化. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` イベントのシリアル化. |
+| `commerce.productViews.id` | `events` | （オプション） `prodView` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.productListOpens.id` | `events` | （オプション） `scOpen` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.productListViews.id` | `events` | （オプション） `scView` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.productListAdds.id` | `events` | （オプション） `scAdd` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.productListRemovals.id` | `events` | （オプション） `scRemove` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.checkouts.id` | `events` | （オプション） `scCheckout` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
 | `commerce.checkouts.id` | `events` | `scCheckout` イベントのシリアル化. |
 | `device.screenHeight` | `s` | AppMeasurementクエリパラメーターの画面解像度のマッピング。 |
 | `device.screenWidth` | `s` | AppMeasurementクエリパラメーターの画面解像度のマッピング。 |
