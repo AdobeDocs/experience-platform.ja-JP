@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、2 つの主なセクションについて説明します。まず、JupyterLab ノートブック内のテンプレートを使用して機械学習モデルを作成します。次に、JupyterLab 内でノートブックをレシピワークフローに導き、Data Science Workspace 内でレシピを作成します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: adaa7fbaf78a37131076501c21bf18559c17ed94
 workflow-type: tm+mt
-source-wordcount: '2335'
-ht-degree: 84%
+source-wordcount: '2350'
+ht-degree: 81%
 
 ---
 
@@ -67,10 +67,10 @@ Now that you know the basics for the [!DNL JupyterLab] notebook environment, you
 
 ### 要件ファイル {#requirements-file}
 
-要件ファイルは、レシピで使用する追加のライブラリを宣言するために使用されます。依存関係がある場合は、バージョン番号を指定できます。追加のライブラリを探すには、https://anaconda.org を参照してください。既に使用されている主なライブラリのリストは次のとおりです。
+要件ファイルは、レシピで使用する追加のライブラリを宣言するために使用されます。依存関係がある場合は、バージョン番号を指定できます。To look for additional libraries, visit [anaconda.org](https://anaconda.org). 要件ファイルの形式設定方法については、 [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually).を参照してください。 既に使用されている主なライブラリのリストは次のとおりです。
 
 ```JSON
-python=3.5.2
+python=3.6.7
 scikit-learn
 pandas
 numpy
@@ -79,7 +79,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
-> 追加したライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。
+> 追加したライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。また、環境ファイルを手動で作成する場合は、 `name` フィールドを上書きできません。
 
 ### 設定ファイル {#configuration-files}
 
@@ -117,7 +117,7 @@ data_access_sdk_python
 
 この手順では、[pandas データフレーム](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)を使用します。Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas&#39; `read_csv()` or `read_json()` functions.
 
-- [[!DNLプラットフォームSDK]](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [外部ソース](#external-sources)
 
 >[!NOTE]
@@ -148,30 +148,32 @@ df = pd.read_json(data)
 
 これで、データはデータフレームオブジェクトに含まれ、[次の節](#data-preparation-and-feature-engineering)で分析および操作できます。
 
-### データアクセス SDK（非推奨）
+### プラットフォームSDKから
 
->[!CAUTION]
->
-> `data_access_sdk_python`   が推奨されなくなりました。[ データローダーの使用に関するガイドについては、「](../authoring/platform-sdk.md)データアクセスコードの Platform SDK への変換`platform_sdk`」を参照してください。
+プラットフォームSDKを使用してデータを読み込むことができます。 ライブラリは、次の行を含めることで、ページの上部にインポートできます。
 
-データアクセス SDK を使用してデータを読み込むことができます。ライブラリは、次の行を含めることで、ページの上部にインポートできます。
-
-`from data_access_sdk_python.reader import DataSetReader`
+`from platform_sdk.dataset_reader import DatasetReader`
 
 次に、`load()` メソッドを使用して、設定（`recipe.conf`）ファイルに設定されたとおりに `trainingDataSetId` からトレーニングデータセットを取得します。
 
 ```PYTHON
-prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                           user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                           service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+def load(config_properties):
+    print("Training Data Load Start")
 
-df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
-                     ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    #########################################
+    # Load Data
+    #########################################    
+    client_context = get_client_context(config_properties)
+    
+    dataset_reader = DatasetReader(client_context, config_properties['trainingDataSetId'])
+    
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 >[!NOTE]
 >
->As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from [!DNL Experience Platform]:
+>As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform using `client_context`:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -227,46 +229,51 @@ First, `week` and `year` columns are created and the original `date` column conv
 スコアリングのデータを読み込む手順は、`split()` 関数でトレーニングデータを読み込む手順と似ています。データアクセス SDK を使用して、`recipe.conf` ファイルにある `scoringDataSetId` からデータを読み込みます。
 
 ```PYTHON
-def load(configProperties):
+def load(config_properties):
 
     print("Scoring Data Load Start")
 
     #########################################
     # Load Data
     #########################################
-    prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                               user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                               service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+    client_context = get_client_context(config_properties)
 
-    df = prodreader.load(data_set_id=configProperties['scoringDataSetId'],
-                         ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    dataset_reader = DatasetReader(client_context, config_properties['scoringDataSetId'])
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 データの読み込み後、データの準備と特徴量エンジニアリングがおこなわれます。
 
 ```PYTHON
-#########################################
-# Data Preparation/Feature Engineering
-#########################################
-df.date = pd.to_datetime(df.date)
-df['week'] = df.date.dt.week
-df['year'] = df.date.dt.year
+    #########################################
+    # Data Preparation/Feature Engineering
+    #########################################
+    if '_id' in dataframe.columns:
+        #Rename columns to strip tenantId
+        dataframe = dataframe.rename(columns = lambda x : str(x)[str(x).find('.')+1:])
+        #Drop id, eventType and timestamp
+        dataframe.drop(['_id', 'eventType', 'timestamp'], axis=1, inplace=True)
 
-df = pd.concat([df, pd.get_dummies(df['storeType'])], axis=1)
-df.drop('storeType', axis=1, inplace=True)
-df['isHoliday'] = df['isHoliday'].astype(int)
+    dataframe.date = pd.to_datetime(dataframe.date)
+    dataframe['week'] = dataframe.date.dt.week
+    dataframe['year'] = dataframe.date.dt.year
 
-df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
-df['weeklySalesLag'] = df.shift(45)['weeklySales']
-df['weeklySalesDiff'] = (df['weeklySales'] - df['weeklySalesLag']) / df['weeklySalesLag']
-df.dropna(0, inplace=True)
+    dataframe = pd.concat([dataframe, pd.get_dummies(dataframe['storeType'])], axis=1)
+    dataframe.drop('storeType', axis=1, inplace=True)
+    dataframe['isHoliday'] = dataframe['isHoliday'].astype(int)
 
-df = df.set_index(df.date)
-df.drop('date', axis=1, inplace=True)
+    dataframe['weeklySalesAhead'] = dataframe.shift(-45)['weeklySales']
+    dataframe['weeklySalesLag'] = dataframe.shift(45)['weeklySales']
+    dataframe['weeklySalesDiff'] = (dataframe['weeklySales'] - dataframe['weeklySalesLag']) / dataframe['weeklySalesLag']
+    dataframe.dropna(0, inplace=True)
 
-print("Scoring Data Load Finish")
+    dataframe = dataframe.set_index(dataframe.date)
+    dataframe.drop('date', axis=1, inplace=True)
 
-return df
+    print("Scoring Data Load Finish")
+
+    return dataframe
 ```
 
 このモデルの目的は将来の毎週の売上を予測することなので、モデルの予測がどれだけうまく機能するかを評価するために使用されるスコアリングデータセットを作成する必要があります。
