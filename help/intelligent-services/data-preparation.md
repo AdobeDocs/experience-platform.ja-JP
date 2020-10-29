@@ -5,10 +5,10 @@ title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 description: 'インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。 '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
 workflow-type: tm+mt
-source-wordcount: '1979'
-ht-degree: 3%
+source-wordcount: '1882'
+ht-degree: 1%
 
 ---
 
@@ -276,81 +276,15 @@ CEEミックスインをスキーマに追加した後、データ内の追加�
 
 ![](images/data-preparation/dataset-location.png)
 
-#### データセット追加の主なID名前空間タグ
+#### データセット追加のIDフィールド
 
 >[!NOTE]
 >
 >の今後のリリースで [!DNL Intelligent Services] は、 [Adobe Experience Platform・アイデンティティ・サービスがお客様の識別機能に統合される予定です](../identity-service/home.md) 。 したがって、次の手順は変更される場合があります。
 
-、などの外部ソースからデータを取り込む場合 [!DNL Adobe Audience Manager]は、データセットに [!DNL Adobe Analytics]`primaryIdentityNameSpace` タグを追加する必要があります。 これは、Catalog Service APIにPATCHリクエストを行うことで行うことができます。
+、 [!DNL Adobe Audience Manager]、 [!DNL Adobe Analytics]または他の外部ソースからデータを取り込む場合は、スキーマフィールドをIDフィールドとして設定できます。 スキーマフィールドをIDフィールドとして設定するには、「 [UIチュートリアル](../xdm/tutorials/create-schema-ui.md#identity-field) 」の「IDフィールドの設定」に関する節を表示し、スキーマエディターまたは [APIチュートリアルを使用してスキーマを作成します](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)。
 
 ローカルCSVファイルからデータを取り込む場合は、データの [マッピングと取り込みに関する次の節に進むことができます](#ingest)。
-
-以下のAPI呼び出しの例に従う前に、カタログ開発ガイドの [はじめにの節](../catalog/api/getting-started.md) 、必要なヘッダーに関する重要な情報を参照してください。
-
-**API 形式**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| パラメーター | 説明 |
-| --- | --- |
-| `{DATASET_ID}` | 前に作成したデータセットのID。 |
-
-**リクエスト**
-
-データを取り込む元のソースに応じて、リクエストペイロードに適切な `primaryIdentityNamespace` タグ値と `sourceConnectorId` タグ値を指定する必要があります。
-
-次のリクエストは、Audience Managerに適したタグ値を追加します。
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-次のリクエストによって、Analyticsに適したタグ値が追加されます。
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->For more information on working with identity namespaces in Platform, see the [identity namespace overview](../identity-service/namespaces.md).
-
-**応答**
-
-リクエストが成功した場合、更新されたデータセットの ID を含む配列が返されます。この ID は、PATCH リクエストで送信された ID と一致する必要があります。
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### データのマッピングと取り込み {#ingest}
 
