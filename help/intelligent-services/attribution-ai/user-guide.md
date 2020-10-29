@@ -5,10 +5,10 @@ title: Attribution AI ユーザーガイド
 topic: User guide
 description: このドキュメントは、インテリジェントサービスユーザーインターフェイスの Attribution AI を操作するためのガイドとなります。
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 97%
+source-wordcount: '1746'
+ht-degree: 79%
 
 ---
 
@@ -25,7 +25,29 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![インスタンスへのアクセス](./images/user-guide/open_Attribution_ai.png)
 
-Attribution AI サービスページが表示されます。このページには、Attribution AI のサービスインスタンスが一覧表示され、インスタンスの名前、コンバージョンイベント、インスタンスの実行頻度、最後の更新のステータスなど、インスタンスに関する情報が表示されます。開始するには、「**Create instance**」をクリックします。
+Attribution AI サービスページが表示されます。このページには、Attribution AI のサービスインスタンスが一覧表示され、インスタンスの名前、コンバージョンイベント、インスタンスの実行頻度、最後の更新のステータスなど、インスタンスに関する情報が表示されます。
+
+「スコア対象の **[!UICONTROL 合計コンバージョンイベント数]** 」指標は、インスタンスを **[!UICONTROL 作成]** コンテナの右下にあります。 この指標は、すべてのSandbox環境と削除されたサービスインスタンスを含む、現在のカレンダー年のAttribution AIがスコアするコンバージョンイベントの合計数を追跡します。
+
+![](./images/user-guide/total_conversions.png)
+
+サービスインスタンスは、UIの右側のコントロールを使用して、編集、複製および削除できます。 これらのコントロールを表示するには、既存の **[!UICONTROL サービスインスタンスからインスタンスを選択し]**&#x200B;ます。 コントロールには次の情報が含まれます。
+
+- **[!UICONTROL 編集]**:「 **[!UICONTROL 編集]** 」を選択すると、既存のサービスインスタンスを変更できます。 インスタンスの名前、説明、ステータスおよびスコアリング頻度を編集できます。
+- **[!UICONTROL クローン]**:「 **[!UICONTROL Clone]** 」を選択すると、選択したサービス・インスタンスがコピーされます。 その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
+- **[!UICONTROL 削除]**:過去の実行を含むサービスインスタンスを削除できます。
+- **[!UICONTROL データソース]**:このインスタンスで使用されているデータセットへのリンク。
+- **[!UICONTROL 前回の実行の詳細]**:これは、実行に失敗した場合にのみ表示されます。 エラーコードなどの実行が失敗した理由に関する情報がここに表示されます。
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL コンバージョンイベント]**:このインスタンスに対して設定されたコンバージョンイベントの概要を簡単に説明します。
+- **[!UICONTROL ルックバックウィンドウ]**:定義した時間枠は、コンバージョンイベントのタッチポイントが含まれるまでの日数を示します。
+- **[!UICONTROL タッチポイント]**:このインスタンスの作成時に定義したすべてのタッチポイントのリスト。
+
+![](./images/user-guide/side_panel_2.png)
+
+Select **[!UICONTROL Create instance]** to begin.
 
 ![インスタンスの作成](./images/user-guide/landing_page.png)
 
@@ -133,7 +155,7 @@ Attribution AI サービスページが表示されます。このページに�
 
 ## 高度なトレーニングとスコアリングの設定
 
-Attribution AI の最後のページは、トレーニングとスコアリングの設定に使用する *Advanced* ページです。
+Attribution AI の最後のページは、トレーニングとスコアリングの設定に使用する **[!UICONTROL Advanced]** ページです。
 
 ![新規ページ：Advanced](./images/user-guide/advanced_settings.png)
 
@@ -153,7 +175,13 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 ![時計アイコン](./images/user-guide/time_of_day.png)
 
-### 地域ベースのモデリング（オプション） {#region-based-modeling-optional}
+### 追加のスコアデータセット列（オプション）
+
+デフォルトでは、標準スキーマの各サービスインスタンスに対してスコアデータセットが作成されます。 コンバージョンイベントとタッチポイントの設定に基づいて、スコアデータセットの出力に列を追加することを選択できます。 開始するには、入力データセットから列を選択し、ドラッグ&amp;ドロップしてハンバーガーアイコンの上にマウスの左ボタンを置き、順序を変更します。
+
+![スコアデータセット列の追加](./images/user-guide/Add-score-dataset.png)
+
+### Region-based modeling (optional) {#region-based-modeling-optional}
 
 顧客の行動は、国や地域によって大きく異なる場合があります。グローバルビジネスの場合、国ベースまたは地域ベースのモデルを使用すると、アトリビューションの精度が向上する可能性があります。追加された地域ごとに、その地域のデータを使用して新しいモデルを作成します。
 
@@ -189,7 +217,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 ## 次の手順
 
-このチュートリアルに従って、Attribution AI にサービスインスタンスを正常に作成できました。インスタンスのスコアリングが完了したら（24 時間以内に完了）、[Attribution AI インサイトを見つける](./discover-insights.md)準備が整います。また、スコアリング結果をダウンロードする場合は、[生のスコアのダウンロード](./download-scores.md)に関するドキュメントを参照してください。
+このチュートリアルに従って、Attribution AI にサービスインスタンスを正常に作成できました。インスタンスのスコアリングが完了したら（24 時間以内に完了）、[Attribution AI インサイトを見つける](./discover-insights.md)準備が整います。Additionally, if you wish to download your scoring results, visit the [downloading scores](./download-scores.md) documentation.
 
 ## その他のリソース
 
