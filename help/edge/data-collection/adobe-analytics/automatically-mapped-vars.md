@@ -5,10 +5,10 @@ description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動�
 seo-description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: aa9789768cbcbb13a36c200ef7540c045c30a3fe
+source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 46%
+source-wordcount: '680'
+ht-degree: 36%
 
 ---
 
@@ -21,19 +21,19 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | AppMeasurement コンテキストデータ `c.a.appid` のマッピング。 |
 | `application.launches.value` | `c.a.launches` | AppMeasurement コンテキストデータ `c.a.launches` のマッピング。 |
-| `commerce.checkouts.id` | `events` | `scCheckout` イベントのシリアル化. |
+| `commerce.checkouts.id` | `events` | `scCheckout` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
 | `commerce.checkouts.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLとコンバージョンCOMMERCE_SC_CHECKOUTとのマッピング（区切り文字を使用） `,`。 |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement クエリパラメーター CURRENCY のマッピング。 |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement クエリパラメーター PURCHASEID のマッピング。 |
-| `commerce.productListAdds.id` | `events` | `scAdd` イベントのシリアル化. |
+| `commerce.productListAdds.id` | `events` | `scAdd` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
 | `commerce.productListAdds.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのマッピング(コンバージョンCOMMERCE_SC_追加とのマッピング)。区切り文字を使用 `,`します。 |
-| `commerce.productListOpens.id` | `events` | `scOpen` イベントのシリアル化. |
+| `commerce.productListOpens.id` | `events` | `scOpen` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
 | `commerce.productListOpens.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのマッピング（コンバージョンCOMMERCE_SC_OPENとのマッピング）。区切り文字を使用 `,`します。 |
-| `commerce.productListRemovals.id` | `events` | `scRemove` イベントのシリアル化. |
+| `commerce.productListRemovals.id` | `events` | `scRemove` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
 | `commerce.productListRemovals.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのマッピングとコンバージョンCOMMERCE_SC_REMOVEとの対応付け（区切り文字を使用） `,`。 |
-| `commerce.productListViews.id` | `events` | `scView` イベントのシリアル化. |
+| `commerce.productListViews.id` | `events` | `scView` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
 | `commerce.productListViews.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLの、コンバージョンCOMMERCE_SC_表示とのマッピング（区切り文字を使用） `,`。 |
-| `commerce.productViews.id` | `events` | `prodView` イベントのシリアル化. |
+| `commerce.productViews.id` | `events` | `prodView` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
 | `commerce.productViews.value` | `events` | AppMeasurementクエリパラメータイベント_リスト_FULLは、コンバージョンCOMMERCE_PROD_表示との区切り文字を使用したマッピング `,`です。 |
 | `commerce.purchases.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのを、区切り文字を使用して、コンバージョンCOMMERCE_PURCHASEとマッピング `,`します。 |
 | `device.colorDepth` | `c` | AppMeasurement クエリパラメーター C_COLOR のマッピング。 |
