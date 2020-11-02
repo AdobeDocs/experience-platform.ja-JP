@@ -3,17 +3,19 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: 結合ポリシーユーザーガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 33%
+source-wordcount: '1516'
+ht-degree: 29%
 
 ---
 
 
 # 結合ポリシーユーザーガイド
 
-Adobe Experience Platform では、複数のソースからデータを組み合わせて、個々の顧客の全体像を把握できます。When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
+Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
+
+例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。 これらのフラグメントがPlatformに取り込まれると、それらのフラグメントが結合され、そのお客様用の単一のプロファイルが作成されます。 複数のソースからのデータが競合する場合(例えば、1つのフラグメントリストが顧客を「独身」、他のリストが「既婚」)、結合ポリシーによって個人のプロファイルに含める情報が決定されます。
 
 RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。このガイドでは、Adobe Experience Platform ユーザーインターフェイスを使用して結合ポリシーを操作する手順を説明します。
 
@@ -23,8 +25,8 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 This guide requires a working understanding of the various [!DNL Experience Platform] services involved with merge policies. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-* [[!DNLリアルタイム顧客プロファイル]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNL IDサービス]](../../identity-service/home.md):取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
+* [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Identity Service]](../../identity-service/home.md):取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
 
 ## 結合ポリシーの表示
