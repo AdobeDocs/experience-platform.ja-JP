@@ -4,10 +4,10 @@ title: プロファイルプレビュー — リアルタイム顧客プロフ�
 description: Adobe Experience Platformでは、複数のソースから顧客データを取り込んで、個々の顧客に対して堅牢な統合プロファイルを構築できます。 リアルタイム顧客プロファイルを有効にしたデータは、プラットフォームに取り込まれると、プロファイルのデータストア内に保存されます。 プロファイルストアのレコード数が増減すると、データストア内のプロファイルフラグメントと結合プロファイルの数に関する情報を含むサンプルジョブが実行されます。 プロファイルAPIを使用して、最新の成功したサンプルや、データセット別、ID名前空間別にリストプロファイルの配布をプレビューできます。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 6%
+source-wordcount: '1608'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,12 @@ Adobe Experience Platformでは、複数のソースから顧客データを取�
 ## はじめに
 
 The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+
+## プロファイルフラグメントと結合されたプロファイル
+
+このガイドは、「プロファイルフラグメント」と「結合されたプロファイル」の両方を参照しています。 先に進む前に、これらの用語の違いを理解することが重要です。
+
+個々の顧客プロファイルは、複数のプロファイルフラグメントで構成され、それらが結合されてその顧客の単一の表示が形成されます。 例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。 これらのフラグメントがプラットフォームに取り込まれると、結合ポリシーに基づいて結合され、そのお客様用の単一のプロファイルが作成されます。 したがって、各プロファイルは複数のフラグメントで構成されるので、プロファイルフラグメントの合計数は、結合されたプロファイルの合計数よりも常に多くなる可能性が高くなります。
 
 ## 表示の最後のサンプル状態 {#view-last-sample-status}
 
