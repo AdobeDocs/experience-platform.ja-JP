@@ -4,10 +4,10 @@ title: リアルタイム顧客プロファイルの概要
 topic: guide
 description: リアルタイム顧客プロファイルは、様々な企業データアセットのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形でそのデータにアクセスできる汎用参照エンティティストアです。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1650'
-ht-degree: 47%
+source-wordcount: '1820'
+ht-degree: 41%
 
 ---
 
@@ -16,28 +16,33 @@ ht-degree: 47%
 
 Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。 この概要は、の役割と使用方法を理解するのに役立ち [!DNL Real-time Customer Profile] ま [!DNL Experience Platform]す。
 
-
 ## [!DNL Profile] experience platformで
 
 次の図では、リアルタイム顧客プロファイルと Experience Platform 内の他のサービスとの関係が強調表示されています。
 
 ![Adobe Experience Platformサービス。](images/profile-overview/profile-in-platform.png)
 
-## プロファイルデータ
+### プロファイルデータストア
 
-[!DNL Real-time Customer Profile] は、様々な企業データアセットからのデータを結合し、個々の顧客プロファイルや関連する時系列イベントの形式でそのデータへのアクセスを提供する、汎用の参照エンティティストアです。 この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
+Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. つまり、 [!DNL Profile] 店舗は、 [!DNL Catalog] データ([!DNL Data Lake])および [!DNL Identity Service] データ（アイデンティティグラフ）とは別のものです。
 
 ### プロファイルガードレール
 
 Experience Platformは、リアルタイム顧客プロファイルがサポートできない [Experience Data Model](../xdm/home.md) (XDM)スキーマの作成を回避するのに役立つ一連のガードレールを提供しています。 これには、パフォーマンスの低下を引き起こすソフトリミットや、エラーやシステムの破損を引き起こすハードリミットが含まれます。 ガイドラインのリストや使用例など、詳細については、 [プロファイル用ガードレールのドキュメントをお読みください](guardrails.md) 。
 
-### プロファイル店
+## プロファイルについて
 
-Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. つまり、 [!DNL Profile] 店舗は、 [!DNL Catalog] データ([!DNL Data Lake])および [!DNL Identity Service] データ（アイデンティティグラフ）とは別のものです。
+[!DNL Real-time Customer Profile] 様々なエンタープライズシステムのデータをマージし、関連する時系列イベントを使用して、顧客プロファイルの形でそのデータへのアクセスを提供します。 この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。以下の節では、プラットフォーム内でプロファイルを効果的に構築し、維持するために理解しておく必要がある主要な概念の一部を取り上げます。
+
+### プロファイルフラグメントと結合されたプロファイル
+
+個々の顧客プロファイルは、複数のプロファイルフラグメントで構成され、それらが結合されてその顧客の単一の表示が形成されます。 例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。 これらのフラグメントがPlatformに取り込まれると、それらのフラグメントが結合され、そのお客様用の単一のプロファイルが作成されます。
+
+複数のソースからのデータが競合する場合(例えば、1人のフラグメントリストが「独身」、他のリストが「既婚」である場合)、 [](#merge-policies) マージポリシーによって、個々のプロファイルに優先順位を付け、含める情報が決まります。 したがって、各プロファイルは複数のフラグメントで構成されるので、Platform内のプロファイルフラグメントの合計数は、結合されたプロファイルの合計数よりも常に多くなる可能性が高くなります。
 
 ### レコードデータ
 
-プロファイルとは、主題、組織、または個人を表すもので、レコードデータとも呼ばれます。例えば、製品のプロファイルには SKU と説明が含まれ、人のプロファイルには名、姓、電子メールアドレスなどの情報が含まれる場合があります。Using [!DNL Experience Platform], you can customize profiles to use types of data relevant to your business. The standard [!DNL Experience Data Model] (XDM) [!DNL Individual Profile] class is the preferred class upon which to build a schema when describing customer record data, and supplies the data integral to many interactions between Platform services. For more information on working with schemas in [!DNL Experience Platform], please begin by reading the [XDM System overview](../xdm/home.md).
+プロファイルとは、多数の属性（レコードデータとも呼ばれます）で構成される件名、組織、または個人を表したものです。 例えば、製品のプロファイルには SKU と説明が含まれ、人のプロファイルには名、姓、電子メールアドレスなどの情報が含まれる場合があります。Using [!DNL Experience Platform], you can customize profiles to use specific data relevant to your business. The standard [!DNL Experience Data Model] (XDM) class, [!DNL XDM Individual Profile], is the preferred class upon which to build a schema when describing customer record data, and supplies the data integral to many interactions between Platform services. For more information on working with schemas in [!DNL Experience Platform], please begin by reading the [XDM System overview](../xdm/home.md).
 
 ### 時系列イベント
 
@@ -45,19 +50,19 @@ Although [!DNL Real-time Customer Profile] processes ingested data and uses Adob
 
 ### ID
 
-どの企業も、個人的に感じる方法で顧客とコミュニケーションをとりたいと思っています。ただし、関連するデジタルエクスペリエンスを顧客に提供する際の課題の 1 つは、多くの場合、タブレット、携帯電話、ノートパソコンなどの様々なデジタルチャネルに広がっている、切断されたデータを結び付ける方法を理解することです。[!DNL Identity Service] 複数の顧客のIDをリンクし、各チャネルのIDグラフを作成することで、顧客の全体像をまとめ、顧客のIDをより深く理解できます。 詳しくは、「[ID サービスの概要](../identity-service/home.md)」を参照してください。
+どの企業も、個人的に感じる方法で顧客とコミュニケーションをとりたいと思っています。ただし、関連するデジタルエクスペリエンスを顧客に提供する際の課題の 1 つは、多くの場合、タブレット、携帯電話、ノートパソコンなどの様々なデジタルチャネルに広がっている、切断されたデータを結び付ける方法を理解することです。[!DNL Identity Service] 複数の顧客のIDをリンクし、各チャネルのIDグラフを作成することで、顧客の全体像をまとめることができます。 詳しくは、「[ID サービスの概要](../identity-service/home.md)」を参照してください。
+
+### 結合ポリシー
+
+When bringing data fragments together from multiple sources and combining them in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be used to create the customer profile. 複数のデータセットのデータに矛盾がある場合、マージポリシーによって、そのデータの処理方法と使用する値が決定されます。 RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。APIを使用した結合ポリシーの操作について詳しくは、 [!DNL Real-time Customer Profile][結合ポリシーエンドポイントガイドを参照してください](api/merge-policies.md)。 To work with merge policies using the [!DNL Experience Platform] UI, refer to the [merge policies user guide](ui/merge-policies.md).
+
+### 和集合スキーマ {#profile-fragments-and-union-schemas}
+
+One of the key features of [!DNL Real-time Customer Profile] is the ability to unify multi-channel data. When [!DNL Real-time Customer Profile] is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. [!DNL Real-time Customer Profile] データは、エンティティやプロファイルがIDでアクセスされたり、セグメントとしてエクスポートされたりすると、ソース間でマージされます。 APIを使用したプロファイルおよび和集合表示へのアクセスについて詳しくは、 [!DNL Real-time Customer Profile] Entitiesエンドポイントガイドを参照して [ください](api/entities.md)。
 
 ### セグメント化
 
 Adobe Experience Platform [!DNL Segmentation Service] produces the audiences needed to power experiences for your individual customers. オーディエンスセグメントを作成すると、そのセグメントの ID が、すべての資格を持つプロファイルのセグメントメンバーのリストに追加されます。Segment rules are built and applied to [!DNL Real-time Customer Profile] data using RESTful APIs and the Segment Builder user interface. セグメント化の詳細については、「[セグメント化サービスの概要](../segmentation/home.md)」を参照してください。
-
-### プロファイルフラグメントと和集合スキーマ {#profile-fragments-and-union-schemas}
-
-One of the key features of [!DNL Real-time Customer Profile] is the ability to unify multi-channel data. When [!DNL Real-time Customer Profile] is used to access an entity, it can supply you with a merged view of all profile fragments for that entity across datasets, referred to as the union view and made possible through what is known as a union schema. [!DNL Real-time Customer Profile] データは、エンティティやプロファイルがIDでアクセスされたり、セグメントとしてエクスポートされたりすると、ソース間でマージされます。 APIを使用したプロファイルおよび和集合表示へのアクセスについて詳しくは、 [!DNL Real-time Customer Profile] Entitiesエンドポイントガイドを参照してください [](api/entities.md)。
-
-### 結合ポリシー
-
-When bringing data together from multiple sources and combining it in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。APIを使用した結合ポリシーの操作について詳しくは、 [!DNL Real-time Customer Profile][結合ポリシーエンドポイントガイドを参照してください](api/merge-policies.md)。 To work with merge policies using the [!DNL Experience Platform] UI, refer to the [merge policies user guide](ui/merge-policies.md).
 
 ### （アルファ）計算済み属性の設定
 
@@ -81,7 +86,7 @@ This section introduces the components that allow [!DNL Real-time Customer Profi
 
 ## Ingest data into [!DNL Profile]
 
-[!DNL Platform] を設定して、にレコードと時系列のデータを送信できます。これにより、リアルタイムストリーミングの取り込みとバッチ取り込みがサポートされ [!DNL Profile]ます。 詳しくは、[リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md)方法を概要するチュートリアルを参照してください。
+[!DNL Platform] は、にレコードと時系列のデータを送信するように設定でき [!DNL Profile]ます。これにより、リアルタイムストリーミングの取り込みとバッチ取り込みがサポートされます。 詳しくは、[リアルタイム顧客プロファイルへのデータの追加](tutorials/add-profile-data.md)方法を概要するチュートリアルを参照してください。
 
 >[!NOTE]
 >
@@ -108,10 +113,10 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 ## 次の手順とその他のリソース
 
-To learn more about [!DNL Real-time Customer Profile], please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
+での作業について詳し [!DNL Real-time Customer Profile]くは、 [プロファイルUIガイド](ui/user-guide.md) または [API開発者ガイドを参照してください](api/overview.md)。
 
 >[!WARNING]
 >
->次のビデオに表示される [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、 [リアルタイム顧客プロファイルユーザーガイド](ui/user-guide.md) (Real-time Customer User Guide)を参照してください。
+>Experience Platformのユーザーインターフェイスは頻繁に更新され、このビデオの録画以降に変更された可能性があります。 最新のUIのスクリーンショットと機能については、 [リアルタイム顧客プロファイルユーザーガイド](ui/user-guide.md) (Real-time Customer User Guide)を参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
