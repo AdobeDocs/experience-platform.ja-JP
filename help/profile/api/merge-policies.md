@@ -3,17 +3,23 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: マージポリシー — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 66%
+source-wordcount: '2458'
+ht-degree: 62%
 
 ---
 
 
 # ポリシーエンドポイントの結合
 
-Adobe Experience Platform では、複数のソースからデータを組み合わせて、個々の顧客の全体像を把握できます。When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。このガイドでは、API を使用して結合ポリシーを操作する手順を示します。UI を使用して結合ポリシーを使用するには、『[結合ポリシーのユーザーガイド](../ui/merge-policies.md)』を参照してください。
+Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
+
+例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。 これらのフラグメントがPlatformに取り込まれると、それらのフラグメントが結合され、そのお客様用の単一のプロファイルが作成されます。 複数のソースからのデータが競合する場合(例えば、1つのフラグメントリストが顧客を「独身」、他のリストが「既婚」)、結合ポリシーによって個人のプロファイルに含める情報が決定されます。
+
+RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。このガイドでは、APIを使用して結合ポリシーを操作する手順を説明します。
+
+UI を使用して結合ポリシーを使用するには、『[結合ポリシーのユーザーガイド](../ui/merge-policies.md)』を参照してください。
 
 ## はじめに
 
@@ -126,7 +132,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 * **`dataSetPrecedence`** :プロファイルフラグメントの送信元のデータセットに基づいて、そのフラグメントを優先します。 これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
    * **`order`**:&quot;dataSetPrecedence&quot;を使用する場合は、配列にデータセットのリストを指定する必要があり `order` ます。 データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
 
-**`dataSetPrecedence`型を使用した attributeMerge オブジェクトの例**
+**`dataSetPrecedence` 型を使用した attributeMerge オブジェクトの例**
 
 ```json
     "attributeMerge": {
@@ -140,7 +146,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
     }
 ```
 
-**`timestampOrdered`型を使用した attributeMerge オブジェクトの例**
+**`timestampOrdered` 型を使用した attributeMerge オブジェクトの例**
 
 ```json
     "attributeMerge": {
@@ -738,7 +744,7 @@ Now that you know how to create and configure merge policies for your IMS Organi
 
 場合によっては、データのバックフィルや、レコードが順番に取り込まれない場合のイベントの正しい順序の確認など、カスタムタイムスタンプを指定し、マージポリシーでシステムタイムスタンプではなくカスタムタイムスタンプが適用される場合があります。
 
-カスタムタイムスタンプを使用するには、 [[!DNL External Source System Audit Details Mixin]](#mixin-details) をプロファイルスキーマに追加する必要があります。 追加したカスタムタイムスタンプは、この `xdm:lastUpdatedDate` フィールドを使用して入力できます。 レコードを取り込むときに `xdm:lastUpdatedDate` フィールドに値が入力され、Experience Platformはそのフィールドを使用して、データセット内およびデータセット間でレコードまたはプロファイルフラグメントを結合します。 が存在しな `xdm:lastUpdatedDate` い場合、または入力されない場合、プラットフォームはシステムタイムスタンプを引き続き使用します。
+カスタムタイムスタンプを使用するには、プロファイルスキーマにタイムスタンプを追加する [[!DNL External Source System Audit Details Mixin]](#mixin-details) 必要があります。 追加したカスタムタイムスタンプは、この `xdm:lastUpdatedDate` フィールドを使用して入力できます。 レコードを取り込むときに `xdm:lastUpdatedDate` フィールドに値が入力され、Experience Platformはそのフィールドを使用して、データセット内およびデータセット間でレコードまたはプロファイルフラグメントを結合します。 が存在しな `xdm:lastUpdatedDate` い場合、または入力されない場合、プラットフォームはシステムタイムスタンプを引き続き使用します。
 
 >[!NOTE]
 >
