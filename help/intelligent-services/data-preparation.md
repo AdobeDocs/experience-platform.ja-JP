@@ -5,9 +5,9 @@ title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 description: 'インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。 '
 translation-type: tm+mt
-source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
+source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1851'
 ht-degree: 1%
 
 ---
@@ -278,11 +278,7 @@ CEEミックスインをスキーマに追加した後、データ内の追加�
 
 #### データセット追加のIDフィールド
 
->[!NOTE]
->
->の今後のリリースで [!DNL Intelligent Services] は、 [Adobe Experience Platform・アイデンティティ・サービスがお客様の識別機能に統合される予定です](../identity-service/home.md) 。 したがって、次の手順は変更される場合があります。
-
-、 [!DNL Adobe Audience Manager]、 [!DNL Adobe Analytics]または他の外部ソースからデータを取り込む場合は、スキーマフィールドをIDフィールドとして設定できます。 スキーマフィールドをIDフィールドとして設定するには、「 [UIチュートリアル](../xdm/tutorials/create-schema-ui.md#identity-field) 」の「IDフィールドの設定」に関する節を表示し、スキーマエディターまたは [APIチュートリアルを使用してスキーマを作成します](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)。
+、 [!DNL Adobe Audience Manager]、 [!DNL Adobe Analytics]または他の外部ソースからデータを取り込む場合は、スキーマフィールドをIDフィールドとして設定できます。 スキーマフィールドをIDフィールドとして設定するには、スキーマ作成の [UIチュートリアル](../xdm/tutorials/create-schema-ui.md#identity-field) または [APIチュートリアル内のIDフィールドの設定に関する節を表示します](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) 。
 
 ローカルCSVファイルからデータを取り込む場合は、データの [マッピングと取り込みに関する次の節に進むことができます](#ingest)。
 
@@ -301,4 +297,4 @@ CEEスキーマとデータセットを作成したら、データテーブル�
 顧客体験データをデータセットに正しく埋め込むと、を使用してインサイト [!DNL Intelligent Services] を生成できます。 開始するには、次のドキュメントを参照してください。
 
 * [Attribution AI の概要](./attribution-ai/overview.md)
-* [顧客 AI の概要](./customer-ai/overview.md)
+* [Customer AI の概要](./customer-ai/overview.md)
