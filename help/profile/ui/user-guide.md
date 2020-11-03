@@ -1,29 +1,27 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-title: リアルタイム顧客プロファイルユーザガイド
+title: リアルタイム顧客プロファイルUIガイド
 topic: guide
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 342a05e4c378732331968ab7695a3ba7b47f2956
 workflow-type: tm+mt
-source-wordcount: '1292'
-ht-degree: 11%
+source-wordcount: '1245'
+ht-degree: 10%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] ユーザーガイド
+# [!DNL Real-time Customer Profile] UIガイド
 
-[!DNL Real-time Customer Profile] オンライン、オフライン、CRM、サードパーティなどの複数のチャネルのデータを組み合わせて、各顧客の全体的な表示を作成します。
-
-This document serves as a guide for interacting with [!DNL Real-time Customer Profile] data in the Adobe Experience Platform user interface.
+[!DNL Real-time Customer Profile] オンライン、オフライン、CRM、サードパーティなどの複数のチャネルのデータを組み合わせて、各顧客の全体的な表示を作成します。 This document serves as a guide for interacting with [!DNL Real-time Customer Profile] data in the Adobe Experience Platform user interface (UI).
 
 ## はじめに
 
-This user guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-time Customer Profiles]. このユーザガイドを読む前に、次のサービスのドキュメントを確認してください。
+このUIガイドでは、管理に関連する様々な [!DNL Experience Platform] サービスについて理解している必要があり [!DNL Real-time Customer Profiles]ます。 このガイドを読む前、またはUIで作業する前に、次のサービスのドキュメントを確認してください。
 
-* [[!DNLリアルタイム顧客プロファイル]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNL IDサービス]](../../identity-service/home.md):異なるデータソース [!DNL Real-time Customer Profile] に取り込まれる際に、アイデンティティを別々のデータソースからブリッジすることで有効に [!DNL Platform]します。
+* [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Identity Service]](../../identity-service/home.md):異なるデータソース [!DNL Real-time Customer Profile] に取り込まれる際に、アイデンティティを別々のデータソースからブリッジすることで有効に [!DNL Platform]します。
 * [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
 
 ## 概要
@@ -102,15 +100,15 @@ ID名前空間を選択した後、「 **[!UICONTROL 参照]** 」タブに戻�
 
 メイン **[!UICONTROL プロファイル]** (Merge Policies **[!UICONTROL )メニューで、「]** Merge Policies」タブを選択して、組織に属するマージポリシーのリストを表示します。 表示される各ポリシーの名前、デフォルトの結合ポリシーかどうか、および適用先のスキーマが表示されます。
 
-For more information on merge policies, see the [merge policies user guide](merge-policies.md).
+For more information on merge policies, see the [merge policies UI guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
 ## 和集合スキーマ {#union-schema}
 
-メイン **[!UICONTROL プロファイル]** ・メニューから「 **[!UICONTROL 和集合スキーマ]** 」タブを選択し、プロファイル・データの和集合スキーマを表示します。 A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. 左側の「[!UICONTROL クラス]」リストからクラスを選択すると、キャンバスにそのスキーマの構造を表示できます。 例えば、「[!DNL XDM Profile]」を選択すると、ク [!DNL XDM Individual Profile] ラスの和集合スキーマが表示されます。
+メイン **[!UICONTROL プロファイル]** (Main Menu)メニューで **[!UICONTROL 、「]** 和集合スキーマ」(Select Data)タブを選択して、取り込むデータの和集合スキーマを表示します。 A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile].
 
-和集合スキーマとAdobe Experience Platform内でのその役割について詳しくは、『 [スキーマ構成ガイド』の和集合スキーマに関する節を参照してください](../../xdm/schema/composition.md)。
+和集合スキーマについて詳しくは、『 [和集合スキーマUIガイド](union-schema.md)』を参照してください。
 
 ![](../images/user-guide/profiles-union-schema.png)
 
