@@ -5,9 +5,9 @@ description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動�
 seo-description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
+source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '674'
 ht-degree: 36%
 
 ---
@@ -91,9 +91,8 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | `placeContext.geo.postalCode` | `zip` | AppMeasurement クエリパラメーター ZIP のマッピング。 |
 | `placeContext.geo.stateProvince` | `state` | AppMeasurement クエリパラメーター STATE のマッピング。 |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurementクエリパラメータ製品のマーチャンダイジングイベント/Evarのマッピング。 |
-| `productlistitems.[N].lineitemid` | `products` | AppMeasurementクエリパラメーターの製品カテゴリマッピング。 |
 | `productlistitems.[N].name` | `products` | AppMeasurementクエリパラメーターの製品名のマッピング。 |
-| `productlistitems.[N].pricetotal` | `products` | AppMeasurementクエリパラメーターの製品価格のマッピング。 |
+| `productlistitems.[N].priceTotal` | `products` | AppMeasurementクエリパラメーターの製品価格のマッピング。 |
 | `productlistitems.[N].quantity` | `products` | AppMeasurementクエリパラメーターの製品数量のマッピング。 |
 | `web.webInteraction.URL` | `pev1` | AppMeasurementクエリパラメーターPAGE_イベント_VAR1のマッピング。 |
 | `web.webInteraction.name` | `pev2` | AppMeasurementクエリパラメーターPAGE_イベント_VAR2のマッピング。 |
