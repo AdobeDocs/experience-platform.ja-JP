@@ -4,10 +4,10 @@ solution: Experience Platform
 title: アドビのプライバシー JavaScript ライブラリの概要
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 6d706b33573e88b2f1ea9d386928dcfdb089a9c5
 workflow-type: tm+mt
-source-wordcount: '921'
-ht-degree: 73%
+source-wordcount: '922'
+ht-degree: 72%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 73%
 | 関数 | 説明 |
 | --- | --- |
 | `retrieveIdentities` | Returns an array of matching identities (`validIds`) that were retrieved from [!DNL Privacy Service], as well as an array of identities that were not found (`failedIds`). |
-| `removeIdentities` | 一致する（有効な）各 ID をブラウザーから削除します。一致する ID の配列（`validIds`）を返します。各 ID には、この ID が削除されたかどうかを示す `isDeleteClientSide` ブール値が含まれます。 |
+| `removeIdentities` | 一致する（有効な）各 ID をブラウザーから削除します。一致する ID の配列（`validIds`）を返します。各 ID には、この ID が削除されたかどうかを示す `isDeletedClientSide` ブール値が含まれます。 |
 | `retrieveThenRemoveIdentities` | 一致する ID の配列（`validIds`）を取得し、ブラウザーからそれらの ID を削除します。この関数は `removeIdentities` に似ていますが、削除の前に、使用中の Adobe ソリューションでアクセス要求を実行する必要がある場合（削除リクエストに指定する固有の ID を取得する必要がある場合など）に最も適しています。 |
 
 >[!NOTE]
@@ -47,7 +47,7 @@ To start using the [!DNL Privacy JS Library], you must install it onto your mach
 
 * `npm install @adobe/adobe-privacy` コマンドを実行して、npm を使用してインストールする。
 * Adobe Launch の拡張機能を `AdobePrivacy` という名前で使用する
-* [https://github.com/Adobe-Marketing-Cloud/adobe-privacy](https://github.com/Adobe-Marketing-Cloud/adobe-privacy) からダウンロードする
+* [Experience CloudGitHubリポジトリからダウンロード](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## をインスタンス化する [!DNL Privacy JS Library]
 
@@ -56,7 +56,6 @@ All apps that utilize the [!DNL Privacy JS Library] must instantiate a new `Adob
 ```js
 var adobePrivacy = new AdobePrivacy({
     imsOrgID: "{IMS_ORG}",
-    key: "{DATA_SUBJECT_ID}",
     reportSuite: "{REPORT_SUITE_ID}",
     trackingServer: "{SERVER_URL}",
     clientCode: "{TARGET_CLIENT_CODE}"
