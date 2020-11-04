@@ -5,7 +5,7 @@ description: Experience Platform Web SDK のデバッグを切り替える方法
 seo-description: Experience Platform Web SDK のデバッグを切り替える方法について説明します
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
+source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 92%
@@ -74,8 +74,8 @@ http://example.com/?alloy_debug=true
 多くの場合、Web サイトに読み込んだライブラリの背後にある詳細にアクセスすると便利です。これをおこなうには、次のように、`getLibraryInfo` コマンドを実行します。
 
 ```js
-alloy("getLibraryInfo").then(function(libraryInfo) {
-  console.log(libraryInfo.version);
+alloy("getLibraryInfo").then(function(result) {
+  console.log(result.libraryInfo.version);
 });
 ```
 
