@@ -1,19 +1,29 @@
 ---
 title: Adobe Experience PlatformウェブSDKリリースノート
 seo-title: Adobe Experience PlatformウェブSDKリリースノート
-description: Adobe Experience PlatformWeb SDKのリリースノート
-seo-description: Adobe Experience PlatformWeb SDKのリリースノート
+description: Adobe Experience Platform Web SDK リリースノート。
+seo-description: Adobe Experience Platform Web SDK リリースノート。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
+source-git-commit: 77c1e693668bc50a81713d02cfe4b0fabc661404
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 3%
+source-wordcount: '221'
+ht-degree: 8%
 
 ---
 
 
 # リリースノート
+
+## バージョン 2.3.0
+
+* より厳密なコンテンツセキュリティポリシーを許可するために、nonceのサポートを追加しました。
+* シングルページアプリのパーソナライゼーションサポートを追加しました。
+* APIを上書きする可能性がある他のページ上のJavaScriptコードとの互換性を改善しました `window.console` 。
+* バグ修正： `sendBeacon` が使用されていない問題を修正しま `documentUnloading``true` した。
+* バグ修正：アンカー要素にHTMLコンテンツが含まれている場合、リンクは自動的に追跡されません。
+* バグ修正：読み取り専用の `message` プロパティを含むブラウザーのエラーが適切に処理されなかったため、顧客に表示されるエラーが異なりました。
+* バグ修正：iframe内でSDKを実行すると、iframeのHTMLページが親ウィンドウのHTMLページとは異なるサブドメインからのものである場合に、エラーが発生します。
 
 ## バージョン 2.2.0
 
