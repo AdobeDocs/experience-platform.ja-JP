@@ -6,10 +6,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 translation-type: tm+mt
-source-git-commit: 502da50576dfd550598111658b41da6a62bb7e79
+source-git-commit: cea3e2f32d9489f5f06be70581bd974b9374646d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 53%
+source-wordcount: '128'
+ht-degree: 51%
 
 ---
 
@@ -44,6 +44,8 @@ ht-degree: 53%
    * Adobe Target {#adobe-target}
       * [Target の概要](personalization/adobe-target/target-overview.md)
       * [シングルページアプリケーションの実装](personalization/adobe-target/spa-implementation.md)
+   * Offer Decisioning {#offer-decisioning}
+      * [Offer Decisioningの概要](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 同意 {#consent}
    * [同意のサポート](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
