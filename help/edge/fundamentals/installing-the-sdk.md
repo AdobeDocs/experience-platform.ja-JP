@@ -5,17 +5,17 @@ description: Experience Platform Web SDK のインストール方法について
 seo-description: Experience Platform Web SDK のインストール方法について説明します
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
+source-git-commit: d23568f7ce63df5aa98dc237a6671eeadde0c9b2
 workflow-type: tm+mt
 source-wordcount: '626'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
 
 
 # SDK のインストール {#installing-the-sdk}
 
-Adobe Experience PlatformWeb SDKの使用方法は、 [Adobe Experience Platform Launchを使用することをお勧めします](http://launch.adobe.com/)。 拡張機能カタログ `AEP Web SDK` 内でを検索し、インストールしてから、拡張機能を設定します。
+Adobe Experience PlatformWeb SDKの使用方法は、 [Adobe Experience Platform Launchを使用することをお勧めします](http://launch.adobe.com/jp)。 拡張機能カタログ `AEP Web SDK` 内でを検索し、インストールしてから、拡張機能を設定します。
 
 AEP Web SDKは、CDN上でも使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
 
@@ -23,8 +23,8 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 以下に例を示します。
 
-* 縮小： [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js)
-* 縮小解除： [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js)
+* 縮小： [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
+* 縮小解除： [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
 
 ## コードの追加 {#adding-the-code}
 
@@ -37,7 +37,7 @@ The first step in implementing the Adobe Experience Platform [!DNL Web SDK] is t
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
 ```
 
 ベースコードは、`alloy` という名前のグローバル関数を作成します。この関数を使用して SDK を操作します。グローバル関数に別の名前を付けたい場合は、`alloy` の名前を次のように変更できます。
@@ -49,7 +49,7 @@ The first step in implementing the Adobe Experience Platform [!DNL Web SDK] is t
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
 ```
 
 この例では、グローバル関数の名前が `alloy` から `mycustomname` に変更されています。
@@ -99,5 +99,5 @@ As explained in the section [Adding the code](#adding-the-code), the base code y
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js"></script>
 ```
