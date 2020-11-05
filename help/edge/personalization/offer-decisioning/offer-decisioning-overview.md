@@ -5,10 +5,10 @@ description: Adobe Experience PlatformWeb SDKは、Offer Decisioningで管理さ
 seo-description: Adobe Experience PlatformWeb SDKは、Offer Decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 Offer DecisioningのUIまたはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: b10b930dca504b7672eb05bd88ab44d09d9e5c0a
+source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 11%
+source-wordcount: '839'
+ht-degree: 10%
 
 ---
 
@@ -56,9 +56,9 @@ Offer Decisioningとの連携に際しては、以下の用語を理解するこ
 
    ![](assets/decision-scope-copy.png)
 
-**エッジ設定：** 詳しくは、 [エッジ設定ドキュメントを参照してください](../../fundamentals/edge-configuration.md) 。
+* **エッジ設定：** 詳しくは、 [エッジ設定ドキュメントを参照してください](../../fundamentals/edge-configuration.md) 。
 
-**ID**:詳しくは、 [プラットフォームWeb SDKがIdentity Serviceを利用する方法を説明するドキュメントをお読みください](../../identity/overview.md)。
+* **ID**:詳しくは、 [プラットフォームWeb SDKがIdentity Serviceを利用する方法を説明するドキュメントをお読みください](../../identity/overview.md)。
 
 ## Offer Decisioningを有効にする
 
@@ -66,7 +66,7 @@ Offer Decisioningを有効にするには、次の手順を実行する必要が
 
 1. エッ [ジ設定でAdobe Experience Platformを有効にし](../../fundamentals/edge-configuration.md) 、「Offer Decisioning」ボックスをオンにします。
    ![オファー判定エッジ設定](./assets/offer-decisioning-edge-config.png)
-2. 手順に従ってSDK [をインストールします](../../fundamentals/installing-the-sdk.md) (SDKはスタンドアロンまたは [Adobe Experience Platform Launch経由でインストールできます](http://launch.adobe.com/jp))。 以下に、起動の [クイック開始ガイドを示します](https://docs.adobe.com/content/help/ja-JP/launch/using/intro/get-started/quick-start.html))。
+2. 手順に従ってSDK [をインストールします](../../fundamentals/installing-the-sdk.md) (SDKはスタンドアロンまたは [Adobe Experience Platform Launch経由でインストールできます](http://launch.adobe.com/jp))。 ここでは、Platform Launchの [クイック開始ガイドを示します](https://docs.adobe.com/content/help/ja-JP/launch/using/intro/get-started/quick-start.html))。
 3. [Offer Decisioning向けSDK](../../fundamentals/configuring-the-sdk.md) を設定します。 以下に、Offer Decisioning固有の手順を示します。
    * スタンドアロンでインストールされたSDK
       1. 「sendEvent」アクションを `decisionScopes`
@@ -80,19 +80,19 @@ Offer Decisioningを有効にするには、次の手順を実行する必要が
           ]
       })
       ```
-   * インストールされたSDKを起動
-      1. [起動プロパティの作成](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html)
-      2. [Launch 埋め込みコードの追加](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. 先ほど作成したエッジ設定で、「エッジ設定」ドロップダウンから設定を選択し、AEP Web SDK Extensionをインストールして設定します。 [拡張機能に関する便利なドキュメント](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/overview.html)。
+   * プラットフォームの起動がインストールされたSDK
+      1. [Platform Launchプロパティの作成](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html)
+      2. [プ追加ラットフォームの埋め込みコードの起動](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. 先ほど作成したエッジ設定で、「エッジ設定」ドロップダウンから設定を選択し、Adobe Experience PlatformWeb SDK Extensionをインストールして設定します。 [拡張機能に関する便利なドキュメント](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/overview.html)。
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. 必要な [データ要素を作成します](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/data-elements.html)。 最低でも、AEP Web SDK Identity MapとAEP Web SDK XDMオブジェクトデータ要素を作成する必要があります。 （AEP Web SDKのデータ要素に関するドキュメントが、こちらからリンクできれば十分です）。
+      4. 必要な [データ要素を作成します](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/data-elements.html)。 最低でも、プラットフォームWeb SDK Identity MapとプラットフォームWeb SDK XDMオブジェクトデータ要素を作成する必要があります。
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       5. ルー [ルの作成](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/rules.html)。
-         * AEP Web SDK追加の「イベントを送信」アクションを追加し、関連するものをそのアクション `decisionScopes` の設定に追加する
+         * プ追加ラットフォームWeb SDKの送信イベントアクションを追加し、そのアクション `decisionScopes` の設定に関連する
             ![send-イベント-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
       6. [作成して発行するライブラリには](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/publish/libraries.html) 、設定したすべての関連ルール、データ要素、拡張子が含まれています
 
