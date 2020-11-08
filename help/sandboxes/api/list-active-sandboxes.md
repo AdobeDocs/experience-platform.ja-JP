@@ -5,10 +5,10 @@ title: 現在のユーザーのアクティブなサンドボックスを一覧�
 topic: developer guide
 description: ルートエンドポイントにGETリクエストを行うことで、現在のユーザーに対してアクティブなサンドボックスをリストできます。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 91%
+source-wordcount: '345'
+ht-degree: 67%
 
 ---
 
@@ -24,14 +24,18 @@ ht-degree: 91%
 **API 形式**
 
 ```http
-GET /
+GET /{QUERY_PARAMS}
 ```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 詳しくは、 [クエリパラメーターの節を参照してください](#query) 。 |
 
 **リクエスト**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/ \
+  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -84,7 +88,17 @@ curl -X GET \
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 3,
+        "count": 1
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/?limit={limit}&offset={offset}",
+            "templated": true
+        }
+    }
 }
 ```
 
@@ -96,3 +110,16 @@ curl -X GET \
 | `type` | サンドボックスタイプ（「開発」または「実稼働」）。 |
 | `isDefault` | このサンドボックスが組織のデフォルトのサンドボックスであるかどうかを示すブール型のプロパティです。通常、これは実稼働用サンドボックスです。 |
 | `eTag` | サンドボックスの特定のバージョンの識別子。バージョン管理とキャッシュの効率化に使用され、この値はサンドボックスに変更が追加されるたびに更新されます。 |
+
+## クエリパラメーターの使用 {#query}
+
+この [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) APIは、サンドボックスのリスト表示時に、ページへのクエリパラメーターの使用と結果のフィルターをサポートしています。
+
+>[!NOTE]
+>
+>と `limit``offset` クエリのパラメーターは一緒に指定する必要があります。 1つのみ指定した場合、APIはエラーを返します。 noneを指定した場合、デフォルトの制限は50で、オフセットは0です。
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `limit` | 応答で返されるレコードの最大数です。 |
+| `offset` | 最初のレコードから応答リストの開始（オフセット）までのエンティティ数。 |
