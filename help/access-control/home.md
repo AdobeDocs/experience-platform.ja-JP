@@ -5,10 +5,10 @@ topic: overview
 title: アクセス制御の概要
 description: Adobe Experience Platformのアクセス制御はAdobe Admin Consoleを通じて提供される。 この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 61%
+source-wordcount: '1299'
+ht-degree: 54%
 
 ---
 
@@ -73,7 +73,7 @@ For more information about sandboxes in [!DNL Experience Platform], please refer
 
 製品プロファイル内の「権限」タブには、そのプロファイル:に対してアクティブなサンドボックスと権限が表示されます。
 
-![](./images/permissions-overview.png)
+![権限の概要](./images/permissions-overview.png)
 
 Permissions that are granted through the [!DNL Admin Console] are sorted by category, with some permissions granting access to several low-level functionalities.
 
@@ -83,12 +83,19 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | --- | --- | --- |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの管理] | 各スキーマと関連リソースへの読み取り、作成、編集および削除アクセス |
 | [!DNL Data Modeling] | [!UICONTROL スキーマの表示] | スキーマおよび関連リソースへの読み取り専用アクセス |
+| [!DNL Data Modeling] | [!UICONTROL 関係の管理] | スキーマ関係の読み取り、作成、編集、削除を行うことができます。 |
+| [!DNL Data Modeling] | [!UICONTROL IDメタデータの管理] | スキーマのIDメタデータの読み取り、作成、編集および削除を行うことができます。 |
 | [!DNL Data Management] | [!UICONTROL データセットの管理] | データセットへの読み取り、作成、編集、削除アクセススキーマへの読み取り専用アクセス |
 | [!DNL Data Management] | [!UICONTROL データセットの表示] | データセットおよびスキーマへの読み取り専用アクセス |
 | [!DNL Data Management] | [!UICONTROL データ監視] | 監視データセットおよびストリームへの読み取り専用アクセス |
 | [!DNL Profile Management] | [!UICONTROL プロファイルの管理] | 顧客プロファイルに使用するデータセットへの読み取り、作成、編集、削除アクセス使用可能なプロファイルへの読み取り専用アクセス |
 | [!DNL Profile Management] | [!UICONTROL プロファイルの表示] | 使用可能なプロファイルへの読み取り専用アクセス |
+| [!DNL Profile Management] | [!UICONTROL セグメントの管理] | セグメントの読み取り、作成、編集および削除を行うことができます。 |
+| [!DNL Profile Management] | [!UICONTROL 表示セグメント] | 使用可能なセグメントへの読み取り専用アクセス権。 |
+| [!DNL Profile Management] | [!UICONTROL 結合ポリシーの管理] | 読み取り、作成、編集および削除のマージポリシーへのアクセス権。 |
+| [!DNL Profile Management] | [!UICONTROL 表示結合ポリシー] | 使用可能なマージポリシーへの読み取り専用アクセス権。 |
 | [!DNL Profile Management] | [!UICONTROL セグメントのオーディエンスの書き出し] | 評価済みのデータセットセグメントをオーディエンスセットに書き出す機能 |
+| [!DNL Profile Management] | [!UICONTROL オーディエンスへのセグメントの評価] | セグメント定義を評価して、オーディエンスのプロファイルを生成する機能。 |
 | [!DNL Identities] | [!UICONTROL ID 名前空間の管理] | ID 名前空間への読み取り、作成、編集および削除アクセス |
 | [!DNL Identities] | [!UICONTROL ID 名前空間の表示] | ID 名前空間への読み取り専用アクセス |
 | [!DNL Sandbox Administration] | [!UICONTROL サンドボックスの管理] | サンドボックスへの読み取り、作成、編集、削除アクセス |
@@ -100,8 +107,12 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
 | [!DNL Data Science Workspace] | [!UICONTROL Data Science Workspace の管理] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
+| [!DNL Data Governance] | [!UICONTROL データ使用量ラベルの適用] | 使用状況ラベルの読み取り、作成、削除を行う。 |
+| [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの管理] | データ使用ポリシーの読み取り、作成、編集および削除にアクセスできます。 |
+| [!DNL Data Governance] | [!UICONTROL 表示データ使用ポリシー] | 組織に属するデータ使用ポリシーに対する読み取り専用アクセス権。 |
+| [!DNL Query Service] | [!UICONTROL クエリの管理] | プラットフォームデータの構造化SQLクエリの読み取り、作成、編集および削除を行う。 |
 
-_(*)この許可には，に対する規定が必要[!DNL Real-time Customer Data Platform]である。 リアルタイム CDP の詳細については、まず「[リアルタイム CDP の概要](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/overview.html)」を参照してください。_
+_(*)この許可には，に対する規定が必要 [!DNL Real-time Customer Data Platform]である。 リアルタイム CDP の詳細については、まず「[リアルタイム CDP の概要](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/overview.html)」を参照してください。_
 
 ## 次の手順
 
