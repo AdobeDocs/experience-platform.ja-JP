@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Adobe Experience Platformでのデータモデリングのベストプラクティス
 topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
-source-git-commit: e15df78978c06da254319d9d394be35c4668caa9
+source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2485'
 ht-degree: 2%
 
 ---
@@ -220,7 +220,7 @@ Adobe Analyticsの場合、ECIDはデフォルトのプライマリIDです。 E
 
 * スキーマを作成する前に、データテーブルをプロファイル、参照およびイベントのカテゴリに並べ替えて、トップダウンアプローチを使用します。
 * 様々な目的でスキーマをデザインする場合、多くの場合、複数の方法とオプションがあります。
-* データモデルがセグメントの使用例をサポートしている必要があります。
+* データモデルは、分類やカスタマージャーニー分析などのビジネスの使用例をサポートする必要があります。
 * スキーマをできるだけ簡単にし、必要に応じて新しいフィールドを追加します。
 
 準備が整ったら、UIでのスキーマの [](../tutorials/create-schema-ui.md) 作成に関するチュートリアルを参照し、スキーマの作成方法、エンティティに適切なクラスの割り当て、データのマッピング先のフィールドの追加手順を確認してください。
