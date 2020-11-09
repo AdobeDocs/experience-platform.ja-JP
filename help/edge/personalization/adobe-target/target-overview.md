@@ -5,9 +5,9 @@ description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し�
 seo-description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: f08452fa9a6ece93e40ef8ca811530feb0620969
+source-git-commit: f2bd8b89207901e57272a4f56d7f561ac10eb60a
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '626'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform [!DNL Web SDK] は、Adobe Targetで管理されるパ
 
 ## Adobe TargetVECの使用
 
-SDKを使用すると、次の1つの例外を除き、通常どおりVECを使用できます。 [ターゲットVECヘルパー拡張機能がインストールされ](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) 、アクティブになっている必要があります。
+プラットフォームWeb SDK実装でVECを使用するには、 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extensionをインストールしてアクティブ化する必要があります。
 
 ## VECアクティビティを自動レンダリング
 
