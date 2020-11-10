@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、API を使用して、リアルタイム顧客プロファイルのオーディエンスセグメントでデータ使用のコンプライアンスを徹底する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 43%
+source-wordcount: '1338'
+ht-degree: 44%
 
 ---
 
@@ -22,9 +22,9 @@ This tutorial covers the steps for enforcing data usage compliance for [!DNL Rea
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md): [!DNL Real-time Customer Profile] は汎用の参照エンティティストアで、内で [!DNL Experience Data Model] (XDM)データを管理するために使用され [!DNL Platform]ます。 プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] は汎用の参照エンティティストアで、内の [!DNL Experience Data Model (XDM)] データの管理に使用され [!DNL Platform]ます。 プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
    - [ポリシーの結合](../../profile/api/merge-policies.md):特定の条件下で統合表示 [!DNL Real-time Customer Profile] に統合できるデータを決定するためにに使用されるルール。 Merge policies can be configured for [!DNL Data Governance] purposes.
-- [[!DNLセグメント]](../home.md):プロファイルストアに含まれる多数の個人を、同じ特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割する方法を [!DNL Real-time Customer Profile] 説明します。
+- [[!DNL Segmentation]](../home.md):プロファイルストアに含まれる多数の個人を、同じ特性を共有し、マーケティング戦略と同様に対応する小さなグループに分割する方法を [!DNL Real-time Customer Profile] 説明します。
 - [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] は、次のコンポーネントを使用して、データ使用のラベル付けと実行のためのインフラストラクチャを提供します。
    - [データ使用ラベル](../../data-governance/labels/user-guide.md)：データセットとフィールドを、それぞれのデータを処理する際に適用する機密性のレベルの観点から説明する際に使用されるラベルです。
    - [データ使用ポリシー](../../data-governance/policies/overview.md)：特定のデータ使用ラベルで分類されたデータで、どのマーケティングアクションが許可されるかを示す設定です。
@@ -385,4 +385,4 @@ When exporting a segment to a dataset using the [!DNL Segmentation] API, you can
 
 ## 次の手順
 
-このチュートリアルでは、オーディエンスセグメントに関連付けられているデータ使用ラベルを検索し、特定のマーケティングアクションに対してポリシー違反の有無をテストしました。の詳細については、 [!DNL Data Governance] [!DNL Data Governance]の概要を参照してください [!DNL Experience Platform][](../../data-governance/home.md)。
+このチュートリアルでは、オーディエンスセグメントに関連付けられているデータ使用ラベルを検索し、特定のマーケティングアクションに対してポリシー違反の有無をテストしました。の詳細については、の概要 [!DNL Data Governance] を参照し [!DNL Experience Platform]てくだ [[!DNL Data Governance]](../../data-governance/home.md)さい。
