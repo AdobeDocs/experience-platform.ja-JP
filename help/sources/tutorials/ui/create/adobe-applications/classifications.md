@@ -6,9 +6,9 @@ title: UIでのAdobe Analytics分類データコネクタの作成
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '654'
 ht-degree: 4%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 4%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-* [[!DNLリアルタイム顧客プロファイル]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNLサンドボックス]](../../../../../sandboxes/home.md):Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Experience Data Model (XDM)] システム](../../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md):Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 Analytics Classifications Data Connectorは、使用前に、データをAdobe Analyticsの新しい [!DNL Classifications] インフラストラクチャに移行した必要があります。 データの移行ステータスを確認するには、Adobeのカスタマーサクセスマネージャーにお問い合わせください。
 
