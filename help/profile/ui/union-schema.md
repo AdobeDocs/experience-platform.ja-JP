@@ -4,9 +4,9 @@ title: リアルタイム顧客プロファイルUIガイド
 topic: guide
 description: Adobe Experience Platformユーザーインターフェイス(UI)では、組織内の任意の和集合スキーマを簡単に表示し、特定のクラスのフィールド、ID、関係および貢献しているスキーマをプレビューできます。 このガイドでは、Platform UIを使用して和集合スキーマを表示し、調査する方法について詳しく説明します。
 translation-type: tm+mt
-source-git-commit: e1fc20a5f791f7628a19c5440db3741c8be3743a
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ This UI guide requires an understanding of the various [!DNL Experience Platform
 
 * [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [[!DNL Identity Service]](../../identity-service/home.md):異なるデータソース [!DNL Real-time Customer Profile] に取り込まれる際に、アイデンティティを別々のデータソースからブリッジすることで有効に [!DNL Platform]します。
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
 
 ## 和集合スキーマについて
 
