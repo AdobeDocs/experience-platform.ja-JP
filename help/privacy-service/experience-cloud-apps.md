@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Privacy Service と Experience Cloud アプリケーション
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 4cd7b9d3ca542c2fba83d066197b92775c053729
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 68%
+source-wordcount: '555'
+ht-degree: 62%
 
 ---
 
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Privacy Service] is built to support privacy req
 
 This document serves as a reference for [!DNL Experience Cloud] application documentation that outlines how to configure that application for privacy-related operations. データの形式設定やラベル付けの方法も含まれます。次の 2 つのカテゴリのアプリケーションを対象としています。
 
-* [Privacy Serviceと統合されたアプリケーション](#integrated): アクセス、削除またはオプトアウトの要求を送信できるアプリケーション [!DNL Privacy Service]。
+* [Privacy Serviceと統合されたアプリケーション](#integrated):アクセス、削除またはオプトアウトの要求を送信できるアプリケーション [!DNL Privacy Service]。
 * [セルフサービスアプリケーション](#self-serve)[!DNL Privacy Service]：プライバシーリクエストを内部で管理する必要があり、 と直接通信できないアプリケーション。
 
 Please review the documentation for your [!DNL Experience Cloud] applications to learn how to format your privacy requests, and which values are supported for those requests.
@@ -29,7 +29,7 @@ The following is a list of [!DNL Experience Cloud] applications that are integra
 
 | アプリケーション | アクセス / 削除 | 販売のオプトアウト | ドキュメントと考慮事項 |
 --- | :---: | :---: | ---
-| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[アクセス / 削除に関するドキュメント](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>[!DNL Advertising Cloud] は、アドビプライバシーセンターが提供する既存のグローバルオプトアウト機能を利用します。詳しくは、[データプライバシーリクエストの作成](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests)に関するガイドを参照してください。</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[GDPR向けドキュメントへのアクセス/削除](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[CCPAのドキュメントへのアクセスと削除](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[CCPAのオプトアウト販売ドキュメント](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | <ul><li>[アクセス / 削除に関するドキュメント](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] は、[プライバシーレポート変数](https://docs.adobe.com/content/help/ja-JP/analytics/admin/data-governance/consent-variables.html)を使用してオプトアウトリクエストを処理します。</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[アクセス / 削除に関するドキュメント](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[オプトアウトに関するドキュメント](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[アクセス / 削除に関するドキュメント](https://helpx.adobe.com/jp/campaign/kb/campaign-privacy.html)</li><li>[オプトアウトに関するドキュメント](../segmentation/honoring-opt-outs.md)</li></ul> |
