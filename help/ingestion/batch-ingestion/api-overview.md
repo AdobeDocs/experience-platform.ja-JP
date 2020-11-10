@@ -5,9 +5,9 @@ title: Batch Ingestion開発者ガイド
 topic: developer guide
 description: このドキュメントでは、バッチ取得 API の使用に関する包括的な概要を説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '2678'
+source-wordcount: '2675'
 ht-degree: 89%
 
 ---
@@ -28,8 +28,8 @@ ht-degree: 89%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 - [バッチ取得](./overview.md)：データをバッチファイルとして Adobe Experience Platform に取得することができます。
-- [[!DNL Experience Data Model] (XDM)システム](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-- [[!DNLサンドボックス]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [[!DNL Experience Data Model (XDM)] システム](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### API 呼び出し例の読み取り
 
