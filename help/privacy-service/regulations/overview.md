@@ -5,10 +5,10 @@ title: プライバシー規制の概要
 topic: troubleshooting
 description: このドキュメントでは、Adobe Experience Cloudがサポートする各種プライバシー規制の概要を説明します。
 translation-type: tm+mt
-source-git-commit: fa401ce2acfaabc7f0b081b8f0f206730baffd3b
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 21%
+source-wordcount: '342'
+ht-degree: 22%
 
 ---
 
@@ -21,10 +21,10 @@ Experience Cloudは、Adobe Experience Platform Privacy Serviceを利用して�
 
 | 規制 | 説明 |
 | --- | --- |
-| CCPA（カリフォルニア） | The [[!DNL California Consumer Privacy Act] (CCPA)](https://oag.ca.gov/privacy/ccpa) enhances privacy rights and consumer protection for residents of California, United States. CCPA は、自分の個人データにアクセスして削除する権利、自分の個人データが販売または開示されているかどうか（および誰に）を知る権利、第三者へのデータの販売をオプトアウトする権利など、カリフォルニア在住者に新しいデータのプライバシー権を提供します。 |
-| GDPR(ヨーロッパ和集合) | The [[!DNL General Data Protection Regulation] (GDPR)](https://gdpr-info.eu) introduced several new data privacy rights for members of the European Union, including the Right to Access and the Right to be Forgotten. つまり、企業が収集した個人データに対して EU 市民は、いつでもデータのアクセスや削除を要求できます。 |
-| LGPD（ブラジル） | LGPD [[!DNL Lei Geral de Proteção de Dados] は](https://gdpr.eu/gdpr-vs-lgpd/) 、ブラジルの個人または自然人の個人データの扱いを規制することを目的としている。 LGPDは、ブラジル国民に対し、個人データの閲覧・削除、個人データの販売・公開（および公開）、データの第三者へオプトアウトの販売権を与える。 |
-| PDPA（タイ） | The [[!DNL Personal Data Protection Act] (PDPA)](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) は、タイのデータ所有者を、個人データの不正な収集、使用、開示から守るために導入されました。 欧州和集合のGDPRに刺激され、この規制は、タイ国民に対し、保存された個人データへのアクセスを要求し、あるいは削除する権利を与える。 |
+| CCPA（カリフォルニア） | The [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) enhances privacy rights and consumer protection for residents of California, United States. CCPA は、自分の個人データにアクセスして削除する権利、自分の個人データが販売または開示されているかどうか（および誰に）を知る権利、第三者へのデータの販売をオプトアウトする権利など、カリフォルニア在住者に新しいデータのプライバシー権を提供します。 |
+| GDPR(ヨーロッパ和集合) | The [[!DNL General Data Protection Regulation (GDPR)]](https://gdpr-info.eu) introduced several new data privacy rights for members of the European Union, including the Right to Access and the Right to be Forgotten. つまり、企業が収集した個人データに対して EU 市民は、いつでもデータのアクセスや削除を要求できます。 |
+| LGPD（ブラジル） | この [[!DNL Lei Geral de Proteção de Dados (LGPD)]](https://gdpr.eu/gdpr-vs-lgpd/) 目的は、ブラジルの個人または自然人の個人データの扱いを規制することです。 LGPDは、ブラジル国民に対し、個人データの閲覧・削除、個人データの販売・公開（および公開）、データの第三者へオプトアウトの販売権を与える。 |
+| PDPA（タイ） | こ [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) れは、タイのデータ所有者の個人データの不正な収集、使用、開示から、データを保護する目的で導入された。 欧州和集合のGDPRに刺激され、この規制は、タイ国民に対し、保存された個人データへのアクセスを要求し、あるいは削除する権利を与える。 |
 
 ## 次の手順
 
