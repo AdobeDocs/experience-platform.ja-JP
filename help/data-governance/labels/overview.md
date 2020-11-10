@@ -5,9 +5,9 @@ title: データ使用ラベルの概要
 topic: labels
 description: Adobe Experience Platformデータガバナンスを使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従ってそれぞれを分類できます。 このドキュメントでは、Experience Platformでのデータ使用ラベルの概要を説明します。
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '616'
 ht-degree: 15%
 
 ---
@@ -31,7 +31,7 @@ Adobeが提供するラベルに加えて、組織に独自のカスタムラベ
 
 ## オーディエンスセグメントのラベルの継承
 
-[Adobe Experience Platformセグメントサービスで作成されたすべてのオーディエンスセグメントは](../../segmentation/home.md) 、対応するデータセットの使用ラベルを継承します。 これにより、 [!DNL Experience Platform] (など [!DNL Real-time Customer Data Platform])の上に構築されたアプリケーションで、宛先に対するセグメントをアクティブ化する際に、自動的にデータ使用ポリシーが適用されます。
+[Adobe Experience Platformセグメントサービスで作成されたすべてのオーディエンスセグメントは](../../segmentation/home.md) 、対応するデータセットの使用ラベルを継承します。 これにより、Experience Platform上に構築されたアプリケーション(例： [!DNL Real-time Customer Data Platform])で、宛先に対するセグメントをアクティブ化する際に、データ使用ポリシーの自動適用を提供できます。
 
 データセットレベルのラベルを継承する以外に、デフォルトでは、セグメントは関連するデータセットからフィールドレベルのラベルをすべて継承します。 ベースのアプリケーションがセグメントをどのように消費するかに応じて、使用するフィールドを指定できるので、除外されたフィールドのラベルをセグメントが継承できない場合があります。 [!DNL Platform]
 
