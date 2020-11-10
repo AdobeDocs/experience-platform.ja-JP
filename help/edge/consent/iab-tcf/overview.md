@@ -5,9 +5,9 @@ description: Experience PlatformWeb SDKを使用してIAB TCF 2.0の同意の環
 seo-description: Experience PlatformWeb SDKを使用してIAB TCF 2.0の同意の環境設定をサポートする方法を説明します。
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: b82ee2508558f76e3ad56cbb8405abe9bfb235f6
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Adobe Experience PlatformWeb SDK(AEP Web SDK)は、Interactive Advertising Burea
 
 IAB TCF 2.0を使用してAEP Web SDKを実装するには、エクスペリエンスデータモデル(XDM)とエクスペリエンスイベントについて十分に理解している必要があります。 開始を行う前に、次のドキュメントを確認してください。
 
-- [Experience Data Model(XDM)システム概要](../../../xdm/home.md):標準化と相互運用性は、Adobe Experience Platformの主な概念です。 [!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
+- [Experience Data Model(XDM)システム概要](../../../xdm/home.md):標準化と相互運用性は、Adobe Experience Platformの主な概念です。 [!DNL Experience Data Model (XDM)]Adobeによって推進されるのは、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 
 ## リアルタイム顧客データプラットフォーム統合
 
