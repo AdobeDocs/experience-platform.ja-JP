@@ -5,9 +5,9 @@ title: AdobeI/Oイベント通知のサブスクライブ
 topic: developer guide
 description: このドキュメントでは、Adobe Experience PlatformサービスのAdobeI/Oイベント通知を登録する手順を説明します。 使用可能なイベントタイプに関する参照情報と、各 [!DNL Platform] applicableserviceで返されたイベントデータの解釈方法に関する詳細ドキュメントへのリンクも記載されています。
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '763'
 ht-degree: 3%
 
 ---
@@ -62,7 +62,7 @@ Webフックは、選択したクライアントを使用して設定できま�
 >
 >* [[!DNL Privacy Service] 通知](../../privacy-service/privacy-events.md)
 >* [[!DNL Data Ingestion] 通知](../../ingestion/quality/subscribe-events.md)
->* [[!DNL Flow Service] （ソース）通知](../../sources/notifications.md)
+>* [[!DNL Flow Service (sources)] 通知](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
@@ -99,6 +99,6 @@ Webフックは、選択したクライアントを使用して設定できま�
 
 * [[!DNL Privacy Service] 通知](../../privacy-service/privacy-events.md)
 * [[!DNL Data Ingestion] 通知](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service] （ソース）通知](../../sources/notifications.md)
+* [[!DNL Flow Service (sources)] 通知](../../sources/notifications.md)
 
 およびのアクティビティを監視する方法について詳しくは、 [[!DNL Observability Insights] 概要](../home.md) を参照し [!DNL Experience Platform] てくだ [!DNL Privacy Service]さい。
