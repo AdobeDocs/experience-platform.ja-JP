@@ -6,10 +6,10 @@ type: Tutorial
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 5238d98db0554d34c2b0bcd28b64354f544faa0f
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 47%
+source-wordcount: '803'
+ht-degree: 44%
 
 ---
 
@@ -24,38 +24,39 @@ ht-degree: 47%
 
 次の節で説明する接続フローで、Amazon S3 または SFTP に接続します。リアルタイム CDP は、セグメントを `.csv` または `.txt` ファイルとして書き出し、希望の場所に配信します。リアルタイム CDP で有効になっているストレージの場所から、電子メールマーケティングプラットフォームにデータのインポートをスケジュールします。データをインポートするプロセスは、パートナーごとに異なります。詳しくは、個々の宛先に関する記事を参照してください。
 
-## 手順1 — 宛先の設定 {#connect-destination}
+## 宛先の設定 {#connect-destination}
 
-1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**&#x200B;で、接続先の電子メールマーケティング先を選択し、「 **[!UICONTROL 設定]**」を選択します。
+**[!UICONTROL 接続]** / **[!UICONTROL 宛先]**&#x200B;で、接続先の電子メールマーケティング先を選択し、「 **[!UICONTROL 設定]**」を選択します。
 
-   ![宛先に接続](/help/rtcdp/destinations/assets/connect-email-marketing.png)
+![宛先に接続](./assets/connect-email-marketing.png)
 
-2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. 「 **[!UICONTROL Connection type]** 」セレクターで、AmazonS3、パスワード付きSFTP、またはSSHキー付きSFTPのいずれかを選択できます。 接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
+In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. 「 **[!UICONTROL Connection type]** 」セレクターで、AmazonS3、パスワード付きSFTP、またはSSHキー付きSFTPのいずれかを選択できます。 接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
 
-   **S3接続の場合**、AmazonアクセスキーIDとシークレットアクセスキーを指定する必要があります。
+- **S3接続の場合**、AmazonアクセスキーIDとシークレットアクセスキーを指定する必要があります。
+- For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
+- For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
-   For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
+「 **[!UICONTROL 設定]** 」(Setup)ステップで、新しい保存先の名前と説明、および書き出すファイルのファイル形式を入力します。
 
-   For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
+前の手順でストレージとしてAmazonS3を選択した場合は、ファイルを配信するクラウドストレージーの保存先にバケット名とフォルダーパスを挿入します。 「SFTPストレージ」オプションで、ファイルが配信されるフォルダーパスを挿入します。
 
-3. 「 **[!UICONTROL 設定]** 」( [!UICONTROL Setup] )手順で、新しい保存先の [!UICONTROL 名前と説明(Description] )を入力し、書き出したファイルのファイル形式(  File format)を入力します。 <br>
-前の手順でストレージとしてAmazonS3を選択した場合は、ファイルが配信されるクラウドストレージーに [!UICONTROL バケット名] と [!UICONTROL フォルダーパス] を挿入します。 For the SFTP storage option, insert the [!UICONTROL Folder path] where the files will be delivered. <br>
-また、この手順では、この宛先に適用する [!UICONTROL マーケティングの使用例] を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。 <br>
-   ![電子メールの設定手順](/help/rtcdp/destinations/assets/email-setup-step.png)
+また、この手順では、この宛先に適用するマーケティングの使用例を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](/help/rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](/help/data-governance/policies/overview.md#core-actions)。
 
-## 手順2 — エクスポート先に含めるセグメントメンバーを選択します。 {#select-segments}
+![電子メールの設定手順](./assets/email-setup-step.png)
+
+## エクスポート先に含めるセグメントメンバーを選択します {#select-segments}
 
 On the **[!UICONTROL Select Segments]** page, select which segments to send to the destination. フィールドの詳細については、以下の節を参照してください。
 
 ![セグメントの選択](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## 手順3 — ファイル名を設定する
+## ファイル名の設定
 
 ファイル名の編集オプションの詳細については、チュートリアルの「 [Activate destinations](/help/rtcdp/destinations/activate-destinations.md#configure) 」の設定手順を参照してください。
 
-## Step 4 - Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
+## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
-この手順では、電子メールマーケティングの宛先に書き出しするフィールドを選択します。
+この手順では、電子メールマーケティングの宛先にエクスポートするフィールドを選択し、どのフィールドが必須かをマークします。
 
 ![宛先属性](/help/rtcdp/destinations/assets/recommended-attributes.png)
 
@@ -86,14 +87,14 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 | 誕生日 | `person.birthDayAndMonth` |
 | セグメントのメンバーシップ | `segmentMembership.status` |
 
-## 手順 5 — ストレージの場所からインポート先にデータをインポートひます
+## ストレージーの場所からインポート先にデータをインポートする
 
 ストレージの場所から宛先にデータをインポートする方法については、個々の電子メールマーケティングの宛先に関する記事を参照してください。
 
-* [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
-* [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
-* [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
-* [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
+- [Adobe Campaign](/help/rtcdp/destinations/adobe-campaign-destination.md#import-data-into-campaign)
+- [Salesforce Marketing Cloud](/help/rtcdp/destinations/salesforce-marketing-cloud-destination.md#import-data-into-salesforce)
+- [Oracle Eloqua](/help/rtcdp/destinations/oracle-eloqua-destination.md#import-data-into-eloqua)
+- [Oracle Responsys](/help/rtcdp/destinations/oracle-responsys-destination.md#import-data-into-responsys)
 
 ## 電子メールマーケティングの宛先へのセグメントのアクティブ化
 
@@ -101,5 +102,5 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ## その他のリソース
 
-* [宛先へのデータのアクティブ化](/help/rtcdp/destinations/activate-destinations.md)
-* [Flow Service APIを使用して、電子メールマーケティングの宛先を作成し、データをアクティブ化する](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
+- [宛先へのデータのアクティブ化](/help/rtcdp/destinations/activate-destinations.md)
+- [Flow Service APIを使用して、電子メールマーケティングの宛先を作成し、データをアクティブ化する](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
