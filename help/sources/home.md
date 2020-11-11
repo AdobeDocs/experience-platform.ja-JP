@@ -5,9 +5,9 @@ title: Adobe Experience Platform ソースコネクタの概要
 topic: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '886'
 ht-degree: 57%
 
 ---
@@ -41,7 +41,7 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 [!DNL Experience Platform] は、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
+- [[!DNL Google AdWords]](connectors/advertising/ads.md) コネクタ
 
 ### クラウドストレージ
 
@@ -91,6 +91,12 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 - [[!DNL Oracle] コネクタ](connectors/databases/oracle.md)
 - [[!DNL Phoenix] コネクタ](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] コネクタ](connectors/databases/postgres.md)
+
+### eCommerce
+
+[!DNL Experience Platform] は、サードパーティeCommerceシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### マーケティングの自動処理
 
