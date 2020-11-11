@@ -4,10 +4,10 @@ title: リアルタイム顧客プロファイルUIガイド
 topic: guide
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
 workflow-type: tm+mt
-source-wordcount: '1244'
-ht-degree: 10%
+source-wordcount: '1245'
+ht-degree: 8%
 
 ---
 
@@ -62,7 +62,7 @@ The profile count displays the total number of profiles your organization has wi
 
 ### マージポリシー
 
-「 **[!UICONTROL Merge policy]** 」セレクターを使用すると、組織のデフォルトの結合ポリシーが自動的に選択されます。 このマージポリシーを使用しない場合は、デフォルトのマージポリシーの `X` 横にあるを選択して、 **[!UICONTROL Select merge policy]** （マージポリシーの選択）ダイアログを開き、別のマージポリシーを選択できます。 結合ポリシーとプラットフォーム内でのその役割について詳しくは、 [結合ポリシーユーザーガイドを参照してください](merge-policies.md)。
+「 **[!UICONTROL Merge policy]** 」セレクターを使用すると、組織のデフォルトの結合ポリシーが自動的に選択されます。 このマージポリシーを使用しない場合は、デフォルトのマージポリシーの `X` 横にあるを選択して、 **[!UICONTROL Select merge policy]** （マージポリシーの選択）ダイアログを開き、別のマージポリシーを選択できます。 結合ポリシーとプラットフォーム内でのその役割について詳しくは、 [結合ポリシーのUIガイドを参照してください](merge-policies.md)。
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -98,7 +98,7 @@ ID名前空間を選択した後、「 **[!UICONTROL 参照]** 」タブに戻�
 
 ## 結合ポリシー
 
-メイン **[!UICONTROL プロファイル]** (Merge Policies **[!UICONTROL )メニューで、「]** Merge Policies」タブを選択して、組織に属するマージポリシーのリストを表示します。 表示される各ポリシーの名前、デフォルトの結合ポリシーかどうか、および適用先のスキーマが表示されます。
+メイン **[!UICONTROL プロファイル]** (Merge Policies **[!UICONTROL )メニューで、「]** Merge Policies」タブを選択して、組織に属するマージポリシーのリストを表示します。 表示される各ポリシーは、名前、それがデフォルトのマージポリシーかどうか、および適用先のスキーマクラスを表示します。
 
 For more information on merge policies, see the [merge policies UI guide](merge-policies.md).
 
