@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: 26d117726a59dea0c08cf6ca5a13bf54951f7f44
+source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '676'
 ht-degree: 8%
 
 ---
@@ -62,6 +62,8 @@ ht-degree: 8%
       - [Oracleコネクタ](connectors/databases/oracle.md)
       - [フェニックスコネクタ](connectors/databases/phoenix.md)
       - [PostgreSQLコネクタ](connectors/databases/postgres.md)
+   - eCommerce {#ecommerce}
+      - [Shopifyコネクタ](connectors/ecommerce/shopify.md)
    - Marketing automation {#marketing-automation}
       - [HubSpotコネクタ](connectors/marketing-automation/hubspot.md)
    - 支払い {#payments}
@@ -106,6 +108,8 @@ ht-degree: 8%
          - [フェニックスコネクタ](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQLコネクタ](tutorials/api/create/databases/postgres.md)
          - [SQL Serverコネクタ](tutorials/api/create/databases/sql-server.md)
+      - eCommerce {#ecommerce}
+         - [Shopifyコネクタ](tutorials/api/create/ecommerce/shopify.md)
       - Marketing automation {#marketing-automation}
          - [HubSpotコネクタ](tutorials/api/create/marketing-automation/hubspot.md)
       - 支払い {#payments}
@@ -118,6 +122,7 @@ ht-degree: 8%
       - [CRMデータの調査](tutorials/api/explore/crm.md)
       - [顧客成功データの調査](tutorials/api/explore/customer-success.md)
       - [データベースまたはNoSQLデータの参照](tutorials/api/explore/database-nosql.md)
+      - [eコマースデータの参照](tutorials/api/explore/ecommerce.md)
       - [マーケティング自動化データの調査](tutorials/api/explore/marketing-automation.md)
       - [支払データの調査](tutorials/api/explore/payments.md)
       - [プロトコルデータの調査](tutorials/api/explore/protocols.md)
@@ -127,6 +132,7 @@ ht-degree: 8%
       - [CRMデータの収集](tutorials/api/collect/crm.md)
       - [顧客成功データの収集](tutorials/api/collect/customer-success.md)
       - [データベースまたはNoSQLデータの収集](tutorials/api/collect/database-nosql.md)
+      - [eコマースデータの収集](tutorials/api/collect/ecommerce.md)
       - [マーケティング自動化データの収集](tutorials/api/collect/marketing-automation.md)
       - [支払データの収集](tutorials/api/collect/payments.md)
       - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
@@ -178,6 +184,8 @@ ht-degree: 8%
          - [Oracleコネクタ](tutorials/ui/create/databases/oracle.md)
          - [フェニックスコネクタ](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQLコネクタ](tutorials/ui/create/databases/postgres.md)
+      - eCommerce {#ecommerce}
+         - [Shopifyコネクタ](tutorials/ui/create/ecommerce/shopify.md)
       - Marketing automation {#marketing-automation}
          - [HubSpotコネクタ](tutorials/ui/create/marketing-automation/hubspot.md)
       - 支払い {#payments}
@@ -188,9 +196,10 @@ ht-degree: 8%
       - [広告コネクタ用のデータフローの設定](tutorials/ui/dataflow/advertising.md)
       - [バッチクラウドストレージコネクタ用のデータフローの設定](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [ストリーミングクラウドストレージコネクタ用のデータフローの設定](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-      - [データベースコネクタのデータフローの設定](tutorials/ui/dataflow/databases.md)
       - [CRMコネクタのデータフローの設定](tutorials/ui/dataflow/crm.md)
       - [顧客成功コネクタ用のデータフローの設定](tutorials/ui/dataflow/customer-success.md)
+      - [データベースコネクタのデータフローの設定](tutorials/ui/dataflow/databases.md)
+      - [eコマースコネクタ用のデータフローの設定](tutorials/ui/dataflow/ecommerce.md)
       - [マーケティング自動化コネクタ用のデータフローの設定](tutorials/ui/dataflow/marketing-automation.md)
       - [支払コネクタのデータフローの構成](tutorials/ui/dataflow/payments.md)
       - [プロトコルコネクタのデータフローの設定](tutorials/ui/dataflow/protocols.md)
