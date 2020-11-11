@@ -3,20 +3,20 @@ keywords: activate destination;activate destinations;activate data
 title: 宛先へのプロファイルとセグメントのアクティブ化
 type: Tutorial
 seo-title: 宛先へのプロファイルとセグメントのアクティブ化
-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
-seo-description: セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
+description: セグメントを宛先にマッピングして、リアルタイム顧客データプラットフォームでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
+seo-description: セグメントを宛先にマッピングして、リアルタイム顧客データプラットフォームでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 28%
+source-wordcount: '1583'
+ht-degree: 22%
 
 ---
 
 
 # 宛先へのプロファイルとセグメントのアクティブ化
 
-セグメントを宛先にマッピングして、アドビのリアルタイム顧客データプラットフォームで保有するデータをアクティブ化します。これをおこなうには、次の手順に従います。
+セグメントを宛先にマッピングして、リアルタイム顧客データプラットフォームでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 
 ## 前提条件 {#prerequisites}
 
@@ -24,74 +24,73 @@ ht-degree: 28%
 
 ## データのアクティブ化 {#activate-data}
 
-アクティブ化ワークフローの手順は、宛先のタイプによって少し異なります。 すべてのタイプの宛先に対する完全なワークフローを以下に示します。
+アクティベーションワークフローの手順は、宛先のタイプによって若干異なります。 すべてのタイプの宛先に対する完全なワークフローを以下に示します。
 
 ### データをアクティブにする宛先の選択 {#select-destination}
 
 適用先：すべての宛先
 
-1. AdobeReal-time CDPユーザー・インターフェイスで、 **[!UICONTROL Destinations]** / **[!UICONTROL Browse]**（宛先）に移動し、セグメントをアクティブにする宛先を選択します。
-   ![リンク先を参照](assets/oracle-eloqua-connect.png)
-2. 宛先の名前をクリックします。これにより、アクティベーションワークフローに移動します。
-   ![activate-flow宛先に対するアクティベーションワークフローが既に存在する場合は、目的の宛先に対して現在アクティブ化されているセグメントを確認できます。](assets/activate-flow.png)右側のパネルで「**[!UICONTROL アクティベーションの編集]**」を選択し、以下の手順に従ってアクティベーションの詳細を変更します。
-3. Select **[!UICONTROL Activate]**.
+Real-time CDPユーザー・インタフェースで、 **[!UICONTROL Destinations]** / **[!UICONTROL Browse]**（宛先）に移動し、セグメントをアクティブにする宛先を選択します。
+![リンク先を参照](assets/oracle-eloqua-connect.png)
 
-<br> 
+アクティベーションワークフローに移動する宛先の名前を選択します。
 
-### **[!UICONTROL セグメントの選択]** 手順 {#select-segments}
+![活性化流](assets/activate-flow.png)
+
+宛先に対するアクティベーションワークフローが既に存在する場合は、その宛先に対して現在アクティブ化されているセグメントを確認できます。 右側のパネルで「**[!UICONTROL アクティベーションの編集]**」を選択し、以下の手順に従ってアクティベーションの詳細を変更します。
+
+宛先を選択したら、「 **[!UICONTROL アクティブ化]**」を選択します。
+
+### [!UICONTROL セグメントの選択] 手順 {#select-segments}
 
 適用先：すべての宛先
 
-![セグメントの選択手順](/help/rtcdp/destinations/assets/select-segments-icon.png)
+![セグメントの選択手順](./assets/select-segments-icon.png)
 
-
-In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select one or more segments to activate to the destination. 「 **[!UICONTROL 次へ]** 」を押して次の手順に進みます。
+In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select one or more segments to activate to the destination. 「 **[!UICONTROL 次へ]** 」を選択して、次の手順に進みます。
 ![segments-to-destination](assets/email-select-segments.png)
 
-<br> 
-
-### **[!UICONTROL IDマッピング]** 手順 {#identity-mapping}
+### [!UICONTROL IDマッピング] 手順 {#identity-mapping}
 
 適用先：ソーシャルリンク先とGoogle Customer Matchの広告先
 
-![IDマッピング手順](/help/rtcdp/destinations/assets/identity-mapping-icon.png)
+![IDマッピング手順](./assets/identity-mapping-icon.png)
 
-*ソーシャル宛先の場合*、 **[!UICONTROL IDマッピング手順で]** 、宛先のターゲットIDとしてマッピングするソース属性を選択できます。 この手順は、スキーマで使用しているプライマリIDに応じて、オプションまたは必須です。 <br> 
+ソーシャル宛先の場合は、ソース属性を選択して、宛先のターゲットIDとしてマッピングできます。 この手順は、スキーマで使用しているプライマリIDに応じて、オプションまたは必須です。
 
-*プライマリIDとしての電子メールアドレス*:スキーマでプライマリIDとして電子メールアドレスを使用している場合は、次に示すように、IDマッピング手順をスキップできます。
+スキーマでプライマリIDとして電子メールアドレスを使用している場合は、次に示すように、IDマッピング手順をスキップできます。
 
 ![IDとしての電子メールアドレス](assets/email-as-identity.gif)
 
-<br> 
-
-*プライマリIDとしての別のID*:スキーマで *報酬ID* 、 *忠誠度ID*、などの別のIDを主IDとして使用する場合は、次に示すように、IDスキーマからの電子メールアドレスをソーシャルの宛先のターゲットIDとして手動でマッピングする必要があります。
+スキーマでプライマリIDとして「報酬ID」や「忠誠度ID」など別のIDを使用する場合は、次に示すように、IDスキーマからの電子メールアドレスをソーシャル宛先のターゲットIDとして手動でマッピングする必要があります。
 
 ![IDとしての忠誠度ID](assets/rewardsid-as-identity.gif)
 
+Adobe Experience Platformへのデータ取り込み時に、電子メールのハッシュ要件に従って顧客の電子メールアドレスをハッシュ化した場合は、ターゲットID `Email_LC_SHA256` として選択し [!DNL Facebook] ます [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。
 
-Adobe Experience Platformへのデータ取り込み時に、電子メールのハッシュ要件に従って顧客の電子メールアドレスをハッシュ化した場合は、ターゲットID `Email_LC_SHA256` として選択し [!DNL Facebook] ます [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。 <br> 使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 AdobeReal-time CDPは、 [!DNL Facebook] 要件を満たすためにEメールアドレスをハッシュ化します。
+使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 リアルタイムCDPは、 [!DNL Facebook] 要件を満たすためにメール・アドレスをハッシュ化します。
 
 ![フィールドへの入力後のIDマッピング](assets/identity-mapping.png)
-
-<br> 
 
 ### **[!UICONTROL 設定手順]** {#configure}
 
 適用先：電子メールマーケティングの宛先とクラウドストレージの宛先
 
-![設定手順](/help/rtcdp/destinations/assets/configure-icon.png)
+![設定手順](./assets/configure-icon.png)
 
-この手順はオプションです。「 **[!UICONTROL 設定]** 」の手順では、書き出す各セグメントのファイル名を設定できます。 デフォルトのファイル名は、宛先名、セグメントID、日時インジケーターで構成されます。 例えば、異なるキャンペーンを区別したり、ファイルにデータの書き出し時間を付けたりするために、書き出したファイル名を編集できます。
+「 **[!UICONTROL 設定]** 」の手順では、書き出す各セグメントのファイル名を設定できます。 ファイル名の設定は任意です。
 
-「 **[!UICONTROL 次へ]** 」を選択してデフォルトのファイル名を使用するか、鉛筆アイコンをクリックしてモーダルウィンドウを開き、ファイル名を編集します。 ファイル名は255文字までに制限されます。
+デフォルトのファイル名は、宛先名、セグメントID、日時インジケーターで構成されます。 例えば、異なるキャンペーンを区別したり、ファイルにデータの書き出し時間を付けたりするために、書き出したファイル名を編集できます。
 
-![ファイル名の設定](assets/activation-workflow-configure-step.png)
+鉛筆アイコンを選択してモーダルウィンドウを開き、ファイル名を編集します。 ファイル名は255文字までに制限されます。
+
+![ファイル名の設定](./assets/activate-destinations/configure-name.png)
 
 ファイル名エディターで、別のコンポーネントを選択してファイル名に追加できます。 宛先名とセグメントIDはファイル名から削除できません。 これらに加えて、次を追加できます。
 
-* **[!UICONTROL セグメント名]**:ファイル名にセグメント名を追加できます。
-* **[!UICONTROL 日時]**:形式を追加するか、ファイルが生成される時刻の10桁のタイムスタンプをUnixに追加するかを選択します。 `MMDDYYYY_HHMMSS` ファイルに、増分書き出しのたびに動的なファイル名を生成する場合は、次のいずれかのオプションを選択します。
-* **[!UICONTROL カスタムテキスト]**:ファイル名追加にカスタムテキストを追加します。
+- **[!UICONTROL セグメント名]**:ファイル名にセグメント名を追加できます。
+- **[!UICONTROL 日時]**:形式を追加するか、ファイルが生成される時刻の10桁のタイムスタンプをUnixに追加するかを選択します。 `MMDDYYYY_HHMMSS` ファイルに、増分書き出しのたびに動的なファイル名を生成する場合は、次のいずれかのオプションを選択します。
+- **[!UICONTROL カスタムテキスト]**:ファイル名追加にカスタムテキストを追加します。
 
 「 **[!UICONTROL Apply changes]** 」を選択して、選択を確認します。
 
@@ -99,15 +98,15 @@ Adobe Experience Platformへのデータ取り込み時に、電子メールの�
 > 
 >「 **[!UICONTROL 日付と時間]** 」コンポーネントを選択しない場合、ファイル名は静的になり、新しくエクスポートされたファイルによって、ストレージー上の前のファイルが上書きされ、各エクスポートで上書きされます。 ストレージの場所から電子メールマーケティングプラットフォームに定期的にインポートジョブを実行する場合は、このオプションをお勧めします。
 
-![ファイル名の編集オプション](assets/activate-workflow-configure-step-2.png)
+![ファイル名の編集オプション](./assets/activate-workflow-configure-step-2.png)
 
-<br> 
+すべてのセグメントの設定が完了したら、「 **[!UICONTROL 次へ]** 」を選択して続行します。
 
-### **[!UICONTROL セグメントスケジュール]** の手順 {#segment-schedule}
+### **[!UICONTROL セグメントスケジュール]** 手順 {#segment-schedule}
 
 適用先：広告の宛先、ソーシャルの宛先
 
-![セグメントスケジュールの手順](/help/rtcdp/destinations/assets/segment-schedule-icon.png)
+![セグメントスケジュールの手順](./assets/segment-schedule-icon.png)
 
 On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
@@ -115,61 +114,53 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >
 >ソーシャルの宛先の場合は、この手順でオーディエンスの接触チャネルを選択する必要があります。次の手順に進むには、まず次の画像のオプションのいずれかを選択してください。
 
-![データ接触チャネルの選択](assets/choose-data-origin.png)
-
-<br> 
+![データ接触チャネルの選択](./assets/choose-data-origin.png)
 
 ### **[!UICONTROL スケジュール]** 手順 {#scheduling}
 
 適用先：電子メールマーケティングの宛先とクラウドストレージの宛先
 
-![セグメントスケジュールの手順](assets/scheduling-icon.png)
+![セグメントスケジュールの手順](./assets/scheduling-icon.png)
 
 On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. これらの値は編集できません。
-
-<br> 
 
 ### **[!UICONTROL 属性の選択]** 手順 {#select-attributes}
 
 適用先：電子メールマーケティングの宛先とクラウドストレージの宛先
 
-![属性の選択手順](/help/rtcdp/destinations/assets/select-attributes-icon.png)
+![属性の選択手順](./assets/select-attributes-icon.png)
 
-
-On the **[!UICONTROL Select Attributes]** page, select **[!UICONTROL Add new field]** and select the attributes that you want to send to the destination.
+On the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]** and choose the attributes that you want to send to the destination.
 
 >[!NOTE]
 >
-> AdobeReal-time CDPは、お使いのスキーマから推奨される、一般的に使用される4つの属性を使用して、選択範囲を事前に設定します。 `person.name.firstName`、 `person.name.lastName`、 `personalEmail.address`、 `segmentMembership.status`。
+> Real-time CDPは、お客様のスキーマから推奨される、一般的に使用される4つの属性で、お客様の選択範囲を事前入力します。 `person.name.firstName`、 `person.name.lastName`、 `personalEmail.address`、 `segmentMembership.status`。
 
-ファイルのエクスポートは、選択されているかどうかに応じて、次のように異な `segmentMembership.status` ります。
-* この `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全なスナップショットに「アクティブ **」メンバーが含まれ、以降の増分エクスポートには「** アクティブ **」メンバーと「** 期限切れ **** 」メンバーが含まれます。
-* この `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初のフルスナップショットとそれ以降の増分エクスポートでは、 **Active** メンバーのみが含まれます。
+ファイルのエクスポートは、選択されているかどうかに応じて、次の方法で異な `segmentMembership.status` ります。
+- この `segmentMembership.status` フィールドを選択した場合、エクスポートされたファイルには、最初の完全なスナップショットに「アクティブ **[!UICONTROL 」メンバーが含まれ、以降の増分エクスポートには「]** アクティブ **[!UICONTROL 」メンバーと「]** 期限切れ **** 」メンバーが含まれます。
+- この `segmentMembership.status` フィールドを選択しない場合、エクスポートされたファイルには、最初のフルスナップショットとそれ以降の増分エクスポートでは、 **[!UICONTROL Active]** メンバーのみが含まれます。
 
-![推奨属性](/help/rtcdp/destinations/assets/recommended-attributes.png)
+![推奨属性](./assets/activate-destinations/mark-mandatory.png)
 
+さらに、異なる属性を必須としてマークすることもできます。 属性を必須としてマークすると、エクスポートしたセグメントにその属性が含まれている必要があります。 その結果、フィルタリングの追加形式として使用できます。 属性を必須としてマークする必要はあり **ません** 。
 
-We recommend one of the attributes to be a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your schema. 必須属性について詳しくは、「[電子メールマーケティングの宛先](/help/rtcdp/destinations/email-marketing-destinations.md#identity)」で「ID」を参照してください。
+属性の1つは、スキーマの [一意の識別子にすることをお勧めします](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 。 For more information about mandatory attributes, see the identity section in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) documentation.
 
 >[!NOTE]
 > 
 >データセット内の特定のフィールド（データセット全体ではなく）に対してデータ使用ラベルが適用されている場合、アクティベーション上でこれらのフィールドレベルのラベルが適用されるのは、次の条件の下です。
->* これらのフィールドは、セグメント定義で使用されます。
->* フィールドは、ターゲット先の投影属性として設定されます。
+>- これらのフィールドは、セグメント定義で使用されます。
+>- フィールドは、ターゲット先の投影属性として設定されます。
 
 >
 > 
-下のスクリーンショットを見てみましょう。 例えば、フィールドに、宛先のマーケティングの使用例と競合する特定のデータ使用ラベルが含まれ `person.name.firstName` ている場合、レビュー手順（手順9）でデータ使用ポリシー違反が表示されます。 詳細については、「 [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations)」を参照してください。
-
-![destination-attributes](assets/select-attributes-step.png)
-
-<br> 
+例えば、フィールドに、宛先のマーケティングの使用例と競合する特定のデータ使用ラベルが含まれ `person.name.firstName` ている場合、レビュー手順でデータ使用ポリシー違反が表示されます。 詳細については、「 [Data Governance in Real-time CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations)」を参照してください。
 
 ### **[!UICONTROL レビュー]** 手順 {#review}
 
 適用先：すべての宛先
 
-![レビュー手順](/help/rtcdp/destinations/assets/review-icon.png)
+![レビュー手順](./assets/review-icon.png)
 
 「**[!UICONTROL 確認]**」ページには、選択の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
@@ -183,7 +174,6 @@ We recommend one of the attributes to be a [unique identifier](/help/rtcdp/desti
 
 ![confirm-selection](assets/confirm-selection.png)
 
-
 ## アクティベーションの編集 {#edit-activation}
 
 リアルタイム CDP の既存のアクティベーションフローを編集するには、次の手順に従います。
@@ -195,7 +185,7 @@ We recommend one of the attributes to be a [unique identifier](/help/rtcdp/desti
 
 ### 電子メールマーケティングの宛先およびクラウドストレージの宛先 {#esp-and-cloud-storage}
 
-電子メールマーケティングの宛先とクラウドストレージの宛先の場合、アドビのリアルタイム CDP はストレージの指定した場所に、タブ区切りの `.csv` または `.txt` ファイルを作成します。新しいファイルはストレージの場所に毎日作成されます。The default file format is:
+For email marketing destinations and cloud storage destinations, Real-time CDP creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. 新しいファイルはストレージの場所に毎日作成されます。The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 ファイル形式は編集できます。 詳しくは、クラウドストレージの [宛先と電子メールマーケティングの宛先を設定する手順に進んでください](/help/rtcdp/destinations/activate-destinations.md#configure) 。
@@ -220,7 +210,7 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 >[!TIP]
 >
->AdobeのリアルタイムCDPとの統合により、履歴オーディエンスのバックフィルが [!DNL Facebook] サポートされます。 宛先に対してセグメントをアクティブ化する [!DNL Facebook] と、すべての過去のセグメント資格情報がに送信されます。
+>The integration between Real-time CDP and [!DNL Facebook] supports historical audience backfills. 宛先に対してセグメントをアクティブ化する [!DNL Facebook] と、すべての過去のセグメント資格情報がに送信されます。
 
 ## アクティベーションの無効化 {#disable-activation}
 
