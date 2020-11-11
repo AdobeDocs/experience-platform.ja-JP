@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: マージポリシー — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
 workflow-type: tm+mt
-source-wordcount: '2458'
-ht-degree: 62%
+source-wordcount: '2494'
+ht-degree: 56%
 
 ---
 
@@ -27,7 +27,13 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 ## 結合ポリシーのコンポーネント {#components-of-merge-policies}
 
-結合ポリシーは IMS 組織外には非公開であり、必要に応じてスキーマを結合するために異なるポリシーを作成できます。Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] では、既定の結合ポリシーを使用できます。また、特定のスキーマ用に結合ポリシーを作成し、それを組織の既定としてマークすることもできます。 各組織はスキーマごとに複数のマージポリシーを持つことができますが、各スキーマは 1 つのデフォルト結合ポリシーしか持つことができません。デフォルトとして設定された結合ポリシーは、スキーマ名が指定され、結合ポリシーが必要であるが指定されていない場合に使用されます。結合ポリシーをデフォルトとして設定すると、以前にデフォルトとして設定された既存の結合ポリシーは自動的にデフォルトとして使用されなくなります。
+マージポリシーはIMS組織に対して非公開なので、異なるポリシーを作成して、必要な方法でスキーマを結合できます。 Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] 組織にデフォルトの結合ポリシーを提供します。または、特定のExperience Data Model(XDM)スキーマクラス用に結合ポリシーを作成し、それを組織のデフォルトとしてマークすることができます。
+
+各組織はスキーマクラスごとに複数のマージポリシーを持つことができますが、各クラスはデフォルトのマージポリシーを1つだけ持つことができます。 デフォルトとして設定されたマージポリシーは、スキーマクラスの名前が指定され、マージポリシーが必須で指定されていない場合に使用されます。
+
+>[!NOTE]
+>
+>新しい結合ポリシーをデフォルトとして設定すると、以前にデフォルトとして設定された既存の結合ポリシーが自動的に更新され、デフォルトとして使用されなくなります。
 
 ### 完全な結合ポリシーオブジェクト
 
@@ -41,7 +47,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -62,7 +68,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 | `imsOrgId` | この結合ポリシーが属する組織 ID |
 | `identityGraph` | 関連 ID の取得元（ID）の ID グラフを示す [ID グラフ](#identity-graph)オブジェクト。関連するすべての ID で見つかったプロファイルフラグメントが結合されます。 |
 | `attributeMerge` | [データの競合が発生した場合に、マージポリシーがプロファイル属性に優先順位を付ける方法を示す属性マージ](#attribute-merge) ・オブジェクト。 |
-| `schema` | 結合ポリシーを使用できる[スキーマ](#schema)オブジェクト。 |
+| `schema.name` | オブジェクトの一部で [`schema`](#schema) あり、 `name` フィールドにはマージポリシーが関連付けられているXDMスキーマクラスが含まれます。 スキーマとクラスの詳細については、 [XDMのドキュメントを読んでください](../../xdm/home.md)。 |
 | `default` | この結合ポリシーが指定されたスキーマのデフォルトかどうかを示すブール値。 |
 | `version` | [!DNL Platform] マージポリシーのバージョンを維持しました。 この読み取り専用の値は、結合ポリシーが更新されるたびに増加します。 |
 | `updateEpoch` | 結合ポリシーの最後の更新日。 |
@@ -132,7 +138,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 * **`dataSetPrecedence`** :プロファイルフラグメントの送信元のデータセットに基づいて、そのフラグメントを優先します。 これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
    * **`order`**:&quot;dataSetPrecedence&quot;を使用する場合は、配列にデータセットのリストを指定する必要があり `order` ます。 データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
 
-**`dataSetPrecedence` 型を使用した attributeMerge オブジェクトの例**
+#### 型を使用した `attributeMerge``dataSetPrecedence` オブジェクトの例
 
 ```json
     "attributeMerge": {
@@ -146,7 +152,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
     }
 ```
 
-**`timestampOrdered` 型を使用した attributeMerge オブジェクトの例**
+#### 型を使用した `attributeMerge``timestampOrdered` オブジェクトの例
 
 ```json
     "attributeMerge": {
@@ -156,7 +162,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 ### スキーマ {#schema}
 
-スキーマオブジェクトは、この結合ポリシーを作成するExperience Data Model(XDM)スキーマを指定します。
+このスキーマオブジェクトは、この結合ポリシーが作成されるExperience Data Model(XDM)スキーマクラスを指定します。
 
 **`schema`オブジェクト**
 
@@ -732,7 +738,7 @@ curl -X DELETE \
 
 ## 次の手順
 
-Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. セグメントの定義と使用を開始するには、[Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)のドキュメントを参照してください。
+組織の結合ポリシーを作成および設定する方法がわかったので、結合ポリシーを使用してPlatform内での顧客プロファイルの表示を調整したり、 [!DNL Real-time Customer Profile] データからオーディエンスセグメントを作成したりできます。 セグメントの定義と使用を開始するには、[Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)のドキュメントを参照してください。
 
 ## 付録
 
