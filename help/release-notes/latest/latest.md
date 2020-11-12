@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 7c4b60dad1ad2071bb19a9b9e181f2db495187c2
+source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
 workflow-type: tm+mt
-source-wordcount: '2049'
+source-wordcount: '2086'
 ht-degree: 26%
 
 ---
@@ -211,6 +211,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | ------- | ----------- |
 | 接続情報の更新 | APIとUIを使用して、既存のバッチ接続の名前、説明、資格情報を更新できるようになり [!DNL Flow Service] ました。 詳しくは、Flow Service APIを使用した [接続の](../../sources/tutorials/api/update.md) 更新に関するチュートリアルおよびUIを使用したアカウントの詳細の [編集を参照してください](../../sources/tutorials/ui/monitor.md)。 |
 | 接続の削除 | エラーを含むバッチ接続や不要になったバッチ接続を、 [!DNL Flow Service] APIとUIを使用して削除できるようになりました。 詳しくは、Flow Service APIを使用した接続の [削除およびUIを使用したアカウントの](../../sources/tutorials/api/delete.md) 削除に関するチュートリアルを参照してください [](../../sources/tutorials/ui/delete-accounts.md)。 |
+| 階層マッピング | データ取り込みプロセス中に、JSONやParketなどの階層的なソースファイルをプレビューできます。 詳しくは、UIのクラウドストレージコネクタ用のデータフローの [設定に関するチュートリアルを参照してください](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 。 |
 | ストリーミングソースでのマッピングのAPIのサポート | APIを使用して、ストリーミングソースのマッピング機能を実行できるようになりました。 |
 | クラウドストレージソースのカスタム区切り文字のAPIサポート | クラウドストレージソースを使用して、CSV以外の区切り形式のファイルを収集できるようになりました。 タブ、カンマ、パイプ、セミコロン、ハッシュなど、任意の1つの列区切り文字を使用して、任意の形式のフラットファイルを収集できます。 値を指定しない場合、デフォルトでコンマが使用されます。 |
 | Adobe Audience ManagerコネクタのSandboxサポート | Audience Managerコネクタは、サンドボックス対応になりました。 ユーザーは、コネクタが選択したSandbox（実稼動用以外のサンドボックスを含む）にAudience Managerデータセットをルーティングできるようにできます。 設定は、IMS組織ごとに1つのサンドボックスに制限されます。 |
