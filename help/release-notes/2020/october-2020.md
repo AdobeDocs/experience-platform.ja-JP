@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e2b0048703816dc481eb9486310d86a8f2483af2
+source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1009'
 ht-degree: 16%
 
 ---
@@ -71,7 +71,6 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 階層マッピング | データ取り込みプロセス中に、JSONやParketなどの階層的なソースファイルをプレビューできます。 |
 | SFTP用SSH認証のサポート | RSA/DSA Open SSHキーを [!DNL Platform] 使用して、SFTPアカウントをに接続できます。 See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
 | UXの強化 | データセットは、データ取り込みプロセス [!DNL Profile] 中に有効にすることができます。 詳しくは、「 [クラウドストレージのdataflowワークフローのチュートリアル](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 」を参照してください。 |
 
