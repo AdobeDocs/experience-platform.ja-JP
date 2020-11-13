@@ -5,9 +5,9 @@ audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 85%
 
 ---
@@ -56,6 +56,7 @@ ht-degree: 85%
          * [Google タグ拡張機能](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [LinkedIn Insight タグ拡張機能](/help/rtcdp/destinations/linkedin-extension.md)
          * [Pinterest Conversion Tracking 拡張機能](destinations/pinterest-extension.md)
+         * [The Trade Desk](/help/rtcdp/destinations/tradedesk-destination.md)
          * [Twitter Universal Website Tag 拡張機能](destinations/twitter-uwt-extension.md)
       * Analytics の宛先 {#analytics-destinations}
          * [Analytics の宛先の概要](destinations/analytics-destinations.md)
