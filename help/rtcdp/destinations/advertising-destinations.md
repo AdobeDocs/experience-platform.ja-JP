@@ -5,10 +5,10 @@ seo-title: 広告の宛先
 description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 seo-description: リアルタイム顧客データプラットフォームをサードパーティの広告プラットフォーム（DSP、広告ネットワーク、SSP など）に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: 77b1ffdd20cbc4e1645688da83769277f6729091
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 75%
+source-wordcount: '222'
+ht-degree: 76%
 
 ---
 
@@ -30,6 +30,7 @@ Connect your [!DNL Real-time Customer Data Platform] to a 3rd-party advertising 
 * [Google 広告](/help/rtcdp/destinations/google-ads-destination.md)
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Google カスタマーマッチ](/help/rtcdp/destinations/google-customer-match-destination.md)
+* [The Trade Desk](/help/rtcdp/destinations/tradedesk-destination.md)
 
 
 ## 拡張機能
