@@ -5,9 +5,9 @@ topic: overview
 title: アクセス制御の概要
 description: Adobe Experience Platformのアクセス制御はAdobe Admin Consoleを通じて提供される。 この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 translation-type: tm+mt
-source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
+source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 54%
 
 ---
@@ -52,8 +52,8 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 | 製品プロファイル | サンドボックスアクセス | 権限 |
 | --- | --- | --- |
-| デフォルトの実稼働 — すべてのアクセス | 実稼動 | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
-| デフォルトのサンドボックス管理 | なし | サンドボックス管理権限へのアクセスのみを提供します。 |
+| 既定の実稼働環境のフルアクセス | 実稼動 | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
+| Sandbox管理者 | なし | サンドボックス管理権限へのアクセスのみを提供します。 |
 
 ## サンドボックスと権限
 
