@@ -5,9 +5,9 @@ seo-title: The Trade Desk Destination
 description: 'トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。 '
 seo-description: トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '575'
 ht-degree: 5%
 
 ---
@@ -46,9 +46,9 @@ Note the following details that are specific to the [!DNL The Trade Desk] destin
    >[!NOTE]
    >
    >この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](../destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
+   >
+   >![トレードデスクの宛先を有効にする](assets/tradedesk-destination-activate.png)
 
-       ![The Trade Desk Destination](assets/tradedesk-destination-activate.png)
-   
 2. 「 [!UICONTROL 認証] 」の手順で、 [!DNL The Trade Desk] 接続の詳細を入力する必要があります。
 
    * **[!UICONTROL 名前]**:この宛先が将来認識される名前。
