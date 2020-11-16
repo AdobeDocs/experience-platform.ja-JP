@@ -5,7 +5,7 @@ seo-title: Microsoft Bingの送信先は、プロファイルデータをMicroso
 description: Microsoft Bingのリンク先では、Microsoftディスプレイ広告全体で、ターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行できます。
 seo-description: Microsoft Bingのリンク先では、Microsoftディスプレイ広告全体で、ターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行できます。
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 6%
@@ -50,8 +50,8 @@ Note the following details that are specific to the [!DNL Microsoft Bing] destin
    >[!NOTE]
    >
    >この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](../destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
-
-   ![Microsoft Bingの宛先のアクティブ化](assets/bing-destination-activate.png)
+   >
+   >![Microsoft Bingの宛先のアクティブ化](assets/bing-destination-activate.png)
 
 1. 「 [!UICONTROL 認証] 」の手順で、宛先接続の詳細を入力する必要があります。
 
