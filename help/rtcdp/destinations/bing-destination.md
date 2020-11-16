@@ -5,7 +5,7 @@ seo-title: Microsoft Bingの送信先は、プロファイルデータをMicroso
 description: Microsoft Bingのリンク先では、Microsoftディスプレイ広告全体で、ターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行できます。
 seo-description: Microsoft Bingのリンク先では、Microsoftディスプレイ広告全体で、ターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行できます。
 translation-type: tm+mt
-source-git-commit: 979256ea975dcc0c1f6c59792b70d6899ee11376
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 6%
@@ -50,8 +50,8 @@ Note the following details that are specific to the [!DNL Microsoft Bing] destin
    >[!NOTE]
    >
    >この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](../destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
-   >
-   >![Microsoft Bingの宛先のアクティブ化](assets/bing-destination-activate.png)
+
+   ![Microsoft Bingの宛先のアクティブ化](assets/bing-destination-activate.png)
 
 1. 「 [!UICONTROL 認証] 」の手順で、宛先接続の詳細を入力する必要があります。
 
@@ -68,7 +68,7 @@ Note the following details that are specific to the [!DNL Microsoft Bing] destin
 
 セグメントのアクティベーションワークフローについて詳しくは、「[宛先へのプロファイルとセグメントのアクティブ化](activate-destinations.md#select-attributes)」を参照してください。
 
-セグメ [ントのスケジュール](activate-destinations.md#segment-schedule) ：手順で、セグメントを宛先の対応するIDまたはフレンドリ名に手動でマップする必要があります。
+「 [セグメントスケジュール](activate-destinations.md#segment-schedule) 」の手順で、セグメントを宛先の対応するIDまたはフレンドリ名に手動でマップする必要があります。
 
 セグメントをマッピングする場合は、使いやすいように、セグメント名を短くすることをお勧めします。 [!DNL Platform] ただし、宛先のセグメントIDまたは名前が、アカウントのセグメントIDまたは名前と一致している必要はありません [!DNL Platform] 。 マッピングフィールドに挿入した値は、すべて宛先に反映されます。
 
