@@ -5,9 +5,9 @@ seo-title: The Trade Desk Destination
 description: 'トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。 '
 seo-description: トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。
 translation-type: tm+mt
-source-git-commit: c9fb63b390d4c7dddcdb35a85710ff664614ad63
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 5%
 
 ---
@@ -46,10 +46,10 @@ Note the following details that are specific to the [!DNL The Trade Desk] destin
    >[!NOTE]
    >
    >この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](../destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
-   >
-   >![トレードデスクの宛先を有効にする](assets/tradedesk-destination-activate.png)
 
-1. 「 [!UICONTROL 認証] 」の手順で、 [!DNL The Trade Desk] 接続の詳細を入力する必要があります。
+       ![The Trade Desk Destination](assets/tradedesk-destination-activate.png)
+   
+2. 「 [!UICONTROL 認証] 」の手順で、 [!DNL The Trade Desk] 接続の詳細を入力する必要があります。
 
    * **[!UICONTROL 名前]**:この宛先が将来認識される名前。
    * **[!UICONTROL 説明]**:この宛先を将来特定するのに役立つ説明です。
@@ -67,13 +67,13 @@ Note the following details that are specific to the [!DNL The Trade Desk] destin
 
    ![トレードデスクの認証手順](assets/tradedesk-destination-authentication.png)
 
-1. 「 **[!UICONTROL 作成先]**」をクリックします。 これで宛先が作成されました。You can click [!UICONTROL Save &amp; Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+3. 「 **[!UICONTROL 作成先]**」をクリックします。 これで宛先が作成されました。You can click [!UICONTROL Save &amp; Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
 ## セグメントのアクティブ化 {#activate-segments}
 
 セグメントのアクティベーションワークフローについて詳しくは、「[宛先へのプロファイルとセグメントのアクティブ化](activate-destinations.md#select-attributes)」を参照してください。
 
-セグメ [ントのスケジュール](activate-destinations.md#segment-schedule) ：手順で、セグメントを宛先の対応するIDまたはフレンドリ名に手動でマップする必要があります。
+「 [セグメントスケジュール](activate-destinations.md#segment-schedule) 」の手順で、セグメントを宛先の対応するIDまたはフレンドリ名に手動でマップする必要があります。
 
 セグメントをマッピングする場合は、使いやすいように、セグメント名を短くすることをお勧めします。 [!DNL Platform] ただし、宛先のセグメントIDまたは名前が、アカウントのセグメントIDまたは名前と一致している必要はありません [!DNL Platform] 。 マッピングフィールドに挿入した値は、すべて宛先に反映されます。
 
