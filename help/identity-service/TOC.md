@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform ID サービス
 breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 6cee9331acde303951718a5be6f5aeaa18a458f6
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 96%
+source-wordcount: '96'
+ht-degree: 90%
 
 ---
 
@@ -26,6 +26,8 @@ ht-degree: 96%
    - [名前空間のリスト](api/list-namespaces.md)
    - [カスタム名前空間の作成](api/create-custom-namespace.md)
    - [ID のネイティブ ID のリスト](api/list-native-id.md)
+- IDサービスUI {#ui}
+   - [IDグラフビューア](ui/identity-graph-viewer.md)
 - [ECID の概要](ecid.md)
 - [トラブルシューティングガイド](troubleshooting-guide.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
