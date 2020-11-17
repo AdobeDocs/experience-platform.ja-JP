@@ -6,10 +6,10 @@ type: Tutorial
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 5238d98db0554d34c2b0bcd28b64354f544faa0f
+source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 44%
+source-wordcount: '835'
+ht-degree: 42%
 
 ---
 
@@ -35,6 +35,8 @@ In the **[!UICONTROL Authentication]** step, if you had previously set up a conn
 - **S3接続の場合**、AmazonアクセスキーIDとシークレットアクセスキーを指定する必要があります。
 - For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 - For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
+
+必要に応じて、RSA形式の公開鍵を添付し、「 **[!UICONTROL Key]** 」セクションの下に書き出したファイルに暗号化を追加できます。 この公開鍵は、Base64エンコードされた文字列 **として書き込む** 必要があります。
 
 「 **[!UICONTROL 設定]** 」(Setup)ステップで、新しい保存先の名前と説明、および書き出すファイルのファイル形式を入力します。
 
