@@ -3,19 +3,19 @@ keywords: RTCDP;rtcdp
 title: 宛先ワークスペース
 seo-title: 宛先ワークスペース
 description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
-seo-description: アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
+seo-description: Real-time Customer Data Platformで、左側のナビゲーションバーから「Destinations」を選択して、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: a3e35dee98b7b2758a4246a63bb0e1bde6b2f165
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 56%
+source-wordcount: '905'
+ht-degree: 47%
 
 ---
 
 
 # 宛先ワークスペース {#destinations-workspace}
 
-アドビのリアルタイム顧客データプラットフォームで、左側のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択して、[!UICONTROL 宛先]ワークスペースにアクセスします。
+In Real-time Customer Data Platform, select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
 
 [!UICONTROL 宛先]ワークスペースは、「[!UICONTROL カタログ]」、「[!UICONTROL 参照]」、「[!UICONTROL アカウント]」、「[!UICONTROL システム表示]」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 
@@ -23,13 +23,13 @@ ht-degree: 56%
 
 ## [!UICONTROL カタログ] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Adobe Real-time CDP, that you can send data to.
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Real-time CDP, that you can send data to.
 
-AdobeReal-time CDPユーザー・インターフェースは、宛先カタログ・ページに多数の検索およびフィルタ・オプションを提供します。
+Real-time CDPユーザー・インタフェースは、ターゲット・カタログ・ページに多数の検索およびフィルタ・オプションを提供します。
 
 * ページの検索機能を使用して、特定の行き先を見つけます。
 * [!UICONTROL カテゴリコントロールを使用した宛先のフィルタリング] 。
-* 「す [!UICONTROL べての宛先] 」と「 [!UICONTROL 自分の宛先]」を切り替えます。 [ **[!UICONTROL All destinations]** ]を選択すると、使用可能なAdobeReal-time CDPの宛先がすべて表示されます。 「 **[!UICONTROL 宛先]** 」を選択すると、接続を確立した宛先のみが表示されます。
+* 「す [!UICONTROL べての宛先] 」と「 [!UICONTROL 自分の宛先]」を切り替えます。 [ **[!UICONTROL All destinations]** ]を選択すると、使用可能なすべてのリアルタイムCDP宛先が表示されます。 「 **[!UICONTROL 自分の宛先]** 」を選択すると、接続を確立した宛先のみが表示されます。
 * 「表示 **[!UICONTROL 接続]** 」または「 **[!UICONTROL 拡張子]**」を選択します。 この2つのカテゴリの違いについて詳しくは、 [宛先のタイプとカテゴリを参照してください](/help/rtcdp/destinations/destination-types.md)。
 
 ![リンク先のフィルタリングと検索デモ](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
@@ -60,7 +60,7 @@ AdobeReal-time CDPユーザー・インターフェースは、宛先カタロ�
 >
 >「 ![Platform](/help/rtcdp/destinations/assets/add-data-symbol.png) （プラットフォーム） **[!UICONTROL 」列の]** 「Data（データ）」ボタンを使用して、そのアカウントの新しい宛先接続を作成します。
 
-![「アカウント」タブ](/help/rtcdp/destinations/assets/accounts-tab.png)
+![「アカウント」タブ](./assets/workspace/edit-account-destinations.png)
 
 | 要素 | 説明 |
 ---------|----------
@@ -69,6 +69,18 @@ AdobeReal-time CDPユーザー・インターフェースは、宛先カタロ�
 | [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination)で選択したユーザー名。 |
 | [!UICONTROL 宛先] | 宛先に対して作成された基本情報に接続された、一意に成功した宛先フローの数を表します。 |
 | [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
+
+また、アカウント情報を編集または更新できます。 「プラットフ ![ォーム](./assets/workspace/pencil-icon.png) 」列の「アカウントを **** 編集」ボタンを選択して、アカウントの情報を編集します。
+
+接続の種類を使用するアカウントの場合は、「OAuthに再接続 `OAuth2` 」を選択して、 **** アカウントの資格情報を更新できます。
+
+![OAUTHイメージ](./assets/workspace/reconnect-oauth.png)
+
+接続の種類 `Access Key``ConnectionString` または接続を使用するアカウントの場合は、アクセスID、秘密鍵、接続文字列などの情報を含むアカウント認証情報を編集できます。
+
+![アカウント情報の画像](./assets/workspace/edit-account-details.png)
+
+アカウントの詳細の編集が終了したら、「 **[!UICONTROL 保存]** 」を選択して更新を完了します。
 
 ## [!UICONTROL 参照] {#browse}
 
