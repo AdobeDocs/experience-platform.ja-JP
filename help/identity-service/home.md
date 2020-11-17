@@ -5,9 +5,9 @@ title: Adobe Experience Platform ID サービス
 topic: overview
 description: Adobe Experience Platform ID サービスを使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客と行動をより良く表示できます。これによって、インパクトのある個人のデジタルエクスペリエンスをリアルタイムで提供できます。
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
 workflow-type: tm+mt
-source-wordcount: '1711'
+source-wordcount: '1719'
 ht-degree: 69%
 
 ---
@@ -86,6 +86,8 @@ All customer identity graphs are collectively managed and updated by [!DNL Ident
 [!DNL Identity Service] 組織のみが表示し、自分のデータ（「個人用グラフ」と呼ばれる）に基づいて作成した身分証明書を管理します。 [!DNL Identity Service] 取り込まれたデータレコードに複数のIDが含まれる場合にプライベートグラフが増加し、見つかったID間の関係が追加されます。
 
 ID データを提供してラベルを付けるときに考慮する必要がある可能性のある要素の例として、「職場の電話」などの電話番号を使用すると、ID グラフで意図したよりも多くの関係が生じる場合があります。多くの従業員が同じ職場の電話番号を持つ一方、「自宅」と「携帯」は関係をできるだけ正確に保つために役立ちます。
+
+詳しくは、IDグラフビューアへの [アクセスに関するチュートリアルを参照してください](./ui/identity-graph-viewer.md)
 
 ## IDデータの [!DNL Identity Service]
 
