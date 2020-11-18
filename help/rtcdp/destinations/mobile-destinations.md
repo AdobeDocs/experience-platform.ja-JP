@@ -1,23 +1,22 @@
 ---
 keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: モバイルの送信先
-seo-title: モバイルの送信先
-description: モバイル送信先の使用例を挿入する
-seo-description: モバイル送信先の使用例を挿入する
+title: モバイルエンゲージメントの宛先
+seo-title: モバイルエンゲージメントの宛先
+description: Adobe Experience Platformは、以下に示すモバイルエンゲージメント先をサポートしています。
+seo-description: Adobe Experience Platformは、以下に示すモバイルエンゲージメント先をサポートしています。
 translation-type: tm+mt
-source-git-commit: 6c8084f35c4981b41a5beecd57ce5b3ef4e409d6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '41'
 ht-degree: 0%
 
 ---
 
 
-# モバイルの送信先 {#mobile-destinations}
+# モバイルエンゲージメントの宛先 {#mobile-destinations}
 
-モバイル送信先の説明を挿入します
+[!DNL Adobe Experience Platform] 現在、次のモバイルエンゲージメント先をサポートしています。
 
-[!DNL Adobe Experience Platform] 現在、次のモバイル宛先をサポートしています。
-
-* 飛行船 — 飛行船ドキュメントページへのリンクを挿入します。
+* [飛行船属性](airship-attributes-destination.md)
+* [航空船タグ](airship-tags-destination.md)
 * [ブレーズ](braze-destination.md)
