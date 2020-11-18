@@ -5,9 +5,9 @@ title: XDM ExperienceEventクラス
 topic: overview
 description: このドキュメントでは、XDM ExperienceEventクラスの概要を説明します。
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: 4d109244e57799c7e3837ceee3e2f5d17fbf0a18
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '797'
 ht-degree: 6%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 6%
 | `eventMergeId` | レコードを作成した、取り込んだバッチのID。 このフィールドは、データ取り込み時にシステムによって自動的に入力されます。 |
 | `eventType` | レコードの主イベントタイプを示す文字列。 指定できる値とその定義については、 [付録の節で説明します](#eventType)。 |
 | `identityMap` | イベントが適用される個々の名前空間IDのセットが含まれるmapフィールド。 このフィールドは、IDデータが取り込まれると自動的に更新されます。 このフィールドを [リアルタイム顧客プロファイルに適切に活用するため](../../profile/home.md)、データ操作で手動でフィールドの内容を更新しないでください。<br /><br />使用事例について詳しくは、スキーマ構成の [基本のIDマップに関する節を参照してください](../schema/composition.md#identityMap) 。 |
-| `timestamp` | イベントまたは観測が発生した時刻。 |
+| `timestamp` | イベントまたは観測が発生した時刻。 すべてのdatetime値は、 [RFC 3339](https://tools.ietf.org/html/rfc3339) 形式で指定する必要があります。 |
 
 ## 互換性のあるミックスイン {#mixins}
 
