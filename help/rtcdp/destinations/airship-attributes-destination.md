@@ -1,14 +1,14 @@
 ---
 keywords: airship attributes;airship destination
-title: 飛行船属性の送信先
-seo-title: 飛行船属性の送信先
+title: 航空船属性の宛先
+seo-title: 航空船属性の宛先
 description: Airship内でターゲティングするために、Adobeオーディエンスデータをオーディエンス属性としてAirshipにシームレスに渡します。
 seo-description: Airship内でターゲティングするために、Adobeオーディエンスデータをオーディエンス属性としてAirshipにシームレスに渡します。
 translation-type: tm+mt
-source-git-commit: 0e065bbc0917d5009738b4cae890ffd13c0ab154
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '1245'
-ht-degree: 14%
+source-wordcount: '1244'
+ht-degree: 13%
 
 ---
 
@@ -61,15 +61,15 @@ Adobe Experience Platformプロファイルの属性は [!DNL Airship] 属性に
 
 To help you better understand how and when you should use the [!DNL Airship Attributes] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### ユースケース 1
+### 使用例1
 
 Adobe Experience Platform内で収集されたプロファイルデータを活用して、チャネル内のメッセージやリッチコンテンツをパーソナライズ [!DNL Airship]できます。 例えば、 [!DNL Experience Platform] プロファイルデータを利用して、内で場所属性を設定し [!DNL Airship]ます。 これにより、ホテルのブランドで各ユーザーの最も近いホテルの場所の画像を表示できます。
 
-### ユースケース 2
+### 使用例2
 
 Adobe Experience Platformの属性を活用して、 [!DNL Airship] プロファイルをさらに豊富にし、SDKや [!DNL Airship] 予測データと組み合わせます。 例えば、ある小売業者は忠誠度のステータスと場所のデータ（プラットフォームの属性）を持つセグメントを作成し、高ターゲットのメッセージを、ネバダ州ラスベガスに住む金忠誠度のユーザーに送信するためにデータを変換すると予測できます。 [!DNL Airship]
 
-## 属性に接続 [!DNL Airship] {#connect-airship-attributes}
+## Connect to [!DNL Airship Attributes] {#connect-airship-attributes}
 
 1. 「 **[!UICONTROL Destinations]** / **[!UICONTROL Catalog]**」で、「 **[!UICONTROL Mobile Engagement]** 」カテゴリまでスクロールします。 を選択 **[!DNL Airship Attributes]**&#x200B;し、「 **[!UICONTROL 設定]**」を選択します。
 
