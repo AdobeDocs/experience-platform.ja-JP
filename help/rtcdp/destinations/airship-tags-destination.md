@@ -5,7 +5,7 @@ seo-title: 航空船タグの宛先
 description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
 seo-description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
 translation-type: tm+mt
-source-git-commit: f08b90531455cdbeb73deb83eed05ba7a9b19df6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 14%
@@ -67,11 +67,11 @@ Adobe Experience Platformのセグメントの概念はAirshipの [タグ](https
 
 To help you better understand how and when you should use the [!DNL Airship Tags] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-### ユースケース 1
+### 使用例1
 
 小売業者やエンターテイメントプラットフォームは、忠誠度の高い顧客に対してユーザープロファイルを作成し、モバイルキャンペーンでのメッセージターゲット設定のために、それらのセグメント [!DNL Airship] をに渡すことができます。
 
-### ユースケース 2
+### 使用例2
 
 ユーザーがAdobe Experience Platform内の特定のセグメントに入る、または離れるときに、1対1のメッセージをリアルタイムでトリガーします。
 
