@@ -5,10 +5,10 @@ audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
 translation-type: tm+mt
-source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
+source-git-commit: 97a4e335314d23a436817d46f9d218a2532acfe5
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 83%
+source-wordcount: '525'
+ht-degree: 82%
 
 ---
 
@@ -102,9 +102,11 @@ ht-degree: 83%
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch 拡張機能 {#launch-extensions}
          * [Experience Platform Launch 拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
-      * モバイルの送信先 {#mobile}
-         * [モバイル送信先の概要](destinations/mobile-destinations.md)
-         * [ブレーズ先](destinations/braze-destination.md)
+      * モバイルエンゲージメントの宛先 {#mobile}
+         * [モバイルエンゲージメントの宛先の概要](destinations/mobile-destinations.md)
+         * [飛行船属性](destinations/airship-attributes-destination.md)
+         * [航空船タグ](destinations/airship-tags-destination.md)
+         * [ブレーズ](destinations/braze-destination.md)
       * パーソナライズ機能の宛先 {#personalization-destinations}
          * [パーソナライズ機能の宛先の概要](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target 拡張機能](/help/rtcdp/destinations/adobe-target-extension.md)
