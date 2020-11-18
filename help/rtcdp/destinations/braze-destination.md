@@ -5,7 +5,7 @@ seo-title: ブレーズ先
 description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 seo-description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 translation-type: tm+mt
-source-git-commit: 9126a9b3a27aa0a0ecefb5d490475423d7840791
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 5%
@@ -57,6 +57,7 @@ Note the following details that are specific to the [!DNL Braze] destination:
    >![ブレーズ先をアクティブ化](assets/braze-destination-activate.png)
 
 1. 「 [!UICONTROL アカウント][!DNL Braze] 」手順で、アカウントトークンを指定する必要があります。 これが君の [!DNL Braze][!DNL API] 鍵だ。 キーの取得方法の詳細な手順は、次を参照してください。 [!DNL API][REST APIキーの概要](https://www.braze.com/docs/api/api_key/)。 トークンを入力し、「 **[!UICONTROL Connect to destination]**」をクリックします。
+
    ![宛先アカウントのブレーズ手順](assets/braze-destination-account.png)
 
 1. 「**[!UICONTROL Next]**」をクリックします。
