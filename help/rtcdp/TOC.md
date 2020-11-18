@@ -5,10 +5,10 @@ audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
 translation-type: tm+mt
-source-git-commit: 2a4d55b2d429fbeb1459a6bd095b0bc39d52917d
+source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 84%
+source-wordcount: '520'
+ht-degree: 83%
 
 ---
 
@@ -102,6 +102,9 @@ ht-degree: 84%
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Experience Platform Launch 拡張機能 {#launch-extensions}
          * [Experience Platform Launch 拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+      * モバイルの送信先 {#mobile}
+         * [モバイル送信先の概要](destinations/mobile-destinations.md)
+         * [ブレーズ先](destinations/braze-destination.md)
       * パーソナライズ機能の宛先 {#personalization-destinations}
          * [パーソナライズ機能の宛先の概要](/help/rtcdp/destinations/personalization-destinations.md)
          * [Adobe Target 拡張機能](/help/rtcdp/destinations/adobe-target-extension.md)
