@@ -6,9 +6,9 @@ type: Tutorial
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '838'
 ht-degree: 42%
 
 ---
@@ -54,7 +54,7 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ## ファイル名の設定
 
-ファイル名の編集オプションの詳細については、チュートリアルの「 [Activate destinations](/help/rtcdp/destinations/activate-destinations.md#configure) 」の設定手順を参照してください。
+セグメントのスケジュールとファイル名の編集オプションについて詳しくは、「アクティブな宛先」チュートリアルの [設定](/help/rtcdp/destinations/activate-destinations.md#configure) 手順を参照してください。
 
 ## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
