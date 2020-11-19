@@ -2,12 +2,12 @@
 keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
 title: PebblePost 拡張機能
 seo-title: PebblePost 拡張機能
-description: PebblePost 拡張機能は、Adobe リアルタイム顧客データプラットフォームでの電子メールの対象となります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: PebblePost 拡張機能は、Adobe リアルタイム顧客データプラットフォームでの電子メールの対象となります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: PebblePost 拡張機能は、 リアルタイム顧客データプラットフォームでの電子メールの対象となります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: PebblePost 拡張機能は、 リアルタイム顧客データプラットフォームでの電子メールの対象となります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '587'
 ht-degree: 47%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 47%
 
 [!DNL PebblePost's Programmatic Direct Mail®] ソリューションは、デジタルマーケターがオンラインの関心と意図を、コンバージョンを行うオフラインの有形メディアに結び付けるのに役立ちます。 マーケティング担当者は、アドビで作成したカスタムデータセグメントを活用して、関連性の高い、長期間持続する社内メディアのインプレッションをターゲット消費者に提供できます。応答パスのアクティビティとオンサイトコンバージョンに基づいて、パフォーマンスをリアルタイムで分析します。
 
-[!DNL PebblePost] は、アドビのリアルタイム顧客データプラットフォームのの電子メール拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html) の拡張機能のページを参照してください。
+[!DNL PebblePost] は、 リアルタイム顧客データプラットフォームの電子メール拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
