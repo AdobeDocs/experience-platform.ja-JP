@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 25%
+source-wordcount: '582'
+ht-degree: 23%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 25%
 
 **リリース日：2020 年 12 月 8 日**
 
-Adobe Experience Platformの既存の機能の更新：
+Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Data Science Workspace]](#dsw)
-- [[!DNL宛先]](#destinations)
-- [[!DNLリアルタイム顧客データプラットフォーム]](#rtcdp)
-- [[!DNLソース]](#sources)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Data Platform]](#rtcdp)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -38,7 +38,7 @@ Adobe Experience Platformの既存の機能の更新：
 
 ## 宛先 {#destinations}
 
-[アドビのリアルタイム顧客データプラットフォーム](../../rtcdp/overview.md) において、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータを活用します。
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **新しい宛先**
 
@@ -57,7 +57,7 @@ Adobe Experience Platformの既存の機能の更新：
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Built on Experience Platform, Adobe Real-time Customer Data Platform ([!DNL Real-time CDP]) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. [!DNL Real-time CDP] 複数のエンタープライズデータソースを組み合わせて、顧客プロファイルをリアルタイムで作成します。 これらのプロファイルから作成されたセグメントは、その後、すべてのチャネルとデバイスで1対1のパーソナライズ顧客エクスペリエンスを提供するために、ダウンストリームの宛先に送信できます。
+Built on Experience Platform, Real-time Customer Data Platform ([!DNL Real-time CDP]) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. [!DNL Real-time CDP] 複数のエンタープライズデータソースを組み合わせて、顧客プロファイルをリアルタイムで作成します。 これらのプロファイルから作成されたセグメントは、その後、すべてのチャネルとデバイスで1対1のパーソナライズ顧客エクスペリエンスを提供するために、ダウンストリームの宛先に送信できます。
 
 **新機能**
 
