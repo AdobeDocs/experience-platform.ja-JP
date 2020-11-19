@@ -5,10 +5,10 @@ seo-title: 調査の宛先
 description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックをキャプチャし、アドビのリアルタイム CDP とデータを共有します。
 seo-description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックをキャプチャし、アドビのリアルタイム CDP とデータを共有します。
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 100%
+source-wordcount: '103'
+ht-degree: 89%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックをキャプチャし、アドビのリアルタイム CDP とデータを共有します。
 
-現在、アドビのリアルタイム顧客データプラットフォームは、以下に示す調査先をサポートしています。これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、Real-time Customer Data Platformは、以下に示す調査先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 * [Forese 拡張機能](/help/rtcdp/destinations/foresee-extension.md)
 * [InMoment 拡張機能](/help/rtcdp/destinations/inmoment-extension.md)
