@@ -1,21 +1,21 @@
 ---
 title: 自動的に収集される情報
 seo-title: Adobe Experience Platform Web SDK で自動的に収集される情報
-description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
-seo-description: Adobe Experience Cloud SDK が自動的に収集する各情報の説明
+description: Adobe Experience CloudSDKが自動的に収集する各情報の説明
+seo-description: Adobe Experience CloudSDKが自動的に収集する各情報の説明
 keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 100%
+source-wordcount: '385'
+ht-degree: 84%
 
 ---
 
 
 # 自動的に収集される情報
 
-Adobe Experience Cloud SDK は、特別な設定をしなくても、多数の情報を自動的に収集します。ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
+Adobe Experience PlatformWeb SDKは、特別な設定なしで多数の情報を自動的に収集します。 ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
 
 ## デバイス（`device`）
 
@@ -57,7 +57,7 @@ Adobe Experience Cloud SDK は、特別な設定をしなくても、多数の�
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-エクスペリエンスが表示された環境のタイプ。JavaScript 版 Adobe Experience Platform SDK では、常に `browser` が設定されます。
+エクスペリエンスが表示される環境のタイプ。 Adobe Experience PlatformウェブSDKは、常にこれをに設定し `browser`ます。
 
 ### ビューポートの高さ
 
