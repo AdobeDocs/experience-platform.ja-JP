@@ -5,9 +5,9 @@ description: Experience PlatformWeb SDKを使用してIAB TCF 2.0の同意の環
 seo-description: Experience PlatformWeb SDKを使用してIAB TCF 2.0の同意の環境設定をサポートする方法を説明します。
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 3f70e7fdd5888018f3814d1446042e96d2e53304
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # IAB Transparency &amp; Consent Framework 2.0の概要
 
-Adobe Experience PlatformWeb SDK(AEP Web SDK)は、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をサポートしています。 このガイドは、リアルタイム顧客データプラットフォーム、Audience Manager、エクスペリエンスイベント、Adobe Analytics、エクスペリエンスエッジとの統合によるAEP Web SDKを介したIAB TCF 2.0のサポートに必要な要件を示しています。
+Adobe Experience PlatformWeb SDKは、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をサポートしています。 このガイドは、リアルタイム顧客データプラットフォーム、Audience Manager、エクスペリエンスイベント、Adobe Analytics、エクスペリエンスエッジとの統合により、IAB TCF 2.0をサポートするための要件を示しています。
 
 さらに、IAB TCF 2.0とAdobe Experience Platform Launchの統合/統合の方法を学習する際には、次のガイドを参照してください。
 
@@ -24,13 +24,13 @@ Adobe Experience PlatformWeb SDK(AEP Web SDK)は、Interactive Advertising Burea
 
 ## はじめに
 
-IAB TCF 2.0を使用してAEP Web SDKを実装するには、エクスペリエンスデータモデル(XDM)とエクスペリエンスイベントについて十分に理解している必要があります。 開始を行う前に、次のドキュメントを確認してください。
+IAB TCF 2.0を使用してWeb SDKを実装するには、エクスペリエンスデータモデル(XDM)とエクスペリエンスのイベントについて、十分に理解している必要があります。 開始を行う前に、次のドキュメントを確認してください。
 
 - [Experience Data Model(XDM)システム概要](../../../xdm/home.md):標準化と相互運用性は、Adobe Experience Platformの主な概念です。 [!DNL Experience Data Model (XDM)]Adobeによって推進されるのは、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 
 ## リアルタイム顧客データプラットフォーム統合
 
-Real-time Customer Data Platform(Real-time CDP)は、Adobe Experience Platform上に構築されており、複数のエンタープライズ・ソースから既知の匿名データを統合できます。 これにより、すべてのチャネルとデバイスにわたって、パーソナライズされた顧客体験をリアルタイムで提供するために使用できる顧客プロファイルを作成できます。 AEP Web SDKを介してリアルタイムCDPに同意データを送信するには、以下が必要です。
+Real-time Customer Data Platform(Real-time CDP)は、Adobe Experience Platform上に構築されており、複数のエンタープライズ・ソースから既知の匿名データを統合できます。 これにより、すべてのチャネルとデバイスにわたって、パーソナライズされた顧客体験をリアルタイムで提供するために使用できる顧客プロファイルを作成できます。 SDKを介してリアルタイムCDPに同意データを送信するには、以下が必要です。
 
 - プロファイルのプライバシーミックスインを使用し、での使用を有効にした、 [!DNL XDM Individual Profile] クラスに基づくデータセット [!DNL Real-time Customer Profile]。
 - Real-time CDPと、前述のプロファイルデータセットを使用して設定されたエッジ構成。
@@ -45,7 +45,7 @@ Adobe Audience Manager(AAM)は、IAB TCF 2.0のサポートを含みます。IAB
 
 >[!TIP]
 >
->AEP Web SDKを介してAudience Managerと統合するには、Adobe Audience Managerに転送するエッジ設定があることを確認します。
+>Adobe Experience PlatformWeb SDKを使用してAudience Managerと統合するには、Adobe Audience Managerに転送するエッジ設定があることを確認します。
 
 ## エクスペリエンスイベントとAdobe Analyticsの統合
 
@@ -58,9 +58,9 @@ Adobe Audience Manager(AAM)は、IAB TCF 2.0のサポートを含みます。IAB
 
 XDMエクスペリエンスのイベントをAnalyticsヒットに変換する方法について詳しくは、 [Analyticsの概要](../../data-collection/adobe-analytics/analytics-overview.md) 「」ドキュメントを参照して開始してください。
 
-## AEP Web SDKの統合
+## Adobe Experience PlatformWeb SDKの統合
 
-以下の節では、IAB TCF 2.0とAEP Web SDKの主な統合ポイントについて説明します。
+以下の節では、IAB TCF 2.0とAdobe Experience PlatformWeb SDKの主な統合ポイントについて説明します。
 
 >[!NOTE]
 >
@@ -68,15 +68,15 @@ XDMエクスペリエンスのイベントをAnalyticsヒットに変換する�
 
 ### 既定の同意
 
-既定の同意は、既に顧客に保存されている同意の優先順位がない場合に使用されます。 つまり、デフォルトの同意オプションでAEP Web SDKの動作を制御し、顧客の地域に基づいて変更を行うことができます。
+既定の同意は、既に顧客に保存されている同意の優先順位がない場合に使用されます。 つまり、デフォルトの同意オプションで、Adobe Experience PlatformWeb SDKの動作を制御し、お客様の地域に基づいて変更を行うことができます。
 
-たとえば、GDPR(General Data Protection Regulation)の管轄区域外のお客様がいる場合、デフォルトの同意はに設定できますが、GDPRの管轄区域内では、デフォルトの同意はに設定でき `in``pending`ます。 クラウド管理プラットフォーム(CMP)が顧客の地域を検出し、IAB TCF 2.0にフラグ `gdprApplies` を提供する場合があります。このフラグは、デフォルトの同意を設定するために使用できます。
+たとえば、GDPR(General Data Protection Regulation)の管轄区域外のお客様がいる場合、デフォルトの同意はに設定できますが、GDPRの管轄区域内では、デフォルトの同意はに設定でき `in``pending`ます。 クラウド管理プラットフォーム(CMP)が顧客の地域を検出し、IAB TCF 2.0にフラグを提供する場合があります。このフラグは、デフォルトの同意を設定するために使用できます。 `gdprApplies`
 
 デフォルトの同意について詳しくは、SDK設定ドキュメントの [デフォルトの同意の節](../../fundamentals/configuring-the-sdk.md#default-consent) を参照してください。
 
 ### 変更時の同意の設定
 
-AEP Web SDKには、IAB TCF 2.0を使用するすべてのAdobeサービスに対して、お客様の同意の希望を伝える `setConsent` コマンドがあります。Real-time CDPと統合している場合は、これによってお客様のプロファイルが更新されます。 Audience Managerとの統合を行っている場合は、顧客情報が更新されます。 また、この呼び出しを行うと、将来のエクスペリエンスイベントの送信を許可するかどうかを制御する、オールオアナッシングの同意プリファレンスを持つcookieも設定されます。 同意が変更されるたびにこのアクションが呼び出されることを意図しています。 今後のページ読み込みでは、エクスペリエンスエッジの同意cookieが読み取られ、エクスペリエンスイベントを送信できるかどうか、およびID cookieを設定できるかどうかが判断されます。
+Adobe Experience PlatformWeb SDKには、IAB TCF 2.0を使用するすべてのAdobeサービスに対して、お客様の同意を伝える `setConsent` コマンドがあります。Real-time CDPと統合する場合は、お客様のプロファイルを更新します。 Audience Managerとの統合を行っている場合は、顧客情報が更新されます。 また、この呼び出しを行うと、将来のエクスペリエンスイベントの送信を許可するかどうかを制御する、オールオアナッシングの同意プリファレンスを持つcookieも設定されます。 同意が変更されるたびにこのアクションが呼び出されることを意図しています。 今後のページ読み込みでは、エクスペリエンスエッジの同意cookieが読み取られ、エクスペリエンスイベントを送信できるかどうか、およびID cookieを設定できるかどうかが判断されます。
 
 Audience ManagerのIAB TCF 2.0統合と同様、Experience Edgeでは、次の目的に対する明示的な同意をユーザーが提供した場合に、同意が得られます。
 
@@ -89,7 +89,7 @@ Audience ManagerのIAB TCF 2.0統合と同様、Experience Edgeでは、次の�
 
 ### エクスペリエンスイベントへの同意の追加
 
-AEP Web SDKには、エクスペリエンスイベントを収集する `sendEvent` コマンドがあります。 エクスペリエンスイベントまたはAdobe Analyticsとの統合時に、すべてのエクスペリエンスイベントの同意を希望する場合は、すべての `sendEvent` コマンドに同意情報を追加する必要があります。
+Adobe Experience PlatformWeb SDKには、エクスペリエンスイベントを収集する `sendEvent` コマンドがあります。 エクスペリエンスイベントまたはAdobe Analyticsとの統合時に、すべてのエクスペリエンスイベントの同意を希望する場合は、すべての `sendEvent` コマンドに同意情報を追加する必要があります。
 
 この `sendEvent` コマンドの詳細については、 [イベントの](../../fundamentals/tracking-events.md)追跡に関するドキュメントを参照してください。
 
