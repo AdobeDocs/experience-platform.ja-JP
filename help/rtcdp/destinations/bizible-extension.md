@@ -2,13 +2,13 @@
 keywords: bizible;bizible extension;bizible destination
 title: Bizible 拡張機能
 seo-title: Bizible 拡張機能
-description: Bizible 拡張機能は、アドビのリアルタイム顧客データプラットフォームの電子メールの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Bizible 拡張機能は、アドビのリアルタイム顧客データプラットフォームの電子メールの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Bizible拡張機能は、リアルタイム顧客データプラットフォームの電子メールの送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Bizible拡張機能は、リアルタイム顧客データプラットフォームの電子メールの送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 59%
+source-wordcount: '526'
+ht-degree: 55%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 59%
 
 [!DNL Bizible] は、業界をリードする B2B アトリビューションソリューションであり、データに対する比類のない可視性を提供するため、成長を促進するスマートな意思決定をおこなうことができます。
 
-[!DNL Bizible] は、アドビのリアルタイム顧客データプラットフォームのの電子メール拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html) の拡張機能のページを参照してください。
+[!DNL Bizible] は、 リアルタイム顧客データプラットフォームの電子メール拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html) の拡張機能のページを参照してください。
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
