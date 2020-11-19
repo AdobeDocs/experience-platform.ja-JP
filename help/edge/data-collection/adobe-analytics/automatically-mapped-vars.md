@@ -5,9 +5,9 @@ description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動�
 seo-description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '675'
 ht-degree: 36%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 36%
 
 # Variables automatically mapped in [!DNL Analytics]
 
-Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
+Below is a list of variables that Adobe Experience Platform Edge Network automatically maps into [!DNL Analytics].
 
 | XDM フィールドパス | [!DNL Analytics Query String] / HTTP ヘッダー | 説明 |
 | ---------- | ------------------------- | ----------------------------------------- |
