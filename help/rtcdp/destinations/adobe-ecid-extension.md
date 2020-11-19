@@ -2,13 +2,13 @@
 Keywords: ECID;ecid
 title: Experience Cloud ID サービス拡張機能
 seo-title: Experience Cloud ID サービス拡張機能
-description: Experience Cloud ID サービス拡張は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Experience Cloud ID サービス拡張は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Experience CloudIDサービスの拡張機能は、リアルタイム顧客データプラットフォームのパーソナライズの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Experience CloudIDサービスの拡張機能は、リアルタイム顧客データプラットフォームのパーソナライズの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 61%
+source-wordcount: '554'
+ht-degree: 54%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 61%
 
 This extension implements the [!DNL Experience Cloud] ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
 
-[!DNL Experience Cloud] ID サービスは、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーション拡張機能です。拡張機能について詳しくは、 ドキュメントの [Experience Cloud ID サービス拡張機能ページ](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)を参照してください。[!DNL Experience Platform Launch]
+[!DNL Experience Cloud] IDサービスは、リアルタイム顧客データプラットフォームのパーソナライゼーション拡張機能です。 拡張機能について詳しくは、 ドキュメントの [Experience Cloud ID サービス拡張機能ページ](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)を参照してください。[!DNL Experience Platform Launch]
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
