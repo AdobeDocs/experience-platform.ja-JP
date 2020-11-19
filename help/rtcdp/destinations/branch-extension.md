@@ -2,13 +2,13 @@
 keywords: branch;branch extension;branch destination
 title: Branch 拡張機能
 seo-title: Branch 拡張機能
-description: Branch 拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Branch 拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Branch拡張機能は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Branch拡張機能は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 45%
+source-wordcount: '536'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 45%
 
 Branch は、すべてのデバイス、チャネル、プラットフォームにわたって顧客を獲得し、関心を引き付けて測定するための強力なリンクとソリューションを提供します。
 
-Branchは、アドビのリアルタイム顧客データプラットフォームの広告の拡張機能です。この拡張機能の詳細については、Branch の Web サイトの[機能ページ](https://branch.io/features/)を参照してください。
+Branchは、リアルタイム顧客データプラットフォームの広告拡張です。 この拡張機能の詳細については、Branch の Web サイトの[機能ページ](https://branch.io/features/)を参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
