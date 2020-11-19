@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: HTTPの宛先は、AdobeのリアルタイムCustomer Data Platformの宛先で、プロファイルデータをサードパーティのHTTPエンドポイントに送信するのに役立ちます。
-seo-title: HTTPの宛先は、AdobeのリアルタイムCustomer Data Platformの宛先で、プロファイルデータをサードパーティのHTTPエンドポイントに送信するのに役立ちます。
-description: HTTPの宛先は、AdobeのリアルタイムCustomer Data Platformの宛先で、プロファイルデータをサードパーティのHTTPエンドポイントに送信するのに役立ちます。
-seo-description: HTTPの宛先は、AdobeのリアルタイムCustomer Data Platformの宛先で、プロファイルデータをサードパーティのHTTPエンドポイントに送信するのに役立ちます。
+title: HTTPの送信先は、プロファイルデータをサードパーティのHTTPエンドポイントに送信する際に役立つ、リアルタイムCustomer Data Platformの送信先です。
+seo-title: HTTPの送信先は、プロファイルデータをサードパーティのHTTPエンドポイントに送信する際に役立つ、リアルタイムCustomer Data Platformの送信先です。
+description: HTTPの送信先は、プロファイルデータをサードパーティのHTTPエンドポイントに送信する際に役立つ、リアルタイムCustomer Data Platformの送信先です。
+seo-description: HTTPの送信先は、プロファイルデータをサードパーティのHTTPエンドポイントに送信する際に役立つ、リアルタイムCustomer Data Platformの送信先です。
 translation-type: tm+mt
-source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '568'
 ht-degree: 7%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 7%
 
 ## 概要 {#overview}
 
-宛先は、サードパーティのエンドポイントにプロファイルデータを送信するのに役立つ [!DNL HTTP] ストリーミング [!DNL Adobe Real-Time Customer Data Platform][!DNL HTTP] 宛先です。
+宛先は、サードパーティのエンドポイントにプロファイルデータを送信するのに役立つ [!DNL HTTP] ストリーミング [!DNL Real-time Customer Data Platform][!DNL HTTP] 宛先です。
 
-プロファイルデータをエンドポイントに送信するには、まず [!DNL HTTP] で宛先に接続する必要があり [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination)ます。
+プロファイルデータをエンドポイントに送信するには、まず [!DNL HTTP] で宛先に接続する必要があり [[!DNL Real-time Customer Data Platform]](#connect-destination)ます。
 
 ## 使用例 {#use-cases}
 
