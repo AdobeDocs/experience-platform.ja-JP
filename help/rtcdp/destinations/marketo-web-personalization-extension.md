@@ -2,13 +2,13 @@
 keywords: Marketo Web Personalization;marketo web personalization;Marketo Web Personalization extension;marketo web personalization extension;marketo;Marketo
 title: Marketo Web パーソナライゼーション拡張機能
 seo-title: Marketo Web パーソナライゼーション拡張機能
-description: Marketo Web パーソナライゼーション拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーション先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Marketo Web パーソナライゼーション拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーション先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: マーケティングツールWebパーソナライゼーション拡張機能は、リアルタイム顧客データプラットフォームのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: マーケティングツールWebパーソナライゼーション拡張機能は、リアルタイム顧客データプラットフォームのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 50%
+source-wordcount: '611'
+ht-degree: 44%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 50%
 
 This extension deploys the script for [!DNL Marketo’s] Web Personalization and ContentAI applications. [!DNL Marketo] Web パーソナライゼーションは、匿名訪問者用の企業特性や、既知の訪問者用の Engagement Platform 内の幅広い行動属性など、Web 訪問者の特性を一意に識別子、コンテンツをパーソナライズします。[!DNL Marketo][!DNL Marketo] ContentAI には、B2B のお客様に固有の Web キャンペーンや電子メールキャンペーンで、AI を活用したレコメンデーションやパーソナライズをおこなう機能が備わっています。
 
-[!DNL Marketo Web Personalization] は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html) の拡張機能のページを参照してください。
+[!DNL Marketo Web Personalization] は、リアルタイム顧客データプラットフォームでのパーソナライゼーション拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
