@@ -2,13 +2,13 @@
 keywords: TMMData;tmm data;tmmdata;TMM data
 title: TMMData 拡張機能
 seo-title: TMMData 拡張機能
-description: TMMData 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける分析の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: TMMData 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける分析の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: TMMData拡張は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: TMMData拡張は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 41%
+source-wordcount: '581'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 41%
 
 [!DNL TMMData's] Adobe Marketing Cloudの基盤プラットフォームは、社内/外部データ、オンライン/オフラインデータなど、重要なデータソースにアクセスし、ブレンドするツールをマーケティングチームに提供し、チャネル間の包括的な分析を自動化し、Adobeや他の分析やBIツールに直接インポートします。
 
-[!DNL TMMData] は、アドビのリアルタイム顧客データプラットフォームの分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html) の拡張機能のページを参照してください。
+[!DNL TMMData] は、Real-time Customer Data Platformのanalytics拡張です。 拡張機能について詳しくは、[Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
