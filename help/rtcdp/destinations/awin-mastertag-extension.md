@@ -2,13 +2,13 @@
 keywords: Awin Advertiser mastertag extension;mastertag tag;Awin;awin;AWIN
 title: Awin Advertiser Mastertag 拡張機能
 seo-title: Awin Advertiser Mastertag 拡張機能
-description: Awin Advertiser Mastertag 拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Awin Advertiser Mastertag 拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Awin Advertiser Mastertag extensionは、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Awin Advertiser Mastertag extensionは、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 58%
+source-wordcount: '556'
+ht-degree: 51%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 58%
 
 The [!DNL MasterTag] is a JavaScript library containing all functions required for Awin tracking solution and should be unconditionally appended to every page on the site, including the confirmation page, but excluding any page that displays or processes payment information.
 
-[!DNL Awin Advertiser Mastertag] は、Adobe リアルタイム顧客データプラットフォームの広告拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html) の拡張機能のページを参照してください。
+[!DNL Awin Advertiser Mastertag] は、リアルタイム顧客データプラットフォームの広告拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html) の拡張機能のページを参照してください。
 
 This destination is an [!DNL Experience Platform Launch] extension. アドビのリアルタイム CDP の Launch の拡張機能について詳しくは、[Experience Platform Launch 拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)を参照してください。
 
