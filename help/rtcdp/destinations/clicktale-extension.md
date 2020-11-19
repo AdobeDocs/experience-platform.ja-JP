@@ -2,13 +2,13 @@
 keywords: clicktale;clicktale extension;clicktale destination
 title: Clicktale 拡張機能
 seo-title: Clicktale 拡張機能
-description: Clicktale 拡張機能は、アドビのリアルタイム顧客データプラットフォームの分析宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Clicktale 拡張機能は、アドビのリアルタイム顧客データプラットフォームの分析宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Clicktale拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Clicktale拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 43%
+source-wordcount: '557'
+ht-degree: 37%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 43%
 
 [!DNL Clicktale's] experience platform launchとの統合により、 [!DNL Clicktale] コードの導入と、ビジュアルエディターを使用した起動内のデータ要素のマッピング機能が可能になり [!DNL Clicktale's] ます。
 
-[!DNL Clicktale] は、アドビのリアルタイム顧客データプラットフォームの分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html) の拡張機能のページを参照してください。
+[!DNL Clicktale] は、Real-time Customer Data Platformのanalytics拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
