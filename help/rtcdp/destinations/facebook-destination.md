@@ -5,9 +5,9 @@ seo-title: Facebook の宛先
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 seo-description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '753'
 ht-degree: 34%
 
 ---
@@ -26,7 +26,7 @@ Activate profiles for your [!DNL Facebook] campaigns for audience targeting, per
 
 ## 使用例
 
-To help you better understand how and when you should use the [!DNL Facebook] destination, here are two sample use cases that Adobe Real-time Customer Data Platform customers can solve by using this feature.
+To help you better understand how and when you should use the [!DNL Facebook] destination, here are two sample use cases that Real-time Customer Data Platform customers can solve by using this feature.
 
 
 ### ユースケース 1
