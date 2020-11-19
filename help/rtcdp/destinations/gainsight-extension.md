@@ -2,13 +2,13 @@
 keywords: foresee;foresee extension;foresee destination
 title: Gainsight 拡張機能
 seo-title: Gainsight 拡張機能
-description: Gainsight 拡張機能は、アドビリアルタイム顧客データプラットフォームのパーソナライズ機能の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Gainsight 拡張機能は、アドビリアルタイム顧客データプラットフォームのパーソナライズ機能の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Gainsight拡張機能は、リアルタイム顧客データプラットフォームのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Gainsight拡張機能は、リアルタイム顧客データプラットフォームのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 47%
+source-wordcount: '555'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 47%
 
 [!DNL Gainsight] は、ユーザーのビヘイビアーを深く理解し、製品の採用を促進し、ユーザーのフィードバックを収集するためのツールを製品所有者に提供します。
 
-[!DNL Gainsight] は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html) の拡張機能のページを参照してください。
+[!DNL Gainsight] は、リアルタイム顧客データプラットフォームでのパーソナライゼーション拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
