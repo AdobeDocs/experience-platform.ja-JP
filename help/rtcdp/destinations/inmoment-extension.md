@@ -2,13 +2,13 @@
 keywords: InMoment;inmoment;Inmoment;launch integration
 title: InMoment 拡張機能
 seo-title: InMoment 拡張機能
-description: InMoment 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: InMoment 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: InMoment拡張は、リアルタイム顧客データプラットフォームの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 46%
+source-wordcount: '576'
+ht-degree: 40%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 The [!DNL InMoment] Launch Integration allows you to quickly and easily enable online feedback via the Digital Intercept product. このアプリでは、CXI Cloud Admin を介してインターセプトの設定と管理を行い、CX マネージャーがプログラムをより詳細に制御できるようにします。
 
-[!DNL InMoment] は、アドビのリアルタイム顧客データプラットフォームの調査拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html) の拡張機能のページを参照してください。
+[!DNL InMoment] は、Real-time Customer Data Platformの調査拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
