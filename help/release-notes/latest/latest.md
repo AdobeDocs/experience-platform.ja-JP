@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
+source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
 workflow-type: tm+mt
-source-wordcount: '2077'
-ht-degree: 25%
+source-wordcount: '2126'
+ht-degree: 24%
 
 ---
 
@@ -122,6 +122,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | 機能 | 説明 |
 | ------- | ----------- |
+| 宛先の詳細UXの更新 | リアルタイムCDPの宛先ワークフローにインライン監視が含まれるようになり、どのバッチアクティベーションが成功したかを確認できます。 この機能を使用すると、アラートと監視ダッシュボードを介してバッチ宛先のワークフロー内で直接問題を解決し、処理パイプライン内のエラーを追跡できます。 |
 | 必須フィールド | ユーザーは、必須フィールドをマークできます。必須フィールドを含むフィールドのみが書き出されるようにします。 |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
