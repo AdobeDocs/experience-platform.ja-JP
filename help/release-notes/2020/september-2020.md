@@ -5,27 +5,27 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 28%
+source-wordcount: '862'
+ht-degree: 27%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020 年 9 月 9 日**
+**リリース日：2020 年 9 月 10 日**
 
-Adobe Experience Platformの既存の機能の更新：
+Adobe Experience Platform の既存の機能のアップデート：
 
-- [[!DNLデータガバナンス]](#governance)
-- [[!DNL宛先]](#destinations)
-- [[!DNL監視性インサイト]](#observability)
-- [[!DNLPrivacy Service]](#privacy)
-- [[!DNLリアルタイム顧客プロファイル]](#profile)
+- [[!DNL Data Governance]](#governance)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Observability Insights]](#observability)
+- [[!DNL Privacy Service]](#privacy)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Segmentation Service]](#segmentation)
-- [[!DNLソース]](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -41,7 +41,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 ## 宛先 {#destinations}
 
-[アドビのリアルタイム顧客データプラットフォーム](../../rtcdp/overview.md) において、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータを活用します。
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **新機能**
 
