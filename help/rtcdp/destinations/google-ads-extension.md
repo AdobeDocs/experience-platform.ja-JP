@@ -2,13 +2,13 @@
 keywords: Google ads;google ads;google ads extension;Google Ads extension
 title: Google 広告拡張機能
 seo-title: Google 広告拡張機能
-description: Google 広告拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Google 広告拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Google Ads拡張機能は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Google Ads拡張機能は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 46%
+source-wordcount: '573'
+ht-degree: 40%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 This extension tracks conversions from users that click on your [!DNL Google Ads]. You will need to also install the gtag.js extension and add it to your library, as [!DNL Google Ads] depends on it.
 
-[!DNL Google Ads] は、Adobe リアルタイム顧客データプラットフォームの広告拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html) の拡張機能のページを参照してください。
+[!DNL Google Ads] は、リアルタイム顧客データプラットフォームの広告拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
