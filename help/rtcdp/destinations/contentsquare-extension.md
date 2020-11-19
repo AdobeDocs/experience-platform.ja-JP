@@ -2,13 +2,13 @@
 keywords: contentsquare extension;contentsquare destination;contentsquare
 title: Contentsquare 拡張機能
 seo-title: Contentsquare 拡張機能
-description: Contentsquare 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける分析の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Contentsquare 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける分析の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Contentsquareの拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Contentsquareの拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 48%
+source-wordcount: '580'
+ht-degree: 42%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 48%
 
 ページ内の行動を視覚化し、顧客が放棄した理由と改善策を探りましょう。Analytics セグメントおよび Target テストごとに、UX およびコンテンツ要素の売上高への貢献度を評価します。Install the [!DNL Contentsquare] tag, setup custom variables and events. 数回のクリックするだけで UX 分析のデータ収集を開始できます。
 
-[!DNL Contentsquare] は、アドビのリアルタイム顧客データプラットフォームの分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html) の拡張機能のページを参照してください。
+[!DNL Contentsquare] は、Real-time Customer Data Platformのanalytics拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
