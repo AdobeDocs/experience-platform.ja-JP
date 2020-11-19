@@ -2,13 +2,13 @@
 keywords: SessionCam;session cam;sessioncam
 title: SessionCam 拡張機能
 seo-title: SessionCam 拡張機能
-description: SessionCam 拡張機能は、アドビのリアルタイム顧客データプラットフォームの解析先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: SessionCam 拡張機能は、アドビのリアルタイム顧客データプラットフォームの解析先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: SessionCam拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: SessionCam拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 47%
+source-wordcount: '556'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 47%
 
 [!DNL SessionCam] は、ユーザーの行動を明らかにし、最も重要な問題を解決するために欠くことのできないツールスイートを提供します。
 
-[!DNL SessionCam] は、アドビのリアルタイム顧客データプラットフォームの分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100517.html) の拡張機能のページを参照してください。
+[!DNL SessionCam] は、Real-time Customer Data Platformのanalytics拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100517.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
