@@ -1,23 +1,23 @@
 ---
-title: Adobe Experience Platform Web SDK のインストール
+title: Adobe Experience PlatformWeb SDKのインストール
 seo-title: Adobe Experience Platform Web SDK：SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します
 seo-description: Experience Platform Web SDK のインストール方法について説明します
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: d23568f7ce63df5aa98dc237a6671eeadde0c9b2
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 66%
+source-wordcount: '623'
+ht-degree: 65%
 
 ---
 
 
 # SDK のインストール {#installing-the-sdk}
 
-Adobe Experience PlatformWeb SDKの使用方法は、 [Adobe Experience Platform Launchを使用することをお勧めします](http://launch.adobe.com/jp)。 拡張機能カタログ `AEP Web SDK` 内でを検索し、インストールしてから、拡張機能を設定します。
+Adobe Experience PlatformWeb SDKの使用方法は、 [Adobe Experience Platform Launchを使用することをお勧めします](http://launch.adobe.com/jp)。 拡張機能カタログ `AEP Web SDK` を検索し、インストールしてから、拡張機能を設定します。
 
-AEP Web SDKは、CDN上でも使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
+Adobe Experience PlatformWeb SDKは、CDNでも使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
 
 URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまたはalloy.js（縮小されていないバージョン用）
 
@@ -28,7 +28,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 ## コードの追加 {#adding-the-code}
 
-The first step in implementing the Adobe Experience Platform [!DNL Web SDK] is to copy and paste the following &quot;base code&quot; as high as possible in the `<head>` tag of your HTML:
+The first step in implementing Adobe Experience Platform [!DNL Web SDK] is to copy and paste the following &quot;base code&quot; as high as possible in the `<head>` tag of your HTML:
 
 ```markup
 <script>
