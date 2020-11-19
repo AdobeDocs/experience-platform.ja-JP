@@ -1,13 +1,13 @@
 ---
-title: 'Adobe TargetとAdobe Experience PlatformWeb SDK '
+title: 'Adobe TargetとAdobe Experience PlatformのWeb SDK '
 seo-title: Adobe Experience PlatformウェブSDKとAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 seo-description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1669'
 ht-degree: 14%
 
 ---
@@ -68,15 +68,15 @@ XDM表示は、Adobe Targetで活用して、マーケターがVisual Experience
 3. XDM表示を定義した後、ABまたはXT VECアクティビティを配信するために、に `sendEvent()` 設定した関数と、対応するXDM表示をシングルページアプリで実装 `renderDecisions``true` します。 XDM表示を渡す必要があり `xdm.web.webPageDetails.viewName`ます。 この手順に従うと、マーケターはVisual Experience Composerを利用して、これらのXDMに対してA/BテストとXTテストを開始できます。
 
    ```javascript
-   alloy("sendEvent",  { 
-     "renderDecisions": true, 
-     "xdm": { 
-       "web": { 
-         "webPageDetails": { 
-            "viewName":"home" 
-         }      
+   alloy("sendEvent", { 
+     "renderDecisions": true, 
+     "xdm": { 
+       "web": { 
+         "webPageDetails": { 
+         "viewName":"home" 
+         }
        } 
-     } 
+     } 
    });
    ```
 
@@ -96,7 +96,7 @@ XDM表示は、Adobe Targetで活用して、マーケターがVisual Experience
 
 ホームサイト全体でA/Bテストを実行するに `sendEvent()` は、XDMを次のように `viewName` 設定して呼び出す必要がありま `home`す。
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -109,14 +109,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -137,18 +138,18 @@ history.listen(onViewChange);
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -177,17 +178,16 @@ The marketing team want to run an A/B test to see whether changing the color of 
 
 選択した配信の好みに応じてサイト上のコンテンツをパーソナライズするために、配信の好みごとに表示を作成することができる。 「 **標準」配信を選択した場合** 、表示に「checkout-normal」という名前を付けることができます。 If **Express Delivery** is selected, the View can be named &quot;checkout-express&quot;.
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -219,7 +219,7 @@ class Checkout extends Component {
 
 ## SPA用のVisual Experience Composerの使用
 
-XDM表示の定義が完了し、それらのXDM表示が渡さ`sendEvent()` れた状態で実装されると、VECはこれらの表示を検出し、A/BまたはXTアクティビティのアクションや変更を作成できるようになります。
+XDM表示の定義が完了し、それらのXDM表示が渡さ `sendEvent()` れた状態で実装されると、VECはこれらの表示を検出し、A/BまたはXTアクティビティのアクションや変更を作成できるようになります。
 
 >[!NOTE]
 >
