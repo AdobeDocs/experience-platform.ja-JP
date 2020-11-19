@@ -5,10 +5,10 @@ seo-title: Analytics の宛先
 description: Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 seo-description: Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 100%
+source-wordcount: '201'
+ht-degree: 94%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 
-現在、アドビのリアルタイム顧客データプラットフォームは、以下に示す Analytics の宛先をサポートしています。これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、リアルタイム顧客データプラットフォームは、以下に示す解析先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 * [Adform Web サイトトラッキング拡張機能](/help/rtcdp/destinations/adform-extension.md)
 * [Adobe Analytics 拡張機能](/help/rtcdp/destinations/adobe-analytics-extension.md)
