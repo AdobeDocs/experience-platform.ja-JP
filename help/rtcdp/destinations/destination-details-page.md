@@ -5,9 +5,9 @@ seo-title: 宛先の詳細ページ
 description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 seo-description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 translation-type: tm+mt
-source-git-commit: 0c2acd79492c474ba664ce32d1592969da71f385
+source-git-commit: ff36899f455848584ab2f5e236812795d2c81681
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '680'
 ht-degree: 18%
 
 ---
@@ -21,7 +21,7 @@ Adobe Experience Platformユーザーインターフェイスでは、宛先の�
 >
 >宛先の詳細ページは、プラットフォームUIの [!UICONTROL Destinations] Workspaceに含まれています。 See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
-プラットフォームUI内の **[!UICONTROL 宛先]** ワークスペースで、「 **[!UICONTROL 参照]** 」タブに移動し、表示するバッチ宛先の名前を選択します。
+Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 **[!UICONTROL 参照]** 」タブに移動し、表示する宛先の名前を選択します。
 
 ![](./assets/details-page/select-destination.png)
 
