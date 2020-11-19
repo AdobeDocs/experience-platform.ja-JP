@@ -5,17 +5,17 @@ description: Experience Platform Web SDK コマンドの実行方法について
 seo-description: Experience Platform Web SDK コマンドの実行方法について説明します
 keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 79%
+source-wordcount: '420'
+ht-degree: 75%
 
 ---
 
 
 # コマンドの実行
 
-Web ページにベースコードが実装されたら、SDK を使用してコマンドの実行を開始できます。コマンドを実行する前に、外部ファイル（`alloy.js`）がサーバーから読み込まれるのを待機する必要はありません。SDK が読み込みを完了していない場合、コマンドはキューに追加され、できるだけ早く SDK によって処理されます。
+Web ページにベースコードが実装されたら、SDK を使用してコマンドの実行を開始できます。コマンドを実行する前に、外部ファイル(aloy.js)がサーバーから読み込まれるのを待つ必要はありません。 SDK が読み込みを完了していない場合、コマンドはキューに追加され、できるだけ早く SDK によって処理されます。
 
 コマンドは、次の構文を使用して実行されます。
 
@@ -42,7 +42,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 コマンドが正常に実行されたかどうかを把握することが重要でない場合は、`then` 呼び出しを削除してもかまいません。
@@ -52,7 +52,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 同様に、コマンドが失敗したかどうかを把握することが重要でない場合は、`catch` 呼び出しを削除してもかまいません。
@@ -62,7 +62,7 @@ alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
-  })
+  });
 ```
 
 ### 応答オブジェクト
@@ -70,9 +70,10 @@ alloy("commandName", options)
 コマンドから返されるすべてのプロミスは、 `result` オブジェクトを使用して解決されます。 結果オブジェクトには、コマンドおよびユーザーの同意に応じたデータが含まれます。 例えば、次のコマンドでは、library infoがresultsオブジェクトのプロパティとして渡されます。
 
 ```js
-alloy("getLibraryInfo").then(function(result) {
-  console.log(results.libraryInfo.version);
-});
+alloy("getLibraryInfo")
+  .then(function(result) {
+    console.log(results.libraryInfo.version);
+  });
 ```
 
 ### 同意
