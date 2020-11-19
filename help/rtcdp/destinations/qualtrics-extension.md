@@ -2,13 +2,13 @@
 keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Qualtrics Website Feedback 拡張機能
 seo-title: Qualtrics Website Feedback 拡張機能
-description: Qualtrics Website Feedback 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Qualtrics Website Feedback 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Qualtrics Webサイトフィードバック拡張機能は、リアルタイム顧客データプラットフォームの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Qualtrics Webサイトフィードバック拡張機能は、リアルタイム顧客データプラットフォームの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 50%
+source-wordcount: '626'
+ht-degree: 44%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 50%
 
 直感的なポイント＆クリックインターフェイスで、ターゲットを絞り込んだ、ブランド化された web メッセージを数分で作成して展開します。web サイトから収集したデータとインサイトは、すべてのチャネルの顧客フィードバックデータと共に表示され、1 つのプラットフォームで顧客体験の全体像が提示されます。
 
-[!DNL Qualtrics Website Feedback] は、アドビのリアルタイム顧客データプラットフォームの調査拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html) の拡張機能のページを参照してください。
+[!DNL Qualtrics Website Feedback] は、Real-time Customer Data Platformの調査拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
