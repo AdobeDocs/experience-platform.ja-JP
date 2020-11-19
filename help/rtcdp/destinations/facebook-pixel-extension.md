@@ -2,13 +2,13 @@
 keywords: facebook pixel extensions;facebook pixel extension;facebook pixel destinations;facebook pixel
 title: Facebook ピクセル拡張機能
 seo-title: Facebook ピクセル拡張機能
-description: Facebook ピクセル拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Facebook ピクセル拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Facebookピクセル拡張機能は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Facebookピクセル拡張機能は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 41%
+source-wordcount: '543'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 41%
 
 The [!DNL Facebook Pixel] is an analytics tool that allows you to measure the effectiveness of your advertising by understanding the actions people take on your website.
 
-[!DNL Facebook Pixel] は、Adobe リアルタイム顧客データプラットフォームの広告拡張機能です。この拡張機能について詳しくは、[Facebook ピクセルの Web サイト](https://developers.facebook.com/docs/facebook-pixel/)を参照してください。
+[!DNL Facebook Pixel] は、リアルタイム顧客データプラットフォームの広告拡張です。 この拡張機能について詳しくは、[Facebook ピクセルの Web サイト](https://developers.facebook.com/docs/facebook-pixel/)を参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
