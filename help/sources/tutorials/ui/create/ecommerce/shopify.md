@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してShopifyソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 918e9fc4eafb21cb40cc475e967aece3018ace87
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 10%
+source-wordcount: '460'
+ht-degree: 13%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model] (XDM)システム](../../../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+* [エクスペリエンスデータモデルl（XDM）システム](../../../../../xdm/home.md)[!DNL Experience Platform]： が顧客体験データを整理するための標準化されたフレームワークです。
    * [スキーマ構成の基本](../../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
