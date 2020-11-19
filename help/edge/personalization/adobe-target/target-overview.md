@@ -1,13 +1,13 @@
 ---
-title: 'Adobe TargetとAdobe Experience PlatformWeb SDK '
+title: 'Adobe TargetとAdobe Experience PlatformのWeb SDK '
 seo-title: Adobe Experience PlatformウェブSDKとAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 seo-description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: f2bd8b89207901e57272a4f56d7f561ac10eb60a
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '629'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # [!DNL Target] 概要
 
-Adobe Experience Platform [!DNL Web SDK] は、Adobe Targetで管理されるパーソナライズされたエクスペリエンスをWebチャネルに配信し、レンダリングできます。 Visual Experience Composer [(VEC)と呼ばれるWYSIWYGエディター、または](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) フォームベースのExperience Composer [](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)（非ビジュアルインターフェイス）を使用して、アクティビティとパーソナライズエクスペリエンスを作成、アクティブ化、配信できます。
+Adobe Experience Platform [!DNL Web SDK] は、Adobe Targetで管理されているパーソナライズされたエクスペリエンスをWebチャネルーに配信し、レンダリングできます。 Visual Experience Composer [(VEC)と呼ばれるWYSIWYGエディター、または](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) フォームベースのExperience Composer [](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)（非ビジュアルインターフェイス）を使用して、アクティビティとパーソナライズエクスペリエンスを作成、アクティブ化、配信できます。
 
 ## Adobe Targetを有効にする
 
@@ -35,7 +35,7 @@ Adobe Experience Platform [!DNL Web SDK] は、Adobe Targetで管理されるパ
 
 ## VECアクティビティを自動レンダリング
 
-AEP Web SDKは、Adobe TargetのWeb上でのVECを使用して定義したエクスペリエンスを、ユーザーに合わせて自動的にレンダリングする機能を備えています。 VECアクティビティを自動レンダリングするAEP Web SDKに通知するには、次のイベントを送信し `renderDecisions = true`ます。
+Adobe Experience PlatformWeb SDKは、Adobe TargetのVEC on the webで定義したエクスペリエンスを、ユーザーに合わせて自動的にレンダリングする機能を備えています。 VECアクティビティを自動レンダリングするAdobe Experience PlatformWeb SDKに示すには、次のイベントを送信し `renderDecisions = true`ます。
 
 ```javascript
 alloy
@@ -85,32 +85,33 @@ alloy
 
 ## 範囲 `__view__`
 
-AEP [!DNL Web SDK] は、VECアクションをレンダリングするAEPに依存せずにVECアクションを取得できる機能 [!DNL Web SDK] を提供します。 として `__view__` 定義されたイベントを送信し `decisionScopes`ます。
+Adobe Experience PlatformWeb SDKは、SDKに依存せずにVECアクションを取得し、VECアクションをレンダリングする機能を提供します。 として `__view__` 定義されたイベントを送信し `decisionScopes`ます。
 
 ```javascript
 alloy("sendEvent", {
-  decisionScopes: [“__view__”,"foo", "bar"], 
-  "xdm": { 
-    "web": { 
-      "webPageDetails": { 
-        "name": "Home Page"
-       }
-      } 
-     }
+      "decisionScopes": ["__view__", "foo", "bar"], 
+      "xdm": { 
+        "web": { 
+          "webPageDetails": { 
+            "name": "Home Page"
+          }
+        } 
+      }
     }
-   ).then(results){
-  for (decision of results.decisions){
-     if(decision.decisionScope == "__view__")
-       console.log(decision.content)
-}
-};
+  ).then(function(results) {
+    for (decision of results.decisions) {
+      if (decision.decisionScope === "__view__") {
+        console.log(decision.content)
+      }
+    }
+  });
 ```
 
 ## XDMでのオーディエンス
 
-AEP Web SDKを介して配信されるターゲットアクティビティのオーディエンスを定義する場合、 [XDM](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/home.html) を定義して使用する必要があります。 XDMスキーマ、クラス、ミックスインを定義した後、ターゲティング用のXDMデータで定義されたターゲットオーディエンスルールを作成できます。 ターゲット内では、XDMデータはカスタムオーディエンスーとしてパラメータービルダーに表示されます。 XDMはドット表記(例えば、 `web.webPageDetails.name`)を使用してシリアル化されます。
+Adobe Experience PlatformWeb SDKを介して配信されるターゲットアクティビティのオーディエンスを定義する場合は、 [XDM](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/home.html) を定義して使用する必要があります。 XDMスキーマ、クラス、ミックスインを定義した後、ターゲティング用のXDMデータで定義されたターゲットオーディエンスルールを作成できます。 ターゲット内では、XDMデータはカスタムオーディエンスーとしてパラメータービルダーに表示されます。 XDMはドット表記(例えば、 `web.webPageDetails.name`)を使用してシリアル化されます。
 
-ターゲットアクティビティに、カスタムパラメーターまたはユーザープロファイルを使用する定義済みのオーディエンスがある場合は、AEP Web SDKを介して正しく配信されないことに注意してください。 カスタムパラメータやユーザプロファイルを使用する代わりに、XDMを使用する必要があります。 ただし、XDMを必要としないAEP Web SDKを介してサポートされる、すぐに使用できるオーディエンスのターゲット設定フィールドがあります。 ターゲットUIで使用できるXDMを必要としないフィールドは次のとおりです。
+ターゲットアクティビティに、カスタムパラメーターまたはユーザープロファイルを使用する定義済みのオーディエンスがある場合は、SDKを介して正しく配信されないことに注意してください。 カスタムパラメータやユーザプロファイルを使用する代わりに、XDMを使用する必要があります。 ただし、XDMを必要としない、Adobe Experience PlatformWeb SDKを介してサポートされる、すぐに使用できるオーディエンスターゲットフィールドがあります。 ターゲットUIで使用できるXDMを必要としないフィールドは次のとおりです。
 
 * ターゲットライブラリ
 * 地域
