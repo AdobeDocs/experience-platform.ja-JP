@@ -6,9 +6,9 @@ seo-title: ソーシャルネットワークの宛先のワークフロー
 description: ソーシャルネットワーク広告アカウントに接続する手順
 seo-description: ソーシャルネットワーク広告アカウントに接続する手順
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '500'
 ht-degree: 58%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 58%
 
 ## ソーシャルネットワークの宛先を作成するためのワークフロー
 
-This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Real-time Customer Data Platform will be the same for all social network destinations, once more are added to the product.
+This tutorial uses [!DNL Facebook] as an example, but the workflow in Real-time Customer Data Platform will be the same for all social network destinations, once more are added to the product.
 
 1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social network destination, then select **[!UICONTROL Configure]**.
 
