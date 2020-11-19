@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '840'
 ht-degree: 60%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 60%
 
 **リリース日：2020年3月11日**
 
-Adobe Experience Platformの既存の機能の更新：
+Adobe Experience Platform の既存の機能のアップデート：
 
-* [[!DNLデータガバナンス]](#governance)
-* [[!DNLデータ取り込み]](#ingestion)
-* [[!DNL宛先]](#destinations)
-* [[!DNL IDサービス]](#identity)
-* [[!DNLソース]](#sources)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Identity Service]](#identity)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -69,7 +69,7 @@ Adobe Experience Platform には、あらゆる種類のデータやデータの
 
 ## 宛先 {#destinations}
 
-[アドビのリアルタイム顧客データプラットフォーム](../../rtcdp/overview.md) において、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータを活用します。
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **新しい宛先**
 
