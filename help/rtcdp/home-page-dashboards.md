@@ -5,17 +5,17 @@ seo-title: リアルタイム顧客データプラットフォームのホーム
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 translation-type: tm+mt
-source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 94%
+source-wordcount: '633'
+ht-degree: 91%
 
 ---
 
 
 # [!DNL Real-time Customer Data Platform] 指標の概要
 
-リアルタイム CDP にログインすると、指標ダッシュボードを含むアドビリアルタイム顧客データプラットフォーム（リアルタイム CDP）のホームページが表示されます。
+指標ダッシュボードを含むReal-time Customer Data Platform(Real-time CDP)ホームページは、Real-time CDPにログインすると表示されます。
 
 ホームページは、指標カードが表示される場所の 1 つに過ぎません。リアルタイム CDP は、ユーザーの経験を通じて指標カードを提供します。これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
 
