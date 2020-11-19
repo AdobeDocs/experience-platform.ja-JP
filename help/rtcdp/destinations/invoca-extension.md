@@ -2,13 +2,13 @@
 keywords: Invoca;invoca
 title: Invoca Tags 拡張機能
 seo-title: Invoca Tags 拡張機能
-description: Invoca Tags 拡張機能は、アドビのリアルタイム顧客データプラットフォームの顧客の宛先を示すボイスです。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Invoca Tags 拡張機能は、アドビのリアルタイム顧客データプラットフォームの顧客の宛先を示すボイスです。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Invoca Tags Extensionは、リアルタイム・カスタマー・データ・プラットフォームの顧客先の音声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Invoca Tags Extensionは、リアルタイム・カスタマー・データ・プラットフォームの顧客先の音声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 46%
+source-wordcount: '582'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 [!DNL Invoca] は、通話データと音声の洞察をデジタルカスタマージャーニーに提供します。With [!DNL Invoca’s] call intelligence platform, marketers finally have analytics to measure call outcomes and tie offline conversions back to digital spend.
 
-[!DNL Invoca Tags] は、アドビのリアルタイム顧客データプラットフォームのの顧客の声拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html) の拡張機能のページを参照してください。
+[!DNL Invoca Tags] は、リアルタイム顧客データプラットフォームの顧客拡張の音声です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
