@@ -2,13 +2,13 @@
 keywords: foresee;foresee extension;foresee destination
 title: Forese 拡張機能
 seo-title: Forese 拡張機能
-description: Foresee 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Foresee 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Forese拡張機能は、リアルタイム顧客データプラットフォームの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Forese拡張機能は、リアルタイム顧客データプラットフォームの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 44%
+source-wordcount: '542'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 44%
 
 Configure [!DNL ForeSee] product deployments using Experience Platform Launch.
 
-[!DNL Foresee] は、アドビのリアルタイム顧客データプラットフォームの調査拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html) の拡張機能のページを参照してください。
+[!DNL Foresee] は、Real-time Customer Data Platformの調査拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
