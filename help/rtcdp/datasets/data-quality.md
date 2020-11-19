@@ -1,14 +1,14 @@
 ---
 keywords: data quality;rtcdp data quality
 title: リアルタイム顧客データプラットフォームのデータ品質
-seo-title: アドビのリアルタイム顧客データプラットフォームでのデータ品質
+seo-title: リアルタイム顧客データプラットフォームのデータ品質
 description: リアルタイム顧客データプラットフォームのデータ品質に関するドキュメント
-seo-description: アドビのリアルタイム顧客データプラットフォームでのバッチ処理とデータ取り込みによるデータ品質の仕組みを説明するドキュメント
+seo-description: リアルタイム顧客データプラットフォームでのバッチ処理およびデータ取り込みによるデータ品質の仕組みを説明するドキュメント
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 67%
+source-wordcount: '135'
+ht-degree: 54%
 
 ---
 
