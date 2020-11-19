@@ -5,21 +5,21 @@ seo-title: リアルタイムの顧客データプラットフォーム概要
 description: リアルタイム顧客データプラットフォームの概要
 seo-description: リアルタイム顧客データプラットフォームの概要
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 29%
+source-wordcount: '289'
+ht-degree: 27%
 
 ---
 
 
-# アドビのリアルタイム顧客データプラットフォームの概要
+# リアルタイム顧客データプラットフォームの概要
 
-AdobeReal-time Customer Data Platform(Real-time CDP)はAdobe Experience Platform上に構築されており、会社は、複数の企業ソースから既知の匿名データを集め、すべてのチャネルとデバイスにわたって、パーソナライズされた顧客体験をリアルタイムで提供できます。
+Real-time Customer Data Platform(Real-time CDP)は、Adobe Experience Platform上に構築され、複数の企業ソースから既知の匿名データを集め、すべてのチャネルとデバイスにわたるパーソナライズされた顧客体験をリアルタイムで提供するプロファイルを作成します。
 
 リアルタイムCDPには、データ管理、ID管理、高度なセグメント化、およびデータ科学のためのツールが含まれ、プロファイルの構築とオーディエンスの定義、および厳格なデータ管理ポリシーの適用が可能な豊富なインサイトの導出が可能です。
 
-AdobeReal-time Customer Data Platformは、Adobe Experience Cloudとのネイティブ統合に加え、パートナーの大きなエコシステムに接続しているため、オンサイトやアプリ内のパーソナライゼーションから電子メール、有料メディア、コールセンター、接続機器など、あらゆるチャネルに対して優れた顧客体験を提供できます。
+リアルタイムの顧客データプラットフォームは、Adobe Experience Cloudとのネイティブな統合に加え、パートナーの大きなエコシステムに接続しているため、オンサイトやアプリ内のパーソナライゼーションからEメール、有料メディア、コールセンター、接続機器など、あらゆるチャネルに対して優れた顧客体験を提供できます。
 
 リアルタイム顧客データプラットフォームを使用すると、次のことができます。
 
