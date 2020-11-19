@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
+source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
 workflow-type: tm+mt
-source-wordcount: '2126'
+source-wordcount: '2180'
 ht-degree: 24%
 
 ---
@@ -113,20 +113,18 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
+| ブレーズ | Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。 |
 | Microsoft Bing | Microsoft Bingの宛先は、Microsoftディスプレイ広告全体でターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行するのに役立ちます。 |
 | The Trade Desk | トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。 |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
 | 宛先の詳細UXの更新 | リアルタイムCDPの宛先ワークフローにインライン監視が含まれるようになり、どのバッチアクティベーションが成功したかを確認できます。 この機能を使用すると、アラートと監視ダッシュボードを介してバッチ宛先のワークフロー内で直接問題を解決し、処理パイプライン内のエラーを追跡できます。 |
+| ファイルの暗号化 | ファイルベースの宛先に対して、ユーザーは書き出したファイルに暗号化を追加できるようになりました。 |
+| ファイルスケジュール | 電子メールベースのスナップショットとクラウドベースのストレージのどちらの場合でも、1回限りの書き出しを作成したり、毎日のスナップショットを作成したりできます。 |
 | 必須フィールド | ユーザーは、必須フィールドをマークできます。必須フィールドを含むフィールドのみが書き出されるようにします。 |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 詳しくは、『[宛先の概要](../../rtcdp/destinations/destinations-overview.md)』を参照してください。
 
@@ -202,9 +200,10 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できるようにする RESTful API とインタラクティブな UI を提供します。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
 **新しいソース**
-|機能 |説明 |
-| — | — |
-| [!DNL Shopify] | [!DNL Shopify] APIまたはUIを使用してに接続でき [!DNL Experience Platform][!DNL Flow Service] るようになりました。 See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| [!DNL Shopify] | APIまたはUI [!DNL Shopify] を [!DNL Experience Platform][!DNL Flow Service] 使用してに接続できるようになりました。 See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
 
 **主な特長**
 
