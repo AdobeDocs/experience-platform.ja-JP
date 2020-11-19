@@ -2,13 +2,13 @@
 keywords: beemray,beemray extension
 title: Beemray 拡張機能
 seo-title: Beemray 拡張機能
-description: Beemray 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Beemray 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Beemray拡張機能は、リアルタイム顧客データプラットフォームのパーソナライズ先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Beemray拡張機能は、リアルタイム顧客データプラットフォームのパーソナライズ先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 61%
+source-wordcount: '561'
+ht-degree: 54%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 61%
 
 [!DNL Beemray] は、状況に合ったコンテキストを使用して製品を加速するお手伝いをします。インサイトを得たり、新しいエクスペリエンスを構築したり、インタラクションを促進したり、本当に重要な瞬間を捉えたりすることが可能になります。Beemray は、機械学習を使用してコンテキストインテリジェンスを自動化します。Beemray は、Adobe Experience Cloud および他のテクニカルパートナーに接続します。すべてがリアルタイムで実行されます。This extension installs [!DNL Beemray] SDK on your site.
 
-Beemray は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の拡張機能です。拡張機能の詳細については、[Adobe Exchange の拡張機能のページ](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html)を参照してください。
+Beemrayは、リアルタイム顧客データプラットフォームのパーソナライゼーション拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html) の拡張機能のページを参照してください。
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
