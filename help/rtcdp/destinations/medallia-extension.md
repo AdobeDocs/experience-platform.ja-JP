@@ -2,13 +2,13 @@
 keywords: Medallia;medallia
 title: Medallia 拡張機能
 seo-title: Medallia 拡張機能
-description: Medalia 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける「顧客の声」の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Medalia 拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける「顧客の声」の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Medalia Extensionは、リアルタイム顧客データプラットフォームの顧客の宛先の音声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Medalia Extensionは、リアルタイム顧客データプラットフォームの顧客の宛先の音声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 48%
+source-wordcount: '586'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 48%
 
 Deploy [!DNL Medallia] quickly and seamlessly on your web properties. また、この拡張機能を使用すると、調査イベントの検出、データ要素を使用した顧客フィードバックのリアルタイムキャプチャ、ルールでのフィードバックの使用によるカスタマーエクスペリエンスのパーソナライズ、Adobe Analytics とのデータの共有が可能になります。
 
-[!DNL Medallia] は、アドビのリアルタイム顧客データプラットフォームのの顧客の声拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html) の拡張機能のページを参照してください。
+[!DNL Medallia] は、リアルタイム顧客データプラットフォームの顧客拡張の音声です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
