@@ -5,9 +5,9 @@ description: Experience Platform Web SDK を使用して同意設定をサポー
 seo-description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '752'
 ht-degree: 63%
 
 ---
@@ -80,7 +80,7 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->現在、SDK は `general` 目的のみをサポートしています。アドビでは、様々な機能や製品に対応する、さらに堅牢な目的やカテゴリのセットを構築する予定ですが、現在の実装アプリーチでは、すべてをオプトインするか、すべてをオプトインしないかのいずれかです。This only applies to the Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
+>現在、SDK は `general` 目的のみをサポートしています。アドビでは、様々な機能や製品に対応する、さらに堅牢な目的やカテゴリのセットを構築する予定ですが、現在の実装アプリーチでは、すべてをオプトインするか、すべてをオプトインしないかのいずれかです。This only applies to Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
 
 ## IAB TCF標準を使用して同意の環境設定を伝える
 
