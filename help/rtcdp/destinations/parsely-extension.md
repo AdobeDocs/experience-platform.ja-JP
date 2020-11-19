@@ -2,13 +2,13 @@
 keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics 拡張機能
 seo-title: Parse.ly Analytics 拡張機能
-description: Parse.ly Analytics 拡張機能は、アドビのリアルタイム顧客データプラットフォームの分析の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Parse.ly Analytics 拡張機能は、アドビのリアルタイム顧客データプラットフォームの分析の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Parse.ly Analyticsの拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Parse.ly Analyticsの拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 46%
+source-wordcount: '541'
+ht-degree: 39%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 [!DNL Parse.ly Analytics] は、2,500 を超える企業がデータを使用してオンラインユーザーを理解するのに役立っています。この拡張機能は JavaScript スニペットをインストールし、訪問者がサイトのコンテンツをどのように操作したかを追跡します。
 
-Parse.ly は、アドビのリアルタイム顧客データプラットフォームの分析拡張機能です。拡張機能の機能について詳しくは、「[Parse.ly Analytics](https://www.parse.ly/)」を参照してください。
+Parse.lyは、リアルタイム顧客データプラットフォームの分析拡張です。 拡張機能の機能について詳しくは、「[Parse.ly Analytics](https://www.parse.ly/)」を参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
