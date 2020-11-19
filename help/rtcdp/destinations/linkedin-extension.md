@@ -2,13 +2,13 @@
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
 title: LinkedIn Insight タグ拡張機能
 seo-title: LinkedIn Insight タグ拡張機能
-description: LinkedIn Insight タグ拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: LinkedIn Insight タグ拡張機能は、アドビのリアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: LinkedIn Insightタグ拡張は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: LinkedIn Insightタグ拡張は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 45%
+source-wordcount: '552'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 45%
 
 Install the [!DNL LinkedIn Insight Tag] to use conversion tracking, retargeting and website demographics features.
 
-[!DNL LinkedIn Insight Tag] は、Adobe リアルタイム顧客データプラットフォームの広告拡張機能です。この拡張機能について詳しくは、「[LinkedIn Insight タグ](https://business.linkedin.com/marketing-solutions/insight-tag)」を参照してください。
+[!DNL LinkedIn Insight Tag] は、リアルタイム顧客データプラットフォームの広告拡張です。 この拡張機能について詳しくは、「[LinkedIn Insight タグ](https://business.linkedin.com/marketing-solutions/insight-tag)」を参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
