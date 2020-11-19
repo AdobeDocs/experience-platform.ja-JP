@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
+source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
 workflow-type: tm+mt
-source-wordcount: '2078'
-ht-degree: 26%
+source-wordcount: '2077'
+ht-degree: 25%
 
 ---
 
@@ -107,7 +107,7 @@ Data Science Workspaceは、機械学習と人工知能を使用して、デー�
 
 ## [!DNL Destinations] サービス {#destinations}
 
-[アドビのリアルタイム顧客データプラットフォーム](../../rtcdp/overview.md) において、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータを活用します。
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **新しい宛先**
 
