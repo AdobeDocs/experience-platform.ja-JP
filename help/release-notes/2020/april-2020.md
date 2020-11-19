@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '991'
-ht-degree: 59%
+source-wordcount: '972'
+ht-degree: 60%
 
 ---
 
@@ -19,14 +19,14 @@ ht-degree: 59%
 **リリース日：2020 年 4 月 8 日**
 
 Adobe Experience Platform の新機能：
-* [[!DNLインテリジェントサービス]](#intelligent)
+* [[!DNL Intelligent Services]](#intelligent)
 
 既存の機能の更新：
 * [[!DNL Experience Data Model (XDM)]](#xdm)
-* [[!DNLデータガバナンス]](#governance)
-* [[!DNL宛先]](#destinations)
-* [[!DNLPrivacy Service]](#privacy)
-* [[!DNLソース]](#sources)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 
@@ -37,7 +37,7 @@ Adobe Experience Platform の新機能：
 | 機能 | 説明 |
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] マーケターに、説明を加えながら個々のレベルで顧客予測を行う力を提供します。 With the help of influential factors, [!DNL Customer AI] can tell you what a customer is likely to do and why. Additionally, marketers can benefit from [!DNL Customer AI] predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. |
-| [!DNL Attribution AI] | [!DNL Attribution AI] は、指定した結果に対する顧客のインタラクションの影響と増分的な影響を計算する、複数チャネルのアルゴリズムによるアトリビューションサービスです。With [!DNL Attribution AI], marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys. |
+| [!DNL Attribution AI] | [!DNL Attribution AI] は、指定した結果に対する顧客のインタラクションの影響と増分的な影響を計算する、複数チャネルのアルゴリズムによるアトリビューションサービスです。[!DNL Attribution AI] を使用すると、マーケターは、カスタマージャーニーの各段階における個々の顧客インタラクションの影響を把握することで、マーケティング費用と広告費用を測定し、最適化できます。 |
 
 **既知の問題**
 
@@ -90,7 +90,7 @@ The [!DNL Data Governance] framework simplifies and streamlines the process of c
 
 ## 宛先 {#destinations}
 
-[アドビのリアルタイム顧客データプラットフォーム](../../rtcdp/overview.md) において、宛先は宛先プラットフォームとの事前に構築された統合であり、これらのパートナーに対してシームレスにデータを活用します。
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **新しい宛先**
 
