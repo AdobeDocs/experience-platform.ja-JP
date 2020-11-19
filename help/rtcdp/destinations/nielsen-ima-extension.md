@@ -2,13 +2,13 @@
 keywords: Nielsen IMA Handler;nielsen ima handler;nielsen ima;Nielsen ima;Nielsen IMA
 title: Nielsen IMA Handler 拡張機能
 seo-title: Nielsen IMA Handler 拡張機能
-description: Nielsen IMA Handler 拡張機能は、アドビのリアルタイム顧客データプラットフォームの解析先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Nielsen IMA Handler 拡張機能は、アドビのリアルタイム顧客データプラットフォームの解析先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: ニールセンIMAハンドラー拡張は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: ニールセンIMAハンドラー拡張は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 42%
+source-wordcount: '508'
+ht-degree: 35%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 42%
 
 ## 概要 {#overview}
 
-[!DNL Nielsen IMA Handler] は、アドビのリアルタイム顧客データプラットフォームの分析拡張機能です。
+[!DNL Nielsen IMA Handler] は、Real-time Customer Data Platformのanalytics拡張です。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
