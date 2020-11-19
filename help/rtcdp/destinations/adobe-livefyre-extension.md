@@ -2,12 +2,12 @@
 keywords: livefyre;livefyre extension
 title: Adobe Livefyre 拡張機能
 seo-title: Adobe Livefyre 拡張機能
-description: Adobe Livefyre 拡張機能は、アドビのリアルタイム顧客データプラットフォームのソーシャルの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Adobe Livefyre 拡張機能は、アドビのリアルタイム顧客データプラットフォームのソーシャルの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: ' Livefyre 拡張機能は、アドビのリアルタイム顧客データプラットフォームのソーシャルの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。'
+seo-description: ' Livefyre 拡張機能は、アドビのリアルタイム顧客データプラットフォームのソーシャルの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。'
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '540'
 ht-degree: 61%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 61%
 
 Adobe Livefyre を使用すれば、一定量のユーザー作成コンテンツを発見、整理し、Webサイトに公開して、高度にパーソナライズされた本物のエクスペリエンスを作成することができます。
 
-Adobe Livefyre は、アドビのリアルタイム顧客データプラットフォームのソーシャル拡張機能です。拡張機能の詳細については、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html) の拡張機能のページを参照してください。
+ Livefyre は、アドビのリアルタイム顧客データプラットフォームのソーシャル拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html) の拡張機能のページを参照してください。
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
