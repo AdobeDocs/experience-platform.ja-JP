@@ -2,13 +2,13 @@
 keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Twitter ユニバーサルウェブサイトタグ拡張
 seo-title: Twitter ユニバーサルウェブサイトタグ拡張
-description: Twitter ユニバーサルウェブサイトタグ拡張は、Adobe リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Twitter ユニバーサルウェブサイトタグ拡張は、Adobe リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Twitter ユニバーサルウェブサイトタグ拡張は、 リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Twitter ユニバーサルウェブサイトタグ拡張は、 リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 44%
+source-wordcount: '540'
+ht-degree: 42%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 44%
 
 [!DNL Twitter Universal Website Tag] は、Twitter UWTタグにビーコンを送信するアクションを提供します。
 
-[!DNL Twitter Universal Website Tag] は、Adobe リアルタイム顧客データプラットフォームの広告拡張機能です。拡張機能について詳しくは、「[高度なコンバージョントラッキング](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)」を参照してください。
+[!DNL Twitter Universal Website Tag] は、リアルタイム顧客データプラットフォームの広告拡張です。 拡張機能について詳しくは、「[高度なコンバージョントラッキング](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)」を参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
@@ -47,7 +47,7 @@ You can also install the extension directly in the [Adobe Experience Platform La
 
 拡張機能をインストールすると、「プラットフォームの起動」で直接、拡張機能のルール設定を開始できます。
 
-Platform Launchでは、特定の状況でのみイベントデータを拡張の宛先に送信するように、インストール済みの拡張機能のルールを設定できます。 拡張機能のルールの設定について詳しくは、[ルールに関するドキュメント](https://docs.adobe.com/help/ja-JP/launch/using/reference/manage-resources/rules.html)を参照してください。
+拡張機能のルールの設定について詳しくは、[ルールに関するドキュメント](https://docs.adobe.com/help/ja-JP/launch/using/reference/manage-resources/rules.html)を参照してください。
 
 ## 拡張機能の設定、アップグレード、削除 {#configure-upgrade-delete}
 
