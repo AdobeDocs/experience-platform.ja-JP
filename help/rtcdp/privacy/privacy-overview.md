@@ -5,9 +5,9 @@ seo-title: リアルタイム顧客データプロファイルでのプライバ
 description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '359'
 ht-degree: 21%
 
 ---
@@ -31,7 +31,7 @@ The majority of [!DNL Real-time CDP] capabilities are powered by Adobe Experienc
 
 ## （IAB TCF 2.0のサポート）
 
-[!DNL Real-time CDP] は、 [(IAB)で概要を説明しているように、の登録](https://iabeurope.eu/vendor-list-tcf-v2-0/) ベンダーリスト [!DNL Transparency & Consent Framework (TCF)][!DNL Interactive Advertising Bureau] に含まれています。 TCF 2.0の要件に準拠して、詳細な顧客の同意データを収集 [!DNL Real-time CDP] し、それを保存されている顧客プロファイルに統合できます。 その後、この同意データは、使用事例に応じて、特定のプロファイルが書き出されたオーディエンスセグメントに含まれているかどうかに織り込まれます。
+[!DNL Real-time CDP] は、に示すように、の登録 [ベンダーリスト](https://iabeurope.eu/vendor-list-tcf-v2-0/)[!DNL Transparency & Consent Framework (TCF)]の一部で [!DNL Interactive Advertising Bureau (IAB)]す。 TCF 2.0の要件に準拠して、詳細な顧客の同意データを収集 [!DNL Real-time CDP] し、それを保存されている顧客プロファイルに統合できます。 その後、この同意データは、使用事例に応じて、特定のプロファイルが書き出されたオーディエンスセグメントに含まれているかどうかに織り込まれます。
 
 詳細については、 [IAB TCF 2.0サポートの概要 [!DNL Real-time CDP]](./iab/overview.md) ()を参照してください。
 
