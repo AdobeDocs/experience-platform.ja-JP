@@ -6,9 +6,9 @@ type: Tutorial
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: d72f392bc3b47bb23ed36b3d1d218373f62b4679
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '557'
 ht-degree: 57%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 57%
 
 ## 概要
 
-このページでは、アドビのリアルタイム顧客データプラットフォームでクラウドストレージの場所に接続する方法について説明します。
+このページでは、 Real-time Customer Data Platform でクラウドストレージの場所に接続する方法について説明します。
 
 1. **[!UICONTROL 接続]** / **[!UICONTROL 宛先]**&#x200B;で、目的のクラウドストレージの宛先を選択し、「 **[!UICONTROL 設定]**」を選択します。
 
