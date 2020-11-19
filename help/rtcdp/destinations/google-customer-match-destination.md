@@ -5,9 +5,9 @@ seo-title: Googleの顧客一致先
 description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 seo-description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1554'
 ht-degree: 12%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 12%
 
 ## 使用例
 
-To help you better understand how and when you should use the [!DNL Google Customer Match] destination, here are sample use cases that Adobe Real-time Customer Data Platform customers can solve by using this feature.
+To help you better understand how and when you should use the [!DNL Google Customer Match] destination, here are sample use cases that Real-time Customer Data Platform customers can solve by using this feature.
 
 
 ### ユースケース 1
