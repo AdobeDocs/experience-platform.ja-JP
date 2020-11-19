@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;merge policies;
 title: Merge policies UIガイド
 topic: guide
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e865bf254a9a3190fcfc053bd83e9968b1a4f7f1
 workflow-type: tm+mt
-source-wordcount: '2667'
-ht-degree: 8%
+source-wordcount: '2673'
+ht-degree: 9%
 
 ---
 
@@ -25,9 +25,9 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 このガイドでは、いくつかの重要な [!DNL Experience Platform] 機能について、十分に理解している必要があります。 このガイドに従う前、またはプロファイルAPIを使用する前に、次のサービスのドキュメントを確認してください。
 
-* [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [リアルタイム顧客プロファイル](../home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 * [Adobe Experience Platform・アイデンティティ・サービス](../../identity-service/home.md):取り込まれる個別のデータソースからIDをブリッジし、リアルタイムの顧客プロファイルを有効に [!DNL Platform]します。
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
+* [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)[!DNL Platform]： が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
 
 ## Mergeメソッド {#merge-methods}
 
