@@ -1,23 +1,23 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: アドビのリアルタイム顧客データプラットフォーム - はじめに
-seo-title: アドビのリアルタイム顧客データプラットフォーム - はじめに
-description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
-seo-description: アドビのリアルタイム顧客データプラットフォーム - サンプルシナリオ
+title: リアルタイム顧客データプラットフォームの概要
+seo-title: リアルタイム顧客データプラットフォームの概要
+description: ' リアルタイム顧客データプラットフォームのサンプルシナリオ'
+seo-description: ' リアルタイム顧客データプラットフォームのサンプルシナリオ'
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '2326'
-ht-degree: 87%
+source-wordcount: '2318'
+ht-degree: 86%
 
 ---
 
 
-# アドビのリアルタイム顧客データプラットフォーム - はじめに
+# リアルタイム顧客データプラットフォームの概要
 
-この入門ガイドでは、アドビのリアルタイム顧客データプラットフォーム（Real-time CDP）のサンプル実装を順を追って説明します。独自の実装を設定する場合に例としてご使用ください。このガイドでは具体的な例を示していますが、設定の作成時に使用できる追加情報へのリンクを示しています。
+この入門ガイドでは、リアルタイム顧客データプラットフォーム(Real-time CDP)のサンプル導入を順を追って説明します。 独自の実装を設定する場合に例としてご使用ください。このガイドでは具体的な例を示していますが、設定の作成時に使用できる追加情報へのリンクを示しています。
 
-この例は、Adobe Experience Platform が提供するアドビのリアルタイム顧客データプラットフォームの次の機能を示しています。
+この例は、 Experience Platform が提供するアドビのリアルタイム顧客データプラットフォームの次の機能を示しています。
 
 * 複数のソースからデータを取り込む
 * 単一の [!DNL real-time customer profile]
@@ -121,7 +121,7 @@ Adobe Target の Adobe Sensei によるパーソナライズ機能により、�
 
 Sarah は気が散ってサイトを離れ、セッションを終了します。Adobe Experience Platform のデータは、Sarah を Luma サイトに戻すのに役立ちます。
 
-Adobe Experience Platform によるアドビのリアルタイム顧客データプラットフォームは、顧客体験管理を目的として構築されています。これにより、組織では次のことが可能になります。
+ Experience Platform によるアドビのリアルタイム顧客データプラットフォームは、顧客体験管理を目的として構築されています。これにより、組織では次のことが可能になります。
 
 * データの統合とアクティベーションのシンプル化
 * 既知のデータと不明なデータの使用の管理
