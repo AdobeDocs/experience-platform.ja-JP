@@ -2,13 +2,13 @@
 keywords: D&B Visitor Intelligence;D&B;visitor intelligence extension
 title: D&B 訪問者インテリジェンス拡張機能
 seo-title: D&B 訪問者インテリジェンス拡張機能
-description: D&B 訪問者インテリジェンス拡張機能は、Adobe リアルタイム顧客データプラットフォームのパーソナライズ機能の対象となります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: D&B 訪問者インテリジェンス拡張機能は、Adobe リアルタイム顧客データプラットフォームのパーソナライズ機能の対象となります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: D&B 訪問者インテリジェンス拡張機能は、 リアルタイム顧客データプラットフォームのパーソナライズ機能の対象となります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: D&B 訪問者インテリジェンス拡張機能は、 リアルタイム顧客データプラットフォームのパーソナライズ機能の対象となります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 46%
+source-wordcount: '540'
+ht-degree: 44%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 未知の訪問者を分析し、リードに変換します。
 
-[!DNL D&B Visitor Intelligence] は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の拡張機能です。拡張機能について詳しくは、[D&amp;B の Web サイト](https://www.dnb.com/)を参照してください。
+[!DNL D&B Visitor Intelligence] は、リアルタイム顧客データプラットフォームでのパーソナライゼーション拡張です。 拡張機能について詳しくは、[D&amp;B の Web サイト](https://www.dnb.com/)を参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
