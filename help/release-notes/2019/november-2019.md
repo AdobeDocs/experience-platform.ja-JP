@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1908'
-ht-degree: 69%
+source-wordcount: '1878'
+ht-degree: 67%
 
 ---
 
@@ -18,19 +18,19 @@ ht-degree: 69%
 **リリース日：2019 年 11 月 18 日**
 
 Adobe Experience Platform の新機能：
-* [[!DNLリアルタイム顧客データプラットフォーム]](#rtcdp)
-* [[!DNL宛先]](#destinations)
-* [[!DNLソース]](#sources)
+* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Sources]](#sources)
 
 既存の機能の更新：
 * [[!DNL Data Science Workspace]](#dsw)
-* [[!DNL Experience Data Model (XDM)システム]](#xdm)
-* [[!DNLリアルタイム顧客プロファイル]](#profile)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Real-time Customer Profile]](#profile)
 * [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Adobe Experience Platform をベースに構築されたアドビのリアルタイム顧客データプラットフォーム（リアルタイム CDP）は、企業が既知のデータと未知のデータを統合し、カスタマージャーニーを通じてインテリジェントな判定を行って顧客プロファイルをアクティブ化するのに役立ちます。リアルタイム CDP は、複数の大規模法人データソースを組み合わせて、1 対 1 のパーソナライズされた顧客体験をすべてのチャネルとデバイスにわたって提供するために使用できる、統合されたプロファイルを作成します。
+ Experience Platform をベースに構築されたアドビのリアルタイム顧客データプラットフォーム（リアルタイム CDP）は、企業が既知のデータと未知のデータを統合し、カスタマージャーニーを通じてインテリジェントな判定を行って顧客プロファイルをアクティブ化するのに役立ちます。リアルタイム CDP は、複数の大規模法人データソースを組み合わせて、1 対 1 のパーソナライズされた顧客体験をすべてのチャネルとデバイスにわたって提供するために使用できる、統合されたプロファイルを作成します。
 
 [!DNL Real-time Customer Data Platform] データ管理、ID管理、高度な分類、およびデータ科学のツールが含まれ、プロファイルの構築やオーディエンスの定義ができ、また、厳密なデータ管理ポリシーを適用できる豊富なインサイトの抽出が可能です。
 
@@ -43,19 +43,19 @@ Adobe Experience Cloud とのネイティブな統合に加え、アドビはパ
 * Adobe Sensei による AI や機械学習を活用して、マーケティング担当者向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
 * すべてのチャネルと宛先にわたって、パーソナライズされたエクスペリエンスをリアルタイムで提供する。
 
-詳しくは、[アドビのリアルタイム顧客データプラットフォームのドキュメント](../../rtcdp/overview.md)を参照してください。
+For more information, see the [Real-time Customer Data Platform documentation](../../rtcdp/overview.md).
 
 **主な特長**
 
 | 機能 | 説明 |
 |---|---|
 | 宛先 | Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-time Customer Data Platform] that activate data to those partners in a seamless way. 詳しくは、以下の「[宛先](#destinations)」を参照してください。 |
-| ホームページの指標ダッシュボード | アドビのリアルタイム顧客データプラットフォーム（リアルタイム CDP）のホームページには、プロファイルとセグメントに関する情報を表示する指標ダッシュボードが含まれています。このホームページには、学習教材へのリンクも含まれています。以下の「[リアルタイム顧客データプラットフォームの指標](#real-time-customer-data-platform-metrics)」の節を参照してください。 |
+| ホームページの指標ダッシュボード | Real-time Customer Data Platform(Real-time CDP)ホームページには、プロファイルとセグメントに関する情報を示す指標ダッシュボードが含まれています。 このホームページには、学習教材へのリンクも含まれています。以下の「[リアルタイム顧客データプラットフォームの指標](#real-time-customer-data-platform-metrics)」の節を参照してください。 |
 | ソース | アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取り込むことができます。詳しくは、以下の「[ソース](#sources)」の節を参照してください。 |
 
 **[!DNL Real-time Customer Data Platform]指標**
 
-リアルタイム CDP にログインすると、指標ダッシュボードを含むアドビリアルタイム顧客データプラットフォーム（リアルタイム CDP）のホームページが表示されます。
+指標ダッシュボードを含むReal-time Customer Data Platform(Real-time CDP)ホームページは、Real-time CDPにログインすると表示されます。
 
 ホームページは、指標カードが表示される場所の 1 つに過ぎません。リアルタイム CDP は、ユーザーの経験を通じて指標カードを提供します。これらの指標は、システム内のデータ、プロファイル、セグメントオーディエンスに関する情報を提供します。
 
