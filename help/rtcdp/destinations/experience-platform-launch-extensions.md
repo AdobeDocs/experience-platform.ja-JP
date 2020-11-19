@@ -5,10 +5,10 @@ seo-title: Experience Platform Launch の拡張機能
 description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
 seo-description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
 translation-type: tm+mt
-source-git-commit: 6bb7bbeaceac8a69641138248a1c41cf9fb3dc63
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 60%
+source-wordcount: '645'
+ht-degree: 55%
 
 ---
 
@@ -31,7 +31,7 @@ To find the Platform Launch extensions in the Adobe Real-time CDP interface, bro
 
 Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](/help/rtcdp/destinations/gainsight-extension.md)や [Confirmit Voice of the Customer 拡張機能](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)などがあります。
 
-アドビリアルタイム顧客データプラットフォームの&#x200B;**プロファイル／セグメント書き出し**&#x200B;の宛先では、イベントデータの取得と他のデータソースとの結合、セグメント化の適用、セグメントと認定プロファイルの宛先への書き出しが実行されます。例としては、[Amazon S3 クラウドストレージの宛先](/help/rtcdp/destinations/amazon-s3-destination.md)や [Google Display &amp; Video 360 の広告の宛先](/help/rtcdp/destinations/google-dv360-destination.md)などがあります。
+**リアルタイム顧客データプラットフォームのプロファイル/セグメントエクスポート** :イベントデータの取得、他のデータソースとの組み合わせ、セグメント化の適用、セグメント化の適用、および条件を満たすプロファイルのエクスポートを行います。 例としては、[Amazon S3 クラウドストレージの宛先](/help/rtcdp/destinations/amazon-s3-destination.md)や [Google Display &amp; Video 360 の広告の宛先](/help/rtcdp/destinations/google-dv360-destination.md)などがあります。
 
 ![Experience Platform Launch の拡張機能と他の宛先との比較](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
