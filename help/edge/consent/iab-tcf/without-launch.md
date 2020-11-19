@@ -4,15 +4,15 @@ seo-title: IAB TCF 2.0とAdobe Experience PlatformWeb SDKの同意の設定
 description: Adobe Experience PlatformWeb SDKでIAB TCF 2.0の同意を設定する方法を説明します。
 seo-description: Adobe Experience PlatformWeb SDKでIAB TCF 2.0の同意を設定する方法を説明します。
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
 
-# IAB TCF 2.0とAdobe Experience PlatformWeb SDK拡張の使用
+# AEP Web SDK拡張とIAB TCF 2.0の使用
 
 このガイドでは、Experience Platform Launchを使用せずに、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をAdobe Experience PlatformWeb SDKと統合する方法を示します。 IAB TCF 2.0との統合の概要については、 [概要を参照してください](./overview.md)。 Experience Platform Launchとの統合方法のガイドについては、Experience Platform Launch用 [IAB TCF 2.0ガイドを参照してください](./with-launch.md)。
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 IAB TCF 2.0をExperience Platform LaunchとAEP Web SDK拡張と共に使用するには、XDMスキーマを使用できる状態にする必要があります。 いずれの設定も行っていない場合は、先に進む前にこのページを表示して開始します。
 
-また、このガイドを使用するには、Adobe Experience PlatformWeb SDKに関する十分な知識が必要です。 簡単なリフレッシャーについては、 [Adobe Experience PlatformWeb SDKの概要](../../home.md) 、および [よくある質問](../../web-sdk-faq.md) (FAQ)に関するドキュメントをお読みください。
+また、このガイドを使用するには、Adobe Experience PlatformWeb SDKに関する実用的な知識が必要です。 簡単なリフレッシャーについては、 [Adobe Experience PlatformWeb SDKの概要](../../home.md) 、および [よくある質問](../../web-sdk-faq.md) (FAQ)に関するドキュメントをお読みください。
 
 ## 既定の同意の有効化
 
@@ -110,4 +110,4 @@ window.__tcfapi('getTCData', 2, function (tcData, success) {
 
 ## 次の手順
 
-IAB TCF 2.0とAdobe Experience PlatformWeb SDK拡張機能の使い方を学んだので、Adobe Analyticsやリアルタイム顧客データプラットフォームなど、他のAdobeソリューションとの統合も選択できます。 詳細は、 [IAB Transparency &amp; Consent Framework 2.0の概要](./overview.md) を参照してください。
+AEP Web SDK ExtensionでのIAB TCF 2.0の使用方法を学習したので、Adobe Analyticsやリアルタイム顧客データプラットフォームなどの他のAdobeソリューションとの統合も選択できます。 詳細は、 [IAB Transparency &amp; Consent Framework 2.0の概要](./overview.md) を参照してください。
