@@ -2,13 +2,13 @@
 keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Confirmit Digital Feedback 拡張機能
 seo-title: Confirmit Digital Feedback 拡張機能
-description: Confirmit Digital Feedback 拡張機能は、アドビのリアルタイム顧客データプラットフォームの顧客の声マネジメントの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Confirmit Digital Feedback 拡張機能は、アドビのリアルタイム顧客データプラットフォームの顧客の声マネジメントの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: デジタルフィードバックの確認拡張は、リアルタイム顧客データプラットフォームの顧客の宛先の音声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: デジタルフィードバックの確認拡張は、リアルタイム顧客データプラットフォームの顧客の宛先の音声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 46%
+source-wordcount: '607'
+ht-degree: 38%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 46%
 * 全体的な顧客満足度
 * その他多数
 
-[!DNL Confirmit] Digital Feedback は、アドビのリアルタイム顧客データプラットフォームの顧客の声マネジメント拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html) の拡張機能のページを参照してください。
+[!DNL Confirmit] デジタルフィードバックは、リアルタイム顧客データプラットフォームの顧客拡張の音声です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
