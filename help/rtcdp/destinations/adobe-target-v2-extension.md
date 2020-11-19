@@ -2,12 +2,12 @@
 keywords: target extension;target;target v2;target v2 extension
 title: Adobe Target v2 拡張機能
 seo-title: Adobe Target v2 拡張機能
-description: Adobe Target v2 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Adobe Target v2 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: ' Target v2 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。'
+seo-description: ' Target v2 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。'
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '572'
 ht-degree: 65%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 65%
 
 Adobe Target は、顧客のエクスペリエンスのカスタマイズやパーソナライズをおこない、Web サイト、モバイルサイト、アプリ、ソーシャルメディア、その他のデジタルチャネルでの収益性を最大化するのに必要なすべてのツールを備えた Adobe Experience Cloud ソリューションです。
 
-Adobe Target v2 は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の拡張機能です。この拡張機能の詳細については、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html) の拡張機能のページを参照してください。
+ Target v2 は、アドビのリアルタイム顧客データプラットフォームのパーソナライズ機能の拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
