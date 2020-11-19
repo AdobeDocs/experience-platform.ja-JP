@@ -2,12 +2,12 @@
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google gtag 拡張
 seo-title: Google gtag 拡張
-description: Google gtag 拡張は、Adobe リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Google gtag 拡張は、Adobe リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Google gtag 拡張は、 リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Google gtag 拡張は、 リアルタイム顧客データプラットフォームの広告先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '589'
 ht-degree: 48%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 48%
 
 Load Google&#39;s `gtag.js` into your site to send event data to [!DNL Google Analytics], Google Ads, and [!DNL Google Marketing Platform]. この拡張機能は、gtag コードをサイトに追加するだけです。他の Google 拡張機能を使用して、gtag を使用するイベントやアクションを追加する必要があります。
 
-Google gtag は、Adobe リアルタイム顧客データプラットフォームの広告拡張機能です。拡張機能の詳細については、「[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html) の拡張機能」のページを参照してください。
+Google gtag は、 リアルタイム顧客データプラットフォームの広告拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
