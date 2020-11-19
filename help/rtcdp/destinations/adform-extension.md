@@ -2,13 +2,13 @@
 keywords: adform extension;adform
 title: Adform 拡張機能
 seo-title: Adform 拡張機能
-description: Adform 拡張機能は、アドビのリアルタイム顧客データプラットフォームの分析宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Adform 拡張機能は、アドビのリアルタイム顧客データプラットフォームの分析宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Adform拡張機能は、リアルタイム顧客データプラットフォームの分析送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Adform拡張機能は、リアルタイム顧客データプラットフォームの分析送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 62%
+source-wordcount: '523'
+ht-degree: 56%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 62%
 
 The Adform Website Tracking extension enables advertisers to implement Adform Tracking Points effortlessly across their sites using the [!DNL Experience Platform Launch] platform.
 
-[!DNL Adform] は、アドビのリアルタイム顧客データプラットフォームの分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html) の拡張機能のページを参照してください。
+[!DNL Adform] は、Real-time Customer Data Platformのanalytics拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html) の拡張機能のページを参照してください。
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
