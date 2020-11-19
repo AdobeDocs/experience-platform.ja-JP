@@ -2,12 +2,12 @@
 keywords: target extension;target
 title: Adobe Target 拡張機能
 seo-title: Adobe Target 拡張機能
-description: Adobe Target 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Adobe Target 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: ' Target 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。'
+seo-description: ' Target 拡張機能は、アドビのリアルタイム顧客データプラットフォームのパーソナライゼーションの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。'
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '555'
 ht-degree: 62%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 62%
 
 Adobe Target は、顧客のエクスペリエンスのカスタマイズやパーソナライズをおこない、Web サイト、モバイルサイト、アプリ、ソーシャルメディア、その他のデジタルチャネルでの収益性を最大化するのに必要なすべてのツールを備えた Adobe Experience Cloud ソリューションです。
 
-Adobe Target は、アドビリアルタイム顧客データプラットフォームのパーソナライズ拡張機能です。拡張機能の詳細については、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html) の拡張機能のページを参照してください。
+ Target は、アドビリアルタイム顧客データプラットフォームのパーソナライズ拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html) の拡張機能のページを参照してください。
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
