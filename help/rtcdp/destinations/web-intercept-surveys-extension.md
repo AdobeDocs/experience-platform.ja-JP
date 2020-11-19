@@ -2,13 +2,13 @@
 keywords: QuestionPro Intercept Surveys;questionpro intercept surveys;QuestionPro;questionpro
 title: QuestionPro Intercept Surveys 拡張機能
 seo-title: QuestionPro Intercept Surveys 拡張機能
-description: QuestionPro Intercept Surveys 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: QuestionPro Intercept Surveys 拡張機能は、アドビのリアルタイム顧客データプラットフォームの調査の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: QuestionPro Intercept調査拡張機能は、リアルタイム顧客データプラットフォームの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: QuestionPro Intercept調査拡張機能は、リアルタイム顧客データプラットフォームの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 48%
+source-wordcount: '571'
+ht-degree: 42%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 48%
 
 [!DNL QuestionPro Intercept Surveys] は、調査を導入し、トランザクションの時点で、またはユーザーが Web サイトを開始／終了したときに、行動データを収集するためのプラットフォームです。
 
-[!DNL QuestionPro Intercept Surveys] は、アドビのリアルタイム顧客データプラットフォームの調査拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html) の拡張機能のページを参照してください。
+[!DNL QuestionPro Intercept Surveys] は、Real-time Customer Data Platformの調査拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
