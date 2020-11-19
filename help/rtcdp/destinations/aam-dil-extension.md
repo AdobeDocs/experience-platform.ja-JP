@@ -2,13 +2,13 @@
 keywords: Audience Manager DIL extension;destination audience manager;dil extension
 title: Audience Manager DIL 拡張機能
 seo-title: Audience Manager DIL 拡張機能
-description: Audience Manager DIL 拡張機能は、アドビのリアルタイム顧客データプラットフォームでのデータ管理プラットフォーム（DMP）の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Audience Manager DIL 拡張機能は、アドビのリアルタイム顧客データプラットフォームでのデータ管理プラットフォーム（DMP）の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Audience ManagerDIL拡張機能は、リアルタイムデータ管理データプラットフォームのDMP(Comp Platform)宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Audience ManagerDIL拡張機能は、リアルタイムデータ管理データプラットフォームのDMP(Comp Platform)宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 68%
+source-wordcount: '605'
+ht-degree: 60%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 68%
 
 これは、Adobe Audience Manager データ統合ライブラリ拡張機能（クライアントサイド実装）です。メモ：この拡張機能は、Adobe Analytics データのサーバーサイド転送（SSF）で使用するためのものではありません。SSF の場合は、Adobe Analytics 拡張機能を使用します。Important: Starting with version 8.0, DIL has a hard dependency on the [!DNL Experience Cloud] ID Service, version 3.3 or higher. Please implement both [!DNL Experience Cloud] ID Service and DIL for full [!DNL Audience Manager] data integration capabilities.
 
-[!DNL Audience Manager] DIL は、アドビのリアルタイム顧客データプラットフォームのデータ管理プラットフォーム（DMP）拡張機能です。拡張機能について詳しくは、Experience Platform Launch ドキュメントの [Audience Manager 拡張機能ページ](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html)を参照してください。
+[!DNL Audience Manager] DILは、リアルタイムの顧客データプラットフォームのDMP(データ管理プラットフォーム)拡張です。 拡張機能について詳しくは、Experience Platform Launch ドキュメントの [Audience Manager 拡張機能ページ](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html)を参照してください。
 
 This destination is an [!DNL Experience Platform Launch] extension. アドビのリアルタイム CDP の Launch の拡張機能について詳しくは、[Experience Platform Launch 拡張機能の概要](/help/rtcdp/destinations/experience-platform-launch-extensions.md)を参照してください。
 
