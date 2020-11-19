@@ -5,9 +5,9 @@ description: Experience Platform Web SDK でパーソナライズされたコン
 seo-description: Experience Platform Web SDK でパーソナライズされたコンテンツをレンダリングする方法について説明します
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '236'
 ht-degree: 23%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 # パーソナライゼーションオプションの概要
 
-Adobe Experience Platformは、Adobe Targetを含むAdobeでのパーソナライゼーションソリューションのクエリを [!DNL Web SDK] サポートしています。 パーソナライゼーションには2つのモードがあります。自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 SDKは、ちらつきを [管理する機能も提供します](../personalization/manage-flicker.md)。
+Adobe Experience Platform [!DNL Web SDK] は、Adobe Targetを含むAdobeでのパーソナライゼーションソリューションのクエリをサポートしています。 パーソナライゼーションには2つのモードがあります。自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 SDKは、ちらつきを [管理する機能も提供します](../personalization/manage-flicker.md)。
 
 ## コンテンツの自動レンダリング
 
@@ -51,12 +51,12 @@ alloy("sendEvent",{
     if (result.decisions){
       // Do something with the decisions.
     }
-  })
+  });
 ```
 
 これにより、決定のリストが各決定に対してJSONオブジェクトとして返されます。
 
-```javascript
+```json
 {
   "decisions": [
     {
