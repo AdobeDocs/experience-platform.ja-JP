@@ -2,13 +2,13 @@
 keywords: dialogtech extension;dialogtech;dialogtech destination;DialogTech;DialogTech SourceTrak
 title: DialogTech 拡張機能
 seo-title: DialogTech 拡張機能
-description: DialogTech 拡張機能は、アドビのリアルタイム顧客データプラットフォームの Analytics の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: DialogTech 拡張機能は、アドビのリアルタイム顧客データプラットフォームの Analytics の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: DialogTech拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: DialogTech拡張機能は、リアルタイム顧客データプラットフォームの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 45%
+source-wordcount: '519'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 45%
 
 Include the [!DNL DialogTech SourceTrak] javascript snippet in Adobe Launch
 
-[!DNL DialogTech] は、アドビのリアルタイム顧客データプラットフォームの分析拡張機能です。拡張機能の詳細については、[Dialogtech の Web サイト](https://www.dialogtech.com/)を参照してください。
+[!DNL DialogTech] は、Real-time Customer Data Platformのanalytics拡張です。 拡張機能の詳細については、[Dialogtech の Web サイト](https://www.dialogtech.com/)を参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
