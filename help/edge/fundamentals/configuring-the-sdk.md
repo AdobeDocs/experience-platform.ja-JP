@@ -1,14 +1,14 @@
 ---
 title: SDK の設定
-seo-title: Adobe Experience Platform Web SDK の設定
+seo-title: Adobe Experience PlatformWeb SDKの設定
 description: Experience Platform Web SDK の設定方法について説明します
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 76%
+source-wordcount: '710'
+ht-degree: 74%
 
 ---
 
@@ -85,13 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で�
 | -------- | ------------ | ----------------- |
 | Boolean | × | `true` |
 
-リンククリックに関連付けられたデータを自動的に収集するかどうかを示します。リンククリックと見なされるクリックの場合、次の [Web インタラクション](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md)データが収集されます。
-
-| **プロパティ** | **説明** |
-| ------------ | ----------------------------------- |
-| リンク名 | リンクコンテキストで判断される名前 |
-| リンク URL | 正規化された URL |
-| リンクタイプ | ダウンロード、終了、またはその他に設定 |
+リンククリックに関連付けられたデータを自動的に収集するかどうかを示します。詳しくは、 [自動リンクトラッキング](../data-collection/track-links.md#automaticLinkTracking) （英語）を参照してください。
 
 ### `onBeforeEventSend`
 
@@ -153,7 +147,7 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 | -------- | ------------ | ----------------- |
 | Boolean | × | true |
 
-trueの場合、SDKは古いAMCV cookieを読み取って設定します。 これは、サイトの一部で訪問者.jsを使用している可能性があるのに、AEP Web SDKの使用に移行する際に役立ちます。 また、ページで訪問者APIが定義されている場合、SDKはECIDのクエリ訪問者APIを使用します。 これにより、AEP Web SDKを使用して2つのタグページを作成でき、同じECIDを保持できます。
+trueの場合、SDKは古いAMCV cookieを読み取って設定します。 これは、サイトの一部で訪問者.jsを使用している可能性がある場合に、Adobe Experience PlatformWeb SDKへの移行に役立ちます。 また、ページで訪問者APIが定義されている場合、SDKはECIDのクエリ訪問者APIを使用します。 これにより、AEP Web SDKを使用して2つのタグページを作成でき、同じECIDを保持できます。
 
 ### `thirdPartyCookiesEnabled`
 
