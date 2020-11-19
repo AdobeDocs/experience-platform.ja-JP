@@ -2,13 +2,13 @@
 keywords: Marketo;marketo;Marketo extension;marketo extension
 title: Marketo 拡張機能
 seo-title: Marketo 拡張機能
-description: Marketo 拡張機能は、アドビのリアルタイム顧客データプラットフォームのの電子メールの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Marketo 拡張機能は、アドビのリアルタイム顧客データプラットフォームのの電子メールの宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Marketorの拡張機能は、リアルタイム顧客データプラットフォームの電子メールの送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Marketorの拡張機能は、リアルタイム顧客データプラットフォームの電子メールの送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 44%
+source-wordcount: '555'
+ht-degree: 39%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 44%
 
 [!DNL Marketo's] 強力なマーケティング自動化ソフトウェアにより、マーケティング担当者はデジタルマーケティングの技術と科学を習得し、顧客や見込み客を惹きつけることができます。
 
-[!DNL Marketo] は、アドビのリアルタイム顧客データプラットフォームのの電子メール拡張機能です。拡張機能について詳しくは、[Adobe Exchange の拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html)を参照してください。
+[!DNL Marketo] は、 リアルタイム顧客データプラットフォームの電子メール拡張機能です。拡張機能について詳しくは、[Adobe Exchange の拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html)を参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
