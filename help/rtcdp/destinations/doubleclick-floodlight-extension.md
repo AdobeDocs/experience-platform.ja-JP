@@ -2,13 +2,13 @@
 keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
 title: DoubleClick Floodlight（ベータ版）拡張機能
 seo-title: DoubleClick Floodlight（ベータ版）拡張機能
-description: DoubleClick Floodlight（ベータ版）拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける広告の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: DoubleClick Floodlight（ベータ版）拡張機能は、アドビのリアルタイム顧客データプラットフォームにおける広告の宛先になります。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: DoubleClick Floodlight（ベータ）拡張は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: DoubleClick Floodlight（ベータ）拡張は、リアルタイム顧客データプラットフォームの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 42%
+source-wordcount: '557'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 42%
 
 This extension allows for quick and easy deployment of [!DNL DoubleClick Floodlight] tags using the traditional floodlight format (not Global Site Tag). 注意：この拡張機能はベータ版です。
 
-[!DNL DoubleClick Floodlight]（ベータ版）は、アドビのリアルタイム顧客データプラットフォームにおける広告拡張機能です。For more information about the extension functionality, see the [!DNL Google] support documentation for [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=ja).
+[!DNL DoubleClick Floodlight] （ベータ版）は、リアルタイム顧客データプラットフォームの広告拡張機能です。 For more information about the extension functionality, see the [!DNL Google] support documentation for [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=ja).
 
 この目的地はAdobe Experience Platform Launchの延長線です。 For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
