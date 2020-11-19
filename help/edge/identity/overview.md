@@ -5,17 +5,17 @@ description: Adobe Experience CloudIDの取得方法を説明します。
 seo-description: Adobe Experience CloudIDの取得方法を説明します。
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 6%
+source-wordcount: '731'
+ht-degree: 4%
 
 ---
 
 
 # ID -Experience CloudIDの取得
 
-Adobe Experience Platformは、 [!DNL Web SDK] Adobe・アイデンティティ・サービスを [利用します](../../identity-service/ecid.md)。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
+Adobe Experience PlatformWeb SDKは、 [AdobeIDサービスを利用します](../../identity-service/ecid.md)。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
 
 ## ファーストパーティID
 
@@ -27,11 +27,11 @@ ID [!DNL Identity Service] をサードパーティドメイン(demdex.net)と�
 
 ## IDの移行
 
-訪問者APIを使用して移行する場合は、既存のAMCV cookieを移行することもできます。 ECIDの移行を有効にするには、設定で `idMigrationEnabled` パラメーターを設定します。 IDの移行は、次のような使用事例を有効にするように設定されています。
+訪問者APIを使用して移行する場合は、既存のAMCV cookieを移行することもできます。 ECIDの移行を有効にするには、設定で `idMigrationEnabled` パラメーターを設定します。 IDの移行により、次のような使用例が可能になります。
 
-* ドメインの一部のページが訪問者APIを使用している場合と、他のページがこのSDKを使用している場合。 この場合、SDKは、既存のAMCV cookieを読み取り、既存のECIDを持つ新しいcookieを書き込みます。 また、SDKはAEP Web SDKが実装されたページでECIDが最初に取得された場合に、訪問者APIが実装された後続のページで同じECIDを持つように、AMCV cookieを書き込みます。
-* 訪問者APIも持つページでAEP Web SDKを設定する場合。 このケースをサポートするために、AMCV cookieが設定されていない場合、SDKはページ上で訪問者APIを探し、それを呼び出してECIDを取得します。
-* サイト全体でAEP Web SDKを使用し、訪問者APIを持たない場合は、返される訪問者情報を保持できるように、ECIDを移行すると便利です。 でのSDKのデプロイ後、訪問者ーのCookie `idMigrationEnabled` のほとんどが移行されるまでの時間が経過すると、設定を無効にできます。
+* ドメインの一部のページが訪問者APIを使用している場合と、他のページがこのSDKを使用している場合。 この場合、SDKは、既存のAMCV cookieを読み取り、既存のECIDを持つ新しいcookieを書き込みます。 また、SDKはAMCV cookieを書き込むので、SDKが実装されたページでECIDが最初に取得された場合、訪問者APIが実装された後続のページでも同じECIDを持つようになります。
+* 訪問者APIも持つページでAdobe Experience PlatformWeb SDKが設定されている場合。 このケースをサポートするために、AMCV cookieが設定されていない場合、SDKはページ上で訪問者APIを探し、それを呼び出してECIDを取得します。
+* サイト全体でAdobe Experience PlatformWeb SDKを使用しており、訪問者APIを持たない場合は、返される訪問者情報を保持できるように、ECIDを移行すると便利です。 でのSDKのデプロイ後、訪問者ーのCookie `idMigrationEnabled` のほとんどが移行されるまでの時間が経過すると、設定を無効にできます。
 
 ## 訪問者IDの取得
 
@@ -43,13 +43,14 @@ ID [!DNL Identity Service] をサードパーティドメイン(demdex.net)と�
 
 ```javascript
 alloy("getIdentity")
-  .then(function(result.identity.ECID) {
-    // This function will get called with Adobe Experience Cloud Id when the command promise is resolved
+  .then(function(result) {
+    // The command succeeded.
+    console.log(result.identity.ECID);
   })
   .catch(function(error) {
     // The command failed.
-    // "error" will be an error object with additional information
-  })
+    // "error" will be an error object with additional information.
+  });
 ```
 
 ## IDの同期
@@ -79,21 +80,14 @@ alloy("sendEvent", {
       ]
     }
   }
-})
+});
 ```
 
+内の各プロパティ `identityMap` は、特定の [ID名前空間に属するIDを表します](../../identity-service/namespaces.md)。 プロパティ名は、ID名前空間記号にする必要があります。この記号は、「[!UICONTROL ID]」の下のAdobe Experience Platformユーザーインターフェイスに表示されます。 プロパティ値は、そのID名前空間に関するIDの配列にする必要があります。
 
-### IDの同期オプション
+ID配列内の各IDオブジェクトは、次のように構造化されます。
 
-#### 識別名前空間記号
-
-| **タイプ** | **必須** | **デフォルト値** |
-| -------- | ------------ | ----------------- |
-| 文字列 | ○ | なし |
-
-オブジェクトのキーは、 [ID名前空間](../../identity-service/namespaces.md) (Identity Symbol)です。 これは、Adobe Experience Platformのユーザーインターフェイスの「[!UICONTROL ID]」の下に表示されています。
-
-#### `id`
+### `id`
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
@@ -101,7 +95,7 @@ alloy("sendEvent", {
 
 これは、特定の名前空間に対して同期するIDです。
 
-#### `authenticationState`
+### `authenticationState`
 
 | **タイプ** | **必須** | **デフォルト値** | **可能な値** |
 | -------- | ------------ | ----------------- | ------------------------------------ |
@@ -109,18 +103,10 @@ alloy("sendEvent", {
 
 IDの認証状態。
 
-#### `primary`
+### `primary`
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
 | Boolean | オプション | false |
 
 このIDを統合プロファイルのプライマリフラグメントとして使用するかどうかを指定します。 デフォルトでは、ECIDがユーザーの主識別子として設定されます。
-
-#### `hashEnabled`
-
-| **タイプ** | **必須** | **デフォルト値** |
-| -------- | ------------ | ----------------- |
-| Boolean | オプション | false |
-
-有効にすると、SHA256ハッシュを使用してIDがハッシュされます。
