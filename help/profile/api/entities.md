@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: エンティティ — リアルタイム顧客プロファイルAPI
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
 workflow-type: tm+mt
-source-wordcount: '1676'
-ht-degree: 89%
+source-wordcount: '1695'
+ht-degree: 88%
 
 ---
 
@@ -910,4 +910,5 @@ The following section provides supplemental information regarding accessing [!DN
 | `startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 | `startTime=1539838505` |
 | `endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 | `endTime=1539838510` |
 | `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 | `limit=100` |
+| `property` | プロパティ値別のフィルター。 次の評価演算子をサポートします。=、!=, &lt;, &lt;=, >, >=. エクスペリエンスイベントでのみ使用でき、最大3つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 | `withCA=true` |
