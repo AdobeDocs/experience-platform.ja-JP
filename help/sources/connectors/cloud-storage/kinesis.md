@@ -5,9 +5,9 @@ title: AmazonKinesisコネクタ
 topic: overview
 description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用して、AmazonKinesisをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c0c609e3f385665cf88129def0c69e7d153ce201
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '223'
 ht-degree: 1%
 
 ---
@@ -34,8 +34,7 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 ### APIの使用
 
 - [Flow Service APIを使用してAmazonKinesisコネクタを作成する](../../tutorials/api/create/cloud-storage/kinesis.md)
-- [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
-- [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
+- [Flow Service APIを使用してストリーミングデータを収集する](../../tutorials/api/collect/streaming.md)
 
 ### UI の使用
 
