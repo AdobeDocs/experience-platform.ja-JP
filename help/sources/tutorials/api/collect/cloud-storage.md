@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1567'
 ht-degree: 14%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 14%
 
 ## はじめに
 
-このチュートリアルでは、有効な接続を通じてサードパーティのクラウドストレージにアクセスでき、ファイルのパスや構造など、DNLプラットフォームに組み込むファイルに関する情報が必要です。 この情報がない場合は、このチュートリアルを試す前に、APIを使用したサードパーティのクラウドストレージの [調査に関するチュ [!DNL Flow Service] ートリアル](../explore/cloud-storage.md) を参照してください。
+このチュートリアルでは、有効な接続を通じてサードパーティのクラウドストレージにアクセスでき、ファイルのパスや構造など、に組み込むファイルに関する情報が必要 [!DNL Platform]です。 この情報がない場合は、このチュートリアルを試す前に、APIを使用したサードパーティのクラウドストレージの [調査に関するチュ [!DNL Flow Service] ートリアル](../explore/cloud-storage.md) を参照してください。
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md):スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-- [[!DNLカタログサービス]](../../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
-- [[!DNLバッチインジェスト]](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
+- [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
 - [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage using the [!DNL Flow Service] API.
 
