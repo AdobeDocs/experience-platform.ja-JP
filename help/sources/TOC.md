@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
+source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '683'
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 8%
       - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
       - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
       - [AzureData Explorerコネクタ](connectors/databases/data-explorer.md)
-      - [Azure Synapse Analyticsコネクタ](connectors/databases/synapse-analytics.md)
+      - [azure synapse解析コネクタ](connectors/databases/synapse-analytics.md)
       - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
       - [Couchbaseコネクタ](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
@@ -96,7 +96,7 @@ ht-degree: 8%
          - [Azure HDInsightsコネクタのApache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/api/create/databases/spark.md)
          - [AzureData Explorerコネクタ](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse Analyticsコネクタ](tutorials/api/create/databases/synapse-analytics.md)
+         - [azure synapse解析コネクタ](tutorials/api/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/api/create/databases/ats.md)
          - [Couchbaseコネクタ](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery Connector](tutorials/api/create/databases/bigquery.md)
@@ -136,6 +136,7 @@ ht-degree: 8%
       - [マーケティング自動化データの収集](tutorials/api/collect/marketing-automation.md)
       - [支払データの収集](tutorials/api/collect/payments.md)
       - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
+      - [ストリーミングデータの収集](tutorials/api/collect/streaming.md)
    - [サードパーティのクラウドストレージシステムからのパーケーデータの取り込み](tutorials/api/cloud-storage-parquet.md)
    - [Flow Service APIを使用したデータセットベースの接続の作成](tutorials/api/create-dataset-base-connection.md)
    - [Flow Service APIを使用してデータフローを監視する](tutorials/api/monitor.md)
@@ -172,7 +173,7 @@ ht-degree: 8%
          - [Azure HDInsightsコネクタのApache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/ui/create/databases/spark.md)
          - [AzureData Explorerコネクタ](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analyticsコネクタ](tutorials/ui/create/databases/synapse-analytics.md)
+         - [azure synapse解析コネクタ](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージコネクタ](tutorials/ui/create/databases/ats.md)
          - [Couchbaseコネクタ](tutorials/ui/create/databases/couchbase.md)
          - [Google Bigクエリコネクタ](tutorials/ui/create/databases/bigquery.md)
