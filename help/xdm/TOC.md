@@ -5,10 +5,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: 0a5b6bab6a0a11a572a4cd5de95b33f8d61d34bc
+source-git-commit: 321dc16a1296aeb28ba78825f191a0368df16547
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 69%
+source-wordcount: '181'
+ht-degree: 65%
 
 ---
 
@@ -56,18 +56,14 @@ ht-degree: 69%
    * [POI相互作用](./data-types/poi-interaction.md)
    * [住所](./data-types/postal-address.md)
 * スキーマレジストリ API {#api}
+   * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
-   * [リソースの一覧](api/list-resources.md)
-   * [リソースの検索](api/look-up-resource.md)
-   * [リソースの更新](api/update-resource.md)
-   * [リソースの置換](api/replace-resource.md)
-   * [リソースの削除](api/delete-resource.md)
-   * [クラスの作成](api/create-class.md)
-   * [Mixin の作成](api/create-mixin.md)
-   * [データタイプの作成](api/create-data-type.md)
-   * [スキーマ](api/create-schema.md)
-   * [和集合](api/unions.md)
+   * [スキーマ](api/schemas.md)
+   * [クラス](api/classes.md)
+   * [ミックスイン](api/mixins.md)
+   * [データタイプ](api/data-types.md)
    * [記述子](api/descriptors.md)
+   * [和集合](api/unions.md)
    * [アドホックスキーマ](api/ad-hoc.md)
    * [付録](api/appendix.md)
 * チュートリアル {#tutorials}
