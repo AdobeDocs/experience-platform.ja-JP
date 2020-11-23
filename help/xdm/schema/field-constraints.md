@@ -5,10 +5,10 @@ title: XDMフィールド型の制約
 topic: overview
 description: XDMのフィールド型制約に関するリファレンスです。マッピングできるその他のシリアル化形式や、APIで独自のフィールド型を定義する方法などが含まれます。
 translation-type: tm+mt
-source-git-commit: 19167f58fae6fac7d938deb74182d2e19960beb3
+source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '994'
+ht-degree: 74%
 
 ---
 
@@ -40,7 +40,7 @@ The table below describes the mapping between each XDM type (`meta:xdmType`) and
 | date-time | type:string<br>format:date-time<br>（RFC 3339、セクション 5.6） | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | String | timestamp | Integer<br>（unix ミリ秒） | int64<br>（unix ミリ秒） |
 | map | object | MAP annotated group<br><br>&lt;<span>key_type</span>> MUST be STRING<br><br>&lt;<span>value_type</span>> type of map values | MapType<br><br>&quot;keyType&quot; MUST be StringType<br><br>&quot;valueType&quot; is type of map values. | java.util.Map | Map | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
 
-## API での XDM フィールドタイプの定義
+## API での XDM フィールドタイプの定義 {#define-fields}
 
 XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards and basic field types, with additional constraints for field names which are enforced by [!DNL Experience Platform]. [スキーマレジストリAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) (R)を使用すると、形式やオプションの制約を使用して、追加のフィールドの種類を定義できます。 XDM field types are exposed by the field-level attribute, `meta:xdmType`.
 
@@ -50,7 +50,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
 
 次の表に、オプションのプロパティを使用してスカラーフィールドタイプとより具体的なフィールドタイプを定義するための適切な書式の概要を示します。オプションのプロパティとタイプ固有のキーワードに関する詳細については、[JSON スキーマのドキュメント](https://json-schema.org/understanding-json-schema/reference/type.html)を参照してください。
 
-最初に、目的のフィールドタイプを探し、提供されたサンプルコードを使用して、mixinを [作成またはデータタイプを](../api/create-mixin.md) 作成するためのAPIリクエストを作成します [](../api/create-data-type.md)。
+最初に、目的のフィールドタイプを探し、提供されたサンプルコードを使用して、mixinを [作成またはデータタイプを](../api/mixins.md#create) 作成するためのAPIリクエストを作成します [](../api/data-types.md#create)。
 
 <table>
   <tr>
