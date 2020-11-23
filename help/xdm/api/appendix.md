@@ -5,10 +5,10 @@ title: スキーマレジストリ開発者向けの付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 42d3bed14c5f926892467baeeea09ee7a140ebdc
+source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '730'
+ht-degree: 50%
 
 ---
 
@@ -16,6 +16,43 @@ ht-degree: 0%
 # 付録
 
 This document provides supplemental information related to working with the [!DNL Schema Registry] API.
+
+## クエリパラメーターの使用 {#query}
+
+は、リソースのリスト表示時に、ページを作成し結果をフィルタリングするクエリパラメーターの使用をサポートしています。 [!DNL Schema Registry]
+
+>[!NOTE]
+>
+>複数のクエリパラメーターを組み合わせる場合は、アンパサンド（`&`）で区切る必要があります。
+
+### ページング {#paging}
+
+ページングに最も一般的なクエリパラメーターは次のとおりです。
+
+| パラメーター | 説明 |
+| --- | --- |
+| `start` | リストの結果を開始する場所を指定します。 この値はリスト応答の `_page.next` 属性から取得でき、結果の次のページにアクセスするのに使用されます。 この `_page.next` 値がnullの場合、追加のページはありません。 |
+| `limit` | 返されるリソースの数を制限する。 例：`limit=5` は 5 つのリソースのリストを返します。 |
+| `orderby` | 特定のプロパティで結果を並べ替える。 例：`orderby=title` は昇順（A ～ Z）のタイトルで結果を並べ替えます。Adding a `-` before the parameter value (`orderby=-title`) will sort items by title in descending order (Z-A). |
+
+### フィルター {#filtering}
+
+パラメーターを使用して結果をフィルターできます。この `property` パラメーターは、取得したリソース内の特定のJSONプロパティに対して特定の演算子を適用するのに使用されます。 次の演算子がサポートされています。
+
+| 演算子 | 説明 | 例 |
+| --- | --- | --- |
+| `==` | プロパティが指定された値と等しいかどうかを示すフィルター。 | `property=title==test` |
+| `!=` | プロパティが指定された値と等しくないかどうかによるフィルター。 | `property=title!=test` |
+| `<` | プロパティが指定された値より小さいかどうかによるフィルター。 | `property=version<5` |
+| `>` | プロパティが指定された値より大きいかどうかによるフィルター。 | `property=version>5` |
+| `<=` | プロパティが指定した値以下か、または指定した値と等しいかによるフィルター。 | `property=version<=5` |
+| `>=` | プロパティが指定された値以上かどうかによるフィルター。 | `property=version>=5` |
+| `~` | 指定された正規式とプロパティが一致するかどうかを示すフィルター。 | `property=title~test$` |
+| なし | プロパティ名のみをステートすると、プロパティが存在するエントリのみが返されます。 | `property=title` |
+
+>[!TIP]
+>
+>この `property` パラメーターを使用して、互換性のあるクラスでミックスインをフィルタリングできます。 For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.
 
 ## 互換性モード
 
