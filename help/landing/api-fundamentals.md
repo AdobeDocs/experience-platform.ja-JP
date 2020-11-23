@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform API の基本
 topic: getting started
 translation-type: tm+mt
-source-git-commit: fac4b3d02a6e58a9d2c298f9b849fa7345e4fa93
+source-git-commit: b6d62492a60494deb848a88a9334e3ef20a93919
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 56%
@@ -95,7 +95,7 @@ JSON ポインターは、JSON ドキュメント内の特定の値を識別す�
 >
 >When dealing with the `xdm:sourceProperty` and `xdm:destinationProperty` attributes of [!DNL Experience Data Model] (XDM) descriptors, any `properties` keys must be **excluded** from the JSON Pointer string. See the [!DNL Schema Registry] API developer guide sub-guide on [descriptors](../xdm/api/descriptors.md) for more information.
 
-## JSON パッチ
+## JSON パッチ {#json-patch}
 
 There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch objects for their request payloads. JSON パッチは、JSON ドキュメントの変更を記述するための標準形式（[RFC 6902](https://tools.ietf.org/html/rfc6902)）です。この標準形式では、リクエスト本文でドキュメント全体を送信する必要なく、JSON の部分的なアップデートを定義できます。
 
