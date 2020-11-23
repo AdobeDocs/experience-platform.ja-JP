@@ -5,10 +5,10 @@ title: エクスペリエンスデータモデル（XDM）システムのトラ�
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）システムに関するよくある質問の回答に加えて、一般的なエラーのトラブルシューティングガイドを提供します。
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
 workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 66%
+source-wordcount: '1831'
+ht-degree: 67%
 
 ---
 
@@ -27,7 +27,7 @@ The following is a list of answers to frequently asked questions about XDM Syste
 
 Mixin を使用して、スキーマにフィールドを追加できます。各 Mixin は 1 つ以上のクラスと互換性があり、それらの互換性のあるクラスの 1 つを実装する任意のスキーマで Mixin を使用できます。Adobe Experience Platform は、独自の定義済みフィールドを含む複数の業界用 Mixin を提供しますが、API またはユーザーインターフェイスを使用して新しい Mixin を作成することで、独自のフィールドをスキーマに追加できます。
 
-For details on creating new mixins in the API, see the [create a mixin](api/create-mixin.md) document in the [!DNL Schema Registry] API developer guide. UI を使用する場合は、[スキーマエディターのチュートリアル](./tutorials/create-schema-ui.md)を参照してください。
+APIでの新しいミックスインの作成について詳しくは、 [!DNL Schema Registry] mixinエンドポイントガイドを参照してください [](api/mixins.md#create)。 UI を使用する場合は、[スキーマエディターのチュートリアル](./tutorials/create-schema-ui.md)を参照してください。
 
 ### Mixin とデータ型の最適な用途は何ですか？
 
@@ -39,7 +39,7 @@ For details on creating new mixins in the API, see the [create a mixin](api/crea
 
 All [!DNL Schema Registry] resources (schemas, mixins, data types, classes) have a URI that acts as an unique ID for reference and lookup purposes. API でスキーマを表示すると、最上位レベルの `$id` および `meta:altId` 属性でスキーマが見つかります。
 
-For more information, see the [schema identification](api/getting-started.md#schema-identification) section in the [!DNL Schema Registry] API developer guide.
+For more information, see the [resource identification](api/getting-started.md#resource-identification) section in the [!DNL Schema Registry] API developer guide.
 
 ### スキーマでは重大な変更をいつ回避し始めますか？
 
@@ -49,7 +49,7 @@ Breaking changes can be made to a schema as long as it has never been used in th
 
 長いフィールドタイプは、最大サイズが 53（+1）ビットの整数で、可能な範囲は -9007199254740992 ～ 9007199254740992 です。これは、JSON の JavaScript 実装が長整数を表す方法に制限があるためです。
 
-For more information on field types, see the [Defining XDM field types](api/appendix.md#field-types) section in the [!DNL Schema Registry] API developer guide.
+フィールドの種類について詳しくは、「 [XDMフィールドの種類の制約に関するドキュメント](./schema/field-constraints.md)」を参照してください。
 
 ### スキーマの ID を定義するには、どうすればよいですか？
 
@@ -120,7 +120,7 @@ The following is a list of error messages that you may encounter when working wi
 
 このエラーは、システムが特定のリソースを見つけることができなかった場合に表示されます。リソースが削除されたか、API 呼び出しのパスが無効です。再試行する前に、API 呼び出しの有効なパスを入力したことを確認してください。リソースの正しい ID を入力したこと、およびパスが適切なコンテナ（グローバルまたはテナント）で適切に名前空間化されていることを確認する必要があります。。
 
-For more information on constructing lookup paths in the API, see the [container](./api/getting-started.md#container) and [schema identification](api/getting-started.md#schema-identification) sections in the [!DNL Schema Registry] developer guide.
+For more information on constructing lookup paths in the API, see the [container](./api/getting-started.md#container) and [resource identification](api/getting-started.md#resource-identification) sections in the [!DNL Schema Registry] developer guide.
 
 ### タイトルは一意である必要があります
 
@@ -149,7 +149,7 @@ For more information on constructing lookup paths in the API, see the [container
 }
 ```
 
-このエラーメッセージは、不適切に名前空間化されたフィールドを含む新しい Mixin を作成しようとすると表示されます。IMS 組織で定義された Mixin では、他の業界やベンダーのリソースとの競合を避けるために、`TENANT_ID` でフィールドを名前空間化する必要があります。Detailed examples of proper data structures for mixins can be found in the document on [creating a mixin](api/create-mixin.md) section in the [!DNL Schema Registry] API developer guide.
+このエラーメッセージは、不適切に名前空間化されたフィールドを含む新しい Mixin を作成しようとすると表示されます。IMS 組織で定義された Mixin では、他の業界やベンダーのリソースとの競合を避けるために、`TENANT_ID` でフィールドを名前空間化する必要があります。ミックスインに適したデータ構造の詳細な例は、ミックスインエンドポイントガイドを参照して [ください](./api/mixins.md#create)。
 
 
 ### [!DNL Real-time Customer Profile] エラー
