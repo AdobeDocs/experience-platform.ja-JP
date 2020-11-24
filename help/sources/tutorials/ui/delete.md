@@ -6,7 +6,7 @@ title: データフローの削除
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 9%
@@ -66,4 +66,4 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 このチュートリアルに従うと、 **[!UICONTROL Sources]** Workspaceを使用して既存のデータフローを削除できます。
 
-APIを使用してプログラムでこれらの操作を実行する手順については、Flow Service APIを使用した [!DNL Flow Service] 接続の [削除に関するチュートリアルを参照してください](../../tutorials/api/delete.md)
+APIを使用してプログラムでこれらの操作を実行する手順については、Flow Service APIを使用したデータフローの [!DNL Flow Service][削除に関するチュートリアルを参照してください](../../tutorials/api/delete-dataflows.md)
