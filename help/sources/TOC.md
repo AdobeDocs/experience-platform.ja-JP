@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
+source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '663'
 ht-degree: 8%
 
 ---
@@ -138,10 +138,11 @@ ht-degree: 8%
       - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
       - [ストリーミングデータの収集](tutorials/api/collect/streaming.md)
    - [サードパーティのクラウドストレージシステムからのパーケーデータの取り込み](tutorials/api/cloud-storage-parquet.md)
-   - [Flow Service APIを使用したデータセットベースの接続の作成](tutorials/api/create-dataset-base-connection.md)
-   - [Flow Service APIを使用してデータフローを監視する](tutorials/api/monitor.md)
-   - [Flow Service APIを使用して接続情報を更新する](tutorials/api/update.md)
-   - [Flow Service APIを使用した接続の削除](tutorials/api/delete.md)
+   - [データセット接続の作成](tutorials/api/create-dataset-base-connection.md)
+   - [データフローの監視](tutorials/api/monitor.md)
+   - [接続の更新](tutorials/api/update.md)
+   - [接続の削除](tutorials/api/delete.md)
+   - [データフローの削除](tutorials/api/delete-dataflows.md)
 - UIチュートリアル {#ui-tutorials}
    - ソースコネクタを作成する {#create}
       - アドビアプリケーション {#adobe-applications}
