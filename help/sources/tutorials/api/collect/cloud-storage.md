@@ -6,17 +6,15 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1583'
 ht-degree: 14%
 
 ---
 
 
 # ソースコネクターとAPIを使用したクラウドストレージデータの収集
-
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと [[!DNL Flow Service] APIを使用してプラットフォームにデータを取り込む手順を説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
 
@@ -62,13 +60,17 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 
 ファイルベースのコネクタの列挙値は、次のとおりです。
 
-| Data.format | 列挙値 |
+| データフォーマット | 列挙値 |
 | ----------- | ---------- |
-| 区切りファイル | `delimited` |
-| JSONファイル | `json` |
-| パーケファイル | `parquet` |
+| 区切り | `delimited` |
+| JSON | `json` |
+| パーケ | `parquet` |
 
-すべてのテーブルベースのコネクタで、列挙値を使用します。 `tabular`.
+テーブルベースのすべてのコネクタの値をに設定し `tabular`ます。
+
+>[!NOTE]
+>
+>列の区切り文字をプロパティとして指定すると、CSVファイルとTSVファイルをクラウドストレージソースコネクタに取り込むことができます。 任意の1文字の値は、列の区切り文字として使用できます。 指定しない場合、コンマ `(,)` がデフォルト値として使用されます。
 
 **API 形式**
 
@@ -88,13 +90,14 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited"
+            "format": "delimited",
+            "columnDelimiter": "\t"
         },
         "params": {
-            "path": "/demo/data7.csv",
+            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
             "connectionSpec": {
@@ -106,7 +109,9 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `baseConnectionId` | アクセスするサードパーティのクラウドストレージシステムの一意の接続ID。 |
+| `connectionId` | アクセスするサードパーティのクラウドストレージシステムの一意の接続ID。 |
+| `data.format` | データ形式属性を定義する列挙値。 |
+| `data.columnDelimiter` | 任意の1文字列の列区切り文字を使用して、フラットファイルを収集できます。 このプロパティは、CSVファイルまたはTSVファイルを取り込む場合にのみ必要です。 |
 | `params.path` | アクセスするソースファイルのパス。 |
 | `connectionSpec.id` | 特定のサードパーティクラウドストレージシステムに関連付けられている接続仕様ID。 接続仕様IDのリストについては、 [付録](#appendix) を参照してください。 |
 
@@ -126,8 +131,6 @@ curl -X POST \
 でソースデータを使用するには、必要に応じてソースデータを構造化するためのターゲットスキーマを作成する [!DNL Platform]必要があります。 次に、このターゲットスキーマを使用して、ソースデータが含まれる [!DNL Platform] データセットを作成します。
 
 ターゲットXDMスキーマは、 [スキーマレジストリAPIに対するPOST要求を実行することで作成できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
-
-If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **API 形式**
 
@@ -279,9 +282,9 @@ A successful response returns an array containing the ID of the newly created da
 
 ## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込まれたデータが到着した宛先への接続を表します。 ターゲット接続を作成するには、データレークに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取り込まれたデータが到着した宛先への接続を表します。 ターゲット接続を作成するには、Data Lakeに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-ターゲットスキーマ、ターゲットデータセット、データレークへの接続仕様IDに固有の識別子が追加されました。 これらの識別子を使用して、 [!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
+これで、ターゲットスキーマ、ターゲットデータセット、データレークへの接続仕様IDの一意の識別子が得られました。 これらの識別子を使用して、 [!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
 
 **API 形式**
 
@@ -403,8 +406,8 @@ curl -X POST \
     "version": 0,
     "createdDate": 1597784069368,
     "modifiedDate": 1597784069368,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
