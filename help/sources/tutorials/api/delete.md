@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
 title: Flow Service APIを使用した接続の削除
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して接続を削除する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 9c807270181084a94f288c248a678821ca58e194
+source-git-commit: 9e28591ef9f07217363cddf72356b8e5cd8a15a3
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '580'
 ht-degree: 22%
 
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 * [ソース](../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
 * [サンドボックス](../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully update your connection&#39;s information using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully delete a connection using the [!DNL Flow Service] API.
 
 ### API 呼び出し例の読み取り
 
@@ -132,7 +132,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 更新する接続の一意の `id` 値。 |
+| `{CONNECTION_ID}` | 削除する接続の固有 `id` 値。 |
 
 **リクエスト**
 
