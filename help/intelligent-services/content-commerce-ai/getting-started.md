@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform
-title: コンテンツ&コマースAIの「はじめに」
+title: コンテンツ&コマースAIはじめに
 topic: Getting started
 description: コンテンツおよびコマースAIはAdobeI/O APIを利用します。 AdobeI/O APIとI/Oコンソール統合を呼び出すには、まず認証のチュートリアルを完了する必要があります。
 translation-type: tm+mt
-source-git-commit: 9ee888b02b4a402200ca4fcaed4a59c0a7eb94cd
+source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '576'
 ht-degree: 12%
 
 ---
 
 
-# Getting started with [!DNL Content and Commerce AI]
+# コンテンツとコマースのAI使用の手引き
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Adobeデベロッパーコンソール内でプロジェクトとAPIを設定し
 
 ![](./images/final-environment.png)
 
-右上隅のドロップダウンメニューから環境を選択し、保存した値を自動入力できるようになりました。 値をいつでも再編集して、すべてのAPI呼び出しを更新するだけです。
+右上隅のドロップダウンメニューから環境を選択して、保存した値を自動入力できるようになりました。 値をいつでも再編集して、すべてのAPI呼び出しを更新するだけです。
 
 ![example](./images/select-environment.png)
 
@@ -75,4 +75,4 @@ Postmanを使用したAdobeI/O APIの操作について詳しくは、AdobeI/O�
 
 拡張機能のフレームワークについて詳しくは、拡張機能の [ドキュメントの](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) 概要を読んで開始してください。 このドキュメントでは、前提条件とプロビジョニング要件について概説します。
 
-開発者用環境の設定に関する詳細は、 [!DNL Content and Commerce AI]開始用環境の設定ガイドを参照して [ください](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)。 このドキュメントでは、Asset Compute Serviceの設定手順を説明します。
+開発者用環境の設定に関する詳細は、 [!DNL Content and Commerce AI]開始用環境の設定ガイドを参照して [ください](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)。 このドキュメントでは、Asset computeサービスの開発を可能にする設定手順を説明します。
