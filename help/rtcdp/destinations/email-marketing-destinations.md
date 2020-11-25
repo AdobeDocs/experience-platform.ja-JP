@@ -6,10 +6,10 @@ type: Tutorial
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 7903d6c715747dfc298a5e4a4615d8ecbbe5d359
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 40%
+source-wordcount: '846'
+ht-degree: 39%
 
 ---
 
@@ -36,7 +36,7 @@ In the **[!UICONTROL Authentication]** step, if you had previously set up a conn
 - For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 - For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
-必要に応じて、RSA形式の公開鍵を添付し、「 **[!UICONTROL Key]** 」セクションの下に書き出したファイルに暗号化を追加できます。 この公開鍵は、Base64エンコードされた文字列 **として書き込む** 必要があります。
+必要に応じて、 **[!UICONTROL Encryption PGP/GPG]** セクションでは、RSA形式の公開鍵を添付して、PGP/GPGを使用した暗号化を **[!UICONTROL Key]** セクションのエクスポートファイルに追加できます。 この公開鍵は、Base64エンコードされた文字列 **として書き込む** 必要があります。
 
 「 **[!UICONTROL 設定]** 」(Setup)ステップで、新しい保存先の名前と説明、および書き出すファイルのファイル形式を入力します。
 
