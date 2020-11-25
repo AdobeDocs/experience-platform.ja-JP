@@ -5,19 +5,17 @@ title: Flow Service APIを使用したクラウドストレージシステムの
 topic: overview
 description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムを調査します。
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '697'
-ht-degree: 17%
+source-wordcount: '745'
+ht-degree: 15%
 
 ---
 
 
 # APIを使用したクラウドストレージシステムの調査 [!DNL Flow Service]
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
-
-このチュートリアルでは、 [!DNL Flow Service] APIを使用してサードパーティのクラウドストレージシステムを調査します。
+このチュートリアルでは、 [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) (サードパーティのクラウドストレージシステム)を使用して調査します。
 
 ## はじめに
 
@@ -28,14 +26,16 @@ ht-degree: 17%
 
 The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage system using the [!DNL Flow Service] API.
 
-### ベース接続の取得
+### 接続IDの取得
 
-APIを使用してサードパーティのクラウドストレージを調査するに [!DNL Platform] は、有効なベース接続IDが必要です。 操作するストレージの基本接続がまだない場合は、次のチュートリアルを使用して作成できます。
+APIを使用してサードパーティのクラウドストレージを調査するに [!DNL Platform] は、有効な接続IDが必要です。 操作するストレージにまだ接続していない場合は、次のチュートリアルを使用して接続を作成できます。
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure BLOB](../create/cloud-storage/blob.md)
 * [Azure Data LakeストレージGen2](../create/cloud-storage/adls-gen2.md)
+* [Azure Fileストレージ](../create/cloud-storage/azure-file-storage.md)
 * [Google Cloud Store](../create/cloud-storage/google.md)
+* [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
 
 ### API 呼び出し例の読み取り
@@ -46,21 +46,21 @@ APIを使用してサードパーティのクラウドストレージを調査�
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## クラウドストレージの利用
 
-クラウドストレージの基本接続を使用して、GETリクエストを実行することで、ファイルやディレクトリを調べることができます。 クラウドストレージを調査するためのGETリクエストを実行する場合は、次の表に示すクエリパラメーターを含める必要があります。
+クラウドストレージの接続IDを使用して、GETリクエストを実行することで、ファイルやディレクトリを調べることができます。 クラウドストレージを調査するためのGETリクエストを実行する場合は、次の表に示すクエリパラメーターを含める必要があります。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
@@ -72,20 +72,20 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 **API 形式**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
+GET /connections/{CONNECTION_ID}/explore?objectType=root
+GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
 ```
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | クラウドストレージベースの接続のID。 |
+| `{CONNECTION_ID}` | クラウドストレージソースコネクタの接続ID。 |
 | `{PATH}` | ディレクトリのパス。 |
 
 **リクエスト**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -113,25 +113,30 @@ curl -X GET \
 
 ## ファイルの構造をInspectにする
 
-クラウドストレージーからGETファイルの構造を検査するには、ファイルのパスをクエリーパラメーターとして指定しながら、データリクエストを実行します。
+クラウドストレージーからGETファイルの構造を検査するには、ファイルのパスを指定し、クエリーパラメーターとして入力しながらデータリクエストを実行します。
+
+カスタムの区切り文字をクエリの枠として指定することで、CSVまたはTSVファイルの構造を調べることができます。 任意の1文字の値は、列の区切り文字として使用できます。 指定しない場合、コンマ `(,)` がデフォルト値として使用されます。
 
 **API 形式**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
 ```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `{BASE_CONNECTION_ID}` | クラウドストレージベースの接続のID。 |
-| `{FILE_PATH}` | ファイルへのパス。 |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | クラウドストレージソースコネクタの接続ID。 |
+| `{FILE_PATH}` | 検査するファイルへのパスです。 |
 | `{FILE_TYPE}` | ファイルの種類です。 次のファイルタイプがサポートされています。<ul><li>区切り文字</code>:区切り文字区切り値。 DSVファイルはコンマで区切る必要があります。</li><li>JSON</code>:JavaScriptオブジェクト表記を参照してください。 JSONファイルはXDMに準拠している必要があります</li><li>パーケ</code>:Apacheパーケー。 パーケファイルはXDMに準拠している必要があります。</li></ul> |
+| `columnDelimiter` | CSVファイルまたはTSVファイルを検査するための列区切り文字として指定した1文字の値。 パラメーターを指定しない場合、値のデフォルトはコンマで `(,)`す。 |
 
 **リクエスト**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
