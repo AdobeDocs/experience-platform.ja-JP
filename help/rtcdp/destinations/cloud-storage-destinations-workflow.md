@@ -6,10 +6,10 @@ type: Tutorial
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 7903d6c715747dfc298a5e4a4615d8ecbbe5d359
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 57%
+source-wordcount: '566'
+ht-degree: 56%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 57%
    >
    >この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](/help/rtcdp/destinations/destinations-workspace.md#catalog) 」セクションを参照してください。
 
-2. クラウドストレージの宛先への接続を既に設定している場合は、**[!UICONTROL 認証]**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新しいアカウント]**」を選択して、クラウドストレージの宛先への新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。必要に応じて、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 この公開鍵は、Base64エンコードされた文字列 **として書き込む** 必要があります。 <br> 認証手順の秘密鍵証明書の入力について詳しくは、 [AmazonS3](/help/rtcdp/destinations/amazon-s3-destination.md) 宛先、宛先、 [[!DNL Amazon Kinesis]](/help/rtcdp/destinations/amazon-kinesis-destination.md) 宛先、 [[!DNL Azure Event Hubs]](/help/rtcdp/destinations/azure-event-hubs-destination.md) SFTP [宛先を参照して](/help/rtcdp/destinations/sftp-destination.md)**** ください。
+2. クラウドストレージの宛先への接続を既に設定している場合は、**[!UICONTROL 認証]**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新しいアカウント]**」を選択して、クラウドストレージの宛先への新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。必要に応じて、 **[!UICONTROL Encryption PGP/GPG]** （暗号化PGP/GPG）セクションでは、RSA形式の公開鍵を添付して、PGP/GPGを使用した暗号化をエクスポートファイルに追加できます。 この公開鍵は、Base64エンコードされた文字列 **として書き込む** 必要があります。 <br> 認証手順の秘密鍵証明書の入力について詳しくは、 [AmazonS3](/help/rtcdp/destinations/amazon-s3-destination.md) 宛先、宛先、 [[!DNL Amazon Kinesis]](/help/rtcdp/destinations/amazon-kinesis-destination.md) 宛先、 [[!DNL Azure Event Hubs]](/help/rtcdp/destinations/azure-event-hubs-destination.md) SFTP [宛先を参照して](/help/rtcdp/destinations/sftp-destination.md)**** ください。
 
    >[!NOTE]
    >
