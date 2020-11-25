@@ -6,9 +6,9 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、リアルタイム顧客データプラットフォームでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、リアルタイム顧客データプラットフォームでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
+source-git-commit: 5928242537acdb1f130a0e8ac1bca3f14c184c6a
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1722'
 ht-degree: 20%
 
 ---
@@ -127,14 +127,6 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >ソーシャルの宛先の場合は、この手順でオーディエンスの接触チャネルを選択する必要があります。次の手順に進むには、まず次の画像のオプションのいずれかを選択してください。
 
 ![データ接触チャネルの選択](./assets/choose-data-origin.png)
-
-### **[!UICONTROL スケジュール]** 手順 {#scheduling}
-
-適用先：電子メールマーケティングの宛先とクラウドストレージの宛先
-
-![セグメントスケジュールの手順](./assets/scheduling-icon.png)
-
-On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. これらの値は編集できません。
 
 ### **[!UICONTROL 属性の選択]** 手順 {#select-attributes}
 
