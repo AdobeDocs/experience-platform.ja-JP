@@ -5,10 +5,10 @@ description: Experience Platform Web SDK のイベントのトラッキング方
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 53%
+source-wordcount: '1331'
+ht-degree: 46%
 
 ---
 
@@ -43,6 +43,35 @@ alloy("sendEvent", {
   }
 });
 ```
+
+コマンドが実行されてからデータがサーバーに送信されるまでに時間がかかる場合があります（例えば、Web SDKライブラリが完全に読み込まれていない場合や、同意がまだ受け取られていない場合）。 `sendEvent` コマンドの実行後に `xdm` オブジェクトの一部を変更する場合は、コマンドの実行 `sendEvent` 前にオブジェクトのクローンを作成するこ `xdm` とを強くお勧めし __`sendEvent` ます。 次に例を示します。
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+この例では、データレイヤーをJSONにシリアル化して複製し、その後デシリアライズします。 次に、コピーされた結果が `sendEvent` コマンドに渡されます。 これにより、 `sendEvent``sendEvent` コマンドの実行時に存在したデータレイヤーのスナップショットが確実に作成され、元のデータレイヤーオブジェクトに対する後の変更がサーバーに送信されるデータに反映されなくなります。 イベント主導型のデータレイヤーを使用している場合は、データのクローン作成は既に自動的に処理されている可能性があります。 例えば、 [Adobe・クライアント・データ・レイヤーを使用している場合](https://github.com/adobe/adobe-client-data-layer/wiki)`getState()` 、計算済みのクローン・スナップショットが、以前のすべての変更のスナップショットとして提供されます。 また、AEP Web SDK Launch拡張を使用している場合は、これも自動的に処理されます。
 
 >[!NOTE]
 >
