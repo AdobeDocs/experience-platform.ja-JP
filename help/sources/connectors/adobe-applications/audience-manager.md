@@ -5,10 +5,10 @@ title: Audience Manager コネクタ
 topic: overview
 description: Adobe Audience Manager データコネクタは、Adobe Audience Manager で収集されたファーストパーティデータを Adobe Experience Platform にストリーミングします。Audience Managerコネクタは、3つのカテゴリのデータをプラットフォームに取り込みます。
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 4ab5c3a8f9dbecc27686c7ce7db4f66ac18c2d2a
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 87%
+source-wordcount: '798'
+ht-degree: 59%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 87%
 
 Adobe Audience Manager データコネクタは、Adobe Audience Manager で収集されたファーストパーティデータを Adobe Experience Platform にストリーミングします。Audience Manager コネクタは、次の 3 つのカテゴリのデータを Platform に取り込みます。
 
-- **リアルタイムデータ**：Audience Manager のデータ収集サーバーでリアルタイムにキャプチャされるデータです。このデータは、Audience Manager でルールベースの特性に入力するために使用され、最短の待ち時間で Platform に表示されます。
-- **プロファイルデータ**：Audience Manager では、リアルタイムのオンボードデータを使用して、顧客プロファイルを導き出します。これらのプロファイルは、セグメント認識で ID グラフと特性への入力に使用されます。
+- **リアルタイムデータ：** Audience Managerのデータ収集サーバーでリアルタイムに取り込まれるデータ。 このデータは、Audience Manager でルールベースの特性に入力するために使用され、最短の待ち時間で Platform に表示されます。
+- **プロファイルデータ：** Audience Managerでは、リアルタイムのオンボードデータを使用して顧客のプロファイルを引き出します。 これらのプロファイルは、セグメント認識で ID グラフと特性への入力に使用されます。
 
 Audience Manager コネクタは、これらのデータカテゴリをエクスペリエンスデータモデル（XDM）スキーマにマッピングし、プラットフォームに送信します。リアルタイムデータはXDM ExperienceEventデータとして送信され、プロファイルデータはXDM Individualプロファイルとして送信されます。
 
@@ -36,7 +36,7 @@ For more information about how XDM is used in Experience Platform, see the [XDM 
 
 Platform で XDM ExperienceEvent および XDM 個別プロファイルにマッピングされる Audience Manager 構造の例を以下に示します。
 
-### ExperienceEvent - リアルタイムデータおよびオンボードデータの場合
+### ExperienceEvent — リアルタイムデータおよびオンボードデータ用
 
 ![](images/aam-experience-events-for-dcs-and-onboarding-data.png)
 
@@ -52,18 +52,18 @@ Platform で XDM ExperienceEvent および XDM 個別プロファイルにマッ
 
 ### データセット
 
-データセットは、スキーマ（列）とフィールド（行）を含み、データ接続で使用できるデータのコレクション（通常はテーブル）のストレージと管理の構成体です。Audience Manager のデータは、リアルタイムデータ、インバウンドデータ、プロファイルデータで構成されます。Audience Manager のデータセットを検索するには、UI の検索機能を使用し、各データタイプの命名規則を指定します。
+データセットは、スキーマ（列）とフィールド（行）を含み、データ接続で使用できるデータのコレクション（通常はテーブル）のストレージと管理の構成体です。Audience Managerデータは、リアルタイムデータ、受信データ、プロファイルデータで構成されます。 Audience Manager のデータセットを検索するには、UI の検索機能を使用し、各データタイプの命名規則を指定します。
 
 Audience Managerデータセットはデフォルトでプロファイルに対して無効になっており、ユーザーは使用事例に基づいてデータセットを有効または無効にすることができます。 プロファイルのセグメントメンバーシップに使用するデータセットを無効にすることはお勧めしません。
 
 | データセット名 | 説明 |
 | ------------ | ----------- |
-| Audience Manager リアルタイム | このデータセットには、Audience Manager DCS エンドポイントで直接ヒットによって収集されたデータと、Audience Manager プロファイルの ID マップが含まれています。このデータセットを有効な状態にして、プロファイルの取り込みをおこないます。 |
-| Audience Manager リアルタイムプロファイル更新 | このデータセットを使用すると、Audience Manager の特性とセグメントをリアルタイムでターゲティングできます。これには、エッジ地域ルーティング、特性、セグメントメンバーシップに関する情報が含まれています。このデータセットを有効な状態にして、プロファイルの取り込みをおこないます。 |
-| Audience Manager デバイスデータ | ECID を持つデバイスデータと対応するセグメント認識を Audience Manager で集計したもの。 |
-| Audience Manager デバイスプロファイルデータ | Audience Manager コネクタの診断に使用されます。 |
-| Audience Manager 認証済みプロファイル | このデータセットには、Audience Manager で認証されたプロファイルが含まれています。 |
-| Audience Manager 認証済みプロファイルメタデータ | Audience Manager コネクタの診断に使用されます。 |
+| Audience Managerリアルタイム | このデータセットには、Audience Manager DCS エンドポイントで直接ヒットによって収集されたデータと、Audience Manager プロファイルの ID マップが含まれています。このデータセットを有効な状態にして、プロファイルの取り込みをおこないます。 |
+| Audience Managerのリアルタイムプロファイル更新 | このデータセットは、Audience Managerの特性とセグメントをリアルタイムでターゲティングできるようにします。 これには、エッジ地域ルーティング、特性、セグメントメンバーシップに関する情報が含まれています。このデータセットを有効な状態にして、プロファイルの取り込みをおこないます。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
+| Audience Manager デバイスデータ | ECID を持つデバイスデータと対応するセグメント認識を Audience Manager で集計したもの。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
+| Audience Manager デバイスプロファイルデータ | Audience Manager コネクタの診断に使用されます。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
+| Audience Manager 認証済みプロファイル | このデータセットには、Audience Manager で認証されたプロファイルが含まれています。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
+| Audience Manager 認証済みプロファイルメタデータ | Audience Manager コネクタの診断に使用されます。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
 
 ### 接続
 
@@ -73,6 +73,5 @@ Adobe Audience Manager では、Audience Manager 接続という 1 つの接続�
 
 | Audience Manager データ | 遅延 | 備考 |
 | --- | --- | --- |
-| リアルタイムデータ | 35 分未満 | リアルタイムノードでキャプチャされてから Platform データレイクに表示されるまでの時間です。 |
-| インバウンドデータ | 13 時間未満 | S3 バケットでキャプチャされてから Platform データレイクに表示されるまでの時間です。 |
-| プロファイルデータ | 2 日未満 | リアルタイム／インバウンドデータから取り込まれてから、ユーザープロファイルに追加されて最終的に Platform データレイクに表示されるまでの時間です。 |
+| リアルタイムデータ | 35 分未満 | Audience Managerエッジノードでキャプチャされてから、プラットフォームデータレイクに表示されるまでの時間。 |
+| プロファイルデータ | 2 日未満 | DCS/PCSエッジデータとオンボードデータを介して取り込まれ、ユーザープロファイルに処理されてから、プロファイルに表示されるまでの時間。 このデータは、プラットフォームデータレイクに直接送信されるわけではありません。 プロファイルの切り替えは、Audience Managerプロファイルデータセットで有効にして、このデータを直接プロファイルに取り込むことができます。 |
