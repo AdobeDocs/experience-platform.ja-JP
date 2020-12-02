@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ソース・ワークスペースから既存のアカウントとデータ・フローを表示する手順を説明します。
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ソース・ワークスペースから既存のデータ・フローを表示する手順を説明します。
 solution: Experience Platform
-title: アカウントとデータフローの監視
+title: データフローの監視
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 5%
+source-wordcount: '822'
+ht-degree: 7%
 
 ---
 
 
-# UIでのアカウントとデータの監視
+# UIのデータフローの監視
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、 [!UICONTROL ソース] ・ワークスペースから既存のアカウントとデータ・フローを表示する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、 [!UICONTROL ソース] ・ワークスペースから既存のデータ・フローを表示する手順を説明します。
 
 ## はじめに
 
@@ -27,53 +27,9 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
    - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-## アカウントの監視
-
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 「 **[!UICONTROL カタログ]** 」画面には、アカウントおよびデータフローを作成できる様々なソースが表示されます。 各ソースには、関連付けられた既存のアカウントおよびデータフローの数が表示されます。
-
-上部のヘッダーから「 **[!UICONTROL アカウント]** 」を選択して、既存のアカウントを表示します。
-
-![カタログ](../../images/tutorials/monitor/catalog-accounts.png)
-
-[ **[!UICONTROL アカウント]** ]ページが表示されます。 このページには、ソース、ユーザー名、データ・フロー数、作成日など、表示可能なアカウントのリストが表示されます。
-
-左上のファネルアイコンを選択して、並べ替えウィンドウを開きます。
-
-![アカウント](../../images/tutorials/monitor/accounts-list.png)
-
-並べ替えパネルを使用すると、特定のソースのアカウントにアクセスできます。 操作するソースを選択し、右側のリストからアカウントを選択します。
-
->[!TIP]
->
-> 「 ![名前](../../images/tutorials/monitor/spectrum-control.png) 」列の「 **[!UICONTROL スペクトル制御]** 」ボタンを使用して、選択したアカウントの新しいソースデータフローを作成します。
-
-![アカウントを選択](../../images/tutorials/monitor/accounts-sort.png)
-
-また、既存のアカウント情報を編集し、アカウント資格情報を更新することもできます。 編集するアカウント情報の鉛筆アイコンを選択します。
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-「アカウントの **[!UICONTROL 詳細を編集]** 」モーダルが表示されます。 このページから、既存のアカウントの詳細と認証資格情報を更新できます。
-
->[!NOTE]
->
-> アカウントの詳細の編集は、すべてのバッチソースコネクタで可能です。
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-「 **[!UICONTROL アカウント]** 」ページから、アクセスしたアカウントに関連付けられた既存のデータフローまたはターゲットデータセットのリストを表示できます。 「三点リーダー(`...`)」ボタンを選択し、選択したデータフローで使用可能なオプションを表示します。 これらのオプションについては、以下で詳しく説明します。
-
-| 制御 | 説明 |
-| ------- | ----------- |
-| [!UICONTROL スケジュールを編集] | データフローのインジェストスケジュールを編集できます。 |
-| [!UICONTROL データフローの無効化] | 選択したデータフローのデータ取り込みを無効にできます。 |
-| [!UICONTROL 削除] | 選択したデータフローを削除できます。 |
-
-![データフロー](../../images/tutorials/monitor/dataflows.png)
-
 ## データフローの監視
 
-データ・フローは、 **[!UICONTROL アカウントを表示せずに、]** カタログ **[!UICONTROL ・ページから直接アクセスできます]**。 上部ヘッダーから **[!UICONTROL データフローを選択し]** 、データフローのリストを表示します。
+「 [Experience PlatformUIにログイン」にログインし](https://platform.adobe.com) 、左側のナビゲーションから「 **[!UICONTROL ソース]** 」を選択して [!UICONTROL ソース] ワークスペースにアクセスします。 上部のヘッダーから **[!UICONTROL データフローを選択し]** 、既存のデータフローを表示します。
 
 ![カタログ・データ・フロー](../../images/tutorials/monitor/catalog-dataflows.png)
 
