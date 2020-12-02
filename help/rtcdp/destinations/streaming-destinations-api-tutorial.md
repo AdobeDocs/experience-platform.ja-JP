@@ -5,10 +5,10 @@ title: ストリーミング送信先への接続とデータのアクティブ�
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
+source-git-commit: f12b400ca95e23d8e6ac282fafa8f4bb141d703a
 workflow-type: tm+mt
-source-wordcount: '1870'
-ht-degree: 59%
+source-wordcount: '2012'
+ht-degree: 54%
 
 ---
 
@@ -592,6 +592,31 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
   }
 }
 ```
+
+## Postmanコレクションを使用したストリーミング先への接続  {#collections}
+
+このチュートリアルで説明するストリーミング送信先に接続する方法を、より合理化した方法で使用でき [[!DNL Postman]](https://www.postman.com/)ます。
+
+[!DNL Postman] は、API呼び出しを行い、定義済みの呼び出しと環境のライブラリを管理するのに使用できるツールです。
+
+このチュートリアルでは、この記事に添付された次の [!DNL Postman] コレクションを紹介します。
+
+* [!DNL AWS Kinesis] [!DNL Postman] collection
+* [!DNL Azure Event Hubs] [!DNL Postman] collection
+
+コレクションのアーカイブをダウンロードするに [は](assets/DestinationPostmanCollection.zip) 、ここをクリックします。
+
+各コレクションには、必要なリクエストと環境変数が含まれ、各リクエスト [!DNL AWS Kinesis]には、および [!DNL Azure Event Hub]の変数が含まれます。
+
+### Postmanコレクションの使用方法
+
+添付されたコレクションを使用して宛先に正常に接続するには、次の手順に従い [!DNL Postman] ます。
+
+* Download and install [!DNL Postman];
+* [添付されたコレクションをダウンロード](assets/DestinationPostmanCollection.zip) 、解凍します。
+* 対応するフォルダーからPostmanにコレクションを読み込みます。
+* この記事の手順に従って、環境変数を入力します。
+* この記事の手順に基づいて、Postmanからの [!DNL API] 要求を実行します。
 
 ## 次の手順
 
