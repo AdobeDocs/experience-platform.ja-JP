@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
+source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 8%
@@ -206,7 +206,8 @@ ht-degree: 8%
       - [支払コネクタのデータフローの構成](tutorials/ui/dataflow/payments.md)
       - [プロトコルコネクタのデータフローの設定](tutorials/ui/dataflow/protocols.md)
    - [受信データをアクティブ化して顧客プロファイルを入力します](tutorials/ui/profile.md)
-   - [アカウントとデータフローの監視](tutorials/ui/monitor.md)
+   - [データフローの監視](tutorials/ui/monitor.md)
+   - [アカウントの更新](tutorials/ui/update.md)
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローの削除](tutorials/ui/delete.md)
 - [フロー実行通知](notifications.md)
