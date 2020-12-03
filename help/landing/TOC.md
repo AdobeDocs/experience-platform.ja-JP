@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform が、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 72%
+source-wordcount: '399'
+ht-degree: 70%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 72%
    * [Data Science Workspace](https://docs.adobe.com/content/help/ja-JP/experience-platform/data-science-workspace/home.html)
    * [デバッガー](https://docs.adobe.com/content/help/ja-JP/debugger/using/experience-cloud-debugger.html)
    * [Debugger 2.0 (Beta)](https://docs.adobe.com/content/help/ja-JP/debugger/using-v2/experience-cloud-debugger.html)
-   * [宛先](https://docs.adobe.com/content/help/ja-JP/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [宛先](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
    * [ETL（抽出、変換、読み込み）](https://docs.adobe.com/content/help/ja-JP/experience-platform/etl/home.html)
    * [ID サービス](https://docs.adobe.com/content/help/ja-JP/experience-platform/identity/home.html)
    * [インテリジェントサービス](https://docs.adobe.com/content/help/ja-JP/experience-platform/intelligent-services/home.html)
