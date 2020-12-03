@@ -5,7 +5,7 @@ title: Audience Manager コネクタ
 topic: overview
 description: Adobe Audience Manager データコネクタは、Adobe Audience Manager で収集されたファーストパーティデータを Adobe Experience Platform にストリーミングします。Audience Managerコネクタは、3つのカテゴリのデータをプラットフォームに取り込みます。
 translation-type: tm+mt
-source-git-commit: 4ab5c3a8f9dbecc27686c7ce7db4f66ac18c2d2a
+source-git-commit: e51f750dae2a76cd05076edfe8c6423efe949891
 workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 59%
@@ -74,4 +74,4 @@ Adobe Audience Manager では、Audience Manager 接続という 1 つの接続�
 | Audience Manager データ | 遅延 | 備考 |
 | --- | --- | --- |
 | リアルタイムデータ | 35 分未満 | Audience Managerエッジノードでキャプチャされてから、プラットフォームデータレイクに表示されるまでの時間。 |
-| プロファイルデータ | 2 日未満 | DCS/PCSエッジデータとオンボードデータを介して取り込まれ、ユーザープロファイルに処理されてから、プロファイルに表示されるまでの時間。 このデータは、プラットフォームデータレイクに直接送信されるわけではありません。 プロファイルの切り替えは、Audience Managerプロファイルデータセットで有効にして、このデータを直接プロファイルに取り込むことができます。 |
+| プロファイルデータ | 2 日未満 | DCS/PCSエッジデータとオンボードデータを介して取り込まれ、ユーザープロファイルに処理されてから、プロファイルに表示されるまでの時間。 このデータは、プラットフォームデータレイクに直接送信されるわけではありません。 プロファイルの切り替えを有効にすると、Audience Managerプロファイルデータセットでこのデータを直接プロファイルに取り込むことができます。 |
