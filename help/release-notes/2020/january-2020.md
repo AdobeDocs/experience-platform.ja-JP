@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '894'
-ht-degree: 71%
+source-wordcount: '880'
+ht-degree: 70%
 
 ---
 
@@ -19,10 +19,10 @@ ht-degree: 71%
 
 Adobe Experience Platform の既存の機能のアップデート：
 
-* [[!DNL Experience Data Model (XDM)システム]](#xdm)
-* [[!DNLPrivacy Service]](#privacy)
-* [[!DNLソース]](#sources)
-* [[!DNL宛先]](#destinations)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
+* [[!DNL Destinations]](#destinations)
 
 ## [!DNL Experience Data Model] (XDM)システム {#xdm}
 
@@ -92,7 +92,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 ## 宛先 {#destinations}
 
-[アドビのリアルタイム CDP](../../rtcdp/overview.md) では、宛先は、宛先プラットフォームとの事前定義済みの統合であり、それらのパートナーに対するデータをシームレスにアクティブ化します。
+In [Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **新機能**
 
@@ -112,4 +112,4 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 * なし
 
-詳しくは、「[宛先の概要](../../rtcdp/destinations/destinations-overview.md)」を参照してください。
+詳しくは、「[宛先の概要](../../destinations/home.md)」を参照してください。
