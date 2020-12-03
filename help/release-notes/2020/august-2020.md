@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 23%
 
 ---
@@ -46,14 +46,14 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | 宛先 | 説明 |
 |--- | ---|
-| [!DNL Google Customer Match] | Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営する次のようなプロパティを通じて顧客に連絡し、顧客と再び関与させることができます。 [!DNL Search]、 [!DNL Shopping]、Gmail、YouTubeの3つを追加しました。 <br><br> 宛先カタログの [!DNL Google Customer Match][ページにアクセスし](/help/rtcdp/destinations/google-customer-match-destination.md) 、AdobeReal-time CDPでの宛先とその設定方法の詳細を確認します。 |
+| [!DNL Google Customer Match] | Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営する次のようなプロパティを通じて顧客に連絡し、顧客と再び関与させることができます。 [!DNL Search]、 [!DNL Shopping]、Gmail、YouTubeの3つを追加しました。 <br><br> 宛先カタログの [!DNL Google Customer Match][ページにアクセスし](../../destinations/catalog/advertising/google-customer-match.md) 、リアルタイムCDPでの宛先の詳細とセットアップ方法を確認します。 |
 
 **新機能**
 
 | 機能 | 説明 |
 |------- | -----------|
-| カスタムファイル名エディタ | 電子メールマーケティングの宛先と、エクスポートされたファイルの名前を編集できるクラウドストレージの宛先に関するデータアクティベーションワークフローに更新します。 詳しくは、アクティベーションワークフローの [ 設定手順](/help/rtcdp/destinations/activate-destinations.md#configure) を参照してください。 |
-| 推奨属性 | 電子メールマーケティングの宛先および推奨属性を表示するクラウドのストレージ先のデータアクティベーションワークフローを更新し、書き出されたファイルに追加します。 詳しくは、アクティベーションワークフローの「属性を [選択](/help/rtcdp/destinations/activate-destinations.md#select-attributes) 」の手順を参照してください。 |
+| カスタムファイル名エディタ | 電子メールマーケティングの宛先と、エクスポートされたファイルの名前を編集できるクラウドストレージの宛先に関するデータアクティベーションワークフローに更新します。 詳しくは、アクティベーションワークフローの [ 設定手順](../../destinations/ui/activate-destinations.md#configure) を参照してください。 |
+| 推奨属性 | 電子メールマーケティングの宛先および推奨属性を表示するクラウドのストレージ先のデータアクティベーションワークフローを更新し、書き出されたファイルに追加します。 詳しくは、アクティベーションワークフローの「属性を [選択](../../destinations/ui/activate-destinations.md#select-attributes) 」の手順を参照してください。 |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
