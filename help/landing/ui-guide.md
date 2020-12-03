@@ -5,7 +5,7 @@ title: Adobe Experience PlatformUIガイド
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1597'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Adobe Experience Platformにログインすると、 [!UICONTROL ホーム] ペ�
 
 「 **[!UICONTROL セグメント]** 」セクションには、IMS組織内で作成されたセグメントの合計数が表示されます。 この数値は、新しいセグメントが作成されると更新されます。 セグメントについて詳しくは、 [Segmentation Serviceの概要を参照してください](../segmentation/home.md)。
 
-The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. 新しい宛先が作成されると、この番号が更新されます。 宛先について詳しくは、 [宛先の概要を参照してください](../rtcdp/destinations/destinations-overview.md)。
+The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. 新しい宛先が作成されると、この番号が更新されます。 宛先について詳しくは、 [宛先の概要を参照してください](../destinations/home.md)。
 
 ### 最近のデータ
 
@@ -51,7 +51,7 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 「 **[!UICONTROL 最近のセグメント]** 」セクションには、IMS組織内で最も新しく作成された5つのセグメント定義がリストされます。 このリストは、新しいセグメント定義が作成されるたびに更新されます。 リストからセグメント定義を選択して、指定したセグメント定義の詳細を表示するか、「 **[!UICONTROL 表示すべて]** 」を選択して、作成したすべてのセグメント定義のリストを確認できます。 セグメントについて詳しくは、 [Segmentation Serviceの概要を参照してください](../segmentation/home.md)。
 
-「 **[!UICONTROL Recent destinations]** 」セクションには、IMS組織内で最も最近作成された5つの宛先がリストされます。 このリストは、新しい宛先が作成されるたびに更新されます。 リストから表示への宛先を選択して、指定した宛先に関する詳細を表示するか、「 **[!UICONTROL 表示すべて]** 」を選択して、作成したすべての宛先のリストを表示できます。 宛先について詳しくは、 [宛先の概要を参照してください](../rtcdp/destinations/destinations-overview.md)。
+「 **[!UICONTROL Recent destinations]** 」セクションには、IMS組織内で最も最近作成された5つの宛先がリストされます。 このリストは、新しい宛先が作成されるたびに更新されます。 リストから表示への宛先を選択して、指定した宛先に関する詳細を表示するか、「 **[!UICONTROL 表示すべて]** 」を選択して、作成したすべての宛先のリストを表示できます。 宛先について詳しくは、 [宛先の概要を参照してください](../destinations/home.md)。
 
 ### 推奨される学習
 
@@ -117,7 +117,7 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 「 **[!UICONTROL ソース]** 」セクションでは、ソース接続を作成、更新、および削除でき、外部ソースのデータをプラットフォームに取り込むことができます。 ソースの詳細については、「 [ソースの概要](../sources/home.md)」を参照してください。
 
-「 **[!UICONTROL 宛先]** 」セクションでは、宛先を作成、更新および削除でき、プラットフォームから多くの外部宛先にデータをエクスポートできます。 宛先について詳しくは、 [宛先の概要を参照してください](../rtcdp/destinations/destinations-overview.md)。
+「 **[!UICONTROL 宛先]** 」セクションでは、宛先を作成、更新および削除でき、プラットフォームから多くの外部宛先にデータをエクスポートできます。 宛先について詳しくは、 [宛先の概要を参照してください](../destinations/home.md)。
 
 ### [!UICONTROL 顧客]
 
