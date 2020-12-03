@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 24%
@@ -126,7 +126,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 | ファイルスケジュール | 電子メールベースのスナップショットとクラウドベースのストレージのどちらの場合でも、1回限りの書き出しを作成したり、毎日のスナップショットを作成したりできます。 |
 | 必須フィールド | ユーザーは、必須フィールドをマークできます。必須フィールドを含むフィールドのみが書き出されるようにします。 |
 
-詳しくは、『[宛先の概要](../../rtcdp/destinations/destinations-overview.md)』を参照してください。
+詳しくは、『[宛先の概要](../../destinations/home.md)』を参照してください。
 
 ## インテリジェントサービス {#intelligent-services}
 
