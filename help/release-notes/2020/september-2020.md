@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 27%
@@ -47,9 +47,9 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| UXの強化 | ユーザーはインラインテーブルアクションにアクセスでき、データの追加、スケジュールの編集、セグメントの追加などの主なアクションに簡単にアクセスできます。 See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
+| UXの強化 | ユーザーはインラインテーブルアクションにアクセスでき、データの追加、スケジュールの編集、セグメントの追加などの主なアクションに簡単にアクセスできます。 See the [destinations workspace](../../destinations/ui/destinations-workspace.md) document for more information. |
 
-詳しくは、[宛先の概要](../../rtcdp/destinations/destinations-overview.md)を参照してください。
+詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## [!DNL Observability Insights] {#observability}
 
@@ -59,7 +59,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | 機能 | 説明 |
 | --- | --- |
-| AdobeI/Oイベント通知 | [!DNL Observability Insights] adobeI/Oイベントを利用して、いくつかのExperience Platformサービスのイベント通知を作成します。 通知ペイロードは、設定済みのWebフックに送信され、このフックを使用して、下流のプロセスをさらに自動化できます。 See the [notifications overview](../../observability/notifications/overview.md) for more information. |
+| Adobe I/Oイベント通知 | [!DNL Observability Insights] adobe i/oイベントを利用して、複数のExperience Platformサービス向けのイベント通知を作成します。 通知ペイロードは、設定済みのWebフックに送信され、このフックを使用して、下流のプロセスをさらに自動化できます。 See the [notifications overview](../../observability/notifications/overview.md) for more information. |
 
 See the [[!DNL Observability Insights] overview](../../observability/home.md) for more information on the service.
 
