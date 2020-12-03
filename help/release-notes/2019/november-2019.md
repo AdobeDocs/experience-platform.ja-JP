@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 67%
@@ -65,7 +65,7 @@ For more information, see the [Real-time Customer Data Platform documentation](.
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] は、Adobeのリアルタイム顧客データプラットフォームがサポートする目的のプラットフォームとの事前に構築された統合です。この統合により、パートナーに対するデータのアクティブ化がシームレスに行われます。 詳しくは、「[宛先の概要](../../rtcdp/destinations/destinations-overview.md)」の記事を参照してください。
+[!DNL Destinations] は、Adobeのリアルタイム顧客データプラットフォームがサポートする目的のプラットフォームとの事前に構築された統合です。この統合により、パートナーに対するデータのアクティブ化がシームレスに行われます。 詳しくは、「[宛先の概要](../../destinations/home.md)」の記事を参照してください。
 
 **使用可能な宛先**
 
@@ -74,12 +74,12 @@ For more information, see the [Real-time Customer Data Platform documentation](.
 * 広告: [!DNL Google]
 * 電子メールマーケティング：Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-各宛先について詳しくは、「[宛先カタログ](../../rtcdp/destinations/destinations-catalog.md)」を参照してください。
+各宛先について詳しくは、「[宛先カタログ](../../destinations/catalog/overview.md)」を参照してください。
 
 **既知の制限事項**
 
-* 初期リリースでは、[アクティベーションフロー](../../rtcdp/destinations/activate-destinations.md#activate-data)（スケジュール手順）のカスタムアクティベーションスケジュールを許可するコントロールは使用できません。
-* 現在、宛先設定を編集または削除する方法はありません。この制限を回避するには、[宛先の詳細ページ](../../rtcdp/destinations/destination-details-page.md)の右上にある宛先を有効または無効にします。
+* 初期リリースでは、[アクティベーションフロー](../../destinations/ui/activate-destinations.md#activate-data)（スケジュール手順）のカスタムアクティベーションスケジュールを許可するコントロールは使用できません。
+* 現在、宛先設定を編集または削除する方法はありません。この制限を回避するには、[宛先の詳細ページ](../../destinations/ui/destination-details-page.md)の右上にある宛先を有効または無効にします。
 * 現在、宛先またはストレージアカウントに接続する際に、アカウントの詳細、パス、または資格情報は検証されません。正しい資格情報を入力していることを確認し、スペルミスや入力ミスをもう一度確認してください。
 * 初期リリースでは、資格情報の更新は行われません。アカウントの有効期限が切れるか、更新が必要な場合は、新しい宛先接続を作成し、以前にマッピングしたセグメントを再マッピングする必要があります。
 
