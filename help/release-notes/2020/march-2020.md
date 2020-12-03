@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 60%
 
 ---
@@ -77,10 +77,10 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | 宛先 | 説明 |
 |--- | ---|
-| クラウドストレージの宛先 | Adobe Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. これにより、オーディエンスとそのプロファイル属性を CSV またはタブ区切りファイル経由で内部システムに送信できます。 |
-| 広告の宛先 | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
+| クラウドストレージの宛先 | Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. これにより、オーディエンスとそのプロファイル属性を CSV またはタブ区切りファイル経由で内部システムに送信できます。 |
+| 広告の宛先 | リアルタイム [!DNL Google][!DNL Google] CDPで現在サポートされている3つの異なるプラットフォームに対して、デスティネーション・カードが3つのデスティネーション・カードに分割されました。 [!DNL Google Ads]、 [!DNL Google Ad Manager]、 [!DNL Google] 表示、ビデオ360。 |
 
-詳しくは、[宛先の概要](../../rtcdp/destinations/destinations-overview.md)を参照してください。
+詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## [!DNL Identity Service] {#identity}
 
