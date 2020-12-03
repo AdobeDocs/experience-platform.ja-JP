@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 60%
+source-wordcount: '969'
+ht-degree: 58%
 
 ---
 
@@ -94,14 +94,14 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 **新しい宛先**
 
-Adobe Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. 詳しくは、以下を参照してください。
+Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. 詳しくは、以下を参照してください。
 
 | ドキュメント | 説明 |
 |--- | ---|
-| [宛先のタイプとカテゴリ](/help/rtcdp/destinations/destination-types.md) | この記事では、アドビのリアルタイム CDP インターフェイスの接続と拡張機能の違いを説明し、これらの各宛先を使用する場合を推奨します。 |
-| [Experience Platform Launch 拡張機能](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Adobe Real-time CDP. |
+| [宛先のタイプとカテゴリ](../../destinations/destination-types.md) | この記事では、リアルタイムCDPインターフェイスの接続と拡張の違いを説明し、これらの各宛先を使用する場合を推奨します。 |
+| [Experience Platform Launch 拡張機能](../../destinations/catalog/launch-extensions/overview.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Real-time CDP. |
 
-詳しくは、『[宛先の概要](/help/rtcdp/destinations/destinations-overview.md)』を参照してください。
+詳しくは、『[宛先の概要](../../destinations/home.md)』を参照してください。
 
 ## [!DNL Privacy Service] {#privacy}
 
