@@ -5,7 +5,7 @@ title: Segmentation Serviceユーザーガイド
 topic: ui guide
 description: Adobe Experience Platformセグメントサービスは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 translation-type: tm+mt
-source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 24%
@@ -102,7 +102,7 @@ Working with segment definitions requires an understanding of the various [!DNL 
 
 >[!NOTE]
 >
-> 宛先は、で使用できる機能で [!DNL Real-time Customer Data Platform]、データを外部プラットフォームに書き出すことができます。 For more information on destinations, please read the [destinations overview](../../rtcdp/destinations/destinations-overview.md). 宛先へのセグメントのアクティブ化方法を学ぶには、宛先へのセグメントのアクティブ化に関する [ガイドをお読みください](../../rtcdp/destinations/activate-destinations.md)。
+> 宛先は、で使用できる機能で [!DNL Real-time Customer Data Platform]、データを外部プラットフォームに書き出すことができます。 For more information on destinations, please read the [destinations overview](../../destinations/home.md). 宛先へのセグメントのアクティブ化方法を学ぶには、宛先へのセグメントのアクティブ化に関する [ガイドをお読みください](../../destinations/ui/activate-destinations.md)。
 
 ### プロファイルサンプル
 
