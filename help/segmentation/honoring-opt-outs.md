@@ -7,8 +7,8 @@ description: 'Experience Platformを使用すると、顧客は、データの�
 translation-type: tm+mt
 source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 63%
+source-wordcount: '1006'
+ht-degree: 64%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 63%
 
 Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. オプトアウトリクエストを処理する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNLリアルタイム顧客プロファイル]](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [[!DNLAdobe Experience Platformセグメントサービス]](./home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+- [[!DNL Real-time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [[!DNLAdobe Experience Platform Privacy Service]](../privacy-service/home.md):組織が、内部の顧客データに関するデータのプライバシー規制へのコンプライアンスを自動化できるよう支援 [!DNL Platform]します。
+- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md):組織が、内部の顧客データに関するデータのプライバシー規制へのコンプライアンスを自動化できるよう支援 [!DNL Platform]します。
 
 ## オプトアウト mixin 
 
