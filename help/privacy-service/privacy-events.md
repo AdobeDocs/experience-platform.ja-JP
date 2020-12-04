@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # 購読する [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] は、構成されたwebフックに送信されるAdobeI/Oイベントを活用して、効率的なジョブリクエストの自動化を促進する、Adobe Experience Platformが提供するメッセージです。 [!DNL Privacy Service]They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Service Events] は、設定されたwebフックに送信されるAdobe I/Oのイベント [!DNL Privacy Service]を活用して、効率的なジョブリクエストの自動化を容易にする、Adobe Experience Platformから提供されるメッセージです。 They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 現在、プライバシージョブリクエストのライフサイクルに関連する通知には、次の 4 種類があります。
 
