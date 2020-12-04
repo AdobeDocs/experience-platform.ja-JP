@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '579'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -40,7 +40,7 @@ The following sections provide additional information that you will need to know
 | Credential | 説明 |
 | ---------- | ----------- |
 | ホスト | The URL of the [!DNL PayPal] instance. (デフォルト：api.sandbox.paypal.com)。 |
-| クライアントID | アプリケーションに関連付けられているクライアントID [!DNL PayPal] 。 |
+| クライアント ID | アプリケーションに関連付けられているクライアントID [!DNL PayPal] 。 |
 | クライアントシークレット | アプリケーションに関連付けられているクライアントシークレット [!DNL PayPal] です。 |
 | 接続指定ID | 接続を作成するために必要な一意の識別子。 の接続指定ID [!DNL PayPal] は次のとおりです。 `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
