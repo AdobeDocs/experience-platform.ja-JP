@@ -8,8 +8,8 @@ description: このチュートリアルでは、データ取得 API を使用�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '622'
-ht-degree: 75%
+source-wordcount: '613'
+ht-degree: 76%
 
 ---
 
@@ -25,7 +25,7 @@ This tutorial covers steps for retrieving information about a failed batch using
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-- [[!DNLデータ取り込み]](../home.md):データの送信先のメソッド [!DNL Experience Platform]。
+- [[!DNL Data Ingestion]](../home.md):データの送信先のメソッド [!DNL Experience Platform]。
 
 ### API 呼び出し例の読み取り
 
