@@ -7,8 +7,8 @@ seo-description: Responsys は、Oracle が提供するクロスチャネルマ�
 translation-type: tm+mt
 source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 65%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
