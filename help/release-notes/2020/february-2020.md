@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '195'
-ht-degree: 66%
+ht-degree: 70%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 66%
 
 **リリース日：2020 年 2 月 12 日**
 
-Adobe Experience Platform内の既存の機能の更新：
+Adobe Experience Platform の既存の機能のアップデート：
 
 * [ソース](#sources)
 
