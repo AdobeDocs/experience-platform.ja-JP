@@ -7,21 +7,21 @@ author: ens28527
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 43%
+source-wordcount: '532'
+ht-degree: 46%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2019 年 9 月 10 日**
+**リリース日：2019 年 10 月 10 日**
 
-Adobe Experience Platformの既存の機能の更新：
+Adobe Experience Platform の既存の機能のアップデート：
 
-* [[!DNLデータ取り込み]](#ingestion)
+* [[!DNL Data Ingestion]](#ingestion)
 * [[!DNL Data Science Workspace]](#dsw)
-* [[!DNLクエリサービス]](#query)
+* [[!DNL Query Service]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
