@@ -8,7 +8,7 @@ description: 'このドキュメントでは、Experience Platform API を呼び
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '875'
 ht-degree: 43%
 
 ---
@@ -101,7 +101,7 @@ API **** 追加画面が表示されます。 Adobe Experience Platformの製品
 
 APIがプロジェクトに追加されると、 **プロジェクトの概要** ページに、すべてのAPI呼び出しで必要な次の資格情報が表示され [!DNL Experience Platform] ます。
 
-* `{API_KEY}` （クライアントID）
+* `{API_KEY}` (クライアント ID)
 * `{IMS_ORG}` (Organization ID)
 
 ![](./images/authentication/api-key-ims-org.png)
