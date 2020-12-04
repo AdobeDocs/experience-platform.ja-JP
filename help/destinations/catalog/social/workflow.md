@@ -6,7 +6,7 @@ seo-title: ソーシャルネットワークの宛先のワークフロー
 description: ソーシャルネットワーク広告アカウントに接続する手順
 seo-description: ソーシャルネットワーク広告アカウントに接続する手順
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 53%
@@ -38,7 +38,7 @@ In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!U
 
 資格情報が確認され、Adobe Experience Cloud がソーシャルネットワークに接続されたら、「**[!UICONTROL 次へ]**」を選択して&#x200B;**[!UICONTROL 設定]**&#x200B;手順に進むことができます。
 
-![資格情報の確認](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+![資格情報の確認](../../assets/catalog/social/workflow/post-connect.png)
 
 **[!UICONTROL 設定]**&#x200B;手順で、アクティベーションフローの[!UICONTROL 名前]と[!UICONTROL 説明]を入力し、ソーシャルネットワーク広告アカウントの[!UICONTROL アカウント ID] を入力します。
 
