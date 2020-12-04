@@ -8,8 +8,8 @@ description: このチュートリアルでは、Data Science Workspace に組�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1731'
-ht-degree: 83%
+source-wordcount: '1723'
+ht-degree: 84%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 83%
 
 次の概念が導入されています。
 
-- **[!DNL JupyterLab]:**[[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、ジュピタープロジェクトの次世代Webベースのインターフェイスで、に緊密に統合されてい [!DNL Adobe Experience Platform]ます。
+- **[!DNL JupyterLab]:**[[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project Jupyter向けの次世代のWebベースのインターフェースで、と緊密に統合されてい [!DNL Adobe Experience Platform]ます。
 - **バッチ**：データセットはいくつかのバッチで構成されます。バッチとは、一定期間に収集され 1 つの単位として一緒に処理される一連のデータです。データセットにデータが追加されると、新しいバッチが作成されます。
 - **データアクセス SDK（廃止）**：データアクセス SDK は廃止されました。Please use the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide.
 
