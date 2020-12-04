@@ -7,7 +7,7 @@ description: Adobe Experience Platform データガバナンスは、データ�
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '762'
 ht-degree: 39%
 
 ---
@@ -25,7 +25,7 @@ Adobe Experience Platform [!DNL Data Governance] provides a user interface that 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-- [[!DNLデータガバナンス]](../home.md)
+- [[!DNL Data Governance]](../home.md)
 - [データ使用ポリシー](./overview.md)
 
 ## データ使用ポリシーの表示 {#view-policies}
