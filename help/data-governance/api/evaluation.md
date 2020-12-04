@@ -168,7 +168,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `entityType` | IDが兄弟 `entityId` プロパティで示されるエンティティのタイプ。 現在、指定できる値は `dataSet`です。 |
-| `entityId` | マーケティングアクションをテストするデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ま [!DNL Catalog Service] す。 詳細については、 [ [!DNL Catalog] listingobjectsのガイドを参照してください](../../catalog/api/list-objects.md) 。 |
+| `entityId` | マーケティングアクションをテストするデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ま [!DNL Catalog Service] す。 See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 
 **応答** 
 
@@ -416,7 +416,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `entityType` | IDが兄弟 `entityId` プロパティで示されるエンティティのタイプ。 現在、指定できる値は `dataSet`です。 |
-| `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ま [!DNL Catalog Service] す。 詳細については、 [ [!DNL Catalog] listingobjectsのガイドを参照してください](../../catalog/api/list-objects.md) 。 |
+| `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ま [!DNL Catalog Service] す。 See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 | `entityMeta.fields` | データセットのスキーマ内の特定のフィールドへのパスの配列。JSONポインター文字列の形式で提供されます。 これらの文字列に許可された構文の詳細については、『API基本ガイド [』の「](../../landing/api-fundamentals.md#json-pointer) JSONポインター」の節を参照してください。 |
 
 **応答** 
