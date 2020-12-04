@@ -4,7 +4,7 @@ solution: Experience Platform
 title: リアルタイム顧客データプラットフォームでのIAB TCF 2.0のサポート
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: b24c624df188be3cbe7f71dcdf8a23d2478c287c
+source-git-commit: 75a0b4ba1342ece3e34a7ef41782b9014516d4fe
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 3%
@@ -45,7 +45,7 @@ ht-degree: 3%
    * [SDKの同意コマンド](../../../edge/consent/supporting-consent.md):このガイドに示す同意関連のSDKコマンドの使用例の概要です。
 * [Adobe Experience Platform分類サービス](../../../segmentation/home.md):同様の特性を共有し、マーケティング戦略と同様に対応する個人のグループに [!DNL Real-time Customer Profile] データを分割できます。
 
-上記の [!DNL Platform] サービスに加えて、 [目的地](../../destinations/destinations-overview.md) 、およびその使用に関する知識も必要 [!DNL Real-time CDP]です。
+上記の [!DNL Platform] サービスに加えて、 [目的地](../../destinations/overview.md) 、およびその使用に関する知識も必要 [!DNL Real-time CDP]です。
 
 ## 顧客の同意フローの概要 {#summary}
 
@@ -220,7 +220,7 @@ alloy("sendEvent", {
 | `consentStringValue` | CMPによって生成された、Base-64エンコードされた同意文字列。 |
 | `gdprApplies` | GDPRが現在ログインしている顧客に適用されるかどうかを示すBoolean値。 TCF 2.0をこのお客様に適用するには、値を「true」に設定する必要があります。 |
 
-### SDKレスポンスの処理 {#sdk-1}
+### SDKレスポンスの処理
 
 すべての [!DNL Platform SDK] コマンドは、呼び出しが成功したか失敗したかを示すプロミスを返します。 その後、これらの応答を、確認メッセージを顧客に表示するなどの追加のロジックに使用できます。 特定の例については、SDKコマンドの実行に関するガイドの成功または失敗の [処理に関する節を参照してください](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) 。
 
