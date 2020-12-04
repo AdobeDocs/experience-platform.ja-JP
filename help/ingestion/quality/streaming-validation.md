@@ -8,8 +8,8 @@ description: ストリーミング取り込みを使用すると、ストリー�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 84%
+source-wordcount: '843'
+ht-degree: 85%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 84%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-- [[!DNLストリーミング取り込み]](../streaming-ingestion/overview.md):データの送信先のメソッドの1つ [!DNL Experience Platform]。
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md):データの送信先のメソッドの1つ [!DNL Experience Platform]。
 
 ### API 呼び出し例の読み取り
 
