@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
-title: フロー・サービスAPIを使用したOracleコネクタの作成
+title: Flow Service APIを使用してOracleコネクタを作成する
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、OracleをExperience Platformに接続する手順を順を追って説明します。
@@ -38,7 +38,7 @@ The following sections provide additional information that you will need to know
 | `connectionString` | 接続に使用する接続文字列 [!DNL Oracle]。 接続文字 [!DNL Oracle] 列パターンは次のとおりです。 `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 の接続指定ID [!DNL Oracle] はです `d6b52d86-f0f8-475f-89d4-ce54c8527328`。 |
 
-開始方法の詳細は、 [このOracleドキュメントを参照してください](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)。
+使い始めについて詳しくは、 [このOracleドキュメントを参照してください](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)。
 
 ### API 呼び出し例の読み取り
 
