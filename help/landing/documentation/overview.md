@@ -39,7 +39,7 @@ Experience Platformのドキュメントは複数の言語で提供されてい�
 
 ![画像](../images/overview/lang.jpg)
 
-## [!DNL Experience Platform] ドキュメント
+## [!DNL Experience Platform]ドキュメント
 
 現在、以下に示す Adobe Experience Platform のサービスおよび機能に関するドキュメントが提供されています。ここで説明する簡単な説明を通して、サービスの詳細を学び、左側のナビゲーションにあるアルファベット順のリストから選択して、さらに深く理解することができます。
 
