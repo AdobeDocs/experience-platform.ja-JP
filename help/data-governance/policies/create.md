@@ -8,8 +8,8 @@ description: Policy Service APIを使用すると、データ使用ポリシー�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 49%
+source-wordcount: '1201'
+ht-degree: 50%
 
 ---
 
