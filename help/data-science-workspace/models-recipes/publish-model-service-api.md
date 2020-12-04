@@ -8,15 +8,15 @@ description: このチュートリアルでは、Senesie Machine Learning APIを
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1501'
-ht-degree: 48%
+source-wordcount: '1496'
+ht-degree: 49%
 
 ---
 
 
 # モデルをサービスとして公開する（API）
 
-このチュートリアルでは、 [[!DNL Sensei Machine Learning API]を使用して、サービスとしてモデルを公開するプロセスについて説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)。
+このチュートリアルでは、を使用して、モデルをサービスとしてパブリッシュするプロセスについて説明 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)します。
 
 ## はじめに
 
