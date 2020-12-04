@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **必須。** 文字列としてのスケジュールの名前。 |
 | `type` | **必須。** 文字列としてのジョブのタイプ。サポートされる2つのタイプは、「batch_segmentation」と「export」です。 |
 | `properties` | **必須。** スケジュールに関連する追加のプロパティを含むオブジェクトです。 |
-| `properties.segments` | **「batch_segmentation」`type`と等しい場合に必須です。**`["*"]` を使用すると、すべてのセグメントが確実に含まれます。 |
+| `properties.segments` | **「batch_segmentation」 `type` と等しい場合に必須です。**`["*"]` を使用すると、すべてのセグメントが確実に含まれます。 |
 | `schedule` | *オプション。* ジョブスケジュールを含む文字列。ジョブは、1日に1回しか実行するようにスケジュールできません。つまり、24時間の間にジョブを2回以上実行するようにスケジュールすることはできません。 Cron スケジュールの詳細については、[cron 式形式のドキュメント](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。この例では、「0 0 1 * *」は、このスケジュールが毎月 1 日午前 0 時に実行されることを意味します。<br><br>この文字列を指定しない場合、システム生成スケジュールが自動的に生成されます。 |
 | `state` | *オプション。* スケジュールの状態を含む文字列。サポートされる2つの状態は、「アクティブ」と「非アクティブ」です。 デフォルトでは、状態は「inactive」に設定されています。 |
 
