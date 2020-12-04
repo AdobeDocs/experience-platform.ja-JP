@@ -11,14 +11,14 @@ thumbnail: 32456.jpg
 translation-type: tm+mt
 source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '42'
+ht-degree: 35%
 
 ---
 
 
 # Experience Platformの基本的な構造
 
-このビデオでは、概要図を順を追って説明し、Experience Platformの主な要素を説明します。
+このビデオでは、概要図を使用し、Experience Platform の主な要素について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
