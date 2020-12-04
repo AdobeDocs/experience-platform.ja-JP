@@ -23,7 +23,7 @@ For more information about the concepts and features of [!DNL Query Service], se
 
 [!DNL Query Editor] に接続することでクエリを柔軟に実行でき [!DNL Query Service]ます。クエリはこの接続がアクティブな間にのみ実行されます。
 
-### Connecting to [!DNL Query Service]
+### 接続先 [!DNL Query Service]
 
 [!DNL Query Editor] が初期化され、開かれたときに接続され [!DNL Query Service] るまでに数秒かかります。 クエリサービスに接続されると、コンソールに示されます（以下を参照）。エディターがクエリサービスに接続される前にクエリを実行しようとすると、接続が完了するまで実行が待機されます。
 
