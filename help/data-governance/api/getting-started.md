@@ -7,8 +7,8 @@ description: Policy Service APIを使用すると、Adobe Experience Platformデ
 translation-type: tm+mt
 source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 31%
+source-wordcount: '427'
+ht-degree: 32%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 31%
 開発者ガイドを使用するには、データガバナンス機能の操作に関わる様々な [!DNL Experience Platform] サービスについて、十分な理解が必要です。 Before beginning to work with the [!DNL Policy Service API], please review the documentation for the following services:
 
 * [[!DNL Data Governance]](../home.md):データ使用のコンプライアンスを [!DNL Experience Platform] 適用するフレームワーク。
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理するための標準化されたフレームワーク。
-* [[!DNL リアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ## API 呼び出し例の読み取り
