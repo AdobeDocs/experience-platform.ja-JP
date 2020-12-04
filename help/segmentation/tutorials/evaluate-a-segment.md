@@ -8,8 +8,8 @@ description: このドキュメントでは、セグメント化 API を使用�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 62%
+source-wordcount: '1535'
+ht-degree: 63%
 
 ---
 
@@ -22,8 +22,8 @@ This document provides a tutorial for evaluating segments and accessing segment 
 
 This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [[!DNLAdobe Experience Platformセグメントサービス]](../home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 - [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
