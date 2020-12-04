@@ -17,7 +17,7 @@ ht-degree: 69%
 
 関連性のあるデジタルエクスペリエンスを提供するには、顧客を完全に理解しておく必要があります。これは、顧客データが異なる複数のシステムに断片化され、各顧客が複数の「ID」を持つように見える場合に、より難しくなります。Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
 
-## Understanding [!DNL Identity Service]
+## [!DNL Identity Service]について 
 
 毎日、顧客はビジネスとやり取りし、ブランドとの関係を高め続けています。典型的な顧客は、E コマース、ロイヤリティ、ヘルプデスクシステムなど、組織のデータインフラストラクチャ内の任意の数のシステムでアクティブである場合があります。同じ顧客が任意の数のデバイスに匿名で関与する場合もあります。[!DNL Identity Service] お客様の全体像をまとめ、異なる複数のシステムに分散させる可能性のある関連データを集計できます。
 
