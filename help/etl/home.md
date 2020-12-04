@@ -7,8 +7,8 @@ description: ETL 統合ガイドでは、Experience Platform 用の高パフォ�
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '4173'
-ht-degree: 74%
+source-wordcount: '4117'
+ht-degree: 76%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 74%
 The ETL integration guide outlines general steps for creating high-performance, secure connectors for [!DNL Experience Platform] and ingesting data into [!DNL Platform].
 
 
-- [[!DNLカタログ]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-- [[!DNLデータアクセス]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
-- [[!DNLデータ取り込み]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [[!DNL Catalog]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+- [[!DNL Data Access]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
+- [[!DNL Data Ingestion]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [認証および認証 API](../tutorials/authentication.md)
-- [[!DNLスキーマレジストリ]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
 This guide also includes sample API calls to use when designing an ETL connector, with links to documentation that outlines each [!DNL Experience Platform] service, and use of its API, in more detail.
 
@@ -128,7 +128,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-[[!DNL Catalog API]の呼び出し方法の詳細な例については、「](../catalog/home.md) カタログサービスの概要 [」を参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)。
+Please refer to the [Catalog Service overview](../catalog/home.md) for detailed examples of how to make calls to the [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 **応答** 
 
@@ -571,7 +571,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 データの書き込み中に、XDM スキーマで定義された検証ルールに従ってデータの検証を選択できます。More information on schema validation can be found in the [ETL Ecosystem Integration Reference Code on [!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md#validation).
 
-If you are using the reference implementation found on [[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md), you can turn on schema validation in this implementation using the system property `-DenableSchemaValidation=true`.
+[[!DNL GitHub]](https://github.com/adobe/experience-platform-etl-reference/blob/fd08dd9f74ae45b849d5482f645f859f330c1951/README.md) にある参照実装を使用している場合は、`-DenableSchemaValidation=true` システムプロパティを使用して、この実装のスキーマ検証を有効にできます。
 
 検証は、`minLength` および `maxlength` （文字列用）、`minimum` および `maximum` （整数用）などの属性のような属性を使用して、論理 XDM 型に対して実行できます。『[スキーマレジストリ API 開発者ガイド](../xdm/api/getting-started.md)』には、XDM の種類と検証に使用できるプロパティの概要を示す表が含まれています。
 
