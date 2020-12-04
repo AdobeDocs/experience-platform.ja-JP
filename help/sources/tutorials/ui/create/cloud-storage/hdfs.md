@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UIでApache HDFSソースコネクタを作成する
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してApache Hadoop Distributed File System（以下「HDFS」と呼ばれる）ソースコネクタを認証する手順を説明します。
+description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してApacheHadoop分散ファイルシステム（以下「HDFS」と呼ばれる）ソースコネクタを認証する手順を説明します。
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
