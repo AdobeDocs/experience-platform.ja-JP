@@ -80,7 +80,7 @@ TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2
 
 ### レコードベースの同意スキーマの作成 {#profile-schema}
 
-**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照]」タブで、**[!DNL XDM Individual Profile] クラスに基づいて新しいスキーマを作成します。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
+**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照] 」タブで、**[!DNL XDM Individual Profile] クラスに基づいて新しいスキーマを作成します。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
 
 ![](../assets/iab/add-mixin-profile.png)
 
