@@ -7,8 +7,8 @@ description: セグメントAPIを正しく機能させるために必要な追�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 25%
+source-wordcount: '308'
+ht-degree: 26%
 
 ---
 
@@ -19,9 +19,9 @@ Adobe Experience Platform [!DNL Segmentation Service] では、セグメント�
 
 開発者ガイドでは、の使用に関連する様々な [!DNL Experience Platform] サービスについての作業的な理解が必要 [!DNL Segmentation Service]です。
 
-- [[!DNLセグメント]](../home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+- [[!DNL Segmentation]](../home.md):データからオーディエンスセグメントを作成でき [!DNL Real-time Customer Profile] ます。
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-- [[!DNLリアルタイム顧客プロファイル]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 - [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 The following sections provide additional information that you will need to know in order to successfully work with the [!DNL Segmentation] API.
