@@ -5,8 +5,8 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1905'
-ht-degree: 85%
+source-wordcount: '1900'
+ht-degree: 86%
 
 ---
 
