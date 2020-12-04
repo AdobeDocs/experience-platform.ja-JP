@@ -5,7 +5,7 @@ seo-title: リアルタイムの顧客データプラットフォーム概要
 description: リアルタイム顧客データプラットフォームの概要
 seo-description: リアルタイム顧客データプラットフォームの概要
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 27%
@@ -38,5 +38,5 @@ Adobe Experience Platformの詳細については、 [Experience Platformの概�
 * [データの取り込み方法](sources/sources-overview.md)
 * [プロファイルへのアクセス方法](profile/profile-overview.md)
 * [セグメントの作成方法](segmentation/segmentation-overview.md)
-* [宛先へのセグメントのアクティブ化の方法](destinations/activate-destinations.md)
+* [宛先へのセグメントのアクティブ化の方法](destinations/overview.md)
 * [データガバナンスポリシーの定義と実施方法](privacy/data-governance-overview.md)
