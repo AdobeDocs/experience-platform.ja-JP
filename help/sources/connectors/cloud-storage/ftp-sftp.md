@@ -44,7 +44,7 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 >
 >ユーザーは、接続前にSFTPサーバー設定でキーボードインタラクティブ認証を無効にする必要があります。 この設定を無効にすると、サービスやプログラムを通じて入力するのではなく、手動でパスワードを入力できます。 Keyboard Interactive Authenticationについて詳しくは、 [Component Proドキュメント](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) （英語）を参照してください。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを [!DNL Platform] 使用してFTPまたはSFTPサーバーに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイスを使用してFTPまたはSFTPサーバーに接続する方法に関する情報を提供 [!DNL Platform] しています。
 
 ### APIの使用
 
