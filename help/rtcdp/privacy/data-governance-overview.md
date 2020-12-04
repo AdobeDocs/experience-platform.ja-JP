@@ -7,8 +7,8 @@ seo-description: 'データガバナンスを使用すると、顧客データ�
 translation-type: tm+mt
 source-git-commit: 91b60539010318ea8d545bff4e5cc7e2d0aa70fc
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 30%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
