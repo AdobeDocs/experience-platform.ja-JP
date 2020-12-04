@@ -5,7 +5,7 @@ seo-title: リアルタイム顧客データプラットフォームのホーム
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 91%
@@ -68,7 +68,7 @@ The **[!UICONTROL Datasets]** counter shows the number of datasets in the system
 
 **[!UICONTROL 宛先]**&#x200B;は、組織に対して作成された宛先の合計数を表示します。この数は、新しい宛先が作成されると更新されます。
 
-宛先について詳しくは、「[宛先の概要](destinations/destinations-overview.md)」を参照してください。
+宛先について詳しくは、「[宛先の概要](destinations/overview.md)」を参照してください。
 
 <!-- ### Successful profile records
 
@@ -134,4 +134,4 @@ The number of failed profile records is updated hourly. -->
 
 宛先をクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてその他の宛先に関する情報を表示します。
 
-宛先について詳しくは、「[宛先の概要](destinations/destinations-overview.md)」を参照してください。
+宛先について詳しくは、「[宛先の概要](destinations/overview.md)」を参照してください。
