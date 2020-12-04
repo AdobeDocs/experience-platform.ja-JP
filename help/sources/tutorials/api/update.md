@@ -8,7 +8,7 @@ description: このチュートリアルでは、Flow Service APIを使用して
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '709'
 ht-degree: 17%
 
 ---
@@ -20,7 +20,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [[!DNL Flow Service API]を使用して、名前、説明、資格情報などの接続情報を更新する手順を説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+このチュートリアルでは、を使用して名前、説明、秘密鍵証明書などの接続情報を更新する手順を説明し [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)ます。
 
 ## はじめに
 
