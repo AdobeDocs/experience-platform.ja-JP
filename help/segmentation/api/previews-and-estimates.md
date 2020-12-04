@@ -7,7 +7,7 @@ description: セグメント定義を作成する際に、Adobe Experience Platf
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '773'
 ht-degree: 27%
 
 ---
@@ -172,7 +172,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、 [[!DNLプロファイルアクセスAPI]を使用して、指定されたエンティティを検索するために使用でき](../../profile/api/entities.md)ます。 |
+| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、を使用して、指定されたエンティティを検索するために使用でき [[!DNL Profile Access API]](../../profile/api/entities.md)ます。 |
 
 ## 特定の見積ジョブの結果の取得 {#get-estimate}
 
