@@ -21,7 +21,7 @@ Adobe Experience PlatformWeb SDKは、CDNでも使用できます。 このフ�
 
 URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまたはalloy.js（縮小されていないバージョン用）
 
-以下に例を示します。
+次に例を示します。
 
 * 縮小： [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
 * 縮小解除： [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
