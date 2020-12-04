@@ -13,7 +13,7 @@ ht-degree: 43%
 ---
 
 
-# [!DNL Real-time Customer Profile] 概要
+# [!DNL Real-time Customer Profile]概要
 
 [!DNL Real-time Customer Profile] オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせることで、各顧客の全体的な表示を確認できます。 [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
 
