@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '605'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -39,8 +39,8 @@ The following sections provide additional information that you will need to know
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| クライアントID | アプリケーションに関連付けられているクライアントID [!DNL HubSpot] 。 |
-| クライアントシークレット | アプリケーションに関連付けられているクライアントシークレット [!DNL HubSpot] です。 |
+| クライアント ID | アプリケーションに関連付けられているクライアントID [!DNL HubSpot] 。 |
+| クライアント秘密鍵 | アプリケーションに関連付けられているクライアントシークレット [!DNL HubSpot] です。 |
 | アクセストークン | OAuth統合を最初に認証する際に取得されるアクセストークン。 |
 | 更新トークン | OAuth統合を最初に認証する際に取得される更新トークン。 |
 | 接続指定ID | 接続を作成するために必要な一意の識別子。 の接続指定ID [!DNL HubSpot] は次のとおりです。 `cc6a4487-9e91-433e-a3a3-9cf6626c1806` |
