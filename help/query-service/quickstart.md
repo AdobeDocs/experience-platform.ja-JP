@@ -7,8 +7,8 @@ description: クイックスタートガイド adobe experience platformクエ�
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 43%
+source-wordcount: '128'
+ht-degree: 44%
 
 ---
 
