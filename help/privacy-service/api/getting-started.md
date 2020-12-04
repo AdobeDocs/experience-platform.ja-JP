@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 27%
+source-wordcount: '759'
+ht-degree: 30%
 
 ---
 
@@ -23,7 +23,7 @@ This guide covers how to use the [!DNL Privacy Service] API. UI の使用方法�
 
 This guide requires a working understanding the following [!DNL Experience Platform] features:
 
-* [[!DNLPrivacy Service]](../home.md):RESTful APIとユーザーインターフェイスを提供します。このインターフェイスを使用すると、Adobe Experience Cloudのアプリケーション全体で、データサブジェクト（お客様）からのアクセスおよび削除のリクエストを管理できます。
+* [[!DNL Privacy Service]](../home.md)：Adobe Experience Cloud アプリケーション全体でデータサブジェクト（顧客）からのアクセスリクエストと削除リクエストを管理するための RESTful API とユーザーインターフェイスが用意されていまます。
 
 以下の節では、Privacy Service API への呼び出しを正常に実行するために必要な追加情報を示しています。
 
