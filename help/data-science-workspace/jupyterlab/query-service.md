@@ -8,8 +8,8 @@ description: Adobe Experience Platform を使用すると、クエリサービ�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 65%
+source-wordcount: '807'
+ht-degree: 66%
 
 ---
 
@@ -29,9 +29,9 @@ This tutorial demonstrates sample SQL queries for common use cases to explore, t
 - データ [!DNL Adobe Analytics] セット
 
 - このチュートリアルで使用する次の主要概念に対する十分な理解
-   - [[!DNL Experience Data Model (XDM)とXDM System]](../../xdm/home.md)
-   - [[!DNLクエリサービス]](../../query-service/home.md)
-   - [[!DNLクエリサービスSQL構文]](../../query-service/sql/overview.md)
+   - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
+   - [[!DNL Query Service]](../../query-service/home.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
 ## アクセス [!DNL JupyterLab] および [!DNL Query Service] {#access-jupyterlab-and-query-service}
