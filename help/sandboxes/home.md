@@ -7,8 +7,8 @@ description: サンドボックスは、Experience Platform の単一のイン�
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 89%
+source-wordcount: '746'
+ht-degree: 90%
 
 ---
 
