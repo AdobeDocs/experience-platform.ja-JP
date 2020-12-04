@@ -7,7 +7,7 @@ description: Batch Ingestion API を使用すると、データをバッチフ�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 81%
 
 ---
@@ -35,7 +35,7 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 ### [!DNL Data Ingestion] 前提条件
 
 - アップロードするデータは、Parquet 形式または JSON 形式である必要があります。
-- A dataset created in the [[!DNL Catalog services]](../../catalog/home.md).
+- で作成されたデータセット [[!DNL Catalog services]](../../catalog/home.md)。
 - Parquet ファイルの内容は、アップロード先のデータセットのスキーマのサブセットと一致している必要があります。
 - 認証後に固有のアクセストークンを取得する必要があります。
 
