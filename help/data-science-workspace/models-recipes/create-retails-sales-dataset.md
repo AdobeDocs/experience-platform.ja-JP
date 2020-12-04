@@ -8,7 +8,7 @@ description: このチュートリアルでは、他のすべての Adobe Experi
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '539'
 ht-degree: 70%
 
 ---
