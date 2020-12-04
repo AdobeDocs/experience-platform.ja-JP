@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 50%
+ht-degree: 51%
 
 ---
 
@@ -36,6 +36,6 @@ The [!DNL Policy Service] API allows you to create and manage data usage policie
 
 Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. この結合ポリシーには、セグメントに含めるデータセットに関する情報があります。さらに、データセットには適用可能なデータ使用ラベルが含まれています。オーディエンスセグメントでデータ使用のコンプライアンスを徹底するための具体的な手順については、[セグメントでデータ使用のコンプライアンスを徹底するためのチュートリアル](../segmentation/tutorials/governance.md)を参照してください。
 
-## Get started with [!DNL Privacy Service]
+## 使用の手引き [!DNL Privacy Service]
 
 [!DNL Privacy Service] は、Adobe Experience Cloud アプリケーション全体でデータのサブジェクト（顧客）の個人データを管理する RESTful API とユーザーインターフェイスを提供します。[!DNL Privacy Service]また、 は、 アプリケーションに関連するジョブのステータスと結果にアクセスできる、中央監査とログのメカニズムも提供します。[!DNL Experience Cloud]For instructions showing how to create and monitor [!DNL Privacy Service] jobs, follow the steps provided in the [Privacy Service developer guide](../privacy-service/api/getting-started.md) or the [Privacy Service user guide](../privacy-service/ui/overview.md).
