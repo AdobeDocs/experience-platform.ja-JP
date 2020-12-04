@@ -397,7 +397,7 @@ JupterLabの左側のナビゲーションで[Data]アイコンタブ（下で�
 
 ### ローカルデータフレームの作成 {#pyspark-create-dataframe}
 
-PySpark 3を使用してローカル・データ・フレームを作成するには、SQLクエリを使用します。 以下に例を示します。
+PySpark 3を使用してローカル・データ・フレームを作成するには、SQLクエリを使用します。 次に例を示します。
 
 ```scala
 date_aggregation.createOrReplaceTempView("temp_df")
@@ -552,7 +552,7 @@ df1.write.format("com.adobe.platform.query")
 
 ### ローカルデータフレームの作成 {#scala-create-dataframe}
 
-Scalaを使用してローカル・データ・フレームを作成するには、SQLクエリが必要です。 以下に例を示します。
+Scalaを使用してローカル・データ・フレームを作成するには、SQLクエリが必要です。 次に例を示します。
 
 ```scala
 sparkdf.createOrReplaceTempView("sparkdf")
