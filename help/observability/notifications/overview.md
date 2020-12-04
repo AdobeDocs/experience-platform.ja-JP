@@ -17,6 +17,6 @@ ht-degree: 0%
 
 [!DNL Observability Insights] adobe experience platformアクティビティに関するイベント通知をサブスクライブできます。 They reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed or if a certain milestone within a workflow has been reached.
 
-[!DNL Observability] 通知は、現在、AdobeI/Oイベントを利用しています。このI/Oは、設定済みのWebフックに送信でき、アクティビティ監視の効率的な自動化を促進できます。 ただし、通知機能は、最終的には電子メールおよびUI通知も含むようになります。
+[!DNL Observability] 通知は、現在、Adobe I/Oイベントを利用しています。このは、設定済みのwebフックに送信でき、アクティビティ監視の効率的な自動化を促進します。 ただし、通知機能は、最終的には電子メールおよびUI通知も含むようになります。
 
 通知の使用を開始するには、I/Oイベント通知の [!DNL Observability] サブスクライブに関するチュートリアル [](./subscribe.md)に進みます。
