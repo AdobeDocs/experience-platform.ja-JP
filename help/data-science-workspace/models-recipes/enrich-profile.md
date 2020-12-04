@@ -8,7 +8,7 @@ description: このドキュメントでは、リアルタイム顧客プロフ�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1218'
 ht-degree: 68%
 
 ---
@@ -28,8 +28,8 @@ This document provides a step-by-step tutorial to enrich [!DNL Real-time Custome
 
 This tutorial requires a working understanding of the various aspects of [!DNL Adobe Experience Platform] involved in ingesting [!DNL Profile] data and creating segments. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-* [[!DNLリアルタイム顧客プロファイル]](../../rtcdp/overview.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNL IDサービス]](../../identity-service/home.md):プラットフォーム [!DNL Real-time Customer Profile] に取り込まれる異なるデータソースのIDをブリッジ化することで有効にします。
+* [[!DNL Real-time Customer Profile]](../../rtcdp/overview.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Identity Service]](../../identity-service/home.md):プラットフォーム [!DNL Real-time Customer Profile] に取り込まれる異なるデータソースのIDをブリッジ化することで有効にします。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 
 上記のドキュメントに加え、スキーマおよびスキーマエディターに関する次のガイドも確認することを強くお勧めします。
