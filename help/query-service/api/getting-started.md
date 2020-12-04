@@ -7,8 +7,8 @@ description: この開発者ガイドでは、Adobe Experience Platform のク�
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 37%
+source-wordcount: '369'
+ht-degree: 38%
 
 ---
 
@@ -21,9 +21,9 @@ This developer guide provides steps for performing various operations in the Ado
 
 This guide requires a working understanding of the various Adobe Experience Platform services involved with using [!DNL Query Service].
 
-- [[!DNLクエリサービス]](../home.md):データセットをクエリし、結果のクエリをの新しいデータセットとして取り込む機能を提供 [!DNL Experience Platform]します。
+- [[!DNL Query Service]](../home.md):データセットをクエリし、結果のクエリをの新しいデータセットとして取り込む機能を提供 [!DNL Experience Platform]します。
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-- [[!DNLサンドボックス]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 The following sections provide additional information that you will need to know in order to successfully use [!DNL Query Service] using the API.
 
