@@ -62,7 +62,7 @@ Before diving into the details of [!DNL Data Science Workspace], here is a brief
 
 ![](./images/home/recipe_hiearchy_ui.png)
 
-## Understanding [!DNL Data Science Workspace]
+## [!DNL Data Science Workspace]について 
 
 With [!DNL Data Science Workspace], your data scientists can streamline the cumbersome process of uncovering insights in large datasets. Built on a common machine learning framework and runtime, [!DNL Data Science Workspace] delivers advanced workflow management, model management, and scalability. インテリジェントサービスは、機械学習レシピの再利用をサポートし、アドビの製品やソリューションを使用して作成された様々なアプリケーションを強化します。
 
