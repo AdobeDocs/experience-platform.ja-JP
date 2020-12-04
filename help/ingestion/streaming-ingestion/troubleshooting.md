@@ -7,8 +7,8 @@ description: このドキュメントでは、Adobe Experience Platform での�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 65%
+source-wordcount: '1008'
+ht-degree: 67%
 
 ---
 
@@ -101,4 +101,4 @@ If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to
 
 ID 名前空間には、デフォルトとカスタムの 2 タイプがあります。When using custom namespaces, make sure the namespace has been registered within [!DNL Identity Service]. デフォルトおよびカスタム名前空間の使用について詳しくは、[ID 名前空間の概要](../../identity-service/namespaces.md)を参照してください。
 
-You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. 左側のナビゲーションで「**[!UICONTROL 監視]**」をクリックし、「**[!UICONTROL エンドツーエンドのストリーミング]**」タブを表示して、選択した期間にストリーミングされたメッセージバッチを表示します。
+[[!DNL Experience Platform UI]](https://platform.adobe.com) を使用して、メッセージの取り込みに失敗した理由の詳細を確認できます。左側のナビゲーションで「**[!UICONTROL 監視]**」をクリックし、「**[!UICONTROL エンドツーエンドのストリーミング]**」タブを表示して、選択した期間にストリーミングされたメッセージバッチを表示します。
