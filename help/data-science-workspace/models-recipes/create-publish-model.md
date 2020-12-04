@@ -8,8 +8,8 @@ description: Adobe Experience Platform Data Science Workspace は、事前に作
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1595'
-ht-degree: 79%
+source-wordcount: '1589'
+ht-degree: 80%
 
 ---
 
@@ -50,7 +50,7 @@ This tutorial reflects the workflow of [!DNL Data Science Workspace], and covers
    * [[!DNL Experience Data Model]](../../xdm/home.md):Adobeが導く標準化の取り組み。Customer Experience Managementの標準スキーマ（例：ExperienceEvent） [!DNL Profile] を定義します。
    * データセット：実際のデータ用に構成されたストレージおよび管理。[XDM スキーマ](../../xdm/schema/field-dictionary.md)の物理的にインスタンス化されたインスタンス。
    * バッチ：データセットは、バッチで構成されます。バッチとは、一定期間に収集され、1 つの単位としてまとめて処理される一連のデータです。
-   * [!DNL JupyterLab]: [[!DNL JupterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project用のオープンソースWebベースのインターフェイスで、に緊密に統合さ [!DNL Jupyter] れてい [!DNL Experience Platform]ます。
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project用のオープンソースのWebベースのインターフェイスで、に緊密に統合さ [!DNL Jupyter] れてい [!DNL Experience Platform]ます。
 
 ## データの準備 {#prepare-your-data}
 
