@@ -7,8 +7,8 @@ description: カタログサービス API を使用すると、応答データ�
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2084'
-ht-degree: 86%
+source-wordcount: '2077'
+ht-degree: 87%
 
 ---
 
@@ -207,8 +207,8 @@ curl -X GET \
 * タグ名は IMS 組織に固有です。
 * アドビのプロセスは、特定の動作にタグを活用する場合があります。これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。したがって、タグ名を宣言する際は、このような規則を避ける必要があります。
 * The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
-   * `unifiedProfile`:このタグ名は、 [[!DNLリアルタイム顧客プロファイル]が取り込むデータセット用に予約されています](../../profile/home.md)。
-   * `unifiedIdentity`:このタグ名は、 [[!DNL Identity Service]で取り込むデータセット用に予約されています](../../identity-service/home.md)。
+   * `unifiedProfile`:このタグ名は、で取り込むデータセット用に予約されてい [[!DNL Real-time Customer Profile]](../../profile/home.md)ます。
+   * `unifiedIdentity`:このタグ名は、で取り込むデータセット用に予約されてい [[!DNL Identity Service]](../../identity-service/home.md)ます。
 
 次に、`tags` プロパティを含むデータセットの例を示します。このプロパティ内のタグは、キーと値のペアの形式をとり、各タグ値は 1 つの文字列を含む配列として表示されます。
 
