@@ -91,7 +91,7 @@ The [!DNL Privacy Service] UI allows you to create and monitor privacy jobs usin
 | --- | --- |
 | [!DNL Privacy Service] UI | UIには監視ダッシュボードが用意されており、すべてのアクティブな要求のステータスを視覚的に表示できます。 [!DNL Privacy Service] See the [Privacy Service user guide](ui/overview.md) for more information. |
 | [!DNL Privacy Service] API | APIが提供する参照エンドポイントを使用して、プライバシージョブのステータスをプログラムで監視でき [!DNL Privacy Service] ます。 APIの使用方法に関する詳細な手順については、 [Privacy Service開発者ガイド](./api/getting-started.md) （英語）を参照してください。 |
-| [!DNL Privacy Events] | [!DNL Privacy Events] 効率的なジョブリクエストの自動化を促進するために、設定済みのWebフックに送信されるAdobeI/Oイベントを活用します。 They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. 詳しくは、「プライバシーイベントの [購読](./privacy-events.md) 」のチュートリアルを参照してください。 |
+| [!DNL Privacy Events] | [!DNL Privacy Events] 効率的なジョブリクエストの自動化を容易にするために、設定済みのwebフックに送信されたAdobe I/Oイベントを活用します。 They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. 詳しくは、「プライバシーイベントの [購読](./privacy-events.md) 」のチュートリアルを参照してください。 |
 
 ## 次の手順
 
