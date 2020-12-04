@@ -5,7 +5,7 @@ title: 電子メールマーケティングの宛先の作成
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 77%
@@ -344,7 +344,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{CONNECTION_SPEC_ID}`：手順「[使用可能な宛先のリストを取得する](#get-the-list-of-available-destinations)」で取得した接続仕様 ID を使用します。
-* `{S3 or SFTP}`：この宛先の接続タイプを入力します。[宛先カタログ](../../rtcdp/destinations/destinations-catalog.md)で、目的の宛先までスクロールして、S3 または SFTP の接続タイプ、あるいはその両方がサポートされているかどうかを確認します。
+* `{S3 or SFTP}`：この宛先の接続タイプを入力します。[宛先カタログ](../catalog/overview.md)で、目的の宛先までスクロールして、S3 または SFTP の接続タイプ、あるいはその両方がサポートされているかどうかを確認します。
 * `{ACCESS_ID}`[!DNL Amazon]： S3 ストレージの場所のアクセス ID
 * `{SECRET_KEY}`[!DNL Amazon]： S3 ストレージの場所の秘密鍵
 
