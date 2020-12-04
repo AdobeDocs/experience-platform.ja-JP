@@ -8,8 +8,8 @@ description: このドキュメントでは、ストリーミング取り込み�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1487'
-ht-degree: 67%
+source-wordcount: '1480'
+ht-degree: 68%
 
 ---
 
