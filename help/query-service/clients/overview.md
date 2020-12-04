@@ -7,8 +7,8 @@ description: このドキュメントでは、様々なデスクトップクラ�
 translation-type: tm+mt
 source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 12%
+source-wordcount: '78'
+ht-degree: 15%
 
 ---
 
@@ -20,9 +20,9 @@ This section explains how to connect to [!DNL Query Service] from a variety of d
 手順は、次のクライアントに対して提供されます。
 
 - [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
-- [[!DNLルッカー]](./looker.md)
-- [[!DNLポスティコ(Mac)]](./postico.md)
-- [[!DNLPower BI(PC)]](./power-bi.md)
+- [[!DNL Looker]](./looker.md)
+- [[!DNL Postico (Mac)]](./postico.md)
+- [[!DNL Power BI (PC)]](./power-bi.md)
 - [[!DNL PSQL]](./psql.md)
 - [[!DNL RStudio]](./rstudio.md)
 - [[!DNL Tableau]](./tableau.md)
