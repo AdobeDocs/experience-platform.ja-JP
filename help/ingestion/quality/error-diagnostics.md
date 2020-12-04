@@ -7,7 +7,7 @@ description: このドキュメントでは、バッチ取り込みの監視、�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '892'
 ht-degree: 33%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-- [[!DNLAdobe Experience Platformデータインジェスト]](../home.md):データの送信先のメソッド [!DNL Experience Platform]。
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md):データの送信先のメソッド [!DNL Experience Platform]。
 
 ### API 呼び出し例の読み取り
 
