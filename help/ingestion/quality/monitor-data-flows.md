@@ -7,8 +7,8 @@ description: このユーザーガイドでは、Adobe Experience Platform ユ�
 translation-type: tm+mt
 source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 69%
+source-wordcount: '552'
+ht-degree: 70%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 69%
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-「**[!UICONTROL ストリーミングエンドツーエンド]**」の監視ページが表示されます。このワークスペースには、受信したストリームイベントの割合を示すグラフ [!DNL Platform]と、[!DNL Real-time Customer Customerプロファイル]によって正常に処理されたストリームイベントの割合 [](../../profile/home.md)、および入力データの詳細なリストが表示されます。
+「**[!UICONTROL ストリーミングエンドツーエンド]**」の監視ページが表示されます。このワークスペースには、受信したストリームイベントの割合を示すグラフ [!DNL Platform]、によって正常に処理されたストリームイベントの割合を示すグラフ、 [[!DNL Real-time Customer Profile]](../../profile/home.md)および入力データの詳細リストが表示されます。
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
