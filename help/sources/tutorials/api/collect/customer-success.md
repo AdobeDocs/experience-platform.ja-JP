@@ -8,7 +8,7 @@ description: このチュートリアルでは、顧客の成功システムか�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1609'
 ht-degree: 13%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 13%
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、サードパーティの顧客成功システムからデータを取得し、ソースコネクタと [!DNL Platform] [!DNL Flow Service] [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを介してデータを取り込む手順について説明します。
+このチュートリアルでは、サードパーティの顧客成功システムからデータを取得し、ソースコネクタと [!DNL Platform][[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してデータを取り込む手順について説明します。
 
 ## はじめに
 
@@ -29,8 +29,8 @@ ht-degree: 13%
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md):スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-* [[!DNLカタログサービス]](../../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
-* [[!DNLバッチインジェスト]](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
+* [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
 * [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 The following sections provide additional information that you will need to know in order to successfully connect to a customer success system using the [!DNL Flow Service] API.
