@@ -7,7 +7,7 @@ description: Adobe Experience Platformでは、カスタムフィーチャパイ
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1421'
 ht-degree: 28%
 
 ---
@@ -439,4 +439,4 @@ Dockerイメージの場所を特定したら、に対するPOSTを実行して 
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-このドキュメントを読むと、Model Authoring SDKを使用してフィーチャパイプラインを作成し、Dockerイメージを作成し、DockerイメージURLを使用して、 [!DNL Sensei Machine Learning] APIを使用してフィーチャパイプラインモデルを作成します。 これで、[!DNL Sensei Machine Learning API]を使用して、データセットの変換とデータ機能の抽出をスケール設定で続行する準備が整いました [](../api/getting-started.md)。
+このドキュメントを読むと、Model Authoring SDKを使用してフィーチャパイプラインを作成し、Dockerイメージを作成し、DockerイメージURLを使用して、 [!DNL Sensei Machine Learning] APIを使用してフィーチャパイプラインモデルを作成します。 これで、を使用して、データセットの変換とデータ機能の抽出をスケール設定で続行する準備が整い [[!DNL Sensei Machine Learning API]](../api/getting-started.md)ました。
