@@ -6,7 +6,7 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、リアルタイム顧客データプラットフォームでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、リアルタイム顧客データプラットフォームでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 20%
@@ -68,7 +68,7 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 ![IDとしての忠誠度ID](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-Adobe Experience Platformへのデータ取り込み時に、電子メールのハッシュ要件に従って顧客の電子メールアドレスをハッシュ化した場合は、ターゲットID `Email_LC_SHA256` として選択し [!DNL Facebook] ます [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)。
+Adobe Experience Platformへのデータ取り込み時に、電子メールのハッシュ要件に従って顧客の電子メールアドレスをハッシュ化した場合は、ターゲットID `Email_LC_SHA256` として選択し [!DNL Facebook] ます [](../catalog/social/facebook.md#email-hashing-requirements)。
 
 使用している電子メールアドレス `Email` がハッシュ化されていない場合は、ターゲットIDを選択します。 リアルタイムCDPは、 [!DNL Facebook] 要件を満たすためにメール・アドレスをハッシュ化します。
 
@@ -158,7 +158,7 @@ On the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new fie
 
 さらに、異なる属性を必須としてマークすることもできます。 属性を必須としてマークすると、エクスポートしたセグメントにその属性が含まれている必要があります。 その結果、フィルタリングの追加形式として使用できます。 属性を必須としてマークする必要はあり **ません** 。
 
-属性の1つは、スキーマの [一意の識別子にすることをお勧めします](/help/rtcdp/destinations/email-marketing-destinations.md#identity) 。 For more information about mandatory attributes, see the identity section in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) documentation.
+属性の1つは、スキーマの [一意の識別子にすることをお勧めします](../../destinations/catalog/email-marketing/overview.md#identity) 。 For more information about mandatory attributes, see the identity section in the [Email marketing destinations](../../destinations/catalog/email-marketing/overview.md#identity) documentation.
 
 >[!NOTE]
 > 
