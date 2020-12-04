@@ -3,12 +3,12 @@ keywords: Experience Platform;getting started;content ai;commerce ai;content and
 solution: Experience Platform
 title: コンテンツ&コマースAIはじめに
 topic: Getting started
-description: コンテンツおよびコマースAIはAdobeI/O APIを利用します。 AdobeI/O APIとI/Oコンソール統合を呼び出すには、まず認証のチュートリアルを完了する必要があります。
+description: コンテンツ&コマースAIはAdobe I/OAPIを活用。 Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず認証のチュートリアルを完了する必要があります。
 translation-type: tm+mt
 source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
 source-wordcount: '576'
-ht-degree: 12%
+ht-degree: 14%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 12%
 >
 >コンテンツとコマースAIはベータ版です。 このドキュメントは変更されることがあります。
 
-[!DNL Content and Commerce AI] adobeI/O APIを使用 AdobeI/O APIとI/Oコンソール統合を呼び出すには、まず [認証のチュートリアルを完了する必要があります](../../tutorials/authentication.md)。
+[!DNL Content and Commerce AI] adobe i/oAPIを利用。 Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。
 
 ただし、 **API** 手順に到達したら、次のスクリーンショットに示すように、APIはAdobe Experience PlatformではなくExperience Cloudの下に配置されます。
 
 ![コンテンツおよびコマースAIの追加](./images/add-api.png)
 
-次に示すように、AdobeI/O API呼び出しの中で必要な各ヘッダーの値を認証チュートリアルの設定を完了する。
+次に示すように、認証チュートリアルで、すべてのAdobe I/OAPI呼び出しに必要な各ヘッダーの値を指定します。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -63,7 +63,7 @@ Adobeデベロッパーコンソール内でプロジェクトとAPIを設定し
 
 ![example](./images/select-environment.png)
 
-Postmanを使用したAdobeI/O APIの操作について詳しくは、AdobeI/OでのJWT認証にPostmanを [使用した場合の記事（中）を参照してください](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)。
+Postmanを使用したAdobe I/OAPIの操作について詳しくは、Adobe I/OでのJWT認証にPostmanを [使用した場合の投稿（中）を参照してください](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)。
 
 ## API 呼び出し例の読み取り
 
@@ -73,6 +73,6 @@ Postmanを使用したAdobeI/O APIの操作について詳しくは、AdobeI/O�
 
 資格情報をすべて取得したら、カスタムワーカーを設定する準備が整い [!DNL Content and Commerce AI]ます。 次のドキュメントは、拡張機能のフレームワークと環境の設定を理解するのに役立ちます。
 
-拡張機能のフレームワークについて詳しくは、拡張機能の [ドキュメントの](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) 概要を読んで開始してください。 このドキュメントでは、前提条件とプロビジョニング要件について概説します。
+拡張機能のフレームワークについて詳しくは、拡張機能の [ドキュメントの](https://docs.adobe.com/content/help/ja-JP/asset-compute/using/extend/understand-extensibility.html) 概要を読んで開始してください。 このドキュメントでは、前提条件とプロビジョニング要件について概説します。
 
 開発者用環境の設定に関する詳細は、 [!DNL Content and Commerce AI]開始用環境の設定ガイドを参照して [ください](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)。 このドキュメントでは、Asset computeサービスの開発を可能にする設定手順を説明します。
