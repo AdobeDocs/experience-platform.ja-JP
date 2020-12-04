@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synapse;synapse;azure synapse analytics
 solution: Experience Platform
-title: UIにAzure Synapse Analyticsソースコネクタを作成する
+title: UIでのAzure synapse分析ソースコネクタの作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してAzure Synapse Analytics（以下「シナプス」と呼ばれる）ソースコネクタを作成する手順を説明します。
+description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用して、Azure synapse分析（以下「シナプス」と呼びます）ソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
@@ -51,11 +51,11 @@ For more information about this value, refer to [this [!DNL Synapse] document](h
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 **[!UICONTROL Databases]** 」カテゴリの下で、「 **[!UICONTROL Azure Synapse Analytics]**」を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **[!UICONTROL 追加]** データ [!DNL Synapse] を選択して新しいコネクタを作成します。
+「 **[!UICONTROL Databases]** 」カテゴリで、「 **[!UICONTROL Azure synapse解析]**」を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **[!UICONTROL 追加]** データ [!DNL Synapse] を選択して新しいコネクタを作成します。
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-[ **[!UICONTROL Azure Synapse Analyticsに]** 接続]ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+「 **[!UICONTROL Azure synapse分析に]** 接続」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
