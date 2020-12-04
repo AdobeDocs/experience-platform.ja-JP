@@ -8,7 +8,7 @@ description: このチュートリアルでは、用意されている Retail Sa
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1146'
 ht-degree: 48%
 
 ---
@@ -25,7 +25,7 @@ This tutorial provides instructions on how you can package the provided Retail S
 
 ## 前提条件
 
-- [[!DNLドッカー]](https://docs.docker.com/install/#supported-platforms)
+- [[!DNL Docker]](https://docs.docker.com/install/#supported-platforms)
 - [[!DNL Python 3 and pip]](https://docs.conda.io/en/latest/miniconda.html)
 - [[!DNL Scala]](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
 - [[!DNL Maven]](https://maven.apache.org/install.html)
