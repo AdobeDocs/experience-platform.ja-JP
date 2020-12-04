@@ -8,7 +8,7 @@ description: Gitは、ソフトウェア開発中にソースコードの変更�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
 
 ## 環境 [!DNL Git] に接続し [!DNL Data Science Workspace JupyterLab Notebooks] ます
 
-[!DNL JupterLabs Notebooks]環境 [!DNL Adobe Experience Platform] を起動し、 [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) 開始に移動して、ノートブックを作成します。
+環境を起動 [!DNL Adobe Experience Platform] し、 [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) 開始に移動する。
 
 内 [!DNL JupyterLab]で、「 **[!UICONTROL ファイル]** 」を選択し、「 **[!UICONTROL 新規」の上にマウスポインターを置きます]**。 表示されるドロップダウンで[ **[!UICONTROL ターミナル]**]を選択します。
 
@@ -60,4 +60,4 @@ ht-degree: 1%
 
 ## 次の手順
 
-リポジトリの複製が完了したら、通常はローカルコンピューター上で行うのと同じようにGitを使用して、ノートブック上の他のユーザーと共同作業できます。 内で実行できる操作の詳細につ [!DNL JupyterLab]いては、 [[!DNL JupyterLab user guide]を参照してください](./overview.md)。
+リポジトリの複製が完了したら、通常はローカルコンピューター上で行うのと同じようにGitを使用して、ノートブック上の他のユーザーと共同作業できます。 内で実行できる操作の詳細については、を参照し [!DNL JupyterLab]てくだ [[!DNL JupyterLab user guide]](./overview.md)さい。
