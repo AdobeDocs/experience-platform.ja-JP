@@ -7,8 +7,8 @@ seo-description: Oracle Eloqua は、Oracle が提供するマーケティング
 translation-type: tm+mt
 source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 66%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
