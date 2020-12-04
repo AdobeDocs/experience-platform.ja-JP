@@ -7,8 +7,8 @@ description: Adobe Experience Platform は、顧客体験を促進する完全�
 translation-type: tm+mt
 source-git-commit: 958074b3dde925f543e54982284c7ea5f2928169
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '131'
+ht-degree: 45%
 
 ---
 
