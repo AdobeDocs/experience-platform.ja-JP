@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: 宛先ガイド
-user-guide-description: 宛先の説明をここに挿入します。
+user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲットを絞った広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: eccf962fd9a24e6b5085f706766693ee7e468aea
+source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 32%
+source-wordcount: '429'
+ht-degree: 31%
 
 ---
 
