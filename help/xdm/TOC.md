@@ -5,10 +5,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 465582e0d1503426104a048561b1c8c68e7f55ee
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 64%
+source-wordcount: '190'
+ht-degree: 62%
 
 ---
 
@@ -70,6 +70,7 @@ ht-degree: 64%
 * チュートリアル {#tutorials}
    * [スキーマの作成（API）](tutorials/create-schema-api.md)
    * [スキーマの作成（UI）](tutorials/create-schema-ui.md)
+   * [データタイプの作成と編集(UI)](./tutorials/create-data-type.md)
    * [2 つのスキーマ間の関係の定義（API）](tutorials/relationship-api.md)
    * [2 つのスキーマ間の関係の定義（UI）](tutorials/relationship-ui.md)
    * [アドホックスキーマの作成（API）](tutorials/ad-hoc.md)
