@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
-title: プライバシーミックスインの概要
+title: Consents & Preferencesデータタイプ
 description: 「プライバシー/マーケティングの環境設定（同意）」データ型は、データ操作から、Consent Management Platforms(CMP)や他のソースによって生成される顧客の権限や好みの収集をサポートすることを目的としています。
 topic: guide
 translation-type: tm+mt
-source-git-commit: ba045a635f840c62980288a1a3ad5015f54121da
+source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2023'
 ht-degree: 1%
 
 ---
@@ -18,10 +18,6 @@ ht-degree: 1%
 
 このドキュメントでは、データ型が提供するフィールドの構造と使用目的について説明し [!DNL Consents & Preferences] ます。
 
->[!IMPORTANT]
->
->この [!DNL Consents & Preferences] データ型は、同意および優先管理の様々な使用例を対象とするように設計されています。 その結果、このドキュメントでは、データ型のフィールドの一般的な使用方法について説明し、これらのフィールドの使用をどのように解釈すべきかについての提案のみを行います。 データタイプの構造と、組織がこれらの同意や好みの選択をどのように解釈し、顧客に提示するかを調整するには、プライバシー法務チームにお問い合わせください。
-
 ## 前提条件 {#prerequisites}
 
 このドキュメントでは、XDMとのスキーマの使用に関する十分な理解が必要 [!DNL Experience Platform]です。 先に進む前に、次のドキュメントを確認してください。
@@ -30,6 +26,10 @@ ht-degree: 1%
 * [スキーマ構成の基本](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## データタイプの構造 {#structure}
+
+>[!IMPORTANT]
+>
+>この [!DNL Consents & Preferences] データ型は、同意および優先管理の様々な使用例を対象とするように設計されています。 その結果、このドキュメントでは、データ型のフィールドの一般的な使用方法について説明し、これらのフィールドの使用をどのように解釈すべきかについての提案のみを行います。 データタイプの構造と、組織がこれらの同意や好みの選択をどのように解釈し、顧客に提示するかを調整するには、プライバシー法務チームにお問い合わせください。
 
 データタイプは、同意と [!DNL Consents & Preferences] 優先 ******** 情報を取り込むために使用されるいくつかのフィールドを提供します。
 
