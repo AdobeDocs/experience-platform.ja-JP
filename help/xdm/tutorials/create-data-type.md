@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Experience PlatformUIを使用して、カスタムデータ型を作成する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 9008b49e1eb5e32b0f4cda7049bf873c689f6442
+source-git-commit: bfb65743764b454754ca8ebb01bfe4407833b291
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Adobe Experience Platformでは、様々な一般的なエクスペリエンス�
 
 このチュートリアルでは、XDMシステムに関する十分な理解が必要です。 Experience Platformエコシステム内でのXDMの役割については、 [XDMの概要](../home.md) 、およびXDMスキーマにデータタイプがどのように貢献するかについては、スキーマ構成の [基本を参照してください](../schema/composition.md) 。
 
-このチュートリアルでは必須ではありませんが、の様々な機能に慣れるために、UIでのスキーマの [構成に関するチュートリアルに従うことをお勧め](./-schema-ui.md)[!DNL Schema Editor]します。
+このチュートリアルでは必須ではありませんが、の様々な機能に慣れるために、UIでのスキーマの [構成に関するチュートリアルに従うことをお勧め](./create-schema-ui.md)[!DNL Schema Editor]します。
 
 ## データ型 [!DNL Schema Editor] 用にを開く
 
