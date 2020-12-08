@@ -5,9 +5,9 @@ seo-title: ブレーズ先
 description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 seo-description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 translation-type: tm+mt
-source-git-commit: 9380c9c24267f815b788eb51949da13b8c47558f
+source-git-commit: 6b19cfa3c4a5327b6b7543123f631d0355995f09
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '953'
 ht-degree: 5%
 
 ---
@@ -33,6 +33,10 @@ Note the following details that are specific to the [!DNL Braze] destination:
 
 * 宛先に [IDをマップする限り](../../../identity-service/namespaces.md) 、任意の [!DNL Braze] IDを [!DNL Braze] 宛先に送信でき [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation)ます。
 * [!DNL Adobe Experience Platform] セグメントは、属性 [!DNL Braze] の下のにエクスポートされ `AdobeExperiencePlatformSegments` ます。
+
+>[!NOTE]
+>
+>に追加のカスタム属性を送信すると、データポイントの使用量が増加する [!DNL Braze][!DNL Braze] 可能性があることに注意してください。 追加のカスタム属性を送信する前に、担当の [!DNL Braze] アカウントマネージャーにお問い合わせください。
 
 ## 使用例 {#use-cases}
 
