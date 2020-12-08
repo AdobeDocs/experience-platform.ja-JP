@@ -5,10 +5,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: 321dc16a1296aeb28ba78825f191a0368df16547
+source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 65%
+source-wordcount: '184'
+ht-degree: 64%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 65%
    * [XDMフィールド型の制約](schema/field-constraints.md)
    * [XDM フィールド辞書](schema/field-dictionary.md)
    * スキーマの使用例 {#use-cases}
-      * [プライバシーの同意ミックスイン](schema/privacy-consent.md)
+      * [Consents &amp; Preferencesデータタイプ](schema/privacy-consent.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -40,6 +40,7 @@ ht-degree: 65%
 * データタイプ {#data-types}
    * [Beacon](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
+   * [同意と環境設定](./data-types/consents.md)
    * [デバイス](./data-types/device.md)
    * [電子メールアドレス](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
