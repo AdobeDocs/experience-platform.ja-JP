@@ -5,10 +5,10 @@ title: Data Science Workspace の概要
 topic: overview
 description: このガイドでは、Data Science Workspaceに関連する主要な概念の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
+source-git-commit: 8b1be4e94c147124fd26f4b877ca807177c9f5ff
 workflow-type: tm+mt
-source-wordcount: '2578'
-ht-degree: 73%
+source-wordcount: '2371'
+ht-degree: 75%
 
 ---
 
@@ -120,35 +120,12 @@ Data Science Workspace は、実験プロセスの柔軟性を大幅に高めま
 
 データサイエンティストは、アドビのサービスを通じて新しいテクノロジーとデータセットの利用が可能になり次第、すぐに活用できます。アドビは頻繁な更新を通じて、データセットとテクノロジーを Platform に統合しているため、ユーザーが統合をおこなう必要はありません。
 
-### アクセス制御 [!DNL Data Science Workspace]
-
-Access control for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). この機能は、Admin Console の製品プロファイルを利用して、権限およびサンドボックスを持つユーザーをリンクします。詳しくは、「[アクセス制御の概要](../access-control/home.md)」を参照してください。
-
->[!IMPORTANT]
->
->In order to use [!DNL Data Science Workspace], the [!UICONTROL &quot;Manage Data Science Workspace&quot;] permission must be enabled.
-
-次の表に、この権限を有効または無効にした場合の影響を示します。
-
-| 権限 | 有効 | 無効 |
-|---|---|---|
-| [!DNL Manage Data Science Workspace] | Provides access to all services in [!DNL Data Science Workspace]. | API and UI access to all services within [!DNL Data Science Workspace] are disabled. While disabled, routing to the [!DNL Data Science Workspace] **[!UICONTROL Models]** and **[!UICONTROL Services]** pages are prevented. |
-
 ### セキュリティと安全
 
 データの保護は、アドビの最優先事項です。アドビは、業界で認められた標準、規制、および認定に準拠するために開発されたセキュリティプロセスと制御を使用して、ユーザーのデータを保護します。
 
 セキュリティは、Adobe Secure Product Lifecycle の一環としてソフトウェアとサービスに組み込まれています。
 アドビのデータおよびソフトウェアのセキュリティやコンプライアンスなどの詳細については、セキュリティページ（https://www.adobe.com/security.html）を参照してください。
-
-### サンドボックスのサポート
-
-Sandboxes are virtual partitions within a single instance of [!DNL Experience Platform]. Each [!DNL Platform] instance supports one production sandbox and multiple non-production sandboxes, each maintaining its own library of [!DNL Platform] resources. 非実稼働用サンドボックスを使用すると、実稼働用サンドボックスに影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。サンドボックスについて詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
-
-Currently, [!DNL Data Science Workspace] has a couple sandbox limitations:
-
-- 計算リソースは、実稼働用サンドボックスと非実稼働用サンドボックスで共有されます。実稼働用サンドボックスの分離は、将来提供される予定です。
-- Scala/[!DNL Spark] and PySpark workloads for both notebooks and recipes are currently only supported in the production sandbox. 非実稼働用サンドボックスのサポートは、将来提供される予定です。
 
 ## [!DNL Data Science Workspace] 実行中
 
