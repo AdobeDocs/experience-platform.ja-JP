@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
-breadcrumb-title: Data Model（XDM）ガイド
+breadcrumb-title: エクスペリエンスデータモデル(XDM)ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: 465582e0d1503426104a048561b1c8c68e7f55ee
+source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 62%
+source-wordcount: '191'
+ht-degree: 59%
 
 ---
 
