@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Flow Service APIを使用したデータフローの削除
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用してデータフローを削除する手順を説明します。
+description: このチュートリアルでは、Flow Service APIを使用してバッチおよびストリーミングデータフローを削除する手順について説明します。
 translation-type: tm+mt
-source-git-commit: ae3e64a5f9a82c0efe3cffeb6d4d425ae2e72bda
+source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 23%
+source-wordcount: '467'
+ht-degree: 22%
 
 ---
 
 
 # Flow Service APIを使用したデータフローの削除
 
-このチュートリアルでは、を使用してバッチソースとストリーミングソースの両方で作成したデータフローを削除する手順を説明 [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)します。
+エラーを含む、または [[!DNL Flow Service] APIを使用して古くなったバッチおよびストリーミングデータフローを削除できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+
+このチュートリアルでは、を使用してバッチソースとストリーミングソースの両方で作成したデータフローを削除する手順について説明 [!DNL Flow Service]します。
 
 ## はじめに
 
