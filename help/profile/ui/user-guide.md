@@ -4,9 +4,9 @@ title: リアルタイム顧客プロファイルUIガイド
 topic: guide
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
+source-git-commit: b991a767f34f0e318b9ca5092fd4cf099de11e0a
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1304'
 ht-degree: 8%
 
 ---
@@ -26,9 +26,19 @@ ht-degree: 8%
 
 ## 概要
 
-[[!DNL Experience Platform] UI](http://platform.adobe.com)( **[!UICONTROL UI]** )の左側のナビゲーションで **[!UICONTROL プロファイルを選択し、「]** 概要」タブを開きます。 このタブには、プロファイルの理解と使用の開始に役立つドキュメントとビデオへのリンクが含まれています。
+Experience PlatformUIで、左側のナビゲーションで **[!UICONTROL プロファイル]** を選択し、「 **[!UICONTROL 概要]** 」タブを開きます。 このタブには、プロファイルの理解と使用の開始に役立つドキュメントとビデオへのリンクが含まれています。
 
 ![](../images/user-guide/profiles-overview.png)
+
+### アルファプロファイルダッシュボード
+
+>[!IMPORTANT]
+>
+>現在、ダッシュボード機能はアルファベットで表示されており、すべてのユーザが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+
+一部のユーザーは、左側のナビゲーションで **[!UICONTROL プロファイルを選択し]** 、「 **[!UICONTROL 概要]** 」タブを開くと、プロファイルデータに関連する主要指標の概要をダッシュボードで示すことができます。
+
+詳しくは、 [プロファイルダッシュボードガイドを参照してください](profile-dashboard.md)。
 
 ## 参照
 
