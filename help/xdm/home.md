@@ -5,10 +5,10 @@ title: XDM システムの概要
 topic: overview
 description: '標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。 '
 translation-type: tm+mt
-source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
+source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
 workflow-type: tm+mt
-source-wordcount: '1584'
-ht-degree: 50%
+source-wordcount: '1581'
+ht-degree: 49%
 
 ---
 
@@ -33,7 +33,7 @@ Before data can be ingested into [!DNL Platform], a schema must be composed to d
 
 ### [!DNL Schema Registry] および [!DNL Schema Library]
 
-The **[!DNL Schema Registry]** provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Adobe Experience Platform **[!DNL Schema Library]**. The [!DNL Schema Library] contains industry standard resources made available to you by Adobe, as well as resources from [!DNL Experience Platform] partners and vendors whose applications you use. また、スキーマレジストリの UI と API を使用して、組織に固有の新しいスキーマやリソースを作成および管理することもできます。
+The **[!DNL Schema Registry]** provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Adobe Experience Platform **[!DNL Schema Library]**. The [!DNL Schema Library] contains industry-standard resources made available to you by Adobe, as well as resources from [!DNL Experience Platform] partners and vendors whose applications you use. また、スキーマレジストリの UI と API を使用して、組織に固有の新しいスキーマやリソースを作成および管理することもできます。
 
 For a comprehensive guide to the major operations available in the [!DNL Schema Registry], see the [Schema Registry developer guide](api/getting-started.md).
 
@@ -46,7 +46,7 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 
 すべての XDM スキーマは、レコードまたは時系列として分類できるデータを記述します。スキーマのデータ動作は、スキーマのクラスによって定義され、スキーマの作成時に割り当てられます。XDM クラスは、特定のデータ動作を表すためにスキーマが格納する必要のある最小のプロパティ数を記述します。
 
-Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time series data, respectively. これらのクラスの詳細については、以下で説明します。
+Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time-series data, respectively. これらのクラスの詳細については、以下で説明します。
 
 ### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -68,7 +68,7 @@ XDM ExperienceEvent は、イベント（または一連のイベント）が発
 
 ## XDM schemas and [!DNL Experience Platform] services
 
-[!DNL Experience Platform] はスキーマに依存しないので、XDM 標準に準拠するスキーマはすべて サービスで使用できます。[!DNL Platform]The ways in which different [!DNL Platform] services use schemas are outlined in more detail below.
+[!DNL Experience Platform] はスキーマにとらわれず、XDM標準に準拠するスキーマはすべて [!DNL Platform] サービスで使用できます。 The ways in which different [!DNL Platform] services use schemas are outlined in more detail below.
 
 ### [!DNL Catalog Service], [!DNL Data Ingestion] &amp; [!DNL Data Lake]
 
