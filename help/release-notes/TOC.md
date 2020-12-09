@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform リリースノート
 breadcrumb-title: Platform リリースノート
 user-guide-description: Adobe Experience Platform の月次リリースノートです。
 translation-type: tm+mt
-source-git-commit: cfa939f759e114be14da89070a491de9d71f8528
+source-git-commit: 3892020104e0c195126356ad01f3883ba001a61c
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '39'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,8 @@ ht-degree: 100%
 
 # Adobe Experience Platform リリースノート {#release-notes}
 
-* [2020 年 11 月](latest/latest.md)
+* [2020 年 12 月](latest/latest.md)
+* [2020 年 11 月](2020/november-2020.md)
 * [2020 年 10 月](2020/october-2020.md)
 * [2020 年 9 月](2020/september-2020.md)
 * [2020 年 8 月](2020/august-2020.md)
