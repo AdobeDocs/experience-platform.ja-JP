@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform が、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '402'
 ht-degree: 70%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 70%
    * [アプリケーションサービス](application-services.md)
    * [アプリケーションとインテリジェントサービス（ビデオ）](video/application-intelligent-services.md)
    * [Experience Cloudとのプラットフォームの統合（ビデオ）](video/experience-cloud-integrations.md)
+* [ライセンス使用ダッシュボード](license-usage-dashboard.md)
 * [トラブルシューティングガイド](troubleshooting.md)
 * [ADLS Gen2の移行](adls2-gen2-migration.md)
 * [用語集](glossary.md)
