@@ -4,9 +4,9 @@ title: リアルタイム顧客プロファイルの概要
 topic: guide
 description: リアルタイム顧客プロファイルは、様々な企業データアセットのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形でそのデータにアクセスできる汎用参照エンティティストアです。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: b8d6bd5caf6c6f4d1da218b6ca12cec154d64412
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1844'
 ht-degree: 41%
 
 ---
@@ -24,7 +24,9 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 ### プロファイルデータストア
 
-Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. つまり、 [!DNL Profile] 店舗は、 [!DNL Catalog] データ([!DNL Data Lake])および [!DNL Identity Service] データ（アイデンティティグラフ）とは別のものです。
+Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. この [!DNL Profile] ストアは、IDグラフの [!DNL Catalog] データとデータ [!DNL Data Lake] とは別 [!DNL Identity Service] のものです。
+
+プロファイルストアはMicrosoft Azure Cosmos DBインフラストラクチャを使用し、Platform Data LakeはMicrosoft Azure Data Lakeストレージを使用します。
 
 ### プロファイルガードレール
 
@@ -34,7 +36,7 @@ Experience Platformは、リアルタイム顧客プロファイルがサポー�
 
 [!DNL Real-time Customer Profile] 様々なエンタープライズシステムのデータをマージし、関連する時系列イベントを使用して、顧客プロファイルの形でそのデータへのアクセスを提供します。 この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。以下の節では、プラットフォーム内でプロファイルを効果的に構築し、維持するために理解しておく必要がある主要な概念の一部を取り上げます。
 
-### プロファイルフラグメントと結合されたプロファイル
+### プロファイルフラグメントと結合されたプロファイル {#profile-fragments-vs-merged-profiles}
 
 個々の顧客プロファイルは、複数のプロファイルフラグメントで構成され、それらが結合されてその顧客の単一の表示が形成されます。 例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。 これらのフラグメントがPlatformに取り込まれると、それらのフラグメントが結合され、そのお客様用の単一のプロファイルが作成されます。
 
