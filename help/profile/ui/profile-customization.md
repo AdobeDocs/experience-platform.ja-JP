@@ -4,7 +4,7 @@ title: プロファイルの詳細のカスタマイズ
 description: 'このガイドでは、Adobe Experience PlatformUI内でリアルタイム顧客プロファイルデータが表示される方法をカスタマイズする手順を順を追って説明します。 '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9068d12e60da63a6a2a2ff18c016080ea581104f
+source-git-commit: d05884c87445ec16b0ad44f593cf782b8c80d646
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Adobe Experience Platformのユーザーインターフェイス内では、顧客プロファイルの形で [!DNL Real-time Customer Profile] データを表示し、操作できます。 UIに表示されるプロファイル情報は、複数のプロファイルフラグメントから結合され、個々の顧客の1つの表示を形成しています。 基本属性、リンクされたID、チャネル環境設定などの詳細が含まれます。 プロファイルに表示されるデフォルトのフィールドは、組織レベルで変更して、優先 [!DNL Profile] 属性を表示することもできます。 このガイドでは、プラットフォームUI内での [!DNL Profile] データの表示方法をカスタマイズする手順を順を追って説明します。
 
-プロファイルUIの完全なガイドについては、 [プロファイルユーザガイドを参照してください](user-guide.md)。
+プロファイルUIの完全なガイドについては、 [プロファイルUIガイドを参照してください](user-guide.md)。
 
 ## カードの順序の変更とサイズ変更 {#reorder-and-resize-cards}
 
