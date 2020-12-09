@@ -5,10 +5,10 @@ title: Adobe Experience PlatformUIガイド
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 0%
+source-wordcount: '1726'
+ht-degree: 1%
 
 ---
 
@@ -143,13 +143,25 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 ### [!UICONTROL データ管理]
 
-「 **[!UICONTROL スキーマ]** 」セクションでは、スキーマの作成と管理を行うことができます。 「スキーマ」の節の使用方法の詳細については、スキーマの [作成に関するチュートリアルを参照してください](../xdm/tutorials/create-schema-ui.md)。 Experience Data Model(XDM)について詳しくは、 [XDMの概要を参照してください](../xdm/home.md)。
+「 **[!UICONTROL スキーマ]** 」セクションでは、Experience Data Model(XDM)スキーマを作成および管理できます。 スキーマの詳細については、スキーマの [作成に関するチュートリアルを参照してください](../xdm/tutorials/create-schema-ui.md)。 More information about XDM can be found in the [XDM System overview](../xdm/home.md).
 
 「 **[!UICONTROL Datasets]** 」セクションでは、データセットの作成と管理を行うことができます。 データセットの詳細については、『 [datasetsユーザガイド](../catalog/datasets/user-guide.md)』を参照してください。
 
-[ **[!UICONTROL クエリ]** ]セクションでは、クエリの作成と管理、クエリサービスが行うSQLクエリのログ、PostgreSQL資格情報の表示を行うことができます。 「クエリ」の節の詳細については、『 [クエリサービスユーザガイド](../query-service/ui/overview.md)』を参照してください。
+[ **[!UICONTROL クエリ]** ]セクションでは、クエリの作成と管理、Adobe Experience Platformクエリサービスが行うSQLクエリのログ、PostgreSQL資格情報の表示を行うことができます。 クエリの詳細については、『 [クエリサービスユーザガイド](../query-service/ui/overview.md)』を参照してください。
 
-「 **[!UICONTROL 監視]** 」セクションでは、バッチおよびストリーミング取り込みを監視できます。 「監視」セクションの詳細については、『 [監視データ取り込みユーザーガイド](../ingestion/quality/monitor-data-flows.md)』を参照してください。
+「 **[!UICONTROL 監視]** 」セクションでは、バッチおよびストリーミング取り込みを監視できます。 監視に関する詳細は、『 [監視データ取り込みユーザーガイド](../ingestion/quality/monitor-data-flows.md)』を参照してください。
+
+### [!UICONTROL 判定]
+
+Offer Decisioningは、Adobe Experience Platformと統合された申し込みサービスです。 Experience Platformを活用して、すべてのタッチポイントにわたって適切なタイミングで最高のオファーと経験を顧客に提供できます。 [!UICONTROL オファー] や [!UICONTROL アクティビティとの連携など、Offer Decisioningの詳細については、] Offer Decisioningのドキュメントを参照してください [](https://experienceleague.adobe.com/docs/offer-decisioning.html)。
+
+### [!UICONTROL 管理]
+
+UI(Platform User Interface)を使用すると、毎日のスナップショットでキャプチャされる、組織のライセンスの使用に関する重要な情報を表示できるダッシュボードが提供されます。 これには、ナビゲーションで[ **[!UICONTROL ライセンスの使用状況]** ]を選択してアクセスします。 ライセンス使用ダッシュボードの詳細については、『 [ライセンス使用ダッシュボードガイド](license-usage-dashboard.md)』を参照してください。
+
+>[!IMPORTANT]
+>
+>ライセンス使用ダッシュボード機能は、現在アルファベット順に表示されており、すべてのユーザが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
 
 ## 次の手順
 
