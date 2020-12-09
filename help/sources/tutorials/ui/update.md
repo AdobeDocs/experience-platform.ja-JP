@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts;
-description: null
+keywords: Experience Platform;home;popular topics;update accounts
+description: 状況によっては、既存のソースアカウントの詳細の更新が必要になる場合があります。 ソースワークスペースでは、既存のバッチ接続またはストリーミング接続（名前、説明、秘密鍵証明書など）の詳細を追加、編集および削除できます。
 solution: Experience Platform
 title: UIでのアカウントの詳細の更新
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 413687a0d9e790ea3f61a858002e9510216d7c34
+source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 10%
+source-wordcount: '442'
+ht-degree: 4%
 
 ---
 
 
 # UIでのアカウントの詳細の更新
 
-状況によっては、既存のソースアカウントの詳細の更新が必要になる場合があります。 「 [!UICONTROL ソース] 」ワークスペースでは、アカウントの名前、説明、認証資格情報の値など、アカウントの詳細を編集、追加および削除できます。
+状況によっては、既存のソースアカウントの詳細の更新が必要になる場合があります。 [!UICONTROL ソース] ・ワークスペースでは、既存のバッチ接続またはストリーミング接続（名前、説明、秘密鍵証明書など）の詳細を追加、編集および削除できます。
 
 このチュートリアルでは、 [!UICONTROL Sources] Workspaceから既存のアカウントの詳細と秘密鍵証明書を更新する手順を説明します。
 
@@ -24,14 +24,12 @@ ht-degree: 10%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [[!DNL Experience Data Model (XDM)] システム](../../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-   - [スキーマ構成の基本](../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+- [ソース](../../home.md):DNLExperience Platformを使用すると、様々なソースからデータを取り込むことができ、プラットフォームサービスを使用して、受信データの構造、ラベル付け、拡張を行うことができます。
+- [サンドボックス](../../../sandboxes/home.md):DNLExperience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 ## アカウントの更新
 
-「 [Experience PlatformUIにログイン」にログインし](https://platform.adobe.com) 、左側のナビゲーションから「 **[!UICONTROL ソース]** 」を選択して [!UICONTROL ソース] ワークスペースにアクセスします。 上部のヘッダーから「 **[!UICONTROL アカウント]** 」を選択して、既存のアカウントを表示します。
+[Experience PlatformUIにログインし、左側のナビゲーションから「](https://platform.adobe.com) Sources **** 」を選択して [!UICONTROL Sources] ワークスペースにアクセスします。 上部のヘッダーから「 **[!UICONTROL アカウント]** 」を選択して、既存のアカウントを表示します。
 
 ![カタログ](../../images/tutorials/update/catalog.png)
 
