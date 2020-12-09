@@ -5,7 +5,7 @@ title: Segmentation Service Segment Builderユーザーガイド
 topic: ui guide
 description: 'セグメントビルダーのワークスペースには、プロファイルのデータ要素を操作できる豊富な機能があります。ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。 '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 50%
@@ -13,7 +13,7 @@ ht-degree: 50%
 ---
 
 
-# [!DNL Segment Builder] ユーザーガイド
+# [!DNL Segment Builder] UIガイド
 
 [!DNL Segment Builder] は、データ要素を操作できるリッチワークスペースを提供し [!DNL Profile] ます。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 
