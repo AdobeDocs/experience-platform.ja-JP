@@ -5,10 +5,10 @@ seo-title: 宛先の詳細ページ
 description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 seo-description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 18%
+source-wordcount: '735'
+ht-degree: 16%
 
 ---
 
@@ -29,6 +29,10 @@ Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 *
 
 ![](../assets/ui/details-page/details.png)
 
+また、「参照」タブで、 ![ごみ箱](../assets/ui/details-page/trash-icon.png) アイコンを選択して、選択したデータフローを削除することもできます。 宛先に対してアクティブ化されたセグメントは、データフローが削除される前にマッピング解除されます。
+
+![](../assets/ui/details-page/delete-flow.png)
+
 ## 右側のレール
 
 右側のレールに、目的のファイルに関する基本情報が表示されます。
@@ -40,6 +44,7 @@ Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 *
 | 右側のレールアイテム | 説明 |
 | --- | --- |
 | [!UICONTROL アクティブ化] | このコントロールを選択して、宛先にマッピングされるセグメントを編集します。 詳しくは、宛先へのセグメントの [アクティブ化に関するガイドを参照してください](./activate-destinations.md) 。 |
+| [!UICONTROL 削除] | このデータフローを削除し、既にアクティブ化されたセグメントのマッピングを解除できます（存在する場合）。 |
 | [!UICONTROL 宛先名] | このフィールドは、宛先名を更新するために編集できます。 |
 | [!UICONTROL 説明] | このフィールドは、任意で説明を更新または追加するために編集できます。 |
 | [!UICONTROL 宛先] | オーディエンスの宛先プラットフォームを表します。See the [destinations catalog](../catalog/overview.md) for more information. |
@@ -75,11 +80,11 @@ Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 *
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL セグメント]
+## [!UICONTROL アクティベーションデータ]
 
-「 [!UICONTROL セグメント] 」タブには、開始日と終了日（該当する場合）を含む、宛先にマッピングされたセグメントのリストが表示されます。 特定のセグメントの詳細を表示するには、リストからセグメント名を選択します。
+「 [!UICONTROL アクティベーションデータ] 」タブには、開始日と終了日（該当する場合）を含む、宛先にマッピングされたセグメントのリストが表示されます。 特定のセグメントの詳細を表示するには、リストからセグメント名を選択します。
 
-![](../assets/ui/details-page/segments.png)
+![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
