@@ -4,10 +4,10 @@ audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 translation-type: tm+mt
-source-git-commit: 8971d373228099d42249d3ec4af13e711323a0cc
+source-git-commit: 983b357f2f17aad273f0465dc9250240a062dcd2
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 59%
+source-wordcount: '97'
+ht-degree: 54%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 59%
 
 * [[!DNL Profile] 概要](home.md)
 * [[!DNL Profile] ガードレール](guardrails.md)
-* [!DNL Profile] API開発者ガイド {#api}
+* [!DNL Profile] API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
    * [（アルファ）計算済み属性](api/computed-attributes.md)
@@ -28,13 +28,14 @@ ht-degree: 59%
    * [[!DNL Profile] システムジョブ（削除要求）](api/profile-system-jobs.md)
 * UIガイド {#ui}
    * [[!DNL Profile] UIガイド](ui/user-guide.md)
+   * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
    * [[!DNL Profile] 詳細カスタマイズ](ui/profile-customization.md)
    * [Merge policies UIガイド](ui/merge-policies.md)
    * [和集合スキーマUIガイド](ui/union-schema.md)
 * チュートリアル {#tutorials}
    * [～へ追加のデータ [!DNL Profile]](tutorials/add-profile-data.md)
    * [サービスのデータセットの [!DNL Profile] & [!DNL Identity] 設定](tutorials/dataset-configuration.md)
-   * [その他のチュートリアル](https://docs.adobe.com/content/help/ja-JP/experience-platform/tutorials/home.html)
+   * [その他のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [プライバシーリクエストの処理](privacy.md)
 * [[!DNL Profile] トラブルシューティングガイド](troubleshooting.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
