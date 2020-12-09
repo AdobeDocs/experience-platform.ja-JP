@@ -5,7 +5,7 @@ title: Segmentation Serviceユーザーガイド
 topic: ui guide
 description: Adobe Experience Platformセグメントサービスは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 3e83215cc24b32b7fe9486c6faf455f247b6c922
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 24%
@@ -13,7 +13,7 @@ ht-degree: 24%
 ---
 
 
-# Segmentation Serviceユーザーガイド
+# Segmentation Service UIガイド
 
 [!DNL Adobe Experience Platform Segmentation Service] には、セグメント定義を作成および管理するためのユーザーインターフェイスが用意されています。
 
