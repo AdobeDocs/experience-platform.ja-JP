@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 translation-type: tm+mt
-source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 68%
@@ -453,7 +453,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 
 ## 次の手順
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. 異なる値でさらに呼び出しを実行し、更新された値を取得してみてください。Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. 詳しくは、『[データ取得監視ガイド](../quality/monitor-data-flows.md)』を参照してください。
+By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. 異なる値でさらに呼び出しを実行し、更新された値を取得してみてください。Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. 詳しくは、『[データ取得監視ガイド](../quality/monitor-data-ingestion.md)』を参照してください。
 
 一般的なストリーミング取得の詳細については、『[ストリーミング取得の概要](../streaming-ingestion/overview.md)』を参照してください。
 
