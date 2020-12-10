@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformのユーザーインターフェイスを使用してCSVファイルをXDMスキーマにマップする方法について説明します。
 translation-type: tm+mt
-source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
+source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
 workflow-type: tm+mt
-source-wordcount: '860'
-ht-degree: 13%
+source-wordcount: '861'
+ht-degree: 14%
 
 ---
 
@@ -113,9 +113,9 @@ The **[!UICONTROL Sample data]** section appears once the file is uploaded, show
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
-## データフローの監視
+## データ取得の監視
 
-CSVファイルをマッピングして作成したら、ファイルを介して取り込まれるデータを監視できます。 データフローの監視の詳細については、「ストリーミングデータフローの [監視に関するチュートリアル](../../ingestion/quality/monitor-data-flows.md)」を参照してください。
+CSVファイルをマッピングして作成したら、ファイルを介して取り込まれるデータを監視できます。 データ取り込みの監視について詳しくは、データ取り込みの [監視に関するチュートリアルを参照してください](../../ingestion/quality/monitor-data-ingestion.md)。
 
 ## 次の手順
 
