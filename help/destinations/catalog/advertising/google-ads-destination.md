@@ -5,10 +5,10 @@ seo-title: Google 広告の宛先
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 seo-description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 27%
+source-wordcount: '663'
+ht-degree: 26%
 
 ---
 
@@ -39,7 +39,9 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 ### 既存の [!DNL Google Ads] アカウント
 
-[!DNL Google] は、サードパーティベンダーとの新しい [!DNL Google Ads] 統合を一時停止しています。 You must have an existing integration with [!DNL Google Ads] in order to be able to perform the allow list steps in the next section and to create a [!DNL Google Ads] destination in Real-time CDP.
+>[!IMPORTANT]
+>
+> [!DNL Google] では、サードパーティベンダーとの新しい [!DNL Google Ads] cookie統合が廃止されました。 次の節の許可リスト手順を実行するには、との既存の統合が必要で [!DNL Google Ads]す。 その結果、を使用するための推奨される方法は、 [!DNL Google Ads][!DNL Google Customer Match] 統合を設定することです。 統合の作成の詳細については、 [!DNL Google Customer Match] 接続の作成に関するチュートリアルを参照してくだ [[!DNL Google Customer Match]](./google-customer-match.md) さい。
 
 ### 許可リスト
 
