@@ -5,7 +5,7 @@ title: データ取り込みの品質
 topic: overview
 description: 次のドキュメントでは、Adobe Experience Platformでのバッチおよびストリーミング取り込みでサポートされているチェックおよび検証動作の概要を示します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 74%
@@ -56,4 +56,4 @@ Both batch and streaming ingestion prevent failed data from going downstream by 
 | データセット | データセットが指定され有効になっていること、さらに削除されていないことを確認します。 |
 | ヘッダー | ヘッダーが指定され、有効になっていることを確認します。 |
 
-More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-flows.md).
+More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).
