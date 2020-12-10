@@ -5,7 +5,7 @@ title: ストリーミング取り込みのトラブルシューティング
 topic: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 67%
@@ -59,7 +59,7 @@ You can group multiple messages within a single request payload and stream them 
 
 All data that is sent to [!DNL Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. バッチの処理ステータスは、送信先のデータセット内に表示されます。
 
-[Experience Platform ユーザーインターフェイス](https://platform.adobe.com)でデータセットのアクティビティを確認することで、データが正常に取り込まれたかどうかを確認できます。左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックし、データセットのリストを表示します。表示されたリストからストリーミング先のアクティビティセットを選択すると、その&#x200B;**[!UICONTROL データセットアクティビティ]**&#x200B;ページを開き、選択した期間に送信されたすべてのバッチが表示されます。For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
+[Experience Platform ユーザーインターフェイス](https://platform.adobe.com)でデータセットのアクティビティを確認することで、データが正常に取り込まれたかどうかを確認できます。左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックし、データセットのリストを表示します。表示されたリストからストリーミング先のアクティビティセットを選択すると、その&#x200B;**[!UICONTROL データセットアクティビティ]**&#x200B;ページを開き、選択した期間に送信されたすべてのバッチが表示されます。For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-ingestion.md).
 
 If your data failed to ingest and you want to recover it from [!DNL Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. 詳しくは、[失敗したバッチの取得](../quality/retrieve-failed-batches.md)に関するガイドを参照してください。
 
