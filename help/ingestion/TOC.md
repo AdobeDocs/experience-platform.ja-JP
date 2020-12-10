@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: データ取り込みガイド
 user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Platform に取り込みます。
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 95%
@@ -36,7 +36,7 @@ ht-degree: 95%
    - [複数のメッセージのストリーミング](tutorials/streaming-multiple-messages.md)
 - データ取得の品質と監視 {#quality}
    - [概要](quality/overview.md)
-   - [データフローの監視](quality/monitor-data-flows.md)
+   - [データ取得の監視](quality/monitor-data-ingestion.md)
    - [エラー診断の取得](quality/error-diagnostics.md)
    - [失敗したバッチの取得](quality/retrieve-failed-batches.md)
    - [ストリーミング取得の検証](quality/streaming-validation.md)
