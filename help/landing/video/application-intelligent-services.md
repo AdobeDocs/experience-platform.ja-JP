@@ -9,10 +9,10 @@ doc-type: video
 activity: understand
 thumbnail: 32554.jpg
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 14%
+source-wordcount: '119'
+ht-degree: 21%
 
 ---
 
@@ -21,10 +21,16 @@ ht-degree: 14%
 
 このビデオでは、Experience Platform上に構築されたアプリケーションとインテリジェントサービスの概要を説明します。
 
-* Attribution AI
-* 顧客 AI
-* Customer Journey Analytics
-* Journey Orchestration
-* リアルタイム顧客データプラットフォーム
+詳しくは、各アプリケーションのドキュメントにアクセスするためのリンクを参照してください。
+
+* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/ja-JP/analytics-platform/using/cja-landing.html)
+* [インテリジェントサービス](https://experienceleague.adobe.com/docs/intelligent-services.html)
+* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/ja-JP/journeys/using/journey-orchestration-home.html)
+* [[!DNL Offer Decisioning]](https://docs.adobe.com/content/help/ja-JP/offer-decisioning/using/offer-decisioning-home.html)
+* [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../../rtcdp/overview.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
+
+
+
+
