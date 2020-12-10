@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージベースのコネクタを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 6%
@@ -78,7 +78,7 @@ The **[!UICONTROL Select dataset]** dialog appears. 使用するデータセッ�
 
 ## データフローの監視と削除
 
-クラウドストレージのデータフローが作成されたら、データを通じて取り込まれるデータを監視できます。 データ・フローの監視および削除の詳細は、「データ・フローの [監視に関するチュートリアル](../../../../../ingestion/quality/monitor-data-flows.md)」を参照してください。
+クラウドストレージのデータフローが作成されたら、データを通じて取り込まれるデータを監視できます。 データ・フローの監視および削除の詳細は、「データ・フローの [監視に関するチュートリアル](../../../../../ingestion/quality/monitor-data-ingestion.md)」を参照してください。
 
 ## 次の手順
 
