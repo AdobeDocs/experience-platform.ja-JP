@@ -5,7 +5,7 @@ title: Adobe Experience PlatformUIガイド
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 1%
@@ -149,7 +149,7 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 [ **[!UICONTROL クエリ]** ]セクションでは、クエリの作成と管理、Adobe Experience Platformクエリサービスが行うSQLクエリのログ、PostgreSQL資格情報の表示を行うことができます。 クエリの詳細については、『 [クエリサービスユーザガイド](../query-service/ui/overview.md)』を参照してください。
 
-「 **[!UICONTROL 監視]** 」セクションでは、バッチおよびストリーミング取り込みを監視できます。 監視に関する詳細は、『 [監視データ取り込みユーザーガイド](../ingestion/quality/monitor-data-flows.md)』を参照してください。
+「 **[!UICONTROL 監視]** 」セクションでは、バッチおよびストリーミング取り込みを監視できます。 監視に関する詳細は、『 [監視データ取り込みユーザーガイド](../ingestion/quality/monitor-data-ingestion.md)』を参照してください。
 
 ### [!UICONTROL 判定]
 
