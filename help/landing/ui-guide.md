@@ -5,9 +5,9 @@ title: Adobe Experience PlatformUIガイド
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
+source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1737'
 ht-degree: 1%
 
 ---
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 このガイドは、Adobe Experience Platformユーザーインターフェイス(UI)の使用方法を紹介し、様々なコンポーネントの用途を説明し、詳細についての詳細ドキュメントへのリンクを提供します。
 
-Adobe Experience Platformの詳細については、 [Experience Platform概要を参照してください](./home.md)。
+Adobe Experience Platformの詳細については、 [Experience Platform概要を参照してください](home.md)。
 
 ## ホーム画面
 
-Adobe Experience Platformにログインすると、 [!UICONTROL ホーム] ページが表示されます。このページは、指標ダッシュボード、最近のデータ、推奨学習セクションで構成されています。
+Adobe Experience Platformにログインすると、 [!UICONTROL ホーム] ページが開きます。このページは、 [指標ダッシュボード](#metrics)、最近のデータ [、](#recent-data)および [](#recommended-learning) 推奨学習セクションで構成されています。
 
 ![](images/user-guide/homepage.png)
 
-### 指標ダッシュボード
+### 指標
 
 指標ダッシュボードには、データセット、プロファイル、セグメントおよび組織内の宛先に関する情報を提供するカードが用意されています。
 
@@ -63,13 +63,13 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 プラットフォームUIの上部ナビゲーションバーには、現在サインインしているIMS組織が表示され、いくつかの重要なコントロールが用意されています。
 
-ナビゲーションバーの左側には、Adobe Experience Platformのロゴが表示されます。 これを選択すると、プラットフォームUIのホーム画面が表示されます。
+ナビゲーションバーの左側には、Adobe Experience Platformのロゴが表示されます。 これを選択すると、プラットフォームのUIのホーム画面が表示されます。
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### IMS組織の切り替えボタン
 
-ナビゲーションバーの右側の最初の項目は、 **IMS組織の切り替えボタン**&#x200B;です。
+上部ナビゲーションバーの右側の最初の項目は、 **IMS組織の切り替えボタン**&#x200B;です。
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,7 +79,7 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 ### アプリケーションの切り替え
 
-右側の次のアイテムは、 **アプリケーションの切り替えボタン**&#x200B;で、 ![アプリケーションの切り替えボタン](./images/user-guide/app-switcher-icon.png) 。 このアイコンを選択すると、Experience Platform、アセット、Exchange、起動を切り替えることができます。
+上部ナビゲーションの右側にある次のアイテムは、 **アプリ切り替えボタン**&#x200B;で、 ![](./images/user-guide/app-switcher-icon.png) アプリ切り替えアイコンで表されます。 このアイコンを選択すると、Experience Platform、分析、アセット、起動など、IMS組織がアクセス権を持つAdobeアプリを切り替えることができます。
 
 ### ヘルプ
 
@@ -89,7 +89,7 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 ### 通知とお知らせ
 
-[ヘルプとサポート]メニューの後に **[**&#x200B;通知]セクションが表示され ![、[](images/user-guide/notification-icon.png) ベル/通知]アイコンと[お知らせ]アイコンで表されます。 「 **[!UICONTROL 通知]** 」タブには製品やその他の関連する更新に関する重要な情報が表示され、「お知らせ **** 」タブにはサービスのメンテナンスに関する通知が表示されます。
+「 **通知」セクション**。 ![ベル/通知とお知らせ](images/user-guide/notification-icon.png) アイコンで表されます。 「 **[!UICONTROL 通知]** 」タブには製品やその他の関連する更新に関する重要な情報が表示され、「お知らせ **** 」タブにはサービスのメンテナンスに関する情報が表示されます。
 
 ### ユーザープロファイル
 
