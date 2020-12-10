@@ -1,14 +1,12 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: リアルタイム顧客データプラットフォームの概要
-seo-title: リアルタイム顧客データプラットフォームの概要
-description: ' リアルタイム顧客データプラットフォームのサンプルシナリオ'
-seo-description: ' リアルタイム顧客データプラットフォームのサンプルシナリオ'
+description: リアルタイム顧客データプラットフォームの実装を設定する際の例として、次のシナリオの例を使用します。
 translation-type: tm+mt
-source-git-commit: 8369bd517639cc66eeb95a811c3ddf46b8c4c48d
+source-git-commit: d4a205b2e5fe4ca1f8d419eec3e7636e2ed0e5ef
 workflow-type: tm+mt
-source-wordcount: '2317'
-ht-degree: 86%
+source-wordcount: '2313'
+ht-degree: 85%
 
 ---
 
