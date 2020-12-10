@@ -5,9 +5,9 @@ title: Adobe Experience PlatformワークフローUIガイド
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 068e8270f389ed84cae6ef4b7185259cb5f6dadc
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ Adobe Experience Platform・ユーザー・インターフェース内の **[!UI
 
 ## [!UICONTROL データの取り込み]
 
-CSVをXDMに **[!UICONTROL マップスキーマ]** ワークフローを使用すると、CSVファイルをアップロードしてExperience Data Model(XDM)スキーマ形式に変換できます。 このワークフローについて詳しくは、CSVファイルのXDMスキーマへの [マッピングに関するチュートリアルを参照してください](../ingestion/tutorials/map-a-csv-file.md)。
+CSVをXDMに **[!UICONTROL マップスキーマ]** ワークフローを使用して、CSVファイルをアップロードし、エクスペリエンスデータモデル(XDM)スキーマに変換できます。 このワークフローについて詳しくは、CSVファイルのXDMスキーマへの [マッピングに関するチュートリアルを参照してください](../ingestion/tutorials/map-a-csv-file.md)。
 
-スキーマ **** からデータセットを作成ワークフローを使用すると、登録済みのXDMスキーマから新しいデータセットを作成できます。 このワークフローの詳細については、『 [datasetsユーザガイド](../catalog/datasets/user-guide.md#schema)』を参照してください。
+「 **[!UICONTROL スキーマからデータセットを]** 作成」ワークフローを使用すると、既存のXDMスキーマから新しいデータセットを作成できます。 このワークフローの詳細については、『 [datasetsユーザガイド](../catalog/datasets/user-guide.md#schema)』を参照してください。
 
 「 **[!UICONTROL CSVからデータセットを]** 作成」ワークフローでは、CSVファイルをアップロードして新しいデータセットを作成できます。 このワークフローの詳細については、『 [datasetsユーザガイド](../catalog/datasets/user-guide.md#csv)』を参照してください。
 
@@ -37,4 +37,4 @@ CSVをXDMに **[!UICONTROL マップスキーマ]** ワークフローを使用�
 
 ## 次の手順
 
-このガイドを読むことで、Experience Platformユーザーインターフェイスの [!UICONTROL ワークフロー] ページについて説明します。 プラットフォームUIの一般的な詳細については、『 [Adobe Experience PlatformUIガイド](./ui-guide.md)』を参照してください。
+このガイドを読むことで、Experience Platformのユーザーインターフェイスで [!UICONTROL 使用できるワークフローについて説明します] 。 プラットフォームUIの機能について詳しくは、 [Adobe Experience PlatformUIガイドを参照してください](ui-guide.md)。
