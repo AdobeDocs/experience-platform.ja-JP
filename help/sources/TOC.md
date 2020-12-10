@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 8%
 
 ---
@@ -36,8 +36,9 @@ ht-degree: 8%
       - [Azure BLOBコネクタ](connectors/cloud-storage/blob.md)
       - [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
       - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
-      - [FTPおよびSFTPコネクタ](connectors/cloud-storage/ftp-sftp.md)
+      - [FTPコネクタ](connectors/cloud-storage/ftp.md)
       - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
+      - [SFTPコネクタ](connectors/cloud-storage/sftp.md)
       - [AmazonS3およびAzure Blobコネクタ](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
@@ -82,6 +83,7 @@ ht-degree: 8%
          - [Azure Data LakeストレージGen2コネクタ](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azureイベントハブコネクタ](tutorials/api/create/cloud-storage/eventhub.md)
          - [Azure Fileストレージコネクタ](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [FTPコネクタ](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloudストレージコネクタ](tutorials/api/create/cloud-storage/google.md)
          - [SFTPコネクタ](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -160,8 +162,9 @@ ht-degree: 8%
          - [Azure BLOBコネクタ](tutorials/ui/create/cloud-storage/blob.md)
          - [Azureイベントハブコネクタ](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Azure Fileストレージコネクタ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [FTPおよびSFTPコネクタ](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [FTPコネクタ](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloudストレージコネクタ](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [SFTPコネクタ](tutorials/ui/create/cloud-storage/sftp.md)
          - [AmazonS3およびBLOBコネクタ](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamicsコネクタ](tutorials/ui/create/crm/dynamics.md)
