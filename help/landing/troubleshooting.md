@@ -7,10 +7,10 @@ landing-page-description: Find answers to frequently asked questions and a guide
 topic: getting started
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 4a65d5e31eda3973d3e8e0d8e066692c667934e1
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '1940'
-ht-degree: 78%
+source-wordcount: '1954'
+ht-degree: 76%
 
 ---
 
@@ -25,7 +25,7 @@ This document provides answers to frequently asked questions about Adobe Experie
 
 ## What are [!DNL Experience Platform] APIs? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] オファーは、HTTP要求を使用してリ [!DNL Platform] ソースにアクセスする複数のRESTful APIを提供します。 これらのサービス API は、それぞれ複数のエンドポイントを公開し、リスト（GET）、ルックアップ（GET）、編集（PUT または PATCH）および削除（DELETE）リソースに対する操作を実行できます。各サービスで使用できる特定のエンドポイントと操作について詳しくは、Adobe I/O の [API リファレンスドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)を参照してください。
+[!DNL Experience Platform] オファーは、HTTP要求を使用してリ [!DNL Platform] ソースにアクセスする複数のRESTful APIを提供します。 これらのサービス API は、それぞれ複数のエンドポイントを公開し、リスト（GET）、ルックアップ（GET）、編集（PUT または PATCH）および削除（DELETE）リソースに対する操作を実行できます。各サービスで使用できる特定のエンドポイントと操作について詳しくは、Adobe I/O の [API リファレンスドキュメント](http://www.adobe.com/go/platform-api-reference-en)を参照してください。
 
 ## API リクエストの形式を設定する方法を教えてください。 {#how-do-i-format-an-api-request}
 
@@ -87,19 +87,19 @@ curl -X GET \
 }
 ```
 
-必要なヘッダーやリクエスト本文を含む、Platform API の特定のエンドポイントについて詳しくは、[API リファレンスのドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)を参照してください。
+必要なヘッダーやリクエスト本文を含む、Platform API の特定のエンドポイントについて詳しくは、[API リファレンスのドキュメント](http://www.adobe.com/go/platform-api-reference-en)を参照してください。
 
 ## IMS 組織とは何ですか。 {#what-is-my-ims-organization}
 
-IMS 組織は、顧客のアドビ代表です。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。When an IMS organization is entitled to [!DNL Experience Platform], it can assign access to developers. IMS 組織 ID（`x-gw-ims-org-id`）は、API 呼び出しを実行する必要がある組織を表すもので、すべての API リクエストのヘッダーとして必要です。This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Platform], see the [authentication tutorial](../tutorials/authentication.md).
+IMS 組織は、顧客のアドビ代表です。ライセンスを取得したアドビのソリューションは、この顧客組織に統合されます。When an IMS organization is entitled to [!DNL Experience Platform], it can assign access to developers. IMS 組織 ID（`x-gw-ims-org-id`）は、API 呼び出しを実行する必要がある組織を表すもので、すべての API リクエストのヘッダーとして必要です。This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Platform], see the [authentication tutorial](http://www.adobe.com/go/platform-api-authentication-en).
 
 ## API キーはどこで入手できますか？ {#where-can-i-find-my-api-key}
 
-API キーは、すべての API リクエストのヘッダーとして必要です。It can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。For a step-by-step walkthrough of how to authenticate to [!DNL Platform], see the [authentication tutorial](../tutorials/authentication.md).
+API キーは、すべての API リクエストのヘッダーとして必要です。It can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). コンソールの「**統合**」タブで、特定の統合の「**概要**」セクションに移動すると、「**クライアント資格情報**」の下にキーが表示されます。For a step-by-step walkthrough of how to authenticate to [!DNL Platform], see the [authentication tutorial](http://www.adobe.com/go/platform-api-authentication-en).
 
 ## アクセストークンはどのように入手できますか？ {#how-do-i-get-an-access-token}
 
-アクセストークンは、すべての API 呼び出しの Authorization ヘッダーに必要です。IMS 組織の統合にアクセスできる場合は、`curl` コマンドを使用して生成できます。アクセストークンは 24 時間のみ有効で、その後 API を使用し続けるためには新しいトークンを生成する必要があります。アクセストークンの生成について詳しくは、[認証に関するチュートリアル](../tutorials/authentication.md)を参照してください。
+アクセストークンは、すべての API 呼び出しの Authorization ヘッダーに必要です。IMS 組織の統合にアクセスできる場合は、`curl` コマンドを使用して生成できます。アクセストークンは 24 時間のみ有効で、その後 API を使用し続けるためには新しいトークンを生成する必要があります。アクセストークンの生成について詳しくは、[認証に関するチュートリアル](http://www.adobe.com/go/platform-api-authentication-en)を参照してください。
 
 ## クエリーパラメーターの使用方法 {#how-do-i-user-query-parameters}
 
@@ -153,7 +153,7 @@ The following status codes may be encountered on any [!DNL Experience Platform] 
 
 ## リクエストヘッダーエラー {#request-header-errors}
 
-All API calls in [!DNL Platform] require specific request headers. 個々のサービスに必要なヘッダーを確認するには、 [API リファレンスのドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)を参照してください。必要な認証ヘッダーの値を確認するには、[認証に関するチュートリアル](../tutorials/authentication.md)を参照してください。API 呼び出しをおこなう際に、これらのヘッダーのいずれかが見つからないか無効な場合は、次のエラーが発生する可能性があります。
+All API calls in [!DNL Platform] require specific request headers. 個々のサービスに必要なヘッダーを確認するには、 [API リファレンスのドキュメント](http://www.adobe.com/go/platform-api-reference-en)を参照してください。必要な認証ヘッダーの値を確認するには、[認証に関するチュートリアル](http://www.adobe.com/go/platform-api-authentication-en)を参照してください。API 呼び出しをおこなう際に、これらのヘッダーのいずれかが見つからないか無効な場合は、次のエラーが発生する可能性があります。
 
 ### OAuth token is missing {#oauth-token-is-missing}
 
@@ -175,7 +175,7 @@ All API calls in [!DNL Platform] require specific request headers. 個々のサ�
 }
 ```
 
-このエラーメッセージは、`Authorization` ヘッダーに指定されたアクセストークンが無効な場合に表示されます。トークンが正しく入力されていることを確認するか、Adobe I/O コンソールで[新しいトークンを生成](../tutorials/authentication.md)します。
+このエラーメッセージは、`Authorization` ヘッダーに指定されたアクセストークンが無効な場合に表示されます。トークンが正しく入力されていることを確認するか、Adobe I/O コンソールで[新しいトークンを生成](http://www.adobe.com/go/platform-api-authentication-en)します。
 
 ### API key is required
 
