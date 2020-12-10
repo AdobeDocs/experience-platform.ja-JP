@@ -1,0 +1,60 @@
+---
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
+description: Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ソース・ワークスペースから既存のデータ・フローを表示する手順を説明します。
+solution: Experience Platform
+title: データフローの監視
+topic: overview
+type: Tutorial
+translation-type: tm+mt
+source-git-commit: 791ad61f2f28da03ef3e5cb5efdd89154e9b1a0b
+workflow-type: tm+mt
+source-wordcount: '422'
+ht-degree: 5%
+
+---
+
+
+# UIの宛先のデータフローの監視
+
+目的地では、Adobe Experience Platformから数え切れないほどの外部パートナーにデータをアクティブにできます。 このチュートリアルでは、Experience Platform・ユーザー・インタフェースを使用して、宛先のデータ・フローを監視する方法について説明します。
+
+## はじめに
+
+このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
+
+- [宛先](../../destinations/home.md):宛先は、一般的に使用されるアプリケーションとの統合が事前に構築されており、チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲットを絞った広告など、様々な用途で、プラットフォームのデータをシームレスにアクティベーションできます。
+- [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+
+## データフローの監視
+
+Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 **[!UICONTROL 参照]** 」タブに移動し、表示する宛先の名前を選択します。
+
+![](../assets/ui/monitor-destinations/select-destination.png)
+
+既存のデータフローのリストが表示されます。 このページには、表示可能なデータ・フローのリストがあります。宛先、ユーザー名、データ・フロー数、ステータスに関する情報が含まれます。
+
+ステータスについて詳しくは、次の表を参照してください。
+
+| ステータス | 説明 |
+| ------ | ----------- |
+| 有効 | ステータスは、データフローがアクティブであり、提供されたスケジュールに従ってデータを取り込んでいることを示します。 `Enabled` |
+| 無効 | ステータスは、データフローが非アクティブで、データを取り込んでいないことを示します。 `Disabled` |
+| Processing | ステータスは、データフローがまだアクティブでないことを示します。 `Processing` このステータスは、多くの場合、新しいデータフローの作成直後に発生します。 |
+| エラー | ステータスは、データフローのアクティベーションプロセスが中断されたことを示します。 `Error` |
+
+## [!UICONTROL データフローの実行]
+
+「 [!UICONTROL Dataflow runs] 」タブは、データフローの実行上の指標データをバッチ宛先に提供します。 個々の実行とその特定の指標のリストが表示され、プロファイルレコードの以下の合計が示されます。
+
+- **[!UICONTROL アクティブ化されたプロファイルレコード]**:アクティベーション用に作成または更新されたプロファイルレコードの合計数です。
+- **[!UICONTROL プロファイルレコードがスキップされました]**: プロファイルEXITまたは欠落した属性に基づいて、アクティベーションでスキップされたプロファイルレコードの合計数です。
+
+![](../assets/ui/monitor-destinations/dataflow-runs.png)
+
+>[!NOTE]
+>
+>データフローの実行は、宛先データフローのスケジュール頻度に基づいて生成されます。 セグメントに適用されたマージ・ポリシーごとに、個別のデータ・フローが実行されます。
+
+特定のデータ・フロー実行の詳細を表示するには、リストから実行の開始時間を選択します。 データフロー実行の詳細ページには、処理されたデータのサイズや、エラー診断の詳細に関するエラーのリストなどの追加情報が含まれます。
+
+![](../assets/ui/monitor-destinations/dataflow.png)
