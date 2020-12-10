@@ -5,10 +5,10 @@ title: Flow Service APIを使用したクラウドストレージシステムの
 topic: overview
 description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムを調査します。
 translation-type: tm+mt
-source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
+source-git-commit: 3d104cdf7c97022fe60feafd3587056d378b56bd
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 15%
+source-wordcount: '746'
+ht-degree: 16%
 
 ---
 
@@ -34,6 +34,7 @@ APIを使用してサードパーティのクラウドストレージを調査�
 * [Azure BLOB](../create/cloud-storage/blob.md)
 * [Azure Data LakeストレージGen2](../create/cloud-storage/adls-gen2.md)
 * [Azure Fileストレージ](../create/cloud-storage/azure-file-storage.md)
+* [FTP](../create/cloud-storage/ftp.md)
 * [Google Cloud Store](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
