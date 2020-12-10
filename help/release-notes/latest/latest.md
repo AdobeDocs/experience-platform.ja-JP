@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
 translation-type: tm+mt
-source-git-commit: a411ac92d946080abd7b22b9d57c7154d263a30a
+source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 36%
+source-wordcount: '426'
+ht-degree: 31%
 
 ---
 
@@ -17,19 +17,35 @@ ht-degree: 36%
 
 **リリース日：2020年12月9日**
 
+Adobe Experience Platform の新機能：
+
+- [[!DNL Dataflows]](#dataflows)
+
 Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
 
+## [!DNL Dataflows] {#dataflows}
+
+データフローは、プラットフォーム間でデータを移動するデータ・ジョブを表します。 これらのデータフローは様々なサービスで構成され、ソース・コネクタからターゲット・データセット、IDおよびプロファイル・サービス、宛先にデータを移動できます。
+
+**主な機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| データフローの透過性 | ソースおよび宛先のデータフローを監視できます。 詳細については、監視ソースに関する [チュートリアル](../../dataflows/ui/monitor-sources.md) 、または監視先に関する [チュートリアルを参照してください](../../dataflows/ui/monitor-destinations.md)。 |
+
+データフローの詳細については、 [データフローの概要を参照してください](../../dataflows/home.md)。
+
 ## [!DNL Data Science Workspace] {#dsw}
 
 Data Science Workspaceは、機械学習と人工知能を使用して、データからインサイトを作成します。 Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測をおこなうことを支援します。
 
-### 主な特長
+**主な特長**
 
 | 機能 | 説明 |
-|--- | ---|
+| --- | ---|
 | Adobe Experience Platform情報パッケージアドオン | Adobe Experience Platformインテリジェンスパッケージアドオンは、Data Science Workspaceのアップグレードで、次のような追加の主要機能をロック解除します。 <li> UI主導のモデル実験と評価。</li><li> 予定されたトレーニングジョブと参照ジョブを使用して、モデルを導入および操作する機能。</li><li> Tensorflowモデル(GPU Compute)での詳細な学習のサポート。</li><li> Sparkベースの分散コンピューティングにより、大規模なデータセット（10MM +行）に対してトレーニングとスコアを実施。</li><li>その他</li> |
 
 Adobe Experience Platformインテリジェンスパッケージアドオンの詳細については、 [Data Science Workspaceのアクセスと機能に関するドキュメントを参照してください](../../data-science-workspace/access-features-dsw.md)。
