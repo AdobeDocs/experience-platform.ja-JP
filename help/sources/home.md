@@ -5,9 +5,9 @@ title: Adobe Experience Platform ソースコネクタの概要
 topic: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 translation-type: tm+mt
-source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '887'
 ht-degree: 57%
 
 ---
@@ -54,8 +54,9 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 - [[!DNL Apache HDFS] コネクタ](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] コネクタ](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] コネクタ](connectors/cloud-storage/azure-file-storage.md)
-- [[!DNL FTP and SFTP] コネクタ](connectors/cloud-storage/ftp-sftp.md)
+- [[!DNL FTP] コネクタ](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] コネクタ](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL SFTP] コネクタ](connectors/cloud-storage/sftp.md)
 
 ### 顧客関係管理（CRM）
 
