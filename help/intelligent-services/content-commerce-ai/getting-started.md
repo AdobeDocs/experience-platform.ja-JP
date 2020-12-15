@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: コンテンツ&コマースAIはじめに
 topic: Getting started
 description: コンテンツ&コマースAIはAdobe I/OAPIを活用。 Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず認証のチュートリアルを完了する必要があります。
 translation-type: tm+mt
-source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 14%
