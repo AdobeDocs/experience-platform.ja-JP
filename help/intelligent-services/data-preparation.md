@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Intelligent Servicesで使用するデータの準備
 topic: Intelligent Services
 description: 'インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。 '
 translation-type: tm+mt
-source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1851'
 ht-degree: 1%
