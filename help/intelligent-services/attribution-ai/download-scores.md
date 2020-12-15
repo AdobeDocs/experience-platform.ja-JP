@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Attribution AI のスコアへのアクセス
 topic: Accessing scores
 description: このドキュメントは、Attribution AIのスコアをダウンロードする際のガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 69%
