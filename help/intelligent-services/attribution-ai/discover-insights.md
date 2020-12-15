@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
-solution: Experience Platform
+solution: Intelligent Services, Experience Platform
 title: Attribution AI でのインサイトの調査
 topic: Attribution AI insights
 description: このドキュメントは、アドビインテリジェントサービスのユーザーインターフェイスでサービスインスタンスのインサイトを操作する際のガイドとして提供されています。
 translation-type: tm+mt
-source-git-commit: 69c27fc45aa9d9acaaed29c2324d02ebd471d63d
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 50%
