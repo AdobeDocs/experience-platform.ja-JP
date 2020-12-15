@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: キーワード抽出
 topic: Developer guide
 description: キーワード抽出サービスは、テキストドキュメントを指定すると、ドキュメントの主題を最も記述したキーワードまたはキーパースを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識(NER)と監視されていないキーワード抽出アルゴリズムの組み合わせが使用されます。
 translation-type: tm+mt
-source-git-commit: e397711baf31092402de83b826887ebef16321eb
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 4%
