@@ -4,7 +4,7 @@ title: Consents & Preferencesデータタイプ
 description: 「プライバシー/マーケティングの環境設定（同意）」データ型は、データ操作から、Consent Management Platforms(CMP)や他のソースによって生成される顧客の権限や好みの収集をサポートすることを目的としています。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 640f0be8a297fada0eee10ff80fec3b3142c09b9
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 1%
@@ -285,7 +285,7 @@ ht-degree: 1%
 >
 >同意データをに送信する場合 [!DNL Real-time Customer Profile]は、 [!DNL Profile]データタイプを含むクラスに基づいて、 [!DNL XDM Individual Profile] 有効なスキーマを作成する必要があり [!DNL Consents & Preferences] ます。 そのスキーマに基づいて作成したデータセットも有効にする必要があり [!DNL Profile]ます。 スキーマとデータセットの [!DNL Real-time Customer Profile] 要件に関する具体的な手順については、上記のリンクを含むチュートリアルを参照してください。
 >
->また、顧客プロファイルを正しく更新するために、最新の同意データと優先データを含むデータセットに優先順位を付けるようにマージポリシーを設定する必要もあります。 詳しくは、 [マージポリシーの概要](../../rtcdp/profile/merge-policies.md) を参照してください。
+>また、顧客プロファイルを正しく更新するために、最新の同意データと優先データを含むデータセットに優先順位を付けるようにマージポリシーを設定する必要もあります。 See the overview on [merge policies](../../rtcdp/profile/merge-policies.md) for more information.
 
 ## 同意と優先順位の変更の処理
 
@@ -333,4 +333,4 @@ ht-degree: 1%
 
 ### フル [!DNL Consents & Preferences] スキーマ {#full-schema}
 
-データ型の完全なスキーマを表示するには、 [!DNL Consents & Preferences][正式なXDMリポジトリを参照してください](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json)。
+データ型の完全なスキーマを表示するには、 [!DNL Consents & Preferences][正式なXDMリポジトリを参照してください](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)。
