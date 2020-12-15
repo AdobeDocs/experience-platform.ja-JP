@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;intelligent services;popular topics;intelligent service;Intelligent service
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: インテリジェントサービスの概要
 topic: Intelligent Services overview
 description: マーケティングアナリストや担当者は、インテリジェントサービスを使用することで、人工知能と機械学習の能力を顧客体験の使用事例で活用できます。これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。さらに、マーケターは、Adobe Experience Cloud、Adobe Experience Platform およびサードパーティアプリケーションで予測をアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 76%
