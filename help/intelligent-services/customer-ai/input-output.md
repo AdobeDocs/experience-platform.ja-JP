@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客AIの入出力
 topic: Getting started
 description: 次のドキュメントでは、Customer AIで使用される様々な入力と出力の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 0f45f12ca4f43de9489eb609fd541aa2be3bae78
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 34%
