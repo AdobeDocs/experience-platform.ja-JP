@@ -1,11 +1,11 @@
 ---
 keywords: text classification;Text classification
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: テキスト分類APIエンドポイント
 topic: Developer guide
 description: テキスト分類サービスは、テキストフラグメントを指定した場合、1つ以上のラベルに分類できます。 分類は、単一のラベル、複数のラベル、階層のいずれかです。
 translation-type: tm+mt
-source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 5%
