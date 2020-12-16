@@ -6,45 +6,44 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
+source-git-commit: cab1d65b643b919a6529926cd0856d89c5264d55
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 14%
+source-wordcount: '1609'
+ht-degree: 19%
 
 ---
 
 
 # ソースコネクターとAPIを使用したクラウドストレージデータの収集
 
-このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタと [[!DNL Flow Service] APIを使用してプラットフォームにデータを取り込む手順を説明します](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)。
+このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクターと[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を介してプラットフォームにデータを取り込む手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効な接続を通じてサードパーティのクラウドストレージにアクセスでき、ファイルのパスや構造など、に組み込むファイルに関する情報が必要 [!DNL Platform]です。 この情報がない場合は、このチュートリアルを試す前に、APIを使用したサードパーティのクラウドストレージの [調査に関するチュ [!DNL Flow Service] ートリアル](../explore/cloud-storage.md) を参照してください。
+このチュートリアルでは、有効な接続を通じてサードパーティのクラウドストレージにアクセスでき、ファイルのパスや構造など、プラットフォームに組み込むファイルに関する情報が必要です。 この情報がない場合は、[このチュートリアルを試す前に、 [!DNL Flow Service] API](../explore/cloud-storage.md)を使用したサードパーティのクラウドストレージの調査に関するチュートリアルを参照してください。
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 - [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   - [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md):スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-- [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
-- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイル [!DNL Experience Platform] としてに取り込むことができます。
-- [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
-The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage using the [!DNL Flow Service] API.
+   - [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md):スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
+- [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、Experience Platform内のデータの場所と系列の記録システムです。
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
+- [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。[!DNL Flow Service] APIを使用してクラウドストレージに正しく接続するために必要な追加情報については、以下の節で説明します。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](../../../../tutorials/authentication.md)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Flow Service]に属するリソースを含む、Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -52,9 +51,9 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 - `Content-Type: application/json`
 
-## ソース接続の作成 {#source}
+## ソース接続の作成{#source}
 
-You can create a source connection by making a POST request to the [!DNL Flow Service] API. ソース接続は、接続ID、ソースデータファイルのパス、および接続仕様IDで構成されます。
+[!DNL Flow Service] APIにPOSTリクエストを行うことで、ソース接続を作成できます。 ソース接続は、接続ID、ソースデータファイルのパス、および接続仕様IDで構成されます。
 
 ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
@@ -66,11 +65,11 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 | JSON | `json` |
 | パーケ | `parquet` |
 
-テーブルベースのすべてのコネクタの値をに設定し `tabular`ます。
+テーブルベースのすべてのコネクタで、値を`tabular`に設定します。
 
 >[!NOTE]
 >
->列の区切り文字をプロパティとして指定すると、CSVファイルとTSVファイルをクラウドストレージソースコネクタに取り込むことができます。 任意の1文字の値は、列の区切り文字として使用できます。 指定しない場合、コンマ `(,)` がデフォルト値として使用されます。
+>列の区切り文字をプロパティとして指定すると、CSVファイルとTSVファイルをクラウドストレージソースコネクタに取り込むことができます。 任意の1文字の値は、列の区切り文字として使用できます。 指定しない場合、コンマ`(,)`がデフォルト値として使用されます。
 
 **API 形式**
 
@@ -113,7 +112,7 @@ curl -X POST \
 | `data.format` | データ形式属性を定義する列挙値。 |
 | `data.columnDelimiter` | 任意の1文字列の列区切り文字を使用して、フラットファイルを収集できます。 このプロパティは、CSVファイルまたはTSVファイルを取り込む場合にのみ必要です。 |
 | `params.path` | アクセスするソースファイルのパス。 |
-| `connectionSpec.id` | 特定のサードパーティクラウドストレージシステムに関連付けられている接続仕様ID。 接続仕様IDのリストについては、 [付録](#appendix) を参照してください。 |
+| `connectionSpec.id` | 特定のサードパーティクラウドストレージシステムに関連付けられている接続仕様ID。 接続仕様IDのリストについては、[付録](#appendix)を参照してください。 |
 
 **応答** 
 
@@ -126,11 +125,11 @@ curl -X POST \
 }
 ```
 
-## ターゲットXDMスキーマの作成 {#target-schema}
+## ターゲットXDMスキーマの作成{#target-schema}
 
-でソースデータを使用するには、必要に応じてソースデータを構造化するためのターゲットスキーマを作成する [!DNL Platform]必要があります。 次に、このターゲットスキーマを使用して、ソースデータが含まれる [!DNL Platform] データセットを作成します。
+Platformでソースデータを使用するには、必要に応じてソースデータを構造化するターゲットスキーマを作成する必要があります。 次に、このターゲットスキーマを使用して、ソースデータが含まれるプラットフォームデータセットを作成します。
 
-ターゲットXDMスキーマは、 [スキーマレジストリAPIに対するPOST要求を実行することで作成できます](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)。
+ターゲットXDMスキーマは、[スキーマレジストリAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)に対するPOST要求を実行することで作成できます。
 
 **API 形式**
 
@@ -177,7 +176,7 @@ curl -X POST \
 
 **応答** 
 
-A successful response returns details of the newly created schema including its unique identifier (`$id`). このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となります。
+正常に応答すると、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を返します。 このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となります。
 
 ```json
 {
@@ -239,7 +238,7 @@ A successful response returns details of the newly created schema including its 
 
 ## ターゲットデータセットの作成
 
-ターゲットデータセットは、 [カタログサービスAPIに対してPOSTリクエストを実行し](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)、ペイロード内のターゲットスキーマのIDを提供することで作成できます。
+ターゲットデータセットは、[カタログサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを指定することで作成できます。
 
 **API 形式**
 
@@ -272,7 +271,7 @@ curl -X POST \
 
 **応答** 
 
-A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。ターゲットデータセットIDは、後の手順でターゲット接続とデータフローを作成する際に必要となります。
+正常に完了すると、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列が返されます。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。ターゲットデータセットIDは、後の手順でターゲット接続とデータフローを作成する際に必要となります。
 
 ```json
 [
@@ -280,11 +279,11 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## ターゲット接続の作成 {#target-connection}
+## ターゲット接続の作成{#target-connection}
 
-ターゲット接続は、取り込まれたデータが到着した宛先への接続を表します。 ターゲット接続を作成するには、Data Lakeに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取り込まれたデータが到着した宛先への接続を表します。 ターゲット接続を作成するには、Data Lakeに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-これで、ターゲットスキーマ、ターゲットデータセット、データレークへの接続仕様IDの一意の識別子が得られました。 これらの識別子を使用して、 [!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
+これで、ターゲットスキーマ、ターゲットデータセット、データレークへの接続仕様IDの一意の識別子が得られました。 これらの識別子を使用して、[!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
 
 **API 形式**
 
@@ -323,13 +322,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `data.schema.id` | ターゲット `$id` のXDMスキーマ。 |
+| `data.schema.id` | ターゲットXDMスキーマの`$id`。 |
 | `params.dataSetId` | ターゲットデータセットのID。 |
-| `connectionSpec.id` | Data Lakeへの固定接続仕様ID。 このIDは次のとおりです。 `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | Data Lakeへの固定接続仕様ID。 このIDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **応答** 
 
-正常な応答は、新しいターゲット接続の固有な識別子(`id`)を返します。 このIDは、後の手順で必要になります。
+正常に応答すると、新しいターゲット接続の一意の識別子(`id`)が返されます。 このIDは、後の手順で必要になります。
 
 ```json
 {
@@ -338,7 +337,7 @@ curl -X POST \
 }
 ```
 
-## マッピングの作成 {#mapping}
+## マッピングを作成{#mapping}
 
 ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、リクエストペイロード内で定義されたデータマッピングを使用して、コンバージョンサービスに対するPOSTリクエストを実行することで達成されます。
 
@@ -411,9 +410,9 @@ curl -X POST \
 }
 ```
 
-## データフロー仕様の取得 {#specs}
+## データフロー仕様の取得{#specs}
 
-データフローは、ソースからデータを収集し、それらをに取り込む役割を持ち [!DNL Platform]ます。 データフローを作成するには、まず、クラウドストレージデータの収集を担当するデータフロー仕様を取得する必要があります。
+データフローは、ソースからデータを収集し、プラットフォームに取り込む役割を持ちます。 データフローを作成するには、まず、クラウドストレージデータの収集を担当するデータフロー仕様を取得する必要があります。
 
 **API 形式**
 
@@ -433,7 +432,7 @@ curl -X GET \
 
 **応答** 
 
-成功した応答は、クラウドストレージからのデータの取り込みを担当するデータフロー仕様の詳細を返し [!DNL Platform]ます。 この応答には、一意のフロー仕様IDが含まれます。 このIDは、次の手順で新しいデータフローを作成する際に必要です。
+正常な応答を得ると、ソースからプラットフォームにデータを取り込む処理を行うデータフロー仕様の詳細が返されます。 この応答には、新しいデータフローの作成に必要な一意のフロー仕様`id`が含まれます。
 
 ```json
 {
@@ -571,11 +570,11 @@ curl -X GET \
 
 データフローは、ソースからのデータのスケジュールおよび収集を担当します。 POST内で前述の値を提供しながらペイロードリクエストを実行すると、データフローを作成できます。
 
-取り込みのスケジュールを設定するには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 interval値は、2つの連続したインジェスションの間の期間を指定し、1回限りのインジェストを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の場合、間隔の値は次の値と等しいかそれ以上に設定する必要があり `15`ます。
+取り込みのスケジュールを設定するには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day`、または`week`です。 interval値は、2つの連続したインジェスションの間の期間を指定し、1回限りのインジェストを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の場合、間隔の値は`15`以上に設定する必要があります。
 
 >[!IMPORTANT]
 >
->データフローのスケジュールを、 [FTPコネクタを使用する場合に1回だけ取り込むように設定することを強くお勧めします](../../../connectors/cloud-storage/ftp.md)。
+>[FTPコネクタ](../../../connectors/cloud-storage/ftp.md)を使用する場合は、1回の取り込みでデータフローをスケジュールすることを強くお勧めします。
 
 **API 形式**
 
@@ -624,17 +623,17 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `flowSpec.id` | 前の手順で取得した [フロー仕様ID](#specs) 。 |
-| `sourceConnectionIds` | 前の手順で取得した [ソース接続ID](#source) 。 |
-| `targetConnectionIds` | 前の手順で取得した [ターゲット接続ID](#target-connection) 。 |
-| `transformations.params.mappingId` | 前の手順で取得した [マッピングID](#mapping) 。 |
+| `flowSpec.id` | 前の手順で取得した[フロー仕様ID](#specs)。 |
+| `sourceConnectionIds` | 前の手順で取得した[ソース接続ID](#source)。 |
+| `targetConnectionIds` | 前の手順で取得した[ターゲット接続ID](#target-connection)。 |
+| `transformations.params.mappingId` | 前の手順で取得した[マッピングID](#mapping)。 |
 | `scheduleParams.startTime` | エポック時間のデータフローの開始時間。 |
-| `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。 `once`、、 `minute`、 `hour`、 `day`またはのいずれか `week`です。 |
-| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度を「次の値」に設定する場合、間隔は不要 `once` です。他の頻度の値に対して、間隔は「次の値」以上に設定する必要があり `15` ます。 |
+| `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。`once`、`minute`、`hour`、`day`、または`week`です。 |
+| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度が`once`として設定されている場合は間隔は不要で、他の頻度の値は`15`以上にする必要があります。 |
 
 **応答** 
 
-A successful response returns the ID (`id`) of the newly created dataflow.
+正常な応答が返されると、新たに作成されたデータフローのID(`id`)が返されます。
 
 ```json
 {
@@ -645,11 +644,11 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ## データフローの監視
 
-データフローを作成したら、データフローを介して取り込まれるデータを監視し、フローの実行、完了状態、エラーに関する情報を確認できます。 データフローの監視方法の詳細については、APIのデータフローの [監視に関するチュートリアルを参照してください](../monitor.md)
+データフローを作成したら、データフローを介して取り込まれるデータを監視し、フローの実行、完了状態、エラーに関する情報を確認できます。 データフローの監視方法の詳細については、API](../monitor.md)の[データフローの監視に関するチュートリアルを参照してください
 
 ## 次の手順
 
-このチュートリアルに従って、ソースコネクタを作成し、クラウドストレージからデータをスケジュールに基づいて収集します。 受信データは、やなどのダウンストリーム [!DNL Platform] サービスで使用でき [!DNL Real-time Customer Profile] るようになり [!DNL Data Science Workspace]ました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従って、ソースコネクタを作成し、クラウドストレージからデータをスケジュールに基づいて収集します。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリームプラットフォームサービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 - [Data Science ワークスペースの概要](../../../../data-science-workspace/home.md)
