@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '144'
 ht-degree: 97%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 97%
    - [UI の概要](ui/overview.md)
    - [クエリエディターユーザーガイド](ui/user-guide.md)
 - クエリの作成 {#creating-queries}
-   - [アドビ定義関数](creating-queries/using-adobe-defined-functions.md)
    - [クエリ作成の概要](creating-queries/creating-queries.md)
    - [データセットとテーブル／スキーマ](creating-queries/datasets-and-tables.md)
    - [クエリ実行の一般的なガイダンス](creating-queries/writing-queries.md)
