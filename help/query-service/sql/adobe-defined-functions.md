@@ -5,59 +5,62 @@ title: アドビ定義関数
 topic: functions
 description: このドキュメントでは、クエリサービスで使用できるアドビ定義の関数について説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
 workflow-type: tm+mt
-source-wordcount: '2167'
-ht-degree: 82%
+source-wordcount: '2889'
+ht-degree: 27%
 
 ---
 
 
 # アドビ定義関数
 
-アドビ定義関数 (ADFs) are prebuilt functions in [!DNL Query Service] that help perform common business related tasks on [!DNL ExperienceEvent] data. これには、Adobe Analytics のようなセッション化および属性の関数が含まれます。Adobe Analytics と、このページで定義されている ADF の概念について詳しくは、[Adobe Analytics のドキュメント](https://docs.adobe.com/content/help/ja-JP/analytics/landing/home.html)を参照してください。This document provides information for Adobe-defined functions available in [!DNL Query Service].
+アドビ定義関数ここで、ADFと呼ばれるものは、Adobe Experience Platformクエリサービスで事前に作成された関数で、[!DNL Experience Event]データに対する一般的なビジネス関連タスクの実行に役立ちます。 例えば、[セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)と[アトリビューション](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数は、Adobe Analyticsで見つかるのと同じように、&lt;a0/>セッション化&lt;a1/>と&lt;a2/>の関数です。
 
-## 窓関数
+このドキュメントは、[!DNL Query Service]で利用できるAdobe定義関数の情報を提供します。
 
-ビジネスロジックの大部分は、顧客のタッチポイントを収集し、時間順に並べる必要があります。This support is provided by [!DNL Spark] SQL in the form of window functions. 窓関数は標準 SQL の一部で、他の多くの SQL エンジンでサポートされています。
+## 窓関数 {#window-functions}
+
+ビジネスロジックの大部分は、顧客のタッチポイントを収集し、時間順に並べる必要があります。[!DNL Spark] SQLでは、このサポートはウィンドウ関数の形式で提供されます。 窓関数は標準 SQL の一部で、他の多くの SQL エンジンでサポートされています。
 
 窓関数は、集計を更新し、順序付けられたサブセットの各行の 1 つの項目を返します。最も基本的な集計関数は `SUM()` です。`SUM()` は行を取得し、合計 1 つを提供します。代わりに `SUM()` をウィンドウに適用して、窓関数に変換すると、各行の累積合計が返されます。
 
-The majority of the [!DNL Spark] SQL helpers are window functions that update each row in your window, with the state of that row added.
+[!DNL Spark] SQLヘルパーの大部分は、ウィンドウ内の各行を更新し、その行の状態を追加するウィンドウ関数です。
 
-### 仕様
+**クエリ構文**
 
-構文：`OVER ([partition] [order] [frame])`
+```sql
+OVER ({PARTITION} {ORDER} {FRAME})
+```
 
-| パラメーター | 説明 |
-| --- | --- |
-| [分割] | 列または使用可能なフィールドに基づく行のサブグループ。例, `PARTITION BY endUserIds._experience.mcid.id` |
-| [order] | サブセットまたは行の順序を指定する列または使用可能なフィールド。例, `ORDER BY timestamp` |
-| [frame] | パーティション内の行のサブグループ。例, `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
+| パラメーター | 説明 | 例 |
+| --------- | ----------- | ------- |
+| `{PARTITION}` | 列または使用可能なフィールドに基づく行のサブグループ。 | `PARTITION BY endUserIds._experience.mcid.id` |
+| `{ORDER}` | サブセットまたは行の順序を指定する列または使用可能なフィールド。 | `ORDER BY timestamp` |
+| `{FRAME}` | パーティション内の行のサブグループ。 | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## セッション化
 
-When you are working with [!DNL ExperienceEvent] data originating from a website, mobile application, interactive voice response system, or any other customer interaction channel it helps if events can be grouped around a related period of activity. 通常、製品の調査、請求書の支払い、口座残高の確認、アプリケーションへの入力などのアクティビティを推進する特定の目的があります。このグループ化は、顧客体験に関するイベントを関連付け、顧客体験に関するより詳細なコンテキストを明らかにするのに役立ちます。
+Webサイト、モバイルアプリ、対話型音声応答システム、またはその他の顧客対話型チャネルからの[!DNL Experience Event]データを扱う場合、関連するアクティビティの周りにイベントをグループ化できると便利です。 通常、製品の調査、請求書の支払い、口座残高の確認、アプリケーションへの入力などのアクティビティを推進する特定の目的があります。
 
-Adobe Analytics でのセッション化について詳しくは、[コンテキスト対応セッション](https://docs.adobe.com/content/help/ja-JP/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)に関するドキュメントを参照してください。
+このグループ化（データのセッション化）は、顧客体験に関するより詳細なコンテキストを明らかにするために、イベントを関連付けるのに役立ちます。
 
-### 仕様
+Adobe Analyticsでのセッション化について詳しくは、[コンテキスト対応セッション](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)のドキュメントを参照してください。
 
-構文：`SESS_TIMEOUT(timestamp, expirationInSeconds) OVER ([partition] [order] [frame])`
+**クエリ構文**
+
+```sql
+SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `timestamp` | データセット内のタイムスタンプフィールド |
-| `expirationInSeconds` | 現在のセッションの終了と新しいイベントの開始を決定するために必要な秒数 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のタイムスタンプフィールド。 |
+| `{EXPIRATION_IN_SECONDS}` | 現在のセッションの終了と新しいイベントの開始を認定するために、セッション間の秒数。 |
 
-| 返されるオブジェクトパラメーター | 説明 |
-| ---------------------- | ------------- |
-| `timestamp_diff` | 現在のレコードと前のレコードの間の時間（秒） |
-| `num` | 窓関数の `PARTITION BY` で定義されたキーの 1 から始まる一意のセッション番号。 |
-| `is_new` | レコードがセッションの最初であるかどうかを識別するために使用されるブール値 |
-| `depth` | セッション内の現在のレコードの深さ |
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
 
-#### クエリ例
+**クエリ例**
 
 ```sql
 SELECT 
@@ -73,7 +76,7 @@ ORDER BY id, timestamp ASC
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                |       timestamp       |      session       
@@ -91,37 +94,176 @@ LIMIT 10
 (10 rows)
 ```
 
-## 帰属
+指定したサンプルクエリの場合、結果は`session`列に表示されます。 `session`列は、次のコンポーネントで構成されています。
 
-顧客のアクションを成功に関連付けることは、顧客体験に影響を与える要因を理解する上で重要な役割を果たします。次の ADF は、異なる有効期限設定で First と Last の属性をサポートしています。
-
-Adobe の属性について詳しくは、Analytics 分析ガイドの「[Attribution IQ の概要](https://docs.adobe.com/content/help/ja-JP/analytics/analyze/analysis-workspace/panels/attribution.html)」を参照してください。[!DNL Analytics]
-
-### ファーストタッチ属性
-
-Returns the first touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset. クエリは、選択したチャネルに対して返される各行のファーストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
-
-このクエリは、一連の顧客アクションに導いたインタラクションを確認する場合に役立ちます。以下の例では、 データの最初の追跡コード（`em:946426`[!DNL ExperienceEvent]）は、最初のインタラクションであったので、顧客のアクションに対して 100%（`1.0`）責任があると見なされます。
-
-### 仕様
-
-構文：`ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `timestamp` | データセット内のタイムスタンプフィールド |
-| `channelName` | 返されるオブジェクトのラベルとして使用するわかりやすい名前 |
-| `channelValue` | クエリ－のターゲットチャネルである列またはフィールド |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | 現在のレコードと前のレコードの時間差（秒）。 |
+| `{NUM}` | window関数の`PARTITION BY`で定義されているキーに対する、1から始まる一意のセッション番号。 |
+| `{IS_NEW}` | レコードがセッションの最初であるかどうかを識別するために使用されるブール値. |
+| `{DEPTH}` | セッション内の現在のレコードの深さ。 |
 
+### SESS_開始_IF
 
-| 返されるオブジェクトパラメーター | 説明 |
-| ---------------------- | ------------- |
-| `name` | ADF にラベルとして入力された `channelName` |
-| `value` |  のファーストタッチである `channelValue` から得た値[!DNL ExperienceEvent] |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the first touch occured |
-| `fraction` | ファーストタッチ属性は、小数のクレジットとして表されます |
+このクエリは、現在のタイムスタンプと指定された式に基づいて、現在の行のセッションの状態を返し、現在の行の新しいセッションを開始します。
 
-#### クエリ例
+**クエリ構文**
+
+```sql
+SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のタイムスタンプフィールド。 |
+| `{TEST_EXPRESSION}` | データのフィールドを確認する式。 例：`application.launches > 0` |
+
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
+
+**クエリ例**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.launches.value > 0, true, false) AS isLaunch,
+    SESS_START_IF(timestamp, application.launches.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**結果**
+
+```console
+                id                |       timestamp       | isLaunch |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | true     | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+指定したサンプルクエリの場合、結果は`session`列に表示されます。 `session`列は、次のコンポーネントで構成されています。
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| パラメーター | 説明 |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | 現在のレコードと前のレコードの時間差（秒）。 |
+| `{NUM}` | window関数の`PARTITION BY`で定義されているキーに対する、1から始まる一意のセッション番号。 |
+| `{IS_NEW}` | レコードがセッションの最初であるかどうかを識別するために使用されるブール値. |
+| `{DEPTH}` | セッション内の現在のレコードの深さ。 |
+
+### SESS_END_IF
+
+このクエリは、現在のタイムスタンプと指定された式に基づいて、現在の行のセッションの状態を返し、現在のセッションを終了し、次の行の新しい開始をセッションします。
+
+**クエリ構文**
+
+```sql
+SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のタイムスタンプフィールド。 |
+| `{TEST_EXPRESSION}` | データのフィールドを確認する式。 例：`application.launches > 0` |
+
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
+
+**クエリ例**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.applicationCloses.value > 0 OR application.crashes.value > 0, true, false) AS isExit,
+    SESS_END_IF(timestamp, application.applicationCloses.value > 0 OR application.crashes.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**結果**
+
+```console
+                id                |       timestamp       | isExit   |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | false    | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+指定したサンプルクエリの場合、結果は`session`列に表示されます。 `session`列は、次のコンポーネントで構成されています。
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| パラメーター | 説明 |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | 現在のレコードと前のレコードの時間差（秒）。 |
+| `{NUM}` | window関数の`PARTITION BY`で定義されているキーに対する、1から始まる一意のセッション番号。 |
+| `{IS_NEW}` | レコードがセッションの最初であるかどうかを識別するために使用されるブール値. |
+| `{DEPTH}` | セッション内の現在のレコードの深さ。 |
+
+## 帰属
+
+顧客のアクションを成功に関連付けることは、顧客体験に影響を与える要因を理解する上で重要です。 以下のADFは、異なる有効期限設定のファーストタッチアトリビューションとラストタッチアトリビューションをサポートしています。
+
+Adobe Analyticsのアトリビューションについて詳しくは、[!DNL Analytics]アトリビューションパネルガイドの[Attribution IQの概要](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html)を参照してください。
+
+### ファーストタッチアトリビューション
+
+このクエリは、ターゲット[!DNL Experience Event]データセット内の1つのチャネルに対するファーストタッチアトリビューション値と詳細を返します。 クエリは、選択したチャネルに対して返される各行のファーストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
+
+このクエリは、一連の顧客アクションに導いたインタラクションを確認する場合に役立ちます。以下の例では、[!DNL Experience Event]データの初期トラッキングコード(`em:946426`)は、最初のインタラクションであったので、顧客のアクションに対して100%(`1.0`)の責任を持ちます。
+
+**クエリ構文**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のタイムスタンプフィールド。 |
+| `{CHANNEL_NAME}` | 返されるオブジェクトのラベルです。 |
+| `{CHANNEL_VALUE}` | クエリ－のターゲットチャネルである列またはフィールド. |
+
+`OVER()`内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
+
+**クエリ例**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -135,7 +277,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -153,31 +295,40 @@ LIMIT 10
 (10 rows)
 ```
 
-### ラストタッチ属性
+指定したサンプルクエリの場合、結果は`first_touch`列に表示されます。 `first_touch`列は、次のコンポーネントで構成されています。
 
-Returns the last touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset. クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
-
-このクエリは、一連の顧客アクションの最終的なインタラクションを確認する場合に役立ちます。In the example shown below, the tracking code in the returned object is the last interaction in each [!DNL ExperienceEvent] record. 各コードは、最後のインタラクションであったので、顧客のアクションに対して 100%（`1.0`）責任があると見なされます。
-
-### 仕様
-
-構文：`ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `timestamp` | データセット内のタイムスタンプフィールド |
-| `channelName` | 返されるオブジェクトのラベルとして使用するわかりやすい名前 |
-| `channelValue` | クエリ－のターゲットチャネルである列またはフィールド |
+| --------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`は、ADFにラベルとして入力された。 |
+| `{VALUE}` |  のファーストタッチである `{CHANNEL_VALUE}` から得た値[!DNL Experience Event] |
+| `{TIMESTAMP}` | 最初のタッチが発生した[!DNL Experience Event]のタイムスタンプ。 |
+| `{FRACTION}` | ファーストタッチの属性で、小数で表します。 |
 
+### ラストタッチアトリビューション
 
-| 返されるオブジェクトパラメーター | 説明 |
-| ---------------------- | ------------- |
-| `name` | ADF にラベルとして入力された `channelName` |
-| `value` |  のラストタッチである `channelValue` から得た値[!DNL ExperienceEvent] |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the `channelValue` was used |
-| `fraction` | ラストタッチ属性は、小数のクレジットとして表されます |
+このクエリは、ターゲット[!DNL Experience Event]データセット内の1つのチャネルに対するラストタッチアトリビューション値と詳細を返します。 クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
 
-#### クエリ例
+このクエリは、一連の顧客アクションの最終的なインタラクションを確認する場合に役立ちます。以下の例では、返されるオブジェクトのトラッキングコードが各[!DNL Experience Event]レコードでの最後のインタラクションです。 各コードは、最後のインタラクションであったので、顧客のアクションに対して100 %(`1.0`)の責任を負います。
+
+**クエリ構文**
+
+```sql
+ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のタイムスタンプフィールド。 |
+| `{CHANNEL_NAME}` | 返されるオブジェクトのラベル。 |
+| `{CHANNEL_VALUE}` | クエリ－のターゲットチャネルである列またはフィールド. |
+
+`OVER()`内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
+
+**クエリ例**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -190,7 +341,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -208,32 +359,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### 有効期限条件を持つファーストタッチ属性
+指定したサンプルクエリの場合、結果は`last_touch`列に表示されます。 `last_touch`列は、次のコンポーネントで構成されています。
 
-Returns the first touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset, expiring after or before a condition. クエリは、選択したチャネルに対して返される各行のファーストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
-
-This query is useful if you want to see what interaction led to a series of customer actions within a portion of the [!DNL ExperienceEvent] dataset determined by a condition of your chosing. 次の例では、結果に表示される 4 日（7 月 15 日、21 日、23 日、29 日）ごとに購入が記録され（`commerce.purchases.value IS NOT NULL`）、各日の初期追跡コードは、顧客のアクションに対して 100%（`1.0`）責任があると見なされます。
-
-#### 仕様
-
-構文：`ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `timestamp` | データセット内のタイムスタンプフィールド |
-| `channelName` | 返されるオブジェクトのラベルとして使用するわかりやすい名前 |
-| `channelValue` | クエリ－のターゲットチャネルである列またはフィールド |
-| `expCondition` | チャネルの有効期限を決定する条件 |
-| `expBefore` | デフォルト値は `false` です。指定した条件が満たされる前または後にチャネルの有効期限が切れるかどうかを示すブール値です。主に、セッションの有効期限条件（例えば `sess.depth = 1, true`）に対して有効になり、前のセッションからファーストタッチが選択されないようにします。 |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`は、ADFにラベルとして入力された。 |
+| `{VALUE}` |  のラストタッチである `{CHANNEL_VALUE}` から得た値[!DNL Experience Event] |
+| `{TIMESTAMP}` | `channelValue`が使用された[!DNL Experience Event]のタイムスタンプ。 |
+| `{FRACTION}` | ラストタッチの属性で、小数で表します。 |
 
-| 返されるオブジェクトパラメーター | 説明 |
-| ---------------------- | ------------- |
-| `name` | ADF にラベルとして入力された `channelName` |
-| `value` | 以前の のファーストタッチである `channelValue`[!DNL ExperienceEvent] から得た値`expCondition` |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the first touch occured |
-| `fraction` | ファーストタッチ属性は、小数のクレジットとして表されます |
+### 有効期限条件付きファーストタッチアトリビューション
 
-#### クエリ例
+このクエリは、ターゲット[!DNL Experience Event]データセット内の1つのチャネルに対するファーストタッチアトリビューション値と詳細を返します。このアトリビューション値は、条件の前後に期限が切れます。 クエリは、選択したチャネルに対して返される各行のファーストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
+
+このクエリは、選択した条件によって決定される[!DNL Experience Event]データセットの一部内で、何がインタラクションを引き起こして一連の顧客アクションを引き起こしたかを調べる場合に役立ちます。 次の例では、結果に表示される 4 日（7 月 15 日、21 日、23 日、29 日）ごとに購入が記録され（`commerce.purchases.value IS NOT NULL`）、各日の初期追跡コードは、顧客のアクションに対して 100%（`1.0`）責任があると見なされます。
+
+**クエリ構文**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のタイムスタンプフィールド。 |
+| `{CHANNEL_NAME}` | 返されるオブジェクトのラベルです。 |
+| `{CHANNEL_VALUE}` | クエリ－のターゲットチャネルである列またはフィールド. |
+| `{EXP_CONDITION}` | チャネルの有効期限を決定する条件. |
+| `{EXP_BEFORE}` | 指定した条件`{EXP_CONDITION}`の前後にチャネルの有効期限が切れるかどうかを示すboolean値です。 これは主に、セッションの有効期限切れ条件に対して有効になり、前のセッションからファーストタッチが選択されないようにします。 デフォルトでは、この値は `false` に設定されています。 |
+
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
+
+**クエリ例**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -246,7 +409,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -264,29 +427,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### 有効期限タイムアウトを持つファーストタッチ属性
+指定したサンプルクエリの場合、結果は`first_touch`列に表示されます。 `first_touch`列は、次のコンポーネントで構成されています。
 
-Returns the first touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset for a specified time period. クエリは、選択したチャネルに対して返される各行のファーストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。このクエリは、選択した時間間隔内で顧客の行動につながったインタラクションを確認する場合に役立ちます。次の例では、各顧客アクションに対して返されるファーストタッチが、過去 7 日間で最も早いインタラクションです（`expTimeout = 86400 * 7`）。
-
-#### 仕様
-
-構文：`ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `timestamp` | データセット内のタイムスタンプフィールド |
-| `channelName` | 返されるオブジェクトのラベルとして使用するわかりやすい名前 |
-| `channelValue` | クエリ－のターゲットチャネルである列またはフィールド |
-| `expTimeout` | クエリがファーストタッチイベントを検索するチャネルイベントの前の時間（秒） |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`は、ADFにラベルとして入力された。 |
+| `{VALUE}` | `CHANNEL_VALUE}`からの値。`{EXP_CONDITION}`の前の[!DNL Experience Event]での最初のタッチです。 |
+| `{TIMESTAMP}` | 最初のタッチが発生した[!DNL Experience Event]のタイムスタンプ。 |
+| `{FRACTION}` | ファーストタッチの属性で、小数で表します。 |
 
-| 返されるオブジェクトパラメーター | 説明 |
-| ---------------------- | ------------- |
-| `name` | ADF にラベルとして入力された `channelName` |
-| `value` | 指定した `expTimeout` 間隔内のファーストタッチである `channelValue` から得た値 |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the first touch occured |
-| `fraction` | ファーストタッチ属性は、小数のクレジットとして表されます |
+### 有効期限が切れたファーストタッチアトリビューション
 
-#### クエリ例
+このクエリは、指定された期間のターゲット[!DNL Experience Event]データセット内の1つのチャネルのファーストタッチアトリビューション値と詳細を返します。 クエリは、選択したチャネルに対して返される各行のファーストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
+
+このクエリは、選択した時間間隔内で顧客の行動につながったインタラクションを確認する場合に役立ちます。次の例では、各顧客アクションに対して返されるファーストタッチが、過去 7 日間で最も早いインタラクションです（`expTimeout = 86400 * 7`）。
+
+**仕様**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のタイムスタンプフィールド。 |
+| `{CHANNEL_NAME}` | 返されるオブジェクトのラベルです。 |
+| `{CHANNEL_VALUE}` | クエリ－のターゲットチャネルである列またはフィールド. |
+| `{EXP_TIMEOUT}` | クエリがファーストタッチイベントを検索するチャネルイベント前の時間（秒）。 |
+
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
+
+**クエリ例**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -299,7 +476,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -317,30 +494,42 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### 有効期限条件を持つラストタッチ属性
+指定したサンプルクエリの場合、結果は`first_touch`列に表示されます。 `first_touch`列は、次のコンポーネントで構成されています。
 
-Returns the last touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset, expiring after or before a condition. クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。This query is useful if you want to see the last interaction in a series of customer actions within a portion of the [!DNL ExperienceEvent] dataset determined by a condition of your chosing. 次の例では、結果に表示される 4 日（7 月 15 日、21 日、23 日、29 日）ごとに購入が記録され（`commerce.purchases.value IS NOT NULL`）、各日の最後の追跡コードは、顧客のアクションに対して 100%（`1.0`）責任があると見なされます。
-
-#### 仕様
-
-構文：`ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `timestamp` | データセット内のタイムスタンプフィールド |
-| `channelName` | 返されるオブジェクトのラベルとして使用するわかりやすい名前 |
-| `channelValue` | クエリ－のターゲットチャネルである列またはフィールド |
-| `expCondition` | チャネルの有効期限を決定する条件 |
-| `expBefore` | デフォルト値は `false` です。指定した条件が満たされる前または後にチャネルの有効期限が切れるかどうかを示すブール値です。主に、セッションの有効期限条件（例えば`sess.depth = 1, true`）に対して有効になり、前のセッションからラストタッチが選択されないようにします。 |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`は、ADFにラベルとして入力された。 |
+| `{VALUE}` | 指定した `{EXP_TIMEOUT}` 間隔内のファーストタッチである `CHANNEL_VALUE}` から得た値. |
+| `{TIMESTAMP}` | 最初のタッチが発生した[!DNL Experience Event]のタイムスタンプ。 |
+| `{FRACTION}` | ファーストタッチの属性で、小数で表します。 |
 
-| 返されるオブジェクトパラメーター | 説明 |
-| ---------------------- | ------------- |
-| `name` | ADF にラベルとして入力された `channelName` |
-| `value` |  以前の のラストタッチである `channelValue`[!DNL ExperienceEvent] から得た値`expCondition` |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the last touch occured |
-| `percentage` | ラストタッチ属性は、小数のクレジットとして表されます |
+### 有効期限条件を含むラストタッチ属性
 
-#### クエリ例
+このクエリは、ターゲット[!DNL Experience Event]データセット内の1つのチャネルに対するラストタッチアトリビューション値と詳細を返します。この値は、条件の前後に期限が切れます。 クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
+
+このクエリは、選択した条件によって決定される[!DNL Experience Event]データセットの一部内の一連の顧客アクションの最後のインタラクションを確認する場合に役立ちます。 次の例では、結果に表示される 4 日（7 月 15 日、21 日、23 日、29 日）ごとに購入が記録され（`commerce.purchases.value IS NOT NULL`）、各日の最後の追跡コードは、顧客のアクションに対して 100%（`1.0`）責任があると見なされます。
+
+**クエリ構文**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のタイムスタンプフィールド。 |
+| `{CHANNEL_NAME}` | 返されるオブジェクトのラベルです。 |
+| `{CHANNEL_VALUE}` | クエリ－のターゲットチャネルである列またはフィールド. |
+| `{EXP_CONDITION}` | チャネルの有効期限を決定する条件. |
+| `{EXP_BEFORE}` | 指定した条件`{EXP_CONDITION}`の前後にチャネルの有効期限が切れるかどうかを示すboolean値です。 これは主に、セッションの有効期限切れ条件に対して有効になり、前のセッションからファーストタッチが選択されないようにします。 デフォルトでは、この値は `false` に設定されています。 |
+
+**クエリ例**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -353,7 +542,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**結果の例**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -371,29 +560,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### 有効期限タイムアウトを持つラストタッチ属性
+指定したサンプルクエリの場合、結果は`last_touch`列に表示されます。 `last_touch`列は、次のコンポーネントで構成されています。
 
-Returns the last touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset for a specified time period. クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。このクエリは、選択した時間間隔内の最後のインタラクションを確認する場合に役立ちます。次の例では、各顧客アクションに対して返されるラストタッチが、次の 7 日間での最後のインタラクションです（`expTimeout = 86400 * 7`）。
-
-#### 仕様
-
-構文：`ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `timestamp` | データセット内のタイムスタンプフィールド |
-| `channelName` | 返されるオブジェクトのラベルとして使用するわかりやすい名前 |
-| `channelValue` | クエリ－のターゲットチャネルである列またはフィールド |
-| `expTimeout` | クエリがラストタッチイベントを検索するチャネルイベント後の時間（秒） |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`は、ADFにラベルとして入力された。 |
+| `{VALUE}` | `{CHANNEL_VALUE}`からの値。`{EXP_CONDITION}`より前の[!DNL Experience Event]での最後のタッチです。 |
+| `{TIMESTAMP}` | 最後のタッチが発生した[!DNL Experience Event]のタイムスタンプ。 |
+| `{FRACTION}` | ラストタッチの属性で、小数で表します。 |
 
-| 返されるオブジェクトパラメーター | 説明 |
-| ---------------------- | ------------- |
-| `name` | ADF にラベルとして入力された `channelName` |
-| `value` | 指定した `expTimeout` 間隔内のラストタッチである `channelValue` から得た値 |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the last touch occured |
-| `percentage` | ラストタッチ属性は、小数のクレジットとして表されます |
+### 有効期限タイムアウトのあるラストタッチアトリビューション
 
-#### クエリ例
+このクエリは、指定された期間のターゲット[!DNL Experience Event]データセット内の1つのチャネルに対するラストタッチアトリビューション値と詳細を返します。 クエリは、選択したチャネルに対して返される各行のラストタッチ値、タイムスタンプおよび属性を持つ `struct` オブジェクトを返します。
+
+このクエリは、選択した時間間隔内の最後のインタラクションを確認する場合に役立ちます。次の例では、各顧客アクションに対して返されるラストタッチが、次の 7 日間での最後のインタラクションです（`expTimeout = 86400 * 7`）。
+
+**クエリ構文**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のタイムスタンプフィールド。 |
+| `{CHANNEL_NAME}` | 返されるオブジェクトのラベル |
+| `{CHANNEL_VALUE}` | クエリ－のターゲットチャネルである列またはフィールド |
+| `{EXP_TIMEOUT}` | クエリがラストタッチイベントを検索するチャネルイベント後の時間（秒）。 |
+
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
+
+**クエリ例**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -406,7 +609,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -424,30 +627,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-## 前/次のタッチ
+指定したサンプルクエリの場合、結果は`last_touch`列に表示されます。 `last_touch`列は、次のコンポーネントで構成されています。
 
-エクスペリエンス内で顧客がどのようにナビゲートしているかを理解することが重要です。これを使用して、顧客の関与の深さを理解し、エクスペリエンスの意図されたステップが設計どおりに機能していることを確認し、顧客に影響を与える潜在的な問題点を特定できます。以下の ADF は、前と次の関係からのパス表示の確立をサポートしています。前のページと次のページを作成したり、複数のイベントを順を追ってパスを作成したりできます。
-
-### 前のタッチ
-
-特定のフィールドの、ウィンドウ内の定義されたステップ数だけ離れた前の値を決定します。この例では、`WINDOW` 関数は`ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` フレームで構成され、ADF は現在の行とその前のすべての行を見るように設定されています。
-
-#### 仕様
-
-構文：`PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `key` | イベントの列またはフィールド。 |
-| `shift` | （オプション）現在のイベントから離れたイベントの数。初期設定は 1 です。 |
-| `ingnoreNulls` | Null `key` 値を無視する必要があるかどうかを示すブール値。デフォルトは `false` です。 |
+| ---------- | ----------- |
+| `{NAME}` | `{CHANNEL_NAME}`は、ADFにラベルとして入力された。 |
+| `{VALUE}` | 指定した `{EXP_TIMEOUT}` 間隔内のラストタッチである `{CHANNEL_VALUE}` から得た値 |
+| `{TIMESTAMP}` | 最後のタッチが発生した[!DNL Experience Event]のタイムスタンプ。 |
+| `{FRACTION}` | ラストタッチの属性で、小数で表します。 |
 
+## パス
 
-| 返されるオブジェクトパラメーター | 説明 |
-| ---------------------- | ------------- |
-| `value` | ADF で使用される `key` に基づく値 |
+パスは、顧客の関与の深さを把握し、エクスペリエンスの意図したステップが設計どおりに機能していることを確認し、顧客に影響を与える潜在的な問題箇所を特定するために使用できます。
 
-#### クエリ例
+以下のADFは、前と次の関係からパス表示を確立することをサポートしています。 前のページと次のページを作成したり、複数のイベントをステップスルーしてパスを作成したりできます。
+
+### 前のページ
+
+特定のフィールドの、ウィンドウ内の定義されたステップ数だけ離れた前の値を決定します。例では、`WINDOW`関数は`ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW`というフレームで設定され、ADFは現在の行とそれ以降の行をすべて参照するように設定されています。
+
+**クエリ構文**
+
+```sql
+PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{KEY}` | イベントの列またはフィールド。 |
+| `{SHIFT}` | （オプション）現在のイベントから離れたイベントの数です。 デフォルト値は1です。 |
+| `{IGNORE_NULLS}` | （オプション）null `{KEY}`値を無視する必要があるかどうかを示すboolean。 デフォルト値は`false`です。 |
+
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
+
+**クエリ例**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
@@ -460,7 +677,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
@@ -478,26 +695,27 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 (10 rows)
 ```
 
-### 次のタッチ
+指定したサンプルクエリの場合、結果は`previous_page`列に表示されます。 `previous_page`列内の値は、ADFで使用される`{KEY}`に基づきます。
 
-特定のフィールドの、ウィンドウ内の定義されたステップ数だけ離れた次の値を決定します。この例では、`WINDOW` 関数は`ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` フレームで構成され、ADF は現在の行とその後すべての行を見るように設定されています。
+### 次のページ
 
-#### 仕様
+特定のフィールドの、ウィンドウ内の定義されたステップ数だけ離れた次の値を決定します。例では、`WINDOW`関数は`ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING`というフレームで設定され、ADFは現在の行とそれ以降の行をすべて参照するように設定されています。
 
-構文：`NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+**クエリ構文**
+
+```sql
+NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `key` | イベントの列またはフィールド |
-| `shift` | （オプション）現在のイベントから離れたイベントの数。初期設定は 1 です。 |
-| `ingnoreNulls` | Null `key` 値を無視する必要があるかどうかを示すブール値。デフォルトは `false` です。 |
+| --------- | ----------- |
+| `{KEY}` | イベントの列またはフィールド。 |
+| `{SHIFT}` | （オプション）現在のイベントから離れたイベントの数です。 デフォルト値は1です。 |
+| `{IGNORE_NULLS}` | （オプション）null `{KEY}`値を無視する必要があるかどうかを示すboolean。 デフォルト値は`false`です。 |
 
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
 
-| 返されるオブジェクトパラメーター | 説明 |
-| ---------------------- | ------------- |
-| `value` | ADF で使用される `key` に基づく値 |
-
-#### クエリ例
+**クエリ例**
 
 ```sql
 SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
@@ -511,7 +729,7 @@ ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
@@ -529,27 +747,33 @@ LIMIT 10
 (10 rows)
 ```
 
+指定したサンプルクエリの場合、結果は`previous_page`列に表示されます。 `previous_page`列内の値は、ADFで使用される`{KEY}`に基づきます。
+
 ## 間隔
 
-間隔を使用すると、イベント発生前または発生後の期間内の潜在的な顧客行動を調査できます。すべての顧客のイベントや他のタイプのキャンペーンから 7 日以内にイベントを確認します。
+間隔：イベントが発生する前または発生した後の特定の期間内の潜在顧客の行動を調査できます。
 
 ### 前の一致までの時間
 
-特定のインシデントから経過した時間を測定する新しいディメンションを提供します。
+このクエリは、前回の一致イベントが見つかった時点からの単位を表す数値を返します。 一致するイベントが見つからなかった場合は、nullを返します。
 
-#### 仕様
+**クエリ構文**
 
-構文：`TIME_BETWEEN_PREVIOUS_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_PREVIOUS_MATCH(
+    {TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT})
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `timestamp` | すべてのイベントに入力されたデータセット内のタイムスタンプフィールド。 |
-| `eventDefintion` | 前のイベントを決定する式。 |
-| `timeUnit` | 出力単位：日、時間、分、秒。デフォルトは秒です。 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のすべてのイベントに入力されたタイムスタンプフィールド。 |
+| `{EVENT_DEFINITION}` | 前のイベントを承認する式。 |
+| `{TIME_UNIT}` | 出力の単位。 可能な値は、日、時間、分、秒です。 デフォルト値は秒です。 |
 
-出力：前の一致イベントが見つかってからの時間の単位を表す数値を返します。一致するイベントが見つからない場合は null のままになります。
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
 
-#### クエリ例
+**クエリ例**
 
 ```sql
 SELECT 
@@ -573,7 +797,7 @@ ORDER BY average_minutes_since_registration
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
              page_name             | average_minutes_since_registration 
@@ -591,23 +815,27 @@ LIMIT 10
 (10 rows)
 ```
 
+指定したサンプルクエリの場合、結果は`average_minutes_since_registration`列に表示されます。 `average_minutes_since_registration`列内の値は、現在のイベントと前のバージョンの時間の差です。 時間の単位は、以前`{TIME_UNIT}`で定義されていました。
+
 ### 次の一致までの時間
 
-特定のディメンションが発生する前の時間を測定する新しいイベントを提供します。
+このクエリは、次に一致するイベントの経過時間の単位を表す負の数を返します。 一致するイベントが見つからない場合、nullが返されます。
 
-#### 仕様
+**クエリ構文**
 
-構文：`TIME_BETWEEN_NEXT_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | パラメーター | 説明 |
-| --- | --- |
-| `timestamp` | すべてのイベントに入力されたデータセット内のタイムスタンプフィールド。 |
-| `eventDefintion` | 次のイベントを決定する式。 |
-| `timeUnit` | 出力単位：日、時間、分、秒。デフォルトは秒です。 |
+| --------- | ----------- |
+| `{TIMESTAMP}` | データセット内のすべてのイベントに入力されたタイムスタンプフィールド。 |
+| `{EVENT_DEFINITION}` | 次のイベントを承認する式。 |
+| `{TIME_UNIT}` | （オプション）出力の単位。 可能な値は、日、時間、分、秒です。 デフォルト値は秒です。 |
 
-出力：次の一致イベントの経過時間の単位を表す負の数値を返します。一致イベントが見つからない場合は null のままになります。
+`OVER()`関数内のパラメーターの説明は、[ウィンドウ関数セクション](#window-functions)にあります。
 
-#### クエリ例
+**クエリ例**
 
 ```sql
 SELECT 
@@ -631,7 +859,7 @@ ORDER BY average_minutes_until_order_confirmation DESC
 LIMIT 10
 ```
 
-#### 結果
+**結果**
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
@@ -649,6 +877,14 @@ LIMIT 10
 (10 rows)
 ```
 
+指定したサンプルクエリの場合、結果は`average_minutes_until_order_confirmation`列に表示されます。 `average_minutes_until_order_confirmation`列の値は、現在のイベントと次のの時間の差です。 時間の単位は、以前`{TIME_UNIT}`で定義されていました。
+
 ## 次の手順
 
-Using the functions described here, you can write queries to access your own [!DNL ExperienceEvent] datasets using [!DNL Query Service]. For more information about authoring queries in [!DNL Query Service], see the documentation on [creating queries](../creating-queries/creating-queries.md).
+ここで説明する関数を使用して、[!DNL Query Service]を使用して独自の[!DNL Experience Event]データセットにアクセスするクエリを書き込むことができます。 [!DNL Query Service]でのオーサリングクエリについて詳しくは、[クエリの作成](../creating-queries/creating-queries.md)に関するドキュメントを参照してください。
+
+## その他のリソース
+
+次のビデオでは、Adobe Experience PlatformインターフェイスとPSQLクライアントでクエリを実行する方法を示します。 また、このビデオでは、XDMオブジェクト内の個々のプロパティ、Adobe定義関数の使用、CREATE TABLE AS SELECT(CTAS)の使用に関する例も使用しています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
