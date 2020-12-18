@@ -6,21 +6,21 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをSFTP(Secure File Transfer Protocol)サーバーに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 7b638f0516804e6a2dbae3982d6284a958230f42
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 20%
+source-wordcount: '770'
+ht-degree: 19%
 
 ---
 
 
-# APIを使用したSFTPコネクタの作成 [!DNL Flow Service]
+# [!DNL Flow Service] APIを使用してSFTPコネクタを作成する
 
 >[!NOTE]
 >
->SFTPコネクタはベータ版です。 機能とドキュメントは変更される場合があります。ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>SFTPコネクタはベータ版です。 機能とドキュメントは変更される場合があります。ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用して、Experience PlatformをSFTP(Secure File Transfer Protocol)サーバに接続する手順を順を追って説明します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、Experience PlatformをSFTP(Secure File Transfer Protocol)サーバに接続する手順を順を追って説明します。
 
 ## はじめに
 
@@ -29,11 +29,11 @@ ht-degree: 20%
 * [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to an SFTP server using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用してSFTPサーバーに正常に接続するために必要な追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-SFTPに接続 [!DNL Flow Service] するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service]がSFTPに接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
@@ -49,19 +49,19 @@ SFTPに接続 [!DNL Flow Service] するには、次の接続プロパティの�
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## 接続の作成
 
@@ -69,7 +69,7 @@ All resources in [!DNL Experience Platform], including those belonging to the [!
 
 ### 基本認証を使用したSFTP接続の作成
 
-基本的な認証を使用してSFTP接続を作成するには、接続の、およびに値を指定しながら、 [!DNL Flow Service] APIにPOSTリクエストを行い `host`ま `userName`す `password`。
+基本的な認証を使用してSFTP接続を作成するには、[!DNL Flow Service] APIにPOSTリクエストを行い、接続の`host`、`userName`および`password`に値を指定します。
 
 **API 形式**
 
@@ -78,6 +78,8 @@ POST /connections
 ```
 
 **リクエスト**
+
+SFTP接続を作成するには、一意の接続指定IDをPOSTリクエストの一部として指定する必要があります。 SFTPの接続指定IDは`b7bf2577-4520-42c9-bae9-cad01560f7bc`です。
 
 ```shell
 curl -X POST \
@@ -110,7 +112,7 @@ curl -X POST \
 | `auth.params.host` | SFTPサーバーのホスト名です。 |
 | `auth.params.username` | SFTPサーバーに関連付けられているユーザー名です。 |
 | `auth.params.password` | SFTPサーバーに関連付けられているパスワードです。 |
-| `connectionSpec.id` | SFTPサーバー接続仕様ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `connectionSpec.id` | SFTPサーバー接続仕様ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **応答** 
 
@@ -125,7 +127,7 @@ curl -X POST \
 
 ### SSH公開鍵認証を使用したSFTP接続の作成
 
-SSH公開鍵認証を使用してSFTPPOSTを作成するには、接続の [!DNL Flow Service] 、 `host`、およびに値を指定しながら、 `userName`APIに接続リクエストを行いま `privateKeyContent``passPhrase`す。
+SSH公開鍵認証を使用してSFTPPOSTを作成するには、[!DNL Flow Service]、`userName`、`privateKeyContent`および`passPhrase`の値を指定しながら、&lt;a0/> APIに接続要求を行います。`host`
 
 **API 形式**
 
@@ -168,7 +170,7 @@ curl -X POST \
 | `auth.params.username` | SFTPサーバーに関連付けられているユーザー名です。 |
 | `auth.params.privateKeyContent` | base64エンコードされたSSH秘密鍵のコンテンツ。 SSH秘密鍵のOpenSSH(RSA/DSA)形式。 |
 | `auth.params.passPhrase` | 鍵ファイルや鍵の内容がパスフレーズで保護されている場合に、秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContentがパスワードで保護されている場合は、PrivateKeyContentのパスフレーズを値として使用する必要があります。 |
-| `connectionSpec.id` | SFTPサーバー接続仕様ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `connectionSpec.id` | SFTPサーバー接続仕様ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **応答** 
 
@@ -183,4 +185,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Flow Service] APIを使用してSFTP接続を作成し、接続の一意のID値を取得したことになります。 この接続IDを使用して、Flow Service APIを使用してクラウドストレージを [調べたり、Flow Service APIを使用してパーケーデータを](../../explore/cloud-storage.md) 取り込んだりできます [](../../cloud-storage-parquet.md)。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用してSFTP接続を作成し、接続の固有のID値を取得したことになります。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用したインジェストパーケットデータを使用して、[クラウドストレージを探索できます。
