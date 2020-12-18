@@ -6,41 +6,41 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをAzure Blob （以下「Blob」）ストレージに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: d332226541685108b58d88096146ed6048606774
+source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '605'
 ht-degree: 19%
 
 ---
 
 
-# APIを使用した [!DNL Azure Blob][!DNL Flow Service] コネクタの作成
+# [!DNL Flow Service] APIを使用して[!DNL Azure Blob]コネクタを作成する
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用して、ストレージに接続する手順 [!DNL Experience Platform] を順を追って説明します(以下「BLOB」と呼び [!DNL Azure Blob] ます)。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Experience Platform]を[!DNL Azure Blob]（以下「Blob」）ストレージに接続する手順を順を追って説明します。
 
-でユーザーインターフェイスを使用する場合 [!DNL Experience Platform]は、 [Azure BlobソースコネクタUIのチュートリアル](../../../ui/create/cloud-storage/blob.md) で、同様の操作を実行するための手順を順を追って説明します。
+[!DNL Experience Platform]でユーザーインターフェイスを使用する場合は、[Azure BlobソースコネクタUIチュートリアル](../../../ui/create/cloud-storage/blob.md)に、同様の操作を実行するための手順を順を追って示します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to an Blob storage using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用してBLOBストレージに正しく接続するために必要な追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-BLOBストレージ [!DNL Flow Service] と接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service]がBLOBストレージと接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | BLOBストレージのデータにアクセスするために必要な接続文字列です。 BLOB接続文字列パターンは次のとおりです。 `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 BLOBの接続指定ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `connectionString` | BLOBストレージのデータにアクセスするために必要な接続文字列です。 BLOB接続文字列パターンは次のとおりです。`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 BLOBの接続指定ID:`4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-接続文字列の取得の詳細については、 [このAzure BLOBドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)。
+接続文字列の取得の詳細については、[このAzure BLOBドキュメント](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -48,19 +48,19 @@ BLOBストレージ [!DNL Flow Service] と接続するには、次の接続プ�
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json``
 
 ## 接続の作成
 
@@ -74,7 +74,7 @@ POST /connections
 
 **リクエスト**
 
-BLOB接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 Blobの接続指定IDはで `4c10e202-c428-4796-9208-5f1f5732b1cf`す。
+BLOB接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 Blobの接続指定IDは`4c10e202-c428-4796-9208-5f1f5732b1cf`です。
 
 ```shell
 curl -X POST \
@@ -102,12 +102,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.connectionString` | BLOBストレージのデータにアクセスするために必要な接続文字列です。 BLOB接続文字列パターンは次のとおりです。 `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | BLOBストレージ接続の指定ID: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | BLOBストレージのデータにアクセスするために必要な接続文字列です。 BLOB接続文字列パターンは次のとおりです。`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | BLOBストレージ接続の指定ID:`4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **応答** 
 
-正常な応答は、新たに作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでストレージを調べるために必要です。
+正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでストレージを調べるために必要です。
 
 ```json
 {
@@ -118,4 +118,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、APIを使用してBlob接続を作成し、応答本文の一部として一意のIDを取得できます。 この接続IDを使用して、Flow Service APIを使用してクラウドストレージを [調べたり、Flow Service APIを使用してパーケーデータを](../../explore/cloud-storage.md) 取り込んだりできます [](../../cloud-storage-parquet.md)。
+このチュートリアルに従うと、APIを使用してBlob接続を作成し、応答本文の一部として一意のIDを取得できます。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用したインジェストパーケットデータを使用して、[クラウドストレージを探索できます。
