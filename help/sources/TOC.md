@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '663'
 ht-degree: 8%
 
 ---
@@ -16,19 +16,19 @@ ht-degree: 8%
 # ソースコネクタ {#sources}
 
 - [ソースコネクタの概要](home.md)
-- 使用可能なソースコネクタ {#connectors}
+- 使用可能なソースコネクタ{#connectors}
    - アドビアプリケーション {#adobe-applications}
       - [Analytics分類データコネクタ](connectors/adobe-applications/classifications.md)
       - [Analyticsデータコネクタ](connectors/adobe-applications/analytics.md)
       - [Audience Manager コネクタ](connectors/adobe-applications/audience-manager.md)
       - [顧客属性コネクタ](connectors/adobe-applications/customer-attributes.md)
-      - Adobeアプリケーションフィールドのマッピング {#mapping}
+      - Adobeアプリケーションフィールドのマッピング{#mapping}
          - [Analytics マッピングフィールド](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Managerマッピングフィールド](connectors/adobe-applications/mapping/audience-manager.md)
          - [ターゲットマッピングフィールド](connectors/adobe-applications/mapping/target.md)
    - 広告 {#advertising}
       - [Google AdWordsコネクタ](connectors/advertising/ads.md)
-   - Cloud storage {#cloud-storage}
+   - クラウドストレージ{#cloud-storage}
       - [AmazonKinesisコネクタ](connectors/cloud-storage/kinesis.md)
       - [AmazonS3コネクタ](connectors/cloud-storage/s3.md)
       - [Apache HDFSコネクタ](connectors/cloud-storage/hdfs.md)
@@ -43,10 +43,10 @@ ht-degree: 8%
    - CRM {#crm}
       - [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforceコネクタ](connectors/crm/salesforce.md)
-   - お客様の成功 {#customer-success}
+   - 顧客の成功{#customer-success}
       - [Salesforce Service Cloudコネクタ](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNowコネクタ](connectors/customer-success/servicenow.md)
-   - データベース {#databases}
+   - データベース{#databases}
       - [Amazon赤方偏移コネクタ](connectors/databases/redshift.md)
       - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
       - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
@@ -63,19 +63,19 @@ ht-degree: 8%
       - [Oracleコネクタ](connectors/databases/oracle.md)
       - [フェニックスコネクタ](connectors/databases/phoenix.md)
       - [PostgreSQLコネクタ](connectors/databases/postgres.md)
-   - eCommerce {#ecommerce}
+   - eコマース{#ecommerce}
       - [Shopifyコネクタ](connectors/ecommerce/shopify.md)
-   - Marketing automation {#marketing-automation}
+   - マーケティングの自動化{#marketing-automation}
       - [HubSpotコネクタ](connectors/marketing-automation/hubspot.md)
-   - 支払い {#payments}
+   - 支払{#payments}
       - [PayPalコネクタ](connectors/payments/paypal.md)
-   - プロトコル {#protocols}
+   - プロトコル{#protocols}
       - [汎用ODataコネクタ](connectors/protocols/odata.md)
 - API チュートリアル {#api-tutorials}
-   - ソースコネクタを作成する {#create}
+   - ソースコネクタを作成{#create}
       - 広告 {#advertising}
          - [Google AdWordsコネクタ](tutorials/api/create/advertising/ads.md)
-      - Cloud storage {#cloud-storage}
+      - クラウドストレージ{#cloud-storage}
          - [AmazonKinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [AmazonS3コネクタ](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFSコネクタ](tutorials/api/create/cloud-storage/hdfs.md)
@@ -87,13 +87,12 @@ ht-degree: 8%
          - [Google Cloudストレージコネクタ](tutorials/api/create/cloud-storage/google.md)
          - [SFTPコネクタ](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [HubSpotコネクタ](tutorials/api/create/crm/hubspot.md)
          - [Microsoft Dynamicsコネクタ](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforceコネクタ](tutorials/api/create/crm/salesforce.md)
-      - お客様の成功 {#customer-success}
+      - 顧客の成功{#customer-success}
          - [Salesforce Service Cloudコネクタ](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNowコネクタ](tutorials/api/create/customer-success/servicenow.md)
-      - データベース {#databases}
+      - データベース{#databases}
          - [Amazon赤方偏移コネクタ](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsightsコネクタのApache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/api/create/databases/spark.md)
@@ -110,13 +109,13 @@ ht-degree: 8%
          - [フェニックスコネクタ](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQLコネクタ](tutorials/api/create/databases/postgres.md)
          - [SQL Serverコネクタ](tutorials/api/create/databases/sql-server.md)
-      - eCommerce {#ecommerce}
+      - eコマース{#ecommerce}
          - [Shopifyコネクタ](tutorials/api/create/ecommerce/shopify.md)
-      - Marketing automation {#marketing-automation}
+      - マーケティングの自動化{#marketing-automation}
          - [HubSpotコネクタ](tutorials/api/create/marketing-automation/hubspot.md)
-      - 支払い {#payments}
+      - 支払{#payments}
          - [PayPalコネクタ](tutorials/api/create/payments/paypal.md)
-      - プロトコル {#protocols}
+      - プロトコル{#protocols}
          - [汎用ODataコネクタ](tutorials/api/create/protocols/odata.md)
    - データの調査 {#explore}
       - [広告データの調査](tutorials/api/explore/advertising.md)
@@ -128,7 +127,7 @@ ht-degree: 8%
       - [マーケティング自動化データの調査](tutorials/api/explore/marketing-automation.md)
       - [支払データの調査](tutorials/api/explore/payments.md)
       - [プロトコルデータの調査](tutorials/api/explore/protocols.md)
-   - データの収集 {#collect}
+   - データを収集{#collect}
       - [広告データの収集](tutorials/api/collect/advertising.md)
       - [クラウドストレージデータの収集](tutorials/api/collect/cloud-storage.md)
       - [CRMデータの収集](tutorials/api/collect/crm.md)
@@ -145,8 +144,8 @@ ht-degree: 8%
    - [接続の更新](tutorials/api/update.md)
    - [接続の削除](tutorials/api/delete.md)
    - [データフローの削除](tutorials/api/delete-dataflows.md)
-- UIチュートリアル {#ui-tutorials}
-   - ソースコネクタを作成する {#create}
+- UIチュートリアル{#ui-tutorials}
+   - ソースコネクタを作成{#create}
       - アドビアプリケーション {#adobe-applications}
          - [Adobe Analytics分類データコネクタ](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Analytics コネクタ](tutorials/ui/create/adobe-applications/analytics.md)
@@ -154,7 +153,7 @@ ht-degree: 8%
          - [顧客属性コネクタ](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - 広告 {#create}
          - [Google AdWordsコネクタ](tutorials/ui/create/advertising/ads.md)
-      - Cloud storage {#cloud-storage}
+      - クラウドストレージ{#cloud-storage}
          - [AmazonKinesisコネクタ](tutorials/ui/create/cloud-storage/kinesis.md)
          - [AmazonS3コネクタ](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFSコネクタ](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -169,10 +168,10 @@ ht-degree: 8%
       - CRM {#crm}
          - [Microsoft Dynamicsコネクタ](tutorials/ui/create/crm/dynamics.md)
          - [Salesforceコネクタ](tutorials/ui/create/crm/salesforce.md)
-      - 顧客の成功 {#customer-success}
+      - 顧客の成功{#customer-success}
          - [Salesforce Service Cloudコネクタ](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNowコネクタ](tutorials/ui/create/customer-success/servicenow.md)
-      - データベース {#databases}
+      - データベース{#databases}
          - [Amazon赤方偏移コネクタ](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsightsコネクタのApache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsightsコネクタ上のApache Spark](tutorials/ui/create/databases/spark.md)
@@ -189,15 +188,15 @@ ht-degree: 8%
          - [Oracleコネクタ](tutorials/ui/create/databases/oracle.md)
          - [フェニックスコネクタ](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQLコネクタ](tutorials/ui/create/databases/postgres.md)
-      - eCommerce {#ecommerce}
+      - eコマース{#ecommerce}
          - [Shopifyコネクタ](tutorials/ui/create/ecommerce/shopify.md)
-      - Marketing automation {#marketing-automation}
+      - マーケティングの自動化{#marketing-automation}
          - [HubSpotコネクタ](tutorials/ui/create/marketing-automation/hubspot.md)
-      - 支払い {#payments}
+      - 支払{#payments}
          - [PayPalコネクタ](tutorials/ui/create/payments/paypal.md)
-      - プロトコル {#protocols}
+      - プロトコル{#protocols}
          - [汎用ODataコネクタ](tutorials/ui/create/protocols/odata.md)
-   - データフローの構成 {#dataflow}
+   - データフローの構成{#dataflow}
       - [広告コネクタ用のデータフローの設定](tutorials/ui/dataflow/advertising.md)
       - [バッチクラウドストレージコネクタ用のデータフローの設定](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [ストリーミングクラウドストレージコネクタ用のデータフローの設定](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
