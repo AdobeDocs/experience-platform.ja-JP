@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをAmazonKinesisアカウントに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 967585ba078edd13f90c820f6b1a0490140ca0cf
+source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 21%
@@ -14,37 +14,37 @@ ht-degree: 21%
 ---
 
 
-# Flow Service APIを使用して [!DNL Amazon Kinesis] コネクタを作成する
+# Flow Service APIを使用して[!DNL Amazon Kinesis]コネクタを作成する
 
 >[!NOTE]
 >
->コネクタ [!DNL Amazon Kineses] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>[!DNL Amazon Kineses]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用して、アカウントに接続する手順を順を追っ [!DNL Experience Platform] て説明し [!DNL Amazon Kinesis] ます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Experience Platform]を[!DNL Amazon Kinesis]アカウントに接続する手順を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to an [!DNL Amazon Kinesis] account using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用して[!DNL Amazon Kinesis]アカウントに正しく接続するために知っておく必要がある追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-アカウント [!DNL Flow Service] に接続するには、次の接続プロパティの値を指定する必要があり [!DNL Amazon Kinesis] ます。
+[!DNL Flow Service]が[!DNL Amazon Kinesis]アカウントと接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | アカウントのアクセスキーID [!DNL Kinesis] 。 |
-| `secretKey` | アカウントの秘密アクセスキー [!DNL Kinesis] 。 |
-| `region` | アカウントの地域 [!DNL Kinesis] です。 |
-| `connectionSpec.id` | 接続 [!DNL Kinesis] 指定ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `accessKeyId` | [!DNL Kinesis]アカウントのアクセスキーID。 |
+| `secretKey` | [!DNL Kinesis]アカウントの秘密アクセスキー。 |
+| `region` | [!DNL Kinesis]アカウントの地域です。 |
+| `connectionSpec.id` | [!DNL Kinesis]接続指定ID:`86043421-563b-46ec-8e6c-e23184711bf6` |
 
-これらの値の詳細については、 [このKinesisドキュメントを参照してください](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)。
+これらの値の詳細については、[このKinesisドキュメント](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -52,13 +52,13 @@ The following sections provide additional information that you will need to know
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -68,7 +68,7 @@ All resources in [!DNL Experience Platform], including those belonging to the [!
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクタを作成する場合に使用できるので、 [!DNL Amazon Kinesis] アカウントごとに必要な接続は1つだけです。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するのに使用できるため、[!DNL Amazon Kinesis]アカウントごとに1つの接続のみが必要です。
 
 **API 形式**
 
@@ -105,14 +105,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | アカウントのアクセスキーID [!DNL Kinesis] 。 |
-| `auth.params.secretKey` | アカウントの秘密アクセスキー [!DNL Kinesis] 。 |
-| `auth.params.region` | アカウントの地域 [!DNL Kinesis] です。 |
-| `connectionSpec.id` | 接続 [!DNL Kinesis] 指定ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `auth.params.accessKeyId` | [!DNL Kinesis]アカウントのアクセスキーID。 |
+| `auth.params.secretKey` | [!DNL Kinesis]アカウントの秘密アクセスキー。 |
+| `auth.params.region` | [!DNL Kinesis]アカウントの地域です。 |
+| `connectionSpec.id` | [!DNL Kinesis]接続指定ID:`86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **応答** 
 
-正常な応答は、新たに作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
+正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
 
 ```json
 {
@@ -123,4 +123,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、APIを使用して [!DNL Amazon Kinesis] 接続を作成し、一意のIDを応答本文の一部として取得できます。 この接続IDを使用して、Flow Service APIを使用してストリーミングデータを [収集できます](../../collect/streaming.md)。
+このチュートリアルに従うと、APIを使用して[!DNL Amazon Kinesis]接続を作成し、一意のIDを応答本文の一部として取得できます。 この接続IDを使用して[Flow Service API](../../collect/streaming.md)を使用してストリーミングデータを収集できます。
