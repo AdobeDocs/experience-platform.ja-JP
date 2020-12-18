@@ -6,43 +6,43 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをMySQLに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 20%
+source-wordcount: '572'
+ht-degree: 19%
 
 ---
 
 
-# APIを使用したMySQLコネクタの作成 [!DNL Flow Service]
+# [!DNL Flow Service] APIを使用してMySQLコネクタを作成する
 
 >[!NOTE]
 >
->MySQL Connectorはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>MySQL Connectorはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用してMySQLに接続する手順を順を追って説明 [!DNL Experience Platform] します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Experience Platform]をMySQLに接続する手順を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to MySQL using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用してMySQLに正しく接続するために必要な追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-MySQLストレージ [!DNL Flow Service] と接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service]がMySQLストレージと接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | アカウントに関連付けられているMySQL接続文字列。 MySQLの接続文字列パターンは次のとおりです。 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | 接続の生成に使用するID。 MySQLの固定接続仕様IDは `26d738e0-8963-47ea-aadf-c60de735468a`です。 |
+| `connectionString` | アカウントに関連付けられているMySQL接続文字列。 MySQLの接続文字列パターンは次のとおりです。`Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | 接続の生成に使用するID。 MySQLの固定接続仕様IDは`26d738e0-8963-47ea-aadf-c60de735468a`です。 |
 
-接続文字列の取得について詳しくは、 [このMySQLドキュメントを参照してください](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)。
+接続文字列の取得について詳しくは、[このMySQLドキュメント](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -50,19 +50,19 @@ MySQLストレージ [!DNL Flow Service] と接続するには、次の接続プ
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## 接続の作成
 
@@ -76,7 +76,7 @@ POST /connections
 
 **リクエスト**
 
-MySQL接続を作成するには、POST要求の一部として一意の接続仕様IDを指定する必要があります。 MySQLの接続仕様IDはで `26d738e0-8963-47ea-aadf-c60de735468a`す。
+MySQL接続を作成するには、POST要求の一部として一意の接続仕様IDを指定する必要があります。 MySQLの接続仕様IDは`26d738e0-8963-47ea-aadf-c60de735468a`です。
 
 ```shell
 curl -X POST \
@@ -104,12 +104,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | アカウントに関連付けられているMySQL接続文字列。 MySQLの接続文字列パターンは次のとおりです。 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | MySQLの固定接続仕様ID: `26d738e0-8963-47ea-aadf-c60de735468a`. |
+| `auth.params.connectionString` | アカウントに関連付けられているMySQL接続文字列。 MySQLの接続文字列パターンは次のとおりです。`Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | MySQLの固定接続仕様ID:`26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 **応答** 
 
-正常な応答は、新たに作成されたベース接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータベースを調べるために必要です。
+正常な応答は、新たに作成されたベース接続の詳細(一意の識別子(`id`)を返します。 このIDは、次のチュートリアルでデータベースを調べるために必要です。
 
 ```json
 {
@@ -120,4 +120,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Flow Service] APIを使用してMySQL接続を作成し、接続の一意のID値を取得しました。 この接続IDは、Flow Service APIを使用してデータベースやNoSQLシステムを [探索する方法を学ぶ際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用してMySQL接続を作成し、接続の一意のID値を取得したことになります。 この接続IDは、Flow Service API](../../explore/database-nosql.md)を使用して[データベースやNoSQLシステムを探索する方法を学ぶ際に、次のチュートリアルで使用できます。
