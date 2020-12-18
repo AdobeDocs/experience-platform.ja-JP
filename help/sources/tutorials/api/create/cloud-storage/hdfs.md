@@ -6,39 +6,39 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、ApacheHadoop分散ファイルシステム（以下「HDFS」と呼ばれる）をExperience Platformに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 21%
+source-wordcount: '555'
+ht-degree: 20%
 
 ---
 
 
-# APIを使用して [!DNL Apache][!DNL Flow Service] HDFSコネクタを作成する
+# [!DNL Flow Service] APIを使って[!DNL Apache] HDFSコネクタを作成する
 
 >[!NOTE]
 >
->Apache HDFSコネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>Apache HDFSコネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-[!DNL Flow Service] 様々な異なるソースから顧客データを収集して一元化し、Adobe Experience Platformに持ち込むために使用します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] 様々な異なるソースから顧客データを収集して一元化し、Adobe Experience Platformに持ち込むために使用します。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用してApacheHadoop分散ファイルシステム（以下「HDFS」と呼ばれる）をに接続する手順を順を追って説明 [!DNL Experience Platform]します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、ApacheHadoop分散ファイルシステム（以下「HDFS」と呼ばれます）を[!DNL Experience Platform]に接続する手順を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to HDFS using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用してHDFSに正しく接続するために必要な追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `url` | URLは、HDFSへの接続に必要な認証パラメーターを匿名で定義します。 この値の取得方法の詳細については、 [このHDFSドキュメントを参照してください](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html)。 |
-| `connectionSpec.id` | 接続を作成するために必要な識別子。 HDFSの接続仕様IDは修正され `54e221aa-d342-4707-bcff-7a4bceef0001`ました。 |
+| `url` | URLは、HDFSへの接続に必要な認証パラメーターを匿名で定義します。 この値の取得方法の詳細については、[このHDFSドキュメント](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html)を参照してください。 |
+| `connectionSpec.id` | 接続を作成するために必要な識別子。 HDFSの固定接続仕様IDは`54e221aa-d342-4707-bcff-7a4bceef0001`です。 |
 
 ### API 呼び出し例の読み取り
 
@@ -46,19 +46,19 @@ The following sections provide additional information that you will need to know
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## 接続の作成
 
@@ -101,11 +101,11 @@ curl -X POST \
 | プロパティ | 説明 |
 | --------- | ----------- |
 | `auth.params.url` | HDFSへの匿名接続に必要な認証パラメーターを定義するURLです |
-| `connectionSpec.id` | HDFS接続仕様ID: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `connectionSpec.id` | HDFS接続仕様ID:`54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **応答** 
 
-正常な応答は、新たに作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -116,4 +116,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、 [!DNL Flow Service] APIを使用してHDFS接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service APIを使用してサードパーティのクラウドストレージを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/cloud-storage.md)。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用してHDFS接続を作成し、接続の固有のID値を取得したことになります。 このIDは、Flow Service API](../../explore/cloud-storage.md)を使用して[サードパーティのクラウドストレージを調査する方法を学習する際に、次のチュートリアルで使用できます。
