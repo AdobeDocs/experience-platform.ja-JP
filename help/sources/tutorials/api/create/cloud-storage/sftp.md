@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをSFTP(Secure File Transfer Protocol)サーバーに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: c88b9400144f511ef456fd5fdc968a5a6b7a3dc0
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 19%
+source-wordcount: '807'
+ht-degree: 23%
 
 ---
 
@@ -29,6 +29,10 @@ ht-degree: 19%
 * [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
+>[!IMPORTANT]
+>
+>SFTPソース接続でJSONオブジェクトを取り込む場合は、改行やキャリッジリターンを避けることをお勧めします。 この制限を回避するには、1行に1つのJSONオブジェクトを使用し、続くファイルには複数行を使用します。
+
 [!DNL Flow Service] APIを使用してSFTPサーバーに正常に接続するために必要な追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
@@ -45,11 +49,11 @@ ht-degree: 19%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -65,7 +69,7 @@ ht-degree: 19%
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、SFTPアカウントごとに必要な接続は1つだけです。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のデータフローを作成する場合に使用できる接続は1つだけです。
 
 ### 基本認証を使用したSFTP接続の作成
 
