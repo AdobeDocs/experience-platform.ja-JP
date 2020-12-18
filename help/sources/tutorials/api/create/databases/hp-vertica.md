@@ -6,67 +6,67 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、HP VerticaをExperience Platformに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 22%
+source-wordcount: '589'
+ht-degree: 21%
 
 ---
 
 
-# APIを使用してHP [!DNL Vertica][!DNL Flow Service] コネクタを作成する
+# [!DNL Flow Service] APIを使用してHP [!DNL Vertica]コネクタを作成する
 
 >[!NOTE]
 >
->HP [!DNL Vertica] コネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>HP [!DNL Vertica]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用してHPとの接続手順を順を追っ [!DNL Vertica] て説明 [!DNL Experience Platform]します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、HP [!DNL Vertica]を[!DNL Experience Platform]に接続する手順を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [ソース](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用して入力データの構造、マッピング、拡張を行うことができます。
-- [サンドボックス](https://docs.adobe.com/content/help/ja-JP/experience-platform/sandbox/home.html): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用して受信データの構造、マッピング、拡張を行うことができます。
+* [サンドボックス](https://docs.adobe.com/content/help/ja-JP/experience-platform/sandbox/home.html): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to HP [!DNL Vertica] using the [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] APIを使用してHP [!DNL Vertica]に正しく接続するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
-HPと接続 [!DNL Flow Service] するには、次の接続プロパティの値を指定する必要があり [!DNL Vertica]ます。
+[!DNL Flow Service]がHP [!DNL Vertica]と接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | HP [!DNL Vertica] インスタンスへの接続に使用する接続文字列。 HPの接続文字列パターン [!DNL Vertica] は `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | 接続を作成するために必要な識別子。 HPの固定接続仕様ID [!DNL Vertica] は次のとおりです。 `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
+| `connectionString` | HP [!DNL Vertica]インスタンスへの接続に使用する接続文字列。 HP [!DNL Vertica]の接続文字列パターンは`Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`です |
+| `connectionSpec.id` | 接続を作成するために必要な識別子。 HP [!DNL Vertica]の固定接続仕様IDは次のとおりです。`a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
-接続文字列の取得の詳細については、 [このHP Verticaドキュメントを参照してください](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)。
+接続文字列の取得に関する詳細は、[このHP Verticaドキュメント](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)を参照してください。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](https://docs.adobe.com/content/help/en/experience-platform/landing/troubleshooting.html#reading-example-api-calls)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://docs.adobe.com/content/help/en/experience-platform/tutorials/authentication.html). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-内のすべてのリソース(ソースコネクタ [!DNL Experience Platform]を含む)は、特定の仮想サンドボックスに分離されています。 All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-- Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるため、HP [!DNL Vertica] アカウントごとに必要な接続は1つだけです。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 HP [!DNL Vertica]アカウントごとに1つの接続のみが必要です。異なるデータを取り込むために複数のソースコネクタを作成するのに使用できます。
 
 **API 形式**
 
@@ -76,7 +76,7 @@ POST /connections
 
 **リクエスト**
 
-HP [!DNL Vertica] 接続を作成するには、一意の接続仕様IDをPOST要求の一部として指定する必要があります。 HPの接続仕様ID [!DNL Vertica] は `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`です。
+HP [!DNL Vertica]接続を作成するには、POST要求の一部として一意の接続仕様IDを指定する必要があります。 HP [!DNL Vertica]の接続仕様IDは`a8b6a1a4-5735-42b4-952c-85dce0ac38b5`です。
 
 ```shell
 curl -X POST \
@@ -104,12 +104,12 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | HP [!DNL Vertica] アカウントに関連付けられている接続文字列。 HPの接続文字列パターン [!DNL Vertica] は次のとおりです。 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | HP [!DNL Vertica] 接続仕様ID: `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
+| `auth.params.connectionString` | HP [!DNL Vertica]アカウントに関連付けられている接続文字列。 HP [!DNL Vertica]の接続文字列パターンは次のとおりです。`Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | HP [!DNL Vertica]接続仕様ID:`a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **応答** 
 
-正常な応答は、新たに作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -120,4 +120,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、 [!DNL Vertica][!DNL Flow Service] APIを使用してHP接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用してHP [!DNL Vertica]接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service API ](../../explore/database-nosql.md)を使用して[データベースを調査する方法を学習する際に、次のチュートリアルで使用できます。
