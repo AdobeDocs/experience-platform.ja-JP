@@ -6,39 +6,39 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle Cloudストレージアカウントに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: d332226541685108b58d88096146ed6048606774
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 22%
+source-wordcount: '540'
+ht-degree: 20%
 
 ---
 
 
-# APIを使用して [!DNL Google Cloud Storage][!DNL Flow Service] コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Google Cloud Storage]コネクタを作成する
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用して、アカウントに接続する手順を順を追っ [!DNL Experience Platform] て説明し [!DNL Google Cloud Storage] ます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Experience Platform]を[!DNL Google Cloud Storage]アカウントに接続する手順を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-以下の節では、 [!DNL Flow Service] APIを使用してGoogle Cloudストレージアカウントに正しく接続するために知っておく必要がある追加情報について説明します。
+[!DNL Flow Service] APIを使用してGoogle Cloudストレージアカウントに正しく接続するために必要な追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-アカウント [!DNL Flow Service] に接続するには、次の接続プロパティの値を指定する必要があり [!DNL Google Cloud Storage] ます。
+[!DNL Flow Service]が[!DNL Google Cloud Storage]アカウントと接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | アカウントのアクセスキーID [!DNL Google Cloud Storage] 。 |
-| `secretAccessKey` | アカウントの秘密アクセスキー [!DNL Google Cloud Storage] 。 |
+| `accessKeyId` | [!DNL Google Cloud Storage]アカウントのアクセスキーID。 |
+| `secretAccessKey` | [!DNL Google Cloud Storage]アカウントの秘密アクセスキー。 |
 
-使い始める前に、 [このGoogle Cloudドキュメントにアクセスしてください](https://cloud.google.com/docs/authentication)。
+使い始める前に、[このGoogle Cloudドキュメント](https://cloud.google.com/docs/authentication)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -46,23 +46,23 @@ ht-degree: 22%
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクタを作成する場合に使用できるので、 [!DNL Google Cloud Storage] アカウントごとに必要な接続は1つだけです。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するのに使用できるため、[!DNL Google Cloud Storage]アカウントごとに1つの接続のみが必要です。
 
 **API 形式**
 
@@ -71,6 +71,8 @@ POST /connections
 ```
 
 **リクエスト**
+
+[!DNL Google Cloud Storage]接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 [!DNL Google Cloud Storage]の接続指定IDは`32e8f412-cdf7-464c-9885-78184cb113fd`です。
 
 ```shell
 curl -X POST \
@@ -99,13 +101,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | アカウントに関連付けられているアクセスキーID [!DNL Google Cloud Storage] 。 |
-| `auth.params.secretAccessKey` | アカウントに関連付けられている秘密アクセスキー [!DNL Google Cloud Storage] です。 |
-| `connectionSpec.id` | 接続 [!DNL Google Cloud Storage] 指定ID: `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| `auth.params.accessKeyId` | [!DNL Google Cloud Storage]アカウントに関連付けられているアクセスキーID。 |
+| `auth.params.secretAccessKey` | [!DNL Google Cloud Storage]アカウントに関連付けられている秘密アクセスキー。 |
+| `connectionSpec.id` | [!DNL Google Cloud Storage]接続指定ID:`32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **応答** 
 
-正常な応答は、新たに作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
+正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
 
 ```json
 {
@@ -116,4 +118,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、APIを使用して [!DNL Google Cloud Storage] 接続を作成し、一意のIDを応答本文の一部として取得できます。 この接続IDを使用して、Flow Service APIを使用してクラウドストレージを [調べたり、Flow Service APIを使用してパーケーデータを](../../explore/cloud-storage.md) 取り込んだりできます [](../../cloud-storage-parquet.md)。
+このチュートリアルに従うと、APIを使用して[!DNL Google Cloud Storage]接続を作成し、一意のIDを応答本文の一部として取得できます。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用したインジェストパーケットデータを使用して、[クラウドストレージを探索できます。
