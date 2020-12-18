@@ -6,42 +6,40 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、CRMデータを収集するためのMicrosoft Dynamics（以下「Dynamics」と呼ばれる）アカウントにプラットフォームを接続する手順を説明します。
 translation-type: tm+mt
-source-git-commit: d332226541685108b58d88096146ed6048606774
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 18%
+source-wordcount: '561'
+ht-degree: 20%
 
 ---
 
 
-# APIを使用して [!DNL Microsoft Dynamics][!DNL Flow Service] コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Microsoft Dynamics]コネクタを作成する
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用して、CRMデータを収集するため [!DNL Platform] の [!DNL Microsoft Dynamics] （以下「Dynamics」と呼ばれる）アカウントに接続する手順を順を追って説明します。
-
-でユーザインターフェイスを使用する場合は、 [!DNL Experience Platform]DynamicsソースコネクタのUIチュートリアル [](../../../ui/create/crm/dynamics.md) で、同様の操作を実行するための手順を順を追って説明します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、[!DNL Platform]を[!DNL Microsoft Dynamics] （以下「Dynamics」と呼びます）アカウントに接続してCRMデータを収集する手順を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md):E[!DNL xperience Platform] は、1つのインスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスのアプリケーションを開発および発展させる仮想 [!DNL Platform] サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md):デジタルエクスペリエンスアプリケーションの開発と発展に役立つ、単一の[!DNL xperience Platform] インスタンスを個別の仮想環境に分割する仮想サンドボックスを [!DNL Platform] 提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect [!DNL Platform] to a Dynamics account using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用して[!DNL Platform]をDynamicsアカウントに正常に接続するために知っておく必要がある追加情報について、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-に接続 [!DNL Flow Service] するに [!DNL Dynamics]は、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service]が[!DNL Dynamics]に接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `serviceUri` | インスタンスのサービスURL [!DNL Dynamics] 。 |
-| `username` | ユーザーアカウントのユー [!DNL Dynamics] ザー名です。 |
-| `password` | アカウントのパス [!DNL Dynamics] ワード。 |
+| `serviceUri` | [!DNL Dynamics]インスタンスのサービスURL。 |
+| `username` | [!DNL Dynamics]ユーザーアカウントのユーザー名です。 |
+| `password` | [!DNL Dynamics]アカウントのパスワード。 |
 
-開始方法の詳細については、 [このDynamicsドキュメントを参照してください](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth)。
+開始方法の詳細については、[このDynamicsドキュメント](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -49,102 +47,23 @@ The following sections provide additional information that you will need to know
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
-## 接続仕様の検索
+## 接続の作成
 
-アカウント [!DNL Platform] に接続する前に、の接続仕様が存在することを確認する必要があり [!DNL Dynamics][!DNL Dynamics]ます。 接続仕様が存在しない場合は、接続を確立できません。
-
-使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GETリクエストを実行し、クエリパラメーターを使用 [!DNL Dynamics] して、の接続仕様を検索できます。
-
-**API 形式**
-
-クエリパラメーターを指定しないでGETリクエストを送信すると、使用可能なすべてのソースの接続仕様が返されます。 特別な情報を取得す `property=name=="dynamics-online"` るクエリを含めることができ [!DNL Dynamics]ます。
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="dynamics-online"
-```
-
-**リクエスト**
-
-次のリクエストは、の接続仕様を取得し [!DNL Dynamics]ます。
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="dynamics-online"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答** 
-
-正常な応答は、固有な識別子( [!DNL Dynamics]`id`)を含む、の接続仕様を返します。 このIDは、次の手順でベース接続を作成する際に必要となります。
-
-```json
-{
-    "items": [
-        {
-            "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
-            "name": "dynamics-online",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication for Dynamics-Online",
-                    "settings": {
-                        "authenticationType": "Office365",
-                        "deploymentType": "Online"
-                    },
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to dynamics-online",
-                        "properties": {
-                            "serviceUri": {
-                                "type": "string",
-                                "description": "The service URL of your Dynamics instance"
-                            },
-                            "username": {
-                                "type": "string",
-                                "description": "User name for the user account"
-                            },
-                            "password": {
-                                "type": "string",
-                                "description": "Password for the user account",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "username",
-                            "password",
-                            "serviceUri"
-                        ]
-                    }
-                }
-            ]
-        }
-    ]
-}
-```
-
-## API用の接続の作成
-
-APIの接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するために使用できるので、APIは [!DNL Dynamics] アカウントごとに1つの接続のみ必要です。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するのに使用できるため、[!DNL Dynamics]アカウントごとに1つの接続のみが必要です。
 
 **API 形式**
 
@@ -153,6 +72,8 @@ POST /connections
 ```
 
 **リクエスト**
+
+[!DNL Dynamics]接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 [!DNL Dynamics]の接続指定IDは`38ad80fe-8b06-4938-94f4-d4ee80266b07`です。
 
 ```shell
 curl -X POST \
@@ -163,8 +84,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dynamics Base Connection",
-        "description": "Base connection for Dynamics account",
+        "name": "Dynamics Connection",
+        "description": "connection for Dynamics account",
         "auth": {
             "specName": "Basic Authentication for Dynamics-Online",
             "params": {
@@ -182,14 +103,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.serviceUri` | インスタンスに関連付けられているサービスURI [!DNL Dynamics] です。 |
-| `auth.params.username` | アカウントに関連付けられているユー [!DNL Dynamics] ザ名。 |
-| `auth.params.password` | アカウントに関連付けられているパス [!DNL Dynamics] ワードです。 |
-| `connectionSpec.id` | 前の手順で取得 `id` した [!DNL Dynamics] アカウントの接続仕様。 |
+| `auth.params.serviceUri` | [!DNL Dynamics]インスタンスに関連付けられたサービスURI。 |
+| `auth.params.username` | [!DNL Dynamics]アカウントに関連付けられているユーザー名。 |
+| `auth.params.password` | [!DNL Dynamics]アカウントに関連付けられているパスワードです。 |
+| `connectionSpec.id` | 前の手順で取得した[!DNL Dynamics]アカウントの接続仕様`id`。 |
 
 **応答** 
 
-リクエストが成功した場合、ベース接続の一意の識別子（`id`）が返されます。このIDは、次のチュートリアルでデータを調べるために必要です。
+正常に応答すると、新たに作成された接続が、一意の識別子(`id`)を含めて返されます。 このIDは、次の手順でCRMシステムを調査するために必要です。
 
 ```json
 {
@@ -200,4 +121,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、APIを使用して [!DNL Dynamics] アカウントへの接続が作成され、一意のIDが応答本文の一部として取得されます。 Flow Service APIを使用してCRMシステムを [調査する方法について学習する際に、次のチュートリアルでこの接続IDを使用できます](../../explore/crm.md)。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用して[!DNL Dynamics]接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service API](../../explore/crm.md)を使用して[CRMシステムを調べる方法を学習する際に、次のチュートリアルで使用できます。
