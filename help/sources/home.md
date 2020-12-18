@@ -5,29 +5,29 @@ title: Adobe Experience Platform ソースコネクタの概要
 topic: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: 466cb072537cbf462d2c4d8f3ee4b6eccc0199a0
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 57%
+source-wordcount: '926'
+ht-degree: 59%
 
 ---
 
 
 # ソースコネクタの概要
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。Adobeアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
-[!DNL Experience Platform] は、様々なデータプロバイダーへのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を提供します。これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
+[!DNL Flow Service] は、プラットフォーム内の様々な異種ソースから顧客データを収集および一元化するために使用します。このサービスは、様々なデータプロバイダーへのソース接続を簡単に設定できるユーザーインターフェイスおよびRESTful APIを提供します。 これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
-With [!DNL Experience Platform], you can centralize data you collect from disparate sources and use the insights gained from it to do more.
+Experience Platform を使用すると、異なるソースから収集したデータを一元管理し、得たインサイトを利用して、より多くの作業をおこなうことができます。
 
 ## ソースのタイプ
 
-Sources in [!DNL Experience Platform] are grouped into the following categories:
+Experience Platform のソースは、次のカテゴリに分類されます。
 
 ### アドビアプリケーション
 
-[!DNL Experience Platform] adobe analytics、Adobe Audience Manager、その他のAdobeアプリケーションからデータを取り込むことがで [!DNL Experience Platform Launch]きます。 詳しくは、次の関連ドキュメントを参照してください。
+Experience Platformは、Adobe Analytics、Adobe Audience Manager、[!DNL Experience Platform Launch]など、他のAdobeアプリケーションからデータを取り込むことを可能にします。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Manager コネクタの概要](connectors/adobe-applications/audience-manager.md)
 - [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -39,13 +39,13 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 ### 広告
 
-[!DNL Experience Platform] は、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Experience Platformは、サードパーティの広告システムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) コネクタ
 
 ### クラウドストレージ
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスのすべての手順は、ユーザーインターフェイスを使用して Sources ワークフローに統合されます。詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Azure Data Lake Storage Gen2] コネクタ](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] コネクタ](connectors/cloud-storage/blob.md)
@@ -60,21 +60,21 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 
 ### 顧客関係管理（CRM）
 
-CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。[!DNL Experience Platform] とからCRMデータを取り込むためのサポート [!DNL Microsoft Dynamics 365] を提供 [!DNL Salesforce]します。 詳しくは、次の関連ドキュメントを参照してください。
+CRM システムは顧客との関係を築くのに役立つデータを提供し、顧客との忠誠度を高め、顧客保持率を高めます。Experience Platformは、CRMデータを[!DNL Microsoft Dynamics 365]と[!DNL Salesforce]から取り込むためのサポートを提供します。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Microsoft Dynamics] コネクタ](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] コネクタ](connectors/crm/salesforce.md)
 
 ### 顧客の成功
 
-[!DNL Experience Platform] は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
+Experience Platform は、サードパーティの顧客成功アプリケーションからデータを取得する機能を備えています。詳しくは、次の関連ドキュメントを参照してください。
 
 - [[!DNL Salesforce Service Cloud] コネクタ](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] コネクタ](connectors/customer-success/servicenow.md)
 
 ### データベース
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Experience Platform は、サードパーティのデータベースからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Amazon Redshift] コネクタ](connectors/databases/redshift.md)
 - [[!DNL Apache Hive on Azure HDInsights] コネクタ](connectors/databases/hive.md)
@@ -95,25 +95,25 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 
 ### eCommerce
 
-[!DNL Experience Platform] は、サードパーティeCommerceシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Experience Platformは、サードパーティのeCommerceシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### マーケティングの自動処理
 
-[!DNL Experience Platform] は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL HubSpot] コネクタ](connectors/marketing-automation/hubspot.md)
 
 ### 支払い
 
-[!DNL Experience Platform] は、サードパーティの支払いシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Experience Platformは、サードパーティの支払いシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL PayPal] コネクタ](connectors/payments/paypal.md)
 
 ### プロトコル
 
-[!DNL Experience Platform] は、サードパーティのプロトコルシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+Experience Platformは、サードパーティのプロトコルシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL Generic OData] コネクタ](connectors/protocols/odata.md)
 
@@ -131,9 +131,9 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 
 Admin Console から付与される使用可能な権限（これら 4 つのソースを含む）の詳細については、「[アクセス制御の概要](../access-control/home.md)」を参照してください。
 
-## Terms and conditions {#terms-and-conditions}
+## 利用条件{#terms-and-conditions}
 
-ベータ版（「ベータ版」）と表示されたソースのいずれかを使用することにより、お客様は、いかなる種類の保証もなく、ベータ版が「現状のまま」提供され ***ることを本書で認めます***。
+ベータ版（「ベータ版」）と表示されたソースを使用することで、お客様は、ベータ版が「現状のまま」提供されることを、いかなる種類の&#x200B;***の保証も受けずに、この旨を了承します。***
 
 Adobeは、ベータ版を保守、修正、更新、変更、またはその他の方法でサポートする義務はありません。 ベータ版および/または付属のマテリアルの正しい機能やパフォーマンスに一切依存しないように注意し、注意が必要です。 ベータ版はAdobeの機密情報と見なされます。
 
