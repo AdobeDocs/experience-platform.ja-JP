@@ -6,45 +6,45 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Azure FileストレージをExperience Platformに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: d332226541685108b58d88096146ed6048606774
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 20%
+source-wordcount: '574'
+ht-degree: 19%
 
 ---
 
 
-# APIを使用した [!DNL Azure File Storage][!DNL Flow Service] コネクタの作成
+# [!DNL Flow Service] APIを使用して[!DNL Azure File Storage]コネクタを作成する
 
 >[!NOTE]
 >
->コネクタ [!DNL Azure File Storage] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>[!DNL Azure File Storage]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順を順を追って説明 [!DNL Azure File Storage] し [!DNL Experience Platform]ます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Azure File Storage]を[!DNL Experience Platform]に接続する手順を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Azure File Storage] using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用して[!DNL Azure File Storage]に正しく接続するために知っておく必要のある追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-と接続 [!DNL Flow Service] するには、次の接続プロパティの値を指定する必要があ [!DNL Azure File Storage]ります。
+[!DNL Flow Service]が[!DNL Azure File Storage]と接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `host` | アクセスする [!DNL Azure File Storag]eインスタンスのエンドポイント。 |
-| `userId` | エンドポイントへの十分なアクセス権を持つユー [!DNL Azure File Storage] ザー。 |
-| `password` | インスタンスのパスワード [!DNL Azure File Storage] です |
-| 接続指定ID | 接続を作成するために必要な一意の識別子。 の接続仕様ID [!DNL Azure File Storage] は次のとおりです。 `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| `host` | アクセスしている[!DNL Azure File Storag]eインスタンスのエンドポイント。 |
+| `userId` | [!DNL Azure File Storage]エンドポイントへの十分なアクセス権を持つユーザー。 |
+| `password` | [!DNL Azure File Storage]インスタンスのパスワード |
+| 接続指定ID | 接続を作成するために必要な一意の識別子。 [!DNL Azure File Storage]の接続仕様ID:`be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 
-開始方法の詳細については、 [このAzure Fileストレージドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)。
+開始方法の詳細については、[このAzureファイルストレージドキュメント](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -52,23 +52,23 @@ The following sections provide additional information that you will need to know
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するために使用できるAzure Fileストレージアカウントごとに1つの接続のみが必要です。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するのに使用できるため、[!DNL Azure File Storage]アカウントごとに1つの接続のみが必要です。
 
 **API 形式**
 
@@ -78,7 +78,7 @@ POST /connections
 
 **リクエスト**
 
-The following request creates a new [!DNL Azure File Storage] connection, configured by the properties provided in the payload:
+[!DNL Azure File Storage]接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 [!DNL Azure File Storage]の接続指定IDは`be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`です。
 
 ```shell
 curl -X POST \
@@ -108,14 +108,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | アクセスしている [!DNL Azure File Storage] インスタンスのエンドポイント。 |
-| `auth.params.userId` | エンドポイントへの十分なアクセス権を持つユー [!DNL Azure File Storage] ザー。 |
-| `auth.params.password` | アク [!DNL Azure File Storage] セスキー。 |
-| `connectionSpec.id` | 接続 [!DNL Azure File Storage] 指定ID: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
+| `auth.params.host` | アクセスする[!DNL Azure File Storage]インスタンスのエンドポイント。 |
+| `auth.params.userId` | [!DNL Azure File Storage]エンドポイントへの十分なアクセス権を持つユーザー。 |
+| `auth.params.password` | [!DNL Azure File Storage]アクセスキー。 |
+| `connectionSpec.id` | [!DNL Azure File Storage]接続指定ID:`be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 **応答** 
 
-正常な応答は、新たに作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -126,4 +126,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Azure File Storage] APIを使用して [!DNL Flow Service] 接続を作成し、接続の一意のID値を取得しました。 このIDは、Flow Service APIを使用してサードパーティのクラウドストレージを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/cloud-storage.md)。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用して[!DNL Azure File Storage]接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service API](../../explore/cloud-storage.md)を使用して[サードパーティのクラウドストレージを調査する方法を学習する際に、次のチュートリアルで使用できます。
