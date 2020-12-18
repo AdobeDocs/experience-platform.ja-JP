@@ -6,36 +6,36 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをSalesforce Service Cloud（以下「SSC」と呼ぶ）に接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 17%
+source-wordcount: '585'
+ht-degree: 19%
 
 ---
 
 
-# APIを使用して [!DNL Salesforce Service Cloud][!DNL Flow Service] コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Salesforce Service Cloud]コネクタを作成する
 
 >[!NOTE]
 >
->コネクタ [!DNL Salesforce Service Cloud] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+>[!DNL Salesforce Service Cloud]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順 [!DNL Experience Platform][!DNL Salesforce Service Cloud] （以下「SSC」と呼びます）を順を追って説明します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、[!DNL Experience Platform]を[!DNL Salesforce Service Cloud]に接続する手順（以下「SSC」と呼びます）を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to SSC using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用してSSCに正常に接続するために知っておく必要がある追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-SSCと接続 [!DNL Flow Service] するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service]がSSCと接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
@@ -43,7 +43,7 @@ SSCと接続 [!DNL Flow Service] するには、次の接続プロパティの�
 | `password` | ユーザーアカウントのパスワードです。 |
 | `securityToken` | ユーザーアカウントのセキュリティトークン。 |
 
-使い始める前に詳しくは、 [このSalesforce Service Cloudドキュメントを参照してください](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm)。
+使い始めの詳細については、[このSalesforceサービスクラウドドキュメント](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -51,102 +51,23 @@ SSCと接続 [!DNL Flow Service] するには、次の接続プロパティの�
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
-## 接続仕様の検索
+## 接続の作成
 
-SSC接続を作成するには、SSC接続仕様のセットが内に存在する必要があり [!DNL Flow Service]ます。 SSCに接続する最初の手順 [!DNL Platform] は、これらの仕様を取得することです。
-
-**API 形式**
-
-使用可能な各ソースには、認証要件などのコネクタプロパティを記述するための固有の接続仕様のセットがあります。 GET要求を `/connectionSpecs` エンドポイントに送信すると、使用可能なすべてのソースの接続仕様が返されます。 また、SSC専用の情報を取得す `property=name=="salesforce-service-cloud"` るクエリを含めることもできます。
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="salesforce-service-cloud"
-```
-
-**リクエスト**
-
-次のリクエストは、SSCの接続仕様を取得します。
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="mysql"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**応答** 
-
-正常に応答すると、固有な識別子(`id`)を含むSSCの接続仕様が返されます。 このIDは、次のベース接続を作成する手順で必要になります。
-
-```json
-{
-    "items": [
-        {
-            "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
-            "name": "salesforce-service-cloud",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication",
-                    "type": "BasicAuthentication",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params",
-                        "properties": {
-                            "environmentUrl": {
-                                "type": "string",
-                                "description": "URL of the source instance"
-                            },
-                            "username": {
-                                "type": "string",
-                                "description": "User name for the user account"
-                            },
-                            "password": {
-                                "type": "string",
-                                "description": "Password for the user account",
-                                "format": "password"
-                            },
-                            "securityToken": {
-                                "type": "string",
-                                "description": "Security token for the user account",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "username",
-                            "password",
-                            "securityToken"
-                        ]
-                    }
-                }
-            ],
-        }
-    ]
-}
-```
-
-## ベース接続を作成する
-
-ベース接続はソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、SSCアカウントごとに1つのベース接続が必要です。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるため、SSCアカウントごとに必要な接続は1つだけです。
 
 **API 形式**
 
@@ -155,6 +76,8 @@ POST /connections
 ```
 
 **リクエスト**
+
+SSC接続を作成するには、POST要求の一部として一意の接続仕様IDを指定する必要があります。 SSCの接続仕様IDは`b66ab34-8619-49cb-96d1-39b37ede86ea`です。
 
 ```shell
 curl -X POST \
@@ -187,11 +110,11 @@ curl -X POST \
 | `auth.params.username` | SSCアカウントに関連付けられているユーザ名。 |
 | `auth.params.password` | SSCアカウントに関連付けられているパスワード。 |
 | `auth.params.securityToken` | SSCアカウントに関連付けられているセキュリティトークン。 |
-| `connectionSpec.id` | 前の手順で取得したSSCアカウント `id` の接続仕様。 |
+| `connectionSpec.id` | 前の手順で取得したSSCアカウントの接続仕様`id`。 |
 
 **応答** 
 
-正常な応答は、新たに作成されたベース接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常に応答すると、新たに作成された接続が、一意の識別子(`id`)を含めて返されます。 このIDは、次の手順でCRMシステムを調査するために必要です。
 
 ```json
 {
@@ -202,4 +125,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Flow Service] APIを使用してSSCベースの接続を作成し、接続の固有のID値を取得しました。 Flow Service APIを使用して顧客の成功システムを [調査する方法について学習する際に、次のチュートリアルでこの基本接続IDを使用できます](../../explore/customer-success.md)。
+このチュートリアルに従うことで、[!DNL Flow Service] APIを使用してSSC接続を作成し、接続の一意のID値を取得しました。 この接続IDは、Flow Service API ](../../explore/customer-success.md)を使用して[顧客の成功システムを調査する方法を学習する際に、次のチュートリアルで使用できます。
