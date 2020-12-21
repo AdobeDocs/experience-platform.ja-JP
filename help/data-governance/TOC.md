@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform データガバナンスのヘルプ
 breadcrumb-title: データガバナンスガイド
 user-guide-description: ラベル、マーケティングアクション、ポリシーを使用して、データ使用に関する制限を実施します。
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 78%
+source-wordcount: '118'
+ht-degree: 73%
 
 ---
 
@@ -27,8 +27,9 @@ ht-degree: 78%
    * [Policy Service API を使用してデータ使用ポリシーを作成する](policies/create.md)
 * ポリシーの適用 {#enforcement}
    * [ポリシー適用の概要](enforcement/overview.md)
-   * [Policy Service API を使用してデータ使用ポリシーを適用する](enforcement/api-enforcement.md)
-* Policy Service API developer guide {#api}
+   * [自動強制](enforcement/auto-enforcement.md)
+   * [APIベースの強制](enforcement/api-enforcement.md)
+* Policy Service API開発者ガイド{#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
    * [ラベル](api/labels.md)
