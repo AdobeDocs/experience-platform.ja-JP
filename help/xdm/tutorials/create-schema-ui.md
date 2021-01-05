@@ -1,54 +1,54 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: スキーマエディターを使用したスキーマの作成
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 26c3aa3b21c2d9850f29816d57ddf2da953d6b10
+source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
 workflow-type: tm+mt
-source-wordcount: '3779'
+source-wordcount: '3568'
 ht-degree: 18%
 
 ---
 
 
-# スキーマの作成には、 [!DNL Schema Editor]
+# [!DNL Schema Editor]
 
-Adobe Experience Platformユーザーインターフェイスを使用すると、と呼ばれるインタラクティブなビジュアルキャンバスで [!DNL Experience Data Model] (XDM)スキーマを作成および管理でき [!DNL Schema Editor]ます。 このチュートリアルでは、を使用してスキーマを作成する方法を説明し [!DNL Schema Editor]ます。
+Adobe Experience Platformのユーザーインターフェイスを使用すると、[!DNL Schema Editor]と呼ばれるインタラクティブなビジュアルキャンバスで[!DNL Experience Data Model] (XDM)スキーマを作成および管理できます。 このチュートリアルでは、[!DNL Schema Editor]を使用してスキーマを作成する方法を説明します。
 
 >[!NOTE]
 >
->デモ目的で、このチュートリアルの手順では、顧客忠誠度プログラムのメンバーを説明するサンプルスキーマを作成します。 これらの手順を使用して目的に合わせて別のスキーマを作成できますが、まずサンプルスキーマの作成に従って、の機能を学ぶことをお勧めし [!DNL Schema Editor]ます。
+>デモ目的で、このチュートリアルの手順では、顧客忠誠度プログラムのメンバーを説明するサンプルスキーマを作成します。 これらの手順を使用して目的に合わせて別のスキーマを作成できますが、まずサンプルスキーマの作成に従って[!DNL Schema Editor]の機能を学ぶことをお勧めします。
 
-If you prefer to compose a schema using the [!DNL Schema Registry] API instead, start by reading the [[!DNL Schema Registry] developer guide](../api/getting-started.md) before attempting the tutorial on [creating a schema using the API](create-schema-api.md).
+代わりに[!DNL Schema Registry] APIを使用してスキーマを構成する場合は、[API](create-schema-api.md)を使用したスキーマの作成に関するチュートリアルを開始する前に、[[!DNL Schema Registry] 開発者ガイド](../api/getting-started.md)を読んで、開始をお勧めします。
 
 ## はじめに
 
 このチュートリアルでは、スキーマの作成に関わるAdobe Experience Platformのさまざまな側面について、十分に理解する必要があります。 このチュートリアルを始める前に、次の概念に関するドキュメントを確認してください。
 
-* [[!DNL Experience Data Model (XDM)]](../home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
    * [スキーマ合成の基本](../schema/composition.md)：XDM スキーマとその構築ブロック（クラス、mixin、データ型、フィールドなど）の概要です。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-## [ [!UICONTROL スキーマ] ]ワークスペースを開く {#browse}
+## [!UICONTROL スキーマ]ワークスペース{#browse}を開きます
 
-[!UICONTROL UIの] スキーマ [!DNL Platform] ワークスペースは、のビジュアライゼーションを提供し [!DNL Schema Library]、組織で使用可能なスキーマを表示が管理できます。 The workspace also includes the [!DNL Schema Editor], the canvas on which you can compose a schema throughout this tutorial.
+[!DNL Platform] UIの[!UICONTROL スキーマ]ワークスペースは[!DNL Schema Library]のビジュアライゼーションを提供し、組織で使用可能なスキーマを表示が管理できます。 このワークスペースには、このチュートリアル全体でスキーマを構成できるキャンバスである[!DNL Schema Editor]も含まれています。
 
-ログイン後、左側のナビゲーションで「 [!DNL Experience Platform]スキーマ **[!UICONTROL 」を選択し、]** スキーマ **** ワークスペースを開きます。 「 **[!UICONTROL 参照]** 」タブには、スキーマのリスト(の表現 [!DNL Schema Library])が表示され、表示やカスタマイズが可能です。 リストには、スキーマの基となる名前、型、クラス、動作（レコードまたは時系列）、およびスキーマが最後に変更された日時が含まれます。
+[!DNL Experience Platform]にログインした後、左側のナビゲーションで&#x200B;**[!UICONTROL スキーマ]**&#x200B;を選択し、**[!UICONTROL スキーマ]**&#x200B;ワークスペースを開きます。 「**[!UICONTROL 参照]**」タブには、スキーマのリスト（[!DNL Schema Library]の表現）が表示され、表示やカスタマイズが可能です。 リストには、スキーマの基となる名前、型、クラス、動作（レコードまたは時系列）、およびスキーマが最後に変更された日時が含まれます。
 
-詳しくは、UI内の既存のXDMリソースの [詳細に関するガイドを参照してください](./explore.md) 。
+詳しくは、[UI](../ui/explore.md)の既存のXDMリソースの詳細を参照してください。
 
 ## スキーマの作成と命名 {#create}
 
-To begin composing a schema, select **[!UICONTROL Create schema]** in the top-right corner of the **[!UICONTROL Schemas]** workspace. ドロップダウンメニューが表示され、コアクラス [!UICONTROL XDM Indivialプロファイル] と [!UICONTROL XDM ExperienceEventのいずれかを選択できます]。 これらのクラスが目的に合わない場合は、 **[!UICONTROL 「参照]** 」を選択して、使用可能な他のクラスから選択するか、新しいクラス [を作成することもできます](#create-new-class)。
+スキーマの構成を開始するには、**[!UICONTROL スキーマ]**&#x200B;ワークスペースの右上隅にある「スキーマ&#x200B;]**を作成」を選択します。**[!UICONTROL &#x200B;ドロップダウンメニューが表示され、コアクラス[!UICONTROL XDM個別プロファイル]と[!UICONTROL XDM ExperienceEvent]のいずれかを選択できます。 これらのクラスが目的に合わない場合は、「**[!UICONTROL 参照]**」を選択して他の使用可能なクラスから選択するか、[新しいクラス](#create-new-class)を作成することもできます。
 
-このチュートリアルの目的で、「 **[!UICONTROL XDM Individual Individualプロファイル]**」を選択します。
+このチュートリアルの目的で、「**[!UICONTROL XDM個別プロファイル]**」を選択します。
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-が表示 [!DNL Schema Editor] されます。 これは、スキーマを作成するキャンバスです。スキーマの基にする標準XDMクラスを選択したので、エディターに到達すると、名称未設定のスキーマがキャンバスの **[!UICONTROL 構造]** セクションに自動的に作成され、そのクラスに基づくすべてのスキーマに含まれる標準フィールドも作成されます。 スキーマに割り当てられたクラスは、「 **[!UICONTROL 組版]****[!UICONTROL 」セクションの「クラス]** 」にも表示されます。
+[!DNL Schema Editor]が表示されます。 これは、スキーマを作成するキャンバスです。スキーマの基にする標準XDMクラスを選択したので、エディターに到着したときに、名称未設定のスキーマがキャンバスの&#x200B;**[!UICONTROL Structure]**&#x200B;セクションに自動的に作成され、そのクラスに基づくすべてのスキーマに含まれる標準フィールドが作成されます。 スキーマに割り当てられたクラスは、**[!UICONTROL 「構成]**」セクションの「クラス&#x200B;**[!UICONTROL Class]**」にも表示されます。
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
@@ -72,11 +72,11 @@ To begin composing a schema, select **[!UICONTROL Create schema]** in the top-ri
 
 これで、mixin を追加して、スキーマにフィールドを追加できます。ミックスインは、特定の概念を説明するためによく一緒に使用される1つ以上のフィールドのグループです。 このチュートリアルでは、mixin を使用してロイヤルティプログラムのメンバーを説明し、名前、誕生日、電話番号、住所などの重要な情報を取得します。
 
-To add a mixin, select **[!UICONTROL Add]** in the **[!UICONTROL Mixins]** sub-section.
+ミックスインを追加するには、**[!UICONTROL ミックスイン]**&#x200B;サブセクションで追加&#x200B;****&#x200B;を選択します。
 
 ![](../images/tutorials/create-schema/add_mixin_button.png)
 
-新しいダイアログが表示され、使用可能なミックスインのリストが表示されます。 各ミックスインは特定のクラスでのみ使用されるため、ダイアログには選択したクラス（この場合はクラス）と互換性のあるリストミックスインのみが表示され [!DNL XDM Individual Profile] ます。 標準のXDMクラスを使用している場合、ミックスインのリストは、使用頻度に基づいてインテリジェントに並べ替えられます。
+新しいダイアログが表示され、使用可能なミックスインのリストが表示されます。 各ミックスインは特定のクラスでのみ使用されるため、ダイアログには選択したクラス（この場合は[!DNL XDM Individual Profile]クラス）と互換性のあるリストミックスインのみが表示されます。 標準のXDMクラスを使用している場合、ミックスインのリストは、使用頻度に基づいてインテリジェントに並べ替えられます。
 
 ![](../images/tutorials/create-schema/mixin-popularity.png)
 
@@ -84,45 +84,45 @@ To add a mixin, select **[!UICONTROL Add]** in the **[!UICONTROL Mixins]** sub-s
 
 ![](../images/tutorials/create-schema/preview-mixin-button.png)
 
-Mixinをプレビューする際、Mixinのスキーマの詳細が右側のパネルに表示されます。 また、提供されたキャンバス内のMixinのフィールド間を移動することもできます。 別のフィールドを選択すると、右側のパネルが更新され、目的のフィールドに関する詳細が表示されます。 プレビューが終了したら **[!UICONTROL 「戻る]** 」を選択して、mixinの選択ダイアログに戻ります。
+Mixinをプレビューする際、Mixinのスキーマの詳細が右側のパネルに表示されます。 また、提供されたキャンバス内のMixinのフィールド間を移動することもできます。 別のフィールドを選択すると、右側のパネルが更新され、目的のフィールドに関する詳細が表示されます。 プレビューが終了したら、「**[!UICONTROL 戻る]**」を選択して、mixinの選択ダイアログに戻ります。
 
 ![](../images/tutorials/create-schema/preview-mixin.png)
 
-このチュートリアルでは、「 **[!UICONTROL 人口統計詳細]** 」ミックスインを選択し、「ミックスイン」を選択し ****&#x200B;ます。
+このチュートリアルでは、**[!UICONTROL 人口統計の詳細]**&#x200B;ミックスインを選択し、**[!UICONTROL ミックスイン追加]**&#x200B;を選択します。
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
-スキーマキャンバスが再び表示されます。The **[!UICONTROL Mixins]** section now lists &quot;[!UICONTROL Demographic Details]&quot; and the **[!UICONTROL Structure]** section includes the fields contributed by the mixin. 「ミックスイン **** 」セクションの下でミックスインの名前を選択して、キャンバス内で提供される特定のフィールドを強調表示することができます。
+スキーマキャンバスが再び表示されます。**[!UICONTROL ミックスイン]**&#x200B;セクションには、「[!UICONTROL 人口統計的詳細]」と&#x200B;**[!UICONTROL 構造]**&#x200B;セクションには、ミックスインが寄与するフィールドが含まれるようになりました。 「**[!UICONTROL ミックスイン]**」セクションでミックスインの名前を選択し、キャンバス内で提供される特定のフィールドを強調表示することができます。
 
 ![](../images/tutorials/create-schema/person_details_structure.png)
 
-This mixin contributes several fields under the top-level name `person` with the data type &quot;[!UICONTROL Person]&quot;. このフィールドグループは、名前、生年月日、性別など、個人に関する情報を説明します。
+このミックスインは、最上位レベルの名前`person`の下に、「[!UICONTROL 人]」というデータ型のフィールドをいくつか使用します。 このフィールドグループは、名前、生年月日、性別など、個人に関する情報を説明します。
 
 >[!NOTE]
 >
->Remember that fields may use scalar types (such as string, integer, array, or date), as well as any data type (a group of fields representing a common concept) defined within the [!DNL Schema Registry].
+>フィールドは、スカラー型（文字列、整数、配列、日付など）と、[!DNL Schema Registry]内で定義された任意のデータ型（共通の概念を表すフィールドのグループ）を使用できます。
 
-Notice that the `name` field has a data type of &quot;[!UICONTROL Person name]&quot;, meaning it too describes a common concept and contains name-related sub-fields such as first name, last name, courtesy title, and suffix.
+`name`フィールドのデータ型は「[!UICONTROL 人名]」です。つまり、一般的な概念を表し、名、姓、敬称、敬称、接尾辞など、名前に関連するサブフィールドが含まれます。
 
 キャンバス内の別のフィールドを選択すると、スキーマ構造に影響を与える追加のフィールドが表示されます。
 
 ## 別の mixin の追加 {#mixin-2}
 
-次に、同じ手順を繰り返して、別の mixin を追加できます。When you view the **[!UICONTROL Add mixin]** dialog this time, notice that the &quot;[!UICONTROL Demographic Details]&quot; mixin has been greyed out and the checkbox next to it cannot be selected. これは、既に現在のスキーマに含まれている mixin を誤って複製するのを防ぎます。
+次に、同じ手順を繰り返して、別の mixin を追加できます。今回は&#x200B;**[!UICONTROL mixin追加]**&#x200B;ダイアログを表示する際に、「[!UICONTROL 人口統計の詳細]」ミックスインは灰色表示になっており、隣のチェックボックスは選択できないことに注意してください。 これは、既に現在のスキーマに含まれている mixin を誤って複製するのを防ぎます。
 
-このチュートリアルでは、ダイアログから「[!DNL Personal Contact Details]」ミックスインを選択し、「 **[!UICONTROL mixin]** 」を選択してスキーマに追加します。
+このチュートリアルでは、ダイアログから「[!DNL Personal Contact Details]」ミックスインを選択し、「**[!UICONTROL ミックスイン追加]**」を選択してスキーマに追加します。
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-追加すると、キャンバスが再び表示されます。&quot;[!UICONTROL Personal Contact Details]&quot; is now listed under **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section, and fields for home address, mobile phone, and more have been added under **[!UICONTROL Structure]**.
+追加すると、キャンバスが再び表示されます。「[!UICONTROL 個人の連絡先の詳細]」が&#x200B;**[!UICONTROL コンポジション]**&#x200B;セクションの&#x200B;**[!UICONTROL ミックスイン]**&#x200B;の下に表示され、自宅住所、携帯電話などのフィールドが&#x200B;**[!UICONTROL 構造]**&#x200B;の下に追加されました。
 
-Similar to the `name` field, the fields you just added represent multi-field concepts. For example, `homeAddress` has a data type of &quot;[!UICONTROL Postal address]&quot; and `mobilePhone` has a data type of &quot;[!UICONTROL Phone number]&quot;. これらの各フィールドを選択して展開し、データ型に含まれる追加のフィールドを表示できます。
+`name`フィールドと同様、先ほど追加したフィールドは複数フィールドの概念を表しています。 例えば、`homeAddress`のデータ型は「[!UICONTROL 住所]」、`mobilePhone`のデータ型は「[!UICONTROL 電話番号]」です。 これらの各フィールドを選択して展開し、データ型に含まれる追加のフィールドを表示できます。
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
 ## 新しい mixin の定義 {#define-mixin}
 
-The &quot;[!UICONTROL Loyalty Members]&quot; schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. 必要なフィールドを含む標準 mixin がないので、新しい mixin を定義する必要があります。
+「[!UICONTROL 忠誠度メンバー]」スキーマは、忠誠度プログラムのメンバーに関連するデータを取り込むためのものなので、いくつかの特定の忠誠度関連フィールドが必要になります。 必要なフィールドを含む標準 mixin がないので、新しい mixin を定義する必要があります。
 
 今回は、**[!UICONTROL Mixin の追加]**&#x200B;ダイアログを開いたときに、「**[!UICONTROL 新規 mixin の作成]**」を選択します。その後、ミックスインの表示名と説明を入力するように求められます。
 
@@ -132,63 +132,63 @@ The &quot;[!UICONTROL Loyalty Members]&quot; schema is meant to capture data rel
 
 このチュートリアルでは、新しい mixin に「Loyalty Details」という名前を付けます。
 
-に戻る **[!UICONTROL には]** 、「 [!DNL Schema Editor]mixin」を選択します。 &quot;[!UICONTROL Loyalty Details]&quot; should now appear under **[!UICONTROL Mixins]** on the left-side of the canvas, but there are no fields associated with it yet and therefore no new fields appear under **[!UICONTROL Structure]**.
+**[!UICONTROL ミッ追加クスイン]**&#x200B;を選択して[!DNL Schema Editor]に戻ります。 キャンバスの左側の&#x200B;**[!UICONTROL ミックスイン]**&#x200B;の下に&quot;[!UICONTROL 忠誠度の詳細]&quot;が表示されるはずですが、関連するフィールドはまだないので、**[!UICONTROL 構造]**&#x200B;の下に新しいフィールドは表示されません。
 
 ## Mixin へのフィールドの追加 {#mixin-fields}
 
 「Loyalty Details」mixin を作成したら、mixin がスキーマに貢献するフィールドを定義します。
 
-To begin, select the mixin name in the **[!UICONTROL Mixins]** section. これを行うと、Mixinのプロパティがエディタの右側に表示され、「 **構造** 」の下のスキーマ名の横に **[!UICONTROL プラス(+)]**&#x200B;アイコンが表示されます。
+最初に、**[!UICONTROL ミックスイン]**&#x200B;セクションでミックスイン名を選択します。 これを行うと、mixinのプロパティがエディターの右側に表示され、**[!UICONTROL 構造]**&#x200B;の下のスキーマ名の横に&#x200B;**プラス(+)**&#x200B;アイコンが表示されます。
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-「 **」の横の** プラス(+)[!DNL Loyalty Members]アイコンを選択して、構造内に新しいノードを作成します。 This node (called `_tenantId` in this example) represents your IMS Organization&#39;s tenant ID, preceded by an underscore. テナント ID の存在は、追加するフィールドが組織の名前空間に限られていることを示しています。
+「**」の横のプラス(+)**&#x200B;アイコンを選択して、構造内に新しいノードを作成します。 [!DNL Loyalty Members]このノード（この例では`_tenantId`と呼ばれます）は、IMS組織のテナントIDを表し、前にアンダースコアが付きます。 テナント ID の存在は、追加するフィールドが組織の名前空間に限られていることを示しています。
 
-つまり、追加するフィールドは組織に固有のものであり、組織にのみアクセス可能な特定の領域 [!DNL Schema Registry] に保存されます。 定義するフィールドは、他の標準クラス、ミックスイン、データ型、およびフィールドの名前との競合を防ぐために、常にテナント名前空間に追加する必要があります。
+つまり、追加するフィールドは組織に固有のものであり、組織にのみアクセス可能な特定の領域の[!DNL Schema Registry]に保存されます。 定義するフィールドは、他の標準クラス、ミックスイン、データ型、およびフィールドの名前との競合を防ぐために、常にテナント名前空間に追加する必要があります。
 
-Inside that namespaced node is a &quot;[!UICONTROL New Field]&quot;. This is the beginning of the &quot;[!UICONTROL Loyalty Details]&quot; mixin.
+その名前の付いたノードの中には、「[!UICONTROL 新しいフィールド]」が入っています。 これは、「[!UICONTROL 忠誠度の詳細]」ミックスインの開始です。
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-Using the controls on the right-hand side of the editor, start by creating a `loyalty` field with type &quot;[!UICONTROL Object]&quot; that will be used to hold your loyalty-related fields. When finished, select **[!UICONTROL Apply]**.
+エディターの右側のコントロールを使用して、忠誠度関連のフィールドの保持に使用する`loyalty`オブジェクト]の型を持つ&lt;a0/>フィールドを作成し、開始します。 [!UICONTROL 終了したら、「**[!UICONTROL 適用]**」を選択します。
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-The changes are applied and the newly created `loyalty` object appears. オブジェクトの横にある **プラス(+)** アイコンを選択して、忠誠度関連のフィールドを追加します。 A &quot;[!UICONTROL New Field]&quot; appears and the **[!UICONTROL Field properties]** section is visible on the right-hand side of the canvas.
+変更が適用され、新しく作成された`loyalty`オブジェクトが表示されます。 オブジェクトの横にあるプラス(+)**アイコンを選択し、忠誠度関連のフィールドを追加します。**「[!UICONTROL 新しいフィールド]」が表示され、キャンバスの右側に&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;セクションが表示されます。
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
 各フィールドには、次の情報が必要です。
 
-* **[!UICONTROL フィールド名]:** フィールドの名前。キャメルケースで書かれます。 例：loyaltyLevel
-* **[!UICONTROL 表示名]:** フィールドの名前。タイトルの場合は大文字で記述されます。 例：Loyalty Level
-* **[!UICONTROL タイプ]:** フィールドのデータ型です。 This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Examples: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], etc.
-* **[!UICONTROL 説明]:** フィールドのオプションの説明は、文頭の場合で記述し、最大200文字で入力します。
+* **[!UICONTROL Field Name]：フィールド** の名前。キャメルケースで書かれています。例：loyaltyLevel
+* **[!UICONTROL 表示名]：フィールド** の名前。タイトルの場合は大文字で表記されます。例：Loyalty Level
+* **[!UICONTROL Type]:** フィールドのデータ型。これには、基本的なスカラー型と[!DNL Schema Registry]で定義されているすべてのデータ型が含まれます。 例：[!UICONTROL 文字列]、[!UICONTROL 整数]、[!UICONTROL ブール値]、[!UICONTROL 人]、[!UICONTROL 住所]、[!UICONTROL 電話番号]など。
+* **[!UICONTROL 説明]:（オプション）フィールド** の説明は、文頭の場合と同様に、最大200文字で記述します。
 
-The first field for the `Loyalty` object will be a string called `loyaltyId`. When setting the new field&#39;s type to &quot;[!UICONTROL String]&quot;, the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including default value, format, and maximum length.
+`Loyalty`オブジェクトの最初のフィールドは、`loyaltyId`という文字列になります。 新しいフィールドのタイプを「[!UICONTROL 文字列]」に設定すると、**[!UICONTROL フィールドプロパティ]**&#x200B;セクションに、デフォルト値、形式、最大長など、制約を適用するためのオプションが入力されます。
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
-選択したデータ型に応じて、様々な制約オプションを使用できます。Since `loyaltyId` will be an email address, select &quot;[!UICONTROL email]&quot; from the **[!UICONTROL Format]** dropdown menu. 「**[!UICONTROL 適用]**」を選択して変更を適用します。
+選択したデータ型に応じて、様々な制約オプションを使用できます。`loyaltyId`は電子メールアドレスになるので、**[!UICONTROL 形式]**&#x200B;ドロップダウンメニューから「[!UICONTROL 電子メール]」を選択します。 「**[!UICONTROL 適用]**」を選択して変更を適用します。
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Add more fields to the mixin {#mixin-fields-2}
+## mixinの追加追加フィールド{#mixin-fields-2}
 
-Now that you have added the `loyaltyId` field, you can add additional fields to capture loyalty-related information such as:
+`loyaltyId`フィールドを追加したら、次のような忠誠度関連の情報を取り込むためのフィールドを追加できます。
 
 * ポイント（整数）
 * 会員登録日
 
-各フィールドをスキーマに追加するには、オ **ブジェクトの横のプラス(+)**`loyalty` アイコンを選択し、必要な情報を入力します。
+各フィールドをスキーマに追加するには、`loyalty`オブジェクトの横にある&#x200B;**プラス(+)**&#x200B;アイコンを選択し、必要な情報を入力します。
 
 完了すると、忠誠度オブジェクトには、忠誠度ID、ポイント、およびメンバー登録用のフィールドが含まれます。
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## mixin追加の列挙フィールド {#enum}
+## mixin追加の列挙フィールド{#enum}
 
-When defining fields in the [!DNL Schema Editor], there are some additional options that you can apply to basic field types in order to provide further constraints on the data the field can contain. これらの制約の使用例を次の表に示します。
+[!DNL Schema Editor]にフィールドを定義する場合、基本的なフィールドの種類に適用できる追加のオプションがいくつかあり、フィールドに含めることのできるデータに対してさらなる制約を設けます。 これらの制約の使用例を次の表に示します。
 
 | 制約 | 説明 |
 | --- | --- |
@@ -196,39 +196,45 @@ When defining fields in the [!DNL Schema Editor], there are some additional opti
 | [!UICONTROL 配列] | フィールドに値の配列が含まれ、各値は指定されたデータ型になっていることを示します。 例えば、データ型が「[!UICONTROL String]」のフィールドに対してこの制約を使用すると、フィールドに文字列の配列が含まれるように指定できます。 |
 | [!UICONTROL Enum] | このフィールドに、可能な値の列挙リストの値の1つを含める必要があることを示します。 |
 | [!UICONTROL ID] | このフィールドがIDフィールドであることを示します。 ID フィールドの詳細については、[このチュートリアルの後半](#identity-field)で説明します。 |
-| [!UICONTROL Relationship] | スキーマの関係は、和集合スキーマを使用して推論できますが、 [!DNL Real-time Customer Profile]これは同じクラスを共有するスキーマにのみ適用されます。 [!UICONTROL Relationship] 制約は、このフィールドが、異なるクラスに基づくスキーマの主なIDを参照することを示し、2つのスキーマ間の関係を示します。 See the tutorial on [defining a relationship](./relationship-ui.md) for more information. |
+| [!UICONTROL Relationship] | スキーマの関係は、和集合スキーマと[!DNL Real-time Customer Profile]を使用して推定できますが、これは同じクラスを共有するスキーマにのみ当てはまります。 [!UICONTROL Relationship]制約は、このフィールドが、異なるクラスに基づくスキーマの主なIDを参照することを示し、2つのスキーマ間の関係を示します。 詳細は、[関係の定義](./relationship-ui.md)のチュートリアルを参照してください。 |
 
-このチュートリアルでは、スキーマの [!DNL "loyalty"] オブジェクトに、顧客の「忠誠度レベル」を説明する新しい列挙フィールドが必要です。値は、4つのオプションのうちの1つに限定できます。 このフィールドをスキーマに追加するには、 **オブジェクトの横にある** プラス(+) `loyalty` アイコンを選択し、「フィールド名 **** 」と「 **[!UICONTROL 表示名]**」の必須フィールドに入力します。 「 **[!UICONTROL タイプ]**」で「[!UICONTROL 文字列]」を選択します。
+>[!NOTE]
+>
+>左側のナビゲーションバーには、必須フィールド、IDフィールドまたは関係フィールドが表示され、スキーマの複雑さに関係なく、これらのフィールドを簡単に見つけることができます。
+>
+>![](../images/tutorials/create-schema/left-rail-special.png)
+
+このチュートリアルでは、スキーマの[!DNL "loyalty"]オブジェクトに、顧客の「忠誠度レベル」を示す新しい列挙フィールドが必要です。値は、4つのオプションのうちの1つに限定されます。 このフィールドをスキーマに追加するには、`loyalty`オブジェクトの横にある&#x200B;**プラス(+)**&#x200B;アイコンを選択し、**[!UICONTROL フィールド名]**&#x200B;と&#x200B;**[!UICONTROL 表示名]**&#x200B;の必須フィールドに入力します。 「**[!UICONTROL タイプ]**」で、「[!UICONTROL 文字列]」を選択します。
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
-タイプを選択した後、 **[!UICONTROL Array]**、 **[!UICONTROL Enum]**、 **** Identityのチェックボックスなど、フィールドに追加のチェックボックスが表示されます。
+**[!UICONTROL 配列]**、**[!UICONTROL 列挙]**、**[!UICONTROL ID]**&#x200B;のチェックボックスなど、タイプを選択した後に、フィールドに追加のチェックボックスが表示されます。
 
-Select the **[!UICONTROL Enum]** checkbox to open the **[!UICONTROL Enum values]** section below. ここで、許容可能な各ロイヤルティレベルの&#x200B;**[!UICONTROL 値]**（キャメルケース）と&#x200B;**[!UICONTROL ラベル]**（タイトルケースでの読みやすい名前でオプション）を入力できます。
+「**[!UICONTROL 列挙]**」チェックボックスを選択して、下の&#x200B;**[!UICONTROL 列挙値]**&#x200B;を開きます。 ここで、許容可能な各ロイヤルティレベルの&#x200B;**[!UICONTROL 値]**（キャメルケース）と&#x200B;**[!UICONTROL ラベル]**（タイトルケースでの読みやすい名前でオプション）を入力できます。
 
-すべてのフィールドプロパティの入力が完了したら、「 **[!UICONTROL Apply]** 」を選択して「[!DNL loyaltyLevel]」フィールドを `loyalty` オブジェクトに追加します。
+すべてのフィールドプロパティを完了したら、「**[!UICONTROL 適用]**」を選択して、「[!DNL loyaltyLevel]」フィールドを`loyalty`オブジェクトに追加します。
 
 ![](../images/tutorials/create-schema/loyalty_level_enum.png)
 
 ## 複数フィールドオブジェクトのデータ型への変換 {#datatype}
 
-この `loyalty` オブジェクトには複数の忠誠度固有のフィールドが含まれ、他のスキーマで役立つ共通のデータ構造を表すようになりました。 では、これら [!DNL Schema Editor] のオブジェクトの構造をデータ型に変換することで、再利用可能な複数フィールドオブジェクトを簡単に適用できます。
+`loyalty`オブジェクトには複数の忠誠度固有のフィールドが含まれ、他のスキーマで役立つ共通のデータ構造を表すようになりました。 [!DNL Schema Editor]を使用すると、再利用可能な複数フィールドオブジェクトを簡単に適用できます。これらのオブジェクトの構造をデータ型に変換します。
 
-データ型を使用すると、複数フィールド構造を一貫して使用でき、mixin よりも柔軟性が高まります。これは、データ型がスキーマ内のどこでも使用できるからです。これは、フィールドの **[!UICONTROL Type]** 値を、で定義されている任意のデータ型の値に設定することで行われ [!DNL Schema Registry]ます。
+データ型を使用すると、複数フィールド構造を一貫して使用でき、mixin よりも柔軟性が高まります。これは、データ型がスキーマ内のどこでも使用できるからです。これは、フィールドの&#x200B;**[!UICONTROL Type]**&#x200B;値を、[!DNL Schema Registry]で定義されている任意のデータ型の値に設定することで行います。
 
-To convert the `loyalty` object to a data type, select the `loyalty` field under **[!UICONTROL Structure]**, then select **[!UICONTROL Convert to new data type]** on the right-hand side of the editor under **[!UICONTROL Field properties]**. オブジェクトが正常に変換されたことを確認する緑のポーバーが表示されます。
+`loyalty`オブジェクトをデータ型に変換するには、**[!UICONTROL 構造]**&#x200B;の下の`loyalty`フィールドを選択し、**[!UICONTROL フィールドのプロパティ]**&#x200B;の下のエディターの右側の&lt;a4/>新しいデータ型&#x200B;]**に変換を選択します。**[!UICONTROL &#x200B;オブジェクトが正常に変換されたことを確認する緑のポーバーが表示されます。
 
 ![](../images/tutorials/create-schema/convert-data-type.png)
 
-Now, when you look under **[!UICONTROL Structure]**, you can see that the `loyalty` field has a data type of &quot;[!DNL Loyalty]&quot; and the fields have small lock icons beside them, indicating they are no longer individual fields but rather part of a multi-field data type.
+**[!UICONTROL 構造]**&#x200B;の下を見ると、`loyalty`フィールドのデータ型が「[!DNL Loyalty]」で、フィールドの横に小さな錠前のアイコンが表示され、個々のフィールドではなく、複数フィールドのデータ型であることがわかります。
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-今後のスキーマでは、フィールドを「[!DNL Loyalty]」タイプとして割り当て、ID、忠誠度レベル、メンバーシンク、ポイントのフィールドが自動的に含まれるようになります。
+今後のスキーマでは、フィールドを「[!DNL Loyalty]」型として割り当て、ID、忠誠度レベル、メンバーシンク、ポイントのフィールドを自動的に含めることができます。
 
 >[!NOTE]
 >
->カスタムデータタイプは、編集スキーマとは独立して作成および編集することもできます。 詳しくは、データタイプの [作成と編集に関するチュートリアル](./create-data-type.md) を参照してください。
+>カスタムデータタイプは、編集スキーマとは独立して作成および編集することもできます。 詳しくは、[データ型の作成と編集](../ui/resources/data-types.md)のガイドを参照してください。
 
 ## スキーマフィールドの検索とフィルター
 
@@ -246,79 +252,79 @@ Now, when you look under **[!UICONTROL Structure]**, you can see that the `loyal
 
 ## ID フィールドとしてのスキーマフィールドの設定 {#identity-field}
 
-スキーマが提供する標準的なデータ構造を活用して、複数のソースにわたって同じ個人に属するデータを識別でき、分類、レポート、データサイエンスの分析など、様々な下流の使用例に対応できます。 個々のIDに基づいてデータを結合するには、該当するスキーマ内でキーフィールドを [!UICONTROL ID] フィールドとしてマークする必要があります。
+スキーマが提供する標準的なデータ構造を活用して、複数のソースにわたって同じ個人に属するデータを識別でき、分類、レポート、データサイエンスの分析など、様々な下流の使用例に対応できます。 個々のIDに基づいてデータを結合するには、キーフィールドを該当するスキーマ内で[!UICONTROL ID]フィールドとしてマークする必要があります。
 
-[!DNL Experience Platform] で「 **[!UICONTROL ID]** 」チェックボックスを使用して、IDフィールドを簡単に示すことがで [!DNL Schema Editor]きます。 ただし、データの性質に基づいて、IDとして使用するのに最適なフィールドを決定する必要があります。
+[!DNL Experience Platform] を使用すると、の「 **** Identity」チェックボックスを使用して、IDフィールドを簡単に示すことがで [!DNL Schema Editor]きます。ただし、データの性質に基づいて、IDとして使用するのに最適なフィールドを決定する必要があります。
 
-For example, there may be thousands of loyalty program members belonging to the same &quot;loyalty level&quot;, but each member of the loyalty program has a unique `loyaltyId` (which in this instance is the individual member&#39;s email address). The fact that `loyaltyId` is a unique identifier for each member makes it a good candidate for an identity field, whereas `loyaltyLevel` is not.
+例えば、同じ「忠誠度レベル」に属する何千もの忠誠度プログラムメンバーが存在する場合がありますが、忠誠度プログラムの各メンバーは一意の`loyaltyId`を持ちます（この場合は、個々のメンバーの電子メールアドレスです）。 `loyaltyId`が各メンバの一意の識別子であることは、`loyaltyLevel`がIDフィールドに対する適切な候補となるのに対し、&lt;a0/>は異なります。
 
 >[!IMPORTANT]
 >
->次の手順は、既存のスキーマフィールドにID記述子を追加する方法を説明します。 スキーマ自体の構造内にIDフィールドを定義する代わりに、 `identityMap` フィールドを使用してID情報を含めることもできます。
+>次の手順は、既存のスキーマフィールドにID記述子を追加する方法を説明します。 スキーマ自体の構造内にIDフィールドを定義する代わりに、`identityMap`フィールドを使用してID情報を格納することもできます。
 >
->を使用する場合は、スキーマに直接追加するすべてのプライマリIDが上書きされることに注意して `identityMap`ください。 詳しくは、『スキーマコンポジションの `identityMap` 基本』ガイドののの節を参照してください [](../schema/composition.md#identityMap) 。
+>`identityMap`を使用する予定がある場合は、スキーマに直接追加するすべてのプライマリIDが上書きされることに注意してください。 詳しくは、『スキーマ構成ガイド](../schema/composition.md#identityMap)の基本』の`identityMap`の節を参照してください。[
 
-エディタの「 **[!UICONTROL 構造]** 」セクションで、 `loyaltyId` フィールドを選択し、「フィールドプロパティ **[!UICONTROL 」の下に「]** ID ****」チェックボックスが表示されます。 Check the box and the option to set this as the **[!UICONTROL Primary identity]** appears. このボックスも選択します。
+エディターの&#x200B;**[!UICONTROL 構造]**&#x200B;セクションで、`loyaltyId`フィールドを選択し、**[!UICONTROL フィールドのプロパティ]**&#x200B;の下に「**[!UICONTROL ID]**」チェックボックスが表示されます。 チェックボックスをオンにし、**[!UICONTROL プライマリID]**&#x200B;として設定するオプションが表示されます。 このボックスも選択します。
 
 >[!NOTE]
 >
 >各スキーマには、1 つのプライマリ ID フィールドのみを含めることができます。スキーマフィールドをプライマリIDとして設定すると、後でスキーマ内の別のIDフィールドをプライマリIDとして設定しようとすると、エラーメッセージが表示されます。
 
-次に、ドロップダウン内の事前定義済みの **[!UICONTROL 名前空間のリストから]** ID名前空間を指定する必要があります。 は顧客の電子メ `loyaltyId` ールアドレスなので、ドロップダウンから「[!UICONTROL Email]」を選択します。 「 **[!UICONTROL 適用]** 」を選択して、 `loyaltyId` フィールドの更新を確認します。
+次に、ドロップダウン内の事前定義済みの名前空間のリストから&#x200B;**[!UICONTROL ID名前空間]**&#x200B;を指定する必要があります。 `loyaltyId`はお客様の電子メールアドレスなので、ドロップダウンから「[!UICONTROL 電子メール]」を選択します。 **[!UICONTROL 「]**&#x200B;を適用」を選択して、`loyaltyId`フィールドの更新を確認します。
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
 >[!NOTE]
 >
->標準名前空間とその定義のリストについては、 [[!DNL Identity Service] ドキュメントを参照してください](../../identity-service/troubleshooting-guide.md#standard-namespaces)。
+>標準名前空間とその定義のリストについては、[[!DNL Identity Service] ドキュメント](../../identity-service/troubleshooting-guide.md#standard-namespaces)を参照してください。
 
-変更を適用した後、のアイコンには指紋の記号が表示され、それが現在のIDフィールドであることが示されます。 `loyaltyId`
+変更を適用した後、`loyaltyId`のアイコンに指紋の記号が表示され、現在はIDフィールドであることが示されます。
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
-Now all data ingested into the `loyaltyId` field will be used to help identify that individual and stitch together a single view of that customer. To learn more about working with identities in [!DNL Experience Platform], please review the [[!DNL Identity Service]](../../identity-service/home.md) documentation.
+`loyaltyId`フィールドに取り込まれたすべてのデータは、その個人を特定し、その顧客の1つの表示をつなぎ合わせるのに役立ちます。 [!DNL Experience Platform]でIDを使用する方法の詳細については、[[!DNL Identity Service]](../../identity-service/home.md)のドキュメントを参照してください。
 
-## スキーマを [!DNL Real-time Customer Profile] {#profile}
+## スキーマを[!DNL Real-time Customer Profile] {#profile}で使用できるようにする
 
-[[!DNL Real-time Customer Profile]](../../profile/home.md) でアイデンティティデータ [!DNL Experience Platform] を活用して、各顧客の全体的な表示を提供します。 このサービスは、堅牢で360°の顧客属性プロファイルを構築し、お客様がと統合されたあらゆるシステムにわたって持つすべてのインタラクション顧客のタイムスタンプのあるアカウントを作成 [!DNL Experience Platform]します。
+[[!DNL Real-time Customer Profile]](../../profile/home.md) アイデンティティデータ [!DNL Experience Platform] を活用して、個々の顧客の全体的な表示を提供します。このサービスは、[!DNL Experience Platform]と統合されたあらゆるシステムにわたって顧客属性の360°の堅牢なプロファイルと、顧客が持つすべてのインタラクション顧客のタイムスタンプのあるアカウントを構築します。
 
-In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. 最初にプライマリIDを定義せずにスキーマを有効にしようとすると、エラーメッセージが表示されます。
+スキーマを[!DNL Real-time Customer Profile]で使用できるようにするには、プライマリIDが定義されている必要があります。 最初にプライマリIDを定義せずにスキーマを有効にしようとすると、エラーメッセージが表示されます。
 
 <img src="../images/tutorials/create-schema/missing_primary_identity.png" width="600" /><br>
 
-To enable the &quot;Loyalty Members&quot; schema for use in [!DNL Profile], begin by selecting &quot;[!DNL Loyalty Members]&quot; in the **[!UICONTROL Structure]** section of the editor.
+[!DNL Profile]で「Loyalty Members」スキーマを使用できるようにするには、まずエディターの&#x200B;**[!UICONTROL Structure]**&#x200B;セクションで「[!DNL Loyalty Members]」を選択します。
 
-エディターの右側には、スキーマに関する情報（表示名、説明、タイプなど）が表示されます。 この情報に加えて、 **[!UICONTROL プロファイル]** 切り替えボタンもあります。
+エディターの右側には、スキーマに関する情報（表示名、説明、タイプなど）が表示されます。 この情報に加えて、**[!UICONTROL プロファイル]**&#x200B;の切り替えボタンがあります。
 
 ![](../images/tutorials/create-schema/profile-toggle.png)
 
-Select **[!UICONTROL Profile]** and a popover appears, asking you to confirm that you wish to enable the schema for [!DNL Profile].
+「**[!UICONTROL プロファイル]**」を選択すると、[!DNL Profile]のスキーマを有効にするかどうかを確認するプローバーが表示されます。
 
 <img src="../images/tutorials/create-schema/enable-profile.png" width="700" /><br>
 
 >[!WARNING]
 >
->Once a schema has been enabled for [!DNL Real-time Customer Profile] and saved, it cannot be disabled.
+>スキーマが[!DNL Real-time Customer Profile]に対して有効になって保存されると、無効にすることはできません。
 
-「 **[!UICONTROL 有効にする]** 」を選択して選択を確定します。 必要に応じて、 **[!UICONTROL プロファイルの切り替えを再度選択してスキーマを無効にすることができますが、有効にした状態でスキーマを保存すると]**[!DNL Profile] 、無効にすることはできません。
+「**[!UICONTROL 有効]**」を選択して、選択を確定します。 **[!UICONTROL プロファイル]**&#x200B;の切り替えを再度選択して、必要に応じてスキーマを無効にできますが、[!DNL Profile]が有効な間にスキーマを保存すると、無効にできなくなります。
 
 ## 次の手順とその他のリソース
 
-スキーマの構成が完了すると、カンバスに完全なスキーマが表示されます。 「 **[!UICONTROL 保存]** 」を選択すると、スキーマがに保存され [!DNL Schema Library]、がアクセスできるようになり [!DNL Schema Registry]ます。
+スキーマの構成が完了すると、カンバスに完全なスキーマが表示されます。 「**[!UICONTROL 保存]**」を選択すると、スキーマが[!DNL Schema Library]に保存され、[!DNL Schema Registry]からアクセスできるようになります。
 
-これで、新しいスキーマを使用してにデータを取り込むことができ [!DNL Platform]ます。 データの取得にスキーマを使用した後は、追加的な変更のみがおこなわれる場合があります。スキーマバージョン管理について詳しくは、「[スキーマ合成の基本](../schema/composition.md)」を参照してください。
+新しいスキーマを使って[!DNL Platform]にデータを取り込めるようになりました。 データの取得にスキーマを使用した後は、追加的な変更のみがおこなわれる場合があります。スキーマバージョン管理について詳しくは、「[スキーマ合成の基本](../schema/composition.md)」を参照してください。
 
-これで、UIでスキーマの関係を [定義するチュートリアルに従って、「Loyalty Members](./relationship-ui.md) 」スキーマに新しい関係フィールドを追加できます。
+これで、[UI](./relationship-ui.md)でスキーマの関係を定義するチュートリアルに従って、「Loyality Members」スキーマに新しい関係フィールドを追加できます。
 
-The &quot;Loyalty Members&quot; schema is also available to be viewed and managed using the [!DNL Schema Registry] API. To begin working with the API, start by reading the [[!DNL Schema Registry API] developer guide](../api/getting-started.md).
+「ロイヤルティメンバー」スキーマは、[!DNL Schema Registry] APIを使用して表示および管理することもできます。 APIの使用を開始するには、[[!DNL Schema Registry API] 開始ガイド](../api/getting-started.md)を読んでください。
 
 ### ビデオリソース
 
 >[!WARNING]
 >
->次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
+>次のビデオに示す[!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
 
-次のビデオでは、 [!DNL Platform] UIで単純なスキーマを作成する方法を示します。
+次のビデオでは、[!DNL Platform] UIで単純なスキーマを作成する方法を示します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
@@ -328,23 +334,11 @@ The &quot;Loyalty Members&quot; schema is also available to be viewed and manage
 
 ## 付録
 
-以下の節では、の使用に関する追加情報について説明し [!DNL Schema Editor]ます。
+以下の節では、[!DNL Schema Editor]の使用に関する追加情報を示します。
 
 ### 新しいクラスの作成 {#create-new-class}
 
-[!DNL Experience Platform] は、組織に固有のクラスに基づいてスキーマを定義する柔軟性を提供します。
-
-[ **[!UICONTROL スキーマ]****ワークスペースで[スキーマの]**&#x200B;作成 **を選択し、ドロップダウンから[]** 参照]を選択します。
-
-![](../images/tutorials/create-schema/browse-classes.png)
-
-使用可能なクラスのリストから選択できるダイアログが表示されます。 ダイアログの上部で、「 **[!UICONTROL 新しいクラスを作成]**」を選択します。 You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior (&quot;[!UICONTROL Record]&quot; or &quot;[!UICONTROL Time Series]&quot;) for the data the schema will define.
-
-![](../images/tutorials/create-schema/create_new_class.png)
-
->[!IMPORTANT]
->
-> 組織で定義されたクラスを実装するスキーマを構築する場合、mixin は互換性のあるクラスでのみ使用できることに注意してください。Since the class you defined is new, there are no compatible mixins listed in the **[!UICONTROL Add mixin]** dialog. Instead, you will need to select **[!UICONTROL Create new mixin]** and define a mixin for use with that class. 次に新しいクラスを実装するスキーマを作成すると、定義した mixin が一覧表示され、使用できます。
+[!DNL Experience Platform] は、組織に固有のクラスに基づいてスキーマを定義する柔軟性を提供します。新しいクラスの作成方法については、UI](../ui/resources/classes.md#create)の[クラスの作成と編集に関するガイドを参照してください。
 
 ### スキーマクラスの変更 {#change-class}
 
@@ -354,18 +348,4 @@ The &quot;Loyalty Members&quot; schema is also available to be viewed and manage
 >
 >スキーマに対するクラスの再割り当ては、細心の注意を払って行う必要があります。 ミックスインは特定のクラスとのみ互換性があるので、クラスを変更するとキャンバスと追加したフィールドがリセットされます。
 
-クラスを再割り当てするには、キャンバスの左側で **[!UICONTROL 「割り当て]** 」を選択します。
-
-![](../images/tutorials/create-schema/assign_class_button.png)
-
-A dialog appears that displays a list of all available classes, including any defined by your organization (the owner being &quot;[!UICONTROL Customer]&quot;) as well as standard classes defined by Adobe.
-
-リストからクラスを選択し、ダイアログの右側に説明を表示します。 You can also select **[!UICONTROL Preview class structure]** to see the fields and metadata associated with the class. 続行するには、[ **[!UICONTROL クラスを割り当て]** ]を選択します。
-
-![](../images/tutorials/create-schema/assign_class.png)
-
-新しいクラスを割り当てるかどうかを確認する新しいダイアログが開きます。 「 **[!UICONTROL 割り当て]** 」を選択して確認します。
-
-![](../images/tutorials/create-schema/assign-confirm.png)
-
-クラスの変更を確認した後、キャンバスはリセットされ、構成の進行状況はすべて失われます。
+スキーマのクラスを変更する方法については、[UI](../ui/resources/schemas.md)でのスキーマの管理に関するガイドを参照してください。
