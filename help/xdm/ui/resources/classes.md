@@ -1,0 +1,98 @@
+---
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;class;classes;
+solution: Experience Platform
+title: UIでのクラスの作成と編集
+description: Experience Platformユーザーインターフェイスでクラスを作成および編集する方法を説明します。
+topic: user guide
+translation-type: tm+mt
+source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+workflow-type: tm+mt
+source-wordcount: '831'
+ht-degree: 8%
+
+---
+
+
+# UIでのクラスの作成と編集
+
+Experience Data Model(XDM)では、スキーマに含めるデータの行動面（レコードまたは時系列）を定義するクラスです。 これに加えて、クラスは、そのクラスに基づくすべてのスキーマに含める必要のある共通のプロパティの最小数を記述し、複数の互換性のあるデータセットを結合する方法を提供します。
+
+Adobeは、[!DNL XDM Individual Profile]や[!DNL XDM ExperienceEvent]を含むいくつかの標準(&quot;core&quot;)XDMクラスを提供しています。 これらのコアクラスに加えて、独自のカスタムクラスを作成し、貴社の具体的な使用例を説明することもできます。
+
+このドキュメントでは、Adobe Experience PlatformUIでカスタムクラスを作成、編集、管理する方法の概要を説明します。
+
+## 前提条件
+
+このガイドでは、XDMシステムに関する十分な理解が必要です。 Experience Platformエコシステム内でのXDMの役割の紹介については、[XDM overview](../../home.md)を参照し、XDMスキーマにクラスがどのように貢献するかについては、[スキーマ構成の基本](../../schema/composition.md)を参照してください。
+
+このガイドは必須ではありませんが、[UI](../../tutorials/create-schema-ui.md)でスキーマを構成する方法のチュートリアルに従って、[!DNL Schema Editor]の様々な機能に慣れることをお勧めします。
+
+## 新しいクラスの作成 {#create}
+
+**[!UICONTROL スキーマ]**&#x200B;ワークスペースで、「**[!UICONTROL スキーマを作成]**」を選択し、ドロップダウンから「**[!UICONTROL 参照]**」を選択します。
+
+![](../../images/ui/resources/classes/browse-classes.png)
+
+使用可能なクラスのリストから選択できるダイアログが表示されます。 ダイアログの上部で、「**[!UICONTROL 新しいクラスを作成]**」を選択します。 次に、新しいクラスに、表示名（クラスを説明、一意、わかりやすい名前）、説明、およびスキーマが定義するデータの動作（「[!UICONTROL Record]」または「[!UICONTROL Time-series]」）を付けます。
+
+終了したら、「**[!UICONTROL クラスを割り当て]**」を選択します。
+
+![](../../images/ui/resources/classes/class-details.png)
+
+[!DNL Schema Editor]が表示され、作成したカスタムクラスに基づく新しいスキーマがキャンバスに表示されます。 まだフィールドがクラスに追加されていないので、スキーマには`_id`フィールドのみが含まれます。これは、[!DNL Schema Registry]内のすべてのリソースに自動的に適用される、システム生成の一意の識別子を表します。
+
+![](../../images/ui/resources/classes/schema.png)
+
+>[!IMPORTANT]
+>
+> 組織で定義されたクラスを実装するスキーマを構築する場合、mixin は互換性のあるクラスでのみ使用できることに注意してください。定義したクラスは新しいので、**[!UICONTROL mixin]**&#x200B;ダイアログに追加は互換性のあるミックスインが一覧に表示されません。 代わりに、そのクラスで使用する新しいミックスイン](./mixins.md#create)を[作成する必要があります。 次に新しいクラスを実装するスキーマを作成すると、定義したミックスインが一覧表示され、使用できます。
+
+クラス[にフィールドを追加する開始](#add-fields)が可能になりました。これは、そのクラスを使用するすべてのスキーマが共有します。
+
+## 既存のクラス{#edit}を編集
+
+>[!NOTE]
+>
+>編集できるのは、組織で定義されたカスタムクラスのみです。
+>
+>また、データ取り込みでクラスを保存して使用した後は、追加の変更のみを行うことができます。 詳しくは、[スキーマ展開のルール](../../schema/composition.md#evolution)を参照してください。
+
+既存のクラスを編集するには、「**[!UICONTROL 参照]**」タブを選択し、編集するクラスを使用するスキーマの名前を選択します。
+
+![](../../images/ui/resources/classes/select-for-edit.png)
+
+>[!TIP]
+>
+>Workspaceの検索およびフィルター機能を使用して、スキーマを簡単に見つけることができます。 詳しくは、[XDMリソース](../explore.md)のガイドを参照してください。
+
+[!DNL Schema Editor]が表示され、スキーマの構造がキャンバスに表示されます。 これで、[クラス](#add-fields)にフィールドを追加する開始が可能になりました。
+
+![](../../images/ui/resources/classes/edit.png)
+
+## クラス追加{#add-fields}のフィールド
+
+[!UICONTROL スキーマエディター]でカスタムクラスを使用するスキーマを開くと、フィールドを開始してクラスに追加できます。 新しいフィールドを追加するには、スキーマ名の横にあるプラス(+)**アイコンを選択します。**
+
+![](../../images/ui/resources/classes/add-field.png)
+
+>[!IMPORTANT]
+>
+>クラスに追加するフィールドは、そのクラスを使用するすべてのスキーマで使用されることに注意してください。 したがって、どのフィールドがスキーマの使用例で役立つかを慎重に検討する必要があります。 このクラスの一部のスキーマでのみ使用されるフィールドを追加しようと思う場合は、代わりに[mixin](./mixins.md#create)を作成して、これらのスキーマに追加することを検討してください。
+
+キャンバスに&#x200B;**[!UICONTROL 新しいフィールド]**&#x200B;が表示され、右側のパネルが更新され、フィールドのプロパティを構成するコントロールが表示されます。 フィールドを設定してクラスに追加する手順については、[UI](../fields/overview.md#define)でのフィールドの定義のガイドを参照してください。
+
+引き続き、必要な数のフィールドをクラスに追加します。 終了したら、「**[!UICONTROL 保存]**」を選択して、スキーマとクラスの両方を保存します。
+
+![](../../images/ui/resources/classes/save.png)
+
+このクラスを使用するスキーマを以前に作成したことがある場合、新しく追加されたフィールドがこれらのスキーマに自動的に表示されます。
+
+## スキーマクラスの変更 {#schema}
+
+スキーマのクラスは、最初の作成プロセスで保存前の任意の時点で変更できます。 詳しくは、[スキーマの作成と編集](./schemas.md#change-class)のガイドを参照してください。
+
+## 次の手順
+
+このドキュメントでは、プラットフォームUIを使用してクラスを作成および編集する方法について説明します。 [!UICONTROL スキーマ]ワークスペースの機能について詳しくは、[[!UICONTROL スキーマ]ワークスペースの概要](../overview.md)を参照してください。
+
+[!DNL Schema Registry] APIを使用してクラスを管理する方法については、[クラスエンドポイントガイド](../../api/classes.md)を参照してください。
