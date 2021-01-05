@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。
 
-ソースコネクタのデータフローの監視の詳細については、ソース [](../../../dataflows/ui/monitor-sources.md) ・チュートリアルの監視データフローを参照してください。
+ソースコネクタの監視データフローの詳細については、sources](../../../dataflows/ui/monitor-sources.md)チュートリアルの[監視データフローを参照してください。
