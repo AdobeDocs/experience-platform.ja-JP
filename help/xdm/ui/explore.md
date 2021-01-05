@@ -1,0 +1,107 @@
+---
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
+solution: Experience Platform
+title: UIでのXDMリソースの参照
+description: Experience Platformのユーザーインターフェイスで既存のスキーマ、クラス、ミックスイン、およびデータタイプを調べる方法について説明します。
+topic: tutorial
+type: Tutorial
+translation-type: tm+mt
+source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
+workflow-type: tm+mt
+source-wordcount: '859'
+ht-degree: 0%
+
+---
+
+
+# UIでのXDMリソースの参照
+
+Adobe Experience Platformでは、すべてのExperience Data Model(XDM)リソースが[!DNL Schema Library]に保存されます。これには、組織が提供する標準リソースや、Adobeが定義するカスタムリソースが含まれます。 Experience PlatformUIで、[!DNL Schema Library]内の任意の既存のスキーマ、クラス、ミックスイン、またはデータ型の構造とフィールドを表示できます。 これは、データ取り込みの計画と準備を行う際に特に便利です。UIは、これらのXDMリソースが提供する各フィールドに必要なデータタイプと使用例に関する情報を提供します。
+
+このチュートリアルでは、Experience PlatformUIの既存のスキーマ、クラス、ミックスイン、データタイプを調べる手順を説明します。
+
+## XDMリソース{#lookup}を検索します。
+
+Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択します。 [!UICONTROL スキーマ]ワークスペースには、**[!UICONTROL 「参照]**」タブがあり、組織内のすべての既存のXDMリソースを調査できます。また、特に&#x200B;**[!UICONTROL クラス]**、**[!UICONTROL ミックスイン]**、**[!UICONTROL データ型]**&#x200B;を調査できます。
+
+![](../images/ui/explore/tabs.png)
+
+「[!UICONTROL 参照]」タブで、フィルターアイコン（![フィルターアイコン画像](../images/ui/explore/icon.png)）を使用して左側のレールにコントロールを表示し、リストに表示されている結果を絞り込むことができます。
+
+例えば、Adobeが提供する標準データ型のみを表示するようにリストをフィルタリングするには、**[!UICONTROL 型]**&#x200B;と&#x200B;**[!UICONTROL Adobe]**&#x200B;の下の&#x200B;**[!UICONTROL データ型]**&#x200B;と&#x200B;**[!UICONTROL 所有者]**&#x200B;を選択します。
+
+「**[!UICONTROL プロファイルに含める]**」トグルを使用すると、結果をフィルタして、[リアルタイム顧客プロファイル](../../profile/home.md)での使用が有効になっているスキーマで使用されているリソースのみを表示できます。
+
+![](../images/ui/explore/filter.png)
+
+検索バーを使用して、検索クエリと名前が一致するリソースに結果を絞り込むこともできます。
+
+![](../images/ui/explore/search.png)
+
+調査するリソースが見つかったら、リストから名前を選択し、キャンバスの構造を表示します。
+
+## キャンバス{#explore}でXDMリソースを調べます。
+
+リソースを選択すると、キャンバスにその構造が表示されます。
+
+![](../images/ui/explore/canvas.png)
+
+サブプロパティを含むオブジェクトタイプのフィールドは、最初にキャンバスに表示されたときに、デフォルトですべて折りたたまれます。 フィールドのサブプロパティを表示するには、名前の横のアイコンを選択します。
+
+![](../images/ui/explore/field-expand.png)
+
+### システム生成フィールド{#system-fields}
+
+一部のフィールド名の先頭にアンダースコアが付くもの（`_repo`や`_id`など）があります。 これらは、データの取り込み時に自動的に生成および割り当てを行うフィールドのプレースホルダです。
+
+したがって、これらのフィールドのほとんどは、プラットフォームに取り込む際に、データの構造から除外する必要があります。 この規則の主な例外は[`_{TENANT_ID}`フィールド](../api/getting-started.md#know-your-tenant_id)です。組織で作成するすべてのXDMフィールドは、以下の名前に置く必要があります。
+
+### データタイプ {#data-types}
+
+キャンバスに表示される各フィールドについて、名前の横に対応するデータタイプが表示され、一目で取り込みが必要なデータのタイプを示します。
+
+![](../images/ui/explore/data-types.png)
+
+角括弧(`[]`)が付いたデータ型は、そのデータ型の配列を表します。 例えば、**[!UICONTROL String]\[]**&#x200B;のデータ型は、フィールドに文字列値の配列が必要であることを示します。 **[!UICONTROL 支払い項目]\[]**&#x200B;のデータ型は、[!UICONTROL 支払い項目]のデータ型に準拠するオブジェクトの配列を示します。
+
+配列フィールドがオブジェクトタイプに基づいている場合は、キャンバスでそのアイコンを選択して、各配列項目に対して期待される属性を表示できます。
+
+![](../images/ui/explore/array-type.png)
+
+### [!UICONTROL フィールドプロパティ] {#field-properties}
+
+キャンバス内のフィールドの名前を選択すると、右側のパネルが更新され、**[!UICONTROL フィールドプロパティ]**&#x200B;の下にそのフィールドの詳細が表示されます。 例えば、フィールドの使用例、デフォルト値、パターン、形式、必須フィールドかどうかに関係なく、その他の説明を入力できます。
+
+![](../images/ui/explore/field-properties.png)
+
+検査対象のフィールドが列挙型フィールドの場合、右側のレールには、フィールドが受け取ると想定する有効な値も表示されます。
+
+![](../images/ui/explore/enum-field.png)
+
+### IDフィールド{#identity}
+
+IDフィールドを含むスキーマを検査する場合、これらのフィールドは、スキーマに提供するクラスまたはミックスインの下の左側のレールに表示されます。 左側のレールでIDフィールド名を選択すると、階層化の深さに関係なく、カンバスにフィールドが表示されます。
+
+キャンバス内のIDフィールドは、指紋アイコン（![指紋アイコン画像](../images/ui/explore/identity-symbol.png)）で強調表示されます。 IDフィールドの名前を選択すると、[ID名前空間](../../identity-service/namespaces.md)や、そのフィールドがスキーマの主IDかどうかなどの追加情報を表示できます。
+
+![](../images/ui/explore/identity-field.png)
+
+>[!NOTE]
+>
+>IDフィールドとダウンストリームのプラットフォームサービスとの関係の詳細については、[IDフィールドの定義](./fields/identity.md)のガイドを参照してください。
+
+### 関係フィールド{#relationship}
+
+関係フィールドを含むスキーマを検査している場合、左側のレールの&#x200B;**[!UICONTROL 関係]**&#x200B;の下にフィールドが表示されます。 左側のレールで関係フィールド名を選択すると、階層化の深さに関係なく、キャンバスにフィールドが表示されます。
+
+また、関係フィールドはキャンバスで一意にハイライト表示され、フィールドが参照する宛先スキーマの名前が表示されます。 関係フィールドの名前を選択すると、右側のパネルに、宛先スキーマのプライマリIDのID名前空間を表示できます。
+
+![](../images/ui/explore/relationship-field.png)
+
+>[!NOTE]
+>
+>XDMスキーマでの関係の使用について詳しくは、[UI](../tutorials/create-schema-ui.md)での関係の作成に関するチュートリアルを参照してください。
+
+## 次の手順
+
+このドキュメントでは、Experience PlatformUIで既存のXDMリソースを調べる方法を説明します。 [!UICONTROL スキーマ]ワークスペースと[!DNL Schema Editor]の様々な機能について詳しくは、[[!UICONTROL スキーマ]ワークスペースの概要](./overview.md)を参照してください。
