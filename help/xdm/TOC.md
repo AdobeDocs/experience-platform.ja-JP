@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
-breadcrumb-title: エクスペリエンスデータモデル(XDM)ガイド
+breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
+source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 57%
+source-wordcount: '216'
+ht-degree: 58%
 
 ---
 
@@ -21,19 +21,19 @@ ht-degree: 57%
    * [データモデリングのベストプラクティス](schema/best-practices.md)
    * [XDMフィールド型の制約](schema/field-constraints.md)
    * [XDM フィールド辞書](schema/field-dictionary.md)
-   * スキーマの使用例 {#use-cases}
+   * スキーマの使用例{#use-cases}
       * [Consents &amp; Preferencesデータタイプ](schema/privacy-consent.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
-* ミックスイン {#mixins}
-   * プロファイルミックスイン {#profile}
+* ミックスイン{#mixins}
+   * プロファイルミックスイン{#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [人口統計の詳細](./mixins/profile/person-details.md)
       * [個人の連絡先の詳細](./mixins/profile/personal-details.md)
       * [セグメントのメンバーシップの詳細](./mixins/profile/segmentation.md)
       * [勤務先担当者の詳細](./mixins/profile/work-details.md)
-   * イベントミックスイン {#event}
+   * イベントミックスイン{#event}
       * [エンドユーザーIDの詳細](./mixins/event/enduserids.md)
       * [環境の詳細](./mixins/event/environment-details.md)
    * [Mixin名の更新](./mixins/name-updates.md)
@@ -56,6 +56,22 @@ ht-degree: 57%
    * [POIの詳細](./data-types/poi-details.md)
    * [POI相互作用](./data-types/poi-interaction.md)
    * [住所](./data-types/postal-address.md)
+*  SchemasUI  {#ui}
+   * [概要](./ui/overview.md)
+   * [XDMリソースの参照](./ui/explore.md)
+   * リソースの作成と編集{#resources}
+      * [スキーマ](./ui/resources/schemas.md)
+      * [クラス](./ui/resources/classes.md)
+      * [ミックスイン](./ui/resources/mixins.md)
+      * [データタイプ](./ui/resources/data-types.md)
+   * フィールドの定義{#fields}
+      * [概要](./ui/fields/overview.md)
+      * [必須フィールド](./ui/fields/required.md)
+      * [オブジェクトフィールド](./ui/fields/object.md)
+      * [配列フィールド](./ui/fields/array.md)
+      * [列挙フィールド](./ui/fields/enum.md)
+      * [IDフィールド](./ui/fields/identity.md)
+      * [関係フィールド](./ui/fields/relationship.md)
 * スキーマレジストリ API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
@@ -69,10 +85,8 @@ ht-degree: 57%
    * [アドホックスキーマ](api/ad-hoc.md)
    * [付録](api/appendix.md)
 * チュートリアル {#tutorials}
-   * [UIでのリソースの参照](./tutorials/explore.md)
    * [スキーマの作成（API）](tutorials/create-schema-api.md)
    * [スキーマの作成（UI）](tutorials/create-schema-ui.md)
-   * [データタイプの作成と編集(UI)](./tutorials/create-data-type.md)
    * [2 つのスキーマ間の関係の定義（API）](tutorials/relationship-api.md)
    * [2 つのスキーマ間の関係の定義（UI）](tutorials/relationship-ui.md)
    * [アドホックスキーマの作成（API）](tutorials/ad-hoc.md)
