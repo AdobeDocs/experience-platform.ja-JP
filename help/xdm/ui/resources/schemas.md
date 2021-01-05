@@ -1,0 +1,142 @@
+---
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
+solution: Experience Platform
+title: UIでのスキーマの作成と編集
+description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
+topic: user guide
+translation-type: tm+mt
+source-git-commit: efa1d8efb26f4196f6724702784ccd13a9337a8a
+workflow-type: tm+mt
+source-wordcount: '1032'
+ht-degree: 1%
+
+---
+
+
+# UIでのスキーマの作成と編集
+
+このガイドでは、Adobe Experience PlatformUIで組織のExperience Data Model(XDM)スキーマを作成、編集、管理する方法の概要を説明します。
+
+>[!IMPORTANT]
+>
+>XDMスキーマは非常にカスタマイズ可能なので、スキーマの作成手順は、スキーマに取り込むデータの種類に応じて異なる場合があります。 その結果、このドキュメントでは、UIのスキーマとの基本的なやり取りについてのみ説明し、クラス、ミックスイン、データ型、フィールドのカスタマイズなどの関連する手順は除外します。
+>
+>スキーマ作成プロセスの詳細なツアーについては、[スキーマ作成チュートリアル](../../tutorials/create-schema-ui.md)に従って、完全なサンプルスキーマを作成し、[!DNL Schema Editor]の多くの機能に慣れてください。
+
+## 前提条件
+
+このガイドでは、XDMシステムに関する十分な理解が必要です。 Experience Platformエコシステム内でのXDMの役割の紹介は[XDM overview](../../home.md)を参照し、スキーマの構成方法の概要は[スキーマ構成の基本](../../schema/composition.md)を参照してください。
+
+## 新しいスキーマを作成{#create}
+
+[!UICONTROL スキーマ]ワークスペースで、右上隅の「スキーマ&#x200B;]**を作成」を選択します。**[!UICONTROL &#x200B;表示されるドロップダウンで、**[!UICONTROL XDM個別プロファイル]**&#x200B;と&#x200B;**[!UICONTROL XDM ExperienceEvent]**&#x200B;のいずれかをスキーマの基本クラスとして選択できます。 または、「**[!UICONTROL 参照]**」を選択して使用可能なクラスの完全なリストから選択するか、代わりに[新しいカスタムクラス](./classes.md#create)を作成することもできます。
+
+![](../../images/ui/resources/schemas/create-schema.png)
+
+クラスを選択すると、[!DNL Schema Editor]が表示され、スキーマのベース構造（クラスが提供する）がキャンバスに表示されます。 ここから、右側のレールを使用して、スキーマに&#x200B;**[!UICONTROL 表示名]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を追加できます。
+
+![](../../images/ui/resources/schemas/schema-details.png)
+
+これで、[ミックスイン](#add-mixins)を追加することで、スキーマの構造を構築する開始を作成できます。
+
+## 既存のスキーマの編集{#edit}
+
+>[!NOTE]
+>
+>スキーマを保存してデータ取り込みで使用した後は、追加の変更のみを行うことができます。 詳しくは、[スキーマ展開のルール](../../schema/composition.md#evolution)を参照してください。
+
+既存のスキーマを編集するには、「**[!UICONTROL 参照]**」タブを選択し、編集するスキーマの名前を選択します。
+
+![](../../images/ui/resources/schemas/edit-schema.png)
+
+>[!TIP]
+>
+>Workspaceの検索およびフィルター機能を使用して、スキーマを簡単に見つけることができます。 詳しくは、[XDMリソース](../explore.md)のガイドを参照してください。
+
+スキーマを選択すると、キャンバスにスキーマの構造が表示された[!DNL Schema Editor]が表示されます。 これで、スキーマに[ミックスイン](#add-mixins)を追加できます。スキーマが使用している場合は、[既存のカスタムミックスイン](./mixins.md#edit)を編集できます。
+
+## スキーマへの mixin の追加 {#add-mixins}
+
+>[!NOTE]
+>
+>この節では、既存のミックスインをスキーマに追加する方法について説明します。 新しいカスタムミックスインを作成する場合は、代わりに[ミックスイン](./mixins.md#create)の作成と編集のガイドを参照してください。
+
+[!DNL Schema Editor]内でスキーマを開くと、ミックスインを使用してスキーマにフィールドを追加できます。 開始するには、左側のレールで&#x200B;**[!UICONTROL ミックスイン]**&#x200B;の横の追加&#x200B;****&#x200B;を選択します。
+
+![](../../images/ui/resources/schemas/add-mixin-button.png)
+
+表示されるダイアログで、リストから目的のミックスインを選択できます。 リストから複数のミックスインを選択できます。選択した各ミックスインが右側のレールに表示されます。
+
+![](../../images/ui/resources/schemas/add-mixin.png)
+
+>[!TIP]
+>
+>リストにあるミックスインについては、プレビューアイコン(![](../../images/ui/resources/schemas/preview-icon.png))を選択して、ミックスインが提供するフィールドの構造を表示してから、スキーマに追加します。
+
+ミックスインの選択が完了したら、**[!UICONTROL ミックスイン追加]**&#x200B;を選択してスキーマに追加します。
+
+![](../../images/ui/resources/schemas/add-mixin-finish.png)
+
+キャンバスにmixinが指定したフィールドが表示され、[!DNL Schema Editor]が再表示されます。
+
+![](../../images/ui/resources/schemas/mixins-added.png)
+
+## リアルタイム顧客プロファイルのスキーマの有効化 {#profile}
+
+[リアルタイム顧客](../../../profile/home.md) プロファイルは、異なるソースからデータを抽出し、各顧客の完全な表示を構築します。スキーマが取り込んだデータをこのプロセスに参加させる場合は、[!DNL Profile]での使用をスキーマに有効にする必要があります。
+
+>[!IMPORTANT]
+>
+>[!DNL Profile]のスキーマを有効にするには、プライマリIDフィールドが定義されている必要があります。 詳しくは、[IDフィールドの定義](../fields/identity.md)のガイドを参照してください。
+
+スキーマを有効にするには、左側のレールでスキーマ名を選択し、右側のレールで&#x200B;**[!UICONTROL プロファイル]**&#x200B;切り替えを選択します。
+
+![](../../images/ui/resources/schemas/profile-toggle.png)
+
+スキーマを有効にして保存すると、無効にできないという警告が表示されます。 続行するには、**[!UICONTROL 「]**&#x200B;を有効にする」を選択します。
+
+![](../../images/ui/resources/schemas/profile-confirm.png)
+
+[!UICONTROL プロファイル]の切り替えを有効にして、キャンバスが再表示されます。
+
+>[!IMPORTANT]
+>
+>スキーマはまだ保存されていないので、スキーマをリアルタイム顧客プロファイルに参加させることに変更を加えた場合は、何も戻りません。有効にしたスキーマを保存すると、無効にできなくなります。 **[!UICONTROL プロファイル]**&#x200B;の切り替えをもう一度選択すると、スキーマが無効になります。
+
+処理を終了するには、「**[!UICONTROL 保存]**」を選択してスキーマを保存します。
+
+![](../../images/ui/resources/schemas/profile-enabled.png)
+
+このスキーマは、リアルタイム顧客プロファイルでの使用が可能になりました。 Platformがこのスキーマに基づいてデータセットにデータを取り込むと、そのデータは統合されたプロファイルデータに組み込まれます。
+
+## スキーマのクラスを変更{#change-class}
+
+スキーマのクラスは、スキーマが保存される前の最初の構成プロセスの任意の時点で変更できます。
+
+>[!WARNING]
+>
+>スキーマに対するクラスの再割り当ては、細心の注意を払って行う必要があります。 ミックスインは特定のクラスとのみ互換性があるので、クラスを変更するとキャンバスと追加したフィールドがリセットされます。
+
+クラスを再割り当てするには、キャンバスの左側で「**[!UICONTROL 割り当て]**」を選択します。
+
+![](../../images/ui/resources/schemas/assign-class-button.png)
+
+組織で定義された任意のクラス（所有者は「[!UICONTROL Customer]」）と、Adobeで定義された標準クラスを含む、使用可能なすべてのクラスのリストを示すダイアログが表示されます。
+
+リストからクラスを選択し、ダイアログの右側に説明を表示します。 また、**[!UICONTROL プレビュークラス構造]**&#x200B;を選択して、クラスに関連付けられたフィールドとメタデータを表示することもできます。 続行するには、「**[!UICONTROL クラス]**&#x200B;を割り当て」を選択します。
+
+![](../../images/ui/resources/schemas/assign-class.png)
+
+新しいダイアログが開き、新しいクラスを割り当てるかどうかを確認するメッセージが表示されます。 「**[!UICONTROL 割り当て]**」を選択して確認します。
+
+![](../../images/ui/resources/schemas/assign-confirm.png)
+
+クラスの変更を確認した後、キャンバスはリセットされ、構成の進行状況はすべて失われます。
+
+## 次の手順
+
+このドキュメントでは、プラットフォームUIでのスキーマの作成と編集の基本について説明します。 独自の用途向けのカスタムミックスインやデータタイプの作成など、UIで完全なスキーマを構築するための包括的なワークフローについては、[スキーマ作成チュートリアル](../../tutorials/create-schema-ui.md)を確認することを強くお勧めします。
+
+[!UICONTROL スキーマ]ワークスペースの機能について詳しくは、[[!UICONTROL スキーマ]ワークスペースの概要](../overview.md)を参照してください。
+
+[!DNL Schema Registry] APIでスキーマを管理する方法については、[スキーマエンドポイントガイド](../../api/schemas.md)を参照してください。
