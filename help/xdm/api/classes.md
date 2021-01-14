@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: クラスの作成
 description: スキーマレジストリAPIの/classesエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDMクラスをプログラムで管理できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b79482635d87efd5b79cf4df781fc0a3a6eb1b56
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 24%
@@ -17,26 +17,26 @@ ht-degree: 24%
 
 すべてのExperience Data Model(XDM)スキーマは、クラスに基づいている必要があります。 クラスは、そのクラスに基づくすべてのスキーマが含める必要がある共通プロパティの基本構造を決定し、これらのスキーマで使用できるミックスインを決定します。 また、スキーマのクラスは、スキーマに含めるデータの行動面を決定します。このデータには次の2つのタイプがあります。
 
-* **[!UICONTROL レコード]**:件名の属性に関する情報を提供します。 主体は、組織または個人にすることができます。
+* **[!UICONTROL レコード]**:件名の属性に関する情報を提供します。主体は、組織または個人にすることができます。
 * **[!UICONTROL 時系列]**:レコードの件名によって直接または間接的にアクションが実行された時点のシステムのスナップショットを提供します。
 
 >[!NOTE]
 >
->データ動作がスキーマ構成に与える影響について詳しくは、スキーマ構成の [基本を参照してください](../schema/composition.md)。
+>データ動作がスキーマ構成に与える影響について詳しくは、[スキーマ構成の基本](../schema/composition.md)を参照してください。
 
-APIの `/classes`[!DNL Schema Registry] エンドポイントを使用すると、エクスペリエンスアプリケーション内のクラスをプログラムで管理できます。
+[!DNL Schema Registry] APIの`/classes`エンドポイントを使用すると、エクスペリエンスアプリケーション内のクラスをプログラムで管理できます。
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、 [[!DNL Schema Registry] APIの一部です](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml)。 先に進む前に、 [はじめに](./getting-started.md) 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるエンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml)の一部です。 先に進む前に、[はじめに](./getting-started.md)を読んで、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
-## Retrieve a list of classes {#list}
+## クラスのリストを取得{#list}
 
-また、またはの `global` コンテナ下のすべてのクラスをリストするには、それぞれに対してGETリクエストを作成す `tenant` るか、またはに対してリクエストを作成 `/global/classes``/tenant/classes`します。
+`/global/classes`または`/tenant/classes`に対してGETリクエストを行うことで、`global`コンテナまたは`tenant`リスト下のすべてのクラスをそれぞれできます。
 
 >[!NOTE]
 >
->リソースをリストする場合、スキーマレジストリでは結果セットが300項目に制限されます。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、結果をフィルターし、返されるリソースの数を減らすために、追加のクエリパラメーターを使用することもお勧めします。 詳しくは、付録ドキュメントの [クエリパラメータ](./appendix.md#query) の節を参照してください。
+>リソースをリストする場合、スキーマレジストリでは結果セットが300項目に制限されます。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、結果をフィルターし、返されるリソースの数を減らすために、追加のクエリパラメーターを使用することもお勧めします。 詳しくは、付録ドキュメントの[クエリパラメーター](./appendix.md#query)の節を参照してください。
 
 **API 形式**
 
@@ -46,12 +46,12 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | クラスを取得するコンテナ: `global` adobeが作成したクラス、または組織が所有するクラス `tenant` 用。 |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 使用可能なパラメーターのリストについては、 [付録ドキュメント](./appendix.md#query) を参照してください。 |
+| `{CONTAINER_ID}` | クラスを取得するコンテナ:Adobeが作成したクラスの場合は`global`、組織が所有するクラスの場合は`tenant`です。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 使用可能なパラメーターのリストについては、[付録ドキュメント](./appendix.md#query)を参照してください。 |
 
 **リクエスト**
 
-次のリクエストは、 `tenant` コンテナからクラスのリストを取得し、 `orderby``title` クエリパラメーターを使用して、クラスを属性で並べ替えます。
+次のリクエストは、`tenant`コンテナからクラスのリストを取得し、`orderby`クエリパラメーターを使用して`title`属性でクラスを並べ替えます。
 
 ```shell
 curl -X GET \
@@ -63,16 +63,16 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing classes:
+応答の形式は、リクエストで送信される`Accept`ヘッダーに依存します。 クラスのリストには、次の`Accept`ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースのリストを表示する際に推奨されるヘッダーです。 (制限：300) |
-| `application/vnd.adobe.xed+json` | Returns full JSON class for each resource, with original `$ref` and `allOf` included. (制限：300) |
+| `application/vnd.adobe.xed+json` | 各リソースの完全なJSONクラスを返し、元の`$ref`と`allOf`が含まれます。 (制限：300) |
 
 **応答** 
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each class. もう一方の `Accept` ヘッダー(`application/vnd.adobe.xed+json`)を使用すると、各クラスのすべての属性が返されます。 Select the appropriate `Accept` header depending on the information you require in your response.
+上記のリクエストでは`application/vnd.adobe.xed-id+json` `Accept`ヘッダーを使用していたので、応答には各クラスの`title`、`$id`、`meta:altId`、`version`属性のみが含まれます。 他の`Accept`ヘッダー(`application/vnd.adobe.xed+json`)を使用すると、各クラスのすべての属性が返されます。 回答で必要な情報に応じて、適切な`Accept`ヘッダーを選択します。
 
 ```json
 {
@@ -110,7 +110,7 @@ The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, 
 }
 ```
 
-## クラスの検索 {#lookup}
+## クラス{#lookup}を検索
 
 GETリクエストのパスにクラスのIDを含めると、特定のクラスを検索できます。
 
@@ -122,12 +122,12 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 取得するクラスを格納するコンテナ。 `global` adobeが作成したクラス、または組織が所有するクラス `tenant` の場合。 |
-| `{CLASS_ID}` | 検索するクラス `meta:altId` のURLエンコード `$id` またはURLエンコードです。 |
+| `{CONTAINER_ID}` | 取得するクラスを格納するコンテナ。Adobeが作成したクラスの場合は`global`、組織が所有するクラスの場合は`tenant`です。 |
+| `{CLASS_ID}` | 検索するクラスの`meta:altId`またはURLエンコードされた`$id`です。 |
 
 **リクエスト**
 
-次のリクエストは、パスに指定された `meta:altId` 値でクラスを取得します。
+次のリクエストは、パスに指定された`meta:altId`値を使用してクラスを取得します。
 
 ```shell
 curl -X GET \
@@ -139,7 +139,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. All lookup requests require a `version` be included in the `Accept` header. The following `Accept` headers are available:
+応答の形式は、リクエストで送信される`Accept`ヘッダーに依存します。 すべての参照リクエストで、`version`を`Accept`ヘッダーに含める必要があります。 次の`Accept`ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | ------- | ------------ |
@@ -151,7 +151,7 @@ The response format depends on the `Accept` header sent in the request. All look
 
 **応答** 
 
-成功した応答は、クラスの詳細を返します。 The fields that are returned depend on the `Accept` header sent in the request. Experiment with different `Accept` headers to compare the responses and determine which header is best for your use case.
+成功した応答は、クラスの詳細を返します。 返されるフィールドは、リクエストで送信される`Accept`ヘッダーによって異なります。 異なる`Accept`ヘッダーを試して、回答を比較し、使用事例に最適なヘッダーを判断します。
 
 ```json
 {
@@ -242,13 +242,13 @@ The response format depends on the `Accept` header sent in the request. All look
 
 ## クラスの作成 {#create}
 
-POSTリクエストを行うことで、 `tenant` コンテナの下にカスタムクラスを定義できます。
+POSTリクエストを行うことで、`tenant`コンテナの下にカスタムクラスを定義できます。
 
 >[!IMPORTANT]
 >
->独自に定義したカスタムクラスに基づいてスキーマを構成する場合、標準のミックスインは使用できません。 各 mixin は、`meta:intendedToExtend` 属性で互換性のあるクラスを定義します。新しいクラスと互換性のある mixin の定義を開始すると（mixin の `meta:intendedToExtend` フィールドで新しいクラスの `$id` を使用）、定義したクラスを実装するスキーマを定義するたびに、それらの mixin を再利用できます。詳しくは、それぞれのエンドポイントガイドでのミックスイン [の](./mixins.md#create) 作成とスキーマの [作成に関する節を参照してください](./schemas.md#create) 。
+>独自に定義したカスタムクラスに基づいてスキーマを構成する場合、標準のミックスインは使用できません。 各 mixin は、`meta:intendedToExtend` 属性で互換性のあるクラスを定義します。新しいクラスと互換性のある mixin の定義を開始すると（mixin の `meta:intendedToExtend` フィールドで新しいクラスの `$id` を使用）、定義したクラスを実装するスキーマを定義するたびに、それらの mixin を再利用できます。詳しくは、それぞれのエンドポイントガイドの[ミックスイン](./mixins.md#create)と[スキーマの作成](./schemas.md#create)の節を参照してください。
 >
->リアルタイム顧客プロファイルでカスタムクラスに基づくスキーマを使用する場合は、和集合スキーマは同じクラスを共有するスキーマに基づいてのみ構築されることに留意することも重要です。 XDM Individual Everience [!UICONTROL 、] XDM ExperienceEventなどの別のクラスの和集合にカスタムクラススキーマを含める場合は、そのクラスを使用する別のスキーマとの関係を確立する必要があります 。 See the tutorial on [establishing a relationship between two schemas in the API](../tutorials/relationship-api.md) for more information.
+>リアルタイム顧客プロファイルでカスタムクラスに基づくスキーマを使用する場合は、和集合スキーマは同じクラスを共有するスキーマに基づいてのみ構築されることに留意することも重要です。 [!UICONTROL XDM Individualプロファイル]や[!UICONTROL XDM ExperienceEvent]など、別のクラスの和集合にカスタムクラススキーマを含める場合は、そのクラスを使用する別のスキーマとの関係を確立する必要があります。 詳しくは、API](../tutorials/relationship-api.md)の2つのスキーマ間の関係の確立に関するチュートリアル[を参照してください。
 
 **API 形式**
 
@@ -311,12 +311,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `_{TENANT_ID}` | 組織の `TENANT_ID` 名前空間。All resources created by your organization must include this property to avoid collisions with other resources in the [!DNL Schema Registry]. |
+| `_{TENANT_ID}` | 組織の `TENANT_ID` 名前空間。[!DNL Schema Registry]内の他のリソースとの競合を回避するために、組織で作成するすべてのリソースにこのプロパティを含める必要があります。 |
 | `allOf` | 新しいリストによってプロパティが継承されるリソースのクラス。配列内の `$ref` オブジェクトの 1 つが、クラスの動作を定義します。この例では、クラスは「レコード」動作を継承します。 |
 
 **応答**
 
-正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたクラスの詳細（`$id`、`meta:altId`、`version`）を含むペイロードを返します。These three values are read-only and are assigned by the [!DNL Schema Registry].
+正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたクラスの詳細（`$id`、`meta:altId`、`version`）を含むペイロードを返します。これらの3つの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
 
 ```JSON
 {
@@ -380,15 +380,15 @@ curl -X POST \
 }
 ```
 
-Performing a GET request to [list all classes](#list) in the `tenant` container would now include the Property class. You can also [perform a lookup (GET) request](#lookup) using the URL-encoded `$id` to view the new class directly.
+[リストに対してGETリクエストを実行すると、`tenant`コンテナ内のすべてのクラス](#list)にPropertyクラスが含まれるようになりました。 また、URLエンコードされた`$id`を使用して、[ルックアップ(GET)リクエスト](#lookup)を実行し、新しいクラスを直接表示することもできます。
 
-## クラスの更新 {#put}
+## クラス{#put}を更新
 
-PUT操作を使用してクラス全体を置き換え、基本的にリソースを書き直すことができます。 PUT要求を通じてクラスを更新する場合、本文には、POST要求で新しいクラスを [作成する際に必要となるすべてのフィールドを含める必要があります](#create) 。
+PUT操作を使用してクラス全体を置き換え、基本的にリソースを書き直すことができます。 PUT要求を通じてクラスを更新する場合、本文には、POST要求で[新しいクラス](#create)を作成する際に必要となるすべてのフィールドを含める必要があります。
 
 >[!NOTE]
 >
->If you only want to update part of a class instead of replacing it entirely, see the section on [updating a portion of a class](#patch).
+>クラス全体を置き換えるのではなく、クラスの一部だけを更新したい場合は、[クラス](#patch)の一部を更新するのを参照してください。
 
 **API 形式**
 
@@ -398,11 +398,11 @@ PUT /tenant/classes/{CLASS_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CLASS_ID}` | 再書き込みす `meta:altId` るクラス `$id` のURLエンコードまたはURL。 |
+| `{CLASS_ID}` | 再書き込みするクラスの`meta:altId`またはURLエンコードされた`$id`。 |
 
 **リクエスト**
 
-次のリクエストは、既存のクラスを書き直し、そのクラスの `description` とフィールドの1つ `title` を変更します。
+次のリクエストは、既存のクラスを書き直し、そのフィールドの`description`と`title`を変更します。
 
 ```SHELL
 curl -X PUT \
@@ -517,13 +517,13 @@ curl -X PUT \
 }
 ```
 
-## Update a portion of a class {#patch}
+## クラス{#patch}の一部を更新
 
-PATCHリクエストを使用して、クラスの一部を更新できます。 の標準的なJSONパッチ操作(、、な [!DNL Schema Registry] ど)はすべて `add`サポートされ `remove``replace`ます。 JSONパッチについて詳しくは、 [APIの基本ガイドを参照してください](../../landing/api-fundamentals.md#json-patch)。
+PATCHリクエストを使用して、クラスの一部を更新できます。 [!DNL Schema Registry]は、`add`、`remove`、`replace`を含む、すべての標準的なJSONパッチ操作をサポートしています。 JSONパッチについて詳しくは、[APIの基本的なガイド](../../landing/api-fundamentals.md#json-patch)を参照してください。
 
 >[!NOTE]
 >
->If you want to replace an entire resource with new values instead of updating individual fields, see the section on [replacing a class using a PUT operation](#put).
+>個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、[PUT演算](#put)を使用したクラスの置き換えの節を参照してください。
 
 **API 形式**
 
@@ -533,11 +533,11 @@ PATCH /tenant/class/{CLASS_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CLASS_ID}` | The URL-encoded `$id` URI or `meta:altId` of the class you want to update. |
+| `{CLASS_ID}` | 更新するクラスのURLエンコードされた`$id` URIまたは`meta:altId`。 |
 
 **リクエスト**
 
-次の例のリクエストでは、既存のクラス `description` と、そのいずれかのフィールド `title` を更新します。
+以下のリクエスト例では、既存のクラスの`description`と、そのフィールドの1つの`title`を更新します。
 
 リクエスト本体は配列の形をとり、リストに表示された各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトは、実行する操作(`op`)、操作を実行するフィールド(`path`)、およびその操作に含める情報(`value`)を含む。
 
@@ -557,7 +557,7 @@ curl -X PATCH \
 
 **応答**
 
-応答には、両方の操作が正常に実行されたことが示されます。フィールド `description` の内容と共に、が更新 `title` され `propertyId` ました。
+応答には、両方の操作が正常に実行されたことが示されます。`description`が`propertyId`フィールドの`title`と共に更新されました。
 
 ```JSON
 {
@@ -621,7 +621,7 @@ curl -X PATCH \
 }
 ```
 
-## クラスの削除 {#delete}
+## クラス{#delete}を削除
 
 場合によっては、スキーマレジストリからクラスを削除する必要があります。 これは、パスで指定されたクラスIDを使用してDELETEリクエストを実行することで行われます。
 
@@ -633,7 +633,7 @@ DELETE /tenant/classes/{CLASS_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CLASS_ID}` | The URL-encoded `$id` URI or `meta:altId` of the class you want to delete. |
+| `{CLASS_ID}` | 削除するクラスのURLエンコードされた`$id` URIまたは`meta:altId`です。 |
 
 **リクエスト**
 
@@ -650,4 +650,4 @@ curl -X DELETE \
 
 正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
 
-You can confirm the deletion by attempting a [lookup (GET) request](#lookup) for the class. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the class has been removed from the Schema Registry.
+クラスの[ルックアップ(GET)リクエスト](#lookup)を試みると、削除を確認できます。 リクエストに`Accept`ヘッダーを含める必要がありますが、HTTPステータス404 （見つかりません）を受け取る必要があります。これは、クラスがスキーマレジストリから削除されたためです。
