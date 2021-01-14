@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
 solution: Experience Platform
 title: スキーマレジストリ開発者向けの付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 50%
@@ -15,11 +15,11 @@ ht-degree: 50%
 
 # 付録
 
-This document provides supplemental information related to working with the [!DNL Schema Registry] API.
+このドキュメントでは、[!DNL Schema Registry] APIの操作に関する補足情報を提供します。
 
-## クエリパラメーターの使用 {#query}
+## クエリパラメータ{#query}を使用
 
-は、リソースのリスト表示時に、ページを作成し結果をフィルタリングするクエリパラメーターの使用をサポートしています。 [!DNL Schema Registry]
+[!DNL Schema Registry]は、クエリをリストする際に、ページを作成し結果をフィルターするためのリソースパラメーターの使用をサポートしています。
 
 >[!NOTE]
 >
@@ -31,13 +31,13 @@ This document provides supplemental information related to working with the [!DN
 
 | パラメーター | 説明 |
 | --- | --- |
-| `start` | リストの結果を開始する場所を指定します。 この値はリスト応答の `_page.next` 属性から取得でき、結果の次のページにアクセスするのに使用されます。 この `_page.next` 値がnullの場合、追加のページはありません。 |
+| `start` | リストの結果を開始する場所を指定します。 この値はリスト応答の`_page.next`属性から取得でき、結果の次のページにアクセスするのに使用されます。 `_page.next`値がnullの場合は、追加のページはありません。 |
 | `limit` | 返されるリソースの数を制限する。 例：`limit=5` は 5 つのリソースのリストを返します。 |
-| `orderby` | 特定のプロパティで結果を並べ替える。 例：`orderby=title` は昇順（A ～ Z）のタイトルで結果を並べ替えます。Adding a `-` before the parameter value (`orderby=-title`) will sort items by title in descending order (Z-A). |
+| `orderby` | 特定のプロパティで結果を並べ替える。 例：`orderby=title` は昇順（A ～ Z）のタイトルで結果を並べ替えます。パラメーター値(`orderby=-title`)の前に`-`を追加すると、タイトル順に項目が降順(Z-A)で並べ替えられます。 |
 
 ### フィルター {#filtering}
 
-パラメーターを使用して結果をフィルターできます。この `property` パラメーターは、取得したリソース内の特定のJSONプロパティに対して特定の演算子を適用するのに使用されます。 次の演算子がサポートされています。
+`property`パラメーターを使用して結果をフィルターできます。このパラメーターは、取得したリソース内の特定のJSONプロパティに対して特定の演算子を適用するのに使用されます。 次の演算子がサポートされています。
 
 | 演算子 | 説明 | 例 |
 | --- | --- | --- |
@@ -52,13 +52,13 @@ This document provides supplemental information related to working with the [!DN
 
 >[!TIP]
 >
->この `property` パラメーターを使用して、互換性のあるクラスでミックスインをフィルタリングできます。 For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.
+>`property`パラメーターを使用して、互換性のあるクラスでミックスインをフィルタリングできます。 例えば、`property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`は[!DNL XDM Individual Profile]クラスと互換性のあるミックスインのみを返します。
 
 ## 互換性モード
 
 [!DNL Experience Data Model] （XDM）は、アドビが推進する公式に文書化された仕様であり、デジタルエクスペリエンスの相互運用性、表現力およびパワーを向上させます。アドビは、[GitHub のオープンソースプロジェクト](https://github.com/adobe/xdm/)でソースコードと公式の XDM 定義を公開しています。これらの定義は XDM 標準表記で記述され、JSON-LD （JavaScript Object Notation for Linked Data）および JSON スキーマを XDM スキーマを定義する文法として使用しています。
 
-パブリックリポジトリーで公式の XDM 定義を見ると、標準 XDM は Adobe Experience Platform での表示とは異なることがわかります。What you are seeing in [!DNL Experience Platform] is called Compatibility Mode, and it provides a simple mapping between standard XDM and the way it is used within [!DNL Platform].
+パブリックリポジトリーで公式の XDM 定義を見ると、標準 XDM は Adobe Experience Platform での表示とは異なることがわかります。[!DNL Experience Platform]で見ているものは「互換性モード」と呼ばれ、標準のXDMと[!DNL Platform]内で使われている方法との間の単純なマッピングを提供します。
 
 ### 互換性モードの仕組み
 
@@ -127,8 +127,8 @@ This document provides supplemental information related to working with the [!DN
 
 Adobe Experience Platform は、複数のソリューションやサービスと連携するように設計されており、各ソリューションおよびサービスには固有の技術的課題と制限（特定のテクノロジーが特殊文字を処理する方法など）があります。これらの制限を克服するために、互換モードが開発されました。
 
-標準的なXDMの代わりに、、 [!DNL Experience Platform] 、 [!DNL Catalog]およびを含むほとんどの [!DNL Data Lake]サービスを [!DNL Real-time Customer Profile][!DNL Compatibility Mode] 使用します。 APIでも使用され [!DNL Schema Registry] ており、このドキュメントの例はすべてをを使用して示してい [!DNL Compatibility Mode][!DNL Compatibility Mode]ます。
+[!DNL Catalog]、[!DNL Data Lake]、[!DNL Real-time Customer Profile]を含むほとんどの[!DNL Experience Platform]サービスは、標準のXDMの代わりに[!DNL Compatibility Mode]を使用します。 [!DNL Schema Registry] APIは[!DNL Compatibility Mode]も使用します。このドキュメントの例はすべて[!DNL Compatibility Mode]を使用して表示されます。
 
-It is worthwhile to know that a mapping takes place between standard XDM and the way it is operationalized in [!DNL Experience Platform], but it should not affect your use of [!DNL Platform] services.
+標準のXDMと[!DNL Experience Platform]での動作との間でマッピングが行われることを知っておく価値はありますが、[!DNL Platform]サービスの使用に影響を与えることはありません。
 
-The open source project is available to you, but when it comes to interacting with resources through the [!DNL Schema Registry], the API examples in this document provide the best practices you should know and follow.
+オープンソースプロジェクトは利用できますが、[!DNL Schema Registry]を通じてリソースと対話する際には、このドキュメントのAPIの例が、知り、従うべきベストプラクティスを提供します。
