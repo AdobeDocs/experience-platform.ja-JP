@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
 title: スキーマレジストリAPIの使用の手引き
 description: このドキュメントでは、スキーマレジストリAPIを呼び出す前に知っておく必要があるコア概念の概要を説明します。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b79482635d87efd5b79cf4df781fc0a3a6eb1b56
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 45%
@@ -13,42 +13,42 @@ ht-degree: 45%
 ---
 
 
-# Getting started with the [!DNL Schema Registry] API
+# [!DNL Schema Registry] API使用の手引き
 
-この [!DNL Schema Registry] APIを使用すると、様々なエクスペリエンスデータモデル(XDM)リソースを作成および管理できます。 This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Schema Registry] API.
+[!DNL Schema Registry] APIを使用すると、様々なエクスペリエンスデータモデル(XDM)リソースを作成および管理できます。 このドキュメントでは、[!DNL Schema Registry] APIを呼び出す前に知っておく必要があるコア概念の紹介を行います。
 
 ## 前提条件
 
 開発者ガイドを使用するには、Adobe Experience Platformの次のコンポーネントについて作業的に理解する必要があります。
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
    * [Basics of schema composition](../schema/composition.md)：XDM スキーマの基本的な構成要素について説明しています。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-XDMは、JSONスキーマ形式を使用して、取り込むカスタマーエクスペリエンスデータの構造を記述し、検証します。 したがって、この基盤となる技術をより深く理解するために、 [公式のJSONスキーマドキュメント](https://json-schema.org/) を確認することを強くお勧めします。
+XDMは、JSONスキーマ形式を使用して、取り込むカスタマーエクスペリエンスデータの構造を記述し、検証します。 したがって、この基盤となる技術の理解を深めるために、[公式のJSONスキーマドキュメント](https://json-schema.org/)を確認することを強くお勧めします。
 
 ## API 呼び出し例の読み取り
 
-The [!DNL Schema Registry] API documentation provides example API calls to demonstrate how to format your requests. この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+[!DNL Schema Registry] APIドキュメントには、リクエストをフォーマットする方法を示すAPI呼び出しの例が記載されています。 この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ## 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Schema Registry]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスのドキュメント](../../sandboxes/home.md)を参照してください。
 
-All lookup (GET) requests to the [!DNL Schema Registry] require an additional `Accept` header, whose value determines the format of information returned by the API. 詳しくは、この後の [Accept ヘッダー](#accept)の節を参照してください。
+[!DNL Schema Registry]へのすべてのルックアップ(GET)リクエストには、追加の`Accept`ヘッダーが必要です。このヘッダーの値によって、APIから返される情報の形式が決まります。 詳しくは、この後の [Accept ヘッダー](#accept)の節を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -56,7 +56,7 @@ All lookup (GET) requests to the [!DNL Schema Registry] require an additional `A
 
 ## 使用する TENANT_ID {#know-your-tenant_id}
 
-APIガイド全体で、APIの概要に関する情報を確認でき `TENANT_ID`ます。 この ID は、作成したリソースに名前空間が適切に設定されていること、またそのリソースが IMS 組織内に格納されていることを確認するために使用されます。ID が不明な場合は、次の GET リクエストを実行して ID にアクセスします。
+APIガイド全体で、`TENANT_ID`への参照を確認できます。 この ID は、作成したリソースに名前空間が適切に設定されていること、またそのリソースが IMS 組織内に格納されていることを確認するために使用されます。ID が不明な場合は、次の GET リクエストを実行して ID にアクセスします。
 
 **API 形式**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **応答** 
 
-A successful response returns information regarding your organization&#39;s use of the [!DNL Schema Registry]. この中には `TENANT_ID` の値である `tenantId` 属性が含まれています。
+正常に応答すると、組織の[!DNL Schema Registry]使用に関する情報が返されます。 この中には `TENANT_ID` の値である `tenantId` 属性が含まれています。
 
 ```JSON
 {
@@ -156,13 +156,13 @@ A successful response returns information regarding your organization&#39;s use 
 
 ## `CONTAINER_ID` について {#container}
 
-Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. There are two containers against which API calls can be made: the `global` container and the `tenant` container.
+[!DNL Schema Registry] APIの呼び出しには`CONTAINER_ID`を使用する必要があります。 API呼び出しは次の2つのコンテナに対して実行できます。`global`コンテナと`tenant`コンテナ。
 
 ### グローバルコンテナ
 
-The `global` container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, mixins, data types, and schemas. You may only perform list and lookup (GET) requests against the `global` container.
+`global`コンテナは、すべての標準Adobeと[!DNL Experience Platform]パートナーが提供するクラス、ミックスイン、データ型、スキーマを保持します。 `global`コンテナに対してのみリストおよび参照(GET)要求を実行できます。
 
-この `global` コンテナを使用した呼び出しの例を次に示します。
+`global`コンテナを使用した呼び出しの例を次に示します。
 
 ```http
 GET /global/classes
@@ -170,19 +170,19 @@ GET /global/classes
 
 ### テナントコンテナ
 
-Not to be confused with your unique `TENANT_ID`, the `tenant` container holds all classes, mixins, data types, schemas, and descriptors defined by an IMS Organization. これらは各組織に固有のもので、他の IMS 組織では表示も管理もできません。You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the `tenant` container.
+`tenant`コンテナは、IMS組織が定義するすべてのクラス、ミックスイン、データ型、スキーマ、および記述子を保持し、独自の`TENANT_ID`と混同しないでください。 これらは各組織に固有のもので、他の IMS 組織では表示も管理もできません。`tenant`コンテナで作成するリソースに対して、すべてのCRUD操作(GET、POST、PUT、PATCH、DELETE)を実行できます。
 
-この `tenant` コンテナを使用した呼び出しの例を次に示します。
+`tenant`コンテナを使用した呼び出しの例を次に示します。
 
 ```http
 POST /tenant/mixins
 ```
 
-When you create a class, mixin, schema or data type in the `tenant` container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. この `$id` は、API 全体で特定のリソースを参照する際に使用されます。`$id` 値の例については、次の節で説明します。
+`tenant`コンテナーにクラス、ミックスイン、スキーマ、またはデータ型を作成すると、そのクラスは[!DNL Schema Registry]に保存され、`TENANT_ID`を含む`$id` URIが割り当てられます。 この `$id` は、API 全体で特定のリソースを参照する際に使用されます。`$id` 値の例については、次の節で説明します。
 
-## リソースの識別 {#resource-identification}
+## リソースID {#resource-identification}
 
-XDMリソースは、次の例のように、URIの形式で `$id` 属性と共に識別されます。
+XDMリソースは、次の例のように、URIの形式で`$id`属性で識別されます。
 
 * `https://ns.adobe.com/xdm/context/profile`
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421`
@@ -192,16 +192,16 @@ URI をより REST に適したものにするために、スキーマでは、`
 * `_xdm.context.profile`
 * `_{TENANT_ID}.schemas.7442343-abs2343-21232421`
 
-Calls to the [!DNL Schema Registry] API will support either the URL-encoded `$id` URI or the `meta:altId` (dot-notation format). API への REST 呼び出しを実行する際には、URL エンコードされた `$id` URI を使用することをお勧めします。
+[!DNL Schema Registry] APIの呼び出しは、URLエンコードされた`$id` URIまたは`meta:altId` （ドット表記形式）をサポートします。 API への REST 呼び出しを実行する際には、URL エンコードされた `$id` URI を使用することをお勧めします。
 
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
 ## Accept ヘッダー {#accept}
 
-When performing list and lookup (GET) operations in the [!DNL Schema Registry] API, an `Accept` header is required to determine the format of the data returned by the API. When looking up specific resources, a version number must also be included in the `Accept` header.
+[!DNL Schema Registry] APIでリストおよびルックアップ(GET)操作を実行する場合、APIから返されるデータの形式を決定するには`Accept`ヘッダーが必要です。 特定のリソースを検索する場合は、`Accept`ヘッダーにバージョン番号も含める必要があります。
 
-The following table lists compatible `Accept` header values, including those with version numbers, along with descriptions of what the API will return when they are used.
+次の表のリストは、`Accept`のヘッダー値（バージョン番号を持つヘッダー値を含む）と、それらが使用された場合にAPIが返す内容に関する説明とに互換性があります。
 
 | Accept | 説明 |
 | ------- | ------------ |
@@ -245,11 +245,11 @@ API でのフィールドの種類の定義について詳しくは、このガ�
 * フィールドには `type` が必要です。
    * 特定のタイプを定義する場合、オプションの `format` が必要なことがあります。
    * データに特定の形式を設定する必要がある場合は、`examples` を配列として追加できます。
-   * フィールドの種類は、レジストリで任意のデータタイプを使用して定義することもできます。See the section on [creating a data type](./data-types.md#create) in the data types endpoint guide for more information.
+   * フィールドの種類は、レジストリで任意のデータタイプを使用して定義することもできます。詳しくは、『データ型エンドポイントガイド』の[データ型](./data-types.md#create)の作成に関する節を参照してください。
 * `description` では、フィールドとフィールドデータについての関連情報を表します。スキーマにアクセスした人が誰でもフィールドの意図を理解できるように、明確な言葉で記述する必要があります。
 
-APIで異なるフィールドタイプを定義する方法について詳しくは、 [フィールド制約のドキュメント](../schema/field-constraints.md) （英語）を参照してください。
+APIで異なるフィールドタイプを定義する方法について詳しくは、[フィールド制約](../schema/field-constraints.md)のドキュメントを参照してください。
 
 ## 次の手順
 
-APIを使用した呼び出しを開始するには、使用可能なエンドポイントガイドの1つを選択します。 [!DNL Schema Registry]
+[!DNL Schema Registry] APIを使用した呼び出しを開始するには、使用可能なエンドポイントガイドの1つを選択します。
