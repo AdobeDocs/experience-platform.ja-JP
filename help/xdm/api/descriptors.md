@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
 solution: Experience Platform
 title: 記述子
 description: スキーマレジストリAPIの/descriptorsエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDM記述子をプログラムで管理できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 57%
@@ -21,15 +21,15 @@ ht-degree: 57%
 
 各スキーマには、1 つ以上のスキーマ記述子エンティティを適用できます。各スキーマ記述子エンティティは、記述子 `@type` と、それが適用される `sourceSchema` を含みます。適用されると、これらの記述子はスキーマを使用して作成されたすべてのデータセットに適用されます。
 
-APIの `/descriptors`[!DNL Schema Registry] エンドポイントを使用すると、エクスペリエンスアプリケーション内の記述子をプログラムで管理できます。
+[!DNL Schema Registry] APIの`/descriptors`エンドポイントを使用すると、エクスペリエンスアプリケーション内の記述子をプログラムで管理できます。
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、 [[!DNL Schema Registry] APIの一部です](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml)。 先に進む前に、 [はじめに](./getting-started.md) 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるエンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml)の一部です。 先に進む前に、[はじめに](./getting-started.md)を読んで、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
-## Retrieve a list of descriptors {#list}
+## 記述子のリストを取得{#list}
 
-組織が定義したすべての記述子をリストするには、にGETリクエストを行い `/tenant/descriptors`ます。
+`/tenant/descriptors`にGETリクエストを行うことで、組織が定義したすべての記述子をリストできます。
 
 **API 形式**
 
@@ -49,18 +49,18 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-The response format depends on the `Accept` header sent in the request. Notice that the `/descriptors` endpoint uses `Accept` headers that are different than all other endpoints in the [!DNL Schema Registry] API.
+応答の形式は、リクエストで送信される`Accept`ヘッダーに依存します。 `/descriptors`エンドポイントは、[!DNL Schema Registry] APIの他のすべてのエンドポイントとは異なる`Accept`ヘッダーを使用します。
 
 >[!IMPORTANT]
 >
->記述子には、一意のヘッダが必要です。こ `Accept` のヘッダは、に置き換えら `xed` れ `xdm`、記述子に固有の `link` オプションもオファーします。 The proper `Accept` headers have been included in the examples calls below, but take extra caution to ensure the correct headers are being used when working with descriptors.
+>記述子には、`xed`を`xdm`に置き換える一意の`Accept`ヘッダーが必要です。また、記述子に固有の`link`オファーも必要です。 以下の呼び出しの例には、適切な`Accept`ヘッダが含まれていますが、記述子を扱う際に正しいヘッダが使用されていることを確認するために注意が必要です。
 
 | `Accept` ヘッダー | 説明 |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | 記述子 ID の配列を返します。 |
 | `application/vnd.adobe.xdm-link+json` | 記述子 API パスの配列を返します。 |
 | `application/vnd.adobe.xdm+json` | 拡張された記述子オブジェクトの配列を返します。 |
-| `application/vnd.adobe.xdm-v2+json` | この `Accept` ヘッダは、ページング機能を利用するために使用する必要があります。 |
+| `application/vnd.adobe.xdm-v2+json` | この`Accept`ヘッダーは、ページング機能を利用するために使用する必要があります。 |
 
 **応答** 
 
@@ -96,11 +96,11 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DESCRIPTOR_ID}` | The `@id` of the descriptor you want to look up. |
+| `{DESCRIPTOR_ID}` | 検索する記述子の`@id`。 |
 
 **リクエスト**
 
-次のリクエストは、その `@id` 値で記述子を取得します。 Descriptors are not versioned, therefore no `Accept` header is required in the lookup request.
+次のリクエストは、記述子を`@id`値で取得します。 記述子はバージョン管理されないので、ルックアップ要求に`Accept`ヘッダーは必要ありません。
 
 ```SHELL
 curl -X GET \
@@ -135,13 +135,13 @@ curl -X GET \
 }
 ```
 
-## Create a descriptor {#create}
+## 記述子{#create}を作成します
 
-You can create a new descriptor by making a POST request to the `/tenant/descriptors` endpoint.
+`/tenant/descriptors`エンドポイントにPOSTリクエストを行うことで、新しい記述子を作成できます。
 
 >[!IMPORTANT]
 >
->The [!DNL Schema Registry] allows you to define several different descriptor types. 各記述子の型は、要求の本文に固有のフィールドを送信する必要があります。 記述子の完全なリストとそれらを定義するのに必要なフィールドについては、 [付録](#defining-descriptors) を参照してください。
+>[!DNL Schema Registry]を使うと、異なる種類の記述子を定義できます。 各記述子の型は、要求の本文に固有のフィールドを送信する必要があります。 記述子とその定義に必要なフィールドの完全なリストについては、[付録](#defining-descriptors)を参照してください。
 
 **API 形式**
 
@@ -151,7 +151,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストでは、スキーマ例の「email address」フィールドに ID 記述子を定義します。This tells [!DNL Experience Platform] to use the email address as an identifier to help stitch together information about the individual.
+次のリクエストでは、スキーマ例の「email address」フィールドに ID 記述子を定義します。これは[!DNL Experience Platform]に、個人に関する情報を組み合わせるのに役立つ識別子として電子メールアドレスを使うよう指示します。
 
 ```SHELL
 curl -X POST \
@@ -175,7 +175,7 @@ curl -X POST \
 
 **応答** 
 
-正常な応答は、新しく作成された記述子の詳細（`@id` を含む）と共に HTTP ステータス 201（作成済み）を返します。The `@id` is a read-only field assigned by the [!DNL Schema Registry] and used for referencing the descriptor in the API.
+正常な応答は、新しく作成された記述子の詳細（`@id` を含む）と共に HTTP ステータス 201（作成済み）を返します。`@id`は、[!DNL Schema Registry]によって割り当てられ、APIで記述子を参照するために使用される読み取り専用のフィールドです。
 
 ```JSON
 {
@@ -191,9 +191,9 @@ curl -X POST \
 }
 ```
 
-## 記述子の更新 {#put}
+## 記述子{#put}を更新
 
-PUTリクエストのパスに記述子を含めること `@id` で、記述子を更新できます。
+PUTリクエストのパスに`@id`を含めると、記述子を更新できます。
 
 **API 形式**
 
@@ -207,13 +207,13 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **リクエスト**
 
-このリクエストは基本的に記述子を書き換えるので、リクエスト本体には、その型の記述子を定義するために必要なすべてのフィールドが含まれている必要があります。In other words, the request payload to update (PUT) a descriptor is the same as the payload to [create (POST) a descriptor](#create) of the same type.
+このリクエストは基本的に記述子を書き換えるので、リクエスト本体には、その型の記述子を定義するために必要なすべてのフィールドが含まれている必要があります。つまり、記述子を更新(PUT)する要求ペイロードは、同じ型の記述子](#create)を[作成(POST)するペイロードと同じです。
 
 >[!IMPORTANT]
 >
->POST要求を使用する記述子を作成する場合と同様に、各記述子の型は、PUT要求ペイロードに独自の固有のフィールドを送信する必要があります。 記述子の完全なリストとそれらを定義するのに必要なフィールドについては、 [付録](#defining-descriptors) を参照してください。
+>POST要求を使用する記述子を作成する場合と同様に、各記述子の型は、PUT要求ペイロードに独自の固有のフィールドを送信する必要があります。 記述子とその定義に必要なフィールドの完全なリストについては、[付録](#defining-descriptors)を参照してください。
 
-次の例では、ID記述子を更新して、別の `xdm:sourceProperty` (`mobile phone`)を参照し、に変更 `xdm:namespace` しま `Phone`す。
+次の例では、ID記述子を更新して、別の`xdm:sourceProperty` (`mobile phone`)を参照し、`xdm:namespace`を`Phone`に変更します。
 
 ```SHELL
 curl -X PUT \
@@ -244,11 +244,11 @@ curl -X PUT \
 }
 ```
 
-Performing a [lookup (GET) request](#lookup) to view the descriptor will show that the fields have now been updated to reflect the changes sent in the PUT request.
+記述子を表示するために[ルックアップ(GET)リクエスト](#lookup)を実行すると、PUTリクエストで送信された変更を反映するようにフィールドが更新されたことが示されます。
 
-## 記述子の削除 {#delete}
+## 記述子{#delete}を削除します
 
-Occasionally you may need to remove a descriptor that you have defined from the [!DNL Schema Registry]. これは、削除する記述子の `@id` を参照する DELETE リクエストを作成することで行われます。
+[!DNL Schema Registry]から定義した記述子を削除しなければならない場合があります。 これは、削除する記述子の `@id` を参照する DELETE リクエストを作成することで行われます。
 
 **API 形式**
 
@@ -275,11 +275,11 @@ curl -X DELETE \
 
 正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
 
-To confirm the descriptor has been deleted, you can perform a [lookup request](#lookup) against the descriptor `@id`. The response returns HTTP status 404 (Not Found) because the descriptor has been removed from the [!DNL Schema Registry].
+記述子が削除されたことを確認するために、記述子`@id`に対して[ルックアップ要求](#lookup)を実行できます。 記述子が[!DNL Schema Registry]から削除されたので、応答はHTTPステータス404 （見つかりません）を返します。
 
 ## 付録
 
-The following section provides additional information regarding working with descriptors in the [!DNL Schema Registry] API.
+次の節では、[!DNL Schema Registry] APIの記述子の操作に関する追加情報を提供します。
 
 ### 記述子の定義 {#defining-descriptors}
 
@@ -287,7 +287,7 @@ The following section provides additional information regarding working with des
 
 #### ID 記述子
 
-An identity descriptor signals that the &quot;[!UICONTROL sourceProperty]&quot; of the &quot;[!UICONTROL sourceSchema]&quot; is an [!DNL Identity] field as described by [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+ID記述子は、「[!UICONTROL sourceSchema]」の「[!UICONTROL sourceProperty]」が[Adobe Experience Platformアイデンティティサービス](../../identity-service/home.md)の記述に従う[!DNL Identity]フィールドであることをシグナルします。
 
 ```json
 {
@@ -308,13 +308,13 @@ An identity descriptor signals that the &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | 記述子を定義するスキーマの `$id` URI。 |
 | `xdm:sourceVersion` | ソーススキーマのメジャーバージョン。 |
 | `xdm:sourceProperty` | ID となる特定のプロパティへのパス。パスは、「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。 |
-| `xdm:namespace` | ID 名前空間の `id` または `code`。A list of namespaces can be found using the [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | ID 名前空間の `id` または `code`。名前空間のリストは、[[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)を使用して見つかります。 |
 | `xdm:property` | `xdm:id` または `xdm:code`（使用されている `xdm:namespace` に応じる）。 |
 | `xdm:isPrimary` | オプションのブール値。true の場合、フィールドがプライマリ ID であることを示します。スキーマには、1 つのプライマリ ID のみを含めることができます。 |
 
 #### わかりやすい名前記述子
 
-Friendly name descriptors allow a user to modify the `title`, `description`, and `meta:enum` values of the core library schema fields. 特に、「eVar」および組織に固有の情報を含むとしてラベル付けする他の「汎用」フィールドを扱う場合に役立ちます。UI は、これらを使用して、わかりやすい名前を表示したり、わかりやすい名前を持つフィールドのみを表示したりできます。
+わかりやすい名前記述子を使用して、コアライブラリスキーマフィールドの`title`、`description`、`meta:enum`の値を変更できます。 特に、「eVar」および組織に固有の情報を含むとしてラベル付けする他の「汎用」フィールドを扱う場合に役立ちます。UI は、これらを使用して、わかりやすい名前を表示したり、わかりやすい名前を持つフィールドのみを表示したりできます。
 
 ```json
 {
@@ -344,7 +344,7 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 | `xdm:sourceProperty` | ID となる特定のプロパティへのパス。パスは、「/」で始まる必要がありますが、「/」で終わらない必要があります。パスに「プロパティ」を含めてはいけません（例：「/properties/personalEmail/properties/address」の代わりに「/personalEmail/address」を使用）。 |
 | `xdm:title` | このフィールドに表示する新しいタイトル（タイトルケースで記述）。 |
 | `xdm:description` | オプションで、タイトルに説明を追加できます。 |
-| `meta:enum` | に示すフィールド `xdm:sourceProperty` が文字列フィールドの場合、 `meta:enum` UI内のフィールドに推奨される値のリストを [!DNL Experience Platform] 決定します。 定義済みリストを宣言しないこと、またはXDMフィールドに対してデータの検証を行わないことに注意して `meta:enum` ください。<br><br>これは、Adobeが定義するコアXDMフィールドに対してのみ使用する必要があります。 ソースプロパティが、組織で定義されたカスタムフィールドの場合は、フィールドの親リソースに対するPATCH要求を介して、フィールドの `meta:enum` プロパティを直接編集する必要があります。 |
+| `meta:enum` | `xdm:sourceProperty`が示すフィールドが文字列フィールドである場合、`meta:enum`は[!DNL Experience Platform] UIでそのフィールドに推奨される値のリストを決定します。 `meta:enum`は定義済みリストを宣言せず、XDMフィールドに対するデータ検証も行わないことに注意してください。<br><br>これは、Adobeが定義するコアXDMフィールドに対してのみ使用する必要があります。ソースプロパティが組織で定義されたカスタムフィールドの場合は、フィールドの親リソースへのPATCH要求を介して、フィールドの`meta:enum`プロパティを直接編集する必要があります。 |
 
 #### 関係記述子
 
