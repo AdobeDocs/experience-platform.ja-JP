@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: スキーマの作成
 description: スキーマレジストリAPIの/スキーマエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDMスキーマをプログラムで管理できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 18%
@@ -15,19 +15,19 @@ ht-degree: 18%
 
 # スキーマエンドポイント
 
-スキーマは、Adobe Experience Platformに取り込むデータの青写真と考えることができます。 各スキーマは、クラスと 0 個以上の mixin で構成されます。APIの `/schemas`[!DNL Schema Registry] エンドポイントを使用すると、エクスペリエンスアプリケーション内のスキーマをプログラムで管理できます。
+スキーマは、Adobe Experience Platformに取り込むデータの青写真と考えることができます。 各スキーマは、クラスと 0 個以上の mixin で構成されます。[!DNL Schema Registry] APIの`/schemas`エンドポイントを使用すると、エクスペリエンスアプリケーション内のスキーマをプログラムで管理できます。
 
 ## はじめに
 
-The API endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 先に進む前に、 [はじめに](./getting-started.md) 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)の一部です。 先に進む前に、[はじめに](./getting-started.md)を読んで、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
 
-## Retrieve a list of schemas {#list}
+## スキーマのリストを取得{#list}
 
-また、スキーマに対してリストリクエストを行うことで、 `global` または `tenant` コンテナ下のすべてのGETをそれぞれ `/global/schemas` または `/tenant/schemas`に対して行うことができます。
+`global`または`tenant`コンテナーの下のすべてのスキーマをリストするには、それぞれ`/global/schemas`または`/tenant/schemas`にGETリクエストを行います。
 
 >[!NOTE]
 >
->リソースをリストする場合、スキーマレジストリでは結果セットが300項目に制限されます。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、結果をフィルターし、返されるリソースの数を減らすために、追加のクエリパラメーターを使用することもお勧めします。 詳しくは、付録ドキュメントの [クエリパラメータ](./appendix.md#query) の節を参照してください。
+>リソースをリストする場合、スキーマレジストリでは結果セットが300項目に制限されます。 この制限を超えるリソースを返すには、ページングパラメーターを使用する必要があります。 また、結果をフィルターし、返されるリソースの数を減らすために、追加のクエリパラメーターを使用することもお勧めします。 詳しくは、付録ドキュメントの[クエリパラメーター](./appendix.md#query)の節を参照してください。
 
 **API 形式**
 
@@ -37,12 +37,12 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ。 `global` adobeが作成したスキーマ、または組織が所有するスキーマ `tenant` 用。 |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 使用可能なパラメーターのリストについては、 [付録ドキュメント](./appendix.md#query) を参照してください。 |
+| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ。Adobeが作成したスキーマの場合は`global`、組織が所有するスキーマの場合は`tenant`です。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 使用可能なパラメーターのリストについては、[付録ドキュメント](./appendix.md#query)を参照してください。 |
 
 **リクエスト**
 
-次のリクエストは、 `tenant` コンテナからスキーマのリストを取得し、 `orderby``title` クエリパラメーターを使用して属性で結果を並べ替えます。
+次のリクエストは、`tenant`コンテナーからスキーマのリストを取得し、`orderby`クエリパラメーターを使用して`title`属性で結果を並べ替えます。
 
 ```shell
 curl -X GET \
@@ -54,16 +54,16 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing schemas:
+応答の形式は、リクエストで送信される`Accept`ヘッダーに依存します。 スキーマのリストには、次の`Accept`ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースのリストを表示する際に推奨されるヘッダーです。 (制限：300) |
-| `application/vnd.adobe.xed+json` | Returns full JSON schema for each resource, with original `$ref` and `allOf` included. (制限：300) |
+| `application/vnd.adobe.xed+json` | 各リソースの完全なJSONスキーマを返します。元の`$ref`と`allOf`が含まれます。 (制限：300) |
 
 **応答** 
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each schema. もう一方の `Accept` ヘッダー(`application/vnd.adobe.xed+json`)を使用すると、各スキーマのすべての属性が返されます。 Select the appropriate `Accept` header depending on the information you require in your response.
+上記のリクエストでは`application/vnd.adobe.xed-id+json` `Accept`ヘッダーが使用されていたので、応答には各スキーマの`title`、`$id`、`meta:altId`、`version`属性のみが含まれます。 他の`Accept`ヘッダー(`application/vnd.adobe.xed+json`)を使用すると、各スキーマのすべての属性が返されます。 回答で必要な情報に応じて、適切な`Accept`ヘッダーを選択します。
 
 ```json
 {
@@ -107,12 +107,12 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ。 `global` adobeが作成したスキーマ、または組織が所有するスキーマ `tenant` 用。 |
-| `{SCHEMA_ID}` | 検索 `meta:altId` するスキーマ `$id` のURLエンコードまたはURLエンコード。 |
+| `{CONTAINER_ID}` | 取得するスキーマを格納するコンテナ。Adobeが作成したスキーマの場合は`global`、組織が所有するスキーマの場合は`tenant`です。 |
+| `{SCHEMA_ID}` | 検索するスキーマの`meta:altId`またはURLエンコードされた`$id`。 |
 
 **リクエスト**
 
-次のリクエストは、パスの `meta:altId` 値で指定されたスキーマを取得します。
+次のリクエストは、パス内の`meta:altId`値で指定されたスキーマを取得します。
 
 ```shell
 curl -X GET \
@@ -124,7 +124,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. All lookup requests require a `version` be included in the `Accept` header. The following `Accept` headers are available:
+応答の形式は、リクエストで送信される`Accept`ヘッダーに依存します。 すべての参照リクエストで、`version`を`Accept`ヘッダーに含める必要があります。 次の`Accept`ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | ------- | ------------ |
@@ -136,7 +136,7 @@ The response format depends on the `Accept` header sent in the request. All look
 
 **応答** 
 
-成功した場合は、スキーマの詳細が返されます。 The fields that are returned depend on the `Accept` header sent in the request. Experiment with different `Accept` headers to compare the responses and determine which header is best for your use case.
+成功した場合は、スキーマの詳細が返されます。 返されるフィールドは、リクエストで送信される`Accept`ヘッダーによって異なります。 異なる`Accept`ヘッダーを試して、回答を比較し、使用事例に最適なヘッダーを判断します。
 
 ```json
 {
@@ -193,7 +193,7 @@ The response format depends on the `Accept` header sent in the request. All look
 
 >[!NOTE]
 >
->以下の呼び出し例は、クラスの組版要件を最小限にし、ミックスインを使用しないで、APIでのスキーマの作成方法のベースラインの例に過ぎません。 ミックスインやデータ型を使用してフィールドを割り当てる方法など、APIでスキーマを作成する方法に関する完全な手順については、 [スキーマ作成のチュートリアルを参照してください](../tutorials/create-schema-api.md)。
+>以下の呼び出し例は、クラスの組版要件を最小限にし、ミックスインを使用しないで、APIでのスキーマの作成方法のベースラインの例に過ぎません。 ミックスインやデータ型を使用してフィールドを割り当てる方法など、APIでスキーマを作成する方法に関する完全な手順については、[スキーマ作成のチュートリアル](../tutorials/create-schema-api.md)を参照してください。
 
 **API 形式**
 
@@ -227,11 +227,11 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `allOf` | オブジェクトの配列。各オブジェクトは、スキーマがフィールドを実装するクラスまたはミックスインを参照します。 各オブジェクトには、新しいスキーマが実装するクラスまたはミックスイン`$ref`の値を表す1つのプロパティ( `$id` )が含まれます。 1つのクラスを指定し、0個以上の追加ミックスインを追加する必要があります。 上記の例では、 `allOf` 配列内の1つのオブジェクトがスキーマのクラスです。 |
+| `allOf` | オブジェクトの配列。各オブジェクトは、スキーマがフィールドを実装するクラスまたはミックスインを参照します。 各オブジェクトには1つのプロパティ(`$ref`)が含まれ、その値は新しいスキーマで実装するクラスまたはミックスの`$id`を表します。 1つのクラスを指定し、0個以上の追加ミックスインを追加する必要があります。 上記の例では、`allOf`配列内の1つのオブジェクトがスキーマのクラスです。 |
 
 **応答**
 
-正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたスキーマの詳細（`$id`、`meta:altId`、`version`など）を含むペイロードを返します。These values are read-only and are assigned by the [!DNL Schema Registry].
+正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成されたスキーマの詳細（`$id`、`meta:altId`、`version`など）を含むペイロードを返します。これらの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
 
 ```JSON
 {
@@ -266,17 +266,17 @@ curl -X POST \
 }
 ```
 
-Performing a GET request to [list all schemas](#list) in the tenant container would now include the new schema. You can perform a [lookup (GET) request](#lookup) using the URL-encoded `$id` URI to view the new schema directly.
+テナントコンテナ内のすべてのスキーマ](#list)に対して[リストに対するGETリクエストを実行すると、新しいスキーマが含まれるようになりました。 URLエンコードされた`$id` URIを使用して[ルックアップ(GET)リクエスト](#lookup)を実行し、新しいスキーマを直接表示できます。
 
-スキーマにフィールドを追加するには、 [PATCH操作を実行して](#patch) 、スキーマのおよ `allOf` び `meta:extends` 配列にミックスインを追加します。
+スキーマにフィールドを追加するには、[PATCH演算](#patch)を実行して、スキーマの`allOf`配列と`meta:extends`配列にミックスインを追加します。
 
-## スキーマの更新 {#put}
+## スキーマの更新{#put}
 
-スキーマ全体をPUT操作で置き換え、基本的にリソースを書き直すことができます。 PUT要求を使用してスキーマを更新する場合、本文には、POST要求で新しいスキーマを [作成する際に必要となるすべてのフィールドを含める必要があります](#create) 。
+スキーマ全体をPUT操作で置き換え、基本的にリソースを書き直すことができます。 PUT要求を通じてスキーマを更新する場合、本文には、POST要求で[新しいスキーマ](#create)を作成する際に必要となるすべてのフィールドを含める必要があります。
 
 >[!NOTE]
 >
->If you only want to update part of a schema instead of replacing it entirely, see the section on [updating a portion of a schema](#patch).
+>スキーマ全体を置き換える代わりに、スキーマの一部だけを更新したい場合は、[の一部を更新する](#patch)の節を参照してください。
 
 **API 形式**
 
@@ -286,11 +286,11 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | 再書き込みす `meta:altId` るスキーマ `$id` のURLエンコードまたはURL。 |
+| `{SCHEMA_ID}` | 再書き込みするスキーマの`meta:altId`またはURLエンコードされた`$id`。 |
 
 **リクエスト**
 
-次のリクエストは、既存のスキーマを置き換え、その `title`、 `description`および `allOf` 属性を変更します。
+次のリクエストは、既存のスキーマを置き換え、`title`、`description`および`allOf`属性を変更します。
 
 ```SHELL
 curl -X PUT \
@@ -349,13 +349,13 @@ curl -X PUT \
 }
 ```
 
-## Update a portion of a schema {#patch}
+## スキーマの一部を更新{#patch}
 
-PATCHリクエストを使用して、スキーマの一部を更新できます。 の標準的なJSONパッチ操作(、、な [!DNL Schema Registry] ど)はすべて `add`サポートされ `remove``replace`ます。 JSONパッチについて詳しくは、 [APIの基本ガイドを参照してください](../../landing/api-fundamentals.md#json-patch)。
+PATCHリクエストを使用して、スキーマの一部を更新できます。 [!DNL Schema Registry]は、`add`、`remove`、`replace`を含む、すべての標準的なJSONパッチ操作をサポートしています。 JSONパッチについて詳しくは、[APIの基本的なガイド](../../landing/api-fundamentals.md#json-patch)を参照してください。
 
 >[!NOTE]
 >
->If you want to replace an entire resource with new values instead of updating individual fields, see the section on [replacing a schema using a PUT operation](#put).
+>個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、[PUT演算](#put)を使用したスキーマの置き換えの節を参照してください。
 
 最も一般的なPATCH操作の1つに、以下の例に示すように、スキーマに以前に定義したミックスインを追加する方法があります。
 
@@ -367,11 +367,11 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to update. |
+| `{SCHEMA_ID}` | 更新するスキーマのURLエンコードされた`$id` URIまたは`meta:altId`。 |
 
 **リクエスト**
 
-以下のリクエスト例では、との配列の両方にmixinの `$id` 値を追加することで、スキーマに新しいmixinを追加し `meta:extends` て `allOf` います。
+以下のリクエスト例では、スキーマに新しいミックスインを追加します。そのミックスインの`$id`値を`meta:extends`配列と`allOf`配列の両方に追加します。
 
 リクエスト本体は配列の形をとり、リストに表示された各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトは、実行する操作(`op`)、操作を実行するフィールド(`path`)、およびその操作に含める情報(`value`)を含む。
 
@@ -440,9 +440,9 @@ curl -X PATCH\
 }
 ```
 
-## Enable a schema for use in Real-time Customer Profile {#union}
+## スキーマをリアルタイム顧客プロファイルで使用できるようにする{#union}
 
-スキーマが [リアルタイム顧客プロファイルに参加するには](../../profile/home.md)、スキーマの `union` アレイに `meta:immutableTags` タグを追加する必要があります。 これを行うには、対象のスキーマに対してPATCHリクエストを行います。
+スキーマが[リアルタイム顧客プロファイル](../../profile/home.md)に参加するには、スキーマの`meta:immutableTags`アレイに`union`タグを追加する必要があります。 これを行うには、対象のスキーマに対してPATCHリクエストを行います。
 
 >[!IMPORTANT]
 >
@@ -456,11 +456,11 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to enable. |
+| `{SCHEMA_ID}` | 有効にするスキーマのURLエンコードされた`$id` URIまたは`meta:altId`です。 |
 
 **リクエスト**
 
-次の例のリクエストでは、既存のスキーマに `meta:immutableTags` 配列を追加し、その配列に対してプロファイルでの使用を有効にするための単一の文字列値 `union` を与えています。
+以下のリクエスト例では、既存のスキーマに`meta:immutableTags`配列を追加し、配列に対してプロファイルでの使用を有効にするための1つの文字列値`union`を与えます。
 
 ```SHELL
 curl -X PATCH\
@@ -481,7 +481,7 @@ curl -X PATCH\
 
 **応答** 
 
-正常に応答すると、更新されたスキーマの詳細が返され、 `meta:immutableTags` 配列が追加されたことが示されます。
+正常に応答すると、更新されたスキーマの詳細が返され、`meta:immutableTags`配列が追加されたことが示されます。
 
 ```JSON
 {
@@ -523,9 +523,9 @@ curl -X PATCH\
 }
 ```
 
-これで、このスキーマのクラスの和集合を表示して、スキーマのフィールドが表示されていることを確認できます。 See the [unions endpoint guide](./unions.md) for more information.
+これで、このスキーマのクラスの和集合を表示して、スキーマのフィールドが表示されていることを確認できます。 詳しくは、[和集合エンドポイントガイド](./unions.md)を参照してください。
 
-## スキーマの削除 {#delete}
+## スキーマの削除{#delete}
 
 スキーマレジストリからスキーマを削除する必要がある場合があります。 これは、パスで指定されたスキーマIDを使用してDELETEリクエストを実行することで行われます。
 
@@ -537,7 +537,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to delete. |
+| `{SCHEMA_ID}` | 削除するスキーマのURLエンコードされた`$id` URIまたは`meta:altId`。 |
 
 **リクエスト**
 
@@ -554,4 +554,4 @@ curl -X DELETE \
 
 正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
 
-スキーマに対してルックアップ(GET)リクエストを実行して、削除を確認できます。 You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the schema has been removed from the Schema Registry.
+スキーマに対してルックアップ(GET)リクエストを実行して、削除を確認できます。 要求に`Accept`ヘッダーを含める必要がありますが、スキーマがスキーマレジストリから削除されたので、HTTPステータス404 （見つかりません）を受け取る必要があります。
