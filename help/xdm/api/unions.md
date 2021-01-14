@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: 和集合
 description: スキーマレジストリAPIの/和集合エンドポイントを使用すると、エクスペリエンスアプリケーションのXDM和集合スキーマをプログラムで管理できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '877'
 ht-degree: 50%
@@ -15,13 +15,13 @@ ht-degree: 50%
 
 # 和集合エンドポイント
 
-Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [[!DNL Real-time Customer Profile]](../../profile/home.md).
+和集合(または和集合表示)は、同じクラス（[!DNL XDM ExperienceEvent]または[!DNL XDM Individual Profile]）を共有し、[[!DNL Real-time Customer Profile]](../../profile/home.md)に対して有効になっているすべてのスキーマのフィールドを集計する、システム生成の読み取り専用スキーマです。
 
 このドキュメントでは、Schema Registry API で和集合を操作するための基本的な概念と、様々な操作のサンプル呼び出しを示しています。XDM の和集合に関する一般的な情報については、「[Basics of schema composition](../schema/composition.md#union)」の和集合に関する節を参照してください。
 
 ## 和集合スキーマフィールド
 
-和集合スキーマには、次の3つの主要フィールドが [!DNL Schema Registry] 自動的に含まれます。 `identityMap`、 `timeSeriesEvents`および `segmentMembership`。
+[!DNL Schema Registry]は、和集合スキーマ内に3つのキーフィールドを自動的に含めます。`identityMap`、`timeSeriesEvents`、および`segmentMembership`。
 
 ### ID マップ
 
@@ -35,11 +35,11 @@ Unions (or union views) are system-generated, read-only schemas that aggregate t
 
 `segmentMembership` マップには、セグメント評価の結果が格納されます。[Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) を使用してセグメントジョブが正常に実行された場合、マップが更新されます。また、`segmentMembership` には、Platform に取り込まれた評価済みのオーディエンスセグメントも格納されます。このため、Adobe Audience Manager などの他のソリューションと統合することができます。詳しくは、[API を使用したセグメ ントの作成](../../segmentation/tutorials/create-a-segment.md)に関するチュートリアルを参照してください。
 
-## Retrieve a list of unions {#list}
+## 和集合のリストを取得{#list}
 
-スキーマに `union` タグを設定すると、がそのスキーマの基となるクラスの和集合にそのスキーマを [!DNL Schema Registry] 自動的に追加します。 該当するクラスに和集合が存在しない場合は、新しい和集合が自動的に作成されます。 The `$id` for the union is similar to the standard `$id` of other [!DNL Schema Registry] resources, with the only difference being that is appended by two underscores and the word &quot;union&quot; (`__union`).
+スキーマに`union`タグを設定すると、[!DNL Schema Registry]は、スキーマの基となるクラスの和集合にスキーマを自動的に追加します。 該当するクラスに和集合が存在しない場合は、新しい和集合が自動的に作成されます。 和集合の`$id`は、他の[!DNL Schema Registry]リソースの標準`$id`に似ていますが、異なるのは2つのアンダースコアと「和集合」(`__union`)が付加されていることだけです。
 
-エンドポイントにGETリクエストを行うことで、使用可能な和集合のリストを表示でき `/tenant/unions` ます。
+`/tenant/unions`エンドポイントにGETリクエストを行うことで、使用可能な和集合のリストを表示できます。
 
 **API 形式**
 
@@ -59,12 +59,12 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
-The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing unions:
+応答の形式は、リクエストで送信される`Accept`ヘッダーに依存します。 和集合のリストには、次の`Accept`ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースのリストを表示する際に推奨されるヘッダーです。 (制限：300) |
-| `application/vnd.adobe.xed+json` | Returns full JSON class for each resource, with original `$ref` and `allOf` included. (制限：300) |
+| `application/vnd.adobe.xed+json` | 各リソースの完全なJSONクラスを返し、元の`$ref`と`allOf`が含まれます。 (制限：300) |
 
 **応答**
 
@@ -89,13 +89,13 @@ The response format depends on the `Accept` header sent in the request. The foll
 }
 ```
 
-## Look up a union {#lookup}
+## 和集合を検索{#lookup}
 
 特定の和集合を表示するには、`$id` と、和集合の詳細の一部またはすべて（Accept ヘッダーにより異なる）を含む GET リクエストを実行します。
 
 >[!NOTE]
 >
->Union lookups are available using the `/unions` and `/schemas` endpoint to enable them for use in [!DNL Profile] exports into a dataset.
+>`/unions`と`/schemas`のエンドポイントを使用して和集合の検索を行い、データセットへの[!DNL Profile]エクスポートで使用できるようにします。
 
 **API 形式**
 
@@ -106,7 +106,7 @@ GET /tenant/schemas/{UNION_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{UNION_ID}` | The URL-encoded `$id` URI of the union you want to look up. 和集合スキーマの URI には「__union」が追加されます。 |
+| `{UNION_ID}` | 検索する和集合のURLエンコードされた`$id` URIです。 和集合スキーマの URI には「__union」が追加されます。 |
 
 **リクエスト**
 
@@ -176,11 +176,11 @@ curl -X GET \
 
 ## 和集合メンバーシップのスキーマを有効にする {#enable}
 
-スキーマをそのクラスの和集合に含めるには、タグをスキーマの `union``meta:immutableTags` 属性に追加する必要があります。 これを行うには、対象のスキーマに対して、1つの文字列値を持つ `meta:immutableTags` 配列を追加するPATCHリクエスト `union` を作成します。 詳しい例については、 [スキーマエンドポイントガイド](./schemas.md#union) を参照してください。
+スキーマをそのクラスの和集合に含めるには、`union`タグをスキーマの`meta:immutableTags`属性に追加する必要があります。 これを行うには、`union`という1つの文字列値を持つ`meta:immutableTags`配列を対象のスキーマに追加するPATCHリクエストを作成します。 詳しい例については、[スキーマエンドポイントガイド](./schemas.md#union)を参照してください。
 
 ## 和集合でのスキーマのリスト {#list-schemas}
 
-特定のエンドポイントに属するスキーマを確認するには、エンドポイントに対してGETリクエストを実行し `/tenant/schemas` ます。 `property` クエリパラメーターを使用すると、アクセス先の和集合があるクラスと同等の `meta:immutableTags` フィールドおよび `meta:class` を含むスキーマのみを返すようにレスポンスを設定できます。
+特定の和集合に属するスキーマを確認するには、`/tenant/schemas`エンドポイントに対してGETリクエストを実行します。 `property` クエリパラメーターを使用すると、アクセス先の和集合があるクラスと同等の `meta:immutableTags` フィールドおよび `meta:class` を含むスキーマのみを返すようにレスポンスを設定できます。
 
 **API 形式**
 
@@ -190,11 +190,11 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CLASS_ID}` | 和集合が有効なスキーマ `$id` をリストするクラスの。 |
+| `{CLASS_ID}` | リストする和集合が有効なスキーマを持つクラスの`$id`。 |
 
 **リクエスト**
 
-次のリクエストは、 [!DNL XDM Individual Profile] クラスの和集合の一部であるすべてのスキーマのリストを取得します。
+次のリクエストは、[!DNL XDM Individual Profile]クラスの和集合の一部であるすべてのスキーマのリストを取得します。
 
 ```SHELL
 curl -X GET \
@@ -206,12 +206,12 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing schemas:
+応答の形式は、リクエストで送信される`Accept`ヘッダーに依存します。 スキーマのリストには、次の`Accept`ヘッダーを使用できます。
 
 | `Accept` ヘッダー | 説明 |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースのリストを表示する際に推奨されるヘッダーです。 (制限：300) |
-| `application/vnd.adobe.xed+json` | Returns full JSON schema for each resource, with original `$ref` and `allOf` included. (制限：300) |
+| `application/vnd.adobe.xed+json` | 各リソースの完全なJSONスキーマを返します。元の`$ref`と`allOf`が含まれます。 (制限：300) |
 
 **応答** 
 
