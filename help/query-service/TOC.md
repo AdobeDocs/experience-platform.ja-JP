@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform クエリサービスのヘルプ
 breadcrumb-title: クエリサービスガイド
 user-guide-description: 標準 SQL を使用して、Platform データレイクのデータを照会します。
 translation-type: tm+mt
-source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
+source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 97%
+source-wordcount: '135'
+ht-degree: 88%
 
 ---
 
@@ -27,14 +27,13 @@ ht-degree: 97%
 - クエリサービス UI {#ui}
    - [UI の概要](ui/overview.md)
    - [クエリエディターユーザーガイド](ui/user-guide.md)
-- クエリの作成 {#creating-queries}
-   - [クエリ作成の概要](creating-queries/creating-queries.md)
-   - [データセットとテーブル／スキーマ](creating-queries/datasets-and-tables.md)
-   - [クエリ実行の一般的なガイダンス](creating-queries/writing-queries.md)
-   - [ExperienceEvent クエリ](creating-queries/experience-event-queries.md)
-   - [データセットの結合](creating-queries/joining-datasets.md)
-   - [データの重複排除](creating-queries/deduplication.md)
-- [クエリ結果からのデータセットの生成](creating-queries/create-datasets.md)
+   - [クエリ結果からのデータセットの生成](ui/create-datasets.md)
+- ベストプラクティス {#best-practices}
+   - [クエリ実行の一般的なガイダンス](best-practices/writing-queries.md)
+   - [データの重複排除](best-practices/deduplication.md)
+   - [エクスペリエンスイベントクエリの例](best-practices/experience-event-queries.md)
+   - [Adobe Analyticsクエリの例](best-practices/adobe-analytics.md)
+   - [Adobe Targetクエリの例](best-practices/adobe-target.md)
 - SQL リファレンス {#sql}
    - [SQL の概要](sql/overview.md)
    - [SQL 構文](sql/syntax.md)
@@ -42,10 +41,6 @@ ht-degree: 97%
    - [Spark SQL 関数](sql/spark-sql-functions.md)
    - [メタデータコマンド](sql/metadata.md)
    - [準備済みステートメント](sql/prepared-statements.md)
-- サンプルクエリ {#samples}
-   - [サンプルクエリの概要](sample-queries/overview.md)
-   - [Adobe Analytics](sample-queries/adobe-analytics.md)
-   - [Adobe Target](sample-queries/adobe-target.md)
 - クエリサービスへのクライアントの接続 {#clients}
    - [クライアント接続の概要](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
