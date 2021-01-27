@@ -5,7 +5,7 @@ title: Aqua Data Studio との接続
 topic: connect
 description: このドキュメントでは、Aqua Data Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 70%
@@ -13,11 +13,11 @@ ht-degree: 70%
 ---
 
 
-# Connect with [!DNL Aqua Data Studio]
+# [!DNL Aqua Data Studio]に接続
 
-This document walks through the steps for connecting [!DNL Aqua Data Studio] with Adobe Experience Platform [!DNL Query Service].
+このドキュメントでは、[!DNL Aqua Data Studio]とAdobe Experience Platform[!DNL Query Service]を結ぶ手順を順を追って説明します。
 
-After installing [!DNL Aqua Data Studio], you must first register the server. メインメニューで「**[!UICONTROL サーバー]**」をクリックし、「**[!UICONTROL サーバーを登録]**」をクリックします。
+[!DNL Aqua Data Studio]をインストールした後は、まずサーバを登録する必要があります。 メインメニューで「**[!UICONTROL サーバー]**」をクリックし、「**[!UICONTROL サーバーを登録]**」をクリックします。
 
 ![](../images/clients/aqua-data-studio/register-server.png)
 
@@ -25,12 +25,12 @@ After installing [!DNL Aqua Data Studio], you must first register the server. �
 
 - **[!UICONTROL Name]**：接続の名前。
 - **[!UICONTROL Login Name and Password]**：使用されるログイン資格情報。ユーザー名は、`ORG_ID@AdobeOrg` の形式をとります。
-- **[!UICONTROL ホストとポート]**:のホストエンドポイントとそのポート [!DNL Query Service]。 に接続するには、ポート80を使用する必要があり [!DNL Query Service]ます。
-- **[!UICONTROL データベース]:** 使用するデータベースです。
+- **[!UICONTROL ホストとポート]**:のホストエンドポイントとそのポート [!DNL Query Service]。[!DNL Query Service]に接続するには、ポート80を使用する必要があります。
+- **[!UICONTROL Database]:** 使用するデータベース。
 
 >[!NOTE]
 >
-> ログイン資格情報、ホスト、ポート、データベース名の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
+> ログイン資格情報、ホスト、ポート、データベース名の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;をクリックしてから、**[!UICONTROL 資格情報]**&#x200B;をクリックします。
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
@@ -42,4 +42,4 @@ After installing [!DNL Aqua Data Studio], you must first register the server. �
 
 ## 次の手順
 
-Now that you have connected to [!DNL Query Service], you can use the **[!UICONTROL Query Analyzer]** within [!DNL Aqua Data Studio] to execute and edit SQL statements. クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../creating-queries/creating-queries.md)』を参照してください。
+[!DNL Query Service]に接続したら、[!DNL Aqua Data Studio]内で&#x200B;**[!UICONTROL クエリアナライザ]**&#x200B;を使用してSQL文を実行し、編集できます。 クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../best-practices/writing-queries.md)』を参照してください。
