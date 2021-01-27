@@ -5,10 +5,10 @@ title: クエリサービス開発者ガイド
 topic: connection parameters
 description: /connection_parametersエンドポイントにGET要求を行うことで、インタラクティブサービスを使用するための接続パラメーターを取得できます。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 62%
+source-wordcount: '134'
+ht-degree: 47%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 62%
 
 ## サンプル API 呼び出し
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+これで、使用するヘッダーがわかったので、[!DNL Query Service] APIを呼び出す準備が整いました。 以下の節では、[!DNL Query Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
-### インタラクティブサービスの接続パラメーターの要求
+### 接続パラメーターの要求
 
-`/connection_parameters` エンドポイントに GET リクエストを実行することで、[インタラクティブサービス](../creating-queries/writing-queries.md)を使用するための接続パラメーターを取得できます。インタラクティブサービスを介した接続に接続パラメーターを使用するクライアントについては、[クエリサービスクライアント](../clients/overview.md)に関するドキュメントを参照してください。
+`/connection_parameters`エンドポイントにGETリクエストを行うことで、接続パラメーターを取得できます。 インタラクティブサービスを介した接続に接続パラメーターを使用するクライアントについては、[クエリサービスクライアント](../clients/overview.md)に関するドキュメントを参照してください。
 
 **API 形式**
 
