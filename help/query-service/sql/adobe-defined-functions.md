@@ -5,7 +5,7 @@ title: アドビ定義関数
 topic: functions
 description: このドキュメントでは、クエリサービスで使用できるアドビ定義の関数について説明します。
 translation-type: tm+mt
-source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
+source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 27%
@@ -15,7 +15,7 @@ ht-degree: 27%
 
 # アドビ定義関数
 
-アドビ定義関数ここで、ADFと呼ばれるものは、Adobe Experience Platformクエリサービスで事前に作成された関数で、[!DNL Experience Event]データに対する一般的なビジネス関連タスクの実行に役立ちます。 例えば、[セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)と[アトリビューション](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数は、Adobe Analyticsで見つかるのと同じように、&lt;a0/>セッション化&lt;a1/>と&lt;a2/>の関数です。
+アドビ定義関数ここで、ADFと呼ばれるものは、Adobe Experience Platformクエリサービスで事前に作成された関数で、[!DNL Experience Event]データに対する一般的なビジネス関連タスクの実行に役立ちます。 例えば、[セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)と[アトリビューション](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数は、Adobe Analyticsで見つかるのと同じように、セッション化との関数です。
 
 このドキュメントは、[!DNL Query Service]で利用できるAdobe定義関数の情報を提供します。
 
@@ -667,14 +667,14 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 **クエリ例**
 
 ```sql
-SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
+SELECT endUserIds._experience.mcid.id, timestamp, web.webPageDetails.name
     PREVIOUS(web.webPageDetails.name, 3)
-      OVER(PARTITION BY endUserIds._experience.mcid.id, _experience.analytics.session.num
+      OVER(PARTITION BY endUserIds._experience.mcid.id
            ORDER BY timestamp
            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
       AS previous_page
 FROM experience_events
-ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 **結果**
@@ -723,7 +723,7 @@ SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
       OVER(PARTITION BY endUserIds._experience.aaid.id
            ORDER BY timestamp
            ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
-      AS previous_page
+      AS next_page
 FROM experience_events
 ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
@@ -881,7 +881,7 @@ LIMIT 10
 
 ## 次の手順
 
-ここで説明する関数を使用して、[!DNL Query Service]を使用して独自の[!DNL Experience Event]データセットにアクセスするクエリを書き込むことができます。 [!DNL Query Service]でのオーサリングクエリについて詳しくは、[クエリの作成](../creating-queries/creating-queries.md)に関するドキュメントを参照してください。
+ここで説明する関数を使用して、[!DNL Query Service]を使用して独自の[!DNL Experience Event]データセットにアクセスするクエリを書き込むことができます。 [!DNL Query Service]でのオーサリングクエリについて詳しくは、[クエリの作成](../best-practices/writing-queries.md)に関するドキュメントを参照してください。
 
 ## その他のリソース
 
