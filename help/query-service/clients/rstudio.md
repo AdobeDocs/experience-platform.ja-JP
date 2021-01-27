@@ -5,7 +5,7 @@ title: RStudio との接続
 topic: connect
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 64%
@@ -13,11 +13,11 @@ ht-degree: 64%
 ---
 
 
-# Connect with [!DNL RStudio]
+# [!DNL RStudio]に接続
 
-This document walks through the steps for connecting R Studio with Adobe Experience Platform [!DNL Query Service].
+このドキュメントでは、R StudioとAdobe Experience Platform[!DNL Query Service]を接続する手順を順を追って説明します。
 
-After installing [!DNL RStudio], on the *Console* screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
+[!DNL RStudio]をインストールした後、表示される&#x200B;*コンソール*&#x200B;画面で、まず[!DNL PostgreSQL]を使用するRスクリプトを準備する必要があります。
 
 ```r
 install.packages("RPostgreSQL")
@@ -26,7 +26,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Once you have prepared your R script to use [!DNL PostgreSQL], you can now connect [!DNL RStudio] to [!DNL Query Service] by loading the [!DNL PostgreSQL] driver.
+[!DNL PostgreSQL]を使用するためのRスクリプトを準備したら、[!DNL PostgreSQL]ドライバを読み込むことで[!DNL RStudio]を[!DNL Query Service]に接続できます。
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -46,13 +46,13 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
+>データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;をクリックしてから、**[!UICONTROL 資格情報]**&#x200B;をクリックします。
 
 ## 次の手順
 
-Now that you have connected to [!DNL Query Service], you can write queries to execute and edit SQL statements. たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
+[!DNL Query Service]に接続したので、SQL文を実行および編集するクエリを書き込むことができます。 たとえば、`dbGetQuery(con, sql)` を使用してクエリを実行できます。ここで、`sql` は実行する SQL クエリです。
 
-次のクエリでは、[ExperienceEvents](../creating-queries/experience-event-queries.md) を含むデータセットを使用し、デバイスの画面の高さを指定して、Web サイトのページビューのヒストグラムを作成します。
+次のクエリでは、[ExperienceEvents](../best-practices/experience-event-queries.md) を含むデータセットを使用し、デバイスの画面の高さを指定して、Web サイトのページビューのヒストグラムを作成します。
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -87,4 +87,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-クエリの書き込みおよび実行方法の詳細については、[クエリの実行ガイド](../creating-queries/creating-queries.md)を参照してください。
+クエリの書き込みおよび実行方法の詳細については、[クエリの実行ガイド](../best-practices/writing-queries.md)を参照してください。
