@@ -5,7 +5,7 @@ title: Looker との接続
 topic: connect
 description: このドキュメントでは、LookerとAdobe Experience Platformクエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 66%
@@ -13,11 +13,11 @@ ht-degree: 66%
 ---
 
 
-# Connect with [!DNL Looker]
+# [!DNL Looker]に接続
 
-To connect [!DNL Looker] with [!DNL Query Service] on Adobe Experience Platform, please follow the steps below:
+[!DNL Looker]をAdobe Experience Platformの[!DNL Query Service]と接続するには、次の手順に従ってください。
 
-After logging into [!DNL Looker], click on **[!UICONTROL Admin]**, followed by **[!UICONTROL Connections]**.
+[!DNL Looker]にログインした後、**[!UICONTROL 管理者]**&#x200B;をクリックし、次に&#x200B;**[!UICONTROL 接続]**&#x200B;をクリックします。
 
 ![](../images/clients/looker/click-admin-connections.png)
 
@@ -37,7 +37,7 @@ After logging into [!DNL Looker], click on **[!UICONTROL Admin]**, followed by *
 
 >[!NOTE]
 >
-> ホストとポート、データベース名、ログイン資格情報の検索について詳しくは、[Platform の資格情報](https://platform.adobe.com/query/configuration)ページを参照してください。To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
+> ホストとポート、データベース名、ログイン資格情報の検索について詳しくは、[Platform の資格情報](https://platform.adobe.com/query/configuration)ページを参照してください。資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;をクリックしてから、**[!UICONTROL 資格情報]**&#x200B;をクリックします。
 
 接続の詳細を入力したら、「**[!UICONTROL Test These Settings]**」をクリックし、資格情報が正しく機能することを確認します。正しく機能している場合は、接続が成功したこと示すメッセージが下に表示されます。接続が成功した場合は、「**[!UICONTROL 接続を追加]**」をクリックして接続を作成します。
 
@@ -45,4 +45,4 @@ After logging into [!DNL Looker], click on **[!UICONTROL Admin]**, followed by *
 
 ## 次の手順
 
-Now that you&#39;ve connected with [!DNL Query Service], you can use [!DNL Looker] to write queries. クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../creating-queries/creating-queries.md)』を参照してください。
+[!DNL Query Service]に接続したので、[!DNL Looker]を使ってクエリを書くことができます。 クエリの書き込みおよび実行方法について詳しくは、『[クエリ実行ガイド](../best-practices/writing-queries.md)』を参照してください。
