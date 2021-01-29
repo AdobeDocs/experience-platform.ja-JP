@@ -5,30 +5,40 @@ title: Tableau との接続
 topic: connect
 description: このドキュメントでは、TableauとAdobe Experience Platformクエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 41%
+source-wordcount: '195'
+ht-degree: 14%
 
 ---
 
 
-# Connect with [!DNL Tableau]
+# [!DNL Tableau]
 
-Install [!DNL Tableau], if it is not already installed.
+このドキュメントでは、TableauとAdobe Experience Platform[!DNL Query Service]を接続する手順を説明します。
 
 >[!NOTE]
 >
->You can get a 14-day trial of &quot;[!DNL Tableau] Desktop&quot; [here](https://www.tableau.com/de-de/products/desktop/download).
->    
-> The version `2018.1.2 (20181.18.0615.1128 64 bit)` has been successful in connecting to [!DNL Query Service].
+> このガイドは、[!DNL Tableau]へのアクセス権が既にあり、そのインターフェイスの操作方法に精通していることを前提としています。 [!DNL Tableau]に関する詳細は、[正式な [!DNL Tableau] ドキュメント](https://help.tableau.com/current/pro/desktop/en-us/default.htm)を参照してください。
 
-Run [!DNL Tableau], and on the opening screen click to open a [!DNL Postgres] connection.
+## [!DNL Tableau]をプラットフォームに接続
 
-![画像](../images/clients/tableau/open-connection.png)
+[!DNL Tableau]を[!DNL Query Service]に接続するには、[!DNL Tableau]を開き、**[!DNL To a Server]**&#x200B;セクションで&#x200B;**[!DNL More]**&#x200B;を選択し、次に&#x200B;**[!DNL PostgreSQL]**&#x200B;を選択します
 
- UI の「`Host, Port, Database, Username, Password`BI ツールに接続[!DNL Platform]」ページから **** を個別にコピーして、対応する Tableau フィールドに貼り付けます。
+![](../images/clients/tableau/open-connection.png)
 
-接続を試みる前に、「**[!UICONTROL SSL を要求する]**」ボックスがオンになっていることを確認します。
+現在は、値を入力してAdobe Experience Platformと接続できます。 データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;を選択してから、**[!UICONTROL 資格情報]**&#x200B;を選択します。
 
-![画像](../images/clients/tableau/ssl-required.png)
+接続を試みる前に、「**[!UICONTROL SSL Required]**」ボックスをオンにしていることを確認してください。
+
+すべての資格情報を入力した後、**[!DNL Sign In]**&#x200B;を選択して続行します。
+
+![](../images/clients/tableau/sign-in.png)
+
+これでAdobe Experience Platformとつながり、テーブルのリストが横に表示されました。
+
+![](../images/clients/tableau/connected.png)
+
+## 次の手順
+
+[!DNL Query Service]に接続したので、[!DNL Tableau]を使ってクエリを書くことができます。 クエリの書き込みと実行の方法の詳細については、[実行中のクエリ](../best-practices/writing-queries.md)のガイドを参照してください。
