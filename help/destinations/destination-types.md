@@ -1,31 +1,31 @@
 ---
-keywords: destinations;destination;destination types
+keywords: 宛先；宛先；宛先タイプ
 title: 宛先のタイプとカテゴリ
 seo-title: 宛先のタイプとカテゴリ
-description: 'リアルタイム顧客データプラットフォームでは、プロファイル/セグメントエクスポート先で、イベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先に適用します。 Experience Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 '
-seo-description: リアルタイム顧客データプラットフォームでは、プロファイル/セグメントエクスポート先で、イベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先に適用します。 Experience Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。
+description: 'Adobe Experience Platformでは、プロファイル/セグメントエクスポート先は、イベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先に適用します。 Experience Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 '
+seo-description: Adobe Experience Platformでは、プロファイル/セグメントエクスポート先は、イベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先に適用します。 Experience Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 61%
+source-wordcount: '581'
+ht-degree: 62%
 
 ---
 
 
 # 宛先のタイプとカテゴリ
 
-このページを読んで、リアルタイム顧客データプラットフォームの様々なタイプとカテゴリを理解してください。
+Adobe Experience Platformの目的地の様々なタイプやカテゴリについて理解するには、このページを参照してください。
 
 ## 宛先のタイプ
 
-リアルタイム顧客データプラットフォームでは、接続と拡張の2つの宛先タイプを区別します。 接続の宛先には、プロファイルの書き出しの宛先と、セグメントの書き出しの宛先があります。
+Adobe Experience Platformでは、接続と拡張の2種類の宛先を区別します。 接続の宛先には、プロファイルの書き出しの宛先と、セグメントの書き出しの宛先があります。
 
 ![宛先のタイプ](./assets/destination-types/types-of-destinations.png)
 
 ### 接続 {#connections}
 
-**[!UICONTROL プロファイルエクスポート]** / **[!UICONTROL セグメントエクスポート]**[](../profile/home.md)：リアルタイム顧客データプラットフォームの取得イベントデータの送信先を、他のデータソースと組み合わせて、リアルタイム顧客プロファイルを形成し、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先に適用します。
+**[!UICONTROL Adobe Experience Platformのプロファイル]** エクスポートおよび **[!UICONTROL セグメントエクスポートイベントデータを取得し、他のデータソースと組み合わせて、リアルタイム顧客プロファイル]**  [](../profile/home.md)、セグメント化およびエクスポートセグメントおよび条件付きプロファイルを作成します。
 
 #### プロファイルの書き出し先
 
@@ -33,7 +33,7 @@ ht-degree: 61%
 
 #### セグメントの書き出し先
 
-セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。Advertising destinations such as [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) or [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) are examples of these types of destinations.
+セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。[[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md)や[[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md)などの広告先がその例です。
 
 #### プロファイルの書き出しとセグメントの書き出し先 - ビデオの概要
 
@@ -43,11 +43,11 @@ ht-degree: 61%
 
 ### 拡張機能 {#extensions}
 
-リアルタイムCDPは、Real-time CDPインターフェイスにプラットフォーム起動の拡張機能を含めるため、Adobe Experience Platform Launchの機能と柔軟性を活用します。
+プラットフォームは、プラットフォームのインターフェイスにプラットフォーム起動の拡張機能を含めるため、Adobe Experience Platform Launchの機能と柔軟性を活用します。
 
 >[!TIP]
 >
->使用例やインターフェイス内での検索方法など、Adobe Experience Platform Launch拡張機能について詳しくは、 [Adobe Experience Platform Launch拡張機能の概要を参照してください](./catalog/launch-extensions/overview.md)。
+>使用例やインターフェイス内での検索方法など、Adobe Experience Platform Launch拡張機能に関する詳細については、[Adobe Experience Platform Launch拡張機能の概要](./catalog/launch-extensions/overview.md)を参照してください。
 
 Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](./catalog/personalization/gainsight.md)や [Confirmit Voice of the Customer 拡張機能](./catalog/voice/confirmit-digital-feedback.md)などがあります。
 
