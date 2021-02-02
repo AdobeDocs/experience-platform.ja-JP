@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform;home;popular topics;ingestion;ingest batch data;tutorial;batch ingestion;tutorial;ui guide;
+keywords: Experience Platform；ホーム；人気のあるトピック；取り込み；取り込み；取り込みバッチデータ；チュートリアル；バッチ取り込み；チュートリアル；uiガイド；
 solution: Experience Platform
 title: Adobe Experience Platform へのデータの取得
 topic: tutorial
 type: Tutorial
-description: Adobe Experience Platformでは、既知のエクスペリエンスデータモデル(XDM)スキーマに準拠するパーケットファイルやデータの形式で、データをバッチファイルとして簡単に読み込むことができます。
+description: Adobe Experience Platformでは、Parketファイルの形式のバッチファイルや、既知のエクスペリエンスデータモデル(XDM)スキーマに準拠するデータを、簡単にバッチファイルとして読み込むことができます。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 51%
+source-wordcount: '1323'
+ht-degree: 49%
 
 ---
 
 
 # Adobe Experience Platform へのデータの取得
 
-Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry.
+Adobe Experience Platformでは、データをバッチファイルとして[!DNL Platform]に簡単にインポートできます。 取り込むデータの例としては、CRMシステムのフラットファイル（Parketファイルなど）のプロファイルデータ、またはスキーマレジストリの既知の[!DNL Experience Data Model](XDM)スキーマに適合するデータが挙げられる。
 
 ## はじめに
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+このチュートリアルを完了するには、[!DNL Experience Platform]にアクセスできる必要があります。 [!DNL Experience Platform]のIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
 
 データ取得 API を使用してデータを取得する場合は、まず『[バッチ取得開発者ガイド](../batch-ingestion/api-overview.md)』をお読みください。
 
 ## データセットワークスペース
 
-The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
+[!DNL Experience Platform]内のDatasetsワークスペースを使用すると、IMS組織が作成したすべてのデータセットの表示と管理を行うことができ、また、新しいデータセットを作成することもできます。
 
 左側のナビゲーションで「**[!UICONTROL データセット]**」をクリックして、「データセット」ワークスペースを表示します。データセットワークスペースには、名前、作成日時、ソース、スキーマ、最終バッチステータスを示す列や、データセットが最後に更新された日時など、データセットのリストが含まれます。
 
 >[!NOTE]
 >
->Click on the filter icon next to the Search bar to use filtering capabilities to view only those datasets enabled for [!DNL Profile].
+>検索バーの横にあるフィルターアイコンをクリックして、フィルター機能を使用し、[!DNL Profile]に対して有効になっているデータセットのみを表示します。
 
 ![すべてのデータセットの表示](../images/tutorials/ingest-batch-data/datasets-overview.png)
 
@@ -42,7 +42,7 @@ The Datasets workspace within [!DNL Experience Platform] allows you to view and 
 
 ![](../images/tutorials/ingest-batch-data/click-create-datasets.png)
 
-On the **[!UICONTROL Create Dataset]** screen, select whether you would like to &quot;[!UICONTROL Create Dataset from Schema]&quot; or &quot;[!UICONTROL Create Dataset from CSV File]&quot;.
+**[!UICONTROL データセットを作成]**&#x200B;画面で、「[!UICONTROL スキーマからデータセットを作成]」を選択するか、「[!UICONTROL CSVファイルからデータセットを作成]」を選択します。
 
 このチュートリアルでは、スキーマを使用してデータセットを作成します。続行するには、「**[!UICONTROL スキーマからデータセットを作成]**」をクリックします。
 
@@ -58,7 +58,7 @@ On the **[!UICONTROL Create Dataset]** screen, select whether you would like to 
 
 ## データセットの設定
 
-On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset as well.
+**[!UICONTROL データセットを設定]**&#x200B;画面で、データセットに名前を付け、データセットの説明も入力する必要があります。
 
 **データセット名に関する注意事項：**
 
@@ -74,25 +74,25 @@ On the **[!UICONTROL Configure Dataset]** screen, you will be required to give y
 
 空のデータセットが作成され、データセットワークスペースの「**[!UICONTROL データセットアクティビティ]**」タブに戻りました。ワークスペースの左上隅にデータセットの名前と、「バッチが追加されていません」という通知が表示されます。このデータセットにバッチをまだ追加していないので、これは期待通りです。
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. 「情報」タブには、データセットの作成日時と最終変更日に関する情報も表示されます。
+データセットワークスペースの右側には、「**[!UICONTROL 情報]**」タブが表示され、データセットID、名前、説明、テーブル名、スキーマ、ストリーミング、ソースなど、新しいデータセットに関連する情報が示されます。 「情報」タブには、データセットの作成日時と最終変更日に関する情報も表示されます。
 
-Also in the Info tab is a  **[!UICONTROL Profile]** toggle that is used for enabling your dataset for use with [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
+また、「情報」タブには、**[!UICONTROL プロファイル]**&#x200B;の切り替えがあり、[!DNL Real-time Customer Profile]でデータセットを有効にするのに使用します。 この切り替えと[!DNL Real-time Customer Profile]の使い方については、後述の節で詳しく説明します。
 
 ![データセットアクティビティ](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## データセットの有効化 [!DNL Real-time Customer Profile]
+## [!DNL Real-time Customer Profile]のデータセットを有効にする
 
-Datasets are used for ingesting data into [!DNL Experience Platform], and that data is ultimately used to identify individuals and stitch together information coming from multiple sources. 情報を繋ぎ合わせたものを「」と呼び [!DNL Real-Time Customer Profile]ます In order for [!DNL Platform] to know which information should be included in the [!DNL Real-Time Profile], datasets can be marked for inclusion using the **[!UICONTROL Profile]** toggle.
+データセットは、データを[!DNL Experience Platform]に取り込むために使用され、最終的には、データは、個人を識別し、複数のソースから得られる情報を組み合わせるために使用されます。 組み合わされた情報を[!DNL Real-Time Customer Profile]と呼びます。 [!DNL Platform]が[!DNL Real-Time Profile]に含める情報を知るために、**[!UICONTROL プロファイル]**&#x200B;トグルを使用して、データセットを含めるようにマークできます。
 
-デフォルトでは、この切り替えはオフになっています。If you choose to toggle on [!DNL Profile], all data ingested into the dataset will be used to help identify an individual and stitch together their [!DNL Real-Time Profile].
+デフォルトでは、この切り替えはオフになっています。[!DNL Profile]をオンに切り替えると、データセットに取り込まれたすべてのデータが、個人を識別し、[!DNL Real-Time Profile]をつなぎ合わせるのに使用されます。
 
-To learn more about [!DNL Real-time Customer Profile] and working with identities, please review the [Identity Service](../../identity-service/home.md) documentation.
+[!DNL Real-time Customer Profile]とIDの使い方の詳細については、[IDサービス](../../identity-service/home.md)のドキュメントを参照してください。
 
-To enable the dataset for [!DNL Real-time Customer Profile], click the **[!UICONTROL Profile]** toggle in the **[!UICONTROL Info]** tab.
+[!DNL Real-time Customer Profile]のデータセットを有効にするには、「**[!UICONTROL 情報]**」タブの&#x200B;**[!UICONTROL プロファイル]**&#x200B;をクリックします。
 
 ![プロファイル切り替え](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
-A dialog will appear asking you to confirm that you want to enable the dataset for [!DNL Real-time Customer Profile].
+[!DNL Real-time Customer Profile]のデータセットを有効にするかどうかを確認するダイアログが表示されます。
 
 ![プロファイル有効ダイアログ](../images/tutorials/ingest-batch-data/enable-dataset-for-profile.png)
 
@@ -102,25 +102,25 @@ A dialog will appear asking you to confirm that you want to enable the dataset f
 
 ## データセットへのデータの追加
 
-データは様々な方法でデータセットに追加できます。You could choose to use [!DNL Data Ingestion] APIs or an ETL partner such as [!DNL Unifi] or [!DNL Informatica]. このチュートリアルでは、UI 内の「**[!UICONTROL データの追加]**」タブを使用してデータセットにデータを追加します。
+データは様々な方法でデータセットに追加できます。[!DNL Data Ingestion] APIまたは[!DNL Unifi]や[!DNL Informatica]などのETLパートナーを使用するよう選択できます。 このチュートリアルでは、UI 内の「**[!UICONTROL データの追加]**」タブを使用してデータセットにデータを追加します。
 
 データセットへのデータの追加を開始するには、「**[!UICONTROL データの追加]**」タブをクリックします 。ファイルをドラッグ&amp;ドロップしたり、追加するファイルをコンピューターで参照したりできるようになりました。
 
 >[!NOTE]
 >
-> Platform では、データ取得用に 2 種類のファイル（parquet、JSON）がサポートされています。一度に 5 個までのファイルを追加でき、各ファイルの最大ファイルサイズは 10GB です。
+>プラットフォームでは、データ取り込みに2種類のファイル（ParketまたはJSON）がサポートされています。 一度に 5 個までのファイルを追加でき、各ファイルの最大ファイルサイズは 10GB です。
 
 ![「データを追加」タブ](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## ファイルのアップロード
 
-Once you drag and drop (or browse and select) a parquet or JSON file that you wish to upload, [!DNL Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
+アップロードするParketまたはJSONファイルをドラッグ&amp;ドロップ（または参照&amp;選択）すると、[!DNL Platform]はすぐにファイルの処理を開始し、**[!UICONTROL 追加「データ]**」タブに&#x200B;**[!UICONTROL アップロード]**&#x200B;ダイアログが表示され、ファイルのアップロードの進行状況が示されます。
 
 ![アップロードダイアログ](../images/tutorials/ingest-batch-data/uploading-file.png)
 
 ## データセット指標
 
-ファイルのアップロードが完了すると、「**[!UICONTROL データセットのアクティビティ]** 」タブに「バッチが追加されていません」と表示されることはなくなります。Instead, the **[!UICONTROL Dataset Activity]** tab now shows dataset metrics. バッチがまだ読み込まれていないので、すべての指標はこの段階で「0」と表示されます。
+ファイルのアップロードが完了すると、「**[!UICONTROL データセットのアクティビティ]** 」タブに「バッチが追加されていません」と表示されることはなくなります。代わりに、「**[!UICONTROL データセットアクティビティ]**」タブにデータセット指標が表示されるようになりました。 バッチがまだ読み込まれていないので、すべての指標はこの段階で「0」と表示されます。
 
 タブの下部には、「[データセットへのデータ追加](#add-data-to-dataset)」処理で取得されたデータの&#x200B;**[!UICONTROL バッチ ID]** を示す追加リストが表示されます。また、取り込んだ日付、取り込んだ記録数、現在のバッチ状態など、バッチに関する情報も含まれます。
 
@@ -146,12 +146,12 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 ## 次の手順 およびその他のリソース
 
-Now that you have created a dataset and successfully ingested data into [!DNL Experience Platform], you can repeat these steps to create a new dataset or ingest more data into the existing dataset.
+データセットを作成し、データを[!DNL Experience Platform]に正しく取り込んだので、これらの手順を繰り返して新しいデータセットを作成するか、既存のデータセットにデータを取り込みます。
 
-バッチ取り込みの詳細については、 [バッチ取り込みの概要を読み](../batch-ingestion/overview.md) 、次のビデオを参照して学習を補ってください。
+バッチインジェストの詳細については、[バッチインジェストの概要](../batch-ingestion/overview.md)を参照し、以下のビデオを見て学習内容を補ってください。
 
 >[!WARNING]
 >
->次のビデオに示す [!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
+>次のビデオに示す[!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
