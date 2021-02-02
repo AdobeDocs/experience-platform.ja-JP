@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide;region
+keywords: Experience Platform；ホーム；人気の高いトピック；IDサービスAPI;IDサービス開発者ガイド；地域
 solution: Experience Platform
 title: はじめに
 topic: API guide
 description: 'Adobe Experience Platform ID サービスは、Adobe Experience Platform 内の ID グラフと呼ばれる、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理します。 '
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 66%
+source-wordcount: '759'
+ht-degree: 65%
 
 ---
 
 
 # [!DNL Identity Service] API開発者ガイド
 
-Adobe Experience Platform [!DNL Identity Service] manages the cross-device, cross-channel, and near real-time identification of your customers in what is known as an identity graph within Adobe Experience Platform.
+Adobe Experience Platform[!DNL Identity Service]は、Adobe Experience Platform内のIDグラフと呼ばれる、デバイス間、チャネル間、お客様のリアルタイムな識別を管理します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [[!DNL Identity Service]](../home.md):お客様のプロファイルデータの断片化に伴う基本的な課題を解決します。 これは、顧客がブランドと対話するデバイスやシステム間で ID を橋渡しするすることで実現します。
+- [[!DNL Identity Service]](../home.md):お客様のプロファイルデータの断片化に伴う基本的な課題を解決します。これは、顧客がブランドと対話するデバイスやシステム間で ID を橋渡しするすることで実現します。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
 
-The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Identity Service] API.
+以下の節では、[!DNL Identity Service] APIを正しく呼び出すために知る必要がある、または手元に置く必要がある追加情報について説明します。
 
 ### API 呼び出し例の読み取り
 
@@ -33,19 +33,19 @@ The following sections provide additional information that you will need to know
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -53,9 +53,9 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 ### 地域ベースのルーティング
 
-The [!DNL Identity Service] API employs region-specific endpoints that require the inclusion of a `{REGION}` as part of the request path. IMS 組織のプロビジョニング中に、地域が決定され、IMS Org プロファイル内に保存されます。Using the correct region with each endpoint ensures that all requests made using the [!DNL Identity Service] API are routed to the appropriate region.
+[!DNL Identity Service] APIでは、リクエストパスの一部として`{REGION}`を含める必要がある領域固有のエンドポイントを使用します。 IMS 組織のプロビジョニング中に、地域が決定され、IMS Org プロファイル内に保存されます。各エンドポイントで正しい領域を使用すると、[!DNL Identity Service] APIを使用して行われたすべてのリクエストが適切な領域にルーティングされます。
 
-There are two regions currently supported by [!DNL Identity Service] APIs: VA7 and NLD2.
+[!DNL Identity Service] APIで現在サポートされている2つの領域があります。VA7とNLD2。
 
 次の表に、地域を使用したパスの例を示します。
 
@@ -70,17 +70,17 @@ There are two regions currently supported by [!DNL Identity Service] APIs: VA7 a
 
 IMS Org プロファイル内で地域が見つからない場合は、システム管理者に問い合わせてください。
 
-## Using the [!DNL Identity Service] API
+## [!DNL Identity Service] APIを使用する
 
 これらのサービスで使用される ID パラメーターは、次の 2 つの方法、複合または XID のいずれかで表現できます。
 
 複合 ID は、ID 値と名前空間の両方を含む構成です。複合 ID を使用する場合、名前空間は名前（`namespace.code`）または ID（`namespace.id`）で指定できます。
 
-When an identity is persisted, [!DNL Identity Service] generates and assigns an ID to that identity, called the native ID, or XID. クラスター API とマッピング API のすべてのバリエーションは、リクエストと応答で複合 ID と XID の両方をサポートしています。これらのAPIを使用するには、次のパラメーターのいずれかが必要です。`xid`、[`ns`または`nsid`]および`id`の組み合わせ。
+IDが持続すると、[!DNL Identity Service]はIDを生成し、ネイティブID(XID)と呼ばれるIDを割り当てます。 クラスター API とマッピング API のすべてのバリエーションは、リクエストと応答で複合 ID と XID の両方をサポートしています。これらのAPIを使用するには、次のパラメーターのいずれかが必要です。`xid`、[`ns`または`nsid`]および`id`の組み合わせ。
 
 応答のペイロードを制限するため、API は、使用される ID 構文のタイプに応じて、それらの応答を調整します。つまり、XID を渡すと応答に XID が含まれ、複合 ID を渡すと、応答はリクエストで使用される構造に従います。
 
-The examples in this document do not cover the complete functionality of the [!DNL Identity Service] API. 完全な API については、「[Swagger API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)」を参照してください。
+このドキュメントの例では、[!DNL Identity Service] APIの全機能については説明しません。 完全な API については、「[Swagger API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)」を参照してください。
 
 >[!NOTE]
 >
