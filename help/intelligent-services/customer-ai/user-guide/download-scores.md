@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics;Export;export;customer ai download;customer ai scores
+keywords: Experience Platform；スコアのダウンロード；顧客ai；人気のあるトピック；エクスポート；エクスポート；顧客aiダウンロード；顧客aiスコア
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客 AI でのスコアのダウンロード
 topic: Downloading scores
-description: 顧客 AI では、Parquet ファイル形式でスコアをダウンロードできます。
+description: 顧客AIでは、スコアをParketファイル形式でダウンロードできます。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 91%
+source-wordcount: '961'
+ht-degree: 86%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 91%
 
 ## はじめに
 
-顧客 AI では、Parquet ファイル形式でスコアをダウンロードできます。このチュートリアルでは、[開始ガイド](../getting-started.md)の顧客 AI スコアのダウンロードに関するセクションを読み終えていることを前提としています。
+顧客AIでは、スコアをParketファイル形式でダウンロードできます。 このチュートリアルでは、[開始ガイド](../getting-started.md)の顧客 AI スコアのダウンロードに関するセクションを読み終えていることを前提としています。
 
-さらに、顧客 AI のスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスが必要です。新しいサービスインスタンスを作成するには、「顧客AIインスタンスの [設定](./configure.md)」にアクセスします。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
+さらに、顧客 AI のスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスが必要です。新しいサービスインスタンスを作成するには、[顧客AIインスタンスの設定](./configure.md)にアクセスします。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
 
 現在は、2 つの方法で顧客 AI スコアをダウンロードできます。
 
@@ -64,7 +64,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **応答** 
 
-成功した応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチIDで `01E5QSWCAASFQ054FNBKYV6TIQ`す。 バッチ ID をコピーして、次の API 呼び出しで使用します。
+成功した応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチID `01E5QSWCAASFQ054FNBKYV6TIQ`です。 バッチ ID をコピーして、次の API 呼び出しで使用します。
 
 ```json
 {
@@ -113,7 +113,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 }
 ```
 
-## バッチ ID を使用して次の API 呼び出しを取得する {#retrieve-the-next-api-call-with-your-batch-id}
+## バッチ ID を使用して次の API 呼び出しを取得する  {#retrieve-the-next-api-call-with-your-batch-id}
 
 バッチ ID を取得したら、`/batches` に対して新しい GET リクエストを実行できます。リクエストを実行すると、次の API リクエストとして使用するリンクが返されます。
 
@@ -167,7 +167,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 }
 ```
 
-## ファイルを取得する {#retrieving-your-files}
+## ファイルを取得する  {#retrieving-your-files}
 
 前の手順で取得した `href` 値を API 呼び出しとして使用して、新しい GET リクエストを実行し、ファイルディレクトリを取得します。
 
