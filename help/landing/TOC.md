@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platform が、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 34%
+source-wordcount: '161'
+ht-degree: 29%
 
 ---
 
@@ -32,13 +32,20 @@ ht-degree: 34%
 * Experience PlatformAPI {#platform-apis}
    * [API の基本事項](api-fundamentals.md)
    * [APIリファレンスドキュメント](http://www.adobe.com/go/platform-api-reference-en)
-   * [Experience Platform API に対する認証](http://www.adobe.com/go/platform-api-authentication-en)
-* プラットフォームドキュメント {#documentation}
+   * [Authenticate and Access Platform APIsチュートリアル](api-authentication.md)
+* プラットフォームドキュメント{#documentation}
    * [ドキュメントの概要](documentation/overview.md)
-* Adobeエコシステムのプラットフォーム {#ecosystem}
+   * [ドキュメントの言語サポート](documentation/language-support.md)
+* Adobeエコシステムのプラットフォーム{#ecosystem}
    * [アプリケーションサービス](application-services.md)
    * [アプリケーションとインテリジェントサービス（ビデオ）](video/application-intelligent-services.md)
    * [Experience Cloudとのプラットフォームの統合（ビデオ）](video/experience-cloud-integrations.md)
+* ガバナンス、プライバシー、セキュリティ{#governance-privacy-security}
+   * [概要](./governance-privacy-security/overview.md)
+   * 同意管理 {#consent}
+      * IAB TCF 2.0 {#iab}
+         * [概要](./governance-privacy-security/consent/iab/overview.md)
+         * [同意データと基本設定データを取り込むためのデータセットの設定](./governance-privacy-security/consent/iab/dataset.md)
 * [ライセンス使用ダッシュボード](license-usage-dashboard.md)
 * [トラブルシューティングガイド](troubleshooting.md)
 * [ADLS Gen2の移行](adls2-gen2-migration.md)
