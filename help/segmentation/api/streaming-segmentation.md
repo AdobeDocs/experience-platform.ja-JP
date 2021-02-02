@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;streaming segmentation;Streaming segmentation;Continuous evaluation;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ストリーミングセグメント化；ストリーミングセグメント化；連続評価；
 solution: Experience Platform
 title: ストリーミングセグメント化
 topic: developer guide
 description: このドキュメントでは、ストリーミングセグメントAPIでストリーミングセグメントを使用する方法の例を示します。
 translation-type: tm+mt
-source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1329'
 ht-degree: 44%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->次のドキュメントでは、APIを使用したストリーミングセグメントの使用方法を説明します。 UIを使用したストリーミングセグメントの使用について詳しくは、『ストリー [ミングセグメント化UI』ガイドを参照してください](../ui/streaming-segmentation.md)。
+>次のドキュメントでは、APIを使用したストリーミングセグメントの使用方法を説明します。 UIを使用したストリーミングセグメントの使用については、[ストリーミングセグメント化UIガイド](../ui/streaming-segmentation.md)を参照してください。
 
-セグメント化のストリーミング [!DNL Adobe Experience Platform] により、お客様はデータの豊富性に重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性を軽減し、データのストリーミング到着時にセグメントの認定が行わ [!DNL Platform]れるようになりました。 With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+[!DNL Adobe Experience Platform]のセグメント化をストリーミングすると、お客様はデータの豊富さに重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性が軽減され、データのストリーミングが[!DNL Platform]に到着する際にセグメントの認定が行われるようになりました。 この機能を使用すると、ほとんどのセグメントルールを[!DNL Platform]に渡すデータと同時に評価できるようになりました。つまり、スケジュール済みのセグメントジョブを実行せずに、セグメントのメンバーシップが最新の状態に維持されます。
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -29,13 +29,13 @@ ht-degree: 44%
 
 ## はじめに
 
-This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+この開発者ガイドでは、ストリーミングセグメント化に関連する様々な[!DNL Adobe Experience Platform]サービスについて、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
-- [[!DNL Segmentation]](../home.md):データからセグメントやオーディエンスを作成する機能を提供し [!DNL Real-time Customer Profile] ます。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
+- [[!DNL Segmentation]](../home.md):デー [!DNL Real-time Customer Profile] タからセグメントやオーディエンスを作成できます。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
 
-The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
+以下の節では、[!DNL Platform] APIを正しく呼び出すために知っておく必要のある追加情報を紹介します。
 
 ### API 呼び出し例の読み取り
 
@@ -43,19 +43,19 @@ The following sections provide additional information that you will need to know
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -67,7 +67,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 >[!NOTE]
 >
->ストリーミングセグメントを機能させるには、組織でスケジュールされたセグメント化を有効にする必要があります。 スケジュール済みセグメントを有効にする方法については、「スケジュール済みセグメントを [有効にする」の節を参照してください。](#enable-scheduled-segmentation)
+>ストリーミングセグメントを機能させるには、組織でスケジュールされたセグメント化を有効にする必要があります。 スケジュール済みセグメントを有効にする方法については、[「スケジュール済みセグメントを有効にする」セクション](#enable-scheduled-segmentation)を参照してください。
 
 ストリーミングセグメントを使用してセグメントを評価するには、クエリが次のガイドラインに従う必要があります。
 
@@ -78,9 +78,9 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 | プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 |
 | プロファイルを参照する着信ヒット | 時間制限のない、1つの着信イベント、および1つ以上のプロファイル属性を参照するセグメント定義。 |
 | 相対的な時間枠内のプロファイルを参照する着信ヒット | 1つの受信イベントと1つ以上のプロファイル属性を参照するセグメント定義。 |
-| プロファイルを参照する複数のイベント | 過去24時間以内に複数のイベントを参照するセグメント定義 **には** 、1つ以上のプロファイル属性が含まれます。 |
+| プロファイルを参照する複数のイベント | 過去24時間以内に複数のイベント&#x200B;**を参照するセグメント定義には、1つ以上のプロファイル属性が含まれます。**（オプション） |
 
-次のシナリオでは、セグメント定義 **は** 、ストリーミングセグメントに対して有効になりません。
+次のシナリオでは、セグメント定義はストリーミングセグメントに対して&#x200B;**有効になりません**。
 
 - セグメント定義には、Adobe Audience Manager(AAM)のセグメントまたは特性が含まれます。
 - セグメント定義には、複数のエンティティ(マルチエンティティクエリ)が含まれます。
@@ -90,11 +90,11 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 | クエリタイプ | ガイドライン |
 | ---------- | -------- |
 | 単一イベントクエリ | ルックバックウィンドウに制限はありません。 |
-| イベント履歴のあるクエリ | <ul><li>ルックバックウィンドウは **1日に制限されます**。</li><li>イベント間に厳密な時間順序条件 **が存在する必要があります** 。</li><li>少なくとも1つの無効なイベントを持つクエリがサポートされます。 ただし、イベント全体を否定にする **ことはできません** 。</li></ul> |
+| イベント履歴のあるクエリ | <ul><li>ルックバックウィンドウは、**1日**&#x200B;に制限されます。</li><li>厳密な時間順序条件&#x200B;**は、イベント間に**&#x200B;が存在する必要があります。</li><li>少なくとも1つの無効なイベントを持つクエリがサポートされます。 ただし、イベント&#x200B;**全体を否定にすることはできません。**</li></ul> |
 
 ## ストリーミングセグメントで有効になっているすべてのセグメントを取得
 
-エンドポイントにGETリクエストを行うことで、IMS組織内でストリーミングセグメント化が有効になっているすべてのセグメントのリストを取得でき `/segment/definitions` ます。
+`/segment/definitions`エンドポイントにGETリクエストを行うことで、IMS組織内でのストリーミングセグメント化が有効になっているすべてのセグメントのリストを取得できます。
 
 **API 形式**
 
@@ -207,7 +207,7 @@ curl -X GET \
 
 ## ストリーミング対応セグメントの作成
 
-上記のいずれかのストリー [ミングセグメントタイプと一致する場合、セグメントは自動的にストリーミングが有効になります](#streaming-segmentation-query-types)。
+](#streaming-segmentation-query-types)に示した[ストリーミングセグメントタイプのいずれかと一致する場合、セグメントは自動的にストリーミングが有効になります。
 
 **API 形式**
 
@@ -242,7 +242,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->これは、標準の「セグメントの作成」リクエストです。 For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
+>これは、標準の「セグメントの作成」リクエストです。 セグメント定義の作成についての詳細は、[セグメント](../tutorials/create-a-segment.md)の作成のチュートリアルをお読みください。
 
 **応答** 
 
@@ -292,7 +292,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Scheduled evaluation can be enabled for sandboxes with a maximum of five (5) merge policies for [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
+>[!DNL XDM Individual Profile]に対して、最大5個のマージポリシーを持つサンドボックスに対して、スケジュールされた評価を有効にできます。 1つのサンドボックス環境内に[!DNL XDM Individual Profile]のマージポリシーが5つを超える場合、スケジュールされた評価を使用できません。
 
 ### スケジュールの作成
 
