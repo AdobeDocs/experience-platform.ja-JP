@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox developer guide
+keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックス開発者ガイド
 solution: Experience Platform
 title: サンドボックス API 開発者ガイド
 topic: developer guide
 description: この開発者ガイドでは、サンドボックス API を使用して Experience Platform のサンドボックスを管理する手順を説明し、様々な操作を実行するための API 呼び出し例を含んでいます。
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 100%
+source-wordcount: '376'
+ht-degree: 96%
 
 ---
 
@@ -29,7 +29,7 @@ IMS 組織のサンドボックスを管理するには「サンドボックス�
 
 ### 必要なヘッダーの値の収集
 
-このガイドでは、Platform API を正しく呼び出すために[認証に関するチュートリアル](../../tutorials/authentication.md)を完了している必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+このガイドでは、Platform API を正しく呼び出すために[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了している必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
