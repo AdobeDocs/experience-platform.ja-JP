@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32797.jpg
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '55'
 ht-degree: 7%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 7%
 
 # Adobe Experience Platform 概要
 
-このビデオでは、Experience Platformの概要と解決するビジネス上の課題について簡単に説明します。 詳しくは、 [Experience Platformの概要ドキュメントを参照してください](../home.md)。
+このビデオでは、Experience Platformの概要と解決するビジネス上の課題の概要を簡単に説明します。
+
+詳しくは、まず[Experience Platformの概要](../home.md)を読んでください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
