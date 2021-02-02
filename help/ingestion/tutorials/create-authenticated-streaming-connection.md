@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;home;popular topics;authenticated streaming connection;streaming connection;create streaming connection;create authenticated streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform；ホーム；人気のあるトピック；認証済みストリーミング接続；ストリーミング接続；ストリーミング接続の作成；認証済みストリーミング接続の作成；ストリーミング取り込み；取り込み；
 solution: Experience Platform
 title: 認証済みストリーミング接続の作成
 topic: tutorial
 type: Tutorial
 description: 認証済みデータ収集機能を使用すると、リアルタイム顧客プロファイルやIDなどのAdobe Experience Platformサービスで、信頼できるソースと信頼できないソースからのレコードを区別できます。
 translation-type: tm+mt
-source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 65%
+source-wordcount: '674'
+ht-degree: 63%
 
 ---
 
 
 # 認証済みストリーミング接続の作成
 
-Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. 個人を特定できる情報（PII）を送信するクライアントがレコードを区別するには、POST リクエストの一部としてアクセストークンを送信します。
+認証済みのデータ収集機能を使用すると、[!DNL Real-time Customer Profile]や[!DNL Identity]などのAdobe Experience Platformサービスで、信頼できるソースと信頼できないソースからのレコードを区別できます。 個人を特定できる情報（PII）を送信するクライアントがレコードを区別するには、POST リクエストの一部としてアクセストークンを送信します。
 
 ## はじめに
 
 Adobe Experience Platform へのデータストリーミングを開始するには、ストリーミング接続を登録する必要があります。ストリーミング接続を登録する場合、ストリーミングデータのソースなど、重要な情報をいくつか指定する必要があります。
 
-After registering a streaming connection, you, as the data producer, will have a unique URL which can be used to stream data to [!DNL Platform].
+ストリーミング接続を登録すると、データプロデューサーとして、[!DNL Platform]にデータをストリーミングするのに使用できる一意のURLが作成されます。
 
 このチュートリアルでは、様々な Adobe Experience Platform サービスに関する実用的な知識も必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):エクスペリエンスデータを [!DNL Platform] 編成するための標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):エクスペリエンスデータを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
 
 以下の節では、ストリーミング取得 API の呼び出しを正常におこなうために知っておく必要がある追加情報を示します。
@@ -37,19 +37,19 @@ After registering a streaming connection, you, as the data producer, will have a
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -179,7 +179,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 ## 次の手順
 
-Now that you have created an authenticated streaming connection, you can stream either time series or record data, allowing you to ingest data within [!DNL Platform]. To learn how to stream time series data to [!DNL Platform], go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to [!DNL Platform], go to the [streaming record data tutorial](./streaming-record-data.md).
+認証済みのストリーミング接続を作成したら、時系列またはデータを記録して、[!DNL Platform]内のデータを取り込むことができます。 時系列データを[!DNL Platform]にストリーミングする方法を学ぶには、[時系列データのストリーミングチュートリアル](./streaming-time-series-data.md)に進みます。 レコードデータを[!DNL Platform]にストリーミング再生する方法を学ぶには、[ストリーミングレコードデータのチュートリアル](./streaming-record-data.md)に進みます。
 
 ## 付録
 
