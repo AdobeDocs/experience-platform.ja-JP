@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager connector;Audience manager;audience manager
+keywords: Experience Platform；ホーム；人気の高いトピック；Audience Managerコネクタ；オーディエンスマネージャ；オーディエンスマネージャ
 solution: Experience Platform
 title: Audience Manager コネクタ
 topic: overview
-description: Adobe Audience Manager データコネクタは、Adobe Audience Manager で収集されたファーストパーティデータを Adobe Experience Platform にストリーミングします。Audience Managerコネクタは、3つのカテゴリのデータをプラットフォームに取り込みます。
+description: Adobe Audience Manager データコネクタは、Adobe Audience Manager で収集されたファーストパーティデータを Adobe Experience Platform にストリーミングします。Audience Managerコネクタは、2つのカテゴリのデータをプラットフォームに取り込みます。
 translation-type: tm+mt
-source-git-commit: e51f750dae2a76cd05076edfe8c6423efe949891
+source-git-commit: b88c358d128ba2016c9449fefc8862bd503c4aa5
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 59%
+source-wordcount: '886'
+ht-degree: 47%
 
 ---
 
 
 # Audience Manager コネクタ
 
-Adobe Audience Manager データコネクタは、Adobe Audience Manager で収集されたファーストパーティデータを Adobe Experience Platform にストリーミングします。Audience Manager コネクタは、次の 3 つのカテゴリのデータを Platform に取り込みます。
+Adobe Audience Managerデータコネクタは、Adobe Audience Managerで収集されたファーストパーティデータをAdobe Experience Platformにストリーミングします。 Audience Managerコネクタは、2つのカテゴリのデータをプラットフォームに取り込みます。
 
-- **リアルタイムデータ：** Audience Managerのデータ収集サーバーでリアルタイムに取り込まれるデータ。 このデータは、Audience Manager でルールベースの特性に入力するために使用され、最短の待ち時間で Platform に表示されます。
-- **プロファイルデータ：** Audience Managerでは、リアルタイムのオンボードデータを使用して顧客のプロファイルを引き出します。 これらのプロファイルは、セグメント認識で ID グラフと特性への入力に使用されます。
+- **リアルタイムデータ：Audience Managerのデータ収集サーバーでリアルタイムに取り込まれる** データ。このデータは、Audience Manager でルールベースの特性に入力するために使用され、最短の待ち時間で Platform に表示されます。
+- **プロファイルデータ：** Audience Managerは、リアルタイムでオンボードのデータを使用して顧客のプロファイルを引き出します。これらのプロファイルは、セグメント認識で ID グラフと特性への入力に使用されます。
 
 Audience Manager コネクタは、これらのデータカテゴリをエクスペリエンスデータモデル（XDM）スキーマにマッピングし、プラットフォームに送信します。リアルタイムデータはXDM ExperienceEventデータとして送信され、プロファイルデータはXDM Individualプロファイルとして送信されます。
 
@@ -30,7 +30,7 @@ XDM は公式に文書化された仕様で、Platform がカスタマーエク�
 
 XDM 標準に準拠することで、カスタマーエクスペリエンスデータを一律に取り込むことができ、データの配信と情報の収集が容易になります。
 
-For more information about how XDM is used in Experience Platform, see the [XDM System overview](../../../xdm/home.md). プロファイルや ExperienceEvent などの XDM スキーマの構造について詳しくは、[スキーマ構成の基礎](../../../xdm/schema/composition.md)を参照してください。
+Experience PlatformでのXDMの使い方について詳しくは、[XDM System overview](../../../xdm/home.md)を参照してください。 プロファイルや ExperienceEvent などの XDM スキーマの構造について詳しくは、[スキーマ構成の基礎](../../../xdm/schema/composition.md)を参照してください。
 
 ## XDM スキーマの例
 
@@ -58,12 +58,14 @@ Audience Managerデータセットはデフォルトでプロファイルに対�
 
 | データセット名 | 説明 |
 | ------------ | ----------- |
-| Audience Managerリアルタイム | このデータセットには、Audience Manager DCS エンドポイントで直接ヒットによって収集されたデータと、Audience Manager プロファイルの ID マップが含まれています。このデータセットを有効な状態にして、プロファイルの取り込みをおこないます。 |
-| Audience Managerのリアルタイムプロファイル更新 | このデータセットは、Audience Managerの特性とセグメントをリアルタイムでターゲティングできるようにします。 これには、エッジ地域ルーティング、特性、セグメントメンバーシップに関する情報が含まれています。このデータセットを有効な状態にして、プロファイルの取り込みをおこないます。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
-| Audience Manager デバイスデータ | ECID を持つデバイスデータと対応するセグメント認識を Audience Manager で集計したもの。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
-| Audience Manager デバイスプロファイルデータ | Audience Manager コネクタの診断に使用されます。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
-| Audience Manager 認証済みプロファイル | このデータセットには、Audience Manager で認証されたプロファイルが含まれています。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
-| Audience Manager 認証済みプロファイルメタデータ | Audience Manager コネクタの診断に使用されます。データセットには、データをバッチとして表示することはできません。 プロファイルの切り替えを有効にして、データを直接プロファイルに取り込むことができます。 |
+| AAMリアルタイム | このデータセットには、Audience Manager DCS エンドポイントで直接ヒットによって収集されたデータと、Audience Manager プロファイルの ID マップが含まれています。このデータセットを有効な状態にして、プロファイルの取り込みをおこないます。 |
+| AAMリアルタイムプロファイルの更新 | このデータセットは、Audience Managerの特性とセグメントをリアルタイムでターゲティングできるようにします。 これには、エッジ地域ルーティング、特性、セグメントメンバーシップに関する情報が含まれています。このデータセットを有効な状態にして、プロファイルの取り込みをおこないます。データセットには、データをバッチとして表示することはできません。 **[!UICONTROL プロファイル]**&#x200B;の切り替えを有効にして、データをプロファイルに直接取り込むことができます。 |
+| AAMデバイスデータ | ECID を持つデバイスデータと対応するセグメント認識を Audience Manager で集計したもの。データセットには、データをバッチとして表示することはできません。 **[!UICONTROL プロファイル]**&#x200B;の切り替えを有効にして、データをプロファイルに直接取り込むことができます。 |
+| AAMデバイスプロファイルデータ | Audience Manager コネクタの診断に使用されます。データセットには、データをバッチとして表示することはできません。 **[!UICONTROL プロファイル]**&#x200B;の切り替えを有効にして、データをプロファイルに直接取り込むことができます。 |
+| AAM認証済みプロファイル | このデータセットには、Audience Manager で認証されたプロファイルが含まれています。データセットには、データをバッチとして表示することはできません。 **[!UICONTROL プロファイル]**&#x200B;の切り替えを有効にして、データをプロファイルに直接取り込むことができます。 |
+| AAM認証済みプロファイルメタデータ | Audience Manager コネクタの診断に使用されます。データセットには、データをバッチとして表示することはできません。 **[!UICONTROL プロファイル]**&#x200B;の切り替えを有効にして、データをプロファイルに直接取り込むことができます。 |
+| AAMデバイスのデータバックフィル | 過去のデバイスデータを取り込むデータセット。 これには、ECIDと、Audience Managerで集計された対応するセグメントの実現が含まれます。 データセットには、データをバッチとして表示することはできません。 **[!UICONTROL プロファイル]**&#x200B;トグルを有効にして、データをプロファイルに直接取り込むことができます。 |
+| AAM認証済みプロファイルのバックフィル | 過去の認証済みデータを取り込まないデータセット。 Audience Managerが認証したプロファイルが含まれます。 データセットには、データをバッチとして表示することはできません。 **[!UICONTROL プロファイル]**&#x200B;トグルを有効にして、データをプロファイルに直接取り込むことができます。 |
 
 ### 接続
 
