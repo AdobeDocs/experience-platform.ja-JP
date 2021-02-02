@@ -1,14 +1,14 @@
 ---
-keywords: analytics destinations;analytics destination
+keywords: 解析の宛先；解析の宛先
 title: Analytics の宛先
 seo-title: Analytics の宛先
 description: Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 seo-description: Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 94%
+source-wordcount: '204'
+ht-degree: 93%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 94%
 
 Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 
-現在、リアルタイム顧客データプラットフォームは、以下に示す解析先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+現在、Adobe Experience Platformでは、以下に示す解析用のリンク先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
 
 - [Adform Web サイトトラッキング拡張機能](./adform.md)
 - [Adobe Analytics 拡張機能](./adobe-analytics.md)
