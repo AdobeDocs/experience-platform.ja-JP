@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform;home;popular topics;ecommerce;eCommerce
+keywords: Experience Platform；ホーム；人気のあるトピック；eコマース；eコマース
 solution: Experience Platform
 title: Flow Service APIを使用したeコマース接続の調査
 topic: overview
 description: このチュートリアルでは、Flow Service APIを使用してeコマース接続を調べます。
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '573'
 ht-degree: 19%
 
 ---
 
 
-# APIを使用したeコマース接続の調査 [!DNL Flow Service]
+# [!DNL Flow Service] APIを使用したeコマース接続の調査
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用してサードパーティのeCommerce **** 接続を調べます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、サードパーティ&#x200B;**[!UICONTROL eCommerce]**&#x200B;接続を調べます。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to an **[!UICONTROL eCommerce]** connection using the [!DNL Flow Service] API.
+次の節では、[!DNL Flow Service] APIを使用して&#x200B;**[!UICONTROL eCommerce]**&#x200B;接続に正しく接続するために知っておく必要がある追加情報について説明します。
 
 ### 接続IDの取得
 
-APIを使用した **[!UICONTROL eCommerce]**[!DNL Platform] 接続を調べるには、有効な接続IDが必要です。 操作する **[!UICONTROL eCommerce]** 接続に対する接続がまだない場合は、次のチュートリアルを使用して接続を作成できます。
+[!DNL Platform] APIを使用して&#x200B;**[!UICONTROL eCommerce]**&#x200B;接続を調べるには、有効な接続IDが必要です。 操作する&#x200B;**[!UICONTROL eCommerce]**&#x200B;接続に対する接続がまだない場合は、次のチュートリアルを使用して接続を作成できます。
 
 * [Shopify](../create/ecommerce/shopify.md)
 
@@ -40,13 +40,13 @@ APIを使用した **[!UICONTROL eCommerce]**[!DNL Platform] 接続を調べる�
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 ## データテーブルの調査
 
-eCommerce **** 接続IDを使用して、GETリクエストを実行することで、データテーブルを調査できます。 次の呼び出しを使用して、検査または取り込むテーブルのパスを探し [!DNL Platform]ます。
+**[!UICONTROL eCommerce]**&#x200B;接続IDを使用して、GETリクエストを実行することで、データテーブルを調査できます。 次の呼び出しを使用して、[!DNL Platform]に検査または取り込むテーブルのパスを探します。
 
 **API 形式**
 
@@ -66,7 +66,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{CONNECTION_ID}` | eCommerce **[!UICONTROL 接続]** ID。 |
+| `{CONNECTION_ID}` | **[!UICONTROL eコマース]**&#x200B;接続ID。 |
 
 **リクエスト**
 
@@ -81,7 +81,7 @@ curl -X GET \
 
 **応答** 
 
-正常な応答を返すと、eCommerce **[!UICONTROL 接続から一連のテーブルが返されます]** 。 次の手順で、に取り込む表を探し [!DNL Platform] 、 `path` プロパティをメモしておきます。このプロパティは、次の手順で指定して構造を検査する必要があります。
+正常な応答が返されると、**[!UICONTROL eCommerce]**&#x200B;接続からテーブルの配列が返されます。 [!DNL Platform]に取り込むテーブルを探し、その`path`プロパティをメモしておきます。これは、次の手順でその構造を調べるために指定する必要があるためです。
 
 ```json
 [
@@ -118,7 +118,7 @@ curl -X GET \
 
 ## テーブルの構造をInspectにする
 
-eCommerce **[!UICONTROL クエリからテーブルの構造を検査するには、]** GETリクエストを実行し、テーブルのパスを `object` 接続パラメーター内に指定します。
+**[!UICONTROL eCommerce]**&#x200B;クエリからテーブルの構造を検査するには、`object`接続パラメーター内にテーブルのパスを指定しながらGETリクエストを実行します。
 
 **API 形式**
 
@@ -128,8 +128,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | eCommerce **[!UICONTROL 接続の接続ID]** 。 |
-| `{TABLE_PATH}` | eCommerce **[!UICONTROL 接続内のテーブルのパス]** 。 |
+| `{CONNECTION_ID}` | **[!UICONTROL eCommerce]**&#x200B;接続の接続ID。 |
+| `{TABLE_PATH}` | **[!UICONTROL eCommerce]**&#x200B;接続内のテーブルのパス。 |
 
 **リクエスト**
 
@@ -144,7 +144,7 @@ curl -X GET \
 
 **応答** 
 
-正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、 `columns` 配列の要素内にあります。
+正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、`columns`配列の要素内にあります。
 
 ```json
 {
@@ -198,4 +198,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、 **[!UICONTROL eCommerce]** 接続を調べ、取り込むテーブルのパスを見つけ、その構造に関する情報を取得し [!DNL Platform]ました。 次のチュートリアルでこの情報を使用して、eCommerceデータを [収集し、プラットフォームに取り込むことができます](../collect/ecommerce.md)。
+このチュートリアルに従って、**[!UICONTROL eCommerce]**&#x200B;の接続を調べ、[!DNL Platform]に取り込むテーブルのパスを見つけ、その構造に関する情報を得ました。 この情報は、次のチュートリアルで[eコマースデータを収集し、プラットフォーム](../collect/ecommerce.md)に取り込む際に使用できます。
