@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;azure data lake storage;Azure
+keywords: Experience Platform；ホーム；人気のあるトピック；Azure Data LakeストレージGen2;Azure Data Lakeストレージ;Azure
 solution: Experience Platform
 title: Flow Service APIを使用してAzure Data LakeストレージGen2コネクタを作成する
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをAzure Data LakeストレージGen2（以下「ADLS Gen2」と呼ばれる）に接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 19%
+source-wordcount: '611'
+ht-degree: 18%
 
 ---
 
 
-# [!DNL Azure] APIを使用して&lt;a0/> Data LakeストレージGen2コネクタを作成する[!DNL Flow Service]
+# [!DNL Azure] APIを使用して[!DNL Flow Service] Data LakeストレージGen2コネクタを作成する
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
@@ -48,7 +48,7 @@ ht-degree: 19%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -124,4 +124,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、APIを使用してADLS Gen2接続を作成し、一意のIDを応答本文の一部として取得しました。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用したインジェストパーケットデータを使用して、[クラウドストレージを探索できます。
+このチュートリアルに従って、APIを使用してADLS Gen2接続を作成し、一意のIDを応答本文の一部として取得しました。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用してParketストレージを[調査できます。
