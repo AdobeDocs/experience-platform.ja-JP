@@ -1,43 +1,45 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: ジョブの書き出し — リアルタイム顧客プロファイルAPI
+keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
+title: ジョブAPIエンドポイントの書き出し
 topic: guide
+type: Documentation
+description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースからのデータを統合することで、Adobe Experience Platform内の個々の顧客の単一の表示を構築できます。 次に、プロファイルデータをデータセットにエクスポートし、さらに処理することができます。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1494'
-ht-degree: 65%
+source-wordcount: '1542'
+ht-degree: 63%
 
 ---
 
 
 # ジョブエンドポイントの書き出し
 
-[!DNL Real-time Customer Profile] 属性データと行動データの両方を含む複数のソースからのデータを統合することで、個々の顧客の単一の表示を構築できます。 Data available within [!DNL Profile] can then be exported to a dataset for further processing. 例えば、データのオーディエンスセグメントをアクティベーション用に書き出したり、プロファイル属性をレポート用に書き出したりでき [!DNL Profile] ます。
+[!DNL Real-time Customer Profile] 属性データと行動データの両方を含む複数のソースからのデータを統合することで、個々の顧客の単一の表示を構築できます。次に、プロファイルデータをデータセットにエクスポートし、さらに処理することができます。 例えば、[!DNL Profile]データのオーディエンスセグメントをアクティベーション用に書き出したり、プロファイル属性をレポート用に書き出したりできます。
 
-This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+このドキュメントでは、[プロファイルAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)を使用して書き出しジョブを作成し、管理する手順を順を追って説明します。
 
 >[!NOTE]
 >
->このガイドでは、の書き出しジョブの使用について説明し [!DNL Profile API]ます。 Adobe Experience Platformセグメントサービスの書き出しジョブを管理する方法について詳しくは、Segmentation API [の書き出しジョブに関するガイドを参照してください](../../profile/api/export-jobs.md)。
+>このガイドは、[!DNL Profile API]での書き出しジョブの使用について説明します。 Adobe Experience Platformセグメントサービスのエクスポートジョブを管理する方法について詳しくは、Segmentation API](../../profile/api/export-jobs.md)の[エクスポートジョブのガイドを参照してください。
 
-書き出しジョブの作成に加えて、 [!DNL Profile] エンドポイント(「 `/entities`[!DNL Profile Access]」とも呼ばれます)を使用してデータにアクセスすることもできます。 See the [entities endpoint guide](./entities.md) for more information. UIを使用して [!DNL Profile] データにアクセスする手順については、 [ユーザガイドを参照してください](../ui/user-guide.md)。
+書き出しジョブを作成するだけでなく、`/entities`エンドポイント（別名「[!DNL Profile Access]」）を使用して[!DNL Profile]データにアクセスすることもできます。 詳しくは、[エンティティのエンドポイントガイド](./entities.md)を参照してください。 UIを使用して[!DNL Profile]データにアクセスする手順については、[ユーザーガイド](../ui/user-guide.md)を参照してください。
 
 ## はじめに
 
-The API endpoints used in this guide are part of the [!DNL Real-time Customer Profile] API. 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[!DNL Real-time Customer Profile] APIの一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## エクスポートジョブの作成
 
-Exporting [!DNL Profile] data requires first creating a dataset into which the data will be exported, then initiating a new export job. これらの両方の手順は、Experience Platform API を使用して実行できます。前者はカタログサービス API を使用し、後者はリアルタイム顧客プロファイル API を使用します。各手順を完了するための詳細な手順については、以下の節で説明しています。
+[!DNL Profile]データのエクスポートでは、まずデータのエクスポート先となるデータセットを作成し、新しいエクスポートジョブを開始する必要があります。 これらの両方の手順は、Experience Platform API を使用して実行できます。前者はカタログサービス API を使用し、後者はリアルタイム顧客プロファイル API を使用します。各手順を完了するための詳細な手順については、以下の節で説明しています。
 
 ### ターゲットデータセットの作成
 
-When exporting [!DNL Profile] data, a target dataset must first be created. データセットを正しく設定して、エクスポートが正常に行われるようにすることが重要です。
+[!DNL Profile]データを書き出す場合は、まずターゲットデータセットを作成する必要があります。 データセットを正しく設定して、エクスポートが正常に行われるようにすることが重要です。
 
-重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。プロファイルデータをエクスポートするには、データセットが [!DNL XDM Individual Profile] 和集合スキーマ(`https://ns.adobe.com/xdm/context/profile__union`)に基づいている必要があります。 和集合スキーマは、同じクラスを共有するスキーマのフィールドを集計する、システム生成の読み取り専用スキーマです。 この場合、それが [!DNL XDM Individual Profile] クラスです。 和集合表示のスキーマについて詳しくは、『スキーマ構成の基本』ガイドの [和集合の節を参照してください](../../xdm/schema/composition.md#union)。
+重要な考慮事項の 1 つは、データセットのベースとなるスキーマ（以下の API サンプルリクエストの `schemaRef.id`）です。プロファイルデータをエクスポートするには、データセットが[!DNL XDM Individual Profile]和集合スキーマ(`https://ns.adobe.com/xdm/context/profile__union`)に基づいている必要があります。 和集合スキーマは、同じクラスを共有するスキーマのフィールドを集計する、システム生成の読み取り専用スキーマです。 この場合、[!DNL XDM Individual Profile]クラスです。 和集合表示のスキーマについて詳しくは、『スキーマ構成の基本』ガイド](../../xdm/schema/composition.md#union)の「和集合」の節を参照してください。[
 
-The steps that follow in this tutorial outline how to create a dataset that references the [!DNL XDM Individual Profile] Union Schema using the [!DNL Catalog] API. You may also use the [!DNL Platform] user interface to create a dataset that references the union schema. UI を使用するための手順に関しては、[この UI チュートリアルでセグメントのエクスポート](../../segmentation/tutorials/create-dataset-export-segment.md)について説明されていますが、UI の使用手順についても当てはまります。完了したら、このチュートリアルに戻り、[新しいエクスポートジョブを開始する](#initiate)手順に進むことができます。
+このチュートリアルでは、[!DNL Catalog] APIを使用して[!DNL XDM Individual Profile]和集合スキーマを参照するデータセットを作成する方法を説明します。 また、[!DNL Platform]ユーザーインターフェイスを使用して、和集合スキーマを参照するデータセットを作成することもできます。 UI を使用するための手順に関しては、[この UI チュートリアルでセグメントのエクスポート](../../segmentation/tutorials/create-dataset-export-segment.md)について説明されていますが、UI の使用手順についても当てはまります。完了したら、このチュートリアルに戻り、[新しいエクスポートジョブを開始する](#initiate)手順に進むことができます。
 
 互換性のあるデータセットが既に存在し、その ID がわかっている場合は、[新しいエクスポートジョブを開始する](#initiate)手順に直接進むことができます。
 
@@ -141,7 +143,7 @@ curl -X POST \
 | `mergePolicy` | *（オプション）*&#x200B;エクスポートされるデータを管理する結合ポリシーを指定します。複数のセグメントがエクスポートされる場合は、このパラメーターを含めます。 |
 | `mergePolicy.id` | 結合ポリシーの ID。 |
 | `mergePolicy.version` | 使用する結合ポリシーの特定のバージョンです。この値を省略すると、デフォルトで最新バージョンが使用されます。 |
-| `additionalFields.eventList` | *（オプション）* 次の設定を1つ以上指定して、子オブジェクトまたは関連付けられたオブジェクト用に書き出す時系列イベントフィールドを制御します。<ul><li>`eventList.fields`：エクスポートするフィールドを制御します。</li><li>`eventList.filter`：関連オブジェクトから取得される結果を制限する基準を指定します。エクスポートに必要な最小値（通常は日付）が基準として予期されます。</li><li>`eventList.filter.fromIngestTimestamp`:指定されたタイムスタンプの後に取り込まれたものへの時系列イベントのフィルター。 これは、イベント時間自体ではなく、イベントの取得時間です。</li></ul> |
+| `additionalFields.eventList` | *（オプション）* 次の設定を1つ以上指定して、子オブジェクトまたは関連付けられたオブジェクト用に書き出す時系列イベントフィールドを制御します。<ul><li>`eventList.fields`：エクスポートするフィールドを制御します。</li><li>`eventList.filter`：関連オブジェクトから取得される結果を制限する基準を指定します。エクスポートに必要な最小値（通常は日付）が基準として予期されます。</li><li>`eventList.filter.fromIngestTimestamp`:指定されたタイムスタンプの後に取り込まれたものへの時系列イベントのフィルター。これは、イベント時間自体ではなく、イベントの取得時間です。</li></ul> |
 | `destination` | **（必須）**&#x200B;エクスポートするデータの宛先情報：<ul><li>`destination.datasetId`：**（必須）**&#x200B;データのエクスポート先のデータセットの ID。</li><li>`destination.segmentPerBatch`：*（オプション）*&#x200B;指定しない場合、ブール値はデフォルトで `false` になります。値が `false` の場合、すべてのセグメント ID が単一のバッチ ID にエクスポートされます。値が `true` の場合、1 つのセグメント ID が 1 つのバッチ ID にエクスポートされます。値を `true` に設定すると、バッチエクスポートのパフォーマンスに影響を与える場合があることに注意してください。</li></ul> |
 | `schema.name` | **（必須）**&#x200B;データのエクスポート先のデータセットに関連付けられているスキーマの名前。 |
 
@@ -452,7 +454,7 @@ curl -X POST \
 
 ### 追加のエクスポートペイロードの例
 
-書き出しジョブの [開始に関する節に示すAPI呼び出しの例では、プロファイル](#initiate) （レコード）とイベント（時系列）の両方のデータを含むジョブを作成します。 この節では、1つのデータタイプまたは他のデータタイプを含むようにエクスポートを制限する追加のリクエストペイロードの例を示します。
+[書き出しジョブ](#initiate)を開始するセクションに示したAPI呼び出しの例では、プロファイル（レコード）とイベント（時系列）の両方のデータを含むジョブが作成されます。 この節では、1つのデータタイプまたは他のデータタイプを含むようにエクスポートを制限する追加のリクエストペイロードの例を示します。
 
 次のペイロードは、プロファイルデータのみを含む(イベントを含まない)エクスポートジョブを作成します。
 
@@ -502,4 +504,4 @@ curl -X POST \
 
 ### セグメントの書き出し
 
-また、書き出しジョブのエンドポイントを使用して、データの代わりにオーディエンスセグメントを書き出すこともでき [!DNL Profile] ます。 詳しくは、セグメント化APIの [書き出しジョブに関するガイドを参照してください](../../segmentation/api/export-jobs.md) 。
+また、書き出しジョブのエンドポイントを使用して、[!DNL Profile]データの代わりにオーディエンスセグメントを書き出すこともできます。 詳しくは、セグメント化API](../../segmentation/api/export-jobs.md)の[書き出しジョブのガイドを参照してください。
