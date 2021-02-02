@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
+keywords: Experience Platform；ホーム；人気のあるトピック；データガバナンス；データ使用ラベル；ポリシーサービス；データ使用ラベルユーザーガイド
 solution: Experience Platform
 title: データ使用状況ラベルのユーザーガイド
 topic: labels
 description: このユーザガイドでは、Adobe Experience Platformユーザインターフェイス内でデータ使用ラベルを使用する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '1119'
-ht-degree: 78%
+source-wordcount: '1136'
+ht-degree: 63%
 
 ---
 
 
 # データ使用状況ラベルのユーザーガイド
 
-このユーザーガイドでは、ユーザーインターフェイス内でデータ使用ラベルを操作する手順を説明し [!DNL Experience Platform] ます。 Before using the guide, please see the [[!DNL Data Governance] overview](../home.md) for a more robust introduction to the [!DNL Data Governance] framework.
+このユーザーガイドでは、[!DNL Experience Platform]ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。 このガイドを使用する前に、[[!DNL Data Governance] 概要](../home.md)を参照して、[!DNL Data Governance]フレームワークのより強力な紹介を確認してください。
 
 ## データセットレベルでのデータ使用状況ラベルの管理
 
@@ -29,21 +29,21 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->In this example, a dataset is created using a pre-configured [!DNL Experience Data Model] (XDM) schema. XDM スキーマについて詳しくは、「[XDM システムの概要](../../xdm/home.md)」と「[スキーマ構成の基本](../../xdm/schema/composition.md)」を参照してください。
+>この例では、事前設定済みの[!DNL Experience Data Model] (XDM)スキーマを使用してデータセットを作成します。 XDM スキーマについて詳しくは、「[XDM システムの概要](../../xdm/home.md)」と「[スキーマ構成の基本](../../xdm/schema/composition.md)」を参照してください。
 
-新しいデータセットを作成するには、「**[!UICONTROL データセット]**」ワークスペースの右上にある「**[!UICONTROL データセットを作成]**」をクリックします。
+新しいデータセットを作成するには、**[!UICONTROL データセット]**&#x200B;ワークスペースの右上隅にある「データセット&#x200B;]**を作成」を選択します。**[!UICONTROL 
 
 ![](../images/labels/create_dataset.png)
 
-「**[!UICONTROL データセットを作成]**」画面が表示されます。ここで、「**[!UICONTROL スキーマからデータセットを作成]**」をクリックします。
+「**[!UICONTROL データセットを作成]**」画面が表示されます。ここから、「**[!UICONTROL スキーマからデータセットを作成]**」を選択します。
 
 ![スキーマからデータセットを作成](../images/labels/dataset_create.png)
 
-「**[!UICONTROL スキーマを選択]**」画面が表示され、データセットの作成に使用できるすべてのスキーマが示されます。スキーマの横にあるラジオボタンをクリックして、スキーマを選択します。右側の「**[!UICONTROL スキーマ]**」セクションには、選択したスキーマの追加の詳細が表示されます。スキーマを選択したら、「**[!UICONTROL 次へ]**」をクリックします。
+「**[!UICONTROL スキーマを選択]**」画面が表示され、データセットの作成に使用できるすべてのスキーマが示されます。スキーマの横にあるラジオボタンを選択して、選択します。 右側の「**[!UICONTROL スキーマ]**」セクションには、選択したスキーマの追加の詳細が表示されます。スキーマを選択したら、「**[!UICONTROL 次へ]**」を選択します。
 
 ![データセットスキーマの選択](../images/labels/dataset_schema.png)
 
-「**[!UICONTROL データセットを設定]**」画面が表示されます。新しいデータセットの名前（必須）と説明（任意ですが推奨）を指定し、「**[!UICONTROL 完了]**」をクリックします。
+「**[!UICONTROL データセットを設定]**」画面が表示されます。新しいデータセットの名前（必須）と説明（任意、推奨）を入力し、**[!UICONTROL 完了]**&#x200B;を選択します。
 
 ![データセットの名前と説明を設定](../images/labels/dataset_configure.png)
 
@@ -53,15 +53,15 @@ ht-degree: 78%
 
 ### データセットへのデータ使用状況ラベルの追加 {#add-labels}
 
-「**[!UICONTROL データセット]**」ワークスペースで新しいデータセットを作成するか、リストから既存のデータセットを選択したら、「**[!UICONTROL データガバナンス]**」をクリックして「**[!UICONTROL データガバナンス]**」ワークスペースを開きます。ワークスペースでは、データセットレベルとフィールドレベルでデータ使用状況ラベルを管理できます。
+新しいデータセットを作成した後、または&#x200B;**[!UICONTROL データセット]**&#x200B;ワークスペースのリストーから既存のデータセットを選択した後、**[!UICONTROL データガバナンス]**&#x200B;を選択して、**[!UICONTROL データガバナンス]**&#x200B;ワークスペースを開きます。 ワークスペースでは、データセットレベルとフィールドレベルでデータ使用状況ラベルを管理できます。
 
 ![データセットの「データガバナンス」タブ](../images/labels/dataset_data_governance.png)
 
-データセットレベルでデータ使用状況ラベルを編集するには、まずデータセット名の横にある鉛筆アイコンをクリックします。
+データセット名の横にある鉛筆アイコンを選択して、データ使用ラベルを開始レベルで編集します。
 
 ![データセットレベルでラベルを編集](../images/labels/dataset_labels_edit_button.png)
 
-「**[!UICONTROL ガバナンスラベルを編集]**」ダイアログが開きます。ダイアログ内で、データセットに適用するラベルの横にあるボックスをオンにします。これらのラベルは、データセット内のすべてのフィールドに継承されることに注意してください。各ボックスをオンにすると、「**[!UICONTROL 適用されたラベル]**」ヘッダーが更新され、選択したラベルが表示されます。目的のラベルを選択したら、「**[!UICONTROL 変更を保存]**」をクリックします。
+「**[!UICONTROL ガバナンスラベルを編集]**」ダイアログが開きます。ダイアログ内で、データセットに適用するラベルの横にあるボックスをオンにします。これらのラベルは、データセット内のすべてのフィールドに継承されることに注意してください。各ボックスをオンにすると、「**[!UICONTROL 適用されたラベル]**」ヘッダーが更新され、選択したラベルが表示されます。必要なラベルを選択したら、「**[!UICONTROL 変更を保存]**」を選択します。
 
 <img alt="データセットレベルでガバナンスラベルを適用" src="../images/labels/apply-labels-dataset.png" width="700"><br>
 
@@ -79,7 +79,7 @@ ht-degree: 78%
 
 [データセットレベルでのデータ使用状況ラベルの追加と編集](#add-labels)のワークフローを継続して、そのデータセットの「**[!UICONTROL データガバナンス]**」ワークフロー内のフィールドレベルのラベルを管理することもできます。
 
-データ使用状況ラベルを個々のフィールドに適用するには、フィールド名の横にあるチェックボックスをオンにし、「**[!UICONTROL ガバナンスラベルを編集]**」をクリックします。
+個々のフィールドにデータ使用ラベルを適用するには、フィールド名の横にあるチェックボックスを選択し、「**[!UICONTROL Edit Governance Labels]**」を選択します。
 
 ![フィールドラベルの編集](../images/labels/fields_single_field.png)
 
@@ -87,7 +87,7 @@ ht-degree: 78%
 
 <img alt="個々のフィールドのガバナンスラベルの編集" src="../images/labels/field-label-inheritance.png" width="700"><br>
 
-使用する各ラベルの横にあるチェックボックスをオンにして、フィールドレベルのラベルを選択します。ラベルを選択すると、「**[!UICONTROL 適用されたラベル]**」ヘッダーが更新され、「**[!UICONTROL 選択されたフィールド]**」ヘッダーに表示されるフィールドに適用されるラベルが表示されます。フィールドレベルのラベルの選択が完了したら、「**[!UICONTROL 変更を保存]**」をクリックします。
+使用する各ラベルの横にあるチェックボックスを選択して、フィールドレベルのラベルを選択します。 ラベルを選択すると、「**[!UICONTROL 適用されたラベル]**」ヘッダーが更新され、「**[!UICONTROL 選択されたフィールド]**」ヘッダーに表示されるフィールドに適用されるラベルが表示されます。フィールドレベルのラベルの選択が完了したら、「**[!UICONTROL 変更を保存]**」を選択します。
 
 <img alt="フィールドレベルのラベルの適用" src="../images/labels/apply-labels-field.png" width="700"><br>
 
@@ -103,36 +103,36 @@ ht-degree: 78%
 
 ## カスタムラベルの管理
 
-UIの「 **[!UICONTROL ポリシー]** 」ワークスペース内に、独自のカスタム使用ラベルを作成でき [!DNL Experience Platform] ます。 左側のナビゲーションで「 **[!UICONTROL ポリシー]** 」をクリックし、「 **[!UICONTROL ラベル]** 」をクリックして既存のラベルのリストを表示します。 ここから、「ラベルを **[!UICONTROL 作成]**」をクリックします。
+[!DNL Experience Platform] UIの&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペース内に、独自のカスタム使用ラベルを作成できます。 左側のナビゲーションで「**[!UICONTROL ポリシー]**」を選択し、「**[!UICONTROL ラベル]**」を選択して、既存のラベルのリストを表示します。 ここから、「**[!UICONTROL ラベルを作成]**」を選択します。
 
 ![](../images/labels/create-label-btn.png)
 
-[ **[!UICONTROL ラベルを作成]** ]ダイアログが表示されます。 ここから、新しいラベルに次の情報を入力します。
+**[!UICONTROL ラベルを作成]**&#x200B;ダイアログが表示されます。 ここから、新しいラベルに次の情報を入力します。
 
-* **[!UICONTROL 識別子]**:ラベルの一意の識別子。 この値は参照用に使用するので、短く簡潔にする必要があります。
+* **[!UICONTROL 識別子]**:ラベルの一意の識別子。この値は参照用に使用するので、短く簡潔にする必要があります。
 * **[!UICONTROL 名前]**:ラベルのわかりやすい表示名。
 * **[!UICONTROL 説明]**:（オプション）詳細なコンテキストを提供するためのラベルの説明。
 
-完了したら、「**[!UICONTROL Create]**」をクリックします。
+終了したら、「**[!UICONTROL 作成]**」を選択します。
 
 ![](../images/labels/create-label.png)
 
-ダイアログが閉じ、新しく作成したカスタムラベルが「 **[!UICONTROL ラベル]** 」タブのリストに表示されます。
+ダイアログが閉じ、新しく作成したカスタムラベルが「**[!UICONTROL ラベル]**」タブのリストに表示されます。
 
 ![](../images/labels/label-created.png)
 
-データセットおよびフィールドの使用ラベルを編集する場合や、データ使用ポリシーを作成する場合に、「 **[!UICONTROL カスタムラベル]** 」でラベルを選択できるようになりました。
+データセットやフィールドの使用ラベルを編集する場合や、データ使用ポリシーを作成する場合に、「**[!UICONTROL カスタムラベル]**」でラベルを選択できるようになりました。
 
 <img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## 次の手順
 
-Now that you have added data usage labels at the dataset and field level, you can begin to ingest data into [!DNL Experience Platform]. 詳しくは、[データ取得ドキュメント](../../ingestion/home.md)を参照してください。
+データセットとフィールドレベルにデータ使用量ラベルを追加したら、[!DNL Experience Platform]にデータを取り込み始めます。 詳しくは、[データ取得ドキュメント](../../ingestion/home.md)を参照してください。
 
 適用したラベルに基づいてデータ使用状況ポリシーを定義することもできます。詳しくは、「[データ使用状況ポリシーの概要](../policies/overview.md)」を参照してください。
 
 ## その他のリソース
 
-The following video is intended to support your understanding of [!DNL Data Governance], and outlines how to apply labels to a dataset and individual fields.
+次のビデオでは、[!DNL Data Governance]について理解を深め、データセットと個々のフィールドにラベルを適用する方法の概要を説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
