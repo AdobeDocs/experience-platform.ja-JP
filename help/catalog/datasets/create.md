@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
+keywords: Experience Platform；ホーム；人気の高いトピック；データセット；データセット；データセットの作成；データセットの作成
 solution: Experience Platform
 title: API を使用したデータセットの作成
 topic: datasets
 description: このドキュメントでは、Adobe Experience Platform API を使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順を説明します。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 82%
+source-wordcount: '1268'
+ht-degree: 79%
 
 ---
 
@@ -22,10 +22,10 @@ ht-degree: 82%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [バッチインジェスト](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] データをバッチファイルとして取り込むことができます。
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
+以下の節では、[!DNL Platform] APIを正しく呼び出すために知っておく必要がある追加情報について説明します。
 
 ### API 呼び出し例の読み取り
 
@@ -33,19 +33,19 @@ The following sections provide additional information that you will need to know
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -61,9 +61,9 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 このチュートリアルは、[スキーマレジストリ API チュートリアル](../../xdm/tutorials/create-schema-api.md)が終わったところから始まり、チュートリアルの中で作成したロイヤルティメンバースキーマを利用します。
 
-If you have not completed the [!DNL Schema Registry] tutorial, please start there and continue with this dataset tutorial only once you have composed the necessary schema.
+[!DNL Schema Registry]チュートリアルを完了していない場合は、開始を行い、必要なスキーマを構成した後で、このデータセットチュートリアルを続けてください。
 
-The following call can be used to view the Loyalty Members schema you created during the [!DNL Schema Registry] API tutorial:
+[!DNL Schema Registry] APIチュートリアルで作成したロイヤルティメンバースキーマの表示には、次の呼び出しを使用できます。
 
 **API 形式**
 
@@ -215,7 +215,7 @@ curl -X POST \
 
 >[!NOTE]
 >
-> このチュートリアルの全例では、 [parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を使用します。JSON ファイル形式の使用例については、[バッチ取得開発ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。
+>このチュートリアルでは、[Apache Parket](https://parquet.apache.org/documentation/latest/)ファイル形式をすべての例で使用します。 JSON ファイル形式の使用例については、[バッチ取得開発ガイド](../../ingestion/batch-ingestion/api-overview.md)を参照してください。
 
 **応答** 
 
@@ -295,7 +295,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 ## ファイルのバッチへのアップロード
 
-アップロード用の新しいバッチが正常に作成されたら、特定のデータセットにファイルをアップロードできるようになりました。データセットを定義する際に、ファイル形式を parquet として指定したことを忘れないでください。したがって、アップロードするファイルはその形式である必要があります。
+アップロード用の新しいバッチが正常に作成されたら、特定のデータセットにファイルをアップロードできるようになりました。データセットを定義する際、ファイル形式をParketに指定したことに注意してください。 したがって、アップロードするファイルはその形式である必要があります。
 
 >[!NOTE]
 >
@@ -330,7 +330,7 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 ## シグナルバッチ完了
 
-すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。Signaling completion causes the service to create [!DNL Catalog] `DataSetFile` entries for the uploaded files and associate them with the batch generated previously. The [!DNL Catalog] batch is marked successful, which triggers any downstream flows that can then work on the now available data.
+すべてのデータファイルをバッチにアップロードした後、バッチに完了を知らせることができます。シグナリングの完了により、サービスでは、アップロードされたファイルに対して[!DNL Catalog] `DataSetFile`エントリが作成され、以前に生成されたバッチに関連付けられます。 [!DNL Catalog]バッチは成功とマークされ、これにより、現在使用可能なデータに対して使用できるダウンストリームフローがトリガーされます。
 
 **API 形式**
 
