@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;Query service;connect to query service;
+keywords: Experience Platform；ホーム；人気の高いトピック；Tableau;Tableau;クエリサービス；クエリサービス；クエリサービスに接続；
 solution: Experience Platform
 title: Tableau との接続
 topic: connect
@@ -7,8 +7,8 @@ description: このドキュメントでは、TableauとAdobe Experience Platfor
 translation-type: tm+mt
 source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 14%
+source-wordcount: '210'
+ht-degree: 13%
 
 ---
 
