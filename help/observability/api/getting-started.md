@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform;home;popular topics;date range
+keywords: Experience Platform；ホーム；人気のあるトピック；日付範囲
 solution: Experience Platform
 title: Observibility Insights API使用の手引き
 topic: developer guide
 description: Observibility Insights APIを使用すると、Adobe Experience Platformの様々な機能の指標データを取得できます。 このドキュメントでは、Observibility Insights APIを呼び出す前に知っておく必要があるコア概念の紹介を行います。
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 11%
+source-wordcount: '253'
+ht-degree: 10%
 
 ---
 
 
-# Getting started with the [!DNL Observability Insights] API
+# [!DNL Observability Insights] API使用の手引き
 
-この [!DNL Observability Insights] APIを使用すると、Adobe Experience Platformの様々な機能の指標データを取得できます。 This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Observability Insights] API.
+[!DNL Observability Insights] APIを使用すると、Adobe Experience Platformの様々な機能の指標データを取得できます。 このドキュメントでは、[!DNL Observability Insights] APIを呼び出す前に知っておく必要があるコア概念の紹介を行います。
 
 ## API 呼び出し例の読み取り
 
-The [!DNL Observability Insights] API documentation provides example API calls to demonstrate how to format your requests. この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。For information on the conventions used in documentation for sample API calls, see the section on how to read example API calls in the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).
+[!DNL Observability Insights] APIドキュメントには、リクエストをフォーマットする方法を示すAPI呼び出しの例が記載されています。 この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプルAPI呼び出しに関するドキュメントで使用される規則について詳しくは、[Experience Platformトラブルシューティングガイド](../../landing/troubleshooting.md)のAPI呼び出し例を読む方法に関する節を参照してください。
 
 ## 必須ヘッダー
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。 [!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 ## 次の手順
 
-APIを使用した呼び出しを開始するには、 [!DNL Observability Insights][指標エンドポイントガイドに進みます](./metrics.md)。
+[!DNL Observability Insights] APIを使用して呼び出しを開始するには、[metrics endpoint guide](./metrics.md)に進みます。
