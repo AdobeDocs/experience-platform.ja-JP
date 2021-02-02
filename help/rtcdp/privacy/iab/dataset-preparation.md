@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
+keywords: Experience Platform；ホーム；IAB;IAB 2.0；同意；同意
 solution: Experience Platform
-title: リアルタイム顧客データプラットフォームでのIAB TCF 2.0のサポート
+title: IAB TCF 2.0の同意データを取り込むためのデータセットの作成
 topic: privacy events
 description: このドキュメントでは、IAB TCF 2.0の同意データを収集するために必要な2つのデータセットを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: 0fea6c4d215e16941010e59817a2a099d775d2cd
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1653'
 ht-degree: 3%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 3%
 
 # IAB TCF 2.0の同意データを取り込むためのデータセットの作成
 
-IAB [!DNL Real-time Customer Data Platform][!DNL Transparency & Consent Framework] (TCF)2.0に従って顧客の同意データを処理するには、そのデータを、TCF 2.0の同意フィールドを含むスキーマのデータセットに送信する必要があります。
+[!DNL Real-time Customer Data Platform]がIAB [!DNL Transparency & Consent Framework] (TCF) 2.0に従って顧客の同意データを処理するには、そのデータを、TCF 2.0の同意フィールドを含むスキーマのデータセットに送信する必要があります。
 
 特に、TCF 2.0の同意データを取り込むには、次の2つのデータセットが必要です。
 
-* クラスに基づくデータセット。で使用可能になっ [!DNL XDM Individual Profile] てい [!DNL Real-time Customer Profile]ます。
-* クラスに基づくデータセット [!DNL XDM ExperienceEvent] 。
+* [!DNL XDM Individual Profile]クラスに基づくデータセット。[!DNL Real-time Customer Profile]での使用が有効になっています。
+* [!DNL XDM ExperienceEvent]クラスに基づくデータセット。
 
-このドキュメントでは、IAB TCF 2.0の同意データを収集するために、これら2つのデータセットを設定する手順を説明します。 TCF 2.0を設定するための完全なワークフローの概要につ [!DNL Real-time CDP] いては、 [IAB TCF 2.0コンプライアンスの概要を参照してください](./overview.md)。
+このドキュメントでは、IAB TCF 2.0の同意データを収集するために、これら2つのデータセットを設定する手順を説明します。 TCF 2.0用に[!DNL Real-time CDP]を設定する完全なワークフローの概要については、[IAB TCF 2.0コンプライアンスの概要](./overview.md)を参照してください。
 
 ## 前提条件
 
@@ -32,63 +32,110 @@ IAB [!DNL Real-time Customer Data Platform][!DNL Transparency & Consent Framewor
    * [Basics of schema composition](../../../xdm/schema/composition.md)：XDM スキーマの基本的な構成要素について説明しています。
    * [UIでのスキーマの作成](../../../xdm/tutorials/create-schema-ui.md):スキーマエディタの基本操作に関するチュートリアルです。
 * [Adobe Experience Platform・アイデンティティ・サービス](../../../identity-service/home.md):デバイスやシステム間で異なるデータソースの顧客IDをブリッジできます。
-* [リアルタイム顧客プロファイル](../../../profile/home.md):を使用 [!DNL Identity Service] すると、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。 [!DNL Real-time Customer Profile] data Lakeからデータを取り込み、顧客プロファイルを個別のデータストアに維持します。
+   * [ID名前空間](../../../identity-service/namespaces.md):顧客IDデータは、IDサービスで認識される特定のID名前空間で提供する必要があります。
+* [リアルタイム顧客プロファイル](../../../profile/home.md):を使用 [!DNL Identity Service] すると、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。[!DNL Real-time Customer Profile] data Lakeからデータを取り込み、顧客プロファイルを個別のデータストアに維持します。
 
-## 同意スキーマ構造 {#structure}
+## [!UICONTROL プライバシー] の詳細Mixinの構造  {#structure}
 
-TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2つのXDMミックスインがあります。レコードベースのデータ([!DNL XDM Individual Profile])用と時系列ベースのデータ([!DNL XDM ExperienceEvent])用に1つずつ、
+[!UICONTROL プライバシーの詳細]ミックスインは、TCF 2.0のサポートに必要な顧客の同意フィールドを提供します。 このミックスインには2つのバージョンがあります。1つは[!DNL XDM Individual Profile]クラスと互換性があり、もう1つは[!DNL XDM ExperienceEvent]クラスと互換性があります。
 
-| スキーマ | 説明 |
-| --- | --- |
-| プロファイルプライバシーミックスイン | このミックスインは、顧客の現在の同意の環境設定をキャプチャします。 有効なスキーマで使用する場合、このMixinで提供される値は、顧客のデータに対する同意の実施の適用方法に関する真実の源泉と見なされます。 [!DNL Profile] |
-| [!DNL Experience Event] プライバシーミックスン | このミックスインは、特定の時点における顧客の同意の好みをキャプチャします。 これらのフィールドに取り込まれたデータは、時間の経過に伴う顧客の同意の好みの変更を追跡するために使用できます。 |
+以下の節では、取り込み時に予想されるデータを含め、これらの各ミックスインの構造について説明します。
 
-各ミックスインの使用例は異なりますが、ミックスインで提供される特定のフィールドはほぼ同じです。 これらのフィールドについては、次の節で詳しく説明します。
+### プロファイルミックスイン{#profile-mixin}
 
-### 同意ミックスインフィールド {#privacy-mixin}
-
-各プライバシーミックスインの構造やフィールドの種類は異なりますが、共に属性を提供します。この属性は、TCF 2.0の強制を行うために必要なサブフィールドです。 `xdm:consentString` これらのフィールドの構造と、期待される値のタイプを以下に示します。
+[!DNL XDM Individual Profile]に基づくスキーマの場合、[!UICONTROL プライバシーの詳細]ミックスインには、顧客IDをIABの同意の環境設定にマッピングする、単一のマップタイプフィールド`xdm:identityPrivacyInfo`が用意されています。 次のJSONは、データ取り込み時に`xdm:identityPrivacyInfo`が期待するデータの種類の例です。
 
 ```json
 {
-  "xdm:consentString": {
-    "xdm:consentStandard": "IAB TCF",
-    "xdm:consentStandardVersion": "2.0",
-    "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
-    "xdm:gdprApplies": true,
-    "xdm:containsPersonalData": false
-  }
+  "xdm:identityPrivacyInfo": {
+      "ECID": {
+        "13782522493631189": {
+          "xdm:identityIABConsent": {
+            "xdm:consentTimestamp": "2020-04-11T05:05:05Z",
+            "xdm:consentString": {
+              "xdm:consentStandard": "IAB TCF",
+              "xdm:consentStandardVersion": "2.0",
+              "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
+              "xdm:gdprApplies": true,
+              "xdm:containsPersonalData": false
+            }
+          }
+        }
+      }
+    }
 }
 ```
 
-| プロパティ | 説明 |
-| --- | --- |
-| `xdm:consentString` | 顧客の更新された同意データおよびその他のコンテキスト情報が含まれます。 |
-| `xdm:consentStandard` | データが適用される同意フレームワーク。 TCF準拠の場合、値は「IAB TCF」にする必要があります。 |
-| `xdm:consentStandardVersion` | に示す同意フレームワークのバージョン番号 `xdm:consentStandard`です。 TCF 2.0に準拠する場合、値は「2.0」にする必要があります。 |
-| `xdm:consentStringValue` | 顧客が選択した同意設定に基づいて生成された同意文字列。 |
-| `xdm:gdprApplies` | GDPRがこの顧客に適用されるかどうかを示すboolean値。 TCF 2.0が強制されるためには、値を「true」に設定する必要があります。 含めない場合のデフォルトは「false」です。 |
-| `xdm:containsPersonalData` | 同意の更新に個人データが含まれているかどうかを示すboolean値です。 含めない場合のデフォルトは「false」です。 |
-
-## 顧客の同意スキーマの作成 {#create-schemas}
-
-プラットフォームUIで、左側のナビゲーションの **[!UICONTROL スキーマ]** をクリックし、 **[!UICONTROL スキーマ]** ワークスペースを開きます。 次のセクションの手順に従って、必要な各スキーマを作成します。
+例に示すように、`xdm:identityPrivacyInfo`の各ルートレベルキーは、IDサービスで認識されるID名前空間に対応しています。 次に、各名前空間プロパティに、その名前空間の顧客の対応するID値とキーが一致するサブプロパティが少なくとも1つ必要です。 この例では、顧客は`13782522493631189`のExperience CloudID(`ECID`)値で識別されます。
 
 >[!NOTE]
 >
->同意データを取り込むために使用する既存のXDMスキーマがある場合は、新しいスキーマを作成する代わりに、それらのデータを編集できます。 ただし、既存のスキーマを編集する場合は、変更を破るのを避けるために、スキーマの進化の [原則に従うこと](../../../xdm/schema/composition.md#evolution) が重要です。
+>上記の例では、1つの名前空間/値のペアを使用して顧客のIDを表していますが、他の名前空間にもキーを追加でき、各名前空間には複数のID値を設定できます。各ID値には、それぞれ独自のIAB同意の設定が含まれます。
 
-### レコードベースの同意スキーマの作成 {#profile-schema}
+識別値オブジェクト内には、`xdm:identityIABConsent`という単一のフィールドが含まれます。 このオブジェクトは、指定したID名前空間と値に対する顧客のIAB同意値を取り込みます。 このフィールドに含まれるサブプロパティを以下に示します。
 
-**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照] 」タブで、**[!DNL XDM Individual Profile] クラスに基づいて新しいスキーマを作成します。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
+| プロパティ | 説明 |
+| --- | --- |
+| `xdm:consentTimestamp` | [ISO 8601](https://www.ietf.org/rfc/rfc3339.txt)のタイムスタンプ。IAB同意値が変更されたときのタイムスタンプ。 |
+| `xdm:consentString` | 顧客の更新された同意データおよびその他のコンテキスト情報を含むオブジェクト。 このオブジェクトの必須サブプロパティについては、[同意文字列プロパティ](#consent-string)のセクションを参照してください。 |
+
+### イベントミックスイン{#event-mixin}
+
+[!DNL XDM ExperienceEvent]に基づくスキーマの場合、[!UICONTROL プライバシーの詳細]ミックスインには、単一の配列型フィールドが用意されています。`xdm:consentStrings`。 この配列の各項目は、プロファイルミックスインの`xdm:consentString`フィールドと同様、IAB同意文字列に必要なプロパティを含むオブジェクトである必要があります。 これらのサブプロパティの詳細については、[次のセクション](#consent-string)を参照してください。
+
+```json
+{
+  "xdm:consentStrings": [
+    {
+      "xdm:consentStandard": "IAB TCF",
+      "xdm:consentStandardVersion": "2.0",
+      "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
+      "xdm:gdprApplies": true,
+      "xdm:containsPersonalData": false
+    }
+  ]
+}
+```
+
+### 同意文字列プロパティ{#consent-string}
+
+[!UICONTROL プライバシーの詳細]ミックスインの両方のバージョンには、顧客のIAB同意文字列を説明する必要なフィールドを取り込む1つ以上のオブジェクトが必要です。 以下に、これらのプロパティについて説明します。
+
+| プロパティ | 説明 |
+| --- | --- |
+| `xdm:consentStandard` | データが適用される同意フレームワーク。 TCF準拠の場合、値は`IAB TCF`にする必要があります。 |
+| `xdm:consentStandardVersion` | `xdm:consentStandard`が示す同意フレームワークのバージョン番号です。 TCF 2.0に準拠するため、値は`2.0`にする必要があります。 |
+| `xdm:consentStringValue` | 顧客が選択した設定に基づいて、同意管理プラットフォーム(CMP)によって生成された同意文字列です。 |
+| `xdm:gdprApplies` | GDPRがこの顧客に適用されるかどうかを示すboolean値。 TCF 2.0が強制されるためには、値を`true`に設定する必要があります。 含めない場合は、デフォルトで`false`に設定されます。 |
+| `xdm:containsPersonalData` | 同意の更新に個人データが含まれているかどうかを示すboolean値です。 含めない場合は、デフォルトで`false`に設定されます。 |
+
+## 顧客の同意スキーマの作成{#create-schemas}
+
+同意データを取り込むデータセットを作成するには、まずXDMスキーマを作成し、これらのデータセットを基にしてデータセットを作成する必要があります。
+
+プラットフォームUIの左側のナビゲーションで&#x200B;**[!UICONTROL スキーマ]**&#x200B;を選択し、[!UICONTROL スキーマ]ワークスペースを開きます。 次のセクションの手順に従って、必要な各スキーマを作成します。
+
+>[!NOTE]
+>
+>同意データを取り込むために使用する既存のXDMスキーマがある場合は、新しいスキーマを作成する代わりに、それらのデータを編集できます。 ただし、既存のスキーマがリアルタイム顧客プロファイルでの使用を有効にしている場合、そのプライマリIDを、電子メールアドレスなどの利子ベースの広告で使用することを禁止する、直接識別可能なフィールドにすることはできません。 制限されているフィールドが不明な場合は、弁護士にお問い合わせください。
+>
+>また、既存のスキーマを編集する場合は、加算（改行なし）変更のみを行うことができます。 詳しくは、[スキーマ進化の原則](../../../xdm/schema/composition.md#evolution)の節を参照してください。
+
+### レコードベースの同意スキーマ{#profile-schema}を作成します
+
+**[!UICONTROL スキーマ]**&#x200B;ワークスペースで、「**[!UICONTROL スキーマを作成]**」を選択し、ドロップダウンから「**[!UICONTROL XDM個々のプロファイル]**」を選択します。
+
+![](../assets/iab/create-schema-profile.png)
+
+[!DNL Schema Editor]が表示され、キャンバスのスキーマの構造が示されます。 右側のレールを使用してスキーマの名前と説明を入力し、キャンバスの左側の&#x200B;**[!UICONTROL ミックスイン]**&#x200B;セクションの追加下の&#x200B;****&#x200B;を選択します。
 
 ![](../assets/iab/add-mixin-profile.png)
 
-**[!UICONTROL Mixin]** ダイアログが表示されます。 ここから、リストから **[!UICONTROL プロファイルのプライバシー]** を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、 **[!UICONTROL 追加「ミックスイン]**」をクリックします。
+**[!UICONTROL mixin追加]**&#x200B;ダイアログが表示されます。 ここから、リストから「**[!UICONTROL プライバシーの詳細]**」を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、**[!UICONTROL ミックスイン追加]**&#x200B;を選択します。
 
 ![](../assets/iab/add-profile-privacy.png)
 
-[スキーマエディタ]キャンバスが再表示され、追加した同意文字列フィールドの構造を確認できます。
+キャンバスが再表示され、`identityPrivacyInfo`フィールドがスキーマ構造に追加されたことが示されます。
 
 ![](../assets/iab/profile-privacy-structure.png)
 
@@ -96,81 +143,87 @@ TCF 2.0のサポートに必要な顧客の同意フィールドを提供する2
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL プロファイル用のデータ取得領域]
-* [!UICONTROL プロファイル担当者の詳細]
-* [!UICONTROL プロファイルの個人情報]
+* [!UICONTROL 人口統計の詳細]
+* [!UICONTROL 個人の連絡先の詳細]
 
 ![](../assets/iab/profile-all-mixins.png)
 
-での使用が既に有効になっている既存のスキーマを編集する場合は、「 [!DNL Real-time Customer Profile]保存 **[!UICONTROL 」をクリックして変更を確認した後で、同意スキーマに基づくデータセット]** の [作成に関する節に進みます](#dataset)。 新しいスキーマを作成する場合は、次のサブセクションで説明されている手順に従ってください。
+既に[!DNL Real-time Customer Profile]での使用が有効になっている既存のスキーマを編集する場合は、**[!UICONTROL 「保存]**」を選択して変更を確認し、[同意スキーマ](#dataset)に基づくデータセットの作成の節に進みます。 新しいスキーマを作成する場合は、次のサブセクションで説明されている手順に従ってください。
 
-#### スキーマを [!DNL Real-time Customer Profile]
+#### スキーマを[!DNL Real-time Customer Profile]で使用できるようにする
 
-受け取った同意データを特定の顧客プロファイル [!DNL Real-time CDP] に関連付けるには、その同意スキーマをで使用できるようにする必要があり [!DNL Real-time Customer Profile]ます。
+[!DNL Real-time CDP]が受け取った同意データを特定の顧客プロファイルに関連付けるには、[!DNL Real-time Customer Profile]での使用を許可スキーマを有効にする必要があります。
 
 >[!NOTE]
 >
->この節に示す例のスキーマでは、その `identityMap` フィールドを主IDとして使用しています。 別のフィールドを主IDとして設定する場合は、cookie IDなどの間接識別子を使用し、電子メールアドレスなどの利子ベースの広告で使用するのを禁止する直接識別子を使用しないようにしてください。 制限されているフィールドが不明な場合は、弁護士にお問い合わせください。
+>この節に示す例のスキーマでは、`identityMap`フィールドを主IDとして使用しています。 別のフィールドを主IDとして設定する場合は、cookie IDなどの間接識別子を使用し、電子メールアドレスなどの利子ベースの広告で使用するのを禁止する直接識別子を使用しないようにしてください。 制限されているフィールドが不明な場合は、弁護士にお問い合わせください。
 >
->スキーマのプライマリIDフィールドを設定する手順については、 [スキーマ作成のチュートリアルを参照してください](../../../xdm/tutorials/create-schema-ui.md#identity-field)。
+>スキーマのプライマリIDフィールドを設定する手順については、[スキーマ作成チュートリアル](../../../xdm/tutorials/create-schema-ui.md#identity-field)を参照してください。
 
-スキーマを有効にするに [!DNL Profile]は、左側のパネルでスキーマの名前をクリックし、右側のパネルで **[!UICONTROL スキーマのプロパティ]** ダイアログを開きます。 ここから、 **[!UICONTROL プロファイル]** 切り替えボタンをクリックします。
+[!DNL Profile]のスキーマを有効にするには、左側のパネルでスキーマの名前を選択し、右側のパネルの&#x200B;**[!UICONTROL スキーマのプロパティ]**&#x200B;ダイアログを開きます。 ここから、**[!UICONTROL プロファイル]**&#x200B;切り替えボタンを選択します。
 
 ![](../assets/iab/profile-enable-profile.png)
 
-プライマリIDが見つからないことを示すポーバーが表示されます。 プライマリIDがidentityMapフィールドに含まれるので、代替のプライマリIDを使用するチェックボックスを選択します。
+プライマリIDが見つからないことを示すポーバーが表示されます。 プライマリIDは`identityMap`フィールドに格納されるので、代替のプライマリIDを使用する場合は、チェックボックスをオンにします。
 
-<img src="../assets/iab/missing-primary-identity.png" width="600" /><br>
+![](../assets/iab/missing-primary-identity.png)
 
-最後に、「 **[!UICONTROL 保存]** 」をクリックして変更を確認します。
+最後に、「**[!UICONTROL 保存]**」を選択して変更を確認します。
 
 ![](../assets/iab/profile-save.png)
 
-### 時系列ベースの同意スキーマの作成 {#event-schema}
+### 時系列ベースの同意スキーマ{#event-schema}を作成します
 
-**[!UICONTROL スキーマ]** ワークスペースの「 **[!UICONTROL 参照]** 」タブで、 [!DNL XDM ExperienceEvent] クラスに基づいて新しいスキーマを作成します。 スキーマエディタ内でスキーマを開いたら、キャンバスの左側にある **[!UICONTROL Mixins]****[!UICONTROL (]** ミックスイン)セクションの下のをクリックします。
+**[!UICONTROL スキーマ]**&#x200B;ワークスペースで、「**[!UICONTROL スキーマを作成]**」を選択し、ドロップダウンから「**[!UICONTROL XDM ExperienceEvent]**」を選択します。
+
+![](../assets/iab/create-schema-event.png)
+
+[!DNL Schema Editor]が表示され、キャンバスのスキーマの構造が示されます。 右側のレールを使用してスキーマの名前と説明を入力し、キャンバスの左側の&#x200B;**[!UICONTROL ミックスイン]**&#x200B;セクションの追加下の&#x200B;****&#x200B;を選択します。
 
 ![](../assets/iab/add-mixin-event.png)
 
-**[!UICONTROL Mixin]** ダイアログが表示されます。 ここから、リストから **[!UICONTROL エクスペリエンスイベントのプライバシーミックスイン]** を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、 **[!UICONTROL 追加「ミックスイン]**」をクリックします。
+**[!UICONTROL mixin追加]**&#x200B;ダイアログが表示されます。 ここから、リストから「**[!UICONTROL プライバシーの詳細]**」を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、**[!UICONTROL ミックスイン追加]**&#x200B;を選択します。
 
 ![](../assets/iab/add-event-privacy.png)
 
-[スキーマエディタ]キャンバスが再表示され、追加された同意文字列フィールドが表示されます。
+キャンバスが再表示され、`consentStrings`配列がスキーマ構造に追加されたことが示されます。
 
 ![](../assets/iab/event-privacy-structure.png)
 
 ここから上記の手順を繰り返し、以下のミックスインをスキーマに追加します。
 
 * [!UICONTROL IdentityMap]
-* [!UICONTROL ExperienceEvent環境の詳細]
-* [!UICONTROL ExperienceEvent Webの詳細]
-* [!UICONTROL ExperienceEventの導入の詳細]
+* [!UICONTROL 環境の詳細]
+* [!UICONTROL Web詳細]
+* [!UICONTROL 実装の詳細]
 
-ミックスインを追加したら、「 **[!UICONTROL 保存]**」をクリックして終了します。
+ミックスインを追加したら、「**[!UICONTROL 保存]**」を選択して終了します。
 
 ![](../assets/iab/event-all-mixins.png)
 
-## 同意スキーマに基づいてデータセットを作成 {#datasets}
+## 同意スキーマに基づいてデータセットを作成する{#datasets}
 
-前述の必須スキーマごとに、顧客の同意データを最終的に取り込むデータセットを作成する必要があります。 スキーマに基づくデータセットはに対して有効にする必要がありますが、 [!DNL XDM Individual Profile] スキーマに基づくデータセットは [!DNL Real-time Customer Profile][!DNL XDM ExperienceEvent][!DNL Profile]有効にしないでください。
+前述の必須スキーマごとに、顧客の同意データを最終的に取り込むデータセットを作成する必要があります。 レコードスキーマに基づくデータセットは[!DNL Real-time Customer Profile]に対して有効にする必要がありますが、時系列スキーマ&#x200B;**に基づくデータセットは[!DNL Profile]-enabledにしないでください。**
 
-まず、左のナビゲーションで **[!UICONTROL Datasets]** (データセット **[!UICONTROL )を選択し、右上隅の「データセットを]** 作成」をクリックします。
+最初に、左のナビゲーションで「**[!UICONTROL データセット]**」を選択し、右上隅の「**[!UICONTROL データセットを作成]**」を選択します。
 
 ![](../assets/iab/dataset-create.png)
 
-On the next page, select **[!UICONTROL Create dataset from schema]**.
+次のページで、「**[!UICONTROL スキーマからデータセットを作成]**」を選択します。
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-「 **[!UICONTROL スキーマからデータセットを]** 作成 **[!UICONTROL 」ワークフローが表示されます。このワークフローは、]** スキーマを選択手順から開始します。 提供されたリストで、前に作成した同意スキーマの1つを探します。 オプションで検索を使用して結果を絞り込み、スキーマを見つけやすくできます。 スキーマの横にあるラジオボタンをクリックして選択し、「 **[!UICONTROL 次へ]** 」をクリックして続行します。
+**[!UICONTROL スキーマ]**&#x200B;からデータセットを作成ワークフローが表示され、**[!UICONTROL スキーマを選択]**&#x200B;の手順から開始します。 提供されたリストで、前に作成した同意スキーマの1つを探します。 オプションで検索バーを使用して結果を絞り込み、スキーマを見つけやすくできます。 目的のスキーマの横にあるラジオボタンを選択し、「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
 ![](../assets/iab/dataset-select-schema.png)
 
-**[!UICONTROL データセットの設定]**&#x200B;手順が表示されます。「 **[!UICONTROL 完了」をクリックする前に、データセットの一意でわかりやすい名前と説明を入力します]**。
+**[!UICONTROL データセットの設定]**&#x200B;手順が表示されます。「**[!UICONTROL 完了]**」を選択する前に、データセットの一意で識別しやすい名前と説明を指定します。
 
 ![](../assets/iab/dataset-configure.png)
 
-新しく作成したデータセットの詳細ページが表示されます。 データセットが [!DNL XDM ExperienceEvent] スキーマに基づいている場合は、プロセスが完了します。 データセットが [!DNL XDM Individual Profile] スキーマに基づいている場合は、プロセスの最後のステップとして、データセットを有効にしてで使用できるようにし [!DNL Real-time Customer Profile]ます。 右側のパネルで、 **[!UICONTROL プロファイル]** /切り替えボタンをクリックして、データセットを有効にします。
+新しく作成したデータセットの詳細ページが表示されます。 データセットが時系列スキーマに基づいている場合は、プロセスが完了します。 データセットがレコードスキーマに基づいている場合は、プロセスの最後の手順として、[!DNL Real-time Customer Profile]で使用するデータセットを有効にします。
+
+右側のパネルで、**[!UICONTROL プロファイル]**&#x200B;の切り替えを選択し、確認プロバーで&#x200B;**[!UICONTROL 有効]**&#x200B;を選択して、[!DNL Profile]のスキーマを有効にします。
 
 ![](../assets/iab/dataset-enable-profile.png)
 
@@ -180,7 +233,7 @@ On the next page, select **[!UICONTROL Create dataset from schema]**.
 
 このチュートリアルに従うと、顧客の同意データを収集するために使用できる2つのデータセットが作成されます。
 
-* ご使用の [!DNL Profile]スキーマに基づ [!DNL XDM Individual Profile] いて有効になったデータセット。
-* 有効になっていない [!DNL XDM ExperienceEvent] スキーマに基づくデータセット [!DNL Profile]。
+* リアルタイム顧客プロファイルでの使用が有効になっている、レコードベースのデータセットです。
+* [!DNL Profile]に対して有効になっていない時系列ベースのデータセット。
 
-これで、 [IAB TCF 2.0の概要に戻って](./overview.md#merge-policies) 、TCF 2.0準拠の設定プロセス [!DNL Real-time CDP] を続行できます。
+これで、[IAB TCF 2.0 overview](./overview.md#merge-policies)に戻り、TCF 2.0準拠用に[!DNL Real-time CDP]を設定するプロセスを続行できます。
