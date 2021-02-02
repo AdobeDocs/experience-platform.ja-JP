@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
+keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ラベルapi；ポリシーサービスapi；データ使用ラベルの概要
 solution: Experience Platform
 title: データ使用ラベルの概要
 topic: labels
 description: Adobe Experience Platformデータガバナンスを使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従ってそれぞれを分類できます。 このドキュメントでは、Experience Platformでのデータ使用ラベルの概要を説明します。
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '619'
 ht-degree: 15%
 
 ---
@@ -41,7 +41,7 @@ Adobeが提供するラベルに加えて、組織に独自のカスタムラベ
 
 [!DNL Experience Platform] には、Adobe Audience Managerとセグメントを共有する機能があります。Audience Managerセグメントに適用されたデータエクスポートコントロールは、[!DNL Experience Platform] [!DNL Data Governance]が認識する同等のラベルおよびマーケティングアクションに変換されます。
 
-特定のデータエクスポートコントロールが[!DNL Platform]のデータ使用ラベルにどのようにマッピングされるかについては、[Audience Managerドキュメント](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)を参照してください。
+特定のデータエクスポートコントロールが[!DNL Platform]のデータ使用ラベルにどのようにマッピングされるかについては、[Audience Managerドキュメント](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)を参照してください。
 
 ## [!DNL Experience Platform] {#manage-labels}でのデータ使用ラベルの管理
 
