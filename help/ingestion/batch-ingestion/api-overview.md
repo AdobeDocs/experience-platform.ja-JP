@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
+keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；取り込み；開発者ガイド；apiガイド；アップロード；取り込みパーケット；取り込みjson;
 solution: Experience Platform
 title: Batch Ingestion開発者ガイド
 topic: developer guide
 description: このドキュメントでは、バッチ取得 API の使用に関する包括的な概要を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '2675'
-ht-degree: 89%
+source-wordcount: '2698'
+ht-degree: 88%
 
 ---
 
@@ -28,8 +28,8 @@ ht-degree: 89%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 - [バッチ取得](./overview.md)：データをバッチファイルとして Adobe Experience Platform に取得することができます。
-- [[!DNL Experience Data Model (XDM)] システム](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [[!DNL Experience Data Model (XDM)] システム](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ### API 呼び出し例の読み取り
 
@@ -37,25 +37,25 @@ ht-degree: 89%
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むリクエストには、追加の `Content-Type` ヘッダーが必要な場合があります。各呼び出しに固有の受け入れられた値は、呼び出しパラメーターで提供されます。
 
 ## タイプ
 
-When ingesting data, it is important to understand how [!DNL Experience Data Model] (XDM) schemas work. XDM のフィールドタイプを様々な形式にマップする方法について詳しくは、『[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
+データを取り込む際には、[!DNL Experience Data Model] (XDM)スキーマの動作を理解することが重要です。 XDM のフィールドタイプを様々な形式にマップする方法について詳しくは、『[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
 
 データ取得には柔軟性があります。ターゲットスキーマ内のデータとタイプが一致しない場合、データは表現されたターゲットタイプに変換されます。  できない場合は、バッチが `TypeCompatibilityException` で失敗します。
 
@@ -65,16 +65,16 @@ When ingesting data, it is important to understand how [!DNL Experience Data Mod
 
 | 受信（行）とターゲット（列） | String | Byte | Short | Integer | Long | Double | Date | Date-Time | Object | Map |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| String | X | X | X | X | X | X | X | X |  |  |
-| Byte | X | X | X | X | X | X |  |  |  |  |
+| 文字列 | X | X | X | X | X | X | X | X |  |  |
+| バイト | X | X | X | X | X | X |  |  |  |  |
 | Short | X | X | X | X | X | X |  |  |  |  |
-| Integer | X | X | X | X | X | X |  |  |  |  |
-| Long | X | X | X | X | X | X | X | X |  |  |
-| Double | X | X | X | X | X | X |  |  |  |  |
-| Date |  |  |  |  |  |  | X |  |  |  |
-| Date-Time |  |  |  |  |  |  |  | X |  |  |
-| Object |  |  |  |  |  |  |  |  | X | X |
-| Map |  |  |  |  |  |  |  |  | X | X |
+| 整数 | X | X | X | X | X | X |  |  |  |  |
+| ロング | X | X | X | X | X | X | X | X |  |  |
+| 重複 | X | X | X | X | X | X |  |  |  |  |
+| 日付 |  |  |  |  |  |  | X |  |  |  |
+| 日時 |  |  |  |  |  |  |  | X |  |  |
+| オブジェクト |  |  |  |  |  |  |  |  | X | X |
+| マップ |  |  |  |  |  |  |  |  | X | X |
 
 >[!NOTE]
 >
@@ -194,7 +194,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
 
 **応答** 
 
@@ -329,7 +329,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
 
 **応答** 
 
@@ -504,7 +504,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | 指定した範囲の開始と終了を整数で指定します。 |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
 
 
 **応答** 
@@ -649,7 +649,7 @@ JSON 本文の「fileDescription」セクションの異なる部分の説明を
 | `header` | アップロードするファイルにはヘッダーが含まれている&#x200B;**必要**&#x200B;があります。スキーマの検証が行われるので、この値を true に設定する必要があります。また、ヘッダーにスペースを含めることは&#x200B;**できません**。ヘッダーにスペースが含まれている場合は、アンダースコアで置き換えてください。 |
 | `charset` | オプションのフィールド。その他のサポートされている文字セットには、「US-ASCII」と「ISO-8869-1」があります。空のままにすると、デフォルトで UTF-8 が使用されます。 |
 
-参照するデータセットには、上記のファイル記述ブロックが含まれ、レジストリ内の有効なスキーマを指す必要があります。そうしないと、ファイルは parquet にマスターされません。
+参照するデータセットには、上記のファイル記述ブロックが含まれ、レジストリ内の有効なスキーマを指す必要があります。そうしないと、ファイルはParketにマスターされません。
 
 ### バッチの作成
 
@@ -752,7 +752,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
 
 
 **応答** 
@@ -959,7 +959,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、などのローカルファイルパスで `Users/sample-user/Downloads/sample.json`す。 |
+| `{FILE_PATH_AND_NAME}` | アップロードしようとしているファイルのフルパスと名前。このファイルパスは、`Users/sample-user/Downloads/sample.json`などのローカルファイルパスです。 |
 
 **応答** 
 
@@ -1001,7 +1001,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### バッチ取得用のデータ変換
 
-In order to ingest a data file into [!DNL Experience Platform], the hierarchical structure of the file must comply with the [Experience Data Model (XDM)](../../xdm/home.md) schema associated with the dataset being uploaded to.
+データファイルを[!DNL Experience Platform]に取り込むためには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた[エクスペリエンスデータモデル(XDM)](../../xdm/home.md)スキーマに準拠している必要があります。
 
 XDM スキーマに準拠する CSV ファイルのマッピング方法に関する情報は、[サンプル変換](../../etl/transformations.md)ドキュメントに記載されている情報と、適切に書式設定された JSON データファイルの例を参照してください。このドキュメントのサンプルファイルは、次の場所にあります。
 
