@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
+keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；互換性；互換性モード；フィールドタイプ；
 solution: Experience Platform
 title: スキーマレジストリ開発者向けの付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 50%
+source-wordcount: '767'
+ht-degree: 48%
 
 ---
 
