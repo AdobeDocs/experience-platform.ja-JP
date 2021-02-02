@@ -5,10 +5,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: baf39df0e03170d6b2b5a151e753d4ad269a43fa
+source-git-commit: 2c0dc4d54dcd1dcd17ffec70dbe3b16bb45ee141
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 59%
+source-wordcount: '217'
+ht-degree: 58%
 
 ---
 
@@ -48,12 +48,14 @@ ht-degree: 59%
    * [地域とのやり取りの詳細](./data-types/geo-interaction-details.md)
    * [ジオシェイプ](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
+   * [ユーザー](./data-types/person.md)
    * [個人名](./data-types/person-name.md)
    * [電話番号](./data-types/phone-number.md)
    * [配置コンテキスト](./data-types/place-context.md)
    * [POIの詳細](./data-types/poi-details.md)
    * [POI相互作用](./data-types/poi-interaction.md)
    * [住所](./data-types/postal-address.md)
+   * [購読](./data-types/subscription.md)
 *  SchemasUI  {#ui}
    * [概要](./ui/overview.md)
    * [XDMリソースの参照](./ui/explore.md)
