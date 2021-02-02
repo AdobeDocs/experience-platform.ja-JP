@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;mixin;mixins;
+keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；ミックスイン；ミックスイン；
 solution: Experience Platform
 title: UIでのミックスインの作成と編集
 description: Experience Platformユーザーインターフェイスでミックスインを作成および編集する方法について説明します。
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '668'
 ht-degree: 5%
 
 ---
