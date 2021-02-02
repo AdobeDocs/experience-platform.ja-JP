@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；日付；日付関数；日付；
 solution: Experience Platform
 title: 日付関数
 topic: overview
 description: このドキュメントでは、データ準備で使用する日付関数を紹介します。
 translation-type: tm+mt
-source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
+source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 18%
+source-wordcount: '411'
+ht-degree: 17%
 
 ---
 
@@ -53,8 +53,8 @@ ht-degree: 18%
 | シンボル | 意味 | プレゼンテーション | 例 |
 | ------ | ------- | ------------ | ------- |
 | G | 元号 | テキスト | AD;アンノ・ドミニ；A |
-| Y | ISO週に基づく年 | 数値 | 1996; 96 |
-| y | 年 | 数値 | 2004; 04 |
+| Y | ISO週に基づく年 | 数値 | 1996;96 |
+| y | 年 | 数値 | 2004;04 |
 | 信用状 | 年の月 | 数/テキスト | 7;07;7月、7月J |
 | w | 年の週 | 数値 | 27 |
 | W | 月の週 | 数値 | 3 |
@@ -73,11 +73,11 @@ ht-degree: 18%
 | S | ミリ秒 | 数値 | 245 |
 | z | タイムゾーン | 一般的なタイムゾーン | 太平洋標準時；PST;GMT-08:00 |
 | Z | タイムゾーン | RFC 822タイムゾーン | -0800 |
-| X | タイムゾーン | ISO 8601タイムゾーン | -08; -0800; -08:00 |
+| X | タイムゾーン | ISO 8601タイムゾーン | -08;-0800;-08:00 |
 | V | タイムゾーンID | テキスト | America/Los_Angeles |
 | O | タイムゾーンのオフセット | テキスト | GMT+8 |
 | 質疑応答 | 年の四半期 | 数/テキスト | 3;03;Q3;第3四半期 |
 
 **例**
 
-式 `date(orderDate, 'yyyy-MM-dd')` は、「December 31st, 2020」の `orderDate` 値を「2020-12-31」のdatetime値に変換します。
+式`date(orderDate, "yyyy-MM-dd")`は、&quot;December 31st, 2020&quot;の`orderDate`値を&quot;2020-12-31&quot;のdatetime値に変換します。
