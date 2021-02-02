@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；データ重複排除 - 重複;重複排除 - 重複;
 solution: Experience Platform
 title: データ重複排除
 topic: queries
@@ -8,8 +8,8 @@ description: このドキュメントでは、エクスペリエンスイベン�
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 19%
+source-wordcount: '491'
+ht-degree: 18%
 
 ---
 
