@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: プラットフォーム；宛先；宛先ワークスペース；ワークスペース；ui；宛先ui;catalog；宛先カタログ；
 title: 宛先ワークスペース
 seo-title: 宛先ワークスペース
 description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
-seo-description: Real-time Customer Data Platformで、左側のナビゲーションバーから「Destinations」を選択して、宛先ワークスペースにアクセスします。
+seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択し、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '905'
-ht-degree: 47%
+source-wordcount: '910'
+ht-degree: 44%
 
 ---
 
 
 # 宛先ワークスペース {#destinations-workspace}
 
-In Real-time Customer Data Platform, select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
+Adobe Experience Platformで、左のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択して、[!UICONTROL 宛先]ワークスペースにアクセスします。
 
 [!UICONTROL 宛先]ワークスペースは、「[!UICONTROL カタログ]」、「[!UICONTROL 参照]」、「[!UICONTROL アカウント]」、「[!UICONTROL システム表示]」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 
@@ -23,18 +23,18 @@ In Real-time Customer Data Platform, select **[!UICONTROL Destinations]** from t
 
 ## [!UICONTROL カタログ] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Real-time CDP, that you can send data to.
+「**[!UICONTROL カタログ]**」タブには、プラットフォームで使用可能なすべての宛先のリストが表示されます。この宛先には、データを送信できます。
 
-Real-time CDPユーザー・インタフェースは、ターゲット・カタログ・ページに多数の検索およびフィルタ・オプションを提供します。
+プラットフォームユーザーインターフェイスは、宛先カタログページに多数の検索およびフィルターオプションを提供します。
 
 * ページの検索機能を使用して、特定の行き先を見つけます。
-* [!UICONTROL カテゴリコントロールを使用した宛先のフィルタリング] 。
-* 「す [!UICONTROL べての宛先] 」と「 [!UICONTROL 自分の宛先]」を切り替えます。 [ **[!UICONTROL All destinations]** ]を選択すると、使用可能なすべてのリアルタイムCDP宛先が表示されます。 「 **[!UICONTROL 自分の宛先]** 」を選択すると、接続を確立した宛先のみが表示されます。
-* 「表示 **[!UICONTROL 接続]** 」または「 **[!UICONTROL 拡張子]**」を選択します。 この2つのカテゴリの違いについて詳しくは、 [宛先のタイプとカテゴリを参照してください](../destination-types.md)。
+* [!UICONTROL カテゴリ]コントロールを使用して宛先をフィルターします。
+* [!UICONTROL すべての宛先]と[!UICONTROL 宛先]を切り替えます。 「**[!UICONTROL すべての宛先]**」が選択されている場合、使用可能なプラットフォームの宛先がすべて表示されます。 **[!UICONTROL 宛先]**&#x200B;を選択した場合は、接続を確立した宛先のみが表示されます。
+* 表示&#x200B;**[!UICONTROL 接続]**&#x200B;または&#x200B;**[!UICONTROL 拡張子]**&#x200B;を選択します。 2つのカテゴリの違いについては、「[宛先の種類とカテゴリ](../destination-types.md)」を参照してください。
 
 ![リンク先のフィルタリングと検索デモ](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-ターゲット・カードには、 **[!UICONTROL Configure]** ( **[!UICONTROL 設定)または]** Activate（アクティブ化）コントロールと、より多くのオプションを表示するセカンダリ・コントロールが含まれます。 これらはすべて次のとおりです。
+宛先カードには、**[!UICONTROL Configure]**&#x200B;または&#x200B;**[!UICONTROL Activate]**&#x200B;コントロールと、より多くのオプションを表示するセカンダリコントロールが含まれます。 これらはすべて次のとおりです。
 
 | 制御 | 説明 |
 ---------|----------
@@ -50,7 +50,7 @@ Real-time CDPユーザー・インタフェースは、ターゲット・カタ�
 
 ![宛先カタログオプション](../assets/ui/workspace/destination-right-rail.png)
 
-リンク先のカテゴリと各リンク先の情報について詳しくは、「 [リンク先カタログ](../catalog/overview.md) 」および「 [リンク先のタイプとカテゴリ」を参照してください](../destination-types.md)。
+宛先カテゴリーと各宛先の情報について詳しくは、[宛先カタログ](../catalog/overview.md)および[宛先の種類とカテゴリ](../destination-types.md)を参照してください。
 
 ## [!UICONTROL アカウント] {#accounts}
 
@@ -58,7 +58,7 @@ Real-time CDPユーザー・インタフェースは、ターゲット・カタ�
 
 >[!TIP]
 >
->「 ![Platform](../assets/ui/workspace/add-data-symbol.png) （プラットフォーム） **[!UICONTROL 」列の]** 「Data（データ）」ボタンを使用して、そのアカウントの新しい宛先接続を作成します。
+>**[!UICONTROL プラットフォーム]**&#x200B;列の追加![データボタン](../assets/ui/workspace/add-data-symbol.png)ボタンを使用して、そのアカウントの新しい宛先接続を作成します。
 
 ![「アカウント」タブ](../assets/ui/workspace/edit-account-destinations.png)
 
@@ -70,25 +70,25 @@ Real-time CDPユーザー・インタフェースは、ターゲット・カタ�
 | [!UICONTROL 宛先] | 宛先に対して作成された基本情報に接続された、一意に成功した宛先フローの数を表します。 |
 | [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
 
-また、アカウント情報を編集または更新できます。 「プラットフ ![ォーム](../assets/ui/workspace/pencil-icon.png) 」列の「アカウントを **** 編集」ボタンを選択して、アカウントの情報を編集します。
+また、アカウント情報を編集または更新できます。 **[!UICONTROL プラットフォーム]**&#x200B;列の![アカウントの編集ボタン](../assets/ui/workspace/pencil-icon.png)を選択し、アカウントの情報を編集します。
 
-接続の種類を使用するアカウントの場合は、「OAuthに再接続 `OAuth2` 」を選択して、 **** アカウントの資格情報を更新できます。
+`OAuth2`接続の種類を使用するアカウントの場合は、「**[!UICONTROL OAuthに再接続]**」を選択して、アカウントの資格情報を更新できます。
 
 ![OAUTHイメージ](../assets/ui/workspace/reconnect-oauth.png)
 
-接続の種類 `Access Key``ConnectionString` または接続を使用するアカウントの場合は、アクセスID、秘密鍵、接続文字列などの情報を含むアカウント認証情報を編集できます。
+`Access Key`または`ConnectionString`の接続タイプを使用するアカウントの場合は、アクセスID、秘密鍵、接続文字列などの情報を含むアカウント認証情報を編集できます。
 
 ![アカウント情報の画像](../assets/ui/workspace/edit-account-details.png)
 
-アカウントの詳細の編集が終了したら、「 **[!UICONTROL 保存]** 」を選択して更新を完了します。
+アカウントの詳細の編集が終了したら、「**[!UICONTROL 保存]**」を選択して更新を完了します。
 
 ## [!UICONTROL 参照] {#browse}
 
-「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. 「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
+「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。**[!UICONTROL 「有効]**」の切り替えがオンになっている宛先は有効に設定され、逆も同様に設定されます。 **[!UICONTROL セグメント]**/**[!UICONTROL 参照]**&#x200B;を選択し、検査するセグメントを選択して、データの流れる宛先を表示することもできます。 「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
 
 >[!TIP]
 >
->「 ![名前](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 」列の]** データボタンを使用して、目的のセグメントに追加するセグメントをアクティブ化します。
+>**[!UICONTROL 名前]**&#x200B;列の追加![データボタン](../assets/ui/workspace/add-data-symbol.png)ボタンを使用して、その宛先に対する追加のセグメントをアクティブ化します。
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
 
@@ -110,7 +110,7 @@ Real-time CDPユーザー・インタフェースは、ターゲット・カタ�
 
 ## [!UICONTROL システム表示]{#system-view}
 
-「**[!UICONTROL システム表示]**」タブには、リアルタイム顧客データプラットフォームで設定したアクティベーションフローの図が表示されます。
+「**[!UICONTROL システム表示]**」タブには、Adobe Experience Platformで設定したアクティベーションフローの図が表示されます。
 
 ![Data-flows1](../assets/ui/workspace/data-flows1.png)
 
