@@ -1,28 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Adobe Experience Platform API の基本
 topic: getting started
+description: このドキュメントでは、Experience PlatformAPIに関連する基盤となるテクノロジーと構文の一部について簡単に説明します。
 translation-type: tm+mt
-source-git-commit: b6d62492a60494deb848a88a9334e3ef20a93919
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 56%
+source-wordcount: '506'
+ht-degree: 53%
 
 ---
 
 
 # Adobe Experience Platform API の基本
 
-Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources. このドキュメントでは、これらのテクノロジーの概要のほか、詳細が記載されている外部ドキュメントへのリンクを提供します。
+Adobe Experience PlatformのAPIは、JSONベースの[!DNL Platform]リソースを効果的に管理するために理解する必要のある、基礎となるテクノロジーと構文をいくつか採用しています。 このドキュメントでは、これらのテクノロジーの概要のほか、詳細が記載されている外部ドキュメントへのリンクを提供します。
 
 ## JSON ポインター {#json-pointer}
 
-JSON ポインターは、JSON ドキュメント内の特定の値を識別するための標準化された文字列構文（[RFC 6901](https://tools.ietf.org/html/rfc6901)）です。JSON ポインターは、`/` 文字で区切られたトークンの文字列であり、オブジェクトのキーまたは配列のインデックスを指定します。トークンは文字列または数値です。JSON Pointer strings are used in many PATCH operations for [!DNL Platform] APIs, as described later in this document. JSON ポインターの詳細については、[JSON ポインターの概要ドキュメント](https://rapidjson.org/md_doc_pointer.html)を参照してください。
+JSON ポインターは、JSON ドキュメント内の特定の値を識別するための標準化された文字列構文（[RFC 6901](https://tools.ietf.org/html/rfc6901)）です。JSON ポインターは、`/` 文字で区切られたトークンの文字列であり、オブジェクトのキーまたは配列のインデックスを指定します。トークンは文字列または数値です。JSONポインタ文字列は、このドキュメントで後述するように、[!DNL Platform] APIの多くのPATCH操作で使用されます。 JSON ポインターの詳細については、[JSON ポインターの概要ドキュメント](https://rapidjson.org/md_doc_pointer.html)を参照してください。
 
 ### JSON スキーマオブジェクトの例
 
-以下のJSONは、JSONポインタ文字列を使用して参照できるフィールドを持つシンプルなXDMスキーマを表しています。 カスタムミックスインを使用して追加されたすべてのフィールド( `loyaltyLevel`など)は、 `_{TENANT_ID}` オブジェクトの下に名前が付けられますが、コアミックスインを使用して追加されたフィールド( `fullName`など)は、そうではありません。
+以下のJSONは、JSONポインタ文字列を使用して参照できるフィールドを持つシンプルなXDMスキーマを表しています。 カスタムミックスイン（`loyaltyLevel`など）を使用して追加されたすべてのフィールドは`_{TENANT_ID}`オブジェクトの下に名前が割り当てられますが、コアミックスイン（`fullName`など）を使用して追加されたフィールドは割り当てられません。
 
 ```json
 {
@@ -86,18 +87,18 @@ JSON ポインターは、JSON ドキュメント内の特定の値を識別す�
 | JSON ポインター | 解決先 |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (コアミックスインによって提供される `fullName` フィールドへの参照を返します)。 |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (カスタムMixinで提供される `loyaltyLevel` フィールドへの参照を返します)。 |
+| `"/properties/person/properties/name/properties/fullName"` | （コアミックスインが提供する`fullName`フィールドへの参照を返します）。 |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | （カスタムミックスインで提供される`loyaltyLevel`フィールドへの参照を返します）。 |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
->When dealing with the `xdm:sourceProperty` and `xdm:destinationProperty` attributes of [!DNL Experience Data Model] (XDM) descriptors, any `properties` keys must be **excluded** from the JSON Pointer string. See the [!DNL Schema Registry] API developer guide sub-guide on [descriptors](../xdm/api/descriptors.md) for more information.
+>[!DNL Experience Data Model] (XDM)記述子の`xdm:sourceProperty`および`xdm:destinationProperty`属性を処理する場合、`properties`キーはJSONポインタ文字列から&#x200B;**除外**&#x200B;する必要があります。 詳しくは、[descriptors](../xdm/api/descriptors.md)の[!DNL Schema Registry] API開発者ガイドのサブガイドを参照してください。
 
 ## JSON パッチ {#json-patch}
 
-There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch objects for their request payloads. JSON パッチは、JSON ドキュメントの変更を記述するための標準形式（[RFC 6902](https://tools.ietf.org/html/rfc6902)）です。この標準形式では、リクエスト本文でドキュメント全体を送信する必要なく、JSON の部分的なアップデートを定義できます。
+[!DNL Platform] APIのPATCH操作には、要求ペイロードにJSONパッチオブジェクトを受け入れるものが多数あります。 JSON パッチは、JSON ドキュメントの変更を記述するための標準形式（[RFC 6902](https://tools.ietf.org/html/rfc6902)）です。この標準形式では、リクエスト本文でドキュメント全体を送信する必要なく、JSON の部分的なアップデートを定義できます。
 
 ### JSON パッチオブジェクトの例
 
@@ -108,7 +109,7 @@ There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch 
 }
 ```
 
-* `op`：パッチ操作のタイプ。While JSON Patch supports several different operation types, not all PATCH operations in [!DNL Platform] APIs are compatible with every operation type. 使用可能な操作のタイプは次のとおりです。
+* `op`：パッチ操作のタイプ。JSONパッチは複数の異なる操作タイプをサポートしますが、[!DNL Platform] APIのPATCH操作はすべての操作タイプと互換性があるわけではありません。 使用可能な操作のタイプは次のとおりです。
    * `add`
    * `remove`
    * `replace`
@@ -125,4 +126,4 @@ JSON スキーマは、JSON データの構造を記述して検証するため�
 
 ## 次の手順
 
-This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. For more information on working with [!DNL Platform] APIs, including best practices and answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
+このドキュメントでは、[!DNL Experience Platform]のJSONベースのリソースの管理に関するテクノロジーと構文の一部を紹介しました。 [!DNL Platform] APIの操作（ベストプラクティスやよくある質問への回答など）について詳しくは、[プラットフォームのトラブルシューティングガイド](troubleshooting.md)を参照してください。
