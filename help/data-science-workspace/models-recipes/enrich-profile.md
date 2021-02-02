@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
+keywords: Experience Platform；機械学習モデル；データ科学ワークスペース；リアルタイム顧客プロファイル；人気の高いトピック；機械学習インサイト
 solution: Experience Platform
 title: 機械学習の洞察によるリアルタイム顧客プロファイルの強化
 topic: tutorial
@@ -8,8 +8,8 @@ description: このドキュメントでは、リアルタイム顧客プロフ�
 translation-type: tm+mt
 source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 24%
+source-wordcount: '635'
+ht-degree: 23%
 
 ---
 
