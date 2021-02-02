@@ -1,12 +1,12 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
+keywords: RTCDP;CDP；リアルタイム顧客データプラットフォーム；リアルタイム顧客データプラットフォーム；リアルタイムcdp;cdp;rtcdp
 title: リアルタイム顧客データプラットフォームの概要
-description: リアルタイム顧客データプラットフォームの実装を設定する際の例として、次のシナリオの例を使用します。
+description: リアルタイム顧客データプラットフォームの実装を設定する際の例として、次のシナリオをサンプルとして使用します。
 translation-type: tm+mt
-source-git-commit: d4a205b2e5fe4ca1f8d419eec3e7636e2ed0e5ef
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 85%
+source-wordcount: '2326'
+ht-degree: 83%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 85%
 この例は、 Experience Platform が提供するアドビのリアルタイム顧客データプラットフォームの次の機能を示しています。
 
 * 複数のソースからデータを取り込む
-* 単一の [!DNL real-time customer profile]
+* それらを1つの[!DNL real-time customer profile]に結合
 * デバイス間で一貫性のある、関連性の高いパーソナライズされたエクスペリエンスを提供します。
 
 ## 使用例
@@ -66,7 +66,7 @@ Adobe Experience Platform を利用した Real-time CDP を使用すると、Lum
 
 ![画像](assets/luma-site.png)
 
-顧客がナビゲーションするにつれて、データがリアルタイムで取得され、Adobe Analytics のレポートスイートに送信されるだけでなく、Adobe Experience Platform に直接送信されます。As data is collected, you begin to form a single view of the consumer, based on behavioral data in [!DNL Experience Platform's real-time customer profile].
+顧客がナビゲーションするにつれて、データがリアルタイムで取得され、Adobe Analytics のレポートスイートに送信されるだけでなく、Adobe Experience Platform に直接送信されます。データを収集すると、[!DNL Experience Platform's real-time customer profile]の行動データに基づいて、消費者の単一の表示を形成し始めます。
 
 Web サイトの訪問者の多くは、以前に Luma から購入したリピート客である可能性があります。新規訪問者とリピーターの両方、および既知の顧客に対応するために、メッセージングとオファーをパーソナライズすることが重要です。
 
@@ -76,7 +76,7 @@ Web サイトの訪問者の多くは、以前に Luma から購入したリピ�
 
 ![画像](assets/luma-sweatshirts.png)
 
-As the customer clicks to learn more about these products, these product views are collected in Adobe Analytics and sent to [!DNL Experience Platform].
+お客様が商品に関する詳細情報を得るたびに、これらの商品表示はAdobe Analyticsで収集され[!DNL Experience Platform]に送られます。
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -95,19 +95,19 @@ Luma は、訪問者の行動を Adobe Experience Platform のユーザープロ
 * 匿名閲覧データ
 * Sarah Rose のアカウントに関連付けられた既存のデータ
 
-Both identies are combined into a single profile in [!DNL Experience Platform]. Luma は今、この消費者を統一的に見ています。
+[!DNL Experience Platform]では、両方のIDが1つのプロファイルに結合されます。 Luma は今、この消費者を統一的に見ています。
 
-サイトのメンズセクションで匿名訪問者が閲覧した行動に基づいて、顧客が男性であると想定されていた可能性があります。ログイン後、Luma は Sarah Rose を認識します。Luma uses the power of the [!DNL Real-time Customer Profile] to refine the messaging delivered to her across channels.
+サイトのメンズセクションで匿名訪問者が閲覧した行動に基づいて、顧客が男性であると想定されていた可能性があります。ログイン後、Luma は Sarah Rose を認識します。Lumaは[!DNL Real-time Customer Profile]の力を活用して、チャネル間で配信されるメッセージを絞り込みます。
 
 ## ユーザーエクスペリエンスのパーソナライズ
 
 Sarah はブロンズ会員であることを感謝して特典の詳細や会員ステータスとポイントの向上に関する情報を提供する、ロイヤリティープログラムのメッセージを受け取ります。
 
-その後、ホームページをクリックして、閲覧を続けます。
+彼女はホームページに移動し、もう少し見てみる。
 
 ![画像](assets/luma-personal.png)
 
-Sarah receives a personalized home page experience that is dynamically delivered, based on her [!DNL Real-time Customer Profile] in Adobe Experience Platform.
+Sarahは、Adobe Experience Platformにいる[!DNL Real-time Customer Profile]に基づいて動的に配信される、パーソナライズされたホームページエクスペリエンスを受信します。
 
 Adobe Target の Adobe Sensei によるパーソナライズ機能により、ランニング用のアパレルやギアに対する過去の購入とアフィニティが考慮され、関連するコンテンツが表示されます。Luma はまた、最近閲覧した男性向けのランニングギアに沿って、男性向けカタログの内容を調整します。
 
@@ -142,11 +142,11 @@ Luma のチームは、顧客の行動とデータをすべて 1 か所にまと
 
 ## データソースの設定
 
-新しいデータソース [!DNL Real-time Customer Data Platform] をプラットフォームに取り込む場合に使用します。 Real-time CDP には、数回のクリックでプロファイルに追加できるデータソースのカタログが含まれます。
+[!DNL Real-time Customer Data Platform]を使用して、新しいデータソースをプラットフォームに取り込みます。 リアルタイムCDPには、迅速かつ容易にプロファイルに追加できるデータソースのカタログが含まれます。
 
 ![画像](assets/luma-source-cat.png)
 
-例えば、Luma の CRM データを取り込むには、*CRM* でカタログをフィルターし、*CRM* を含むすべてのあらかじめ用意されているコネクタが表示されます 。データを追加するに [!DNL Microsoft Dynamics CRM] は：
+例えば、Luma の CRM データを取り込むには、*CRM* でカタログをフィルターし、*CRM* を含むすべてのあらかじめ用意されているコネクタが表示されます 。[!DNL Microsoft Dynamics CRM]データを追加するには：
 
 1. 接続を許可します。
 
@@ -158,7 +158,7 @@ Luma のチームは、顧客の行動とデータをすべて 1 か所にまと
 
    例えば、「**[!UICONTROL 連絡先]**」を選択します。連絡先データのプレビューが自動的に読み込まれ、すべてが期待どおりに表示されることを確認できます。
 
-   Adobe Experience platform takes a lot of the manual work out of this process by auto-mapping standard fields to the [!DNL Experience Data Model] (XDM) profile schema.
+   Adobe Experience Platformは、標準フィールドを[!DNL Experience Data Model](XDM)プロファイルスキーマに自動マッピングすることで、このプロセスから手作業の多くを取り除きます。
 
 1. フィールドマッピングを確認します。
 
@@ -171,15 +171,15 @@ Luma のチームは、顧客の行動とデータをすべて 1 か所にまと
 
    ![画像](assets/luma-source-sched.png)
 
-これで完了です。You just added [!DNL Microsoft CRM] as a data source into [!DNL Experience Platform].
+これで完了です。[!DNL Microsoft CRM]をデータソースとして[!DNL Experience Platform]に追加しました。
 
 ### 取り込んだデータに使用ポリシーのラベルを付ける
 
-Luma　には、収集した特定の種類の情報の使用を制限する内部ポリシーが多数あります。また、データの使用に関する法的な問題やプライバシーに関する問題にも準拠する必要があります。Using Adobe Experience Platform [!DNL Data Governance], predefined data usage labels can be applied to datasets (and specific fields within those datasets), allowing Luma to categorize their data according to specific usage restrictions.
+Luma　には、収集した特定の種類の情報の使用を制限する内部ポリシーが多数あります。また、データの使用に関する法的な問題やプライバシーに関する問題にも準拠する必要があります。Adobe Experience Platform[!DNL Data Governance]を使用すると、定義済みのデータ使用ラベルをデータセット（およびこれらのデータセット内の特定のフィールド）に適用でき、Lumaは特定の使用制限に従ってデータを分類できます。
 
 ![](assets/governance-labels.png)
 
-Once data usage labels have been applied, Luma can then use [!DNL Data Governance] to create data usage policies. データ使用ポリシーは、特定のラベルを含むデータで実行可能なアクションの種類を記述するルールです。ポリシー違反を構成する Real-time CDP でアクションを実行しようとすると、アクションを実行できず、どのポリシーに違反したかとその理由を示すアラートが表示されます。
+データ使用ラベルが適用されると、Lumaは[!DNL Data Governance]を使用してデータ使用ポリシーを作成できます。 データ使用ポリシーは、特定のラベルを含むデータで実行可能なアクションの種類を記述するルールです。ポリシー違反を構成する Real-time CDP でアクションを実行しようとすると、アクションを実行できず、どのポリシーに違反したかとその理由を示すアラートが表示されます。
 
 ## 特定の顧客データの統合
 
@@ -191,16 +191,16 @@ Luma が所有する Sarah に関するプロファイル情報がすべて表�
 
 | カテゴリ | 説明 |
 |---|---|
-| ID | Shows the identities that have been linked together in [!DNL Platform] from Sarah&#39;s interactions with Luma across channels and devices. Web サイトから Sarah の ECID が表示されます。Her identity also includes the ECID from her mobile app, her email ID, a CRM ID from the recently added [!DNL Microsoft Dynamics] dataset, and a loyalty ID passed into Adobe Experience Platform from the Luma loyalty system. |
+| ID | Sarahがチャネルやデバイス間でLumaとやり取りした際に[!DNL Platform]内で相互にリンクされたIDを表示します。 Web サイトから Sarah の ECID が表示されます。また、モバイルアプリのECID、電子メールID、最近追加された[!DNL Microsoft Dynamics]データセットのCRM ID、Luma忠誠度システムからAdobe Experience Platformに渡される忠誠度IDなどもこのIDに含まれます。 |
 | イベント | Sarah の Luma ブランドとのインタラクションデータをすべて表示します。これには、Sarah が先ほど閲覧した品目、過去に閲覧したもの、受信した電子メール、コールセンターとのやりとり、またそれぞれのインタラクションが発生したチャネルとデバイスが含まれます。 |
 
 Real-time CDP プロファイルは、Luma マーケティングチームのワークフローを数週間から数分に短縮し、この 360 度の顧客ビューに基づいてパーソナライズ機能の可能性をアンロックします。このプロファイルは、サインイン前にサイトを閲覧した際の行動データと、既存の顧客プロファイルを結合し、Sarah の包括的なビューを作成します。
 
-The marketing team can use this enhanced, [!DNL Real-time Customer Profile] to better personalize Sarah&#39;s experience and increase her brand loyalty with Luma.
+マーケティングチームは、この強化された[!DNL Real-time Customer Profile]機能を使用して、Sarahの体験をパーソナライズし、Lumaとのブランドへの忠誠度を高めることができます。
 
 ## セグメント
 
-The powerful Adobe Experience Platform segmentation capabilities enable marketers to combine attributes, events and existing segments, based on data captured in the [!DNL Real-time Customer Profile].
+強力なAdobe Experience Platform分類機能により、マーケターは、[!DNL Real-time Customer Profile]でキャプチャされたデータに基づいて、属性、イベントおよび既存のセグメントを組み合わせることができます。
 
 <!-- ![image](assets/luma-segments.png) -->
 
@@ -233,7 +233,7 @@ Sarah が買い物かごにギフトと思われる品物を追加したまま�
 
 「買い物かごの放棄者へのオファー」セグメントを追加すると、このセグメントに含まれる人の数をおおまかに確認できます。様々なチャネルに対して対応し、パーソナライズ機能を活用することができます。
 
-「**[!UICONTROL 宛先に送信]**」をクリックします。
+「**[!UICONTROL 宛先に送信]**」を選択します。
 
  Real-time CDP では、Luma はオーディエンスセグメントにシームレスに対応して、パーソナライズできます。\
 以下に、Luma がこの宛先を送信する際に使用できるすべての宛先（アドビソリューションとアドビ以外のソリューションの両方）を示します。
@@ -257,9 +257,9 @@ Sarah が買い物かごにギフトと思われる品物を追加したまま�
 
 >[!NOTE]
 >
->必要に応じて、日付フィールドをクリックすると、90 日後に自動的にスケジュールされます。
+>日付フィールドを選択すると、90日後に自動的にスケジュールされます。
 
-「**[!UICONTROL 保存]**」をクリックし 、次のページに移動します。
+「**[!UICONTROL 保存]**」を選択して、次のページに移動します。
 
 このオーディエンスの顧客が購入すると、その顧客のこのオーディエンスへのメンバーシップはリアルタイムで抑制されます。彼らのステータスが変わり、オーディエンス対象外となります。
 
@@ -271,7 +271,7 @@ Adobe Experience Platform　には、セグメントを特定の宛先に対し�
 
 アクティビティがポリシーに違反する場合は、警告が表示されます。この警告には、ポリシーが違反された理由と、違反の解決方法を識別するのに役立つデータ系列情報が含まれています。
 
-With these controls, [!DNL Experience Platform] helps Luma comply with regulations and market responsibly. これらのコントロールは柔軟性が高く、Luma のセキュリティチームやガバナンスチームの要件に合わせて変更することができます。これにより、既知顧客データや不明な顧客データの管理に関する地域の要件や組織の要件に自信を持って対応できます。
+[!DNL Experience Platform]は、ルーマが規制に準拠し、責任を持って市場に出るのに役立ちます。 これらのコントロールは柔軟性が高く、Luma のセキュリティチームやガバナンスチームの要件に合わせて変更することができます。これにより、既知顧客データや不明な顧客データの管理に関する地域の要件や組織の要件に自信を持って対応できます。
 
 ### データフローキャンバス
 
@@ -283,7 +283,7 @@ With these controls, [!DNL Experience Platform] helps Luma comply with regulatio
 
 Sarah がモバイルデバイスでソーシャルメディアサイトを閲覧すると、Luma の広告が表示されます。広告では買い物かごに残した品物があることをリマインドします。
 
-その後、Sarah がメールをチェックすると、再ターゲット化されたメッセージがあります。Sarah はそのメッセージから Luma へのリンクをクリックします。
+その後、Sarah がメールをチェックすると、再ターゲット化されたメッセージがあります。Lumaへのリンクを電子メールから選択します。
 
 このリンクから Sarah は Luma のモバイルホームページに移動して、Adobe Target が提供するパーソナライズされたエクスペリエンスを閲覧します。
 
