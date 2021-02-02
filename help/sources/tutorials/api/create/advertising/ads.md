@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;google adwords;Google AdWords;adwords
+keywords: Experience Platform；ホーム；人気のあるトピック；google adwords;Google AdWords;adwords
 solution: Experience Platform
 title: Flow Service APIを使用してGoogle AdWordsコネクタを作成する
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle AdWordsに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '636'
 ht-degree: 18%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 18%
 | クライアントシークレット | 更新トークンの取得に使用される[!DNL Google]アプリケーションのクライアントシークレット。 |
 | 接続指定ID | 接続を作成するために必要な一意の識別子。 [!DNL Google AdWords]の接続指定IDは次のとおりです。`d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
-これらの値の詳細については、[Google AdWordsドキュメント](https://developers.google.com/adwords/api/docs/guides/authentication)を参照してください。
+これらの値の詳細については、[Google AdWordsのドキュメント](https://developers.google.com/adwords/api/docs/guides/authentication)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -54,7 +54,7 @@ ht-degree: 18%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
