@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics; File Transfer Protocol; file transfer protocol
+keywords: Experience Platform；ホーム；人気の高いトピック；ファイル転送プロトコル；ファイル転送プロトコル
 solution: Experience Platform
 title: Flow Service APIを使用してFTPコネクタを作成する
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをFTP(File Transfer Protocol)サーバに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 21%
+source-wordcount: '580'
+ht-degree: 20%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 21%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -125,4 +125,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用してFTP接続を作成し、接続の固有のID値を取得したことになります。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用したインジェストパーケットデータを使用して、[クラウドストレージを探索できます。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用してFTP接続を作成し、接続の固有のID値を取得したことになります。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用してParketストレージを[調査できます。
