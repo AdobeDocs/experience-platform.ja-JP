@@ -6,10 +6,10 @@ breadcrumb-title: Platform チュートリアル
 user-guide-description: 取り込み用のデータの準備から高度な機械学習アルゴリズムの使用まで、あらゆる作業について説明するチュートリアルに従い、すばやく簡単にプラットフォームを開始できます。
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 60%
+source-wordcount: '74'
+ht-degree: 56%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 60%
 # Adobe Experience Platform のチュートリアル {#tutorials}
 
 * [チュートリアルの概要](home.md)
-* [Experience Platform API に対する認証](authentication.md)
+* [Experience Platform API に対する認証](https://www.adobe.com/go/platform-api-authentication-en)
 * [Platform データへのアクセス](data-access.md)
 * [データガバナンスとプライバシー](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)
