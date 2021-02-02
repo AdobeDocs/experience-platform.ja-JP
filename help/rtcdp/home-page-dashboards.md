@@ -1,14 +1,14 @@
 ---
-keywords: metrics overview; rtcdp metrics overview
+keywords: 指標の概要；rtcdp指標の概要
 title: リアルタイム顧客データプラットフォームのホームページとダッシュボード
 seo-title: リアルタイム顧客データプラットフォームのホームページとダッシュボード
 description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 seo-description: Adobe Experience Platform のダッシュボード、ホームページ、初回ユーザーエクスペリエンス
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '636'
+ht-degree: 75%
 
 ---
 
@@ -44,13 +44,13 @@ Some information is shown in different ways on both the leaderboard and metric c
 
 ### データセット
 
-The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. このカウンターは、データセットの作成時に更新されます。
+**[!UICONTROL Datasets]**&#x200B;カウンターは、システム内のデータセットの数と[!DNL Platform]内のデータの量を示します。 このカウンターは、データセットの作成時に更新されます。
 
 データセットの詳細については、「[データセットの概要](../catalog/datasets/overview.md)」を参照してください。
 
 ### プロファイル
 
-**[!UICONTROL プロファイル数]** は、内でプロファイルを持つ人の合計数を示し [!DNL Real-time Customer Profile]ます。 プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
+**[!UICONTROL プロファイル]**&#x200B;の数は、[!DNL Real-time Customer Profile]内のプロファイルを持つ人の合計数を示します。 プロファイルフラグメントは含まれません。これは、アドレス可能なオーディエンスの合計です。
 
 このカウントでは、「統合プロファイル」の[結合ポリシー](profile/merge-policies.md)構成で設定された既定の結合ポリシーを使用します。
 
@@ -74,7 +74,7 @@ The **[!UICONTROL Datasets]** counter shows the number of datasets in the system
 
 In the leaderboard **[!UICONTROL Successful profile records]** shows the total number of records that have been successfully processed into the profile.
 
-There is also a metric card that shows the percentage of successful records. Click **[!UICONTROL View datasets]** to see more details about the profile records. Hover over the colored area of the graph to see additional details:
+There is also a metric card that shows the percentage of successful records. Select **[!UICONTROL View datasets]** to see more details about the profile records. Hover over the colored area of the graph to see additional details:
 
 ![image](assets/home-profilerecords-details.PNG)
 
@@ -90,7 +90,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 ![image](assets/home-profile-details.PNG)
 
-Click **[!UICONTROL View profiles]** to see more details about the profile records.
+Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
 For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
 
@@ -100,7 +100,7 @@ For more information about viewing a specific profile, see [Profile viewer](prof
 
 In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of records that failed to process into the profile.
 
-The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
+The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
 The number of failed profile records is updated hourly. -->
 
@@ -108,7 +108,7 @@ The number of failed profile records is updated hourly. -->
 
 **[!UICONTROL 最近のデータセット]**&#x200B;カードには、組織内で作成された最新の 5 つのデータセットが表示されます。このリストは、新しいデータセットが作成されると更新されます。
 
-データセットをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてデータセットのリストを表示します。ここからは、特定のソースをクリックして詳細を表示できます。
+データセットを選択してその項目の詳細を表示するか、**[!UICONTROL 表示ーall]**&#x200B;を選択してデータセットのリストを確認します。 ここから、詳細の特定のソースを選択できます。
 
 データセットの詳細については、「[データセットの概要](../catalog/datasets/overview.md)」を参照してください。
 
@@ -116,7 +116,7 @@ The number of failed profile records is updated hourly. -->
 
 「**[!UICONTROL 最近のソース]**」指標カードには、組織内で作成された最新の 5 つのソースが表示されます。このリストは、新しいソースが作成されると更新されます。
 
-ソースをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてソースのリストを表示します。ここからは、特定のソースをクリックして詳細を表示できます。
+ソースを選択してそのアイテムの詳細を表示するか、**[!UICONTROL すべての]**&#x200B;を表示してソースのリストを確認します。 ここから、詳細の特定のソースを選択できます。
 
 ソースについて詳しくは、「[ソースの概要](sources/sources-overview.md)」を参照してください。
 
@@ -124,7 +124,7 @@ The number of failed profile records is updated hourly. -->
 
 「**[!UICONTROL 最近のセグメント]**」指標カードには、組織内で作成された最新の 5 つのセグメントが表示されます。このリストは、新しいセグメントが作成されると更新されます。
 
-セグメントをクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてその他のセグメントに関する情報を表示します。
+セグメントを選択してその項目の詳細を表示するか、**[!UICONTROL すべての]**&#x200B;を表示してその他のセグメントの詳細を表示します。
 
 セグメントについて詳しくは、「[セグメント化サービスの概要](segmentation/segmentation-overview.md)」を参照してください。
 
@@ -132,6 +132,6 @@ The number of failed profile records is updated hourly. -->
 
 「**[!UICONTROL 最近の宛先]**」指標カードには、組織内で作成された最新の 5 つの宛先が表示されます。このリストは、新しい宛先が作成されると更新されます。
 
-宛先をクリックしてその項目の詳細を表示するか、「**[!UICONTROL すべて表示]**」をクリックしてその他の宛先に関する情報を表示します。
+目的のアイテムの詳細を表示する宛先を選択するか、**[!UICONTROL すべての]**&#x200B;を表示して、その他の宛先に関する情報を表示します。
 
 宛先について詳しくは、「[宛先の概要](destinations/overview.md)」を参照してください。
