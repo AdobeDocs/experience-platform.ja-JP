@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;connect;connect to query service;aqua data studio;Aqua Data Studio;Looker;looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；接続；クエリサービスへの接続；アクアデータスタジオ；Aqua Data Studio;Looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;
 solution: Experience Platform
 title: クライアントのクエリサービスへの接続
 topic: connect
 description: このドキュメントでは、様々なデスクトップクライアントアプリケーションからクエリサービスに接続する方法と、それらの接続を検証する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
+source-git-commit: 5c5ea35dbed85518f7925bd13a2280cae6215927
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 15%
+source-wordcount: '112'
+ht-degree: 10%
 
 ---
 
 
-# クライアントの接続先 [!DNL Query Service]
+# クライアントを[!DNL Query Service]に接続
 
-This section explains how to connect to [!DNL Query Service] from a variety of desktop client applications and how to verify those connections. [!DNL Query Service] は [!DNL Postgres] プロトコルを使用するので、この節の説明では、クエリを接続および書き込むための [!DNL Postgres] ツールとドライバの使用方法を説明します。
+この節では、様々なデスクトップクライアントアプリケーションから[!DNL Query Service]に接続する方法と、それらの接続を検証する方法について説明します。 [!DNL Query Service] では、 [!DNL PostgreSQL] プロトコルを使用します。この節の説明では、 [!DNL PostgreSQL] ツールとドライバを使用してクエリを接続し、書き込む方法について説明します。
 
 手順は、次のクライアントに対して提供されます。
 
