@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；Data Science Workspace;Data Science
 solution: Experience Platform
 title: Senesi 機械学習 API 開発者ガイド
 topic: Developer guide
 description: この開発者ガイドは、Sensei 機械学習 API の使用を開始する際に役立つ手順を提供し、様々な Data Science Workspace リソースに対して CRUD 操作を実行するための API 呼び出しの例を示します。
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 70%
+source-wordcount: '244'
+ht-degree: 64%
 
 ---
 
 
 # [!DNL Sensei Machine Learning] API開発者ガイド
 
-The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
+[!DNL Sensei Machine Learning] APIは、データ科学者が機械学習サービスを、アルゴリズムのオンボーディングから実験まで、およびサービスの展開まで、編成および管理するメカニズムを提供します。
 
 この開発者ガイドは、[Sensei 機械学習 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) の使用を開始する際に役立つ手順を提供し、様々な Data Science Workspace リソースに対して CRUD 操作を実行するための API 呼び出しの例を示します。
 
 ## はじめに
 
-次のリクエストヘッダーにアクセスして API を呼び出すには、[認証](../../tutorials/authentication.md)チュートリアルを完了しておく必要があります。[!DNL Adobe Experience Platform]
+次のリクエストヘッダーにアクセスして API を呼び出すには、[認証](https://www.adobe.com/go/platform-api-authentication-en)チュートリアルを完了しておく必要があります。[!DNL Adobe Experience Platform]
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
