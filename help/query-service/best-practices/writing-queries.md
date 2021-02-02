@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリの書き込み；クエリの書き込み；
 solution: Experience Platform
 title: クエリの記述
 topic: queries
@@ -8,8 +8,8 @@ description: このドキュメントでは、Adobe Experience Platform クエ�
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '957'
-ht-degree: 51%
+source-wordcount: '970'
+ht-degree: 50%
 
 ---
 
