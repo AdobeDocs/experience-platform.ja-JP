@@ -3,29 +3,29 @@ title: Adobe Experience Platform Web SDK のヘルプ
 seo-title: Adobe Experience Platform Web SDK のヘルプ
 description: Adobe Experience Platform Web SDK の概要と、その使用方法を説明します。
 seo-description: Adobe Experience Cloudのお客様がExperience Cloudの様々なサービスを利用できるようにする方法を学びます。
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
+keywords: Adobe Experience PlatformWeb SDK；プラットフォームWeb SDK;Web SDK；エッジ；訪問者.js;AppMeasurement.js;AT.js;DIL.js;Web sdk;Web SDK；起動；起動
 translation-type: tm+mt
-source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '689'
-ht-degree: 20%
+source-wordcount: '709'
+ht-degree: 18%
 
 ---
 
 
 # Adobe Experience PlatformWeb SDKとは
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe Experience Platform Edge Network. JavaScriptライブラリに加え、Web SDKの設定を支援する [Experience Platform Launch拡張](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) 。
+Adobe Experience PlatformWeb SDKは、Adobe Experience Cloudのお客様がAdobe Experience Platformエッジネットワークを介して[!DNL Experience Cloud]の様々なサービスとやり取りできるクライアント側のJavaScriptライブラリです。 JavaScriptライブラリに加えて、Web SDKの設定に役立つ[Experience Platform Launch拡張子](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)があります。
 
 ## エクスペリエンスエッジ
 
-[!DNL Adobe Experience Platform Web SDK] は、Experience Edgeを構成するコレクションの一部です。 Experience Edgeは、次の3つのテクノロジーで構成されています。
+[!DNL Adobe Experience Platform Web SDK] は、Experience Edgeを構成するコレクションの一部です。Experience Edgeは、次の3つのテクノロジーで構成されています。
 
-* **[!DNL Adobe Experience Platform Web SDK]:** テクノロジーの導入を大幅にシンプル化するJavaScript SDKと [!DNL Experience Platform Launch][!DNL Adobe] 拡張機能
-* **Adobe Experience PlatformモバイルSDK:** v5モバイルSDKの拡張機能により、お客様は新しい導入方法を使用できます。
-* **[!DNL Adobe Experience Platform Edge Network]:** サーバのグローバルな分散ネットワーク。製品の導入に関する新しい方法論を可能にし [!DNL Adobe] ます。
+* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDKと [!DNL Experience Platform Launch] 拡張機能により、 [!DNL Adobe] テクノロジの導入を大幅にシンプル化
+* **Adobe Experience PlatformモバイルSDK:** v5モバイルSDKの拡張機能で、お客様は新しい展開方法を使用できます。
+* **[!DNL Adobe Experience Platform Edge Network]:** サーバのグローバルな分散ネットワーク。新しい [!DNL Adobe] 製品導入方法を可能にします。
 
-The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.
+[!DNL Adobe Experience Edge]は、低レイテンシのデータ収集、プラグ可能なコンピューティング、およびすべてのアドレス可能なチャネルにわたる迅速なデータアクティベーションのための新しいフレームワークです。
 
 [!DNL Adobe Experience Edge] は、すべてのチャネル（JavaScript、モバイル、サーバー側）に対して単一の統合SDKを提供します。このSDKは、共通のAdobeドメイン(`adobedc.net`)にデータを送信し、データとエクスペリエンスの配信に対して単一のペイロードを受け取ります。
 
@@ -38,11 +38,11 @@ The [!DNL Adobe Experience Edge] is a new framework for low-latency data collect
 * 革新のスピードを上げる
 * Adobeのお客様にとって、継続的な競争優位性を提供
 
-統合されたエッジシステムを1つ使用することで、顧客は広告、マーケティング、パーソナライズの各キャンペーンを、統合されたエクスペリエンスとしてすべてのチャネルにわたって管理できます。  TCO（総所有コスト） [!DNL Adobe] の低いサービスをお客様に提供できます。  また、リアルタイムエッジをプラグ可能にし、お客様が新しい機能やお客様定義のロジックをより迅速にそのリアルタイムシステムに追加できるようにすることで、製品の革新の迅速化にも役立ちます。 [!DNL Adobe]
+統合されたエッジシステムを1つ使用することで、顧客は広告、マーケティング、パーソナライズの各キャンペーンを、統合されたエクスペリエンスとしてすべてのチャネルにわたって管理できます。  [!DNL Adobe]は、TCO（総所有コスト）が低いサービスをお客様に提供できます。  また、リアルタイムエッジをプラグ可能にし、[!DNL Adobe]お客様が新しい機能やお客様定義のロジックをリアルタイムシステムに迅速に追加できるようにすることで、製品の革新の迅速化にも役立ちます。
 
 ## ビデオの概要
 
-以下のビデオでは、Adobe Experience PlatformとAdobe Experience Platformの概要 [!DNL Web SDK] を説明 [!DNL Edge Network]します。
+次のビデオでは、Adobe Experience Platform[!DNL Web SDK]とAdobe Experience Platform[!DNL Edge Network]の概要を説明しています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -55,17 +55,17 @@ Adobe Experience Platform Web SDK は、次の SDK の代わりとなります�
 * AT.js
 * DIL.js
 
-これは、既存のライブラリの単なるラッパーではなく、完全なリライトです。目的は、タグを適切な順序で実行する必要があり、ライブラリのバージョン管理の課題との矛盾、依存関係の管理の改善によって、課題を解決することです。 これは、を実装する新しい方法で [!DNL Experience Cloud] あり、 [オープンソースです](https://github.com/adobe/alloy)。
+これは、既存のライブラリの単なるラッパーではなく、完全なリライトです。目的は、タグを適切な順序で実行する必要があり、ライブラリのバージョン管理の課題との矛盾、依存関係の管理の改善によって、課題を解決することです。 [!DNL Experience Cloud]を実装する新しい方法で、[オープンソース](https://github.com/adobe/alloy)です。
 
-新しいライブラリに加えて、アドビのソリューションに対する HTTP 要求を整理する新しいエンドポイントが追加されました。以前は、Visitor.js は訪問者 ID サービスに対してブロック呼び出しを送信した後、AT.js は Adobe Target に呼び出しを送信、DIL.js は Adobe Audience Manager に呼び出しを送信、最後に AppMeasurement.js は Adobe Analytics に呼び出しを送信していました。This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to Adobe Experience Platform in a single call.
+新しいライブラリに加えて、アドビのソリューションに対する HTTP 要求を整理する新しいエンドポイントが追加されました。以前は、Visitor.js は訪問者 ID サービスに対してブロック呼び出しを送信した後、AT.js は Adobe Target に呼び出しを送信、DIL.js は Adobe Audience Manager に呼び出しを送信、最後に AppMeasurement.js は Adobe Analytics に呼び出しを送信していました。この新しいライブラリとエンドポイントは、IDを取得し、[!DNL Target]エクスペリエンスを取得し、[!DNL Audience Manager]にデータを送信し、1回の呼び出しでデータをAdobe Experience Platformに渡すことができます。
 
-次のビデオでは、Adobe Experience Platform [!DNL Web SDK] とAdobe Experience Platformの実際 [!DNL Edge Network] の動作を実演します。 このビデオの例では、 [!DNL Experience Platform]、、、およびにデータを送信する、Adobeへの1回の呼び出しを使用し [!DNL Analytics][!DNL Audience Manager][!DNL Target]ます。
+次のビデオでは、Adobe Experience Platform[!DNL Web SDK]とAdobe Experience Platform[!DNL Edge Network]の実際の動作を実演します。 このビデオの例では、Adobeへの1回の呼び出しを使用して、[!DNL Experience Platform]、[!DNL Analytics]、[!DNL Audience Manager]および[!DNL Target]にデータを送信します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-この製品は、ますます多くの使用事例をサポートするように、常に進化し、成長しています。 最新のバージョンに対応するために、 [サポートされているユースケースボードをご覧ください](https://github.com/adobe/alloy/projects/5)。 現在サポートしている使用事例や、可能な限り最適な判断を下すために取り組んでいる使用事例について、この情報を最新の状態に保ちます。
+この製品は、ますます多くの使用事例をサポートするように、常に進化し、成長しています。 最新の情報を入手するには、[サポートされているユースケースボード](https://github.com/adobe/alloy/projects/5)をご覧ください。 現在サポートしている使用事例や、可能な限り最適な判断を下すために取り組んでいる使用事例について、この情報を最新の状態に保ちます。
 
-* **まだサポートされていない使用例：** これらは、将来サポートされる予定の使用例です。
-* **使用事例が進行中：** これらは、チームが現在リリースに向けて完了している使用例です。
-* **サポートされる使用例：** これらは、現在サポートされていて機能する使用例です。
-* **サポートしない使用例：** これらは、サポートしないと決めた使用例です。
+* **まだサポートされていない使用例：** これらの使用例は、将来サポートされる予定です。
+* **進行中の使用例：** チームが現在リリース用に完了している使用例です。
+* **サポートされる使用例：** これらは、現在サポートされ、機能する使用例です。
+* **サポートしない使用例：サポートしな** いと判断した使用例を示します。
