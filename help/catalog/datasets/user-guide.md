@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
+keywords: Experience Platform；ホーム；人気の高いトピック；有効データセット；データセット；データセット
 solution: Experience Platform
 title: データセットユーザガイド
 topic: datasets
 description: このdatasetsユーザーガイドでは、Adobe Experience Platformユーザーインターフェイス内でデータセットを操作する際に、一般的な操作を実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
+source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 71%
+source-wordcount: '1143'
+ht-degree: 69%
 
 ---
 
@@ -22,15 +22,15 @@ ht-degree: 71%
 このユーザガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。 
 
 * [Datasets](overview.md):でのデータ永続性のストレージと管理の構成体 [!DNL Experience Platform]。
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマエディタ](../../xdm/tutorials/create-schema-ui.md):ユーザーインターフェイス [!DNL Schema Editor] 内で独自のカスタムXDMスキーマを作成する方法を説明し [!DNL Platform] ます。
+   * [スキーマエディタ](../../xdm/tutorials/create-schema-ui.md):ユー [!DNL Schema Editor] ザーインターフェイス [!DNL Platform] 内で独自のカスタムXDMスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md):お客様のデータの使用に関する規制、制限、ポリシーへの準拠を確保します。
 
 ## データセットの表示
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが適用されるスキーマ、最新の取得実行のステータスなど）が表示されます。
+[!DNL Experience Platform] UIで、左側のナビゲーションの&#x200B;**[!UICONTROL Datasets]**&#x200B;をクリックして、**[!UICONTROL Datasets]**&#x200B;ダッシュボードを開きます。 ダッシュボードリストは、組織で使用可能なすべてのデータセットを管理します。リストに表示された各データセットに関する詳細（名前、データセットが適用されるスキーマ、最新の取得実行のステータスなど）が表示されます。
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -49,7 +49,7 @@ In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the lef
 
 ![](../images/datasets/user-guide/preview_dataset.png)
 
-For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. 詳しくは、次のドキュメントを参照してください。
+データにアクセスするためのより堅牢な方法を提供するために、[!DNL Experience Platform]は、[!DNL Query Service]や[!DNL JupyterLab]などのダウンストリームサービスを提供し、データを調査および分析します。 詳しくは、次のドキュメントを参照してください。
 
 * [クエリサービスの概要](../../query-service/home.md)
 * [JupyterLab ユーザガイド](../../data-science-workspace/jupyterlab/overview.md)
@@ -65,7 +65,7 @@ For more robust methods to access your data, [!DNL Experience Platform] provides
 * [スキーマからのデータセットの作成](#schema)
 * [CSV ファイルからのデータセットの作成](#csv)
 
-### 既存スキーマからのデータセットの作成 {#schema}
+### 既存スキーマからのデータセットの作成  {#schema}
 
 **[!UICONTROL データセット作成]**&#x200B;画面で、「**[!UICONTROL スキーマからデータセットを作成]**」をクリックし、新しい空のデータセットを作成します。
 
@@ -79,7 +79,7 @@ For more robust methods to access your data, [!DNL Experience Platform] provides
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### CSV ファイルを使用したデータセットの作成 {#csv}
+### CSV ファイルを使用したデータセットの作成  {#csv}
 
 CSV ファイルを使用してデータセットを作成する場合、アドホックスキーマが作成され、指定された CSV ファイルと一致する構造のデータセットが提供されます。**[!UICONTROL データセット作成]**&#x200B;画面で、「**[!UICONTROL CSV ファイルからデータセットを作成]**」というボックスをクリックします。
 
@@ -99,18 +99,20 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 
 ## リアルタイム顧客プロファイルデータセットの有効化
 
-すべてのデータセットには、取得したデータによって顧客プロファイルを拡張する機能があります。To do so, the schema that the dataset adheres to must be compatible for use in [!DNL Real-time Customer Profile]. 互換性のあるスキーマは、次の要件を満たします。
+すべてのデータセットには、取得したデータによって顧客プロファイルを拡張する機能があります。そのためには、データセットに従うスキーマが[!DNL Real-time Customer Profile]での使用に対して互換性がある必要があります。 互換性のあるスキーマは、次の要件を満たします。
 
 * スキーマに、ID プロパティとして指定された属性が 1 つ以上あります。
 * スキーマに、プライマリ ID として定義された ID プロパティがあります。
 
-For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
+[!DNL Profile]のスキーマを有効にする方法について詳しくは、[スキーマエディターユーザーガイド](../../xdm/tutorials/create-schema-ui.md)を参照してください。
 
 プロファイルでデータセットを有効にするには、その&#x200B;**[!UICONTROL データセットアクティビティ]**&#x200B;画面にアクセスし、「**[!UICONTROL プロパティ]**」列内の&#x200B;**[!UICONTROL プロファイル]**&#x200B;切り替えをクリックします。有効にすると、データセットに取得されたデータが顧客プロファイルに入力されます。
 
-![](../images/datasets/user-guide/enable_dataset_profiles.png)
+>[!NOTE]
+>
+>データセットに既にデータが含まれていて、その後[!DNL Profile]が有効になっている場合、既存のデータは[!DNL Profile]で自動的に消費されません。 [!DNL Profile]のデータセットを有効にした後、既存のデータを再度取り込み、顧客のプロファイルに貢献させることをお勧めします。
 
-If a dataset already contains data and is then enabled for [!DNL Profile], the existing data is not consumed by [!DNL Profile]. After a dataset is enabled for [!DNL Profile], it is recommended that you re-ingest any existing data to have them populate customer profiles.
+![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
 ## データセットのデータガバナンスの管理と実施
 
@@ -122,7 +124,7 @@ If a dataset already contains data and is then enabled for [!DNL Profile], the e
 
 >[!NOTE]
 >
->Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
+>Adobeのアプリケーションおよびサービス(Adobe Analytics、Adobe Audience Manager、[!DNL Offer Decisioning]など)で作成および使用されるデータセットは削除できません。
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
@@ -132,11 +134,13 @@ If a dataset already contains data and is then enabled for [!DNL Profile], the e
 
 ## プロファイル対応データセットの削除
 
-If a dataset is enabled for [!DNL Profile], deleting it through the UI disables the dataset for ingestion, but does not automatically delete the dataset in the backend. データセットに含まれるプロファイルと ID データを完全に削除するには、追加の削除リクエストを実行する必要があります。For steps on how to properly delete data from the [!DNL Profile] store, see the [!DNL Real-time Customer Profile] API [sub-guide on profile system jobs, also known as &quot;delete requests&quot;](../../profile/api/profile-system-jobs.md).
+[!DNL Profile]に対してデータセットが有効になっている場合、UIからそのデータセットを削除すると、プラットフォーム内のData Lakeとプロファイルストアの両方から削除されます。
+
+データセットを[!DNL Profile]ストアからのみ削除できます（データはData Lakeに残す）。この場合、削除できるのはReal-time CustomerプロファイルAPIを使用する方法です。 詳しくは、[プロファイルシステムジョブAPIエンドポイントガイド](../../profile/api/profile-system-jobs.md)を参照してください。
 
 ## データ取得の監視
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Monitoring]** in the left-navigation. 「**[!UICONTROL 監視]**」ダッシュボードを使用すると 、バッチ取得またはストリーミング取得から受信データのステータスを表示できます。個々のバッチのステータスを表示するには、「**[!UICONTROL エンドツーエンドのバッチ処理]**」または「**[!UICONTROL エンドツーエンドのストリーミング]**」をクリックします。ダッシュボードは、正常、失敗、または進行中のすべてのバッチ取得またはストリーミング取得ををリストします。各リストには、バッチ ID、ターゲットデータセットの名前、取得したレコード数など、バッチの詳細が表示されます。If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
+[!DNL Experience Platform] UIの左側のナビゲーションで[**[!UICONTROL 監視]**]をクリックします。 「**[!UICONTROL 監視]**」ダッシュボードを使用すると 、バッチ取得またはストリーミング取得から受信データのステータスを表示できます。個々のバッチのステータスを表示するには、「**[!UICONTROL エンドツーエンドのバッチ処理]**」または「**[!UICONTROL エンドツーエンドのストリーミング]**」をクリックします。ダッシュボードは、正常、失敗、または進行中のすべてのバッチ取得またはストリーミング取得ををリストします。各リストには、バッチ ID、ターゲットデータセットの名前、取得したレコード数など、バッチの詳細が表示されます。ターゲットデータセットが[!DNL Profile]に対して有効になっている場合は、取り込まれたIDレコードとプロファイルレコードの数も表示されます。
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
@@ -150,7 +154,7 @@ In the [!DNL Experience Platform] UI, click **[!UICONTROL Monitoring]** in the l
 
 ## 次の手順
 
-This user guide provided instructions for performing common actions when working with datasets in the [!DNL Experience Platform] user interface. For steps on performing common [!DNL Platform] workflows involving datasets, please refer to the following tutorials:
+このユーザーガイドでは、[!DNL Experience Platform]ユーザーインターフェイスでデータセットを操作する際に、一般的な操作を実行する手順を説明しています。 データセットに関連する一般的な[!DNL Platform]ワークフローを実行する手順については、以下のチュートリアルを参照してください。
 
 * [API を使用したデータセットの作成](create.md)
 * [データアクセス API を使用したクエリデータセットデータ](../../data-access/home.md)
