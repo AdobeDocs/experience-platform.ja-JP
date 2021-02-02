@@ -2,12 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: 宛先ガイド
-user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲットを絞った広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
+user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
+description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 translation-type: tm+mt
-source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
+source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 31%
+source-wordcount: '443'
+ht-degree: 32%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 31%
 * API チュートリアル {#api}
    * [ストリーミング先(AWSKinesisおよびAzureイベントハブ)に接続し、データをアクティブにする](./api/streaming-destinations.md)
    * [電子メールマーケティングの宛先に接続し、データをアクティブにする](./api/email-marketing.md)
-* UIガイド {#ui}
+* UIガイド{#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [宛先の詳細ページ](./ui/destination-details-page.md)
    * [宛先に接続](./ui/connect-destination.md)
@@ -29,7 +30,7 @@ ht-degree: 31%
    * [ (Alpha) HTTP送信先](./catalog/http-destination.md)
    * アドビの宛先 {#adobe}
       * [アドビの宛先の概要](./catalog/adobe/overview.md)
-      * [Experience Platformセグメントの共有](https://docs.adobe.com/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Experience Platformセグメントの共有](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * 広告の宛先 {#advertising}
       * [広告の宛先の概要](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud目的地](./catalog/advertising/adobe-advertising-cloud.md)
@@ -77,12 +78,13 @@ ht-degree: 31%
       * [クラウドストレージの宛先を作成するためのワークフロー](./catalog/cloud-storage/workflow.md)
       * [AmazonKinesis駅](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3 の宛先](./catalog/cloud-storage/amazon-s3.md)
+      * [Azure Blobの宛先](./catalog/cloud-storage/azure-blob.md)
       * [Azureイベントハブの宛先](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP の宛先](./catalog/cloud-storage/sftp.md)
-   * Data Management Platform destinations {#data-management}
+   * データ管理プラットフォームの宛先{#data-management}
       * [データ管理プラットフォームの宛先の概要](./catalog/data-management/overview.md)
       * [Audience ManagerDIL先](./catalog/data-management/aam-dil-extension.md)
-   * 電子メールの宛先 {#email}
+   * 電子メールの宛先{#email}
       * [Bizible Analyticsの宛先](./catalog/email/bizible.md)
       * [マーケティング先](./catalog/email/marketo.md)
       * [マーケットマンチキンの目的地](./catalog/email/marketo-munchkin.md)
@@ -95,7 +97,7 @@ ht-degree: 31%
       * [SalesforceMarketing Cloud先](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Experience Platform Launch 拡張機能 {#launch-extensions}
       * [Experience Platform Launch 拡張機能の概要](./catalog/launch-extensions/overview.md)
-   * モバイルエンゲージメントの宛先 {#mobile-engagement}
+   * モバイルエンゲージメント先{#mobile-engagement}
       * [モバイルエンゲージメントの宛先の概要](./catalog/mobile-engagement/overview.md)
       * [航空船属性の宛先](./catalog/mobile-engagement/airship-attributes.md)
       * [航空船タグの宛先](./catalog/mobile-engagement/airship-tags.md)
