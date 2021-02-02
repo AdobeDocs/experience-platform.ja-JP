@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;data access api;query data access
+keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；データアクセスapi;クエリデータアクセス
 solution: Experience Platform
 title: データアクセスの概要
 topic: tutorial
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platform のデータアクセス API を使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする手順を説明するチュートリアルを紹介します。また、ページングや部分的なダウンロードなど、データアクセス API の固有の機能の一部も紹介します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1384'
-ht-degree: 73%
+source-wordcount: '1400'
+ht-degree: 72%
 
 ---
 
 
-# APIを使用したクエリデータセット [!DNL Data Access] データ
+# [!DNL Data Access] APIを使用したクエリデータセットデータ
 
-This document provides a step-by-step tutorial that covers how to locate, access, and download data stored within a dataset using the [!DNL Data Access] API in Adobe Experience Platform. You will also be introduced to some of the unique features of the [!DNL Data Access] API, such as paging and partial downloads.
+このドキュメントでは、Adobe Experience Platformの[!DNL Data Access] APIを使用して、データセット内に保存されたデータの検索、アクセス、ダウンロードの方法を説明するチュートリアルを順を追って説明します。 また、ページングや部分的なダウンロードなど、[!DNL Data Access] APIの独自の機能の一部にも導入されます。
 
 ## はじめに
 
@@ -30,19 +30,19 @@ This document provides a step-by-step tutorial that covers how to locate, access
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -50,23 +50,23 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 ## シーケンス図
 
-This tutorial follows the steps outlined in the sequence diagram below, highlighting the core functionality of the [!DNL Data Access] API.</br>
+このチュートリアルは、次のシーケンス図に示す手順に従って、[!DNL Data Access] APIのコア機能を強調表示します。</br>
 ![](../images/sequence_diagram.png)
 
-The [!DNL Catalog] API allows you to retrieve information regarding batches and files. The [!DNL Data Access] API allows you to access and download these files over HTTP as either full or partial downloads, depending on the size of the file.
+[!DNL Catalog] APIを使用すると、バッチやファイルに関する情報を取得できます。 [!DNL Data Access] APIを使用すると、ファイルのサイズに応じて、HTTP経由でこれらのファイルにアクセスし、ダウンロードの全部または一部をダウンロードできます。
 
 ## データの検索
 
-Before you can begin to use the [!DNL Data Access] API, you need to identify the location of the data that you want to access. In the [!DNL Catalog] API, there are two endpoints that you can use to browse an organization&#39;s metadata and retrieve the ID of a batch or file that you want to access:
+[!DNL Data Access] APIの使用を開始する前に、アクセスするデータの場所を特定する必要があります。 [!DNL Catalog] APIには、組織のメタデータを参照し、アクセスするバッチまたはファイルのIDを取得するために使用できるエンドポイントが2つあります。
 
 - `GET /batches`：組織内のバッチのリストを返します
 - `GET /dataSetFiles`：組織内のファイルのリストを返します
 
-For a comprehensive list of endpoints in the [!DNL Catalog] API, please refer to the [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+[!DNL Catalog] APIのエンドポイントの包括的なリストについては、[APIリファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)を参照してください。
 
 ## IMS 組織内のバッチのリストを取得する
 
-Using the [!DNL Catalog] API, you can return a list of batches under your organization:
+[!DNL Catalog] APIを使用して、組織の下でバッチのリストを返すことができます。
 
 **API 形式**
 
@@ -197,7 +197,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 
 ## 特定のバッチに属するすべてのファイルのリストを取得する
 
-Now that you have the ID of the batch that you want to access, you can use the [!DNL Data Access] API to get a list of files belonging to that batch.
+アクセスするバッチのIDが決まったので、[!DNL Data Access] APIを使用して、そのバッチに属するファイルのリストを取得できます。
 
 **API 形式**
 
@@ -254,7 +254,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 
 ## ファイル ID を使用したファイルへのアクセス
 
-Once you have a unique file ID, you can use the [!DNL Data Access] API to access the specific details about the file, including its name, size in bytes, and a link to download it.
+一意のファイルIDを取得したら、[!DNL Data Access] APIを使用して、ファイル名、バイト単位のサイズ、ダウンロード用のリンクなど、ファイルに関する具体的な詳細情報にアクセスできます。
 
 **API 形式**
 
@@ -387,7 +387,7 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 
 ## ファイルのコンテンツへのアクセス
 
-You can also access the contents of a file using the [!DNL Data Access] API.
+[!DNL Data Access] APIを使用してファイルのコンテンツにアクセスすることもできます。
 
 **API 形式**
 
@@ -416,7 +416,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 ## ファイルの一部コンテンツのダウンロード
 
-The [!DNL Data Access] API allows for downloading files in chunks. 範囲ヘッダーは、ファイルから特定のバイト範囲をダウンロードする`GET /files/{FILE_ID}`リクエスト時に指定できます。範囲を指定しない場合、API はデフォルトでファイル全体をダウンロードします。
+[!DNL Data Access] APIは、チャンクでファイルをダウンロードできます。 範囲ヘッダーは、ファイルから特定のバイト範囲をダウンロードする`GET /files/{FILE_ID}`リクエスト時に指定できます。範囲を指定しない場合、API はデフォルトでファイル全体をダウンロードします。
 
 [前の節](#retrieve-the-metadata-of-a-file)の HEAD の例では、特定のファイルのサイズをバイト単位で示しています。
 
@@ -451,12 +451,12 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 応答本体には、（リクエストの「範囲」ヘッダーで指定された）ファイルの最初の 100 バイトと、HTTP ステータス 206（部分的な内容）が含まれます。応答には、次のヘッダーも含まれます。
 
 - コンテンツの長さ：100（返されるバイト数）
-- Content-type: application/parquet（パケットファイルがリクエストされたので、応答コンテンツタイプはパケット）
+- コンテンツタイプ：application/parket（Parketファイルが要求されたので、応答コンテンツタイプは`parquet`です）
 - コンテンツ範囲：バイト 0～99／249058（合計バイト数（249058）のうち、リクエストされた範囲（0-99））
 
 ## API 応答のページネーションの設定
 
-Responses within the [!DNL Data Access] API are paginated. デフォルトでは、1 ページあたりの最大エントリ数は 100 です。ページングパラメーターを使用して、デフォルトの動作を変更できます。
+[!DNL Data Access] API内の応答はページ分割されます。 デフォルトでは、1 ページあたりの最大エントリ数は 100 です。ページングパラメーターを使用して、デフォルトの動作を変更できます。
 
 - `limit`：「limit」パラメーターを使用して、必要に応じて 1 ページあたりのエントリ数を指定できます。
 - `start`：オフセットは、「開始」クエリパラメーターで設定できます。
