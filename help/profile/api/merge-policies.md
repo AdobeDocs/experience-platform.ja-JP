@@ -1,33 +1,35 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: マージポリシー — リアルタイム顧客プロファイルAPI
+keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
+title: ポリシーの結合APIエンドポイント
 topic: guide
+type: Documentation
+description: 'Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、統合ポリシーは、データの優先順位付け方法と統合表示を作成するデータを決定する際にPlatformが使用するルールです。 '
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '2494'
-ht-degree: 56%
+source-wordcount: '2560'
+ht-degree: 54%
 
 ---
 
 
 # ポリシーエンドポイントの結合
 
-Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
+Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、結合ポリシーは、[!DNL Platform]がデータの優先順位付け方法と統合データを決定する際に使用するルールです。統合表示を作成する際には、どのデータを結合するかを決定します。
 
 例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。 これらのフラグメントがPlatformに取り込まれると、それらのフラグメントが結合され、そのお客様用の単一のプロファイルが作成されます。 複数のソースからのデータが競合する場合(例えば、1つのフラグメントリストが顧客を「独身」、他のリストが「既婚」)、結合ポリシーによって個人のプロファイルに含める情報が決定されます。
 
 RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。このガイドでは、APIを使用して結合ポリシーを操作する手順を説明します。
 
-UI を使用して結合ポリシーを使用するには、『[結合ポリシーのユーザーガイド](../ui/merge-policies.md)』を参照してください。
+UIを使用して結合ポリシーを操作するには、[merge policies UIガイド](../ui/merge-policies.md)を参照してください。
 
 ## はじめに
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## 結合ポリシーのコンポーネント {#components-of-merge-policies}
 
-マージポリシーはIMS組織に対して非公開なので、異なるポリシーを作成して、必要な方法でスキーマを結合できます。 Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] 組織にデフォルトの結合ポリシーを提供します。または、特定のExperience Data Model(XDM)スキーマクラス用に結合ポリシーを作成し、それを組織のデフォルトとしてマークすることができます。
+マージポリシーはIMS組織に対して非公開なので、異なるポリシーを作成して、必要な方法でスキーマを結合できます。 [!DNL Profile]データにアクセスするAPIにはマージポリシーが必要ですが、明示的に指定されない場合はデフォルトが使用されます。 [!DNL Platform] 組織にデフォルトの結合ポリシーを提供します。または、特定のExperience Data Model(XDM)スキーマクラス用に結合ポリシーを作成し、それを組織のデフォルトとしてマークすることができます。
 
 各組織はスキーマクラスごとに複数のマージポリシーを持つことができますが、各クラスはデフォルトのマージポリシーを1つだけ持つことができます。 デフォルトとして設定されたマージポリシーは、スキーマクラスの名前が指定され、マージポリシーが必須で指定されていない場合に使用されます。
 
@@ -67,10 +69,10 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 | `name` | リスト表示で結合ポリシーを識別できるわかりやすい名前。 |
 | `imsOrgId` | この結合ポリシーが属する組織 ID |
 | `identityGraph` | 関連 ID の取得元（ID）の ID グラフを示す [ID グラフ](#identity-graph)オブジェクト。関連するすべての ID で見つかったプロファイルフラグメントが結合されます。 |
-| `attributeMerge` | [データの競合が発生した場合に、マージポリシーがプロファイル属性に優先順位を付ける方法を示す属性マージ](#attribute-merge) ・オブジェクト。 |
-| `schema.name` | オブジェクトの一部で [`schema`](#schema) あり、 `name` フィールドにはマージポリシーが関連付けられているXDMスキーマクラスが含まれます。 スキーマとクラスの詳細については、 [XDMのドキュメントを読んでください](../../xdm/home.md)。 |
+| `attributeMerge` | [データの競合が発生した場合に、マージポリシーでプロファイル属性の優先順位を決定する方法を示す属性](#attribute-merge) mergeobjectです。 |
+| `schema.name` | [`schema`](#schema)オブジェクトの一部である`name`フィールドには、マージポリシーが関連付けられているXDMスキーマクラスが含まれます。 スキーマとクラスの詳細は、[XDMドキュメント](../../xdm/home.md)を読んでください。 |
 | `default` | この結合ポリシーが指定されたスキーマのデフォルトかどうかを示すブール値。 |
-| `version` | [!DNL Platform] マージポリシーのバージョンを維持しました。 この読み取り専用の値は、結合ポリシーが更新されるたびに増加します。 |
+| `version` | [!DNL Platform] マージポリシーのバージョンを維持しました。この読み取り専用の値は、結合ポリシーが更新されるたびに増加します。 |
 | `updateEpoch` | 結合ポリシーの最後の更新日。 |
 
 **結合ポリシーの例**
@@ -97,7 +99,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 ### ID グラフ {#identity-graph}
 
-[Adobe Experience Platformアイデンティティサービス](../../identity-service/home.md) は、グローバルに、およびの各組織で使用されるIDグラフを管理 [!DNL Experience Platform]します。 結合ポリシーの `identityGraph` 属性は、ユーザーの関連 ID の決定方法を定義します。
+[Adobe Experience PlatformID](../../identity-service/home.md) サービスは、グローバルに、およびの各組織で使用するIDグラフを管理 [!DNL Experience Platform]します。結合ポリシーの `identityGraph` 属性は、ユーザーの関連 ID の決定方法を定義します。
 
 **ID グラフオブジェクト**
 
@@ -122,7 +124,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 ### 属性の結合 {#attribute-merge}
 
-プロファイルフラグメントとは、特定のユーザーに存在する ID のリストからの 1 つの ID のプロファイル情報のことです。使用するIDグラフのタイプが複数のIDになる場合、プロファイル属性と優先度が競合する可能性があります。 を使用 `attributeMerge`すると、キー値（レコードデータ）型のデータセット間の結合の競合をイベントする際に、優先順位を付けるプロファイル属性を指定できます。
+プロファイルフラグメントとは、特定のユーザーに存在する ID のリストからの 1 つの ID のプロファイル情報のことです。使用するIDグラフのタイプが複数のIDになる場合、プロファイル属性と優先度が競合する可能性があります。 `attributeMerge`を使用すると、キー値（レコードデータ）型のデータセット間の結合の競合をイベントする際に、優先順位を付けるプロファイル属性を指定できます。
 
 **attributeMerge オブジェクト**
 
@@ -134,11 +136,11 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 ここで、`{ATTRIBUTE_MERGE_TYPE}` は次のいずれかです。
 
-* **`timestampOrdered`**:（デフォルト）最後に更新されたプロファイルを優先します。 この結合タイプを使用する場合、`data` 属性は不要です。`timestampOrdered` また、データセット内またはデータセット間でプロファイルフラグメントを結合する場合に優先されるカスタムタイムスタンプもサポートします。 詳しくは、カスタムタイムスタンプの [使用に関する付録の節を参照してください](#custom-timestamps)。
-* **`dataSetPrecedence`** :プロファイルフラグメントの送信元のデータセットに基づいて、そのフラグメントを優先します。 これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
-   * **`order`**:&quot;dataSetPrecedence&quot;を使用する場合は、配列にデータセットのリストを指定する必要があり `order` ます。 データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
+* **`timestampOrdered`**:（デフォルト）最後に更新されたプロファイルを優先します。この結合タイプを使用する場合、`data` 属性は不要です。`timestampOrdered` また、データセット内またはデータセット間でプロファイルフラグメントを結合する場合に優先されるカスタムタイムスタンプもサポートします。詳しくは、[カスタムタイムスタンプの使用](#custom-timestamps)の付録の節を参照してください。
+* **`dataSetPrecedence`** :プロファイルフラグメントの送信元のデータセットに基づいて、そのフラグメントを優先します。これは、あるデータセットに存在する情報が別のデータセットのデータよりも優先または信頼されている場合に使用できます。この結合タイプを使用する場合、`order` 属性は優先順にデータセットをリストするので、必須です。
+   * **`order`**:&quot;dataSetPrecedence&quot;を使用する場合は、 `order` 配列にデータセットのリストを指定する必要があります。データセットに含まれていないリストは結合されません。つまり、データセットをプロファイルに結合するには、データセットを明示的にリストする必要があります。`order` 配列は、データセットの ID を優先順にリストします。
 
-#### 型を使用した `attributeMerge``dataSetPrecedence` オブジェクトの例
+#### `attributeMerge`オブジェクトの例（`dataSetPrecedence`型を使用）
 
 ```json
     "attributeMerge": {
@@ -152,7 +154,7 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
     }
 ```
 
-#### 型を使用した `attributeMerge``timestampOrdered` オブジェクトの例
+#### `attributeMerge`オブジェクトの例（`timestampOrdered`型を使用）
 
 ```json
     "attributeMerge": {
@@ -182,11 +184,11 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
     }
 ```
 
-XDMの詳細とExperience Platformでのスキーマの使い方については、 [XDM Systemの概要を読んでください](../../xdm/home.md)。
+XDMの詳細やExperience Platformでのスキーマの使い方については、まず[XDM System overview](../../xdm/home.md)を読んでください。
 
 ## 結合ポリシーへのアクセス {#access-merge-policies}
 
-Using the [!DNL Real-time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. また、エンドポイントを使用して、ID別に複数のマージポリシーを取得することもで `/config/mergePolicies/bulk-get` きます。 これらの各呼び出しを実行する手順を、以下の各節で説明します。
+[!DNL Real-time Customer Profile] APIを使用して`/config/mergePolicies`エンドポイントでルックアップリクエストを実行し、特定の結合ポリシーをIDで表示するか、特定の条件でフィルタリングしたIMS組織のすべての結合ポリシーにアクセスできます。 また、`/config/mergePolicies/bulk-get`エンドポイントを使用して、IDに基づいて複数のマージポリシーを取得することもできます。 これらの各呼び出しを実行する手順を、以下の各節で説明します。
 
 ### ID による単一の結合ポリシーへのアクセス
 
@@ -240,7 +242,7 @@ curl -X GET \
 
 ### ID別に複数のマージポリシーを取得する
 
-エンドポイントにPOSTリクエストを送信し、取得するマージポリシーのIDをリクエスト本文に含めることで、複数のマージポリシーを取得でき `/config/mergePolicies/bulk-get` ます。
+`/config/mergePolicies/bulk-get`エンドポイントにPOSTリクエストを送信し、取得するマージポリシーのIDをリクエスト本文に含めることで、複数のマージポリシーを取得できます。
 
 **API 形式**
 
@@ -738,31 +740,31 @@ curl -X DELETE \
 
 ## 次の手順
 
-組織の結合ポリシーを作成および設定する方法がわかったので、結合ポリシーを使用してPlatform内での顧客プロファイルの表示を調整したり、 [!DNL Real-time Customer Profile] データからオーディエンスセグメントを作成したりできます。 セグメントの定義と使用を開始するには、[Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)のドキュメントを参照してください。
+組織の結合ポリシーの作成および設定方法がわかったので、結合ポリシーを使用してPlatform内の顧客プロファイルの表示を調整したり、[!DNL Real-time Customer Profile]データからオーディエンスセグメントを作成したりできます。 セグメントの定義と使用を開始するには、[Adobe Experience Platform セグメント化サービス](../../segmentation/home.md)のドキュメントを参照してください。
 
 ## 付録
 
 この節では、マージポリシーの操作に関する補足情報を説明します。
 
-### カスタムタイムスタンプの使用 {#custom-timestamps}
+### カスタムタイムスタンプの使用{#custom-timestamps}
 
-記録をExperience Platformに取り込むと、取り込み時にシステムタイムスタンプを取得し、記録に追加する。 マージポリシーの `timestampOrdered``attributeMerge` 種類としてを選択すると、プロファイルはシステムのタイムスタンプに基づいてマージされます。 つまり、記録がプラットフォームに取り込まれた時のタイムスタンプに基づいて結合が行われます。
+記録をExperience Platformに取り込むと、取り込み時にシステムタイムスタンプを取得し、記録に追加する。 マージポリシーの`attributeMerge`タイプとして`timestampOrdered`が選択されている場合、プロファイルはシステムのタイムスタンプに基づいてマージされます。 つまり、記録がプラットフォームに取り込まれた時のタイムスタンプに基づいて結合が行われます。
 
 場合によっては、データのバックフィルや、レコードが順番に取り込まれない場合のイベントの正しい順序の確認など、カスタムタイムスタンプを指定し、マージポリシーでシステムタイムスタンプではなくカスタムタイムスタンプが適用される場合があります。
 
-カスタムタイムスタンプを使用するには、プロファイルスキーマにタイムスタンプを追加する [[!DNL External Source System Audit Details Mixin]](#mixin-details) 必要があります。 追加したカスタムタイムスタンプは、この `xdm:lastUpdatedDate` フィールドを使用して入力できます。 レコードを取り込むときに `xdm:lastUpdatedDate` フィールドに値が入力され、Experience Platformはそのフィールドを使用して、データセット内およびデータセット間でレコードまたはプロファイルフラグメントを結合します。 が存在しな `xdm:lastUpdatedDate` い場合、または入力されない場合、プラットフォームはシステムタイムスタンプを引き続き使用します。
+カスタムタイムスタンプを使用するには、プロファイルスキーマに[[!DNL External Source System Audit Details Mixin]](#mixin-details)を追加する必要があります。 追加したカスタムタイムスタンプは、`xdm:lastUpdatedDate`フィールドを使用して入力できます。 `xdm:lastUpdatedDate`フィールドにデータを入力してレコードを取り込むと、Experience Platformはそのフィールドを使用して、データセット内およびデータセット間でレコードまたはプロファイルフラグメントを結合します。 `xdm:lastUpdatedDate`が存在しない場合、または入力されていない場合、プラットフォームは引き続きシステムタイムスタンプを使用します。
 
 >[!NOTE]
 >
->同じレコード上でPATCHを送信する場合は、タイム `xdm:lastUpdatedDate` スタンプが設定されていることを確認する必要があります。
+>同じレコードでPATCHを送信する場合は、`xdm:lastUpdatedDate`タイムスタンプが設定されていることを確認する必要があります。
 
-スキーマレジストリAPIを使用してスキーマを操作する手順(スキーマにミックスインを追加する方法など)については、APIを使用したスキーマの作成に関する [チュートリアルを参照してください](../../xdm/tutorials/create-schema-api.md)。
+スキーマレジストリAPIを使用したスキーマの操作手順(スキーマへのミックスインの追加方法など)については、[API](../../xdm/tutorials/create-schema-api.md)を使用したスキーマの作成のチュートリアルを参照してください。
 
-UIを使用してカスタムタイムスタンプを操作するには、 [マージポリシーユーザーガイドのカスタムタイムスタンプの](../ui/merge-policies.md#custom-timestamps) 使用に関する節を参照してください [](../ui/merge-policies.md)。
+UIを使用してカスタムタイムスタンプを操作するには、『[merge policies user guide](../ui/merge-policies.md)』の「using custom timestamps](../ui/merge-policies.md#custom-timestamps)」の節を参照してください。[
 
-#### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] details  {#mixin-details}
 
-次の例は、に正しく入力されたフィールドを示してい [!DNL External Source System Audit Details Mixin]ます。 完全なミックスインJSONは、GitHubの [パブリックエクスペリエンスデータモデル(XDM)レポートでも表示できます](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) 。
+次の例は、[!DNL External Source System Audit Details Mixin]に正しく入力されたフィールドを示しています。 完全なミックスインJSONは、GitHubの[パブリックエクスペリエンスデータモデル(XDM)リポジトリ](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json)でも表示できます。
 
 ```json
 {
