@@ -1,34 +1,35 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Privacy Service サービス UI の概要
 topic: UI guide
+description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視し始めます。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 52%
+source-wordcount: '180'
+ht-degree: 33%
 
 ---
 
 
 # [!DNL Privacy Service] UI の概要
 
-Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. This document explores the [!DNL Privacy Service] UI. API の使用について詳しくは、[Privacy Service 開発者ガイド](../api/getting-started.md)を参照してください。
+Adobe Experience Platform[!DNL Privacy Service]は、RESTful APIとユーザーインターフェイスを提供し、各種ソリューション間でプライバシーとコンプライアンスの要求を調整できます。 このドキュメントは[!DNL Privacy Service] UIを調べます。 API の使用について詳しくは、[Privacy Service 開発者ガイド](../api/getting-started.md)を参照してください。
 
-## Log in to the [!DNL Privacy Service] UI
+## [!DNL Privacy Service] UIにログインします
 
-You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. また、Adobe ID が関連付けられている組織内のシステム管理者権限が必要です。
+[!DNL Privacy Service] UIに対して認証を行うには、Adobe IDが必要です。 また、Adobe ID が関連付けられている組織内のシステム管理者権限が必要です。
 
-Adobe Experience Cloud のログインページ（https://experience.adobe.com）に移動します。 「**[!UICONTROL Adobe ID でログイン]**」をクリックし、指示に従って Adobe ID の資格情報を入力します。
+「**[!UICONTROL Adobe IDでサインイン]**」を選択し、指示に従ってAdobe IDの資格情報を入力します。
 
-Once you are signed in, click **[!UICONTROL Privacy UI]**.
+サインインしたら、「**[!UICONTROL プライバシーUI]**」を選択します。
 
 ![](../images/ui-overview/quick-access.png)
 
-### ログイン元 [!DNL Experience Platform]
+### [!DNL Experience Platform]からログイン
 
-Adobe Experience PlatformUIにアクセスできる場合は、左側のナビゲーションにある「 [!DNL Privacy Service] 要求 **** 」タブからUIにアクセスすることもできます。
+Adobe Experience PlatformUIにアクセスできる場合は、左側のナビゲーションの「**[!UICONTROL リクエスト]**」タブから[!DNL Privacy Service] UIにアクセスすることもできます。
 
 ![](../images/ui-overview/platform.png)
 
