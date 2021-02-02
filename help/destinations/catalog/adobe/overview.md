@@ -1,31 +1,31 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
+keywords: 宛先；エクスペリエンスクラウドソリューション；ターゲット;ターゲット先；ad cloud;advertising cloud;オーディエンス管理者；adobeターゲットの送信先；ターゲット;オーディエンス管理者の宛先；
 title: アドビの宛先
 seo-title: アドビの宛先
-description: アドビのリアルタイム CDP 内のデータを他の Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などをおこない、顧客体験を管理します。
-seo-description: アドビのリアルタイム CDP 内のデータを他の Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などをおこない、顧客体験を管理します。
+description: プラットフォームのデータを他のAdobe Experience Cloudソリューションに接続し、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理できます。
+seo-description: プラットフォームのデータを他のAdobe Experience Cloudソリューションに接続し、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理できます。
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 57%
+source-wordcount: '243'
+ht-degree: 21%
 
 ---
 
 
 # アドビの宛先 {#adobe-destinations}
 
-アドビのリアルタイム CDP 内のデータを他の Experience Cloud ソリューションに接続して、広告のターゲット設定、パーソナライズ機能、マーケティングの自動化などを行い、顧客体験を管理します。
+広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うために、Adobe Experience Platformのデータを他のAdobe Experience Cloudのソリューションに結び付けることで、顧客体験を管理できます。
 
 ## 接続
 
-接続と拡張の違いについて詳しくは、宛先の種類とカテゴリページの [接続](../../destination-types.md#connections) （英語）を参照してください。
+接続と拡張子の違いについて詳しくは、[宛先の種類とカテゴリ]ページの[接続](../../destination-types.md#connections)を参照してください。
 
 - [Adobe Campaign](../email-marketing/adobe-campaign.md)
 
 ## 拡張機能
 
-接続と拡張の違いについて詳しくは、宛先の種類とカテゴリページの [拡張](../../destination-types.md#extensions) （英語）を参照してください。
+接続と拡張の違いについて詳しくは、宛先の種類とカテゴリページの[拡張子](../../destination-types.md#extensions)を参照してください。
 
 - [Adobe Advertising Cloud 拡張機能](../advertising/adobe-advertising-cloud.md)
 - [Adobe Analytics 拡張機能](../analytics/adobe-analytics.md)
