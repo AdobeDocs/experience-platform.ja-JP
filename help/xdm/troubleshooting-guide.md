@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;home;popular topics;;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;Union schema;UNION PROFILE;union profile
+keywords: Experience Platform；ホーム；人気の高いトピック；XDM;XDMプロファイル;XDM個人システム；XDM個人イベント;XDM ExperienceEvent;XDM ExperienceEventイベント;XDM ExperienceEvent；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデルモデル；スキーマ；トラブルシューティング；FAQ;和集合スキーマ;イベント和集合;プロファイル和集合
 solution: Experience Platform
 title: エクスペリエンスデータモデル（XDM）システムのトラブルシューティングガイド
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）システムに関するよくある質問の回答に加えて、一般的なエラーのトラブルシューティングガイドを提供します。
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '1831'
-ht-degree: 67%
+source-wordcount: '1873'
+ht-degree: 62%
 
 ---
 
 
 # [!DNL Experience Data Model] (XDM)システムトラブルシューティングガイド
 
-This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) System, as well as a troubleshooting guide for common errors. Adobe Experience Platform の他のサービスに関する質問やトラブルシューティングについては、[Experience Platform のトラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、[!DNL Experience Data Model] (XDM)システムに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。 Adobe Experience Platform の他のサービスに関する質問やトラブルシューティングについては、[Experience Platform のトラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
-**[!DNL Experience Data Model](XDM)** は、顧客体験管理のための標準化されたスキーマを定義するオープンソース仕様です。 The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services. に **[!DNL Schema Registry]** は、ユーザーインターフェイスと、内部にアクセスするRESTful APIが用意さ **[!DNL Schema Library]** れてい [!DNL Experience Platform]ます。 詳しくは、[XDM のドキュメント](home.md)を参照してください。
+**[!DNL Experience Data Model](XDM)** は、顧客体験管理のための標準化されたスキーマを定義するオープンソース仕様です。[!DNL Experience Platform]が構築される方法論&#x200B;**XDM System**&#x200B;は[!DNL Platform]サービスで使用する[!DNL Experience Data Model]スキーマを操作します。 **[!DNL Schema Registry]**&#x200B;は、[!DNL Experience Platform]内の&#x200B;**[!DNL Schema Library]**&#x200B;にアクセスするためのユーザーインターフェイスとRESTful APIを提供します。 詳しくは、[XDM のドキュメント](home.md)を参照してください。
 
 ## FAQ
 
-The following is a list of answers to frequently asked questions about XDM System and use of the [!DNL Schema Registry] API.
+以下は、XDMシステムと[!DNL Schema Registry] APIの使い方に関するよくある質問に対する回答のリストです。
 
 ### フィールドをスキーマに追加するには、どうすればよいですか？
 
 Mixin を使用して、スキーマにフィールドを追加できます。各 Mixin は 1 つ以上のクラスと互換性があり、それらの互換性のあるクラスの 1 つを実装する任意のスキーマで Mixin を使用できます。Adobe Experience Platform は、独自の定義済みフィールドを含む複数の業界用 Mixin を提供しますが、API またはユーザーインターフェイスを使用して新しい Mixin を作成することで、独自のフィールドをスキーマに追加できます。
 
-APIでの新しいミックスインの作成について詳しくは、 [!DNL Schema Registry] mixinエンドポイントガイドを参照してください [](api/mixins.md#create)。 UI を使用する場合は、[スキーマエディターのチュートリアル](./tutorials/create-schema-ui.md)を参照してください。
+[!DNL Schema Registry] APIでの新しいミックスインの作成について詳しくは、[ミックスインエンドポイントのガイド](api/mixins.md#create)を参照してください。 UI を使用する場合は、[スキーマエディターのチュートリアル](./tutorials/create-schema-ui.md)を参照してください。
 
 ### Mixin とデータ型の最適な用途は何ですか？
 
@@ -37,23 +37,23 @@ APIでの新しいミックスインの作成について詳しくは、 [!DNL S
 
 ### スキーマの一意の ID とは何ですか？
 
-All [!DNL Schema Registry] resources (schemas, mixins, data types, classes) have a URI that acts as an unique ID for reference and lookup purposes. API でスキーマを表示すると、最上位レベルの `$id` および `meta:altId` 属性でスキーマが見つかります。
+すべての[!DNL Schema Registry]リソース(スキーマ、ミックスイン、データ型、クラス)には、参照および参照の目的で一意のIDとして機能するURIがあります。 API でスキーマを表示すると、最上位レベルの `$id` および `meta:altId` 属性でスキーマが見つかります。
 
-For more information, see the [resource identification](api/getting-started.md#resource-identification) section in the [!DNL Schema Registry] API developer guide.
+詳しくは、[!DNL Schema Registry] API開発者ガイドの[リソースID](api/getting-started.md#resource-identification)の節を参照してください。
 
 ### スキーマでは重大な変更をいつ回避し始めますか？
 
-Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
+データセットの作成に使用されたことがない、または[[!DNL Real-time Customer Profile]](../profile/home.md)での使用が有効になっている限り、スキーマに対して無効な変更を行うことができます。 スキーマがデータセットの作成に使用されたり、[!DNL Real-time Customer Profile]での使用が有効になると、[スキーマ展開](schema/composition.md#evolution)のルールは、システムによって厳密に適用されます。
 
 ### 長いフィールドタイプの最大サイズはどれくらいですか？
 
 長いフィールドタイプは、最大サイズが 53（+1）ビットの整数で、可能な範囲は -9007199254740992 ～ 9007199254740992 です。これは、JSON の JavaScript 実装が長整数を表す方法に制限があるためです。
 
-フィールドの種類について詳しくは、「 [XDMフィールドの種類の制約に関するドキュメント](./schema/field-constraints.md)」を参照してください。
+フィールドの種類について詳しくは、[XDMフィールドの種類制約](./schema/field-constraints.md)のドキュメントを参照してください。
 
 ### スキーマの ID を定義するには、どうすればよいですか？
 
-In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. キーフィールドを「ID」としてマークすることで、スキーマで ID が定義されます。Commonly used fields for identity include email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html), CRM ID, and other unique ID fields.
+[!DNL Experience Platform]では、解釈されるデータのソースに関係なく、IDを使用して対象（通常は個人）を特定します。 キーフィールドを「ID」としてマークすることで、スキーマで ID が定義されます。IDに一般的に使用されるフィールドには、電子メールアドレス、電話番号、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM ID、その他の一意のIDフィールドがあります。
 
 フィールドは、API またはユーザーインターフェイスを使用して ID としてマークできます。
 
@@ -63,31 +63,31 @@ API では、ID は ID 記述子を作成することで確立されます。ID 
 
 ID 記述子は、/descriptors エンドポイントへの POST リクエストによって作成されます。作成に成功した場合は、HTTP ステータス 201（Created）と、新しい記述子の詳細を含む応答オブジェクトを受け取ります。
 
-For more details on creating identity descriptors in the API, see the document on [descriptors](api/descriptors.md) section in the [!DNL Schema Registry] developer guide.
+APIでのID記述子の作成について詳しくは、[!DNL Schema Registry]開発者ガイドの[descriptors](api/descriptors.md)のドキュメントを参照してください。
 
 #### UI で ID を定義
 
-スキーマエディターでスキーマを開き、エディターの「**[!UICONTROL 構造]**」セクションのフィールド（ID としてマークする）をクリックします。右側の「**[!UICONTROL フィールドプロパティ]**」で、「**[!UICONTROL ID]**」チェックボックスをクリックします。
+スキーマエディタでスキーマを開き、エディタの&#x200B;**[!UICONTROL 構造]**&#x200B;セクションで、IDとしてマークするフィールドを選択します。 右側の「**[!UICONTROL フィールドプロパティ]**」で、「**[!UICONTROL ID]**」チェックボックスを選択します。
 
 UI で ID を管理する方法について詳しくは、スキーマエディターのチュートリアルの [ID フィールドの定義](./tutorials/create-schema-ui.md#identity-field)に関する節を参照してください。
 
 ### スキーマにプライマリ ID は必要ですか？
 
-スキーマには 0 または 1 の ID が含まれる場合があるため、プライマリ ID はオプションです。However, a schema must have a primary identity in order for the schema to be enabled for use in [!DNL Real-time Customer Profile]. 詳しくは、スキーマエディターのチュートリアルの [ID](./tutorials/create-schema-ui.md#identity-field) に関する節を参照してください。
+スキーマには 0 または 1 の ID が含まれる場合があるため、プライマリ ID はオプションです。ただし、[!DNL Real-time Customer Profile]でスキーマを使用するには、スキーマにプライマリIDが必要です。 詳しくは、スキーマエディターのチュートリアルの [ID](./tutorials/create-schema-ui.md#identity-field) に関する節を参照してください。
 
-### で使用するスキーマを有効にする方法を教えてく [!DNL Real-time Customer Profile]ださい。
+### スキーマを[!DNL Real-time Customer Profile]で使用できるようにするにはどうすればよいですか？
 
-Schemas are enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md) through the addition of a &quot;union&quot; tag, located in the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
+スキーマは、スキーマの`meta:immutableTags`属性にある「和集合」タグを追加することで、[[!DNL Real-time Customer Profile]](../profile/home.md)での使用が有効になります。 [!DNL Profile]でのスキーマの使用は、APIまたはユーザーインターフェイスを使用して行うことができます。
 
-#### Enabling an existing schema for [!DNL Profile] using the API
+#### APIを使用して[!DNL Profile]の既存のスキーマを有効にする
 
 PATCH リクエストを作成して、スキーマを更新し、値「union」を含む配列として `meta:immutableTags` 属性を追加します。更新が成功すると、応答に更新されたスキーマが表示され、スキーマに和集合タグが含まれるようになります。
 
-For more information on using the API to enable a schema for use in [!DNL Real-time Customer Profile], see the [unions](./api/unions.md) document of the [!DNL Schema Registry] developer guide.
+APIを使用して[!DNL Real-time Customer Profile]でスキーマを使用できるようにする方法について詳しくは、[!DNL Schema Registry]開発者ガイドの[和集合](./api/unions.md)ドキュメントを参照してください。
 
-#### Enabling an existing schema for [!DNL Profile] using the UI
+#### UIを使用した[!DNL Profile]の既存のスキーマの有効化
 
-In [!DNL Experience Platform], click on **[!UICONTROL Schemas]** in the left-navigation, and select the name of the schema you wish to enable from the list of schemas. 次に、エディターの右側の「**[!UICONTROL スキーマプロパティ]**」で、「**[!UICONTROL プロファイル]**」をクリックしてオンに切り替えます。
+[!DNL Experience Platform]で、左側のナビゲーションから「**[!UICONTROL スキーマ]**」を選択し、スキーマのリストから有効にするスキーマの名前を選択します。 次に、**[!UICONTROL スキーマプロパティ]**&#x200B;の下のエディターの右側で、**[!UICONTROL プロファイル]**&#x200B;を選択してオンに切り替えます。
 
 
 詳しくは、スキーマエディターのチュートリアルの[リアルタイム顧客プロファイルでの使用](./tutorials/create-schema-ui.md#profile)に関する節を参照してください。
@@ -96,15 +96,15 @@ In [!DNL Experience Platform], click on **[!UICONTROL Schemas]** in the left-nav
 
 和集合スキーマは読み取り専用であり、システムによって自動的に生成されます。和集合スキーマを直接編集することはできません。和集合スキーマは、特定のクラスを実装するスキーマに「和集合」タグが追加されたときに、そのクラスに対して作成されます。
 
-For more information on unions in XDM, see the [unions](./api/unions.md) section in the [!DNL Schema Registry] API developer guide.
+XDMの和集合について詳しくは、[!DNL Schema Registry] API開発者ガイドの[和集合](./api/unions.md)の節を参照してください。
 
 ### データをスキーマに取り込むには、どのようにデータファイルをフォーマットする必要がありますか？
 
-[!DNL Experience Platform] は、 [!DNL Parquet] またはJSON形式のデータファイルを受け入れます。 これらのファイルの内容は、データセットが参照するスキーマに準拠している必要があります。データファイル取得に関するベストプラクティスについて詳しくは、「[バッチ取得の概要](../ingestion/home.md)」を参照してください。
+[!DNL Experience Platform] データファイルは、 [!DNL Parquet] またはJSON形式で受け付けます。これらのファイルの内容は、データセットが参照するスキーマに準拠している必要があります。データファイル取得に関するベストプラクティスについて詳しくは、「[バッチ取得の概要](../ingestion/home.md)」を参照してください。
 
 ## エラーとトラブルシューティング
 
-The following is a list of error messages that you may encounter when working with the [!DNL Schema Registry] API.
+以下は、[!DNL Schema Registry] APIを使用する際に発生する可能性のあるエラーメッセージのリストです。
 
 ### オブジェクトが見つかりません
 
@@ -120,7 +120,7 @@ The following is a list of error messages that you may encounter when working wi
 
 このエラーは、システムが特定のリソースを見つけることができなかった場合に表示されます。リソースが削除されたか、API 呼び出しのパスが無効です。再試行する前に、API 呼び出しの有効なパスを入力したことを確認してください。リソースの正しい ID を入力したこと、およびパスが適切なコンテナ（グローバルまたはテナント）で適切に名前空間化されていることを確認する必要があります。。
 
-For more information on constructing lookup paths in the API, see the [container](./api/getting-started.md#container) and [resource identification](api/getting-started.md#resource-identification) sections in the [!DNL Schema Registry] developer guide.
+APIでルックアップパスを構築する方法について詳しくは、[!DNL Schema Registry]開発者ガイドの[コンテナ](./api/getting-started.md#container)と[リソースID](api/getting-started.md#resource-identification)の節を参照してください。
 
 ### タイトルは一意である必要があります
 
@@ -149,12 +149,12 @@ For more information on constructing lookup paths in the API, see the [container
 }
 ```
 
-このエラーメッセージは、不適切に名前空間化されたフィールドを含む新しい Mixin を作成しようとすると表示されます。IMS 組織で定義された Mixin では、他の業界やベンダーのリソースとの競合を避けるために、`TENANT_ID` でフィールドを名前空間化する必要があります。ミックスインに適したデータ構造の詳細な例は、ミックスインエンドポイントガイドを参照して [ください](./api/mixins.md#create)。
+このエラーメッセージは、不適切に名前空間化されたフィールドを含む新しい Mixin を作成しようとすると表示されます。IMS 組織で定義された Mixin では、他の業界やベンダーのリソースとの競合を避けるために、`TENANT_ID` でフィールドを名前空間化する必要があります。ミックスインに適したデータ構造の詳細な例は、[ミックスインエンドポイントガイド](./api/mixins.md#create)を参照してください。
 
 
 ### [!DNL Real-time Customer Profile] エラー
 
-The following error messages are associated with operations involved in enabling schemas for [!DNL Real-time Customer Profile]. See the [unions](./api/unions.md) section in the [!DNL Schema Registry] API developer guide for more information.
+次のエラーメッセージは、[!DNL Real-time Customer Profile]のスキーマを有効にする操作に関連しています。 詳しくは、[!DNL Schema Registry] API開発ガイドの[和集合](./api/unions.md)の節を参照してください。
 
 #### プロファイルデータセットを有効にするには、スキーマが有効である必要があります
 
@@ -167,7 +167,7 @@ The following error messages are associated with operations involved in enabling
 }
 ```
 
-This error message displays when you attempt to enable a profile dataset for a schema that has not been enabled for [!DNL Real-time Customer Profile]. データセットを有効にする前に、スキーマに和集合タグが含まれていることを確認してください。
+[!DNL Real-time Customer Profile]に対して有効になっていないスキーマのプロファイルデータセットを有効にしようとすると、このエラーメッセージが表示されます。 データセットを有効にする前に、スキーマに和集合タグが含まれていることを確認してください。
 
 #### 参照 ID 記述子が必要です
 
@@ -182,7 +182,7 @@ This error message displays when you attempt to enable a profile dataset for a s
 }
 ```
 
-This error message displays when you attempt to enable a schema for [!DNL Profile] and one of its properties contains a relationship descriptor without a reference identity descriptor. このエラーを解決するには、問題のスキーマフィールドに参照 ID 記述子を追加します。
+このエラーメッセージは、[!DNL Profile]のスキーマを有効にしようとしたときに、そのプロパティの1つに参照ID記述子を持たない関係記述子が含まれている場合に表示されます。 このエラーを解決するには、問題のスキーマフィールドに参照 ID 記述子を追加します。
 
 #### 参照 ID 記述子フィールドの名前空間と宛先スキーマの名前空間が一致している必要があります
 
@@ -200,13 +200,13 @@ This error message displays when you attempt to enable a schema for [!DNL Profil
 }
 ```
 
-In order to enable schemas that contain relationship descriptors for use in [!DNL Profile], the namespace of the source field and the primary namespace of the target field must be the same. このエラーメッセージは、参照 ID 記述子に対して一致しない名前空間が含まれるスキーマを有効にしようとすると表示されます。この問題を解決するには、宛先スキーマの ID フィールドの `xdm:namespace` 値が、ソースフィールドの参照 ID 記述子にある `xdm:identityNamespace` プロパティの値と一致することを確認してください。
+[!DNL Profile]で使用する関係記述子を含むスキーマを有効にするには、ソースフィールドとターゲットフィールドの主名前空間の名前空間を同じにする必要があります。 このエラーメッセージは、参照 ID 記述子に対して一致しない名前空間が含まれるスキーマを有効にしようとすると表示されます。この問題を解決するには、宛先スキーマの ID フィールドの `xdm:namespace` 値が、ソースフィールドの参照 ID 記述子にある `xdm:identityNamespace` プロパティの値と一致することを確認してください。
 
 サポートされる ID 名前空間コードのリストについては、「ID 名前空間の概要」の「[標準の名前空間](../identity-service/namespaces.md)」の節を参照してください。
 
 ### Accept ヘッダーのエラー
 
-Most GET requests in the [!DNL Schema Registry] API require an Accept header in order for the system to determine how to format the response. Accept ヘッダーに関連する一般的なエラーのリストを以下に示します。様々な API リクエストの互換性のある Accept ヘッダーのリストについては、[スキーマレジストリ開発者ガイド](api/getting-started.md)の対応する節を参照してください。
+[!DNL Schema Registry] APIのほとんどのGETリクエストでは、応答のフォーマット方法を決定するために、Acceptヘッダーが必要です。 Accept ヘッダーに関連する一般的なエラーのリストを以下に示します。様々な API リクエストの互換性のある Accept ヘッダーのリストについては、[スキーマレジストリ開発者ガイド](api/getting-started.md)の対応する節を参照してください。
 
 #### Accept ヘッダーのパラメーターが必要です
 
@@ -265,7 +265,7 @@ Most GET requests in the [!DNL Schema Registry] API require an Accept header in 
 application/vnd.adobe.xed+json; version=1
 ```
 
-For a list of supported Accept headers, see the [Accept header](api/getting-started.md#accept) section in the [!DNL Schema Registry] developer guide.
+サポートされるAcceptヘッダーのリストについては、[!DNL Schema Registry]開発ガイドの[Accept header](api/getting-started.md#accept)の節を参照してください。
 
 #### Accept ヘッダーにバージョンを指定しないでください
 
