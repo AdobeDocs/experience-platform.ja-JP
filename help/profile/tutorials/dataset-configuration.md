@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
+keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API；データセットを有効にする
 title: API を使用したプロファイルおよび ID サービスのデータセットの設定
 topic: tutorial
 type: Tutorial
+description: このチュートリアルでは、Adobe Experience PlatformAPIを使用して、リアルタイム顧客プロファイルおよびIDサービスでデータセットを有効にする方法について説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f34983dc13a900e7c8fe2e2cef454400c1b6a726
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 56%
+source-wordcount: '1057'
+ht-degree: 54%
 
 ---
 
 
-# APIのデータセットの設定 [!DNL Profile] と [!DNL Identity Service] 使用
+# APIを使用した[!DNL Profile]と[!DNL Identity Service]のデータセットの設定
 
-This tutorial covers the process of enabling a dataset for use in [!DNL Real-time Customer Profile] and [!DNL Identity Service], broken down into the following steps:
+このチュートリアルでは、[!DNL Real-time Customer Profile]と[!DNL Identity Service]で使用するデータセットを有効にするプロセスを、次の手順に分けて説明します。
 
-1. Enable a dataset for use in [!DNL Real-time Customer Profile], using one of two options:
+1. [!DNL Real-time Customer Profile]で使用するデータセットを有効にするには、次の2つのオプションのいずれかを使用します。
    - [新しいデータセットの作成](#create-a-dataset-enabled-for-profile-and-identity)
    - [既存のデータセットの設定](#configure-an-existing-dataset)
 1. [データセットへのデータの取り込み](#ingest-data-into-the-dataset)
@@ -25,12 +26,12 @@ This tutorial covers the process of enabling a dataset for use in [!DNL Real-tim
 
 ## はじめに
 
-This tutorial requires a working understanding of the various Adobe Experience Platform services involved in managing [!DNL Profile]-enabled datasets. Before beginning this tutorial, please review the documentation for these related [!DNL Platform] services:
+このチュートリアルでは、[!DNL Profile]が有効なデータセットの管理に関わる様々なAdobe Experience Platformのサービスについて、十分に理解しておく必要があります。 このチュートリアルを開始する前に、関連する[!DNL Platform]サービスのドキュメントを確認してください。
 
 - [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-- [[!DNL Identity Service]](../../identity-service/home.md):取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースのIDをブリッジ化することで有効に [!DNL Platform]します。
+- [[!DNL Identity Service]](../../identity-service/home.md):取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースからIDをブリッジすることで有効に [!DNL Platform]します。
 - [[!DNL Catalog Service]](../../catalog/home.md):および用のデータセットの作成と設定を可能にするRESTful API [!DNL Real-time Customer Profile] で [!DNL Identity Service]す。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
 
 以下の節では、Platform API を正しく呼び出すために知っておく必要がある追加情報を示します。
 
@@ -40,7 +41,7 @@ This tutorial requires a working understanding of the various Adobe Experience P
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -50,13 +51,13 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 
 - Content-Type: application/json
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。 [!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
-## 有効にするデータセットの作成( [!DNL Profile] および [!DNL Identity] {#create-a-dataset-enabled-for-profile-and-identity}
+## [!DNL Profile]と[!DNL Identity] {#create-a-dataset-enabled-for-profile-and-identity}に対して有効にするデータセットの作成
 
-You can enable a dataset for [!DNL Real-time Customer Profile] and [!DNL Identity Service] immediately upon creation or at any point after the dataset has been created. 作成済みのデータセットを有効にする場合は、このドキュメントの後半の手順に従って、[既存のデータセットを設定](#configure-an-existing-dataset)します。新しいデータセットを作成するには、リアルタイム顧客プロファイルが有効となっている既存の XDM スキーマの ID を知っておく必要があります。プロファイルが有効なスキーマを参照または作成する方法について詳しくは、[スキーマレジストリ API を使用したスキーマの作成](../../xdm/tutorials/create-schema-api.md)に関するチュートリアルを参照してください。次の [!DNL Catalog] APIの呼び出しは、およびのデータセットを有効に [!DNL Profile] し [!DNL Identity Service]ます。
+データセットの作成直後、またはデータセットの作成後いつでも、[!DNL Real-time Customer Profile]と[!DNL Identity Service]のデータセットを有効にできます。 作成済みのデータセットを有効にする場合は、このドキュメントの後半の手順に従って、[既存のデータセットを設定](#configure-an-existing-dataset)します。新しいデータセットを作成するには、リアルタイム顧客プロファイルが有効となっている既存の XDM スキーマの ID を知っておく必要があります。プロファイルが有効なスキーマを参照または作成する方法について詳しくは、[スキーマレジストリ API を使用したスキーマの作成](../../xdm/tutorials/create-schema-api.md)に関するチュートリアルを参照してください。次の[!DNL Catalog] APIの呼び出しは、[!DNL Profile]と[!DNL Identity Service]のデータセットを有効にします。
 
 **API 形式**
 
@@ -66,7 +67,7 @@ POST /dataSets
 
 **リクエスト**
 
-By including `unifiedProfile` and `unifiedIdentity` under `tags` in the request body, the dataset will be immediately enabled for [!DNL Profile] and [!DNL Identity Service], respectively. これらのタグの値は、`"enabled:true"` 文字列を含む配列である必要があります。
+リクエスト本文の`tags`の下に`unifiedProfile`と`unifiedIdentity`を含めると、データセットは[!DNL Profile]と[!DNL Identity Service]のそれぞれに対して即座に有効になります。 これらのタグの値は、`"enabled:true"` 文字列を含む配列である必要があります。
 
 ```shell
 curl -X POST \
@@ -96,8 +97,8 @@ curl -X POST \
 
 | プロパティ | 説明 |
 |---|---|
-| `schemaRef.id` | The ID of the [!DNL Profile]-enabled schema upon which the dataset will be based. |
-| `{TENANT_ID}` | The namespace within the [!DNL Schema Registry] which contains resources belonging to your IMS Organization. See the [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) section of the [!DNL Schema Registry] developer guide for more information. |
+| `schemaRef.id` | データセットの基になる[!DNL Profile]対応スキーマのID。 |
+| `{TENANT_ID}` | [!DNL Schema Registry]内の名前空間。IMS組織に属するリソースが含まれます。 詳しくは、[!DNL Schema Registry]開発者ガイドの[TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id)の節を参照してください。 |
 
 **応答** 
 
@@ -111,11 +112,11 @@ curl -X POST \
 
 ## 既存のデータセットの設定 {#configure-an-existing-dataset}
 
-以下の手順では、 [!DNL Real-time Customer Profile] およびに対して以前に作成したデータセットを有効にする方法について説明 [!DNL Identity Service]します。 既にプロファイル対応データセットを作成している場合は、[データの取り込み](#ingest-data-into-the-dataset)手順に進んでください。
+以下の手順では、[!DNL Real-time Customer Profile]と[!DNL Identity Service]に対して、以前に作成したデータセットを有効にする方法を説明します。 既にプロファイル対応データセットを作成している場合は、[データの取り込み](#ingest-data-into-the-dataset)手順に進んでください。
 
 ### データセットが有効かどうかを確認します。{#check-if-the-dataset-is-enabled}
 
-Using the [!DNL Catalog] API, you can inspect an existing dataset to determine whether it is enabled for use in [!DNL Real-time Customer Profile] and [!DNL Identity Service]. 次の呼び出しは、データセットの詳細を ID によって取得します。
+[!DNL Catalog] APIを使用して、既存のデータセットを調べ、[!DNL Real-time Customer Profile]と[!DNL Identity Service]での使用が有効になっているかどうかを確認できます。 次の呼び出しは、データセットの詳細を ID によって取得します。
 
 **API 形式**
 
@@ -195,11 +196,11 @@ curl -X GET \
 }
 ```
 
-プロパティ `tags` の下で、`unifiedProfile` と `unifiedIdentity` が値 `enabled:true` と共に存在することを確認できます。したがって、 [!DNL Real-time Customer Profile][!DNL Identity Service] とは、それぞれこのデータセットに対して有効になります。
+プロパティ `tags` の下で、`unifiedProfile` と `unifiedIdentity` が値 `enabled:true` と共に存在することを確認できます。したがって、[!DNL Real-time Customer Profile]と[!DNL Identity Service]は、それぞれこのデータセットに対して有効になります。
 
 ### データセットの有効化 {#enable-the-dataset}
 
-If the existing dataset has not been enabled for [!DNL Profile] or [!DNL Identity Service], you can enable it by making a PATCH request using the dataset ID.
+既存のデータセットが[!DNL Profile]または[!DNL Identity Service]に対して有効になっていない場合は、データセットIDを使用してPATCHリクエストを行うことで有効にできます。
 
 **API 形式**
 
@@ -241,14 +242,14 @@ curl -X PATCH \
 
 ## データセットへのデータの取り込み {#ingest-data-into-the-dataset}
 
-とは、XDMデータ [!DNL Real-time Customer Profile] がデータセットに取り込まれる際に、その両方を [!DNL Identity Service] 利用します。 データセットにデータをアップロードする手順については、[API を使用したデータセットの作成](../../catalog/datasets/create.md)に関するチュートリアルを参照してください。When planning what data to send to your [!DNL Profile]-enabled dataset, consider the following best practices:
+[!DNL Real-time Customer Profile]と[!DNL Identity Service]は共にXDMデータをデータセットに取り込む際に消費します。 データセットにデータをアップロードする手順については、[API を使用したデータセットの作成](../../catalog/datasets/create.md)に関するチュートリアルを参照してください。[!DNL Profile]対応データセットに送信するデータを計画する際には、次のベストプラクティスを考慮してください。
 
 - オーディエンスセグメント条件として使用するデータを含めます。
-- ID グラフを最大化するために、プロファイルデータから確認できる識別子をできるだけ多く含めます。This allows [!DNL Identity Service] to stitch identities across datasets more effectively.
+- ID グラフを最大化するために、プロファイルデータから確認できる識別子をできるだけ多く含めます。これにより、[!DNL Identity Service]はデータセット間でIDをより効果的に結合できます。
 
-## データ取り込みの確認 [!DNL Real-time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
+## [!DNL Real-time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}によるデータ取り込みの確認
 
-初めて新しいデータセットにデータをアップロードする際、または新しい ETL やデータソースが関与するプロセスの一部として、データが期待どおりにアップロードされたかどうかを慎重に確認することをお勧めします。Using the [!DNL Real-time Customer Profile] Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for [!DNL Real-time Customer Profile]. データセットが有効になっていることを確認した後、ソースデータの形式と識別子が期待通りに動作することを確認します。APIを使用して [!DNL Real-time Customer Profile] データにアクセスする方法について詳しくは、「 [!DNL Profile] API」とも呼ばれる [エンティティのエンドポイントガイド](../api/entities.md)[!DNL Profile Access] に従ってください。
+初めて新しいデータセットにデータをアップロードする際、または新しい ETL やデータソースが関与するプロセスの一部として、データが期待どおりにアップロードされたかどうかを慎重に確認することをお勧めします。[!DNL Real-time Customer Profile]アクセスAPIを使用すると、バッチデータがデータセットに読み込まれるのと同時に取得できます。 期待するエンティティをいずれも取得できない場合は、[!DNL Real-time Customer Profile]に対してデータセットが有効になっていない可能性があります。 データセットが有効になっていることを確認した後、ソースデータの形式と識別子が期待通りに動作することを確認します。[!DNL Real-time Customer Profile] APIを使用して[!DNL Profile]データにアクセスする方法について詳しくは、[エンティティエンドポイントガイド](../api/entities.md)（「[!DNL Profile Access] API」とも呼ばれます）に従ってください。
 
 ## ID サービスによるデータ取り込みの確認 {#confirm-data-ingest-by-identity-service}
 
