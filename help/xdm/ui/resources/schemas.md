@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
+keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；スキーマ;スキーマ;
 solution: Experience Platform
 title: UIでのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: efa1d8efb26f4196f6724702784ccd13a9337a8a
+source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1167'
 ht-degree: 1%
 
 ---
@@ -65,13 +65,21 @@ ht-degree: 1%
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-表示されるダイアログで、リストから目的のミックスインを選択できます。 リストから複数のミックスインを選択できます。選択した各ミックスインが右側のレールに表示されます。
+ダイアログが表示され、スキーマ用に選択できるミックスインのリストが表示されます。 ミックスインは1つのクラスとのみ互換性があるので、スキーマが選択したクラスに関連付けられているミックスインのみが表示されます。 デフォルトでは、一覧に表示されるミックスインは、組織内での使用頻度に基づいて並べ替えられます。
+
+![](../../images/ui/resources/schemas/mixin-popularity.png)
+
+検索バーを使用して、目的のMixinを見つけることができます。 名前がクエリと一致するミックスインは、リストの上部に表示されます。 「**[!UICONTROL 標準フィールド]**」の下に、必要なデータ属性を説明するフィールドを含むミックスインが表示されます。
+
+![](../../images/ui/resources/schemas/mixin-search.png)
+
+スキーマに追加するミックスインの名前の横にあるチェックボックスを選択します。 リストから複数のミックスインを選択できます。選択した各ミックスインが右側のレールに表示されます。
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->リストにあるミックスインについては、プレビューアイコン(![](../../images/ui/resources/schemas/preview-icon.png))を選択して、ミックスインが提供するフィールドの構造を表示してから、スキーマに追加します。
+>リストにあるミックスインに対しては、情報アイコン(![](../../images/ui/resources/schemas/info-icon.png))にマウスポインターを置くか、情報アイコンにフォーカスして、ミックスインが取り込むデータの種類に関する簡単な説明を表示できます。 また、プレビューアイコン(![](../../images/ui/resources/schemas/preview-icon.png))を選択して、スキーマに追加する前に、ミックスインが提供するフィールドの構造を表示することもできます。
 
 ミックスインの選択が完了したら、**[!UICONTROL ミックスイン追加]**&#x200B;を選択してスキーマに追加します。
 
