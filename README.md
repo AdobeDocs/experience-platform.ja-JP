@@ -1,9 +1,9 @@
 ---
-source-git-commit: b0cc44b33b399eb64122374251840a4298946d80
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '509'
-ht-degree: 81%
+source-wordcount: '508'
+ht-degree: 79%
 
 ---
 # 貢献しているコンテンツ
@@ -12,11 +12,11 @@ ht-degree: 81%
 
 ## アドビオープンソース行動規範
 
-このプロジェクトでは、[Adobe Open Source Code of Actions](code-of-conduct.md) または. NET Foundation [Code の実施を採用してい](https://dotnetfoundation.org/code-of-conduct)ます。詳しくは、[投稿](contributing.md)の記事を参照してください。
+このプロジェクトでは、[Adobe Open Source Code of Actions](code-of-conduct.md) または [.NET Foundation Code の実施を採用してい](https://dotnetfoundation.org/code-of-conduct)ます。詳しくは、[投稿](contributing.md)の記事を参照してください。
 
 ## Adobeコンテンツへの貢献方法
 
-「[Adobe Docs寄稿者ガイド](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)」を参照してください。
+「[Adobe Docs寄稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)」を参照してください。
 
 投稿方法は、誰がどのような変更を投稿するかに応じて異なります。
 
@@ -24,7 +24,7 @@ ht-degree: 81%
 
 リクエストを送信するには、記事内の「**Log an issue**」リンクをクリックして、GitHub で問題を開きます。タイトルと説明を指定し、「**Submit new issue**」をクリックします。
 
-マイナーアップデートをリクエストするには、記事の「**Edit this page**」リンクをクリックして、GitHub でソース記事を開きます。GitHub の UI を使用して、更新をおこないます。詳しくは、全般的な事項について説明した[アドビドキュメントのコントリビューターガイド](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)を参照してください。
+マイナーアップデートをリクエストするには、記事の「**Edit this page**」リンクをクリックして、GitHub でソース記事を開きます。GitHub の UI を使用して、更新をおこないます。詳しくは、全般的な事項について説明した[アドビドキュメントのコントリビューターガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja)を参照してください。
 
 このリポジトリのドキュメントおよびコード例については、マイナーな修正または詳細な説明をアドビの利用条件で説明しています。
 
@@ -38,13 +38,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Adobeの従業員による主な変更または新規記事
 
-Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャーまたは開発者が、業務として技術記事の執筆やコントリビューションをする場合は、`https://git.corp.adobe.com/AdobeDocs` にあるプライベートリポジトリを使用する必要があります。See the [Internal Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) for more information.
+Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャーまたは開発者が、業務として技術記事の執筆やコントリビューションをする場合は、`https://git.corp.adobe.com/AdobeDocs` にあるプライベートリポジトリを使用する必要があります。詳細については、『[内部コラボレーションガイド](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en)』を参照してください。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Experience Platformドキュメントチームへの問い合わせ
 
-上述の通り、Adobeコミュニティのメンバーは、適切な作者に割り当てられる問題を提出できます。 Adobeの従業員は、雑誌号を送信するか、Experience Platformのドキュメントチームに直接問い合わせることができます。 特定のプラットフォーム領域のリードライターを見つけるには、 [Adobe Experience PlatformドキュメントWikiを参照してください](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)。
+上述の通り、Adobeコミュニティのメンバーは、適切な作者に割り当てられる問題を提出できます。 Adobeの従業員は、雑誌号を送信するか、Experience Platformのドキュメントチームに直接問い合わせることができます。 特定のプラットフォーム領域のリードライターを見つけるには、[Adobe Experience Platformのドキュメントwiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)を参照してください。
 
 ## ツールとセットアップ
 
@@ -52,7 +52,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 コミュニティ寄稿者は、基本的な編集に GitHub UI を使用したり、レポをフォークしてメジャー貢献度を確保したりできます。
 
-詳しくは、[Adobe Docs 寄稿者ガイド](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)を参照してください。
+詳しくは、[Adobe Docs 寄稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)を参照してください。
 
 ### Markdown
 
