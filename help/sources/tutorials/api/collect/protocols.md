@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
+keywords: Experience Platform；ホーム；人気のあるトピック；プロトコルデータの収集；プロトコルデータ
 solution: Experience Platform
 title: ソースコネクタとAPIを使用してプロトコルデータを収集する
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、プロトコルアプリケーションからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: d8ec9b4b28602bce30365fe64829c8c8df1b9211
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1528'
 ht-degree: 20%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 20%
 
 ### 必須ヘッダーの値の収集
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](../../../../tutorials/authentication.md)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
