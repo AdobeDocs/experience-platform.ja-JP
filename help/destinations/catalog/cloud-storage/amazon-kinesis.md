@@ -1,66 +1,64 @@
 ---
-keywords: Amazon Kinesis;kinesis destination;kinesis
+keywords: AmazonKinesis;kinesis宛先；kinesis
 title: AmazonKinesis駅
 seo-title: AmazonKinesis駅
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 seo-description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 translation-type: tm+mt
-source-git-commit: 7484e64d0d359f40ef242dfc9d2d1704018a8ed6
+source-git-commit: a78dd4b95896387aa1daa022c9e1d5a6cf978448
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 7%
 
 ---
 
 
-# （ベータ） [!DNL Amazon Kinesis] 宛先
-
+# （ベータ版） [!DNL Amazon Kinesis]宛先
 
 >[!IMPORTANT]
 >
->リアルタイムCDPの [!DNL Amazon Kinesis] 宛先は、現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>プラットフォームの[!DNL Amazon Kinesis]宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 ## 概要 {#overview}
 
-による [!DNL Kinesis Data Streams][!DNL Amazon Web Services] サービスでは、大量のデータレコードのストリームをリアルタイムで収集して処理できます。
+[!DNL Amazon Web Services]の[!DNL Kinesis Data Streams]サービスを使用すると、大量のデータレコードをリアルタイムで収集して処理できます。
 
-Adobe Experience Platformからのデータをストリーミングするために、 [!DNL Amazon Kinesis] ストレージへのリアルタイムの送信接続を作成できます。
+[!DNL Amazon Kinesis]ストレージへのリアルタイムの送信接続を作成して、Adobe Experience Platformからデータをストリーミングできます。
 
-* 詳しくは、 [!DNL Amazon Kinesis]Amazonのドキュメント [を参照してください](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)。
-* API呼び出しを [!DNL Amazon Kinesis] 使用して接続するには、 [ストリーミング宛先APIチュートリアルを参照してください](../../api/streaming-destinations.md)。
-* Real-time CDPユーザー・インターフェイスを [!DNL Amazon Kinesis] 使用して接続するには、以下のセクションを参照してください。
+* [!DNL Amazon Kinesis]について詳しくは、[Amazonのドキュメント](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)を参照してください。
+* API呼び出しを使用して[!DNL Amazon Kinesis]に接続するには、[ストリーミング宛先APIのチュートリアル](../../api/streaming-destinations.md)を参照してください。
+* プラットフォームユーザーインターフェイスを使用して[!DNL Amazon Kinesis]に接続するには、以下の節を参照してください。
 
 ![AmazonKinesisUI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
-
 ## 使用例 {#use-cases}
 
-などのストリーミング送信先を使用すると [!DNL Amazon Kinesis]、高価値のセグメントイベントや関連するプロファイル属性を、選択したシステムに簡単にフィードできます。
+[!DNL Amazon Kinesis]などのストリーミング送信先を使用すると、高価値のセグメントイベントや関連するプロファイル属性を、簡単に任意のシステムにフィードできます。
 
-例えば、見込み客が、「コンバージョンする傾向が高い」セグメントに該当するホワイトペーパーをダウンロードしたとします。 見込み客が属するセグメントを [!DNL Amazon Kinesis] 宛先にマッピングすると、このイベントがに表示され [!DNL Amazon Kinesis]ます。 企業のITシステムで最も効果的に機能すると考えられるように、Do-It-Yoursenアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
+例えば、見込み客が、「コンバージョンする傾向が高い」セグメントに該当するホワイトペーパーをダウンロードしたとします。 見込み客が属するセグメントを[!DNL Amazon Kinesis]宛先にマッピングすると、[!DNL Amazon Kinesis]にこのイベントが表示されます。 企業のITシステムで最も効果的に機能すると考えられるように、Do-It-Yoursenアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
 
-## 書き出しタイプ {#export-type}
+## エクスポートの種類{#export-type}
 
-**プロファイルベース** — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](../../ui/activate-destinations.md#select-attributes)。
+**プロファイルベース**  — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](../../ui/activate-destinations.md#select-attributes)。
 
 ## 宛先の接続 {#connect-destination}
 
-See [Cloud storage destinations workflow ](./workflow.md)for instructions on how to connect to your cloud storage destinations, including those supported by [!DNL Amazon].
+[!DNL Amazon]でサポートされるものも含め、クラウドストレージへの接続方法については、[クラウドストレージの接続先ワークフロー](./workflow.md)を参照してください。
 
-For [!DNL Amazon Kinesis] destinations, enter the following information in the create destination workflow:
+[!DNL Amazon Kinesis]宛先に対して、宛先を作成ワークフローで次の情報を入力します。
 
-### 認証手順の {#authentication-step}
+### 認証手順{#authentication-step}
 
-* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:では、 [!DNL Amazon Web Services]ペアを作成して、お客様のア `access key - secret access key`[!DNL Amazon Kinesis] カウントにリアルタイムCDPアクセスを許可します。 詳しくは、 [Amazonウェブサービスのドキュメントを参照してください](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)。
+* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:で、 [!DNL Amazon Web Services]ペアを生成して、プラットフォームに `access key - secret access key`  [!DNL Amazon Kinesis] アカウントへのアクセスを許可します。詳しくは、[AmazonWebサービスドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 * **region**:データをストリーミングする [!DNL Amazon Web Services] 領域を指定します。
 
 ![アカウント手順の入力フィールド](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### 設定手順で {#setup-step}
+### セットアップ手順{#setup-step}
 
-* **名前**:接続先の名前を指定 [!DNL Amazon Kinesis]
+* **名前**:接続先の名前を指定  [!DNL Amazon Kinesis]
 * **説明**:への接続の説明を入力し [!DNL Amazon Kinesis]ます。
-* **stream**:アカウント内の既存のデータストリームの名前を指定し [!DNL Amazon Kinesis] ます。 リアルタイムCDPは、このストリームにデータをエクスポートします。
+* **stream**:ア [!DNL Amazon Kinesis] カウント内の既存のデータストリームの名前を指定します。プラットフォームは、このストリームにデータをエクスポートします。
 
 ![認証手順の入力フィールド](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
@@ -68,7 +66,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 >[!IMPORTANT]
 >
->Real-time CDP needs `write` permissions on the bucket object where the export files will be delivered.
+>Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
@@ -76,9 +74,9 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 セグメントのアクティベーションワークフローについて詳しくは、「[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
 
-## 書き出されたデータ {#exported-data}
+## エクスポートされたデータ{#exported-data}
 
-書き出された [!DNL Experience Platform] データはJSON形式 [!DNL Amazon Kinesis] で取得されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
+書き出した[!DNL Experience Platform]データは、JSON形式で[!DNL Amazon Kinesis]に格納されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
 
 ```json
 {
