@@ -1,0 +1,86 @@
+---
+keywords: Experience Platform；ホーム；人気の高いトピック
+solution: Experience Platform
+title: Adobe Experience Platformのガバナンス、プライバシー、セキュリティ
+topic: overview
+description: Experience Platformは、ビジネス慣行、法的義務、開発プロセスに従うために、収集したエクスペリエンスデータを確実に制御できるいくつかのサービスとツールを提供します。
+translation-type: tm+mt
+source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+workflow-type: tm+mt
+source-wordcount: '813'
+ht-degree: 18%
+
+---
+
+
+# Adobe Experience Platformのガバナンス、プライバシー、セキュリティ
+
+Adobe Experience Platformでは、顧客体験を大幅に高めるために、データを取り込み、分析、最適化、および操作することができます。 このデータは広大で複雑で非常に価値があります データ操作の性質、ビジネスの法的管轄範囲、およびデータの使用に関する組織のポリシーに応じて、ビジネス上の関心事を保護するために、顧客体験データの収集と使用を慎重に管理および監視する必要があります。
+
+Experience Platformは、ビジネス慣行、法的義務、開発プロセスに従うために、収集したエクスペリエンスデータを確実に制御できるいくつかのサービスとツールを提供します。 以下の節では、これらの各サービスの概要と、詳細についてのドキュメントへのリンクを示します。
+
+サービスは次の3つのドメインに分類できます。
+
+* [データガバナンス](#governance)
+* [プライバシー](#privacy)
+* [セキュリティ](#security)
+
+## データガバナンス {#governance}
+
+データ・ガバナンスは、Experience Platformのすべての機能と組み合わさる重要な概念です。 データ・ガバナンスは、プラットフォームを通じてジャーニー全体を通じてデータを管理し、把握する能力を表します。 データの品質、データの系列、データのカタログ化などを維持する必要があります。
+
+### Adobe Experience Platform データガバナンス {#data-governance}
+
+プラットフォーム・サービスとして、Adobe Experience Platform・データ・ガバナンスを使用すると、お客様のデータを管理し、データ使用に適用される規制、制限、ポリシーに対するコンプライアンスを確保できます。 データ使用のラベル付け、データ使用ポリシー、ポリシーの適用、データ系列など、様々なレベルでExperience Platform内の重要な役割を果たします。
+
+詳細については、[Data Governance overview](../../data-governance/home.md)を参照してください。
+
+### カタログとデータセット{#catalog}
+
+カタログサービスは、 Platform 内のデータの場所と系列のレコードのシステムです。Experience Platform に取得されるすべてのデータはファイルとディレクトリとしてデータレイクに保存されますが、カタログには、参照や監視のために、これらのファイルとディレクトリのメタデータと説明が保持されます。
+
+カタログは取り込んだデータをデータセットにまとめ、各データセットにはメタデータが含まれ、このデータに含まれるデータのラベル付けや分類に使用できます。
+
+サービスの詳細については、「[カタログサービスの概要](../../catalog/home.md)」を参照してください。 Experience Platformでのデータセットの管理方法については、[データセットの概要](../../catalog/datasets/overview.md)を参照してください。
+
+## プライバシー {#privacy}
+
+プライバシーは、ビジネス、議員、およびお客様にとって重要な問題です。 お客様から収集した個人データは、ほとんどすべてのExperience Platformワークフローの中心にあるので、プラットフォームはこれらのイニシアチブをサポートするサービスを提供します。
+
+### Adobe Experience Platform Privacy Service {#privacy-service}
+
+欧州和集合のGDPR(General Data Protection Regulation)やCCPA(California Consumer Privacy Act)などの法的プライバシー規制は、収集および保存する個人データに対するアクセス権と削除権を国内の市民に付与するものです。
+
+Adobe Experience Platform Privacy Serviceは、RESTful APIとユーザーインターフェイスを提供し、これらのリクエストの管理に役立ちます。 Privacy Serviceにより、Adobe Experience Cloudのアプリケーションから個人または個人の顧客データにアクセスする要求や削除を送信でき、法的および組織のプライバシーに関する規制への自動コンプライアンスを容易に行うことができます。
+
+詳しくは、「[Privacy Service の概要](../../privacy-service/home.md)」を参照してください。
+
+### 同意の収集{#consent}
+
+法的プライバシー規制の多くは、データ収集、パーソナライゼーション、その他のマーケティングの使用例に関して、アクティブで具体的な同意を求める要件を導入しています。 これらの要件を満たすために、Experience Platformでは、個々の顧客プロファイルの同意情報を取得し、それらの設定を、各顧客のデータが下流のプラットフォームワークフローでどのように使用されるかの決定要因として使用できます。
+
+IAB Transparency and Consent Framework(TCF)2.0に従って顧客の同意データを収集し処理する方法については、プラットフォーム](./consent/iab/overview.md)の[IAB TCF 2.0サポートの概要を参照してください。
+
+<!-- For more information on the consent collection process using the Adobe standard, see the [consent collection overview]. -->
+
+## セキュリティ {#security}
+
+データの整合性とセキュリティは、お客様のビジネスに不可欠であり、このリスクには業界をリードするセキュリティ機能が必要です。 この課題に対応するため、プラットフォームは、データ・オペレーションの保護に役立つツールをいくつか提供します。
+
+### アクセス制御 {#access-control}
+
+Experience Platformは、Adobe Admin Consoleを使用して、様々なプラットフォーム機能に対して役割に基づくアクセス制御を提供します。 この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
+
+詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
+
+### サンドボックス {#sandboxes}
+
+Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。
+
+開発の柔軟性の必要性に対応するため、Experience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割するサンドボックスを提供し、独自の開発ライフサイクルに基づいてデジタルエクスペリエンスのアプリケーションを発展させます。
+
+詳しくは、「[サンドボックスの概要](../../sandboxes/home.md)」を参照してください。
+
+## 次の手順
+
+このドキュメントでは、データ管理、プライバシー、セキュリティに関連する各種プラットフォームサービスおよびツールの概要を説明しました。 これらの機能の詳細については、このガイド全体にリンクされたドキュメントを参照してください。
