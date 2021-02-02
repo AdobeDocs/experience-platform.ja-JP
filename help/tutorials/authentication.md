@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
+keywords: Experience Platform；ホーム；人気の高いトピック；認証；アクセス
 solution: Experience Platform
 title: Experience Platform API の認証とアクセス
 topic: tutorial
 type: Tutorial
 description: 'このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。 '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 43%
+source-wordcount: '882'
+ht-degree: 42%
 
 ---
 
 
-# Authenticate and access [!DNL Experience Platform] APIs
+# [!DNL Experience Platform] APIの認証とアクセス
 
-This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to [!DNL Experience Platform] APIs.
+このドキュメントでは、[!DNL Experience Platform] APIを呼び出すための、Adobe Experience Platform開発者アカウントへのアクセス権を得るためのチュートリアルを順を追って説明します。
 
 ## API を呼び出すための認証
 
@@ -27,7 +27,7 @@ This document provides a step-by-step tutorial for gaining access to an Adobe Ex
 
 ## 前提条件
 
-In order to successfully make calls to [!DNL Experience Platform] APIs, you require the following:
+[!DNL Experience Platform] APIの呼び出しを正常に行うには、次の情報が必要です。
 
 * Adobe Experience Platform へのアクセス権を持つ IMS 組織
 * 登録済みの Adobe ID アカウント
@@ -39,17 +39,17 @@ In order to successfully make calls to [!DNL Experience Platform] APIs, you requ
 
 Adobe ID をお持ちでない場合は、次の手順で作成できます。
 
-1. [ [Adobe開発者コンソール]に移動します。](https://console.adobe.io)
-2. 「**[!UICONTROL 新規アカウントを作成]**」をクリックします
+1. [Adobe開発者コンソール](https://console.adobe.io)に移動します
+2. 「**[!UICONTROL 新しいアカウントを作成]**」を選択します。
 3. サインアッププロセスの完了
 
-## Become a developer and user for [!DNL Experience Platform] for an organization
+## 組織の[!DNL Experience Platform]の開発者とユーザーになる
 
 Adobe I/O で統合を作成する前に、IMS 組織の製品の開発者権限を持つアカウントが必要です。Admin Console の開発者アカウントに関する詳しい情報については、開発者管理用の[サポートドキュメント](https://helpx.adobe.com/jp/enterprise/using/manage-developers.html)を参照してください。
 
 **開発者アクセスの獲得**
 
-Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization&#39;s products using the [[!DNL Admin Console]](https://adminconsole.adobe.com/).
+[[!DNL Admin Console]](https://adminconsole.adobe.com/)を使用して組織の製品の1つの開発者として追加するには、組織の[!DNL Admin Console]管理者にお問い合わせください。
 
 ![](images/authentication/assign-developer.png)
 
@@ -61,7 +61,7 @@ Contact an [!DNL Admin Console] administrator in your Organization to add you as
 
 **ユーザーアクセスの取得**
 
-Your [!DNL Admin Console] administrator must also add you to the product as a user.
+[!DNL Admin Console]管理者がユーザーとして製品に追加する必要もあります。
 
 ![](images/authentication/assign-users.png)
 
@@ -73,7 +73,7 @@ Your [!DNL Admin Console] administrator must also add you to the product as a us
 
 >[!NOTE]
 >
->『 [Privacy Service開発者ガイド](../privacy-service/api/getting-started.md)』からこのドキュメントをフォローしている場合は、このガイドに戻って、に固有のアクセス資格情報を生成でき [!DNL Privacy Service]ます。
+>[Privacy Service開発者ガイド](../privacy-service/api/getting-started.md)からこのドキュメントをフォローしている場合は、このガイドに戻って[!DNL Privacy Service]固有のアクセス資格情報を生成できます。
 
 AdobeDeveloper Consoleを使用して、次の3つのアクセス資格情報を生成する必要があります。
 
@@ -81,25 +81,25 @@ AdobeDeveloper Consoleを使用して、次の3つのアクセス資格情報を
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-およ `{IMS_ORG}` びは1回だけ生成する必要があり、今後の `{API_KEY}`[!DNL Platform] API呼び出しで再利用できます。 ただし、一時的な `{ACCESS_TOKEN}` ので、24時間ごとに再生成する必要があります。
+`{IMS_ORG}`と`{API_KEY}`は1回だけ生成する必要があり、将来の[!DNL Platform] API呼び出しで再利用できます。 ただし、`{ACCESS_TOKEN}`は一時的で、24時間ごとに再生成する必要があります。
 
 手順の詳細は以下のとおりです。
 
 ### 1回限りのセットアップ
 
-[Adobeデベロッパーコンソールに移動し](https://www.adobe.com/go/devs_console_ui) 、Adobe IDでサインインします。 次に、Adobe開発者コンソールのドキュメントで、空のプロジェクトの [作成に関するチュートリアルに説明されている手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) 。
+[Adobeデベロッパーコンソール](https://www.adobe.com/go/devs_console_ui)に移動し、Adobe IDでサインインします。 次に、Adobe開発者コンソールドキュメントの[空のプロジェクト](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md)の作成に関するチュートリアルに説明されている手順に従います。
 
-新しいプロジェクトを作成したら、プ **[!UICONTROL ロジェクト概要]** 画面の「 **API** 」をクリックします。
+新しいプロジェクトを作成したら、**プロジェクトの概要**&#x200B;画面で追加&#x200B;**[!UICONTROL API]**&#x200B;を選択します。
 
 ![](images/authentication/add-api-button.png)
 
-API **** 追加画面が表示されます。 Adobe Experience Platformの製品アイコンをクリックし、「 **[!UICONTROL Experience PlatformAPI]** 」を選択してから「 **[!UICONTROL 次へ]**」をクリックします。
+**追加API**&#x200B;画面が表示されます。 Adobe Experience Platformの商品アイコンを選択し、**[!UICONTROL Experience PlatformAPI]**&#x200B;を選択してから、**[!UICONTROL 次へ]**&#x200B;を選択します。
 
 ![](images/authentication/add-platform-api.png)
 
-プロジェクトに追加するAPI [!DNL Experience Platform] を選択したら、サービスアカウント(JWT)を使用したプロジェクトへのAPIの [](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) 追加（「APIを設定」の手順から開始）のチュートリアルに示されている手順に従って、プロセスを完了します。
+プロジェクトに追加するAPIとして[!DNL Experience Platform]を選択したら、[サービスアカウント(JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md)を使用したプロジェクトへのAPIの追加（「APIを設定」の手順から開始）のチュートリアルに従って、プロセスを終了します。
 
-APIがプロジェクトに追加されると、 **プロジェクトの概要** ページに、すべてのAPI呼び出しで必要な次の資格情報が表示され [!DNL Experience Platform] ます。
+APIがプロジェクトに追加されると、**プロジェクトの概要**&#x200B;ページに、[!DNL Experience Platform] APIへのすべての呼び出しで必要な次の資格情報が表示されます。
 
 * `{API_KEY}` (クライアント ID)
 * `{IMS_ORG}` (Organization ID)
@@ -108,13 +108,13 @@ APIがプロジェクトに追加されると、 **プロジェクトの概要**
 
 ### 各セッションの認証
 
-最後に必要な秘密鍵証明書は、収集する必要がある秘密鍵証明書 `{ACCESS_TOKEN}`です。 との値とは異なり、APIを使用し続け `{API_KEY}` るに `{IMS_ORG}`は、新しいトークンを24時間ごとに生成する必要があり [!DNL Platform] ます。
+最後に必要な資格情報は`{ACCESS_TOKEN}`です。 `{API_KEY}`および`{IMS_ORG}`の値と異なり、[!DNL Platform] APIを使用し続けるには、24時間ごとに新しいトークンを生成する必要があります。
 
-新しいトークンを生成するに `{ACCESS_TOKEN}`は、『Developer Console credentials』ガイドのJWTトークンを [生成する手順に従います](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) 。
+新しい`{ACCESS_TOKEN}`を生成するには、『Developer Console秘密鍵証明書』ガイドの[JWTトークン](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md)の生成手順に従います。
 
 ## アクセス資格情報のテスト
 
-3つの必要な資格情報をすべて収集したら、以下のAPI呼び出しを行うことができます。 この呼び出しは、スキーマレジストリの [!DNL Experience Data Model]`global` コンテナ内のすべての(XDM)クラスをリストします。
+3つの必要な資格情報をすべて収集したら、以下のAPI呼び出しを行うことができます。 この呼び出しは、スキーマレジストリの`global`コンテナ内のすべての[!DNL Experience Data Model] (XDM)クラスをリストします。
 
 **API 形式**
 
@@ -161,6 +161,6 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## 次の手順
 
-このドキュメントを読むと、APIのアクセス資格情報を収集し、テストに成功し [!DNL Platform] ます。 ドキュメント全体で提供されているAPI呼び出しの例に従うことができ [ます](../landing/documentation/overview.md)。
+このドキュメントを読むと、[!DNL Platform] APIのアクセス資格情報を収集し、テストに成功します。 現在は、[ドキュメント](../landing/documentation/overview.md)全体で提供されているAPI呼び出しの例に従うことができます。
 
-このチュートリアルで収集した認証値に加えて、多くのAPIでは、有効な認証値をヘッダーとして指定す [!DNL Platform]`{SANDBOX_NAME}` る必要もあります。 詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
+このチュートリアルで収集した認証値に加えて、多くの[!DNL Platform] APIでは、有効な`{SANDBOX_NAME}`をヘッダーとして指定する必要があります。 詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
