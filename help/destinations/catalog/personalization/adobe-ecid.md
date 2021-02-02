@@ -2,65 +2,65 @@
 Keywords: ECID;ecid
 title: Experience Cloud ID サービス拡張機能
 seo-title: Experience Cloud ID サービス拡張機能
-description: Experience CloudIDサービスの拡張機能は、リアルタイム顧客データプラットフォームのパーソナライズの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Experience CloudIDサービスの拡張機能は、リアルタイム顧客データプラットフォームのパーソナライズの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: Experience CloudIDサービス拡張は、Adobe Experience Platformのパーソナライズ先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Experience CloudIDサービス拡張は、Adobe Experience Platformのパーソナライズ先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 80db19822551883da272787affb6f7dc9dc3a745
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '534'
 ht-degree: 36%
 
 ---
 
 
-# [!DNL Experience Cloud] IDサービスの拡張 {#adobe-ecid-extension}
+# [!DNL Experience Cloud] IDサービスの拡張  {#adobe-ecid-extension}
 
 ## 概要 {#overview}
 
-This extension implements the [!DNL Experience Cloud] ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
+この拡張機能は、すべての[!DNL Experience Cloud]ソリューションの訪問者を識別する[!DNL Experience Cloud] IDサービスを実装します。
 
-[!DNL Experience Cloud] IDサービスは、リアルタイム顧客データプラットフォームのパーソナライゼーション拡張機能です。 拡張機能について詳しくは、 ドキュメントの [Experience Cloud ID サービス拡張機能ページ](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)を参照してください。[!DNL Experience Platform Launch]
+[!DNL Experience Cloud] IDサービスは、Adobe Experience Platformのパーソナライゼーション拡張機能です。拡張機能について詳しくは、 ドキュメントの [Experience Cloud ID サービス拡張機能ページ](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)を参照してください。[!DNL Experience Platform Launch]
 
-This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md).
+この宛先は[!DNL Adobe Experience Platform Launch]拡張子です。 プラットフォームでの[!DNL Platform Launch]拡張機能の動作について詳しくは、[Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![Adobe ECID 拡張機能](../../assets/catalog/personalization/adobe-ecid/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
-この拡張機能は、リアルタイムCDPを購入したすべてのお客様のDestinationsカタログで利用できます。
+この拡張機能は、プラットフォームを購入したすべての顧客のDestinationsカタログで利用できます。
 
-To use this extension, you need access to [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] は、Adobe Experience Cloud に付属の付加価値機能として提供されています。Contact your organization administrator to get access to [!DNL Launch] and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+この拡張機能を使用するには、[!DNL Experience Platform Launch]にアクセスする必要があります。 [!DNL Experience Platform Launch] は、Adobe Experience Cloud に付属の付加価値機能として提供されています。組織の管理者に連絡して、[!DNL Launch]へのアクセス権を取得し、**[!UICONTROL manage_properties]**&#x200B;の権限を与えて、拡張機能をインストールするように依頼してください。
 
 ## 拡張機能のインストール {#install-extension}
 
-To install the [!DNL Experience Cloud] ID Service extension:
+[!DNL Experience Cloud] IDサービス拡張機能をインストールするには：
 
-In the [Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+[プラットフォームインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
-Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. **[!UICONTROL Configure]** コントロールが灰色表示になっている場合は、 **[!UICONTROL manage_properties]** 権限がありません。 [前提条件](#prerequisites)を確認してください。
+リンク先をクリックしてハイライトし、右側のパネルで「**[!UICONTROL 設定]**」を選択します。 **[!UICONTROL Configure]**&#x200B;コントロールがグレー表示になっている場合は、**[!UICONTROL manage_properties]**&#x200B;権限がありません。 [前提条件](#prerequisites)を確認してください。
 
-In the **[!UICONTROL Select available Platform Launch property]** window, select the [!DNL Platform Launch] property in which you want to install the extension. You also have the option of creating a new property in [!DNL Platform Launch]. プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、 ドキュメントの[「プロパティ」ページに関する節](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)を参照してください。[!DNL Launch]
+**[!UICONTROL 利用可能なプラットフォームの起動プロパティを選択]**&#x200B;ウィンドウで、拡張機能をインストールする[!DNL Platform Launch]プロパティを選択します。 また、[!DNL Platform Launch]に新しいプロパティを作成するオプションもあります。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、 ドキュメントの[「プロパティ」ページに関する節](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)を参照してください。[!DNL Launch]
 
-The workflow takes you to [!DNL Platform Launch] to complete the installation.
+このワークフローにより、[!DNL Platform Launch]に移動してインストールを完了します。
 
 拡張機能の設定オプションとインストールのサポートについて詳しくは、 ドキュメントの [Experience Cloud ID サービスの拡張機能ページ](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html)を参照してください。[!DNL Experience Launch]
 
-You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/).  ドキュメントの[新しい拡張機能の追加](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)に関するページを参照してください。[!DNL Platform Launch]
+[Adobe Experience Platform Launchインターフェイス](https://launch.adobe.com/)に直接インストールすることもできます。  ドキュメントの[新しい拡張機能の追加](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)に関するページを参照してください。[!DNL Platform Launch]
 
 ## 拡張機能の使用方法 {#how-to-use}
 
-Once you have installed the extension, you can start setting up rules for it directly in [!DNL Platform Launch].
+拡張機能をインストールすると、[!DNL Platform Launch]に直接ルールを設定する開始を作成できます。
 
-In [!DNL Platform Launch], you can set up rules for your installed extensions to send event data to the extension destination only in certain situations. 拡張機能のルールの設定について詳しくは、[ルールに関するドキュメント](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html)を参照してください。
+[!DNL Platform Launch]では、特定の状況でのみイベントデータを拡張の宛先に送信するように、インストール済みの拡張機能のルールを設定できます。 拡張機能のルールの設定について詳しくは、[ルールに関するドキュメント](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html)を参照してください。
 
 ## 拡張機能の設定、アップグレード、削除 {#configure-upgrade-delete}
 
-You can configure, upgrade, and delete extensions in the [!DNL Platform Launch] interface.
+[!DNL Platform Launch]インターフェイスでは、拡張機能の設定、アップグレード、削除が可能です。
 
 >[!TIP]
 >
->If the extension is already installed on one of your properties, the Real-time CDP UI still displays **[!UICONTROL Install]** for the extension. 「[拡張機能のインストール](#install-extension)」の説明にしたがってインストールワークフローを開始し、 に移動して拡張機能を設定または削除します。[!DNL Platform Launch]
+>拡張機能が既にプロパティの1つにインストールされている場合、プラットフォームUIには、拡張機能の&#x200B;**[!UICONTROL Install]**&#x200B;が表示されます。 「[拡張機能のインストール](#install-extension)」の説明にしたがってインストールワークフローを開始し、 に移動して拡張機能を設定または削除します。[!DNL Platform Launch]
 
 拡張機能をアップグレードするには、 ドキュメントの「[拡張機能のアップグレード](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html)」を参照してください。[!DNL Platform Launch]
