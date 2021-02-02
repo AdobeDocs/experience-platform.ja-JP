@@ -1,14 +1,14 @@
 ---
-keywords: google customer match;Google customer match;Google Customer Match
+keywords: Googleの顧客一致；Googleの顧客一致；Googleの顧客一致
 title: Googleの顧客一致先
 seo-title: Googleの顧客一致先
 description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 seo-description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: 3837f00ff8b950e1f7642a9ffb5d194388dcab28
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1478'
+ht-degree: 5%
 
 ---
 
@@ -17,168 +17,193 @@ ht-degree: 0%
 
 ## 概要 {#overview}
 
-[Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) では、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営する次のようなプロパティを通じて顧客に連絡し、顧客と再び関与させることができます。 [!DNL Search]、 [!DNL Shopping]、、 [!DNL Gmail]および [!DNL YouTube]。
+[Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchを使用すると、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営する次のようなプロパティを通じて顧客に連絡し、顧客と再び関わり合うことができます。 [!DNL Search]、 [!DNL Shopping]、、 [!DNL Gmail]および [!DNL YouTube]。
 
 ![Real-time CDP UIのGoogle Customer Match宛先](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## 使用例
 
-To help you better understand how and when you should use the [!DNL Google Customer Match] destination, here are sample use cases that Real-time Customer Data Platform customers can solve by using this feature.
+[!DNL Google Customer Match]宛先の使い方と使い方をより深く理解するために、以下はReal-time Customer Data Platformのお客様がこの機能を使用して解決できる使用例です。
 
 ### ユースケース 1
 
-スポーツアパレルのブランドは、過去の購入や閲覧履歴に基づいてオファーやアイテムをパーソナライズす [!DNL Google Search] るこ [!DNL Google Shopping] とを通じて既存の顧客に届けたいと考えています。 アパレル・ブランドは、自社のCRMからReal-time CDPにEメール・アドレスを取り込み、独自のオフライン・データからセグメントを構築し、これらのセグメントを使用 [!DNL Google Customer Match] し [!DNL Search] て広告費用を最適化でき [!DNL Shopping]ます。
+[!DNL Google Search]と[!DNL Google Shopping]を通じて既存の顧客に連絡し、過去の購入や閲覧の履歴に基づいてオファーやアイテムをパーソナライズしたいと考えているスポーツアパレルブランドです。 アパレル・ブランドは、自社のCRMからReal-time CDPにEメール・アドレスを取り込み、自社のオフライン・データからセグメントを構築し、[!DNL Search]と[!DNL Shopping]で使用する[!DNL Google Customer Match]にこれらのセグメントを送信して、広告費用を最適化できます。
 
 ### ユースケース 2
 
 有名なテクノロジー会社が、新しい電話を発売したばかり。 この新しい電話モデルを推進するために、電話の新機能を、以前のモデルの電話を所有するお客様に知らせたいと考えています。
 
-このリリースを促進するために、CRMデータベースからEメールアドレスを識別子として使用し、Real-time CDPにアップロードします。 セグメントは、古い電話モデルを所有し、に送信された顧客に基づいて作成され、現在の顧客、古い電話モデルを所有する顧客、同様の顧客をターゲットで [!DNL Google Customer Match] きるようにし [!DNL YouTube]ます。
+このリリースを促進するために、CRMデータベースからEメールアドレスを識別子として使用し、Real-time CDPにアップロードします。 セグメントは、古い電話モデルを所有し、[!DNL Google Customer Match]に送信された顧客に基づいて作成され、現在の顧客、古い電話モデルを所有する顧客、および同様の顧客を[!DNL YouTube]にターゲットできます。
 
-## 宛先のデータ・ガバナンス [!DNL Google Customer Match] {#data-governance}
+## 宛先の詳細{#destination-specs}
 
-リアルタイムCDPの宛先には、宛先プラットフォームに送信または受信するデータに対する特定のルールと義務が含まれている場合があります。 データの制約事項と義務、およびそのデータをAdobe Experience Platformや目的地プラットフォームでどのように使用するかについては、責任を持って理解してください。 Adobe Experience Platformは、データ使用上の義務の一部を管理するのに役立つデータ管理ツールを提供しています。 [データ管理ツールとポリシーの詳細](../../..//data-governance/labels/overview.md) 。
+### [!DNL Google Customer Match]宛先{#data-governance}のデータ・ガバナンス
 
-## タイプとIDの書き出し {#export-type}
+リアルタイムCDPの宛先には、宛先プラットフォームに送信または受信するデータに対する特定のルールと義務が含まれている場合があります。 データの制約事項と義務、およびそのデータをAdobe Experience Platformや目的地プラットフォームでどのように使用するかについては、責任を持って理解してください。 Adobe Experience Platformは、データ使用上の義務の一部を管理するのに役立つデータ管理ツールを提供しています。 [データ管理ツールとポリシーに](../../..//data-governance/labels/overview.md) ついて詳しく説明します。
 
-**セグメントエクスポート** — セグメント(オーディエンス)のすべてのメンバーを、識別子（名前、電話番号など）と共にエクスポートします。 used in the [!DNL Google Customer Match] destination.
+### 書き出しの種類とID {#export-type}
 
-**ID** - Googleで顧客IDとして生の電子メールまたはハッシュされた電子メールを使用できます。
+**セグメントのエクスポート**  — セグメント(オーディエンス)のすべてのメンバーを、識別子（名前、電話番号など）と共にエクスポートします。[!DNL Google Customer Match]宛先で使用されます。
 
-## [!DNL Google Customer Match] アカウントの前提条件 {#google-account-prerequisites}
+**ID**  - Googleで顧客IDとして生の電子メールまたはハッシュされた電子メールを使用できます。
 
-Real-time CDPで [!DNL Google Customer Match] 宛先を設定する前に、 [!DNL Customer Match]Googleサポートドキュメントで概要を説明している、Googleの使用に関するポリシーを読み、遵守し [ていることを確認してください](https://support.google.com/google-ads/answer/6299717)。
+### [!DNL Google Customer Match] アカウントの前提条件  {#google-account-prerequisites}
 
-### 許可リスト {#allowlist}
+[!DNL Google Customer Match]宛先をReal-time CDPに設定する前に、[Googleサポートドキュメント](https://support.google.com/google-ads/answer/6299717)で概説されている[!DNL Customer Match]を使用するGoogleのポリシーを読み、それに従っていることを確認してください。
+
+### 許可リスト{#allowlist}
 
 >[!NOTE]
 >
->Real-time CDPで最初の宛先を設定する前に、Googleの許可リストに追加する必要があり [!DNL Google Customer Match] ます。 リンク先を作成する前に、Googleが以下に説明する許可リストプロセスを完了していることを確認してください。
+>Real-time CDPで最初の[!DNL Google Customer Match]宛先を設定する前に、Googleの許可リストに追加する必要があります。 リンク先を作成する前に、Googleが以下に説明する許可リストプロセスを完了していることを確認してください。
 
-Real-time CDPで [!DNL Google Customer Match] 宛先を作成する前に、Googleに連絡し、「Use Customer Match partners [](https://support.google.com/google-ads/answer/7361372?hl=ja&amp;ref_topic=6296507) 」の許可リスト手順に従ってGoogleドキュメントにデータをアップロードする必要があります。
+Real-time CDPで[!DNL Google Customer Match]宛先を作成する前に、Googleに問い合わせて、Googleドキュメントの[Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=ja&amp;ref_topic=6296507)の許可リスト手順に従う必要があります。
 
+さらに、Googleの[User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)を使用してデータをアップロードする場合は、アカウントを追加する必要がある2つ目のGoogle許可リストもあります。 Googleのアカウントマネージャーに問い合わせて、許可リストに追加されていることを確認してください。
 
-### 電子メールハッシュ要件 {#hashing-requirements}
+### IDの一致要件{#id-matching-requirements}
 
-<!--
+[!DNL Google] 個人識別情報(PII)を明確に送信しないようにする必要があります。したがって、[!DNL Google Customer Match]に対してアクティブ化されたオーディエンスは、電子メールアドレスや電話番号など、*ハッシュ化された*&#x200B;識別子をキーオフにすることができます。
 
->[!IMPORTANT]
+Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件を満たす必要があります。
+
+#### 電話番号のハッシュ要件{#phone-number-hashing-requirements}
+
+[!DNL Google Customer Match]で電話番号をアクティブにする方法は2つあります。
+
+* **生の電話番号を取り込む**:生の電話番号を [!DNL E.164] 形式で取り込んで、アクティベーション時に自動的にハッシュ化 [!DNL Platform]されます。このオプションを選択する場合は、必ず生の電話番号を`Phone_E.164`名前空間に取り込むようにしてください。
+* **ハッシュ化された電話番号を取り込む**:に取り込む前に電話番号を事前にハッシュ化でき [!DNL Platform]ます。このオプションを選択する場合は、ハッシュ化された電話番号を必ず`PHONE_SHA256_E.164`名前空間に取り込むようにしてください。
+
+>[!NOTE]
 >
-> When using mobile device IDs as identifiers, an AppId must be provided in the activation flow. For more information, see step 6 in the [Activate segments](#activate-segments) section of this page.
+>`Phone`名前空間に取り込まれた電話番号は、[!DNL Google Customer Match]では有効にできません。
 
--->
+#### Eメールハッシュ要件{#hashing-requirements}
 
-Googleでは、個人を特定できる情報(PII)を明確に送信しないよう求めています。 したがって、にアクティブ化するオーディエンスは、ハッシュ化された [!DNL Google Customer Match] 電子メールアドレスからキーオフにする ** 必要があります。 電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュするか、Experience Platform内で電子メールアドレスを明確に扱ってアクティベーション上でアルゴリズムハッシュするかを選択できます。
+電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュするか、Experience Platform内で電子メールアドレスを明確に扱ってアクティベーション上でアルゴリズムハッシュするかを選択できます。
 
 Googleのハッシュ要件およびアクティベーションに関するその他の制限について詳しくは、Googleのドキュメントの次の節を参照してください。
 
 * [[!DNL Customer Match] 電子メールアドレス、アドレスまたはユーザーIDを含む](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
 * [[!DNL Customer Match] 考慮事項](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
+* [電話番号との顧客一致](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
+* [モバイルデバイスIDとの一致](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
 
-<!--
 
-Links to be added when activation based on phone number and device IDs becomes available.
-
-* [Customer Match with phone number](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
-* [Customer Match with mobile device IDs](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
-
--->
-
-電子メールアドレスのExperience Platformでの取り込みについては、 [バッチインジェストの概要](../../../ingestion/batch-ingestion/overview.md) 、ストリーミングインジェストの概要を参照してください [](../../../ingestion/streaming-ingestion/overview.md)。
+Experience Platformでの電子メールアドレスの取り込みについて詳しくは、[バッチインジェストの概要](../../../ingestion/batch-ingestion/overview.md)および[ストリーミングインジェストの概要](../../../ingestion/streaming-ingestion/overview.md)を参照してください。
 
 電子メールアドレスを自分でハッシュする場合は、上のリンクで説明したGoogleの要件に準拠していることを確認してください。
 
+#### カスタム名前空間{#custom-namespaces}の使用
 
->[!IMPORTANT]
->
->Eメールアドレスをハッシュしない場合は、にセグメントをアクティブ化する際に、Real-time CDPがこれを行い [!DNL Google Customer Match]ます。 [アクティベーションワークフロー](#activate-segments) （手順5を参照）で、プレーンテキストの電子メールアドレス `Email` 、およびハッシュされた電子メールアドレスに対して、次に示すよう *なオプションを選択*`Email_LC_SHA256`**&#x200B;します。
+`User_ID`名前空間を使用してGoogleにデータを送信する前に、[!DNL gTag]を使用して自分のIDを同期させてください。 詳しくは、[公式ドキュメント](https://support.google.com/google-ads/answer/9199250)を参照してください。
 
-![アクティベーションのハッシュ](../../assets/catalog/advertising/google-customer-match/identity-mapping.png)
+<!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
 ## 宛先に接続 {#connect-destination}
 
-「 **[!UICONTROL Destinations]** / **[!UICONTROL Catalog]**」で、「 **[!UICONTROL Advertising]** 」カテゴリまでスクロールします。 を選択 [!DNL Google Customer Match]し、「 **[!UICONTROL 設定]**」を選択します。
+**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;で、**[!UICONTROL 広告]**&#x200B;カテゴリまでスクロールします。 「[!DNL Google Customer Match]」を選択し、「**[!UICONTROL 設定]**」を選択します。
 
 ![Google Customer Matchのリンク先に接続](../../assets/catalog/advertising/google-customer-match/connect.png)
 
 >[!NOTE]
 >
->この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](../../ui/destinations-workspace.md#catalog) 」セクションを参照してください。
+>この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
-In the **Account** step, if you had previously set up a connection to your [!DNL Google Customer Match] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Google Customer Match]. [宛先に **[!UICONTROL 接続]** ]を選択してログインし、Adobe Experience Cloudを [!DNL Google Ad] アカウントに接続します。
+**アカウント**&#x200B;の手順で、[!DNL Google Customer Match]宛先への接続を事前に設定している場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。 または、「**[!UICONTROL 新しいアカウント]**」を選択して、[!DNL Google Customer Match]への新しい接続を設定できます。 **[!UICONTROL [宛先に接続]**]を選択してログインし、[!DNL Google Ad]アカウントにAdobe Experience Cloudを接続します。
 
 >[!NOTE]
 >
->Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Google Ad] account. このため、間違った資格情報を使用すると、ワークフローを完了することができません。
+>リアルタイムCDPは、認証プロセスでの資格情報の検証をサポートし、[!DNL Google Ad]アカウントに不正な資格情報を入力した場合は、エラーメッセージを表示します。 このため、間違った資格情報を使用すると、ワークフローを完了することができません。
 
 ![Google Customer Matchの宛先に接続 — 認証手順](../../assets/catalog/advertising/google-customer-match/connection.png)
 
-Once your credentials are confirmed and Adobe Experience Cloud is connected to your Google account, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
+資格情報が確認され、Adobe Experience CloudがGoogleアカウントに接続されたら、**[!UICONTROL 「次へ]**」を選択して&#x200B;**[!UICONTROL セットアップ]**&#x200B;の手順に進むことができます。
 
 ![資格情報の確認](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
-「 **[!UICONTROL Authentication]** ( [!UICONTROL 認証] )」手順で、アクティベーションフローの [!UICONTROL 名前と説明を入力し、Googleに]Account IDを入力します。
+**[!UICONTROL 認証]**&#x200B;手順で、[!UICONTROL 名前]と[!UICONTROL 説明]をアクティベーションフローに入力し、Googleに[!UICONTROL アカウントID]を入力します。
 
-また、この手順では、この宛先に適用する **[!UICONTROL マーケティングの使用例]** を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](../../../rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](../../../data-governance/policies/overview.md#core-actions)。
+また、この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングの使用例]**&#x200B;を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例についての詳細は、[Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations)ページを参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md#core-actions)を参照してください。
 
 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
 >[!IMPORTANT]
 >
-> * 「 **[!UICONTROL PIIと]** 組み合わせ [!DNL Google Customer Match] 」マーケティングの使用例は、デフォルトで宛先に対して選択されており、削除できません。
-> * 目的 [!DNL Google Customer Match] 地用。 **[!UICONTROL アカウントID]** は、Googleを使用する顧客のクライアントIDです。 IDの形式はxxx-xxx-xxxxです。
+> * **[!UICONTROL 「PIIと結合]**」マーケティングの使用例は、デフォルトで[!DNL Google Customer Match]の宛先に対して選択されており、削除できません。
+> * [!DNL Google Customer Match]宛先用。 **[!UICONTROL アカウント]** IDは、Googleを使用する顧客のクライアントIDです。IDの形式はxxx-xxx-xxxxです。
 
 
 ![Google Customer Matchの接続 — 認証手順](../../assets/catalog/advertising/google-customer-match/authentication.png)
 
-これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。In either case, see the next section, [Activate segments to [!DNL Google Customer Match]](#activate-segments), for the rest of the workflow.
+これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。どちらの場合も、残りのワークフローについては、次の[「 [!DNL Google Customer Match]](#activate-segments)にセグメントをアクティブにする」を参照してください。
 
-## Activate segments to [!DNL Google Customer Match] {#activate-segments}
+## セグメントを[!DNL Google Customer Match] {#activate-segments}にアクティブ化
 
-セグメントをアクティブ化するに [!DNL Google Customer Match]は、次の手順に従います。
-
-**[!UICONTROL 宛先／参照]**&#x200B;で、セグメントをアクティブ化する宛先を選択します。[!DNL Google Customer Match]
-
-宛先の名前をクリックします。これにより、「アクティブ化」のフローに移動します。
-
-![活性化流](../../assets/catalog/advertising/google-customer-match/activate-flow.png)
+[!DNL Google Customer Match]にセグメントをアクティブ化する方法については、[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
 
-宛先に対するアクティベーションフローが既に存在する場合は、その宛先に現在送信されているセグメントを確認できます。右側のパネルで「**[!UICONTROL アクティベーションの編集]**」を選択し、以下の手順に従ってアクティベーションの詳細を変更します。
+**[!UICONTROL セグメントスケジュール]**&#x200B;の手順で、[!DNL IDFA]または[!DNL GAID]セグメントを[!DNL Google Customer Match]に送信する際に、[!UICONTROL アプリID]を指定する必要があります。
+
+![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+
+[!DNL App ID]を見つける方法の詳細については、[公式ドキュメント](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)を参照してください。
+
+
+
+
+
+
+
+<!-- 
+To activate segments to [!DNL Google Customer Match], follow the steps below: 
+
+In **[!UICONTROL Destinations > Browse]**, select the [!DNL Google Customer Match] destination where you want to activate your segments.
+
+Click the name of the destination. This takes you to the Activate flow.
+
+![activate-flow](../../assets/catalog/advertising/google-customer-match/activate-flow.png)
+
+Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 
 Select **[!UICONTROL Activate]**. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to [!DNL Google Customer Match].
 
 ![segments-to-destination](../../assets/catalog/advertising/google-customer-match/activate-segments.png)
 
-「 **[!UICONTROL IDマッピング]** 」の手順で、この宛先にIDとして含める属性を選択します。 **** 追加新しいマッピングを選択し、スキーマを参照し、電子メールやハッシュ化された電子メールを選択して、対応するターゲットIDにマッピングします。
+In the **[!UICONTROL Identity mapping]** step, select which attributes to be included as an identity in this destination. Select **[!UICONTROL Add new mapping]** and browse your schema, select email and/or hashed email, and map them to the corresponding target identity.
 
-![IDマッピング初期画面](../../assets/catalog/advertising/google-customer-match/identity-mapping.png)
+![identity mapping initial screen](../../assets/catalog/advertising/google-customer-match/identity-mapping.png) 
 
-**プライマリID**:スキーマで主なIDとしてプレーンテキスト（ハッシュ化されていない）電子メールアドレスが存在する場合、「 **[!UICONTROL ソース属性]** 」で電子メールフィールドを選択し、 **[!UICONTROL ターゲットID]**(ID)の右の列にある電子メールフィールドに次のようにマップします。
+**Plain text email address as primary identity**: If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the Email field in the right column under **[!UICONTROL Target Identities]**, as shown below:
 
-![プレーンテキスト電子メールIDの選択](../../assets/catalog/advertising/google-customer-match/raw-email.gif)
+![select plain text emails identity](../../assets/catalog/advertising/google-customer-match/raw-email.gif) 
 
-**プライマリID**:スキーマで電子メールアドレスを主IDとしてハッシュ化している場合は、次に示すように、「 **[!UICONTROL ソース属性]** 」でハッシュ化された電子メールフィールドを選択し、「 **[!UICONTROL ターゲットID]**」の右列にある「Email_LC_SHA256」フィールドにマップします。
+**Hashed email address as primary identity**: If you have hashed email addresses as primary identity in your schema, select the hashed email field in your **[!UICONTROL Source Attributes]** and map to the Email_LC_SHA256 field in the right column under **[!UICONTROL Target Identities]**, as shown below:
 
-![ハッシュ電子メールIDの選択](../../assets/catalog/advertising/google-customer-match/hashed-emails.gif)
+![select hashed emails identity](../../assets/catalog/advertising/google-customer-match/hashed-emails.gif)
 
-「 **[!UICONTROL セグメントスケジュール]** 」ページで、送信先にデータを送信する開始日を設定できます。
+On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination.
 
-「**[!UICONTROL 確認]**」ページには、選択の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
+On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 >[!IMPORTANT]
 >
->この手順では、リアルタイムCDPがデータ使用ポリシー違反をチェックします。 次に、ポリシー違反の例を示します。 セグメントアクティベーションのワークフローは、違反を解決するまで完了できません。 ポリシー違反の解決方法について詳しくは、「データ管理ドキュメント」の「 [ポリシーの適用](../../../rtcdp/privacy/data-governance-overview.md#enforcement) 」を参照してください。
-
+>In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+ 
 ![confirm-selection](../../assets/common/data-policy-violation.png)
 
-ポリシー違反が検出されなかった場合は、「 **[!UICONTROL Finish]** 」を選択して、選択を確定し、開始が宛先にデータを送信することを確認します。
+If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![confirm-selection](../../assets/catalog/advertising/google-customer-match/review.png)
+![confirm-selection](../../assets/catalog/advertising/google-customer-match/review.png) -->
 
 ## セグメントのアクティベーションが成功したことを確認します。 {#verify-activation}
 
-アクティベーションのフローが完了したら、 **[!UICONTROL Google Ads]** アカウントに切り替えます。 アクティブ化されたセグメントは、Googleアカウントに顧客リストとして表示されます。 セグメントサイズに応じて、提供するアクティブなオーディエンスが100人を超えない限り、一部のユーザーは入力されないことに注意してください。
+アクティベーションの流れが完了したら、**[!UICONTROL Google Ads]**&#x200B;アカウントに切り替えます。 アクティブ化されたセグメントは、Googleアカウントに顧客リストとして表示されます。 セグメントサイズに応じて、提供するアクティブなオーディエンスが100人を超えない限り、一部のユーザーは入力されないことに注意してください。
+
+セグメントを[!DNL IDFA]と[!DNL GAID]の両方のモバイルIDにマッピングする場合、[!DNL Google Customer Match]はIDマッピングごとに個別のセグメントを作成します。 [!DNL Google Ads]アカウントには、[!DNL IDFA]用と[!DNL GAID]用の2つの異なるセグメントが表示されます。
 
 ## その他のリソース {#additional-resources}
 
