@@ -1,40 +1,40 @@
 ---
-keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
+keywords: データ・ガバナンスrtcdp;rtcdpデータ・ガバナンス；リアルタイム・カスタマー・データ・プロファイル・データ・ガバナンス；プライバシーrtcdp;rtcdpプライバシー
 title: リアルタイム顧客データプロファイルでのプライバシー
 seo-title: リアルタイム顧客データプロファイルでのプライバシー
 description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 seo-description: リアルタイム顧客データプロファイルを使用すると、プライバシー規制に準拠したデータ操作を維持するプロセスを合理化できます。
 translation-type: tm+mt
-source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
+source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 21%
+source-wordcount: '386'
+ht-degree: 19%
 
 ---
 
 
-# プライバシー [!DNL Real-time CDP]
+# [!DNL Real-time CDP]のプライバシー
 
-[!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP])マーケティング担当者が複数のエンタープライズシステムからのデータを統合し、顧客の識別、把握、関与をより的確に行えるようにします。 アドビでは、基本的なデザイン原則として消費者データのプライバシーを保持し、マーケティング担当者が顧客のデータのプライバシーを管理するのに役立つ様々なコントロールを提供しています。
+[!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP])マーケティング担当者が複数のエンタープライズシステムからのデータを統合し、顧客の識別、把握、関与をより的確に行えるようにします。アドビでは、基本的なデザイン原則として消費者データのプライバシーを保持し、マーケティング担当者が顧客のデータのプライバシーを管理するのに役立つ様々なコントロールを提供しています。
 
-The majority of [!DNL Real-time CDP] capabilities are powered by Adobe Experience Platform. This document provides information about the various privacy enhancement technologies supported by [!DNL Real-time CDP], with links to [!DNL Experience Platform] documentation for more information.
+[!DNL Real-time CDP]の機能の大半はAdobe Experience Platformが動力を持っています。 このドキュメントでは、[!DNL Real-time CDP]がサポートする各種のプライバシー拡張テクノロジーに関する情報と、[!DNL Experience Platform]ドキュメントへのリンクを提供しています。
 
 ## 顧客のアクセスおよび削除要求の実行
 
-(GDPR)や [!DNL General Data Protection Regulation][!DNL California Consumer Privacy Act] (CCPA)などの法的プライバシー規制により、お客様は、お客様から収集した個人データへのアクセスを要求したり、そのデータを削除したりする権利を得ることができます。 データの収集とストレージに [!DNL Real-time CDP] 機能を活用するため、個人データのアクセスと削除を求める顧客の要求は、内で管理する必要があり [!DNL Experience Platform][!DNL Platform]ます。 See the overview on [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) for more information.
+[!DNL General Data Protection Regulation](GDPR)や[!DNL California Consumer Privacy Act](CCPA)などの法的プライバシー規制は、お客様に、お客様が収集した個人データへのアクセスを要求したり、削除する権利を与えます。 [!DNL Real-time CDP]はデータの収集とストレージに[!DNL Experience Platform]機能を活用するので、個人データのアクセスと削除のリクエストは[!DNL Platform]内で管理する必要があります。 詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md)の概要を参照してください。
 
 ## オプトアウト機能
 
-[!DNL Real-time CDP] セグメント化の使用例に個人データオプトアウトを含めることができます。 顧客のオプトアウトプリファレンスは、によってキャプチャおよび保存され [!DNL Real-time Customer Profile]、セグメントの述語にBooleanロジック(「AND NOT」)を使用してセグメントからオプトアウトしたユーザーを除外すると、適用できます。
+[!DNL Real-time CDP] セグメント化の使用例に個人データオプトアウトを含めることができます。顧客のオプトアウト設定は[!DNL Real-time Customer Profile]によってキャプチャおよび保存され、セグメントの述語にBooleanロジック(「AND NOT」)を使用してセグメントからオプトアウトしたユーザーを除外すると、適用できます。
 
-詳しくは、Adobe Experience Platform Segmentation Serviceドキュメントで、オプトアウトリクエストの [実行に関するドキュメントを参照してください](../../segmentation/honoring-opt-outs.md) 。
+詳しくは、Adobe Experience Platform Segmentation Serviceドキュメントの[オプトアウトリクエスト](../../segmentation/honoring-opt-outs.md)に関するドキュメントを参照してください。
 
 ## （IAB TCF 2.0のサポート）
 
-[!DNL Real-time CDP] は、に示すように、の登録 [ベンダーリスト](https://iabeurope.eu/vendor-list-tcf-v2-0/)[!DNL Transparency & Consent Framework (TCF)]の一部で [!DNL Interactive Advertising Bureau (IAB)]す。 TCF 2.0の要件に準拠して、詳細な顧客の同意データを収集 [!DNL Real-time CDP] し、それを保存されている顧客プロファイルに統合できます。 その後、この同意データは、使用事例に応じて、特定のプロファイルが書き出されたオーディエンスセグメントに含まれているかどうかに織り込まれます。
+[!DNL Real-time CDP] は、に示すように、に登録された [ベンダー](https://iabeurope.eu/vendor-list-tcf-v2-0/) リストの一部であるAdobe Experience Platform [!DNL Transparency & Consent Framework (TCF)]に基づいて構築され [!DNL Interactive Advertising Bureau (IAB)]ます。TCF 2.0の要件に準拠したプラットフォームを使用すると、詳細な顧客の同意データを収集し、保存されている顧客プロファイルに統合できます。 その後、この同意データは、使用事例に応じて、特定のプロファイルが書き出されたオーディエンスセグメントに含まれているかどうかに織り込まれます。
 
-詳細については、 [IAB TCF 2.0サポートの概要 [!DNL Real-time CDP]](./iab/overview.md) ()を参照してください。
+詳しくは、Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md)の[IAB TCF 2.0サポートの概要を参照してください。
 
 ## 次の手順
 
-This document provided a brief introduction to the privacy capabilities of [!DNL Real-time CDP]. 各機能の詳細については、本ガイド全体にリンクされたドキュメントを参照してください。
+このドキュメントは[!DNL Real-time CDP]のプライバシー機能の簡単な紹介を提供しました。 各機能の詳細については、本ガイド全体にリンクされたドキュメントを参照してください。
