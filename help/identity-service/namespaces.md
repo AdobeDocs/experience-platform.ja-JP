@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces;namespaces;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: Experience Platform；ホーム；人気のあるトピック；名前空間;名前空間;名前空間;名前空間;ID名前空間;ID名前空間;ID;ID;IDサービス；IDサービス
 solution: Experience Platform
 title: Adobe Experience Platform ID サービス
 topic: overview
@@ -7,7 +7,7 @@ description: 'ID 名前空間は、ID が関連するコンテキストのイン
 translation-type: tm+mt
 source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1475'
 ht-degree: 20%
 
 ---
