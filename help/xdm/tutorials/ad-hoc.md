@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;tutorial;Tutorial;create;Create;schema;Schema
+keywords: Experience Platform；ホーム；人気のあるトピック；API;XDM;XDM;XDM system；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；ad-hoc;Ad hoc;Ad hoc;Tutorial;Create;スキーマ;スキーマ
 solution: Experience Platform
 title: アドホックスキーマの作成
 description: 特定の状況において、1 つのデータセットでのみ使用するために名前空間が使用されたフィールドを持つ Experience Data Model（XDM）スキーマを作成する必要が出ることがあります。これは「アドホック」スキーマと呼ばれます。アドホックスキーマは、CSV ファイルの取り込みや特定の種類のソース接続の作成など、Experience Platform の様々なデータ取り込みワークフローで使用されます。
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 80%
+source-wordcount: '823'
+ht-degree: 76%
 
 ---
 
 
 # アドホックスキーマの作成
 
-In specific circumstances, it may be necessary to create an [!DNL Experience Data Model] (XDM) schema with fields that are namespaced for usage only by a single dataset. これは「アドホック」スキーマと呼ばれます。Ad-hoc schemas are used in various data ingestion workflows for [!DNL Experience Platform], including ingesting CSV files and creating certain kinds of source connections.
+特定の状況では、1つのデータセットでのみ使用するために名前が付けられたフィールドを持つ[!DNL Experience Data Model] (XDM)スキーマを作成する必要が生じる場合があります。 これは「アドホック」スキーマと呼ばれます。アドホックスキーマは、CSVファイルの取り込みや特定の種類のソース接続の作成など、[!DNL Experience Platform]用の様々なデータ取り込みワークフローで使用されます。
 
-このドキュメントでは、[スキーマレジストリ API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) を使用してアドホックスキーマを作成する一般的な手順を示します。It is intended to be used in conjunction with other [!DNL Experience Platform] tutorials that require creating an ad-hoc schema as part of their workflow. これらの各ドキュメントには、特定の使用例に合わせてアドホックスキーマを適切に設定する方法に関する詳細が記載されています。
+このドキュメントでは、[スキーマレジストリ API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) を使用してアドホックスキーマを作成する一般的な手順を示します。これは、アドホックスキーマをワークフローの一部として作成する必要がある他の[!DNL Experience Platform]チュートリアルと組み合わせて使用することを目的としています。 これらの各ドキュメントには、特定の使用例に合わせてアドホックスキーマを適切に設定する方法に関する詳細が記載されています。
 
 ## はじめに
 
-This tutorial requires a working understanding of [!DNL Experience Data Model] (XDM) System. このチュートリアルを開始する前に、次の XDM ドキュメントを確認してください。
+このチュートリアルでは、[!DNL Experience Data Model] (XDM)システムに関する十分な理解が必要です。 このチュートリアルを開始する前に、次の XDM ドキュメントを確認してください。
 
 - [XDMシステムの概要](../home.md):XDMとその実装に関する概要を、で説明し [!DNL Experience Platform]ます。
 - [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの基本的なコンポーネントの概要。
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
+このチュートリアルを開始する前に、[開発者ガイド](../api/getting-started.md)を参照し、[!DNL Schema Registry] APIを正しく呼び出すために知っておく必要がある重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 
 ## アドホッククラスの作成
 
@@ -241,7 +241,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 **リクエスト**
 
-次のリクエストでは、Accept ヘッダー`application/vnd.adobe.xed-full+json; version=1`を使用して、拡張形式のスキーマを返します。Note that when retrieving a specific resource from the [!DNL Schema Registry], the request&#39;s Accept header must include major version of the resource in question.
+次のリクエストでは、Accept ヘッダー`application/vnd.adobe.xed-full+json; version=1`を使用して、拡張形式のスキーマを返します。[!DNL Schema Registry]から特定のリソースを取得する場合、要求のAcceptヘッダーには、該当するリソースのメジャーバージョンが含まれている必要があります。
 
 ```shell
 curl -X GET \
@@ -307,4 +307,4 @@ curl -X GET \
 
 このチュートリアルに従い、新しいアドホックスキーマを作成しました。別のチュートリアルの一部としてこのドキュメントにたどり着いた場合は、アドホックスキーマの `$id` を使用し、指示に従ってワークフローを完了することができるようになりました。
 
-For more information on working with the [!DNL Schema Registry] API, please refer to the [developer guide](../api/getting-started.md).
+[!DNL Schema Registry] APIの使い方について詳しくは、[開発者ガイド](../api/getting-started.md)を参照してください。
