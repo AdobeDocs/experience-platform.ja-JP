@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp segments;segment builder rtcdp;rtcdp segment;customer ai rtcdp
+keywords: rtcdpセグメント；セグメントビルダーrtcdp;rtcdpセグメント；顧客ai rtcdp
 title: リアルタイム顧客データプラットフォームでの顧客AI
 description: 顧客AIの概要と、コンバージョンやチャーンなどの特定の結果に関するスコアの生成を支援する方法について説明します。
 translation-type: tm+mt
 source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '304'
 ht-degree: 8%
 
 ---
