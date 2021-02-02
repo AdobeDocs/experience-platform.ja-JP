@@ -1,36 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: アドビのプライバシー JavaScript ライブラリの概要
 topic: overview
+description: AdobeのプライバシーJavaScriptライブラリを使用すると、Privacy Serviceで使用するデータの件名を取得できます。
 translation-type: tm+mt
-source-git-commit: 6d706b33573e88b2f1ea9d386928dcfdb089a9c5
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 72%
+source-wordcount: '944'
+ht-degree: 70%
 
 ---
 
 
 # アドビのプライバシー JavaScript ライブラリの概要
 
-アドビは、データプロセッサーとして、お客様の許可と指示に従って個人データを処理します。データ管理者であるお客様は、アドビに処理および保管を委任する個人データを決めます。Depending on the information you choose to send through Adobe Experience Cloud solutions, Adobe can store private information applicable to privacy regulations such as the [!DNL General Data Protection Regulation] (GDPR) and [!DNL California Consumer Privacy Act] (CCPA). Experience Cloud ソリューションによる個人データの収集について詳しくは、[Adobe Experience Cloud のプライバシー](https://www.adobe.com/jp/privacy/experience-cloud.html)に関するドキュメントを参照してください。
+アドビは、データプロセッサーとして、お客様の許可と指示に従って個人データを処理します。データ管理者であるお客様は、アドビに処理および保管を委任する個人データを決めます。Adobe Experience Cloudのソリューションを通じて送信する際に選択した情報に応じて、Adobeは[!DNL General Data Protection Regulation] (GDPR)や[!DNL California Consumer Privacy Act] (CCPA)などのプライバシー規制に適した個人情報を保存できます。 Experience Cloud ソリューションによる個人データの収集について詳しくは、[Adobe Experience Cloud のプライバシー](https://www.adobe.com/jp/privacy/experience-cloud.html)に関するドキュメントを参照してください。
 
 データ管理者は、**アドビのプライバシー JavaScript ライブラリ**&#x200B;を使用して、特定のドメインについて ソリューションで生成されたすべてのデータサブジェクトの ID を自動的に取得できます。[!DNL Experience Cloud][Adobe Experience Platform Privacy Service](home.md) が提供する API では、これらの ID を使用して、データサブジェクトに属する個人データへのアクセスリクエストと削除リクエストを作成できます。
 
 >[!NOTE]
 >
->The [!DNL Privacy JS Library] typically only needs to be installed on privacy-related pages, and is not required to be installed on all pages of a website or domain.
+>[!DNL Privacy JS Library]は通常、プライバシー関連のページにのみインストールする必要があり、Webサイトやドメインのすべてのページにインストールする必要はありません。
 
 ## 関数
 
-に [!DNL Privacy JS Library] は、でIDを管理するための機能がいくつか用意されて [!DNL Privacy Service]います。 これらの関数は、ブラウザーに保存されている、特定の訪問者の ID を管理する場合にのみ使用できます。They cannot be used to submit information to the [!DNL Experience Cloud Central Service] directly.
+[!DNL Privacy JS Library]は、[!DNL Privacy Service]内のIDを管理するためのいくつかの機能を提供します。 これらの関数は、ブラウザーに保存されている、特定の訪問者の ID を管理する場合にのみ使用できます。情報を[!DNL Experience Cloud Central Service]に直接送信する際には使用できません。
 
 次の表に、ライブラリが提供する様々な関数の概要を示します。
 
 | 関数 | 説明 |
 | --- | --- |
-| `retrieveIdentities` | Returns an array of matching identities (`validIds`) that were retrieved from [!DNL Privacy Service], as well as an array of identities that were not found (`failedIds`). |
+| `retrieveIdentities` | [!DNL Privacy Service]から取得された一致するID(`validIds`)の配列と、見つからなかったIDの配列(`failedIds`)を返します。 |
 | `removeIdentities` | 一致する（有効な）各 ID をブラウザーから削除します。一致する ID の配列（`validIds`）を返します。各 ID には、この ID が削除されたかどうかを示す `isDeletedClientSide` ブール値が含まれます。 |
 | `retrieveThenRemoveIdentities` | 一致する ID の配列（`validIds`）を取得し、ブラウザーからそれらの ID を削除します。この関数は `removeIdentities` に似ていますが、削除の前に、使用中の Adobe ソリューションでアクセス要求を実行する必要がある場合（削除リクエストに指定する固有の ID を取得する必要がある場合など）に最も適しています。 |
 
@@ -43,15 +44,15 @@ ht-degree: 72%
 
 ## インストール
 
-To start using the [!DNL Privacy JS Library], you must install it onto your machine using one of the following methods:
+[!DNL Privacy JS Library]を使用して開始を行うには、次のいずれかの方法を使用して、マシンにインストールする必要があります。
 
 * `npm install @adobe/adobe-privacy` コマンドを実行して、npm を使用してインストールする。
 * Adobe Launch の拡張機能を `AdobePrivacy` という名前で使用する
-* [Experience CloudGitHubリポジトリからダウンロード](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
+* [Experience CloudGitHubリポジトリ](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)からダウンロード
 
-## をインスタンス化する [!DNL Privacy JS Library]
+## [!DNL Privacy JS Library]をインスタンス化する
 
-All apps that utilize the [!DNL Privacy JS Library] must instantiate a new `AdobePrivacy` object, which must be configured to a specific Adobe solution. 例えば、Adobe Analytics でインスタンス化する場合は、次のようになります。
+[!DNL Privacy JS Library]を利用するすべてのアプリでは、新しい`AdobePrivacy`オブジェクトをインスタンス化する必要があります。このオブジェクトは、特定のAdobeソリューションに設定する必要があります。 例えば、Adobe Analytics でインスタンス化する場合は、次のようになります。
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -66,11 +67,11 @@ var adobePrivacy = new AdobePrivacy({
 
 ## コードサンプル
 
-The following code samples demonstrate how to use the [!DNL Privacy JS Library] for several common scenarios, provided that you are not using [!DNL Launch] or DTM.
+次のコード例は、[!DNL Launch]やDTMを使用しない場合に、一般的なシナリオのいくつかで[!DNL Privacy JS Library]の使用方法を示しています。
 
 ### ID の取得
 
-This example demonstrates how to retrieve a list of identities from [!DNL Experience Cloud].
+この例は、IDのリストを[!DNL Experience Cloud]から取得する方法を示しています。
 
 #### JavaScript
 
@@ -92,7 +93,7 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 | 変数 | 説明 |
 | --- | --- |
 | `validIds` | 正常に取得されたすべての ID を含む JSON オブジェクト。 |
-| `failedIDs` | A JSON object containing all the IDs that were not retrieved from [!DNL Privacy Service], or otherwise could not be found. |
+| `failedIDs` | [!DNL Privacy Service]から取得されなかった、または見つからなかったIDをすべて含むJSONオブジェクト。 |
 
 #### 結果
 
@@ -141,7 +142,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | 変数 | 説明 |
 | --- | --- |
 | `validIds` | 正常に取得されたすべての ID を含む JSON オブジェクト。 |
-| `failedIDs` | A JSON object containing all the IDs that were not retrieved from [!DNL Privacy Service], or otherwise could not be found. |
+| `failedIDs` | [!DNL Privacy Service]から取得されなかった、または見つからなかったIDをすべて含むJSONオブジェクト。 |
 
 #### 結果
 
@@ -170,11 +171,11 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 
 ## 次の手順
 
-By reading this document, you have been introduced to the core functionalities of the [!DNL Privacy JS Library]. After using the library to retrieve a list of identities, you can use those identities to create data access and delete requests to the [!DNL Privacy Service] API. 詳しくは、「[Privacy Service developer guide](api/getting-started.md)」を参照してください。
+このドキュメントを読むと、[!DNL Privacy JS Library]の主な機能が紹介されます。 ライブラリを使用してIDのリストを取得した後、これらのIDを使用して[!DNL Privacy Service] APIへのデータアクセスおよび削除要求を作成できます。 詳しくは、「[Privacy Service developer guide](api/getting-started.md)」を参照してください。
 
 ## 付録
 
-This section contains supplemental information for using the [!DNL Privacy JS Library].
+この節では、[!DNL Privacy JS Library]の使用に関する補足情報を説明します。
 
 ### アドビソリューションの設定パラメーター
 
