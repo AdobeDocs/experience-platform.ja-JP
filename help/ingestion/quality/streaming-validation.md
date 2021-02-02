@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;streaming ingestion validation;validation;Streaming ingestion validation;validate;Synchronous validation;synchronous validation;Asynchronous validation;asynchronous validation;
+keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング；ストリーミング取り込み；ストリーミング取り込みの検証；検証；ストリーミング取り込みの検証；検証；同期検証；非同期検証；非同期検証；
 solution: Experience Platform
 title: ストリーミング取り込みの検証
 topic: tutorial
 type: Tutorial
 description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データを Adobe Experience Platform にアップロードできます。ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 85%
+source-wordcount: '875'
+ht-degree: 82%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 85%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
 - [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md):データの送信先のメソッドの1つ [!DNL Experience Platform]。
 
 ### API 呼び出し例の読み取り
@@ -31,19 +31,19 @@ ht-degree: 85%
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Schema Registry]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -142,7 +142,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 非同期検証
 
-非同期検証は、即座にフィードバックを提供しない検証方法です。Instead, the data is sent to a failed batch in [!DNL Data Lake] to prevent data loss. この失敗したデータを、後で取得して、さらに分析と再現をおこなうことができます。この方法は、実稼働環境で使用する必要があります。特に要求されない限り、ストリーミング取り込みは非同期検証モードで動作します。
+非同期検証は、即座にフィードバックを提供しない検証方法です。代わりに、データの損失を防ぐために、[!DNL Data Lake]内の失敗したバッチにデータが送信されます。 この失敗したデータを、後で取得して、さらに分析と再現をおこなうことができます。この方法は、実稼働環境で使用する必要があります。特に要求されない限り、ストリーミング取り込みは非同期検証モードで動作します。
 
 **API 形式**
 
@@ -199,7 +199,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | ----------- | ------------- |
 | 200 | 成功です。同期検証の場合は、検証チェックに合格したことを意味します。非同期検証の場合は、メッセージが正常に受信されたことだけを意味します。最終的なメッセージのステータスは、データセットを観察することで確認できます。 |
 | 400 | エラーです。リクエストに何か間違いがあります。ストリーミング検証サービスから、詳細を含んだエラーメッセージが表示されます。 |
-| 401 | エラーです。リクエストは未承認です。ベアラトークンを使用してリクエストする必要があります。アクセスをリクエストする方法について詳しくは、[このチュートリアル](../../tutorials/authentication.md)または[ブログ投稿](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)を参照してください。 |
+| 401 | エラーです。リクエストは未承認です。ベアラトークンを使用してリクエストする必要があります。アクセスをリクエストする方法について詳しくは、[このチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)または[ブログ投稿](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)を参照してください。 |
 | 500 | エラーです。内部システムエラーが発生しました。 |
 | 501 | エラーです。つまり、この場所では同期検証が&#x200B;**サポートされていません**。 |
 | 503 | エラーです。サービスは現在利用できません。クライアントは、指数バックオフ戦略を使用して、少なくとも 3 回再試行する必要があります。 |
