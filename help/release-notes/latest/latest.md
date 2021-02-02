@@ -1,67 +1,80 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Experience Platformリリースノート（2020年12月9日）
+description: Experience Platform リリースノート 2021 年 1 月 27 日
 doc-type: release notes
-last-update: December 9, 2020
-author: ens60013 & ens72471
+last-update: January 27, 2021
+author: ens60013
 translation-type: tm+mt
-source-git-commit: ae353e6dda3f92647c32ee8e731be5785d24e5cb
+source-git-commit: 74325dcfe9d7b117e3f812d88e0c4a980d44ef53
 workflow-type: tm+mt
-source-wordcount: '426'
-ht-degree: 31%
+source-wordcount: '639'
+ht-degree: 49%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2020年12月9日**
-
-Adobe Experience Platform の新機能：
-
-- [[!DNL Dataflows]](#dataflows)
+**リリース日：2021 年 1 月 27 日**
 
 Adobe Experience Platform の既存の機能のアップデート：
 
-- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Sources]](#sources)
+- [[!DNL Experience Platform Launch Server Side]](#launch)
 
-## [!DNL Dataflows] {#dataflows}
+## [!DNL Data Prep] {#data-prep}
 
-データフローは、プラットフォーム間でデータを移動するデータ・ジョブを表します。 これらのデータフローは様々なサービスで構成され、ソース・コネクタからターゲット・データセット、IDおよびプロファイル・サービス、宛先にデータを移動できます。
+[!DNL Data Prep] データエンジニアがエクスペリエンスデータモデル(XDM)との間でデータのマッピング、変換、検証を行えるようにします。
 
-**主な機能**
+**新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| データフローの透過性 | ソースおよび宛先のデータフローを監視できます。 詳細については、監視ソースに関する [チュートリアル](../../dataflows/ui/monitor-sources.md) 、または監視先に関する [チュートリアルを参照してください](../../dataflows/ui/monitor-destinations.md)。 |
+| 正規式関数 | [!DNL Data Prep] マッパーで、正規式に基づく入力フィールドの一部の一致と抽出がサポートされるようになりました。 |
 
-データフローの詳細については、 [データフローの概要を参照してください](../../dataflows/home.md)。
+詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
 
-## [!DNL Data Science Workspace] {#dsw}
+## 宛先 {#destinations}
 
-Data Science Workspaceは、機械学習と人工知能を使用して、データからインサイトを作成します。 Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測をおこなうことを支援します。
+[!DNL Destinations] は、目的のプラットフォームと事前にビルドされた統合機能で、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
-**主な特長**
+**新機能**
 
 | 機能 | 説明 |
-| --- | ---|
-| Adobe Experience Platform情報パッケージアドオン | Adobe Experience Platformインテリジェンスパッケージアドオンは、Data Science Workspaceのアップグレードで、次のような追加の主要機能をロック解除します。 <li> UI主導のモデル実験と評価。</li><li> 予定されたトレーニングジョブと参照ジョブを使用して、モデルを導入および操作する機能。</li><li> Tensorflowモデル(GPU Compute)での詳細な学習のサポート。</li><li> Sparkベースの分散コンピューティングにより、大規模なデータセット（10MM +行）に対してトレーニングとスコアを実施。</li><li>その他</li> |
+| ------- | ----------- |
+| 高度なIDの一致 | 外部ID、電話番号、モバイルデバイスIDなど、追加のID照合のサポートを追加し、[!DNL Facebook Custom Audiences]と[!DNL Google Customer Match]のオーディエンス一致率機能を強化しました。 詳しくは、次のドキュメントを参照してください。 <ul><li>[Facebook の宛先](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Matchのリンク先](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[宛先へのプロファイルとセグメントのアクティブ化](../../destinations/ui/activate-destinations.md)</li></ul> |
 
-Adobe Experience Platformインテリジェンスパッケージアドオンの詳細については、 [Data Science Workspaceのアクセスと機能に関するドキュメントを参照してください](../../data-science-workspace/access-features-dsw.md)。
+詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できるようにする RESTful API とインタラクティブな UI を提供します。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
-**主な特長**
+**新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| ストリーミングソースのアカウントと接続の詳細の更新 | APIとUIを使用して、既存のストリーミング接続の名前、説明および秘密鍵証明書を更新できるようにな [!DNL Flow Service] りました。 詳しくは、APIを使用した接続の [更新とUIを使用したアカウントの詳細の](../../sources/tutorials/api/update.md) 編集に関するチュートリアルを参照してください [](../../sources/tutorials/ui/monitor.md)。 |
-| データフローの削除 | エラーを含む、または不要になったストリーミングデータフローを、 [!DNL Flow Service] APIとUIを使用して削除できるようになりました。 詳細は、APIを使用したデータ・フローの [削除およびUIを使用したデータ・フローの](../../sources/tutorials/api/delete-dataflows.md) 削除に関するチュートリアルを参照してください [](../../sources/tutorials/ui/delete.md)。 |
+| Adobe Audience Managerソースコネクタの機能強化 | Audience ManagerからPlatformに取り込む個々のファーストパーティセグメントをフィルタリングおよび選択でき、ファーストパーティの特性をフィルタリングできるようになりました。 詳細については、[Audience Managerソースコネクタ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)の作成に関するチュートリアルを参照してください。 |
+| [!DNL Google BigQuery] ソースコネクタの強化 | [!DNL BigQuery]ソースコネクタを使用して、1回のフロー実行で10 GBを超えるファイルを取り込めるようになりました。 詳しくは、[[!DNL BigQuery] ソースコネクタの概要](../../sources/connectors/databases/bigquery.md)を参照してください。 |
+| クラウドストレージ用の複雑なデータ型のサポート | クラウドストレージソースコネクタを使用する場合、JSONファイル内の配列などの複雑なデータ型を取り込めるようになりました。 詳しくは、UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)または[でのクラウドストレージのデータフロー[の作成に関するチュートリアル（ [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md)を使用）を参照してください。 |
+| [!DNL Microsoft Dynamics]ソースのサービスプリンシパルキーベースの認証のサポート | パスワードベースの認証の代わりに、サービスプリンシパルキーを使用して[!DNL Dynamics]アカウントに対して認証できるようになりました。 詳しくは、[[!DNL Dynamics] ソースコネクタの概要](../../sources/connectors/crm/ms-dynamics.md)を参照してください。 |
+| クラウドストレージソースでのカスタム区切り文字のUIのサポート | カンマ(`,`)、タブ(`\t`)、パイプ(`|`)などのカスタムの列区切り文字を設定して、UIから区切りファイルを収集できるようになりました。 詳しくは、[クラウドストレージソースコネクタ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)を使用したデータフローの作成のチュートリアルを参照してください |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
 
+## [!DNL Experience Platform Launch Server Side] {#launch}
+
+Adobe Experience Platform Launch Server Side は、通常クライアントでおこなわれるタスクを、Adobe Experience Platform Edge ネットワークを使用して実行することにより、web ページやアプリの重みを軽減します。Platform Launch Server Side のルールにより、クライアントサイドの実装を変更しなくても、データを変換して新しい宛先に送信できます。
+
+Platform Launch Server Side を Adobe Experience Platform の web およびモバイル SDK と組み合わせることで、次のことが可能になります。
+
+- データのペイロードを含むページから 1 回の呼び出しをおこない、このデータをサーバーサイドで統合して、クライアント側のネットワークトラフィックを減らし、顧客により高速なエクスペリエンスを提供する。
+- web ページの読み込みに要する時間を短縮する。この機能により、サイトを、パフォーマンスに関する業界のベストプラクティスに合わせることができます。
+- 透明性を高め、クライアントサイドのすべてのプロパティを通して、どのタイプのデータをどこに送信するかを制御する。
+- サーバーサイドのルールを作成し、以前に追跡したデータを新しい送信先に送信する。
+
+詳しくは、[プラットフォーム起動ドキュメント](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en)を参照してください。
