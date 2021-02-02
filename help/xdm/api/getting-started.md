@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform；ホーム；人気の高いトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマレジストリ；
 solution: Experience Platform
 title: スキーマレジストリAPIの使用の手引き
 description: このドキュメントでは、スキーマレジストリAPIを呼び出す前に知っておく必要があるコア概念の概要を説明します。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1132'
-ht-degree: 45%
+source-wordcount: '1163'
+ht-degree: 44%
 
 ---
 
@@ -34,7 +34,7 @@ XDMは、JSONスキーマ形式を使用して、取り込むカスタマーエ�
 
 ## 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
