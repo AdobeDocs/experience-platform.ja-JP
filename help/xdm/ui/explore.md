@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
+keywords: Experience Platform；ホーム；人気のあるトピック；ui;UI;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；エクスプローラ；クラス；ミックスイン；データ型；スキーマ;
 solution: Experience Platform
 title: UIでのXDMリソースの参照
 description: Experience Platformのユーザーインターフェイスで既存のスキーマ、クラス、ミックスイン、およびデータタイプを調べる方法について説明します。
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e5c5fea783aa4088d225f771905fa8b2098613cf
+source-git-commit: 912d02477febdafa4a53aebc83bc3a93b0f84f09
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
 
 ![](../images/ui/explore/filter.png)
 
-検索バーを使用して、検索クエリと名前が一致するリソースに結果を絞り込むこともできます。
+検索バーを使用して、結果をさらに絞り込むこともできます。 キーワードを検索する場合、最上位の項目は検索クエリと名前が一致するリソースを表します。 これらの項目の下の&#x200B;**[!UICONTROL 標準フィールド]**&#x200B;には、クエリに一致するフィールドを含むリソースがすべて表示されます。 これにより、XDMリソースの名前を事前に知る必要なく、XDMリソースを含むデータのタイプに基づいて検索できます。
 
 ![](../images/ui/explore/search.png)
 
