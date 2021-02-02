@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；アドビ定義関数；sql;
 solution: Experience Platform
 title: アドビ定義関数
 topic: functions
@@ -7,7 +7,7 @@ description: このドキュメントでは、クエリサービスで使用で�
 translation-type: tm+mt
 source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
-source-wordcount: '2889'
+source-wordcount: '2902'
 ht-degree: 27%
 
 ---
