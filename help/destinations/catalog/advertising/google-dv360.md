@@ -1,14 +1,14 @@
 ---
-keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
+keywords: DoubleClick入札マネージャ；DoubleClick入札マネージャ；DoubleClick;Display & Video 360;Display 360;video 360;Video 360;Display 360;Display 360;display and video
 title: Google Display と Video 360 の宛先
 seo-title: Google Display と Video 360 の宛先
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 seo-description: 'Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。 '
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 50%
+source-wordcount: '742'
+ht-degree: 46%
 
 ---
 
@@ -21,19 +21,20 @@ ht-degree: 50%
 
 ## 宛先の仕様
 
-Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
+[!DNL Google Display & Video 360]宛先に固有の次の詳細を確認します。
 
-* You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Google Display & Video 360] destinations: Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
+* 次の[ID](../../../identity-service/namespaces.md)を[!DNL Google Ads]宛先に送信できます。[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en)、Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID。
+   * Googleは、カリフォルニア州のユーザーをターゲットする場合は[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en)を使用し、その他すべてのユーザーの場合はGoogle Cookie IDを使用します。
 * アクティブ化されたオーディエンスは、Google プラットフォームでプログラムを使用して作成されます。
-*  Real-time CDP には、現在、アクティベーションの成功を検証するための測定指標は含まれていません。統合を検証し、オーディエンスターゲティングの規模を理解するには、Google でのオーディエンス数を参照します。
+* 現在、プラットフォームには、アクティベーションの成功を検証するための測定指標は含まれていません。 統合を検証し、オーディエンスターゲティングの規模を理解するには、Google でのオーディエンス数を参照します。
 
 >[!IMPORTANT]
 >
->Google Display &amp; Video 360 を使用して最初の宛先を作成する場合で、以前に Experience Cloud ID サービスにおいて、Adobe Audience Manager や他のアプリケーションとの間で [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていないときには、アドビコンサルティングまたはカスタマーケアに連絡して、ID 同期を有効にしてください。以前にAudience ManagerでGoogle統合を設定した場合、Real-time CDPに繰り越しを設定したID同期。
+>Google Display &amp; Video 360 を使用して最初の宛先を作成する場合で、以前に Experience Cloud ID サービスにおいて、Adobe Audience Manager や他のアプリケーションとの間で [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていないときには、アドビコンサルティングまたはカスタマーケアに連絡して、ID 同期を有効にしてください。以前にAudience ManagerでGoogle統合を設定していた場合、Platformへの繰り越しを設定したID同期。
 
-### 書き出しタイプ {#export-type}
+### エクスポートの種類{#export-type}
 
-**セグメントエクスポート** — セグメント(オーディエンス)のすべてのメンバーをGoogleのエクスポート先にエクスポートします。
+**セグメントエクスポート**  — セグメント(オーディエンス)のすべてのメンバーをGoogleのエクスポート先にエクスポートします。
 
 ## 前提条件
 
@@ -41,9 +42,9 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 >[!NOTE]
 >
->この許可リストは、リアルタイムCDPで最初の [!DNL Google Display & Video 360] 宛先を設定する前に必須です。 リンク先を作成する前に、Googleが以下に説明する許可リストプロセスを完了していることを確認してください。
+>この許可リストは、Platformで最初の[!DNL Google Display & Video 360]宛先を設定する前に必須です。 リンク先を作成する前に、Googleが以下に説明する許可リストプロセスを完了していることを確認してください。
 
-Real-time CDPで [!DNL Google Display & Video 360] 宛先を作成する前に、Googleに連絡して、許可されているデータプロバイダのリストにAdobeし、許可リストにアカウントを追加するように求める必要があります。 Google に連絡し、次の情報を提供します。
+Platformで[!DNL Google Display & Video 360]宛先を作成する前に、Googleに連絡して、許可されているデータプロバイダーのリストにAdobeし、許可リストにアカウントを追加するように求める必要があります。 Google に連絡し、次の情報を提供します。
 
 * **アカウント ID**：これは、アドビの Google アカウント ID です。アドビカスタマーケアまたは Adobe 担当者に問い合わせて、この ID を取得してください。
 * **顧客 ID**：これは、アドビの Google 顧客アカウント ID です。アドビカスタマーケアまたは Adobe 担当者に問い合わせて、この ID を取得してください。
@@ -51,15 +52,15 @@ Real-time CDPで [!DNL Google Display & Video 360] 宛先を作成する前に�
 
 ## 宛先の設定
 
-**[!UICONTROL 接続]** / **[!UICONTROL 宛先]**、を選択し、「 [!DNL Google Display & Video 360]設定 ****」を選択します。
+**[!UICONTROL 接続]**/**[!UICONTROL 宛先]**&#x200B;で、[!DNL Google Display & Video 360]を選択し、**[!UICONTROL 設定]**&#x200B;を選択します。
 
 ![Google Display &amp; Video 360 の宛先への接続](../../assets/catalog/advertising/google-dv360/catalog.png)
 
 >[!NOTE]
 >
->この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 [!UICONTROL アクティブ化] 」と「 [!UICONTROL 設定]」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](../../ui/destinations-workspace.md#catalog) 」セクションを参照してください。
+>この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「[!UICONTROL アクティブ化]」と「[!UICONTROL 設定]」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
-宛先を作成ワークフローの **セットアップ** 手順で、宛先の [!UICONTROL 基本情報] 、およびこの宛先に適用するマーケティングの使用例を入力します。
+宛先を作成ワークフローの&#x200B;**セットアップ**&#x200B;手順で、宛先の[!UICONTROL 基本情報]と、この宛先に適用するマーケティングの使用例を入力します。
 
 ![Google Display &amp; Video 360 の基本情報](../../assets/catalog/advertising/google-dv360/setup.png)
 
@@ -69,16 +70,16 @@ Real-time CDPで [!DNL Google Display & Video 360] 宛先を作成する前に�
    * Display &amp; Video 360 アカウントにある特定のブランドにのみオーディエンスを共有するには、`Invite Advertiser` を使用します。
    * Display &amp; Video 360 アカウントのすべてのブランドにオーディエンスを共有するには、`Invite Partner` を使用します。
 * **[!UICONTROL アカウント ID]**：**[!DNL Invite partner]** または **[!DNL Invite advertiser]** のアカウント ID に Google アカウントの ID を入力します。通常、これは 6 桁または 7 桁の ID です。
-* **[!UICONTROL マーケティングの使用例]**:マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](../../../rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](../../../data-governance/policies/overview.md#core-actions)。
+* **[!UICONTROL マーケティングの使用例]**:マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例について詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 >[!NOTE]
 >
->When setting up a [!DNL Google Display & Video 360] destination please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
+>[!DNL Google Display & Video 360]宛先を設定する際は、[!DNL Google Account Manager]またはAdobeの担当者に相談して、お持ちのアカウントのタイプをご確認ください。
 
-## Activate segments to [!DNL Google Display & Video 360]
+## セグメントを[!DNL Google Display & Video 360]にアクティブ化
 
-For instructions on how to activate segments to [!DNL Google Display & Video 360], see [Activate Data to Destinations](../../ui/activate-destinations.md).
+[!DNL Google Display & Video 360]にセグメントをアクティブ化する方法については、[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
 ## 書き出されたデータ
 
-データが正常に宛先にエクスポートされたかどうかを確認するには、アカウントを確認して [!DNL Google Display & Video 360] く [!DNL Google Display & Video 360] ださい。 アクティベーションに成功すると、オーディエンスがアカウントに入力されます。
+データが[!DNL Google Display & Video 360]宛先に正常にエクスポートされたかどうかを確認するには、[!DNL Google Display & Video 360]アカウントを確認してください。 アクティベーションに成功すると、オーディエンスがアカウントに入力されます。
