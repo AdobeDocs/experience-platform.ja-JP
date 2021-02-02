@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp;Secure File Transfer Protocol;secure file transfer protocol
+keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;SFTP；セキュアファイル転送プロトコル；セキュアファイル転送プロトコル
 solution: Experience Platform
 title: Flow Service APIを使用したSFTPコネクタの作成
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをSFTP(Secure File Transfer Protocol)サーバーに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: c88b9400144f511ef456fd5fdc968a5a6b7a3dc0
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '826'
 ht-degree: 23%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 23%
 
 ### 必須ヘッダーの値の収集
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -131,7 +131,7 @@ curl -X POST \
 
 ### SSH公開鍵認証を使用したSFTP接続の作成
 
-SSH公開鍵認証を使用してSFTPPOSTを作成するには、[!DNL Flow Service]、`userName`、`privateKeyContent`および`passPhrase`の値を指定しながら、&lt;a0/> APIに接続要求を行います。`host`
+SSH公開鍵認証を使用してSFTPPOSTを作成するには、[!DNL Flow Service]、`userName`、`privateKeyContent`および`passPhrase`の値を指定しながら、`host` APIに接続要求を行います。
 
 **API 形式**
 
@@ -189,4 +189,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用してSFTP接続を作成し、接続の固有のID値を取得したことになります。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用したインジェストパーケットデータを使用して、[クラウドストレージを探索できます。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用してSFTP接続を作成し、接続の固有のID値を取得したことになります。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用してParketストレージを[調査できます。
