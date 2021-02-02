@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
+keywords: Experience Platform；ホーム；人気のあるトピック；CJA;ジャーニー分析；顧客ジャーニー分析；キャンペーンの調整；オーケストレーション；顧客ジャーニー;ジャーニー;ジャーニーの調整；機能；ワークフロー
 solution: Experience Platform
 title: Adobe Experience Platform ドキュメントの概要
 topic: overview
@@ -7,8 +7,8 @@ description: Adobe Experience Platformのドキュメントは、ユーザーイ
 translation-type: tm+mt
 source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 55%
+source-wordcount: '484'
+ht-degree: 53%
 
 ---
 
