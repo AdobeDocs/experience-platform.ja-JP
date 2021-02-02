@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
+keywords: Experience Platform；ホーム；人気のあるトピック；ID名前空間;ID名前空間
 solution: Experience Platform
 title: Adobe Experience Platform ID サービストラブルシューティングガイド
 topic: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '2248'
-ht-degree: 82%
+source-wordcount: '2191'
+ht-degree: 80%
 
 ---
 
 
 # ID サービストラブルシューティングガイド
 
-This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
+このドキュメントでは、Adobe Experience Platform[!DNL Identity Service]に関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。 [!DNL Platform] APIに関する一般的な質問とトラブルシューティングについては、[Adobe Experience PlatformAPIトラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
-1 人の顧客を識別するデータは、多くの場合、顧客がブランドに関与するために使用する様々なデバイスやシステムにわたって断片化されます。[!DNL Identity Service] これらの断片化されたIDをまとめて収集し、顧客の行動を完全に把握し、効果的なデジタルエクスペリエンスをリアルタイムで提供できます。 詳しくは、「[ID サービスの概要](./home.md)」を参照してください。
+1 人の顧客を識別するデータは、多くの場合、顧客がブランドに関与するために使用する様々なデバイスやシステムにわたって断片化されます。[!DNL Identity Service] これらの断片化されたIDをまとめて収集し、顧客の行動を完全に把握し、効果的なデジタルエクスペリエンスをリアルタイムで提供できます。詳しくは、「[ID サービスの概要](./home.md)」を参照してください。
 
 ## FAQ
 
-The following is a list of answers to frequently asked questions about [!DNL Identity Service].
+以下は、[!DNL Identity Service]に関するよくある質問に対する回答のリストです。
 
 ## ID データとは
 
@@ -41,7 +41,7 @@ ID データは、個人を識別するために使用できる任意のデー�
 
 プライベート ID グラフは、組織にのみ表示される、結合済み ID とリンクされた ID の間の関係を示すプライベートマップです。
 
-When more than one identity is included in any data ingested from a streaming endpoint or sent to a dataset enabled for [!DNL Identity Service], those identities are linked in the Private Identity Graph. [!DNL Identity Service] このグラフを利用して、特定のコンシューマーまたはエンティティのIDを収集し、IDのステッチとプロファイルの結合を可能にします。
+ストリーミングエンドポイントから取り込まれたデータ、または[!DNL Identity Service]に対して有効なデータセットに送信されたデータに複数のIDが含まれる場合、それらのIDはプライベートIDグラフにリンクされます。 [!DNL Identity Service] このグラフを利用して、特定のコンシューマーまたはエンティティのIDを収集し、IDのステッチとプロファイルの結合を可能にします。
 
 ## XDM スキーマ内に複数の ID フィールドを作成する方法を教えてください。
 
@@ -75,20 +75,7 @@ API を使用して ID 記述子を作成する際に名前空間を定義する
 
 ## Experience Platform が提供する標準 ID 名前空間は何ですか。 {#standard-namespaces}
 
-次の標準名前空間は、Experience Platform 内のすべての組織で使用できます。
-
-| 表示名 | ID | コード | 説明 |
-| ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | レガシー名：「Adobe AudienceManager」 |
-| ECID | 4 | ECID | エイリアス：「Adobe Marketing Cloud ID」、「Adobe Experience Cloud ID」、「Adobe Experience Platform ID」 |
-| Email | 6 | Email |  |
-| 電子メール（SHA256、小文字） | 11 | Emails | 事前にハッシュ化された電子メール用標準名前空間。この名前空間で指定された値は、SHA-256 でハッシュする前に小文字に変換されます。 |
-| Phone | 7 | Phone |  |
-| Windows AID | 8 | WAID |  |
-| AdCloud | 411 | AdCloud | エイリアス：Ad Cloud |
-| Adobe Target | 9 | TNTID | ターゲット ID |
-| Google 広告 ID | 20914 | GAID | GAID |
-| Apple IDFA | 20915 | IDFA | 広告主の ID |
+標準ID名前空間は、すべての組織が使用できる名前空間です。 使用可能な標準名前空間の完全なリストについては、[ID名前空間の概要](./namespaces.md)を参照してください。
 
 ## 組織で使用できる ID 名前空間のリストはどこで見つけられますか？
 
@@ -136,11 +123,11 @@ Internal solutions|Preferred|Common
 
 ## トラブルシューティング
 
-The following section provides troubleshooting suggestions for specific error codes and unexpected behavior you may encounter while working with the [!DNL Identity Service] API.
+次の節では、[!DNL Identity Service] APIの操作中に発生する可能性のある、特定のエラーコードと予期しない動作に関するトラブルシューティングの推奨事項を示します。
 
 ## [!DNL Identity Service] エラーメッセージ
 
-The following is a list of error messages you may encounter when using the [!DNL Identity Service] API.
+以下は、[!DNL Identity Service] APIの使用時に発生する可能性があるエラーメッセージのリストです。
 
 ### 必要なクエリーパラメーターがありません
 
@@ -172,7 +159,7 @@ The following is a list of error messages you may encounter when using the [!DNL
 }
 ```
 
-[!DNL Identity Service] 180日を超える古いデータを削除します。 このエラーメッセージは、これより古いデータにアクセスしようとすると表示されます。
+[!DNL Identity Service] 180日を超える古いデータを削除します。このエラーメッセージは、これより古いデータにアクセスしようとすると表示されます。
 
 ### 1 回の呼び出しで使用できる XID は 1,000 個までです
 
@@ -209,7 +196,7 @@ The following is a list of error messages you may encounter when using the [!DNL
 }
 ```
 
-このエラーメッセージは、リクエストパスで `graph-type` クエリーパラメーターに無効な値が与えられた場合に表示されます。See the section on [identity graphs](./home.md) in the [!DNL Identity Service] overview to learn which graph-types are supported.
+このエラーメッセージは、リクエストパスで `graph-type` クエリーパラメーターに無効な値が与えられた場合に表示されます。サポートされるグラフのタイプについては、[!DNL Identity Service]の概要の[IDグラフ](./home.md)の節を参照してください。
 
 ### サービストークンに有効なスコープがありません
 
@@ -221,7 +208,7 @@ The following is a list of error messages you may encounter when using the [!DNL
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. この問題を解決するには、システム管理者に問い合わせてください。
+このエラーメッセージは、IMS組織が[!DNL Identity Service]に対する適切な権限を持つプロビジョニングを行っていない場合に表示されます。 この問題を解決するには、システム管理者に問い合わせてください。
 
 ### ゲートウェイサービストークンが無効です
 
@@ -233,7 +220,7 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-このエラーが発生した場合、アクセストークンは無効です。Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. 新しいアクセストークンの生成手順については、[認証に関するチュートリアル](../tutorials/authentication.md)を参照してください。
+このエラーが発生した場合、アクセストークンは無効です。アクセストークンは24時間ごとに期限が切れます。[!DNL Platform] APIを使用し続けるには、再生成する必要があります。 新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。
 
 ### 認証サービストークンが無効です
 
@@ -245,7 +232,7 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-このエラーが発生した場合、アクセストークンは無効です。Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. 新しいアクセストークンの生成手順については、[認証に関するチュートリアル](../tutorials/authentication.md)を参照してください。
+このエラーが発生した場合、アクセストークンは無効です。アクセストークンは24時間ごとに期限が切れます。[!DNL Platform] APIを使用し続けるには、再生成する必要があります。 新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。
 
 ### ユーザートークンに有効な製品コンテキストがありません
 
@@ -257,7 +244,7 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration.  統合のための新しいアクセストークンの生成手順については、[認証に関するチュートリアル](../tutorials/authentication.md)を参照してください。[!DNL Experience Platform]
+このエラーメッセージは、アクセストークンが[!DNL Experience Platform]統合から生成されていない場合に表示されます。  統合のための新しいアクセストークンの生成手順については、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を参照してください。[!DNL Experience Platform]
 
 ### ID とネイティブ XID を取得する際の内部エラーと名前空間コード
 
@@ -269,9 +256,9 @@ This error message displays when your access token has not been generated from a
 }
 ```
 
-When [!DNL Identity Service] persists an identity, the identity&#39;s ID and associated namespace ID are assigned a unique identifier called an XID. このメッセージは、特定の ID 値と名前空間の XID を見つけるプロセス中にエラーが発生した場合に表示されます。
+[!DNL Identity Service]がIDを保持する場合、IDと関連付けられた名前空間IDには、XIDと呼ばれる一意の識別子が割り当てられます。 このメッセージは、特定の ID 値と名前空間の XID を見つけるプロセス中にエラーが発生した場合に表示されます。
 
-### The IMS Org is not provisioned for [!DNL Identity Service] usage
+### IMS組織が[!DNL Identity Service]の使用に対してプロビジョニングされていません
 
 ```json
 {
@@ -281,7 +268,7 @@ When [!DNL Identity Service] persists an identity, the identity&#39;s ID and ass
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. この問題を解決するには、システム管理者に問い合わせてください。
+このエラーメッセージは、IMS組織が[!DNL Identity Service]に対する適切な権限を持つプロビジョニングを行っていない場合に表示されます。 この問題を解決するには、システム管理者に問い合わせてください。
 
 ### 内部サーバーエラー
 
@@ -293,13 +280,13 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-This error displays when an unexpected exception occurs in the execution of a [!DNL Platform] service call. ベストプラクティスは、自動呼び出しをプログラムして、このエラーを受け取ったときに一定の時間間隔でリクエストを数回再試行することです。問題が解決しない場合は、システム管理者に問い合わせてください。
+このエラーは、[!DNL Platform]サービス呼び出しの実行中に予期しない例外が発生した場合に表示されます。 ベストプラクティスは、自動呼び出しをプログラムして、このエラーを受け取ったときに一定の時間間隔でリクエストを数回再試行することです。問題が解決しない場合は、システム管理者に問い合わせてください。
 
 ## バッチ取得エラーコード
 
-[!DNL Identity Service] バッチインジェストを [!DNL Platform] 使用してアップロードされたレコードおよび時系列データからIDデータを取り込みます。 バッチ取得は非同期的なプロセスなので、エラーを表示するには、バッチの詳細を表示する必要があります。バッチが完了するまで、バッチの進行に合わせてエラーが蓄積されます。
+[!DNL Identity Service] バッチインジェストを [!DNL Platform] 使用してアップロードされたレコードおよび時系列データからIDデータを取り込みます。バッチ取得は非同期的なプロセスなので、エラーを表示するには、バッチの詳細を表示する必要があります。バッチが完了するまで、バッチの進行に合わせてエラーが蓄積されます。
 
-The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+[データ取り込みAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)の使用時に発生する可能性のある[!DNL Identity Service]に関連するエラーメッセージのリストを以下に示します。
 
 ### 不明な XDM スキーマ
 
@@ -311,7 +298,7 @@ The following is a list of error messages related to [!DNL Identity Service] you
 }
 ```
 
-[!DNL Identity Service] IDは、それぞれまたはクラスに適合するレコードまたは時系列データに対して [!DNL Profile] のみ [!DNL ExperienceEvent] 使用します。 Attempting to ingest data for [!DNL Identity Service] that does not adhere to either class will trigger this error.
+[!DNL Identity Service] IDは、それぞれまたは [!DNL Profile] クラスに適合するレコードまたは時系列データに対してのみ使用 [!DNL ExperienceEvent] されます。どちらのクラスにも準拠しない[!DNL Identity Service]のデータを取り込もうとすると、このエラーがトリガーします。
 
 ### 処理されたバッチの最初の 100 行に 0 個の有効な ID がありました
 
@@ -335,7 +322,7 @@ The following is a list of error messages related to [!DNL Identity Service] you
 }
 ```
 
-[!DNL Identity Service] 単一のレコードに2つ以上のID値が存在する場合は、IDのみがリンクされます。 このエラーメッセージは、取得されたバッチごとに 1 回ずつ発生し、1 つの ID しか見つからずに ID グラフに変更が生じなかったレコードの数を表示します。
+[!DNL Identity Service] 単一のレコードに2つ以上のID値が存在する場合は、IDのみがリンクされます。このエラーメッセージは、取得されたバッチごとに 1 回ずつ発生し、1 つの ID しか見つからずに ID グラフに変更が生じなかったレコードの数を表示します。
 
 ### 名前空間コードがこの IMS 組織に登録されていません
 
@@ -359,7 +346,7 @@ The following is a list of error messages related to [!DNL Identity Service] you
 }
 ```
 
-When ingesting batch data, this error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. この問題を解決するには、システム管理者に問い合わせてください。
+バッチデータを取り込むと、IMS組織が[!DNL Identity Service]に対する適切な権限を持つプロビジョニングを行っていない場合に、このエラーメッセージが表示されます。 この問題を解決するには、システム管理者に問い合わせてください。
 
 ### 内部エラー
 
