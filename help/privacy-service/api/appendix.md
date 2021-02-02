@@ -1,24 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: 使用可能な ID 名前空間と修飾子
+title: Privacy ServiceAPI開発者ガイド付録
 topic: developer guide
+description: このドキュメントには、Privacy ServiceAPIを使用するための追加情報が含まれています。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 79%
+source-wordcount: '498'
+ht-degree: 73%
 
 ---
 
 
 # 付録
 
+以下の節では、Adobe Experience Platform Privacy ServiceAPIを使用するための追加情報を示します。
+
 ## 標準 ID 名前空間 {#standard-namespaces}
 
-All identities that are sent to [!DNL Privacy Service] must be provided under a specific identity namespace. ID 名前空間は [Adobe Experience Platform ID サービス](../../identity-service/home.md)のコンポーネントで、ID が関連付けられているコンテキストを示します。
+[!DNL Privacy Service]に送信されるすべてのIDは、特定のID名前空間で提供する必要があります。 ID 名前空間は [Adobe Experience Platform ID サービス](../../identity-service/home.md)のコンポーネントで、ID が関連付けられているコンテキストを示します。
 
-The following table outlines several commonly used, pre-defined identity types made available by [!DNL Experience Platform], along with their associated `namespace` values:
+次の表に、[!DNL Experience Platform]が使用できる、一般的に使用される事前定義IDの種類と、関連する`namespace`値の概要を示します。
 
 | ID タイプ | `namespace` | `namespaceId` |
 | --- | --- | --- |
@@ -36,7 +39,7 @@ The following table outlines several commonly used, pre-defined identity types m
 >
 > 各 ID タイプには整数値の `namespaceId` があります。これは、ID の `namespace` プロパティを「namespaceId」に設定する際に `type` 文字列の代わりに使用できます。詳しくは、[名前空間修飾子](#namespace-qualifiers)の節を参照してください。
 
-You can retrieve a list of identity namespaces in use by your organization by making a GET request to the `idnamespace/identities` endpoint in the [!DNL Identity Service] API. 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
+[!DNL Identity Service] APIの`idnamespace/identities`エンドポイントにGETリクエストを行うことで、組織で使用されているID名前空間のリストを取得できます。 詳しくは、[ID サービス開発者ガイド](../../identity-service/api/getting-started.md)を参照してください。
 
 ## 名前空間修飾子
 
@@ -45,12 +48,12 @@ You can retrieve a list of identity namespaces in use by your organization by ma
 | 修飾子 | 定義 |
 | --------- | ---------- |
 | standard | 個々の組織データセット（E メールアドレス、電話番号など）に関連付けられていない、グローバルに定義された標準名前空間の 1 つです。名前空間 ID が指定されています。 |
-| custom | A unique namespace created in the context of an organization, not shared across the [!DNL Experience Cloud]. この値は、検索の対象となるわかりやすい名前（「name」フィールド）を表します。名前空間 ID が指定されています。 |
+| custom | 組織のコンテキストで作成された一意の名前空間で、[!DNL Experience Cloud]間で共有されるものではありません。 この値は、検索の対象となるわかりやすい名前（「name」フィールド）を表します。名前空間 ID が指定されています。 |
 | integrationCode | 「custom」に似ていますが、特に、検索対象となるデータソースの統合コードとして定義されています。名前空間 ID が指定されています。 |
 | namespaceId | 値が、名前空間サービスを通じて作成またはマッピングされた名前空間の実際の ID であることを示します。 |
 | unregistered | 名前空間サービスで定義されておらず、「現状のまま」解釈されるフリーフォーム文字列です。この種の名前空間を処理するアプリケーションは、名前空間をチェックし、会社のコンテキストおよびデータセットに適している場合は処理します。名前空間 IDが指定されていません。 |
-| analytics | A custom namespace that is mapped internally in [!DNL Analytics], not in the namespace service. これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
-| target | A custom namespace understood internally by [!DNL Target], not in the namespace service. これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
+| analytics | 名前空間サービスではなく、[!DNL Analytics]で内部的にマップされるカスタム名前空間。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
+| target | [!DNL Target]が内部的に理解したカスタム名前空間で、名前空間サービスには含まれません。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
 
 ## 使用可能な製品値
 
