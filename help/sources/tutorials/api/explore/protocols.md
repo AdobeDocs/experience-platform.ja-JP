@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform;home;popular topics;protocol
+keywords: Experience Platform；ホーム；人気の高いトピック；プロトコル
 solution: Experience Platform
 title: Flow Service APIを使用したプロトコルシステムの調査
 topic: overview
 description: このチュートリアルでは、Flow Service APIを使用してプロトコルアプリケーションを調べます。
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 20%
+source-wordcount: '588'
+ht-degree: 19%
 
 ---
 
 
-# APIを使用したプロトコル・システムの調査 [!DNL Flow Service]
+# [!DNL Flow Service] APIを使用したプロトコル・システムの調査
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用してプロトコルアプリケーションを調べます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用してプロトコルアプリケーションを調べます。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to a protocols application using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用してプロトコルアプリケーションに正しく接続するために必要な追加情報については、以下の節で説明します。
 
 ### ベース接続の取得
 
-APIを使用してプロトコルシステムを調査するには、有効なベース接続IDが必要 [!DNL Platform] です。 使用するプロトコルシステムの基本接続がまだない場合は、次のチュートリアルを通じて接続を作成できます。
+[!DNL Platform] APIを使用してプロトコルシステムを調べるには、有効なベース接続IDが必要です。 使用するプロトコルシステムの基本接続がまだない場合は、次のチュートリアルを通じて接続を作成できます。
 
 * [汎用OData](../create/protocols/odata.md)
 
@@ -40,13 +40,13 @@ APIを使用してプロトコルシステムを調査するには、有効な�
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 
 ## データテーブルの調査
 
-プロトコルアプリケーションの接続IDを使用して、GETリクエストを実行することで、データテーブルを調査できます。 次の呼び出しを使用して、検査または取り込むテーブルのパスを探し [!DNL Platform]ます。
+プロトコルアプリケーションの接続IDを使用して、GETリクエストを実行することで、データテーブルを調査できます。 次の呼び出しを使用して、[!DNL Platform]に検査または取り込むテーブルのパスを探します。
 
 **API 形式**
 
@@ -81,7 +81,7 @@ curl -X GET \
 
 **応答** 
 
-正常な応答を返すと、プロトコルアプリケーションからテーブルの配列が返されます。 次の手順で、に取り込む表を探し [!DNL Platform] 、 `path` プロパティをメモしておきます。このプロパティは、次の手順で指定して構造を検査する必要があります。
+正常な応答を返すと、プロトコルアプリケーションからテーブルの配列が返されます。 [!DNL Platform]に取り込むテーブルを探し、その`path`プロパティをメモしておきます。これは、次の手順でその構造を調べるために指定する必要があるためです。
 
 ```json
 [
@@ -142,7 +142,7 @@ curl -X GET \
 
 **応答** 
 
-正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、 `columns` 配列の要素内にあります。
+正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、`columns`配列の要素内にあります。
 
 ```json
 {
@@ -190,4 +190,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従って、プロトコルのアプリケーションを調べ、取り込むテーブルのパスを見つけ、その構造に関する情報を得 [!DNL Platform]ました。 次のチュートリアルでこの情報を使用して、プロトコルアプリケーションからデータを [収集し、Platformに取り込むことができます](../collect/protocols.md)。
+このチュートリアルに従って、プロトコルのアプリケーションを調べ、[!DNL Platform]に取り込むテーブルのパスを見つけ、その構造に関する情報を得ました。 この情報は、次のチュートリアルで使用して、プロトコルアプリケーションからデータを[収集し、プラットフォーム](../collect/protocols.md)に取り込むことができます。
