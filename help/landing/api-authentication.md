@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
+keywords: Experience Platform；ホーム；人気の高いトピック；認証；アクセス
 solution: Experience Platform
 title: Experience Platform API の認証とアクセス
 topic: tutorial
@@ -8,8 +8,8 @@ description: 'このドキュメントでは、Experience Platform API を呼び
 translation-type: tm+mt
 source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 43%
+source-wordcount: '882'
+ht-degree: 42%
 
 ---
 
