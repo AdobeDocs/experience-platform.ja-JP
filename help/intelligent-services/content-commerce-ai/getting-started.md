@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
+keywords: Experience Platform；はじめに；コンテンツai；コマースai；コンテンツとコマースai
 solution: Experience Platform, Intelligent Services
 title: コンテンツ&コマースAIはじめに
 topic: Getting started
 description: コンテンツ&コマースAIはAdobe I/OAPIを活用。 Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず認証のチュートリアルを完了する必要があります。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 14%
+source-wordcount: '596'
+ht-degree: 13%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 14%
 >
 >コンテンツとコマースAIはベータ版です。 このドキュメントは変更されることがあります。
 
-[!DNL Content and Commerce AI] adobe i/oAPIを利用。 Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず [認証チュートリアルを完了する必要があります](../../tutorials/authentication.md)。
+[!DNL Content and Commerce AI] adobe i/oAPIを利用。Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。
 
-ただし、 **API** 手順に到達したら、次のスクリーンショットに示すように、APIはAdobe Experience PlatformではなくExperience Cloudの下に配置されます。
+ただし、**追加 API**&#x200B;の手順に進むと、次のスクリーンショットに示すように、APIはAdobe Experience PlatformではなくExperience Cloudの下に配置されます。
 
 ![コンテンツおよびコマースAIの追加](./images/add-api.png)
 
@@ -33,29 +33,29 @@ ht-degree: 14%
 
 ## ポストマン環境の作成（オプション）
 
-Adobeデベロッパーコンソール内でプロジェクトとAPIを設定したら、Postman用の環境ファイルをダウンロードできます。 プロジェクトの左側のレールの **[!UICONTROL API]** (API)で、「 **[!UICONTROL コンテンツとコマースAI]**」を選択します。 新しいタブが開き、「[!DNL Try it out]」というラベルの付いたカードが表示されます。 「Postman用に **ダウンロード** 」を選択して、postman環境の設定に使用するJSONファイルをダウンロードします。
+Adobeデベロッパーコンソール内でプロジェクトとAPIを設定したら、Postman用の環境ファイルをダウンロードできます。 プロジェクトの左側のレールの&#x200B;**[!UICONTROL API]**&#x200B;の下で、「**[!UICONTROL コンテンツとコマースのAI]**」を選択します。 新しいタブが開き、「[!DNL Try it out]」というラベルの付いたカードが表示されます。 「**Postman**&#x200B;にダウンロード」を選択して、postman環境の設定に使用するJSONファイルをダウンロードします。
 
 ![郵便配達人にダウンロードする](./images/add-to-postman.png)
 
-ファイルをダウンロードしたら、Postmanを開き、右上の **歯車アイコンを選択して、** 環境の **管理** ダイアログを開きます。
+ファイルをダウンロードしたら、Postmanを開き、右上の&#x200B;**ギアアイコン**&#x200B;を選択して、「**環境を管理**」ダイアログを開きます。
 
 ![ギアアイコン](./images/select-gear-icon.png)
 
-次に、[ **環境の** 管理 **]ダイアログボックスで[読み込み** ]を選択します。
+次に、**環境の管理**&#x200B;ダイアログ内で、「**読み込み**」を選択します。
 
 ![インポート](./images/import.png)
 
-リダイレクトされ、コンピューターから環境ファイルを選択するように求められます。 前にダウンロードしたJSONファイルを選択し、「 **開く** 」を選択して環境を読み込みます。
+リダイレクトされ、コンピューターから環境ファイルを選択するように求められます。 前にダウンロードしたJSONファイルを選択し、「**開く**」を選択して環境を読み込みます。
 
 ![](./images/choose-your-file.png)
 
 ![](./images/click-open.png)
 
-新しい環境名が入力された状態で、「 *環境の管理* 」タブに戻ります。 表示する環境名を選択し、Postmanで使用可能な変数を編集します。 引き続き、 `JWT_TOKEN` およびを手動で設定する必要があり `ACCESS_TOKEN`ます。 これらの値は、 [認証のチュートリアルの完了時に取得する必要があります](../../tutorials/authentication.md)。
+新しい環境名が入力され、「*環境の管理*」タブに戻ります。 表示する環境名を選択し、Postmanで使用可能な変数を編集します。 引き続き、`JWT_TOKEN`と`ACCESS_TOKEN`を手動で入力する必要があります。 これらの値は、[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)の完了時に取得する必要があります。
 
 ![](./images/re-direct.png)
 
-完了すると、変数は下のスクリーンショットのようになります。 「 **更新** 」を選択して、環境の設定を終了します。
+完了すると、変数は下のスクリーンショットのようになります。 「**更新**」を選択して、環境の設定を終了します。
 
 ![](./images/final-environment.png)
 
@@ -63,7 +63,7 @@ Adobeデベロッパーコンソール内でプロジェクトとAPIを設定し
 
 ![example](./images/select-environment.png)
 
-Postmanを使用したAdobe I/OAPIの操作について詳しくは、Adobe I/OでのJWT認証にPostmanを [使用した場合の投稿（中）を参照してください](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)。
+Postmanを使用したAdobe I/OAPIの操作について詳しくは、[Adobe I/OでのJWT認証にPostmanを使用した場合のMediumの投稿](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)を参照してください。
 
 ## API 呼び出し例の読み取り
 
@@ -71,8 +71,8 @@ Postmanを使用したAdobe I/OAPIの操作について詳しくは、Adobe I/O�
 
 ## 次の手順 {#next-steps}
 
-資格情報をすべて取得したら、カスタムワーカーを設定する準備が整い [!DNL Content and Commerce AI]ます。 次のドキュメントは、拡張機能のフレームワークと環境の設定を理解するのに役立ちます。
+資格情報をすべて取得したら、[!DNL Content and Commerce AI]のカスタムワーカーを設定する準備が整います。 次のドキュメントは、拡張機能のフレームワークと環境の設定を理解するのに役立ちます。
 
-拡張機能のフレームワークについて詳しくは、拡張機能の [ドキュメントの](https://docs.adobe.com/content/help/ja-JP/asset-compute/using/extend/understand-extensibility.html) 概要を読んで開始してください。 このドキュメントでは、前提条件とプロビジョニング要件について概説します。
+拡張機能のフレームワークについて詳しくは、[拡張機能](https://docs.adobe.com/content/help/ja-JP/asset-compute/using/extend/understand-extensibility.html)のドキュメントの概要を読んで開始してください。 このドキュメントでは、前提条件とプロビジョニング要件について概説します。
 
-開発者用環境の設定に関する詳細は、 [!DNL Content and Commerce AI]開始用環境の設定ガイドを参照して [ください](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)。 このドキュメントでは、Asset computeサービスの開発を可能にする設定手順を説明します。
+[!DNL Content and Commerce AI]用の環境の設定についての詳細は、[開発者環境](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)の設定ガイドを読んで開始を参照してください。 このドキュメントでは、Asset computeサービスの開発を可能にする設定手順を説明します。
