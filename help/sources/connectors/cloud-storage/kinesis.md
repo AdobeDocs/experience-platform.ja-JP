@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
+keywords: Experience Platform；ホーム；人気のあるトピック；AmazonKinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: AmazonKinesisコネクタ
 topic: overview
 description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用して、AmazonKinesisをプラットフォームに接続する方法に関する情報を提供しています。
 translation-type: tm+mt
-source-git-commit: c0c609e3f385665cf88129def0c69e7d153ce201
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '234'
 ht-degree: 1%
 
 ---
 
 
-# （ベータ版） [!DNL Amazon Kinesis] コネクタ
+# （ベータ版） [!DNL Amazon Kinesis]コネクタ
 
 >[!NOTE]
 >
->コネクタ [!DNL Amazon Kinesis] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../home.md#terms-and-conditions) 「」を参照してください。
+>[!DNL Amazon Kinesis]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
 
-Adobe Experience Platformは、AWS、 [!DNL Google Cloud Platform]およびなどのクラウドプロバイダーに対してネイティブの接続を提供 [!DNL Azure]します。 これらのシステムのデータをに取り込むことができ [!DNL Platform]ます。
+Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]などのクラウドプロバイダーに対してネイティブの接続を提供します。 これらのシステムのデータを[!DNL Platform]に取り込むことができます。
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. 取り込んだデータは、XDM JSON、XDMパーケー、または区切り文字として形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] データをリアルタイムで取り込むこ [!DNL Amazon Kinesis] とができます。
+Cloudストレージソースは、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータを[!DNL Platform]に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parket、または区切り形式で形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] データをリアルタイムで取り込むこ [!DNL Amazon Kinesis] とができます。
 
 ## IPアドレス許可リスト
 
-IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、「 [IPアドレスの許可リスト](../../ip-address-allow-list.md) 」ページを参照してください。
+IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
 
-## 接続 [!DNL Amazon Kinesis] 先 [!DNL Platform]
+## [!DNL Amazon Kinesis]を[!DNL Platform]に接続
 
-次のドキュメントは、APIまたはユーザーインターフェイス [!DNL Amazon Kinesis] を [!DNL Platform] 使用して接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL Amazon Kinesis]を[!DNL Platform]に接続する方法に関する情報を提供しています。
 
 ### APIの使用
 
