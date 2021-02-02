@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Collect eCommerce data;eCommerce data
+keywords: Experience Platform；ホーム；人気のあるトピック；eCommerceデータの収集；eCommerceデータ
 solution: Experience Platform
 title: ソースコネクタとAPIを使用してeコマースデータを収集する
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのeCommerceシステムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: a7a7c52f5b0c57562039883ae8ff48efefbcbbf5
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1489'
 ht-degree: 15%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 15%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
