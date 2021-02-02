@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
+keywords: Experience Platform；小売の販売手法；データサイエンスワークスペース；人気の高いトピック；レシピ
 solution: Experience Platform
 title: 小売販売スキーマとデータセットの作成
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、他のすべての Adobe Experience Platform Data Science Workspace　チュートリアルに必要な前提条件とアセットについて説明します。完了すると、Experience Platform 上の IMS 組織のメンバーと共に、小売販売スキーマとデータセットを利用できるようになります。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 70%
+source-wordcount: '554'
+ht-degree: 68%
 
 ---
 
 
 # 小売販売スキーマとデータセットの作成
 
-This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on [!DNL Experience Platform].
+このチュートリアルでは、他のすべての[!DNL Adobe Experience Platform] [!DNL Data Science Workspace]チュートリアルに必要な前提条件とアセットについて説明します。 完了すると、[!DNL Experience Platform]上のIMS組織のメンバーと共に、小売販売スキーマとデータセットを利用できるようになります。
 
 ## はじめに
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
-- へのアクセス [!DNL Adobe Experience Platform]。 If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
-- Authorization to make [!DNL Experience Platform] API calls. このチュートリアルを正しく完了するには、『[ Adobe Experience Platform API の認証とアクセス](../../tutorials/authentication.md)』チュートリアルを完了して次の値を取得してください。
+- [!DNL Adobe Experience Platform]にアクセスします。 [!DNL Experience Platform]のIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
+- [!DNL Experience Platform] API呼び出しを行うための認証。 このチュートリアルを正しく完了するには、『[ Adobe Experience Platform API の認証とアクセス](https://www.adobe.com/go/platform-api-authentication-en)』チュートリアルを完了して次の値を取得してください。
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - クライアント秘密鍵：`{CLIENT_SECRET}`
    - クライアント証明書：`{PRIVATE_KEY}`
-- [小売販売レシピ](../pre-built-recipes/retail-sales.md)のデータとソースファイルの例。Download the assets required for this and other [!DNL Data Science Workspace] tutorials from the [Adobe public Git repository](https://github.com/adobe/experience-platform-dsw-reference/).
+- [小売販売レシピ](../pre-built-recipes/retail-sales.md)のデータとソースファイルの例。このチュートリアルと他の[!DNL Data Science Workspace]チュートリアルに必要なアセットを、[AdobeのパブリックGitリポジトリ](https://github.com/adobe/experience-platform-dsw-reference/)からダウンロードします。
 - [ 2.7 以降](https://www.python.org/downloads/)[!DNL Python]および次の Python パッケージ：
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
@@ -44,7 +44,7 @@ This tutorial provides you with the prerequisites and assets required for all ot
 
 ### ファイルの設定
 
-1. Inside the [!DNL Experience Platform] tutorial resource package, navigate into the directory `bootstrap`, and open `config.yaml` using an appropriate text editor.
+1. [!DNL Experience Platform]チュートリアルリソースパッケージ内で、`bootstrap`ディレクトリに移動し、`config.yaml`を開きます。
 2. 「`Enterprise`」セクションの下で、次の値を入力します。
 
    ```yaml
@@ -93,7 +93,7 @@ This tutorial provides you with the prerequisites and assets required for all ot
 
 ### ブートストラップスクリプトの実行
 
-1. Open your terminal application and navigate to the [!DNL Experience Platform] tutorial resource directory.
+1. ターミナルアプリケーションを開き、[!DNL Experience Platform]チュートリアルリソースディレクトリに移動します。
 2. `bootstrap` ディレクトリを現在の作業パスに設定し、次のコマンドを入力して `bootstrap.py` スクリプトを実行します。[!DNL Python]
 
    ```bash
@@ -106,12 +106,12 @@ This tutorial provides you with the prerequisites and assets required for all ot
 
 ## 次の手順
 
-Upon successful completion of the bootstrap script, the Retail Sales input and output schemas and datasets can be viewed on [!DNL Experience Platform]. 詳しくは、『[プレビュースキーマデータのチュートリアル](./preview-schema-data.md)』を参照してください。
+ブートストラップスクリプトが正常に完了すると、小売売上の入出力スキーマーとデータセットを[!DNL Experience Platform]で表示できます。 詳しくは、『[プレビュースキーマデータのチュートリアル](./preview-schema-data.md)』を参照してください。
 
-You have also successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
+また、提供されたブートストラップスクリプトを使用して、小売販売のサンプルデータを[!DNL Experience Platform]に正しく取り込みました。
 
 取得したデータを引き続き使用するには、以下を実行します。
 - [Jupyter ノートブックを使用したデータ分析](../jupyterlab/analyze-your-data.md)
    - Data Science Workspace　の Jupyter ノートブックを使用して、データにアクセスし、調査、視覚化、理解します。
 - [ソースファイルのレシピへのパッケージ化](./package-source-files-recipe.md)
-   - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.
+   - 読み込み可能なレシピファイルにソースファイルをパッケージ化して、独自のモデルを[!DNL Data Science Workspace]に取り込む方法を学ぶには、このチュートリアルに従ってください。
