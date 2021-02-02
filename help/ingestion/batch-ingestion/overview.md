@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
+keywords: Experience Platform；ホーム；人気のあるトピック；データ取り込み；バッチ；バッチ；有効なデータセット；バッチ取り込みの概要；概要；バッチ取り込みの概要；
 solution: Experience Platform
 title: バッチインジェストの概要
 topic: overview
-description: Batch Ingestion API を使用すると、データをバッチファイルとして Adobe Experience Platform に取り込むことができます。CRM システムのフラットファイルのプロファイルデータ（Parquet ファイルなど）、または Experience Data Model（XDM）レジストリの既知のスキーマに適合するデータを取り込むことができます。
+description: Batch Ingestion API を使用すると、データをバッチファイルとして Adobe Experience Platform に取り込むことができます。取り込まれるデータは、CRMシステムのフラットファイル（Parketファイルなど）のプロファイルデータ、またはエクスペリエンスデータモデル(XDM)レジストリの既知のスキーマに準拠するデータです。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 81%
+source-wordcount: '1216'
+ht-degree: 74%
 
 ---
 
 
 # [!DNL Batch Ingestion]概要
 
-The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
+[!DNL Batch Ingestion] APIを使うと、データをバッチファイルとしてAdobe Experience Platformに取り込むことができます。 取り込まれるデータは、CRMシステムのフラットファイル（Parketファイルなど）のプロファイルデータ、または[!DNL Experience Data Model] (XDM)レジストリの既知のスキーマに準拠するデータです。
 
 [データ取得 API のリファレンスは](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)では、これらの API 呼び出しに関する追加情報が提供されています。
 
@@ -25,7 +25,7 @@ The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience P
 
 ## API の使用
 
-The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of data that consists of one or more files to be ingested as a single unit) into [!DNL Experience Platform] in three basic steps:
+[!DNL Data Ingestion] APIを使用すると、次の3つの基本的な手順でデータをバッチ（1つのユニットとして取り込まれる1つ以上のファイルから成るデータの1単位）として[!DNL Experience Platform]に取り込むことができます。
 
 1. 新しいバッチを作成します。
 2. データの XDM スキーマと一致する、指定したデータセットにファイルをアップロードします。
@@ -35,8 +35,8 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 ### [!DNL Data Ingestion] 前提条件
 
 - アップロードするデータは、Parquet 形式または JSON 形式である必要があります。
-- で作成されたデータセット [[!DNL Catalog services]](../../catalog/home.md)。
-- Parquet ファイルの内容は、アップロード先のデータセットのスキーマのサブセットと一致している必要があります。
+- [[!DNL Catalog services]](../../catalog/home.md)で作成されたデータセット。
+- Parketファイルの内容は、アップロード先のデータセットのスキーマのサブセットと一致する必要があります。
 - 認証後に固有のアクセストークンを取得する必要があります。
 
 ### バッチインジェストのベストプラクティス
@@ -52,19 +52,19 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -131,7 +131,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 >[!NOTE]
 >
->次の例では、[Parquet](https://parquet.apache.org/documentation/latest/) ファイル形式を使用しています。JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](./api-overview.md)』を参照してください。
+>以下の例では、[Apache Parket](https://parquet.apache.org/documentation/latest/)ファイル形式を使用しています。 JSON ファイル形式の使用例については、『[バッチ取得開発者ガイド](./api-overview.md)』を参照してください。
 
 ### サイズの小さなファイルのアップロード
 
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## バッチ完了を示す
 
-すべてのファイルをバッチにアップロードしたら、バッチの完了を示すことができます。By doing this, the [!DNL Catalog] DataSetFile entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
+すべてのファイルをバッチにアップロードしたら、バッチの完了を示すことができます。これにより、完了したファイルに対して[!DNL Catalog] DataSetFileエントリが作成され、上で生成したバッチに関連付けられます。 次に[!DNL Catalog]バッチは成功とマークされ、トリガーはダウンストリームフローして使用可能なデータを取り込みます。
 
 **リクエスト**
 
