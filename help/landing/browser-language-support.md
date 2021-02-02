@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: Experience Platform；ホーム；人気のあるトピック；CJA;ジャーニー分析；顧客ジャーニー分析；キャンペーンの調整；オーケストレーション；顧客ジャーニー;ジャーニー;ジャーニーの調整；機能；地域
 solution: Experience Platform
 title: Adobe Experience Platformブラウザと言語のサポート
 topic: getting started
 description: Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。Experience Platform を使用すると、顧客データとコンテンツを任意のシステムから一元管理し、データサイエンスと機械学習を適用して、パーソナライズされた豊富なエクスペリエンスのデザインと配信を大幅に改善できます。
 translation-type: tm+mt
-source-git-commit: 56116abcb4273b27ffcb3aefed0acf2ac35152fe
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 32%
+source-wordcount: '243'
+ht-degree: 29%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platformユーザーインターフェイス(UI)は、複数の
 
 ## ブラウザーのサポート
 
-プラットフォームUIは、 **最新バージョンのGoogle Chrome、Safari、Firefox** 、Microsoft Edgeで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
+プラットフォームUIは、Google Chrome、Safari、FirefoxおよびMicrosoft Edgeの&#x200B;**最新バージョン**&#x200B;で最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
 
 | オペレーティングシステム | サポートされているブラウザー |
 |---|---|
@@ -48,8 +48,8 @@ Adobe Experience Platformユーザーインターフェイス(UI)は、複数の
 
 言語を変更するには：
 
-1. ユーザーインターフェイスのフッターで現在の言語を選択し [!DNL Experience Platform] ます。
-2. プロファイル設定で、「地域の **[!UICONTROL 変更]**」をクリックします。
+1. [!DNL Experience Platform]ユーザーインターフェイスのフッターで現在の言語を選択します。
+2. プロファイル設定で、「**[!UICONTROL 地域を変更]**」を選択します。
 3. 地域を選択します。
 
 >[!NOTE]
