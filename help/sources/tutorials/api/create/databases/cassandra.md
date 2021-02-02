@@ -1,47 +1,47 @@
 ---
-keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassandra;Cassandra;cassandra
+keywords: Experience Platform；ホーム；人気のあるトピック；Apache Cassandra;apache cassandra;Cassandra;cassandra
 solution: Experience Platform
 title: Flow Service APIを使用してApache Cassandraコネクタを作成する
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Apache Cassandra（以下「Cassandra」と呼ばれる）をExperience Platformに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 19%
+source-wordcount: '628'
+ht-degree: 18%
 
 ---
 
 
-# APIを使用した [!DNL Apache Cassandra][!DNL Flow Service] コネクタの作成
+# [!DNL Flow Service] APIを使用して[!DNL Apache Cassandra]コネクタを作成する
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、 [!DNL Flow Service] APIを使用して、に接続する手順(以下「Cassandra」と呼ばれ [!DNL Apache Cassandra] る)を順を追って説明 [!DNL Experience Platform]します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Apache Cassandra] （以下「Cassandra」と呼びます）を[!DNL Experience Platform]に接続する手順を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully connect to Cassandra using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用してCassandraに正しく接続するために必要な追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
-と接続 [!DNL Flow Service] するには、次の接続プロパティの値を指定する必要があ [!DNL Cassandra]ります。
+[!DNL Flow Service]が[!DNL Cassandra]と接続するには、次の接続プロパティの値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `host` | サー [!DNL Cassandra] バーのIPアドレスまたはホスト名。 |
-| `port` | サー [!DNL Cassandra] バーがクライアント接続をリッスンするために使用するTCPポートです。 The default port is `9042`. |
-| `username` | 認証のためにサー [!DNL Cassandra] バーに接続するために使用するユーザー名です。 |
-| `password` | 認証用に [!DNL Cassandra] サーバーに接続するためのパスワードです。 |
-| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 の接続指定ID [!DNL Cassandra] はです `a8f4d393-1a6b-43f3-931f-91a16ed857f4`。 |
+| `host` | [!DNL Cassandra]サーバーのIPアドレスまたはホスト名。 |
+| `port` | [!DNL Cassandra]サーバーがクライアント接続をリッスンするために使用するTCPポート。 デフォルトのポートは`9042`です。 |
+| `username` | 認証用に[!DNL Cassandra]サーバーに接続するために使用するユーザー名です。 |
+| `password` | 認証用に[!DNL Cassandra]サーバーに接続するためのパスワードです。 |
+| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 [!DNL Cassandra]の接続指定IDは`a8f4d393-1a6b-43f3-931f-91a16ed857f4`です。 |
 
-使い始める前に、このCassandraドキュメントを参照し [てください](https://cassandra.apache.org/doc/latest/operating/security.html#authentication)。
+使い始めについての詳細は、[このCassandraドキュメント](https://cassandra.apache.org/doc/latest/operating/security.html#authentication)を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -49,13 +49,13 @@ The following sections provide additional information that you will need to know
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -65,7 +65,7 @@ All resources in [!DNL Experience Platform], including those belonging to the [!
 
 ## 接続の作成
 
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のソースコネクタを作成する場合に使用できるので、 [!DNL Cassandra] アカウントごとに1つのコネクタが必要です。
+接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、[!DNL Cassandra]アカウントごとに1つのコネクタが必要です。
 
 **API 形式**
 
@@ -75,7 +75,7 @@ POST /connections
 
 **リクエスト**
 
-接続を作成するには、その [!DNL Cassandra] 一意の接続指定IDをPOST要求の一部として指定する必要があります。 の接続指定ID [!DNL Cassandra] はです `a8f4d393-1a6b-43f3-931f-91a16ed857f4`。
+[!DNL Cassandra]接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 [!DNL Cassandra]の接続指定IDは`a8f4d393-1a6b-43f3-931f-91a16ed857f4`です。
 
 ```shell
 curl -X POST \
@@ -106,15 +106,15 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | サー [!DNL Cassandra] バーのIPアドレスまたはホスト名。 |
-| `auth.params.port` | サー [!DNL Cassandra] バーがクライアント接続をリッスンするために使用するTCPポートです。 The default port is `9042`. |
-| `auth.params.username` | 認証のためにサー [!DNL Cassandra] バーに接続するために使用するユーザー名です。 |
-| `auth.params.password` | 認証用に [!DNL Cassandra] サーバーに接続するためのパスワードです。 |
-| `connectionSpec.id` | 接続 [!DNL Cassandra] 仕様ID: `a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
+| `auth.params.host` | [!DNL Cassandra]サーバーのIPアドレスまたはホスト名。 |
+| `auth.params.port` | [!DNL Cassandra]サーバーがクライアント接続をリッスンするために使用するTCPポート。 デフォルトのポートは`9042`です。 |
+| `auth.params.username` | 認証用に[!DNL Cassandra]サーバーに接続するために使用するユーザー名です。 |
+| `auth.params.password` | 認証用に[!DNL Cassandra]サーバーに接続するためのパスワードです。 |
+| `connectionSpec.id` | [!DNL Cassandra]接続仕様ID:`a8f4d393-1a6b-43f3-931f-91a16ed857f4`. |
 
 **応答** 
 
-正常な応答は、新たに作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -125,4 +125,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うことで、 [!DNL Cassandra] APIを使用して [!DNL Flow Service] 接続を作成し、接続の一意のID値を取得しました。 このIDは、Flow Service APIを使用してデータベースを [調査する方法を学習する際に、次のチュートリアルで使用できます](../../explore/database-nosql.md)。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用して[!DNL Cassandra]接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service API ](../../explore/database-nosql.md)を使用して[データベースを調査する方法を学習する際に、次のチュートリアルで使用できます。
