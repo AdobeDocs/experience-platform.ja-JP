@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;error diagnostics;retrieve error diagnostics;get error diagnostics;get error;get errors;retrieve errors;
+keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；部分取り込み；部分取り込みエラー；部分取り込みエラー；部分的なバッチ取り込み；取り込み；取り込み；エラー診断；エラー診断の取り込み；エラーの取り込み；
 solution: Experience Platform
 title: Adobe Experience Platform 部分取得の概要
 topic: overview
 description: このドキュメントでは、バッチ取り込みの監視、部分的なバッチ取り込みエラーの管理、および部分的なバッチ取り込みタイプの参照に関する情報を提供します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 33%
+source-wordcount: '936'
+ht-degree: 31%
 
 ---
 
 
 # エラー診断を取得しています
 
-Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。You can either use batch ingestion, which allows you to insert data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real time.
+Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。バッチインジェストを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングエンドポイントを使用して[!DNL Platform]にデータをリアルタイムで挿入できます。
 
 このドキュメントでは、バッチ取り込みの監視、部分的なバッチ取り込みエラーの管理、および部分的なバッチ取り込みタイプの参照に関する情報を提供します。
 
@@ -23,7 +23,7 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
 - [[!DNL Adobe Experience Platform Data Ingestion]](../home.md):データの送信先のメソッド [!DNL Experience Platform]。
 
 ### API 呼び出し例の読み取り
@@ -32,25 +32,25 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Schema Registry]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
-## エラー診断のダウンロード中 {#download-diagnostics}
+## エラー診断{#download-diagnostics}をダウンロード中
 
-Adobe Experience Platformでは、入力ファイルのエラー診断をダウンロードできます。 診断は30日以内に保持 [!DNL Platform] されます。
+Adobe Experience Platformでは、入力ファイルのエラー診断をダウンロードできます。 診断は[!DNL Platform]内に最長30日間保持されます。
 
-### リスト入力ファイル {#list-files}
+### リスト入力ファイル{#list-files}
 
 次の要求は、ファイナライズされたバッチで提供されるすべてのファイルのリストを取得します。
 
@@ -107,7 +107,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 }
 ```
 
-### 入力ファイルの診断を取得 {#retrieve-diagnostics}
+### 入力ファイルの診断を取得{#retrieve-diagnostics}
 
 すべての異なる入力ファイルのリストを取得したら、次のリクエストを使用して、個々のファイルの診断を取得できます。
 
@@ -134,14 +134,14 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **応答** 
 
-正常に応答すると、診断が保存された場所の詳細を示す `path` オブジェクトを含むJSONオブジェクトが返されます。 応答は、 `path` JSON行形式で [オブジェクトを返します](https://jsonlines.org/) 。
+正常に応答すると、診断が保存された場所を詳細に示す`path`オブジェクトを含むJSONオブジェクトが返されます。 応答は、[JSON行](https://jsonlines.org/)形式の`path`オブジェクトを返します。
 
 ```json
 {"path": "F1.json"}
 {"path": "etc/F2.json"}
 ```
 
-## Retrieve batch ingestion errors {#retrieve-errors}
+## バッチインジェストエラーを取得{#retrieve-errors}
 
 バッチにエラーが含まれる場合は、これらのエラーに関するエラー情報を取得して、データを再取り込みできるようにする必要があります。
 
@@ -214,7 +214,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | 解析、変換、または検証の結果、処理できなかった行の数です。 この値は、から値を引くことで得ら `inputRecordCount` れ `outputRecordCount`ます。 この値は、有効になっている場合に関係なく、すべてのバッチで生成 `errorDiagnostics` されます。 |
+| `metrics.failedRecordCount` | 解析、変換、または検証の結果、処理できなかった行の数です。 この値は、`outputRecordCount`から`inputRecordCount`を引くことで得られます。 この値は、`errorDiagnostics`が有効になっているかどうかに関係なく、すべてのバッチで生成されます。 |
 
 **エラーのある応答**
 
@@ -277,8 +277,8 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | 解析、変換、または検証の結果、処理できなかった行の数です。 この値は、から値を引くことで得ら `inputRecordCount` れ `outputRecordCount`ます。 この値は、有効になっている場合に関係なく、すべてのバッチで生成 `errorDiagnostics` されます。 |
-| `errors.recordCount` | 指定したエラーコードが失敗した行数です。 この値は **、が有効な場合**`errorDiagnostics` にのみ生成されます。 |
+| `metrics.failedRecordCount` | 解析、変換、または検証の結果、処理できなかった行の数です。 この値は、`outputRecordCount`から`inputRecordCount`を引くことで得られます。 この値は、`errorDiagnostics`が有効になっているかどうかに関係なく、すべてのバッチで生成されます。 |
+| `errors.recordCount` | 指定したエラーコードが失敗した行数です。 `errorDiagnostics`が有効な場合、この値は&#x200B;****&#x200B;のみ生成されます。 |
 
 >[!NOTE]
 >
@@ -374,7 +374,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
 }
 ```
 
-その後、 [診断取得エンドポイントを使用して、エラーに関する詳細情報を取得できます](#retrieve-diagnostics)。
+その後、[診断の取得エンドポイント](#retrieve-diagnostics)を使用して、エラーに関する詳細な情報を取得できます。
 
 エラーファイルの取得に関する応答の例を次に示します。
 
