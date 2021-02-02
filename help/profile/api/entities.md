@@ -1,27 +1,29 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: エンティティ — リアルタイム顧客プロファイルAPI
+keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
+title: エンティティ(プロファイルアクセス) APIエンドポイント
 topic: guide
+type: Documentation
+description: Adobe Experience Platform を使用すると、RESTful API またはユーザーインターフェイスを使用して、リアルタイムの顧客プロファイルデータにアクセスできます。このガイドでは、プロファイルAPIを使用して、一般的に「プロファイル」と呼ばれるエンティティにアクセスする方法について概説します。
 translation-type: tm+mt
-source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 88%
+source-wordcount: '1737'
+ht-degree: 87%
 
 ---
 
 
 # エンティティエンドポイント(プロファイルアクセス)
 
-Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile] data using RESTful APIs or the user interface. このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。For more information on accessing profiles using the [!DNL Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
+Adobe Experience Platformでは、RESTful APIまたはユーザーインターフェイスを使用して[!DNL Real-time Customer Profile]データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Platform] UIを使用したプロファイルへのアクセスについて詳しくは、[プロファイルユーザーガイド](../ui/user-guide.md)を参照してください。
 
 ## はじめに
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## ID によるプロファイルデータへのアクセス
 
-You can access a [!DNL Profile] entity by making a GET request to the `/access/entities` endpoint and providing the entity&#39;s identity as a series of query parameters. この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
+[!DNL Profile]エンティティにアクセスするには、`/access/entities`エンドポイントにGETリクエストを送信し、一連のクエリパラメーターとしてエンティティのIDを指定します。 この ID は、ID 値（`entityId`）と ID 名前空間（`entityIdNS`）です。
 
 クエリパスに指定されたデータパラメーターで、アクセスするデータを指定します。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -776,7 +778,7 @@ curl -X POST \
 
 ## 複数スキーマエンティティの時系列イベントへのアクセス
 
-関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、『 [!DNL Schema Registry] API開発者ガイド [記述子エンドポイントガイド』を参照してください](../../xdm/api/descriptors.md)。
+関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、[!DNL Schema Registry] API開発者ガイド[記述子エンドポイントガイド](../../xdm/api/descriptors.md)を参照してください。
 
 リクエストパスにクエリパラメーターを含めて、アクセスするデータを指定できます。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -886,11 +888,11 @@ curl -X GET \
 
 ## 次の手順
 
-By following this guide you have successfully accessed [!DNL Real-time Customer Profile] data fields, profiles, and time series data. To learn how to access other data resources stored in [!DNL Platform], see the [Data Access overview](../../data-access/home.md).
+このガイドに従うと、[!DNL Real-time Customer Profile]データフィールド、プロファイル、および時系列データに正常にアクセスできます。 [!DNL Platform]に保存されている他のデータリソースへのアクセス方法については、[データアクセスの概要](../../data-access/home.md)を参照してください。
 
 ## 付録 {#appendix}
 
-The following section provides supplemental information regarding accessing [!DNL Profile] data using the API.
+次の節では、APIを使用して[!DNL Profile]データにアクセスする場合の補足情報を説明します。
 
 ### クエリパラメーター {#query-parameters}
 
@@ -910,5 +912,5 @@ The following section provides supplemental information regarding accessing [!DN
 | `startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 | `startTime=1539838505` |
 | `endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 | `endTime=1539838510` |
 | `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 | `limit=100` |
-| `property` | プロパティ値別のフィルター。 次の評価演算子をサポートします。=、!=, &lt;, &lt;=, >, >=. エクスペリエンスイベントでのみ使用でき、最大3つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
+| `property` | プロパティ値別のフィルター。 次の評価演算子をサポートします。=、!=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大3つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 | `withCA=true` |
