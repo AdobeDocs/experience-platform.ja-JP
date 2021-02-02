@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；自動適用；APIベースの適用；データガバナンス
 solution: Experience Platform
-title: ポリシー適用の概要
-topic: enforcement
+title: 自動ポリシー適用
+topic: guide
 description: このドキュメントでは、Experience Platform内の宛先に対してセグメントをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
 translation-type: tm+mt
-source-git-commit: 385084f3de2ebfcbee94d6b0c116dae82f5df764
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1128'
 ht-degree: 19%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 19%
 
 データ系列は、プラットフォームでのポリシーの適用方法において重要な役割を果たします。 一般的に、データ系列とは、一連のデータの接触チャネルを指し、時間の経過と共にその一連のデータに何が起こるか（またはデータの移動場所）を指します。
 
-[!DNL Data Governance]のコンテキストでは、Lineageを使用すると、データ使用ラベルをデータセットから、リアルタイム顧客プロファイルや宛先などのデータを使用するダウンストリームサービスに伝播できます。 これにより、プラットフォームを通じたデータの遍歴のいくつかの重要なポイントでポリシーの評価と実施が可能になり、ポリシー違反が発生した理由に関するデータ・コンシューマへのコンテキストが提供されます。
+[!DNL Data Governance]のコンテキストでは、Lineageを使用すると、データ使用ラベルをデータセットから、リアルタイム顧客プロファイルや宛先などのデータを使用するダウンストリームサービスに伝播できます。 これにより、プラットフォームを介してデータのジャーニーのいくつかの重要なポイントでポリシーを評価および適用でき、ポリシー違反が発生した理由に関するデータ・コンシューマへのコンテキストが提供されます。
 
 Experience Platformでは、ポリシーの実施は次の系統に関係しています。
 
@@ -95,7 +95,7 @@ Experience Platformでは、ポリシーの実施は次の系統に関係して�
 
 ## アクティブ化されたセグメントに対するポリシー施行 {#policy-enforcement-for-activated-segments}
 
-ポリシーの施行は、アクティブ化された後も引き続きセグメントに適用され、ポリシー違反の原因となったセグメントや宛先に対する変更が制限されます。[データ系列](#lineage)がポリシーの適用でどのように機能するかにより、次の操作を行うと違反が発生する可能性があります。
+ポリシーの施行は、アクティブ化された後も引き続きセグメントに適用され、ポリシー違反の原因となったセグメントや宛先に対する変更が制限されます。[データ系列](#lineage)がポリシーの適用でどのように機能するかにより、次のアクションは違反をトリガーする可能性があります。
 
 * データ使用ラベルの更新
 * セグメントのデータセットの変更
