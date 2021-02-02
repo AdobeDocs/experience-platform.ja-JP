@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;collect customer success;customer success
+keywords: Experience Platform；ホーム；人気の高いトピック；顧客の成功を収集；顧客の成功
 solution: Experience Platform
 title: ソースコネクターとAPIを使用して顧客成功システムからデータを収集する
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、顧客の成功システムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: d8ec9b4b28602bce30365fe64829c8c8df1b9211
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1541'
 ht-degree: 14%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 14%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
