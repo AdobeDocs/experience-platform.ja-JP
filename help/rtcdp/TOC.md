@@ -5,9 +5,9 @@ audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
 translation-type: tm+mt
-source-git-commit: 6043ecb8e32dec70b7eaf7695a266d797f97b9f4
+source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '126'
 ht-degree: 80%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 80%
 * プライバシーとデータガバナンス {#privacy}
    * [プライバシーの概要](privacy/privacy-overview.md)
    * [データガバナンスの概要](privacy/data-governance-overview.md)
-   * （IAB TCF 2.0のサポート） {#iab}
+   * IAB TCF 2.0のサポート{#iab}
       * [リアルタイムCDPでのIAB TCF 2.0のサポート](privacy/iab/overview.md)
       * [IAB TCF 2.0の同意データを取り込むためのデータセットの作成](privacy/iab/dataset-preparation.md)
 * プロファイル {#profile}
@@ -40,6 +40,7 @@ ht-degree: 80%
 * セグメント {#segmentation}
    * [セグメント化の概要](segmentation/segmentation-overview.md)
    * [セグメントビルダーガイド](segmentation/segment-builder-guide.md)
+   * [顧客 AI](segmentation/customer-ai.md)
 * ソース {#sources}
    * [ソースの概要](sources/sources-overview.md)
    * [Adobe Launch での Web サイトタグの実装](sources/launch.md)
