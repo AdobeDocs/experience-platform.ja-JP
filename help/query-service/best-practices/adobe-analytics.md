@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe analytics;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；サンプルクエリ；サンプルクエリ;adobe analytics;
 solution: Experience Platform
 title: クエリ例
 topic: queries
@@ -7,8 +7,8 @@ description: 選択した Adobe Analytics レポートスイートのデータ�
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 60%
+source-wordcount: '1017'
+ht-degree: 59%
 
 ---
 
@@ -215,7 +215,7 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 
 | eVar6（製品検索方法） | 売上高 | 注文件数 | 製品表示 | 買い物かごへの追加 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| 内部検索：夏のシャツ | 19.99 | 1 | 1 | 3 |
+| 内部検索：夏のシャツ | 19.99 | 1 | 3 | 3 |
 | 内部検索：冬帽子 | 12.99 | 3 | 3 | 3 |
 
 変換構文の使用について詳しくは、[コンバージョン構文](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax)を使用したeVarの実装に関するAdobe Analyticsのドキュメントを参照してください。
