@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;identity;field;
+keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；ID；フィールド；
 solution: Experience Platform
 title: UIでのIDフィールドの定義
 description: Experience PlatformユーザーインターフェイスでIDフィールドを定義する方法を説明します。
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: f5f507c2e962e2ff9f81376bfe363a6f438056cd
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '575'
 ht-degree: 5%
 
 ---
