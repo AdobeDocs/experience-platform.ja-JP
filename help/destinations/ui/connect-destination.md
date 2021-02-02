@@ -1,21 +1,21 @@
 ---
-keywords: connect destination;destination connect;how to connect destination
-title: リアルタイム顧客データプラットフォームでの宛先への接続
-seo-title: リアルタイム顧客データプラットフォームでの宛先への接続
+keywords: 接続先；宛先接続；宛先接続方法
+title: Adobe Experience Platformの宛先に接続
+seo-title: Adobe Experience Platformの宛先に接続
 type: Tutorial
-description: このチュートリアルでは、リアルタイム顧客データプラットフォームで宛先を接続する手順をリストします
+description: このチュートリアルでは、Adobe Experience Platformの宛先を接続する手順をリストします
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 62%
+source-wordcount: '126'
+ht-degree: 60%
 
 ---
 
 
 # 宛先の接続方法
 
-次の手順に従って、リアルタイム顧客データプラットフォームの宛先に接続します。
+次の手順に従って、Adobe Experience Platformの宛先に接続します。
 
 1. 左側のナビゲーションバーから「**[!UICONTROL 宛先]**」に移動します。
 2. 「[[!UICONTROL カタログ]](./destinations-workspace.md#catalog)」タブで、接続先を選択します。
