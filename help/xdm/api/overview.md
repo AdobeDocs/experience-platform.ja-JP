@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform；ホーム；人気の高いトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマレジストリ；
 solution: Experience Platform
 title: Schema Registry API 開発者ガイド
 description: 'スキーマレジストリAPIを使用すると、Experience Platform内で利用可能なすべてのスキーマと関連するXDMリソースをプログラムで管理できます。 '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 5%
+ht-degree: 2%
 
 ---
 
@@ -63,19 +63,19 @@ Platformでは、特定の使用例に対してスキーマを作成できます
 
 スキーマレジストリAPIを使用すると、サンドボックスとIMS組織間でXDMリソースを転送および共有できます。 任意のスキーマ、ミックスイン、またはデータタイプに対して、リソースの構造と依存するリソースを含む書き出しペイロードを生成できます。 その後、このペイロードを使用して、リソースを宛先サンドボックスおよびIMS組織にインポートできます。
 
-このエンドポイントの使用について詳しくは、[スキーマレジストリAPIリファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)を参照してください。
+これらのエンドポイントの使用方法の詳細については、『[エクスポート/インポートエンドポイントガイド](./export-import.md)』を参照してください。
 
 ## サンプルデータ
 
 スキーマライブラリ内の指定したスキーマのサンプルデータを生成できます。 返された応答オブジェクトは、データ取り込みのソースとして使用できます。
 
-このエンドポイントの使用について詳しくは、[スキーマレジストリAPIリファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)を参照してください。
+このエンドポイントの使用について詳しくは、[サンプルデータエンドポイントガイド](./sample-data.md)を参照してください。
 
 ## 監査ログ
 
 スキーマレジストリは、異なる更新間でリソース(クラス、ミックスイン、データ型、またはスキーマ)に対して発生したすべての変更のログを保持します。 特定のリソースのログを取得するには、そのリソースの`$id`または`meta:altId`を、このエンドポイントへのGET要求のパスに指定します。
 
-このエンドポイントの使用について詳しくは、[スキーマレジストリAPIリファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)を参照してください。
+このエンドポイントの使用方法の詳細については、[監査ログエンドポイントガイド](./audit-log.md)を参照してください。
 
 ## 次の手順
 
