@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp
+keywords: RTCDP;CDP；リアルタイム顧客データプラットフォーム；リアルタイム顧客データプラットフォーム；リアルタイムcdp;cdp；顧客AI
 title: リアルタイムの顧客データプラットフォーム概要
 seo-title: リアルタイムの顧客データプラットフォーム概要
 description: リアルタイム顧客データプラットフォームの概要
 seo-description: リアルタイム顧客データプラットフォームの概要
 translation-type: tm+mt
-source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
+source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '306'
+ht-degree: 25%
 
 ---
 
 
 # リアルタイム顧客データプラットフォームの概要
 
-Real-time Customer Data Platform(Real-time CDP)は、Adobe Experience Platform上に構築され、複数の企業ソースから既知の匿名データを集め、すべてのチャネルとデバイスにわたるパーソナライズされた顧客体験をリアルタイムで提供するプロファイルを作成します。
+Real-time Customer Data Platform(Real-time CDP)はAdobe Experience Platformを基盤としており、複数の企業ソースから既知の匿名データを集め、すべてのチャネルとデバイスにわたるパーソナライズされた顧客体験をリアルタイムで提供できます。
 
 リアルタイムCDPには、データ管理、ID管理、高度なセグメント化、およびデータ科学のためのツールが含まれ、プロファイルの構築とオーディエンスの定義、および厳格なデータ管理ポリシーの適用が可能な豊富なインサイトの導出が可能です。
 
@@ -30,7 +30,7 @@ Real-time Customer Data Platform(Real-time CDP)は、Adobe Experience Platform�
 
 ## 追加情報
 
-Adobe Experience Platformの詳細については、 [Experience Platformの概要を読んでください](../landing/home.md)。
+Adobe Experience Platformの詳細については、まず[Experience Platformの概要](../landing/home.md)を読んでください。
 
 リアルタイム顧客データプラットフォームを使い始める際には、次のドキュメントを参照することをお勧めします。
 
