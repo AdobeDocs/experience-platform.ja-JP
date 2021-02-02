@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；接続の更新
 solution: Experience Platform
 title: Flow Service APIを使用して接続情報を更新する
 topic: overview
 type: Tutorial
 description: 状況によっては、既存のソース接続の詳細を更新する必要がある場合があります。 Flow Service APIを使用すると、既存のバッチ接続またはストリーミング接続（名前、説明、秘密鍵証明書など）の詳細を追加、編集および削除できます。
 translation-type: tm+mt
-source-git-commit: d1a9f7d0c83b8bb34e26b6e5a9825488e62b43de
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 15%
+source-wordcount: '709'
+ht-degree: 14%
 
 ---
 
@@ -18,18 +18,18 @@ ht-degree: 15%
 
 状況によっては、既存のソース接続の詳細を更新する必要がある場合があります。 [!DNL Flow Service] 既存のバッチ接続またはストリーミング接続（名前、説明、秘密鍵証明書など）の詳細を追加、編集および削除できます。
 
-このチュートリアルでは、を使用して既存の接続の詳細と秘密鍵証明書を更新する手順を説明し [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)ます。
+このチュートリアルでは、[[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して既存の接続の詳細と秘密鍵証明書を更新する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効な接続IDが必要です。 有効な接続IDがない場合は、 [ソースの概要から選択したコネクタを選択し](../../home.md) 、このチュートリアルを試行する前に概要を説明した手順に従ってください。
+このチュートリアルでは、有効な接続IDが必要です。 有効な接続IDがない場合は、[ソースの概要](../../home.md)から選択したコネクタを選択し、このチュートリアルを試みる前に説明した手順に従ってください。
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
 * [ソース](../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [サンドボックス](../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-The following sections provide additional information that you will need to know in order to successfully update your connection&#39;s information using the [!DNL Flow Service] API.
+[!DNL Flow Service] APIを使用して接続の情報を正しく更新するために必要な追加情報については、以下の節で説明します。
 
 ### API 呼び出し例の読み取り
 
@@ -37,13 +37,13 @@ The following sections provide additional information that you will need to know
 
 ### 必須ヘッダーの値の収集
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ All resources in [!DNL Experience Platform], including those belonging to [!DNL 
 ## 接続の詳細を検索する
 
 >[!NOTE]
->このチュートリアルでは、 [Salesforceソースコネクタ](../../connectors/crm/salesforce.md) (Sources Source Connector [)を例として使用しますが、概要の手順は、](../../home.md)使用可能なソースコネクタのいずれかに適用されます。
+>このチュートリアルでは、例として[Salesforceソースコネクタ](../../connectors/crm/salesforce.md)を使用しますが、概要の手順は、[使用可能なソースコネクタ](../../home.md)のいずれかに適用されます。
 
 接続情報を更新する最初の手順は、接続IDを使用して接続の詳細を取得することです。
 
@@ -66,7 +66,7 @@ GET /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 取得する接続の一意の `id` 値。 |
+| `{CONNECTION_ID}` | 取得する接続の一意の`id`値。 |
 
 **リクエスト**
 
@@ -83,7 +83,7 @@ curl -X GET \
 
 **応答** 
 
-正常に応答すると、秘密鍵証明書、固有な識別子(`id`)およびバージョンを含む、接続の現在の詳細が返されます。
+正常に応答すると、資格情報、一意の識別子(`id`)、バージョンを含む、接続の現在の詳細が返されます。
 
 ```json
 {
@@ -121,10 +121,10 @@ curl -X GET \
 
 ## 接続の更新
 
-既存の接続IDを取得したら、 [!DNL Flow Service] APIに対するPATCHリクエストを実行します。
+既存の接続IDを取得したら、[!DNL Flow Service] APIに対するPATCHリクエストを実行します。
 
 >[!IMPORTANT]
->PATCHリクエストには、 `If-Match` ヘッダーの使用が必要です。 このヘッダーの値は、接続の一意のバージョンです。
+>PATCHリクエストには`If-Match`ヘッダーを使用する必要があります。 このヘッダーの値は、接続の一意のバージョンです。
 
 **API 形式**
 
@@ -134,7 +134,7 @@ PATCH /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 更新する接続の一意の `id` 値。 |
+| `{CONNECTION_ID}` | 更新する接続の一意の`id`値。 |
 
 **リクエスト**
 
@@ -173,7 +173,7 @@ curl -X PATCH \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `op` | 接続の更新に必要なアクションを定義するために使用される操作呼び出し。 次の操作があります。 `add`、 `replace`および `remove`。 |
+| `op` | 接続の更新に必要なアクションを定義するために使用される操作呼び出し。 次の操作があります。`add`、`replace`、`remove`。 |
 | `path` | 更新するパラメーターのパス。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 
@@ -190,7 +190,7 @@ curl -X PATCH \
 
 ## 更新された接続の詳細を検索します
 
-APIにGETリクエストを行うことで行った変更を確認するために、更新したのと同じ接続IDを取得でき [!DNL Flow Service] ます。
+[!DNL Flow Service] APIにGETリクエストを行うことで行った変更を確認するために、更新したのと同じ接続IDを取得できます。
 
 **API 形式**
 
@@ -200,7 +200,7 @@ GET /connections/{CONNECTION_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 取得する接続の一意の `id` 値。 |
+| `{CONNECTION_ID}` | 取得する接続の一意の`id`値。 |
 
 **リクエスト**
 
@@ -255,4 +255,4 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従うと、 [!DNL Flow Service] APIを使用した接続に関連付けられた秘密鍵証明書と情報を更新できます。 ソースコネクタの使用に関する詳細は、 [ソースの概要を参照してください](../../home.md)。
+このチュートリアルに従うと、[!DNL Flow Service] APIを使用して、接続に関連付けられた資格情報と情報を更新できます。 ソースコネクタの使用に関する詳細は、[ソースの概要](../../home.md)を参照してください。
