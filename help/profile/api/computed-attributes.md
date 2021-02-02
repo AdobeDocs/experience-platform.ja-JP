@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: 計算済み属性 — リアルタイム顧客プロファイルAPI
+keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
+title: 計算済み属性APIエンドポイント
 topic: guide
+type: Documentation
+description: '計算済み属性を使用すると、他の値、計算および式に基づいてフィールドの値を自動計算できます。計算済み属性は、リアルタイム顧客プロファイルデータに対して機能します。つまり、Adobe Experience Platformに保存されているすべてのレコードおよびイベントの集計値を処理できます。 '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '2403'
-ht-degree: 83%
+source-wordcount: '2450'
+ht-degree: 82%
 
 ---
 
@@ -25,13 +27,13 @@ ht-degree: 83%
 
 ## はじめに
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[リアルタイム顧客プロファイルAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## 計算済み属性について
 
-Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. 各プロファイルには、顧客の連絡先情報、好み、購入履歴など、顧客に関する重要な情報が含まれ、顧客の全体像を把握することができます。
+Adobe Experience Platformでは、複数のソースからデータを簡単にインポートおよびマージして[!DNL Real-time Customer Profiles]を生成できます。 各プロファイルには、顧客の連絡先情報、好み、購入履歴など、顧客に関する重要な情報が含まれ、顧客の全体像を把握することができます。
 
-プロファイルで収集された情報には、データフィールドを直接読み取る場合にわかりやすい（「名」など）ものや、情報を生成するために複数の計算を実施するもの、他のフィールドの値に依存するもの（「ライフタイム購入合計」など）があります。To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
+プロファイルで収集された情報には、データフィールドを直接読み取る場合にわかりやすい（「名」など）ものや、情報を生成するために複数の計算を実施するもの、他のフィールドの値に依存するもの（「ライフタイム購入合計」など）があります。このデータを一目で理解しやすくするために、[!DNL Platform]を使用すると、これらの参照と計算を自動的に実行する計算済み属性を作成し、適切なフィールドに値を返すことができます。
 
 計算済み属性には、受信データ上で操作し、結果の値をプロファイル属性またはイベントに格納する式（ルール）の作成が含まれます。式は複数の異なる方法で定義でき、「受信イベントのみ」、「受信イベントとプロファイルデータ」、または「受信イベント、プロファイルデータ、および履歴イベント」を評価するルールを指定できます。
 
@@ -39,9 +41,9 @@ Adobe Experience Platform enables you to easily import and merge data from multi
 
 計算済み属性の使用例は、単純な計算から非常に複雑な参照まで多岐にわたります。次に、計算済み属性の使用例をいくつか示します。
 
-1. **[!UICONTROL 割合]:** 単純な計算済み属性には、レコード上の2つの数値フィールドを取り、それらを分割して割合を作成することが含まれます。 例えば、ある人物に送信された電子メールの合計数を、その人物が開封した電子メールの数で割ることができます。結果の計算済み属性フィールドを見ると、その人物による電子メールの開封率合がすばやく表示されます。
-1. **[!UICONTROL アプリケーションの使用]:** 別の例としては、ユーザーがアプリを開いた回数を集計する機能もあります。 個人のオープンイベントに基づいてアプリケーションを開いた合計回数を追跡し、ユーザーが 100 回目に開いた際に特別なオファーやメッセージを配信し、ブランドとのエンゲージメントを高めるよう促すことができます。
-1. **[!UICONTROL ライフタイム値]:** 顧客の全期間購入値など、現在の合計を収集するのは非常に困難な場合があります。 これには、新しい購入イベントが発生するたびに履歴合計を更新する必要があります。計算済みの属性を使用すると、顧客に関連する購入イベントが成功するたびに自動的に更新される、単一のフィールドにライフタイム値を保持することで、この処理をより簡単におこなうことができます。
+1. **[!UICONTROL 割合]：計算結果の単純な属性** には、レコード上の2つの数値フィールドを取り出し、それらを分割して割合を作成することが含まれます。例えば、ある人物に送信された電子メールの合計数を、その人物が開封した電子メールの数で割ることができます。結果の計算済み属性フィールドを見ると、その人物による電子メールの開封率合がすばやく表示されます。
+1. **[!UICONTROL アプリの使用]:** 別の例として、ユーザーがアプリを開いた回数を集計する機能があります。個人のオープンイベントに基づいてアプリケーションを開いた合計回数を追跡し、ユーザーが 100 回目に開いた際に特別なオファーやメッセージを配信し、ブランドとのエンゲージメントを高めるよう促すことができます。
+1. **[!UICONTROL ライフタイム値]：顧客のライフタイム購入値など、実行中の合計を** 収集するのは非常に困難な場合があります。これには、新しい購入イベントが発生するたびに履歴合計を更新する必要があります。計算済みの属性を使用すると、顧客に関連する購入イベントが成功するたびに自動的に更新される、単一のフィールドにライフタイム値を保持することで、この処理をより簡単におこなうことができます。
 
 ## 計算済み属性の設定
 
@@ -51,19 +53,19 @@ Adobe Experience Platform enables you to easily import and merge data from multi
 >
 >計算済み属性は、アドビ定義の Mixin 内のフィールドに追加することはできません。フィールドは、`tenant` 名前空間内に存在する、つまり、定義してスキーマに追加するフィールドである必要があります。
 
-In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). また、構成の基本ドキュメントの[和集合に関する節](../../xdm/schema/composition.md)を確認することをお勧めします。
+計算済みの属性フィールドを正しく定義するには、スキーマが[!DNL Profile]に対して有効にされ、スキーマの基となるクラスの和集合スキーマの一部として表示される必要があります。 [!DNL Profile]が有効なスキーマと和集合の詳細については、[スキーマのプロファイルと和集合スキーマの表示を有効にする](../../xdm/api/getting-started.md)の[!DNL Schema Registry]開発者ガイドの節を参照してください。 また、構成の基本ドキュメントの[和集合に関する節](../../xdm/schema/composition.md)を確認することをお勧めします。
 
-The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows the steps for defining a new mixin containing the computed attribute field and ensuring it is the correct namespace. プロファイル対応スキーマ内の適切な名前空間に、既にフィールドがある場合は、[計算済み属性を作成する](#create-a-computed-attribute)手順に直接進むことができます。
+このチュートリアルのワークフローは、[!DNL Profile]が有効なスキーマを使用し、計算済みの属性フィールドを含む新しいミックスインを定義し、正しい名前空間であることを確認する手順に従います。 プロファイル対応スキーマ内の適切な名前空間に、既にフィールドがある場合は、[計算済み属性を作成する](#create-a-computed-attribute)手順に直接進むことができます。
 
 ### スキーマの表示
 
-次の手順では、Adobe Experience Platform のユーザーインターフェイスを使用してスキーマを検索し、Mixin を追加してし、フィールドを定義します。If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
+次の手順では、Adobe Experience Platform のユーザーインターフェイスを使用してスキーマを検索し、Mixin を追加してし、フィールドを定義します。[!DNL Schema Registry] APIを使用したい場合は、[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)を参照して、ミックスインの作成、スキーマへのミックスインの追加、[!DNL Real-time Customer Profile]で使用するスキーマの有効化を行ってください。
 
 ユーザインターフェイスで、左側のパネルの「**[!UICONTROL スキーマ]**」をクリックし、「**[!UICONTROL 参照]**」タブの検索バーを使用して、更新するスキーマをすばやく見つけます。
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-Once you have located the schema, click its name to open the [!DNL Schema Editor] where you can make edits to the schema.
+スキーマを見つけたら、名前をクリックして[!DNL Schema Editor]を開き、スキーマに編集を加えることができます。
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
@@ -77,7 +79,7 @@ Mixin に名前と説明を入力し、完了したら「**[!UICONTROL Mixin を
 
 ### 追加スキーマ
 
-Your new mixin should now appear in the &quot;[!UICONTROL Mixins]&quot; section under &quot;[!UICONTROL Composition]&quot;. Mixin の名前をクリックすると、エディターの「**[!UICONTROL 構造]**」セクションに、「**[!UICONTROL フィールドを追加]**」ボタンが複数表示されます。
+新しいミックスインが「[!UICONTROL コンポジション]」の下の「[!UICONTROL ミックスイン]」セクションに表示されます。 Mixin の名前をクリックすると、エディターの「**[!UICONTROL 構造]**」セクションに、「**[!UICONTROL フィールドを追加]**」ボタンが複数表示されます。
 
 上位のフィールドを追加するには、スキーマ名の隣にある「**[!UICONTROL フィールドを追加]**」を選択するか、お好きなスキーマ内の任意の場所にフィールドを追加するよう選択することもできます。
 
@@ -97,13 +99,13 @@ Your new mixin should now appear in the &quot;[!UICONTROL Mixins]&quot; section 
 
 ![](../images/computed-attributes/Apply.png)
 
-### スキーマの有効化 [!DNL Profile]
+### [!DNL Profile]のスキーマを有効にする
 
-Before continuing, ensure that the schema has been enabled for [!DNL Profile]. エディターの「**[!UICONTROL 構造]**」セクションでスキーマ名をクリックすると、「**[!UICONTROL スキーマプロパティ]**」タブが表示されます。**[!UICONTROL プロファイル]** ・スライダが青の場合は、スキーマが有効になってい [!DNL Profile]ます。
+続行する前に、スキーマが[!DNL Profile]に対して有効になっていることを確認してください。 エディターの「**[!UICONTROL 構造]**」セクションでスキーマ名をクリックすると、「**[!UICONTROL スキーマプロパティ]**」タブが表示されます。**[!UICONTROL プロファイル]**&#x200B;のスライダーが青の場合、[!DNL Profile]のスキーマは有効になっています。
 
 >[!NOTE]
 >
->Enabling a schema for [!DNL Profile] cannot be undone, so if you click on the slider once it has been enabled, you do not have to risk disabling it.
+>[!DNL Profile]のスキーマを有効にすると元に戻せないので、一度有効にした後にスライダをクリックした場合に、無効にするリスクはありません。
 
 ![](../images/computed-attributes/Profile.png)
 
@@ -111,7 +113,7 @@ Before continuing, ensure that the schema has been enabled for [!DNL Profile]. �
 
 ### 計算済み属性の作成 {#create-a-computed-attribute}
 
-With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute.
+計算済み属性フィールドを特定し、スキーマが[!DNL Profile]に対して有効になっていることを確認したら、計算済み属性を設定できます。
 
 まず、作成する計算済み属性の詳細を含むリクエスト本文を使用して、`/config/computedAttributes` エンドポイントに POST リクエストを送信します。
 
@@ -154,7 +156,7 @@ curl -X POST \
 | `path` | 計算済み属性を含むフィールドへのパス。このパスは、スキーマの `properties` 属性内にあり、パスにフィールド名を含めないでください。パスを書き込む場合は、複数レベルの `properties` 属性を省略します。 |
 | `{TENANT_ID}` | テナント ID に慣れていない場合は、[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md#know-your-tenant_id)で、テナント ID を見つける手順を参照してください。 |
 | `description` | 計算済み属性の説明。複数の計算済み属性を定義した場合は特に便利です。IMS 組織内の他のユーザーが、使用する正しい計算済み属性を判断するのに役立ちます。 |
-| `expression.value` | 有効な [!DNL Profile Query Language] (PQL)式。 PQL の詳細とサポートされるクエリへのリンクについては、[PQL の概要](../../segmentation/pql/overview.md)を参照してください。 |
+| `expression.value` | 有効な[!DNL Profile Query Language] (PQL)式。 PQL の詳細とサポートされるクエリへのリンクについては、[PQL の概要](../../segmentation/pql/overview.md)を参照してください。 |
 | `schema.name` | 計算済み属性フィールドを含むスキーマの基となるクラス。例：XDM ExperienceEvent クラスに基づくスキーマの場合 `_xdm.context.experienceevent`。 |
 
 **応答** 
@@ -475,7 +477,7 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | 有効な [!DNL Profile Query Language] (PQL)式。 PQL の詳細とサポートされるクエリへのリンクについては、[PQL の概要](../../segmentation/pql/overview.md)を参照してください。 |
+| `{NEW_EXPRESSION_VALUE}` | 有効な[!DNL Profile Query Language] (PQL)式。 PQL の詳細とサポートされるクエリへのリンクについては、[PQL の概要](../../segmentation/pql/overview.md)を参照してください。 |
 
 **応答** 
 
