@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
+keywords: Experience Platform；アトリビューションai；アクセススコア；人気のあるトピック；スコアのダウンロード；アトリビューションaiスコア；エクスポート；エクスポート
 solution: Experience Platform, Intelligent Services
 title: Attribution AI のスコアへのアクセス
 topic: Accessing scores
 description: このドキュメントは、Attribution AIのスコアをダウンロードする際のガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 69%
+source-wordcount: '1056'
+ht-degree: 68%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 69%
 
 ## はじめに
 
-Attribution AIを使用すると、パーケーファイル形式のスコアをダウンロードできます。 This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
+Attribution AIを使用すると、Parketファイル形式のスコアをダウンロードできます。 このチュートリアルでは、[はじめに](./getting-started.md)ガイドのAttribution AIスコアのセクションを読み終えている必要があります。
 
-また、Attribution AIのスコアにアクセスするには、正常な実行ステータスのサービスインスタンスを使用できる状態にする必要があります。 To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
+また、Attribution AIのスコアにアクセスするには、正常な実行ステータスのサービスインスタンスを使用できる状態にする必要があります。 新しいサービスインスタンスを作成するには、[Attribution AIユーザーガイド](./user-guide.md)を参照してください。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
 
 ## データセット ID を見つける {#dataset-id}
 
-Within your service instance for Attribution AI insights, click the *More actions* dropdown in the top-right navigation then select **[!UICONTROL Access scores]**.
+Attribution AIインサイトのサービスインスタンス内で、右上のナビゲーションの「*その他のアクション*」ドロップダウンをクリックし、「**[!UICONTROL スコアへのアクセス]**」を選択します。
 
 ![その他のアクション](./images/download-scores/more-actions.png)
 
@@ -35,7 +35,7 @@ Within your service instance for Attribution AI insights, click the *More action
 
 ## バッチ ID を取得する {#retrieve-your-batch-id}
 
-前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、 `limit` クエリパラメーターの数値を、返す金額に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
+前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、`limit`クエリパラメーターの数を、返す分に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
 
 **API 形式**
 
@@ -59,11 +59,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **応答** 
 
-成功した応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチIDで `01E5QSWCAASFQ054FNBKYV6TIQ`す。 バッチ ID をコピーして、次の API 呼び出しで使用します。
+成功した応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチID `01E5QSWCAASFQ054FNBKYV6TIQ`です。 バッチ ID をコピーして、次の API 呼び出しで使用します。
 
 >[!NOTE]
 >
-> 次の応答では、読みやすさを考慮して `tags` オブジェクトの形式を変更しました。
+> 次の応答では、`tags`オブジェクトが読みやすくなるように変更されました。
 
 ```json
 {
@@ -166,7 +166,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 }
 ```
 
-## ファイルを取得する {#retrieving-your-files}
+## ファイルを取得する  {#retrieving-your-files}
 
 前の手順で取得した `href` 値を API 呼び出しとして使用して、新しい GET リクエストを実行し、ファイルディレクトリを取得します。
 
@@ -261,11 +261,11 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ![端末](./images/download-scores/terminal-output.png)
 
-ダウンロードされるスコアはパーケー形式で、スコアの表示には [!DNL Spark]シェルまたはパーケーリーダーが必要です。 生のスコア表示には、 [パーケツールを使用できます](https://github.com/apache/parquet-mr/tree/master/parquet-tools)。 パーケツールを使ってデータを分析でき [!DNL Spark]ます。
+ダウンロードされるスコアはParquet形式で、スコアを表示するには[!DNL Spark]-shellまたはParketreaderが必要です。 生のスコア表示の場合は、[Apache Parket tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools)を使用できます。 パーケツールは[!DNL Spark]を使ってデータを分析できます。
 
 ## 次の手順
 
-このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順を説明しています。 スコア出力の詳細については、 [Attribution AIのinput and output](./input-output.md) documentationを参照してください。
+このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順を説明しています。 スコア出力の詳細については、[Attribution AI input and output](./input-output.md)のドキュメントを参照してください。
 
 ## Snowflakeを使用したスコアへのアクセス
 
