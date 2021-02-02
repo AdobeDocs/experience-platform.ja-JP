@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；データセットの生成；データセットの生成；データセットの作成；
 solution: Experience Platform
 title: データセットをクエリ結果から生成する
 topic: queries
@@ -8,8 +8,8 @@ description: 'クエリサービスを使用すると、UI からデータセッ
 translation-type: tm+mt
 source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 53%
+source-wordcount: '320'
+ht-degree: 50%
 
 ---
 
