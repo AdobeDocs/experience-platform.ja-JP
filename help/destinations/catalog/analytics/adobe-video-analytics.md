@@ -2,13 +2,13 @@
 keywords: media analytics extension;media analytics;audio and video extension
 title: Adobe Media Analytics for Audio and Video 拡張機能
 seo-title: Adobe Media Analytics for Audio and Video 拡張機能
-description: ' Media Analytics for Audio and Video 拡張機能は、アドビリアルタイム顧客データプラットフォームの分析の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。'
-seo-description: ' Media Analytics for Video 拡張機能は、アドビリアルタイム顧客データプラットフォームの分析の宛先です。拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。'
+description: Adobeのオーディオおよびビデオ用メディア分析の拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+seo-description: Adobeのビデオ分析拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 80db19822551883da272787affb6f7dc9dc3a745
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 48%
+source-wordcount: '575'
+ht-degree: 40%
 
 ---
 
@@ -19,49 +19,49 @@ ht-degree: 48%
 
 Adobe Media Analytics for Audio and Video は基本的な分析機能のアドオンで、ビデオ、オーディオおよび広告における堅牢な測定機能をクライアントに提供します。
 
- Media Analytics for Audio and Video は、アドビリアルタイム顧客データプラットフォームの分析拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html) の拡張機能のページを参照してください。
+オーディオ&amp;ビデオ用Adobeメディア解析は、Adobe Experience Platformの解析拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html) の拡張機能のページを参照してください。
 
-This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md).
+この宛先は[!DNL Adobe Experience Platform Launch]拡張子です。 プラットフォームでの[!DNL Platform Launch]拡張機能の動作について詳しくは、[Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![Adobe Media Analytics for Audio and Video 拡張機能](../../assets/catalog/analytics/adobe-video-analytics/catalog.png)
 
 ## 前提条件 {#prerequisites}
 
-This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Real-time CDP.
+この拡張機能は、[!DNL Destinations]カタログにあり、プラットフォームを購入したすべてのお客様に提供されます。
 
-To use this extension, you need access to [!DNL Adobe Experience Platform Launch]. [!DNL Platform Launch] は、Adobe Experience Cloud に付属の付加価値機能として提供されています。Contact your organization administrator to get access to [!DNL Platform Launch] and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+この拡張機能を使用するには、[!DNL Adobe Experience Platform Launch]にアクセスする必要があります。 [!DNL Platform Launch] は、Adobe Experience Cloud に付属の付加価値機能として提供されています。組織の管理者に連絡して、[!DNL Platform Launch]へのアクセス権を取得し、**[!UICONTROL manage_properties]**&#x200B;の権限を与えて、拡張機能をインストールするように依頼してください。
 
 ## 拡張機能のインストール {#install-extension}
 
 Adobe Analytics for Video 拡張機能をインストールするには：
 
-In the [Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+[プラットフォームインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
-Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. **[!UICONTROL Configure]** コントロールが灰色表示になっている場合は、 **[!UICONTROL manage_properties]** 権限がありません。 [前提条件](#prerequisites)を確認してください。
+リンク先をクリックしてハイライトし、右側のパネルで「**[!UICONTROL 設定]**」を選択します。 **[!UICONTROL Configure]**&#x200B;コントロールがグレー表示になっている場合は、**[!UICONTROL manage_properties]**&#x200B;権限がありません。 [前提条件](#prerequisites)を確認してください。
 
-In the **[!UICONTROL Select available Platform Launch property]** window, select the [!DNL Platform Launch] property in which you want to install the extension. You also have the option of creating a new property in [!DNL Platform Launch]. プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、 ドキュメントの[「プロパティ」ページに関する節](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)を参照してください。[!DNL Launch]
+**[!UICONTROL 利用可能なプラットフォームの起動プロパティを選択]**&#x200B;ウィンドウで、拡張機能をインストールする[!DNL Platform Launch]プロパティを選択します。 また、[!DNL Platform Launch]に新しいプロパティを作成するオプションもあります。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、 ドキュメントの[「プロパティ」ページに関する節](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)を参照してください。[!DNL Launch]
 
-The workflow takes you to [!DNL Platform Launch] to complete the installation.
+このワークフローにより、[!DNL Platform Launch]に移動してインストールを完了します。
 
-For information about the extension configuration options, see the [Adobe Media Analytics for Audio and Video extension page](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html) in [!DNL Experience Launch] documentation.
+拡張機能の設定について詳しくは、[!DNL Experience Launch]ドキュメントの[オーディオおよびビデオ用Adobeメディア解析の拡張機能ページ](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)を参照してください。
 
-You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/).  ドキュメントの[新しい拡張機能の追加](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)に関するページを参照してください。[!DNL Platform Launch]
+[Adobe Experience Platform Launchインターフェイス](https://launch.adobe.com/)に直接インストールすることもできます。  ドキュメントの[新しい拡張機能の追加](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)に関するページを参照してください。[!DNL Platform Launch]
 
 ## 拡張機能の使用方法 {#how-to-use}
 
-Once you have installed the extension, you can start setting up rules for it directly in [!DNL Platform Launch].
+拡張機能をインストールすると、[!DNL Platform Launch]に直接ルールを設定する開始を作成できます。
 
-In [!DNL Platform Launch], you can set up rules for your installed extensions to send event data to the extension destination only in certain situations. 拡張機能のルールの設定について詳しくは、[ルールに関するドキュメント](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html)を参照してください。
+[!DNL Platform Launch]では、特定の状況でのみイベントデータを拡張の宛先に送信するように、インストール済みの拡張機能のルールを設定できます。 拡張機能のルールの設定について詳しくは、[ルールに関するドキュメント](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html)を参照してください。
 
 ## 拡張機能の設定、アップグレード、削除 {#configure-upgrade-delete}
 
-You can configure, upgrade, and delete extensions in the [!DNL Platform Launch] interface.
+[!DNL Platform Launch]インターフェイスでは、拡張機能の設定、アップグレード、削除が可能です。
 
 >[!TIP]
 >
->If the extension is already installed on one of your properties, the Real-time CDP UI still displays **[!UICONTROL Install]** for the extension. 「[拡張機能のインストール](#install-extension)」の説明にしたがってインストールワークフローを開始し、 に移動して拡張機能を設定または削除します。[!DNL Platform Launch]
+>拡張機能が既にプロパティの1つにインストールされている場合、プラットフォームUIには、拡張機能の&#x200B;**[!UICONTROL Install]**&#x200B;が表示されます。 「[拡張機能のインストール](#install-extension)」の説明にしたがってインストールワークフローを開始し、 に移動して拡張機能を設定または削除します。[!DNL Platform Launch]
 
 拡張機能をアップグレードするには、 ドキュメントの「[拡張機能のアップグレード](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html)」を参照してください。[!DNL Platform Launch]
 
