@@ -1,117 +1,117 @@
 ---
-keywords: airship tags;airship destination
+keywords: 飛行船タグ；飛行船の目的地
 title: 航空船タグの宛先
 seo-title: 航空船タグの宛先
 description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
 seo-description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1213'
 ht-degree: 13%
 
 ---
 
 
-# （ベータ） [!DNL Airship Tags] 宛先 {#airship-tags-destination}
+# （ベータ版） [!DNL Airship Tags]宛先{#airship-tags-destination}
 
 >[!IMPORTANT]
 >
->Adobe Experience Platformの [!DNL Airship Tags] 目的地は現在ベータ段階です。 ドキュメントと機能は変更される場合があります。
+>Adobe Experience Platformの[!DNL Airship Tags]宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 ## 概要
 
 [!DNL Airship] は、顧客関与プラットフォームをリードし、顧客のライフサイクルのあらゆる段階で、意味のあるパーソナライズされたチャネルのメッセージをユーザに届けるのに役立ちます。
 
-この統合により、Adobe Experience Platformセグメントデータはタグ [!DNL Airship] として [](https://docs.airship.com/guides/audience/tags/) に渡され、ターゲティングまたはトリガーが行われます。
+この統合は、ターゲティングまたはトリガーのために、Adobe Experience Platformセグメントデータを[!DNL Airship][タグ](https://docs.airship.com/guides/audience/tags/)としてに渡します。
 
-詳しくは、 [!DNL Airship]航空船ドキュメント [を参照してください](https://docs.airship.com)。
+[!DNL Airship]の詳細については、[航空船ドキュメント](https://docs.airship.com)を参照してください。
 
 
 >[!TIP]
 >
->このドキュメントページはチー [!DNL Airship] ムが作成したページです。 お問い合わせや更新のご依頼は、 [support.airship.comから直接お問い合わせください](https://support.airship.com/)。
+>このドキュメントページは[!DNL Airship]チームが作成しました。 お問い合わせや更新のご依頼は、[support.airship.com](https://support.airship.com/)まで直接お問い合わせください。
 
 ## 前提条件
 
-Adobe Experience Platformセグメントをに送信する前に、次の操作を行う [!DNL Airship]必要があります。
+Adobe Experience Platformセグメントを[!DNL Airship]に送信する前に、次の操作を行う必要があります。
 
-* プロジェクトでタググループを作成し [!DNL Airship] ます。
+* [!DNL Airship]プロジェクトにタググループを作成します。
 * 認証用のベアラートークンを生成します。
 
 >[!TIP]
 > 
->まだアカウントを作成していない場合は、 [!DNL Airship] こ [のサインアップリンクを使用してアカウントを作成します](https://go.airship.eu/accounts/register/plan/starter/) 。
+>まだ[!DNL Airship]アカウントを作成していない場合は、[このサインアップリンク](https://go.airship.eu/accounts/register/plan/starter/)を経由してアカウントを作成します。
 
 ### タググループ
 
-Adobe Experience Platformのセグメントの概念はAirshipの [タグ](https://docs.airship.com/guides/audience/tags/) （実装にわずかな違いがあります）に似ています。 この統合は、Experience Platformセグメント内のユーザーの [メンバーシップのステータスを](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) 、タグの存在または存在しない状態にマッピングし [!DNL Airship] ます。 例えば、プロファイルセグメントがに `xdm:status` 変更された場合、タグはプラットフォームに追加され `realized`るか、このプラットフォームがマッピングされる [!DNL Airship] チャネルに名前付けされます。 に `xdm:status` 変更した場合、タグ `exited`は削除されます。
+Adobe Experience Platformのセグメントの概念は、Airshipの[タグ](https://docs.airship.com/guides/audience/tags/)と似ていますが、実装にわずかな違いがあります。 この統合は、Experience Platformセグメント](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins)のユーザーの[メンバーシップのステータスを、[!DNL Airship]タグの存在または存在しない状態にマッピングします。 例えば、`xdm:status`が`realized`に変わるプラットフォームセグメントでは、タグは[!DNL Airship]チャネルに追加されるか、このプロファイルがマッピングされる名前を付けます。 `xdm:status`が`exited`に変更されると、タグは削除されます。
 
-この統合を有効にするには、 *タググループ* を [!DNL Airship] namedに作成し `adobe-segments`ます。
+この統合を有効にするには、*タググループ*&#x200B;を[!DNL Airship]内に`adobe-segments`という名前で作成します。
 
 >[!IMPORTANT]
 >
->新しいタググループを作成する場合 **は** 、「[!DNL Allow these tags to be set only from your server]」と表示されるラジオボタンをチェックしないでください。 これを行うと、Adobeタグの統合が失敗します。
+>新しいタググループ&#x200B;**を作成する場合、「[!DNL Allow these tags to be set only from your server]」と表示されるラジオボタンを**&#x200B;チェックしないでください。 これを行うと、Adobeタグの統合が失敗します。
 
-タググループの作成手順については、「タググループの [管理](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) 」を参照してください。
+タググループの作成手順については、[タググループの管理](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups)を参照してください。
 
 ### ベアラートークン
 
-「 **[!UICONTROL 設定]** 」に移動し、 **[!UICONTROL Airshipダッシュボード]** の「APIs &amp; Integrations」に移動し、左側のメニューで「 [](https://go.airship.com)**** Tokens」を選択します。
+[Airshipダッシュボード](https://go.airship.com)の&#x200B;**[!UICONTROL 設定]**&quot; **[!UICONTROL APIs &amp; Integrations]**&#x200B;に移動し、左側のメニューで&#x200B;**[!UICONTROL トークン]**&#x200B;を選択します。
 
-「トークン **[!UICONTROL を作成]**」をクリックします。
+「**[!UICONTROL トークンを作成]**」をクリックします。
 
 トークンにわかりやすい名前(「Adobeタグの宛先」など)を指定し、ロールに「すべてのアクセス」を選択します。
 
-「トークン **[!UICONTROL の作成]** 」をクリックし、詳細を機密情報として保存します。
+「**[!UICONTROL トークン]**&#x200B;を作成」をクリックし、詳細を機密情報として保存します。
 
 ## 使用例
 
-To help you better understand how and when you should use the [!DNL Airship Tags] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
+[!DNL Airship Tags]の行き先の使い方と使い方を理解するために、Adobe Experience Platformのお客様がこの行き先を使って解決できる使用例を以下に示します。
 
 ### 使用例1
 
-小売業者やエンターテイメントプラットフォームは、忠誠度の高い顧客に対してユーザープロファイルを作成し、モバイルキャンペーンでのメッセージターゲット設定のために、それらのセグメント [!DNL Airship] をに渡すことができます。
+小売業者やエンターテイメントプラットフォームは、忠誠度の高い顧客に対してユーザープロファイルを作成し、それらのセグメントを[!DNL Airship]に渡して、モバイルキャンペーンに対するメッセージのターゲット設定を行うことができます。
 
 ### 使用例2
 
-ユーザーがAdobe Experience Platform内の特定のセグメントに入る、または離れるときに、1対1のメッセージをリアルタイムでトリガーします。
+トリガーがAdobe Experience Platform内の特定のセグメントに入る、または離れるときに、1対1のメッセージをリアルタイムで表示します。
 
-例えば、ある小売業者がプラットフォームでジーンズブランド固有のセグメントを設定するとします。 あの小売業者は、誰かがジーンズの好みを特定のブランドにしたらすぐにモバイルメッセージをトリガーできるようになりました。
+例えば、ある小売業者がプラットフォームでジーンズブランド固有のセグメントを設定するとします。 あの小売店では、誰かがジーンズの好みを特定のブランドにしたらすぐにモバイルメッセージをトリガーできるようになりました。
 
-## Connect to [!DNL Airship Tags] {#connect-airship-tags}
+## [!DNL Airship Tags] {#connect-airship-tags}に接続
 
-「 **[!UICONTROL Destinations]** / **[!UICONTROL Catalog]**」で、「 **[!UICONTROL Mobile Engagement]** 」カテゴリまでスクロールします。 を選択 **[!DNL Airship Tags]**&#x200B;し、「 **[!UICONTROL 設定]**」を選択します。
+**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;で、**[!UICONTROL モバイルエンゲージメント]**&#x200B;カテゴリまでスクロールします。 「**[!DNL Airship Tags]**」を選択し、「**[!UICONTROL 設定]**」を選択します。
 
 >[!NOTE]
 >
->この宛先との接続が既に存在する場合は、宛先カードに **[!UICONTROL 「アクティブ化]** 」ボタンが表示されます。 「 **[!UICONTROL アクティブ化]** 」と「 **[!UICONTROL 設定]**」の違いについて詳しくは、表示先ワークスペースのドキュメントの「 [カタログ](../../ui/destinations-workspace.md#catalog) 」セクションを参照してください。
+>この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
 ![航空船タグに接続](../../assets/catalog/mobile-engagement/airship-tags/catalog.png)
 
-In the **Account** step, if you had previously set up a connection to your [!DNL Airship Tags] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Airship Tags]. 「宛先 **[!UICONTROL に接続]** 」を選択し、 [!DNL Airship] ダッシュボードから生成したベアラトークンを使用して、Adobe Experience Platformを [!DNL Airship] プロジェクトに接続します。
+**アカウント**&#x200B;の手順で、[!DNL Airship Tags]宛先への接続を事前に設定している場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。 または、「**[!UICONTROL 新しいアカウント]**」を選択して、[!DNL Airship Tags]への新しい接続を設定できます。 **[!UICONTROL 宛先]**&#x200B;に接続を選択し、[!DNL Airship]ダッシュボードから生成したベアラトークンを使用して、[!DNL Airship]プロジェクトにAdobe Experience Platformを接続します。
 
 >[!NOTE]
 >
->Adobe Experience Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Airship] account. このため、間違った資格情報を使用すると、ワークフローを完了することができません。
+>Adobe Experience Platformは、認証プロセスで資格情報の検証をサポートし、[!DNL Airship]アカウントに正しくない資格情報を入力するとエラーメッセージを表示します。 このため、間違った資格情報を使用すると、ワークフローを完了することができません。
 
 ![航空船タグに接続](../../assets/catalog/mobile-engagement/airship-tags/connect-account.png)
 
-Once your credentials are confirmed and Adobe Experience Platform is connected to your [!DNL Airship] project, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
+資格情報が確認され、Adobe Experience Platformが[!DNL Airship]プロジェクトに接続されたら、**[!UICONTROL 次へ]**&#x200B;を選択して&#x200B;**[!UICONTROL セットアップ]**&#x200B;の手順に進むことができます。
 
-In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow.
+**[!UICONTROL 認証]**&#x200B;手順で、アクティベーションフローの&#x200B;**[!UICONTROL 名前]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力します。
 
-また、この手順では、米国またはEUのデータセンターを選択し、この宛先に適用する [!DNL Airship] データセンターに応じて選択できます。 最後に、データをエクスポート先にエクスポートする1つ以上のマーケティングの使用例を選択します。 Adobe定義のマーケティングの使用例から選択するか、独自の使用例を作成することができます。 マーケティングの使用例の詳細については、Real-time CDP [（リアルタイムCDP）ページの「](../../../rtcdp/privacy/data-governance-overview.md#destinations) Data Governance（データ・ガバナンス）」を参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、 [データ使用ポリシーの概要を参照してください](../../../data-governance/policies/overview.md#core-actions)。
+また、この手順では、この宛先に適用する[!DNL Airship]データセンターに応じて、米国またはEUデータセンターを選択できます。 最後に、データをエクスポート先にエクスポートする1つ以上のマーケティングの使用例を選択します。 Adobe定義のマーケティングの使用例から選択するか、独自の使用例を作成することができます。 マーケティングの使用例について詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
-Select **[!UICONTROL Create Destination]** after you have filled in the fields above.
+上記のフィールドに入力したら、「**[!UICONTROL 宛先を作成]**」を選択します。
 
 ![航空船タグに接続](../../assets/catalog/mobile-engagement/airship-tags/select-domain.png)
 
-これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow.
+これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。どちらの場合も、残りのワークフローについては、次の[セグメントをアクティブにする](#activate-segments)の節を参照してください。
 
 ## セグメントのアクティブ化 {#activate-segments}
 
-セグメントをアクティブ化するに [!DNL Airship Tags]は、次の手順に従います。
+[!DNL Airship Tags]にセグメントをアクティブ化するには、次の手順に従います。
 
 **[!UICONTROL 宛先／参照]**&#x200B;で、セグメントをアクティブ化する宛先を選択します。[!DNL Airship Tags]
 
@@ -124,38 +124,40 @@ Select **[!UICONTROL Create Destination]** after you have filled in the fields a
 
 ![活性化流](../../assets/catalog/mobile-engagement/airship-tags/activate.png)
 
-Select **[!UICONTROL Activate]**. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to [!DNL Airship Tags].
+「**[!UICONTROL アクティブ化]**」を選択します。 **[!UICONTROL 宛先]**&#x200B;をアクティブにするワークフローの&#x200B;**[!UICONTROL セグメントを選択]**&#x200B;ページで、[!DNL Airship Tags]に送信するセグメントを選択します。
 
 ![segments-to-destination](../../assets/catalog/mobile-engagement/airship-tags/select-segments.png)
 
-マッピング **[!UICONTROL 手順で]** 、 [XDM](../../../xdm/home.md) スキーマから、宛先スキーマにマップする属性とIDを選択します。 **** 新しいマッピングを追加選択してスキーマを参照し、対応するターゲットIDにマッピングします。
+**[!UICONTROL マッピング]**&#x200B;手順で、[XDM](../../../xdm/home.md)スキーマーから宛先スキーマーにマッピングする属性とIDを選択します。 **[!UICONTROL 追加新しいマッピング]**&#x200B;を選択して、スキーマを参照し、対応するターゲットIDにマッピングします。
 
 ![IDマッピング初期画面](../../assets/catalog/mobile-engagement/airship-tags/identity-mapping.png)
 
-[!DNL Airship] タグは、デバイスインスタンスを表すチャネル（iPhoneなど）またはすべてのユーザーのデバイスを顧客IDなどの共通の識別子にマップする名前付きユーザーに設定できます。 スキーマで主IDとしてテキスト形式の（ハッシュ化されていない）電子メールアドレスが存在する場合、「 **[!UICONTROL ソース属性]** 」で電子メールフィールドを選択し、 [!DNL Airship] ターゲットID **[!UICONTROL (ID]**)の右の列の指定されたユーザーにマップします。
+[!DNL Airship] タグは、デバイスインスタンスを表すチャネル（iPhoneなど）またはすべてのユーザーのデバイスを顧客IDなどの共通の識別子にマップする名前付きユーザーに設定できます。スキーマの主なIDとしてテキスト形式の（ハッシュ化されていない）電子メールアドレスが存在する場合は、**[!UICONTROL ソース属性]**&#x200B;で電子メールフィールドを選択し、**[!UICONTROL ターゲットID]**&#x200B;の右の列の[!DNL Airship]にマップします。
 
 ![名前付きユーザーマッピング](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
-チャネルにマップする必要がある識別子（デバイスなど）の場合、ソースに基づいて適切なチャネルにマップします。 次の画像は、Google広告IDを [!DNL Airship] Androidチャネルにマップする方法を示しています。
+チャネルにマップする必要がある識別子（デバイスなど）の場合、ソースに基づいて適切なチャネルにマップします。 次の画像は、Google広告IDを[!DNL Airship] Androidチャネルにマップする方法を示しています。
 
-![Airshipタグ](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)![](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)への接続Airshipタグ![チャネルマッピングに接続](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
+![Airship](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png)
+![タグに接続Airshipタグに接続](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png)
+![チャネルマッピング](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
 
-現在、 **[!UICONTROL セグメントスケジュール]** ページでは、スケジュールは無効になっています。 「 **[!UICONTROL 次へ]** 」をクリックしてレビュー手順に進みます。
+**[!UICONTROL セグメントスケジュール]**&#x200B;ページで、現在、スケジュールは無効になっています。 「**[!UICONTROL 次へ]**」をクリックしてレビュー手順に進みます。
 
 「**[!UICONTROL 確認]**」ページには、選択の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
 
 >[!IMPORTANT]
 >
->この手順では、Adobe Experience Platformがデータ使用ポリシーの違反を確認します。 次に、ポリシー違反の例を示します。 セグメントアクティベーションのワークフローは、違反を解決するまで完了できません。 ポリシー違反の解決方法について詳しくは、「データ管理ドキュメント」の「 [ポリシーの適用](../../../rtcdp/privacy/data-governance-overview.md#enforcement) 」を参照してください。
+>この手順では、Adobe Experience Platformがデータ使用ポリシーの違反を確認します。 次に、ポリシー違反の例を示します。 セグメントアクティベーションのワークフローは、違反を解決するまで完了できません。 ポリシー違反の解決方法について詳しくは、「データ管理ドキュメント」の「[ポリシーの適用](../../../data-governance/enforcement/auto-enforcement.md)」を参照してください。
 
 ![confirm-selection](../../assets/common/data-policy-violation.png)
 
-ポリシー違反が検出されなかった場合は、「 **[!UICONTROL Finish]** 」を選択して、選択を確定し、開始が宛先にデータを送信することを確認します。
+ポリシー違反が検出されなかった場合は、[**[!UICONTROL 完了]**]を選択して、選択と開始が宛先にデータを送信することを確認します。
 
 ![confirm-selection](../../assets/catalog/mobile-engagement/airship-tags/review.png)
 
 
-## データの使用とガバナンス {#data-usage-governance}
+## データの使用とガバナンス{#data-usage-governance}
 
-すべての [!DNL Adobe Experience Platform] 宛先は、データ処理時のデータ使用ポリシーに準拠しています。 データ・ガバナンスの [!DNL Adobe Experience Platform] 実施方法の詳細については、「 [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md)」を参照してください。
+すべての[!DNL Adobe Experience Platform]宛先は、データ処理時のデータ使用ポリシーに準拠しています。 [!DNL Adobe Experience Platform]によるデータガバナンスの適用方法について詳しくは、[データガバナンスの概要](../../../data-governance/home.md)を参照してください。
 
