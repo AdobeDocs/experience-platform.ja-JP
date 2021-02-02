@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
+keywords: Experience Platform；ホーム；人気のあるトピック；IDグラフビューア；IDグラフビューア；IDグラフビューア；ID名前空間;ID名前空間;ID;IDサービス；IDサービス
 solution: Experience Platform
 title: Adobe Experience Platform ID サービス
 topic: tutorial
 description: アイデンティティグラフは、特定の顧客の異なるアイデンティティ間の関係を示すマップです。異なるチャネル間での顧客のブランドとの相互作用を視覚的に示します。
 translation-type: tm+mt
-source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
+source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '905'
 ht-degree: 1%
 
 ---
@@ -31,23 +31,23 @@ IDグラフビューアを使用するには、関連する様々なAdobe Experi
 
 ### 用語
 
-- **ID（ノード）:** IDまたはノードは、エンティティに固有のデータ（通常は人）です。 IDは、名前空間とIDの値で構成されます。
+- **ID（ノード）:ID** またはノードは、エンティティに固有のデータ（通常は個人）です。IDは、名前空間とIDの値で構成されます。
 - **リンク（エッジ）:** リンクまたはエッジは、ID間の接続を表します。
-- **グラフ（クラスター）:** グラフまたはクラスターは、個人を表すIDとリンクのグループです。
+- **グラフ（クラスター）：グラフ** またはクラスターは、個人を表すIDとリンクのグループです。
 
 ## IDグラフビューアにアクセスする
 
-IDグラフビューアをUIで使用するには、左側のナビゲーションで「 **[!UICONTROL ID]** 」を選択し、「 **[!UICONTROL IDグラフ]** 」タブを選択します。 「 **[!UICONTROL ID名前空間]** 」画面で、「ID名前空間を **[!UICONTROL 選択]** 」アイコンをクリックして、使用する名前空間を検索します。
+IDグラフビューアをUIで使用するには、左側のナビゲーションで「**[!UICONTROL ID]**」を選択し、「**[!UICONTROL IDグラフ]**」タブを選択します。 **[!UICONTROL ID名前空間]**&#x200B;画面で、**[!UICONTROL ID名前空間]**&#x200B;を選択アイコンをクリックし、使用する名前空間を検索します。
 
 ![名前空間画面](../images/identity-graph-viewer/identity-namespace.png)
 
-「ID **[!UICONTROL 名前空間を選択]** 」パネルが表示されます。 この画面には、名前空間の **[!UICONTROL 表示名]**、IDシンボル所有者、 **[!UICONTROL 所有者、最終更新日、更新日、名前空間]**&#x200B;説明など、組織が使用できるのリストが含まれ ************&#x200B;ます。 有効なID値が接続されている限り、指定された任意の名前空間を使用できます。
+「**[!UICONTROL ID名前空間を選択]**」パネルが表示されます。 この画面には、名前空間の&#x200B;**[!UICONTROL 表示名]**、**[!UICONTROL ID記号]**、**[!UICONTROL 所有者]**、**[!UICONTROL 最終更新日]**、**[!UICONTROL 説明]**&#x200B;に関する情報など、組織が利用できる名前空間のリストが含まれます。 有効なID値が接続されている限り、指定された任意の名前空間を使用できます。
 
-使用する名前空間を選択し、「 **[!UICONTROL 選択]** 」をクリックして続行します。
+使用する名前空間を選択し、「****」をクリックして次に進みます。
 
 ![select-identity-名前空間](../images/identity-graph-viewer/select-identity-namespace.png)
 
-名前空間を選択したら、「 **[!UICONTROL ID値]** 」テキストボックスに特定の顧客に対応する値を入力し、「 **[!UICONTROL 表示」を選択します]**。
+名前空間を選択したら、「**[!UICONTROL ID値]**」テキストボックスに特定の顧客に対応する値を入力し、「**[!UICONTROL 表示]**」を選択します。
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
@@ -55,27 +55,27 @@ IDグラフビューアが表示されます。 画面の左側には、選択�
 
 >[!IMPORTANT]
 >
->IDグラフを生成するには、2つ以上のリンクされたIDと、有効な名前空間とIDのペアが必要です。 グラフビューアで表示できるIDの最大数は150です。 See the [appendix](#appendix) section below for more information.
+>IDグラフを生成するには、2つ以上のリンクされたIDと、有効な名前空間とIDのペアが必要です。 グラフビューアで表示できるIDの最大数は150です。 詳しくは、下の[付録](#appendix)を参照してください。
 
 ![同一性グラフ](../images/identity-graph-viewer/graph-viewer.png)
 
-「 **[!UICONTROL ID]** 」テーブルでハイライト表示された行を更新し、右側に表示される情報を更新するIDを選択します。この情報には、IDの **[!UICONTROL 値]**、バッチID **[!UICONTROL 、]****** 最終更新日が含まれます。
+**[!UICONTROL ID]**&#x200B;テーブルで強調表示された行を更新し、右側のレールに表示される情報を更新するIDを選択します。IDには、**[!UICONTROL 値]**、**[!UICONTROL バッチID]**&#x200B;および&#x200B;**[!UICONTROL 最終更新]**&#x200B;日が含まれます。
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-グラフ内でフィルタリングを行い、 **[!UICONTROL Identities]** テーブルの上部にある並べ替えオプションを使用して特定の名前空間を分離できます。 ドロップダウンメニューで、ハイライトする名前空間を選択します。
+グラフ内でフィルターを適用し、**[!UICONTROL ID]**&#x200B;テーブルの上部にある並べ替えオプションを使用して、特定の名前空間を分離できます。 ドロップダウンメニューで、ハイライトする名前空間を選択します。
 
 ![名前空間別フィルター](../images/identity-graph-viewer/filter-namespace.png)
 
-グラフビューアに戻り、選択した名前空間がハイライト表示されます。 また、フィルターオプションは、選択した名前空間の **[!UICONTROL 情報のみを返すように「]** ID」テーブルを更新します。
+グラフビューアに戻り、選択した名前空間がハイライト表示されます。 また、フィルターオプションは、選択した名前空間の情報のみを返すように&#x200B;**[!UICONTROL ID]**&#x200B;テーブルを更新します。
 
 ![フィルタ](../images/identity-graph-viewer/filtered.png)
 
-グラフビューアボックスの右上には、倍率に関するオプションが表示されます。 グラフにズームインするには **(+)** アイコンを、ズームアウトするには **(-)** アイコンを選択します。
+グラフビューアボックスの右上には、倍率に関するオプションが表示されます。 **(+)**&#x200B;アイコンを選択してグラフにズームインするか、**(-)**&#x200B;アイコンを選択してズームアウトします。
 
 ![zoom](../images/identity-graph-viewer/zoom.png)
 
-バッチの詳細を表示するには、ヘッダーから **[!UICONTROL データソース]** を選択します。 「 **[!UICONTROL データソース]** 」( **[!UICONTROL Data source]** )テーブルには、グラフに関連付けられた **[!UICONTROL バッチIDのリスト、リンクされたID]**、ソーススキーマ、取り込み日が表示されます。
+バッチの詳細を表示するには、ヘッダーから&#x200B;**[!UICONTROL データソース]**&#x200B;を選択します。 **[!UICONTROL データソース]**&#x200B;テーブルには、グラフに関連付けられた&#x200B;**[!UICONTROL バッチID]**&#x200B;のリストと、**[!UICONTROL リンクされたID]**、ソーススキーマ、取り込み日が表示されます。
 
 ![データソース](../images/identity-graph-viewer/data-source-table.png)
 
@@ -102,11 +102,9 @@ IDグラフビューアにアクセスするとエラーが発生する場合が
 - 選択した名前空間にID値が存在する必要があります。
 - IDグラフビューアを生成するには、少なくとも2つのIDがリンクされている必要があります。
 - IDグラフビューアは、IDの上限を150個にする必要があります。
-- IDグラフビューアは、現在、実稼動用サンドボックス以外ではアクセスできません。
-- IDグラフビューアは、現在、バッチで取り込んだデータのみをサポートし、ストリーミングソースを使用して取り込んだデータは表示されません。
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
 
 ## 次の手順
 
-このドキュメントを読むことで、Platform UIで顧客のIDグラフを表示する方法を学びました。 プラットフォームのIDの詳細については、「 [IDサービスの概要」を参照してください。](../home.md)
+このドキュメントを読むことで、Platform UIで顧客のIDグラフを表示する方法を学びました。 プラットフォームのIDの詳細については、[IDサービスの概要](../home.md)を参照してください。
