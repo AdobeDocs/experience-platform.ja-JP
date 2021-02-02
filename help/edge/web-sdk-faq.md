@@ -4,9 +4,9 @@ seo-title: Adobe Experience PlatformWeb SDK FAQ
 description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 seo-description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
 translation-type: tm+mt
-source-git-commit: a493fad1bbd6114ba06074ebb3064268ba25b445
+source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
 workflow-type: tm+mt
-source-wordcount: '1683'
+source-wordcount: '1808'
 ht-degree: 2%
 
 ---
@@ -63,7 +63,7 @@ Adobe Experience Platform Launchではこれらのライブラリの展開と管
 
 ## この新しいWeb SDKの価値
 
-**パフォーマンス：** Web SDKは、現在のAdobeライブラリのすべてを使用するよりも小さく、ページの読み込みが大幅に高速になります。
+**パフォーマンス：** Web SDKは、現在のAdobeライブラリのすべてを使用するよりも小さく、ページ読み込みを大幅に高速化します。
 
 **シンプル：XDM、Web SDK、** Experience Platform Launch、Experience Edge、Adobe Experience Cloudの各ソリューション、Adobe Experience Platformを組み合わせることで、理解しやすく、追跡しやすいデータ収集ストーリーを構築できます。
 
@@ -73,7 +73,7 @@ Adobe Experience Platform Launchではこれらのライブラリの展開と管
 * **Experience Edge：データを** Adobe Experience Platformやソリューションに必要な形式で簡単にルーティングできます。
 * **Adobe Experience PlatformとAdobeのソリューション：価値提案を** 有効にします。
 
-**制御：す** べてのデータは単一の接続されたデータストリームを使用しているので、アプリケーション間やアプリケーション間を通じて、データが1ミリ秒ごとに論理的に追跡および制御できます。
+**制御：す** べてのデータは単一の接続されたデータストリームを使用しているので、ジャーニーのミリ秒ごとに、アプリケーション間で、データがどのように見えるかを論理的に追跡して制御できます。
 
 **最新で将来に備えたもの：Web SDK** とExperience Edge Networkへの接続により、Adobeはデータ収集、パーソナライゼーション、同意およびサードパーティCookieの将来に対するAdobeの取り組みを大幅に最新化できました。(Adobeが管理するファーストパーティドメインを有効にします)。
 
@@ -124,7 +124,7 @@ Web SDKは、急速に発展しています。 その他の使用例が検討中
 
 ## Allyを使用して開始する際に、Webサイトの訪問者が新しい訪問者として表示されないようにECIDを移行できますか。
 
-はい、Adobe Experience PlatformWeb SDKには、ID移行機能があります。 詳しくは、[このドキュメント](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration)の説明に従ってください。
+はい、Adobe Experience PlatformWeb SDKには、ID移行機能があります。 詳しくは、[プラットフォームWeb SDK IDドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration)のIDの移行の手順に従ってください。
 
 ## Web SDKとAdobe Experience Platform Launchの違いは何ですか。
 
@@ -144,7 +144,7 @@ Web SDKは、急速に発展しています。 その他の使用例が検討中
 
 * Adobe Experience Platform Launchは、最高の利用可能なタグとSDK Managerだけでなく、`alloy.js`のデプロイやXDMスキーマへのデータのマッピングを非常に簡単に行えます。 Experience Platform Launchを使用しない場合は、送信する前に、`alloy.js`のデプロイ、イベント、XDMへのデータのマッピングを管理する必要があります。 これは、Experience Platform Launchを使うよりも&#x200B;_ずっと_&#x200B;難しい処理です。
 
-* `alloy.js`を導入するのにExperience Platform Launchを使用することをお勧めします。たとえ&lt;a0/>を使用するタグが唯一のものであってもです。
+* `alloy.js`を導入するのにExperience Platform Launchを使用することをお勧めします。たとえを使用するタグが唯一のものであってもです。
 
 ## 「Adobe Experience Platform Launch・サーバ側」とは
 
@@ -153,6 +153,18 @@ Web SDKは、急速に発展しています。 その他の使用例が検討中
 ## CNAMEまたはファーストパーティドメインとは何ですか。また、それが重要なのはなぜですか。
 
 CNAMEに関する詳細は、[Adobeドキュメント](https://docs.adobe.com/content/help/ja-JP/id-service/using/reference/analytics-reference/cname.html)を参照してください
+
+## Adobe Experience PlatformWeb SDKはcookieを使用しますか。 その場合、どのcookieが使用されますか。
+
+はい。現在、Web SDKは、実装に応じて1 ～ 4のcookieを使用します。 以下は、Web SDKで表示される4つのcookieのリストと、その使用方法です。
+
+**kndct_orgid_identity:ECID** と、ECIDに関連するその他の情報の保存には、ID cookieが使用されます。
+
+**kndctr_orgid_consent:** このcookieは、Webサイトに対するユーザーの同意の優先度を保存します。
+
+**kndctr_orgid_personalization:** このcookieには、Adobe Targetがwebページのパーソナライズに使用するセッション情報が含まれます。
+
+**kndctr_orgid_consentcheck:** このセッションベースのcookieは、サーバーに対して、同意の環境設定サーバー側を調べるように通知します。
 
 ## Adobe Experience PlatformWeb SDKに関する詳細情報はどこで入手できますか？
 
