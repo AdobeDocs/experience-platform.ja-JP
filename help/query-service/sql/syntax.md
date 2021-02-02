@@ -1,31 +1,32 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；SQL構文；SQL;CTAS;CTAS；選択としてテーブルを作成
 solution: Experience Platform
 title: SQL 構文
 topic: syntax
 description: このドキュメントは、クエリサービスでサポートされる SQL 構文を示します。
 translation-type: tm+mt
-source-git-commit: e02028e9808eab3373143aba7bbc4a115c52746b
+source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 89%
+source-wordcount: '2212'
+ht-degree: 83%
 
 ---
 
 
 # SQL 構文
 
-[!DNL Query Service] は、標準のANSI SQLを文や他の制限付きコマンドに使用する機能を提供し `SELECT` ます。 This document shows SQL syntax supported by [!DNL Query Service].
+[!DNL Query Service] は、標準のANSI SQLを文や他の制限付きコマンドに使用する機能を `SELECT` 提供します。このドキュメントは、[!DNL Query Service]がサポートするSQL構文を示しています。
 
 ## SELECT クエリーの定義
 
-The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
+次の構文は、[!DNL Query Service]がサポートする`SELECT`クエリを定義します。
 
 ```sql
 [ WITH with_query [, ...] ]
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
     [ FROM from_item [, ...] ]
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
     [ WHERE condition ]
     [ GROUP BY grouping_element [, ...] ]
     [ HAVING condition [, ...] ]
@@ -63,6 +64,30 @@ table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
  
 TABLE [ ONLY ] table_name [ * ]
 ```
+
+### SNAPSHOT句
+
+この句は、スナップショットIDに基づいてテーブルのデータを増分的に読み取るために使用できます。 スナップショットIDは、データが書き込まれるたびに、データレークテーブル上の数値（タイプLong）で識別されるチェックポイントマーカーです。 SNAPSHOT句は、その次に使用するテーブルの関係に付加されます。
+
+```sql
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
+```
+
+#### 例
+
+```sql
+SELECT * FROM Customers SNAPSHOT SINCE 123;
+
+SELECT * FROM Customers SNAPSHOT AS OF 345;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+
+SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+
+SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+```
+
+SNAPSHOT句はテーブルまたはテーブルの別名で使用できますが、サブクエリまたは表示の上には使用できません。 SNAPHOST句は、テーブルにSELECTクエリを適用できるあらゆる場所で機能します。
 
 ### WHERE ILIKE 句
 
@@ -112,14 +137,15 @@ SELECT statement 2
 
 ## CREATE TABLE AS SELECT
 
-The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
+次の構文は、[!DNL Query Service]がサポートする`CREATE TABLE AS SELECT` (CTAS)クエリを定義します。
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-where,
-`target_schema_title` is the title of XDM schema. この句は、CTASクエリが作成した新しいデータセットに対して既存のXDMスキーマを使用する場合に限り、新しいデータセットに対してインジェストされたすべての新しいバッチの行レベルの検証を必要とするかどうかを指定します。`rowvalidation` デフォルト値は「true」です。
+ここで
+`target_schema_title`はXDMスキーマのタイトルです。 この句は、CTASクエリが作成した新しいデータセットに対して既存のXDMスキーマを使用する場合にのみ使用してください
+`rowvalidation`は、新しく作成されたデータセットに対して取り込まれたすべての新しいバッチについて、行レベルの検証を必要とするかどうかを指定します。 デフォルト値は「true」です。
 
 `select_query` は `SELECT` 文で、その構文は上述されています。
 
@@ -135,10 +161,15 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 
 1. `SELECT` 文には、`COUNT`、`SUM`、`MIN` などの集計関数のエイリアスが含まれている必要があります。
 2. `SELECT` 文は () 括弧ありでもなしでも使用できます。
+3. `SELECT`ステートメントには、増分差分をターゲットテーブルに読み込むためのSNAPSHOT句を指定できます。
+
+```sql
+CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
+```
 
 ## INSERT INTO
 
-The following syntax defines an `INSERT INTO` query supported by [!DNL Query Service]:
+次の構文は、[!DNL Query Service]がサポートする`INSERT INTO`クエリを定義します。
 
 ```sql
 INSERT INTO table_name select_query
@@ -156,6 +187,11 @@ INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 1. `SELECT` 文は () 括弧で囲んではいけません。
 2. `SELECT` 文の結果のスキーマは、`INSERT INTO` 文で定義されたテーブルの結果に準拠している必要があります。
+3. `SELECT`ステートメントには、増分差分をターゲットテーブルに読み込むためのSNAPSHOT句を指定できます。
+
+```sql
+INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
+```
 
 ### DROP TABLE
 
@@ -172,7 +208,7 @@ DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREATE VIEW
 
-The following syntax defines a `CREATE VIEW` query supported by [!DNL Query Service]:
+次の構文は、[!DNL Query Service]がサポートする`CREATE VIEW`クエリを定義します。
 
 ```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
@@ -189,7 +225,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### DROP VIEW
 
-The following syntax defines a `DROP VIEW` query supported by [!DNL Query Service]:
+次の構文は、[!DNL Query Service]がサポートする`DROP VIEW`クエリを定義します。
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -244,7 +280,7 @@ CLOSE { name }
 
 ### COMMIT
 
-No action is taken in [!DNL Query Service] as a response to the commit transaction statement.
+[!DNL Query Service]では、コミットトランザクション文への応答としてのアクションは行われません。
 
 ```sql
 COMMIT [ WORK | TRANSACTION ]
@@ -482,7 +518,7 @@ where 'format_name' is be one of:
 
 >[!NOTE]
 >
->完全な出力パスは、 `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>完全な出力パスは`adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`です
 
 
 ### ALTER
