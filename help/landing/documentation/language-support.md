@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
+keywords: Experience Platform；ホーム；人気のあるトピック；CJA;ジャーニー分析；顧客ジャーニー分析；キャンペーンの調整；オーケストレーション；顧客ジャーニー;ジャーニー;ジャーニーの調整；機能；地域
 solution: Experience Platform
-title: プラットフォームドキュメントの言語サポート
+title: Experience Platformドキュメントの言語サポート
 topic: getting started
-description: Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。Experience Platform を使用すると、顧客データとコンテンツを任意のシステムから一元管理し、データサイエンスと機械学習を適用して、パーソナライズされた豊富なエクスペリエンスのデザインと配信を大幅に改善できます。
+description: Adobe Experience Platformを使用すると、組織は顧客データを一元化および標準化してから、データサイエンスと機械学習を適用し、パーソナライズされた豊富なエクスペリエンスの設計と配信を大幅に改善できます。
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 45%
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
-# プラットフォームドキュメントの言語サポート
+# Experience Platformドキュメントの言語サポート
 
-Adobe Experience Platformのドキュメントは複数の言語で提供されています。 言語を変更するには、言語ドロップダウンをクリックし、目的の言語を選択します。
+Adobe Experience Platformのドキュメントは複数の言語で提供されています。
 
-![画像](../images/overview/lang.jpg)
+ドキュメントが表示される言語を変更するには、上部ナビゲーションの言語アイコンを選択します。
 
-## [!DNL Experience Platform]ドキュメント
+![](../images/overview/documentation-language.png)
 
-使用可能なドキュメントの種類について詳しくは、 [プラットフォームのドキュメントの種類の概要を参照してください](overview.md)。
+言語ドロップダウンが開いたら、ドキュメントの表示に使用する言語を選択します。
 
-特定の [!DNL Platform] 機能やサービスの詳細については、 [Experience Platformドキュメントランディングページからガイドを選択してください](https://experienceleague.adobe.com/docs/experience-platform.html)。
+![](../images/overview/documentation-language-select.png)
