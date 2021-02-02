@@ -1,26 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: 同意
+title: 同意エンドポイント
 topic: developer guide
+description: Privacy ServiceAPIを使用して、Experience Cloudアプリに対する顧客の同意要求を管理する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# 同意
+# 同意エンドポイント
 
-個人データを収集するには、一定の規制で顧客の明示的な同意が必要でした。 APIの `/consent`[!DNL Privacy Service] エンドポイントを使用すると、顧客の同意要求を処理し、それらをプライバシーワークフローに統合できます。
+特定の規制では、個人データを収集する前に、明示的な顧客の同意が必要です。 [!DNL Privacy Service] APIの`/consent`エンドポイントを使用すると、顧客の同意要求を処理し、それらをプライバシーワークフローに統合できます。
 
-このガイドを使用する前に、以下のAPI呼び出し例に示す必須の認証ヘッダーの詳細については、 [「はじめに](./getting-started.md) 」の節を参照してください。
+このガイドを使用する前に、以下のAPI呼び出しの例に示す必須の認証ヘッダーの情報については、[はじめに](./getting-started.md)の節を参照してください。
 
 ## 顧客の同意要求の処理
 
-同意要求は、エンドポイントに対してPOST要求を行うことによって処理され `/consent` ます。
+`/consent`エンドポイントにPOSTリクエストを行うことで、同意リクエストが処理されます。
 
 **API 形式**
 
@@ -30,7 +31,7 @@ POST /consent
 
 **リクエスト**
 
-次の要求は、 `entities` 配列に指定されたユーザーIDに対して新しい同意ジョブを作成します。
+次のリクエストは、`entities`配列で提供されるユーザーIDに対して新しい同意ジョブを作成します。
 
 ```shell
 curl -X POST \
@@ -61,15 +62,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `optOutOfSale` | trueに設定されている場合、ユーザーは個人データの販売または共有をオプトアウトし `entities` たいと思っていることを示します。 |
-| `entities` | 同意要求が適用されるユーザーを示すオブジェクトの配列。 各オブジェクトには、個々のユーザー `namespace` とその名前空間 `values` を一致させるための、との配列が含まれます。 |
-| `nameSpace` | 配列内の各オブジェクトには、Privacy ServiceAPIで `entities` 認識される [標準ID名前空間の1つが含まれている必要があります](./appendix.md#standard-namespaces) 。 |
-| `values` | 各ユーザーの値の配列。指定された値に対応し `nameSpace`ます。 |
+| `optOutOfSale` | trueに設定した場合、`entities`の下に提供されるユーザーが、個人データの販売または共有をオプトアウトすることを希望することを示します。 |
+| `entities` | 同意要求が適用されるユーザーを示すオブジェクトの配列。 各オブジェクトには、`namespace`と`values`の配列が含まれ、各名前空間に対応付けられます。 |
+| `nameSpace` | `entities`配列内の各オブジェクトには、Privacy ServiceAPIで認識される[標準ID名前空間](./appendix.md#standard-namespaces)の1つが含まれている必要があります。 |
+| `values` | 指定された`nameSpace`に対応する、各ユーザーの値の配列。 |
 
 >[!NOTE]
 >
->送信先の顧客ID値を決定する方法について詳し [!DNL Privacy Service]くは、IDデータの [提供に関するガイドを参照してください](../identity-data.md)。
+>[!DNL Privacy Service]に送信する顧客ID値を決定する方法について詳しくは、[IDデータ](../identity-data.md)の提供ガイドを参照してください。
 
 **応答** 
 
-正常な応答が返されると、ペイロードのないHTTPステータス202(Accepted)が返され、その要求がによって受け入れられ、処理中であるこ [!DNL Privacy Service] とを示します。
+正常な応答は、ペイロードなしのHTTPステータス202 (Accepted)を返し、その要求が[!DNL Privacy Service]によって受け入れられ、処理中であることを示します。
