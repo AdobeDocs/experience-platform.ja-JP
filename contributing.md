@@ -1,6 +1,9 @@
 ---
-source-git-commit: 1c79978cfbd5beb0561e336cddf1461686f73882
-translation-type: ht
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+workflow-type: tm+mt
+translation-type: tm+mt
+source-wordcount: '296'
+ht-degree: 97%
 
 ---
 # コントリビューション
@@ -11,11 +14,13 @@ translation-type: ht
 
 ## 行動規範
 
-このプロジェクトはアドビの[行動規範](code-of-conduct.md)に従います。参加する際には、本行動規範を遵守することが求められます。不適切な行動が見られた場合は、[Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com) までお知らせください。
+このプロジェクトはアドビの[行動規範](code-of-conduct.md)に従います。参加する際には、本行動規範を遵守することが求められます。
+
+不適切な行動が見られた場合は、[Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com) までお知らせください。
 
 ## コントリビューターガイドドキュメント
 
-「[コントリビューターガイド](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)」を参照してください。
+「[コントリビューターガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)」を参照してください。
 
 ## 質問がある場合
 
@@ -23,7 +28,11 @@ translation-type: ht
 
 ## コントリビューター使用許諾契約
 
-このプロジェクトに対してサードパーティがおこなうコントリビューションには、署名されたコントリビューター使用許諾契約（CLA）が関連付けられている必要があります。この使用許諾契約は、アドビに対してそのコントリビューションをプロジェクトの一部として再配布する権限を認めるものです。[アドビの CLA に署名してください。](http://opensource.adobe.com/cla.html)アドビの CLA は 1 回提出すれば済みます。以前に提出したことがある場合は、再提出する必要はありません。
+このプロジェクトに対してサードパーティがおこなうコントリビューションには、署名されたコントリビューター使用許諾契約（CLA）が関連付けられている必要があります。この使用許諾契約は、アドビに対してそのコントリビューションをプロジェクトの一部として再配布する権限を認めるものです。
+
+[アドビの CLA に署名してください。](http://opensource.adobe.com/cla.html)
+
+アドビの CLA は 1 回提出すれば済みます。以前に提出したことがある場合は、再提出する必要はありません。
 
 ## コードのレビュー
 
@@ -40,4 +49,4 @@ submitting a pull request!
 
 ## セキュリティ上の問題
 
-セキュリティ上の問題はこのイシュートラッカーに報告しないでください。代わりに、[セキュリティ専門家に問題を報告します。](https://helpx.adobe.com/jp/security/alertus.html)
+セキュリティ上の問題はこのイシュートラッカーに報告しないでください。代わりに、[セキュリティ専門家に問題を報告します。](https://helpx.adobe.com/jp/security/alertus.html)。
