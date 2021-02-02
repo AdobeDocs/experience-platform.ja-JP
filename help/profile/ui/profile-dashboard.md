@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
-title: プロファイルダッシュボード
+keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；ユーザインターフェイス；UI；カスタマイズ；プロファイルダッシュボード;ダッシュボード
+title: プロファイルダッシュボードUIガイド
 description: 'このガイドでは、Adobe Experience PlatformUIで利用できるリアルタイム顧客プロファイルデータダッシュボードについて説明します。 '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 983b357f2f17aad273f0465dc9250240a062dcd2
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '697'
 ht-degree: 1%
 
 ---
 
 
-# アルファ [!DNL Real-time Customer Profile] ダッシュボード {#profile-dashboard}
+# （アルファ） [!DNL Real-time Customer Profile]ダッシュボード{#profile-dashboard}
 
 >[!IMPORTANT]
 >
 >このドキュメントで説明されているダッシュボード機能は、現在アルファベットで表示されており、すべてのユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
 
-Adobe Experience Platformユーザーインターフェイス(UI)は、毎日のスナップショット時に取り込まれる、データに関する重要な情報を表示できるダッシュボードを提供します。 [!DNL Real-time Customer Profile] このガイドでは、UIの [!DNL Profile] ダッシュボードにアクセスして操作する方法と、ダッシュボードに表示される指標に関する詳細について説明します。
+Adobe Experience Platformユーザーインターフェイス(UI)は、毎日のスナップショットの間に取り込まれた[!DNL Real-time Customer Profile]データに関する重要な情報を表示できるダッシュボードを提供します。 このガイドでは、UIの[!DNL Profile]ダッシュボードにアクセスして操作する方法と、ダッシュボードに表示される指標に関する詳細を説明します。
 
-Experience Platformユーザーインターフェイスに含まれるすべてのプロファイル機能の概要については、 [リアルタイムプロファイルUIガイドを参照してください](user-guide.md)。
+Experience Platformユーザーインターフェイス内のプロファイル機能の概要については、[リアルタイムカスタマープロファイルUIガイド](user-guide.md)を参照してください。
 
 ## プロファイルダッシュボードデータ
 
@@ -33,11 +33,11 @@ Experience Platformユーザーインターフェイスに含まれるすべて�
 >
 >スナップショットが作成された後にデータに対して行われた変更や更新は、次のスナップショットが作成されるまでダッシュボードに反映されません。
 
-プロファイルダッシュボードに表示される指標は、組織のデフォルトの結合ポリシーに基づいています。 マージポリシーの詳細、およびデフォルトのマージポリシーを選択または変更する方法については、 [マージポリシーのUIガイドを参照してください](merge-policies.md)。
+プロファイルダッシュボードに表示される指標は、組織のデフォルトの結合ポリシーに基づいています。 結合ポリシーの詳細、およびデフォルトの結合ポリシーを選択または変更する方法については、[結合ポリシーUIガイド](merge-policies.md)を参照してください。
 
 ## プロファイルダッシュボードの詳細
 
-Platform UI内のプロファイルダッシュボードに移動するには、左のナビゲーションバーの「 **[!UICONTROL プロファイル]** 」を選択し、「 **[!UICONTROL 概要]** 」タブを選択してダッシュボードを表示します。
+プラットフォームUI内のプロファイルダッシュボードに移動するには、左のナビゲーションバーの&#x200B;**[!UICONTROL プロファイル]**&#x200B;を選択し、**[!UICONTROL 概要]**&#x200B;タブを選択してダッシュボードを表示します。
 
 ![](../images/profile-dashboard/dashboard-overview.png)
 
@@ -56,17 +56,21 @@ Experience Platformは、プロファイルデータに関連する様々な指�
 
 ### [!UICONTROL オーディエンスサイズ] {#audience-size}
 
-オーディエンス **[!UICONTROL サイズ]** Widgetは、スナップショットが作成された時点での、プロファイルデータストア内のマージされたプロファイルの合計数を表示します。 この数値は、組織の既定の結合ポリシーがプロファイルデータに適用され、プロファイルフラグメントを結合して個々のプロファイルを1つにするための結果です。
+**[!UICONTROL オーディエンスサイズ]**&#x200B;ウィジェットは、スナップショットが作成された時点での、プロファイルデータストア内のマージされたプロファイルの合計数を表示します。 この数値は、組織の既定の結合ポリシーがプロファイルデータに適用され、プロファイルフラグメントを結合して個々のプロファイルを1つにするための結果です。
 
-フラグメントと結合されたプロファイルの詳細については、 [プロファイルの概要の「](../home.md#profile-fragments-vs-merged-profiles) プロファイルフラグメントと結合されたプロファイル [」セクションを読み始めてください](../home.md)。
+フラグメントと結合されたプロファイルの詳細については、まず、[プロファイルの概要](../home.md)の&#x200B;*プロファイルフラグメントと結合されたプロファイル*&#x200B;セクションを読んでください。
+
+>[!NOTE]
+>
+>この指標の計算に使用されるマージポリシーは、[!UICONTROL License usage]ダッシュボードの[!UICONTROL Addressableオーディエンス]の計算に使用されるシステム生成マージポリシーと異なるので、[!DNL Profile]と[!UICONTROL License usage]ダッシュボードのオーディエンス数が完全に同じになる可能性はありません。
 
 ![](../images/profile-dashboard/audience-size.png)
 
 ### [!UICONTROL 名前空間別プロファイル数] {#profiles-by-namespace}
 
-名前空間別 **[!UICONTROL プロファイル]** Widgetは、プロファイルストア内の結合されたすべてのプロファイルでの名前空間の内訳を表示します。 1つのプロファイルに複数のプロファイルが関連付けられている場合があるので、 [!UICONTROL ID名前空間別の名前空間の合計数] (つまり、各名前空間に表示される値を合計した数)は、常にマージプロファイルの合計数より多くなります。 例えば、ある顧客が複数のチャネルで自社のブランドとやり取りした場合、複数の名前空間がその個々の顧客に関連付けられます。
+名前空間&#x200B;]**別の**[!UICONTROL &#x200B;プロファイルは、プロファイルストア内の結合されたすべてのプロファイルの名前空間の内訳を表示します。 1つのプロファイルに複数の名前空間が関連付けられている場合があるので、[!UICONTROL ID名前空間]による名前空間の合計数(つまり、各プロファイルに表示される値を合計した数)は、常にマージプロファイルの合計数より多くなります。 例えば、ある顧客が複数のチャネルで自社のブランドとやり取りした場合、複数の名前空間がその個々の顧客に関連付けられます。
 
-ID名前空間の詳細については、 [Adobe Experience PlatformIDサービスのドキュメントを参照してください](../../identity-service/home.md)。
+ID名前空間の詳細については、[Adobe Experience PlatformIDサービスドキュメント](../../identity-service/home.md)を参照してください。
 
 ![](../images/profile-dashboard/profiles-by-namespace.png)
 
@@ -79,4 +83,4 @@ Platform UIには、Experience Platform内のデータのスナップショッ�
 
 ## 次の手順
 
-このドキュメントに従うと、プロファイルダッシュボードを見つけて、利用可能なウィジェットに表示される指標を理解できるようになります。 Experience PlatformUIでの [!DNL Profile] データの操作について詳しくは、 [[!DNL Profile] UIガイドを参照してください](user-guide.md)。
+このドキュメントに従うと、プロファイルダッシュボードを見つけて、利用可能なウィジェットに表示される指標を理解できるようになります。 Experience PlatformUIでの[!DNL Profile]データの操作について詳しくは、[[!DNL Profile] UIガイド](user-guide.md)を参照してください。
