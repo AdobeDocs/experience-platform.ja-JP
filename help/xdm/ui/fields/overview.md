@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field;
+keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；フィールド；
 solution: Experience Platform
 title: UIでのXDMフィールドの定義
 description: Experience PlatformユーザーインターフェイスでXDMフィールドを定義する方法を説明します。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1311'
 ht-degree: 4%
 
 ---
@@ -86,10 +86,10 @@ UIで新しいXDMフィールドを定義するには、まず[!DNL Schema Edito
 | [!UICONTROL 形式] | [!UICONTROL 文字列] | 値が準拠する必要がある文字列に対して、事前定義済みの形式のリストから選択します。 次の形式を使用できます。 <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL 電子メール]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL 最小長] | [!UICONTROL 文字列] | 取り込み時に値を受け入れるために文字列に含める必要がある最小文字数。 |
 | [!UICONTROL 最大長] | [!UICONTROL 文字列] | 取り込み時に値を受け入れるために文字列に含める必要がある最大文字数。 |
-| [!UICONTROL 最小値] | [!UICONTROL Double] | 取り込み時に重複が受け入れられる最小値。 取り込まれた値がここに入力された値と完全に一致する場合は、その値が受け入れられます。 |
-| [!UICONTROL 最大値] | [!UICONTROL 重複] | 取り込み時に重複が受け入れられる最大値。 取り込まれた値がここに入力された値と完全に一致する場合は、その値が受け入れられます。 |
-| [!UICONTROL 排他的最小値] | [!UICONTROL 重複] | 取り込み時に重複が受け入れられる最大値。 取り込まれた値がここに入力された値と完全に一致する場合、その値は拒否されます。 |
-| [!UICONTROL 排他的最大値] | [!UICONTROL 重複] | 取り込み時に重複が受け入れられる最大値。 取り込まれた値がここに入力された値と完全に一致する場合、その値は拒否されます。 |
+| [!UICONTROL 最小値] | [!UICONTROL Double] | 取り込み時に重複が受け入れられる最小値。 取り込まれた値がここに入力された値と完全に一致する場合は、その値が受け入れられます。 この制約を使用する場合、「[!UICONTROL 排他的最小値]」制約は空白にする必要があります。 |
+| [!UICONTROL 最大値] | [!UICONTROL 重複] | 取り込み時に重複が受け入れられる最大値。 取り込まれた値がここに入力された値と完全に一致する場合は、その値が受け入れられます。 この制約を使用する場合、「[!UICONTROL 排他的最大値]」制約は空白にする必要があります。 |
+| [!UICONTROL 排他的最小値] | [!UICONTROL 重複] | 取り込み時に重複が受け入れられる最大値。 取り込まれた値がここに入力された値と完全に一致する場合、その値は拒否されます。 この制約を使用する場合、「[!UICONTROL 最小値]」（非排他的）制約は空白にする必要があります。 |
+| [!UICONTROL 排他的最大値] | [!UICONTROL 重複] | 取り込み時に重複が受け入れられる最大値。 取り込まれた値がここに入力された値と完全に一致する場合、その値は拒否されます。 この制約を使用する場合、「[!UICONTROL 最大値]」（非排他的）制約は空白にする必要があります。 |
 
 ## 特殊フィールドの種類{#special}
 
