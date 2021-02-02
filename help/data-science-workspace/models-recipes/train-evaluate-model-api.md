@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
+keywords: Experience Platform；トレーニングと評価；データサイエンスワークスペース；人気の高いトピック；Senesie Machine Learning API
 solution: Experience Platform
 title: モデルのトレーニングと評価（API）
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Senesie Machine Learning API呼び出しを使用して、モデルを作成、トレーニング、評価する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 98%
+source-wordcount: '1230'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 98%
 
 API を使用したモデルのトレーニングと評価に必要なエンジンを作成するには、[API を使用してパッケージ化されたレシピをインポート](./import-packaged-recipe-api.md)します。
 
-API 呼び出しの開始時に必要な認証については、[こちら](../../tutorials/authentication.md)のチュートリアルを参照してください。
+[Experience PlatformAPI認証のチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)に従って、API呼び出しを行う開始を実行します。
 
 このチュートリアルから、次の値を入手できます。
 
