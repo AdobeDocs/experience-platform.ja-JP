@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;PayPal connector;paypal;Paypal
+keywords: Experience Platform；ホーム；人気のあるトピック；PayPalコネクタ；Paypal;Paypal
 solution: Experience Platform
 title: Flow Service APIを使用してPayPalコネクタを作成する
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、PayPalをExperience Platformに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 20%
+source-wordcount: '579'
+ht-degree: 19%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 20%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
