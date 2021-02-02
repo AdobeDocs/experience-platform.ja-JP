@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；自動適用；APIベースの適用；データガバナンス
 solution: Experience Platform
 title: ポリシー適用の概要
-topic: enforcement
+topic: guide
 description: データ使用ラベルがAdobe Experience Platformのデータセットに適用され、これらのラベルに対するマーケティング活動に対してデータ使用ポリシーが定義されると、データ管理機能により、これらのポリシーを適用し、ポリシー違反を構成するデータ操作を防ぐことができます。 Data Governance機能によって提供されるプラットフォームのポリシー適用には、APIベースの適用と自動適用の2つの方法があります。
 translation-type: tm+mt
-source-git-commit: 30733f2274ff8cb9ae73cf2b9f7f0219fefbd393
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '232'
 ht-degree: 12%
 
 ---
