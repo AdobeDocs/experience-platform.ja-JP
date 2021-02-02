@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
+keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API;プレビュー；サンプル
 title: プロファイルプレビュー — リアルタイム顧客プロファイルAPI
-description: Adobe Experience Platformでは、複数のソースから顧客データを取り込んで、個々の顧客に対して堅牢な統合プロファイルを構築できます。 リアルタイム顧客プロファイルを有効にしたデータは、プラットフォームに取り込まれると、プロファイルのデータストア内に保存されます。 プロファイルストアのレコード数が増減すると、データストア内のプロファイルフラグメントと結合プロファイルの数に関する情報を含むサンプルジョブが実行されます。 プロファイルAPIを使用して、最新の成功したサンプルや、データセット別、ID名前空間別にリストプロファイルの配布をプレビューできます。
+description: リアルタイム顧客プロファイルAPIエンドポイントを使用すると、プロファイルデータの最新の成功したサンプルをプレビューできるほか、データセット別、Adobe Experience Platform内のID名前空間別にリストプロファイルの配布を検証できます。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1554'
 ht-degree: 5%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # プレビューサンプルステータスエンドポイント(プロファイルプレビュー)
 
-Adobe Experience Platformでは、複数のソースから顧客データを取り込んで、個々の顧客に対して堅牢な統合プロファイルを構築できます。 リアルタイム顧客プロファイルが有効なデータがに取り込まれ [!DNL Platform]ると、そのデータはプロファイルデータストア内に保存されます。
+Adobe Experience Platformでは、複数のソースから顧客データを取り込んで、個々の顧客に対して堅牢な統合プロファイルを構築できます。 リアルタイム顧客プロファイルが有効なデータは[!DNL Platform]に取り込まれるので、プロファイルデータストア内に保存されます。
 
 プロファイルストアへのレコードの取り込みが、総プロファイル数を5%以上増減すると、ジョブがトリガされ、カウントが更新される。 ストリーミングデータワークフローの場合、5%増減のしきい値に達したかどうかを判断するために、1時間ごとにチェックが行われます。 ジョブが存在する場合は、そのジョブが自動的にトリガされ、カウントが更新されます。 バッチ取り込みの場合、バッチをプロファイルストアに正常に取り込んでから15分以内に、5%の増減のしきい値に達すると、ジョブが実行され、カウントが更新されます。 プロファイルAPIを使用して、最新の成功したサンプルジョブをプレビューできるほか、リストプロファイルの配布をデータセット別、ID名前空間別に測定できます。
 
-これらの指標は、Experience PlatformUIの [!UICONTROL プロファイル] セクション内でも使用できます。 UIを使用してプロファイルデータにアクセスする方法については、 [[!DNL Profile] ユーザガイドを参照してください](../ui/user-guide.md)。
+これらの指標は、Experience PlatformUIの[!UICONTROL プロファイル]セクション内でも使用できます。 UIを使用したプロファイルデータへのアクセス方法については、[[!DNL Profile] ユーザーガイド](../ui/user-guide.md)を参照してください。
 
 ## はじめに
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## プロファイルフラグメントと結合されたプロファイル
 
@@ -30,9 +30,9 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 個々の顧客プロファイルは、複数のプロファイルフラグメントで構成され、それらが結合されてその顧客の単一の表示が形成されます。 例えば、顧客が複数のチャネルをまたがって自社のブランドとやり取りを行う場合、1人の顧客に関連する複数のプロファイルフラグメントが複数のデータセットに表示されます。 これらのフラグメントがプラットフォームに取り込まれると、結合ポリシーに基づいて結合され、そのお客様用の単一のプロファイルが作成されます。 したがって、各プロファイルは複数のフラグメントで構成されるので、プロファイルフラグメントの合計数は、結合されたプロファイルの合計数よりも常に多くなる可能性が高くなります。
 
-## 表示の最後のサンプル状態 {#view-last-sample-status}
+## 表示の最後のサンプル状態{#view-last-sample-status}
 
-エンドポイントに対してGETリクエストを実行し、IMS組織で最後に正常に実行されたサンプルジョブの詳細を表示できます。 `/previewsamplestatus` これには、サンプル内のプロファイルの合計数、プロファイル数指標、または組織がExperience Platform内に持つプロファイルの合計数が含まれます。 プロファイル数は、プロファイルフラグメントを結合して個々の顧客に対する単一のプロファイルを形成した後に生成されます。 つまり、様々なチャネルでブランドとやり取りする 1 人の顧客に関連する複数のプロファイルフラグメントが組織に存在する場合でも、これらのフラグメントは、1 個人に関連しているため（デフォルトの結合ポリシーに従って）結合され、プロファイルの数が「1」として返されます。
+`/previewsamplestatus`エンドポイントに対してGETリクエストを実行し、IMS組織で実行された最後に成功したサンプルジョブの詳細を表示できます。 これには、サンプル内のプロファイルの合計数、プロファイル数指標、または組織がExperience Platform内に持つプロファイルの合計数が含まれます。 プロファイル数は、プロファイルフラグメントを結合して個々の顧客に対する単一のプロファイルを形成した後に生成されます。 つまり、様々なチャネルでブランドとやり取りする 1 人の顧客に関連する複数のプロファイルフラグメントが組織に存在する場合でも、これらのフラグメントは、1 個人に関連しているため（デフォルトの結合ポリシーに従って）結合され、プロファイルの数が「1」として返されます。
 
 プロファイル数には、属性（レコードデータ）を持つプロファイルと、Adobe Analyticsプロファイルなどの時系列(イベント)データのみを含むプロファイルの両方が含まれます。 プラットフォーム内の最新のプロファイル総数を提供するために、プロファイルデータが取り込まれる際に、サンプルジョブは定期的に更新されます。
 
@@ -59,7 +59,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->この例の応答では、 `numRowsToRead` とは互いに等し `totalRows` い。 Experience Platform内に組織が持つプロファイルの数によっては、この場合があります。 ただし、これら2つの数字は異なります。これ `numRowsToRead` は、サンプルがプロファイル総数(`totalRows`)のサブセットとして表されるので、小さい方の数字になります。
+>この例の応答では、`numRowsToRead`と`totalRows`は互いに等しくなります。 Experience Platform内に組織が持つプロファイルの数によっては、この場合があります。 ただし、これら2つの数字は異なります。`numRowsToRead`は、プロファイルの総数(`totalRows`)のサブセットとしてサンプルを表すので、通常は小さい方の数字になります。
 
 ```json
 {
@@ -84,7 +84,7 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `numRowsToRead` | サンプル内のマージされたプロファイルの合計数。 |
-| `sampleJobRunning` | サンプルジョブが進行中 `true` の場合に返すboolean値です。 バッチファイルがアップロードされた時点からプロファイルストアに実際に追加された時点までの待ち時間に対して、透明度を提供します。 |
+| `sampleJobRunning` | サンプルジョブが進行中の場合に`true`を返すboolean値です。 バッチファイルがアップロードされた時点からプロファイルストアに実際に追加された時点までの待ち時間に対して、透明度を提供します。 |
 | `cosmosDocCount` | Cosmosでのドキュメントの合計数です。 |
 | `totalFragmentCount` | プロファイルストア内のプロファイルフラグメントの合計数です。 |
 | `lastSuccessfulBatchTimestamp` | 前回成功したバッチ取り込みのタイムスタンプ。 |
@@ -92,13 +92,13 @@ curl -X GET \
 | `totalRows` | エクスペリエンスプラットフォーム内の結合されたプロファイルの合計数です。「プロファイル数」とも呼ばれます。 |
 | `lastBatchId` | 最後のバッチ取り込みID。 |
 | `status` | 最後のサンプルのステータス。 |
-| `samplingRatio` | サンプリングされた結合プロファイル(`numRowsToRead`)と結合された合計プロファイル(`totalRows`)の比率。10進数形式で表されます。 |
+| `samplingRatio` | サンプリングした結合プロファイル(`numRowsToRead`)と結合された合計プロファイル(`totalRows`)の比率。10進数形式で表されます。 |
 | `mergeStrategy` | サンプルで使用されるマージ方法。 |
 | `lastSampledTimestamp` | 最後に成功したサンプルタイムスタンプ。 |
 
 ## データセット別リストプロファイル配布
 
-プロファイルセット別のGETの分布を確認するには、エンドポイントに対してリクエストを実行し `/previewsamplestatus/report/dataset` ます。
+プロファイルセットごとのGETの分布を確認するには、`/previewsamplestatus/report/dataset`エンドポイントに対してデータリクエストを実行します。
 
 **API 形式**
 
@@ -113,7 +113,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストでは、 `date` パラメーターを使用して、指定した日付の最新のレポートを返します。
+次のリクエストでは、`date`パラメーターを使用して、指定した日付の最新のレポートを返します。
 
 ```shell
 curl -X GET \
@@ -126,7 +126,7 @@ curl -X GET \
 
 **応答** 
 
-この応答には、データセットオブジェクトのリストを含む `data` 配列が含まれます。 表示された応答は、3つのデータセットを表示するように切り捨てられました。
+この応答には、データセットオブジェクトのリストを含む`data`配列が含まれます。 表示された応答は、3つのデータセットを表示するように切り捨てられました。
 
 >[!NOTE]
 >
@@ -179,21 +179,21 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `sampleCount` | このデータセットIDを持つ、サンプリングされた結合プロファイルの合計数。 |
-| `samplePercentage` | サンプリングさ `sampleCount` れた結合プロファイルの合計数( `numRowsToRead` 最後のサンプルステータスで返される [値](#view-last-sample-status))に対する割合（百進数形式）。 |
+| `samplePercentage` | `sampleCount`は、サンプルされた結合プロファイルの合計数（[最後のサンプル状態](#view-last-sample-status)で返された`numRowsToRead`値）に対する割合で、10進数形式で表されます。 |
 | `fullIDsCount` | このデータセットIDとマージされたプロファイルの合計数。 |
-| `fullIDsPercentage` | 結合さ `fullIDsCount` れたプロファイルの総数( `totalRows` 最後のサンプルステータスで返される [値](#view-last-sample-status))に対する割合（小数形式）。 |
+| `fullIDsPercentage` | 結合されたプロファイルの合計数（[最後のサンプル状態](#view-last-sample-status)で返される`totalRows`値）に対する`fullIDsCount`のパーセンテージ。10進数形式で表します。 |
 | `name` | データセットの作成時に提供される、データセットの名前。 |
 | `description` | データセットの作成時に提供される、データセットの説明。 |
 | `value` | データセットのID。 |
 | `streamingIngestionEnabled` | データセットのストリーミング取り込みが有効になっているかどうか。 |
 | `createdUser` | データセットを作成したユーザーのユーザーID。 |
-| `reportTimestamp` | レポートのタイムスタンプ。 リクエスト中に `date` パラメーターが指定された場合、レポートは指定された日付に対して返されます。 パラメーターを指定しな `date` い場合は、最新のレポートが返されます。 |
+| `reportTimestamp` | レポートのタイムスタンプ。 リクエスト時に`date`パラメーターが指定された場合、指定された日付のレポートが返されます。 `date`パラメーターが指定されない場合は、最新のレポートが返されます。 |
 
 
 
 ## 名前空間別リストプロファイル配布
 
-エンドポイントに対してGETリクエストを実行し、プロファイルストア内の結合されたすべてのプロファイルにわたるID名前空間別の分類を表示できます。 `/previewsamplestatus/report/namespace` ID名前空間は、顧客データが関連付けられるコンテキストのインジケータとして機能する、Adobe Experience PlatformIDサービスの重要なコンポーネントです。 To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).
+`/previewsamplestatus/report/namespace`エンドポイントに対してGETリクエストを実行し、プロファイルストア内の結合されたすべてのプロファイルのID名前空間別の分類を表示できます。 ID名前空間は、顧客データが関連付けられるコンテキストのインジケータとして機能する、Adobe Experience PlatformIDサービスの重要なコンポーネントです。 詳しくは、[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。
 
 >[!NOTE]
 >
@@ -212,7 +212,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 **リクエスト**
 
-次のリクエストは `date` パラメーターを指定しないので、最新のレポートを返します。
+次の要求では`date`パラメーターが指定されていないので、最新のレポートが返されます。
 
 ```shell
 curl -X GET \
@@ -225,7 +225,7 @@ curl -X GET \
 
 **応答** 
 
-応答には `data` 配列が含まれ、各名前空間の詳細が含まれる個々のオブジェクトが含まれます。 4つの名前空間が表示されるように、表示される応答は切り捨てられました。
+応答には`data`配列が含まれ、各名前空間の詳細が個々のオブジェクトに含まれます。 4つの名前空間が表示されるように、表示される応答は切り捨てられました。
 
 ```json
 {
@@ -278,15 +278,15 @@ curl -X GET \
 | プロパティ | 説明 |
 |---|---|
 | `sampleCount` | 名前空間内のサンプル結合プロファイルの合計数。 |
-| `samplePercentage` | サンプリング `sampleCount` された結合プロファイルの割合( `numRowsToRead` 最後のサンプルステータスで返された [値](#view-last-sample-status))。10進数形式で表されます。 |
-| `reportTimestamp` | レポートのタイムスタンプ。 リクエスト中に `date` パラメーターが指定された場合、レポートは指定された日付に対して返されます。 パラメーターを指定しな `date` い場合は、最新のレポートが返されます。 |
+| `samplePercentage` | サンプリングされた結合プロファイルの割合（`sampleCount`最後のサンプルステータス](#view-last-sample-status)で返される`numRowsToRead`値）。10進数形式で表します。[ |
+| `reportTimestamp` | レポートのタイムスタンプ。 リクエスト時に`date`パラメーターが指定された場合、指定された日付のレポートが返されます。 `date`パラメーターが指定されない場合は、最新のレポートが返されます。 |
 | `fullIDsFragmentCount` | 名前空間内のプロファイルフラグメントの合計数です。 |
 | `fullIDsCount` | 名前空間内のマージされたプロファイルの合計数。 |
-| `fullIDsPercentage` | 結合さ `fullIDsCount` れたプロファイルの合計( `totalRows` 最後のサンプルステータスで返される [値](#view-last-sample-status))に対する割合（パーセンテージ）。表現は10進数形式です。 |
-| `code` | 名前空間 `code` の。 これは、 [Adobe Experience PlatformIDサービスAPIを使用して名前空間を操作する場合に見られます](../../identity-service/api/list-namespaces.md) 。また、Experience PlatformUIでは [!UICONTROL ID記号] とも呼ばれます。 To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md). |
-| `value` | 名前空間の `id` 値。 これは、 [IDサービスAPIを使用して名前空間を操作する場合に見つかります](../../identity-service/api/list-namespaces.md)。 |
+| `fullIDsPercentage` | 結合されたプロファイルの合計（[最後のサンプルステータス](#view-last-sample-status)で返される`totalRows`値）に対する`fullIDsCount`の割合（10進数形式）。 |
+| `code` | 名前空間の`code`。 これは、[Adobe Experience PlatformIDサービスAPI](../../identity-service/api/list-namespaces.md)を使用して名前空間を操作する場合に見つかります。また、Experience PlatformUIでは[!UICONTROL ID記号]とも呼ばれます。 詳しくは、[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。 |
+| `value` | 名前空間の`id`値。 これは、[IDサービスAPI](../../identity-service/api/list-namespaces.md)を使用する名前空間を操作する場合に見つかります。 |
 
 ## 次の手順
 
-同様の予測とプレビューを使用して、セグメント定義に関する表示の概要レベルの情報に対して、期待されるオーディエンスを確実に分離することもできます。 APIを使用したセグメントプレビューと予測の操作に関する詳細な手順については、 [!DNL Adobe Experience Platform Segmentation Service] API開発者ガイドの一部、 [プレビューと予測エンドポイントガイド](../../segmentation/api/previews-and-estimates.md)[!DNL Segmentation] を参照してください。
+同様の予測とプレビューを使用して、セグメント定義に関する表示の概要レベルの情報に対して、期待されるオーディエンスを確実に分離することもできます。 [!DNL Adobe Experience Platform Segmentation Service] APIを使用したセグメントプレビューと予測の使用に関する詳細な手順については、[!DNL Segmentation] API開発者ガイドの[プレビューと予測エンドポイントガイド](../../segmentation/api/previews-and-estimates.md)を参照してください。
 
