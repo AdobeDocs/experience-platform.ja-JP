@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics
+keywords: Experience Platform；はじめに；お客様向けai；人気の高いトピック
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: はじめに — 顧客 AI
 topic: Getting started
 description: ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 72%
+source-wordcount: '571'
+ht-degree: 71%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 72%
 
 顧客 AI のガイドでは、顧客 AI の使用に関連する様々な Platform サービスに関する十分な知識が必要です。開始する前に、次のドキュメントを確認してください。
 
-- [Experience Data Model(XDM)システム概要](../../xdm/home.md):XDMは、Experience Platformを利用し [!DNL Adobe Experience Cloud]て適切なメッセージを適切な人に、適切なチャネルに、ちょうど適切なタイミングで配信できる基本的なフレームワークです。 Experience Platform を構築する方法論である XDM システムによって、Platform サービスでエクスペリエンスデータモデルスキーマを操作できるようになります。
+- [Experience Data Model(XDM)システム概要](../../xdm/home.md):XDMは、Experience Platformを利用し [!DNL Adobe Experience Cloud]て適切なメッセージを適切な人に、適切なチャネルに、ちょうど適切なタイミングで配信できる基本的なフレームワークです。Experience Platform を構築する方法論である XDM システムによって、Platform サービスでエクスペリエンスデータモデルスキーマを操作できるようになります。
 - [スキーマ構成の基本](../../xdm/schema/composition.md):このドキュメントでは、Experience Data Model(XDM)スキーマと、で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介 [!DNL Adobe Experience Platform]します。
 - [スキーマの構築](../../xdm/tutorials/create-schema-ui.md)：このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
-- [リアルタイム顧客プロファイルの概要](../../rtcdp/overview.md):Real-time Customer Data Platform(Real-time CDP)を基盤とし [!DNL Adobe Experience Platform]て構築され、会社は既知の未知のデータを集約し、お客様の遍歴を通じてインテリジェントな判定を行い、お客様のプロファイルをアクティブにします。 リアルタイム CDP は、複数の大規模法人データソースを組み合わせて、1 対 1 のパーソナライズされた顧客体験をすべてのチャネルとデバイスにわたって提供するために使用できる、統合されたプロファイルを作成します。
+- [リアルタイム顧客プロファイルの概要](../../rtcdp/overview.md):Real-time Customer Data Platform(Real-time CDP)を基盤とし [!DNL Adobe Experience Platform]て構築され、会社は既知の未知のデータを集約し、お客様のジャーニー全体でインテリジェントな判定を使用して顧客のプロファイルをアクティブ化できます。リアルタイム CDP は、複数の大規模法人データソースを組み合わせて、1 対 1 のパーソナライズされた顧客体験をすべてのチャネルとデバイスにわたって提供するために使用できる、統合されたプロファイルを作成します。
 - [セグメント化サービスの概要](../../segmentation/home.md)：セグメント化とは、プロファイルストアにあるプロファイルのサブセットによって共有される特定の属性や行動を定義し、マーケティング可能な人々のグループを顧客ベースから選別するプロセスです。例えば、「スニーカーを購入し忘れましたか？」という電子メールキャンペーンでは、過去 30 日間にランニングシューズを検索したが購入を完了しなかったすべてのユーザーのオーディエンスが必要な場合があります。様々なセグメントを使用すると、様々なオーディエンスに焦点を当て、よりカスタマイズされたマーケティングエクスペリエンスを提供できます。
 - [セグメントビルダーユーザガイド](../../segmentation/tutorials/create-a-segment.md)：Platform では、セグメントを簡単に作成してアクセスでき、様々な構成要素を使用してセグメントをさらに特徴付けることができます。
 
@@ -28,9 +28,9 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->If you do not need to download raw scores, you can skip this step and proceed to the [configuration guide](./user-guide/configure.md).
+>生のスコアをダウンロードする必要がない場合は、この手順をスキップして[設定ガイド](./user-guide/configure.md)に進みます。
 
-顧客 AI スコアのダウンロードは、API 呼び出しの組み合わせを通じて実行されます。Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](../../tutorials/authentication.md)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+顧客 AI スコアのダウンロードは、API 呼び出しの組み合わせを通じて実行されます。Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -50,4 +50,4 @@ Experience Platform のすべてのリソースは、特定の仮想サンドボ
 
 ## 次の手順
 
-上記のドキュメントで概要を説明した手順を完了したら、 [Input and Output](./input-output.md) Documentationを参照してください。 このドキュメントでは、Customer AIで使用され、生成されるデータのタイプについて簡単に説明します。
+上記のドキュメントで概要を説明した手順を完了したら、[入出力](./input-output.md)のドキュメントを参照してください。 このドキュメントでは、Customer AIで使用され、生成されるデータのタイプについて簡単に説明します。
