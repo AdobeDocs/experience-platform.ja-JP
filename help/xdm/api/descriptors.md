@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
+keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；記述子；ID;ID；フレンドリ名；フレンドリ名；参照；リレーションシップ；リレーションシップ
 solution: Experience Platform
 title: 記述子
 description: スキーマレジストリAPIの/descriptorsエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDM記述子をプログラムで管理できます。
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1569'
-ht-degree: 57%
+source-wordcount: '1611'
+ht-degree: 56%
 
 ---
 
