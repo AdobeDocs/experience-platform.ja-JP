@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;Salesforce;salesforce
+keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce;salesforce
 solution: Experience Platform
 title: フローサービスAPIを使用したSalesforceコネクタの作成
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、フローサービスAPIを使用して、CRMデータを収集するためのSalesforceアカウントにプラットフォームを接続する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 20%
+source-wordcount: '570'
+ht-degree: 19%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 20%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](../../../../../tutorials/authentication.md)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
