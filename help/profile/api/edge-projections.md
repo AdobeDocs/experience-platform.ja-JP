@@ -1,27 +1,29 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: エッジ予測 — リアルタイム顧客プロファイルAPI
+keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
+title: Edge Projection APIエンドポイント
 topic: guide
+type: Documentation
+description: Adobe Experience Platformでは、複数のチャネルにわたって、顧客に合った一貫性のあるパーソナライズされたエクスペリエンスをリアルタイムで提供できます。変更が発生した場合に適切なデータを容易に利用でき、継続的に更新できます。 これは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバであるエッジを使用して行われます。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 86%
+source-wordcount: '1961'
+ht-degree: 83%
 
 ---
 
 
 # エッジ投影設定と宛先エンドポイント
 
-複数のチャネルにわたって顧客の体験をリアルタイムで調整し、一貫性を保ち、パーソナライズするためには、変更が発生した場合に適切なデータを容易に利用でき、継続的に更新する必要があります。Adobe Experience Platform を使用すると、エッジと呼ばれるものを使用して、データへのこのリアルタイムアクセスを可能にします。エッジとは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバーです。たとえば、Adobe Target や Adobe Campaign などの Adobe アプリケーションは、エッジを使用して、パーソナライズされた顧客体験をリアルタイムで提供します。データは投影によってエッジにルーティングされ、データの送信先となるエッジを定義する投影先と、エッジ上で利用可能にする特定の情報を定義する投影設定があります。This guide provides detailed instructions for using the [!DNL Real-time Customer Profile] API to work with edge projections, including destinations and configurations.
+複数のチャネルにわたって顧客の体験をリアルタイムで調整し、一貫性を保ち、パーソナライズするためには、変更が発生した場合に適切なデータを容易に利用でき、継続的に更新する必要があります。Adobe Experience Platform を使用すると、エッジと呼ばれるものを使用して、データへのこのリアルタイムアクセスを可能にします。エッジとは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバーです。たとえば、Adobe Target や Adobe Campaign などの Adobe アプリケーションは、エッジを使用して、パーソナライズされた顧客体験をリアルタイムで提供します。データは投影によってエッジにルーティングされ、データの送信先となるエッジを定義する投影先と、エッジ上で利用可能にする特定の情報を定義する投影設定があります。このガイドでは、[!DNL Real-time Customer Profile] APIを使用して、宛先や設定などのエッジ投影を操作する詳細な手順を説明します。
 
 ## はじめに
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 >[!NOTE]
 >
->Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. このドキュメントでは、複数 `Content-Type` が使用されています。 サンプル呼び出しのヘッダーには特に注意を払い、各リクエストで正しいヘッダーが使用されていることを確認して `Content-Type` ください。
+>ペイロード(POST、PUT、PATCH)を含む要求には、`Content-Type`ヘッダーが必要です。 このドキュメントでは、複数の`Content-Type`が使用されています。 リクエストごとに正しい`Content-Type`を使用していることを確認するため、サンプル呼び出しのヘッダーに特に注意してください。
 
 ## 投影先
 
@@ -330,7 +332,7 @@ curl -X DELETE \
 
 ## 投影設定
 
-投影設定は、各エッジで使用可能なデータに関する情報を提供します。Rather than projecting a complete [!DNL Experience Data Model] (XDM) schema to the edge, a projection provides only specific data, or fields, from the schema. 組織は、各 XDM スキーマに複数の投影設定を定義できます。
+投影設定は、各エッジで使用可能なデータに関する情報を提供します。投影は、完全な[!DNL Experience Data Model] (XDM)スキーマを端に投影するのではなく、スキーマから特定のデータ（フィールド）だけを提供します。 組織は、各 XDM スキーマに複数の投影設定を定義できます。
 
 ### すべての投影設定のリスト
 
@@ -355,7 +357,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **リクエスト**
 
-次のリクエストでは、 [!DNL Experience Data Model] スキーマクラスに関連付けられているすべての投影設定をリスト [!DNL XDM Individual Profile]します。 For more information on XDM and its role within [!DNL Platform], please begin by reading the [XDM System overview](../../xdm/home.md).
+次のリクエストは、[!DNL Experience Data Model]スキーマクラス[!DNL XDM Individual Profile]に関連付けられているすべての投影設定をリストします。 XDMと[!DNL Platform]内でのその役割についての詳細は、[XDMシステム概要](../../xdm/home.md)を読んでください。
 
 ```shell
 curl -X GET \
@@ -436,7 +438,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->The POST request to create a configuration requires a specific `Content-Type` header, as shown below. 正しくない`Content-Type`ヘッダーを使用すると、HTTP ステータス 415（サポートされていないメディアタイプ）エラーが発生します。
+>構成を作成するPOSTリクエストには、以下に示すように、特定の`Content-Type`ヘッダーが必要です。 正しくない`Content-Type`ヘッダーを使用すると、HTTP ステータス 415（サポートされていないメディアタイプ）エラーが発生します。
 
 ```shell
 curl -X POST \
@@ -648,4 +650,4 @@ curl -X POST \
 
 ## 次の手順
 
-This guide has shown you the steps involved in order to configure projections and destinations, including how to properly format the `selector` parameter. 組織のニーズに合わせて新しい投影先や設定を作成できるようになりました。
+このガイドでは、`selector`パラメーターを正しくフォーマットする方法など、投影と宛先を設定するための手順を示しました。 組織のニーズに合わせて新しい投影先や設定を作成できるようになりました。
