@@ -1,47 +1,47 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；スキーマ;スキーマ；作成
 solution: Experience Platform
 title: スキーマレジストリ API を使用したスキーマの作成
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '2343'
-ht-degree: 80%
+source-wordcount: '2373'
+ht-degree: 79%
 
 ---
 
 
-# Create a schema using the [!DNL Schema Registry] API
+# [!DNL Schema Registry] APIを使用したスキーマの作成
 
-は、Adobe Experience Platform [!DNL Schema Registry] 内の人々にアクセスする [!DNL Schema Library] ために使用されます。 The [!DNL Schema Library] contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
+[!DNL Schema Registry]は、Adobe Experience Platform内の[!DNL Schema Library]にアクセスするために使用されます。 [!DNL Schema Library]には、Adobe、[!DNL Experience Platform]パートナー、および使用するアプリケーションのベンダーが提供するリソースが含まれています。 レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
 
-This tutorial uses the [!DNL Schema Registry] API to walk you through the steps to compose a schema using a standard class. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor Tutorial](create-schema-ui.md) provides step-by-step instructions for performing similar actions in the schema editor.
+このチュートリアルでは、[!DNL Schema Registry] APIを使って、標準クラスを使用してスキーマを構成する手順を順を追って説明します。 [!DNL Experience Platform]でユーザインターフェイスを使用したい場合は、[スキーマエディタのチュートリアル](create-schema-ui.md)で、スキーマエディタで同様の操作を実行するための手順を順を追って説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md):顧客体験データを [!DNL Experience Platform] 整理する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
+このチュートリアルを開始する前に、[開発者ガイド](../api/getting-started.md)を参照し、[!DNL Schema Registry] APIを正しく呼び出すために知っておく必要がある重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 
 このチュートリアルでは、小売ロイヤルティプログラムのメンバーに関連するデータを記述する「ロイヤルティメンバー」スキーマを作成する手順について説明します。開始する前に、付録にある[完全なロイヤルティメンバースキーマ](#complete-schema)をプレビューできます。
 
 ## 標準クラスでのスキーマを構成
 
-A schema can be thought of as the blueprint for the data you wish to ingest into [!DNL Experience Platform]. 各スキーマは、クラスと 0 個以上の mixin で構成されます。つまり、スキーマを定義するために mixin を追加する必要はありませんが、ほとんどの場合は少なくとも 1 つの mixin が使用されます。
+スキーマは[!DNL Experience Platform]に取り込むデータの青写真と考えることができます。 各スキーマは、クラスと 0 個以上の mixin で構成されます。つまり、スキーマを定義するために mixin を追加する必要はありませんが、ほとんどの場合は少なくとも 1 つの mixin が使用されます。
 
 ### クラスの割り当て
 
 スキーマ構成プロセスは、クラスの選択から始まります。このクラスは、データの主要な動作面（レコードと時系列）、および取得されるデータを説明するために必要な最小フィールドを定義します。
 
-The schema you are making in this tutorial uses the [!DNL XDM Individual Profile] class. [!DNL XDM Individual Profile] は、Adobeがレコード動作を定義するために提供する標準クラスです。 動作に関する詳細については、「[スキーマ合成の基本](../schema/composition.md)」を参照してください。
+このチュートリアルで作成するスキーマは、[!DNL XDM Individual Profile]クラスを使用します。 [!DNL XDM Individual Profile] は、Adobeがレコード動作を定義するために提供する標準クラスです。動作に関する詳細については、「[スキーマ合成の基本](../schema/composition.md)」を参照してください。
 
 クラスを割り当てるために、API 呼び出しが行われ、テナントコンテナ内に新しいスキーマが作成（POST）されます。この呼び出しには、スキーマが実装するクラスが含まれます。各スキーマは、1 つのクラスのみを実装できます。
 
@@ -53,7 +53,7 @@ POST /tenant/schemas
 
 **リクエスト**
 
-リクエストには、クラスの `$id` を参照する `allOf` 属性を含める必要があります。この属性は、スキーマが実装する「基本クラス」を定義します。In this example, the base class is the [!DNL XDM Individual Profile] class.  クラスの `$id`[!DNL XDM Individual Profile] は、以下の `$ref` 配列内の `allOf` フィールドの値として使用されます。
+リクエストには、クラスの `$id` を参照する `allOf` 属性を含める必要があります。この属性は、スキーマが実装する「基本クラス」を定義します。この例では、基本クラスは[!DNL XDM Individual Profile]クラスです。  クラスの `$id`[!DNL XDM Individual Profile] は、以下の `$ref` 配列内の `allOf` フィールドの値として使用されます。
 
 ```SHELL
 curl -X POST \
@@ -77,7 +77,7 @@ curl -X POST \
 
 **応答** 
 
-リクエストが成功すると、HTTP 応答ステータス 201（作成済み）が返され、応答本文に、`$id`、`meta:altIt`、および`version` を含む新しく作成されたスキーマの詳細が含まれています。These values are read-only and are assigned by the [!DNL Schema Registry].
+リクエストが成功すると、HTTP 応答ステータス 201（作成済み）が返され、応答本文に、`$id`、`meta:altIt`、および`version` を含む新しく作成されたスキーマの詳細が含まれています。これらの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
 
 ```JSON
 {
@@ -260,7 +260,7 @@ curl -X PATCH \
 
 >[!TIP]
 >
-> 使用可能なすべての mixin を確認して、各 mixin に含まれるフィールドに慣れておくことをお勧めします。「グローバル」コンテナと「テナント」コンテナのそれぞれに対してリクエストを実行し、「meta:intendedToExtend」フィールドが使用中のクラスと一致する mixins のみを返すことにより、特定のクラスで使用できるすべての mixins をリスト（GET）できます。In this case, it is the [!DNL XDM Individual Profile] class, so the [!DNL XDM Individual Profile] `$id` is used:
+> 使用可能なすべての mixin を確認して、各 mixin に含まれるフィールドに慣れておくことをお勧めします。「グローバル」コンテナと「テナント」コンテナのそれぞれに対してリクエストを実行し、「meta:intendedToExtend」フィールドが使用中のクラスと一致する mixins のみを返すことにより、特定のクラスで使用できるすべての mixins をリスト（GET）できます。この場合、[!DNL XDM Individual Profile]クラスなので、[!DNL XDM Individual Profile] `$id`が使用されます。
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -344,7 +344,7 @@ curl -X PATCH \
 
 「ロイヤルティメンバー」スキーマは、ロイヤルティプログラムに固有の情報を取り込む必要があります。この情報は、標準 mixin には含まれません。
 
-The [!DNL Schema Registry] accounts for this by allowing you to define your own mixins within the tenant container. これらの mixin は組織に固有のもので、IMS 組織外のユーザーは表示したり編集したりすることはできません。
+[!DNL Schema Registry]は、テナントコンテナ内で独自のミックスインを定義できるので、これを説明します。 これらの mixin は組織に固有のもので、IMS 組織外のユーザーは表示したり編集したりすることはできません。
 
 新しい mixin を作成（POST）するには、リクエストに、mixin に互換性がある基本クラスの `$id` を含む `meta:intendedToExtend` フィールドと、mixin に含めるプロパティを含める必要があります。 
 
@@ -419,7 +419,7 @@ curl -X POST\
 
 **応答** 
 
-リクエストが成功すると、HTTP 応答ステータス 201（作成済み）が返され、応答本文に `$id`、`meta:altIt`、および `version`を含む新しく作成された mixin の詳細が含まれています。These values are read-only and are assigned by the [!DNL Schema Registry].
+リクエストが成功すると、HTTP 応答ステータス 201（作成済み）が返され、応答本文に `$id`、`meta:altIt`、および `version`を含む新しく作成された mixin の詳細が含まれています。これらの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
 
 ```JSON
 {
@@ -756,7 +756,7 @@ curl -X POST \
 
 **応答** 
 
-リクエストが成功すると、HTTP 応答ステータス 201（作成済み）が返され、応答本文に `$id`、`meta:altIt`、および `version` を含む新しく作成されたデータ型の詳細が含まれています。す。These values are read-only and are assigned by the [!DNL Schema Registry].
+リクエストが成功すると、HTTP 応答ステータス 201（作成済み）が返され、応答本文に `$id`、`meta:altIt`、および `version` を含む新しく作成されたデータ型の詳細が含まれています。す。これらの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
 
 ```JSON
 {
@@ -956,9 +956,9 @@ GET 要求を実行してスキーマを参照すると、次に示すように�
 
 ### ID 記述子の定義
 
-Schemas are used for ingesting data into [!DNL Experience Platform]. このデータは、最終的に複数のサービスで使用され、個人の単一の統合表示を作成します。この処理を支援するために、主要フィールドを「ID」としてマークし、データ取得時に、これらのフィールド内のデータをその個人の「ID グラフ」に挿入できます。The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched together view of each individual customer.
+スキーマは、[!DNL Experience Platform]にデータを取り込むために使用されます。 このデータは、最終的に複数のサービスで使用され、個人の単一の統合表示を作成します。この処理を支援するために、主要フィールドを「ID」としてマークし、データ取得時に、これらのフィールド内のデータをその個人の「ID グラフ」に挿入できます。次に、[[!DNL Real-time Customer Profile]](../../profile/home.md)および他の[!DNL Experience Platform]サービスによってグラフデータにアクセスし、各顧客の組み合わせ表示を提供することができます。
 
-Fields that are commonly marked as &quot;Identity&quot; include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html), CRM ID, or other unique ID fields.
+「ID」として一般的にマークされるフィールドには、次のものがあります。電子メールアドレス、電話番号、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM IDまたはその他の一意のIDフィールド。
 
 組織に固有の識別子は、適切な ID フィールドである場合もあるので、それらを考慮します。
 
@@ -974,7 +974,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストは、「loyaltyId」フィールドに ID 記述子を定義します。This tells [!DNL Experience Platform] to use the unique loyalty program member identifier (in this case, the member&#39;s email address) to help stitch together information about the individual.
+次のリクエストは、「loyaltyId」フィールドに ID 記述子を定義します。これは、[!DNL Experience Platform]に対して、一意の忠誠度プログラムメンバ識別子（この場合、メンバの電子メールアドレス）を使用して、個々の情報を結合するのに役立つように指示します。
 
 ```SHELL
 curl -X POST \
@@ -997,11 +997,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->You can list available &quot;xdm:namespace&quot; values, or create new ones, using the [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). 「xdm:property」の値は、使用する「xdm:namespace」によって「xdm:code」または「xdm:id」になります。
+>[[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)を使って、&quot;xdm:名前空間&quot;の値をリストしたり、新しい値を作成したりできます。 「xdm:property」の値は、使用する「xdm:namespace」によって「xdm:code」または「xdm:id」になります。
 
 **応答** 
 
-正常な応答では、新しく作成された記述子の詳細（`@id` を含む）とと共に、HTTP ステータス 201（作成済み）が返されます。The `@id` is a read-only field assigned by the [!DNL Schema Registry] and is used for referencing the descriptor in the API.
+正常な応答では、新しく作成された記述子の詳細（`@id` を含む）とと共に、HTTP ステータス 201（作成済み）が返されます。`@id`は、[!DNL Schema Registry]によって割り当てられる読み取り専用のフィールドで、APIの記述子を参照するために使用されます。
 
 ```JSON
 {
@@ -1017,11 +1017,11 @@ curl -X POST \
 }
 ```
 
-## スキーマを [!DNL Real-time Customer Profile] {#profile}
+## スキーマを[!DNL Real-time Customer Profile] {#profile}で使用可能にする
 
-By adding the &quot;union&quot; tag to the `meta:immutableTags` attribute, you can enable the Loyalty Members schema for use by [!DNL Real-time Customer Profile].
+`meta:immutableTags`属性に「和集合」タグを追加すると、[!DNL Real-time Customer Profile]で使用する忠誠度メンバースキーマを有効にできます。
 
-For more information on working with union views, see the section on [unions](../api/unions.md) in the [!DNL Schema Registry] developer guide.
+和集合表示の使用に関する詳細は、『[!DNL Schema Registry]開発者ガイド』の「[和集合](../api/unions.md)」の節を参照してください。
 
 ### 「追加和集合」タグの追加
 
@@ -1105,7 +1105,7 @@ curl -X PATCH \
 
 ### 和集合でのスキーマのリスト
 
-You have now successfully added your schema to the [!DNL XDM Individual Profile] union. 同じ和集合に属するすべてのスキーマのリストを表示するには、クエリーパラメーターを使用して GET 要求を実行し、応答をフィルタリングします。
+これで、スキーマが[!DNL XDM Individual Profile]和集合に正常に追加されました。 同じ和集合に属するすべてのスキーマのリストを表示するには、クエリーパラメーターを使用して GET 要求を実行し、応答をフィルタリングします。
 
 `property` クエリーパラメーターを使用して、 クラスの `meta:immutableTags` と等しい `meta:class` を持つ `$id` フィールドを含むプロファイルのみが返されるように指定できます。[!DNL XDM Individual Profile]
 
@@ -1117,7 +1117,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **リクエスト**
 
-The example request below returns all schemas that are part of the [!DNL XDM Individual Profile] union.
+次の例のリクエストは、[!DNL XDM Individual Profile]和集合に含まれるすべてのスキーマを返します。
 
 ```SHELL
 curl -X GET \
@@ -1185,7 +1185,7 @@ curl -X GET \
 
 このチュートリアル全体で、スキーマは小売ロイヤルティメンバープログラムを説明するために構成されています。
 
-The schema implements the [!DNL XDM Individual Profile] class and combines multiple mixins; bringing in information about the loyalty members using the standard &quot;Person Details&quot; and &quot;Personal Details&quot; mixins, as well as through a &quot;Loyalty Details&quot; mixin that is defined during the tutorial.
+スキーマは[!DNL XDM Individual Profile]クラスを実装し、複数のミックスインを組み合わせます。標準の「個人の詳細」と「個人の詳細」ミックスインを使用し、また、チュートリアルで定義された「忠誠度の詳細」ミックスインを使用して、忠誠度メンバーに関する情報を取り込みます。
 
 以下に、完全な「ロイヤルティメンバー」スキーマを JSON 形式で示します。
 
