@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、プロトコルアプリケーションからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 20%
@@ -85,13 +85,49 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Generic OData source connection",
-        "connectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
+        "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "description": "Generic OData source connection",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Orders"
+            "tableName": "Orders",
+            "columns": [
+                {
+                "name": "OrderID",
+                "type": "integer",
+                "xdm": {
+                    "type": "integer",
+                    "minimum": -2147483648,
+                    "maximum": 2147483647
+                }
+                },
+                {
+                    "name": "CustomerID",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "OrderDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                {
+                    "name": "ShippedDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "8e6b41a8-d998-4545-ad7d-c6a9fff406c3",
@@ -102,7 +138,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `connectionId` | プロトコルアプリケーションの接続ID |
+| `baseConnectionId` | プロトコルアプリケーションの接続ID |
 | `params.path` | ソースファイルのパス。 |
 | `connectionSpec.id` | プロトコルアプリケーションの接続仕様ID。 |
 
