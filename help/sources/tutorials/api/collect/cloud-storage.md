@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
+source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1639'
 ht-degree: 19%
 
 ---
@@ -340,6 +340,10 @@ curl -X POST \
 ## マッピングを作成{#mapping}
 
 ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、リクエストペイロード内で定義されたデータマッピングを使用して、コンバージョンサービスに対するPOSTリクエストを実行することで達成されます。
+
+>[!TIP]
+>
+>クラウドストレージのソースコネクタを使用して、JSONファイル内の配列などの複雑なデータ型をマッピングできます。
 
 **API 形式**
 
