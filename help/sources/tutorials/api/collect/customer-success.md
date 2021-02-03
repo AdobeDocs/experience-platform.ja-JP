@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、顧客の成功システムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 14%
@@ -87,24 +87,56 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Source connection for Customer Success",
-        "connectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
         "description": "Source connection for a Customer Success connector",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Account"
+            "tableName": "Account",
+            "columns": [
+                {
+                    "name": "Id",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Phone",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "CreatedDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
         }
-    }}'
+    }'
 ```
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `connectionId` | アクセスするサードパーティ顧客成功システムの一意の接続ID。 |
+| `baseConnectionId` | アクセスするサードパーティ顧客成功システムの一意の接続ID。 |
 | `params.path` | ソースファイルのパス。 |
 | `connectionSpec.id` | 特定のサードパーティ顧客成功システムに関連付けられた接続仕様ID。 接続仕様IDのリストについては、[付録](#appendix)を参照してください。 |
 
