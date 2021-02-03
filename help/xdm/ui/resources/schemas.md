@@ -5,7 +5,7 @@ title: UIでのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
+source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 1%
@@ -81,7 +81,7 @@ ht-degree: 1%
 >
 >リストにあるミックスインに対しては、情報アイコン(![](../../images/ui/resources/schemas/info-icon.png))にマウスポインターを置くか、情報アイコンにフォーカスして、ミックスインが取り込むデータの種類に関する簡単な説明を表示できます。 また、プレビューアイコン(![](../../images/ui/resources/schemas/preview-icon.png))を選択して、スキーマに追加する前に、ミックスインが提供するフィールドの構造を表示することもできます。
 
-ミックスインの選択が完了したら、**[!UICONTROL ミックスイン追加]**&#x200B;を選択してスキーマに追加します。
+ミックスインを選択したら、**[!UICONTROL ミックスイン]**&#x200B;追加を選択してスキーマに追加します。
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
