@@ -5,10 +5,10 @@ title: Flow Service APIを使用したCRMシステムの調査
 topic: overview
 description: このチュートリアルでは、Flow Service APIを使用してCRMシステムを調べます。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 20%
+source-wordcount: '589'
+ht-degree: 19%
 
 ---
 
@@ -28,9 +28,9 @@ ht-degree: 20%
 
 [!DNL Flow Service] APIを使用してCRMシステムに正常に接続するために必要な追加情報については、以下の節で説明します。
 
-### ベース接続の取得
+### 接続IDの作成
 
-[!DNL Platform] APIを使用してCRMシステムを調査するには、有効なベース接続IDが必要です。 操作するCRMシステムの基本接続がまだない場合は、次のチュートリアルを使用して作成できます。
+[!DNL Platform] APIを使用してCRMシステムを調査するには、有効な接続IDが必要です。 作業対象のCRMシステムにまだ接続していない場合は、次のチュートリアルを使用してCRMシステムを作成できます。
 
 * [Microsoft Dynamics](../create/crm/ms-dynamics.md)
 * [Salesforce](../create/crm/salesforce.md)
@@ -43,21 +43,21 @@ ht-degree: 20%
 
 [!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 [!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## データテーブルの調査
 
-CRMシステムの基本接続を使用して、GETリクエストを実行することで、データテーブルを調べることができます。 次の呼び出しを使用して、[!DNL Platform]に検査または取り込むテーブルのパスを探します。
+CRMシステムの接続IDを使用して、GETリクエストを実行することで、データテーブルを調査できます。 次の呼び出しを使用して、[!DNL Platform]に検査または取り込むテーブルのパスを探します。
 
 **API 形式**
 
@@ -73,7 +73,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=root' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -129,7 +129,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
