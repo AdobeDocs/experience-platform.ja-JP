@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle AdWordsに接続する手順を順を追って説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 18%
 
 ---
@@ -39,12 +39,12 @@ ht-degree: 18%
 
 | **Credential** | **説明** |
 | -------------- | --------------- |
-| 顧客ID | AdWordsアカウントのクライアント顧客ID。 |
-| 開発者トークン | マネージャーアカウントに関連付けられている開発者トークン。 |
-| 更新トークン | AdWordsへのアクセスを許可するために[!DNL Google]から取得した更新トークン。 |
-| クライアント ID | 更新トークンの取得に使用される[!DNL Google]アプリケーションのクライアントID。 |
-| クライアントシークレット | 更新トークンの取得に使用される[!DNL Google]アプリケーションのクライアントシークレット。 |
-| 接続指定ID | 接続を作成するために必要な一意の識別子。 [!DNL Google AdWords]の接続指定IDは次のとおりです。`d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | AdWordsアカウントのクライアント顧客ID。 |
+| `developerToken` | マネージャーアカウントに関連付けられている開発者トークン。 |
+| `refreshToken` | AdWordsへのアクセスを許可するために[!DNL Google]から取得した更新トークン。 |
+| `clientId` | 更新トークンの取得に使用される[!DNL Google]アプリケーションのクライアントID。 |
+| `clientSecret` | 更新トークンの取得に使用される[!DNL Google]アプリケーションのクライアントシークレット。 |
+| `connectionSpec` | 接続を作成するために必要な一意の識別子。 [!DNL Google AdWords]の接続指定IDは次のとおりです。`d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 これらの値の詳細については、[Google AdWordsのドキュメント](https://developers.google.com/adwords/api/docs/guides/authentication)を参照してください。
 
