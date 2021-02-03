@@ -2,11 +2,11 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ui;UI;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；エクスプローラ；クラス；ミックスイン；データ型；スキーマ;
 solution: Experience Platform
 title: UIでのXDMリソースの参照
-description: Experience Platformのユーザーインターフェイスで既存のスキーマ、クラス、ミックスイン、およびデータタイプを調べる方法について説明します。
+description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、ミックスイン、およびデータタイプを調べる方法について説明します。
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 912d02477febdafa4a53aebc83bc3a93b0f84f09
+source-git-commit: 6246e623a711bff06eefe5d5954719d69df921c3
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
