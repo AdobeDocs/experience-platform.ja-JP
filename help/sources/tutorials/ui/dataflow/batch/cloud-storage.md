@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 4e85dc702cda5c6c495a6f7fb70453b7897baa36
+source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1898'
 ht-degree: 2%
 
 ---
@@ -108,7 +108,7 @@ ht-degree: 2%
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-JSONファイルの場合は、フィールドを他のフィールドに直接マッピングするだけでなく、オブジェクトを他のオブジェクトや配列に直接マッピングすることもできます。
+JSONファイルの場合は、フィールドを他のフィールドに直接マッピングするだけでなく、オブジェクトを他のオブジェクトや配列に直接他の配列にマッピングすることもできます。また、クラウドストレージソースコネクタを使用して、JSONファイル内の配列などの複雑なデータ型をプレビューおよびマッピングできます。
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
@@ -220,4 +220,4 @@ JSONファイルの場合は、フィールドを他のフィールドに直接�
 
 ### [!DNL Profile]母集団の受信データをアクティブ化
 
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むのに使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../../profile.md)のチュートリアルを参照してください。
+ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../../profile.md)のチュートリアルを参照してください。
