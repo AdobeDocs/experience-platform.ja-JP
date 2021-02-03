@@ -5,9 +5,9 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: 2c0dc4d54dcd1dcd17ffec70dbe3b16bb45ee141
+source-git-commit: cbdeb7529d27cb8b1cacc4a64b90637bb80f514d
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '225'
 ht-degree: 58%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 58%
       * [環境の詳細](./mixins/event/environment-details.md)
    * [Mixin名の更新](./mixins/name-updates.md)
 * データタイプ {#data-types}
+   * [アプリケーション](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
    * [同意と環境設定](./data-types/consents.md)
@@ -48,6 +49,7 @@ ht-degree: 58%
    * [地域とのやり取りの詳細](./data-types/geo-interaction-details.md)
    * [ジオシェイプ](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
+   * [測定](./data-types/measure.md)
    * [ユーザー](./data-types/person.md)
    * [個人名](./data-types/person-name.md)
    * [電話番号](./data-types/phone-number.md)
@@ -55,7 +57,10 @@ ht-degree: 58%
    * [POIの詳細](./data-types/poi-details.md)
    * [POI相互作用](./data-types/poi-interaction.md)
    * [住所](./data-types/postal-address.md)
+   * [検索](./data-types/search.md)
    * [購読](./data-types/subscription.md)
+   * [Webインタラクション](./data-types/web-interactions.md)
+   * [ウェブページの詳細](./data-types/webpage-details.md)
 *  SchemasUI  {#ui}
    * [概要](./ui/overview.md)
    * [XDMリソースの参照](./ui/explore.md)
