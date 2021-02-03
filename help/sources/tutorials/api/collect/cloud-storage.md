@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 19%
@@ -89,7 +89,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
             "format": "delimited",
@@ -108,7 +108,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `connectionId` | アクセスするサードパーティのクラウドストレージシステムの一意の接続ID。 |
+| `baseConnectionId` | アクセスするサードパーティのクラウドストレージシステムの一意の接続ID。 |
 | `data.format` | データ形式属性を定義する列挙値。 |
 | `data.columnDelimiter` | 任意の1文字列の列区切り文字を使用して、フラットファイルを収集できます。 このプロパティは、CSVファイルまたはTSVファイルを取り込む場合にのみ必要です。 |
 | `params.path` | アクセスするソースファイルのパス。 |
