@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;node reference;
+keywords: Experience Platform；開発者ガイド；Data Science Workspace；人気の高いトピック；リアルタイムの機械学習；ノード参照；
 solution: Experience Platform
 title: Real-time Machine Learningノートブックユーザーガイド
 topic: Training and scoring a ML model
@@ -7,7 +7,7 @@ description: 次のガイドは、JupterLabAdobe Experience PlatformでReal-time
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1671'
 ht-degree: 0%
 
 ---
@@ -19,15 +19,15 @@ ht-degree: 0%
 >
 >リアルタイム機械学習は、まだすべてのユーザーが利用できるわけではありません。 この機能はアルファベットで、まだテスト中です。 このドキュメントは変更される可能性があります。
 
-次のガイドでは、リアルタイム機械学習アプリケーションを作成するために必要な手順について説明します。 Adobeが提供する **[!UICONTROL Real-time ML]** Pythonノートブックテンプレートを使用して、このガイドでは、モデルのトレーニング、DSLの作成、DSLからEdgeへの公開、リクエストのスコアリングを行います。 リアルタイム機械学習モデルの導入に進むにつれて、データセットのニーズに合わせてテンプレートを変更することが期待されます。
+次のガイドでは、リアルタイム機械学習アプリケーションを作成するために必要な手順について説明します。 **[!UICONTROL Real-time ML]** PythonノートパソコンのAdobeを使って、モデルのトレーニング、DSLの作成、DSLのエッジへの公開、リクエストのスコアリングを行います。 リアルタイム機械学習モデルの導入に進むにつれて、データセットのニーズに合わせてテンプレートを変更することが期待されます。
 
 ## リアルタイム機械学習ノートブックの作成
 
-[Adobe Experience PlatformUI]で、[ **[!UICONTROL Data Science]** ]から[ **Notebooks**]を選択します。 次に、 **[!UICONTROL JupyterLabを選択し]** 、環境の読み込みに時間をかけます。
+Adobe Experience PlatformのUIで、**データサイエンス**&#x200B;内から「**[!UICONTROL ノートブック]**」を選択します。 次に、**[!UICONTROL JupyterLab]**&#x200B;を選択し、環境の読み込みに時間をかけます。
 
 ![JupyterLabを開く](../images/rtml/open-jupyterlab.png)
 
-ラン [!DNL JupyterLab] チャーが表示されます。 「 *Real-Time Machine Learning* 」まで下にスクロールし、「 **[!UICONTROL Real-time ML]** 」ノートブックを選択します。 データセットの例が記載されたノートブックセルを含むテンプレートが開きます。
+[!DNL JupyterLab]ランチャーが表示されます。 「*Real-Time Machine Learning*」まで下にスクロールし、**[!UICONTROL リアルタイムML]**&#x200B;ノートブックを選択します。 データセットの例が記載されたノートブックセルを含むテンプレートが開きます。
 
 ![空白のPython](../images/rtml/authoring-notebook.png)
 
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->インポートのリストは、作成するモデルによって異なる場合があります。 新しいノードが時間の経過と共に追加されるので、このリストは変更されます。 使用可能なノードの完全なリストについては、『 [node reference guide](./node-reference.md) 』を参照してください。
+>インポートのリストは、作成するモデルによって異なる場合があります。 新しいノードが時間の経過と共に追加されるので、このリストは変更されます。 使用可能なノードの完全なリストについては、[ノードリファレンスガイド](./node-reference.md)を参照してください。
 
 ```python
 from pprint import pprint
@@ -73,26 +73,26 @@ pprint(nf.discover_nodes())
 
 ## リアルタイム機械学習モデルのトレーニング
 
-次のいずれかのオプションを使用して、データの読み取り、前処理、分析を行う [!DNL Python] コードを作成します。 次に、独自のMLモデルをトレーニングし、ONNX形式にシリアル化して、Real-time Machine Learningモデルストアにアップロードする必要があります。
+次のいずれかのオプションを使用して、[!DNL Python]コードを記述し、データの読み取り、前処理、分析を行います。 次に、独自のMLモデルをトレーニングし、ONNX形式にシリアル化して、Real-time Machine Learningモデルストアにアップロードする必要があります。
 
 - [JupterLabノートブックでの独自のモデルのトレーニング](#training-your-own-model)
 - [JupterLabノートブックに、トレーニング済みのONNXモデルをアップロード](#pre-trained-model-upload)
 
-### 独自のモデルのトレーニング {#training-your-own-model}
+### 独自のモデルのトレーニング{#training-your-own-model}
 
 開始を設定します。
 
 >[!NOTE]
 >
->リアルタイム **ML** テンプレートでは、 [自動車保険のCSVデータセット](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) が取得され [!DNL Github]ます。
+>**リアルタイムML**&#x200B;テンプレートでは、[車保険のCSVデータセット](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance)が[!DNL Github]から取得されます。
 
 ![トレーニングデータの読み込み](../images/rtml/load_training.png)
 
-Adobe Experience Platform内のデータセットを使用する場合は、下のセルのコメントを解除します。 次に、を適切な値に置き換え `DATASET_ID` る必要があります。
+Adobe Experience Platform内のデータセットを使用する場合は、下のセルのコメントを解除します。 次に、`DATASET_ID`を適切な値に置き換える必要があります。
 
 ![rtmlデータセット](../images/rtml/rtml-dataset.png)
 
-ノートブックのデータセットにアクセスするには、の左側の [!DNL JupyterLab] ナビゲーションで「 **Data** ( [!DNL JupyterLab]データ)」タブを選択します。 「 **[!UICONTROL Datasets]** 」ディレクトリと「 **[!UICONTROL スキーマ]** 」ディレクトリが表示されます。 「 **[!UICONTROL Datasets]** 」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「 **[!UICONTROL Explore Data in Notebook]** 」オプションを選択します。 ノートブックの下部に実行可能コードのエントリが表示されます。 このセルにあなたのが入ってい `dataset_id`ます。
+[!DNL JupyterLab]ノートブックのデータセットにアクセスするには、[!DNL JupyterLab]の左側のナビゲーションにある「**データ**」タブを選択します。 **[!UICONTROL Datasets]**&#x200B;ディレクトリと&#x200B;**[!UICONTROL スキーマ]**&#x200B;ディレクトリが表示されます。 「**[!UICONTROL データセット]**」を選択して右クリックし、使用するデータセットのドロップダウンメニューから「**[!UICONTROL ノートブックのデータを探索]**」オプションを選択します。 ノートブックの下部に実行可能コードのエントリが表示されます。 このセルには`dataset_id`が入っています。
 
 ![データセットアクセス](../images/rtml/access-dataset.png)
 
@@ -100,7 +100,7 @@ Adobe Experience Platform内のデータセットを使用する場合は、下�
 
 ### トレーニングのプロパティ
 
-表示されたテンプレートを使用して、のトレーニングプロパティを変更し `config_properties`ます。
+表示されたテンプレートを使用して、`config_properties`内のトレーニングプロパティを変更します。
 
 ```python
 config_properties = {
@@ -113,15 +113,15 @@ config_properties = {
 
 ### モデルの準備
 
-リアルタイムML **** テンプレートを使用する場合は、MLモデルの分析、事前処理、トレーニング、評価を行う必要があります。 これは、データ変換を適用し、トレーニングパイプラインを構築することで行います。
+**[!UICONTROL リアルタイムML]**&#x200B;テンプレートを使用する場合は、MLモデルの分析、事前処理、トレーニング、評価を行う必要があります。 これは、データ変換を適用し、トレーニングパイプラインを構築することで行います。
 
 **データ変換**
 
-リアルタイムML **[!UICONTROL Templatesの]** Data Transformations **** セルは、独自のデータセットを使用できるように変更する必要があります。 通常は、列名の変更、データのロールアップ、データの準備/機能の設計に関係します。
+**[!UICONTROL リアルタイムML]**&#x200B;テンプレート&#x200B;**データ変換**&#x200B;セルは、独自のデータセットを使用できるように変更する必要があります。 通常は、列名の変更、データのロールアップ、データの準備/機能の設計に関係します。
 
 >[!NOTE]
 >
->次の例は、を使用して読みやすくしたもので `[ ... ]`す。 完全なコードセルの「 *Real-time XML* templates data transformations」セクションを表示して展開してください。
+>次の例は、`[ ... ]`を使用して読みやすくまとめたものです。 表示して、完全なコードセルの&#x200B;*リアルタイムML*&#x200B;テンプレートのデータ変換セクションを展開してください。
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -196,7 +196,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-指定したセルを実行して、結果の例を表示します。 データセットから返される出力テーブルは、定義した変更内容を `carinsurancedataset.csv` 返します。
+指定したセルを実行して、結果の例を表示します。 `carinsurancedataset.csv`データセットから返される出力テーブルは、定義した変更を返します。
 
 ![データ変換の例](../images/rtml/table-return.png)
 
@@ -204,7 +204,7 @@ df_final = pd.get_dummies(df_final, columns = cat_cols)
 
 次に、トレーニングパイプラインを作成する必要があります。 これは、ONNXファイルを変換して生成する必要がある以外は、他のトレーニングパイプラインファイルと同様です。
 
-前のセルで定義したデータ変換を使用して、テンプレートを変更します。 以下に示すコードは、機能パイプラインでONNXファイルを生成する際に使用します。 完全なパイプラインコードセルの *リアルタイムML* テンプレートを表示してください。
+前のセルで定義したデータ変換を使用して、テンプレートを変更します。 以下に示すコードは、機能パイプラインでONNXファイルを生成する際に使用します。 *リアルタイムML*&#x200B;テンプレートをパイプラインコードの完全なセルに表示してください。
 
 ```python
 #for generating onnx
@@ -246,7 +246,7 @@ model.generate_onnx_resources()
 
 >[!NOTE]
 >
->文字 `model_path` 列値(`model.onnx`)を変更して、モデルの名前を変更します。
+>`model_path`文字列値(`model.onnx`)を変更して、モデルの名前を変更します。
 
 ```python
 model_path = "model.onnx"
@@ -266,13 +266,13 @@ print("Model ID : ", model_id)
 
 ![ONNXモデル](../images/rtml/onnx-model-rail.png)
 
-### 独自のトレーニング済みONNXモデルのアップロード {#pre-trained-model-upload}
+### トレーニングを受けたONNXモデル{#pre-trained-model-upload}をアップロード
 
-ノートブックにある「Upload」ボタンを使用して、事前にトレーニングを受けたONNXモデルをノートブック・環境にアップロードし [!DNL JupyterLab][!DNL Data Science Workspace] ます。
+[!DNL JupyterLab]ノートブックにある「アップロード」ボタンを使用して、トレーニングを受けたONNXモデルを[!DNL Data Science Workspace]ノートブック環境にアップロードします。
 
 ![アップロードアイコン](../images/rtml/upload.png)
 
-次に、 `model_path` Real-time ML ** Notebookの文字列値をONNXモデル名と一致するように変更します。 完了したら、 *Set model path* （モデルパスを設定）セルを実行し、「Upload your model to RTML Model Store *(モデルをRTMLモデルストアに* アップロード)」セルを実行します。 成功した場合、モデルの場所とモデルIDはどちらも応答に返されます。
+次に、*リアルタイムML*&#x200B;ノートブックの`model_path`文字列値を、ONNXモデル名と一致するように変更します。 完了したら、*Set model path*&#x200B;セルを実行し、*Upload your model to RTML Model Store*&#x200B;セルを実行します。 成功した場合、モデルの場所とモデルIDはどちらも応答に返されます。
 
 ![自分のモデルのアップロード](../images/rtml/upload-own-model.png)
 
@@ -288,9 +288,9 @@ print("Model ID : ", model_id)
 
 >[!NOTE]
 >
-> 使用するデータのタイプに基づいて複数のノードを持つ場合があります。 次の例は、 *リアルタイムML* テンプレート内の1つのノードのみを示しています。 完全なコードセルの「 *Real-time ML* templates *Node Authoring* 」セクションを表示してください。
+> 使用するデータのタイプに基づいて複数のノードを持つ場合があります。 次の例は、*リアルタイムML*&#x200B;テンプレート内の1つのノードのみを示しています。 *リアルタイムML*&#x200B;テンプレート&#x200B;*ノードオーサリング*&#x200B;のセクションを完全なコードセルに表示してください。
 
-以下のPandasノードでは、を使用 `"import": "map"` してメソッド名をパラメーター内の文字列として読み込み、続いてパラメーターをmap関数として入力します。 次の例では、を使用してこれを行い `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`ます。 マップを配置した後、またはとして設定するオプション `inplace` があり `True` ま `False`す。 変換 `inplace` をインプレイスで適用するかどうかを、に `True``False` 基づいて設定します。 デフォルトでは、新しい列 `"inplace": False` が作成されます。 新しい列名の提供のサポートは、以降のリリースで追加されるように設定されています。 最後の行 `cols` は、1つの列名または列のリストにすることができます。 変換を適用する列を指定します。 この例では、を指定し `leasing` ます。 使用可能なノードとその使用方法の詳細については、 [ノードリファレンスガイドを参照してください](./node-reference.md)。
+以下のPandasノードは、`"import": "map"`を使用して、メソッド名をパラメーター内の文字列として読み込み、次にパラメーターをmap関数として入力します。 以下の例では、`{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`を使用してこれを行います。 マップを配置した後、`inplace`を`True`または`False`に設定するオプションがあります。 変換をインプレイスで適用するかどうかに基づいて、`inplace`を`True`または`False`に設定します。 デフォルトでは`"inplace": False`は新しい列を作成します。 新しい列名の提供のサポートは、以降のリリースで追加されるように設定されています。 最後の行`cols`は、1つの列名または列のリストにすることができます。 変換を適用する列を指定します。 この例では`leasing`が指定されています。 使用可能なノードとその使用方法について詳しくは、[ノードリファレンスガイド](./node-reference.md)を参照してください。
 
 ```python
 # Renaming leasing column using Pandas Node
@@ -330,7 +330,7 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-次に、ノードをエッジで接続します。 各タプルは [!DNL Edge] 接続です。
+次に、ノードをエッジで接続します。 各タプルは[!DNL Edge]接続です。
 
 >[!TIP]
 >
@@ -347,7 +347,7 @@ dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
 pprint(json.loads(dsl))
 ```
 
-完了すると、各ノードとそれらにマッピングされたパラメーターを含む `edge` オブジェクトが返されます。
+完了すると、各ノードとそれらにマッピングされたパラメーターを含む`edge`オブジェクトが返されます。
 
 ![エッジリターン](../images/rtml/edge-return.png)
 
@@ -355,13 +355,13 @@ pprint(json.loads(dsl))
 
 >[!NOTE]
 >
->リアルタイム機械学習は、Adobe Experience Platformハブに一時的に導入され、管理されます。 詳しくは、 [リアルタイム機械学習アーキテクチャの概要セクションを参照してください](./home.md#architecture)。
+>リアルタイム機械学習は、Adobe Experience Platformハブに一時的に導入され、管理されます。 詳しくは、[リアルタイム機械学習アーキテクチャ](./home.md#architecture)の概要セクションを参照してください。
 
-DSLグラフを作成したら、にグラフを配信でき [!DNL Edge]ます。
+DSLグラフを作成したら、[!DNL Edge]にグラフを配信できます。
 
 >[!IMPORTANT]
 >
->頻繁に発行しないで [!DNL Edge] ください。これは、ノードに大きな負荷がかかる場合があり [!DNL Edge] ます。 同じモデルを複数回パブリッシュすることはお勧めしません。
+>頻繁に[!DNL Edge]に発行しないでください。これは[!DNL Edge]ノードに大きな負荷を与える可能性があります。 同じモデルを複数回パブリッシュすることはお勧めしません。
 
 ```python
 edge_utils = EdgeUtils()
@@ -372,13 +372,13 @@ print(f'Service ID: {service_id}')
 
 ### DSLの更新とEdgeへの再公開（オプション）
 
-DSLを更新する必要がない場合は、 [スコアリングにスキップできます](#scoring)。
+DSLを更新する必要がない場合は、[スコア](#scoring)にスキップできます。
 
 >[!NOTE]
 >
 >次のセルは、Edgeに公開された既存のDSLを更新する場合にのみ必要です。
 
-モデルは開発を続ける可能性が高い。 新しいサービスを作成する代わりに、既存のサービスを新しいモデルで更新できます。 更新するノードを定義し、新しいIDを割り当ててから、に新しいDSLを再度アップロードでき [!DNL Edge]ます。
+モデルは開発を続ける可能性が高い。 新しいサービスを作成する代わりに、既存のサービスを新しいモデルで更新できます。 更新したいノードを定義し、新しいIDを割り当ててから、新しいDSLを[!DNL Edge]に再度アップロードすることができます。
 
 次の例では、ノード0は新しいIDで更新されます。
 
@@ -410,7 +410,7 @@ print(f'Updated dsl: {updated_dsl}')
 
 ## スコアリング {#scoring}
 
-に投稿した後 [!DNL Edge]、スコアリングはクライアントからのPOSTリクエストによって行われます。 通常、これはMLスコアを必要とするクライアントアプリケーションから実行できます。 ポストマンからもできる。 リアルタイム **[!UICONTROL ML]** テンプレートは、EdgeUtilsを使用してこのプロセスを示します。
+[!DNL Edge]に投稿した後、スコアリングはクライアントからのPOSTリクエストによって行われます。 通常、これはMLスコアを必要とするクライアントアプリケーションから実行できます。 ポストマンからもできる。 **[!UICONTROL リアルタイムML]**&#x200B;テンプレートは、EdgeUtilsを使用してこのプロセスを示します。
 
 >[!NOTE]
 >
@@ -422,21 +422,21 @@ import time
 time.sleep(20)
 ```
 
-トレーニングで使用したのと同じスキーマを使用して、サンプルスコアリングデータが生成されます。 このデータは、スコアリングデータフレームを作成し、スコアリングディクショナリに変換するために使用されます。 完全なコードセルに対して *リアルタイムML* テンプレートを表示してください。
+トレーニングで使用したのと同じスキーマを使用して、サンプルスコアリングデータが生成されます。 このデータは、スコアリングデータフレームを作成し、スコアリングディクショナリに変換するために使用されます。 *リアルタイムML*&#x200B;テンプレートを完全なコードセルに表示してください。
 
 ![スコアリングデータ](../images/rtml/generate-score-data.png)
 
 ### エッジエンドポイントに対するスコア
 
-リアルタイムML *テンプレート内の次のセルを使用して、サー*[!DNL Edge] ビスに対してスコアを付けます。
+*リアルタイムML*&#x200B;テンプレート内の次のセルを使用して、[!DNL Edge]サービスに対してスコアを付けます。
 
 ![エッジに対するスコア](../images/rtml/scoring-edge.png)
 
-スコアリングが完了すると、 [!DNL Edge] URL、ペイロード、およびからのスコア出力が返 [!DNL Edge] されます。
+スコアリングが完了すると、[!DNL Edge] URL、ペイロード、および[!DNL Edge]からのスコア出力が返されます。
 
-## デプロイ済みのアプリを [!DNL Edge]
+## [!DNL Edge]からデプロイ済みのアプリをリスト
 
-に現在デプロイされているアプリのリストを生成するに [!DNL Edge]は、次のコードセルを実行します。 このセルは編集または削除できません。
+[!DNL Edge]上に現在デプロイされているアプリのリストを生成するには、次のコードセルを実行します。 このセルは編集または削除できません。
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -457,11 +457,11 @@ print(services)
 ]
 ```
 
-## デプロイ済みのアプリまたはサービスIDを [!DNL Edge]
+## デプロイ済みのアプリケーションまたはサービスIDを[!DNL Edge]から削除する（オプション）
 
 >[!CAUTION]
 >
->このセルは、デプロイ済みのEdgeアプリケーションを削除するために使用します。 デプロイ済みのアプリケーションを削除する必要がある場合を除き、次のセルは使用しないでくだ [!DNL Edge] さい。
+>このセルは、デプロイ済みのEdgeアプリケーションを削除するために使用します。 デプロイ済みの[!DNL Edge]アプリケーションを削除する必要がない場合は、次のセルを使用しないでください。
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
@@ -472,4 +472,4 @@ else:
 
 ## 次の手順
 
-上記のチュートリアルに従うことで、ONNXモデルのトレーニングとReal-time Machine Learningモデルストアへのアップロードに成功しました。 さらに、リアルタイム機械学習モデルにスコアを割り当て、導入しています。 モデルオーサリングに使用できるノードの詳細については、 [ノードリファレンスガイドを参照してください](./node-reference.md)。
+上記のチュートリアルに従うことで、ONNXモデルのトレーニングとReal-time Machine Learningモデルストアへのアップロードに成功しました。 さらに、リアルタイム機械学習モデルにスコアを割り当て、導入しています。 モデルオーサリングに使用できるノードの詳細については、[ノードリファレンスガイド](./node-reference.md)を参照してください。
