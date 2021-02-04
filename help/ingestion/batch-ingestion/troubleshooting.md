@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
+keywords: Experience Platform；ホーム；人気のあるトピック；インジェストされたデータ；トラブルシューティング；faq；インジェスト；バッチインジェスト；バッチインジェスト；
 solution: Experience Platform
 title: Batch Ingestのトラブルシューティングガイド
 topic: troubleshooting
@@ -7,15 +7,15 @@ description: 'このドキュメントは、Adobe Experience Platform バッチ�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 88%
+source-wordcount: '1416'
+ht-degree: 87%
 
 ---
 
 
 # バッチ取得トラブルシューティングガイド
 
-This documentation will help answer frequently asked questions regarding Adobe Experience Platform [!DNL Batch Data Ingestion] APIs.
+このドキュメントは、Adobe Experience Platform[!DNL Batch Data Ingestion] APIに関するよくある質問への回答に役立ちます。
 
 ## バッチ API 呼び出し
 
@@ -122,7 +122,7 @@ JSON 行の場合、1 行に 1 つの JSON オブジェクトがあります。�
 ]
 ```
 
-デフォルトでは、は1行のJSONを [!DNL Batch Data Ingestion] 使用します。
+デフォルトでは、[!DNL Batch Data Ingestion]は1行JSONを使用します。
 
 ### CSV の取得はサポートされていますか？
 
@@ -184,7 +184,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 | ステータス | マスターに書き込まれたデータ | 説明 |
 | ------ | ---------------------- | ----------- |
 | Abandoned |  | クライアントは、予想された時間枠でバッチを完了できませんでした。 |
-| Aborted |  | The client has explicitly called, via the [!DNL Batch Data Ingestion] APIs, an abort operation for the specified batch. Loaded 状態になったバッチは中止することはできません。 |
+| Aborted |  | クライアントは、[!DNL Batch Data Ingestion] APIを介して、指定したバッチに対して中止操作を明示的に呼び出しました。 Loaded 状態になったバッチは中止することはできません。 |
 | Active／Success | x | バッチはステージからマスターに正常にプロモートされ、ダウンストリーム消費で使用できるようになりました。**注意**：「Active」と「Success」は同じ意味で使用されます。 |
 | Archived |  | バッチはコールドストレージにアーカイブされています。 |
 | Failed／Failure |  | 不良な設定または不正なデータ、あるいはその両方から生じる端末の状態。クライアントがデータを修正して再送信できるように、実行可能なエラーはバッチと共に記録されます。**注意**：「Failed」と「Failure」は同じ意味で使用されます。 |
@@ -206,7 +206,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID
 
 ### バッチの「Stalled」とは何を意味しますか？
 
-When a batch is in &quot;Stalled&quot;, it means that [!DNL Data Ingestion Services] is experiencing difficulty ingesting the batch and all retries have been exhausted.
+バッチが「停止」にある場合は、[!DNL Data Ingestion Services]でバッチの取り込みが困難で、すべての再試行が使い果たされたことを意味します。
 
 ### バッチの「Loading」とは何を意味しますか？
 
@@ -241,7 +241,7 @@ When a batch is in &quot;Stalled&quot;, it means that [!DNL Data Ingestion Servi
 
 ### バッチを削除する方法を教えてください。
 
-Instead of deleting directly from [!DNL Catalog], batches should be removed using either method provided below:
+[!DNL Catalog]から直接削除する代わりに、次に示すいずれかの方法を使用してバッチを削除する必要があります。
 
 1. バッチが進行中の場合は、バッチを中止する必要があります。
 2. バッチが正常にマスターされた場合は、バッチを元に戻す必要があります。
@@ -252,11 +252,11 @@ Active／Success 状態のバッチに対しては、次のバッチレベルの
 
 | 指標 | 説明 |
 | ------ | ----------- |
-| inputByteSize | The total number of bytes staged for [!DNL Data Ingestion Services] to process. |
-| inputRecordSize | The total number of rows staged for [!DNL Data Ingestion Services] to process. |
-| outputByteSize | によって出力される合計バイト数 [!DNL Data Ingestion Services] で [!DNL Data Lake]す。 |
-| outputRecordSize | によって出力される行の総数 [!DNL Data Ingestion Services] で [!DNL Data Lake]す。 |
-| partitionCount | The total number of partitions written into [!DNL Data Lake]. |
+| inputByteSize | [!DNL Data Ingestion Services]が処理するためにステージングされた合計バイト数です。 |
+| inputRecordSize | [!DNL Data Ingestion Services]が処理するためにステージングされた行の合計数です。 |
+| outputByteSize | [!DNL Data Ingestion Services]から[!DNL Data Lake]に出力される合計バイト数。 |
+| outputRecordSize | [!DNL Data Ingestion Services]から[!DNL Data Lake]に出力される行の総数。 |
+| partitionCount | [!DNL Data Lake]に書き込まれたパーティションの総数です。 |
 
 ### 指標が一部のバッチで使用できないのはなぜですか？
 
