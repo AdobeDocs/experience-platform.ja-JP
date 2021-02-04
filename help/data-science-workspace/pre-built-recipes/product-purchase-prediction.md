@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform；製品の購入レシピ；データサイエンスワークスペース；人気の高いトピック；レシピ；プレビルドレシピ
 solution: Experience Platform
 title: 製品購入レシピ
 topic: overview
@@ -7,8 +7,8 @@ description: 製品購入予測レシピを使用すると、特定のタイプ�
 translation-type: tm+mt
 source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 100%
+source-wordcount: '396'
+ht-degree: 96%
 
 ---
 
