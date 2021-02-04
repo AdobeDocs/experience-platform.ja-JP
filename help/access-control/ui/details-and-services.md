@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;product profile
+keywords: Experience Platform；ホーム；人気の高いトピック；製品プロファイル
 solution: Experience Platform
 title: 製品プロファイルの詳細と追加のサービスの管理
 topic: user guide
@@ -7,8 +7,8 @@ description: このドキュメントでは、Adobe Admin Consoleの製品プロ
 translation-type: tm+mt
 source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 68%
+source-wordcount: '213'
+ht-degree: 66%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 68%
 
 ![services-page](../images/services-page.png)
 
-**[!UICONTROL サービス]**&#x200B;メニューを使用すると、プロファイルの作成時に最初に設定した追加の サービスに対するプロファイルのアクセスを変更できます。[!DNL Platform]Depending on your [!DNL Platform] subscription, these services can include:
+**[!UICONTROL サービス]**&#x200B;メニューを使用すると、プロファイルの作成時に最初に設定した追加の サービスに対するプロファイルのアクセスを変更できます。[!DNL Platform][!DNL Platform]購読に応じて、次のサービスが含まれます。
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
