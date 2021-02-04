@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform；はじめに；顧客ai；人気のあるトピック；顧客ai入力；顧客ai出力
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客AIの入出力
 topic: Getting started
@@ -7,8 +7,8 @@ description: 次のドキュメントでは、Customer AIで使用される様�
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 34%
+source-wordcount: '838'
+ht-degree: 33%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 34%
 
 ## 顧客AI入力データ
 
-顧客AIは、コンシューマーエクスペリエンスのイベントデータを使用して傾向スコアを計算します。 コンシューマーエクスペリエンスのイベントについて詳しくは、Intelligent Servicesドキュメントで使用する [データの準備](../data-preparation.md)（英語のみ）を参照してください。
+顧客AIは、コンシューマーエクスペリエンスのイベントデータを使用して傾向スコアを計算します。 コンシューマーエクスペリエンスのイベントについて詳しくは、[Intelligent Servicesドキュメントで使用するデータの準備](../data-preparation.md)を参照してください。
 
 ### 履歴データ
 
@@ -68,4 +68,4 @@ ht-degree: 34%
 
 ## 次の手順 {#next-steps}
 
-データを準備し、すべての資格情報とスキーマを準備したら、『Configure a Customer AI Instance [](./user-guide/configure.md) 』ガイドに従って開始します。 このガイドでは、Customer AIのインスタンスの作成手順を説明します。
+データを準備し、すべての資格情報とスキーマを準備したら、『[顧客AIインスタンスの設定](./user-guide/configure.md)』ガイドに従って開始します。 このガイドでは、Customer AIのインスタンスの作成手順を説明します。
