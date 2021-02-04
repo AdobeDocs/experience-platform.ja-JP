@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
+keywords: Experience Platform；インサイト；顧客ai；人気のあるトピック；顧客aiインサイト
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客 AI によるインサイトの獲得
 topic: Discovering insights
@@ -7,7 +7,7 @@ description: このドキュメントは、Intelligent Services 顧客 AI ユー
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '1389'
+source-wordcount: '1399'
 ht-degree: 55%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 55%
 
 ## はじめに
 
-顧客 AI のインサイトを利用するには、正常な実行ステータスを持つサービスインスタンスを使用できる必要があります。新しいサービスインスタンスを作成するには、「顧客AIインスタンスの [設定](./configure.md)」を参照してください。 サービスインスタンスを最近作成し、まだトレーニングとスコア付けをおこなっている場合は、実行が終了するまで 24 時間お待ちください。
+顧客 AI のインサイトを利用するには、正常な実行ステータスを持つサービスインスタンスを使用できる必要があります。新しいサービスインスタンスを作成するには、[顧客AIインスタンスの設定](./configure.md)を参照してください。 サービスインスタンスを最近作成し、まだトレーニングとスコア付けをおこなっている場合は、実行が終了するまで 24 時間お待ちください。
 
 ## サービスインスタンスの概要
 
-In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. *サービス*&#x200B;ブラウザーが開き、使用可能な Intelligent Services が表示されます。顧客 AI のコンテナで、「**[!UICONTROL 開く]**」をクリックします。
+[!DNL Adobe Experience Platform] UIの左側のナビゲーションで&#x200B;**[!UICONTROL サービス]**&#x200B;をクリックします。 *サービス*&#x200B;ブラウザーが開き、使用可能な Intelligent Services が表示されます。顧客 AI のコンテナで、「**[!UICONTROL 開く]**」をクリックします。
 
 ![インスタンスへのアクセス](../images/insights/navigate-to-service.png)
 
@@ -52,8 +52,8 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ダッシュボード内のサービスインスタンスの詳細の概要を表示するには、サービスインスタンスのコンテナを選択し、名前に付けられるハイパーリンクを避けます。 右側のパネルが開き、詳細情報が表示されます。 コントロールには、次の項目が含まれます。
 
-- **[!UICONTROL 編集]**:「 **[!UICONTROL 編集]** 」を選択すると、既存のサービスインスタンスを変更できます。 インスタンスの名前、説明およびスコアリング頻度を編集できます。
-- **[!UICONTROL クローン]**:「 **[!UICONTROL Clone]** 」を選択すると、現在選択されているサービス・インスタンスが設定済みでコピーされます。 その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
+- **[!UICONTROL 編集]**:「 **** 編集」を選択すると、既存のサービスインスタンスを変更できます。インスタンスの名前、説明およびスコアリング頻度を編集できます。
+- **[!UICONTROL クローン]**:[ **** Clonecopys]を選択すると、現在選択されているサービス・インスタンスが設定されます。その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
 - **[!UICONTROL 削除]**:過去の実行を含むサービスインスタンスを削除できます。
 - **[!UICONTROL データソース]**:このインスタンスで使用されるデータセットへのリンク。
 - **[!UICONTROL 実行頻度]**:スコアリングの実行頻度と実行日時。
@@ -67,7 +67,7 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![失敗した実行メッセージ](../images/insights/failed-run.png)
 
-サービスインスタンスの追加の詳細を表示する 2 つ目の方法は、インサイトページ内にあります。右上の「**[!UICONTROL 詳細を表示]**」をクリックして、ドロップダウンを表示できます。スコアの定義、作成日時、傾向タイプなどの詳細が表示されます。For more information on any of the properties listed, please visit [Configuring a Customer AI instance](./configure.md).
+サービスインスタンスの追加の詳細を表示する 2 つ目の方法は、インサイトページ内にあります。右上の「**[!UICONTROL 詳細を表示]**」をクリックして、ドロップダウンを表示できます。スコアの定義、作成日時、傾向タイプなどの詳細が表示されます。一覧に示したプロパティの詳細については、[顧客AIインスタンスの設定](./configure.md)を参照してください。
 
 ![詳細を表示](../images/insights/landing-show-more.png)
 
@@ -79,7 +79,7 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![編集ボタンをクリックする](../images/insights/edit-button.png)
 
-編集ダイアログボックスが表示され、インスタンスの名前、説明、ステータス、スコアリング頻度を編集できます。 To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
+編集ダイアログボックスが表示され、インスタンスの名前、説明、ステータス、スコアリング頻度を編集できます。 変更を確認してダイアログを閉じるには、右下の「**[!UICONTROL 保存]**」を選択します。
 
 ![編集ポップオーバー](../images/insights/edit-instance.png)
 
@@ -87,14 +87,14 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 右上のナビゲーションの「**[!UICONTROL 編集]**」の横に「**[!UICONTROL その他のアクション]**」ボタンがあります。「**[!UICONTROL その他のアクション]**」をクリックするとドロップダウンが開き、次の操作のいずれかを選択できます。
 
-- **[!UICONTROL クローン]**:「 **[!UICONTROL Clone]** 」を選択すると、設定されたサービスインスタンスがコピーされます。 その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
+- **[!UICONTROL クローン]**:「 **** Clonecopys」を選択すると、設定したサービス・インスタンスがコピーされます。その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
 - **[!UICONTROL 削除]**：インスタンスを削除します。
-- **[!UICONTROL アクセススコア]**:「 **[!UICONTROL アクセススコア]** 」を選択すると、ダイアログが開き、Customer AI [Tutorialの](./download-scores.md) ダウンロードスコアへのリンクが提供されます。このダイアログには、API呼び出しの作成に必要なデータセットIDも表示されます。
+- **[!UICONTROL アクセススコア]**:「 **[!UICONTROL アクセス]** スコア」を選択すると、ダイアログが開き、顧客AIチュートリアルの [](./download-scores.md) ダウンロードスコアへのリンクが提供されます。このダイアログには、API呼び出しの作成に必要なデータセットIDも表示されます。
 - **[!UICONTROL 実行履歴の表示]**：ダイアログが開き、サービスインスタンスに関連付けられたすべてのスコア付け実行のリストが表示されます。
 
 ![その他のアクション](../images/insights/more-actions.png)
 
-## Scoring summary {#scoring-summary}
+## スコアリングの概要{#scoring-summary}
 
 スコアリングの概要には、スコア対象プロファイルの合計数が表示され、高、中、低の傾向を含むグループに分類されます。 傾向バケットは、スコア範囲に基づいて決定され、「低」は 24 未満、「中」は 25 ～ 74、「高」は 74 を超える値になります。各バケットには、凡例に対応する色があります。
 
@@ -134,17 +134,17 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ### セグメントの作成
 
-Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for low, medium, and high propensity redirects you to the segment builder.
+低、中、高の傾向の任意のグループで「**[!UICONTROL セグメントを作成]**」ボタンを選択すると、セグメントビルダーにリダイレクトされます。
 
 >[!NOTE]
 >
->「 **[!UICONTROL セグメントを]** 作成」ボタンは、データセットに対してリアルタイム顧客プロファイルが有効になっている場合にのみ使用できます。 リアルタイム顧客プロファイルを有効にする方法の詳細については、 [リアルタイム顧客プロファイルの概要](../../../rtcdp/overview.md)を参照してください。
+>「**[!UICONTROL セグメントを作成]**」ボタンは、データセットに対してリアルタイム顧客プロファイルが有効になっている場合にのみ使用できます。 リアルタイム顧客プロファイルを有効にする方法の詳細については、[リアルタイム顧客プロファイルの概要](../../../rtcdp/overview.md)を参照してください。
 
 ![「セグメントを作成」をクリックする](../images/insights/influential-factors-create-segment.png)
 
 ![セグメントの作成](../images/insights/create-segment.png)
 
-セグメントビルダーを使用して、セグメントを定義します。 インサイトページから「セグメント **[!UICONTROL を作成]** 」を選択すると、顧客AIは、選択したグループ情報を自動的にセグメントに追加します。 セグメントの作成を完了するには、セグメントビルダーのユーザーインターフェイスの右側パネルにある「*名前*」コンテナと「*説明*」パラメーターを入力します。セグメントに名前と説明を付けたら、右上の「**[!UICONTROL 保存]**」をクリックします。
+セグメントビルダーを使用して、セグメントを定義します。 「インサイト」ページから「**[!UICONTROL セグメント]**&#x200B;を作成」を選択すると、顧客AIは、選択したグループ情報を自動的にセグメントに追加します。 セグメントの作成を完了するには、セグメントビルダーのユーザーインターフェイスの右側パネルにある「*名前*」コンテナと「*説明*」パラメーターを入力します。セグメントに名前と説明を付けたら、右上の「**[!UICONTROL 保存]**」をクリックします。
 
 >[!NOTE]
 >
