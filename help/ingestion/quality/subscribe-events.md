@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion notifications;notifications;subscribe events;data ingestion status events;status events;subscribe;status notifications;
+keywords: Experience Platform；ホーム；人気のあるトピック；データ取り込み通知；通知；購読イベント；データ取り込みステータスイベント；ステータスイベント；購読；ステータス通知；
 solution: Experience Platform
 title: データ取得イベントへのサブスクライブ
 topic: overview
@@ -7,33 +7,33 @@ description: Adobe Experience Platformは、取り込みプロセスの監視を
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 30%
+source-wordcount: '683'
+ht-degree: 29%
 
 ---
 
 
 # データ取得通知
 
-Adobe Experience Platform でデータを取得するプロセスは、複数の手順で構成されます。Once you identify data files that need to be ingested into [!DNL Platform], the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. 取得処理は、[Adobe データ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) を使用するか、Experience Platform のユーザーインターフェイスを使用して開始することができます。[!DNL Experience Platform]
+Adobe Experience Platform でデータを取得するプロセスは、複数の手順で構成されます。[!DNL Platform]に取り込む必要のあるデータファイルを特定すると、取り込みプロセスが開始され、データが正常に取り込まれるか、または失敗するまで各ステップが連続して行われます。 取得処理は、[Adobe データ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) を使用するか、Experience Platform のユーザーインターフェイスを使用して開始することができます。[!DNL Experience Platform]
 
-Data loaded into [!DNL Platform] must go through multiple steps in order to reach its destination, the [!DNL Data Lake] or the [!DNL Real-time Customer Profile] data store. 各手順では、データの処理やデータの検証が行われ、データが次の手順に渡される前にデータが保存されます。取得されるデータの量によっては、この処理に時間がかかる場合があり、検証、セマンティクスまたは処理エラーが原因でプロセスが失敗する可能性が常にあります。失敗した場合は、データの問題を修正し、修正したデータファイルを使用して取得プロセス全体を再開する必要があります。
+[!DNL Platform]に読み込まれたデータは、目的のデータストア、[!DNL Data Lake]データストア、または[!DNL Real-time Customer Profile]データストアに到達するために、複数の手順を経る必要があります。 各手順では、データの処理やデータの検証が行われ、データが次の手順に渡される前にデータが保存されます。取得されるデータの量によっては、この処理に時間がかかる場合があり、検証、セマンティクスまたは処理エラーが原因でプロセスが失敗する可能性が常にあります。失敗した場合は、データの問題を修正し、修正したデータファイルを使用して取得プロセス全体を再開する必要があります。
 
-To assist in monitoring the ingestion process, [!DNL Experience Platform] makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures.
+[!DNL Experience Platform]は、取り込みプロセスの監視を支援するため、プロセスの各ステップで公開された一連のイベントを登録し、取り込まれたデータの状態と発生する可能性のあるエラーを通知する。
 
 ## データインジェスト通知用のWebフックの登録
 
-データインジェスト通知を受け取るには、 [Adobeデベロッパーコンソール](https://www.adobe.com/go/devs_console_ui) (DDC)を使用してWebフックをExperience Platform統合に登録する必要があります。
+データインジェスト通知を受け取るには、[Adobe開発者コンソール](https://www.adobe.com/go/devs_console_ui)を使用して、WebフックをExperience Platform統合に登録する必要があります。
 
-これを行う方法について詳しくは、 [購読に関するチュートリアルに従って [!DNL Adobe I/O Event] 通知を行います](../../observability/notifications/subscribe.md) 。
+これを行う方法の詳細な手順については、[ [!DNL Adobe I/O Event] 通知](../../observability/notifications/subscribe.md)のサブスクライブのチュートリアルに従ってください。
 
 >[!IMPORTANT]
 >
->購読プロセス中に、イベントプロバイダーとして **[!UICONTROL プラットフォーム通知]** (Platform notifications **[!UICONTROL )を選択し、プロンプトが表示されたら]** Data ingestion notificationイベント購読を選択します。
+>購読プロセス中に、イベントプロバイダーとして&#x200B;**[!UICONTROL プラットフォーム通知]**&#x200B;を選択し、プロンプトが表示されたら&#x200B;**[!UICONTROL データ取り込み通知]**&#x200B;イベント購読を選択します。
 
 ## データ取り込み通知の受信
 
-Webフックの登録が完了し、新しいデータが取り込まれると、イベント通知の受信開始を設定できます。 これらのイベントは、Webフック自体を使用して表示するか、Adobe開発者コンソールでプロジェクトのイベント登録の概要にある[ **[!UICONTROL デバッグトレース]** ]タブを選択して表示できます。
+Webフックの登録が完了し、新しいデータが取り込まれると、イベント通知の受信開始を設定できます。 これらのイベントは、Webフック自体を使用して表示するか、Adobe開発者コンソールでプロジェクトのイベント登録の概要にある[**[!UICONTROL Debug Tracing]**]タブを選択して表示できます。
 
 以下のJSONは、バッチインジェストイベントが失敗した場合にWebフックに送信される通知ペイロードの例です。
 
@@ -67,13 +67,13 @@ Webフックの登録が完了し、新しいデータが取り込まれると�
 | `event_id` | 通知用の、システム生成の一意のID。 |
 | `event` | 通知をトリガーしたイベントの詳細を含むオブジェクトです。 |
 | `event.xdm:datasetId` | インジェストイベントが適用されるデータセットのID。 |
-| `event.xdm:eventCode` | データセットに対してトリガーされたイベントのタイプを示すステータスコード。 具体的な値とその定義については、 [付録](#event-codes) を参照してください。 |
+| `event.xdm:eventCode` | データセットに対してトリガーされたイベントのタイプを示すステータスコード。 特定の値とその定義については、[付録](#event-codes)を参照してください。 |
 
-イベント通知の完全なスキーマを表示するには、 [パブリックGitHubリポジトリを参照してください](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)。
+イベント通知の完全なスキーマを表示するには、[パブリックGitHubリポジトリ](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json)を参照してください。
 
 ## 次の手順
 
-プロジェクトに [!DNL Platform] 通知を登録すると、 [!UICONTROL プロジェクトの概要からイベントを受け取った表示を表示できます]。 Refer to the guide on [tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) for detailed instructions on how to trace your events.
+プロジェクトに[!DNL Platform]通知を登録すると、[!UICONTROL プロジェクトの概要]から表示が受け取ったイベントを確認できます。 イベントのトレース方法の詳細な手順については、[Adobe I/Oイベント](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)のトレースのガイドを参照してください。
 
 ## 付録
 
@@ -85,10 +85,10 @@ Webフックの登録が完了し、新しいデータが取り込まれると�
 
 | イベントコード | プラットフォームサービス | ステータス | イベントの説明 |
 | --- | ---------------- | ------ | ----------------- |
-| `ing_load_success` | [!DNL Data Ingestion] | 成功 | バッチが内のデータセットに正常に取り込まれました [!DNL Data Lake]。 |
-| `ing_load_failure` | [!DNL Data Ingestion] | 失敗 | バッチを内のデータセットに取り込めませんでした [!DNL Data Lake]。 |
-| `ps_load_success` | [!DNL Real-time Customer Profile] | 成功 | バッチが正常に [!DNL Profile] データストアに取り込まれました。 |
-| `ps_load_failure` | [!DNL Real-time Customer Profile] | 失敗 | バッチをデータストアに取り込めませんでした [!DNL Profile] 。 |
+| `ing_load_success` | [!DNL Data Ingestion] | 成功 | バッチが[!DNL Data Lake]内のデータセットに取り込まれました。 |
+| `ing_load_failure` | [!DNL Data Ingestion] | 失敗 | バッチを[!DNL Data Lake]内のデータセットに取り込めませんでした。 |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | 成功 | バッチが[!DNL Profile]データストアに正常に取り込まれました。 |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | 失敗 | バッチを[!DNL Profile]データストアに取り込めませんでした。 |
 | `ig_load_success` | [!DNL Identity Service] | 成功 | データが正常にIDグラフに読み込まれました。 |
 | `ig_load_failure` | [!DNL Identity Service] | 失敗 | データをIDグラフに読み込めませんでした。 |
 
