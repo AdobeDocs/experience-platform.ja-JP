@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Customer Attributes connector
+keywords: Experience Platform；ホーム；人気の高いトピック；顧客属性コネクタ
 solution: Experience Platform
 title: 顧客属性コネクタ
 topic: overview
@@ -7,8 +7,8 @@ description: 次のドキュメントは、APIまたはユーザーインター�
 translation-type: tm+mt
 source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 38%
+source-wordcount: '129'
+ht-degree: 35%
 
 ---
 
