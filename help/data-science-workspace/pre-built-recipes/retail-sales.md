@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform；小売の販売レシピ；データサイエンスワークスペース；人気の高いトピック；レシピ；プレビルドレシピ
 solution: Experience Platform
 title: 小売販売レシピ
 topic: overview
@@ -7,8 +7,8 @@ description: 小売販売レシピを使用すると、特定の期間にシー�
 translation-type: tm+mt
 source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 100%
+source-wordcount: '585'
+ht-degree: 97%
 
 ---
 
