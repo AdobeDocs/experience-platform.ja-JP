@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;update an object
+keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；api；オブジェクトの更新
 solution: Experience Platform
 title: オブジェクトの更新
 topic: developer guide
@@ -7,15 +7,15 @@ description: 'PATCH リクエストのパスに ID を含めることで、カ�
 translation-type: tm+mt
 source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 85%
+source-wordcount: '359'
+ht-degree: 83%
 
 ---
 
 
 # オブジェクトの更新
 
-You can update part of a [!DNL Catalog] object by including its ID in the path of a PATCH request. このドキュメントでは、カタログオブジェクトに対して PATCH 操作を実行する次の 2 つの方法について説明します。
+[!DNL Catalog]オブジェクトのIDをPATCHリクエストのパスに含めると、その一部を更新できます。 このドキュメントでは、カタログオブジェクトに対して PATCH 操作を実行する次の 2 つの方法について説明します。
 
 * フィールドを使用する
 * JSON パッチ表記を使用する
@@ -36,7 +36,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 更新する[!DNL Catalog]オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
@@ -85,7 +85,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 更新する[!DNL Catalog]オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
