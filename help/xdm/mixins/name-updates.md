@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM;ExperienceEvent；フィールド；スキーマ;スキーマ;スキーマデザイン；mixin;mixin;enduserids;end-user;ids;updates;
 solution: Experience Platform
 title: Mixin名の更新
 topic: overview
@@ -7,7 +7,7 @@ description: 最近のXDMミックスイン名の変更のリストです。
 translation-type: tm+mt
 source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '273'
 ht-degree: 2%
 
 ---
