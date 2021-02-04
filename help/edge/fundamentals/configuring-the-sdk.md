@@ -3,12 +3,12 @@ title: SDK の設定
 seo-title: Adobe Experience PlatformWeb SDKの設定
 description: Experience Platform Web SDK の設定方法について説明します
 seo-description: Experience Platform Web SDK の設定方法について説明します
-keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；Web;環境;placeContext;debugEnabled;edgeDomain;orgId;clickBeforeEventSend;defaultConsent;Web設定；prehidingStyle;cookieDestinations;enabledDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 74%
+source-wordcount: '738'
+ht-degree: 72%
 
 ---
 
@@ -75,7 +75,7 @@ Adobeサービスとのやり取りに使用するドメイン。 Adobe エッ�
 | -------- | ------------ | ----------------- |
 | 文字列 | ○ | なし |
 
-Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で複数のインスタンスを設定する場合は、インスタンスごとに異なる `orgId` を設定する必要があります。
+割り当てられた[!DNL Experience Cloud]組織ID。  1 つのページ内で複数のインスタンスを設定する場合は、インスタンスごとに異なる `orgId` を設定する必要があります。
 
 ## データの収集
 
@@ -83,9 +83,9 @@ Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で�
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
-| Boolean | × | `true` |
+| ブール値 | × | `true` |
 
-リンククリックに関連付けられたデータを自動的に収集するかどうかを示します。詳しくは、 [自動リンクトラッキング](../data-collection/track-links.md#automaticLinkTracking) （英語）を参照してください。
+リンククリックに関連付けられたデータを自動的に収集するかどうかを示します。詳しくは、[自動リンクトラッキング](../data-collection/track-links.md#automaticLinkTracking)を参照してください。
 
 ### `onBeforeEventSend`
 
@@ -93,7 +93,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で�
 | -------- | ------------ | ----------------- |
 | 関数 | × | () => 未定義 |
 
-すべてのイベントに対して呼び出されるコールバックを送信直前に設定する場合には、これを設定します。フィールド `xdm` を持つオブジェクトがコールバックに送信されます。Modify the `xdm` object to change what is sent.  このコールバック内では、`xdm` オブジェクトには、イベントコマンドに渡されたデータと、自動的に収集された情報が既に含まれています。このコールバックのタイミングと例について詳しくは、[イベントのグローバルな変更](tracking-events.md#modifying-events-globally)を参照してください。
+すべてのイベントに対して呼び出されるコールバックを送信直前に設定する場合には、これを設定します。フィールド `xdm` を持つオブジェクトがコールバックに送信されます。`xdm`オブジェクトを変更して、送信内容を変更します。  このコールバック内では、`xdm` オブジェクトには、イベントコマンドに渡されたデータと、自動的に収集された情報が既に含まれています。このコールバックのタイミングと例について詳しくは、[イベントのグローバルな変更](tracking-events.md#modifying-events-globally)を参照してください。
 
 ## プライバシーオプション
 
@@ -127,17 +127,17 @@ Your assigned [!DNL Experience Cloud] organization ID.  1 つのページ内で�
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
-| Boolean | × | `true` |
+| ブール値 | × | `true` |
 
-Enables [!DNL Audience Manager] cookie destinations, which allows the setting of cookies based on segment qualification.
+[!DNL Audience Manager] cookieの宛先を有効にします。これにより、セグメントクオリフィケーションに基づいたcookieの設定が可能になります。
 
 ### `urlDestinationsEnabled`
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
-| Boolean | × | `true` |
+| ブール値 | × | `true` |
 
-Enables [!DNL Audience Manager] URL destinations, which allows the firing of URLs based on segment qualification.
+[!DNL Audience Manager] URLの送信先を有効にします。これにより、セグメントクオリフィケーションに基づいてURLを呼び出すことができます。
 
 ## ID オプション
 
@@ -145,7 +145,7 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
-| Boolean | × | true |
+| ブール値 | × | true |
 
 trueの場合、SDKは古いAMCV cookieを読み取って設定します。 これは、サイトの一部で訪問者.jsを使用している可能性がある場合に、Adobe Experience PlatformWeb SDKへの移行に役立ちます。 また、ページで訪問者APIが定義されている場合、SDKはECIDのクエリ訪問者APIを使用します。 これにより、AEP Web SDKを使用して2つのタグページを作成でき、同じECIDを保持できます。
 
@@ -153,6 +153,6 @@ trueの場合、SDKは古いAMCV cookieを読み取って設定します。 こ�
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
-| Boolean | × | true |
+| ブール値 | × | true |
 
 アドビのサードパーティ Cookie の設定を有効にします。SDKは、サードパーティのコンテキストで訪問者IDを永続化して、サイト間で同じ訪問者IDを使用できるようにする機能を備えています。 複数のサイトがある場合や、データをパートナーと共有する場合に役立ちます。ただし、プライバシー上の理由から望ましくないこともあります。
