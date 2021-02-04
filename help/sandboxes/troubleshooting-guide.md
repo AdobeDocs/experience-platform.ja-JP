@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox troubleshooting
+keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックスのトラブルシューティング
 solution: Experience Platform
 title: サンドボックストラブルシューティングガイド
 topic: troubleshooting guide
@@ -7,8 +7,8 @@ description: このドキュメントでは、Adobe Experience Platform のサ�
 translation-type: tm+mt
 source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 92%
+source-wordcount: '551'
+ht-degree: 90%
 
 ---
 
