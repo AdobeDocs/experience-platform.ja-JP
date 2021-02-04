@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql;sql reference;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；sql;sql参照；
 solution: Experience Platform
 title: SQL リファレンス
 topic: reference
@@ -7,12 +7,12 @@ description: クエリサービスは、SELECTステートメントや他の制�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 6%
+source-wordcount: '71'
+ht-degree: 5%
 
 ---
 
 
 # SQL リファレンス
 
-[!DNL Query Service] は、標準のANSI SQLを文や他の制限付きコマンドに使用する機能を提供し `SELECT` ます。 [!DNL Query Service] には、データ定義言語またはデータ操作言語機能は含まれません。 The data queried via the service comes from [!DNL Experience Data Lake], which contains largely immutable datasets.
+[!DNL Query Service] は、標準のANSI SQLを文や他の制限付きコマンドに使用する機能を `SELECT` 提供します。[!DNL Query Service] には、データ定義言語またはデータ操作言語機能は含まれません。サービスを介してクエリされるデータは、主に不変データセットを含む[!DNL Experience Data Lake]から取得されます。
