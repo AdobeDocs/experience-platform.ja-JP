@@ -3,12 +3,12 @@ title: パーソナライズされたエクスペリエンスのちらつきの�
 seo-title: ちらつきを管理するAdobe Experience PlatformWeb SDK
 description: ユーザーエクスペリエンスのちらつきを管理する方法を説明します。
 seo-description: Experience PlatformWeb SDKのプロパティを使用してちらつきを管理する方法を説明します
-keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
+keywords: ターゲット；ちらつき；prehidingStyle；非同期；非同期；
 translation-type: tm+mt
 source-git-commit: e0f992eafbb973fa1c48acc3b165788137d143a4
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 76%
+source-wordcount: '496'
+ht-degree: 75%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 76%
 
 事前非表示フェーズでは、SDK は `prehidingStyle` 設定オプションを使用して HTML スタイルタグを作成し、DOM に追加して、ページの大きな部分が非表示になるようにします。ページのどの部分がパーソナライズされるかが不明な場合は、`prehidingStyle` を `body { opacity: 0 !important }` に設定することをお勧めします。これにより、ページ全体が非表示になります。ただし、これは、LighthouseやWebページテストなどのツールから報告されるページレンダリングパフォーマンスが低下する原因となっています。 最高のページレンダリングパフォーマンスを得るには、`prehidingStyle` をコンテナ要素（パーソナライズするページの部分を含む）のリストに設定することをお勧めします。
 
-Assuming you have an HTML page like the one below and you know that only `bar` and `bazz` container elements will be ever personalized:
+以下のようなHTMLページがあり、`bar`と`bazz`のコンテナのみがパーソナライズされると仮定します。
 
 ```html
 <html>
