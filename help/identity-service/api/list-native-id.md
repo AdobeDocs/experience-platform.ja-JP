@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;identity xid;XID
+keywords: Experience Platform；ホーム；人気のあるトピック；ID xid;XID
 solution: Experience Platform
 title: ID のネイティブ ID の取得
 topic: API guide
@@ -7,19 +7,19 @@ description: ID データは、通常、取得される XDM データの ID 文�
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 81%
+source-wordcount: '230'
+ht-degree: 79%
 
 ---
 
 
 # ID の XID の取得
 
-ID データは、通常、取得される XDM データの ID 文字列値および ID 名前空間として提供され、API 呼び出しで使用する ID を指定する際に使用されます。When identities are persisted in [!DNL Identity Service], an ID is generated and assigned to that identity, called the native XID. [!DNL Platform]集約された ID と名前空間にこのよりコンパクトなフォームを使用して ID データのサポートを必要とする API。XID は base64 エンコードされた文字列です。
+ID データは、通常、取得される XDM データの ID 文字列値および ID 名前空間として提供され、API 呼び出しで使用する ID を指定する際に使用されます。IDが[!DNL Identity Service]に保持されると、IDが生成され、そのIDに割り当てられます。これはネイティブXIDと呼ばれます。 [!DNL Platform]集約された ID と名前空間にこのよりコンパクトなフォームを使用して ID データのサポートを必要とする API。XID は base64 エンコードされた文字列です。
 
 >[!NOTE]
 >
-> この形式は主にアドビ内部での使用を目的としています。Native XID as a singular value is more space efficient and is what is used internally within [!DNL Platform] solutions for storage and serialization. しかし、人間が読み取れるわけではなく、不透明で、使用するために別の呼び出しが必要です。
+> この形式は主にアドビ内部での使用を目的としています。単数値としてのネイティブXIDは、スペース効率が高く、ストレージとシリアル化のために[!DNL Platform]ソリューション内で内部的に使用されています。 しかし、人間が読み取れるわけではなく、不透明で、使用するために別の呼び出しが必要です。
 
 この節で説明するサービスを使用して、指定した ID 値と名前空間の XID を取得します。
 
