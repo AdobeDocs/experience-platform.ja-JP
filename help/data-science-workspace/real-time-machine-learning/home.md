@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
+keywords: Experience Platform；開発者ガイド；Data Science Workspace；よく読まれるトピック；リアルタイムの機械学習；
 solution: Experience Platform
 title: リアルタイム機械学習の概要
 topic: Overview
@@ -7,7 +7,7 @@ description: リアルタイム機械学習は、エンドユーザーに対す�
 translation-type: tm+mt
 source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '548'
 ht-degree: 5%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 5%
 >
 >リアルタイム機械学習は、まだすべてのユーザーが利用できるわけではありません。 この機能はアルファベットで、まだテスト中です。 このドキュメントは変更される可能性があります。
 
-リアルタイム機械学習は、エンドユーザーに対するデジタルエクスペリエンスコンテンツの関連性を大幅に向上させます。 これは、でのリアルタイムの会議と継続的な学習を活用することで可能になり [!DNL Experience Edge]ます。
+リアルタイム機械学習は、エンドユーザーに対するデジタルエクスペリエンスコンテンツの関連性を大幅に向上させます。 これは、[!DNL Experience Edge]でのリアルタイムの会議と継続的な学習を活用することで可能になります。
 
-ハブとレスポンシブの両方でシームレスな計算を組み合わせることで、従来、関連性が高く応答性の高いパーソナライズされたエクスペリエンスの電源投入に関与していた待ち時間が大幅に削減されます。 [!DNL Edge] したがって、リアルタイム機械学習では、同期的な意思決定に対する遅延が非常に低いという推測が提供されます。 例としては、パーソナライズされたWebページコンテンツのレンダリングや、オファーの提示、Webストアでの変動の抑制とコンバージョンの増加を目的とした割引などがあります。
+ハブと[!DNL Edge]の両方でシームレスな計算を組み合わせることで、従来、関連性が高く応答性の高いパーソナライズされたエクスペリエンスの電力供給に関与していた待ち時間が大幅に削減されます。 したがって、リアルタイム機械学習では、同期的な意思決定に対する遅延が非常に低いという推測が提供されます。 例としては、パーソナライズされたWebページコンテンツのレンダリングや、オファーの提示、Webストアでの変動の抑制とコンバージョンの増加を目的とした割引などがあります。
 
-## リアルタイム機械学習アーキテクチャ {#architecture}
+## リアルタイム機械学習アーキテクチャ{#architecture}
 
 次の図は、リアルタイム機械学習アーキテクチャの概要を示しています。 現在、alphaの方が簡単になっています。
 
@@ -37,7 +37,7 @@ ht-degree: 5%
 
 ### データの取り込みと準備
 
-Data is ingested and transformed with the [!DNL Experience Data Model] (XDM) on Adobe Experience Platform. このデータは、モデルトレーニングに使用されます。 XDM について詳しくは、[XDM の概要](../../xdm/home.md)を参照してください。
+データはAdobe Experience Platformで[!DNL Experience Data Model] (XDM)と共に取り込まれ、変換される。 このデータは、モデルトレーニングに使用されます。 XDM について詳しくは、[XDM の概要](../../xdm/home.md)を参照してください。
 
 ### オーサリング
 
@@ -45,7 +45,7 @@ Data is ingested and transformed with the [!DNL Experience Data Model] (XDM) on 
 
 ### デプロイ
 
-予測APIエンドポイント [!DNL Experience Edge] を使用して、サー [!UICONTROL ビスギャラリーでリアルタイム機械学習サービスを作成するモデルを展開します] 。
+モデルを[!DNL Experience Edge]に展開し、予測APIエンドポイントを使用して[!UICONTROL サービスギャラリー]にリアルタイム機械学習サービスを作成します。
 
 ### 推論
 
@@ -64,8 +64,8 @@ Data is ingested and transformed with the [!DNL Experience Data Model] (XDM) on 
 > アルファの制限：
 > - 現在、ONNXベースのモデルのみがサポートされています。
 > - ノードで使用される関数はシリアライズできません。 例えば、Pandasノードで使用されるラムダ関数です。
-> - 手動で [!DNL Edge] 導入を行った後、20秒のスリープ状態が発生します。
-> - 詳細な学習を行う場合は、データを、呼び出されたときに、DLモデルが受け入れ可能なアレイを返すように送信する必要があり `df.values` ます。 これは、ONNXモデルスコアリングノードが出力を使用 `df.values` して送信し、モデルに対してスコアリングを行うためです。
+> - [!DNL Edge]の導入が手動で行われた後、20秒のスリープ状態が発生します。
+> - 詳細な学習を行う場合は、`df.values`を呼び出すと、DLモデルが受け入れ可能な配列を返すようにデータを送信する必要があります。 これは、ONNXモデルスコアリングノードが`df.values`を使用し、出力を送信してモデルに対してスコアを付けるためです。
 
 
 
@@ -73,7 +73,7 @@ Data is ingested and transformed with the [!DNL Experience Data Model] (XDM) on 
 
 |  | アルファ（5月） |
 | --- | --- |
-| **機能** | - RTMLノートブックテンプレートを使用し、カスタムの機械学習モデルを作成、テスト、および展開します。 <br>  — トレーニングを受けた機械学習モデルのインポートをサポート。 <br>  — リアルタイム機械学習SDK <br>  — オーサリングノードのスターターセット。 <br> -Adobe Experience Platformハブに配備。 |
+| **機能** | - RTMLノートブックテンプレートを使用し、カスタムの機械学習モデルを作成、テスト、および展開します。 <br>  — トレーニングを受けた機械学習モデルのインポートをサポート。<br>  — リアルタイム機械学習SDK<br>  — オーサリングノードのスターターセット。<br> -Adobe Experience Platformハブに配備。 |
 | **入手方法** | 北米 |
 | **オーサリングノード** | - Pandas <br> - ScikitLearn <br> - ONXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **スコアリング実行時間** | ONNX |
