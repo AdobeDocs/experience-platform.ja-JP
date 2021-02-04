@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox;Sandbox;testing;Testing
+keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックス；サンドボックス；テスト；テスト
 solution: Experience Platform
 title: サンドボックスの概要
 topic: overview
@@ -7,8 +7,8 @@ description: サンドボックスは、Experience Platform の単一のイン�
 translation-type: tm+mt
 source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 90%
+source-wordcount: '755'
+ht-degree: 89%
 
 ---
 
@@ -51,7 +51,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 ## Experience Platform API でのサンドボックス
 
-Experience Platform API を呼び出す場合は、ヘッダーの `x-sandbox-name` でサンドボックス名を指定する必要があります。For example, when making a call to the [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) to view all datasets within the Production sandbox, the sandbox&#39;s name (&quot;prod&quot;) is provided as a header in the API request:
+Experience Platform API を呼び出す場合は、ヘッダーの `x-sandbox-name` でサンドボックス名を指定する必要があります。例えば、実稼働用サンドボックス内のすべてのデータセットを表示するために[[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)を呼び出す場合、サンドボックス名(&quot;prod&quot;)はAPIリクエストのヘッダーとして提供されます。
 
 ```shell
 curl -X GET \
