@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;browser;browser details;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；ブラウザーの詳細；データ型；データ型；
 solution: Experience Platform
 title: ブラウザーの詳細データタイプ
 topic: overview
@@ -7,29 +7,29 @@ description: このドキュメントでは、Browser Details XDMデータ型の
 translation-type: tm+mt
 source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 21%
+source-wordcount: '262'
+ht-degree: 19%
 
 ---
 
 
-# [!UICONTROL ブラウザーの詳細] 、データタイプ
+# [!UICONTROL ブラウザーの] 詳細データタイプ
 
-[!UICONTROL ブラウザーの詳細] は、ブラウザーやアプリケーションに関する詳細を説明する標準のXDMデータ型です。
+[!UICONTROL ブラウザーの] 詳細は、ブラウザーまたはアプリケーションに関する詳細を記述する標準のXDMデータ型です。
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `acceptLanguage` | 文字列 | An IETF language tag ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
+| `acceptLanguage` | 文字列 | IETF言語タグ([RFC 5646](https://tools.ietf.org/html/rfc5646))。 |
 | `cookiesEnabled` | Boolean | ユーザーの設定でcookieの書き込みを許可するかどうかを示します。 |
-| `javaEnabled` | Boolean | 監視元のデバイスでJavaが有効になっているかどうかを示します。 |
-| `javaScriptEnabled` | Boolean | 監視が行われたデバイスでJavaScriptが有効になっているかどうかを示します。 |
+| `javaEnabled` | ブール値 | 監視元のデバイスでJavaが有効になっているかどうかを示します。 |
+| `javaScriptEnabled` | ブール値 | 監視が行われたデバイスでJavaScriptが有効になっているかどうかを示します。 |
 | `javaScriptVersion` | 文字列 | 観察時にサポートされる JavaScript のバージョン。 |
 | `javaVersion` | 文字列 | 観察時にサポートされる Java のバージョン。 |
 | `name` | 文字列 | アプリケーションまたはブラウザーの名前。 |
 | `quicktimeVersion` | 文字列 | 観察時にサポートされる Apple Quicktime のバージョン。 |
-| `thirdPartyCookiesEnabled` | Boolean | 監視元のデバイスでサードパーティCookieが有効になっているかどうかを示します。 |
+| `thirdPartyCookiesEnabled` | ブール値 | 監視元のデバイスでサードパーティCookieが有効になっているかどうかを示します。 |
 | `userAgent` | 文字列 | クライアント要求のHTTPユーザーエージェント文字列。 |
 | `vendor` | 文字列 | アプリケーションまたはブラウザーのベンダー。 |
 | `version` | 文字列 | アプリケーションまたはブラウザーのバージョン。 |
