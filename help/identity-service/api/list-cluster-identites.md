@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;list identities;list cluster
+keywords: Experience Platform；ホーム；人気のあるトピック；リストID;リストクラスタ
 solution: Experience Platform
 title: クラスター ID のリスト
 topic: API guide
@@ -7,8 +7,8 @@ description: ID グラフで関連付けられている ID は、名前空間に
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 100%
+source-wordcount: '356'
+ht-degree: 97%
 
 ---
 
