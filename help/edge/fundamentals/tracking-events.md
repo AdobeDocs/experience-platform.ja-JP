@@ -3,11 +3,11 @@ title: イベントのトラッキング
 seo-title: Adobe Experience Platform Web SDK のイベントのトラッキング
 description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
 seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
+keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;ドキュメントのアンロード；onBeforeEventSend;
 translation-type: tm+mt
 source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1342'
 ht-degree: 46%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 46%
 
 # イベントのトラッキング
 
-To send event data to Adobe Experience Cloud, use the `sendEvent` command. この `sendEvent` コマンドは、 にデータを送信し、パーソナライズされたコンテンツ、ID、オーディエンスの宛先を取得する主な方法です。[!DNL Experience Cloud]
+イベントデータをAdobe Experience Cloudに送信するには、`sendEvent`コマンドを使用します。 この `sendEvent` コマンドは、 にデータを送信し、パーソナライズされたコンテンツ、ID、オーディエンスの宛先を取得する主な方法です。[!DNL Experience Cloud]
 
 Adobe Experience Cloud に送信されるデータは、次の 2 つのカテゴリに分類されます。
 
@@ -26,7 +26,7 @@ Adobe Experience Cloud に送信されるデータは、次の 2 つのカテゴ
 
 XDM データは、Adobe Experience Platform 内で作成したスキーマとコンテンツと同じ構造を持つオブジェクトです。[スキーマの作成方法の詳細について説明します。](../../xdm/tutorials/create-schema-ui.md)
 
-Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
+解析、パーソナライゼーション、オーディエンス、または宛先に含めたいXDMデータは、`xdm`オプションを使用して送信する必要があります。
 
 
 ```javascript
@@ -44,7 +44,7 @@ alloy("sendEvent", {
 });
 ```
 
-コマンドが実行されてからデータがサーバーに送信されるまでに時間がかかる場合があります（例えば、Web SDKライブラリが完全に読み込まれていない場合や、同意がまだ受け取られていない場合）。 `sendEvent` コマンドの実行後に `xdm` オブジェクトの一部を変更する場合は、コマンドの実行 `sendEvent` 前にオブジェクトのクローンを作成するこ `xdm` とを強くお勧めし __`sendEvent` ます。 次に例を示します。
+`sendEvent`コマンドが実行されてから、データがサーバーに送信されるまでの間に時間が経過する場合があります（例えば、Web SDKライブラリが完全に読み込まれていない場合や、同意がまだ受け取られていない場合）。 `sendEvent`コマンドの実行後に`xdm`オブジェクトの一部を変更する場合は、`sendEvent`コマンドの実行前に`xdm`オブジェクト&#x200B;_を_&#x200B;クローンすることを強くお勧めします。 次に例を示します。
 
 ```javascript
 var clone = function(value) {
@@ -71,7 +71,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-この例では、データレイヤーをJSONにシリアル化して複製し、その後デシリアライズします。 次に、コピーされた結果が `sendEvent` コマンドに渡されます。 これにより、 `sendEvent``sendEvent` コマンドの実行時に存在したデータレイヤーのスナップショットが確実に作成され、元のデータレイヤーオブジェクトに対する後の変更がサーバーに送信されるデータに反映されなくなります。 イベント主導型のデータレイヤーを使用している場合は、データのクローン作成は既に自動的に処理されている可能性があります。 例えば、 [Adobe・クライアント・データ・レイヤーを使用している場合](https://github.com/adobe/adobe-client-data-layer/wiki)`getState()` 、計算済みのクローン・スナップショットが、以前のすべての変更のスナップショットとして提供されます。 また、AEP Web SDK Launch拡張を使用している場合は、これも自動的に処理されます。
+この例では、データレイヤーをJSONにシリアル化して複製し、その後デシリアライズします。 次に、コピーされた結果が`sendEvent`コマンドに渡されます。 これにより、`sendEvent`コマンドが`sendEvent`コマンドの実行時に存在したデータレイヤーのスナップショットが確実に保持され、後で元のデータレイヤーオブジェクトに対する変更がサーバーに送信されるデータに反映されなくなります。 イベント主導型のデータレイヤーを使用している場合は、データのクローン作成は既に自動的に処理されている可能性があります。 例えば、[Adobeクライアントデータレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)を使用している場合、`getState()`メソッドは、すべての以前の変更に関する計算済みのクローンスナップショットを提供します。 また、AEP Web SDK Launch拡張を使用している場合は、これも自動的に処理されます。
 
 >[!NOTE]
 >
@@ -83,7 +83,7 @@ dataLayer.commerce = null;
 
 ### `eventType` の設定
 
-In an XDM experience event, there is an optional `eventType` field. ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信するイベントを区別するのに役立ちます。 XDMには、ユーザが使用できる定義済みのイベントタイプがいくつか用意されています。また、ユースケースに合わせて独自のカスタムイベントタイプを常に作成することもできます。 以下は、XDMが提供するあらかじめ定義されたイベントタイプのリストです。 [詳しくは、XDMの公開リポートを参照してください](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)。
+XDMエクスペリエンスイベントには、オプションの`eventType`フィールドがあります。 ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信するイベントを区別するのに役立ちます。 XDMには、ユーザが使用できる定義済みのイベントタイプがいくつか用意されています。また、ユースケースに合わせて独自のカスタムイベントタイプを常に作成することもできます。 以下は、XDMが提供するあらかじめ定義されたイベントタイプのリストです。 [詳しくは、XDMの公開リポートを参照してください](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)。
 
 
 | **イベントタイプ:** | **定義:** |
@@ -92,7 +92,7 @@ In an XDM experience event, there is an optional `eventType` field. ここには
 | advertising.timePlayed | 特定の時間指定メディアアセットに対するユーザーの滞在時間を示します。 |
 | advertising.federated | エクスペリエンスイベントがデータフェデレーション（顧客間のデータ共有）を通じて作成されたかどうかを示します。 |
 | advertising.clicks | 広告に対するクリック操作 |
-| advertising.conversions | パフォーマンス評価のイベントをトリガーする、お客様が事前に定義したアクション |
+| advertising.conversions | パフォーマンス評価のイベントをトリガーするお客様の事前定義済みのアクション |
 | advertising.firstQuartiles | デジタルビデオ広告が通常の速度で25%再生されました |
 | advertising.impressions | エンドユーザーに対する広告のインプレッション（複数可）で、閲覧可能性がある |
 | advertising.midpoints | デジタルビデオ広告が通常の速度で50%再生されました |
@@ -112,7 +112,7 @@ In an XDM experience event, there is an optional `eventType` field. ここには
 | delivery.feedback | 配信のフィードバックイベント。 電子メール配信用のフィードバックイベントの例 |
 
 
-これらのイベントタイプは、Adobe Experience Platform Launchの拡張機能を使用している場合や、Experience Platform Launchなしでいつでも渡すことができる場合は、ドロップダウンに表示されます。 They can be passed in as part of the `xdm` option.
+これらのイベントタイプは、Adobe Experience Platform Launchの拡張機能を使用している場合や、Experience Platform Launchなしでいつでも渡すことができる場合は、ドロップダウンに表示されます。 `xdm`オプションの一部として渡すことができます。
 
 
 ```javascript
@@ -145,7 +145,7 @@ alloy("sendEvent", {
 
 ### データセットIDの上書き
 
-場合によっては、設定UIで設定されたデータセット以外のデータセットにイベントを送信する必要があります。 その場合は、 `datasetId``sendEvent` コマンドでオプションを設定する必要があります。
+場合によっては、設定UIで設定されたデータセット以外のデータセットにイベントを送信する必要があります。 そのためには、`sendEvent`コマンドに`datasetId`オプションを設定する必要があります。
 
 
 ```javascript
@@ -160,11 +160,11 @@ alloy("sendEvent", {
 
 ### ID情報の追加
 
-カスタムID情報をイベントに追加することもできます。 Experience CloudIDの [取得を参照してください](../identity/overview.md)。
+カスタムID情報をイベントに追加することもできます。 [Experience CloudIDの取得](../identity/overview.md)を参照してください。
 
 ## sendBeacon API の使用
 
-Web ページのユーザーが離脱する直前にイベントデータを送信するのは、困難な場合があります。リクエストに時間がかかりすぎると、ブラウザーによってリクエストがキャンセルされる場合があります。一部のブラウザーではこの間に、データを簡単に収集できるよう、`sendBeacon` と呼ばれる Web 標準 API が実装されています。`sendBeacon` を使用する場合、ブラウザーはグローバルブラウジングコンテキストで Web リクエストをおこないます。これは、ブラウザーがバックグラウンドでビーコンリクエストをおこない、ページナビゲーションを保持しないことを意味します。To tell Adobe Experience Platform [!DNL Web SDK] to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  次に例を示します。
+Web ページのユーザーが離脱する直前にイベントデータを送信するのは、困難な場合があります。リクエストに時間がかかりすぎると、ブラウザーによってリクエストがキャンセルされる場合があります。一部のブラウザーではこの間に、データを簡単に収集できるよう、`sendBeacon` と呼ばれる Web 標準 API が実装されています。`sendBeacon` を使用する場合、ブラウザーはグローバルブラウジングコンテキストで Web リクエストをおこないます。これは、ブラウザーがバックグラウンドでビーコンリクエストをおこない、ページナビゲーションを保持しないことを意味します。[!DNL Web SDK]に`sendBeacon`を使うように指示するには、イベントコマンドに`"documentUnloading": true`を追加します。  次に例を示します。
 
 
 ```javascript
@@ -183,7 +183,7 @@ alloy("sendEvent", {
 });
 ```
 
-ブラウザーでは、`sendBeacon` で一度に送信できるデータの量に制限が設けられています。多くのブラウザーでは、上限は 64K です。If the browser rejects the event because the payload is too large, Adobe Experience Platform [!DNL Web SDK] falls back to using its normal transport method (for example, fetch).
+ブラウザーでは、`sendBeacon` で一度に送信できるデータの量に制限が設けられています。多くのブラウザーでは、上限は 64K です。ペイロードが大きすぎるのでブラウザーがイベントを拒否した場合、Adobe Experience Platform[!DNL Web SDK]は通常の転送方法（例えばフェッチなど）を使用してフォールバックします。
 
 ## イベントからの応答の処理
 
