@@ -63,7 +63,7 @@ Adobe Experience Platform Launchではこれらのライブラリの展開と管
 
 ## この新しいWeb SDKの価値
 
-**パフォーマンス：** Web SDKは、現在のAdobeライブラリのすべてを使用するよりも小さく、ページ読み込みを大幅に高速化します。
+**パフォーマンス：** Web SDKは、現在のAdobeライブラリのすべてを使用するよりも小さく、ページの読み込みが大幅に高速になります。
 
 **シンプル：XDM、Web SDK、** Experience Platform Launch、Experience Edge、Adobe Experience Cloudの各ソリューション、Adobe Experience Platformを組み合わせることで、理解しやすく、追跡しやすいデータ収集ストーリーを構築できます。
 
