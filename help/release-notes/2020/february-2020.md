@@ -23,7 +23,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 ## ソース {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platformは外部ソースからデータを取り込みながら、[!DNL Platform]サービスを使ってデータの構造、ラベル付け、拡張を行うことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できるようにする RESTful API とインタラクティブな UI を提供します。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
@@ -31,11 +31,11 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| SaaS 用 API のサポート — サービスシステム | New source connectors for [!DNL Salesforce Service Cloud] API and [!DNL ServiceNow] API. |
-| SaaS 用 API のサポート — マーケティングシステム | New source connectors for [!DNL HubSpot] API. |
-| API support for [!DNL NoSQL] database systems | 、、、 [!DNL AWS Redshift]、 [!DNL Google BigQuery]、 [!DNL MariaDB]および [!DNL MySQL][!DNL PostgreSQL][!DNL SQL Server] APIの新しいソースコネクタ。 |
-| クラウドストレージシステム用 API のサポート | New source connectors for [!DNL Azure Data Lake Service Gen 2] API and [!DNL Google Cloud Storage] API. |
-| クラウドストレージシステムの UI のサポート | New source connector for [!DNL Google Cloud Storage] in the UI. |
+| SaaS 用 API のサポート — サービスシステム | [!DNL Salesforce Service Cloud] APIと[!DNL ServiceNow] API用の新しいソースコネクタ。 |
+| SaaS 用 API のサポート — マーケティングシステム | [!DNL HubSpot] API用の新しいソースコネクタ。 |
+| [!DNL NoSQL]データベースシステムのAPIサポート | [!DNL AWS Redshift]、[!DNL Google BigQuery]、[!DNL MariaDB]、[!DNL MySQL]、[!DNL PostgreSQL]、および[!DNL SQL Server] API用の新しいソースコネクタ。 |
+| クラウドストレージシステム用 API のサポート | [!DNL Azure Data Lake Service Gen 2] APIと[!DNL Google Cloud Storage] API用の新しいソースコネクタ。 |
+| クラウドストレージシステムの UI のサポート | UIの[!DNL Google Cloud Storage]の新しいソースコネクタ。 |
 
 **既知の問題**
 
