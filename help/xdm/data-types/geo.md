@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；地理；データ型；データ型；
 solution: Experience Platform
 title: 地域データタイプ
 topic: overview
@@ -7,15 +7,15 @@ description: このドキュメントでは、Geo XDMデータタイプの概要
 translation-type: tm+mt
 source-git-commit: 6a7967ac9e652c7e73fd713e89a9079287cf0ae5
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 39%
+source-wordcount: '196'
+ht-degree: 36%
 
 ---
 
 
-# [!UICONTROL 地域] データタイプ
+#  Geodata型
 
-[!UICONTROL 地域] (Geo)は、イベントが観察された地域を示す標準のXDMデータ型です。
+ Geoisは、イベントが観察された地域を示す標準のXDMデータ型です。
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
