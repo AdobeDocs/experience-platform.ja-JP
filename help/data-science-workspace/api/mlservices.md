@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；mlservices;senesi機械学習api
 solution: Experience Platform
 title: サービス
 topic: Developer guide
@@ -7,8 +7,8 @@ description: MLService は、組織が開発済みのモデルにアクセスし
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 100%
+source-wordcount: '887'
+ht-degree: 98%
 
 ---
 
@@ -107,7 +107,7 @@ curl -X POST \
 }
 ```
 
-## MLService のリストの取得 {#retrieve-a-list-of-mlservices}
+## MLService のリストの取得  {#retrieve-a-list-of-mlservices}
 
 MLService のリストを取得するには、GET リクエストを 1 回実行します。結果のフィルタリングに役立つように、リクエストパスでクエリパラメーターを指定できます。使用可能なクエリのリストについては、「[アセット取得のためのクエリーパラメーター](./appendix.md#query)」の付録の節を参照してください。
 
@@ -166,7 +166,7 @@ curl -X GET \
 }
 ```
 
-## 特定の MLService の取得 {#retrieve-a-specific-mlservice}
+## 特定の MLService の取得  {#retrieve-a-specific-mlservice}
 
 特定の実験の詳細を取得するには、目的の MLService の ID をリクエストパスに含んだ GET リクエストを実行します。
 
@@ -210,7 +210,7 @@ curl -X GET \
 }
 ```
 
-## MLService の更新 {#update-an-mlservice}
+## MLService の更新  {#update-an-mlservice}
 
 既存の MLService を更新するには、対象となる MLService の ID をリクエストパスに含め、更新後のプロパティを JSON ペイロードで指定した PUT リクエストを実行して、プロパティを上書きします。
 
