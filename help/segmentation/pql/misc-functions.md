@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;miscellaneous functions;misc;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；その他の関数；その他；
 solution: Experience Platform
 title: その他の関数
 topic: developer guide
@@ -7,15 +7,15 @@ description: 次の関数は、プロファイルクエリ言語（PQL）のそ�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 81%
+source-wordcount: '131'
+ht-degree: 70%
 
 ---
 
 
 # その他の関数
 
-The following function is a miscellaneous function for [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+次の関数は、[!DNL Profile Query Language] (PQL)のその他の関数です。 他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## Let
 
