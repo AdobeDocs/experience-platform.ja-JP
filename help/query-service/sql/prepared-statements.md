@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；準備文；準備文；sql;
 solution: Experience Platform
 title: 準備済み文
 topic: prepared statements
@@ -7,15 +7,15 @@ description: SQLでは、準備された文を使用して、類似したクエ�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 93%
+source-wordcount: '378'
+ht-degree: 90%
 
 ---
 
 
 # 準備済み文
 
-SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。Adobe Experience Platform [!DNL Query Service] supports prepared statements by using a parameterized query. クエリを何度も再解析する必要がなくなるため、これを使用してパフォーマンスを最適化できます。
+SQL では、準備済み文を使用して、類似したクエリや更新をテンプレート化します。Adobe Experience Platform[!DNL Query Service]は、パラメータ化クエリを使用した準備文をサポートしています。 クエリを何度も再解析する必要がなくなるため、これを使用してパフォーマンスを最適化できます。
 
 ## 準備済み文の使用
 
@@ -108,12 +108,12 @@ EXECUTE getIdRange(10000, 10005);
 
 | ID | 名 | 姓 | 生年月日 | 電子メール | 都市 | 国 |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexander | davis | 1993-09-15 | example@example.com | バンクーバー | カナダ |
-| 10001 | antoine | dubois | 1967-03-14 | example2@example.com | パリ | フランス |
+| 10000 | アレクサン | デイビス | 1993-09-15 | example@example.com | バンクーバー | カナダ |
+| 10001 | アントイン | ダボイ | 1967-03-14 | example2@example.com | パリ | フランス |
 | 10002 | 京子 | 桜 | 1999-11-26 | example3@example.com | 東京 | 日本 |
-| 10003 | linus | pettersson | 1982-06-03 | example4@example.com | ストックホルム | スウェーデン |
-| 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | ナイロビ | ケニア |
-| 10005 | fernando | rios | 2002-07-30 | example6@example.com | サンティアゴ | チリ |
+| 10003 | 亜麻 | ペターソン | 1982-06-03 | example4@example.com | ストックホルム | スウェーデン |
+| 10004 | aasir | ワイタカ | 1976-12-17 | example5@example.com | ナイロビ | ケニア |
+| 10005 | フェルナン | rios | 2002-07-30 | example6@example.com | サンティアゴ | チリ |
 
 準備済み文の使用が終了したら、次の呼び出しを使用して、その文の割り当てを解除できます。
 
