@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ；セグメント；メンバーシップ；セグメントのメンバーシップ；スキーマデザイン；マップ；
 solution: Experience Platform
 title: セグメントメンバーシップの詳細ミックスイン
 topic: overview
@@ -7,23 +7,23 @@ description: このドキュメントでは、セグメントメンバーシッ�
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '406'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL セグメントメンバーシップの詳細] mixin
+# [!UICONTROL セグメントのメンバーシップ] の詳細Mixin
 
 >[!NOTE]
 >
->いくつかのミックスインの名前が変更されました。 詳しくは、 [mixin名の更新に関するドキュメントを参照してください](../name-updates.md) 。
+>いくつかのミックスインの名前が変更されました。 詳しくは、[mixin name updates](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL セグメントのメンバーシップの詳細] は、 [[!DNL XDM Individual Profile] クラスの標準ミックスインです](../../classes/individual-profile.md)。 mixinは、個人が属するセグメント、最後の資格日時、およびメンバーシップが有効になるまでの期間など、セグメントのメンバーシップに関する情報をキャプチャする単一のマップフィールドを提供します。
+[!UICONTROL セグメントのメンバーシップ] の詳細は、 [[!DNL XDM Individual Profile] クラスの標準のmixinです](../../classes/individual-profile.md)。mixinは、個人が属するセグメント、最後の資格日時、およびメンバーシップが有効になるまでの期間など、セグメントのメンバーシップに関する情報をキャプチャする単一のマップフィールドを提供します。
 
 >[!WARNING]
 >
->このミックスインを使用して、この `segmentMembership` フィールドをプロファイルスキーマに手動で追加する必要がありますが、このフィールドに手動で値を入力したり、更新したりしないでください。 セグメント化ジョブが実行されると、プロファイルごとに `segmentMembership` マップが自動的に更新されます。
+>`segmentMembership`フィールドは、このミックスインを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドの入力や更新を手動で行うことは避けてください。 セグメント化ジョブの実行時に、各プロファイルの`segmentMembership`マップが自動的に更新されます。
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 | --- | --- | --- |
 | `segmentMembership` | マップ | 個人のセグメントのメンバーシップを表すmapオブジェクト。 このオブジェクトの構造については、以下で詳しく説明します。 |
 
-次の例は、特定のプロファイルに対してシステムが入力した `segmentMembership` マップの例です。 セグメントのメンバーシップは、オブジェクトのルートレベルキーで示される名前空間で並べ替えられます。 次に、各名前空間の個々のキーは、プロファイルが属するセグメントのIDを表します。 各セグメントオブジェクトには、メンバーシップに関する詳細を提供する次のような複数のサブフィールドが含まれています。
+次の例は、特定のプロファイルに対してシステムが入力した`segmentMembership`マップの例です。 セグメントのメンバーシップは、オブジェクトのルートレベルキーで示される名前空間で並べ替えられます。 次に、各名前空間の個々のキーは、プロファイルが属するセグメントのIDを表します。 各セグメントオブジェクトには、メンバーシップに関する詳細を提供する次のような複数のサブフィールドが含まれています。
 
 ```json
 {
@@ -76,7 +76,7 @@ ht-degree: 1%
 | `xdm:lastQualificationTime` | このプロファイルが最後にセグメントに適用された時間のタイムスタンプ。 |
 | `xdm:validUntil` | セグメントのメンバーシップが有効であると見なされなくなったときのタイムスタンプ。 |
 | `xdm:status` | セグメントのメンバーシップが現在のリクエストの一部として実現されたかどうかを示します。 次の値を指定できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントの一部であり、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントを入力しています。</li><li>`exited`:プロファイルは、現在のリクエストの一部としてセグメントを終了しています。</li></ul> |
-| `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれます。 メンバーシップごとに1つの型のペイロードのみを指定できます。 `xdm:payloadType` ペイロード(、`boolean`、 `number`、または `propensity``string`)のタイプを示し、その兄弟プロパティはペイロードタイプの値を提供します。 |
+| `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれます。 メンバーシップごとに1つの型のペイロードのみを指定できます。 `xdm:payloadType` ペイロード(、`boolean`、 `number`、または `propensity` `string`)のタイプを示し、その兄弟プロパティはペイロードタイプの値を提供します。 |
 
 Mixinの詳細については、パブリックXDMリポジトリを参照してください。
 
