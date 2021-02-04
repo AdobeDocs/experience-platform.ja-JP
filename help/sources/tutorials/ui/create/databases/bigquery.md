@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Google Big Query;google big query;GBQ;gbq
+keywords: Experience Platform；ホーム；人気のあるトピック；Google Bigクエリ;Googleビッグクエリ;GBQ;gbq
 solution: Experience Platform
 title: UIでGoogle Bigクエリソースコネクタを作成する
 topic: overview
@@ -8,8 +8,8 @@ description: このチュートリアルでは、プラットフォームユー�
 translation-type: tm+mt
 source-git-commit: 74fbf388cf645c89f9f6d00a5ae2e59ba94041b9
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 9%
+source-wordcount: '521'
+ht-degree: 8%
 
 ---
 
