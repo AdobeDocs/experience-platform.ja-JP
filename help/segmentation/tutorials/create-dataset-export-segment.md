@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;Segmentation;create a dataset;export audience segment;export segment;
+keywords: Experience Platform；ホーム；人気の高いトピック；Segmentation Service;Segmentation;Segmentation；データセットの作成；オーディエンスセグメントのエクスポート；セグメントのエクスポート；
 solution: Experience Platform
 title: オーディエンスセグメントをエクスポートするためのデータセットの作成
 topic: tutorial
@@ -8,8 +8,8 @@ description: このチュートリアルでは、Experience Platform UI で、�
 translation-type: tm+mt
 source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 57%
+source-wordcount: '773'
+ht-degree: 56%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 57%
 
 [!DNL Adobe Experience Platform] では、特定の属性に基づいて顧客プロファイルをオーディエンスに簡単にセグメント化できます。セグメントを作成したら、そのオーディエンスをデータセットにエクスポートし、そこでオーディエンスにアクセスしたりて操作したりできます。エクスポートを正常におこなうには、データセットを正しく設定する必要があります。
 
-This tutorial walks through the steps required to create a dataset that can be used for exporting an audience segment using the [!DNL Experience Platform] UI.
+[!DNL Experience Platform] UIを使用したオーディエンスセグメントの書き出しに使用できるデータセットを作成する手順を説明します。
 
-このチュートリアルは、[セグメント結果の評価とアクセス](./evaluate-a-segment.md)に関するチュートリアルで説明している手順に直接関連しています。The evaluating a segment tutorial provides steps for creating a dataset using the [!DNL Catalog Service] API, whereas this tutorial outlines steps to create a dataset using the [!DNL Experience Platform] UI.
+このチュートリアルは、[セグメント結果の評価とアクセス](./evaluate-a-segment.md)に関するチュートリアルで説明している手順に直接関連しています。セグメントの評価のチュートリアルでは[!DNL Catalog Service] APIを使用してデータセットを作成する手順を紹介します。このチュートリアルでは、[!DNL Experience Platform] UIを使用してデータセットを作成する手順について概説します。
 
 ## はじめに
 
-セグメントをエクスポートするには、データセットがに基づいている必要があり [!DNL XDM Individual Profile Union Schema]ます。 A union schema is a system-generated, read-only schema that aggregates the fields of all schemas that share the same class, in this case that is the [!DNL XDM Individual Profile] class. 和集合表示スキーマについて詳しくは、[スキーマレジストリ開発者ガイドのリアルタイム顧客プロファイルの節](../../xdm/schema/composition.md#union)を参照してください。
+セグメントをエクスポートするには、データセットが[!DNL XDM Individual Profile Union Schema]に基づいている必要があります。 和集合スキーマは、システム生成の読み取り専用スキーマで、同じクラス（この場合は[!DNL XDM Individual Profile]クラス）を共有するすべてのスキーマのフィールドを集計します。 和集合表示スキーマについて詳しくは、[スキーマレジストリ開発者ガイドのリアルタイム顧客プロファイルの節](../../xdm/schema/composition.md#union)を参照してください。
 
 UI で和集合スキーマを表示するには、左側のナビゲーションで「**[!UICONTROL Profiles]**」をクリックし、「**[!UICONTROL Union schema]**」タブをクリックします（下図を参照）。
 
@@ -33,13 +33,13 @@ UI で和集合スキーマを表示するには、左側のナビゲーショ�
 
 ## データセットワークスペース
 
-The datasets workspace within the [!DNL Experience Platform] UI allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
+[!DNL Experience Platform] UI内のデータセットワークスペースを使用すると、IMS組織が作成したすべてのデータセットの表示と管理を行えるほか、新しいデータセットを作成できます。
 
 データセットワークスペースを表示するには、左側のナビゲーションで「**[!UICONTROL Datasets]**」をクリックし、「**[!UICONTROL Browse]**」タブをクリックします。データセットワークスペースには、名前、作成日時、ソース、スキーマ、最終バッチステータスを示す列、およびデータセットが最後に更新された日時など、データセットのリストが含まれます。 各列の幅によっては、すべての列を表示するには、左または右にスクロールする必要があります。
 
 >[!NOTE]
 >
->Click on the filter icon next to the search bar to use filtering capabilities to view only those datasets enabled for [!DNL Real-time Customer Profile].
+>検索バーの横にあるフィルターアイコンをクリックして、フィルター機能を使用し、[!DNL Real-time Customer Profile]に対して有効になっているデータセットのみを表示します。
 
 ![すべてのデータセットの表示](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
@@ -55,7 +55,7 @@ The datasets workspace within the [!DNL Experience Platform] UI allows you to vi
 
 ## XDM 個別プロファイル和集合スキーマの選択
 
-To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset, find the &quot;[!UICONTROL XDM Individual Profile]&quot; schema with a type of &quot;[!UICONTROL Union]&quot; on the **[!UICONTROL Select Schema]** screen.
+データセットに使用する[!DNL XDM Individual Profile Union Schema]を選択するには、**[!UICONTROL スキーマを選択]**&#x200B;画面で、「[!UICONTROL 和集合]」のタイプを持つ「[!UICONTROL XDM Indivitualプロファイル]」スキーマを探します。
 
 「**[!UICONTROL XDM Individual Profile]**」の横のラジオボタンを選択し、右上隅の「**[!UICONTROL Next]**」をクリックします。
 
@@ -63,7 +63,7 @@ To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset
 
 ## データセットの設定
 
-On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset.
+**[!UICONTROL データセットを設定]**&#x200B;画面で、データセットに名前を付け、データセットの説明を入力する必要があります。
 
 **データセット名に関する注意事項：**
 - 後でライブラリ内で簡単に見つけられるように、データセット名は短く、わかりやすい名前にする必要があります。
@@ -78,7 +78,7 @@ On the **[!UICONTROL Configure Dataset]** screen, you will be required to give y
 
 空のデータセットが作成され、データセットワークスペースの「**[!UICONTROL データセットアクティビティ]**」タブに戻りました。****&#x200B;ワークスペースの左上隅にデータセットの名前と、「バッチが追加されていません」という通知が表示されます。このデータセットにバッチをまだ追加していないので、これは期待通りです。
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
+データセットワークスペースの右側には、「**[!UICONTROL 情報]**」タブが表示され、データセットID、名前、説明、テーブル名、スキーマ、ストリーミング、ソースなど、新しいデータセットに関連する情報が示されます。 「**[!UICONTROL 情報]**」タブには、データセットの作成日時と最終変更日に関する情報も含まれています。
 
 **[!UICONTROL データセット ID]** は、オーディエンスセグメントのエクスポートワークフローを完了するために必要になるので、メモしておいてください。
 
@@ -86,6 +86,6 @@ On the right-hand side of the Datasets workspace you will see the **[!UICONTROL 
 
 ## 次の手順
 
-Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the dataset ID to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
+[!DNL XDM Individual Profile Union Schema]に基づいてデータセットを作成したら、データセットIDを使用して[セグメント結果の評価とアクセスのチュートリアル](./evaluate-a-segment.md)に進むことができます。
 
-At this time, please return to the evaluating segment results tutorial and pick up from the [generating profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the exporting a segment workflow.
+現時点では、評価セグメントの結果のチュートリアルに戻り、セグメントのエクスポートの[オーディエンスメンバ](./evaluate-a-segment.md#generate-profiles)のプロファイルの生成手順から進んでください。
