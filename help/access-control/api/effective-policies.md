@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;effective policies;access control api
+keywords: Experience Platform；ホーム；人気の高いトピック；効果的なポリシー；アクセス制御api
 solution: Experience Platform
 title: 有効なポリシーの表示
 topic: developer guide
@@ -7,8 +7,8 @@ description: Adobe Experience Platform のアクセス制御では、Adobe Admin
 translation-type: tm+mt
 source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 72%
+source-wordcount: '319'
+ht-degree: 70%
 
 ---
 
@@ -25,7 +25,7 @@ POST /acl/effective-policies
 
 **リクエスト**
 
-The following requests retrieves information about the &quot;[!UICONTROL Manage Datasets]&quot; permission and access to the &quot;[!UICONTROL schemas]&quot; resource type for the current user.
+次のリクエストは、「[!UICONTROL データセットを管理]」権限に関する情報を取得し、現在のユーザーの「[!UICONTROL スキーマ]」リソースタイプにアクセスします。
 
 ```shell
 curl -X POST \
@@ -66,11 +66,11 @@ curl -X POST \
 
 ## 次の手順
 
-This document covered how to make calls to the [!DNL Access Control] API to return information on active permissions and related policies for resource types. For more information about access control for [!DNL Experience Platform], see the [access control overview](../home.md).
+このドキュメントでは、[!DNL Access Control] APIを呼び出して、アクティブなアクセス許可とリソースタイプの関連ポリシーに関する情報を返す方法を説明しました。 [!DNL Experience Platform]のアクセス制御について詳しくは、[アクセス制御の概要](../home.md)を参照してください。
 
 ## 付録
 
-This section provides supplemental information for using the [!DNL Access Control] API.
+この節では、[!DNL Access Control] APIの使用に関する補足情報を提供します。
 
 ### 許可された権限とリソースの種類
 
