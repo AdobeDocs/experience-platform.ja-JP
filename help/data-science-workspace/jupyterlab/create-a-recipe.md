@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;JupyterLab;recipe;notebooks;Data Science Workspace;popular topics;create recipe
+keywords: Experience Platform;JupyterLab；レシピ；ノートブック；Data Science Workspace；人気の高いトピック；レシピの作成
 solution: Experience Platform
 title: Jupyter ノートブックを使用したレシピの作成
 topic: tutorial
@@ -8,7 +8,7 @@ description: このチュートリアルでは、2 つの主なセクション�
 translation-type: tm+mt
 source-git-commit: adaa7fbaf78a37131076501c21bf18559c17ed94
 workflow-type: tm+mt
-source-wordcount: '2350'
+source-wordcount: '2362'
 ht-degree: 81%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 81%
 
 # Jupyter ノートブックを使用したレシピの作成
 
-このチュートリアルでは、2 つの主なセクションについて説明します。First, you will create a machine learning model using a template within [!DNL JupyterLab Notebook]. Next, you will exercise the notebook to recipe workflow within [!DNL JupyterLab] to create a recipe within [!DNL Data Science Workspace].
+このチュートリアルでは、2 つの主なセクションについて説明します。まず、[!DNL JupyterLab Notebook]内のテンプレートを使用して機械学習モデルを作成します。 次に、ノートブックを[!DNL JupyterLab]内のレシピワークフローに導き、[!DNL Data Science Workspace]内にレシピを作成します。
 
 ## 導入された概念：
 
@@ -25,21 +25,21 @@ ht-degree: 81%
 - **トレーニング**：トレーニングは、ラベル付きのデータからパターンやインサイトを学習するプロセスです。
 - **スコアリング**：スコアリングは、トレーニング済みモデルを使用してデータからインサイトを生成するプロセスです。
 
-## Get started with the [!DNL JupyterLab] notebook environment
+## [!DNL JupyterLab]ノートブック環境を使い始める
 
-Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. 開始するには、 [Adobe Experience Platformに移動し](https://platform.adobe.com) 、左の[ **[!UICONTROL ノートブック]** ]タブをクリックします。 新しいノートブックを作成するには、からレシピビルダーテンプレートを選択し [!DNL JupyterLab Launcher]ます。
+レシピを一から作成する場合は[!DNL Data Science Workspace]内で行います。 開始するには、[Adobe Experience Platform](https://platform.adobe.com)に移動し、左側の&#x200B;**[!UICONTROL ノートブック]**&#x200B;タブをクリックします。 [!DNL JupyterLab Launcher]からレシピビルダーテンプレートを選択して、新しいノートブックを作成します。
 
-The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring runs inside the notebook. これにより、トレーニングデータとスコアリングデータで実験を実行する間に、`train()` メソッドと `score()` メソッドを柔軟に変更できます。Once you are happy with the outputs of the training and scoring, you can create a recipe to be used in [!DNL Data Science Workspace] using the notebook to recipe functionality built in to the Recipe Builder notebook.
+[!UICONTROL Recipe Builder]ノートブックを使用すると、ノートブック内でトレーニングとスコアリングの実行を実行できます。 これにより、トレーニングデータとスコアリングデータで実験を実行する間に、`train()` メソッドと `score()` メソッドを柔軟に変更できます。トレーニングとスコアの出力結果に満足したら、Recipe Builderノートブックに組み込まれたレシピ機能を使用して、[!DNL Data Science Workspace]で使用するレシピを作成できます。
 
 >[!NOTE]
 >
->The Recipe Builder notebook supports working with all file formats but currently the Create Recipe functionality only supports [!DNL Python].
+>Recipe Builderノートブックは、すべてのファイル形式での作業をサポートしていますが、現在のところ、レシピの作成機能では[!DNL Python]のみがサポートされています。
 
 ![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
 ランチャーからRecipe Builderノートブックをクリックすると、タブにノートブックが開きます。 ノートブックで使用されるテンプレートは、[こちらのパブリックリポジトリー](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)にもある Python 小売売上予測レシピです。
 
-You will notice that in the toolbar there are three additional actions namely – **[!UICONTROL Train]**, **[!UICONTROL Score]**, and **[!UICONTROL Create Recipe]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. これらのアクションに関する詳細は、ノートブックでレシピを作成した後に、[トレーニングとスコアリング](#training-and-scoring)の節で説明します。
+ツールバーには、**[!UICONTROL トレーニング]**、**[!UICONTROL スコア]**、**[!UICONTROL レシピを作成]**&#x200B;の3つの追加アクションがあります。 これらのアイコンは、[!UICONTROL レシピビルダー]ノートブックにのみ表示されます。 これらのアクションに関する詳細は、ノートブックでレシピを作成した後に、[トレーニングとスコアリング](#training-and-scoring)の節で説明します。
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -55,7 +55,7 @@ You will notice that in the toolbar there are three additional actions namely �
 
 ## Recipe Builder ノートブックの概要
 
-Now that you know the basics for the [!DNL JupyterLab] notebook environment, you can begin looking at the files that make up a machine learning model recipe. ここで説明するファイルは次のとおりです。
+[!DNL JupyterLab]ノートブック環境の基本を理解できたら、機械学習モデルのレシピを構成するファイルを調べ始めることができます。 ここで説明するファイルは次のとおりです。
 
 - [要件ファイル](#requirements-file)
 - [設定ファイル](#configuration-files)
@@ -67,7 +67,7 @@ Now that you know the basics for the [!DNL JupyterLab] notebook environment, you
 
 ### 要件ファイル {#requirements-file}
 
-要件ファイルは、レシピで使用する追加のライブラリを宣言するために使用されます。依存関係がある場合は、バージョン番号を指定できます。To look for additional libraries, visit [anaconda.org](https://anaconda.org). 要件ファイルの形式設定方法については、 [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually).を参照してください。 既に使用されている主なライブラリのリストは次のとおりです。
+要件ファイルは、レシピで使用する追加のライブラリを宣言するために使用されます。依存関係がある場合は、バージョン番号を指定できます。追加のライブラリを探すには、[anaconda.org](https://anaconda.org)にアクセスしてください。 要件ファイルの形式設定については、[Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually)を参照してください。 既に使用されている主なライブラリのリストは次のとおりです。
 
 ```JSON
 python=3.6.7
@@ -79,7 +79,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
-> 追加したライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。また、環境ファイルを手動で作成する場合は、 `name` フィールドを上書きできません。
+> 追加したライブラリまたは特定のバージョンは、上記のライブラリと互換性がない場合があります。また、環境ファイルを手動で作成する場合は、`name`フィールドを上書きすることはできません。
 
 ### 設定ファイル {#configuration-files}
 
@@ -105,17 +105,17 @@ data_access_sdk_python
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## トレーニングデータローダー {#training-data-loader}
+## トレーニングデータローダー  {#training-data-loader}
 
 トレーニングデータローダーの目的は、機械学習モデルの作成に使用するデータをインスタンス化することです。通常、トレーニングデータローダーが達成するタスクは 2 つあります。
-- Load data from [!DNL Platform]
+- [!DNL Platform]からデータを読み込む
 - データの準備と特徴量エンジニアリング
 
 以下の 2 つの節で、データの読み込みとデータの準備について説明します。
 
-### データの読み込み {#loading-data}
+### データの読み込み  {#loading-data}
 
-この手順では、[pandas データフレーム](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)を使用します。Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas&#39; `read_csv()` or `read_json()` functions.
+この手順では、[pandas データフレーム](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)を使用します。データは、[!DNL Adobe Experience Platform] SDK (`platform_sdk`)を使用して[!DNL Platform]内のファイルから、またはpandas&#39; `read_csv()`または`read_json()`関数を使用して外部ソースから読み込むことができます。
 
 - [[!DNL Platform SDK]](#platform-sdk)
 - [外部ソース](#external-sources)
@@ -128,7 +128,7 @@ data_access_sdk_python
 
 `platform_sdk` データローダーの使用に関する詳細なチュートリアルについては、『[Platform SDK ガイド](../authoring/platform-sdk.md)』を参照してください。このチュートリアルでは、認証の構築、データの基本読み取り、およびデータの基本的な書き込みに関する情報を提供します。
 
-### 外部ソース {#external-sources}
+### 外部ソース  {#external-sources}
 
 この節では、JSON または CSV ファイルを pandas オブジェクトにインポートする方法を示します。Pandas ライブラリの公式ドキュメントについては、次の URL を参照してください。
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -173,7 +173,7 @@ def load(config_properties):
 
 >[!NOTE]
 >
->As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform using `client_context`:
+>[設定ファイルセクション](#configuration-files)で説明したように、`client_context`を使用してExperience Platformからデータにアクセスする場合、次の設定パラメーターが設定されます。
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -182,7 +182,7 @@ def load(config_properties):
 
 データが揃ったら、データの準備と特徴のエンジニアリングから始めます。
 
-### データの準備と特徴量エンジニアリング {#data-preparation-and-feature-engineering}
+### データの準備と特徴量エンジニアリング  {#data-preparation-and-feature-engineering}
 
 データは読み込み後に準備されて、`train` データセットと `val` データセットに分割されます。サンプルコードを以下に示します。
 
@@ -214,7 +214,7 @@ dataframe.drop('date', axis=1, inplace=True)
 - 将来の売上高と過去の売上高を得るために `weeklySales` をオフセットする
 - 日付別にデータを `train` と `val` データセットに分割する
 
-First, `week` and `year` columns are created and the original `date` column converted to [!DNL Python] [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html). 週と年の値は、datetime オブジェクトから抽出されます。
+最初に、`week`列と`year`列が作成され、元の`date`列が[!DNL Python] [datetime](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html)に変換されます。 週と年の値は、datetime オブジェクトから抽出されます。
 
 次に、`storeType` が 3 つの異なる店舗タイプ（`A`、`B`、`C`）を表す 3 つの列に変換されます。それぞれにはどちらの `storeType` が true かを示すブール値が含まれます。`storeType` 列が削除されます。
 
@@ -224,7 +224,7 @@ First, `week` and `year` columns are created and the original `date` column conv
 
 `load()` 関数は `train` と `val` データセットを出力として完了する必要があります。
 
-### スコアリングデータローダー {#scoring-data-loader}
+### スコアリングデータローダー  {#scoring-data-loader}
 
 スコアリングのデータを読み込む手順は、`split()` 関数でトレーニングデータを読み込む手順と似ています。データアクセス SDK を使用して、`recipe.conf` ファイルにある `scoringDataSetId` からデータを読み込みます。
 
@@ -299,7 +299,7 @@ df.dropna(0, inplace=True)
 
 スコアリングデータローダーの `load()` 関数は、スコアリングデータセットを出力として使用して完了する必要があります。
 
-### パイプラインファイル {#pipeline-file}
+### パイプラインファイル  {#pipeline-file}
 
 `pipeline.py` ファイルには、トレーニングとスコアリングのロジックが含まれます。
 
@@ -349,7 +349,7 @@ def train(configProperties, data):
 
 アプリケーションに応じて、`GradientBoostingRegressor()` 関数に引数が含まれることに注意してください。`xTrainingDataset` には、トレーニングに使用する特徴を含める必要がありますが、`yTrainingDataset` にはラベルを含める必要があります。
 
-### スコアリング {#scoring}
+### スコアリング  {#scoring}
 
 `score()` 関数には、スコアリングアルゴリズムを含め、モデルの成功度を示す測定値を返す必要があります。`score()` 関数は、スコアリングデータセットラベルとトレーニング済みモデルを使用して、予測された特徴のセットを生成します。次に、これらの予測値が、スコアリングデータセットの実際の特徴と比較されます。この例では、`score()` 関数は、トレーニング済みモデルを使用して、スコアリングデータセットのラベルを使用して特徴を予測します。予測された特徴が返されます。
 
@@ -371,11 +371,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### 評価ファイル {#evaluator-file}
+### 評価ファイル  {#evaluator-file}
 
 `evaluator.py` ファイルには、トレーニングレシピの評価方法とトレーニングデータの分割方法に関するロジックが含まれています。小売販売の例では、トレーニングデータの読み込みと準備のロジックが含まれます。以下の 2 つの節で説明します。
 
-### データセットの分割 {#split-the-dataset}
+### データセットの分割  {#split-the-dataset}
 
 トレーニングのデータ準備段階では、トレーニングとテストに使用するデータセットを分割する必要があります。この `val` データは、トレーニング後にモデルを評価するために暗黙的に使用されます。このプロセスはスコアリングとは別のものです。
 
@@ -394,7 +394,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### トレーニング済みモデルの評価 {#evaluate-the-trained-model}
+### トレーニング済みモデルの評価  {#evaluate-the-trained-model}
 
 `evaluate()` 関数は、モデルのトレーニングが終わると実行され、モデルの成功度を示す指標を返します。`evaluate()` 関数は、テストデータセットラベルとトレーニング済みモデルを使用して、一連の特徴を予測します。これらの予測値は、テストデータセットの実際の特徴と比較されます。一般的なスコアリングアルゴリズムには、次のものがあります。
 - [平均絶対誤差率（MAPE）](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -423,9 +423,9 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 この関数は、評価指標の配列を含む `metric` オブジェクトを返します。これらの指標は、トレーニング済みモデルのパフォーマンスを評価するために使用されます。
 
-### データセーバーファイル {#data-saver-file}
+### データセーバーファイル  {#data-saver-file}
 
-`datasaver.py` ファイルには、スコアリングのテスト中に予測を保存する `save()` 関数が含まれています。The `save()` function will take your prediction and using [!DNL Experience Platform Catalog] APIs, write the data to the `scoringResultsDataSetId` you specified in your `scoring.conf` file.
+`datasaver.py` ファイルには、スコアリングのテスト中に予測を保存する `save()` 関数が含まれています。`save()`関数は、予測を受け取り、[!DNL Experience Platform Catalog] APIを使用して、`scoring.conf`ファイルで指定した`scoringResultsDataSetId`にデータを書き込みます。
 
 小売販売のサンプルレシピでの使用例を次に示します。Platform へのデータ書き込みにおける `DataSetWriter` ライブラリの使用に注意してください。
 
@@ -456,7 +456,7 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## トレーニングとスコアリング {#training-and-scoring}
+## トレーニングとスコアリング  {#training-and-scoring}
 
 ノートブックの変更が完了し、レシピのトレーニングをおこなう場合は、バーの上部にある関連ボタンをクリックして、セル内にトレーニングランを作成できます。ボタンをクリックすると、トレーニングスクリプトのコマンドと出力のログがノートブック（`evaluator.py` セルの下）に表示されます。Conda は、最初にすべての依存関係をインストールし、その後トレーニングを開始します。
 
@@ -464,13 +464,13 @@ def save(configProperties, prediction):
 
 デバッグの目的で、非表示の出力を表示する場合は、出力セルの末尾に `debug` を追加し、再実行します。
 
-## レシピの作成 {#create-recipe}
+## レシピの作成  {#create-recipe}
 
-When you are done editing the recipe and satisfied with the training/scoring output, you can create a recipe from the notebook by pressing **[!UICONTROL Create Recipe]** in the top-right navigation.
+レシピの編集が完了し、トレーニング/スコアリング出力に満足したら、右上のナビゲーションの&#x200B;**[!UICONTROL レシピ]**&#x200B;を押して、ノートブックからレシピを作成できます。
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-ボタンを押すと、レシピ名の入力を求められます。 この名前は、に作成された実際のレシピを表し [!DNL Platform]ます。
+ボタンを押すと、レシピ名の入力を求められます。 この名前は、[!DNL Platform]で作成された実際のレシピを表します。
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -489,11 +489,11 @@ When you are done editing the recipe and satisfied with the training/scoring out
 > - 異なるノートブックに同時にレシピを作成しないでください
 
 
-## 次の手順 {#next-steps}
+## 次の手順  {#next-steps}
 
-このチュートリアルでは、Recipe Builder ノートブックで機械学習モデルを作成する方法を学習しました。You have also learned how to exercise the notebook to recipe workflow within the notebook to create a recipe within [!DNL Data Science Workspace].
+このチュートリアルでは、Recipe Builder ノートブックで機械学習モデルを作成する方法を学習しました。また、ノートブック内でレシピワークフローを実行し、[!DNL Data Science Workspace]内でレシピを作成する方法も学習しました。
 
-To continue learning how to work with resources within [!DNL Data Science Workspace], please visit the [!DNL Data Science Workspace] recipes and models dropdown.
+[!DNL Data Science Workspace]内のリソースの使い方を学び続けるには、[!DNL Data Science Workspace]レシピとモデルのドロップダウンを参照してください。
 
 ## その他のリソース {#additional-resources}
 
