@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema library;Schema Library;schema;record data;time series;time-series
+keywords: Experience Platform；ホーム；人気の高いトピック；XDM;XDMプロファイル;XDM個人システム；XDM個人イベント;XDM ExperienceEvent;XDM ExperienceEvent；エクスペリエンスイベント;ExperienceEvent;Mixin;Mixin;Experienceイベント;XDMerienceEvent;event;event;XDM Experienceevent;Experience Data Model;Experience Data Model;Data Model;Data Model;スキーマレジストリ；スキーマレジストリ；イベントライブラリ；スキーマ；レコードデータ；時系列；時系列
 solution: Experience Platform
 title: XDM システムの概要
 topic: overview
@@ -7,8 +7,8 @@ description: '標準化と相互運用性は、Adobe Experience Platform の背�
 translation-type: tm+mt
 source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 49%
+source-wordcount: '1642'
+ht-degree: 47%
 
 ---
 
@@ -17,40 +17,40 @@ ht-degree: 49%
 
 標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。[!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 
-XDM はパブリックに文書化された仕様であり、デジタルエクスペリエンスのパワーを向上させるために設計されています。It provides common structures and definitions for any application to use to communicate with [!DNL Platform] services. XDM 標準に準拠することで、すべての顧客体験データを共通の表現に組み込み、より迅速かつ統合的な方法でインサイトを得ることができます。顧客の行動から貴重なインサイトを得たり、セグメントを使用して顧客のオーディエンスを定義したり、パーソナライゼーションを目的として顧客属性を表すことができます。
+XDM はパブリックに文書化された仕様であり、デジタルエクスペリエンスのパワーを向上させるために設計されています。[!DNL Platform]サービスとの通信に使用するアプリケーションの共通の構造と定義を提供します。 XDM 標準に準拠することで、すべての顧客体験データを共通の表現に組み込み、より迅速かつ統合的な方法でインサイトを得ることができます。顧客の行動から貴重なインサイトを得たり、セグメントを使用して顧客のオーディエンスを定義したり、パーソナライゼーションを目的として顧客属性を表すことができます。
 
-XDM is the foundational framework that allows Adobe Experience Cloud, powered by [!DNL Experience Platform], to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which [!DNL Experience Platform] is built, XDM System, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services.
+XDMは、[!DNL Experience Platform]の力を借りたAdobe Experience Cloudが、正しい人に正しいチャネルに、正しいメッセージを、まさに適切なタイミングで届けることを可能にする基礎的な枠組みです。 [!DNL Experience Platform]が構築される方法論XDM Systemは、[!DNL Platform]サービスが使用する[!DNL Experience Data Model]スキーマを操作します。
 
-This document provides an overview of the role of XDM System within [!DNL Experience Platform].
+このドキュメントでは、[!DNL Experience Platform]内のXDMシステムの役割の概要を説明します。
 
 ## XDM スキーマ
 
 [!DNL Experience Platform] では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。システムをまたいで一貫したデータを定義することで、意味を保有しやすくなり、データから価値を得ることができます。
 
-Before data can be ingested into [!DNL Platform], a schema must be composed to describe the data&#39;s structure and provide constraints to the type of data that can be contained within each field. スキーマは、基本クラスと 0 個以上の Mixin で構成されます。
+データを[!DNL Platform]に取り込む前に、スキーマを構成して、データの構造を記述し、各フィールドに含めることができるデータの種類に制約を与える必要があります。 スキーマは、基本クラスと 0 個以上の Mixin で構成されます。
 
 デザインの原則やベストプラクティスなど、スキーマ構成モデルについて詳しくは、[スキーマ構成の基本](schema/composition.md)を参照してください。
 
 ### [!DNL Schema Registry] および [!DNL Schema Library]
 
-The **[!DNL Schema Registry]** provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Adobe Experience Platform **[!DNL Schema Library]**. The [!DNL Schema Library] contains industry-standard resources made available to you by Adobe, as well as resources from [!DNL Experience Platform] partners and vendors whose applications you use. また、スキーマレジストリの UI と API を使用して、組織に固有の新しいスキーマやリソースを作成および管理することもできます。
+**[!DNL Schema Registry]**&#x200B;は、Adobe Experience Platform **[!DNL Schema Library]**&#x200B;内のすべてのスキーマ関連リソースを表示し、管理するためのユーザーインターフェイスとRESTful APIを提供します。 [!DNL Schema Library]には、Adobeが提供する業界標準のリソースと、使用するアプリケーションの[!DNL Experience Platform]パートナーやベンダーのリソースが含まれています。 また、スキーマレジストリの UI と API を使用して、組織に固有の新しいスキーマやリソースを作成および管理することもできます。
 
-For a comprehensive guide to the major operations available in the [!DNL Schema Registry], see the [Schema Registry developer guide](api/getting-started.md).
+[!DNL Schema Registry]で入手できる主な操作の詳細なガイドについては、[スキーマレジストリ開発者ガイド](api/getting-started.md)を参照してください。
 
 ## XDM システムでのデータの動作 {#data-behaviors}
 
-Data intended for use in [!DNL Experience Platform] is grouped into two behavior types:
+[!DNL Experience Platform]での使用を意図したデータは、次の2つの動作タイプに分類されます。
 
 * **レコードデータ**：主体の属性に関する情報を提供します。主体は、組織または個人にすることができます。
 * **時系列データ**：レコードの主体によって直接または間接的にアクションが実行された時点のシステムのスナップショットを提供します。
 
 すべての XDM スキーマは、レコードまたは時系列として分類できるデータを記述します。スキーマのデータ動作は、スキーマのクラスによって定義され、スキーマの作成時に割り当てられます。XDM クラスは、特定のデータ動作を表すためにスキーマが格納する必要のある最小のプロパティ数を記述します。
 
-Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time-series data, respectively. これらのクラスの詳細については、以下で説明します。
+独自のクラスを[!DNL Schema Registry]内に定義できますが、レコードと時系列のデータにはそれぞれ優先クラス&#x200B;**[!DNL XDM Individual Profile]**&#x200B;と&#x200B;**[!DNL XDM ExperienceEvent]**&#x200B;を使用することをお勧めします。 これらのクラスの詳細については、以下で説明します。
 
 ### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
-[!DNL XDM Individual Profile] は、特定された対象と部分的に識別された対象の両方の属性の単数形式の表現を形成する、レコードベースのクラスです。 高度に識別されるプロファイルには、個人的なコミュニケーションやターゲットを絞ったエンゲージメントに使用したり、詳細な個人情報（名前、性別、生年月日、場所など）および連絡先情報（電話番号や電子メールアドレスなど）を含めたりできます。
+[!DNL XDM Individual Profile] は、特定された対象と部分的に識別された対象の両方の属性の単数形式の表現を形成する、レコードベースのクラスです。高度に識別されるプロファイルには、個人的なコミュニケーションやターゲットを絞ったエンゲージメントに使用したり、詳細な個人情報（名前、性別、生年月日、場所など）および連絡先情報（電話番号や電子メールアドレスなど）を含めたりできます。
 
 識別されにくいプロファイルは、ブラウザーの cookie のように、匿名の行動シグナルのみで構成される場合があります。この場合、少ないプロファイルデータを使用して、匿名プロファイルの興味や好みを照合し、格納する情報ベースを構築します。これらの識別子は、時間が経過すると、主体が通知、購読、購入などに新規登録するため、より詳細になる場合があります。これによってプロファイル属性が増加すると、最終的に件名が特定され、ターゲットを絞ったエンゲージメントの度合いが高くなる可能性があります。
 
@@ -66,57 +66,57 @@ XDM ExperienceEvent は、イベント（または一連のイベント）が発
 
 ![ExperienceEvent カスタマージャーニー](images/overview/experience-event-journey.png)
 
-## XDM schemas and [!DNL Experience Platform] services
+## XDMスキーマと[!DNL Experience Platform]サービス
 
-[!DNL Experience Platform] はスキーマにとらわれず、XDM標準に準拠するスキーマはすべて [!DNL Platform] サービスで使用できます。 The ways in which different [!DNL Platform] services use schemas are outlined in more detail below.
+[!DNL Experience Platform] はスキーマにとらわれず、XDM標準に準拠するスキーマはすべて [!DNL Platform] サービスで使用できます。異なる[!DNL Platform]サービスがスキーマを使用する方法について、以下で詳しく説明します。
 
-### [!DNL Catalog Service], [!DNL Data Ingestion] &amp; [!DNL Data Lake]
+### [!DNL Catalog Service],  [!DNL Data Ingestion] &amp;  [!DNL Data Lake]
 
-[!DNL Catalog Service] は、 [!DNL Experience Platform] アセットとその関連スキーマの記録システムです。 [!DNL Catalog] は、実際のデータを含むファイルやディレクトリではなく、これらのファイルやディレクトリのメタデータや説明を保持します。
+[!DNL Catalog Service] は、 [!DNL Experience Platform] アセットとその関連スキーマの記録システムです。[!DNL Catalog] は、実際のデータを含むファイルやディレクトリではなく、これらのファイルやディレクトリのメタデータや説明を保持します。
 
 [!DNL Catalog] データは、接触チャネル [!DNL Data Lake]やファイル形式に関係なく、によって管理されるすべてのデータを含む、非常に詳細なデータストア [!DNL Platform]に保存されます。
 
-To begin ingesting data into [!DNL Experience Platform], a dataset is created using [!DNL Catalog Service]. データセットは、取り込むデータの構造を記述した XDM スキーマを参照します。If a dataset is created without a schema, [!DNL Experience Platform] will derive an &quot;observed schema&quot; by inspecting the type and content of ingested data fields. Datasets are then tracked in [!DNL Catalog] and stored in the [!DNL Data Lake] alongside the schemas and observed schemas on which they are based.
+[!DNL Experience Platform]へのデータの取り込みを開始するには、[!DNL Catalog Service]を使用してデータセットを作成します。 データセットは、取り込むデータの構造を記述した XDM スキーマを参照します。スキーマなしでデータセットを作成した場合、[!DNL Experience Platform]は、取り込んだデータフィールドの種類と内容を調べ、「観測されたスキーマ」を引き出します。 次に、データセットは[!DNL Catalog]で追跡され、スキーマとその基となる監視スキーマーの横の[!DNL Data Lake]に保存されます。
 
-For more information on [!DNL Catalog], see the [Catalog Service overview](../catalog/home.md). Adobe Experience Platform のデータ取り込みについて詳しくは、[データ取り込みの概要](../ingestion/home.md)を参照してください。
+[!DNL Catalog]について詳しくは、[カタログサービスの概要](../catalog/home.md)を参照してください。 Adobe Experience Platform のデータ取り込みについて詳しくは、[データ取り込みの概要](../ingestion/home.md)を参照してください。
 
 ### [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] allows you to use standard SQL to query [!DNL Experience Platform] data to support many different use cases.
+Adobe Experience Platform[!DNL Query Service]では、標準のSQLからクエリ[!DNL Experience Platform]データを使用して、様々な使用例をサポートできます。
 
-After a schema has been composed and a dataset has been created which references that schema, data is then ingested and stored in the [!DNL Data Lake]. Using [!DNL Query Service], you can join any datasets in the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into [!DNL Real-time Customer Profile].
+スキーマを構成し、そのスキーマを参照するデータセットを作成した後、データを[!DNL Data Lake]に取り込んで保存します。 [!DNL Query Service]を使用すると、[!DNL Data Lake]内の任意のデータセットに参加し、クエリ結果を新しいデータセットとして取り込み、レポート、機械学習、または[!DNL Real-time Customer Profile]への取り込みに使用できます。
 
-To learn more about [!DNL Query Service], please see the [Query Service introduction](../query-service/home.md).
+[!DNL Query Service]の詳細については、[クエリサービスの紹介](../query-service/home.md)を参照してください。
 
 ### [!DNL Real-time Customer Profile]
 
-リアルタイムの顧客プロファイルは、ターゲットを絞り、パーソナライズされたエクスペリエンス管理のための一元的な顧客プロファイルを提供します。Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with [!DNL Experience Platform].
+リアルタイムの顧客プロファイルは、ターゲットを絞り、パーソナライズされたエクスペリエンス管理のための一元的な顧客プロファイルを提供します。各プロファイルには、すべてのシステムにわたって集計されたデータと、[!DNL Experience Platform]で使用するシステムのいずれかで行われた個人のイベントに関する、対応可能なタイムスタンプ付きのアカウントが含まれます。
 
-[!DNL Real-time Customer Profile] は、 [!DNL XDM Individual Profile] またはクラスに基づいてスキーマ形式のデータを使用し [!DNL XDM ExperienceEvent] 、そのデータに基づいてクエリに応答します。 [!DNL Profile] は、他のクラスに基づくスキーマの使用をサポートしていません。
+[!DNL Real-time Customer Profile] は、 [!DNL XDM Individual Profile] OR [!DNL XDM ExperienceEvent] クラスに基づいてスキーマ形式のデータを使用し、そのデータに基づいてクエリに応答します。[!DNL Profile] は、他のクラスに基づくスキーマの使用をサポートしていません。
 
-[!DNL Profile] 各顧客プロファイルのインスタンスを維持し、データを結合して個人の「単一の真実の源泉」を形成します。 この統合データは、「和集合ビュー」と呼ばれるものを使用して表されます。和集合ビューは、同じクラスを実装するすべてのスキーマのフィールドを、1 つのスキーマに集計します。When composing a schema using the UI or API, you can enable the schema for use with [!DNL Real-time Customer Profile] and tag it for inclusion in the union view. The tagged schema will then participate in the schema definition being fed to [!DNL Profile].
+[!DNL Profile] 各顧客プロファイルのインスタンスを維持し、データを結合して個人の「単一の真実の源泉」を形成します。この統合データは、「和集合ビュー」と呼ばれるものを使用して表されます。和集合ビューは、同じクラスを実装するすべてのスキーマのフィールドを、1 つのスキーマに集計します。UIまたはAPIを使用してスキーマを構成する場合、スキーマの[!DNL Real-time Customer Profile]での使用を有効にし、和集合表示に含めるタグを付けることができます。 次に、タグ付きスキーマは[!DNL Profile]に送られるスキーマ定義に参加します。
 
-と [!DNL XDM Individual Profile] データが取り込まれ、管理されると [!DNL XDM ExperienceEvent] きに、データの使用 [!DNL Catalog][!DNL Real-time Customer Profile] が可能なデータの取り込みを開始します。 取り込まれるインタラクションや詳細が多いほど、個人プロファイルは強力になります。
+[!DNL XDM Individual Profile]と[!DNL XDM ExperienceEvent]のデータは[!DNL Catalog]に取り込まれ、管理されるので、[!DNL Real-time Customer Profile]をトリガーして、使用可能になったデータの取り込みを開始します。 取り込まれるインタラクションや詳細が多いほど、個人プロファイルは強力になります。
 
-[!DNL XDM Individual Profile] データは、チャネルやAdobeソリューションの統合全体にわたってアクションを伝え、強化します。行動やインタラクションデータの豊富な履歴と組み合わせると、このデータを電源機械学習に使用します。 The [!DNL Real-time Customer Profile] API can also be used to enrich the functionality of third-party solutions, CRMs, and proprietary solutions.
+[!DNL XDM Individual Profile] データは、チャネルやAdobeソリューションの統合全体にわたってアクションを伝え、強化します。行動やインタラクションデータの豊富な履歴と組み合わせると、このデータを電源機械学習に使用します。[!DNL Real-time Customer Profile] APIは、サードパーティのソリューション、CRM、および独自仕様のソリューションの機能を強化するためにも使用できます。
 
 詳しくは、[リアルタイム顧客プロファイルの概要](../profile/home.md)を参照してください。
 
 ### [!DNL Data Science Workspace]
 
-Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to gain insights from data stored within [!DNL Experience Platform]. [!DNL Data Science Workspace] データ科学者は、XDM Individualに基づくレシピ [!DNL Profile] と、顧客とそのアクティビティに関する [!DNL XDM ExperienceEvent] データを作成でき、購入傾向や推奨オファーなど、個人が認識し、使用する可能性が高い予測を容易に行うことができます。
+Adobe Experience Platform[!DNL Data Science Workspace]は、機械学習と人工知能を使って[!DNL Experience Platform]に保存されたデータから洞察を得ています。 [!DNL Data Science Workspace] データ科学者は、XDM Individualに基づくレシピ [!DNL Profile] と、顧客とそのアクティビティに関する [!DNL XDM ExperienceEvent] データを作成でき、購入傾向や推奨オファーなど、個人が認識し、使用する可能性が高い予測を容易にできます。
 
-With [!DNL Data Science Workspace], data scientists can easily create intelligent services APIs powered by machine learning. これらのサービスは、Adobe Target や Adobe Analytics Cloud などの他のアドビソリューションと連携して、パーソナライズされ、ターゲットを絞ったデジタルエクスペリエンスを自動化します。
+[!DNL Data Science Workspace]を使うと、データ科学者は機械学習を利用したインテリジェントなサービスAPIを簡単に作成できます。 これらのサービスは、Adobe Target や Adobe Analytics Cloud などの他のアドビソリューションと連携して、パーソナライズされ、ターゲットを絞ったデジタルエクスペリエンスを自動化します。
 
-For more information on using [!DNL Experience Platform] data to power insights, see the [Data Science Workspace overview](../data-science-workspace/home.md).
+[!DNL Experience Platform]データを使用してインサイトを強化する方法の詳細については、[データサイエンスワークスペースの概要](../data-science-workspace/home.md)を参照してください。
 
 ## 次の手順とその他のリソース
 
-Now that you better understand the role of schemas throughout [!DNL Experience Platform], you are ready to start composing your own. 学習内容の補足を続けるには、推奨ドキュメントを読み、次のビデオをご覧ください。
+これで、[!DNL Experience Platform]を通じてスキーマの役割をより深く理解できたので、自分で作成する開始を作る準備が整いました。 学習内容の補足を続けるには、推奨ドキュメントを読み、次のビデオをご覧ください。
 
-To learn design principles and best practices for composing schemas to be used with [!DNL Experience Platform], begin by reading the [basics of schema composition](schema/composition.md). スキーマの作成手順については、[API を使用した](tutorials/create-schema-api.md)または[ユーザーインターフェイスを使用した](tutorials/create-schema-ui.md)スキーマの作成に関するチュートリアルを参照してください。
+[!DNL Experience Platform]で使用するスキーマを構成する際の設計原則とベストプラクティスを学ぶには、まずスキーマ組成の[基本を読みます](schema/composition.md)。 スキーマの作成手順については、[API を使用した](tutorials/create-schema-api.md)または[ユーザーインターフェイスを使用した](tutorials/create-schema-ui.md)スキーマの作成に関するチュートリアルを参照してください。
 
-での理解を深めるには、次のビデオ [!DNL XDM System] をご覧く [!DNL Experience Platform]ださい。
+[!DNL Experience Platform]の[!DNL XDM System]に対する理解を深めるには、次のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
 
