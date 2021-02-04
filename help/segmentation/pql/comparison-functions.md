@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;comparison functions;comparison;
+keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；比較関数；比較；
 solution: Experience Platform
 title: 比較関数
 topic: developer guide
@@ -7,15 +7,15 @@ description: 比較関数 は、異なる式と値を比較するために使用
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 91%
+source-wordcount: '325'
+ht-degree: 86%
 
 ---
 
 
 # 比較関数
 
-比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+比較関数は、異なる式と値を比較するために使用され、それに応じて`true`または`false`を返します。他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## Equals
 
