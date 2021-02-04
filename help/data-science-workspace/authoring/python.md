@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
+keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；Python sdk；データアクセスapi;Read Python;Write Python
 solution: Experience Platform
 title: Pythonを使用したデータへのアクセス
 topic: tutorial
@@ -8,7 +8,7 @@ description: 次のドキュメントは、Data Science Workspaceで使用する
 translation-type: tm+mt
 source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '412'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # Pythonを使用したデータへのアクセス
 
-次のドキュメントは、Data Science Workspaceで使用するPythonを使用したデータへのアクセス方法の例を示しています。 JupterLabノートブックを使用したデータへのアクセスについては、JupyterLabノートブックデータアクセス [](../jupyterlab/access-notebook-data.md) ・ドキュメントを参照してください。
+次のドキュメントは、Data Science Workspaceで使用するPythonを使用したデータへのアクセス方法の例を示しています。 JupterLabノートブックを使用したデータへのアクセスについては、[JupyterLabノートブックデータアクセス](../jupyterlab/access-notebook-data.md)のドキュメントを参照してください。
 
 ## データセットの読み取り
 
@@ -55,7 +55,7 @@ partitions = dataset.get_partitions_info()
 
 DISTINCT句を使用すると、行/列レベルですべての個別の値を取得し、応答からすべての重複値を削除できます。
 
-この `distinct()` 関数の使用例を次に示します。
+`distinct()`関数の使用例を次に示します。
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -87,9 +87,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### ORDER BY句
 
-ORDER BY句を使用すると、受け取った結果を、指定した列で特定の順序（昇順または降順）で並べ替えることができます。 これは、 `sort()` 関数を使用して行います。
+ORDER BY句を使用すると、受け取った結果を、指定した列で特定の順序（昇順または降順）で並べ替えることができます。 これは`sort()`関数を使って行います。
 
-この `sort()` 関数の使用例を次に示します。
+`sort()`関数の使用例を次に示します。
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -99,7 +99,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 LIMIT句を使用すると、データセットから受け取るレコードの数を制限できます。
 
-この `limit()` 関数の使用例を次に示します。
+`limit()`関数の使用例を次に示します。
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -109,7 +109,7 @@ df = dataset_reader.limit(100).read()
 
 OFFSET句を使用すると、行を最初から開始にスキップし、後から行を返すことができます。 LIMITと組み合わせて使用すると、ブロック内の行を反復することができます。
 
-この `offset()` 関数の使用例を次に示します。
+`offset()`関数の使用例を次に示します。
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -138,7 +138,7 @@ write_tracker = dataset_writer.write(<your_dataFrame>, file_format='json')
 
 >[!NOTE]
 >
->データへのパスは保存され **ません** 。 対応するデータのパスを保存する必要があります。
+>データへのパスは&#x200B;****&#x200B;保存されません。 対応するデータのパスを保存する必要があります。
 
 ### ユーザースペースへの書き込み
 
@@ -160,4 +160,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## 次の手順
 
-Adobe Experience Platformデータサイエンスワークスペースでは、上記のコードサンプルを使用してデータの読み取りと書き込みを行うレシピサンプルを提供しています。 Pythonを使用してデータにアクセスする方法の詳細については、 [Data Science Workspace Python GitHub Repositoryを参照してください](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)。
+Adobe Experience Platformデータサイエンスワークスペースでは、上記のコードサンプルを使用してデータの読み取りと書き込みを行うレシピサンプルを提供しています。 Pythonを使用してデータにアクセスする方法の詳細については、[Data Science Workspace Python GitHub Repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)を参照してください。
