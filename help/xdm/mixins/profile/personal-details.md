@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ；個人の詳細；スキーマデザイン；ミックスイン；Mixin;
 solution: Experience Platform
 title: 個人の連絡先の詳細ミックスイン
 topic: overview
@@ -7,19 +7,19 @@ description: このドキュメントでは、個人の連絡先の詳細ミッ�
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 10%
+source-wordcount: '152'
+ht-degree: 9%
 
 ---
 
 
-# [!UICONTROL 個人連絡先の詳細] Mixin
+# [!UICONTROL 個人連絡先] の詳細Mixin
 
 >[!NOTE]
 >
->いくつかのミックスインの名前が変更されました。 詳しくは、 [mixin名の更新に関するドキュメントを参照してください](../name-updates.md) 。
+>いくつかのミックスインの名前が変更されました。 詳しくは、[mixin name updates](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL 個人連絡先の詳細] は、 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) クラスの標準ミックスインです。このミックスインは、個人の連絡先情報を示します。
+[!UICONTROL 個人連絡先] の詳細は、個人の連絡先情報を説明する、 [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) クラス用の標準ミックスインです。
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
