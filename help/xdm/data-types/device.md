@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;device;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；デバイス；データ型；データ型；
 solution: Experience Platform
 title: デバイスデータタイプ
 topic: overview
@@ -7,15 +7,15 @@ description: このドキュメントでは、Device XDMデータタイプの概
 translation-type: tm+mt
 source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 19%
+source-wordcount: '325'
+ht-degree: 18%
 
 ---
 
 
-# [!UICONTROL Device] data type
+#  Devicedata type
 
-[!UICONTROL Device] （デバイス）は、識別されたデバイスを記述する標準XDMデータ型です。 デバイスは、セッション間で追跡可能なアプリケーションまたはブラウザーインスタンスで、通常はcookieによって追跡されます。
+ デバイスは、識別されたデバイスを記述する標準XDMデータ型です。デバイスは、セッション間で追跡可能なアプリケーションまたはブラウザーインスタンスで、通常はcookieによって追跡されます。
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -26,11 +26,11 @@ ht-degree: 19%
 | `model` | 文字列 | デバイスのモデルの名前。 これは、デバイスの共通名、人間が読み取り可能な名前、またはマーケティング名です。 例えば、「iPhone 6S」は携帯電話の特定のモデルです。 |
 | `modelNumber` | 文字列 | このデバイスの製造元によって割り当てられた一意のモデル番号です。 モデル番号は、バージョンではなく、特定のモデル設定を識別する一意の識別子です。 |
 | `screenHeight` | 整数 | デバイスのアクティブなディスプレイの、デフォルトの向きにおける垂直方向のピクセル数。 |
-| `screenOrientation` | 文字列 | 現在の画面の向き。 Accepted values include `portrait` and `landscape`. |
+| `screenOrientation` | 文字列 | 現在の画面の向き。 指定できる値は`portrait`と`landscape`です。 |
 | `screenWidth` | 文字列 | デバイスのアクティブなディスプレイの、デフォルトの向きにおける水平方向のピクセル数。 |
 | `type` | 文字列 | 追跡するデバイスのタイプ。 次の値を指定できます。 <ul><li>`mobile`</li><li>`tablet`</li><li>`desktop`</li><li>`ereader`</li><li>`gaming`</li><li>`television`</li><li>`settop`</li><li>`mediaplayer`</li><li>`computers`</li><li>`tv screens`</li></ul> |
 | `typeID` | 文字列 | デバイスの識別子。これは、DeviceAtlasまたは使用中のハードウェアを識別する別のサービスからの識別子である可能性があります。 |
-| `typeIDService` | 文字列 | デバイスタイプを識別するために使用されるサービスの名前空間。使用できる値の詳細については、 [付録](#typeIDService) を参照してください。 |
+| `typeIDService` | 文字列 | デバイスタイプを識別するために使用されるサービスの名前空間。使用できる値の詳細については、[付録](#typeIDService)を参照してください。 |
 
 Mixinの詳細については、パブリックXDMリポジトリを参照してください。
 
@@ -39,11 +39,11 @@ Mixinの詳細については、パブリックXDMリポジトリを参照して
 
 ## 付録
 
-次の節では、 [!UICONTROL Device] Data Typeに関する追加情報について説明します。
+次の節では、[!UICONTROL デバイス]のデータ型に関する追加情報を説明します。
 
-## typeIDServiceに指定できる値です {#typeIDService}
+## typeIDService {#typeIDService}に指定できる値
 
-次の表に、使用できる値と関連する意味を示し `typeIDService` ます。
+次の表に、`typeIDService`に使用できる値とその関連する意味を示します。
 
 | 値 | 説明 |
 | --- | --- |
