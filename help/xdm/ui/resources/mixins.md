@@ -5,9 +5,9 @@ title: UIでのミックスインの作成と編集
 description: Experience Platformユーザーインターフェイスでミックスインを作成および編集する方法について説明します。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: cf74c7922271035474c7f10534692983add48616
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '704'
 ht-degree: 5%
 
 ---
@@ -45,9 +45,9 @@ Adobe Experience Platformでは、様々なマーケティング用の使用例�
 
 >[!NOTE]
 >
->編集できるのは、組織で定義されたカスタムミックスインのみです。
+>組織で定義されたカスタムミックスインのみを完全に編集およびカスタマイズできます。 Adobeが定義するコアミックスインの場合、各スキーマのコンテキスト内で編集できるのはフィールドの表示名だけです。 詳しくは、[スキーマフィールドの表示名の編集](./schemas.md#display-names)の節を参照してください。
 >
->また、データ取り込みのためにミックスインを保存してスキーマで使用した後は、その後、ミックスインに追加変更を加えるだけで済みます。 詳しくは、[スキーマ展開のルール](../../schema/composition.md#evolution)を参照してください。
+>カスタムミックスインを保存し、データ取り込みのためにスキーマで使用した後は、その後、ミックスインに追加の変更を加えることのみ可能です。 詳しくは、[スキーマ展開のルール](../../schema/composition.md#evolution)を参照してください。
 
 既存のMixinを編集するには、まず[!DNL Schema Editor]内でMixinを使用するスキーマを開く必要があります。 [既存のスキーマを選択して](./schemas.md#edit)を編集するか、[新しいスキーマ](./schemas.md#create)を作成して目的のミックスインを追加します。
 
