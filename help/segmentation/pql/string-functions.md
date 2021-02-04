@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；文字列関数；文字列；
 solution: Experience Platform
 title: 文字列関数
 topic: developer guide
@@ -7,15 +7,15 @@ description: プロファイルクエリ言語（PQL）には、文字列の操�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 97%
+source-wordcount: '783'
+ht-degree: 95%
 
 ---
 
 
 # 文字列関数
 
-[!DNL Profile Query Language] (PQL)オファーは、文字列とのやり取りを簡単にするための機能です。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL)オファーは、文字列とのやり取りを簡単にするための機能です。他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## like
 
