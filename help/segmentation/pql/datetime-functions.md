@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；日付と時間関数；日付と時間関数；日時；時刻；
 solution: Experience Platform
 title: 日付および時間関数
 topic: developer guide
@@ -7,15 +7,15 @@ description: 日付および時間関数 は、プロファイルクエリ言語
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 91%
+source-wordcount: '507'
+ht-degree: 87%
 
 ---
 
 
 # 日付および時間関数
 
-日付および時間関数 は、 [!DNL Profile Query Language] (PQL)内の値に対する日付と時間の操作を実行するために使用します。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+日付および時間関数 は、[!DNL Profile Query Language] (PQL)内の値に対して日付と時間の操作を実行するために使用されます。 他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## Current month
 
