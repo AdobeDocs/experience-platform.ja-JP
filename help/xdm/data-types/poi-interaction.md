@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;interaction;point of interest;point-of-interest;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；ポイント；インタラクション；目標点；データ型；データ型；
 solution: Experience Platform
 title: 目標地点インタラクションデータタイプ
 topic: overview
@@ -7,15 +7,15 @@ description: このドキュメントでは、目標地点インタラクショ�
 translation-type: tm+mt
 source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
 workflow-type: tm+mt
-source-wordcount: '162'
+source-wordcount: '183'
 ht-degree: 3%
 
 ---
 
 
-# [!UICONTROL 目標地点インタラクション] ・データ型
+# [!UICONTROL 目標地点] インタラクションデータ型
 
-[!UICONTROL 目標地点インタラクション] (POI)は、モバイルデバイスが範囲内にあるときにID情報をモバイルアプリケーションに通信するワイヤレスデバイスを表す標準のXDMデータ型です。
+[!UICONTROL 目標地点] インタラクションは、モバイルデバイスが範囲内にあるときにID情報をモバイルアプリケーションに通信するワイヤレスデバイスを表す標準のXDMデータ型です。
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
