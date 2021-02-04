@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
+keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；データ準備；データ準備；データの準備；データの準備；
 solution: Experience Platform
 title: マッピング関数
 topic: overview
@@ -7,7 +7,7 @@ description: このドキュメントでは、Adobe Experience Platform内での
 translation-type: tm+mt
 source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '333'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 2%
 
 マッピングとは、1つのXDM属性に対する入力属性または計算済みフィールドの関連付けです。 個々のマッピングを作成することで、単一の属性を複数のXDM属性にマッピングできます。
 
-様々なマッピング関数の詳細については、『 [マッピング関数』ガイドを参照してください](./functions.md)。
+様々なマッピング関数の詳細については、[マッピング関数ガイド](./functions.md)を参照してください。
 
 ## マッピングセット
 
@@ -37,4 +37,4 @@ ht-degree: 2%
 
 ## 次の手順
 
-このドキュメントでは、Adobe Experience Platformのデータ準備の基本事項を説明します。 様々なマッピング関数の詳細については、『 [マッピング関数』ガイドを参照してください](./functions.md)。 異なる日時文字列の詳細については、『 [日付文字列』ガイドを参照してください](./dates.md)。
+このドキュメントでは、Adobe Experience Platformのデータ準備の基本事項を説明します。 様々なマッピング関数の詳細については、[マッピング関数ガイド](./functions.md)を参照してください。 異なる日時文字列の詳細については、[日付文字列ガイド](./dates.md)を参照してください。
