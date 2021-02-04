@@ -16,27 +16,27 @@ ht-degree: 0%
 
 Adobe Experience PlatformWeb SDKは、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をサポートしています。 このガイドでは、AEP Web SDK extension forExperience Platform Launchを使用してIAB TCF 2.0の同意情報をAdobeに送信するためのAdobe Experience Platform Launchプロパティを設定する方法を説明します。
 
-Experience Platform Launchを使用したくない場合は、Experience Platform Launchを使用せずにIAB TCF 2.0を [使用する方法のガイドを参照してください](./without-launch.md)。
+Experience Platform Launchを使用したくない場合は、[Experience Platform Launch](./without-launch.md)を使用せずにIAB TCF 2.0を使用する方法のガイドを参照してください。
 
 ## はじめに
 
 IAB TCF 2.0をExperience Platform LaunchとAEP Web SDK拡張と共に使用するには、XDMスキーマとデータセットが必要です。
 
-また、このガイドを使用するには、Adobe Experience PlatformWeb SDKに関する実用的な知識が必要です。 簡単なリフレッシャーについては、 [Adobe Experience PlatformWeb SDKの概要](../../home.md) 、および [よくある質問](../../web-sdk-faq.md) (FAQ)に関するドキュメントをお読みください。
+また、このガイドを使用するには、Adobe Experience PlatformWeb SDKに関する実用的な知識が必要です。 簡単なリフレッシャーについては、[Adobe Experience PlatformWeb SDKの概要](../../home.md)および[よくある質問](../../web-sdk-faq.md)のドキュメントをお読みください。
 
 ## 既定の同意の設定
 
-拡張機能の設定には、デフォルトの同意の設定があります。 これにより、同意Cookieを持たない顧客の動作が制御されます。 同意Cookieを持たない顧客のエクスペリエンスイベントをキューに入れる場合は、これをに設定し `pending`ます。
+拡張機能の設定には、デフォルトの同意の設定があります。 これにより、同意Cookieを持たない顧客の動作が制御されます。 同意Cookieを持たない顧客のエクスペリエンスイベントをキューに入れる場合は、`pending`に設定します。
 
 >[!NOTE]
 >
 >現在のところ、Experience Platform Launch拡張機能を使用して動的に設定する方法はありません。
 
-デフォルトの同意について詳しくは、SDK設定ドキュメントの [デフォルトの同意の節](../../fundamentals/configuring-the-sdk.md#default-consent) を参照してください。
+デフォルトの同意について詳しくは、SDK設定ドキュメントの[デフォルトの同意の節](../../fundamentals/configuring-the-sdk.md#default-consent)を参照してください。
 
-## 同意情報を使用してプロファイルを更新する {#consent-code-1}
+## 同意情報{#consent-code-1}を使用してプロファイルを更新中
 
-顧客の同意の環境設定が変更された場合に `setConsent` アクションを呼び出すには、新しいExperience Platform Launchルールを作成する必要があります。 開始するには、新しいイベントを追加し、コア拡張機能の「カスタムコード」イベントタイプを選択します。
+顧客の同意の環境設定が変更されたときに`setConsent`アクションを呼び出すには、新しいExperience Platform Launchルールを作成する必要があります。 開始するには、新しいイベントを追加し、コア拡張機能の「カスタムコード」イベントタイプを選択します。
 
 新しいイベントには、次のコードサンプルを使用します。
 
@@ -62,7 +62,7 @@ addEventListener();
 
 このカスタムコードは2つの処理を行います。
 
-* 2つのデータ要素を設定します。1つは同意文字列、もう1つは `gdprApplies` フラグ付きです。 これは、後で「同意を設定」アクションに入力する場合に役立ちます。
+* 2つのデータ要素を設定します。1つは同意文字列、もう1つは`gdprApplies`フラグを持ちます。 これは、後で「同意を設定」アクションに入力する場合に役立ちます。
 
 * 同意の環境設定が変更された場合にルールをトリガーします。 「同意の設定」アクションは、同意の環境設定が変更された場合に必ず使用します。 内追加部に「同意を設定」アクションを挿入し、次のようにフォームに入力します。
 
@@ -79,16 +79,16 @@ addEventListener();
 
 ## エクスペリエンスイベント用のXDMデータ要素の作成
 
-同意文字列は、XDMエクスペリエンスイベントに含める必要があります。 これを行うには、XDM Objectデータ要素を使用します。 新しいXDMオブジェクトデータ要素を作成して開始するか、既に作成したイベント送信用のXDMオブジェクト要素を使用します。 エクスペリエンスイベントのプライバシーミックスインをスキーマに追加した場合は、XDMオブジェクトに `consentStrings` キーが必要です。
+同意文字列は、XDMエクスペリエンスイベントに含める必要があります。 これを行うには、XDM Objectデータ要素を使用します。 新しいXDMオブジェクトデータ要素を作成して開始するか、既に作成したイベント送信用のXDMオブジェクト要素を使用します。 スキーマにエクスペリエンスイベントのプライバシーミックスインを追加した場合は、XDMオブジェクトに`consentStrings`キーが必要です。
 
-1. 「 **[!UICONTROL consentStrings]**」を選択します。
+1. **[!UICONTROL consentStrings]**&#x200B;を選択します。
 
-1. 「個々の項目を **[!UICONTROL 提供する]** 」を選択し、「 **[!UICONTROL 項目]**」を選択します。
+1. 「**[!UICONTROL 個々の項目を指定]**」を選択し、「**[!UICONTROL 追加項目]**」を選択します。
 
-1. 「 **[!UICONTROL consentString]** 」という見出しを展開し、最初の項目を展開して、次の値を入力します。
+1. **[!UICONTROL consentString]**&#x200B;見出しを展開し、最初の項目を展開して、次の値を入力します。
 
 * `consentStandard`:IAB TCF
-* `consentStandardVersion`: 2.0
+* `consentStandardVersion`:2.0
 * `consentStringValue`:%IAB TCF同意文字列%
 * `gdprApplies`:%IAB TCF Consent GDPR%
 
@@ -120,7 +120,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-このコードは、 `useractioncomplete` と `tcloaded` イベントの両方が処理される点を除き、前のカスタムコードと同じです。 [前のカスタムコードは](#consent-code-1) 、顧客が初めて自分の環境設定を選択した場合にのみトリガーされます。 また、このコードは、顧客が既に環境設定を選択している場合にもトリガーされます。 例えば、2回目のページ読み込み時など。
+このコードは、`useractioncomplete`と`tcloaded`の両方のイベントが処理される点を除いて、前のカスタムコードと同じです。 [以前のカスタムコード](#consent-code-1)は、お客様が初めて好みを選択した場合にのみトリガーします。 このコードは、ユーザーが既に環境設定を選択している場合にもトリガーします。 例えば、2回目のページ読み込み時など。
 
 AEP Web SDK Extension追加から「イベントを送信」アクションを送信します。 XDMフィールド内で、前の節で作成したXDMデータ要素を選択します。
 
@@ -130,4 +130,4 @@ AEP Web SDK Extension追加から「イベントを送信」アクションを�
 
 ## 次の手順
 
-AEP Web SDK ExtensionでのIAB TCF 2.0の使用方法を学習したので、Adobe Analyticsやリアルタイム顧客データプラットフォームなどの他のAdobeソリューションとの統合も選択できます。 詳細は、 [IAB Transparency &amp; Consent Framework 2.0の概要](./overview.md) を参照してください。
+AEP Web SDK ExtensionでのIAB TCF 2.0の使用方法を学習したので、Adobe Analyticsやリアルタイム顧客データプラットフォームなどの他のAdobeソリューションとの統合も選択できます。 詳細については、[IAB Transparency &amp; Consent Framework 2.0の概要](./overview.md)を参照してください。
