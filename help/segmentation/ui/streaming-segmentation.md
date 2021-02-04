@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming segmentation;Segmentation;Segmentation Service;segmentation service;ui guide;
+keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミングセグメント；セグメント化；セグメント化サービス；セグメント化サービス；uiガイド；
 solution: Experience Platform
 title: ストリーミングセグメント化
 topic: ui guide
@@ -7,7 +7,7 @@ description: Adobe Experience Platformでのセグメント化のストリーミ
 translation-type: tm+mt
 source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->次のドキュメントでは、UIを使用したストリーミングセグメントの使用方法を説明します。 APIを使用したストリーミングセグメントの使用について詳しくは、『 [ストリーミングセグメントAPI』ガイドを参照してください](../api/streaming-segmentation.md)。
+>次のドキュメントでは、UIを使用したストリーミングセグメントの使用方法を説明します。 APIを使用したストリーミングセグメントの使用について詳しくは、[ストリーミングセグメント化APIガイド](../api/streaming-segmentation.md)を参照してください。
 
-セグメント化のストリーミング [!DNL Adobe Experience Platform] により、お客様はデータの豊富性に重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性を軽減し、データのストリーミング到着時にセグメントの認定が行わ [!DNL Platform]れるようになりました。 With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+[!DNL Adobe Experience Platform]のセグメント化をストリーミングすると、お客様はデータの豊富さに重点を置きながら、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性が軽減され、データのストリーミングが[!DNL Platform]に到着する際にセグメントの認定が行われるようになりました。 この機能を使用すると、ほとんどのセグメントルールを[!DNL Platform]に渡すデータと同時に評価できるようになりました。つまり、スケジュール済みのセグメントジョブを実行せずに、セグメントのメンバーシップが最新の状態に維持されます。
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->ストリーミングセグメントを機能させるには、組織でスケジュール済みのセグメント化を有効にする必要があります。 For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in the Segmentation user guide](./overview.md#scheduled-segmentation).
+>ストリーミングセグメントを機能させるには、組織でスケジュール済みのセグメント化を有効にする必要があります。 スケジュールされたセグメント化を有効にする方法の詳細については、『セグメント化ユーザーガイド](./overview.md#scheduled-segmentation)』の「ストリーミングセグメント化」の節を参照してください。[
 
 次のいずれかの条件を満たす場合、クエリはストリーミングセグメント化によって自動的に評価されます。
 
@@ -40,9 +40,9 @@ ht-degree: 1%
 | プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 |  |
 | プロファイルを参照する着信ヒット | 時間制限のない、1つの着信イベント、および1つ以上のプロファイル属性を参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | 相対的な時間枠内のプロファイルを参照する着信ヒット | 1つの受信イベントと1つ以上のプロファイル属性を参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| プロファイルを参照する複数のイベント | 過去24時間以内に複数のイベントを参照するセグメント定義 **には** 、1つ以上のプロファイル属性が含まれます。 | ![](../images/ui/streaming-segmentation/event-history-success.png) |
+| プロファイルを参照する複数のイベント | 過去24時間以内に複数のイベント&#x200B;**を参照するセグメント定義には、1つ以上のプロファイル属性が含まれます。**（オプション） | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
-次のシナリオでは、セグメント定義 **は** 、ストリーミングセグメントに対して有効になりません。
+次のシナリオでは、セグメント定義はストリーミングセグメントに対して&#x200B;**有効になりません**。
 
 - セグメント定義には、Adobe Audience Manager(AAM)のセグメントまたは特性が含まれます。
 - セグメント定義には、複数のエンティティ(マルチエンティティクエリ)が含まれます。
@@ -52,7 +52,7 @@ ht-degree: 1%
 | クエリタイプ | ガイドライン |
 | ---------- | -------- |
 | 単一イベントクエリ | ルックバックウィンドウに制限はありません。 |
-| イベント履歴のあるクエリ | <ul><li>ルックバックウィンドウは **1日に制限されます**。</li><li>イベント間に厳密な時間順序条件 **が存在する必要があります** 。</li><li>少なくとも1つの無効なイベントを持つクエリがサポートされます。 ただし、イベント全体を否定にする **ことはできません** 。</li></ul> |
+| イベント履歴のあるクエリ | <ul><li>ルックバックウィンドウは、**1日**&#x200B;に制限されます。</li><li>厳密な時間順序条件&#x200B;**は、イベント間に**&#x200B;が存在する必要があります。</li><li>少なくとも1つの無効なイベントを持つクエリがサポートされます。 ただし、イベント&#x200B;**全体を否定にすることはできません。**</li></ul> |
 
 セグメント定義を変更して、ストリーミングセグメントの条件を満たさなくなった場合、セグメント定義は自動的に「ストリーミング」から「バッチ」に切り替わります。
 
@@ -62,7 +62,7 @@ ht-degree: 1%
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-特に、条件を満たした **[!UICONTROL オーディエンスの合計サイズ]** の詳細が表示されます。 「 **[!UICONTROL 条件付き]** オーディエンスの合計サイズ」には、最後に完了したセグメントジョブの実行からの条件付きオーディエンスの合計数が表示されます。 過去24時間以内にセグメントジョブが完了しなかった場合、オーディエンス数は予測から取得されます。
+特に、**[!UICONTROL 条件を満たすオーディエンスの合計サイズ]**&#x200B;の詳細が表示されます。 **[!UICONTROL 条件を満たしたオーディエンスの合計サイズ]**&#x200B;は、最後に完了したセグメントジョブの実行からの条件を満たしたオーディエンスの合計数を示します。 過去24時間以内にセグメントジョブが完了しなかった場合、オーディエンス数は予測から取得されます。
 
 下に示す折れ線グラフは、過去24時間に修飾および欠格されたセグメントの数を示しています。 ドロップダウンは、過去24時間、先週または過去30日間を表示するように調整できます。
 
@@ -72,11 +72,11 @@ ht-degree: 1%
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
-セグメント定義の詳細については、セグメント定義の詳細に関する前の節を参照して [ください](#segment-details)。
+セグメント定義の詳細については、[セグメント定義の詳細](#segment-details)の前の節を参照してください。
 
 ## ストリーミングセグメントのビデオデモ
 
-次のビデオでは、ストリーミングのセグメント化について理解しておくことを目的としています。 ここには、顧客体験の例を示し、その後インター [!DNL Platform] フェイスの主な機能を簡単に紹介します。
+次のビデオでは、ストリーミングのセグメント化について理解しておくことを目的としています。 これは、顧客体験の例を示し、その後に[!DNL Platform]インターフェイスの主な機能を簡単に紹介します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
@@ -84,4 +84,4 @@ ht-degree: 1%
 
 このユーザガイドでは、ストリーミングが有効なセグメント定義がAdobe Experience Platformでどのように機能するか、およびストリーミングが有効なセグメントを監視する方法について説明します。
 
-Adobe Experience Platformのユーザインターフェイスの使用方法の詳細については、『 [セグメント化ユーザガイド](./overview.md)』を参照してください。
+Adobe Experience Platformのユーザーインターフェイスの使い方の詳細については、[セグメント化ユーザーガイド](./overview.md)を参照してください。
