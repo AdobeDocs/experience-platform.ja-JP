@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;identity;Identity
+keywords: Experience Platform；ホーム；人気のあるトピック；ID;ID
 solution: Experience Platform
 title: ID マッピングのリストの表示
 topic: API guide
@@ -7,8 +7,8 @@ description: マッピングは、クラスターにある、指定した名前�
 translation-type: tm+mt
 source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 100%
+source-wordcount: '270'
+ht-degree: 97%
 
 ---
 
