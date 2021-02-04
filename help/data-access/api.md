@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
+keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；Python sdk;Spark sdk；データアクセスapi；エクスポート；Export
 solution: Experience Platform
 title: データアクセス開発ガイド
 topic: developer guide
@@ -7,15 +7,15 @@ description: データアクセス API では、Experience Platform 内に取り
 translation-type: tm+mt
 source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 86%
+source-wordcount: '528'
+ht-degree: 83%
 
 ---
 
 
 # データアクセス開発ガイド
 
-The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
+Data Access APIは、[!DNL Experience Platform]内の取り込んだデータセットの検出性とアクセシビリティに重点を置いたRESTfulインターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートしています。
 
 ![Experience Platform でのデータアクセス](images/Data_Access_Experience_Platform.png)
 
@@ -204,7 +204,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 ## ファイルのコンテンツへのアクセス
 
-The [!DNL Data Access] API can also be used to access the contents of a file. これを使用して、コンテンツを外部ソースにダウンロードできます。
+[!DNL Data Access] APIを使用してファイルのコンテンツにアクセスすることもできます。 これを使用して、コンテンツを外部ソースにダウンロードできます。
 
 **API 形式**
 
@@ -241,4 +241,4 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## データ取り込みイベントへの登録
 
-[!DNL Platform] は、 [Adobeデベロッパーコンソールを通じて特定の高価値イベントを購読用に使用できるようにします](https://www.adobe.com/go/devs_console_ui)。 例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、データインジェスト通知の [サブスクライブに関するチュートリアル](../ingestion/quality/subscribe-events.md) を参照してください。
+[!DNL Platform] は、 [Adobeデベロッパーコンソールを通じて特定の高価値イベントを購読用に使用できるようにします](https://www.adobe.com/go/devs_console_ui)。例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[データインジェスト通知のサブスクライブ](../ingestion/quality/subscribe-events.md)のチュートリアルを参照してください。
