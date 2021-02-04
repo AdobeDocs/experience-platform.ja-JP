@@ -3,39 +3,39 @@ title: 変数が自動的にAdobe Analyticsにマッピング
 seo-title: Adobe Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数
 description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
 seo-description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
-keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
+keywords: adobe analytics；変数；analytics；自動マップ；自動マップ；
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 36%
+source-wordcount: '683'
+ht-degree: 35%
 
 ---
 
 
-# Variables automatically mapped in [!DNL Analytics]
+# [!DNL Analytics]に自動的にマッピングされる変数
 
-Below is a list of variables that Adobe Experience Platform Edge Network automatically maps into [!DNL Analytics].
+以下は、Adobe Experience Platformエッジネットワークが自動的に[!DNL Analytics]にマッピングする変数のリストです。
 
 | XDM フィールドパス | [!DNL Analytics Query String] / HTTP ヘッダー | 説明 |
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | AppMeasurement コンテキストデータ `c.a.appid` のマッピング。 |
 | `application.launches.value` | `c.a.launches` | AppMeasurement コンテキストデータ `c.a.launches` のマッピング。 |
-| `commerce.checkouts.id` | `events` | `scCheckout` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.checkouts.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLとコンバージョンCOMMERCE_SC_CHECKOUTとのマッピング（区切り文字を使用） `,`。 |
+| `commerce.checkouts.id` | `events` | `scCheckout` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.checkouts.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_SC_CHECKOUTとのAppMeasurementクエリパラメーターイベントー_リスト_FULLのマッピング。 |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement クエリパラメーター CURRENCY のマッピング。 |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement クエリパラメーター PURCHASEID のマッピング。 |
-| `commerce.productListAdds.id` | `events` | `scAdd` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productListAdds.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのマッピング(コンバージョンCOMMERCE_SC_追加とのマッピング)。区切り文字を使用 `,`します。 |
-| `commerce.productListOpens.id` | `events` | `scOpen` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productListOpens.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのマッピング（コンバージョンCOMMERCE_SC_OPENとのマッピング）。区切り文字を使用 `,`します。 |
-| `commerce.productListRemovals.id` | `events` | `scRemove` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productListRemovals.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのマッピングとコンバージョンCOMMERCE_SC_REMOVEとの対応付け（区切り文字を使用） `,`。 |
-| `commerce.productListViews.id` | `events` | `scView` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productListViews.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLの、コンバージョンCOMMERCE_SC_表示とのマッピング（区切り文字を使用） `,`。 |
-| `commerce.productViews.id` | `events` | `prodView` イベントのシリアル化。 このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productViews.value` | `events` | AppMeasurementクエリパラメータイベント_リスト_FULLは、コンバージョンCOMMERCE_PROD_表示との区切り文字を使用したマッピング `,`です。 |
-| `commerce.purchases.value` | `events` | AppMeasurementクエリパラメーターイベント_リスト_FULLのを、区切り文字を使用して、コンバージョンCOMMERCE_PURCHASEとマッピング `,`します。 |
+| `commerce.productListAdds.id` | `events` | `scAdd` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.productListAdds.value` | `events` | イベント`,`を使用した、コンバージョンCOMMERCE_SC_とのAppMeasurementクエリパラメーター追加_リスト_FULLのマッピング。 |
+| `commerce.productListOpens.id` | `events` | `scOpen` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.productListOpens.value` | `events` | イベント`,`を使用した、コンバージョンCOMMERCE_SC_OPENとのAppMeasurementクエリパラメーターのリスト__FULLのマッピング。 |
+| `commerce.productListRemovals.id` | `events` | `scRemove` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.productListRemovals.value` | `events` | イベント`,`を使用した、コンバージョンCOMMERCE_SC_REMOVEとのAppMeasurementクエリパラメーターのリスト__FULLのマッピング。 |
+| `commerce.productListViews.id` | `events` | `scView` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.productListViews.value` | `events` | イベント`,`を使用した、コンバージョンCOMMERCE_SC_表示とのAppMeasurementクエリパラメーターのリスト__FULLのマッピング。 |
+| `commerce.productViews.id` | `events` | `prodView` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
+| `commerce.productViews.value` | `events` | AppMeasurementクエリパラメータイベント_リスト_FULLのマッピング(コンバージョンCOMMERCE_PROD_表示とのマッピング)。区切り文字`,`を使用します。 |
+| `commerce.purchases.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_PURCHASEとのAppMeasurementクエリパラメーターイベントー_リスト_FULLのマッピング。 |
 | `device.colorDepth` | `c` | AppMeasurement クエリパラメーター C_COLOR のマッピング。 |
 | `device.screenHeight` | `s` | AppMeasurementクエリパラメーターの画面解像度のマッピング。 |
 | `device.screenWidth` | `s` | AppMeasurementクエリパラメーターの画面解像度のマッピング。 |
@@ -68,7 +68,7 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | AppMeasurement コンテキストデータ `a.media.name` のマッピング。 |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name` | `c.a.media.show` | AppMeasurement コンテキストデータ `c.a.media.show` のマッピング。 |
 | `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | コンバージョン VEDIO_SHOW_TYPE を使用した AppMeasurement コンテキストデータ `c.a.media.type` のマッピング。 |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement context data `c.a.media.type` mapping with conversion VIDEO_SHOW_TYPE. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurementコンテキストデータ`c.a.media.type`とコンバージョンVIDEO_SHOW_TYPEとのマッピング。 |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | AppMeasurement コンテキストデータ `c.a.media.length` のマッピング。 |
 | `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | AppMeasurementコンテキストデータ。 |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastChannel` | `c.a.media.channel` | AppMeasurement コンテキストデータ `c.a.media.channel` のマッピング。 |
@@ -96,7 +96,7 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | `productlistitems.[N].quantity` | `products` | AppMeasurementクエリパラメーターの製品数量のマッピング。 |
 | `web.webInteraction.URL` | `pev1` | AppMeasurementクエリパラメーターPAGE_イベント_VAR1のマッピング。 |
 | `web.webInteraction.name` | `pev2` | AppMeasurementクエリパラメーターPAGE_イベント_VAR2のマッピング。 |
-| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` に変更 `pe=lnk_o`します。 `web.webInteraction.type=download` に変更 `pe=lnk_d`します。 `web.webInteraction.type=exit` to `pe=lnk_e` |
+| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` に変更 `pe=lnk_o`します。 `web.webInteraction.type=download` に変更 `pe=lnk_d`します。 `web.webInteraction.type=exit` to  `pe=lnk_e` |
 | `web.webPageDetails.URL` | `g` | AppMeasurement クエリパラメーター PAGE_URL のマッピング。 |
 | `web.webPageDetails.errorPage` | `pageType` | 変換ERROR_PAGE_TYPEを伴うAppMeasurementクエリパラメーターPAGE_TYPE_FULLのマッピング。 |
 | `web.webPageDetails.homePage` | `hp` | コンバージョン BOOLEAN_TO_YN を使用した AppMeasurement クエリパラメーター HOMEPAGE のマッピング。 |
