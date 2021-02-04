@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；ビーコン；インタラクションの詳細；データ型；データ型；
 solution: Experience Platform
 title: 地域インタラクション詳細データタイプ
 topic: overview
@@ -7,15 +7,15 @@ description: このドキュメントでは、地域インタラクション詳�
 translation-type: tm+mt
 source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '156'
 ht-degree: 5%
 
 ---
 
 
-# [!UICONTROL 地域インタラクションの詳細] 、データタイプ
+# [!UICONTROL 地域インタラクションの] 詳細データタイプ
 
-[!UICONTROL 地域インタラクションの詳細] は、地理的に定義された領域に現在含まれている状態を示す標準のXDMデータ型です。
+[!UICONTROL 地理的な操作の] 詳細は、地理的に定義された領域に現在含まれている状態を示す標準のXDMデータ型です。
 
 <img src="../images/data-types/geo-interaction-details.png" width="400" /><br />
 
@@ -23,7 +23,7 @@ ht-degree: 5%
 | --- | --- | --- |
 | `geoShape` | [[!UICONTROL ジオシェイプ]](./geo-shape.md) | 対話操作を行う領域の地域形状を示します。 このフィールドには、ボックス、円または多角形を記述できます。 |
 | `deviceGeoAccuracy` | Double | 地域測定デバイスまたはメカニズムの精度（メートル単位）。 |
-| `distanceToCenter` | Double | 地理円の場合、地理の中心までの距離（メートル単位）。 |
+| `distanceToCenter` | 重複 | 地理円の場合、地理の中心までの距離（メートル単位）。 |
 
 データ型の詳細については、パブリックXDMリポジトリを参照してください。
 
