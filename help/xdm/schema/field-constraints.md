@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;schema design;datatype;Datatype;data type;Data type;schemas;Schemas;Schema design;map;Map;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ；ミックスイン；ミックスイン；ミックスイン；データ型；データ型；データ型；データ型；スキーマ型；データ型；データ型；スキーマ;スキーマ;スキーマ設計；マップ；
 solution: Experience Platform
 title: XDMフィールド型の制約
 topic: overview
@@ -7,8 +7,8 @@ description: XDMのフィールド型制約に関するリファレンスです�
 translation-type: tm+mt
 source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
-source-wordcount: '994'
-ht-degree: 74%
+source-wordcount: '1027'
+ht-degree: 71%
 
 ---
 
@@ -19,30 +19,30 @@ ht-degree: 74%
 
 ## はじめに
 
-このガイドを使用する前に、XDMスキーマ、クラス [、ミックスインの紹介について、スキーマ構成の](./composition.md) 基本事項を確認してください。
+このガイドを使用する前に、XDMスキーマ、クラス、ミックスインの紹介について、[スキーマ構成の基本事項](./composition.md)を参照してください。
 
-独自のフィールドの種類を定義する場合は、『 [スキーマレジストリ開発者ガイド](../api/getting-started.md) 』に開始して、カスタムフィールドを含めるためのミックスインとデータ型の作成方法を学ぶことを強くお勧めします。
+独自のフィールドの種類を定義する場合は、カスタムフィールドを含めるミックスインとデータ型の作成方法を[スキーマレジストリ開発者ガイド](../api/getting-started.md)に開始して学ぶことを強くお勧めします。
 
 ## 他の形式への XDM タイプのマッピング
 
-The table below describes the mapping between each XDM type (`meta:xdmType`) and other serialization formats.
+次の表に、各XDMタイプ(`meta:xdmType`)と他のシリアル化形式との対応付けを示します。
 
 | XDM タイプ<br>（meta:xdmType） | JSON<br>（JSON スキーマ） | Parquet<br>（タイプ / 注釈） | [!DNL Spark] SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| string | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | String | System.String | String | string | String | string |
-| number | type:number | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Number | double | Double | double |
-| long | type:integer<br>maximum:2^53+1<br>minimum:-2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | Number | long | Integer | int64 |
-| int | type:integer<br>maximum:2^31<br>minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Number | int | Integer | int32 |
-| short | type:integer<br>maximum:2^15<br>minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Short | System.Int16 | Number | int | Integer | int32 |
-| byte | type:integer<br>maximum:2^7<br>minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | Number | int | Integer | int32 |
-| boolean | type:boolean | BOOLEAN | BooleanType | java.lang.Boolean | Boolean | System.Boolean | Boolean | bool | Integer | Integer | bool |
-| date | type:string<br>format:date<br>（RFC 3339、セクション 5.6） | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | String | date | Integer<br>（unix ミリ秒） | int64<br>（unix ミリ秒） |
-| date-time | type:string<br>format:date-time<br>（RFC 3339、セクション 5.6） | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | String | timestamp | Integer<br>（unix ミリ秒） | int64<br>（unix ミリ秒） |
+| string | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | String | System.String | 文字列 | string | 文字列 | string |
+| number | type:number | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Number | double | 重複 | 重複 |
+| long | type:integer<br>maximum:2^53+1<br>minimum:-2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | 数値 | long | Integer | int64 |
+| int | type:integer<br>maximum:2^31<br>minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | 数値 | int | 整数 | int32 |
+| short | type:integer<br>maximum:2^15<br>minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Short | System.Int16 | 数値 | int | 整数 | int32 |
+| byte | type:integer<br>maximum:2^7<br>minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Byte | System.SByte | 数値 | int | 整数 | int32 |
+| boolean | type:boolean | BOOLEAN | BooleanType | java.lang.Boolean | Boolean | System.Boolean | ブール値 | bool | 整数 | 整数 | bool |
+| date | type:string<br>format:date<br>（RFC 3339、セクション 5.6） | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | 文字列 | date | Integer<br>（unix ミリ秒） | int64<br>（unix ミリ秒） |
+| date-time | type:string<br>format:date-time<br>（RFC 3339、セクション 5.6） | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | 文字列 | timestamp | Integer<br>（unix ミリ秒） | int64<br>（unix ミリ秒） |
 | map | object | MAP annotated group<br><br>&lt;<span>key_type</span>> MUST be STRING<br><br>&lt;<span>value_type</span>> type of map values | MapType<br><br>&quot;keyType&quot; MUST be StringType<br><br>&quot;valueType&quot; is type of map values. | java.util.Map | Map | --- | object | object | map | map&lt;<span>key_type, value_type</span>> |
 
 ## API での XDM フィールドタイプの定義 {#define-fields}
 
-XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards and basic field types, with additional constraints for field names which are enforced by [!DNL Experience Platform]. [スキーマレジストリAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) (R)を使用すると、形式やオプションの制約を使用して、追加のフィールドの種類を定義できます。 XDM field types are exposed by the field-level attribute, `meta:xdmType`.
+XDMスキーマは、[JSONスキーマ](https://json-schema.org/)標準規格と基本的なフィールドタイプを使用して定義され、[!DNL Experience Platform]によって適用されるフィールド名に対する制約が追加されています。 [スキーマレジストリAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)を使用すると、形式とオプションの制約を使用して、追加のフィールドの種類を定義できます。 XDMのフィールド型は、フィールドレベルの属性`meta:xdmType`で公開されます。
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
 
 次の表に、オプションのプロパティを使用してスカラーフィールドタイプとより具体的なフィールドタイプを定義するための適切な書式の概要を示します。オプションのプロパティとタイプ固有のキーワードに関する詳細については、[JSON スキーマのドキュメント](https://json-schema.org/understanding-json-schema/reference/type.html)を参照してください。
 
-最初に、目的のフィールドタイプを探し、提供されたサンプルコードを使用して、mixinを [作成またはデータタイプを](../api/mixins.md#create) 作成するためのAPIリクエストを作成します [](../api/data-types.md#create)。
+最初に、目的のフィールドタイプを探し、提供されたサンプルコードを使用して[mixin](../api/mixins.md#create)または[creating a data type](../api/data-types.md#create)のAPIリクエストを作成します。
 
 <table>
   <tr>
@@ -128,7 +128,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
   </tr>
   <tr>
     <td>long</td>
-    <td>type: integer<br/>maximum:2^53+1<br>minimum:-2^53+1</td>
+    <td>type:integer<br/>maximum:2^53+1<br>minimum:-2^53+1</td>
     <td>
       <pre class="JSON language-JSON hljs">
         "sampleField": {
@@ -141,7 +141,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
   </tr>
   <tr>
     <td>int</td>
-    <td>type: integer<br/>maximum:2^31<br>minimum:-2^31</td>
+    <td>type:integer<br/>maximum:2^31<br>minimum:-2^31</td>
     <td>
       <pre class="JSON language-JSON hljs">
         "sampleField": {
@@ -154,7 +154,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
   </tr>
   <tr>
     <td>short</td>
-    <td>type: integer<br/>maximum:2^15<br>minimum:-2^15</td>
+    <td>type:integer<br/>maximum:2^15<br>minimum:-2^15</td>
     <td>
       <pre class="JSON language-JSON hljs">
         "sampleField": {
@@ -167,7 +167,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
   </tr>
   <tr>
     <td>byte</td>
-    <td>type: integer<br/>maximum:2^7<br>minimum:-2^7</td>
+    <td>type:integer<br/>maximum:2^7<br>minimum:-2^7</td>
     <td>
       <pre class="JSON language-JSON hljs">
         "sampleField": {
