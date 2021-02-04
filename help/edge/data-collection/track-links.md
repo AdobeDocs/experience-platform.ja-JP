@@ -3,11 +3,11 @@ title: Adobe Analyticsとのリンクトラッキング
 seo-title: Adobe Experience PlatformWeb SDKを使用したAdobe Analyticsへのリンクトラッキング
 description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
 seo-description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page表示;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # リンクの追跡
 
-リンクは手動で設定することも、 [自動的に追跡することもできます](#automaticLinkTracking)。 手動トラッキングは、スキーマの `web.webInteraction` 部分に詳細を追加することで行います。 次の3つの必須変数があります。
+リンクは手動で設定するか、[自動的に](#automaticLinkTracking)追跡することができます。 手動トラッキングは、スキーマの`web.webInteraction`部分に詳細を追加することで行います。 次の3つの必須変数があります。
 
 * `web.webInteraction.name`
 * `web.webInteraction.type`
@@ -44,28 +44,28 @@ alloy("sendEvent", {
 * **`download`:** ダウンロードリンク
 * **`exit`:** 離脱リンク
 
-## 自動リンクトラッキング {#automaticLinkTracking}
+## 自動リンクトラッキング{#automaticLinkTracking}
 
-デフォルトでは、Web SDKは、該当するリンクタグのクリックをキャプチャ、ラベル付けおよび記録します。 クリック数は、ドキュメントに接続された [キャプチャ](https://www.w3.org/TR/uievents/#capture-phase) ・クリックイベント・リスナーを使用してキャプチャされます。
+デフォルトでは、Web SDKは、該当するリンクタグのクリックをキャプチャ、ラベル付けおよび記録します。 クリック数は、ドキュメントに接続されている[キャプチャ](https://www.w3.org/TR/uievents/#capture-phase)クリックイベントリスナーを使用してキャプチャされます。
 
-自動リンクトラッキングは、Web SDKを [設定することで無効にできます](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) 。
+自動リンクトラッキングは、Web SDKを[設定](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled)することで無効にできます。
 
 ```javascript
 clickCollectionEnabled: false
 ```
 
-### どのタグがリンクトラッキングに適しているか。{#qualifyingLinks}
+### どのタグがリンクトラッキングに適合しますか？{#qualifyingLinks}
 
-自動リンクトラッキングは、アンカー `A` と `AREA` タグに対して行われます。 ただし、これらのタグにハン `onclick` ドラーがアタッチされている場合、リンクトラッキングでは考慮されません。
+アンカー`A`タグと`AREA`タグに対して、自動リンクトラッキングが実行されます。 ただし、これらのタグに`onclick`ハンドラーがアタッチされている場合、リンクトラッキングは考慮されません。
 
-### リンクのラベルはどのように付けられますか。{#labelingLinks}
+### リンクのラベルは？{#labelingLinks}
 
-アンカータグにdownload属性が含まれている場合、またはリンクが人気のあるファイル拡張子で終わる場合、リンクはダウンロードリンクとしてラベル付けされます。 ダウンロードリンク修飾子は、次の正規式を使用して [設定できます](../fundamentals/configuring-the-sdk.md) 。
+アンカータグにdownload属性が含まれている場合、またはリンクが人気のあるファイル拡張子で終わる場合、リンクはダウンロードリンクとしてラベル付けされます。 ダウンロードリンク修飾子は、正規式を使用して[設定](../fundamentals/configuring-the-sdk.md)できます。
 
 ```javascript
 downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
 ```
 
-リンクターゲットドメインが現在のドメインと異なる場合、リンクは離脱リンクとしてラベル付けされ `window.location.hostname`ます。
+リンクターゲットドメインが現在の`window.location.hostname`と異なる場合、リンクは離脱リンクとしてラベル付けされます。
 
 ダウンロードリンクまたは離脱リンクと見なされないリンクは、「その他」とラベル付けされます。
