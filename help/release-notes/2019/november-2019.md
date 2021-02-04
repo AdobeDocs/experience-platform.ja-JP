@@ -43,13 +43,13 @@ Adobe Experience Cloud とのネイティブな統合に加え、アドビはパ
 * Adobe Sensei による AI や機械学習を活用して、マーケティング担当者向けに構築された実用的なインサイトを生み出し、オーディエンスを拡大縮小する。
 * すべてのチャネルと宛先にわたって、パーソナライズされたエクスペリエンスをリアルタイムで提供する。
 
-For more information, see the [Real-time Customer Data Platform documentation](../../rtcdp/overview.md).
+詳しくは、[リアルタイム顧客データプラットフォームドキュメント](../../rtcdp/overview.md)を参照してください。
 
 **主な特長**
 
 | 機能 | 説明 |
 |---|---|
-| 宛先 | Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-time Customer Data Platform] that activate data to those partners in a seamless way. 詳しくは、以下の「[宛先](#destinations)」を参照してください。 |
+| 宛先 | Adobeの[!DNL Real-time Customer Data Platform]がサポートする宛先プラットフォームとの事前に構築された統合により、これらのパートナーに対するデータをシームレスにアクティブ化します。 詳しくは、以下の「[宛先](#destinations)」を参照してください。 |
 | ホームページの指標ダッシュボード | Real-time Customer Data Platform(Real-time CDP)ホームページには、プロファイルとセグメントに関する情報を示す指標ダッシュボードが含まれています。 このホームページには、学習教材へのリンクも含まれています。以下の「[リアルタイム顧客データプラットフォームの指標](#real-time-customer-data-platform-metrics)」の節を参照してください。 |
 | ソース | アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取り込むことができます。詳しくは、以下の「[ソース](#sources)」の節を参照してください。 |
 
@@ -65,7 +65,7 @@ For more information, see the [Real-time Customer Data Platform documentation](.
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] は、Adobeのリアルタイム顧客データプラットフォームがサポートする目的のプラットフォームとの事前に構築された統合です。この統合により、パートナーに対するデータのアクティブ化がシームレスに行われます。 詳しくは、「[宛先の概要](../../destinations/home.md)」の記事を参照してください。
+[!DNL Destinations] は、Adobeのリアルタイム顧客データプラットフォームがサポートする目的のプラットフォームとの事前に構築された統合です。この統合により、パートナーに対するデータのアクティブ化がシームレスに行われます。詳しくは、「[宛先の概要](../../destinations/home.md)」の記事を参照してください。
 
 **使用可能な宛先**
 
@@ -85,7 +85,7 @@ For more information, see the [Real-time Customer Data Platform documentation](.
 
 ## ソース {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platformは外部ソースからデータを取り込みながら、[!DNL Platform]サービスを使ってデータの構造、ラベル付け、拡張を行うことができます。 アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できるようにする RESTful API とインタラクティブな UI を提供します。これらのソース接続を使用すると、ストレージシステムと CRM サービスに対する認証、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
@@ -94,8 +94,8 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | 機能 | 説明 |
 | ---------- | ------------ |
 | ソース UI | ソース接続を作成、表示、および管理するための新しいユーザーインターフェイス。 |
-| CRM コネクタの改良されたワークフロー | New intuitive UI workflow for creating and managing [!DNL Microsoft Dynamics] and [!DNL Salesforce] connectors. |
-| クラウドベースのストレージ用のコネクタのサポート | コネクタがクラウドベースのストレージにアクセスできるようになりました。New sources include [!DNL Amazon S3], [!DNL Azure Blob], and FTP/SFTP servers. |
+| CRM コネクタの改良されたワークフロー | [!DNL Microsoft Dynamics]コネクタと[!DNL Salesforce]コネクタを作成および管理するための直感的な新しいUIワークフロー。 |
+| クラウドベースのストレージ用のコネクタのサポート | コネクタがクラウドベースのストレージにアクセスできるようになりました。新しいソースには、[!DNL Amazon S3]、[!DNL Azure Blob]、FTP/SFTPサーバーが含まれます。 |
 
 **既知の問題**
 
@@ -105,20 +105,20 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] enables data scientists to seamlessly generate insights from data and content across Adobe applications and third-party systems by building and operationalizing Machine Learning Models. [!DNL Data Science Workspace] は、XDMデータの調査と準備を含む、エンドツーエンドのデータ科学ライフサイクルと緊密に統合され、さらにモデルの開発と運用を強化して、機械学習インサイトを自動的に強化 [!DNL Platform][!DNL Real-time Customer Profile] します。
+Adobe Experience Platform[!DNL Data Science Workspace]は、機械学習モデルの構築と運用により、データ科学者がAdobeアプリケーションやサードパーティ製システム全体でデータやコンテンツからの洞察をシームレスに生み出せるようにします。 [!DNL Data Science Workspace] は、XDMデータの調査と準備、モデルの開発と運用を含む、エンドツーエンドのデータ科学ライフサイクルと緊密に統合され、エンドツーエンドのデータ科学ライフサイクル [!DNL Platform]  [!DNL Real-time Customer Profile] を強化しています。
 
 **新機能**
 
 | 機能 | 説明 |
 | -----------| ---------- |
-| Data access using [!DNL Platform] SDK | Pre-built Recipes and launcher notebooks in [!DNL Python] now use [!DNL Platform] SDK for accessing data. |
+| [!DNL Platform] SDKを使用したデータアクセス | [!DNL Python]の事前にビルドされたレシピとランチャーノートブックは、データへのアクセスに[!DNL Platform] SDKを使用するようになりました。 |
 | サンドボックスのサポート | ノートブックやレシピを開発用サンドボックスや実稼働用サンドボックスに分離する機能など、今後のサンドボックス機能（現在はベータ版）のサポート。詳しくは、「[サンドボックスの概要](../../sandboxes/home.md)」を参照してください。 |
 
 詳しくは、「[Data Science Workspace　の概要](../../data-science-workspace/home.md)」を参照してください。
 
-## [!DNL Experience Data Model] (XDM)システム {#xdm}
+## [!DNL Experience Data Model] (XDM)システム  {#xdm}
 
-Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
+標準化と相互運用性は、[!DNL Experience Platform]の背後にある重要な概念です。 [!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 
 XDM はパブリックに文書化された仕様であり、デジタルエクスペリエンスのパワーを向上させるために設計されています。Adobe Experience Platform 上のサービスと通信するすべてのアプリケーションに共通の構造と定義を提供します。XDM 標準規格に準拠することで、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
 
@@ -129,25 +129,25 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 | 通知スキーマ | データ取得プロセス中に送信される通知データを表す新しいスキーマ。 |
 | Adobe AdCloud DSP スキーマ | Adobe Advertising Cloud ディスプレイ広告（DSP）メタデータを表すための 5 つの新しいスキーマ（配置、キャンペーン、パッケージ、広告主、アカウント）が追加されました。 |
 | ExperienceEvent の実装の詳細 Mixin | イベントの収集に使用するソフトウェアに関する情報を保存するための標準フィールドを追加する新しい ExperienceEvent Mixin。 |
-| [!DNL Profile Privacy] ミックスイン | New profile mixin that adds fields to accept general out-out and sales/sharing opt-out signals for [!DNL Real-time Customer Profile]. |
+| [!DNL Profile Privacy] ミックスイン | [!DNL Real-time Customer Profile]に対する一般的なアウトおよび販売/共有オプトアウトシグナルを受け入れるフィールドを追加する新しいプロファイルミックスイン。 |
 | `xdm:alternateDisplayInfo` の形式制限 | `xdm:alternateDisplayInfo` の「タイトル」フィールドと「説明」フィールドは、両方とも検証に合格する文字列である必要があります。 |
-| 名前の変更：XDM [!DNL Individual Profile] | The &quot;title&quot; of the &quot;XDM [!DNL Profile]&quot; class has been updated to &quot;XDM [!DNL Individual Profile]&quot;. クラスの公式 `$id` は変更されていません。 |
+| 名前の変更：XDM [!DNL Individual Profile] | &quot;XDM [!DNL Profile]&quot;クラスの&quot;title&quot;が&quot;XDM [!DNL Individual Profile]&quot;に更新されました。 クラスの公式 `$id` は変更されていません。 |
 
 **既知の問題**
 
 * なし。
 
-To learn more about working with XDM using the [!DNL Schema Registry] API and [!DNL Schema Editor] user interface, please read the [XDM System documentation](../../xdm/home.md).
+[!DNL Schema Registry] APIと[!DNL Schema Editor]ユーザーインターフェイスを使用したXDMの使い方の詳細については、[XDMシステムドキュメント](../../xdm/home.md)を読んでください。
 
 ## [!DNL Real-time Customer Profile] {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。[!DNL Real-time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせた個々の顧客の全体的な表示を確認できます。 [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
 
 | 機能 | 説明 |
 | -----------| ---------- |
-| Enhancements to [!DNL Profile] lookup | 参照記述子と関連エンティティを使用してプロファイルを検索できるようになりました。 |
-| 指定したデータセットのデータのクリーンアップ | Users can now delete data for a given dataset or batch using the [!DNL Profile] System Jobs API. |
-| Edge [!DNL Profile] query enhancements | Applications can now query Edge [!DNL Profile] by any of the identities of a given profile. |
+| [!DNL Profile]参照の強化 | 参照記述子と関連エンティティを使用してプロファイルを検索できるようになりました。 |
+| 指定したデータセットのデータのクリーンアップ | ユーザーは、[!DNL Profile]システムジョブAPIを使用して、特定のデータセットまたはバッチのデータを削除できるようになりました。 |
+| Edge [!DNL Profile]クエリの拡張 | 特定のプロファイルのIDを使用して、アプリケーションがクエリエッジ[!DNL Profile]をアプリケーションできるようになりました。 |
 | プロジェクションごとの結合ポリシーの設定 | アプリケーションでは、特定の結合ポリシーで管理されるデータのビューを生成するために、プロジェクションごとに結合ポリシーを設定できるようになりました。 |
 | 計算済み属性 | 計算済み属性は、他の値、計算、および式に基づいて、フィールドの値を自動的に計算します。計算済み属性は、「受信イベント」、「受信イベントとプロファイルデータ」、または「受信イベント、プロファイルデータ、および履歴イベント」に基づいて、プロファイルレベルで動作し、値（「合計購入」、「ライフタイム値」、「ファネルステータス」など）を集計します。 |
 
@@ -159,22 +159,22 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 * なし。
 
-For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile Overview](../../profile/home.md).
+[!DNL Real-time Customer Profile]についての詳細は、[!DNL Profile]データを扱う際のチュートリアルやベストプラクティスなど、[リアルタイム顧客プロファイルの概要](../../profile/home.md)をご覧ください。
 
 ## [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+Adobe Experience Platform[!DNL Segmentation Service]は、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスとRESTful APIを提供します。 これらのセグメントは[!DNL Platform]上で一元的に構成および管理され、どのAdobeアプリケーションでも容易にアクセスできます。
 
-[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。 セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
 
 | 機能 | 説明 |
 | -----------| ---------- |
 | スケジュールされたセグメント化 | ユーザーは、UI と API を使用して、すべてのセグメントに対して、スケジュールされたセグメント評価を有効にできるようになりました。有効にすると、すべてのセグメントが 1 日に 1 回評価されます。この機能は、オンデマンドのセグメント化機能には影響しません。オンデマンドのセグメント化機能は以前と同じように引き続き機能します。<br/><br/>注意：5つを超えるマージポリシーを持つサンドボックスでは、スケジュール済みセグメント機能を使用でき [!DNL XDM Individual Profile]ません。 |
-| ストリーミングセグメント化 | Support for continuous evaluation of segments (streaming segmentation) allows most segment rules to be evaluated as the data is passing into [!DNL Platform]. この機能を使用すると、セグメントメンバーシップは、スケジュールされたセグメント化ジョブを実行しなくても最新の状態になります。複数エンティティの関係を使用するセグメントや強化ペイロードを含むセグメントなど、一部の例外が存在します。 |
+| ストリーミングセグメント化 | セグメントの継続的な評価（ストリーミングセグメント化）がサポートされ、ほとんどのセグメントルールを、データが[!DNL Platform]に渡される際に評価できます。 この機能を使用すると、セグメントメンバーシップは、スケジュールされたセグメント化ジョブを実行しなくても最新の状態になります。複数エンティティの関係を使用するセグメントや強化ペイロードを含むセグメントなど、一部の例外が存在します。 |
 | 構成ブロックとしてのセグメント | セグメントビルダー UI を使用してセグメントを作成する場合、以前に定義したセグメントを、追加セグメントの構成ブロックとして使用できるようになりました。 <ul><li>現在のオーディエンスメンバーシップの参照：ユーザーがオーディエンスになったり、オーディエンスでなくなったりしたときに更新されます。</li><li>ロジックのコピー：選択したセグメント定義を新しいセグメントにコピーします。</li></ul> |
 | ID 名前空間ごとにセグメントメンバーシップを表示 | セグメントメンバーシップを ID 名前空間（電子メール、ECID、合計数）ごとに表示できるようになりました。 |
 | RBAC のサポート | セグメントビルダーでは、基本的なロールベースのアクセス制御と権限がサポートされるようになりました。 |
-| Enhanced support for external audience sharing between [!DNL Platform] and Adobe solutions | Users can now bring in external (non-[!DNL Experience Platform]) audience metadata in scenarios where the number of audiences is large or not known a priori. This release includes access to [!DNL Audience Manager] metadata for customers who have provisioned the solution connector. This audience metadata can be used within Segment Builder to create new [!DNL Experience Platform] segments. <br/><br/> さらに、で作成したセグメント [!DNL Experience Platform] は、、などの統合Adobeソリューションで使用できる [!DNL Audience Manager]ようにな [!DNL Target]り [!DNL Ad Cloud]ます。 |
+| [!DNL Platform]とAdobeソリューション間の外部オーディエンス共有のサポートを強化 | オーディエンス数が多い、または不明なシナリオでは、外部（[!DNL Experience Platform]以外の）オーディエンスメタデータを取り込めるようになりました。 このリリースには、ソリューションコネクターをプロビジョニングしたお客様の[!DNL Audience Manager]メタデータへのアクセスが含まれます。 このオーディエンスメタデータは、セグメントビルダー内で新しい[!DNL Experience Platform]セグメントを作成するために使用できます。 <br/><br/> さらに、で作成したセグメント [!DNL Experience Platform] は、、などの統合Adobeソリューションで使用できる [!DNL Audience Manager]ようにな [!DNL Target]り [!DNL Ad Cloud]ます。 |
 
 **バグの修正**
 
@@ -188,4 +188,4 @@ Adobe Experience Platform [!DNL Segmentation Service] provides a user interface 
 
 * なし。
 
-To learn more about [!DNL Segmentation Service], please read the [Segmentation Service overview](../../segmentation/home.md).
+[!DNL Segmentation Service]の詳細については、[Segmentation Service overview](../../segmentation/home.md)を参照してください。
