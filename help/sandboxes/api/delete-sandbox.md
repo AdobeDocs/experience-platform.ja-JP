@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;delete sandbox
+keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックスの削除
 solution: Experience Platform
 title: サンドボックスの削除
 topic: developer guide
@@ -7,8 +7,8 @@ description: サンドボックスの名前を要求パスに含むDELETE要求�
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 81%
+source-wordcount: '110'
+ht-degree: 76%
 
 ---
 
