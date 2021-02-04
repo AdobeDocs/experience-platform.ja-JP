@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;create batch;catalog service;api
+keywords: Experience Platform；ホーム；人気の高いトピック；作成バッチ；カタログサービス；api
 solution: Experience Platform
 title: データセットの作成
 topic: developer guide
@@ -7,15 +7,15 @@ description: データセットがデータを取得するには、バッチが�
 translation-type: tm+mt
 source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 61%
+source-wordcount: '138'
+ht-degree: 57%
 
 ---
 
 
 # バッチの作成
 
-データセットがデータを取得するには、バッチが関連付けられている必要があります。Using the `id` value of an existing dataset, you can create a batch by making a POST request to the `/batches` endpoint in the [!DNL Catalog] API.
+データセットがデータを取得するには、バッチが関連付けられている必要があります。既存のデータセットの`id`値を使用して、[!DNL Catalog] APIの`/batches`エンドポイントへのPOSTリクエストを行うことで、バッチを作成できます。
 
 **API 形式**
 
