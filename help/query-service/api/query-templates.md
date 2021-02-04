@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリテンプレート；apiガイド；テンプレート；クエリサービス；
 solution: Experience Platform
 title: クエリサービス開発者ガイド
 topic: query templates
@@ -7,8 +7,8 @@ description: 以下のドキュメントでは、クエリサービスAPIのク�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 91%
+source-wordcount: '673'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 91%
 
 ## API 呼び出しの例
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+これで、使用するヘッダーがわかったので、[!DNL Query Service] APIを呼び出す準備が整いました。 以下の節では、[!DNL Query Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### クエリテンプレートのリストの取得
 
