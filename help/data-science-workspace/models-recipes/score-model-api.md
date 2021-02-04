@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
+keywords: Experience Platform；モデルのスコア；データサイエンスワークスペース；人気の高いトピック；先生の機械学習api
 solution: Experience Platform
 title: モデルのスコアリング（API）
 topic: tutorial
@@ -8,8 +8,8 @@ description: このチュートリアルでは、Senesie Machine Learning APIを
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 96%
+source-wordcount: '543'
+ht-degree: 93%
 
 ---
 
