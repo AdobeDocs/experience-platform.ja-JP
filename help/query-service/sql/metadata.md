@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
+keywords: Experience Platform；ホーム；人気の高いトピック；PSQL;psql;クエリサービス；クエリサービス；メタデータ；コマンド；メタデータコマンド；
 solution: Experience Platform
 title: メタデータコマンド
 topic: metadata
@@ -7,8 +7,8 @@ description: メタデータのクエリに現在サポートされているPSQL
 translation-type: tm+mt
 source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 90%
+source-wordcount: '324'
+ht-degree: 86%
 
 ---
 
@@ -44,5 +44,5 @@ ht-degree: 90%
 
 `\d` で開始するすべてのコマンドを組み合わせることができます。例えば、すべてのテーブル、シーケンスおよびリストの `\dtsn` スキーマを表示できます。`\d` を使用すると、すべての表示可能な表、表示、マテリアライズドビュー、シーケンスが表示されます。
 
-上記のコマンドの詳細は、[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) にあるドキュメントを参照してください。However, please be aware that not all the options shown in the PostgreSQL documentation are supported by [!DNL Experience Platform].
+上記のコマンドの詳細は、[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) にあるドキュメントを参照してください。ただし、PostgreSQLのドキュメントに示すすべてのオプションが[!DNL Experience Platform]でサポートされているわけではありません。
 
