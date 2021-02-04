@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments;multi-entity;multi-entity segmentation;multi-entity segments;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化；セグメント化；セグメント；セグメント；マルチエンティティ；マルチエンティティセグメント化；マルチエンティティセグメント化；
 solution: Experience Platform
 title: マルチエンティティのセグメント化
 topic: overview
@@ -7,15 +7,15 @@ description: 複数エンティティのセグメント化は、製品、店舗�
 translation-type: tm+mt
 source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 14%
+source-wordcount: '672'
+ht-degree: 13%
 
 ---
 
 
 # マルチエンティティのセグメント化
 
-マルチエンティティセグメントは、Adobe Experience Platformの一部として利用できる高度な機能 [!DNL Segmentation Service]です。 この機能を使用すると、製品や店舗に関連するデータなど、組織が定義できる追加の「非人」データ（「ディメンションエンティティ」とも呼ばれます）を使用して、 [!DNL Real-time Customer Profile] データを拡張できます。 マルチエンティティのセグメント化は、お客様固有のビジネスニーズに関連するデータに基づいてオーディエンスセグメントを定義する際に柔軟性を提供し、データベースのクエリーに関する専門知識を持たなくても実行できます。 マルチエンティティセグメント化を使用すると、データストリームにコストをかけずにセグメントに主要データを追加したり、バックエンドのデータが結合されるのを待つ必要がありません。
+マルチエンティティセグメントは、Adobe Experience Platform[!DNL Segmentation Service]の一部として利用できる高度な機能です。 この機能を使用すると、製品や店舗に関連するデータなど、組織が定義できる追加の「非人口」データ（「ディメンションエンティティ」とも呼ばれます）を使用して[!DNL Real-time Customer Profile]データを拡張できます。 マルチエンティティのセグメント化は、お客様固有のビジネスニーズに関連するデータに基づいてオーディエンスセグメントを定義する際に柔軟性を提供し、データベースのクエリーに関する専門知識を持たなくても実行できます。 マルチエンティティセグメント化を使用すると、データストリームにコストをかけずにセグメントに主要データを追加したり、バックエンドのデータが結合されるのを待つ必要がありません。
 
 ## はじめに
 
@@ -23,7 +23,7 @@ ht-degree: 14%
 
 * [[!DNL Real-time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
    * [プロファイルガードレール](../profile/guardrails.md):でサポートされるデータモデル作成のベストプラクティスで [!DNL Profile]す。
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):データからセグメントを作成でき [!DNL Real-time Customer Profile] ます。
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md):デー [!DNL Real-time Customer Profile] タからセグメントを作成できます。
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
    * [スキーマ構成の基本](../xdm/schema/composition.md#union):Experience Platformで使用するスキーマを構成するためのベストプラクティスを学びます。
 
@@ -41,7 +41,7 @@ E メールキャンペーンを作成しているマーケターは、過去 3 
 
 ## マルチエンティティセグメントの作成
 
-マルチエンティティセグメントを作成するには、まず、 [!DNL Segmentation] APIまたはセグメントビルダーのUIを使用してセグメント定義を作成する前に、スキーマ間の関係を定義する必要があります。
+マルチエンティティセグメントを作成するには、まず[!DNL Segmentation] APIまたはセグメントビルダーのUIを使用してセグメント定義を作成する前に、スキーマ間の関係を定義する必要があります。
 
 ### 関係の定義
 
@@ -61,4 +61,4 @@ E メールキャンペーンを作成しているマーケターは、過去 3 
 
 ## マルチエンティティセグメントの評価とアクセス
 
-セグメントを作成したら、セグメントAPIを使用してセグメントの結果を評価し、アクセスできます。 マルチエンティティセグメントの評価は、標準セグメントの評価と非常に似ています。 このプロセスは、Segmentation APIを使用してのみ実行できます。 APIを使用してセグメントを評価し、セグメントにアクセスする方法に関する詳細なガイドについては、チュートリアル「 [評価とアクセス](./tutorials/evaluate-a-segment.md) 」を参照してください。
+セグメントを作成したら、セグメントAPIを使用してセグメントの結果を評価し、アクセスできます。 マルチエンティティセグメントの評価は、標準セグメントの評価と非常に似ています。 このプロセスは、Segmentation APIを使用してのみ実行できます。 APIを使用してセグメントを評価し、セグメントにアクセスする方法に関する詳細なガイドについては、チュートリアル[の「セグメント](./tutorials/evaluate-a-segment.md)の評価とアクセス」を参照してください。
