@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: アクセス制御ワークスペースの参照
 topic: user guide
@@ -7,15 +7,15 @@ description: このドキュメントでは、アクセス制御ワークスペ�
 translation-type: tm+mt
 source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 77%
+source-wordcount: '306'
+ht-degree: 76%
 
 ---
 
 
 # アクセス制御ワークスペースの参照
 
-In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. アドビは IMS 組織に柔軟性のある管理者階層を提供していますが、アクセス制御を設定するにはシステム管理者、製品管理者または製品プロファイル管理者の権限が必要です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関するアドビ ヘルプセンターの記事を参照してください。
+Adobe Admin Console経由で[!DNL Experience Platform]のアクセス制御を設定するには、[!DNL Experience Platform]への購読を持つIMS組織の管理者である必要があります。 アドビは IMS 組織に柔軟性のある管理者階層を提供していますが、アクセス制御を設定するにはシステム管理者、製品管理者または製品プロファイル管理者の権限が必要です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関するアドビ ヘルプセンターの記事を参照してください。
 
 管理者権限がない場合は、システム管理者に問い合わせてアクセス権を取得してください。
 
@@ -27,7 +27,7 @@ Adobe Experience Platform のアクセス制御ワークスペースが開き、
 
 ![プラットフォームのアクセス制御](../images/platform-access-control.png)
 
-This user guide focuses on how to use the [!DNL Admin Console] to assign access permissions for [!DNL Platform]. For more general information on how to navigate the [!DNL Admin Console], see the [Admin Console user guide](https://helpx.adobe.com/jp/enterprise/using/admin-console.html).
+このユーザーガイドでは、[!DNL Admin Console]を使用して[!DNL Platform]のアクセス権限を割り当てる方法に焦点を当てます。 [!DNL Admin Console]を操作する方法の一般的な情報については、[Admin Consoleユーザーガイド](https://helpx.adobe.com/jp/enterprise/using/admin-console.html)を参照してください。
 
 ## 次の手順
 
