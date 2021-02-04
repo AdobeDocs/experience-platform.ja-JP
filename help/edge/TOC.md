@@ -46,9 +46,9 @@ ht-degree: 57%
       * [シングルページアプリケーションの実装](personalization/adobe-target/spa-implementation.md)
    * Offer Decisioning {#offer-decisioning}
       * [Offer Decisioningの概要](personalization/offer-decisioning/offer-decisioning-overview.md)
-* 同意 {#consent}
+* 同意{#consent}
    * [同意のサポート](consent/supporting-consent.md)
-   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
+   * IAB透明性と同意フレームワーク2.0 {#iab-tcf}
       * [概要](consent/iab-tcf/overview.md)
       * [Adobe Experience Platform Launchとの統合](consent/iab-tcf/with-launch.md)
       * [統合(Adobe Experience Platform Launchなし)](consent/iab-tcf/without-launch.md)
