@@ -1,5 +1,5 @@
 ---
-keywords: mobile messaging;mobile messaging destinations;Braze; Airship
+keywords: モバイルメッセージング；モバイルメッセージングの宛先；Braze;飛行船
 title: モバイルエンゲージメントの宛先
 seo-title: モバイルエンゲージメントの宛先
 description: Adobe Experience Platformは、以下に示すモバイルエンゲージメント先をサポートしています。
@@ -7,13 +7,13 @@ seo-description: Adobe Experience Platformは、以下に示すモバイルエ�
 translation-type: tm+mt
 source-git-commit: c24676970629f5a39297001357f8af40895533d9
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '48'
 ht-degree: 0%
 
 ---
 
 
-# モバイルエンゲージメントの宛先 {#mobile-destinations}
+# モバイルエンゲージメント先{#mobile-destinations}
 
 [!DNL Adobe Experience Platform] 現在、次のモバイルエンゲージメント先をサポートしています。
 
