@@ -102,7 +102,7 @@ ht-degree: 60%
 
 リクエストビルダーを使用して開始するには、画面の右側にあるステータスレポートウィジェットの下の「**[!UICONTROL リクエストを作成]**」を選択します。
 
-![「リクエストを作成」を選択します。](../images/user-guide/create-request.png)
+![「要求の作成」を選択します。](../images/user-guide/create-request.png)
 
 **[!UICONTROL Create Request]** ダイアログが開き、現在選択されている規制タイプのプライバシージョブリクエストを送信するために使用できるオプションが表示されます。
 
