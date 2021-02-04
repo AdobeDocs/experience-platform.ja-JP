@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
+keywords: Experience Platform；モデルのスコア；データサイエンスワークスペース；人気の高いトピック；ui；スコアリングの実行；スコアリングの結果
 solution: Experience Platform
 title: モデルのスコアリング（UI）
 topic: tutorial
@@ -8,21 +8,21 @@ description: 'Adobe Experience Platform Data Science Workspace　でのスコア
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 87%
+source-wordcount: '624'
+ht-degree: 85%
 
 ---
 
 
 # モデルのスコアリング（UI）
 
-Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. 次に、スコアリング結果が保存され、新しいバッチとして指定した出力データセットで表示可能になります。
+Adobe Experience Platform[!DNL Data Science Workspace]でのスコアは、既存のトレーニングを受けたモデルに入力データを送ることで達成できます。 次に、スコアリング結果が保存され、新しいバッチとして指定した出力データセットで表示可能になります。
 
-This tutorial demonstrates the steps required to score a Model in the [!DNL Data Science Workspace] user interface.
+このチュートリアルでは、[!DNL Data Science Workspace]ユーザーインターフェイスでモデルにスコアを付けるために必要な手順を説明します。
 
 ## はじめに
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+このチュートリアルを完了するには、[!DNL Experience Platform]にアクセスできる必要があります。 [!DNL Experience Platform]のIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
 
 このチュートリアルには、トレーニング済みのモデルが必要です。トレーニング済みモデルがない場合は、続行する前に、『[UI でのモデルのトレーニングと評価](./train-evaluate-model-ui.md)』チュートリアルに従ってください。
 
@@ -65,4 +65,4 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
 
 ## 次の手順
 
-This tutorial walked you through the steps to score data using a trained Model in [!DNL Data Science Workspace]. [UI でモデルをサービスとして公開](./publish-model-service-ui.md)する方法のチュートリアルに従って、組織内のユーザーが機械学習サービスに簡単にアクセスしてデータをスコアリングできるようにします。
+このチュートリアルでは、[!DNL Data Science Workspace]のトレーニングを受けたモデルを使用してデータにスコアを付ける手順を順を追って説明しました。 [UI でモデルをサービスとして公開](./publish-model-service-ui.md)する方法のチュートリアルに従って、組織内のユーザーが機械学習サービスに簡単にアクセスしてデータをスコアリングできるようにします。
