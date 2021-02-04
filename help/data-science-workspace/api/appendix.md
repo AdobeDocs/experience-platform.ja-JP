@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；
 solution: Experience Platform
 title: 付録
 topic: Developer guide
@@ -7,19 +7,19 @@ description: 以下の節では、Sensei Machine Learning API の様々な機能
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 85%
+source-wordcount: '323'
+ht-degree: 83%
 
 ---
 
 
 # 付録
 
-The following sections provide reference information for various features of the [!DNL Sensei Machine Learning] API.
+以下の節では、[!DNL Sensei Machine Learning] APIの様々な機能に関するリファレンス情報を提供します。
 
 ## アセット取得用のクエリーパラメーター {#query}
 
-The [!DNL Sensei Machine Learning] API provides support for query parameters with retrieving assets. 使用可能なクエリパラメーターとその使用方法を次の表に示します。
+[!DNL Sensei Machine Learning] APIは、アセットの取得に関するクエリパラメーターのサポートを提供します。 使用可能なクエリパラメーターとその使用方法を次の表に示します。
 
 | クエリーパラメーター | 説明 | デフォルト値 |
 | --------------- | ----------- | ------- |
