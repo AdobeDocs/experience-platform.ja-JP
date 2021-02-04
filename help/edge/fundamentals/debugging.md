@@ -3,12 +3,12 @@ title: デバッグ
 seo-title: Adobe Experience Platform Web SDK のデバッグ
 description: Experience Platform Web SDK のデバッグを切り替える方法について説明します
 seo-description: Experience Platform Web SDK のデバッグを切り替える方法について説明します
-keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
+keywords: デバッグWeb sdk；デバッグ；設定；設定；設定コマンド；デバッグコマンド；edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
 source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 92%
+source-wordcount: '397'
+ht-degree: 89%
 
 ---
 
