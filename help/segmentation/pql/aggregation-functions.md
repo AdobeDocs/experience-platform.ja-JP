@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;aggregation functions;aggregation;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；集計関数；集計；
 solution: Experience Platform
 title: 集計関数
 topic: developer guide
@@ -7,15 +7,15 @@ description: '集計関数 は、プロファイルクエリ言語(PQL)配列内
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 79%
+source-wordcount: '243'
+ht-degree: 73%
 
 ---
 
 
 # 集計関数
 
-集計関数 are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+集計関数 は、[!DNL Profile Query Language] (PQL)配列内の複数の値をグループ化して単一の概要値を形成するために使用します。 他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## Count
 
