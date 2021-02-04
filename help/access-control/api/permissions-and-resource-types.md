@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
+keywords: Experience Platform；ホーム；人気のあるトピック；アクセス制御権限；アクセス制御リソースタイプ；アクセス制御api
 solution: Experience Platform
 title: 権限名とリソースタイプのリスト
 topic: developer guide
@@ -7,8 +7,8 @@ description: Adobe Experience Platform のアクセス制御では、Adobe Admin
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 75%
+source-wordcount: '199'
+ht-degree: 69%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 75%
 
 `/acl/reference` エンドポイントに GET リクエストをおこなうことで、すべての権限とリソースタイプの名前をリストできます。これらの名前は、現在のユーザーに対する[有効なポリシーを表示する](./effective-policies.md) API 呼び出しで使用できます。
 
-権限とは、Adobe Admin Console で管理され、0 個以上のリソースタイプポリシーにマッピングされるポリシーです。A resource type is a policy that enables read, write, and/or delete capabilities for a specific type of [!DNL Platform] resource (such as datasets or schemas).
+権限とは、Adobe Admin Console で管理され、0 個以上のリソースタイプポリシーにマッピングされるポリシーです。リソースタイプは、特定の種類の[!DNL Platform]リソース(データセットやスキーマなど)の読み取り、書き込み、削除の機能を有効にするポリシーです。
 
 **API 形式**
 
