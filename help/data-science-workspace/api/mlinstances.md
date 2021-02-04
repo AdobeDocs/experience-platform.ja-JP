@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；インスタンス；先生の機械学習api
 solution: Experience Platform
 title: MLInstance
 topic: Developer guide
@@ -7,8 +7,8 @@ description: MLInstance は、既存のエンジンと適切な設定セット�
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 100%
+source-wordcount: '616'
+ht-degree: 97%
 
 ---
 
