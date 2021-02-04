@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure HDInsights;Apache Spark
+keywords: Experience Platform；ホーム；人気のあるトピック；Azure HDInsights;Apache Spark
 solution: Experience Platform
 title: UIでAzure HDInsightsソースコネクタ上にApache Sparkを作成します
 topic: overview
@@ -8,19 +8,19 @@ description: このチュートリアルでは、プラットフォームユー�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 16%
+source-wordcount: '497'
+ht-degree: 15%
 
 ---
 
 
-# Create an [!DNL Apache Spark] on [!DNL Azure HDInsights] source connector in the UI
+# UIの[!DNL Azure HDInsights]ソースコネクタに[!DNL Apache Spark]を作成する
 
 >[!NOTE]
 >
-> オン [!DNL Apache Spark] の [!DNL Azure HDInsights] コネクタはベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+> [!DNL Azure HDInsights]コネクタの[!DNL Apache Spark]はベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、 [!DNL Apache Spark] ユーザインターフェイスを使用して [!DNL Azure HDInsights][!DNL Platform] ソースコネクタ上のを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用して[!DNL Azure HDInsights]ソースコネクタ上に[!DNL Apache Spark]を作成する手順を説明します。
 
 ## はじめに
 
@@ -31,46 +31,46 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 
-既に有効な [!DNL Spark] 接続がある場合は、このドキュメントの残りの部分をスキップして、データフローの [設定に関するチュートリアルに進むことができます](../../dataflow/databases.md)
+既に有効な[!DNL Spark]接続がある場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/databases.md)のチュートリアルに進むことができます
 
 ### 必要な資格情報の収集
 
-で [!DNL Spark] アカウントにアクセスするに [!DNL Platform]は、次の値を指定する必要があります。
+[!DNL Platform]の[!DNL Spark]アカウントにアクセスするには、次の値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `host` | サー [!DNL Spark] バーのIPアドレスまたはホスト名。 |
-| `username` | サーバーへのアクセスに使用するユー [!DNL Spark] ザー名。 |
+| `host` | [!DNL Spark]サーバーのIPアドレスまたはホスト名。 |
+| `username` | [!DNL Spark]サーバーへのアクセスに使用するユーザー名。 |
 | `password` | ユーザーに対応するパスワードです。 |
 
-使用の開始方法の詳細については、 [このSparkドキュメントを参照してください](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview)。
+開始方法の詳細については、[このSparkドキュメント](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview)を参照してください。
 
-## アカウントに接続 [!DNL Spark] する
+## [!DNL Spark]アカウントに接続
 
-必要な資格情報を収集したら、次の手順に従って、接続する [!DNL Spark] アカウントをリンクでき [!DNL Platform]ます。
+必要な資格情報を収集したら、次の手順に従って[!DNL Spark]アカウントをリンクして[!DNL Platform]に接続します。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 [ **[!UICONTROL カタログ]** ]画面には、アカウントを作成する際に使用できる様々なソースが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com)にログインし、左のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して&#x200B;**[!UICONTROL ソース]**&#x200B;ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には様々なソースが表示され、このソースを使用してアカウントを作成できます。
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-「 **[!UICONTROL Databases]** 」カテゴリで、「 **[!UICONTROL Spark]**」を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **[!UICONTROL 追加]** データ [!DNL Spark] を選択して新しいコネクタを作成します。
+**[!UICONTROL Databases]**&#x200B;カテゴリーの下で、**[!UICONTROL Spark]**&#x200B;を選択します。 このコネクタを初めて使用する場合は、**[!UICONTROL 設定]**&#x200B;を選択します。 それ以外の場合は、**[!UICONTROL 追加data]**&#x200B;を選択して新しい[!DNL Spark]コネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/spark/catalog.png)
 
-「 **[!UICONTROL Sparkに]** 接続」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+**[!UICONTROL Sparkに接続]**&#x200B;ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明および [!DNL Spark] 資格情報を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明、[!DNL Spark]資格情報を入力します。 終了したら、[**[!UICONTROL 接続]**]を選択し、新しい接続が確立されるまでの時間を許可します。
 
 ![新規](../../../../images/tutorials/create/spark/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続する [!DNL Spark] アカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
+既存のアカウントに接続するには、接続する[!DNL Spark]アカウントを選択し、**[!UICONTROL 次へ]**&#x200B;を選択して次に進みます。
 
 ![既存の](../../../../images/tutorials/create/spark/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、ア [!DNL Spark] カウントへの接続を確立しました。 次のチュートリアルに進み、データを取り込むデータフローを [設定できます [!DNL Platform]](../../dataflow/databases.md)。
+このチュートリアルに従うと、[!DNL Spark]アカウントへの接続が確立されます。 次のチュートリアルに進み、[データを [!DNL Platform]](../../dataflow/databases.md)に取り込むようにデータフローを設定できます。
