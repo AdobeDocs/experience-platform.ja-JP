@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
+keywords: Experience Platform；トレーニングと評価；データサイエンスワークスペース；人気の高いトピック；モデルの作成；トレーニングの実行の作成
 solution: Experience Platform
 title: モデル（UI）のトレーニングと評価
 topic: tutorial
@@ -8,8 +8,8 @@ description: Adobe Experience Platform Data Science Workspace　では、モデ�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1038'
-ht-degree: 93%
+source-wordcount: '1055'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform Data Science Workspace　では、モデルの意図�
 
 ## はじめに
 
-In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+このチュートリアルを完了するには、[!DNL Experience Platform]にアクセスできる必要があります。 [!DNL Experience Platform]のIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
 
 このチュートリアルでは、既存のレシピが必要です。レシピがない場合は、先に進む前に、「[UI へのパッケージレシピの読み込み](./import-packaged-recipe-ui.md)」チュートリアルに従ってください。
 
@@ -50,7 +50,7 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
 1. Adobe Experience Platform で、左側のナビゲーション列にある「**[!UICONTROL モデル]**」リンクをクリックして、既存のすべてのモデルを一覧表示します。訓練されるモデルの名前を探し、クリックします。
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. 既存のトレーニング実行と現在のトレーニングステータスが表示されます。For Models created using the [!DNL Data Science Workspace] user interface, a training run is automatically generated and executed using the default configurations and input training dataset.
+2. 既存のトレーニング実行と現在のトレーニングステータスが表示されます。[!DNL Data Science Workspace]ユーザーインターフェイスを使用して作成されたモデルの場合、トレーニング実行は自動的に生成され、デフォルトの設定と入力トレーニングデータセットを使用して実行されます。
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
 3. 新しいトレーニングを作成するには、**[!UICONTROL モデルの概要]**ページの右上近くにある「トレーニング」をクリックします。
@@ -88,7 +88,7 @@ In order to complete this tutorial, you must have access to [!DNL Experience Pla
 
 ## 次の手順
 
-This tutorial walked you through creating, training, and evaluating a Model in [!DNL Data Science Workspace]. 最適モデルに到達したら、「[UI でのモデルのスコア付け](./score-model-ui.md)」チュートリアルに従って、訓練済みモデルを使用して洞察を生成できます。
+このチュートリアルでは、[!DNL Data Science Workspace]でモデルを作成、トレーニング、評価する手順を説明しました。 最適モデルに到達したら、「[UI でのモデルのスコア付け](./score-model-ui.md)」チュートリアルに従って、訓練済みモデルを使用して洞察を生成できます。
 
 ## リファレンス {#reference}
 
