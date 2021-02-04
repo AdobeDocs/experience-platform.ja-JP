@@ -31,27 +31,27 @@ ht-degree: 16%
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| `is_set` 関数 | この `is_set` 関数を使用すると、ソースデータ内に属性が存在するかどうかを確認できます。 `is_set` と組み合わせて使用して、属性の存在と属性内の値の存在の両方 `is_empty` を確認できます。 |
-| `get_values` 関数 | この `get_values` 関数を使用すると、任意のキーの入力マップから値を取得できます。 |
+| `is_set` 関数 | `is_set`関数を使用すると、ソースデータ内の属性の存在を確認できます。 `is_set` と組み合わせて使用して、属性の存在と属性内 `is_empty` の値の存在の両方を確認できます。 |
+| `get_values` 関数 | `get_values`関数を使用すると、任意のキーの入力マップから値を取得できます。 |
 
-For more information, please read the [Data Prep overview](../../data-prep/home.md).
+詳細については、[データ準備の概要](../../data-prep/home.md)を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。[!DNL Real-time Customer Profile]を使用すると、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルからのデータを組み合わせた個々の顧客の全体的な表示を確認できます。 [!DNL Profile] 個別の顧客データを統合表示に統合し、各顧客の操作に関する実用的でタイムスタンプのあるアカウントを提供できます。
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| プロファイルプレビューAPIの追加 | プロファイルプレビューAPI(`/previewsamplestatus`)には、IMS組織全体のプロファイルフラグメントの合計の内訳を表示する機能と、ID名前空間全体のプロファイルフラグメントの表示機能が含まれるようになりました。 |
+| プロファイルプレビューAPIの追加 | プロファイルプレビューAPI(`/previewsamplestatus`)には、IMS組織全体のプロファイルフラグメントの合計の内訳を表示し、ID名前空間全体のプロファイルフラグメントの表示を行う機能が含まれています。 |
 | 和集合スキーマ表示の更新 | Experience PlatformUIでは、和集合スキーマに貢献するすべてのスキーマとデータセットに関する情報、およびIDや関係フィールドなどの表面キー属性を、より簡単に見つけることができます。 これらの更新により、トラブルシューティングおよび検証機能が向上し、プロファイルが正しく設定され、IDが正しく関連付けられ、データが正常に取り込まれたことを確認できます。 |
 
-For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
+[!DNL Real-time Customer Profile]について詳しくは、[!DNL Profile]データを操作するためのチュートリアルやベストプラクティスなど、に関する情報を[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
-Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+Adobe Experience Platformセグメントサービスは、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントは[!DNL Platform]上で一元的に構成および管理され、どのAdobeアプリケーションでも容易にアクセスできます。
 
-[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。 セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
 
 **新機能**
 
@@ -59,11 +59,11 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 | ------- | ----------- |
 | ストリーミングセグメントの制限の削除 | ルックバック期間の7日間の制限は解除されました。 |
 
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
+[!DNL Segmentation Service]について詳しくは、[セグメントの概要](../../segmentation/home.md)を参照してください
 
 ## ソース {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platformは外部ソースからデータを取り込みながら、[!DNL Platform]サービスを使ってデータの構造、ラベル付け、拡張を行うことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できるようにする RESTful API とインタラクティブな UI を提供します。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
@@ -71,12 +71,12 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| SFTP用SSH認証のサポート | RSA/DSA Open SSHキーを [!DNL Platform] 使用して、SFTPアカウントをに接続できます。 See the [SFTP overview](../../sources/connectors/cloud-storage/sftp.md) for more information. |
-| UXの強化 | データセットは、データ取り込みプロセス [!DNL Profile] 中に有効にすることができます。 詳しくは、「 [クラウドストレージのdataflowワークフローのチュートリアル](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) 」を参照してください。 |
+| SFTP用SSH認証のサポート | RSA/DSA Open SSHキーを使用して、SFTPアカウントを[!DNL Platform]に接続できます。 詳しくは、[SFTPの概要](../../sources/connectors/cloud-storage/sftp.md)を参照してください。 |
+| UXの強化 | データ収集プロセス中に[!DNL Profile]のデータセットを有効にすることができます。 詳しくは、[クラウドストレージのdataflow workflow](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)チュートリアルを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
 
-## Time to Value {#time-to-value}
+## 値までの時間{#time-to-value}
 
 Adobe Experience Platformは、マーケティング・オペレーションズ・チームが、広範なデータ・エンジニアリングの専門知識を必要とせずに、顧客の360度の表示を完全に構築できるようにします。 目標は、データ速度を通じてチームや価値を加速させることです。
 
