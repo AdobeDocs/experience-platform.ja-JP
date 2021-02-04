@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;query service
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace；人気の高いトピック；クエリサービス
 solution: Experience Platform
 title: Jupyter ノートブックのクエリサービス
 topic: tutorial
@@ -8,7 +8,7 @@ description: Adobe Experience Platform を使用すると、クエリサービ�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '818'
 ht-degree: 66%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 66%
 
 # Jupyter ノートブックのクエリサービス
 
-[!DNL Adobe Experience Platform] 標準機能としてに統合するこ [!DNL Data Science Workspace] とで、で構造化クエリ言語(SQL) [!DNL Query Service] を使用 [!DNL JupyterLab] できます。
+[!DNL Adobe Experience Platform] 標準機能としてに統合する [!DNL Data Science Workspace] ことで、で構造化クエリ言語(SQL) [!DNL Query Service] を使用 [!DNL JupyterLab] できます。
 
-This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze [!DNL Adobe Analytics] data.
+このチュートリアルでは、[!DNL Adobe Analytics]データの調査、変換、分析を行う一般的な使用例のサンプルSQLクエリを示します。
 
 ## はじめに
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-- へのアクセス [!DNL Adobe Experience Platform]。 If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding
+- [!DNL Adobe Experience Platform]にアクセスします。 [!DNL Experience Platform]のIMS組織へのアクセス権がない場合は、先に進む前に、システム管理者にお問い合わせください
 
-- データ [!DNL Adobe Analytics] セット
+- [!DNL Adobe Analytics]データセット
 
 - このチュートリアルで使用する次の主要概念に対する十分な理解
    - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
@@ -34,15 +34,15 @@ This tutorial demonstrates sample SQL queries for common use cases to explore, t
    - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## アクセス [!DNL JupyterLab] および [!DNL Query Service] {#access-jupyterlab-and-query-service}
+## [!DNL JupyterLab]と[!DNL Query Service] {#access-jupyterlab-and-query-service}にアクセス
 
-1. In [[!DNL Experience Platform]](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. JupyterLab が読み込まれるまで、しばらく待ちます。
+1. [[!DNL Experience Platform]](https://platform.adobe.com)で、左のナビゲーション列から&#x200B;**[!UICONTROL ノートブック]**&#x200B;に移動します。 JupyterLab が読み込まれるまで、しばらく待ちます。
 
    ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
-   >If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **[!UICONTROL File]** then select **[!UICONTROL New Launcher]**.
+   >新しい「ランチャー」タブが自動的に表示されなかった場合は、「**[!UICONTROL ファイル]**」をクリックして新しい「ランチャー」タブを開き、「**[!UICONTROL 新しいランチャー]**」を選択します。
 
 2. 「ランチャー」タブで、Python 3 環境の「**[!UICONTROL 空白]**」アイコンをクリックして、空のノートブックを開きます。
 
@@ -56,13 +56,13 @@ This tutorial demonstrates sample SQL queries for common use cases to explore, t
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Find an [!DNL Adobe Analytics] dataset to explore and right-click on the listing, click **[!UICONTROL Query Data in Notebook]** to generate SQL queries in the empty notebook.
+4. 調査する[!DNL Adobe Analytics]データセットを探し、リスト上で右クリックして、「Notebook ]**のクエリデータ」をクリックし、空のノートブックにSQLクエリを生成します。**[!UICONTROL 
 
-5. `qs_connect()` 関数が含まれる最初の生成済みセルをクリックし、再生ボタンをクリックして実行します。This function creates a connection between your notebook instance and the [!DNL Query Service].
+5. `qs_connect()` 関数が含まれる最初の生成済みセルをクリックし、再生ボタンをクリックして実行します。この関数は、ノートブックインスタンスと[!DNL Query Service]の間に接続を作成します。
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copy down the [!DNL Adobe Analytics] dataset name from the second generated SQL query, it will be the value after `FROM`.
+6. 2番目に生成されたSQLクエリから[!DNL Adobe Analytics]データセット名をコピーします。これは`FROM`の後の値になります。
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -100,13 +100,13 @@ This tutorial demonstrates sample SQL queries for common use cases to explore, t
 
 個々のノートブックセルに次の SQL クエリを入力します。クエリを実行するには、セルをクリックしてから、**[!UICONTROL 再生]**&#x200B;ボタンをクリックします。成功したクエリの結果またはエラーログは、実行されたセルの下に表示されます。
 
-When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by clicking the **[!UICONTROL Power]** button located at the top right corner.
+ノートブックが長時間非アクティブになると、ノートブックと[!DNL Query Service]の接続が切断される場合があります。 その場合は、右上隅の&#x200B;**[!UICONTROL 電源]**&#x200B;ボタンをクリックして[!DNL JupyterLab]を再起動します。
 
 ![](../images/jupyterlab/query/restart_button.png)
 
 ノートブックのカーネルはリセットされますが、セルは保持され、**すべて**&#x200B;のセルを再実行して、中断した場所から続行します。
 
-### 1 時間ごとの訪問者数 {#hourly-visitor-count}
+### 1 時間ごとの訪問者数  {#hourly-visitor-count}
 
 次のクエリは、指定した日付の 1 時間ごとの訪問者数を返します。
 
@@ -124,9 +124,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-In the above query, the timestamp in the `WHERE` clause is set to be the value of `target_year`. 変数を中括弧（`{}`）で囲んで、SQL クエリに含めます。
+上記のクエリでは、`WHERE`句のタイムスタンプが`target_year`の値に設定されています。 変数を中括弧（`{}`）で囲んで、SQL クエリに含めます。
 
-オプションの変数 `hourly_visitor` は、クエリの最初の行に含まれます。クエリの結果は、この変数に Pandas データフレームとして保存されます。Storing results in a dataframe allows you to later visualize the query results using a desired [!DNL Python] package. Execute the following [!DNL Python] code in a new cell to generate a bar graph:
+オプションの変数 `hourly_visitor` は、クエリの最初の行に含まれます。クエリの結果は、この変数に Pandas データフレームとして保存されます。結果をデータフレームに保存すると、目的の[!DNL Python]パッケージを使用して、後でクエリ結果を視覚化できます。 次の[!DNL Python]コードを新しいセルで実行して、棒グラフを生成します。
 
 ```python
 trace = go.Bar(
@@ -194,7 +194,7 @@ ORDER  BY Hour;
 hourly_actions_date_rage.head()
 ```
 
-### 訪問者セッションごとのイベント数 {#number-of-events-per-visitor-session}
+### 訪問者セッションごとのイベント数  {#number-of-events-per-visitor-session}
 
 次のクエリは、指定した日付の訪問者セッションごとのイベント数を返します。
 
@@ -212,7 +212,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Execute the following [!DNL Python] code to generate a histogram for the number of events per visit session:
+次の[!DNL Python]コードを実行して、訪問セッションあたりのイベント数のヒストグラムを生成します。
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -244,7 +244,7 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### 特定の日のアクティブユーザー {#active-users-for-a-given-day}
+### 特定の日のアクティブユーザー  {#active-users-for-a-given-day}
 
 次のクエリは、指定した日付の最もアクティブな 10 人のユーザーを返します。
 
@@ -261,7 +261,7 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-### ユーザアクティビティごとのアクティブな都市 {#active-cities-by-user-activity}
+### ユーザアクティビティごとのアクティブな都市  {#active-cities-by-user-activity}
 
 次のクエリは、指定した日付のユーザーアクティビティの大部分を生成している 10 都市を返します。
 
@@ -280,4 +280,4 @@ LIMIT  10;
 
 ## 次の手順
 
-This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. 「[Jupyter ノートブックによるデータの分析](./analyze-your-data.md)」のチュートリアルに従って、Data Access SDK を使用して同様の操作がどのように実行されるかを確認します。
+このチュートリアルでは、[!DNL Jupyter]ノートブックの[!DNL Query Service]を使用する場合の使用例をいくつか示しました。 「[Jupyter ノートブックによるデータの分析](./analyze-your-data.md)」のチュートリアルに従って、Data Access SDK を使用して同様の操作がどのように実行されるかを確認します。
