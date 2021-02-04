@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；実験；先生の機械学習api
 solution: Experience Platform
 title: 実験
 topic: Developer guide
@@ -7,8 +7,8 @@ description: モデルの開発とトレーニングは、実験レベルで行�
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 100%
+source-wordcount: '780'
+ht-degree: 98%
 
 ---
 
@@ -70,7 +70,7 @@ curl -X POST \
 }
 ```
 
-## トレーニング実行またはスコア付け実行の作成と実行 {#experiment-training-scoring}
+## トレーニング実行またはスコア付け実行の作成と実行  {#experiment-training-scoring}
 
 POST リクエストを実行、有効なテスト ID を指定、および実行タスクを指定することで、トレーニング実行またはスコア付け実行を作成できます。スコア付け実行は、成功した既存のトレーニング実行が実行に含まれる場合にのみ作成できます。トレーニング実行を正常に作成すると、モデルトレーニング手順が初期化され、これを正常に完了すると、トレーニングモデルが生成されます。トレーニング済みモデルを作成すると、指定期間に実験で利用できるトレーニング済みモデルを 1 つのみにするよう、既存のモデルが置き換えられます。
 
