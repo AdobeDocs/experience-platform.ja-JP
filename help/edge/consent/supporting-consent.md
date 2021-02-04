@@ -3,12 +3,12 @@ title: 同意のサポート
 seo-title: Adobe Experience Platform Web SDK：同意設定のサポート
 description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
 seo-description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
-keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
+keywords: 同意；defaultConsent;default consent;setConsent;プロファイルプライバシーミックスイン；エクスペリエンスイベントプライバシーミックスイン；プライバシーミックスイン；
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 63%
+source-wordcount: '766'
+ht-degree: 62%
 
 ---
 
@@ -80,11 +80,11 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->現在、SDK は `general` 目的のみをサポートしています。アドビでは、様々な機能や製品に対応する、さらに堅牢な目的やカテゴリのセットを構築する予定ですが、現在の実装アプリーチでは、すべてをオプトインするか、すべてをオプトインしないかのいずれかです。This only applies to Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
+>現在、SDK は `general` 目的のみをサポートしています。アドビでは、様々な機能や製品に対応する、さらに堅牢な目的やカテゴリのセットを構築する予定ですが、現在の実装アプリーチでは、すべてをオプトインするか、すべてをオプトインしないかのいずれかです。これは、Adobe Experience Platform[!DNL Web SDK]にのみ当てはまり、他のAdobeのJavaScriptライブラリには当てはまりません。
 
 ## IAB TCF標準を使用して同意の環境設定を伝える
 
-SDKは、Interactive Advertising Bureau(IAB)Transparency and Consent Framework(TCF)標準を通じて提供されるユーザーの同意の環境設定の記録をサポートしています。 同意文字列は、上記と同じ `setConsent` コマンドを使用して次のように設定できます。
+SDKは、Interactive Advertising Bureau(IAB)Transparency and Consent Framework(TCF)標準を通じて提供されるユーザーの同意の環境設定の記録をサポートしています。 同意文字列は、上記と同じ`setConsent`コマンドを使用して次のように設定できます。
 
 ```javascript
 alloy("setConsent", {
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-このように同意が設定されると、リアルタイム顧客プロファイルは同意情報で更新されます。 これを機能させるには、プロファイルXDMスキーマに [プロファイルプライバシーミックスインが含まれている必要があります](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)。 イベントを送信する場合、IABの同意情報をイベントXDMオブジェクトに手動で追加する必要があります。 SDKは、イベントに同意情報を自動的に含めません。 同意情報をイベントに送信するには、エクスペリエンスイベント [のプライバシーMixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) をエクスペリエンスイベントスキーマに追加する必要があります。
+このように同意が設定されると、リアルタイム顧客プロファイルは同意情報で更新されます。 この処理を行うには、プロファイルXDMスキーマに[プロファイルプライバシーミックスイン](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)を含める必要があります。 イベントを送信する場合、IABの同意情報をイベントXDMオブジェクトに手動で追加する必要があります。 SDKは、イベントに同意情報を自動的に含めません。 同意情報をイベントに送信するには、エクスペリエンスイベントスキーマに[エクスペリエンスイベントプライバシーミックスイン](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md)を追加する必要があります。
 
 ## 両方の標準を1回の要求で送信する
 
@@ -126,5 +126,5 @@ alloy("setConsent", {
 
 ## 同意の設定時にIDを同期する
 
-デフォルトの同意が保留中の場合、最初に外に出てIDを確立する要求 `setConsent` が送信される場合があります。 このため、最初の要求時にIDを同期することが重要な場合があります。 IDマップは、コマンドと同様に `setConsent` コマンドに追加でき `sendEvent` ます。 Experience CloudIDの [取得を参照してください。](../identity/overview.md)
+デフォルトの同意が保留中の場合、`setConsent`は、最初に外に出てIDを確立する要求です。 このため、最初の要求時にIDを同期することが重要な場合があります。 IDマップは、`sendEvent`コマンドと同様に`setConsent`コマンドに追加できます。 [Experience CloudIDの取得](../identity/overview.md)を参照
 
