@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox overview
+keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックスの概要
 solution: Experience Platform
 title: サンドボックス UI の概要
 topic: user guide
@@ -7,8 +7,8 @@ description: Adobe Experience Platform は仮想サンドボックスを提供�
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 100%
+source-wordcount: '132'
+ht-degree: 94%
 
 ---
 
