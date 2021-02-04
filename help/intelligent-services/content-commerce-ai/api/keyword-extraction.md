@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
+keywords: Experience Platform；はじめに；コンテンツai；コマースai；コンテンツとコマースai；キーワードの抽出；キーワードの抽出
 solution: Experience Platform, Intelligent Services
 title: キーワード抽出
 topic: Developer guide
@@ -7,7 +7,7 @@ description: キーワード抽出サービスは、テキストドキュメン�
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1075'
 ht-degree: 4%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] はベータ版です。 このドキュメントは変更されることがあります。
+>[!DNL Content and Commerce AI] はベータ版です。このドキュメントは変更されることがあります。
 
 キーワード抽出サービスは、テキストドキュメントを指定すると、ドキュメントの主題を最も記述したキーワードまたはキーパースを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識(NER)と監視されていないキーワード抽出アルゴリズムの組み合わせが使用されます。
 
-で認識される名前付きエンティティ [!DNL Content and Commerce AI] を次の表に示します。
+[!DNL Content and Commerce AI]が認識する名前付きエンティティを次の表に示します。
 
 | エンティティ名 | 説明 |
 | --- | --- |
@@ -39,7 +39,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->PDFを処理する予定がある場合は、このドキュメント内の [PDFキーワードの抽出](#pdf-extraction) に関する説明に進んでください。 また、docx、ppt、amd xmlなどの追加ファイルタイプのサポートは、後でリリースされるように設定されています。
+>PDFを処理する予定がある場合は、このドキュメント内の[PDFキーワード抽出](#pdf-extraction)の手順に進んでください。 また、docx、ppt、amd xmlなどの追加ファイルタイプのサポートは、後でリリースされるように設定されています。
 
 **API 形式**
 
@@ -78,7 +78,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。 リクエストを行う前に、適切な情報があることを確認し `analyzer_id` てください。 キーワード抽出サービスの場合、 `analyzer_id` IDは：
+>`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。リクエストを行う前に、適切な`analyzer_id`があることを確認してください。 キーワード抽出サービスの場合、`analyzer_id` IDは：
 >`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
@@ -114,21 +114,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | プロパティ | 説明 | 必須 |
 | --- | --- | --- |
-| `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
+| `analyzer_id` | リクエストの展開先の[!DNL Sensei]サービスID。 このIDは、[!DNL Sensei Content Frameworks]のうちどれを使用するかを決定します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
 | `application-id` | 作成したアプリケーションのID。 | ○ |
-| `data` | ドキュメントを表す配列内の各オブジェクトを持つJSONオブジェクトを含む配列。 この配列の一部として渡されたパラメータは、配列の外部で指定されたグローバルパラメータよりも優先され `data` ます。 次の表に示す残りのプロパティは、内で上書きでき `data`ます。 | ○ |
+| `data` | ドキュメントを表す配列内の各オブジェクトを持つJSONオブジェクトを含む配列。 この配列の一部として渡されたパラメータは、`data`配列の外部で指定されたグローバルパラメータよりも優先されます。 この表で説明する他のプロパティは、`data`内で上書きできます。 | ○ |
 | `language` | 入力テキストの言語。 デフォルト値は `en` です。 | × |
-| `content-type` | 入力が要求本文の一部であるか、S3バケットの署名済みURLであるかを示すために使用されます。 このプロパティのデフォルトはで `inline`す。 | ○ |
-| `encoding` | 入力テキストのエンコーディング形式です。 ORを指定でき `utf-8` ま `utf-16`す。 このプロパティのデフォルトはで `utf-8`す。 | × |
-| `threshold` | スコア(0 ～ 1)のしきい値。この値を超えると結果を返す必要があります。 すべての結果を返すに `0` は、この値を使用します。 このプロパティのデフォルトはで `0`す。 | × |
-| `top-N` | 返す結果の数です（負の整数は指定できません）。 すべての結果を返すに `0` は、この値を使用します。 と組み合わせて使用した場合、返される結果の数は、どちらの制限セットにも該当しない数になります。 `threshold`このプロパティのデフォルトはで `0`す。 | × |
-| `custom` | 渡す任意のカスタムパラメーター。 このプロパティを機能させるには、有効なJSONオブジェクトが必要です。 カスタムパラメータの詳細については、 [付録](#appendix) を参照してください。 | × |
+| `content-type` | 入力が要求本文の一部であるか、S3バケットの署名済みURLであるかを示すために使用されます。 このプロパティのデフォルトは`inline`です。 | ○ |
+| `encoding` | 入力テキストのエンコーディング形式です。 `utf-8`または`utf-16`を指定できます。 このプロパティのデフォルトは`utf-8`です。 | × |
+| `threshold` | スコア(0 ～ 1)のしきい値。この値を超えると結果を返す必要があります。 すべての結果を返すには、値`0`を使用します。 このプロパティのデフォルトは`0`です。 | × |
+| `top-N` | 返す結果の数です（負の整数は指定できません）。 すべての結果を返すには、値`0`を使用します。 `threshold`と組み合わせて使用した場合、返される結果の数は、どちらの制限セットの中でも小さい方です。 このプロパティのデフォルトは`0`です。 | × |
+| `custom` | 渡す任意のカスタムパラメーター。 このプロパティを機能させるには、有効なJSONオブジェクトが必要です。 カスタムパラメーターの詳細については、[付録](#appendix)を参照してください。 | × |
 | `content-id` | 応答で返されるデータ要素の一意のID。 この値が渡されない場合は、自動生成IDが割り当てられます。 | × |
-| `content` | キーワード抽出サービスで使用されるコンテンツ。 コンテンツは生のテキスト（「inline」コンテンツタイプ）にすることができます。 <br> コンテンツがS3上のファイル(「s3-bucket」 content-type)の場合、署名済みURLを渡します。 コンテンツがリクエスト本文の一部である場合、データ要素のリストには1つのオブジェクトしか含めないでください。 複数のオブジェクトが渡された場合は、最初のオブジェクトのみが処理されます。 | ○ |
+| `content` | キーワード抽出サービスで使用されるコンテンツ。 コンテンツは生のテキスト（「inline」コンテンツタイプ）にすることができます。 <br> コンテンツがS3上のファイル(「s3-bucket」 content-type)の場合、署名済みURLを渡します。コンテンツがリクエスト本文の一部である場合、データ要素のリストには1つのオブジェクトしか含めないでください。 複数のオブジェクトが渡された場合は、最初のオブジェクトのみが処理されます。 | ○ |
 
 **応答** 
 
-正常に応答すると、抽出されたキーワードが `response` 配列に含まれるJSONオブジェクトが返されます。
+正常に応答すると、`response`配列に抽出されたキーワードが含まれるJSONオブジェクトが返されます。
 
 ```json
 {
@@ -228,7 +228,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 }
 ```
 
-## PDFキーワード抽出 {#pdf-extraction}
+## PDFキーワード抽出{#pdf-extraction}
 
 キーワード抽出サービスはPDFをサポートしますが、PDFファイルに新しいAnalyzerIDを使用し、ドキュメントの種類をPDFに変更する必要があります。 詳しくは、次の例を参照してください。
 
@@ -244,7 +244,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。 リクエストを行う前に、適切な情報があることを確認し `analyzer_id` てください。 PDFキーワード抽出の場合、 `analyzer_id` IDは次のとおりです。
+>`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。リクエストを行う前に、適切な`analyzer_id`があることを確認してください。 PDFキーワード抽出の場合、`analyzer_id` IDは：
 >`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
 
 ```SHELL
@@ -276,21 +276,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | プロパティ | 説明 | 必須 |
 | --- | --- | --- |
-| `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
+| `analyzer_id` | リクエストの展開先の[!DNL Sensei]サービスID。 このIDは、[!DNL Sensei Content Frameworks]のうちどれを使用するかを決定します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
 | `application-id` | 作成したアプリケーションのID。 | ○ |
-| `data` | ドキュメントを表す配列内の各オブジェクトを持つJSONオブジェクトを含む配列。 この配列の一部として渡されたパラメータは、配列の外部で指定されたグローバルパラメータよりも優先され `data` ます。 次の表に示す残りのプロパティは、内で上書きでき `data`ます。 | ○ |
-| `language` | 入力の言語。 The default value is `en` (english). | × |
-| `content-type` | 入力コンテンツタイプを示すために使用します。 これはに設定する必要があり `file`ます。 | ○ |
-| `encoding` | 入力のエンコーディング形式です。 これはに設定する必要があり `pdf`ます。 後日、サポートされるように設定されるエンコーディングタイプが増えます。 | ○ |
-| `threshold` | スコア(0 ～ 1)のしきい値。この値を超えると結果を返す必要があります。 すべての結果を返すに `0` は、この値を使用します。 このプロパティのデフォルトはで `0`す。 | × |
-| `top-N` | 返す結果の数です（負の整数は指定できません）。 すべての結果を返すに `0` は、この値を使用します。 と組み合わせて使用した場合、返される結果の数は、どちらの制限セットにも該当しない数になります。 `threshold`このプロパティのデフォルトはで `0`す。 | × |
-| `custom` | 渡す任意のカスタムパラメーター。 このプロパティを機能させるには、有効なJSONオブジェクトが必要です。 カスタムパラメータの詳細については、 [付録](#appendix) を参照してください。 | × |
+| `data` | ドキュメントを表す配列内の各オブジェクトを持つJSONオブジェクトを含む配列。 この配列の一部として渡されたパラメータは、`data`配列の外部で指定されたグローバルパラメータよりも優先されます。 この表で説明する他のプロパティは、`data`内で上書きできます。 | ○ |
+| `language` | 入力の言語。 デフォルト値は`en`（英語）です。 | × |
+| `content-type` | 入力コンテンツタイプを示すために使用します。 これは`file`に設定する必要があります。 | ○ |
+| `encoding` | 入力のエンコーディング形式です。 これは`pdf`に設定する必要があります。 後日、サポートされるように設定されるエンコーディングタイプが増えます。 | ○ |
+| `threshold` | スコア(0 ～ 1)のしきい値。この値を超えると結果を返す必要があります。 すべての結果を返すには、値`0`を使用します。 このプロパティのデフォルトは`0`です。 | × |
+| `top-N` | 返す結果の数です（負の整数は指定できません）。 すべての結果を返すには、値`0`を使用します。 `threshold`と組み合わせて使用した場合、返される結果の数は、どちらの制限セットの中でも小さい方です。 このプロパティのデフォルトは`0`です。 | × |
+| `custom` | 渡す任意のカスタムパラメーター。 このプロパティを機能させるには、有効なJSONオブジェクトが必要です。 カスタムパラメーターの詳細については、[付録](#appendix)を参照してください。 | × |
 | `content-id` | 応答で返されるデータ要素の一意のID。 この値が渡されない場合は、自動生成IDが割り当てられます。 | × |
-| `content` | これはに設定する必要があり `file`ます。 | ○ |
+| `content` | これは`file`に設定する必要があります。 | ○ |
 
 **応答** 
 
-正常に応答すると、抽出されたキーワードが `response` 配列に含まれるJSONオブジェクトが返されます。
+正常に応答すると、`response`配列に抽出されたキーワードが含まれるJSONオブジェクトが返されます。
 
 ```json
 {
@@ -359,11 +359,11 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 }
 ```
 
-AEMクラウドサービスの設定、デプロイ、統合の方法に関する手順を含む、PDF抽出の使用に関する詳細と例を示します。 CCAI PDF抽出ワーカーgithubリポジトリにアクセスし [ます](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)。
+AEMクラウドサービスの設定、デプロイ、統合の方法に関する手順を含む、PDF抽出の使用に関する詳細と例を示します。 [CCAI PDF抽出ワーカーgithubリポジトリ](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)にアクセスします。
 
 ## 付録 {#appendix}
 
-次の表に、内から利用できるパラメータを示し `custom`ます。
+次の表に、`custom`内から利用できるパラメータを示します。
 
 | 名前 | 説明 | 必須 |
 | --- | --- | --- |
