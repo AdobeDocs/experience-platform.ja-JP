@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;array functions;array;
+keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；配列関数；配列；
 solution: Experience Platform
 title: 配列、リスト、およびセットの関数
 topic: developer guide
@@ -7,15 +7,15 @@ description: プロファイルクエリ言語（PQL）は、配列、リスト�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 96%
+source-wordcount: '766'
+ht-degree: 94%
 
 ---
 
 
 # 配列、リスト、およびセットの関数
 
-[!DNL Profile Query Language] (PQL)オファーは、配列、リスト、文字列とのやり取りを容易にするために機能します。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL)オファーは、配列、リスト、文字列とのやり取りを容易にするために機能します。他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## In
 
