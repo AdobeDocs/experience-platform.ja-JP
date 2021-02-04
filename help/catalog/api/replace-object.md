@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;replace an object
+keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；api；オブジェクトの置き換え
 solution: Experience Platform
 title: オブジェクトの置換
 topic: developer guide
@@ -7,19 +7,19 @@ description: PUT リクエストを使用して、カタログオブジェクト
 translation-type: tm+mt
 source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 68%
+source-wordcount: '171'
+ht-degree: 64%
 
 ---
 
 
 # オブジェクトの置換
 
-You can overwrite the contents of a [!DNL Catalog] object using a PUT request, wherein the entire resource is replaced with the request payload.
+PUTリクエストを使用して[!DNL Catalog]オブジェクトの内容を上書きできます。このリソース全体がリクエストペイロードに置き換えられます。
 
 >[!NOTE]
 >
->If you only need to update a few specific fields within a [!DNL Catalog] object, using a PATCH request may be more efficient.
+>[!DNL Catalog]オブジェクト内の特定のフィールドの数を更新するだけで済む場合は、PATCHリクエストを使用する方が効率的です。
 
 **API 形式**
 
@@ -29,7 +29,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be replaced. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 置き換える[!DNL Catalog]オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
