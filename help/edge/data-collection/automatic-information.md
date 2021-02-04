@@ -3,12 +3,12 @@ title: 自動的に収集される情報
 seo-title: Adobe Experience Platform Web SDK で自動的に収集される情報
 description: Adobe Experience CloudSDKが自動的に収集する各情報の説明
 seo-description: Adobe Experience CloudSDKが自動的に収集する各情報の説明
-keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+keywords: 情報の収集；コンテキスト；設定；デバイス；画面の高さ；画面の向き；画面の向き；画面の幅；環境；ビューポートの幅；ビューポートの高さ；ビューポートの幅；ビューポートの幅；ブラウザの詳細；実装の詳細；名前；タイムゾーン；ローカル時間；ローカルオフセット；ローカルタイムゾーンオフセット；タイムスタンプ；web;url;webPageDetails;webPage Details;webReferrer;web転送者;landscape;portrait;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 84%
+source-wordcount: '434'
+ht-degree: 74%
 
 ---
 
@@ -57,7 +57,7 @@ Adobe Experience PlatformWeb SDKは、特別な設定なしで多数の情報を
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-エクスペリエンスが表示される環境のタイプ。 Adobe Experience PlatformウェブSDKは、常にこれをに設定し `browser`ます。
+エクスペリエンスが表示される環境のタイプ。 Adobe Experience PlatformWeb SDKは、常に`browser`に設定します。
 
 ### ビューポートの高さ
 
