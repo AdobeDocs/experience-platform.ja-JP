@@ -3,19 +3,19 @@ title: Adobe Analytics へのデータの送信
 seo-title: Adobe Experience Platform Web SDK を使用した Adobe Analytics へのデータの送信
 description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
 seo-description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
-keywords: adobe analytics;analytics;mapped data;mapped vars;
+keywords: adobe analytics;analytics；マップされたデータ；マップされた変数；
 translation-type: tm+mt
 source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 84%
+source-wordcount: '209'
+ht-degree: 81%
 
 ---
 
 
 # データをAdobe Analyticsに送信中
 
-The Adobe Experience Platform [!DNL Web SDK] can send data to Adobe Analytics. これは、`xdm` を、Adobe Analytics で使用できる形式に変換することによって機能します。
+Adobe Experience Platform[!DNL Web SDK]は、Adobe Analyticsにデータを送信できます。 これは、`xdm` を、Adobe Analytics で使用できる形式に変換することによって機能します。
 
 ## セットアップ
 
@@ -23,7 +23,7 @@ The Adobe Experience Platform [!DNL Web SDK] can send data to Adobe Analytics. �
 
 ## 自動的にマッピングされたデータ
 
-The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM variables automatically. 自動的にマッピングされた変数の完全なリストについては、[こちら](automatically-mapped-vars.md)をご覧ください。
+Adobe Experience Platform[!DNL Edge Network]は、多くのXDM変数を自動的にマッピングします。 自動的にマッピングされた変数の完全なリストについては、[こちら](automatically-mapped-vars.md)をご覧ください。
 
 ## 手動でマッピングされたデータ
 
