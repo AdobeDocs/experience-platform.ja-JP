@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；トラブルシューティングガイド；faq；トラブルシューティング；
 solution: Experience Platform
 title: Adobe Experience Platform クエリサービストラブルシューティングガイド
 topic: troubleshooting
@@ -7,8 +7,8 @@ description: このドキュメントには、発生する一般的なエラー�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 91%
+source-wordcount: '181'
+ht-degree: 85%
 
 ---
 
