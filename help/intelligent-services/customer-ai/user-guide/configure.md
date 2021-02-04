@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
+keywords: Experience Platform；ユーザーガイド；顧客ai；人気の高いトピック；インスタンスの設定；インスタンスの作成；
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客AIインスタンスの設定
 topic: Instance creation
@@ -7,7 +7,7 @@ description: インテリジェントサービスは、様々な用途に設定�
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1296'
 ht-degree: 35%
 
 ---
@@ -21,28 +21,28 @@ ht-degree: 35%
 
 ## インスタンスの設定 {#set-up-your-instance}
 
-In the Platform UI, select **[!UICONTROL Services]** in the left navigation. 「**[!UICONTROL サービス]**」ブラウザーが表示され、使用可能なすべてのサービスが表示されます。In the container for Customer AI, select **[!UICONTROL Open]**.
+プラットフォームUIの左側のナビゲーションで、「**[!UICONTROL サービス]**」を選択します。 「**[!UICONTROL サービス]**」ブラウザーが表示され、使用可能なすべてのサービスが表示されます。Customer AIのコンテナで、**[!UICONTROL 「Open]**」を選択します。
 
 ![](../images/user-guide/navigate-to-service.png)
 
-「 **Customer AI** 」 UIが表示され、すべてのサービスインスタンスが表示されます。
+**Customer AI** UIが表示され、すべてのサービスインスタンスが表示されます。
 
-- 「スコア対象プロファイル **[!UICONTROL の合計]** 」指標は、インスタンスを **[!UICONTROL 作成]** コンテナの右下にあります。 この指標は、すべてのSandbox環境および削除されたサービスインスタンスを含む、現在のカレンダー年度のCustomer AIによってスコアされたプロファイルの合計数を追跡します。
+- **[!UICONTROL スコア]**&#x200B;の合計プロファイル数指標は、**[!UICONTROL インスタンスを作成]**&#x200B;コンテナの右下にあります。 この指標は、すべてのSandbox環境および削除されたサービスインスタンスを含む、現在のカレンダー年度のCustomer AIによってスコアされたプロファイルの合計数を追跡します。
 
 ![](../images/user-guide/total-profiles.png)
 
-サービスインスタンスは、UIの右側のコントロールを使用して、編集、複製および削除できます。 これらのコントロールを表示するには、既存の **[!UICONTROL サービスインスタンスからインスタンスを選択し]**&#x200B;ます。 コントロールには、次の項目が含まれます。
+サービスインスタンスは、UIの右側のコントロールを使用して、編集、複製および削除できます。 これらのコントロールを表示するには、既存の&#x200B;**[!UICONTROL サービスインスタンス]**&#x200B;からインスタンスを選択します。 コントロールには、次の項目が含まれます。
 
-- **[!UICONTROL 編集]**:「 **[!UICONTROL 編集]** 」を選択すると、既存のサービスインスタンスを変更できます。 インスタンスの名前、説明およびスコアリング頻度を編集できます。
-- **[!UICONTROL クローン]**:「 **[!UICONTROL Clone]** 」を選択すると、現在選択されているサービスインスタンスのセットアップがコピーされます。 その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
+- **[!UICONTROL 編集]**:「 **** 編集」を選択すると、既存のサービスインスタンスを変更できます。インスタンスの名前、説明およびスコアリング頻度を編集できます。
+- **[!UICONTROL クローン]**:[ **** Clonecopys]を選択すると、現在選択されているサービス・インスタンスのセットアップがコピーされます。その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
 - **[!UICONTROL 削除]**:過去の実行を含むサービスインスタンスを削除できます。
 - **[!UICONTROL データソース]**:このインスタンスで使用されるデータセットへのリンク。
-- **[!UICONTROL 前回の実行の詳細]**:これは、実行に失敗した場合にのみ表示されます。 エラーコードなど、実行に失敗した理由に関する情報がここに表示されます。
+- **[!UICONTROL 前回の実行の詳細]**:これは、実行に失敗した場合にのみ表示されます。エラーコードなど、実行に失敗した理由に関する情報がここに表示されます。
 - **[!UICONTROL スコアの定義]**:このインスタンスに対して設定した目標の概要を簡単に示します。
 
 ![](../images/user-guide/service-instance-panel.png)
 
-新しいインスタンスを作成するには、「インスタンスを **[!UICONTROL 作成]**」を選択します。
+新しいインスタンスを作成するには、「**[!UICONTROL インスタンスを作成]**」を選択します。
 
 ![](../images/user-guide/dashboard.png)
 
@@ -58,49 +58,49 @@ In the Platform UI, select **[!UICONTROL Services]** in the left navigation. 「
 
 - デフォルトでは、適格な母集団が指定されていない限り、すべてのプロファイルに対して傾向スコアが生成されます。イベントに基づいてプロファイルを含めたり除外したりする条件を定義することで、適格な母集団を指定できます。
 
-Provide the required values and then select **[!UICONTROL Next]**.
+必要な値を入力し、「**[!UICONTROL 次へ]**」を選択します。
 
 ![](../images/user-guide/setup.png)
 
 ### 目標の定義 {#define-a-goal}
 
-The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a prediction goal. 目標は 1 つ以上のイベントで構成され、各イベントの発生は保持する条件に基づきます。顧客 AI インスタンスの目的は、特定の期間内に目標を達成する可能性を判断することです。
+**[!UICONTROL 目標を定義]**&#x200B;ステップが表示され、予測目標を視覚的に定義するためのインタラクティブな環境が提供されます。 目標は 1 つ以上のイベントで構成され、各イベントの発生は保持する条件に基づきます。顧客 AI インスタンスの目的は、特定の期間内に目標を達成する可能性を判断することです。
 
-目標を作成するには、「 **[!UICONTROL Enter Field Name]** 」を選択し、ドロップダウンリストからフィールドを選択します。 2つ目の入力を選択し、イベントの条件の句を選択して、イベントを完了するターゲット値を指定します。 Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
+目標を作成するには、「**[!UICONTROL フィールド名を入力]**」を選択し、ドロップダウンリストからフィールドを選択します。 2つ目の入力を選択し、イベントの条件の句を選択して、イベントを完了するターゲット値を指定します。 追加のイベントは、**[!UICONTROL 追加イベント]**&#x200B;を選択して設定できます。 最後に、日数の予測期間を適用して目標を完了し、**[!UICONTROL 次へ]**&#x200B;を選択します。
 
 ![](../images/user-guide/goal.png)
 
 #### 発生し、発生しない
 
-目標を定義する際、「発生 **[!UICONTROL する]** 」または「発生しない **[!UICONTROL 」を選択でき]**&#x200B;ます。 「発生 **[!UICONTROL する]** 」を選択すると、顧客のイベントデータをInsights UIに含めるために、定義したイベント条件を満たす必要があります。
+目標を定義する際に、「**[!UICONTROL 発生する]**」または「**[!UICONTROL 発生しない]**」を選択できます。 「**[!UICONTROL 発生]**」を選択した場合は、顧客のイベントデータをインサイトUIに含めるために、定義したイベント条件を満たす必要があります。
 
-例えば、顧客が購入するかどうかを予測するアプリを設定する場合は、「発生 **[!UICONTROL する」を選択し]** 、「すべて **[!UICONTROL 」を選択して「]** コマース **.購入.id」を「演算子」に****** 指定します。
+例えば、顧客が購入するかどうかを予測するアプリを設定する場合、「**[!UICONTROL 発生]**」に続けて「**[!UICONTROL すべての]**」を選択し、演算子として「**commerce.purchases.id**」と「**exists**」を入力します。
 
 ![発生する](../images/user-guide/occur.png)
 
-ただし、あるイベントが特定の期間に発生しないかどうかを予測したい場合があります。 このオプションで目標を設定するには、[ **[!UICONTROL 発生しない]** ]ドロップダウンを選択します。
+ただし、あるイベントが特定の期間に発生しないかどうかを予測したい場合があります。 このオプションで目標を設定するには、最上位レベルのドロップダウンで[**[!UICONTROL 発生しない]**]を選択します。
 
-例えば、関与が少なくなり、次の月にアカウントのログインページを訪問しない顧客を予測したい場合、 「発生し **[!UICONTROL ない」を選択し]** 、「次のす **[!UICONTROL べて」に続けて「発生しない」を選択し]** 、次に「web.webWebInteraction.URL」と入力します。 **等しい」は、「次の値を含む********** アカウントログイン」の演算子です。
+例えば、関与が少なくなり、次の月にアカウントのログインページを訪問しない顧客を予測したい場合、 「**[!UICONTROL 発生しません]**」に続けて「**[!UICONTROL すべての]**」を選択し、**web.webInteraction.URL**&#x200B;と&#x200B;**[!UICONTROL 等しい]**&#x200B;を演算子として入力します。演算子には&#x200B;**account-login**&#x200B;を値とします。
 
 ![発生しない](../images/user-guide/not-occur.png)
 
 #### すべての
 
-場合によっては、イベントの組み合わせが発生するかどうかを予測したい場合や、あらかじめ定義されたセットから任意のイベントの発生を予測したい場合があります。 顧客がイベントの組み合わせを持つかどうかを予測するには、「目標の **[!UICONTROL 定義]** 」ページの第2レベルのドロップダウンから **** 、「すべて」オプションを選択します。
+場合によっては、イベントの組み合わせが発生するかどうかを予測したい場合や、あらかじめ定義されたセットから任意のイベントの発生を予測したい場合があります。 顧客がイベントの組み合わせを持つかどうかを予測するには、**[!UICONTROL 目標を定義]**&#x200B;ページの2番目のレベルのドロップダウンから「**[!UICONTROL すべての]**」オプションを選択します。
 
-例えば、顧客が特定の製品を購入したかどうかを予測できます。 この予測目標は、次の2つの条件で定義されます。が `commerce.order.purchaseID` 存在し **、** が特定の値と等しい `productListItems.SKU`**** 。
+例えば、顧客が特定の製品を購入したかどうかを予測できます。 この予測目標は、次の2つの条件で定義されます。`commerce.order.purchaseID` **exists**&#x200B;と`productListItems.SKU` **は**&#x200B;の特定の値と等しい。
 
 ![すべての例](../images/user-guide/all-of.png)
 
-特定のセットから顧客が何らかのイベントを持つかどうかを予測するには、「 **[!UICONTROL いずれか]** 」オプションを使用します。
+特定のセットからイベントを得るかどうかを予測するには、**[!UICONTROL 「]**&#x200B;いずれか」オプションを使用します。
 
-例えば、あるURLや特定の名前を持つWebページに顧客が訪問するかを予測できます。 この予測目標は、次の2つの条件で定義されます。 `web.webPageDetails.URL` **特定の値を持つ開始** 、および特定の値を持つ `web.webPageDetails.name` 開始 **** 。
+例えば、あるURLや特定の名前を持つWebページに顧客が訪問するかを予測できます。 この予測目標は、次の2つの条件で定義されます。`web.webPageDetails.URL` **特定の値が**&#x200B;の開始と`web.webPageDetails.name` **特定の値が**&#x200B;の開始。
 
 ![任意の例](../images/user-guide/any-of.png)
 
 ### スケジュールの設定&#x200B;*（オプション）*{#configure-a-schedule}
 
-The **[!UICONTROL Advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed.
+**[!UICONTROL 詳細]**&#x200B;手順が表示されます。 このオプションの手順では、予測の実行を自動化するスケジュールを設定したり、特定のイベントをフィルターする予測の除外を定義したり、必要がない場合は&#x200B;**[!UICONTROL 「完了」]**&#x200B;を選択したりできます。
 
 「**[!UICONTROL スコアリング頻度]**」を設定して、スコアリングスケジュールを設定します。予測の自動実行は、週単位または月単位でスケジュールできます。
 
@@ -108,11 +108,11 @@ The **[!UICONTROL Advanced]** step appears. This optional step allows you to con
 
 スケジュール設定では、特定の条件を満たすイベントがスコアの生成時に評価されるのを防ぐために、予測の除外を定義できます。この機能を使用して、無関係なデータ入力を除外できます。
 
-To exclude certain events, select **[!UICONTROL Add exclusion]** and define the event in the same fashion as to how the goal is defined. To remove an exclusion, select the ellipses (**[!UICONTROL ...]**) to the top-right of the event container and then select **[!UICONTROL Remove Container]**.
+特定のイベントを除外するには、**[!UICONTROL 除外]**&#x200B;を選択し、目標の定義と同じ方法で追加イベントを定義します。 除外を削除するには、三点リーダー(**[!UICONTROL ...]**)をイベントコンテナの右上に表示し、「**[!UICONTROL コンテナを削除]**」を選択します。
 
 ![](../images/user-guide/exclusion.png)
 
-Exclude events as needed and then select **[!UICONTROL Finish]** to create the instance.
+必要に応じてイベントを除外し、「**[!UICONTROL 完了]**」を選択してインスタンスを作成します。
 
 ![](../images/user-guide/advanced.png)
 
@@ -126,7 +126,7 @@ Exclude events as needed and then select **[!UICONTROL Finish]** to create the i
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルに従うと、顧客AIのインスタンスの設定と傾向スコアの生成に成功します。 セグメントビルダーを使用して、予測スコアを含む顧客セグメントを [作成したり、Customer AIでインサイトを](./create-segment.md) 発見したりできるようになりました [](./discover-insights.md)。
+このチュートリアルに従うと、顧客AIのインスタンスの設定と傾向スコアの生成に成功します。 セグメントビルダーを使用して、予測スコア](./create-segment.md)を含む顧客セグメントを[作成するか、顧客AI](./discover-insights.md)を含む[discoverインサイトを作成するかを選択できるようになりました。
 
 ## その他のリソース
 
