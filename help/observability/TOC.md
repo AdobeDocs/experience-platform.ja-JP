@@ -15,7 +15,7 @@ ht-degree: 74%
 # Observability Insights {#observability}
 
 * [Observability Insights の概要](home.md)
-* Observibility Insights API開発者ガイド {#api}
+* 観察性インサイトAPI開発ガイド{#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
    * [指標](api/metrics.md)
