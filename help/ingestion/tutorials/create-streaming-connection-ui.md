@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;ui guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング接続；ストリーミング接続の作成；uiガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取り込み；取り込み；
 solution: Experience Platform
 title: UI を使用したストリーミング接続の作成
 topic: tutorial
@@ -8,8 +8,8 @@ description: この UI ガイドは、Adobe Experience Platform を使用して�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 74%
+source-wordcount: '532'
+ht-degree: 71%
 
 ---
 
@@ -20,15 +20,15 @@ ht-degree: 74%
 
 ## はじめに
 
-In order to start streaming data to [!DNL Experience Platform], you must first create a streaming HTTP connection. ストリーミング接続を作成する場合、ストリーミングデータのソースや、信頼できる（認証済み）ソースまたは信頼できない（未認証）ソースからデータを送信するかどうかなど、重要な設定をおこなう必要があります。
+[!DNL Experience Platform]に開始ストリーミングデータを接続するには、まずストリーミングHTTP接続を作成する必要があります。 ストリーミング接続を作成する場合、ストリーミングデータのソースや、信頼できる（認証済み）ソースまたは信頼できない（未認証）ソースからデータを送信するかどうかなど、重要な設定をおこなう必要があります。
 
-After registering a streaming connection you will have a unique URL which can be used to stream data to [!DNL Platform].
+ストリーミング接続を登録すると、[!DNL Platform]にデータをストリーミングするのに使用できる一意のURLが生成されます。
 
-このガイドに記載されている操作を完了するには、Adobe Experience Platform にアクセスする必要があります。If you do not have access to [!DNL Platform], please contact your system administrator before proceeding.
+このガイドに記載されている操作を完了するには、Adobe Experience Platform にアクセスする必要があります。[!DNL Platform]へのアクセス権がない場合は、先に進む前にシステム管理者に問い合わせてください。
 
 ## ストリーミング接続の作成
 
-After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the **[!UICONTROL Catalog]** tab. このページには、使用可能なソースの種類が個々のカードで表示されます。各カードの丸の中に、データセットへのストリーミング接続から作成されたデータフローの数が示されます。
+[!DNL Experience Platform] UIにログインした後、**[!UICONTROL ソース]**&#x200B;をクリックして、「**[!UICONTROL カタログ]**」タブを開きます。 このページには、使用可能なソースの種類が個々のカードで表示されます。各カードの丸の中に、データセットへのストリーミング接続から作成されたデータフローの数が示されます。
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
@@ -40,8 +40,8 @@ After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sourc
 
 「**[!UICONTROL アカウント認証]**」で、ストリーミング接続の次の設定プロパティを選択します。
 
-- **[!UICONTROL 認証]:** ストリーミング接続に認証が必要かどうか。 認証を実行すると、データは信頼できるソースから収集されます。個人を特定できる情報（Personally Identifiable Information：PII）を扱う場合は、このオプションをオンにすることをお勧めします。
-- **[!UICONTROL XDMスキーマの互換性]:** このストリーミングスキーマが、XDM接続と互換性のあるイベントを送信するかどうかを指定します。 デフォルトでは、このプロパティは&#x200B;**オン**&#x200B;になっています。
+- **[!UICONTROL 認証]:** ストリーミング接続に認証が必要かどうか。認証を実行すると、データは信頼できるソースから収集されます。個人を特定できる情報（Personally Identifiable Information：PII）を扱う場合は、このオプションをオンにすることをお勧めします。
+- **[!UICONTROL XDMスキーマの互換性]:** このストリーミングスキーマが、XDM接続と互換性のあるイベントを送信するかどうかを指定します。デフォルトでは、このプロパティは&#x200B;**オン**&#x200B;になっています。
 
 設定プロパティの選択が完了したら、「**[!UICONTROL 接続]**」をクリックします。これで、ストリーミング HTTP 接続が作成され、「**[!UICONTROL ソース]**」ワークスペースの「**[!UICONTROL 参照]**」タブに表示されるようになりました。
 
@@ -79,4 +79,4 @@ After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sourc
 
 ## 次の手順
 
-By following this tutorial, you have created a streaming HTTP connection, enabling you to use the streaming endpoint to access a variety of [!DNL Data Ingestion] APIs. API でストリーミング接続を作成する手順については、[ストリーミング接続の作成に関するチュートリアル](../tutorials/create-streaming-connection.md)を参照してください。
+このチュートリアルに従って、ストリーミングHTTP接続を作成し、ストリーミングエンドポイントを使用して様々な[!DNL Data Ingestion] APIにアクセスできるようにします。 API でストリーミング接続を作成する手順については、[ストリーミング接続の作成に関するチュートリアル](../tutorials/create-streaming-connection.md)を参照してください。
