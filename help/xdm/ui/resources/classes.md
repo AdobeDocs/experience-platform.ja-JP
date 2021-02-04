@@ -5,10 +5,10 @@ title: UIでのクラスの作成と編集
 description: Experience Platformユーザーインターフェイスでクラスを作成および編集する方法を説明します。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 5bf729197de53e9d24675c8a1d0455e807fb90c5
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 8%
+source-wordcount: '886'
+ht-degree: 7%
 
 ---
 
@@ -53,9 +53,9 @@ Adobeは、[!DNL XDM Individual Profile]や[!DNL XDM ExperienceEvent]を含む�
 
 >[!NOTE]
 >
->編集できるのは、組織で定義されたカスタムクラスのみです。
+>組織で定義されたカスタムクラスのみを完全に編集およびカスタマイズできます。 Adobeが定義するコアクラスの場合、各フィールドの表示名だけを、個々のスキーマのコンテキスト内で編集できます。 詳しくは、[スキーマフィールドの表示名の編集](./schemas.md#display-names)の節を参照してください。
 >
->また、データ取り込みでクラスを保存して使用した後は、追加の変更のみを行うことができます。 詳しくは、[スキーマ展開のルール](../../schema/composition.md#evolution)を参照してください。
+>カスタムクラスを保存してデータ取り込みで使用した後は、それ以降は追加の変更のみを行うことができます。 詳しくは、[スキーマ展開のルール](../../schema/composition.md#evolution)を参照してください。
 
 既存のクラスを編集するには、「**[!UICONTROL 参照]**」タブを選択し、編集するクラスを使用するスキーマの名前を選択します。
 
