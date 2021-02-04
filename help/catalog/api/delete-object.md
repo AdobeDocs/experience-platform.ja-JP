@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;delete an object;catalog service;api
+keywords: Experience Platform；ホーム；人気のあるトピック；オブジェクトの削除；カタログサービス；api
 solution: Experience Platform
 title: オブジェクトの削除
 topic: developer guide
@@ -7,19 +7,19 @@ description: DELETE リクエストのパスに ID を指定することで、�
 translation-type: tm+mt
 source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 55%
+source-wordcount: '201'
+ht-degree: 52%
 
 ---
 
 
 # オブジェクトの削除
 
-You can delete a [!DNL Catalog] object by providing its ID in the path of a DELETE request.
+DELETEリクエストのパスに[!DNL Catalog]オブジェクトのIDを指定すると、オブジェクトを削除できます。
 
 >[!WARNING]
 >
->Take extra care when deleting objects, as this cannot be undone and may produce breaking changes elsewhere in [!DNL Experience Platform].
+>オブジェクトの削除は取り消しができず、[!DNL Experience Platform]の他の場所で改行の変更が行われる可能性があるので、注意が必要です。
 
 **API 形式**
 
@@ -29,11 +29,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->エンドポイ `DELETE /batches/{ID}` ントは非推奨です。 バッチを削除するには、 [Batch Ingestion APIを使用する必要があります](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)。
+>`DELETE /batches/{ID}`エンドポイントは非推奨です。 バッチを削除するには、[バッチ取り込みAPI](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)を使用する必要があります。
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be deleted. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 削除する[!DNL Catalog]オブジェクトの種類です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | 更新する特定のオブジェクトの識別子。 |
 
 **リクエスト**
@@ -61,4 +61,4 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->If no [!DNL Catalog] objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.
+>リクエストで指定されたIDに一致する[!DNL Catalog]オブジェクトがない場合、HTTPステータスコード200を引き続き受け取ることができますが、応答配列は空になります。
