@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassandra;cassandra;Cassandra
+keywords: Experience Platform；ホーム；人気のあるトピック；Apache Cassandra;apache cassandra;cassandra;Cassandra
 solution: Experience Platform
 title: Apache Cassandraコネクタ
 topic: overview
@@ -7,21 +7,21 @@ description: 次のドキュメントは、APIを使用してApache Cassandraを
 translation-type: tm+mt
 source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 20%
+source-wordcount: '148'
+ht-degree: 18%
 
 ---
 
 
 # [!DNL Apache Cassandra] コネクタ
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。 データベースプロバイダーのサポートには、が含まれ [!DNL Apache Cassandra]ます。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。データベースプロバイダーのサポートには[!DNL Apache Cassandra]が含まれます。
 
-次のドキュメントは、APIを使用して接続する方法に関する情報 [!DNL Apache Cassandra] を提供 [!DNL Platform] します。
+以下のドキュメントは、APIを使用して[!DNL Apache Cassandra]を[!DNL Platform]に接続する方法に関する情報を提供しています。
 
-## API [!DNL Apache Cassandra] を [!DNL Platform] 使用した接続
+## APIを使用して[!DNL Apache Cassandra]を[!DNL Platform]に接続
 
 - [Flow Service APIを使用してApache Cassandraコネクタを作成する](../../tutorials/api/create/databases/cassandra.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
