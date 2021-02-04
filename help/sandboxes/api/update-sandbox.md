@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;update sandbox
+keywords: Experience Platform；ホーム；人気のあるトピック；Sandboxの更新
 solution: Experience Platform
 title: サンドボックスの更新
 topic: developer guide
@@ -7,8 +7,8 @@ description: 要求パスにサンドボックスの名前を含むPATCH要求�
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 72%
+source-wordcount: '127'
+ht-degree: 68%
 
 ---
 
