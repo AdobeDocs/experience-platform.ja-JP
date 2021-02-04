@@ -1,5 +1,5 @@
 ---
-keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
+keywords: データ・ガバナンスrtcdp;rtcdpデータ・ガバナンス；リアルタイム・カスタマー・データ・プロファイル・データ・ガバナンス
 title: データガバナンスの概要
 seo-title: リアルタイム顧客データプラットフォームにおけるデータガバナンス
 description: 'データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。 '
@@ -7,7 +7,7 @@ seo-description: 'データガバナンスを使用すると、顧客データ�
 translation-type: tm+mt
 source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '707'
 ht-degree: 42%
 
 ---
