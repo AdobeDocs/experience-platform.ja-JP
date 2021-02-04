@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics; notifications
+keywords: Experience Platform；ホーム；人気の高いトピック；通知
 description: Adobe I/Oイベントを使用すると、イベントを登録し、Webフックを使用して、フロー実行の状態に関する通知を受信できます。 これらの通知には、フローの実行の成功に関する情報や、実行の失敗に貢献したエラーに関する情報が含まれます。
 solution: Experience Platform
 title: フロー実行通知
@@ -7,7 +7,7 @@ topic: overview
 translation-type: tm+mt
 source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '787'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 # フロー実行通知
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) は、社内のさまざまなソースから顧客データを収集し、一元化するために使用 [!DNL Platform]します。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) は、社内のさまざまなソースから顧客データを収集し、一元化するために使用 [!DNL Platform]します。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
 Adobe I/Oイベントでは、イベントを登録し、Webフックを使用して、フロー実行の状態に関する通知を受信できます。 これらの通知には、フローの実行の成功に関する情報や、実行の失敗に貢献したエラーに関する情報が含まれます。
 
@@ -25,19 +25,19 @@ Adobe I/Oイベントでは、イベントを登録し、Webフックを使用�
 
 ## はじめに
 
-このチュートリアルでは、フローを監視するソース接続が既に1つ以上作成済みであることを前提としています。 ソース接続をまだ設定していない場合は、 [ソースの概要にアクセスし、選択したソースを設定してから](./home.md) 、このガイドに戻ってください。
+このチュートリアルでは、フローを監視するソース接続が既に1つ以上作成済みであることを前提としています。 ソース接続をまだ設定していない場合は、[ソースの概要](./home.md)にアクセスし、選択したソースを設定してから、このガイドに戻ってください。
 
-また、このドキュメントでは、Webフックに関する実際の理解と、あるアプリケーションから別のアプリケーションへのWebフックの接続方法に関する知識も必要です。 Webhooksの概要については、 [[!DNL I/O Events] ドキュメント](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) を参照してください。
+また、このドキュメントでは、Webフックに関する実際の理解と、あるアプリケーションから別のアプリケーションへのWebフックの接続方法に関する知識も必要です。 Webhookの紹介については、[[!DNL I/O Events] ドキュメント](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md)を参照してください。
 
 ## Webフックのフロー実行通知の登録
 
-フロー実行通知を受け取るには、Adobeデベロッパーコンソールを使用してWebフックを [!DNL Experience Platform] 統合に登録する必要があります。
+フロー実行通知を受け取るには、Adobeデベロッパーコンソールを使用してWebフックを[!DNL Experience Platform]統合に登録する必要があります。
 
-これを行う方法について詳しくは、 [購読に関するチュートリアルに従って [!DNL I/O Event] 通知を行います](../observability/notifications/subscribe.md) 。
+これを行う方法の詳細な手順については、[ [!DNL I/O Event] 通知](../observability/notifications/subscribe.md)のサブスクライブのチュートリアルに従ってください。
 
 >[!IMPORTANT]
 >
->購読プロセス中に、イベントプロバイダーとして「 **[!UICONTROL Platform notifications]** 」を必ず選択し、次のイベント購読を選択します。
+>購読プロセス中に、イベントプロバイダーとして&#x200B;**[!UICONTROL Platform notifications]**&#x200B;を選択し、次のイベント購読を選択します。
 >
 >* **[!UICONTROL Experience Platformソースのフローの実行に成功しました]**
 >* **[!UICONTROL Experience Platformソースのフローの実行に失敗しました]**
@@ -47,15 +47,15 @@ Adobe I/Oイベントでは、イベントを登録し、Webフックを使用�
 
 Webフックが接続され、イベント購読が完了すると、Webフックダッシュボードを介してフロー実行通知を受信する開始が発生します。
 
-通知は、実行された取り込みジョブの数、ファイルサイズ、エラーなどの情報を返します。 通知は、フロー実行に関連付けられたペイロードもJSON形式で返します。 応答ペイロードは、またはとして分類でき `sources_flow_run_success` ま `sources_flow_run_failure`す。
+通知は、実行された取り込みジョブの数、ファイルサイズ、エラーなどの情報を返します。 通知は、フロー実行に関連付けられたペイロードもJSON形式で返します。 応答ペイロードは、`sources_flow_run_success`または`sources_flow_run_failure`に分類できます。
 
 >[!IMPORTANT]
 >
->フロー作成プロセス中に部分的な取り込みが有効な場合、成功した取り込みと失敗した取り込みの両方を含むフローは、フロー作成プロセス中に設定されたエラーのしきい値の割合を下回る場合にのみ、マークされます。 `sources_flow_run_success` 成功したフローの実行にエラーが含まれる場合、これらのエラーは、戻り値のペイロードの一部として含まれます。
+>フローの作成プロセス中に部分的な取り込みが有効になっている場合、成功した取り込みと失敗した取り込みの両方を含むフローは、エラー数がフローの作成プロセス中に設定されたエラーしきい値の割合を下回る場合にのみ`sources_flow_run_success`としてマークされます。 成功したフローの実行にエラーが含まれる場合、これらのエラーは、戻り値のペイロードの一部として含まれます。
 
 ### 成功
 
-成功した応答は、特定のフロー実行の特性を定義 `metrics` する一連のセットを返します。この一連のセット `activities` は、データの変換方法を示します。
+成功した応答は、特定のフロー実行の特性を定義する`metrics`と、データの変換方法を示す`activities`のセットを返します。
 
 ```json
 {
@@ -314,21 +314,21 @@ Webフックが接続され、イベント購読が完了すると、Webフッ�
 
 >[!NOTE]
 >
->エラーメッセージの詳細については、 [付録](#errors) を参照してください。
+>エラーメッセージの詳細については、[付録](#errors)を参照してください。
 
 ## 次の手順
 
-フローの実行ステータスでリアルタイム通知を受信できるイベントをサブスクライブできるようになりました。 フローの実行とソースの詳細については、 [ソースの概要を参照してください](./home.md)。
+フローの実行ステータスでリアルタイム通知を受信できるイベントをサブスクライブできるようになりました。 フローの実行とソースについて詳しくは、[ソースの概要](./home.md)を参照してください。
 
 ## 付録
 
 次の節では、フロー実行通知の操作について詳しく説明します。
 
-### エラーメッセージについて {#errors}
+### エラーメッセージについて{#errors}
 
-取り込みエラーは、データがソースからコピーされている場合や、コピーされたデータがに処理されている場合に発生する可能性があり [!DNL Platform]ます。 特定のエラーについて詳しくは、次の表を参照してください。
+インジェストエラーは、データがソースからコピーされている場合や、コピーされたデータが[!DNL Platform]に処理されている場合に発生する可能性があります。 特定のエラーについて詳しくは、次の表を参照してください。
 
 | エラー | 説明 |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | ソースからデータをコピー中にエラーが発生しました。 |
-| `CONNECTOR-2001-500` | コピーされたデータの処理中にエラーが発生し [!DNL Platform]ました。 このエラーは、解析、検証または変換に関するものです。 |
+| `CONNECTOR-2001-500` | コピーされたデータを[!DNL Platform]に処理中にエラーが発生しました。 このエラーは、解析、検証または変換に関するものです。 |
