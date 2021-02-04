@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;mysql;MySQL
+keywords: Experience Platform；ホーム；人気の高いトピック；mysql;MySQL
 solution: Experience Platform
 title: UI での MySQL ソースコネクタの作成
 topic: overview
@@ -8,19 +8,19 @@ description: このチュートリアルでは、プラットフォームユー�
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '433'
 ht-degree: 12%
 
 ---
 
 
-# Create a [!DNL MySQL] source connector in the UI
+# UIに[!DNL MySQL]ソースコネクタを作成する
 
 >[!NOTE]
 >
-> コネクタ [!DNL MySQL] はベータ版です。 ベータラベル付きのコネクタの使用について詳しくは、 [ソースの概要](../../../../home.md#terms-and-conditions) 「」を参照してください。
+> [!DNL MySQL]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用して [!DNL MySQL] ソースコネクタを作成する手順を説明します。
+Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、プラットフォームユーザーインターフェイスを使用して[!DNL MySQL]ソースコネクタを作成する手順を説明します。
 
 ## はじめに
 
@@ -31,40 +31,40 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
    * [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に接続している場合は、このドキュメントの残りの部分をスキップして、データフローの [!DNL MySQL] 設定に関するチュートリアルに進むことができます [](../../dataflow/databases.md)。
+既に[!DNL MySQL]ドキュメントをお持ちの場合は、この接続の残りの部分をスキップして、[データフロー](../../dataflow/databases.md)の設定に関するチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
-で [!DNL MySQL] アカウントにアクセスするに [!DNL Platform]は、次の値を指定する必要があります。
+[!DNL Platform]の[!DNL MySQL]アカウントにアクセスするには、次の値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `connectionString` | アカウントに関連付けられている [!DNL MySQL] 接続文字列。 接続文字 [!DNL MySQL] 列パターンは次のとおりです。 `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. 接続文字列の詳細と、 [[!DNL MySQL] ドキュメントを読むことによる接続文字列の取得方法についても詳しく説明しています](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)。 |
+| `connectionString` | アカウントに関連付けられている[!DNL MySQL]接続文字列。 [!DNL MySQL]接続文字列パターンは次のとおりです。`Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. 接続文字列の詳細や、接続文字列を取得する方法については、[[!DNL MySQL] ドキュメント](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html)を読んでみてください。 |
 
-## アカウントに接続 [!DNL MySQL] する
+## [!DNL MySQL]アカウントに接続
 
-必要な資格情報を収集したら、次の手順に従って [!DNL MySQL] アカウントをにリンクでき [!DNL Platform]ます。
+必要な資格情報を収集したら、次の手順に従って[!DNL MySQL]アカウントを[!DNL Platform]にリンクします。
 
-[Adobe Experience Platform](https://platform.adobe.com) にログインし、左のナビゲーションバーで **[!UICONTROL 「ソース]** 」を選択して「 **[!UICONTROL ソース]** 」ワークスペースにアクセスします。 [ **[!UICONTROL カタログ]** ]画面には、アカウントを作成する際に使用できる様々なソースが表示されます。
+[Adobe Experience Platform](https://platform.adobe.com)にログインし、左のナビゲーションバーで「**[!UICONTROL ソース]**」を選択して&#x200B;**[!UICONTROL ソース]**&#x200B;ワークスペースにアクセスします。 **[!UICONTROL カタログ]**&#x200B;画面には様々なソースが表示され、このソースを使用してアカウントを作成できます。
 
-「 **[!UICONTROL Databases]** 」カテゴリで、「 **[!UICONTROL MySQL]**」を選択します。 このコネクタを初めて使用する場合は、「 **[!UICONTROL 設定]**」を選択します。 それ以外の場合は、 **[!UICONTROL 追加]** データ [!DNL MySQL] を選択して新しいコネクタを作成します。
+**[!UICONTROL Databases]**&#x200B;カテゴリの下で、**[!UICONTROL MySQL]**&#x200B;を選択します。 このコネクタを初めて使用する場合は、**[!UICONTROL 設定]**&#x200B;を選択します。 それ以外の場合は、**[!UICONTROL 追加data]**&#x200B;を選択して新しい[!DNL MySQL]コネクタを作成します。
 
 ![](../../../../images/tutorials/create/my-sql/catalog.png)
 
-「MySQL **[!UICONTROL に]** 接続」ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+**[!UICONTROL MySQLに接続]**&#x200B;ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
-新しい資格情報を使用する場合は、「 **[!UICONTROL 新規アカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明および [!DNL MySQL] 資格情報を入力します。 終了したら、 **[!UICONTROL [接続]** ]を選択し、新しい接続が確立されるまでの時間を許可します。
+新しい資格情報を使用する場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、名前、オプションの説明、[!DNL MySQL]資格情報を入力します。 終了したら、[**[!UICONTROL 接続]**]を選択し、新しい接続が確立されるまでの時間を許可します。
 
 ![](../../../../images/tutorials/create/my-sql/new.png)
 
 ### 既存のアカウント
 
-既存のアカウントに接続するには、接続する [!DNL MySQL] アカウントを選択し、「 **[!UICONTROL 次へ]** 」を選択して次に進みます。
+既存のアカウントに接続するには、接続する[!DNL MySQL]アカウントを選択し、**[!UICONTROL 次へ]**&#x200B;を選択して次に進みます。
 
 ![](../../../../images/tutorials/create/my-sql/existing.png)
 
 ## 次の手順
 
-このチュートリアルに従って、MySQLアカウントへの接続を確立しました。 次のチュートリアルに進み、データを取り込むデータフローを [設定できます [!DNL Platform]](../../dataflow/databases.md)。
+このチュートリアルに従って、MySQLアカウントへの接続を確立しました。 次のチュートリアルに進み、[データを [!DNL Platform]](../../dataflow/databases.md)に取り込むようにデータフローを設定できます。
