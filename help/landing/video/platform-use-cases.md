@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platformの使用例
-description: このビデオでは、Adobe Experience Platform&アンプ；mdash；リアルタイム顧客データプラットフォーム、顧客の遍歴、配信とチャネル間のエクスペリエンス、顧客エクスペリエンスの応用開発の4つの主要な使用例を概要を説明します。
+description: このビデオでは、Adobe Experience Platform&アンプ；mdash；リアルタイム顧客データプラットフォーム、顧客ジャーニーインテリジェンス、配信とチャネル間のエクスペリエンスの4つの主な使用例の概要を説明します。
 feature: platform
 topics: null
 kt: 4337
@@ -22,7 +22,7 @@ ht-degree: 0%
 このビデオでは、Experience Platformの主な使用例の4つの概要を説明します。
 
 * リアルタイム顧客データプラットフォーム
-* 顧客の遍歴情報
+* 顧客ジャーニー情報
 * 配信とチャネル間の経験
 * 顧客体験アプリケーションの開発
 
