@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: Experience Platform；ホーム；人気のあるトピック；名前空間リスト;リスト名前空間
 solution: Experience Platform
 title: 名前空間のリスト
 topic: API guide
@@ -7,8 +7,8 @@ description: 使用可能なすべての名前空間をリストします。
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 59%
+source-wordcount: '81'
+ht-degree: 53%
 
 ---
 
@@ -34,7 +34,7 @@ curl -X GET \
 
 **応答**
 
-応答には、各オブジェクトが使用可能な名前空間を表すオブジェクトの配列が含まれます。Namespaces with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL false]&quot; are standard namespaces, while those with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL true]&quot; are namespaces that your organization has created.
+応答には、各オブジェクトが使用可能な名前空間を表すオブジェクトの配列が含まれます。「[!UICONTROL カスタム]」の値が「[!UICONTROL false]」の名前空間は標準名前空間ですが、「[!UICONTROL カスタム]」の値が「[!UICONTROL true]」の名前空間は組織が作成したです。
 
 >[!NOTE]
 >
