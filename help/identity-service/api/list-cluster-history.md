@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;identities;cluster history
+keywords: Experience Platform；ホーム；人気のあるトピック；ID；クラスタの履歴
 solution: Experience Platform
 title: ID のクラスター履歴の取得
 topic: API guide
@@ -7,8 +7,8 @@ description: ID を使用して、様々なデバイスグラフの実行中に�
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 96%
+source-wordcount: '337'
+ht-degree: 94%
 
 ---
 
