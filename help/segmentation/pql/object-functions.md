@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;object functions;object;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；オブジェクト関数；
 solution: Experience Platform
 title: オブジェクト関数
 topic: developer guide
@@ -7,15 +7,15 @@ description: プロファイルクエリ言語（PQL）は、オブジェクト�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 82%
+source-wordcount: '137'
+ht-degree: 72%
 
 ---
 
 
 # オブジェクト関数
 
-[!DNL Profile Query Language] (PQL)オファーは、オブジェクトとのやり取りを簡単にするために機能します。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL)オファーは、オブジェクトとのやり取りを簡単にするために機能します。他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## Isnull
 
