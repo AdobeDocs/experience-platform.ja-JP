@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
+keywords: Experience Platform；ホーム；人気の高いトピック；Audience Managerマッピング；オーディエンスマネージャマッピング
 solution: Experience Platform
 title: Audience Manager のマッピングフィールド
 topic: overview
@@ -7,8 +7,8 @@ description: 次の表には、Adobe Audience Manager データのフィール�
 translation-type: tm+mt
 source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 97%
+source-wordcount: '162'
+ht-degree: 90%
 
 ---
 
