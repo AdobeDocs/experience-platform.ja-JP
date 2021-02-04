@@ -24,9 +24,9 @@ Adobe Experience Platform の既存の機能のアップデート：
 * [[!DNL Sources]](#sources)
 * [[!DNL Destinations]](#destinations)
 
-## [!DNL Experience Data Model] (XDM)システム {#xdm}
+## [!DNL Experience Data Model] (XDM)システム  {#xdm}
 
-Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
+標準化と相互運用性は、[!DNL Experience Platform]の背後にある重要な概念です。 [!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 
 XDM はパブリックに文書化された仕様であり、デジタルエクスペリエンスのパワーを向上させるために設計されています。Adobe Experience Platform 上のサービスと通信するすべてのアプリケーションに共通の構造と定義を提供します。XDM 標準規格に準拠することで、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
 
@@ -34,38 +34,38 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 | 機能 | 説明 |
 |--- | ---|
-| 同じ階層のフィールドに対するフィールドタイプの制限 | XDM フィールドを特定のタイプとして定義した後、名前と階層が同じ他のフィールドに対して、それらのフィールドが使用されているクラスや Mixin に関係なく、同じフィールドタイプを使用する必要があります。For example, if a mixin for the XDM [!DNL Profile] class contains a `profile.age` field of type &quot;integer&quot;, a similar mixin for XDM [!DNL ExperienceEvent] cannot have a `profile.age` field of type &quot;string&quot;. 別のフィールドタイプを利用するには、そのフィールドが、以前に定義したフィールド（例えば、`profile.person.age`）とは異なる階層のフィールドである必要があります。この機能は、和集合でスキーマを統合する際の競合を防ぐためのものです。この制限は既存のスキーマにさかのぼって影響を与えませんが、フィールドタイプの競合に関してスキーマを確認し、必要に応じてスキーマを編集することを強くお勧めします。 |
+| 同じ階層のフィールドに対するフィールドタイプの制限 | XDM フィールドを特定のタイプとして定義した後、名前と階層が同じ他のフィールドに対して、それらのフィールドが使用されているクラスや Mixin に関係なく、同じフィールドタイプを使用する必要があります。例えば、XDM [!DNL Profile]クラスのミックスインに&quot;integer&quot;型の`profile.age`フィールドが含まれている場合、XDM [!DNL ExperienceEvent]の同様のミックスインには&quot;string&quot;型の`profile.age`フィールドを含めることはできません。 別のフィールドタイプを利用するには、そのフィールドが、以前に定義したフィールド（例えば、`profile.person.age`）とは異なる階層のフィールドである必要があります。この機能は、和集合でスキーマを統合する際の競合を防ぐためのものです。この制限は既存のスキーマにさかのぼって影響を与えませんが、フィールドタイプの競合に関してスキーマを確認し、必要に応じてスキーマを編集することを強くお勧めします。 |
 | 大文字と小文字を区別するフィールドの検証 | 大文字と小文字の区別なく、同じレベルのカスタムフィールドに同じ名前を付けることはできません。例えば、「Email」という名前のカスタムフィールドを追加する場合、同じレベルで「email」という名前の別のカスタムフィールドを追加することはできません。 |
 
 **既知の問題**
 
 * なし
 
-To learn more about working with XDM using the [!DNL Schema Registry] API and [!DNL Schema Editor] user interface, please read the [XDM System documentation](../../xdm/home.md).
+[!DNL Schema Registry] APIと[!DNL Schema Editor]ユーザーインターフェイスを使用したXDMの使い方の詳細については、[XDMシステムドキュメント](../../xdm/home.md)を読んでください。
 
 ## [!DNL Privacy Service] {#privacy}
 
-新しい法規制や組織の規制により、ユーザーはリクエストによってデータストアから個人データにアクセスしたり削除したりする権利を与えられています。Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+新しい法規制や組織の規制により、ユーザーはリクエストによってデータストアから個人データにアクセスしたり削除したりする権利を与えられています。Adobe Experience Platform[!DNL Privacy Service]は、RESTful APIとユーザーインターフェイスを提供し、お客様からのこれらのデータリクエストを管理するのに役立ちます。 [!DNL Privacy Service]を使うと、個人顧客データや個人顧客データにアクセスして削除する要求をAdobe Experience Cloudのアプリケーションから送信でき、法的および組織のプライバシー規制への自動コンプライアンスが容易になります。
 
 **新機能**
 
 | 機能 | 説明 |
 |--- | ---|
-| [!DNL Privacy Service] 商標変更 | The formerly named &quot;GDPR Service&quot; has been rebranded to [!DNL Privacy Service] as the service has grown to support other regulations in addition to GDPR. |
-| 新しい API エンドポイント | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`. |
-| 新しい必須の `regulation` プロパティ | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. 指定できる値は、`gdpr` と `ccpa` です。 |
-| サポート対象 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] 製品の値としてを使用し、Adobe [!DNL Primetime Authentication]からアクセス/削除の要求 `primetimeAuthentication` を受け入れるようになりました。 |
+| [!DNL Privacy Service] 商標変更 | GDPRに加え、他の規制をサポートするようになったため、以前の名称は[!DNL Privacy Service]に変更された。 |
+| 新しい API エンドポイント | [!DNL Privacy Service] APIの基本パスが`/data/privacy/gdpr`から`/data/core/privacy/jobs`に更新されました。 |
+| 新しい必須の `regulation` プロパティ | [!DNL Privacy Service] APIで新しいジョブを作成する場合、`regulation`プロパティを要求ペイロードに指定して、ジョブを追跡する規則を示す必要があります。 指定できる値は、`gdpr` と `ccpa` です。 |
+| サポート対象 [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] 製品の値としてを使用し、Adobe [!DNL Primetime Authentication]からアクセス/削除 `primetimeAuthentication` の要求を受け入れるようになりました。 |
 | Privacy Service UI の強化 | GDPR および CCPA 規制に関する個別のジョブトラッキングページ。新しい**Regulation Type **ドロップダウンを使用して、GDPRとCCPAのトラッキングデータを切り替えます。 |
 
 **既知の問題**
 
 * なし
 
-For more information about [!DNL Privacy Service], please start by reading the [Privacy Service overview](../../privacy-service/home.md).
+[!DNL Privacy Service]の詳細については、[Privacy Serviceの概要](../../privacy-service/home.md)を読んで開始してください。
 
 ## ソース {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
+Adobe Experience Platformは外部ソースからデータを取り込みながら、[!DNL Platform]サービスを使ってデータの構造、ラベル付け、拡張を行うことができます。 アドビアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM など、様々なソースからデータを取得することができます。
 
 [!DNL Experience Platform] は、様々なデータプロバイダーのソース接続を簡単に設定できるようにする RESTful API とインタラクティブな UI を提供します。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
@@ -92,7 +92,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 ## 宛先 {#destinations}
 
-In [Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+[リアルタイムCDP](../../rtcdp/overview.md)では、宛先は、それらのパートナーに対してシームレスにデータをアクティブ化する宛先プラットフォームとの統合が事前に構築されています。
 
 **新機能**
 
