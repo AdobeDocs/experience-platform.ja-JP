@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
+keywords: Experience Platform；ホーム；人気のあるトピック；etl;ETL;etl変換；ETL変換
 solution: Experience Platform
 title: ETL 変換の例
 topic: overview
@@ -7,8 +7,8 @@ description: この記事では、抽出、変換、読み込み（ETL）の開�
 translation-type: tm+mt
 source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 90%
+source-wordcount: '493'
+ht-degree: 88%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 90%
 
 ### サンプルファイル
 
-Sample CSV and JSON files are available from the public ETL Reference [!DNL GitHub] repo maintained by Adobe:
+サンプルのCSVファイルとJSONファイルは、パブリックETLリファレンス[!DNL GitHub]のレポート(Adobeによって管理)から入手できます。
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -178,7 +178,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 ### データフレームの例
 
-The structure of the following example dataframe has been mapped to a schema that implements the [!DNL XDM Individual Profile] class, and contains the most common fields associated with schemas of that type.
+次の例のデータフレームの構造は、[!DNL XDM Individual Profile]クラスを実装するスキーマにマップされており、その型のスキーマに関連付けられた最も一般的なフィールドが含まれています。
 
 ```python
 [
