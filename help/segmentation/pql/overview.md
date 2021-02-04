@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;PQL;pql;profile query language
+keywords: Experience Platform；ホーム；人気の高いトピック；PQL;pql;プロファイルクエリ言語
 solution: Experience Platform
 title: プロファイルクエリ言語（PQL）の概要
 topic: developer guide
@@ -7,15 +7,15 @@ description: このガイドでは、PQL の全般的な概要と、形式につ
 translation-type: tm+mt
 source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 91%
+source-wordcount: '715'
+ht-degree: 90%
 
 ---
 
 
 # [!DNL Profile Query Language] (PQL)の概要
 
-[!DNL Profile Query Language] (PQL)は [!DNL Experience Data Model] (XDM)準拠のクエリ言語で、 [!DNL Real-time Customer Profile] データに対するセグメントクエリの定義と実行をサポートするように設計されています。
+[!DNL Profile Query Language] (PQL)は [!DNL Experience Data Model] (XDM)準拠のクエリ言語で、 [!DNL Real-time Customer Profile] データのセグメントクエリの定義と実行をサポートするように設計されています。
 
 このガイドでは、PQL の全般的な概要と、形式についてのガイドライン、PQL 式の例を示します。
 
@@ -81,7 +81,7 @@ PQL では次のリテラル型をサポートしています。
 | 配列、リスト、セット | 配列、リスト、セットの操作に使用されます。これらの関数について詳しくは、[配列関数、リスト関数、セット関数のドキュメント](./array-functions.md)を参照してください。 |
 | マップ | マップの操作に使用します。これらの関数について詳しくは、[マップ関数のドキュメント](./map-functions.md)を参照してください。 |
 | 文字列 | 文字列の操作に使用します。これらの関数について詳しくは、[文字列関数のドキュメント](./string-functions.md)を参照してください。 |
-| オブジェクト | オブジェクトとの対話に使用します。 More information about these functions can be found in the [object functions document](./object-functions.md). |
+| オブジェクト | オブジェクトとの対話に使用します。 これらの関数の詳細については、[オブジェクト関数ドキュメント](./object-functions.md)を参照してください。 |
 | 算術演算 | PQL 要素に対して基本的な算術演算を実行するために使用します。これらの関数について詳しくは、[算術演算関数のドキュメント](./arithmetic-functions.md)を参照してください |
 | 集計 | 配列の結果を 1 つの結果に組み合わせるために使用します。これらの関数について詳しくは、[集計関数のドキュメント](./aggregation-functions.md)を参照してください。 |
 | 日時 | 日付、時刻、日時の各オブジェクトと組み合わせて使用します。これらの関数について詳しくは、[日付／時刻関数のドキュメント](./datetime-functions.md)を参照してください。 |
@@ -91,4 +91,4 @@ PQL では次のリテラル型をサポートしています。
 
 ## 次の手順
 
-Now that you&#39;ve learned how to use [!DNL Profile Query Language], you can use PQL when creating and modifying segments. セグメント化について詳しくは、[セグメント化の概要](../home.md)を参照してください。
+[!DNL Profile Query Language]の使い方を学んだので、セグメントの作成と変更時にPQLを使用できます。 セグメント化について詳しくは、[セグメント化の概要](../home.md)を参照してください。
