@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメントビルダー；セグメントビルダー
 solution: Experience Platform
 title: Segmentation Service Segment Builderの変更ガイド
 topic: ui guide
@@ -7,7 +7,7 @@ description: 'セグメントビルダーのワークスペースには、プロ
 translation-type: tm+mt
 source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 13%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platformの2020年10月のリリースでは、Adobe Experience
 
 ![](../images/ui/segment-refactoring/former-time-constraint.png)
 
-このセグメントには、ルールレベルに2つの制約があります。1つは「[!UICONTROL 今日]」、もう1つは「[!UICONTROL 昨日]」です。
+このセグメントには、ルールレベルに2つの制約があります。1つは「[!UICONTROL 今日]」に、もう1つは「[!UICONTROL 昨日]」に使用します。
 
 前のセグメントは、次のセグメントと同じです。イベントレベルの時間制約はどちらも、AND演算子を使用して結び付けられています。 最初のイベントレベルの時間制約は、名前が「Training」で今日発生しているクリックイベントを参照し、2番目のイベントレベルの時間制約は、名前が「Pets」で昨日発生したクリックイベントを参照します。
 
