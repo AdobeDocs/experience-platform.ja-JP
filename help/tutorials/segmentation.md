@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: セグメント化のチュートリアル
 topic: tutorial
@@ -8,19 +8,19 @@ description: Adobe Experience Platform セグメント化サービスは、セ�
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 56%
+source-wordcount: '589'
+ht-degree: 55%
 
 ---
 
 
 # セグメント化のチュートリアル
 
-Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. セグメント化の詳細について確認するには、最初に「[Segmentation Service overview](../segmentation/home.md)」をお読みください。
+Adobe Experience Platform[!DNL Segmentation Service]は、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスとRESTful APIを提供します。 これらのセグメントは[!DNL Platform]上で一元的に構成および管理され、どのAdobeソリューションでも容易にアクセスできます。 セグメント化の詳細について確認するには、最初に「[Segmentation Service overview](../segmentation/home.md)」をお読みください。
 
 ## セグメント定義の作成
 
-セグメント定義は、ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用されるルールセットです。概念化が完了したら、セグメント定義で説明されているルールを使用して、セグメントに適したオーディエンスメンバーを決定します。The developing, testing, previewing, and saving of a segment definition can be done using the [!DNL Platform] user interface or APIs. セグメント定義を作成するには、[セグメント API の作成に関するチュートリアル](../segmentation/tutorials/create-a-segment.md)、または[セグメントビルダー UI のユーザガイド](../segmentation/ui/overview.md)に従います。
+セグメント定義は、ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用されるルールセットです。概念化が完了したら、セグメント定義で説明されているルールを使用して、セグメントに適したオーディエンスメンバーを決定します。セグメント定義の開発、テスト、プレビュー、保存は、[!DNL Platform]ユーザーインターフェイスまたはAPIを使用して行うことができます。 セグメント定義を作成するには、[セグメント API の作成に関するチュートリアル](../segmentation/tutorials/create-a-segment.md)、または[セグメントビルダー UI のユーザガイド](../segmentation/ui/overview.md)に従います。
 
 ## セグメントの評価とアクセス結果
 
@@ -28,20 +28,20 @@ Adobe Experience Platform [!DNL Segmentation Service] provides a user interface 
 
 ## セグメントデータの書き出し
 
-Exporting segments containing [!DNL Profile] data requires first [creating a dataset into which the data will be exported](../segmentation/tutorials/create-dataset-export-segment.md), then initiating a new export job. 書き出しジョブの生成手順は、セグメントの [評価のチュートリアルで確認できます](../segmentation/tutorials/evaluate-a-segment.md)。
+[!DNL Profile]データを含むセグメントの書き出しを行うには、まず[データの書き出し先となるデータセット](../segmentation/tutorials/create-dataset-export-segment.md)を作成し、新しい書き出しジョブを開始する必要があります。 エクスポートジョブの生成手順は、[セグメント](../segmentation/tutorials/evaluate-a-segment.md)の評価のチュートリアルで確認できます。
 
 ## 結合ポリシーの設定
 
-Adobe Experience Platform では、複数のソースのデータを統合して、個々の顧客の全体像を把握できます。When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。To work with merge policies in the [!DNL Platform] UI, visit the [merge policies user guide](../profile/ui/merge-policies.md). To work with merge policies using the [!DNL Real-time Customer Profile] API, see the [merge policies developer guide](../profile/api/merge-policies.md).
+Adobe Experience Platform では、複数のソースのデータを統合して、個々の顧客の全体像を把握できます。このデータを統合する際、マージポリシーは、[!DNL Platform]がデータの優先順位付け方法と、どのデータを組み合わせて統合表示を作成するかを決定するために使用するルールです。 RESTful API またはユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。[!DNL Platform] UIの結合ポリシーを使用するには、[merge policiesユーザーガイド](../profile/ui/merge-policies.md)を参照してください。 [!DNL Real-time Customer Profile] APIを使用して結合ポリシーを操作するには、[merge policies開発者ガイド](../profile/api/merge-policies.md)を参照してください。
 
 ## セグメントでデータ使用のコンプライアンスを徹底する
 
-Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. この結合ポリシーには、セグメントに含めるデータセットに関する情報があります。さらに、データセットには適用可能なデータ使用ラベルが含まれています。オーディエンスセグメントでデータ使用のコンプライアンスを徹底するための具体的な手順については、[セグメントでデータ使用のコンプライアンスを徹底するためのチュートリアル](../segmentation/tutorials/governance.md)を参照してください。
+[!DNL Real-time Customer Profile]で使用できるセグメントは、セグメント定義内にマージポリシーIDを含みます。 この結合ポリシーには、セグメントに含めるデータセットに関する情報があります。さらに、データセットには適用可能なデータ使用ラベルが含まれています。オーディエンスセグメントでデータ使用のコンプライアンスを徹底するための具体的な手順については、[セグメントでデータ使用のコンプライアンスを徹底するためのチュートリアル](../segmentation/tutorials/governance.md)を参照してください。
 
 ## ストリーミングセグメント化
 
-ストリーミングセグメント化機能は、イベントが特定のセグメントグループに入った直後に顧客を即座に評価する機能です。 詳しくは、[ストリーミングによるセグメント化の概 要](../segmentation/api/streaming-segmentation.md)を参照してください。
+ストリーミングセグメント化機能は、イベントが特定のセグメントグループに入った直後に顧客を即座に評価する機能です。 この機能を使用すると、ほとんどのセグメントルールを、データがAdobe Experience Platformに渡される際に評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメント化ジョブを実行せずに最新の状態に維持されます。 詳しくは、[ストリーミングによるセグメント化の概 要](../segmentation/api/streaming-segmentation.md)を参照してください。
 
 ## マルチエンティティのセグメント化
 
-Multi-entity segmentation is the ability to extend [!DNL Profile] data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the [!DNL Profile] schema. 詳しくは、[マルチエンティティのセグメント化に関するドキュメント](../segmentation/multi-entity-segmentation.md)を参照してください。
+マルチエンティティセグメント化機能は、プロファイル、店舗、または他の非製品クラスに基づいて、追加のデータを使用して[!DNL Profile]データを拡張する機能です。 接続すると、追加のクラスのデータは、[!DNL Profile]スキーマにネイティブであるかのように使用できるようになります。 詳しくは、[マルチエンティティのセグメント化に関するドキュメント](../segmentation/multi-entity-segmentation.md)を参照してください。
