@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；エンジン；先生の機械学習api
 solution: Experience Platform
 title: エンジン
 topic: Developer guide
@@ -7,8 +7,8 @@ description: エンジンは、Data Science Workspace　での機械学習モデ
 translation-type: tm+mt
 source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
-source-wordcount: '1147'
-ht-degree: 71%
+source-wordcount: '1162'
+ht-degree: 70%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 71%
 
 >[!TIP]
 >
->Docker URLがない場合は、 [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorialを参照し、DockerホストURLの作成に関する手順を説明します。
+>Docker URLがない場合は、[Package source files into a recipe](../models-recipes/package-source-files-recipe.md)チュートリアルを参照し、DockerホストURLの作成手順を確認してください。
 
 パッケージ化されたレシピファイル（Docker ホストの URL、ユーザー名、パスワードなど）をアップロードするには、Docker レジストリ資格情報が必要です。この情報は、次の GET リクエストを実行することで調べることができます。
 
@@ -105,7 +105,7 @@ curl -X POST \
 
 **PySpark/Scalaの要求**
 
-PySparkレシピをリクエストする際、と `executionType` は&quot;PySpark&quot; `type` です。 Scalaレシピのリクエストを行う場合、 `executionType` とは「Spark」 `type` です。 次のScalaレシピの例ではSparkを使用しています。
+PySparkレシピをリクエストする際、`executionType`と`type`は&quot;PySpark&quot;です。 Scalaレシピのリクエストを行う場合、`executionType`と`type`は&quot;Spark&quot;です。 次のScalaレシピの例ではSparkを使用しています。
 
 ```shell
 curl -X POST \
@@ -138,7 +138,7 @@ curl -X POST \
 | `name` | エンジンの名前。このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
 | `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
 | `type` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
-| `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する場合に必要なフィールドです。 このフィールドはに設定する必要があり `databricks-spark`ます。 |
+| `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する場合に必要なフィールドです。 このフィールドは`databricks-spark`に設定する必要があります。 |
 | `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
 | `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
 
@@ -171,7 +171,7 @@ curl -X POST \
 }
 ```
 
-## ドックURLを使用してフィーチャパイプラインエンジンを作成する {#feature-pipeline-docker}
+## Docker URLを使用してフィーチャパイプラインエンジンを作成する{#feature-pipeline-docker}
 
 フィーチャパイプラインエンジンは、メタデータとDockerPOSTを参照するDocker URLを提供しながらイメージリクエストを実行することで作成できます。
 
@@ -215,18 +215,18 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `type` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 値はSparkまたはPySparkに設定できます。 |
-| `algorithm` | 使用するアルゴリズムで、この値を `fp` （フィーチャパイプライン）に設定します。 |
+| `algorithm` | 使用中のアルゴリズムで、この値を`fp` （フィーチャパイプライン）に設定します。 |
 | `name` | フィーチャーパイプラインエンジンの名前。 このエンジンに対応するレシピは、UI に表示されるこの値をレシピ名として継承します。 |
 | `description` | エンジンのオプションの説明。このエンジンに対応するレシピは、UI に表示されるこの値をレシピの説明として継承します。このプロパティが必要です。説明を指定しない場合は、値を空の文字列に設定します。 |
-| `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する場合に必要なフィールドです。 このフィールドはに設定する必要があり `databricks-spark`ます。 |
+| `mlLibrary` | PySparkおよびScalaレシピ用のエンジンを作成する場合に必要なフィールドです。 このフィールドは`databricks-spark`に設定する必要があります。 |
 | `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
 | `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
-| `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値はに設定する必要があり `docker`ます。 |
-| `artifacts.default.defaultMLInstanceConfigs` | 設定ファイルの `pipeline.json` パラメーター。 |
+| `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値は`docker`に設定する必要があります。 |
+| `artifacts.default.defaultMLInstanceConfigs` | `pipeline.json`構成ファイルのパラメーター。 |
 
 **応答** 
 
-A successful response returns a payload containing the details of the newly created feature pipeline Engine including its unique identifier (`id`). 次に示すのは、PySpark機能のパイプラインエンジンの応答例です。
+成功した応答は、新たに作成されたフィーチャーパイプラインエンジンの詳細を含むペイロードを返します。この詳細には、一意の識別子(`id`)が含まれます。 次に示すのは、PySpark機能のパイプラインエンジンの応答例です。
 
 ```json
 {
