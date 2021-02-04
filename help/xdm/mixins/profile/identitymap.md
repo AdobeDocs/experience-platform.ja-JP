@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ;identityMap；アイデンティティマップ；スキーマ設計；マップ；和集合スキーマ;和集合
 solution: Experience Platform
 title: IdentityMapミックスイン
 topic: overview
@@ -7,24 +7,24 @@ description: このドキュメントでは、XDM Individualプロファイル�
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
 
-# [!UICONTROL IdentityMap] mixin
+#  IdentityMapmixin
 
 >[!NOTE]
 >
->いくつかのミックスインの名前が変更されました。 詳しくは、 [mixin名の更新に関するドキュメントを参照してください](../name-updates.md) 。
+>いくつかのミックスインの名前が変更されました。 詳しくは、[mixin name updates](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL IdentityMap] は、 [[!DNL XDM Individual Profile] クラスの標準ミックスインです](../../classes/individual-profile.md)。 ミックスインは単一のマップフィールドを提供します。このフィールドには、名前空間がキーを設定した一連のユーザIDが含まれます。
+ IdentityMapは、ク [[!DNL XDM Individual Profile] ラスの標準ミックスインです](../../classes/individual-profile.md)。ミックスインは単一のマップフィールドを提供します。このフィールドには、名前空間がキーを設定した一連のユーザIDが含まれます。
 
 >[!WARNING]
 >
->本発明の `IdentityMap` フィールドは、アイデンティティデータが取り込まれると、システムによって自動的に更新される。 このフィールドを [リアルタイム顧客プロファイルに適切に活用するため](../../../profile/home.md)、データ操作で手動でフィールドの内容を更新しないでください。
+>`IdentityMap`フィールドは、IDデータが取り込まれると自動的にシステムによって更新されます。 このフィールドを[リアルタイム顧客プロファイル](../../../profile/home.md)に適切に利用するため、データ操作でフィールドの内容を手動で更新しないでください。
 
 <img src="../../images/mixins/identitymap.png" width="600" /><br />
 
-使用事例について詳しくは、スキーマ構成の [基本のIDマップに関する節を参照してください](../../schema/composition.md#identityMap) 。
+使用事例の詳細については、[スキーマ構成の基本](../../schema/composition.md#identityMap)のIDマップに関する節を参照してください。
