@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；ビーコン；インタラクションの詳細；データ型；データ型；
 solution: Experience Platform
 title: ビーコンのデータタイプ
 topic: overview
@@ -7,23 +7,23 @@ description: このドキュメントでは、XDM Individualプロファイル�
 translation-type: tm+mt
 source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '248'
 ht-degree: 6%
 
 ---
 
 
-# [!UICONTROL Beacon] data type
+#  Beacondata型
 
-[!UICONTROL Beacon] は標準のXDMデータ型で、モバイルデバイスが範囲内にあるときにID情報をモバイルアプリケーションに通信するワイヤレスデバイスを表します。
+ ビーコンは、標準的なXDMデータ型で、モバイルデバイスが範囲内にあるときにID情報をモバイルアプリケーションに通信するワイヤレスデバイスを表します。
 
 <img src="../images/data-types/beacon.png" width="450" /><br />
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `beaconMajor` | Double | メジャー値は、1 ～ 65,535の間のグループと符号なし整数値を識別し、区別します。 |
-| `beaconMinor` | Double | マイナー値は、1 ～ 65,535の間の個々の整数値と符号なし整数値を識別し、区別します。 |
-| `proximity` | 文字列 | ビーコンからの推定距離。使用できる値と定義については、 [付録](#proximity) を参照してください。 |
+| `beaconMinor` | 重複 | マイナー値は、1 ～ 65,535の間の個々の整数値と符号なし整数値を識別し、区別します。 |
+| `proximity` | 文字列 | ビーコンからの推定距離。使用できる値と定義については、[付録](#proximity)を参照してください。 |
 | `proximityUUID` | 文字列 | 近接性UUID(Universally Unique Identifier)は、ネットワーク内のビーコンと、管理外のネットワーク内の他のすべてのビーコンを区別するために使用される特別な識別子です。 近接UUIDはビーコンに設定され、組織のビーコンを識別するために範囲内のモバイルデバイスに送信されます。 |
 
 データ型の詳細については、パブリックXDMリポジトリを参照してください。
@@ -33,11 +33,11 @@ ht-degree: 6%
 
 ## 付録
 
-次の節では、 [!UICONTROL Beacon] データタイプに関する追加情報について説明します。
+次の節では、[!UICONTROL ビーコン]データタイプに関する追加情報を示します。
 
-## 近接性に指定できる値 {#proximity}
+## 近接性に指定できる値{#proximity}
 
-次の表に、使用できる値と関連する意味を示し `proximity` ます。
+次の表に、`proximity`に使用できる値とその関連する意味を示します。
 
 | 値 | 説明 |
 | --- | --- |
