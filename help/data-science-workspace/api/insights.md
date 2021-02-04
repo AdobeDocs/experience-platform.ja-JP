@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；インサイト；先生機械学習api
 solution: Experience Platform
 title: Insights
 topic: Developer guide
@@ -7,13 +7,13 @@ description: インサイトには、関連する評価指標を表示するこ�
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 100%
+source-wordcount: '512'
+ht-degree: 97%
 
 ---
 
 
-# Insights
+# インサイト
 
 インサイトには、関連する評価指標を表示することにより、データサイエンティストが最適な ML モデルを評価および選択できるようにするための指標が含まれています。
 
