@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;marketing actions api;API-based enforcement;data governance
+keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；マーケティングアクションapi;APIベースの適用；データガバナンス
 solution: Experience Platform
 title: マーケティングアクション
 topic: developer guide
@@ -7,7 +7,7 @@ description: マーケティングアクションは、Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '732'
 ht-degree: 11%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 11%
 
 # マーケティングアクションエンドポイント
 
-A marketing action, in the context of the Adobe Experience Platform [!DNL Data Governance], is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
+Adobe Experience Platform[!DNL Data Governance]に関連するマーケティングアクションは、[!DNL Experience Platform]データ消費者が行うアクションで、データ使用ポリシーの違反をチェックする必要があります。
 
-ポリシーサービスAPIのエンドポイントを使用して、組織のマーケティングアクションを管理でき `/marketingActions` ます。
+Policy Service APIの`/marketingActions`エンドポイントを使用して、組織のマーケティングアクションを管理できます。
 
 ## はじめに
 
-The API endpoints used in this guide are part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). 先に進む前に、 [はじめに](./getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)の一部です。 先に進む前に、[はじめにガイド](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
-## マーケティングアクションのリストの取得 {#list}
+## マーケティングアクションのリストを取得{#list}
 
-コアマーケティングアクションのリストを取得するには、またはに対してそれぞれGETリクエストを作成し `/marketingActions/core` ま `/marketingActions/custom`す。
+コアマーケティングアクションまたはカスタムマーケティングアクションのリストは、それぞれ`/marketingActions/core`または`/marketingActions/custom`にGETリクエストを行うことで取得できます。
 
 **API 形式**
 
@@ -49,7 +49,7 @@ curl -X GET \
 
 **応答** 
 
-成功した応答は、取得した各マーケティングアクションの詳細（およびを含む）を返 `name` し `href`ます。 この `href` 値は、データ使用ポリシーを [作成する際のマーケティングアクションを識別するために使用されます](policies.md#create-policy)。
+成功した応答は、取得した各マーケティングアクションの詳細（`name`と`href`を含む）を返します。 `href`値は、[データ使用ポリシー](policies.md#create-policy)を作成する際のマーケティングアクションの識別に使用されます。
 
 ```json
 {
@@ -103,12 +103,12 @@ curl -X GET \
 | --- | --- |
 | `_page.count` | 返されたマーケティングアクションの合計数です。 |
 | `children` | 取得したマーケティングアクションの詳細を含むオブジェクトの配列。 |
-| `name` | マーケティングアクションの名前。特定のマーケティングアクションを [検索する際に一意の識別子として機能し](#lookup)ます。 |
-| `_links.self.href` | マーケティングアクションのURI参照。データ使用ポリシーの `marketingActionsRefs` 作成時に配列を完成させるのに使用できます [](policies.md#create-policy)。 |
+| `name` | マーケティングアクションの名前。[特定のマーケティングアクション](#lookup)を検索する際に一意の識別子として機能します。 |
+| `_links.self.href` | マーケティングアクションのURI参照。[データ使用ポリシー](policies.md#create-policy)の作成時に`marketingActionsRefs`配列を完了するのに使用できます。 |
 
 ## 特定のマーケティングアクションの検索 {#lookup}
 
-特定のマーケティングアクションの詳細を調べるには、GETリクエストのパスにマーケティングアクションの `name` プロパティを含めます。
+GETリクエストのパスにマーケティングアクションの`name`プロパティを含めて、特定のマーケティングアクションの詳細を調べます。
 
 **API 形式**
 
@@ -119,11 +119,11 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | The `name` property of the marketing action you want to look up. |
+| `{MARKETING_ACTION_NAME}` | 検索するマーケティングアクションの`name`プロパティ。 |
 
 **リクエスト**
 
-次のリクエストは、という名前のカスタムマーケティングアクションを取得し `combineData`ます。
+次のリクエストは、`combineData`という名前のカスタムマーケティングアクションを取得します。
 
 ```shell
 curl -X GET \
@@ -136,7 +136,7 @@ curl -X GET \
 
 **応答** 
 
-The response object contains the details for the marketing action, including the path (`_links.self.href`) needed to reference the marketing action when [defining a data usage policy](policies.md#create-policy) (`marketingActionsRefs`).
+responseオブジェクトには、マーケティングアクションの詳細が含まれます。この中には、[データ使用ポリシー](policies.md#create-policy) (`marketingActionsRefs`)を定義する際に、マーケティングアクションを参照するために必要なパス(`_links.self.href`)が含まれます。
 
 ```JSON
 {
@@ -157,7 +157,7 @@ The response object contains the details for the marketing action, including the
 }
 ```
 
-## Create or update a custom marketing action {#create-update}
+## カスタムマーケティングアクション{#create-update}の作成または更新
 
 PUTリクエストのパスにマーケティングアクションの既存の名前または目的の名前を含めることで、新しいカスタムマーケティングアクションを作成したり、既存のマーケティングアクションを更新したりできます。
 
@@ -173,7 +173,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **リクエスト**
 
-次のリクエストでは、同じ名前のマーケティングアクションがシステムにまだ存在しない場合 `crossSiteTargeting`、という名前の新しいマーケティングアクションが作成されます。 マーケティングアクションが存在する場合、代わりに、この呼び出しによって、ペイロードで提供されたプロパティに基づいて、そのマーケティングアクションが更新されます。 `crossSiteTargeting`
+次のリクエストは、同じ名前のマーケティングアクションがシステムにまだ存在しない場合に、`crossSiteTargeting`という名前の新しいマーケティングアクションを作成します。 `crossSiteTargeting`マーケティングアクションが存在する場合、代わりに、この呼び出しによって、ペイロードで提供されたプロパティに基づいてそのマーケティングアクションが更新されます。
 
 ```shell
 curl -X PUT \
@@ -191,7 +191,7 @@ curl -X PUT \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | 作成または更新するマーケティングアクションの名前。 <br><br>**重要**:このプロパティはパス `{MARKETING_ACTION_NAME}` 内のものと一致する必要があります。一致しない場合は、HTTP 400(Bad Request)エラーが発生します。 つまり、マーケティングアクションが作成されると、その `name` プロパティを変更できません。 |
+| `name` | 作成または更新するマーケティングアクションの名前。 <br><br>**重要**:このプロパティはパス `{MARKETING_ACTION_NAME}` 内のものと一致する必要があります。一致しない場合は、HTTP 400(Bad Request)エラーが発生します。つまり、マーケティングアクションが作成されると、その`name`プロパティは変更できません。 |
 | `description` | マーケティングアクションの詳細なコンテキストを提供する説明です（オプション）。 |
 
 **応答** 
@@ -217,7 +217,7 @@ curl -X PUT \
 }
 ```
 
-## Delete a custom marketing action {#delete}
+## カスタムマーケティングアクションの削除{#delete}
 
 DELETEリクエストのパスに名前を含めると、カスタムマーケティングアクションを削除できます。
 
@@ -250,4 +250,4 @@ curl -X DELETE \
 
 正常な応答は、空白の応答本文を持つHTTP Status 200(OK)を返します。
 
-You can confirm the deletion by attempting to [look up the marketing action](#look-up). マーケティングアクションがシステムから削除された場合は、HTTP 404 （見つかりません）エラーが表示されます。
+[マーケティングアクション](#look-up)を検索して削除を確認できます。 マーケティングアクションがシステムから削除された場合は、HTTP 404 （見つかりません）エラーが表示されます。
