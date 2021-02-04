@@ -3,12 +3,12 @@ title: イベントデータの結合
 seo-title: Adobe Experience Platform Web SDK：イベントデータの結合
 description: Experience Platform Web SDK イベントデータの結合方法について説明します
 seo-description: Experience Platform Web SDK イベントデータの結合方法について説明します
-keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
+keywords: merge;イベントデータ；eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise;Merge Id Promise;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 53%
+source-wordcount: '475'
+ht-degree: 52%
 
 ---
 
@@ -59,7 +59,7 @@ alloy("sendEvent", {
 });
 ```
 
-By passing the same value for the `mergeId` option to both event commands in this example, the data in the second event command is augmented to data previously sent on the first event command. A record for each event command is created in the [!DNL Experience Data Platform], but during reporting the records are joined together using the event merge ID and appear as a single event.
+この例では、`mergeId`オプションに同じ値を両方のイベントコマンドに渡すことで、2番目のイベントコマンドのデータは、最初のイベントコマンドで以前に送信されたデータに増大します。 [!DNL Experience Data Platform]には各イベントコマンドのレコードが作成されますが、レポート中はイベント結合IDを使用してレコードが結合され、単一のイベントとして表示されます。
 
 特定のイベントに関するデータをサードパーティプロバイダーに送信する場合は、同じイベント結合 ID をそのデータに含めることもできます。後で、サードパーティのデータをAdobe Experience Platformに読み込む場合は、イベント結合IDを使用して、Webページ上で発生した個別のイベントの結果として収集されたすべてのデータが結合されます。
 
@@ -124,7 +124,7 @@ eventMergeIdPromise.then(function(results) {
 
 ## XDM 形式に関する注意事項
 
-イベントコマンド内では、イベントマージIDが、貴社に代わって正しい場所の `xdm` ペイロードに追加されます。  If desired, the event merge ID can be sent as part of the `xdm` option instead, like this:
+イベントコマンド内で、イベントマージIDは、お客様に代わって正しい場所の`xdm`ペイロードに追加されます。  必要に応じて、次のように、`xdm`オプションの一部としてイベントマージIDを送信できます。
 
 ```javascript
 alloy("sendEvent", {
@@ -142,4 +142,4 @@ alloy("sendEvent", {
 });
 ```
 
-イベント結合IDを `xdm` オブジェクトに直接追加する場合は、の代わりに名前が使用さ `eventMergeID` れていることに注意してくだ `mergeId`さい。
+イベント結合IDを`xdm`オブジェクトに直接追加する場合は、`mergeId`の代わりに`eventMergeID`という名前が使用されていることに注意してください。
