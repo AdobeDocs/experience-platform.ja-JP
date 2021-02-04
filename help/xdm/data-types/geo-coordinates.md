@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;coordinates;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；地理；座標；データ型；データ型；
 solution: Experience Platform
 title: 地域座標データタイプ
 topic: overview
@@ -7,22 +7,22 @@ description: このドキュメントでは、地理座標のXDMデータタイ�
 translation-type: tm+mt
 source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 17%
+source-wordcount: '131'
+ht-degree: 15%
 
 ---
 
 
-# [!UICONTROL 地域座標] データタイプ
+# [!UICONTROL 地域] コーディネータデータタイプ
 
-[!UICONTROL 地域座標] (Geo Coordinates)は、ある場所の地理的座標を記述する標準のXDMデータ型です。 このデータ型は、 [スキーマ.orgに記載されている公開仕様に基づいています](https://schema.org/GeoCoordinates)。
+[!UICONTROL 地域] 座標は、ある場所の地理的座標を示す標準のXDMデータ型です。このデータ型は、[スキーマ.org](https://schema.org/GeoCoordinates)に記載されている公開仕様に基づいています。
 
 <img src="../images/data-types/geo-coordinates.png" width="400" /><br />
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `_schema.description` | 文字列 | 座標が何を識別するかの説明。 |
-| `_schema.elevation` | Double | 定義した座標の特定の標高。 The value must conform to the [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/) datum and is measured in meters. |
-| `_schema.latitude` | Double | 地理的な点の符号付き垂直座標です。 |
-| `_schema.longitude` | Double | 地理的位置の符号付き水平座標です。 |
+| `_schema.elevation` | Double | 定義した座標の特定の標高。 この値は、[WGS84](http://gisgeography.com/wgs84-world-geodetic-system/)データムに準拠し、メートル単位で測定されます。 |
+| `_schema.latitude` | 重複 | 地理的な点の符号付き垂直座標です。 |
+| `_schema.longitude` | 重複 | 地理的位置の符号付き水平座標です。 |
 | `_id` | 文字列 | システムによって生成された、座標の一意のID。 |
