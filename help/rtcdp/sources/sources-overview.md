@@ -1,5 +1,5 @@
 ---
-keywords: rtcdp sources;sources rtcdp;real time customer data platform sources
+keywords: rtcdpソース；ソースrtcdp；リアルタイム顧客データプラットフォームソース
 title: ソースの概要
 seo-title: Adobe Experience Platform のソース
 description: このドキュメントでは、リアルタイム顧客データプラットフォームのソースの概要を説明します。
@@ -7,8 +7,8 @@ seo-description: このドキュメントでは、リアルタイム顧客デー
 translation-type: tm+mt
 source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 100%
+source-wordcount: '109'
+ht-degree: 90%
 
 ---
 
