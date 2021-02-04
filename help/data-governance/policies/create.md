@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage policy
+keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ポリシー
 solution: Experience Platform
 title: データ使用ポリシーの作成
 topic: policies
@@ -8,32 +8,32 @@ description: Policy Service APIを使用すると、データ使用ポリシー�
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 50%
+source-wordcount: '1211'
+ht-degree: 49%
 
 ---
 
 
 # APIでのデータ使用ポリシーの作成
 
-[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) （ポリシーサービスAPI）を使用すると、データ使用ポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
+[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)を使用すると、データ使用ポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
 
-This document provides a step-by-step tutorial for creating a policy using the [!DNL Policy Service] API. API で利用可能な様々な操作についての詳しいガイドは、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。
+このドキュメントでは、[!DNL Policy Service] APIを使用してポリシーを作成するための手順を説明するチュートリアルを提供します。 API で利用可能な様々な操作についての詳しいガイドは、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。
 
 ## はじめに
 
 このチュートリアルでは、ポリシーの作成と評価に関わる次の主要概念について、十分に理解している必要があります。
 
-* [[!DNL Data Governance]](../home.md):データ使用のコンプライアンスを [!DNL Platform] 適用するフレームワーク。
+* [[!DNL Data Governance]](../home.md):データ使用のコンプライアンスを [!DNL Platform] 強制するフレームワーク。
 * [データ使用ラベル](../labels/overview.md)：データ使用ラベルは、XDM データフィールドに適用され、そのデータのアクセス方法に関する制限を指定します。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 整理する際に使用される標準化されたフレームワーク。
-* [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+* [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Policy Service] API, including required headers and how to read example API calls.
+このチュートリアルを始める前に、[開発者ガイド](../api/getting-started.md)を参照し、必要なヘッダーやAPI呼び出し例の読み方を含む[!DNL Policy Service] APIの呼び出しを正しく行うために必要な重要な情報を確認してください。
 
 ## マーケティングアクションの定義 {#define-action}
 
-In the [!DNL Data Governance] framework, a marketing action is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
+[!DNL Data Governance]フレームワークでは、マーケティングアクションとは、[!DNL Experience Platform]データコンシューマーが行うアクションです。この場合、データ使用ポリシーの違反を確認する必要があります。
 
 データ使用ポリシーを作成する最初の手順は、ポリシーが評価するマーケティングアクションを決定することです。 これは、次のいずれかのオプションを使用しておこなうことができます。
 
@@ -42,11 +42,11 @@ In the [!DNL Data Governance] framework, a marketing action is an action that an
 
 ### 既存のマーケティングアクションの検索 {#look-up}
 
-You can look up existing marketing actions to be evaluated by your policy by making a GET request to one of the `/marketingActions` endpoints.
+`/marketingActions`エンドポイントの1つにGETリクエストを行うことで、ポリシーで評価される既存のマーケティングアクションを検索できます。
 
 **API 形式**
 
-Depending on whether you are looking up a marketing action provided by [!DNL Experience Platform] or a custom marketing action created by your organization, use the `marketingActions/core` or `marketingActions/custom` endpoints, respectively.
+[!DNL Experience Platform]が提供するマーケティングアクションを検索するか、組織が作成したカスタムマーケティングアクションを検索するかに応じて、それぞれ`marketingActions/core`エンドポイントまたは`marketingActions/custom`エンドポイントを使用します。
 
 ```http
 GET /marketingActions/core
@@ -123,7 +123,7 @@ curl -X GET \
 | --- | --- |
 | `_links.self.href` | `children` 配列内の各項目には、一覧表示されたマーケティングアクションの URI ID が含まれます。 |
 
-使用するマーケティングアクションが見つかったら、その `href` プロパティの値を記録します。This value is used during the next step of [creating a policy](#create-policy).
+使用するマーケティングアクションが見つかったら、その `href` プロパティの値を記録します。この値は、[ポリシー](#create-policy)の作成の次の手順で使用されます。
 
 ### 新しいマーケティングアクションの作成 {#create-new}
 
@@ -223,7 +223,7 @@ curl -X PUT \
 >
 > OR および AND 演算子のみがサポートされます。
 
-Once you have configured your policy expression, you can create a new policy by making a POST request to the `/policies/custom` endpoint.
+ポリシー式を設定したら、`/policies/custom`エンドポイントにPOST要求を行って、新しいポリシーを作成できます。
 
 **API 形式**
 
@@ -269,7 +269,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `marketingActionRefs` | [前の手順](#define-action)で取得したマーケティングアクションの `href` 値を含む配列。上記の例では、1 つのリストのみがマーケティングアクションとして扱われますが、複数のアクションを指定することもできます。 |
-| `deny` | ポリシー式オブジェクト。Defines the usage labels and conditions that would cause the policy to reject the marketing action referenced in `marketingActionRefs`. |
+| `deny` | ポリシー式オブジェクト。`marketingActionRefs`で参照されているマーケティングアクションをポリシーが拒否する原因となる使用方法のラベルと条件を定義します。 |
 
 **応答** 
 
@@ -328,9 +328,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->While this step is optional if you wish to leave your policy in `DRAFT` status, please note that by default a policy must have its status set to `ENABLED` in order to participate in evaluation. See the guide on [policy enforcement](../enforcement/api-enforcement.md) for information on how to make exceptions for policies in `DRAFT` status.
+>この手順は`DRAFT`ステータスのままにする場合はオプションですが、評価に参加するには、デフォルトでポリシーのステータスを`ENABLED`に設定する必要があります。 `DRAFT`ステータスのポリシーに例外を設定する方法については、[ポリシーの適用](../enforcement/api-enforcement.md)のガイドを参照してください。
 
-By default, policies that have their `status` property set to `DRAFT` do not participate in evaluation. `/policies/custom/` エンドポイントに PATCH リクエストを実行して、リクエストパスの最後にそのポリシーの一意の識別子を指定することで、ポリシーの評価を有効にできます。
+デフォルトでは、`status`プロパティが`DRAFT`に設定されているポリシーは評価に関与しません。 `/policies/custom/` エンドポイントに PATCH リクエストを実行して、リクエストパスの最後にそのポリシーの一意の識別子を指定することで、ポリシーの評価を有効にできます。
 
 **API 形式**
 
@@ -344,7 +344,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **リクエスト**
 
-The following request performs a PATCH operation on the `status` property of the policy, changing its value from `DRAFT` to `ENABLED`.
+次の要求は、ポリシーの`status`プロパティに対してPATCH操作を実行し、値を`DRAFT`から`ENABLED`に変更します。
 
 ```shell
 curl -X PATCH \
@@ -420,6 +420,6 @@ curl -X PATCH \
 
 このチュートリアルでは、マーケティングアクションのデータ使用ポリシーを作成しました。[データ使用ポリシーの実施](../enforcement/api-enforcement.md)に関するチュートリアルを続けて、ポリシー違反を確認し、エクスペリエンスアプリケーションでそれらを処理する方法を学ぶことができます。
 
-For more information on the different available operations in the [!DNL Policy Service] API,  see the [Policy Service developer guide](../api/getting-started.md). For information on how to enforce policies for [!DNL Real-time Customer Profile] data, see the tutorial on [enforcing data usage compliance for audience segments](../../segmentation/tutorials/governance.md).
+[!DNL Policy Service] APIで利用可能な様々な操作について詳しくは、[Policy Service開発者ガイド](../api/getting-started.md)を参照してください。 [!DNL Real-time Customer Profile]データに対してポリシーを適用する方法については、[オーディエンスセグメント](../../segmentation/tutorials/governance.md)に対するデータ使用のコンプライアンスの適用に関するチュートリアルを参照してください。
 
-To learn how to manage usage policies in the [!DNL Experience Platform] user interface, see the [policy user guide](user-guide.md).
+[!DNL Experience Platform]ユーザーインターフェイスで使用ポリシーを管理する方法については、[policy user guide](user-guide.md)を参照してください。
