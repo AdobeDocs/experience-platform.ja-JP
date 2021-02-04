@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;target mapping;Target mapping
+keywords: Experience Platform；ホーム；人気の高いトピック；ターゲットマッピング;ターゲットマッピング
 solution: Experience Platform
 title: Target マッピングフィールド
 topic: overview
@@ -7,8 +7,8 @@ description: 次の表に、エクスペリエンスイベントスキーマ（*
 translation-type: tm+mt
 source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 93%
+source-wordcount: '471'
+ht-degree: 91%
 
 ---
 
