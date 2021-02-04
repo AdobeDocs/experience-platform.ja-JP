@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;product profile
+keywords: Experience Platform；ホーム；人気の高いトピック；製品プロファイル
 solution: Experience Platform
 title: 製品プロファイルの新規作成
 topic: user guide
@@ -7,8 +7,8 @@ description: このドキュメントでは、Adobe Admin Consoleで新しい商
 translation-type: tm+mt
 source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 79%
+source-wordcount: '253'
+ht-degree: 77%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 79%
 
 ![プロファイル新規作成ボタン](../images/new-profile-button.png)
 
-The **[!UICONTROL Create New Profile]** dialog appears, prompting you to enter a profile name and description for the new profile. プロファイルの表示名を変更する場合は、「**[!UICONTROL プロファイル名と同じ]**」チェックボックスをオフにし、表示されるテキストボックスに表示名を入力します。「**[!UICONTROL ユーザー通知]**」では、ユーザーが追加または削除されたときに E メールで通知を受け取るかどうかを切り替えることができます。
+[**[!UICONTROL 新しいプロファイルの作成]**]ダイアログが表示され、新しいプロファイルのプロファイル名と説明を入力するよう求められます。 プロファイルの表示名を変更する場合は、「**[!UICONTROL プロファイル名と同じ]**」チェックボックスをオフにし、表示されるテキストボックスに表示名を入力します。「**[!UICONTROL ユーザー通知]**」では、ユーザーが追加または削除されたときに E メールで通知を受け取るかどうかを切り替えることができます。
 
 終了したら、「**[!UICONTROL 次へ]**」をクリックします。
 
 ![新規プロファイルの詳細](../images/new-profile-details.png)
 
-The next screen prompts you to choose which [!DNL Platform] services to include in the profile. サービスの横にある切り替えボタンをクリックすると、サービスを無効にできます。サービスが無効になっている場合、そのサービスに関連付けられているすべての機能は、この製品プロファイルに割り当てられたユーザーには使用できません。終了したら、「**[!UICONTROL 完了]**」をクリックします。
+次の画面では、プロファイルに含める[!DNL Platform]サービスを選択するように求められます。 サービスの横にある切り替えボタンをクリックすると、サービスを無効にできます。サービスが無効になっている場合、そのサービスに関連付けられているすべての機能は、この製品プロファイルに割り当てられたユーザーには使用できません。終了したら、「**[!UICONTROL 完了]**」をクリックします。
 
 ![新規プロファイルのサービス](../images/new-profile-services.png)
 
