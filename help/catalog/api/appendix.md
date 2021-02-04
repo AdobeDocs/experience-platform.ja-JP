@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
+keywords: Experience Platform；ホーム；人気の高いトピック；カタログサービス；カタログapi；付録
 solution: Experience Platform
 title: カタログサービス開発者ガイドの付録
 topic: developer guide
@@ -7,19 +7,19 @@ description: このドキュメントでは、Adobe Experience Platformのカタ
 translation-type: tm+mt
 source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 77%
+source-wordcount: '920'
+ht-degree: 76%
 
 ---
 
 
 # [!DNL Catalog Service] 開発ガイド付録
 
-This document contains additional information to help you work with the [!DNL Catalog] API.
+このドキュメントには、[!DNL Catalog] APIを使用する際に役立つ追加情報が含まれています。
 
 ## 相互に関連するオブジェクトの表示 {#view-interrelated-objects}
 
-Some [!DNL Catalog] objects can be interrelated with other [!DNL Catalog] objects. 応答ペイロードの先頭に `@` プリフィックスが付いたフィールドは、関連オブジェクトを表します。これらのフィールドの値は URI の形式をとります。それらが表す関連オブジェクトは、個別の GET リクエストで取得できます。
+一部の[!DNL Catalog]オブジェクトは、他の[!DNL Catalog]オブジェクトと相互に関連付けることができます。 応答ペイロードの先頭に `@` プリフィックスが付いたフィールドは、関連オブジェクトを表します。これらのフィールドの値は URI の形式をとります。それらが表す関連オブジェクトは、個別の GET リクエストで取得できます。
 
 [特定のデータセットの検索](look-up-object.md)時にドキュメントに返されるデータセットの例には、URI 値 `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"` を持つ `files` フィールドが含まれています。この URI を新しい GET リクエストのパスとして使用すると、`files` フィールドの内容を表示できます。
 
@@ -93,9 +93,9 @@ curl -X GET \
 
 ## 1 回の呼び出しでの複数リクエスト
 
-The root endpoint of the [!DNL Catalog] API allows for multiple requests to be made within a single call. リクエストのペイロードには、通常は個々のリクエストを表すオブジェクトの配列が含まれており、順番に実行されます。
+[!DNL Catalog] APIのルートエンドポイントを使用すると、1回の呼び出しで複数のリクエストを実行できます。 リクエストのペイロードには、通常は個々のリクエストを表すオブジェクトの配列が含まれており、順番に実行されます。
 
-If these requests are modifications or additions to [!DNL Catalog] and any one of the changes fails, all changes will revert.
+これらの要求が[!DNL Catalog]への変更または追加であり、いずれかの変更が失敗した場合、すべての変更が元に戻されます。
 
 **API 形式**
 
@@ -146,13 +146,13 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `id` | 応答にリクエストを照合できるように、応答オブジェクトに添付されるユーザー指定の ID。[!DNL Catalog] はこの値を格納せず、単に参照用に応答として返します。 |
-| `resource` | The resource path relative to the root of the [!DNL Catalog] API. プロトコルとドメインはこの値の一部ではなく、「/」というプリフィックスを付ける必要があります。<br/><br/> サブリクエストの `method` として PATCH または DELETE を使用する場合は、リソースパスにオブジェクト ID を含めます。Not to be confused with the user-supplied `id`, the resource path uses the ID of the [!DNL Catalog] object itself (for example, `resource: "/dataSets/1234567890"`). |
+| `resource` | [!DNL Catalog] APIのルートを基準とした相対リソースパスです。 プロトコルとドメインはこの値の一部ではなく、「/」というプリフィックスを付ける必要があります。<br/><br/> サブリクエストの `method` として PATCH または DELETE を使用する場合は、リソースパスにオブジェクト ID を含めます。ユーザーが提供する`id`と混同しないように、リソースパスは[!DNL Catalog]オブジェクト自体のIDを使用します（例：`resource: "/dataSets/1234567890"`）。 |
 | `method` | リクエストでとられるアクションに関連するメソッド（GET、PUT、POST、PATCH、DELETE）の名前。 |
 | `body` | 通常、POST、PUT、PATCH リクエストのペイロードとして渡される JSON ドキュメント。このプロパティは、GET または DELETE リクエストには必要ありません。 |
 
 **応答**
 
-成功した応答は、各リクエストに割り当てた `id`、個々のリクエストの HTTP ステータスコード、および応答 `body` を含むオブジェクトの配列を返します。Since the three sample requests were all to create new objects, the `body` of each object is an array containing only the ID of the newly created object, as is the standard with most successful POST responses in [!DNL Catalog].
+成功した応答は、各リクエストに割り当てた `id`、個々のリクエストの HTTP ステータスコード、および応答 `body` を含むオブジェクトの配列を返します。3つのサンプルリクエストはすべて新しいオブジェクトを作成するためのものなので、各オブジェクトの`body`は、[!DNL Catalog]で最も成功したPOST応答の標準と同様に、新しく作成されたオブジェクトのIDのみを含む配列です。
 
 ```json
 [
@@ -193,6 +193,6 @@ curl -X POST \
 
 ## データの圧縮
 
-Compaction is an [!DNL Experience Platform] service that merges data from small files into larger files without changing any data. パフォーマンス上の理由から、小さなファイルのセットを大きなファイルに組み合わせて、クエリを実行する際にデータへのアクセスを高速化する方が有益な場合があります。
+圧縮は、小さいファイルのデータを、データを変更せずに大きいファイルにマージする[!DNL Experience Platform]サービスです。 パフォーマンス上の理由から、小さなファイルのセットを大きなファイルに組み合わせて、クエリを実行する際にデータへのアクセスを高速化する方が有益な場合があります。
 
-When the files in an ingested batch have been compacted, its associated [!DNL Catalog] object is updated for monitoring purposes.
+取り込まれたバッチ内のファイルが圧縮されると、関連する[!DNL Catalog]オブジェクトが更新され、監視が行われます。
