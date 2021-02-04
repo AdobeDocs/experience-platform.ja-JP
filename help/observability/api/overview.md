@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;date range
+keywords: Experience Platform；ホーム；人気のあるトピック；日付範囲
 solution: Experience Platform
 title: Observibility Insights API開発者ガイド
 topic: developer guide
@@ -7,18 +7,18 @@ description: 観察性インサイトは、Adobe Experience Platform で主要�
 translation-type: tm+mt
 source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 31%
+source-wordcount: '161'
+ht-degree: 30%
 
 ---
 
 
 # [!DNL Observability Insights] API開発者ガイド
 
-この [!DNL Observability Insights] APIは、Adobe Experience Platformの様々な機能の指標データをプログラム的に取得して監視できるエンドポイントを提供します。 このエンドポイントの概要を以下に示します。 詳しくは、エンドポイントガイドを参照して、 [入門ガイド](./getting-started.md) （英語のみ）を参照して、必要なヘッダーに関する重要な情報、サンプルAPI呼び出しなどを確認してください。
+[!DNL Observability Insights] APIは、Adobe Experience Platformの様々な機能の指標データをプログラム的に取得して監視できるエンドポイントを提供します。 このエンドポイントの概要を以下に示します。 詳しくは、エンドポイントガイドを参照し、必要なヘッダー、サンプルAPI呼び出しの読み取りなどに関する重要な情報については、[はじめに](./getting-started.md)を参照してください。
 
-使用可能なすべてのエンドポイントとCRUD操作を表示するには、 [[!DNL Observability Insights] APIスウォッガーにアクセスします](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)。
+使用可能なすべてのエンドポイントとCRUD操作を表示するには、[[!DNL Observability Insights] APIスウォッガー](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)を参照してください。
 
 ## 指標
 
-観察性指標は、Adobe Experience Platformの様々な機能の使用状況の統計、過去の傾向、およびパフォーマンス指標に関する洞察を提供します。 APIを使用して指標を取得する方法について詳しくは、 [指標エンドポイントガイドを参照してください](./metrics.md)。
+観察性指標は、Adobe Experience Platformの様々な機能の使用状況の統計、過去の傾向、およびパフォーマンス指標に関する洞察を提供します。 APIを使用して指標を取得する方法については、[指標エンドポイントガイド](./metrics.md)を参照してください。
