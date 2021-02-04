@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp
+keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;SFTP
 solution: Experience Platform
 title: UIでのSFTPソースコネクタの作成
 topic: overview
@@ -8,7 +8,7 @@ description: このチュートリアルでは、プラットフォームユー�
 translation-type: tm+mt
 source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '702'
 ht-degree: 6%
 
 ---
