@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
+keywords: Experience Platform;プレビュースキーマデータ；Data Science Workspace；人気の高いトピック
 solution: Experience Platform
 title: プレビュースキーマとデータセット
 topic: tutorial
@@ -8,15 +8,15 @@ description: 次のドキュメントでは、Adobe Experience Platformでのス
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 70%
+source-wordcount: '237'
+ht-degree: 67%
 
 ---
 
 
 # プレビュースキーマとデータセット
 
-「[小売販売スキーマとデータセットの作成](./create-retails-sales-dataset.md)」のチュートリアルのブートストラップスクリプトの実行が正常に完了したら、Output schemas and datasets can be viewed on [!DNL Experience Platform]. スキーマとデータセットを表示するには、次の手順に従います。
+「[小売販売スキーマとデータセットの作成](./create-retails-sales-dataset.md)」のチュートリアルのブートストラップスクリプトの実行が正常に完了したら、出力スキーマーとデータセットは[!DNL Experience Platform]で表示できます。 スキーマとデータセットを表示するには、次の手順に従います。
 
 1. 左側のナビゲーション列にある「**[!UICONTROL スキーマ]**」リンクをクリックし、ブートストラップスクリプトで作成された入力スキーマを見つけます。スキーマの名前は、前の手順の `config.yaml` で定義した名前に対応します。スキーマをクリックし、スキーマの詳細とその構成を表示します。
 
@@ -32,10 +32,10 @@ ht-degree: 70%
 
 ## 次の手順
 
-You have now successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
+これで、提供されたブートストラップスクリプトを使用して、小売販売のサンプルデータを[!DNL Experience Platform]に正しく取り込みました。
 
 取得したデータを引き続き使用するには、以下を実行します。
 - [Jupyter ノートブックを使用したデータ分析](../jupyterlab/analyze-your-data.md)
-   - Use Jupyter notebooks in [!DNL Data Science Workspace] to access, explore, visualize, and understand your data.
+   - [!DNL Data Science Workspace]のJupyterノートブックを使用して、データにアクセスし、調査し、視覚化し、理解します。
 - [ソースファイルのレシピへのパッケージ化](./package-source-files-recipe.md)
-   - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.
+   - 読み込み可能なレシピファイルにソースファイルをパッケージ化して、独自のモデルを[!DNL Data Science Workspace]に取り込む方法を学ぶには、このチュートリアルに従ってください。
