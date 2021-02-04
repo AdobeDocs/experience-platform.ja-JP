@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;access data sources;data access;spark sdk;python sdk
+keywords: Experience Platform；ホーム；人気のあるトピック；データソースへのアクセス；データアクセス；spark sdk;python sdk
 solution: Experience Platform
 title: データアクセスのチュートリアル
 topic: tutorial
@@ -8,8 +8,8 @@ description: Adobe Experience Platform では、データアクセス API を使
 translation-type: tm+mt
 source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 57%
+source-wordcount: '154'
+ht-degree: 52%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 57%
 
 Data Accessは、Experience Platform内で取り込まれたデータセットの検出性とアクセス性に重点を置いたツールをユーザーに提供することで、Adobe Experience Platformをサポートします。
 
-To learn more, begin by reading the [Data Access overview](../data-access/home.md).
+詳しくは、[データアクセスの概要](../data-access/home.md)を読んでください。
 
 ## データアクセスAPIを使用したデータセットデータのクエリ
 
@@ -32,4 +32,4 @@ To learn more, begin by reading the [Data Access overview](../data-access/home.m
 - ファイルの一部コンテンツのダウンロード.
 - API 応答のページネーションの設定.
 
-To get started, follow the [Data Access API tutorial](../data-access/tutorials/dataset-data.md).
+開始するには、[データアクセスAPIのチュートリアル](../data-access/tutorials/dataset-data.md)に従ってください。
