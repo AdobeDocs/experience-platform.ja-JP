@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;user guide;attribution ai;popular topics;region
+keywords: Experience Platform；ユーザーガイド；アトリビューションai；人気のあるトピック；地域
 solution: Experience Platform, Intelligent Services
 title: Attribution AI ユーザーガイド
 topic: User guide
@@ -7,7 +7,7 @@ description: このドキュメントは、インテリジェントサービス�
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1755'
 ht-degree: 79%
 
 ---
@@ -21,23 +21,23 @@ Attribution AI はインテリジェントサービスの一部で、顧客と�
 
 ## インスタンスの作成
 
-In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. **[!UICONTROL Services]** ブラウザーが開き、利用可能なアドビのインテリジェントサービスが表示されます。Attribution AI のコンテナで、「**[!UICONTROL Open]**」をクリックします。
+[!DNL Adobe Experience Platform] UIの左側のナビゲーションで&#x200B;**[!UICONTROL サービス]**&#x200B;をクリックします。 **[!UICONTROL Services]** ブラウザーが開き、利用可能なアドビのインテリジェントサービスが表示されます。Attribution AI のコンテナで、「**[!UICONTROL Open]**」をクリックします。
 
 ![インスタンスへのアクセス](./images/user-guide/open_Attribution_ai.png)
 
 Attribution AI サービスページが表示されます。このページには、Attribution AI のサービスインスタンスが一覧表示され、インスタンスの名前、コンバージョンイベント、インスタンスの実行頻度、最後の更新のステータスなど、インスタンスに関する情報が表示されます。
 
-「スコア対象の **[!UICONTROL 合計コンバージョンイベント数]** 」指標は、インスタンスを **[!UICONTROL 作成]** コンテナの右下にあります。 この指標は、すべてのSandbox環境と削除されたサービスインスタンスを含む、現在のカレンダー年のAttribution AIがスコアするコンバージョンイベントの合計数を追跡します。
+**[!UICONTROL スコア]**&#x200B;の合計コンバージョンイベント数指標は、**[!UICONTROL インスタンスを作成]**&#x200B;コンテナの右下にあります。 この指標は、すべてのSandbox環境と削除されたサービスインスタンスを含む、現在のカレンダー年のAttribution AIがスコアするコンバージョンイベントの合計数を追跡します。
 
 ![](./images/user-guide/total_conversions.png)
 
-サービスインスタンスは、UIの右側のコントロールを使用して、編集、複製および削除できます。 これらのコントロールを表示するには、既存の **[!UICONTROL サービスインスタンスからインスタンスを選択し]**&#x200B;ます。 コントロールには次の情報が含まれます。
+サービスインスタンスは、UIの右側のコントロールを使用して、編集、複製および削除できます。 これらのコントロールを表示するには、既存の&#x200B;**[!UICONTROL サービスインスタンス]**&#x200B;からインスタンスを選択します。 コントロールには次の情報が含まれます。
 
-- **[!UICONTROL 編集]**:「 **[!UICONTROL 編集]** 」を選択すると、既存のサービスインスタンスを変更できます。 インスタンスの名前、説明、ステータスおよびスコアリング頻度を編集できます。
-- **[!UICONTROL クローン]**:「 **[!UICONTROL Clone]** 」を選択すると、選択したサービス・インスタンスがコピーされます。 その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
+- **[!UICONTROL 編集]**:「 **** 編集」を選択すると、既存のサービスインスタンスを変更できます。インスタンスの名前、説明、ステータスおよびスコアリング頻度を編集できます。
+- **[!UICONTROL クローン]**:「 **** Clonecopys」を選択すると、選択したサービス・インスタンスがコピーされます。その後、ワークフローを変更してマイナーツイークを作成し、新しいインスタンスとして名前を変更できます。
 - **[!UICONTROL 削除]**:過去の実行を含むサービスインスタンスを削除できます。
 - **[!UICONTROL データソース]**:このインスタンスで使用されているデータセットへのリンク。
-- **[!UICONTROL 前回の実行の詳細]**:これは、実行に失敗した場合にのみ表示されます。 エラーコードなどの実行が失敗した理由に関する情報がここに表示されます。
+- **[!UICONTROL 前回の実行の詳細]**:これは、実行に失敗した場合にのみ表示されます。エラーコードなどの実行が失敗した理由に関する情報がここに表示されます。
 
 ![](./images/user-guide/side_panel.png)
 
@@ -47,7 +47,7 @@ Attribution AI サービスページが表示されます。このページに�
 
 ![](./images/user-guide/side_panel_2.png)
 
-Select **[!UICONTROL Create instance]** to begin.
+開始するには、「**[!UICONTROL インスタンス]**&#x200B;を作成」を選択します。
 
 ![インスタンスの作成](./images/user-guide/landing_page.png)
 
@@ -105,7 +105,7 @@ Select **[!UICONTROL Create instance]** to begin.
 
 ![コンバージョンの追加](./images/user-guide/add_conversion.png)
 
-### ルックバックウィンドウの定義 {#lookback-window}
+### ルックバックウィンドウの定義  {#lookback-window}
 
 変換の定義が完了したら、ルックバックウィンドウを確定する必要があります。矢印キーを使用するかデフォルト値（56）をクリックして、コンバージョンイベントの何日前からのタッチポイントを考慮に入れるかを指定します。タッチポイントは次の手順で定義します。
 
@@ -181,7 +181,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 ![スコアデータセット列の追加](./images/user-guide/Add-score-dataset.png)
 
-### Region-based modeling (optional) {#region-based-modeling-optional}
+### 領域ベースのモデリング（オプション） {#region-based-modeling-optional}
 
 顧客の行動は、国や地域によって大きく異なる場合があります。グローバルビジネスの場合、国ベースまたは地域ベースのモデルを使用すると、アトリビューションの精度が向上する可能性があります。追加された地域ごとに、その地域のデータを使用して新しいモデルを作成します。
 
@@ -201,7 +201,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 ![地域](./images/user-guide/region-based.png)
 
-### トレーニングウィンドウ {#training-window}
+### トレーニングウィンドウ  {#training-window}
 
 できるだけ正確なモデルを得るためには、ビジネスを表す履歴データを使用してモデルをトレーニングすることが重要です。デフォルトでは、モデルは2四半期（6か月）のコンバージョンイベントデータを使用してトレーニングを受けます。 ドロップダウンを選択すると、デフォルトを変更できます。トレーニングに使用するデータの期間は、1 四半期（3 ヶ月）から 4 四半期（12 ヶ月）の間で選択できます。
 
@@ -217,7 +217,7 @@ Attribution AI の最後のページは、トレーニングとスコアリン�
 
 ## 次の手順
 
-このチュートリアルに従って、Attribution AI にサービスインスタンスを正常に作成できました。インスタンスのスコアリングが完了したら（24 時間以内に完了）、[Attribution AI インサイトを見つける](./discover-insights.md)準備が整います。Additionally, if you wish to download your scoring results, visit the [downloading scores](./download-scores.md) documentation.
+このチュートリアルに従って、Attribution AI にサービスインスタンスを正常に作成できました。インスタンスのスコアリングが完了したら（24 時間以内に完了）、[Attribution AI インサイトを見つける](./discover-insights.md)準備が整います。さらに、スコアリング結果をダウンロードする場合は、[ダウンロード中のスコア](./download-scores.md)に関するドキュメントを参照してください。
 
 ## その他のリソース
 
