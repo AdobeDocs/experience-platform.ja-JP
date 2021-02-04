@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Experience Platformのユーザーインターフェイスは頻繁に更新され、このビデオの録画以降に変更された可能性があります。 最新の情報については、 [Adobe Experience PlatformUIガイドを参照してください](../ui-guide.md)。
+>Experience Platformのユーザーインターフェイスは頻繁に更新され、このビデオの録画以降に変更された可能性があります。 最新の情報については、[Adobe Experience PlatformUIガイド](../ui-guide.md)を参照してください。
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
