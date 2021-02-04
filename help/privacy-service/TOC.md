@@ -28,7 +28,7 @@ ht-degree: 95%
    * [Privacy Service UI の概要](ui/overview.md)
    * [Privacy Service ユーザガイド](ui/user-guide.md)
 * [プライバシーイベントへの購読](privacy-events.md)
-* プライバシー規制ガイド {#regulations}
+* プライバシー規制ガイド{#regulations}
    * [概要](regulations/overview.md)
    * [FAQ](regulations/faq.md)
    * [用語](regulations/terminology.md)
