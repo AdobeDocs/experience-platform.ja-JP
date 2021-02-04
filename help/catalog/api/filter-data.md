@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
+keywords: Experience Platform；ホーム；人気のあるトピック；フィルタ；フィルタ；フィルタデータ；フィルタデータ；フィルタデータ；日付範囲
 solution: Experience Platform
 title: クエリパラメータ－を使用したカタログデータのフィルター
 topic: developer guide
@@ -7,17 +7,17 @@ description: カタログサービス API を使用すると、応答データ�
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2077'
-ht-degree: 87%
+source-wordcount: '2090'
+ht-degree: 86%
 
 ---
 
 
-# Filter [!DNL Catalog] data using query parameters
+# クエリパラメーターを使用して[!DNL Catalog]データをフィルター
 
-The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
+[!DNL Catalog Service] APIを使用すると、リクエストクエリーパラメーターを使用して応答データをフィルタリングできます。 [!DNL Catalog]のベストプラクティスの一部は、すべてのAPI呼び出しでフィルターを使用することです。これらの呼び出しは、APIの負荷を軽減し、全体的なパフォーマンスの向上に役立ちます。
 
-This document outlines the most common methods for filtering [!DNL Catalog] objects in the API. It is recommended that you reference this document while reading the [Catalog developer guide](getting-started.md) to learn more about how to interact with the [!DNL Catalog] API. について詳しくは、 [!DNL Catalog Service]概要を参照してください [[!DNL Catalog] ](../home.md)。
+このドキュメントでは、APIの[!DNL Catalog]オブジェクトをフィルタリングする最も一般的な方法について説明します。 [!DNL Catalog] APIの使い方の詳細については、[カタログ開発者ガイド](getting-started.md)を読みながら、このドキュメントを参照することをお勧めします。 [!DNL Catalog Service]の一般的な情報については、[[!DNL Catalog] 概要](../home.md)を参照してください。
 
 ## 返されるオブジェクトの制限
 
@@ -37,7 +37,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | 返すオブジェクトの数を 1 ～ 100 の範囲で示す整数。 |
 
 **リクエスト**
@@ -105,9 +105,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | 応答本文に含める属性の名前。 |
-| `{OBJECT_ID}` | The unique identifier of a specific [!DNL Catalog] object being retrieved. |
+| `{OBJECT_ID}` | 取得する特定の[!DNL Catalog]オブジェクトの固有な識別子。 |
 
 **リクエスト**
 
@@ -124,7 +124,7 @@ curl -X GET \
 
 **応答** 
 
-A successful response returns a list of [!DNL Catalog] objects with only the requested properties displayed.
+正常に応答すると、[!DNL Catalog]オブジェクトのリストが返され、要求されたプロパティのみが表示されます。
 
 ```json
 {
@@ -206,7 +206,7 @@ curl -X GET \
 * 現在タグをサポートしているカタログオブジェクトは、データセット、バッチ、接続のみです。
 * タグ名は IMS 組織に固有です。
 * アドビのプロセスは、特定の動作にタグを活用する場合があります。これらのタグの名前には、標準として「adobe」というプリフィックスが付けられます。したがって、タグ名を宣言する際は、このような規則を避ける必要があります。
-* The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
+* 次のタグ名は、[!DNL Experience Platform]全体で使用するために予約されているので、組織のタグ名として宣言することはできません。
    * `unifiedProfile`:このタグ名は、で取り込むデータセット用に予約されてい [[!DNL Real-time Customer Profile]](../../profile/home.md)ます。
    * `unifiedIdentity`:このタグ名は、で取り込むデータセット用に予約されてい [[!DNL Identity Service]](../../identity-service/home.md)ます。
 
@@ -262,7 +262,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | フィルターに使用するタグの名前。 |
 | `{TAG_VALUE}` | フィルターに使用するタグの値。ワイルドカード文字（`*`）をサポートします。 |
 
@@ -333,7 +333,7 @@ curl -X GET \
 
 ## 日付範囲によるフィルター
 
-Some endpoints in the [!DNL Catalog] API have query parameters that allow for ranged queries, most often in the case of dates.
+[!DNL Catalog] APIの一部のエンドポイントには、幅のあるクエリを許可するクエリパラメーターがあります。ほとんどの場合、日付の場合はこのパラメーターが使用されます。
 
 **API 形式**
 
@@ -360,7 +360,7 @@ curl -X GET \
 
 **応答** 
 
-A successful response contains a list of [!DNL Catalog] objects that fall within the specified date range. 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
+成功した応答には、指定した日付範囲に該当する[!DNL Catalog]オブジェクトのリストが含まれます。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
@@ -428,7 +428,7 @@ curl -X GET \
 
 **応答** 
 
-A successful response contains a list of [!DNL Catalog] objects that are sorted according to the `orderBy` parameter. 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
+成功した応答には、`orderBy`パラメーターに従って並べ替えられた[!DNL Catalog]オブジェクトのリストが含まれます。 制限も指定しない限り、応答には最大 20 個のオブジェクトが含まれます。
 
 ```json
 {
@@ -497,7 +497,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | 値のフィルターに使用するプロパティの名前です。 |
 | `{VALUE}` | クエリに応じて含めるまたは除外する結果を決定するプロパティ値。 |
 
@@ -573,7 +573,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 取得する[!DNL Catalog]オブジェクトの型です。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | クエリするプロパティ、およびその値の評価方法を示す条件式。以下に例を示します。 |
 
 `property` パラメーターの値は、複数の異なる種類の条件付き式をサポートします。次の表に、サポートされる式の基本構文を示します。
