@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；セグメント定義；セグメント定義；api;API;
 solution: Experience Platform
 title: セグメントの定義
 topic: developer guide
@@ -7,21 +7,21 @@ description: このガイドは、セグメント定義をより深く理解す�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 51%
+source-wordcount: '1079'
+ht-degree: 50%
 
 ---
 
 
 # セグメント定義エンドポイント
 
-Adobe Experience Platform を使用すると、プロファイルのグループから特定の属性やビヘイビアーのグループを定義するセグメントを作成できます。A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). このオブジェクトは PQL 述語とも呼ばれます。PQL predicates define the rules for the segment based on conditions related to any record or time-series data you supply to [!DNL Real-time Customer Profile]. PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
+Adobe Experience Platform を使用すると、プロファイルのグループから特定の属性やビヘイビアーのグループを定義するセグメントを作成できます。セグメント定義は、[!DNL Profile Query Language] (PQL)に書き込まれたクエリをカプセル化するオブジェクトです。 このオブジェクトは PQL 述語とも呼ばれます。PQL述語は、[!DNL Real-time Customer Profile]に指定するレコードまたは時系列データに関連する条件に基づいて、セグメントの規則を定義します。 PQL クエリの記述について詳しくは、[PQL ガイド](../pql/overview.md)を参照してください。
 
 このガイドは、セグメント定義をより深く理解するのに役立つ情報を提供し、APIを使用して基本的なアクションを実行するためのサンプルAPI呼び出しを含みます。
 
 ## はじめに
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+このガイドで使用されるエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、[はじめにガイド](./getting-started.md)を見て、必要なヘッダーやAPI呼び出し例の読み方など、APIを正しく呼び出すために必要な重要な情報を確認してください。
 
 ## セグメント定義のリストの取得 {#list}
 
@@ -29,7 +29,7 @@ IMS 組織の全セグメント定義のリストを取得するには、`/segme
 
 **API 形式**
 
-エンドポイントでは、結果のフィルタリングに役立ついくつかのクエリパラメーターが `/segment/definitions` サポートされています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントに呼び出しを実行すると、組織で使用可能なセグメント定義がすべて取得されます。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
+`/segment/definitions`エンドポイントは、結果のフィルタリングに役立ついくつかのクエリパラメーターをサポートしています。 これらのパラメーターはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 パラメーターを指定しないでこのエンドポイントに呼び出しを実行すると、組織で使用可能なセグメント定義がすべて取得されます。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /segment/definitions
@@ -43,7 +43,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 | `start` | 返されるセグメント定義の開始オフセットを指定します。 | `start=4` |
 | `limit` | 返される、1 ページあたりのセグメント定義の数を指定します。 | `limit=20` |
 | `page` | どのページからセグメント定義の結果を表示するかを指定します。 | `page=5` |
-| `sort` | 結果を並べ替える基準となるフィールドを指定します。 Is written in the following format: `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
+| `sort` | 結果を並べ替える基準となるフィールドを指定します。 は次の形式で書き込まれます。`[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | セグメント定義でストリーミングを有効にするかどうかを指定します。 | `evaluationInfo.continuous.enabled=true` |
 
 **リクエスト**
@@ -251,7 +251,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 ## 特定のセグメント定義の取得 {#get}
 
-You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to retrieve in the request path.
+`/segment/definitions`エンドポイントにGETリクエストを送信し、取得するセグメント定義のIDをリクエストパスに指定することで、特定のセグメント定義に関する詳細な情報を取得できます。
 
 **API 形式**
 
@@ -261,7 +261,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | The `id` value of the segment definition you want to retrieve. |
+| `{SEGMENT_ID}` | 取得するセグメント定義の`id`値。 |
 
 **リクエスト**
 
@@ -331,9 +331,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
 | `description` | 人間にとってわかりやすい、定義の説明。 |
 | `evaluationInfo` | システム生成オブジェクト。評価、バッチ、連続（ストリーミングとも呼ばれます）または同期のタイプを指定し、セグメント定義が実行されます。 |
 
-## 一括取得セグメント定義 {#bulk-get}
+## セグメント定義の一括取得{#bulk-get}
 
-エンドポイントにPOSTリクエストを送信し、リクエスト本文にセグメント定義の `/segment/definitions/bulk-get``id` 値を入力することで、指定した複数のセグメント定義に関する詳細な情報を取得できます。
+`/segment/definitions/bulk-get`エンドポイントにPOSTリクエストを送信し、リクエスト本文にセグメント定義の`id`値を指定することで、指定した複数のセグメント定義に関する詳細な情報を取得できます。
 
 **API 形式**
 
@@ -466,7 +466,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
 
 ## 特定のセグメント定義の削除 {#delete}
 
-You can request to delete a specific segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to delete in the request path.
+`/segment/definitions`エンドポイントにDELETEリクエストを送信し、削除するセグメント定義のIDをリクエストパスに指定することで、特定のセグメント定義を削除するようリクエストできます。
 
 **API 形式**
 
@@ -494,7 +494,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
 
 ## 特定のセグメント定義の更新
 
-エンドポイントにPATCHリクエストを送信し、更新するセグメント定義のIDをリクエストパスに指定することで、特定のセグメント定義を更新でき `/segment/definitions` ます。
+`/segment/definitions`エンドポイントにPATCHリクエストを送信し、更新するセグメント定義のIDをリクエストパスに指定することで、特定のセグメント定義を更新できます。
 
 **API 形式**
 
@@ -504,7 +504,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | The `id` value of the segment definition you want to update. |
+| `{SEGMENT_ID}` | 更新するセグメント定義の`id`値。 |
 
 **リクエスト**
 
@@ -587,4 +587,4 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 
 ## 次の手順
 
-このガイドを読むと、セグメント定義の動作についての理解が深まります。 セグメントの作成の詳細については、「セグメントの [作成](../tutorials/create-a-segment.md) 」チュートリアルを参照してください。
+このガイドを読むと、セグメント定義の動作についての理解が深まります。 セグメントの作成の詳細については、[セグメントの作成](../tutorials/create-a-segment.md)のチュートリアルを参照してください。
