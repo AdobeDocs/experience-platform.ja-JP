@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
+keywords: Experience Platform；機械学習モデル；Data Science Workspace；一般的なトピック；モデルの作成と公開
 solution: Experience Platform
 title: 機械学習モデルの作成および公開手順
 topic: tutorial
@@ -8,8 +8,8 @@ description: Adobe Experience Platform Data Science Workspace は、事前に作
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 80%
+source-wordcount: '1604'
+ht-degree: 79%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 80%
 
 あなたはオンラインの小売サイトを所有しているとします。あなたは顧客が小売 Web サイトで買い物をする際に、自社が提供する他の様々な製品が目に入るよう、パーソナライズされた製品レコメンデーションを提示したいと考えています。Web サイトの存在期間全体にわたって、顧客データを継続的に収集し、このデータを使用してパーソナライズされた商品レコメンデーションを生成しようとします。
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 事前に組み込まれた [製品Recommendationsレシピを使用して目標を達成する手段を提供します](../pre-built-recipes/product-recommendations.md)。 Follow this tutorial to see how you can access and understand your retail data, create and optimise a machine learning Model, and generate insights in [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] 事前に組み込まれた [製品Recommendationsレシピを使用して目標を達成する手段を提供します](../pre-built-recipes/product-recommendations.md)。このチュートリアルに従って、小売データにアクセスして理解し、機械学習モデルを作成して最適化し、[!DNL Data Science Workspace]でインサイトを生成する方法を確認します。
 
-This tutorial reflects the workflow of [!DNL Data Science Workspace], and covers the following steps for creating a machine learning Model:
+このチュートリアルは、[!DNL Data Science Workspace]のワークフローを反映しており、機械学習モデルを作成するための次の手順をカバーしています。
 
 1. [データの準備](#prepare-your-data)
 2. [モデルのオーサリング](#author-your-model)
@@ -33,7 +33,7 @@ This tutorial reflects the workflow of [!DNL Data Science Workspace], and covers
 
 このチュートリアルを開始する前に、次の前提条件を満たす必要があります。
 
-* へのアクセス [!DNL Adobe Experience Platform]。 If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+* [!DNL Adobe Experience Platform]にアクセスします。 [!DNL Experience Platform]のIMS組織にアクセスできない場合は、先に進む前に、システム管理者にお問い合わせください。
 
 * イネーブルメントアセット。次のアイテムをプロビジョニングするには、アカウント担当者にお問い合わせください。
    * Recommendations のレシピ
@@ -44,21 +44,21 @@ This tutorial reflects the workflow of [!DNL Data Science Workspace], and covers
    * ゴールデンデータセット postValues
    * ゴールデンデータセットスキーマ
 
-* Download the three required [!DNL Jupyter Notebook] files from the [Adobe public [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
+* 必要な3つの[!DNL Jupyter Notebook]ファイルを[Adobepublic [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs)からダウンロードします。これらは[!DNL Data Science Workspace]で[!DNL JupyterLab]ワークフローを示すのに使用されます。
 
 * このチュートリアルで使用する次の主要概念に対する十分な理解
    * [[!DNL Experience Data Model]](../../xdm/home.md):Adobeが導く標準化の取り組み。Customer Experience Managementの標準スキーマ（例：ExperienceEvent） [!DNL Profile] を定義します。
    * データセット：実際のデータ用に構成されたストレージおよび管理。[XDM スキーマ](../../xdm/schema/field-dictionary.md)の物理的にインスタンス化されたインスタンス。
    * バッチ：データセットは、バッチで構成されます。バッチとは、一定期間に収集され、1 つの単位としてまとめて処理される一連のデータです。
-   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project用のオープンソースのWebベースのインターフェイスで、に緊密に統合さ [!DNL Jupyter] れてい [!DNL Experience Platform]ます。
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) は、Project用のオープンソースのWebベースのインターフェイスで [!DNL Jupyter] 、に緊密に統合されて [!DNL Experience Platform]います。
 
 ## データの準備 {#prepare-your-data}
 
-顧客に合わせてパーソナライズされた商品レコメンデーションを作成する機械学習モデルを作成するには、Web サイトにおける以前の顧客の購入を分析する必要があります。This section explores how this data is ingested into [!DNL Platform] through [!DNL Adobe Analytics], and how that data is transformed into a Feature dataset to be used by your machine learning Model.
+顧客に合わせてパーソナライズされた商品レコメンデーションを作成する機械学習モデルを作成するには、Web サイトにおける以前の顧客の購入を分析する必要があります。この節では、このデータが[!DNL Platform]から[!DNL Adobe Analytics]にどのように取り込まれるか、およびそのデータが機械学習モデルで使用する機能データセットにどのように変換されるかについて説明します。
 
 ### データを調べてスキーマを理解する
 
-1. [Adobe Experience Platform](https://platform.adobe.com/) にログインし、「**[!UICONTROL データセット]**」をクリックして既存のデータセットをすべてリストし、調査するデータセットを選択します。In this case, the [!DNL Analytics] dataset **Golden Data Set postValues**.
+1. [Adobe Experience Platform](https://platform.adobe.com/) にログインし、「**[!UICONTROL データセット]**」をクリックして既存のデータセットをすべてリストし、調査するデータセットを選択します。この場合、[!DNL Analytics]データセット&#x200B;**ゴールデンデータセットpostValues**です。
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. 右上近くにある **[!UICONTROL プレビューデータセット]**&#x200B;を選択し、サンプルレコードを確認して、「**[!UICONTROL 閉じる]**」をクリックします。
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -70,27 +70,27 @@ This tutorial reflects the workflow of [!DNL Data Science Workspace], and covers
 | データセット名 | スキーマ | 説明 |
 | ----- | ----- | ----- |
 | ゴールデンデータセット postValues | ゴールデンデータセットスキーマ | [!DNL Analytics]Web サイトの ソースデータ |
-| Recommendations の入力データセット | Recommendations の入力スキーマ | The [!DNL Analytics] data is transformed into a training dataset using a feature pipeline. このデータは、製品レコメンデーションの機械学習モデルのトレーニングに使用されます。`itemid` および `userid` は、その顧客が購入した製品に対応しています。 |
+| Recommendations の入力データセット | Recommendations の入力スキーマ | [!DNL Analytics]データは、機能パイプラインを使用してトレーニングデータセットに変換されます。 このデータは、製品レコメンデーションの機械学習モデルのトレーニングに使用されます。`itemid` および `userid` は、その顧客が購入した製品に対応しています。 |
 | Recommendations の出力データセット | Recommendations の出力スキーマ | スコア付け結果が保存されるデータセットには、各顧客にお勧めする製品のリストが含まれます。 |
 
 ## モデルのオーサリング {#author-your-model}
 
-The second component of the [!DNL Data Science Workspace] lifecycle involves authoring Recipes and Models. 製品 Recommendations レシピは、過去の購入データと機械学習を利用して、製品 Recommendations を大規模に生成できるように作られています。
+[!DNL Data Science Workspace]ライフサイクルの2番目の要素は、レシピとモデルの作成です。 製品 Recommendations レシピは、過去の購入データと機械学習を利用して、製品 Recommendations を大規模に生成できるように作られています。
 
 レシピは、特定の問題を解決するために設計された機械学習アルゴリズムとロジックを含んでおり、モデルの基盤となります。さらに重要な点は、レシピを使用すると、組織全体の機械学習を民主化でき、他のユーザーはコードを書かなくても様々な用途のモデルにアクセスできるようになることです。
 
 ### 製品 Recommendations レシピの参照
 
-1. In [!DNL Adobe Experience Platform], navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top to view a list of available Recipes for your organization.
+1. [!DNL Adobe Experience Platform]で、左側のナビゲーション列の&#x200B;**[!UICONTROL モデル]**&#x200B;に移動し、上部の&#x200B;**[!UICONTROL レシピ]**をクリックして、組織で使用可能なレシピのリストを表示します。
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. 提供された&#x200B;**[!UICONTROL Recommendations レシピ]**を探し、名前をクリックして開きます。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. 右側パネルで、「**[!UICONTROL Recommendations 入力スキーマ]**」をクリックして、レシピを実行するスキーマを表示します。The schema fields &quot;[!UICONTROL itemId]&quot; and &quot;[!UICONTROL userId]&quot; correspond to a product purchased ([!UICONTROL interactionType]) by that customer at a specific time ([!UICONTROL timestamp]). 同じ手順に従って、**[!UICONTROL Recommendations の出力スキーマ]**のフィールドを確認します。
+3. 右側パネルで、「**[!UICONTROL Recommendations 入力スキーマ]**」をクリックして、レシピを実行するスキーマを表示します。スキーマフィールド「[!UICONTROL itemId]」と「[!UICONTROL userId]」は、特定の時刻([!UICONTROL timestamp])に、その顧客が購入した製品([!UICONTROL interactionType])に対応します。 同じ手順に従って、**[!UICONTROL Recommendations の出力スキーマ]**のフィールドを確認します。
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 これで、商品 Recommendations のレシピで必要な入力および出力スキーマを確認しました。次のセクションに進み、製品レコメンデーションモデルの作成、トレーニング、および評価方法を見つけることができます。
 
-## モデルのトレーニングと評価 {#train-and-evaluate-your-model}
+## モデルのトレーニングと評価  {#train-and-evaluate-your-model}
 
 データの準備が完了し、レシピを使用する準備が整ったら、機械学習モデルを作成、トレーニング、および評価できます。
 
@@ -98,7 +98,7 @@ The second component of the [!DNL Data Science Workspace] lifecycle involves aut
 
 モデルはレシピのインスタンスで、データを大規模にトレーニングして、スコアを付けることができます。
 
-1. In [!DNL Adobe Experience Platform], navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top of the page to display a list of all available Recipes for your organization..
+1. [!DNL Adobe Experience Platform]で、左側のナビゲーション列の&#x200B;**[!UICONTROL モデル]**&#x200B;に移動し、ページ上部の&#x200B;**[!UICONTROL レシピ]**をクリックして、組織で使用可能なすべてのレシピのリストを表示します。
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. 提供された **[!UICONTROL Recommendations レシピ]**&#x200B;を探して、名前をクリックし、レシピの概要ページを入力して開きます。「レシピの概要」ページの中央（既存のモデルがない場合）または右上のいずれかで「**[!UICONTROL モデルを作成]**」をクリックします。
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
@@ -115,7 +115,7 @@ The second component of the [!DNL Data Science Workspace] lifecycle involves aut
 
 1. 「**モデルの概要**」ページで、右上付近にある「**[!UICONTROL トレーニング]**」をクリックして新しいトレーニング実行を作成します。モデルの作成時に使用したのと同じ入力データセットを選択し、「**[!UICONTROL 次へ]**」をクリックします。
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. **設定**&#x200B;ページが表示されます。Here you can configure the training run&#39;s &quot;[!UICONTROL num_recommendations]&quot; value, also known as a Hyperparameter. 最適化されたトレーニング済みモデルは、トレーニング実行の結果に基づいて、パフォーマンスが最も高いハイパーパラメーターを利用します。
+2. **設定**&#x200B;ページが表示されます。ここで、トレーニング実行の&quot;[!UICONTROL num_recommendations]&quot;値（Hyperparameterとも呼ばれます）を設定できます。 最適化されたトレーニング済みモデルは、トレーニング実行の結果に基づいて、パフォーマンスが最も高いハイパーパラメーターを利用します。
 
    ハイパーパラメーターは学習できないので、トレーニングを実行する前に割り当てる必要があります。ハイパーパラメーターを調整すると、トレーニングモデルの精度が変わる場合があります。モデルの最適化は反復的なプロセスなので、満足のいく評価を得るには複数のトレーニング実行が必要となる場合があります。
 
@@ -137,7 +137,7 @@ The second component of the [!DNL Data Science Workspace] lifecycle involves aut
 3. 各トレーニング実行に使用されるスキーマセット、データセット、設定パラメーターは、右側のパネルで確認できます。
 4. 「モデル」ページに戻り、評価指標を観察して、パフォーマンスが最も高いトレーニングを特定します。
 
-## モデルを操作できるようにする {#operationalize-your-model}
+## モデルを操作できるようにする  {#operationalize-your-model}
 
 Data Science ワークフローの最後の手順では、モデルを操作できるようにして、データストアからのインサイトにスコアを付けて利用します。
 
@@ -166,4 +166,4 @@ Data Science ワークフローの最後の手順では、モデルを操作で�
 
 製品のレコメンデーションが正常に生成されました。
 
-This tutorial introduced you to the workflow of [!DNL Data Science Workspace], demonstrating how raw unprocessed data can be turned into useful information through machine learning. To learn more about using the [!DNL Data Science Workspace], continue to the next guide on [creating the retail sales schema and dataset](./create-retails-sales-dataset.md).
+このチュートリアルでは、[!DNL Data Science Workspace]のワークフローについて説明し、未処理の生のデータを機械学習によって有用な情報に変える方法を説明します。 [!DNL Data Science Workspace]の使い方の詳細については、[小売売上スキーマとデータセット](./create-retails-sales-dataset.md)の作成に関する次のガイドに進んでください。
