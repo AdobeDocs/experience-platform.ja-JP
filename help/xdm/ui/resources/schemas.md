@@ -5,9 +5,9 @@ title: UIでのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
+source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1321'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 1%
 >
 >Workspaceの検索およびフィルター機能を使用して、スキーマを簡単に見つけることができます。 詳しくは、[XDMリソース](../explore.md)のガイドを参照してください。
 
-スキーマを選択すると、キャンバスにスキーマの構造が表示された[!DNL Schema Editor]が表示されます。 これで、スキーマに[ミックスイン](#add-mixins)を追加できます。スキーマが使用している場合は、[既存のカスタムミックスイン](./mixins.md#edit)を編集できます。
+スキーマを選択すると、キャンバスにスキーマの構造が表示された[!DNL Schema Editor]が表示されます。 スキーマが使用する場合は、スキーマにミックスイン[を追加、[フィールド表示名](#display-names)を編集、または[既存のカスタムミックスイン](./mixins.md#edit)を編集できるようになりました。](#add-mixins)
 
 ## スキーマへの mixin の追加 {#add-mixins}
 
@@ -116,6 +116,22 @@ ht-degree: 1%
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 このスキーマは、リアルタイム顧客プロファイルでの使用が可能になりました。 Platformがこのスキーマに基づいてデータセットにデータを取り込むと、そのデータは統合されたプロファイルデータに組み込まれます。
+
+## スキーマフィールドの表示名を編集{#display-names}
+
+クラスを割り当ててミックスインをスキーマに追加した後は、標準のXDMリソースとカスタムのXDMリソースのどちらで提供されているかに関係なく、スキーマのフィールドの表示名を編集できます。
+
+>[!NOTE]
+>
+>標準のクラスまたはミックスインに属するフィールドの表示名は、特定のスキーマのコンテキストでのみ編集できます。 つまり、あるスキーマで標準フィールドの表示名を変更しても、同じ関連クラスまたはMixinを使用する他のスキーマには影響しません。
+
+スキーマフィールドの表示名を編集するには、キャンバスでフィールドを選択します。 右側のレールで、**[!UICONTROL 表示名]**&#x200B;の下に新しい名前を入力します。
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+右側のレールで「**[!UICONTROL Apply]**」を選択すると、キャンバスが更新され、フィールドの新しい表示名が表示されます。 「**[!UICONTROL 保存]**」を選択して、変更をスキーマに適用します。
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## スキーマのクラスを変更{#change-class}
 
