@@ -3,11 +3,11 @@ title: 'Adobe TargetとAdobe Experience PlatformのWeb SDK '
 seo-title: Adobe Experience PlatformウェブSDKとAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 seo-description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
-keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
+keywords: ターゲット;adobeターゲット;xdm表示;表示；シングルページアプリ；SPA;SPAライフサイクル；クライアント側；ABテスト；AB；エクスペリエンスのターゲット設定；XT;VEC
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1689'
 ht-degree: 14%
 
 ---
@@ -41,7 +41,7 @@ SPA の Adobe Target VEC は、ビューと呼ばれる新しい概念を活用�
 
 ![](assets/example-views.png)
 
-As the customer becomes more interested in the products that the business is selling, they decide to click the **Products** link. ホームサイトと同様、製品サイト全体をビューとして定義できます。この表示は、「products-all」という名前にできます。
+顧客は、ビジネスが販売する製品に対する関心が高まるにつれ、**製品**&#x200B;リンクをクリックすることにします。 ホームサイトと同様、製品サイト全体をビューとして定義できます。この表示は、「products-all」という名前にできます。
 
 ![](assets/example-products-all.png)
 
@@ -49,7 +49,7 @@ As the customer becomes more interested in the products that the business is sel
 
 ![](assets/example-products.png)
 
-顧客が「 **ロードする製品を増やす** 」ボタンをクリックしてサイト上の他の製品を調査する場合、WebサイトのURLは変わりませんが、表示される2行目の製品のみを表す表示をここに作成できます。 表示名は「products-page-2」にできます。
+顧客が「**さらに読み込む**」ボタンをクリックしてサイト上の他の製品を探索するとき、WebサイトのURLは変わりませんが、表示される2行目の製品のみを表す表示をここに作成できます。 表示名は「products-page-2」にできます。
 
 ![](assets/example-load-more.png)
 
@@ -63,9 +63,9 @@ As the customer becomes more interested in the products that the business is sel
 
 XDM表示は、Adobe Targetで活用して、マーケターがVisual Experience Composerを使用してSPA上でA/BテストとXTテストを実行できるようにします。 1回限りの開発者の設定を完了するには、次の手順を実行する必要があります。
 
-1. [Adobe Experience PlatformWeb SDKのインストール](../../fundamentals/installing-the-sdk.md)
+1. [Adobe Experience PlatformWeb SDK](../../fundamentals/installing-the-sdk.md)をインストール
 2. 個人用に設定するシングルページアプリ内のすべてのXDM表示を特定します。
-3. XDM表示を定義した後、ABまたはXT VECアクティビティを配信するために、に `sendEvent()` 設定した関数と、対応するXDM表示をシングルページアプリで実装 `renderDecisions``true` します。 XDM表示を渡す必要があり `xdm.web.webPageDetails.viewName`ます。 この手順に従うと、マーケターはVisual Experience Composerを利用して、これらのXDMに対してA/BテストとXTテストを開始できます。
+3. XDM表示を定義した後、ABまたはXT VECアクティビティを配信するために、`renderDecisions`を`true`に設定し、対応するXDM表示をシングルページアプリで実装します。 `sendEvent()`XDM表示は`xdm.web.webPageDetails.viewName`に渡す必要があります。 この手順に従うと、マーケターはVisual Experience Composerを利用して、これらのXDMに対してA/BテストとXTテストを開始できます。
 
    ```javascript
    alloy("sendEvent", { 
@@ -82,11 +82,11 @@ XDM表示は、Adobe Targetで活用して、マーケターがVisual Experience
 
 >[!NOTE]
 >
->最初の `sendEvent()` 呼び出し時に、エンドユーザーにレンダリングする必要のあるすべてのXDM表示が取得され、キャッシュされます。 XDM表示が渡された以降の `sendEvent()` 呼び出しは、キャッシュから読み取られ、サーバーコールなしでレンダリングされます。
+>最初の`sendEvent()`呼び出し時に、エンドユーザに対してレンダリングする必要のあるすべてのXDM表示が取得され、キャッシュされます。 XDM表示が渡された後の`sendEvent()`呼び出しは、キャッシュから読み出され、サーバーコールなしでレンダリングされます。
 
 ## `sendEvent()` 関数の例
 
-この節では、仮定的なeコマースSPA用にReactで `sendEvent()` 関数を呼び出す方法を示す3つの例の概要を説明します。
+この節では、Reactで仮定のeコマースSPA用に`sendEvent()`関数を呼び出す方法を示す3つの例を概説します。
 
 ### 例1:A/Bテストホームページ
 
@@ -94,7 +94,7 @@ XDM表示は、Adobe Targetで活用して、マーケターがVisual Experience
 
 ![](assets/use-case-1.png)
 
-ホームサイト全体でA/Bテストを実行するに `sendEvent()` は、XDMを次のように `viewName` 設定して呼び出す必要がありま `home`す。
+ホームサイト全体でA/Bテストを実行するには、`sendEvent()`を呼び出し、XDM `viewName`を`home`に設定する必要があります。
 
 ```jsx
 function onViewChange() { 
@@ -134,7 +134,7 @@ history.listen(onViewChange);
 
 ### 例2:パーソナライズされた製品
 
-マーケティングチームは、ユーザーが「もっと **ロードする」をクリックした後で価格ラベルの色を赤に変更して、2番目の行の製品をパーソナライズしたいと考えています**。
+マーケティングチームは、ユーザーが&#x200B;**「さらに**&#x200B;を読み込む」をクリックした後に、価格ラベルの色を赤に変更して、2行目の製品をパーソナライズしたいと考えています。
 
 ![](assets/use-case-2.png)
 
@@ -172,11 +172,11 @@ class Products extends Component {
 
 ### 例3:A/Bテスト配信の環境設定
 
-The marketing team want to run an A/B test to see whether changing the color of the button from blue to red when **Express Delivery** is selected can boost conversions (as opposed to keeping the button color blue for both delivery options).
+**高速配信**&#x200B;が選択されている場合にボタンの色を青から赤に変更すると、(両方の配信オプションのボタンの色を青に保つのではなく)コンバージョンが高くなるかどうかをA/Bテストを実行します。
 
 ![](assets/use-case-3.png)
 
-選択した配信の好みに応じてサイト上のコンテンツをパーソナライズするために、配信の好みごとに表示を作成することができる。 「 **標準」配信を選択した場合** 、表示に「checkout-normal」という名前を付けることができます。 If **Express Delivery** is selected, the View can be named &quot;checkout-express&quot;.
+選択した配信の好みに応じてサイト上のコンテンツをパーソナライズするために、配信の好みごとに表示を作成することができる。 **通常の配信**&#x200B;を選択した場合、表示には「checkout-normal」という名前を付けることができます。 「**高速配信**」が選択されている場合は、表示に「checkout-express」という名前を付けることができます。
 
 ```jsx
 function onViewChange(viewName) { 
@@ -219,11 +219,11 @@ class Checkout extends Component {
 
 ## SPA用のVisual Experience Composerの使用
 
-XDM表示の定義が完了し、それらのXDM表示が渡さ `sendEvent()` れた状態で実装されると、VECはこれらの表示を検出し、A/BまたはXTアクティビティのアクションや変更を作成できるようになります。
+XDM表示の定義が完了し、それらのXDM表示が渡された`sendEvent()`を実装すると、VECはこれらの表示を検出し、A/BまたはXTアクティビティに対するアクションや変更を作成できるようになります。
 
 >[!NOTE]
 >
->SPAでVECを使用するには、 [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) または [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extensionをインストールしてアクティベートする必要があります。
+>SPAでVECを使用するには、[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)または[Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extensionをインストールしてアクティブ化する必要があります。
 
 ### 変更パネル
 
@@ -233,7 +233,7 @@ XDM表示の定義が完了し、それらのXDM表示が渡さ `sendEvent()` �
 
 ### アクション
 
-アクションをクリックすると、このアクションが適用されるサイトの要素がハイライトされます。Each VEC action created under a View has the following icons: **Information**, **Edit**, **Clone**, **Move**, and **Delete**. これらのアイコンの詳細については、次の表で説明します。
+アクションをクリックすると、このアクションが適用されるサイトの要素がハイライトされます。表示の下で作成される各VECアクションには、次のアイコンがあります。**情報**、**編集**、**クローン**、**移動**、**削除**。 これらのアイコンの詳細については、次の表で説明します。
 
 ![](assets/action-icons.png)
 
@@ -241,8 +241,8 @@ XDM表示の定義が完了し、それらのXDM表示が渡さ `sendEvent()` �
 |---|---|
 | 情報 | アクションの詳細を表示します。 |
 | Edit | アクションのプロパティを直接編集できます。 |
-| 複製 | 変更パネルに存在する 1 つ以上のビューまたは VEC で参照および移動した 1 つ以上のビューにアクションを複製します。アクションは、必ずしも変更パネルに存在する必要はありません。<br/><br/>**注意：** クローン・オペレーションの作成後、VECの表示に[参照]を使用して移動し、クローン・アクションが有効なオペレーションであったかどうかを確認する必要があります。 アクションがビューに適用できない場合、エラーが表示されます。 |
-| 移動 | 変更パネルに既に存在するページ読み込みイベントまたはその他のビューにアクションを移動します。<br/><br/>**ページ型イベント:** ページ読み込みイベントに対応するアクションは、Webアプリケーションの最初のページ読み込みに適用されます。 <br/><br/>**注意：**&#x200B;移動操作が行われた後、「参照」を使用してVEC内の表示に移動し、移動が有効な操作であったかどうかを確認する必要があります。 アクションがビューに適用できない場合、エラーが表示されます。 |
+| 複製 | 変更パネルに存在する 1 つ以上のビューまたは VEC で参照および移動した 1 つ以上のビューにアクションを複製します。アクションは、必ずしも変更パネルに存在する必要はありません。<br/><br/>**注意：クローン操作を行った** 後、VEC内の表示に[参照]を使用して移動し、そのクローン操作が有効な操作であったかどうかを確認する必要があります。アクションがビューに適用できない場合、エラーが表示されます。 |
+| 移動 | 変更パネルに既に存在するページ読み込みイベントまたはその他のビューにアクションを移動します。<br/><br/>**ページ読み込みイベント：ページ読み込みイベントに対応する** すべてのアクションは、Webアプリケーションの最初のページ読み込みに適用されます。<br/><br/>**注意：**&#x200B;移動操作が行われた後、「参照」を使用してVEC内の表示に移動し、移動が有効な操作であったかどうかを確認する必要があります。アクションがビューに適用できない場合、エラーが表示されます。 |
 | Delete | アクションを削除します。 |
 
 ## SPAでのVECの使用例
@@ -253,24 +253,24 @@ XDM表示の定義が完了し、それらのXDM表示が渡さ `sendEvent()` �
 
 以前のドキュメントでは、「home」という名前の表示がホームサイト全体に対して定義されていました。 次に、マーケティングチームは「ホーム」表示を次のように更新します。
 
-* 「カート **」** ボタン **と「いいね！」ボタンを** 、青の明るい部分に変更します。 これは、ヘッダーのコンポーネントの変更が含まれるので、ページの読み込み中に発生する必要があります。
-* Change the **Latest Products for 2019** label to **Hottest Products for 2019** and change the text color to purple.
+* **追加を買い物かご**&#x200B;に、**いいね！**&#x200B;ボタンを、より明るい青色の共有に変更します。 これは、ヘッダーのコンポーネントの変更が含まれるので、ページの読み込み中に発生する必要があります。
+* **2019年の最新製品**&#x200B;のラベルを&#x200B;**2019年の最新製品**&#x200B;に変更し、テキストの色を紫に変更します。
 
-To make these updates in the VEC, select **Compose** and apply those changes to the &quot;home&quot; view.
+VECでこれらの更新を行うには、**「構成**」を選択し、変更を「ホーム」表示に適用します。
 
 ![](assets/vec-home.png)
 
 ### 例2:製品ラベルの変更
 
-「products-page-2」表示の場合、マーケティングチームは **Price** ラベルを **Sale Price** （販売価格）に変更し、ラベルの色を赤に変更したいと考えています。
+「products-page-2」表示の場合、マーケティングチームは、**価格**&#x200B;ラベルを&#x200B;**販売価格**&#x200B;に変更し、ラベルの色を赤に変更することを希望します。
 
 VECでこれらの更新を行うには、次の手順が必要です。
 
-1. VECで「 **参照** 」を選択します。
-2. サイトの上部ナビゲーションで **「製品** 」を選択します。
-3. Select **Load More** once to view the second row of products.
-4. VECで **構成** (Compose)を選択します。
-5. Apply actions to change the text label to **Sale Price** and the color to red.
+1. VECで「**参照**」を選択します。
+2. サイトの上部ナビゲーションで&#x200B;**製品**&#x200B;を選択します。
+3. 「**もっと**&#x200B;読み込む」を1回選択して、2行目の製品を表示します。
+4. VECで「**構成**」を選択します。
+5. テキストラベルを&#x200B;**販売価格**&#x200B;に変更し、色を赤に変更するアクションを適用します。
 
 ![](assets/vec-products-page-2.png)
 
@@ -280,16 +280,16 @@ VECでこれらの更新を行うには、次の手順が必要です。
 
 VECでこれらの更新を行うには、次の手順が必要です。
 
-1. VECで「 **参照** 」を選択します。
+1. VECで「**参照**」を選択します。
 2. 製追加品を買い物かごに追加する必要があります。
 3. サイトの右上隅にある買い物かごアイコンを選択します。
-4. 「注文を **チェックアウト**」を選択します。
-5. 「 **配信プリファレンス」(** Preferences **)の「高速配信**」(Express Client)ラジオボタンを選択します。
-6. VECで **構成** (Compose)を選択します。
-7. [ **支払** ]ボタンの色を赤に変更します。
+4. 「**注文をチェックアウト**」を選択します。
+5. **配信の環境設定**&#x200B;の下にある「配信&#x200B;**高速設定**」ラジオボタンを選択します。
+6. VECで「**構成**」を選択します。
+7. **ペイ**&#x200B;ボタンの色を赤に変更します。
 
 >[!NOTE]
 >
->「checkout-express」表示は、「 **Express配信** 」ラジオボタンが選択されるまで、変更パネルに表示されません。 これは、この`sendEvent()` 機能が実行されるのは、「 **高速配信** 」ラジオボタンが選択されたときです。したがって、VECは、ラジオボタンが選択されるまで「チェックアウト高速」表示を認識しないからです。
+>「checkout-express」表示は、「**高速配信**」ラジオボタンが選択されるまで、変更パネルに表示されません。 これは、`sendEvent()`関数が実行されるのは、**「高速配信」**&#x200B;ラジオボタンが選択されたときです。したがって、VECは、ラジオボタンが選択されるまで「checkout-express」表示を認識しないからです。
 
 ![](assets/vec-delivery-preference.png)
