@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;sensei machine learning api
+keywords: Experience Platform；モデルの発行；Data Science Workspace；人気の高いトピック；Senesie機械学習api
 solution: Experience Platform
 title: モデルをサービスとして公開する（API）
 topic: tutorial
@@ -8,23 +8,23 @@ description: このチュートリアルでは、Senesie Machine Learning APIを
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 49%
+source-wordcount: '1510'
+ht-degree: 48%
 
 ---
 
 
 # モデルをサービスとして公開する（API）
 
-このチュートリアルでは、を使用して、モデルをサービスとしてパブリッシュするプロセスについて説明 [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)します。
+このチュートリアルでは、[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)を使用して、モデルをサービスとしてパブリッシュするプロセスについて説明します。
 
 ## はじめに
 
-このチュートリアルでは、Adobe Experience Platformデータサイエンスワークスペースに関する実用的な理解が必要です。 このチュートリアルを始める前に、 [Data Science Workspaceの概要](../home.md) 、サービスの概要を確認してください。
+このチュートリアルでは、Adobe Experience Platformデータサイエンスワークスペースに関する実用的な理解が必要です。 このチュートリアルを始める前に、[データサイエンスワークスペースの概要](../home.md)で、サービスの概要を確認してください。
 
-このチュートリアルに従うには、既存のMLエンジン、MLインスタンス、およびテストが必要です。 APIでこれらを作成する手順については、パッケージ化されたレシピの [読み込みに関するチュートリアルを参照してください](./import-packaged-recipe-api.md)。
+このチュートリアルに従うには、既存のMLエンジン、MLインスタンス、およびテストが必要です。 APIでこれらを作成する手順については、[パッケージ化されたレシピの読み込み](./import-packaged-recipe-api.md)のチュートリアルを参照してください。
 
-最後に、このチュートリアルを開始する前に、開発者ガイドの [「はじめに](../api/getting-started.md) 」の節を参照して、 [!DNL Sensei Machine Learning] APIを正しく呼び出すために必要な重要な情報を確認してください。このチュートリアル全体で使用する必要のあるヘッダーも含まれます。
+最後に、このチュートリアルを始める前に、[!DNL Sensei Machine Learning] APIの呼び出しを成功させるために知っておく必要のある重要な情報について、開発者ガイドの[はじめに](../api/getting-started.md)の節を参照してください。
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -40,7 +40,7 @@ ht-degree: 49%
 
 | 用語 | 定義 |
 --- | ---
-| **機械学習インスタンス（ML インスタンス）** | 特定のデータ、パラメーター、および [!DNL Sensei][!DNL Sensei] コードを含む、特定のテナント用のエンジンのインスタンス。 |
+| **機械学習インスタンス（ML インスタンス）** | 特定のテナント用の[!DNL Sensei]エンジンのインスタンス。特定のデータ、パラメーター、および[!DNL Sensei]コードを含みます。 |
 | **Experiment** | トレーニング Experiment Run、スコアリングExperiment Run、またはその両方を保持するための包括的なエンティティ。 |
 | **スケジュールに沿った Experiment** | トレーニング Experiment Run またはスコアリング Experiment Run の自動化を表す用語。これらの実験は、ユーザー定義のスケジュールに従って実行されます。 |
 | **Experiment Run** | トレーニング Experiment やスコアリング Experiment の特定のインスタンス。特定の Experiment から複数の Experiment Run をおこなう場合、トレーニングやスコアリングに使用されるデータセット値が異なる場合があります。 |
@@ -96,7 +96,7 @@ curl -X POST
 
 **応答** 
 
-成功した応答は、新たに作成されたMLサービスの詳細を返します。この詳細には、その独自の値と、対応するスコアリングテスト `id` の値 `scoringExperimentId` が含まれます。
+成功した応答は、新たに作成されたMLサービスの詳細を返します。この詳細には、対応するスコアリングテストの一意の`id`と`scoringExperimentId`が含まれます。
 
 
 ```JSON
@@ -178,7 +178,7 @@ curl -X POST
 
 **応答** 
 
-正常に応答すると、新しく作成されたMLサービスの詳細が返されます。 これには、サービス独自のもの `id`に加え、対応するトレーニング `trainingExperimentId` とスコアリングの実験が含ま `scoringExperimentId` れます。
+正常に応答すると、新しく作成されたMLサービスの詳細が返されます。 これには、サービス固有の`id`と、対応するトレーニングとスコアリングの実験の`trainingExperimentId`と`scoringExperimentId`が含まれます。
 
 ```JSON
 {
@@ -256,7 +256,7 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 
 **応答** 
 
-正常に応答すると、新しく作成されたMLサービスの詳細が返されます。 これには、サービス独自のトレーニング `id`とスコアリングの実験が含まれ `trainingExperimentId` 、それぞれ `scoringExperimentId` に対応するトレーニングとスコアリングの実験が含まれます。 以下の応答例では、の存在 `trainingSchedule` と `scoringSchedule` 示唆に基づいて、トレーニングとスコアリングのテストエンティティが「Everiments」というスケジュールに従っています。
+正常に応答すると、新しく作成されたMLサービスの詳細が返されます。 これには、サービス固有の`id`と、対応するトレーニングとスコアリングの実験の`trainingExperimentId`と`scoringExperimentId`が含まれます。 以下の応答例では、`trainingSchedule`と`scoringSchedule`の存在が示しているので、トレーニングとスコアリングのテストエンティティが「Everiments」というスケジュールになっていることが示されています。
 
 ```JSON
 {
@@ -285,9 +285,9 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 }
 ```
 
-## MLサービスの検索 {#retrieving-ml-services}
+## MLサービスの検索{#retrieving-ml-services}
 
-既存のMLサービスを検索するには、に `GET` リクエストを作成し、パスに一意のMLサービス `/mlServices``id` を提供します。
+`/mlServices`に`GET`リクエストを作成し、パスにMLサービスの一意の`id`を提供することで、既存のMLサービスを検索できます。
 
 **API 形式**
 
@@ -297,7 +297,7 @@ GET /mlServices/{SERVICE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SERVICE_ID}` | 検索してい `id` るMLサービスの一意の名前。 |
+| `{SERVICE_ID}` | 検索しているMLサービスの一意の`id`。 |
 
 **リクエスト**
 
@@ -347,7 +347,7 @@ curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 ## トレーニングまたはスコアリングのスケジュール
 
-If you want to schedule scoring and training on an ML Service that has already been published, you can do so by updating the existing ML Service with a `PUT` request on `/mlServices`.
+既に発行済みのMLサービスに対するスコアリングとトレーニングをスケジュールする場合は、`/mlServices`の`PUT`リクエストを使用して既存のMLサービスを更新します。
 
 **API 形式**
 
@@ -357,11 +357,11 @@ PUT /mlServices/{SERVICE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SERVICE_ID}` | 更新 `id` するMLサービスの一意の値。 |
+| `{SERVICE_ID}` | 更新するMLサービスの一意の`id`。 |
 
 **リクエスト**
 
-次のリクエストは、既存のMLサービスのトレーニングとスコアリングをスケジュールします。これには、キーとキーをそれぞれのキー、キー、キーと共 `trainingSchedule` に追加します `scoringSchedule``startTime``endTime``cron` 。
+次のリクエストは、`trainingSchedule`キーと`scoringSchedule`キーをそれぞれ`startTime`キー、`endTime`キー、`cron`キーと共に追加して、既存のMLサービスのトレーニングとスコアリングをスケジュールします。
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -394,7 +394,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->Do not attempt to modify the `startTime` on existing scheduled training and scoring jobs. `startTime` を変更する必要がある場合は、同じモデルを公開して、トレーニングジョブとスコアリングジョブのスケジュールを再設定することを検討してください。
+>既存の予定されているトレーニングジョブとスコアリングジョブの`startTime`を変更しないでください。 `startTime` を変更する必要がある場合は、同じモデルを公開して、トレーニングジョブとスコアリングジョブのスケジュールを再設定することを検討してください。
 
 **応答** 
 
