@@ -5,9 +5,9 @@ title: Adobe Experience Platform ID サービス
 topic: tutorial
 description: アイデンティティグラフは、特定の顧客の異なるアイデンティティ間の関係を示すマップです。異なるチャネル間での顧客のブランドとの相互作用を視覚的に示します。
 translation-type: tm+mt
-source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
+source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '930'
 ht-degree: 1%
 
 ---
@@ -100,7 +100,7 @@ IDグラフは、IDグラフビューアからもアクセスできます。
 IDグラフビューアにアクセスするとエラーが発生する場合があります。 IDグラフビューアを操作する場合の前提条件と制限のリストを次に示します。
 
 - 選択した名前空間にID値が存在する必要があります。
-- IDグラフビューアを生成するには、少なくとも2つのIDがリンクされている必要があります。
+- IDグラフビューアを生成するには、少なくとも2つのIDがリンクされている必要があります。 ID値は1つだけで、IDはリンクされていない可能性があります。この場合、値は[!DNL Profile]ビューアにのみ存在します。
 - IDグラフビューアは、IDの上限を150個にする必要があります。
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
