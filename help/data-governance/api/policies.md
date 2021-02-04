@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
+keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；APIベースの適用；データガバナンス
 solution: Experience Platform
 title: ポリシー
 topic: developer guide
@@ -7,7 +7,7 @@ description: データ使用ポリシーは組織が導入するルールで、E
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1815'
 ht-degree: 9%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 9%
 
 # ポリシーエンドポイント
 
-Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. の `/policies` エンドポイント [!DNL Policy Service API] を使用すると、組織のデータ使用ポリシーをプログラムで管理できます。
+データ使用ポリシーとは、[!DNL Experience Platform]内のデータに対して実行を許可（制限）されるマーケティングアクションの種類を記述するルールです。 [!DNL Policy Service API]の`/policies`エンドポイントを使用すると、組織のデータ使用ポリシーをプログラムで管理できます。
 
 ## はじめに
 
-The API endpoint used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). 先に進む前に、 [はじめに](getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
-## Retrieve a list of policies {#list}
+## ポリシーのリストを取得{#list}
 
-すべてのまたは `core` ポリシーをリストするには、それぞれに対してGETリクエストを行う `custom` か、ポリシーをリクエスト `/policies/core``/policies/custom`します。
+`/policies/core`または`/policies/custom`に対してGETリクエストを行うことで、すべての`core`または`custom`ポリシーをリストできます。
 
 **API 形式**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **応答** 
 
-成功した応答には、取得した各ポリシーの詳細( `children``id` 値を含む)をリストする配列が含まれます。 特定のポリシーの `id` フィールドを使用して、そのポリシーの [参照](#lookup)、 [更新](#update)、 [](#delete) 削除の各リクエストを実行できます。
+正常な応答には`children`配列が含まれ、`id`値を含む取得された各ポリシーの詳細をリストします。 特定のポリシーの`id`フィールドを使用して、そのポリシーの[lookup](#lookup)、[update](#update)、[delete](#delete)の各リクエストを実行できます。
 
 ```JSON
 {
@@ -142,14 +142,14 @@ curl -X GET \
 | --- | --- |
 | `_page.count` | 取得したポリシーの合計数です。 |
 | `name` | ポリシーの表示名です。 |
-| `status` | ポリシーの現在のステータス。 次の3つのステータスが考えられます。 `DRAFT`、 `ENABLED`または `DISABLED`。 By default, only `ENABLED` policies participate in evaluation. 詳しくは、 [ポリシー評価の概要](../enforcement/overview.md) を参照してください。 |
+| `status` | ポリシーの現在のステータス。 次の3つのステータスが考えられます。`DRAFT`、`ENABLED`、または`DISABLED`。 デフォルトでは、`ENABLED`ポリシーのみが評価に参加します。 詳しくは、[ポリシー評価](../enforcement/overview.md)の概要を参照してください。 |
 | `marketingActionRefs` | ポリシーに適用されるすべてのマーケティングアクションのURIをリストする配列。 |
 | `description` | ポリシーの使用例に関する詳細なコンテキストを提供する、オプションの説明です。 |
-| `deny` | ポリシーに関連付けられたマーケティングアクションが実行されるのを制限する、特定のデータ使用ラベルを表すオブジェクトです。 このプロパティの詳細については、「ポリシーの [作成](#create-policy) 」の節を参照してください。 |
+| `deny` | ポリシーに関連付けられたマーケティングアクションが実行されるのを制限する、特定のデータ使用ラベルを表すオブジェクトです。 このプロパティの詳細については、[ポリシー](#create-policy)の作成の節を参照してください。 |
 
-## ポリシーの検索 {#look-up}
+## ポリシー{#look-up}を検索
 
-GET要求のパスにそのポリシーのプロパティを含めると、特定のポリシーを検索できます。 `id`
+GET要求のパスにそのポリシーの`id`プロパティを含めると、特定のポリシーを検索できます。
 
 **API 形式**
 
@@ -160,7 +160,7 @@ GET /policies/custom/{POLICY_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{POLICY_ID}` | The `id` of the policy you want to look up. |
+| `{POLICY_ID}` | 検索するポリシーの`id`。 |
 
 **リクエスト**
 
@@ -223,21 +223,21 @@ curl -X GET \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | ポリシーの表示名です。 |
-| `status` | ポリシーの現在のステータス。 次の3つのステータスが考えられます。 `DRAFT`、 `ENABLED`または `DISABLED`。 By default, only `ENABLED` policies participate in evaluation. 詳しくは、 [ポリシー評価の概要](../enforcement/overview.md) を参照してください。 |
+| `status` | ポリシーの現在のステータス。 次の3つのステータスが考えられます。`DRAFT`、`ENABLED`、または`DISABLED`。 デフォルトでは、`ENABLED`ポリシーのみが評価に参加します。 詳しくは、[ポリシー評価](../enforcement/overview.md)の概要を参照してください。 |
 | `marketingActionRefs` | ポリシーに適用されるすべてのマーケティングアクションのURIをリストする配列です。 |
 | `description` | ポリシーの使用例に関する詳細なコンテキストを提供する、オプションの説明です。 |
-| `deny` | ポリシーに関連付けられたマーケティングアクションが実行されるのを制限する、特定のデータ使用ラベルを表すオブジェクトです。 このプロパティの詳細については、「ポリシーの [作成](#create-policy) 」の節を参照してください。 |
+| `deny` | ポリシーに関連付けられたマーケティングアクションが実行されるのを制限する、特定のデータ使用ラベルを表すオブジェクトです。 このプロパティの詳細については、[ポリシー](#create-policy)の作成の節を参照してください。 |
 
-## Create a custom policy {#create-policy}
+## カスタムポリシー{#create-policy}の作成
 
-この [!DNL Policy Service] APIでは、ポリシーは次のように定義されます。
+[!DNL Policy Service] APIでは、ポリシーは次のように定義されます。
 
 * 特定のマーケティングアクションへの参照
 * マーケティングアクションの実行が制限されているデータ使用ラベルを説明する式
 
 後者の要件を満たすには、ポリシー定義に、データ使用ラベルの存在に関するブール式を含める必要があります。 この式はポリシー式と呼ばれます。
 
-ポリシー式は、各ポリシー定義内の `deny` プロパティの形式で提供されます。 単一のラベルの存在のみをチェックする単純な `deny` オブジェクトの例を次に示します。
+ポリシー式は、各ポリシー定義内で`deny`プロパティの形式で提供されます。 単純な`deny`オブジェクトの例で、単一のラベルの存在のみをチェックする場合は、次のようになります。
 
 ```json
 "deny": {
@@ -247,7 +247,7 @@ curl -X GET \
 
 ただし、多くのポリシーでは、データ使用ラベルの存在に関して、より複雑な条件を指定しています。 これらの使用例をサポートするために、ポリシー式を説明するブール演算を含めることもできます。 ポリシー式オブジェクトには、ラベルまたは演算子と演算値のいずれかを含める必要がありますが、両方を含めることはできません。 また、各演算値もポリシー式オブジェクトです。
 
-例えば、ラベルが存在するデータに対してマーケティングアクションを実行できないようにするポリシーを定義する場合、 `C1 OR (C3 AND C7)` ポリシーの `deny` プロパティは次のように指定します。
+例えば、`C1 OR (C3 AND C7)`ラベルが存在するデータに対してマーケティングアクションを実行できないようにするポリシーを定義する場合、ポリシーの`deny`プロパティは次のように指定します。
 
 ```JSON
 "deny": {
@@ -267,11 +267,11 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `operator` | 兄弟 `operands` 配列に指定されたラベル間の条件付き関係を示します。 使用できる値は次のとおりです。 <ul><li>`OR`:式は、 `operands` 配列内のラベルのいずれかが存在する場合はtrueに解決されます。</li><li>`AND`:式は、 `operands` 配列内のすべてのラベルが存在する場合にのみtrueに解決されます。</li></ul> |
-| `operands` | オブジェクトの配列。各オブジェクトは、1つのラベルか、およびの追加のペアを表し `operator` ま `operands` す。 配列内のラベルや操作の存在は、その兄弟 `operands``operator` プロパティの値に基づいてtrueまたはfalseに解決されます。 |
+| `operator` | 兄弟`operands`配列に指定されたラベル間の条件付き関係を示します。 使用できる値は次のとおりです。 <ul><li>`OR`:式は、 `operands` 配列内のラベルのいずれかが存在する場合はtrueに解決されます。</li><li>`AND`:式は、 `operands` 配列内のすべてのラベルが存在する場合にのみtrueに解決されます。</li></ul> |
+| `operands` | オブジェクトの配列。各オブジェクトは、1つのラベルか、または追加の`operator`と`operands`のプロパティのペアを表します。 `operands`配列内のラベルや操作の存在は、兄弟`operator`プロパティの値に基づいてtrueまたはfalseに解決されます。 |
 | `label` | ポリシーに適用される単一のデータ使用ラベルの名前です。 |
 
-You can create a new custom policy by making a POST request to the `/policies/custom` endpoint.
+`/policies/custom`エンドポイントにPOSTリクエストを行うことで、新しいカスタムポリシーを作成できます。
 
 **API 形式**
 
@@ -281,7 +281,7 @@ POST /policies/custom
 
 **リクエスト**
 
-次のリクエストは、ラベルを含むデータに対するマーケティング操作の実行を制限する新しいポリシー `exportToThirdParty` を作成 `C1 OR (C3 AND C7)`します。
+次のリクエストは、`C1 OR (C3 AND C7)`というラベルを含むデータに対するマーケティング操作`exportToThirdParty`の実行を制限する新しいポリシーを作成します。
 
 ```shell
 curl -X POST \
@@ -317,14 +317,14 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | ポリシーの表示名です。 |
-| `status` | ポリシーの現在のステータス。 次の3つのステータスが考えられます。 `DRAFT`、 `ENABLED`または `DISABLED`。 By default, only `ENABLED` policies participate in evaluation. 詳しくは、 [ポリシー評価の概要](../enforcement/overview.md) を参照してください。 |
-| `marketingActionRefs` | ポリシーに適用されるすべてのマーケティングアクションのURIをリストする配列です。 マーケティングアクションのURIは、マーケティングアクション `_links.self.href` を [検索するための応答の下に提供されます](./marketing-actions.md#look-up)。 |
+| `status` | ポリシーの現在のステータス。 次の3つのステータスが考えられます。`DRAFT`、`ENABLED`、または`DISABLED`。 デフォルトでは、`ENABLED`ポリシーのみが評価に参加します。 詳しくは、[ポリシー評価](../enforcement/overview.md)の概要を参照してください。 |
+| `marketingActionRefs` | ポリシーに適用されるすべてのマーケティングアクションのURIをリストする配列です。 マーケティングアクションのURIは、[マーケティングアクション](./marketing-actions.md#look-up)の検索に対する応答として`_links.self.href`の下に提供されます。 |
 | `description` | ポリシーの使用例に関する詳細なコンテキストを提供する、オプションの説明です。 |
 | `deny` | ポリシーに関連付けられたマーケティングアクションの実行が制限されている特定のデータ使用ラベルを説明するポリシー式です。 |
 
 **応答** 
 
-A successful response returns the details of the newly created policy, including its `id`. この値は読み取り専用で、ポリシーの作成時に自動的に割り当てられます。
+正常に応答すると、新しく作成されたポリシーの詳細（`id`を含む）が返されます。 この値は読み取り専用で、ポリシーの作成時に自動的に割り当てられます。
 
 ```JSON
 {
@@ -369,17 +369,17 @@ A successful response returns the details of the newly created policy, including
 }
 ```
 
-## カスタムポリシーの更新 {#update}
+## カスタムポリシー{#update}の更新
 
 >[!IMPORTANT]
 >
->更新できるのは、カスタムポリシーのみです。 コアポリシーを有効または無効にする場合は、有効になっているコアポリシーのリストの [更新に関する節を参照してください](#update-enabled-core)。
+>更新できるのは、カスタムポリシーのみです。 コアポリシーを有効または無効にする場合は、[有効なコアポリシーのリストの更新](#update-enabled-core)の節を参照してください。
 
 既存のカスタムポリシーを更新するには、ポリシーの更新された形式全体を含むペイロードを、PUTリクエストのパスに指定します。 つまり、PUTリクエストは基本的にポリシーを書き換えます。
 
 >[!NOTE]
 >
->カスタムポリシーの一部を上書きするのではなく、ポリシーの1つ以上のフィールドのみを更新する場合は [](#patch) 、カスタムポリシーの一部の更新に関するセクションを参照してください。
+>ポリシーを上書きせずに、1つ以上のフィールドのみを更新する場合は、[カスタムポリシーの一部の更新](#patch)の節を参照してください。
 
 **API 形式**
 
@@ -389,7 +389,7 @@ PUT /policies/custom/{POLICY_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{POLICY_ID}` | The `id` of the policy you want to update. |
+| `{POLICY_ID}` | 更新するポリシーの`id`。 |
 
 **リクエスト**
 
@@ -425,10 +425,10 @@ curl -X PUT \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | ポリシーの表示名です。 |
-| `status` | ポリシーの現在のステータス。 次の3つのステータスが考えられます。 `DRAFT`、 `ENABLED`または `DISABLED`。 By default, only `ENABLED` policies participate in evaluation. 詳しくは、 [ポリシー評価の概要](../enforcement/overview.md) を参照してください。 |
-| `marketingActionRefs` | ポリシーに適用されるすべてのマーケティングアクションのURIをリストする配列です。 マーケティングアクションのURIは、マーケティングアクション `_links.self.href` を [検索するための応答の下に提供されます](./marketing-actions.md#look-up)。 |
+| `status` | ポリシーの現在のステータス。 次の3つのステータスが考えられます。`DRAFT`、`ENABLED`、または`DISABLED`。 デフォルトでは、`ENABLED`ポリシーのみが評価に参加します。 詳しくは、[ポリシー評価](../enforcement/overview.md)の概要を参照してください。 |
+| `marketingActionRefs` | ポリシーに適用されるすべてのマーケティングアクションのURIをリストする配列です。 マーケティングアクションのURIは、[マーケティングアクション](./marketing-actions.md#look-up)の検索に対する応答として`_links.self.href`の下に提供されます。 |
 | `description` | ポリシーの使用例に関する詳細なコンテキストを提供する、オプションの説明です。 |
-| `deny` | ポリシーに関連付けられたマーケティングアクションの実行が制限されている特定のデータ使用ラベルを説明するポリシー式です。 このプロパティの詳細については、「ポリシーの [作成](#create-policy) 」の節を参照してください。 |
+| `deny` | ポリシーに関連付けられたマーケティングアクションの実行が制限されている特定のデータ使用ラベルを説明するポリシー式です。 このプロパティの詳細については、[ポリシー](#create-policy)の作成の節を参照してください。 |
 
 **応答** 
 
@@ -469,19 +469,19 @@ curl -X PUT \
 }
 ```
 
-## Update a portion of a custom policy {#patch}
+## カスタムポリシーの一部の更新{#patch}
 
 >[!IMPORTANT]
 >
->更新できるのは、カスタムポリシーのみです。 コアポリシーを有効または無効にする場合は、有効になっているコアポリシーのリストの [更新に関する節を参照してください](#update-enabled-core)。
+>更新できるのは、カスタムポリシーのみです。 コアポリシーを有効または無効にする場合は、[有効なコアポリシーのリストの更新](#update-enabled-core)の節を参照してください。
 
-ポリシーの特定の部分を更新するには、PATCH リクエストを使用します。ポリシーを書き換えるPUT要求とは異なり、PATCH要求では、要求本文で指定されたプロパティのみが更新されます。 これは、適切なプロパティ(`/status`)とその値(または`ENABLED``DISABLED`)へのパスを指定するだけで済むので、ポリシーを有効または無効にする場合に特に便利です。
+ポリシーの特定の部分を更新するには、PATCH リクエストを使用します。ポリシーを書き換えるPUT要求とは異なり、PATCH要求では、要求本文で指定されたプロパティのみが更新されます。 これは、適切なプロパティ(`/status`)とその値（`ENABLED`または`DISABLED`）へのパスを指定するだけで済むので、ポリシーを有効または無効にする場合に特に便利です。
 
 >[!NOTE]
 >
->PATCH要求のペイロードは、JSONパッチの形式に従います。 受け入れられる構文の詳細については、 [APIの基本的なガイド](../../landing/api-fundamentals.md) を参照してください。
+>PATCH要求のペイロードは、JSONパッチの形式に従います。 受け入れられる構文の詳細については、[APIの基本原則のガイド](../../landing/api-fundamentals.md)を参照してください。
 
-この [!DNL Policy Service] APIは、JSONパッチの操作 `add`、 `remove`およびをサポートし `replace`、以下の例に示すように、複数の更新を1回の呼び出しに組み合わせることができます。
+[!DNL Policy Service] APIは、JSONパッチ操作`add`、`remove`、`replace`をサポートし、以下の例に示すように、複数の更新を1回の呼び出しに組み合わせることができます。
 
 **API 形式**
 
@@ -491,11 +491,11 @@ PATCH /policies/custom/{POLICY_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{POLICY_ID}` | プロパティ `id` を更新するポリシーの名前。 |
+| `{POLICY_ID}` | プロパティを更新するポリシーの`id`。 |
 
 **リクエスト**
 
-次の要求では、2つの `replace` 操作を使用してポリシーのステータスをからに変更 `DRAFT` し、 `ENABLED``description` フィールドを新しい説明で更新します。
+次の要求では、2つの`replace`操作を使用して、ポリシーの状態を`DRAFT`から`ENABLED`に変更し、`description`フィールドを新しい説明で更新します。
 
 >[!IMPORTANT]
 >
@@ -571,13 +571,13 @@ curl -X PATCH \
 }
 ```
 
-## カスタムポリシーの削除 {#delete}
+## カスタムポリシー{#delete}の削除
 
-You can delete a custom policy by including its `id` in the path of a DELETE request.
+DELETE要求のパスに`id`を含めると、カスタムポリシーを削除できます。
 
 >[!WARNING]
 >
->削除したポリシーは復元できません。It is best practice to [perform a lookup (GET) request](#lookup) first to view the policy and confirm it is the correct policy you wish to remove.
+>削除したポリシーは復元できません。まず、[ルックアップ(GET)リクエスト](#lookup)を実行して、ポリシーを表示し、削除する正しいポリシーであることを確認することをお勧めします。
 
 **API 形式**
 
@@ -606,9 +606,9 @@ curl -X DELETE \
 
 ポリシーを再度参照(GET)すると、削除を確認できます。 ポリシーが正常に削除された場合は、HTTP 404 （見つかりません）エラーが表示されます。
 
-## 有効なコアポリシーのリストの取得 {#list-enabled-core}
+## 有効なコアポリシーのリストを取得{#list-enabled-core}
 
-デフォルトでは、有効なデータ使用ポリシーのみが評価に関与します。 エンドポイントにGETリクエストを行うことで、組織で現在有効になっているコアポリシーのリストを取得でき `/enabledCorePolicies` ます。
+デフォルトでは、有効なデータ使用ポリシーのみが評価に関与します。 `/enabledCorePolicies`エンドポイントにGETリクエストを行うことで、組織で現在有効になっているコアポリシーのリストを取得できます。
 
 **API 形式**
 
@@ -629,7 +629,7 @@ curl -X GET \
 
 **応答** 
 
-正常に応答すると、有効なコアポリシーのリストが `policyIds` 配列の下に返されます。
+正常に応答すると、有効なコアポリシーのリストが`policyIds`配列の下に返されます。
 
 ```json
 {
@@ -658,13 +658,13 @@ curl -X GET \
 }
 ```
 
-## 有効なコアポリシーのリストの更新 {#update-enabled-core}
+## 有効なコアポリシーのリストの更新{#update-enabled-core}
 
-デフォルトでは、有効なデータ使用ポリシーのみが評価に関与します。 エンドポイントにPUTリクエストを行うと、1回の呼び出しで、組織で有効になっているコアポリシーのリストを更新でき `/enabledCorePolicies` ます。
+デフォルトでは、有効なデータ使用ポリシーのみが評価に関与します。 `/enabledCorePolicies`エンドポイントにPUTリクエストを送信すると、1回の呼び出しで、組織で有効になっているコアポリシーのリストを更新できます。
 
 >[!NOTE]
 >
->このエンドポイントで有効または無効にできるのは、コアポリシーのみです。 カスタムポリシーを有効または無効にするには、ポリシーの一部の [更新に関する節を参照してください](#patch)。
+>このエンドポイントで有効または無効にできるのは、コアポリシーのみです。 カスタムポリシーを有効または無効にする方法については、[ポリシー](#patch)の一部の更新の節を参照してください。
 
 **API 形式**
 
@@ -695,11 +695,11 @@ curl -X GET \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `policyIds` | 有効にするコアポリシーIDのリストです。 含まれないコアポリシーはすべて `DISABLED` ステータスに設定され、評価には参加しません。 |
+| `policyIds` | 有効にするコアポリシーIDのリストです。 含まれないコアポリシーは`DISABLED`ステータスに設定され、評価には参加しません。 |
 
 **応答** 
 
-正常に応答すると、有効なコアポリシーの更新リストが `policyIds` 配列に返されます。
+正常に応答すると、有効なコアポリシーの更新リストが`policyIds`配列に返されます。
 
 ```json
 {
@@ -726,4 +726,4 @@ curl -X GET \
 
 ## 次の手順
 
-新しいポリシーを定義した場合、または既存のポリシーを更新した場合、 [!DNL Policy Service] APIを使用して、特定のラベルやデータセットに対するマーケティングアクションをテストし、ポリシーで期待どおりの違反が発生しているかどうかを確認できます。 詳しくは、 [ポリシー評価エンドポイントのガイドを参照してください](./evaluation.md) 。
+新しいポリシーを定義したり、既存のポリシーを更新したりしたら、[!DNL Policy Service] APIを使用して、特定のラベルやデータセットに対するマーケティングアクションをテストし、ポリシーで期待どおりの違反が発生しているかどうかを確認できます。 詳しくは、[ポリシー評価エンドポイント](./evaluation.md)のガイドを参照してください。
