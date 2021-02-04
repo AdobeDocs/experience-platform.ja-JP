@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;circle;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；地理；円；データ型；データ型；
 solution: Experience Platform
 title: 地域サークルデータタイプ
 topic: overview
@@ -7,15 +7,15 @@ description: このドキュメントでは、Geo Circle XDMデータタイプ�
 translation-type: tm+mt
 source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 26%
+source-wordcount: '133'
+ht-degree: 23%
 
 ---
 
 
-# [!UICONTROL 地域サークル] （データ型）
+# [!UICONTROL GeoCircledata] タイプ
 
-[!UICONTROL 地理円] (Geo Circle)は、特定の一連の座標を中心にした特定の半径を指定した、円形の地理的な領域を表す標準的なXDMデータ型です。 このデータ型は、 [スキーマ.orgに記載されている公開仕様に基づいています](http://schema.org/GeoCircle)。
+[!UICONTROL 地理] 円は、特定の一連の座標を中心とする特定の半径を指定した、円形の地理的な領域を表す標準のXDMデータ型です。このデータ型は、[スキーマ.org](http://schema.org/GeoCircle)に記載されている公開仕様に基づいています。
 
 <img src="../images/data-types/geo-circle.png" width="400" /><br />
 
