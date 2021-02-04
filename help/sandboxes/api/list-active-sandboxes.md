@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
+keywords: Experience Platform；ホーム；人気のあるトピック；リストのアクティブなサンドボックス；リストのサンドボックス
 solution: Experience Platform
 title: 現在のユーザーのアクティブなサンドボックスを一覧表示
 topic: developer guide
@@ -7,8 +7,8 @@ description: ルートエンドポイントにGETリクエストを行うこと�
 translation-type: tm+mt
 source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 67%
+source-wordcount: '355'
+ht-degree: 65%
 
 ---
 
@@ -29,7 +29,7 @@ GET /{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 詳しくは、 [クエリパラメーターの節を参照してください](#query) 。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 詳しくは、[クエリパラメーター](#query)の節を参照してください。 |
 
 **リクエスト**
 
@@ -111,13 +111,13 @@ curl -X GET \
 | `isDefault` | このサンドボックスが組織のデフォルトのサンドボックスであるかどうかを示すブール型のプロパティです。通常、これは実稼働用サンドボックスです。 |
 | `eTag` | サンドボックスの特定のバージョンの識別子。バージョン管理とキャッシュの効率化に使用され、この値はサンドボックスに変更が追加されるたびに更新されます。 |
 
-## クエリパラメーターの使用 {#query}
+## クエリパラメータ{#query}を使用
 
-この [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) APIは、サンドボックスのリスト表示時に、ページへのクエリパラメーターの使用と結果のフィルターをサポートしています。
+[[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) APIは、サンドボックスのリスト表示時に、ページへのクエリパラメーターの使用と結果のフィルターをサポートしています。
 
 >[!NOTE]
 >
->と `limit``offset` クエリのパラメーターは一緒に指定する必要があります。 1つのみ指定した場合、APIはエラーを返します。 noneを指定した場合、デフォルトの制限は50で、オフセットは0です。
+>`limit`と`offset`のクエリパラメーターは一緒に指定する必要があります。 1つのみ指定した場合、APIはエラーを返します。 noneを指定した場合、デフォルトの制限は50で、オフセットは0です。
 
 | パラメーター | 説明 |
 | --------- | ----------- |
