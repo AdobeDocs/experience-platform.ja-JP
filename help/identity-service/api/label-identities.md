@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;label identities
+keywords: Experience Platform；ホーム；人気のあるトピック；ラベルのID
 solution: Experience Platform
 title: フィールドを ID としてラベル付け
 topic: api guide
@@ -7,15 +7,15 @@ description: 個人を特定できる情報（PII）を含むフィールドは�
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 93%
+source-wordcount: '194'
+ht-degree: 89%
 
 ---
 
 
 # フィールドを ID としてラベル付け
 
-個人を特定できる情報（PII）を含むフィールドは、ID フィールドとしてラベル付けできます。A value provided in an identity field is interpreted as an identity by [!DNL Identity Service]. ID の名前空間は、フィールドのラベル付けの一部として指定されます。
+個人を特定できる情報（PII）を含むフィールドは、ID フィールドとしてラベル付けできます。IDフィールドに指定された値は、[!DNL Identity Service]によってIDとして解釈されます。 ID の名前空間は、フィールドのラベル付けの一部として指定されます。
 
 フィールドを ID としてラベル付けするには、次の条件が満たされている必要があります。
 
