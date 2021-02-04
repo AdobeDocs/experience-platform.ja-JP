@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
+keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックスユーザーガイド；サンドボックスガイド
 solution: Experience Platform
 title: サンドボックスユーザーガイド
 topic: user guide
@@ -7,8 +7,8 @@ description: このドキュメントでは、Adobe Experience Platform ユー�
 translation-type: tm+mt
 source-git-commit: 2d1a9699866bd39de7251731e9f0cd2f753a5083
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 50%
+source-wordcount: '633'
+ht-degree: 49%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 50%
 
 ## サンドボックスの表示
 
-In the Experience Platform UI, select **[!UICONTROL Sandboxes]** in the left-navigation to open the **[!UICONTROL Sandboxes]** dashboard. ダッシュボードには、組織で使用可能なすべてのサンドボックスがリストされます。これには、サンドボックスのタイプ（実稼動または開発）や状態（アクティブ、作成、削除、失敗）が含まれます。
+Experience PlatformUIで、左側のナビゲーションにある「サンドボックス」**[!UICONTROL 「サンドボックス」]**&#x200B;を選択して、**[!UICONTROL サンドボックス]**&#x200B;ダッシュボードを開きます。 ダッシュボードには、組織で使用可能なすべてのサンドボックスがリストされます。これには、サンドボックスのタイプ（実稼動または開発）や状態（アクティブ、作成、削除、失敗）が含まれます。
 
 ![](../images/ui/view-sandboxes.png)
 
@@ -49,13 +49,13 @@ Experience Platformでのサンドボックスの使用方法の概要を簡単�
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-UIで新しいサンドボックスを作成するには、画面の右上にある「サンドボックスを **[!UICONTROL 作成]** 」ボタンを選択します。
+UIで新しいサンドボックスを作成するには、画面の右上にある「Sandboxを作成」**[!UICONTROL ボタンを選択します。]**
 
 ![](../images/ui/create-sandbox.png)
 
-**[!UICONTROL サンドボックスを作成]**&#x200B;ダイアログが表示され、サンドボックスの表示タイトルと名前を指定するよう求められます。**表示タイトル**&#x200B;は、人間が読み取り可能なもので、簡単に識別できる説明的なタイトルにする必要があります。The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise. サンドボックス **[!UICONTROL 名]** (Sandbox **Name**)は、英数字とハイフン(-)で構成する必要があります。また、最大256文字まで使用できます。
+**[!UICONTROL サンドボックスを作成]**&#x200B;ダイアログが表示され、サンドボックスの表示タイトルと名前を指定するよう求められます。**表示タイトル**&#x200B;は、人間が読み取り可能なもので、簡単に識別できる説明的なタイトルにする必要があります。サンドボックス&#x200B;**[!UICONTROL Name]**&#x200B;は、API呼び出しで使用する完全小文字の識別子です。したがって、一意で簡潔にする必要があります。 サンドボックス&#x200B;**[!UICONTROL 名前]**&#x200B;は、英数字とハイフン&#x200B;**(-)**&#x200B;で構成する必要があります。サンドボックスは文字で始まり、最大256文字です。
 
-When finished, select **[!UICONTROL Create]**.
+終了したら、「**[!UICONTROL 作成]**」を選択します。
 
 ![](../images/ui/create-dialog.png)
 
@@ -63,7 +63,7 @@ When finished, select **[!UICONTROL Create]**.
 >
 > あなたが作成できるのは非実稼動のサンドボックスタイプのみ制限されているので、**[!UICONTROL タイプ]**&#x200B;オプションは「非実稼動」でロックされ、操作できません。
 
-Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
+サンドボックスの作成が完了したら、ページを更新し、新しいサンドボックスが&#x200B;**[!UICONTROL サンドボックス]**&#x200B;ダッシュボードに表示され、ステータスが&quot;[!UICONTROL 作成]&quot;になります。 新しいサンドボックスのプロビジョニングには約15分かかります。その後、そのステータスが「[!UICONTROL アクティブ]」に変わります。
 
 ![](../images/ui/creating.png)
 
@@ -75,15 +75,15 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 実稼動以外のサンドボックスをリセットすると、サンドボックスの名前と関連付けられた権限は保持されたまま、そのサンドボックスに関連付けられているすべてのスキーマ（リソース、データセットなど）が削除されます。この「クリーンな」サンドボックスは、引き続き、アクセス権を持つユーザーと同じ名前で使用できます。
 
-To reset a sandbox in the UI, select **[!UICONTROL Sandboxes]** in the left-nav, then select the sandbox you want to reset. In the dialog that appears on the right-hand side of the screen, select **[!UICONTROL Reset Sandbox]**.
+UIでサンドボックスをリセットするには、左側のナビゲーションで&#x200B;**[!UICONTROL サンドボックス]**&#x200B;を選択し、リセットするサンドボックスを選択します。 画面の右側に表示されるダイアログで、「**[!UICONTROL Reset Sandbox]**」を選択します。
 
 ![](../images/ui/reset-sandbox.png)
 
-選択内容を確認するダイアログが表示されます。Select **[!UICONTROL Reset]** to continue.
+選択内容を確認するダイアログが表示されます。「**[!UICONTROL リセット]**」を選択して続行します。
 
 ![](../images/ui/reset-confirm.png)
 
-A confirmation message appears and the sandbox&#39;s state changes to &quot;**[!UICONTROL Resetting]&quot;**. Once it has been provisioned by the system, its state will update to **&quot;[!UICONTROL Active]&quot;** or **&quot;[!UICONTROL Failed]&quot;**.
+確認メッセージが表示され、サンドボックスの状態が「**[!UICONTROL Resetting]」**&#x200B;に変わります。 システムによってプロビジョニングされると、状態は&#x200B;**&quot;[!UICONTROL アクティブ]&quot;**&#x200B;または&#x200B;**&quot;[!UICONTROL 失敗]&quot;**&#x200B;に更新されます。
 
 ![](../images/ui/resetting.png)
 
@@ -95,11 +95,11 @@ A confirmation message appears and the sandbox&#39;s state changes to &quot;**[!
 
 非実稼動用サンドボックスを削除すると、権限を含め、そのサンドボックスに関連付けられているすべてのリソースが完全に削除されます。
 
-To delete a sandbox in the UI, select **[!UICONTROL Sandboxes]** in the left-nav, then select the sandbox you want to delete. In the dialog that appears on the right-hand side of the screen, select **[!UICONTROL Delete Sandbox]**.
+UIのサンドボックスを削除するには、左側のナビゲーションで&#x200B;**[!UICONTROL サンドボックス]**&#x200B;を選択し、削除するサンドボックスを選択します。 画面の右側に表示されるダイアログで、「**[!UICONTROL Delete Sandbox]**」を選択します。
 
 ![](../images/ui/delete-sandbox.png)
 
-選択内容を確認するダイアログが表示されます。Select **[!UICONTROL Delete]** to continue.
+選択内容を確認するダイアログが表示されます。続行するには、「**[!UICONTROL 削除]**」を選択します。
 
 ![](../images/ui/delete-confirm.png)
 
