@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;product profile
+keywords: Experience Platform；ホーム；人気の高いトピック；製品プロファイル
 solution: Experience Platform
 title: 製品プロファイルのユーザーの管理
 topic: user guide
@@ -7,8 +7,8 @@ description: このドキュメントでは、Adobe Experience PlatformのUIで�
 translation-type: tm+mt
 source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 72%
+source-wordcount: '206'
+ht-degree: 69%
 
 ---
 
@@ -37,4 +37,4 @@ ht-degree: 72%
 
 ## 次の手順
 
-Now that you have learned how to control access to [!DNL Platform] features through the [!DNL Admin Console], see the appendix section in the [access control overview](../home.md) to learn more about each individual permission and the [!DNL Platform] functionalities they grant access to.
+[!DNL Admin Console]を通じて[!DNL Platform]機能へのアクセスを制御する方法を学んだら、[アクセス制御の概要](../home.md)の付録の節を参照して、個々の権限と[!DNL Platform]機能のアクセスを許可する方法を確認してください。
