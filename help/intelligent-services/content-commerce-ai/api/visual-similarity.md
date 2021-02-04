@@ -1,5 +1,5 @@
 ---
-keywords: Visual similarity;visual similarity;ccai api
+keywords: 視覚的類似性；視覚的類似性；ccai api
 solution: Experience Platform, Intelligent Services
 title: 視覚的類似性
 topic: Developer guide
@@ -7,7 +7,7 @@ description: 視覚類似性サービスは、画像を指定すると、カタ�
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '503'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] はベータ版です。 このドキュメントは変更されることがあります。
+>[!DNL Content and Commerce AI] はベータ版です。このドキュメントは変更されることがあります。
 
 視覚類似性サービスは、画像を指定すると、カタログから視覚的に類似した画像を自動的に見つけ出します。
 
@@ -37,7 +37,7 @@ POST /services/v1/predict
 
 >[!CAUTION]
 >
->`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。 リクエストを行う前に、適切な情報があることを確認し `analyzer_id` てください。 本サービスのご利用を受けるには、コンテンツおよびコマースAIベータチームにお問い合わせ `analyzer_id` ください。
+>`analyzer_id` どの変数を使用 [!DNL Sensei Content Framework] するかを決定します。リクエストを行う前に、適切な`analyzer_id`があることを確認してください。 このサービスの`analyzer_id`を受け取るには、Content and Commerce AIベータチームにお問い合わせください。
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,21 +76,21 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | プロパティ | 説明 | 必須 |
 | --- | --- | --- |
-| `analyzer_id` | リクエストがデプロイされる [!DNL Sensei] サービスID。 このIDは、使用するIDを決定 [!DNL Sensei Content Frameworks] します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
+| `analyzer_id` | リクエストの展開先の[!DNL Sensei]サービスID。 このIDは、[!DNL Sensei Content Frameworks]のうちどれを使用するかを決定します。 カスタムサービスの場合は、Content and Commerce AIチームに連絡して、カスタムIDを設定してください。 | ○ |
 | `application-id` | 作成したアプリケーションのID。 | ○ |
-| `data` | 画像を表す配列内の各オブジェクトを持つJSONオブジェクトを含む配列。 この配列の一部として渡されたパラメータは、配列の外部で指定されたグローバルパラメータよりも優先され `data` ます。 次の表に示す残りのプロパティは、内で上書きでき `data`ます。 | ○ |
+| `data` | 画像を表す配列内の各オブジェクトを持つJSONオブジェクトを含む配列。 この配列の一部として渡されたパラメータは、`data`配列の外部で指定されたグローバルパラメータよりも優先されます。 この表で説明する他のプロパティは、`data`内で上書きできます。 | ○ |
 | `content-id` | 応答で返されるデータ要素の一意のID。 この値が渡されない場合は、自動生成IDが割り当てられます。 | × |
-| `content` | 視覚類似性サービスによって分析されるコンテンツ。 画像が要求本文に含まれるイベントでは、curlコマンド `-F file=@<filename>` を使用して画像を渡し、このパラメーターは空の文字列のままにします。 <br> 画像がS3上のファイルである場合は、署名済みURLを渡します。 コンテンツがリクエスト本文の一部である場合、データ要素のリストには1つのオブジェクトしか含めないでください。 複数のオブジェクトが渡された場合は、最初のオブジェクトのみが処理されます。 | ○ |
-| `content-type` | 入力が要求本文の一部であるか、S3バケットの署名済みURLであるかを示すために使用されます。 このプロパティのデフォルトはで `inline`す。 | × |
-| `encoding` | 入力画像のファイル形式。 現在、処理できるのはJPEGおよびPNG画像のみです。 このプロパティのデフォルトはで `jpeg`す。 | × |
-| `threshold` | スコア(0 ～ 1)のしきい値。この値を超えると結果を返す必要があります。 すべての結果を返すに `0` は、この値を使用します。 このプロパティのデフォルトはで `0`す。 | × |
-| `top-N` | 返す結果の数です（負の整数は指定できません）。 すべての結果を返すに `0` は、この値を使用します。 と組み合わせて使用した場合、返される結果の数は、どちらの制限セットにも該当しない数になります。 `threshold`このプロパティのデフォルトはで `0`す。 | × |
+| `content` | 視覚類似性サービスによって分析されるコンテンツ。 イメージが要求本文に含まれるイベントでは、curlコマンドで`-F file=@<filename>`を使用してイメージを渡し、このパラメーターは空の文字列のままにします。 <br> 画像がS3上のファイルである場合は、署名済みURLを渡します。コンテンツがリクエスト本文の一部である場合、データ要素のリストには1つのオブジェクトしか含めないでください。 複数のオブジェクトが渡された場合は、最初のオブジェクトのみが処理されます。 | ○ |
+| `content-type` | 入力が要求本文の一部であるか、S3バケットの署名済みURLであるかを示すために使用されます。 このプロパティのデフォルトは`inline`です。 | × |
+| `encoding` | 入力画像のファイル形式。 現在、処理できるのはJPEGおよびPNG画像のみです。 このプロパティのデフォルトは`jpeg`です。 | × |
+| `threshold` | スコア(0 ～ 1)のしきい値。この値を超えると結果を返す必要があります。 すべての結果を返すには、値`0`を使用します。 このプロパティのデフォルトは`0`です。 | × |
+| `top-N` | 返す結果の数です（負の整数は指定できません）。 すべての結果を返すには、値`0`を使用します。 `threshold`と組み合わせて使用した場合、返される結果の数は、どちらの制限セットの中でも小さい方です。 このプロパティのデフォルトは`0`です。 | × |
 | `custom` | 渡す任意のカスタムパラメーター。 | × |
 | `historic-metadata` | メタデータを渡すことができる配列。 | × |
 
 **応答** 
 
-正常な応答を返すと、カタログ内の視覚的に類似した各画像に対し `response` てandが含まれ `feature_value``feature_name` る配列が返されます。
+正常に応答すると、カタログ内の視覚的に類似した各画像の`feature_value`と`feature_name`を含む`response`配列が返されます。
 
 次の例の応答では、視覚的に類似した画像が返されています。
 
