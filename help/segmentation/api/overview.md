@@ -1,61 +1,61 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；API;API;
 title: Adobe Experience Platformセグメントサービス開発ガイド
 topic: guide
 description: この概要ドキュメントでは、Segmentation Service APIの各エンドポイントの概要を説明し、詳しくは関連するエンドポイントガイドへのリンクを示します。
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '501'
 ht-degree: 6%
 
 ---
 
 
-# Adobe Experience Platform [!DNL Segmentation Service] API開発ガイド
+# Adobe Experience Platform[!DNL Segmentation Service] API開発ガイド
 
-[!DNL Adobe Experience Platform Segmentation Service] セグメントを作成し、データ [!DNL Adobe Experience Platform] からでオーディエンスを生成でき [!DNL Real-time Customer Profile] ます。
+[!DNL Adobe Experience Platform Segmentation Service] セグメントを作成し、 [!DNL Adobe Experience Platform] データ [!DNL Real-time Customer Profile] からでオーディエンスを生成できます。
 
-この [!DNL Segmentation Service] APIは複数のエンドポイントを提供し、でのセグメント化操作をプログラムで管理できるようにし [!DNL Experience Platform]ます。 この概要ドキュメントでは、これらの各エンドポイントの概要を説明し、詳しくは、関連するエンドポイントガイドへのリンクを示します。 個々のエンドポイントのガイドを読む前に、 [はじめに](./getting-started.md) 、必要なヘッダーに関する重要な情報、サンプルAPI呼び出しの読み方などについてのガイドを参照してください。
+[!DNL Segmentation Service] APIは複数のエンドポイントを提供し、[!DNL Experience Platform]でのセグメント化操作をプログラム的に管理できるようにします。 この概要ドキュメントでは、これらの各エンドポイントの概要を説明し、詳しくは、関連するエンドポイントガイドへのリンクを示します。 個々のエンドポイントガイドを読む前に、必要なヘッダー、サンプルAPI呼び出しの読み取りなどに関する重要な情報については、[はじめに](./getting-started.md)を参照してください。
 
-使用可能なすべてのエンドポイントとCRUD操作を表示するには、 [Segmentation Service APIリファレンスを参照してください](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)。
+使用可能なすべてのエンドポイントとCRUD操作を表示するには、[Segmentation Service APIリファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)を参照してください。
 
 ## ジョブの書き出し
 
-ジョブの書き出し は、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 エンドポイントを使用して、すべての書き出しジョブの取得、新しい書き出しジョブの作成、特定の書き出しジョブの詳細の取得または特定の書き出しジョブのキャンセルを行うことができます。 `/export/jobs`
+ジョブの書き出し は、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 `/export/jobs`エンドポイントを使用して、すべての書き出しジョブの取得、新しい書き出しジョブの作成、特定の書き出しジョブの詳細の取得、または特定の書き出しジョブのキャンセルを行うことができます。
 
-For more information on using this endpoint, please read the [export jobs endpoint guide](./export-jobs.md).
+このエンドポイントの使用に関する詳細は、[書き出しジョブのエンドポイントガイド](./export-jobs.md)を参照してください。
 
 ## プレビューと予測
 
-プレビューには、セグメント定義の条件を満たすプロファイルのページ分割リストが用意されており、期待どおりの結果と比較できます。 エンドポイントを使用して、新しいプレビュージョブを作成したり、特定のプレビュージョブの結果を検索したりできます。 `/preview`
+プレビューには、セグメント定義の条件を満たすプロファイルのページ分割リストが用意されており、期待どおりの結果と比較できます。 `/preview`エンドポイントを使用して、新しいプレビュージョブを作成したり、特定のプレビュージョブの結果を検索したりできます。
 
-予測には、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報が含まれます。 エンドポイントを使用して、セグメント定義の予測を表示でき `/estimate` ます。
+予測には、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報が含まれます。 `/estimate`エンドポイントを使用して、セグメント定義の予測を表示できます。
 
-これらのエンドポイントの使用に関する詳細は、『 [プレビューと予測エンドポイントガイド』を参照してください](./previews-and-estimates.md)。
+これらのエンドポイントの使用に関する詳細は、[プレビューおよび推定エンドポイントガイド](./previews-and-estimates.md)を読んでください。
 
 ## スケジュール
 
-スケジュールは、バッチセグメントジョブを1日1回自動的に実行するために使用できるツールです。 エンドポイントを使用して、スケジュールのリストの取得、新しいスケジュールの作成、特定のスケジュールの詳細の取得、特定のスケジュールの更新または特定のスケジュールの削除を行うことができます。 `/config/schedules`
+スケジュールは、バッチセグメントジョブを1日1回自動的に実行するために使用できるツールです。 `/config/schedules`エンドポイントを使用して、スケジュールのリストの取得、新しいスケジュールの作成、特定のスケジュールの詳細の取得、特定のスケジュールの更新または特定のスケジュールの削除を行うことができます。
 
-For more information on using this endpoint, please read the [schedules endpoint guide](./schedules.md).
+このエンドポイントの使用に関する詳細は、[スケジュールエンドポイントガイド](./schedules.md)を参照してください。
 
 ## セグメントの定義
 
-セグメント定義は、どのプロファイルがどのオーディエンスセグメントに含まれるかを定義します。 エンドポイントを使用して、セグメント定義を管理でき `/segment/definitions` ます。
+セグメント定義は、どのプロファイルがどのオーディエンスセグメントに含まれるかを定義します。 `/segment/definitions`エンドポイントを使用して、セグメント定義を管理できます。
 
-For more information on using this endpoint, please read the [segment definitions endpoint guide](./segment-definitions.md).
+このエンドポイントの使用に関する詳細は、『[セグメント定義エンドポイントガイド](./segment-definitions.md)』を参照してください。
 
 ## セグメントジョブ
 
-セグメントジョブでは、以前に確立されたセグメント定義が処理され、オーディエンスセグメントが生成されます。エンドポイントを使用して、セグメントジョブを管理でき `/segment/jobs` ます。
+セグメントジョブでは、以前に確立されたセグメント定義が処理され、オーディエンスセグメントが生成されます。`/segment/jobs`エンドポイントを使用して、セグメントジョブを管理できます。
 
-For more information on using this endpoint, please read the [segment jobs endpoint guide](./segment-jobs.md).
+このエンドポイントの使用に関する詳細は、[セグメントジョブエンドポイントガイド](./segment-jobs.md)を参照してください。
 
 ## セグメント検索
 
-セグメント検索は、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返す場合に使用します。 セグメント検索の操作を開始するには、 [検索エンドポイントガイドを参照してください](segment-search.md)
+セグメント検索は、様々なデータソースに含まれるフィールドを検索し、ほぼリアルタイムで返す場合に使用します。 セグメント検索の使用を開始するには、[検索エンドポイントガイド](segment-search.md)を参照してください
 
 ## 次の手順
 
-APIの使用を開始するには、様々なエンドポイントガイドを参照して、サービスの様々なエンドポイントを呼び出す方法に関する詳細な手順を確認してください。 [!DNL Segmentation Service] To learn more about working with segments using the [!DNL Platform] UI, see the [Segmentation user guide](../ui/overview.md).
+[!DNL Segmentation Service] APIの使用を開始するには、様々なエンドポイントガイドを参照して、サービスの様々なエンドポイントを呼び出す方法に関する詳細な手順を確認してください。 [!DNL Platform] UIを使用したセグメントの操作について詳しくは、[セグメント化ユーザーガイド](../ui/overview.md)を参照してください。
