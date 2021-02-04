@@ -17,7 +17,7 @@ ht-degree: 83%
 
 - [概要](home.md)
 - [セグメントデータタイプ](data-types.md)
-- セグメント化API開発ガイド {#api}
+- セグメント化API開発ガイド{#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
    - [ジョブの書き出し](api/export-jobs.md)
