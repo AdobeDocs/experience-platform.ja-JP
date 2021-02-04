@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;fullName;xdm:fullName;person name;name;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ;fullName;xdm:fullName；人物名；名前；データ型；データ型；
 solution: Experience Platform
 title: 個人名データ型
 topic: overview
@@ -7,15 +7,15 @@ description: このドキュメントでは、Person Name XDMデータ型の概�
 translation-type: tm+mt
 source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 23%
+source-wordcount: '251'
+ht-degree: 21%
 
 ---
 
 
-# [!UICONTROL 個人名] 、データ型
+# [!UICONTROL 個人] 名データ型
 
-[!UICONTROL Person name] （個人名）は、個人のフルネームを記述する標準のXDMデータ型です。 名前構造の表記は言語や文化によって大きく異なるので、名前は常にこのデータ型を使ってモデル化する必要があります。
+[!UICONTROL 個人] 名は、個人のフルネームを記述する標準のXDMデータ型です。名前構造の表記は言語や文化によって大きく異なるので、名前は常にこのデータ型を使ってモデル化する必要があります。
 
 また、データ型には、正式な挨拶や非公式のあいさつ文の作成など、フルネームのフラグメントのみを使用する必要がある状況で使用できる多数のオプションのプロパティが用意されています。
 
@@ -23,12 +23,12 @@ ht-degree: 23%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `courtesyTitle` | 敬称、敬称（敬称、敬称など）の省略形( `Mr.`、 `Miss.`、 `Dr.`など)。 |
+| `courtesyTitle` | 敬称、敬称の省略形（`Mr.`、`Miss.`、`Dr.`など）。 |
 | `firstName` | 名前の言語で最も一般的に受け入れられる、書き込み順の名前の最初のセグメント。 |
 | `fullName` | 名前の言語で最も一般的に受け入れられる、書き方の順での人のフルネーム。 |
 | `lastName` | 名前の言語で最も一般的に受け入れられる、書き込み順序の名前の最後のセグメント。 |
 | `middleName` | 姓と名の間に付けられたミドルネーム、代替ネームまたは追加ネーム。 |
-| `suffix` | 追加情報( `Jr.`、、、、 `Sr.`、 `M.D.`、 `PhD`、 `I``II``III`など)を提供するために、人名の後に提供されるレターのグループ。 |
+| `suffix` | 追加情報を提供するために、人の名前の後に提供される文字のグループ（`Jr.`、`Sr.`、`M.D.`、`PhD`、`I`、`II`、`III`など）。 |
 
 個人名データ型の詳細については、パブリックXDMリポジトリを参照してください。
 
