@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
+keywords: Experience Platform；ウォークスルー；Data Science Workspace；よく読まれるトピック
 solution: Experience Platform
 title: Data Science Workspace　のチュートリアル
 topic: Walkthrough
@@ -7,7 +7,7 @@ description: このドキュメントでは、Adobe Experience Platform Data Sci
 translation-type: tm+mt
 source-git-commit: 0d76b14599bc6b6089f9c760ef6a6be3a19243d4
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1716'
 ht-degree: 33%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 33%
 
 # [!DNL Data Science Workspace] walkthrough
 
-This document provides a walkthrough for Adobe Experience Platform [!DNL Data Science Workspace]. このチュートリアルでは、一般的なデータサイエンティストのワークフローと、機械学習を使用した問題へのアプローチ方法および解決方法について説明します。
+このドキュメントでは、Adobe Experience Platform[!DNL Data Science Workspace]のチュートリアルを提供します。 このチュートリアルでは、一般的なデータサイエンティストのワークフローと、機械学習を使用した問題へのアプローチ方法および解決方法について説明します。
 
 ## 前提条件
 
 - 登録済みの Adobe ID アカウント
-   - The Adobe ID account must have been added to an Organization with access to Adobe Experience Platform and [!DNL Data Science Workspace].
+   - Adobe IDアカウントは、Adobe Experience Platformと[!DNL Data Science Workspace]にアクセスできる組織に追加されている必要があります。
 
 ## 小売の使用例
 
@@ -30,22 +30,22 @@ This document provides a walkthrough for Adobe Experience Platform [!DNL Data Sc
 
 データサイエンティストのソリューションは、小売業者が提供する豊富な履歴情報を活用して、将来の傾向を予測し、価格決定を最適化することです。 このチュートリアルでは、過去の販売データを使用して機械学習モデルをトレーニングし、モデルを使用して将来の販売傾向を予測します。 これにより、最適な価格の変更に役立つインサイトを生成できます。
 
-この概要は、データサイエンティストがデータセットを取り込み、週別の売上を予測するモデルを作成する手順を反映しています。 このチュートリアルでは、Adobe Experience Platformの小売売上ノートブックの例で、次の節について説明し [!DNL Data Science Workspace]ます。
+この概要は、データサイエンティストがデータセットを取り込み、週別の売上を予測するモデルを作成する手順を反映しています。 このチュートリアルでは、Adobe Experience Platform[!DNL Data Science Workspace]のサンプル小売売上ノートブックの以下の節について説明します。
 
 - [セットアップ](#setup)
 - [データの調査](#exploring-data)
 - [特徴エンジニアリング](#feature-engineering)
 - [トレーニングと検証](#training-and-verification)
 
-### ノートブック [!DNL Data Science Workspace]
+### [!DNL Data Science Workspace]のノートブック
 
-[Adobe Experience PlatformUI]で、[ **[!UICONTROL Data Science]** ]タブから[ **[!UICONTROL Notebooks]** ]を選択し、[ [!UICONTROL Notebooks] Overview]ページに移動します。 このページから、 [!DNL JupyterLab] タブを選択して [!DNL JupyterLab] 環境を起動します。 のデフォルトのランディングページ [!DNL JupyterLab] は、 **[!UICONTROL ランチャーです]**。
+Adobe Experience PlatformのUIで、「**[!UICONTROL データサイエンス]**」タブから「**[!UICONTROL ノートブック]**」を選択して、[!UICONTROL ノートブック]の概要ページに移動します。 このページから「[!DNL JupyterLab]」タブを選択して[!DNL JupyterLab]環境を起動します。 [!DNL JupyterLab]のデフォルトのランディングページは&#x200B;**[!UICONTROL ランチャー]**&#x200B;です。
 
 ![](./images/walkthrough/notebooks.png)
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-このチュートリアルでは、の [!DNL Python] 3を使用 [!DNL JupyterLab Notebooks] して、データにアクセスして調査する方法を示します。 ランチャーページには、サンプルのノートブックが用意されています。以下に示す例では、 **[!UICONTROL 小売売上]** (RSA)のサンプルノートブックを使用しています。
+このチュートリアルでは、[!DNL JupyterLab Notebooks]の[!DNL Python] 3を使用して、データにアクセスし、調査する方法を示します。 ランチャーページには、サンプルのノートブックが用意されています。**[!UICONTROL 小売売上]**&#x200B;サンプルノートブックは、次に示す例で使用されています。
 
 ### セットアップ {#setup}
 
@@ -62,21 +62,21 @@ This document provides a walkthrough for Adobe Experience Platform [!DNL Data Sc
 
 #### データの読み込み
 
-ライブラリの読み込み後、開始がデータを確認できます。 The following [!DNL Python] code uses pandas&#39; `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on [!DNL Github] into the pandas DataFrame:
+ライブラリの読み込み後、開始がデータを確認できます。 次の[!DNL Python]コードは、pandas&#39; `DataFrame`データ構造と[read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv)関数を使用して、[!DNL Github]でホストされているCSVをpandas DataFrameに読み込みます。
 
 ![](./images/walkthrough/read_csv.png)
 
-Pandas の DataFrame データ構造は、2 次元のラベル付きデータ構造です。To quickly see the dimensions of your data, you can use `df.shape`. DataFrame の次元を表すタプルが返されます。
+Pandas の DataFrame データ構造は、2 次元のラベル付きデータ構造です。データの次元をすばやく確認するには、`df.shape`を使用します。 DataFrame の次元を表すタプルが返されます。
 
 ![](./images/walkthrough/df_shape.png)
 
-最後に、データの外観をプレビューできます。 You can use `df.head(n)` to view the first `n` rows of the DataFrame:
+最後に、データの外観をプレビューできます。 `df.head(n)`を使用して、DataFrameの最初の`n`行を表示できます。
 
 ![](./images/walkthrough/df_head.png)
 
 #### 統計概要
 
-We can leverage [!DNL Python's] pandas library to get the data type of each attribute. 以下の呼び出しの出力では、各列のエントリ数とデータタイプに関する情報が得られます。
+[!DNL Python's] pandasライブラリを利用して、各属性のデータタイプを取得できます。 以下の呼び出しの出力では、各列のエントリ数とデータタイプに関する情報が得られます。
 
 ```PYTHON
 df.info()
@@ -96,7 +96,7 @@ df.describe()
 
 これにより、各特性に対して6435個のインスタンスが存在することがわかります。 また、平均、標準偏差（std）、最小、最大、四分位数などの統計情報も表示されます。これにより、データの偏差に関する情報が得られます。次の節では、ビジュアライゼーションについて説明します。このビジュアライゼーションは、この情報と組み合わせて、データに関する完全な理解を得るために役立ちます。
 
-Looking at the minimum and maximum values for `store`, you can see that there are 45 unique stores the data represents. 店舗の種類を識別する `storeTypes` もあります。you can see the distribution of `storeTypes` by doing the following:
+`store`の最小値と最大値を調べると、45の一意のストアが表していることがわかります。 店舗の種類を識別する `storeTypes` もあります。`storeTypes`の配布は、次のようにして確認できます。
 
 ![](./images/walkthrough/df_groupby.png)
 
@@ -143,7 +143,7 @@ Looking at the minimum and maximum values for `store`, you can see that there ar
 
 #### 週と年の列を足す
 
-The current format for date (`2010-02-05`) can make it hard to differentiate that the data is for every week. このため、日付には週と年を含めるように変換する必要があります。
+現在の日付形式(`2010-02-05`)では、毎週のデータを区別するのが難しくなります。 このため、日付には週と年を含めるように変換する必要があります。
 
 ![](./images/walkthrough/date_to_week_year.png)
 
@@ -153,11 +153,11 @@ The current format for date (`2010-02-05`) can make it hard to differentiate tha
 
 #### storeType をインジケーター変数に変換する
 
-Next, you want to convert the storeType column to columns representing each `storeType`. There are 3 store types, (`A`, `B`, `C`), from which you are creating 3 new columns. The value set in each is a boolean value where a &#39;1&#39; is set depending on what the `storeType` was and `0` for the other 2 columns.
+次に、storeType列を各`storeType`を表す列に変換します。 ストアには3つのタイプ(`A`、`B`、`C`)があり、ここで3つの新しい列を作成します。 それぞれに設定される値はboolean値で、他の2列の`storeType`と`0`に応じて&#39;1&#39;が設定されます。
 
 ![](./images/walkthrough/storeType.png)
 
-現在の `storeType` 列は削除されます。
+現在の`storeType`列は削除されます。
 
 #### isHoliday を数値型に変換する
 
@@ -167,11 +167,11 @@ Next, you want to convert the storeType column to columns representing each `sto
 
 #### 来週の売上を予測する
 
-次に、データセットごとに、前回と将来の週別の売上を追加します。 これを行うには、をオフセットし `weeklySales`ます。 さらに、 `weeklySales` 差が計算されます。 これは、`weeklySales` で前の週の `weeklySales` 値を引くことでおこなわれます 。
+次に、データセットごとに、前回と将来の週別の売上を追加します。 `weeklySales`をオフセットすると、これを行うことができます。 また、`weeklySales`の差も計算されます。 これは、`weeklySales` で前の週の `weeklySales` 値を引くことでおこなわれます 。
 
 ![](./images/walkthrough/weekly_past_future.png)
 
-Since you are offsetting the `weeklySales` data 45 datasets forwards and 45 datasets backwards to create new columns, the first and last 45 data points have NaN values. You can remove these points from your dataset by using the `df.dropna()` function which removes all rows that have NaN values.
+`weeklySales`データ45データセットをオフセットして、45データセットを後ろに戻して新しい列を作成するので、最初と最後の45データポイントにはNaN値が割り当てられます。 これらのポイントは、`df.dropna()`関数を使用して、NaN値を持つすべての行を削除することで、データセットから削除できます。
 
 ![](./images/walkthrough/dropna.png)
 
@@ -191,19 +191,19 @@ Since you are offsetting the `weeklySales` data 45 datasets forwards and 45 data
 
 #### データセットのトレーニングおよびテストサブセットへの分割
 
-モデルがどの程度正確に値を予測できるかを知る方法が必要です。 この評価は、検証として使用するデータセットの一部を割り当て、残りをトレーニングデータとして割り当てることでおこなうことができます。Since `weeklySalesAhead` is the actual future values of `weeklySales`, you can use this to evaluate how accurate the model is at predicting the value. 分割は次の手順でおこないます。
+モデルがどの程度正確に値を予測できるかを知る方法が必要です。 この評価は、検証として使用するデータセットの一部を割り当て、残りをトレーニングデータとして割り当てることでおこなうことができます。`weeklySalesAhead`は`weeklySales`の実際の未来値なので、この値を使用して、モデルが値を予測する際の正確さを評価できます。 分割は次の手順でおこないます。
 
 ![](./images/walkthrough/split_data.png)
 
-You now have `X_train` and `y_train` for preparing the models and `X_test` and `y_test` for evaluation later.
+これで、モデルを準備する`X_train`と`y_train`、後で評価する`X_test`と`y_test`ができます。
 
 #### スポットチェックアルゴリズム
 
-In this section, you declare all the algorithms into an array called `model`. Next, you iterate through this array and for each algorithm, input your training data with `model.fit()` which creates a model `mdl`. このモデルを使って、自分の `weeklySalesAhead``X_test` データで予測できます。
+この節では、すべてのアルゴリズムを`model`という配列に宣言します。 次に、この配列を繰り返し処理し、各アルゴリズムに対して、トレーニングデータを`model.fit()`で入力します。これにより、モデル`mdl`が作成されます。 このモデルを使って、`weeklySalesAhead`を`X_test`データで予測できます。
 
 ![](./images/walkthrough/training_scoring.png)
 
-For the scoring, you are taking the mean percentage difference between the predicted `weeklySalesAhead` with the actual values in the `y_test` data. 予測と実際の結果との差を最小限に抑えたいので、グラデーション昇圧回帰は最もパフォーマンスの高いモデルです。
+スコアリングの場合、予測された`weeklySalesAhead`と`y_test`データの実際の値との間の平均差率を計算します。 予測と実際の結果との差を最小限に抑えたいので、グラデーション昇圧回帰は最もパフォーマンスの高いモデルです。
 
 #### 予測の視覚化
 
@@ -220,4 +220,4 @@ For the scoring, you are taking the mean percentage difference between the predi
 - 次に、機能エンジニアリングを使用して小売データセットを変更します。
 - 最後に、データのモデルを作成し、今後の売上を予測するのに最もパフォーマンスの高いモデルを選択します。
 
-準備が整ったら、『 [JupterLab開始ガイド](./jupyterlab/overview.md) 』を読み、Adobe Experience Platform・データ・サイエンス・ワークスペースのノートブックの概要を簡単に確認します。 さらに、モデルとレシピの詳細について知りたい場合は、 [小売の販売スキーマとデータセット](./models-recipes/create-retails-sales-dataset.md) ・チュートリアルを読んで開始してください。 このチュートリアルでは、Data Science Workspaceのチュートリアルページで確認できる、以降のData Science Workspaceのチュートリアルについて準備 [します](../tutorials/data-science-workspace.md)。
+準備が整ったら、『JupterLab user guide](./jupyterlab/overview.md)』を読み、Adobe Experience Platform・データ・サイエンス・ワークスペースのノートブックの概要を簡単に確認して、開始を行ってください。 [さらに、モデルとレシピの詳細について知りたい場合は、[小売売上スキーマとデータセット](./models-recipes/create-retails-sales-dataset.md)のチュートリアルを読んで開始してください。 このチュートリアルでは、Data Science Workspaceのチュートリアル（Data Science Workspaceの[チュートリアルページ](../tutorials/data-science-workspace.md)で参照可能）の準備をします。
