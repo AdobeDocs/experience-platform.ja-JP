@@ -3,12 +3,12 @@ title: エッジ設定
 seo-title: Experience PlatformWeb SDKのエッジ設定
 description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 seo-description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
-keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
+keywords: 設定；エッジ；エッジ設定ID;環境設定；edgeConfigId;id;ID同期有効；ID同期コンテナID;Sandbox；ストリーミングインレット；イベントデータセット；ターゲット；クライアントコード；プロパティトークン；ターゲット環境ID;Cookie宛先；Url宛先；Analytics設定ブロックレポートスイートID;
 translation-type: tm+mt
 source-git-commit: 94b3faf3157f4e1f4e46b6055914a04883dc44fa
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 3%
+source-wordcount: '924'
+ht-degree: 2%
 
 ---
 
@@ -81,7 +81,7 @@ Adobe Targetを設定するには、クライアントコードを指定する�
 
 ### [!UICONTROL クライアントコード]
 
-ターゲットアカウントの一意のID。 これを調べるには、[!UICONTROL at.js]または&lt;a11/>の[!UICONTROL download]ボタンの横にある&lt;a0/>Adobe Target] >[!UICONTROL セットアップ[!UICONTROL  > ]実装[!UICONTROL  >設定を編集]に移動します。2/>mbox.js][!UICONTROL 
+ターゲットアカウントの一意のID。 これを調べるには、[!UICONTROL at.js]または[!UICONTROL の[!UICONTROL download]ボタンの横にある]Adobe Target] >[!UICONTROL セットアップ[!UICONTROL  > ]実装[!UICONTROL  >設定を編集]に移動します。2/>mbox.js][!UICONTROL 
 
 ### [!UICONTROL プロパティトークン]
 
