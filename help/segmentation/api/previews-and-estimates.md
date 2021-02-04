@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
+keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；プレビュー；予測；プレビューと予測；予測とプレビュー;api;API;
 solution: Experience Platform
 title: エンドポイントのプレビューと予測
 topic: developer guide
@@ -7,19 +7,19 @@ description: セグメント定義を作成する際に、Adobe Experience Platf
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 27%
+source-wordcount: '792'
+ht-degree: 26%
 
 ---
 
 
 # エンドポイントのプレビューと予測
 
-As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **プレビューは、セグメント定義に適格なプロファイルのページ分割リストを表示するので、結果を予想と比較できます。****予測は** 、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報を提供します。
+セグメント定義を作成する際、[!DNL Adobe Experience Platform]内の予測ツールとプレビューツールを使用して、概要レベルの情報を表示し、期待されるオーディエンスを確実に特定できます。 **プレビューは、セグメント定義に適格なプロファイルのページ分割リストを表示するので、結果を予想と比較できます。****** 予測には、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報が含まれます。
 
 ## はじめに
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+このガイドで使用されるエンドポイントは、[!DNL Adobe Experience Platform Segmentation Service] APIの一部です。 先に進む前に、[はじめにガイド](./getting-started.md)を見て、必要なヘッダーやAPI呼び出し例の読み方など、APIを正しく呼び出すために必要な重要な情報を確認してください。
 
 ## 推定の生成方法
 
@@ -75,8 +75,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `predicateExpression` | データのクエリに使用する PQL 式です。 |
-| `predicateType` | の下にあるクエリ式の述語の種類 `predicateExpression`です。 現在、このプロパティに指定できる値は `pql/text`です。 |
-| `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema the profile data is based on. |
+| `predicateType` | `predicateExpression`の下のクエリ式の述語の種類です。 現在、このプロパティに指定できる値は`pql/text`のみです。 |
+| `predicateModel` | プロファイルデータの基になる[!DNL Experience Data Model] (XDM)スキーマの名前。 |
 
 **応答**
 
@@ -97,9 +97,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `state` | プレビュージョブの現在の状態です。最初に作成されたときは、「NEW」状態になります。 次に、処理が完了するまで「実行中」の状態になり、その時点で「RESULT_READY」または「FAILED」になります。 |
 | `previewId` | 次の節で説明するように、予測またはプレビューを表示する際に参照用に使用されるプレビュージョブのID。 |
 
-## 特定のプレビューの結果を取得する {#get-preview}
+## 特定のプレビュー{#get-preview}の結果を取得
 
-You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview ID in the request path.
+`/preview`エンドポイントにGETリクエストを送信し、リクエストパスにプレビューIDを指定することで、特定のプレビューに関する詳細な情報を取得できます。
 
 **API 形式**
 
@@ -109,7 +109,7 @@ GET /preview/{PREVIEW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | The `previewId` value of the preview you want to retrieve. |
+| `{PREVIEW_ID}` | 取得するプレビューの`previewId`値。 |
 
 **リクエスト**
 
@@ -172,11 +172,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、を使用して、指定されたエンティティを検索するために使用でき [[!DNL Profile Access API]](../../profile/api/entities.md)ます。 |
+| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、[[!DNL Profile Access API]](../../profile/api/entities.md)を使用して、指定されたエンティティを検索するために使用できます。 |
 
 ## 特定の見積ジョブの結果の取得 {#get-estimate}
 
-プレビュージョブを作成したら、そのジョブをエンドポイント `previewId``/estimate` へのGETリクエストのパスで使用して、予測されるオーディエンスサイズ、信頼区間、および表示標準偏差など、セグメント定義に関する統計情報を取得できます。
+プレビュージョブを作成したら、そのジョブの`previewId`を`/estimate`エンドポイントへのGETリクエストのパスで使用して、セグメント定義に関する表示の統計情報(予測オーディエンスサイズ、信頼区間、エラー標準偏差など)を取得できます。
 
 **API 形式**
 
@@ -186,7 +186,7 @@ GET /estimate/{PREVIEW_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | 予測ジョブは、プレビュージョブが作成され、2つのジョブが参照用に同じID値を共有している場合にのみトリガーされます。 特に、これはプレビュージョブの作成時に返される `previewId` 値です。 |
+| `{PREVIEW_ID}` | 予測ジョブは、プレビュージョブが作成され、2つのジョブが参照用に同じID値を共有している場合にのみトリガーされます。 特に、プレビュージョブの作成時に返される`previewId`値です。 |
 
 **リクエスト**
 
@@ -231,4 +231,4 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ## 次の手順
 
-このガイドを読むと、プレビューと予測の使い方に関する理解が深まります。 その他の [!DNL Segmentation Service] APIエンドポイントについて詳しくは、 [Segmentation Service開発者ガイドの概要を参照してください](./overview.md)。
+このガイドを読むと、プレビューと予測の使い方に関する理解が深まります。 他の[!DNL Segmentation Service] APIエンドポイントの詳細については、[Segmentation Service開発者ガイドの概要](./overview.md)を参照してください。
