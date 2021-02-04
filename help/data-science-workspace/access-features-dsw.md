@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics;access control;sandbox;intelligence pack;dsw features;dsw access;Adobe Experience Platform Intelligence;intelligence;aep intelligence package
+keywords: Experience Platform；ホーム；Data Science Workspace；人気の高いトピック；アクセス制御；サンドボックス；インテリジェンスパック；dsw機能；dswアクセス；Adobe Experience Platformインテリジェンス；インテリジェンス；aepインテリジェンスパッケージ
 solution: Experience Platform
 title: Data Science Workspaceのアクセスと機能
 topic: Access and features for data science workspace
@@ -7,8 +7,8 @@ description: '次のドキュメントでは、Data Science Workspaceの権限�
 translation-type: tm+mt
 source-git-commit: 40181fc9b1b08c2e21f806caae76b8af0ec9e5e6
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 27%
+source-wordcount: '644'
+ht-degree: 26%
 
 ---
 
@@ -19,15 +19,15 @@ ht-degree: 27%
 
 ![DSWタブ](./images/access/platform-tabs.png)
 
-- **ノートブック：** Experience Platform上のデータの調査、分析、モデル化を行う、対話型の開発環境([JupyterLab](./jupyterlab/overview.md))を提供します。
-- **モデル：** 高度な機械学習レシピとモデルを作成、公開、保存するためのツールが用意されています。 詳しくは、「機械学習モデルの [作成と公開](./models-recipes/create-publish-model.md) 」チュートリアルを参照してください。
-- **サービス：** インテリジェントサービスなどのAdobeが提供するサービスと、Data Science Workspaceで作成した [カスタムサービスの両方が含まれます](../intelligent-services/home.md) 。
+- **ノートブック：Experience Platform** 上でデータの調査、分析、モデル化を行う、対話型の開発環境([JupterLab](./jupyterlab/overview.md))を提供します。
+- **モデル：高度な機械学習レシピおよびモデルを作成、公開、保存するためのツール** です。詳細については、[機械学習モデルを作成して公開するチュートリアル](./models-recipes/create-publish-model.md)を参照してください。
+- **サービス：インテリジェントサービスなどのAdobeが提供するサービス** と、Data Science Workspaceで作成した [カスタム](../intelligent-services/home.md) サービスの両方が含まれます。
 
 「サービス」タブしか表示されないのはなぜですか。
 
 - 組織は、インテリジェントサービスカスタマーAIを含むリアルタイムカスタマーデータプラットフォーム(RTCDP)のみを利用できます。
 
-「 **データサイエンス** 」タブが表示されず、Data Science Workspaceの機能を使用する場合は、会社管理者に連絡して、Adobe Experience Platformインテリジェンスライセンスがあるかどうかを確認してください。
+「**データサイエンス**」タブが見えない場合、Data Science Workspaceの機能を利用するには、会社管理者に連絡して、Adobe Experience Platformインテリジェンスライセンスがあるかどうかを確認してください。
 
 ## Adobe Experience Platform情報パッケージアドオン
 
@@ -58,7 +58,7 @@ Experience Platform のアクセス制御は、[Adobe Admin Console](https://adm
 
 | 権限 | 有効 | 無効 |
 |---|---|---|
-| Data Science Workspace の管理 | Data Science Workspace のすべてのサービスへのアクセスを提供します。 | Data Science Workspace内のすべてのサービスへのAPIとUIのアクセスが無効になっています。 無効になっている場合、 **ノートブック**、 **モデル**、 **サービス** ページを選択できなくなります。 <li>Real-time Customer Data Platform **(RTCDP)を通じて、** Services（サービス）へのアクセスは引き続き可能です。</li> |
+| Data Science Workspace の管理 | Data Science Workspace のすべてのサービスへのアクセスを提供します。 | Data Science Workspace内のすべてのサービスへのAPIとUIのアクセスが無効になっています。 無効にしている間は、**ノートブック**、**モデル**、**サービス**&#x200B;の各ページを選択できません。 <li>**サービス**&#x200B;へのアクセスは、リアルタイム顧客データプラットフォーム(RTCDP)を通じて引き続き利用できます。</li> |
 
 ## サンドボックスのサポート
 
@@ -72,4 +72,4 @@ Experience Platform のアクセス制御は、[Adobe Admin Console](https://adm
 
 このドキュメントでは、Data Science Workspaceで使用できる様々なタイプのアクセスおよび機能について説明しました。
 
-日々の完全なワークフローなど、Data Science Workspaceの詳細については、まず [Data Science Workspaceチュートリアル](./walkthrough.md) 「」を参照してください。 For more general information, visit the [Data Science Workspace overview](./home.md).
+Data Science Workspaceの詳細（日々の完全なワークフローなど）については、まず[Data Science Workspaceのチュートリアル](./walkthrough.md)のドキュメントを読んでください。 一般的な情報については、[データサイエンスワークスペースの概要](./home.md)を参照してください。
