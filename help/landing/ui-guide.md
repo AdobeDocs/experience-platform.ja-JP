@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;platform ui guide;introduction to platform;dashboard;
+keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform；ユーザーガイド；uiガイド；プラットフォームuiガイド；プラットフォームの紹介；ダッシュボード;
 solution: Experience Platform
 title: Adobe Experience PlatformUIガイド
 topic: ui guide
@@ -7,7 +7,7 @@ description: 'Adobe Experience Platform '
 translation-type: tm+mt
 source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1737'
+source-wordcount: '1756'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 
 このガイドは、Adobe Experience Platformユーザーインターフェイス(UI)の使用方法を紹介し、様々なコンポーネントの用途を説明し、詳細についての詳細ドキュメントへのリンクを提供します。
 
-Adobe Experience Platformの詳細については、 [Experience Platform概要を参照してください](home.md)。
+Adobe Experience Platformの詳細については、[Experience Platformの概要](home.md)を参照してください。
 
 ## ホーム画面
 
-Adobe Experience Platformにログインすると、 [!UICONTROL ホーム] ページが開きます。このページは、 [指標ダッシュボード](#metrics)、最近のデータ [、](#recent-data)および [](#recommended-learning) 推奨学習セクションで構成されています。
+Adobe Experience Platformにログインした後、[!UICONTROL ホーム]ページに移動します。このページは、[指標ダッシュボード](#metrics)、[最近のデータ](#recent-data)、[推奨学習](#recommended-learning)の各セクションで構成されています。
 
 ![](images/user-guide/homepage.png)
 
@@ -31,13 +31,13 @@ Adobe Experience Platformにログインすると、 [!UICONTROL ホーム] ペ�
 
 ![](images/user-guide/homepage-dashboard.png)
 
-「 **[!UICONTROL Datasets]** 」セクションには、IMS組織内のデータセットの数が表示されます。 新しいデータセットが作成されると、この数値は更新されます。 データセットの詳細については、「 [データセットの概要](../catalog/datasets/overview.md)」を参照してください。
+**[!UICONTROL Datasets]**&#x200B;セクションには、IMS組織内のデータセットの数が表示されます。 新しいデータセットが作成されると、この数値は更新されます。 データセットに関する詳細は、[データセットの概要](../catalog/datasets/overview.md)を参照してください。
 
-「 **[!UICONTROL プロファイル]** 」セクションには、IMS組織内のプロファイルを持つユーザーの合計数(プロファイルフラグメントを除く)が表示されます。 この合計数はアドレス可能なオーディエンスの合計を表し、24時間に1回更新されます。 プロファイルの詳細については、 [リアルタイム顧客プロファイルの概要を参照してください](../profile/home.md)。
+**[!UICONTROL プロファイル]**&#x200B;セクションには、IMS組織内のプロファイルを持つ人の合計数が表示されます。プロファイルフラグメントは除きます。 この合計数はアドレス可能なオーディエンスの合計を表し、24時間に1回更新されます。 プロファイルの詳細については、[リアルタイム顧客プロファイルの概要](../profile/home.md)を参照してください。
 
-「 **[!UICONTROL セグメント]** 」セクションには、IMS組織内で作成されたセグメントの合計数が表示されます。 この数値は、新しいセグメントが作成されると更新されます。 セグメントについて詳しくは、 [Segmentation Serviceの概要を参照してください](../segmentation/home.md)。
+「**[!UICONTROL セグメント]**」セクションには、IMS組織内で作成されたセグメントの合計数が表示されます。 この数値は、新しいセグメントが作成されると更新されます。 セグメントについて詳しくは、[Segmentation Serviceの概要](../segmentation/home.md)を参照してください。
 
-The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. 新しい宛先が作成されると、この番号が更新されます。 宛先について詳しくは、 [宛先の概要を参照してください](../destinations/home.md)。
+**[!UICONTROL Destinations]**&#x200B;セクションには、IMS組織で作成された宛先の合計数が表示されます。 新しい宛先が作成されると、この番号が更新されます。 宛先に関する詳細は、[宛先の概要](../destinations/home.md)を参照してください。
 
 ### 最近のデータ
 
@@ -45,17 +45,17 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 ![](images/user-guide/homepage-recent.png)
 
-「 **[!UICONTROL 最近のデータセット]** 」セクションには、IMS組織内で最も新しく作成された5つのデータセットがリストされます。 このリストは、新しいデータセットが作成されるたびに更新されます。 リストからデータセットを選択し、指定したデータセットの詳細を表示できます。または、「すべて **[!UICONTROL 表示]** 」を選択して、作成されたすべてのデータセットのリストを確認できます。 データセットの詳細については、「 [データセットの概要](../catalog/datasets/overview.md)」を参照してください。
+**[!UICONTROL 最近のデータセット]**&#x200B;セクションには、IMS組織内で最も新しく作成された5つのデータセットがリストされます。 このリストは、新しいデータセットが作成されるたびに更新されます。 リストからデータセットを選択して、指定したデータセットの詳細を表示するか、**[!UICONTROL 表示all]**&#x200B;を選択して、作成されたすべてのデータセットのリストを確認できます。 データセットに関する詳細は、[データセットの概要](../catalog/datasets/overview.md)を参照してください。
 
-「 **[!UICONTROL 最新のソース]** 」セクションには、IMS組織内で最も新しく作成されたソースコネクタが5つリストされます。 このリストは、新しいソースコネクタが作成されるたびに更新されます。 指定したコネクタの詳細をリストから表示に表示するソース接続を選択するか、作成したすべてのソース接続のリストを表示するには **[!UICONTROL 表示]** 「すべて」を選択します。 ソースの詳細については、「 [ソースの概要](../sources/home.md)」を参照してください。
+「**[!UICONTROL 最近のソース]**」セクションには、IMS組織内で最も新しく作成されたソースコネクタ5つがリストされます。 このリストは、新しいソースコネクタが作成されるたびに更新されます。 リストからソース接続を選択して、指定した表示の詳細を参照できます。または、**[!UICONTROL 表示all]**&#x200B;を選択して、作成されたすべてのソース接続のリストを確認できます。 ソースに関する詳細は、[ソースの概要](../sources/home.md)を参照してください。
 
-「 **[!UICONTROL 最近のセグメント]** 」セクションには、IMS組織内で最も新しく作成された5つのセグメント定義がリストされます。 このリストは、新しいセグメント定義が作成されるたびに更新されます。 リストからセグメント定義を選択して、指定したセグメント定義の詳細を表示するか、「 **[!UICONTROL 表示すべて]** 」を選択して、作成したすべてのセグメント定義のリストを確認できます。 セグメントについて詳しくは、 [Segmentation Serviceの概要を参照してください](../segmentation/home.md)。
+**[!UICONTROL 最近のセグメント]**&#x200B;セクションには、IMS組織内で最も新しく作成された5つのセグメント定義がリストされます。 このリストは、新しいセグメント定義が作成されるたびに更新されます。 リストからセグメント定義を選択して、指定したセグメント定義の詳細を表示するか、「**[!UICONTROL 表示すべて]**」を選択して、作成したすべてのセグメント定義のリストを確認できます。 セグメントについて詳しくは、[Segmentation Serviceの概要](../segmentation/home.md)を参照してください。
 
-「 **[!UICONTROL Recent destinations]** 」セクションには、IMS組織内で最も最近作成された5つの宛先がリストされます。 このリストは、新しい宛先が作成されるたびに更新されます。 リストから表示への宛先を選択して、指定した宛先に関する詳細を表示するか、「 **[!UICONTROL 表示すべて]** 」を選択して、作成したすべての宛先のリストを表示できます。 宛先について詳しくは、 [宛先の概要を参照してください](../destinations/home.md)。
+**[!UICONTROL Recent destinations]**&#x200B;セクションには、IMS組織内で最も新しく作成された宛先5つがリストされます。 このリストは、新しい宛先が作成されるたびに更新されます。 指定した宛先に関する詳細をリストから表示に表示する宛先を選択するか、作成したすべての宛先のリストを表示するには、**[!UICONTROL 表示all]**&#x200B;を選択します。 宛先に関する詳細は、[宛先の概要](../destinations/home.md)を参照してください。
 
 ### 推奨される学習
 
-「 **[!UICONTROL 推奨学習]** 」セクションには、Adobe Experience Platformを使い始める際に役立つドキュメントへのリンクが記載されています。
+「**[!UICONTROL 推奨される学習]**」セクションには、Adobe Experience Platformを使い始める際に役立つドキュメントへのリンクが記載されています。
 
 ![](images/user-guide/homepage-recommended.png)
 
@@ -69,7 +69,7 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 ### IMS組織の切り替えボタン
 
-上部ナビゲーションバーの右側の最初の項目は、 **IMS組織の切り替えボタン**&#x200B;です。
+上部ナビゲーションバーの右側の最初の項目は、**IMS組織の切り替えボタン**&#x200B;です。
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,27 +79,27 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 ### アプリケーションの切り替え
 
-上部ナビゲーションの右側にある次のアイテムは、 **アプリ切り替えボタン**&#x200B;で、 ![](./images/user-guide/app-switcher-icon.png) アプリ切り替えアイコンで表されます。 このアイコンを選択すると、Experience Platform、分析、アセット、起動など、IMS組織がアクセス権を持つAdobeアプリを切り替えることができます。
+上部ナビゲーションの右側の次のアイテムは、**アプリケーション切り替えボタン**&#x200B;で、![アプリケーション切り替えボタン](./images/user-guide/app-switcher-icon.png)で表されます。 このアイコンを選択すると、Experience Platform、分析、アセット、起動など、IMS組織がアクセス権を持つAdobeアプリを切り替えることができます。
 
 ### ヘルプ
 
-アプリケーションの切り替えボタンの右側には、 **ヘルプとサポートのメニューが表示されます**。このメニューは ![、](./images/user-guide/help-icon.png) 疑問符/ヘルプアイコンで表されます。 このアイコンを選択すると、ヘルプやサポートのリソースを含むポーバーメニューが表示されます。 「 **[!UICONTROL ヘルプ]** 」タブには、現在参照しているページに関連するドキュメントのリストが表示されます。 「 **[!UICONTROL サポート]** 」タブでは、Adobeサポートチームとサポートチケットを作成できます。 「 **[!UICONTROL Feedback]** 」タブを使用すると、プラットフォームに関するフィードバックをAdobeに送信できます。
+アプリケーション切り替えボタンの右側には、**ヘルプとサポートメニュー**&#x200B;が表示されます。これは、![疑問符/help](./images/user-guide/help-icon.png)アイコンで表されます。 このアイコンを選択すると、ヘルプやサポートのリソースを含むポーバーメニューが表示されます。 「**[!UICONTROL ヘルプ]**」タブには、現在閲覧中のページに関連するドキュメントのリストが表示されます。 「**[!UICONTROL サポート]**」タブを使用すると、Adobeサポートチームとサポートチケットを作成できます。 **[!UICONTROL 「Feedback]**」タブを使用すると、プラットフォームに関するフィードバックをAdobeに送信できます。
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### 通知とお知らせ
 
-「 **通知」セクション**。 ![ベル/通知とお知らせ](images/user-guide/notification-icon.png) アイコンで表されます。 「 **[!UICONTROL 通知]** 」タブには製品やその他の関連する更新に関する重要な情報が表示され、「お知らせ **** 」タブにはサービスのメンテナンスに関する情報が表示されます。
+**通知セクション**&#x200B;内。![ベル/通知とお知らせ](images/user-guide/notification-icon.png)アイコンで表されます。 「**[!UICONTROL 通知]**」タブには製品やその他の関連する更新に関する重要な情報が表示され、「**[!UICONTROL お知らせ]**」タブにはサービスメンテナンスに関する情報が表示されます。
 
 ### ユーザープロファイル
 
-上部ナビゲーションバーの最後の項目は **ユーザー設定**&#x200B;です。これは、 ![ユーザー設定/ユーザープロファイル](images/user-guide/profile-icon.png) アイコンで表されます。 環境設定を編集したり、サインアウトしたりするには、このアイコンを選択します。
+上部ナビゲーションバーの最後の項目は、**ユーザー設定**&#x200B;です。これは、![ユーザー設定/ユーザープロファイル](images/user-guide/profile-icon.png)アイコンで表されます。 環境設定を編集したり、サインアウトしたりするには、このアイコンを選択します。
 
 ### サンドボックス
 
-上部ナビゲーションバーのすぐ下に、サンドボックスバーがあります。 このバーは、現在プラットフォームに使用しているサンドボックスを表示します。 サンドボックスについて詳しくは、 [サンドボックスの概要を参照してください](../sandboxes/home.md)。
+上部ナビゲーションバーのすぐ下に、サンドボックスバーがあります。 このバーは、現在プラットフォームに使用しているサンドボックスを表示します。 サンドボックスについて詳しくは、[サンドボックスの概要](../sandboxes/home.md)を参照してください。
 
-## 左側のナビゲーション {#left-nav}
+## 左側のナビゲーション{#left-nav}
 
 画面の左側のナビゲーションは、リストUIでサポートされるすべての様々なサービスをします。
 
@@ -109,55 +109,55 @@ The **[!UICONTROL Destinations]** section shows the total number of destinations
 
 ![](images/user-guide/homepage-left.png)
 
-「 **[!UICONTROL ホーム]** 」セクションでは、プラットフォームUIのホームページに戻ることができます。
+「**[!UICONTROL ホーム]**」セクションを使用すると、プラットフォームUIのホームページに戻ることができます。
 
-「 **[!UICONTROL ワークフロー]** 」セクションには、プラットフォーム内で操作を実行するための複数手順のワークフローのリストが表示されます。 ワークフローの詳細については、 [ワークフローの概要を参照してください](./workflows.md)。
+**[!UICONTROL ワークフロー]**&#x200B;セクションは、プラットフォーム内で操作を実行するための複数手順のワークフローのリストを示しています。 ワークフローに関する詳細は、[ワークフローの概要](./workflows.md)を参照してください。
 
 ### [!UICONTROL 接続]
 
-「 **[!UICONTROL ソース]** 」セクションでは、ソース接続を作成、更新、および削除でき、外部ソースのデータをプラットフォームに取り込むことができます。 ソースの詳細については、「 [ソースの概要](../sources/home.md)」を参照してください。
+**[!UICONTROL ソース]**&#x200B;セクションでは、ソース接続を作成、更新、および削除でき、外部ソースのデータをプラットフォームに取り込むことができます。 ソースに関する詳細は、[ソースの概要](../sources/home.md)を参照してください。
 
-「 **[!UICONTROL 宛先]** 」セクションでは、宛先を作成、更新および削除でき、プラットフォームから多くの外部宛先にデータをエクスポートできます。 宛先について詳しくは、 [宛先の概要を参照してください](../destinations/home.md)。
+**[!UICONTROL Destinations]**&#x200B;セクションでは、宛先を作成、更新および削除でき、プラットフォームから多くの外部宛先にデータをエクスポートできます。 宛先に関する詳細は、[宛先の概要](../destinations/home.md)を参照してください。
 
 ### [!UICONTROL 顧客]
 
-「 **[!UICONTROL プロファイル]** 」セクションでは、顧客プロファイル、表示プロファイル指標、結合ポリシーの作成と管理、表示和集合スキーマを参照できます。 「 [!UICONTROL プロファイル] 」セクションの使用方法の詳細については、 [[!DNL Profile] ユーザガイドを参照してください](../profile/ui/user-guide.md)。 リアルタイム顧客のプロファイルについて詳しくは、 [リアルタイム顧客プロファイルの概要を参照してください](../profile/home.md)。
+**[!UICONTROL プロファイル]**&#x200B;セクションでは、顧客プロファイル、表示プロファイル指標、結合ポリシーの作成と管理、表示和集合スキーマを参照できます。 [!UICONTROL プロファイル]の使い方の詳細については、[[!DNL Profile] ユーザーガイド](../profile/ui/user-guide.md)をお読みください。 リアルタイム顧客のプロファイルについて詳しくは、[リアルタイム顧客プロファイルの概要](../profile/home.md)を参照してください。
 
-「 **[!UICONTROL セグメント]** 」セクションでは、セグメント定義を作成および管理できます。 「 [!UICONTROL セグメント] 」セクションの使用方法の詳細については、「 [セグメント化ユーザーガイド](../segmentation/ui/overview.md)」を参照してください。 Segmentation Serviceについて詳しくは、 [Segmentation Serviceの概要を参照してください](../segmentation/home.md)。
+「**[!UICONTROL セグメント]**」セクションでは、セグメント定義を作成および管理できます。 [!UICONTROL セグメント]の使用について詳しくは、[セグメント化ユーザーガイド](../segmentation/ui/overview.md)を参照してください。 Segmentation Serviceの詳細については、[Segmentation Service overview](../segmentation/home.md)を参照してください。
 
-「 **[!UICONTROL ID]** 」セクションでは、ID名前空間を作成および管理できます。 「 [!UICONTROL ID] 」セクションの詳細(ID名前空間に関する情報や、Platform UIでのIDの使用方法など)については、「 [ID名前空間の概要](../identity-service/namespaces.md)」を参照してください。
+「**[!UICONTROL ID]**」セクションでは、ID名前空間を作成および管理できます。 「ID]」セクションの詳細(ID名前空間に関する情報や、プラットフォームUIでのIDの使用方法など)については、[!UICONTROL ID名前空間の概要](../identity-service/namespaces.md)を参照してください。[
 
 ### [!UICONTROL プライバシー]
 
-「 **[!UICONTROL ポリシー]** 」セクションでは、データ使用ポリシーを作成および管理できます。 「ポリシー」セクションの使用方法の詳細については、『 [データ使用ポリシーユーザーガイド](../data-governance/policies/user-guide.md)』を参照してください。 データ使用ポリシーの詳細については、「 [データ使用ポリシーの概要](../data-governance/policies/overview.md)」を参照してください。
+「**[!UICONTROL ポリシー]**」セクションでは、データ使用ポリシーを作成および管理できます。 「ポリシー」セクションの使用方法の詳細については、[データ使用ポリシーユーザーガイド](../data-governance/policies/user-guide.md)を参照してください。 データ使用ポリシーの詳細については、[データ使用ポリシーの概要](../data-governance/policies/overview.md)を参照してください。
 
-「 **[!UICONTROL リクエスト]** 」セクションでは、プライバシーリクエストを作成および管理できます。 Privacy ServiceUIにアクセスするには、リストに記載されている必要があります。 「リクエスト」セクションの使用方法の詳細については、 [Privacy Serviceユーザーガイドを参照してください](../privacy-service/ui/user-guide.md)。 Privacy Serviceの詳細については、 [Privacy Serviceの概要を参照してください](../privacy-service/home.md)。
+「**[!UICONTROL リクエスト]**」セクションでは、プライバシーリクエストを作成および管理できます。 Privacy ServiceUIにアクセスするには、リストに記載されている必要があります。 「リクエスト」の節の使い方について詳しくは、[Privacy Serviceユーザーガイド](../privacy-service/ui/user-guide.md)をお読みください。 Privacy Serviceに関する詳細は、[Privacy Serviceの概要](../privacy-service/home.md)を参照してください。
 
 ### [!UICONTROL データ科学]
 
-「 **[!UICONTROL ノートブック]** 」セクションからJupyterLabにアクセスできます。JupyterLabは、データの調査、分析、モデル化を行う、インタラクティブな開発環境です。 「ノートブック」セクションの使用方法の詳細については、 [JupterLabユーザーガイドを参照してください](../data-science-workspace/jupyterlab/overview.md)。 Data Science Workspaceの詳細については、「 [Data Science Workspaceの概要」を参照してください](../data-science-workspace/home.md)
+**[!UICONTROL ノートブック]**&#x200B;セクションは、データの調査、分析、モデル化を可能にするインタラクティブな開発環境であるJupterLabへのアクセスを提供します。 「ノートブック」セクションの使い方の詳細については、[JupyterLabユーザーガイド](../data-science-workspace/jupyterlab/overview.md)を参照してください。 Data Science Workspaceの詳細については、[データサイエンスワークスペースの概要](../data-science-workspace/home.md)を参照してください
 
-「 **[!UICONTROL モデル]** 」セクションでは、機械学習と人工知能を活用して、モデルの作成、開発、トレーニング、調整を行い、予測を行うことができます。 モデルに関する詳細は、 [トレーニングとモデルの評価に関するチュートリアルで確認できます](../data-science-workspace/models-recipes/train-evaluate-model-ui.md)。
+**[!UICONTROL モデル]**&#x200B;セクションでは、機械学習と人工知能を活用して、モデルの作成、開発、トレーニング、調整を行い、予測を行うことができます。 「モデル」セクションの詳細については、[トレーニングのチュートリアルで、モデル](../data-science-workspace/models-recipes/train-evaluate-model-ui.md)を評価してください。
 
-「 **[!UICONTROL サービス]** 」セクションでは、公開されたモデルをスケジュールされたトレーニングとスコアリング用に管理したり、Adobeのインテリジェントサービスを活用して、リアルタイムでパーソナライズされた顧客体験を提供したりできます。 サービスに関する詳細は、「サービスとしてのモデルの [発行」チュートリアルを参照してください](../data-science-workspace/models-recipes/publish-model-service-ui.md)。
+「**[!UICONTROL サービス]**」セクションでは、公開されたモデルをスケジュール済みのトレーニングとスコアリング用に管理したり、Adobeのインテリジェントサービスを利用して、リアルタイムでパーソナライズされた顧客体験を提供できます。 サービスに関する詳細は、「[サービスとしてのモデルの公開](../data-science-workspace/models-recipes/publish-model-service-ui.md)」を参照してください。
 
 ### [!UICONTROL データ管理]
 
-「 **[!UICONTROL スキーマ]** 」セクションでは、Experience Data Model(XDM)スキーマを作成および管理できます。 スキーマの詳細については、スキーマの [作成に関するチュートリアルを参照してください](../xdm/tutorials/create-schema-ui.md)。 More information about XDM can be found in the [XDM System overview](../xdm/home.md).
+「**[!UICONTROL スキーマ]**」セクションでは、エクスペリエンスデータモデル(XDM)スキーマを作成および管理できます。 スキーマの詳細については、[スキーマ](../xdm/tutorials/create-schema-ui.md)の作成のチュートリアルを参照してください。 XDMの詳細は[XDMシステム概要](../xdm/home.md)を参照してください。
 
-「 **[!UICONTROL Datasets]** 」セクションでは、データセットの作成と管理を行うことができます。 データセットの詳細については、『 [datasetsユーザガイド](../catalog/datasets/user-guide.md)』を参照してください。
+「**[!UICONTROL データセット]**」セクションでは、データセットの作成と管理が可能です。 データセットに関する詳細は、『[datasetsユーザーガイド](../catalog/datasets/user-guide.md)』を参照してください。
 
-[ **[!UICONTROL クエリ]** ]セクションでは、クエリの作成と管理、Adobe Experience Platformクエリサービスが行うSQLクエリのログ、PostgreSQL資格情報の表示を行うことができます。 クエリの詳細については、『 [クエリサービスユーザガイド](../query-service/ui/overview.md)』を参照してください。
+**[!UICONTROL クエリ]**&#x200B;セクションを使用すると、クエリの作成と管理、Adobe Experience Platformクエリサービスが行うSQLクエリのログ、PostgreSQL資格情報の表示を行うことができます。 クエリの詳細については、『クエリサービスユーザガイド](../query-service/ui/overview.md)』を参照してください。[
 
-「 **[!UICONTROL 監視]** 」セクションでは、バッチおよびストリーミング取り込みを監視できます。 監視に関する詳細は、『 [監視データ取り込みユーザーガイド](../ingestion/quality/monitor-data-ingestion.md)』を参照してください。
+**[!UICONTROL 監視]**&#x200B;セクションでは、バッチとストリーミング取り込みを監視できます。 監視に関する詳細は、『[監視データ取り込みユーザーガイド](../ingestion/quality/monitor-data-ingestion.md)』を参照してください。
 
 ### [!UICONTROL 判定]
 
-Offer Decisioningは、Adobe Experience Platformと統合された申し込みサービスです。 Experience Platformを活用して、すべてのタッチポイントにわたって適切なタイミングで最高のオファーと経験を顧客に提供できます。 [!UICONTROL オファー] や [!UICONTROL アクティビティとの連携など、Offer Decisioningの詳細については、] Offer Decisioningのドキュメントを参照してください [](https://experienceleague.adobe.com/docs/offer-decisioning.html)。
+Offer Decisioningは、Adobe Experience Platformと統合された申し込みサービスです。 Experience Platformを活用して、すべてのタッチポイントにわたって適切なタイミングで最高のオファーと経験を顧客に提供できます。 [!UICONTROL オファー]や[!UICONTROL アクティビティ]との連携を含め、Offer Decisioningの詳細については、[Offer Decisioningのドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning.html)を参照してください。
 
 ### [!UICONTROL 管理]
 
-UI(Platform User Interface)を使用すると、毎日のスナップショットでキャプチャされる、組織のライセンスの使用に関する重要な情報を表示できるダッシュボードが提供されます。 これには、ナビゲーションで[ **[!UICONTROL ライセンスの使用状況]** ]を選択してアクセスします。 ライセンス使用ダッシュボードの詳細については、『 [ライセンス使用ダッシュボードガイド](license-usage-dashboard.md)』を参照してください。
+UI(Platform User Interface)を使用すると、毎日のスナップショットでキャプチャされる、組織のライセンスの使用に関する重要な情報を表示できるダッシュボードが提供されます。 これにアクセスするには、ナビゲーションで&#x200B;**[!UICONTROL ライセンスの使用状況]**&#x200B;を選択します。 ライセンス使用ダッシュボードの詳細については、[ライセンス使用ダッシュボードガイド](license-usage-dashboard.md)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -165,4 +165,4 @@ UI(Platform User Interface)を使用すると、毎日のスナップショッ�
 
 ## 次の手順
 
-このガイドを読むことで、Platform UIのホームページと主要なナビゲーション要素について紹介します。 ユーザーインターフェイスでの作業に関する詳細は、各プラットフォームサービスのドキュメントを参照してください。 このドキュメントへのリンクは、このドキュメントの前の [左側のナビゲーション](#left-nav) ・セクションに記載されています。
+このガイドを読むことで、Platform UIのホームページと主要なナビゲーション要素について紹介します。 ユーザーインターフェイスでの作業に関する詳細は、各プラットフォームサービスのドキュメントを参照してください。 このドキュメントへのリンクは、このドキュメントの前の[左側のナビゲーション](#left-nav)のセクションにあります。
