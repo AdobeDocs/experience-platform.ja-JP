@@ -5,10 +5,10 @@ seo-title: Facebook の宛先
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 seo-description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: d0b6225a726c13e2b77ea0f61446ea489df81e69
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 26%
+source-wordcount: '963'
+ht-degree: 25%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 26%
 # [!DNL Facebook] 宛先
 
 ## 概要 {#overview}
+
+>[!IMPORTANT]
+>
+>新しい宛先設定エクスペリエンスへの顧客の移行は現在進行中です。 現時点で、宛先設定ページへのアクセスで問題が発生する場合があります。
 
 ハッシュされた電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、および抑制のための[!DNL Facebook]キャンペーンのプロファイルをアクティブにします。
 
