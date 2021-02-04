@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
+keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；モデル；先生の機械学習api
 solution: Experience Platform
 title: モデル
 topic: Developer guide
@@ -7,8 +7,8 @@ description: モデルは、履歴データと構成を使用してビジネス�
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '846'
-ht-degree: 67%
+source-wordcount: '861'
+ht-degree: 66%
 
 ---
 
@@ -163,9 +163,9 @@ curl -X GET \
 | `experimentId` | 有効な実験 ID。 |
 | `experimentRunId` | 有効な実験実行 ID。 |
 
-## 事前生成されたモデルの登録 {#register-a-model}
+## 事前生成されたモデルの登録{#register-a-model}
 
-You can register a pre-generated Model by making a POST request to the `/models` endpoint. モデルを登録するには、 `modelArtifact` ファイルと `model` プロパティの値を要求の本文に含める必要があります。
+`/models`エンドポイントにPOSTリクエストを行うことで、事前生成されたモデルを登録できます。 モデルを登録するには、`modelArtifact`ファイルと`model`プロパティの値を要求の本文に含める必要があります。
 
 **API 形式**
 
@@ -175,7 +175,7 @@ POST /models
 
 **リクエスト**
 
-次のPOSTには、必要な `modelArtifact` ファイルと `model` プロパティの値が含まれています。 これらの値について詳しくは、次の表を参照してください。
+次のPOSTには、必要な`modelArtifact`ファイルと`model`プロパティ値が含まれています。 これらの値について詳しくは、次の表を参照してください。
 
 ```shell
 curl -X POST \
@@ -215,7 +215,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `id` | モデルに対応する ID。 |
-| `modelArtifactUri` | モデルが保存されている場所を示す URI。The URI ends with the `id` value for your model. |
+| `modelArtifactUri` | モデルが保存されている場所を示す URI。URIの末尾は、モデルの`id`値です。 |
 
 ## ID によるモデルの更新
 
@@ -317,9 +317,9 @@ curl -X DELETE \
 }
 ```
 
-## モデル用の新しいトランスコードの作成 {#create-transcoded-model}
+## モデル{#create-transcoded-model}用の新しいトランスコードの作成
 
-トランスコードとは、あるエンコーディングから別のエンコーディングへの直接のデジタルからデジタルへの変換です。 新しい出力を作成するには、とを指定し、モデル用に新しいトランスコード `{MODEL_ID}``targetFormat` を作成します。
+トランスコードとは、あるエンコーディングから別のエンコーディングへの直接のデジタルからデジタルへの変換です。 新しい出力を含める`{MODEL_ID}`と`targetFormat`を指定して、モデル用の新しいトランスコードを作成します。
 
 **API 形式**
 
@@ -356,7 +356,7 @@ curl -X POST \
 
 **応答** 
 
-正常な応答が返されると、トランスコードの情報を含むJSONオブジェクトを含むペイロードが返されます。 これには、特定のトランスコードされたモデルを`id`取得する際に使用されるトランスコード固有識別子( [)が含まれます](#retrieve-transcoded-model)。
+正常な応答が返されると、トランスコードの情報を含むJSONオブジェクトを含むペイロードが返されます。 これには、[特定のトランスコードされたモデル](#retrieve-transcoded-model)の取得で使用されるトランスコード固有識別子(`id`)が含まれます。
 
 ```json
 {
@@ -372,9 +372,9 @@ curl -X POST \
 }
 ```
 
-## モデルのトランスコーディングのリストの取得 {#retrieve-transcoded-model-list}
+## モデル{#retrieve-transcoded-model-list}のトランスコーディングのリストを取得します
 
-モデルに対して実行されたトランスコーディングのリストを取得するには、でGETリクエストを実行し `{MODEL_ID}`ます。
+`{MODEL_ID}`と共にGETリクエストを実行すると、モデルで実行されたトランスコーディングのリストを取得できます。
 
 **API 形式**
 
@@ -432,9 +432,9 @@ curl -X GET \
 }
 ```
 
-## Retrieve a specific transcoded Model {#retrieve-transcoded-model}
+## 特定のトランスコードされたモデルを取得{#retrieve-transcoded-model}
 
-トランスコードされた特定のモデルを取得するには、トランスコードされたモデルのIDとIDを使用してGETリクエスト `{MODEL_ID}` を実行します。
+`{MODEL_ID}`とトランスコードされたモデルのIDを使用してGETリクエストを実行すると、特定のトランスコードされたモデルを取得できます。
 
 **API 形式**
 
