@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；自動適用；APIベースの適用；データガバナンス
 solution: Experience Platform
 title: ポリシー
 topic: developer guide
@@ -7,7 +7,7 @@ description: マーケティングアクションが作成され、ポリシー�
 translation-type: tm+mt
 source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1541'
 ht-degree: 17%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 17%
 
 # ポリシー評価エンドポイント
 
-Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. 返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反するポリシーのセットの形をとります。
+マーケティングアクションが作成され、ポリシーが定義されたら、[!DNL Policy Service] APIを使用して、特定のアクションによってポリシーが違反されたかどうかを評価できます。 返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反するポリシーのセットの形をとります。
 
-By default, only policies whose status is set to `ENABLED` participate in evaluation. ただし、クエリパラメーターを使用して、評価に `?includeDraft=true``DRAFT` ポリシーを含めることはできます。
+デフォルトでは、`ENABLED`に設定されたステータスのポリシーのみが評価に参加します。 ただし、クエリパラメーター`?includeDraft=true`を使用して、評価に`DRAFT`ポリシーを含めることはできます。
 
 評価のリクエストは、次の 3 つの方法のいずれかでおこなうことができます。
 
@@ -27,11 +27,11 @@ By default, only policies whose status is set to `ENABLED` participate in evalua
 
 ## はじめに
 
-The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). 先に進む前に、 [はじめに](./getting-started.md)[!DNL Experience Platform] 、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、APIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)の一部です。 先に進む前に、[はじめにガイド](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
-## データ使用ラベルを使用してポリシー違反を評価します {#labels}
+## データ使用ラベル{#labels}を使用してポリシー違反を評価
 
-GET要求で `duleLabels` クエリパラメーターを使用することで、特定のデータ使用ラベルのセットの存在に基づいてポリシー違反を評価できます。
+GET要求で`duleLabels`クエリパラメーターを使用すると、特定のデータ使用ラベルのセットの存在に基づいてポリシー違反を評価できます。
 
 **API 形式**
 
@@ -42,8 +42,8 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 一連のデータ使用ラベルに対してテストするマーケティングアクションの名前。 マーケティングアクションのエンドポイントに [GETリクエストを行うことで、使用可能なマーケティングアクションのリストを取得できます](./marketing-actions.md#list)。 |
-| `{LABELS_LIST}` | マーケティングアクションをテストするためのデータ使用ラベル名のコンマ区切りリスト。 次に例を示します。 `duleLabels=C1,C2,C3`<br><br>ラベル名では大文字と小文字が区別されます。 パラメーターにリストする際は、大文字と小文字を正しく指定していることを確認してく `duleLabels` ださい。 |
+| `{MARKETING_ACTION_NAME}` | 一連のデータ使用ラベルに対してテストするマーケティングアクションの名前。 マーケティングアクションのエンドポイント](./marketing-actions.md#list)に[GETリクエストを行うと、使用可能なマーケティングアクションのリストを取得できます。 |
+| `{LABELS_LIST}` | マーケティングアクションをテストするためのデータ使用ラベル名のコンマ区切りリスト。 次に例を示します。`duleLabels=C1,C2,C3`<br><br>ラベル名では大文字と小文字が区別されます。 `duleLabels`パラメーターにリストする場合は、大文字と小文字を正しく指定していることを確認してください。 |
 
 **リクエスト**
 
@@ -51,7 +51,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 >[!IMPORTANT]
 >
->ポリシーでの表現における`AND`および`OR`演算子に注意してください。In the example below, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1` and `C3`) to return the violated policy. ポリシーを慎重に評価し、ポリシー式を十分に定義します。
+>ポリシーでの表現における`AND`および`OR`演算子に注意してください。以下の例では、リクエスト内でラベル（`C1`または`C3`）が単独で表示されていた場合、マーケティングアクションはこのポリシーに違反していません。 違反ポリシーを返すには、ラベル（`C1`と`C3`）の両方を使用します。 ポリシーを慎重に評価し、ポリシー式を十分に定義します。
 
 ```shell
 curl -X GET \
@@ -64,7 +64,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答には `violatedPolicies` 配列が含まれます。配列には、指定されたラベルに対するマーケティングアクションの実行結果として違反されたポリシーの詳細が含まれます。 If no policies are violated, the `violatedPolicies` array will be empty.
+成功した応答には`violatedPolicies`配列が含まれます。この配列には、指定されたラベルに対するマーケティングアクションの実行の結果として違反されたポリシーの詳細が含まれます。 ポリシーに違反しない場合は、`violatedPolicies`配列は空になります。
 
 ```JSON
 {
@@ -122,9 +122,9 @@ curl -X GET \
 }
 ```
 
-## データセットを使用したポリシー違反の評価 {#datasets}
+## データセット{#datasets}を使用してポリシー違反を評価
 
-データ使用ラベルを収集できる1つ以上のデータセットのセットに基づいて、ポリシー違反を評価できます。 これは、特定のマーケティングアクションに対してエンドポイントに対してPOSTリクエストを実行し、リクエスト本文内でデータセットIDのリストを提供することで行います。 `/constraints`
+データ使用ラベルを収集できる1つ以上のデータセットのセットに基づいて、ポリシー違反を評価できます。 これは、特定のマーケティングアクションに対して`/constraints`エンドポイントにPOSTリクエストを実行し、リクエスト本文内のデータセットIDのリストを提供することで行います。
 
 **API 形式**
 
@@ -135,11 +135,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | 1つ以上のデータセットに対してテストするマーケティングアクションの名前。 マーケティングアクションのエンドポイントに [GETリクエストを行うことで、使用可能なマーケティングアクションのリストを取得できます](./marketing-actions.md#list)。 |
+| `{MARKETING_ACTION_NAME}` | 1つ以上のデータセットに対してテストするマーケティングアクションの名前。 マーケティングアクションのエンドポイント](./marketing-actions.md#list)に[GETリクエストを行うと、使用可能なマーケティングアクションのリストを取得できます。 |
 
 **リクエスト**
 
-次のリクエストは、3つのデータセットのセットに対して `crossSiteTargeting` マーケティングアクションを実行し、ポリシー違反の有無を評価します。
+次のリクエストは、3つのデータセットのセットに対して`crossSiteTargeting`マーケティングアクションを実行し、ポリシー違反の評価を行います。
 
 ```shell
 curl -X POST \
@@ -167,12 +167,12 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `entityType` | IDが兄弟 `entityId` プロパティで示されるエンティティのタイプ。 現在、指定できる値は `dataSet`です。 |
-| `entityId` | マーケティングアクションをテストするデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ま [!DNL Catalog Service] す。 See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
+| `entityType` | 兄弟`entityId`プロパティでIDが示されるエンティティのタイプ。 現在、`dataSet`の値のみが許可されています。 |
+| `entityId` | マーケティングアクションをテストするデータセットのID。 データセットとそれに対応するIDのリストは、[!DNL Catalog Service] APIの`/dataSets`エンドポイントにGETリクエストを行うことで取得できます。 詳しくは、[ [!DNL Catalog] オブジェクト](../../catalog/api/list-objects.md)のリストを参照してください。 |
 
 **応答** 
 
-成功した応答には `violatedPolicies` 配列が含まれます。配列には、指定されたデータセットに対するマーケティングアクションの実行の結果として違反されたポリシーの詳細が含まれます。 If no policies are violated, the `violatedPolicies` array will be empty.
+成功した応答には`violatedPolicies`配列が含まれます。この配列には、指定されたデータセットに対するマーケティングアクションの実行の結果として違反されたポリシーの詳細が含まれます。 ポリシーに違反しない場合は、`violatedPolicies`配列は空になります。
 
 ```JSON
 {
@@ -348,14 +348,14 @@ curl -X POST \
 | `duleLabels` | 応答オブジェクトには、指定したデータセット内のすべてのラベルの統合リストを含む`duleLabels`配列が含まれます。このリストには、データセット内のすべてのフィールドにデータセットレベルおよびフィールドレベルのラベルが含まれます。 |
 | `discoveredLabels` | この応答には、各データセットのオブジェクトを含む`discoveredLabels`配列も含まれ、`datasetLabels`がデータセットレベルおよびフィールドレベルのラベルに分類されて表示されます。各フィールドレベルのラベルには、そのラベルを持つ特定のフィールドへのパスが表示されます。 |
 
-## 特定のデータセットフィールドを使用してポリシー違反を評価します {#fields}
+## 特定のデータセットフィールド{#fields}を使用してポリシー違反を評価します。
 
 1つ以上のデータセット内のフィールドのサブセットに基づいてポリシー違反を評価できるので、これらのフィールドに適用されたデータ使用ラベルのみが評価されます。
 
 データセットフィールドを使用してポリシーを評価する場合は、次の点に注意してください。
 
-* **フィールド名では大文字と小文字が区別されます**。フィールドを指定する場合は、データセットに表示されるとおりに記述する必要があります(例： `firstName` vs `firstname`)。
-* **データセットラベルの継承**:データセット内の個々のフィールドは、データセットレベルで適用されたラベルを継承します。 ポリシーの評価が期待どおりに返されない場合は、フィールドレベルで適用されるラベルに加え、データセットレベルからフィールドに継承されたラベルがないかどうかを確認してください。
+* **フィールド名では大文字と小文字が区別されます**。フィールドを指定する場合は、データセットに表示されるとおりに記述する必要があります( `firstName` vsなど `firstname`)。
+* **データセットラベルの継承**:データセット内の個々のフィールドは、データセットレベルで適用されたラベルを継承します。ポリシーの評価が期待どおりに返されない場合は、フィールドレベルで適用されるラベルに加え、データセットレベルからフィールドに継承されたラベルがないかどうかを確認してください。
 
 **API 形式**
 
@@ -366,11 +366,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | データセットフィールドのサブセットに対してテストするマーケティングアクションの名前。 マーケティングアクションのエンドポイントに [GETリクエストを行うことで、使用可能なマーケティングアクションのリストを取得できます](./marketing-actions.md#list)。 |
+| `{MARKETING_ACTION_NAME}` | データセットフィールドのサブセットに対してテストするマーケティングアクションの名前。 マーケティングアクションのエンドポイント](./marketing-actions.md#list)に[GETリクエストを行うと、使用可能なマーケティングアクションのリストを取得できます。 |
 
 **リクエスト**
 
-次のリクエストは、3つのデータセットに属する特定のフィールドセット `crossSiteTargeting` に対するマーケティングアクションをテストします。 ペイロードは、データセットのみを含む [評価要求に似ており](#datasets)、ラベルを収集する各データセットに対して特定のフィールドを追加します。
+次のリクエストは、3つのデータセットに属する特定のフィールドセットに対してマーケティングアクション`crossSiteTargeting`をテストします。 ペイロードは、データセット](#datasets)のみを含む[評価リクエストに似ており、ラベルを収集する各データセットに対して特定のフィールドを追加します。
 
 ```shell
 curl -X POST \
@@ -415,15 +415,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `entityType` | IDが兄弟 `entityId` プロパティで示されるエンティティのタイプ。 現在、指定できる値は `dataSet`です。 |
-| `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットのID。 APIでエンドポイントにGETリクエストを行うことで、データセットとそれに対応するIDのリストを取得でき `/dataSets` ま [!DNL Catalog Service] す。 See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
-| `entityMeta.fields` | データセットのスキーマ内の特定のフィールドへのパスの配列。JSONポインター文字列の形式で提供されます。 これらの文字列に許可された構文の詳細については、『API基本ガイド [』の「](../../landing/api-fundamentals.md#json-pointer) JSONポインター」の節を参照してください。 |
+| `entityType` | 兄弟`entityId`プロパティでIDが示されるエンティティのタイプ。 現在、`dataSet`の値のみが許可されています。 |
+| `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットのID。 データセットとそれに対応するIDのリストは、[!DNL Catalog Service] APIの`/dataSets`エンドポイントにGETリクエストを行うことで取得できます。 詳しくは、[ [!DNL Catalog] オブジェクト](../../catalog/api/list-objects.md)のリストを参照してください。 |
+| `entityMeta.fields` | データセットのスキーマ内の特定のフィールドへのパスの配列。JSONポインター文字列の形式で提供されます。 これらの文字列に許可された構文の詳細については、APIの基本原則ガイドの[JSONポインタ](../../landing/api-fundamentals.md#json-pointer)の節を参照してください。 |
 
 **応答** 
 
-成功した応答には `violatedPolicies` 配列が含まれます。配列には、指定されたデータセットフィールドに対するマーケティングアクションの実行結果として違反されたポリシーの詳細が含まれます。 If no policies are violated, the `violatedPolicies` array will be empty.
+成功した応答には`violatedPolicies`配列が含まれます。この配列には、指定されたデータセットフィールドに対するマーケティングアクションの実行結果として違反されたポリシーの詳細が含まれます。 ポリシーに違反しない場合は、`violatedPolicies`配列は空になります。
 
-以下の例の応答とデータセットのみを含む [応答を比較すると](#datasets)、収集されたラベルのリストが短いことに注意してください。 また、各データセット `discoveredLabels` の値は、リクエスト本文で指定されたフィールドのみが含まれるので、減らされています。 また、以前に違反したポリシーでは両方の `Targeting Ads or Content` ラベルを表示する必要があるため、空の `C4 AND C6``violatedPolicies` 配列で示されるように違反することはありません。
+以下の例の応答と、データセット](#datasets)のみを含む[応答とを比較すると、収集されたラベルのリストが短いことに注意してください。 また、各データセットの`discoveredLabels`も、リクエスト本文で指定されたフィールドのみが含まれるので、減らされています。 また、以前に違反したポリシー`Targeting Ads or Content`には、両方の`C4 AND C6`ラベルが必要なので、空の`violatedPolicies`配列で示されるように違反することはありません。
 
 ```JSON
 {
@@ -523,9 +523,9 @@ curl -X POST \
 }
 ```
 
-## ポリシーを一括で評価 {#bulk}
+## ポリシーを一括で評価{#bulk}
 
-エンドポイントでは、1回のAPI呼び出しで複数の評価ジョブを実行できます。 `/bulk-eval`
+`/bulk-eval`エンドポイントを使用すると、1回のAPI呼び出しで複数の評価ジョブを実行できます。
 
 **API 形式**
 
@@ -535,11 +535,11 @@ POST /bulk-eval
 
 **リクエスト**
 
-一括評価要求のペイロードは、オブジェクトの配列でなければなりません。実行する評価ジョブごとに1つずつ。 データセットとフィールドに基づいて評価されるジョブの場合は、 `entityList` 配列を指定する必要があります。 データ使用ラベルに基づいて評価されるジョブの場合は、 `labels` 配列を指定する必要があります。
+一括評価要求のペイロードは、オブジェクトの配列でなければなりません。実行する評価ジョブごとに1つずつ。 データセットとフィールドに基づいて評価されるジョブの場合は、`entityList`配列を指定する必要があります。 データ使用ラベルに基づいて評価されるジョブの場合は、`labels`配列を指定する必要があります。
 
 >[!WARNING]
 >
->一覧に表示されている評価ジョブに、との両方が含まれ `entityList` る場合、 `labels` と配列が含まれる場合は、エラーが発生します。 データセットとラベルの両方に基づいて同じマーケティングアクションを評価する場合は、そのマーケティングアクションに対して別々の評価ジョブを含める必要があります。
+>リストにある評価ジョブに`entityList`と`labels`の両方の配列が含まれている場合、エラーが発生します。 データセットとラベルの両方に基づいて同じマーケティングアクションを評価する場合は、そのマーケティングアクションに対して別々の評価ジョブを含める必要があります。
 
 ```shell
 curl -X POST \
@@ -580,9 +580,9 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `evalRef` | ポリシー違反のラベルまたはデータセットに対してテストするマーケティングアクションのURIです。 |
-| `includeDraft` | デフォルトでは、有効なポリシーのみが評価に参加します。 をに設定 `includeDraft` すると、ステータス `true`のポリシーも参加 `DRAFT` します。 |
-| `labels` | マーケティングアクションをテストするための一連のデータ使用ラベル。<br><br>**重要**:このプロパティを使用する場合、 `entityList` プロパティを同じオブジェクトに含めないでください。 データセットやフィールドを使用して同じマーケティングアクションを評価するには、 `entityList` 配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
-| `entityList` | 一連のデータセットと、それらのデータセット内の（オプションで）特定のフィールドに対して、マーケティングアクションをテストします。<br><br>**重要**:このプロパティを使用する場合、 `labels` プロパティを同じオブジェクトに含めないでください。 特定のデータ使用ラベルを使用して同じマーケティングアクションを評価するには、 `labels` 配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
+| `includeDraft` | デフォルトでは、有効なポリシーのみが評価に参加します。 `includeDraft`を`true`に設定すると、`DRAFT`ステータスのポリシーも参加します。 |
+| `labels` | マーケティングアクションをテストするための一連のデータ使用ラベル。<br><br>**重要**:このプロパティを使用する場合、 `entityList` プロパティを同じオブジェクトに含めないでください。データセットやフィールドを使用して同じマーケティングアクションを評価するには、`entityList`配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
+| `entityList` | 一連のデータセットと、それらのデータセット内の（オプションで）特定のフィールドに対して、マーケティングアクションをテストします。<br><br>**重要**:このプロパティを使用する場合、 `labels` プロパティを同じオブジェクトに含めないでください。特定のデータ使用ラベルを使用して同じマーケティングアクションを評価するには、`labels`配列を含むリクエストペイロードに別のオブジェクトを含める必要があります。 |
 | `entityType` | マーケティングアクションをテストするエンティティのタイプ。 現在は、`dataSet` のみがサポートされています。 |
 | `entityId` | マーケティングアクションをテストするデータセットのID。 |
 | `entityMeta.fields` | （オプション）マーケティングアクションをテストするデータセット内の特定のフィールドのリスト。 |
@@ -683,6 +683,6 @@ curl -X POST \
 ]
 ```
 
-## ポリシー評価 [!DNL Real-time Customer Profile]
+## [!DNL Real-time Customer Profile]のポリシー評価
 
-The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-time Customer Profile] segments. 詳しくは、[オーディエンスセグメントのデータ使用に対する準拠の適用](../../segmentation/tutorials/governance.md)に関するチュートリアルを参照してください。
+[!DNL Policy Service] APIは、[!DNL Real-time Customer Profile]セグメントの使用に関するポリシー違反の有無を確認する場合にも使用できます。 詳しくは、[オーディエンスセグメントのデータ使用に対する準拠の適用](../../segmentation/tutorials/governance.md)に関するチュートリアルを参照してください。
