@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
+keywords: Experience Platform；開発者ガイド；SDK；データアクセスSDK；データサイエンスワークスペース；人気の高いトピック
 solution: Experience Platform
 title: Platform SDK ガイド
 topic: SDK authoring
@@ -7,8 +7,8 @@ description: このチュートリアルでは、PythonとRの両方でdata_acce
 translation-type: tm+mt
 source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 84%
+source-wordcount: '483'
+ht-degree: 82%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 84%
 
 ## 認証の構築 {#build-authentication}
 
-Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, IMS Org ID, a user token, and a service token.
+認証は、[!DNL Adobe Experience Platform]を呼び出すために必要で、APIキー、IMS組織ID、ユーザートークン、サービストークンで構成されます。
 
 ### Python
 
@@ -68,9 +68,9 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## データの基本読み取り {#basic-reading-of-data}
+## データの基本読み取り  {#basic-reading-of-data}
 
-With the new [!DNL Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes.
+新しい[!DNL Platform] SDKでは、最大読み取りサイズは32 GBで、最大読み取り時間は10分です。
 
 読み取り時間が長すぎる場合は、次のいずれかのフィルターオプションを使用してみてください。
 
@@ -105,7 +105,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## オフセットと制限によるフィルター {#filter-by-offset-and-limit}
+## オフセットと制限によるフィルター  {#filter-by-offset-and-limit}
 
 バッチ ID によるフィルタリングはサポートされなくなったので、データの読み取りの範囲を絞るには、`offset` と `limit` を使用する必要があります。
 
@@ -123,7 +123,7 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## 日付によるフィルター {#filter-by-date}
+## 日付によるフィルター  {#filter-by-date}
 
 日付フィルターの精度が、日別に設定されるのではなく、タイムスタンプによって定義されるようになりました。
 
@@ -147,7 +147,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-The new [!DNL Platform] SDK supports the following operations:
+新しい[!DNL Platform] SDKは、次の操作をサポートします。
 
 | 操作 | 関数 |
 | --------- | -------- |
@@ -159,7 +159,7 @@ The new [!DNL Platform] SDK supports the following operations:
 | および（`&`） | `And()` |
 | または（`|`） | `Or()` |
 
-## 選択した列によるフィルター {#filter-by-selected-columns}
+## 選択した列によるフィルター  {#filter-by-selected-columns}
 
 データの読み取りをさらに絞り込むために、列名でフィルターすることもできます。
 
@@ -175,7 +175,7 @@ df = dataset_reader.select(['column-a','column-b']).read()
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## 並べ替え結果の取得 {#get-sorted-results}
+## 並べ替え結果の取得  {#get-sorted-results}
 
 受け取った結果は、それぞれ、ターゲットデータセットの指定した列と、その順序（昇順または降順）で並べ替えることができます。
 
@@ -193,7 +193,7 @@ df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## データの基本的な書き込み {#basic-writing-of-data}
+## データの基本的な書き込み  {#basic-writing-of-data}
 
 >[!NOTE]
 >
