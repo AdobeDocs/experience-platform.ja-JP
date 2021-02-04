@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
+keywords: Experience Platform；最適化；モデル；データサイエンスワークスペース；人気の高いトピック；モデルの洞察
 solution: Experience Platform
 title: モデルの最適化
 topic: tutorial
@@ -8,15 +8,15 @@ description: モデルインサイトフレームワークは、Data Science Wor
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 89%
+source-wordcount: '1260'
+ht-degree: 88%
 
 ---
 
 
 # モデルインサイトフレームワークを使用したモデルの最適化
 
-The Model Insights Framework provides the data scientist with tools in [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. このフレームワークにより、機械学習ワークフローの速度と効果だけでなく、データサイエンティストによる使いやすさも向上します。これは、モデルの調整を支援するために、機械学習アルゴリズムのタイプごとにデフォルトのテンプレートを提供することによっておこなわれます。結果的に、データサイエンティストと市民データサイエンティストは、エンドカスタマーに対してより適切なモデル最適化の決定をおこなうことができます。
+Model Insights Frameworkは、データサイエンティストに[!DNL Data Science Workspace]のツールを提供し、実験に基づく最適な機械学習モデルに対して迅速かつ十分な情報に基づく選択を行います。 このフレームワークにより、機械学習ワークフローの速度と効果だけでなく、データサイエンティストによる使いやすさも向上します。これは、モデルの調整を支援するために、機械学習アルゴリズムのタイプごとにデフォルトのテンプレートを提供することによっておこなわれます。結果的に、データサイエンティストと市民データサイエンティストは、エンドカスタマーに対してより適切なモデル最適化の決定をおこなうことができます。
 
 ## 指標とは
 
@@ -79,7 +79,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 | `evaluator.class` | デフォルトの指標 | `evaluation.metric` |
 --- | --- | ---
 | `DefaultBinaryClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `DefaultMultiClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultMultiClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX`<br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` |  - MAP（Mean Average Precision）<br>- 正規割引累積利益<br>- 平均逆数ランク<br>- 指標 K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 
@@ -101,19 +101,19 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-In the [!DNL Data Science Workspace], the user would be able to see the insights in the &quot;Evaluation Metrics&quot; tab in the experiment page.
+[!DNL Data Science Workspace]では、テストページの「評価指標」タブにインサイトが表示されます。
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-As of now, there are no default evaluation metrics for [!DNL Python] or [!DNL Tensorflow]. Thus, to get the evaluation metrics for [!DNL Python] or [!DNL Tensorflow], you will need to create a custom evaluation metric. これは、`Evaluator` クラスを実装することで実行できます。
+現在のところ、[!DNL Python]または[!DNL Tensorflow]のデフォルトの評価指標はありません。 したがって、[!DNL Python]または[!DNL Tensorflow]の評価指標を取得するには、カスタム評価指標を作成する必要があります。 これは、`Evaluator` クラスを実装することで実行できます。
 
 ####  のカスタム評価指標[!DNL Python]
 
 カスタム評価指標の場合、評価基準に実装する必要がある主なメソッドは `split()` と `evaluate()` の 2 つです。
 
-For [!DNL Python], these methods would be defined in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) for the `Evaluator` class. `Evaluator` の例については、[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) リンクを参照してください。
+[!DNL Python]の場合、これらのメソッドは[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)で`Evaluator`クラスに定義されます。 `Evaluator` の例については、[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) リンクを参照してください。
 
-Creating evaluation metrics in [!DNL Python] requires the user to implement the `evaluate()` and `split()` methods.
+[!DNL Python]で評価指標を作成するには、ユーザーが`evaluate()`メソッドと`split()`メソッドを実装する必要があります。
 
 `evaluate()` メソッドは、`name`、`value`、`valueType` プロパティを持つ指標オブジェクトの配列を含む指標オブジェクトを返します。
 
@@ -123,7 +123,7 @@ Creating evaluation metrics in [!DNL Python] requires the user to implement the 
 
 #### Tensorflow のカスタム評価指標
 
-For [!DNL Tensorflow], similar to [!DNL Python], the methods `evaluate()` and `split()` in the `Evaluator` class will need to be implemented. `evaluate()` については指標を返し、`split()` はトレーニングとテストのデータセットを返す必要があります。
+[!DNL Tensorflow]の場合は、[!DNL Python]と同様、`Evaluator`クラスのメソッド`evaluate()`と`split()`を実装する必要があります。 `evaluate()` については指標を返し、`split()` はトレーニングとテストのデータセットを返す必要があります。
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -158,7 +158,7 @@ class Evaluator(AbstractEvaluator):
 
 ## 事前に作成された指標とビジュアライゼーショングラフの使用
 
-The [!DNL Sensei Model Insights Framework] will support one default template for each type of machine learning algorithm. 次の表に、一般的な高レベルの機械学習アルゴリズムクラスと、対応する評価指標およびビジュアライゼーションを示します。
+[!DNL Sensei Model Insights Framework]は、機械学習アルゴリズムのタイプごとに1つのデフォルトテンプレートをサポートします。 次の表に、一般的な高レベルの機械学習アルゴリズムクラスと、対応する評価指標およびビジュアライゼーションを示します。
 
 | ML アルゴリズムの種類 | 評価指標 | ビジュアライゼーション |
 --- | --- | ---
