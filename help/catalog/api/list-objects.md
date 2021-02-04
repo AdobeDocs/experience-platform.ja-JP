@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
+keywords: Experience Platform；ホーム；人気のあるトピック；フィルタ；フィルタ；フィルタデータ；フィルタデータ；フィルタデータ
 solution: Experience Platform
 title: オブジェクトリスト
 topic: developer guide
@@ -7,8 +7,8 @@ description: 1 回の API 呼び出しで、特定のタイプの使用可能な
 translation-type: tm+mt
 source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 58%
+source-wordcount: '240'
+ht-degree: 55%
 
 ---
 
@@ -26,7 +26,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be listed. 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | 表示する[!DNL Catalog]オブジェクトのタイプ。 有効なオブジェクトは次のとおりです。 <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | 応答で返された結果をフィルターするために使用されるクエリパラメーター。複数のパラメーターはアンパサンド（`&`）で区切られます。詳しくは、[カタログデータのフィルタリング](filter-data.md)に関するガイドを参照してください。 |
 
 **リクエスト**
@@ -44,11 +44,11 @@ curl -X GET \
 
 **応答**
 
-A successful response returns a list of [!DNL Catalog] objects in the form of key-value pairs, filtered by the query parameters provided in the request. For each key-value pair, the key represents a unique identifier for the [!DNL Catalog] object in question, which can then be used in another call to [view that specific object](look-up-object.md) for more details.
+成功した応答は、[!DNL Catalog]オブジェクトのリストをキーと値のペアの形式で返し、リクエストに指定されたクエリパラメーターでフィルタリングします。 キーと値のペアごとに、キーは対象の[!DNL Catalog]オブジェクトの固有な識別子を表します。その後、詳細については、特定のオブジェクト](look-up-object.md)を呼び出す[表示の別の呼び出しで使用できます。
 
 >[!NOTE]
 >
->If a returned object does not contain one or more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in ***`Sample Dataset 3`*** and ***`Sample Dataset 4`*** below.
+>返されたオブジェクトに、`properties`クエリで示される要求されたプロパティが1つ以上含まれていない場合、応答は、以下の&#x200B;***`Sample Dataset 3`***&#x200B;と&#x200B;***`Sample Dataset 4`***&#x200B;に示すように、要求されたプロパティのみを返します。
 
 ```json
 {
