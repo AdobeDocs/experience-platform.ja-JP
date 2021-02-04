@@ -3,19 +3,19 @@ title: Adobe Experience PlatformWeb SDKのインストール
 seo-title: Adobe Experience Platform Web SDK：SDK のインストール
 description: Experience Platform Web SDK のインストール方法について説明します
 seo-description: Experience Platform Web SDK のインストール方法について説明します
-keywords: web sdk installation;installing web sdk;internet explorer;promise;
+keywords: web sdkのインストール；web sdkのインストール；internet explorer;promise;
 translation-type: tm+mt
 source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 65%
+source-wordcount: '632'
+ht-degree: 64%
 
 ---
 
 
 # SDK のインストール {#installing-the-sdk}
 
-Adobe Experience PlatformWeb SDKの使用方法は、 [Adobe Experience Platform Launchを使用することをお勧めします](http://launch.adobe.com/jp)。 拡張機能カタログ `AEP Web SDK` を検索し、インストールしてから、拡張機能を設定します。
+Adobe Experience PlatformWeb SDKの使い方は、[Adobe Experience Platform Launch](http://launch.adobe.com/jp)を経由することをお勧めします。 拡張機能カタログで`AEP Web SDK`を検索し、インストールして、拡張機能を設定します。
 
 Adobe Experience PlatformWeb SDKは、CDNでも使用できます。 このファイルを参照するか、ダウンロードして、独自のインフラストラクチャ上でホストできます。 縮小版および縮小版以外のバージョンで利用できます。 縮小されていないバージョンは、デバッグ目的で役立ちます。
 
@@ -23,12 +23,12 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 次に例を示します。
 
-* 縮小： [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
-* 縮小解除： [https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
+* 縮小：[https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
+* 縮小解除：[https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
 
-## コードの追加 {#adding-the-code}
+## コードの追加{#adding-the-code}
 
-The first step in implementing Adobe Experience Platform [!DNL Web SDK] is to copy and paste the following &quot;base code&quot; as high as possible in the `<head>` tag of your HTML:
+Adobe Experience Platform[!DNL Web SDK]を実装する最初の手順は、次の「ベースコード」をHTMLの`<head>`タグ内でできる限り高くコピーして貼り付けることです。
 
 ```markup
 <script>
@@ -62,11 +62,11 @@ The first step in implementing Adobe Experience Platform [!DNL Web SDK] is to co
 
 ## Internet Explorer のサポート {#support-internet-explore}
 
-この SDK は、非同期タスクの完了を伝える方法として promise を使用します。The [Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you need to have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+この SDK は、非同期タスクの完了を伝える方法として promise を使用します。SDKが使用する[Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise)実装は、[!DNL Internet Explorer]を除くすべてのターゲットブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]でSDKを使用するには、`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill)が必要です。
 
 既に `window.Promise` がポリフィルされているかどうかを判断するには、次の手順を実行します。
 
-1. Open your website in [!DNL Internet Explorer].
+1. [!DNL Internet Explorer]でWebサイトを開きます。
 1. ブラウザーのデバッグコンソールを開きます。
 1. コンソールに「`window.Promise`」とに入力し、Enter キーを押します。
 
@@ -82,11 +82,11 @@ The first step in implementing Adobe Experience Platform [!DNL Web SDK] is to co
 
 >[!NOTE]
 >
->別のPromise実装を読み込む場合は、それがサポートしていることを確認してくだ `Promise.prototype.finally`さい。
+>別のPromise実装を読み込む場合は、`Promise.prototype.finally`をサポートしていることを確認してください。
 
 ## JavaScript ファイルの同期読み込み {#loading-javascript-synchronously}
 
-As explained in the section [Adding the code](#adding-the-code), the base code you have copied and pasted into your website&#39;s HTML loads an external file with additional code. この追加のコードには、SDK のコア機能が含まれています。このファイルの読み込み中に実行しようとしたコマンドは、キューに追加され、ファイルの読み込み後に処理されます。これは、最もパフォーマンスの高いインストール方法です。
+[コード](#adding-the-code)の追加の説明に従って、コピーしてWebサイトのHTMLに貼り付けたベースコードは、追加のコードを含む外部ファイルを読み込みます。 この追加のコードには、SDK のコア機能が含まれています。このファイルの読み込み中に実行しようとしたコマンドは、キューに追加され、ファイルの読み込み後に処理されます。これは、最もパフォーマンスの高いインストール方法です。
 
 ただし、特定の状況では、ファイルを同期的に読み込むことが望ましい場合もあります（これらの状況に関する詳細は後で説明します）。これをおこなうと、外部ファイルが読み込まれて実行されるまで、HTML ドキュメントの残りの部分がブラウザーで解析およびレンダリングされなくなります。通常、プライマリコンテンツをユーザーに表示する前にこの遅延が発生するのはお勧めしませんが、状況によっては合理的な場合もあります。
 
