@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;poi details;point of interest;point of interest details;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ;poi;poi詳細；目標点の詳細；データ型；データ型；
 solution: Experience Platform
 title: 目標地点の詳細データ型
 topic: overview
@@ -7,15 +7,15 @@ description: このドキュメントでは、目標地点の詳細XDMデータ�
 translation-type: tm+mt
 source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 16%
+source-wordcount: '200'
+ht-degree: 14%
 
 ---
 
 
-# [!UICONTROL 目標地点の詳細] 、データ型
+# [!UICONTROL 目標地点の] 詳細データ型
 
-[!UICONTROL 目標地点の詳細] は、イベントが監視された地理的関連データを示す標準のXDMデータ型です。
+[!UICONTROL 目標地点の] 詳細は、イベントが監視された地理的関連データを示す標準XDMデータ型です。
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
