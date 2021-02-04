@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
+keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；apiガイド；クエリ;クエリ;クエリサービス；
 solution: Experience Platform
 title: クエリサービス開発者ガイド
 topic: queries
@@ -7,8 +7,8 @@ description: 以下の節では、クエリサービスAPIの/クエリエンド
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 95%
+source-wordcount: '676'
+ht-degree: 93%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 95%
 
 ## サンプル API 呼び出し
 
-The following sections walk through calls you can make using the `/queries` endpoint in the [!DNL Query Service] API. 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+以下の節では、[!DNL Query Service] APIの`/queries`エンドポイントを使用して行える呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### クエリのリストの取得
 
