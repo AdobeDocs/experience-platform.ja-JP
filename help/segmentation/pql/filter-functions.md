@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;filter functions;filter;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；フィルタ関数；フィルタ；
 solution: Experience Platform
 title: フィルター関数
 topic: developer guide
@@ -7,15 +7,15 @@ description: フィルター関数 は、プロファイルクエリ言語(PQL)�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 83%
+source-wordcount: '219'
+ht-degree: 77%
 
 ---
 
 
 # フィルター関数
 
-フィルター関数 は、 [!DNL Profile Query Language] (PQL)のアレイ内のデータをフィルタするために使用します。 More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+フィルター関数 は[!DNL Profile Query Language] (PQL)の配列内のデータをフィルタするために使用されます。 他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## フィルター
 
