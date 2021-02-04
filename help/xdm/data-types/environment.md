@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;environment;datatype;data-type;data type;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ;環境；データ型；データ型；
 solution: Experience Platform
 title: 環境データ型
 topic: overview
@@ -7,25 +7,25 @@ description: このドキュメントでは、環境XDMデータ型の概要を�
 translation-type: tm+mt
 source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 15%
+source-wordcount: '464'
+ht-degree: 14%
 
 ---
 
 
-# [!UICONTROL 環境] ・データ型
+#  環境データ型
 
-[!UICONTROL 環境] は標準のXDMデータ型で、監視イベントの周囲の環境を記述します。特に、ネットワークやソフトウェアのバージョンなどの一時的な情報の詳細を示します。
+ Environmentは、監視イベントの周囲の環境を記述する標準的なXDMデータ型です。特に、ネットワークやソフトウェアのバージョンなどの一時的な情報の詳細を示します。
 
 >[!IMPORTANT]
 >
->すべての値は、DeviceAtlas [Adobeによるライセンスを受けたDeviceAtlas](https://deviceatlas.com) データベースと一致する必要があります。
+>すべての値は、Adobeがライセンスを取得した[DeviceAtlas](https://deviceatlas.com)データベースと一致する必要があります。
 
 <img src="../images/data-types/environment.png" width="400" /><br />
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `_dc` | オブジェクト | 1つのフィールドを含むオブジェクト `language`。データ表示に関するユーザーの言語、地理的環境、文化的環境設定を表す環境の言語を示します。 Languages are specified in language code as defined in [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
+| `_dc` | オブジェクト | 1つのフィールド`language`を含むオブジェクト。データ表示に関するユーザーの言語、地理的、文化的な好みを表す環境の言語を示します。 言語は、[IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt)で定義されている言語コードで指定されます。 |
 | `browserDetails` | [ブラウザーの詳細](./browser-details.md) | ブラウザー名、バージョン、JavaScriptバージョン、ユーザーエージェント文字列、受け入れ環境など、ブラウザー固有の言語の詳細について説明します。 |
 | `ISP` | 文字列 | ユーザーのインターネットサービスプロバイダーの名前。 |
 | `carrier` | 文字列 | ユーザーに通信サービスを販売し、配信するモバイルサービスプロバイダーキャリアまたはMNO(ワイヤレスネットワーク、ワイヤレスキャリア、セルラー会社、モバイルネットワークキャリアとも呼ばれます)の名前。 |
@@ -34,10 +34,10 @@ ht-degree: 15%
 | `domain` | 文字列 | ユーザーのISPのドメイン。 |
 | `ipV4` | 文字列 | 通信にインターネットプロトコル（32ビット）を使用するコンピュータネットワークに参加するデバイスに割り当てられる数値ラベル。 |
 | `ipV6` | 文字列 | 通信にインターネットプロトコル（128ビット）を使用するコンピュータネットワークに参加するデバイスに割り当てられる数値ラベル。 |
-| `operatingSystem` | 文字列 | 観察されたときに使用されたオペレーティングシステムの名前。The attribute should not contain any version information such as `10.5.3`, but instead contain &quot;edition&quot; designations such as `Ultimate` or `Professional`. |
+| `operatingSystem` | 文字列 | 観察されたときに使用されたオペレーティングシステムの名前。属性には`10.5.3`などのバージョン情報を含めず、代わりに`Ultimate`や`Professional`などの「エディション」指定を含めます。 |
 | `operatingSystemVendor` | 文字列 | 観察されたときに使用されたオペレーティングシステムベンダーの名前。 |
 | `operatingSystemVersion` | 文字列 | 観察されたときに使用されたオペレーティングシステムの完全なバージョン識別子。バージョンは通常数値で構成されますが、ベンダー定義の形式になる場合があります。 |
-| `type` | 文字列 | アプリケーション環境のタイプ。 使用できる値については、 [付録](#type) を参照してください。 |
+| `type` | 文字列 | アプリケーション環境のタイプ。 使用できる値については、[付録](#type)を参照してください。 |
 | `viewportHeight` | 整数 | エクスペリエンスが表示されたウィンドウの縦方向のサイズ（ピクセル単位）。 Web表示イベントの場合、これはブラウザビューポートの高さです。 |
 | `viewPortWidth` | 整数 | エクスペリエンスが表示されたウィンドウの水平方向のサイズ（ピクセル単位）。 Web表示イベントの場合、これはブラウザビューポートの幅です。 |
 
@@ -48,11 +48,11 @@ Mixinの詳細については、パブリックXDMリポジトリを参照して
 
 ## 付録
 
-次の節では、 [!UICONTROL Device] Data Typeに関する追加情報について説明します。
+次の節では、[!UICONTROL デバイス]のデータ型に関する追加情報を説明します。
 
-## 型に指定できる値 {#type}
+## {#type}型に指定できる値
 
-次の表に、使用できる値と関連する意味を示し `type` ます。
+次の表に、`type`に使用できる値とその関連する意味を示します。
 
 | 値 | 説明 |
 | --- | --- |
