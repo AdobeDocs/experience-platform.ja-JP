@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics;customer ai segments
+keywords: Experience Platform；インサイト；顧客ai；人気のあるトピック；顧客aiセグメント
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 予測スコアを使用した顧客セグメントの作成
 topic: Create a segment
@@ -7,8 +7,8 @@ description: 予測の実行が完了すると、予測された傾向スコア�
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 88%
+source-wordcount: '318'
+ht-degree: 85%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 88%
 
 ![](../images/user-guide/properties.png)
 
-Above the left-hand *Fields* column, click the **gear** icon and select a *Merge policy* from the drop-down. 「**[!UICONTROL 保存]**」をクリックしてセグメントを作成します。
+左側の&#x200B;*フィールド*&#x200B;列の上で、**歯車**&#x200B;アイコンをクリックし、ドロップダウンから&#x200B;*マージポリシー*&#x200B;を選択します。 「**[!UICONTROL 保存]**」をクリックしてセグメントを作成します。
 
 ![](../images/user-guide/merge_policy.png)
 
