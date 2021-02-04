@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
+keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックスを検索；サンドボックスを検索
 solution: Experience Platform
 title: サンドボックスの検索
 topic: developer guide
@@ -7,8 +7,8 @@ description: 個々のサンドボックスを検索するには、要求パス�
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 90%
+source-wordcount: '237'
+ht-degree: 86%
 
 ---
 
