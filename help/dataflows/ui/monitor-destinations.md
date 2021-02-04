@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
+keywords: Experience Platform；ホーム；人気のあるトピック；モニターアカウント；モニターデータフロー；データフロー；宛先
 description: 目的地では、Adobe Experience Platformから数え切れないほどの外部パートナーにデータをアクティブにできます。 このチュートリアルでは、Experience Platform・ユーザー・インタフェースを使用して、宛先のデータ・フローを監視する方法について説明します。
 solution: Experience Platform
 title: データフローの監視
@@ -8,7 +8,7 @@ type: Tutorial
 translation-type: tm+mt
 source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '437'
 ht-degree: 5%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 5%
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 - [宛先](../../destinations/home.md):宛先は、一般的に使用されるアプリケーションとの統合が事前に構築されており、チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲットを絞った広告など、様々な用途で、プラットフォームのデータをシームレスにアクティベーションできます。
-- [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 ## データフローの監視
 
-Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 **[!UICONTROL 参照]** 」タブに移動し、表示する宛先の名前を選択します。
+プラットフォームUI内の&#x200B;**[!UICONTROL 宛先]**&#x200B;ワークスペースで、「**[!UICONTROL 参照]**」タブに移動し、表示する宛先の名前を選択します。
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -37,17 +37,17 @@ Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 *
 
 | ステータス | 説明 |
 | ------ | ----------- |
-| 有効 | ステータスは、データフローがアクティブであり、提供されたスケジュールに従ってデータを取り込んでいることを示します。 `Enabled` |
-| 無効 | ステータスは、データフローが非アクティブで、データを取り込んでいないことを示します。 `Disabled` |
-| Processing | ステータスは、データフローがまだアクティブでないことを示します。 `Processing` このステータスは、多くの場合、新しいデータフローの作成直後に発生します。 |
-| エラー | ステータスは、データフローのアクティベーションプロセスが中断されたことを示します。 `Error` |
+| 有効 | `Enabled`ステータスは、データフローがアクティブであり、提供されたスケジュールに従ってデータを取り込んでいることを示します。 |
+| 無効 | `Disabled`ステータスは、データフローが非アクティブで、データを取り込んでいないことを示します。 |
+| Processing | `Processing`ステータスは、データフローがまだアクティブでないことを示します。 このステータスは、多くの場合、新しいデータフローの作成直後に発生します。 |
+| エラー | `Error`ステータスは、データフローのアクティベーションプロセスが中断されたことを示します。 |
 
 ## [!UICONTROL データフローの実行]
 
-「 [!UICONTROL Dataflow runs] 」タブは、データフローの実行上の指標データをバッチ宛先に提供します。 個々の実行とその特定の指標のリストが表示され、プロファイルレコードの以下の合計が示されます。
+[!UICONTROL Dataflow runs]タブは、バッチ宛先に対してデータフローの実行に関する指標データを提供します。 個々の実行とその特定の指標のリストが表示され、プロファイルレコードの以下の合計が示されます。
 
 - **[!UICONTROL アクティブ化されたプロファイルレコード]**:アクティベーション用に作成または更新されたプロファイルレコードの合計数です。
-- **[!UICONTROL プロファイルレコードがスキップされました]**: プロファイルEXITまたは欠落した属性に基づいて、アクティベーションでスキップされたプロファイルレコードの合計数です。
+- **[!UICONTROL プロファイルレコードがスキップされました]**:プロファイルEXITまたは欠落した属性に基づいて、アクティベーションでスキップされたプロファイルレコードの合計数です。
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 
