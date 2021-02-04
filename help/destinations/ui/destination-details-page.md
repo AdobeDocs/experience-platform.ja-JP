@@ -1,5 +1,5 @@
 ---
-keywords: destinations;destination;destinations detail page;destinations details page
+keywords: 宛先；宛先；宛先詳細ページ；宛先詳細ページ
 title: 宛先の詳細ページ
 seo-title: 宛先の詳細ページ
 description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
@@ -7,7 +7,7 @@ seo-description: '個々の宛先の詳細ページには、宛先名、ID、宛
 translation-type: tm+mt
 source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '743'
 ht-degree: 16%
 
 ---
@@ -19,9 +19,9 @@ Adobe Experience Platformユーザーインターフェイスでは、宛先の�
 
 >[!NOTE]
 >
->宛先の詳細ページは、プラットフォームUIの [!UICONTROL Destinations] Workspaceに含まれています。 See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
+>宛先の詳細ページは、プラットフォームUIの[!UICONTROL 宛先]ワークスペースの一部です。 詳しくは、[[!UICONTROL 宛先]ワークスペースの概要](./destinations-workspace.md)を参照してください。
 
-Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 **[!UICONTROL 参照]** 」タブに移動し、表示する宛先の名前を選択します。
+プラットフォームUI内の&#x200B;**[!UICONTROL 宛先]**&#x200B;ワークスペースで、「**[!UICONTROL 参照]**」タブに移動し、表示する宛先の名前を選択します。
 
 ![](../assets/ui/details-page/select-destination.png)
 
@@ -29,7 +29,7 @@ Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 *
 
 ![](../assets/ui/details-page/details.png)
 
-また、「参照」タブで、 ![ごみ箱](../assets/ui/details-page/trash-icon.png) アイコンを選択して、選択したデータフローを削除することもできます。 宛先に対してアクティブ化されたセグメントは、データフローが削除される前にマッピング解除されます。
+また、「参照」タブで、![ごみ箱](../assets/ui/details-page/trash-icon.png)アイコンを選択して、選択したデータフローを削除することもできます。 宛先に対してアクティブ化されたセグメントは、データフローが削除される前にマッピング解除されます。
 
 ![](../assets/ui/details-page/delete-flow.png)
 
@@ -43,32 +43,32 @@ Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 *
 
 | 右側のレールアイテム | 説明 |
 | --- | --- |
-| [!UICONTROL アクティブ化] | このコントロールを選択して、宛先にマッピングされるセグメントを編集します。 詳しくは、宛先へのセグメントの [アクティブ化に関するガイドを参照してください](./activate-destinations.md) 。 |
+| [!UICONTROL アクティブ化] | このコントロールを選択して、宛先にマッピングされるセグメントを編集します。 詳しくは、[宛先へのセグメントのアクティブ化](./activate-destinations.md)のガイドを参照してください。 |
 | [!UICONTROL 削除] | このデータフローを削除し、既にアクティブ化されたセグメントのマッピングを解除できます（存在する場合）。 |
 | [!UICONTROL 宛先名] | このフィールドは、宛先名を更新するために編集できます。 |
 | [!UICONTROL 説明] | このフィールドは、任意で説明を更新または追加するために編集できます。 |
-| [!UICONTROL 宛先] | オーディエンスの宛先プラットフォームを表します。See the [destinations catalog](../catalog/overview.md) for more information. |
+| [!UICONTROL 宛先] | オーディエンスの宛先プラットフォームを表します。詳しくは、[宛先カタログ](../catalog/overview.md)を参照してください。 |
 | [!UICONTROL ステータス] | 宛先が有効か無効かを示します。 |
 | [!UICONTROL マーケティングアクション] | データ管理の目的でこの宛先に適用されるマーケティングアクション（使用例）を示します。 |
-| [!UICONTROL カテゴリ] | 宛先のタイプを示します。 See the [destinations catalog](../catalog/overview.md) for more information. |
-| [!UICONTROL 接続タイプ] | オーディエンスが送信先に送信される際に使用されるフォームを示します。 使用できる値は「[!UICONTROL Cookie]」および「[!UICONTROL プロファイルベース]」です。 |
-| [!UICONTROL 頻度] | オーディエンスが宛先に送信される頻度を示します。指定できる値は「[!UICONTROL Streaming]」および「[!UICONTROL Batch]」です。 |
-| [!UICONTROL ID] | 宛先で受け入れられるID名前空間（、、など） `GAID`を表し `IDFA`ま `email`す。 For more information on accepted identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md). |
+| [!UICONTROL カテゴリ] | 宛先のタイプを示します。 詳しくは、[宛先カタログ](../catalog/overview.md)を参照してください。 |
+| [!UICONTROL 接続タイプ] | オーディエンスが送信先に送信される際に使用されるフォームを示します。 使用できる値は、「[!UICONTROL Cookie]」および「[!UICONTROL プロファイルベース]」です。 |
+| [!UICONTROL 頻度] | オーディエンスが宛先に送信される頻度を示します。指定できる値は、「[!UICONTROL ストリーミング]」および「[!UICONTROL バッチ]」です。 |
+| [!UICONTROL ID] | 宛先が受け入れるID名前空間（`GAID`、`IDFA`、`email`など）を表します。 受け入れられるID名前空間について詳しくは、[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。 |
 | [!UICONTROL 作成者] | この宛先を作成したユーザーを示します。 |
 | [!UICONTROL 作成] | この宛先が作成されたUTC日時を示します。 |
 
-## [!UICONTROL 有効]/[!UICONTROL 無効] 切り替え
+## [!UICONTROL 有効]/ 無効の切り替え
 
-「 **[!UICONTROL 有効]/[!UICONTROL 無効]** 」を開始に切り替えて、宛先へのすべてのデータのエクスポートを一時停止できます。
+「**[!UICONTROL 有効]/[!UICONTROL 無効]**」トグルを使用して開始を行い、宛先へのすべてのデータのエクスポートを一時停止できます。
 
 ![](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL データフローの実行]
 
-「 [!UICONTROL Dataflow runs] 」タブは、データフローの実行上の指標データをバッチ宛先に提供します。 個々の実行とその特定の指標のリストが表示され、プロファイルレコードの以下の合計が示されます。
+[!UICONTROL Dataflow runs]タブは、バッチ宛先に対してデータフローの実行に関する指標データを提供します。 個々の実行とその特定の指標のリストが表示され、プロファイルレコードの以下の合計が示されます。
 
 * **[!UICONTROL アクティブ化されたプロファイルレコード]**:アクティベーション用に作成または更新されたプロファイルレコードの合計数です。
-* **[!UICONTROL プロファイルレコードがスキップされました]**: プロファイルEXITまたは欠落した属性に基づいて、アクティベーションでスキップされたプロファイルレコードの合計数です。
+* **[!UICONTROL プロファイルレコードがスキップされました]**:プロファイルEXITまたは欠落した属性に基づいて、アクティベーションでスキップされたプロファイルレコードの合計数です。
 
 ![](../assets/ui/details-page/dataflow-runs.png)
 
@@ -82,14 +82,14 @@ Platform UI内の **[!UICONTROL Destinations]** ワークスペースで、「 *
 
 ## [!UICONTROL アクティベーションデータ]
 
-「 [!UICONTROL アクティベーションデータ] 」タブには、開始日と終了日（該当する場合）を含む、宛先にマッピングされたセグメントのリストが表示されます。 特定のセグメントの詳細を表示するには、リストからセグメント名を選択します。
+「[!UICONTROL アクティベーションデータ]」タブには、開始日と終了日（該当する場合）を含む、宛先にマッピングされたセグメントのリストが表示されます。 特定のセグメントの詳細を表示するには、リストからセグメント名を選択します。
 
 ![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
->セグメントの詳細ページについて詳しくは、「 [セグメント化UIの概要](../../segmentation/ui/overview.md#segment-details)」を参照してください。
+>セグメントの詳細ページの詳細については、「[セグメントUIの概要](../../segmentation/ui/overview.md#segment-details)」を参照してください。
 
 ## 次の手順
 
-このドキュメントでは、宛先の詳細ページの機能について説明します。 UIでの宛先の管理について詳しくは、 [[!UICONTROL Destinations] Workspaceの概要を参照してください](./destinations-workspace.md)。
+このドキュメントでは、宛先の詳細ページの機能について説明します。 UIでの宛先の管理について詳しくは、[[!UICONTROL 宛先]ワークスペース](./destinations-workspace.md)の概要を参照してください。
