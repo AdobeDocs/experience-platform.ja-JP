@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;logical quantifiers;logical quantifier;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；論理量指定子；論理量指定子；
 solution: Experience Platform
 title: 論理量指定子
 topic: developer guide
@@ -7,15 +7,15 @@ description: 論理量指定子を使用すると、プロファイルクエリ�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 88%
+source-wordcount: '218'
+ht-degree: 80%
 
 ---
 
 
 # 論理量指定子関数
 
-Logical quantifiers can be used to assert conditions with arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL)内の配列と条件をアサートするために、論理量指定子を使用できます。 他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## exists
 
