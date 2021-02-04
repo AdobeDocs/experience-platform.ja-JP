@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api
+keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ラベルapi；ポリシーサービスapi
 solution: Experience Platform
 title: 'APIを使用したデータ使用ラベルの管理 '
 topic: developer guide
@@ -7,7 +7,7 @@ description: Dataset Service APIを使用すると、データセットの使用
 translation-type: tm+mt
 source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1017'
 ht-degree: 8%
 
 ---
@@ -15,21 +15,21 @@ ht-degree: 8%
 
 # APIを使用したデータ使用ラベルの管理
 
-このドキュメントでは、 [!DNL Policy Service] APIと [!DNL Dataset Service] APIを使用してデータ使用ラベルを管理する方法について手順を説明します。
+このドキュメントでは、[!DNL Policy Service] APIと[!DNL Dataset Service] APIを使用してデータ使用ラベルを管理する手順を説明します。
 
-には、組織のデータ使用ラベルを作成および管理するための複数のエンドポイントが [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) 用意されています。
+[[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)には、組織のデータ使用ラベルを作成および管理できるエンドポイントがいくつか用意されています。
 
-この [!DNL Dataset Service] APIを使用すると、データセットの使用ラベルを適用および編集できます。 これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] APIとは別のものです。
+[!DNL Dataset Service] APIを使用すると、データセットの使用ラベルを適用および編集できます。 これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理する[!DNL Catalog Service] APIとは別のものです。
 
 ## はじめに
 
-このガイドを読む前に、カタログ開発者ガイドの [はじめに節に説明されている手順に従って](../../catalog/api/getting-started.md) 、APIを呼び出すために必要な資格情報を収集し [!DNL Platform] ます。
+このガイドを読む前に、カタログ開発者ガイドの「[はじめに](../../catalog/api/getting-started.md)」に説明されている手順に従って、[!DNL Platform] APIを呼び出すために必要な資格情報を収集します。
 
-このドキュメントで概要を説明している [!DNL Dataset Service] エンドポイントを呼び出すには、特定のデータセットに固有の `id` 値を割り当てる必要があります。 この値がない場合は、カタログオブジェクトの [一覧表示に関するガイドを参照して](../../catalog/api/list-objects.md) 、既存のデータセットのIDを確認してください。
+このドキュメントで説明する[!DNL Dataset Service]エンドポイントを呼び出すには、特定のデータセットに対して一意の`id`値を持つ必要があります。 この値がない場合は、[カタログオブジェクト](../../catalog/api/list-objects.md)のリストを参照し、既存のデータセットのIDを確認してください。
 
-## すべてのラベルをリスト {#list-labels}
+## すべてのラベル{#list-labels}をリスト
 
-APIを使用して、またはに対してそれぞれGETリクエストを行うことで、すべての [!DNL Policy Service] ラベルまたは `core` ラベルをリストでき `custom``/labels/core``/labels/custom`ます。
+[!DNL Policy Service] APIを使用すると、`/labels/core`または`/labels/custom`に対してGETリクエストを行うことで、すべての`core`または`custom`ラベルをリストできます。
 
 **API 形式**
 
@@ -53,7 +53,7 @@ curl -X GET \
 
 **応答** 
 
-正常に応答すると、システムから取得されたカスタムラベルのリストが返されます。 上の例のリクエストはに対して行われたので `/labels/custom`、以下の応答にはカスタムラベルのみが表示されています。
+正常に応答すると、システムから取得されたカスタムラベルのリストが返されます。 上記のリクエスト例は`/labels/custom`に対して行われたので、以下の応答はカスタムラベルのみを示しています。
 
 ```json
 {
@@ -109,9 +109,9 @@ curl -X GET \
 }
 ```
 
-## ラベルを検索 {#look-up-label}
+## ラベルを検索{#look-up-label}
 
-特定のラベルを検索するには、そのラベルの `name` プロパティを [!DNL Policy Service] APIへのGET要求のパスに含めます。
+特定のラベルを検索するには、そのラベルの`name`プロパティを[!DNL Policy Service] APIへのGET要求のパスに含めます。
 
 **API 形式**
 
@@ -122,11 +122,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LABEL_NAME}` | The `name` property of the custom label you want to look up. |
+| `{LABEL_NAME}` | 検索するカスタムラベルの`name`プロパティ。 |
 
 **リクエスト**
 
-次のリクエストは、パスに示されているカスタムラベル `L2`を取得します。
+次のリクエストは、パスに示されているカスタムラベル`L2`を取得します。
 
 ```shell
 curl -X GET \
@@ -163,9 +163,9 @@ curl -X GET \
 }
 ```
 
-## カスタムラベルの作成または更新 {#create-update-label}
+## カスタムラベル{#create-update-label}の作成または更新
 
-カスタムラベルを作成または更新するには、 [!DNL Policy Service] APIに対してPUTリクエストを行う必要があります。
+カスタムラベルを作成または更新するには、[!DNL Policy Service] APIにPUTリクエストを行う必要があります。
 
 **API 形式**
 
@@ -175,11 +175,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LABEL_NAME}` | カスタムラベルの `name` プロパティ。 この名前のカスタムラベルが存在しない場合は、新しいラベルが作成されます。 存在する場合は、そのラベルが更新されます。 |
+| `{LABEL_NAME}` | カスタムラベルの`name`プロパティ。 この名前のカスタムラベルが存在しない場合は、新しいラベルが作成されます。 存在する場合は、そのラベルが更新されます。 |
 
 **リクエスト**
 
-次のリクエストは、顧客が選択した支払計画に関する情報を含むデータを記述するための新しいラベルを作成し `L3`ます。
+次のリクエストは、顧客が選択した支払計画に関する情報を含むデータを記述するための新しいラベル`L3`を作成します。
 
 ```shell
 curl -X PUT \
@@ -199,7 +199,7 @@ curl -X PUT \
 | プロパティ | 説明 |
 | --- | --- |
 | `name` | ラベルの一意の文字列識別子。 この値は参照目的で使用され、ラベルをデータセットやフィールドに適用するので、短く簡潔にすることをお勧めします。 |
-| `category` | ラベルのカテゴリ。 カスタムラベル用に独自のカテゴリを作成できますが、ラベルをUIに表示する `Custom` 場合は、を使用することを強くお勧めします。 |
+| `category` | ラベルのカテゴリ。 カスタムラベル用に独自のカテゴリを作成することもできますが、ラベルをUIに表示する場合は`Custom`を使用することを強くお勧めします。 |
 | `friendlyName` | ラベルのわかりやすい名前。表示目的で使用されます。 |
 | `description` | （オプション）詳細なコンテキストを提供するラベルの説明です。 |
 
@@ -229,9 +229,9 @@ curl -X PUT \
 }
 ```
 
-## データセットのラベルを検索する {#look-up-dataset-labels}
+## データセット{#look-up-dataset-labels}のラベルを検索します
 
-APIにGETリクエストを行うことで、既存のデータセットに適用されているデータ使用量ラベルを調べることができ [!DNL Dataset Service] ます。
+[!DNL Dataset Service] APIにGETリクエストを行うことで、既存のデータセットに適用されているデータ使用ラベルを調べることができます。
 
 **API 形式**
 
@@ -241,7 +241,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATASET_ID}` | ラベルを調べるデータセットの固有 `id` 値。 |
+| `{DATASET_ID}` | 検索するラベルのデータセットの一意の`id`値。 |
 
 **リクエスト**
 
@@ -282,9 +282,9 @@ curl -X GET \
 | `labels` | データセットに適用されたデータ使用量ラベルのリスト。 |
 | `optionalLabels` | データセット内の個々のフィールドのリストで、データ使用ラベルが適用されています。 |
 
-## データセットへのラベルの適用 {#apply-dataset-labels}
+## データセット{#apply-dataset-labels}にラベルを適用
 
-POSTまたはPUTリクエストのペイロードにラベルを指定すると、データセット用の一連のラベルを作成でき [!DNL Dataset Service] ます。 これらのいずれかの方法を使用すると、既存のラベルが上書きされ、ペイロードに指定されたラベルに置き換えられます。
+[!DNL Dataset Service] APIへのPOSTまたはPUTリクエストのペイロードにラベルを提供することで、データセット用の一連のラベルを作成できます。 これらのいずれかの方法を使用すると、既存のラベルが上書きされ、ペイロードに指定されたラベルに置き換えられます。
 
 **API 形式**
 
@@ -295,7 +295,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATASET_ID}` | ラベルを作成するデータセットの固有 `id` 値。 |
+| `{DATASET_ID}` | ラベルを作成するデータセットの一意の`id`値。 |
 
 **リクエスト**
 
@@ -327,7 +327,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `labels` | データセットに追加するデータ使用ラベルのリストです。 |
-| `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。 <br/><br/>`option`:フィールドの [!DNL Experience Data Model] (XDM)属性を含むオブジェクトです。 次の3つのプロパティが必要です。<ul><li>id</code>:フィールドに関連付けられているスキーマのURI $id</code> 。</li><li>contentType</code>:スキーマのコンテンツタイプとバージョン番号。 これは、XDMルックアップ要求に対して有効な <a href="../../xdm/api/getting-started.md#accept">Acceptヘッダーの1つの形式にする必要があります</a> 。</li><li>schemaPath</code>:データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`:フィールドに追加するデータ使用ラベルのリストです。 |
+| `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。<br/><br/>`option`:フィールドの[!DNL Experience Data Model] (XDM)属性を含むオブジェクト。 次の3つのプロパティが必要です。<ul><li>id</code>:フィールドに関連付けられているスキーマのURI $id</code>値。</li><li>contentType</code>:スキーマのコンテンツタイプとバージョン番号。 XDMルックアップ要求に対しては、有効な<a href="../../xdm/api/getting-started.md#accept">Accept headers</a>のいずれかの形式で行う必要があります。</li><li>schemaPath</code>:データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`:フィールドに追加するデータ使用ラベルのリストです。 |
 
 **応答** 
 
@@ -349,9 +349,9 @@ curl -X POST \
 }
 ```
 
-## データセットからのラベルの削除 {#remove-dataset-labels}
+## データセット{#remove-dataset-labels}からラベルを削除
 
-APIにDELETEリクエストを行うことで、データセットに適用されたラベルを削除でき [!DNL Dataset Service] ます。
+[!DNL Dataset Service] APIにDELETEリクエストを行うと、データセットに適用されたラベルを削除できます。
 
 **API 形式**
 
@@ -361,7 +361,7 @@ DELETE /datasets/{DATASET_ID}/labels
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{DATASET_ID}` | ラベルを削除するデータセットの固有 `id` 値。 |
+| `{DATASET_ID}` | ラベルを削除するデータセットの一意の`id`値。 |
 
 **リクエスト**
 
@@ -376,14 +376,14 @@ curl -X DELETE \
 
 **応答** 
 
-成功した応答HTTPステータス200 (OK)。ラベルが削除されたことを示します。 別の呼び出しで、データセットの既存のラベルを [調べて](#look-up-dataset-labels) 、これを確認できます。
+成功した応答HTTPステータス200 (OK)。ラベルが削除されたことを示します。 別の呼び出しで、データセットの既存のラベル[を参照し、これを確認できます。](#look-up-dataset-labels)
 
 ## 次の手順
 
 このドキュメントを読むことで、APIを使用したデータ使用ラベルの管理方法を学びました。
 
-Once you have added data usage labels at the dataset- and field-level, you can begin to ingest data into [!DNL Experience Platform]. 詳しくは、[データ取得ドキュメント](../../ingestion/home.md)を参照してください。
+データセットレベルとフィールドレベルでデータ使用量ラベルを追加すると、[!DNL Experience Platform]にデータを取り込み始めることができます。 詳しくは、[データ取得ドキュメント](../../ingestion/home.md)を参照してください。
 
 適用したラベルに基づいてデータ使用状況ポリシーを定義することもできます。詳しくは、「[データ使用状況ポリシーの概要](../policies/overview.md)」を参照してください。
 
-でのデータセットの管理について詳し [!DNL Experience Platform]くは、「 [データセットの概要](../../catalog/datasets/overview.md)」を参照してください。
+[!DNL Experience Platform]でのデータセットの管理について詳しくは、[データセットの概要](../../catalog/datasets/overview.md)を参照してください。
