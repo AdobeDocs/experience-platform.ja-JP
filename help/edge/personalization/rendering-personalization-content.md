@@ -7,7 +7,7 @@ keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisi
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '241'
 ht-degree: 23%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 # パーソナライゼーションオプションの概要
 
-Adobe Experience Platform [!DNL Web SDK] は、Adobe Targetを含むAdobeでのパーソナライゼーションソリューションのクエリをサポートしています。 パーソナライゼーションには2つのモードがあります。自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 SDKは、ちらつきを [管理する機能も提供します](../personalization/manage-flicker.md)。
+Adobe Experience Platform[!DNL Web SDK]は、Adobe Targetを含むAdobeでのパーソナライゼーションソリューションのクエリをサポートしています。 パーソナライゼーションには2つのモードがあります。自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 また、SDKは、[ちらつき](../personalization/manage-flicker.md)を管理する機能も提供します。
 
 ## コンテンツの自動レンダリング
 
@@ -41,7 +41,7 @@ alloy("sendEvent", {
 
 ## コンテンツの手動レンダリング
 
-オプションを指定すると、 `sendEvent` コマンドに対する約束として返される決定のリストを要求でき `decisionScopes` ます。 スコープとは、パーソナライゼーションソリューションに対して、どの決定を行うかを知らせる文字列です。
+`decisionScopes`オプションを指定すると、`sendEvent`コマンドに対して約束として返す決定のリストを要求できます。 スコープとは、パーソナライゼーションソリューションに対して、どの決定を行うかを知らせる文字列です。
 
 ```javascript
 alloy("sendEvent",{
@@ -93,8 +93,8 @@ alloy("sendEvent",{
 
 >[!TIP]
 >
-> 使用する場合 [!DNL Target]、スコープはサーバー上のmBoxになり、個別ではなくすべてのスコープが一度に要求されるだけになります。 グローバルmboxは常に送信されます。
+> [!DNL Target]を使用すると、スコープはサーバー上のmBoxになり、個別にリクエストされるのではなく、一度にリクエストされるのみです。 グローバルmboxは常に送信されます。
 
 ### 自動コンテンツの取得
 
-を自動レンダリング可能な決定を含め、Alloy自動レンダリング `result.decisions` を行わない場合は、をに設定し、特別なスコープ `renderDecisions` を含め `false`ることができ `__view__`ます。
+`result.decisions`に自動レンダリング可能な決定を含め、Aloy自動レンダリングを行わない場合は、`renderDecisions`を`false`に設定し、特別なスコープ`__view__`を含めます。
