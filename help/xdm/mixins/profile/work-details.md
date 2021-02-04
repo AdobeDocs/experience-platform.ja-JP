@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ;スキーマ設計；ミックスイン；ミックスイン；作業の詳細；プロファイル作業；
 solution: Experience Platform
 title: 作業担当者の詳細ミックスイン
 topic: overview
@@ -7,19 +7,19 @@ description: このドキュメントでは、作業担当者の詳細ミック�
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 6%
+source-wordcount: '177'
+ht-degree: 5%
 
 ---
 
 
-# [!UICONTROL 作業担当者の詳細] Mixin
+# [!UICONTROL 勤務先担当者の] 詳細Mixin
 
 >[!NOTE]
 >
->いくつかのミックスインの名前が変更されました。 詳しくは、 [mixin名の更新に関するドキュメントを参照してください](../name-updates.md) 。
+>いくつかのミックスインの名前が変更されました。 詳しくは、[mixin name updates](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL 「Work Contact Details] 」は、 [[!DNL XDM Individual Profile] クラスの標準ミックスインです](../../classes/individual-profile.md)。 ミックスインは、勤務先住所、勤務先電子メール、勤務先電話番号、個人が属する組織など、個人に関する職業情報を取得するいくつかのフィールドを提供します。
+[!UICONTROL [作業連絡先の] 詳細]は、 [[!DNL XDM Individual Profile] クラスの標準ミックスインです](../../classes/individual-profile.md)。ミックスインは、勤務先住所、勤務先電子メール、勤務先電話番号、個人が属する組織など、個人に関する職業情報を取得するいくつかのフィールドを提供します。
 
 <img src="../../images/mixins/profile-work-details.png" width="550" /><br />
 
