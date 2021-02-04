@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
+keywords: Experience Platform；ホーム；人気のあるトピック；データ型；データ型；データ型；データ型；データ型；Segmentationデータ型；Segmentation;Segmentation Service;Segmentationサービスのデータ型；
 solution: Experience Platform
 title: Adobe Experience Platformセグメントサービスのデータタイプ
 topic: overview
@@ -7,15 +7,15 @@ description: すべての XDM データ型がセグメント化サービス内�
 translation-type: tm+mt
 source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 69%
+source-wordcount: '503'
+ht-degree: 66%
 
 ---
 
 
-# Adobe Experience Platform [!DNL Segmentation Service] でサポートされるデータ型
+# Adobe Experience Platform[!DNL Segmentation Service]がサポートするデータ型
 
-All XDM data types are supported within [!DNL Segmentation Service]. セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
+[!DNL Segmentation Service]内では、すべてのXDMデータ型がサポートされています。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 
 ## 文字列データ
 
@@ -26,7 +26,7 @@ All XDM data types are supported within [!DNL Segmentation Service]. セグメ�
 | ステートメントのタイプ | 例 |
 | -------------- | -------- |
 | 論理 | `and`、`or`、`not` |
-| 包含／排他 | `include`, `must` `exist`, `exclude`, `must not exist` |
+| 包含／排他 | `include`,  `must` `exist`,  `exclude`  `must not exist` |
 | 比較 | `equals`、`does not equal`、`contains`、`starts with` |
 
 ## 日付データ
@@ -40,7 +40,7 @@ All XDM data types are supported within [!DNL Segmentation Service]. セグメ�
 
 ## エクスペリエンスイベント
 
-As an Adobe Experience Platform schema, [!DNL XDM ExperienceEvents] record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. [!DNL ExperienceEvents] は事実の記録です したがって、セグメント定義時に使用できるデータソースになります。
+[!DNL XDM ExperienceEvents]は、Adobe Experience Platformスキーマとして、[!DNL Platform]統合アプリケーションとの明示的で暗黙的な顧客の対話を記録します。このアプリケーションには、対話が行われた時点のシステムのスナップショットが含まれます。 [!DNL ExperienceEvents] は事実の記録ですしたがって、セグメント定義時に使用できるデータソースになります。
 
 次の表に示すように、イベントデータは、イベント動作の絞り込みやイベント属性の指定に役立つキーワードを使用して表現されます。
 
@@ -55,11 +55,11 @@ As an Adobe Experience Platform schema, [!DNL XDM ExperienceEvents] record expli
 
 外部オーディエンスは、新しいセグメント定義のコンポーネントとしても使用でき、属性ルールを新しいセグメントに追加できます。
 
-現在、外部オーディエンスとしてサポートされているのはAdobe Audience Managerのみです。今後、追加のソースが有効になる予定です。 プラットフォームでのAdobe Audience Managerオーディエンスの使用について詳しくは、Adobe Audience Managerのドキュメント内の [オーディエンス共有ガイドを参照してください](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)。
+現在、外部オーディエンスとしてサポートされているのはAdobe Audience Managerのみです。今後、追加のソースが有効になる予定です。 プラットフォームでのAdobe Audience Managerオーディエンスの使用に関する詳細は、Adobe Audience Managerのドキュメント](https://docs.adobe.com/content/help/ja-JP/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)内の[オーディエンス共有ガイドを参照してください。
 
 ### セグメントの共有
 
-プラットフォームで作成したセグメントは、他の [Adobe Experience Cloudコアサービス内で使用できます](https://docs.adobe.com/content/help/ja-JP/core-services/interface/experience-cloud.html)。 この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントに連絡する必要があります。
+プラットフォームで作成されたセグメントは、他の[Adobe Experience Cloudコアサービス](https://docs.adobe.com/content/help/ja-JP/core-services/interface/experience-cloud.html)内で使用できます。 この機能を有効にするには、ソリューションアーキテクトまたは担当のコンサルタントに連絡する必要があります。
 
 ## その他のデータタイプ
 
