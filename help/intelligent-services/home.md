@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;intelligent services;popular topics;intelligent service;Intelligent service
+keywords: Experience Platform；ホーム；インテリジェントサービス；人気の高いトピック；インテリジェントサービス；インテリジェントサービス
 solution: Experience Platform, Intelligent Services
 title: インテリジェントサービスの概要
 topic: Intelligent Services overview
@@ -7,15 +7,15 @@ description: マーケティングアナリストや担当者は、インテリ�
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 76%
+source-wordcount: '502'
+ht-degree: 74%
 
 ---
 
 
 # インテリジェントサービスの概要
 
-マーケティングアナリストや担当者は、インテリジェントサービスを使用することで、人工知能と機械学習の能力を顧客体験の使用事例で活用できます。これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。Additionally, marketing practitioners can activate predictions in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], and 3rd party applications.
+マーケティングアナリストや担当者は、インテリジェントサービスを使用することで、人工知能と機械学習の能力を顧客体験の使用事例で活用できます。これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。また、マーケティング担当者は、[!DNL Adobe Experience Cloud]、[!DNL Adobe Experience Platform]、およびサードパーティのアプリケーションで予測を有効にすることができます。
 
 次のビデオは、インテリジェントサービスに関する理解を深めるためのものです。 このビデオでは、ビジネス用途の例を使用して、高レベルのワークフローと、Attribution AIAIとお客様AIの機能の概要を説明します。
 
@@ -23,7 +23,7 @@ ht-degree: 76%
 
 ## インテリジェントサービスのメリット
 
-Intelligent Services, built on [!DNL Adobe Experience Platform], gives marketers responsible for customer experience access to AI-as-a-service, making it easy for anyone to predict customer behavior, measure the impact of a campaign, or ensure better return on every investment. 以下に、インテリジェントサービスの利点の一部を示します。
+[!DNL Adobe Experience Platform]上に構築されたインテリジェントサービスは、AI-a-serviceに対する顧客体験へのアクセスを担当するマーケターに対して、誰でも簡単に顧客行動を予測し、キャンペーンの影響を測定し、各投資利益率を向上させます。 以下に、インテリジェントサービスの利点の一部を示します。
 
 ### コスト効率に優れた市場投入速度
 
@@ -41,7 +41,7 @@ Intelligent Services, built on [!DNL Adobe Experience Platform], gives marketers
 
 ### 取り込み
 
-Customer data is ingested and transformed with the Experience Data Model (XDM) on [!DNL Adobe Experience Platform]. XDM について詳しくは、[XDM の概要](../xdm/home.md)を参照してください。
+顧客データは[!DNL Adobe Experience Platform]上のエクスペリエンスデータモデル(XDM)で取り込まれ、変換されます。 XDM について詳しくは、[XDM の概要](../xdm/home.md)を参照してください。
 
 ### 設定
 
@@ -53,7 +53,7 @@ Customer data is ingested and transformed with the Experience Data Model (XDM) o
 
 ### 行動の決定
 
-Lastly, you can decide what actions to take with the predictions, such as consuming insights, activating applications across the [!DNL Adobe Experience Cloud], and building custom dashboards.
+最後に、インサイトを消費し、[!DNL Adobe Experience Cloud]全体でアプリをアクティブ化し、カスタムダッシュボードを作成するなど、予測に対して実行するアクションを決定できます。
 
 ## 次の手順
 
