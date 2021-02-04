@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;boolean functions;boolean;
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；ブール関数；ブール関数；
 solution: Experience Platform
 title: ブール関数
 topic: developer guide
@@ -7,15 +7,15 @@ description: ブール関数 は、プロファイルクエリ言語(PQL)の異�
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 84%
+source-wordcount: '253'
+ht-degree: 78%
 
 ---
 
 
 # ブール関数
 
-ブール関数 は、 [!DNL Profile Query Language] (PQL)の異なる要素に対してブール論理を実行するために使用されます。  More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+ブール関数 は、[!DNL Profile Query Language] (PQL)の異なる要素に対してブールロジックを実行するために使用されます。  他のPQL関数の詳細については、[[!DNL Profile Query Language] 概要](./overview.md)を参照してください。
 
 ## And
 
