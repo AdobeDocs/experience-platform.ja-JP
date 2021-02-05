@@ -4,7 +4,7 @@ title: UIでのXDMスキーマのサンプルデータの生成
 description: Adobe Experience Platformユーザーインターフェイスの既存のスキーマに基づいてサンプルJSONデータを生成する方法を学びます。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 87497ef8a0ebf8de8b6c2dff1650c0b982299e8a
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Experience PlatformUIで定義するスキーマに対して、スキーマの構造に適合するサンプルJSONオブジェクトを生成できます。 このオブジェクトは、該当するスキーマを使用するデータセットに取り込まれるデータのテンプレートとして使用できます。
 
-Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択します。 「**[!UICONTROL 参照]**」タブで、サンプルデータを生成するスキーマを探します。 リストから選択すると、右側のパネルが更新され、スキーマの詳細が表示されます。 ここから、「**[!UICONTROL サンプルファイル]をダウンロード**」を選択します。
+Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択します。 「**[!UICONTROL 参照]**」タブで、サンプルデータを生成するスキーマを探します。 リストから選択すると、右側のパネルが更新され、スキーマの詳細が表示されます。 ここから、「**[!UICONTROL サンプルファイル]**&#x200B;をダウンロード」を選択します。
 
 ![](../images/ui/sample/sample-data.png)
 
