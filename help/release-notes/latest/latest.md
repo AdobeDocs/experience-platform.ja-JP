@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 74325dcfe9d7b117e3f812d88e0c4a980d44ef53
+source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '651'
 ht-degree: 49%
 
 ---
@@ -39,6 +39,12 @@ Adobe Experience Platform の既存の機能のアップデート：
 ## 宛先 {#destinations}
 
 [!DNL Destinations] は、目的のプラットフォームと事前にビルドされた統合機能で、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新しい宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [!DNL Azure Blob] | [!DNL Azure Blob] は、Microsoftのクラウド向けオブジェクトストレージソリューションです。 |
 
 **新機能**
 
