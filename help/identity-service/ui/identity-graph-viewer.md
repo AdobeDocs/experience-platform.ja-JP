@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；IDグラフビューア；IDグラフビューア；IDグラフビューア；ID名前空間;ID名前空間;ID;IDサービス；IDサービス
 solution: Experience Platform
-title: Adobe Experience Platform ID サービス
+title: IDグラフビューアの概要
 topic: tutorial
 description: アイデンティティグラフは、特定の顧客の異なるアイデンティティ間の関係を示すマップです。異なるチャネル間での顧客のブランドとの相互作用を視覚的に示します。
 translation-type: tm+mt
-source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
+source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 1%
+source-wordcount: '946'
+ht-degree: 0%
 
 ---
 
 
-# （ベータ版）IDグラフビューア
+# （ベータ版）アイデンティティグラフビューアの概要
 
 >[!NOTE]
 >
@@ -108,3 +108,9 @@ IDグラフビューアにアクセスするとエラーが発生する場合が
 ## 次の手順
 
 このドキュメントを読むことで、Platform UIで顧客のIDグラフを表示する方法を学びました。 プラットフォームのIDの詳細については、[IDサービスの概要](../home.md)を参照してください。
+
+## その他のリソース
+
+次のビデオは、IDグラフビューアを理解していることを目的としています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
