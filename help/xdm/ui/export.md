@@ -5,7 +5,7 @@ description: Adobe Experience Platformユーザーインターフェイスで、
 topic: user guide
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2d6e833db7cd79135e6da4c68c9dca8cbed09ce4
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -205,11 +205,11 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
 
 ペイロードは配列の形をとり、各配列項目は、エクスポートするカスタムXDMリソースを表すオブジェクトです。 上記の例では、「[!DNL Loyalty details]」カスタムミックスインと「[!DNL Loyalty Members]」スキーマが含まれています。 スキーマが使用するコアリソースは、すべてのサンドボックスおよびIMS組織で使用できるので、エクスポートに含まれません。
 
-組織のテナントIDの各インスタンスは、ペイロードに`<XDM_TENANTID_PLACEHOLDER>`と表示されます。 これらのプレースホルダは、次の手順でスキーマを書き出す場所に応じて、適切なテナントID値に自動的に置き換えられます。
+組織のテナントIDの各インスタンスは、ペイロードに`<XDM_TENANTID_PLACEHOLDER>`と表示されます。 これらのプレースホルダは、次の手順でスキーマを読み込んだ場所に応じて、適切なテナントID値に自動的に置き換えられます。
 
 ## APIを使用したリソースの読み込み
 
-スキーマの書き出しJSONをコピーしたら、スキーマレジストリAPIの`/import`エンドポイントへのPOSTリクエストのペイロードとして使用できます。 スキーマを正しいIMS組織とサンドボックスに送信する呼び出しを設定する方法の詳細については、API](../api/export-import.md#import)での[XDMリソースのインポートに関する節を参照してください。
+スキーマの書き出しJSONをコピーしたら、スキーマレジストリAPIの`/import`エンドポイントへのPOSTリクエストのペイロードとして使用できます。 スキーマを目的のIMS組織とサンドボックスに送信する呼び出しを設定する方法の詳細については、API](../api/export-import.md#import)での[XDMリソースのインポートに関するセクションを参照してください。
 
 ## 次の手順
 
