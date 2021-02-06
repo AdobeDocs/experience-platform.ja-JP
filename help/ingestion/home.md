@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；データ取り込み；データの場所；データの場所；データ管理;データ管理；系列；バッチ；取り込んだデータ
 solution: Experience Platform
-title: Adobe Experience Platform のデータ取り込みの概要
+title: データ取り込みの概要
 topic: overview
 description: このドキュメントでは、データをプラットフォームに取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 52%
+source-wordcount: '460'
+ht-degree: 51%
 
 ---
 
