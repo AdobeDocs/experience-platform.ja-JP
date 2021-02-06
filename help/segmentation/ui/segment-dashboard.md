@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;プロファイル；セグメント；セグメント；セグメント化；ユーザインターフェイス；UI；カスタマイズ；セグメントダッシュボード;ダッシュボード
-title: セグメントダッシュボード
+title: セグメントダッシュボードUIガイド
 description: 'このガイドでは、Adobe Experience PlatformUIで使用できるセグメントのダッシュボードについて説明します。 '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 63758450276d47e7e0eddeb047779222cb80a3e2
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '743'
 ht-degree: 1%
 
 ---
