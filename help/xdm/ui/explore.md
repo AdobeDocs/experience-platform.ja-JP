@@ -6,7 +6,7 @@ description: Experience Platformユーザーインターフェイスで既存の
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6246e623a711bff06eefe5d5954719d69df921c3
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
