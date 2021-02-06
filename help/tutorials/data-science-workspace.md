@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platformデータサイエンスワークスペースでは、機械学習と人工知能を使用して、データからインサイトを作成します。 Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測をおこなうことを支援します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1304'
 ht-degree: 18%
@@ -36,7 +36,7 @@ Sensei Machine Learning APIを使用してCRUD操作を実行する際に必要�
 
 ## [!DNL JupyterLab]ノートブックの使い方
 
-[!DNL JupyterLab] は、のWebベースのユーザーインターフェイスで、Adobe Experience Platform [!DNL Project Jupyter] と緊密に統合されています。[!DNL Jupyter notebooks]、コード、およびデータを扱うデータ科学者向けの対話型開発環境を提供します。 このドキュメントでは、[!DNL JupyterLab]とその機能の概要と、一般的な操作を実行する手順を説明します。
+[!DNL JupyterLab] は、のWebベースのユーザーインターフェイスで、Adobe Experience Platform [!DNL Project Jupyter] と緊密に統合されています。[!DNL Jupyter Notebooks]、コード、およびデータを扱うデータ科学者向けの対話型開発環境を提供します。 このドキュメントでは、[!DNL JupyterLab]とその機能の概要と、一般的な操作を実行する手順を説明します。
 
 **このガイドは次の目的に役立ちます。**
 - [!DNL JupyterLab]インターフェイスにアクセスし、理解します。
