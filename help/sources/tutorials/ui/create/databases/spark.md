@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure HDInsights;Apache Spark
 solution: Experience Platform
-title: UIでAzure HDInsightsソースコネクタ上にApache Sparkを作成します
+title: UIでAzure HDInsights Source ConnectionにApache Sparkを作成します
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してAzure HDInsightsソースコネクタ上にApache Sparkを作成する手順を説明します。
+description: Adobe Experience PlatformUIを使用してAzure HDInsightsソース接続でApache Sparkを作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '496'
 ht-degree: 15%
 
 ---
 
 
-# UIの[!DNL Azure HDInsights]ソースコネクタに[!DNL Apache Spark]を作成する
+# UIの[!DNL Azure HDInsights]ソース接続に[!DNL Apache Spark]を作成
 
 >[!NOTE]
 >
