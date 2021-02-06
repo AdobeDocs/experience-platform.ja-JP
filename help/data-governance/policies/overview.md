@@ -3,12 +3,12 @@ keywords: Experience Platform；ホーム；人気のあるトピック；スケ
 solution: Experience Platform
 title: データ使用ポリシーの概要
 topic: policies
-description: データ使用状況ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実施する必要があります。データ使用ポリシーは、Experience Platform 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです
+description: データ使用ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実装する必要があります。データ使用ポリシーは、Experience Platform 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1010'
-ht-degree: 19%
+ht-degree: 18%
 
 ---
 
