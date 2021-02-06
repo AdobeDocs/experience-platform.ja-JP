@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；受信データのアクティブ化；プロファイルの入力；rtcp；入力された統合プロファイル
 solution: Experience Platform
-title: 受信ソースデータをアクティブ化して顧客プロファイルを入力します
+title: UIで顧客プロファイルを入力するためのインバウンドソースデータのアクティブ化
 topic: overview
 type: Tutorial
 description: ソースコネクタから受信するデータは、リアルタイム顧客プロファイルデータの強化と埋め込みに使用できます。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 15%
+source-wordcount: '507'
+ht-degree: 14%
 
 ---
 
 
 # 受信ソースデータをアクティブ化して顧客プロファイルを入力します
 
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。
+ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むのに使用できます。
 
 ## はじめに
 
