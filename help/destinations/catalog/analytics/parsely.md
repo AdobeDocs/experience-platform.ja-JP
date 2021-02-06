@@ -1,21 +1,17 @@
 ---
 keywords: 解析。 ly;parsely;parse;parse.ly;Parse.ly
-title: Parse.ly Analytics 拡張機能
-seo-title: Parse.ly Analytics 拡張機能
+title: Parse.ly Analytics拡張の宛先
 description: Parse.ly Analyticsの拡張機能は、Adobe Experience Platformの解析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Parse.ly Analyticsの拡張機能は、Adobe Experience Platformの解析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 27%
+source-wordcount: '502'
+ht-degree: 25%
 
 ---
 
 
-# [!DNL Parse.ly Analytics] 拡張子 {#parsely-analytics-extension}
-
-## 概要 {#overview}
+# [!DNL Parse.ly Analytics] 拡張機能 {#parsely-analytics-extension}
 
 [!DNL Parse.ly Analytics] は、2,500 を超える企業がデータを使用してオンラインユーザーを理解するのに役立っています。この拡張機能は JavaScript スニペットをインストールし、訪問者がサイトのコンテンツをどのように操作したかを追跡します。
 
