@@ -1,21 +1,17 @@
 ---
 keywords: 電子メール；電子メール；電子メール；電子メールの宛先；salesforce;salesforceの宛先
-title: Salesforce Marketing Cloud
-seo-title: SalesforceMarketing Cloud
-description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
+title: SalesforceMarketing Cloud接続先
 seo-description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 61%
+source-wordcount: '513'
+ht-degree: 58%
 
 ---
 
 
-# [!DNL Salesforce Marketing Cloud]
-
-## 概要
+# [!DNL Salesforce Marketing Cloud] connection
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/jp/products/marketing-cloud/email-marketing/) は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです（旧称 ExactTarget）。
 
