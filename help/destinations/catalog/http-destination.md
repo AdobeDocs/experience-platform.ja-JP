@@ -1,25 +1,21 @@
 ---
 keywords: ストリーミング；
-title: HTTP宛先は、プロファイルデータをサードパーティのHTTPエンドポイントに送信する際に役立つ、Adobe Experience Platform宛先です。
-seo-title: HTTP宛先は、プロファイルデータをサードパーティのHTTPエンドポイントに送信する際に役立つ、Adobe Experience Platform宛先です。
-description: HTTP宛先は、プロファイルデータをサードパーティのHTTPエンドポイントに送信する際に役立つ、Adobe Experience Platform宛先です。
-seo-description: HTTP宛先は、プロファイルデータをサードパーティのHTTPエンドポイントに送信する際に役立つ、Adobe Experience Platform宛先です。
+title: HTTP接続先
+description: Adobe Experience PlatformのHTTP宛先を使用すると、プロファイルデータをサードパーティのHTTPエンドポイントに送信できます。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '488'
 ht-degree: 8%
 
 ---
 
 
-# （アルファ） [!DNL HTTP]宛先
+# （アルファ） [!DNL HTTP]接続
 
 >[!IMPORTANT]
 >
 >プラットフォームの[!DNL HTTP]宛先は現在アルファベットです。 ドキュメントと機能は変更される場合があります。
-
-## 概要 {#overview}
 
 [!DNL HTTP]宛先は[!DNL Adobe Experience Platform]ストリーミング宛先で、プロファイルデータをサードパーティ[!DNL HTTP]エンドポイントに送信するのに役立ちます。
 
