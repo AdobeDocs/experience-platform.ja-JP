@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Analytics分類データコネクタ
 solution: Experience Platform
-title: Adobe Analytics分類データコネクタ
+title: 分類データ用Adobe Analyticsソースコネクタ
 topic: overview
-description: 次のドキュメントに、ユーザーインターフェイスを使用してAnalytics分類をプラットフォームに接続する方法に関する情報を示します
+description: ユーザーインターフェイスを使用してAnalytics分類をプラットフォームに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '181'
 ht-degree: 10%
 
 ---
 
 
-# Adobe Analytics分類データコネクタ
+# 分類データ用Adobe Analyticsソースコネクタ
 
 Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
@@ -25,4 +25,4 @@ Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外�
 
 ## UIを使用したAnalytics分類のプラットフォームへの接続
 
-- [UIでのAnalytics分類データコネクタの作成](../../tutorials/ui/create/adobe-applications/classifications.md)
+- [UIでのAnalytics分類データ接続の作成](../../tutorials/ui/create/adobe-applications/classifications.md)
