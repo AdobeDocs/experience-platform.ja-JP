@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；サービスノー；ServiceNow
 solution: Experience Platform
-title: ServiceNowコネクタ
+title: ServiceNowソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してServiceNowをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用してServiceNowをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 11%
+ht-degree: 8%
 
 ---
 
@@ -31,11 +31,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL ServiceNow]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用してServiceNowコネクタを作成する](../../tutorials/api/create/customer-success/servicenow.md)
+- [Flow Service APIを使用してServiceNowソース接続を作成する](../../tutorials/api/create/customer-success/servicenow.md)
 - [Flow Service APIを使用した顧客成功システムの調査](../../tutorials/api/explore/customer-success.md)
 - [Flow Service APIを使用して、顧客の成功システムからデータを収集する](../../tutorials/api/collect/customer-success.md)
 
 ## UIを使用して[!DNL ServiceNow]を[!DNL Platform]に接続
 
-- [UI での ServiceNow ソースコネクタの作成](../../tutorials/ui/create/customer-success/servicenow.md)
-- [UIでの顧客成功コネクタのデータフローの設定](../../tutorials/ui/dataflow/customer-success.md)
+- [UIでのServiceNowソース接続の作成](../../tutorials/ui/create/customer-success/servicenow.md)
+- [UIでの顧客成功接続のデータフローの設定](../../tutorials/ui/dataflow/customer-success.md)
