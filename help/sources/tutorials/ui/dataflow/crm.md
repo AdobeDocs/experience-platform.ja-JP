@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；crmスキーマ;crm;CRM;dataflow;Dataflow
 solution: Experience Platform
-title: UIでのCRMコネクタのデータフローの設定
+title: UIでのCRMソース接続のデータフローの設定
 topic: overview
 type: Tutorial
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、CRMアカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1522'
 ht-degree: 3%
 
 ---
 
 
-# UIでのCRMコネクタのデータフローの設定
+# UIでのCRM接続のデータフローの設定
 
 データフローとは、ソースからデータセット[!DNL Platform]にデータを取得し、取り込むスケジュール済みのタスクです。 このチュートリアルでは、CRMアカウントを使用して新しいデータフローを設定する手順を説明します。
 
@@ -187,4 +187,4 @@ CRMアカウントを作成すると、*データの選択*&#x200B;の手順が�
 
 ### [!DNL Profile]母集団の受信データをアクティブ化
 
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むのに使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
+ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
