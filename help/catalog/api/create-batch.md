@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；作成バッチ；カタログサービス；api
 solution: Experience Platform
-title: データセットの作成
+title: APIでのバッチの作成
 topic: developer guide
-description: データセットがデータを取得するには、バッチが関連付けられている必要があります。既存のデータセットのID値を使用して、カタログAPIの/batchesエンドポイントにPOSTリクエストを行うことで、バッチを作成できます。
+description: カタログAPIの/batchesエンドポイントにPOSTリクエストを作成して、バッチを作成できます。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 57%
+source-wordcount: '117'
+ht-degree: 51%
 
 ---
 
