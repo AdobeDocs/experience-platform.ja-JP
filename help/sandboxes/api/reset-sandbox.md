@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックスのリセット
 solution: Experience Platform
-title: サンドボックスのリセット
+title: APIでのサンドボックスのリセット
 topic: developer guide
 description: 開発サンドボックスには「出荷時リセット」機能があり、この機能によりサンドボックスからデフォルト以外のすべてのリソースが削除されます。サンドボックスの名前を要求パスに含むPUT要求を行うことで、サンドボックスをリセットできます。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 84%
+source-wordcount: '169'
+ht-degree: 77%
 
 ---
 
 
-# サンドボックスのリセット
+# APIでのサンドボックスのリセット
 
 開発サンドボックスには「出荷時リセット」機能があり、この機能によりサンドボックスからデフォルト以外のすべてのリソースが削除されます。サンドボックスをリセットするには、そのサンドボックスの `name` をリクエストパスに含む PUT リクエストを作成する必要があります。
 
