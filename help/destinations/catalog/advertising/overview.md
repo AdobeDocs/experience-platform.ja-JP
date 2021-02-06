@@ -1,19 +1,19 @@
 ---
 keywords: 広告の宛先；宛先；プラットフォームの宛先
 title: 広告の宛先
-seo-title: 広告の宛先
+seo-title: 広告の宛先 概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム(DSP、ad network、SSPなど)に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 seo-description: Adobe Experience Platformをサードパーティの広告プラットフォーム(DSP、ad network、SSPなど)に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '227'
 ht-degree: 48%
 
 ---
 
 
-# 広告の宛先 {#advertising-destinations}
+# 広告の宛先の概要 {#advertising-destinations}
 
 Adobe Experience Platformをサードパーティの広告プラットフォーム(DSP、ad network、SSPなど)に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 
