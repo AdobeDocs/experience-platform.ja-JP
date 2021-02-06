@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；列挙；フィールド；
 solution: Experience Platform
-title: UIで列挙フィールドを定義する
+title: UIでの列挙フィールドの定義
 description: Experience Platformユーザーインターフェイスで列挙フィールドを定義する方法を説明します。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
 
-# UIで列挙フィールドを定義する
+# UIでの列挙フィールドの定義
 
 エクスペリエンスデータモデル(XDM)では、列挙フィールドは、許容値の事前定義されたリストに制限されるフィールドを表します。
 
