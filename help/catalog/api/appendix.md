@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；カタログサービス；カタログapi；付録
 solution: Experience Platform
-title: カタログサービス開発者ガイドの付録
+title: Catalog Service APIガイドの付録
 topic: developer guide
 description: このドキュメントでは、Adobe Experience PlatformのカタログAPIを使用する際に役立つ追加情報を説明します。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
 source-wordcount: '920'
-ht-degree: 76%
+ht-degree: 75%
 
 ---
 
 
-# [!DNL Catalog Service] 開発ガイド付録
+# [!DNL Catalog Service] APIガイドの付録
 
 このドキュメントには、[!DNL Catalog] APIを使用する際に役立つ追加情報が含まれています。
 
