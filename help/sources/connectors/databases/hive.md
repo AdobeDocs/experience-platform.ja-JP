@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Apache Hive;Hive;hive;Azure HDInsights;azure hdinsights;
 solution: Experience Platform
-title: Azure HDInsightsコネクタのApache Hive
+title: Azure HDInsightsソースコネクタのApache Hiveの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure HDInsightsのApache Hiveをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用して、Azure HDInsightsのApache HiveをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 10%
@@ -31,11 +31,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL Azure HDInsights]の[!DNL Apache Hive]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用してAzure HDInsights ConnectorにApache Hiveを作成する](../../tutorials/api/create/databases/hive.md)
+- [Flow Service APIを使用して、Azure HDInsightsソース接続でApache Hiveを作成する](../../tutorials/api/create/databases/hive.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して[!DNL Azure HDInsights]の[!DNL Apache Hive]を[!DNL Platform]に接続
 
-- [UIのAzure HDInsightsソースコネクタにApache Hiveを作成する](../../tutorials/ui/create/databases/hive.md)
-- [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
+- [UIのAzure HDInsightsソース接続でApacheハイブを作成します](../../tutorials/ui/create/databases/hive.md)
+- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
