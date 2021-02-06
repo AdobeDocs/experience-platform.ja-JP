@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；マーケティング自動化コネクタ
 solution: Experience Platform
-title: UIでのマーケティング自動化コネクタのデータフローの設定
+title: UIでのMarketing Automationソース接続のデータフローの設定
 topic: overview
 type: Tutorial
 description: データフローとは、ソースからデータを取得し、 [!DNL Platform] データセットにデータを取り込む、スケジュール設定されたタスクです。 このチュートリアルでは、マーケティング自動化アカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1481'
 ht-degree: 3%
 
 ---
 
 
-# UIでのマーケティング自動化コネクタのデータフローの設定
+# UIでのマーケティング自動化接続用のデータフローの設定
 
 データフローとは、ソースからデータセット[!DNL Platform]にデータを取得し、取り込むスケジュール済みのタスクです。 このチュートリアルでは、マーケティング自動化アカウントを使用して新しいデータフローを設定する手順を説明します。
 
@@ -181,4 +181,4 @@ ht-degree: 3%
 
 ### [!DNL Profile]母集団の受信データをアクティブ化
 
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むのに使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
+ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
