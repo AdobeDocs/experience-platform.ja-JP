@@ -1,21 +1,17 @@
 ---
 keywords: Yextコンバージョントラッキング；Yext;yext;yextコンバージョントラッキング
-title: Yext コンバージョントラッキング拡張機能
-seo-title: Yext コンバージョントラッキング拡張機能
+title: Yext Conversion Tracking Extensionの宛先
 description: 「外部コンバージョントラッキング」拡張は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: 「外部コンバージョントラッキング」拡張は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 27%
+source-wordcount: '527'
+ht-degree: 24%
 
 ---
 
 
-# [!DNL Yext Conversion Tracking] 拡張子 {#yext-extension}
-
-## 概要 {#overview}
+# [!DNL Yext Conversion Tracking] 拡張機能 {#yext-extension}
 
 [!DNL Yext Conversion Tracking]拡張機能を使用すると、外部製品の使用に関連付けられるコンバージョンを測定できます。
 
