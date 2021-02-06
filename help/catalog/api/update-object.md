@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；api；オブジェクトの更新
 solution: Experience Platform
-title: オブジェクトの更新
+title: カタログオブジェクトの更新
 topic: developer guide
 description: 'PATCH リクエストのパスに ID を含めることで、カタログオブジェクトの一部を更新できます。このドキュメントでは、フィールドの使用、およびカタログオブジェクトに対するPATCH操作を実行するためのJSONパッチ表記の使用について説明します。 '
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 83%
+source-wordcount: '361'
+ht-degree: 81%
 
 ---
 
 
-# オブジェクトの更新
+# カタログオブジェクトの更新
 
 [!DNL Catalog]オブジェクトのIDをPATCHリクエストのパスに含めると、その一部を更新できます。 このドキュメントでは、カタログオブジェクトに対して PATCH 操作を実行する次の 2 つの方法について説明します。
 
