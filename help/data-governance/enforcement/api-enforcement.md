@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；自動適用；APIベースの適用；データガバナンス；テスト
 solution: Experience Platform
-title: ポリシーサービス API を使用したデータ使用ポリシーの適用
+title: Policy Service APIを使用したデータ使用ポリシーの実施
 topic: guide
 type: Tutorial
 description: データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、Policy Service APIを使用して、データセットまたは任意のラベルグループに対するマーケティングアクションがポリシー違反かどうかを評価できます。 その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1006'
-ht-degree: 40%
+ht-degree: 39%
 
 ---
 
