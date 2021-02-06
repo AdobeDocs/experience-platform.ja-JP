@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；マーケティングアクションapi;APIベースの適用；データガバナンス
 solution: Experience Platform
-title: マーケティングアクション
+title: マーケティングアクションAPIエンドポイント
 topic: developer guide
 description: マーケティングアクションは、Adobe Experience Platform データガバナンスのコンテキストでは、Experience Platform データコンシューマーがおこなうアクションのことで、そのため、データ使用ポリシーの違反がないかを確認する必要があります。
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 11%
+source-wordcount: '734'
+ht-degree: 10%
 
 ---
 
