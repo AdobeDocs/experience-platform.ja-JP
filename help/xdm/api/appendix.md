@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；互換性；互換性モード；フィールドタイプ；
 solution: Experience Platform
-title: スキーマレジストリ開発者向けの付録
+title: スキーマレジストリAPIガイド付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 48%
+source-wordcount: '772'
+ht-degree: 47%
 
 ---
 
 
-# 付録
+# スキーマレジストリAPIガイドの付録
 
 このドキュメントでは、[!DNL Schema Registry] APIの操作に関する補足情報を提供します。
 
