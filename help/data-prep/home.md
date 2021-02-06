@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；データ準備；データ準備；データの準備；データの準備；
 solution: Experience Platform
-title: マッピング関数
+title: データ準備の概要
 topic: overview
-description: このドキュメントでは、Adobe Experience Platform内でのデータ準備を紹介します。
+description: このドキュメントでは、Adobe Experience Platform内でのデータ準備について説明します。
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 2%
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
 
-# データ準備
+# データ準備の概要
 
 データ準備を使用すると、データエンジニアはエクスペリエンスデータモデル(XDM)との間でデータのマッピング、変換、検証を行うことができます。 データ準備は、CSV取り込みワークフローを含むデータ取り込みプロセスで「マップ」手順として表示されます。 データエンジニアは、データ準備を使用して、取り込み中に次のデータ操作を実行できます。
 
