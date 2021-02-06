@@ -1,21 +1,17 @@
 ---
 keywords: Marketor;marketo;Marketo Extension;marketo Extension
-title: Marketo 拡張機能
-seo-title: Marketo 拡張機能
+title: Marketo Extensionの宛先
 description: Marketo拡張機能は、Adobe Experience Platformの電子メールの送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Marketo拡張機能は、Adobe Experience Platformの電子メールの送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 26%
+source-wordcount: '519'
+ht-degree: 24%
 
 ---
 
 
-# [!DNL Marketo] 拡張子 {#marketo-extension}
-
-## 概要 {#overview}
+# [!DNL Marketo] 拡張機能 {#marketo-extension}
 
 [!DNL Marketo]の強力なマーケティング自動化ソフトウェアは、マーケティング担当者がデジタルマーケティングの技術と科学を習得し、顧客や見込み客を惹きつけるのに役立ちます。
 
