@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；汎用OData；汎用odata
 solution: Experience Platform
-title: Flow Service APIを使用して汎用ODataコネクタを作成する
+title: フローサービスAPIを使用した汎用ODataソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、汎用ODataをExperience Platformに接続する手順を順を追って説明します。
+description: Flow Service APIを使用して汎用ODataをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 20%
+source-wordcount: '546'
+ht-degree: 21%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL Generic OData]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Generic OData]ソース接続を作成する
 
 >[!NOTE]
 >
