@@ -1,21 +1,17 @@
 ---
 keywords: DoubleClick入札マネージャ；DoubleClick入札マネージャ；DoubleClick;Display & Video 360;Display 360;video 360;Video 360;Display 360;Display 360;display and video
-title: Google Display と Video 360 の宛先
-seo-title: Google Display と Video 360 の宛先
+title: Googleディスプレイ&ビデオ360接続先
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
-seo-description: 'Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。 '
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 46%
+source-wordcount: '711'
+ht-degree: 43%
 
 ---
 
 
-# [!DNL Google Display & Video 360] 宛先
-
-## 概要
+# [!DNL Google Display & Video 360] connection
 
 [!DNL Display & Video 360]（旧称 ）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。[!DNL DoubleClick Bid Manager]
 
