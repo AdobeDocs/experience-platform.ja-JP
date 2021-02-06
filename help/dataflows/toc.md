@@ -4,10 +4,10 @@ audience: user
 user-guide-title: データフローガイド
 user-guide-description: データフローは、Platform 間でデータを移動するデータジョブを表します。
 translation-type: tm+mt
-source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
 source-wordcount: '31'
-ht-degree: 54%
+ht-degree: 48%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 54%
 # データフロー {#dataflows}
 
 - [データフローの概要](./home.md)
-- API チュートリアル {#api}
+- APIガイド{#api}
    - [データフローの監視](./api/monitor.md)
 - UIガイド{#ui}
    - [宛先のデータフローの監視](./ui/monitor-destinations.md)
