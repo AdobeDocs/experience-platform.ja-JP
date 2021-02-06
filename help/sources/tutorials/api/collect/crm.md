@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；crm;CRM
 solution: Experience Platform
-title: ソースコネクタとAPIを使用してCRMデータを収集する
+title: ソースコネクタとAPIを使用したCRMデータの収集
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、サードパーティのCRMシステムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
+description: このチュートリアルでは、サードパーティのCRMシステムからデータを取得し、ソースコネクタとAPIを使用してそれらのデータをプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 20%
