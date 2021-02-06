@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；プレビュー；予測；プレビューと予測；予測とプレビュー;api;API;
 solution: Experience Platform
-title: エンドポイントのプレビューと予測
+title: プレビューと予測APIエンドポイント
 topic: developer guide
-description: セグメント定義を作成する際に、Adobe Experience Platformの見積もりツールとプレビューツールを使用して、表示の概要レベルの情報を利用し、期待されるオーディエンスを確実に切り離すことができます。
+description: Adobe Experience Platform Segmentation Service APIのプレビューおよび予測エンドポイントを使用すると、概要レベルの情報を表示でき、セグメント内の期待されるオーディエンスを確実に分離できます。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '793'
 ht-degree: 26%
 
 ---
