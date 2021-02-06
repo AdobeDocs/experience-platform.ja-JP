@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: Adobe Experience Platformのガバナンス、プライバシー、セキュリティ
+title: ガバナンス、プライバシー、セキュリティの概要
 topic: overview
-description: Experience Platformは、ビジネス慣行、法的義務、開発プロセスに従うために、収集したエクスペリエンスデータを確実に制御できるいくつかのサービスとツールを提供します。
+description: Adobe Experience Platformは、ビジネス慣行、法的義務、開発プロセスに従うために、収集したエクスペリエンスデータを確実に制御できるいくつかのサービスとツールを提供しています。
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '811'
 ht-degree: 18%
 
 ---
