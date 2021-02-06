@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；取得失敗したバッチ；取得失敗したバッチ；失敗したバッチ；バッチ取り込み；失敗したバッチ；取得失敗したバッチ；ダウンロード失敗したバッチ；
 solution: Experience Platform
-title: 失敗したバッチの取得
+title: データアクセスAPIを使用した失敗したバッチの取得
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、データ取得 API を使用して、失敗したバッチに関する情報を取得する手順を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 72%
+source-wordcount: '652'
+ht-degree: 70%
 
 ---
 
 
-# API を使用した失敗したバッチの取得
+# データアクセスAPIを使用して失敗したバッチを取得する
 
 Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。バッチインジェストを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングエンドポイントをリアルタイムで使用して[!DNL Platform]にデータを挿入できます。
 
