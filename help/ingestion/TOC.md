@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: データ取り込みガイド
 user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Platform に取り込みます。
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 95%
+source-wordcount: '121'
+ht-degree: 91%
 
 ---
 
@@ -34,13 +34,13 @@ ht-degree: 95%
    - [レコードデータのストリーミング](tutorials/streaming-record-data.md)
    - [時系列データのストリーミング](tutorials/streaming-time-series-data.md)
    - [複数のメッセージのストリーミング](tutorials/streaming-multiple-messages.md)
-- データ取得の品質と監視 {#quality}
+- データの品質と監視{#quality}
    - [概要](quality/overview.md)
    - [データ取得の監視](quality/monitor-data-ingestion.md)
    - [エラー診断の取得](quality/error-diagnostics.md)
    - [失敗したバッチの取得](quality/retrieve-failed-batches.md)
    - [ストリーミング取得の検証](quality/streaming-validation.md)
-   - [データ取得イベントへのサブスクリプション](quality/subscribe-events.md)
+   - [データ取得通知](quality/subscribe-events.md)
 - [ソースコネクタ](source-connectors.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
