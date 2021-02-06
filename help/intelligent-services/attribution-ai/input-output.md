@@ -5,15 +5,15 @@ title: Attribution AIの入出力
 topic: Input and Output data for Attribution AI
 description: 次のドキュメントでは、Attribution AIで使用される様々な入出力の概要を説明します。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '2089'
+source-wordcount: '2091'
 ht-degree: 15%
 
 ---
 
 
-# [!DNL Attribution AI] 入出力
+# [!DNL Attribution AI]の入出力
 
 次のドキュメントは、[!DNL Attribution AI]で使用される様々な入力と出力の概要を示しています。
 
@@ -72,7 +72,7 @@ Attribution AIには、モデルトレーニングの入力として履歴デー
 >
 > デフォルト設定のアプリケーションに必要なデータの最小長は次のとおりです。2四半期（180日）+ 56日= 236日。
 
-例：
+例 :
 
 - 過去90日間（3か月）以内に発生したコンバージョンイベントを属性化し、コンバージョンイベントの4週間前に発生したすべてのタッチポイントを追跡する必要があります。 入力データ期間は、過去90日間+ 28日間（4週間）に及びます。 トレーニング期間は90日で、ルックバック期間は28日間の合計118日です。
 
