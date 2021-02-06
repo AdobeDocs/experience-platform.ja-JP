@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ssc;SSC;Salesforce Service Cloud;salesforceサービスクラウド
 solution: Experience Platform
-title: フローサービスAPIを使用したSalesforceサービスクラウドコネクタの作成
+title: フローサービスAPIを使用したSalesforceサービスクラウドソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをSalesforce Service Cloud（以下「SSC」と呼ぶ）に接続する手順を順を追って説明します。
+description: Flow Service APIを使用して、Adobe Experience PlatformをSalesforce Service Cloudに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 18%
+source-wordcount: '594'
+ht-degree: 19%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL Salesforce Service Cloud]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Salesforce Service Cloud]ソース接続を作成する
 
 >[!NOTE]
 >
