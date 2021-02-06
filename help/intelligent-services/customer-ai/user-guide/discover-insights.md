@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；インサイト；顧客ai；人気のあるトピック；顧客aiインサイト
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: 顧客 AI によるインサイトの獲得
+title: 顧客AIを使用したDiscoverインサイト
 topic: Discovering insights
 description: このドキュメントは、Intelligent Services 顧客 AI ユーザーインターフェイスのサービスインスタンスインサイトを操作するためのガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1399'
-ht-degree: 55%
+ht-degree: 54%
 
 ---
 
 
-# 顧客 AI によるインサイトの獲得
+# 顧客AIを使用したインサイトの発見
 
 顧客 AI は、Intelligent Services の一部として Adobe Sensei を活用し、顧客の次の行動を予測する力をマーケターに提供します。顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイメントは必要ありません。
 
