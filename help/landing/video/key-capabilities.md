@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platformの主な能力
+title: Experience Platformの主な機能
 description: このビデオでは、Adobe Experience Platform&アンプ；mdash;Create actionable, intelligent, real-timeの顧客プロファイルの主な機能について説明します。AI/MLモデルとデータクエリを使用して、データを拡張し、より多くのインサイトを引き出す。オープンで落ち着いたコンポーネントを革新し、リアルタイムエクスペリエンスの配信とパーソナライズを強化します。ガバナンス、セキュリティ、プライバシー管理によって信頼を得る
 feature: null
 topics: null
@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32502.jpg
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
