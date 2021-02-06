@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform；ユーザーガイド；uiガイド；ワークフローuiガイド；ワークフロー;ワークフローユーザーガイド；
 solution: Experience Platform
-title: Adobe Experience PlatformワークフローUIガイド
+title: ワークフローUIガイド
 topic: ui guide
-description: 'Adobe Experience Platform '
+description: 複数手順のワークフローに従って、Adobe Experience Platformユーザーインターフェイス内で共通の操作を実行する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 2%
+source-wordcount: '307'
+ht-degree: 1%
 
 ---
 
 
-# Adobe Experience PlatformワークフローUIガイド
+#  WorkflowsUIガイド
 
 Adobe Experience Platformユーザーインターフェイス内の&#x200B;**[!UICONTROL ワークフロー]**&#x200B;セクションは、プラットフォーム内で操作を実行するための複数手順のワークフローのリストを示しています。 これらのワークフローは、データ取り込みやデータ科学などの領域をカバーします。
 
