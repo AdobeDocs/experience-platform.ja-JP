@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Google AdWords;google adwords
 solution: Experience Platform
-title: Google AdWordsコネクタ
+title: Google AdWordsソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle AdWordsをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用してGoogle AdWordsをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 9%
@@ -33,11 +33,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ### APIの使用
 
-- [Flow Service APIを使用してGoogle AdWordsコネクタを作成する](../../tutorials/api/create/advertising/ads.md)
+- [Flow Service APIを使用してGoogle AdWordsソース接続を作成する](../../tutorials/api/create/advertising/ads.md)
 - [Flow Service APIを使用して広告システムを調査する](../../tutorials/api/explore/advertising.md)
 - [Flow Service APIを使用して広告データを収集する](../../tutorials/api/collect/advertising.md)
 
 ### UI の使用
 
-- [UIでのGoogle AdWordsソースコネクタの作成](../../tutorials/ui/create/advertising/ads.md)
-- [UIでの広告コネクタのデータフローの設定](../../tutorials/ui/dataflow/advertising.md)
+- [UIでのGoogle AdWordsソース接続の作成](../../tutorials/ui/create/advertising/ads.md)
+- [UIでの広告接続用のデータフローの設定](../../tutorials/ui/dataflow/advertising.md)
