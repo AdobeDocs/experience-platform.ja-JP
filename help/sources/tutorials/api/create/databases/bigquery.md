@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；bigquery;Google;google;Google BigQuery
 solution: Experience Platform
-title: Flow Service APIを使用してGoogle BigQueryコネクタを作成する
+title: Flow Service APIを使用したGoogle BigQueryソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle BigQuery（以下「BigQuery」と呼ばれる）に接続する手順を順を追って説明します。
+description: Flow Service APIを使用してAdobe Experience PlatformをGoogle BigQueryに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '616'
 ht-degree: 18%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL Google BigQuery]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Google BigQuery]ソース接続を作成する
 
 >[!NOTE]
 >
