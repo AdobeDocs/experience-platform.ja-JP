@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure Data LakeストレージGen2;Azure Data Lakeストレージ;Azure
 solution: Experience Platform
-title: Flow Service APIを使用してAzure Data LakeストレージGen2コネクタを作成する
+title: Flow Service APIを使用してAzure Data LakeストレージGen2ソース接続を作成する
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをAzure Data LakeストレージGen2（以下「ADLS Gen2」と呼ばれる）に接続する手順を順を追って説明します。
+description: Flow Service APIを使用して、Adobe Experience PlatformをAzure Data LakeストレージGen2に接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '602'
 ht-degree: 18%
 
 ---
 
 
-# [!DNL Azure] APIを使用して[!DNL Flow Service] Data LakeストレージGen2コネクタを作成する
+# [!DNL Azure] APIを使用してData LakeストレージGen2ソース接続を作成する[!DNL Flow Service]
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
@@ -27,7 +27,7 @@ ht-degree: 18%
 * [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] 単一のプラットフォームインスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してADLS Gen2ソースコネクタを正しく作成するために必要な追加情報については、以下の節で説明します。
+[!DNL Flow Service] APIを使用してADLS Gen2ソース接続を正しく作成するために必要な追加情報については、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
