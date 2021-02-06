@@ -1,19 +1,19 @@
 ---
 keywords: インサイト；アトリビューションai；アトリビューションaiインサイト；AAIクエリサービス；アトリビューションクエリ；アトリビューションスコア
 solution: Intelligent Services, Experience Platform
-title: AAIクエリサービスクイック開始ガイド
+title: クエリサービスを使用したアトリビューションスコアの分析
 topic: Attribution AI queries
-description: このドキュメントでは、クエリサービスを使用してアトリビューションスコアを分析するためのガイドとテンプレートを提供します。
+description: Adobe Experience Platformクエリサービスを使用してAttribution AIスコアを分析する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Experience Platformクエリサービスアトリビューションスコア分析クイック開始ガイド
+# クエリサービスを使用したアトリビューションスコアの分析
 
 データ内の各行は変換を表し、その変換では関連するタッチポイントの情報が`touchpointsDetail`列の下に構造体の配列として保存されます。
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 | ---------------------- | ------ |
 | タッチポイント名 | `touchpointsDetail. touchpointName` |
 | タッチポイントチャネル | `touchpointsDetail.touchPoint.mediaChannel` |
-| Touchpoint AAIアルゴリズムスコア | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| タッチポイントAttribution AIのアルゴリズムスコア | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## データパスの検索
 
