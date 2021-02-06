@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；ECID;ecid
 solution: Experience Platform
-title: Adobe Experience Platform ECID
+title: ECIDの概要
 topic: overview
 description: Experience CloudID(ECID)は、ID管理へのアクセスを提供するクライアント側モジュールで、主に3つの機能を提供します。
 translation-type: tm+mt
-source-git-commit: 45f2423741ad993765408a9f60e2df6238671b9f
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 77%
+source-wordcount: '186'
+ht-degree: 76%
 
 ---
 
