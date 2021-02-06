@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce;salesforce
 solution: Experience Platform
-title: UIでのSalesforceソースコネクタの作成
+title: UIでのSalesforceソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してSalesforceソースコネクタを作成する手順を説明します。
+description: Adobe Experience PlatformUIを使用してSalesforceソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '453'
 ht-degree: 10%
 
 ---
 
 
-# UIに[!DNL Salesforce]ソースコネクタを作成する
+# UIに[!DNL Salesforce]ソース接続を作成する
 
 Adobe Experience Platformのソースコネクタは、外部ソースのCRMデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用して[!DNL Salesforce]ソースコネクタを作成する手順を説明します。
 
