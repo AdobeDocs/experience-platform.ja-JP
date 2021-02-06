@@ -1,21 +1,17 @@
 ---
 keywords: facebookピクセル拡張子；facebookピクセル拡張子；facebookピクセル宛先；facebookピクセル
-title: Facebook ピクセル拡張機能
-seo-title: Facebook ピクセル拡張機能
+title: Facebookピクセル拡張の宛先
 description: Facebookピクセル拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Facebookピクセル拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 23%
+source-wordcount: '509'
+ht-degree: 20%
 
 ---
 
 
 # [!DNL Facebook Pixel] 拡張機能 {#facebook-pixel-extension}
-
-## 概要 {#overview}
 
 [!DNL Facebook Pixel]は分析ツールで、訪問者がWebサイトでとる行動を把握することで、広告の効果を測定できます。
 
