@@ -1,21 +1,17 @@
 ---
 keywords: AmazonS3;S3宛先；s3;amazon s3
-title: Amazon S3 の宛先
-seo-title: Amazon S3 の宛先
+title: AmazonS3接続先
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
-seo-description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 26%
+source-wordcount: '223'
+ht-degree: 14%
 
 ---
 
 
-# [!DNL Amazon S3] destination
-
-## 概要
+# [!DNL Amazon S3] connection
 
 [!DNL Amazon Web Services] (AWS) S3ストレージへのライブアウトバウンド接続を作成し、タブ区切りファイルまたはCSVデータファイルをAdobe Experience PlatformからS3バケットに定期的にエクスポートします。
 
