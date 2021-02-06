@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ipアドレス；ipアドレス；ipアドレス許可リスト;許可リスト
 description: ソースコネクタを使用する前に、許可リストにIPアドレスを追加する必要があります。
 solution: Experience Platform
-title: IPアドレス許可リスト
+title: ソース接続のIPアドレス許可リスト
 topic: overview
 translation-type: tm+mt
-source-git-commit: a812ad3b130c5998013688dcda522e7d20ae578f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
