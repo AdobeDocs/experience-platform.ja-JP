@@ -1,21 +1,17 @@
 ---
 keywords: ターゲット式;ターゲット;ターゲットv2;ターゲットv2拡張子
-title: Adobe Target v2 拡張機能
-seo-title: Adobe Target v2 拡張機能
+title: Adobe Targetv2の拡張先
 description: Adobe Targetv2拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Adobe Targetv2拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 45%
+source-wordcount: '531'
+ht-degree: 44%
 
 ---
 
 
 # Adobe Target v2 拡張機能 {#adobe-target-v2-extension}
-
-## 概要 {#overview}
 
 Adobe Target は、顧客のエクスペリエンスのカスタマイズやパーソナライズをおこない、Web サイト、モバイルサイト、アプリ、ソーシャルメディア、その他のデジタルチャネルでの収益性を最大化するのに必要なすべてのツールを備えた Adobe Experience Cloud ソリューションです。
 
