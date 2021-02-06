@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Sandboxの更新
 solution: Experience Platform
-title: サンドボックスの更新
+title: APIでサンドボックスを更新する
 topic: developer guide
 description: 要求パスにサンドボックスの名前を含むPATCH要求を作成し、要求ペイロードに更新するプロパティを含めることで、サンドボックス内の1つ以上のフィールドを更新できます。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 68%
+source-wordcount: '133'
+ht-degree: 60%
 
 ---
 
 
-# サンドボックスの更新
+# APIでサンドボックスを更新する
 
 リクエストパスにサンドボックスの`name`を含む PATCH リクエストを作成し、リクエストペイロードで更新するプロパティを作成することで、サンドボックス内の 1 つ以上のフィールドを更新できます。
 
