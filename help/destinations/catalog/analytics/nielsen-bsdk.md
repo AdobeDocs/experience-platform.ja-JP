@@ -1,21 +1,17 @@
 ---
 keywords: Nielsen BSDK;Nielsen bsdk;Nielsen BSDK
-title: Nielsen BSDK 拡張機能
-seo-title: Nielsen BSDK 拡張機能
+title: Nielsen BSDK Extension Destination
 description: ニールセンBSDK拡張は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: ニールセンBSDK拡張は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 36%
+source-wordcount: '591'
+ht-degree: 34%
 
 ---
 
 
-# [!DNL Nielsen BSDK] 拡張子 {#nielsen-bsdk-extension}
-
-## 概要 {#overview}
+# [!DNL Nielsen BSDK] 拡張機能 {#nielsen-bsdk-extension}
 
 [!DNL Nielsen Digital SDK] 以下のデジタル測定製品を使用して、拡張機能オファーのオーディエンス測定を開始します。
 
