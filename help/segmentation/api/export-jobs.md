@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；書き出しジョブ；api;
 solution: Experience Platform
-title: ジョブエンドポイントの書き出し
+title: ジョブAPIエンドポイントの書き出し
 topic: developer guide
-description: 書き出しジョブは、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 Adobe Experience PlatformセグメントAPIの/export/jobsエンドポイントを使用すると、エクスポートジョブをプログラムによって取得、作成およびキャンセルできます。
+description: 書き出しジョブは、オーディエンスセグメントメンバーをデータセットに永続化するために使用される非同期プロセスです。 Segmentation Service APIの/export/jobsエンドポイントを使用すると、エクスポートジョブをプログラムによって取得、作成、キャンセルできます。
 translation-type: tm+mt
-source-git-commit: 783fa7ff0c22143a21c4f666c956c8b4d956189e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1680'
 ht-degree: 34%
 
 ---
