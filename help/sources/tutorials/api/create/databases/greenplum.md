@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；グリーンプラム；グリーンプラム
 solution: Experience Platform
-title: Flow Service APIを使用してGreenPlumコネクタを作成する
+title: Flow Service APIを使用したGreenPlumソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、GreenPlumをExperience Platformに接続する手順を順を追って説明します。
+description: Flow Service APIを使用してGreenPlumをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 19%
+source-wordcount: '549'
+ht-degree: 20%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL GreenPlum]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL GreenPlum]ソース接続を作成する
 
 >[!NOTE]
 >
