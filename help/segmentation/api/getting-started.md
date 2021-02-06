@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；api;
 solution: Experience Platform
-title: セグメント化サービス開発者ガイド
+title: Segmentation Service APIの概要
 topic: developer guide
 description: セグメントAPIを正しく機能させるために必要な追加情報については、次のドキュメントを参照してください。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 25%
+source-wordcount: '329'
+ht-degree: 23%
 
 ---
 
 
-# [!DNL Segmentation Service] {#getting-started}はじめに
+# Segmentation Service APIの使い始めに{#getting-started}
 
 Adobe Experience Platform[!DNL Segmentation Service]では、セグメントを作成し、[!DNL Real-time Customer Profile]データからAdobe Experience Platformでオーディエンスを生成できます。
 
