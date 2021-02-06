@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；オブジェクトの削除；カタログサービス；api
 solution: Experience Platform
-title: オブジェクトの削除
+title: APIでのオブジェクトの削除
 topic: developer guide
 description: DELETE リクエストのパスに ID を指定することで、カタログオブジェクトを削除できます。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 52%
+source-wordcount: '207'
+ht-degree: 47%
 
 ---
 
 
-# オブジェクトの削除
+# APIでのオブジェクトの削除
 
 DELETEリクエストのパスに[!DNL Catalog]オブジェクトのIDを指定すると、オブジェクトを削除できます。
 
