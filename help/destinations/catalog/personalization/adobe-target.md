@@ -1,21 +1,17 @@
 ---
 keywords: ターゲット式;ターゲット
-title: Adobe Target 拡張機能
-seo-title: Adobe Target 拡張機能
+title: Adobe Targetの延長先
 description: Adobe Target拡張は、Adobe Experience Platformのパーソナライゼーションの目的地です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Adobe Target拡張は、Adobe Experience Platformのパーソナライゼーションの目的地です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 43%
+source-wordcount: '511'
+ht-degree: 41%
 
 ---
 
 
 # Adobe Target 拡張機能 {#adobe-target-extension}
-
-## 概要 {#overview}
 
 Adobe Target は、顧客のエクスペリエンスのカスタマイズやパーソナライズをおこない、Web サイト、モバイルサイト、アプリ、ソーシャルメディア、その他のデジタルチャネルでの収益性を最大化するのに必要なすべてのツールを備えた Adobe Experience Cloud ソリューションです。
 
