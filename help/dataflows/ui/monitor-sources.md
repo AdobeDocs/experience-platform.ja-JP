@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；モニターアカウント；モニターデータフロー；データフロー；ソース
 description: Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ソース・ワークスペースから既存のデータ・フローを表示する手順を説明します。
 solution: Experience Platform
-title: データフローの監視
+title: UIでのソースのデータフローの監視
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 4d99526a592e173e3b46e1fa2a3f869b1fe5d4f2
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '823'
 ht-degree: 4%
 
 ---
