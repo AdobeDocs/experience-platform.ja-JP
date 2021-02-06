@@ -1,20 +1,18 @@
 ---
 keywords: 電子メール；電子メール；電子メール；電子メールの宛先
-title: 電子メールマーケティングの宛先
-seo-title: 電子メールマーケティングの宛先
+title: 電子メールマーケティング宛先の概要
 type: Tutorial
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
-seo-description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '811'
-ht-degree: 35%
+source-wordcount: '791'
+ht-degree: 32%
 
 ---
 
 
-# 電子メールマーケティングの宛先 {#email-marketing-destinations}
+# 電子メールマーケティングの宛先の概要 {#email-marketing-destinations}
 
 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。Adobe Experience Platformは、電子メールマーケティングの宛先に対してセグメントをアクティブ化できるようにすることで、ESPと統合されています。
 
