@@ -1,21 +1,17 @@
 ---
 keywords: google Universal Analytics;Google Universal Analytics;Google Universal Analytics
-title: Google Universal Analytics 拡張機能
-seo-title: Google Universal Analytics 拡張機能
+title: Google Universal Analytics Extensionの宛先
 description: Google Universal Analyticsの拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Google Universal Analyticsの拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 30%
+source-wordcount: '528'
+ht-degree: 28%
 
 ---
 
 
 # [!DNL Google Universal Analytics] 拡張機能 {#google-universal-analytics-extension}
-
-## 概要 {#overview}
 
 [!DNL Google Universal Analytics] を使用すると、広告の ROI を測定するとともに、フラッシュ、ビデオ、ソーシャルネットワーキングのサイトやアプリケーションを追跡できます。
 
