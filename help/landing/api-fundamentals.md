@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: Adobe Experience Platform API の基本
+title: Experience Platform API の基本
 topic: getting started
 description: このドキュメントでは、Experience PlatformAPIに関連する基盤となるテクノロジーと構文の一部について簡単に説明します。
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 53%
 
 ---
 
 
-# Adobe Experience Platform API の基本
+# Experience Platform API の基本
 
 Adobe Experience PlatformのAPIは、JSONベースの[!DNL Platform]リソースを効果的に管理するために理解する必要のある、基礎となるテクノロジーと構文をいくつか採用しています。 このドキュメントでは、これらのテクノロジーの概要のほか、詳細が記載されている外部ドキュメントへのリンクを提供します。
 
