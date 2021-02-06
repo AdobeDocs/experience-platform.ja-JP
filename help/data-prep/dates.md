@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；日付；日付関数；日付；
 solution: Experience Platform
-title: 日付関数
+title: データ準備日関数
 topic: overview
 description: このドキュメントでは、データ準備で使用する日付関数を紹介します。
 translation-type: tm+mt
-source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 17%
+source-wordcount: '415'
+ht-degree: 16%
 
 ---
 
 
-# 日付関数
+# データ準備日の関数
 
 データ準備は、文字列とdatetimeオブジェクトの両方の日付関数をサポートしています。
 
