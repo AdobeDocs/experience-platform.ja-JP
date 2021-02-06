@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platformに建設されたアプリケーション&インテリジェントサービス
+title: Experience Platform上に構築されたアプリケーションとインテリジェントサービス
 description: このビデオでは、Applications&mdash;Real-time Customer Data Platform、Journey Orchestration、Customer Journey Analytics、Attribution AIおよびお客様のAIを補完する、Adobe Experience Platform上に構築されたApplication ServicesとIntelligent Servicesの概要を説明します。
 feature: platform
 topics: null
@@ -9,10 +9,10 @@ doc-type: video
 activity: understand
 thumbnail: 32554.jpg
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '119'
-ht-degree: 21%
+source-wordcount: '118'
+ht-degree: 22%
 
 ---
 
