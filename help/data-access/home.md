@@ -3,12 +3,12 @@ keywords: Experience Platform；ホーム；人気のあるトピック；デー
 solution: Experience Platform
 title: データアクセスの概要
 topic: overview
-description: Data Accessは、Experience Platform内で取り込まれたデータセットの検出性とアクセス性に重点を置いたツールをユーザーに提供することで、Adobe Experience Platformをサポートします。
+description: Data Accessは、取り込まれたプラットフォーム・データセットの検出性とアクセス性に重点を置いたツールをユーザーに提供することで、Adobe Experience Platformをサポートします。
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 20%
+source-wordcount: '185'
+ht-degree: 18%
 
 ---
 
