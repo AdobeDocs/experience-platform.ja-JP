@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ；ミックスイン；ミックスイン；ミックスイン；データ型；データ型；データ型；データ型；スキーマ型；データ型；データ型；スキーマ;スキーマ;スキーマ設計；マップ；
 solution: Experience Platform
-title: XDMフィールド型の制約
+title: XDM Field Typeの制約
 topic: overview
 description: XDMのフィールド型制約に関するリファレンスです。マッピングできるその他のシリアル化形式や、APIで独自のフィールド型を定義する方法などが含まれます。
 translation-type: tm+mt
-source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 71%
