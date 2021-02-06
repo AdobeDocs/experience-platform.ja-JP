@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；部分取り込み；部分取り込みエラー；部分取り込みエラー；部分的なバッチ取り込み；取り込み；取り込み；エラー診断；エラー診断の取り込み；エラーの取り込み；
 solution: Experience Platform
-title: Adobe Experience Platform 部分取得の概要
+title: データ取り込みエラー診断の取得
 topic: overview
 description: このドキュメントでは、バッチ取り込みの監視、部分的なバッチ取り込みエラーの管理、および部分的なバッチ取り込みタイプの参照に関する情報を提供します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 31%
@@ -13,7 +13,7 @@ ht-degree: 31%
 ---
 
 
-# エラー診断を取得しています
+# データ取り込みエラー診断を取り出しています
 
 Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。バッチインジェストを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングエンドポイントを使用して[!DNL Platform]にデータをリアルタイムで挿入できます。
 
