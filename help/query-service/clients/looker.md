@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；ルッカー；ルッカー；クエリサービスに接続；
 solution: Experience Platform
-title: Looker との接続
+title: Lookerをクエリサービスに接続
 topic: connect
 description: このドキュメントでは、LookerとAdobe Experience Platformクエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 24%
+source-wordcount: '244'
+ht-degree: 22%
 
 ---
 
 
-# [!DNL Looker]
+# [!DNL Looker]をクエリサービスに接続
 
 このドキュメントでは、[!DNL Looker]をAdobe Experience Platform[!DNL Query Service]に接続する手順を説明します。
 
 >[!NOTE]
 >
 > このガイドは、[!DNL Looker]へのアクセス権が既にあり、そのインターフェイスの操作方法に精通していることを前提としています。 [!DNL Looker]に関する詳細は、[正式な [!DNL Looker] ドキュメント](https://docs.looker.com/)を参照してください。
-
-## [!DNL Looker]をプラットフォームに接続
 
 [!DNL Looker]にログインした後、**[!DNL Admin]**&#x200B;を選択し、次に&#x200B;**[!DNL Connections]**&#x200B;を選択します。
 
