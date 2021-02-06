@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイムの顧客プロファイル；トラブルシューティング；API；統合プロファイル；統合プロファイル；統合；プロファイル;rtcp;プロファイルの有効化；プロファイルの有効化
-title: リアルタイムのお客様向けプロファイルAPI開発者ガイド
+title: リアルタイム顧客プロファイルAPIガイド
 topic: guide
-description: Real-time Customer Customer Exponds APIには、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプリング、エラーになったプロファイルデータの削除など、プロファイルデータの調査と操作を行う複数のエンドポイントが含まれています。
+description: Real-time Customer Commenter APIを使用すると、表示プロファイル、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプル、不要になった、または誤って追加されたプロファイルデータの削除など、プロファイルデータを参照および操作できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 translation-type: tm+mt
-source-git-commit: 823d89ab37156e775a2879e3a2c91bfd911b83bb
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '870'
 ht-degree: 21%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] API開発者ガイド
+# [!DNL Real-time Customer Profile] APIガイド
 
 [!DNL Real-time Customer Profile] adobe experience platform内の個々の顧客の全体的な表示を確認できます。[!DNL Profile] オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルから個別の顧客データを統合表示に統合し、各顧客インタラクションに関する実用的なタイムスタンプのあるアカウントを提供できます。
 
