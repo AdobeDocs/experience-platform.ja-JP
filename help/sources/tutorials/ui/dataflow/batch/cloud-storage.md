@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1898'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# UIでのクラウドストレージバッチコネクタのデータフローの設定
+# UIでのクラウドストレージバッチ接続のデータフローの設定
 
 データフローとは、ソースからデータセット[!DNL Platform]にデータを取得し、取り込むスケジュール済みのタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 
