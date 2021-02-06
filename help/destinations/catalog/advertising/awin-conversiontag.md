@@ -1,21 +1,17 @@
 ---
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
-title: Awin Advertiser コンバージョンタグの拡張
-seo-title: Awin Advertiser コンバージョンタグの拡張
+title: Awin広告主コンバージョンタグ拡張の宛先
 description: Awin Advertiser Conversion Tag Extensionは、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Awin Advertiser Conversion Tag Extensionは、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 43%
+source-wordcount: '529'
+ht-degree: 41%
 
 ---
 
 
 # Awin Advertiser コンバージョンタグの拡張 {#awin-conversiontag-extension}
-
-## 概要 {#overview}
 
 コンバージョンタグは、AWIN.Tracking.Sale JavaScript オブジェクトの宣言です。この宣言は、確認ページで実行され、コンバージョンがおこなわれたことをマスタータグに指示します。その後、必要なトラッキングリクエストが実行されます。
 
