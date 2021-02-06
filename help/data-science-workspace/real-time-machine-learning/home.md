@@ -5,7 +5,7 @@ title: リアルタイム機械学習の概要
 topic: Overview
 description: リアルタイム機械学習は、エンドユーザーに対するデジタルエクスペリエンスコンテンツの関連性を大幅に向上させます。 これは、Experience Edgeでリアルタイムの会議と継続的な学習を活用することで可能になります。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 5%
