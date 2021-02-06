@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；エクスペリエンスイベントクエリ；エクスペリエンスイベントクエリ；エクスペリエンスイベントクエリ;
 solution: Experience Platform
-title: エクスペリエンスイベントクエリ
+title: エクスペリエンスイベントのサンプルクエリ
 topic: queries
 type: Tutorial
-description: 次のドキュメントは、エクスペリエンスのイベントに関するクエリの例を示しています。
+description: 次のドキュメントは、Adobe Experience Platformクエリサービスのエクスペリエンスイベントに関するクエリの例を示しています。
 translation-type: tm+mt
-source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 60%
+source-wordcount: '320'
+ht-degree: 58%
 
 ---
 
 
-# [!DNL Experience Event] クエリ
+# [!DNL Experience Events]のサンプルクエリ
 
 標準的なSQLクエリに加えて、Adobe Experience Platform[!DNL Query Service]は[!DNL Experience Events]を使用したクエリの書き込みをサポートしています。 エクスペリエンスイベントは、Experience Data Model(XDM)ExperienceEventクラスで表されます。Experience Data Model(XDM)ExperienceEventクラスは、ユーザーがWebサイトやサービスを操作したときに不変で非集計的なスナップショットを取り込むので、時間ドメインの分析に使用できます。
 
