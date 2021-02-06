@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；PSQL;psql;クエリサービス；クエリサービス；メタデータ；コマンド；メタデータコマンド；
 solution: Experience Platform
-title: メタデータコマンド
+title: クエリサービスのMetadata PostgreSQLコマンド
 topic: metadata
-description: メタデータのクエリに現在サポートされているPSQLコマンドのリストです。
+description: 現在、Adobe Experience Platformクエリサービス内のメタデータのクエリに対してサポートされているPostgreSQLコマンドのリストです。
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 86%
+source-wordcount: '338'
+ht-degree: 77%
 
 ---
 
 
-# メタデータコマンド
+# クエリサービスのMetadata PostgreSQLコマンド
 
-データセット上のメタデータに対しては、現在、次の PSQL コマンドによるクエリがサポートされています。
+データセットのメタデータについては、現在、次のPostgreSQLコマンドがクエリ用にサポートされています。
 
 >[!NOTE]
 >
