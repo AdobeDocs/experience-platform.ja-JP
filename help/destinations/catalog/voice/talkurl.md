@@ -1,21 +1,17 @@
 ---
 keywords: Talk URL Inbox;Talk URL Inbox;Talk URL Inbox;Talk URL Inbox;Talk URL;Talk URL
-title: Talk URL Inbox 拡張機能
-seo-title: Talk URL Inbox
+title: Talk URL Inbox Extensionの宛先
 description: Talk URL Inbox拡張は、Adobe Experience Platformの顧客先の音声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Talk URL Inbox拡張は、Adobe Experience Platformの顧客先の音声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 30%
+source-wordcount: '550'
+ht-degree: 28%
 
 ---
 
 
-# [!DNL Talk URL Inbox] 拡張子 {#talk-url-extension}
-
-## 概要 {#overview}
+# [!DNL Talk URL Inbox] 拡張機能 {#talk-url-extension}
 
 Web ページ訪問者から音声メッセージを受信します。ホスト UI とクラウドベースの機械学習機能を含み、音声メッセージをテキストインサイトへと即座に書き起こします。
 
