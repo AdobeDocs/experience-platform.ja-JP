@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；
 solution: Experience Platform
-title: スキーマワークスペースの概要
+title: スキーマUIの概要
 description: この概要では、Experience Platformのスキーマワークスペースの主な機能について説明します。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-#  Schemasworkspaceの概要
+#  スキーマUIの概要
 
 Adobe Experience Platformユーザーインターフェイスの[!UICONTROL スキーマ]ワークスペースを使用すると、スキーマ、クラス、ミックスイン、データ型などのExperience Data Model(XDM)リソースを管理できます。 Adobeが提供するコアリソースの表示や調査を行ったり、組織のカスタムリソースやスキーマを作成したりできます。
 
