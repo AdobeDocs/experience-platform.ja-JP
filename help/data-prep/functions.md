@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；フィールドのマッピング；マッピング関数；
 solution: Experience Platform
-title: データ準備関数
+title: データ準備マッピング関数
 topic: overview
 description: このドキュメントでは、データ準備で使用するマッピング関数を紹介します。
 translation-type: tm+mt
-source-git-commit: bfcb1924e40b67c0af41dc789b5ff0bf8e8366e1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '3597'
+source-wordcount: '3599'
 ht-degree: 19%
 
 ---
 
 
-# データ準備関数
+# データ準備マッピング関数
 
 データ準備関数を使用して、ソースフィールドに入力した値に基づいて値を計算および計算できます。
 
@@ -197,7 +197,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | 擬似ランダム ID を生成します。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### ユーザーエージェント関数
+### ユーザーエージェント機能
 
 >[!NOTE]
 >
@@ -205,11 +205,11 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| ua_os_name | ユーザーエージェント文字列からオペレーティングシステム名を抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_os_name(USER_AGENT) | ua_os_name(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | ユーザーエージェント文字列からオペレーティングシステムのメジャーバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_os_version_major(USER_AGENT) | ua_os_version_major(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
-| ua_os_version | ユーザーエージェント文字列からオペレーティングシステムのバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_os_version(USER_AGENT) | ua_os_version(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
-| ua_os_name_version | ユーザーエージェント文字列からオペレーティングシステムの名前とバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_os_name_version(USER_AGENT) | ua_os_name_version(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
-| ua_agent_version | ユーザーエージェント文字列からエージェントのバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_agent_version(USER_AGENT) | ua_agent_version(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
-| ua_agent_version_major | ユーザー・エージェント文字列からエージェント名とメジャー・バージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_agent_version_major(USER_AGENT) | ua_agent_version_major(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
-| ua_agent_name | ユーザー・エージェント文字列からエージェント名を抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_agent_name(USER_AGENT) | ua_agent_name(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
-| ua_device_class | ユーザーエージェント文字列からデバイスクラスを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_device_class(USER_AGENT) | ua_device_class(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Phone |
+| ua_os_name | ユーザーエージェント文字列からオペレーティングシステム名を抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_name(USER_AGENT) | ua_os_name(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
+| ua_os_version_major | ユーザーエージェント文字列からオペレーティングシステムのメジャーバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_version_major(USER_AGENT) | ua_os_version_major(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
+| ua_os_version | ユーザーエージェント文字列からオペレーティングシステムのバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_version(USER_AGENT) | ua_os_version(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
+| ua_os_name_version | ユーザーエージェント文字列からオペレーティングシステムの名前とバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_name_version(USER_AGENT) | ua_os_name_version(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
+| ua_agent_version | ユーザーエージェント文字列からエージェントバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_agent_version(USER_AGENT) | ua_agent_version(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
+| ua_agent_version_major | ユーザーエージェント文字列からエージェント名とメジャーバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_agent_version_major(USER_AGENT) | ua_agent_version_major(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
+| ua_agent_name | ユーザーエージェント文字列からエージェント名を抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_agent_name(USER_AGENT) | ua_agent_name(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
+| ua_device_class | ユーザーエージェント文字列からデバイスクラスを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_device_class(USER_AGENT) | ua_device_class(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Phone |
