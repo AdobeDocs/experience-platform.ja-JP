@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；その他の関数；その他；
 solution: Experience Platform
-title: その他の関数
+title: PQLのその他の関数
 topic: developer guide
 description: 次の関数は、プロファイルクエリ言語（PQL）のその他の関数です。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 70%
+source-wordcount: '132'
+ht-degree: 68%
 
 ---
 
