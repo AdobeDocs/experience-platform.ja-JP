@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；オプトアウト；Segmentation;Segmentationサービス；Segmentationサービス；名誉のオプトアウト；オプトアウト；オプトアウト；オプトアウト；
 solution: Experience Platform
-title: オプトアウトの遵守
+title: セグメントでのオプトアウトリクエストの実行
 topic: overview
-description: 'Experience Platformを使用すると、顧客は、データの使用状況やストレージに関するオプトアウトリクエストをリアルタイム顧客プロファイル内で送信できます。 これらのオプトアウトリクエストは、カリフォルニア州消費者プライバシー法（CCPA）に含まれています。CCPA は、カリフォルニア州の在住者に対して、個人データにアクセスし削除する権利や、個人データが販売または開示されたか（そして誰に対して）を知る権利を付与しています。 '
+description: 'Adobe Experience Platformでは、顧客がデータの使用状況やストレージに関するオプトアウトリクエストをリアルタイム顧客プロファイル内に送信することを許可しています。] これらのオプトアウトリクエストは、カリフォルニア州消費者プライバシー法（CCPA）に含まれています。CCPA は、カリフォルニア州の在住者に対して、個人データにアクセスし削除する権利や、個人データが販売または開示されたか（そして誰に対して）を知る権利を付与しています。 '
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 63%
+source-wordcount: '1031'
+ht-degree: 62%
 
 ---
 
 
 # セグメントでのオプトアウトリクエストの遵守
 
-[!DNL Experience Platform] 顧客が内部でのデータの使用状況やストレージに関するオプトアウトリクエストを送信でき [!DNL Real-time Customer Profile]ます。これらのオプトアウト要求は[!DNL California Consumer Privacy Act] (CCPA)の一部であり、カリフォルニア州の住民に対して、個人データのアクセス権や削除権を与え、個人データの販売または公開（および公開）の有無を知ることができます。
+Adobe Experience Platformは、顧客が[!DNL Real-time Customer Profile]内でのデータの使用状況とストレージに関するオプトアウトリクエストを送信することを許可します。 これらのオプトアウト要求は[!DNL California Consumer Privacy Act] (CCPA)の一部であり、カリフォルニア州の住民に対して、個人データのアクセス権や削除権を与え、個人データの販売または公開（および公開）の有無を知ることができます。
 
 顧客がオプトアウトしたら、組織はマーケティング活動のオーディエンスを生成する際に、これらのオプトアウトを遵守する必要があります。このドキュメントでは、オプトアウトリクエストの遵守に関する重要な詳細について説明します。
 
