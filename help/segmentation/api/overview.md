@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；API;API;
-title: Adobe Experience Platformセグメントサービス開発ガイド
+title: Segmentation Service APIガイド
 topic: guide
-description: この概要ドキュメントでは、Segmentation Service APIの各エンドポイントの概要を説明し、詳しくは関連するエンドポイントガイドへのリンクを示します。
+description: Segmentation Service APIを使用すると、開発者はAdobe Experience Platformでのセグメント化操作をプログラムで管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 6%
@@ -12,7 +12,7 @@ ht-degree: 6%
 ---
 
 
-# Adobe Experience Platform[!DNL Segmentation Service] API開発ガイド
+# Segmentation Service APIガイド
 
 [!DNL Adobe Experience Platform Segmentation Service] セグメントを作成し、 [!DNL Adobe Experience Platform] データ [!DNL Real-time Customer Profile] からでオーディエンスを生成できます。
 
