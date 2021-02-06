@@ -1,21 +1,17 @@
 ---
 keywords: 広告；業者の机
-title: The Trade Desk Destination
-seo-title: The Trade Desk Destination
+title: トレードデスクの接続先
 description: 'トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。 '
-seo-description: トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '550'
 ht-degree: 5%
 
 ---
 
 
-# [!DNL The Trade Desk] destination
-
-## 概要 {#overview}
+# [!DNL The Trade Desk] connection
 
 [!DNL The Trade Desk] destinationは、プロファイルデータの送信先にな [!DNL The Trade Desk]ります。
 
