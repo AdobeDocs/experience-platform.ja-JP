@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；準備文；準備文；sql;
 solution: Experience Platform
-title: 準備済み文
+title: クエリサービスにおける作成済明細書
 topic: prepared statements
 description: SQLでは、準備された文を使用して、類似したクエリや更新をテンプレート化します。 Adobe Experience Platform クエリサービスは、パラメーター化されたクエリを使用して準備済み文をサポートします。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 90%
+source-wordcount: '381'
+ht-degree: 89%
 
 ---
 
