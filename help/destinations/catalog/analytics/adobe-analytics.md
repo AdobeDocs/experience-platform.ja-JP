@@ -1,21 +1,17 @@
 ---
 keywords: Analytics拡張機能；Analytics拡張機能；ターゲット解析
-title: Adobe Analytics 拡張機能
-seo-title: Adobe Analytics 拡張機能
+title: Adobe Analyticsの延長先
 description: Adobe Analyticsの拡張は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Adobe Analyticsの拡張は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 41%
+source-wordcount: '499'
+ht-degree: 39%
 
 ---
 
 
 # Adobe Analytics 拡張機能 {#adobe-analytics-extension}
-
-## 概要 {#overview}
 
 Adobe Analytics は、顧客像を把握し、顧客インテリジェンスを活用してビジネスを導く力をユーザーに提供する、業界最先端のソリューションです。
 
