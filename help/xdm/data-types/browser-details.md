@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；ブラウザーの詳細；データ型；データ型；
 solution: Experience Platform
-title: ブラウザーの詳細データタイプ
+title: ブラウザーの詳細データ型
 topic: overview
 description: このドキュメントでは、Browser Details XDMデータ型の概要を説明します。
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 19%
