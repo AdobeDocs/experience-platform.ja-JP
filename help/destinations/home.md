@@ -2,13 +2,13 @@
 keywords: 宛先；adobe experience platform;platform;destinations overview;destinations overview;activate data;activate;
 title: 宛先の概要
 seo-title: 宛先の概要
-description: クロスチャネルのマーケティングキャンペーン、電子メール、ターゲット広告などの宛先に対し、Platform データを活用します。
+description: チャネル間のマーケティングキャンペーン、電子メール、ターゲットを絞った広告などの目的地に対して、Adobe Experience Platformデータをアクティブ化する方法を説明します。
 seo-description: 宛先は、宛先プラットフォームとの統合が事前に構築されており、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。 Adobe Experience Platformの宛先を使用すると、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な使用例に関する既知および不明なデータをアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: 32eae2ed782e46941bb21e3aca62c6bce68cde1e
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 43%
+source-wordcount: '493'
+ht-degree: 40%
 
 ---
 
