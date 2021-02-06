@@ -1,21 +1,17 @@
 ---
 keywords: contentsquare拡張子；contentsquareターゲット；contentsquare
-title: Contentsquare 拡張機能
-seo-title: Contentsquare 拡張機能
+title: Contentsquare拡張の宛先
 description: Contentsquareの拡張子は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Contentsquareの拡張子は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 31%
+source-wordcount: '542'
+ht-degree: 29%
 
 ---
 
 
 # [!DNL Contentsquare] 拡張機能 {#contentsquare-extension}
-
-## 概要 {#overview}
 
 ページ内の行動を視覚化し、顧客が放棄した理由と改善策を探りましょう。Analytics セグメントおよび Target テストごとに、UX およびコンテンツ要素の売上高への貢献度を評価します。[!DNL Contentsquare]タグをインストールし、カスタム変数とイベントを設定します。 数回のクリックするだけで UX 分析のデータ収集を開始できます。
 
