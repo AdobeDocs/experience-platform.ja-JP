@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDM system；エクスペリエンスデータモデル；エクスペリエンスデータモデル；Experience Data Model；データモデル；スキーマレジストリ；スキーマ;スキーマ;スキーマ;スキーマ;Relationship;Relationship;Identity;Reference;
 solution: Experience Platform
-title: レジストリ API を使用した 2 つのスキーマ間の関係の定義
+title: スキーマレジストリAPIを使用した2つのスキーマ間の関係の定義
 description: このドキュメントでは、スキーマレジストリ API を使用して、組織が定義した 2 つのスキーマ間の 1 対 1 の関係を定義するためのチュートリアルを提供します。
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1337'
-ht-degree: 48%
+ht-degree: 47%
 
 ---
 
