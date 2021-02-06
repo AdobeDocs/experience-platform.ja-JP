@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；データセットの生成；データセットの生成；データセットの作成；
 solution: Experience Platform
-title: データセットをクエリ結果から生成する
+title: クエリサービスの結果からデータセットを生成
 topic: queries
 type: Tutorial
-description: 'クエリサービスを使用すると、UI からデータセットを作成できます。作成したデータセットは、Data Lake内の他のデータセットと同様にアクセスでき、様々な使用例で使用できます。 '
+description: 'Adobe Experience Platformクエリサービスを使用すると、UIからデータセットを作成できます。 作成したデータセットは、Data Lake内の他のデータセットと同様にアクセスでき、様々な使用例で使用できます。 '
 translation-type: tm+mt
-source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 50%
+source-wordcount: '327'
+ht-degree: 43%
 
 ---
 
 
-# データセットをクエリ結果から生成する
+# クエリサービスの結果からデータセットを生成
 
 [!DNL Query Service]の真の力は、クエリが[!DNL Data Lake]内のデータセットを生成して、より多くのクエリや[!DNL Data Science Workspace]、[!DNL Real-time Customer Profile]、[!DNL Analysis Workspace]などの他のサービスで使用される場合に明らかになります。
 
