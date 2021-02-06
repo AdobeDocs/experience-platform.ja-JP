@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；顧客属性
 solution: Experience Platform
-title: UIで顧客属性ソースコネクタを作成する
+title: UIでの顧客属性ソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、顧客属性プロファイルデータをAdobe Experience Platformに収集するためのソースコネクタをUIで作成する手順を説明します。
+description: 顧客属性プロファイルデータをAdobe Experience Platformに収集するためのUIでソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '377'
 ht-degree: 6%
 
 ---
 
 
-# UIで顧客属性ソースコネクタを作成する
+# UIでの顧客属性ソース接続の作成
 
-このチュートリアルでは、顧客属性プロファイルデータをAdobe Experience Platformに収集するためのソースコネクタをUIで作成する手順を説明します。 顧客属性について詳しくは、[概要ドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html)を参照してください。
+このチュートリアルでは、顧客属性プロファイルデータをAdobe Experience Platformに収集するためのソース接続をUIで作成する手順を説明します。 顧客属性について詳しくは、[概要ドキュメント](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html)を参照してください。
 
 ## ソース接続の作成
 
