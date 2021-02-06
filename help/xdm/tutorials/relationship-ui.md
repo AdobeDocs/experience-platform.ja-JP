@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ui;UI;XDM;XDM system；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマエディタ；スキーマエディタ；スキーマ;スキーマ;スキーマ；作成；リレーションシップ；リファレンス；
 solution: Experience Platform
-title: スキーマエディターを使用した 2 つのスキーマ間の関係の定義
+title: スキーマエディタを使用した2つのスキーマ間の関係の定義
 description: このドキュメントでは、Experience Platformユーザーインターフェイスのスキーマエディタを使用して、2つのスキーマ間の関係を定義するためのチュートリアルを提供します。
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 32%
+source-wordcount: '945'
+ht-degree: 31%
 
 ---
 
