@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ポリシー
 solution: Experience Platform
-title: データ使用ポリシーの作成
+title: APIでのデータ使用ポリシーの作成
 topic: policies
 type: Tutorial
 description: Policy Service APIを使用すると、データ使用ポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。 このドキュメントでは、Policy Service APIを使用してポリシーを作成するための手順を説明するチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 55a54463e918fc62378c660ef17f36e2ede471e0
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 49%
+source-wordcount: '1219'
+ht-degree: 48%
 
 ---
 
@@ -24,8 +24,8 @@ ht-degree: 49%
 
 このチュートリアルでは、ポリシーの作成と評価に関わる次の主要概念について、十分に理解している必要があります。
 
-* [[!DNL Data Governance]](../home.md):データ使用のコンプライアンスを [!DNL Platform] 強制するフレームワーク。
-* [データ使用ラベル](../labels/overview.md)：データ使用ラベルは、XDM データフィールドに適用され、そのデータのアクセス方法に関する制限を指定します。
+* [Adobe Experience Platformデータガバナンス](../home.md):データ使用のコンプライアンスを [!DNL Platform] 強制するフレームワーク。
+   * [データ使用ラベル](../labels/overview.md)：データ使用ラベルは、XDM データフィールドに適用され、そのデータのアクセス方法に関する制限を指定します。
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
 * [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
