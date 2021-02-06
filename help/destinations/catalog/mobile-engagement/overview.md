@@ -1,19 +1,17 @@
 ---
 keywords: モバイルメッセージング；モバイルメッセージングの宛先；Braze;飛行船
-title: モバイルエンゲージメントの宛先
-seo-title: モバイルエンゲージメントの宛先
-description: Adobe Experience Platformは、以下に示すモバイルエンゲージメント先をサポートしています。
-seo-description: Adobe Experience Platformは、以下に示すモバイルエンゲージメント先をサポートしています。
+title: モバイルエンゲージメントの宛先の概要
+description: Adobe Experience Platformがサポートする様々なモバイルエンゲージメント先について説明します。
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
 
 
-# モバイルエンゲージメント先{#mobile-destinations}
+# モバイルエンゲージメント先の概要{#mobile-destinations}
 
 [!DNL Adobe Experience Platform] 現在、次のモバイルエンゲージメント先をサポートしています。
 
