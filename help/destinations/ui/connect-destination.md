@@ -1,19 +1,18 @@
 ---
 keywords: 接続先；宛先接続；宛先接続方法
 title: Adobe Experience Platformの宛先に接続
-seo-title: Adobe Experience Platformの宛先に接続
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformの宛先を接続する手順をリストします
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 60%
+source-wordcount: '117'
+ht-degree: 64%
 
 ---
 
 
-# 宛先の接続方法
+# 宛先に接続
 
 次の手順に従って、Adobe Experience Platformの宛先に接続します。
 
