@@ -1,21 +1,17 @@
 ---
 keywords: demandbase extension;demandbase;demandbase destination
-title: Demandbase 拡張機能
-seo-title: Demandbase 拡張機能
+title: Demandbase拡張の宛先
 description: Demandbase拡張機能は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Demandbase拡張機能は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 28%
+source-wordcount: '539'
+ht-degree: 26%
 
 ---
 
 
 # [!DNL Demandbase] 拡張機能 {#demandbase-extension}
-
-## 概要 {#overview}
 
 [!DNL Demandbase] B2BアカウントのインサイトをAdobe Analyticsに直接入手し、業界、売上高、およびターゲットアカウント別にトラフィックと行動をセグメント化できます。 このアカウントベースの表示は、エンゲージメント、コンバージョン、および最も価値の高い訪問者の出所に関する独自の洞察を提供します。
 
