@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform；ユーザーガイド；uiガイド；プラットフォームuiガイド；プラットフォームの紹介；ダッシュボード;
 solution: Experience Platform
-title: Adobe Experience PlatformUIガイド
+title: Experience PlatformUIの概要
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
