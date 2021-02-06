@@ -1,25 +1,21 @@
 ---
 keywords: AmazonKinesis;kinesis宛先；kinesis
-title: AmazonKinesis駅
-seo-title: AmazonKinesis駅
+title: AmazonKinesis接続先
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
-seo-description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 translation-type: tm+mt
-source-git-commit: a78dd4b95896387aa1daa022c9e1d5a6cf978448
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '451'
 ht-degree: 7%
 
 ---
 
 
-# （ベータ版） [!DNL Amazon Kinesis]宛先
+# （ベータ版） [!DNL Amazon Kinesis]接続
 
 >[!IMPORTANT]
 >
 >プラットフォームの[!DNL Amazon Kinesis]宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
-
-## 概要 {#overview}
 
 [!DNL Amazon Web Services]の[!DNL Kinesis Data Streams]サービスを使用すると、大量のデータレコードをリアルタイムで収集して処理できます。
 
