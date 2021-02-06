@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；サービスノー；ServiceNow
 solution: Experience Platform
-title: Flow Service APIを使用してServiceNowコネクタを作成する
+title: Flow Service APIを使用したServiceNowソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをServiceNowサーバーに接続する手順を順を追って説明します。
+description: Flow Service APIを使用して、Adobe Experience PlatformをServiceNowサーバーに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 19%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL ServiceNow]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL ServiceNow]ソース接続を作成する
 
 >[!NOTE]
 >
