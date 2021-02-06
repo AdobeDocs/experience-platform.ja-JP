@@ -1,25 +1,21 @@
 ---
 keywords: Azureイベントハブの宛先；azureイベントハブ；azure eventhub
-title: （ベータ版）Azureイベントハブの宛先
-seo-title: （ベータ版）Azureイベントハブの宛先
+title: （ベータ版）Azureイベントハブの接続先
 description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
-seo-description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: 97c0a9f4726ec85b7a72dc682fbd201a6152c1ba
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '487'
 ht-degree: 6%
 
 ---
 
 
-# （ベータ版） [!DNL Azure Event Hubs]宛先
+# （ベータ版） [!DNL Azure Event Hubs]接続
 
 >[!IMPORTANT]
 >
 >プラットフォームの[!DNL Azure Event Hubs]宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
-
-## 概要 {#overview}
 
 [!DNL Azure Event Hubs] は、大規模なデータストリーミングプラットフォームおよびイベント取り込みサービスです。1秒あたり数百万個のイベントを受信し、処理できます。 イベントハブに送信されたデータは、任意のリアルタイム分析プロバイダーまたはバッチ/ストレージアダプターを使用して、変換および保存できます。
 
