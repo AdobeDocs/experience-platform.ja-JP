@@ -1,21 +1,17 @@
 ---
 keywords: Advertising Cloud;advertising cloud extension;広告クラウドの宛先
-title: Adobe Advertising Cloud 拡張機能
-seo-title: Adobe Advertising Cloud 拡張機能
+title: Adobe Advertising Cloudの延長先
 description: Adobe Advertising Cloudの拡張はAdobe Experience Platformの広告の場所です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Adobe Advertising Cloudの拡張はAdobe Experience Platformの広告の場所です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 34%
+source-wordcount: '465'
+ht-degree: 31%
 
 ---
 
 
 # Adobe Advertising Cloud 拡張機能 {#adobe-advertising-cloud-extension}
-
-## 概要 {#overview}
 
 これは、DSPと検索の両方に対して[!DNL Advertising Cloud]変換タグとセグメントタグを実装するための[!DNL Advertising Cloud]拡張です（DCOは現在サポートされていません）。
 
