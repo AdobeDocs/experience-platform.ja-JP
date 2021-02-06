@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；ブール関数；ブール関数；
 solution: Experience Platform
-title: ブール関数
+title: PQLブール関数
 topic: developer guide
-description: ブール関数 は、プロファイルクエリ言語(PQL)の異なる要素に対してブールロジックを実行するために使用します。
+description: ブール関数は、プロファイルクエリ言語（PQL）の異なる要素にブール論理を実行するために使用されます。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 78%
+source-wordcount: '254'
+ht-degree: 83%
 
 ---
 
