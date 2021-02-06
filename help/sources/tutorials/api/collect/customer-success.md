@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；顧客の成功を収集；顧客の成功
 solution: Experience Platform
-title: ソースコネクターとAPIを使用して顧客成功システムからデータを収集する
+title: ソースコネクタとAPIを使用した顧客成功システムからのデータ収集
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、顧客の成功システムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 14%
@@ -14,7 +14,7 @@ ht-degree: 14%
 ---
 
 
-# ソースコネクターとAPIを使用して顧客成功システムからデータを収集する
+# ソースコネクタとAPIを使用した顧客成功システムからのデータ収集
 
 このチュートリアルでは、サードパーティの顧客成功システムからデータを取得し、ソースコネクタと[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用して[!DNL Platform]に取り込む手順を説明します。
 
