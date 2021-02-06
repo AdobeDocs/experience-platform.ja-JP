@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント；セグメント；セグメントの作成；セグメント；セグメントの作成；セグメントの作成；Segmentation Service;
 solution: Experience Platform
-title: セグメントの作成
+title: Segmentation Service APIを使用したセグメントの作成
 topic: tutorial
 type: Tutorial
-description: このドキュメントでは、Adobe Experience PlatformセグメントサービスAPIを使用したセグメント定義の開発、テスト、プレビュー、保存に関するチュートリアルを提供します。
+description: このチュートリアルでは、Adobe Experience PlatformセグメントサービスAPIを使用したセグメント定義の開発、テスト、プレビュー、保存の方法を学びます。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 55%
+source-wordcount: '924'
+ht-degree: 54%
 
 ---
 
 
-# セグメントの作成
+# Segmentation Service APIを使用してセグメントを作成する
 
 このドキュメントでは、[[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md)を使用してセグメント定義を開発、テスト、プレビュー、および保存するためのチュートリアルを提供します。
 
