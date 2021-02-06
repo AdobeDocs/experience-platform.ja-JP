@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；文字列関数；文字列；
 solution: Experience Platform
-title: 文字列関数
+title: PQL文字列関数
 topic: developer guide
 description: プロファイルクエリ言語（PQL）には、文字列の操作が簡単になる関数が用意されています。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 95%
+source-wordcount: '784'
+ht-degree: 94%
 
 ---
 
