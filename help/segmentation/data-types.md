@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；データ型；データ型；データ型；データ型；データ型；Segmentationデータ型；Segmentation;Segmentation Service;Segmentationサービスのデータ型；
 solution: Experience Platform
-title: Adobe Experience Platformセグメントサービスのデータタイプ
+title: Segmentation Serviceでサポートされるデータタイプ
 topic: overview
-description: すべての XDM データ型がセグメント化サービス内でサポートされています。セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
+description: Experience Data Model(XDM)のすべてのデータ型は、AdobeSegmentation Service内でサポートされます。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 66%
+source-wordcount: '514'
+ht-degree: 63%
 
 ---
 
 
-# Adobe Experience Platform[!DNL Segmentation Service]がサポートするデータ型
+# Segmentation Serviceでサポートされるデータタイプ
 
-[!DNL Segmentation Service]内では、すべてのXDMデータ型がサポートされています。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
+Experience Data Model(XDM)のすべてのデータタイプは、Adobe Experience Platformセグメントサービス内でサポートされます。 セグメント定義を構成するルールは、次のデータタイプによってコンテキスト化されます。
 
 ## 文字列データ
 
