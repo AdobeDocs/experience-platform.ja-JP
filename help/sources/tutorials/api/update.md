@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；接続の更新
 solution: Experience Platform
-title: Flow Service APIを使用して接続情報を更新する
+title: Flow Service APIを使用した接続情報の更新
 topic: overview
 type: Tutorial
 description: 状況によっては、既存のソース接続の詳細を更新する必要がある場合があります。 Flow Service APIを使用すると、既存のバッチ接続またはストリーミング接続（名前、説明、秘密鍵証明書など）の詳細を追加、編集および削除できます。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '709'
 ht-degree: 14%
