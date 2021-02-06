@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；PostgreSQL;postgresql
 solution: Experience Platform
-title: PostgreSQLコネクタ
+title: PostgreSQLソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIやユーザインターフェースを使ってPostgreSQLをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザインターフェイスを使用してPostgreSQLをAdobe Experience Platformに接続する方法を学びます。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '242'
-ht-degree: 26%
+ht-degree: 22%
 
 ---
 
@@ -31,11 +31,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL PostgreSQL]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用したPostgreSQLコネクタの作成](../../tutorials/api/create/databases/postgres.md)
+- [Flow Service APIを使用したPostgreSQLソース接続の作成](../../tutorials/api/create/databases/postgres.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して[!DNL PostgreSQL]を[!DNL Platform]に接続
 
-- [UI での PostgreSQL ソースコネクタの作成](../../tutorials/ui/create/databases/postgres.md)
-- [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
+- [UIでのPostgreSQLソース接続の作成](../../tutorials/ui/create/databases/postgres.md)
+- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
