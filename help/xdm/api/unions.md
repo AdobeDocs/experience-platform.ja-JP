@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDM system；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；和集合;和集合；セグメントメンバーシップ；timeSeriesEvents;
 solution: Experience Platform
-title: 和集合
+title: 和集合APIエンドポイント
 description: スキーマレジストリAPIの/和集合エンドポイントを使用すると、エクスペリエンスアプリケーションのXDM和集合スキーマをプログラムで管理できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '912'
 ht-degree: 48%
 
 ---
