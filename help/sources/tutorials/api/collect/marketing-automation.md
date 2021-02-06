@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；マーケティング自動化システム；マーケティング自動化データの収集
 solution: Experience Platform
-title: ソースコネクターとAPIを使用してマーケティング自動化データを収集する
+title: ソースコネクタとAPIを使用したマーケティング自動化データの収集
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
+description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタとAPIを使用してそれらをAdobe Experience Platformに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1538'
 ht-degree: 20%
 
 ---
 
 
-# ソースコネクターとAPIを使用してマーケティング自動化データを収集する
+# ソースコネクターとAPIを使用したマーケティング自動化データの収集
 
 このチュートリアルでは、サードパーティのマーケティング自動化システムからデータを取得し、ソースコネクタと[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してプラットフォームに取り込む手順を説明します。
 
