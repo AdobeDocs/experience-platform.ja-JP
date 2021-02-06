@@ -1,22 +1,19 @@
 ---
 keywords: クラウドのストレージ先；クラウドのストレージ
-title: クラウドストレージの宛先ワークフロー
-seo-title: クラウドストレージの宛先ワークフロー
+title: クラウドストレージの保存先の作成
 type: Tutorial
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 52%
+source-wordcount: '534'
+ht-degree: 49%
 
 ---
 
 
-# クラウドストレージの宛先を作成するためのワークフロー
-
-## 概要
+# クラウドストレージの保存先の作成
 
 このページでは、Adobe Experience Platformのクラウドストレージの場所に接続する方法を説明します。
 
