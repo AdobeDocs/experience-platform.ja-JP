@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；Data Science Workspace;Data Science
 solution: Experience Platform
-title: Senesi 機械学習 API 開発者ガイド
+title: Senesi Machine Learning APIガイド
 topic: Developer guide
-description: この開発者ガイドは、Sensei 機械学習 API の使用を開始する際に役立つ手順を提供し、様々な Data Science Workspace リソースに対して CRUD 操作を実行するための API 呼び出しの例を示します。
+description: Senesie Machine Learning APIを使用すると、開発者は様々なData Science Workspaceリソースに対してCRUD操作を実行できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 64%
+source-wordcount: '243'
+ht-degree: 50%
 
 ---
 
 
-# [!DNL Sensei Machine Learning] API開発者ガイド
+# [!DNL Sensei Machine Learning] APIガイド
 
 [!DNL Sensei Machine Learning] APIは、データ科学者が機械学習サービスを、アルゴリズムのオンボーディングから実験まで、およびサービスの展開まで、編成および管理するメカニズムを提供します。
 
