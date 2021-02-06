@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログサービス；カタログ；カタログサービス；カタログサービス；カタログ
 solution: Experience Platform
-title: カタログサービス開発者ガイド
+title: カタログサービスAPIガイド
 topic: developer guide
-description: この開発者ガイドでは、カタログ API の使用を始める手順を説明します。次に、カタログを使用して主要な操作を実行するためのサンプル API 呼び出しを提供します。
+description: Catalog Service APIを使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 44%
+source-wordcount: '599'
+ht-degree: 39%
 
 ---
 
 
-# [!DNL Catalog Service] 開発ガイド
+# [!DNL Catalog Service] APIガイド
 
 [!DNL Catalog Service] は、Adobe Experience Platform内のデータの位置と系統に関する記録システムです。[!DNL Catalog] は、データ自体にアクセスすることなく、データに関する情報を検索できるメタデータストア（「カタログ」） [!DNL Experience Platform]として機能します。詳しくは、[[!DNL Catalog] 概要](../home.md)を参照してください。
 
