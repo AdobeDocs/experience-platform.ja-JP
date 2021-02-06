@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；eCommerceデータの収集；eCommerceデータ
 solution: Experience Platform
-title: ソースコネクタとAPIを使用してeコマースデータを収集する
+title: ソースコネクタとAPIを使用したeコマースデータの収集
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティのeCommerceシステムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 15%
