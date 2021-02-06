@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックスを検索；サンドボックスを検索
 solution: Experience Platform
-title: サンドボックスの検索
+title: APIでのサンドボックスの検索
 topic: developer guide
 description: 個々のサンドボックスを検索するには、要求パスにサンドボックスのnameプロパティを含むGET要求を作成します。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 86%
+source-wordcount: '243'
+ht-degree: 80%
 
 ---
 
 
-# サンドボックスの検索
+# APIでサンドボックスを検索する
 
 個々のサンドボックスを検索するには、リクエストパスにサンドボックスの `name` プロパティを含む GET リクエストを作成する必要があります。
 
