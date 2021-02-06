@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；SQL構文；SQL;CTAS;CTAS；選択としてテーブルを作成
 solution: Experience Platform
-title: SQL 構文
+title: クエリサービスのSQL構文
 topic: syntax
-description: このドキュメントは、クエリサービスでサポートされる SQL 構文を示します。
+description: このドキュメントは、Adobe Experience PlatformクエリサービスでサポートされるSQL構文を示しています。
 translation-type: tm+mt
-source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2212'
-ht-degree: 83%
+source-wordcount: '2221'
+ht-degree: 82%
 
 ---
 
 
-# SQL 構文
+# クエリサービスのSQL構文
 
 [!DNL Query Service] は、標準のANSI SQLを文や他の制限付きコマンドに使用する機能を `SELECT` 提供します。このドキュメントは、[!DNL Query Service]がサポートするSQL構文を示しています。
 
