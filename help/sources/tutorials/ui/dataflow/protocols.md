@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；プロトコルコネクタ
 solution: Experience Platform
-title: UIでのプロトコルコネクタのデータフローの設定
+title: UIでのプロトコル・ソース接続のデータ・フローの構成
 topic: overview
 type: Tutorial
 description: データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みタスクです。 このチュートリアルでは、プロトコルアカウントを使用して新しいデータフローを構成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1463'
 ht-degree: 3%
 
 ---
 
 
-# UIでのプロトコルコネクタのデータフローの設定
+# UIでのプロトコル接続用のデータフローの構成
 
 データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みタスクです。 このチュートリアルでは、プロトコルアカウントを使用して新しいデータフローを構成する手順を説明します。
 
