@@ -1,13 +1,13 @@
 ---
 keywords: OCR；テキストの存在；光学式文字認識
 solution: Experience Platform, Intelligent Services
-title: 光学式文字認識
+title: テキストの存在と光学式文字認識
 topic: Developer guide
-description: テキストの存在/光学式文字認識(OCR)サービスは、画像を指定した場合、画像内にテキストが存在するかどうかを示すことができます。 テキストが存在する場合、OCRはテキストを返すことができます
+description: Content and Commerce AI APIでは、Text Presence / Optical Character Recognition(OCR)サービスは、特定の画像にテキストが存在するかどうかを示すことができます。 テキストが存在する場合、OCRはテキストを返すことができます。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '525'
 ht-degree: 4%
 
 ---
