@@ -1,17 +1,17 @@
 ---
 keywords: アイデンティティrtcdp;rtcdpアイデンティティ；リアルタイムcdpアイデンティティ
-title: リアルタイム CDP での ID
+title: リアルタイム顧客データプラットフォームのID
 description: Adobe Experience Platform ID サービスは、デバイスとシステム間で ID を結合することで、顧客とその行動をより良く把握できるようにします。
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 63%
+source-wordcount: '435'
+ht-degree: 60%
 
 ---
 
 
-# リアルタイム CDP での ID
+# リアルタイム顧客データプラットフォームのID
 
 Adobe Experience Platform[!DNL Identity Service]は、デバイスとシステム間でIDを相互に結び付けることで、顧客とその行動をより良く表示できるように支援します。 通常、顧客は複数のチャネルを通じてブランドとやり取りします。これには、Web サイトのオンライン閲覧、店頭での購入、ロイヤリティープログラムへの参加、サポートのためのヘルプデスクへの電話、他多数が含まれます。これらの複数のシステムでは、その顧客用にIDが作成され、[!DNL Identity Service]がそれらのIDをまとめて全体像を見ることができます。
 
