@@ -5,7 +5,7 @@ title: ETL 変換の例
 topic: overview
 description: この記事では、抽出、変換、読み込み（ETL）の開発者が経験する可能性がある変換の例を示します。
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 88%
