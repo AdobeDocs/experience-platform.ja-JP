@@ -1,21 +1,17 @@
 ---
 keywords: facebook拡張子；facebook拡張子；facebook宛先；facebook;instagram;messenger;facebook messenger
-title: Facebook の宛先
-seo-title: Facebook の宛先
+title: Facebookの拡張先
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
-seo-description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 25%
+source-wordcount: '952'
+ht-degree: 23%
 
 ---
 
 
-# [!DNL Facebook] 宛先
-
-## 概要 {#overview}
+# [!DNL Facebook] 拡張機能
 
 >[!IMPORTANT]
 >
