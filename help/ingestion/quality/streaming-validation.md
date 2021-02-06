@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データを Adobe Experience Platform にアップロードできます。ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 82%
