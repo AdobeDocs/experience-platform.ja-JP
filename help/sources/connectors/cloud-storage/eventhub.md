@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Azureイベントハブ；Azureイベントハブ；イベントハブ；イベントハブ
 solution: Experience Platform
-title: Azureイベントハブコネクタ
+title: Azureイベントハブソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzureイベントハブをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用してAzureイベントハブをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -33,10 +33,10 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ### APIの使用
 
-- [Flow Service APIを使用してAzureイベントハブコネクタを作成する](../../tutorials/api/create/cloud-storage/eventhub.md)
+- [Flow Service APIを使用してAzureイベントハブのソース接続を作成する](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Flow Service APIを使用してストリーミングデータを収集する](../../tutorials/api/collect/streaming.md)
 
 ### UI の使用
 
-- [UIにAzureイベントハブのソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [UIにAzureイベントハブのソース接続を作成する](../../tutorials/ui/create/cloud-storage/eventhub.md)
+- [UIでのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
