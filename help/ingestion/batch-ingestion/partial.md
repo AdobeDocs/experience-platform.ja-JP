@@ -5,7 +5,7 @@ title: 部分的なバッチ取り込みの概要
 topic: overview
 description: このドキュメントでは、部分バッチ取得を管理するためのチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 35%
