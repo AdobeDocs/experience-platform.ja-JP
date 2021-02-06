@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ；個人の詳細；スキーマデザイン；ミックスイン；Mixin;
 solution: Experience Platform
-title: 個人の連絡先の詳細ミックスイン
+title: 個人の連絡先の詳細Mixin
 topic: overview
 description: このドキュメントでは、個人の連絡先の詳細ミックスインの概要を説明します。
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 9%
