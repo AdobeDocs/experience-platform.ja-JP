@@ -1,22 +1,18 @@
 ---
 keywords: Facebook;Facebook；ソーシャルネットワーク；ソーシャルネットワーク；ソーシャルネットワーク認証；ソーシャルネットワーク認証
-title: ソーシャルネットワークの宛先のワークフロー
+title: ソーシャルネットワークの宛先の作成
 type: Tutorial
-seo-title: ソーシャルネットワークの宛先のワークフロー
-description: ソーシャルネットワーク広告アカウントに接続する手順
-seo-description: ソーシャルネットワーク広告アカウントに接続する手順
+description: Adobe Experience Platformのソーシャルネットワーク広告アカウントに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: d1aa2c825cd679d593cf97d84506058482a7fe8f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 56%
+source-wordcount: '460'
+ht-degree: 52%
 
 ---
 
 
-# ソーシャルネットワーク宛先の認証ワークフロー{#social-network-destinations-workflow}
-
-## ソーシャルネットワークの宛先を作成するためのワークフロー
+# ソーシャルネットワークの宛先を作成{#social-network-destinations-workflow}
 
 このチュートリアルでは例として[!DNL Facebook]を使用しますが、Adobe Experience Platformのワークフローはすべてのソーシャルネットワークの宛先に対して同じになり、もう一度製品に追加されます。
 
