@@ -6,7 +6,7 @@ description: 特定の状況において、1 つのデータセットでのみ�
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 76%
