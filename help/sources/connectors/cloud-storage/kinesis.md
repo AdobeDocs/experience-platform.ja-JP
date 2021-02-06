@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；AmazonKinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
-title: AmazonKinesisコネクタ
+title: AmazonKinesisソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用して、AmazonKinesisをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用して、AmazonKinesisをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 1%
@@ -33,10 +33,10 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ### APIの使用
 
-- [Flow Service APIを使用してAmazonKinesisコネクタを作成する](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Flow Service APIを使用してAmazonKinesisのソース接続を作成する](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Flow Service APIを使用してストリーミングデータを収集する](../../tutorials/api/collect/streaming.md)
 
 ### UI の使用
 
-- [UIでAmazonKinesisソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [UIでのAmazonKinesisソース接続の作成](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [UIでのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
