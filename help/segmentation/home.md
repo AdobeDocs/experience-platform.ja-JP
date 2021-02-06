@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメントサービス；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント
 solution: Experience Platform
-title: Adobe Experience Platform セグメント化サービス
+title: Segmentation Serviceの概要
 topic: overview
-description: このドキュメントでは、セグメント化サービスの概要と Adobe Experience Platform での役割について説明します。
+description: Adobe Experience Platformセグメントサービスと、それがプラットフォームエコシステムで果たす役割について説明します。
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '1400'
-ht-degree: 67%
+source-wordcount: '1394'
+ht-degree: 66%
 
 ---
 
 
-# Adobe Experience Platform[!DNL Segmentation Service]の概要
+# [!DNL Segmentation Service]概要
 
 Adobe Experience Platform[!DNL Segmentation Service]は、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスとRESTful APIを提供します。 これらのセグメントは[!DNL Platform]上で一元的に構成および管理され、どのAdobeソリューションでも容易にアクセスできます。
 
