@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure synapse分析；azure synapse分析；シナプス；シナプス
 solution: Experience Platform
-title: azure synapse解析コネクタ
+title: azure synapse解析ソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用して、Azure synapse分析をプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用して、Azure synapse分析をAdobe Experience Platformに接続する方法について説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 11%
@@ -27,11 +27,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL Azure Synapse Analytics]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用して、Azure synapse分析コネクタを作成する](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Flow Service APIを使用して、Azure synapse分析ソース接続を作成する](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して[!DNL Azure Synapse Analytics]を[!DNL Platform]に接続
 
-- [UIでのAzure synapse分析ソースコネクタの作成](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
+- [UIでのAzure synapse分析ソース接続の作成](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
