@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；サンプルデータ；rpc;
 solution: Experience Platform
-title: サンプルデータエンドポイントガイド
+title: サンプルデータAPIエンドポイント
 description: スキーマレジストリAPIの/sampledataエンドポイントを使用すると、既存のXDMスキーマの構造にマッピングされたサンプルデータを生成できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 2%
@@ -37,7 +37,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | サンプルデータを生成するスキーマの`meta:altId`またはURLエンコードされた`$id`。 |
+| `{SCHEMA_ID}` | サンプルデータを生成するスキーマの`meta:altId`またはURLエンコードされた`$id`です。 |
 
 **リクエスト**
 
