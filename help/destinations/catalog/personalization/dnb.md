@@ -1,21 +1,17 @@
 ---
 keywords: D&B訪問者インテリジェンス；D&Amp;B;訪問者インテリジェンス拡張
-title: D&B 訪問者インテリジェンス拡張機能
-seo-title: D&B 訪問者インテリジェンス拡張機能
+title: D&B訪問者インテリジェンス拡張先
 description: D&B訪問者インテリジェンス拡張機能は、Adobe Experience Platformのパーソナライズ対象です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: D&B訪問者インテリジェンス拡張機能は、Adobe Experience Platformのパーソナライズ対象です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 27%
+source-wordcount: '501'
+ht-degree: 24%
 
 ---
 
 
 # [!DNL D&B Visitor Intelligence] 拡張機能 {#dnb-extension}
-
-## 概要 {#overview}
 
 未知の訪問者を分析し、リードに変換します。
 
