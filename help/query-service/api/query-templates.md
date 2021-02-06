@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリテンプレート；apiガイド；テンプレート；クエリサービス；
 solution: Experience Platform
-title: クエリサービス開発者ガイド
+title: クエリテンプレートAPIエンドポイント
 topic: query templates
 description: 以下のドキュメントでは、クエリサービスAPIのクエリテンプレートを使用して実行できる様々なAPI呼び出しについて詳しく説明します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 90%
+source-wordcount: '674'
+ht-degree: 89%
 
 ---
 
 
-# クエリテンプレート
+# クエリテンプレートエンドポイント
 
-## API 呼び出しの例
+## サンプル API 呼び出し
 
 これで、使用するヘッダーがわかったので、[!DNL Query Service] APIを呼び出す準備が整いました。 以下の節では、[!DNL Query Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
