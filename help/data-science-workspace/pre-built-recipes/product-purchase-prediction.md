@@ -1,21 +1,19 @@
 ---
 keywords: Experience Platform；製品の購入レシピ；データサイエンスワークスペース；人気の高いトピック；レシピ；プレビルドレシピ
 solution: Experience Platform
-title: 製品購入レシピ
+title: 製品購入予測レシピ
 topic: overview
 description: 製品購入予測レシピを使用すると、特定のタイプの顧客購入イベント（製品購入など）の確率を予測できます。
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 96%
+source-wordcount: '397'
+ht-degree: 94%
 
 ---
 
 
-# 製品購入レシピ
-
-## 概要
+# 製品購入予測レシピ
 
 製品購入予測レシピを使用すると、特定のタイプの顧客購入イベント（製品購入など）の確率を予測できます。
 
