@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；支払い
 solution: Experience Platform
-title: Flow Service APIを使用して支払システムを調査します。
+title: フローサービスAPIを使用した支払いシステムの調査
 topic: overview
 description: このチュートリアルでは、Flow Service APIを使用して支払い申請を調べます。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 20%
