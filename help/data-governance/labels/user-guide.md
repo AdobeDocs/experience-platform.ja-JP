@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；データガバナンス；データ使用ラベル；ポリシーサービス；データ使用ラベルユーザーガイド
 solution: Experience Platform
-title: データ使用状況ラベルのユーザーガイド
+title: UIでのデータ使用量ラベルの管理
 topic: labels
-description: このユーザガイドでは、Adobe Experience Platformユーザインターフェイス内でデータ使用ラベルを使用する手順を説明します。
+description: このガイドでは、Adobe Experience Platformユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 63%
+source-wordcount: '1134'
+ht-degree: 60%
 
 ---
 
 
-# データ使用状況ラベルのユーザーガイド
+# UIでのデータ使用量ラベルの管理
 
 このユーザーガイドでは、[!DNL Experience Platform]ユーザーインターフェイス内でデータ使用ラベルを使用する手順を説明します。 このガイドを使用する前に、[[!DNL Data Governance] 概要](../home.md)を参照して、[!DNL Data Governance]フレームワークのより強力な紹介を確認してください。
 
-## データセットレベルでのデータ使用状況ラベルの管理
+## データセットレベルでのラベルの管理
 
 データセットレベルでデータ使用状況ラベルを管理するには、既存のデータセットを選択するか、新しいデータセットを作成する必要があります。Adobe Experience Platform にログインした後、左側のナビゲーションで「**[!UICONTROL データセット]**」を選択し、「**[!UICONTROL データセット]**」ワークスペースを開きます。このページには、組織に属するすべての作成済みデータセットと、各データセットに関する有用な詳細情報がリストされます。
 
@@ -75,7 +75,7 @@ ht-degree: 63%
 
 ![継承されたラベルを非表示にする](../images/labels/hide_inherited_labels.png)
 
-## データセットフィールドレベルでのデータ使用状況ラベルの管理
+## フィールドレベルでのラベルの管理
 
 [データセットレベルでのデータ使用状況ラベルの追加と編集](#add-labels)のワークフローを継続して、そのデータセットの「**[!UICONTROL データガバナンス]**」ワークフロー内のフィールドレベルのラベルを管理することもできます。
 
