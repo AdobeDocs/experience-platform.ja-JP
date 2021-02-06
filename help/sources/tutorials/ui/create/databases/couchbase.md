@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Couchbase;couchbase
 solution: Experience Platform
-title: UIでCouchbaseソースコネクタを作成する
+title: UIでのCouchbaseソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してCouchbaseソースコネクタを作成する手順を説明します。
+description: Adobe Experience PlatformUIを使用してCouchbaseソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '467'
 ht-degree: 6%
 
 ---
 
 
-# UIに[!DNL Couchbase]ソースコネクタを作成する
+# UIに[!DNL Couchbase]ソース接続を作成する
 
 >[!NOTE]
 >
