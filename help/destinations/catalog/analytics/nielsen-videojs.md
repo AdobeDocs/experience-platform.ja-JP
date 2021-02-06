@@ -1,21 +1,17 @@
 ---
 keywords: Nielsen VideoJS Player Handler;nielsen videojs player;nielsen videojs player;Nielsen;nielsen;Nielsen videojs;Nielsen Digital SDK;nielsen digital SDK
-title: Nielsen VideoJS Player Handler 拡張機能
-seo-title: Nielsen VideoJS Player Handler 拡張機能
+title: Nielsen VideoJSプレイヤーハンドラー拡張の宛先
 description: ニールセンビデオJSプレイヤーハンドラー拡張機能は、Adobe Experience Platformの分析の対象です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: ニールセンビデオJSプレイヤーハンドラー拡張機能は、Adobe Experience Platformの分析の対象です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 36%
+source-wordcount: '614'
+ht-degree: 33%
 
 ---
 
 
-# [!DNL Nielsen VideoJS Player Handler] 拡張子 {#nielsen-vjs-extension}
-
-## 概要 {#overview}
+# [!DNL Nielsen VideoJS Player Handler] 拡張機能 {#nielsen-vjs-extension}
 
 [!DNL Nielsen Digital SDK] 以下のデジタル測定製品を使用して、拡張機能オファーのオーディエンス測定を開始します。
 
