@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；FTP;ftp;
 solution: Experience Platform
-title: FTPコネクタ
+title: FTPソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してFTPサーバーをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用してFTPサーバーをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 2%
@@ -48,11 +48,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ### APIの使用
 
-- [Flow Service APIを使用してFTPコネクタを作成する](../../tutorials/api/create/cloud-storage/ftp.md)
+- [Flow Service APIを使用したFTPソース接続の作成](../../tutorials/api/create/cloud-storage/ftp.md)
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
-- [UIでのFTPソースコネクタの作成](../../tutorials/ui/create/cloud-storage/ftp.md)
-- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UIでのFTPソース接続の作成](../../tutorials/ui/create/cloud-storage/ftp.md)
+- [UIでのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
