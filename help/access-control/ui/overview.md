@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；アクセス制御;Adobe管理コンソール
 solution: Experience Platform
-title: アクセス制御ユーザーガイド
+title: アクセス制御UIの概要
 topic: user guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントでは、Admin Console を操作して Platform のアクセス制御を管理する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '194'
-ht-degree: 50%
+ht-degree: 45%
 
 ---
 
 
-# アクセス制御ユーザーガイド
+# アクセス制御UIの概要
 
 Adobe Experience Platformのアクセス制御では、[Adobe Admin Console](https://adminconsole.adobe.com)を使用して、様々な[!DNL Platform]機能の役割と権限を管理できます。 このドキュメントは、[!DNL Admin Console]を使って[!DNL Platform]のアクセス制御を管理する方法を示すガイドの役割を果たします。 [!DNL Experience Platform]のアクセス制御の概要については、[アクセス制御の概要](./../home.md)を参照してください。
 
