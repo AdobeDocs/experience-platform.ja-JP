@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；監視データフロー；フローサービスapi；フローサービス
 solution: Experience Platform
-title: フローと実行の監視
+title: Flow Service APIを使用したデータフローの監視
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、完全性、エラーおよび指標に関するフロー実行データを監視する手順を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '722'
 ht-degree: 15%
 
 ---
