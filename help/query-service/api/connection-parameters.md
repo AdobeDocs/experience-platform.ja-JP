@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；apiガイド；接続パラメータ；クエリサービス；
 solution: Experience Platform
-title: クエリサービス開発者ガイド
+title: 接続パラメーターAPIエンドポイント
 topic: connection parameters
 description: /connection_parametersエンドポイントにGET要求を行うことで、インタラクティブサービスを使用するための接続パラメーターを取得できます。
 translation-type: tm+mt
-source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 42%
+source-wordcount: '148'
+ht-degree: 38%
 
 ---
 
 
-# 接続パラメーター
+# 接続パラメーターエンドポイント
 
 ## サンプル API 呼び出し
 
