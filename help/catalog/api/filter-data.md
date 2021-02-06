@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；フィルタ；フィルタ；フィルタデータ；フィルタデータ；フィルタデータ；日付範囲
 solution: Experience Platform
-title: クエリパラメータ－を使用したカタログデータのフィルター
+title: クエリパラメーターを使用したカタログデータのフィルター
 topic: developer guide
 description: カタログサービス API を使用すると、応答データをリクエストパラメーターを使用してフィルタリングするクエリができます。カタログについてのベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを改善するのに役立ちます。
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '2090'
 ht-degree: 86%
