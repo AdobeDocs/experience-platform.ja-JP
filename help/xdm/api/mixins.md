@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；API;XDM;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；ミックスインレジストリ；スキーマレジストリ；ミックスイン；ミックスイン；作成
 solution: Experience Platform
-title: Mixin の作成
+title: Mixins APIエンドポイント
 description: スキーマレジストリAPIの/mixinsエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDMミックスインをプログラムで管理できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1134'
-ht-degree: 12%
+ht-degree: 11%
 
 ---
 
