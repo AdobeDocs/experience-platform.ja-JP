@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データフローの削除
 description: ソース・ワークスペースでは、エラーを含む、または古くなった既存のバッチおよびストリーミング・データ・フローを削除できます。
 solution: Experience Platform
-title: データフローの削除
+title: UI内のデータフローの削除
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 6%
+source-wordcount: '368'
+ht-degree: 5%
 
 ---
 
