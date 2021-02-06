@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；データ取り込み；バッチ；バッチ；有効なデータセット；バッチ取り込みの概要；概要；バッチ取り込みの概要；
 solution: Experience Platform
-title: バッチインジェストの概要
+title: バッチ取り込みの概要
 topic: overview
-description: Batch Ingestion API を使用すると、データをバッチファイルとして Adobe Experience Platform に取り込むことができます。取り込まれるデータは、CRMシステムのフラットファイル（Parketファイルなど）のプロファイルデータ、またはエクスペリエンスデータモデル(XDM)レジストリの既知のスキーマに準拠するデータです。
+description: Adobe Experience Platformデータ取り込みAPIを使用すると、データをバッチファイルとしてプラットフォームに取り込むことができます。 取り込まれるデータは、CRMシステムのフラットファイル（Parketファイルなど）のプロファイルデータ、またはエクスペリエンスデータモデル(XDM)レジストリの既知のスキーマに準拠するデータです。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 74%
+source-wordcount: '1222'
+ht-degree: 72%
 
 ---
 
 
-# [!DNL Batch Ingestion]概要
+# バッチ取り込みの概要
 
-[!DNL Batch Ingestion] APIを使うと、データをバッチファイルとしてAdobe Experience Platformに取り込むことができます。 取り込まれるデータは、CRMシステムのフラットファイル（Parketファイルなど）のプロファイルデータ、または[!DNL Experience Data Model] (XDM)レジストリの既知のスキーマに準拠するデータです。
+Adobe Experience Platformデータ取り込みAPIを使用すると、データをバッチファイルとしてプラットフォームに取り込むことができます。 取り込まれるデータは、CRMシステムのフラットファイル（Parketファイルなど）のプロファイルデータ、または[!DNL Experience Data Model] (XDM)レジストリの既知のスキーマに準拠するデータです。
 
 [データ取得 API のリファレンスは](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)では、これらの API 呼び出しに関する追加情報が提供されています。
 
