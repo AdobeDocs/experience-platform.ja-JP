@@ -2,13 +2,12 @@
 keywords: 宛先；宛先；宛先タイプ
 title: 宛先のタイプとカテゴリ
 seo-title: 宛先のタイプとカテゴリ
-description: 'Adobe Experience Platformでは、プロファイル/セグメントエクスポート先は、イベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先に適用します。 Experience Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 '
-seo-description: Adobe Experience Platformでは、プロファイル/セグメントエクスポート先は、イベントデータを取得し、他のデータソースと組み合わせて、セグメント化を適用し、セグメント化を適用し、条件を満たすプロファイルを宛先に適用します。 Experience Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。
+description: Adobe Experience Platformの様々な目的地のタイプやカテゴリについて学びます。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 62%
+source-wordcount: '514'
+ht-degree: 70%
 
 ---
 
