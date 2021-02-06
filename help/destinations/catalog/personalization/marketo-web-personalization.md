@@ -1,21 +1,17 @@
 ---
 keywords: Marketto Webパーソナライゼーション；Marketto Webパーソナライゼーション；Marketto Webパーソナライゼーション拡張；Marketto Webパーソナライゼーション拡張；Marketo;Marketo
-title: Marketo Web パーソナライゼーション拡張機能
-seo-title: Marketo Web パーソナライゼーション拡張機能
+title: Marketor Webパーソナライゼーション拡張子の宛先
 description: Marketto Webパーソナライゼーション拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Marketto Webパーソナライゼーション拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 33%
+source-wordcount: '580'
+ht-degree: 31%
 
 ---
 
 
-# [!DNL Marketo Web Personalization] 拡張子 {#marketo-web-personalization-extension}
-
-## 概要 {#overview}
+# [!DNL Marketo Web Personalization] 拡張機能 {#marketo-web-personalization-extension}
 
 この拡張機能は、[!DNL Marketo’s] WebパーソナライゼーションおよびContentAIアプリケーションのスクリプトをデプロイします。 [!DNL Marketo] Web パーソナライゼーションは、匿名訪問者用の企業特性や、既知の訪問者用の Engagement Platform 内の幅広い行動属性など、Web 訪問者の特性を一意に識別子、コンテンツをパーソナライズします。[!DNL Marketo][!DNL Marketo] ContentAI には、B2B のお客様に固有の Web キャンペーンや電子メールキャンペーンで、AI を活用したレコメンデーションやパーソナライズをおこなう機能が備わっています。
 
