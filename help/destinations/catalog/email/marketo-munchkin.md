@@ -1,21 +1,17 @@
 ---
 keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin extension;marketo munchkin extension;marketo;Marketo;Marketo
-title: Marketo Munchkin 拡張機能
-seo-title: Marketo Munchkin 拡張機能
+title: Marketo Munchkin Extension Destination
 description: Marketo Munchkin拡張機能は、Adobe Experience Platformのパーソナライズの目的地です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Marketo Munchkin拡張機能は、Adobe Experience Platformのパーソナライズの目的地です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 28%
+source-wordcount: '552'
+ht-degree: 26%
 
 ---
 
 
-# [!DNL Marketo Munchkin] 拡張子 {#marketo-munchkin-extension}
-
-## 概要 {#overview}
+# [!DNL Marketo Munchkin] 拡張機能 {#marketo-munchkin-extension}
 
 リード管理からアカウントベースのマーケティングに至るまで、[!DNL Marketo Engagement Platform]は、顧客や見込み客との関与の計画、調整、測定を、各自の経験の段階でシンプル化します。
 
