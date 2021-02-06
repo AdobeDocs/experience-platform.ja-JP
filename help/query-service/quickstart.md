@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ
 solution: Experience Platform
-title: Adobe Experience Platform クエリサービスクイックスタートガイド
+title: Adobe Experience Platformクエリサービスクイックスタートガイド
 topic: quickstart
-description: クイックスタートガイド adobe experience platformクエリサービスの
+description: Adobe Experience Platformクエリサービスクイックスタートガイド。
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 41%
+ht-degree: 34%
 
 ---
 
