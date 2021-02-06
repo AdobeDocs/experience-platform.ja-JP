@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce;salesforce
 solution: Experience Platform
-title: フローサービスAPIを使用したSalesforceコネクタの作成
+title: フローサービスAPIを使用したSalesforceソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、フローサービスAPIを使用して、CRMデータを収集するためのSalesforceアカウントにプラットフォームを接続する手順を説明します。
+description: Flow Service APIを使用して、Adobe Experience PlatformをSalesforceアカウントに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 19%
+source-wordcount: '565'
+ht-degree: 20%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL Salesforce]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Salesforce]ソース接続を作成する
 
 フローサービスは、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元管理するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、[!DNL Platform]を[!DNL Salesforce]アカウントに接続し、CRMデータを収集する手順を順を追って説明します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、Flow Service APIを使用して[!DNL Platform]を[!DNL Salesforce]アカウントに接続する手順を順を追って説明します。
 
 ## はじめに
 
