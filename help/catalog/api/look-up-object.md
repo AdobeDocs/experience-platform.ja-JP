@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；オブジェクト参照；api
 solution: Experience Platform
-title: オブジェクトの検索
+title: カタログオブジェクトの検索
 topic: developer guide
 description: '特定のカタログオブジェクトの一意の識別子がわかっている場合は、GET リクエストを実行してそのオブジェクトの詳細を表示できます。 '
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 77%
+source-wordcount: '165'
+ht-degree: 71%
 
 ---
 
 
-# オブジェクトの検索
+# カタログオブジェクトの検索
 
 特定の[!DNL Catalog]オブジェクトの固有な識別子がわかっている場合は、そのオブジェクトの詳細を表示するためにGETリクエストを実行できます。
 
