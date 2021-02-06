@@ -1,21 +1,17 @@
 ---
 keywords: TMMData;tmm data;tmdata;TMM data
-title: TMMData 拡張機能
-seo-title: TMMData 拡張機能
+title: TMMData拡張の宛先
 description: TMMData拡張は、Adobe Experience Platformの分析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: TMMData拡張は、Adobe Experience Platformの分析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 24%
+source-wordcount: '544'
+ht-degree: 22%
 
 ---
 
 
-# [!DNL TMMData] 拡張子 {#tmmdata-extension}
-
-## 概要 {#overview}
+# [!DNL TMMData] 拡張機能 {#tmmdata-extension}
 
 [!DNL TMMData's] Adobe Marketing Cloudの基盤プラットフォームは、社内/外部データ、オンライン/オフラインデータなど、重要なデータソースにアクセスし、ブレンドするツールをマーケティングチームに提供し、チャネル間の包括的な分析を自動化し、Adobeや他の分析やBIツールに直接インポートします。
 
