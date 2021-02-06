@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；データアクセスapi;クエリデータアクセス
 solution: Experience Platform
-title: データアクセスの概要
+title: Data Access APIを使用した表示データセットデータ
 topic: tutorial
 type: Tutorial
-description: このドキュメントでは、Adobe Experience Platform のデータアクセス API を使用して、データセット内に保存されたデータを検索、アクセス、ダウンロードする手順を説明するチュートリアルを紹介します。また、ページングや部分的なダウンロードなど、データアクセス API の固有の機能の一部も紹介します。
+description: Adobe Experience PlatformのData Access APIを使用して、データセット内に保存されているデータの検索、アクセス、ダウンロードの方法を説明します。 また、ページングや部分的なダウンロードなど、データアクセス API の固有の機能の一部も紹介します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1400'
-ht-degree: 72%
+source-wordcount: '1398'
+ht-degree: 69%
 
 ---
 
 
-# [!DNL Data Access] APIを使用したクエリデータセットデータ
+# [!DNL Data Access] APIを使用した表示データセットデータ
 
 このドキュメントでは、Adobe Experience Platformの[!DNL Data Access] APIを使用して、データセット内に保存されたデータの検索、アクセス、ダウンロードの方法を説明するチュートリアルを順を追って説明します。 また、ページングや部分的なダウンロードなど、[!DNL Data Access] APIの独自の機能の一部にも導入されます。
 
