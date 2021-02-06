@@ -5,10 +5,10 @@ title: データセットの概要
 topic: datasets
 description: このドキュメントでは、Experience Platform のデータセットのおおまかな概要を説明します。
 translation-type: tm+mt
-source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '706'
-ht-degree: 40%
+ht-degree: 39%
 
 ---
 
