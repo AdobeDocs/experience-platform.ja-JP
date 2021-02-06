@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；データセット；データセット；データセットの作成；データセットの作成
 solution: Experience Platform
-title: API を使用したデータセットの作成
+title: APIを使用したデータセットの作成
 topic: datasets
 description: このドキュメントでは、Adobe Experience Platform API を使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '1268'
 ht-degree: 79%
