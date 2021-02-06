@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；api；オブジェクトの置き換え
 solution: Experience Platform
-title: オブジェクトの置換
+title: カタログオブジェクトの置換
 topic: developer guide
 description: PUT リクエストを使用して、カタログオブジェクトのコンテンツを上書きできます。この場合、リソース全体がリクエストペイロードで置き換えられます。
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 64%
+source-wordcount: '173'
+ht-degree: 60%
 
 ---
 
 
-# オブジェクトの置換
+# カタログオブジェクトの置換
 
 PUTリクエストを使用して[!DNL Catalog]オブジェクトの内容を上書きできます。このリソース全体がリクエストペイロードに置き換えられます。
 
