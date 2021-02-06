@@ -1,19 +1,17 @@
 ---
 keywords: 起動拡張；起動拡張；起動先；プラットフォーム起動拡張；プラットフォーム起動拡張；プラットフォーム起動先
-title: Experience Platform Launch の拡張機能
-seo-title: Experience Platform Launch の拡張機能
-description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
-seo-description: ' Launch は、アドビが提供する次世代タグ管理機能です。 Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。'
+title: Adobe Experience Platform Launchの延長先
+description: Adobe Experience Platform Launchは、Adobeが提供する次世代のタグ管理機能です。  Platform Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 52%
+source-wordcount: '617'
+ht-degree: 46%
 
 ---
 
 
-# Adobe Experience Platform Launch の拡張機能 {#overview.md}
+# Adobe Experience Platform Launch の拡張機能
 
 Adobe Experience Platform Launchは、Adobeが提供する次世代のタグ管理機能です。  Platform Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。 Platform Launch は、Adobe Experience Cloud に付属の付加価値機能として提供されています。
 
