@@ -1,21 +1,17 @@
 ---
 keywords: Google広告；Google広告；Google広告；Google広告；Google広告；Google広告
-title: Google 広告の宛先
-seo-title: Google 広告の宛先
+title: Google Ads Connectionの宛先
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
-seo-description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '691'
-ht-degree: 23%
+source-wordcount: '660'
+ht-degree: 19%
 
 ---
 
 
-# [!DNL Google Ads] 宛先
-
-## 概要
+# [!DNL Google Ads] connection
 
 [!DNL Google Ads](旧称 [!DNL Google AdWords])は、企業がテキストベースの検索、グラフィックディスプレイ、 [!DNL YouTube] ビデオ、アプリ内モバイルディスプレイにわたってペイパークリック広告を行えるようにするオンライン広告サービスです。
 
