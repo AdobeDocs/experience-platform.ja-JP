@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；インジェストされたデータ；トラブルシューティング；faq；インジェスト；バッチインジェスト；バッチインジェスト；
 solution: Experience Platform
-title: Batch Ingestのトラブルシューティングガイド
+title: Batch Ingest Troubleshooting Guide
 topic: troubleshooting
 description: 'このドキュメントは、Adobe Experience Platform バッチデータ取得 API に関するよくある質問に答えるのに役立ちます。 '
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 87%
