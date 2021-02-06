@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；クラウドストレージデータ；ストリーミングデータ；ストリーミング
 solution: Experience Platform
-title: ソースコネクタとAPIを使用してストリーミングデータを収集する
+title: ソースコネクタとAPIを使用したストリーミングデータの収集
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してプラットフォームにストリーミングデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 17%
@@ -14,7 +14,7 @@ ht-degree: 17%
 ---
 
 
-# ソースコネクタとAPIを使用してストリーミングデータを収集する
+# ソースコネクタとAPIを使用したストリーミングデータの収集
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
