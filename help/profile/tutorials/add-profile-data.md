@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API;プロファイルを有効にする；プロファイルを有効にする
-title: リアルタイム顧客プロファイルへのデータの追加
+title: リアルタ追加イム顧客プロファイルに対するデータ
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、リアルタイム顧客プロファイルにデータを追加するために必要な手順について説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '380'
-ht-degree: 51%
+ht-degree: 50%
 
 ---
 
