@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；uiガイド；
 solution: Experience Platform
-title: XDM スキーマへの CSV ファイルのマッピング
+title: CSVファイルのXDMスキーマへのマップ
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformのユーザーインターフェイスを使用してCSVファイルをXDMスキーマにマップする方法について説明します。
 translation-type: tm+mt
-source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 13%
