@@ -1,21 +1,17 @@
 ---
 keywords: InMoment;inment;Inmoment；起動統合
-title: InMoment 拡張機能
-seo-title: InMoment 拡張機能
+title: インモーメントの延長先
 description: InMoment拡張は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: InMoment拡張は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 29%
+source-wordcount: '538'
+ht-degree: 27%
 
 ---
 
 
 # [!DNL InMoment] 拡張機能 {#inmoment-extension}
-
-## 概要 {#overview}
 
 [!DNL InMoment] Launch Integrationを使用すると、Digital Intercept製品を介したオンラインフィードバックをすばやく簡単に有効にできます。 このアプリでは、CXI Cloud Admin を介してインターセプトの設定と管理を行い、CX マネージャーがプログラムをより詳細に制御できるようにします。
 
