@@ -1,25 +1,21 @@
 ---
 keywords: 飛行船属性；飛行船の宛先
-title: 航空船属性の宛先
-seo-title: 航空船属性の宛先
+title: 航空船属性接続先
 description: Airship内でターゲティングするために、Adobeオーディエンスデータをオーディエンス属性としてAirshipにシームレスに渡します。
-seo-description: Airship内でターゲティングするために、Adobeオーディエンスデータをオーディエンス属性としてAirshipにシームレスに渡します。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1205'
 ht-degree: 13%
 
 ---
 
 
-# （ベータ版） [!DNL Airship Attributes]宛先{#airship-attributes-destination}
+# （ベータ版） [!DNL Airship Attributes]接続{#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >Adobe Experience Platformの[!DNL Airship Attributes]宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
-
-## 概要 {#overview}
 
 [!DNL Airship] は、顧客関与プラットフォームをリードし、顧客のライフサイクルのあらゆる段階で、意味のあるパーソナライズされたチャネルのメッセージをユーザに届けるのに役立ちます。
 
