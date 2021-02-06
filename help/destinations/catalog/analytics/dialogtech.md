@@ -1,21 +1,17 @@
 ---
 keywords: dialogtech extension;dialogtech;dialogtech destination;DialogTech;DialogTech SourceTrak
-title: DialogTech 拡張機能
-seo-title: DialogTech 拡張機能
+title: DialogTech拡張の宛先
 description: DialogTechの拡張機能は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: DialogTechの拡張機能は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 23%
+source-wordcount: '484'
+ht-degree: 20%
 
 ---
 
 
 # [!DNL DialogTech] 拡張機能 {#dialogtech-extension}
-
-## 概要 {#overview}
 
 Adobeの起動に[!DNL DialogTech SourceTrak] javascriptスニペットを含める
 
