@@ -1,21 +1,17 @@
 ---
 keywords: DoubleClick Floodlight;doubleclick floodlight extension;doubleclick;floodlight
-title: DoubleClick Floodlight（ベータ版）拡張機能
-seo-title: DoubleClick Floodlight（ベータ版）拡張機能
+title: DoubleClick Floodlight（ベータ）拡張の宛先
 description: DoubleClick Floodlight（ベータ）拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: DoubleClick Floodlight（ベータ）拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 23%
+source-wordcount: '517'
+ht-degree: 20%
 
 ---
 
 
 # [!DNL DoubleClick Floodlight] （ベータ版）拡張機能
-
-## 概要 {#overview}
 
 この拡張機能を使用すると、（グローバルサイトタグではなく）従来のfloodlight形式を使用した[!DNL DoubleClick Floodlight]タグの迅速かつ容易なデプロイメントが可能になります。 注意：この拡張機能はベータ版です。
 
