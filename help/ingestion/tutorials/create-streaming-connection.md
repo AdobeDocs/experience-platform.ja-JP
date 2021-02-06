@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング接続；ストリーミング接続の作成；apiガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取り込み；取り込み；
 solution: Experience Platform
-title: API を使用したストリーミング接続の作成
+title: APIを使用したストリーミング接続の作成
 topic: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '677'
-ht-degree: 62%
+ht-degree: 61%
 
 ---
 
