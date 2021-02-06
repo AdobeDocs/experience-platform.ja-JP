@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；PSQL;クエリサービスへのpsqlconnect;クエリサービス；クエリサービス；
 solution: Experience Platform
-title: PSQL との接続
+title: PSQLをクエリサービスに接続
 topic: connect
 description: 'PSQLは、PostgreSQLをマシンにインストールする際に提供されるコマンドラインインターフェイスです。 次の手順に従ってインストールできます。 '
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 15%
+source-wordcount: '247'
+ht-degree: 13%
 
 ---
 
 
-# PSQL
+# PSQLをクエリサービスに接続
 
 PSQLは、[!DNL PostgreSQL]をマシンにインストールするときにインストールされるコマンドラインインターフェイスです。 このドキュメントでは、PSQLをAdobe Experience Platform[!DNL Query Service]と接続する手順を説明します。
 
 >[!NOTE]
 >
 > このガイドは、[!DNL PSQL]へのアクセス権が既にあり、その使い方に精通していることを前提としています。 [!DNL PSQL]について詳しくは、[official [!DNL PSQL] documentation](https://www.postgresql.org/docs/current/app-psql.html.
-
-## PSQLと[!DNL Query Service]の接続
 
 PSQLをコンピューターにインストールした後、PSQLをクエリサービスに接続する準備が整いました。 [!DNL Platform] UIに戻り、**[!UICONTROL クエリ]**&#x200B;を選択し、次に&#x200B;**[!UICONTROL 資格情報]**&#x200B;を選択します。
 
