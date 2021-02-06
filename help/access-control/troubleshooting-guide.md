@@ -5,10 +5,10 @@ title: アクセス制御トラブルシューティングガイド
 topic: troubleshooting guide
 description: このドキュメントでは、Adobe Experience Platform のアクセス制御に関するよくある質問に対する回答を示します。
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 69%
+ht-degree: 68%
 
 ---
 
