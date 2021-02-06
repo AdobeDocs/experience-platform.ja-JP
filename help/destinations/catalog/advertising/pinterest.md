@@ -1,21 +1,17 @@
 ---
 keywords: Pinterest;pinterest;Pinterestコンバージョントラッキング；pintrestコンバージョントラッキング
-title: Pinterest Conversion Tracking 拡張機能
-seo-title: Pinterest Conversion Tracking 拡張機能
+title: Pinterestコンバージョントラッキング拡張の宛先
 description: Pinterestコンバージョントラッキング拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Pinterestコンバージョントラッキング拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 31%
+source-wordcount: '536'
+ht-degree: 29%
 
 ---
 
 
-# [!DNL Pinterest Conversion Tracking] 拡張子 {#pinterest-extension}
-
-## 概要 {#overview}
+# [!DNL Pinterest Conversion Tracking] 拡張機能 {#pinterest-extension}
 
 プロモーションされたピンを表示した後に、訪問者が Web サイト上で実行するアクションをトラックします。広告費用対効果を測定し、ターゲットを絞ったオーディエンスを作成します。詳しくは[こちら](https://ads.pinterest.com/)。
 
