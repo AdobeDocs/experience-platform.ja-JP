@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；名前空間リスト;リスト名前空間
 solution: Experience Platform
-title: 名前空間のリスト
+title: リストが使用できるID名前空間
 topic: API guide
 description: 使用可能なすべての名前空間をリストします。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '81'
-ht-degree: 53%
+source-wordcount: '83'
+ht-degree: 44%
 
 ---
 
 
-# 名前空間のリスト
+# リストが使用できるID名前空間
 
 **API 形式**
 
