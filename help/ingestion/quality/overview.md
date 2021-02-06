@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；データの質；品質；サポートされる検証；検証；サポートされる検証；
 solution: Experience Platform
-title: データ取り込みの品質
+title: データの質
 topic: overview
 description: 次のドキュメントでは、Adobe Experience Platformでのバッチおよびストリーミング取り込みでサポートされているチェックおよび検証動作の概要を示します。
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 71%
+source-wordcount: '317'
+ht-degree: 70%
 
 ---
 
