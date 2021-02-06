@@ -5,9 +5,9 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 translation-type: tm+mt
-source-git-commit: c82ad393ecaa46d01596dbba06f5fc756711bc31
+source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '236'
 ht-degree: 56%
 
 ---
@@ -39,17 +39,20 @@ ht-degree: 56%
    * [アプリケーション](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
+   * [コマース](./data-types/commerce.md)
    * [同意と環境設定](./data-types/consents.md)
    * [デバイス](./data-types/device.md)
    * [電子メールアドレス](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
    * [地域](./data-types/geo.md)
    * [地域サークル](./data-types/geo-circle.md)
-   * [地域座標](./data-types/geo-coordinates.md)
+   * [地理座標](./data-types/geo-coordinates.md)
    * [地域とのやり取りの詳細](./data-types/geo-interaction-details.md)
    * [ジオシェイプ](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
    * [測定](./data-types/measure.md)
+   * [Order](./data-types/order.md)
+   * [支払項目](./data-types/payment-item.md)
    * [ユーザー](./data-types/person.md)
    * [個人名](./data-types/person-name.md)
    * [電話番号](./data-types/phone-number.md)
@@ -95,10 +98,10 @@ ht-degree: 56%
    * [アドホックスキーマ](api/ad-hoc.md)
    * [付録](api/appendix.md)
 * チュートリアル {#tutorials}
-   * [スキーマの作成（API）](tutorials/create-schema-api.md)
    * [スキーマの作成（UI）](tutorials/create-schema-ui.md)
-   * [2 つのスキーマ間の関係の定義（API）](tutorials/relationship-api.md)
+   * [スキーマの作成（API）](tutorials/create-schema-api.md)
    * [2 つのスキーマ間の関係の定義（UI）](tutorials/relationship-ui.md)
+   * [2 つのスキーマ間の関係の定義（API）](tutorials/relationship-api.md)
    * [アドホックスキーマの作成（API）](tutorials/ad-hoc.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
