@@ -5,7 +5,7 @@ title: 顧客AIインスタンスの設定
 topic: Instance creation
 description: インテリジェントサービスは、様々な用途に設定できる、使いやすい Adobe Sensei サービスとして顧客 AI を提供します。次の節では、顧客 AI のインスタンスを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 35%
