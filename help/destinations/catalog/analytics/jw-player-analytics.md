@@ -1,25 +1,21 @@
 ---
 keywords: JWプレイヤー；JWプレイヤー；JWプレイヤー；JW拡張子；JW拡張子
-title: JW Player Analytics（ベータ版）拡張機能
-seo-title: JW Player Analytics（ベータ版）拡張機能
+title: JW Player Analytics（ベータ）拡張の宛先
 description: JWプレイヤー分析（ベータ版）拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: JWプレイヤー分析（ベータ版）拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 29%
+source-wordcount: '545'
+ht-degree: 22%
 
 ---
 
 
 # [!DNL JW Player Analytics] （ベータ版）拡張機能  {#jw-player-analytics-extension}
 
-## 概要 {#overview}
-
 この拡張機能は、[!DNL JW Player]アダプタをインストールして[!DNL JW Player]イベントをAdobeビデオ分析に接続します。 Adobe Video Analytics の機能を活用して、顧客のビデオ視聴習慣を把握するための詳細なインサイトを得ます。
 
-[!DNL JW Player Analytics] （ベータ版）は、Adobe Experience Platformの解析拡張です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) の拡張機能のページを参照してください。
+[!DNL JW Player Analytics] （ベータ版）は、Adobe Experience PlatformのAnalytics拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 プラットフォーム起動の拡張機能の動作について詳しくは、[Adobe Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -33,7 +29,7 @@ ht-degree: 29%
 
 ## 拡張機能のインストール {#install-extension}
 
-[!DNL JW Player Analytics] (BETA)拡張機能をインストールするには：
+[!DNL JW Player Analytics] （ベータ版）拡張機能をインストールするには：
 
 [プラットフォームインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
@@ -45,7 +41,7 @@ ht-degree: 29%
 
 このワークフローにより、プラットフォーム起動に移動してインストールを完了します。
 
-拡張機能の設定オプションについて詳しくは、Adobe Exchange の [JW Player Analytics（BETA）拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)を参照してください。
+拡張機能の設定について詳しくは、AdobeExchangeの[JW Player Analytics（ベータ版）拡張機能のページ](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html)を参照してください。
 
 [Adobe Experience Platform Launchインターフェイス](https://launch.adobe.com/)に直接インストールすることもできます。 プラットフォーム起動ドキュメントの追加[新しい拡張子](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)を参照してください。
 
