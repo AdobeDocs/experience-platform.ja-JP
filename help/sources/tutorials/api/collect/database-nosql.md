@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: このチュートリアルでは、データベースからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 19%
