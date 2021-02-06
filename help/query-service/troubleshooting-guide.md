@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；トラブルシューティングガイド；faq；トラブルシューティング；
 solution: Experience Platform
-title: Adobe Experience Platform クエリサービストラブルシューティングガイド
+title: クエリサービストラブルシューティングガイド
 topic: troubleshooting
 description: このドキュメントには、発生する一般的なエラーコードと考えられる原因に関する情報が含まれています。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 85%
+source-wordcount: '177'
+ht-degree: 82%
 
 ---
 
 
-# エラーとトラブルシューティング
+# [!DNL Query Service] トラブルシューティングガイド
 
 ## REST API エラー
 
