@@ -5,7 +5,7 @@ title: 監視性通知の概要
 topic: overview
 description: Observantibility Insightsを使用すると、Adobe Experience Platformアクティビティに関するイベント通知を登録できます。 ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために、Obsembantability Insights APIをポーリングする必要性を減らすか、なくします。
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
