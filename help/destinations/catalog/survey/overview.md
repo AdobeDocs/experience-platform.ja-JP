@@ -1,19 +1,17 @@
 ---
 keywords: 調査先；調査；予測；瞬間；Web切片調査;Qualtrics
-title: 調査の宛先
-seo-title: 調査の宛先
-description: 調査プラットフォームは、調査のイベントを検出し、データ要素を使用してリアルタイムで顧客のフィードバックを捕捉し、プラットフォームとデータを共有します。
-seo-description: 調査プラットフォームは、調査のイベントを検出し、データ要素を使用してリアルタイムで顧客のフィードバックを捕捉し、プラットフォームとデータを共有します。
+title: 調査先の概要
+description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックを捕捉し、Adobe Experience Platformとデータを共有します。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 30%
+source-wordcount: '89'
+ht-degree: 32%
 
 ---
 
 
-# 調査先 {#survey-destinations}
+# 調査先の概要 {#survey-destinations}
 
 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックを捕捉し、Adobe Experience Platformとデータを共有します。
 
