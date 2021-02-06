@@ -2,11 +2,11 @@
 keywords: Experience Platform；概要；顧客ai；人気の高いトピック；顧客aiの概要
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客 AI の概要
-topic: Customer AI overview
+topic: Customer AI Overview
 description: 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイは必要ありません。
 landing-page-description: 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 85%
