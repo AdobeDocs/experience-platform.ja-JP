@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；パッケージレシピの読み込み；Data Science Workspace；人気のあるトピック；レシピ；api;senesie機械学習；エンジンの作成
 solution: Experience Platform
-title: パッケージ化されたレシピ（API）の読み込み
+title: Senesie Machine Learning APIを使用したパッケージ化されたレシピの読み込み
 topic: tutorial
 type: Tutorial
 description: 'このチュートリアルでは Sensei 機械学習 API を使用して、ユーザーインターフェイスの「レシピ」としても知られるエンジンを作成します。 '
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 62%
+source-wordcount: '1007'
+ht-degree: 60%
 
 ---
 
 
-# パッケージ化されたレシピ（API）の読み込み
+# Senesie Machine Learning APIを使用して、パッケージ化されたレシピを読み込みます
 
 このチュートリアルでは、[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)を使用して[エンジン](../api/engines.md)を作成します。これはユーザーインターフェイス内でもレシピとして知られています。
 
