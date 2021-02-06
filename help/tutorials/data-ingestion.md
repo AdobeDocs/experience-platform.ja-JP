@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: データ取得には、バッチ取得、ストリーミング取得、ソースコネクタを使用した取得が含まれます。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 41%
+ht-degree: 40%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 41%
 
 Adobe Experience Platform は、複数のソースからのデータを統合し、マーケターが顧客の行動をより深く理解できるようにします。Adobe[!DNL Experience Platform Data Ingestion]は、[!DNL Platform]がこれらのソースからデータを取り込む複数のメソッドを表します。また、そのデータがData Lake内でどのように保持され、ダウンストリーム[!DNL Platform services]で使用されるかを表します。 [!DNL Data Ingestion] ソースコネクタを使用したバッチ取り込み、ストリーミング取り込み、取り込みが含まれます。詳しくは、「[データ取得の概要](../ingestion/home.md)」を読むか、[ソースのドキュメント](../sources/home.md)に直接進んでください。
 
-## UI と API でのソースコネクタの作成
+## UIとAPIでのソース接続の作成
 
 ソースコネクタを使用すると、複数のソースからデータを取り込むことができ、[!DNL Platform services]を使用してラベル付け、構造化、拡張を行うことができます。 ソースコネクタの作成を開始するには、[ソースの概要](../sources/home.md)を参照してください。
 
