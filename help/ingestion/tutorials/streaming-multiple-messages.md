@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング取り込み；取り込み；複数のメッセージのストリーミング；複数のメッセージ；
 solution: Experience Platform
-title: 単一の HTTP リクエストで複数のメッセージをストリーミング
+title: 単一のHTTPリクエストでの複数のメッセージの送信
 topic: tutorial
 type: Tutorial
 description: このドキュメントでは、ストリーミング取り込みを使用して、1つのHTTPリクエスト内で複数のメッセージをAdobe Experience Platformに送信するためのチュートリアルを提供します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 67%
+ht-degree: 66%
 
 ---
 
 
-# 単一の HTTP リクエストで複数のメッセージを送信
+# 単一のHTTPリクエストでの複数のメッセージの送信
 
 データを Adobe Experience Platform にストリーミングする場合、多数の HTTP 呼び出しを作成すると高コストになる可能性があります。例えば、1 KB のペイロードで 200 個の HTTP リクエストを作成するよりも、それぞれが 1 KB の 200 個のメッセージが含まれた 1 個の HTTP リクエスト（200 KB の単一ペイロード）を作成する方がはるかに効率的です。正しく使用すれば、1つのリクエスト内で複数のメッセージをグループ化するのは、[!DNL Experience Platform]に送信されるデータを最適化する優れた方法です。
 
