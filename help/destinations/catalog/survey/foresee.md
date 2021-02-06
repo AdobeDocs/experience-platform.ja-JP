@@ -1,21 +1,17 @@
 ---
 keywords: forese;foreextension;foredestination
-title: Forese 拡張機能
-seo-title: Forese 拡張機能
+title: Forese Extension Destination
 description: Forese拡張は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Forese拡張は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 27%
+source-wordcount: '504'
+ht-degree: 24%
 
 ---
 
 
 # [!DNL Foresee] 拡張機能 {#foresee-extension}
-
-## 概要 {#overview}
 
 Experience Platform Launchを使用して[!DNL ForeSee]製品のデプロイメントを構成します。
 
