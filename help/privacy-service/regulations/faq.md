@@ -5,7 +5,7 @@ title: プライバシー規制FAQ
 topic: troubleshooting
 description: このドキュメントでは、サポートされる法的プライバシー規制とAdobe Experience Cloudでの法的プライバシー規制の導入に関するよくある質問への回答を示します。
 translation-type: tm+mt
-source-git-commit: 00904291ab7e2f119d3886b5aae9be50d4e8bd2b
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1599'
 ht-degree: 35%
