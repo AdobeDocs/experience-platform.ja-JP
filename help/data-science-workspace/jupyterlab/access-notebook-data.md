@@ -3,9 +3,9 @@ keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace；人�
 solution: Experience Platform
 title: Jupyterlabノートブックでのデータアクセス
 topic: Developer Guide
-description: このガイドでは、Data Science Workspaceに組み込まれたJupyterノートブックを使用してデータにアクセスする方法に焦点を当てます。
+description: このガイドでは、Data Science Workspaceに組み込まれたJupterノートブックを使用してデータにアクセスする方法について説明します。
 translation-type: tm+mt
-source-git-commit: 645a0f595d268fb08ebfa5652f77a4b1628afcd3
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '3101'
 ht-degree: 25%
