@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；XDM;XDMプロファイル;XDM個人システム；XDM個人イベント;XDM ExperienceEvent;XDM ExperienceEventイベント;XDM ExperienceEvent；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデルモデル；スキーマ；トラブルシューティング；FAQ;和集合スキーマ;イベント和集合;プロファイル和集合
 solution: Experience Platform
-title: エクスペリエンスデータモデル（XDM）システムのトラブルシューティングガイド
-description: このドキュメントでは、エクスペリエンスデータモデル（XDM）システムに関するよくある質問の回答に加えて、一般的なエラーのトラブルシューティングガイドを提供します。
+title: XDMシステムトラブルシューティングガイド
+description: このドキュメントでは、Adobe Experience PlatformのExperience Data Model(XDM)とXDM Systemに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1873'
-ht-degree: 62%
+source-wordcount: '1879'
+ht-degree: 60%
 
 ---
 
 
-# [!DNL Experience Data Model] (XDM)システムトラブルシューティングガイド
+# XDMシステムトラブルシューティングガイド
 
-このドキュメントでは、[!DNL Experience Data Model] (XDM)システムに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。 Adobe Experience Platform の他のサービスに関する質問やトラブルシューティングについては、[Experience Platform のトラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
+このドキュメントでは、Adobe Experience Platformの[!DNL Experience Data Model] (XDM)とXDM Systemに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。 他の Platform サービスに関する質問とトラブルシューティングについては、[Experience Platform トラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
 
 **[!DNL Experience Data Model](XDM)** は、顧客体験管理のための標準化されたスキーマを定義するオープンソース仕様です。[!DNL Experience Platform]が構築される方法論&#x200B;**XDM System**&#x200B;は[!DNL Platform]サービスで使用する[!DNL Experience Data Model]スキーマを操作します。 **[!DNL Schema Registry]**&#x200B;は、[!DNL Experience Platform]内の&#x200B;**[!DNL Schema Library]**&#x200B;にアクセスするためのユーザーインターフェイスとRESTful APIを提供します。 詳しくは、[XDM のドキュメント](home.md)を参照してください。
 
