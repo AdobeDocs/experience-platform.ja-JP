@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；モデルの発行；Data Science Workspace；人気の高いトピック；Senesie機械学習api
 solution: Experience Platform
-title: モデルをサービスとして公開する（API）
+title: Senesie Machine Learning APIを使用したサービスとしてのモデルの公開
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Senesie Machine Learning APIを使用して、モデルをサービスとして公開するプロセスについて説明します。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1510'
-ht-degree: 48%
+source-wordcount: '1516'
+ht-degree: 47%
 
 ---
 
 
-# モデルをサービスとして公開する（API）
+# [!DNL Sensei Machine Learning API]
 
 このチュートリアルでは、[[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)を使用して、モデルをサービスとしてパブリッシュするプロセスについて説明します。
 
