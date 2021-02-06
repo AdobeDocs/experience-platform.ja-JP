@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；FTP;ftp
 solution: Experience Platform
-title: UIでのFTPソースコネクタの作成
+title: UIでのFTPソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してFTPソースコネクタを作成する手順を説明します。
+description: Adobe Experience PlatformUIを使用してFTPソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e28a3ec2d4330f0e9f3895e0236c9ebea2ef2776
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 10%
@@ -14,13 +14,13 @@ ht-degree: 10%
 ---
 
 
-# UIでのFTPソースコネクタの作成
+# UIでのFTPソース接続の作成
 
 >[!NOTE]
 >
 >FTPコネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
-このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してFTPソースコネクタを作成する手順を説明します。
+このチュートリアルでは、Adobe Experience PlatformUIを使用したFTPソース接続の作成手順を説明します。
 
 ## はじめに
 
