@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；Python sdk；データアクセスapi;Read Python;Write Python
 solution: Experience Platform
-title: Pythonを使用したデータへのアクセス
+title: Data Science WorkspaceでPythonを使用してデータにアクセスする
 topic: tutorial
 type: Tutorial
 description: 次のドキュメントは、Data Science Workspaceで使用するPythonのデータにアクセスする方法の例を示しています。
 translation-type: tm+mt
-source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '420'
 ht-degree: 2%
 
 ---
 
 
-# Pythonを使用したデータへのアクセス
+# Data Science WorkspaceのPythonを使用したデータへのアクセス
 
 次のドキュメントは、Data Science Workspaceで使用するPythonを使用したデータへのアクセス方法の例を示しています。 JupterLabノートブックを使用したデータへのアクセスについては、[JupyterLabノートブックデータアクセス](../jupyterlab/access-notebook-data.md)のドキュメントを参照してください。
 
