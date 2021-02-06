@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Analyticsソースコネクタ；Analyticsコネクタ；Analyticsソース；Analyticsソース；Analytics
 solution: Experience Platform
-title: UI での Adobe Analytics ソースコネクタの作成
+title: UIでのAdobe Analyticsソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、UIで消費者データをAdobe Experience Platformに取り込むためのAdobe Analyticsソースコネクタを作成する手順を説明します。
+description: UIでAdobe Analyticsソース接続を作成し、ユーザーデータをAdobe Experience Platformに取り込む方法を説明します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 15%
+source-wordcount: '801'
+ht-degree: 13%
 
 ---
 
 
-# UI での Adobe Analytics ソースコネクタの作成
+# UIでのAdobe Analyticsソース接続の作成
 
-このチュートリアルでは、UIで消費者データをAdobe Experience Platformに取り込むためのAdobe Analyticsソースコネクタを作成する手順を説明します。
+このチュートリアルでは、UIでユーザーデータをAdobe Experience Platformに取り込むためのAdobe Analyticsソース接続を作成する手順を説明します。
 
 ## はじめに
 
