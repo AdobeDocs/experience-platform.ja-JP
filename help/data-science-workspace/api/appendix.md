@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；
 solution: Experience Platform
-title: 付録
+title: Senesie Machine Learning APIガイド付録
 topic: Developer guide
 description: 以下の節では、Sensei Machine Learning API の様々な機能に関するリファレンス情報を提供します。
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 83%
+source-wordcount: '330'
+ht-degree: 80%
 
 ---
 
 
-# 付録
+# [!DNL Sensei Machine Learning] APIガイドの付録
 
 以下の節では、[!DNL Sensei Machine Learning] APIの様々な機能に関するリファレンス情報を提供します。
 
