@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；スケジュール；スケジュール；api;API;
 solution: Experience Platform
-title: スケジュール
+title: APIエンドポイントのスケジュール
 topic: developer guide
 description: スケジュールは、バッチセグメントジョブを1日1回自動的に実行するために使用できるツールです。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1203'
 ht-degree: 46%
 
 ---
