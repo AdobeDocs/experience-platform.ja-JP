@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Maria DB;maria db
 solution: Experience Platform
-title: UI での MariaDB ソースコネクタの作成
+title: UIでのMariaDBソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してMaria DBソースコネクタを作成する手順を説明します。
+description: Adobe Experience PlatformUIを使用してMaria DBソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 16%
+source-wordcount: '432'
+ht-degree: 14%
 
 ---
 
 
-# UIに[!DNL MariaDB]ソースコネクタを作成する
+# UIに[!DNL MariaDB]ソース接続を作成する
 
 >[!NOTE]
 >
