@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;SFTP
 solution: Experience Platform
-title: SFTPコネクタ
+title: SFTPソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してSFTPサーバーをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用してSFTPサーバーをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 2%
@@ -48,11 +48,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ### APIの使用
 
-- [Flow Service APIを使用したSFTPコネクタの作成](../../tutorials/api/create/cloud-storage/sftp.md)
+- [Flow Service APIを使用したSFTPソース接続の作成](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
-- [UIでのSFTPソースコネクタの作成](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UIでのSFTPソース接続の作成](../../tutorials/ui/create/cloud-storage/sftp.md)
+- [UIでのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
