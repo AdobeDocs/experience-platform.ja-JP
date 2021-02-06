@@ -1,21 +1,17 @@
 ---
 keywords: Nielsen IMA Handler;nielsen ima handler;nielsen ima;Nielsen ima;Nielsen IMA
-title: Nielsen IMA Handler 拡張機能
-seo-title: Nielsen IMA Handler 拡張機能
+title: Nielsen IMAハンドラー拡張先
 description: ニールセンIMAハンドラー拡張は、Adobe Experience Platformの解析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: ニールセンIMAハンドラー拡張は、Adobe Experience Platformの解析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 22%
+source-wordcount: '473'
+ht-degree: 19%
 
 ---
 
 
-# [!DNL Nielsen IMA Handler] 拡張子 {#nielsen-ima-extension}
-
-## 概要 {#overview}
+# [!DNL Nielsen IMA Handler] 拡張機能 {#nielsen-ima-extension}
 
 [!DNL Nielsen IMA Handler] は、Adobe Experience Platformのanalytics拡張です。
 
