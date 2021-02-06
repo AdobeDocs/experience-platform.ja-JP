@@ -1,19 +1,17 @@
 ---
 keywords: 音声宛先；音声宛先
-title: 顧客の声の宛先
-seo-title: 顧客の声の宛先
+title: 顧客の宛先の音声概要
 description: Voice プラットフォームは、音声メッセージ、通話データ、チャットの会話など、様々なソースからデータを収集して照合します。照合された情報をフィルタリングおよび分析して、会社が要件を満たすように Web サイトを最適化できるようにします。
-seo-description: Voice プラットフォームは、音声メッセージ、通話データ、チャットの会話など、様々なソースからデータを収集して照合します。照合された情報をフィルタリングおよび分析して、会社が要件を満たすように Web サイトを最適化できるようにします。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 89%
+source-wordcount: '127'
+ht-degree: 77%
 
 ---
 
 
-# 顧客の声の宛先 {#voice-of-customer-destinations}
+# 顧客宛先の音声概要{#voice-of-customer-destinations}
 
 Voice プラットフォームは、音声メッセージ、通話データ、チャットの会話など、様々なソースからデータを収集して照合します。照合された情報をフィルタリングおよび分析して、会社が要件を満たすように Web サイトを最適化できるようにします。
 
