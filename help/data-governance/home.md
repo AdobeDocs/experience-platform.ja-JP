@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；DULE；スケジュール
 solution: Experience Platform
-title: Adobe Experience Platform のデータガバナンス
+title: データ・ガバナンスの概要
 topic: overview
 description: Adobe Experience Platform データガバナンスを使用すると、顧客データを管理し、データの使用に適した規制、制限、ポリシーへのコンプライアンスを確保できます。カタログ化、データ系列、データ使用のラベル付け、データ使用ポリシー、マーケティング活動のためのデータ使用の制御など、様々なレベルでExperience Platform内の主な役割を果たします。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 68%
@@ -13,7 +13,7 @@ ht-degree: 68%
 ---
 
 
-# [!DNL Data Governance]概要
+# データガバナンスの概要
 
 Adobe Experience Platform の主な機能の 1 つは、複数の企業システムのデータを統合して、マーケターが顧客を識別、理解し、惹きつけられるようにすることです。このデータは、組織または法規制によって定義された使用制限の対象となる場合があります。したがって、[!DNL Platform]内のデータ操作がデータ使用ポリシーに準拠していることを確認することが重要です。
 
