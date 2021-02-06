@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ターゲットマッピング;ターゲットマッピング
 solution: Experience Platform
-title: Target マッピングフィールド
+title: Adobe TargetイベントデータのXDMへのマッピング
 topic: overview
-description: 次の表に、エクスペリエンスイベントスキーマ（*XDM ExperienceEventフィールド*）のフィールドと、マップする必要がある対応するターゲットフィールド(ターゲットリクエストフィールド)の概要を示します。 一部のマッピングに関する追加のメモも示します。
+description: Adobe Experience Platformで使用するAdobe TargetイベントフィールドをExperience Data Model(XDM)スキーマにマップする方法を説明します。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '462'
 ht-degree: 91%
 
 ---
 
 
-# ターゲットマッピングフィールド
+# ターゲットマッピングフィールドのマッピング
 
 Adobe Experience Platform を使用すると、Adobe Target のデータを Target ソースコネクタを介して取り込めます。コネクタを使用する場合、Target フィールドのすべてのデータを、XDM ExperienceEvent クラスに関連付けられた「[エクスペリエンスデータモデル（XDM）](../../../../xdm/home.md)」フィールドにマッピングする必要があります。
 
