@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；APIベースの適用；データガバナンス
 solution: Experience Platform
-title: ポリシー
+title: ポリシーAPIエンドポイント
 topic: developer guide
 description: データ使用ポリシーは組織が導入するルールで、Experience Platform 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するものです。/policiesエンドポイントは、データ使用ポリシーの表示、作成、更新または削除に関連するすべてのAPI呼び出しに使用されます。
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '1817'
 ht-degree: 9%
 
 ---
