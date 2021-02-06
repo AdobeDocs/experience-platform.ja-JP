@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；ガードレール；ガイドライン；制限；エンティティ；プライマリエンティティ；ディメンションエンティティ；
-title: リアルタイム顧客プロファイルデータのExperience Platformガードレール
+title: リアルタイム顧客プロファイルデータのガードレール
 solution: Experience Platform
 product: experience platform
 topic: guide
 type: Documentation
 description: 'Adobe Experience Platformは、リアルタイム顧客プロファイルがサポートできないデータモデルの作成を回避するための一連のガードレールを提供しています。 このドキュメントでは、プロファイルデータをモデリングする際に留意すべきベストプラクティスと制約について説明します。 '
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1456'
 ht-degree: 4%
 
 ---
 
 
-# [!DNL Platform] ～のガードレール  [!DNL Real-time Customer Profile]
+# [!DNL Real-time Customer Profile]データのガードレール
 
 [!DNL Real-time Customer Profile] は、行動分析インサイトと顧客属性に基づいて、チャネル間の個別のエクスペリエンスをパーソナライズして提供できる個々のプロファイルを提供します。このターゲティングを達成するために、[!DNL Profile]とAdobe Experience Platform内のセグメント化エンジンは、高度に非正規化されたハイブリッドデータモデルを使用し、これにより、顧客プロファイルの開発に新しいアプローチをオファーします。 このハイブリッドデータモデルを使用すると、収集されるデータが正しくモデル化されていることが非常に重要になります。 プロファイルデータを保守する[!DNL Profile]データストアはリレーショナルストアではありませんが、[!DNL Profile]は、セグメントを簡単で直感的な方法で作成するために、小さなディメンションエンティティとの統合を可能にします。 この統合は、マルチエンティティセグメント化と呼ばれます。
 
