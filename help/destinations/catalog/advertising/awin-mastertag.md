@@ -1,21 +1,17 @@
 ---
 keywords: Awin Advertiser mastertag extension;mastertag;Awin;awin;AWIN
-title: Awin Advertiser Mastertag 拡張機能
-seo-title: Awin Advertiser Mastertag 拡張機能
+title: Awin広告主マスタータグ拡張の宛先
 description: Awin Advertiser Mastertag extensionは、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Awin Advertiser Mastertag extensionは、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 36%
+source-wordcount: '518'
+ht-degree: 34%
 
 ---
 
 
 # [!DNL Awin Advertiser Mastertag] 拡張機能 {#awin-mastertag-extension}
-
-## 概要 {#overview}
 
 [!DNL MasterTag]はAwinトラッキングソリューションに必要なすべての関数を含むJavaScriptライブラリで、確認ページを含め、支払い情報を表示または処理するページを除き、サイト上のすべてのページに無条件に追加する必要があります。
 
