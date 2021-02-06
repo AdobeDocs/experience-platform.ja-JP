@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；開発者ガイド；SDK；モデルオーサリング；Data Science Workspace；人気のあるトピック；テスト
 solution: Experience Platform
-title: SDK 開発者ガイド
+title: モデルオーサリング SDK
 topic: Overview
 description: モデルオーサリングSDKを使用すると、PySparkとSpark (Scala)で実装可能なテンプレートを提供する、Adobe Experience Platformデータサイエンスワークスペースで使用できるカスタム機械学習レシピと機能パイプラインを開発できます。
 translation-type: tm+mt
-source-git-commit: e1b8bc378c2f72862c0c28e44dceb8a35e44a29e
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 70%
@@ -13,7 +13,7 @@ ht-degree: 70%
 ---
 
 
-# SDK 開発者ガイド
+# モデルオーサリング SDK
 
 モデルオーサリングSDKを使用すると、[!DNL Adobe Experience Platform] Data Science Workspaceで使用できるカスタム機械学習レシピと機能パイプラインを開発し、[!DNL PySpark]と[!DNL Spark (Scala)]で実装可能なテンプレートを提供できます。
 
