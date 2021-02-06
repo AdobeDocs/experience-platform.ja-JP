@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: Privacy ServiceAPI開発者ガイド付録
+title: Privacy ServiceAPIガイド付録
 topic: developer guide
 description: このドキュメントには、Privacy ServiceAPIを使用するための追加情報が含まれています。
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 73%
+source-wordcount: '501'
+ht-degree: 72%
 
 ---
 
 
-# 付録
+# Privacy ServiceAPIガイドの付録
 
 以下の節では、Adobe Experience Platform Privacy ServiceAPIを使用するための追加情報を示します。
 
