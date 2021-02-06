@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: 同意エンドポイント
+title: 同意APIエンドポイント
 topic: developer guide
 description: Privacy ServiceAPIを使用して、Experience Cloudアプリに対する顧客の同意要求を管理する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '244'
 ht-degree: 2%
 
 ---
