@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ;スキーマ設計；ミックスイン；ミックスイン；作業の詳細；プロファイル作業；
 solution: Experience Platform
-title: 作業担当者の詳細ミックスイン
+title: 勤務先の連絡先の詳細Mixin
 topic: overview
 description: このドキュメントでは、作業担当者の詳細ミックスインの概要を説明します。
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 5%
