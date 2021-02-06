@@ -1,21 +1,17 @@
 ---
 keywords: bizible;bizible extension;bizible destination
-title: Bizible 拡張機能
-seo-title: Bizible 拡張機能
+title: Bizible Extensionの宛先
 description: Bizible拡張機能は、Adobe Experience Platformの電子メールの送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Bizible拡張機能は、Adobe Experience Platformの電子メールの送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 41%
+source-wordcount: '488'
+ht-degree: 40%
 
 ---
 
 
-# [!DNL Bizible] 拡張子 {#bizible-extension}
-
-## 概要 {#overview}
+# [!DNL Bizible] 拡張機能 {#bizible-extension}
 
 [!DNL Bizible] は、業界をリードする B2B アトリビューションソリューションであり、データに対する比類のない可視性を提供するため、成長を促進するスマートな意思決定をおこなうことができます。
 
