@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；スキーマ;スキーマ；作成
 solution: Experience Platform
-title: スキーマレジストリ API を使用したスキーマの作成
+title: スキーマレジストリAPIを使用したスキーマの作成
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 79%
