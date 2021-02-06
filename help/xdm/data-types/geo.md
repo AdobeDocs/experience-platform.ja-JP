@@ -5,7 +5,7 @@ title: 地域データタイプ
 topic: overview
 description: このドキュメントでは、Geo XDMデータタイプの概要を説明します。
 translation-type: tm+mt
-source-git-commit: 6a7967ac9e652c7e73fd713e89a9079287cf0ae5
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 36%
