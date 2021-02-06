@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；配列関数；配列；
 solution: Experience Platform
-title: 配列、リスト、およびセットの関数
+title: アレイ、リスト、および設定PQL関数
 topic: developer guide
 description: プロファイルクエリ言語（PQL）は、配列、リスト、および文字列とのやり取りを容易にする関数を提供します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 94%
+source-wordcount: '767'
+ht-degree: 93%
 
 ---
 
