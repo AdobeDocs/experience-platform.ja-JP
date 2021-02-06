@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；セグメントジョブ；セグメントジョブ；API;API;
 solution: Experience Platform
-title: セグメントジョブ
+title: セグメントジョブAPIエンドポイント
 topic: developer guide
-description: このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
+description: Adobe Experience PlatformセグメントサービスAPIのセグメントジョブエンドポイントは、組織のセグメントジョブをプログラムで管理できるようにします。
 translation-type: tm+mt
-source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 34%
+source-wordcount: '1168'
+ht-degree: 32%
 
 ---
 
