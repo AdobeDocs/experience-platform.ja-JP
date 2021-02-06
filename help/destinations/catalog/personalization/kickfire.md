@@ -1,21 +1,17 @@
 ---
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
-title: KickFire 拡張機能
-seo-title: KickFire 拡張機能
+title: KickFire拡張先
 description: KickFire拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: KickFire拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 22%
+source-wordcount: '507'
+ht-degree: 19%
 
 ---
 
 
 # [!DNL KickFire] 拡張機能 {#kickfire-extension}
-
-## 概要 {#overview}
 
 [!DNL KickFire's] IPアドレスインテリジェンスとB2Bファーストグラフィックデータを使用すると、IPアドレスを会社に変換したり、匿名Web訪問者を識別したり、アカウントデータを会社のIPアドレスに基づいてテクノロジスタックに統合したりできます。
 
