@@ -1,21 +1,17 @@
 ---
 keywords: twitter;Twitter；ユニバーサルWebサイトタグ；TwitterユニバーサルWebサイトタグ；Twitter UWTタグ；Twitter uwt;twitter uwt
-title: Twitter ユニバーサルウェブサイトタグ拡張
-seo-title: Twitter ユニバーサルウェブサイトタグ拡張
+title: TwitterユニバーサルWebサイトタグ拡張の宛先
 description: TwitterユニバーサルWebサイトタグ拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: TwitterユニバーサルWebサイトタグ拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 24%
+source-wordcount: '508'
+ht-degree: 21%
 
 ---
 
 
-# [!DNL Twitter Universal Website Tag] 拡張子 {#twitter-uwt-extension}
-
-## 概要 {#overview}
+# [!DNL Twitter Universal Website Tag] 拡張機能 {#twitter-uwt-extension}
 
 [!DNL Twitter Universal Website Tag] は、Twitter UWTタグにビーコンを送信するアクションを提供します。
 
