@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；spark sdk；データアクセスapi;sparkレシピ；読み取りspark；書き込みspark
 solution: Experience Platform
-title: Sparkを使用したデータへのアクセス
+title: Data Science WorkspaceのSparkを使用したデータへのアクセス
 topic: tutorial
 type: Tutorial
 description: 次のドキュメントには、Data Science Workspaceで使用するSparkを使用してデータにアクセスする方法の例が含まれています。
 translation-type: tm+mt
-source-git-commit: e1035f3d1ad225a0892c5f97ca51618cd6b47412
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
 
 
-# Sparkを使用したデータへのアクセス
+# Data Science WorkspaceのSparkを使用したデータへのアクセス
 
 次のドキュメントには、Data Science Workspaceで使用するSparkを使用してデータにアクセスする方法の例が含まれています。 JupterLabノートブックを使用したデータへのアクセスについては、[JupyterLabノートブックデータアクセス](../jupyterlab/access-notebook-data.md)のドキュメントを参照してください。
 
