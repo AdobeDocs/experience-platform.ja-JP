@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；AmazonRedshift;AmazonRedshift;Redshift;Redshift
 solution: Experience Platform
-title: Amazon赤方偏移コネクタ
+title: AmazonRedshiftソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用して、AmazonRedshiftをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用して、AmazonRedshiftをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 11%
@@ -31,11 +31,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL Amazon Redshift]を[!DNL Platform]に接続
 
-- [フローサービスAPIを使用して、AmazonRedshiftコネクタを作成する](../../tutorials/api/create/databases/redshift.md)
+- [Flow Service APIを使用して、AmazonRedshiftソース接続を作成する](../../tutorials/api/create/databases/redshift.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して[!DNL Amazon Redshift]を[!DNL Platform]に接続
 
-- [UIでのAmazonRedshiftソースコネクタの作成](../../tutorials/ui/create/databases/redshift.md)
-- [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
+- [UIでのAmazonRedshiftソース接続の作成](../../tutorials/ui/create/databases/redshift.md)
+- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
