@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；CJA;ジャーニー分析；顧客ジャーニー分析；キャンペーンの調整；オーケストレーション；顧客ジャーニー;ジャーニー;ジャーニーの調整；機能；ワークフロー
 solution: Experience Platform
-title: Adobe Experience Platform ドキュメントの概要
+title: Experience Platformドキュメントの概要
 topic: overview
 description: Adobe Experience Platformのドキュメントは、ユーザーインターフェイスと API の両方の概要、チュートリアル、ガイドなど、複数の形式で提供されています。Experience Platformサービスで使用できる最も一般的なドキュメントの種類を簡単に説明します。
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 53%
+source-wordcount: '483'
+ht-degree: 52%
 
 ---
 
