@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；データモデル；ui；ワークスペース；配列；フィールド；
 solution: Experience Platform
-title: UIで配列フィールドを定義する
+title: UIでの配列フィールドの定義
 description: Experience Platformユーザーインターフェイスで配列フィールドを定義する方法を説明します。
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '363'
 ht-degree: 1%
 
 ---
 
 
-# UIで配列フィールドを定義する
+# UIでの配列フィールドの定義
 
 Adobe Experience PlatformユーザーインターフェイスでExperience Data Model(XDM)フィールドを定義する場合、そのフィールドを配列として指定できます。
 
