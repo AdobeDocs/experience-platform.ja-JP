@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;JupyterLab；レシピ；ノートブック；Data Science Workspace；人気の高いトピック；レシピの作成
 solution: Experience Platform
-title: Jupyter ノートブックを使用したレシピの作成
+title: ジャプターノートブックを使用したレシピの作成
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、2 つの主なセクションについて説明します。まず、JupyterLab ノートブック内のテンプレートを使用して機械学習モデルを作成します。次に、JupyterLab 内でノートブックをレシピワークフローに導き、Data Science Workspace 内でレシピを作成します。
 translation-type: tm+mt
-source-git-commit: adaa7fbaf78a37131076501c21bf18559c17ed94
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '2362'
-ht-degree: 81%
+ht-degree: 80%
 
 ---
 
 
-# Jupyter ノートブックを使用したレシピの作成
+# Jupyter Notebooksを使用してレシピを作成する
 
 このチュートリアルでは、2 つの主なセクションについて説明します。まず、[!DNL JupyterLab Notebook]内のテンプレートを使用して機械学習モデルを作成します。 次に、ノートブックを[!DNL JupyterLab]内のレシピワークフローに導き、[!DNL Data Science Workspace]内にレシピを作成します。
 
