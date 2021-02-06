@@ -5,7 +5,7 @@ title: Flow Service APIを使用したデータベースの調査
 topic: overview
 description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのデータベースのコンテンツとファイル構造を調べます。
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 20%
