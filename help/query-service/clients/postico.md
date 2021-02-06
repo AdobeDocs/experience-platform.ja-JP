@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；ポスティコ；ポスティコ；クエリサービスに接続；
 solution: Experience Platform
-title: Postico との接続
+title: Posticoをクエリサービスに接続
 topic: connect
 description: このドキュメントには、Adobe Experience Platformクエリサービス用のバックアップクライアントPosticoをインストールするためのリンクが含まれています。
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 17%
+source-wordcount: '253'
+ht-degree: 16%
 
 ---
 
 
-# [!DNL Postico]
+# [!DNL Postico]をクエリサービス(Mac)に接続
 
 このドキュメントでは、[!DNL Postico]をAdobe Experience Platform[!DNL Query Service]に接続する手順を説明します。
 
@@ -22,8 +22,6 @@ ht-degree: 17%
 > このガイドは、[!DNL Postico]へのアクセス権が既にあり、そのインターフェイスの操作方法に精通していることを前提としています。 [!DNL Postico]に関する詳細は、[正式な [!DNL Postico] ドキュメント](https://eggerapps.at/postico/docs)を参照してください。
 > 
 > さらに、[!DNL Postico]は&#x200B;****&#x200B;のみで、macOSデバイスで使用できます。
-
-## [!DNL Postico]をクエリサービスに接続
 
 [!DNL Postico]をクエリサービスに接続するには、[!DNL Postico]を開いて&#x200B;**[!DNL New Favorite]**&#x200B;を選択します。
 
