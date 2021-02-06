@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；はじめに；お客様向けai；人気の高いトピック
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: はじめに — 顧客 AI
+title: お客様向けAIはじめに
 topic: Getting started
 description: ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '571'
-ht-degree: 71%
+ht-degree: 70%
 
 ---
 
