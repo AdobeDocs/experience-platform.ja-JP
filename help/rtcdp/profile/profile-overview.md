@@ -2,13 +2,13 @@
 keywords: rtcdpプロファイル;プロファイルrtcdp;rtcdp identities;rtcdpマージポリシー；リアルタイム顧客プロファイル
 title: リアルタイム顧客プロファイルの概要
 seo-title: リアルタイムの顧客データプラットフォームでのリアルタイム顧客プロファイル
-description: リアルタイムの顧客データプラットフォームを使用して、顧客に対して一貫性のある連携した関連性のあるエクスペリエンスをリアルタイム顧客プロファイルを介して提供する方法の概要を説明します。
+description: リアルタイム顧客データプラットフォームを使用すると、リアルタイム顧客プロファイルを使用している顧客に対して、連携し、一貫性のある、関連性のあるエクスペリエンスを提供できます。
 seo-description: リアルタイムの顧客データプラットフォーム，プロファイル，データ，エクスペリエンス，チャネル
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 42%
+source-wordcount: '404'
+ht-degree: 35%
 
 ---
 
