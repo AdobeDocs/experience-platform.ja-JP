@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマレジストリ；
 solution: Experience Platform
-title: スキーマレジストリAPIの使用の手引き
+title: スキーマレジストリAPIの使い始めに
 description: このドキュメントでは、スキーマレジストリAPIを呼び出す前に知っておく必要があるコア概念の概要を説明します。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 44%
