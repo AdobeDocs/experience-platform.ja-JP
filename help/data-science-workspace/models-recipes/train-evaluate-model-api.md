@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；トレーニングと評価；データサイエンスワークスペース；人気の高いトピック；Senesie Machine Learning API
 solution: Experience Platform
-title: モデルのトレーニングと評価（API）
+title: Senesie Machine Learning APIを使用したモデルのトレーニングと評価
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Senesie Machine Learning API呼び出しを使用して、モデルを作成、トレーニング、評価する方法について説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 96%
+source-wordcount: '1237'
+ht-degree: 94%
 
 ---
 
 
-# モデルのトレーニングと評価（API）
+# [!DNL Sensei Machine Learning] APIを使用してモデルをトレーニングおよび評価する
 
 
 このチュートリアルでは、API 呼び出しを使用してモデルを作成、トレーニング、評価する方法を示します。API ドキュメントの詳しいリストについては、[こちらのドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)を参照してください。
