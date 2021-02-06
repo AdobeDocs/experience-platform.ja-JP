@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Tableau;Tableau;クエリサービス；クエリサービス；クエリサービスに接続；
 solution: Experience Platform
-title: Tableau との接続
+title: Tableauをクエリサービスに接続
 topic: connect
 description: このドキュメントでは、TableauとAdobe Experience Platformクエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 13%
+source-wordcount: '213'
+ht-degree: 11%
 
 ---
 
 
-# [!DNL Tableau]
+# [!DNL Tableau]をクエリサービスに接続
 
 このドキュメントでは、TableauとAdobe Experience Platform[!DNL Query Service]を接続する手順を説明します。
 
 >[!NOTE]
 >
 > このガイドは、[!DNL Tableau]へのアクセス権が既にあり、そのインターフェイスの操作方法に精通していることを前提としています。 [!DNL Tableau]に関する詳細は、[正式な [!DNL Tableau] ドキュメント](https://help.tableau.com/current/pro/desktop/en-us/default.htm)を参照してください。
-
-## [!DNL Tableau]をプラットフォームに接続
 
 [!DNL Tableau]を[!DNL Query Service]に接続するには、[!DNL Tableau]を開き、**[!DNL To a Server]**&#x200B;セクションで&#x200B;**[!DNL More]**&#x200B;を選択し、次に&#x200B;**[!DNL PostgreSQL]**&#x200B;を選択します
 
