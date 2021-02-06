@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ラベルapi；ポリシーサービスapi；サポートされるデータ使用ラベル；契約ラベル；IDラベル；機密ラベル
 solution: Experience Platform
-title: コアデータの使用ラベル
+title: データ使用ラベルの用語集
 topic: labels
 description: このドキュメントでは、Adobe Experience Platformが現在サポートしているすべてのデータ使用ラベルについて概説します。
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 81%
@@ -13,7 +13,7 @@ ht-degree: 81%
 ---
 
 
-# コアデータの使用ラベル
+# データ使用ラベルの用語集
 
 データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットを分類できます。Adobe Experience Platformデータガバナンスでは、データの分類を開始する際にすぐに使用できるコアデータ使用ラベルがいくつか用意されています。
 
