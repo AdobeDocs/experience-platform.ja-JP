@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；自動適用；APIベースの適用；データガバナンス
 solution: Experience Platform
-title: ポリシー
+title: ポリシー評価APIエンドポイント
 topic: developer guide
 description: マーケティングアクションが作成され、ポリシーが定義されたら、Policy Service API を使用して、特定のアクションによってポリシーが違反したかどうかを評価できます。返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反するポリシーのセットの形をとります。
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1541'
+source-wordcount: '1544'
 ht-degree: 17%
 
 ---
