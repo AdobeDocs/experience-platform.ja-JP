@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；アドビ定義関数；sql;
 solution: Experience Platform
-title: アドビ定義関数
+title: クエリ・サービスのAdobe定義SQL関数
 topic: functions
-description: このドキュメントでは、クエリサービスで使用できるアドビ定義の関数について説明します。
+description: このドキュメントでは、Adobe Experience Platformクエリサービスで使用できるAdobe定義関数について説明します。
 translation-type: tm+mt
-source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2902'
-ht-degree: 27%
+source-wordcount: '2913'
+ht-degree: 26%
 
 ---
 
 
-# アドビ定義関数
+# クエリサービスのAdobe定義SQL関数
 
-アドビ定義関数ここで、ADFと呼ばれるものは、Adobe Experience Platformクエリサービスで事前に作成された関数で、[!DNL Experience Event]データに対する一般的なビジネス関連タスクの実行に役立ちます。 例えば、[セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)と[アトリビューション](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数は、Adobe Analyticsで見つかるのと同じように、セッション化との関数です。
+ADFと呼ばれるAdobe定義関数は、Adobe Experience Platformクエリサービスで事前に構築された関数で、[!DNL Experience Event]データに対する一般的なビジネス関連タスクの実行に役立ちます。 例えば、[セッション化](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html)と[アトリビューション](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)の関数は、Adobe Analyticsで見つかるのと同じように、セッション化との関数です。
 
 このドキュメントは、[!DNL Query Service]で利用できるAdobe定義関数の情報を提供します。
 
