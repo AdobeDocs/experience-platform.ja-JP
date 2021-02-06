@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；データベースコネクタ
 solution: Experience Platform
-title: UIでのデータベースコネクタのデータフローの設定
+title: UIでのデータベース・ソース接続のデータ・フローの構成
 topic: overview
 type: Tutorial
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、データベースアカウントを使用して新しいデータフローを構成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1448'
 ht-degree: 3%
 
 ---
 
 
-# UIでのデータベースコネクタのデータフローの設定
+# UIでのデータベース接続用のデータフローの構成
 
 データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、データベースアカウントを使用して新しいデータフローを構成する手順を説明します。
 
@@ -181,4 +181,4 @@ ht-degree: 3%
 
 ### [!DNL Profile]母集団の受信データをアクティブ化
 
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むのに使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
+ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
