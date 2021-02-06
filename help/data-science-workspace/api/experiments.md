@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；実験；先生の機械学習api
 solution: Experience Platform
-title: 実験
+title: 実験APIエンドポイント
 topic: Developer guide
 description: モデルの開発とトレーニングは、実験レベルで行われます。実験は、MLInstance、トレーニング実行、スコア付け実行で構成されます。
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 98%
+source-wordcount: '783'
+ht-degree: 97%
 
 ---
 
 
-# 実験
+# 実験エンドポイント
 
 モデルの開発とトレーニングは、実験レベルで行われます。実験は、MLInstance、トレーニング実行、スコア付け実行で構成されます。
 
