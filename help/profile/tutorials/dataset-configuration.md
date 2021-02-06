@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API；データセットを有効にする
-title: API を使用したプロファイルおよび ID サービスのデータセットの設定
+title: APIを使用したプロファイルおよびIDサービス用のデータセットの設定
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience PlatformAPIを使用して、リアルタイム顧客プロファイルおよびIDサービスでデータセットを有効にする方法について説明します。
 translation-type: tm+mt
-source-git-commit: f34983dc13a900e7c8fe2e2cef454400c1b6a726
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1057'
-ht-degree: 54%
+ht-degree: 53%
 
 ---
 
