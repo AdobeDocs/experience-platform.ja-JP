@@ -1,25 +1,21 @@
 ---
 keywords: mobile;ブレーズ。メッセージ；
-title: ブレーズ先
-seo-title: ブレーズ先
+title: 接続先をブレーズ
 description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
-seo-description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '932'
 ht-degree: 5%
 
 ---
 
 
-# （ベータ版） [!DNL Braze]宛先
+# （ベータ版） [!DNL Braze]接続
 
 >[!IMPORTANT]
 >
 >Adobe Experience Platformのブレーズ行き先は現在ベータ段階です。 ドキュメントと機能は変更される場合があります。
-
-## 概要 {#overview}
 
 [!DNL Braze]宛先は、プロファイルデータを[!DNL Braze]に送信するのに役立ちます。
 
