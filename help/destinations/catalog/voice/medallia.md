@@ -1,21 +1,17 @@
 ---
 keywords: メダリア
-title: Medallia 拡張機能
-seo-title: Medallia 拡張機能
+title: Medalia Extension Destination
 description: メダリア・エクステンションはAdobe Experience Platformの客先の声。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: メダリア・エクステンションはAdobe Experience Platformの客先の声。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 31%
+source-wordcount: '542'
+ht-degree: 29%
 
 ---
 
 
-# [!DNL Medallia] 拡張子 {#medallia-extension}
-
-## 概要 {#overview}
+# [!DNL Medallia] 拡張機能 {#medallia-extension}
 
 [!DNL Medallia]は、Webプロパティに素早くシームレスに展開できます。 また、この拡張機能を使用すると、調査イベントの検出、データ要素を使用した顧客フィードバックのリアルタイムキャプチャ、ルールでのフィードバックの使用によるカスタマーエクスペリエンスのパーソナライズ、Adobe Analytics とのデータの共有が可能になります。
 
