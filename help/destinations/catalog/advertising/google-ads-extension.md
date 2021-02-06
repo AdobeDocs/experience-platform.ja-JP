@@ -1,21 +1,17 @@
 ---
 keywords: Google広告；Google広告；Google広告拡張；Google広告拡張
-title: Google 広告拡張機能
-seo-title: Google 広告拡張機能
+title: Google広告の拡張先
 description: Google Ads拡張機能は、Adobe Experience Platformの広告の表示先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Google Ads拡張機能は、Adobe Experience Platformの広告の表示先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 26%
+source-wordcount: '538'
+ht-degree: 23%
 
 ---
 
 
 # [!DNL Google Ads] 拡張機能
-
-## 概要 {#overview}
 
 この拡張機能は、[!DNL Google Ads]をクリックしたユーザーからのコンバージョンを追跡します。 [!DNL Google Ads]が依存するので、gtag.js拡張をインストールしてライブラリに追加する必要もあります。
 
