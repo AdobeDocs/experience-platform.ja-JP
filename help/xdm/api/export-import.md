@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；エクスポート；rpc;
 solution: Experience Platform
-title: エクスポート/インポートエンドポイントガイド
+title: APIエンドポイントの書き出し/読み込み
 description: スキーマレジストリAPIの/exportエンドポイントと/importエンドポイントを使用すると、IMS組織とサンドボックス間でXDMリソースを共有できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: dfa91e387b6fcd0d528a523a06d2516bc8befc20
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 2%
