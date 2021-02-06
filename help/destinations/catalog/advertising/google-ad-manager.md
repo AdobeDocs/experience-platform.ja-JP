@@ -1,21 +1,17 @@
 ---
 keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager
-title: Google Ad Manager の宛先
-seo-title: Google Ad Manager の宛先
-description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
-seo-description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。 '
+title: Google Ad Managerの接続先
+description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。  '
 translation-type: tm+mt
-source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 35%
+source-wordcount: '676'
+ht-degree: 30%
 
 ---
 
 
-# [!DNL Google Ad Manager Destination]
-
-## 概要
+# [!DNL Google Ad Manager] connection
 
 [!DNL Google Ad Manager]（以前は for Publishers または と呼ばれていました）は の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。[!DNL DoubleClick][!DNL DoubleClick AdX][!DNL Google]
 
