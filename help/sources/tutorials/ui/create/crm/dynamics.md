@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics
 solution: Experience Platform
-title: UIでMicrosoft Dynamicsソースコネクタを作成する
+title: UIでMicrosoft Dynamics Source Connectionを作成する
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してMicrosoft Dynamics （以下「Dynamics」と呼ばれる）ソースコネクタを作成する手順を説明します。
+description: Adobe Experience PlatformUIを使用してMicrosoft Dynamicsソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 4241e00fd444969e5a40c8b34dd7786b1a3c6dcb
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '596'
 ht-degree: 7%
 
 ---
 
 
-# UIに[!DNL Microsoft Dynamics]ソースコネクタを作成する
+# UIに[!DNL Microsoft Dynamics]ソース接続を作成する
 
-このチュートリアルでは、プラットフォームユーザーインターフェイスを使用して[!DNL Microsoft Dynamics] （以下「[!DNL Dynamics]」と呼びます）ソースコネクタを作成する手順を説明します。
+このチュートリアルでは、Adobe Experience PlatformUIを使用して[!DNL Microsoft Dynamics]（以下「[!DNL Dynamics]」と呼ばれる）ソース接続を作成する手順を説明します。
 
 ## はじめに
 
