@@ -1,21 +1,17 @@
 ---
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
-title: Google gtag 拡張
-seo-title: Google gtag 拡張
+title: Google Gtag Extensionの宛先
 description: Googleタグ拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Googleタグ拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 31%
+source-wordcount: '553'
+ht-degree: 29%
 
 ---
 
 
 # Google gtag 拡張 {#gtag-advertising-extension}
-
-## 概要 {#overview}
 
 Googleの`gtag.js`をサイトに読み込んで、イベントデータを[!DNL Google Analytics]、Google Ads、および[!DNL Google Marketing Platform]に送信します。 この拡張機能は、gtag コードをサイトに追加するだけです。他の Google 拡張機能を使用して、gtag を使用するイベントやアクションを追加する必要があります。
 
