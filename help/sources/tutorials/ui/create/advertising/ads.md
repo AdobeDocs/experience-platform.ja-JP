@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Google AdWords;Google AdWordsソースコネクタ；google adwordsコネクタ
 solution: Experience Platform
-title: UIでのGoogle AdWordsソースコネクタの作成
+title: UIでのGoogle AdWordsソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してGoogle AdWordsソースコネクタを作成する手順を説明します。
+description: Adobe Experience PlatformUIを使用してGoogle AdWordsソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '506'
 ht-degree: 9%
 
 ---
 
 
-# UIに[!DNL Google AdWords]ソースコネクタを作成する
+# UIに[!DNL Google AdWords]ソース接続を作成する
 
 >[!NOTE]
 >
