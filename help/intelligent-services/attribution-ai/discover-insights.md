@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；インサイト；アトリビューションai；人気のあるトピック；アトリビューションaiインサイト
 solution: Intelligent Services, Experience Platform
-title: Attribution AI でのインサイトの調査
+title: Attribution AI内のDiscoverインサイト
 topic: Attribution AI insights
 description: このドキュメントは、アドビインテリジェントサービスのユーザーインターフェイスでサービスインスタンスのインサイトを操作する際のガイドとして提供されています。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1656'
-ht-degree: 50%
+ht-degree: 49%
 
 ---
 
 
-# Attribution AI でのインサイトの調査
+# Attribution AI内のインサイトの検出
 
 Attribution AI サービスインスタンスは、マーケティングパフォーマンスと投資回収率に関するマーケティングの意思決定およびその評価に役立つインサイトを提供します。サービスインスタンスを選択すると、ビジュアル化された情報とフィルターが表示されます。これらは、カスタマージャーニーの各段階における、すべての顧客インタラクションの影響を理解するのに役立ちます。
 
