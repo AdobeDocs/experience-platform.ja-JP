@@ -1,19 +1,17 @@
 ---
 keywords: 飛行船タグ；飛行船の目的地
-title: 航空船タグの宛先
-seo-title: 航空船タグの宛先
+title: 航空船タグ接続先
 description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
-seo-description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1197'
 ht-degree: 13%
 
 ---
 
 
-# （ベータ版） [!DNL Airship Tags]宛先{#airship-tags-destination}
+# （ベータ版） [!DNL Airship Tags]接続{#airship-tags-destination}
 
 >[!IMPORTANT]
 >
