@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure Data LakeストレージGen2;ADLS Gen2;adls gen2;adlsコネクタ
 solution: Experience Platform
-title: UI での Azure データレイクストレージ Gen2 ソースコネクタの作成
+title: UIにAzure Data LakeストレージGen2ソース接続を作成する
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Azure Data LakeストレージGen2 （以下「ADLS Gen2」と呼ばれる）ソースコネクタをプラットフォームユーザーインターフェイスを使用して認証する手順を説明します。
+description: Adobe Experience PlatformUIを使用してAzure Data LakeストレージGen2ソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 11%
+source-wordcount: '484'
+ht-degree: 9%
 
 ---
 
 
-# UIに[!DNL Azure Data Lake Storage Gen2]ソースコネクタを作成する
+# UIに[!DNL Azure Data Lake Storage Gen2]ソース接続を作成する
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Azure Data Lake Storage Gen2] （以下「[!DNL ADLS Gen2]」と呼びます）ソースコネクタを[!DNL Platform]ユーザーインターフェイスを使用して認証する手順を説明します。
 
