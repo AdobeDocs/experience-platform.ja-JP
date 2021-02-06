@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure;azure blob;blob;Blob
 solution: Experience Platform
-title: Flow Service APIを使用してAzure BLOBコネクタを作成する
+title: Flow Service APIを使用してAzure Blobソース接続を作成する
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをAzure Blob （以下「Blob」）ストレージに接続する手順を順を追って説明します。
+description: Flow Service APIを使用してAdobe Experience PlatformをAzure Blobに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '761'
 ht-degree: 26%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL Azure Blob]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Azure Blob]ソース接続を作成する
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して、[!DNL Azure Blob]（以下「BLOB」と呼ばれる）をExperience Platformに接続する手順を順を追って説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して、[!DNL Azure Blob]（以下「BLOB」と呼ばれる）をAdobe Experience Platformに接続する手順を順を追って説明します。
 
 ## はじめに
 
@@ -25,7 +25,7 @@ ht-degree: 26%
 * [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-次の節では、[!DNL Flow Service] APIを使用して[!DNL Blob]ソースコネクタを正しく作成するために知っておく必要がある追加情報について説明します。
+以下の節では、[!DNL Flow Service] APIを使用して[!DNL Blob]ソース接続を正しく作成するために知っておく必要がある追加情報を紹介します。
 
 ### 必要な資格情報の収集
 
