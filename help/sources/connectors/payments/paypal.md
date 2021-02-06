@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Paypal;Paypal;PayPal
 solution: Experience Platform
-title: PayPalコネクタ
-topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してPayPalをプラットフォームに接続する方法に関する情報を提供しています。
+title: PayPalソースコネクタの概要
+description: APIまたはユーザーインターフェイスを使用してPayPalをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 11%
+ht-degree: 8%
 
 ---
 
@@ -31,11 +30,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL PayPal]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用してPayPalコネクタを作成する](../../tutorials/api/create/payments/paypal.md)
+- [Flow Service APIを使用してPayPalソース接続を作成する](../../tutorials/api/create/payments/paypal.md)
 - [Flow Service APIを使用して支払申込書を調査します](../../tutorials/api/explore/payments.md)
 - [Flow Service APIを使用して、支払い申請からデータを収集する](../../tutorials/api/collect/payments.md)
 
 ## UIを使用して[!DNL PayPal]を[!DNL Platform]に接続
 
-- [UI での PayPal ソースコネクタの作成](../../tutorials/ui/create/payments/paypal.md)
-- [UIで支払コネクタのデータフローを構成します](../../tutorials/ui/dataflow/payments.md)
+- [UIでのPayPalソース接続の作成](../../tutorials/ui/create/payments/paypal.md)
+- [UIでの支払接続のデータフローの構成](../../tutorials/ui/dataflow/payments.md)
