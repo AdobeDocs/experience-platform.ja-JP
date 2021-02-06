@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；取り込み；開発者ガイド；apiガイド；アップロード；取り込みパーケット；取り込みjson;
 solution: Experience Platform
-title: Batch Ingestion開発者ガイド
+title: Batch Ingest APIガイド
 topic: developer guide
 description: このドキュメントでは、バッチ取得 API の使用に関する包括的な概要を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 88%
@@ -13,7 +13,7 @@ ht-degree: 88%
 ---
 
 
-# バッチ取得開発者ガイド
+# バッチ取り込みAPIガイド
 
 このドキュメントでは、[バッチ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) の使用に関する包括的な概要を説明します。
 
