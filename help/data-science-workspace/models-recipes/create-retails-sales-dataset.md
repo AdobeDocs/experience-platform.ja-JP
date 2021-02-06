@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform；小売の販売手法；データサイエンスワークスペース；人気の高いトピック；レシピ
 solution: Experience Platform
-title: 小売販売スキーマとデータセットの作成
+title: 小売売上スキーマとデータセットの作成
 topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、他のすべての Adobe Experience Platform Data Science Workspace　チュートリアルに必要な前提条件とアセットについて説明します。完了すると、Experience Platform 上の IMS 組織のメンバーと共に、小売販売スキーマとデータセットを利用できるようになります。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 68%
+ht-degree: 63%
 
 ---
 
@@ -111,7 +111,7 @@ ht-degree: 68%
 また、提供されたブートストラップスクリプトを使用して、小売販売のサンプルデータを[!DNL Experience Platform]に正しく取り込みました。
 
 取得したデータを引き続き使用するには、以下を実行します。
-- [Jupyter ノートブックを使用したデータ分析](../jupyterlab/analyze-your-data.md)
-   - Data Science Workspace　の Jupyter ノートブックを使用して、データにアクセスし、調査、視覚化、理解します。
+- [Jupyterノートブックを使用してデータを分析](../jupyterlab/analyze-your-data.md)
+   - Data Science WorkspaceのJupyterノートブックを使用して、データにアクセス、調査、視覚化、理解します。
 - [ソースファイルのレシピへのパッケージ化](./package-source-files-recipe.md)
    - 読み込み可能なレシピファイルにソースファイルをパッケージ化して、独自のモデルを[!DNL Data Science Workspace]に取り込む方法を学ぶには、このチュートリアルに従ってください。
