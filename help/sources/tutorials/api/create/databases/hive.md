@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Apache hive;hive;Hive
 solution: Experience Platform
-title: Flow Service APIを使用してAzure HDInsights ConnectorでApache Hiveを作成する
+title: Flow Service APIを使用したAzure HDInsights Source ConnectionでのApache Hiveの作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Azure HDInsights上のApache HiveをExperience Platformに接続する手順を順を追って説明します。
+description: Flow Service APIを使用して、Azure HDInsightsのApache HiveをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '573'
 ht-degree: 19%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL Azure HDInsights]コネクタ上に[!DNL Apache Hive]を作成する
+# [!DNL Flow Service] APIを使用して[!DNL Azure HDInsights]ソース接続上に[!DNL Apache Hive]を作成する
 
 >[!NOTE]
 >
