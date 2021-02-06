@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；日付範囲
 solution: Experience Platform
-title: Observibility Insights API開発者ガイド
+title: 観察性インサイトAPIガイド
 topic: developer guide
-description: 観察性インサイトは、Adobe Experience Platform で主要な観察性指標を公開するための RESTful API です。これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
+description: 観察性インサイトは、開発者がAdobe Experience Platformで主要な観察性指標を公開できるRESTful APIです。 これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 30%
+source-wordcount: '159'
+ht-degree: 19%
 
 ---
 
 
-# [!DNL Observability Insights] API開発者ガイド
+# [!DNL Observability Insights] APIガイド
 
 [!DNL Observability Insights] APIは、Adobe Experience Platformの様々な機能の指標データをプログラム的に取得して監視できるエンドポイントを提供します。 このエンドポイントの概要を以下に示します。 詳しくは、エンドポイントガイドを参照し、必要なヘッダー、サンプルAPI呼び出しの読み取りなどに関する重要な情報については、[はじめに](./getting-started.md)を参照してください。
 
