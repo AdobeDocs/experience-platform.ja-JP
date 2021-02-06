@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform ヘルプのアクセス制御
 breadcrumb-title: アクセス制御ガイド
 user-guide-description: Adobe Admin Console の製品プロファイルを活用して、ユーザーを、権限やサンドボックスとリンクさせます。
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 96%
+source-wordcount: '98'
+ht-degree: 92%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 96%
 * [アクセス制御の概要](home.md)
 * アクセス制御 UI {#ui}
    * [概要](ui/overview.md)
-   * [ワークスペースアクセス制御の参照](ui/browse.md)
+   * [製品プロファイルの選択](ui/browse.md)
    * [製品プロファイルの権限の管理](ui/permissions.md)
    * [製品プロファイルの詳細と追加サービスの管理](ui/details-and-services.md)
    * [新しい製品プロファイルの作成](ui/create-profile.md)
