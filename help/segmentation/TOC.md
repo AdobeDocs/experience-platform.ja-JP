@@ -1,23 +1,23 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform セグメント化サービスのヘルプ
+user-guide-title: Adobe Experience Platform セグメント化サービス
 breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイムの顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 translation-type: tm+mt
-source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 83%
+source-wordcount: '135'
+ht-degree: 88%
 
 ---
 
 
-# Adobe Experience Platform セグメント化サービスのヘルプ {#segmentation}
+# Adobe Experience Platform セグメント化サービス {#segmentation}
 
-- [概要](home.md)
+- [セグメント化サービスの概要](home.md)
 - [セグメントデータタイプ](data-types.md)
-- セグメント化API開発ガイド{#api}
+- セグメント化 API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
    - [ジョブの書き出し](api/export-jobs.md)
@@ -28,7 +28,7 @@ ht-degree: 83%
    - [セグメント検索](api/segment-search.md)
    - [ストリーミングセグメント化](api/streaming-segmentation.md)
 - セグメント化 UI {#ui}
-   - [セグメント化のUIガイド](ui/overview.md)
+   - [概要](ui/overview.md)
    - [セグメントダッシュボード](ui/segment-dashboard.md)
    - [セグメントビルダー](ui/segment-builder.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
