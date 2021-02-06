@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure synapse分析；シナプス；シナプス；azure synapse分析
 solution: Experience Platform
-title: UIでのAzure synapse分析ソースコネクタの作成
+title: UIでのAzure synapse分析ソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用して、Azure synapse分析（以下「シナプス」と呼びます）ソースコネクタを作成する手順を説明します。
+description: Adobe Experience PlatformUIを使用して、Azure synapse分析（以下「シナプス」と呼ばれる）ソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '478'
 ht-degree: 9%
 
 ---
 
 
-# UIに[!DNL Azure Synapse Analytics]ソースコネクタを作成する
+# UIに[!DNL Azure Synapse Analytics]ソース接続を作成する
 
 >[!NOTE]
 >
