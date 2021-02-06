@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；データセット接続フローサービス；フローサービス；フローサービス接続
 solution: Experience Platform
-title: Flow Service APIを使用してExperience Platformデータセットベースの接続を作成する
+title: Flow Service APIを使用したAdobe Experience Platformデータセットベース接続の作成
 topic: overview
 type: Tutorial
-description: フローサービスは、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元管理するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+description: Flow Service APIを使用して、Adobe Experience Platformへのデータセットベース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '721'
 ht-degree: 23%
 
 ---
