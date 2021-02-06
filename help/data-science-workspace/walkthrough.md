@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ウォークスルー；Data Science Workspace；よく読まれるトピック
 solution: Experience Platform
-title: Data Science Workspace　のチュートリアル
+title: Data Science Workspaceのチュートリアル
 topic: Walkthrough
 description: このドキュメントでは、Adobe Experience Platform Data Science Workspace　のチュートリアルを提供します。特に、データサイエンティストが通る一般的なワークフローは、機械学習を使用した問題の解決に役立ちます。
 translation-type: tm+mt
-source-git-commit: 0d76b14599bc6b6089f9c760ef6a6be3a19243d4
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 33%
