@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Analytics Data Connector;analytics;Analytics
 solution: Experience Platform
-title: Analytics コネクタ
+title: レポートスイートデータ用Adobe Analyticsソースコネクタ
 topic: overview
 description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 42%
+source-wordcount: '502'
+ht-degree: 41%
 
 ---
 
 
-# Analytics コネクタ
+# レポートスイートデータ用Adobe Analyticsコネクタ
 
-Adobe Experience Platform を使用すると、Analytics コネクタ（ADC）を介して Adobe Analytics データを取得することができます。ADCは、[!DNL Analytics]が収集したデータをリアルタイムで[!DNL Platform]にストリーミングし、SCDS形式の[!DNL Analytics]データを[!DNL Platform] (XDM)フィールドに変換して[!DNL Experience Data Model]が使用します。
+Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）を介して Adobe Analytics データを取り込むことができます。ADCは、[!DNL Analytics]が収集したデータをリアルタイムで[!DNL Platform]にストリーミングし、SCDS形式の[!DNL Analytics]データを[!DNL Platform] (XDM)フィールドに変換して[!DNL Experience Data Model]が使用します。
 
 このドキュメントでは、[!DNL Analytics]の概要と[!DNL Analytics]データの使用例を説明します。
 
