@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；RStudio;rstudio;クエリサービスに接続；
 solution: Experience Platform
-title: RStudio との接続
+title: RStudioをクエリサービスに接続
 topic: connect
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 39%
+source-wordcount: '282'
+ht-degree: 36%
 
 ---
 
 
-# [!DNL RStudio]
+# [!DNL RStudio]をクエリサービスに接続
 
 このドキュメントでは、[!DNL RStudio]とAdobe Experience Platform[!DNL Query Service]を結ぶ手順を順を追って説明します。
 
@@ -21,7 +21,7 @@ ht-degree: 39%
 >
 > このガイドは、[!DNL RStudio]へのアクセス権が既にあり、その使い方に精通していることを前提としています。 [!DNL RStudio]に関する詳細は、[正式な [!DNL RStudio] ドキュメント](https://rstudio.com/products/rstudio/)を参照してください。
 
-## [!DNL RStudio]と[!DNL Query Service]の接続
+## [!DNL RStudio]インターフェイスに[!DNL Query Service]接続を作成する
 
 [!DNL RStudio]をインストールした後、表示される&#x200B;**[!DNL Console]**&#x200B;画面で、まず[!DNL PostgreSQL]を使用するRスクリプトを準備する必要があります。
 
