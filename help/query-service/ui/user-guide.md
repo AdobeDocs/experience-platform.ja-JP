@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリエディタ；クエリエディタ；クエリサービス；クエリサービス；
 solution: Experience Platform
-title: クエリエディターユーザガイド
+title: クエリエディターUIガイド
 topic: query editor
-description: クエリエディターは、Adobe Experience Platform クエリサービスが提供するインタラクティブなツールで、Experience Platform ユーザーインターフェイス内で顧客体験データのクエリを記述、検証および実行できます。クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
+description: クエリエディターは、Adobe Experience Platformクエリサービスが提供するインタラクティブなツールです。このツールを使用すると、Experience Platformユーザーインターフェイス内で顧客体験データのクエリを作成、検証、実行できます。 クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 translation-type: tm+mt
-source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '1081'
-ht-degree: 57%
+source-wordcount: '1082'
+ht-degree: 53%
 
 ---
 
 
-# [!DNL Query Editor] ユーザーガイド
+# [!DNL Query Editor] UIガイド
 
 [!DNL Query Editor] は、Adobe Experience Platformが提供するインタラクティブなツール [!DNL Query Service] [!DNL Experience Platform] です。ユーザーインターフェイス内で顧客体験データのクエリを作成、検証および実行できます。[!DNL Query Editor] は、分析およびデータ探索用の開発クエリをサポートし、開発目的でインタラクティブクエリを実行できるほか、でデータセットを設定する非インタラクティブクエリも実行でき [!DNL Experience Platform]ます。
 
