@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API;プレビュー；サンプル
-title: プロファイルプレビュー — リアルタイム顧客プロファイルAPI
+title: プロファイルサンプルステータスAPIエンドポイント
 description: リアルタイム顧客プロファイルAPIエンドポイントを使用すると、プロファイルデータの最新の成功したサンプルをプレビューできるほか、データセット別、Adobe Experience Platform内のID名前空間別にリストプロファイルの配布を検証できます。
 topic: guide
 translation-type: tm+mt
-source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '1553'
 ht-degree: 5%
 
 ---
@@ -193,7 +193,7 @@ curl -X GET \
 
 ## 名前空間別リストプロファイル配布
 
-`/previewsamplestatus/report/namespace`エンドポイントに対してGETリクエストを実行し、プロファイルストア内の結合されたすべてのプロファイルのID名前空間別の分類を表示できます。 ID名前空間は、顧客データが関連付けられるコンテキストのインジケータとして機能する、Adobe Experience PlatformIDサービスの重要なコンポーネントです。 詳しくは、[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。
+`/previewsamplestatus/report/namespace`エンドポイントに対してGETリクエストを実行し、プロファイルストア内の結合されたすべてのプロファイルのID名前空間別の分類を表示できます。 ID名前空間は、顧客データが関連付けられるコンテキストのインジケーターとして機能する、Adobe Experience PlatformIDサービスの重要なコンポーネントです。 詳しくは、[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。
 
 >[!NOTE]
 >
