@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリ;クエリエディタ；クエリエディタ；クエリエディタ；
 solution: Experience Platform
-title: Adobe Experience Platform クエリサービス UI ガイド
+title: クエリサービスUIガイド
 topic: guide
-description: Adobe Experience Platform クエリサービスは、クエリの書き込みと実行、以前に実行したクエリの表示、IMS 組織内のユーザーが保存したクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
+description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、表示が以前に実行したクエリ、IMS組織内でユーザーによって保存されたクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 59%
+source-wordcount: '629'
+ht-degree: 53%
 
 ---
 
