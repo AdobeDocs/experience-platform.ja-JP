@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;SFTP；セキュアファイル転送プロトコル；セキュアファイル転送プロトコル
 solution: Experience Platform
-title: Flow Service APIを使用したSFTPコネクタの作成
+title: Flow Service APIを使用したSFTPソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをSFTP(Secure File Transfer Protocol)サーバーに接続する手順を順を追って説明します。
+description: Flow Service APIを使用して、Adobe Experience PlatformをSFTP（セキュアファイル転送プロトコル）サーバーに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '823'
 ht-degree: 23%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用してSFTPコネクタを作成する
+# [!DNL Flow Service] APIを使用したSFTPソース接続の作成
 
 >[!NOTE]
 >
