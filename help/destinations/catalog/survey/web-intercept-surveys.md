@@ -1,21 +1,17 @@
 ---
 keywords: QuestionPro Intercept調査;Questionpro Intercept調査;QuestionPro;Questionpro
-title: QuestionPro Intercept Surveys 拡張機能
-seo-title: QuestionPro Intercept Surveys 拡張機能
+title: QuestionPro Intercept調査拡張の宛先
 description: QuestionPro Intercept調査拡張は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: QuestionPro Intercept調査拡張は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 31%
+source-wordcount: '532'
+ht-degree: 28%
 
 ---
 
 
-# [!DNL QuestionPro Intercept Surveys] 拡張子 {#questionpro-extension}
-
-## 概要 {#overview}
+# [!DNL QuestionPro Intercept Surveys] 拡張機能 {#questionpro-extension}
 
 [!DNL QuestionPro Intercept Surveys] は、調査を導入し、トランザクションの時点で、またはユーザーが Web サイトを開始／終了したときに、行動データを収集するためのプラットフォームです。
 
