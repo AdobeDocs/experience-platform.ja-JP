@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ユーザーガイド；アトリビューションai；人気のあるトピック；地域
 solution: Experience Platform, Intelligent Services
-title: Attribution AI ユーザーガイド
+title: Attribution AIUIガイド
 topic: User guide
 description: このドキュメントは、インテリジェントサービスユーザーインターフェイスの Attribution AI を操作するためのガイドとなります。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '1755'
-ht-degree: 79%
+ht-degree: 78%
 
 ---
 
 
-# Attribution AI ユーザーガイド
+# Attribution AIUIガイド
 
 Attribution AI はインテリジェントサービスの一部で、顧客とのやり取りの影響と増分的な効果を指定した成果に照らして計算する、マルチチャネルのアルゴリズムアトリビューションサービスです。Attribution AI を使用すると、マーケターは、カスタマージャーニーの各段階における顧客との個々のやり取りの影響を把握することで、マーケティング費用や広告費用を測定し最適化できます。
 
