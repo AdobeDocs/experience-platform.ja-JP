@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ポリシーユーザーガイド
 solution: Experience Platform
-title: データ使用ポリシーユーザガイド
+title: UIでのデータ使用ポリシーの管理
 topic: policies
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platformユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要を説明します。
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 34%
+source-wordcount: '772'
+ht-degree: 31%
 
 ---
 
 
-# データ使用ポリシーユーザガイド
+# UI でのデータ使用ポリシーの管理
 
 Adobe Experience Platform[!DNL Data Governance]は、データ使用ポリシーの作成と管理を可能にするユーザーインターフェイスを提供します。 このドキュメントでは、[!DNL Experience Platform]ユーザーインターフェイスの&#x200B;**ポリシー**&#x200B;ワークスペースで実行できるアクションの概要を説明します。
 
@@ -28,7 +28,7 @@ Adobe Experience Platform[!DNL Data Governance]は、データ使用ポリシー
 - [[!DNL Data Governance]](../home.md)
 - [データ使用ポリシー](./overview.md)
 
-## データ使用ポリシーの表示 {#view-policies}
+## 表示の既存ポリシー{#view-policies}
 
 [!DNL Experience Platform] UIで「**[!UICONTROL ポリシー]**」を選択し、**[!UICONTROL ポリシー]**&#x200B;ワークスペースを開きます。 「**[!UICONTROL 参照]**」タブには、使用可能なポリシー（関連するラベル、マーケティングアクション、ステータスなど）が一覧表示されます。
 
@@ -38,7 +38,7 @@ Adobe Experience Platform[!DNL Data Governance]は、データ使用ポリシー
 
 ![](../images/policies/policy-details.png)
 
-## カスタムデータ使用ポリシーの作成  {#create-policy}
+## カスタムポリシー{#create-policy}の作成
 
 新しいカスタムデータ使用ポリシーを作成するには、**[!UICONTROL ポリシー]**&#x200B;ワークスペースの&#x200B;**[!UICONTROL 参照]**&#x200B;タブの右上隅にある「ポリシー&#x200B;**[!UICONTROL 作成]**」を選択します。
 
@@ -68,7 +68,7 @@ Adobe Experience Platform[!DNL Data Governance]は、データ使用ポリシー
 
 ![](../images/policies/created-policy.png)
 
-## データ使用ポリシーの有効化または無効化 {#enable}
+## ポリシー{#enable}を有効または無効にする
 
 すべてのデータ使用ポリシー(Adobeが提供するコアポリシーを含む)は、デフォルトで無効になっています。 個々のポリシーの適用が考慮されるようにするには、APIまたはUIを使用して手動でそのポリシーを有効にする必要があります。
 
