@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；リストID;リストクラスタ
 solution: Experience Platform
-title: クラスター ID のリスト
+title: クラスター内のすべてのIDのリスト
 topic: API guide
 description: ID グラフで関連付けられている ID は、名前空間に関係なく、その ID グラフでは同じ「クラスター」の一部と見なされます。以下のオプションは、すべてのクラスターメンバーにアクセスする手段を提供します。
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 97%
+source-wordcount: '359'
+ht-degree: 95%
 
 ---
 
