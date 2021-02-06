@@ -5,7 +5,7 @@ title: コンテンツとコマースAIの概要
 topic: Content and Commerce AI
 description: コンテンツとコマースAIは、コンテンツからインテリジェントな機能を抽出し、コンテンツの整理、合理化を行い、顧客に対して効果的でパーソナライズされたエクスペリエンスを提供するAIサービスのセットです。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
