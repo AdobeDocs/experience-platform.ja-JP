@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；フィルタ関数；フィルタ；
 solution: Experience Platform
-title: フィルター関数
+title: PQLフィルタ関数
 topic: developer guide
-description: フィルター関数 は、プロファイルクエリ言語(PQL)でアレイ内のデータをフィルタするために使用します。
+description: フィルター関数は、プロファイルクエリ言語（PQL）で配列内のデータをフィルターするために使用します。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 77%
+source-wordcount: '220'
+ht-degree: 81%
 
 ---
 
