@@ -5,7 +5,7 @@ title: Privacy Serviceトラブルシューティングガイド
 topic: troubleshooting
 description: このドキュメントでは、Privacy Serviceに関するよくある質問と、APIでよく発生するエラーに関する情報に回答します。
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 42%
