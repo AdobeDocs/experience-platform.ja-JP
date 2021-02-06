@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；ファイル転送プロトコル；ファイル転送プロトコル
 solution: Experience Platform
-title: Flow Service APIを使用してFTPコネクタを作成する
+title: フローサービスAPIを使用したFTPソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをFTP(File Transfer Protocol)サーバに接続する手順を順を追って説明します。
+description: Flow Service APIを使用して、Adobe Experience PlatformをFTP（ファイル転送プロトコル）サーバーに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 20%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用してFTPコネクタを作成する
+# [!DNL Flow Service] APIを使用したFTPソース接続の作成
 
 >[!NOTE]
 >
