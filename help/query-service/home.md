@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ
 solution: Experience Platform
-title: Adobe Experience Platform クエリサービス
+title: クエリサービスの概要
 topic: overview
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 26%
+source-wordcount: '635'
+ht-degree: 25%
 
 ---
 
