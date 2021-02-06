@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；効果的なポリシー；アクセス制御api
 solution: Experience Platform
-title: 有効なポリシーの表示
+title: 有効なポリシーAPIエンドポイント
 topic: developer guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントは、Adobe Experience Platform向けアクセス制御APIを使用して効果的なポリシーを表示する方法のガイドとして機能します。
 translation-type: tm+mt
-source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 70%
+source-wordcount: '320'
+ht-degree: 68%
 
 ---
 
 
-# 有効なポリシーの表示
+# 有効なポリシーエンドポイント
 
 現在のユーザーに有効なポリシーを表示するには、 API で `/acl/effective-policies` エンドポイントに POST リクエストを実行します。[!DNL Access Control]取得する権限とリソースの種類は、リクエストペイロードに配列の形式で指定する必要があります。これは、以下の API 呼び出し例に示されています。
 
