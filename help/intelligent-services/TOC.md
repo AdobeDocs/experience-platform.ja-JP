@@ -6,10 +6,10 @@ user-guide-title: Intelligent Services のヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、スコアの生成、インサイトの発見、マーケティングイベントデータからのセグメントの作成をおこないます。
 translation-type: tm+mt
-source-git-commit: 0675b38397667e8764c75e22a1e2f2e4aaddeb3c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 55%
+source-wordcount: '119'
+ht-degree: 48%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 55%
    - [Attribution AI の概要](attribution-ai/getting-started.md)
    - [入出力](attribution-ai/input-output.md)
    - [ユーザーインターフェイスガイド](attribution-ai/user-guide.md)
-   - [インサイトの発見](attribution-ai/discover-insights.md)
-   - [スコアへのアクセス](attribution-ai/download-scores.md)
-   - [AAIクエリサービスクイック開始ガイド](attribution-ai/aai-query-service.md)
+   - [Discoverインサイト](attribution-ai/discover-insights.md)
+   - [スコアのダウンロード](attribution-ai/download-scores.md)
+   - [クエリサービスを使用したスコアの分析](attribution-ai/aai-query-service.md)
 - コンテンツとコマースAI （ベータ版） {#content-commerce-ai}
    - [概要](content-commerce-ai/overview.md)
    - [はじめに](content-commerce-ai/getting-started.md)
@@ -41,7 +41,7 @@ ht-degree: 55%
    - [入出力](customer-ai/input-output.md)
    - UIガイド{#user-guide}
       - [インスタンスの設定](customer-ai/user-guide/configure.md)
-      - [インサイトの発見](customer-ai/user-guide/discover-insights.md)
+      - [Discoverインサイト](customer-ai/user-guide/discover-insights.md)
       - [顧客AIスコアを使用したセグメントの作成](customer-ai/user-guide/create-segment.md)
       - [スコアのダウンロード](customer-ai/user-guide/download-scores.md)
 - [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
