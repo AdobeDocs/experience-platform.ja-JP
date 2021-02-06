@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure Fileストレージ;Azureファイルストレージ
 solution: Experience Platform
-title: Azure Fileストレージコネクタ
+title: Azure Fileストレージソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure Fileストレージをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用してAzure FileストレージをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 3%
@@ -44,11 +44,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ### APIの使用
 
-- [Flow Service APIを使用してAzure Fileストレージコネクタを作成する](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Flow Service APIを使用してAzure Fileストレージソース接続を作成する](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
-- [UIにAzure Fileストレージソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UIにAzure Fileストレージソース接続を作成する](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
+- [UIでのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
