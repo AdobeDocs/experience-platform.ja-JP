@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；顧客属性コネクタ
 solution: Experience Platform
-title: 顧客属性コネクタ
+title: 顧客属性ソースコネクタの概要
 topic: overview
-description: 次のドキュメントは、APIまたはユーザーインターフェイスを使用して顧客属性をプラットフォームに接続する方法に関する情報を提供しています
+description: APIまたはユーザーインターフェイスを使用して顧客属性をAdobe Experience Platformに接続する方法を学びます
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '130'
 ht-degree: 35%
 
 ---
@@ -19,8 +19,8 @@ Adobe Experience Platform を使用すると、データを外部ソースから
 
 Experience Platformは、顧客属性プロファイルデータをAdobe Experience Platformに取り込むためのサポートを提供します。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して顧客属性をプラットフォームに接続する方法に関する情報を提供しています。
+次のドキュメントは、APIまたはユーザーインターフェイスを使用して顧客属性をAdobe Experience Platformに接続する方法に関する情報を提供しています。
 
 ## UIを使用した顧客属性とプラットフォームの接続
 
-- [UIでの顧客属性ソースコネクタの作成](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [UIでの顧客属性ソース接続の作成](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
