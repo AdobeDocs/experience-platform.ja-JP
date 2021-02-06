@@ -1,21 +1,17 @@
 ---
 keywords: livefyre; livefyre extension
-title: Adobe Livefyre 拡張機能
-seo-title: Adobe Livefyre 拡張機能
+title: AdobeLivefyre Extensionの宛先
 description: AdobeのLivefyre拡張機能は、Adobe Experience Platformのソーシャルターゲットです。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: AdobeのLivefyre拡張機能は、Adobe Experience Platformのソーシャルターゲットです。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 43%
+source-wordcount: '498'
+ht-degree: 41%
 
 ---
 
 
 # Adobe Livefyre 拡張機能 {#adobe-livefyre-extension}
-
-## 概要 {#overview}
 
 Adobe Livefyre を使用すれば、一定量のユーザー作成コンテンツを発見、整理し、Webサイトに公開して、高度にパーソナライズされた本物のエクスペリエンスを作成することができます。
 
