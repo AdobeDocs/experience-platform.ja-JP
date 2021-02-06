@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Apache Cassandra;apache cassandra;cassandra;Cassandra
 solution: Experience Platform
-title: Apache Cassandraコネクタ
+title: Apache Cassandraソースコネクタの概要
 topic: overview
-description: 次のドキュメントは、APIを使用してApache Cassandraをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIを使用してApache CassandraをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 18%
@@ -23,6 +23,6 @@ Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外�
 
 ## APIを使用して[!DNL Apache Cassandra]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用してApache Cassandraコネクタを作成する](../../tutorials/api/create/databases/cassandra.md)
+- [Flow Service APIを使用してApache Cassandraソース接続を作成する](../../tutorials/api/create/databases/cassandra.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
