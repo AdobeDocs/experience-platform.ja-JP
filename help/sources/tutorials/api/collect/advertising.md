@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；フローサービス；広告；google adwords;advertising
 solution: Experience Platform
-title: ソースコネクターとAPIを使用した広告データの収集
+title: ソースコネクタとAPIを使用した広告データの収集
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティの広告アプリケーションからデータを取得し、ソースコネクタとFlow Service APIを使用してプラットフォームに取り込む手順について説明します。
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 20%
@@ -14,7 +14,7 @@ ht-degree: 20%
 ---
 
 
-# ソースコネクターとAPIを使用した広告データの収集
+# ソースコネクタとAPIを使用した広告データの収集
 
 このチュートリアルでは、サードパーティの広告アプリケーションからデータを取得し、ソースコネクターと[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してAdobe Experience Platformに取り込む手順について説明します。
 
