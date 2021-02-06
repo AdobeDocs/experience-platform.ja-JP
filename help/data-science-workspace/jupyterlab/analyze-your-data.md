@@ -4,19 +4,19 @@ solution: Experience Platform
 title: ノートブックを使用したデータの分析
 topic: tutorial
 type: Tutorial
-description: このチュートリアルでは、Data Science Workspace に組み込まれている Jupyter ノートブックを使用してデータへのアクセス、データの調査、データの視覚化をおこなう方法について説明します。
+description: このチュートリアルでは、Data Science Workspaceに組み込まれたJupterノートブックを使用して、データにアクセス、調査、視覚化する方法に焦点を当てます。
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1735'
-ht-degree: 83%
+ht-degree: 79%
 
 ---
 
 
 # ノートブックを使用したデータの分析
 
-このチュートリアルでは、Data Science Workspace に組み込まれている Jupyter ノートブックを使用してデータへのアクセス、データの調査、データの視覚化をおこなう方法について説明します。このチュートリアルを完了すると、Jupyter ノートブックで提供される機能の一部を把握でき、データへの理解を深めることができます。
+このチュートリアルでは、Data Science Workspaceに組み込まれたJupterノートブックを使用して、データにアクセス、調査、視覚化する方法に焦点を当てます。 このチュートリアルを終えるまでに、データをよりよく理解するために、Jupyter Notebooksオファーの機能の一部を理解しておく必要があります。
 
 次の概念が導入されています。
 
@@ -196,8 +196,8 @@ df.describe()
 
 ## 次の手順
 
-このチュートリアルでは、データサイエンスワークスペースで新しいジュピターノートブックを作成する方法、および[!DNL Adobe Experience Platform]から外部のデータにアクセスする方法について説明しました。 特に、次の手順を詳しく説明しました。
-- Jupyter ノートブックの新規作成
+このチュートリアルでは、データサイエンスワークスペースで新しいジャプターノートブックを作成する方法、および[!DNL Adobe Experience Platform]から外部のデータにアクセスする方法について説明しました。 特に、次の手順を詳しく説明しました。
+- 新しいジャプターノートブックを作成する
 - データセットとスキーマへのアクセス
 - データセットの調査
 
