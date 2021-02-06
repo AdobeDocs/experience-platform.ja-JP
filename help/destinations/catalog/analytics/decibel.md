@@ -1,21 +1,17 @@
 ---
 keywords: デシベルの拡張子；デシベル；デシベルの送信先
-title: Decibel 拡張機能
-seo-title: Decibel 拡張機能
+title: デシベル拡張の宛先
 description: デシベル拡張は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: デシベル拡張は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 29%
+source-wordcount: '521'
+ht-degree: 27%
 
 ---
 
 
 # [!DNL Decibel] 拡張機能 {#decibel-extension}
-
-## 概要 {#overview}
 
 Webプロパティに[!DNL Decibel]を素早くシームレスにデプロイします。 また、拡張機能を通じて使用可能なアクションを使用して、追加の高度な設定をルールと共にデプロイすることもできます。
 
