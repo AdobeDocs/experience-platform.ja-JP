@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；BigQuery;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
-title: Google BigQuery Connector
+title: Google BigQuery Source Connectorの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してGoogle BigQueryをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用してGoogle BigQueryをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '248'
-ht-degree: 14%
+ht-degree: 11%
 
 ---
 
@@ -31,11 +31,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL Google BigQuery]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用してGoogle BigQueryコネクタを作成する](../../tutorials/api/create/databases/bigquery.md)
+- [Flow Service APIを使用してGoogle BigQueryソース接続を作成する](../../tutorials/api/create/databases/bigquery.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して[!DNL Google BigQuery]を[!DNL Platform]に接続
 
-- [UI での Google BigQuery ソースコネクタの作成](../../tutorials/ui/create/databases/bigquery.md)
-- [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
+- [UIでのGoogle BigQueryソース接続の作成](../../tutorials/ui/create/databases/bigquery.md)
+- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
