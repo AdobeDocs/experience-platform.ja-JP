@@ -5,7 +5,7 @@ title: Mixin名の更新
 topic: overview
 description: 最近のXDMミックスイン名の変更のリストです。
 translation-type: tm+mt
-source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 2%
