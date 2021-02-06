@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；名前空間;名前空間;名前空間;名前空間;ID名前空間;ID名前空間;ID;ID;IDサービス；IDサービス
 solution: Experience Platform
-title: Adobe Experience Platform ID サービス
+title: ID名前空間の概要
 topic: overview
 description: 'ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」という値は電子メールアドレスとして、または「443522」という数値のCRM IDとして区別されます。 '
 translation-type: tm+mt
-source-git-commit: 0547c33e831fe1ac684f55a0e79978cd7f191e65
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1473'
 ht-degree: 20%
 
 ---
