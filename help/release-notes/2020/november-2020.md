@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 24%
@@ -103,7 +103,7 @@ Data Science Workspaceは、機械学習と人工知能を使用して、デー�
 | ------- | ----------- |
 | [!DNL JupyterLab] レシピビルダーテンプレート | ノートブックからレシピ要件への対応、およびバージョンの更新。 [!DNL Python] ML Runtimeの基本イメージは、 [!DNL Python] 3.6.7と [!DNL Conda] 環境専用に更新されました。 |
 
-詳細については、[Jupyterノートブック](../../data-science-workspace/jupyterlab/create-a-recipe.md)を使ってレシピを作成するドキュメントをお読みください。
+詳細については、[Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md)を使ってレシピを作成するドキュメントをお読みください。
 
 ## [!DNL Destinations] サービス {#destinations}
 
