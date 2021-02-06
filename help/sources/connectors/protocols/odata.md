@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
-title: 汎用ODataコネクタ
+title: 汎用ODataソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用して汎用ODataをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用して、汎用ODataをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 7%
@@ -31,11 +31,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL Generic OData]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用して汎用ODataコネクタを作成する](../../tutorials/api/create/protocols/odata.md)
+- [Flow Service APIを使用した汎用ODataソース接続の作成](../../tutorials/api/create/protocols/odata.md)
 - [Flow Service APIを使用したプロトコルアプリケーションの調査](../../tutorials/api/explore/protocols.md)
 - [Flow Service APIを使用したプロトコルアプリケーションからのデータ収集](../../tutorials/api/collect/protocols.md)
 
 ## UIを使用して[!DNL Generic OData]を[!DNL Platform]に接続
 
-- [UIで汎用ODataソースコネクタを作成する](../../tutorials/ui/create/protocols/odata.md)
-- [UIでのプロトコルコネクタのデータフローの設定](../../tutorials/ui/dataflow/protocols.md)
+- [UIでの汎用ODataソース接続の作成](../../tutorials/ui/create/protocols/odata.md)
+- [UIでのプロトコル接続用のデータフローの構成](../../tutorials/ui/dataflow/protocols.md)
