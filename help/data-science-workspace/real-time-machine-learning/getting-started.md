@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；開発者ガイド；Data Science Workspace；よく読まれるトピック；リアルタイムの機械学習；
 solution: Experience Platform
-title: リアルタイム機械学習の概要
+title: リアルタイム機械学習の手引き
 topic: Getting started
 description: 次のドキュメントでは、Adobe Experience Platformでリアルタイム機械学習モデルを作成するために必要な手順について説明します。
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 リアルタイム機械学習を利用するには、Adobe Experience Platformと[!DNL Data Science Workspace]のプロビジョニングを受けた組織にアクセスできる必要があります。 さらに、トレーニングとスコアリングに使用する完全なデータセットが必要です。
 
-Real-time Machine Learningのガイドでは、Python 3、[Jupyter notebooks](../jupyterlab/overview.md)、data science、およびMachine Learningに関する作業を理解する必要があります。
+Real-time Machine Learningのガイドでは、Python 3、[Jupyter Notebooks](../jupyterlab/overview.md)、データサイエンス、および機械学習に関する作業を理解する必要があります。
 
 **キーワード:**
 
