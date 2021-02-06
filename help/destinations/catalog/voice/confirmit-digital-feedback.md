@@ -1,21 +1,17 @@
 ---
 keywords: デジタルフィードバックの確認；確認；確認
-title: Confirmit Digital Feedback 拡張機能
-seo-title: Confirmit Digital Feedback 拡張機能
+title: デジタルフィードバックの拡張を確認
 description: デジタルフィードバックの確認拡張は、Adobe Experience Platformのお客様の声の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: デジタルフィードバックの確認拡張は、Adobe Experience Platformのお客様の声の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 28%
+source-wordcount: '563'
+ht-degree: 26%
 
 ---
 
 
-# [!DNL Confirmit Digital Feedback]拡張子
-
-## 概要 {#overview}
+# [!DNL Confirmit Digital Feedback] 拡張機能
 
 [!DNL Confirmit Digital Feedback] ソリューションを使用すると、webサイトのトラフィックをリアルタイムのインサイトに変換できます。[!DNL Confirmit]を使うと、目立たない、ターゲットを絞った調査を要件に応じて表示でき、訪問者に次のようなフィードバックを提供するよう促すことができます。
 
