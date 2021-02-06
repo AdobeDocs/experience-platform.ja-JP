@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；ソースコネクタ；ソースコネクタ；ソース；データソース；データソース；データソース；データソース；データソース接続
 solution: Experience Platform
-title: Adobe Experience Platform ソースコネクタの概要
+title: ソースコネクタの概要
 topic: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 58%
+source-wordcount: '940'
+ht-degree: 56%
 
 ---
 
@@ -30,12 +30,12 @@ Experience Platform のソースは、次のカテゴリに分類されます。
 Experience Platformは、Adobe Analytics、Adobe Audience Manager、[!DNL Experience Platform Launch]など、他のAdobeアプリケーションからデータを取り込むことを可能にします。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Manager コネクタの概要](connectors/adobe-applications/audience-manager.md)
-- [UI での Adobe Audience Manager ソースコネクタの作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [UIでのAdobe Audience Managerソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics分類データコネクタの概要](connectors/adobe-applications/classifications.md)
-- [UIでのAdobe Analytics分類データソースコネクタの作成](./tutorials/ui/create/adobe-applications/classifications.md)
+- [UIでのAdobe Analytics分類データソース接続の作成](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics Data コネクタの概要](connectors/adobe-applications/analytics.md)
-- [UI での Adobe Analytics ソースコネクタの作成](./tutorials/ui/create/adobe-applications/analytics.md)
-- [UIでの顧客属性ソースコネクタの作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [UIでのAdobe Analyticsソース接続の作成](./tutorials/ui/create/adobe-applications/analytics.md)
+- [UIでの顧客属性ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### 広告
 
