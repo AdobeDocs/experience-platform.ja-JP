@@ -5,7 +5,7 @@ title: Adobe Experience Platform 概要
 topic: getting started
 description: Adobe Experience Platformを使用すると、組織は顧客データを一元化および標準化してから、データサイエンスと機械学習を適用し、パーソナライズされた豊富なエクスペリエンスの設計と配信を大幅に改善できます。
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 35%
