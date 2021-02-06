@@ -5,7 +5,7 @@ title: Data Science Workspaceのアクセスと機能
 topic: Access and features for data science workspace
 description: '次のドキュメントでは、Data Science Workspaceの権限と機能へのアクセスについて概説します。 '
 translation-type: tm+mt
-source-git-commit: 40181fc9b1b08c2e21f806caae76b8af0ec9e5e6
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 26%
