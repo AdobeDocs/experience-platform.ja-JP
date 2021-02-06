@@ -1,21 +1,17 @@
 ---
 keywords: Qualtrics;Qualtrics;Qualtrics Webサイトのフィードバック；Qualtrics Webサイトのフィードバック；Qualtrics Webサイトのフィードバック
-title: Qualtrics Website Feedback 拡張機能
-seo-title: Qualtrics Website Feedback 拡張機能
+title: Qualtrics Webサイトのフィードバック拡張先
 description: Qualtrics Webサイトのフィードバック拡張機能は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Qualtrics Webサイトのフィードバック拡張機能は、Adobe Experience Platformの調査先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '621'
-ht-degree: 34%
+source-wordcount: '590'
+ht-degree: 32%
 
 ---
 
 
-# [!DNL Qualtrics Website Feedback] 拡張子 {#qualtrics-extension}
-
-## 概要 {#overview}
+# [!DNL Qualtrics Website Feedback] 拡張機能 {#qualtrics-extension}
 
 [!DNL Qualtrics Website Feedback] を使用すると、適切なメッセージと適格なタイミングで web サイトの訪問者を引き付けることができます。Webサイトのフィードバック調査の訪問者体験の向上を望む場合でも、コンバージョンの向上を望む場合でも、[!DNL Qualtrics Website Feedback]様が対象としています。
 
