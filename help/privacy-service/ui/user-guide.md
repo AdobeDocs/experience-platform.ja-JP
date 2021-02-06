@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；エクスポート；エクスポート
 solution: Experience Platform
-title: Privacy Service ユーザーガイド
+title: Privacy ServiceUIでのプライバシージョブの管理
 topic: UI guide
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシー要求を調整および監視する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1090'
-ht-degree: 60%
+source-wordcount: '1100'
+ht-degree: 59%
 
 ---
 
 
-# [!DNL Privacy Service] ユーザーガイド
+# Privacy ServiceUIでのプライバシージョブの管理
 
 このドキュメントでは、[!DNL Privacy Service]ユーザーインターフェイスを使用してプライバシーリクエストを作成し、管理する手順を説明します。
 
@@ -102,7 +102,7 @@ ht-degree: 60%
 
 リクエストビルダーを使用して開始するには、画面の右側にあるステータスレポートウィジェットの下の「**[!UICONTROL リクエストを作成]**」を選択します。
 
-![「要求の作成」を選択します。](../images/user-guide/create-request.png)
+![「リクエストを作成」を選択します。](../images/user-guide/create-request.png)
 
 **[!UICONTROL Create Request]** ダイアログが開き、現在選択されている規制タイプのプライバシージョブリクエストを送信するために使用できるオプションが表示されます。
 
