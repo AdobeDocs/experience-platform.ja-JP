@@ -1,21 +1,17 @@
 ---
 keywords: SessionCam;session cam;sessioncam
-title: SessionCam 拡張機能
-seo-title: SessionCam 拡張機能
+title: SessionCam拡張先
 description: SessionCam拡張は、Adobe Experience Platformの解析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: SessionCam拡張は、Adobe Experience Platformの解析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 30%
+source-wordcount: '517'
+ht-degree: 28%
 
 ---
 
 
-# [!DNL SessionCam] 拡張子 {#sessioncam-extension}
-
-## 概要 {#overview}
+# [!DNL SessionCam] 拡張機能 {#sessioncam-extension}
 
 [!DNL SessionCam] は、ユーザーの行動を明らかにし、最も重要な問題を解決するために欠くことのできないツールスイートを提供します。
 
