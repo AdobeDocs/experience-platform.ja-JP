@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；集計関数；集計；
 solution: Experience Platform
-title: 集計関数
+title: PQL集計関数
 topic: developer guide
-description: '集計関数 は、プロファイルクエリ言語(PQL)配列内の複数の値をグループ化して単一の概要値を形成するために使用します。 '
+description: '集約関数は、プロファイルクエリ言語（PQL）配列内で複数の値をグループ化して単一の要約値を形成するために使用されます。 '
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 73%
+source-wordcount: '244'
+ht-degree: 80%
 
 ---
 
