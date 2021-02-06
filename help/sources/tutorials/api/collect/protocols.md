@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；プロトコルデータの収集；プロトコルデータ
 solution: Experience Platform
-title: ソースコネクタとAPIを使用してプロトコルデータを収集する
+title: ソースコネクタとAPIを使用したプロトコルデータの収集
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、プロトコルアプリケーションからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 20%
@@ -14,7 +14,7 @@ ht-degree: 20%
 ---
 
 
-# ソースコネクタとAPIを使用してプロトコルデータを収集する
+# ソースコネクタとAPIを使用したプロトコルデータの収集
 
 このチュートリアルでは、サードパーティのプロトコルアプリケーションからデータを取得し、ソースコネクタと[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してAdobe Experience Platformに取り込む手順を説明します。
 
