@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Apache Spark;apache spark;Azure HDInsights;azure hdinsights
 solution: Experience Platform
-title: Azure HDInsightsコネクタ上のApache Spark
+title: Azure HDInsights Source ConnectorのApache Sparkの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure HDInsightsのApache Sparkをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用して、Azure HDInsightsのApache SparkをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 10%
@@ -31,11 +31,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL Azure HDInsights]の[!DNL Apache Spark]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用してAzure HDInsights ConnectorでApache Sparkを作成する](../../tutorials/api/create/databases/spark.md)
+- [Flow Service APIを使用して、Azure HDInsightsソース接続でApache Sparkを作成します](../../tutorials/api/create/databases/spark.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して[!DNL Azure HDInsights]の[!DNL Apache Spark]を[!DNL Platform]に接続
 
-- [UIでAzure HDInsightsソースコネクタ上にApache Sparkを作成します](../../tutorials/ui/create/databases/spark.md)
-- [UIでのデータベースコネクタのデータフローの設定](../../tutorials/ui/dataflow/databases.md)
+- [UIでAzure HDInsightsソース接続上にApache Sparkを作成します](../../tutorials/ui/create/databases/spark.md)
+- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
