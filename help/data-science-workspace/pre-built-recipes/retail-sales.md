@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；小売の販売レシピ；データサイエンスワークスペース；人気の高いトピック；レシピ；プレビルドレシピ
 solution: Experience Platform
-title: 小売販売レシピ
+title: 小売売上のレシピ
 topic: overview
 description: 小売販売レシピを使用すると、特定の期間にシードされたすべての店舗の売上高を予測できます。正確な予測モデルを使用すると、小売業者は、需要および価格設定ポリシーの関係を見い出し、販売と売上高を最大化するために最適化された価格決定をおこなうことができます。
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '585'
-ht-degree: 97%
+ht-degree: 92%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 97%
 
 [こちらのチュートリアル](../jupyterlab/create-a-recipe.md)に従って、作業を開始できます。
 
-このチュートリアルでは、Adobe Experience Platform で、Jupyter ノートブックを使用して小売販売レシピを作成し、ノートブックをレシピワークフローに使用してレシピを作成します。
+このチュートリアルでは、ジュピター・ノートブックで小売売上のレシピを作成し、ノートブックを使用してレシピ・ワークフローを使用してAdobe Experience Platformでレシピを作成します。
 
 ## データスキーマ
 
