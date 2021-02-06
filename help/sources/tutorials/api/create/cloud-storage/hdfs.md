@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Apache Distributed File System;Apache Emator;hdfs;HDFS
 solution: Experience Platform
-title: Flow Service APIを使用してApache HDFSコネクタを作成する
+title: Flow Service APIを使用したApache HDFSソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、ApacheHadoop分散ファイルシステム（以下「HDFS」と呼ばれる）をExperience Platformに接続する手順を順を追って説明します。
+description: Flow Service APIを使用してApacheHadoop分散ファイルシステムをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 19%
+source-wordcount: '565'
+ht-degree: 20%
 
 ---
 
 
-# [!DNL Flow Service] APIを使って[!DNL Apache] HDFSコネクタを作成する
+# [!DNL Apache] APIを使って[!DNL Flow Service] HDFSソース接続を作成する
 
 >[!NOTE]
 >
