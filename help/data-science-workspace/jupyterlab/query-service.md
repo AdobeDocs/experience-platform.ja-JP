@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace；人気の高いトピック；クエリサービス
 solution: Experience Platform
-title: Jupyter ノートブックのクエリサービス
+title: ジュピターノートのクエリサービス
 topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform を使用すると、クエリサービスを標準機能として JupyterLab に統合することにより、Data Science Workspace で構造化照会言語（SQL）を使用できます。このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例のサンプルSQLクエリを示します。
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '818'
-ht-degree: 66%
+ht-degree: 64%
 
 ---
 
 
-# Jupyter ノートブックのクエリサービス
+# ジュピターノートのクエリサービス
 
 [!DNL Adobe Experience Platform] 標準機能としてに統合する [!DNL Data Science Workspace] ことで、で構造化クエリ言語(SQL) [!DNL Query Service] を使用 [!DNL JupyterLab] できます。
 
