@@ -1,21 +1,17 @@
 ---
 keywords: 量子指標拡張；量子指標；量子指標；量子指標
-title: Quantum Metric 拡張機能
-seo-title: Quantum Metric 拡張機能
+title: Quantum Metric Extension Destination
 description: Quantum Metric拡張は、Adobe Experience Platformの分析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Quantum Metric拡張は、Adobe Experience Platformの分析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 26%
+source-wordcount: '536'
+ht-degree: 24%
 
 ---
 
 
-# [!DNL Quantum Metric] 拡張子 {#quantum-metric-extension}
-
-## 概要 {#overview}
+# [!DNL Quantum Metric] 拡張機能 {#quantum-metric-extension}
 
 [!DNL Quantum Metric's] adobe開始との統合により、 [!DNL Quantum Metric's] データ収集タグのコードレス導入が容易になります。さらに、この拡張機能は、[!DNL Quantum Metric] APIから役立つ情報を含む起動データ要素を取り込む機能をオファーします。
 
