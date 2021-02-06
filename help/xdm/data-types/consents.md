@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API；同意；環境設定；Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
-title: Consents & Preferencesデータタイプ
+title: 同意と環境設定のデータタイプ
 description: 「プライバシー/マーケティングの環境設定（同意）」データ型は、データ操作から、Consent Management Platforms(CMP)や他のソースによって生成される顧客の権限や好みの収集をサポートすることを目的としています。
 topic: guide
 translation-type: tm+mt
-source-git-commit: caebdcd48e03bd8b91da624532569b55d8696fb4
+source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 1%
