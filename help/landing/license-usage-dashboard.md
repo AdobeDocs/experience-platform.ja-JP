@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ユーザインターフェイス；UI；カスタマイズ；ライセンス使用ダッシュボード;ダッシュボード；ライセンス使用；エンタイトルメント；コンシューム
-title: ライセンス使用ダッシュボード
+title: ライセンスの使用ダッシュボード
 description: 'このガイドでは、Adobe Experience PlatformUIで使用できるライセンスの使用ダッシュボードについて説明します。 '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 8e4d8d29ca13017d7f6de5ca790efe91b01c129d
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 1%
