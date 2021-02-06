@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；動作；動作；動作；動作；
 solution: Experience Platform
-title: 動作エンドポイントガイド
+title: 動作APIエンドポイント
 description: スキーマレジストリAPIの/behaviorsエンドポイントを使用すると、グローバルコンテナで使用可能なすべての動作を取得できます。
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 5%
