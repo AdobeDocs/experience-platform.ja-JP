@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；IDサービスAPI;IDサービス開発者ガイド；地域
 solution: Experience Platform
-title: はじめに
+title: IDサービスAPIガイド
 topic: API guide
-description: 'Adobe Experience Platform ID サービスは、Adobe Experience Platform 内の ID グラフと呼ばれる、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理します。 '
+description: Identity Service APIを使用すると、開発者は、IDグラフAdobe Experience Platformを使用して、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 65%
+source-wordcount: '769'
+ht-degree: 60%
 
 ---
 
 
-# [!DNL Identity Service] API開発者ガイド
+# [!DNL Identity Service] APIガイド
 
 Adobe Experience Platform[!DNL Identity Service]は、Adobe Experience Platform内のIDグラフと呼ばれる、デバイス間、チャネル間、お客様のリアルタイムな識別を管理します。
 
