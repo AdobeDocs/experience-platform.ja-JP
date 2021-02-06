@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: Privacy Service と Experience Cloud アプリケーション
+title: Privacy ServiceとExperience Cloudの申し込み
 topic: overview
 description: このドキュメントでは、プライバシーに関する操作のために様々なExperience Cloudアプリケーションを設定する方法に関するリファレンスを提供します。
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '576'
-ht-degree: 59%
+ht-degree: 58%
 
 ---
 
