@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Blob;Blob;Azure Blob;Azure Blob
 solution: Experience Platform
-title: Azure BLOBコネクタ
+title: Azure Blobソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure Blobをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用してAzure BlobをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 3%
 
 ---
@@ -36,15 +36,15 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## [!DNL Azure Blob]を[!DNL Platform]に接続
 
-以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure Blobをプラットフォームに接続する方法に関する情報を提供しています。
+以下のドキュメントは、APIまたはユーザーインターフェイスを使用してAzure BlobをAdobe Experience Platformに接続する方法に関する情報を提供しています。
 
 ### APIの使用
 
-- [Flow Service APIを使用してAzure BLOBコネクタを作成する](../../tutorials/api/create/cloud-storage/blob.md)
+- [Flow Service APIを使用してAzure BLOBソース接続を作成します](../../tutorials/api/create/cloud-storage/blob.md)
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
-- [UIにAzure BLOBソースコネクタを作成する](../../tutorials/ui/create/cloud-storage/blob.md)
-- [UIでのクラウドストレージコネクタのデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UIにAzure BLOBソース接続を作成する](../../tutorials/ui/create/cloud-storage/blob.md)
+- [UIでのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
