@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；オーディエンスマネージャのソースコネクタ；Audience Manager;オーディエンスマネージャのコネクタ
 solution: Experience Platform
-title: UI での Adobe Audience Manager ソースコネクタの作成
+title: UIでのAdobe Audience Managerソース接続の作成
 topic: overview
 type: Tutorial
 description: このチュートリアルでは、ユーザーインターフェイスを使用してコンシューマーエクスペリエンスイベントデータをプラットフォームに取り込むための、Adobe Audience Manager用のソースコネクタを作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: bdf95d75bf8db9f3438011f298d17c4259d2c63c
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '466'
-ht-degree: 6%
+ht-degree: 2%
 
 ---
 
 
-# UI での Adobe Audience Manager ソースコネクタの作成
+# UIでのAdobe Audience Managerソース接続の作成
 
 このチュートリアルでは、ユーザーインターフェイスを使用してコンシューマーエクスペリエンスイベントデータをプラットフォームに取り込むための、Adobe Audience Manager用のソースコネクタを作成する手順を説明します。
 
