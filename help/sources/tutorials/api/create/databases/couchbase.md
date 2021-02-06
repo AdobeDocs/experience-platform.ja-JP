@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；couchbase;Couchbase
 solution: Experience Platform
-title: Flow Service APIを使用してCouchbaseコネクタを作成する
+title: Flow Service APIを使用したCouchbaseソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、CouchbaseをExperience Platformに接続する手順を順を追って説明します。
+description: Flow Service APIを使用してCouchbaseをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 20%
+source-wordcount: '527'
+ht-degree: 21%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL Couchbase]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Couchbase]ソース接続を作成する
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ ht-degree: 20%
 
 [!DNL Flow Service] 様々な異なるソースから顧客データを収集して一元化し、Adobe Experience Platformに持ち込むために使用します。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、Flow Service APIを使用して[!DNL Couchbase]を[!DNL Experience Platform]に接続する手順を順を追って説明します。
+[!DNL Couchbase]を[!DNL Experience Platform]に接続する方法を説明します。
 
 ## はじめに
 
