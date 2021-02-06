@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；Aqua Data Studio;Aqua data studio;クエリサービスに接続；
 solution: Experience Platform
-title: Aqua Data Studio との接続
+title: Aqua Data Studioをクエリサービスに接続
 topic: connect
 description: このドキュメントでは、Aqua Data Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 32%
+source-wordcount: '300'
+ht-degree: 30%
 
 ---
 
 
-# [!DNL Aqua Data Studio]
+# [!DNL Aqua Data Studio]をクエリサービスに接続
 
 このドキュメントでは、[!DNL Aqua Data Studio]をAdobe Experience Platform[!DNL Query Service]に接続する手順を説明します。
 
 >[!NOTE]
 >
 > このガイドは、[!DNL Aqua Data Studio]へのアクセス権が既にあり、そのインターフェイスの操作方法に精通していることを前提としています。 [!DNL Aqua Data Studio]に関する詳細は、[正式な [!DNL Aqua Data Studio] ドキュメント](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1)を参照してください。
-
-## [!DNL Aqua Data Studio]をプラットフォームに接続
 
 [!DNL Aqua Data Studio]をインストールした後は、まずサーバを登録する必要があります。 メインメニューで&#x200B;**[!DNL Server]**&#x200B;を選択し、次に&#x200B;**[!DNL Register Server]**&#x200B;を選択します。
 
