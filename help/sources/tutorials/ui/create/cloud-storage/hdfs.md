@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；Apache HDFS;HDFS;hdfs
 solution: Experience Platform
-title: UIでApache HDFSソースコネクタを作成する
+title: UIでのApache HDFSソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、プラットフォームユーザーインターフェイスを使用してApacheHadoop分散ファイルシステム（以下「HDFS」と呼ばれる）ソースコネクタを認証する手順を説明します。
+description: Adobe Experience PlatformUIを使用してApacheHadoop分散ファイルシステムのソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '492'
 ht-degree: 6%
 
 ---
 
 
-# UIに[!DNL Apache] HDFSソースコネクタを作成する
+# UIに[!DNL Apache] HDFSソース接続を作成する
 
 >[!NOTE]
 >
