@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloudストレージ;Googleクラウドストレージ;google;Google
 solution: Experience Platform
-title: Flow Service APIを使用してGoogle Cloudストレージコネクタを作成する
+title: Flow Service APIを使用したGoogle Cloudストレージソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをGoogle Cloudストレージアカウントに接続する手順を順を追って説明します。
+description: Flow Service APIを使用して、Adobe Experience PlatformをGoogle Cloudストレージアカウントに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '554'
 ht-degree: 20%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL Google Cloud Storage]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL Google Cloud Storage]ソース接続を作成する
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
