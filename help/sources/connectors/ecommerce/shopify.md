@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；shopify;Shopify;
 solution: Experience Platform
-title: Shopifyコネクタ
+title: Shopifyソースコネクタの概要
 topic: overview
-description: 以下のドキュメントは、APIまたはユーザーインターフェイスを使用してShopifyをプラットフォームに接続する方法に関する情報を提供しています。
+description: APIまたはユーザーインターフェイスを使用してShopifyをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: b31b7dc04d32129ba5522e1b0d3e52a213347a40
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 10%
@@ -27,11 +27,11 @@ Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外�
 
 ## APIを使用して[!DNL Shopify]を[!DNL Platform]に接続
 
-- [フローサービスAPIを使用してShopifyコネクタを作成する](../../tutorials/api/create/ecommerce/shopify.md)
+- [Flow Service APIを使用してShopifyソース接続を作成する](../../tutorials/api/create/ecommerce/shopify.md)
 - [Flow Service APIを使用したeコマース接続の調査](../../tutorials/api/explore/ecommerce.md)
 - [Flow Service APIを使用してeコマースデータを収集する](../../tutorials/api/collect/ecommerce.md)
 
 ## UIを使用して[!DNL Shopify]を[!DNL Platform]に接続
 
-- [UIでShopifyソースコネクタを作成する](../../tutorials/ui/create/ecommerce/shopify.md)
-- [UIでのeコマースコネクタのデータフローの設定](../../tutorials/ui/dataflow/ecommerce.md)
+- [UIでのShopifyソース接続の作成](../../tutorials/ui/create/ecommerce/shopify.md)
+- [UIでのeコマース接続用のデータフローの構成](../../tutorials/ui/dataflow/ecommerce.md)
