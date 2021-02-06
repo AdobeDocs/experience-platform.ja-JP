@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；analytics；分類
-description: このチュートリアルでは、UIで分類データをAdobe Experience Platformに取り込むためのAdobe Analytics分類データコネクタを作成する手順を説明します。
+description: 分類データをAdobe Experience Platformに取り込むためのAdobe AnalyticsソースコネクタUIを作成する方法を説明します。
 solution: Experience Platform
-title: UIでのAdobe Analytics分類データコネクタの作成
+title: UIで分類データのAdobe Analyticsソース接続を作成する
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '660'
 ht-degree: 3%
 
 ---
 
 
-# UIでのAdobe Analytics分類データコネクタの作成
+# UIで分類データのAdobe Analyticsソース接続を作成する
 
-このチュートリアルでは、UIで分類データをAdobe Experience Platformに取り込むためのAdobe Analytics分類データコネクタを作成する手順を説明します。
+このチュートリアルでは、UIで分類データをAdobe Experience Platformに取り込むためのAdobe Analytics分類データソース接続を作成する手順を説明します。
 
 ## はじめに
 
@@ -86,5 +86,5 @@ Analytics Classifications Data Connectorを使用するには、使用する前�
 このチュートリアルに従って、[!DNL Classifications]データを[!DNL Platform]に取り込むAnalytics分類データコネクタを作成しました。 [!DNL Analytics]と[!DNL Classifications]のデータについて詳しくは、次のドキュメントを参照してください。
 
 * [Analytics Data Connectorの概要](../../../../connectors/adobe-applications/analytics.md)
-* [UIでのAnalyticsデータコネクタの作成](./analytics.md)
+* [UIでのAnalyticsデータ接続の作成](./analytics.md)
 * [分類について](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
