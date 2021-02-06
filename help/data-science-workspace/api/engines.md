@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；エンジン；先生の機械学習api
 solution: Experience Platform
-title: エンジン
+title: エンジンAPIエンドポイント
 topic: Developer guide
 description: エンジンは、Data Science Workspace　での機械学習モデルの基礎です。特定の問題を解決する機械学習アルゴリズム、特徴エンジニアリングを実行する特徴パイプライン、またはその両方が含まれます。
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 70%
+source-wordcount: '1165'
+ht-degree: 69%
 
 ---
 
 
-# エンジン
+# エンジンエンドポイント
 
 エンジンは、Data Science Workspace　での機械学習モデルの基礎です。特定の問題を解決する機械学習アルゴリズム、特徴エンジニアリングを実行する特徴パイプライン、またはその両方が含まれます。
 
