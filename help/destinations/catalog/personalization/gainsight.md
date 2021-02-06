@@ -1,21 +1,17 @@
 ---
 keywords: forese;foreextension;foredestination
-title: Gainsight 拡張機能
-seo-title: Gainsight 拡張機能
+title: 勝者の拡張先
 description: Gainsight拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Gainsight拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 30%
+source-wordcount: '517'
+ht-degree: 28%
 
 ---
 
 
 # [!DNL Gainsight] 拡張機能 {#gainsight-extension}
-
-## 概要 {#overview}
 
 [!DNL Gainsight] は、ユーザーのビヘイビアーを深く理解し、製品の採用を促進し、ユーザーのフィードバックを収集するためのツールを製品所有者に提供します。
 
