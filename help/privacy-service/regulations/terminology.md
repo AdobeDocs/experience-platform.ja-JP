@@ -5,7 +5,7 @@ title: プライバシー規制の用語
 topic: troubleshooting
 description: 本ドキュメントでは、Adobe Experience Cloudがサポートするプライバシー規制に関する主要用語の定義を示します。
 translation-type: tm+mt
-source-git-commit: 714b071bfa68ad0796afad25525b62b42bd56b3f
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 12%
