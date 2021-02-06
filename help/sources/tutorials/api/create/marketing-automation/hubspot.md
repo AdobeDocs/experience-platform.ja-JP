@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；ハブスポット；ハブスポット
 solution: Experience Platform
-title: Flow Service APIを使用してHubSpotコネクタを作成する
+title: Flow Service APIを使用したHubSpotソース接続の作成
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、Experience PlatformをHubSpotに接続する手順を順を追って説明します。
+description: Flow Service APIを使用してAdobe Experience PlatformをHubSpotに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 18%
+source-wordcount: '594'
+ht-degree: 19%
 
 ---
 
 
-# [!DNL Flow Service] APIを使用して[!DNL HubSpot]コネクタを作成する
+# [!DNL Flow Service] APIを使用して[!DNL HubSpot]ソース接続を作成する
 
 >[!NOTE]
 >
