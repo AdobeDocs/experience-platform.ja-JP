@@ -1,21 +1,17 @@
 ---
 keywords: SFTP;sftp
-title: SFTP の宛先
-seo-title: SFTP の宛先
+title: SFTP接続先
 description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
-seo-description: SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 47%
+source-wordcount: '185'
+ht-degree: 38%
 
 ---
 
 
-# SFTP の宛先
-
-## 概要
+# SFTP接続
 
 SFTP サーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的に Experience Platform から書き出します。
 
