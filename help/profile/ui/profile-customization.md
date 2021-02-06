@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；ユーザインターフェイス；UI；カスタマイズ；プロファイルの詳細；詳細
-title: UIでの表示プロファイルのカスタマイズ
+title: UIのプロファイル詳細のカスタマイズ
 description: 'このガイドでは、Adobe Experience PlatformUI内でリアルタイム顧客プロファイルデータが表示される方法をカスタマイズする手順を順を追って説明します。 '
 topic: guide
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1183'
 ht-degree: 0%
 
 ---
