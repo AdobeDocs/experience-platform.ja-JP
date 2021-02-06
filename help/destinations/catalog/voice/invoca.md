@@ -1,21 +1,17 @@
 ---
 keywords: インボカ；インボカ
-title: Invoca Tags 拡張機能
-seo-title: Invoca Tags 拡張機能
+title: インボカタグエクステンション宛先
 description: Invoca Tags Extensionは、Adobe Experience Platformのお客様の声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Invoca Tags Extensionは、Adobe Experience Platformのお客様の声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 27%
+source-wordcount: '536'
+ht-degree: 25%
 
 ---
 
 
 # [!DNL Invoca Tags] 拡張機能 {#invoca-extension}
-
-## 概要 {#overview}
 
 [!DNL Invoca] は、通話データと音声の洞察をデジタルカスタマージャーニーに提供します。[!DNL Invoca’s]コールインテリジェンスプラットフォームを使用すると、マーケティング担当者は、最終的に分析を行い、コールの成果を測定し、オフラインのコンバージョンをデジタル費用に結び付けることができます。
 
