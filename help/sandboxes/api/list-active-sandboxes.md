@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；リストのアクティブなサンドボックス；リストのサンドボックス
 solution: Experience Platform
-title: 現在のユーザーのアクティブなサンドボックスを一覧表示
+title: APIの現在のリスト用のユーザーのアクティブなサンドボックス
 topic: developer guide
 description: ルートエンドポイントにGETリクエストを行うことで、現在のユーザーに対してアクティブなサンドボックスをリストできます。
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 65%
+source-wordcount: '361'
+ht-degree: 60%
 
 ---
 
 
-# 現在のユーザーのアクティブなサンドボックスを一覧表示
+# APIの現在のリスト用のアクティブなサンドボックス
 
 >[!NOTE]
 >
