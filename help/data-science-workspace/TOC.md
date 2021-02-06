@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Data Science ワークスペース�
 breadcrumb-title: Data Science Workspace ガイド
 user-guide-description: 機械学習を利用して、Adobe Sensei とJupyterLab Notebooks でモデルとレシピを開発、トレーニング、評価します。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 84%
+source-wordcount: '233'
+ht-degree: 79%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 84%
 * [Data Science Workspaceのアクセスと機能](access-features-dsw.md)
 * [Data Science ワークスペースのチュートリアル](walkthrough.md)
 * JupyterLab ノートブック {#jupyterlab}
-   * [JupyterLab ユーザガイド](jupyterlab/overview.md)
+   * [概要](jupyterlab/overview.md)
    * [データアクセス](jupyterlab/access-notebook-data.md)
    * [データの分析](jupyterlab/analyze-your-data.md)
    * [クエリサービス](jupyterlab/query-service.md)
@@ -37,7 +37,7 @@ ht-degree: 84%
 * リアルタイム機械学習（アルファ） {#real-time-machine-learning}
    * [概要](real-time-machine-learning/home.md)
    * [はじめに](real-time-machine-learning/getting-started.md)
-   * [RTMLオーサリングノートブックユーザーガイド](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [ノートブックの管理](real-time-machine-learning/rtml-authoring-notebook.md)
    * [ノードリファレンスガイド](real-time-machine-learning/node-reference.md)
 * 事前定義済みレシピ {#pre-built-recipes}
    * [製品のレコメンデーションレシピ](pre-built-recipes/product-recommendations.md)
@@ -46,11 +46,11 @@ ht-degree: 84%
 * モデルオーサリング {#authoring}
    * [モデルオーサリング SDK](authoring/sdk.md)
    * [フィーチャパイプラインの作成](authoring/feature-pipeline.md)
-   * [Platform SDK ガイド（Python）](authoring/platform-sdk.md)
+   * [プラットフォームSDK(Python)を使用したモデルオーサリング](authoring/platform-sdk.md)
    * [Pythonデータアクセス](authoring/python.md)
    * [Sparkデータアクセス](authoring/spark.md)
 * モデルとレシピのチュートリアル {#models-recipes}
-   * [機械学習モデルのチュートリアルの作成と公開](models-recipes/create-publish-model.md)
+   * [機械学習モデルの作成と公開](models-recipes/create-publish-model.md)
    * [小売売上データセットとスキーマの作成](models-recipes/create-retails-sales-dataset.md)
    * [プレビュースキーマとデータセット](models-recipes/preview-schema-data.md)
    * [ソースファイルのレシピへのパッケージ化](models-recipes/package-source-files-recipe.md)
