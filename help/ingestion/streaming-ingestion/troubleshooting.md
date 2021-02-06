@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング；ストリーミング取り込み；トラブルシューティング；ストリーミング取り込みのトラブルシューティング；ストリーミング取り込みfaq;faq;
 solution: Experience Platform
-title: ストリーミング取り込みのトラブルシューティング
+title: Streaming Ingest Troubleshooting Guide
 topic: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform でのストリーミングの取り込みに関するよくある質問に対する回答を示します。
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 66%
+source-wordcount: '1025'
+ht-degree: 65%
 
 ---
 
