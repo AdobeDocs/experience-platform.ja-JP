@@ -1,19 +1,17 @@
 ---
 keywords: dmpの宛先；DIL;オーディエンスマネージャーdmpの拡張；dmpの拡張；データ管理プラットフォーム；データ管理プラットフォームの宛先
-title: データ管理プラットフォーム（DMP）の宛先
-seo-title: データ管理プラットフォーム（DMP）の宛先
+title: DMP(データ管理プラットフォーム)宛先の概要
 description: DMP（データ管理プラットフォーム）を使用すると、広告主、発行者、代理店が独自のオーディエンスプロファイルを構築し、最も価値の高いセグメントを特定して、あらゆるデジタルチャネルでそれらを使用できます。これにより、真に死角のない消費者プロファイルを作成し、意味のあるオーディエンスを構築しアクティブ化できます。
-seo-description: DMP（データ管理プラットフォーム）を使用すると、広告主、発行者、代理店が独自のオーディエンスプロファイルを構築し、最も価値の高いセグメントを特定して、あらゆるデジタルチャネルでそれらを使用できます。これにより、真に死角のない消費者プロファイルを作成し、意味のあるオーディエンスを構築しアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 70%
+source-wordcount: '138'
+ht-degree: 55%
 
 ---
 
 
-# [!DNL Data Management Platform] (DMP)宛先  {#dmp-destinations}
+# [!DNL Data Management Platform] (DMP)宛先の概要  {#dmp-destinations}
 
 [!DNL Data Management Platforms] (DMP)広告主、出版社、代理店が、独自のオーディエンスプロファイルを構築し、最も価値の高いセグメントを特定して、デジタルチャネル全体で使用できるようにします。これにより、真に死角のない消費者プロファイルを作成し、意味のあるオーディエンスを構築しアクティブ化できます。
 
