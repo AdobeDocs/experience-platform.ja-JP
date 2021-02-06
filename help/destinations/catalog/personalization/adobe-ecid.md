@@ -1,21 +1,17 @@
 ---
 Keywords: ECID;ecid
-title: Experience Cloud ID サービス拡張機能
-seo-title: Experience Cloud ID サービス拡張機能
+title: Experience CloudIDサービスの拡張先
 description: Experience CloudIDサービス拡張は、Adobe Experience Platformのパーソナライズ先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Experience CloudIDサービス拡張は、Adobe Experience Platformのパーソナライズ先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 36%
+source-wordcount: '501'
+ht-degree: 34%
 
 ---
 
 
 # [!DNL Experience Cloud] IDサービスの拡張  {#adobe-ecid-extension}
-
-## 概要 {#overview}
 
 この拡張機能は、すべての[!DNL Experience Cloud]ソリューションの訪問者を識別する[!DNL Experience Cloud] IDサービスを実装します。
 
