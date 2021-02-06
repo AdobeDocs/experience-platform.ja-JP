@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；はじめに；コンテンツai；コマースai；コンテンツとコマースai
 solution: Experience Platform, Intelligent Services
-title: コンテンツ&コマースAIはじめに
+title: コンテンツとコマースの使用の手引きAI
 topic: Getting started
 description: コンテンツ&コマースAIはAdobe I/OAPIを活用。 Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず認証のチュートリアルを完了する必要があります。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 13%
