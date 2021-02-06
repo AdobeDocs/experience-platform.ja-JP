@@ -1,19 +1,17 @@
 ---
 keywords: 宛先；エクスペリエンスクラウドソリューション；ターゲット;ターゲット先；ad cloud;advertising cloud;オーディエンス管理者；adobeターゲットの送信先；ターゲット;オーディエンス管理者の宛先；
-title: アドビの宛先
-seo-title: アドビの宛先
+title: Adobe先の概要
 description: プラットフォームのデータを他のAdobe Experience Cloudソリューションに接続し、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理できます。
-seo-description: プラットフォームのデータを他のAdobe Experience Cloudソリューションに接続し、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理できます。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 21%
+source-wordcount: '219'
+ht-degree: 22%
 
 ---
 
 
-# アドビの宛先 {#adobe-destinations}
+# アドビの宛先の概要 {#adobe-destinations}
 
 広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うために、Adobe Experience Platformのデータを他のAdobe Experience Cloudのソリューションに結び付けることで、顧客体験を管理できます。
 
