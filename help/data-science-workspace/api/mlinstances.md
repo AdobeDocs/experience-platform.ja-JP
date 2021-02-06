@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；インスタンス；先生の機械学習api
 solution: Experience Platform
-title: MLInstance
+title: MLInstances APIエンドポイント
 topic: Developer guide
 description: MLInstance は、既存のエンジンと適切な設定セット（トレーニングパラメーター、スコアリングパラメーター、またはハードウェアリソース設定を定義する）とのペアリングです。
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 97%
+source-wordcount: '619'
+ht-degree: 96%
 
 ---
 
 
-# MLInstance
+# MLInstancesエンドポイント
 
 MLInstance は、既存の[エンジン](./engines.md)と適切な設定セット（トレーニングパラメーター、スコアリングパラメーター、またはハードウェアリソース設定を定義する）とのペアリングです。
 
