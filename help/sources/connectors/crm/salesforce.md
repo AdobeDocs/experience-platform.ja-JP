@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；crmスキーマ;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
-title: Salesforceコネクタ
+title: Salesforceソースコネクタの概要
 topic: overview
-description: Experience Platformは、サードパーティのCRMシステムからデータを取り込むためのサポートを提供します。 CRMプロバイダのサポートにはSalesforceが含まれます。
+description: APIまたはユーザーインターフェイスを使用してSalesforceをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 8%
@@ -27,11 +27,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL Salesforce]を[!DNL Platform]に接続
 
-- [フローサービスAPIを使用したSalesforceコネクタの作成](../../tutorials/api/create/crm/salesforce.md)
+- [フローサービスAPIを使用したSalesforceソース接続の作成](../../tutorials/api/create/crm/salesforce.md)
 - [Flow Service APIを使用したCRMシステムの調査](../../tutorials/api/explore/crm.md)
 - [Flow Service APIを使用してCRMデータを収集する](../../tutorials/api/collect/crm.md)
 
 ## UIを使用して[!DNL Salesforce]を[!DNL Platform]に接続
 
-- [UIでのSalesforceソースコネクタの作成](../../tutorials/ui/create/crm/salesforce.md)
-- [UIでのCRMコネクタのデータフローの設定](../../tutorials/ui/dataflow/crm.md)
+- [UIでのSalesforceソース接続の作成](../../tutorials/ui/create/crm/salesforce.md)
+- [UIでのCRM接続のデータフローの設定](../../tutorials/ui/dataflow/crm.md)
