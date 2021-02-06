@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；データ取り込み通知；通知；購読イベント；データ取り込みステータスイベント；ステータスイベント；購読；ステータス通知；
 solution: Experience Platform
-title: データ取得イベントへのサブスクライブ
+title: データ取り込み通知
 topic: overview
 description: Adobe Experience Platformは、取り込みプロセスの監視を支援するため、プロセスの各ステップで公開された一連のイベントを登録し、取り込まれたデータの状態と発生し得る障害を通知する。
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '681'
 ht-degree: 29%
 
 ---
