@@ -1,14 +1,14 @@
 ---
 keywords: テキスト分類；テキスト分類
 solution: Experience Platform, Intelligent Services
-title: テキスト分類APIエンドポイント
+title: コンテンツとコマースAI APIのテキスト分類
 topic: Developer guide
 description: テキスト分類サービスは、テキストフラグメントを指定した場合、1つ以上のラベルに分類できます。 分類は、単一のラベル、複数のラベル、階層のいずれかです。
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 5%
+source-wordcount: '441'
+ht-degree: 4%
 
 ---
 
