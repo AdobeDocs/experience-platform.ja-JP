@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；スキーマ;スキーマ；列挙；プライマリID；プライマリID;XDM個々のプロファイル；エクスペリエンスイベント;XDMエクスペリエンスイベント；エクスペリエンスイベント；XDMエクスペリエンスイベント；スキーマデザイン；ベストプラクティス
 solution: Experience Platform
-title: Adobe Experience Platformでのデータモデリングのベストプラクティス
+title: データモデリングのベストプラクティス
 topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '2515'
+source-wordcount: '2507'
 ht-degree: 2%
 
 ---
 
 
-# Adobe Experience Platformでのデータモデリングのベストプラクティス
+# データモデリングのベストプラクティス
 
 [!DNL Experience Data Model] (XDM)は、下流のAdobe Experience Platformサービスで使用される共通の構造と定義を提供することで顧客体験データを標準化する中核的なフレームワークです。XDM標準を守ることで、すべての顧客体験データを共通の表現に組み込むことができ、顧客の行動から貴重な洞察を得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ目的で顧客属性を表したりできます。
 
@@ -75,7 +75,7 @@ Experience Platformで使用するデータモデルを設計する際に推奨�
 | --- | --- | --- | --- | --- |
 | 1234567 | Add | 275098 | 2 | 10月1日10:32 AM |
 | 1234567 | 削除 | 275098 | 1 | 10月1日10:33 AM |
-| 1234567 | 追加 | 486502 | 1 | 10月1日10:41 AM |
+| 1234567 | 追加 | 486502 | 3 | 10月1日10:41 AM |
 | 1234567 | 追加 | 910482 | 5 | 10月3日2:15 PM |
 
 #### セグメントの使用例
