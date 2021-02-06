@@ -5,7 +5,7 @@ title: サンドボックストラブルシューティングガイド
 topic: troubleshooting guide
 description: このドキュメントでは、Adobe Experience Platform のサンドボックスに関するよくある質問に対して回答を示します。
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 90%
