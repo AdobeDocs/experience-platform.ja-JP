@@ -1,19 +1,19 @@
 ---
 keywords: 表示プロファイルrtcdp;rtcdpプロファイル表示;rtcdpプロファイル
-title: リアルタイム CDP でのプロファイルの表示
+title: リアルタイム顧客データプラットフォームでのプロファイルの表示
 seo-title: 'リアルタイム顧客データプラットフォームでのリアルタイム顧客プロファイルデータの表示 '
 description: リアルタイム顧客データプラットフォームでのリアルタイム顧客プロファイルデータの表示
 seo-description: リアルタイム顧客データプラットフォームでのリアルタイム顧客プロファイルデータの表示
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 58%
+source-wordcount: '183'
+ht-degree: 51%
 
 ---
 
 
-# リアルタイム CDP でのプロファイルの表示
+# リアルタイム顧客データプラットフォームでのプロファイルの表示
 
 [!DNL Real-time Customer Profile] オンライン、オフライン、CRM、サードパーティなどの複数のチャネルのデータを組み合わせて、各顧客の全体的な表示を作成します。個々のプロファイルは様々なソースからシステムに取り込まれるデータに基づいて集計されるので、各プロファイルでは、顧客のブランドとのやり取りがすべて、タイムスタンプ付きで実用的に記述されます。
 
