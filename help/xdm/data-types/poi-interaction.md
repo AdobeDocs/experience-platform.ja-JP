@@ -5,7 +5,7 @@ title: 目標地点インタラクションデータタイプ
 topic: overview
 description: このドキュメントでは、目標地点インタラクションXDMデータ型の概要を説明します。
 translation-type: tm+mt
-source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 3%
