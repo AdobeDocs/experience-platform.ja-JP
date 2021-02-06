@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace；人気のあるトピック；jupyterlab
 solution: Experience Platform
-title: JupyterLab ユーザーガイド
+title: JupterLab UIの概要
 topic: Overview
-description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。このドキュメントでは、JupyterLab とその機能の概要と、一般的なアクションを実行する手順を説明します。
+description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。このソリューションは、データ科学者がJupter Notebooks、コード、データを扱うための対話型の開発環境を提供します。 このドキュメントでは、JupyterLab とその機能の概要と、一般的なアクションを実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: d5e7679ac41fd476c77a98920d7f7aeaefacec6d
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1950'
-ht-degree: 69%
+ht-degree: 67%
 
 ---
 
 
-# [!DNL JupyterLab] ユーザーガイド
+# [!DNL JupyterLab] UI の概要
 
-[!DNL JupyterLab] は、[プロジェクト Jupyter](https://jupyter.org/) の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者が Jupyter のノートブック、コード、データを扱うための、インタラクティブな開発環境を提供します。
+[!DNL JupyterLab] は、[プロジェクト Jupyter](https://jupyter.org/) の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。このソリューションは、データ科学者がJupter Notebooks、コード、データを扱うための対話型の開発環境を提供します。
 
 このドキュメントでは、[!DNL JupyterLab]とその機能の概要と、一般的な操作を実行する手順を説明します。
 
