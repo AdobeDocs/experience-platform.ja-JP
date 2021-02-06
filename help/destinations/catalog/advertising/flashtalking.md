@@ -1,21 +1,17 @@
 ---
 keywords: Flashtalking OneTag拡張機能；Flashtalking OneTag拡張機能；Flashtalking OneTag宛先；Flashtalking OneTag;flashtalking onetag
-title: Flashtalking OneTag 拡張機能
-seo-title: Flashtalking OneTag 拡張機能
+title: Flashtalking OneTag Extensionの宛先
 description: Flashtalking OneTag拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Flashtalking OneTag拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 26%
+source-wordcount: '538'
+ht-degree: 23%
 
 ---
 
 
 # [!DNL Flashtalking OneTag] 拡張機能 {#flashtalking-extension}
-
-## 概要 {#overview}
 
 Experience Platform Launch用の[!DNL Flashtalking OneTag]拡張機能を使用すると、サイトのアクションを簡単に関連付けて、表示、ビデオ、モバイル広告アクティビティを行うことができます。 「起動」を使用して、[!DNL Flashtalking OneTag]をWebプロパティに展開します。
 
