@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；AzureData Explorer;Azure Data Explorer;Data Explorer;Data Explorer
 solution: Experience Platform
-title: UIでAzureData Explorerソースコネクタを作成する
+title: UIでAzureData Explorerソース接続を作成する
 topic: overview
 type: Tutorial
-description: このチュートリアルでは、Platformユーザーインターフェイスを使用してAzureData Explorer(以下「Data Explorer」と呼ばれる)ソースコネクタを作成する手順を説明します。
+description: Adobe Experience PlatformUIを使用してAzureData Explorerソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '512'
 ht-degree: 8%
 
 ---
 
 
-# UIに[!DNL Azure Data Explorer]ソースコネクタを作成する
+# UIに[!DNL Azure Data Explorer]ソース接続を作成する
 
 >[!NOTE]
 >
