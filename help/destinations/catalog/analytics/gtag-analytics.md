@@ -1,21 +1,17 @@
 ---
 keywords: Googleグローバルサイトタグ；gtag;google gtag;google拡張子；googleタグ拡張子；GTAG
-title: Google Global Site Tag 拡張機能
-seo-title: Google Global Site Tag 拡張機能
+title: Googleグローバルサイトタグ拡張の宛先
 description: Googleグローバルサイトタグ拡張機能は、Adobe Experience PlatformのAnalyticsの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
-seo-description: Googleグローバルサイトタグ拡張機能は、Adobe Experience PlatformのAnalyticsの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 28%
+source-wordcount: '527'
+ht-degree: 25%
 
 ---
 
 
-# [!DNL Google Global Site Tag] 拡張子 {#gtag-analytics-extension}
-
-## 概要 {#overview}
+# [!DNL Google Global Site Tag] 拡張機能 {#gtag-analytics-extension}
 
 [!DNL Google Analytics]、[!DNL Google Ads]、および[!DNL Google Marketing Platform]に、[!DNL Google's Global Site Tag]またはgtag.js経由でデータを送信します。 製品ごとに複数のアカウントを設定できます。
 
