@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；複数のオブジェクト参照；api
 solution: Experience Platform
-title: 複数のオブジェクトの検索
+title: 複数のカタログオブジェクトの検索
 topic: developer guide
 description: オブジェクトごとに 1 つのリクエストを実行する代わりに、複数のオブジェクトを表示する場合、カタログには同じ種類のオブジェクトを複数リクエストするためのシンプルなショートカットが用意されています。1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
 translation-type: tm+mt
-source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 53%
+source-wordcount: '237'
+ht-degree: 49%
 
 ---
 
 
-# 複数のオブジェクトの検索
+# 複数のカタログオブジェクトの検索
 
 1つのオブジェクトにつき1つのリクエストを行うのではなく、複数の特定のオブジェクトを表示したい場合、[!DNL Catalog]は同じ型の複数のオブジェクトをリクエストする簡単なショートカットを提供します。 1 つの GET リクエストで複数のオブジェクトを返すには、リクエストに ID のコンマ区切りリストを含めます。
 
