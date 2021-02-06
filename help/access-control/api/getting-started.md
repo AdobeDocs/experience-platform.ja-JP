@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；アクセス制御;api；はじめに
 solution: Experience Platform
-title: アクセス制御開発者ガイド
+title: アクセス制御APIガイド
 topic: developer guide
-description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。以下の節では、Schema Registry API への呼び出しを正常に実行するために必要な追加情報を示しています。
+description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。以降の節では、スキーマレジストリAPIを正しく呼び出すために開発者が知る必要がある追加情報について説明します。
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
 source-wordcount: '389'
-ht-degree: 64%
+ht-degree: 57%
 
 ---
 
 
-# [!DNL Access control] 開発ガイド
+# [!DNL Access Control] APIガイド
 
 [!DNL Access control] というの [!DNL Experience Platform] は、 [Adobe Admin Consoleを通して投与されるからだ](https://adminconsole.adobe.com)。この機能は、Admin Console の製品プロファイルを利用して、権限およびサンドボックスを持つユーザーをリンクします。詳しくは、「[アクセス制御の概要](../home.md)」を参照してください。
 
