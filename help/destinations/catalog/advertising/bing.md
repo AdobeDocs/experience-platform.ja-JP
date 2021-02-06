@@ -1,21 +1,17 @@
 ---
 keywords: '広告；bing; '
-title: Microsoft Bingの宛先
-seo-title: Microsoft Bingの送信先は、プロファイルデータをMicrosoftディスプレイ広告に送信する際に役立ちます。
-description: Microsoft Bingのリンク先では、Microsoftディスプレイ広告全体で、ターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行できます。
-seo-description: Microsoft Bingのリンク先では、Microsoftディスプレイ広告全体で、ターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行できます。
+title: Microsoft Bing接続先
+description: Microsoft Bingの接続先で、Microsoftディスプレイ広告全体に対して、ターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行できます。
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '461'
 ht-degree: 6%
 
 ---
 
 
-# [!DNL Microsoft Bing] destination
-
-## 概要 {#overview}
+# [!DNL Microsoft Bing] connection
 
 [!DNL Microsoft Bing]宛先は、プロファイルデータを[!DNL Microsoft Display Advertising]に送信するのに役立ちます。
 
