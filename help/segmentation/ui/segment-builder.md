@@ -5,10 +5,10 @@ title: セグメントビルダーのUIガイド
 topic: ui guide
 description: 'Adobe Experience PlatformUIのセグメントビルダーは、プロファイルデータ要素を操作できるリッチワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。 '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 48%
+source-wordcount: '1928'
+ht-degree: 45%
 
 ---
 
@@ -100,6 +100,22 @@ ht-degree: 48%
 コード表示には、API呼び出しで使用するセグメントの値をコピーできるボタンが用意されています。 セグメントの最新バージョンを取得するには、セグメントに対する最新の変更を保存していることを確認します。
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### 集計関数
+
+[!DNL Segment Builder]の集計は、データ型が数値(重複または整数)のXDM属性のグループに対する計算です。 セグメントビルダーでサポートされる集計関数は、SUM、AVERAGE、MINおよびMAXの4つです。
+
+集計関数を作成するには、左側のレールからイベントを選択し、[!UICONTROL イベント]コンテナに挿入します。
+
+![](../images/ui/segment-builder/select-event.png)
+
+イベントコンテナ内にイベントを配置した後、楕円アイコン(...)を選択し、続けて&#x200B;**[!UICONTROL 集計]**&#x200B;を選択します。
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+集計が追加されます。 集計関数、集計する属性、等価関数、値を選択できるようになりました。 次の例では、このセグメントは、各購入が$100未満の場合でも、購入した値の合計が$100を超えるプロファイルを資格とします。
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## コンテナ
 
