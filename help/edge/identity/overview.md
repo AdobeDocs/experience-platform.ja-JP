@@ -5,9 +5,9 @@ description: Adobe Experience CloudIDの取得方法を説明します。
 seo-description: Adobe Experience CloudIDの取得方法を説明します。
 keywords: Identity;First Party Identity;Identity Service；サードパーティID;IDの移行；訪問者ID；サードパーティID；サードパーティID;IDMigrationEnabled;getIdentity;SyncIdentity;sendEvent;primary;Id;Identity;名前空間;名前空間状態；認証；hashEnabled;
 translation-type: tm+mt
-source-git-commit: 60945f7f3a87568b82d968692cc7a6e07593fa01
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '919'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience PlatformWeb SDKは、[AdobeIDサービス](../../identity-servi
 
 ## サードパーティID
 
-[!DNL Identity Service]には、IDをサードパーティドメイン(demdex.net)と同期して、サイト間の追跡を有効にする機能があります。 これが有効な場合、訪問者の最初のリクエスト（ECIDのないユーザーなど）は、demdex.netに対して行われます。 これは、Chromeなどを許可するブラウザーでのみ実行され、設定の`thirdPartyCookiesEnabled`パラメーターで制御されます。 この機能をすべて一緒に無効にする場合は、`thirdPartyCookiesEnabled`をfalseに設定します。
+[!DNL Identity Service]には、IDをサードパーティドメイン(demdex.net)と同期して、サイト間の追跡を有効にする機能があります。 これが有効な場合、訪問者の最初のリクエスト（例えば、ECIDのない訪問者）は、demdex.netに対して行われます。 これは、ChromeなどのChromeを許可するブラウザーでのみ実行され、設定の`thirdPartyCookiesEnabled`パラメーターで制御されます。 この機能をすべて一緒に無効にする場合は、`thirdPartyCookiesEnabled`をfalseに設定します。
 
 ## IDの移行
 
