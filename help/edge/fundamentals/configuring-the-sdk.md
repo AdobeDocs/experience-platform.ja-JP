@@ -5,7 +5,7 @@ description: Experience Platform Web SDK の設定方法について説明しま
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；Web;環境;placeContext;debugEnabled;edgeDomain;orgId;clickBeforeEventSend;defaultConsent;Web設定；prehidingStyle;cookieDestinations;enabledDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 72%
