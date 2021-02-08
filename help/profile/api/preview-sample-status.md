@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API;プレビュー；サンプル
-title: プロファイルサンプルステータスAPIエンドポイント
-description: リアルタイム顧客プロファイルAPIエンドポイントを使用すると、プロファイルデータの最新の成功したサンプルをプレビューできるほか、データセット別、Adobe Experience Platform内のID名前空間別にリストプロファイルの配布を検証できます。
+title: プレビューサンプルステータス(プロファイルプレビュー)APIエンドポイント
+description: Real-time Customer Comment Endpoint APIの一部であるプレビューサンプルステータスエンドポイントを使用すると、プロファイルデータの最新の成功したサンプルをプレビューでき、データセット別、Adobe Experience Platform内のID名前空間別にリストプロファイルの配布を測定できます。
 topic: guide
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5266c393b034d1744134522cf1769304f39733da
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 5%
+source-wordcount: '1655'
+ht-degree: 4%
 
 ---
 
@@ -16,13 +16,20 @@ ht-degree: 5%
 
 Adobe Experience Platformでは、複数のソースから顧客データを取り込んで、個々の顧客に対して堅牢な統合プロファイルを構築できます。 リアルタイム顧客プロファイルが有効なデータは[!DNL Platform]に取り込まれるので、プロファイルデータストア内に保存されます。
 
-プロファイルストアへのレコードの取り込みが、総プロファイル数を5%以上増減すると、ジョブがトリガされ、カウントが更新される。 ストリーミングデータワークフローの場合、5%増減のしきい値に達したかどうかを判断するために、1時間ごとにチェックが行われます。 ジョブが存在する場合は、そのジョブが自動的にトリガされ、カウントが更新されます。 バッチ取り込みの場合、バッチをプロファイルストアに正常に取り込んでから15分以内に、5%の増減のしきい値に達すると、ジョブが実行され、カウントが更新されます。 プロファイルAPIを使用して、最新の成功したサンプルジョブをプレビューできるほか、リストプロファイルの配布をデータセット別、ID名前空間別に測定できます。
+プロファイルストアへのレコードの取り込みが、総プロファイル数を5%以上増減する場合、サンプリングジョブをトリガしてカウントを更新する。 サンプルのトリガー方法は、使用されている取り込みのタイプによって異なります。
+
+* **ストリーミングデータワークフロー**&#x200B;の場合、5%の増減しきい値に達したかどうかを判断するために、1時間ごとにチェックが行われます。 サンプルジョブが存在する場合は、サンプルジョブが自動的にトリガーされ、カウントが更新されます。
+* **バッチインジェスト**&#x200B;の場合、バッチをプロファイルストアに正常に取り込んでから15分以内に、5%の増減のしきい値に達すると、ジョブが実行され、カウントが更新されます。 プロファイルAPIを使用して、最新の成功したサンプルジョブをプレビューできるほか、リストプロファイルの配布をデータセット別、ID名前空間別に測定できます。
 
 これらの指標は、Experience PlatformUIの[!UICONTROL プロファイル]セクション内でも使用できます。 UIを使用したプロファイルデータへのアクセス方法については、[[!DNL Profile] ユーザーガイド](../ui/user-guide.md)を参照してください。
 
+>[!NOTE]
+>
+>Adobe Experience Platform Segmentation Service APIの一部として、予測およびプレビューエンドポイントが用意されています。このエンドポイントを使用すると、セグメント定義に関する概要レベルの情報を表示し、期待されるオーディエンスを確実に分離できます。 セグメントプレビューと予測エンドポイントを使用する詳細な手順については、[!DNL Segmentation] API開発者ガイドの[プレビューおよび予測エンドポイントガイド](../../segmentation/api/previews-and-estimates.md)を参照してください。
+
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、[[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用されるAPIエンドポイントは、[[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## プロファイルフラグメントと結合されたプロファイル
 
@@ -89,7 +96,7 @@ curl -X GET \
 | `totalFragmentCount` | プロファイルストア内のプロファイルフラグメントの合計数です。 |
 | `lastSuccessfulBatchTimestamp` | 前回成功したバッチ取り込みのタイムスタンプ。 |
 | `streamingDriven` | *このフィールドは非推奨となり、応答に意義はありません。* |
-| `totalRows` | エクスペリエンスプラットフォーム内の結合されたプロファイルの合計数です。「プロファイル数」とも呼ばれます。 |
+| `totalRows` | Experience Platform内のマージされたプロファイルの合計数。「プロファイル数」とも呼ばれます。 |
 | `lastBatchId` | 最後のバッチ取り込みID。 |
 | `status` | 最後のサンプルのステータス。 |
 | `samplingRatio` | サンプリングした結合プロファイル(`numRowsToRead`)と結合された合計プロファイル(`totalRows`)の比率。10進数形式で表されます。 |
@@ -189,11 +196,9 @@ curl -X GET \
 | `createdUser` | データセットを作成したユーザーのユーザーID。 |
 | `reportTimestamp` | レポートのタイムスタンプ。 リクエスト時に`date`パラメーターが指定された場合、指定された日付のレポートが返されます。 `date`パラメーターが指定されない場合は、最新のレポートが返されます。 |
 
-
-
 ## 名前空間別リストプロファイル配布
 
-`/previewsamplestatus/report/namespace`エンドポイントに対してGETリクエストを実行し、プロファイルストア内の結合されたすべてのプロファイルのID名前空間別の分類を表示できます。 ID名前空間は、顧客データが関連付けられるコンテキストのインジケーターとして機能する、Adobe Experience PlatformIDサービスの重要なコンポーネントです。 詳しくは、[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。
+`/previewsamplestatus/report/namespace`エンドポイントに対してGETリクエストを実行し、プロファイルストア内の結合されたすべてのプロファイルのID名前空間別の分類を表示できます。 ID名前空間は、顧客データが関連付けられるコンテキストのインジケータとして機能する、Adobe Experience PlatformIDサービスの重要なコンポーネントです。 詳しくは、[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。
 
 >[!NOTE]
 >
@@ -288,5 +293,4 @@ curl -X GET \
 
 ## 次の手順
 
-同様の予測とプレビューを使用して、セグメント定義に関する表示の概要レベルの情報に対して、期待されるオーディエンスを確実に分離することもできます。 [!DNL Adobe Experience Platform Segmentation Service] APIを使用したセグメントプレビューと予測の使用に関する詳細な手順については、[!DNL Segmentation] API開発者ガイドの[プレビューと予測エンドポイントガイド](../../segmentation/api/previews-and-estimates.md)を参照してください。
-
+プロファイルストアでサンプルデータをプレビューする方法がわかったので、Segmentation Service APIの見積もりとプレビューエンドポイントを使用して、セグメント定義に関する表示の概要レベル情報を得ることもできます。 この情報は、セグメント内の期待されるオーディエンスを確実に分離するのに役立ちます。 セグメント化APIを使用したセグメントプレビューと予測の操作について詳しくは、[プレビューおよび予測エンドポイントガイド](../../segmentation/api/previews-and-estimates.md)を参照してください。
