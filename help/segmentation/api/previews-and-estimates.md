@@ -3,19 +3,27 @@ keywords: Experience Platform；ホーム；人気の高いトピック；セグ
 solution: Experience Platform
 title: プレビューと予測APIエンドポイント
 topic: developer guide
-description: Adobe Experience Platform Segmentation Service APIのプレビューおよび予測エンドポイントを使用すると、概要レベルの情報を表示でき、セグメント内の期待されるオーディエンスを確実に分離できます。
+description: セグメント定義が作成されると、Adobe Experience Platformの見積もりツールとプレビューツールを使用して、表示の概要レベルの情報を利用し、期待されるオーディエンスを確実に切り分けることができます。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: eba6de210dcbc12b829b09ba6e7083d342517ba2
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 26%
+source-wordcount: '949'
+ht-degree: 18%
 
 ---
 
 
 # エンドポイントのプレビューと予測
 
-セグメント定義を作成する際、[!DNL Adobe Experience Platform]内の予測ツールとプレビューツールを使用して、概要レベルの情報を表示し、期待されるオーディエンスを確実に特定できます。 **プレビューは、セグメント定義に適格なプロファイルのページ分割リストを表示するので、結果を予想と比較できます。****** 予測には、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報が含まれます。
+セグメント定義を作成する際に、Adobe Experience Platformの見積もりツールとプレビューツールを使用して、表示の概要レベルの情報を得ることで、期待するオーディエンスを確実に切り離すことができます。
+
+* **プレビューは、セグメント定義に適格なプロファイルのページ分割リストを表示するので、結果を予想と比較できます。**
+
+* **** 予測には、予測されるオーディエンスサイズ、信頼区間、誤差の標準偏差など、セグメント定義の統計情報が含まれます。
+
+>[!NOTE]
+>
+>特定の名前空間またはプロファイルデータストア内のプロファイルフラグメントと結合プロファイルの合計数など、リアルタイム顧客プロファイルデータに関連する同様の指標にアクセスするには、『プロファイルAPI開発者ガイド』の「[プレビュープレビュー(プロファイルサンプルステータス)エンドポイントガイド](../../profile/api/preview-sample-status.md)」を参照してください。
 
 ## はじめに
 
@@ -23,11 +31,10 @@ ht-degree: 26%
 
 ## 推定の生成方法
 
-データサンプリングがトリガされる方法は、取り込み方法によって異なります。
+プロファイルストアへのレコードの取り込みが、総プロファイル数を5%以上増減する場合、サンプリングジョブをトリガしてカウントを更新する。 データサンプリングをトリガする方法は、取り込み方法によって異なります。
 
-バッチ取り込みの場合、プロファイルストアは15分ごとに自動的にスキャンされ、最後のサンプリングジョブが実行されてから新しいバッチが正常に取り込まれたかどうかを確認します。 その場合、プロファイルストアがスキャンされ、レコード数に少なくとも5%の変更があったかどうかが確認されます。 これらの条件が満たされると、新しいサンプリングジョブがトリガされます。
-
-ストリーミング取り込みの場合、プロファイルストアは1時間ごとに自動的にスキャンされ、レコード数に少なくとも5%の変更があったかどうかが確認されます。 この条件が満たされると、新しいサンプリングジョブがトリガされます。
+* **バッチ取り込み：バッチ取り込み** の場合、バッチをプロファイルストアに取り込んでから15分以内に、5%の増減のしきい値に達すると、ジョブが実行されてカウントが更新されます。
+* **ストリーミング取り込み：データワークフロー** のストリーミングの場合、5%増加または減少のしきい値が満たされたかどうかを調べるために、1時間ごとにチェックが行われます。ジョブが存在する場合は、そのジョブが自動的にトリガされ、カウントが更新されます。
 
 スキャンのサンプルサイズは、プロファイルストアのエンティティの全体数によって異なります。 これらのサンプルサイズを次の表に示します。
 
@@ -76,7 +83,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | データのクエリに使用する PQL 式です。 |
 | `predicateType` | `predicateExpression`の下のクエリ式の述語の種類です。 現在、このプロパティに指定できる値は`pql/text`のみです。 |
-| `predicateModel` | プロファイルデータの基になる[!DNL Experience Data Model] (XDM)スキーマの名前。 |
+| `predicateModel` | プロファイルデータが基づく[!DNL Experience Data Model] (XDM)スキーマクラスの名前。 |
 
 **応答**
 
@@ -172,7 +179,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、[[!DNL Profile Access API]](../../profile/api/entities.md)を使用して、指定されたエンティティを検索するために使用できます。 |
+| `results` | エンティティIDと関連IDのリスト。 提供されたリンクは、[プロファイルアクセスAPIエンドポイント](../../profile/api/entities.md)を使用して、指定されたエンティティを検索するのに使用できます。 |
 
 ## 特定の見積ジョブの結果の取得 {#get-estimate}
 
@@ -206,17 +213,27 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 ```json
 {
-    "estimatedSize": 0,
-    "numRowsToRead": 1,
+    "estimatedSize": 4275,
+    "numRowsToRead": 4275,
+    "estimatedNamespaceDistribution": [
+        {
+            "namespaceId": "4",
+            "profilesMatchedSoFar": 35
+        },
+        {
+            "namespaceId": "6",
+            "profilesMatchedSoFar": 4275
+        }
+    ],
     "state": "RESULT_READY",
-    "profilesReadSoFar": 1,
+    "profilesReadSoFar": 4275,
     "standardError": 0,
     "error": {
         "description": "",
         "traceback": ""
     },
-    "profilesMatchedSoFar": 0,
-    "totalRows": 1,
+    "profilesMatchedSoFar": 4275,
+    "totalRows": 4275,
     "confidenceInterval": "95%",
     "_links": {
         "preview": "https://platform.adobe.io/data/core/ups/preview/app-32be0328-3f31-4b64-8d84-acd0c4fbdad3/execution/0?previewQueryId=e890068b-f5ca-4a8f-a6b5-af87ff0caac3"
@@ -226,9 +243,10 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `state` | プレビュージョブの現在の状態です。処理が完了するまでは「RUNNING」で、完了した時点で「RESULT_READY」または「FAILED」になります。 |
-| `_links.preview` | プレビュージョブの現在の状態が「RESULT_READY」の場合、この属性は推定を表示するための URL を提供します。 |
+| `estimatedNamespaceDistribution` | セグメント内のプロファイル数を識別名前空間別に分類したオブジェクトの配列。 1つのプロファイルが複数の名前空間に関連付けられる可能性があるので、名前空間別のプロファイルの合計数(各名前空間に表示される値を合計)は、プロファイル数指標より多くなる場合があります。 例えば、ある顧客が複数のチャネルで自社のブランドとやり取りした場合、複数の名前空間がその個々の顧客に関連付けられます。 |
+| `state` | プレビュージョブの現在の状態です。処理が完了するまで、状態は「実行中」になり、その時点で「RESULT_READY」または「FAILED」になります。 |
+| `_links.preview` | `state`が「RESULT_READY」の場合、このフィールドは予測を表示するURLを提供します。 |
 
 ## 次の手順
 
-このガイドを読むと、プレビューと予測の使い方に関する理解が深まります。 他の[!DNL Segmentation Service] APIエンドポイントの詳細については、[Segmentation Service開発者ガイドの概要](./overview.md)を参照してください。
+このガイドを読んだ後は、セグメント化APIを使用したプレビューと予測の使い方について、より深く理解する必要があります。 特定の名前空間またはプロファイルデータストア内のプロファイルフラグメントと結合プロファイルの合計数など、リアルタイム顧客プロファイルデータに関連する指標にアクセスする方法については、[プロファイルプレビュー(`/previewsamplestatus`)のガイド](../../profile/api/preview-sample-status.md)を参照してください。
