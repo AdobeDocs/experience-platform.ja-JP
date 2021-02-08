@@ -5,10 +5,10 @@ description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し�
 seo-description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 keywords: ターゲット;adobeターゲット;xdm表示;表示；シングルページアプリ；SPA;SPAライフサイクル；クライアント側；ABテスト；AB；エクスペリエンスのターゲット設定；XT;VEC
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '1689'
-ht-degree: 14%
+source-wordcount: '1688'
+ht-degree: 12%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience PlatformWeb SDKは、シングルページアプリケーショ
 
 ## XDM表示とシングルページアプリ
 
-SPA の Adobe Target VEC は、ビューと呼ばれる新しい概念を活用します。ビューとはビジュアル要素の論理的集合体で、全体として SPA のエクスペリエンスを形作ります。したがって、単一のページアプリは、ユーザーの操作に基づいて、URLではなく表示を介した移行と見なすことができます。 通常、ビューはサイト全体またはサイト内のグループ化されたビジュアル要素を表せます。
+SPA向けAdobe TargetVECは、表示と呼ばれる概念を利用している。spaエクスペリエンスを構成する視覚的要素の論理的なグループ。 したがって、単一のページアプリは、ユーザーの操作に基づいて、URLではなく表示を介した移行と見なすことができます。 通常、ビューはサイト全体またはサイト内のグループ化されたビジュアル要素を表せます。
 
 表示の詳細を説明するために、次の例では、「React」に実装された仮定のオンラインeコマースサイトを使用して、例の表示を調べます。
 
