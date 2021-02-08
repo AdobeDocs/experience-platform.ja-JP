@@ -5,9 +5,9 @@ description: Experience Platform Web SDK の設定方法について説明しま
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；Web;環境;placeContext;debugEnabled;edgeDomain;orgId;clickBeforeEventSend;defaultConsent;Web設定；prehidingStyle;cookieDestinations;enabledDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '740'
 ht-degree: 72%
 
 ---
@@ -66,6 +66,7 @@ alloy("configure", {
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ------------------ |
 | 文字列 | × | `beta.adobedc.net` |
+| 文字列 | × | `omtrdc.net` |
 
 Adobeサービスとのやり取りに使用するドメイン。 Adobe エッジインフラストラクチャにリクエストをプロキシするファーストパーティドメイン（CNAME）がある場合にのみ使用されます。
 
