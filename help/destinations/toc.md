@@ -5,10 +5,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f98fb81fee57151e6424355f64bccb29c5669dad
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 42%
+source-wordcount: '339'
+ht-degree: 43%
 
 ---
 
@@ -129,3 +129,4 @@ ht-degree: 42%
       * [インボカタグ](./catalog/voice/invoca.md)
       * [メダリア](./catalog/voice/medallia.md)
       * [Talk URL Inbox](./catalog/voice/talkurl.md)
+* [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
