@@ -5,7 +5,7 @@ title: レポートスイートデータ用Adobe Analyticsソースコネクタ
 topic: overview
 description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: e480ce789c849db24713da312345ea3162e617a6
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 41%
@@ -49,7 +49,7 @@ XDM について詳しくは、「[XDM システムの概要](../../../xdm/home.
 | -------------- | ---------------- |
 | [!DNL Real-time Customer Profile]への新しいデータ（A4T ****&#x200B;が有効になっていません） | &lt; 2 分 |
 | [!DNL Real-time Customer Profile]への新しいデータ（A4T **は**&#x200B;有効） | &lt; 15 分 |
-| データレイクの新しいデータ | &lt; 45 分 |
+| データレイクの新しいデータ | &lt; 90 分 |
 | データのバックフィル（13 か月分のデータまたは 100 億イベントのデータのいずれか低い方） | &lt; 4 週間 |
 
 >[!NOTE]
