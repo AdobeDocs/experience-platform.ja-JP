@@ -1,12 +1,12 @@
 ---
 keywords: Audience ManagerDIL拡張子；宛先オーディエンスマネージャ；DIL拡張子
-title: Audience ManagerDILの拡張先
+title: Audience Manager DIL 拡張機能
 description: Audience ManagerDILの拡張は、Adobe Experience Platformのデータ管理プラットフォーム(DMP)の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 42%
+source-wordcount: '559'
+ht-degree: 43%
 
 ---
 
