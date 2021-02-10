@@ -3,7 +3,7 @@ keywords: dmpの宛先；DIL;オーディエンスマネージャーdmpの拡張
 title: DMP(データ管理プラットフォーム)宛先の概要
 description: DMP（データ管理プラットフォーム）を使用すると、広告主、発行者、代理店が独自のオーディエンスプロファイルを構築し、最も価値の高いセグメントを特定して、あらゆるデジタルチャネルでそれらを使用できます。これにより、真に死角のない消費者プロファイルを作成し、意味のあるオーディエンスを構築しアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 55%
