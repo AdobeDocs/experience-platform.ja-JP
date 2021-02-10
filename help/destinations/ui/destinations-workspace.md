@@ -1,10 +1,10 @@
 ---
 keywords: プラットフォーム；宛先；宛先ワークスペース；ワークスペース；ui；宛先ui;catalog；宛先カタログ；
-title: Destinations Workspaceの概要
+title: 宛先ワークスペースの概要
 description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択し、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 43%
