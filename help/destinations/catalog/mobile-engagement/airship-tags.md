@@ -1,11 +1,11 @@
 ---
 keywords: 飛行船タグ；飛行船の目的地
-title: 航空船タグ接続先
+title: 航空船タグの接続
 description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1197'
+source-wordcount: '1196'
 ht-degree: 13%
 
 ---
