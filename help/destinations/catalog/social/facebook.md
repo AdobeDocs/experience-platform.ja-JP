@@ -1,11 +1,11 @@
 ---
 keywords: facebook拡張子；facebook拡張子；facebook宛先；facebook;instagram;messenger;facebook messenger
-title: Facebookの拡張先
+title: Facebookの拡張機能
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '951'
 ht-degree: 23%
 
 ---
