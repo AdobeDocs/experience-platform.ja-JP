@@ -3,10 +3,10 @@ keywords: 調査先；調査；予測；瞬間；Web切片調査;Qualtrics
 title: 調査先の概要
 description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックを捕捉し、Adobe Experience Platformとデータを共有します。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '89'
-ht-degree: 32%
+ht-degree: 35%
 
 ---
 
