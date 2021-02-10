@@ -1,12 +1,12 @@
 ---
 keywords: 宛先；エクスペリエンスクラウドソリューション；ターゲット;ターゲット先；ad cloud;advertising cloud;オーディエンス管理者；adobeターゲットの送信先；ターゲット;オーディエンス管理者の宛先；
-title: Adobe先の概要
+title: アドビの宛先の概要
 description: プラットフォームのデータを他のAdobe Experience Cloudソリューションに接続し、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理できます。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
