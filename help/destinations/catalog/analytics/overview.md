@@ -1,12 +1,12 @@
 ---
 keywords: 解析の宛先；解析の宛先
-title: Analyticsの宛先の概要
+title: Analytics の宛先の概要
 description: Analytics の宛先は、訪問者がサイト上のコンテンツとどのようにやり通りしたかを追跡し、データを収集して、オーディエンスの行動を把握します。これらのプラットフォームは、最も価値の高い訪問者のエンゲージメントとコンバージョンに関する独自のインサイトを提供します。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 89%
+ht-degree: 91%
 
 ---
 
