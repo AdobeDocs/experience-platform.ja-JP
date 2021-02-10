@@ -1,11 +1,11 @@
 ---
 keywords: 分岐；分岐の拡張；分岐の宛先
-title: 分岐の拡張先
+title: Branch 拡張機能
 description: Branch拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '497'
 ht-degree: 25%
 
 ---
