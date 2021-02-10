@@ -1,11 +1,11 @@
 ---
 keywords: 量子指標拡張；量子指標；量子指標；量子指標
-title: Quantum Metric Extension Destination
+title: Quantum Metric 拡張機能
 description: Quantum Metric拡張は、Adobe Experience Platformの分析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '535'
 ht-degree: 24%
 
 ---
