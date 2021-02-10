@@ -1,12 +1,12 @@
 ---
 keywords: ターゲット式;ターゲット
-title: Adobe Targetの延長先
+title: Adobe Target 拡張機能
 description: Adobe Target拡張は、Adobe Experience Platformのパーソナライゼーションの目的地です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 41%
+source-wordcount: '510'
+ht-degree: 42%
 
 ---
 
