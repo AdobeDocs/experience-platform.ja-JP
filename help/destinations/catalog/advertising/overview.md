@@ -1,14 +1,14 @@
 ---
 keywords: 広告の宛先；宛先；プラットフォームの宛先
-title: 広告の宛先
-seo-title: 広告の宛先 概要
+title: 広告の宛先の概要
+seo-title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム(DSP、ad network、SSPなど)に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 seo-description: Adobe Experience Platformをサードパーティの広告プラットフォーム(DSP、ad network、SSPなど)に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 48%
+source-wordcount: '233'
+ht-degree: 43%
 
 ---
 
@@ -25,12 +25,12 @@ Adobe Experience Platformをサードパーティの広告プラットフォー�
 
 接続と拡張子の違いについて詳しくは、[宛先の種類とカテゴリ]ページの[接続](../../destination-types.md#connections)を参照してください。
 
-- [Google Display と Video 360](./google-dv360.md)
-- [Google 広告](./google-ads-destination.md)
-- [Google Ad Manager](./google-ad-manager.md)
-- [Google カスタマーマッチ](./google-customer-match.md)
-- [Microsoft Bing](./bing.md)
-- [トレードデスクの宛先](./tradedesk.md)
+- [Google Display &amp; Video 360接続](./google-dv360.md)
+- [Google Ads接続](./google-ads-destination.md)
+- [Google Ad Manager接続](./google-ad-manager.md)
+- [Google Customer Match接続](./google-customer-match.md)
+- [Microsoft Bing接続](./bing.md)
+- [トレードデスクの接続](./tradedesk.md)
 
 ## 拡張機能
 
