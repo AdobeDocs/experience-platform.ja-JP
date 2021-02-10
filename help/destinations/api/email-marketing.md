@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: API呼び出しを使用した電子メールマーケティング先の作成
+title: 電子メールマーケティングの宛先に接続し、API呼び出しを使用してデータをアクティブにする
 description: このドキュメントでは、Adobe Experience PlatformAPIを使用した電子メールマーケティングの宛先の作成について説明します
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 71%
+source-wordcount: '1649'
+ht-degree: 70%
 
 ---
 
 
-# 電子メールマーケティングの宛先を作成し、API呼び出しを使用してデータをアクティブ化する
+# 電子メールマーケティングの宛先に接続し、API呼び出しを使用してデータをアクティブにする
 
 このチュートリアルでは、API 呼び出しを使用して Adobe Experience Platform のデータに接続する方法、[電子メールマーケティングの宛先](../catalog/email-marketing/overview.md)を作成する方法、新しく作成した宛先へのデータフローを作成する方法および新しく作成した宛先へのデータをアクティブ化する方法を説明します。
 
