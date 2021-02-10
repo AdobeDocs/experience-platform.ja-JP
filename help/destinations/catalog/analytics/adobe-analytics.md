@@ -1,12 +1,12 @@
 ---
 keywords: Analytics拡張機能；Analytics拡張機能；ターゲット解析
-title: Adobe Analyticsの延長先
+title: Adobe Analytics 拡張機能
 description: Adobe Analyticsの拡張は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 39%
+source-wordcount: '498'
+ht-degree: 40%
 
 ---
 
