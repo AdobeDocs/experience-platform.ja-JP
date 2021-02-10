@@ -1,11 +1,11 @@
 ---
 keywords: 起動拡張；起動拡張；起動先；プラットフォーム起動拡張；プラットフォーム起動拡張；プラットフォーム起動先
-title: Adobe Experience Platform Launchの延長先
+title: Adobe Experience Platform Launch拡張
 description: Adobe Experience Platform Launchは、Adobeが提供する次世代のタグ管理機能です。  Platform Launch は、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '616'
 ht-degree: 46%
 
 ---
