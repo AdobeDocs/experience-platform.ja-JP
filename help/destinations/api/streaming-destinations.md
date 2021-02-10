@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；APIチュートリアル；ストリーミング送信先API;プラットフォーム
 solution: Experience Platform
-title: ストリーミング送信先への接続とAPI呼び出しを使用したデータのアクティブ化
+title: Adobe Experience PlatformでAPI呼び出しを使用して、ストリーミング送信先に接続し、データをアクティブにします。
 description: このドキュメントでは、Adobe Experience PlatformAPIを使用したストリーミング宛先の作成について説明します
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '2021'
 ht-degree: 54%
@@ -14,7 +14,7 @@ ht-degree: 54%
 ---
 
 
-# Adobe Experience PlatformでAPI呼び出しを使用して、ストリーミング送信先に接続し、データをアクティブにします。
+# ストリーミング宛先への接続とAPI呼び出しを使用したデータのアクティブ化
 
 >[!NOTE]
 >
