@@ -3,10 +3,10 @@ keywords: クラウドのストレージ先；クラウドのストレージ
 title: クラウドストレージの宛先の概要
 description: Adobe Experience Platformは、セグメントをデータファイルとしてAmazonS3、AWSKinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 34%
+ht-degree: 31%
 
 ---
 
@@ -25,11 +25,11 @@ Adobe Experience Platformは、セグメントをデータファイルとして�
 
 ## 利用可能なクラウドストレージの宛先
 
-- [Amazon S3 の宛先](./amazon-s3.md)
-- [Azure Blobの宛先](./azure-blob.md)
-- [SFTP の宛先](./sftp.md)
+- [AmazonS3接続](./amazon-s3.md)
+- [Azure Blob接続](./azure-blob.md)
+- [SFTP接続](./sftp.md)
 
 ## 利用可能なクラウドストレージストリーミング先
 
-- [AmazonKinesis駅](./amazon-kinesis.md)
-- [Azureイベントハブの宛先](./azure-event-hubs.md)
+- [AmazonKinesis接続](./amazon-kinesis.md)
+- [Azureイベントハブ接続](./azure-event-hubs.md)
