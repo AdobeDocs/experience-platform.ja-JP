@@ -1,17 +1,17 @@
 ---
 keywords: Googleの顧客一致；Googleの顧客一致；Googleの顧客一致
-title: Googleの顧客一致接続先
+title: Google Customer Match接続
 description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1470'
 ht-degree: 5%
 
 ---
 
 
-# Google Customer Match接続
+# [!DNL Google Customer Match] connection
 
 >[!IMPORTANT]
 >
