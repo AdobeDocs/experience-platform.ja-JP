@@ -3,10 +3,10 @@ keywords: 宛先；エクスペリエンスクラウドソリューション；�
 title: アドビの宛先の概要
 description: プラットフォームのデータを他のAdobe Experience Cloudソリューションに接続し、広告のターゲット設定、パーソナライゼーション、マーケティングの自動化などを行うことで、顧客体験を管理できます。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 24%
+source-wordcount: '220'
+ht-degree: 23%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 24%
 
 接続と拡張子の違いについて詳しくは、[宛先の種類とカテゴリ]ページの[接続](../../destination-types.md#connections)を参照してください。
 
-- [Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Adobe Campaign接続](../email-marketing/adobe-campaign.md)
 
 ## 拡張機能
 
