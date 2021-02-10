@@ -1,11 +1,11 @@
 ---
 keywords: デシベルの拡張子；デシベル；デシベルの送信先
-title: デシベル拡張の宛先
+title: Decibel 拡張機能
 description: デシベル拡張は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '520'
 ht-degree: 27%
 
 ---
