@@ -3,9 +3,9 @@ keywords: モバイルメッセージング；モバイルメッセージング�
 title: モバイルエンゲージメントの宛先の概要
 description: Adobe Experience Platformがサポートする様々なモバイルエンゲージメント先について説明します。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '39'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,6 @@ ht-degree: 0%
 
 [!DNL Adobe Experience Platform] 現在、次のモバイルエンゲージメント先をサポートしています。
 
-* [飛行船属性](./airship-attributes.md)
-* [航空船タグ](./airship-tags.md)
-* [ブレーズ](./braze.md)
+* [航空船属性接続](./airship-attributes.md)
+* [航空船タグの接続](./airship-tags.md)
+* [ブレーズ接続](./braze.md)
