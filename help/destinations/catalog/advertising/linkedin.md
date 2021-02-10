@@ -1,12 +1,12 @@
 ---
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insightタグ；インサイトタグ；Insightタグ
-title: LinkedIn Insightタグ拡張の宛先
+title: LinkedIn Insight タグ拡張機能
 description: LinkedIn Insightタグ拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 23%
+source-wordcount: '514'
+ht-degree: 24%
 
 ---
 
