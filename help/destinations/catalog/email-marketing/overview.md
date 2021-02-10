@@ -1,13 +1,13 @@
 ---
 keywords: 電子メール；電子メール；電子メール；電子メールの宛先
-title: 電子メールマーケティング宛先の概要
+title: 電子メールマーケティングの宛先の概要
 type: Tutorial
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '791'
-ht-degree: 32%
+ht-degree: 33%
 
 ---
 
