@@ -1,14 +1,14 @@
 ---
 keywords: 宛先；adobe experience platform;platform;destinations overview;destinations overview;activate data;activate;
-title: 宛先の概要
+title: Destinations overview
 seo-title: 宛先の概要
 description: チャネル間のマーケティングキャンペーン、電子メール、ターゲットを絞った広告などの目的地に対して、Adobe Experience Platformデータをアクティブ化する方法を説明します。
 seo-description: 宛先は、宛先プラットフォームとの統合が事前に構築されており、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。 Adobe Experience Platformの宛先を使用すると、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な使用例に関する既知および不明なデータをアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 40%
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 40%
 
 **[!DNL Destinations]** は、目的のプラットフォームと事前にビルドされた統合機能で、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
-## 宛先とソース {#destinations-and-sources}
+## 宛先とソース{#destinations-and-sources}
 
 プラットフォームの主な機能の1つは、ファーストパーティのデータを取り込み、ビジネスニーズに合わせてアクティブ化することです。 ソースを使用してデータをプラットフォームに取り込み、宛先をプラットフォームからデータを書き出します。
 
@@ -43,7 +43,7 @@ ht-degree: 40%
 
 詳しくは、「[宛先のタイプとカテゴリ](./destination-types.md)」の概要を参照してください。
 
-## 宛先とアクセス制御  {#access-controls}
+## 宛先とアクセス制御{#access-controls}
 
 プラットフォームの宛先機能は、Adobe Experience Platformアクセス制御権限と連携します。 ユーザーの権限レベルに応じて、宛先を表示、管理、アクティブ化できます。個々の権限について詳しくは、「[Adobe Experience Platform でのアクセス制御](../access-control/home.md)」を参照して、ページの下部まで下にスクロールします。
 
