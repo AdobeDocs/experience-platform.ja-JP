@@ -1,12 +1,12 @@
 ---
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
-title: Awin広告主コンバージョンタグ拡張の宛先
+title: Awin Advertiser コンバージョンタグの拡張
 description: Awin Advertiser Conversion Tag Extensionは、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 41%
+source-wordcount: '528'
+ht-degree: 42%
 
 ---
 
