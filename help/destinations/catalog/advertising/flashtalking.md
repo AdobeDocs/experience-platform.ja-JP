@@ -1,12 +1,12 @@
 ---
 keywords: Flashtalking OneTag拡張機能；Flashtalking OneTag拡張機能；Flashtalking OneTag宛先；Flashtalking OneTag;flashtalking onetag
-title: Flashtalking OneTag Extensionの宛先
+title: Flashtalking OneTag 拡張機能
 description: Flashtalking OneTag拡張は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 23%
+source-wordcount: '537'
+ht-degree: 24%
 
 ---
 
