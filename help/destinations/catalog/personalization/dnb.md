@@ -1,12 +1,12 @@
 ---
 keywords: D&B訪問者インテリジェンス；D&Amp;B;訪問者インテリジェンス拡張
-title: D&B訪問者インテリジェンス拡張先
+title: D&B 訪問者インテリジェンス拡張機能
 description: D&B訪問者インテリジェンス拡張機能は、Adobe Experience Platformのパーソナライズ対象です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 24%
+source-wordcount: '500'
+ht-degree: 25%
 
 ---
 
