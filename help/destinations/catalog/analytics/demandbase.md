@@ -1,11 +1,11 @@
 ---
 keywords: demandbase extension;demandbase;demandbase destination
-title: Demandbase拡張の宛先
+title: Demandbase 拡張機能
 description: Demandbase拡張機能は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '538'
 ht-degree: 26%
 
 ---
