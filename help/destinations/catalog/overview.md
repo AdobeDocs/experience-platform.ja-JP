@@ -5,10 +5,10 @@ seo-title: 宛先カタログの概要
 description: 宛先カタログは、データを受信する準備ができている使用可能な宛先のリストを提供します。 これらの宛先には、アドビソリューション、広告プラットフォーム、調査プラットフォーム、E メールマーケティングプラットフォームなどが含まれます。
 seo-description: 宛先カタログは、データを受信する準備ができている使用可能な宛先のリストを提供します。 これらの宛先には、アドビソリューション、広告プラットフォーム、調査プラットフォーム、E メールマーケティングプラットフォームなどが含まれます。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 65%
+source-wordcount: '194'
+ht-degree: 62%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 65%
 
 Adobe Experience Platformの別のリンク先カテゴリに対して、データをアクティブ化できます。 以下のリンクは、各宛先カテゴリに関する詳細情報を提供します。
 
-- [アドビソリューション](./adobe/overview.md)
-- [広告の宛先](./advertising/overview.md)
-- [Analytics の宛先](./analytics/overview.md)
-- [クラウドストレージの宛先](./cloud-storage/overview.md)
-- [データ管理プラットフォーム](./data-management/overview.md)
-- [電子メールマーケティング](./email-marketing/overview.md)
-- [パーソナライズ機能](./personalization/overview.md)
-- [ソーシャルの宛先](./social/overview.md)
-- [調査](./survey/overview.md)
-- [顧客の声](./voice/overview.md)
+- [アドビの宛先の概要](./adobe/overview.md)
+- [広告の宛先の概要](./advertising/overview.md)
+- [Analytics の宛先の概要](./analytics/overview.md)
+- [クラウドストレージの宛先の概要](./cloud-storage/overview.md)
+- [DMP(データ管理プラットフォーム)宛先の概要](./data-management/overview.md)
+- [電子メールマーケティングの宛先の概要](./email-marketing/overview.md)
+- [パーソナライズ機能の宛先の概要](./personalization/overview.md)
+- [ソーシャルネットワークの宛先の概要](./social/overview.md)
+- [調査先の概要](./survey/overview.md)
+- [顧客の宛先の概要の音声](./voice/overview.md)
