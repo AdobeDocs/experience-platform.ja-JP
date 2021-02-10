@@ -1,9 +1,9 @@
 ---
-keywords: facebook拡張子；facebook拡張子；facebook宛先；facebook;instagram;messenger;facebook messenger
-title: Facebookの拡張機能
+keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagram;messenger;facebook messenger
+title: Facebookの接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 23%
@@ -11,7 +11,7 @@ ht-degree: 23%
 ---
 
 
-# [!DNL Facebook] 拡張機能
+# [!DNL Facebook] connection
 
 >[!IMPORTANT]
 >
