@@ -3,9 +3,9 @@ keywords: 広告；業者の机
 title: トレードデスクの接続
 description: 'トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。 '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '540'
 ht-degree: 5%
 
 ---
@@ -50,7 +50,6 @@ ht-degree: 5%
 * **[!UICONTROL 名前]**:この宛先が将来認識される名前。
 * **[!UICONTROL 説明]**:この宛先を将来特定するのに役立つ説明です。
 * **[!UICONTROL アカウントID]**:アカウント [!DNL Trade Desk] [!UICONTROL ID]。
-* **[!UICONTROL クライアントシークレット]**:クライアント資格情報で使用される `clientSecret`  [!DNL OAuth2] パラメーター。
 * **[!UICONTROL サーバーの場所]**:どの地域サーバーを使用する [!DNL The Trade Desk] かを担当者に問い合わせてください。以下は、選択可能な地域サーバーです。
 
    * **[!UICONTROL ヨーロッパ]**
