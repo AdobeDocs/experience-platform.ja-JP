@@ -3,10 +3,10 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebookの接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 23%
+source-wordcount: '1001'
+ht-degree: 22%
 
 ---
 
@@ -15,9 +15,11 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->新しい移行先バージョンへのお客様の移行は現在進行中です。 移行が完了するまで、この宛先で使用できるIDは[!UICONTROL EMAIL]と[!UICONTROL EMAIL_LC_SHA_256]のみです。
+>現在、お客様をこの移行先の新しいバージョン[!DNL Facebook Custom Audience]に移行中です。
+>
+> この記事の説明は、両方のバージョンに当てはまり、次の注意が必要です。この移行の進行中は、現在の[!DNL Facebook]宛先のバージョンのみがユーザーインターフェイスに表示されます。アクティベーションには[!UICONTROL EMAIL]EMAIL[!UICONTROL EMAIL_LC_SHA_256] IDのみを使用できます。
 
-ハッシュされた電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、および抑制のための[!DNL Facebook]キャンペーンのプロファイルをアクティブにします。
+ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制のための[!DNL Facebook]キャンペーンのプロファイルをアクティブにします。
 
 [!DNL Facebook]、[!DNL Instagram]、[!DNL Audience Network]、[!DNL Messenger]など、[!DNL Custom Audiences]でサポートされるアプリのファミリーに対するオーディエンスターゲティングには、このリンク先を使用できます。 [!DNL Facebook’s]キャンペーンを実行するアプリの選択範囲が、[!DNL Facebook Ads Manager] の配置レベルで示されます。
 
@@ -95,10 +97,13 @@ Experience Platformでの電子メールアドレスの取り込みについて�
    - 例：`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`（`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149` ではない）
 - 文字列にソルトを使用しないでください。
 
-非ハッシュ化された名前空間のデータは、アクティベーション時に[!DNL Platform]によって自動的にハッシュされます。
+>[!NOTE]
+>
+>非ハッシュ化された名前空間のデータは、アクティベーション時に[!DNL Platform]によって自動的にハッシュされます。
+> 属性ソースデータは自動的にハッシュされません。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティベーション上のデータを自動的にハッシュ化します。[!DNL Platform]
+> 「**[!UICONTROL 変換を適用]**」オプションは、属性をソースフィールドとして選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
 
-属性ソースデータは自動的にハッシュされません。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティベーション上のデータを自動的にハッシュ化します。
-[!DNL Platform]![IDマッピング変換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![IDマッピング変換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### カスタム名前空間{#custom-namespaces}の使用
 
