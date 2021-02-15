@@ -6,7 +6,7 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 15%
@@ -60,7 +60,7 @@ Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL
 
 ソーシャル宛先の場合は、ソース属性またはID名前空間を選択して、宛先のターゲットIDとしてマップする必要があります。
 
-#### 例：[!DNL Facebook] {#example-facebook}でのオーディエンスデータのアクティブ化
+#### 例：[!DNL Facebook Custom Audience] {#example-facebook}でのオーディエンスデータのアクティブ化
 
 これは、[!DNL Facebook]でオーディエンスデータをアクティブ化する際の正しいIDマッピングの例です。
 
