@@ -5,9 +5,9 @@ title: ストリーミングセグメントUIガイド
 topic: ui guide
 description: Adobe Experience Platformでのセグメント化のストリーミングにより、データの豊富性に重点を置き、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性が軽減され、データがプラットフォームに到着するとセグメントの認定が行われるようになりました。 この機能を使用すると、ほとんどのセグメントルールを、データがプラットフォームに渡される際に評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメント化ジョブを実行せずに最新の状態に維持されます。
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '769'
 ht-degree: 1%
 
 ---
@@ -75,12 +75,6 @@ ht-degree: 1%
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
 セグメント定義の詳細については、[セグメント定義の詳細](#segment-details)の前の節を参照してください。
-
-## ストリーミングセグメントのビデオデモ
-
-次のビデオでは、ストリーミングのセグメント化について理解しておくことを目的としています。 これは、顧客体験の例を示し、その後に[!DNL Platform]インターフェイスの主な機能を簡単に紹介します。
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
 ## 次の手順
 
