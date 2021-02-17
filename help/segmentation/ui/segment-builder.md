@@ -5,10 +5,10 @@ title: セグメントビルダーのUIガイド
 topic: ui guide
 description: 'Adobe Experience PlatformUIのセグメントビルダーは、プロファイルデータ要素を操作できるリッチワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。 '
 translation-type: tm+mt
-source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
+source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
 workflow-type: tm+mt
-source-wordcount: '1928'
-ht-degree: 45%
+source-wordcount: '1896'
+ht-degree: 46%
 
 ---
 
@@ -163,7 +163,7 @@ ht-degree: 45%
 >
 >オーディエンスの予測値は、その日のサンプルデータのサンプルサイズを使用して生成されます。プロファイルストアのエンティティ数が 100 万個未満の場合は、データセット全体が使用されます。100 万個から 2,000 万個のエンティティがある場合は、100 万個のエンティティが使用されます。2,000 万個を超えるエンティティがある場合は、合計エンティティ数の 5％が使用されます。セグメントの推定サイズを生成する方法について詳しくは、セグメントの作成に関するチュートリアルの[予測値の生成に関する節](../tutorials/create-a-segment.md#estimate-and-preview-an-audience)を参照してください。
 
-## 次の手順とその他のリソース {#next-steps}
+## 次の手順 {#next-steps}
 
 セグメントビルダーは、豊富なワークフローを備えており、マーケティング可能なオーディエンスを[!DNL Real-time Customer Profile]データから分離できます。 このガイドをお読みになると、次のことができるようになります。
 
@@ -173,16 +173,4 @@ ht-degree: 45%
 - スケジュールに沿ったセグメント化に対してすべてのセグメント定義を有効にする。
 - ストリーミングによるセグメント化に対して、特定のセグメント定義を有効にする。
 
-[!DNL Segmentation Service]の詳細については、ドキュメントを読み続け、以下のビデオを見て学習を補ってください。 [!DNL Segmentation Service] UIの他の部分の詳細については、[[!DNL Segmentation Service] ユーザーガイド](./overview.md)を参照してください
-
->[!WARNING]
->
-> 次のビデオに示す[!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
-
-**セグメントの作成:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**動的セグメントの作成：**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+[!DNL Segmentation Service]の詳細については、引き続きドキュメントを読み、関連ビデオを見て学習を補ってください。 [!DNL Segmentation Service] UIの他の部分の詳細については、[[!DNL Segmentation Service] ユーザーガイド](./overview.md)を参照してください
