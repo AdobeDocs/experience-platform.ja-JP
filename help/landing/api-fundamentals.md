@@ -5,7 +5,7 @@ title: Experience Platform API の基本
 topic: getting started
 description: このドキュメントでは、Experience PlatformAPIに関連する基盤となるテクノロジーと構文の一部について簡単に説明します。
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 53%
@@ -120,7 +120,7 @@ JSON ポインターは、JSON ドキュメント内の特定の値を識別す�
 
 `op` で示されている操作タイプによっては、JSON パッチオブジェクトに追加のプロパティが必要な場合があります。JSON パッチの様々な操作と必要な構文の詳細については、[JSON パッチのドキュメント](http://jsonpatch.com/)を参照してください。
 
-## JSON スキーマ
+## JSON スキーマ {#json-schema}
 
 JSON スキーマは、JSON データの構造を記述して検証するために使用される形式です。[Experience Data Model （XDM）](../xdm/home.md)では、JSON スキーマ機能を利用して、取得される顧客体験データの構造と形式に制約を適用します。JSON スキーマの詳細については、[公式のドキュメント](https://json-schema.org/)を参照してください。
 
