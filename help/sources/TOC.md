@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 15%
+source-wordcount: '557'
+ht-degree: 16%
 
 ---
 
@@ -117,6 +117,8 @@ ht-degree: 15%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - プロトコル{#protocols}
          - [汎用OData](tutorials/api/create/protocols/odata.md)
+      - ストリーミング{#streaming}
+         - [HTTP API](tutorials/api/create/streaming/http.md)
    - データの調査 {#explore}
       - [広告データの調査](tutorials/api/explore/advertising.md)
       - [クラウドストレージデータの調査](tutorials/api/explore/cloud-storage.md)
@@ -196,6 +198,8 @@ ht-degree: 15%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - プロトコル{#protocols}
          - [汎用OData](tutorials/ui/create/protocols/odata.md)
+      - ストリーミング{#streaming}
+         - [HTTP API](tutorials/ui/create/streaming/http.md)
    - データフローの構成{#dataflow}
       - [広告接続のデータフロー](tutorials/ui/dataflow/advertising.md)
       - [バッチクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/batch/cloud-storage.md)
