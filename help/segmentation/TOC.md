@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform セグメント化サービス
 breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイムの顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 88%
+source-wordcount: '152'
+ht-degree: 78%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 88%
    - [セグメントダッシュボード](ui/segment-dashboard.md)
    - [セグメントビルダー](ui/segment-builder.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
+   - [ストリーミングセグメント（ビデオ）](video/streaming-segmentation-overview.md)
    - [時間制約リファクタリング](ui/segment-refactoring.md)
 - [オプトアウトの実行](honoring-opt-outs.md)
 - [マルチエンティティセグメント化](multi-entity-segmentation.md)
@@ -51,6 +52,9 @@ ht-degree: 88%
    - [その他の関数](pql/misc-functions.md)
 - チュートリアル {#tutorials}
    - [セグメントの作成](tutorials/create-a-segment.md)
+   - [セグメントの作成（ビデオ）](video/create-segment.md)
+   - [動的セグメントの作成（ビデオ）](video/create-a-dynamic-segment.md)
+   - [マルチエンティティセグメントの作成（ビデオ）](video/create-multi-entity-segments.md)
    - [セグメントの評価](tutorials/evaluate-a-segment.md)
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
    - [セグメントのデータ使用コンプライアンスの実施](tutorials/governance.md)
