@@ -5,10 +5,10 @@ title: Segmentation Serviceの概要
 topic: overview
 description: Adobe Experience Platformセグメントサービスと、それがプラットフォームエコシステムで果たす役割について説明します。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '1394'
-ht-degree: 66%
+source-wordcount: '1407'
+ht-degree: 65%
 
 ---
 
@@ -46,6 +46,8 @@ API を使用したセグメント定義の作成について詳しくは、[API
 > イベントでは、スキーマが拡張され、以降のすべてのアップロードで、新しく追加されたフィールドを適宜更新する必要があります。[!DNL Experience Data Model] (XDM)のカスタマイズの詳細については、[スキーマエディタのチュートリアル](../xdm/tutorials/create-schema-ui.md)を参照してください。
 
 ## セグメントの評価
+
+プラットフォームでは、現在、セグメントを評価する2つの方法をサポートしています。ストリーミングのセグメント化とバッチセグメント化。
 
 ### ストリーミングセグメント化
 
