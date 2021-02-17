@@ -3,10 +3,10 @@ keywords: Azure Blob;Blob宛先；s3;azure BLOB宛先
 title: Azure Blob接続
 description: Azure Blobストレージへのライブ送信接続を作成して、タブ区切りデータファイルまたはCSVデータファイルをAdobe Experience Platformから定期的にエクスポートします。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6d1960be886d12475603aeb79fe6283a1fd3030e
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 10%
+source-wordcount: '602'
+ht-degree: 7%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 10%
 
 [!DNL Experience Platform] は、次の書き出し先のファイル形式をサポートしてい [!DNL Blob]ます。
 
-- 区切り文字区切り値(DSV):DSV形式のデータ・ファイルのサポートは、現在、コンマ区切り値に制限されています。 一般的なDSVファイルは、今後サポートされる予定です。 サポートされるファイルの詳細については、[宛先のアクティブ化](../../ui/activate-destinations.md#esp-and-cloud-storage)のチュートリアルのクラウドストレージの節を参照してください
+- 区切り文字区切り値(DSV):DSV形式のデータ・ファイルのサポートは、現在、コンマ区切り値に制限されています。 一般的なDSVファイルは、今後サポートされる予定です。 サポートされるファイルの詳細については、[アクティベート先](../../ui/activate-destinations.md#esp-and-cloud-storage)のチュートリアルのクラウドストレージの節を参照してください。
 
 ## BLOBアカウントに接続{#connect-destination}
 
@@ -38,15 +38,21 @@ ht-degree: 10%
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、操作対象の特定の宛先を見つけることもできます。
 
-**[!UICONTROL クラウドストレージ]**&#x200B;カテゴリの下で、**[!UICONTROL Azure Blobストレージ]**&#x200B;を選択し、**[!UICONTROL アクティブ化]**&#x200B;を選択します。
+**[!UICONTROL クラウドストレージ]**&#x200B;カテゴリの下で、**[!UICONTROL Azure Blobストレージ]**&#x200B;を選択し、**[!UICONTROL 構成]**&#x200B;を選択します。
 
 ![カタログ](../../assets/catalog/cloud-storage/blob/catalog.png)
+
+>[!NOTE]
+>
+>この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
 **[!UICONTROL Azure Blobストレージ]**&#x200B;に接続ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント{#new-account}
 
-新しい資格情報を使用する場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、接続文字列を指定します。 BLOBストレージのデータにアクセスするために必要な接続文字列です。 [!DNL Blob]接続文字列のパターン開始:`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
+新しい資格情報を使用する場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、接続文字列を指定します。 接続文字列は、Blobストレージのデータにアクセスするために必要です。 [!DNL Blob]接続文字列のパターン開始:`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
+
+[!DNL Blob]接続文字列の構成の詳細については、Microsoftのドキュメントの[Azureストレージアカウントの接続文字列を構成する](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account)を参照してください。
 
 必要に応じて、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 この公開鍵&#x200B;**は、Base64エンコードされた文字列として書かれる必要があります。**
 
@@ -60,7 +66,11 @@ ht-degree: 10%
 
 ## 認証 {#authentication}
 
-**認証**&#x200B;ページが表示されます。 表示される入力フォームで、ファイルの名前、オプションの説明、フォルダーパス、コンテナーを入力します。 終了したら、「**[!UICONTROL 宛先を作成]**」を選択します。
+**認証**&#x200B;ページが表示されます。 表示される入力フォームで、ファイルの名前、オプションの説明、フォルダーパス、コンテナーを入力します。
+
+この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択することもできます。 マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+
+終了したら、「**[!UICONTROL 宛先を作成]**」を選択します。
 
 ![認証](../../assets/catalog/cloud-storage/blob/authentication.png)
 
