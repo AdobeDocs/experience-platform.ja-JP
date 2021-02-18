@@ -1,19 +1,18 @@
 ---
-title: SDK の設定
-seo-title: Adobe Experience PlatformWeb SDKの設定
-description: Experience Platform Web SDK の設定方法について説明します
+title: Adobe Experience PlatformWeb SDKの設定
+description: Adobe Experience PlatformWeb SDKの設定方法を説明します。
 seo-description: Experience Platform Web SDK の設定方法について説明します
-keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；Web;環境;placeContext;debugEnabled;edgeDomain;orgId;clickBeforeEventSend;defaultConsent;Web設定；prehidingStyle;cookieDestinations;enabledDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；web;環境;placeContext;debugEnabled;edgeDomain;orgId;clickBeforeEventSend;defaultConsent;web設定；prehidingStyle;cookieDestinations;enationsDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 72%
+source-wordcount: '741'
+ht-degree: 70%
 
 ---
 
 
-# SDK の設定
+# プラットフォームWeb SDKの設定
 
 SDK の設定は、`configure` コマンドを使用しておこないます。
 
