@@ -1,12 +1,10 @@
 ---
-title: Web SDK FAQ
-seo-title: Adobe Experience PlatformWeb SDK FAQ
-description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
-seo-description: Adobe Experience PlatformWeb SDKに関するよくある質問(FAQ)
+title: Adobe Experience PlatformWeb SDK FAQ
+description: Adobe Experience PlatformWeb SDKに関するよくある質問への回答を示します。
 translation-type: tm+mt
-source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---
@@ -14,7 +12,7 @@ ht-degree: 2%
 
 # よくある質問
 
-このFAQには、AdobeWeb SDKに関するよくある質問が含まれています。
+このガイドでは、Adobe Experience PlatformWeb SDKに関してよく尋ねられる質問に対する回答を提供します。
 
 ## Adobe Experience PlatformWeb SDKとは
 
@@ -138,7 +136,7 @@ Web SDKは、急速に発展しています。 その他の使用例が検討中
 
 いいえ。`alloy.js`ファイルは自分でダウンロードできます。
 
-ただし、次の点に注意してください。
+ただし、
 
 * Adobe Experience PlatformWeb SDKでは、エッジネットワークがストリームを識別し、データの処理を決定できるように、エクスペリエンスエッジ設定IDと呼ばれる要素が必要です。 このIDはExperience Platform Launch内で作成されます。 これは、プロパティの作成やJavaScriptコードの導入にExperience Platform Launchを使用する必要がないという意味ではありませんが、設定IDの作成にはExperience Platform Launchを使用する必要はありません。
 
