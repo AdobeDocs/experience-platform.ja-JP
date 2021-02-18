@@ -1,19 +1,18 @@
 ---
-title: IDとAudience ManagerおよびAdobe Experience Platformの同期
-seo-title: IDとAudience ManagerおよびAdobe Experience PlatformとAdobe Experience PlatformWeb SDKの同期
-description: IDをExperience PlatformWeb SDKとAdobe Audience Managerと同期する方法を学びます
+title: プラットフォームWeb SDKを使用したAudience ManagerとAdobe Experience PlatformのIDの同期
+description: プラットフォームWeb SDKを使用してAudience ManagerとAdobe Experience PlatformのIDを同期する方法を学びます
 seo-description: IDをExperience PlatformWeb SDKとAdobe Audience Managerと同期する方法を学びます
 keywords: オーディエンスマネージャ；AAM;ID;ID；同期；名前空間;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
 
-# IDの同期
+# Audience ManagerとExperience PlatformのIDの同期
 
 Adobe Experience PlatformWeb SDKは、[sendEvent](./overview.md#syncing-identities)コマンドを使用して、顧客IDとその認証状態を宣言する機能をサポートしています。
 
