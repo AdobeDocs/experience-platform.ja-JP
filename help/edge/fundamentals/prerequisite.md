@@ -1,13 +1,11 @@
 ---
-title: Adobe Experience PlatformWeb SDKを使用するための前提条件
-seo-title: Adobe Experience PlatformWeb SDKを使用するための前提条件
-description: Adobe Experience PlatformWeb SDKを使用するための前提条件
-seo-description: Adobe Experience PlatformWeb SDKを使用するための前提条件
+title: Adobe Experience PlatformWeb SDK使用の前提条件
+description: Adobe Experience PlatformWeb SDKを使用するための前提条件について説明します。
 keywords: ファーストパーティドメイン；CNAME;スキーマ;スキーマの作成；起動；aep web sdk extension；拡張；設定id；設定ツール；データ要素の作成；データ要素の作成；XDMオブジェクト；sendEvent；送信イベント;
 translation-type: tm+mt
-source-git-commit: a19b4384e2ea64eb9ab5f0f5443fd329ec44a2a0
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '270'
 ht-degree: 4%
 
 ---
