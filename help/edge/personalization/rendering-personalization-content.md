@@ -1,19 +1,17 @@
 ---
-title: パーソナライズされたコンテンツのレンダリング
-seo-title: Adobe Experience Platform Web SDK：パーソナライズされたコンテンツのレンダリング
-description: Experience Platform Web SDK でパーソナライズされたコンテンツをレンダリングする方法について説明します
-seo-description: Experience Platform Web SDK でパーソナライズされたコンテンツをレンダリングする方法について説明します
+title: Adobe Experience PlatformWeb SDKを使用してパーソナライズされたコンテンツをレンダリング
+description: Adobe Experience PlatformWeb SDKを使用して、パーソナライズされたコンテンツをレンダリングする方法を説明します。
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 23%
+source-wordcount: '230'
+ht-degree: 10%
 
 ---
 
 
-# パーソナライゼーションオプションの概要
+# パーソナライズされたコンテンツのレンダリング
 
 Adobe Experience Platform[!DNL Web SDK]は、Adobe Targetを含むAdobeでのパーソナライゼーションソリューションのクエリをサポートしています。 パーソナライゼーションには2つのモードがあります。自動的にレンダリングできるコンテンツと開発者がレンダリングする必要のあるコンテンツを取得します。 また、SDKは、[ちらつき](../personalization/manage-flicker.md)を管理する機能も提供します。
 
