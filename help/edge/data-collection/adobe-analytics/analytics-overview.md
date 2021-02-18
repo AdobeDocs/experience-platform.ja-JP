@@ -1,14 +1,12 @@
 ---
-title: Adobe Analytics へのデータの送信
-seo-title: Adobe Experience Platform Web SDK を使用した Adobe Analytics へのデータの送信
-description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
-seo-description: Adobe Experience Platform Web SDK を使用して Adobe Analytics にデータを送信する方法について説明します
+title: Adobe Experience PlatformWeb SDKを使用したAdobe Analyticsへのデータの送信
+description: Adobe Experience PlatformWeb SDKを使用してAdobe Analyticsにデータを送信する方法を学びます。
 keywords: adobe analytics;analytics；マップされたデータ；マップされた変数；
 translation-type: tm+mt
-source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 77%
+source-wordcount: '192'
+ht-degree: 61%
 
 ---
 
