@@ -1,19 +1,17 @@
 ---
-title: 'Adobe TargetとAdobe Experience PlatformのWeb SDK '
-seo-title: Adobe Experience PlatformウェブSDKとAdobe Targetの使用
+title: Adobe TargetとプラットフォームWeb SDKの連携
 description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
-seo-description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 keywords: ターゲット;adobeターゲット;アクティビティ.id；エクスペリエンス.id；レンダリング決定；決定範囲；スニペットの事前非表示；vec；フォームベースのExperience Composer;xdm;オーディエンス；決定；スコープ；スキーマ;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '632'
 ht-degree: 3%
 
 ---
 
 
-# [!DNL Target] 概要
+# Adobe TargetとプラットフォームWeb SDKの連携
 
 Adobe Experience Platform[!DNL Web SDK]は、Adobe Targetで管理されるパーソナライズされたエクスペリエンスをWebチャネルに配信およびレンダリングできます。 [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html)(VEC)と呼ばれるWYSIWYGエディター、または非ビジュアルインターフェイスである[フォームベースのExperience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)を使用して、アクティビティとパーソナライズエクスペリエンスを作成、アクティブ化、配信できます。
 
