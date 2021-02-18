@@ -1,14 +1,12 @@
 ---
-title: デバッグ
-seo-title: Adobe Experience Platform Web SDK のデバッグ
-description: Experience Platform Web SDK のデバッグを切り替える方法について説明します
-seo-description: Experience Platform Web SDK のデバッグを切り替える方法について説明します
+title: Adobe Experience PlatformWeb SDKでのデバッグ
+description: Experience PlatformWeb SDKのデバッグ機能を切り替える方法を学びます。
 keywords: デバッグWeb sdk；デバッグ；設定；設定；設定コマンド；デバッグコマンド；edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 89%
+source-wordcount: '392'
+ht-degree: 84%
 
 ---
 
