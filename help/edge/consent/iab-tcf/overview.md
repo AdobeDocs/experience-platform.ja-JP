@@ -1,19 +1,17 @@
 ---
-title: IAB Transparency & Consent Framework 2.0の概要
-seo-title: Interactive Advertising Bureau Transparency & Consent Framework 2.0からのAdobe Experience PlatformWeb SDKの同意の環境設定のサポート
-description: Experience PlatformWeb SDKを使用してIAB TCF 2.0の同意の環境設定をサポートする方法を説明します。
-seo-description: Experience PlatformWeb SDKを使用してIAB TCF 2.0の同意の環境設定をサポートする方法を説明します。
+title: Adobe Experience PlatformWeb SDKでのIAB TCF 2.0のサポート
+description: Adobe Experience PlatformWeb SDKを使用してIAB TCF 2.0の同意の環境設定をサポートする方法を学びます。
 keywords: 同意；setConsent;プロファイルプライバシーMixin；エクスペリエンスイベントプライバシーMixin；プライバシーMixin;IAB TCF 2.0；リアルタイムCDP；リアルタイム顧客データプロファイル
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '878'
 ht-degree: 0%
 
 ---
 
 
-# IAB Transparency &amp; Consent Framework 2.0の概要
+# Adobe Experience PlatformWeb SDKでのIAB TCF 2.0のサポート
 
 Adobe Experience PlatformWeb SDKは、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をサポートしています。 このガイドは、リアルタイム顧客データプラットフォーム、Audience Manager、エクスペリエンスイベント、Adobe Analytics、エクスペリエンスエッジとの統合により、IAB TCF 2.0をサポートするための要件を示しています。
 
