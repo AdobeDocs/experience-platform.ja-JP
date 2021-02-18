@@ -1,19 +1,17 @@
 ---
 title: Adobe Experience PlatformWeb SDKのインストール
-seo-title: Adobe Experience Platform Web SDK：SDK のインストール
-description: Experience Platform Web SDK のインストール方法について説明します
-seo-description: Experience Platform Web SDK のインストール方法について説明します
+description: Experience Platform Web SDK のインストール方法について説明します.
 keywords: web sdkのインストール；web sdkのインストール；internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 64%
+source-wordcount: '616'
+ht-degree: 62%
 
 ---
 
 
-# SDK のインストール {#installing-the-sdk}
+# SDKのインストール{#installing-the-sdk}
 
 Adobe Experience PlatformWeb SDKの使い方は、[Adobe Experience Platform Launch](http://launch.adobe.com/jp)を経由することをお勧めします。 拡張機能カタログで`AEP Web SDK`を検索し、インストールして、拡張機能を設定します。
 
@@ -86,7 +84,7 @@ Adobe Experience Platform[!DNL Web SDK]を実装する最初の手順は、次�
 
 ## JavaScript ファイルの同期読み込み {#loading-javascript-synchronously}
 
-[コード](#adding-the-code)の追加の説明に従って、コピーしてWebサイトのHTMLに貼り付けたベースコードは、追加のコードを含む外部ファイルを読み込みます。 この追加のコードには、SDK のコア機能が含まれています。このファイルの読み込み中に実行しようとしたコマンドは、キューに追加され、ファイルの読み込み後に処理されます。これは、最もパフォーマンスの高いインストール方法です。
+「[コード](#adding-the-code)の追加」で説明したように、コピーしてWebサイトのHTMLに貼り付けたベースコードは、追加のコードを含む外部ファイルを読み込みます。 この追加のコードには、SDK のコア機能が含まれています。このファイルの読み込み中に実行しようとしたコマンドは、キューに追加され、ファイルの読み込み後に処理されます。これは、最もパフォーマンスの高いインストール方法です。
 
 ただし、特定の状況では、ファイルを同期的に読み込むことが望ましい場合もあります（これらの状況に関する詳細は後で説明します）。これをおこなうと、外部ファイルが読み込まれて実行されるまで、HTML ドキュメントの残りの部分がブラウザーで解析およびレンダリングされなくなります。通常、プライマリコンテンツをユーザーに表示する前にこの遅延が発生するのはお勧めしませんが、状況によっては合理的な場合もあります。
 
