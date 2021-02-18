@@ -1,14 +1,12 @@
 ---
-title: イベントデータの結合
-seo-title: Adobe Experience Platform Web SDK：イベントデータの結合
+title: Adobe Experience PlatformWeb SDKでのイベントデータの結合
 description: Experience Platform Web SDK イベントデータの結合方法について説明します
-seo-description: Experience Platform Web SDK イベントデータの結合方法について説明します
 keywords: merge;イベントデータ；eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise;Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 52%
+source-wordcount: '464'
+ht-degree: 48%
 
 ---
 
