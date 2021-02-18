@@ -1,18 +1,16 @@
 ---
-title: IAB TCF 2.0とExperience Platform Launchの使用
-seo-title: IAB TCF 2.0のAdobe Experience Platform LaunchおよびAdobe Experience PlatformWeb SDKとの同意の設定
-description: Adobe Experience Platform LaunchおよびAdobe Experience PlatformWeb SDKとのIAB TCF 2.0の同意を設定する方法を説明します。
-seo-description: Adobe Experience Platform LaunchおよびAdobe Experience PlatformWeb SDKとのIAB TCF 2.0の同意を設定する方法を説明します。
+title: プラットフォーム起動とプラットフォームWeb SDK Extensionを使用したIAB TCF 2.0サポートの統合
+description: IAB TCF 2.0の同意を、Adobe Experience Platform LaunchおよびAdobe Experience PlatformWeb SDK拡張と共に設定する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
 
 
-# IAB TCF 2.0とExperience Platform LaunchおよびAEP Web SDK拡張の使用
+# プラットフォーム起動とプラットフォームWeb SDK拡張を使用してIAB TCF 2.0サポートを統合
 
 Adobe Experience PlatformWeb SDKは、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をサポートしています。 このガイドでは、AEP Web SDK extension forExperience Platform Launchを使用してIAB TCF 2.0の同意情報をAdobeに送信するためのAdobe Experience Platform Launchプロパティを設定する方法を説明します。
 
@@ -64,7 +62,7 @@ addEventListener();
 
 * 2つのデータ要素を設定します。1つは同意文字列、もう1つは`gdprApplies`フラグを持ちます。 これは、後で「同意を設定」アクションに入力する場合に役立ちます。
 
-* 同意の環境設定が変更された場合にルールをトリガーします。 「同意の設定」アクションは、同意の環境設定が変更された場合に必ず使用します。 内追加部に「同意を設定」アクションを挿入し、次のようにフォームに入力します。
+* 同意の環境設定が変更された場合にルールをトリガーします。 「同意の設定」アクションは、同意の環境設定が変更された場合に必ず使用する必要があります。 内追加部に「同意を設定」アクションを挿入し、次のようにフォームに入力します。
 
 * 標準：&quot;IAB TCF&quot;
 * バージョン：&quot;2.0&quot;
