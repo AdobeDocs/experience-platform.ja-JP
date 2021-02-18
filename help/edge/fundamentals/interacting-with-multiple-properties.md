@@ -1,14 +1,12 @@
 ---
-title: 複数のプロパティの操作
-seo-title: Adobe Experience Platform Web SDK：複数のプロパティの操作
-description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します
-seo-description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します
+title: Adobe Experience PlatformWeb SDKでの複数のプロパティの操作
+description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します.
 keywords: 複数のプロパティ；設定；sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 85%
+source-wordcount: '245'
+ht-degree: 78%
 
 ---
 
