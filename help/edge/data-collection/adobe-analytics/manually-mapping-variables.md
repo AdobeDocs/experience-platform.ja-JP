@@ -1,14 +1,13 @@
 ---
-title: Adobe Analyticsでの変数の手動マッピング
-seo-title: Web SDKを使用したAdobe Analyticsの変数の手動マッピング
-description: 処理ルールを使用して手動で変数をAdobe Analyticsにマッピングする方法
+title: Adobe Experience PlatformWeb SDKでのAdobe Analytics変数の手動マッピング
+description: Experience PlatformWeb SDKの処理ルールを使用して、手動で変数をAdobe Analyticsにマッピングする方法を説明します。
 seo-description: Web SDKでの処理ルールを使用した、手動による変数のAdobe Analyticsへのマッピング
 keywords: adobe analytics;analytics；変数；マッピング変数；map変数；contextData;contextData；処理ルール；xdm;スキーマ;
 translation-type: tm+mt
-source-git-commit: 206b5addd6baf5a120b469b21313ee86ac1fe53b
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 34%
+source-wordcount: '405'
+ht-degree: 33%
 
 ---
 
