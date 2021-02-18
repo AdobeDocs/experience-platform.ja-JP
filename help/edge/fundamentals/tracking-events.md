@@ -1,19 +1,17 @@
 ---
-title: イベントのトラッキング
-seo-title: Adobe Experience Platform Web SDK のイベントのトラッキング
-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
-seo-description: Experience Platform Web SDK のイベントのトラッキング方法について説明します
+title: Adobe Experience PlatformWeb SDKを使用したイベントの追跡
+seo-description: Adobe Experience PlatformWeb SDKイベントの追跡方法を説明します。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;ドキュメントのアンロード；onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 46%
+source-wordcount: '1334'
+ht-degree: 44%
 
 ---
 
 
-# イベントのトラッキング
+# 追跡イベント
 
 イベントデータをAdobe Experience Cloudに送信するには、`sendEvent`コマンドを使用します。 この `sendEvent` コマンドは、 にデータを送信し、パーソナライズされたコンテンツ、ID、オーディエンスの宛先を取得する主な方法です。[!DNL Experience Cloud]
 
