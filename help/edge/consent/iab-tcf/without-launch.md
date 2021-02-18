@@ -1,18 +1,17 @@
 ---
-title: IAB TCF 2.0をExperience Platform Launchなしで使用
-seo-title: IAB TCF 2.0とAdobe Experience PlatformWeb SDKの同意の設定
-description: Adobe Experience PlatformWeb SDKでIAB TCF 2.0の同意を設定する方法を説明します。
+title: Adobe Experience PlatformWeb SDKを使用したIAB TCF 2.0のサポートの統合
+description: Adobe Experience Platform Launchを使用せずにWebサイトのIAB TCF 2.0サポートを設定する方法を説明します。
 seo-description: Adobe Experience PlatformWeb SDKでIAB TCF 2.0の同意を設定する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
 
 
-# AEP Web SDK拡張とIAB TCF 2.0の使用
+# IAB TCF 2.0サポートとプラットフォームWeb SDKの統合
 
 このガイドでは、Experience Platform Launchを使用せずに、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をAdobe Experience PlatformWeb SDKと統合する方法を示します。 IAB TCF 2.0との統合の概要については、[概要](./overview.md)を参照してください。 Experience Platform Launchとの統合方法のガイドについては、[Experience Platform Launch](./with-launch.md)のIAB TCF 2.0ガイドを参照してください。
 
