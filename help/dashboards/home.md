@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Experience Platformダッシュボード
+title: Experience Platformダッシュボードの概要
 topic: overview
 type: Documentation
-description: 'Adobe Experience Platformは、毎日のスナップショットで取り込むように、組織のデータに関する重要な情報を表示できる複数のダッシュボードを提供しています。 '
+description: 'Adobe Experience Platformの複数のダッシュボードを調査し、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示します。 '
 translation-type: tm+mt
-source-git-commit: 5d33b8db91491ec5d7f45b3ebe3067cd382d9d46
+source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 3%
