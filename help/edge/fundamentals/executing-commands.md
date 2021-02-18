@@ -1,14 +1,12 @@
 ---
-title: コマンドの実行
-seo-title: Adobe Experience Platform Web SDK コマンドの実行
+title: Adobe Experience PlatformWeb SDKコマンドの実行
 description: Experience Platform Web SDK コマンドの実行方法について説明します
-seo-description: Experience Platform Web SDK コマンドの実行方法について説明します
 keywords: コマンドの実行；commandName;Promises;getLibraryInfo;responseオブジェクト；同意；
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 73%
+source-wordcount: '417'
+ht-degree: 70%
 
 ---
 
