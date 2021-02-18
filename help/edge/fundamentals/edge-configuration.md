@@ -1,19 +1,17 @@
 ---
-title: エッジ設定
-seo-title: Experience PlatformWeb SDKのエッジ設定
+title: Experience PlatformWeb SDKのエッジ設定の作成
 description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
-seo-description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 keywords: 設定；エッジ；エッジ設定ID;環境設定；edgeConfigId;id;ID同期有効；ID同期コンテナID;Sandbox；ストリーミングインレット；イベントデータセット；ターゲット；クライアントコード；プロパティトークン；ターゲット環境ID;Cookie宛先；Url宛先；Analytics設定ブロックレポートスイートID;
 translation-type: tm+mt
-source-git-commit: 94b3faf3157f4e1f4e46b6055914a04883dc44fa
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '916'
 ht-degree: 2%
 
 ---
 
 
-# エッジの設定
+# エッジ設定の作成
 
 Adobe Experience PlatformWeb SDKの設定は、2か所に分かれています。 SDKの[configureコマンド](configuring-the-sdk.md)は、`edgeDomain`のように、クライアントで処理する必要のある処理を制御します。 エッジ設定は、SDKのその他すべての設定を処理します。 要求がAdobe Experience Platformエッジネットワークに送信されると、`edgeConfigId`はサーバ側の設定を参照するために使用されます。 これにより、Webサイトでコードを変更することなく、設定を更新できます。
 
@@ -91,7 +89,7 @@ Adobe Targetを設定するには、クライアントコードを指定する�
 
 ### [!UICONTROL ターゲット環境ID]
 
-[adobe targetの](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 環境は、開発の全段階を通じて導入の管理を支援します。この設定は、各環境で使用する環境を指定します。
+[Adobe Targetの](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) 環境は、開発の全段階を通じて導入の管理を支援します。この設定は、各環境で使用する環境を指定します。
 
 Adobeでは、この設定を`dev`、`stage`、`prod`の各エッジ設定環境ごとに異なる方法で行うことをお勧めします。 ただし、既にAdobe Target環境を定義している場合は、それらを使用できます。
 
