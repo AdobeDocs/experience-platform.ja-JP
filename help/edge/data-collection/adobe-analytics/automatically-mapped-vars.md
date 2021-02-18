@@ -1,13 +1,12 @@
 ---
-title: 変数が自動的にAdobe Analyticsにマッピング
-seo-title: Adobe Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数
+title: Adobe Experience PlatformWeb SDKで自動的にマッピングされたAdobe Analytics変数
 description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
-seo-description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
+seo-description: Adobe Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数を学習します。
 keywords: adobe analytics；変数；analytics；自動マップ；自動マップ；
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '681'
 ht-degree: 35%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 35%
 
 # [!DNL Analytics]に自動的にマッピングされる変数
 
-以下は、Adobe Experience Platformエッジネットワークが自動的に[!DNL Analytics]にマッピングする変数のリストです。
+以下は、Adobe Experience Platformエッジネットワークが自動的にAdobe Analyticsにマッピングする変数のリストです。
 
 | XDM フィールドパス | [!DNL Analytics Query String] / HTTP ヘッダー | 説明 |
 | ---------- | ------------------------- | ----------------------------------------- |
