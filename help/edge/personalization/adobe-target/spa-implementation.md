@@ -1,13 +1,11 @@
 ---
-title: 'Adobe TargetとAdobe Experience PlatformのWeb SDK '
-seo-title: Adobe Experience PlatformウェブSDKとAdobe Targetの使用
-description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
-seo-description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
+title: Adobe Experience PlatformWeb SDKのシングルページアプリケーション実装
+description: Adobe Targetを使用して、Adobe Experience PlatformWeb SDKのシングルページアプリケーション(SPA)実装を作成する方法を学びます。
 keywords: ターゲット;adobeターゲット;xdm表示;表示；シングルページアプリ；SPA;SPAライフサイクル；クライアント側；ABテスト；AB；エクスペリエンスのターゲット設定；XT;VEC
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1665'
 ht-degree: 12%
 
 ---
@@ -15,25 +13,25 @@ ht-degree: 12%
 
 # シングルページアプリケーションの実装
 
-Adobe Experience PlatformWeb SDKは、シングルページアプリケーション(SPA)などの次世代のクライアント側テクノロジー上でパーソナライゼーションを実行できる豊富な機能を備えています。
+Adobe Experience PlatformWeb SDKは、シングルページアプリケーション(SPA)など、次世代のクライアント側テクノロジーでパーソナライゼーションを実行できる豊富な機能を備えています。
 
 従来の Web サイトは、「ページ間」ナビゲーションモデル（別名マルチページアプリケーション）を使用していました。このモデルでは、Web サイトデザインは URL と密接に結合され、ある Web ページから別のページへのトランジションにはページ読み込みが必要になります。
 
-代わりに、シングルページアプリケーションなどの最新のWebアプリケーションは、多くの場合ページのリロードとは無関係に、ブラウザーUIのレンダリングを迅速に使用するモデルを採用しています。 これらのエクスペリエンスは、スクロール、クリック、カーソルの移動など、顧客の操作によってトリガーされます。 最新のWebのパラダイムが進化してきたので、従来の汎用イベント（ページ読み込みなど）との関連性が、パーソナライゼーションや実験を展開するようにはなりません。
+代わりに、シングルページアプリケーションなどの最新のWebアプリケーションでは、多くの場合ページのリロードとは無関係に、ブラウザーUIのレンダリングを迅速に使用するモデルが採用されています。 これらのエクスペリエンスは、スクロール、クリック、カーソルの移動など、顧客の操作によってトリガーされます。 最新のWebのパラダイムが進化してきたので、従来の汎用イベント（ページ読み込みなど）との関連性が、パーソナライゼーションや実験を展開するようにはなりません。
 
 ![](assets/spa-vs-traditional-lifecycle.png)
 
 ## SPA向けプラットフォームWeb SDKの利点
 
-シングルページアプリ用にAdobe Experience PlatformWeb SDKを使用する利点を次に示します。
+シングルページアプリケーションでAdobe Experience PlatformWeb SDKを使用する利点を次に示します。
 
 * ページ読み込み時にすべてのオファーをキャッシュし、複数のサーバー呼び出しを単一のサーバー呼び出しに減らす機能。
 * オファーは、従来のサーバー呼び出しによって導入された遅延時間なく、キャッシュを介して即座に表示されるので、サイトでのユーザーエクスペリエンスが大幅に向上します。
 * 1行のコードと1回限りの開発者のセットアップにより、マーケターはSPA上のVisual Experience Composer(VEC)を使用して、A/Bおよびエクスペリエンスターゲット設定(XT)アクティビティを作成し、実行できます。
 
-## XDM表示とシングルページアプリ
+## XDM表示とシングルページアプリケーション
 
-SPA向けAdobe TargetVECは、表示と呼ばれる概念を利用している。spaエクスペリエンスを構成する視覚的要素の論理的なグループ。 したがって、単一のページアプリは、ユーザーの操作に基づいて、URLではなく表示を介した移行と見なすことができます。 通常、ビューはサイト全体またはサイト内のグループ化されたビジュアル要素を表せます。
+SPA向けAdobe TargetVECは、表示と呼ばれる概念を利用している。SPAエクスペリエンスを構成する視覚的要素の論理的なグループ。 したがって、単一ページのアプリは、ユーザーの操作に基づいて、URLではなく表示を介した移行と見なすことができます。 通常、ビューはサイト全体またはサイト内のグループ化されたビジュアル要素を表せます。
 
 表示の詳細を説明するために、次の例では、「React」に実装された仮定のオンラインeコマースサイトを使用して、例の表示を調べます。
 
@@ -64,8 +62,8 @@ SPA向けAdobe TargetVECは、表示と呼ばれる概念を利用している�
 XDM表示は、Adobe Targetで活用して、マーケターがVisual Experience Composerを使用してSPA上でA/BテストとXTテストを実行できるようにします。 1回限りの開発者の設定を完了するには、次の手順を実行する必要があります。
 
 1. [Adobe Experience PlatformWeb SDK](../../fundamentals/installing-the-sdk.md)をインストール
-2. 個人用に設定するシングルページアプリ内のすべてのXDM表示を特定します。
-3. XDM表示を定義した後、ABまたはXT VECアクティビティを配信するために、`renderDecisions`を`true`に設定し、対応するXDM表示をシングルページアプリで実装します。 `sendEvent()`XDM表示は`xdm.web.webPageDetails.viewName`に渡す必要があります。 この手順に従うと、マーケターはVisual Experience Composerを利用して、これらのXDMに対してA/BテストとXTテストを開始できます。
+2. 個人用に設定したいシングルページアプリケーション内のすべてのXDM表示を特定します。
+3. XDM表示を定義した後、ABまたはXT VECアクティビティを配信するために、`renderDecisions`を`true`に設定し、対応するXDM表示をシングルページアプリで実装します。 `sendEvent()`XDM表示は`xdm.web.webPageDetails.viewName`に渡す必要があります。 この手順により、マーケターはVisual Experience Composerを利用して、これらのXDMに対するA/BテストとXTテストを開始できます。
 
    ```javascript
    alloy("sendEvent", { 
