@@ -1,19 +1,17 @@
 ---
-title: 同意のサポート
-seo-title: Adobe Experience Platform Web SDK：同意設定のサポート
-description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
-seo-description: Experience Platform Web SDK を使用して同意設定をサポートする方法について説明します
+title: Adobe Experience PlatformWeb SDKを使用した顧客同意の環境設定のサポート
+description: Adobe Experience PlatformWeb SDKを使用して、同意の環境設定をサポートする方法を説明します。
 keywords: 同意；defaultConsent;default consent;setConsent;プロファイルプライバシーミックスイン；エクスペリエンスイベントプライバシーミックスイン；プライバシーミックスイン；
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 62%
+source-wordcount: '760'
+ht-degree: 58%
 
 ---
 
 
-# 同意のサポート
+# 顧客の同意に関する基本設定のサポート
 
 ユーザーのプライバシーを尊重するため、SDK に対して特定の目的でユーザー固有のデータを使用することを許可する前に、ユーザーの同意を求めることができます。現在、SDK はユーザーに対し、あらゆる目的に対するオプトインまたはオプトアウトのみを許可していますが、アドビでは、将来的に、特定の目的でより詳細な制御を提供したいと考えています。
 
@@ -40,7 +38,7 @@ alloy("configure", {
 
 この時点で、ユーザーインターフェイス内のどこかでユーザーにオプトインを求めることをお勧めします。ユーザーの環境設定を収集した後、これらの環境設定を SDK に伝えます。
 
-## 同意設定の連絡 adobe標準を通じて
+## 同意設定の連絡 Adobe標準を通じて
 
 ユーザーがオプトインした場合は、次のように、`general` オプションを `in` に設定して `setConsent` コマンドを実行します。
 
