@@ -1,29 +1,27 @@
 ---
-title: Offer Decisioning概要
-seo-title: Offer DecisioningおよびAdobe Experience PlatformWeb SDK
+title: Offer DecisioningとプラットフォームWeb SDKの連携
 description: Adobe Experience PlatformWeb SDKは、Offer Decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 Offer DecisioningのUIまたはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
-seo-description: Adobe Experience PlatformWeb SDKは、Offer Decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 Offer DecisioningのUIまたはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
 keywords: オファー判定；判定；Web SDK；プラットフォームWeb SDK；パーソナライズされたオファー;オファーの配信；オファー配信;オファーのパーソナライズ；
 translation-type: tm+mt
-source-git-commit: 05049025bdfc67af4d811e90218bf6e2613fab51
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 10%
+source-wordcount: '849'
+ht-degree: 16%
 
 ---
 
 
-# [!DNL Offer Decisioning] 概要
+# Offer DecisioningとプラットフォームWeb SDKの連携
 
 >[!NOTE]
 >
->現在、Adobe Experience PlatformWeb SDKでのOffer Decisioningの使用は、一部のユーザーに対して早期にアクセスできます。 この機能は、すべてのIMS組織で使用できるわけではありません。
+>現在、Adobe Experience Platform Web SDK での Offer Decisioning の使用は、一部のユーザーが早期にアクセスできます。この機能は、すべての IMS 組織で使用できるわけではありません。
 
 Adobe Experience Platform[!DNL Web SDK]は、Offer Decisioningで管理されるパーソナライズされたオファーを配信し、レンダリングできます。 Offer Decisioningのユーザーインターフェイス(UI)またはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
 
 ## 前提条件
 
-* IMS組織がEdge Decisioningで有効になっている
+* IMS組織がedge decisioningに対して有効になっている
 * オファー、作成されたアクティビティ
 * エッジ設定が公開されている
 
@@ -31,7 +29,7 @@ Adobe Experience Platform[!DNL Web SDK]は、Offer Decisioningで管理される
 
 Offer Decisioningとの連携に際しては、以下の用語を理解することが重要です。 詳細および追加の用語の表示については、[Offer Decisioningの用語集](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)を参照してください。
 
-* **コンテナ:** コンテナとは、異なる懸念を切り離すための分離メカニズムです。コンテナIDは、すべてのリポジトリAPIの最初のパス要素です。 すべての判定オブジェクトはコンテナ内に存在します。
+* **コンテナ:** コンテナとは、異なる懸念を切り離すための分離メカニズムです。コンテナ ID は、すべてのリポジトリー API の最初のパス要素です。すべての決定オブジェクトはコンテナ内に存在します。
 
 * **デシジョンスコープ：** Offer Decisioningの場合、これらは、オファー判定サービスでオファーの提案に使用するアクティビティIDと配置IDを含むBase64エンコードされたJSON文字列です。
 
