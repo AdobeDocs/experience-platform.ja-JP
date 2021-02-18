@@ -1,18 +1,16 @@
 ---
-title: Adobe Experience Platform Web SDK 拡張機能
-seo-title: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
-description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
-seo-description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
+title: Adobe Experience Platform Web SDK 拡張機能 概要
+description: Adobe Experience Platform Launch向けAdobe Experience PlatformWeb SDK Extensionについて
 translation-type: tm+mt
-source-git-commit: 473cc1f7617f1d65cdb70ff0e758178ea0174f00
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '645'
+ht-degree: 55%
 
 ---
 
 
-# プラットフォーム開始用Adobe Experience PlatformWeb SDK拡張機能
+# Adobe Experience PlatformWeb SDK拡張機能の概要
 
 Adobe Experience PlatformWeb SDK Extensionは、Adobe Experience Platformエッジネットワークを介して、WebプロパティからAdobe Experience Cloudにデータを送信します。 Adobe Experience Platform Web SDK 拡張機能を使用すると、プラットフォームへのデータのストリーミング、ID の同期、オプトイン、およびコンテキストデータの自動収集が可能になります。
 
