@@ -1,14 +1,12 @@
 ---
-title: アプリ内ブラウザーのサポート
-seo-title: Adobe Experience Platform Web SDK でのアプリ内ブラウザーのサポート
-description: Experience Platform Web SDK でアプリ内ブラウザーをサポートする方法について説明します
-seo-description: Experience Platform Web SDK でアプリ内ブラウザーをサポートする方法について説明します
+title: アプリ内ブラウザーのサポート (Adobe Experience PlatformウェブSDK)
+description: Adobe Experience PlatformWeb SDKでアプリ内ブラウザーをサポートする方法を説明します。
 keywords: アプリ内ブラウザ；ブラウザ；
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 86%
+source-wordcount: '112'
+ht-degree: 66%
 
 ---
 
