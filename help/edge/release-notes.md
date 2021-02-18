@@ -1,14 +1,12 @@
 ---
-title: Adobe Experience PlatformウェブSDKリリースノート
-seo-title: Adobe Experience PlatformウェブSDKリリースノート
-description: Adobe Experience Platform Web SDK リリースノート。
-seo-description: Adobe Experience Platform Web SDK リリースノート。
+title: Adobe Experience Platform Web SDK リリースノート
+description: Adobe Experience PlatformウェブSDKの最新のリリースノートです。
 keywords: Adobe Experience PlatformWeb SDK；プラットフォームWeb SDK;Web SDK；リリースノート；
 translation-type: tm+mt
-source-git-commit: 77c1e693668bc50a81713d02cfe4b0fabc661404
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 8%
+source-wordcount: '223'
+ht-degree: 5%
 
 ---
 
