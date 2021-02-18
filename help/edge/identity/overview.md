@@ -1,19 +1,18 @@
 ---
-title: Experience CloudIDを取得しています
-seo-title: Adobe Experience PlatformWeb SDKによるExperience CloudIDの取得
-description: Adobe Experience CloudIDの取得方法を説明します。
+title: Adobe Experience PlatformWeb SDKを使用したExperience CloudIDの取得
+description: Adobe Experience PlatformWeb SDKを使用してAdobe Experience CloudID(ECID)を取得する方法を説明します。
 seo-description: Adobe Experience CloudIDの取得方法を説明します。
 keywords: Identity;First Party Identity;Identity Service；サードパーティID;IDの移行；訪問者ID；サードパーティID；サードパーティID;IDMigrationEnabled;getIdentity;SyncIdentity;sendEvent;primary;Id;Identity;名前空間;名前空間状態；認証；hashEnabled;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '924'
 ht-degree: 3%
 
 ---
 
 
-# ID -Experience CloudIDの取得
+# Adobe Experience CloudIDの取得
 
 Adobe Experience PlatformWeb SDKは、[AdobeIDサービス](../../identity-service/ecid.md)を利用します。 これにより、各デバイスに固有の識別子が保持され、ページ間のアクティビティを相互に関連付けることができます。
 
