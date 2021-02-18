@@ -1,13 +1,11 @@
 ---
-title: Adobe Analyticsとのリンクトラッキング
-seo-title: Adobe Experience PlatformWeb SDKを使用したAdobe Analyticsへのリンクトラッキング
+title: Adobe Experience PlatformWeb SDKを使用したリンクの追跡
 description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
-seo-description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page表示;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
