@@ -1,14 +1,12 @@
 ---
-title: パーソナライズされたエクスペリエンスのちらつきの管理
-seo-title: ちらつきを管理するAdobe Experience PlatformWeb SDK
-description: ユーザーエクスペリエンスのちらつきを管理する方法を説明します。
-seo-description: Experience PlatformWeb SDKのプロパティを使用してちらつきを管理する方法を説明します
+title: Adobe Experience PlatformWeb SDKを使用した、パーソナライズされたエクスペリエンスのちらつきの管理
+description: Adobe Experience PlatformWeb SDKを使用して、ユーザーエクスペリエンスのちらつきを管理する方法を説明します。
 keywords: ターゲット；ちらつき；prehidingStyle；非同期；非同期；
 translation-type: tm+mt
-source-git-commit: e0f992eafbb973fa1c48acc3b165788137d143a4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 75%
+source-wordcount: '492'
+ht-degree: 76%
 
 ---
 
