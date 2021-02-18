@@ -1,19 +1,17 @@
 ---
-title: 自動的に収集される情報
-seo-title: Adobe Experience Platform Web SDK で自動的に収集される情報
-description: Adobe Experience CloudSDKが自動的に収集する各情報の説明
-seo-description: Adobe Experience CloudSDKが自動的に収集する各情報の説明
+title: Adobe Experience PlatformWeb SDKで自動的に収集された情報
+description: Adobe Experience PlatformSDKが自動的に収集する各情報の概要です。
 keywords: 情報の収集；コンテキスト；設定；デバイス；画面の高さ；画面の向き；画面の向き；画面の幅；環境；ビューポートの幅；ビューポートの高さ；ビューポートの幅；ビューポートの幅；ブラウザの詳細；実装の詳細；名前；タイムゾーン；ローカル時間；ローカルオフセット；ローカルタイムゾーンオフセット；タイムスタンプ；web;url;webPageDetails;webPage Details;webReferrer;web転送者;landscape;portrait;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 74%
+source-wordcount: '422'
+ht-degree: 73%
 
 ---
 
 
-# 自動的に収集される情報
+# 自動的に収集された情報
 
 Adobe Experience PlatformWeb SDKは、特別な設定なしで多数の情報を自動的に収集します。 ただしこの情報は、必要に応じて、`configure` コマンドの `context` オプションで無効にすることができます。[SDK の設定を参照してください](../fundamentals/configuring-the-sdk.md)。以下に、その情報の一覧を示します。括弧内の名前は、コンテキストの設定時に使用する文字列を示します。
 
