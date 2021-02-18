@@ -1,20 +1,19 @@
 ---
-title: Adobe Experience Platform Web SDK 拡張機能
-seo-title: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
+title: Adobe Experience PlatformWeb SDK Extensionリリースノート
 description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
 seo-description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
 translation-type: tm+mt
-source-git-commit: 56f0b3abd859a6b27f0117fb6ec4c312ca93ba5d
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 100%
+source-wordcount: '988'
+ht-degree: 94%
 
 ---
 
 
-# Adobe Experience Platform Web SDK リリースノート
+# Adobe Experience PlatformWeb SDK拡張機能リリースノート
 
-[詳細情報：Adobe Experience Platform Web SDK リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/release-notes.html)
+このドキュメントでは、Adobe Experience Platform Launch向けAdobe Experience PlatformWeb SDK extensionのリリースノートをカバーしています。 SDK自体の最新のリリースノートについては、[プラットフォームWeb SDKリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/release-notes.html)を参照してください。
 
 ## 2020 年 11 月 4 日
 
