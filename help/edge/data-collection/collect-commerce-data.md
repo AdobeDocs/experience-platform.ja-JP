@@ -1,19 +1,17 @@
 ---
-title: 製品
-seo-title: Adobe Experience Platform Web SDK での製品のサポート
-description: Experience Platform Web SDK で製品または買い物かごを使用している場合に、データを追加する方法について説明します。
-seo-description: Experience Platform Web SDK で製品または買い物かごを使用している場合に、データを追加する方法について説明します。
-keywords: 製品；コマース；測定；測定；注文；買い物かご放棄；チェックアウト；productListAdds;productListOpens;productListReopens;productListReopens;productViews;purchases;saveForLaters;currencyCode;paymentAmount;tancationID;transationID;priceTotal;purchaseID;purchaseOrderNumber;
+title: Adobe Experience PlatformWeb SDKを使用したコマースおよび製品情報の収集
+description: Adobe Experience PlatformWeb SDKを使用して、商品や買い物かごに関連するデータを追加する方法を説明します。
+keywords: 製品；コマース；測定；測定；注文；買い物かご放棄；チェックアウト；productListAdds;productListOpens;productListReopens;productListReopens;productViews;purchases;saveForLaters;currencyCode;paymentAmount;tancamentID;transationID;priceTotal;purchaseID;purchaseOrderNumber;
 translation-type: tm+mt
-source-git-commit: c34cd52301d812655c85d4e1bca42049204f9403
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 97%
+source-wordcount: '1321'
+ht-degree: 95%
 
 ---
 
 
-# コマースと製品の収集
+# コマースおよび製品情報の収集
 
 サイト上に製品がある場合は、アドビのほとんどの機能を有効にするために、このデフォルトのセットを送信することができます。これは提案ですが、最初から非常に強力なデータセットを提供します。
 
