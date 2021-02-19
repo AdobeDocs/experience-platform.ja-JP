@@ -68,7 +68,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | Google広告ID(GAID) | Google広告IDを表す名前空間。 詳しくは、[Google広告ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)の次のドキュメントを参照してください。 |
 | Google Click ID | GoogleクリックIDを表す名前空間。 詳しくは、[Google広告でのクリック追跡](https://developers.google.com/adwords/api/docs/guides/click-tracking)の次のドキュメントを参照してください。 |
 | Phone | 電話番号を表す名前空間。 このタイプの名前空間は多くの場合、1人の人に関連付けられるので、異なるチャネル間でその人を識別するのに使用できます。 |
-| 電話(E.164) | E.164形式でハッシュする必要がある生の電話番号を表す名前空間です。 E.164形式には、プラス記号(`+`)、国際国際電話番号、地域番号、電話番号が含まれます。 例：`(+)(country code)(area code)(phone number)`。 |
+| 電話(E.164) | E.164形式でハッシュする必要がある生の電話番号を表す名前空間です。 E.164形式には、プラス記号(`+`)、国際国の通話コード、地域番号、電話番号が含まれます。 例：`(+)(country code)(area code)(phone number)`。 |
 | 電話(SHA256) | SHA256を使用してハッシュする必要がある電話番号を表す名前空間です。 記号、文字、および先頭のゼロを削除する必要があります。 また、コードを呼び出す国をプレフィックスとして追加する必要があります。 |
 | 電話(SHA256_E.164) | SHA256とE.164の両方の形式を使用してハッシュする必要がある生の電話番号を表す名前空間です。 |
 | TNTID | Adobe Targetを表す名前空間。 詳しくは、[ターゲット](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en)の次のドキュメントを参照してください。 |
