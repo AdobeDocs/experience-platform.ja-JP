@@ -3,10 +3,10 @@ keywords: ストリーミング；
 title: HTTP接続
 description: Adobe Experience PlatformのHTTP宛先を使用すると、プロファイルデータをサードパーティのHTTPエンドポイントに送信できます。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 8%
+source-wordcount: '542'
+ht-degree: 7%
 
 ---
 
@@ -58,6 +58,7 @@ ht-degree: 8%
 - **[!UICONTROL 名前]**:この宛先を認識するための名前を入力します。
 - **[!UICONTROL 説明]**:この宛先を将来特定するのに役立つ説明を入力します。
 - **[!UICONTROL Custom Headers]**:宛先呼び出しに含めるカスタムヘッダーを入力します。次の形式に従います。 `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](/help/data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](/help/data-governance/policies/overview.md)を参照してください。
 
 >[!IMPORTANT]
 >
@@ -65,7 +66,7 @@ ht-degree: 8%
 
 ![HTTP認証](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL マーケティングの使用例]**:マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例について詳しくは、[データ使用ポリシーの概要](../../data-governance/policies/overview.md)を参照してください。
+**[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../data-governance/policies/overview.md)を参照してください。
 
 「**[!UICONTROL 宛先を作成]**」をクリックします。
 
@@ -75,7 +76,7 @@ ht-degree: 8%
 
 ## 宛先属性
 
-[[!UICONTROL 属性]](../ui/activate-destinations.md#select-attributes)を選択の手順中、[アクティブ化するセグメント](../ui/activate-destinations.md)を[!DNL HTTP]宛先に対して実行する場合は、[和集合スキーマ](../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。 宛先に書き出す一意の識別子およびその他の XDM フィールドを選択します。
+[[!UICONTROL 属性]](../ui/activate-destinations.md#select-attributes)を選択の手順中、[アクティブ化するセグメント](../ui/activate-destinations.md)を[!DNL HTTP]宛先に対して実行する場合は、[和集合スキーマ](../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
 
 ## エクスポートされたデータ{#exported-data}
 
