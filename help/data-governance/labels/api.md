@@ -29,7 +29,7 @@ ht-degree: 8%
 
 ## すべてのラベル{#list-labels}をリスト
 
-[!DNL Policy Service] APIを使用すると、`/labels/core`または`/labels/custom`に対してGETリクエストを行うことで、すべての`core`または`custom`ラベルをリストできます。
+[!DNL Policy Service] APIを使用すると、`/labels/core`または`/labels/custom`に対してGETリクエストを行うことで、すべての`core`ラベルまたは`custom`ラベルをリストできます。
 
 **API 形式**
 
