@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '4143'
-ht-degree: 75%
+ht-degree: 76%
 
 ---
 
@@ -57,7 +57,7 @@ ETL コネクタ統合には、複数の Experience Platform コンポーネン�
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -790,5 +790,5 @@ Adobe Experience Platformは、現在、遅延データを識別していない�
 | ---- | ------ | ----------- |
 | 2019-01-19 | データセットから「fields」プロパティを削除しました。 | データセットには、以前は、スキーマのコピーを含む「fields」プロパティが含まれていました。この機能は使用しないでください。「fields」プロパティが見つかった場合は無視し、「observedSchema」または「schemaRef」を代わりに使用する必要があります。 |
 | 2019/03/15 | 「schemaRef」プロパティをデータセットに追加しました。 | データセットの「schemaRef」プロパティには、データセットの基となる XDM スキーマを参照する URI が含まれ、そのデータセットで使用できるすべての潜在的なフィールドを表します。 |
-| 2019/03/15 | すべてのエンドユーザー識別子が「identityMap」プロパティにマップされます。 | 「identityMap」は、CRM ID、ECID、ロイヤリティプログラム ID など、主体のすべての一意の識別子をカプセル化したものです。このマップは[[!DNL Identity Service]](../identity-service/home.md)が使用して、サブジェクトの既知の匿名IDをすべて解決し、エンドユーザーごとに1つのIDグラフを形成します。 |
+| 2019/03/15 | すべてのエンドユーザー識別子が「identityMap」プロパティにマップされます。 | 「identityMap」は、CRM ID、ECID、ロイヤリティプログラム ID など、主体のすべての一意の ID をカプセル化したものです。このマップは[[!DNL Identity Service]](../identity-service/home.md)が使用して、サブジェクトの既知の匿名IDをすべて解決し、エンドユーザーごとに1つのIDグラフを形成します。 |
 | 2019/05/30 | データセットから「schema」プロパティを EOL と削除しました。 | データセット「スキーマ」プロパティは、[!DNL Catalog] APIの非推奨の`/xdms`エンドポイントを使用して、スキーマへの参照リンクを提供しました。 これは、新しい[!DNL Schema Registry] APIで参照されているスキーマの「id」、「version」、「contentType」を提供する「schemaRef」に置き換えられました。 |
