@@ -3,10 +3,10 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: Adobe Campaign接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 41%
+source-wordcount: '713'
+ht-degree: 37%
 
 ---
 
@@ -47,6 +47,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 - **[!UICONTROL Folder Path]**:ストレージー上の場所に、PlatformがエクスポートデータをCSVまたはタブ区切りファイルとしてデポジットするパスを指定します。
 - **[!UICONTROL コンテナ]**: *BLOB接続の場合*。フォルダーパスが含まれるBLOBを保持するコンテナです。
 - **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
+- **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 ![Campaign の基本情報](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -58,7 +59,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 ## 宛先属性 {#destination-attributes}
 
-Adobe Campaign の宛先に対して[セグメントをアクティブ化する](../../ui/activate-destinations.md)場合は、[ユニオンスキーマー](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。宛先に書き出す一意の識別子およびその他の XDM フィールドを選択します。詳しくは、電子メールマーケティング宛先ドキュメントの「書き出したファイル](./overview.md#destination-attributes)で、宛先属性として使用するスキーマフィールドの選択」を参照してください。[
+Adobe Campaign の宛先に対して[セグメントをアクティブ化する](../../ui/activate-destinations.md)場合は、[ユニオンスキーマー](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の ID を選択することをお勧めします。宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、電子メールマーケティング宛先ドキュメントの「書き出したファイル](./overview.md#destination-attributes)で、宛先属性として使用するスキーマフィールドの選択」を参照してください。[
 
 ## エクスポートされたデータ{#exported-data}
 
