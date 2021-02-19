@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
 source-wordcount: '1473'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 23%
 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] 個人(顧客、見込み客、ユーザー、組織など) [!DNL Experience Platform] に関連付けて保存されているデータを、より小さなグループに分割できます。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):取り込まれる異なるデータソースのIDをブリッジ化して、顧客プロファイルを作成でき [!DNL Platform]ます。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md):取り込まれる異なるデータソースのIDをブリッジ化することで、顧客プロファイルを作成でき [!DNL Platform]ます。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 
 また、このドキュメントを通して使用される次の 2 つの重要用語を知り、その違いを理解することも重要です。
 - **セグメント定義**：ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用されるルールセットです。
