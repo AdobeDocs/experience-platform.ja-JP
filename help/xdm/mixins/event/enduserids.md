@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気のあるトピック；スキ
 solution: Experience Platform
 title: エンドユーザーIDの詳細Mixin
 topic: overview
-description: このドキュメントでは、エンドユーザーIDの詳細ミックスインの概要を説明します。
+description: このドキュメントでは、「エンドユーザーIDの詳細」ミックスインの概要を説明します。
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
@@ -19,7 +19,7 @@ ht-degree: 6%
 >
 >いくつかのミックスインの名前が変更されました。 詳しくは、[mixin name updates](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL エンドユーザーID] の詳細： [[!DNL XDM ExperienceEvent] クラスの標準ミックスインです](../../classes/individual-profile.md)。複数のAdobeアプリケーションにわたる個人のID情報の説明に使用されます。ミックスインはルートレベルの`endUserIDs`オブジェクトを提供します。このオブジェクト自体には読み取り専用の`_experience`フィールドが含まれ、その値はデータの取り込み時に自動的に更新されます。
+[!UICONTROL エンドユーザーID] の詳細： [[!DNL XDM ExperienceEvent] クラスの標準ミックスインです](../../classes/individual-profile.md)。複数のAdobeアプリケーションにわたる個人のID情報の説明に使用されます。ミックスインはルートレベル`endUserIDs`オブジェクトを提供します。このオブジェクト自体には読み取り専用の`_experience`フィールドが含まれ、その値はデータの取り込み時に自動的に更新されます。
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
