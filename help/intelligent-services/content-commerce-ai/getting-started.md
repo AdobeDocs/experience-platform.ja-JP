@@ -19,7 +19,7 @@ ht-degree: 13%
 >
 >コンテンツとコマースAIはベータ版です。 このドキュメントは変更されることがあります。
 
-[!DNL Content and Commerce AI] adobe i/oAPIを利用。Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。
+[!DNL Content and Commerce AI] Adobe I/OAPIを利用。Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。
 
 ただし、**追加 API**&#x200B;の手順に進むと、次のスクリーンショットに示すように、APIはAdobe Experience PlatformではなくExperience Cloudの下に配置されます。
 
