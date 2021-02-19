@@ -5,9 +5,9 @@ seo-title: 宛先の概要
 description: チャネル間のマーケティングキャンペーン、電子メール、ターゲットを絞った広告などの目的地に対して、Adobe Experience Platformデータをアクティブ化する方法を説明します。
 seo-description: 宛先は、宛先プラットフォームとの統合が事前に構築されており、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。 Adobe Experience Platformの宛先を使用すると、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な使用例に関する既知および不明なデータをアクティブ化できます。
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 35%
 
 ---
@@ -53,12 +53,12 @@ ht-degree: 35%
 
 データ・ガバナンスは、次を通じて、プラットフォームの宛先に適用されます。
 
-* *マーケティングの使用* 例。宛先の作成ワークフローで選択できます。
-* *特定の使用状況ラベルを含むデータがアクティブ化されるのを制限するデータ使用* ポリシーを、特定のマーケティング使用例のある宛先に対して適用します。
+* *宛先の作成ワークフローで選択できるマーケティ* ングアクション。
+* *特定の使用状況ラベルを含むデータが、特定のマーケティングアクションを持つ宛先に対してアクティブ化されるのを制限するデータ使用* ポリシー。
 
-[マーケティングの使用例](../data-governance/policies/overview.md)と[データポリシー違反](../data-governance/enforcement/auto-enforcement.md)の解決の詳細については、プラットフォームドキュメントの[!DNL Data Governance]を参照してください。
+[marketing actions](../data-governance/policies/overview.md)と[resolving data policy violations](../data-governance/enforcement/auto-enforcement.md)の詳細については、プラットフォームドキュメントの[!DNL Data Governance]を参照してください。
 
-宛先作成ワークフローでのマーケティングの使用例の選択について詳しくは、プラットフォームの異なる宛先タイプに対する次のページを参照してください。
+宛先を作成ワークフローでのマーケティングアクションの選択について詳しくは、プラットフォームの様々な宛先タイプに関する次のページを参照してください。
 
 * [広告の表示先 — Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [広告の表示先 — Google Ads](./catalog/advertising/google-ads-destination.md)
