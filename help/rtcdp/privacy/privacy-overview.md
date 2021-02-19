@@ -21,7 +21,7 @@ ht-degree: 6%
 
 ## 顧客のアクセスおよび削除要求の実行
 
-[!DNL General Data Protection Regulation](GDPR)や[!DNL California Consumer Privacy Act](CCPA)などの法的プライバシー規制は、お客様に、お客様が収集した個人データへのアクセスを要求したり、削除する権利を与えます。 [!DNL Real-time CDP]はデータの収集とストレージに[!DNL Experience Platform]機能を活用するので、個人データのアクセスと削除のリクエストは[!DNL Platform]内で管理する必要があります。 詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md)の概要を参照してください。
+[!DNL General Data Protection Regulation](GDPR)や[!DNL California Consumer Privacy Act](CCPA)などの法的プライバシー規制は、お客様に、お客様が収集した個人データへのアクセスを要求したり、それらから削除する権利を与える。 [!DNL Real-time CDP]はデータの収集とストレージに[!DNL Experience Platform]機能を活用するので、個人データのアクセスと削除のリクエストは[!DNL Platform]内で管理する必要があります。 詳しくは、[Adobe Experience Platform Privacy Service](../../privacy-service/home.md)の概要を参照してください。
 
 ## オプトアウト機能
 
