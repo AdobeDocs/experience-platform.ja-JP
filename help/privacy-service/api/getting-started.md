@@ -77,7 +77,7 @@ AdobeDeveloper Consoleを使用して、次の3つのアクセス資格情報を
 
 ![](../images/api/getting-started/key-pair-generated.png)
 
-APIがプロジェクトに追加されると、**Privacy ServiceAPIの概要**&#x200B;ページにプロジェクトページが再表示されます。 ここから、**[!UICONTROL サービスアカウント(JWT)]**&#x200B;セクションまで下にスクロールします。このセクションでは、[!DNL Privacy Service] APIへのすべての呼び出しで必要な次のアクセス資格情報が提供されます。
+APIがプロジェクトに追加されると、**Privacy ServiceAPIの概要**&#x200B;ページにプロジェクトページが再表示されます。 ここから、**[!UICONTROL サービスアカウント(JWT)]**&#x200B;セクションまで下にスクロールします。このセクションでは、[!DNL Privacy Service] APIのすべての呼び出しで必要な次のアクセス資格情報が提供されます。
 
 * **[!UICONTROL クライアントID]**:クライアントIDは、x-api-keyヘッダー `{API_KEY}` で指定する必要があるクライアントIDです。
 * **[!UICONTROL 組織ID]**:組織IDは、x-gw-ims-org-idヘッダーで使用する必要がある `{IMS_ORG}` 値です。
