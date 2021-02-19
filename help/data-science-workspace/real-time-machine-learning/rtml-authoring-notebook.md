@@ -27,7 +27,7 @@ Adobe Experience PlatformのUIで、**データサイエンス**&#x200B;内か�
 
 ![JupyterLabを開く](../images/rtml/open-jupyterlab.png)
 
-[!DNL JupyterLab]ランチャーが表示されます。 「*Real-Time Machine Learning*」まで下にスクロールし、**[!UICONTROL リアルタイムML]**&#x200B;ノートブックを選択します。 データセットの例が記載されたノートブックセルを含むテンプレートが開きます。
+[!DNL JupyterLab]ランチャーが表示されます。 「*Real-Time Machine Learning*」まで下にスクロールし、**[!UICONTROL Real-time XML]**&#x200B;ノートブックを選択します。 データセットの例が記載されたノートブックセルを含むテンプレートが開きます。
 
 ![空白のPython](../images/rtml/authoring-notebook.png)
 
