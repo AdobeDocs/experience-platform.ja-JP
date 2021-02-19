@@ -29,7 +29,7 @@ ht-degree: 80%
 
 レシピを一から作成する場合は[!DNL Data Science Workspace]内で行います。 開始するには、[Adobe Experience Platform](https://platform.adobe.com)に移動し、左側の&#x200B;**[!UICONTROL ノートブック]**&#x200B;タブをクリックします。 [!DNL JupyterLab Launcher]からレシピビルダーテンプレートを選択して、新しいノートブックを作成します。
 
-[!UICONTROL Recipe Builder]ノートブックを使用すると、ノートブック内でトレーニングとスコアリングの実行を実行できます。 これにより、トレーニングデータとスコアリングデータで実験を実行する間に、`train()` メソッドと `score()` メソッドを柔軟に変更できます。トレーニングとスコアの出力結果に満足したら、Recipe Builderノートブックに組み込まれたレシピ機能を使用して、[!DNL Data Science Workspace]で使用するレシピを作成できます。
+[!UICONTROL Recipe Builder]ノートブックを使用すると、ノートブック内でトレーニングとスコアリングの実行を実行できます。 これにより、トレーニングデータとスコアリングデータで実験を実行する間に、`train()` メソッドと `score()` メソッドを柔軟に変更できます。トレーニングとスコアの出力結果に満足したら、Recipe Builderノートブックに組み込まれているレシピ機能を使用して、[!DNL Data Science Workspace]で使用するレシピを作成できます。
 
 >[!NOTE]
 >
