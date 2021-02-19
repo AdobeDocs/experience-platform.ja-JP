@@ -27,7 +27,7 @@ ht-degree: 27%
 * [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してPlatformをDynamicsアカウントに正常に接続するために知っておく必要がある追加情報については、以下の節で説明します。
+[!DNL Flow Service] APIを使用してPlatformをDynamicsアカウントに正常に接続するために必要な追加情報について、以下の節で説明します。
 
 ### 必要な資格情報の収集
 
