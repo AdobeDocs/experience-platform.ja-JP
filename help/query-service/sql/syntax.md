@@ -216,7 +216,7 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
 >[!NOTE]
-> `SELECT`ステートメント&#x200B;**は、括弧()で囲まないでください。**&#x200B;また、`SELECT`ステートメントの結果のスキーマは、`INSERT INTO`ステートメントで定義されたテーブルの結果に従う必要があります。 ターゲットテーブルに増分差分を読み込むための`SNAPSHOT`句を指定できます。
+> `SELECT`ステートメント&#x200B;**は、**&#x200B;を括弧()で囲まないでください。 また、`SELECT`ステートメントの結果のスキーマは、`INSERT INTO`ステートメントで定義されたテーブルの結果に従う必要があります。 ターゲットテーブルに増分差分を読み込むための`SNAPSHOT`句を指定できます。
 
 ## DROP TABLE
 
