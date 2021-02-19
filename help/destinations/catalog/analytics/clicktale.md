@@ -13,7 +13,7 @@ ht-degree: 24%
 
 # [!DNL Clicktale] 拡張機能 {#clicktale-extension}
 
-[!DNL Clicktale's] experience platform launchとの統合により、 [!DNL Clicktale] コードの導入と、ビジュアルエディターを使用した起動内のデータ要素のマッピング機能が可能になり [!DNL Clicktale's] ます。
+[!DNL Clicktale's] Experience Platform Launchとの統合により、 [!DNL Clicktale] コードの導入と、ビジュアルエディターを使用した起動内のデータ要素のマッピング機能が可能になり [!DNL Clicktale's] ます。
 
 [!DNL Clicktale] は、Adobe Experience Platformのanalytics拡張です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html) の拡張機能のページを参照してください。
 
