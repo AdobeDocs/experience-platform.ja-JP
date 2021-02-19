@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 55a54463e918fc62378c660ef17f36e2ede471e0
 workflow-type: tm+mt
 source-wordcount: '1219'
-ht-degree: 48%
+ht-degree: 49%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 48%
 
 * [Adobe Experience Platformデータガバナンス](../home.md):データ使用のコンプライアンスを [!DNL Platform] 強制するフレームワーク。
    * [データ使用ラベル](../labels/overview.md)：データ使用ラベルは、XDM データフィールドに適用され、そのデータのアクセス方法に関する制限を指定します。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 * [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 このチュートリアルを始める前に、[開発者ガイド](../api/getting-started.md)を参照し、必要なヘッダーやAPI呼び出し例の読み方を含む[!DNL Policy Service] APIの呼び出しを正しく行うために必要な重要な情報を確認してください。
@@ -330,7 +330,7 @@ curl -X POST \
 >
 >この手順は`DRAFT`ステータスのままにする場合はオプションですが、評価に参加するには、デフォルトでポリシーのステータスを`ENABLED`に設定する必要があります。 `DRAFT`ステータスのポリシーに例外を設定する方法については、[ポリシーの適用](../enforcement/api-enforcement.md)のガイドを参照してください。
 
-デフォルトでは、`status`プロパティが`DRAFT`に設定されているポリシーは評価に関与しません。 `/policies/custom/` エンドポイントに PATCH リクエストを実行して、リクエストパスの最後にそのポリシーの一意の識別子を指定することで、ポリシーの評価を有効にできます。
+デフォルトでは、`status`プロパティが`DRAFT`に設定されているポリシーは評価に関与しません。 `/policies/custom/` エンドポイントに PATCH リクエストを実行して、リクエストパスの最後にそのポリシーの一意の ID を指定することで、ポリシーの評価を有効にできます。
 
 **API 形式**
 
