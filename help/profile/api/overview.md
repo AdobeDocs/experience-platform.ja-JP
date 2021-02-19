@@ -14,11 +14,11 @@ ht-degree: 21%
 
 # [!DNL Real-time Customer Profile] APIガイド
 
-[!DNL Real-time Customer Profile] adobe experience platform内の個々の顧客の全体的な表示を確認できます。[!DNL Profile] オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルから個別の顧客データを統合表示に統合し、各顧客インタラクションに関する実用的なタイムスタンプのあるアカウントを提供できます。
+[!DNL Real-time Customer Profile] Adobe Experience Platform内の個々の顧客の全体的な表示を確認できます。[!DNL Profile] オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルから個別の顧客データを統合表示に統合し、各顧客インタラクションに関する実用的なタイムスタンプのあるアカウントを提供できます。
 
 [!DNL Real-time Customer Profile] APIには複数のエンドポイントが含まれ、以下で説明します。 詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプルAPI呼び出しの読み取りなどに関する重要な情報については、[はじめに](getting-started.md)を参照してください。
 
-使用可能なすべてのエンドポイントとCRUD操作を表示するには、[リアルタイム顧客プロファイルAPIリファレンススウォッチ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)を参照してください。
+使用可能なすべてのエンドポイントとCRUD操作を表示するには、[リアルタイムプロファイルAPIリファレンススウォッチ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)を参照してください。
 
 [!DNL Experience Platform] UIの[!DNL Real-time Customer Profile]データを操作する手引きについては、[プロファイルユーザーガイド](../ui/user-guide.md)を参照してください。
 
