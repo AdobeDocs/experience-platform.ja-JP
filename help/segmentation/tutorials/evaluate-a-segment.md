@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
 source-wordcount: '1567'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 60%
 
 ### 必須ヘッダー
 
-また、このチュートリアルでは、 API の呼び出しを正常におこなうために、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了している必要があります。[!DNL Platform]次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+また、このチュートリアルでは、 API の呼び出しを正常におこなうために、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了している必要があります。[!DNL Platform]次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
