@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '438'
-ht-degree: 31%
+ht-degree: 33%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 31%
 開発者ガイドを使用するには、データガバナンス機能の操作に関わる様々な[!DNL Experience Platform]サービスに関する作業を理解しておく必要があります。 [!DNL Policy Service API]との連携を開始する前に、次のサービスのドキュメントを確認してください。
 
 * [[!DNL Data Governance]](../home.md):データ使用のコンプライアンスを [!DNL Experience Platform] 強制するフレームワーク。
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
