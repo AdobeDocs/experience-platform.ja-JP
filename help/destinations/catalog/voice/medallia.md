@@ -15,7 +15,7 @@ ht-degree: 29%
 
 [!DNL Medallia]は、Webプロパティに素早くシームレスに展開できます。 また、この拡張機能を使用すると、調査イベントの検出、データ要素を使用した顧客フィードバックのリアルタイムキャプチャ、ルールでのフィードバックの使用によるカスタマーエクスペリエンスのパーソナライズ、Adobe Analytics とのデータの共有が可能になります。
 
-[!DNL Medallia] adobe experience platformのお客様の声です拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html) の拡張機能のページを参照してください。
+[!DNL Medallia] Adobe Experience Platformのお客様の声です拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 プラットフォーム起動の拡張機能の動作について詳しくは、[Adobe Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
