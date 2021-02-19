@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；部分取り込み；部分取り込み；エラーの取り込み；部分取り込み；部分バッチ取り込み；部分的なバッチ取り込み；取り込み；取り込み；
+keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；部分取り込み；部分取り込み；エラーの取り込み；部分的なバッチ取り込み；部分的なバッチ取り込み；取り込み；取り込み；
 solution: Experience Platform
 title: 部分的なバッチ取り込みの概要
 topic: overview
@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '945'
-ht-degree: 35%
+ht-degree: 40%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 35%
 このチュートリアルでは、部分バッチ取得に関わる様々な Adobe Experience Platform サービスに関する十分な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [バッチインジェスト](./overview.md):CSVやParketなどのデータファイルからデータを [!DNL Platform] 取り込んで保存する方法。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 
 以下の節では、[!DNL Platform] APIを正しく呼び出すために知っておく必要のある追加情報を紹介します。
 
@@ -34,7 +34,7 @@ ht-degree: 35%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
