@@ -35,7 +35,7 @@ Attribution AIインサイトのサービスインスタンス内で、右上の
 
 ## バッチ ID を取得する {#retrieve-your-batch-id}
 
-前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、`limit`クエリパラメーターの数を、返す分に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
+前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、`limit`クエリパラメーターの数を、返す金額に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
 
 **API 形式**
 
@@ -261,7 +261,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 ![端末](./images/download-scores/terminal-output.png)
 
-ダウンロードされるスコアはParquet形式で、スコアを表示するには[!DNL Spark]-shellまたはParketreaderが必要です。 生のスコア表示の場合は、[Apache Parket tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools)を使用できます。 パーケツールは[!DNL Spark]を使ってデータを分析できます。
+ダウンロードされるスコアはParquet形式で、スコアを表示するには[!DNL Spark]-shellまたはParquet Readerが必要です。 生のスコア表示の場合は、[Apache Parket tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools)を使用できます。 パーケツールは[!DNL Spark]を使ってデータを分析できます。
 
 ## 次の手順
 
