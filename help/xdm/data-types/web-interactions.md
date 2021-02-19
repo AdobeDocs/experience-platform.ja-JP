@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # [!UICONTROL Web] インタラクションデータ型
 
-[!UICONTROL Web] インタラクションは、標準のExperience Data Model(XDM)データ型で、最初のページ読み込みが完了した後にWebページ上で発生したインタラクションに関する情報を記述します。単一ページのWebアプリ(SPA)など、新しいページ読み込みをトリガーしないリッチWebアプリケーションでのインタラクションの記録を目的としています。
+[!UICONTROL Web] インタラクションは、最初のページ読み込みが完了した後にWebページ上で発生したインタラクションに関する情報を記述する、標準のExperience Data Model(XDM)データ型です。単一ページのWebアプリ(SPA)など、新しいページ読み込みをトリガーしないリッチWebアプリケーションでのインタラクションの記録を目的としています。
 
 <img src="../images/data-types/web-interaction.PNG" width="500" /><br />
 
