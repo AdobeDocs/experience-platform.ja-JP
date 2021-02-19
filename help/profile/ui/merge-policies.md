@@ -3,7 +3,7 @@ keywords: Experience Platform;プロファイル；リアルタイム顧客プ�
 title: Merge Policies UI Guide
 topic: guide
 type: Documentation
-description: 'Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、統合ポリシーは、データの優先順位付け方法と統合表示を作成するデータを決定する際にPlatformが使用するルールです。 '
+description: 'Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、統合ポリシーは、データの優先順位付け方法と統合表示を作成するデータをPlatformが決定する際に使用するルールです。 '
 translation-type: tm+mt
 source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
