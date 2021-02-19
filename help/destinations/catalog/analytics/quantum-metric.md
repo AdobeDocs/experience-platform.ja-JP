@@ -13,7 +13,7 @@ ht-degree: 24%
 
 # [!DNL Quantum Metric] 拡張機能 {#quantum-metric-extension}
 
-[!DNL Quantum Metric's] adobe開始との統合により、 [!DNL Quantum Metric's] データ収集タグのコードレス導入が容易になります。さらに、この拡張機能は、[!DNL Quantum Metric] APIから役立つ情報を含む起動データ要素を取り込む機能をオファーします。
+[!DNL Quantum Metric's] Adobe開始との統合により、 [!DNL Quantum Metric's] データ収集タグのコードレス導入が容易になります。さらに、この拡張機能は、[!DNL Quantum Metric] APIから役立つ情報を含む起動データ要素を取り込む機能をオファーします。
 
 [!DNL Quantum Metric] は、Adobe Experience Platformのanalytics拡張です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html) の拡張機能のページを参照してください。
 
