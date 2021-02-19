@@ -19,7 +19,7 @@ Adobe Experience PlatformユーザーインターフェイスでExperience Data 
 
 配列の内容は、そのフィールドで選択された[!UICONTROL Type]によって異なります。 例えば、フィールドの[!UICONTROL Type]が&quot;[!UICONTROL String]&quot;に設定されている場合、そのフィールドを配列として設定すると、フィールドが文字列の配列として指定されます。 フィールドの[!UICONTROL Type]が「[!UICONTROL 住所]」などの複数フィールドのデータ型に設定されると、そのデータ型に適合する住所オブジェクトの配列になります。
 
-UI](./overview.md#define)で新しいフィールドを[定義した後、右側のレールで「**[!UICONTROL 配列]**」チェックボックスを選択して、配列フィールドに設定できます。
+UI](./overview.md#define)で[新しいフィールドを定義した後、右側のナビゲーションバーの&#x200B;**[!UICONTROL Array]**&#x200B;チェックボックスを選択して、配列フィールドに設定できます。
 
 ![](../../images/ui/fields/special/array.png)
 
