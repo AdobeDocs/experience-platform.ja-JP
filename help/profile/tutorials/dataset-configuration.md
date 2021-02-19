@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1057'
-ht-degree: 53%
+ht-degree: 57%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 53%
 - [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 - [[!DNL Identity Service]](../../identity-service/home.md):取り込ま [!DNL Real-time Customer Profile] れる異なるデータソースからIDをブリッジすることで有効に [!DNL Platform]します。
 - [[!DNL Catalog Service]](../../catalog/home.md):および用のデータセットの作成と設定を可能にするRESTful API [!DNL Real-time Customer Profile] で [!DNL Identity Service]す。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 
 以下の節では、Platform API を正しく呼び出すために知っておく必要がある追加情報を示します。
 
@@ -41,7 +41,7 @@ ht-degree: 53%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
