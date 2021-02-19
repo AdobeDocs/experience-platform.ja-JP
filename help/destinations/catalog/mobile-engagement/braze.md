@@ -3,9 +3,9 @@ keywords: mobile;ブレーズ。メッセージ；
 title: ブレーズ接続
 description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '925'
 ht-degree: 5%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 5%
 * **[!UICONTROL 名前]**:この宛先を認識するための名前を入力します。
 * **[!UICONTROL 説明]**:この宛先を将来特定するのに役立つ説明を入力します。
 * **[!UICONTROL エンドポイントインスタンス]**:使用するエンドポイントインスタンスを [!DNL Braze] 担当者に問い合わせます。
-* **[!UICONTROL マーケティングの使用例]**:マーケティングの使用例は、目的のデータが目的のデータにエクスポートされることを示します。Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例について詳しくは、[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンスのページを参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 ![ブレーズ認証手順](../../assets/catalog/mobile-engagement/braze/authentication.png)
 
