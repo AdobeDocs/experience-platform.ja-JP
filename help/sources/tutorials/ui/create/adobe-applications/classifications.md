@@ -62,7 +62,7 @@ Analytics Classifications Data Connectorを使用するには、使用する前�
 
 ## 分類のデータフローの監視
 
-データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 **[!UICONTROL カタログ]**&#x200B;画面で、**[!UICONTROL データフロー]**&#x200B;を選択し、[!DNL Classifications]アカウントに関連付けられた確立されたフローのリストを表示します。
+データフローを作成したら、データフローを介して取り込まれるデータを監視できます。 **[!UICONTROL カタログ]**&#x200B;画面で、**[!UICONTROL データフロー]**&#x200B;を選択し、[!DNL Classifications]アカウントに関連付けられた確立済みフローのリストを表示します。
 
 ![](../../../../images/tutorials/create/classifications/dataflows.png)
 
