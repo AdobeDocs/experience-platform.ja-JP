@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1134'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -38,7 +38,7 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | パラメーター | 説明 |
 | --- | --- |
 | `{CONTAINER_ID}` | ミックスインの取得元のコンテナ:`global`はAdobeが作成したミックスイン用、`tenant`は組織が所有するミックスイン用です。 |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 使用可能なパラメーターのリストについては、[付録ドキュメント](./appendix.md#query)を参照してください。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。使用可能なパラメーターのリストについては、[付録ドキュメント](./appendix.md#query)を参照してください。 |
 
 **リクエスト**
 
