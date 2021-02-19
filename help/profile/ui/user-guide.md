@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
 source-wordcount: '1352'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 8%
 
 * [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [[!DNL Identity Service]](../../identity-service/home.md):異な [!DNL Real-time Customer Profile] るデータソースに取り込まれる際に、アイデンティティを別々のデータソースからブリッジすることで有効に [!DNL Platform]します。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 
 ## 概要
 
@@ -90,7 +90,7 @@ Experience PlatformUIで、左側のナビゲーションで&#x200B;**[!UICONTRO
 
 ### ID値
 
-ID名前空間を選択した後、「**[!UICONTROL 参照]**」タブに戻り、**[!UICONTROL ID値]**&#x200B;を入力できます。 この値は個々の顧客プロファイルに固有の値で、提供される名前空間に対して有効なエントリである必要があります。 例えば、「電子メール」というID名前空間を選択するには、有効な電子メールアドレスの形式のID値が必要です。
+ID名前空間を選択したら、「**[!UICONTROL 参照]**」タブに戻り、**[!UICONTROL ID値]**&#x200B;を入力できます。 この値は個々の顧客プロファイルに固有の値で、提供される名前空間に対して有効なエントリである必要があります。 例えば、「電子メール」というID名前空間を選択するには、有効な電子メールアドレスの形式のID値が必要です。
 
 ![](../images/user-guide/profiles-show-profile.png)
 
