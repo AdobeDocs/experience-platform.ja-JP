@@ -59,7 +59,7 @@ Adobe Experience Platform データガバナンスは、顧客データを管理
 
 | 機能 | 説明 |
 | --- | --- |
-| Adobe I/Oイベント通知 | [!DNL Observability Insights] adobe i/oイベントを利用して、複数のExperience Platformサービス向けのイベント通知を作成します。通知ペイロードは、設定済みのWebフックに送信され、このフックを使用して、下流のプロセスをさらに自動化できます。 詳しくは、[通知の概要](../../observability/notifications/overview.md)を参照してください。 |
+| Adobe I/Oイベント通知 | [!DNL Observability Insights] Adobe I/Oイベントを利用して、複数のExperience Platformサービス向けのイベント通知を作成します。通知ペイロードは、設定済みのWebフックに送信され、このフックを使用して、下流のプロセスをさらに自動化できます。 詳しくは、[通知の概要](../../observability/notifications/overview.md)を参照してください。 |
 
 サービスの詳細については、[[!DNL Observability Insights] 概要](../../observability/home.md)を参照してください。
 
@@ -83,7 +83,7 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 | ------- | ----------- |
 | プロファイルビューアー | プラットフォームUIのプロファイルビューアが、完全なカスタマイズが可能なダッシュボードに更新されました。 ユーザーは、次のタスクを行うことができます。 <ul><li>基本情報ウィジェットで、選択した標準属性とカスタマイズした属性を更新します。</li><li>カスタムウィジェットの作成、編集、削除</li><li>ウィジェットのサイズ変更と並べ替え</li></ul> |
 
-[!DNL Real-time Customer Profile]について詳しくは、[!DNL Profile]データを操作するためのチュートリアルやベストプラクティスなど、に関する情報を[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
+[!DNL Real-time Customer Profile]について詳しくは、[!DNL Profile]データを操作するためのチュートリアルやベストプラクティスなど、に関する情報を[リアルタイム顧客プロファイルの概要](../../profile/home.md)をご覧ください。
 
 ## セグメント化サービス {#segmentation}
 
