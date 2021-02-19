@@ -105,4 +105,4 @@ ht-degree: 6%
 
 ### [!DNL Profile]母集団の受信データをアクティブ化
 
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むのに使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../../profile.md)のチュートリアルを参照してください。
+ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../../profile.md)のチュートリアルを参照してください。
