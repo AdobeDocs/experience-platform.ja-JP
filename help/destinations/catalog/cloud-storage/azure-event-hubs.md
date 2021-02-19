@@ -3,9 +3,9 @@ keywords: Azureイベントハブの宛先；azureイベントハブ；azure eve
 title: （ベータ版）Azureイベントハブ接続
 description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '546'
 ht-degree: 6%
 
 ---
@@ -55,6 +55,7 @@ ht-degree: 6%
 * **[!UICONTROL 名前]**:接続先の名前を入力し [!DNL Azure Event Hubs]ます。
 * **[!UICONTROL 説明]**:接続の説明を入力します。例：「Premium tier customers」、「Osins in kitesurfing」
 * **[!UICONTROL eventHubName]**:目的のストリームの名前を指定し [!DNL Azure Event Hubs] ます。
+* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 ![設定手順で必要なデータ](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
