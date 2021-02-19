@@ -746,7 +746,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、CRMシステムからデータを収集するソースコネクタをスケジュールに基づいて作成しました。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリームプラットフォームサービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従うことで、CRMシステムからデータを収集するソースコネクタをスケジュールに基づいて作成しました。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリームプラットフォームサービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 * [Data Science ワークスペースの概要](../../../../data-science-workspace/home.md)
