@@ -37,7 +37,7 @@ SDKを使用してAdobe Experience Platformに同意データを送信するに�
 
 ## Audience Manager統合
 
-Adobe Audience Manager(AAM)は、IAB TCF 2.0のサポートを含みます。IAB TCF 2.0では、顧客のプライバシー選択を評価、尊重、ダウンストリームのパートナーに転送できます。<!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
+Adobe Audience Manager(AAM)は、IAB TCF 2.0のサポートを含みます。IAB TCF 2.0では、顧客のプライバシー選択を評価、尊重し、下流のパートナーに転送できます。<!--For more information, read the documentation on [Sending Data to Audience Manager](../audience-manager/audience-manager-overview.md).-->
 
 >[!TIP]
 >
