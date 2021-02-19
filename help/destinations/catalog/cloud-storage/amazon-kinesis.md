@@ -3,10 +3,10 @@ keywords: AmazonKinesis;kinesis宛先；kinesis
 title: AmazonKinesis接続
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 7%
+source-wordcount: '510'
+ht-degree: 6%
 
 ---
 
@@ -55,6 +55,7 @@ ht-degree: 7%
 * **名前**:接続先の名前を指定  [!DNL Amazon Kinesis]
 * **説明**:への接続の説明を入力し [!DNL Amazon Kinesis]ます。
 * **stream**:ア [!DNL Amazon Kinesis] カウント内の既存のデータストリームの名前を指定します。プラットフォームは、このストリームにデータをエクスポートします。
+* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 ![認証手順の入力フィールド](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
