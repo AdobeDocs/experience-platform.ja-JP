@@ -15,7 +15,7 @@ ht-degree: 28%
 
 Web ページ訪問者から音声メッセージを受信します。ホスト UI とクラウドベースの機械学習機能を含み、音声メッセージをテキストインサイトへと即座に書き起こします。
 
-[!DNL Talk URL Inbox] adobe experience platformのお客様の声です拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html) の拡張機能のページを参照してください。
+[!DNL Talk URL Inbox] Adobe Experience Platformのお客様の声です拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 プラットフォーム起動の拡張機能の動作について詳しくは、[Adobe Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
