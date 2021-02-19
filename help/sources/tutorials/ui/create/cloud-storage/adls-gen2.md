@@ -27,7 +27,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
    - [スキーマエディタのチュートリアル](../../../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
-既に有効なADLS Gen2接続をお持ちの場合は、このドキュメントの残りの部分をスキップして、[データフローの設定](../../dataflow/batch/cloud-storage.md)のチュートリアルに進むことができます。
+既に有効なADLS Gen2接続をお持ちの場合は、このドキュメントの残りの部分をスキップし、[データフローの設定](../../dataflow/batch/cloud-storage.md)のチュートリアルに進むことができます。
 
 ### 必要な資格情報の収集
 
@@ -54,7 +54,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![](../../../../images/tutorials/create/adls-gen2/catalog.png)
 
-**[!UICONTROL Azure Data Lake Gen2]**&#x200B;に接続するダイアログが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+**[!UICONTROL Azure Data Lake Gen2]**&#x200B;に接続ダイアログが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
