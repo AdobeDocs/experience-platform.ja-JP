@@ -3,9 +3,9 @@ keywords: 飛行船タグ；飛行船の目的地
 title: 航空船タグの接続
 description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1193'
 ht-degree: 13%
 
 ---
@@ -99,7 +99,7 @@ Adobe Experience Platformのセグメントの概念は、Airshipの[タグ](htt
 
 **[!UICONTROL 認証]**&#x200B;手順で、アクティベーションフローの&#x200B;**[!UICONTROL 名前]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力します。
 
-また、この手順では、この宛先に適用する[!DNL Airship]データセンターに応じて、米国またはEUデータセンターを選択できます。 最後に、データをエクスポート先にエクスポートする1つ以上のマーケティングの使用例を選択します。 Adobe定義のマーケティングの使用例から選択するか、独自の使用例を作成することができます。 マーケティングの使用例について詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+また、この手順では、この宛先に適用する[!DNL Airship]データセンターに応じて、米国またはEUデータセンターを選択できます。 最後に、データをエクスポート先にエクスポートする1つ以上の&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 上記のフィールドに入力したら、「**[!UICONTROL 宛先を作成]**」を選択します。
 
@@ -130,7 +130,7 @@ Adobe Experience Platformのセグメントの概念は、Airshipの[タグ](htt
 
 ![IDマッピング初期画面](../../assets/catalog/mobile-engagement/airship-tags/identity-mapping.png)
 
-[!DNL Airship] タグは、デバイスインスタンスを表すチャネル（iPhoneなど）またはすべてのユーザーのデバイスを顧客IDなどの共通の識別子にマップする名前付きユーザーに設定できます。スキーマの主なIDとしてテキスト形式の（ハッシュ化されていない）電子メールアドレスが存在する場合は、**[!UICONTROL ソース属性]**&#x200B;で電子メールフィールドを選択し、**[!UICONTROL ターゲットID]**&#x200B;の右の列の[!DNL Airship]にマップします。
+[!DNL Airship] タグは、デバイスインスタンスを表すチャネル（iPhoneなど）またはすべてのユーザーのデバイスを顧客IDなどの共通の識別子にマップする名前付きユーザーに設定できます。スキーマの主なIDとしてテキスト形式の（ハッシュ化されていない）電子メールアドレスがある場合は、**[!UICONTROL ソース属性]**&#x200B;で電子メールフィールドを選択し、**[!UICONTROL ターゲットID]**&#x200B;の右の列の[!DNL Airship]にマップします。
 
 ![名前付きユーザーマッピング](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 
