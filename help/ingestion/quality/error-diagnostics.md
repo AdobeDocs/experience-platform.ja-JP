@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '936'
-ht-degree: 31%
+ht-degree: 35%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
 - [[!DNL Adobe Experience Platform Data Ingestion]](../home.md):データの送信先のメソッド [!DNL Experience Platform]。
 
 ### API 呼び出し例の読み取り
@@ -32,7 +32,7 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -48,7 +48,7 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 
 ## エラー診断{#download-diagnostics}をダウンロード中
 
-Adobe Experience Platformでは、入力ファイルのエラー診断をダウンロードできます。 診断は[!DNL Platform]内に最長30日間保持されます。
+Adobe Experience Platformでは、入力ファイルのエラー診断をダウンロードできます。 診断は[!DNL Platform]内に最大30日間保持されます。
 
 ### リスト入力ファイル{#list-files}
 
