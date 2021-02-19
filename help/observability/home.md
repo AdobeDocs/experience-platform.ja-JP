@@ -25,7 +25,7 @@ APIの使用について詳しくは、[[!DNL Observability Insights] API開発�
 
 ## イベント通知
 
-[!DNL Observability Insights] adobe experience platformアクティビティに関するイベント通知をサブスクライブできます。イベントをサブスクライブすることで、ジョブが完了した時点、ワークフロー内の特定のマイルストーンに達した場合、またはプロセス中にエラーが発生した場合に、独自のダウンストリームプロトコルを設定できます。
+[!DNL Observability Insights] Adobe Experience Platformアクティビティに関するイベント通知をサブスクライブできます。イベントをサブスクライブすることで、ジョブが完了した時点、ワークフロー内の特定のマイルストーンに達した場合、またはプロセス中にエラーが発生した場合に、独自のダウンストリームプロトコルを設定できます。
 
 詳しくは、[イベント通知](./notifications/overview.md)の概要を参照してください。
 
