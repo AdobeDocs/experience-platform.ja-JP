@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
 workflow-type: tm+mt
 source-wordcount: '236'
-ht-degree: 56%
+ht-degree: 57%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 56%
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
-* ミックスイン{#mixins}
+* Mixin {#mixins}
    * プロファイルミックスイン{#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [人口統計の詳細](./mixins/profile/person-details.md)
@@ -70,7 +70,7 @@ ht-degree: 56%
    * リソースの作成と編集{#resources}
       * [スキーマ](./ui/resources/schemas.md)
       * [クラス](./ui/resources/classes.md)
-      * [ミックスイン](./ui/resources/mixins.md)
+      * [Mixin](./ui/resources/mixins.md)
       * [データタイプ](./ui/resources/data-types.md)
    * フィールドの定義{#fields}
       * [概要](./ui/fields/overview.md)
@@ -88,7 +88,7 @@ ht-degree: 56%
    * [スキーマ](api/schemas.md)
    * [動作](api/behaviors.md)
    * [クラス](api/classes.md)
-   * [ミックスイン](api/mixins.md)
+   * [Mixin](api/mixins.md)
    * [データタイプ](api/data-types.md)
    * [記述子](api/descriptors.md)
    * [和集合](api/unions.md)
