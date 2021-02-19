@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '1007'
-ht-degree: 60%
+ht-degree: 62%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 60%
 
 - `{DOCKER_URL}`：インテリジェントサービスの Docker イメージへの URL アドレス。
 
-このチュートリアルでは、 API への呼び出しをおこなうために、[Adobe Experience Platform 認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了している必要があります。[!DNL Platform]次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+このチュートリアルでは、 API への呼び出しをおこなうために、[Adobe Experience Platform 認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了している必要があります。[!DNL Platform]次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `{ACCESS_TOKEN}`：認証後に提供される特定の Bearer トークン値。
 - `{IMS_ORG}`：固有の Adobe Experience Platform 統合にある IMS 組織の資格情報。
@@ -53,7 +53,7 @@ ht-degree: 60%
 
 >[!CAUTION]
 >
-> [!DNL Python]またはRを使用している場合は、以下のリクエストを使用してください。 PySparkまたはScalaを使用している場合は、Python/Rの例の下にあるPySpark/Scalaリクエストの例を使用してください。
+> [!DNL Python]またはRを使用している場合は、以下のリクエストを使用してください。 PySparkやScalaを使用している場合は、Python/Rの例の下にあるPySpark/Scalaリクエストの例を使ってください。
 
 **API 形式**
 
@@ -172,7 +172,7 @@ curl -X POST \
 
 **応答** 
 
-正常な応答は、新たに作成されたエンジンの一意の識別子（`id`）を含む詳細を含むペイロードを返します。次の例は、[!DNL Python]エンジンに対する応答です。 `executionType`キーと`type`キーは、指定されたPOSTに基づいて変更されます。
+正常な応答は、新たに作成されたエンジンの一意の ID（`id`）を含む詳細を含むペイロードを返します。次の例は、[!DNL Python]エンジンに対する応答です。 `executionType`キーと`type`キーは、指定されたPOSTに基づいて変更されます。
 
 ```json
 {
