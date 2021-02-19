@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '219'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
 
-# Microsoft Dynamicsコネクタ
+# Microsoft Dynamics コネクタ
 
 Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
