@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '882'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -24,7 +24,7 @@ CSVデータを[!DNL Adobe Experience Platform]に取り込むには、データ
 
 このチュートリアルでは、[!DNL Platform]の次のコンポーネントについて十分に理解している必要があります。
 
-- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 - [[!DNL Batch ingestion]](../batch-ingestion/overview.md):ユーザーが指定したデータファイルからデータを [!DNL Platform] 取り込む方法。
 
 また、このチュートリアルでは、CSV データの取り込み先のデータセットを既に作成している必要があります。UI でデータセットを作成する手順については、[データ取得のチュートリアル](./ingest-batch-data.md)を参照してください。
@@ -87,7 +87,7 @@ CSVデータを新しいデータセットに取り込むには、**[!UICONTROL 
 
 ### 追加計算フィールド
 
-計算済みフィールドでは、入力スキーマーの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して参照しやすくすることができます。
+計算済みフィールドでは、入力スキーマーの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して、参照しやすくすることができます。
 
 先に進むには、**[!UICONTROL 追加計算済みフィールド]**&#x200B;ボタンを選択します。
 
