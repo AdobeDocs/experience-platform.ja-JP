@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '1755'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platformにログインした後、[!UICONTROL ホーム]ペー
 
 **[!UICONTROL Datasets]**&#x200B;セクションには、IMS組織内のデータセットの数が表示されます。 新しいデータセットが作成されると、この数値は更新されます。 データセットに関する詳細は、[データセットの概要](../catalog/datasets/overview.md)を参照してください。
 
-**[!UICONTROL プロファイル]**&#x200B;セクションには、IMS組織内のプロファイルを持つ人の合計数が表示されます。プロファイルフラグメントは除きます。 この合計数はアドレス可能なオーディエンスの合計を表し、24時間に1回更新されます。 プロファイルの詳細については、[リアルタイム顧客プロファイルの概要](../profile/home.md)を参照してください。
+**[!UICONTROL プロファイル]**&#x200B;セクションには、IMS組織内のプロファイルを持つ人の合計数が表示されます。プロファイルフラグメントは除きます。 この合計数はアドレス可能なオーディエンスの合計を表し、24時間に1回更新されます。 プロファイルに関する詳細は、[リアルタイム顧客プロファイルの概要](../profile/home.md)を参照してください。
 
 「**[!UICONTROL セグメント]**」セクションには、IMS組織内で作成されたセグメントの合計数が表示されます。 この数値は、新しいセグメントが作成されると更新されます。 セグメントについて詳しくは、[Segmentation Serviceの概要](../segmentation/home.md)を参照してください。
 
@@ -153,7 +153,7 @@ Adobe Experience Platformにログインした後、[!UICONTROL ホーム]ペー
 
 ### [!UICONTROL 判定]
 
-Offer Decisioningは、Adobe Experience Platformと統合された申し込みサービスです。 Experience Platformを活用して、すべてのタッチポイントにわたって適切なタイミングで最高のオファーと経験を顧客に提供できます。 [!UICONTROL オファー]や[!UICONTROL アクティビティ]との連携を含め、Offer Decisioningの詳細については、[Offer Decisioningのドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning.html)を参照してください。
+Offer Decisioningは、Adobe Experience Platformと統合された申し込みサービスです。 これにより、 Experience Platform を活用して、あらゆるタッチポイントで最高のオファーとエクスペリエンスを適切なタイミングで顧客に提供できます。[!UICONTROL オファー]や[!UICONTROL アクティビティ]との連携を含め、Offer Decisioningの詳細については、[Offer Decisioningのドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning.html)を参照してください。
 
 ### [!UICONTROL 管理]
 
