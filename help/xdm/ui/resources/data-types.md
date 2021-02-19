@@ -69,7 +69,7 @@ Adobe Experience Platformでは、様々な一般的なエクスペリエンス�
 
 右側のレールのコントロールを使用して、新しいフィールドの詳細を設定します。 フィールドを設定してデータ型に追加する手順については、[UI](../fields/overview.md#define)でのフィールドの定義のガイドを参照してください。
 
-Restaurantデータ型では、レストランの名前を表す文字列フィールドが必要です。 したがって、[!UICONTROL フィールド名]は「名前」に、[!UICONTROL タイプ]は「[!UICONTROL 文字列]」に設定されます。 **[!UICONTROL 「Apply]**」を選択して、変更をフィールドに適用します。
+Restaurantデータ型では、レストランの名前を表す文字列フィールドが必要です。 したがって、[!UICONTROL フィールド名]は「名前」に、[!UICONTROL タイプ]は「[!UICONTROL 文字列]」に設定されます。 「**[!UICONTROL 適用]**」を選択して、変更をフィールドに適用します。
 
 ![](../../images/ui/resources/data-types/name-field.png)
 
