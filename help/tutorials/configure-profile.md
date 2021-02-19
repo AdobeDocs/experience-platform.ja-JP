@@ -47,7 +47,7 @@ ht-degree: 26%
 
 ## [!DNL Profile]および[!DNL Identity]サービスのスキーマを有効にする
 
-データをAdobe Experience Platformに取り込んで[!DNL Real-time Customer Profiles]の作成に使用する前に、取り込むデータの構造を提供するスキーマを作成し、そのスキーマを[!DNL Profile]とAdobe Experience Platform[!DNL Identity Service]で使用できるようにする必要があります。
+データをAdobe Experience Platformに取り込んで[!DNL Real-time Customer Profiles]の作成に使用する前に、取り込むデータの構造を提供するスキーマを作成し、そのスキーマを[!DNL Profile]とAdobe Experience Platform[!DNL Identity Service]で使用できるようにする必要がある。
 
 **このガイドは次の目的に役立ちます。**
 - 既存のスキーマを参照します。
