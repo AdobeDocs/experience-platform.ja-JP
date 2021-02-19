@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
 source-wordcount: '722'
-ht-degree: 15%
+ht-degree: 20%
 
 ---
 
@@ -40,7 +40,7 @@ Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外�
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
