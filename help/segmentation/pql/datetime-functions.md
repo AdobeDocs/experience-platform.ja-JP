@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；日付と時間関数；日付と時間関数；日時；時刻；
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；日付と時間関数；日付と時間関数；日付；時刻；
 solution: Experience Platform
 title: PQLの日付と時間関数
 topic: developer guide
