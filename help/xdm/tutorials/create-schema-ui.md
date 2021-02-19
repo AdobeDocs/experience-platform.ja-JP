@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '3600'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Experience Platformのユーザーインターフェイスを使用する�
 
 このチュートリアルでは、スキーマの作成に関わるAdobe Experience Platformのさまざまな側面について、十分に理解する必要があります。 このチュートリアルを始める前に、次の概念に関するドキュメントを確認してください。
 
-* [[!DNL Experience Data Model (XDM)]](../home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
    * [スキーマ合成の基本](../schema/composition.md)：XDM スキーマとその構築ブロック（クラス、mixin、データ型、フィールドなど）の概要です。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
@@ -218,7 +218,7 @@ Mixinをプレビューする際、Mixinのスキーマの詳細が右側のパ�
 
 ## 複数フィールドオブジェクトのデータ型への変換 {#datatype}
 
-`loyalty`オブジェクトには複数の忠誠度固有のフィールドが含まれ、他のスキーマで役立つ共通のデータ構造を表すようになりました。 [!DNL Schema Editor]を使用すると、再利用可能な複数フィールドオブジェクトを簡単に適用できます。これらのオブジェクトの構造をデータ型に変換します。
+`loyalty`オブジェクトには複数の忠誠度固有のフィールドが含まれ、他のスキーマで役立つ共通のデータ構造を表すようになりました。 [!DNL Schema Editor]を使用すると、再利用可能な複数フィールドオブジェクトを簡単に適用できます。これらのオブジェクトの構造をデータ型に変換できます。
 
 データ型を使用すると、複数フィールド構造を一貫して使用でき、mixin よりも柔軟性が高まります。これは、データ型がスキーマ内のどこでも使用できるからです。これは、フィールドの&#x200B;**[!UICONTROL Type]**&#x200B;値を、[!DNL Schema Registry]で定義されている任意のデータ型の値に設定することで行います。
 
@@ -316,7 +316,7 @@ Mixinをプレビューする際、Mixinのスキーマの詳細が右側のパ�
 
 これで、[UI](./relationship-ui.md)でスキーマの関係を定義するチュートリアルに従って、「Loyality Members」スキーマに新しい関係フィールドを追加できます。
 
-「ロイヤルティメンバー」スキーマは、[!DNL Schema Registry] APIを使用して表示および管理することもできます。 APIの使用を開始するには、[[!DNL Schema Registry API] 開始ガイド](../api/getting-started.md)を読んでください。
+「Loyality Members」スキーマは、[!DNL Schema Registry] APIを使用して表示および管理することもできます。 APIの使用を開始するには、[[!DNL Schema Registry API] 開始ガイド](../api/getting-started.md)を読んでください。
 
 ### ビデオリソース
 
