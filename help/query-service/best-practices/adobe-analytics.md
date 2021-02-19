@@ -215,8 +215,8 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 
 | eVar6（製品検索方法） | 売上高 | 注文件数 | 製品表示 | 買い物かごへの追加 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| 内部検索：夏のシャツ | 19.99 | 1 | 3 | 3 |
-| 内部検索：冬帽子 | 12.99 | 3 | 3 | 3 |
+| 内部検索：夏のシャツ | 19.99 | 1 | 1 | 1 |
+| 内部検索：冬帽子 | 12.99 | 3 | 1 | 1 |
 
 変換構文の使用について詳しくは、[コンバージョン構文](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax)を使用したeVarの実装に関するAdobe Analyticsのドキュメントを参照してください。
 
