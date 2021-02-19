@@ -78,7 +78,7 @@ curl -X POST \
 
 **応答**
 
-成功時の応答は、新規作成された MLService の詳細を格納したペイロードを返します。この詳細には、一意の識別子（`id`）、トレーニングの実験 ID（`trainingExperimentId`）、スコアリングの実験 ID（`scoringExperimentId`）、入力トレーニングデータセット ID（`trainingDataSetId`）などが含まれます。
+成功時の応答は、新規作成された MLService の詳細を格納したペイロードを返します。この詳細には、一意の ID（`id`）、トレーニングの実験 ID（`trainingExperimentId`）、スコアリングの実験 ID（`scoringExperimentId`）、入力トレーニングデータセット ID（`trainingDataSetId`）などが含まれます。
 
 ```json
 {
