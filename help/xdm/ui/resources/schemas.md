@@ -85,7 +85,7 @@ ht-degree: 1%
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
-キャンバスにmixinが指定したフィールドが表示され、[!DNL Schema Editor]が再表示されます。
+キャンバスにmixinが指定したフィールドが表示され、[!DNL Schema Editor]が再び表示されます。
 
 ![](../../images/ui/resources/schemas/mixins-added.png)
 
