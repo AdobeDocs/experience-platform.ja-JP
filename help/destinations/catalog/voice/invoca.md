@@ -15,7 +15,7 @@ ht-degree: 26%
 
 [!DNL Invoca] は、通話データと音声の洞察をデジタルカスタマージャーニーに提供します。[!DNL Invoca’s]コールインテリジェンスプラットフォームを使用すると、マーケティング担当者は、最終的に分析を行い、コールの成果を測定し、オフラインのコンバージョンをデジタル費用に結び付けることができます。
 
-[!DNL Invoca Tags] adobe experience platformのお客様の声です拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html) の拡張機能のページを参照してください。
+[!DNL Invoca Tags] Adobe Experience Platformのお客様の声です拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html) の拡張機能のページを参照してください。
 
 この目的地はAdobe Experience Platform Launchの延長線です。 プラットフォーム起動の拡張機能の動作について詳しくは、[Adobe Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
