@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気の高いトピック；クエ
 solution: Experience Platform
 title: クエリテンプレートAPIエンドポイント
 topic: query templates
-description: 以下のドキュメントでは、クエリサービスAPIのクエリテンプレートを使用して実行できる様々なAPI呼び出しについて詳しく説明します。
+description: 次のドキュメントでは、クエリサービスAPIのクエリテンプレートを使用して実行できる様々なAPI呼び出しについて詳しく説明します。
 translation-type: tm+mt
 source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
