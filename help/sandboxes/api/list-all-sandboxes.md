@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
 source-wordcount: '320'
-ht-degree: 60%
+ht-degree: 63%
 
 ---
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 詳しくは、[クエリパラメーター](#query)の節を参照してください。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。詳しくは、[クエリパラメーター](#query)の節を参照してください。 |
 
 **リクエスト**
 
@@ -128,7 +128,7 @@ curl -X GET \
 | `isDefault` | このサンドボックスが組織のデフォルトのサンドボックスであるかどうかを示すブール型のプロパティです。通常、これは実稼働用サンドボックスです。 |
 | `eTag` | サンドボックスの特定のバージョンの識別子。バージョン管理とキャッシュの効率化に使用され、この値はサンドボックスに変更が追加されるたびに更新されます。 |
 
-## クエリパラメータ{#query}を使用
+## クエリパラメーターの使用 {#query}
 
 [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) APIは、サンドボックスのリスト表示時に、ページへのクエリパラメーターの使用と結果のフィルターをサポートしています。
 
