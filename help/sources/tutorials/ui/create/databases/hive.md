@@ -57,7 +57,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 ![カタログ](../../../../images/tutorials/create/hive/catalog.png)
 
-**[!UICONTROL Hiveに接続]**&#x200B;ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
+**[!UICONTROL Hive]**&#x200B;に接続ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
 ### 新しいアカウント
 
