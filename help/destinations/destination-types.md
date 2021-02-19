@@ -4,10 +4,10 @@ title: 宛先のタイプとカテゴリ
 seo-title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platformの様々な目的地のタイプやカテゴリについて学びます。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 70%
+source-wordcount: '513'
+ht-degree: 64%
 
 ---
 
@@ -62,7 +62,7 @@ Platform Launch拡張は、生のイベントデータを複数のタイプの�
 
 ## 宛先カテゴリ
 
-[宛先カテゴリ](https://platform.adobe.com/destination/catalog)内の接続と拡張機能は、達成できるよう、マーケティングの使用例に応じて、宛先カテゴリ（**広告**、**クラウドストレージ**、**調査プラットフォーム**、**電子メールマーケティング**&#x200B;など）でグループ化されます。各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](./catalog/overview.md)を参照してください。
+[宛先カタログ](https://platform.adobe.com/destination/catalog)内のカテゴリと拡張子は、目的のマーケティング活動に応じて、宛先ストレージ(**広告**、**クラウド調査**、**広告プラットフォーム**、**電子メールマーケティング**&#x200B;など)ごとにグループ化されます。 各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](./catalog/overview.md)を参照してください。
 
 ![宛先カテゴリ](./assets/destination-types/destination-categories-menu.png)
 
