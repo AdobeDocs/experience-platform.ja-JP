@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
 source-wordcount: '1044'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Experience Platformユーザーインターフェイス(UI)では、組織
 
 * [[!DNL Real-time Customer Profile]](../home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [[!DNL Identity Service]](../../identity-service/home.md):異な [!DNL Real-time Customer Profile] るデータソースに取り込まれる際に、アイデンティティを別々のデータソースからブリッジすることで有効に [!DNL Platform]します。
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 
 ## 和集合スキーマについて
 
