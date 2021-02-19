@@ -24,7 +24,7 @@ ht-degree: 79%
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
@@ -962,7 +962,7 @@ GET 要求を実行してスキーマを参照すると、次に示すように�
 
 組織に固有の識別子は、適切な ID フィールドである場合もあるので、それらを考慮します。
 
-ID 記述子は、「sourceSchema」の「sourceProperty」が「ID」と見なす必要のある一意の識別子であることを示します。
+ID 記述子は、「sourceSchema」の「sourceProperty」が「ID」と見なす必要のある一意の ID であることを示します。
 
 記述子の操作について詳しくは、『[スキーマレジストリ開発者ガイド](../api/getting-started.md)』を参照してください。
 
