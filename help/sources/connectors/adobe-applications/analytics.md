@@ -25,7 +25,7 @@ Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）
 
 ![](./images/analytics-data-experience-platform.png)
 
-[!DNL Analytics]は、高いレベルで、世界中の様々なデジタルチャネルや複数のデータセンターからデータを収集します。 データが収集されると、訪問者 ID、セグメント化および変換アーキテクチャ（VISTA）のルールと処理ルールが適用され、受信データが形成されます。生データがこの軽量処理を経た後、[!DNL Real-time Customer Profile]は消費の準備ができていると見なします。 前述と並行するプロセスでは、同じ処理済みデータがマイクロバッチ処理され、プラットフォームデータセットに取り込まれて[!DNL Data Science Workspace]、[!DNL Query Service]、および他のデータ検出アプリケーションでの使用が可能になります。
+[!DNL Analytics]は、高いレベルで、世界中の様々なデジタルチャネルや複数のデータセンターからデータを収集します。 データが収集されると、訪問者 ID、セグメント化および変換アーキテクチャ（VISTA）のルールと処理ルールが適用され、受信データが形成されます。生データがこの軽量処理を経た後、[!DNL Real-time Customer Profile]は消費の準備ができていると見なします。 前述と並行するプロセスでは、同じ処理済みデータがマイクロバッチ処理され、プラットフォームデータセットに取り込まれて[!DNL Data Science Workspace]、[!DNL Query Service]、および他のデータ検出アプリケーションで使用されます。
 
 処理ルールの詳細については、[処理ルールの概要](https://docs.adobe.com/content/help/ja-JP/analytics/admin/admin-tools/processing-rules/processing-rules.html)を参照してください。
 
