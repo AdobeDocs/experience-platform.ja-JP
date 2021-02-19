@@ -3,9 +3,9 @@ keywords: 広告；業者の机
 title: トレードデスクの接続
 description: 'トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。 '
 translation-type: tm+mt
-source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '534'
 ht-degree: 5%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 5%
    * **[!UICONTROL 北米西部]**
    * **[!UICONTROL ラテンアメリカ]**
 
-* **[!UICONTROL マーケティングの使用例]**:マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例について詳しくは、[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンスのページを参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 ![トレードデスクの認証手順](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
