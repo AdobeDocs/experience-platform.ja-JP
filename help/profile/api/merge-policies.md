@@ -3,7 +3,7 @@ keywords: Experience Platform;プロファイル；リアルタイム顧客プ�
 title: ポリシーの結合APIエンドポイント
 topic: guide
 type: Documentation
-description: 'Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、統合ポリシーは、データの優先順位付け方法と統合表示を作成するデータを決定する際にPlatformが使用するルールです。 '
+description: 'Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、統合ポリシーは、データの優先順位付け方法と統合表示を作成するデータをPlatformが決定する際に使用するルールです。 '
 translation-type: tm+mt
 source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
@@ -65,7 +65,7 @@ UIを使用して結合ポリシーを操作するには、[merge policies UIガ
 
 | プロパティ | 説明 |
 |---|---|
-| `id` | 作成時に割り当てられる、システムで生成された一意の識別子 |
+| `id` | 作成時に割り当てられる、システムで生成された一意の ID |
 | `name` | リスト表示で結合ポリシーを識別できるわかりやすい名前。 |
 | `imsOrgId` | この結合ポリシーが属する組織 ID |
 | `identityGraph` | 関連 ID の取得元（ID）の ID グラフを示す [ID グラフ](#identity-graph)オブジェクト。関連するすべての ID で見つかったプロファイルフラグメントが結合されます。 |
