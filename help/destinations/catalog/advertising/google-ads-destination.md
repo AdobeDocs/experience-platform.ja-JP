@@ -3,9 +3,9 @@ keywords: Google広告；Google広告；Google広告；Google広告；Google広�
 title: Google Ads接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '654'
 ht-degree: 19%
 
 ---
@@ -71,7 +71,7 @@ Platformで[!DNL Google Ads]宛先を作成する前に、[!DNL Google]に問い
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントのタイプ]**：AdWords は利用可能な唯一のオプションです。
 * **[!UICONTROL アカウントID]**:アカウントIDをに入力し [!DNL Google Ads]ます。通常、ID の形式は 123-456-7890 です。
-* **[!UICONTROL マーケティングの使用例]**:マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例について詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 ## セグメントを[!DNL Google Ads]にアクティブ化
 
