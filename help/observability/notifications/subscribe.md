@@ -15,7 +15,7 @@ ht-degree: 4%
 
 # Adobe I/Oイベントの通知を購読する
 
-[!DNL Observability Insights] adobe experience platformアクティビティに関するAdobe I/Oイベントの通知を購読できます。これらのイベントは、アクティビティ監視の効率的な自動化を容易にするために、設定済みのWebフックに送信されます。
+[!DNL Observability Insights] Adobe Experience Platformアクティビティに関するAdobe I/Oイベントの通知を購読できます。これらのイベントは、アクティビティ監視の効率的な自動化を容易にするために、設定済みのWebフックに送信されます。
 
 このドキュメントでは、Adobe Experience PlatformサービスのAdobe I/Oイベント通知を登録する方法について手順を説明します。 利用可能なイベントタイプに関するリファレンス情報と、該当する[!DNL Platform]サービスごとに返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクも提供されています。
 
