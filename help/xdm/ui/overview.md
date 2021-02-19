@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '292'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platformユーザーインターフェイスの[!UICONTROL ス�
 
 * [スキーマ](./resources/schemas.md)
 * [クラス](./resources/classes.md)
-* [ミックスイン](./resources/mixins.md)
+* [Mixin](./resources/mixins.md)
 * [データタイプ](./resources/data-types.md)
 
 ## XDMフィールドの定義
