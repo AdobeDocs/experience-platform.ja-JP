@@ -3,9 +3,9 @@ keywords: Googleの顧客一致；Googleの顧客一致；Googleの顧客一致
 title: Google Customer Match接続
 description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1491'
 ht-degree: 5%
 
 ---
@@ -129,13 +129,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
 **[!UICONTROL 認証]**&#x200B;手順で、[!UICONTROL 名前]と[!UICONTROL 説明]をアクティベーションフローに入力し、Googleに[!UICONTROL アカウントID]を入力します。
 
-また、この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングの使用例]**&#x200B;を選択できます。 マーケティングの使用例は、データがエクスポート先にエクスポートされる意図を示します。 Adobe定義のマーケティングの使用例から選択するか、独自のマーケティングの使用例を作成することができます。 マーケティングの使用例についての詳細は、[Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations)ページを参照してください。 個々のAdobe定義マーケティングの使用例について詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md#core-actions)を参照してください。
+また、この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択できます。 マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、[Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations)ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md#core-actions)を参照してください。
 
 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
 >[!IMPORTANT]
 >
-> * **[!UICONTROL 「PIIと結合]**」マーケティングの使用例は、デフォルトで[!DNL Google Customer Match]の宛先に対して選択されており、削除できません。
+> * **[!UICONTROL 「PIIと結合]**」マーケティングアクションは、デフォルトで[!DNL Google Customer Match]宛先に対して選択されており、削除できません。
 > * [!DNL Google Customer Match]宛先用。 **[!UICONTROL アカウント]** IDは、Googleを使用する顧客のクライアントIDです。IDの形式はxxx-xxx-xxxxです。
 
 
