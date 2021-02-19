@@ -29,7 +29,7 @@ Adobe Experience Platformユーザーインターフェイス内の&#x200B;**[!U
 
 ## [!UICONTROL モデル]
 
-**[!UICONTROL インポートレシピ]**&#x200B;ワークフローを使用すると、レシピのインポートと設定を行うことができます。 このワークフローに関する詳細は、[パッケージ化されたレシピの読み込み](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md)のチュートリアルを参照してください。
+**[!UICONTROL インポートレシピ]**&#x200B;ワークフローを使用すると、レシピのインポートと設定を行うことができます。 このワークフローの詳細については、[パッケージ化されたレシピの読み込み](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md)のチュートリアルを参照してください。
 
 **[!UICONTROL モデルを作成]**&#x200B;ワークフローを使用すると、機械学習モデルを作成できます。 このワークフローに関する詳細は、[モデルトレーニングと評価のチュートリアル](../data-science-workspace/models-recipes/train-evaluate-model-ui.md)を参照してください。
 
