@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
 source-wordcount: '1140'
-ht-degree: 68%
+ht-degree: 69%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 68%
 このユーザガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。 
 
 * [Datasets](overview.md):でのデータ永続性のストレージと管理の構成体 [!DNL Experience Platform]。
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    * [スキーマエディタ](../../xdm/tutorials/create-schema-ui.md):ユー [!DNL Schema Editor] ザーインターフェイス [!DNL Platform] 内で独自のカスタムXDMスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
