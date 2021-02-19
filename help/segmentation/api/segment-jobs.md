@@ -15,7 +15,7 @@ ht-degree: 32%
 
 # セグメントジョブエンドポイント
 
-セグメントジョブは、新しいオーディエンスセグメントを作成する非同期プロセスです。[セグメント定義](./segment-definitions.md)と、[!DNL Real-time Customer Profile]がプロファイルフラグメント間で重なり合う属性を結合する方法を制御する[結合ポリシー](../../profile/api/merge-policies.md)を参照します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
+セグメントジョブは、新しいオーディエンスセグメントを作成する非同期プロセスです。[セグメント定義](./segment-definitions.md)と、[!DNL Real-time Customer Profile]がプロファイルフラグメント間で重なり合う属性をどのように結合するかを制御する[結合ポリシー](../../profile/api/merge-policies.md)を参照します。 セグメントジョブが正常に完了すると、処理中に発生した可能性のあるエラーやオーディエンスの最終的なサイズなど、セグメントに関するさまざまな情報を収集できます。
 
 このガイドは、セグメントジョブをよりよく理解するのに役立つ情報を提供し、API を使用して基本的なアクションを実行するためのサンプル API 呼び出しを含みます。
 
@@ -168,7 +168,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | セグメントジョブに関して、システム生成の読み取り専用識別子。 |
-| `status` | セグメントジョブの現在のステータス。 ステータスには、「NEW」、「PROCESSING」、「CANCELLING」、「CANCELLED」、「FAILED」、「SUCCEEDEDED」などの値が考えられます。 |
+| `status` | セグメントジョブの現在のステータス。 ステータスには、「NEW」、「PROCESSING」、「CANCELLING」、「CANCELLED」、「FAILED」、「SUCCEEDED」などの値が考えられます。 |
 | `segments` | セグメントジョブ内で返されるセグメント定義に関する情報を含むオブジェクト。 |
 | `segments.segment.id` | セグメント定義のID。 |
 | `segments.segment.expression` | PQLで記述される、セグメント定義の式に関する情報を含むオブジェクト。 |
@@ -365,7 +365,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | セグメントジョブに関して、システム生成の読み取り専用識別子。 |
-| `status` | セグメントジョブの現在のステータス。 ステータスには、「NEW」、「PROCESSING」、「CANCELLING」、「CANCELLED」、「FAILED」、「SUCCEEDEDED」などの値が考えられます。 |
+| `status` | セグメントジョブの現在のステータス。 ステータスには、「NEW」、「PROCESSING」、「CANCELLING」、「CANCELLED」、「FAILED」、「SUCCEEDED」などの値が考えられます。 |
 | `segments` | セグメントジョブ内で返されるセグメント定義に関する情報を含むオブジェクト。 |
 | `segments.segment.id` | セグメント定義のID。 |
 | `segments.segment.expression` | PQLで記述される、セグメント定義の式に関する情報を含むオブジェクト。 |
@@ -472,7 +472,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `id` | セグメントジョブに関して、システム生成の読み取り専用識別子。 |
-| `status` | セグメントジョブの現在のステータス。 ステータスには、「NEW」、「PROCESSING」、「CANCELLING」、「CANCELLED」、「FAILED」、「SUCCEEDEDED」などの値が考えられます。 |
+| `status` | セグメントジョブの現在のステータス。 ステータスには、「NEW」、「PROCESSING」、「CANCELLING」、「CANCELLED」、「FAILED」、「SUCCEEDED」などの値が考えられます。 |
 | `segments` | セグメントジョブ内で返されるセグメント定義に関する情報を含むオブジェクト。 |
 | `segments.segment.id` | セグメント定義のID。 |
 | `segments.segment.expression` | PQLで記述される、セグメント定義の式に関する情報を含むオブジェクト。 |
