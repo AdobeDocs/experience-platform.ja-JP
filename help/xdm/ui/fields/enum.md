@@ -31,7 +31,7 @@ Adobe Experience Platformユーザーインターフェイスで[新しいフィ
 
 ![](../../images/ui/fields/special/enum-configured.png)
 
-キャンバスが更新され、変更が反映されます。 このスキーマを今後調査する場合は、右側のレール内の列挙フィールドの制約を表示および編集できます。
+キャンバスが更新され、変更が反映されます。 このスキーマを今後調査する場合、右側のレール内の列挙フィールドの制約を表示して編集できます。
 
 ![](../../images/ui/fields/special/enum-applied.png)
 
