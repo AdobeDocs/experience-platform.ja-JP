@@ -172,13 +172,13 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | post_cust_visid | identityMap | オブジェクト | 顧客訪問者 ID。 |
 | post_cust_visid | endUserIDs._experience.aacustomid.primary | ブール値 | 顧客訪問者 ID。 |
 | post_cust_visid | endUserIDs。_experience.aacustomid.namespace.code | 文字列 | 顧客訪問者 ID。 |
-| post_visid_high + visid_low | identityMap | オブジェクト | 訪問の一意の識別子。 |
-| post_visid_high + visid_low | endUserIDs。_experience.aaid.id | 文字列 | 訪問の一意の識別子。 |
+| post_visid_high + visid_low | identityMap | オブジェクト | 訪問の一意の ID。 |
+| post_visid_high + visid_low | endUserIDs。_experience.aaid.id | 文字列 | 訪問の一意の ID。 |
 | post_visid_high | endUserIDs。_experience.aaid.primary | ブール値 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
 | post_visid_high | endUserIDs。_experience.aaid.namespace.code | 文字列 | visid_low と組み合わせて使用し、訪問を一意に識別します。 |
 | post_visid_low | identityMap | オブジェクト | visid_high と組み合わせて使用し、訪問を一意に識別します。 |
 | hit_time_gmt | receivedTimestamp | 文字列 | ヒットのタイムスタンプ（UNIX 時間）。 |
-| hitid_high + hitid_low | _id | 文字列 | ヒットを識別する一意の識別子。 |
+| hitid_high + hitid_low | _id | 文字列 | ヒットを識別する一意の ID。 |
 | hitid_low | _id | 文字列 | hitid_high と組み合わせて使用し、ヒットを一意に識別します。 |
 | ip | environment.ipV4 | 文字列 | イメージリクエストの HTTP ヘッダーに基づく IP アドレス。 |
 | j_jscript | environment.browserDetails.javaScriptEnabled | ブール値 | 使用する JavaScript のバージョン。 |
