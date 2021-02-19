@@ -6,9 +6,9 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2140'
 ht-degree: 15%
 
 ---
@@ -228,13 +228,13 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 >[!NOTE]
 > 
->データセット内の特定のフィールド（データセット全体ではなく）に対してデータ使用ラベルが適用されている場合、アクティベーション上でこれらのフィールドレベルのラベルが適用されるのは、次の条件の下です。
+>データセット内の特定のフィールド（データセット全体ではなく）に対してデータ使用ラベルが適用されている場合、アクティベーション上でこれらのフィールドレベルのラベルの適用は次の条件下で行われます。
 >* これらのフィールドは、セグメント定義で使用されます。
 >* フィールドは、ターゲット先の投影属性として設定されます。
 
 >
 > 
-例えば、フィールド`person.name.firstName`に、宛先のマーケティングの使用例と競合する特定のデータ使用ラベルが含まれている場合、レビュー手順でデータ使用ポリシー違反が表示されます。 詳しくは、[Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations)でのデータ管理を参照してください。
+例えば、フィールド`person.name.firstName`に、宛先のマーケティングアクションと競合する特定のデータ使用ラベルが含まれている場合、レビュー手順でデータ使用ポリシー違反が表示されます。 詳しくは、[Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations)でのデータ管理を参照してください。
 
 ### **[!UICONTROL Reviewstep]**   {#review}
 
