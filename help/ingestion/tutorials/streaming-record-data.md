@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1163'
-ht-degree: 66%
+ht-degree: 69%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 66%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -364,7 +364,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | 以前に作成したストリーミング接続の ID。 |
-| `xactionId` | 先ほど送信したレコードに対してサーバーサイドで生成された一意の識別子。この IDは、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
+| `xactionId` | 送信したレコードに対してサーバー側で生成された一意の ID です。この IDは、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
 | `receivedTimeMs` | リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポックタイム）。 |
 | `synchronousValidation.status` | `synchronousValidation=true` クエリパラメーターが追加されたので、この値が表示されます。検証が成功した場合、ステータスは `pass` になります。 |
 
