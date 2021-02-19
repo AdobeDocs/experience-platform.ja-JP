@@ -44,7 +44,7 @@ Adobeは、[!DNL XDM ExperienceEvent]クラスで使用するいくつかの標�
 
 ## 付録
 
-次の節では、[!UICONTROL XDM ExperienceEvent]クラスに関する追加情報を示します。
+次の節では、[!UICONTROL XDM ExperienceEvent]クラスに関する追加情報を説明します。
 
 ### xdm:eventType {#eventType}に指定できる値
 
