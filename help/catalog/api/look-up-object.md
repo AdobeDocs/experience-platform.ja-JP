@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気のあるトピック；カタ
 solution: Experience Platform
 title: カタログオブジェクトの検索
 topic: developer guide
-description: '特定のカタログオブジェクトの一意の識別子がわかっている場合は、GET リクエストを実行してそのオブジェクトの詳細を表示できます。 '
+description: '特定のカタログオブジェクトの一意の ID がわかっている場合は、GET リクエストを実行してそのオブジェクトの詳細を表示できます。 '
 translation-type: tm+mt
 source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
