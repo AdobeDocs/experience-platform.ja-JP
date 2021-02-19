@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '1285'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Platform[!DNL Privacy Service]は、法的および組織のプ
 
 * [[!DNL Privacy Service]](../privacy-service/home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
 * [[!DNL Catalog Service]](home.md):データの場所と内の系列のレコードのシステム [!DNL Experience Platform]。データセットメタデータの更新に使用できる API を提供します。
-* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
 * [[!DNL Identity Service]](../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
 
 ## ID 名前空間について {#namespaces}
