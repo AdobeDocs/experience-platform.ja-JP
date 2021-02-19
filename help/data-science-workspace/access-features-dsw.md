@@ -31,7 +31,7 @@ ht-degree: 26%
 
 ## Adobe Experience Platform情報パッケージアドオン
 
-次の表に、Data Science Workspaceの主な違いの一部を示します。Data Science Workspaceと、Adobe Experience Platformインテリジェンスパッケージアドオンの違いは次のとおりです。
+次の表に、Data Science Workspaceの主な違いの一部を示します。Data Science Workspaceと、Adobe Experience Platformインテリジェンスパッケージアドオンの有無は次のとおりです。
 
 >[!NOTE]
 >
