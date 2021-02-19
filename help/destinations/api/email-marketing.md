@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '1649'
-ht-degree: 70%
+ht-degree: 73%
 
 ---
 
@@ -28,7 +28,7 @@ Platformのユーザインターフェイスを使用して宛先を接続し、
 
 このガイドは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
 * [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] は、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
@@ -47,7 +47,7 @@ Platformのユーザインターフェイスを使用して宛先を接続し、
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -110,7 +110,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **応答** 
 
-リクエストが成功した場合、使用可能な宛先のリストと、その一意の識別子（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、Adobe Campaign に接続してセグメントを提供する場合、レスポンス内で次のスニペットを探します。
+リクエストが成功した場合、使用可能な宛先のリストと、その一意の ID（`id`）が返されます。使用する宛先の値を保存します。この値は、以降の手順で必要になります。例えば、Adobe Campaign に接続してセグメントを提供する場合、レスポンス内で次のスニペットを探します。
 
 ```json
 {
@@ -187,7 +187,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答** 
 
-リクエストが成功した場合、ベース接続の一意の識別子（`id`）が返されます。この値は、次の手順でソース接続を作成する際に必要になるため保存します。
+リクエストが成功した場合、ベース接続の一意の ID（`id`）が返されます。この値は、次の手順でソース接続を作成する際に必要になるため保存します。
 
 ```json
 {
@@ -351,7 +351,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答** 
 
-リクエストが成功した場合、ベース接続の一意の識別子（`id`）が返されます。この値は、次の手順でターゲット接続を作成する際に必要になるため保存します。
+リクエストが成功した場合、ベース接続の一意の ID（`id`）が返されます。この値は、次の手順でターゲット接続を作成する際に必要になるため保存します。
 
 ```json
 {
@@ -440,7 +440,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **応答** 
 
-リクエストが成功した場合は、新しく作成した、電子メールマーケティングの宛先へのターゲット接続を表す一意の識別子（`id`）が返されます。この値は、後の手順で必要になるため保存します。
+リクエストが成功した場合は、新しく作成した、電子メールマーケティングの宛先へのターゲット接続を表す一意の ID（`id`）が返されます。この値は、後の手順で必要になるため保存します。
 
 ```json
 {
@@ -652,7 +652,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 ## 次の手順
 
-このチュートリアルに従うと、プラットフォームを優先する電子メールマーケティングの宛先の1つに接続し、それぞれの宛先に対してデータフローを設定できます。 これで、発信データを電子メールキャンペーン、ターゲット広告、ほかの多くの使用事例の宛先で使用することができます。詳しくは、以下のページを参照してください。
+このチュートリアルに従うと、プラットフォームを優先する電子メールマーケティング先の1つに接続し、それぞれの宛先に対してデータフローを設定できます。 これで、発信データを電子メールキャンペーン、ターゲット広告、ほかの多くの使用事例の宛先で使用することができます。詳しくは、以下のページを参照してください。
 
 * [Destinations overview](../home.md)
 * [宛先カタログの概要](../catalog/overview.md)
