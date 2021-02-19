@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '596'
-ht-degree: 19%
+ht-degree: 25%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 19%
 
 ### ベース接続の取得
 
-[!DNL Platform] APIを使用してCSシステムを調べるには、有効なベース接続IDが必要です。 操作するCSシステムの基本接続がまだない場合は、次のチュートリアルを使用して作成できます。
+[!DNL Platform] APIを使用してCSシステムを調べるには、有効なベース接続IDが必要です。 作業対象のCSシステムに対する基本的な接続がまだない場合は、次のチュートリアルを使用して作成できます。
 
 * [Salesforceサービスクラウド](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
@@ -41,7 +41,7 @@ ht-degree: 19%
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
