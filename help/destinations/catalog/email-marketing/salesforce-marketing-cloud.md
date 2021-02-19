@@ -3,10 +3,10 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: SalesforceMarketing Cloud接続
 seo-description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 58%
+source-wordcount: '620'
+ht-degree: 48%
 
 ---
 
@@ -38,8 +38,10 @@ ht-degree: 58%
 「**[!UICONTROL 設定]**」で、目的の宛先に関する情報を次のように入力します。
 - **[!UICONTROL 名前]**：宛先の名前を選択します。
 - **[!UICONTROL 説明]**：宛先の説明を入力します。
+- **[!UICONTROL グループ名]**:プラットフォームがデータエクスポートを預け入れる、AmazonS3バケット。入力する文字は3 ～ 63文字の長さにする必要があります。 先頭と末尾は文字または数字にする必要があります。 小文字、数字、ハイフン(-)のみを含める必要があります。 IPアドレス（192.100.1.1など）の形式を設定しないでください。
 - **[!UICONTROL Folder Path]**:ストレージー上の場所に、PlatformがエクスポートデータをCSVまたはタブ区切りファイルとしてデポジットするパスを指定します。
-- **[!UICONTROL ファイル形式]**：**[!UICONTROL CSV]** または **[!UICONTROL TAB_DELIMITED]**。ストレージの場所に書き出すファイル形式を選択します。
+- **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
+- **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 ![Salesforce の基本情報](../../assets/catalog/email-marketing/salesforce/basic-information.png)
 
@@ -51,7 +53,7 @@ ht-degree: 58%
 
 ## 宛先属性 {#destination-attributes}
 
-[セグメント](../../ui/activate-destinations.md)を[!DNL Salesforce Marketing Cloud]宛先に対してアクティブ化する場合、[和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。 宛先に書き出す一意の識別子およびその他の XDM フィールドを選択します。詳しくは、「電子メールマーケティングの宛先」の「[書き出したファイルの宛先属性として使用するスキーマフィールドの選択](./overview.md#destination-attributes)」を参照してください。
+[セグメント](../../ui/activate-destinations.md)を[!DNL Salesforce Marketing Cloud]宛先に対してアクティブ化する場合、[和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、「電子メールマーケティングの宛先」の「[書き出したファイルの宛先属性として使用するスキーマフィールドの選択](./overview.md#destination-attributes)」を参照してください。
 
 ## エクスポートされたデータ{#exported-data}
 
