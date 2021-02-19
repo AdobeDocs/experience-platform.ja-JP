@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1147'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -37,7 +37,7 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | パラメーター | 説明 |
 | --- | --- |
 | `{CONTAINER_ID}` | データタイプを取得するコンテナ:Adobeが作成したデータ型の場合は`global`、組織が所有するデータ型の場合は`tenant`です。 |
-| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。 使用可能なパラメーターのリストについては、[付録ドキュメント](./appendix.md#query)を参照してください。 |
+| `{QUERY_PARAMS}` | 結果をフィルターするオプションのクエリパラメーター。使用可能なパラメーターのリストについては、[付録ドキュメント](./appendix.md#query)を参照してください。 |
 
 **リクエスト**
 
