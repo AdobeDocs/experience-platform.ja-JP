@@ -23,7 +23,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->`segmentMembership`フィールドは、このミックスインを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドの入力や更新を手動で行うことは避けてください。 セグメント化ジョブの実行時に、各プロファイルの`segmentMembership`マップが自動的に更新されます。
+>`segmentMembership`フィールドは、このミックスインを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドに手動で入力したり、更新したりしないでください。 セグメント化ジョブの実行時に、各プロファイルの`segmentMembership`マップが自動的に更新されます。
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
