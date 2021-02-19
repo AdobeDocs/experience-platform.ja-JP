@@ -15,7 +15,7 @@ ht-degree: 38%
 
 Adobe Media Analytics for Audio and Video は基本的な分析機能のアドオンで、ビデオ、オーディオおよび広告における堅牢な測定機能をクライアントに提供します。
 
-オーディオ&amp;ビデオ用Adobeメディア解析は、Adobe Experience Platformの解析拡張です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html) の拡張機能のページを参照してください。
+オーディオ&amp;ビデオ用Adobeメディア分析は、Adobe Experience Platformの分析拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html) の拡張機能のページを参照してください。
 
 この宛先は[!DNL Adobe Experience Platform Launch]拡張子です。 プラットフォームでの[!DNL Platform Launch]拡張機能の動作について詳しくは、[Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
