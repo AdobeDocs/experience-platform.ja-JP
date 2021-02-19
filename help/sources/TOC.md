@@ -41,7 +41,7 @@ ht-degree: 16%
       - [SFTPコネクタ](connectors/cloud-storage/sftp.md)
       - [AmazonS3およびAzure Blobコネクタ](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
-      - [Microsoft Dynamicsコネクタ](connectors/crm/ms-dynamics.md)
+      - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforceコネクタ](connectors/crm/salesforce.md)
    - 顧客の成功{#customer-success}
       - [Salesforce Service Cloudコネクタ](connectors/customer-success/salesforce-service-cloud.md)
