@@ -15,7 +15,7 @@ ht-degree: 22%
 
 # [!UICONTROL 郵便] 先住所のデータ型
 
-[!UICONTROL 郵便] 宛先は、住所の詳細を記述する標準のXDMデータ型です。
+[!UICONTROL 郵便番号] は、住所の詳細を記述する標準のXDMデータ型です。
 
 <img src="../images/data-types/postal-address.png" width="450" /><br />
 
