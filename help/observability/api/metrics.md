@@ -15,7 +15,7 @@ ht-degree: 41%
 
 # 指標エンドポイント
 
-観察性指標は、Adobe Experience Platformの様々な機能の使用状況の統計、過去の傾向、およびパフォーマンス指標に関する洞察を提供します。 [!DNL Observability Insights API]の`/metrics`エンドポイントを使用すると、[!DNL Platform]で組織のアクティビティの指標データをプログラムで取得できます。
+観察性指標は、Adobe Experience Platformの様々な機能の使用状況の統計、過去の傾向、およびパフォーマンス指標に関する洞察を提供します。 [!DNL Observability Insights API]の`/metrics`エンドポイントを使用すると、[!DNL Platform]の組織のアクティビティの指標データをプログラムで取得できます。
 
 ## はじめに
 
