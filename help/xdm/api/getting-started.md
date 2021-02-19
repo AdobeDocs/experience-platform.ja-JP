@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1163'
-ht-degree: 44%
+ht-degree: 48%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 44%
 
 開発者ガイドを使用するには、Adobe Experience Platformの次のコンポーネントについて作業的に理解する必要があります。
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
    * [Basics of schema composition](../schema/composition.md)：XDM スキーマの基本的な構成要素について説明しています。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
@@ -34,7 +34,7 @@ XDMは、JSONスキーマ形式を使用して、取り込むカスタマーエ�
 
 ## 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
