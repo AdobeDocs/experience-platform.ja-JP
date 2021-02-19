@@ -42,7 +42,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 標準化と相互運用性は、[!DNL Experience Platform]の背後にある重要な概念です。 [!DNL JupyterLab]を組み込みIDEとして[!DNL Platform]に統合すると、他の[!DNL Platform]サービスとやり取りでき、[!DNL Platform]を最大限に活用できます。 [!DNL JupyterLab]では、次の[!DNL Platform]サービスを利用できます。
 
-* **[!DNL Catalog Service]：読み取り/書き込み機能を備えたデータセットに** アクセスし、データセットを参照します。
+* **[!DNL Catalog Service]：読み取り/書き込み機能を備えたデータセットに** アクセスし、データセットを表示します。
 * **[!DNL Query Service]:SQLを使用してデータセットに** アクセスし、データ量の多いデータを処理する際に、データアクセスのオーバーヘッドを低減できます。
 * **[!DNL Sensei ML Framework]：データのトレーニングとスコア付け、および1回のクリックでレシピを作成できるモデル開発。** 
 * **[!DNL Experience Data Model (XDM)]:** 標準化と相互運用性は、Adobe Experience Platformの主な概念です。[Adobeに基づくExperience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
