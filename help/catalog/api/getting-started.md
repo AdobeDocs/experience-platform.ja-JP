@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
 source-wordcount: '599'
-ht-degree: 39%
+ht-degree: 48%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 39%
 
 [!DNL Catalog Service] は、Adobe Experience Platform内のデータの位置と系統に関する記録システムです。[!DNL Catalog] は、データ自体にアクセスすることなく、データに関する情報を検索できるメタデータストア（「カタログ」） [!DNL Experience Platform]として機能します。詳しくは、[[!DNL Catalog] 概要](../home.md)を参照してください。
 
-この開発者ガイドでは、[!DNL Catalog] APIを使用して開始を行う際に役立つ手順を説明します。 次に、[!DNL Catalog]を使用して主要な操作を実行するためのサンプルAPI呼び出しを提供します。
+このデベロッパーガイドでは、[!DNL Catalog] API の使用を開始する際に役立つ手順を説明します。次に、[!DNL Catalog]を使用して主要な操作を実行するためのサンプルAPI呼び出しを提供します。
 
 ## 前提条件
 
 [!DNL Catalog] では、様々な種類のリソースおよび操作のメタデータを追跡 [!DNL Experience Platform]します。この開発者ガイドでは、以下のリソースの作成と管理に関連する様々な[!DNL Experience Platform]サービスについて、十分に理解している必要があります。
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):顧客体験データを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 * [バッチ取得](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]： が CSV や Parket などのデータファイルからデータを取得して保存する方法。
 * [ストリーミング取得](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform]： がクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
 
@@ -35,7 +35,7 @@ ht-degree: 39%
 
 ## 必須ヘッダーの値の収集
 
-[!DNL Platform] APIを呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。 次に示すように、すべての[!DNL Experience Platform] API呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
