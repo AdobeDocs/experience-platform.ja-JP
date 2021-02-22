@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ；フィールド；フィールド；標準フィールド；標準フィールド；辞書；マップ；マップ
 solution: Experience Platform
 title: エクスペリエンスデータモデル(XDM)フィールドディクショナリ
-topic: overviews
+topic: 概要
 description: エクスペリエンスデータモデル（XDM）は、Adobe Experience Platform のスキーマを構成する際に使用できる一連の標準フィールドを定義します。これらのフィールドを使用すると、XDM を使用するすべてのサービスが、これらのフィールドで提供される特定の定義を明示的に理解するので、Platform サービス全体で一貫した動作が行われます。
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '25232'
+source-wordcount: '25233'
 ht-degree: 98%
 
 ---
