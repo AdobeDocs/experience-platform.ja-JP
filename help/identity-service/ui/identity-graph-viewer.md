@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；IDグラフビューア；IDグラフビューア；IDグラフビューア；ID名前空間;ID名前空間;ID;IDサービス；IDサービス
 solution: Experience Platform
 title: IDグラフビューアの概要
-topic: tutorial
+topic: チュートリアル
 description: アイデンティティグラフは、特定の顧客の異なるアイデンティティ間の関係を示すマップです。異なるチャネル間での顧客のブランドとの相互作用を視覚的に示します。
 translation-type: tm+mt
 source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
