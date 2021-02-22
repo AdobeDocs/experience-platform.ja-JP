@@ -4,7 +4,7 @@ description: Adobe Experience PlatformWeb SDKの設定方法を説明します�
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；web;環境;placeContext;debugEnabled;edgeDomain;orgId;clickBeforeEventSend;defaultConsent;web設定；prehidingStyle;cookieDestinations;enationsDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 70%
@@ -60,7 +60,7 @@ alloy("configure", {
 | 同期検証 | 収集されたデータをスキーマと照らし合わせて検証し、ラベル `collect:error OR success` の下の応答でエラーを返します。 |
 | コンソールログ | ブラウザーの JavaScript コンソールにデバッグメッセージを表示できるようにします |
 
-### `edgeDomain`
+### `edgeDomain` {#edge-domain}
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ------------------ |
@@ -141,7 +141,7 @@ Adobeサービスとのやり取りに使用するドメイン。 Adobe エッ�
 
 ## ID オプション
 
-### `idMigrationEnabled`
+### `idMigrationEnabled` {#id-migration-enabled}
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
