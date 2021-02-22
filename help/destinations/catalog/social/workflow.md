@@ -1,13 +1,13 @@
 ---
 keywords: Facebook;Facebook；ソーシャルネットワーク；ソーシャルネットワーク；ソーシャルネットワーク認証；ソーシャルネットワーク認証
 title: ソーシャルネットワークの宛先の作成
-type: Tutorial
+type: チュートリアル
 description: Adobe Experience Platformのソーシャルネットワーク広告アカウントに接続する方法を説明します。
 translation-type: tm+mt
 source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 52%
+source-wordcount: '456'
+ht-degree: 53%
 
 ---
 
