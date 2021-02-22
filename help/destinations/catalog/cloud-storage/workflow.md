@@ -1,13 +1,13 @@
 ---
 keywords: クラウドのストレージ先；クラウドのストレージ
 title: クラウドストレージの保存先の作成
-type: Tutorial
+type: チュートリアル
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
 source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '530'
 ht-degree: 50%
 
 ---
