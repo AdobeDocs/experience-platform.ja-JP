@@ -1,107 +1,194 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；モニターアカウント；モニターデータフロー；データフロー；ソース
-description: Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、ソース・ワークスペースから既存のデータ・フローを表示する手順を説明します。
+description: このチュートリアルでは、集計された監視表示とクロスサービス監視の両方を使用して、データフローを監視する手順を説明します。
 solution: Experience Platform
 title: UIでのソースのデータフローの監視
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 4c668a47e62ba7736dd2d7afe4e71fd015198356
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 4%
+source-wordcount: '1646'
+ht-degree: 6%
 
 ---
 
 
 # UIのソースのデータフローの監視
 
-Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!UICONTROL ソース]ワークスペースから既存のデータフローを表示する手順を説明します。
+Adobe Experience Platformでは、様々なソースからデータを取り込み、Experience Platform内で分析し、様々な目的地に活性化する。 プラットフォームでは、データフローに透明性を提供することで、この非線形の可能性があるデータフローの追跡プロセスを容易にします。
+
+監視ダッシュボードは、データフローのジャーニーを視覚的に表します。 集計された監視表示を使用して、ソース・レベル、データ・フロー、データ・フロー実行に垂直に移動でき、データ・フローの成功または失敗に貢献する対応する指標を表示できます。 また、監視ダッシュボードのクロスサービス監視機能を使用して、ソースから[!DNL Identity Service]、[!DNL Profile]に至るデータフローのジャーニーを監視することもできます。
+
+このチュートリアルでは、集計された監視表示とクロスサービス監視の両方を使用して、データフローを監視する手順を説明します。
 
 ## はじめに
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [ソース](../../sources/home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-- [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [データフロー](../home.md):データフローは、プラットフォーム間でデータを移動するデータ・ジョブを表します。データフローは様々なサービスで構成され、ソースコネクタからターゲットデータセット、[!DNL Identity]と[!DNL Profile]、[!DNL Destinations]にデータを移動できます。
+   * [Dataflowの実行](../../sources/notifications.md):Dataflowの実行は、選択したデータフローの頻度構成に基づく定期的なスケジュールジョブです。
+* [ソース](../../sources/home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [ID サービス](../../identity-service/home.md)：デバイスやシステム間で ID を関連付けることで、個々の顧客とそのビヘイビアーへの理解を深めることができます。
+* [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
+* [サンドボックス](../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-## データフローの監視
+## 集計された監視表示
 
-[Experience PlatformUI](https://platform.adobe.com)にログインし、左側のナビゲーションから「**[!UICONTROL ソース]**」を選択して[!UICONTROL ソース]ワークスペースにアクセスします。 上部のヘッダーから「**[!UICONTROL Dataflows]**」を選択し、既存のデータフローを表示します。
+[プラットフォームUI](https://platform.adobe.com)で、左側のナビゲーションから「**[!UICONTROL 監視]**」を選択して、[!UICONTROL 監視]ダッシュボードにアクセスします。 [!UICONTROL 監視]ダッシュボードには、ソースから[!DNL Identity Service]へのデータトラフィックの正常性、および[!DNL Profile]へのデータトラフィックの正常性のインサイトを含む、すべてのソースデータフローに関する指標と情報が含まれます。
 
-![カタログ・データ・フロー](../assets/ui/monitor-sources/catalog-dataflows.png)
+ダッシュボードの中央には[!UICONTROL ソースインジェスト]パネルがあり、このパネルには、取り込まれたレコードと失敗したレコードに関するデータを表示する指標とグラフが含まれています。
 
-既存のデータフローのリストが表示されます。 このページには、ソース、ユーザー名、データフロー数およびステータスに関する情報を含む、表示可能なデータフローのリストが表示されます。
+![監視ダッシュボード](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
-ステータスについて詳しくは、次の表を参照してください。
+デフォルトでは、表示されるデータには、過去24時間の取り込み率が含まれています。 「**[!UICONTROL 過去24時間]**」を選択して、表示されるレコードの時間枠を調整します。
 
-| ステータス | 説明 |
-| ------ | ----------- |
-| 有効 | `Enabled`ステータスは、データフローがアクティブであり、提供されたスケジュールに従ってデータを取り込んでいることを示します。 |
-| 無効 | `Disabled`ステータスは、データフローが非アクティブで、データを取り込んでいないことを示します。 |
-| Processing | `Processing`ステータスは、データフローがまだアクティブでないことを示します。 このステータスは、多くの場合、新しいデータフローの作成直後に発生します。 |
-| エラー | `Error`ステータスは、データフローのアクティベーションプロセスが中断されたことを示します。 |
+![change-date](../assets/ui/monitor-sources/change-date.png)
 
-左上のファネルアイコンを選択して並べ替えます。
+カレンダーのポップアップウィンドウが表示され、代替の取り込み時間枠のオプションが表示されます。 「**[!UICONTROL 過去30日間]**」を選択し、「**[!UICONTROL 適用]**」を選択します
 
-![データフローリスト](../assets/ui/monitor-sources/dataflows-list.png)
+![adjust-time-frame](../assets/ui/monitor-sources/adjust-timeframe.png)
 
-並べ替えパネルが表示されます。 スクロール・メニューからアクセスするソースを選択し、右側のリストからデータ・フローを選択します。 「三点リーダー(`...`)」ボタンを選択して、選択したデータフローで利用可能なオプションを表示することもできます。
+グラフはデフォルトで有効になっており、グラフを無効にして下のソースのリストを拡張できます。 「**[!UICONTROL 指標とグラフ]**」トグルを選択して、グラフを無効にします。
 
-![並べ替えデータフロー](../assets/ui/monitor-sources/dataflows-sort.png)
+![指標とグラフ](../assets/ui/monitor-sources/metrics-graphs.png)
 
-**[!UICONTROL Dataflowアクティビティ]**&#x200B;ページには、失敗したレコードと取り込まれたレコードの数、およびデータフローの状態と処理時間に関する情報が含まれています。 データフローの上にあるカレンダーアイコンを選択して、インジェストレコードの時間枠を調整します。
+| ソースの取り込み | 説明 |
+| ---------------- | ----------- |
+| [!UICONTROL 取り込まれた記録  ] | 取り込まれたレコードの合計数です。 |
+| [!UICONTROL レコードが失敗しました] | データのエラーが原因で取り込まれなかったレコードの合計数です。 |
+| [!UICONTROL 失敗したデータフローの合計] | `failed`状態のデータフローの合計数です。 |
 
-![dataflow-アクティビティ](../assets/ui/monitor-sources/dataflow-activity.png)
+ソースインジェストリストには、少なくとも1つの既存のアカウントを含むすべてのソースが表示されます。 また、リストには、適用した時間枠に基づく各ソースの取り込み率、失敗したレコード数、失敗したデータフローの合計数に関する情報も含まれます。
 
-カレンダーを使用すると、取り込むレコードに応じて異なる時間枠を表示できます。 「[!UICONTROL 最近の7日間]」または「[!UICONTROL 最近の30日間]」の2つの事前設定されたオプションのいずれかを選択できます。 または、カレンダーを使用してカスタムの期間を設定できます。 選択した期間を選択し、「**[!UICONTROL 適用]**」を選択して続行します。
+![摂取源](../assets/ui/monitor-sources/source-ingestion.png)
 
-![フローカレンダー](../assets/ui/monitor-sources/flow-calendar.png)
+ソースのリストを並べ替えるには、[**[!UICONTROL マイソース]**]を選択し、ドロップダウンメニューからカテゴリを選択します。 例えば、クラウドストレージに重点を置く場合は、「**[!UICONTROL クラウドストレージ]**」を選択します。
 
-デフォルトでは、**[!UICONTROL Dataflowアクティビティ]**&#x200B;には、データフローに関連付けられた&#x200B;**[!UICONTROL プロパティ]**&#x200B;パネルが表示されます。 リストからフロー実行を選択し、固有の実行IDに関する情報を含む、関連するメタデータを表示します。
+![カテゴリ順](../assets/ui/monitor-sources/sort-by-category.png)
 
-**[!UICONTROL Dataflow run overview]**&#x200B;にアクセスするには、**[!UICONTROL Dataflow run開始]**&#x200B;を選択します。
+すべてのソースの既存のデータフローを表示するには、**[!UICONTROL データフロー]**&#x200B;を選択します。
 
-![runs](../assets/ui/monitor-sources/run-metadata.png)
+![表示全データフロー](../assets/ui/monitor-sources/view-all-dataflows.png)
 
-**[!UICONTROL Dataflow run overview]**&#x200B;には、メタデータ、部分的な取り込みステータス、割り当てられたエラーしきい値など、データフローに関する情報が表示されます。 上部のヘッダーには、エラーの概要も含まれます。 **[!UICONTROL エラーの概要]**&#x200B;には、インジェストプロセスでエラーが発生したステップを示す、特定の最上位レベルのエラーが含まれています。
+または、検索バーにソースを入力して、1つのソースを分離することもできます。 ソースを識別したら、横にあるフィルタ・アイコン![フィルタ](../assets/ui/monitor-sources/filter.png)を選択して、アクティブなデータ・フローのリストを表示します。
 
-![dataflow-run-overview](../assets/ui/monitor-sources/dataflow-run-overview.png)
+![search](../assets/ui/monitor-sources/search.png)
 
-**[!UICONTROL エラーの概要]**&#x200B;で確認できるエラーについては、次の表を参照してください。
+データフローのリストが表示されます。 リストを絞り込み、エラーのあるデータフローに焦点を当てるには、**[!UICONTROL エラーのみを表示]**&#x200B;を選択します。
 
-| エラー | 説明 |
-| ---------- | ----------- |
-| `CONNECTOR-1001-500` | ソースからデータをコピー中にエラーが発生しました。 |
-| `CONNECTOR-2001-500` | コピーされたデータを[!DNL Platform]に処理中にエラーが発生しました。 このエラーは、解析、検証または変換に関するものです。 |
+![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
 
-画面の下半分には、**[!UICONTROL Dataflow run errors]**&#x200B;に関する情報が含まれます。 ここから、取り込んだファイルの表示、プレビューおよびダウンロードのエラー診断、またはファイルマニフェストのダウンロードを行うこともできます。
+監視するデータフローを見つけ、その横にあるフィルタアイコン![filter](../assets/ui/monitor-sources/filter.png)を選択して、実行ステータスの詳細を確認します。
 
-**[!UICONTROL Dataflow run errors]**&#x200B;セクションには、エラーコード、失敗したレコード数、エラーを説明する情報が表示されます。
+![dataflow](../assets/ui/monitor-sources/dataflow.png)
 
-**[!UICONTROL プレビューエラー診断]**&#x200B;を選択して、インジェストエラーの詳細を表示します。
+データフロー実行ページには、データフローの実行開始日、データのサイズ、ステータス、および処理時間に関する情報が表示されます。 データフロー実行開始時間の横にあるフィルタアイコン![filter](../assets/ui/monitor-sources/filter.png)を選択して、そのデータフロー実行の詳細を表示します。
 
-![データフロー実行エラー](../assets/ui/monitor-sources/dataflow-run-errors.png)
+![データフロー実行開始](../assets/ui/monitor-sources/dataflow-run-start.png)
 
-**[!UICONTROL エラー診断プレビュー]**&#x200B;パネルが表示されます。 この画面には、ファイル名、エラーコード、エラーが発生した列の名前、エラーの説明など、インジェストエラーに関する具体的な情報が表示されます。
+[!UICONTROL Dataflow run details]ページには、データフローのメタデータ、部分的なインジェストの状態、およびエラー概要に関する情報が表示されます。 エラーサマリには、インジェストプロセスでエラーが発生したステップを示す、特定の最上位レベルのエラーが含まれます。
 
-この節では、エラーを含む列のプレビューも説明します。
+下にスクロールすると、発生したエラーに関する詳細情報が表示されます。
 
->[!IMPORTANT]
->
->**[!UICONTROL エラー診断プレビュー]**&#x200B;を有効にするには、データフローの設定時に、**[!UICONTROL 部分的なインジェスト]**&#x200B;と&#x200B;**[!UICONTROL エラー診断]**&#x200B;をアクティブにする必要があります。 これを行うと、フローの実行中に取り込まれたすべてのレコードをスキャンできます。
+![dataflow-run-details](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-![プレビューエラー診断](../assets/ui/monitor-sources/preview-error-diagnostics.png)
+[!UICONTROL Dataflow run errors]パネルに、データフローのインジェストエラーを引き起こした特定のエラーおよびエラーコードが表示されます。 このシナリオでは、マッパー変換エラーが発生し、結果として24件のレコードが失敗しました。
 
-エラーをプレビューした後、**[!UICONTROL dataflow runs overview]**&#x200B;パネル内から「**[!UICONTROL Download]**」を選択して、完全なエラー診断にアクセスし、ファイルマニフェストをダウンロードできます。 詳しくは、[エラー診断](../../ingestion/batch-ingestion/partial.md#retrieve-errors)と[メタデータ](../../ingestion/batch-ingestion/partial.md#download-metadata)のダウンロードに関するドキュメントを参照してください。
+詳しくは、「**[!UICONTROL ファイル]**」を選択してください。
 
-![プレビューエラー診断](../assets/ui/monitor-sources/download.png)
+![dataflow-run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
 
-データフローの監視と取り込みの詳細については、[ストリーミングデータフローの監視](../../ingestion/quality/monitor-data-ingestion.md)のチュートリアルを参照してください。
+[!UICONTROL ファイル]パネルには、ファイルの名前とパスに関する情報が含まれます。
+
+エラーをより詳細に表すには、**[!UICONTROL プレビューエラー診断]**&#x200B;を選択します。
+
+![files](../assets/ui/monitor-sources/files.png)
+
+「[!UICONTROL Error diagnosticsプレビュー]」ウィンドウが開き、データフローに最大100個のエラーのプレビューが表示されます。 「**[!UICONTROL ダウンロード]**」を選択してcurlコマンドを取得し、エラー診断をダウンロードできます。
+
+終了したら、「**[!UICONTROL 閉じる]**」を選択します。
+
+![エラー診断](../assets/ui/monitor-sources/error-diagnostics.png)
+
+上部のヘッダーにあるパンくずリストを使用して、[!UICONTROL 監視]ダッシュボードに戻ることができます。 **[!UICONTROL 実行開始を選択：2/14/2021, 9:47 PM]**&#x200B;で前のページに戻り、**[!UICONTROL Dataflow:忠誠度データ取り込みデモ —]**&#x200B;でデータフローページに戻れませんでした。
+
+![パンくず](../assets/ui/monitor-sources/breadcrumbs.png)
+
+## クロスサービスの監視
+
+ダッシュボードの上部は、ソースレベルから[!DNL Identity Service]、[!DNL Profile]への取り込みフローを表しています。 各セルには、取り込みのその段階で発生したエラーの存在を示すドットマーカーが含まれています。 緑の点はエラーのない取り込みを意味し、赤の点は取り込みの特定の段階でエラーが発生したことを意味します。
+
+![クロスサービス監視](../assets/ui/monitor-sources/cross-service-monitoring.png)
+
+データフローページから、成功したデータフローを探し、その横にあるフィルタ・アイコン![filter](../assets/ui/monitor-sources/filter.png)を選択して、そのデータフロー実行情報を確認します。
+
+![データフロー成功](../assets/ui/monitor-sources/dataflow-success.png)
+
+[!UICONTROL ソースインジェスト]ページには、データフローの正常なインジェストを確認する情報が含まれています。 ここから、ソースレベルから[!DNL Identity Service]、[!DNL Profile]にデータフローのジャーニーを監視する開始を設定できます。
+
+**[!UICONTROL ID]**&#x200B;を選択して、[!UICONTROL ID]ステージで取り込みを確認します。
+
+![ソース](../assets/ui/monitor-sources/sources.png)
+
+### [!DNL Identity] 指標
+
+[!UICONTROL ID処理]ページには、[!DNL Identity Service]に取り込まれるレコードに関する情報（追加されたIDの数、作成されたグラフ、更新されたグラフの数など）が含まれます。
+
+dataflow実行開始時間の横にあるフィルタアイコン![filter](../assets/ui/monitor-sources/filter.png)を選択し、[!DNL Identity]データフロー実行の詳細を表示します。
+
+![ID](../assets/ui/monitor-sources/identities.png)
+
+| ID指標 | 説明 |
+| ---------------- | ----------- |
+| [!UICONTROL 受信したレコード] | [!DNL Data Lake]から受信したレコードの数です。 |
+| [!UICONTROL レコードが失敗しました] | データのエラーが原因でプラットフォームに取り込まれなかったレコードの数。 |
+| [!UICONTROL スキップされたレコード] | レコード行に識別子が1つしかないため、[!DNL Identity Service]に取り込まれなかったレコードの数です。 |
+| [!UICONTROL 取り込まれた記録] | [!DNL Identity Service]に取り込まれたレコードの数です。 |
+| [!UICONTROL 合計レコード数] | 失敗したレコード、スキップしたレコード、[!DNL Identities]が追加されたレコード、重複したレコードを含む、すべてのレコードの合計数です。 |
+| [!UICONTROL IDの追加] | [!DNL Identity Service]に追加された新しい識別子の数です。 |
+| [!UICONTROL グラフの作成] | [!DNL Identity Service]で作成された新しいグラフの数。 |
+| [!UICONTROL グラフの更新] | 新しいエッジで更新された既存のIDグラフの数。 |
+| [!UICONTROL 失敗したデータフローの実行] | 失敗したデータフローの実行数。 |
+| [!UICONTROL 処理時間] | 取り込みの開始から完了までのタイムスタンプ。 |
+| [!UICONTROL ステータス] | データフローの全体的なステータスを定義します。 使用可能なステータス値は次のとおりです。 <ul><li>`Success`:データフローがアクティブで、提供されたスケジュールに従ってデータを取り込んでいることを示します。</li><li>`Failed`:データフローのアクティベーションプロセスがエラーによって中断されたことを示します。 </li><li>`Processing`:データフローがまだアクティブでないことを示します。このステータスは、多くの場合、新しいデータフローの作成直後に発生します。</li></ul> |
+
+[!UICONTROL Dataflow run details]ページに、[!DNL Identity]データフロー実行のIMS組織IDやデータフロー実行IDなど、その他の情報が表示されます。 また、このページには、[!DNL Identity Service]が提供する対応するエラーコードとエラーメッセージも表示されます。これは、インジェストプロセスでエラーが発生した場合に表示されます。
+
+**[!UICONTROL 実行開始を選択：2/14/2021, 9:47 PM]**&#x200B;をクリックして、前のページに戻ります。
+
+![identitys-dataflow-run](../assets/ui/monitor-sources/identities-dataflow-run.png)
+
+[!UICONTROL ID処理]ページで、**[!UICONTROL プロファイル]**&#x200B;を選択し、[!UICONTROL プロファイル]ステージのレコード取り込みの状態を確認します。
+
+![select-プロファイル](../assets/ui/monitor-sources/select-profiles.png)
+
+### [!DNL Profile] 指標
+
+[!UICONTROL プロファイル処理]ページには、[!DNL Profile]に取り込まれるレコードに関する情報(作成されたプロファイルフラグメントの数、更新されたプロファイルフラグメント、プロファイルフラグメントの合計数など)が含まれます。
+
+dataflow実行開始時間の横にあるフィルタアイコン![filter](../assets/ui/monitor-sources/filter.png)を選択し、[!DNL Profile]データフロー実行の詳細を表示します。
+
+![プロファイル](../assets/ui/monitor-sources/profiles.png)
+
+| プロファイル指標 | 説明 |
+| --------------- | ----------- |
+| [!UICONTROL 受信したレコード] | [!DNL Data Lake]から受信したレコードの数です。 |
+| [!UICONTROL レコードが失敗しました  ] | エラーのため[!DNL Profile]に取り込まれずに取り込まれたレコードの数です。 |
+| [!UICONTROL プロファイルフラグメントの追加] | 追加された新しい[!DNL Profile]フラグメントの数です。 |
+| [!UICONTROL プロファイルフラグメントの更新] | 更新された既存の[!DNL Profile]フラグメントの数 |
+| [!UICONTROL プロファイルフラグメントの合計] | [!DNL Profile]に書き込まれたレコードの総数です。既存の[!DNL Profile]フラグメントが更新され、新しく作成された[!DNL Profile]フラグメントも含まれます。 |
+| [!UICONTROL 失敗したデータフローの実行] | 失敗したデータフローの実行数。 |
+| [!UICONTROL 処理時間] | 取り込みの開始から完了までのタイムスタンプ。 |
+| [!UICONTROL ステータス] | データフローの全体的なステータスを定義します。 使用可能なステータス値は次のとおりです。 <ul><li>`Success`:データフローがアクティブで、提供されたスケジュールに従ってデータを取り込んでいることを示します。</li><li>`Failed`:データフローのアクティベーションプロセスがエラーによって中断されたことを示します。 </li><li>`Processing`:データフローがまだアクティブでないことを示します。このステータスは、多くの場合、新しいデータフローの作成直後に発生します。</li></ul> |
+
+[!UICONTROL Dataflow run details]ページに、[!DNL Profile]データフロー実行のIMS組織IDやデータフロー実行IDなど、その他の情報が表示されます。 また、このページには、[!DNL Profile]が提供する対応するエラーコードとエラーメッセージも表示されます。これは、インジェストプロセスでエラーが発生した場合に表示されます。
+
+![プロファイル — データフロー実行](../assets/ui/monitor-sources/profiles-dataflow-run.png)
 
 ## 次の手順
 
-このチュートリアルに従うと、**[!UICONTROL ソース]**&#x200B;ワークスペースから既存のアカウントとデータフローに正常にアクセスできます。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリーム[!DNL Platform]サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従うと、**[!UICONTROL Monitoring]**&#x200B;ダッシュボードを使用して、ソースレベルから[!DNL Identity Service]、[!DNL Profile]へのインジェストデータフローを正常に監視できます。 また、インジェスト処理中にデータフローの失敗に寄与したエラーも正常に識別されました。 詳しくは、次のドキュメントを参照してください。
 
-- [リアルタイム顧客プロファイルの概要](../../profile/home.md)
-- [Data Science ワークスペースの概要](../../data-science-workspace/home.md)
+* [リアルタイム顧客プロファイルの概要](../../profile/home.md)
+* [Data Science ワークスペースの概要](../../data-science-workspace/home.md)
