@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ソースコネクタ；ソースコネクタ；ソース；データソース；データソース；データソース；データソース；データソース接続
 solution: Experience Platform
 title: ソースコネクタの概要
-topic: overview
+topic: 概要
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '942'
 ht-degree: 56%
 
 ---
@@ -56,6 +56,7 @@ Experience Platformは、サードパーティの広告システムからデー�
 - [[!DNL Azure File Storage] コネクタ](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL FTP] コネクタ](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] コネクタ](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub] コネクタ](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL SFTP] コネクタ](connectors/cloud-storage/sftp.md)
 
 ### 顧客関係管理（CRM）
