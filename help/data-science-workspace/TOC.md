@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Data Science ワークスペース�
 breadcrumb-title: Data Science Workspace ガイド
 user-guide-description: 機械学習を利用して、Adobe Sensei とJupyterLab Notebooks でモデルとレシピを開発、トレーニング、評価します。
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: fe2872519cfeda8024a5ad62f6a71e854822f858
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 79%
+source-wordcount: '237'
+ht-degree: 78%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 79%
    * [データアクセス](jupyterlab/access-notebook-data.md)
    * [データの分析](jupyterlab/analyze-your-data.md)
    * [クエリサービス](jupyterlab/query-service.md)
+   * [探索的データ分析(EDA)](jupyterlab/eda-notebook.md)
    * [レシピの作成](jupyterlab/create-a-recipe.md)
    * [Gitを使用したJupyterLabでのコラボレーション](jupyterlab/using-git-for-collaboration.md)
 * Senesi Machine Learning API {#api}
