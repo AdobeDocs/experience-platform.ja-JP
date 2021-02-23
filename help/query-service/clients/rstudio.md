@@ -5,10 +5,10 @@ title: RStudioをクエリサービスに接続
 topic: connect
 description: このドキュメントでは、R Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 36%
+source-wordcount: '368'
+ht-degree: 18%
 
 ---
 
@@ -20,39 +20,40 @@ ht-degree: 36%
 >[!NOTE]
 >
 > このガイドは、[!DNL RStudio]へのアクセス権が既にあり、その使い方に精通していることを前提としています。 [!DNL RStudio]に関する詳細は、[正式な [!DNL RStudio] ドキュメント](https://rstudio.com/products/rstudio/)を参照してください。
+> 
+> さらに、クエリサービスでRStudioを使用するには、PostgreSQL JDBC 4.2ドライバーをインストールする必要があります。 JDBCドライバは[PostgreSQL公式サイト](https://jdbc.postgresql.org/download.html)からダウンロードできます。
 
 ## [!DNL RStudio]インターフェイスに[!DNL Query Service]接続を作成する
 
-[!DNL RStudio]をインストールした後、表示される&#x200B;**[!DNL Console]**&#x200B;画面で、まず[!DNL PostgreSQL]を使用するRスクリプトを準備する必要があります。
+[!DNL RStudio]をインストールした後、RJDBCパッケージをインストールする必要があります。 **[!DNL Packages]**&#x200B;ウィンドウに移動し、**[!DNL Install]**&#x200B;を選択します。
 
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
+![](../images/clients/rstudio/install-package.png)
+
+**[!DNL Install Packages]**&#x200B;画面が表示され、ポップアップが表示されます。 **[!DNL Install from]**&#x200B;セクションで&#x200B;**[!DNL Repository (CRAN)]**&#x200B;が選択されていることを確認します。 **[!DNL Packages]**&#x200B;の値は`RJDBC`にする必要があります。 **[!DNL Install dependencies]**&#x200B;が選択されていることを確認します。 すべての値が正しいことを確認したら、**[!DNL Install]**&#x200B;を選択してパッケージをインストールします。
+
+![](../images/clients/rstudio/install-jrdbc.png)
+
+RJDBCパッケージがインストールされたら、RStudioを再起動してインストールプロセスを完了します。
+
+RStudioを再起動した後、クエリサービスに接続できるようになりました。 **[!DNL Packages]**&#x200B;ウィンドウで&#x200B;**[!DNL RJDBC]**&#x200B;パッケージを選択し、コンソールで次のコマンドを入力します。
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-[!DNL PostgreSQL]を使用するためのRスクリプトを準備したら、[!DNL PostgreSQL]ドライバを読み込むことで[!DNL RStudio]を[!DNL Query Service]に接続できます。
+{PATH TO THE POSTGRESQL JDBC JAR}は、コンピューターにインストールされたPostgreSQL JDBC JARへのパスを表します。
 
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
+コンソールで次のコマンドを入力して、クエリサービスへの接続を作成できます。
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
-
-| プロパティ | 説明 |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | 使用するデータベースの名前。 |
-| `{HOST_NUMBER` および `{PORT_NUMBER}` | ホストエンドポイントと、そのクエリサービス用のポート。 |
-| `{USERNAME}` および `{PASSWORD}` | 使用されるログイン資格情報。ユーザー名の形式は `ORG_ID@AdobeOrg` となります。 |
 
 >[!NOTE]
 >
 >データベース名、ホスト、ポート、ログイン資格情報の検索について詳しくは、[Platform の資格情報ページ](https://platform.adobe.com/query/configuration)を参照してください。資格情報を探すには、[!DNL Platform]にログインし、**[!UICONTROL クエリ]**&#x200B;を選択してから、**[!UICONTROL 資格情報]**&#x200B;を選択します。
+
+![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## クエリの記述
 
