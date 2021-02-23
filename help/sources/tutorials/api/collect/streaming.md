@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；クラウドストレージデータ；ストリーミングデータ；ストリーミング
 solution: Experience Platform
 title: ソースコネクタとAPIを使用したストリーミングデータの収集
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してプラットフォームにストリーミングデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1305'
 ht-degree: 20%
 
 ---
@@ -26,7 +26,8 @@ ht-degree: 20%
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
+- [[!DNL HTTP API]](../create/streaming/http.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
 
