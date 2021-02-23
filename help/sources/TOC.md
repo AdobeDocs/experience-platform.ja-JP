@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '563'
 ht-degree: 16%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 16%
       - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [FTPコネクタ](connectors/cloud-storage/ftp.md)
       - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
+      - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [SFTPコネクタ](connectors/cloud-storage/sftp.md)
       - [AmazonS3およびAzure Blobコネクタ](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -51,7 +52,7 @@ ht-degree: 16%
       - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
       - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
       - [AzureData Explorerコネクタ](connectors/databases/data-explorer.md)
-      - [azure synapse解析コネクタ](connectors/databases/synapse-analytics.md)
+      - [Azure Synapse分析コネクタ](connectors/databases/synapse-analytics.md)
       - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
       - [Couchbaseコネクタ](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
@@ -85,6 +86,7 @@ ht-degree: 16%
          - [Azure Fileストレージ](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloudストレージ](tutorials/api/create/cloud-storage/google.md)
+         - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -97,7 +99,7 @@ ht-degree: 16%
          - [Azure HDInsightsのApache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsightsでのApache Spark](tutorials/api/create/databases/spark.md)
          - [AzureData Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [azure synapse解析](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Synapse分析](tutorials/api/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージ](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -165,6 +167,7 @@ ht-degree: 16%
          - [Azure Fileストレージ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloudストレージ](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [AmazonS3とブロブ](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
@@ -178,7 +181,7 @@ ht-degree: 16%
          - [Azure HDInsightsのApache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsightsでのApache Spark](tutorials/ui/create/databases/spark.md)
          - [AzureData Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [azure synapse解析](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Synapse分析](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージ](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Googleビッグクエリ](tutorials/ui/create/databases/bigquery.md)
