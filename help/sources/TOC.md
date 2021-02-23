@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '572'
 ht-degree: 16%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 16%
       - [FTPコネクタ](connectors/cloud-storage/ftp.md)
       - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
+      - [Oracleオブジェクトストレージ](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTPコネクタ](connectors/cloud-storage/sftp.md)
       - [AmazonS3およびAzure Blobコネクタ](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -87,6 +88,7 @@ ht-degree: 16%
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloudストレージ](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
+         - [Oracleオブジェクトストレージ](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -168,6 +170,7 @@ ht-degree: 16%
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloudストレージ](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
+         - [Oracleオブジェクトストレージ](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [AmazonS3とブロブ](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
