@@ -4,10 +4,10 @@ description: Adobe Experience PlatformWeb SDKの設定方法を説明します�
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；web;環境;placeContext;debugEnabled;edgeDomain;orgId;clickBeforeEventSend;defaultConsent;web設定；prehidingStyle;cookieDestinations;enationsDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 70%
+source-wordcount: '743'
+ht-degree: 69%
 
 ---
 
@@ -147,7 +147,7 @@ Adobeサービスとのやり取りに使用するドメイン。 Adobe エッ�
 | -------- | ------------ | ----------------- |
 | ブール値 | × | true |
 
-trueの場合、SDKは古いAMCV cookieを読み取って設定します。 これは、サイトの一部で訪問者.jsを使用している可能性がある場合に、Adobe Experience PlatformWeb SDKへの移行に役立ちます。 また、ページで訪問者APIが定義されている場合、SDKはECIDのクエリ訪問者APIを使用します。 これにより、AEP Web SDKを使用して2つのタグページを作成でき、同じECIDを保持できます。
+trueの場合、SDKは古いAMCV cookieを読み取って設定します。 これは、サイトの一部で訪問者.jsを使用している可能性がある場合に、Adobe Experience PlatformWeb SDKへの移行に役立ちます。 また、ページで訪問者APIが定義されている場合、SDKはECIDのクエリ訪問者APIを使用します。 これにより、Adobe Experience PlatformWeb SDKを使用して2つのタグページを作成でき、同じECIDを持つことができます。
 
 ### `thirdPartyCookiesEnabled`
 
