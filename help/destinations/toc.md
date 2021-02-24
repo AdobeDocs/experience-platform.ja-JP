@@ -5,10 +5,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 62%
+source-wordcount: '455'
+ht-degree: 61%
 
 ---
 
@@ -92,7 +92,7 @@ ht-degree: 62%
    * 電子メールマーケティングの宛先 {#email-marketing}
       * [電子メールマーケティングの宛先の概要](./catalog/email-marketing/overview.md)
       * [Adobe Campaign接続](./catalog/email-marketing/adobe-campaign.md)
-      * [Oracle・エロカ・コネクション](./catalog/email-marketing/oracle-eloqua.md)
+      * [OracleEloqua接続](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle応答](./catalog/email-marketing/oracle-responsys.md)
       * [SalesforceMarketing Cloud接続](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Experience Platform Launch の拡張機能 {#launch-extensions}
@@ -117,6 +117,7 @@ ht-degree: 62%
       * [ソーシャルネットワークの宛先の作成](./catalog/social/workflow.md)
       * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
       * [Facebookの接続](./catalog/social/facebook.md)
+      * [LinkedInの一致したオーディエンス接続](./catalog/social/linkedin.md)
    * 調査先 {#survey}
       * [調査先の概要](./catalog/survey/overview.md)
       * [Forese拡張の宛先](./catalog/survey/foresee.md)
