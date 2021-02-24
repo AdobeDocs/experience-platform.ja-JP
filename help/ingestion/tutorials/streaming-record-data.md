@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング取り込み；取り込み；記録データ；ストリームレコードデータ；
 solution: Experience Platform
 title: ストリーミング取り込みAPIを使用したストリームレコードデータ
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1165'
 ht-degree: 69%
 
 ---
@@ -264,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
-## ストリーミング接続へのレコードデータの取り込み
+## ストリーミング接続へのレコードデータの取り込み {#ingest-data}
 
 データセットとストリーミング接続が確立された状態で、XDM形式のJSONレコードを取り込み、レコードデータを[!DNL Platform]に取り込むことができます。
 
