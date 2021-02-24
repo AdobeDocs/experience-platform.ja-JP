@@ -3,7 +3,7 @@ keywords: linkedin接続；linkedin接続；linkedin接続；linkedinの宛先�
 title: Linkedinがオーディエンス接続に一致しました
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するLinkedInキャンペーンのプロファイルをアクティブにします。
 translation-type: tm+mt
-source-git-commit: 48cc2017e4a65321fb7ef54ea26aca0a98606516
+source-git-commit: 6d64bc362aa8c85e354f5c02cc2acbe6f1405c99
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 14%
@@ -19,17 +19,17 @@ ht-degree: 14%
 
 ## 使用例
 
-[!DNL LinkedIn Matched Audience]の宛先を使う方法と時期をよりよく理解するために、Adobe Experience Platformのお客様はこの機能を使って解決できる使用例を以下に示します。
+[!DNL LinkedIn Matched Audiences]の宛先を使う方法と時期をよりよく理解するために、Adobe Experience Platformのお客様はこの機能を使って解決できる使用例を以下に示します。
 
 ソフトウェア会社は会議を組織し、参加者と連絡を取り合い、会議の出席状況に基づいてパーソナライズされたオファーを表示したいと考えています。 会社は、自分の[!DNL CRM]からAdobe Experience Platformに電子メールアドレスやモバイルデバイスIDを取り込み、自分のオフラインデータからセグメントを作成し、[!DNL LinkedIn]ソーシャルプラットフォームに送信して、広告費用を最適化できます。
 
 ## 宛先の詳細{#destination-specs}
 
-[!DNL LinkedIn Matched Audience] は、次のIDのアクティベーションをサポートします。ハッシュ化された電子メール、 [!DNL GAID]および [!DNL IDFA]。
+[!DNL LinkedIn Matched Audiences] は、次のIDのアクティベーションをサポートします。ハッシュ化された電子メール、 [!DNL GAID]および [!DNL IDFA]。
 
 ### エクスポートの種類{#export-type}
 
-**セグメントのエクスポート**  — セグメント(オーディエンス)のすべてのメンバーを、識別子（名前、電話番号など）と共にエクスポートします。[!DNL LinkedIn Matched Audience]宛先で使用されます。
+**セグメントのエクスポート**  — セグメント(オーディエンス)のすべてのメンバーを、識別子（名前、電話番号など）と共にエクスポートします。[!DNL LinkedIn Matched Audiences]宛先で使用されます。
 
 ### LinkedInアカウントの前提条件{#LinkedIn-account-prerequisites}
 
@@ -39,7 +39,7 @@ ht-degree: 14%
 
 ### IDの一致要件{#id-matching-requirements}
 
-[!DNL LinkedIn Matched Audience] 個人識別情報(PII)を明確に送信しないようにする必要があります。したがって、[!DNL LinkedIn Matched Audience]に対してアクティブ化されたオーディエンスは、電子メールアドレスやモバイルデバイスIDなど、*ハッシュ化された*&#x200B;識別子をキーオフにすることができます。
+[!DNL LinkedIn Matched Audiences] 個人識別情報(PII)を明確に送信しないようにする必要があります。したがって、[!DNL LinkedIn Matched Audiences]に対してアクティブ化されたオーディエンスは、電子メールアドレスやモバイルデバイスIDなど、*ハッシュ化された*&#x200B;識別子をキーオフにすることができます。
 
 Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件を満たす必要があります。
 
@@ -71,11 +71,11 @@ Experience Platformでの電子メールアドレスの取り込みについて�
 
 ## 宛先に接続 {#connect-destination}
 
-[!DNL LinkedIn Matched Audience]宛先に接続するには、[ソーシャルネットワーク宛先認証ワークフロー](./workflow.md)を参照してください。
+[!DNL LinkedIn Matched Audiences]宛先に接続するには、[ソーシャルネットワーク宛先認証ワークフロー](./workflow.md)を参照してください。
 
-## セグメントを[!DNL LinkedIn Matched Audience] {#activate-segments}にアクティブ化
+## セグメントを[!DNL LinkedIn Matched Audiences] {#activate-segments}にアクティブ化
 
-[!DNL LinkedIn Matched Audience]にセグメントをアクティブ化する方法については、[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+[!DNL LinkedIn Matched Audiences]にセグメントをアクティブ化する方法については、[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
 ## エクスポートされたデータ{#exported-data}
 
@@ -83,4 +83,4 @@ Experience Platformでの電子メールアドレスの取り込みについて�
 
 >[!TIP]
 >
->Adobe Experience Platformと[!DNL LinkedIn Matched Audience]の統合は、履歴オーディエンスのバックフィルをサポートします。 宛先に対してセグメントをアクティブ化すると、すべての過去のセグメント資格情報が[!DNL LinkedIn]に送信されます。
+>Adobe Experience Platformと[!DNL LinkedIn Matched Audiences]の統合は、履歴オーディエンスのバックフィルをサポートします。 宛先に対してセグメントをアクティブ化すると、すべての過去のセグメント資格情報が[!DNL LinkedIn]に送信されます。
