@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；有効データセット；データセット；データセット
 solution: Experience Platform
 title: データセットUIガイド
-topic: datasets
+topic: データセット
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1141'
 ht-degree: 69%
 
 ---
@@ -97,7 +97,7 @@ CSV ファイルを使用してデータセットを作成する場合、アド�
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## リアルタイム顧客プロファイルデータセットの有効化
+## リアルタイム顧客プロファイルデータセットの有効化 {#enable-profile}
 
 すべてのデータセットには、取得したデータによって顧客プロファイルを拡張する機能があります。そのためには、データセットに従うスキーマが[!DNL Real-time Customer Profile]での使用に対して互換性がある必要があります。 互換性のあるスキーマは、次の要件を満たします。
 
