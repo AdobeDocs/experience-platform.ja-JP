@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング；ストリーミング取り込み；ストリーミング取り込みの検証；検証；ストリーミング取り込みの検証；検証；同期検証；非同期検証；非同期検証；
 solution: Experience Platform
 title: ストリーミング取り込みの検証
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データを Adobe Experience Platform にアップロードできます。ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 87%
+source-wordcount: '898'
+ht-degree: 85%
 
 ---
 
@@ -66,6 +66,10 @@ ht-degree: 87%
 デフォルトでは、同期検証はオンになっていません。有効にするには、API 呼び出しをおこなう際に、オプションのクエリパラメーター `synchronousValidation=true` を渡す必要があります。また、現時点では、同期検証は、ストリームエンドポイントが VA7 データセンターにある場合にのみ使用できます。
 
 同期検証中にメッセージが失敗した場合、そのメッセージは出力キューに書き込まれず、ユーザーに対して即座にフィードバックが提供されます。
+
+>[!NOTE]
+>
+>変更がキャッシュされるため、スキーマの変更はすぐに利用できない場合があります。 キャッシュが更新されるまで最大15分間かかります。
 
 **API 形式**
 
