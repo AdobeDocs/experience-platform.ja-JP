@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform セグメント化サービス
 breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイムの顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 translation-type: tm+mt
-source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 78%
+source-wordcount: '157'
+ht-degree: 75%
 
 ---
 
@@ -56,6 +56,7 @@ ht-degree: 78%
    - [動的セグメントの作成（ビデオ）](video/create-a-dynamic-segment.md)
    - [マルチエンティティセグメントの作成（ビデオ）](video/create-multi-entity-segments.md)
    - [セグメントの評価](tutorials/evaluate-a-segment.md)
+   - [外部オーディエンスの読み込みと使用](tutorials/using-external-audiences.md)
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
    - [セグメントのデータ使用コンプライアンスの実施](tutorials/governance.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
