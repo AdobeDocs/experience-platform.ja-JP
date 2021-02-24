@@ -3,10 +3,10 @@ title: Adobe Experience PlatformWeb SDK Extensionリリースノート
 description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
 seo-description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 94%
+source-wordcount: '990'
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 
 #### バグの修正
 
-* お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。AEP を呼び出す API が環境を認識するようになったので、編集にアクセスできるスキーマのみが表示されます。
+* お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。Platformを呼び出すAPIは、環境を認識するようになったので、編集にアクセスできるスキーマのみが表示されます。
 
 #### 機能
 
@@ -62,7 +62,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 * `sendEvent` アクションでのデータセット ID の上書きをサポートします。
 * タイプ `IdentityMap` の新しいデータ要素を追加します。これは、現在有効になっている XDM オブジェクトデータ要素と `setConsent` アクションに `identityMap` エントリを入力するために使用できます。
 * `setConsent` アクションで ID マップを渡す機能をサポートします。
-* XDM オブジェクトデータ要素での AEP サンドボックスの選択をサポートします。
+* XDMオブジェクトデータ要素でのプラットフォームサンドボックスの選択をサポートします。
 
 
 ## 2020 年 5 月 27 日
@@ -91,7 +91,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 * データ要素が参照されるたびにイベント結合 ID がリセットされる問題を修正しました。
 * `setCustomerIds` アクションの名前を `syncIdentity` に変更しました。
 * `getIdentity` コマンドを追加しました。現在のところ、カスタムコードでのみ使用できます。
-* `_satellite` を使用したデバッグを有効にすると、AEP Web SDK 機能でデバッグが有効になります。
+* `_satellite`を使用してデバッグを有効にすると、Adobe Experience PlatformWeb SDKでのデバッグが有効になります。
 * XDM オブジェクトに入力された値（ブール値、数字、および小数）のサポートを追加しました。
 
 ## 2020 年 3 月 17 日
@@ -168,7 +168,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 * 拡張機能を追加。
 * 追加のライブラリやネットワーク呼び出しが不要な ECID サポート。
 * オプトインのサポート。
-* AEP への XDM の送信サポート。
+* XDMをプラットフォームに送信するサポート
 * ファーストパーティドメインのサポート。
 * ブラウザーコンテキストを自動的に収集。
 * 完全なオープンソース（[拡張機能](https://github.com/adobe/reactor-extension-alloy)、[SDK](https://github.com/adobe/reactor-extension-alloy)）。
