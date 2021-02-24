@@ -3,10 +3,10 @@ keywords: ソーシャルネットワーク；ソーシャルネットワーク�
 title: ソーシャルネットワークの宛先の概要
 description: ソーシャルネットワークの宛先を使用すると、キャンペーンのプロファイルをアクティブ化し、ハッシュ化された電子メールに基づいてオーディエンスのターゲット設定、パーソナライゼーション、および抑制をおこなうことができます。
 translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 75%
+source-wordcount: '76'
+ht-degree: 71%
 
 ---
 
@@ -19,3 +19,4 @@ Adobe Experience Platformは現在、次のソーシャルネットワークの�
 
 - [Adobe Livefyre 拡張機能](./adobe-livefyre.md)
 - [[!DNL Facebook] 拡張機能](./facebook.md)
+- [LinkedInの一致したオーディエンス接続](./linkedin.md)
