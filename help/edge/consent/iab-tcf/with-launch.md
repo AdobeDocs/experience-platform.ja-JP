@@ -1,24 +1,24 @@
 ---
-title: プラットフォーム起動とプラットフォームWeb SDK Extensionを使用したIAB TCF 2.0サポートの統合
+title: platform launchとプラットフォームWeb SDK Extensionを使用したIAB TCF 2.0サポートの統合
 description: IAB TCF 2.0の同意を、Adobe Experience Platform LaunchおよびAdobe Experience PlatformWeb SDK拡張と共に設定する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
 
 
-# プラットフォーム起動とプラットフォームWeb SDK拡張を使用してIAB TCF 2.0サポートを統合
+# platform launchとプラットフォームWeb SDK拡張を使用してIAB TCF 2.0サポートを統合
 
-Adobe Experience PlatformWeb SDKは、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をサポートしています。 このガイドでは、AEP Web SDK extension forExperience Platform Launchを使用してIAB TCF 2.0の同意情報をAdobeに送信するためのAdobe Experience Platform Launchプロパティを設定する方法を説明します。
+Adobe Experience PlatformWeb SDKは、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をサポートしています。 このガイドでは、Experience Platform Launch用のAdobe Experience PlatformWeb SDK拡張を使用して、IAB TCF 2.0の同意情報をAdobeに送信するためのAdobe Experience Platform Launchプロパティを設定する方法を説明します。
 
 Experience Platform Launchを使用したくない場合は、[Experience Platform Launch](./without-launch.md)を使用せずにIAB TCF 2.0を使用する方法のガイドを参照してください。
 
 ## はじめに
 
-IAB TCF 2.0をExperience Platform LaunchとAEP Web SDK拡張と共に使用するには、XDMスキーマとデータセットが必要です。
+IAB TCF 2.0をExperience Platform LaunchとPlatform Web SDK拡張と共に使用するには、XDMスキーマとデータセットを利用できる状態にする必要があります。
 
 また、このガイドを使用するには、Adobe Experience PlatformWeb SDKに関する実用的な知識が必要です。 簡単なリフレッシャーについては、[Adobe Experience PlatformWeb SDKの概要](../../home.md)および[よくある質問](../../web-sdk-faq.md)のドキュメントをお読みください。
 
@@ -120,7 +120,7 @@ addEventListener();
 
 このコードは、`useractioncomplete`と`tcloaded`の両方のイベントが処理される点を除いて、前のカスタムコードと同じです。 [以前のカスタムコード](#consent-code-1)は、お客様が初めて好みを選択した場合にのみトリガーします。 このコードは、ユーザーが既に環境設定を選択している場合にもトリガーします。 例えば、2回目のページ読み込み時など。
 
-AEP Web SDK Extension追加から「イベントを送信」アクションを送信します。 XDMフィールド内で、前の節で作成したXDMデータ要素を選択します。
+Platform Web SDK 追加 Extensionから「イベントを送信」アクションを送信します。 XDMフィールド内で、前の節で作成したXDMデータ要素を選択します。
 
 ## IAB TCF 2.0同意情報を使用した他のイベントの送信
 
@@ -128,4 +128,4 @@ AEP Web SDK Extension追加から「イベントを送信」アクションを�
 
 ## 次の手順
 
-AEP Web SDK ExtensionでのIAB TCF 2.0の使用方法を学習したので、Adobe Analyticsやリアルタイム顧客データプラットフォームなどの他のAdobeソリューションとの統合も選択できます。 詳細については、[IAB Transparency &amp; Consent Framework 2.0の概要](./overview.md)を参照してください。
+Platform Web SDK ExtensionでのIAB TCF 2.0の使用方法を学習したので、Adobe Analyticsやリアルタイム顧客データプラットフォームなどの他のAdobeソリューションとの統合も選択できます。 詳細については、[IAB Transparency &amp; Consent Framework 2.0の概要](./overview.md)を参照してください。
