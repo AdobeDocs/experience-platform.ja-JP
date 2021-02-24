@@ -5,7 +5,7 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 translation-type: tm+mt
-source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
+source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 61%
@@ -117,7 +117,7 @@ ht-degree: 61%
       * [ソーシャルネットワークの宛先の作成](./catalog/social/workflow.md)
       * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
       * [Facebookの接続](./catalog/social/facebook.md)
-      * [LinkedInの一致したオーディエンス接続](./catalog/social/linkedin.md)
+      * [Linkedinがオーディエンス接続に一致しました](./catalog/social/linkedin.md)
    * 調査先 {#survey}
       * [調査先の概要](./catalog/survey/overview.md)
       * [Forese拡張の宛先](./catalog/survey/foresee.md)
