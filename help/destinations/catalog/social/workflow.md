@@ -4,17 +4,17 @@ title: ソーシャルネットワークの宛先の作成
 type: チュートリアル
 description: Adobe Experience Platformのソーシャルネットワーク広告アカウントに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 19e38faa84d365682e97c2ec1c6352d127c0ac29
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 53%
+source-wordcount: '460'
+ht-degree: 52%
 
 ---
 
 
 # ソーシャルネットワークの宛先を作成{#social-network-destinations-workflow}
 
-このチュートリアルでは例として[!DNL Facebook]を使用しますが、Adobe Experience Platformのワークフローはすべてのソーシャルネットワークの宛先に対して同じになり、もう一度製品に追加されます。
+このチュートリアルでは例として[!DNL Facebook]を使用しますが、Adobe Experience Platformのワークフローはすべてのソーシャルネットワークの宛先で同じです。
 
 **[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;で、**[!UICONTROL ソーシャル]**&#x200B;カテゴリまでスクロールします。 希望するソーシャルネットワークの宛先を選択し、**[!UICONTROL 設定]**&#x200B;を選択します。
 
@@ -38,16 +38,19 @@ ht-degree: 53%
 
 **[!UICONTROL 設定]**&#x200B;手順で、アクティベーションフローの[!UICONTROL 名前]と[!UICONTROL 説明]を入力し、ソーシャルネットワーク広告アカウントの[!UICONTROL アカウント ID] を入力します。
 
-また、この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択できます。 マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+>[!IMPORTANT]
+>
+> [!DNL Facebook]宛先の場合、**[!UICONTROL アカウントID]**&#x200B;は[!DNL Facebook Ad Account ID]です。 このIDは[!DNL Facebook Ads Manager]にあります。 以下に示すように、ID の前に `act_` を追加します。
 
-上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+![ソーシャルネットワークの宛先に接続 — 設定手順](../../assets/catalog/social/workflow/setup.png)
 
 >[!IMPORTANT]
 >
-> * [!DNL Facebook]宛先用。 **[!UICONTROL アカウント]** IDはお客様 [!DNL Facebook Ad Account ID]の。このIDは[!DNL Facebook Ads Manager]にあります。 以下に示すように、ID の前に `act_` を追加します。
+> [!DNL LinkedIn]宛先の場合、**[!UICONTROL アカウントID]**&#x200B;は[!DNL LinkedIn Campaign Manager Account ID]です。 このIDは[!DNL LinkedIn Campaign Manager]にあります。
 
+また、この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択できます。 マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
-![ソーシャルネットワークの宛先に接続 — 設定手順](../../assets/catalog/social/workflow/setup.png)
+上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
 これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。いずれの場合も、ワークフローでのこの後の操作については、次の「[ソーシャルネットワークに対してセグメントをアクティブ化する](#activate-segments)」の節を参照してください。
 
