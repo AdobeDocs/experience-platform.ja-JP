@@ -1,9 +1,9 @@
 ---
 keywords: linkedin接続；linkedin接続；linkedin接続；linkedinの宛先；linkedin;
-title: LinkedInの一致したオーディエンス接続
+title: Linkedinがオーディエンス接続に一致しました
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するLinkedInキャンペーンのプロファイルをアクティブにします。
 translation-type: tm+mt
-source-git-commit: d51de1ab4b2d4e91232166657466e597093f22ef
+source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 14%
