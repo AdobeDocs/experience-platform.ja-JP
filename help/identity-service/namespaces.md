@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；名前空間;名前空間;名前空間;名前空間;ID名前空間;ID名前空間;ID;ID;IDサービス；IDサービス
 solution: Experience Platform
 title: ID名前空間の概要
-topic: overview
+topic: 概要
 description: 'ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」という値は電子メールアドレスとして、または「443522」という数値のCRM IDとして区別されます。 '
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 20%
 
 ---
@@ -84,7 +84,7 @@ UIの標準名前空間を表示するには、左側のナビゲーションで
 
 ![](./images/browse-namespaces.png)
 
-## カスタム名前空間の管理
+## カスタム名前空間の管理{#manage-namespaces}
 
 組織のデータや使用事例によっては、カスタム名前空間が必要な場合があります。カスタム名前空間は[[!DNL Identity Service]](./api/create-custom-namespace.md) APIを使用して、またはUIを通じて作成できます。
 
