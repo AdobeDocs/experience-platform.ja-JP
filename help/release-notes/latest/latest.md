@@ -1,58 +1,83 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: Experience Platform リリースノート 2021 年 1 月 27 日
+description: 2021年2月25日Experience Platformリリースノート
 doc-type: release notes
-last-update: January 27, 2021
-author: ens60013
+last-update: February 24, 2021
+author: ens70167
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: d3151d9ccaf61e6ec1a88e147f3694292e953de0
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 49%
+source-wordcount: '770'
+ht-degree: 36%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2021 年 1 月 27 日（PT）**
+**リリース日：2021 年 2 月 24 日**
 
 Adobe Experience Platform の既存の機能のアップデート：
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
 - [[!DNL Sources]](#sources)
-- [[!DNL Experience Platform Launch Server Side]](#launch)
 
-## [!DNL Data Prep] {#data-prep}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Data Prep] データエンジニアがエクスペリエンスデータモデル(XDM)との間でデータのマッピング、変換、検証を行えるようにします。
-
-**新機能**
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| 正規式関数 | [!DNL Data Prep] マッパーで、正規式に基づく入力フィールドの一部の一致と抽出がサポートされるようになりました。 |
-
-詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
-
-## 宛先 {#destinations}
-
-[!DNL Destinations] は、目的のプラットフォームと事前にビルドされた統合機能で、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-
-**新しい宛先**
-
-| 宛先 | 説明 |
-| ----------- | ----------- |
-| [!DNL Azure Blob] | [!DNL Azure Blob] は、Microsoftのクラウド向けオブジェクトストレージソリューションです。 |
+Data Science Workspaceは、機械学習と人工知能を使用して、データからインサイトを作成します。 Adobe Experience Platform に統合された Data Science Workspace は、アドビソリューションでコンテンツやデータアセットを使用して予測をおこなうことを支援します。
 
 **新機能**
 
 | 機能 | 説明 |
-| ------- | ----------- |
-| 高度なIDの一致 | 外部ID、電話番号、モバイルデバイスIDなど、追加のID照合のサポートを追加し、[!DNL Facebook Custom Audiences]と[!DNL Google Customer Match]のオーディエンス一致率機能を強化しました。 詳しくは、次のドキュメントを参照してください。 <ul><li>[Facebook の宛先](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Matchのリンク先](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[宛先へのプロファイルとセグメントのアクティブ化](../../destinations/ui/activate-destinations.md)</li></ul> |
+| --- | --- |
+| JupyterLab EDAノートブック | 探索的データ分析(EDA)PythonノートブックがJupyterlabで入手できるようになりました。 このノートブックは、データのパターンの検出、データの正確性のチェック、および予測モデルに関する関連データの要約を行うのに役立つように設計されています。 詳しくは、[予測モデルに関するWebベースのデータの調査](../../data-science-workspace/jupyterlab/eda-notebook.md)のチュートリアルを参照してください。 |
 
-詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
+Data Science Workspaceの一般的な情報については、[データサイエンスワークスペースの概要](../../data-science-workspace/home.md)を参照してください。
+
+## [!DNL Dataflows] {#dataflows}
+
+Adobe Experience Platformでは、様々なソースからデータを取り込み、Experience Platform内で分析し、様々な目的地に活性化する。 プラットフォームでは、データフローに透明性を提供することで、この非線形の可能性があるデータフローの追跡プロセスを容易にします。
+
+データフローは、Platform 間でデータを移動するデータジョブを表します。これらのデータフローは様々なサービスで構成され、ソースコネクタからターゲットデータセットにデータを移動できます。その後、[!DNL Identity Service]と[!DNL Real-time Customer Profile]がデータを利用してから、最終的に[!DNL Destinations]にアクティブ化します。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| 新しい監視ダッシュボード | ソースデータインジェクションに対して、クロスサービスの透過性と実行可能なインサイトの監視ダッシュボードを使用できるようになりました。 新しい監視ダッシュボードは、[!DNL Data Lake]から[!DNL Identity Service]、[!DNL Profile]に処理されるデータの包括的な表示を提供します。また、取り込み率、成功数、失敗数を監視することもできます。 詳細については、UI](../../dataflows/ui/monitor-sources.md)の[監視ソースのデータフローのチュートリアルを参照してください。 |
+
+データフローの一般的な情報については、[データフローの概要](../../dataflows/home.md)を参照してください。
+
+## [!DNL Experience Data Model (XDM) System] {#xdm}
+
+標準化と相互運用性は、[!DNL Experience Platform]の背後にある重要な概念です。 [!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
+
+XDM はパブリックに文書化された仕様であり、デジタルエクスペリエンスのパワーを向上させるために設計されています。Adobe Experience Platform 上のサービスと通信するすべてのアプリケーションに共通の構造と定義を提供します。XDM 標準規格に準拠することで、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| アップグレードされた検索UI | [!UICONTROL スキーマ]ワークスペースの[!UICONTROL 参照]タブと[!DNL Schema Editor]のミックスイン選択ダイアログで、検索機能が強化されました。<br><br>以前にキーワードを検索した場合、検索クエリと名前が一致するXDMリソースのみが結果に含まれます。現在は、クエリと名前が一致するリソースに加えて、キーワードに一致する個々の属性を含むリソースも含まれます。 これにより、XDMリソースを、リソース名ではなく、属性を含むXDMリソースに基づいて検索できます。<br><br>詳細は、XDM [リソースの](../../xdm/ui/explore.md) 調査とUIでのスキーマの [](../../xdm/ui/resources/schemas.md) 管理に関するドキュメントを参照してください。 |
+
+XDMの一般的な情報については、[XDMシステム概要](../../xdm/home.md)を参照してください。
+
+## [!DNL Identity Service] {#identity}
+
+関連するデジタルエクスペリエンスを提供するには、顧客を完全に理解する必要があります。顧客データが異なる複数のシステムに断片化されており、そのため各顧客が複数の「ID」を持つと考えられる場合、顧客を理解するのはさらに困難になります。
+
+Adobe Experience Platform[!DNL Identity Service]は、デバイスやシステム間でIDをつなぐことで、顧客とその行動をより良く表示できるように支援します。これにより、インパクトの高い個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| ID グラフ viewer | IDグラフビューアでは、UIで繋ぎ合わされたIDを検証および視覚化でき、デバッグと透明度を向上できます。 詳しくは、[IDグラフビューアのドキュメント](../../identity-service/ui/identity-graph-viewer.md)を参照してください。 |
+
+[!DNL Identity Service]の一般的な情報については、[IDサービスの概要](../../identity-service/home.md)を参照してください。
 
 ## [!DNL Sources] {#sources}
 
@@ -60,27 +85,11 @@ Adobe Experience Platform では、外部ソースからデータを取り込む
 
 Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
-**新機能**
+**新しいソース**
 
 | 機能 | 説明 |
-| ------- | ----------- |
-| Adobe Audience Managerソースコネクタの機能強化 | Audience ManagerからPlatformに取り込む個々のファーストパーティセグメントをフィルタリングおよび選択でき、ファーストパーティの特性をフィルタリングできるようになりました。 詳細については、[Audience Managerソースコネクタ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)の作成に関するチュートリアルを参照してください。 |
-| [!DNL Google BigQuery] ソースコネクタの強化 | [!DNL BigQuery]ソースコネクタを使用して、1回のフロー実行で10 GBを超えるファイルを取り込めるようになりました。 詳しくは、[[!DNL BigQuery] ソースコネクタの概要](../../sources/connectors/databases/bigquery.md)を参照してください。 |
-| クラウドストレージ用の複雑なデータ型のサポート | クラウドストレージソースコネクタを使用する場合、JSONファイル内の配列などの複雑なデータ型を取り込めるようになりました。 詳しくは、UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)または[でのクラウドストレージのデータフロー[の作成に関するチュートリアル（ [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md)を使用）を参照してください。 |
-| [!DNL Microsoft Dynamics]ソースのサービスプリンシパルキーベースの認証のサポート | パスワードベースの認証の代わりに、サービスプリンシパルキーを使用して[!DNL Dynamics]アカウントに対して認証できるようになりました。 詳しくは、[[!DNL Dynamics] ソースコネクタの概要](../../sources/connectors/crm/ms-dynamics.md)を参照してください。 |
-| クラウドストレージソースでのカスタム区切り文字のUIのサポート | カンマ(`,`)、タブ(`\t`)、パイプ(`|`)などのカスタムの列区切り文字を設定して、UIから区切りファイルを収集できるようになりました。 詳しくは、[クラウドストレージソースコネクタ](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)を使用したデータフローの作成のチュートリアルを参照してください |
+| --- | --- |
+| [!DNL Google PubSub] | [!DNL Flow Service] APIまたはUIを使用して、[!DNL Google PubSub]を[!DNL Experience Platform]に接続できるようになりました。 詳しくは、[[!DNL Google PubSub] コネクタの概要](../../sources/connectors/cloud-storage/google-pubsub.md)を参照してください。 |
+| [!DNL Oracle Object Storage] | [!DNL Flow Service] APIまたはUIを使用して、[!DNL Oracle Object Storage]を[!DNL Experience Platform]に接続できるようになりました。 詳しくは、[[!DNL Oracle Object Storage] コネクタの概要](../../sources/connectors/cloud-storage/oracle-object-storage.md)を参照してください。 |
 
-ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
-
-## [!DNL Experience Platform Launch Server Side] {#launch}
-
-Adobe Experience Platform Launch Server Side は、通常クライアントでおこなわれるタスクを、Adobe Experience Platform Edge ネットワークを使用して実行することにより、web ページやアプリの重みを軽減します。Platform Launch Server Side のルールにより、クライアントサイドの実装を変更しなくても、データを変換して新しい宛先に送信できます。
-
-Platform Launch Server Side を Adobe Experience Platform の web およびモバイル SDK と組み合わせることで、次のことが可能になります。
-
-- データのペイロードを含むページから 1 回の呼び出しをおこない、このデータをサーバーサイドで統合して、クライアント側のネットワークトラフィックを減らし、顧客により高速なエクスペリエンスを提供する。
-- web ページの読み込みに要する時間を短縮する。この機能により、サイトを、パフォーマンスに関する業界のベストプラクティスに合わせることができます。
-- 透明性を高め、クライアントサイドのすべてのプロパティを通して、どのタイプのデータをどこに送信するかを制御する。
-- サーバーサイドのルールを作成し、以前に追跡したデータを新しい送信先に送信する。
-
-詳しくは、[プラットフォーム起動ドキュメント](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en)を参照してください。
+ソースの一般的な情報については、[ソースの概要](../../sources/home.md)を参照してください。
