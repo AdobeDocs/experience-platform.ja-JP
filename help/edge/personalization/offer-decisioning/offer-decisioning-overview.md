@@ -1,9 +1,9 @@
 ---
-title: Offer DecisioningとプラットフォームWeb SDKの連携
-description: Adobe Experience PlatformWeb SDKは、Offer Decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 Offer DecisioningのUIまたはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
-keywords: オファー判定；判定；Web SDK；プラットフォームWeb SDK；パーソナライズされたオファー;オファーの配信；オファー配信;オファーのパーソナライズ；
+title: offer decisioningとプラットフォームWeb SDKの使用
+description: Adobe Experience PlatformWeb SDKは、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 offer decisioningのUIまたはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
+keywords: offer decisioning；判定；Web SDK；プラットフォームWeb SDK；パーソナライズされたオファー；配信オファー;オファー配信;オファーのパーソナライズ；
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 16%
@@ -11,13 +11,13 @@ ht-degree: 16%
 ---
 
 
-# Offer DecisioningとプラットフォームWeb SDKの連携
+# offer decisioningとプラットフォームWeb SDKの使用
 
 >[!NOTE]
 >
 >現在、Adobe Experience Platform Web SDK での Offer Decisioning の使用は、一部のユーザーが早期にアクセスできます。この機能は、すべての IMS 組織で使用できるわけではありません。
 
-Adobe Experience Platform[!DNL Web SDK]は、Offer Decisioningで管理されるパーソナライズされたオファーを配信し、レンダリングできます。 Offer Decisioningのユーザーインターフェイス(UI)またはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
+Adobe Experience Platform[!DNL Web SDK]は、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 offer decisioningユーザーインターフェイス(UI)またはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
 
 ## 前提条件
 
@@ -27,11 +27,11 @@ Adobe Experience Platform[!DNL Web SDK]は、Offer Decisioningで管理される
 
 ## 用語
 
-Offer Decisioningとの連携に際しては、以下の用語を理解することが重要です。 詳細および追加の用語の表示については、[Offer Decisioningの用語集](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)を参照してください。
+offer decisioningを扱う際は、次の用語を理解することが重要です。 詳細および追加の用語の表示については、[Offer decisioning用語集](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)を参照してください。
 
 * **コンテナ:** コンテナとは、異なる懸念を切り離すための分離メカニズムです。コンテナ ID は、すべてのリポジトリー API の最初のパス要素です。すべての決定オブジェクトはコンテナ内に存在します。
 
-* **デシジョンスコープ：** Offer Decisioningの場合、これらは、オファー判定サービスでオファーの提案に使用するアクティビティIDと配置IDを含むBase64エンコードされたJSON文字列です。
+* **デシジョンスコープ：Offer decisioning** の場合、これらは、オファーの提案にoffer decisioningサービスで使用するアクティビティIDとプレースメントIDを含むBase64エンコードされたJSON文字列です。
 
    *Decision scope JSON:*
 
@@ -58,14 +58,14 @@ Offer Decisioningとの連携に際しては、以下の用語を理解するこ
 
 * **ID**:詳しくは、 [プラットフォームWeb SDKがIdentity Serviceを利用する方法を説明するドキュメントをお読みください](../../identity/overview.md)。
 
-## Offer Decisioningを有効にする
+## offer decisioningの有効化
 
-Offer Decisioningを有効にするには、次の手順を実行する必要があります。
+offer decisioningを有効にするには、次の手順を実行する必要があります。
 
-1. [エッジ構成](../../fundamentals/edge-configuration.md)でAdobe Experience Platformを有効にし、「Offer Decisioning」ボックスをチェックします
+1. [エッジ設定](../../fundamentals/edge-configuration.md)でAdobe Experience Platformを有効にし、「Offer decisioning」ボックスをオンにします
    ![オファー判定エッジ設定](./assets/offer-decisioning-edge-config.png)
-2. [SDK](../../fundamentals/installing-the-sdk.md)のインストールの指示に従います(SDKは、スタンドアロンまたは[Adobe Experience Platform Launch](http://launch.adobe.com/jp)を介してインストールできます)。 以下に、プラットフォームの起動](https://docs.adobe.com/content/help/ja-JP/launch/using/intro/get-started/quick-start.html)の[クイック開始ガイドを示します。
-3. [Offer Decisioning用の](../../fundamentals/configuring-the-sdk.md) SDKを設定します。以下に、Offer Decisioning固有の手順を示します。
+2. [SDK](../../fundamentals/installing-the-sdk.md)のインストールの指示に従います(SDKは、スタンドアロンまたは[Adobe Experience Platform Launch](http://launch.adobe.com/jp)を介してインストールできます)。 以下に、[Platform launch](https://docs.adobe.com/content/help/ja-JP/launch/using/intro/get-started/quick-start.html)のクイック開始ガイドを示します。
+3. [offer decisioning用の](../../fundamentals/configuring-the-sdk.md) SDKを設定します。その他のOffer decisioning固有の手順を以下に示します。
    * スタンドアロンでインストールされたSDK
       1. `decisionScopes`で「sendEvent」アクションを設定します。
 
@@ -78,10 +78,10 @@ Offer Decisioningを有効にするには、次の手順を実行する必要が
           ]
       })
       ```
-   * プラットフォームの起動がインストールされたSDK
-      1. [Platform Launchプロパティの作成](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html)
-      2. [プ追加ラットフォームの埋め込みコードの起動](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. 先ほど作成したエッジ設定で、「エッジ設定」ドロップダウンから設定を選択し、AEP Web SDK Extensionをインストールして設定します。 [拡張子](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/overview.html)に関する有用なドキュメント。
+   * platform launchがインストールしたSDK
+      1. [platform launchプロパティの作成](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html)
+      2. [platform launch追加埋め込みコード](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. 先ほど作成したエッジ設定で、「エッジ設定」ドロップダウンから設定を選択して、Platform Web SDK Extensionをインストールし、設定します。 [拡張子](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/overview.html)に関する有用なドキュメント。
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
