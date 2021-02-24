@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能 概要
 description: Adobe Experience Platform Launch向けAdobe Experience PlatformWeb SDK Extensionについて
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 55%
+source-wordcount: '640'
+ht-degree: 53%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 55%
 
 Adobe Experience PlatformWeb SDK Extensionは、Adobe Experience Platformエッジネットワークを介して、WebプロパティからAdobe Experience Cloudにデータを送信します。 Adobe Experience Platform Web SDK 拡張機能を使用すると、プラットフォームへのデータのストリーミング、ID の同期、オプトイン、およびコンテキストデータの自動収集が可能になります。
 
-## AEP Web SDK 拡張機能の設定
+## 拡張機能の設定
 
 この節では、Adobe Experience Platform Web SDK 拡張機能を設定する際に使用できるオプションについて説明します。
 
@@ -49,11 +49,11 @@ Adobe Experience PlatformWeb SDK拡張機能は、ページ上の複数のイン
 
 ### **[!UICONTROL オプトインを有効にする]**
 
-**[!UICONTROL オプトインを有効にする]**&#x200B;が有効な場合、AEP Web SDK拡張は、オプトインが受信されるまでヒットを保持できます。 オプトインの環境設定をおこなうためのアクションが拡張機能に表示されます。
+**[!UICONTROL オプトインを有効にする]**&#x200B;が有効な場合、拡張機能はオプトインが受信されるまでヒットを保持できます。 オプトインの環境設定をおこなうためのアクションが拡張機能に表示されます。
 
 ### **[!UICONTROL 移行ECIDの有効化]**
 
-AEP Web SDK 拡張機能では、新しい Cookie を使用して ECID を保存します。この設定により、移行目的で、新しい cookie と古い cookie の互換性が有効になります。ECID を持つ既存の訪問者がいない場合を除き、この機能を有効にすることを強くお勧めします。
+プラットフォームWeb SDK拡張では、新しいCookieを使用してECIDを保存します。 この設定により、移行目的で、新しい cookie と古い cookie の互換性が有効になります。ECID を持つ既存の訪問者がいない場合を除き、この機能を有効にすることを強くお勧めします。
 
 ### **[!UICONTROL サードパーティCookieを使用する]**
 
