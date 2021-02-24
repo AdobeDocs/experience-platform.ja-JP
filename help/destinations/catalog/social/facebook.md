@@ -3,7 +3,7 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebookの接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
+source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 22%
@@ -86,7 +86,7 @@ Adobe Experience Platformに取り込むIDのタイプに応じて、対応す�
 
 電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュするか、Experience Platform内で電子メールアドレスを明確に扱ってアクティベーション上でアルゴリズムハッシュするかを選択できます。
 
-Experience Platformでの電子メールアドレスの取り込みについては、[batch ingestion overview](/help/ingestion/batch-ingestion/overview.md)および[steaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md)を参照してください。
+Experience Platformでの電子メールアドレスの取り込みについて詳しくは、[バッチインジェストの概要](/help/ingestion/batch-ingestion/overview.md)および[ストリーミングインジェストの概要](/help/ingestion/streaming-ingestion/overview.md)を参照してください。
 
 電子メールアドレスを自分でハッシュする場合は、次の要件を満たしていることを確認してください。
 
