@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: 18712835b2408b24cd2735b19c94bf1b1fe50df1
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 36%
+source-wordcount: '712'
+ht-degree: 33%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -52,6 +53,19 @@ Adobe Experience Platform の既存の機能のアップデート：
 | 高度なIDの一致 | 外部ID、電話番号、モバイルデバイスIDなど、追加のID照合のサポートを追加し、[!DNL Facebook Custom Audiences]と[!DNL Google Customer Match]のオーディエンス一致率機能を強化しました。 詳しくは、次のドキュメントを参照してください。 <ul><li>[Facebook の宛先](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Matchのリンク先](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[宛先へのプロファイルとセグメントのアクティブ化](../../destinations/ui/activate-destinations.md)</li></ul> |
 
 詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
+
+## リアルタイム顧客プロファイル {#profile}
+
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。[!DNL Profile] すべての顧客インタラクションに関して、実行可能なタイムスタンプのあるアカウントを提供する統合表示に顧客データを統合できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| プロファイルストアからのデータセットの削除 | Experience Platformデータレイクからデータセットを削除すると、プロファイルストアからも自動的に削除されます。 プロファイルストアからプロファイルセットを明示的に削除する削除リクエストを行う場合に、System Jobs APIエンドポイントを使用する必要がなくなりました。 詳しくは、[プロファイルシステムジョブAPIエンドポイントガイド](../../profile/api/profile-system-jobs.md)を参照してください。 |
+| 特定のセグメントに対するID名前空間の推定数 | プロファイル数の見積もりに対して、プレビューAPIは次の情報をレポートするようになりました。<ul><li>特定の名前空間に対するセグメント内の推定プロファイルの合計数。</li><li>特定の名前空間に対するプロファイル和集合スキーマ内の推定プロファイルの合計数。</li></ul>詳しくは、[プロファイルプレビューAPIエンドポイントガイド](../../profile/api/preview-sample-status.md)を参照してください。 |
+
+[!DNL Profile]データを扱うためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、まず[リアルタイム顧客プロファイルの概要](../../profile/home.md)をご覧ください。
 
 ## [!DNL Sources] {#sources}
 
