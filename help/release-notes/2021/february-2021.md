@@ -5,17 +5,21 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 7142d13b144f34d92087affe101c5ccfcb52d90e
+source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 36%
+source-wordcount: '1069'
+ht-degree: 34%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2021 年 2 月 24 日**
+**リリース日：2021 年 2 月 24 日（PT）**
+
+Adobe Experience Platform の新機能：
+
+- [（ベータ版）ダッシュボード](#dashboards)
 
 Adobe Experience Platform の既存の機能のアップデート：
 
@@ -23,7 +27,18 @@ Adobe Experience Platform の既存の機能のアップデート：
 - [[!DNL Dataflows]](#dataflows)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
+
+## （ベータ版）ダッシュボード{#dashboards}
+
+Adobe Experience Platformは、毎日のスナップショットで取り込むように、組織のデータに関する重要な情報を表示できる複数のダッシュボードを提供しています。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| プロファイル、セグメント、宛先、ライセンス使用ダッシュボード（ベータ版） | **注意：現在、ダッシュボード機能はベータ版であり、一部のユーザーはご利用いただけません。ドキュメントと機能は変更される場合があります。**<br/><br/>&#x200B;ダッシュボードは、組織のデータに対してそのまま使用できるレポートを提供し、プラットフォーム内のマーケティング担当者ワークフローに直接組み込まれます。これらのダッシュボードは、ITサポートを追加したり、データウェアハウスの設計と実装を追加してデータをエクスポートし処理するのにかかる時間と労力を必要とせずに利用できます。 |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -78,6 +93,18 @@ Adobe Experience Platform[!DNL Identity Service]は、デバイスやシステ�
 | ID グラフ viewer | IDグラフビューアでは、UIで繋ぎ合わされたIDを検証および視覚化でき、デバッグと透明度を向上できます。 詳しくは、[IDグラフビューアのドキュメント](../../identity-service/ui/identity-graph-viewer.md)を参照してください。 |
 
 [!DNL Identity Service]の一般的な情報については、[IDサービスの概要](../../identity-service/home.md)を参照してください。
+
+## リアルタイム顧客プロファイル {#profile}
+
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。[!DNL Profile] すべての顧客インタラクションに関して、実行可能なタイムスタンプのあるアカウントを提供する統合表示に顧客データを統合できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 計算済み属性（アルファ） | ***注意：この機能は現在アルファベットで表示されており、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。*** <br/><br/>計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。その後、集計をセグメント化、アクティベーション、パーソナライゼーションに使用できます。 これらの関数の例としては、count、sum、average、min、max、true/falseがあります。 計算済み属性は、現在APIでのみ使用できます。 詳しくは、[計算済み属性の概要](../../profile/computed-attributes/overview.md)を参照してください。 |
+
+[!DNL Profile]データを扱うためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、まず[リアルタイム顧客プロファイルの概要](../../profile/home.md)をご覧ください。
 
 ## [!DNL Sources] {#sources}
 
