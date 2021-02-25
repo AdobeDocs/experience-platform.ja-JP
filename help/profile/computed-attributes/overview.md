@@ -5,9 +5,9 @@ topic: ガイド
 type: ドキュメント
 description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計する関数です。 これらの関数は自動的に計算され、セグメント化、アクティベーションおよびパーソナライゼーションで使用できます。
 translation-type: tm+mt
-source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
+source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '730'
 ht-degree: 41%
 
 ---
