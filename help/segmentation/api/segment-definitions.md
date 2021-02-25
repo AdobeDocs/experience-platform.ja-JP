@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；セグメント定義；セグメント定義；api;API;
 solution: Experience Platform
 title: セグメント定義APIエンドポイント
-topic: developer guide
+topic: 開発ガイド
 description: Adobe Experience PlatformSegmentation Service APIのセグメント定義エンドポイントは、組織のセグメント定義をプログラムで管理できるようにします。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1124'
 ht-degree: 50%
 
 ---
@@ -197,6 +197,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | 値内の式の構造を示します。現時点では、次の形式がサポートされています。 <ul><li>`pql/text`：セグメント定義のテキスト表現で、公開された PQL 文法に従っている必要があります。例：`workAddress.stateProvince = homeAddress.stateProvince`</li></ul> |
 | `expression.value` | `expression.format` に指定されたタイプに適合する式です。 |
 | `description` | 定義の人間が読み取り可能な説明。 |
+
+>[!NOTE]
+>
+>セグメント定義式は、計算済み属性を参照する場合もあります。 詳しくは、[計算済み属性APIエンドポイントガイド](../../profile/computed-attributes/ca-api.md)を参照してください
+>
+>計算済み属性機能はアルファ版であり、一部のユーザーが使用できます。ドキュメントと機能は変更される場合があります。
 
 **応答**
 
