@@ -4,10 +4,10 @@ audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 44%
+source-wordcount: '122'
+ht-degree: 40%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 44%
 * [!DNL Profile] API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
-   * [（アルファ）計算済み属性](api/computed-attributes.md)
    * [エッジ投影](api/edge-projections.md)
    * [エンティティ([!DNL Profile] アクセス)](api/entities.md)
    * [書き出しジョブ([!DNL Profile] 書き出し)](api/export-jobs.md)
@@ -35,6 +34,11 @@ ht-degree: 44%
    * [結合ポリシーの作成（ビデオ）](video/create-merge-policies.md)
    * [和集合スキーマUIガイド](ui/union-schema.md)
    * [和集合スキーマの概要（ビデオ）](video/union-schemas-overview.md)
+* （アルファ）計算済み属性{#computed-attributes}
+   * [概要](computed-attributes/overview.md)
+   * [計算済み属性API](computed-attributes/ca-api.md)
+   * [計算済み属性フィールドの設定](computed-attributes/configure-api.md)
+   * [サンプル式](computed-attributes/expressions.md)
 * チュートリアル {#tutorials}
    * [～へ追加のデータ [!DNL Profile]](tutorials/add-profile-data.md)
    * [サービスのデータセットの [!DNL Profile] & [!DNL Identity] 設定](tutorials/dataset-configuration.md)
