@@ -5,9 +5,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 16%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 16%
       - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
       - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
       - [AzureData Explorerコネクタ](connectors/databases/data-explorer.md)
-      - [Azure Synapse分析コネクタ](connectors/databases/synapse-analytics.md)
+      - [azure synapse分析コネクタ](connectors/databases/synapse-analytics.md)
       - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
       - [Couchbaseコネクタ](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
@@ -101,7 +101,7 @@ ht-degree: 16%
          - [Azure HDInsightsのApache Hive](tutorials/api/create/databases/hive.md)
          - [Azure HDInsightsでのApache Spark](tutorials/api/create/databases/spark.md)
          - [AzureData Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse分析](tutorials/api/create/databases/synapse-analytics.md)
+         - [azure synapse分析](tutorials/api/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージ](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -148,6 +148,7 @@ ht-degree: 16%
    - [データセット接続の作成](tutorials/api/create-dataset-base-connection.md)
    - [データフローの監視](tutorials/api/monitor.md)
    - [接続の更新](tutorials/api/update.md)
+   - [データフローの更新](tutorials/api/update-dataflows.md)
    - [接続の削除](tutorials/api/delete.md)
    - [データフローの削除](tutorials/api/delete-dataflows.md)
 - UIチュートリアル{#ui-tutorials}
@@ -184,7 +185,7 @@ ht-degree: 16%
          - [Azure HDInsightsのApache Hive](tutorials/ui/create/databases/hive.md)
          - [Azure HDInsightsでのApache Spark](tutorials/ui/create/databases/spark.md)
          - [AzureData Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse分析](tutorials/ui/create/databases/synapse-analytics.md)
+         - [azure synapse分析](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azureテーブルストレージ](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Googleビッグクエリ](tutorials/ui/create/databases/bigquery.md)
