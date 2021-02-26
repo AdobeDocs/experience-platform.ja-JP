@@ -3,21 +3,15 @@ keywords: Googleの顧客一致；Googleの顧客一致；Googleの顧客一致
 title: Google Customer Match接続
 description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1432'
 ht-degree: 5%
 
 ---
 
 
 # [!DNL Google Customer Match] connection
-
->[!IMPORTANT]
->
->現在、この移行先の新しいバージョンにお客様を移行中です。
->
-> この記事の説明は、両方のバージョンに当てはまり、次の注意が必要です。この移行の進行中は、現在の[!DNL Google Customer Match]宛先のバージョンのみがユーザーインターフェイスに表示されます。アクティベーションには[!UICONTROL EMAIL]EMAIL[!UICONTROL EMAIL_LC_SHA_256] IDのみを使用できます。
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchを使用すると、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営する次のようなプロパティを通じて顧客に連絡し、顧客と再び関わり合うことができます。 [!DNL Search]、 [!DNL Shopping]、、 [!DNL Gmail]および [!DNL YouTube]。
 
