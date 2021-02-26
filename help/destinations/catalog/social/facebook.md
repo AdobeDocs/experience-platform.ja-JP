@@ -3,21 +3,15 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebookの接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
 translation-type: tm+mt
-source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 22%
+source-wordcount: '942'
+ht-degree: 23%
 
 ---
 
 
 # [!DNL Facebook] connection
-
->[!IMPORTANT]
->
->現在、お客様をこの移行先の新しいバージョン[!DNL Facebook Custom Audience]に移行中です。
->
-> この記事の説明は、両方のバージョンに当てはまり、次の注意が必要です。この移行の進行中は、現在の[!DNL Facebook]宛先のバージョンのみがユーザーインターフェイスに表示されます。アクティベーションには[!UICONTROL EMAIL]EMAIL[!UICONTROL EMAIL_LC_SHA_256] IDのみを使用できます。
 
 ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制のための[!DNL Facebook]キャンペーンのプロファイルをアクティブにします。
 
