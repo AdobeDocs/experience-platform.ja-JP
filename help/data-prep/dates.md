@@ -1,25 +1,43 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；日付；日付関数；日付；
+keywords: Experience Platform；ホーム；人気のあるトピック；マップcsv；マップcsvファイル；マップcsvファイルをxdmに；マップcsvをxdm;ui guide；マップ；マッピング；日付関数；日付関数；日付関数；日付関数
 solution: Experience Platform
 title: データ準備日関数
-topic: overview
-description: このドキュメントでは、データ準備で使用する日付関数を紹介します。
+topic: 概要
+description: このドキュメントでは、データ準備で使用する日付関数を導入します。
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 16%
+source-wordcount: '483'
+ht-degree: 15%
 
 ---
 
 
-# データ準備日の関数
+# Date関数
 
 データ準備は、文字列とdatetimeオブジェクトの両方の日付関数をサポートしています。
 
+## 日付関数の形式
+
+date関数は、文字列およびdatetimeオブジェクトをISO 8601形式のZonedDateTimeオブジェクトに変換します。
+
+**形式**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{DATE}` | 必須。日付を表す文字列です。 |
+| `{FORMAT}` | オプション。日付の形式を表す文字列です。 文字列の形式設定について詳しくは、[日付/時間形式文字列セクション](#format)を参照してください。 |
+| `{DEFAULT_DATE}` | オプション。指定した日付がnullの場合に返されるデフォルトの日付です。 |
+
+例えば、式`date(orderDate, "yyyy-MM-dd")`は、&quot;December 31st, 2020&quot;の`orderDate`値を&quot;2020-12-31&quot;のdatetime値に変換します。
+
 ## 日付関数の変換
 
-入力データからの文字列フィールドが、エクスペリエンスデータモデル(XDM)を使用してスキーマの日付フィールドにマップされる場合、日付形式について明示的に言及する必要があります。 明示的に言及しなかった場合、Data Prepは、入力データを次の形式に対応付けて変換しようとします。 一致する形式が見つかると、それ以降の形式の評価が停止します。
+入力データからの文字列フィールドが、エクスペリエンスデータモデル(XDM)を使用してスキーマの日付フィールドにマップされる場合、日付形式について明示的に言及する必要があります。 明示的に言及しなかった場合、Data Prepは、入力データを次の形式に対応付けて変換しようとします。 一致する形式が見つかると、それ以降の形式の評価は停止します。
 
 ```console
 "yyyy-MM-dd HH:mm:ssZ",
@@ -46,7 +64,7 @@ ht-degree: 16%
 >
 > データ準備では、文字列を可能な限り日付に変換しようとします。 ただし、これらのコンバージョンは望ましくない結果を引き起こす可能性があります。 例えば、文字列値「12112020」は「MMddyyyy」というパターンと一致しますが、ユーザーは「ddMMyyyy」というパターンを使用して読み取る日付を想定している場合があります。 そのため、文字列の日付形式について明示的に言及する必要があります。
 
-## 日付/時間形式文字列
+## 日付/時間形式の文字列{#format}
 
 次の表に、書式文字列に対して定義されるパターン文字を示します。 大文字と小文字が区別されることに注意してください。
 
@@ -77,7 +95,3 @@ ht-degree: 16%
 | V | タイムゾーンID | テキスト | America/Los_Angeles |
 | O | タイムゾーンのオフセット | テキスト | GMT+8 |
 | 質疑応答 | 年の四半期 | 数/テキスト | 3;03;Q3;第3四半期 |
-
-**例**
-
-式`date(orderDate, "yyyy-MM-dd")`は、&quot;December 31st, 2020&quot;の`orderDate`値を&quot;2020-12-31&quot;のdatetime値に変換します。
