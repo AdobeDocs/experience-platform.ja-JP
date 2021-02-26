@@ -2,9 +2,9 @@
 title: platform launchとプラットフォームWeb SDK Extensionを使用したIAB TCF 2.0サポートの統合
 description: IAB TCF 2.0の同意を、Adobe Experience Platform LaunchおよびAdobe Experience PlatformWeb SDK拡張と共に設定する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,9 @@ IAB TCF 2.0をExperience Platform LaunchとPlatform Web SDK拡張と共に使用
 
 ## 既定の同意の設定
 
-拡張機能の設定には、デフォルトの同意の設定があります。 これにより、同意Cookieを持たない顧客の動作が制御されます。 同意Cookieを持たない顧客のエクスペリエンスイベントをキューに入れる場合は、`pending`に設定します。
+拡張機能の設定には、デフォルトの同意の設定があります。 これにより、同意Cookieを持たない顧客の動作が制御されます。 同意Cookieを持たない顧客のエクスペリエンスイベントをキューに入れる場合は、`pending`に設定します。 また、データ要素を使用して、デフォルトの同意値を動的に設定することもできます。
 
->[!NOTE]
->
->現在のところ、Experience Platform Launch拡張機能を使用して動的に設定する方法はありません。
-
-デフォルトの同意について詳しくは、SDK設定ドキュメントの[デフォルトの同意の節](../../fundamentals/configuring-the-sdk.md#default-consent)を参照してください。
+デフォルトの同意の設定方法について詳しくは、SDK設定ガイドの[デフォルトの同意のセクション](../../fundamentals/configuring-the-sdk.md#default-consent)を参照してください。
 
 ## 同意情報{#consent-code-1}を使用してプロファイルを更新中
 
@@ -69,7 +65,7 @@ addEventListener();
 * 値：&quot;%IAB TCF同意文字列%&quot;
 * GDPR適用：&quot;%IAB TCF Consent GDPR%&quot;
 
-![IABの同意の設定](../../../assets/iab_set_consent_action.png)
+![IABの同意の設定](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
