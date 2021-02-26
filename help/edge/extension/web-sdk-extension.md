@@ -2,73 +2,64 @@
 title: Adobe Experience Platform Web SDK 拡張機能 概要
 description: Adobe Experience Platform Launch向けAdobe Experience PlatformWeb SDK Extensionについて
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 53%
+source-wordcount: '560'
+ht-degree: 19%
 
 ---
 
 
 # Adobe Experience PlatformWeb SDK拡張機能の概要
 
-Adobe Experience PlatformWeb SDK Extensionは、Adobe Experience Platformエッジネットワークを介して、WebプロパティからAdobe Experience Cloudにデータを送信します。 Adobe Experience Platform Web SDK 拡張機能を使用すると、プラットフォームへのデータのストリーミング、ID の同期、オプトイン、およびコンテキストデータの自動収集が可能になります。
+Adobe Experience PlatformWeb SDK拡張は、Adobe Experience Platformエッジネットワークを介して、WebプロパティからAdobe Experience Cloudにデータを送信します。 この拡張機能を使用すると、データをプラットフォームにストリーミングしたり、IDを同期したり、顧客の同意シグナルを処理したり、コンテキストデータを自動的に収集したりできます。
+
+このドキュメントでは、Adobe Experience Platform Launchユーザーインターフェイスで拡張機能を設定する方法を説明します。
 
 ## 拡張機能の設定
 
-この節では、Adobe Experience Platform Web SDK 拡張機能を設定する際に使用できるオプションについて説明します。
+Platform Web SDK Extensionが既にプロパティ用にインストールされている場合は、Platform launchUIでプロパティを開き、「**[!UICONTROL Extensions]**」タブを選択します。 「Platform Web SDK」で、「**[!UICONTROL Configure]**」を選択します。
 
-Adobe Experience PlatformWeb SDK拡張機能がまだインストールされていない場合は、プロパティを開き、**[!UICONTROL エクステンション/カタログ]**&#x200B;を選択し、Adobe Experience PlatformWeb SDK拡張機能の上にカーソルを置いて、**[!UICONTROL インストール]**&#x200B;を選択します。
+![](../images/extension/overview/configure.png)
 
-拡張機能を構成するには、「**[!UICONTROL 拡張機能]**」タブを開き、拡張機能の上にマウスポインターを置いて、「**[!UICONTROL 設定]**」を選択します。
+拡張機能をまだインストールしていない場合は、「**[!UICONTROL カタログ]**」タブを選択します。 使用可能な拡張機能のリストから、Platform Web SDK Extensionを探し、「**[!UICONTROL インストール]**」を選択します。
 
-![](./assets/ext-aep-config.png)
+![](../images/extension/overview/install.png)
 
-### インスタンス名
+どちらの場合も、プラットフォームWeb SDKの設定ページに到達します。 以下の節では、拡張機能の設定オプションについて説明します。
 
-Adobe Experience PlatformWeb SDK拡張機能は、ページ上の複数のインスタンスをサポートします。 これは、1 つの Adobe Experience Platform Launch 設定で複数の組織にデータを送信するために使用します。**[!UICONTROL Name]**&#x200B;は、既定でaloyに設定されます。 ただし、インスタンス名は任意の有効な JavaScript オブジェクト名に変更できます。Adobe Experience Platform拡張では、各インスタンスに異なる&#x200B;**[!UICONTROL Config ID]**&#x200B;と異なる&#x200B;**[!UICONTROL 組織ID]**&#x200B;を設定する必要があります。
+![](../images/extension/overview/config-screen.png)
 
-## **[!UICONTROL Config ID]**
+## 一般的な設定オプション
 
-**[!UICONTROL Config ID]**&#x200B;は、データのルーティング先と、サーバで使用する設定をAdobe Experience Platformに指示するものです。 これは、Adobe Experience Platform 拡張機能が動作するために必要です。設定 ID は、ClientCare に問い合わせて取得できます。
+ページ上部の設定オプションは、データのルーティング先と、サーバーで使用する設定をAdobe Experience Platformに指定します。
 
+### [!UICONTROL 名前]
 
-### **[!UICONTROL 組織 ID]**
+Adobe Experience PlatformWeb SDK拡張機能は、ページ上の複数のインスタンスをサポートします。 これは、1 つの Platform Launch 設定で複数の組織にデータを送信するために使用します。
 
+拡張子の名前はデフォルトで「[!DNL alloy]」に設定されます。 ただし、インスタンス名は任意の有効な JavaScript オブジェクト名に変更できます。
 
+### **[!UICONTROL IMS 組織 ID]**
 
-**[!UICONTROL 組織ID]**&#x200B;は、Adobeでのデータ送信先となる組織です。 ほとんどの場合は、自動入力されるデフォルト値を使用する必要があります。ページに複数のインスタンスが存在する場合は、データの送信先となる 2 つ目の組織の値をここに入力します。
+[!UICONTROL IMS組織ID]は、Adobeでのデータ送信先の組織です。 ほとんどの場合は、自動入力されるデフォルト値を使用する必要があります。ページに複数のインスタンスがある場合は、データの送信先となる2つ目の組織の値をこのフィールドに入力します。
 
 ### **[!UICONTROL エッジドメイン]**
 
-**[!UICONTROL Edge Domain]**&#x200B;は、Adobe Experience Platform拡張がデータを送受信するドメインです。 拡張機能では、実稼動用トラフィックにファーストパーティの CNAME を使用する必要があります。デフォルトのサードパーティドメインは開発環境で使用できますが、実稼動環境には適していません。ファーストパーティ CNAME の設定方法については、[ここ](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)で説明します。
+[!UICONTROL Edge Domain]は、Adobe Experience Platform拡張がデータを送受信するドメインです。 拡張機能では、実稼動用トラフィックにファーストパーティの CNAME を使用する必要があります。デフォルトのサードパーティドメインは開発環境で使用できますが、実稼動環境には適していません。ファーストパーティ CNAME の設定方法については、[ここ](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)で説明します。
 
-### **[!UICONTROL エラーを有効にする]**
+## [!UICONTROL エッジ設定]
 
-デフォルトでは、拡張機能でエラーが発生した場合、エラーはコンソールに記録されます。実稼働環境でエラーを非表示にする場合は、「**[!UICONTROL エラーを有効にする]**」チェックボックスをオフにできます。 Platform Launch でデバッグが有効になっている場合は、引き続きエラーが表示されます。
+要求がAdobe Experience Platformエッジネットワークに送信されると、エッジ設定IDを使用してサーバ側設定が参照されます。 これにより、Webサイトでコードを変更することなく、設定を更新できます。
 
-### **[!UICONTROL オプトインを有効にする]**
+詳しくは、[エッジ設定](../fundamentals/edge-configuration.md)のガイドを参照してください。
 
-**[!UICONTROL オプトインを有効にする]**&#x200B;が有効な場合、拡張機能はオプトインが受信されるまでヒットを保持できます。 オプトインの環境設定をおこなうためのアクションが拡張機能に表示されます。
+## [!UICONTROL プライバシー]
 
-### **[!UICONTROL 移行ECIDの有効化]**
+「[!UICONTROL プライバシー]」セクションでは、Webサイトからの顧客の同意シグナルをSDKがどのように処理するかを設定できます。 特に、他の明示的な同意の優先順位が与えられていない場合に、顧客を想定するデフォルトの同意レベルを選択できます。 次の表に、各オプションの内容を示します。
 
-プラットフォームWeb SDK拡張では、新しいCookieを使用してECIDを保存します。 この設定により、移行目的で、新しい cookie と古い cookie の互換性が有効になります。ECID を持つ既存の訪問者がいない場合を除き、この機能を有効にすることを強くお勧めします。
-
-### **[!UICONTROL サードパーティCookieを使用する]**
-
-Adobe Experience Platform は、常にファーストパーティドメインに cookie を保存します。このオプションを使用すると、ファーストパーティドメインの cookie に加えて、demdex.net に設定されたサードパーティ cookie を使用できます。これは、複数のドメイン間を移動するユーザーがいる場合に役立ちます。これにより、demdex.net への呼び出しが無効になります。
-
-### **[!UICONTROL コンテキスト]**
-
-拡張機能は、リクエストのコンテキストに関する情報（URL やブラウザーについての詳細など）を自動的に収集します。これは、特定のコンテキストを選択解除することで無効にできます。
-
-- **[!UICONTROL web]** - url、転送者など、Webページの詳細
-- **[!UICONTROL device]**  — 画面の向き、画面の高さ、画面の幅など、デバイスに関する詳細。
-- **[!UICONTROL 環境]**  — コンピューティング環境（ブラウザ、接続など）に関する情報
-- **[!UICONTROL location]**  — ユーザーの場所に関する制限のある情報
-
-## 次の作業
-
-1. [アクションタイプ](action-types.md)を設定します。
-2. [データ要素の種類](data-element-types.md)を設定します。
+| [!UICONTROL 既定の同意レベル] | 説明 |
+| --- | --- |
+| [!UICONTROL In] | オプトイン。 デフォルトで顧客の同意が得られ、オプトアウトシグナルのみを受け取る場合は、このオプションを使用します。 |
+| [!UICONTROL 保留中] | 「保留中」の同意を持つ顧客は、オプトイン信号が送信されるまで、オプトアウトされていると見なされます。 業務に対する明示的な顧客の同意が必要な場合に、このオプションを使用します。 |
+| [!UICONTROL データ要素によって提供される] | デフォルトの同意レベルは、ユーザーが定義する別のデータ要素によって決定されます。 このオプションを使用する場合は、提供されたドロップダウンメニューを使用してデータ要素を指定する必要があります。 |
