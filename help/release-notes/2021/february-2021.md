@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
+source-git-commit: 2eea954217a8f0cca605cd0435bace59200cacda
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 34%
 
 ---
@@ -25,6 +25,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
 - [[!DNL Real-time Customer Profile]](#profile)
@@ -65,6 +66,16 @@ Adobe Experience Platformでは、様々なソースからデータを取り込�
 | 新しい監視ダッシュボード | ソースデータインジェクションに対して、クロスサービスの透過性と実行可能なインサイトの監視ダッシュボードを使用できるようになりました。 新しい監視ダッシュボードは、[!DNL Data Lake]から[!DNL Identity Service]、[!DNL Profile]に処理されるデータの包括的な表示を提供します。また、取り込み率、成功数、失敗数を監視することもできます。 詳細については、UI](../../dataflows/ui/monitor-sources.md)の[監視ソースのデータフローのチュートリアルを参照してください。 |
 
 データフローの一般的な情報については、[データフローの概要](../../dataflows/home.md)を参照してください。
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] は、目的のプラットフォームと事前にビルドされた統合機能で、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新しい宛先**
+
+| 宛先 | 説明 |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | [!DNL LinkedIn Matched Audiences]接続を使用すると、[!DNL LinkedIn]ソーシャルプラットフォームでオーディエンスをアクティブにできます。 |
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
