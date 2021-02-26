@@ -3,7 +3,7 @@ title: Adobe Experience PlatformWeb SDKでのIAB TCF 2.0のサポート
 description: Adobe Experience PlatformWeb SDKを使用してIAB TCF 2.0の同意の環境設定をサポートする方法を学びます。
 keywords: 同意；setConsent;プロファイルプライバシーMixin；エクスペリエンスイベントプライバシーMixin；プライバシーMixin;IAB TCF 2.0；リアルタイムCDP；リアルタイム顧客データプロファイル
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -66,7 +66,7 @@ XDMエクスペリエンスイベントをAnalyticsヒットに変換する方�
 
 既定の同意は、既に顧客に保存されている同意の優先順位がない場合に使用されます。 つまり、デフォルトの同意オプションで、Adobe Experience PlatformWeb SDKの動作を制御し、お客様の地域に基づいて変更を行うことができます。
 
-たとえば、GDPR(General Data Protection Regulation)の管轄区域外のお客様がいる場合、デフォルトの同意は`in`に設定できますが、GDPRの管轄区域内では`pending`に設定できます。 クラウド管理プラットフォーム(CMP)は、顧客の地域を検出し、IAB TCF 2.0にフラグ`gdprApplies`を提供します。このフラグは、デフォルトの同意を設定するために使用できます。
+たとえば、GDPR(General Data Protection Regulation)の管轄区域外のお客様がいる場合、デフォルトの同意は`in`に設定できますが、GDPRの管轄区域内では`pending`に設定できます。 お客様の同意管理プラットフォーム(CMP)がお客様の地域を検出し、IAB TCF 2.0にフラグ`gdprApplies`を提供する場合があります。このフラグは、デフォルトの同意を設定するために使用できます。
 
 デフォルトの同意について詳しくは、SDK設定ドキュメントの[デフォルトの同意の節](../../fundamentals/configuring-the-sdk.md#default-consent)を参照してください。
 
