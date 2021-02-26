@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；イベントハブ；Azureイベントハブ；イベントハブ
 solution: Experience Platform
 title: Flow Service APIを使用してAzureイベントハブのソース接続を作成する
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Flow Service APIを使用して、Adobe Experience PlatformをAzureイベントハブアカウントに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 25%
+source-wordcount: '568'
+ht-degree: 26%
 
 ---
 
@@ -90,7 +90,7 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for Event Hubs",
+            "specName": "Azure EventHub authentication credentials",
             "params": {
                 "sasKeyName": "sasKeyName",
                 "sasKey": "sasKey",
