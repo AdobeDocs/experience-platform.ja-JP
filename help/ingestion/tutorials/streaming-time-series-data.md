@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング取り込み；取り込み；時系列データ；時系列データ；ストリーム時系列データ；
 solution: Experience Platform
 title: ストリーミング取り込みAPIを使用した時系列データのストリーム配信
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '1236'
-ht-degree: 71%
+source-wordcount: '1313'
+ht-degree: 66%
 
 ---
 
@@ -316,9 +316,11 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 以下のリクエスト例では、ソース名が見つからない時系列データをプラットフォームに取り込みます。 データにソース名がない場合は、ストリーミング接続定義からソースIDが追加されます。
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> 独自の `xdmEntity._id` および `xdmEntity.timestamp` を生成する必要があります。ID を生成する良い方法は、UUID を使用することです。また、次の API 呼び出しでは、認証ヘッダーは必要あり&#x200B;**ません**。
+> 独自の `xdmEntity._id` および `xdmEntity.timestamp` を生成する必要があります。IDを生成する良い方法は、データ準備でUUID関数を使用することです。 UUID関数の詳細については、[『データ準備関数』ガイド](../../data-prep/functions.md)を参照してください。 `xdmEntity._id`属性は、レコード自体の一意の識別子を表し、レコードを持つ個人またはデバイスの一意のIDではなく、****&#x200B;レコード自体の一意の識別子を表します。 個人IDまたはデバイスIDは、スキーマの個人IDまたはデバイスIDとして割り当てられる属性に固有です。
+>
+>時系列データに必要なフィールドは、`xdmEntity._id`と`xdmEntity.timestamp`の両方です。 また、次の API 呼び出しでは、認証ヘッダーは必要あり&#x200B;**ません**。
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
