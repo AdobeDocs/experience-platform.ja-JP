@@ -3,10 +3,10 @@ title: Adobe Experience PlatformWeb SDKを使用した顧客同意の環境設�
 description: Adobe Experience PlatformWeb SDKを使用して、同意の環境設定をサポートする方法を説明します。
 keywords: 同意；defaultConsent;default consent;setConsent;プロファイルプライバシーミックスイン；エクスペリエンスイベントプライバシーミックスイン；プライバシーミックスイン；
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 58%
+source-wordcount: '753'
+ht-degree: 57%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 58%
 ユーザーがすべての目的をオプトインした場合、SDK は次のタスクを実行できます。
 
 * アドビのサーバーとの間でデータを送信する。
-* Cookie または Web ストレージ項目の読み取りと書き込み（ユーザーのオプトイン設定を保持する場合を除く）。
+* CookieまたはWebストレージー項目を読み取って書き込みます。
 
 ユーザーがすべての目的をオプトアウトした場合、SDK は次のタスクを実行しません。
 
