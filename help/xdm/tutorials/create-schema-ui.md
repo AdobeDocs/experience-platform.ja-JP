@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ui;UI;XDM;XDM system；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマエディタ；スキーマエディタ；スキーマ;スキーマ;スキーマ；作成
 solution: Experience Platform
 title: スキーマエディタを使用したスキーマの作成
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3600'
+source-wordcount: '3602'
 ht-degree: 18%
 
 ---
@@ -102,7 +102,7 @@ Mixinをプレビューする際、Mixinのスキーマの詳細が右側のパ�
 >
 >フィールドは、スカラー型（文字列、整数、配列、日付など）と、[!DNL Schema Registry]内で定義された任意のデータ型（共通の概念を表すフィールドのグループ）を使用できます。
 
-`name`フィールドのデータ型は「[!UICONTROL 人名]」です。つまり、一般的な概念を表し、名、姓、敬称、敬称、接尾辞など、名前に関連するサブフィールドが含まれます。
+`name`フィールドのデータ型は「[!UICONTROL 人名]」です。つまり、一般的な概念を表し、名、姓、敬称、敬称、接尾辞などの名前関連のサブフィールドが含まれます。
 
 キャンバス内の別のフィールドを選択すると、スキーマ構造に影響を与える追加のフィールドが表示されます。
 
