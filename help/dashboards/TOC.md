@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platformダッシュボードヘルプ
+user-guide-title: Adobe Experience Platform ダッシュボードのヘルプ
 breadcrumb-title: ダッシュボードガイド
-user-guide-description: カスタマイズ可能なダッシュボードのExperience Platformデータを視覚化します。
+user-guide-description: カスタマイズ可能なダッシュボードで Experience Platform データを視覚化します。
 translation-type: tm+mt
 source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
 workflow-type: tm+mt
 source-wordcount: '34'
-ht-degree: 20%
+ht-degree: 61%
 
 ---
 
