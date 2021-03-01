@@ -3,9 +3,9 @@ title: Adobe Experience PlatformWeb SDKコマンドの実行
 description: Experience Platform Web SDK コマンドの実行方法について説明します
 keywords: コマンドの実行；commandName;Promises;getLibraryInfo;responseオブジェクト；同意；
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '416'
 ht-degree: 70%
 
 ---
@@ -13,7 +13,8 @@ ht-degree: 70%
 
 # コマンドの実行
 
-Web ページにベースコードが実装されたら、SDK を使用してコマンドの実行を開始できます。コマンドを実行する前に、外部ファイル(aloy.js)がサーバーから読み込まれるのを待つ必要はありません。 SDK が読み込みを完了していない場合、コマンドはキューに追加され、できるだけ早く SDK によって処理されます。
+
+Web ページにベースコードが実装されたら、SDK を使用してコマンドの実行を開始できます。コマンドを実行する前に、サーバから外部ファイル(`alloy.js`)が読み込まれるのを待つ必要はありません。 SDK が読み込みを完了していない場合、コマンドはキューに追加され、できるだけ早く SDK によって処理されます。
 
 コマンドは、次の構文を使用して実行されます。
 
