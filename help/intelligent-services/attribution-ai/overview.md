@@ -8,7 +8,7 @@ landing-page-description: Attribution AI は、コンバージョンイベント
 translation-type: tm+mt
 source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '501'
 ht-degree: 90%
 
 ---
