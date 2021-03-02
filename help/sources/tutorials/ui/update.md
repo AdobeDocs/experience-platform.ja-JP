@@ -3,13 +3,13 @@ keywords: Experience Platform；ホーム；人気の高いトピック；アカ
 description: 状況によっては、既存のソースアカウントの詳細の更新が必要になる場合があります。 ソースワークスペースでは、既存のバッチ接続またはストリーミング接続（名前、説明、秘密鍵証明書など）の詳細を追加、編集および削除できます。
 solution: Experience Platform
 title: UIでのソース接続アカウントの詳細の更新
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 translation-type: tm+mt
-source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
+source-git-commit: 04cf2cc1f15d9a673a0753643fc6263bcaf41464
 workflow-type: tm+mt
 source-wordcount: '681'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -26,8 +26,8 @@ ht-degree: 3%
 
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
-- [ソース](../../home.md):DNLExperience Platformを使用すると、様々なソースからデータを取り込むことができ、プラットフォームサービスを使用して、受信データの構造、ラベル付け、拡張を行うことができます。
-- [サンドボックス](../../../sandboxes/home.md):DNLExperience Platformは、1つのプラットフォームインスタンスを別々の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
+- [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
+- [サンドボックス](../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 ## アカウントの更新
 
