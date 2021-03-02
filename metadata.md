@@ -1,6 +1,7 @@
 ---
 cloud: experience-cloud
 product: adobe experience platform
+feature-set: Platform
 solution-title: Platform の概要
 solution-hub-url: https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
@@ -10,13 +11,13 @@ tutorials-title: チュートリアル
 tutorials-url: https://docs.adobe.com/content/help/ja-JP/experience-platform/tutorials/home.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.ja-JP
 solution: Experience Platform
-type: Documentation
+type: ドキュメント
 index: true
 translation-type: tm+mt
-source-git-commit: ffa637c7a0c30bb1b41746b2278f00e40aa2e11e
+source-git-commit: 100e17f44c3af2a888d92d982ae3b2de1ed45ec5
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
