@@ -4,7 +4,7 @@ title: 表示先の詳細
 description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 seo-description: '個々の宛先の詳細ページには、宛先名、ID、宛先にマッピングされたセグメントなど、宛先の詳細の概要が表示され、アクティベーションを編集したり、データフローを有効／無効化したりするコントロールが表示されます。 '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 15%
@@ -79,7 +79,7 @@ Adobe Experience Platformユーザーインターフェイスでは、宛先の�
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL アクティベーションデータ]
+## [!UICONTROL アクティベーションデータ] {#activation-data}
 
 「[!UICONTROL アクティベーションデータ]」タブには、開始日と終了日（該当する場合）を含む、宛先にマッピングされたセグメントのリストが表示されます。 特定のセグメントの詳細を表示するには、リストからセグメント名を選択します。
 
