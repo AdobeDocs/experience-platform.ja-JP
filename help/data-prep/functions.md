@@ -5,9 +5,9 @@ title: データ準備マッピング関数
 topic: 概要
 description: このドキュメントでは、データ準備で使用するマッピング関数を紹介します。
 translation-type: tm+mt
-source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
+source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3719'
 ht-degree: 18%
 
 ---
@@ -94,30 +94,30 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | get_url_protocol | 渡されたURLからプロトコルを返します。 入力が無効な場合は、nullを返します。 | <ul><li>URL:**必須**&#x200B;プロトコルの抽出元URL。</li></ul> | get_url_&#x200B;protocol(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
-| get_url_host | 指定されたURLのホストを返します。 入力が無効な場合は、nullを返します。 | <ul><li>URL:**必須**&#x200B;ホストの抽出元のURL。</li></ul> | get_url_&#x200B;host(URL) | get_url_host&#x200B;(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
-| get_url_port | 指定されたURLのポートを返します。 入力が無効な場合は、nullを返します。 | <ul><li>URL:**必須**&#x200B;ポートの抽出元のURL。</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
-| get_url_path | 指定されたURLのパスを返します。 デフォルトでは、フルパスが返されます。 | <ul><li>URL:**必須**&#x200B;パスの抽出元のURL。</li><li>FULL_PATH:*オプション*&#x200B;完全パスが返されるかどうかを決定するブール値。 falseに設定した場合は、パスの末尾のみが返されます。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
-| get_url_クエリ_str | 指定されたURLのクエリ文字列を返します。 | <ul><li>URL:**必須**&#x200B;クエリ文字列を取得しようとしているURL。</li><li>アンカー：**必須**&#x200B;クエリ文字列内のアンカーに対して行う処理を決定します。 次の3つの値のいずれかを指定できます。&quot;retain&quot;、&quot;remove&quot;、または&quot;append&quot;。<br><br>値が「retain」の場合、返される値にアンカーが関連付けられます。<br>値が「remove」の場合、戻り値からアンカーが削除されます。<br>値が「append」の場合、アンカーは別の値として返されます。</li></ul> | get_url_&#x200B;クエリ_str(URL, ANCHOR) | get_url_query_str&#x200B;(&quot;foo://example.com:8042/over/&#x200B;there?&#x200B;url#nose, &quot;retain&quot;, &quot;retain&quot;)<br>get_url_query_&#x200B;str(&quot;foo://example.com:8042?name str&#x200B;#over?nose>get_str_name?#nose&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_host | 渡されたURLのホストを返します。 入力が無効な場合は、nullを返します。 | <ul><li>URL:**必須**&#x200B;ホストの抽出元URL。</li></ul> | get_url_&#x200B;host(URL) | get_url_&#x200B;host(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
+| get_url_port | 渡されたURLのポートを返します。 入力が無効な場合は、nullを返します。 | <ul><li>URL:**必須**&#x200B;ポートの抽出元URL。</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
+| get_url_path | 渡されたURLのパスを返します。 デフォルトでは、フルパスが返されます。 | <ul><li>URL:**必須**&#x200B;パスの抽出元URL。</li><li>FULL_PATH:*オプション*&#x200B;フルパスが返されるかどうかを指定するboolean値。 falseに設定した場合は、パスの終わりのみが返されます。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
+| get_url_クエリ_str | 渡されたURLのクエリ文字列を返します。 | <ul><li>URL:**必須**&#x200B;クエリ文字列の取得元のURL。</li><li>アンカー：**必須**&#x200B;クエリ文字列内のアンカーの処理を指定します。 次の3つの値のいずれかになります。&quot;retain&quot;、&quot;remove&quot;または&quot;append&quot;。<br><br>値が「retain」の場合、返される値にアンカーが割り当てられます。<br>値が「remove」の場合、返される値からアンカーが削除されます。<br>値が「append」の場合、アンカーは別の値として返されます。</li></ul> | get_url_&#x200B;クエリ_str(URL, ANCHOR) | get_url_&#x200B;クエリ_str(&quot;foo://example.com:8042/over/there?ferret#nose&#x200B;, &quot;retain&quot;&#x200B;?ferret#nose=<br>get_url_クエリ_str(&quot;foo://example.com:8042&#x200B;/there?name=nose>get_nose&lt;nose>get_get_noser_str_name foo://example.com?=ferret#nose&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### 日付および時間関数
 
 >[!NOTE]
 >
->テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。`date`関数に関する詳細は、[date関数ガイド](./dates.md)を参照してください。
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。`date`関数の詳細については、[日付関数ガイド](./dates.md)を参照してください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | now | 現在の時刻を取得します。 |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 現在の Unix 時間を取得します。 |  | timestamp() | timestamp() | 1571850624571 |
-| format | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付：**必須**&#x200B;形式を設定する入力日。ZonedDateTimeオブジェクトとして指定します。</li><li>形式：**必須**&#x200B;日付を変更する形式。</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>タイムスタンプ：**必須**&#x200B;フォーマットするタイムスタンプ。 これはミリ秒で書き込まれます。</li><li>形式：**必須**&#x200B;タイムスタンプを変更する形式。</li></ul> | dformat &#x200B; (TIMESTAMP, FORMAT) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-Oct-2019 11:24&quot; |
-| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付：**必須**&#x200B;日付を表す文字列。</li><li>形式：**必須**&#x200B;日付の形式を表す文字列。</li><li>DEFAULT_DATE:**必須**&#x200B;指定した日付がnullの場合は、返されるデフォルトの日付。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
+| format | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付：**必須** ZonedDateTimeオブジェクトとしての、フォーマットする入力日。</li><li>形式：**必須**&#x200B;日付の変更先の形式。</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
+| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>TIMESTAMP:**必須**&#x200B;形式を設定するタイムスタンプ。 これはミリ秒で書き込まれます。</li><li>形式：**必須**&#x200B;タイムスタンプを変更する形式。</li></ul> | dformat &#x200B;(TIMESTAMP, FORMAT) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-Oct-2019 11:24&quot; |
+| date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付：**必須**&#x200B;日付を表す文字列。</li><li>形式：**必須**&#x200B;日付の形式を表す文字列。</li><li>DEFAULT_DATE:**必須**&#x200B;指定された日付がnullの場合は、デフォルトの日付が返されます。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
 | date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付：**必須**&#x200B;日付を表す文字列。</li><li>形式：**必須**&#x200B;日付の形式を表す文字列。</li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付：**必須**&#x200B;日付を表す文字列。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
-| date_part | 日付の一部を取得します。次のコンポーネント値がサポートされています。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;millisecond&quot;<br>&quot;ms&quot; | <ul><li>コンポーネント：**必須**&#x200B;日付の一部を表す文字列。 </li><li>日付：**必須**&#x200B;日付。標準形式で指定します。</li></ul> | date_part &#x200B; (COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
-| set_date_part | 指定された日付のコンポーネントを置き換えます。次のコンポーネントが受け入れられます。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>コンポーネント：**必須**&#x200B;日付の一部を表す文字列。 </li><li>値：**必須**&#x200B;指定した日付のコンポーネントに設定する値。</li><li>日付：**必須**&#x200B;日付。標準形式で指定します。</li></ul> | set_date_part&#x200B;(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
-| make_date_time | 部分から日付を作成します。この関数は、make_timestampを使用して誘導することもできます。 | <ul><li>年：**必須**&#x200B;年。4桁で記述します。</li><li>月：**必須**&#x200B;月。 指定できる値は1 ～ 12です。</li><li>日：**必須**&#x200B;日。 指定できる値は1 ～ 31です。</li><li>時間：**必須**&#x200B;時。 指定できる値は0 ～ 23です。</li><li>分：**必須**&#x200B;分。 指定できる値は0 ～ 59です。</li><li>ナノ秒：**必須**&#x200B;ナノ秒の値。 指定できる値は0 ～ 99999999です。</li><li>タイムゾーン：**必須**&#x200B;日時のタイムゾーン。</li></ul> | make_date_time &#x200B;(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time&#x200B;(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
-| zone_date_to_utc | タイムゾーンの日付をUTCの日付に変換します。 | <ul><li>日付：**必須**&#x200B;変換しようとしている日付。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12.000000999-&#x200B;07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
+| date_part | 日付の一部を取得します。次のコンポーネント値がサポートされています。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;quarter&quot;<br>&quot;qq&quot;<br>&quot;q&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;dayofyear&quot;<br>&quot;dy&quot;<br>&quot;y&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;week&quot;<br>&quot;ww&quot;<br>&quot;w&quot;<br><br>&quot;weekday&quot;<br>&quot;dw&quot;<br>&quot;w&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br>&quot;hh24&quot;<br>&quot;hh12&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot;<br><br>&quot;millisecond&quot;<br>&quot;ms&quot; | <ul><li>コンポーネント：**必須**&#x200B;日付の一部を表す文字列。 </li><li>日付：**必須**&#x200B;標準形式の日付。</li></ul> | date_part&#x200B;(COMPONENT, DATE) | date_part(&quot;MM&quot;, date(&quot;2019-10-17 11:55:12&quot;)) | 10 |
+| set_date_part | 指定された日付のコンポーネントを置き換えます。次のコンポーネントが受け入れられます。<br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>コンポーネント：**必須**&#x200B;日付の一部を表す文字列。 </li><li>値：**必須**&#x200B;指定した日付のコンポーネントに設定する値。</li><li>日付：**必須**&#x200B;標準形式の日付。</li></ul> | set_date_part&#x200B;(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44.797&quot; |
+| make_date_time | 部分から日付を作成します。この関数は、make_timestampを使用して誘導することもできます。 | <ul><li>年：**必須**&#x200B;年、4桁で表記。</li><li>MONTH:**必須**&#x200B;月。 指定できる値は1 ～ 12です。</li><li>DAY:**必須**&#x200B;日。 指定できる値は1 ～ 31です。</li><li>HOUR:**必須**&#x200B;時間。 指定できる値は0 ～ 23です。</li><li>分：**必須**&#x200B;分。 指定できる値は0 ～ 59です。</li><li>ナノ秒：**必須**&#x200B;ナノ秒値。 指定できる値は0 ～ 99999999です。</li><li>TIMEZONE:**必須**&#x200B;日付時間のタイムゾーン。</li></ul> | make_date_time&#x200B;(YEAR, MONTH, DAY, HOUR, MINUTE, SECOND, NANOSECOND, TIMEZONE) | make_date_time&#x200B;(2019, 10, 17, 11, 55, 12, 999, &quot;America/Los_Angeles&quot;) | `2019-10-17T11:55:12.0&#x200B;00000999-07:00[America/Los_Angeles]` |
+| zone_date_to_utc | 任意のタイムゾーンの日付をUTCで表した日付に変換します。 | <ul><li>日付：**必須**&#x200B;変換しようとしている日付。</li></ul> | zone_date_to_utc&#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12.000000999-&#x200B;07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
 | zone_date_to_zone | あるタイムゾーンの日付を別のタイムゾーンに変換します。 | <ul><li>日付：**必須**&#x200B;変換しようとしている日付。</li><li>ゾーン：**必須**&#x200B;日付を変換しようとしているタイムゾーン。</li></ul> | zone_date_to_zone&#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:12&#x200B;.000000999-07:00&#x200B;[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
 
 &#x200B;
@@ -131,12 +131,12 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | size_of | 入力のサイズを返します。 | <ul><li>入力：**必須**&#x200B;サイズを調べようとしているオブジェクト。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| is_empty | オブジェクトが空かどうかをチェックします。 | <ul><li>入力：**必須**&#x200B;確認しようとしているオブジェクトは空です。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
-| arrays_to_object | オブジェクトのリストを作成します。 | <ul><li>入力：**必須**&#x200B;キーと配列のペアのグループ。</li></ul> | arrays_to_object(INPUT) | サンプルが必要 | サンプルが必要 |
-| to_object | 指定されたフラットキー/値ペアに基づいてオブジェクトを作成します。 | <ul><li>入力：**必須**&#x200B;キー/値ペアのフラットなリスト。</li></ul> | to_object(INPUT) | to_&#x200B;object(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
-| str_to_object | 入力ストリングからオブジェクトを作成します。 | <ul><li>文字列：**必須**&#x200B;オブジェクトを作成するために解析されるストリング。</li><li>VALUE_DELIMITER:*オプション*&#x200B;フィールドと値を区切る区切り記号。 デフォルトの区切り文字は`:`です。</li><li>FIELD_DELIMITER:*オプション*&#x200B;フィールド値のペアを区切る区切り記号。 デフォルトの区切り文字は`,`です。</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | phone - 123 456 7890&quot;、&quot;-&quot;、&quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
-| is_set | オブジェクトがソースデータ内に存在するかどうかをチェックします。 | <ul><li>入力：**必須**&#x200B;ソースデータ内に存在する場合に確認するパス。</li></ul> | is_set(INPUT) | is_set&#x200B;(&quot;evars.evar.field1&quot;) | true |
-| 無効にする | 属性の値を`null`に設定します。 これは、ターゲットスキーマにフィールドをコピーしない場合に使用します。 |  | nullify() | nullify() | `null` |
+| is_empty | オブジェクトが空かどうかをチェックします。 | <ul><li>入力：**必須**&#x200B;確認しようとしているオブジェクトが空です。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
+| arrays_to_object | オブジェクトのリストを作成します。 | <ul><li>入力：**必須**&#x200B;キーと配列のペアのグループ。</li></ul> | arrays_to_object(INPUT) | 必要なサンプル | 必要なサンプル |
+| to_object | 指定されたフラットなキー/値のペアに基づいてオブジェクトを作成します。 | <ul><li>入力：**必須**&#x200B;キーと値のペアのフラットリスト。</li></ul> | to_object(INPUT) | to_&#x200B;object(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
+| str_to_object | 入力文字列からオブジェクトを作成します。 | <ul><li>文字列：**必須**&#x200B;オブジェクトを作成するために解析される文字列。</li><li>VALUE_DELIMITER:*オプション*&#x200B;フィールドと値を区切る区切り文字。 デフォルトの区切り文字は`:`です。</li><li>FIELD_DELIMITER:*オプション*&#x200B;フィールド値のペアを区切る区切り文字。 デフォルトの区切り文字は`,`です。</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | 電話 — 123 456 7890&quot;、&quot;-&quot;、&quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
+| is_set | オブジェクトがソースデータ内に存在するかどうかを確認します。 | <ul><li>入力：**必須**&#x200B;ソースデータ内に存在する場合に確認するパス。</li></ul> | is_set(INPUT) | is_set&#x200B;(&quot;evars.evar.field1&quot;) | true |
+| 無効にする | 属性の値を`null`に設定します。 これは、フィールドをターゲットスキーマにコピーしない場合に使用します。 |  | nullify() | nullify() | `null` |
 
 ### 階層 — 配列
 
@@ -146,10 +146,12 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| coalesce | 渡された配列の最初のnull以外のオブジェクトを返します。 | <ul><li>入力：**必須** NULL以外の最初のオブジェクトを検索する配列。</li></ul> | coalesce(INPUT)[coalesce(INPUT)] | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
-| first | 指定された配列の最初のエレメントを取得します。 | <ul><li>入力：**必須**&#x200B;最初の要素を検索する配列。</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
-| last | 指定された配列の最後のエレメントを取得します。 | <ul><li>入力：**必須**&#x200B;最後の要素を検索する配列。</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
-| to_array | 入力のリストを取得し、配列に変換します。 | <ul><li>INCLUDE_NULLS:**必須**&#x200B;応答配列にNULLを含めるかどうかを示すブール値。</li><li>値：**必須**&#x200B;配列に変換する要素。</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
+| coalesce | 渡された配列の最初のnull以外のオブジェクトを返します。 | <ul><li>入力：**必須** NULLでない最初のオブジェクトを探す配列。</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
+| first | 渡された配列の最初の要素を取得します。 | <ul><li>入力：**必須**&#x200B;最初の要素を探す配列。</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
+| last | 渡された配列の最後の要素を取得します。 | <ul><li>入力：**必須**&#x200B;最後の要素を探す配列。</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
+| add_to_array | 配列の末尾に要素を追加します。 | <ul><li>配列：**必須**&#x200B;要素を追加する配列。</li><li>値：配列に追加する要素です。</li></ul> | add_to_array&#x200B;(ARRAY, VALUES) | add_to_array&#x200B;([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;、&#39;b&#39;、&#39;c&#39;、&#39;d&#39;] |
+| join_arrays | 配列を結合します。 | <ul><li>配列：**必須**&#x200B;要素を追加する配列。</li><li>値：親配列に追加する配列。</li></ul> | join_arrays&#x200B;(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [「a」、「b」、「c」、「d」、「e」] |
+| to_array | 入力のリストを取り、配列に変換します。 | <ul><li>INCLUDE_NULLS:**必須**&#x200B;応答配列にNULLを含めるかどうかを示すboolean値。</li><li>値：**必須**&#x200B;配列に変換する要素。</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
 ### 論理演算子
 
@@ -159,8 +161,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| decode | キーと、キーと値のペアのリストが配列としてフラット化されている場合、この関数は、キーが見つかった場合は値を返し、デフォルト値が配列に存在する場合はデフォルト値を返します。 | <ul><li>キー：**必須**&#x200B;照合するキー。</li><li>OPTIONS:**必須**&#x200B;キー/値のペアの統合された配列。 必要に応じて、最後にデフォルト値を付けることもできます。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 指定されたstateCodeが&quot;ca&quot;, &quot;California&quot;の場合。<br>指定されたstateCodeが「pa」、「ペンシルベニア」の場合<br>stateCodeが次の&quot;N/A&quot;と一致しない場合 |
-| iif | 指定されたブール式を評価し、結果に基づいて指定された値を返します。 | <ul><li>式：**必須**&#x200B;評価されるブール式。</li><li>TRUE_VALUE:**必須**&#x200B;式の評価結果がtrueの場合に返される値。</li><li>FALSE_VALUE:**必須**&#x200B;式の評価結果がfalseの場合に返される値。</li></ul> | iif(式, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
+| decode | キーと、キーと値のペアのリストが配列としてフラット化されている場合、この関数は、キーが見つかった場合は値を返し、デフォルト値が配列に存在する場合はデフォルト値を返します。 | <ul><li>キー：**必須**&#x200B;一致するキー。</li><li>OPTIONS:**必須**&#x200B;キーと値のペアのフラットな配列。 オプションで、デフォルト値を末尾に配置できます。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 渡されたstateCodeが「ca」、「California」の場合。<br>指定されたstateCodeが「pa」、「Pennsylvania」の場合。<br>stateCodeが次の値と一致しない場合は、「N/A」となります。 |
+| iif | 指定されたブール式を評価し、結果に基づいて指定された値を返します。 | <ul><li>式:**必須**&#x200B;評価するブール値式。</li><li>TRUE_VALUE:**必須**&#x200B;式がtrueと評価された場合に返される値。</li><li>FALSE_VALUE:**必須**&#x200B;式の評価結果がfalseの場合に返される値。</li></ul> | iif(式, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
 ### 集計
 
@@ -170,8 +172,8 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| min | 指定された引数の最小値を返します。自然な順序を使用します。 | <ul><li>OPTIONS:**必須**&#x200B;相互に比較できる1つ以上のオブジェクト。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
-| max | 指定された引数の最大値を返します。自然な順序を使用します。 | <ul><li>OPTIONS:**必須**&#x200B;相互に比較できる1つ以上のオブジェクト。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
+| min | 指定された引数の最小値を返します。自然な順序を使用します。 | <ul><li>OPTIONS:**必須**&#x200B;互いに比較できる1つ以上のオブジェクト。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
+| max | 指定された引数の最大値を返します。自然な順序を使用します。 | <ul><li>OPTIONS:**必須**&#x200B;互いに比較できる1つ以上のオブジェクト。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 ### 型変換
 
@@ -181,9 +183,9 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| to_bigint | 文字列をBigIntegerに変換します。 | <ul><li>文字列：**必須** BigIntegerに変換する文字列です。</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;100000.34&quot;) | 1000000.34 |
-| to_decimal | ストリングをDoubleに変換します。 | <ul><li>文字列：**必須** Double型に変換する文字列。</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
-| to_float | ストリングをFloatに変換します。 | <ul><li>文字列：**必須** Floatに変換するストリング。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
+| to_bigint | 文字列をBigIntegerに変換します。 | <ul><li>文字列：**必須** BigIntegerに変換する文字列。</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;1000000.34&quot;) | 1000000.34 |
+| to_decimal | 文字列を重複に変換します。 | <ul><li>文字列：**必須**&#x200B;重複に変換する文字列。</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
+| to_float | 文字列を浮動小数点数型(Float)に変換します。 | <ul><li>文字列：**必須**&#x200B;浮動小数点型に変換する文字列。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | 文字列を整数型(Integer)に変換します。 | <ul><li>文字列：**必須**&#x200B;整数に変換する文字列。</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
 ### JSON関数
@@ -194,7 +196,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| json_to_object | 指定されたストリングからJSONコンテンツのシリアル化を解除します。 | <ul><li>文字列：**必須**&#x200B;非直列化するJSONストリング。</li></ul> | json_to_object &#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}}) | JSONを表すオブジェクト。 |
+| json_to_object | 渡された文字列からJSONコンテンツを逆シリアル化します。 | <ul><li>文字列：**必須**&#x200B;デシリアライズするJSON文字列。</li></ul> | json_to_object &#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}}) | JSONを表すオブジェクト。 |
 
 ### 特別な操作
 
@@ -206,7 +208,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | 擬似ランダム ID を生成します。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### ユーザーエージェント関数
+### ユーザーエージェント機能
 
 >[!NOTE]
 >
@@ -214,11 +216,11 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 -------- | ----------- | ---------- | -------| ---------- | -------------
-| ua_os_name | ユーザーエージェント文字列からオペレーティングシステム名を抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
-| ua_os_version_major | ユーザーエージェント文字列からオペレーティングシステムのメジャーバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_os_version_major(&#x200B;USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
-| ua_os_version | ユーザーエージェント文字列からオペレーティングシステムのバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
-| ua_os_name_version | ユーザーエージェント文字列からオペレーティングシステムの名前とバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
-| ua_agent_version | ユーザーエージェント文字列からエージェントのバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
-| ua_agent_version_major | ユーザー・エージェント文字列からエージェント名とメジャー・バージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_agent_version_major(&#x200B;USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
-| ua_agent_name | ユーザー・エージェント文字列からエージェント名を抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
-| ua_device_class | ユーザーエージェント文字列からデバイスクラスを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェントの文字列。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46(KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Phone |
+| ua_os_name | ユーザーエージェント文字列からオペレーティングシステム名を抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
+| ua_os_version_major | ユーザーエージェント文字列からオペレーティングシステムのメジャーバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
+| ua_os_version | ユーザーエージェント文字列からオペレーティングシステムのバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
+| ua_os_name_version | ユーザーエージェント文字列からオペレーティングシステムの名前とバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_name_version&#x200B;(USER_AGENT) | ua_os_name_version&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
+| ua_agent_version | ユーザーエージェント文字列からエージェントバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_agent_version&#x200B;(USER_AGENT) | ua_agent_version&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
+| ua_agent_version_major | ユーザーエージェント文字列からエージェント名とメジャーバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_agent_version_major &#x200B;(USER_AGENT) | ua_agent_version_major&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
+| ua_agent_name | ユーザーエージェント文字列からエージェント名を抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_agent_name&#x200B;(USER_AGENT) | ua_agent_name&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
+| ua_device_class | ユーザーエージェント文字列からデバイスクラスを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_device_class&#x200B;(USER_AGENT) | ua_device_class&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Phone |
