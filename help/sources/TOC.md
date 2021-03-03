@@ -4,10 +4,11 @@ audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
+feature: データ取り込み、ソース
 translation-type: tm+mt
-source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '577'
 ht-degree: 16%
 
 ---
@@ -65,7 +66,7 @@ ht-degree: 16%
       - [Oracleコネクタ](connectors/databases/oracle.md)
       - [フェニックスコネクタ](connectors/databases/phoenix.md)
       - [PostgreSQLコネクタ](connectors/databases/postgres.md)
-   - eコマース{#ecommerce}
+   - e コマース {#ecommerce}
       - [Shopifyコネクタ](connectors/ecommerce/shopify.md)
    - マーケティングの自動化{#marketing-automation}
       - [HubSpotコネクタ](connectors/marketing-automation/hubspot.md)
@@ -113,7 +114,7 @@ ht-degree: 16%
          - [フェニックス](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - eコマース{#ecommerce}
+      - e コマース {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - マーケティングの自動化{#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
@@ -197,7 +198,7 @@ ht-degree: 16%
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [フェニックス](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
-      - eコマース{#ecommerce}
+      - e コマース {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - マーケティングの自動化{#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
