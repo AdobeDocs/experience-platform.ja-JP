@@ -3,21 +3,22 @@ cloud: experience-cloud
 product: adobe experience platform
 feature-set: Platform
 solution-title: Platform の概要
-solution-hub-url: https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/home.html
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: ドキュメント
-getting-started-url: https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/documentation/overview.html
+getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html
 tutorials-title: チュートリアル
-tutorials-url: https://docs.adobe.com/content/help/ja-JP/experience-platform/tutorials/home.html
+tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.ja-JP
 solution: Experience Platform
 type: ドキュメント
 index: true
+role: アーキテクト，開発者，データ・アーキテクト，データ・エンジニア，ビジネス実践者，管理者，リーダー
 translation-type: tm+mt
-source-git-commit: 100e17f44c3af2a888d92d982ae3b2de1ed45ec5
+source-git-commit: 467edb785bd3c8609d2fc64183edd1d7b34d7e86
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '147'
+ht-degree: 82%
 
 ---
 
