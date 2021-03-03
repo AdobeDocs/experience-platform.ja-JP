@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK 拡張機能 概要
 description: Adobe Experience Platform Launch向けAdobe Experience PlatformWeb SDK Extensionについて
 translation-type: tm+mt
-source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 19%
+source-wordcount: '553'
+ht-degree: 14%
 
 ---
 
@@ -32,17 +32,17 @@ Platform Web SDK Extensionが既にプロパティ用にインストールされ
 
 ## 一般的な設定オプション
 
-ページ上部の設定オプションは、データのルーティング先と、サーバーで使用する設定をAdobe Experience Platformに指定します。
+ページ上部の設定オプションは、データのルーティング先とサーバーで使用する設定をAdobe Experience Platformに指定します。
 
 ### [!UICONTROL 名前]
 
-Adobe Experience PlatformWeb SDK拡張機能は、ページ上の複数のインスタンスをサポートします。 これは、1 つの Platform Launch 設定で複数の組織にデータを送信するために使用します。
+Adobe Experience PlatformWeb SDK拡張機能は、ページ上の複数のインスタンスをサポートします。 この名前は、1つのPlatform launch設定で複数の組織にデータを送信する場合に使用します。
 
 拡張子の名前はデフォルトで「[!DNL alloy]」に設定されます。 ただし、インスタンス名は任意の有効な JavaScript オブジェクト名に変更できます。
 
 ### **[!UICONTROL IMS 組織 ID]**
 
-[!UICONTROL IMS組織ID]は、Adobeでのデータ送信先の組織です。 ほとんどの場合は、自動入力されるデフォルト値を使用する必要があります。ページに複数のインスタンスがある場合は、データの送信先となる2つ目の組織の値をこのフィールドに入力します。
+[!UICONTROL IMS組織ID]は、Adobeでのデータ送信先の組織です。 ほとんどの場合、自動入力されるデフォルト値を使用します。 ページに複数のインスタンスがある場合は、データの送信先となる2つ目の組織の値をこのフィールドに入力します。
 
 ### **[!UICONTROL エッジドメイン]**
 
@@ -50,7 +50,7 @@ Adobe Experience PlatformWeb SDK拡張機能は、ページ上の複数のイン
 
 ## [!UICONTROL エッジ設定]
 
-要求がAdobe Experience Platformエッジネットワークに送信されると、エッジ設定IDを使用してサーバ側設定が参照されます。 これにより、Webサイトでコードを変更することなく、設定を更新できます。
+要求がAdobe Experience Platformエッジネットワークに送信されると、エッジ設定IDを使用してサーバ側設定が参照されます。 Webサイトでコードを変更しなくても、設定を更新できます。
 
 詳しくは、[エッジ設定](../fundamentals/edge-configuration.md)のガイドを参照してください。
 
@@ -61,5 +61,5 @@ Adobe Experience PlatformWeb SDK拡張機能は、ページ上の複数のイン
 | [!UICONTROL 既定の同意レベル] | 説明 |
 | --- | --- |
 | [!UICONTROL In] | オプトイン。 デフォルトで顧客の同意が得られ、オプトアウトシグナルのみを受け取る場合は、このオプションを使用します。 |
-| [!UICONTROL 保留中] | 「保留中」の同意を持つ顧客は、オプトイン信号が送信されるまで、オプトアウトされていると見なされます。 業務に対する明示的な顧客の同意が必要な場合に、このオプションを使用します。 |
+| [!UICONTROL 保留中] | 「保留中」の同意を持つ顧客は、オプトイン信号が送信されるまでオプトアウトされます。 業務に対する明示的な顧客の同意が必要な場合に、このオプションを使用します。 |
 | [!UICONTROL データ要素によって提供される] | デフォルトの同意レベルは、ユーザーが定義する別のデータ要素によって決定されます。 このオプションを使用する場合は、提供されたドロップダウンメニューを使用してデータ要素を指定する必要があります。 |
