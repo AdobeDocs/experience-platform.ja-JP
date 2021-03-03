@@ -4,10 +4,11 @@ audience: user
 user-guide-title: Adobe Experience Platform ID サービス
 breadcrumb-title: Platform ID サービスガイド
 user-guide-description: デバイスやシステムをまたいで顧客 ID を結び付け、パーソナライズされたデジタルエクスペリエンスを提供します。
+feature: ID
 translation-type: tm+mt
-source-git-commit: 6cee9331acde303951718a5be6f5aeaa18a458f6
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '97'
 ht-degree: 90%
 
 ---
