@@ -3,11 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Observability Insights ガイド
 user-guide-description: 統計指標とイベント通知を使用して、Platform アクティビティを監視します。
+feature: データ管理
 translation-type: tm+mt
-source-git-commit: 92e3edaba5793d18e826d3e3f3151ba8a51fce53
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 77%
+source-wordcount: '55'
+ht-degree: 78%
 
 ---
 
