@@ -3,23 +3,23 @@ title: Adobe Experience PlatformWeb SDKでの複数のプロパティの操作
 description: 複数の Experience Platform Web SDK プロパティの操作方法について説明します.
 keywords: 複数のプロパティ；設定；sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: b865b7fb940ca2d5f8b44f71eb58e62e3473f52d
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 78%
+source-wordcount: '242'
+ht-degree: 68%
 
 ---
 
 
 # 複数のプロパティの操作
 
-同じページで 2 つの異なるプロパティを操作する場合があります。これには、以下が含まれます。
+同じページで 2 つの異なるプロパティを操作する場合があります。例えば、次のような場合があります。
 
 * 買収され、共同で　Web サイトの統合に取り組んでいる企業
 * 複数の企業間でのデータ共有関係
 * 新しい Adobe ソリューションをテストしていて、既存の実装を中断したくないお客様
 
-SDK では、ベースコード内の配列に別の名前を追加することで、各プロパティに個別のインスタンスを作成できます。次の例では、`mycustomname1` と　`mycustomname2`　という 2 つの名前を指定します。
+SDK では、ベースコード内の配列に別の名前を追加することで、各プロパティに個別のインスタンスを作成できます。次の例は、`mycustomname1`と`mycustomname2`の2つの名前を示しています。
 
 ```markup
 <script>
@@ -33,7 +33,7 @@ SDK では、ベースコード内の配列に別の名前を追加すること�
 
 その結果、スクリプトは 2 つの SDK インスタンスを作成します。最初のインスタンスと対話するためのグローバル関数に `mycustomname1`、2 番目のインスタンスと対話するためのグローバル関数が `mycustomname2` という名前が付けられます。
 
-2 つの異なるインスタンスを作成すると、異なるプロパティに対してそれぞれを設定できます。`mycustomname1` との対話によって生じる通信やデータの持続性は、`mycustomname2` と切り離されます。
+2 つの異なるインスタンスを作成すると、異なるプロパティに対してそれぞれを設定できます。`mycustomname1`との対話によって生じる通信やデータの持続性は、`mycustomname2`から切り離された状態に保たれます。
 
 上の例に続き、次のように各インスタンスを使用してコマンドを実行できます。
 
@@ -65,4 +65,4 @@ mycustomname2("sendEvent", {
 
 ## 制限事項
 
-cookieとの競合を避けるために、1つのページ内のAdobe Experience Platform[!DNL Web SDK]の1つのインスタンスのみが特定の`edgeConfigId`を持つことができます。  同様に、Adobe Experience Platform[!DNL Web SDK]の1つのインスタンスのみが特定の`orgId`を持つことができます。
+cookieとの競合を避けるために、1つのページ内のAdobe Experience Platform[!DNL Web SDK]の1つのインスタンスのみが特定の`edgeConfigId`を持つことができます。 同様に、Adobe Experience Platform[!DNL Web SDK]の1つのインスタンスのみが特定の`orgId`を持つことができます。
