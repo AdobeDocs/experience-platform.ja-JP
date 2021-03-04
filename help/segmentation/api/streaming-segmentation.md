@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ストリーミングセグメント化；ストリーミングセグメント化；連続評価；
 solution: Experience Platform
 title: 'ストリーミングセグメント化によりほぼリアルタイムでイベントを評価 '
-topic: developer guide
+topic: 開発ガイド
 description: このドキュメントでは、Adobe Experience PlatformセグメントサービスAPIを使用したストリーミングセグメントの使用方法の例を示します。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 47%
+source-wordcount: '1341'
+ht-degree: 46%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 47%
 
 この開発者ガイドでは、ストリーミングセグメント化に関連する様々な[!DNL Adobe Experience Platform]サービスについて、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統一された消費者プロファイルを提供します。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された消費者プロファイルを提供します。
 - [[!DNL Segmentation]](../home.md):デー [!DNL Real-time Customer Profile] タからセグメントやオーディエンスを作成できます。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 
