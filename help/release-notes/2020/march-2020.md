@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: リリースノート;
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '841'
 ht-degree: 60%
 
 ---
@@ -86,7 +86,7 @@ Adobe Experience Platform には、あらゆる種類のデータやデータの
 
 関連するデジタルエクスペリエンスを提供するには、顧客を完全に理解する必要があります。顧客データが異なる複数のシステムに断片化されており、そのため各顧客が複数の「ID」を持つと考えられる場合、顧客を理解するのはさらに困難になります。
 
-Adobe Experience Platform[!DNL Identity Service]は、デバイスやシステム間でIDをつなぐことで、顧客とその行動をより良く表示できるように支援します。これにより、インパクトの高い個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
+Adobe Experience Platform[!DNL Identity Service]は、デバイスやシステム間でIDをつなぐことで、顧客とその行動をより良く表示できるように支援します。これにより、インパクトなパーソナルデジタルエクスペリエンスをリアルタイムで提供できます。
 
 **新機能**
 
