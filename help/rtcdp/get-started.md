@@ -3,10 +3,10 @@ keywords: RTCDP;CDP；リアルタイム顧客データプラットフォーム�
 title: リアルタイム顧客データプラットフォームの概要
 description: リアルタイム顧客データプラットフォームの実装を設定する際の例として、次のシナリオをサンプルとして使用します。
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2326'
-ht-degree: 83%
+source-wordcount: '2328'
+ht-degree: 81%
 
 ---
 
@@ -66,7 +66,7 @@ Adobe Experience Platform を利用した Real-time CDP を使用すると、Lum
 
 ![画像](assets/luma-site.png)
 
-顧客がナビゲーションするにつれて、データがリアルタイムで取得され、Adobe Analytics のレポートスイートに送信されるだけでなく、Adobe Experience Platform に直接送信されます。データを収集すると、[!DNL Experience Platform's real-time customer profile]の行動データに基づいて、消費者の単一の表示を形成し始めます。
+ユーザーがナビゲーションを行うと、データがリアルタイムで取り込まれ、Adobe Analyticsのレポートスイートだけでなく、直接Adobe Experience Platformに送信されます。 データを収集すると、[!DNL Experience Platform's real-time customer profile]の行動データに基づいて、消費者の単一の表示を形成し始めます。
 
 Web サイトの訪問者の多くは、以前に Luma から購入したリピート客である可能性があります。新規訪問者とリピーターの両方、および既知の顧客に対応するために、メッセージングとオファーをパーソナライズすることが重要です。
 
@@ -261,7 +261,7 @@ Sarah が買い物かごにギフトと思われる品物を追加したまま�
 
 「**[!UICONTROL 保存]**」を選択して、次のページに移動します。
 
-このオーディエンスの顧客が購入すると、その顧客のこのオーディエンスへのメンバーシップはリアルタイムで抑制されます。彼らのステータスが変わり、オーディエンス対象外となります。
+このオーディエンスの顧客が購入を行うと、そのオーディエンスへの参加がリアルタイムに抑制される。 彼らのステータスが変わり、オーディエンス対象外となります。
 
 これにより、対象外のオーディエンスのために在庫を使い果たさないことで、Luma のメディアチームのディレクターは数十万ドルを節約できます。
 
