@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログサービス；カタログ；カタログサービス；カタログサービス；カタログ
 solution: Experience Platform
 title: カタログサービスAPIガイド
-topic: developer guide
+topic: 開発ガイド
 description: Catalog Service APIを使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 48%
+source-wordcount: '602'
+ht-degree: 45%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 48%
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 * [バッチ取得](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]： が CSV や Parket などのデータファイルからデータを取得して保存する方法。
-* [ストリーミング取得](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform]： がクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
+* [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md):クライアント側とサーバ側のデバイスからデータを [!DNL Experience Platform] 取り込み、リアルタイムで保存する方法。
 
 以下の節では、[!DNL Catalog Service] APIを正しく呼び出すために知る必要がある、または手元に置く必要がある追加情報について説明します。
 
