@@ -4,10 +4,10 @@ solution: Experience Platform
 title: オーディエンスセグメントでデータ使用のコンプライアンスを徹底する
 topic: チュートリアル
 translation-type: tm+mt
-source-git-commit: 2ca0768c951cf67a775fdfc2c1f9440596d118bf
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 12%
+source-wordcount: '640'
+ht-degree: 10%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platformは、外部オーディエンスのインポート機�
 - [リアルタイム顧客プロファイル](../../profile/home.md)：複数のソースから集約されたデータに基づいて、統合されたリアルタイムのコンシューマープロファイルを提供します。
 - [エクスペリエンスデータモデル（XDM）](../../xdm/home.md)：Platform が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
 - [データセット](../../catalog/datasets/overview.md)：Experience Platform のデータ永続化のためのストレージと管理の構成。
-- [ストリーミング取得](../../ingestion/streaming-ingestion/overview.md)：Experience Platform がクライアントサイドおよびサーバーサイドのデバイスからデータをリアルタイムで取得し、保存する方法。
+- [ストリーミング取り込み](../../ingestion/streaming-ingestion/overview.md):Experience Platformがクライアント側とサーバ側のデバイスからデータをリアルタイムで取り込み、保存する方法。
 
 ## 外部オーディエンスのID名前空間の作成
 
