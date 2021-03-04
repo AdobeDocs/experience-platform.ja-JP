@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: IAB TCF 2.0同意データを取り込むためのデータセットの作成
-topic: privacy events
+topic: プライバシーイベント
 description: このドキュメントでは、IAB TCF 2.0の同意データを収集するために必要な2つのデータセットを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1647'
 ht-degree: 3%
 
 ---
@@ -105,7 +105,7 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework] (TCF) 2.
 | `xdm:consentStandard` | データが適用される同意フレームワーク。 TCF準拠の場合、値は`IAB TCF`にする必要があります。 |
 | `xdm:consentStandardVersion` | `xdm:consentStandard`が示す同意フレームワークのバージョン番号です。 TCF 2.0に準拠するため、値は`2.0`にする必要があります。 |
 | `xdm:consentStringValue` | 顧客が選択した設定に基づいて、同意管理プラットフォーム(CMP)によって生成された同意文字列です。 |
-| `xdm:gdprApplies` | GDPRがこの顧客に適用されるかどうかを示すboolean値。 TCF 2.0が強制されるためには、値を`true`に設定する必要があります。 含めない場合は、デフォルトで`false`に設定されます。 |
+| `xdm:gdprApplies` | GDPRがこの顧客に適用されるかどうかを示すboolean値。 TCF 2.0が強制されるためには、値を`true`に設定する必要があります。 含めない場合は、デフォルトで`true`に設定されます。 |
 | `xdm:containsPersonalData` | 同意の更新に個人データが含まれているかどうかを示すboolean値です。 含めない場合は、デフォルトで`false`に設定されます。 |
 
 ## 顧客の同意スキーマの作成{#create-schemas}
