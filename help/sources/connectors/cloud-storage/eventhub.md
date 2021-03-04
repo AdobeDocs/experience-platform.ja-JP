@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azureイベントハブ；Azureイベントハブ；イベントハブ；イベントハブ
 solution: Experience Platform
 title: Azureイベントハブソースコネクタの概要
-topic: overview
+topic: 概要
 description: APIまたはユーザーインターフェイスを使用してAzureイベントハブをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '250'
 ht-degree: 1%
 
 ---
