@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データの場所；データ管理;データ管理；系統；系列；データ型；データ型；データ型；データ型
 solution: Experience Platform
 title: データセットの概要
-topic: datasets
+topic: データセット
 description: このドキュメントでは、Experience Platform のデータセットのおおまかな概要を説明します。
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '708'
 ht-degree: 39%
 
 ---
