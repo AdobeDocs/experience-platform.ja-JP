@@ -2,20 +2,20 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データ取り込み；取り込んだデータ；ストリーミング；概要；ストリーミング取り込み；待ち時間；ストリーミング待ち時間；
 solution: Experience Platform
 title: ストリーミング取り込みの概要
-topic: overview
-description: ユーザーは、Adobe Experience Platform のストリーミングインジェストを使用して、クライアントおよびサーバー側のデバイスから Experience Platform にリアルタイムでデータを送信することができます。
+topic: 概要
+description: Adobe Experience Platformのストリーミング取り込み機能を使用すると、クライアントおよびサーバ側のデバイスからExperience Platformにデータをリアルタイムで送信できます。
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 31%
+source-wordcount: '286'
+ht-degree: 23%
 
 ---
 
 
 # ストリーミングインジェストの概要
 
-Adobe Experience Platformのストリーミング取り込み機能は、ユーザーがクライアントおよびサーバー側デバイスから[!DNL Experience Platform]にデータをリアルタイムで送信する方法を提供します。
+Adobe Experience Platformのストリーミング取り込み機能は、ユーザがクライアントおよびサーバ側デバイスから[!DNL Experience Platform]にデータをリアルタイムで送信する方法を提供します。
 
 ## ストリームインジェストの機能
 
