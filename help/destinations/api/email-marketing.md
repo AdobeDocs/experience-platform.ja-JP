@@ -6,10 +6,10 @@ description: このドキュメントでは、Adobe Experience PlatformAPIを使
 topic: チュートリアル
 type: チュートリアル
 translation-type: tm+mt
-source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 72%
+source-wordcount: '1701'
+ht-degree: 71%
 
 ---
 
@@ -366,6 +366,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] 1ファイルあたり500万件のレコード（行）でエクスポートファイルを自動的に分割します。各行は1つのプロファイルを表します。
+>
+>分割ファイル名には、そのファイルが大きな書き出しの一部であることを示す番号が付加されます。次に例を示します。`filename.csv`、`filename_2.csv`、`filename_3.csv`。
 
 **API 形式**
 
