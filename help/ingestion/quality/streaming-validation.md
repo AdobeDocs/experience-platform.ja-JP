@@ -4,19 +4,19 @@ solution: Experience Platform
 title: ストリーミング取り込みの検証
 topic: チュートリアル
 type: チュートリアル
-description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データを Adobe Experience Platform にアップロードできます。ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
+description: ストリーミング取り込みを使用すると、リアルタイムでストリーミングエンドポイントを使用してデータをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 translation-type: tm+mt
-source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 85%
+source-wordcount: '900'
+ht-degree: 81%
 
 ---
 
 
 # ストリーミング取り込みの検証
 
-ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用して、データを Adobe Experience Platform にアップロードできます。ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
+ストリーミング取り込みを使用すると、リアルタイムでストリーミングエンドポイントを使用してデータをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 
 ## はじめに
 
