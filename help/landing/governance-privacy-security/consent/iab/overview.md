@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: Experience PlatformでのIAB TCF 2.0のサポート
-topic: privacy events
+topic: プライバシーイベント
 description: Adobe Experience Platformの宛先にセグメントをアクティブ化する際に、顧客の同意を伝えるためのデータ操作とスキーマの設定方法を説明します。
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 1%
 
 ---
@@ -165,7 +165,7 @@ alloy("setConsent", {
 | `standard` | 使用される同意基準。 TCF 2.0の同意処理を行うには、この値を`IAB`に設定する必要があります。 |
 | `version` | `standard`で示された同意基準のバージョン番号。 TCF 2.0の同意処理を行うには、この値を`2.0`に設定する必要があります。 |
 | `value` | CMPによって生成された、Base-64エンコードされた同意文字列。 |
-| `gdprApplies` | GDPRが現在ログインしている顧客に適用されるかどうかを示すBoolean値。 TCF 2.0をこのお客様に適用するには、`true`に設定する必要があります。 |
+| `gdprApplies` | GDPRが現在ログインしている顧客に適用されるかどうかを示すBoolean値。 TCF 2.0をこのお客様に適用するには、`true`に設定する必要があります。 定義されていない場合、デフォルトは`true`です。 |
 
 `setConsent`コマンドは、同意設定の変更を検出するCMPフックの一部として使用する必要があります。 次のJavaScriptは、OneTrustの`OnConsentChanged`フックに`setConsent`コマンドを使用する方法の例を示しています。
 
@@ -219,7 +219,7 @@ alloy("sendEvent", {
 | `consentStandard` | 使用される同意基準。 TCF 2.0の同意処理を行うには、この値を`IAB`に設定する必要があります。 |
 | `consentStandardVersion` | `standard`で示された同意基準のバージョン番号。 TCF 2.0の同意処理を行うには、この値を`2.0`に設定する必要があります。 |
 | `consentStringValue` | CMPによって生成された、Base-64エンコードされた同意文字列。 |
-| `gdprApplies` | GDPRが現在ログインしている顧客に適用されるかどうかを示すBoolean値。 TCF 2.0をこのお客様に適用するには、`true`に設定する必要があります。 |
+| `gdprApplies` | GDPRが現在ログインしている顧客に適用されるかどうかを示すBoolean値。 TCF 2.0をこのお客様に適用するには、`true`に設定する必要があります。 定義されていない場合、デフォルトは`true`です。 |
 
 ### SDKレスポンスの処理
 
@@ -233,7 +233,7 @@ alloy("sendEvent", {
 
 顧客の同意データを収集し、必要な同意属性を含むオーディエンスセグメントを作成したら、それらのセグメントをダウンストリームの宛先にエクスポートする際に、TCF 2.0準拠を強制できます。
 
-一連の顧客プロファイルに対する同意設定`gdprApplies`を`true`に設定した場合、各プロファイルの同意嗜好に基づいて、それらのプロファイルから下流の宛先にエクスポートされたデータがフィルタリングされる。 必要な同意の環境設定を満たさないプロファイルは、エクスポート処理中にスキップされます。
+一連の顧客プロファイルに対する同意設定`gdprApplies`を`true`に設定した場合、各プロファイルのTCF同意嗜好に基づいて、それらのプロファイルから下流の宛先にエクスポートされたデータがフィルタリングされる。 必要な同意の環境設定を満たさないプロファイルは、エクスポート処理中にスキップされます。
 
 プロファイルを宛先にエクスポートするセグメントに含めるには、次の目的（[TCF 2.0ポリシー](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)で説明されているとおり）に同意する必要があります。
 
