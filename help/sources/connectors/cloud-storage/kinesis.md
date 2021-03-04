@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；AmazonKinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
 title: AmazonKinesisソースコネクタの概要
-topic: overview
+topic: 概要
 description: APIまたはユーザーインターフェイスを使用して、AmazonKinesisをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '236'
 ht-degree: 1%
 
 ---
