@@ -4,15 +4,15 @@ title: リアルタイム顧客プロファイルの概要
 topic: ガイド
 description: リアルタイム顧客プロファイルは、様々な企業データアセットのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形でそのデータにアクセスできる汎用参照エンティティストアです。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 translation-type: tm+mt
-source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1825'
-ht-degree: 37%
+source-wordcount: '1827'
+ht-degree: 35%
 
 ---
 
 
-# [!DNL Real-time Customer Profile]概要
+# [!DNL Real-time Customer Profile] の概要
 
 Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。[!DNL Real-time Customer Profile]を使うと、オンライン、オフライン、CRM、サードパーティなど複数のチャネルからのデータを組み合わせることで、各顧客の全体的な表示を見ることができます。 [!DNL Profile] 顧客のデータを統合表示に統合し、顧客の操作ごとに実行可能なタイムスタンプのあるアカウントを提供できます。この概要は、[!DNL Experience Platform]の[!DNL Real-time Customer Profile]の役割と使い方を理解するのに役立ちます。
 
@@ -92,7 +92,7 @@ Adobe Experience Platform[!DNL Segmentation Service]は、個々の顧客にパ�
 
 ## エッジ投影
 
-リアルタイムで複数のチャネルにわたって顧客に調整された一貫性のあるパーソナライズされたエクスペリエンスを提供するには、適切なデータをすぐに利用でき、変更が発生したときに継続的に更新する必要があります。Adobe Experience Platform を使用すると、エッジと呼ばれるものを使用して、データへのこのリアルタイムアクセスを可能にします。エッジとは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバーです。たとえば、Adobe Target や Adobe Campaign などの Adobe アプリケーションは、エッジを使用して、パーソナライズされた顧客体験をリアルタイムで提供します。データは投影によってエッジにルーティングされ、データの送信先となるエッジを定義する投影先と、エッジ上で利用可能にする特定の情報を定義する投影設定があります。詳しくは、[!DNL Real-time Customer Profile] APIを使用した投影の操作を開始する方法については、[edge projection endpoints guide](api/edge-projections.md)を参照してください。
+複数のチャネルにわたって顧客に対して、調整、一貫性、パーソナライズされたエクスペリエンスをリアルタイムで提供するために、変更が発生した場合に適切なデータを容易に利用でき、継続的に更新する必要があります。 Adobe Experience Platform を使用すると、エッジと呼ばれるものを使用して、データへのこのリアルタイムアクセスを可能にします。エッジとは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバーです。例えば、Adobe TargetやAdobe CampaignなどのAdobeアプリは、パーソナライズされた顧客体験をリアルタイムで提供するためにエッジを使用します。 データは投影によってエッジにルーティングされ、データの送信先となるエッジを定義する投影先と、エッジ上で利用可能にする特定の情報を定義する投影設定があります。詳しくは、[!DNL Real-time Customer Profile] APIを使用した投影の操作を開始する方法については、[edge projection endpoints guide](api/edge-projections.md)を参照してください。
 
 ## データを[!DNL Profile]に取り込む
 
