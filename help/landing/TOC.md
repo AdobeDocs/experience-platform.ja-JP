@@ -3,12 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
-user-guide-description: Experience Platform が、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法について説明します。
+user-guide-description: Experience Platformが、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 32%
+source-wordcount: '160'
+ht-degree: 22%
 
 ---
 
