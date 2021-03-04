@@ -6,9 +6,9 @@ topic: 概要
 type: チュートリアル
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してプラットフォームにストリーミングデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1306'
 ht-degree: 20%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 20%
    - [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
    - [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md):スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 - [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、内のデータの場所と系列のレコードシステムで [!DNL Experience Platform]す。
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):のストリーミング取り込み [!DNL Platform] 機能を使用すると、クライアントおよびサーバ側のデバイスからデータをリアルタイム [!DNL Experience Platform] に送信できます。
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md):のストリーミング取り込み [!DNL Platform] 機能を使用すると、クライアントおよびサーバ側のデバイスからデータをリアルタイム [!DNL Experience Platform] で送信できます。
 - [サンドボックス](../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
 [!DNL Flow Service] APIを使用してストリーミングデータを正しく収集するために知っておく必要がある追加情報については、以下の節で説明します。
