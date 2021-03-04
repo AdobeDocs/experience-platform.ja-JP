@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；IDサービスAPI;IDサービス開発者ガイド；地域
 solution: Experience Platform
 title: IDサービスAPIガイド
-topic: API guide
+topic: APIガイド
 description: Identity Service APIを使用すると、開発者は、IDグラフAdobe Experience Platformを使用して、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 66%
+source-wordcount: '772'
+ht-degree: 65%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform[!DNL Identity Service]は、Adobe Experience Platform�
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 - [[!DNL Identity Service]](../home.md):お客様のプロファイルデータの断片化に伴う基本的な課題を解決します。これは、顧客がブランドと対話するデバイスやシステム間で ID を橋渡しするすることで実現します。
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された消費者プロファイルを提供します。
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Platform] に使用される標準化されたフレームワーク。
 
 以下の節では、[!DNL Identity Service] APIを正しく呼び出すために知る必要がある、または手元に置く必要がある追加情報について説明します。
