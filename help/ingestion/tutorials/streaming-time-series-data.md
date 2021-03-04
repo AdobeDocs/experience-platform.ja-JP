@@ -6,9 +6,9 @@ topic: チュートリアル
 type: チュートリアル
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 translation-type: tm+mt
-source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1314'
 ht-degree: 66%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 66%
 このチュートリアルでは、Adobe Experience Platform の各種サービスに関する実用的な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):エクスペリエンスデータを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された消費者プロファイルを提供します。
 - [スキーマレジストリ開発ガイド](../../xdm/api/getting-started.md):APIの使用可能な各エンドポイントと、それらの [!DNL Schema Registry] APIを呼び出す方法をカバーする包括的なガイドです。これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
 
 また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
