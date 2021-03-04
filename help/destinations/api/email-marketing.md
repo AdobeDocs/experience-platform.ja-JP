@@ -3,13 +3,13 @@ keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: 電子メールマーケティングの宛先に接続し、API呼び出しを使用してデータをアクティブにする
 description: このドキュメントでは、Adobe Experience PlatformAPIを使用した電子メールマーケティングの宛先の作成について説明します
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
 workflow-type: tm+mt
-source-wordcount: '1649'
-ht-degree: 73%
+source-wordcount: '1681'
+ht-degree: 72%
 
 ---
 
@@ -360,6 +360,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 ### ストレージの場所とデータ形式を指定する
+
+[!DNL Adobe Experience Platform] 電子メールマーケティングおよびクラウドストレージの宛先のデータを [!DNL CSV] ファイルの形式でエクスポートします。
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] 1ファイルあたり500万件のレコード（行）でエクスポートファイルを自動的に分割します。各行は1つのプロファイルを表します。
 
 **API 形式**
 
