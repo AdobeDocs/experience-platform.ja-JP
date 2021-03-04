@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データ取り込み；データの場所；データの場所；データ管理;データ管理；系列；バッチ；取り込んだデータ
 solution: Experience Platform
 title: データ取り込みの概要
-topic: overview
+topic: 概要
 description: このドキュメントでは、データをプラットフォームに取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '462'
 ht-degree: 51%
 
 ---
