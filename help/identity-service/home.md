@@ -2,20 +2,20 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ID;XDMグラフ；IDサービス；IDサービス
 solution: Experience Platform
 title: IDサービスの概要
-topic: overview
-description: Adobe Experience Platform ID サービスを使用すると、デバイスやシステム間で ID を橋渡しすることで、顧客と行動をより良く表示できます。これによって、インパクトのある個人のデジタルエクスペリエンスをリアルタイムで提供できます。
+topic: 概要
+description: Adobe Experience Platform・アイデンティティ・サービスは、デバイスやシステム間でIDをつなぐことで、顧客と行動の表示を向上させ、効果的な個人のデジタル体験をリアルタイムで提供します。
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1730'
-ht-degree: 68%
+source-wordcount: '1733'
+ht-degree: 66%
 
 ---
 
 
-# [!DNL Identity Service]概要
+# [!DNL Identity Service] の概要
 
-関連性のあるデジタルエクスペリエンスを提供するには、顧客を完全に理解しておく必要があります。これは、顧客データが異なる複数のシステムに断片化され、各顧客が複数の「ID」を持つように見える場合に、より難しくなります。Adobe Experience Platform[!DNL Identity Service]は、デバイスやシステム間でIDをつなぐことで、顧客とその行動をより良く表示できるように支援します。これにより、インパクトの高い個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
+関連性のあるデジタルエクスペリエンスを提供するには、顧客を完全に理解しておく必要があります。これは、顧客データが異なる複数のシステムに断片化され、各顧客が複数の「ID」を持つように見える場合に、より難しくなります。Adobe Experience Platform[!DNL Identity Service]は、デバイスやシステム間でIDをつなぐことで、顧客とその行動をより良く表示できるように支援します。これにより、インパクトなパーソナルデジタルエクスペリエンスをリアルタイムで提供できます。
 
 ## [!DNL Identity Service]について 
 
