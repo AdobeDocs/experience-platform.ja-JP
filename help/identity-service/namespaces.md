@@ -5,9 +5,9 @@ title: ID名前空間の概要
 topic: 概要
 description: 'ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」という値は電子メールアドレスとして、または「443522」という数値のCRM IDとして区別されます。 '
 translation-type: tm+mt
-source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1475'
 ht-degree: 20%
 
 ---
