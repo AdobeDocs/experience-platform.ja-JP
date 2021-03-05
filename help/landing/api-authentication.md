@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；認証；アクセス
 solution: Experience Platform
 title: Experience Platform API の認証とアクセス
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: 'このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。 '
 translation-type: tm+mt
-source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
+source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 42%
+source-wordcount: '908'
+ht-degree: 41%
 
 ---
 
@@ -161,6 +161,6 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
 
 ## 次の手順
 
-このドキュメントを読むと、[!DNL Platform] APIのアクセス資格情報を収集し、テストに成功します。 現在は、[ドキュメント](../landing/documentation/overview.md)全体で提供されているAPI呼び出しの例に従うことができます。
+このドキュメントを読むと、[!DNL Platform] APIのアクセス資格情報を収集し、テストに成功します。 プラットフォームAPIの[はじめにガイド](api-guide.md)に記載されている例に従うことができるようになりました。 このガイドには、各プラットフォームサービスのAPIガイドへのリンクが含まれ、追加情報が記載されています。 エラー、ポストマン、JSONの場合。
 
 このチュートリアルで収集した認証値に加えて、多くの[!DNL Platform] APIでは、有効な`{SANDBOX_NAME}`をヘッダーとして指定する必要があります。 詳しくは、「[サンドボックスの概要](../sandboxes/home.md)」を参照してください。
