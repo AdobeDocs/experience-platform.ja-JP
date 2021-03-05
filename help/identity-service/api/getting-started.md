@@ -3,11 +3,11 @@ keywords: Experience Platform；ホーム；人気の高いトピック；IDサ�
 solution: Experience Platform
 title: IDサービスAPIガイド
 topic: APIガイド
-description: Identity Service APIを使用すると、開発者は、IDグラフAdobe Experience Platformを使用して、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
+description: Identity Service APIを使用すると、開発者は、Adobe Experience PlatformのIDグラフを使用して、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69c3106070e31377ea8571cd14dc33aa9b6f7037
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '773'
 ht-degree: 65%
 
 ---
