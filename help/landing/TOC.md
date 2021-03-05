@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform 概要
 breadcrumb-title: Experience Platform の概要
 user-guide-description: Experience Platformが、パーソナライズされたエクスペリエンスをリアルタイムで顧客に提供する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 36b85bee308fdcf599c9b7913cf94774404f06d2
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 22%
+source-wordcount: '170'
+ht-degree: 24%
 
 ---
 
@@ -30,8 +30,10 @@ ht-degree: 22%
    * [ワークフローUIガイド](workflows.md)
    * [ブラウザーと言語のサポート](browser-language-support.md)
 * Experience PlatformAPI {#platform-apis}
+   * [ Platform API の概要](api-guide.md)
    * [ Platform API の認証とアクセス](api-authentication.md)
    * [API の基本事項](api-fundamentals.md)
+   * [プラットフォームAPIでのPostmanの使用](postman.md)
    * [APIリファレンスドキュメント](http://www.adobe.com/go/platform-api-reference-en)
 * プラットフォームドキュメント{#documentation}
    * [概要](documentation/overview.md)
