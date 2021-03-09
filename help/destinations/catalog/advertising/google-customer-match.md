@@ -3,9 +3,9 @@ keywords: Googleの顧客一致；Googleの顧客一致；Googleの顧客一致
 title: Google Customer Match接続
 description: Google Customer Matchでは、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営するSearch、Shopping、Gmail、YouTubeなどのプロパティで顧客に連絡し、顧客と再び関与させることができます。
 translation-type: tm+mt
-source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
+source-git-commit: 494b41265a0eec71ec15c7896eb8c652b3164e18
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1420'
 ht-degree: 5%
 
 ---
@@ -15,27 +15,27 @@ ht-degree: 5%
 
 [Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchを使用すると、オンラインおよびオフラインのデータを使用して、Googleが所有し、運営する次のようなプロパティを通じて顧客に連絡し、顧客と再び関わり合うことができます。 [!DNL Search]、 [!DNL Shopping]、、 [!DNL Gmail]および [!DNL YouTube]。
 
-![Real-time CDP UIのGoogle Customer Match宛先](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Adobe Experience PlatformUIのGoogle Customer Matchの表示先](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## 使用例
 
-[!DNL Google Customer Match]宛先の使い方と使い方をより深く理解するために、以下はReal-time Customer Data Platformのお客様がこの機能を使用して解決できる使用例です。
+[!DNL Google Customer Match]の宛先を使用する方法とタイミングをより深く理解するために、以下はAdobe Experience Platformのお客様がこの機能を使用して解決できる使用例です。
 
 ### ユースケース 1
 
-[!DNL Google Search]と[!DNL Google Shopping]を通じて既存の顧客に連絡し、過去の購入や閲覧の履歴に基づいてオファーやアイテムをパーソナライズしたいと考えているスポーツアパレルブランドです。 アパレル・ブランドは、自社のCRMからReal-time CDPにEメール・アドレスを取り込み、自社のオフライン・データからセグメントを構築し、[!DNL Search]と[!DNL Shopping]で使用する[!DNL Google Customer Match]にこれらのセグメントを送信して、広告費用を最適化できます。
+[!DNL Google Search]と[!DNL Google Shopping]を通じて既存の顧客に連絡し、過去の購入や閲覧の履歴に基づいてオファーやアイテムをパーソナライズしたいと考えているスポーツアパレルブランドです。 アパレルブランドは、自社のCRMからExperience Platformに電子メールアドレスを取り込み、自社のオフラインデータからセグメントを作成し、[!DNL Search]と[!DNL Shopping]で使用する[!DNL Google Customer Match]に送信して、広告費用を最適化できます。
 
 ### ユースケース 2
 
 有名なテクノロジー会社が、新しい電話を発売したばかり。 この新しい電話モデルを推進するために、電話の新機能を、以前のモデルの電話を所有するお客様に知らせたいと考えています。
 
-このリリースを促進するために、CRMデータベースからEメールアドレスを識別子として使用し、Real-time CDPにアップロードします。 セグメントは、古い電話モデルを所有し、[!DNL Google Customer Match]に送信された顧客に基づいて作成され、現在の顧客、古い電話モデルを所有する顧客、および同様の顧客を[!DNL YouTube]にターゲットできます。
+このリリースを促進するために、電子メールアドレスを識別子として使用し、CRMデータベースからExperience Platformに電子メールアドレスをアップロードします。 セグメントは、古い電話モデルを所有し、[!DNL Google Customer Match]に送信された顧客に基づいて作成され、現在の顧客、古い電話モデルを所有する顧客、および同様の顧客を[!DNL YouTube]にターゲットできます。
 
 ## 宛先の詳細{#destination-specs}
 
 ### [!DNL Google Customer Match]宛先{#data-governance}のデータ・ガバナンス
 
-リアルタイムCDPの宛先には、宛先プラットフォームに送信または受信するデータに対する特定のルールと義務が含まれている場合があります。 データの制約事項と義務、およびそのデータをAdobe Experience Platformや目的地プラットフォームでどのように使用するかについては、責任を持って理解してください。 Adobe Experience Platformは、データ使用上の義務の一部を管理するのに役立つデータ管理ツールを提供しています。 [データ管理ツールとポリシーに](../../..//data-governance/labels/overview.md) ついて詳しく説明します。
+Experience Platform内の宛先には、宛先プラットフォームに送信または受信するデータに対して、特定のルールと義務を持つ場合があります。 データの制約事項と義務、およびそのデータをAdobe Experience Platformや目的地プラットフォームでどのように使用するかについては、責任を持って理解してください。 Adobe Experience Platformは、データ使用上の義務の一部を管理するのに役立つデータ管理ツールを提供しています。 [データ管理ツールとポリシーに](../../..//data-governance/labels/overview.md) ついて詳しく説明します。
 
 ### 書き出しの種類とID {#export-type}
 
@@ -45,15 +45,15 @@ ht-degree: 5%
 
 ### [!DNL Google Customer Match] アカウントの前提条件  {#google-account-prerequisites}
 
-[!DNL Google Customer Match]宛先をReal-time CDPに設定する前に、[Googleサポートドキュメント](https://support.google.com/google-ads/answer/6299717)で概説されている[!DNL Customer Match]を使用するGoogleのポリシーを読み、それに従っていることを確認してください。
+Experience Platformで[!DNL Google Customer Match]宛先を設定する前に、[Googleサポートドキュメント](https://support.google.com/google-ads/answer/6299717)で説明されている[!DNL Customer Match]を使用する際のGoogleのポリシーを読み、それに従っていることを確認してください。
 
 ### 許可リスト{#allowlist}
 
 >[!NOTE]
 >
->Real-time CDPで最初の[!DNL Google Customer Match]宛先を設定する前に、Googleの許可リストに追加する必要があります。 リンク先を作成する前に、Googleが以下に説明する許可リストプロセスを完了していることを確認してください。
+>Experience Platformの最初の[!DNL Google Customer Match]宛先を設定する前に、Googleの許可リストに追加する必要があります。 リンク先を作成する前に、Googleが以下に説明する許可リストプロセスを完了していることを確認してください。
 
-Real-time CDPで[!DNL Google Customer Match]宛先を作成する前に、Googleに問い合わせて、Googleドキュメントの[Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=ja&amp;ref_topic=6296507)の許可リスト手順に従う必要があります。
+Experience Platformで[!DNL Google Customer Match]のアップロード先を作成する前に、Googleに問い合わせて、Googleドキュメントの[Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=ja&amp;ref_topic=6296507)の許可リスト手順に従う必要があります。
 
 さらに、Googleの[User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)を使用してデータをアップロードする場合は、アカウントを追加する必要がある2つ目のGoogle許可リストもあります。 Googleのアカウントマネージャーに問い合わせて、許可リストに追加されていることを確認してください。
 
@@ -92,7 +92,7 @@ Experience Platformでの電子メールアドレスの取り込みについて�
 
 #### カスタム名前空間{#custom-namespaces}の使用
 
-`User_ID`名前空間を使用してGoogleにデータを送信する前に、[!DNL gTag]を使用して自分のIDを同期させてください。 詳しくは、[公式ドキュメント](https://support.google.com/google-ads/answer/9199250)を参照してください。
+`User_ID`名前空間を使用してGoogleにデータを送信する前に、[!DNL gTag]を使用して自分のIDを同期させてください。 詳細については、[Googleの公式文書](https://support.google.com/google-ads/answer/9199250)を参照してください。
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
@@ -113,17 +113,17 @@ Attribute source data is not automatically hashed. When your source field contai
 
 >[!NOTE]
 >
->リアルタイムCDPは、認証プロセスでの資格情報の検証をサポートし、[!DNL Google Ad]アカウントに不正な資格情報を入力した場合は、エラーメッセージを表示します。 このため、間違った資格情報を使用すると、ワークフローを完了することができません。
+>Experience Platformは、認証プロセスで資格情報の検証をサポートし、[!DNL Google Ad]アカウントに正しくない資格情報を入力すると、エラーメッセージを表示します。 このため、間違った資格情報を使用すると、ワークフローを完了することができません。
 
 ![Google Customer Matchの宛先に接続 — 認証手順](../../assets/catalog/advertising/google-customer-match/connection.png)
 
-資格情報が確認され、Adobe Experience CloudがGoogleアカウントに接続されたら、**[!UICONTROL 「次へ]**」を選択して&#x200B;**[!UICONTROL セットアップ]**&#x200B;の手順に進むことができます。
+資格情報が確認され、Adobe Experience CloudがGoogleアカウントに接続されたら、**[!UICONTROL 「次へ]**」を選択して、**[!UICONTROL 認証]**&#x200B;の手順に進むことができます。
 
 ![資格情報の確認](../../assets/catalog/advertising/google-customer-match/connection-success.png)
 
-**[!UICONTROL 認証]**&#x200B;手順で、[!UICONTROL 名前]と[!UICONTROL 説明]をアクティベーションフローに入力し、Googleに[!UICONTROL アカウントID]を入力します。
+**[!UICONTROL 認証]**&#x200B;手順で、**[!UICONTROL 名前]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;をアクティベーションフローに入力し、Googleの&#x200B;**[!UICONTROL アカウントID]**&#x200B;を入力します。
 
-また、この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択できます。 マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、[Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations)ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md#core-actions)を参照してください。
+この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択することもできます。 マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
@@ -146,7 +146,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-[!DNL App ID]を見つける方法の詳細については、[公式ドキュメント](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)を参照してください。
+[!DNL App ID]を見つける方法の詳細については、[Googleの公式文書](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)を参照してください。
 
 
 
