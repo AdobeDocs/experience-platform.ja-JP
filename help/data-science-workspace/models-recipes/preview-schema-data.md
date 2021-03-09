@@ -2,33 +2,33 @@
 keywords: Experience Platform;プレビュースキーマデータ；Data Science Workspace；人気の高いトピック
 solution: Experience Platform
 title: 小売売上スキーマとデータセットのプレビュー
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: 次のドキュメントでは、Adobe Experience Platformでのスキーマとデータセットのプレビューの概要を説明します。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 59%
+source-wordcount: '238'
+ht-degree: 22%
 
 ---
 
 
 # 小売売上スキーマとデータセットのプレビュー
 
-「[小売販売スキーマとデータセットの作成](./create-retails-sales-dataset.md)」のチュートリアルのブートストラップスクリプトの実行が正常に完了したら、出力スキーマーとデータセットは[!DNL Experience Platform]で表示できます。 スキーマとデータセットを表示するには、次の手順に従います。
+[小売売上スキーマとデータセット](./create-retails-sales-dataset.md)のチュートリアルで、ブートストラップスクリプトが正常に完了したとき。 出力スキーマーとデータセットは[!DNL Experience Platform]で表示できます。 スキーマとデータセットを表示するには、次の手順に従います。
 
-1. 左側のナビゲーション列にある「**[!UICONTROL スキーマ]**」リンクをクリックし、ブートストラップスクリプトで作成された入力スキーマを見つけます。スキーマの名前は、前の手順の `config.yaml` で定義した名前に対応します。スキーマをクリックし、スキーマの詳細とその構成を表示します。
+左側のナビゲーションにある&#x200B;**[!UICONTROL スキーマ]**&#x200B;タブを選択し、ブートストラップスクリプトで作成された入力スキーマを探します。 スキーマの名前は、前の手順の `config.yaml` で定義した名前に対応します。スキーマをクリックし、スキーマの詳細とその構成を表示します。
 
-   ![](../images/models-recipes/access-data/schema_overview.png)
+![](../images/models-recipes/access-data/schema.PNG)
 
-2. 左側のナビゲーション列にある「**[!UICONTROL データセット]**」リンクをクリックし、リストの名前をクリックして、作成した入力データセットを開きます。データセットの名前は、前の手順の `config.yaml` で定義した名前に対応します。
+左側のナビゲーションにある「**[!UICONTROL データセット]**」タブを選択し、データセットの名前を選択して作成した入力データセットを開きます。 データセットの名前は、前の手順の`config.yaml`で定義した名前に対応しています。
 
-   ![](../images/models-recipes/access-data/dataset_overview.png)
+![](../images/models-recipes/access-data/dataset.PNG)
 
-3. 右上の「**[!UICONTROL プレビューデータセット」]**&#x200B;をクリックし、データセットのサブセットを表示します。
+右上にある「プレビューデータセット&#x200B;**[!UICONTROL 」を選択して、データセットのサブセットをプレビューします。]**
 
-   ![](../images/models-recipes/access-data/preview_dataset.png)
+![](../images/models-recipes/access-data/preview.PNG)
 
 ## 次の手順
 
