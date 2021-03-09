@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure Fileストレージ;Azureファイルストレージ
 solution: Experience Platform
 title: Azure Fileストレージソースコネクタの概要
-topic: overview
+topic: 概要
 description: APIまたはユーザーインターフェイスを使用してAzure FileストレージをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 3%
+source-wordcount: '470'
+ht-degree: 2%
 
 ---
 
@@ -26,6 +26,10 @@ Cloudストレージソースは、ダウンロード、フォーマット、ア
 ## IPアドレス許可リスト
 
 IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+
+>[!IMPORTANT]
+>
+>[!DNL Azure File Storage]ソースコネクタは、現在、プラットフォームとの同じ領域接続をサポートしていません。 つまり、Azureインスタンスがプラットフォームと同じネットワーク領域を使用している場合、プラットフォームソースへの接続を確立できません。 現在、クロスリージョン接続のみがサポートされています。 詳しくは、Adobeのアカウントマネージャーにお問い合わせください。
 
 ## ファイルとディレクトリの命名規則
 
