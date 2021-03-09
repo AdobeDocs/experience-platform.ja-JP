@@ -2,10 +2,10 @@
 title: Adobe Experience PlatformWeb SDK Extensionのアクションタイプ
 description: Adobe Experience Platform LaunchのAdobe Experience PlatformWeb SDK Extensionが提供する様々なアクションタイプについて説明します。
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 18%
+source-wordcount: '341'
+ht-degree: 6%
 
 ---
 
@@ -24,9 +24,9 @@ Adobe Experience Platformが送信したデータを収集し、その情報に�
 
 ## 同意の設定
 
-ユーザーから同意を受けた後、この同意は、「同意の設定」アクションタイプを使用して、Adobe Experience PlatformWeb SDKに伝える必要があります。 現在、「Adobe」と「IAB TCF」の 2 種類の標準がサポートされています。Adobe 標準を使用する場合は、同意を「イン」または「アウト」に設定するか、データ要素を使用して指定できます。IAB TCF 標準を使用する場合は、使用するバージョンと値、および GDPR に関する追加情報を提供します。
+ユーザーから同意を受けた後、この同意は、「同意の設定」アクションタイプを使用して、Adobe Experience PlatformWeb SDKに伝える必要があります。 現在、「Adobe」と「IAB TCF」の 2 種類の標準がサポートされています。「[顧客の同意に関する基本設定のサポート](../consent/supporting-consent.md)」を参照してください。 Adobeバージョン2.0を使用する場合は、データ要素の値のみがサポートされます。 同意オブジェクトに解決されるデータ要素を作成する必要があります。
 
-この操作では、承認を受けた後でIDを同期できるように、IDマップを含めるオプションのフィールドも提供されます。 同期は、同意が「保留中」に設定されている場合に便利です。同意呼び出しが最初に呼び出される可能性が高いからです。
+この操作では、承認を受けた後でIDを同期できるように、IDマップを含めるオプションのフィールドも提供されます。 同期は、同意が「保留」または「送信」として設定されている場合に便利です。同意の呼び出しが最初に実行される呼び出しである可能性が高いからです。
 
 ## イベント結合 ID のリセット
 
