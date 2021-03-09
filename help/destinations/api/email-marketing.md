@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: 電子メールマーケティングの宛先に接続し、API呼び出しを使用してデータをアクティブにする
+title: 電子メールマーケティングの宛先に接続し、Flow Service APIを使用してデータをアクティブ化する
 description: このドキュメントでは、Adobe Experience PlatformAPIを使用した電子メールマーケティングの宛先の作成について説明します
 topic: チュートリアル
 type: チュートリアル
 translation-type: tm+mt
-source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1707'
 ht-degree: 71%
 
 ---
 
 
-# 電子メールマーケティングの宛先に接続し、API呼び出しを使用してデータをアクティブにする
+# 電子メールマーケティングの宛先に接続し、Flow Service APIを使用してデータをアクティブ化する
 
 このチュートリアルでは、API 呼び出しを使用して Adobe Experience Platform のデータに接続する方法、[電子メールマーケティングの宛先](../catalog/email-marketing/overview.md)を作成する方法、新しく作成した宛先へのデータフローを作成する方法および新しく作成した宛先へのデータをアクティブ化する方法を説明します。
 
@@ -67,7 +67,7 @@ Platformのユーザインターフェイスを使用して宛先を接続し、
 
 ### Swagger のドキュメント
 
-このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)の[Flow Service APIドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)の[Flow Service APIに関するドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
 
 ## 使用可能な宛先のリストを取得する {#get-the-list-of-available-destinations}
 
