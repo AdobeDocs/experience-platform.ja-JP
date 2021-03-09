@@ -3,15 +3,29 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience PlatformWeb SDK；プラットフォームWeb SDK;Web SDK；リリースノート；
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: b0e6d1f7cf7302bb3a7403bb18dfd8b7489d583e
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 10%
+source-wordcount: '496'
+ht-degree: 6%
 
 ---
 
 
 # リリースノート
+
+## バージョン 2.4.0
+
+* SDKをnpmパッケージ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)として[インストールできるようになりました。
+* [デフォルトの同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)の設定時に、`out`オプションのサポートが追加され、同意が得られるまですべてのイベントが削除されます(既存の`pending`オプションはイベントをキューに入れ、同意が得られたら送信します)。
+* [onBeforeEventSendコールバック](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend)を使用して、イベントの送信を防ぐことができるようになりました。
+* レンダリングまたはクリックされるパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization`の代わりにXDMミックスインを使用するようになりました。
+* [getIdentityコマンド](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id)は、IDと共にエッジ領域IDを返すようになりました。
+* サーバーから受け取った警告およびエラーは改善され、より適切な方法で処理されました。
+* [Adobeの同意2.0基準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)のサポートを追加しました。
+* 同意の環境設定を受け取ると、ハッシュ化されてローカルストレージに保存され、CMP、Platform Web SDK、Platform Edge Networkの間で最適化された統合を実現します。 同意の環境設定を収集する場合は、ページの読み込みごとに`setConsent`を呼び出すことをお勧めします。
+* [監視フック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)、`onCommandResolved`、`onCommandRejected`の2つが追加されました。
+* バグ修正：パーソナライゼーションインタラクション通知イベントには、ユーザーが新しい単一ページのアプリ表示に移動し、元の表示に戻り、コンバージョンに該当する重複をクリックした場合に、同じアクティビティに関する情報が含まれます。
+* バグ修正：SDKから送信された最初のイベントが`documentUnloading`を`true`に設定していた場合、[`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon)を使用してイベントが送信され、IDが確立されていないというエラーが発生します。
 
 ## バージョン 2.3.0
 
