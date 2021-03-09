@@ -3,10 +3,10 @@ title: Adobe Experience PlatformWeb SDK Extensionリリースノート
 description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
 seo-description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 89%
+source-wordcount: '1134'
+ht-degree: 79%
 
 ---
 
@@ -14,6 +14,19 @@ ht-degree: 89%
 # Adobe Experience PlatformWeb SDK拡張機能リリースノート
 
 このドキュメントでは、Adobe Experience Platform Launch向けAdobe Experience PlatformWeb SDK extensionのリリースノートをカバーしています。 SDK自体の最新のリリースノートについては、[プラットフォームWeb SDKリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/release-notes.html)を参照してください。
+
+## 2020 年 3 月 9 日
+
+### Adobe Experience Platform Web SDK 2.4.0
+
+Adobe Experience Platform Web SDK ライブラリのバージョン 2.4.0 が含まれます。
+
+* 「イベントアクションUIを送信」に、[「ドキュメントのアンロード中」](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)チェックボックスが追加されました。
+* [デフォルトの同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)を設定すると、同意を受けるまですべてのイベントを破棄する`out`オプションのサポートを追加しました(既存の`pending`オプションは、同意を受けたらイベントをキューに入れ、送信します)。
+* デフォルトの同意フィールドにツールチップを追加しました。
+* [Adobeの同意2.0基準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)のサポートを追加しました。
+* ユーザーのアクセストークンが無効であるか、適切にプロビジョニングされていない場合に、XDMオブジェクトのデータ要素のUIにより適切なエラーが表示されるようになりました。
+* XDMオブジェクトデータ要素を表示するとブラウザー開発者コンソールに表示される、接触チャネル間のエラー（拡張機能の動作には影響しません）を修正しました。
 
 ## 2020 年 11 月 4 日
 
