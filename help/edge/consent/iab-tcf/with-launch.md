@@ -2,9 +2,9 @@
 title: platform launchとプラットフォームWeb SDK Extensionを使用したIAB TCF 2.0サポートの統合
 description: IAB TCF 2.0の同意を、Adobe Experience Platform LaunchおよびAdobe Experience PlatformWeb SDK拡張と共に設定する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ IAB TCF 2.0をExperience Platform LaunchとPlatform Web SDK拡張と共に使用
 
 ## 既定の同意の設定
 
-拡張機能の設定には、デフォルトの同意の設定があります。 これにより、同意Cookieを持たない顧客の動作が制御されます。 同意Cookieを持たない顧客のエクスペリエンスイベントをキューに入れる場合は、`pending`に設定します。 また、データ要素を使用して、デフォルトの同意値を動的に設定することもできます。
+拡張機能の設定には、デフォルトの同意の設定があります。 これにより、同意Cookieを持たない顧客の動作が制御されます。 同意Cookieを持たない顧客のエクスペリエンスイベントをキューに入れる場合は、`pending`に設定します。 同意Cookieを持たない顧客のエクスペリエンスイベントを破棄する場合は、`out`に設定します。 また、データ要素を使用して、デフォルトの同意値を動的に設定することもできます。
 
 デフォルトの同意の設定方法について詳しくは、SDK設定ガイドの[デフォルトの同意のセクション](../../fundamentals/configuring-the-sdk.md#default-consent)を参照してください。
 
