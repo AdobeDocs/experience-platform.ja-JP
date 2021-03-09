@@ -1,12 +1,12 @@
 ---
 title: Adobe Experience PlatformWeb SDKを使用したイベントの追跡
-seo-description: Adobe Experience PlatformWeb SDKイベントの追跡方法を説明します。
+description: Adobe Experience PlatformWeb SDKイベントの追跡方法を説明します。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;ドキュメントのアンロード；onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 44%
+source-wordcount: '1397'
+ht-degree: 34%
 
 ---
 
@@ -79,7 +79,7 @@ dataLayer.commerce = null;
 
 現在、XDM　スキーマと一致しないデータの送信はサポートされていません。将来的にはサポートが予定されています。
 
-### `eventType` の設定
+### `eventType` の設定 {#event-types}
 
 XDMエクスペリエンスイベントには、オプションの`eventType`フィールドがあります。 ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信するイベントを区別するのに役立ちます。 XDMには、ユーザが使用できる定義済みのイベントタイプがいくつか用意されています。また、ユースケースに合わせて独自のカスタムイベントタイプを常に作成することもできます。 以下は、XDMが提供するあらかじめ定義されたイベントタイプのリストです。 [詳しくは、XDMの公開リポートを参照してください](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)。
 
@@ -211,20 +211,20 @@ alloy("sendEvent", {
 
 ## イベントのグローバルな変更 {#modifying-events-globally}
 
-イベントのフィールドをグローバルに追加、削除、または変更する場合は、`onBeforeEventSend` コールバックを設定できます。このコールバックは、イベントが送信されるたびに呼び出されます。このコールバックは、`xdm` フィールドを含むイベントオブジェクトで渡されます。イベントで送信されるデータを変更する場合は、`event.xdm` を変更します。
+イベントのフィールドをグローバルに追加、削除、または変更する場合は、`onBeforeEventSend` コールバックを設定できます。このコールバックは、イベントが送信されるたびに呼び出されます。このコールバックは、`xdm` フィールドを含むイベントオブジェクトで渡されます。`content.xdm`を変更して、イベントと共に送信されるデータを変更します。
 
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(event) {
+  "onBeforeEventSend": function(content) {
     // Change existing values
-    event.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
+    content.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
     // Remove existing values
-    delete event.xdm.web.webReferrer.URL;
+    delete content.xdm.web.webReferrer.URL;
     // Or add new values
-    event.xdm._adb3lettersandnumbers.mycustomkey = "value";
+    content.xdm._adb3lettersandnumbers.mycustomkey = "value";
   }
 });
 ```
@@ -235,10 +235,54 @@ alloy("configure", {
 2. 自動的に収集された値（[自動情報](../data-collection/automatic-information.md)を参照）
 3. `onBeforeEventSend` コールバックで加えられた変更です。
 
-`onBeforeEventSend` コールバックでが例外をスローしてもイベントは送信されますが、コールバック内で加えられ変更は、最終的なイベントには適用されません。
+`onBeforeEventSend`コールバックに関する注意事項
+
+* イベントXDMは、コールバック中に変更できます。 コールバックが返された後、
+content.xdmおよびcontent.dataオブジェクトは、イベントと共に送信されます。
+
+   ```javascript
+   onBeforeEventSend: function(content){
+     //sets a query parameter in XDM
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     content.xdm.marketing.trackingCode = urlParams.get('cid')
+   }
+   ```
+
+* このコールバックによって例外がスローされると、イベントの処理は中断され、イベントは送信されません。
+* コールバックが`false`のboolean値を返すと、イベント処理は中断し、
+エラーがない場合、イベントは送信されません。 このメカニズムにより、特定のイベントを
+イベントデータを調べ、イベントを送信すべきでない場合は`false`を返します。
+
+   >[!NOTE]
+   >ページの最初のイベントでfalseが返されないように、注意が必要です。 最初のイベントでfalseを返すと、パーソナライゼーションに悪影響を与える可能性があります。
+
+```javascript
+   onBeforeEventSend: function(content) {
+     // ignores events from bots
+     if (MyBotDetector.isABot()) {
+       return false;
+     }
+   }
+```
+
+ブール値`false`以外の戻り値は、イベントがコールバックの後で処理および送信できるようにします。
+
+* イベントは、イベントタイプを調べることでフィルタリングできます([イベントタイプ](#event-types)を参照)。
+
+```javascript
+    onBeforeEventSend: function(content) {  
+      // augments XDM if link click event is to a partner website
+      if (
+        content.xdm.eventType === "web.webinteraction.linkClicks" &&
+        content.xdm.web.webInteraction.URL ===
+          "http://example.com/partner-page.html"
+      ) {
+        content.xdm.partnerWebsiteClick = true;
+      }
+   }
+```
 
 ## 実行可能なエラーの可能性
 
 イベントを送信する際、送信されるデータが大きすぎる（要求全体で 32KB を超える）場合は、エラーが発生する可能性があります。この場合、送信されるデータの量を減らす必要があります。
-
-デバッグが有効な場合、サーバーは、設定された XDM スキーマに対して送信されるイベントデータを同期的に検証します。データがスキーマと一致しない場合、不一致の詳細がサーバーから返され、エラーが発生します。この場合は、スキーマと一致するようにデータを変更します。デバッグが有効になっていない場合、サーバーはデータを非同期で検証するので、対応するエラーは発生しません。
