@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；APIチュートリアル；ストリーミング送信先API;プラットフォーム
 solution: Experience Platform
-title: Adobe Experience PlatformでAPI呼び出しを使用して、ストリーミング送信先に接続し、データをアクティブにします。
+title: Adobe Experience PlatformのFlow Service APIを使用して、ストリーミング送信先に接続し、データをアクティブにします。
 description: このドキュメントでは、Adobe Experience PlatformAPIを使用したストリーミング宛先の作成について説明します
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2029'
 ht-degree: 54%
 
 ---
 
 
-# ストリーミング宛先への接続とAPI呼び出しを使用したデータのアクティブ化
+# Flow Service APIを使用して、ストリーミング送信先に接続し、データをアクティブにします
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 ### Swagger のドキュメント  {#swagger-docs}
 
-このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)の[Flow Service APIドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)の[Flow Service APIに関するドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
 
 ## 使用可能なストリーミング先のリストを取得{#get-the-list-of-available-streaming-destinations}
 
