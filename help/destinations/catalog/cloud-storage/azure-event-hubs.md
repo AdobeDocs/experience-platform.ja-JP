@@ -3,7 +3,7 @@ keywords: Azureイベントハブの宛先；azureイベントハブ；azure eve
 title: （ベータ版）Azureイベントハブ接続
 description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 6%
@@ -22,7 +22,7 @@ ht-degree: 6%
 [!DNL Azure Event Hubs]ストレージへのリアルタイムの送信接続を作成して、Adobe Experience Platformからデータをストリーミングできます。
 
 * [!DNL Azure Event Hubs]の詳細については、[Microsoftのドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)を参照してください。
-* API呼び出しを使用して[!DNL Azure Event Hubs]に接続するには、[ストリーミング宛先APIのチュートリアル](../../api/streaming-destinations.md)を参照してください。
+* プログラム的に[!DNL Azure Event Hubs]に接続するには、[ストリーミング送信先APIのチュートリアル](../../api/streaming-destinations.md)を参照してください。
 * プラットフォームユーザーインターフェイスを使用して[!DNL Azure Event Hubs]に接続するには、以下の節を参照してください。
 
 ![AWSKinesisのUI](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
@@ -108,6 +108,6 @@ ht-degree: 6%
 
 >[!MORELIKETHIS]
 >
->* [Azureイベントハブに接続し、API呼び出しを使用してデータをアクティブにする](../../api/streaming-destinations.md)
+>* [Azureイベントハブに接続し、Flow Service APIを使用してデータをアクティブにする](../../api/streaming-destinations.md)
 >* [AWSKinesisの宛先](./amazon-kinesis.md)
 >* [宛先のタイプとカテゴリ](../../destination-types.md)
