@@ -3,7 +3,7 @@ title: Adobe Experience PlatformWeb SDKのインストール
 description: Experience Platform Web SDK のインストール方法について説明します.
 keywords: Web sdkのインストール；Web sdkのインストール；internet explorer;promise;npmパッケージ
 translation-type: tm+mt
-source-git-commit: 29272856d766e5adeb4b00ea62b28ea77abe338e
+source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 33%
@@ -31,8 +31,10 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 次に例を示します。
 
-* 縮小：[https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js)
-* 縮小されません：[https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.3.0/alloy.js)
+
+* 縮小：[https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js)
+* 縮小解除：[https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js)
+
 
 ### コードの追加{#adding-the-code}
 
@@ -45,7 +47,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
 ```
 
 「ベースコード」は、`alloy`という名前のグローバル関数を作成します。 この関数を使用して SDK を操作します。グローバル関数に別の名前を付けたい場合は、`alloy`名前を次のように変更します。
@@ -57,7 +59,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["mycustomname"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
 ```
 
 この例では、グローバル関数の名前が `alloy` から `mycustomname` に変更されています。
@@ -107,7 +109,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js"></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js"></script>
 ```
 
 ## オプション3:NPMパッケージの使用
