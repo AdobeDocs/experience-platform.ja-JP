@@ -4,10 +4,10 @@ description: Adobe Experience PlatformWeb SDKの設定方法を説明します�
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；web;環境;placeContext;debugEnabled;edgeDomain;orgId;clickBeforeEventSend;defaultConsent;web設定；prehidingStyle;cookieDestinations;enationsDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: f78da58ba7a593d9c161030833d9b69e2ba57c9a
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 69%
+source-wordcount: '793'
+ht-degree: 63%
 
 ---
 
@@ -103,7 +103,10 @@ Adobeサービスとのやり取りに使用するドメイン。 Adobe エッ�
 | -------- | ------------ | ----------------- |
 | オブジェクト | × | `"in"` |
 
-ユーザーのデフォルトの同意を設定します。これは、ユーザーに対して同意設定が保存されていない場合に使用されます。もう 1 つの有効な値は `"pending"` です。この設定をおこなうと、ユーザーが同意設定を提供するまで作業はキューに登録されます。ユーザーの環境設定を指定した後、作業を続行するか、ユーザーの環境設定に基づいて中止します。詳しくは、[同意のサポート](../consent/supporting-consent.md)を参照してください。
+ユーザーのデフォルトの同意を設定します。これは、ユーザーに対して同意設定が保存されていない場合に使用されます。他の有効な値は`"pending"`と`"out"`です。 このデフォルト値は、ユーザーのプロファイルに保持されません。 setConsentが呼び出された場合にのみ、ユーザーのプロファイルが更新されます。
+* `"in"`:これが設定されている場合、または値が指定されていない場合、ユーザーの同意を得ずに作業を続行します。
+* `"pending"`:この設定を行うと、ユーザーが同意を求めるまで作業はキューに入れられます。
+* `"out"`:この設定を行うと、ユーザーが同意の環境設定を行うまで作業は破棄されます。ユーザーの環境設定を指定した後、作業を続行するか、ユーザーの環境設定に基づいて中止します。詳しくは、[同意のサポート](../consent/supporting-consent.md)を参照してください。
 
 ## パーソナライゼーションオプション
 
