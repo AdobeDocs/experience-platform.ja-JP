@@ -3,7 +3,7 @@ keywords: AmazonKinesis;kinesis宛先；kinesis
 title: AmazonKinesis接続
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 6%
@@ -22,7 +22,7 @@ ht-degree: 6%
 [!DNL Amazon Kinesis]ストレージへのリアルタイムの送信接続を作成して、Adobe Experience Platformからデータをストリーミングできます。
 
 * [!DNL Amazon Kinesis]について詳しくは、[Amazonのドキュメント](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)を参照してください。
-* API呼び出しを使用して[!DNL Amazon Kinesis]に接続するには、[ストリーミング宛先APIのチュートリアル](../../api/streaming-destinations.md)を参照してください。
+* プログラム的に[!DNL Amazon Kinesis]に接続するには、[ストリーミング送信先APIのチュートリアル](../../api/streaming-destinations.md)を参照してください。
 * プラットフォームユーザーインターフェイスを使用して[!DNL Amazon Kinesis]に接続するには、以下の節を参照してください。
 
 ![AmazonKinesisUI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
@@ -117,7 +117,7 @@ ht-degree: 6%
 
 >[!MORELIKETHIS]
 >
->* [AmazonKinesisに接続し、API呼び出しを使用してデータをアクティブにする](../../api/streaming-destinations.md)
+>* [AmazonKinesisに接続し、Flow Service APIを使用してデータをアクティブにする](../../api/streaming-destinations.md)
 >* [Azureイベントハブの宛先](./azure-event-hubs.md)
 >* [宛先のタイプとカテゴリ](../../destination-types.md)
 
