@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;SFTP
 solution: Experience Platform
 title: UIでのSFTPソース接続の作成
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Adobe Experience PlatformUIを使用してSFTPソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '718'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ SFTPに接続するには、次の接続プロパティの値を指定する必�
 | `host` | SFTPサーバーに関連付けられている名前またはIPアドレス。 |
 | `username` | SFTPサーバーへのアクセス権を持つユーザー名。 |
 | `password` | SFTPサーバーのパスワードです。 |
-| `privateKeyContent` | Base64エンコードされたSSH秘密鍵のコンテンツ。 SSH秘密鍵のOpenSSH(RSA/DSA)形式。 |
+| `privateKeyContent` | Base64エンコードされたSSH秘密鍵のコンテンツ。 OpenSSHキーのタイプは、RSAまたはDSAに分類する必要があります。 |
 | `passPhrase` | 鍵ファイルや鍵の内容がパスフレーズで保護されている場合に、秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContentがパスワードで保護されている場合は、PrivateKeyContentのパスフレーズを値として使用する必要があります。 |
 
 必要な資格情報を収集したら、次の手順に従って新しいSFTPアカウントを作成し、プラットフォームに接続します。
@@ -75,13 +75,13 @@ SFTPコネクタは、アクセスに使用できる様々な認証タイプを�
 
 >[!IMPORTANT]
 >
->SFTPコネクタは、RSA/DSA OpenSSHキーをサポートします。 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`と主要なファイルコンテンツ開始を確認してください。 秘密鍵ファイルがPPK形式のファイルの場合は、PuTTYツールを使用してPPK形式からOpenSSH形式に変換します。
+>SFTPコネクタは、RSAまたはDSAタイプのOpenSSHキーをサポートします。 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`で終わり`"-----END [RSA/DSA] PRIVATE KEY-----"`で終わる主要なファイルコンテンツ開始を確認してください。 秘密鍵ファイルがPPK形式のファイルの場合は、PuTTYツールを使用してPPK形式からOpenSSH形式に変換します。
 
 ![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| 秘密鍵の内容 | Base64エンコードされたSSH秘密鍵のコンテンツ。 SSH秘密鍵はOpenSSH形式にする必要があります。 |
+| 秘密鍵の内容 | Base64エンコードされたSSH秘密鍵のコンテンツ。 OpenSSHキーのタイプは、RSAまたはDSAに分類する必要があります。 |
 | Passphrase | キーファイルまたはキーの内容がパスフレーズで保護されている場合に、秘密鍵を復号化するためのパスフレーズまたはパスワードを指定します。 PrivateKeyContentがパスワードで保護されている場合は、PrivateKeyContentのパスフレーズを値として使用する必要があります。 |
 
 ### 既存のアカウント
