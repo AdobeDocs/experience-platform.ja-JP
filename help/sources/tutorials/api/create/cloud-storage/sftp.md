@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;SFTP；セキュアファイル転送プロトコル；セキュアファイル転送プロトコル
 solution: Experience Platform
 title: Flow Service APIを使用したSFTPソース接続の作成
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Flow Service APIを使用して、Adobe Experience PlatformをSFTP（セキュアファイル転送プロトコル）サーバーに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 23%
+source-wordcount: '877'
+ht-degree: 21%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 23%
 | `host` | SFTPサーバーに関連付けられている名前またはIPアドレス。 |
 | `username` | SFTPサーバーへのアクセス権を持つユーザー名。 |
 | `password` | SFTPサーバーのパスワードです。 |
-| `privateKeyContent` | Base64エンコードされたSSH秘密鍵のコンテンツ。 SSH秘密鍵のOpenSSH(RSA/DSA)形式。 |
+| `privateKeyContent` | Base64エンコードされたSSH秘密鍵のコンテンツ。 OpenSSHキーのタイプは、RSAまたはDSAに分類する必要があります。 |
 | `passPhrase` | 鍵ファイルや鍵の内容がパスフレーズで保護されている場合に、秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContentがパスワードで保護されている場合は、PrivateKeyContentのパスフレーズを値として使用する必要があります。 |
 
 ### API 呼び出し例の読み取り
@@ -133,6 +133,10 @@ curl -X POST \
 
 SSH公開鍵認証を使用してSFTPPOSTを作成するには、[!DNL Flow Service]、`userName`、`privateKeyContent`および`passPhrase`の値を指定しながら、`host` APIに接続要求を行います。
 
+>[!IMPORTANT]
+>
+>SFTPコネクタは、RSAまたはDSAタイプのOpenSSHキーをサポートします。 `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`で終わり`"-----END [RSA/DSA] PRIVATE KEY-----"`で終わる主要なファイルコンテンツ開始を確認してください。 秘密鍵ファイルがPPK形式のファイルの場合は、PuTTYツールを使用してPPK形式からOpenSSH形式に変換します。
+
 **API 形式**
 
 ```http
@@ -172,7 +176,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.host` | SFTPサーバーのホスト名です。 |
 | `auth.params.username` | SFTPサーバーに関連付けられているユーザー名です。 |
-| `auth.params.privateKeyContent` | base64エンコードされたSSH秘密鍵のコンテンツ。 SSH秘密鍵のOpenSSH(RSA/DSA)形式。 |
+| `auth.params.privateKeyContent` | Base64エンコードされたSSH秘密鍵のコンテンツ。 OpenSSHキーのタイプは、RSAまたはDSAに分類する必要があります。 |
 | `auth.params.passPhrase` | 鍵ファイルや鍵の内容がパスフレーズで保護されている場合に、秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContentがパスワードで保護されている場合は、PrivateKeyContentのパスフレーズを値として使用する必要があります。 |
 | `connectionSpec.id` | SFTPサーバー接続仕様ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
