@@ -6,9 +6,9 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2151'
 ht-degree: 15%
 
 ---
@@ -30,19 +30,11 @@ ht-degree: 15%
 
 適用先：すべての宛先
 
-Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL 宛先]**/**[!UICONTROL 参照]**&#x200B;に移動し、セグメントをアクティブにする宛先を選択します。
+Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL 宛先]**/**[!UICONTROL 参照]**&#x200B;に移動し、次の図に示すように、セグメントをアクティブにする宛先に対応する&#x200B;**[!UICONTROL アクティブ化]**&#x200B;ボタンを押します。
 
-![リンク先を参照](../assets/ui/activate-destinations/connect.png)
+![行き先にアクティブ化](../assets/ui/activate-destinations/browse-tab-activate.png)
 
-アクティベーションワークフローに移動する宛先の名前を選択します。
-
-![活性化流](../assets/ui/activate-destinations/activate-flow.png)
-
->[!NOTE]
->
->宛先に対するアクティベーションワークフローが既に存在する場合は、その宛先に対して現在アクティブ化されているセグメントを確認できます。 右側のパネルで「**[!UICONTROL アクティベーションの編集]**」を選択し、以下の手順に従ってアクティベーションの詳細を変更します。
-
-宛先を選択したら、「**[!UICONTROL アクティブ化]**」を選択します。
+次のセクションの手順に従って、アクティブにするセグメントを選択します。
 
 ### [!UICONTROL セグメントの選択] 手順  {#select-segments}
 
