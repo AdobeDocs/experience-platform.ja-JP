@@ -5,9 +5,9 @@ title: JupterLab UIの概要
 topic: 概要
 description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者がJupter Notebooks、コード、データを扱うための対話型の開発環境を提供します。 このドキュメントでは、JupyterLab とその機能の概要と、一般的なアクションを実行する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 23128fb481452b558c52f962f78ae638fc1f0418
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '1816'
+source-wordcount: '1820'
 ht-degree: 56%
 
 ---
@@ -118,9 +118,9 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 ### 終了して[!DNL JupyterLab]を再起動
 
-[!DNL JupyterLab]では、セッションを終了して、それ以上のリソースが使用されないようにできます。 開始するには、**電源アイコン**&#x200B;を選択し、表示されるポーバーから&#x200B;**[!UICONTROL Shut Down]**&#x200B;を選択して、セッションを終了します。 ノートブックセッションは、アクティビティが12時間続かないと自動終了します。
+[!DNL JupyterLab]では、セッションを終了して、それ以上のリソースが使用されないようにできます。 **電源アイコン** ![電源アイコン](../images/jupyterlab/user-guide/power_button.png)を選択して開始し、表示されるポーバーから&#x200B;**[!UICONTROL シャットダウン]**&#x200B;を選択してセッションを終了します。 ノートブックセッションは、アクティビティが12時間続かないと自動終了します。
 
-[!DNL JupyterLab]を再起動するには、電源アイコンのすぐ左にある&#x200B;**再起動アイコン**&#x200B;を選択し、表示されるポーバーから&#x200B;**[!UICONTROL 再起動]**&#x200B;を選択します。
+[!DNL JupyterLab]を再起動するには、電源アイコンのすぐ左にある&#x200B;**再起動アイコン** ![再起動アイコン](../images/jupyterlab/user-guide/restart_button.png)を選択し、表示されるポーバーから&#x200B;**[!UICONTROL 再開]**&#x200B;を選択します。
 
 ![jupterlabを終了する](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
