@@ -4,10 +4,10 @@ title: 宛先ワークスペースの概要
 description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択し、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 41%
+source-wordcount: '1017'
+ht-degree: 37%
 
 ---
 
@@ -87,15 +87,19 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 
 >[!TIP]
 >
->**[!UICONTROL 名前]**&#x200B;列の追加![データボタン](../assets/ui/workspace/add-data-symbol.png)ボタンを使用して、その宛先に対する追加のセグメントをアクティブ化します。
+> * **[!UICONTROL 追加名前]**&#x200B;列の![セグメントボタン](../assets/ui/workspace/add-data-symbol.png)ボタンを使用して、その宛先に対する追加のセグメントをアクティブにします。
+> * **[!UICONTROL 名前]**&#x200B;列の![宛先を削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)を使用して、宛先への既存の接続を削除します。
+
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
 
 | 要素 | 説明 |
 ---------|----------
-| 名前 | この宛先へのアクティベーションフローに指定した名前。 |
+| 名前 | この宛先へのアクティベーションフローに指定した名前。同じ列には、次の2つのコントロールが含まれます。と[!UICONTROL 宛先]を削除します。 |
+| 最後のフロー実行ステータス | 最後のデータフロー実行のステータス。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
+| 最終フロー実行日 | 最後のデータフローが実行された日時。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
 | [!UICONTROL 宛先] | アクティベーションフローに対して選択した宛先プラットフォームです。 |
-| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3 または FTP</li><li>リアルタイム広告の宛先の場合：サーバー間</li></ul> |
+| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3、FTP、または[!DNL Azure Blob]を指定できます。</li><li>リアルタイム広告の宛先の場合：サーバー間.</li><li>ストリーミング先の場合：[!DNL Azure Event Hubs]または[!DNL Amazon Kinesis]を指定できます。</li></ul> |
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
 | [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されているセグメントの数を示します。 このコントロールを選択すると、アクティブ化されたセグメントの詳細を確認できます。 アクティブ化されたセグメントの詳細については、宛先の詳細ページの[アクティベーションデータ](/help/destinations/ui/destination-details-page.md#activation-data)を参照してください。 |
 | [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）。 |
