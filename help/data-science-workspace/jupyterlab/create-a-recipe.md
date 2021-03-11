@@ -2,14 +2,14 @@
 keywords: Experience Platform;JupyterLab；レシピ；ノートブック；Data Science Workspace；人気の高いトピック；レシピの作成
 solution: Experience Platform
 title: ジャプターノートブックを使用したレシピの作成
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: このチュートリアルでは、2 つの主なセクションについて説明します。まず、JupyterLab ノートブック内のテンプレートを使用して機械学習モデルを作成します。次に、JupyterLab 内でノートブックをレシピワークフローに導き、Data Science Workspace 内でレシピを作成します。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 80%
+source-wordcount: '2366'
+ht-degree: 79%
 
 ---
 
@@ -92,9 +92,9 @@ data_access_sdk_python
 - `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA`
 - `scoringResultsDataSetId`
 
-データセットとスキーマ ID を確認するには、左ナビゲーションバー（フォルダーアイコンの下）にあるノートブック内の「データ」タブに移動します。
+データセットとスキーマIDを見つけるには、左のナビゲーションバー（フォルダーアイコンの下）にあるノートブック内の「データ」タブ![「データ」タブ](../images/jupyterlab/create-recipe/dataset-tab.png)に移動します。
 
-![](../images/jupyterlab/create-recipe/datasets.png)
+![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
 同じ情報は、「[Adobe Experience Platform](https://platform.adobe.com/)」の「**[スキーマ](https://platform.adobe.com/schema)**」タブと「**[データセット](https://platform.adobe.com/dataset/overview)**」タブにあります。
 
