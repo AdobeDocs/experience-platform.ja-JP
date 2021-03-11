@@ -2,14 +2,14 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace；人気の高いトピック；クエリサービス
 solution: Experience Platform
 title: ジュピターノートのクエリサービス
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: Adobe Experience Platform を使用すると、クエリサービスを標準機能として JupyterLab に統合することにより、Data Science Workspace で構造化照会言語（SQL）を使用できます。このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例のサンプルSQLクエリを示します。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 64%
+source-wordcount: '824'
+ht-degree: 58%
 
 ---
 
@@ -98,15 +98,13 @@ ht-degree: 64%
 
 ## データのクエリ {#query-your-data}
 
-個々のノートブックセルに次の SQL クエリを入力します。クエリを実行するには、セルをクリックしてから、**[!UICONTROL 再生]**&#x200B;ボタンをクリックします。成功したクエリの結果またはエラーログは、実行されたセルの下に表示されます。
+個々のノートブックセルに次の SQL クエリを入力します。クエリを実行するには、セルで選択し、**[!UICONTROL 再生]**&#x200B;ボタンを選択します。 成功したクエリの結果またはエラーログは、実行されたセルの下に表示されます。
 
-ノートブックが長時間非アクティブになると、ノートブックと[!DNL Query Service]の接続が切断される場合があります。 その場合は、右上隅の&#x200B;**[!UICONTROL 電源]**&#x200B;ボタンをクリックして[!DNL JupyterLab]を再起動します。
+ノートブックが長時間非アクティブになると、ノートブックと[!DNL Query Service]の接続が切断される場合があります。 その場合は、電源ボタンの横の右上隅にある&#x200B;**再起動**&#x200B;ボタン![再起動ボタン](../images/jupyterlab/user-guide/restart_button.png)を選択して、[!DNL JupyterLab]を再起動します。
 
-![](../images/jupyterlab/query/restart_button.png)
+ノートブックのカーネルはリセットされますが、セルは残ります。すべてのセルを再実行して、中断した場所に戻ります。
 
-ノートブックのカーネルはリセットされますが、セルは保持され、**すべて**&#x200B;のセルを再実行して、中断した場所から続行します。
-
-### 1 時間ごとの訪問者数  {#hourly-visitor-count}
+### 1 時間ごとの訪問者数 {#hourly-visitor-count}
 
 次のクエリは、指定した日付の 1 時間ごとの訪問者数を返します。
 
@@ -188,7 +186,7 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-この変更したクエリを実行すると、結果が `hourly_actions_date_range` にデータフレームとして保存されます。新しいセルで次の関数を実行し、結果をプレビューします。
+変更されたクエリを実行すると、結果が`hourly_actions_date_range`にデータフレームとして保存されます。 新しいセルで次の関数を実行し、結果をプレビューします。
 
 ```python
 hourly_actions_date_rage.head()
