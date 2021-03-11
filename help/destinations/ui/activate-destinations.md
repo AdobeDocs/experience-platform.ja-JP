@@ -6,7 +6,7 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '2151'
 ht-degree: 15%
@@ -30,7 +30,7 @@ ht-degree: 15%
 
 適用先：すべての宛先
 
-Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL 宛先]**/**[!UICONTROL 参照]**&#x200B;に移動し、次の図に示すように、セグメントをアクティブにする宛先に対応する&#x200B;**[!UICONTROL アクティブ化]**&#x200B;ボタンを押します。
+Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL 宛先]**/**[!UICONTROL 参照]**&#x200B;に移動し、次の図に示すように、セグメントをアクティブにする宛先に対応する&#x200B;**[!UICONTROL アクティブ化]**&#x200B;ボタンをクリックします。
 
 ![行き先にアクティブ化](../assets/ui/activate-destinations/browse-tab-activate.png)
 
