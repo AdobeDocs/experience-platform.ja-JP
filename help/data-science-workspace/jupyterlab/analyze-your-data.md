@@ -2,14 +2,14 @@
 keywords: Experience Platform;JupyterLab；ノートブック；Data Science Workspace；人気の高いトピック；データノートブックの分析
 solution: Experience Platform
 title: ノートブックを使用したデータの分析
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: このチュートリアルでは、Data Science Workspaceに組み込まれたJupterノートブックを使用して、データにアクセス、調査、視覚化する方法に焦点を当てます。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4
 workflow-type: tm+mt
-source-wordcount: '1735'
-ht-degree: 79%
+source-wordcount: '1733'
+ht-degree: 76%
 
 ---
 
@@ -80,11 +80,11 @@ pandas の DataFrame データ構造は、2 次元のラベル付きデータ構
 
 この節では、Retail Sales データセットを使用します。これは、Retail Sales サンプルノートブックで使用されているのと同じデータセットです。
 
-Jupyter ニートブックで、左側の「**Data**」タブからデータにアクセスできます。このタブをクリックすると、データセットのリストが表示されます。
+ジュピター・ノートブックでは、左側の&#x200B;**データ**&#x200B;タブ![データタブ](../images/jupyterlab/analyze-data/dataset-tab.png)からデータにアクセスできます。 タブを選択すると、2つのフォルダーが表示されます。 **[!UICONTROL Datasets]**&#x200B;フォルダーを選択します。
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-これで、Datasets ディレクトリで、取り込まれたすべてのデータセットを確認できます。ディレクトリにデータセットが大量に入力されている場合は、すべてのエントリの読み込みに 1 分程度かかる場合があります。
+Datasetsディレクトリに取り込まれたすべてのデータセットが表示されます。 ディレクトリにデータセットが大量に入力されている場合は、すべてのエントリの読み込みに 1 分程度かかる場合があります。
 
 データセットは同じなので、外部データを使用した前の節の読み込みデータを置き換えます。「**Load Data**」の下のコードブロックを選択し、キーボードの **D** キーを 2 回押します。フォーカスがテキスト内ではなく、ブロック上にあることを確認します。**D** キーを 2 回押す前に、**Esc** キーを押してテキストフォーカスをエスケープすることができます。
 
