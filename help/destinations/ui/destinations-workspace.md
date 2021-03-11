@@ -4,10 +4,10 @@ title: 宛先ワークスペースの概要
 description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択し、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 37%
+ht-degree: 34%
 
 ---
 
@@ -117,6 +117,6 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 
 ![Data-flows1](../assets/ui/workspace/data-flows1.png)
 
-ページに表示される任意の宛先を選択し、「**[!UICONTROL フローを表示]**」を押して、各宛先に設定したすべての接続に関する情報を表示します。
+ページに表示されている宛先を選択し、**[!UICONTROL 表示フロー]**&#x200B;をクリックして、各宛先に対して設定したすべての接続に関する情報を表示します。
 
 ![Data-flows2](../assets/ui/workspace/data-flows2.png)
