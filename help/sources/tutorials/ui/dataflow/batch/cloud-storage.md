@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データフロー；データフロー
 solution: Experience Platform
 title: UIでのクラウドストレージバッチコネクタのデータフローの設定
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1874'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ ht-degree: 2%
 
 [!DNL Experience Platform] は、外部ストレージから取り込む次のファイル形式をサポートしています。
 
-* 区切り文字区切り値(DSV):DSV形式のデータ・ファイルのサポートは、現在、コンマ区切り値に制限されています。 DSV形式のファイル内のフィールド・ヘッダーの値は、英数字とアンダースコアのみで構成する必要があります。 一般的なDSVファイルは、今後サポートされる予定です。
+* 区切り文字区切り値(DSV):DSV形式のデータ・ファイルの区切り文字としては、任意の1文字の値を使用できます。
 * [!DNL JavaScript Object Notation] (JSON):JSON形式のデータファイルは、XDMに準拠している必要があります。
 * [!DNL Apache Parquet]:パーケット形式のデータファイルは、XDMに準拠している必要があります。
 
@@ -220,4 +220,4 @@ JSONファイルの場合は、フィールドを他のフィールドに直接�
 
 ### [!DNL Profile]母集団の受信データをアクティブ化
 
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../../profile.md)のチュートリアルを参照してください。
+ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むのに使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../../profile.md)のチュートリアルを参照してください。
