@@ -6,10 +6,10 @@ breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードで Experience Platform データを視覚化します。
 feature: データ管理
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 4b087685f065d05894fb45c19fce453346448614
 workflow-type: tm+mt
-source-wordcount: '36'
-ht-degree: 63%
+source-wordcount: '40'
+ht-degree: 57%
 
 ---
 
@@ -22,4 +22,6 @@ ht-degree: 63%
    * [セグメント](guides/segments.md)
    * [宛先](guides/destinations.md)
    * [ライセンスの使用](guides/license-usage.md)
+* [ダッシュボードの変更](modify.md)
+* [ウィジェットライブラリ](widget-library.md)
 * [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
