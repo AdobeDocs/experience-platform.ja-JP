@@ -3,9 +3,9 @@ keywords: 広告；業者の机
 title: トレードデスクの接続
 description: 'トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。 '
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '609'
 ht-degree: 5%
 
 ---
@@ -17,13 +17,17 @@ ht-degree: 5%
 
 [!DNL The Trade Desk] は、ディスプレイ、ビデオ、モバイル在庫ソースにわたって、デジタルキャンペーンをターゲットにした再ターゲット化やオーディエンスを広告購入者が実行するためのセルフサービスプラットフォームです。
 
-プロファイルデータを[!DNL The Trade Desk]に送信するには、まず宛先に接続する必要があります。
+プロファイルデータを[!DNL Trade Desk]に送信するには、まず宛先に接続する必要があります。
 
 ## 宛先の仕様 {#destination-specs}
 
-[!DNL The Trade Desk]宛先に固有の次の詳細をメモしておきます。
+[!DNL Trade Desk]宛先に固有の次の詳細をメモしておきます。
 
 * 次の[ID](../../../identity-service/namespaces.md)を[!DNL The Trade Desk]宛先に送信できます。[!DNL The Trade Desk ID]、[!DNL IDFA]、[!DNL GAID]。
+
+>[!IMPORTANT]
+>
+>[!DNL The Trade Desk]で最初の宛先を作成したい場合で、以前(Adobe Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL The Trade Desk]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
 
 ## 使用例 {#use-cases}
 
@@ -50,7 +54,7 @@ ht-degree: 5%
 * **[!UICONTROL 名前]**:この宛先が将来認識される名前。
 * **[!UICONTROL 説明]**:この宛先を将来特定するのに役立つ説明です。
 * **[!UICONTROL アカウントID]**:アカウント [!DNL Trade Desk] [!UICONTROL ID]。
-* **[!UICONTROL サーバーの場所]**:どの地域サーバーを使用する [!DNL The Trade Desk] かを担当者に問い合わせてください。以下は、選択可能な地域サーバーです。
+* **[!UICONTROL サーバーの場所]**:どの地域サーバーを使用する [!DNL Trade Desk] かを担当者に問い合わせてください。以下は、選択可能な地域サーバーです。
 
    * **[!UICONTROL ヨーロッパ]**
    * **[!UICONTROL シンガポール]**
@@ -79,4 +83,4 @@ ht-degree: 5%
 
 ## エクスポートされたデータ{#exported-data}
 
-データが[!DNL The Trade Desk]宛先に正常にエクスポートされたかどうかを確認するには、[!DNL The Trade Desk]アカウントを確認してください。 アクティベーションに成功すると、オーディエンスがアカウントに入力されます。
+データが[!DNL The Trade Desk]宛先に正常にエクスポートされたかどうかを確認するには、[!DNL Trade Desk]アカウントを確認してください。 アクティベーションに成功すると、オーディエンスがアカウントに入力されます。
