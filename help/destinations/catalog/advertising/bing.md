@@ -3,10 +3,10 @@ keywords: '広告；bing; '
 title: Microsoft Bing接続
 description: Microsoft Bingの接続先で、Microsoftディスプレイ広告全体に対して、ターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行できます。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 6%
+source-wordcount: '527'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,10 @@ ht-degree: 6%
 
 * 次の[ID](../../../identity-service/namespaces.md)を[!DNL Microsoft Bing]宛先に送信できます。[!DNL Microsoft ID]。
 
+>[!IMPORTANT]
+>
+>[!DNL Microsoft Bing]で最初の宛先を作成したい場合で、以前(Adobe Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL Microsoft Bing]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
+
 ## 使用例 {#use-cases}
 
 マーケティング担当者として、[!DNL Microsoft Advertising IDs]から構築されたセグメントを[!DNL Microsoft Advertising]チャネルのディスプレイ広告を通じてターゲットに使用できるようにしたいと思います。
@@ -33,7 +37,7 @@ ht-degree: 6%
 
 ## 前提条件 {#prerequisites}
 
-宛先を設定する際に、次の情報を入力するように求められます。
+宛先を設定する際は、次の情報を入力する必要があります。
 
 * [!UICONTROL アカウントID]:これは、整数形式 [!DNL Bing Ads CID]のユーザーのものです。
 
