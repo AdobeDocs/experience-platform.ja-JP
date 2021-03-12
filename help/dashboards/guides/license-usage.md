@@ -2,18 +2,18 @@
 keywords: Experience Platform；ユーザインターフェイス；UI；カスタマイズ；ライセンス使用ダッシュボード;ダッシュボード；ライセンス使用；エンタイトルメント；コンシューム
 title: ライセンスの使用ダッシュボード
 description: Adobe Experience Platformは、組織のライセンスの使用に関する重要な情報を表示できるダッシュボードを提供します。
-topic: guide
-type: Documentation
+topic: ガイド
+type: ドキュメント
 translation-type: tm+mt
-source-git-commit: 084aaa315f694d696abee7f078be3a121111f6cc
+source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 1%
+source-wordcount: '656'
+ht-degree: 4%
 
 ---
 
 
-# （ベータ版）[!UICONTROL ライセンスの使用状況]ダッシュボード{#license-usage-dashboard}
+# （ベータ版）ライセンス使用ダッシュボード{#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Adobe Experience Platformユーザーインターフェイス(UI)は、毎日の
 
 >[!NOTE]
 >
->サンドボックスの消費レポートは、同じタイプのすべてのサンドボックスに対して累積的に行われます。 つまり、「[!UICONTROL 実稼働環境]」または「[!UICONTROL 開発環境]」を選択すると、それぞれ本番用サンドボックスと開発用サンドボックスに関するレポートが作成されます。
+>サンドボックスの消費レポートは、同じタイプのすべてのサンドボックスに対して累積的に行われます。 つまり、「[!UICONTROL 実稼動]」または「[!UICONTROL 開発]」を選択すると、すべての実稼働用サンドボックスと開発用サンドボックスに対して、それぞれ使用状況レポートが表示されます。
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -53,26 +53,35 @@ Adobe Experience Platformユーザーインターフェイス(UI)は、毎日の
 
 ![](../images/license-usage/select-date-range.png)
 
-### ウィジェットと指標
+## ウィジェット
 
-ライセンスの使用ダッシュボードはウィジェットで構成され、組織のライセンスの使用に関する重要な情報を提供する読み取り専用の指標が表示されます。 これらのウィジェットの詳細については、このガイドの利用可能なウィジェットの節を参照してください。
+ライセンスの使用ダッシュボードはウィジェットで構成され、組織のライセンスの使用に関する重要な情報を提供する読み取り専用の指標が表示されます。 表示される指標は、組織のライセンスによって異なります（詳しくは、[使用可能な指標](#available-metrics)のセクションを参照してください）。
 
-## 利用可能なウィジェット{#available-widgets}
+各ウィジェットには、組織の実際の数値と、組織のライセンスで利用可能な合計とを比較した折れ線グラフが表示され、合計使用率の割合が示されます。
 
-Experience Platformは現在、ライセンスの使用状況を視覚化するために使用できる1つのウィジェットを提供していますが、近日中にさらに多くのウィジェットがリリースされます。
+![](../images/license-usage/widgets.png)
 
-### [!UICONTROL アドレス可能なオーディエンス] {#addressable-audiences}
+## 使用可能な指標
 
-**[!UICONTROL アドレス指定可能なオーディエンス]**&#x200B;ウィジェットは、プロファイルデータストア内のマージされたプロファイルの合計数を表示します。これは、システム生成のマージポリシーを適用し、決定論的（プライベート）グラフアルゴリズムを使用して現在のすべてのデータセットのプロファイルフラグメントを結合した後です。
+現在、ライセンスの使用ダッシュボードには4つの指標があります。
 
-フラグメントと結合されたプロファイルの詳細については、まず、[プロファイルの概要](../../profile/home.md)の&#x200B;*プロファイルフラグメントと結合されたプロファイル*&#x200B;セクションを読んでください。
+* [!UICONTROL アドレス可能なオーディエンス] (プロファイル数で測定)
+* [!UICONTROL 平均的なプロファイルの豊かさ]
+* [!UICONTROL 総消費ストレージ]
+* [!UICONTROL セグメント化率ごとにスキャンされるデータ]
 
->[!NOTE]
->
->この指標の計算に使用されるマージ・ポリシーは、Experience Platformによって生成され、編集することも、別のマージ・ポリシーを選択することもできません。 このシステム生成のマージポリシーは、[!DNL Profile]ダッシュボードの[!UICONTROL オーディエンスサイズ]の計算に使用されるデフォルトのマージポリシーとは異なるので、[!UICONTROL ライセンスの使用]と[!DNL Profile]のダッシュボードのオーディエンス数が完全に同じになる可能性は低くなります。
+これらの各指標の定義は、組織が購入したライセンスによって異なります。 各指標の詳細な定義については、該当する「製品の詳細」ドキュメントを参照してください。
 
-![](../images/license-usage/addressable-audiences.png)
+| ライセンス | 製品の説明 |
+|---|---|
+| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD標準</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>RT顧客データプラットフォーム：OD</li><li>RT顧客データプラットフォーム：OD PRFL ～ 10M</li><li>RT顧客データプラットフォーム：OD PRFL ～ 50M</li></ul> | [リアルタイム顧客データプラットフォーム](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>AEP:ODアクティベーション</li><li>AEP:ODアクティベーションPRFL ～ 10M</li><li>AEP:ODアクティベーションPRFL最大50M</li></ul> | [Adobe Experience Platformアクティベーション](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:ODインテリジェンス</li></ul> | [Adobe Experience Platform情報](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
 ## 次の手順
 
-このドキュメントに従うことで、ライセンス使用ダッシュボードを見つけ、表示用のサンドボックスを選択できるようになります。 利用可能なウィジェットに表示される指標も理解する必要があります。 Experience PlatformUIについて詳しくは、[『プラットフォームUIガイド](../../landing/ui-guide.md)』を参照してください。
+このドキュメントを読むと、ライセンス使用ダッシュボードを特定し、表示用のサンドボックスを選択できるようになります。 また、購入したライセンスに基づいて、組織で利用可能な指標に関する詳細情報も確認できます。
+
+Experience PlatformUIで使用できるその他の機能の詳細については、『[Platform UI guide](../../landing/ui-guide.md)』を参照してください。
