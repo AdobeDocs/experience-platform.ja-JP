@@ -1,11 +1,13 @@
 ---
 title: Adobe Experience PlatformWeb SDK Extensionのアクションタイプ
 description: Adobe Experience Platform LaunchのAdobe Experience PlatformWeb SDK Extensionが提供する様々なアクションタイプについて説明します。
+solution: Experience Platform
+feature: Web SDK
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: 9ce6dd5a290b55da04f4ae185cab96c120777775
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 6%
+source-wordcount: '548'
+ht-degree: 4%
 
 ---
 
@@ -18,9 +20,15 @@ ht-degree: 6%
 
 ## イベントの送信
 
-Adobe Experience Platformが送信したデータを収集し、その情報に基づいて行動できるように、Adobe[!DNL Experience Platform]にイベントを送信します。 インスタンスを選択します（複数ある場合）。 ページの読み込みの開始時、または単一ページアプリでの表示の変更時にイベントが発生した場合は、「**[!UICONTROL 表示の開始時に発生します]**」を選択します。
+Adobe Experience Platformが送信したデータを収集し、その情報に基づいて行動できるように、Adobe[!DNL Experience Platform]にイベントを送信します。 インスタンスを選択します（複数ある場合）。 **[!UICONTROL XDM Data]**&#x200B;フィールドには、任意の送信データを格納できます。 XDMスキーマの構造に準拠するJSONオブジェクトを使用します。 このオブジェクトは、ページ上に作成するか、**[!UICONTROL カスタムコード]** **[!UICONTROL データ要素]**&#x200B;を使用して作成できます。
 
-**[!UICONTROL XDM Data]**&#x200B;フィールドには、任意の送信データを格納できます。 XDMスキーマの構造に準拠するJSONオブジェクトを使用します。 このオブジェクトは、ページ上に作成するか、**[!UICONTROL カスタムコード]** **[!UICONTROL データ要素]**&#x200B;を使用して作成できます。
+「イベントを送信」アクションタイプには、実装に応じて役立つフィールドがいくつかあります。 これらのフィールドはすべてオプションです。
+
+- **Type:** このフィールドでは、XDMスキーマに記録されるイベントタイプを指定できます。デフォルトのイベントタイプの詳細については、[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)を参照してください。
+- **マージID:** イベントの [マージ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) IDを指定する場合は、このフィールドで指定します。現時点では、ダウンストリームのソリューションはイベントデータをマージできません。
+- **データセットID：エッジ設定で指定したデータセット以外のデータセットにデータを送信する** 必要がある場合は、ここでそのデータセットIDを指定できます。
+- **ドキュメントがアンロードします：** ユーザーがページから離れた場所に移動した場合でもイベントがサーバーに到達することを確認するには、 **[!UICONTROL ドキュメントがアンロードする]** チェックボックスをオンにします。これにより、イベントはサーバーに到達できますが、応答は無視されます。
+- **視覚的なパーソナライゼーションの意思決定のレンダリング：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、「視覚的なパーソナライゼーションのデシジョンを **[!UICONTROL レンダリング」]** チェックボックスをオンにします。必要に応じて、決定範囲を指定することもできます。 パーソナライズされたコンテンツのレンダリングについて詳しくは、[パーソナライゼーションドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content)を参照してください。
 
 ## 同意の設定
 
@@ -34,4 +42,4 @@ Adobe Experience Platformが送信したデータを収集し、その情報に�
 
 ## 次の作業
 
-アクションの種類を設定した後、[データ要素の種類](data-element-types.md)を設定します。
+アクションを設定した後、[データ要素の型を設定](data-element-types.md)します。
