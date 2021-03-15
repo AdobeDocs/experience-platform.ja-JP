@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データガバナンス；データ使用ラベル；ポリシーサービス；データ使用ラベルユーザーガイド
 solution: Experience Platform
 title: UIでのデータ使用量ラベルの管理
-topic: labels
+topic: ラベル
 description: このガイドでは、Adobe Experience Platformユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 41d01b3aec0afa60dd602716a30cc94402702a70
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1135'
 ht-degree: 60%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 60%
 
 データセットレベルでデータ使用状況ラベルを管理するには、既存のデータセットを選択するか、新しいデータセットを作成する必要があります。Adobe Experience Platform にログインした後、左側のナビゲーションで「**[!UICONTROL データセット]**」を選択し、「**[!UICONTROL データセット]**」ワークスペースを開きます。このページには、組織に属するすべての作成済みデータセットと、各データセットに関する有用な詳細情報がリストされます。
 
-![データワークスペース内の「データセット」タブ](../images/labels/datasets.png)
+![データワークスペース内の「データセット」タブ](../images/labels/datasets-tab.png)
 
 次の節では、ラベルの適用先の新しいデータセットを作成する手順を説明します。既存のデータセットのラベルを編集する場合は、リストからデータセットを選択し、「[データセットへのデータ使用状況ラベルの追加](#add-labels)」に進みます。
 
@@ -33,47 +33,47 @@ ht-degree: 60%
 
 新しいデータセットを作成するには、**[!UICONTROL データセット]**&#x200B;ワークスペースの右上隅にある「データセット&#x200B;]**を作成」を選択します。**[!UICONTROL 
 
-![](../images/labels/create_dataset.png)
+![](../images/labels/create-dataset.png)
 
 「**[!UICONTROL データセットを作成]**」画面が表示されます。ここから、「**[!UICONTROL スキーマからデータセットを作成]**」を選択します。
 
-![スキーマからデータセットを作成](../images/labels/dataset_create.png)
+![スキーマからデータセットを作成](../images/labels/create-from-dataset.png)
 
 「**[!UICONTROL スキーマを選択]**」画面が表示され、データセットの作成に使用できるすべてのスキーマが示されます。スキーマの横にあるラジオボタンを選択して、選択します。 右側の「**[!UICONTROL スキーマ]**」セクションには、選択したスキーマの追加の詳細が表示されます。スキーマを選択したら、「**[!UICONTROL 次へ]**」を選択します。
 
-![データセットスキーマの選択](../images/labels/dataset_schema.png)
+![データセットスキーマの選択](../images/labels/select-schema.png)
 
 「**[!UICONTROL データセットを設定]**」画面が表示されます。新しいデータセットの名前（必須）と説明（任意、推奨）を入力し、**[!UICONTROL 完了]**&#x200B;を選択します。
 
-![データセットの名前と説明を設定](../images/labels/dataset_configure.png)
+![データセットの名前と説明を設定](../images/labels/configure-dataset.png)
 
 「**[!UICONTROL データセットアクティビティ]**」ページが開き、新しく作成したデータセットに関する情報が表示されます。この例では、データセットの名前は「ロイヤルティーメンバー」なので、トップナビゲーションには&#x200B;**データセット／ロイヤルティーメンバー**&#x200B;と表示されます。
 
-![「データセットアクティビティ」ページ](../images/labels/dataset_activity.png)
+![「データセットアクティビティ」ページ](../images/labels/dataset-created.png)
 
 ### データセットへのデータ使用状況ラベルの追加 {#add-labels}
 
 新しいデータセットを作成した後、または&#x200B;**[!UICONTROL データセット]**&#x200B;ワークスペースのリストーから既存のデータセットを選択した後、**[!UICONTROL データガバナンス]**&#x200B;を選択して、**[!UICONTROL データガバナンス]**&#x200B;ワークスペースを開きます。 ワークスペースでは、データセットレベルとフィールドレベルでデータ使用状況ラベルを管理できます。
 
-![データセットの「データガバナンス」タブ](../images/labels/dataset_data_governance.png)
+![データセットの「データガバナンス」タブ](../images/labels/dataset-governance.png)
 
 データセット名の横にある鉛筆アイコンを選択して、データ使用ラベルを開始レベルで編集します。
 
-![データセットレベルでラベルを編集](../images/labels/dataset_labels_edit_button.png)
+![データセットレベルでラベルを編集](../images/labels/dataset-level-edit.png)
 
 「**[!UICONTROL ガバナンスラベルを編集]**」ダイアログが開きます。ダイアログ内で、データセットに適用するラベルの横にあるボックスをオンにします。これらのラベルは、データセット内のすべてのフィールドに継承されることに注意してください。各ボックスをオンにすると、「**[!UICONTROL 適用されたラベル]**」ヘッダーが更新され、選択したラベルが表示されます。必要なラベルを選択したら、「**[!UICONTROL 変更を保存]**」を選択します。
 
-<img alt="データセットレベルでガバナンスラベルを適用" src="../images/labels/apply-labels-dataset.png" width="700"><br>
+![データセットレベルでガバナンスラベルを適用](../images/labels/apply-labels-dataset.png)
 
 「**[!UICONTROL データガバナンス]**」ワークスペースが再び表示され、データセットレベルで適用したラベルが示されます。また、ラベルがデータセット内の各フィールドに継承されていることも確認できます。
 
-![フィールドに継承されるデータセットラベル](../images/labels/dataset_inherited_labels.png)
+![フィールドに継承されるデータセットラベル](../images/labels/dataset-labels-applied.png)
 
 データセットレベルでラベルの横に「x」が表示されていることに注意してください。この場合、ラベルを削除できます。各フィールドの継承されたラベルの横には「x」がなく、「灰色表示」になっています。これらのラベルは削除したり、編集したりできません。これは、**継承されたフィールドは読み取り専用**&#x200B;で、フィールドレベルでは削除できないためです。
 
 「**[!UICONTROL 継承されたラベルを表示]**」トグルはデフォルトでオンになっており、データセットからフィールドに継承されたラベルを表示できます。トグルをオフに切り替えると、データセット内の継承されたラベルが非表示になります。
 
-![継承されたラベルを非表示にする](../images/labels/hide_inherited_labels.png)
+![継承されたラベルを非表示にする](../images/labels/inherited-labels.png)
 
 ## フィールドレベルでのラベルの管理
 
@@ -81,23 +81,23 @@ ht-degree: 60%
 
 個々のフィールドにデータ使用ラベルを適用するには、フィールド名の横にあるチェックボックスを選択し、「**[!UICONTROL Edit Governance Labels]**」を選択します。
 
-![フィールドラベルの編集](../images/labels/fields_single_field.png)
+![フィールドラベルの編集](../images/labels/field-label-edit.png)
 
 「**[!UICONTROL ガバナンスラベルを編集]**」ダイアログが表示されます。このダイアログには、選択されたフィールド、適用されたラベル、継承されたラベルを示すヘッダーが表示されます。継承されたラベル（C2 と C5）は、ダイアログで灰色表示になることに注意してください。これらのラベルは、データセットレベルから継承された読み取り専用のラベルなので、データセットレベルのみで編集できます。
 
-<img alt="個々のフィールドのガバナンスラベルの編集" src="../images/labels/field-label-inheritance.png" width="700"><br>
+![個々のフィールドのガバナンスラベルの編集](../images/labels/field-label-inheritance.png)
 
 使用する各ラベルの横にあるチェックボックスを選択して、フィールドレベルのラベルを選択します。 ラベルを選択すると、「**[!UICONTROL 適用されたラベル]**」ヘッダーが更新され、「**[!UICONTROL 選択されたフィールド]**」ヘッダーに表示されるフィールドに適用されるラベルが表示されます。フィールドレベルのラベルの選択が完了したら、「**[!UICONTROL 変更を保存]**」を選択します。
 
-<img alt="フィールドレベルのラベルの適用" src="../images/labels/apply-labels-field.png" width="700"><br>
+![フィールドレベルのラベルの適用](../images/labels/apply-labels-field.png)
 
 「**[!UICONTROL データガバナンス]**」ワークスペースが再び表示され、フィールド名の横の行にフィールドレベルの選択済みラベルが表示されます。フィールドレベルのラベルの横には「x」が表示され、ラベルを削除できます。
 
-![フィールドレベルのラベルを表示するフィールド](../images/labels/fields_show_field_level_labels.png)
+![フィールドレベルのラベルを表示するフィールド](../images/labels/field-labels-applied.png)
 
 これらの手順を繰り返して、追加のフィールドに対してフィールドレベルのラベルの追加と編集を続けることができます。複数のフィールドを選択して、フィールドレベルのラベルを同時に適用することもできます。
 
-![複数のフィールドを選択して、フィールドレベルのラベルを同時に適用します。](../images/labels/fields_select_multiple.png)
+![複数のフィールドを選択して、フィールドレベルのラベルを同時に適用します。](../images/labels/multiple-fields.png)
 
 継承は最上位レベルから下のレベル（データセットからフィールド）のみに移動するため、フィールドレベルで適用されたラベルは他のフィールドやデータセットには反映されないことに注意する必要があります。
 
