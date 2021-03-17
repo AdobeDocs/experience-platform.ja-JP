@@ -5,10 +5,10 @@ description: Adobe Experience Platformは、組織のライセンスの使用に
 topic: ガイド
 type: ドキュメント
 translation-type: tm+mt
-source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
+source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 4%
+source-wordcount: '660'
+ht-degree: 3%
 
 ---
 
@@ -75,8 +75,8 @@ Adobe Experience Platformユーザーインターフェイス(UI)は、毎日の
 | ライセンス | 製品の説明 |
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD標準</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>RT顧客データプラットフォーム：OD</li><li>RT顧客データプラットフォーム：OD PRFL ～ 10M</li><li>RT顧客データプラットフォーム：OD PRFL ～ 50M</li></ul> | [リアルタイム顧客データプラットフォーム](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform、App Services、インテリジェントサービス](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT顧客データプラットフォーム：OD</li><li>RT顧客データプラットフォーム：OD PRFL ～ 10M</li><li>RT顧客データプラットフォーム：OD PRFL ～ 50M</li></ul> | [リアルタイム顧客データプラットフォーム](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:ODアクティベーション</li><li>AEP:ODアクティベーションPRFL ～ 10M</li><li>AEP:ODアクティベーションPRFL最大50M</li></ul> | [Adobe Experience Platformアクティベーション](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:ODインテリジェンス</li></ul> | [Adobe Experience Platform情報](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
