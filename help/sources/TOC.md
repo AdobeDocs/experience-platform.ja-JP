@@ -6,10 +6,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: データ取り込み、ソース
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 16%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -148,9 +148,9 @@ ht-degree: 16%
    - [サードパーティのクラウドストレージシステムからParketデータを取り込む](tutorials/api/cloud-storage-parquet.md)
    - [データセット接続の作成](tutorials/api/create-dataset-base-connection.md)
    - [データフローの監視](tutorials/api/monitor.md)
-   - [接続の更新](tutorials/api/update.md)
+   - [アカウントの更新](tutorials/api/update.md)
    - [データフローの更新](tutorials/api/update-dataflows.md)
-   - [接続の削除](tutorials/api/delete.md)
+   - [アカウントの削除](tutorials/api/delete.md)
    - [データフローの削除](tutorials/api/delete-dataflows.md)
 - UIチュートリアル{#ui-tutorials}
    - ソース接続の作成{#create}
@@ -222,6 +222,7 @@ ht-degree: 16%
    - [受信データをアクティブ化して顧客プロファイルを入力します](tutorials/ui/profile.md)
    - [データフローの監視](tutorials/ui/monitor.md)
    - [アカウントの更新](tutorials/ui/update.md)
+   - [データフローの更新](tutorials/ui/update-dataflows.md)
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローの削除](tutorials/ui/delete.md)
 - [フロー実行通知](notifications.md)
