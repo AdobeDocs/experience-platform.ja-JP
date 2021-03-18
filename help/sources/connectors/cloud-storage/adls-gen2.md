@@ -5,10 +5,10 @@ title: Azure Data LakeストレージGen2ソースコネクタの概要
 topic: 概要
 description: APIまたはユーザーインターフェイスを使用してAzure Data LakeストレージGen2をAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5c6539d45df91369c3608965fd887c013d528b98
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -48,7 +48,7 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 - [Flow Service APIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
 - [Flow Service APIを使用してクラウドストレージデータを収集する](../../tutorials/api/collect/cloud-storage.md)
 
-## UI の使用
+### UI の使用
 
 - [UIでのADLS-Gen2ソース接続の作成](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [UIでのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
