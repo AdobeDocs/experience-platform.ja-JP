@@ -3,10 +3,10 @@ title: Adobe Experience PlatformWeb SDKを使用した顧客同意の環境設�
 description: Adobe Experience PlatformWeb SDKを使用して、同意の環境設定をサポートする方法を説明します。
 keywords: 同意；defaultConsent;default consent;setConsent;プロファイルプライバシーミックスイン；エクスペリエンスイベントプライバシーミックスイン；プライバシーミックスイン；
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: dd9101079a1093c109f43b268a78c07770221156
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 33%
+source-wordcount: '977'
+ht-degree: 32%
 
 ---
 
@@ -66,13 +66,16 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     }]
 });
 ```
 
-ユーザーが選択した場合は、次のようにオプトアウト`n`に設定したcollect環境設定で`setConsent`コマンドを実行します。
+時間フィールドには、ユーザーが最後に同意の環境設定を更新した日時を指定する必要があります。 ユーザーが選択した場合は、次のようにオプトアウト`n`に設定したcollect環境設定で`setConsent`コマンドを実行します。
 
 ```javascript
 alloy("setConsent", {
@@ -82,6 +85,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "n"
+        },
+        metadata: {
+          time: "2021-03-17T15:51:30-07:00"
         }
       }
     }]
@@ -155,6 +161,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     },{
