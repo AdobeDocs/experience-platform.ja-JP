@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；接続の更新
+keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；アカウントの更新
 solution: Experience Platform
-title: Flow Service APIを使用した接続の更新
+title: Flow Service APIを使用したアカウントの更新
 topic: 概要
 type: チュートリアル
-description: このチュートリアルでは、Flow Service APIを使用した接続の詳細と秘密鍵証明書の更新手順を説明します。
+description: このチュートリアルでは、Flow Service APIを使用してアカウントの詳細と秘密鍵証明書を更新する手順について説明します。
 translation-type: tm+mt
-source-git-commit: 5187647dfcf82a476bc776bf2b606db228ca70a4
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 31%
@@ -14,7 +14,7 @@ ht-degree: 31%
 ---
 
 
-# Flow Service APIを使用した接続の更新
+# Flow Service APIを使用してアカウントを更新する
 
 状況によっては、既存のソース接続の詳細を更新する必要がある場合があります。 [!DNL Flow Service] 既存のバッチ接続またはストリーミング接続（名前、説明、秘密鍵証明書など）の詳細を追加、編集および削除できます。
 
