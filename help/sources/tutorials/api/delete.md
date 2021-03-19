@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；接続の削除；削除；api
+keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；アカウントの削除；削除；api
 solution: Experience Platform
-title: Flow Service APIを使用した接続の削除
-topic: overview
-type: Tutorial
-description: Flow Service APIを使用して接続を削除する方法を説明します。
+title: Flow Service APIを使用したアカウントの削除
+topic: 概要
+type: チュートリアル
+description: Flow Service APIを使用してアカウントを削除する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '594'
 ht-degree: 27%
 
 ---
 
 
-# Flow Service APIを使用した接続の削除
+# Flow Service APIを使用したアカウントの削除
 
 Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
