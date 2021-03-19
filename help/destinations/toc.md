@@ -6,10 +6,10 @@ user-guide-description: チャネル間のマーケティングキャンペー�
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 feature: 宛先
 translation-type: tm+mt
-source-git-commit: 648be489aa77870f67564ee350c4d85885673832
+source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
 workflow-type: tm+mt
 source-wordcount: '464'
-ht-degree: 60%
+ht-degree: 61%
 
 ---
 
@@ -130,6 +130,6 @@ ht-degree: 60%
       * [顧客の宛先の概要の音声](./catalog/voice/overview.md)
       * [Confirmit Digital Feedback 拡張機能](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoca Tags 拡張機能](./catalog/voice/invoca.md)
-      * [メダリア語](./catalog/voice/medallia.md)
+      * [Medallia 拡張機能](./catalog/voice/medallia.md)
       * [Talk URL Inbox 拡張機能](./catalog/voice/talkurl.md)
 * [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
