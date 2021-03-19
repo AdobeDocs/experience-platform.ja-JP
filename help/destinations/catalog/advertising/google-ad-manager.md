@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager接続
 description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。  '
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '754'
 ht-degree: 30%
 
 ---
@@ -19,8 +19,6 @@ ht-degree: 30%
 
 [!DNL Google Ad Manager]宛先に固有の次の詳細を確認します。
 
-* 次の[ID](../../../identity-service/namespaces.md)を[!DNL Google Ads]宛先に送信できます。[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en)、Google cookie ID、IDFA、GAID、Roku ID、Microsoft ID、Amazon Fire TV ID。
-   * Googleは、カリフォルニア州のユーザーをターゲットする場合は[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en)を使用し、その他すべてのユーザーの場合はGoogle Cookie IDを使用します。
 * アクティブ化されたオーディエンスは、プラットフォーム[!DNL Google]でプログラム的に作成されます。
 * 現在、プラットフォームには、アクティベーションの成功を検証するための測定指標は含まれていません。 統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
 
@@ -28,7 +26,21 @@ ht-degree: 30%
 >
 >[!DNL Google Ad Manager]で最初の宛先を作成する場合で、以前(Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL Google]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
 
-### エクスポートの種類{#export-type}
+## サポートされるID{#supported-identities}
+
+[!DNL Google Ad Manager] は、次の表に示すIDのアクティベーションをサポートしています。
+
+| ターゲットID | 説明 | 注意点 |
+|---|---|---|
+| GAID | [!DNL Google Advertising ID] | ソースIDがGAID名前空間の場合は、このターゲットIDを選択します。 |
+| IDFA | [!DNL Apple ID for Advertisers] | ソースIDがIDFA名前空間の場合は、このターゲットIDを選択します。 |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html)、別名 [!DNL Device ID]。数値型で 38 桁のデバイス ID。Audience Manager はこの値を、操作するデバイスのそれぞれに関連付けます。 | Googleは、カリフォルニア州のターゲットユーザーに対しては[AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en)を使用し、その他すべてのユーザーに対してはGoogle Cookie IDを使用します。 |
+| [!DNL Google] cookie ID | [!DNL Google] cookie ID | [!DNL Google] このIDを使用して、カリフォルニア以外のターゲットユーザーを対象にします。 |
+| RIDA | 広告のRoku ID。 このIDはRokuデバイスを一意に識別します。 |  |
+| MAID | Microsoft広告ID。 このIDは、Windows 10を実行するデバイスを一意に識別します。 |  |
+| AmazonファイアテレビID | このIDは、Amazonファイアテレビを一意に識別します。 |  |
+
+## エクスポートの種類{#export-type}
 
 **セグメントエクスポート**  — セグメント(オーディエンス)のすべてのメンバーをGoogleのエクスポート先にエクスポートします。
 
