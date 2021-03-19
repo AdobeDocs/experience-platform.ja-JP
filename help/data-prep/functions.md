@@ -5,7 +5,7 @@ title: データ準備マッピング関数
 topic: 概要
 description: このドキュメントでは、データ準備で使用するマッピング関数を紹介します。
 translation-type: tm+mt
-source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
+source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
 workflow-type: tm+mt
 source-wordcount: '3719'
 ht-degree: 18%
@@ -35,7 +35,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 次の表に、サンプル式とその結果生成される出力を含む、サポートされるすべてのマッピング関数を示します。
 
-### 文字列関数
+### 文字列関数 {#string}
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | extract_regex | 正規式に基づいて、入力文字列からグループを抽出します。 | <ul><li>文字列：**必須**&#x200B;グループの抽出元の文字列。</li><li>REGEX:**必須**&#x200B;グループに一致させる正規式。</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+), [^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | 文字列が入力された正規式と一致するかどうかを確認します。 | <ul><li>文字列：**必須**&#x200B;チェックする文字列は、正規式と一致します。</li><li>REGEX:**必須**&#x200B;比較する正規式。</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+), [^,]*,([^,]+)&quot;) | true |
 
-### ハッシュ関数
+### ハッシュ関数{#hashing}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | md5 | 入力を受け取り、MD5を使用してハッシュ値を生成します。 | <ul><li>入力：**必須**&#x200B;ハッシュするプレーンテキスト。</li><li>CHARSET:*オプション*&#x200B;文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。 </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | 入力でCyclic Redundancy Check（CRC；巡回冗長検査）アルゴリズムを使用し、32ビットの循環コードを生成します。 | <ul><li>入力：**必須**&#x200B;ハッシュするプレーンテキスト。</li><li>CHARSET:*オプション*&#x200B;文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-### URL関数
+### URL関数{#url}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | get_url_path | 渡されたURLのパスを返します。 デフォルトでは、フルパスが返されます。 | <ul><li>URL:**必須**&#x200B;パスの抽出元URL。</li><li>FULL_PATH:*オプション*&#x200B;フルパスが返されるかどうかを指定するboolean値。 falseに設定した場合は、パスの終わりのみが返されます。</li></ul> | get_url_path&#x200B;(URL, FULL_PATH) | get_url_path&#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
 | get_url_クエリ_str | 渡されたURLのクエリ文字列を返します。 | <ul><li>URL:**必須**&#x200B;クエリ文字列の取得元のURL。</li><li>アンカー：**必須**&#x200B;クエリ文字列内のアンカーの処理を指定します。 次の3つの値のいずれかになります。&quot;retain&quot;、&quot;remove&quot;または&quot;append&quot;。<br><br>値が「retain」の場合、返される値にアンカーが割り当てられます。<br>値が「remove」の場合、返される値からアンカーが削除されます。<br>値が「append」の場合、アンカーは別の値として返されます。</li></ul> | get_url_&#x200B;クエリ_str(URL, ANCHOR) | get_url_&#x200B;クエリ_str(&quot;foo://example.com:8042/over/there?ferret#nose&#x200B;, &quot;retain&quot;&#x200B;?ferret#nose=<br>get_url_クエリ_str(&quot;foo://example.com:8042&#x200B;/there?name=nose>get_nose&lt;nose>get_get_noser_str_name foo://example.com?=ferret#nose&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
-### 日付および時間関数
+### 日付および時間関数 {#date-and-time}
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 &#x200B;
 
-### 階層 — オブジェクト
+### 階層 — オブジェクト{#objects}
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | is_set | オブジェクトがソースデータ内に存在するかどうかを確認します。 | <ul><li>入力：**必須**&#x200B;ソースデータ内に存在する場合に確認するパス。</li></ul> | is_set(INPUT) | is_set&#x200B;(&quot;evars.evar.field1&quot;) | true |
 | 無効にする | 属性の値を`null`に設定します。 これは、フィールドをターゲットスキーマにコピーしない場合に使用します。 |  | nullify() | nullify() | `null` |
 
-### 階層 — 配列
+### 階層 — 配列{#arrays}
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | join_arrays | 配列を結合します。 | <ul><li>配列：**必須**&#x200B;要素を追加する配列。</li><li>値：親配列に追加する配列。</li></ul> | join_arrays&#x200B;(ARRAY, VALUES) | join_arrays&#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [「a」、「b」、「c」、「d」、「e」] |
 | to_array | 入力のリストを取り、配列に変換します。 | <ul><li>INCLUDE_NULLS:**必須**&#x200B;応答配列にNULLを含めるかどうかを示すboolean値。</li><li>値：**必須**&#x200B;配列に変換する要素。</li></ul> | to_array&#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
-### 論理演算子
+### 論理演算子 {#logical-operators}
 
 >[!NOTE]
 >
@@ -164,7 +164,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | decode | キーと、キーと値のペアのリストが配列としてフラット化されている場合、この関数は、キーが見つかった場合は値を返し、デフォルト値が配列に存在する場合はデフォルト値を返します。 | <ul><li>キー：**必須**&#x200B;一致するキー。</li><li>OPTIONS:**必須**&#x200B;キーと値のペアのフラットな配列。 オプションで、デフォルト値を末尾に配置できます。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 渡されたstateCodeが「ca」、「California」の場合。<br>指定されたstateCodeが「pa」、「Pennsylvania」の場合。<br>stateCodeが次の値と一致しない場合は、「N/A」となります。 |
 | iif | 指定されたブール式を評価し、結果に基づいて指定された値を返します。 | <ul><li>式:**必須**&#x200B;評価するブール値式。</li><li>TRUE_VALUE:**必須**&#x200B;式がtrueと評価された場合に返される値。</li><li>FALSE_VALUE:**必須**&#x200B;式の評価結果がfalseの場合に返される値。</li></ul> | iif(式, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-### 集計
+### 集計 {#aggregation}
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | min | 指定された引数の最小値を返します。自然な順序を使用します。 | <ul><li>OPTIONS:**必須**&#x200B;互いに比較できる1つ以上のオブジェクト。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 指定された引数の最大値を返します。自然な順序を使用します。 | <ul><li>OPTIONS:**必須**&#x200B;互いに比較できる1つ以上のオブジェクト。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### 型変換
+### 型変換{#type-conversions}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | to_float | 文字列を浮動小数点数型(Float)に変換します。 | <ul><li>文字列：**必須**&#x200B;浮動小数点型に変換する文字列。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
 | to_integer | 文字列を整数型(Integer)に変換します。 | <ul><li>文字列：**必須**&#x200B;整数に変換する文字列。</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-### JSON関数
+### JSON関数{#json}
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | 渡された文字列からJSONコンテンツを逆シリアル化します。 | <ul><li>文字列：**必須**&#x200B;デシリアライズするJSON文字列。</li></ul> | json_to_object &#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}}) | JSONを表すオブジェクト。 |
 
-### 特別な操作
+### 特殊演算{#special-operations}
 
 >[!NOTE]
 >
@@ -208,7 +208,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | 擬似ランダム ID を生成します。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### ユーザーエージェント機能
+### ユーザーエージェント機能{#user-agent}
 
 >[!NOTE]
 >
