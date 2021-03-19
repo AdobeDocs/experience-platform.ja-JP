@@ -3,9 +3,9 @@ title: Adobe TargetとプラットフォームWeb SDKの連携
 description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 keywords: ターゲット;adobeターゲット;アクティビティ.id；エクスペリエンス.id；レンダリング決定；決定範囲；スニペットの事前非表示；vec；フォームベースのExperience Composer;xdm;オーディエンス；決定；スコープ；スキーマ;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '657'
 ht-degree: 3%
 
 ---
@@ -15,21 +15,31 @@ ht-degree: 3%
 
 Adobe Experience Platform[!DNL Web SDK]は、Adobe Targetで管理されるパーソナライズされたエクスペリエンスをWebチャネルに配信およびレンダリングできます。 [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html)(VEC)と呼ばれるWYSIWYGエディター、または非ビジュアルインターフェイスである[フォームベースのExperience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html)を使用して、アクティビティとパーソナライズエクスペリエンスを作成、アクティブ化、配信できます。
 
+次の機能がテスト済みで、現在ターゲットでサポートされています。
+
+* A/Bテスト
+* A4Tインプレッションとコンバージョンのレポート
+* 自動パーソナライゼーション
+* エクスペリエンスのターゲット設定
+* 多変量分析テスト
+* ネイティブのターゲットインプレッションとコンバージョンレポート
+* VECのサポート
+
 ## Adobe Targetを有効にする
 
-[!DNL Target]を有効にするには、次の手順を実行する必要があります。
+[!DNL Target]を有効にするには、次の手順を実行します。
 
 1. [エッジ設定](../../fundamentals/edge-configuration.md)のターゲットを、適切なクライアントコードで有効にします。
 1. イベント追加に対する`renderDecisions`オプション。
 
-その後、オプションで次のこともできます。
+次のオプションも追加できます。
 
-* 追加`decisionScopes`をイベントに送信して、特定のアクティビティを取得します(フォームベースのコンポーザーで作成されたアクティビティに役立ちます)。
-* 追加[事前非表示のスニペット](../manage-flicker.md)を使用して、ページの特定の部分のみを非表示にします。
+* `decisionScopes`:このアクティビティをイベントに追加して、特定のオプション(フォームベースのコンポーザーで作成されたアクティビティに役立ちます)を取得します。
+* [スニペットのプレヒード](../manage-flicker.md):ページの特定の部分のみを非表示にします。
 
 ## Adobe TargetVECの使用
 
-プラットフォームWeb SDK実装でVECを使用するには、[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)または[Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extensionをインストールしてアクティブ化する必要があります。
+プラットフォームWeb SDK実装でVECを使用するには、[Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)または[Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extensionをインストールしてアクティブ化します。
 
 ## VECアクティビティを自動レンダリング
 
@@ -109,7 +119,7 @@ alloy("sendEvent", {
 
 Adobe Experience PlatformWeb SDK経由で配信されるターゲットアクティビティのオーディエンスを定義する場合は、[XDM](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/home.html)を定義して使用する必要があります。 XDMスキーマ、クラス、ミックスインを定義した後、ターゲティング用のXDMデータで定義されたターゲットオーディエンスルールを作成できます。 ターゲット内では、XDMデータはカスタムオーディエンスーとしてパラメータービルダーに表示されます。 XDMはドット表記（例えば`web.webPageDetails.name`）を使用してシリアル化されます。
 
-ターゲットアクティビティに、カスタムパラメーターまたはユーザープロファイルを使用する定義済みのオーディエンスがある場合は、SDKを介して正しく配信されないことに注意してください。 カスタムパラメータやユーザプロファイルを使用する代わりに、XDMを使用する必要があります。 ただし、XDMを必要としない、Adobe Experience PlatformWeb SDKを介してサポートされる、すぐに使用できるオーディエンスターゲットフィールドがあります。 ターゲットUIで使用できるXDMを必要としないフィールドは次のとおりです。
+ターゲットアクティビティに、カスタムパラメーターまたはユーザープロファイルを使用する定義済みのオーディエンスがある場合、それらはSDKを介して正しく配信されません。 カスタムパラメータやユーザプロファイルを使用する代わりに、XDMを使用する必要があります。 ただし、XDMを必要としない、Adobe Experience PlatformWeb SDKを介してサポートされる、すぐに使用できるオーディエンスターゲットフィールドがあります。 XDMを必要としないターゲットUIでは、次のフィールドを使用できます。
 
 * ターゲットライブラリ
 * 地域
@@ -122,10 +132,10 @@ Adobe Experience PlatformWeb SDK経由で配信されるターゲットアクテ
 
 ## 用語
 
-__決定事項：__ で [!DNL Target]は、アクティビティから選択したエクスペリエンスとの相関関係を示します。
+__決定事項：__ で [!DNL Target]は、アクティビティから選択したエクスペリエンスとの関連を決定します。
 
 __スキーマ：決定__ のスキーマは、でのオファーのタイプ [!DNL Target]です。
 
-__範囲：決定__ の範囲。[!DNL Target]では、これはmBoxです。 グローバルmBoxは`__view__`スコープです。
+__範囲：決定__ の範囲。[!DNL Target]では、範囲はmBoxです。 グローバルmBoxは`__view__`スコープです。
 
 __XDM:XDM__ はドット表記にシリアライズされ、mBoxパラメーター [!DNL Target] としてに挿入されます。
