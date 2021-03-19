@@ -6,10 +6,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: データ取り込み、ソース
 translation-type: tm+mt
-source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
+source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '582'
+ht-degree: 16%
 
 ---
 
@@ -227,4 +227,5 @@ ht-degree: 0%
    - [データフローの削除](tutorials/ui/delete.md)
 - [フロー実行通知](notifications.md)
 - [IPアドレス許可リスト](ip-address-allow-list.md)
+- [よくある質問](./troubleshooting.md)
 - [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
