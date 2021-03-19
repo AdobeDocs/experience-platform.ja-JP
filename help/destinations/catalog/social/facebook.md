@@ -1,12 +1,12 @@
 ---
 keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagram;messenger;facebook messenger
 title: Facebookの接続
-description: ハッシュ化された電子メールに基づいて、オーディエンスターゲティング、パーソナライズ機能および抑制のために Facebook キャンペーンのプロファイルをアクティブ化します。
+description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するFacebookキャンペーンのプロファイルをアクティブにします。
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '1141'
-ht-degree: 20%
+source-wordcount: '1131'
+ht-degree: 17%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 20%
 
 ## 使用例
 
-[!DNL Facebook]の宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platformのお客様がこの機能を使用して解決できる使用例を2つ示します。
+[!DNL Facebook]宛先の使い方と使い方を理解するために、Adobe Experience Platformのお客様がこの機能を使って解決できる使用例を2つ挙げます。
 
 ### ユースケース 1
 
@@ -39,7 +39,7 @@ ht-degree: 20%
 
 >[!IMPORTANT]
 >
->[!DNL Facebook]に送信されるデータには、ステッチIDを含めないでください。 お客様は、この義務を守る責任があります。アクティベーション用に選択したセグメントが、マージポリシーでステッチオプションを使用しないようにすることで、義務を守ることができます。 [マージポリシー](/help/profile/ui/merge-policies.md)の詳細を表示します。
+>[!DNL Facebook]に送信されたデータには、ステッチIDを含めることはできません。 お客様は、この義務を守る責任があります。アクティベーション用に選択したセグメントが、マージポリシーでステッチオプションを使用しないようにすることで、義務を守ることができます。 [マージポリシー](/help/profile/ui/merge-policies.md)の詳細を表示します。
 
 ## サポートされるID{#supported-identities}
 
@@ -47,15 +47,15 @@ ht-degree: 20%
 
 | ターゲットID | 説明 | 注意点 |
 |---|---|---|
-| GAID | Google広告ID | ソースIDがGAID名前空間の場合は、このターゲットIDを選択します。 |
-| IDFA | Apple の広告主 ID | ソースIDがIDFA名前空間の場合は、このターゲットIDを選択します。 |
+| GAID | Google広告ID | ソースIDがGAID名前空間の場合は、GAIDターゲットIDを選択します。 |
+| IDFA | Apple の広告主 ID | ソースIDがIDFAターゲットの場合は、IDFA名前空間IDを選択します。 |
 | phone_sha256 | SHA256アルゴリズムでハッシュされた電話番号 | 平文とSHA256ハッシュの両方の電話番号がAdobe Experience Platformでサポートされています。 「[ID matching requirements](#id-matching-requirements-id-matching-requirements)」の説明に従い、プレーンテキストとハッシュ化された電話番号にそれぞれ適切な名前空間を使用します。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティベーション上のデータを自動的にハッシュ化します。[!DNL Platform] |
 | email_lc_sha256 | SHA256アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストとSHA256ハッシュの電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 「[ID matching requirements](#id-matching-requirements-id-matching-requirements)」の説明に従い、プレーンテキストとハッシュ化された電子メールアドレスにそれぞれ適切な名前空間を使用します。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティベーション上のデータを自動的にハッシュ化します。[!DNL Platform] |
 | extern_id | カスタムユーザーID | ソースIDがカスタムターゲットの場合は、この名前空間IDを選択します。 |
 
 ## エクスポートの種類{#export-type}
 
-**セグメントのエクスポート**  — セグメント(オーディエンス)のすべてのメンバーを、識別子（名前、電話番号など）と共にエクスポートします。Facebookのリンク先で使用されます。
+**セグメントエクスポート**  — セグメント(オーディエンス)のすべてのメンバーを、Facebookの宛先で使用されている識別子（名前、電話番号など）と共にエクスポートします。
 
 ## Facebookアカウントの前提条件{#facebook-account-prerequisites}
 
@@ -65,20 +65,20 @@ ht-degree: 20%
 - **Adobe Experience Cloud**&#x200B;のビジネスアカウントは、貴社の[!DNL Facebook Ad Account]に広告パートナーとして追加する必要があります。 `business ID=206617933627973`.を使用します。詳しくは、Facebookのドキュメントの[追加Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897)を参照してください。
    >[!IMPORTANT]
    >
-   > Adobe Experience Cloud の権限を設定する場合は、**キャンペーンの管理**&#x200B;権限を有効にする必要があります。これは、[!DNL Adobe Experience Platform] 統合に必要です。
-- [!DNL Facebook Custom Audiences] 利用規約を読み、署名します。これをおこなうには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` に進みます（`accountID` は [!DNL Facebook Ad Account ID] です）。
+   > Adobe Experience Cloud の権限を設定する場合は、**キャンペーンの管理**&#x200B;権限を有効にする必要があります。[!DNL Adobe Experience Platform]統合には権限が必要です。
+- [!DNL Facebook Custom Audiences] 利用規約を読み、署名します。これを行うには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`に移動します。`accountID`は[!DNL Facebook Ad Account ID]です。
 
 ## IDの一致要件{#id-matching-requirements}
 
 [!DNL Facebook] 個人識別情報(PII)を明確に送信しないようにする必要があります。したがって、[!DNL Facebook]に対してアクティブ化されたオーディエンスは、電子メールアドレスや電話番号など、*ハッシュ化された*&#x200B;識別子をキーオフにすることができます。
 
-Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件を満たす必要があります。
+Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件に従う必要があります。
 
 ### 電話番号のハッシュ要件{#phone-number-hashing-requirements}
 
 [!DNL Facebook]で電話番号をアクティブにする方法は2つあります。
 
-- **生の電話番号を取り込む**:生の電話番号を [!DNL E.164] 形式で取り込んで、アクティベーション時に自動的にハッシュ化 [!DNL Platform]されます。このオプションを選択する場合は、必ず生の電話番号を`Phone_E.164`名前空間に取り込むようにしてください。
+- **生の電話番号を取り込む**:フォーマットの生の電話番号をに取り込むこ [!DNL E.164] とができ [!DNL Platform]ます。彼らはアクティベーションを受けて自動的にハッシュした。 このオプションを選択する場合は、必ず生の電話番号を`Phone_E.164`名前空間に取り込むようにしてください。
 - **ハッシュ化された電話番号を取り込む**:に取り込む前に電話番号を事前にハッシュ化でき [!DNL Platform]ます。このオプションを選択する場合は、ハッシュ化された電話番号を必ず`Phone_SHA256`名前空間に取り込むようにしてください。
 
 >[!NOTE]
@@ -88,7 +88,7 @@ Adobe Experience Platformに取り込むIDのタイプに応じて、対応す�
 
 ### Eメールハッシュ要件{#email-hashing-requirements}
 
-電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュするか、Experience Platform内で電子メールアドレスを明確に扱ってアクティベーション上でアルゴリズムハッシュするかを選択できます。
+電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、Experience Platform内で明確な電子メールアドレスを使用して、アクティベーション上で[!DNL Platform]ハッシュ化したりできます。
 
 Experience Platformでの電子メールアドレスの取り込みについて詳しくは、[バッチインジェストの概要](/help/ingestion/batch-ingestion/overview.md)および[ストリーミングインジェストの概要](/help/ingestion/streaming-ingestion/overview.md)を参照してください。
 
