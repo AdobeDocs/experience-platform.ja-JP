@@ -6,10 +6,10 @@ user-guide-description: チャネル間のマーケティングキャンペー�
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 feature: 宛先
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 648be489aa77870f67564ee350c4d85885673832
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 61%
+source-wordcount: '464'
+ht-degree: 60%
 
 ---
 
@@ -82,6 +82,7 @@ ht-degree: 61%
       * [Azure Blob接続](./catalog/cloud-storage/azure-blob.md)
       * [（ベータ版）Azureイベントハブ接続](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP接続](./catalog/cloud-storage/sftp.md)
+      * [IPアドレス許可リスト](./catalog/cloud-storage/ip-address-allow-list.md)
    * データ管理プラットフォームの宛先{#data-management}
       * [DMP(データ管理プラットフォーム)宛先の概要](./catalog/data-management/overview.md)
       * [Audience Manager DIL 拡張機能](./catalog/data-management/aam-dil-extension.md)
