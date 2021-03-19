@@ -3,10 +3,10 @@ keywords: linkedin接続；linkedin接続；linkedin接続；linkedinの宛先�
 title: Linkedinがオーディエンス接続に一致しました
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するLinkedInキャンペーンのプロファイルをアクティブにします。
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 13%
+source-wordcount: '675'
+ht-degree: 12%
 
 ---
 
@@ -19,9 +19,9 @@ ht-degree: 13%
 
 ## 使用例
 
-[!DNL LinkedIn Matched Audiences]の宛先を使う方法と時期をよりよく理解するために、Adobe Experience Platformのお客様はこの機能を使って解決できる使用例を以下に示します。
+[!DNL LinkedIn Matched Audiences]の宛先を使用する方法とタイミングをより深く理解するために、Adobe Experience Platformのお客様がこの機能を使って解決できる使用例を以下に示します。
 
-ソフトウェア会社は会議を組織し、参加者と連絡を取り合い、会議の出席状況に基づいてパーソナライズされたオファーを表示したいと考えています。 会社は、自分の[!DNL CRM]からAdobe Experience Platformに電子メールアドレスやモバイルデバイスIDを取り込み、自分のオフラインデータからセグメントを作成し、[!DNL LinkedIn]ソーシャルプラットフォームに送信して、広告費用を最適化できます。
+ソフトウェア会社は会議を組織し、参加者と連絡を取り合い、会議の出席状況に基づいてパーソナライズされたオファーを表示したいと考えています。 会社は、自分の[!DNL CRM]から電子メールアドレスやモバイルデバイスIDをAdobe Experience Platformに取り込むことができます。 その後、独自のオフラインデータからセグメントを作成し、これらのセグメントを[!DNL LinkedIn]ソーシャルプラットフォームに送信して、広告費用を最適化できます。
 
 ## 宛先の詳細{#destination-specs}
 
@@ -40,7 +40,7 @@ ht-degree: 13%
 
 ### エクスポートの種類{#export-type}
 
-**セグメントのエクスポート**  — セグメント(オーディエンス)のすべてのメンバーを、識別子（名前、電話番号など）と共にエクスポートします。[!DNL LinkedIn Matched Audiences]宛先で使用されます。
+**セグメントエクスポート**  — セグメント(オーディエンス)のすべてのメンバーを、 [!DNL LinkedIn Matched Audiences] 宛先で使用されている識別子（名前、電話番号など）と共にエクスポートします。
 
 ### LinkedInアカウントの前提条件{#LinkedIn-account-prerequisites}
 
@@ -52,11 +52,11 @@ ht-degree: 13%
 
 [!DNL LinkedIn Matched Audiences] 個人識別情報(PII)を明確に送信しないようにする必要があります。したがって、[!DNL LinkedIn Matched Audiences]に対してアクティブ化されたオーディエンスは、電子メールアドレスやモバイルデバイスIDなど、*ハッシュ化された*&#x200B;識別子をキーオフにすることができます。
 
-Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件を満たす必要があります。
+Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件に従う必要があります。
 
 #### Eメールハッシュ要件{#email-hashing-requirements}
 
-電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュするか、Experience Platform内で電子メールアドレスを明確に扱ってアクティベーション上でアルゴリズムハッシュするかを選択できます。
+電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、Experience Platform内で明確な電子メールアドレスを使用して、アクティベーション上で[!DNL Platform]ハッシュ化したりできます。
 
 Experience Platformでの電子メールアドレスの取り込みについて詳しくは、[バッチインジェストの概要](/help/ingestion/batch-ingestion/overview.md)および[ストリーミングインジェストの概要](/help/ingestion/streaming-ingestion/overview.md)を参照してください。
 
