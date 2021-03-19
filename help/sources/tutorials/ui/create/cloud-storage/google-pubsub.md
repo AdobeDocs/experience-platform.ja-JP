@@ -6,10 +6,10 @@ topic: 概要
 type: チュートリアル
 description: プラットフォームユーザーインターフェイスを使用してGoogle PubSubソースコネクタを作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 11%
+source-wordcount: '511'
+ht-degree: 9%
 
 ---
 
@@ -33,16 +33,20 @@ ht-degree: 11%
 
 ### 必要な資格情報の収集
 
-[!DNL PubSub]をプラットフォームに接続するには、次の資格情報の有効な値を指定する必要があります。
+[!DNL PubSub]をプラットフォームに接続するには、次の資格情報に対して有効な値を指定する必要があります。
 
 | Credential | 説明 |
 | ---------- | ----------- |
 | `projectId` | [!DNL PubSub]の認証に必要なプロジェクトID。 |
-| `credentials` | [!DNL PubSub]の認証に必要な秘密鍵またはキーです。 |
+| `credentials` | [!DNL PubSub]の認証に必要な秘密鍵または秘密鍵ID。 |
 
-これらの値について詳しくは、次の[PubSub authentication](https://cloud.google.com/pubsub/docs/authentication)ドキュメントを参照してください。
+これらの値について詳しくは、次の[PubSub authentication](https://cloud.google.com/pubsub/docs/authentication)ドキュメントを参照してください。 サービスアカウントベースの認証を使用している場合は、資格情報の生成方法に関する手順について、次の[PubSubガイド](https://cloud.google.com/docs/authentication/production#create_service_account)を参照してください。
 
-必要な資格情報を収集したら、次の手順に従って[!DNL Blob]アカウントをプラットフォームにリンクできます。
+>[!TIP]
+>
+>サービスアカウントベースの認証を使用している場合は、秘密鍵証明書をコピーして貼り付ける際に、サービスアカウントへの十分なユーザーアクセス権限を付与済みで、JSONに余分な空白がないことを確認してください。
+
+必要な資格情報を収集したら、次の手順に従って[!DNL PubSub]アカウントをプラットフォームにリンクできます。
 
 ## [!DNL PubSub]アカウントに接続
 
