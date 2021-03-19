@@ -3,9 +3,9 @@ keywords: mobile;ブレーズ。メッセージ；
 title: ブレーズ接続
 description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '951'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,6 @@ ht-degree: 5%
 
 [!DNL Braze]宛先に固有の次の詳細をメモしておきます。
 
-* [ID](../../../identity-service/namespaces.md)は、[!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation)にマップする限り、[!DNL Braze]宛先に送信できます。
 * [!DNL Adobe Experience Platform] セグメントは、この [!DNL Braze] 属性の `AdobeExperiencePlatformSegments` 下のにエクスポートされます。
 
 >[!NOTE]
@@ -37,6 +36,14 @@ ht-degree: 5%
 ## 使用例 {#use-cases}
 
 マーケターとして、モバイルエンゲージメントの宛先でユーザーをターゲットし、[!DNL Adobe Experience Platform]にセグメントを作成したいと考えています。 さらに、[!DNL Adobe Experience Platform]でセグメントとプロファイルが更新され次第、[!DNL Adobe Experience Platform]プロファイルの属性に基づいてパーソナライズされたエクスペリエンスを提供したいと思います。
+
+### サポートされるID{#supported-identities}
+
+[!DNL Google Ad Manager] は、次の表に示すIDのアクティベーションをサポートしています。
+
+| ターゲットID | 説明 | 注意点 |
+|---|---|---|
+| external_id | 任意のIDのマッピングをサポートするカスタム[!DNL Braze]識別子。 | [ID](../../../identity-service/namespaces.md)は、[!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation)にマップする限り、[!DNL Braze]宛先に送信できます。 |
 
 ## エクスポートタイプ{#export-type}
 
