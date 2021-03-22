@@ -3,15 +3,17 @@ keywords: Azure Blob;Blob宛先；s3;azure BLOB宛先
 title: Azure Blob接続
 description: Azure Blobストレージへのライブ送信接続を作成して、タブ区切りデータファイルまたはCSVデータファイルをAdobe Experience Platformから定期的にエクスポートします。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 7%
+source-wordcount: '603'
+ht-degree: 8%
 
 ---
 
 
 # [!DNL Azure Blob] connection
+
+## 概要 {#overview}
 
 [!DNL Azure Blob] (以下「[!DNL Blob]」と呼ばれる)は、Microsoftが提供するクラウド向けのオブジェクトストレージソリューションです。このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用して[!DNL Blob]宛先を作成する手順を説明します。
 
