@@ -6,7 +6,7 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '2151'
 ht-degree: 15%
@@ -26,7 +26,7 @@ ht-degree: 15%
 
 アクティベーションワークフローの手順は、宛先のタイプによって若干異なります。 すべてのタイプの宛先に対する完全なワークフローを以下に示します。
 
-### {#select-destination}へのデータのアクティブ化先を選択
+## {#select-destination}へのデータのアクティブ化先を選択
 
 適用先：すべての宛先
 
@@ -36,7 +36,7 @@ Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL
 
 次のセクションの手順に従って、アクティブにするセグメントを選択します。
 
-### [!UICONTROL セグメントの選択] 手順  {#select-segments}
+## [!UICONTROL セグメントの選択] 手順  {#select-segments}
 
 適用先：すべての宛先
 
@@ -46,7 +46,7 @@ Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL
 
 ![segments-to-destination](../assets/ui/activate-destinations/email-select-segments.png)
 
-### [!UICONTROL ID] マッピング手順  {#identity-mapping}
+## [!UICONTROL ID] マッピング手順  {#identity-mapping}
 
 適用先：ソーシャルリンク先とGoogle Customer Matchの広告先
 
@@ -54,7 +54,7 @@ Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL
 
 ソーシャル宛先の場合は、ソース属性またはID名前空間を選択して、宛先のターゲットIDとしてマップする必要があります。
 
-#### 例：[!DNL Facebook Custom Audience] {#example-facebook}でのオーディエンスデータのアクティブ化
+## 例：[!DNL Facebook Custom Audience] {#example-facebook}でのオーディエンスデータのアクティブ化
 
 以下は、[!DNL Facebook]でオーディエンスデータをアクティブ化する際の正しいIDマッピングの例です。
 
@@ -84,7 +84,7 @@ Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL
 
  
 
-#### 例：[!DNL Google Customer Match] {#example-gcm}でのオーディエンスデータのアクティブ化
+## 例：[!DNL Google Customer Match] {#example-gcm}でのオーディエンスデータのアクティブ化
 
 これは、[!DNL Google Customer Match]でオーディエンスデータをアクティブ化する際の正しいIDマッピングの例です。
 
@@ -112,23 +112,7 @@ Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL
 属性ソースデータは自動的にハッシュされません。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティベーション上のデータを自動的にハッシュ化します。
 [!DNL Platform]![IDマッピング変換](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-<!-- 
-`IDFA` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-Select `GAID` as target identity if your data consists of Android device IDs. `GAID` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
-
-* [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md). -->
-
-### **** 設定手順  {#configure}
+## **** 設定手順  {#configure}
 
 適用先：電子メールマーケティングの宛先とクラウドストレージの宛先
 
@@ -177,7 +161,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 すべてのセグメントの設定が完了したら、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-### **[!UICONTROL セグメントの]** スケジュール  {#segment-schedule}
+## **[!UICONTROL セグメントの]** スケジュール  {#segment-schedule}
 
 適用先：広告の宛先、ソーシャルの宛先
 
@@ -197,7 +181,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![アプリidを入力](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-### **** スケジュールの手順  {#scheduling}
+## **** スケジュールの手順  {#scheduling}
 
 適用先：電子メールマーケティングの宛先とクラウドストレージの宛先
 
@@ -205,7 +189,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 **[!UICONTROL スケジュール]**&#x200B;ページでは、宛先へのデータ送信の開始日、および宛先へのデータ送信の頻度を確認できます。 これらの値は編集できません。
 
-### **[!UICONTROL 属性]** 手順の選択  {#select-attributes}
+## **[!UICONTROL 属性]** 手順の選択  {#select-attributes}
 
 適用先：電子メールマーケティングの宛先とクラウドストレージの宛先
 
@@ -237,7 +221,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 > 
 例えば、フィールド`person.name.firstName`に、宛先のマーケティングアクションと競合する特定のデータ使用ラベルが含まれている場合、レビュー手順でデータ使用ポリシー違反が表示されます。 詳しくは、[Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations)でのデータ管理を参照してください。
 
-### **[!UICONTROL Reviewstep]**   {#review}
+## **[!UICONTROL Reviewstep]**   {#review}
 
 適用先：すべての宛先
 
@@ -281,11 +265,11 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 これらのファイルがストレージの場所に存在すれば、アクティベーションは成功しています。書き出したファイルの構造を理解するには、サンプルの.csvファイル](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv)を[ダウンロードします。 このサンプルファイルには、プロファイル属性`person.firstname`、`person.lastname`、`person.gender`、`person.birthyear`、`personalEmail.address`が含まれます。
 
-### 広告の宛先
+## 広告の宛先
 
 データをアクティブ化するそれぞれの広告先のアカウントを確認します。 アクティベーションに成功した場合、オーディエンスは広告プラットフォームに入力されます。
 
-### ソーシャルネットワークの宛先
+## ソーシャルネットワークの宛先
 
 [!DNL Facebook]の場合、アクティベーションが成功した場合は、[[!UICONTROL Facebook広告マネージャー]](https://www.facebook.com/adsmanager/manage/)で[!DNL Facebook]カスタムオーディエンスがプログラム的に作成されます。 ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つかどうかによって、ユーザーのセグメントメンバーシップが追加および削除されます。
 
