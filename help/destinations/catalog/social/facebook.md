@@ -3,7 +3,7 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebookの接続
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するFacebookキャンペーンのプロファイルをアクティブにします。
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1131'
 ht-degree: 17%
@@ -74,7 +74,7 @@ ht-degree: 17%
 
 Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件に従う必要があります。
 
-### 電話番号のハッシュ要件{#phone-number-hashing-requirements}
+## 電話番号のハッシュ要件{#phone-number-hashing-requirements}
 
 [!DNL Facebook]で電話番号をアクティブにする方法は2つあります。
 
@@ -86,7 +86,7 @@ Adobe Experience Platformに取り込むIDのタイプに応じて、対応す�
 >`Phone`名前空間に取り込まれた電話番号は、[!DNL Facebook]では有効にできません。
 
 
-### Eメールハッシュ要件{#email-hashing-requirements}
+## Eメールハッシュ要件{#email-hashing-requirements}
 
 電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、Experience Platform内で明確な電子メールアドレスを使用して、アクティベーション上で[!DNL Platform]ハッシュ化したりできます。
 
@@ -109,7 +109,7 @@ Experience Platformでの電子メールアドレスの取り込みについて�
 
 ![IDマッピング変換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### カスタム名前空間{#custom-namespaces}の使用
+## カスタム名前空間{#custom-namespaces}の使用
 
 `Extern_ID`名前空間を使用して[!DNL Facebook]にデータを送信する前に、[!DNL Facebook Pixel]を使用して自分の識別子を同期させてください。 詳しくは、[公式ドキュメント](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)を参照してください。
 
