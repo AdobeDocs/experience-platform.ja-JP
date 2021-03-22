@@ -3,10 +3,10 @@ keywords: Google広告；Google広告；Google広告；Google広告；Google広�
 title: Google Ads接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '738'
-ht-degree: 20%
+ht-degree: 19%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 20%
 
 [!DNL Google Ads](旧称 [!DNL Google AdWords])は、企業がテキストベースの検索、グラフィックディスプレイ、 [!DNL YouTube] ビデオ、アプリ内モバイルディスプレイにわたってペイパークリック広告を行えるようにするオンライン広告サービスです。
 
-## 宛先の仕様
+## 宛先の詳細{#specifics}
 
 [!DNL Google Ads]宛先に固有の次の詳細を確認します。
 
@@ -26,7 +26,7 @@ ht-degree: 20%
 >
 >[!DNL Google Ads]で最初の宛先を作成する場合で、以前(Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience ManagerでGoogle統合を設定していた場合、Platformへの繰り越しを設定したID同期。
 
-### サポートされるID{#supported-identities}
+## サポートされるID{#supported-identities}
 
 [!DNL Google Ad Manager] は、次の表に示すIDのアクティベーションをサポートしています。
 
@@ -40,7 +40,7 @@ ht-degree: 20%
 | MAID | Microsoft広告ID。 このIDは、Windows 10を実行するデバイスを一意に識別します。 |  |
 | AmazonファイアテレビID | このIDは、Amazonファイアテレビを一意に識別します。 |  |
 
-### エクスポートの種類{#export-type}
+## エクスポートの種類{#export-type}
 
 **セグメントエクスポート**  — セグメント(オーディエンス)のすべてのメンバーをGoogleのエクスポート先にエクスポートします。
 
