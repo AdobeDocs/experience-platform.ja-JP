@@ -4,7 +4,7 @@ title: 電子メールマーケティングの宛先の概要
 type: チュートリアル
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 33%
@@ -62,7 +62,7 @@ ht-degree: 33%
 
 この手順の詳細については、チュートリアルの[属性を選択](../../ui/activate-destinations.md#select-attributes)の手順を参照してください。
 
-### ID {#identity}
+## ID {#identity}
 
 [ユニオンスキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の ID を選択することをお勧めします。これは、ユーザーの ID をキーオフにするフィールドです。最も一般的に、このフィールドは電子メールアドレスですが、ロイヤリティープログラム ID や電話番号を指定することもできます。スキーマ内で最も一般的な一意のIDとそのXDMフィールドについては、次の表を参照してください。
 
@@ -72,7 +72,7 @@ ht-degree: 33%
 | 電話番号 | `mobilePhone.number` |
 | ロイヤリティープログラム ID | `Customer-defined XDM field` |
 
-### その他の宛先属性
+## その他の宛先属性
 
 「スキーマ」フィールドセレクターで、電子メールの送信先に書き出しする他のフィールドを選択します。次のオプションが推奨されます。
 
