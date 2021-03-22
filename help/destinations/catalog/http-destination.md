@@ -3,10 +3,10 @@ keywords: ストリーミング；
 title: HTTP接続
 description: Adobe Experience PlatformのHTTP宛先を使用すると、プロファイルデータをサードパーティのHTTPエンドポイントに送信できます。
 translation-type: tm+mt
-source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 7%
+source-wordcount: '543'
+ht-degree: 8%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 >プラットフォームの[!DNL HTTP]宛先は現在アルファベットです。 ドキュメントと機能は変更される場合があります。
+
+## 概要 {#overview}
 
 [!DNL HTTP]宛先は[!DNL Adobe Experience Platform]ストリーミング宛先で、プロファイルデータをサードパーティ[!DNL HTTP]エンドポイントに送信するのに役立ちます。
 
@@ -33,11 +35,9 @@ ht-degree: 7%
 
 ![HTTP宛先をアクティブにする](../assets/catalog/http/activate.png)
 
->[!NOTE]
->
->この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../ui/destinations-workspace.md#catalog)」の節を参照してください。
->
->![HTTP宛先をアクティブにする](../assets/catalog/http/connect.png)
+この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../ui/destinations-workspace.md#catalog)」の節を参照してください。
+
+![HTTP宛先をアクティブにする](../assets/catalog/http/connect.png)
 
 [!UICONTROL アカウント]の手順で、HTTPエンドポイント接続の詳細を定義する必要があります。 「**[!UICONTROL 新規アカウント]**」を選択し、接続先のHTTPエンドポイントの接続の詳細を入力します。
 - **[!UICONTROL httpEndpoint]**:プロファイルデータ [!DNL URL] の送信先のHTTPエンドポイントの完全な状態です。
