@@ -3,9 +3,9 @@ keywords: 広告；業者の机
 title: トレードデスクの接続
 description: 'トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。 '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '625'
 ht-degree: 5%
 
 ---
@@ -21,23 +21,27 @@ ht-degree: 5%
 
 プロファイルデータを[!DNL Trade Desk]に送信するには、まず宛先に接続する必要があります。
 
-## 宛先の仕様 {#destination-specs}
-
-[!DNL Trade Desk]宛先に固有の次の詳細をメモしておきます。
-
-* 次の[ID](../../../identity-service/namespaces.md)を[!DNL The Trade Desk]宛先に送信できます。[!DNL The Trade Desk ID]、[!DNL IDFA]、[!DNL GAID]。
-
->[!IMPORTANT]
->
->[!DNL The Trade Desk]で最初の宛先を作成したい場合で、以前(Adobe Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL The Trade Desk]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
-
 ## 使用例 {#use-cases}
 
 マーケティング担当者として、[!DNL Trade Desk IDs]やデバイスIDから構築されたセグメントを使用して、デジタルキャンペーンをターゲットにした再ターゲット化やオーディエンスを作成できるようにしたいと思います。
 
+## サポートされるID{#supported-identities}
+
+[!DNL The Trade Desk] は、次の表に示すIDのアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md)の詳細を表示します。
+
+| ターゲットID | 説明 |
+|---|---|
+| GAID | [!DNL Google Advertising ID] |
+| IDFA | [!DNL Apple ID for Advertisers] |
+| トレードデスクID | Advertiser ID in the Trade Desk platform |
+
 ## エクスポートタイプ{#export-type}
 
 **[!DNL Segment export]**  — セグメント(オーディエンス)のすべてのメンバーをエクスポート先にエクスポートします。
+
+## 前提条件 {#prerequisites}
+
+[!DNL The Trade Desk]で最初の宛先を作成したい場合で、以前(Adobe Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL The Trade Desk]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
 
 ## 宛先に接続 {#connect-destination}
 
@@ -45,13 +49,13 @@ ht-degree: 5%
 
 ![トレードデスクの宛先の設定](../../assets/catalog/advertising/tradedesk/configure.png)
 
->[!NOTE]
->
->この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
->
->![トレードデスクの宛先を有効にする](../../assets/catalog/advertising/tradedesk/activate.png)
+この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
-[!UICONTROL 認証]手順で、[!DNL The Trade Desk]接続の詳細を入力する必要があります。
+![トレードデスクの宛先を有効にする](../../assets/catalog/advertising/tradedesk/activate.png)
+
+## 認証手順{#authentication}
+
+**[!UICONTROL 認証]**&#x200B;手順で、[!DNL The Trade Desk]接続の詳細を入力する必要があります。
 
 * **[!UICONTROL 名前]**:この宛先が将来認識される名前。
 * **[!UICONTROL 説明]**:この宛先を将来特定するのに役立つ説明です。
