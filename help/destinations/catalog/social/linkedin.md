@@ -3,9 +3,9 @@ keywords: linkedin接続；linkedin接続；linkedin接続；linkedinの宛先�
 title: Linkedinがオーディエンス接続に一致しました
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するLinkedInキャンペーンのプロファイルをアクティブにします。
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '663'
 ht-degree: 12%
 
 ---
@@ -23,11 +23,7 @@ ht-degree: 12%
 
 ソフトウェア会社は会議を組織し、参加者と連絡を取り合い、会議の出席状況に基づいてパーソナライズされたオファーを表示したいと考えています。 会社は、自分の[!DNL CRM]から電子メールアドレスやモバイルデバイスIDをAdobe Experience Platformに取り込むことができます。 その後、独自のオフラインデータからセグメントを作成し、これらのセグメントを[!DNL LinkedIn]ソーシャルプラットフォームに送信して、広告費用を最適化できます。
 
-## 宛先の詳細{#destination-specs}
-
-[!DNL LinkedIn Matched Audiences] は、次のIDのアクティベーションをサポートします。ハッシュ化された電子メール、 [!DNL GAID]および [!DNL IDFA]。
-
-### サポートされるID{#supported-identities}
+## サポートされるID{#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] は、次の表に示すIDのアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md)の詳細を表示します。
 
@@ -38,23 +34,23 @@ ht-degree: 12%
 | email_lc_sha256 | SHA256アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストとSHA256ハッシュの電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 「[ID matching requirements](#id-matching-requirements-id-matching-requirements)」の説明に従い、プレーンテキストとハッシュ電子メールにそれぞれ適切な名前空間を使用します。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティベーション上のデータを自動的にハッシュ化します。[!DNL Platform] |
 
 
-### エクスポートの種類{#export-type}
+## エクスポートの種類{#export-type}
 
 **セグメントエクスポート**  — セグメント(オーディエンス)のすべてのメンバーを、 [!DNL LinkedIn Matched Audiences] 宛先で使用されている識別子（名前、電話番号など）と共にエクスポートします。
 
-### LinkedInアカウントの前提条件{#LinkedIn-account-prerequisites}
+## LinkedInアカウントの前提条件{#LinkedIn-account-prerequisites}
 
 [!UICONTROL 一致したオーディエンス]の宛先にLinkedInを使用する前に、[!DNL LinkedIn Campaign Manager]アカウントに[!DNL Creative Manager]権限レベル以上があることを確認してください。
 
 [!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、「[Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753)」（LinkedIn ドキュメント）を参照してください。
 
-### IDの一致要件{#id-matching-requirements}
+## IDの一致要件{#id-matching-requirements}
 
 [!DNL LinkedIn Matched Audiences] 個人識別情報(PII)を明確に送信しないようにする必要があります。したがって、[!DNL LinkedIn Matched Audiences]に対してアクティブ化されたオーディエンスは、電子メールアドレスやモバイルデバイスIDなど、*ハッシュ化された*&#x200B;識別子をキーオフにすることができます。
 
 Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件に従う必要があります。
 
-#### Eメールハッシュ要件{#email-hashing-requirements}
+## Eメールハッシュ要件{#email-hashing-requirements}
 
 電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、Experience Platform内で明確な電子メールアドレスを使用して、アクティベーション上で[!DNL Platform]ハッシュ化したりできます。
 
