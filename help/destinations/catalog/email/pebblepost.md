@@ -3,15 +3,17 @@ keywords: PebblePost;peblepost;PebblePostプログラムダイレクトメール
 title: PebblePost 拡張機能
 description: PebblePost拡張子は、Adobe Experience Platformの電子メールの送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '555'
 ht-degree: 27%
 
 ---
 
 
 # [!DNL PebblePost] 拡張機能 {#pebblepost-extension}
+
+## 概要 {#overview}
 
 [!DNL PebblePost's Programmatic Direct Mail®] ソリューションは、デジタルマーケターがオンラインの関心と意図を、コンバージョンを行うオフラインの有形メディアに結び付けるのに役立ちます。マーケティング担当者は、アドビで作成したカスタムデータセグメントを活用して、関連性の高い、長期間持続する社内メディアのインプレッションをターゲット消費者に提供できます。応答パスのアクティビティとオンサイトのコンバージョンに基づいて、パフォーマンスをリアルタイムで分析します。
 
