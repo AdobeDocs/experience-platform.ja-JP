@@ -3,9 +3,9 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager接続
 description: 'Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。  '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '754'
 ht-degree: 30%
 
 ---
@@ -17,16 +17,12 @@ ht-degree: 30%
 
 [!DNL Google Ad Manager]（以前は for Publishers または と呼ばれていました）は の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。[!DNL DoubleClick][!DNL DoubleClick AdX][!DNL Google]
 
-## 宛先の仕様
+## 宛先の詳細{#specifics}
 
 [!DNL Google Ad Manager]宛先に固有の次の詳細を確認します。
 
 * アクティブ化されたオーディエンスは、プラットフォーム[!DNL Google]でプログラム的に作成されます。
-* 現在、プラットフォームには、アクティベーションの成功を検証するための測定指標は含まれていません。 統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
-
->[!IMPORTANT]
->
->[!DNL Google Ad Manager]で最初の宛先を作成する場合で、以前(Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL Google]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
+* [!DNL Platform] には、現在、アクティベーションの成功を検証する測定指標は含まれていません。統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
 
 ## サポートされるID{#supported-identities}
 
@@ -48,7 +44,9 @@ ht-degree: 30%
 
 ## 前提条件
 
-### 許可リスト
+[!DNL Google Ad Manager]で最初の宛先を作成する場合で、以前(Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL Google]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
+
+## 許可リスト
 
 >[!NOTE]
 >
