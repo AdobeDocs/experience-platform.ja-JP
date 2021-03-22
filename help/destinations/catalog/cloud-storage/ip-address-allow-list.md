@@ -4,15 +4,17 @@ title: 'クラウドストレージ先のIPアドレス許可リスト '
 type: ドキュメント
 description: このページには、許可リストに追加できるIP範囲が含まれています。このIP範囲は、Experience PlatformからSFTPサーバー、AmazonS3、またはAzure Blobストレージに安全にデータをエクスポートするために使用できます。
 translation-type: tm+mt
-source-git-commit: 648be489aa77870f67564ee350c4d85885673832
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 0%
+source-wordcount: '188'
+ht-degree: 1%
 
 ---
 
 
 # クラウドストレージの宛先のIPアドレス許可リスト{#ip-address-allow-list}
+
+## 概要 {#overview}
 
 >[!IMPORTANT]
 >
