@@ -3,9 +3,9 @@ keywords: mobile;ブレーズ。メッセージ；
 title: ブレーズ接続
 description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '953'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 5%
 >[!IMPORTANT]
 >
 >Adobe Experience Platformのブレーズ行き先は現在ベータ段階です。 ドキュメントと機能は変更される場合があります。
+
+## 概要 {#overview}
 
 [!DNL Braze]宛先は、プロファイルデータを[!DNL Braze]に送信するのに役立ちます。
 
