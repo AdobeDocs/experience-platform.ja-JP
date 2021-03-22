@@ -1,11 +1,11 @@
 ---
 keywords: media analytics extension;media analytics;audio and video extension
 title: Adobe Media Analytics for Audio and Video 拡張機能
-description: Adobeのオーディオおよびビデオ用メディア分析の拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
+description: オーディオ&ビデオ用Adobe Medium分析の拡張機能は、Adobe Experience Platformの分析先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '538'
 ht-degree: 38%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 38%
 
 # Adobe Media Analytics for Audio and Video 拡張機能 {#adobe-analytics-for-video-extension}
 
+## 概要 {#overview}
+
 Adobe Media Analytics for Audio and Video は基本的な分析機能のアドオンで、ビデオ、オーディオおよび広告における堅牢な測定機能をクライアントに提供します。
 
-オーディオ&amp;ビデオ用Adobeメディア分析は、Adobe Experience Platformの分析拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html) の拡張機能のページを参照してください。
+オーディオ&amp;ビデオAdobe Medium分析は、Adobe Experience Platformの分析拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html) の拡張機能のページを参照してください。
 
 この宛先は[!DNL Adobe Experience Platform Launch]拡張子です。 プラットフォームでの[!DNL Platform Launch]拡張機能の動作について詳しくは、[Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
@@ -37,11 +39,11 @@ Adobe Analytics for Video 拡張機能をインストールするには：
 
 リンク先をクリックしてハイライトし、右側のパネルで「**[!UICONTROL 設定]**」を選択します。 **[!UICONTROL Configure]**&#x200B;コントロールがグレー表示になっている場合は、**[!UICONTROL manage_properties]**&#x200B;権限がありません。 [前提条件](#prerequisites)を確認してください。
 
-**[!UICONTROL 利用可能なプラットフォームの起動プロパティを選択]**&#x200B;ウィンドウで、拡張機能をインストールする[!DNL Platform Launch]プロパティを選択します。 また、[!DNL Platform Launch]に新しいプロパティを作成するオプションもあります。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、 ドキュメントの[「プロパティ」ページに関する節](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)を参照してください。[!DNL Launch]
+**[!UICONTROL 使用可能なPlatform launchプロパティを選択]**&#x200B;ウィンドウで、拡張機能をインストールする[!DNL Platform Launch]プロパティを選択します。 また、[!DNL Platform Launch]に新しいプロパティを作成するオプションもあります。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、 ドキュメントの[「プロパティ」ページに関する節](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page)を参照してください。[!DNL Launch]
 
 このワークフローにより、[!DNL Platform Launch]に移動してインストールを完了します。
 
-拡張機能の設定について詳しくは、[!DNL Experience Launch]ドキュメントの[オーディオおよびビデオ用Adobeメディア解析の拡張機能ページ](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)を参照してください。
+拡張機能の設定について詳しくは、[!DNL Experience Launch]ドキュメントの[オーディオおよびビデオの拡張機能のAdobe Medium解析ページ](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/media-analytics-extension/overview.html)を参照してください。
 
 [Adobe Experience Platform Launchインターフェイス](https://launch.adobe.com/)に直接インストールすることもできます。  ドキュメントの[新しい拡張機能の追加](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension)に関するページを参照してください。[!DNL Platform Launch]
 
