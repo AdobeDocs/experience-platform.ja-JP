@@ -3,9 +3,9 @@ keywords: 飛行船属性；飛行船の宛先
 title: 航空船属性接続
 description: Airship内でターゲティングするために、Adobeオーディエンスデータをオーディエンス属性としてAirshipにシームレスに渡します。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1202'
 ht-degree: 13%
 
 ---
@@ -39,13 +39,13 @@ ht-degree: 13%
 >
 >まだ[!DNL Airship]アカウントを作成していない場合は、[このサインアップリンク](https://go.airship.eu/accounts/register/plan/starter/)を経由してアカウントを作成します。
 
-### 属性を有効にする{#enable-attributes}
+## 属性を有効にする{#enable-attributes}
 
 Adobe Experience Platformプロファイルの属性は[!DNL Airship]属性に似ており、このページで後述するマッピングツールを使用して、プラットフォームで相互に簡単にマッピングできます。
 
 [!DNL Airship] プロジェクトには、定義済みの属性とデフォルトの属性がいくつかあります。カスタム属性がある場合は、最初に[!DNL Airship]で定義する必要があります。 詳しくは、[属性の設定と管理](https://docs.airship.com/tutorials/audience/attributes/)を参照してください。
 
-### ベアラトークン{#bearer-token}
+## ベアラトークン{#bearer-token}を生成
 
 [Airshipダッシュボード](https://go.airship.com)の&#x200B;**[!UICONTROL 設定]**&quot; **[!UICONTROL APIs &amp; Integrations]**&#x200B;に移動し、左側のメニューで&#x200B;**[!UICONTROL トークン]**&#x200B;を選択します。
 
