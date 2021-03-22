@@ -3,15 +3,17 @@ keywords: adform extension;adform
 title: Adform Website Tracking 拡張機能
 description: Adform拡張子は、Adobe Experience Platformの解析の送信先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '487'
 ht-degree: 44%
 
 ---
 
 
 # Adform Website Tracking 拡張機能 {#adform-extension}
+
+## 概要 {#overview}
 
 Adform Webサイトトラッキング拡張機能を使用すると、広告主は[!DNL Experience Platform Launch]プラットフォームを使用して、サイト全体にAdformトラッキングポイントを容易に導入できます。
 
