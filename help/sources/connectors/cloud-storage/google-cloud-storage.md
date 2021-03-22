@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloudストレージ;Googleクラウドストレージ
 solution: Experience Platform
 title: Google Cloudストレージソースコネクタの概要
-topic: overview
+topic: 概要
 description: APIまたはユーザーインターフェイスを使用してGoogle CloudストレージをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 2%
+source-wordcount: '542'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]などのクラウドプロバイダーにネイティブの接続を提供し、これらのシステムからデータを取り込むことができます。
 
-Cloudストレージソースは、ダウンロード、フォーマット、アップロードを必要とせずに、独自のデータを[!DNL Platform]に取り込むことができます。 取り込んだデータは、XDM JSON、XDM Parket、または区切り形式で形式設定できます。 プロセスの各手順は、Sourcesワークフローに統合されます。 [!DNL Platform] バッチを使用してデータを取り込むこ [!DNL Google Cloud Storage] とができます。
+クラウドストレージソースを使用すると、ダウンロード、フォーマット、アップロードをおこなう必要なく、独自のデータを Platform に取り込むことができます。取り込んだデータは、エクスペリエンスデータモデル(XDM)に準拠したJSONまたはパーケットとして、または区切り形式で形式設定できます。 プロセスのすべての手順がソースワークフローに統合されます。 プラットフォームでは、[!DNL Google Cloud Storage]からバッチを通じてデータを取り込むことができます。
 
 ## IPアドレス許可リスト
 
@@ -25,7 +25,7 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## [!DNL Google Cloud Storage]アカウントを接続するための前提条件の設定
 
-[!DNL Platform]に接続するには、まず[!DNL Google Cloud Storage]アカウントの相互運用性を有効にする必要があります。 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform]を開き、ナビゲーションパネルの&#x200B;**[!UICONTROL ストレージ]**&#x200B;オプションから&#x200B;**[!UICONTROL 設定]**&#x200B;を選択します。
+プラットフォームに接続するには、まず[!DNL Google Cloud Storage]アカウントの相互運用性を有効にする必要があります。 相互運用性設定にアクセスするには、[!DNL Google Cloud Platform]を開き、ナビゲーションパネルの&#x200B;**[!UICONTROL クラウドストレージ]**&#x200B;オプションから&#x200B;**[!UICONTROL 設定]**&#x200B;を選択します。
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -33,13 +33,11 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-**[!UICONTROL 相互運用性]**&#x200B;ページには、認証、アクセスキー、およびユーザーアカウントに関連付けられたデフォルトのプロジェクトに関する情報が含まれています。 相互運用可能なアクセス用のデフォルトのプロジェクトをまだ確立していない場合は、**[!UICONTROL 「相互運用可能なアクセス用のデフォルトのプロジェクト]**」セクション内で設定できます。 既定のプロジェクトが既に確立されている場合は、このセクションに、プロジェクトが既定として設定されていることを確認するメッセージが表示されます。
-
-ユーザーアカウントの新しいアクセスキーIDとシークレットアクセスキーを生成するには、「**[!UICONTROL キーを作成]**」を選択します。
+**[!UICONTROL 相互運用性]**&#x200B;ページには、認証、アクセスキー、およびサービスアカウントに関連付けられたデフォルトのプロジェクトに関する情報が含まれています。 サービスアカウントの新しいアクセスキーIDとシークレットアクセスキーを生成するには、「**[!UICONTROL サービスアカウントのキーを作成]**」を選択します。
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-新しく生成したアクセスキーIDとシークレットアクセスキーを使用して、[!DNL Google Cloud Storage]アカウントを[!DNL Platform]に接続できます。
+新しく生成したアクセスキーIDとシークレットアクセスキーを使用して、[!DNL Google Cloud Storage]アカウントをプラットフォームに接続できます。
 
 ## ファイルとディレクトリの命名規則
 
@@ -47,14 +45,14 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 - ディレクトリ名とファイルコンポーネント名は255文字以内にする必要があります。
 - ディレクトリ名とファイル名の末尾にスラッシュ(`/`)を付けることはできません。 指定した場合は、自動的に削除されます。
-- 次の予約済みURL文字は、適切にエスケープする必要があります。`! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- 次の予約済みURL文字は、適切にエスケープする必要があります。`! ' ( ) ; @ & = + $ , % # [ ]`
 - 次の文字は使用できません。`" \ / : | < > * ?`.
 - 無効なURLパス文字は使用できません。 `\uE000`のようなコードポイントは、NTFSファイル名では有効ですが、有効なUnicode文字ではありません。 また、制御文字（0x00 ～ 0x1F、\u0081など）のようなASCII文字やUnicode文字も使用できません。 HTTP/1.1でUnicode文字列を扱うルールについては、[RFC 2616, Section 2.2を参照してください。基本規則](https://www.ietf.org/rfc/rfc2616.txt)と[RFC 3987](https://www.ietf.org/rfc/rfc3987.txt)。
 - 次のファイル名は使用できません。LPT1、LPT2、LPT3、LPT4、LPT5、LPT6、LPT7、LPT8、LPT9、COM1、COM2、COM3、COM4、COM5、COM6、COM7、COM8、COM9、prn、AUX、NUL、CON、CLOCK$、ドット文字(.)および2つのドット文字(..)。
 
-## [!DNL Google Cloud Storage]を[!DNL Platform]に接続
+## [!DNL Google Cloud Storage]をプラットフォームに接続
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL Google Cloud Storage]を[!DNL Platform]に接続する方法に関する情報を提供しています。
+以下のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL Google Cloud Storage]をプラットフォームに接続する方法に関する情報を提供しています。
 
 ### APIの使用
 
