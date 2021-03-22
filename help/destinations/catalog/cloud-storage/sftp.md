@@ -3,15 +3,17 @@ keywords: SFTP;sftp
 title: SFTP接続
 description: 区切り形式のデータファイルをAdobe Experience Platformから定期的にエクスポートするには、SFTPサーバーへのライブ送信接続を作成します。
 translation-type: tm+mt
-source-git-commit: 4f0047e7ac4c83e3e17ea0a077bbeb09c86d1db6
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 7%
+source-wordcount: '232'
+ht-degree: 8%
 
 ---
 
 
 # SFTP接続
+
+## 概要 {#overview}
 
 区切り形式のデータファイルをAdobe Experience Platformから定期的にエクスポートするには、SFTPサーバーへのライブ送信接続を作成します。
 
