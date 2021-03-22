@@ -3,9 +3,9 @@ keywords: '広告；bing; '
 title: Microsoft Bing接続
 description: Microsoft Bingの接続先で、Microsoftディスプレイ広告全体に対して、ターゲットを設定したデジタルキャンペーンの再ターゲット化とオーディエンスを実行できます。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '533'
 ht-degree: 5%
 
 ---
@@ -19,25 +19,25 @@ ht-degree: 5%
 
 プロファイルデータを[!DNL Microsoft Bing]に送信するには、まず宛先に接続する必要があります。
 
-## 宛先の仕様 {#destination-specs}
-
-[!DNL Microsoft Bing]宛先に固有の次の詳細をメモしておきます。
-
-* 次の[ID](../../../identity-service/namespaces.md)を[!DNL Microsoft Bing]宛先に送信できます。[!DNL Microsoft ID]。
-
->[!IMPORTANT]
->
->[!DNL Microsoft Bing]で最初の宛先を作成したい場合で、以前(Adobe Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL Microsoft Bing]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
-
 ## 使用例 {#use-cases}
 
 マーケティング担当者として、[!DNL Microsoft Advertising IDs]から構築されたセグメントを[!DNL Microsoft Advertising]チャネルのディスプレイ広告を通じてターゲットに使用できるようにしたいと思います。
+
+## サポートされるID{#supported-identities}
+
+[!DNL The Trade Desk] は、次の表に示すIDのアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md)の詳細を表示します。
+
+| ターゲットID | 説明 |
+|---|---|
+| MAID | Microsoft広告ID |
 
 ## エクスポートタイプ{#export-type}
 
 **[!DNL Segment Export]**  — セグメント(オーディエンス)のすべてのメンバーを [!DNL Microsoft Bing] 宛先にエクスポートします。
 
 ## 前提条件 {#prerequisites}
+
+[!DNL Microsoft Bing]で最初の宛先を作成したい場合で、以前(Adobe Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL Microsoft Bing]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
 
 宛先を設定する際は、次の情報を入力する必要があります。
 
@@ -49,13 +49,13 @@ ht-degree: 5%
 
 ![Microsoft Bingの宛先の設定](../../assets/catalog/advertising/bing/configure.png)
 
->[!NOTE]
->
->この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
->
->![Microsoft Bingの宛先のアクティブ化](../../assets/catalog/advertising/bing/activate.png)
+この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
-[!UICONTROL 認証]手順で、宛先接続の詳細を入力する必要があります。
+![Microsoft Bingの宛先のアクティブ化](../../assets/catalog/advertising/bing/activate.png)
+
+## 認証手順{#authentication}
+
+**[!UICONTROL 認証]**&#x200B;手順で、宛先接続の詳細を入力する必要があります。
 
 * **[!UICONTROL 名前]**:この宛先が将来認識される名前。
 * **[!UICONTROL 説明]**:この宛先を将来特定するのに役立つ説明です。
