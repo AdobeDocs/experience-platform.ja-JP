@@ -5,15 +5,17 @@ type: チュートリアル
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '535'
 ht-degree: 50%
 
 ---
 
 
 # クラウドストレージの保存先の作成
+
+## 概要 {#overview}
 
 このページでは、Adobe Experience Platformのクラウドストレージの場所に接続する方法を説明します。
 
@@ -25,6 +27,8 @@ ht-degree: 50%
 >
 >この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
+## 認証手順{#authentication}
+
 クラウドストレージの宛先への接続を既に設定している場合は、**[!UICONTROL 認証]**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新しいアカウント]**」を選択して、クラウドストレージの宛先への新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。必要に応じて、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 この公開鍵&#x200B;**は、Base64エンコードされた文字列として書かれる必要があります。**
 
 **認証**&#x200B;手順の資格情報の入力に関する詳細は、[AmazonS3](./amazon-s3.md)宛先、[[!DNL Amazon Kinesis]](./amazon-kinesis.md)宛先、[[!DNL Azure Event Hubs]](./azure-event-hubs.md)宛先、[SFTP](./sftp.md)宛先を参照してください。
@@ -34,6 +38,8 @@ ht-degree: 50%
 >プラットフォームは、認証プロセスで資格情報の検証をサポートしており、クラウドストレージの場所に誤った資格情報を入力すると、エラーメッセージを表示します。 これにより、間違った資格情報を使用してワークフローを完了できなくします。
 
 ![クラウドストレージの宛先 - 認証手順](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+
+## 設定手順{#setup}
 
 「**[!UICONTROL 設定]**」手順で、アクティベーションフローの「**[!UICONTROL 名前]**」と「**[!UICONTROL 説明]**」を入力します。
 
