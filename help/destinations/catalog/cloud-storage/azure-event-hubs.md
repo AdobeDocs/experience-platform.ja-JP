@@ -3,15 +3,17 @@ keywords: Azureイベントハブの宛先；azureイベントハブ；azure eve
 title: （ベータ版）Azureイベントハブ接続
 description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '543'
 ht-degree: 6%
 
 ---
 
 
 # （ベータ版） [!DNL Azure Event Hubs]接続
+
+## 概要 {#overview}
 
 >[!IMPORTANT]
 >
