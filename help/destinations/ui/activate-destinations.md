@@ -6,15 +6,17 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '2151'
+source-wordcount: '2152'
 ht-degree: 15%
 
 ---
 
 
 # 宛先へのプロファイルとセグメントのアクティブ化
+
+## 概要 {#overview}
 
 セグメントを宛先にマッピングして、[!DNL Adobe Experience Platform]にあるデータをアクティブにします。 これをおこなうには、次の手順に従います。
 
