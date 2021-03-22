@@ -3,15 +3,17 @@ keywords: linkedin接続；linkedin接続；linkedin接続；linkedinの宛先�
 title: Linkedinがオーディエンス接続に一致しました
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するLinkedInキャンペーンのプロファイルをアクティブにします。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '664'
 ht-degree: 12%
 
 ---
 
 
 # [!DNL LinkedIn Matched Audiences] connection
+
+## 概要 {#overview}
 
 ハッシュされた電子メールとモバイルIDに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制のための[!DNL LinkedIn]キャンペーンのプロファイルをアクティブにします。
 
