@@ -1,17 +1,19 @@
 ---
-keywords: 電子メール；電子メール；電子メール；電子メールの送信先；oracle検索；oracle
-title: Oracle・エロカ・コネクション
+keywords: 電子メール；電子メール；電子メール；電子メールの送信先；oracleの検索；oracle
+title: OracleEloqua接続
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '629'
 ht-degree: 49%
 
 ---
 
 
 # [!DNL Oracle Eloqua] connection
+
+## 概要 {#overview}
 
 [[!DNL Oracle Eloqua] は](https://www.oracle.com/marketingcloud/products/marketing-automation/)[!DNL Oracle]、 が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 
