@@ -4,7 +4,7 @@ title: 宛先のタイプとカテゴリ
 seo-title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platformの様々な目的地のタイプやカテゴリについて学びます。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 64%
@@ -22,37 +22,37 @@ Adobe Experience Platformでは、接続と拡張の2種類の宛先を区別し
 
 ![宛先のタイプ](./assets/destination-types/types-of-destinations.png)
 
-### 接続 {#connections}
+## 接続 {#connections}
 
 **[!UICONTROL Adobe Experience Platformのプロファイル]** エクスポートおよび **[!UICONTROL セグメントエクスポートイベントデータを取得し、他のデータソースと組み合わせて、リアルタイム顧客プロファイル]**  [](../profile/home.md)、セグメント化およびエクスポートセグメントおよび条件付きプロファイルを作成します。
 
-#### プロファイルの書き出し先
+## プロファイルの書き出し先
 
 プロファイル書き出し先は、プロファイルや属性を含むファイルを生成します。これらの宛先は生データを使用し、多くの場合、電子メールアドレスを主キーとして使用します。[Amazon S3 クラウドストレージの宛先](./catalog/cloud-storage/amazon-s3.md)は、プロファイルの書き出しを含むファイルを配置できる、宛先の一例です。
 
-#### セグメントの書き出し先
+## セグメントの書き出し先
 
 セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。[[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md)や[[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md)などの広告先がその例です。
 
-#### プロファイルの書き出しとセグメントの書き出し先 - ビデオの概要
+## プロファイルの書き出しとセグメントの書き出し先 - ビデオの概要
 
 次のビデオでは、2 種類の宛先の詳細について説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-### 拡張機能 {#extensions}
+## 拡張機能 {#extensions}
 
-プラットフォームは、プラットフォームのインターフェイスにプラットフォーム起動の拡張機能を含めるため、Adobe Experience Platform Launchの機能と柔軟性を活用します。
+プラットフォームは、プラットフォームインターフェイスにPlatform launch拡張機能を組み込むため、Adobe Experience Platform Launchの能力と柔軟性を活用します。
 
 >[!TIP]
 >
 >使用例やインターフェイス内での検索方法など、Adobe Experience Platform Launch拡張機能に関する詳細については、[Adobe Experience Platform Launch拡張機能の概要](./catalog/launch-extensions/overview.md)を参照してください。
 
-Platform Launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](./catalog/personalization/gainsight.md)や [Confirmit Voice of the Customer 拡張機能](./catalog/voice/confirmit-digital-feedback.md)などがあります。
+platform launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](./catalog/personalization/gainsight.md)や [Confirmit Voice of the Customer 拡張機能](./catalog/voice/confirmit-digital-feedback.md)などがあります。
 
 ![Experience Platform Launch の拡張機能と他の宛先との比較](./assets/common/launch-and-other-destinations.png)
 
-### 接続と拡張機能を使用するタイミング
+## 接続と拡張機能を使用するタイミング
 
 マーケターは、接続と拡張機能の組み合わせを使用して、お客様の使用例に対処できます。
 
