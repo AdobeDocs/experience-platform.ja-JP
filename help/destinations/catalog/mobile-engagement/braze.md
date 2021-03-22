@@ -3,10 +3,10 @@ keywords: mobile;ブレーズ。メッセージ；
 title: ブレーズ接続
 description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
 source-wordcount: '953'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 5%
 
 プロファイルデータを[!DNL Braze]に送信するには、まず宛先に接続する必要があります。
 
-## 宛先の仕様 {#destination-specs}
+## 宛先の詳細{#specifics}
 
 [!DNL Braze]宛先に固有の次の詳細をメモしておきます。
 
