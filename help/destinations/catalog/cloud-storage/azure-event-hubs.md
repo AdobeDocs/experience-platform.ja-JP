@@ -3,9 +3,9 @@ keywords: Azureイベントハブの宛先；azureイベントハブ；azure eve
 title: （ベータ版）Azureイベントハブ接続
 description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '542'
 ht-degree: 6%
 
 ---
@@ -43,14 +43,14 @@ ht-degree: 6%
 
 [!DNL Azure Event Hubs]宛先に対して、宛先を作成ワークフローで次の情報を入力します。
 
-### 認証手順{#authentication-step}
+## 認証手順{#authentication-step}
 
 * **[!UICONTROL SASキー]** 名と **[!UICONTROL SASキー]**:SASキーの名前とキーを入力します。[Microsoftのドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)で、SASキーを使用した[!DNL Azure Event Hubs]への認証について説明します。
 * **[!UICONTROL 名前空間]**: [!DNL Azure Event Hubs] 名前空間を入力します。[Microsoftドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)の[!DNL Azure Event Hubs]名前空間について説明します。
 
 ![認証手順で必要な入力](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
-### セットアップ手順{#setup-step}
+## 設定手順{#setup-step}
 
 * **[!UICONTROL 名前]**:接続先の名前を入力し [!DNL Azure Event Hubs]ます。
 * **[!UICONTROL 説明]**:接続の説明を入力します。例：「Premium tier customers」、「Osins in kitesurfing」
