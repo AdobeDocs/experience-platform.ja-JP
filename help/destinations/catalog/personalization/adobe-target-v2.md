@@ -3,9 +3,9 @@ keywords: ターゲット式;ターゲット;ターゲットv2;ターゲットv2
 title: Adobe Target v2 拡張機能
 description: Adobe Targetv2拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '531'
 ht-degree: 45%
 
 ---
@@ -13,11 +13,13 @@ ht-degree: 45%
 
 # Adobe Target v2 拡張機能 {#adobe-target-v2-extension}
 
+## 概要 {#overview}
+
 Adobe Target は、顧客のエクスペリエンスのカスタマイズやパーソナライズをおこない、Web サイト、モバイルサイト、アプリ、ソーシャルメディア、その他のデジタルチャネルでの収益性を最大化するのに必要なすべてのツールを備えた Adobe Experience Cloud ソリューションです。
 
 Adobe Targetv2は、Adobe Experience Platformのパーソナライゼーション拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html) の拡張機能のページを参照してください。
 
-この目的地はAdobe Experience Platform Launchの延長線です。 プラットフォーム起動の拡張機能の動作について詳しくは、[Adobe Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
+この目的地はAdobe Experience Platform Launchの延長線です。 platform launch拡張機能がプラットフォームでどのように機能するかについて詳しくは、[Adobe Experience Platform Launch拡張機能の概要](../launch-extensions/overview.md)を参照してください。
 
 ![Adobe Target v2 拡張機能](../../assets/catalog/personalization/adobe-target-v2/catalog.png)
 
