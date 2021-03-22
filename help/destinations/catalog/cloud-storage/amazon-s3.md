@@ -3,15 +3,17 @@ keywords: AmazonS3;S3宛先；s3;amazon s3
 title: AmazonS3接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '223'
 ht-degree: 14%
 
 ---
 
 
 # [!DNL Amazon S3] connection  {#s3-connection}
+
+## 概要 {#overview}
 
 [!DNL Amazon Web Services] (AWS) S3ストレージへのライブアウトバウンド接続を作成し、タブ区切りファイルまたはCSVデータファイルをAdobe Experience PlatformからS3バケットに定期的にエクスポートします。
 
