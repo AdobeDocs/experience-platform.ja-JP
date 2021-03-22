@@ -3,15 +3,17 @@ keywords: Audience ManagerDIL拡張子；宛先オーディエンスマネージ
 title: Audience Manager DIL 拡張機能
 description: Audience ManagerDILの拡張は、Adobe Experience Platformのデータ管理プラットフォーム(DMP)の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '560'
 ht-degree: 43%
 
 ---
 
 
 # Audience Manager DIL 拡張機能 {#aam-dil-extension}
+
+## 概要 {#overview}
 
 これは、Adobe Audience Manager データ統合ライブラリ拡張機能（クライアントサイド実装）です。メモ：この拡張機能は、Adobe Analytics データのサーバーサイド転送（SSF）で使用するためのものではありません。SSF の場合は、Adobe Analytics 拡張機能を使用します。重要：バージョン8.0以降では、DILは[!DNL Experience Cloud] IDサービス、バージョン3.3以降に強い依存関係を持ちます。 [!DNL Experience Cloud] IDサービスとDILの両方を実装し、[!DNL Audience Manager]の完全なデータ統合機能を実現してください。
 
