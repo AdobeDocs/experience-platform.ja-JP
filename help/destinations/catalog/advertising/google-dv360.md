@@ -3,10 +3,10 @@ keywords: DoubleClick入札マネージャ；DoubleClick入札マネージャ；
 title: Google Display & Video 360接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '788'
-ht-degree: 42%
+ht-degree: 41%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 42%
 
 [!DNL Display & Video 360]（旧称 ）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。[!DNL DoubleClick Bid Manager]
 
-## 宛先の仕様
+## 宛先の詳細{#specifics}
 
 [!DNL Google Display & Video 360]宛先に固有の次の詳細を確認します。
 
@@ -26,7 +26,7 @@ ht-degree: 42%
 >
 >Google Display &amp; Video 360 を使用して最初の宛先を作成する場合で、以前に Experience Cloud ID サービスにおいて、Adobe Audience Manager や他のアプリケーションとの間で [ID 同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていないときには、アドビコンサルティングまたはカスタマーケアに連絡して、ID 同期を有効にしてください。以前にAudience ManagerでGoogle統合を設定していた場合、Platformへの繰り越しを設定したID同期。
 
-### サポートされるID{#supported-identities}
+## サポートされるID{#supported-identities}
 
 [!DNL Google Ad Manager] は、次の表に示すIDのアクティベーションをサポートしています。
 
@@ -40,7 +40,7 @@ ht-degree: 42%
 | MAID | Microsoft広告ID。 このIDは、Windows 10を実行するデバイスを一意に識別します。 |  |
 | AmazonファイアテレビID | このIDは、Amazonファイアテレビを一意に識別します。 |  |
 
-### エクスポートの種類{#export-type}
+## エクスポートの種類{#export-type}
 
 **セグメントエクスポート**  — セグメント(オーディエンス)のすべてのメンバーをGoogleのエクスポート先にエクスポートします。
 
