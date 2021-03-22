@@ -3,9 +3,9 @@ keywords: 飛行船タグ；飛行船の目的地
 title: 航空船タグの接続
 description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 13%
 
 ---
@@ -41,7 +41,7 @@ Adobe Experience Platformセグメントを[!DNL Airship]に送信する前に�
 > 
 >まだ[!DNL Airship]アカウントを作成していない場合は、[このサインアップリンク](https://go.airship.eu/accounts/register/plan/starter/)を経由してアカウントを作成します。
 
-### タググループ
+## タググループ
 
 Adobe Experience Platformのセグメントの概念は、Airshipの[タグ](https://docs.airship.com/guides/audience/tags/)と似ていますが、実装にわずかな違いがあります。 この統合は、Experience Platformセグメント](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins)のユーザーの[メンバーシップのステータスを、[!DNL Airship]タグの存在または存在しない状態にマッピングします。 例えば、`xdm:status`が`realized`に変わるプラットフォームセグメントでは、タグは[!DNL Airship]チャネルに追加されるか、このプロファイルがマッピングされる名前を付けます。 `xdm:status`が`exited`に変更されると、タグは削除されます。
 
@@ -53,7 +53,7 @@ Adobe Experience Platformのセグメントの概念は、Airshipの[タグ](htt
 
 タググループの作成手順については、[タググループの管理](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups)を参照してください。
 
-### ベアラートークン
+## ベアラートークンの生成
 
 [Airshipダッシュボード](https://go.airship.com)の&#x200B;**[!UICONTROL 設定]**&quot; **[!UICONTROL APIs &amp; Integrations]**&#x200B;に移動し、左側のメニューで&#x200B;**[!UICONTROL トークン]**&#x200B;を選択します。
 
