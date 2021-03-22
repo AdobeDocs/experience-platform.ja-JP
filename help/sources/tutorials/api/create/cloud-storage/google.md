@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloudストレージ;Googleクラウドストレージ;google;Google
 solution: Experience Platform
 title: Flow Service APIを使用したGoogle Cloudストレージソース接続の作成
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Flow Service APIを使用して、Adobe Experience PlatformをGoogle Cloudストレージアカウントに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 26%
+source-wordcount: '597'
+ht-degree: 24%
 
 ---
 
@@ -35,10 +35,10 @@ ht-degree: 26%
 
 | Credential | 説明 |
 | ---------- | ----------- |
-| `accessKeyId` | [!DNL Google Cloud Storage]アカウントのアクセスキーID。 |
-| `secretAccessKey` | [!DNL Google Cloud Storage]アカウントの秘密アクセスキー。 |
+| アクセスキーID | プラットフォームに対する[!DNL Google Cloud Storage]アカウントの認証に使用する61文字の英数字の文字列。 |
+| 秘密アクセスキー | [!DNL Google Cloud Storage]アカウントをプラットフォームに対して認証するために使用する、40文字のベース64エンコードされた文字列。 |
 
-使い始める前に、[このGoogle Cloudドキュメント](https://cloud.google.com/docs/authentication)を参照してください。
+これらの値について詳しくは、[Google CloudストレージのHMACキー](https://cloud.google.com/storage/docs/authentication/hmackeys#overview)ガイドを参照してください。 独自のアクセスキーIDとシークレットアクセスキーを生成する手順については、[[!DNL Google Cloud Storage] 概要](../../../../connectors/cloud-storage/google-cloud-storage.md)を参照してください。
 
 ### API 呼び出し例の読み取り
 
