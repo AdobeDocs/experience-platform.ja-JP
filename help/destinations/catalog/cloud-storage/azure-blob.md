@@ -3,7 +3,7 @@ keywords: Azure Blob;Blob宛先；s3;azure BLOB宛先
 title: Azure Blob接続
 description: Azure Blobストレージへのライブ送信接続を作成して、タブ区切りデータファイルまたはCSVデータファイルをAdobe Experience Platformから定期的にエクスポートします。
 translation-type: tm+mt
-source-git-commit: 6d1960be886d12475603aeb79fe6283a1fd3030e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 7%
@@ -26,7 +26,7 @@ ht-degree: 7%
 
 既に有効なBlobの宛先がある場合は、このドキュメントの残りの部分をスキップして、[宛先](../../ui/activate-destinations.md)へのセグメントのアクティブ化に関するチュートリアルに進むことができます。
 
-### サポートされているファイル形式
+## サポートされているファイル形式 {#file-formats}
 
 [!DNL Experience Platform] は、次の書き出し先のファイル形式をサポートしてい [!DNL Blob]ます。
 
@@ -48,7 +48,7 @@ ht-degree: 7%
 
 **[!UICONTROL Azure Blobストレージ]**&#x200B;に接続ページが表示されます。 このページでは、新しい秘密鍵証明書または既存の秘密鍵証明書を使用できます。
 
-### 新しいアカウント{#new-account}
+## 新しいアカウント{#new-account}
 
 新しい資格情報を使用する場合は、「**[!UICONTROL 新しいアカウント]**」を選択します。 表示される入力フォームで、接続文字列を指定します。 接続文字列は、Blobストレージのデータにアクセスするために必要です。 [!DNL Blob]接続文字列のパターン開始:`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
 
@@ -58,7 +58,7 @@ ht-degree: 7%
 
 ![新しいアカウント](../../assets/catalog/cloud-storage/blob/new.png)
 
-### 既存のアカウント
+## 既存のアカウント{#existing-account}
 
 既存のアカウントに接続するには、接続する[!DNL Blob]アカウントを選択し、**次へ**&#x200B;を選択して次に進みます。
 
