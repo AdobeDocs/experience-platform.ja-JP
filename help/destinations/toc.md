@@ -6,9 +6,9 @@ user-guide-description: チャネル間のマーケティングキャンペー�
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 feature: 宛先
 translation-type: tm+mt
-source-git-commit: 3ae5efca9744e5f5edde56038beab93be5157de3
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '463'
 ht-degree: 61%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 61%
    * [Flow Service APIを使用して、ストリーミング送信先に接続し、データをアクティブにします](./api/streaming-destinations.md)
    * [電子メールマーケティングの宛先に接続し、Flow Service APIを使用してデータをアクティブ化する](./api/email-marketing.md)
 * UIガイド{#ui}
-   * [宛先ワークスペースの概要](./ui/destinations-workspace.md)
+   * [宛先ワークスペース](./ui/destinations-workspace.md)
    * [表示先の詳細](./ui/destination-details-page.md)
    * [宛先に接続](./ui/connect-destination.md)
    * [宛先へのプロファイルとセグメントのアクティブ化](./ui/activate-destinations.md)
