@@ -3,15 +3,17 @@ keywords: AmazonKinesis;kinesis宛先；kinesis
 title: AmazonKinesis接続
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '507'
 ht-degree: 6%
 
 ---
 
 
 # （ベータ版） [!DNL Amazon Kinesis]接続
+
+## 概要 {#overview}
 
 >[!IMPORTANT]
 >
