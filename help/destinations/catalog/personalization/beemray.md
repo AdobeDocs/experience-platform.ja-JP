@@ -3,15 +3,17 @@ keywords: beemray,beemray extension
 title: Beemray 拡張機能
 description: Beemray拡張機能は、Adobe Experience Platformのパーソナライゼーション先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '522'
 ht-degree: 42%
 
 ---
 
 
 # [!DNL Beemray] 拡張機能 {#beemray-extension}
+
+## 概要 {#overview}
 
 [!DNL Beemray] は、状況に合ったコンテキストを使用して製品を加速するお手伝いをします。インサイトを得たり、新しいエクスペリエンスを構築したり、インタラクションを促進したり、本当に重要な瞬間を捉えたりすることが可能になります。Beemray は、機械学習を使用してコンテキストインテリジェンスを自動化します。Beemray は、Adobe Experience Cloud および他のテクニカルパートナーに接続します。何もかもがリアルタイムで起こる。 この拡張機能は、[!DNL Beemray] SDKをサイトにインストールします。
 
