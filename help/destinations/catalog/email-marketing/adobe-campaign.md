@@ -3,7 +3,7 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: Adobe Campaign接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 translation-type: tm+mt
-source-git-commit: b6e795d33b5590001a3270ea42995fdbad28dd88
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 28%
@@ -32,7 +32,6 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 ![Adobe Campaignに接続](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
 接続先ワークフローの&#x200B;**[!UICONTROL アカウント]**&#x200B;手順で、ストレージの場所に対して&#x200B;**[!UICONTROL 接続の種類]**&#x200B;を選択します。 Adobe Campaignの場合は、**[!UICONTROL AmazonS3]**、**[!UICONTROL SFTP with Password]**、**[!UICONTROL SFTP with SSH Key]**、**[!UICONTROL Azure Blob]**&#x200B;のいずれかを選択できます。 Adobe Campaignにデータを送信するには、[!DNL Amazon S3]または[!DNL Azure Blob]を使用することをお勧めします。 接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
-
 
 
 ![Campaign ウィザードの設定](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
