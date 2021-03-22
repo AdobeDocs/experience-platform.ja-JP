@@ -3,9 +3,9 @@ keywords: mobile;ブレーズ。メッセージ；
 title: ブレーズ接続
 description: Brazeは、顧客と顧客の好みのブランドとの関連性が高く印象的なエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '952'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ ht-degree: 5%
 
 マーケターとして、モバイルエンゲージメントの宛先でユーザーをターゲットし、[!DNL Adobe Experience Platform]にセグメントを作成したいと考えています。 さらに、[!DNL Adobe Experience Platform]でセグメントとプロファイルが更新され次第、[!DNL Adobe Experience Platform]プロファイルの属性に基づいてパーソナライズされたエクスペリエンスを提供したいと思います。
 
-### サポートされるID{#supported-identities}
+## サポートされるID{#supported-identities}
 
 [!DNL Google Ad Manager] は、次の表に示すIDのアクティベーションをサポートしています。
 
@@ -48,7 +48,6 @@ ht-degree: 5%
 ## エクスポートタイプ{#export-type}
 
 **[!DNL Profile-based]**  — 目的のスキーマフィールド(例：フィールドマッピングに従って、電子メールアドレス、電話番号、姓)やIDを指定します。[!DNL Adobe Experience Platform] セグメントは、この [!DNL Braze] 属性の `AdobeExperiencePlatformSegments` 下のにエクスポートされます。
-
 
 ## 宛先に接続 {#connect-destination}
 
@@ -127,7 +126,7 @@ XDMフィールドを[!DNL Braze]宛先フィールドに正しくマップす�
 
 さらにマッピングを追加するには、前の手順を繰り返します。
 
-### 例 {#mapping-example}
+## マッピングの例{#mapping-example}
 
 例えば、XDMプロファイルスキーマと[!DNL Braze]インスタンスに次の属性とIDが含まれているとします。
 
