@@ -3,9 +3,9 @@ keywords: AmazonKinesis;kinesis宛先；kinesis
 title: AmazonKinesis接続
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '506'
 ht-degree: 6%
 
 ---
@@ -43,14 +43,14 @@ ht-degree: 6%
 
 [!DNL Amazon Kinesis]宛先に対して、宛先を作成ワークフローで次の情報を入力します。
 
-### 認証手順{#authentication-step}
+## 認証手順{#authentication-step}
 
 * **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:で、 [!DNL Amazon Web Services]ペアを生成して、プラットフォームに `access key - secret access key`  [!DNL Amazon Kinesis] アカウントへのアクセスを許可します。詳しくは、[AmazonWebサービスドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 * **region**:データをストリーミングする [!DNL Amazon Web Services] 領域を指定します。
 
 ![アカウント手順の入力フィールド](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### セットアップ手順{#setup-step}
+## 設定手順{#setup-step}
 
 * **名前**:接続先の名前を指定  [!DNL Amazon Kinesis]
 * **説明**:への接続の説明を入力し [!DNL Amazon Kinesis]ます。
