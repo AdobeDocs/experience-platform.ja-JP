@@ -3,9 +3,9 @@ keywords: Azure Blob;Blob宛先；s3;azure BLOB宛先
 title: Azure Blob接続
 description: Azure Blobストレージへのライブ送信接続を作成して、タブ区切りデータファイルまたはCSVデータファイルをAdobe Experience Platformから定期的にエクスポートします。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '600'
 ht-degree: 8%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 8%
 
 [!DNL Blob]接続文字列の構成の詳細については、Microsoftのドキュメントの[Azureストレージアカウントの接続文字列を構成する](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account)を参照してください。
 
-必要に応じて、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 この公開鍵&#x200B;**は、Base64エンコードされた文字列として書かれる必要があります。**
+必要に応じて、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、[!DNL Base64]エンコードされた文字列として書き込む必要があります。
 
 ![新しいアカウント](../../assets/catalog/cloud-storage/blob/new.png)
 
