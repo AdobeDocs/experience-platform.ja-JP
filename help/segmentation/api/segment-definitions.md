@@ -5,10 +5,10 @@ title: セグメント定義APIエンドポイント
 topic: 開発ガイド
 description: Adobe Experience PlatformSegmentation Service APIのセグメント定義エンドポイントは、組織のセグメント定義をプログラムで管理できるようにします。
 translation-type: tm+mt
-source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
+source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 50%
+source-wordcount: '1174'
+ht-degree: 48%
 
 ---
 
@@ -588,6 +588,67 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
     "creationTime": 0,
     "updateEpoch": 1579295340,
     "updateTime": 1579295340000
+}
+```
+
+## セグメント定義の変換
+
+`/segment/conversion`エンドポイントにPOSTリクエストを行うことで、`pql/text`と`pql/json`の間でセグメント定義を変換するか、`pql/json`を`pql/text`に変換することができます。
+
+**API 形式**
+
+```http
+POST /segment/conversion
+```
+
+**リクエスト**
+
+次のリクエストは、セグメント定義の形式を`pql/text`から`pql/json`に変更します。
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "profileInstanceId": "ups",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "payloadSchema": "string",
+        "ttlInDays": 60
+    }'
+```
+
+**応答** 
+
+正常に応答すると、HTTPステータス200が返され、新しく変換されたセグメント定義の詳細が返されます。
+
+```json
+{
+    "ttlInDays": 60,
+    "imsOrgId": "6A29340459CA8D350A49413A@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/json",
+        "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"country\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"workAddress\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}},{\"nodeType\":\"literal\",\"literalType\":\"String\",\"value\":\"US\"}]}"
+    }
 }
 ```
 
