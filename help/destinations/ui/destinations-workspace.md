@@ -4,10 +4,10 @@ title: 宛先ワークスペース
 description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択し、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 35%
+source-wordcount: '1012'
+ht-degree: 32%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 35%
 
 Adobe Experience Platformで、左のナビゲーションバーから「**[!UICONTROL 宛先]**」を選択して、[!UICONTROL 宛先]ワークスペースにアクセスします。
 
-[!UICONTROL 宛先]ワークスペースは、「[!UICONTROL カタログ]」、「[!UICONTROL 参照]」、「[!UICONTROL アカウント]」、「[!UICONTROL システム表示]」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
+[!UICONTROL 宛先]ワークスペースは、以下の節で説明する4つのセクション[!UICONTROL カタログ]、[!UICONTROL 参照]、[!UICONTROL アカウント]、[!UICONTROL システム表示]で構成されます。
 
 ![宛先 — 概要](../assets/ui/workspace/destinations-overview.png)
 
@@ -26,7 +26,7 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 
 「**[!UICONTROL カタログ]**」タブには、プラットフォームで使用可能なすべての宛先のリストが表示されます。この宛先には、データを送信できます。
 
-プラットフォームユーザーインターフェイスは、宛先カタログページに多数の検索およびフィルターオプションを提供します。
+プラットフォームユーザーインターフェイスは、宛先カタログページにいくつかの検索およびフィルターオプションを提供します。
 
 * ページの検索機能を使用して、特定の行き先を見つけます。
 * [!UICONTROL カテゴリ]コントロールを使用して宛先をフィルターします。
@@ -35,7 +35,7 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 
 ![リンク先のフィルタリングと検索デモ](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-宛先カードには、**[!UICONTROL Configure]**&#x200B;または&#x200B;**[!UICONTROL Activate]**&#x200B;コントロールと、より多くのオプションを表示するセカンダリコントロールが含まれます。 これらはすべて次のとおりです。
+宛先カードには、**[!UICONTROL Configure]**&#x200B;または&#x200B;**[!UICONTROL Activate]**&#x200B;コントロールと、より多くのオプションを表示するセカンダリコントロールが含まれます。 以下に、これらのコントロールを示します。
 
 | 制御 | 説明 |
 ---------|----------
@@ -47,7 +47,7 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 
 ![宛先カードの制御](../assets/ui/workspace/destination-card-options.png)
 
-カタログ内で目的のカードを選択し、右側のパネルを開きます。  ここで、宛先の説明を確認できます。 右側のレールには、上の表で説明したのと同じコントロール、宛先の説明、宛先のカテゴリとタイプの表示が表示されます。
+カタログ内で目的のカードを選択し、右側のパネルを開きます。 ここで、宛先の説明を確認できます。 右側のレールには、上の表で説明したのと同じコントロール、宛先の説明、宛先のカテゴリとタイプの表示が表示されます。
 
 ![宛先カタログオプション](../assets/ui/workspace/destination-right-rail.png)
 
@@ -98,14 +98,14 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 | 要素 | 説明 |
 ---------|----------
 | 名前 | この宛先へのアクティベーションフローに指定した名前。同じ列には、次の2つのコントロールが含まれます。と[!UICONTROL 宛先]を削除します。 |
-| 最後のフロー実行ステータス | 最後のデータフロー実行のステータス。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
-| 最終フロー実行日 | 最後のデータフローが実行された日時。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
+| [!UICONTROL 最後のフロー実行ステータス] | 最後のデータフロー実行のステータス。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
+| [!UICONTROL 最終フロー実行日] | 最後のデータフローが実行された日時。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
 | [!UICONTROL 宛先] | アクティベーションフローに対して選択した宛先プラットフォームです。 |
 | [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3、FTP、または[!DNL Azure Blob]を指定できます。</li><li>リアルタイム広告の宛先の場合：サーバー間.</li><li>ストリーミング先の場合：[!DNL Azure Event Hubs]または[!DNL Amazon Kinesis]を指定できます。</li></ul> |
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
 | [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されているセグメントの数を示します。 このコントロールを選択すると、アクティブ化されたセグメントの詳細を確認できます。 アクティブ化されたセグメントの詳細については、宛先の詳細ページの[アクティベーションデータ](/help/destinations/ui/destination-details-page.md#activation-data)を参照してください。 |
 | [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）。 |
-| [!UICONTROL ステータス] | `Active` または `Inactive`.データが現在この宛先に対してアクティブ化されているかどうかを示します。ステータスを編集するには、「[アクティベーションの無効化](./activate-destinations.md#disable-activation)」を参照してください。 |
+| [!UICONTROL ステータス] | `Active` または `Inactive`.データがこの宛先に対してアクティブ化されているかどうかを示します。 ステータスを編集するには、「[アクティベーションの無効化](./activate-destinations.md#disable-activation)」を参照してください。 |
 
 目的の行をクリックすると、目的の行に関する詳細情報が右側のレールに表示されます。
 
