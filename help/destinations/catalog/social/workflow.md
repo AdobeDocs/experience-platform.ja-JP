@@ -4,7 +4,7 @@ title: ソーシャルネットワークの宛先の作成
 type: チュートリアル
 description: Adobe Experience Platformのソーシャルネットワーク広告アカウントに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 52%
@@ -54,7 +54,7 @@ ht-degree: 52%
 >
 > [!DNL LinkedIn]宛先の場合、**[!UICONTROL アカウントID]**&#x200B;は[!DNL LinkedIn Campaign Manager Account ID]です。 このIDは[!DNL LinkedIn Campaign Manager]にあります。
 
-また、この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択できます。 マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択することもできます。 マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
