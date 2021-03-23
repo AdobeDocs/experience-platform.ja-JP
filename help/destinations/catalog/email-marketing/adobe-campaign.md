@@ -3,10 +3,10 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: Adobe Campaign接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 28%
+source-wordcount: '827'
+ht-degree: 21%
 
 ---
 
@@ -38,12 +38,12 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 ![Campaign ウィザードの設定](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- **[!UICONTROL AmazonS3 接続]**&#x200B;の場合、アクセスキー ID とシークレットアクセスキーを指定する必要があります。
-- **[!UICONTROL SFTP（パスワード）]** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
-- **[!UICONTROL SFTP（SSH キー）]** で接続する場合は、ドメイン、ポート、ユーザー名、SSH キーを指定する必要があります。
+- **[!UICONTROL AmazonS3]**&#x200B;接続の場合は、[!UICONTROL アクセスキーID]と[!UICONTROL シークレットアクセスキー]を指定する必要があります。
+- **[!UICONTROL SFTPとパスワード]**&#x200B;接続の場合、[!UICONTROL ドメイン]、[!UICONTROL ポート]、[!UICONTROL ユーザー名]、[!UICONTROL パスワード]を指定する必要があります。
+- **[!UICONTROL SSHキー]**&#x200B;接続を使用するSFTPの場合、[!UICONTROL ドメイン]、[!UICONTROL ポート]、[!UICONTROL ユーザー名]、[!UICONTROL SSHキー]を指定する必要があります。
 - **[!UICONTROL Azure Blob]**&#x200B;接続の場合は、接続文字列を指定する必要があります。
 
-必要に応じて、RSA形式の公開鍵を添付し、PGP/GPGを使用した暗号化を&#x200B;**[!UICONTROL Key]**&#x200B;セクションのエクスポートファイルに追加することができます。 この公開鍵&#x200B;**は、Base64エンコードされた文字列として書かれる必要があります。**
+必要に応じて、RSA形式の公開鍵を添付し、PGP/GPGを使用した暗号化を&#x200B;**[!UICONTROL Key]**&#x200B;セクションのエクスポートファイルに追加することができます。 公開鍵は、[!DNL Base64]エンコードされた文字列として書き込む必要があります。
 
 ![Campaign 情報の入力](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
@@ -54,7 +54,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 - **[!UICONTROL フォルダーパス]**[!DNL Platform]： が書き出しデータを CSV またはタブ区切りファイルとして格納するストレージの場所へのパスを指定します。
 - **[!UICONTROL コンテナ]**: *BLOB接続の場合*。フォルダーパスが含まれるBLOBを保持するコンテナです。
 - **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
-- **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)ページを参照してください。 同じドキュメント内の[Adobe定義のマーケティングアクション](../../../data-governance/policies/overview.md#core-actions)も参照してください。
+- **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)ページを参照してください。
 
 ![Campaign の基本情報](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -66,7 +66,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 ## 宛先属性 {#destination-attributes}
 
-Adobe Campaign の宛先に対して[セグメントをアクティブ化する](../../ui/activate-destinations.md)場合は、[ユニオンスキーマー](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の ID を選択することをお勧めします。宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、電子メールマーケティング宛先ドキュメントの「書き出したファイル](./overview.md#destination-attributes)で、宛先属性として使用するスキーマフィールドの選択」を参照してください。[
+Adobe Campaign先に対して[セグメント](../../ui/activate-destinations.md)をアクティブ化する場合、Adobeでは、[和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することを推奨します。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳細については、[書き出したファイルの保存先属性として使用するスキーマフィールドの選択](./overview.md#destination-attributes)を参照してください。
 
 ## エクスポートされたデータ{#exported-data}
 
