@@ -3,19 +3,17 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: OracleEloqua接続
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 49%
+source-wordcount: '628'
+ht-degree: 33%
 
 ---
 
 
 # [!DNL Oracle Eloqua] connection
 
-## 概要 {#overview}
-
-[[!DNL Oracle Eloqua] は](https://www.oracle.com/marketingcloud/products/marketing-automation/)[!DNL Oracle]、 が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
+[[!DNL Oracle Eloqua] は](https://www.oracle.com/cx/marketing/automation/)[!DNL Oracle]、 が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 
 セグメントデータを[!DNL Oracle Eloqua]に送信するには、まずAdobe Experience Platformの宛先](#connect-destination)を[接続し、次に[ストレージの場所から[!DNL Oracle Eloqua]にデータインポート](#import-data-into-eloqua)を設定する必要があります。
 
@@ -25,24 +23,41 @@ ht-degree: 49%
 
 ## 宛先に接続 {#connect-destination}
 
-**[!UICONTROL 接続]**/**[!UICONTROL 宛先]**&#x200B;で、[!DNL Oracle Eloqua]を選択し、**[!UICONTROL 宛先]**&#x200B;を接続します。
+**[!UICONTROL 接続]**/**[!UICONTROL 宛先]**&#x200B;で、[!DNL Oracle Eloqua]を選択し、**[!UICONTROL 設定]**&#x200B;を選択します。
 
-[Eloqua に接続](../../assets/catalog/email-marketing/oracle-eloqua/catalog.png)
+>[!NOTE]
+>
+>この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「[!UICONTROL アクティブ化]」と「[!UICONTROL 設定]」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
-クラウドストレージの宛先への接続を既に設定している場合は、**[!UICONTROL 認証]**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続の 1 つを選択します。または、「**[!UICONTROL 新しいアカウント]**」を選択して、新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。[!DNL Oracle Eloqua]の場合は、**[!UICONTROL パスワード]**&#x200B;のSFTPと&#x200B;**[!UICONTROL SSHキー]**&#x200B;のSFTPのどちらかを選択できます。 接続タイプに応じて、以下の情報を入力し、「**[!UICONTROL 宛先への接続]**」を選択します。
+![Eloqua に接続](../../assets/catalog/email-marketing/oracle-eloqua/catalog.png)
 
-**[!UICONTROL SFTP（パスワード）]** で接続する場合は、ドメイン、ポート、ユーザー名、パスワードを指定する必要があります。
-**[!UICONTROL SFTP（SSH キー）]** で接続する場合は、ドメイン、ポート、ユーザー名、SSH キーを指定する必要があります。
+**[!UICONTROL アカウント]**&#x200B;の手順で、クラウドストレージの接続先への接続を以前に設定した場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続の1つを選択します。 または、「**[!UICONTROL 新しいアカウント]**」を選択して、新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。[!DNL Oracle Eloqua]の場合は、**[!UICONTROL パスワード]**&#x200B;のSFTPと&#x200B;**[!UICONTROL SSHキー]**&#x200B;のSFTPのどちらかを選択できます。
 
-![Eloqua ウィザードの設定](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
+![Eloquaアカウントの接続](../../assets/catalog/email-marketing/oracle-eloqua/connection-type.png)
 
-「**[!UICONTROL 設定]**」手順で、目的の宛先に関する情報を次のように入力します。
+接続タイプに応じて、以下の情報を入力し、「**[!UICONTROL 宛先への接続]**」を選択します。
+
+- **[!UICONTROL SFTPとパスワード]**&#x200B;接続の場合、[!UICONTROL ドメイン]、[!UICONTROL ポート]、[!UICONTROL ユーザー名]、[!UICONTROL パスワード]を指定する必要があります。
+- **[!UICONTROL SSHキー]**&#x200B;接続を使用するSFTPの場合、[!UICONTROL ドメイン]、[!UICONTROL ポート]、[!UICONTROL ユーザー名]、[!UICONTROL SSHキー]を指定する必要があります。
+
+必要に応じて、RSA形式の公開鍵を添付し、PGP/GPGを使用した暗号化を&#x200B;**[!UICONTROL Key]**&#x200B;セクションのエクスポートファイルに追加することができます。 公開鍵は、[!DNL Base64]エンコードされた文字列として書き込む必要があります。
+
+![宛先に接続する](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
+
+**[!UICONTROL 認証]**&#x200B;の手順で、宛先に関する関連情報を次のように入力します。
 - **[!UICONTROL 名前]**：宛先の名前を選択します。
 - **[!UICONTROL 説明]**：宛先の説明を入力します。
-- **[!UICONTROL グループ名]**:プラットフォームがデータエクスポートを預け入れる、AmazonS3バケット。入力する文字は3 ～ 63文字の長さにする必要があります。 先頭と末尾は文字または数字にする必要があります。 小文字、数字、ハイフン(-)のみを含める必要があります。 IPアドレス（192.100.1.1など）の形式を設定しないでください。
 - **[!UICONTROL Folder Path]**:ストレージー上の場所に、PlatformがエクスポートデータをCSVまたはタブ区切りファイルとしてデポジットするパスを指定します。
 - **[!UICONTROL ファイル形式]**：**CSV** または **TAB_DELIMITED**。ストレージの場所に書き出すファイル形式を選択します。
-- **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+- **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+
+<!--
+
+Commenting out Amazon S3 bucket part for now until support is clarified
+
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+
+-->
 
 ![Eloqua の基本情報](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
 
@@ -54,7 +69,7 @@ ht-degree: 49%
 
 ## 宛先属性 {#destination-attributes}
 
-[セグメント](../../ui/activate-destinations.md)を[!DNL Oracle Eloqua]宛先に対してアクティブ化する場合、[和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、「電子メールマーケティングの宛先」の「[書き出したファイルの宛先属性として使用するスキーマフィールドの選択](./overview.md#destination-attributes)」を参照してください。
+[セグメント](../../ui/activate-destinations.md)を[!DNL Oracle Eloqua]宛先にアクティブ化する場合、Adobeでは[和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することを推奨します。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳細については、[書き出したファイルの保存先属性として使用するスキーマフィールドの選択](./overview.md#destination-attributes)を参照してください。
 
 ## エクスポートされたデータ{#exported-data}
 
@@ -62,4 +77,4 @@ ht-degree: 49%
 
 ## [!DNL Oracle Eloqua] {#import-data-into-eloqua}へのデータインポートの設定
 
-プラットフォームをAmazonS3またはSFTPストレージに接続した後、ストレージの場所から[!DNL Oracle Eloqua]にデータインポートを設定する必要があります。 これを達成する方法については、[!DNL Oracle Eloqua Help Center]の[連絡先またはアカウントのインポート](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)を参照してください。
+[!DNL Platform]をSFTPストレージに接続した後、ストレージの場所から[!DNL Oracle Eloqua]にデータインポートを設定する必要があります。 これを達成する方法については、[!DNL Oracle Eloqua Help Center]の[連絡先またはアカウントのインポート](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)を参照してください。
