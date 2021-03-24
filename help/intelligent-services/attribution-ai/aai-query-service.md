@@ -2,12 +2,12 @@
 keywords: インサイト；アトリビューションai；アトリビューションaiインサイト；AAIクエリサービス；アトリビューションクエリ；アトリビューションスコア
 solution: Intelligent Services, Experience Platform
 title: クエリサービスを使用したアトリビューションスコアの分析
-topic: Attribution AI queries
+topic: Attribution AIクエリ
 description: Adobe Experience Platformクエリサービスを使用してAttribution AIスコアを分析する方法を説明します。
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Adobe Experience PlatformのUIで、左側のナビゲーションにある&#x20
 
 ## アトリビューションスコア分析用のクエリテンプレート
 
-以下のクエリは、様々なスコア分析セナリオのテンプレートとして使用できます。 `_tenantId`と`your_score_output_dataset`を、スコアリング出力スキーマで見つかった適切な値に置き換える必要があります。
+以下のクエリは、様々なスコア分析シナリオのテンプレートとして使用できます。 `_tenantId`と`your_score_output_dataset`を、スコアリング出力スキーマで見つかった適切な値に置き換える必要があります。
 
 >[!NOTE]
 >
@@ -299,4 +299,58 @@ Adobe Experience PlatformのUIで、左側のナビゲーションにある&#x20
         conversionName, num_dist_tp
     ORDER BY
         conversionName, num_dist_tp
+```
+
+### スキーマの分割・統合の例
+
+このクエリは、構造体の列を複数の単数列に分割し、配列を複数の行に分解します。 これは、アトリビューションスコアをCSV形式に変換する際に役立ちます。 このクエリの出力には、1つのコンバージョンと、そのコンバージョンに対応するタッチポイントの1つが各行に含まれます。
+
+>[!TIP]
+>
+> この例では、`_tenantId`と`your_score_output_dataset`に加えて`{COLUMN_NAME}`を置き換える必要があります。 `COLUMN_NAME`変数は、Attribution AIインスタンスの設定時に追加された、オプションのパススルー列名(レポート列)の値を受け取ることができます。 スコアリング出力スキーマを確認し、このクエリを完了するのに必要な`{COLUMN_NAME}`値を見つけてください。
+
+```sql
+SELECT 
+  segmentation,
+  conversionName,
+  scoreCreatedTime,
+  aaid, _id, eventMergeId,
+  conversion.eventType as conversion_eventType,
+  conversion.quantity as conversion_quantity,
+  conversion.eventSource as conversion_eventSource,
+  conversion.priceTotal as conversion_priceTotal,
+  conversion.timestamp as conversion_timestamp,
+  conversion.geo as conversion_geo,
+  conversion.receivedTimestamp as conversion_receivedTimestamp,
+  conversion.dataSource as conversion_dataSource,
+  conversion.productType as conversion_productType,
+  conversion.passThrough.{COLUMN_NAME} as conversion_passThru_column,
+  conversion.skuId as conversion_skuId,
+  conversion.product as conversion_product,
+  touchpointName,
+  touchPoint.campaignGroup as tp_campaignGroup, 
+  touchPoint.mediaType as tp_mediaType,
+  touchPoint.campaignTag as tp_campaignTag,
+  touchPoint.timestamp as tp_timestamp,
+  touchPoint.geo as tp_geo,
+  touchPoint.receivedTimestamp as tp_receivedTimestamp,
+  touchPoint.passThrough.{COLUMN_NAME} as tp_passThru_column,
+  touchPoint.campaignName as tp_campaignName,
+  touchPoint.mediaAction as tp_mediaAction,
+  touchPoint.mediaChannel as tp_mediaChannel,
+  touchPoint.eventid as tp_eventid,
+  scores.*
+FROM (
+  SELECT
+        _tenantId.your_score_output_dataset.segmentation,
+        _tenantId.your_score_output_dataset.conversionName,
+        _tenantId.your_score_output_dataset.scoreCreatedTime,
+        _tenantId.your_score_output_dataset.conversion,
+        _id,
+        eventMergeId,
+        map_values(identityMap)[0][0].id as aaid,
+        inline(_tenantId.your_score_output_dataset.touchpointsDetail)
+  FROM
+        your_score_output_dataset
+)
 ```
