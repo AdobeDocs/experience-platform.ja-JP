@@ -5,9 +5,9 @@ title: エクスペリエンスデータモデル(XDM)フィールドディク�
 topic: 概要
 description: エクスペリエンスデータモデル（XDM）は、Adobe Experience Platform のスキーマを構成する際に使用できる一連の標準フィールドを定義します。これらのフィールドを使用すると、XDM を使用するすべてのサービスが、これらのフィールドで提供される特定の定義を明示的に理解するので、Platform サービス全体で一貫した動作が行われます。
 translation-type: tm+mt
-source-git-commit: 027f3335b406ea526a07e1b3894e4d50c850d5d6
+source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
 workflow-type: tm+mt
-source-wordcount: '25236'
+source-wordcount: '25239'
 ht-degree: 98%
 
 ---
@@ -530,3 +530,5 @@ ht-degree: 98%
 | xdm:workPhone | 勤務先電話 | 勤務先の電話番号。 | オブジェクト |  | オブジェクト | https://ns.adobe.com/experience/campaign/experienceevent-profile-work-details, https://ns.adobe.com/xdm/context/profile-work-details |
 | xdm:xid | エクスペリエンス識別子 | 存在する場合、この値は、すべての名前空間内のすべての名前空間スコープ識別子全体で一意の名前空間間識別子を表します。 | 文字列 |  | 文字列 | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-profile-segmentation, https://ns.adobe.com/experience/profile/profile-all, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/experience/target/activity/activityevent/segmentevent, https://ns.adobe.com/experience/target/experienceevent-all, https://ns.adobe.com/xdm/context/experienceevent-enduserids, https://ns.adobe.com/xdm/context/experienceevent-enduserids-deprecated, https://ns.adobe.com/xdm/context/experienceevent-profile-stitch, https://ns.adobe.com/xdm/context/experienceevent-segmentmembership, https://ns.adobe.com/xdm/context/profile-identities-deprecated, https://ns.adobe.com/xdm/context/profile-segmentation, , , , , , , ,  |
 | xmpDM:duration | チャプターの長さ／期間 | チャプターの長さ（秒）. | 整数 |  | int | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising-timed-asset-reference, https://ns.adobe.com/xdm/context/experienceevent-advertising, https://ns.adobe.com/xdm/context/experienceevent-media |
+
+{style=&quot;table-layout:auto&quot;}
