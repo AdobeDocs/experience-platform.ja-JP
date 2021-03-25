@@ -1,13 +1,14 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
-title: オーディエンスセグメントでデータ使用のコンプライアンスを徹底する
+title: 外部オーディエンスの読み込みと使用
+description: Adobe Experience Platformで外部オーディエンスを使用する方法を学ぶには、このチュートリアルに従ってください。
 topic: チュートリアル
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 10%
+source-wordcount: '652'
+ht-degree: 9%
 
 ---
 
