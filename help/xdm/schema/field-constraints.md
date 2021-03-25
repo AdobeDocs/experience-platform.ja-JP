@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ；ミックスイン；ミックスイン；ミックスイン；データ型；データ型；データ型；データ型；スキーマ型；データ型；データ型；スキーマ;スキーマ;スキーマ設計；マップ；
 solution: Experience Platform
 title: XDM Field Typeの制約
-topic: overview
+topic: 概要
 description: Experience Data Model(XDM)のフィールドタイプ制約のリファレンスです。マッピングできるその他のシリアル化形式や、APIで独自のフィールドタイプを定義する方法が含まれます。
 translation-type: tm+mt
-source-git-commit: c9ea7471bb18c92443a5e45c14c8505ef3ccf30d
+source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1083'
 ht-degree: 18%
 
 ---
@@ -165,7 +165,7 @@ XDMはJSONスキーマの上に構築されているので、XDMフィールド�
 | [!UICONTROL 整数] | タイプ：`INT32`<br>注釈：`INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Short] | タイプ：`INT32`<br>注釈：`INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | タイプ：`INT32`<br>注釈：`INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Date] | タイプ：`INT32`<br>注釈：`DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL 日付] | タイプ：`INT32`<br>注釈：`DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | タイプ：`INT64`<br>注釈：`TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL ブール型] | 型：`BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL マップ] | `MAP`-annotated group<br><br>(`<key-type>` 必須 `STRING`) | `MapType`<br><br>(`keyType` 必須 `StringType`) | `java.util.Map` |
@@ -448,3 +448,5 @@ XDMはJSONスキーマの上に構築されているので、XDMフィールド�
     </td>
   </tr>
 </table>
+
+{style=&quot;table-layout:auto&quot;}
