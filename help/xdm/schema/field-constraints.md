@@ -5,9 +5,9 @@ title: XDM Field Typeの制約
 topic: 概要
 description: Experience Data Model(XDM)のフィールドタイプ制約のリファレンスです。マッピングできるその他のシリアル化形式や、APIで独自のフィールドタイプを定義する方法が含まれます。
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1080'
 ht-degree: 18%
 
 ---
@@ -212,7 +212,7 @@ XDMはJSONスキーマの上に構築されているので、XDMフィールド�
 
 最初に、目的のフィールドタイプを探し、提供されたサンプルコードを使用して[mixin](../api/mixins.md#create)または[creating a data type](../api/data-types.md#create)のAPIリクエストを作成します。
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>XDM タイプ</th>
     <th>オプションのプロパティ</th>
@@ -448,5 +448,3 @@ XDMはJSONスキーマの上に構築されているので、XDMフィールド�
     </td>
   </tr>
 </table>
-
-{style=&quot;table-layout:auto&quot;}
