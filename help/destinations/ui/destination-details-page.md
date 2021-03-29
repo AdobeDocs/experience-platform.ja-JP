@@ -4,9 +4,9 @@ title: 表示先の詳細
 description: '個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたセグメント、アクティベーションの編集とデータフローの有効/無効を切り替えるコントロールが含まれます。 '
 seo-description: '個々の宛先の詳細ページには、宛先の詳細の概要が表示されます。 宛先の詳細には、宛先名、ID、宛先にマッピングされたセグメント、アクティベーションの編集とデータフローの有効/無効を切り替えるコントロールが含まれます。 '
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '745'
 ht-degree: 5%
 
 ---
@@ -57,6 +57,8 @@ Adobe Experience Platformユーザーインターフェイスでは、宛先の�
 | [!UICONTROL ID] | 宛先が受け入れるID名前空間（`GAID`、`IDFA`、`email`など）を表します。 受け入れられるID名前空間について詳しくは、[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。 |
 | [!UICONTROL 作成者] | この宛先を作成したユーザーを示します。 |
 | [!UICONTROL 作成] | この宛先が作成されたUTC日時を示します。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL 有効]/ 無効の切り替え
 
