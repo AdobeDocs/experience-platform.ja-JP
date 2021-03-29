@@ -5,9 +5,9 @@ title: XDM Field Typeの制約
 topic: 概要
 description: Experience Data Model(XDM)のフィールドタイプ制約のリファレンスです。マッピングできるその他のシリアル化形式や、APIで独自のフィールドタイプを定義する方法が含まれます。
 translation-type: tm+mt
-source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
+source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1086'
 ht-degree: 18%
 
 ---
@@ -33,7 +33,7 @@ XDMはJSONスキーマの上に構築されているので、XDMフィールド�
 
 次の表に、各XDM型がJSONスキーマでどのように表されるか、および型に準拠する値の例を示します。
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>XDM タイプ</th>
@@ -185,6 +185,8 @@ XDMはJSONスキーマの上に構築されているので、XDMフィールド�
 | [!UICONTROL ブール型] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL マップ] | `Map` | (なし) | `object` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### MongoDB、Aerospike、Protobuf 2 {#mongo}
 
 | XDM タイプ | MongoDB | Aerospike | Protobuf 2 |
@@ -199,6 +201,8 @@ XDMはJSONスキーマの上に構築されているので、XDMフィールド�
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>（UNIXミリ秒） | `int64`<br>（UNIXミリ秒） |
 | [!UICONTROL ブール型] | `bool` | `Integer`<br>（0/1バイナリ） | `bool` |
 | [!UICONTROL マップ] | `object` | `map` | `map<key_type, value_type>` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## API での XDM フィールドタイプの定義 {#define-fields}
 
