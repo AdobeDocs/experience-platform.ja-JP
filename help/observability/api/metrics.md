@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: 指標APIエンドポイント
-topic: developer guide
+topic: 開発ガイド
 description: Observibility Insights APIを使用して、Experience Platformで観察可能な指標を取得する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2056'
 ht-degree: 41%
 
 ---
@@ -178,6 +178,8 @@ curl -X POST \
 | `aggregator` | 複数の時系列レコードを単一の結果にグループ化するために使用する集計関数を指定します。 使用可能なアグリゲータの詳細については、[OpenTSDBドキュメント](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html)を参照してください。 |
 | `downsample` | フィールドを間隔（「グループ」）に分けて並べ替えることで、指標データのサンプリング率を減らす集計関数を指定できるオプションのフィールドです。 ダウンサンプリングの間隔は`granularity`プロパティで決定します。 ダウンサンプリングの詳細については、[OpenTSDBドキュメント](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html)を参照してください。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 **応答** 
 
 成功した応答は、リクエストで指定された指標とフィルターの結果のデータポイントを返します。
@@ -270,6 +272,8 @@ curl -X POST \
 | `groupBy` | 指標の`filter`プロパティで複数のデータセットが指定され、リクエストで`groupBy`オプションがtrueに設定された場合、このオブジェクトには、対応する`dps`プロパティが適用されるデータセットのIDが含まれます。<br><br>このオブジェクトが応答で空の場合、対応する `dps` プロパティは、 `filters` 配列で指定されたすべてのデータセット(フィルターが指定されていない場合は、内のすべてのデータセット) [!DNL Platform] に適用されます。 |
 | `dps` | 指定した指標、フィルターおよび時間範囲に対して返されるデータ。 このオブジェクトの各キーは、指定した指標に対応する値を持つタイムスタンプを表します。 各データポイント間の時間は、リクエストで指定された`granularity`値に応じて異なります。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## 付録
 
 次の節では、`/metrics`エンドポイントの使用に関する追加情報について説明します。
@@ -310,6 +314,8 @@ curl -X POST \
 | **timeseries.data.collection.inlet.success** | 1 つのデータインレットまたはすべてのデータインレットに対する成功した HTTP 呼び出しの合計数。 | インレットID |
 | **timeseries.data.collection.inlet.failure** | 1 つのデータインレットまたはすべてのデータインレットに対する失敗した HTTP 呼び出しの合計数。 | インレットID |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Identity Service] {#identity}
 
 次の表に、Adobe Experience Platform[!DNL Identity Service]の指標の概要を示します。
@@ -326,6 +332,8 @@ curl -X POST \
 | timeseries.identity.graph.imsorg.numidgraphs.count | IMS 組織 の ID グラフに保存される一意のグラフ ID の数。 | なし |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | 特定のグラフの強さ（「不明」、「弱」または「強」）の IMS 組織の ID グラフに保存される一意の ID の数。 | グラフの強さ（**必須**） |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Privacy Service] {#privacy}
 
 次の表に、Adobe Experience Platform[!DNL Privacy Service]の指標の概要を示します。
@@ -335,6 +343,8 @@ curl -X POST \
 | timeseries.gdpr.jobs.totaljobs.count | GDPR から作成されたジョブの合計数。 | ENV(必&#x200B;**須**) |
 | timeseries.gdpr.jobs.completedjobs.count | GDPR から完了したジョブの合計数。 | ENV(必&#x200B;**須**) |
 | timeseries.gdpr.jobs.errorjobs.count | GDPR からのエラージョブの合計数。 | ENV(必&#x200B;**須**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Query Service] {#query}
 
@@ -348,6 +358,8 @@ curl -X POST \
 | timeseries.queryservice.query.scheduledquery.count | 実行されたスケジュール済みクエリの合計数。 | なし |
 | timeseries.queryservice.query.interactivequery.count | 実行されたインタラクティブクエリの合計数。 | なし |
 | timeseries.queryservice.query.batchfrompsqlquery.count | PSQL から実行されたバッチクエリの合計数。 | なし |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Real-time Customer Profile] {#profile}
 
@@ -369,6 +381,8 @@ curl -X POST \
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | データセットに対する最後のレコード更新要求のタイムスタンプ。 | データセット ID (**必須**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | 平均レコードサイズ。 | IMS 組織 (**必須**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | データセットに対して取得された更新要求の割合。 | データセット ID (**必須**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### エラーメッセージ
 
@@ -403,6 +417,8 @@ curl -X POST \
 | `title` | エラーメッセージと発生した可能性のある理由を含む文字列です。 |
 | `report` | エラーをトリガーした操作で使用されているサンドボックスやIMS組織など、エラーに関するコンテキスト情報が含まれます。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 次の表に、APIから返される可能性のある様々なエラーコードをリストします。
 
 | エラーコード | タイトル | 説明 |
@@ -412,3 +428,5 @@ curl -X POST \
 | `INSGHT-1001-500` | 指標のクエリに失敗しました | サーバーエラーが原因で、指標データベースのクエリを試行中にエラーが発生しました。 もう一度要求してみて、問題が解決しない場合は、Adobeサポートに問い合わせてください。 |
 | `INSGHT-1002-500` | サービスエラー | 内部エラーが原因で要求を処理できませんでした。 もう一度要求してみて、問題が解決しない場合は、Adobeサポートに問い合わせてください。 |
 | `INSGHT-1003-401` | Sandbox検証エラー | サンドボックス検証エラーが原因で、要求を処理できませんでした。 `x-sandbox-name`ヘッダーに入力したSandbox名が、IMS組織に対して有効な有効なSandboxであることを確認してから、要求を再試行してください。 |
+
+{style=&quot;table-layout:auto&quot;}
