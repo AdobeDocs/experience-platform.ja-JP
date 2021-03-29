@@ -4,9 +4,9 @@ title: 宛先ワークスペース
 description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
 seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択し、宛先ワークスペースにアクセスします。
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1018'
 ht-degree: 32%
 
 ---
@@ -45,6 +45,8 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 | [!UICONTROL 表示データフロー] | 宛先に存在するデータアクティベーションフローの表示。 |
 | [!UICONTROL 表示ドキュメント] | 特定のドキュメントページへのリンクを開き、そのドキュメントページの詳細と設定に役立ちます。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ![宛先カードの制御](../assets/ui/workspace/destination-card-options.png)
 
 カタログ内で目的のカードを選択し、右側のパネルを開きます。 ここで、宛先の説明を確認できます。 右側のレールには、上の表で説明したのと同じコントロール、宛先の説明、宛先のカテゴリとタイプの表示が表示されます。
@@ -70,6 +72,8 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 | [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](../catalog/email-marketing/overview.md#connect-destination)で選択したユーザー名。 |
 | [!UICONTROL 宛先] | 宛先に対して作成された基本情報に接続された、一意に成功した宛先フローの数を表します。 |
 | [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 また、アカウント情報を編集または更新できます。 **[!UICONTROL プラットフォーム]**&#x200B;列の![アカウントの編集ボタン](../assets/ui/workspace/pencil-icon.png)を選択し、アカウントの情報を編集します。
 
