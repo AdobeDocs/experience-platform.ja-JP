@@ -2,23 +2,19 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；mysql;MySQL
 solution: Experience Platform
 title: UIでのMySQLソース接続の作成
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Adobe Experience PlatformUIを使用してMySQLソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 10%
+source-wordcount: '419'
+ht-degree: 11%
 
 ---
 
 
 # UIに[!DNL MySQL]ソース接続を作成する
-
->[!NOTE]
->
-> [!DNL MySQL]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、Adobe Experience PlatformUIを使用して[!DNL MySQL]ソース接続を作成する手順を説明します。
 
