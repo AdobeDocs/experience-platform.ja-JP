@@ -2,23 +2,19 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；shopify;Shopify
 solution: Experience Platform
 title: UIでのShopifyソース接続の作成
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Adobe Experience PlatformUIを使用してShopifyソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 12%
+source-wordcount: '452'
+ht-degree: 13%
 
 ---
 
 
 # UIに[!DNL Shopify]ソース接続を作成する
-
->[!NOTE]
->
-> [!DNL Shopify]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用して[!DNL Shopify]ソースコネクタを作成する手順を説明します。
 
