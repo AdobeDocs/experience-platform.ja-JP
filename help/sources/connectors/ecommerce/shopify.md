@@ -2,22 +2,18 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；shopify;Shopify;
 solution: Experience Platform
 title: Shopifyソースコネクタの概要
-topic: overview
+topic: 概要
 description: APIまたはユーザーインターフェイスを使用してShopifyをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 10%
+source-wordcount: '158'
+ht-degree: 12%
 
 ---
 
 
-# （ベータ版） [!DNL Shopify]コネクタ
-
->[!NOTE]
->
->[!DNL Shopify]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# [!DNL Shopify] コネクタ
 
 Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
