@@ -2,14 +2,14 @@
 keywords: Experience Platform；モデルのスコア；データサイエンスワークスペース；人気の高いトピック；ui；スコアリングの実行；スコアリングの結果
 solution: Experience Platform
 title: Data Science Workspace UIでのモデルのスコア設定
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: 'Adobe Experience Platform Data Science Workspace　でのスコアリングは、既存のトレーニング済みモデルに入力データを送ることで達成できます。次に、スコアリング結果が保存され、新しいバッチとして指定した出力データセットで表示可能になります。 '
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 82%
+source-wordcount: '650'
+ht-degree: 31%
 
 ---
 
@@ -30,38 +30,70 @@ Adobe Experience Platform[!DNL Data Science Workspace]でのスコアは、既�
 
 スコアリングの実行は、以前に完了し評価されたトレーニングの実行の最適化された設定を使用して作成されます。モデルの最適な設定のセットは、通常、トレーニングの実行評価指標を見直すことで決定されます。
 
-1. 最も最適なトレーニング実行を見つけて、その設定をスコアリングに使用します。目的のトレーニング実行を開き、名前をクリックします。
+最も最適なトレーニング実行を見つけて、その設定をスコアリングに使用します。次に、目的のトレーニングを開き、名前に付けられたハイパーリンクを選択します。
 
-2. 「トレーニング実行の&#x200B;**[!UICONTROL 評価]**」タブで、画面右上の「**[!UICONTROL スコア]**」ボタンをクリックします。これにより、新しい&#x200B;**スコアリングの実行**ワークフローが開始されます。
-   ![](../images/models-recipes/score/training_run_overview.png)
+![トレーニングの実行を選択](../images/models-recipes/score/select-run.png)
 
-3. 入力スコアリングデータセットを選択し、「**[!UICONTROL 次へ]**」をクリックします。
-   ![](../images/models-recipes/score/scoring_input.png)
+トレーニングの「**[!UICONTROL 評価]**」タブから、画面の右上にある「**[!UICONTROL スコア]**」を選択します。 新しいスコアリングワークフローが開始されます。
 
-4. 出力スコアリングデータセットを選択します。これは、スコアリング結果が保存される専用の出力データセットです。選択を確定し、「**[!UICONTROL 次へ]**」をクリックします。
-   ![](../images/models-recipes/score/scoring_results.png)
+![](../images/models-recipes/score/training_run_overview.png)
 
-5. ワークフローの最後の手順で、スコアリングの実行を設定するよう求められます。これらの設定は、スコアリングの実行にモデルで使用されます。
-モデルの作成時に設定された継承パラメーターは削除できないことに注意してください。継承されていないパラメーターは、値をダブルクリックするか、エントリにカーソルを合わせて元に戻すアイコンをクリックすると編集するまたは元に戻すことができます。
-   ![](../images/models-recipes/score/configuration.png)
-スコアリング設定を確認して、「**[!UICONTROL 完了]**」をクリックし、スコアリングの実行を作成して実行します。「**[!UICONTROL スコアリングの実行]**」タブに移動すると、新しいスコアリングの実行にステータスが表示されます。
-   ![](../images/models-recipes/score/scoring_runs_tab.png)
-スコアリングの実行には、「保留中」、「完了」、「失敗」、「実行中」の 4 つのステータスのいずれかが表示され、自動的に更新されます。ステータスが「完了」または「失敗」の場合は、次の手順に進みます。
+入力スコアリングデータセットを選択し、「**[!UICONTROL 次へ]**」を選択します。
+
+![](../images/models-recipes/score/scoring_input.png)
+
+出力スコアリングデータセットを選択します。これは、スコアリング結果が保存される専用の出力データセットです。選択内容を確認し、「**[!UICONTROL 次へ]**」を選択します。
+
+![](../images/models-recipes/score/scoring_results.png)
+
+ワークフローの最後の手順で、スコアリングの実行を設定するよう求められます。これらの設定は、スコアリング実行のモデルで使用されます。
+モデルの作成中に設定された継承パラメータは削除できません。 継承されていないパラメーターは、重複が値をクリックするか、エントリの上にカーソルを置いた状態で「元に戻す」アイコンを選択することで編集または元に戻すことができます。
+
+![設定](../images/models-recipes/score/configuration.png)
+
+スコアリングの設定を確認し、「**[!UICONTROL 完了]**」を選択して、スコアリング実行を作成し実行します。 「**[!UICONTROL スコアリングの実行]**」タブに移動し、**[!UICONTROL 保留]**&#x200B;ステータスの新しいスコアリングの実行が表示されます。
+
+![スコアリング実行タブ](../images/models-recipes/score/scoring_runs_tab.png)
+
+スコアリングの実行は、次のいずれかのステータスで表示できます。
+- 保留中
+- Complete
+- Failed
+- 実行中
+
+ステータスは自動的に更新されます。 ステータスが&#x200B;**[!UICONTROL 完了]**&#x200B;または&#x200B;**[!UICONTROL 失敗]**&#x200B;の場合は、次の手順に進みます。
 
 ## スコアリング結果の表示
 
-1. スコアリングの実行に使用されたトレーニングの実行を見つけ、名前をクリックして、「**[!UICONTROL 評価]**」ページを表示します。
+表示スコアリング結果を開始するには、トレーニングランを選択します。
 
-2. トレーニングの実行の評価ページの上部近くにある「**[!UICONTROL スコアリングの実行]**」タブをクリックし 、既存のスコアリングの実行のリストを表示します。スコアリングリストをクリックすると、右の列に詳細が表示されます。
-   ![](../images/models-recipes/score/view_details.png)
+![トレーニングの実行を選択](../images/models-recipes/score/select-run.png)
 
-3. 選択したスコアリングの実行のステータスが「完了」または「失敗」の場合、右の列にある&#x200B;**[!UICONTROL 表示アクティビティログ]**リンクがアクティブになります。リンクをクリックして、実行ログを表示またはダウンロードします。スコアリングの実行が失敗した場合、実行ログには、失敗の理由を判断する際に役立つ情報が記録されます。
-   ![](../images/models-recipes/score/activity_logs.png)
+トレーニングの実行&#x200B;**[!UICONTROL 評価]**&#x200B;ページにリダイレクトされます。 トレーニング実行の評価ページの上部近くにある「**[!UICONTROL スコアリング実行]**」タブを選択し、既存のスコアリング実行のリストを表示します。
 
-4. 右側の列にある「**[!UICONTROL スコアリング結果データセットのプレビュー]**」リンクをクリックします。スコアリングの実行の出力データセットのプレビューを確認できるようになります。
-   ![](../images/models-recipes/score/preview_results.png)
+![評価ページ](../images/models-recipes/score/view_scoring_runs.png)
 
-5. スコアリング結果の完全なセットについては、右側の列にある「**[!UICONTROL スコアリング結果データセット]**」リンクをクリックします。
+次に、実行の詳細を表示するためのスコアリングの実行を選択します。
+
+![詳細を実行する](../images/models-recipes/score/view_details.png)
+
+選択したスコアリング実行のステータスが「完了」または「失敗」の場合、**[!UICONTROL 表示アクティビティログ]**&#x200B;リンクが使用可能になります。 スコアリングの実行が失敗した場合、実行ログには、失敗の理由を判断するのに役立つ情報が記録されます。 実行ログをダウンロードするには、[**[!UICONTROL 表示アクティビティログ]**]を選択します。
+
+![表示ログの選択](../images/models-recipes/score/view_logs.png)
+
+**[!UICONTROL 表示アクティビティlogs]**&#x200B;プロバーが表示されます。 URLを選択して、関連付けられたログを自動的にダウンロードします。
+
+![](../images/models-recipes/score/activity_logs.png)
+
+また、**[!UICONTROL プレビュースコアリング結果データセット]**&#x200B;を選択して、スコアリング結果の表示を行うこともできます。
+
+![プレビュー結果の選択](../images/models-recipes/score/view_results.png)
+
+出力データセットのプレビューが提供されます。
+
+![プレビュー結果](../images/models-recipes/score/preview_results.png)
+
+スコアリング結果の完全なセットについては、右の列にある&#x200B;**[!UICONTROL スコアリング結果データセット]**&#x200B;リンクを選択します。
 
 ## 次の手順
 
