@@ -5,10 +5,10 @@ title: Flow Service APIを使用したCloudストレージシステムの調査
 topic: 概要
 description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムを調査します。
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 20%
+source-wordcount: '821'
+ht-degree: 18%
 
 ---
 
@@ -101,14 +101,25 @@ curl -X GET \
 ```json
 [
     {
-        "type": "File",
-        "name": "data.csv",
-        "path": "/some/path/data.csv"
+        "type": "file",
+        "name": "account.csv",
+        "path": "/test-connectors/testFolder-fileIngestion/account.csv",
+        "canPreview": true,
+        "canFetchSchema": true
     },
     {
-        "type": "Folder",
-        "name": "foobar",
-        "path": "/some/path/foobar"
+        "type": "file",
+        "name": "profileData.json",
+        "path": "/test-connectors/testFolder-fileIngestion/profileData.json",
+        "canPreview": true,
+        "canFetchSchema": true
+    },
+    {
+        "type": "file",
+        "name": "sampleprofile--3.parquet",
+        "path": "/test-connectors/testFolder-fileIngestion/sampleprofile--3.parquet",
+        "canPreview": true,
+        "canFetchSchema": true
     }
 ]
 ```
@@ -117,14 +128,14 @@ curl -X GET \
 
 クラウドストレージーからGETファイルの構造を検査するには、ファイルのパスを指定し、クエリーパラメーターとして入力しながらデータリクエストを実行します。
 
-カスタムの区切り文字をクエリの枠として指定することで、CSVまたはTSVファイルの構造を調べることができます。 任意の1文字の値は、列の区切り文字として使用できます。 指定しない場合、コンマ`(,)`がデフォルト値として使用されます。
+ファイルのパスと種類を指定しながらGETリクエストを実行すると、クラウドストレージソースからデータファイルの構造を調べることができます。 また、CSV、TSV、圧縮JSON、区切り形式のファイルなど、様々なファイルタイプを調べる場合は、それらのファイルタイプをクエリーパラメーターの一部として指定します。
 
 **API 形式**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
 ```
 
 | パラメーター | 説明 |
@@ -132,13 +143,13 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 | `{CONNECTION_ID}` | クラウドストレージソースコネクタの接続ID。 |
 | `{FILE_PATH}` | 検査するファイルへのパスです。 |
 | `{FILE_TYPE}` | ファイルの種類です。 次のファイルタイプがサポートされています。<ul><li>DELIMITED</code>:区切り文字区切り値。 DSVファイルはコンマで区切る必要があります。</li><li>JSON</code>:JavaScriptオブジェクト表記を参照してください。 JSONファイルはXDMに準拠している必要があります</li><li>PARKET</code>:Apacheパーケー。 パーケファイルはXDMに準拠している必要があります。</li></ul> |
-| `columnDelimiter` | CSVファイルまたはTSVファイルを検査するための列区切り文字として指定した1文字の値。 パラメーターを指定しない場合、値のデフォルトはコンマ`(,)`です。 |
+| `{QUERY_PARAMS}` | 結果のフィルタリングに使用できるオプションのクエリパラメーター。 詳しくは、[クエリパラメーター](#query)の節を参照してください。 |
 
 **リクエスト**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -173,6 +184,15 @@ curl -X GET \
     }
 ]
 ```
+
+## クエリパラメーターの使用 {#query}
+
+[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)は、異なるファイルタイプのプレビューや検査を行うためのクエリパラメーターの使用をサポートしています。
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `columnDelimiter` | CSVファイルまたはTSVファイルを検査するための列区切り文字として指定した1文字の値。 パラメーターを指定しない場合、値のデフォルトはコンマ`(,)`です。 |
+| `compressionType` | 圧縮された区切りファイルまたはJSONファイルをプレビューするために必要なクエリパラメーター。 サポートされる圧縮ファイルは次のとおりです。 <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 ## 次の手順
 
