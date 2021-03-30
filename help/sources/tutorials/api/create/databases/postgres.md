@@ -2,23 +2,19 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Flow Service APIを使用したPostgreSQLソース接続の作成
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Flow Service APIを使用して、Adobe Experience PlatformをPostgreSQLに接続する方法を学びます。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 26%
+source-wordcount: '562'
+ht-degree: 27%
 
 ---
 
 
 # [!DNL Flow Service] APIを使用して[!DNL PostgreSQL]ソース接続を作成する
-
->[!NOTE]
->
->[!DNL PostgreSQL]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
