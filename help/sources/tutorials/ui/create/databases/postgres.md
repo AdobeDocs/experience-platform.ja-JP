@@ -2,23 +2,19 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: UIでのPostgreSQLソース接続の作成
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Adobe Experience PlatformUIを使用してPostgreSQLソース接続を作成する方法を学びます。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 10%
+source-wordcount: '457'
+ht-degree: 11%
 
 ---
 
 
 # UIに[!DNL PostgreSQL]ソース接続を作成する
-
->[!NOTE]
->
-> [!DNL PostgreSQL]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用して[!DNL PostgreSQL] （以下、「PSQL」と呼びます）ソースコネクタを作成する手順を説明します。
 
