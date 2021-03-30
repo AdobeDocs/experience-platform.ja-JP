@@ -6,10 +6,10 @@ topic: 概要
 type: チュートリアル
 description: このチュートリアルでは、サードパーティのクラウドストレージからデータを取得し、ソースコネクタとAPIを使用してプラットフォームにデータを取り込む手順を説明します。
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
 workflow-type: tm+mt
-source-wordcount: '1639'
-ht-degree: 19%
+source-wordcount: '1768'
+ht-degree: 18%
 
 ---
 
@@ -57,7 +57,7 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
-ファイルベースのコネクタの列挙値は、次のとおりです。
+ファイルベースのソースの列挙値は、次のとおりです。
 
 | データフォーマット | 列挙値 |
 | ----------- | ---------- |
@@ -65,11 +65,10 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 | JSON | `json` |
 | パーケ | `parquet` |
 
-テーブルベースのすべてのコネクタで、値を`tabular`に設定します。
+テーブルベースのすべてのソースに対して、値を`tabular`に設定します。
 
->[!NOTE]
->
->列の区切り文字をプロパティとして指定すると、CSVファイルとTSVファイルをクラウドストレージソースコネクタに取り込むことができます。 任意の1文字の値は、列の区切り文字として使用できます。 指定しない場合、コンマ`(,)`がデフォルト値として使用されます。
+- [カスタム区切りファイルを使用したソース接続の作成](#using-custom-delimited-files)
+- [圧縮ファイルを使用したソース接続の作成](#using-compressed-files)
 
 **API 形式**
 
@@ -77,7 +76,13 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 POST /sourceConnections
 ```
 
+### カスタム区切りファイル{#using-custom-delimited-files}を使用したソース接続の作成
+
 **リクエスト**
+
+`columnDelimiter`をプロパティとして指定すると、カスタムの区切り文字を使用して区切りファイルを取り込むことができます。 任意の1文字の値は、列の区切り文字として使用できます。 指定しない場合、コンマ`(,)`がデフォルト値として使用されます。
+
+次の例では、タブ区切り値を使用して、区切り形式のファイルに対してソース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -88,9 +93,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud storage source connection for delimited files",
         "description": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "data": {
             "format": "delimited",
             "columnDelimiter": "\t"
@@ -99,7 +104,7 @@ curl -X POST \
             "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
@@ -113,6 +118,64 @@ curl -X POST \
 | `data.columnDelimiter` | 任意の1文字列の列区切り文字を使用して、フラットファイルを収集できます。 このプロパティは、CSVファイルまたはTSVファイルを取り込む場合にのみ必要です。 |
 | `params.path` | アクセスするソースファイルのパス。 |
 | `connectionSpec.id` | 特定のサードパーティクラウドストレージシステムに関連付けられている接続仕様ID。 接続仕様IDのリストについては、[付録](#appendix)を参照してください。 |
+
+**応答** 
+
+正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 このIDは、後の手順でデータフローを作成する際に必要です。
+
+```json
+{
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+### 圧縮ファイル{#using-compressed-files}を使用したソース接続の作成
+
+**リクエスト**
+
+圧縮されたJSONまたは区切り形式のファイルを取り込むには、`compressionType`をプロパティとして指定します。 サポートされる圧縮ファイルの種類は次のリストです。
+
+- `bzip2`
+- `gzip`
+- `deflate`
+- `zipDeflate`
+- `tarGzip`
+- `tar`
+
+次のリクエスト例は、`gzip`ファイルタイプを使用して、圧縮された区切りファイルのソース接続を作成します。
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Cloud storage source connection for compressed files",
+        "description": "Cloud storage source connection for compressed files",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "data": {
+            "format": "delimited",
+            "properties": {
+                "compressionType" : "gzip"
+            }
+        },
+        "params": {
+            "path": "/compressed/files.gzip"
+        },
+        "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+            "version": "1.0"
+        }
+     }'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `data.properties.compressionType` | 取り込み用の圧縮ファイルタイプを指定します。 このプロパティは、圧縮されたJSONまたは区切り形式のファイルを取り込む場合にのみ必要です。 |
 
 **応答** 
 
