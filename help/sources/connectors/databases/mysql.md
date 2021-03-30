@@ -2,22 +2,18 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；MySQL;mysql;My sql;My SQL
 solution: Experience Platform
 title: MySQL Source Connectorの概要
-topic: overview
+topic: 概要
 description: APIまたはユーザーインターフェイスを使用してMySQLをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 11%
+source-wordcount: '234'
+ht-degree: 12%
 
 ---
 
 
-# （ベータ版） MySQL Connector
-
->[!NOTE]
->
->MySQL Connectorはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# MySQLコネクタ
 
 Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
