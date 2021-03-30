@@ -2,22 +2,18 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce Service Cloud;salesforceサービスクラウド
 solution: Experience Platform
 title: Salesforce Service Cloudソースコネクタの概要
-topic: overview
+topic: 概要
 description: APIまたはユーザーインターフェイスを使用してSalesforce Service CloudをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 7%
+source-wordcount: '229'
+ht-degree: 8%
 
 ---
 
 
-# （ベータ版） [!DNL Salesforce Service Cloud]コネクタ
-
->[!NOTE]
->
->[!DNL Salesforce Service Cloud]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# [!DNL Salesforce Service Cloud] コネクタ
 
 Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
