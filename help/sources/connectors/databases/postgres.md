@@ -2,22 +2,18 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；PostgreSQL;postgresql
 solution: Experience Platform
 title: PostgreSQLソースコネクタの概要
-topic: overview
+topic: 概要
 description: APIまたはユーザインターフェイスを使用してPostgreSQLをAdobe Experience Platformに接続する方法を学びます。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 22%
+source-wordcount: '226'
+ht-degree: 24%
 
 ---
 
 
-# （ベータ版） [!DNL PostgreSQL]コネクタ
-
->[!NOTE]
->
->[!DNL PostgreSQL]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# [!DNL PostgreSQL] コネクタ
 
 Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
