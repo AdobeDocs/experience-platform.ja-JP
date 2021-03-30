@@ -2,14 +2,14 @@
 keywords: Experience Platform；パッケージレシピの読み込み；Data Science Workspace；人気の高いトピック；レシピ；ui；エンジンの作成
 solution: Experience Platform
 title: Data Science Workspace UIでのパッケージ化されたレシピの読み込み
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: このチュートリアルでは、提供された「小売売上」の例を使用してパッケージ化されたレシピを設定およびインポートする方法に関するインサイトを提供します。このチュートリアルの最後までに、Adobe Experience Platform Data Science Workspace　でモデルの作成、トレーニング、評価をおこなう準備が整います。
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 40%
+source-wordcount: '1835'
+ht-degree: 37%
 
 ---
 
@@ -124,7 +124,7 @@ ht-degree: 40%
 
 ### Dockerベースのレシピのインポート — [!DNL Python] {#python}
 
-[!DNL Platform] UIの左上にある&#x200B;**[!UICONTROL ワークフロー]**&#x200B;を移動して選択すると開始します。 次に、「**レシピを読み込み**」を選択し、「****&#x200B;を起動」をクリックします。
+[!DNL Platform] UIの左上にある&#x200B;**[!UICONTROL ワークフロー]**&#x200B;を移動して選択すると開始します。 次に、「**レシピを読み込み**」を選択し、「****&#x200B;を起動」を選択します。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -136,7 +136,7 @@ ht-degree: 40%
 >
 > 『[ソースファイルをレシピにパッケージ化](./package-source-files-recipe.md)』チュートリアルでは、Python ソースファイルを使用して Retail Sales レシピを作成する最後に Docker URL が提供されていました。
 
-**ソース**&#x200B;を選択ページに移動したら、[!DNL Python]ソースファイルを使用して作成したパッケージ化されたレシピに対応するDocker URLを&#x200B;**[!UICONTROL ソースURL]**&#x200B;フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/python/retail/retail.config.json` にあります。**ランタイム**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL Python]**&#x200B;を選択し、**タイプ**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL 分類]**&#x200B;を選択します。 すべての情報が入力されたら、右上隅の「**[!UICONTROL 次へ]**」をクリックして、「**スキーマの管理**」に進みます。
+**ソース**&#x200B;を選択ページに移動したら、[!DNL Python]ソースファイルを使用して作成したパッケージ化されたレシピに対応するDocker URLを&#x200B;**[!UICONTROL ソースURL]**&#x200B;フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/python/retail/retail.config.json` にあります。**ランタイム**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL Python]**&#x200B;を選択し、**タイプ**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL 分類]**&#x200B;を選択します。 すべての情報が入力されたら、右上隅の「**[!UICONTROL 次へ]**」を選択して、「**スキーマの管理**」に進みます。
 
 >[!NOTE]
 >
@@ -148,9 +148,9 @@ ht-degree: 40%
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-「**機能の管理**」セクションで、スキーマビューアのテナントIDをクリックして、小売売上高の入力スキーマを展開します。 目的の入出力機能をハイライト表示し、右側の&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;ウィンドウで「**[!UICONTROL 入力機能]**」または「**[!UICONTROL ターゲット機能]**」を選択して、入力機能と出力機能を選択します。このチュートリアルの目的では、**[!UICONTROL weeklySales]** を&#x200B;**[!UICONTROL ターゲット機能]**、その他すべてを&#x200B;**[!UICONTROL 入力機能]**&#x200B;として設定します。「**[!UICONTROL 次へ]**」をクリックして、新しく設定したレシピを確認します。
+「**機能の管理**」セクションで、スキーマビューアのテナントIDを選択し、小売売上高の入力スキーマを展開します。 目的の入出力機能をハイライト表示し、右側の&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;ウィンドウで「**[!UICONTROL 入力機能]**」または「**[!UICONTROL ターゲット機能]**」を選択して、入力機能と出力機能を選択します。このチュートリアルの目的では、**[!UICONTROL weeklySales]** を&#x200B;**[!UICONTROL ターゲット機能]**、その他すべてを&#x200B;**[!UICONTROL 入力機能]**&#x200B;として設定します。「**[!UICONTROL 次へ]**」を選択して、新しく設定したレシピを確認します。
 
-レシピを確認し、必要に応じて、設定を追加、変更または削除します。「**[!UICONTROL 完了]**」をクリックし、レシピを作成します。
+レシピを確認し、必要に応じて、設定を追加、変更または削除します。「**[!UICONTROL 完了]**」を選択して、レシピを作成します。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -158,7 +158,7 @@ ht-degree: 40%
 
 ### Docker ベースのレシピのインポート — R {#r}
 
-[!DNL Platform] UIの左上にある&#x200B;**[!UICONTROL ワークフロー]**&#x200B;を移動して選択すると開始します。 次に、「**レシピを読み込み**」を選択し、「****&#x200B;を起動」をクリックします。
+[!DNL Platform] UIの左上にある&#x200B;**[!UICONTROL ワークフロー]**&#x200B;を移動して選択すると開始します。 次に、「**レシピを読み込み**」を選択し、「****&#x200B;を起動」を選択します。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -170,7 +170,7 @@ ht-degree: 40%
 >
 > 「[ソースファイルをレシピにパッケージ化](./package-source-files-recipe.md)」チュートリアルでは、R ソースファイルを使用して Retail Sales レシピを作成する最後に Docker URL が提供されていました。
 
-**ソース**&#x200B;を選択ページに移動したら、Rソースファイルを使用して作成したパッケージ化レシピに対応するDocker URLを&#x200B;**[!UICONTROL ソースURL]**&#x200B;フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json` にあります。**ランタイム**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL R]**&#x200B;を選択し、**タイプ**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL 分類]**&#x200B;を選択します。 すべての情報が入力されたら、右上隅の「**[!UICONTROL 次へ]**」をクリックして、「**スキーマの管理**」に進みます。
+**ソース**&#x200B;を選択ページに移動したら、Rソースファイルを使用して作成したパッケージ化レシピに対応するDocker URLを&#x200B;**[!UICONTROL ソースURL]**&#x200B;フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json` にあります。**ランタイム**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL R]**&#x200B;を選択し、**タイプ**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL 分類]**&#x200B;を選択します。 すべての情報が入力されたら、右上隅の「**[!UICONTROL 次へ]**」を選択して、「**スキーマの管理**」に進みます。
 
 >[!NOTE]
 >
@@ -182,9 +182,9 @@ ht-degree: 40%
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-「*機能の管理*」セクションで、スキーマビューアのテナントIDをクリックして、小売売上高の入力スキーマを展開します。 目的の入出力機能をハイライト表示し、右側の&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;ウィンドウで「**[!UICONTROL 入力機能]**」または「**[!UICONTROL ターゲット機能]**」を選択して、入力機能と出力機能を選択します。このチュートリアルの目的では、**[!UICONTROL weeklySales]** を&#x200B;**[!UICONTROL ターゲット機能]**、その他すべてを&#x200B;**[!UICONTROL 入力機能]**&#x200B;として設定します。「**[!UICONTROL 次へ]**」をクリックして、新しい設定済みのレシピを確認します。
+「*機能の管理*」セクションで、スキーマビューアのテナントIDを選択し、小売売上高の入力スキーマを展開します。 目的の入出力機能をハイライト表示し、右側の&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;ウィンドウで「**[!UICONTROL 入力機能]**」または「**[!UICONTROL ターゲット機能]**」を選択して、入力機能と出力機能を選択します。このチュートリアルの目的では、**[!UICONTROL weeklySales]** を&#x200B;**[!UICONTROL ターゲット機能]**、その他すべてを&#x200B;**[!UICONTROL 入力機能]**&#x200B;として設定します。「**[!UICONTROL 次へ]**」を選択して、新しい設定済みレシピを確認します。
 
-レシピを確認し、必要に応じて、設定を追加、変更または削除します。「**完了**」をクリックし、レシピを作成します。
+レシピを確認し、必要に応じて、設定を追加、変更または削除します。「**完了**」を選択して、レシピを作成します。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -192,7 +192,7 @@ ht-degree: 40%
 
 ### Dockerベースのレシピのインポート — PySpark {#pyspark}
 
-[!DNL Platform] UIの左上にある&#x200B;**[!UICONTROL ワークフロー]**&#x200B;を移動して選択すると開始します。 次に、「**レシピを読み込み**」を選択し、「****&#x200B;を起動」をクリックします。
+[!DNL Platform] UIの左上にある&#x200B;**[!UICONTROL ワークフロー]**&#x200B;を移動して選択すると開始します。 次に、「**レシピを読み込み**」を選択し、「****&#x200B;を起動」を選択します。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -204,7 +204,7 @@ ht-degree: 40%
 >
 > [ソースファイルをRecipe](./package-source-files-recipe.md)チュートリアルにパッケージ化すると、PySparkソースファイルを使用して小売売上のレシピを作成する際に、最後にDocker URLが提供されます。
 
-**ソース**&#x200B;を選択ページに移動したら、PySparkソースファイルを使って作成したパッケージレシピに対応するDocker URLを&#x200B;**[!UICONTROL Source URL]**&#x200B;フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json` にあります。**Runtime**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL PySpark]**&#x200B;を選択します。 PySparkランタイムが選択されると、デフォルトのアーティファクトは&#x200B;**[!UICONTROL Docker]**&#x200B;に自動入力されます。 次に、**タイプ**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL 分類]**&#x200B;を選択します。 すべての情報が入力されたら、右上隅の「**[!UICONTROL 次へ]**」をクリックして、「**スキーマの管理**」に進みます。
+**ソース**&#x200B;を選択ページに移動したら、PySparkソースファイルを使って作成したパッケージレシピに対応するDocker URLを&#x200B;**[!UICONTROL Source URL]**&#x200B;フィールドに貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムの&#x200B;**ブラウザー**&#x200B;を使用してインポートします。提供された設定ファイルは `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json` にあります。**Runtime**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL PySpark]**&#x200B;を選択します。 PySparkランタイムが選択されると、デフォルトのアーティファクトは&#x200B;**[!UICONTROL Docker]**&#x200B;に自動入力されます。 次に、**タイプ**&#x200B;ドロップダウンで&#x200B;**[!UICONTROL 分類]**&#x200B;を選択します。 すべての情報が入力されたら、右上隅の「**[!UICONTROL 次へ]**」を選択して、「**スキーマの管理**」に進みます。
 
 >[!NOTE]
 >
@@ -212,13 +212,15 @@ ht-degree: 40%
 
 ![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
 
-次に、**スキーマの管理**&#x200B;セクションの「小売売上高の入出力スキーマー」を選択します。これらのパラメーターは、[小売売上スキーマーとデータセット](../models-recipes/create-retails-sales-dataset.md)の作成チュートリアルの提供されたブートストラップスクリプトを使用して作成されます。
+次に、**スキーマの管理**&#x200B;セレクターを使用して小売売上の入出力スキーマーを選択し、[小売売上スキーマとデータセット](../models-recipes/create-retails-sales-dataset.md)の作成チュートリアルで提供されたブートストラップスクリプトを使用してスキーマーを作成します。
+
+![スキーマの管理](../images/models-recipes/import-package-ui/manage-schemas.png)
+
+「**機能の管理**」セクションで、スキーマビューアのテナントIDを選択し、小売売上高の入力スキーマを展開します。 目的の入出力機能をハイライト表示し、右側の&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;ウィンドウで「**[!UICONTROL 入力機能]**」または「**[!UICONTROL ターゲット機能]**」を選択して、入力機能と出力機能を選択します。このチュートリアルの目的では、**[!UICONTROL weeklySales]** を&#x200B;**[!UICONTROL ターゲット機能]**、その他すべてを&#x200B;**[!UICONTROL 入力機能]**&#x200B;として設定します。「**[!UICONTROL 次へ]**」を選択して、新しく設定したレシピを確認します。
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-「**機能の管理**」セクションで、スキーマビューアのテナントIDをクリックして、小売売上高の入力スキーマを展開します。 目的の入出力機能をハイライト表示し、右側の&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;ウィンドウで「**[!UICONTROL 入力機能]**」または「**[!UICONTROL ターゲット機能]**」を選択して、入力機能と出力機能を選択します。このチュートリアルの目的では、**[!UICONTROL weeklySales]** を&#x200B;**[!UICONTROL ターゲット機能]**、その他すべてを&#x200B;**[!UICONTROL 入力機能]**&#x200B;として設定します。「**[!UICONTROL 次へ]**」をクリックして、新しく設定したレシピを確認します。
-
-レシピを確認し、必要に応じて、設定を追加、変更または削除します。「**[!UICONTROL 完了]**」をクリックし、レシピを作成します。
+レシピを確認し、必要に応じて、設定を追加、変更または削除します。「**[!UICONTROL 完了]**」を選択して、レシピを作成します。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
@@ -226,7 +228,7 @@ ht-degree: 40%
 
 ### Dockerベースのレシピのインポート — Scala {#scala}
 
-[!DNL Platform] UIの左上にある&#x200B;**[!UICONTROL ワークフロー]**&#x200B;を移動して選択すると開始します。 次に、「**レシピを読み込み**」を選択し、「****&#x200B;を起動」をクリックします。
+[!DNL Platform] UIの左上にある&#x200B;**[!UICONTROL ワークフロー]**&#x200B;を移動して選択すると開始します。 次に、「**レシピを読み込み**」を選択し、「****&#x200B;を起動」を選択します。
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -238,7 +240,7 @@ ht-degree: 40%
 >
 > [ソースファイルをレシピ](./package-source-files-recipe.md)にパッケージ化するチュートリアルでは、Scala ([!DNL Spark])ソースファイルを使用して小売売上のレシピを作成する最後にDocker URLが提供されています。
 
-「**ソース**&#x200B;を選択」ページに移動したら、「ソースURL」フィールドに、Scalaソースファイルを使用して作成したパッケージレシピに対応するDocker URLを貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムのブラウザーを使用してインポートします。提供された設定ファイルは`experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`にあります。**ランタイム**&#x200B;ドロップダウンで、**[!UICONTROL Spark]**&#x200B;を選択します。 [!DNL Spark]ランタイムが選択されると、デフォルトのアーチファクトが&#x200B;**[!UICONTROL Docker]**&#x200B;に自動入力されます。 次に、**タイプ**&#x200B;ドロップダウンから&#x200B;**[!UICONTROL 回帰]**&#x200B;を選択します。 すべての情報が入力されたら、右上隅の「**[!UICONTROL 次へ]**」をクリックして、「**スキーマの管理**」に進みます。
+「**ソース**&#x200B;を選択」ページに移動したら、「ソースURL」フィールドに、Scalaソースファイルを使用して作成したパッケージレシピに対応するDocker URLを貼り付けます。 次に、指定した設定ファイルをドラッグ&amp;ドロップするか、ファイルシステムのブラウザーを使用してインポートします。提供された設定ファイルは`experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`にあります。**ランタイム**&#x200B;ドロップダウンで、**[!UICONTROL Spark]**&#x200B;を選択します。 [!DNL Spark]ランタイムが選択されると、デフォルトのアーチファクトが&#x200B;**[!UICONTROL Docker]**&#x200B;に自動入力されます。 次に、**タイプ**&#x200B;ドロップダウンから&#x200B;**[!UICONTROL 回帰]**&#x200B;を選択します。 すべての情報が入力されたら、右上隅の「**[!UICONTROL 次へ]**」を選択して、「**スキーマの管理**」に進みます。
 
 >[!NOTE]
 >
@@ -246,13 +248,15 @@ ht-degree: 40%
 
 ![](../images/models-recipes/import-package-ui/scala-databricks.png)
 
-次に、**スキーマの管理**&#x200B;セクションの「小売売上高の入出力スキーマー」を選択します。これらのパラメーターは、[小売売上スキーマーとデータセット](../models-recipes/create-retails-sales-dataset.md)の作成チュートリアルの提供されたブートストラップスクリプトを使用して作成されます。
+次に、**スキーマの管理**&#x200B;セレクターを使用して小売売上の入出力スキーマーを選択し、[小売売上スキーマとデータセット](../models-recipes/create-retails-sales-dataset.md)の作成チュートリアルで提供されたブートストラップスクリプトを使用してスキーマーを作成します。
+
+![スキーマの管理](../images/models-recipes/import-package-ui/manage-schemas.png)
+
+「**機能の管理**」セクションで、スキーマビューアのテナントIDを選択し、小売売上高の入力スキーマを展開します。 目的の入出力機能をハイライト表示し、右側の&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;ウィンドウで「**[!UICONTROL 入力機能]**」または「**[!UICONTROL ターゲット機能]**」を選択して、入力機能と出力機能を選択します。このチュートリアルでは、&quot;[!UICONTROL weeklySales]&quot;を&#x200B;**[!UICONTROL ターゲット機能]**&#x200B;に、その他すべてを&#x200B;**[!UICONTROL 入力機能]**&#x200B;に設定します。 「**[!UICONTROL 次へ]**」を選択して、新しく設定したレシピを確認します。
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-「**機能の管理**」セクションで、スキーマビューアのテナントIDをクリックして、小売売上高の入力スキーマを展開します。 目的の入出力機能をハイライト表示し、右側の&#x200B;**[!UICONTROL フィールドプロパティ]**&#x200B;ウィンドウで「**[!UICONTROL 入力機能]**」または「**[!UICONTROL ターゲット機能]**」を選択して、入力機能と出力機能を選択します。このチュートリアルでは、&quot;[!UICONTROL weeklySales]&quot;を&#x200B;**[!UICONTROL ターゲット機能]**&#x200B;に、その他すべてを&#x200B;**[!UICONTROL 入力機能]**&#x200B;に設定します。 「**[!UICONTROL 次へ]**」をクリックして、新しく設定したレシピを確認します。
-
-レシピを確認し、必要に応じて、設定を追加、変更または削除します。「**[!UICONTROL 完了]**」をクリックし、レシピを作成します。
+レシピを確認し、必要に応じて、設定を追加、変更または削除します。「**[!UICONTROL 完了]**」を選択して、レシピを作成します。
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
