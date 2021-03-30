@@ -2,23 +2,19 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Shopify;shopify;eコマース
 solution: Experience Platform
 title: Flow Service APIを使用したShopifyコネクタソース接続の作成
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Flow Service APIを使用してShopifyをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 26%
+source-wordcount: '551'
+ht-degree: 27%
 
 ---
 
 
 # [!DNL Flow Service] APIを使用して[!DNL Shopify]ソース接続を作成する
-
->[!NOTE]
->
->[!DNL Shopify]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
