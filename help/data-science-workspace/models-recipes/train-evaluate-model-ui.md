@@ -2,14 +2,14 @@
 keywords: Experience Platform；トレーニングと評価；データサイエンスワークスペース；人気の高いトピック；モデルの作成；トレーニングの実行の作成
 solution: Experience Platform
 title: Data Science Workspace UIでのモデルのトレーニングと評価
-topic: tutorial
-type: Tutorial
+topic: チュートリアル
+type: チュートリアル
 description: Adobe Experience Platform Data Science Workspace　では、モデルの意図に適した既存のレシピを組み込むことで、機械学習モデルが作成されます。次に、モデルに関連するハイパーパラメーターを微調整することで、モデルの動作効率と有効性を最適化するようにトレーニングおよび評価します。レシピは再利用可能で、複数のモデルを作成し、単一のレシピで特定の目的に合わせてカスタマイズできます。
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 90%
+source-wordcount: '1099'
+ht-degree: 63%
 
 ---
 
@@ -28,63 +28,76 @@ Adobe Experience Platform Data Science Workspace　では、モデルの意図�
 
 ## モデルの作成
 
-1. Adobe Experience Platform で、左側のナビゲーション列にある「**[!UICONTROL モデル]**」リンクをクリックして、既存のすべてのモデルを一覧表示します。ページの右上近くにある「**[!UICONTROL モデルの作成]**」をクリックして、モデル作成プロセスを開始します。
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+Experience Platformで、左側のナビゲーションにある「**[!UICONTROL モデル]**」タブを選択し、「参照」タブを選択して既存のモデルを表示します。 ページの右上付近にある「**[!UICONTROL モデルを作成]**」を選択して、モデル作成プロセスを開始します。
 
-2. 既存のレシピのリストを参照し、モデルの作成に使用するレシピを探して選択し、「**[!UICONTROL 次へ]**」をクリックします。
-   ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
+![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-3. 適切な入力データセットを選択し、「**[!UICONTROL 次へ]**」をクリックします。これにより、モデルのデフォルトの入力トレーニングデータセットが設定されます。
-   ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
+既存のレシピのリストを参照し、モデルの作成に使用するレシピを探して選択し、**[!UICONTROL 次へ]**を選択します。
+![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-4. モデルの名前を指定し、デフォルトのモデル設定を確認します。レシピの作成中にデフォルトの設定が適用されています。値をダブルクリックして設定値を確認および変更します。新しい設定のセットを指定するには、「**[!UICONTROL 新しい設定をアップロード]**」をクリックし、モデル構成を含む JSON ファイルをブラウザーウィンドウにドラッグします。「**[!UICONTROL 完了]**」をクリックして、モデルを作成します。
+適切な入力データセットを選択し、「**[!UICONTROL 次へ]**」を選択します。 これにより、モデルのデフォルトの入力トレーニングデータセットが設定されます。
+![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-   >[!NOTE]
-   >
-   >設定は、意図されたレシピに固有です。例えば、「小売販売レシピ」の設定は、「製品レコメンデーションレシピ」に対しては機能しません。小売販売レシピ設定のリストについては「[リファレンス](#reference)」の節を照してください。
+モデルの名前を指定し、デフォルトのモデル設定を確認します。レシピの作成中にデフォルトの設定が適用されています。値をダブルクリックして設定値を確認および変更します。
 
-   ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
+新しい設定のセットを提供するには、「**[!UICONTROL 新しい設定をアップロード]**」を選択し、モデル設定を含むJSONファイルをブラウザーウィンドウにドラッグします。 [**[!UICONTROL 終了]**]を選択して、モデルを作成します。
+
+>[!NOTE]
+>
+>設定は、意図されたレシピに固有です。例えば、「小売販売レシピ」の設定は、「製品レコメンデーションレシピ」に対しては機能しません。小売販売レシピ設定のリストについては「[リファレンス](#reference)」の節を照してください。
+
+![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## トレーニング実行の作成
 
-1. Adobe Experience Platform で、左側のナビゲーション列にある「**[!UICONTROL モデル]**」リンクをクリックして、既存のすべてのモデルを一覧表示します。訓練されるモデルの名前を探し、クリックします。
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+Experience Platformで、左側のナビゲーションにある「**[!UICONTROL モデル]**」タブを選択し、「参照」タブを選択して既存のモデルを表示します。 トレーニングするモデルの名前にアタッチされているハイパーリンクを探して選択します。
 
-2. 既存のトレーニング実行と現在のトレーニングステータスが表示されます。[!DNL Data Science Workspace]ユーザーインターフェイスを使用して作成されたモデルの場合、トレーニング実行は自動的に生成され、デフォルトの設定と入力トレーニングデータセットを使用して実行されます。
-   ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
+![](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-3. 新しいトレーニングを作成するには、**[!UICONTROL モデルの概要]**ページの右上近くにある「トレーニング」をクリックします。
-   ![](../images/models-recipes/train-evaluate-ui/training_input.png)
+既存のトレーニング実行と現在のトレーニングステータスが表示されます。[!DNL Data Science Workspace]ユーザーインターフェイスを使用して作成されたモデルの場合、トレーニング実行は自動的に生成され、デフォルトの設定と入力トレーニングデータセットを使用して実行されます。
 
-4. トレーニング実行のトレーニング入力データセットを選択し、「**[!UICONTROL 次へ]**」をクリックします。
-   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+モデルの概要ページの右上付近にある&#x200B;**[!UICONTROL トレーニング]**&#x200B;を選択して、新しいトレーニングを作成します。
 
-5. モデルの作成時に提供されたデフォルトの設定が表示されるので、値をダブルクリックして変更および修正します。「**[!UICONTROL 完了]**」をクリックして、トレーニング実行を作成し、実行します。
+![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-   >[!NOTE]
-   >
-   >設定は、意図されたレシピに固有です。例えば、「小売販売レシピ」の設定は、「製品レコメンデーションレシピ」に対しては機能しません。小売販売レシピ設定のリストについては「[リファレンス](#reference)」の節を照してください。
+トレーニング実行のトレーニング入力データセットを選択し、**[!UICONTROL 次へ]**&#x200B;を選択します。
 
-   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+![](../images/models-recipes/train-evaluate-ui/training_input.png)
+
+モデルの作成時に提供されたデフォルトの設定が表示されるので、値をダブルクリックして変更および修正します。「**[!UICONTROL 完了]**」を選択して、トレーニングの実行を作成し、実行します。
+
+>[!NOTE]
+>
+>設定は、意図されたレシピに固有です。例えば、「小売販売レシピ」の設定は、「製品レコメンデーションレシピ」に対しては機能しません。小売販売レシピ設定のリストについては「[リファレンス](#reference)」の節を照してください。
+
+![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+
 
 ## モデルの評価
 
-1. Adobe Experience Platform で、左側のナビゲーション列にある「**[!UICONTROL モデル]**」リンクをクリックして、既存のすべてのモデルを一覧表示します。評価するモデルの名前を探し、クリックします。
-   ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
+Experience Platformで、左側のナビゲーションにある「**[!UICONTROL モデル]**」タブを選択し、「参照」タブを選択して既存のモデルを表示します。 評価するモデルの名前に付けられたハイパーリンクを探して選択します。
 
-2. 既存のトレーニング実行と現在のトレーニングステータスが表示されます。複数の完了したトレーニング実行がある場合、評価指標は、モデル評価チャートでさまざまなトレーニング実行間で比較できます。グラフの上にあるドロップダウンリストを使用して評価指標を選択します。
+![モデルを選択](../images/models-recipes/train-evaluate-ui/model-hyperlink.png)
 
-   絶対百分率誤差（MAPE）指標は、精度をエラーに対する割合で表します。これは、パフォーマンスが最も高い実験を特定するために使用されます。MAPE が低いほど、より良い結果が得られます。
+既存のトレーニング実行と現在のトレーニングステータスが表示されます。複数のトレーニングの実行が完了している場合、モデル評価表で異なるトレーニングの実行間で評価指標を比較できます。グラフの上にあるドロップダウンリストを使用して、評価指標を選択します。
 
-   ![](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
+絶対百分率誤差（MAPE）指標は、精度をエラーに対する割合で表します。これは、パフォーマンスが最も高い実験を特定するために使用されます。MAPE が低いほど、より良い結果が得られます。
 
-   「精度」指標は、*取得された*インスタンスの合計と比較した、関連するインスタンスの割合を示します。精度は、ランダムに選択した結果が正しい確率と見なすことができます。
-   ![](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+![トレーニングの実施の概要](../images/models-recipes/train-evaluate-ui/complete_training_run.png)
 
-   特定のトレーニングの実行をクリックして、その実行の詳細を表示します。これは、実行が完了する前でも実行できます。実行の詳細ページでは、トレーニングの実行に固有の他の評価指標、設定パラメーターおよびビジュアライゼーションを確認できます。また、実行の詳細を確認するアクティビティログをダウンロードすることもできます。ログは、失敗した実行で何が起きたかを確認するのに特に役立ちます。
-   ![](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+「精度」指標は、*取得された*&#x200B;インスタンスの合計と比較した、関連するインスタンスの割合を示します。精度は、ランダムに選択した結果が正しい確率と見なすことができます。
 
-3. ハイパーパラメーターはトレーニングできず、異なる組み合わせのハイパーパラメーターをテストすることでモデルを最適化する必要があります。最適化されたモデルに到達するまで、このモデルのトレーニングと評価のプロセスを繰り返します。
+![複数の実行の実行](../images/models-recipes/train-evaluate-ui/multiple_training_runs.png)
+
+特定のトレーニング実行を選択すると、評価ページを開いてその実行の詳細が表示されます。 これは、実行が完了する前でも実行できます。評価ページでは、トレーニングの実行に固有のその他の評価指標、設定パラメーターおよびビジュアライゼーションを確認できます。
+
+![プレビューログ](../images/models-recipes/train-evaluate-ui/evaluate_training.png)
+
+また、実行の詳細を確認するアクティビティログをダウンロードすることもできます。ログは、失敗した実行で何が起きたかを確認するのに特に役立ちます。
+
+![アクティビティログ](../images/models-recipes/train-evaluate-ui/activity_logs.png)
+
+ハイパーパラメーターはトレーニングできず、異なる組み合わせのハイパーパラメーターをテストすることでモデルを最適化する必要があります。最適化されたモデルに到達するまで、このモデルのトレーニングと評価のプロセスを繰り返します。
 
 ## 次の手順
 
