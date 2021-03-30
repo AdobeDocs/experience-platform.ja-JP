@@ -6,19 +6,15 @@ topic: 概要
 type: チュートリアル
 description: Adobe Experience PlatformUIを使用してSFTPソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
+source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '701'
 ht-degree: 6%
 
 ---
 
 
 # UIでのSFTPソース接続の作成
-
->[!NOTE]
->
->SFTPコネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 このチュートリアルでは、Adobe Experience PlatformUIを使用したSFTPソース接続の作成手順を説明します。
 
