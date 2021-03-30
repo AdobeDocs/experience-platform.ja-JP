@@ -2,23 +2,19 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；MySQL;mysql
 solution: Experience Platform
 title: Flow Service APIを使用したMySQLソース接続の作成
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: Flow Service APIを使用してAdobe Experience PlatformをMySQLに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 25%
+source-wordcount: '565'
+ht-degree: 26%
 
 ---
 
 
 # [!DNL Flow Service] APIを使用したMySQLソース接続の作成
-
->[!NOTE]
->
->MySQL Connectorはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
