@@ -5,19 +5,15 @@ title: SFTPソースコネクタの概要
 topic: 概要
 description: APIまたはユーザーインターフェイスを使用してSFTPサーバーをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 2%
+source-wordcount: '452'
+ht-degree: 3%
 
 ---
 
 
-# （ベータ版）SFTPコネクタ
-
->[!NOTE]
->
->SFTPコネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# SFTPコネクタ
 
 Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]などのクラウドプロバイダーにネイティブの接続を提供し、これらのシステムからデータを取り込むことができます。
 
