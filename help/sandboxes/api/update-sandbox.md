@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Sandboxの更新
 solution: Experience Platform
 title: APIでサンドボックスを更新する
-topic: developer guide
+topic: 開発ガイド
 description: 要求パスにサンドボックスの名前を含むPATCH要求を作成し、要求ペイロードに更新するプロパティを含めることで、サンドボックス内の1つ以上のフィールドを更新できます。
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '135'
 ht-degree: 60%
 
 ---
@@ -41,7 +41,6 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "title": "Development B"
