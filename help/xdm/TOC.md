@@ -6,9 +6,9 @@ breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 feature: スキーマ
 translation-type: tm+mt
-source-git-commit: 27cdb65c846293d7edce340e1cb5a360c0e40604
+source-git-commit: 4a67bcbd2a1458ae47ba64fe2647da442fdf4695
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '239'
 ht-degree: 57%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 57%
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [セグメント定義](./classes/segment-definition.md)
 * Mixin {#mixins}
    * プロファイルミックスイン{#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
