@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 8d4270d9168a570fcf92ba60d70dbc8e9af98136
+source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 50%
+source-wordcount: '436'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,35 @@ ht-degree: 50%
 
 Adobe Experience Platform の既存の機能のアップデート：
 
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] データエンジニアがエクスペリエンスデータモデル(XDM)との間でデータのマッピング、変換、検証を行えるようにします。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| `add_to_array` 関数 | パラメータとして配列をサポートする機能を更新。 |
+| `to_array` 関数 | オブジェクトをパラメーターとしてサポートする機能を更新しました。 |
+
+詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
+
+## セグメント化サービス {#segmentation}
+
+Adobe Experience Platformセグメントサービスは、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントは[!DNL Platform]上で一元的に構成および管理され、どのAdobeアプリケーションでも容易にアクセスできます。
+
+[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| （ベータ版）エッジセグメント | エッジセグメント化では、セグメントをリアルタイムで評価するので、同じページと次のページのパーソナライゼーションで使用できます。 エッジセグメントについて詳しくは、[セグメントUIの概要](../../segmentation/ui/overview.md)を参照してください。 |
+| （ベータ版）増分セグメント | バッチセグメントで評価される既存のセグメント定義の有効期限が1時間まで増加します。 |
+
+[!DNL Segmentation Service]について詳しくは、[セグメントの概要](../../segmentation/home.md)を参照してください。
 
 ## [!DNL Sources] {#sources}
 
