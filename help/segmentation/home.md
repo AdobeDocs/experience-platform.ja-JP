@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメントサービス；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント
 solution: Experience Platform
 title: Segmentation Serviceの概要
-topic: overview
+topic: 概要
 description: Adobe Experience Platformセグメントサービスと、それがプラットフォームエコシステムで果たす役割について説明します。
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 65%
+source-wordcount: '1449'
+ht-degree: 63%
 
 ---
 
 
-# [!DNL Segmentation Service]概要
+# [!DNL Segmentation Service] の概要
 
 Adobe Experience Platform[!DNL Segmentation Service]は、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスとRESTful APIを提供します。 これらのセグメントは[!DNL Platform]上で一元的に構成および管理され、どのAdobeソリューションでも容易にアクセスできます。
 
@@ -60,6 +60,12 @@ API を使用したセグメント定義の作成について詳しくは、[API
 継続的なデータ選択プロセスの代わりに、バッチセグメント化では、セグメント定義を介してすべてのプロファイルデータを一括して移動し、対応するオーディエンスを生成します。作成したセグメントは保存されて、使用時にエクスポートできるようになります。
 
 セグメントの評価方法については、[セグメント評価のチュートリアル](./tutorials/evaluate-a-segment.md)を参照してください。
+
+### エッジセグメント
+
+エッジセグメント化は、エッジ上でプラットフォーム内のセグメントを瞬時に評価する機能で、同じページや次のページのパーソナライズの使用例を実現します。
+
+エッジセグメント化について詳しくは、[APIドキュメント](./api/edge-segmentation.md)または[UIドキュメント](./ui/edge-segmentation.md)を参照してください。
 
 ## セグメント化の結果へのアクセス
 
