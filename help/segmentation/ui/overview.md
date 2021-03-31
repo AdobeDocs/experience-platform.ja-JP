@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ユーザーガイド；uiガイド；セグメント化uiガイド；セグメントビルダー；実現；既存；終了；
 solution: Experience Platform
 title: Segmentation Service UIガイド
-topic: ui guide
+topic: uiガイド
 description: Adobe Experience Platformセグメントサービスは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 24%
+source-wordcount: '1514'
+ht-degree: 23%
 
 ---
 
@@ -167,6 +167,12 @@ Understandeは、セグメントに該当するプロファイルのサンプリ
 >[!NOTE]
 >
 >ストリーミングセグメントを機能させるには、組織でスケジュール済みのセグメント化を有効にする必要があります。 スケジュールされたセグメント化を有効にする方法の詳細については、[このユーザーガイド](#scheduled-segmentation)のストリーミングセグメント化の節を参照してください。
+
+## エッジセグメント{#edge-segmentation}
+
+エッジセグメント化は、エッジ上でプラットフォーム内のセグメントを瞬時に評価する機能で、同じページや次のページのパーソナライズの使用例を実現します。
+
+エッジのセグメント化について詳しくは、『[エッジセグメント化UIガイド](./edge-segmentation.md)』を参照してください。
 
 ## ポリシー違反
 
