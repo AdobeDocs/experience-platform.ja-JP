@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 398e55f442a2c8ecab0c3d9315fbdd5c02946e45
 workflow-type: tm+mt
 source-wordcount: '1138'
 ht-degree: 34%
@@ -75,7 +75,7 @@ Adobe Experience Platformでは、様々なソースからデータを取り込�
 
 | 宛先 | 説明 |
 | ----------- | ----------- |
-| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | [!DNL LinkedIn Matched Audiences]接続を使用すると、[!DNL LinkedIn]ソーシャルプラットフォームでオーディエンスをアクティブにできます。 |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | [!DNL LinkedIn Matched Audiences]接続を使用すると、[!DNL LinkedIn]ソーシャルプラットフォームでオーディエンスをアクティブにできます。 |
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
