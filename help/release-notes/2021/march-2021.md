@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 523e09b9af19b1deb01a69be0673b9a17084b7e4
+source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '550'
 ht-degree: 42%
 
 ---
@@ -43,7 +43,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| （ベータ版）複数の実稼働用サンドボックス | IMS組織で複数の実稼働サンドボックスを作成および管理でき、特定の実稼働サンドボックスを特定の業種、ブランド、プロジェクトまたは地域に対して専用にすることができるようになりました。 詳しくは、UI](../../sandboxes/ui/user-guide.md)または[での実稼働用サンドボックスの作成に関するチュートリアル[を参照してください。API](../../sandboxes/api/create-sandbox.md)を使用する場合は、このチュートリアルを参照してください。 |
+| （ベータ版）複数の実稼働用サンドボックス | IMS組織で複数の実稼働サンドボックスを作成および管理でき、特定の実稼働サンドボックスを特定の業種、ブランド、プロジェクトまたは地域に対して専用にすることができるようになりました。 詳しくは、UI](../../sandboxes/ui/user-guide.md)または[でAPI](../../sandboxes/api/create-sandbox.md)を使用した実稼働用サンドボックス[の作成に関するチュートリアルを参照してください。 |
 
 サンドボックスについて詳しくは、「[サンドボックスの概要](../../sandboxes/home.md)」を参照してください。
 
