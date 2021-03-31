@@ -5,10 +5,10 @@ title: 'ストリーミングセグメント化によりほぼリアルタイム
 topic: 開発ガイド
 description: このドキュメントでは、Adobe Experience PlatformセグメントサービスAPIを使用したストリーミングセグメントの使用方法の例を示します。
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
 workflow-type: tm+mt
-source-wordcount: '1341'
-ht-degree: 46%
+source-wordcount: '1342'
+ht-degree: 44%
 
 ---
 
@@ -403,6 +403,6 @@ curl -X POST \
 
 ## 次の手順
 
-新しいセグメントと既存のセグメントの両方でストリーミングセグメント化を有効にし、スケジュールされたセグメント化を有効にしてベースラインを開発し、定期評価を実行したので、組織のセグメントの作成を開始できます。
+これで、ストリーミングセグメント用の新しいセグメントと既存のセグメントの両方を有効にし、スケジュール済みのセグメントを有効にしてベースラインを作成し、定期的に評価できるようになりました。
 
 Adobe Experience Platform ユーザーインターフェイスを使用して同様のアクションを実行し、セグメントを操作する方法については、『[セグメントビルダーユーザーガイド](../ui/segment-builder.md)』を参照してください。
