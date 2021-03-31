@@ -6,10 +6,10 @@ breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイムの顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 feature: セグメント
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5839ab36a7d8f992e92c7f9eff8c58459c4c3260
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 75%
+source-wordcount: '162'
+ht-degree: 74%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 75%
 - セグメント化 API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
+   - [エッジセグメント](api/edge-segmentation.md)
    - [ジョブの書き出し](api/export-jobs.md)
    - [プレビューと予測](api/previews-and-estimates.md)
    - [スケジュール](api/schedules.md)
@@ -32,6 +33,7 @@ ht-degree: 75%
    - [概要](ui/overview.md)
    - [セグメントダッシュボード](ui/segment-dashboard.md)
    - [セグメントビルダー](ui/segment-builder.md)
+   - [エッジセグメント](ui/edge-segmentation.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
    - [ストリーミングセグメント（ビデオ）](video/streaming-segmentation-overview.md)
    - [時間制約リファクタリング](ui/segment-refactoring.md)
