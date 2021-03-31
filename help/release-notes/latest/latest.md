@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
+source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 42%
+source-wordcount: '422'
+ht-degree: 36%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 42%
 Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -34,18 +33,6 @@ Adobe Experience Platform の既存の機能のアップデート：
 | `to_array` 関数 | オブジェクトをパラメーターとしてサポートする機能を更新しました。 |
 
 詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
-
-## [!DNL Sandboxes] {#sandboxes}
-
-Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。
-
-このニーズに対応するために、Experience Platform は、サンドボックスを提供します。サンドボックスでは、単一の Platform インスタンスを別々の仮想環境に分割することができ、デジタルエクスペリエンスアプリケーションの開発と発展に役立ちます。
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| （ベータ版）複数の実稼働用サンドボックス | IMS組織で複数の実稼働サンドボックスを作成および管理でき、特定の実稼働サンドボックスを特定の業種、ブランド、プロジェクトまたは地域に対して専用にすることができるようになりました。 詳しくは、UI](../../sandboxes/ui/user-guide.md)または[でAPI](../../sandboxes/api/create-sandbox.md)を使用した実稼働用サンドボックス[の作成に関するチュートリアルを参照してください。 |
-
-サンドボックスについて詳しくは、「[サンドボックスの概要](../../sandboxes/home.md)」を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
