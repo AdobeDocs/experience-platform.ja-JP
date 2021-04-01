@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience platform
 feature-set: Platform
 solution-title: Platform の概要
@@ -15,7 +15,7 @@ type: ドキュメント
 index: true
 role: アーキテクト，開発者，データ・アーキテクト，データ・エンジニア，ビジネス実践者，管理者，リーダー
 translation-type: tm+mt
-source-git-commit: 467edb785bd3c8609d2fc64183edd1d7b34d7e86
+source-git-commit: b3ab087a9cae13d2ff270916d88b8086a4122af6
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 82%
