@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；データ準備；データ準備；データの準備；データの準備；
 solution: Experience Platform
 title: データ準備の概要
-topic: overview
+topic: 概要
 description: このドキュメントでは、Adobe Experience Platform内でのデータ準備について説明します。
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 0%
+source-wordcount: '352'
+ht-degree: 1%
 
 ---
 
@@ -37,4 +37,4 @@ ht-degree: 0%
 
 ## 次の手順
 
-このドキュメントでは、Adobe Experience Platformのデータ準備の基本事項を説明します。 様々なマッピング関数の詳細については、[マッピング関数ガイド](./functions.md)を参照してください。 異なる日時文字列の詳細については、[日付文字列ガイド](./dates.md)を参照してください。
+このドキュメントでは、Adobe Experience Platformのデータ準備の基本事項を説明します。 様々なマッピング関数の詳細については、[マッピング関数ガイド](./functions.md)を参照してください。 異なる日時文字列の詳細については、[日付文字列ガイド](./dates.md)を参照してください。 データ準備APIの使用方法については、[データ準備開発ガイド](api/overview.md)を参照してください。
