@@ -6,10 +6,10 @@ description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
+source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 33%
+source-wordcount: '631'
+ht-degree: 32%
 
 ---
 
@@ -65,6 +65,10 @@ SFTP の宛先の場合は、ファイルが配信される「**[!UICONTROL フ�
 これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。残りのワークフローでデータをエクスポートする場合は、[セグメントをアクティブ化](#activate-segments)の節を読みます。
 
 ## マクロを使用してストレージーの場所にフォルダーを作成{#use-macros}
+
+>[!NOTE]
+>
+> この節で説明する機能は、現在[AmazonS3](./amazon-s3.md)の宛先でのみ利用できます。
 
 ストレージーの場所にあるセグメントファイルごとにカスタムフォルダーを作成するには、フォルダーパスの入力フィールドにマクロを使用します。 以下に示すように、入力フィールドの末尾にマクロを挿入します。
 
