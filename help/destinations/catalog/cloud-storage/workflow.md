@@ -4,14 +4,14 @@ title: クラウドストレージの保存先の作成
 type: チュートリアル
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
+source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 43%
+source-wordcount: '617'
+ht-degree: 33%
 
 ---
-
 
 # クラウドストレージの保存先の作成
 
@@ -35,9 +35,9 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->プラットフォームは、認証プロセスで資格情報の検証をサポートしており、クラウドストレージの場所に誤った資格情報を入力すると、エラーメッセージを表示します。 これにより、間違った資格情報を使用してワークフローを完了できなくします。
+>プラットフォームは、認証プロセスで資格情報の検証をサポートしており、クラウドストレージの場所に誤った資格情報を入力すると、エラーメッセージを表示します。 このため、間違った資格情報を使用すると、ワークフローを完了することができません。
 
-![クラウドストレージの宛先 - 認証手順](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![クラウドストレージの接続先に接続 — アカウント手順](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
 ## 認証手順{#authentication}
 
@@ -62,7 +62,35 @@ SFTP の宛先の場合は、ファイルが配信される「**[!UICONTROL フ�
 
 ![イベントハブクラウドのストレージ先への接続 — 認証手順](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
 
-これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。いずれの場合も、データをエクスポートする残りのワークフローについては、次の「[セグメントのアクティブ化](#activate-segments)」の節を参照してください。
+これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。残りのワークフローでデータをエクスポートする場合は、[セグメントをアクティブ化](#activate-segments)の節を読みます。
+
+## マクロを使用してストレージーの場所にフォルダーを作成{#use-macros}
+
+ストレージーの場所にあるセグメントファイルごとにカスタムフォルダーを作成するには、フォルダーパスの入力フィールドにマクロを使用します。 以下に示すように、入力フィールドの末尾にマクロを挿入します。
+
+![マクロを使用してストレージーにフォルダーを作成する方法](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+以下の例では、ID `25768be6-ebd5-45cc-8913-12fb3f348615`のサンプルセグメント`Luxury Audience`を参照しています。
+
+### マクロ1 - `%SEGMENT_NAME%`
+
+入力：`acme/campaigns/2021/%SEGMENT_NAME%`
+
+ストレージーの場所のフォルダーパス：`acme/campaigns/2021/Luxury Audience`
+
+### マクロ2 - `%SEGMENT_ID%`
+
+入力：`acme/campaigns/2021/%SEGMENT_ID%`
+
+ストレージーの場所のフォルダーパス：`acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+### マクロ3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+
+入力：`acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+
+ストレージーの場所のフォルダーパス：`acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## セグメントのアクティブ化 {#activate-segments}
 
