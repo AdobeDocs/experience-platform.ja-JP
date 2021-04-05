@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気の高いトピック；エッ
 solution: Experience Platform
 title: エッジセグメントUIガイド
 topic: uiガイド
-description: 'エッジセグメント化は、エッジ上でプラットフォーム内のセグメントを瞬時に評価する機能で、同じページや次のページのパーソナライズの使用例を実現します。 '
+description: エッジセグメント化は、エッジ上でプラットフォーム内のセグメントを瞬時に評価する機能で、同じページや次のページのパーソナライズの使用例を実現します。
+exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '339'
 ht-degree: 2%
 
 ---
-
 
 # エッジセグメントUIガイド
 
@@ -25,8 +25,8 @@ ht-degree: 2%
 | ---------- | ------- | ------- |
 | 受信ヒット | 時間制限のない、単一の着信イベントを参照するセグメント定義。 | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | プロファイルを参照する着信ヒット | 時間制限のない、1つの着信イベント、および1つ以上のプロファイル属性を参照するセグメント定義。 | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| 周波数クエリ | 特定の回数のイベントを参照するセグメント定義。 |  |
-| プロファイルを参照する頻度クエリ | あるイベントが一定回数発生したことを参照し、1つ以上のプロファイル属性を持つセグメント定義。 |  |
+| 周波数クエリ | 少なくとも一定回数発生するイベントを参照するセグメント定義。 |  |
+| プロファイルを参照する頻度クエリ | 少なくとも一定回数発生するイベントを参照し、1つ以上のプロファイル属性を持つセグメント定義。 |  |
 
 クエリが上記のクエリタイプのいずれかと一致する場合は、「edge ]**」トグルをオンにして**[!UICONTROL  Evaluate as streaming segment（ストリーミングセグメントとして評価）をオンにすることで、エッジセグメントを有効にできます。
 
