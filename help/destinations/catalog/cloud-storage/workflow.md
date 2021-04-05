@@ -6,7 +6,7 @@ description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
+source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 33%
@@ -72,22 +72,19 @@ SFTP の宛先の場合は、ファイルが配信される「**[!UICONTROL フ�
 
 以下の例では、ID `25768be6-ebd5-45cc-8913-12fb3f348615`のサンプルセグメント`Luxury Audience`を参照しています。
 
-### マクロ1 - `%SEGMENT_NAME%`
+**マクロ1:`%SEGMENT_NAME%`**
 
 入力：`acme/campaigns/2021/%SEGMENT_NAME%`
-
 ストレージーの場所のフォルダーパス：`acme/campaigns/2021/Luxury Audience`
 
-### マクロ2 - `%SEGMENT_ID%`
+**マクロ2:`%SEGMENT_ID%`**
 
 入力：`acme/campaigns/2021/%SEGMENT_ID%`
-
 ストレージーの場所のフォルダーパス：`acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
 
-### マクロ3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+**マクロ3:`%SEGMENT_NAME%/%SEGMENT_ID%`**
 
 入力：`acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
-
 ストレージーの場所のフォルダーパス：`acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
 
 
