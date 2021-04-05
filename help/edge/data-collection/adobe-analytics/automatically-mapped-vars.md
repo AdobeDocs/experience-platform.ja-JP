@@ -3,14 +3,14 @@ title: Adobe Experience PlatformWeb SDKで自動的にマッピングされたAd
 description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
 seo-description: Adobe Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数を学習します。
 keywords: adobe analytics；変数；analytics；自動マップ；自動マップ；
+exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '684'
 ht-degree: 35%
 
 ---
-
 
 # [!DNL Analytics]に自動的にマッピングされる変数
 
@@ -103,3 +103,5 @@ ht-degree: 35%
 | `web.webPageDetails.server` | `sv` | AppMeasurement クエリパラメーター USER_SERVER のマッピング。 |
 | `web.webPageDetails.siteSection` | `ch` | AppMeasurementクエリパラメーターのチャネルマッピング。 |
 | `web.webReferrer.URL` | `r` | AppMeasurement クエリパラメーター REFERRER のマッピング。 |
+
+{style=&quot;table-layout:auto&quot;}
