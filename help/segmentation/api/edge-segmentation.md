@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；エッジセグメント化；エッジセグメント化；ストリーミングエッジ；
 solution: Experience Platform
 title: 'APIを使用したエッジセグメント '
-topic: 開発ガイド
+topic: 開発者ガイド
 description: このドキュメントでは、Adobe Experience PlatformセグメントサービスAPIでエッジセグメントを使用する方法の例を示します。
+exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 0c4625ec0728c8c94b72e3e16e7ecf45ea2d0c0b
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 10%
 
 ---
-
 
 # エッジセグメント
 
@@ -39,8 +39,8 @@ ht-degree: 10%
 | ---------- | ------- |
 | 受信ヒット | 時間制限のない、単一の着信イベントを参照するセグメント定義。 |
 | プロファイルを参照する着信ヒット | 時間制限のない、1つの着信イベント、および1つ以上のプロファイル属性を参照するセグメント定義。 |
-| 周波数クエリ | 特定の回数のイベントを参照するセグメント定義。 |
-| プロファイルを参照する頻度クエリ | あるイベントが一定回数発生したことを参照し、1つ以上のプロファイル属性を持つセグメント定義。 |
+| 周波数クエリ | 少なくとも一定回数発生するイベントを参照するセグメント定義。 |
+| プロファイルを参照する頻度クエリ | 少なくとも一定回数発生するイベントを参照し、1つ以上のプロファイル属性を持つセグメント定義。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -214,7 +214,7 @@ curl -X POST \
 | -------- | ----------- |
 | `evaluationInfo.synchronous.enabled` | `evaluationInfo`オブジェクトは、セグメント定義が受ける評価のタイプを決定します。 エッジセグメントを使用するには、`evaluationInfo.synchronous.enabled`を`true`の値で設定します。 |
 
-**応答** 
+**応答**
 
 正常に完了すると、エッジセグメント化が有効な、新しく作成されたセグメント定義の詳細が返されます。
 
