@@ -1,18 +1,18 @@
 ---
-keywords: 編集アクティベーション、編集先
+keywords: 編集アクティベーション;編集先；
 title: アクティベーションフローの編集
 type: チュートリアル
 seo-title: アクティベーションフローの編集
 description: この記事の手順に従って、Adobe Experience Platformの既存のアクティベーションフローを編集します。
 seo-description: この記事の手順に従って、Adobe Experience Platformの既存のアクティベーションフローを編集します。
-exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 translation-type: tm+mt
-source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
+source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 1%
 
 ---
+
 
 # アクティベーションフローの編集{#edit-activation-flows}
 
