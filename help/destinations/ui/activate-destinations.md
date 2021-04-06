@@ -5,14 +5,14 @@ type: チュートリアル
 seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
+exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
+source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
 workflow-type: tm+mt
-source-wordcount: '2150'
-ht-degree: 15%
+source-wordcount: '2102'
+ht-degree: 13%
 
 ---
-
 
 # 宛先へのプロファイルとセグメントのアクティブ化
 
@@ -241,16 +241,9 @@ Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL
 
 ![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
 
-## アクティベーションの編集 {#edit-activation}
-
-Adobe Experience Platformの既存のアクティベーションフローを編集するには、次の手順に従います。
-
-1. 左側のナビゲーションバーで「**[!UICONTROL 宛先]**」を選択し、「**[!UICONTROL 参照]**」タブをクリックして、宛先名をクリックします。
-2. 右側のパネルで「**[!UICONTROL アクティベーションの編集]**」を選択し、宛先に送信するセグメントを変更します。
-
 ## セグメントのアクティベーションが成功したことを確認します。 {#verify-activation}
 
-### 電子メールマーケティングの宛先およびクラウドストレージの宛先 {#esp-and-cloud-storage}
+### 電子メールマーケティングの宛先およびクラウドストレージの宛先  {#esp-and-cloud-storage}
 
 電子メールマーケティングのリンク先とクラウドストレージのリンク先の場合、Adobe Experience Platformは、指定したストレージーの場所にタブ区切りの`.csv`ファイルまたは`.txt`ファイルを作成します。 新しいファイルはストレージの場所に毎日作成されます。デフォルトのファイル形式は次のとおりです。
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
