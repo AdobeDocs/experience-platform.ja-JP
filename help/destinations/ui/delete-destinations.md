@@ -1,16 +1,16 @@
 ---
-keywords: 削除先；宛先の削除方法
+keywords: 宛先の削除
 title: 宛先の削除
 type: チュートリアル
 description: このチュートリアルでは、Adobe Experience PlatformUIの既存のリンク先を削除する手順をリストします
+exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 translation-type: tm+mt
-source-git-commit: c7f01ce5667ad92e95f1576ff466b2a13338b54b
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 1%
+source-wordcount: '401'
+ht-degree: 2%
 
 ---
-
 
 # 宛先を削除{#delete-destinations}
 
