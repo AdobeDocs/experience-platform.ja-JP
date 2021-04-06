@@ -1,16 +1,16 @@
 ---
 keywords: プラットフォーム；宛先；宛先ワークスペース；ワークスペース；ui；宛先ui;catalog；宛先カタログ；
 title: 宛先ワークスペース
-description: 宛先ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の 4 つのセクションで構成されます。これらは、以下の節で説明します。
+description: 宛先ワークスペースは、カタログ、参照、アカウントおよびシステム表示の4つのセクションで構成されます。 以下の節で説明します。
 seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択し、宛先ワークスペースにアクセスします。
+exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
+source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
 workflow-type: tm+mt
-source-wordcount: '1018'
-ht-degree: 32%
+source-wordcount: '810'
+ht-degree: 22%
 
 ---
-
 
 # 宛先ワークスペース {#destinations-workspace}
 
@@ -20,17 +20,17 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 
 [!UICONTROL 宛先]ワークスペースは、以下の節で説明する4つのセクション[!UICONTROL カタログ]、[!UICONTROL 参照]、[!UICONTROL アカウント]、[!UICONTROL システム表示]で構成されます。
 
-![宛先 — 概要](../assets/ui/workspace/destinations-overview.png)
+![宛先 — 概要](../assets/ui/workspace/destinations-workspace.png)
 
 ## [!UICONTROL カタログ] {#catalog}
 
-「**[!UICONTROL カタログ]**」タブには、プラットフォームで使用可能なすべての宛先のリストが表示されます。この宛先には、データを送信できます。
+「**[!UICONTROL カタログ]**」タブには、[!DNL Platform]で使用可能なすべての宛先のリストが表示されます。この宛先には、データを送信できます。
 
-プラットフォームユーザーインターフェイスは、宛先カタログページにいくつかの検索およびフィルターオプションを提供します。
+[!DNL Platform]ユーザーインターフェイスは、宛先カタログページに検索およびフィルターの複数のオプションを提供します。
 
 * ページの検索機能を使用して、特定の行き先を見つけます。
 * [!UICONTROL カテゴリ]コントロールを使用して宛先をフィルターします。
-* [!UICONTROL すべての宛先]と[!UICONTROL 宛先]を切り替えます。 「**[!UICONTROL すべての宛先]**」が選択されている場合、使用可能なプラットフォームの宛先がすべて表示されます。 **[!UICONTROL 宛先]**&#x200B;を選択した場合は、接続を確立した宛先のみが表示されます。
+* [!UICONTROL すべての宛先]と[!UICONTROL 宛先]を切り替えます。 「**[!UICONTROL すべての宛先]**」を選択すると、使用可能な[!DNL Platform]宛先がすべて表示されます。 「**[!UICONTROL 宛先]**」を選択すると、接続を確立した宛先のみが表示されます。
 * 表示&#x200B;**[!UICONTROL 接続]**&#x200B;または&#x200B;**[!UICONTROL 拡張子]**&#x200B;を選択します。 2つのカテゴリの違いについては、「[宛先の種類とカテゴリ](../destination-types.md)」を参照してください。
 
 ![リンク先のフィルタリングと検索デモ](../assets/ui/workspace/destinations-search-and-filter.gif)
@@ -49,7 +49,7 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 
 ![宛先カードの制御](../assets/ui/workspace/destination-card-options.png)
 
-カタログ内で目的のカードを選択し、右側のパネルを開きます。 ここで、宛先の説明を確認できます。 右側のレールには、上の表で説明したのと同じコントロール、宛先の説明、宛先のカテゴリとタイプの表示が表示されます。
+カタログ内で目的のカードを選択し、右側のパネルを開きます。 ここで、宛先の説明を確認できます。 右側のレールには、上の表で説明したのと同じコントロールが表示されます。このコントロールには、宛先の説明、宛先のカテゴリとタイプが示されます。
 
 ![宛先カタログオプション](../assets/ui/workspace/destination-right-rail.png)
 
@@ -57,44 +57,16 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 
 ## [!UICONTROL アカウント] {#accounts}
 
-「**[!UICONTROL アカウント]**」タブでは、様々な宛先との接続を確立した場合の詳細を確認できます。各宛先について取得できるすべての情報については、次の表を参照してください。
-
->[!TIP]
->
->**[!UICONTROL プラットフォーム]**&#x200B;列の追加![データボタン](../assets/ui/workspace/add-data-symbol.png)ボタンを使用して、そのアカウントの新しい宛先接続を作成します。
-
-![「アカウント」タブ](../assets/ui/workspace/edit-account-destinations.png)
-
-| 要素 | 説明 |
----------|----------
-| [!UICONTROL プラットフォーム] | 接続を設定した宛先。 |
-| [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3 または FTP</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3 クラウドストレージの宛先：アクセスキー </li><li>SFTP クラウドストレージの宛先：SFTP の基本認証</li></ul> |
-| [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](../catalog/email-marketing/overview.md#connect-destination)で選択したユーザー名。 |
-| [!UICONTROL 宛先] | 宛先に対して作成された基本情報に接続された、一意に成功した宛先フローの数を表します。 |
-| [!UICONTROL 認証済み] | この宛先への接続が承認された日付。 |
-
-{style=&quot;table-layout:auto&quot;}
-
-また、アカウント情報を編集または更新できます。 **[!UICONTROL プラットフォーム]**&#x200B;列の![アカウントの編集ボタン](../assets/ui/workspace/pencil-icon.png)を選択し、アカウントの情報を編集します。
-
-`OAuth2`接続の種類を使用するアカウントの場合は、「**[!UICONTROL OAuthに再接続]**」を選択して、アカウントの資格情報を更新できます。
-
-![OAUTHイメージ](../assets/ui/workspace/reconnect-oauth.png)
-
-`Access Key`または`ConnectionString`の接続タイプを使用するアカウントの場合は、アクセスID、秘密鍵、接続文字列などの情報を含むアカウント認証情報を編集できます。
-
-![アカウント情報の画像](../assets/ui/workspace/edit-account-details.png)
-
-アカウントの詳細の編集が終了したら、「**[!UICONTROL 保存]**」を選択して更新を完了します。
+「**[!UICONTROL アカウント]**」タブには、様々な宛先で確立した接続の詳細が表示され、既存の接続の詳細を更新できます。 詳しい手順については、[アカウントの更新](update-accounts.md)を参照してください。
 
 ## [!UICONTROL 参照] {#browse}
 
-「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。**[!UICONTROL 「有効]**」の切り替えがオンになっている宛先は有効に設定され、逆も同様に設定されます。 **[!UICONTROL セグメント]**/**[!UICONTROL 参照]**&#x200B;を選択し、検査するセグメントを選択して、データの流れる宛先を表示することもできます。 「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
+「**[!UICONTROL 参照]**」タブには、接続を確立した宛先が表示されます。**[!UICONTROL 有効/無効]**&#x200B;の切り替えをオンにした宛先は、それぞれアクティブまたは非アクティブに設定します。 **[!UICONTROL セグメント]**/**[!UICONTROL 参照]**&#x200B;を選択し、検査するセグメントを選択して、データの流れる宛先を表示することもできます。 「参照」タブで各宛先に対して提供されるすべての情報については、次の表を参照してください。
 
 >[!TIP]
 >
-> * **[!UICONTROL 追加名前]**&#x200B;列の![セグメントボタン](../assets/ui/workspace/add-data-symbol.png)ボタンを使用して、その宛先に対する追加のセグメントをアクティブにします。
-> * **[!UICONTROL 名前]**&#x200B;列の![宛先を削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)を使用して、宛先への既存の接続を削除します。
+> * **[!UICONTROL 追加名前]**&#x200B;列の![セグメントボタン](../assets/ui/workspace/add-data-symbol.png)ボタンを使用して、[他のセグメントをその宛先に対して](activate-destinations.md)アクティブにします。
+> * **[!UICONTROL 名前]**&#x200B;列の![宛先を削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)を使用して、宛先への既存の接続を[削除](delete-destinations.md)します。
 
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
@@ -103,7 +75,7 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 ---------|----------
 | 名前 | この宛先へのアクティベーションフローに指定した名前。同じ列には、次の2つのコントロールが含まれます。と[!UICONTROL 宛先]を削除します。 |
 | [!UICONTROL 最後のフロー実行ステータス] | 最後のデータフロー実行のステータス。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
-| [!UICONTROL 最終フロー実行日] | 最後のデータフローが実行された日時。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
+| [!UICONTROL 最終フロー実行日] | 最後のデータフロー実行が発生した日時。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
 | [!UICONTROL 宛先] | アクティベーションフローに対して選択した宛先プラットフォームです。 |
 | [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3、FTP、または[!DNL Azure Blob]を指定できます。</li><li>リアルタイム広告の宛先の場合：サーバー間.</li><li>ストリーミング先の場合：[!DNL Azure Event Hubs]または[!DNL Amazon Kinesis]を指定できます。</li></ul> |
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
