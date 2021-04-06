@@ -4,7 +4,7 @@ title: 宛先アカウントの更新
 type: チュートリアル
 description: このチュートリアルでは、Adobe Experience PlatformUIで宛先アカウントを更新する手順をリストします
 translation-type: tm+mt
-source-git-commit: 6fd980b486c4a330f9188065bac55c624af584a1
+source-git-commit: e4afbdd6ff8f45ea8d5506f0228f0a80b44eee51
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 36%
@@ -21,7 +21,7 @@ ht-degree: 36%
 ![「アカウント」タブ](../assets/ui/update-accounts/destination-accounts.png)
 
 | 要素 | 説明 |
----------|----------
+|---|---|
 | [!UICONTROL プラットフォーム] | 接続を設定した宛先。 |
 | [!UICONTROL 接続タイプ] | ストレージバケットまたは宛先への接続タイプを表します。 <ul><li>電子メールマーケティングの宛先の場合：S3 または FTP</li><li>リアルタイム広告の宛先の場合：サーバー間</li><li>Amazon S3 クラウドストレージの宛先：アクセスキー </li><li>SFTP クラウドストレージの宛先：SFTP の基本認証</li></ul> |
 | [!UICONTROL ユーザー名] | [「宛先の接続」ウィザード](../catalog/email-marketing/overview.md#connect-destination)で選択したユーザー名。 |
