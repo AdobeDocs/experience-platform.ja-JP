@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気の高いトピック；API;AP
 solution: Experience Platform
 title: スキーマレジストリAPIの使い始めに
 description: このドキュメントでは、スキーマレジストリAPIを呼び出す前に知っておく必要があるコア概念の概要を説明します。
-topic: developer guide
+topic: 開発者ガイド
+exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 48%
+source-wordcount: '1365'
+ht-degree: 39%
 
 ---
-
 
 # [!DNL Schema Registry] API使用の手引き
 
@@ -22,7 +22,7 @@ ht-degree: 48%
 開発者ガイドを使用するには、Adobe Experience Platformの次のコンポーネントについて作業的に理解する必要があります。
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
-   * [Basics of schema composition](../schema/composition.md)：XDM スキーマの基本的な構成要素について説明しています。
+   * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの基本的な構成要素について説明します。
 * [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
 
@@ -207,21 +207,38 @@ URI をより REST に適したものにするために、スキーマでは、`
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | ID のリストのみを返します。これは、リソースを一覧表示する際に最も使用される値です。 |
 | `application/vnd.adobe.xed+json` | 元の `$ref` および `allOf` を含むフル JSON スキーマのリストを返します。これは、全リソースのリストを返す際に使用されます。 |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | `$ref` と `allOf` を含む未処理の XDM です。タイトルと説明があります。 |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` 属性と解決された `allOf`。タイトルと説明があります。 |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | `$ref` と `allOf` を含む未処理の XDM です。タイトルや説明はありません。 |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` 属性と解決された `allOf`。タイトルや説明はありません。 |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` 属性と解決された `allOf`。記述子が含まれます。 |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` と `allOf` を含む未処理の XDM です。タイトルと説明があります。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 属性と解決された `allOf`。タイトルと説明があります。 |
+| `application/vnd.adobe.xed-notext+json; version=1` | `$ref` と `allOf` を含む未処理の XDM です。タイトルや説明はありません。 |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` 属性と解決された `allOf`。タイトルや説明はありません。 |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` 属性と解決された `allOf`。記述子が含まれます。 |
 
 >[!NOTE]
 >
->メジャーバージョン（1、2、3など）のみを指定した場合、レジストリは最新のマイナーバージョン(例：.1、.2、.3)が自動的に更新されます。
+>プラットフォームは、現在、各スキーマ(`1`)に対して1つのメジャーバージョンのみをサポートしています。 したがって、スキーマの最新のマイナーバージョンを返すためには、ルックアップ要求を実行する際に`version`の値が常に`1`である必要があります。 スキーマのバージョン付けの詳細については、次のサブセクションを参照してください。
+
+### スキーマのバージョン管理{#versioning}
+
+スキーマバージョンは、スキーマレジストリAPIの`Accept`ヘッダーによって参照され、ダウンストリームプラットフォームサービスAPIペイロードの`schemaRef.contentType`プロパティで参照されます。
+
+現在、プラットフォームは各スキーマに対して1つのメジャーバージョン(`1`)のみをサポートしています。 [スキーマ展開](../schema/composition.md#evolution)の規則に従えば、スキーマの更新は、それぞれ非破壊的でなければなりません。つまり、スキーマの新しいマイナーバージョン（`1.2`、`1.3`など） は、常に以前のマイナーバージョンとの下位互換性があります。 したがって、`version=1`を指定すると、スキーマレジストリは常にスキーマの&#x200B;**最新の**&#x200B;メジャーバージョン`1`を返します。つまり、以前のマイナーバージョンは返されません。
+
+>[!NOTE]
+>
+>スキーマの展開に関する非破壊的な要件は、スキーマがデータセットから参照され、次のいずれかの場合にのみ適用されます。
+>
+>* データがデータセットに取り込まれました。
+>* データセットは、リアルタイム顧客プロファイルでの使用が可能になっています（データが取り込まれていない場合でも可）。
+
+>
+>
+上記の条件の1つを満たすデータセットにスキーマが関連付けられていない場合は、そのデータセットに対して変更を加えることができます。 ただし、いずれの場合も`version`コンポーネントは`1`に残ります。
 
 ## XDM フィールドの制約とベストプラクティス
 
 スキーマのフィールドは、その `properties` オブジェクト内にリストされます。各フィールド自体はオブジェクトで、フィールドに格納できるデータを記述および制約する属性を含みます。
 
-API でのフィールドの種類の定義について詳しくは、このガイドの[付録](appendix.md)を参照してください。この付録には、最も一般的に使用されるデータタイプ用のコードサンプルとオプションの制約が示されています。
+APIでのフィールドタイプの定義について詳しくは、このガイドの[フィールド制約ガイド](../schema/field-constraints.md)を参照してください。最も一般的に使用されるデータタイプのコードサンプルやオプション制約などがあります。
 
 以下のサンプルフィールドは、適切に形式が設定された XDM フィールドを表しています。サンプルコードの下に、命名時の制約とベストプラクティスが示されています。これらのベストプラクティスは、同様の属性を含むその他のリソースを定義する際にも適用できます。
 
