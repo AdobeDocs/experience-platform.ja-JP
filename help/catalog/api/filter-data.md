@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；フィルタ；フィルタ；フィルタデータ；フィルタデータ；フィルタデータ；日付範囲
 solution: Experience Platform
 title: クエリパラメーターを使用したカタログデータのフィルター
-topic: developer guide
+topic: 開発者ガイド
 description: カタログサービス API を使用すると、応答データをリクエストパラメーターを使用してフィルタリングするクエリができます。カタログについてのベストプラクティスの一部は、すべての API 呼び出しでフィルターを使用することです。これらの呼び出しは、API の負荷を軽減し、全体的なパフォーマンスを改善するのに役立ちます。
+exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 86%
+source-wordcount: '2123'
+ht-degree: 85%
 
 ---
-
 
 # クエリパラメーターを使用して[!DNL Catalog]データをフィルター
 
@@ -155,6 +155,10 @@ curl -X GET \
 * リクエストされたプロパティが 1 つもオブジェクトに含まれていない場合は、空のオブジェクトとして表示されます（`Dataset2`）。
 * データセットは、リクエストされたプロパティがそのプロパティを含むが値がない場合、そのプロパティを空のオブジェクトとして返すことがあります（`Dataset3`）。
 * それ以外の場合は、リクエストされたすべてのプロパティの完全な値がデータセットに表示されます（`Dataset4`）。
+
+>[!NOTE]
+>
+>各データセットの`schemaRef`プロパティには、バージョン番号がスキーマの最新のマイナーバージョンを示しています。 詳しくは、XDM APIガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。
 
 ## 応答リストのオフセット開始インデックス
 
