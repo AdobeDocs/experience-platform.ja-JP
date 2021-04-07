@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気の高いトピック；API;XD
 solution: Experience Platform
 title: 和集合APIエンドポイント
 description: スキーマレジストリAPIの/和集合エンドポイントを使用すると、エクスペリエンスアプリケーションのXDM和集合スキーマをプログラムで管理できます。
-topic: developer guide
+topic: 開発者ガイド
+exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 48%
+source-wordcount: '902'
+ht-degree: 47%
 
 ---
-
 
 # 和集合エンドポイント
 
@@ -126,8 +126,8 @@ curl -X GET \
 
 | Accept | 説明 |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | `$ref` と `allOf` を含む未処理の和集合。タイトルと説明が含まれます。 |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` 属性と `allOf` が解決されます。タイトルと説明が含まれます。 |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` と `allOf` を含む未処理の和集合。タイトルと説明が含まれます。 |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` 属性と `allOf` が解決されます。タイトルと説明が含まれます。 |
 
 **応答**
 
@@ -213,7 +213,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースのリストを表示する際に推奨されるヘッダーです。 (制限：300) |
 | `application/vnd.adobe.xed+json` | 各リソースの完全なJSONスキーマを返します。元の`$ref`と`allOf`が含まれます。 (制限：300) |
 
-**応答** 
+**応答**
 
 「成功した」応答は、和集合のメンバーシップが有効になっている、指定したクラスに属するスキーマのみを含む、フィルターされたリストを返します。 複数のクエリーパラメーターを使用する場合は、AND が想定されることに注意してください。
 
