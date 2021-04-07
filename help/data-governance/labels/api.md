@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ラベルapi；ポリシーサービスapi
 solution: Experience Platform
 title: 'APIを使用したデータ使用ラベルの管理 '
-topic: developer guide
+topic: 開発者ガイド
 description: Dataset Service APIを使用すると、データセットの使用ラベルを適用および編集できます。 これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理するCatalog Service APIとは別のものです。
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 8%
+source-wordcount: '1147'
+ht-degree: 7%
 
 ---
 
@@ -51,7 +51,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、システムから取得されたカスタムラベルのリストが返されます。 上記のリクエスト例は`/labels/custom`に対して行われたので、以下の応答はカスタムラベルのみを示しています。
 
@@ -137,7 +137,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、カスタムラベルの詳細が返されます。
 
@@ -203,7 +203,7 @@ curl -X PUT \
 | `friendlyName` | ラベルのわかりやすい名前。表示目的で使用されます。 |
 | `description` | （オプション）詳細なコンテキストを提供するラベルの説明です。 |
 
-**応答** 
+**応答**
 
 正常な応答は、カスタムラベルの詳細を返します。既存のラベルが更新された場合はHTTPコード200(OK)、新しいラベルが作成された場合は201（作成済み）を返します。
 
@@ -280,7 +280,11 @@ curl -X GET \
 | プロパティ | 説明 |
 | --- | --- |
 | `labels` | データセットに適用されたデータ使用量ラベルのリスト。 |
-| `optionalLabels` | データセット内の個々のフィールドのリストで、データ使用ラベルが適用されています。 |
+| `optionalLabels` | データセット内の個々のフィールドのリストで、データ使用ラベルが適用されています。 次のサブプロパティが必要です：<br/><br/>`option`:フィールドの[!DNL Experience Data Model] (XDM)属性を含むオブジェクト。 次の3つのプロパティが必要です。<ul><li>`id`:フィールドに関連付けられているスキーマのURI `$id` 値。</li><li>`contentType`:スキーマの形式とバージョンを示します。詳しくは、XDM APIガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。</li><li>`schemaPath`:問題のスキーマプロパティへのパス。 [JSONポインター](../../landing/api-fundamentals.md#json-pointer) 構文で記述されています。</li></ul>`labels`:フィールドに追加するデータ使用ラベルのリストです。 |
+
+- id:データセットの基となるXDMスキーマのURI $id値。
+- contentType:スキーマの形式とバージョンを示します。 詳しくは、XDM APIガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。
+- schemaPath:問題のスキーマプロパティへのパス。[JSONポインター](../../landing/api-fundamentals.md#json-pointer)構文で記述されています。
 
 ## データセット{#apply-dataset-labels}にラベルを適用
 
@@ -327,9 +331,9 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `labels` | データセットに追加するデータ使用ラベルのリストです。 |
-| `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。<br/><br/>`option`:フィールドの[!DNL Experience Data Model] (XDM)属性を含むオブジェクト。 次の3つのプロパティが必要です。<ul><li>id</code>:フィールドに関連付けられているスキーマのURI $id</code>値。</li><li>contentType</code>:スキーマのコンテンツタイプとバージョン番号。 XDMルックアップ要求に対しては、有効な<a href="../../xdm/api/getting-started.md#accept">Accept headers</a>のいずれかの形式で行う必要があります。</li><li>schemaPath</code>:データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`:フィールドに追加するデータ使用ラベルのリストです。 |
+| `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各項目は、次のプロパティを持つ必要があります：<br/><br/>`option`:フィールドの[!DNL Experience Data Model] (XDM)属性を含むオブジェクト。 次の3つのプロパティが必要です。<ul><li>`id`:フィールドに関連付けられているスキーマのURI `$id` 値。</li><li>`contentType`:スキーマの形式とバージョンを示します。詳しくは、XDM APIガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。</li><li>`schemaPath`:問題のスキーマプロパティへのパス。 [JSONポインター](../../landing/api-fundamentals.md#json-pointer) 構文で記述されています。</li></ul>`labels`:フィールドに追加するデータ使用ラベルのリストです。 |
 
-**応答** 
+**応答**
 
 正常に完了すると、データセットに追加されたラベルが返されます。
 
