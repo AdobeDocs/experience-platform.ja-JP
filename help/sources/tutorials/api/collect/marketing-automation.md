@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；マーケティング自動化システム；マーケティング自動化データの収集
 solution: Experience Platform
 title: ソースコネクタとAPIを使用したマーケティング自動化データの収集
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタとAPIを使用してそれらをAdobe Experience Platformに取り込む手順を説明します。
+exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 20%
+source-wordcount: '1578'
+ht-degree: 19%
 
 ---
-
 
 # ソースコネクターとAPIを使用したマーケティング自動化データの収集
 
@@ -108,7 +108,7 @@ curl -X POST \
 | `params.path` | アクセスするソースファイルのパス。 |
 | `connectionSpec.id` | マーケティング自動化システムの接続仕様ID。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 この値は、後の手順でターゲット接続を作成する際に必要となるので保存します。
 
@@ -165,7 +165,7 @@ curl -X POST \
 }'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を返します。 このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となるので、保存してください。
 
@@ -259,8 +259,9 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `schemaRef.id` | ターゲットXDMスキーマの`$id`。 |
+| `schemaRef.contentType` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full-notext+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 |
 
-**応答** 
+**応答**
 
 正常に完了すると、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列が返されます。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順でターゲットデータセット接続とデータフローを作成する際に必要なターゲットデータセットIDを保存します。
 
@@ -298,7 +299,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/da411446eec78026c28d9fafd9e406e304b771d55b07b91b",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -314,6 +315,7 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `data.schema.id` | ターゲットXDMスキーマの`$id`。 |
+| `data.schema.version` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 |
 | `params.dataSetId` | ターゲットデータセットのID。 |
 | `connectionSpec.id` | Data Lakeへの接続に使用する接続仕様ID。 このIDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
@@ -382,7 +384,7 @@ curl -X POST \
 | --- | --- |
 | `xdmSchema` | ターゲットXDMスキーマのID。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 この値は、後の手順でデータフローを作成する際に必要となるので保存します。
 
@@ -728,7 +730,7 @@ curl -X POST \
 | `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。`once`、`minute`、`hour`、`day`、または`week`です。 |
 | `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度が`once`として設定されている場合は間隔は不要で、他の頻度の値は`15`以上にする必要があります。 |
 
-**応答** 
+**応答**
 
 正常な応答が返されると、新たに作成されたデータフローのID(`id`)が返されます。
 
