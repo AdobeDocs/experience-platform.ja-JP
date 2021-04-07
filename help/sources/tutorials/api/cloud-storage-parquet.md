@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データソース接続
 solution: Experience Platform
 title: Flow Service APIを使用したサードパーティのクラウドストレージシステムからのパーケットデータの取り込み
-topic: overview
-type: Tutorial
+topic: 概要
+type: チュートリアル
 description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムからApache Parketデータを取り込む手順を順を追って説明します。
+exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 20%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して、サードパーティのクラウドストレージシステムからParketデータを取り込む
 
@@ -31,7 +31,7 @@ ht-degree: 20%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -116,7 +116,7 @@ curl -X POST \
 }'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を返します。 このIDは、次の手順でソース接続を作成する際に必要です。
 
@@ -230,7 +230,7 @@ curl -X POST \
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e15530faf88aeb52d9ca5c5671a059f44f1a42ea7f5fdb80",
                 "id": "",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -246,7 +246,7 @@ curl -X POST \
 | `data.schema.id` | 前の手順でターゲットxdmスキーマを取得した場合は(`$id`)。 |
 | `params.path` | ソースファイルのパス。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 この値は、後の手順でターゲット接続を作成する際に必要となるので保存します。
 
@@ -301,7 +301,7 @@ curl -X POST \
 | -------- | ----------- |
 | `schemaRef.id` | ターゲットXDMスキーマのID。 |
 
-**応答** 
+**応答**
 
 正常に完了すると、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列が返されます。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順でターゲットデータセット接続とデータフローを作成する際に必要なターゲットデータセットIDを保存します。
 
@@ -342,7 +342,7 @@ curl -X POST \
             "format": "parquet_xdm",
             "schema": {
                 "id": ""https://ns.adobe.com/{TENANT_ID}/schemas/e15530faf88aeb52d9ca5c5671a059f44f1a42ea7f5fdb80"",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -358,7 +358,7 @@ curl -X POST \
 | `params.dataSetId` | ターゲットデータセットのID。 |
 | `connectionSpec.id` | クラウドストレージの接続指定ID。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新しいターゲット接続の一意の識別子(`id`)が返されます。 この値は、後の手順で必要になるため保存します。
 
@@ -419,7 +419,7 @@ curl -X POST \
 | `sourceConnectionIds` | 前の手順で取得したソース接続ID。 |
 | `targetConnectionIds` | 前の手順で取得したターゲット接続ID。 |
 
-**応答** 
+**応答**
 
 正常な応答が返されると、新たに作成されたデータフローのID(`id`)が返されます。
 
