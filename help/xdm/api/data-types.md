@@ -3,14 +3,14 @@ keywords: Experience Platform；ホーム；人気の高いトピック；API;XD
 solution: Experience Platform
 title: データ型APIエンドポイント
 description: スキーマレジストリAPIの/datatypesエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDMデータ型をプログラムで管理できます。
+exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 13%
 
 ---
-
 
 # データ型エンドポイント
 
@@ -60,7 +60,7 @@ curl -X GET \
 | `application/vnd.adobe.xed-id+json` | 各リソースの短い概要を返します。 リソースのリストを表示する際に推奨されるヘッダーです。 (制限：300) |
 | `application/vnd.adobe.xed+json` | 各リソースの完全なJSONデータ型を返し、元の`$ref`と`allOf`が含まれます。 (制限：300) |
 
-**応答** 
+**応答**
 
 上記のリクエストでは`application/vnd.adobe.xed-id+json` `Accept`ヘッダーが使用されていたので、応答には各データタイプの`title`、`$id`、`meta:altId`、`version`属性のみが含まれます。 他の`Accept`ヘッダー(`application/vnd.adobe.xed+json`)を使用すると、各データ型のすべての属性が返されます。 回答で必要な情報に応じて、適切な`Accept`ヘッダーを選択します。
 
@@ -127,13 +127,13 @@ curl -X GET \
 
 | `Accept` ヘッダー | 説明 |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | `$ref` および `allOf` で生、タイトルと説明を含む |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` および `allOf` を解決、タイトルと説明を含む |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | `$ref` および `allOf` で生、タイトルや説明なし |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` および `allOf` で解決、タイトルや説明なし |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` および `allOf` で解決、説明を含む |
+| `application/vnd.adobe.xed+json; version=1` | `$ref` および `allOf` で生、タイトルと説明を含む |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` および `allOf` を解決、タイトルと説明を含む |
+| `application/vnd.adobe.xed-notext+json; version=1` | `$ref` および `allOf` で生、タイトルや説明なし |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` および `allOf` で解決、タイトルや説明なし |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` および `allOf` で解決、説明を含む |
 
-**応答** 
+**応答**
 
 正常に応答すると、データタイプの詳細が返されます。 返されるフィールドは、リクエストで送信される`Accept`ヘッダーによって異なります。 異なる`Accept`ヘッダーを試して、回答を比較し、使用事例に最適なヘッダーを判断します。
 
@@ -390,7 +390,7 @@ curl -X PUT \
       }'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、更新されたデータ型の詳細が返されます。
 
