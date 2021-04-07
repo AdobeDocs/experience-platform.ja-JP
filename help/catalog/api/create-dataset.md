@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データセット；データセット；データセットの作成；データセットの作成；データセットの有効化
 solution: Experience Platform
 title: APIでのデータセットの作成
-topic: developer guide
+topic: 開発者ガイド
 description: このドキュメントでは、Catalog Service APIでデータセットオブジェクトを作成する方法について説明します。
+exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 53%
+source-wordcount: '256'
+ht-degree: 48%
 
 ---
-
 
 # APIでのデータセットの作成
 
@@ -57,6 +57,7 @@ curl -X POST \
 | --- | --- |
 | `name` | 作成するデータセットの名前。 |
 | `schemaRef.id` | データセットの基になる XDM スキーマの URI `$id` 値。 |
+| `schemaRef.contentType` | スキーマの形式とバージョンを示します。 詳しくは、XDM APIガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。 |
 
 >[!NOTE]
 >
