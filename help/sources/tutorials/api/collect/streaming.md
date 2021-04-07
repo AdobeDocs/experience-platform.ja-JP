@@ -5,14 +5,14 @@ title: ソースコネクタとAPIを使用したストリーミングデータ�
 topic: 概要
 type: チュートリアル
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してプラットフォームにストリーミングデータを取り込む手順を説明します。
+exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 20%
+source-wordcount: '1325'
+ht-degree: 19%
 
 ---
-
 
 # ソースコネクタとAPIを使用したストリーミングデータの収集
 
@@ -42,7 +42,7 @@ ht-degree: 20%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -113,7 +113,7 @@ curl -X POST \
 | `connectionId` | ストリーミングコネクタの一意の接続ID。 |
 | `connectionSpec.id` | 特定のストリーミングコネクタに関連付けられている接続仕様ID。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 このIDは、後の手順でデータフローを作成する際に必要です。
 
@@ -170,7 +170,7 @@ curl -X POST \
     }'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を返します。 このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となります。
 
@@ -257,7 +257,7 @@ curl -X POST \
     -d '{
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
-            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.1"
+            "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         },
         "fileDescription": {
             "format": "parquet"
@@ -277,8 +277,9 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `schemaRef.id` | ターゲットXDMスキーマのID。 |
+| `schemaRef.contentType` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full-notext+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 |
 
-**応答** 
+**応答**
 
 正常に完了すると、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列が返されます。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。ターゲットデータセットIDは、後の手順でターゲット接続とデータフローを作成する際に必要となります。
 
@@ -331,7 +332,7 @@ curl -X POST \
 | `params.dataSetId` | ターゲットデータセットのID。 |
 | `connectionSpec.id` | Data Lakeへの接続に使用する接続仕様ID。 このIDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新しいターゲット接続の一意の識別子(`id`)が返されます。 このIDは、後の手順で必要になります。
 
@@ -387,7 +388,7 @@ curl -X POST \
 | -------- | ----------- |
 | `xdmSchema` | ターゲットXDMスキーマの`$id`。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 このIDは、後の手順でデータフローを作成する際に必要です。
 
@@ -551,7 +552,7 @@ curl -X POST \
 | `targetConnectionIds` | 前の手順で取得した[ターゲット接続ID](#target-connection)。 |
 | `transformations.params.mappingId` | 前の手順で取得した[マッピングID](#mapping)。 |
 
-**応答** 
+**応答**
 
 正常な応答が返されると、新たに作成されたデータフローのID(`id`)が返されます。
 
