@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データセット；データセット；データセットの作成；データセットの作成
 solution: Experience Platform
 title: APIを使用したデータセットの作成
-topic: datasets
+topic: データセット
 description: このドキュメントでは、Adobe Experience Platform API を使用してデータセットを作成し、ファイルを使用してデータセットを設定する一般的な手順を説明します。
+exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1268'
-ht-degree: 82%
+source-wordcount: '1306'
+ht-degree: 81%
 
 ---
-
 
 # API を使用したデータセットの作成
 
@@ -29,7 +29,7 @@ ht-degree: 82%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -212,6 +212,11 @@ curl -X POST \
     }
 }'
 ```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `schemaRef.id` | データセットの基になる XDM スキーマの URI `$id` 値。 |
+| `schemaRef.contentType` | スキーマの形式とバージョンを示します。 詳しくは、XDM APIガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。 |
 
 >[!NOTE]
 >
