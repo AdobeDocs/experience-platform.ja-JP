@@ -5,14 +5,14 @@ title: ストリーミング取り込みAPIを使用したストリームレコ�
 topic: チュートリアル
 type: チュートリアル
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
+exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1166'
 ht-degree: 69%
 
 ---
-
 
 # ストリーミング取り込みAPIを使用したストリームレコードデータ
 
@@ -32,7 +32,7 @@ ht-degree: 69%
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -245,7 +245,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "Dataset description",
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID},
-        "contentType": "application/vnd.adobe.xed-full+json;version=1.0"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
@@ -264,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
-## ストリーミング接続へのレコードデータの取り込み {#ingest-data}
+## ストリーミング接続へのレコードデータの取り込み  {#ingest-data}
 
 データセットとストリーミング接続が確立された状態で、XDM形式のJSONレコードを取り込み、レコードデータを[!DNL Platform]に取り込むことができます。
 
@@ -297,7 +297,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -306,7 +306,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity": {
@@ -336,7 +336,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
@@ -346,7 +346,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     }
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、HTTPステータス200が返され、新たにストリーミングされた[!DNL Profile]の詳細が返されます。
 
@@ -456,5 +456,3 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name
 このドキュメントを読むと、ストリーミング接続を使用して[!DNL Platform]にレコードデータを取り込む方法が理解できます。 異なる値でさらに呼び出しを実行し、更新された値を取得してみてください。さらに、[!DNL Platform] UIを使用して、取り込んだデータを開始で監視できます。 詳しくは、『[データ取得監視ガイド](../quality/monitor-data-ingestion.md)』を参照してください。
 
 一般的なストリーミング取得の詳細については、『[ストリーミング取得の概要](../streaming-ingestion/overview.md)』を参照してください。
-
-
