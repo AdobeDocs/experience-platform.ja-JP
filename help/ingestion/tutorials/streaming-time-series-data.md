@@ -5,14 +5,14 @@ title: ストリーミング取り込みAPIを使用した時系列データの�
 topic: チュートリアル
 type: チュートリアル
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
+exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 66%
 
 ---
-
 
 # ストリーミング取り込みAPIを使用した時系列データのストリーム再生
 
@@ -32,7 +32,7 @@ ht-degree: 66%
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -112,7 +112,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.{SCHEMA_ID}",
     "meta:resourceType": "schemas",
-    "version": "{SCHEMA_VERSION}",
+    "version": "1",
     "type": "object",
     "title": "{SCHEMA_NAME}",
     "description": "{SCHEMA_DESCRIPTION}",
@@ -271,7 +271,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "{DATASET_DESCRIPTION}",
     "schemaRef": {
         "id": "{SCHEMA_REF_ID}",
-        "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "fileDescription": {
         "persisted": true,
@@ -329,7 +329,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "{SCHEMA_REF_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -338,7 +338,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity":{
@@ -391,7 +391,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
@@ -401,7 +401,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     }
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、HTTPステータス200が返され、新たにストリーミングされた[!DNL Profile]の詳細が返されます。
 
