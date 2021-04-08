@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ストリーミングセグメント；セグメント化；セグメント化サービス；セグメント化サービス；uiガイド；
 solution: Experience Platform
 title: ストリーミングセグメントUIガイド
-topic: ui guide
+topic: uiガイド
 description: Adobe Experience Platformでのセグメント化のストリーミングにより、データの豊富性に重点を置き、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性が軽減され、データがプラットフォームに到着するとセグメントの認定が行われるようになりました。 この機能を使用すると、ほとんどのセグメントルールを、データがプラットフォームに渡される際に評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメント化ジョブを実行せずに最新の状態に維持されます。
+exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt
-source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
-
 
 # ストリーミングセグメント化
 
@@ -39,9 +39,11 @@ ht-degree: 1%
 | ---------- | ------- | ------- |
 | 受信ヒット | 時間制限のない、単一の着信イベントを参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | 相対時間枠内での着信ヒット | 単一の着信イベントを参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| 時間枠のある次のヒット | 時間枠を持つ1つの着信イベントを参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 |  |
 | プロファイルを参照する着信ヒット | 時間制限のない、1つの着信イベント、および1つ以上のプロファイル属性を参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | 相対的な時間枠内のプロファイルを参照する着信ヒット | 1つの受信イベントと1つ以上のプロファイル属性を参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| セグメント | 1つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | プロファイルを参照する複数のイベント | 過去24時間以内に複数のイベント&#x200B;**を参照するセグメント定義には、1つ以上のプロファイル属性が含まれます。**（オプション） | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 次のシナリオでは、セグメント定義はストリーミングセグメントに対して&#x200B;**有効になりません**。
