@@ -2,32 +2,37 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ECID;ecid
 solution: Experience Platform
 title: ECIDの概要
-topic: overview
+topic: 概要
 description: Experience CloudID(ECID)は、ID管理へのアクセスを提供するクライアント側モジュールで、主に3つの機能を提供します。
+exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 441c9b520bf163f989ad6a8a683174957e08a6f2
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 76%
+source-wordcount: '287'
+ht-degree: 10%
 
 ---
 
-
 # ECID の概要
 
-[!DNL Experience Cloud Identity Service] (ECID)は、ID管理へのアクセスを提供するクライアント側のモジュールで、主に次の3つの機能を提供します。
+Experience CloudID(ECID)は、Adobe Experience PlatformおよびAdobe Experience Cloudのアプリケーションで使用される共有ID名前空間です。
 
-- 各訪問者の識別
-- パートナーとの同期の提供
-- オフラインまたは他の ID とグラフに接続する一対のリンクのフィード
+ECIDは、顧客IDの基盤を提供します。 [[!DNL Identity Service]](./home.md)のコンテキストでは、ECIDはデバイスのプライマリIDとして、またIDグラフのベースノードとして使用されます。
 
-オンライン訪問者を識別するには、サイトまたはモバイルアプリに ECID を実装する必要があります。ECID は、Adobe Experience Platform のすべてのソリューションでユーザーを識別するユニバーサルで永続的な ID を提供します。
+ECIDを使用すると、次のことが可能です。
 
-Web サイトの実装を使用する場合は、[ここ](https://docs.adobe.com/content/help/ja-JP/id-service/using/home.html)でリソースを参照してください。
+* アイデンティティに対する人追加間中心のコンテキスト。デバイスとは異なり、実際の人々に対してマーケティングを行うことができます。
+* パートナーとの同期を提供する。
+* オフラインまたは他の ID とグラフに接続する一対のリンクのフィード.
 
-モバイルアプリを使用している場合は、ECID を使用して[アプリとモバイル Web の間で訪問者をトラック](https://docs.adobe.com/content/help/ja-JP/mobile-services/ios/sdk-reference-ios/hybrid-app.html)する方法を確認します。
+オンラインユーザーを識別するには、サイトまたはモバイルアプリにECIDを実装する必要があります。ECIDは、Adobe Experience Cloudにあるすべてのアプリケーションで訪問者を識別する汎用の永続的なIDを提供します。
 
-[Adobe Launch](https://docs.adobe.com/content/help/ja-JP/launch/using/overview.html) を使用すると、これらのツールの導入と管理が簡単になります。
+## 次の手順とその他のリソース
 
-また、GDPR への準拠に ECID を使用する方法については、[Privacy Service のドキュメント](../privacy-service/identity-data.md)も参照してください。
+プラットフォームやExperience Cloudの異なるアプリケーション間でのECIDの理解に関する詳細なリソースは、次のドキュメントに記載されています。
 
+* Webサイト実装でECIDを使用するには、[Experience CloudIDサービス](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en)のドキュメントを参照してください。
+* ECIDのアプリやモバイルWebコンテンツでの使用方法を確認するには、[アプリとモバイルWebの間の訪問者追跡に関するドキュメント](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en#sdk-reference-ios)を参照してください。
+* [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=en)を使うと、これらのツールの導入は簡単で管理も簡単です。
+* ECIDを使用してGDPRのようなプライバシー規制への準拠を容易にする方法については、[Privacy Serviceドキュメント](../privacy-service/identity-data.md)を参照してください。
+* プラットフォームのコンテキストを含むECIDについて詳しくは、[IDサービスの概要](./home.md)および[ID名前空間の概要](./namespaces.md)を参照してください。
