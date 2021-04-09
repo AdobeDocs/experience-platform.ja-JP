@@ -6,18 +6,18 @@ topic: 開発者ガイド
 description: このドキュメントでは、Adobe Experience PlatformセグメントサービスAPIでエッジセグメントを使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
+source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 10%
+source-wordcount: '653'
+ht-degree: 11%
 
 ---
 
-# エッジセグメント
+# エッジセグメント（ベータ）
 
 >[!NOTE]
 >
->次のドキュメントでは、APIを使用したエッジセグメント化の実行方法を示します。 UIを使用したエッジセグメント化の実行について詳しくは、[エッジセグメント化UIガイド](../ui/edge-segmentation.md)を参照してください。
+>次のドキュメントでは、APIを使用したエッジセグメント化の実行方法を示します。 UIを使用したエッジセグメント化の実行について詳しくは、[エッジセグメント化UIガイド](../ui/edge-segmentation.md)を参照してください。 また、エッジセグメントは現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
 エッジセグメント化は、エッジ上でAdobe Experience Platformのセグメントを瞬時に評価する機能で、同じページや次のページのパーソナライゼーションの使用例を実現します。
 
