@@ -6,7 +6,7 @@ topic: 概要
 description: このドキュメントでは、データ準備で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 21782ee74adfe97fa0a88f499d01393155691b29
+source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
 workflow-type: tm+mt
 source-wordcount: '3793'
 ht-degree: 18%
@@ -42,7 +42,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | 渡された文字列を連結します。 | <ul><li>文字列：連結する文字列です。</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | explode | 正規表現に基づいて文字列を分割し、部分の配列を返します。文字列を分割するregexをオプションで含めることができます。 デフォルトでは、分割は「,」に解決されます。 次の区切り文字&#x200B;**は、`\`でエスケープする必要があります。**`+, ?, ^, |, ., [, (, {, ), *, $, \`複数の文字を区切り文字として含める場合、区切り文字は複数文字の区切り文字として扱われます。 | <ul><li>文字列：**必須**&#x200B;分割する必要のある文字列。</li><li>REGEX:*オプション*&#x200B;文字列の分割に使用できる正規式。</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
 | instr | サブ文字列の場所/インデックスを返します。 | <ul><li>入力：**必須**&#x200B;検索する文字列。</li><li>SUBSTRING:**必須**&#x200B;文字列内で検索されるサブ文字列。</li><li>開始位置：*オプション*&#x200B;文字列内の開始の位置。</li><li>オカレンス：*オプション*&#x200B;開始位置から探すn番目の値。 デフォルトの重み付けは 1 です。 </li></ul> | instr(INPUT, SUBSTRING,開始_位置，オカレンス) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
@@ -67,7 +67,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 ### 正規式関数
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | 正規式に基づいて、入力文字列からグループを抽出します。 | <ul><li>文字列：**必須**&#x200B;グループの抽出元の文字列。</li><li>REGEX:**必須**&#x200B;グループに一致させる正規式。</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+), [^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | matches_regex | 文字列が入力された正規式と一致するかどうかを確認します。 | <ul><li>文字列：**必須**&#x200B;チェックする文字列は、正規式と一致します。</li><li>REGEX:**必須**&#x200B;比較する正規式。</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+), [^,]*,([^,]+)&quot;) | true |
 
@@ -80,7 +80,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | sha1 | 入力を受け取り、Secure Hash Algorithm 1(SHA-1)を使用してハッシュ値を生成します。 | <ul><li>入力：**必須**&#x200B;ハッシュするプレーンテキスト。</li><li>CHARSET:*オプション*&#x200B;文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | 入力を受け取り、Secure Hash Algorithm 256(SHA-256)を使用してハッシュ値を生成します。 | <ul><li>入力：**必須**&#x200B;ハッシュするプレーンテキスト。</li><li>CHARSET:*オプション*&#x200B;文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B;ee6a39af698154a83a586ee270a0d372104 |
 | sha512 | 入力を受け取り、Secure Hash Algorithm 512(SHA-512)を使用してハッシュ値を生成します。 | <ul><li>入力：**必須**&#x200B;ハッシュするプレーンテキスト。</li><li>CHARSET:*オプション*&#x200B;文字セットの名前。 使用できる値は、「UTF-8」、「UTF-16」、「ISO-8859-1」および「US-ASCII」です。</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cd7b367dd078a89 a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
@@ -96,7 +96,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | get_url_protocol | 渡されたURLからプロトコルを返します。 入力が無効な場合は、nullを返します。 | <ul><li>URL:**必須**&#x200B;プロトコルの抽出元URL。</li></ul> | get_url_&#x200B;protocol(URL) | get_url_protocol(&quot;https://platform &#x200B; .adobe.com/home&quot;) | https |
 | get_url_host | 渡されたURLのホストを返します。 入力が無効な場合は、nullを返します。 | <ul><li>URL:**必須**&#x200B;ホストの抽出元URL。</li></ul> | get_url_&#x200B;host(URL) | get_url_&#x200B;host(&quot;https://platform &#x200B; .adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | 渡されたURLのポートを返します。 入力が無効な場合は、nullを返します。 | <ul><li>URL:**必須**&#x200B;ポートの抽出元URL。</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
@@ -112,7 +112,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。`date`関数の詳細については、[日付関数ガイド](./dates.md)を参照してください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | now | 現在の時刻を取得します。 |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 現在の Unix 時間を取得します。 |  | timestamp() | timestamp() | 1571850624571 |
 | format | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付：**必須** ZonedDateTimeオブジェクトとしての、フォーマットする入力日。</li><li>形式：**必須**&#x200B;日付の変更先の形式。</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
@@ -136,7 +136,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | 入力のサイズを返します。 | <ul><li>入力：**必須**&#x200B;サイズを調べようとしているオブジェクト。</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | オブジェクトが空かどうかをチェックします。 | <ul><li>入力：**必須**&#x200B;確認しようとしているオブジェクトが空です。</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | arrays_to_object | オブジェクトのリストを作成します。 | <ul><li>入力：**必須**&#x200B;キーと配列のペアのグループ。</li></ul> | arrays_to_object(INPUT) | 必要なサンプル | 必要なサンプル |
@@ -154,7 +154,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | 渡された配列の最初のnull以外のオブジェクトを返します。 | <ul><li>入力：**必須** NULLでない最初のオブジェクトを探す配列。</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | 渡された配列の最初の要素を取得します。 | <ul><li>入力：**必須**&#x200B;最初の要素を探す配列。</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | 渡された配列の最後の要素を取得します。 | <ul><li>入力：**必須**&#x200B;最後の要素を探す配列。</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
@@ -171,7 +171,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decode | キーと、キーと値のペアのリストが配列としてフラット化されている場合、この関数は、キーが見つかった場合は値を返し、デフォルト値が配列に存在する場合はデフォルト値を返します。 | <ul><li>キー：**必須**&#x200B;一致するキー。</li><li>OPTIONS:**必須**&#x200B;キーと値のペアのフラットな配列。 オプションで、デフォルト値を末尾に配置できます。</li></ul> | decode(KEY,OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | 渡されたstateCodeが「ca」、「California」の場合。<br>指定されたstateCodeが「pa」、「Pennsylvania」の場合。<br>stateCodeが次の値と一致しない場合は、「N/A」となります。 |
 | iif | 指定されたブール式を評価し、結果に基づいて指定された値を返します。 | <ul><li>式:**必須**&#x200B;評価するブール値式。</li><li>TRUE_VALUE:**必須**&#x200B;式がtrueと評価された場合に返される値。</li><li>FALSE_VALUE:**必須**&#x200B;式の評価結果がfalseの場合に返される値。</li></ul> | iif(式, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
@@ -184,7 +184,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | 指定された引数の最小値を返します。自然な順序を使用します。 | <ul><li>OPTIONS:**必須**&#x200B;互いに比較できる1つ以上のオブジェクト。</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | 指定された引数の最大値を返します。自然な順序を使用します。 | <ul><li>OPTIONS:**必須**&#x200B;互いに比較できる1つ以上のオブジェクト。</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
@@ -197,7 +197,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | to_bigint | 文字列をBigIntegerに変換します。 | <ul><li>文字列：**必須** BigIntegerに変換する文字列。</li></ul> | to_bigint(STRING) | to_bigint&#x200B;(&quot;1000000.34&quot;) | 1000000.34 |
 | to_decimal | 文字列を重複に変換します。 | <ul><li>文字列：**必須**&#x200B;重複に変換する文字列。</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
 | to_float | 文字列を浮動小数点数型(Float)に変換します。 | <ul><li>文字列：**必須**&#x200B;浮動小数点型に変換する文字列。</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
@@ -212,7 +212,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | 渡された文字列からJSONコンテンツを逆シリアル化します。 | <ul><li>文字列：**必須**&#x200B;デシリアライズするJSON文字列。</li></ul> | json_to_object &#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;:&quot;Doe&quot;}}) | JSONを表すオブジェクト。 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -224,7 +224,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | 擬似ランダム ID を生成します。 |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -236,7 +236,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
--------- | ----------- | ---------- | -------| ---------- | -------------
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | ua_os_name | ユーザーエージェント文字列からオペレーティングシステム名を抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_name&#x200B;(USER_AGENT) | ua_os_name&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | ユーザーエージェント文字列からオペレーティングシステムのメジャーバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
 | ua_os_version | ユーザーエージェント文字列からオペレーティングシステムのバージョンを抽出します。 | <ul><li>USER_AGENT:**必須**&#x200B;ユーザーエージェント文字列。</li></ul> | ua_os_version&#x200B;(USER_AGENT) | ua_os_version&#x200B;(&quot;Mozilla/5.0 (iPhone;CPU iPhone OS 5_1_1（Mac OS Xなど）AppleWebKit/534.46（KHTML、Geckoなど）バージョン/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
