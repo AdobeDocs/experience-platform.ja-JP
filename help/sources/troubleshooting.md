@@ -4,14 +4,14 @@ solution: Experience Platform
 title: ソースのトラブルシューティング
 topic: トラブルシューティング
 description: このドキュメントでは、Adobe Experience Platformのソースに関するよくある質問に対する回答を示します。
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '663'
 ht-degree: 1%
 
 ---
-
 
 # （ベータ版）ソースのトラブルシューティングガイド
 
@@ -57,7 +57,7 @@ ht-degree: 1%
 
 ### サポートされるのはどのような日付と時間形式ですか？
 
-ソースは、データを取り込みながら、様々なdatetime形式をサポートしています。 サポートされる日時形式について詳しくは、[data prep date functions guide](../data-prep/dates.md)を参照してください。
+ソースは、データを取り込みながら、様々なdatetime形式をサポートしています。 サポートされる日時形式について詳しくは、データ準備ドキュメントの[データ形式処理ガイド](../data-prep/data-handling.md#dates)の日付セクションを参照してください。
 
 ### 配列をCSV、JSON、Parketファイルでフォーマットする方法を教えてください。
 
