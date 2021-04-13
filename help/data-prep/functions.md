@@ -6,9 +6,9 @@ topic: 概要
 description: このドキュメントでは、データ準備で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3798'
 ht-degree: 18%
 
 ---
@@ -109,7 +109,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 >[!NOTE]
 >
->テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。`date`関数の詳細については、[日付関数ガイド](./dates.md)を参照してください。
+>テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。`date`関数の詳細については、[データ形式処理ガイド](./data-handling.md#dates)の日付セクションを参照してください。
 
 | 関数 | 説明 | パラメーター | 構文 | 式 | サンプル出力 |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
