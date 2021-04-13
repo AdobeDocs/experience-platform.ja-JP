@@ -4,10 +4,11 @@ solution: Experience Platform
 title: データ準備の概要
 topic: 概要
 description: このドキュメントでは、Adobe Experience Platform内でのデータ準備について説明します。
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '389'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ ht-degree: 1%
 
 あるスキーマを別のマッピングに変換する一連のマッピングは、まとめてマッピングセットと呼ばれます。 各データ・フローの一部として、単一のマッピング・セットが作成されます。 マッピングセットは、データフローの一部であり、データフローの一部として作成、編集および監視されます。
 
+## データ形式の処理
+
+データ準備では、プラットフォームに取り込まれる様々な形式のデータを確実に処理できます。 データ準備での様々なデータ型の処理方法の詳細については、[データ形式処理の概要](./data-handling.md)を参照してください。
+
 ## 次の手順
 
-このドキュメントでは、Adobe Experience Platformのデータ準備の基本事項を説明します。 様々なマッピング関数の詳細については、[マッピング関数ガイド](./functions.md)を参照してください。 異なる日時文字列の詳細については、[日付文字列ガイド](./dates.md)を参照してください。 データ準備APIの使用方法については、[データ準備開発ガイド](api/overview.md)を参照してください。
+このドキュメントでは、Adobe Experience Platformのデータ準備の基本事項を説明します。 様々なマッピング関数の詳細については、[マッピング関数ガイド](./functions.md)を参照してください。 データ準備での様々なデータ型の処理方法の詳細については、[データ形式処理ガイド](./data-handling.md#dates)を参照してください。 データ準備APIの使用方法については、[データ準備開発ガイド](api/overview.md)を参照してください。
