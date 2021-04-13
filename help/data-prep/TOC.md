@@ -5,10 +5,10 @@ user-guide-title: データ準備ガイド
 user-guide-description: Adobe Experience Platform に取り込むデータを準備します。
 feature: データ管理、データ取り込み
 translation-type: tm+mt
-source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 52%
+source-wordcount: '43'
+ht-degree: 51%
 
 ---
 
@@ -22,5 +22,5 @@ ht-degree: 52%
    - [はじめに](./api/getting-started.md)
    - [関数](./api/functions.md)
    - [マッピングセット](./api/mapping-set.md)
-- [Datetimeオブジェクト](dates.md)
+- [データ形式の処理](./data-handling.md)
 - [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
