@@ -3,14 +3,14 @@ keywords: Experience Platform；ホーム；人気のあるトピック；クラ
 solution: Experience Platform
 title: ソースコネクタとAPIを使用したストリーミングデータの収集
 topic: 概要
-type: チュートリアル
+type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してプラットフォームにストリーミングデータを取り込む手順を説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: a63208dcdbe6851262e567a89c00b160dffa0e41
 workflow-type: tm+mt
-source-wordcount: '1325'
-ht-degree: 19%
+source-wordcount: '1499'
+ht-degree: 22%
 
 ---
 
@@ -119,10 +119,89 @@ curl -X POST \
 
 ```json
 {
-    "id": "2abd97c4-91bb-4c93-bd97-c491bbfc933d",
+    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+
+## ストリーミングエンドポイントURLの取得{#get-endpoint}
+
+ソース接続を作成した状態で、ストリーミングエンドポイントのURLを取得できるようになりました。
+
+**API 形式**
+
+```http
+GET /flowservice/sourceConnections/{CONNECTION_ID}
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | 前に作成したsourceConnectionsの`id`値。 |
+
+**リクエスト**
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnections/e96d6135-4b50-446e-922c-6dd66672b6b2 \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**応答**
+
+リクエストが成功した場合は、リクエストした接続についての詳細情報と HTTP ステータス 200 が返されます。ストリーミングエンドポイントURLは、接続時に自動的に作成され、`inletUrl`値を使用して取得できます。
+
+```json
+{
+    "items": [
+        {
+            "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
+            "createdAt": 1617743929826,
+            "updatedAt": 1617743930363,
+            "createdBy": "{CREATED_BY}",
+            "updatedBy": "{UPDATED_BY}",
+            "createdClient": "{USER_ID}",
+            "updatedClient": "{USER_ID}",
+            "sandboxId": "d537df80-c5d7-11e9-aafb-87c71c35cac8",
+            "sandboxName": "prod",
+            "imsOrgId": "{IMS_ORG}",
+            "name": "Test source connector for streaming data",
+            "description": "Test source connector for streaming data",
+            "baseConnectionId": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
+            "state": "enabled",
+            "data": {
+                "format": "delimited",
+                "schema": null,
+                "properties": null
+            },
+            "connectionSpec": {
+                "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                "version": "1.0"
+            },
+            "params": {
+                "sourceId": "Streaming raw data",
+                "inletUrl": "https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
+                "inletId": "2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b",
+                "dataType": "raw",
+                "name": "hgtest"
+            },
+            "version": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
+            "etag": "\"d6006bc1-0000-0200-0000-606cd03a0000\"",
+            "inheritedAttributes": {
+                "baseConnection": {
+                    "id": "f6aa6c58-3c3d-4c59-aa6c-583c3d6c599c",
+                    "connectionSpec": {
+                        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                        "version": "1.0"
+                    }
+                }
+            }
+        }
+    ]
+}
+```
+
 
 ## ターゲットXDMスキーマの作成{#target-schema}
 
@@ -528,7 +607,7 @@ curl -X POST \
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "2abd97c4-91bb-4c93-bd97-c491bbfc933d"
+            "e96d6135-4b50-446e-922c-6dd66672b6b2"
         ],
         "targetConnectionIds": [
             "723222e2-6ab9-4b0b-b222-e26ab9bb0bc2"
@@ -563,9 +642,65 @@ curl -X POST \
 }
 ```
 
+## 取り込む生データをポストする{#ingest-data}
+
+フローを作成したら、JSONメッセージを以前に作成したストリーミングエンドポイントに送信できます。
+
+**API 形式**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| パラメーター | 説明 |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | 新しく作成されたストリーミング接続の `id` 値。 |
+
+**リクエスト**
+
+この例のリクエストでは、生データを、以前に作成されたストリーミングエンドポイントに取り込みます。
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**応答**
+
+成功した応答は、新たに取り込まれた情報の詳細とともにHTTPステータス200を返す。
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | 以前に作成したストリーミング接続の ID。 |
+| `xactionId` | 送信したレコードに対してサーバー側で生成された一意の ID です。この ID は、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
+| `receivedTimeMs`：リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポック）。 |
+
 ## 次の手順
 
-このチュートリアルに従って、データフローを作成し、ストリーミングコネクタからストリーミングデータを収集しました。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリーム[!DNL Platform]サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従って、データフローを作成し、ストリーミングコネクタからストリーミングデータを収集します。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリーム[!DNL Platform]サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
 - [Data Science ワークスペースの概要](../../../../data-science-workspace/home.md)
