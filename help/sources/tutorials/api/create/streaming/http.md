@@ -3,13 +3,14 @@ keywords: Experience Platform；ホーム；人気のあるトピック；スト
 solution: Experience Platform
 title: APIを使用したストリーミング接続の作成
 topic: チュートリアル
-type: チュートリアル
+type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
+exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 69abc982c4a820b850096d83761552ca526bca29
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 42%
+source-wordcount: '884'
+ht-degree: 41%
 
 ---
 
@@ -31,7 +32,7 @@ ht-degree: 42%
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -104,7 +105,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.name` | 作成するストリーミング接続の名前。 |
 | `connectionSpec.id` | ストリーミング接続の接続仕様`id`。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)を含む)と共に、HTTPステータス201が返されます。
 
@@ -170,7 +171,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.authenticationRequired` | 作成したストリーミング接続を指定するパラメーター |
 | `connectionSpec.id` | ストリーミング接続の接続仕様`id`。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)を含む)と共に、HTTPステータス201が返されます。
 
