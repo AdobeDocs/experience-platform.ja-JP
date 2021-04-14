@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；インテリジェントサービス；人気の高いトピック；インテリジェントサービス；インテリジェントサービス
 solution: Experience Platform, Intelligent Services
 title: インテリジェントサービスで使用するデータの準備
-topic: Intelligent Services
-description: 'インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。 '
+topic: インテリジェントサービス
+description: インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。
+exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
 workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 1%
+source-wordcount: '2033'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL Intelligent Services]で使用するデータを準備する
 
@@ -75,7 +75,28 @@ CEEミックスインにはいくつかの重要なフィールドがあり、[!
 * &quot;mcid&quot;(Adobe Audience ManagerID用)
 * &quot;aid&quot;(Adobe AnalyticsID用)
 
-どのフィールドを主IDとして使用すべきかがわからない場合は、Adobeコンサルティングサービスに問い合わせて、最適なソリューションを決定してください。
+どのフィールドを主IDとして使用すべきかがわからない場合は、Adobeコンサルティングサービスに問い合わせて、最適なソリューションを決定してください。 プライマリIDが設定されていない場合、インテリジェントサービスアプリケーションは次のデフォルト動作を使用します。
+
+| デフォルト | Attribution AI | 顧客 AI |
+| --- | --- | --- |
+| ID列 | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| 名前空間 | AAID | ECID |
+
+プライマリIDを設定するには、「**[!UICONTROL スキーマ]**」タブからスキーマに移動し、スキーマ名のハイパーリンクを選択して&#x200B;**[!DNL Schema Editor]**&#x200B;を開きます。
+
+![スキーマに移動](./images/data-preparation/navigate_schema.png)
+
+次に、主要IDにするフィールドに移動し、それを選択します。 **[!UICONTROL フィールドのプロパティ]**&#x200B;メニューがそのフィールド用に開きます。
+
+![フィールドを選択](./images/data-preparation/find_field.png)
+
+**[!UICONTROL フィールドプロパティ]**&#x200B;メニューで、**[!UICONTROL 「ID」]**&#x200B;チェックボックスが見つかるまで下にスクロールします。 チェックボックスをオンにすると、選択したIDを&#x200B;**[!UICONTROL プライマリID]**&#x200B;として設定するオプションが表示されます。 このボックスも選択します。
+
+![チェックボックスを選択](./images/data-preparation/set_primary_identity.png)
+
+次に、ドロップダウン内の事前定義済みの名前空間のリストから&#x200B;**[!UICONTROL ID名前空間]**&#x200B;を指定する必要があります。 この例では、Adobe Audience ManagerID `mcid.id`が使用されているため、ECID名前空間が選択されています。 **[!UICONTROL 「]**&#x200B;適用」を選択して更新を確認し、右上隅の「**[!UICONTROL 保存]**」を選択してスキーマに変更を保存します。
+
+![変更を保存する](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -104,7 +125,7 @@ CEEミックスインにはいくつかの重要なフィールドがあり、[!
 
 `xdm:channel`に必要な各サブフィールドの詳細については、[エクスペリエンスチャネルスキーマ](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md)仕様を参照してください。 一部のマッピングの例については、](#example-channels)の下の[テーブルを参照してください。
 
-##### チャネルマッピングの例{#example-channels}
+#### チャネルマッピングの例{#example-channels}
 
 次の表に、`xdm:channel`スキーマにマッピングされたマーケティングチャネルの例を示します。
 
