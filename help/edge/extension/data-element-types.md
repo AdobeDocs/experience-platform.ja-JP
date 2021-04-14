@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience PlatformWeb SDK Extensionのデータ要素の種類
 description: Adobe Experience Platform LaunchのAdobe Experience PlatformWeb SDK Extensionが提供する様々なデータ要素タイプについて説明します。
+exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 47%
 
 ---
-
 
 # データ要素タイプ
 
@@ -26,7 +26,7 @@ ID マップデータ要素を使用すると、他のデータ要素や指定�
 
 ![](./assets/identity-map-data-element.png)
 
-## XDM オブジェクト
+## XDM オブジェクト {#xdm-object}
 
 XDM形式を使用して、任意のデータをAdobe Experience PlatformWeb SDKに送信します。 XDM オブジェクトデータ要素を使用すると、データの形式を簡単に設定できます。このデータ要素を初めて開いたときに、正しい Adobe Experience Platform サンドボックスとスキーマを選択してください。スキーマを選択すると、スキーマの構造が表示され、簡単に入力できます。
 
