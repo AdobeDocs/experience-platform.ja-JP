@@ -2,15 +2,15 @@
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API；同意；環境設定；Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
 title: 同意と環境設定のデータタイプ
 description: 「プライバシー、パーソナライゼーション、マーケティングの環境設定に関する同意」データ型は、データ操作からConsent Management Platforms(CMP)や他のソースで生成される顧客の権限や好みの収集をサポートすることを目的としています。
-topic: guide
+topic: ガイド
+exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 translation-type: tm+mt
-source-git-commit: 865379292985037b184d92e5d3fc1abc1873e962
+source-git-commit: 4e9395b4551842cf75b0d1a4ec36c85930c42da5
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '1845'
 ht-degree: 1%
 
 ---
-
 
 # [!DNL Consents & Preferences] データ型
 
@@ -80,17 +80,6 @@ ht-degree: 1%
     },
     "metadata": {
       "time": "2019-01-01T15:52:25+00:00"
-    },
-    "idSpecific": {
-      "email": {
-        "jdoe@example.com": {
-          "marketing": {
-            "email": {
-              "val": "n"
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -250,36 +239,6 @@ ht-degree: 1%
 | プロパティ | 説明 |
 | --- | --- |
 | `time` | 顧客の同意および環境設定が最後に更新された時点のISO 8601タイムスタンプ。 読み込みと複雑さを軽減するために、個々の環境設定にタイムスタンプを適用する代わりに、このフィールドを使用できます。 個々の環境設定で`time`値を指定すると、その環境設定の`metadata`タイムスタンプよりも優先されます。 |
-
-### `idSpecific`
-
-`idSpecific` は、特定の同意または優先度が顧客に広く適用されるわけではなく、単一のデバイスまたはIDに限定される場合に使用できます。例えば、顧客はあるアドレス宛てオプトアウトの電子メールを受信できる一方、別のアドレス宛ての電子メールを受信できる可能性があります。
-
->[!IMPORTANT]
->
->チャネルレベルの同意と環境設定（`idSpecific`の外側に`consents`が提供する同意と環境設定）は、そのチャネル内のIDに適用されます。 したがって、チャネルレベルの同意事項や環境設定は、同等のIDやデバイス固有の設定が適用されるかどうかに関わらず、直接影響を受けます。
->
->* お客様がチャネルレベルでオプトアウトした場合、`idSpecific`の同等の同意または環境設定は無視されます。
->* チャネルレベルの同意または優先度が設定されていない場合、またはお客様がオプトインを選択した場合は、`idSpecific`の同等の同意または好みが使用されます。
-
-
-`idSpecific`オブジェクトの各キーは、Adobe Experience PlatformIDサービスで認識される特定のID名前空間を表します。 様々なIDを分類する独自のカスタム名前空間を定義できますが、リアルタイム顧客プロファイルのストレージサイズを小さくするために、Identity Serviceが提供する標準名前空間の1つを使用することをお勧めします。 ID名前空間の詳細については、Identity Serviceドキュメントの[ID名前空間の概要](../../identity-service/namespaces.md)を参照してください。
-
-各名前空間オブジェクトのキーは、ユーザーが環境設定を行った一意のID値を表します。 各ID値には、`consents`と同じ形式の完全な同意と環境設定を含めることができます。
-
-```json
-"idSpecific": {
-  "email": {
-    "jdoe@example.com": {
-      "marketing": {
-        "email": {
-          "val": "n"
-        }
-      }
-    }
-  }
-}
-```
 
 ## データ型{#ingest}を使用したデータの取り込み
 
