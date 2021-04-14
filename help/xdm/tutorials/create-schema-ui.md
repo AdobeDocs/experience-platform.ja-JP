@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気の高いトピック；ui;UI;
 solution: Experience Platform
 title: スキーマエディタを使用したスキーマの作成
 topic: チュートリアル
-type: チュートリアル
+type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
+exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 53bf2ad757b24ad294af32101124e8047580807a
 workflow-type: tm+mt
-source-wordcount: '3602'
-ht-degree: 18%
+source-wordcount: '3683'
+ht-degree: 16%
 
 ---
-
 
 # [!DNL Schema Editor]
 
@@ -48,7 +48,11 @@ Adobe Experience Platformのユーザーインターフェイスを使用する�
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-[!DNL Schema Editor]が表示されます。 これは、スキーマを作成するキャンバスです。スキーマの基にする標準XDMクラスを選択したので、エディターに到着したときに、名称未設定のスキーマがキャンバスの&#x200B;**[!UICONTROL Structure]**&#x200B;セクションに自動的に作成され、そのクラスに基づくすべてのスキーマに含まれる標準フィールドが作成されます。 スキーマに割り当てられたクラスは、**[!UICONTROL 「構成]**」セクションの「クラス&#x200B;**[!UICONTROL Class]**」にも表示されます。
+スキーマの基にする標準的なXDMクラスを選択したので、**[!UICONTROL mixin追加]**&#x200B;ダイアログが表示され、フィールドをスキーマに追加する際に、すぐに開始を実行できます。 ここでは、「**[!UICONTROL キャンセル]**」を選択してダイアログを終了します。
+
+![](../images/tutorials/create-schema/cancel-mixin.png)
+
+[!DNL Schema Editor]が表示されます。 これは、スキーマを作成するキャンバスです。エディターに移動すると、名称未設定のスキーマがキャンバスの&#x200B;**[!UICONTROL 構造]**&#x200B;セクションに自動的に作成され、そのクラスに基づくすべてのスキーマに含まれる標準フィールドも作成されます。 スキーマに割り当てられたクラスは、**[!UICONTROL 「構成]**」セクションの「クラス&#x200B;**[!UICONTROL Class]**」にも表示されます。
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
@@ -102,7 +106,7 @@ Mixinをプレビューする際、Mixinのスキーマの詳細が右側のパ�
 >
 >フィールドは、スカラー型（文字列、整数、配列、日付など）と、[!DNL Schema Registry]内で定義された任意のデータ型（共通の概念を表すフィールドのグループ）を使用できます。
 
-`name`フィールドのデータ型は「[!UICONTROL 人名]」です。つまり、一般的な概念を表し、名、姓、敬称、敬称、接尾辞などの名前関連のサブフィールドが含まれます。
+`name`フィールドのデータ型は「[!UICONTROL 人名]」です。つまり、一般的な概念を表し、名、姓、敬称、敬称、接尾辞など、名前に関連するサブフィールドが含まれます。
 
 キャンバス内の別のフィールドを選択すると、スキーマ構造に影響を与える追加のフィールドが表示されます。
 
@@ -120,11 +124,13 @@ Mixinをプレビューする際、Mixinのスキーマの詳細が右側のパ�
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## 新しい mixin の定義 {#define-mixin}
+## カスタムミックスインを定義する{#define-mixin}
 
-「[!UICONTROL 忠誠度メンバー]」スキーマは、忠誠度プログラムのメンバーに関連するデータを取り込むためのものなので、いくつかの特定の忠誠度関連フィールドが必要になります。 必要なフィールドを含む標準 mixin がないので、新しい mixin を定義する必要があります。
+「[!UICONTROL 忠誠度メンバー]」スキーマは、忠誠度プログラムのメンバーに関連するデータを取り込むためのものなので、いくつかの特定の忠誠度関連フィールドが必要になります。
 
-今回は、**[!UICONTROL Mixin の追加]**&#x200B;ダイアログを開いたときに、「**[!UICONTROL 新規 mixin の作成]**」を選択します。その後、ミックスインの表示名と説明を入力するように求められます。
+標準の[!UICONTROL 忠誠度の詳細]ミックスインがあり、スキーマに追加して、忠誠度のプログラムに関連する一般的なフィールドを取り込むことができます。 スキーマがキャプチャした概念を表すために標準ミックスインを使用することを強くお勧めしますが、標準忠誠度ミックスインの構造は、特定の忠誠度プログラムに関連するすべてのデータを取り込めない場合があります。 このシナリオでは、代わりに、これらのフィールドを取り込むための新しいカスタムミックスインを定義できます。
+
+**[!UICONTROL Mixin追加]**&#x200B;ダイアログを再度開きますが、今回は上部の「**[!UICONTROL 新しいMixinを作成]**」を選択します。 その後、ミックスインの表示名と説明を入力するように求められます。
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
