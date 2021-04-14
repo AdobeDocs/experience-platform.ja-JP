@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: ガバナンス、プライバシー、セキュリティの概要
-topic: overview
+topic: 概要
 description: Adobe Experience Platformは、ビジネス慣行、法的義務、開発プロセスに従うために、収集したエクスペリエンスデータを確実に制御できるいくつかのサービスとツールを提供しています。
+exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '833'
 ht-degree: 18%
 
 ---
-
 
 # Adobe Experience Platformのガバナンス、プライバシー、セキュリティ
 
@@ -55,13 +55,13 @@ Adobe Experience Platform Privacy Serviceは、RESTful APIとユーザーイン�
 
 詳しくは、「[Privacy Service の概要](../../privacy-service/home.md)」を参照してください。
 
-### 同意の収集{#consent}
+### 同意処理{#consent}
 
 法的プライバシー規制の多くは、データ収集、パーソナライゼーション、その他のマーケティングの使用例に関して、アクティブで具体的な同意を求める要件を導入しています。 これらの要件を満たすために、Experience Platformでは、個々の顧客プロファイルの同意情報を取得し、それらの設定を、各顧客のデータが下流のプラットフォームワークフローでどのように使用されるかの決定要因として使用できます。
 
-IAB Transparency and Consent Framework(TCF)2.0に従って顧客の同意データを収集し処理する方法については、プラットフォーム](./consent/iab/overview.md)の[IAB TCF 2.0サポートの概要を参照してください。
+Adobe標準を使用して顧客の同意と嗜好データを処理する方法については、Experience Platform](./consent/adobe/overview.md)の[同意処理の概要を参照してください。
 
-<!-- For more information on the consent collection process using the Adobe standard, see the [consent collection overview]. -->
+IAB Transparency and Consent Framework (TCF) 2.0に従って顧客の同意データを処理する方法については、プラットフォーム](./consent/iab/overview.md)の[IAB TCF 2.0サポートの概要を参照してください。
 
 ## セキュリティ {#security}
 
