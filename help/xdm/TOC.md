@@ -6,10 +6,10 @@ breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 feature: スキーマ
 translation-type: tm+mt
-source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
+source-git-commit: 8b88a828f8680ac4d064f7f84e0db9e315526833
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 53%
+source-wordcount: '280'
+ht-degree: 49%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 53%
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [人口統計の詳細](./mixins/profile/person-details.md)
       * [個人の連絡先の詳細](./mixins/profile/personal-details.md)
+      * [プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）](./mixins/profile/consents.md)
       * [セグメントのメンバーシップの詳細](./mixins/profile/segmentation.md)
       * [勤務先担当者の詳細](./mixins/profile/work-details.md)
    * イベントミックスイン{#event}
@@ -51,6 +52,10 @@ ht-degree: 53%
    * [デバイス](./data-types/device.md)
    * [電子メールアドレス](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
+   * [汎用同意フィールド](./data-types/consent-field.md)
+   * [汎用マーケティング基本設定フィールド](./data-types/marketing-field.md)
+   * [購読付きの汎用マーケティング環境設定フィールド](./data-types/marketing-field-subscriptions.md)
+   * [汎用パーソナライゼーション設定フィールド](./data-types/personalization-field.md)
    * [地域](./data-types/geo.md)
    * [地域サークル](./data-types/geo-circle.md)
    * [地理座標](./data-types/geo-coordinates.md)
