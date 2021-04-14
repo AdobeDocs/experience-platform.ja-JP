@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気のあるトピック；API;AP
 solution: Experience Platform
 title: UIでのスキーマの作成と編集
 description: Experience Platformユーザーインターフェイスでスキーマを作成および編集する方法の基本について説明します。
-topic: user guide
+topic: ' ユーザーガイド'
+exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 90a0c4e8d47d9bce38c9e13272e4f41f78f46e35
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1380'
 ht-degree: 1%
 
 ---
-
 
 # UIでのスキーマの作成と編集
 
@@ -69,7 +69,15 @@ ht-degree: 1%
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
-検索バーを使用して、目的のMixinを見つけることができます。 名前がクエリと一致するミックスインは、リストの上部に表示されます。 「**[!UICONTROL 標準フィールド]**」の下に、必要なデータ属性を説明するフィールドを含むミックスインが表示されます。
+追加するMixinフィールドの一般的なアクティビティまたはビジネス領域がわかっている場合は、左側のレールで業種別のカテゴリを1つまたは複数選択して、Mixinの表示リストをフィルターします。
+
+![](../../images/ui/resources/schemas/industry-filter.png)
+
+>[!NOTE]
+>
+>XDMでの業界固有のデータモデリングのベストプラクティスについて詳しくは、[業界データモデル](../../schema/industries/overview.md)に関するドキュメントを参照してください。
+
+検索バーを使用して、目的のMixinを見つけるのに役立ちます。 名前がクエリと一致するミックスインは、リストの上部に表示されます。 「**[!UICONTROL 標準フィールド]**」の下に、必要なデータ属性を説明するフィールドを含むミックスインが表示されます。
 
 ![](../../images/ui/resources/schemas/mixin-search.png)
 
