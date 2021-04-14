@@ -6,10 +6,10 @@ breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
 feature: スキーマ
 translation-type: tm+mt
-source-git-commit: 4a67bcbd2a1458ae47ba64fe2647da442fdf4695
+source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 57%
+source-wordcount: '258'
+ht-degree: 53%
 
 ---
 
@@ -22,6 +22,11 @@ ht-degree: 57%
    * [データモデリングのベストプラクティス](schema/best-practices.md)
    * [XDMフィールド型の制約](schema/field-constraints.md)
    * [XDM フィールド辞書](schema/field-dictionary.md)
+   * 業界データモデル{#industries}
+      * [概要](./schema/industries/overview.md)
+      * [小売データモデルERD](./schema/industries/retail.md)
+      * [金融サービスデータモデルERD](./schema/industries/financial.md)
+      * [旅行および接客のデータモデルERD](./schema/industries/travel-hospitality.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
