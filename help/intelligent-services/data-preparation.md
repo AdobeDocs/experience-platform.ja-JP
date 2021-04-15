@@ -3,21 +3,21 @@ keywords: Experience Platform；ホーム；インテリジェントサービス
 solution: Experience Platform, Intelligent Services
 title: インテリジェントサービスで使用するデータの準備
 topic: インテリジェントサービス
-description: インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesは、これを達成するためにExperience Data Model(XDM)スキーマを活用します。 特に、Intelligent Services]で使用するすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。
+description: インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesでは、Experience Data Model(XDM)スキーマを使用してこれを実現します。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
+source-git-commit: 867c97d58f3496cb9e9e437712f81bd8929ba99f
 workflow-type: tm+mt
-source-wordcount: '2033'
-ht-degree: 2%
+source-wordcount: '2400'
+ht-degree: 1%
 
 ---
 
 # [!DNL Intelligent Services]で使用するデータを準備する
 
-[!DNL Intelligent Services]がマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 [!DNL Intelligent Services] これを達成す [!DNL Experience Data Model] るためには、XDM(R)スキーマを活用します。特に、[!DNL Intelligent Services]で使用されるすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠している必要があります。
+[!DNL Intelligent Services]がマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 [!DNL Intelligent Services] これを達成す [!DNL Experience Data Model] るためには、XDM(R)スキーマを活用します。特に、[!DNL Intelligent Services]で使用されるすべてのデータセットは、Consumer ExperienceEvent(CEE)XDMスキーマに準拠するか、Adobe Analyticsコネクタを使用する必要があります。 また、カスタマーAIはAdobe Audience Managerコネクタをサポートしています。
 
-このドキュメントでは、複数のチャネルからこのスキーマへのマーケティングイベントデータのマッピング、スキーマ内の重要なフィールドの概要を説明し、データを構造に効果的にマッピングする方法を判断する際の一般的な手引きを示します。
+このドキュメントでは、複数のチャネルからマーケティングイベントのデータをCEEスキーマにマッピングし、スキーマ内の重要なフィールドの概要を説明し、データを構造に効果的にマッピングする方法を判断する際の一般的な手順を説明します。 Adobe Analyticsのデータを使用する場合は、[Adobe Analyticsのデータ準備](#analytics-data)のセクションを表示してください。 Adobe Audience Managerデータ（お客様のAIのみ）を使用する予定がある場合は、[Adobeオーディエンスマネージャデータ準備](#AAM-data)のセクションに表示してください。
 
 ## ワークフローの概要
 
@@ -31,12 +31,32 @@ ht-degree: 2%
 1. アクセス資格情報を使用して、データをBlobコンテナにアップロードします。
 1. Adobeコンサルティングサービスで作業し、データを[Consumer ExperienceEventスキーマ](#cee-schema)にマッピングし、[!DNL Intelligent Services]に取り込みます。
 
+### Adobe Analyticsデータの準備{#analytics-data}
+
+顧客AIとAttribution AIは、Adobe Analyticsデータをネイティブでサポートします。 Adobe Analyticsデータを使用するには、ドキュメントに記載されている手順に従って[Analyticsソースコネクタ](../sources/tutorials/ui/create/adobe-applications/analytics.md)を設定します。
+
+ソースコネクタがデータをExperience Platformにストリーミングすると、インスタンス設定時に、データソースとしてAdobe Analyticsを選択し、その後データセットを選択することができます。 すべての必須スキーマフィールドとミックスインは、接続の設定時に自動的に作成されます。 データセットをCEE形式にETL（抽出、変換、ロード）する必要はありません。
+
+>[!IMPORTANT]
+>
+>Adobe Analyticsコネクターは、データをバックフィルするのに最大4週間かかります。 接続を最近設定した場合は、顧客やAttribution AIに必要な最小長のデータがデータセットに含まれていることを確認する必要があります。 [顧客AI](./customer-ai/input-output.md#data-requirements)または[Attribution AI](./attribution-ai/input-output.md#data-requirements)の履歴データのセクションを確認し、予測目標に十分なデータがあることを確認してください。
+
+### Adobe Audience Managerデータの準備（お客様向けAIのみ） {#AAM-data}
+
+顧客AIは、Adobe Audience Managerデータをネイティブでサポートします。 Audience Managerデータを使用するには、ドキュメントに記載されている手順に従って[Audience Managerソースコネクタ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md)を設定します。
+
+ソースコネクタがデータをExperience Platformにストリーミングすると、Customer AIの設定時に、データソースとしてAdobe Audience Managerを選択し、その後データセットを選択することができます。 すべての必須スキーマフィールドとミックスインは、接続の設定時に自動的に作成されます。 データセットをCEE形式にETL（抽出、変換、ロード）する必要はありません。
+
+>[!IMPORTANT]
+>
+>コネクターを最近設定した場合は、データセットに必要な最小長のデータが含まれていることを確認する必要があります。 顧客AIの[入力/出力ドキュメント](./customer-ai/input-output.md)の履歴データの節を確認し、予測目標に十分なデータがあることを確認してください。
+
 ### [!DNL Experience Platform] データ準備
 
-データが既に[!DNL Platform]に保存されている場合は、次の手順に従います。
+データが既に[!DNL Platform]に保存されており、Adobe AnalyticsまたはAdobe Audience Manager（Customer AIのみ）のソースコネクタを通じてストリーミングしない場合は、次の手順に従います。 お客様AIを利用する予定の場合は、CEEスキーマを理解することをお勧めします。
 
 1. [コンシューマーエクスペリエンスイベントスキーマ](#cee-schema)の構造を確認し、データをフィールドにマップできるかどうかを判断します。
-1. Adobeのコンサルティングサービスに連絡して、データをスキーマにマッピングし、[!DNL Intelligent Services]に取り込みます。自分でデータをマッピングする場合は、[このガイドの手順](#mapping)に従ってください。
+2. Adobeのコンサルティングサービスに連絡して、データをスキーマにマッピングし、[!DNL Intelligent Services]に取り込みます。自分でデータをマッピングする場合は、[このガイドの手順](#mapping)に従ってください。
 
 ## CEEスキーマについて{#cee-schema}
 
