@@ -2,16 +2,16 @@
 keywords: Experience Platform；はじめに；アトリビューションai；人気のあるトピック；アトリビューションai入力；アトリビューションai出力；
 solution: Experience Platform, Intelligent Services
 title: Attribution AIの入出力
-topic: Input and Output data for Attribution AI
+topic: Attribution AIの入出力データ
 description: 次のドキュメントでは、Attribution AIで使用される様々な入出力の概要を説明します。
+exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2098'
 ht-degree: 15%
 
 ---
-
 
 # [!DNL Attribution AI]の入出力
 
@@ -49,7 +49,7 @@ Attribution AIの場合、[!DNL Consumer Experience Event] (CEE)スキーマの�
 - web.webPageDetails
 - xdm:productListItems
 
-### 履歴データ
+### 履歴データ {#data-requirements}
 
 >[!IMPORTANT]
 >
