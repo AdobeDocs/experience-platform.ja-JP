@@ -2,26 +2,95 @@
 keywords: Experience Platform；はじめに；顧客ai；人気のあるトピック；顧客ai入力；顧客ai出力
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客AIでの入出力
-topic: Getting started
-description: 次のドキュメントでは、Customer AIで使用される様々な入力と出力の概要を説明します。
+topic: はじめに
+description: Customer AIが使用する必要なイベント、入力および出力について詳しく説明します。
+exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
-source-wordcount: '840'
-ht-degree: 33%
+source-wordcount: '2878'
+ht-degree: 17%
 
 ---
 
-
 # 顧客AIでの入出力
 
-次のドキュメントでは、Customer AIで使用される様々な入力と出力の概要を説明します。
+次のドキュメントでは、Customer AIで使用される様々な必須イベント、入力および出力の概要を説明します。
+
+## はじめに
+
+顧客AIは、次のデータセットの1つを分析して、傾向の傾向スコアの変化やコンバージョン傾向スコアを予測します。
+
+- コンシューマーエクスペリエンスイベント(CEE)データセット
+- [Analyticsソースコネクタ](../../sources/tutorials/ui/create/adobe-applications/analytics.md)を使用したAdobe Analyticsデータ
+- [Audience Managerソースコネクタ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)を使用したAdobe Audience Managerデータ
+
+>[!IMPORTANT]
+>
+>ソースコネクタは、データをバックフィルするのに最大4週間かかります。 コネクターを最近設定した場合は、データセットに顧客AIに必要な最小長のデータが含まれていることを確認する必要があります。 [履歴データ](#data-requirements)のセクションを確認し、予測目標に十分なデータがあることを確認してください。
+
+このドキュメントでは、CEEスキーマの基本的な理解が必要です。 続行する前に、[インテリジェントサービスデータ準備](../data-preparation.md)のドキュメントを確認してください。
+
+次の表に、このドキュメントで使用される一般的な用語の概要を示します。
+
+| 用語 | 定義 |
+| --- | --- |
+| [エクスペリエンスデータモデル（XDM）](../../xdm/home.md) | XDMは、Adobe Experience Platformを利用するAdobe Experience Cloudが、適切なチャネルを適切な人に、適切な時に適切なメッセージを届けることを可能にする基礎的な枠組みです。 Experience Platform を構築する方法論である XDM システムによって、Platform サービスでエクスペリエンスデータモデルスキーマを操作できるようになります。 |
+| XDM スキーマ | Experience Platform では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。システムをまたいで一貫したデータを定義することで、意味を保有しやすくなり、データから価値を得ることができます。データをPlatformに取り込む前に、スキーマを作成して、データの構造を説明し、各フィールドに含めることができるデータの種類に制限を設ける必要があります。 スキーマは、基本のXDMクラスと0個以上のミックスインで構成されます。 |
+| XDMクラス | すべての XDM スキーマは、レコードまたは時系列として分類できるデータを記述します。スキーマのデータ動作は、スキーマのクラスによって定義され、スキーマの作成時に割り当てられます。 XDM クラスは、特定のデータ動作を表すためにスキーマが格納する必要のある最小のプロパティ数を記述します。 |
+| [Mixin](../../xdm/schema/composition.md) | スキーマ内の1つ以上のフィールドを定義するコンポーネント。 ミックスインは、スキーマの階層でのフィールドの表示を強制するので、に含まれるすべてのスキーマで同じ構造を示します。 Mixin は、`meta:intendedToExtend` 属性で識別される特定のクラスのみと互換性があります。 |
+| [データタイプ](../../xdm/schema/composition.md) | スキーマに1つ以上のフィールドを提供できるコンポーネント。 ただし、Mixin とは異なり、データ型は特定のクラスに制限されません。そのため、データ型は、潜在的に異なるクラスを持つ複数のスキーマで再利用可能な一般的なデータ構造を記述するためのより柔軟なオプションとなります。このドキュメントで説明するデータタイプは、CEEとAdobe Analyticsの両方のスキーマでサポートされています。 |
+| チャーン | 購読をキャンセルしたり、更新しないことを選択したりしたアカウントの割合を示す測定値。 変動率が高いと、月別定期売上高(MRR)に悪影響を与え、製品やサービスに対する不満を示す可能性もあります。 |
+| [リアルタイム顧客プロファイル](../../profile/home.md) | リアルタイムの顧客プロファイルは、ターゲットを絞り、パーソナライズされたエクスペリエンス管理のための一元的な顧客プロファイルを提供します。各プロファイルには、すべてのシステムをまたいで集計されたデータと、Experience Platform で使用するイベントのいずれかで発生した個人に関する、実用的なタイムスタンプの付いたアカウントが含まれます。 |
 
 ## 顧客AI入力データ
 
-顧客AIは、コンシューマーエクスペリエンスのイベントデータを使用して傾向スコアを計算します。 コンシューマーエクスペリエンスのイベントについて詳しくは、[Intelligent Servicesドキュメントで使用するデータの準備](../data-preparation.md)を参照してください。
+>[!TIP]
+>
+> 顧客AIは、予測に役立つイベントを自動的に判断し、利用可能なデータが品質予測を生成するのに十分でない場合は、警告を発します。
 
-### 履歴データ
+お客様のAIは、CEE、Adobe Analytics、Adobe Audience Managerのデータセットをサポートしています。 CEEスキーマでは、スキーマの作成プロセス中にミックスインを追加する必要があります。 Adobe AnalyticsまたはAdobe Audience Managerのデータセットを使用している場合、ソースコネクタは、接続プロセス中に次に示す標準イベント（コマース、Webページの詳細、アプリケーション、検索）を直接マッピングします。
+
+Adobe AnalyticsデータまたはAudience Managerデータのマッピングについて詳しくは、[Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md)または[Audience Managerフィールドマッピング](../../sources/connectors/adobe-applications/mapping/audience-manager.md)ガイドを参照してください。
+
+### お客様のAIで使用される標準イベント{#standard-events}
+
+XDM Experienceイベントは、様々な顧客行動を判断するために使用します。 データの構造によっては、以下に示すイベントタイプが顧客の行動の一部と異なる場合があります。 Webユーザーのアクティビティを明確かつ明確に識別するために必要なデータを持つフィールドはユーザー次第です。 予測目標に応じて、必要な必須フィールドが変わる場合があります。
+
+お客様のAIは、モデル機能の構築に異なるイベントタイプを使用しています。 これらのイベントタイプは、複数のXDMミックスインを使用してスキーマに自動的に追加されます。
+
+>[!NOTE]
+>
+>Adobe AnalyticsまたはAdobe Audience Managerのデータを使用している場合は、スキーマが自動的に作成され、データの取り込みに必要な標準イベントが使用されます。 データを取り込むための独自のカスタムCEEスキーマを作成する場合は、データを取り込むために必要なミックスインを考慮する必要があります。
+
+以下に示す標準的なイベントのそれぞれに対するデータは必要ありませんが、特定のイベントが特定のシナリオで必要となる場合があります。 標準のイベントデータがある場合は、スキーマに含めることをお勧めします。 例えば、購入イベントを予測するCustomer AIアプリケーションを作成する場合は、`Commerce`データ型と`Web page details`データ型のデータが役立ちます。
+
+プラットフォームUIでミックスインを表示するには、左側のナビゲーションバーの「**[!UICONTROL スキーマ]**」タブを選択し、「**[!UICONTROL ミックスイン]**」タブを選択します。
+
+
+| Mixin | イベントタイプ | XDMフィールドのパス |
+| --- | --- | --- |
+| [!UICONTROL コマースの詳細] | order | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
+|  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
+|  | checkouts | <li> commerce.checkouts.value </li> <li> productListItems.SKU </li> |
+|  | purchases | <li> commerce.purchases.value </li> <li> productListItems.SKU </li> |
+|  | productListRemovals | <li> commerce.productListRemovals.value </li> <li> productListItems.SKU </li> |
+|  | productListOpens | <li> commerce.productListOpens.value </li> <li> productListItems.SKU </li> |
+|  | productViews | <li> commerce.productViews.value </li> <li> productListItems.SKU </li> |
+| [!UICONTROL Web詳細] | webVisit | web.webPageDetails.name |
+|  | webInteraction | web.webInteraction.linkClicks.value |
+| [!UICONTROL 申し込みの詳細] | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
+|  | applicationCrashs | <li> application.crashes.value </li> <li> application.name </li> |
+|  | applicationFeatureUsages | <li> application.featureUsages.value </li> <li> application.name </li> |
+|  | applicationFirstLaunches | <li> application.firstLaunches.value </li> <li> application.name </li> |
+|  | applicationInstalls | <li> application.installs.value </li> <li> application.name </li> |
+|  | applicationLaunches | <li> application.launches.value </li> <li> application.name </li> |
+|  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
+| [!UICONTROL 検索の詳細] | search | search.keywords |
+
+さらに、顧客AIは、購読データを使用してより良いチャーンモデルを構築できます。 購読データは、[[!UICONTROL 購読]](../../xdm/data-types/subscription.md)データ型の形式を使用する各プロファイルに必要です。 ただし、最適なチャーンモデルを得るためには、ほとんどのフィールドはオプションです。ただし、最適なチャーンモデルを得るには、`startDate`、`endDate`など、できる限り多くのフィールドのデータを提供することを強くお勧めします。
+
+### 履歴データ {#data-requirements}
 
 顧客AIには、モデルトレーニングの履歴データが必要ですが、必要なデータ量は、次の2つの主要な要素に基づいています。結果ウィンドウと適格母集団。
 
@@ -47,13 +116,150 @@ ht-degree: 33%
 
 必要な最小データに加えて、顧客AIも最新のデータに最適です。 この使用例では、顧客AIは、ユーザーの最近の行動データに基づいて、将来の予測を行っています。 つまり、最新のデータを使用すると、より正確な予測が得られる可能性が高くなります。
 
-## 顧客 AI 出力データ
+### シナリオの例
 
-顧客 AI は、適格と見なされる個々のプロファイルの属性を生成します。プロビジョニングした内容に基づいてスコアを使用する方法は2つあります。 データセットに対してリアルタイム顧客プロファイルを有効にしている場合は、リアルタイム顧客プロファイルを使用してデータを利用できます。 リアルタイム顧客プロファイルをお持ちでない場合は、Data Lakeにある顧客AI出力データセットをダウンロードできます。
+この節では、顧客AIインスタンスの様々なシナリオ、および必須と推奨のイベントタイプについて説明します。 mixinとそのフィールドパスの詳細については、上記の[標準イベントテーブル](#standard-events)を参照してください。
 
 >[!NOTE]
 >
->出力値は、セグメントの作成や定義に使用できるリアルタイム顧客プロファイルが使用します。
+> 必要なイベントタイプは、Webユーザーのアクティビティを明確かつ明確に識別するために使用されます。 必要なイベントタイプ数は、スキーマの予測目標と構造に基づいて変更されます。 特定のイベントタイプが必要な場合は、CEEスキーマの構築時にそのイベントタイプを含めることをお勧めします。 Adobe AnalyticsまたはAdobe Audience Managerのデータを使用している場合は、ストリーミングするデータに応じて、必要な標準イベントを使用できる必要があります。
+
+### シナリオ1:eコマース小売Webサイトでの購入コンバージョン
+
+**予測目標：Webサイト上で特定の衣料品を購入する対象プロファイルのコンバージョン傾向を** 予測します。
+
+**必要な標準イベントタイプ:**
+
+この特定の予測目標を設定した最適な顧客AI出力を得るには、次に示すイベントタイプが必要です。 予測目標に応じて必要なイベントを除外できますが、複数のイベントを除外すると、結果が低下する可能性があります。
+
+- order
+- チェックアウト
+- 購入
+- webVisit
+- search
+
+**その他の推奨される標準イベントタイプ:**
+
+お客様のAIインスタンスを設定する際に、目標と資格を持つ訪問者の複雑さに基づいて、残りの[イベントタイプ](#standard-events)が必要になる場合があります。 特定のデータタイプでデータが使用可能な場合は、そのデータをスキーマに含めることをお勧めします。
+
+### シナリオ2:メディアストリーミングサービスWebサイトでの購読変換
+
+**予測目標：標準計画や割増計画など、特定のレベルの購読にコミットする対象プロファイルの購読コンバージョン傾向を** 予測します。
+
+**必要な標準イベントタイプ:**
+
+この特定の予測目標を設定した最適な顧客AI出力を得るには、次に示すイベントタイプが必要です。 予測目標に応じて必要なイベントを除外できますが、複数のイベントを除外すると、結果が低下する可能性があります。
+
+- order
+- チェックアウト
+- 購入
+- webVisit
+- search
+
+この例では、`order`、`checkouts`、`purchases`を使用して、購読が購入されたことを示し、そのタイプを示します。
+
+また、正確なモデルを得るには、[購読データ型](../../xdm/data-types/subscription.md)の使用可能なプロパティの一部を使用することをお勧めします。
+
+**その他の推奨される標準イベントタイプ:**
+
+お客様のAIインスタンスを設定する際に、目標と資格を持つ訪問者の複雑さに基づいて、残りの[イベントタイプ](#standard-events)が必要になる場合があります。 特定のデータタイプでデータが使用可能な場合は、そのデータをスキーマに含めることをお勧めします。
+
+### シナリオ3:電子商取引小売Webサイトをチャーン編集
+
+**予測目標：購入イベントが発生しない可能性を** 予測します。
+
+**必要な標準イベントタイプ:**
+
+この特定の予測目標を設定した最適な顧客AI出力を得るには、次に示すイベントタイプが必要です。 予測目標に応じて必要なイベントを除外できますが、複数のイベントを除外すると、結果が低下する可能性があります。
+
+- order
+- チェックアウト
+- 購入
+- webVisit
+- search
+
+**その他の推奨される標準イベントタイプ:**
+
+お客様のAIインスタンスを設定する際に、目標と資格を持つ訪問者の複雑さに基づいて、残りの[イベントタイプ](#standard-events)が必要になる場合があります。 特定のデータタイプでデータが使用可能な場合は、そのデータをスキーマに含めることをお勧めします。
+
+### シナリオ4:eコマース小売Webサイトでのアップセルコンバージョン
+
+**予測目標：特定の製品を購入して新しい関連製品を購入した訪問者の購入傾向を** 予測します。
+
+**必要な標準イベントタイプ:**
+
+この特定の予測目標を設定した最適な顧客AI出力を得るには、次に示すイベントタイプが必要です。 予測目標に応じて必要なイベントを除外できますが、複数のイベントを除外すると、結果が低下する可能性があります。
+
+- order
+- チェックアウト
+- 購入
+- webVisit
+- search
+
+**その他の推奨される標準イベントタイプ:**
+
+お客様のAIインスタンスを設定する際に、目標と資格を持つ訪問者の複雑さに基づいて、残りの[イベントタイプ](#standard-events)が必要になる場合があります。 特定のデータタイプでデータが使用可能な場合は、そのデータをスキーマに含めることをお勧めします。
+
+### シナリオ5:オンラインニュースアウトレットでの登録解除（チャーン）
+
+**予測目標：来月、サービスを登録解除する資格のある訪問者の傾向を** 予測します。
+
+**必要な標準イベントタイプ:**
+
+この特定の予測目標を設定した最適な顧客AI出力を得るには、次に示すイベントタイプが必要です。 予測目標に応じて必要なイベントを除外できますが、複数のイベントを除外すると、結果が低下する可能性があります。
+
+- webVisit
+- search
+
+また、正確なモデルを得るには、[購読データ型](../../xdm/data-types/subscription.md)の使用可能なプロパティの一部を使用することをお勧めします。
+
+**その他の推奨される標準イベントタイプ:**
+
+お客様のAIインスタンスを設定する際に、目標と資格を持つ訪問者の複雑さに基づいて、残りの[イベントタイプ](#standard-events)が必要になる場合があります。 特定のデータタイプでデータが使用可能な場合は、そのデータをスキーマに含めることをお勧めします。
+
+### シナリオ6:モバイルアプリケーションの起動
+
+**予測目標：有料プロファイルが次のX日後に有料モバイルアプリを起動する傾向を** 予測します。これは、「月別アクティブユーザー」の主要業績評価指標(KPI)の予測と似ています。
+
+**必要な標準イベントタイプ:**
+
+この特定の予測目標を設定した最適な顧客AI出力を得るには、次に示すイベントタイプが必要です。 予測目標に応じて必要なイベントを除外できますが、複数のイベントを除外すると、結果が低下する可能性があります。
+
+- order
+- チェックアウト
+- 購入
+- webVisit
+- applicationCloses
+- applicationCrashs
+- applicationFeatureUsages
+- applicationFirstLaunches
+- applicationInstalls
+- applicationLaunches
+- applicationUpgrades
+
+この例では、モバイルアプリケーションの購入が必要な場合、`order`、`checkouts`、および`purchases`が使用されます。
+
+**その他の推奨される標準イベントタイプ:**
+
+お客様のAIインスタンスを設定する際に、目標と資格を持つ訪問者の複雑さに基づいて、残りの[イベントタイプ](#standard-events)が必要になる場合があります。 特定のデータタイプでデータが使用可能な場合は、そのデータをスキーマに含めることをお勧めします。
+
+### シナリオ7:実現した特徴(Adobe Audience Manager)
+
+**予測目標：実現される一部の特性の傾向を** 予測します。
+
+**必要な標準イベントタイプ:**
+
+Adobe Audience Managerの特性を使用するには、[Audience Managerソースコネクタ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)を使用してソース接続を作成する必要があります。 ソースコネクタは、適切なミックスインを持つスキーマを自動的に作成します。 スキーマがCustomer AIを利用できるように、手動でイベントタイプを追加する必要はありません。
+
+新しい顧客AIインスタンスを設定する場合、`audienceName`と`audienceID`を使用して、目標を定義する際に、スコアリングの特定の特性を選択できます。
+
+## 顧客 AI 出力データ
+
+顧客 AI は、適格と見なされる個々のプロファイルの属性を生成します。プロビジョニングした内容に基づいてスコア（出力）を使用する方法は2つあります。 リアルタイム顧客プロファイル対応データセットをお持ちの場合は、[セグメントビルダー](../../segmentation/ui/segment-builder.md)のリアルタイム顧客プロファイルから得たインサイトを利用できます。 プロファイル対応のデータセットがない場合は、データレークにあるCustomer AI出力データセット](./user-guide/download-scores.md)を[ダウンロードできます。
+
+>[!NOTE]
+>
+> 出力値は、セグメントの作成や定義に使用できるリアルタイム顧客プロファイルが使用します。
 
 次の表に、顧客 AI の出力に含まれる様々な属性を示します。
 
