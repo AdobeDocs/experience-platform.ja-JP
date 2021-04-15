@@ -2,16 +2,16 @@
 keywords: Experience Platform；ユーザーガイド；顧客ai；人気の高いトピック；インスタンスの設定；インスタンスの作成；
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客AIインスタンスの設定
-topic: Instance creation
+topic: インスタンスの作成
 description: インテリジェントサービスは、様々な用途に設定できる、使いやすい Adobe Sensei サービスとして顧客 AI を提供します。次の節では、顧客 AI のインスタンスを設定する手順を説明します。
+exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 35%
+source-wordcount: '1304'
+ht-degree: 34%
 
 ---
-
 
 # 顧客AIインスタンスの設定
 
@@ -19,7 +19,7 @@ ht-degree: 35%
 
 インテリジェントサービスは、様々な用途に設定できる、使いやすい Adobe Sensei サービスとして顧客 AI を提供します。次の節では、顧客 AI のインスタンスを設定する手順を説明します。
 
-## インスタンスの設定 {#set-up-your-instance}
+## インスタンスの設定  {#set-up-your-instance}
 
 プラットフォームUIの左側のナビゲーションで、「**[!UICONTROL サービス]**」を選択します。 「**[!UICONTROL サービス]**」ブラウザーが表示され、使用可能なすべてのサービスが表示されます。Customer AIのコンテナで、**[!UICONTROL 「Open]**」を選択します。
 
@@ -54,7 +54,7 @@ ht-degree: 35%
 
 - 傾向タイプによって、スコアと指標の極性の意図が決まります。「**[!UICONTROL チャーン]**」または「**[!UICONTROL コンバージョン]**」を選択できます。傾向タイプがインスタンスに与える影響の詳細については、「インサイトの検出」ドキュメントの[スコアリングの概要](./discover-insights.md#scoring-summary)のを参照してください。
 
-- データソースは、データが存在する場所です。データセットは、スコアの予測に使用される入力データセットです。設計上、顧客 AI はコンシューマーエクスペリエンスイベントデータを使用して傾向スコアを計算します。ドロップダウンセレクターからデータセットを選択すると、顧客 AI と互換性のあるもののみが表示されます。
+- データソースは、データが存在する場所です。データセットは、スコアの予測に使用される入力データセットです。顧客AIは、設計上、コンシューマーエクスペリエンスのイベント、Adobe Analytics、Adobe Audience Managerのデータを使用して傾向スコアを計算します。 ドロップダウンセレクターからデータセットを選択すると、顧客 AI と互換性のあるもののみが表示されます。
 
 - デフォルトでは、適格な母集団が指定されていない限り、すべてのプロファイルに対して傾向スコアが生成されます。イベントに基づいてプロファイルを含めたり除外したりする条件を定義することで、適格な母集団を指定できます。
 
@@ -133,4 +133,3 @@ ht-degree: 35%
 次のビデオは、お客様向けAIの設定ワークフローを理解していただくためのものです。 さらに、ベストプラクティスと使用例が示されています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
-
