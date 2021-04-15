@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化サービス；ユーザーガイド；uiガイド；セグメント化uiガイド；セグメント化uiガイド；セグメントビルダー；セグメントビルダー；
 solution: Experience Platform
 title: セグメントビルダーのUIガイド
-topic: ui guide
-description: 'Adobe Experience PlatformUIのセグメントビルダーは、プロファイルデータ要素を操作できるリッチワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。 '
+topic: uiガイド
+description: Adobe Experience PlatformUIのセグメントビルダーは、プロファイルデータ要素を操作できるリッチワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
+exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
+source-git-commit: bad293cf25b955496897d895169ec494416e9787
 workflow-type: tm+mt
-source-wordcount: '1896'
-ht-degree: 46%
+source-wordcount: '2002'
+ht-degree: 43%
 
 ---
-
 
 # [!DNL Segment Builder] UIガイド
 
@@ -65,7 +65,7 @@ ht-degree: 46%
 
 [Luceneの検索構文](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)を利用した検索バーを使ってオーディエンスを検索することもできます。 「**[!UICONTROL オーディエンス]**」タブで最上位のフォルダーを選択すると、検索バーが表示され、そのフォルダー内を検索することができます。検索結果は、単語の入力が終わると同時に表示され始めます。例えば、`Online Shoppers`という名前のオーディエンスを検索するには、開始が検索バーに「Online」と入力します。 「Online」という単語を完全に入力すると、「Online」という単語を含む検索結果が表示されます。
 
-## ルールビルダーキャンバス {#rule-builder-canvas}
+## ルールビルダーキャンバス  {#rule-builder-canvas}
 
 セグメント定義は、ターゲットオーディエンスの重要な特徴やビヘイビアーの説明に使用される一連のルールです。これらのルールは、[!DNL Segment Builder]の中央にあるルールビルダーキャンバスを使用して作成されます。
 
@@ -116,6 +116,22 @@ ht-degree: 46%
 集計が追加されます。 集計関数、集計する属性、等価関数、値を選択できるようになりました。 次の例では、このセグメントは、各購入が$100未満の場合でも、購入した値の合計が$100を超えるプロファイルを資格とします。
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
+
+### カウント関数
+
+セグメントビルダーのカウント関数は、指定したイベントを探し、その回数をカウントするために使用します。 セグメントビルダーでサポートされているカウント機能は、「最低」、「最大」、「正確」、「範囲内」および「すべて」です。
+
+カウント関数を作成するには、左側のレールからイベントを選択し、[!UICONTROL イベント]コンテナに挿入します。
+
+![](../images/ui/segment-builder/add-event.png)
+
+イベントコンテナ内にイベントを配置した後、[!UICONTROL 少なくとも1]ボタンを選択します。
+
+![](../images/ui/segment-builder/add-count.png)
+
+これで、count関数が追加されました。 これで、関数のcount関数と値を選択できるようになりました。 次の例では、1回以上クリックしたイベントを含めます。
+
+![](../images/ui/segment-builder/select-count.png)
 
 ## コンテナ
 
