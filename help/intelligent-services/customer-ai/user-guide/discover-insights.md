@@ -2,16 +2,16 @@
 keywords: Experience Platform；インサイト；顧客ai；人気のあるトピック；顧客aiインサイト
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客AIを使用したDiscoverインサイト
-topic: Discovering insights
+topic: インサイトの発見
 description: このドキュメントは、Intelligent Services 顧客 AI ユーザーインターフェイスのサービスインスタンスインサイトを操作するためのガイドとして機能します。
+exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: ff953cf0aed2b9122b78126a87625e88f1ca4506
 workflow-type: tm+mt
-source-wordcount: '1399'
-ht-degree: 54%
+source-wordcount: '1634'
+ht-degree: 45%
 
 ---
-
 
 # 顧客AIを使用したインサイトの発見
 
@@ -25,7 +25,7 @@ ht-degree: 54%
 
 ## サービスインスタンスの概要
 
-[!DNL Adobe Experience Platform] UIの左側のナビゲーションで&#x200B;**[!UICONTROL サービス]**&#x200B;をクリックします。 *サービス*&#x200B;ブラウザーが開き、使用可能な Intelligent Services が表示されます。顧客 AI のコンテナで、「**[!UICONTROL 開く]**」をクリックします。
+[!DNL Adobe Experience Platform] UIの左側のナビゲーションで&#x200B;**[!UICONTROL サービス]**&#x200B;をクリックします。 *サービス*&#x200B;ブラウザーが開き、使用可能なインテリジェントサービスが表示されます。顧客 AI のコンテナで、「**[!UICONTROL 開く]**」をクリックします。
 
 ![インスタンスへのアクセス](../images/insights/navigate-to-service.png)
 
@@ -37,14 +37,15 @@ ht-degree: 54%
 
 ![インスタンスの作成](../images/insights/dashboard.png)
 
-開始するサービスインスタンス名をクリックします。
+開始するサービスインスタンス名を選択します。
 
 ![インスタンスの作成](../images/insights/click-the-name.png)
 
-次に、そのサービスインスタンスのインサイトページが表示され、データのビジュアライゼーションが提供されます。ビジュアライゼーションと、データを使用して実行できる操作について、本ガイド全体で詳しく説明します。
+次に、そのサービスインスタンスのインサイトページが表示され、「**[!UICONTROL 最新のスコア]**」または「**[!UICONTROL パフォーマンスの概要]**」を選択するオプションが表示されます。 デフォルトのタブ&#x200B;**[!UICONTROL 最新のスコア]**&#x200B;は、データのビジュアライゼーションを提供します。 ビジュアライゼーションと、データを使用して実行できる操作について、本ガイド全体で詳しく説明します。
 
-![設定ページ](../images/insights/landing-page.png)
+「**[!UICONTROL パフォーマンスの概要]**」タブには、各傾向バケットの実際の傾向（複数可）が表示されます。 詳しくは、[パフォーマンスの概要指標](#performance-metrics)の節を参照してください。
 
+![設定ページ](../images/insights/landing_page_insights.png)
 
 ### サービスインスタンスの詳細
 
@@ -155,6 +156,30 @@ ht-degree: 54%
 新しいセグメントを Platform UI に表示するには、左のナビゲーションで「**[!UICONTROL セグメント]**」をクリックします。**[!UICONTROL 参照]**&#x200B;ページが表示され、使用可能なセグメントがすべて表示されます。
 
 ![すべてのセグメント](../images/insights/Segments-dashboard.png)
+
+## パフォーマンスの概要指標{#performance-metrics}
+
+**[!UICONTROL パフォーマンスの概要]**&#x200B;タブは、実際の傾向またはコンバージョン率を示し、顧客AIがスコアする各傾向グループに分けます。
+
+![「Performance summary」タブ](../images/insights/summary_tab.png)
+
+最初は予想されたレート（点線）のみが表示されます。 予想レートは、スコアリングの実行が行われておらず、データがまだ使用できない場合に表示されます。 ただし、結果ウィンドウが過ぎると、予測レートは実際のレート（実線）に置き換えられます。
+
+行の上にカーソルを置くと、その日の日付と、その日の実績/予測レートがそのバケットに表示されます。
+
+![グループの例](../images/insights/churn_tab.png)
+
+表示される予想レートと実際のレートに対して、時間枠をフィルターできます。 **カレンダーアイコン** ![アイコン](../images/insights/calendar_icon.png)を選択し、新しい日付範囲を選択します。 各グループの結果が更新され、新しい日付範囲内に表示されます。
+
+![日付の選択](../images/insights/date_selector.png)
+
+### 個々のスコアリング実行率
+
+「**[!UICONTROL パフォーマンスの概要]**」タブの下半分には、各スコアリング実行の結果が表示されます。 右上のドロップダウン日を選択して、異なるスコアリング実行の結果を表示します。
+
+チャーンとコンバージョンの予測方法に応じて、[!UICONTROL スコアの分布]グラフには、各増分でチャーン/コンバートされたプロファイルの分布と、チャーン/コンバートされていない訪問者の分布が表示されます。
+
+![個人得点](../images/insights/scoring_tab.png)
 
 ## 次の手順
 
