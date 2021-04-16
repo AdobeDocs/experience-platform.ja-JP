@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；取り込み；開発者ガイド；apiガイド；アップロード；取り込みパーケット；取り込みjson;
 solution: Experience Platform
 title: Batch Ingest APIガイド
-topic: developer guide
+topic: 開発者ガイド
 description: このドキュメントでは、バッチ取得 API の使用に関する包括的な概要を説明します。
+exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2558'
 ht-degree: 89%
 
 ---
-
 
 # バッチ取り込みAPIガイド
 
@@ -33,7 +33,7 @@ ht-degree: 89%
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -608,15 +608,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
       "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-      },
-      "fileDescription": {
-          "format": "parquet",
-          "delimiters": [","], 
-          "quotes": ["\""],
-          "escapes": ["\\"],
-          "header": true,
-          "charset": "UTF-8"
-      }      
+      }
   }'
 ```
 
@@ -624,32 +616,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 | --------- | ----------- |
 | `{TENANT_ID}` | この ID を使用すると、作成したリソースの名前空間が適切に付けられ、IMS 組織内に含まれるようになります |
 | `{SCHEMA_ID}` | 作成したスキーマの ID。 |
-
-JSON 本文の「fileDescription」セクションの異なる部分の説明を以下に示します。
-
-```json
-{
-    "fileDescription": {
-        "format": "parquet",
-        "delimiters": [","],
-        "quotes": ["\""],
-        "escapes": ["\\"],
-        "header": true,
-        "charset": "UTF-8"
-    }
-}
-```
-
-| パラメーター | 説明 |
-| --------- | ----------- |
-| `format` | 入力ファイルの形式ではなく、マスターファイルの形式です。 |
-| `delimiters` | 区切り文字として使用する文字。 |
-| `quotes` | 引用符に使用する文字。 |
-| `escapes` | エスケープ文字として使用する文字。 |
-| `header` | アップロードするファイルにはヘッダーが含まれている&#x200B;**必要**&#x200B;があります。スキーマの検証が行われるので、この値を true に設定する必要があります。また、ヘッダーにスペースを含めることは&#x200B;**できません**。ヘッダーにスペースが含まれている場合は、アンダースコアで置き換えてください。 |
-| `charset` | オプションのフィールド。その他のサポートされている文字セットには、「US-ASCII」と「ISO-8869-1」があります。空のままにすると、デフォルトで UTF-8 が使用されます。 |
-
-参照するデータセットには、上記のファイル記述ブロックが含まれ、レジストリ内の有効なスキーマを指す必要があります。そうしないと、ファイルはParketにマスターされません。
 
 ### バッチの作成
 
@@ -817,7 +783,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## バッチの削除 {#delete-a-batch}
+## バッチの削除  {#delete-a-batch}
 
 `action=REVERT` クエリパラメーターを使用して、削除するバッチの ID に対して次の POST リクエストを実行すると、バッチを削除できます。バッチは「非アクティブ」と指定され、ガベージコレクションの対象となります。バッチは非同期で収集され、その時点で「削除済み」と指定されます。
 
