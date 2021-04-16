@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: ジョブAPIエンドポイントの書き出し
-topic: guide
+topic: ガイド
 type: Documentation
 description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースからのデータを統合することで、Adobe Experience Platform内の個々の顧客の単一の表示を構築できます。 次に、プロファイルデータをデータセットにエクスポートし、さらに処理することができます。
+exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1543'
 ht-degree: 63%
 
 ---
-
 
 # ジョブエンドポイントの書き出し
 
@@ -68,9 +68,7 @@ curl -X POST \
           "contentType": "application/vnd.adobe.xed+json;version=1"
         },
         "fileDescription": {
-          "persisted": true,
-          "containerFormat": "parquet",
-          "format": "parquet"
+          "persisted": true
         }
       }'
 ```
@@ -91,7 +89,7 @@ curl -X POST \
 ] 
 ```
 
-### エクスポートジョブの開始 {#initiate}
+### エクスポートジョブの開始  {#initiate}
 
 和集合保持データセットを取得したら、リアルタイム顧客プロファイル API の `/export/jobs` エンドポイントに対して POST リクエストを実行し、エクスポートするデータの詳細をリクエストの本文で提供することにより、データセットにプロファイルデータを保持するためのエクスポートジョブを作成できます。
 
