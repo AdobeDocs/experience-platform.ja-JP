@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API；データセットを有効にする
 title: APIを使用したプロファイルおよびIDサービス用のデータセットの設定
-topic: tutorial
+topic: チュートリアル
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience PlatformAPIを使用して、リアルタイム顧客プロファイルおよびIDサービスでデータセットを有効にする方法について説明します。
+exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1057'
+source-wordcount: '1058'
 ht-degree: 57%
 
 ---
-
 
 # APIを使用した[!DNL Profile]と[!DNL Identity Service]のデータセットの設定
 
@@ -37,7 +37,7 @@ ht-degree: 57%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -79,9 +79,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fileDescription" : {
-    "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     },
     "fields":[],
     "schemaRef" : {
@@ -175,9 +173,7 @@ curl -X GET \
         "viewId": "5b020a27e7040801dedbf46f",
         "status": "enabled",
         "fileDescription": {
-            "persisted": true,
-            "containerFormat": "parquet",
-            "format": "parquet"
+            "persisted": true
         },
         "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
