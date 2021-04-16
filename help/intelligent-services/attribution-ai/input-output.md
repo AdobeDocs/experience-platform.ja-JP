@@ -6,10 +6,10 @@ topic: Attribution AIの入出力データ
 description: 次のドキュメントでは、Attribution AIで使用される様々な入出力の概要を説明します。
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
 workflow-type: tm+mt
-source-wordcount: '2098'
-ht-degree: 15%
+source-wordcount: '2189'
+ht-degree: 14%
 
 ---
 
@@ -19,7 +19,16 @@ ht-degree: 15%
 
 ## [!DNL Attribution AI] 入力データ
 
-[!DNL Attribution AI] は、 [!DNL Consumer Experience Event] データを使用してアルゴリズムのスコアを計算します。[!DNL Consumer Experience Event]の詳細については、[Intelligent Servicesドキュメントで使用するデータの準備](../data-preparation.md)を参照してください。
+Attribution AIは、次のデータセットのいずれかを分析してアルゴリズムスコアを計算することで機能します。
+
+- コンシューマーエクスペリエンスイベント(CEE)データセット
+- [Analyticsソースコネクタ](../../sources/tutorials/ui/create/adobe-applications/analytics.md)を使用したAdobe Analyticsデータセット
+
+>[!IMPORTANT]
+>
+>Adobe Analyticsのソースコネクタは、データをバックフィルするのに最大4週間かかる場合があります。 コネクターを最近設定した場合は、Attribution AIに必要な最小長のデータがデータセットに含まれていることを確認する必要があります。 [履歴データ](#data-requirements)のセクションを確認し、正確なアルゴリズムスコアを計算するのに十分なデータがあることを確認してください。
+
+[!DNL Consumer Experience Event] (CEE)スキーマの設定の詳細については、『[インテリジェントサービスデータ準備](../data-preparation.md)』ガイドを参照してください。 Adobe Analyticsデータのマッピングについて詳しくは、[Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md)のドキュメントを参照してください。
 
 Attribution AIの場合、[!DNL Consumer Experience Event] (CEE)スキーマのすべての列が必須ではありません。
 
