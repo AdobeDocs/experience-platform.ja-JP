@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気の高いトピック；セグ
 solution: Experience Platform
 title: セグメント結果の評価とアクセス
 topic: チュートリアル
-type: チュートリアル
+type: Tutorial
 description: このチュートリアルでは、Adobe Experience PlatformSegmentation Service APIを使用してセグメントを評価し、セグメントの結果にアクセスする方法を学びます。
+exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1569'
 ht-degree: 61%
 
 ---
-
 
 # セグメント結果の評価とアクセス
 
@@ -144,7 +144,7 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 アクセスしたい特定のプロファイルを知っている場合は、[!DNL Real-time Customer Profile] APIを使ってアクセスできます。 個々のプロファイルにアクセスするための完全な手順については、[プロファイル API を使用したリアルタイム顧客プロファイルデータへのアクセス](../../profile/api/entities.md)のチュートリアルで説明しています。
 
-## セグメントのエクスポート {#export}
+## セグメントのエクスポート  {#export}
 
 セグメントジョブが正常に完了したら（`status` 属性の値は「SUCCEEDED」）、オーディエンスをデータセットにエクスポートして、オーディエンスにアクセスし、処理をおこなうことができます。
 
@@ -193,9 +193,7 @@ curl -X POST \
         "contentType": "application/vnd.adobe.xed+json;version=1"
     },
     "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     }
 }'
 ```
