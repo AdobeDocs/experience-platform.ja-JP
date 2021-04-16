@@ -2,16 +2,16 @@
 keywords: Experience Platform；ユーザーガイド；アトリビューションai；人気のあるトピック；地域
 solution: Experience Platform, Intelligent Services
 title: Attribution AIUIガイド
-topic: User guide
+topic: 'ユーザーガイド '
 description: このドキュメントは、インテリジェントサービスユーザーインターフェイスの Attribution AI を操作するためのガイドとなります。
+exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 013f8d99fc394477177fdbf7eb9dd9b8ce94b88f
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1767'
 ht-degree: 78%
 
 ---
-
 
 # Attribution AIUIガイド
 
@@ -65,7 +65,11 @@ Attribution AI サービスページが表示されます。このページに�
 
 基本情報を入力したら、**Select Dataset** ドロップダウンをクリックしてデータセットを選択します。データセットは、モデルのトレーニングと、モデルが生成する後続のデータのスコアリングに使用されます。ドロップダウンセレクターからデータセットを選択する際、Attribution AI と互換性があり、XDM（Experience Data Model）スキーマに準拠するデータセットのみリスト表示されます。データセットを選択したら、右上隅の「**Next**」をクリックして、イベント定義ページに進みます。
 
-![設定ページ](./images/user-guide/initial_creation_attribution.png)
+>[!TIP]
+>
+>Adobe Analyticsデータセットは、Analytics Source Connectorを介してサポートされます。
+
+![設定ページ](./images/user-guide/dataset_selector.png)
 
 ## イベントの定義
 
@@ -75,7 +79,7 @@ Attribution AI サービスページが表示されます。このページに�
 - **ルックバックウィンドウ**：コンバージョンイベントの何日前からのタッチポイントを考慮に入れるかを示す時間枠です。
 - **タッチポイント**：コンバージョンの数値的影響つまり売上ベースの影響を評価するために使用する、受信者レベル、個人レベル、cookie レベルのマーケティングイベントです。
 
-### コンバージョンイベントの定義 {#define-conversion-events}
+### コンバージョンイベントの定義  {#define-conversion-events}
 
 コンバージョンイベントを定義するには、イベントに名前を付け、**フィールド名を入力** ドロップダウンメニューをクリックしてイベントタイプを選択する必要があります。
 
