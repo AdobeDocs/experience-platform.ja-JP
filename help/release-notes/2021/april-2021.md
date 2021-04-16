@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 2736b81ae32eebe4cbc997e106315be2529c0d15
+source-git-commit: fff9e6455c6eae5f9903e1d28ab365cddfd51ef8
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 24%
+source-wordcount: '331'
+ht-degree: 31%
 
 ---
 
@@ -38,6 +38,8 @@ Adobe Experience Platform の既存の機能のアップデート：
 サポートされるデータセットの詳細については、[[!DNL Intelligent Services] データ準備ドキュメント](../../intelligent-services/data-preparation.md)を参照してください。
 
 ### Attribution AI
+
+Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、カスタマージャーニーにわたる個々のマーケティングタッチポイントのマーケティング効果をマーケターが定量化するのに役立ちます。
 
 | 機能 | 説明 |
 | ------- | ----------- |
