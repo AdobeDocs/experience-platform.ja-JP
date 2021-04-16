@@ -6,7 +6,7 @@ topic: 開発者ガイド
 description: このドキュメントでは、Catalog Service APIでデータセットオブジェクトを作成する方法について説明します。
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 48%
@@ -44,11 +44,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/719c4e19184402c27595e65b931a142b",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
     }
 }'
 ```
