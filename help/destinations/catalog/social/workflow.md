@@ -5,10 +5,10 @@ type: Tutorial
 description: Adobe Experience Platformのソーシャル広告アカウントに接続する方法を説明します。
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: e2af4fcfe232889f3f928c00c9f9b37cf9754ca1
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 19%
+ht-degree: 11%
 
 ---
 
@@ -64,8 +64,8 @@ ht-degree: 19%
 
 上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
 
-これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。いずれの場合も、ワークフローでのこの後の操作については、次の「[ソーシャルネットワークに対してセグメントをアクティブ化する](#activate-segments)」の節を参照してください。
+これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。どちらの場合も、残りのワークフローについては、次の[ソーシャル宛先に対するセグメントのアクティブ化](#activate-segments)の節を参照してください。
 
-## ソーシャルネットワークに対してセグメントをアクティブ化する {#activate-segments}
+## ソーシャルリンク先に対するセグメントのアクティブ化{#activate-segments}
 
-ソーシャルネットワークに対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
+ソーシャルリンク先に対するセグメントをアクティブ化する方法については、[宛先へのデータをアクティブ化](../../ui/activate-destinations.md)を参照してください。
