@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: fff9e6455c6eae5f9903e1d28ab365cddfd51ef8
+source-git-commit: 73ecf6e6f9796088e2d14f9dc3d9667104b22a8e
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 31%
+source-wordcount: '586'
+ht-degree: 36%
 
 ---
 
@@ -19,7 +19,22 @@ ht-degree: 31%
 
 Adobe Experience Platform の既存の機能のアップデート：
 
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Intelligent Services]](#intelligent-services)
+- [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] データエンジニアがエクスペリエンスデータモデル(XDM)との間でデータのマッピング、変換、検証を行えるようにします。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 既存のデータフローのマッピングの編集のサポート | 既存のデータフローのマッピング・セットを更新できるようになりました。 1回の取り込みにスケジュールされたデータフローのマッピングセットは更新できません。 この機能は、HTTP API、Adobe Analytics、Adobe Audience Manager、および[!DNL Marketo Engage]ではサポートされていません。 詳しくは、UI](../../sources/tutorials/ui/update-dataflows.md)の[ソースデータフローの更新に関するチュートリアルを参照してください。 |
+| ストリーミング取り込みのサポート | ストリーミングソース接続の作成時に、データ準備機能を使用できるようになりました。 詳しくは、UI](../../sources/tutorials/ui/create/streaming/http.md)での[ストリーミングソース接続の作成に関するチュートリアルを参照してください。 |
+
+詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
@@ -47,3 +62,14 @@ Attribution AI は、コンバージョンイベントにつながるタッチ�
 
 サポートされるデータセットの詳細については、[[!DNL Intelligent Services] データ準備ドキュメント](../../intelligent-services/data-preparation.md)を参照してください。
 
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+
+Experience Platform には、様々なデータプロバイダーへのソース接続を簡単に設定できる RESTful API とインタラクティブ UI が用意されています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| [!DNL Marketo Engage] (ベータ) | UIを使って[!DNL Marketo Engage]ソース接続を作成し、B2Bデータをプラットフォームに送り、プラットフォームに接続されたアプリケーションを使ってこのデータを最新の状態に保つことができるようになりました。 詳しくは、[[!DNL Marketo Engage] ソースコネクタのドキュメント](../../sources/connectors/adobe-applications/marketo/marketo.md)を参照してください。 |
+
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
