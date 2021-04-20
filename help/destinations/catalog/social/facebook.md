@@ -4,9 +4,9 @@ title: Facebook接続
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制のために、Facebookキャンペーンのプロファイルをアクティブにします。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1146'
 ht-degree: 16%
 
 ---
@@ -117,7 +117,7 @@ Experience Platformでの電子メールアドレスの取り込みについて�
 
 ## 宛先に接続 {#connect-destination}
 
-[!DNL Facebook]宛先に接続するには、[ソーシャルネットワーク宛先認証ワークフロー](./workflow.md)を参照してください。
+[!DNL Facebook]宛先に接続するには、[ソーシャル宛先認証ワークフロー](./workflow.md)を参照してください。
 
 次のビデオでは、[!DNL Facebook]宛先を設定し、セグメントをアクティブにする手順も示しています。
 
