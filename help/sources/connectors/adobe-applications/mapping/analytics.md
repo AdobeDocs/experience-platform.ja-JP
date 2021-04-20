@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Analyticsマッピングフィールド；Analyticsマッピング
 solution: Experience Platform
 title: Adobe Analyticsソースコネクタのフィールドのマッピング
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）を介して Adobe Analytics データを取り込むことができます。ADC を通じて取り込まれるデータには、Analytics フィールドからエクスペリエンスデータモデル（XDM）フィールドに直接マッピングできるものや、正しくマッピングされるために変換や特定の関数が必要になるものがあります。
+exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '3393'
+source-wordcount: '3405'
 ht-degree: 99%
 
 ---
-
 
 # Analyticsフィールドのマッピング
 
@@ -124,6 +124,8 @@ Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）
 | videopausetime | media.mediaTimed.pauseTime | オブジェクト | <!-- MISSING --> | {id (文字列), value (数値)} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | 整数 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## マッピングフィールドの分割
 
 これらのフィールドには 1 つのソースがありますが、**複数の** XDM の場所にマッピングされます。
@@ -133,6 +135,8 @@ Adobe Experience Platform を使用すると、Analytics Data Connector（ADC）
 | s_resolution | device.screenWidth、device.screenHeight | 整数 | モニターの解像度を表す数値 ID。 |
 | mobileosversion | environment.operatingSystem、environment.operatingSystemVersion | 文字列 | モバイルオペレーティングシステムのバージョン。 |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | 整数 | ビデオ広告の長さ。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 生成されたマッピングフィールド
 
@@ -191,6 +195,8 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | 文字列 | Mobile Services ビーコンの近接性. |
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | 整数 | ビデオの章の名前。 |
 | videolength | media.mediaTimed.primaryAssetReference._xmpDM.duration | 整数 | ビデオの長さ。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 高度なマッピングフィールド
 
@@ -269,3 +275,5 @@ ADC からのフィールドを変換する要選択します。XDM で生成す
 | visit_ref_type | _experience.analytics.session.web.webReferrer.type | 文字列 | 訪問の最初のリファラーのリファラータイプを表す数値 ID。 |
 | visit_search_engine | _experience.analytics.session.search.searchEngine | 文字列 | 訪問の最初の検索エンジンを表す数値 ID。 |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | 整数 | 訪問者の最初のヒットのタイムスタンプ（Unix 時間）。 |
+
+{style=&quot;table-layout:auto&quot;}
