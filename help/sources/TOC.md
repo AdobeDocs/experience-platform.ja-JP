@@ -1,14 +1,13 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
-feature: Data Ingestion, Sources
+feature: データ取り込み、ソース
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '602'
 ht-degree: 16%
 
 ---
@@ -27,6 +26,11 @@ ht-degree: 16%
          - [Analyticsフィールドのマッピング](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Managerフィールドのマッピング](connectors/adobe-applications/mapping/audience-manager.md)
          - [ターゲットフィールドのマッピング](connectors/adobe-applications/mapping/target.md)
+         - [Marketo Engageフィールドのマッピング](connectors/adobe-applications/mapping/marketo.md)
+      - Marketo Engage{#marketo}
+         - [Marketo Engageコネクタ](connectors/adobe-applications/marketo/marketo.md)
+         - [Marketo Engage認証ガイド](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Marketo Engage名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - 広告 {#advertising}
       - [Google AdWordsコネクタ](connectors/advertising/ads.md)
    - クラウドストレージ{#cloud-storage}
@@ -159,6 +163,7 @@ ht-degree: 16%
          - [Adobe Analytics（分類データ）](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [顧客属性](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - 広告 {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - クラウドストレージ{#cloud-storage}
