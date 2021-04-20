@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Adobe Experience Platform に関する FAQ とトラブルシューティングガイド
 description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドを見つけます。
 landing-page-description: よくある質問への回答、および Experience Platform の一般的なエラーのトラブルシューティングに関するガイドを見つけます。
-topic: getting started
+topic: はじめに
 type: Documentation
+exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
+source-git-commit: e722d7598a558bcbc5c48d237d394f91c0803352
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1717'
 ht-degree: 70%
 
 ---
-
 
 # [!DNL Platform] FAQとトラブルシューティングガイド
 
@@ -88,7 +88,7 @@ UI と API のどちらを使用しているかによって、次の必要シス
 [!DNL Experience Platform] APIでは、次のステータスコードが検出される場合があります。 それぞれに様々な原因があり、本項で述べる説明は概して一般的なものです。個々の[!DNL Platform]サービスの特定のエラーに関する詳細は、下の[サービストラブルシューティングディレクトリ](#service-troubleshooting-directory)を参照してください。
 
 | ステータスコード | 説明 | 考えられる原因 |
---- | --- | ---
+|--- | --- | ---|
 | 400 | Bad request | リクエストが不適切に構築され、キー情報が欠落している、または正しくない構文が含まれていました。 |
 | 401 | Authentication failed | リクエストが認証チェックに合格しませんでした。アクセストークンが見つからないか、無効です。詳しくは、以下の「[OAuth トークンエラー](#oauth-token-is-missing)」の節を参照してください。 |
 | 403 | Forbidden | リソースが見つかりましたが、リソースを表示するための正しい資格情報がありません。 |
@@ -198,4 +198,3 @@ UI と API のどちらを使用しているかによって、次の必要シス
 | [!DNL Flow Service] ([!DNL Sources] および [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] トラブルシューティングガイド](../profile/troubleshooting.md) |
 | サンドボックス | [サンドボックス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [サンドボックストラブルシューティングガイド](../sandboxes/troubleshooting-guide.md) |
-
