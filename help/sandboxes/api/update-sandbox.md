@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Sandboxの更新
 solution: Experience Platform
 title: APIでサンドボックスを更新する
-topic: 開発ガイド
+topic: developer guide
 description: 要求パスにサンドボックスの名前を含むPATCH要求を作成し、要求ペイロードに更新するプロパティを含めることで、サンドボックス内の1つ以上のフィールドを更新できます。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloudストレージ;Google Cloudストレージ;GCS;gcs
 solution: Experience Platform
 title: UIでのGoogle Cloudストレージソース接続の作成
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: Adobe Experience PlatformUIを使用してGoogle Cloudストレージソース接続を作成する方法を説明します。
 translation-type: tm+mt
 source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4

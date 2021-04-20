@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；監視；モニタ；データフロー；モニタ取り込み；データ取り込み；データ取り込み；表示レコード；表示バッチ；
 solution: Experience Platform
 title: データ収集の監視
-topic: 概要
+topic: overview
 description: このユーザーガイドでは、Adobe Experience Platform ユーザーインターフェイス内でデータを監視する方法の手順を説明します。このガイドでは、Adobe ID を持っていて、Adobe Experience Platform にアクセスできる必要があります。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

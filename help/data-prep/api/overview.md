@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform；データ準備；データ準備api；トラブルシューティング；API
 title: データ準備APIの概要
-topic: ガイド
+topic: guide
 description: データ準備APIを使用すると、マッピングのセットと関数をプログラムによって作成でき、ソーススキーマとターゲットノードの間でデータを変換できます。
 translation-type: tm+mt
 source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498

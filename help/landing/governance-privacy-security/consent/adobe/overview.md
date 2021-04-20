@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Adobe Experience Platformでの同意処理
-topic: はじめに
+topic: getting started
 description: Adobe2.0標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を学びます。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt

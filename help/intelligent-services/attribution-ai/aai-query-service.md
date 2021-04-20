@@ -2,7 +2,7 @@
 keywords: インサイト；アトリビューションai；アトリビューションaiインサイト；AAIクエリサービス；アトリビューションクエリ；アトリビューションスコア
 solution: Intelligent Services, Experience Platform
 title: クエリサービスを使用したアトリビューションスコアの分析
-topic: Attribution AIクエリ
+topic: Attribution AI queries
 description: Adobe Experience Platformクエリサービスを使用してAttribution AIスコアを分析する方法を説明します。
 translation-type: tm+mt
 source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9

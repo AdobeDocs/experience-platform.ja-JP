@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 汎用同意フィールドデータ型
-topic: 概要
+topic: overview
 description: このドキュメントでは、汎用同意フィールドのXDMデータ型の概要を説明します。
 translation-type: tm+mt
 source-git-commit: ebcd8900687b6e91d3f06690a9db0e118bbc3b58

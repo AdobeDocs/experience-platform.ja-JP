@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；リストサンドボックス
 solution: Experience Platform
 title: APIのリストサンドボックス
-topic: 開発ガイド
+topic: developer guide
 description: IMS組織に属するすべてのサンドボックス（アクティブな場合もその他の場合も）をリストするには、/sandboxsエンドポイントにGETリクエストを行います。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

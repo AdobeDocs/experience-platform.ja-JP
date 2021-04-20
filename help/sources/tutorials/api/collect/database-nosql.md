@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データベースデータベース；サードパーティのデータベース
 solution: Experience Platform
 title: ソースコネクタとAPIを使用したデータベースからのデータ収集
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: このチュートリアルでは、データベースからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt

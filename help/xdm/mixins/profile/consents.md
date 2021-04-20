@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: プライバシー/パーソナライゼーション/マーケティングの環境設定（同意） Mixin
-topic: 概要
+topic: overview
 description: このドキュメントでは、プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）ミックスインの概要を説明します。
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

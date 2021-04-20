@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 金融サービス業界データモデルERD
-topic: 概要
+topic: overview
 description: 表示とは、銀行、金融サービス、保険(BFSI)業界向けの標準化されたデータモデルを示すERD(Entity Relationship Diagram)です。 このデータモデルは、Adobe Experience Platformで使用するExperience Data Model(XDM)と互換性があります。
 translation-type: tm+mt
 source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60

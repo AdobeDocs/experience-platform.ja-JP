@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；リアルタイム顧客プロファイル;IDサービス；
 solution: Experience Platform
 title: リアルタイム顧客プロファイルのチュートリアル
-topic: チュートリアル
-type: チュートリアル
+topic: tutorial
+type: Tutorial
 description: このドキュメントでは、関連する手順について説明し、各ワークフローを完了するためのチュートリアルへのリンクを示しています。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

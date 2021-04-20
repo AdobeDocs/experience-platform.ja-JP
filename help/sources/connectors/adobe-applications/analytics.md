@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Analytics Data Connector;analytics;Analytics
 solution: Experience Platform
 title: レポートスイートデータ用Adobe Analyticsソースコネクタ
-topic: 概要
+topic: overview
 description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；マーケティングの自動化
 solution: Experience Platform
 title: Flow Service APIを使用したMarketing Automationシステムの調査
-topic: 概要
+topic: overview
 description: このチュートリアルでは、Flow Service APIを使用して、マーケティング自動化システムを調査します。
 translation-type: tm+mt
 source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85

@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データ収集；起動；Web sdk
 solution: Experience Platform
 title: データ収集の概要
-topic: 概要
+topic: overview
 description: Adobe Experience Platformでの顧客体験のデータ収集に関連する様々なテクノロジーについて説明します。
 translation-type: tm+mt
 source-git-commit: 629fe68029a9f45e45d5e2d238ffff455c7d6de6

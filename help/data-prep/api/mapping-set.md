@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；マッピングセット；
 solution: Experience Platform
 title: マッピングセットAPIエンドポイント
-topic: マッピングセット
+topic: mapping sets
 description: 'Adobe Experience PlatformAPIの`/mappingSets`エンドポイントを使用すると、マッピングセットをプログラムによって取得、作成、更新および検証できます。 '
 translation-type: tm+mt
 source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf

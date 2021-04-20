@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックス；サンドボックス；テスト；テスト
 solution: Experience Platform
 title: サンドボックスの概要
-topic: 概要
+topic: overview
 description: サンドボックスは、Experience Platform の単一のインスタンス内の仮想パーティションで、デジタルエクスペリエンスアプリケーションの開発プロセスとシームレスに統合できます。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

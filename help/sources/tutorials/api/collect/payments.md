@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；支払データの収集；支払データ
 solution: Experience Platform
 title: ソースコネクタとAPIを使用した支払データの収集
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: このチュートリアルでは、支払い申込書からデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt

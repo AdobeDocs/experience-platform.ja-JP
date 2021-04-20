@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform;apiガイド；プラットフォームapiガイド；プラットフォームの紹介；開発者ガイド
 solution: Experience Platform
 title: Adobe Experience PlatformAPIの使い始めに
-topic: apiガイド
+topic: api guide
 description: Adobe Experience Platformは互いに密接に関連したAPIサービスを提供しています。 このガイドには、使用可能なサービス、CRUD操作に必要なヘッダー、エラーメッセージ、Postmanコレクション、サンプルAPI呼び出しに関する情報が含まれています。
 translation-type: tm+mt
 source-git-commit: 85d2ae5ccf1b27baaafe839f1d3f00d588abe4fc

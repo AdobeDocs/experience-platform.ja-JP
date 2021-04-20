@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメントサービス；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント
 solution: Experience Platform
 title: Segmentation Serviceの概要
-topic: 概要
+topic: overview
 description: Adobe Experience Platformセグメントサービスと、それがプラットフォームエコシステムで果たす役割について説明します。
 translation-type: tm+mt
 source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef

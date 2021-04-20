@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 購読データ型を持つ汎用マーケティング環境設定フィールド
-topic: 概要
+topic: overview
 description: このドキュメントでは、購読のXDMデータ型を持つ汎用マーケティングプリファレンスフィールドの概要を説明します。
 translation-type: tm+mt
 source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa

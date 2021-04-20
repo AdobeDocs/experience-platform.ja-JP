@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ；列挙；ミックスイン；ミックスイン；ミックスイン；データ型；データ型；データ型；データ型；一次ID；一次ID;XDM個別プロファイル；列挙型；エクスペリエンスイベント;XDM ExperienceEvent；エクスペリエンスイベント；エクスペリエンスイベント；XDM ExperienceEvent;スキーマ設計；クラス；クラス；クラス；クラス；データ型；データ型；データ型；スキーマ;イベント;identityMap;IDマップ；IDマップ；スキーマ設計；マップ；スキーマ和集合;スキーマ
 solution: Experience Platform
 title: スキーマ組成の基礎
-topic: 概要
+topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 translation-type: tm+mt
 source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2

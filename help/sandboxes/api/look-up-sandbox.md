@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックスを検索；サンドボックスを検索
 solution: Experience Platform
 title: APIでのサンドボックスの検索
-topic: 開発ガイド
+topic: developer guide
 description: 個々のサンドボックスを検索するには、要求パスにサンドボックスのnameプロパティを含むGET要求を作成します。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

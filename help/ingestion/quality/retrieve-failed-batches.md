@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；取得失敗したバッチ；取得失敗したバッチ；失敗したバッチ；バッチ取り込み；失敗したバッチ；取得失敗したバッチ；ダウンロード失敗したバッチ；
 solution: Experience Platform
 title: データアクセスAPIを使用した失敗したバッチの取得
-topic: チュートリアル
-type: チュートリアル
+topic: tutorial
+type: Tutorial
 description: このチュートリアルでは、データ取得 API を使用して、失敗したバッチに関する情報を取得する手順を説明します。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

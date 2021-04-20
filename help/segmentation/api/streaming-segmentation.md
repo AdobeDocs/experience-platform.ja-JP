@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ストリーミングセグメント化；ストリーミングセグメント化；連続評価；
 solution: Experience Platform
 title: 'ストリーミングセグメント化によりほぼリアルタイムでイベントを評価 '
-topic: 開発者ガイド
+topic: developer guide
 description: このドキュメントでは、Adobe Experience PlatformセグメントサービスAPIを使用したストリーミングセグメントの使用方法の例を示します。
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt

@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；アカウントの削除；削除；api
 solution: Experience Platform
 title: Flow Service APIを使用したアカウントの削除
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: Flow Service APIを使用してアカウントを削除する方法を説明します。
 translation-type: tm+mt
 source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb

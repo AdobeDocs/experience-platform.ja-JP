@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Flow Service APIを使用したPostgreSQLソース接続の作成
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをPostgreSQLに接続する方法を学びます。
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

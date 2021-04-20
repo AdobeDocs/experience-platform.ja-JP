@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: データ準備ガイド
 user-guide-description: Adobe Experience Platform に取り込むデータを準備します。
-feature: データ管理、データ取り込み
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 旅行・接客業界データモデルERD
-topic: 概要
+topic: overview
 description: 表示とは、Adobe Experience Platformで使用されるExperience Data Model(XDM)と互換性がある、旅行業界および接客業界向けの標準化されたデータモデルを示すエンティティ関係図(ERD)です。
 translation-type: tm+mt
 source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60

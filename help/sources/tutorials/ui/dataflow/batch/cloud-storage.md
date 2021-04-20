@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データフロー；データフロー
 solution: Experience Platform
 title: UIでのクラウドストレージバッチコネクタのデータフローの設定
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、クラウドストレージアカウントを使用して新しいデータフローを設定する手順を説明します。
 translation-type: tm+mt
 source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48

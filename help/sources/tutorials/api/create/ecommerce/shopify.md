@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Shopify;shopify;eコマース
 solution: Experience Platform
 title: Flow Service APIを使用したShopifyコネクタソース接続の作成
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: Flow Service APIを使用してShopifyをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
 source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3

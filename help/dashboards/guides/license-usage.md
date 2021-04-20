@@ -2,8 +2,8 @@
 keywords: Experience Platform；ユーザインターフェイス；UI；カスタマイズ；ライセンス使用ダッシュボード;ダッシュボード；ライセンス使用；エンタイトルメント；コンシューム
 title: ライセンスの使用ダッシュボード
 description: Adobe Experience Platformは、組織のライセンスの使用に関する重要な情報を表示できるダッシュボードを提供します。
-topic: ガイド
-type: ドキュメント
+topic: guide
+type: Documentation
 translation-type: tm+mt
 source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
 workflow-type: tm+mt

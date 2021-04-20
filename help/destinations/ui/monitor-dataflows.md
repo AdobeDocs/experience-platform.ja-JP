@@ -3,8 +3,8 @@ keywords: Experience Platform；ホーム；人気の高いトピック；モニ
 description: 宛先は、宛先プラットフォームとの統合が事前に構築されており、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。 宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 solution: Experience Platform
 title: データフローの監視
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
 source-git-commit: e436d7147c613dad5b2ff596a412759fd60d228c

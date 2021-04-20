@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Google PubSub;google pubsub
 solution: Experience Platform
 title: Flow Service APIを使用したGoogle PubSubソース接続の作成
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをGoogle PubSubアカウントに接続する方法を説明します。
 translation-type: tm+mt
 source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14

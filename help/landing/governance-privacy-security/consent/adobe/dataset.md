@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: 同意データと優先データを取り込むためのデータセットの設定
-topic: はじめに
+topic: getting started
 description: Adobe Experience Platformで同意と嗜好データを取り込むためのExperience Data Model(XDM)スキーマおよびデータセットの設定方法について説明します。
 translation-type: tm+mt
 source-git-commit: 980bff169659d3ffc92a0678f8a0b153b3189906

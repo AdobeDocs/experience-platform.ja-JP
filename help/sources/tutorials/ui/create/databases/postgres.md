@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: UIでのPostgreSQLソース接続の作成
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: Adobe Experience PlatformUIを使用してPostgreSQLソース接続を作成する方法を学びます。
 translation-type: tm+mt
 source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18

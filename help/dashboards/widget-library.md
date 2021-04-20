@@ -2,7 +2,7 @@
 keywords: Experience Platform；ユーザインターフェイス；UI;ダッシュボード;ダッシュボード;プロファイル；セグメント；宛先；ライセンスの使用
 title: ウィジェットライブラリを使用したダッシュボードウィジェットの追加作成と作成
 description: 'このガイドでは、標準ウィジェットを追加し、Adobe Experience Platformでダッシュボードデータを視覚化するカスタムウィジェットを作成する手順を順を追って説明します。 '
-topic: ガイド
+topic: guide
 translation-type: tm+mt
 source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
 workflow-type: tm+mt

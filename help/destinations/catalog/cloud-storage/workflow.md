@@ -1,7 +1,7 @@
 ---
 keywords: クラウドのストレージ先；クラウドのストレージ
 title: クラウドストレージの保存先の作成
-type: チュートリアル
+type: Tutorial
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c

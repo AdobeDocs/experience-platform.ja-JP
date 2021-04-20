@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ソース；取り込み；トラブルシューティング；ソースのトラブルシューティング；ソースfaq；ソースコネクタ；ソースコネクタ；ソースコネクタfaq；ソースコネクタのトラブルシューティング；
 solution: Experience Platform
 title: ソースのトラブルシューティング
-topic: トラブルシューティング
+topic: troubleshooting
 description: このドキュメントでは、Adobe Experience Platformのソースに関するよくある質問に対する回答を示します。
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt

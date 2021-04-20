@@ -1,7 +1,7 @@
 ---
 keywords: 宛先アカウントの更新；宛先アカウント；アカウントの更新方法
 title: 宛先アカウントの更新
-type: チュートリアル
+type: Tutorial
 description: このチュートリアルでは、Adobe Experience PlatformUIで宛先アカウントを更新する手順をリストします
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
 translation-type: tm+mt

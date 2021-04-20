@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データソース接続
 solution: Experience Platform
 title: Flow Service APIを使用したサードパーティのクラウドストレージシステムからのパーケットデータの取り込み
-topic: 概要
+topic: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムからApache Parketデータを取り込む手順を順を追って説明します。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041

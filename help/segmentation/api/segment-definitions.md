@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；セグメント定義；セグメント定義；api;API;
 solution: Experience Platform
 title: セグメント定義APIエンドポイント
-topic: 開発ガイド
+topic: developer guide
 description: Adobe Experience PlatformSegmentation Service APIのセグメント定義エンドポイントは、組織のセグメント定義をプログラムで管理できるようにします。
 translation-type: tm+mt
 source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b

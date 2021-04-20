@@ -2,8 +2,8 @@
 keywords: Experience Platform；パッケージレシピの読み込み；Data Science Workspace；人気の高いトピック；レシピ；ui；エンジンの作成
 solution: Experience Platform
 title: Data Science Workspace UIでのパッケージ化されたレシピの読み込み
-topic: チュートリアル
-type: チュートリアル
+topic: tutorial
+type: Tutorial
 description: このチュートリアルでは、提供された「小売売上」の例を使用してパッケージ化されたレシピを設定およびインポートする方法に関するインサイトを提供します。このチュートリアルの最後までに、Adobe Experience Platform Data Science Workspace　でモデルの作成、トレーニング、評価をおこなう準備が整います。
 translation-type: tm+mt
 source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e

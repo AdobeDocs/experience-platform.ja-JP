@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；更新データフロー
 solution: Experience Platform
 title: Flow Service APIを使用したデータフローの更新
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: このチュートリアルでは、名前、説明、スケジュールなど、Flow Service APIを使用してデータフローを更新する手順を説明します。
 translation-type: tm+mt
 source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22

@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: ガバナンス、プライバシー、セキュリティの概要
-topic: 概要
+topic: overview
 description: Adobe Experience Platformは、ビジネス慣行、法的義務、開発プロセスに従うために、収集したエクスペリエンスデータを確実に制御できるいくつかのサービスとツールを提供しています。
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt

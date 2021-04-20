@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ユーザーガイド；uiガイド；セグメント化uiガイド；セグメントビルダー；実現；既存；終了；
 solution: Experience Platform
 title: Segmentation Service UIガイド
-topic: uiガイド
+topic: ui guide
 description: Adobe Experience Platformセグメントサービスは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 translation-type: tm+mt
 source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3

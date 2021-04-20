@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ID名前空間;ID名前空間
 solution: Experience Platform
 title: IDサービストラブルシューティングガイド
-topic: トラブルシューティング
+topic: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

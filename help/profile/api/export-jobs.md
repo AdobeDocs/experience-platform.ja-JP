@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: ジョブAPIエンドポイントの書き出し
-topic: ガイド
+topic: guide
 type: Documentation
 description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースからのデータを統合することで、Adobe Experience Platform内の個々の顧客の単一の表示を構築できます。 次に、プロファイルデータをデータセットにエクスポートし、さらに処理することができます。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67

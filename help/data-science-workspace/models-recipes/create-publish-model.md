@@ -2,8 +2,8 @@
 keywords: Experience Platform；機械学習モデル；Data Science Workspace；一般的なトピック；モデルの作成と公開
 solution: Experience Platform
 title: 機械学習モデルの作成と公開
-topic: チュートリアル
-type: チュートリアル
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace は、事前に作成された製品推奨レシピを使用して目標を達成する手段を提供します。このチュートリアルに従って、小売データにアクセスして理解し、機械学習モデルを作成して最適化し、Data Science Workspaceでインサイトを生成する方法を確認します。
 translation-type: tm+mt
 source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b

@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；データ準備；データ準備；データの準備；データの準備；
 solution: Experience Platform
 title: データ準備の概要
-topic: 概要
+topic: overview
 description: このドキュメントでは、Adobe Experience Platform内でのデータ準備について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt

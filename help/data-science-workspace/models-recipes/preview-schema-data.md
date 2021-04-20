@@ -2,8 +2,8 @@
 keywords: Experience Platform;プレビュースキーマデータ；Data Science Workspace；人気の高いトピック
 solution: Experience Platform
 title: 小売売上スキーマとデータセットのプレビュー
-topic: チュートリアル
-type: チュートリアル
+topic: tutorial
+type: Tutorial
 description: 次のドキュメントでは、Adobe Experience Platformでのスキーマとデータセットのプレビューの概要を説明します。
 translation-type: tm+mt
 source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09

@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: リアルタイム顧客プロファイルAPI使用の手引き
-topic: ガイド
-type: ドキュメント
+topic: guide
+type: Documentation
 description: プロファイルAPIの概要ガイドでは、プロファイルデータに対して基本的なCRUD操作を実行する際にリアルタイム顧客プロファイルAPIエンドポイントを使用する場合に知っておく必要がある、主要な概念と基本的な機能について説明します。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 汎用パーソナライゼーション設定フィールドデータ型
-topic: 概要
+topic: overview
 description: このドキュメントでは、汎用パーソナライゼーション環境設定フィールドのXDMデータ型の概要を説明します。
 translation-type: tm+mt
 source-git-commit: 9ca0978cdf42926303d622a4d536ac48bca32e70

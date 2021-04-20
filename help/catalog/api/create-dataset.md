@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データセット；データセット；データセットの作成；データセットの作成；データセットの有効化
 solution: Experience Platform
 title: APIでのデータセットの作成
-topic: 開発者ガイド
+topic: developer guide
 description: このドキュメントでは、Catalog Service APIでデータセットオブジェクトを作成する方法について説明します。
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt

@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；アカウントの更新
 solution: Experience Platform
 title: Flow Service APIを使用したアカウントの更新
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用してアカウントの詳細と秘密鍵証明書を更新する手順について説明します。
 translation-type: tm+mt
 source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb

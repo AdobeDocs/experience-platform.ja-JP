@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: Edge Projection APIエンドポイント
-topic: ガイド
-type: ドキュメント
+topic: guide
+type: Documentation
 description: Adobe Experience Platformでは、複数のチャネルにわたって、顧客に合わせた一貫性のあるパーソナライズされたエクスペリエンスをリアルタイムで提供できます。変更が発生した場合に適切なデータを容易に入手でき、継続的に更新できます。 これは、データを格納し、アプリケーションから容易にアクセスできるようにする、地理的に配置されたサーバであるエッジを使用して行われます。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

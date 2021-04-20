@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: データフローガイド
 user-guide-description: データフローは、Platform 間でデータを移動するデータジョブを表します。
-feature: データ管理、データ取り込み
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

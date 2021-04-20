@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；スキーマ;
 solution: Experience Platform
 title: スキーマAPIエンドポイント
-topic: スキーマ
+topic: schemas
 description: 'Adobe Experience PlatformAPIの`/functions''エンドポイントを使用すると、マッピング式とリストで使用可能なマッピングセット関数を検証できます。 '
 translation-type: tm+mt
 source-git-commit: 60c80a73deb8c77f19d5963cc3319d46143fb4c3

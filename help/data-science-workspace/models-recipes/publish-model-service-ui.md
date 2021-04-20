@@ -2,8 +2,8 @@
 keywords: Experience Platform；モデルの発行；Data Science Workspace；人気の高いトピック；サービスのスコア
 solution: Experience Platform
 title: Data Science Workspace UIのサービスとしてモデルを発行
-topic: チュートリアル
-type: チュートリアル
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace　を使用すると、訓練を受けた評価済みのモデルをサービスとして公開でき、IMS 組織内のユーザーは、独自のモデルを作成する必要なくデータをスコアリングできます。
 translation-type: tm+mt
 source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e

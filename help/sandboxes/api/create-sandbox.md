@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Sandbox;Sandbox
 solution: Experience Platform
 title: APIでサンドボックスを作成する
-topic: 開発ガイド
+topic: developer guide
 description: '''/sandboxs''エンドポイントにPOSTリクエストを作成することで、新しいサンドボックスを作成できます。'
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

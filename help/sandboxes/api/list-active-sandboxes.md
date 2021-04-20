@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；リストのアクティブなサンドボックス；リストのサンドボックス
 solution: Experience Platform
 title: APIの現在のリスト用のユーザーのアクティブなサンドボックス
-topic: 開発ガイド
+topic: developer guide
 description: ルートエンドポイントにGETリクエストを行うことで、現在のユーザーに対してアクティブなサンドボックスをリストできます。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

@@ -2,7 +2,7 @@
 keywords: Experience Platform；ユーザインターフェイス；UI;ダッシュボード;ダッシュボード;プロファイル；セグメント；宛先；ライセンスの使用
 title: UIでのプラットフォームダッシュボードの変更
 description: 'このガイドでは、ダッシュボード内での組織のAdobe Experience Platformデータの表示方法をカスタマイズする手順を順を追って説明します。 '
-topic: ガイド
+topic: guide
 translation-type: tm+mt
 source-git-commit: 5cc973a5db88eb23c6e1aeee3695820a0555e4cf
 workflow-type: tm+mt

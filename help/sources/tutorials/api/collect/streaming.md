@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；クラウドストレージデータ；ストリーミングデータ；ストリーミング
 solution: Experience Platform
 title: ソースコネクタとAPIを使用したストリーミングデータの収集
-topic: 概要
+topic: overview
 type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してプラットフォームにストリーミングデータを取り込む手順を説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4

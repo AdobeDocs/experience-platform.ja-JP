@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クラウドストレージ；クラウドストレージ
 solution: Experience Platform
 title: Flow Service APIを使用したCloudストレージシステムの調査
-topic: 概要
+topic: overview
 description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムを調査します。
 translation-type: tm+mt
 source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8

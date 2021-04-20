@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログサービス；カタログ；カタログサービス；カタログサービス；カタログ
 solution: Experience Platform
 title: カタログサービスAPIガイド
-topic: 開発ガイド
+topic: developer guide
 description: Catalog Service APIを使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 translation-type: tm+mt
 source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac

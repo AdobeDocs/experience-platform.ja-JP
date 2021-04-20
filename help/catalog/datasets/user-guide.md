@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；有効データセット；データセット；データセット
 solution: Experience Platform
 title: データセットUIガイド
-topic: データセット
+topic: datasets
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
 translation-type: tm+mt
 source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5

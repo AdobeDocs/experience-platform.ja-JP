@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: カタログおよびデータセットガイド
 user-guide-description: データレイク内でデータ系列、メタデータ、ファイル記述、ディレクトリ、データセットを調べます。
-feature: データ管理
+feature: Data Management
 translation-type: tm+mt
 source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt

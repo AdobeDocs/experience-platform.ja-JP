@@ -3,7 +3,7 @@ keywords: Experience Platform；ホーム；人気のあるトピック；更新
 description: このチュートリアルでは、ソース・ワークスペースを使用して、データ・フロー・スケジュール（取り込み頻度や間隔率など）を更新する手順を説明します。
 solution: Experience Platform
 title: UIでのソース接続データフローの更新
-topic: 概要
+topic: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt

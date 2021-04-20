@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；スキーマ;
 solution: Experience Platform
 title: スキーマAPIエンドポイント
-topic: スキーマ
+topic: schemas
 description: 'Adobe Experience PlatformAPIの「/スキーマ」エンドポイントを使用すると、プラットフォームのMapperで使用するスキーマをプログラムによって取得、作成、更新できます。 '
 translation-type: tm+mt
 source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055

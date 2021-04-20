@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: 計算済み属性フィールドの構成方法
-topic: ガイド
-type: ドキュメント
+topic: guide
+type: Documentation
 description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。 計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、Mixin を使用して、既存のスキーマにフィールドを追加するか、スキーマ内で既に定義されているフィールドを選択することで作成できます。
 translation-type: tm+mt
 source-git-commit: 92533f732cc14b57d2a0a34ce9afe99554f9af04

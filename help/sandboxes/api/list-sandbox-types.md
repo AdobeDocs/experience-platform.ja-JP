@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；リストサンドボックス
 solution: Experience Platform
 title: APIでサポートされるリストサンドボックスの種類
-topic: 開発ガイド
+topic: developer guide
 description: /sandboxTypesエンドポイントにGETリクエストを行うことで、組織でサポートされているSandboxタイプのリストを取得できます。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

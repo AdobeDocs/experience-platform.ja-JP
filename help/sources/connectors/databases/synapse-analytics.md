@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure synapse分析；azure synapse分析；シナプス；シナプス
 solution: Experience Platform
 title: azure synapse分析ソースコネクタの概要
-topic: 概要
+topic: overview
 description: APIまたはユーザーインターフェイスを使用して、Azure synapse分析をAdobe Experience Platformに接続する方法について説明します。
 translation-type: tm+mt
 source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30

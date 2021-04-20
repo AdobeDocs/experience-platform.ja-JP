@@ -3,8 +3,8 @@ keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: 電子メールマーケティングの宛先に接続し、Flow Service APIを使用してデータをアクティブ化する
 description: このドキュメントでは、Adobe Experience PlatformAPIを使用した電子メールマーケティングの宛先の作成について説明します
-topic: チュートリアル
-type: チュートリアル
+topic: tutorial
+type: Tutorial
 translation-type: tm+mt
 source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt

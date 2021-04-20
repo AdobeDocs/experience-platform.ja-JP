@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；インテリジェントサービス；人気の高いトピック；インテリジェントサービス；インテリジェントサービス
 solution: Experience Platform, Intelligent Services
 title: インテリジェントサービスで使用するデータの準備
-topic: インテリジェントサービス
+topic: Intelligent Services
 description: インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesでは、Experience Data Model(XDM)スキーマを使用してこれを実現します。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt

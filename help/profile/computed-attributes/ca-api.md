@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: 計算済み属性APIエンドポイント
-topic: ガイド
-type: ドキュメント
+topic: guide
+type: Documentation
 description: Adobe Experience Platformでは、計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。 これらの関数は自動的に計算され、セグメント化、アクティベーションおよびパーソナライゼーションで使用できます。 このガイドでは、リアルタイム顧客プロファイルAPIを使用して、計算済み属性を作成、表示、更新および削除する方法を示します。
 translation-type: tm+mt
 source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210

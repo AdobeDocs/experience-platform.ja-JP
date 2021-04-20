@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Kinesis;kinesis;AmazonKinesis;amazon kinesis
 solution: Experience Platform
 title: フローサービスAPIを使用したAmazonKinesisソース接続の作成
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをAmazonKinesisアカウントに接続する方法を説明します。
 translation-type: tm+mt
 source-git-commit: ed14fe464a4dc82f54902c8dc92fe00bc2a5381e

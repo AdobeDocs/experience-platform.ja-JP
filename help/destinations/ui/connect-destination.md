@@ -1,7 +1,7 @@
 ---
 keywords: 接続先；宛先接続；宛先接続方法
 title: 宛先に接続
-type: チュートリアル
+type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformの宛先を接続する手順をリストします
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 translation-type: tm+mt

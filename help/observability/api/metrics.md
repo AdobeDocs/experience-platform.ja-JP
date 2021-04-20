@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: 指標APIエンドポイント
-topic: 開発ガイド
+topic: developer guide
 description: Observibility Insights APIを使用して、Experience Platformで観察可能な指標を取得する方法を説明します。
 translation-type: tm+mt
 source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1

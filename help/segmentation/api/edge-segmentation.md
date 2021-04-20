@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；エッジセグメント化；エッジセグメント化；ストリーミングエッジ；
 solution: Experience Platform
 title: 'APIを使用したエッジセグメント '
-topic: 開発者ガイド
+topic: developer guide
 description: このドキュメントでは、Adobe Experience PlatformセグメントサービスAPIでエッジセグメントを使用する方法の例を示します。
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt

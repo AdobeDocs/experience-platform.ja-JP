@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックスユーザーガイド；サンドボックスガイド
 solution: Experience Platform
 title: Sandbox UIガイド
-topic: ' ユーザーガイド'
+topic: user guide
 description: このドキュメントでは、Adobe Experience Platform ユーザーインターフェイスのサンドボックスに関連する様々な操作を実行する手順について説明します。
 translation-type: tm+mt
 source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31

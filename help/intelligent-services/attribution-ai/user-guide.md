@@ -2,7 +2,7 @@
 keywords: Experience Platform；ユーザーガイド；アトリビューションai；人気のあるトピック；地域
 solution: Experience Platform, Intelligent Services
 title: Attribution AIUIガイド
-topic: 'ユーザーガイド '
+topic: User guide 
 description: このドキュメントは、インテリジェントサービスユーザーインターフェイスの Attribution AI を操作するためのガイドとなります。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt

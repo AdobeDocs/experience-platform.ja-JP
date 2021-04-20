@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Oracleオブジェクトストレージ;oracleオブジェクトストレージ
 solution: Experience Platform
 title: Flow Service APIを使用したOracleオブジェクトストレージソース接続の作成
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをOracleオブジェクトストレージに接続する方法を説明します。
 translation-type: tm+mt
 source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80

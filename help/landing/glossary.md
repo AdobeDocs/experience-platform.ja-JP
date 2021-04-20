@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Adobe Experience Platform用語集
-topic: はじめに
+topic: getting started
 description: Experience Platform の重要な用語集。
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c

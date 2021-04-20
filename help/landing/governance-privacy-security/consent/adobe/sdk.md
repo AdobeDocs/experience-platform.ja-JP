@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience PlatformWeb SDKを使用した顧客の同意データの処理
-topic: はじめに
+topic: getting started
 description: Adobe2.0標準を使用して、Adobe Experience PlatformのWeb SDKを統合し、Adobe Experience Platformの顧客の同意データを処理する方法を説明します。
 translation-type: tm+mt
 source-git-commit: fee3f005ca3679f8639cea45c16150090b2a1e0f

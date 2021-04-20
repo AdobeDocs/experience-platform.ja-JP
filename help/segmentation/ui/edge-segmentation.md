@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；エッジセグメント化；セグメント化；セグメント化サービス；セグメント化サービス；uiガイド；ストリーミングエッジ；
 solution: Experience Platform
 title: エッジセグメントUIガイド
-topic: uiガイド
+topic: ui guide
 description: エッジセグメント化は、エッジ上でプラットフォーム内のセグメントを瞬時に評価する機能で、同じページや次のページのパーソナライズの使用例を実現します。
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt

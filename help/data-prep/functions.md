@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；フィールドのマッピング；マッピング関数；
 solution: Experience Platform
 title: データ準備マッピング関数
-topic: 概要
+topic: overview
 description: このドキュメントでは、データ準備で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt

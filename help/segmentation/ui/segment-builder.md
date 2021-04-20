@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化サービス；ユーザーガイド；uiガイド；セグメント化uiガイド；セグメント化uiガイド；セグメントビルダー；セグメントビルダー；
 solution: Experience Platform
 title: セグメントビルダーのUIガイド
-topic: uiガイド
+topic: ui guide
 description: Adobe Experience PlatformUIのセグメントビルダーは、プロファイルデータ要素を操作できるリッチワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt

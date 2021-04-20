@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API；データセットを有効にする
 title: APIを使用したプロファイルおよびIDサービス用のデータセットの設定
-topic: チュートリアル
+topic: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience PlatformAPIを使用して、リアルタイム顧客プロファイルおよびIDサービスでデータセットを有効にする方法について説明します。
 exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312

@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データガバナンス；データ使用ラベル；ポリシーサービス；データ使用ラベルユーザーガイド
 solution: Experience Platform
 title: UIでのデータ使用量ラベルの管理
-topic: ラベル
+topic: labels
 description: このガイドでは、Adobe Experience Platformユーザーインターフェイスでデータ使用ラベルを使用する手順を説明します。
 translation-type: tm+mt
 source-git-commit: 41d01b3aec0afa60dd602716a30cc94402702a70

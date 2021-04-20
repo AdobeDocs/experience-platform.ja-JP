@@ -2,7 +2,7 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；サンプルデータ；
 solution: Experience Platform
 title: サンプルデータAPIエンドポイント
-topic: サンプルデータ
+topic: sample data
 description: 'Adobe Experience PlatformAPIの「/samples」エンドポイントを使用すると、マッピングされたサンプルデータをプログラムによって取得、作成、更新および検証できます。 '
 translation-type: tm+mt
 source-git-commit: a2c966ae2401faa572cbba974ce6f572d5280a8f

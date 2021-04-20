@@ -1,7 +1,7 @@
 ---
 keywords: 編集アクティベーション;編集先；
 title: アクティベーションフローの編集
-type: チュートリアル
+type: Tutorial
 seo-title: アクティベーションフローの編集
 description: この記事の手順に従って、Adobe Experience Platformの既存のアクティベーションフローを編集します。
 seo-description: この記事の手順に従って、Adobe Experience Platformの既存のアクティベーションフローを編集します。

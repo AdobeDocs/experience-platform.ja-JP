@@ -2,8 +2,8 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;SFTP
 solution: Experience Platform
 title: UIでのSFTPソース接続の作成
-topic: 概要
-type: チュートリアル
+topic: overview
+type: Tutorial
 description: Adobe Experience PlatformUIを使用してSFTPソース接続を作成する方法を説明します。
 translation-type: tm+mt
 source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3

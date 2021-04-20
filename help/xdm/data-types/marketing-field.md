@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: 汎用マーケティングプリファレンスフィールドのデータ型
-topic: 概要
+topic: overview
 description: このドキュメントでは、汎用マーケティングプリファレンスフィールドのXDMデータ型の概要を説明します。
 translation-type: tm+mt
 source-git-commit: f5ec59e609fda66d379847dca068d19d4cce8228

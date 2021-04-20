@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: セグメント定義クラス
-topic: 概要
+topic: overview
 description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のセグメント定義クラスの概要を説明します。
 translation-type: tm+mt
 source-git-commit: f4e80cc6a5e5e135bedb77b2d56ae5cb2c8d8c53
