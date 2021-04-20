@@ -2,18 +2,18 @@
 title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience PlatformWeb SDK；プラットフォームWeb SDK;Web SDK；リリースノート；
+exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: b0e6d1f7cf7302bb3a7403bb18dfd8b7489d583e
+source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 6%
+source-wordcount: '500'
+ht-degree: 5%
 
 ---
 
-
 # リリースノート
 
-## バージョン 2.4.0
+## バージョン2.4.0、2021年3月
 
 * SDKをnpmパッケージ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)として[インストールできるようになりました。
 * [デフォルトの同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)の設定時に、`out`オプションのサポートが追加され、同意が得られるまですべてのイベントが削除されます(既存の`pending`オプションはイベントをキューに入れ、同意が得られたら送信します)。
@@ -27,7 +27,7 @@ ht-degree: 6%
 * バグ修正：パーソナライゼーションインタラクション通知イベントには、ユーザーが新しい単一ページのアプリ表示に移動し、元の表示に戻り、コンバージョンに該当する重複をクリックした場合に、同じアクティビティに関する情報が含まれます。
 * バグ修正：SDKから送信された最初のイベントが`documentUnloading`を`true`に設定していた場合、[`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon)を使用してイベントが送信され、IDが確立されていないというエラーが発生します。
 
-## バージョン 2.3.0
+## バージョン2.3.0、2020年11月
 
 * より厳密なコンテンツセキュリティポリシーを許可するために、nonceのサポートを追加しました。
 * シングルページアプリのパーソナライゼーションサポートを追加しました。
@@ -37,12 +37,12 @@ ht-degree: 6%
 * バグ修正：読み取り専用の`message`プロパティを含むブラウザーのエラーが適切に処理されなかったため、お客様に表示されるエラーが異なりました。
 * バグ修正：iframe内でSDKを実行すると、iframeのHTMLページが親ウィンドウのHTMLページとは異なるサブドメインからのものである場合に、エラーが発生します。
 
-## バージョン 2.2.0
+## バージョン2.2.0、2020年10月
 
 * バグ修正：`idMigrationEnabled`が`true`の場合、オプトインオブジェクトはAlyが呼び出しを行うのをブロックしていました。
 * バグ修正：ちらつきの問題を防ぐために、パーソナライズオファーが返される必要がある要求をAllyに認識させます。
 
-## バージョン 2.1.0
+## バージョン2.1.0、2020年8月
 
 * `syncIdentity`コマンドを削除し、`sendEvent`コマンドにこれらのIDを渡すことをサポートします。
 * IAB 2.0同意基準をサポートします。
