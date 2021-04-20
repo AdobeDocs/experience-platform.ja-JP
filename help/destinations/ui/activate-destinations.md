@@ -1,15 +1,15 @@
 ---
 keywords: 宛先をアクティブ化；宛先をアクティブ化；データをアクティブ化
 title: 宛先へのプロファイルとセグメントのアクティブ化
-type: チュートリアル
+type: Tutorial
 seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformでのデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '2102'
+source-wordcount: '2100'
 ht-degree: 13%
 
 ---
@@ -175,7 +175,7 @@ Adobe Experience Platformユーザーインターフェイスで、**[!UICONTROL
 >
 >ソーシャルの宛先の場合は、この手順でオーディエンスの接触チャネルを選択する必要があります。次の手順に進むには、まず次の画像のオプションのいずれかを選択してください。
 
-![Facebookでのオーディエンスの接触チャネル](../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Facebookオーディエンス接触チャネル](../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 >[!IMPORTANT]
 >
@@ -264,9 +264,9 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 データをアクティブ化するそれぞれの広告先のアカウントを確認します。 アクティベーションに成功した場合、オーディエンスは広告プラットフォームに入力されます。
 
-## ソーシャルネットワークの宛先
+## ソーシャルの宛先
 
-[!DNL Facebook]の場合、アクティベーションが成功した場合は、[[!UICONTROL Facebook広告マネージャー]](https://www.facebook.com/adsmanager/manage/)で[!DNL Facebook]カスタムオーディエンスがプログラム的に作成されます。 ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つかどうかによって、ユーザーのセグメントメンバーシップが追加および削除されます。
+[!DNL Facebook]の場合、アクティベーションが成功したときは、[[!UICONTROL Facebook広告マネージャー]](https://www.facebook.com/adsmanager/manage/)に[!DNL Facebook]カスタムオーディエンスがプログラム的に作成されることを意味します。 ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つかどうかによって、ユーザーのセグメントメンバーシップが追加および削除されます。
 
 >[!TIP]
 >
