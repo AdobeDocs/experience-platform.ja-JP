@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Adobe Experience Platformでの同意処理
 topic: はじめに
 description: Adobe2.0標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を学びます。
+exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: f7fde2cb6828ebdd1763171008858fdd7242c784
+source-git-commit: a0f585e4aaeecb968a9fc9f408630946e1c30b2b
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Platformでの同意処理
 
 Adobe Experience Platformでは、顧客から収集した同意データを処理し、保存されている顧客プロファイルに統合できます。 その後、このデータをダウンストリームプロセスで使用して、特定の顧客に対してデータ収集を行うか、そのプロファイルを特定の目的に使用するかを判断できます。 例えば、特定のプロファイルの同意データによって、その署名をエクスポートしたオーディエンスセグメントに含めることができるか、電子メール、テキストメッセージ、プッシュ通知などの特定のマーケティングチャネルに参加できるかを指定できます。
 
-このドキュメントでは、同意管理プラットフォーム(CMP)によって生成された顧客の同意データを取り込み、そのデータを顧客プロファイルに統合して、下流の用途に使用するためのプラットフォームデータ操作の構成方法について概要を説明します。
+このドキュメントでは、同意管理プラットフォーム(CMP)によって生成された顧客の同意データを取り込み、そのデータを顧客プロファイルに統合して、下流の用途に使用するためのプラットフォームデータ操作の構成方法の概要を説明します。
 
 >[!NOTE]
 >
@@ -83,13 +83,19 @@ CMPの同意変更フックによってトリガーされるSDKコマンドに�
 
 データセットとマージポリシーを取得し、お客様のプロファイルで必要な同意フィールドを表すようにしたら、次の手順は、同意データ自体をプラットフォームに取り込むことです。
 
-主に、CMPで同意変更イベントが検出された場合は、プラットフォームに同意データを送信するために、Adobe Experience PlatformWeb SDKを使用する必要があります。 別の場所に既に同意データを保存している場合は、収集した同意データを同意データセットのXDMスキーマにマッピングし、バッチ取り込みを使用してPlatformに送信することで、収集した同意データを直接取り込むこともできます。
+主に、CMPで同意変更イベントが検出された場合は、プラットフォームに同意データを送信するために、Adobe Experience PlatformWeb SDKを使用する必要があります。 モバイルプラットフォームで同意データを収集する場合は、Adobe Experience PlatformモバイルSDKを使用する必要があります。 また、収集した同意データを同意データセットのXDMスキーマにマッピングし、バッチ取り込みを使用してPlatformに送信することで、収集した同意データを直接取り込むこともできます。
 
 各メソッドの詳細については、以下のサブセクションを参照してください。
 
-### Experience PlatformWeb SDKを統合して、顧客の同意データを処理する{#sdk}
+### 同意データを処理するようにExperience PlatformWeb SDKを設定{#web-sdk}
 
-Webサイトの同意変更イベントをリッスンするようにCMPを設定したら、Experience PlatformWeb SDKを統合して、更新された同意設定を受け取り、同意変更イベントが発生した場合に必ずプラットフォームに送信できます。 詳しくは、[顧客の同意データを処理するようにSDKを設定する](./sdk.md)のガイドに従ってください。
+Webサイトの同意変更イベントをリッスンするようにCMPを設定したら、Experience PlatformWeb SDKを統合して、更新された同意設定を受け取り、各ページの読み込み時および同意変更イベントが発生した場合にプラットフォームに送信できます。 詳しくは、[顧客の同意データを処理するようにWeb SDKを設定する](./sdk.md)のガイドを参照してください。
+
+### 同意データを処理するようにExperience PlatformモバイルSDKを設定{#mobile-sdk}
+
+モバイルアプリケーションで顧客の同意が必要な場合、Experience PlatformMobile SDKを統合して、同意設定を取得および更新し、同意APIが呼び出されるたびにPlatformに送信できます。
+
+[同意API](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent/edge-consent-api-reference)を使用した](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent)および[同意モバイル拡張の設定については、モバイルSDKのドキュメントを参照してください。 モバイルSDKを使用してプライバシーに関する問題を解決する方法について詳しくは、[プライバシーとGDPR](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/privacy-and-gdpr)を参照してください。
 
 ### XDM準拠の同意データを直接取り込む{#batch}
 
