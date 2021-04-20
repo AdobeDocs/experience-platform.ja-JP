@@ -2,20 +2,20 @@
 title: Experience PlatformWeb SDKのエッジ設定の作成
 description: 'Experience Platformエッジネットワークを構成する方法を説明します。 '
 keywords: 設定；エッジ；エッジ設定ID;環境設定；edgeConfigId;id;ID同期有効；ID同期コンテナID;Sandbox；ストリーミングインレット；イベントデータセット；ターゲット；クライアントコード；プロパティトークン；ターゲット環境ID;Cookie宛先；Url宛先；Analytics設定ブロックレポートスイートID;
+exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '928'
 ht-degree: 2%
 
 ---
-
 
 # エッジ設定の作成
 
 Adobe Experience PlatformWeb SDKの設定は、2か所に分かれています。 SDKの[configureコマンド](configuring-the-sdk.md)は、`edgeDomain`のように、クライアントで処理する必要のある処理を制御します。 エッジ設定は、SDKのその他すべての設定を処理します。 要求がAdobe Experience Platformエッジネットワークに送信されると、`edgeConfigId`はサーバ側の設定を参照するために使用されます。 これにより、Webサイトでコードを変更することなく、設定を更新できます。
 
-この機能を使用するには、組織がプロビジョニングされている必要があります。 許可リストを使用するには、Customer Success Manager(CSM)に問い合わせてください。
+この機能を使用するには、組織がプロビジョニングされている必要があります。 Customer Success Manager(CSM)に問い合わせて、許可リストを使用してください。
 
 ## エッジ設定の作成
 
@@ -35,17 +35,17 @@ SDKで`edgeConfigId`として使用されるIDは、設定と環境（例えば`
 
 各設定環境で使用できる設定は次のとおりです。 ほとんどのセクションは有効または無効にできます。 無効にすると、設定は保存されますが、アクティブになりません。
 
-##  IdentitySettings
+## [!UICONTROL サードパーティ] IDの設定
 
-IDセクションは、常にオンになる唯一のセクションです。 次の2つの設定を使用できます。&quot;[!UICONTROL ID同期が有効]&quot;および&quot;[!UICONTROL ID同期コンテナID]&quot;。
+サードパーティIDセクションは、常にオンになる唯一のセクションです。 次の2つの設定を使用できます。&quot;[!UICONTROL サードパーティIDの同期が有効になりました]&quot;および&quot;[!UICONTROL サードパーティIDの同期コンテナID]&quot;。
 
 ![設定UIの「ID」セクション](../../assets/edge_configuration_identity.png)
 
-### [!UICONTROL IDの同期が有効]
+### [!UICONTROL サードパーティIDの同期が有効]
 
 SDKがサードパーティパートナーとのID同期を実行するかどうかを制御します。
 
-### [!UICONTROL ID同期コンテナID]
+### [!UICONTROL サードパーティIDの同期コンテナID]
 
 ID同期をコンテナにグループ化して、異なるID同期を異なる時間に実行できるようにします。 これは、特定の設定IDに対して実行されるID同期のコンテナを制御します。
 
