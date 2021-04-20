@@ -6,10 +6,10 @@ user-guide-description: チャネル間のマーケティングキャンペー�
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 feature: 宛先
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 60%
+source-wordcount: '470'
+ht-degree: 59%
 
 ---
 
@@ -118,11 +118,11 @@ ht-degree: 60%
       * [Gainsight 拡張機能](./catalog/personalization/gainsight.md)
       * [KickFire 拡張機能](./catalog/personalization/kickfire.md)
       * [Marketto Web パーソナリゼーション拡張機能](./catalog/personalization/marketo-web-personalization.md)
-   * ソーシャルネットワークの宛先 {#social}
-      * [ソーシャルネットワークの宛先の概要](./catalog/social/overview.md)
-      * [ソーシャルネットワークの宛先の作成](./catalog/social/workflow.md)
+   * ソーシャルの宛先{#social}
+      * [ソーシャルリンク先の概要](./catalog/social/overview.md)
+      * [ソーシャルターゲットの作成](./catalog/social/workflow.md)
       * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
-      * [Facebookの接続](./catalog/social/facebook.md)
+      * [Facebook接続](./catalog/social/facebook.md)
       * [Linkedinがオーディエンス接続に一致しました](./catalog/social/linkedin.md)
    * 調査先 {#survey}
       * [調査先の概要](./catalog/survey/overview.md)
