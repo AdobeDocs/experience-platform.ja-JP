@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Audience Managerマッピング；オーディエンスマネージャマッピング
 solution: Experience Platform
 title: Adobe Audience Managerソースコネクタのフィールドのマッピング
-topic: overview
+topic-legacy: overview
 description: Adobe Audience Managerデータ(リアルタイム、オンボード、プロファイルデータ)を、Audience Managerソースコネクタの対応するExperience Data Model(XDM)フィールドにマップする方法を説明します。
+exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 70%
+source-wordcount: '175'
+ht-degree: 68%
 
 ---
-
 
 # Audience Managerフィールドのマッピング
 
@@ -38,6 +38,8 @@ ht-degree: 70%
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → os name </li><li>d_os_version → os_version</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## プロファイルデータ
 
 タイプ：プロファイル XDM
@@ -47,3 +49,5 @@ ht-degree: 70%
 | `ids` | `identityMap` |
 | `smem` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `tmem` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+
+{style=&quot;table-layout:auto&quot;}
