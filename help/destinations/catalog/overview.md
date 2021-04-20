@@ -4,14 +4,14 @@ title: 宛先カタログの概要
 seo-title: 宛先カタログの概要
 description: 宛先カタログは、データを受信する準備ができている使用可能な宛先のリストを提供します。 これらの宛先には、アドビソリューション、広告プラットフォーム、調査プラットフォーム、E メールマーケティングプラットフォームなどが含まれます。
 seo-description: 宛先カタログは、データを受信する準備ができている使用可能な宛先のリストを提供します。 これらの宛先には、アドビソリューション、広告プラットフォーム、調査プラットフォーム、E メールマーケティングプラットフォームなどが含まれます。
+exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 61%
+source-wordcount: '197'
+ht-degree: 59%
 
 ---
-
 
 # 宛先カタログの概要
 
@@ -31,6 +31,6 @@ Adobe Experience Platformの別のリンク先カテゴリに対して、デー�
 - [電子メールマーケティングの宛先の概要](./email-marketing/overview.md)
 - [モバイルエンゲージメントの宛先の概要](./mobile-engagement/overview.md)
 - [パーソナライズ機能の宛先の概要](./personalization/overview.md)
-- [ソーシャルネットワークの宛先の概要](./social/overview.md)
+- [ソーシャルリンク先の概要](./social/overview.md)
 - [調査先の概要](./survey/overview.md)
 - [顧客の宛先の概要の音声](./voice/overview.md)
