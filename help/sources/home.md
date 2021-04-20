@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ソースコネクタ；ソースコネクタ；ソース；データソース；データソース；データソース；データソース；データソース接続
 solution: Experience Platform
 title: ソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 56%
+source-wordcount: '951'
+ht-degree: 55%
 
 ---
-
 
 # ソースコネクタの概要
 
@@ -36,6 +36,8 @@ Experience Platformは、Adobe Analytics、Adobe Audience Manager、[!DNL Experi
 - [Adobe Analytics Data コネクタの概要](connectors/adobe-applications/analytics.md)
 - [UIでのAdobe Analyticsソース接続の作成](./tutorials/ui/create/adobe-applications/analytics.md)
 - [UIでの顧客属性ソース接続の作成](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [[!DNL Marketo Engage] コネクタの概要](connectors/adobe-applications/marketo/marketo.md)
+- [UIで [!DNL Marketo Engage] ソース接続を作成する](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### 広告
 
@@ -95,7 +97,7 @@ Experience Platform は、サードパーティのデータベースからデー
 - [[!DNL Phoenix] コネクタ](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] コネクタ](connectors/databases/postgres.md)
 
-### eCommerce
+### e コマース
 
 Experience Platformは、サードパーティのeCommerceシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
