@@ -1,22 +1,30 @@
 ---
-keywords: Facebook;Facebook；ソーシャルネットワーク；ソーシャルネットワーク；ソーシャルネットワーク認証；ソーシャルネットワーク認証
+keywords: Facebook;facebook；ソーシャルネットワーク；ソーシャルネットワーク；ソーシャルネットワーク認証；ソーシャルネットワーク認証
 title: ソーシャルネットワークの宛先の作成
-type: チュートリアル
+type: Tutorial
 description: Adobe Experience Platformのソーシャルネットワーク広告アカウントに接続する方法を説明します。
+exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 52%
+source-wordcount: '503'
+ht-degree: 31%
 
 ---
-
 
 # ソーシャルネットワークの宛先を作成{#social-network-destinations-workflow}
 
 ## 概要 {#overview}
 
 このチュートリアルでは例として[!DNL Facebook]を使用しますが、Adobe Experience Platformのワークフローはすべてのソーシャルネットワークの宛先で同じです。
+
+## ソーシャルのリンク先の設定 — ビデオチュートリアル{#video}
+
+以下のビデオでは、Adobe Experience Platformでソーシャルターゲットを設定し、セグメントをアクティブ化する方法を示します。 手順は、次のセクションで順番にレイアウトされます。
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+
+## ソーシャルターゲットを選択{#select-destination}
 
 **[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;で、**[!UICONTROL ソーシャル]**&#x200B;カテゴリまでスクロールします。 希望するソーシャルネットワークの宛先を選択し、**[!UICONTROL 設定]**&#x200B;を選択します。
 
@@ -26,9 +34,9 @@ ht-degree: 52%
 >
 >この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
-## 認証手順{#authentication}
+## アカウントステップ{#account}
 
-ソーシャルネットワークの宛先への接続を既に設定している場合は、**認証**&#x200B;手順で「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。または、「**[!UICONTROL 新規アカウント]**」を選択して、ソーシャルネットワークの宛先への新しい接続を設定できます。「**[!UICONTROL 宛先に接続]**」を選択すると、選択したソーシャルネットワークの宛先に移動するので、ログインして Adobe Experience Cloud をソーシャルネットワーク広告アカウントに接続します。
+**アカウント**&#x200B;の手順で、ソーシャルネットワークの宛先への接続を事前に設定している場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。 または、「**[!UICONTROL 新規アカウント]**」を選択して、ソーシャルネットワークの宛先への新しい接続を設定できます。「**[!UICONTROL 宛先に接続]**」を選択すると、選択したソーシャルネットワークの宛先に移動するので、ログインして Adobe Experience Cloud をソーシャルネットワーク広告アカウントに接続します。
 
 >[!NOTE]
 >
@@ -36,23 +44,21 @@ ht-degree: 52%
 
 ![ソーシャルネットワークの宛先に接続 - 認証手順](../../assets/catalog/social/workflow/pre-connect.png)
 
-資格情報が確認され、Adobe Experience Cloud がソーシャルネットワークに接続されたら、「**[!UICONTROL 次へ]**」を選択して&#x200B;**[!UICONTROL 設定]**&#x200B;手順に進むことができます。
+資格情報が確認され、Adobe Experience Cloudがソーシャルネットワークに接続されたら、「**[!UICONTROL 次へ]**」を選択して、**[!UICONTROL 認証]**&#x200B;の手順に進むことができます。
 
 ![資格情報の確認](../../assets/catalog/social/workflow/post-connect.png)
 
-## 設定手順{#setup}
+## 認証手順{#authentication}
 
-**[!UICONTROL 設定]**&#x200B;手順で、アクティベーションフローの[!UICONTROL 名前]と[!UICONTROL 説明]を入力し、ソーシャルネットワーク広告アカウントの[!UICONTROL アカウント ID] を入力します。
-
->[!IMPORTANT]
->
-> [!DNL Facebook]宛先の場合、**[!UICONTROL アカウントID]**&#x200B;は[!DNL Facebook Ad Account ID]です。 このIDは[!DNL Facebook Ads Manager]にあります。 以下に示すように、ID の前に `act_` を追加します。
-
-![ソーシャルネットワークの宛先に接続 — 設定手順](../../assets/catalog/social/workflow/setup.png)
+**[!UICONTROL 認証]**&#x200B;手順で、アクティベーションフローの[!UICONTROL 名前]と[!UICONTROL 説明]を入力し、ソーシャルネットワーク広告アカウントの[!UICONTROL アカウントID]を入力します。
 
 >[!IMPORTANT]
 >
-> [!DNL LinkedIn]宛先の場合、**[!UICONTROL アカウントID]**&#x200B;は[!DNL LinkedIn Campaign Manager Account ID]です。 このIDは[!DNL LinkedIn Campaign Manager]にあります。
+> * [!DNL Facebook]宛先の場合、**[!UICONTROL アカウントID]**&#x200B;は[!DNL Facebook Ad Account ID]です。 このIDは[!DNL Facebook Ads Manager]にあります。 IDの先頭に`act_`を付けます（下図を参照）。
+> * [!DNL LinkedIn]宛先の場合、**[!UICONTROL アカウントID]**&#x200B;は[!DNL LinkedIn Campaign Manager Account ID]です。 このIDは[!DNL LinkedIn Campaign Manager]にあります。
+
+
+![ソーシャルネットワークの宛先に接続 - 認証手順](../../assets/catalog/social/workflow/authentication.png)
 
 この手順では、この宛先に適用する&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択することもできます。 マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。 Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
