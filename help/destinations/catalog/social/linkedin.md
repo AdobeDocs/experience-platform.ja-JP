@@ -4,9 +4,9 @@ title: Linkedinがオーディエンス接続に一致しました
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制のために、LinkedInキャンペーンのプロファイルをアクティブにします。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '677'
 ht-degree: 12%
 
 ---
@@ -80,7 +80,7 @@ Experience Platformでの電子メールアドレスの取り込みについて�
 
 ## 宛先に接続 {#connect-destination}
 
-[!DNL LinkedIn Matched Audiences]宛先に接続するには、[ソーシャルネットワーク宛先認証ワークフロー](./workflow.md)を参照してください。
+[!DNL LinkedIn Matched Audiences]宛先に接続するには、[ソーシャル宛先認証ワークフロー](./workflow.md)を参照してください。
 
 次のビデオでは、[!DNL LinkedIn Matched Audiences]宛先を設定し、セグメントをアクティブにする手順も示しています。
 
