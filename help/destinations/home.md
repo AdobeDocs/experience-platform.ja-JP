@@ -4,14 +4,14 @@ title: Destinations overview
 seo-title: 宛先の概要
 description: チャネル間のマーケティングキャンペーン、電子メール、ターゲットを絞った広告などの目的地に対して、Adobe Experience Platformデータをアクティブ化する方法を説明します。
 seo-description: 宛先は、宛先プラットフォームとの統合が事前に構築されており、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。 Adobe Experience Platformの宛先を使用すると、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な使用例に関する既知および不明なデータをアクティブ化できます。
+exl-id: afd07ddc-652e-4e22-b298-feba27332462
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '488'
 ht-degree: 35%
 
 ---
-
 
 # [!DNL Destinations] 概要 {#overview}
 
@@ -29,7 +29,7 @@ ht-degree: 35%
 * 宛先を使用して[アクティブ化](./ui/activate-destinations.md)し、プロファイルやセグメントをマーケティング自動化プラットフォーム、デジタル広告プラットフォームなどに送信します。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
-## コントロール {#controls}
+## コントロール  {#controls}
 
 「[宛先](./ui/destinations-workspace.md)」ワークスペースのコントロールを使用すると、次のことができます。
 
@@ -65,6 +65,6 @@ ht-degree: 35%
 * [広告の表示先 — Google Display &amp; Video 360  ](./catalog/advertising/google-dv360.md)
 * [クラウドストレージの宛先](./catalog/cloud-storage/workflow.md)
 * [電子メールマーケティングの宛先](./catalog/email-marketing/overview.md)
-* [ソーシャルネットワークの宛先](./catalog/social/workflow.md)
+* [ソーシャルの宛先](./catalog/social/workflow.md)
 
 セグメントアクティベーションワークフローでのデータポリシー違反の詳細については、[宛先へのプロファイルとセグメントのアクティブ化](./ui/activate-destinations.md#review)のレビュー手順を参照してください。
