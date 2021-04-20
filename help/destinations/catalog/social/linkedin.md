@@ -1,15 +1,15 @@
 ---
 keywords: linkedin接続；linkedin接続；linkedin接続；linkedinの宛先；linkedin;
 title: Linkedinがオーディエンス接続に一致しました
-description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制に使用するLinkedInキャンペーンのプロファイルをアクティブにします。
+description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制のために、LinkedInキャンペーンのプロファイルをアクティブにします。
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '678'
 ht-degree: 12%
 
 ---
-
 
 # [!DNL LinkedIn Matched Audiences] connection
 
@@ -17,7 +17,7 @@ ht-degree: 12%
 
 ハッシュされた電子メールとモバイルIDに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制のための[!DNL LinkedIn]キャンペーンのプロファイルをアクティブにします。
 
-![Adobe Experience PlatformUIのLinkedInリンク先](../../assets/catalog/social/linkedin/catalog.png)
+![Adobe Experience PlatformUIでのlinkedIn行き先](../../assets/catalog/social/linkedin/catalog.png)
 
 ## 使用例
 
@@ -36,13 +36,13 @@ ht-degree: 12%
 | email_lc_sha256 | SHA256アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストとSHA256ハッシュの電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 「[ID matching requirements](#id-matching-requirements-id-matching-requirements)」の説明に従い、プレーンテキストとハッシュ電子メールにそれぞれ適切な名前空間を使用します。 ソースフィールドにハッシュ化されていない属性が含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティベーション上のデータを自動的にハッシュ化します。[!DNL Platform] |
 
 
-## エクスポートの種類{#export-type}
+## エクスポートタイプ{#export-type}
 
 **セグメントエクスポート**  — セグメント(オーディエンス)のすべてのメンバーを、 [!DNL LinkedIn Matched Audiences] 宛先で使用されている識別子（名前、電話番号など）と共にエクスポートします。
 
-## LinkedInアカウントの前提条件{#LinkedIn-account-prerequisites}
+## linkedInアカウントの前提条件{#LinkedIn-account-prerequisites}
 
-[!UICONTROL 一致したオーディエンス]の宛先にLinkedInを使用する前に、[!DNL LinkedIn Campaign Manager]アカウントに[!DNL Creative Manager]権限レベル以上があることを確認してください。
+[!UICONTROL LinkedIn一致オーディエンス]の宛先を使用する前に、[!DNL LinkedIn Campaign Manager]アカウントに[!DNL Creative Manager]権限レベル以上があることを確認してください。
 
 [!DNL LinkedIn Campaign Manager] ユーザー権限の編集方法については、「[Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753)」（LinkedIn ドキュメント）を参照してください。
 
@@ -81,6 +81,10 @@ Experience Platformでの電子メールアドレスの取り込みについて�
 ## 宛先に接続 {#connect-destination}
 
 [!DNL LinkedIn Matched Audiences]宛先に接続するには、[ソーシャルネットワーク宛先認証ワークフロー](./workflow.md)を参照してください。
+
+次のビデオでは、[!DNL LinkedIn Matched Audiences]宛先を設定し、セグメントをアクティブにする手順も示しています。
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## セグメントを[!DNL LinkedIn Matched Audiences] {#activate-segments}にアクティブ化
 
