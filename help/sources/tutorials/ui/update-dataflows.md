@@ -2,21 +2,21 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；更新データフロー；編集スケジュール
 description: このチュートリアルでは、ソース・ワークスペースを使用して、データ・フロー・スケジュール（取り込み頻度や間隔率など）を更新する手順を説明します。
 solution: Experience Platform
-title: UIのソース接続のデータフロースケジュールの更新
+title: UIでのソース接続データフローの更新
 topic: 概要
-type: チュートリアル
+type: Tutorial
+exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt
-source-git-commit: 31e4b15ad71a0d17278fbdb4d88ff42029cbe655
+source-git-commit: 3a36996b43760bc9161b8d4750a1121e9ada8d30
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '745'
+ht-degree: 7%
 
 ---
 
-
 # UIのデータフローの更新
 
-このチュートリアルでは、[!UICONTROL ソース]ワークスペースを使用して、データフロースケジュールの取り込み頻度と間隔を含む更新手順を説明します。
+このチュートリアルでは、[!UICONTROL Sources]ワークスペースを使用したデータフロースケジュールおよびマッピングの編集に関する情報を含む、既存のソースのデータフローを更新する手順を説明します。
 
 ## はじめに
 
@@ -25,7 +25,11 @@ ht-degree: 0%
 - [ソース](../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
 - [サンドボックス](../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-## スケジュールを編集
+## マッピングの編集
+
+>[!NOTE]
+>
+>マッピングの編集機能は、現在、次のソースではサポートされていません。Adobe Analytics、Adobe Audience Manager、HTTP API、[!DNL Marketo Engage]。
 
 プラットフォームUIで、左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。 上部のヘッダーから「**[!UICONTROL Dataflows]**」を選択し、既存のデータフローのリストを表示します。
 
@@ -39,11 +43,57 @@ ht-degree: 0%
 
 並べ替えパネルには、使用可能なすべてのソースのリストが表示されます。 リストから複数のソースを選択して、異なるソースに属するデータフローのフィルタ選択にアクセスできます。
 
-既存のデータフローのリストを表示するために使用するソースを選択します。 再スケジュールするデータフローを特定したら、アカウント名の横の三点リーダー(`...`)を選択します。
+既存のデータフローのリストを表示するために使用するソースを選択します。 更新するデータフローを特定したら、アカウント名の横の三点リーダー(`...`)を選択します。
 
-![再計画](../../images/tutorials/update-dataflows/reschedule.png)
+![編集元](../../images/tutorials/update-dataflows/edit-source.png)
 
-ドロップダウンメニューが表示され、[スケジュール&#x200B;]**の編集]、[**[!UICONTROL &#x200B;データフロー&#x200B;]**の無効化]、[]**&#x200B;監視の&#x200B;**[!UICONTROL 表示]、[**[!UICONTROL &#x200B;削除&#x200B;]**]の各オプションが表示されます。**[!UICONTROL &#x200B;メニューから[**[!UICONTROL スケジュール]**&#x200B;の編集]を選択します。
+ドロップダウンメニューが表示され、選択したデータフローを更新するオプションが表示されます。 ここから、データフローのマッピングセットおよびインジェストスケジュールを更新できます。 監視ダッシュボードのデータフローを検査するオプションや、データフローを無効または削除するオプションを選択することもできます。
+
+「**[!UICONTROL ソース]**&#x200B;を編集」を選択して、マッピングを更新します。
+
+![edit-dataflow](../../images/tutorials/update-dataflows/edit-dataflow.png)
+
+「[!UICONTROL データ追加]」手順が表示されます。適切なデータ形式を選択して、選択したデータの内容を確認し、**[!UICONTROL 次へ]**&#x200B;を選択して次に進みます。
+
+![add-data](../../images/tutorials/update-dataflows/add-data.png)
+
+[!UICONTROL マッピング]ページには、データセットに関連付けられたマッピングセットを追加および削除できるインターフェイスが用意されています。
+
+>[!TIP]
+>
+>マッピングの更新は、将来スケジュールされるデータフローの実行にのみ適用されます。
+
+新しいマッピングセットを追加するには、追加&#x200B;**[!UICONTROL 新しいマッピング]**&#x200B;を選択します。
+
+![add-new-mapping](../../images/tutorials/update-dataflows/add-new-mapping.png)
+
+次に、適切なソースフィールド属性とターゲットXDMフィールドの値を入力し、追加のマッピングセットを完了します。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
+
+![新しいマッピングが追加された](../../images/tutorials/update-dataflows/new-mapping-added.png)
+
+[!UICONTROL スケジュール]ステップが表示され、データフローの取り込みスケジュールを更新し、選択したソースデータを更新したマッピングで自動的に取り込むことができます。
+
+>[!NOTE]
+>
+>1回限りの取り込みと開始時間が過去のデータフローのマッピングセットは更新できません。
+
+![スケジュール](../../images/tutorials/update-dataflows/scheduling.png)
+
+[!UICONTROL Dataflow detail]ページでは、データフローの更新された名前と説明を指定でき、データフローのエラーしきい値を再構成できます。
+
+更新した値を入力したら、「**[!UICONTROL 次へ]**」を選択します。
+
+![データフロー詳細](../../images/tutorials/update-dataflows/dataflow-detail.png)
+
+**[!UICONTROL レビュー]**&#x200B;ステップが表示され、データフローを更新前に確認できます。
+
+データフローをレビューしたら、「**[!UICONTROL Finish]**」を選択し、新しいマッピングセットを含むデータフローを作成する時間を設定します。
+
+![レビュー](../../images/tutorials/update-dataflows/review.png)
+
+## スケジュールを編集
+
+既存のデータフローのインジェストスケジュールを編集するには、データフロー名の横にある三点リーダー(`...`)を選択し、ドロップダウンメニューから[**[!UICONTROL スケジュール]**&#x200B;の編集]を選択します。
 
 ![スケジュールの編集](../../images/tutorials/update-dataflows/edit-schedule.png)
 
@@ -66,6 +116,6 @@ ht-degree: 0%
 
 ## 次の手順
 
-このチュートリアルに従うと、[!UICONTROL ソース]ワークスペースを使用して、データフローのインジェストスケジュールを更新できます。
+このチュートリアルに従うと、[!UICONTROL ソース]ワークスペースを使用して、データフローのインジェストスケジュールとマッピングセットを更新できます。
 
 [!DNL Flow Service] APIを使用してプログラム的にこれらの操作を実行する手順については、[Flow Service API](../../tutorials/api/update-dataflows.md)を使用したデータフローの更新に関するチュートリアルを参照してください。
