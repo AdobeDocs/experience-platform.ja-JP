@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；SFTP;SFTP；セキュアファイル転送プロトコル；セキュアファイル転送プロトコル
 solution: Experience Platform
 title: Flow Service APIを使用したSFTPソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをSFTP（セキュアファイル転送プロトコル）サーバーに接続する方法を説明します。
+exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 translation-type: tm+mt
-source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '850'
 ht-degree: 21%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用したSFTPソース接続の作成
 
@@ -114,7 +114,7 @@ curl -X POST \
 | `auth.params.password` | SFTPサーバーに関連付けられているパスワードです。 |
 | `connectionSpec.id` | SFTPサーバー接続仕様ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成された接続の固有な識別子(`id`)を返します。 このIDは、次のチュートリアルでSFTPサーバーを調べるために必要です。
 
@@ -176,7 +176,7 @@ curl -X POST \
 | `auth.params.passPhrase` | 鍵ファイルや鍵の内容がパスフレーズで保護されている場合に、秘密鍵を復号化するためのパスフレーズまたはパスワード。 PrivateKeyContentがパスワードで保護されている場合は、PrivateKeyContentのパスフレーズを値として使用する必要があります。 |
 | `connectionSpec.id` | SFTPサーバー接続仕様ID:`b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成された接続の固有な識別子(`id`)を返します。 このIDは、次のチュートリアルでSFTPサーバーを調べるために必要です。
 
