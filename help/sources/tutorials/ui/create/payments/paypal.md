@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ペイパル；Paypal
 solution: Experience Platform
 title: UIでのPayPalソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してPayPalソース接続を作成する方法を説明します。
+exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 9%
 
 ---
-
 
 # UIに[!DNL PayPal]ソース接続を作成する
 
