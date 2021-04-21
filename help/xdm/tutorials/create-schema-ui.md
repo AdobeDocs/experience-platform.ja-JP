@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ui;UI;XDM;XDM system；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマエディタ；スキーマエディタ；スキーマ;スキーマ;スキーマ；作成
 solution: Experience Platform
 title: スキーマエディタを使用したスキーマの作成
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Experience Platform 内でスキーマエディターを使用してスキーマを作成する手順を説明します。
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 53bf2ad757b24ad294af32101124e8047580807a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3683'
+source-wordcount: '3682'
 ht-degree: 16%
 
 ---
@@ -167,7 +167,7 @@ Mixinをプレビューする際、Mixinのスキーマの詳細が右側のパ�
 各フィールドには、次の情報が必要です。
 
 * **[!UICONTROL Field Name]：フィールド** の名前。キャメルケースで書かれています。例：loyaltyLevel
-* **[!UICONTROL 表示名]：フィールド** の名前。タイトルの場合は大文字で表記されます。例：Loyalty Level
+* **[!UICONTROL 表示名]：フィールド** の名前。タイトルの場合は大文字で記述されます。例：Loyalty Level
 * **[!UICONTROL Type]:** フィールドのデータ型。これには、基本的なスカラー型と[!DNL Schema Registry]で定義されているすべてのデータ型が含まれます。 例：[!UICONTROL 文字列]、[!UICONTROL 整数]、[!UICONTROL ブール値]、[!UICONTROL 人]、[!UICONTROL 住所]、[!UICONTROL 電話番号]など。
 * **[!UICONTROL 説明]:（オプション）フィールド** の説明は、文頭の場合と同様に、最大200文字で記述します。
 
