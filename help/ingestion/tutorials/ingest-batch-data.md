@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；取り込み；取り込み；取り込みバッチデータ；チュートリアル；バッチ取り込み；チュートリアル；uiガイド；
 solution: Experience Platform
 title: データをExperience Platformに取り込む
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platformでは、Parketファイルの形式のバッチファイルや、既知のエクスペリエンスデータモデル(XDM)スキーマに準拠するデータを、簡単にバッチファイルとして読み込むことができます。
+exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 49%
 
 ---
-
 
 # Adobe Experience Platform へのデータの取得
 
