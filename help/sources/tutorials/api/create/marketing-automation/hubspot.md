@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ハブスポット；ハブスポット
 solution: Experience Platform
 title: Flow Service APIを使用したHubSpotソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してAdobe Experience PlatformをHubSpotに接続する方法を説明します。
+exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 24%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL HubSpot]ソース接続を作成する
 
@@ -115,7 +115,7 @@ curl -X POST \
 | `auth.params.accessToken` | OAuth統合を最初に認証する際に取得されるアクセストークン。 |
 | `auth.params.refreshToken` | OAuth統合を最初に認証する際に取得される更新トークン。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続が返されます。この接続には、一意の接続識別子(`id`)が含まれます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
