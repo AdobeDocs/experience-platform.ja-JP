@@ -2,16 +2,16 @@
 keywords: Experience Platform；アトリビューションai；アクセススコア；人気のあるトピック；スコアのダウンロード；アトリビューションaiスコア；エクスポート；エクスポート
 solution: Experience Platform, Intelligent Services
 title: Attribution AIのスコアのダウンロード
-topic: Downloading scores
+topic-legacy: Downloading scores
 description: このドキュメントは、Attribution AIのスコアをダウンロードする際のガイドとして機能します。
+exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 67%
 
 ---
-
 
 # Attribution AIのスコアのダウンロード
 
@@ -33,7 +33,7 @@ Attribution AIインサイトのサービスインスタンス内で、右上の
 
 ![データセット ID](../customer-ai/images/download-scores/access-scores.png)
 
-## バッチ ID を取得する {#retrieve-your-batch-id}
+## バッチ ID を取得する  {#retrieve-your-batch-id}
 
 前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、`limit`クエリパラメーターの数を、返す金額に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
 
