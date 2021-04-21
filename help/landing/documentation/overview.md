@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；CJA;ジャーニー分析；顧客ジャーニー分析；キャンペーンの調整；オーケストレーション；顧客ジャーニー;ジャーニー;ジャーニーの調整；機能；ワークフロー
 solution: Experience Platform
 title: Experience Platformドキュメントの概要
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platformのドキュメントは、ユーザーインターフェイスと API の両方の概要、チュートリアル、ガイドなど、複数の形式で提供されています。Experience Platformサービスで使用できる最も一般的なドキュメントの種類を簡単に説明します。
+exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 52%
 
 ---
-
 
 # Experience Platformドキュメントの概要
 
@@ -36,4 +36,3 @@ Experience Platformドキュメントは、ユーザーインターフェイス(
 * **チュートリアル：**&#x200B;チュートリアルは、UI、API、またはその両方を順に示し、特定の結果へと導きます。開発者ガイドとは異なり、API チュートリアルは 1 つまたは 2 つのエンドポイントのみに焦点を当てている可能性があり、完全な API リソースではありません。同様に、UI チュートリアルでは、そのサービスで使用できる完全なユーザインターフェイスではなく、特定の手順にのみ焦点を当てる場合があります。チュートリアルは、多くの場合、より大規模なワークフローの一部であり、次に試すチュートリアルを説明する「次のステップ」を示しています。
 
 * **UIガイド：** UIガイドでは、特定のサービスに対して [!DNL Platform] ユーザーインターフェイスで使用できるアクションについて概説します。これらのドキュメントには、UIを使用したプラットフォームとの対話に重点を置いたスクリーンショットと手順が含まれています。 開発者ガイドと同様に、UIガイドでは、回避する「了解事項」など、使用可能なすべてのアクションとオプションについて概説します。 これは、UI を操作する際の最も詳細なリソースです。
-
