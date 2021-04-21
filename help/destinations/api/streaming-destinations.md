@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気の高いトピック；APIチ
 solution: Experience Platform
 title: Adobe Experience PlatformのFlow Service APIを使用して、ストリーミング送信先に接続し、データをアクティブにします。
 description: このドキュメントでは、Adobe Experience PlatformAPIを使用したストリーミング宛先の作成について説明します
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2029'
+source-wordcount: '2027'
 ht-degree: 54%
 
 ---
-
 
 # Flow Service APIを使用して、ストリーミング送信先に接続し、データをアクティブにします
 
@@ -49,7 +49,7 @@ Platformのユーザーインターフェイスを使用して宛先に接続し
 
 このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
-### 必須ヘッダーおよびオプションヘッダーの値の収集 {#gather-values}
+### 必須ヘッダーおよびオプションヘッダーの値の収集  {#gather-values}
 
 Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
@@ -332,7 +332,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{REGION}`: *[!DNL Amazon Kinesis] 接続用。* プラットフォームがデータをストリーミングする、AmazonKinesisアカウント内の地域。
 * `{EVENT_HUB_NAME}`: *[!DNL Azure Event Hubs] 接続用。* プラットフォームがデータをストリーミングする [!DNL Azure Event Hub] 名前を入力します。詳しくは、[!DNL Microsoft]ドキュメントの[イベントハブの作成](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub)を参照してください。
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成されたターゲット接続からストリーミング宛先への一意の識別子(`id`)が返されます。 この値は、後の手順で必要になるため保存します。
 
