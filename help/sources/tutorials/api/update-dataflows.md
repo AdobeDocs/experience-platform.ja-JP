@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；更新データフロー
 solution: Experience Platform
 title: Flow Service APIを使用したデータフローの更新
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、名前、説明、スケジュールなど、Flow Service APIを使用してデータフローを更新する手順を説明します。
+exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 translation-type: tm+mt
-source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '615'
 ht-degree: 33%
 
 ---
-
 
 # Flow Service APIを使用してデータフローを更新する
 
@@ -76,7 +76,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、バージョン、スケジュール、一意の識別子(`id`)を含む、データフローの現在の詳細が返されます。
 
@@ -241,7 +241,7 @@ curl -X PATCH \
 | `path` | 更新するパラメーターのパス。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 
-**応答** 
+**応答**
 
 正常な応答が返されると、フローIDと更新されたeタグが返されます。 フローIDを提供しながら[!DNL Flow Service] APIにGETリクエストを行うことで、更新を検証できます。
 
