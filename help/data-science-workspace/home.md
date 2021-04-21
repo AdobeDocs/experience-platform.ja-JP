@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；データサイエンスワークスペース；人気の高いトピック；データサイエンスワークスペース；データサイエンス
 solution: Experience Platform
 title: Data Science Workspaceの概要
-topic: overview
+topic-legacy: overview
 description: このガイドでは、Adobe Experience PlatformのData Science Workspaceに関連する主要な概念の概要を説明します。
+exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 74%
 
 ---
-
 
 # Data Science Workspace の概要
 
@@ -196,4 +196,3 @@ Adobe Experience Platform のすべてのデータは標準化された XDM ス�
 次のビデオは、[!DNL Data Science Workspace]についての理解を深めるためのものです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
-
