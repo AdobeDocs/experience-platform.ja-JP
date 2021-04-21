@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；アドレス；xdm：アドレス；データ型；データ型；
 solution: Experience Platform
 title: 住所のデータの種類
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Postal Address XDMデータ型の概要を説明します。
+exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 22%
 
 ---
-
 
 # [!UICONTROL 郵便] 先住所のデータ型
 
