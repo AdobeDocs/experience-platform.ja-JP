@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ
 solution: Experience Platform
 title: クエリサービスの概要
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Experience Platform 内でのクエリサービスの役割を概説します。
+exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 25%
 
 ---
 
-
-# [!DNL Query Service]概要
+# [!DNL Query Service] の概要
 
 Adobe Experience Platform は様々なソースからデータを取得します。マーケターにとっての主要な課題は、このデータの意味を理解して、顧客に関するインサイトを得ることです。Adobe Experience Platform[!DNL Query Service]は、[!DNL Platform]のクエリデータに標準のSQLを使えるようにすることで、それを容易にします。 [!DNL Query Service]を使用すると、[!DNL Data Lake]内の任意のデータセットに参加し、クエリ結果を新しいデータセットとして取り込み、レポート、機械学習、または[!DNL Real-time Customer Profile]への取り込みに使用できます。 このドキュメントでは、[!DNL Experience Platform]内の[!DNL Query Service]の役割の概要を説明します。
 
