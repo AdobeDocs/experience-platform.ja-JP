@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データソースへのアクセス；データアクセス；spark sdk;python sdk
 solution: Experience Platform
 title: データアクセスのチュートリアル
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform では、データアクセス API を使用して、Experience Platform 内で取り込んだデータセットを検出してアクセスできます。
+exl-id: c0b6eb7d-8874-4f3a-927e-9ff51e3c0cc9
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 52%
 
 ---
-
 
 # データアクセスのチュートリアル
 
