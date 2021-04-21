@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；自動適用；APIベースの適用；データガバナンス
 solution: Experience Platform
 title: ポリシーの自動適用
-topic: guide
+topic-legacy: guide
 description: このドキュメントでは、Experience Platform内の宛先に対してセグメントをアクティブ化する際に、データ使用ポリシーが自動的に適用される方法について説明します。
+exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1128'
 ht-degree: 19%
 
 ---
-
 
 # 自動ポリシー適用
 
