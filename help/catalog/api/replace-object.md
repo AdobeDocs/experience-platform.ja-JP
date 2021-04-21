@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；api；オブジェクトの置き換え
 solution: Experience Platform
 title: カタログオブジェクトの置換
-topic: developer guide
+topic-legacy: developer guide
 description: PUT リクエストを使用して、カタログオブジェクトのコンテンツを上書きできます。この場合、リソース全体がリクエストペイロードで置き換えられます。
+exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 60%
 
 ---
-
 
 # カタログオブジェクトの置換
 
