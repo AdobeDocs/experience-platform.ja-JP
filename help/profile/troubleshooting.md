@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: リアルタイム顧客プロファイルトラブルシューティングガイド
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: このドキュメントでは、リアルタイム顧客プロファイルに関するよくある質問と、Adobe Experience Platformを使用したプロファイルデータの操作時の一般的なエラーのトラブルシューティングガイドに回答します。
+exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 3%
 
 ---
-
 
 # リアルタイム顧客プロファイルトラブルシューティングガイド
 
