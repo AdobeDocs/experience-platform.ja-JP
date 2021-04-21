@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce Service Cloud;salesforceサービスクラウド
 solution: Experience Platform
 title: Salesforce Service Cloudソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してSalesforce Service CloudをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
 translation-type: tm+mt
-source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '228'
 ht-degree: 8%
 
 ---
-
 
 # [!DNL Salesforce Service Cloud] コネクタ
 
