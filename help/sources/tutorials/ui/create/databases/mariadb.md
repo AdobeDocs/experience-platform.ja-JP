@@ -6,19 +6,15 @@ topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してMaria DBソース接続を作成する方法を説明します。
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '416'
 ht-degree: 14%
 
 ---
 
 
 # UIに[!DNL MariaDB]ソース接続を作成する
-
->[!NOTE]
->
-> [!DNL MariaDB]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用してMaria DBソースコネクタを作成する手順を説明します。
 
