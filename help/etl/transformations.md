@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；etl;ETL;etl変換；ETL変換
 solution: Experience Platform
 title: ETL 変換の例
-topic: overview
+topic-legacy: overview
 description: この記事では、抽出、変換、読み込み（ETL）の開発者が経験する可能性がある変換の例を示します。
+exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 88%
 
 ---
-
 
 # ETL 変換の例
 
@@ -307,4 +307,3 @@ Adobe Experience Platform で使用するデータフレームを作成する場
       }]
    }
 ```
-
