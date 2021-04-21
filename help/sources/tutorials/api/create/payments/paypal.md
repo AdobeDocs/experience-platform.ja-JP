@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；PayPalコネクタ；Paypal;Paypal
 solution: Experience Platform
 title: Flow Service APIを使用したPayPalソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してPayPalをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 25%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL PayPal]ソース接続を作成する
 
@@ -113,7 +113,7 @@ curl -X POST \
 | `auth.params.clientSecret` | [!DNL PayPal]インスタンスに関連付けられているクライアントシークレット。 |
 | `connectionSpec.id` | [!DNL PayPal]接続指定ID:`221c7626-58f6-4eec-8ee2-042b0226f03b`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続が返されます。この接続には、一意の接続識別子(`id`)が含まれます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
