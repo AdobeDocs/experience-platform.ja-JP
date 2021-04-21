@@ -2,16 +2,16 @@
 keywords: OCR；テキストの存在；光学式文字認識
 solution: Experience Platform, Intelligent Services
 title: テキストの存在と光学式文字認識
-topic: Developer guide
+topic-legacy: Developer guide
 description: Content and Commerce AI APIでは、Text Presence / Optical Character Recognition(OCR)サービスは、特定の画像にテキストが存在するかどうかを示すことができます。 テキストが存在する場合、OCRはテキストを返すことができます。
+exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 4%
 
 ---
-
 
 # テキストの存在と光学式文字認識
 
@@ -86,7 +86,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `content-id` | 応答で返されるデータ要素の一意のID。 この値が渡されない場合は、自動生成IDが割り当てられます。 | × |
 | `content` | コンテンツは、生の画像（「inline」コンテンツタイプ）にすることができます。 <br> コンテンツがS3上のファイル(「s3-bucket」 content-type)の場合、署名済みURLを渡します。 | ○ |
 
-**応答** 
+**応答**
 
 正常に応答すると、`feature_value`配列で検出されたテキストが返されます。 テキストが読み取られ、左から右に上から下に返されます。 つまり、「I loveAdobe」が検出された場合、ペイロードは、別のオブジェクトで「I」、「love」および「Adobe」を返します。 オブジェクトには、単語を含む`feature_name`と、そのテキストの信頼性指標を含む`feature_value`が与えられます。
 
