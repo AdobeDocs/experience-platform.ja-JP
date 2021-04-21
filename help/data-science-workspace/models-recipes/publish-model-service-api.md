@@ -2,17 +2,17 @@
 keywords: Experience Platform；モデルの発行；Data Science Workspace；人気の高いトピック；Senesie機械学習api
 solution: Experience Platform
 title: Senesie Machine Learning APIを使用したサービスとしてのモデルの公開
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Senesie Machine Learning APIを使用して、モデルをサービスとして公開するプロセスについて説明します。
+exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 47%
 
 ---
-
 
 # [!DNL Sensei Machine Learning API]
 
@@ -94,7 +94,7 @@ curl -X POST
 | `scoringSchedule.endTime` | 開始スコアリングを行うタイミングを示す日時。 |
 | `scoringSchedule.cron` | テストの実行にスコアを付ける間隔を示すCron値。 |
 
-**応答** 
+**応答**
 
 成功した応答は、新たに作成されたMLサービスの詳細を返します。この詳細には、対応するスコアリングテストの一意の`id`と`scoringExperimentId`が含まれます。
 
@@ -176,7 +176,7 @@ curl -X POST
 | `scoringSchedule.endTime` | 開始スコアリングを行うタイミングを示す日時。 |
 | `scoringSchedule.cron` | テストの実行にスコアを付ける間隔を示すCron値。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新しく作成されたMLサービスの詳細が返されます。 これには、サービス固有の`id`と、対応するトレーニングとスコアリングの実験の`trainingExperimentId`と`scoringExperimentId`が含まれます。
 
@@ -254,7 +254,7 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 | `scoringSchedule.endTime` | 開始スコアリングを行うタイミングを示す日時。 |
 | `scoringSchedule.cron` | テストの実行にスコアを付ける間隔を示すCron値。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新しく作成されたMLサービスの詳細が返されます。 これには、サービス固有の`id`と、対応するトレーニングとスコアリングの実験の`trainingExperimentId`と`scoringExperimentId`が含まれます。 以下の応答例では、`trainingSchedule`と`scoringSchedule`の存在が示しているので、トレーニングとスコアリングのテストエンティティが「Everiments」というスケジュールになっていることが示されています。
 
