@@ -2,17 +2,17 @@
 keywords: Experience Platform；モデルの発行；Data Science Workspace；人気の高いトピック；サービスのスコア
 solution: Experience Platform
 title: Data Science Workspace UIのサービスとしてモデルを発行
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace　を使用すると、訓練を受けた評価済みのモデルをサービスとして公開でき、IMS 組織内のユーザーは、独自のモデルを作成する必要なくデータをスコアリングできます。
+exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 translation-type: tm+mt
-source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '502'
 ht-degree: 47%
 
 ---
-
 
 # Data Science Workspace UIで、モデルをサービスとして発行
 
@@ -26,7 +26,7 @@ Adobe Experience Platform Data Science Workspace　を使用すると、訓練�
 
 Sensei 機械学習 API を使用してモデルを公開する場合は、[API のチュートリアル](./publish-model-service-api.md)を参照してください。
 
-## モデルの公開 {#publish-a-model}
+## モデルの公開  {#publish-a-model}
 
 Adobe Experience Platformで、左側のナビゲーション列にある「**[!UICONTROL モデル]**」を選択し、「**[!UICONTROL 参照]**」タブを選択して、既存のすべてのモデルをリストします。 サービスとしてパブリッシュするモデルの名前を選択します。
 
