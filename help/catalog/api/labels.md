@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ使用ラベル；カタログサービス
 solution: Experience Platform
 title: Dataset Service APIのデータ使用ラベル
-topic: developer guide
+topic-legacy: developer guide
 description: Dataset Service APIは、データセットのデータ使用ラベルを管理するエンドポイントを提供します。
+exl-id: 2451e5b0-b117-4465-8e58-70fc341c0748
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
-
 
 # データセットサービスAPIのデータ使用ラベル
 
