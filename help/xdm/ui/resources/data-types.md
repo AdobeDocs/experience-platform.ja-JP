@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ui;XDM;XDM system；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；スキーマ;スキーマ;スキーマ；作成；データ型；データ型；
 solution: Experience Platform
 title: UIを使用したデータタイプの作成と編集
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Experience Platformユーザーインターフェイスでデータタイプを作成および編集する方法について説明します。
+exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 0%
 
 ---
-
 
 # UIを使用したデータタイプの作成と編集
 
