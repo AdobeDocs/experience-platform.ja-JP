@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ；列挙；ミックスイン；ミックスイン；ミックスイン；データ型；データ型；データ型；データ型；一次ID；一次ID;XDM個別プロファイル；列挙型；エクスペリエンスイベント;XDM ExperienceEvent；エクスペリエンスイベント；エクスペリエンスイベント；XDM ExperienceEvent;スキーマ設計；クラス；クラス；クラス；クラス；データ型；データ型；データ型；スキーマ;イベント;identityMap;IDマップ；IDマップ；スキーマ設計；マップ；スキーマ和集合;スキーマ
 solution: Experience Platform
 title: スキーマ組成の基礎
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
+exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 translation-type: tm+mt
-source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3502'
+source-wordcount: '3501'
 ht-degree: 40%
 
 ---
-
 
 # スキーマ合成の基本
 
@@ -127,7 +127,7 @@ XDMスキーマは、大量の複雑なデータを独立した形式で保存�
 
 &amp;ast;スキーマは、クラスと 0 個以上の Mixin で構成されます。つまり、Mixin を使用せずにデータセットスキーマを作成できます。
 
-### クラス {#class}
+### クラス  {#class}
 
 クラスを割り当てることで、スキーマの構成が開始されます。クラスは、スキーマに含まれるデータ（レコードまたは時系列）の行動面を定義します。これに加えて、クラスは、そのクラスに基づくすべてのスキーマに含める必要のある共通のプロパティの最小数を記述し、複数の互換性のあるデータセットを結合する方法を提供します。
 
