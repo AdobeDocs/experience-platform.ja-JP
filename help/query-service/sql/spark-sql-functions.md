@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；Spark SQL;Spark SQL;Spark SQL関数；関数；
 solution: Experience Platform
 title: クエリサービスのSpark SQL関数
-topic: spark sql functions
+topic-legacy: spark sql functions
 description: このドキュメントには、SQL機能を拡張するSpark SQL関数に関する情報が含まれています。
+exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '3893'
 ht-degree: 2%
 
 ---
-
 
 # [!DNL Spark] SQL関数
 
