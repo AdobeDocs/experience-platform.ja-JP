@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ETL;etl;etlワークフロー；ETLワークフロー
 solution: Experience Platform
 title: ETLワークフロー
-topic: overview
+topic-legacy: overview
 description: 様々な抽出、変換、読み込み（ETL）ツールの形式は異なることがありますが、ほとんどのツールでは、複数のデータソースを組み合わせる際に役立つ類似した機能が公開されています。
+exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 84%
 
 ---
-
 
 # ETL ワークフロー
 
