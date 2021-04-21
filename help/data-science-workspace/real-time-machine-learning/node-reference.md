@@ -2,16 +2,16 @@
 keywords: Experience Platform；開発者ガイド；Data Science Workspace；よく読まれるトピック；リアルタイム機械学習；ノードリファレンス；
 solution: Experience Platform
 title: リアルタイム機械学習ノードリファレンス
-topic: Nodes reference
+topic-legacy: Nodes reference
 description: ノードは、グラフを形成する基本単位です。 各ノードは特定のタスクを実行し、リンクを使用してMLパイプラインを表すグラフを形成して、互いにチェーンできます。 タスクは、データやスキーマの変換、機械学習推論などの入力データに対する操作を表す。 ノードは、変換された値または推定された値を次のノードに出力します。
+exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '678'
 ht-degree: 1%
 
 ---
-
 
 # リアルタイム機械学習ノードリファレンス（アルファ）
 
