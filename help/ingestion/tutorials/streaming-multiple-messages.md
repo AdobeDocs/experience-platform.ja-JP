@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング取り込み；取り込み；複数のメッセージのストリーミング；複数のメッセージ；
 solution: Experience Platform
 title: 単一のHTTPリクエストでの複数のメッセージの送信
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このドキュメントでは、ストリーミング取り込みを使用して、1つのHTTPリクエスト内で複数のメッセージをAdobe Experience Platformに送信するためのチュートリアルを提供します。
+exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 66%
 
 ---
-
 
 # 単一のHTTPリクエストでの複数のメッセージの送信
 
