@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；google adwords;Google AdWords;adwords
 solution: Experience Platform
 title: Flow Service APIを使用したGoogle AdWordsソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してAdobe Experience PlatformをGoogle AdWordsに接続する方法を説明します。
+exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 23%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Google AdWords]ソース接続を作成する
 
@@ -50,7 +50,7 @@ ht-degree: 23%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -120,7 +120,7 @@ curl -X POST \
 | `auth.params.clientSecret` | [!DNL AdWords]アカウントのクライアントシークレット。 |
 | `connectionSpec.id` | [!DNL Google AdWords]接続指定ID:`d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
