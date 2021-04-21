@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '952'
 ht-degree: 55%
 
 ---
@@ -91,6 +91,7 @@ Experience Platform は、サードパーティのデータベースからデー
 - [[!DNL GreenPlum] コネクタ](connectors/databases/greenplum.md)
 - [[!DNL HP Vertica] コネクタ](connectors/databases/hp-vertica.md)
 - [[!DNL IBM DB2] コネクタ](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB] コネクタ](connectors/databases/mariadb.md)
 - [[!DNL Microsoft SQL Server] コネクタ](connectors/databases/sql-server.md)
 - [[!DNL MySQL] コネクタ](connectors/databases/mysql.md)
 - [[!DNL Oracle] コネクタ](connectors/databases/oracle.md)
