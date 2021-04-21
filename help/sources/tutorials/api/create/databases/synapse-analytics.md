@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；シナプス；シナプス；Azure synapse解析
 solution: Experience Platform
-title: フローサービスAPIを使用したAzure synapse分析ソース接続の作成
-topic: overview
+title: Flow Service APIを使用したAzure synapse分析ソース接続の作成
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してAzure synapse分析をAdobe Experience Platformに接続する方法を説明します。
+exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 25%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Azure Synapse Analytics]ソース接続を作成する
 
@@ -46,7 +46,7 @@ ht-degree: 25%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -107,7 +107,7 @@ curl -X POST \
 | `auth.params.connectionString` | [!DNL Synapse]への接続に使用する接続文字列。 [!DNL Synapse]接続文字列パターンは`Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`です。 |
 | `connectionSpec.id` | [!DNL Synapse]接続指定ID:`a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータベースを調べるために必要です。
 
