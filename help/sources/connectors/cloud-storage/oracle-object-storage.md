@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Oracleオブジェクトストレージ;oracleオブジェクトストレージ
+keywords: Experience Platform；ホーム；人気の高いトピック；Oracleオブジェクトストレージ;oracleオブジェクトストレージ
 solution: Experience Platform
 title: Oracleオブジェクトストレージソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してOracleオブジェクトストレージをAdobe Experience Platformに接続する方法について説明します。
+exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
 translation-type: tm+mt
-source-git-commit: 04c605aedd4c52b54d0f075c169ce919650cdee9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '415'
 ht-degree: 3%
 
 ---
-
 
 # Oracleオブジェクトストレージコネクタ
 
