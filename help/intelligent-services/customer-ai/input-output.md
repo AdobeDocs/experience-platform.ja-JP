@@ -2,13 +2,13 @@
 keywords: Experience Platform；はじめに；顧客ai；人気のあるトピック；顧客ai入力；顧客ai出力
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客AIでの入出力
-topic: Getting started
+topic-legacy: Getting started
 description: Customer AIが使用する必要なイベント、入力および出力について詳しく説明します。
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2878'
+source-wordcount: '2876'
 ht-degree: 17%
 
 ---
