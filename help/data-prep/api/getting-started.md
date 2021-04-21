@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform；データ準備；データ準備api；トラブルシューティング；API
 title: データ準備APIの概要
-topic: guide
+topic-legacy: guide
 description: Data Prep APIエンドポイントを使用して、マッパーで使用する基本的なCRUD操作を実行するために知っておく必要がある主要な概念と基本的な機能について説明します。
+exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
 translation-type: tm+mt
-source-git-commit: a3ea7a6b68c81ee91a338735009ae0fa63884ded
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '186'
 ht-degree: 5%
 
 ---
