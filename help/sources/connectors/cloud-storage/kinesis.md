@@ -6,18 +6,14 @@ topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用して、AmazonKinesisをAdobe Experience Platformに接続する方法を説明します。
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '218'
 ht-degree: 1%
 
 ---
 
-# （ベータ版） [!DNL Amazon Kinesis]コネクタ
-
->[!NOTE]
->
->[!DNL Amazon Kinesis]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# [!DNL Amazon Kinesis] コネクタ
 
 Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]などのクラウドプロバイダーに対してネイティブの接続を提供します。 これらのシステムのデータを[!DNL Platform]に取り込むことができます。
 
