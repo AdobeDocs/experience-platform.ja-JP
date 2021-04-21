@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログサービス；カタログ；カタログサービス；データの場所；データの場所；データ管理;データ管理；系列；系列；カタログ；データセットを有効にする
 solution: Experience Platform
 title: カタログサービスの概要
-topic: overview
+topic-legacy: overview
 description: カタログサービスは、Adobe Experience Platform 内のデータの場所と系列のレコードのシステムです。Experience Platform に取得されるすべてのデータはファイルとディレクトリとしてデータレイクに保存されますが、カタログには、参照や監視のために、これらのファイルとディレクトリのメタデータと説明が保持されます。
+exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 41%
 
 ---
 
-
-# [!DNL Catalog Service]概要
+# [!DNL Catalog Service] の概要
 
 [!DNL Catalog Service] は、Adobe Experience Platform内のデータの位置と系統に関する記録システムです。[!DNL Experience Platform]に取り込まれるすべてのデータは[!DNL Data Lake]にファイルやディレクトリとして保存されますが、[!DNL Catalog]は、参照や監視のために、これらのファイルやディレクトリのメタデータと説明を保持します。
 
