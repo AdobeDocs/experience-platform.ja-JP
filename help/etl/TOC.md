@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ETL ガイド
 breadcrumb-title: ETL ガイド
 user-guide-description: データを Platform に取り込むための、安全な高性能コネクターを作成する一般的な手順について説明します。
-feature: Data Management, Data Ingestion
+feature: データ管理、データ取り込み
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 78%
