@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Apache Hive;Azure HDInsights;azure hdinsights
 solution: Experience Platform
 title: UIのAzure HDInsights Source ConnectionでApacheハイブを作成します
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してAzure HDInsightsソース接続でApache Hiveを作成する方法を説明します。
+exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 9%
 
 ---
-
 
 # UIの[!DNL Azure HDInsights]ソース接続に[!DNL Apache Hive]を作成
 
