@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Adobe Experience PlatformUIのセグメントビルダーは、プロファイルデータ要素を操作できるリッチワークスペースを備えています。 ワークスペースには、ルールを作成および編集するための直感的なコントロールがあります。例えば、データプロパティを表示する際に使用するドラッグ＆ドロップタイルなどです。
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
 source-wordcount: '2000'
 ht-degree: 43%
@@ -117,7 +117,7 @@ ht-degree: 43%
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### カウント関数
+### カウント関数{#count-functions}
 
 セグメントビルダーのカウント関数は、指定したイベントを探し、その回数をカウントするために使用します。 セグメントビルダーでサポートされているカウント機能は、「最低」、「最大」、「正確」、「範囲内」および「すべて」です。
 
