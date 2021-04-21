@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Tableau;Tableau;クエリサービス；クエリサービス；クエリサービスに接続；
 solution: Experience Platform
 title: Tableauをクエリサービスに接続
-topic: connect
+topic-legacy: connect
 description: このドキュメントでは、TableauとAdobe Experience Platformクエリサービスを接続する手順について説明します。
+exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 11%
 
 ---
-
 
 # [!DNL Tableau]をクエリサービスに接続
 
