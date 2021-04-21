@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；文字列関数；文字列；
 solution: Experience Platform
 title: PQL文字列関数
-topic: developer guide
+topic-legacy: developer guide
 description: プロファイルクエリ言語（PQL）には、文字列の操作が簡単になる関数が用意されています。
+exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 94%
 
 ---
-
 
 # 文字列関数
 
@@ -269,4 +269,3 @@ emailAddress.regexGroup("@(\w+)", 1)
 ## 次の手順
 
 ここで学習した文字列関数は、PQL クエリ内で使用できます。その他の PQL 関数について詳しくは、[プロファイルクエリ言語の概要](./overview.md)を参照してください。
-
