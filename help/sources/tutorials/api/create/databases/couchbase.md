@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；couchbase;Couchbase
 solution: Experience Platform
 title: Flow Service APIを使用したCouchbaseソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してCouchbaseをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 27%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Couchbase]ソース接続を作成する
 
@@ -42,7 +42,7 @@ ht-degree: 27%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -103,7 +103,7 @@ curl -X POST \
 | `auth.params.connectionString` | [!DNL Couchbase]アカウントへの接続に使用する接続文字列。 接続文字列パターンは次のとおりです。`Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
 | `connectionSpec.id` | [!DNL Couchbase]接続仕様ID:`1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
