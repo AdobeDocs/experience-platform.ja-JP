@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；shopify;Shopify
 solution: Experience Platform
 title: UIでのShopifyソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してShopifyソース接続を作成する方法を説明します。
+exl-id: 527cac95-3d9a-4089-98e4-66d746641b85
 translation-type: tm+mt
-source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '450'
 ht-degree: 13%
 
 ---
-
 
 # UIに[!DNL Shopify]ソース接続を作成する
 
