@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: データ取得のチュートリアル
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: データ取得には、バッチ取得、ストリーミング取得、ソースコネクタを使用した取得が含まれます。
+exl-id: 51627acf-e90b-4911-aa54-4a59f3b6a8f9
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 40%
 
 ---
-
 
 # データを[!DNL Experience Platform]に取り込む
 
@@ -45,6 +45,3 @@ CSVデータをAdobe Experience Platformに取り込むには、データを[!DN
 ## 1 回の HTTP リクエストでの複数メッセージのストリーミング
 
 データを Adobe Experience Platform にストリーミングする場合、多数の HTTP 呼び出しを作成するコストが高くなる可能性があります。例えば、1 KB のペイロードで 200 個の HTTP リクエストを作成するよりも、それぞれが 1 KB の 200 個のメッセージが含まれた 1 個の HTTP リクエスト（200 KB の単一ペイロード）を作成する方がはるかに効率的です。正しく使用すれば、1つのリクエスト内で複数のメッセージをグループ化するのは、[!DNL Experience Platform]に送信されるデータを最適化する優れた方法です。 ストリーミング取り込みを使用して、1つのHTTP要求内に複数のメッセージを[!DNL Experience Platform]に送信する方法を学ぶには、[複数のメッセージの送信チュートリアル](../ingestion/tutorials/streaming-multiple-messages.md)に従ってください。
-
-
-
