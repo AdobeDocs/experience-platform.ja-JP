@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；shopify;Shopify;
 solution: Experience Platform
 title: Shopifyソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してShopifyをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 636b31a7-e5f9-434a-acd1-226096522495
 translation-type: tm+mt
-source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '157'
 ht-degree: 12%
 
 ---
-
 
 # [!DNL Shopify] コネクタ
 
