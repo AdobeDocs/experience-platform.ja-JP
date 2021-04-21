@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Flow Service APIを使用してMicrosoft Dynamics Source Connectionを作成する
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、プラットフォームをMicrosoft Dynamicsアカウントに接続する方法を説明します。
+exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 27%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Microsoft Dynamics]ソース接続を作成する
 
@@ -114,7 +114,7 @@ curl -X POST \
 | `auth.params.password` | [!DNL Dynamics]アカウントに関連付けられているパスワードです。 |
 | `connectionSpec.id` | 前の手順で取得した[!DNL Dynamics]アカウントの接続仕様`id`。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続が、一意の識別子(`id`)を含めて返されます。 このIDは、次の手順でCRMシステムを調査するために必要です。
 
@@ -169,7 +169,7 @@ curl -X POST \
 | `auth.params.servicePrincipalId` | [!DNL Dynamics]アカウントのクライアントID。 このIDは、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |
 | `auth.params.servicePrincipalKey` | サービスプリンシパル秘密キー。 この秘密鍵証明書は、サービスプリンシパルとキーベースの認証を使用する場合に必要です。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続が、一意の識別子(`id`)を含めて返されます。 このIDは、次の手順でCRMシステムを調査するために必要です。
 
