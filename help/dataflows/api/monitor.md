@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；監視データフロー；フローサービスapi；フローサービス
 solution: Experience Platform
 title: Flow Service APIを使用したデータフローの監視
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用して、完全性、エラーおよび指標に関するフロー実行データを監視する手順を説明します。
+exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 20%
 
 ---
-
 
 # Flow Service APIを使用してデータフローを監視する
 
@@ -36,7 +36,7 @@ Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外�
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -81,7 +81,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、作成日、ソース接続、ターゲット接続、およびフロー実行の固有な識別子(`id`)など、フロー実行に関する詳細を返します。
 
