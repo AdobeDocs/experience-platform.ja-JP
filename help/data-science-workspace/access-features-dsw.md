@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；Data Science Workspace；人気の高いトピック；アクセス制御；サンドボックス；インテリジェンスパック；dsw機能；dswアクセス；Adobe Experience Platformインテリジェンス；インテリジェンス；aepインテリジェンスパッケージ
 solution: Experience Platform
 title: Data Science Workspaceのアクセスと機能
-topic: Access and features for data science workspace
-description: '次のドキュメントでは、Data Science Workspaceの権限と機能へのアクセスについて概説します。 '
+topic-legacy: Access and features for data science workspace
+description: 次のドキュメントでは、Data Science Workspaceの権限と機能へのアクセスについて概説します。
+exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 26%
 
 ---
-
 
 # Data Science Workspaceのアクセスと機能
 
