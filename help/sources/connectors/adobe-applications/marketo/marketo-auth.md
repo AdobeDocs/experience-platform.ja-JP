@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Marketo Engage；マーケティング担当；マーケティング担当
 solution: Experience Platform
 title: Marketoソースコネクタを認証する
-topic: 概要
+topic-legacy: overview
 description: このドキュメントでは、Marketo認証資格情報を生成する方法について説明します。
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
