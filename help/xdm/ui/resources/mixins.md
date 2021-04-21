@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気のあるトピック；API;AP
 solution: Experience Platform
 title: UIでのミックスインの作成と編集
 description: Experience Platformユーザーインターフェイスでミックスインを作成および編集する方法について説明します。
-topic: user guide
+topic-legacy: user guide
+exl-id: 240b857d-75ad-42fd-9249-050cbc5306a9
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '704'
 ht-degree: 5%
 
 ---
-
 
 # UIでのミックスインの作成と編集
 
