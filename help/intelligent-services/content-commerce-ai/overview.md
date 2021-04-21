@@ -2,16 +2,16 @@
 keywords: Experience Cloud；はじめに；コンテンツとコマースai；人気の高いトピック；インテリジェントサービス；ccai
 solution: Experience Cloud, Intelligent Services, Experience Platform
 title: コンテンツとコマースAIの概要
-topic: Content and Commerce AI
+topic-legacy: Content and Commerce AI
 description: コンテンツとコマースAIは、コンテンツからインテリジェントな機能を抽出し、コンテンツの整理、合理化を行い、顧客に対して効果的でパーソナライズされたエクスペリエンスを提供するAIサービスのセットです。
+exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
 
 ---
-
 
 # コンテンツとコマースAIの概要
 
@@ -54,4 +54,3 @@ ht-degree: 1%
 - セッション内および後続のエクスペリエンスに対して、改善されたパーソナライズされたエクスペリエンスを提供するには、顧客のプロファイルを使用します。
 - コンテンツ機能を使用して、KPIを推進する顧客の行動に関する洞察を得ます。
 - コンテンツのインサイトを使用して、コンテンツの作成、オーサリング、選択を改善します。
-
