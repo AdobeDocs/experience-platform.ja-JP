@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；DULE；スケジュール
 solution: Experience Platform
 title: Policy Service APIの使い始めに
-topic: developer guide
+topic-legacy: developer guide
 description: Policy Service APIを使用すると、Adobe Experience Platformデータガバナンスに関する様々なリソースを作成および管理できます。 このドキュメントでは、ポリシーサービス API を呼び出す前に知っておく必要があるコア概念の概要を説明します。
+exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 33%
 
 ---
-
 
 # [!DNL Policy Service] API使用の手引き
 
@@ -28,7 +28,7 @@ ht-degree: 33%
 
 ## API 呼び出し例の読み取り
 
-[!DNL Policy Service] APIドキュメントには、リクエストをフォーマットする方法を示すAPI呼び出しの例が記載されています。 この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+[!DNL Policy Service] APIドキュメントには、リクエストをフォーマットする方法を示すAPI呼び出しの例が記載されています。 この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ## 必須ヘッダー
 
@@ -46,7 +46,7 @@ ht-degree: 33%
 >
 >[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
 
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
+ペイロード（POST、PUT、PATCH）を含んだすべてのリクエストには、以下の追加ヘッダーが必要です。
 
 * `Content-Type: application/json`
 
