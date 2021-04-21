@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Privacy ServiceとExperience Cloudの申し込み
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、プライバシーに関する操作のために様々なExperience Cloudアプリケーションを設定する方法に関するリファレンスを提供します。
+exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 58%
 
 ---
-
 
 # [!DNL Privacy Service] および [!DNL Experience Cloud] アプリケーション
 
