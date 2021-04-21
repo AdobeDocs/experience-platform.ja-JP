@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；APIベースの適用；データガバナンス
 solution: Experience Platform
 title: ポリシーAPIエンドポイント
-topic: developer guide
+topic-legacy: developer guide
 description: データ使用ポリシーは組織が導入するルールで、Experience Platform 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するものです。/policiesエンドポイントは、データ使用ポリシーの表示、作成、更新または削除に関連するすべてのAPI呼び出しに使用されます。
+exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 9%
 
 ---
-
 
 # ポリシーエンドポイント
 
@@ -45,7 +45,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常な応答には`children`配列が含まれ、`id`値を含む取得された各ポリシーの詳細をリストします。 特定のポリシーの`id`フィールドを使用して、そのポリシーの[lookup](#lookup)、[update](#update)、[delete](#delete)の各リクエストを実行できます。
 
@@ -322,7 +322,7 @@ curl -X POST \
 | `description` | ポリシーの使用例に関する詳細なコンテキストを提供する、オプションの説明です。 |
 | `deny` | ポリシーに関連付けられたマーケティングアクションの実行が制限されている特定のデータ使用ラベルを説明するポリシー式です。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新しく作成されたポリシーの詳細（`id`を含む）が返されます。 この値は読み取り専用で、ポリシーの作成時に自動的に割り当てられます。
 
@@ -430,7 +430,7 @@ curl -X PUT \
 | `description` | ポリシーの使用例に関する詳細なコンテキストを提供する、オプションの説明です。 |
 | `deny` | ポリシーに関連付けられたマーケティングアクションの実行が制限されている特定のデータ使用ラベルを説明するポリシー式です。 このプロパティの詳細については、[ポリシー](#create-policy)の作成の節を参照してください。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、更新されたポリシーの詳細が返されます。
 
@@ -523,7 +523,7 @@ curl -X PATCH \
         ]'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、更新されたポリシーの詳細が返されます。
 
@@ -697,7 +697,7 @@ curl -X GET \
 | --- | --- |
 | `policyIds` | 有効にするコアポリシーIDのリストです。 含まれないコアポリシーは`DISABLED`ステータスに設定され、評価には参加しません。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、有効なコアポリシーの更新リストが`policyIds`配列に返されます。
 
