@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Kinesis;kinesis;AmazonKinesis;amazon kinesis
 solution: Experience Platform
 title: フローサービスAPIを使用したAmazonKinesisソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをAmazonKinesisアカウントに接続する方法を説明します。
+exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 translation-type: tm+mt
-source-git-commit: ed14fe464a4dc82f54902c8dc92fe00bc2a5381e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '559'
 ht-degree: 26%
 
 ---
-
 
 # Flow Service APIを使用して[!DNL Amazon Kinesis]ソース接続を作成する
 
@@ -48,7 +48,7 @@ ht-degree: 26%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -111,7 +111,7 @@ curl -X POST \
 | `auth.params.region` | [!DNL Kinesis]アカウントの地域です。 地域について詳しくは、[IPアドレス許可リスト](../../../../ip-address-allow-list.md)のドキュメントを参照してください |
 | `connectionSpec.id` | [!DNL Kinesis]接続指定ID:`86043421-563b-46ec-8e6c-e23184711bf6` |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
 
