@@ -2,16 +2,16 @@
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；mlservices;senesi機械学習api
 solution: Experience Platform
 title: MLServices APIエンドポイント
-topic: Developer guide
+topic-legacy: Developer guide
 description: MLService は、組織が開発済みのモデルにアクセスし再利用できるようにするための、公開されているトレーニング済みモデルです。MLService の主要な特長は、トレーニングとスコアリングをスケジュールに従って自動化できる点です。スケジュールされたトレーニングの実行は、モデルの効率と精度を維持するのに役立ちます。また、スケジュールされたスコアリングの実行で、新しいインサイトを一貫して生成できるようになります。
+exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 97%
 
 ---
-
 
 # MLServicesエンドポイント
 
@@ -19,7 +19,7 @@ MLService は、組織が開発済みのモデルにアクセスし再利用で�
 
 自動トレーニングおよびスコアリングのスケジュールは、開始タイムスタンプ、終了タイムスタンプおよび頻度を使用して [cron 式](https://jp.wikipedia.org/wiki/Cron)として定義します。スケジュールは、[MLService の作成](#create-an-mlservice)時に定義できますし、[既存の MLService の更新](#update-an-mlservice)で適用することもできます。
 
-## MLService の作成 {#create-an-mlservice}
+## MLService の作成  {#create-an-mlservice}
 
 MLService を作成するには、サービスの名前と有効な MLInstance ID を指定するペイロードを含んだ POST リクエストを実行します。MLService の作成に使用する MLInstance には、既存のトレーニング実験は必要ありませんが、対応する実験 ID とトレーニング実行 ID を指定することで、既存のトレーニング済みモデルを使用して MLService を作成することもできます。
 
