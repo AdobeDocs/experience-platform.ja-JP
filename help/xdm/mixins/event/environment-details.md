@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM;ExperienceEvent；フィールド；スキーマ;スキーマ;スキーマデザイン；ミックスイン；環境;環境の詳細；
 solution: Experience Platform
 title: 環境の詳細Mixin
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、ExperienceEvent環境の詳細ミックスインの概要を説明します。
+exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 3%
 
 ---
-
 
 # [!UICONTROL 環境] の詳細
 
