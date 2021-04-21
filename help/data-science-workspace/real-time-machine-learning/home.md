@@ -2,16 +2,16 @@
 keywords: Experience Platform；開発者ガイド；Data Science Workspace；よく読まれるトピック；リアルタイムの機械学習；
 solution: Experience Platform
 title: リアルタイム機械学習の概要
-topic: Overview
+topic-legacy: Overview
 description: リアルタイム機械学習は、エンドユーザーに対するデジタルエクスペリエンスコンテンツの関連性を大幅に向上させます。 これは、Experience Edgeでリアルタイムの会議と継続的な学習を活用することで可能になります。
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '549'
 ht-degree: 5%
 
 ---
-
 
 # リアルタイム機械学習の概要（アルファ）
 
@@ -81,4 +81,3 @@ ht-degree: 5%
 ## 次の手順
 
 『[始める前に](./getting-started.md)』に従って、作業を開始できます。このガイドでは、リアルタイム機械学習モデルを作成するために必要な前提条件をすべて設定する手順を説明します。
-
