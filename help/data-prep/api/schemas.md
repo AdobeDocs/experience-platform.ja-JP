@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；スキーマ;
 solution: Experience Platform
 title: スキーマAPIエンドポイント
-topic: schemas
+topic-legacy: schemas
 description: 'Adobe Experience PlatformAPIの「/スキーマ」エンドポイントを使用すると、プラットフォームのMapperで使用するスキーマをプログラムによって取得、作成、更新できます。 '
 translation-type: tm+mt
-source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '613'
 ht-degree: 9%
 
 ---
@@ -55,7 +55,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 次の応答は、要求されたスキーマのリストと共にHTTPステータス200を返します。
 
@@ -163,7 +163,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、新しく作成したスキーマに関する情報と共にHTTPステータス200が返されます。
 
@@ -202,7 +202,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | -------- | ----------- |
 | `sampleId` | スキーマ元のサンプルデータのID。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新しく作成したスキーマに関する情報と共にHTTPステータス200が返されます。
 
@@ -273,7 +273,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | `schemaRef.id` | 参照しているスキーマのID。 |
 | `schemaRef.contentType` | 参照先スキーマの応答形式を決定します。 このフィールドの詳細については、[スキーマレジストリ開発者ガイド](../../xdm/api/schemas.md#lookup)を参照してください。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新しく作成したスキーマに関する情報と共にHTTPステータス200が返されます。
 
@@ -318,7 +318,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
  -F 'file=@{PATH_TO_FILE}.json'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、新しく作成したスキーマに関する情報と共にHTTPステータス200が返されます。
 
@@ -360,7 +360,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 成功した場合、指定されたスキーマに関する情報と共にHTTPステータス200が返されます。
 
