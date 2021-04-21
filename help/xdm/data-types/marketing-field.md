@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: 汎用マーケティングプリファレンスフィールドのデータ型
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、汎用マーケティングプリファレンスフィールドのXDMデータ型の概要を説明します。
+exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 translation-type: tm+mt
-source-git-commit: f5ec59e609fda66d379847dca068d19d4cce8228
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '534'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL 汎用マーケティングプリファレンス] フィールドデータ型
 
