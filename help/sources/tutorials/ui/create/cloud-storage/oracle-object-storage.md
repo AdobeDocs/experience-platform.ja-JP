@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Oracleオブジェクトストレージ;oracleオブジェクトストレージ
+keywords: Experience Platform；ホーム；人気の高いトピック；Oracleオブジェクトストレージ;oracleオブジェクトストレージ
 solution: Experience Platform
 title: UIでのOracleオブジェクトストレージソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してOracleオブジェクトストレージのソース接続を作成する方法を説明します。
+exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
 translation-type: tm+mt
-source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 10%
 
 ---
-
 
 # UIでの[!DNL Oracle Object Storage]ソース接続の作成
 
@@ -41,7 +41,7 @@ ht-degree: 10%
 
 必要な資格情報を収集したら、次の手順に従って新しいOracleオブジェクトストレージアカウントを作成し、プラットフォームに接続します。
 
-## Oracleオブジェクトに接続ストレージ
+## oracleオブジェクトに接続ストレージ
 
 プラットフォームUIで、左側のナビゲーションから「**[!UICONTROL ソース]**」を選択し、[!UICONTROL ソース]ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
