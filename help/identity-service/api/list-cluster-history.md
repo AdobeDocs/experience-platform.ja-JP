@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ID；クラスタの履歴
 solution: Experience Platform
 title: IDのクラスタ履歴の取得
-topic: API guide
+topic-legacy: API guide
 description: ID を使用して、様々なデバイスグラフの実行中にクラスターを移動できます。ID サービスは、特定の ID のクラスター関連付けを経時的に表示します。
+exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 92%
 
 ---
-
 
 # ID のクラスター履歴の取得
 
