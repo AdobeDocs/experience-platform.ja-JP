@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloudストレージ;Googleクラウドストレージ;google;Google
 solution: Experience Platform
 title: Flow Service APIを使用したGoogle Cloudストレージソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをGoogle Cloudストレージアカウントに接続する方法を説明します。
+exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 translation-type: tm+mt
-source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '595'
 ht-degree: 24%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Google Cloud Storage]ソース接続を作成する
 
@@ -42,7 +42,7 @@ ht-degree: 24%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -105,7 +105,7 @@ curl -X POST \
 | `auth.params.secretAccessKey` | [!DNL Google Cloud Storage]アカウントに関連付けられている秘密アクセスキー。 |
 | `connectionSpec.id` | [!DNL Google Cloud Storage]接続指定ID:`32e8f412-cdf7-464c-9885-78184cb113fd` |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
 
