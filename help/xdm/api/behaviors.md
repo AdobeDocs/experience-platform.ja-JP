@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気の高いトピック；API;XD
 solution: Experience Platform
 title: 動作APIエンドポイント
 description: スキーマレジストリAPIの/behaviorsエンドポイントを使用すると、グローバルコンテナで使用可能なすべての動作を取得できます。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 5%
 
 ---
-
 
 # 動作エンドポイント
 
@@ -117,7 +117,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json;version=1'
 ```
 
-**応答** 
+**応答**
 
 正常に完了した応答は、バージョン、説明、およびその動作を使用するクラスに提供する属性など、動作の詳細を返します。
 
