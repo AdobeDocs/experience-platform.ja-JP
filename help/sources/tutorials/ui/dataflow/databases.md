@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データベースコネクタ
 solution: Experience Platform
 title: UIでのデータベース・ソース接続のデータ・フローの構成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: データフローとは、ソースからプラットフォームデータセットにデータを取得し、取り込むスケジュール設定されたタスクです。 このチュートリアルでは、データベースアカウントを使用して新しいデータフローを構成する手順を説明します。
+exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 3%
 
 ---
-
 
 # UIでのデータベース接続用のデータフローの構成
 
