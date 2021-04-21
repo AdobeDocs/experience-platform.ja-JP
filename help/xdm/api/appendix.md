@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気の高いトピック；API;XD
 solution: Experience Platform
 title: スキーマレジストリAPIガイド付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 49%
 
 ---
-
 
 # スキーマレジストリAPIガイドの付録
 
@@ -131,4 +131,4 @@ Adobe Experience Platform は、複数のソリューションやサービスと
 
 標準のXDMと[!DNL Experience Platform]での動作との間でマッピングが行われることを知っておく価値はありますが、[!DNL Platform]サービスの使用に影響を与えることはありません。
 
-オープンソースプロジェクトは利用できますが、[!DNL Schema Registry]を通じてリソースと対話する際には、このドキュメントのAPIの例が、知り、従うべきベストプラクティスを提供します。
+オープンソースプロジェクトは利用できますが、[!DNL Schema Registry]を通じてリソースとやり取りする際には、このドキュメントのAPIの例が、知り、従うべきベストプラクティスを示しています。
