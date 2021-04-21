@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；イベントハブ；Azureイベントハブ；イベントハブ
 solution: Experience Platform
 title: Flow Service APIを使用してAzureイベントハブのソース接続を作成する
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをAzureイベントハブアカウントに接続する方法を説明します。
+exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 translation-type: tm+mt
-source-git-commit: 643da0981b3c955a9f66b6542ddaf2bda7398a2e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 26%
+source-wordcount: '566'
+ht-degree: 25%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Azure Event Hubs]ソース接続を作成する
 
@@ -48,7 +48,7 @@ ht-degree: 26%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -111,7 +111,7 @@ curl -X POST \
 | `namespace` | アクセスしている[!DNL Event Hubs]の名前空間。 |
 | `connectionSpec.id` | [!DNL Azure Event Hubs]接続指定ID:`bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
 
