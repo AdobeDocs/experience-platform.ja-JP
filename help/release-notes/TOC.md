@@ -4,17 +4,18 @@ user-guide-title: Adobe Experience Platform リリースノート
 breadcrumb-title: Platform リリースノート
 user-guide-description: Adobe Experience Platform の月次リリースノートです。
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0c9b60fe0777286819841c520a41007634622578
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 97%
+source-wordcount: '44'
+ht-degree: 95%
 
 ---
 
 
 # Adobe Experience Platform リリースノート {#release-notes}
 
-* [2021 年 3 月](latest/latest.md)
+* [2021年4月](latest/latest.md)
+* [2021 年 3 月](2021/march-2021.md)
 * [2021 年 2 月](2021/february-2021.md)
 * [2021 年 1 月](2021/january-2021.md)
 * 2020 年 {#2020}
