@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；製品プロファイル
 solution: Experience Platform
 title: 製品プロファイルの詳細と追加サービスの管理
-topic: user guide
+topic-legacy: user guide
 description: このドキュメントでは、Adobe Admin Consoleの製品プロファイルの詳細や追加のサービスを管理するために必要な手順を説明します。 プロファイルの詳細を設定し、追加のサービスにアクセスするには、プロファイル設定メニューを使用します。
+exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 61%
 
 ---
-
 
 # 製品プロファイルの詳細と追加のサービスの管理
 
