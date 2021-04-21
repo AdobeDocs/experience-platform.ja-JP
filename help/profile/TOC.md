@@ -1,11 +1,10 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
-feature: Profiles
+feature: プロファイル
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 41%
