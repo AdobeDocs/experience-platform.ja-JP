@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure synapse分析；シナプス；シナプス；azure synapse分析
 solution: Experience Platform
 title: UIでのAzure synapse分析ソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用して、Azure synapse分析（以下「シナプス」と呼ばれる）ソース接続を作成する方法を説明します。
+exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 9%
 
 ---
-
 
 # UIに[!DNL Azure Synapse Analytics]ソース接続を作成する
 
@@ -51,7 +51,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-**[!UICONTROL データベース]**&#x200B;カテゴリーの下で、**[!UICONTROL Azure synapse解析]**&#x200B;を選択します。 このコネクタを初めて使用する場合は、**[!UICONTROL 設定]**&#x200B;を選択します。 それ以外の場合は、**[!UICONTROL 追加data]**&#x200B;を選択して新しい[!DNL Synapse]コネクタを作成します。
+**[!UICONTROL データベース]**&#x200B;カテゴリーの下で、**[!UICONTROL Azure synapse分析]**&#x200B;を選択します。 このコネクタを初めて使用する場合は、**[!UICONTROL 設定]**&#x200B;を選択します。 それ以外の場合は、**[!UICONTROL 追加data]**&#x200B;を選択して新しい[!DNL Synapse]コネクタを作成します。
 
 ![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
