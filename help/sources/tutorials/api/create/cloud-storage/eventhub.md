@@ -7,18 +7,15 @@ type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをAzureイベントハブアカウントに接続する方法を説明します。
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 25%
+source-wordcount: '550'
+ht-degree: 26%
 
 ---
 
-# [!DNL Flow Service] APIを使用して[!DNL Azure Event Hubs]ソース接続を作成する
 
->[!NOTE]
->
-> [!DNL Azure Event Hubs]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+# [!DNL Flow Service] APIを使用して[!DNL Azure Event Hubs]ソース接続を作成する
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
