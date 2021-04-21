@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックスの削除
 solution: Experience Platform
 title: APIでのサンドボックスの削除
-topic: developer guide
+topic-legacy: developer guide
 description: サンドボックスの名前を要求パスに含むDELETE要求を行うことで、サンドボックスを削除できます。
+exl-id: c900325e-bc28-42f1-bc9a-eecb33fa9be4
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 66%
+source-wordcount: '116'
+ht-degree: 67%
 
 ---
-
 
 # APIでのサンドボックスの削除
 
