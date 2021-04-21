@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；モニターアカウント；モニターデータフロー；データフロー；送信先
+keywords: Experience Platform，ホーム，人気のあるトピック，アカウントの監視，データフロー，データフロー，宛先
 description: 宛先は、宛先プラットフォームとの統合が事前に構築されており、Adobe Experience Platformからのデータをシームレスにアクティベーションできます。 宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 solution: Experience Platform
 title: データフローの監視
@@ -7,7 +7,7 @@ topic-legacy: overview
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 63158e7322ae91d5b36a7b2aa22fd93512f9bebb
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 18%
