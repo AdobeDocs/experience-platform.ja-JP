@@ -2,16 +2,16 @@
 keywords: Experience Platform；ウォークスルー；Data Science Workspace；よく読まれるトピック
 solution: Experience Platform
 title: Data Science Workspaceのチュートリアル
-topic: Walkthrough
+topic-legacy: Walkthrough
 description: このドキュメントでは、Adobe Experience Platform Data Science Workspace　のチュートリアルを提供します。特に、データサイエンティストが通る一般的なワークフローは、機械学習を使用した問題の解決に役立ちます。
+exl-id: d814846e-52a9-46c6-831a-3399241959f2
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 33%
 
 ---
-
 
 # [!DNL Data Science Workspace] walkthrough
 
@@ -132,7 +132,7 @@ df.describe()
 
 真ん中に斜めの 1 がそろっていることに注目してください。これは、変数をそれ自体と比較する場合、完全に正の相関関係があることを示しています。強い正の相関は 1 に近い大きさになり、弱い相関は 0 に近い大きさになります。負の相関は、逆の傾向を示す負の係数で示されます。
 
-### 特徴エンジニアリング {#feature-engineering}
+### 特徴エンジニアリング  {#feature-engineering}
 
 この節では、以下の操作を実行して小売データセットを変更する際に、機能エンジニアリングを使用します。
 
