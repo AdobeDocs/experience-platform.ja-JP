@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure;azure blob;blob;Blob
 solution: Experience Platform
 title: Flow Service APIを使用してAzure Blobソース接続を作成する
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してAdobe Experience PlatformをAzure Blobに接続する方法を説明します。
+exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 26%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Azure Blob]ソース接続を作成する
 
@@ -104,7 +104,7 @@ curl -X POST \
 | `auth.params.connectionString` | BLOBストレージのデータにアクセスするために必要な接続文字列です。 BLOB接続文字列パターンは次のとおりです。`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | BLOBストレージ接続の指定ID:`4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでストレージを調べるために必要です。
 
@@ -158,7 +158,7 @@ curl -X POST \
 | `auth.params.connectionString` | [!DNL Blob]ストレージ内のデータにアクセスするために必要なSAS URI。 [!DNL Blob] SAS URIパターンは次のとおりです。`https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
 | `connectionSpec.id` | [!DNL Blob]ストレージ接続の指定ID:`4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでストレージを調べるために必要です。
 
