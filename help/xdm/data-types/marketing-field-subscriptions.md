@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: 購読データ型を持つ汎用マーケティング環境設定フィールド
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、購読のXDMデータ型を持つ汎用マーケティングプリファレンスフィールドの概要を説明します。
+exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 translation-type: tm+mt
-source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '728'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Subscriptionsデータ型の汎用マーケティングプリファレンスフィ] ールド
 
