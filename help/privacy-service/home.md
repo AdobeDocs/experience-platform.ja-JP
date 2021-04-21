@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Privacy Serviceの概要
-topic: overview
+topic-legacy: overview
 description: Privacy Serviceを使用すると、Experience Cloudデータの運用に関する法的プライバシー規制への自動コンプライアンスを容易に行うことができます。
+exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1394'
 ht-degree: 10%
 
 ---
 
-
-# [!DNL Privacy Service]概要
+# [!DNL Privacy Service] の概要
 
 より良い顧客体験を提供するためには、顧客の個人データを収集し、保存する必要があります。このデータを使用する場合、顧客のプライバシーを理解し、尊重することが重要です。新しい法規制や組織の規制により、ユーザーは要求に応じて、データストアから個人データにアクセスしたり、個人データを削除したりする権利が与えられます。
 
@@ -92,7 +92,7 @@ CRMシステムが利用する[!DNL Experience Cloud]アプリケーションに
 | --- | --- |
 | [!DNL Privacy Service] UI | [!DNL Privacy Service] UIは監視ダッシュボードを備えており、すべてのアクティブな要求の状態を視覚的に表示できます。 詳しくは、[Privacy Serviceユーザーガイド](ui/overview.md)を参照してください。 |
 | [!DNL Privacy Service] API | [!DNL Privacy Service] APIが提供する参照エンドポイントを使用して、プライバシージョブのステータスをプログラムで監視できます。 APIの使用方法について詳しくは、[Privacy Service開発者ガイド](./api/getting-started.md)を参照してください。 |
-| [!DNL Privacy Events] | [!DNL Privacy Events] 効率的なジョブリクエストの自動化を容易にするために、設定済みのwebフックに送信されたAdobe I/Oイベントを活用します。ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために、[!DNL Privacy Service] APIをポーリングする必要が少なくなるか、なくなります。 詳しくは、[プライバシーイベントの登録](./privacy-events.md)のチュートリアルを参照してください。 |
+| [!DNL Privacy Events] | [!DNL Privacy Events] 効率的なジョブリクエストの自動化を促進するために、設定済みのwebフックに送信されるAdobe I/Oイベントを活用します。ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために、[!DNL Privacy Service] APIをポーリングする必要が少なくなるか、なくなります。 詳しくは、[プライバシーイベントの登録](./privacy-events.md)のチュートリアルを参照してください。 |
 
 ## 次の手順
 
