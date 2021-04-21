@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: 計算済み属性APIエンドポイント
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platformでは、計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。 これらの関数は自動的に計算され、セグメント化、アクティベーションおよびパーソナライゼーションで使用できます。 このガイドでは、リアルタイム顧客プロファイルAPIを使用して、計算済み属性を作成、表示、更新および削除する方法を示します。
+exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
 translation-type: tm+mt
-source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2279'
+source-wordcount: '2277'
 ht-degree: 62%
 
 ---
-
 
 # (Alpha)計算済み属性APIエンドポイント
 
@@ -628,7 +628,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 スキーマ定義属性について詳しくは、『[セグメント定義APIエンドポイントガイド](../../segmentation/api/segment-definitions.md)』の例を参照してください。
 
-**応答** 
+**応答**
 
 リクエストが成功した場合は、新しく作成したセグメント定義の詳細と HTTP ステータス 200 が返されます。セグメント定義の応答オブジェクトについて詳しくは、[セグメント定義APIエンドポイントガイド](../../segmentation/api/segment-definitions.md)を参照してください。
 
