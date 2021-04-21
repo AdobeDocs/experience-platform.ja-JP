@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気のあるトピック；API;AP
 solution: Experience Platform
 title: サンプルデータAPIエンドポイント
 description: スキーマレジストリAPIの/sampledataエンドポイントを使用すると、既存のXDMスキーマの構造にマッピングされたサンプルデータを生成できます。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 5%
 
 ---
-
 
 # サンプルデータエンドポイント
 
@@ -37,7 +37,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{SCHEMA_ID}` | サンプルデータを生成するスキーマの`meta:altId`またはURLエンコードされた`$id`です。 |
+| `{SCHEMA_ID}` | サンプルデータを生成するスキーマの`meta:altId`またはURLエンコードされた`$id`。 |
 
 **リクエスト**
 
@@ -52,7 +52,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 成功した応答は、指定したスキーマのサンプルデータオブジェクトを返します。
 
