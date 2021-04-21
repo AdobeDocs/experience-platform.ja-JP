@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Greenplum;greenplum
 solution: Experience Platform
 title: UIでのGreenPlumソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してGreenPlumソース接続を作成する方法を説明します。
+exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 9%
 
 ---
-
 
 # UIに[!DNL GreenPlum]ソース接続を作成する
 
