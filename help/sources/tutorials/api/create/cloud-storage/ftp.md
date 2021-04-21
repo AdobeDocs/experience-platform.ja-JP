@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ファイル転送プロトコル；ファイル転送プロトコル
 solution: Experience Platform
 title: フローサービスAPIを使用したFTPソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをFTP（ファイル転送プロトコル）サーバーに接続する方法を説明します。
+exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 26%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用したFTPソース接続の作成
 
@@ -43,7 +43,7 @@ ht-degree: 26%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -112,7 +112,7 @@ curl -X POST \
 | `auth.params.password` | FTPサーバーに関連付けられているパスワードです。 |
 | `connectionSpec.id` | FTPサーバー接続仕様ID:`fb2e94c9-c031-467d-8103-6bd6e0a432f2` |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成された接続の固有な識別子(`id`)を返します。 このIDは、次のチュートリアルでFTPサーバを調べるために必要です。
 
