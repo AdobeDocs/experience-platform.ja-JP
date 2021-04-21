@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；マッピングセット；
 solution: Experience Platform
 title: マッピングセットAPIエンドポイント
-topic: mapping sets
-description: 'Adobe Experience PlatformAPIの`/mappingSets`エンドポイントを使用すると、マッピングセットをプログラムによって取得、作成、更新および検証できます。 '
+topic-legacy: mapping sets
+description: Adobe Experience PlatformAPIの`/mappingSets`エンドポイントを使用すると、マッピングセットをプログラムによって取得、作成、更新および検証できます。
+exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '807'
 ht-degree: 6%
 
 ---
-
 
 # マッピングでエンドポイントを設定
 
@@ -52,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 ```json
 {
@@ -224,7 +224,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | `mappings.source` | データのマッピング元の場所。 |
 | `mappings.destination` | データのマッピング先の場所。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、HTTPステータス200が返され、新しく作成されたマッピングセットに関する情報が返されます。
 
@@ -290,7 +290,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 }
 ```
 
-**応答** 
+**応答**
 
 応答が成功すると、HTTPステータス200が返され、提示されたマッピングの検証情報が返されます。
 
@@ -422,7 +422,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、HTTPステータス200が返され、取得するマッピングセットに関する詳細情報が返されます。
 
@@ -836,7 +836,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 ```json
 [
@@ -940,7 +940,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 応答が成功すると、HTTPステータス200が返され、指定されたマッピングに関する詳細情報が返されます。
 
