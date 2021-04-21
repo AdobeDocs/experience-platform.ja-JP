@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；配置コンテキスト；配置コンテキスト；データ型；データ型；
 solution: Experience Platform
 title: コンテキストデータタイプを配置
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Place Context XDMデータタイプの概要を説明します。
+exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 6%
 
 ---
-
 
 # [!UICONTROL Place ] contextdata type
 
