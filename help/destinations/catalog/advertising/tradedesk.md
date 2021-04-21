@@ -1,15 +1,15 @@
 ---
-keywords: 広告；業者の机
+keywords: 広告；業者の机広告業務机
 title: トレードデスクの接続
-description: 'トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。 '
+description: トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。
+exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '628'
 ht-degree: 5%
 
 ---
-
 
 # [!DNL The Trade Desk] connection
 
