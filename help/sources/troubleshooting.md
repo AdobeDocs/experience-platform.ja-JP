@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ソース；取り込み；トラブルシューティング；ソースのトラブルシューティング；ソースfaq；ソースコネクタ；ソースコネクタ；ソースコネクタfaq；ソースコネクタのトラブルシューティング；
 solution: Experience Platform
 title: ソースのトラブルシューティング
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Platformのソースに関するよくある質問に対する回答を示します。
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '662'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ### ソースを有効にするために、ネットワークセキュリティ設定を変更する必要がありますか？
 
-ソースを有効にするには、特定のIPアドレスを許可リストする必要がある場合があります。 詳しくは、ご使用の特定のソースコネクタに関するドキュメントをお読みください。
+ソースを有効にするには、許可リスト特定のIPアドレスをする必要がある場合があります。 詳しくは、ご使用の特定のソースコネクタに関するドキュメントをお読みください。
 
 ### ソースでサポートされる認証の種類を教えてください。
 
