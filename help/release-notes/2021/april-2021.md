@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
+source-git-commit: 0c9b60fe0777286819841c520a41007634622578
 workflow-type: tm+mt
-source-wordcount: '728'
-ht-degree: 32%
+source-wordcount: '729'
+ht-degree: 35%
 
 ---
 
@@ -65,7 +65,7 @@ Attribution AI は、コンバージョンイベントにつながるタッチ�
 
 ## セグメント化サービス {#segmentation}
 
-Adobe Experience Platformセグメントサービスは、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントは[!DNL Platform]上で一元的に構成および管理され、どのAdobeアプリケーションでも容易にアクセスできます。
+Adobe Experience Platformセグメントサービスは、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントは、Platform 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
 
 [!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
 
@@ -76,7 +76,6 @@ Adobe Experience Platformセグメントサービスは、セグメントを作�
 | その他の集計関数 | セグメントビルダーにカウント機能が追加されました。 カウント関数を使用すると、指定したイベントが実行された回数をカウントできます。 カウント関数について詳しくは、[セグメントビルダーガイド](../../segmentation/ui/segment-builder.md#count-functions)のカウント関数の節を参照してください |
 
 [!DNL Segmentation Service]について詳しくは、[セグメントの概要](../../segmentation/home.md)を参照してください。
-
 
 ## [!DNL Sources] {#sources}
 
