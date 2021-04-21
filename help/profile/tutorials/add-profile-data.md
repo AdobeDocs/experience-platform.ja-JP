@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API;プロファイルを有効にする；プロファイルを有効にする
 title: リアルタ追加イム顧客プロファイルに対するデータ
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、リアルタイム顧客プロファイルにデータを追加するために必要な手順について説明します。
+exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 50%
 
 ---
-
 
 # &lt;a0/追加>へのデータ[!DNL Real-time Customer Profile]
 
