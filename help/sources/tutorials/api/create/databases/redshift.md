@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；redshift;Redshift;AmazonRedshift;Amazon Redshift
 solution: Experience Platform
 title: フローサービスAPIを使用したAmazonRedshiftソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをAmazonRedshiftに接続する方法を説明します。
+exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 26%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Amazon Redshift]ソース接続を作成する
 
@@ -48,7 +48,7 @@ ht-degree: 26%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -113,7 +113,7 @@ curl -X POST \
 | `auth.params.username` | [!DNL Redshift]アカウントに関連付けられているユーザー名。 |
 | `connectionSpec.id` | 前の手順で取得した[!DNL Redshift]アカウントの接続仕様`id`。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続が、一意の識別子(`id`)を含めて返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
