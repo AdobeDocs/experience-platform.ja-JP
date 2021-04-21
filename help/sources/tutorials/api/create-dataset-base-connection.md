@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データセット接続フローサービス；フローサービス；フローサービス接続
 solution: Experience Platform
 title: Flow Service APIを使用したAdobe Experience Platformデータセットベース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience Platformへのデータセットベース接続を作成する方法を説明します。
+exl-id: 5e829f4a-954b-4011-a003-c42c7a0d5617
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 28%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用した[!DNL Experience Platform]データセットベースの接続の作成
 
@@ -37,7 +37,7 @@ ht-degree: 28%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -83,7 +83,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、接続仕様と、ベース接続の作成に必要な一意の識別子(`id`)を返します。
 
@@ -171,7 +171,7 @@ curl -X POST \
 | ------------- | --------------- |
 | `connectionSpec.id` | 前の手順で取得した接続仕様`id`。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成されたベース接続の詳細(一意の識別子(`id`)を返します。 このIDは、ターゲット接続を作成し、サードパーティのソースコネクタからデータを取り込むために必要です。
 
