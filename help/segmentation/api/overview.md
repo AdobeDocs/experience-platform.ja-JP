@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；API;API;
 title: Segmentation Service APIガイド
-topic: guide
+topic-legacy: guide
 description: Segmentation Service APIを使用すると、開発者はAdobe Experience Platformでのセグメント化操作をプログラムで管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
+exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 6%
 
 ---
-
 
 # Segmentation Service APIガイド
 
