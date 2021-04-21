@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；日付範囲
 solution: Experience Platform
 title: 観察性インサイトの概要
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform監視性インサイトは、プラットフォームアクティビティに主要指標を公開できるRESTful APIです。 これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
+exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 11%
 
 ---
 
-
-# [!DNL Observability Insights]概要
+# [!DNL Observability Insights] の概要
 
 Adobe Experience Platform[!DNL Observability Insights]では、統計指標とイベント通知を使用して、プラットフォームアクティビティを監視できます。 このドキュメントでは、サービスが提供する様々な機能の概要と、詳細についての詳細ドキュメントへのリンクを示します。
 
