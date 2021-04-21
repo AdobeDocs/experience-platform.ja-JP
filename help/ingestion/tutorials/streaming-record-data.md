@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング取り込み；取り込み；記録データ；ストリームレコードデータ；
 solution: Experience Platform
 title: ストリーミング取り込みAPIを使用したストリームレコードデータ
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 69%
 
 ---
