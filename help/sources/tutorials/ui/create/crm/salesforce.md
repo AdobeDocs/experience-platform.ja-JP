@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce;salesforce
 solution: Experience Platform
 title: UIでのSalesforceソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してSalesforceソース接続を作成する方法を説明します。
+exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 10%
 
 ---
-
 
 # UIに[!DNL Salesforce]ソース接続を作成する
 
