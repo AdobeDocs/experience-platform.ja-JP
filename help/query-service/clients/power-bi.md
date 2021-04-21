@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；Power BI；パワーバイ；クエリサービスに接続；
 solution: Experience Platform
 title: Power BI をクエリサービスに接続します。
-topic: connect
+topic-legacy: connect
 description: このドキュメントでは、Power BIとAdobe Experience Platformクエリサービスを接続する手順について説明します。
+exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 6%
 
 ---
-
 
 # [!DNL Power BI]をクエリサービス(PC)に接続
 
