@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気のあるトピック；ui;UI;
 solution: Experience Platform
 title: UIでのXDMリソースの参照
 description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、ミックスイン、およびデータタイプを調べる方法について説明します。
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
 
 ---
-
 
 # UIでのXDMリソースの参照
 
@@ -64,7 +64,7 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
 
 角括弧(`[]`)が付いたデータ型は、そのデータ型の配列を表します。 例えば、**[!UICONTROL String]\[]**&#x200B;のデータ型は、フィールドに文字列値の配列が必要であることを示します。 **[!UICONTROL 支払い項目]\[]**&#x200B;のデータ型は、[!UICONTROL 支払い項目]のデータ型に準拠するオブジェクトの配列を示します。
 
-配列フィールドがオブジェクトタイプに基づいている場合は、キャンバスでそのアイコンを選択して、各配列項目に対して必要な属性を表示できます。
+配列フィールドがオブジェクトタイプに基づいている場合は、キャンバスでそのアイコンを選択して、各配列項目に対して期待される属性を表示できます。
 
 ![](../images/ui/explore/array-type.png)
 
