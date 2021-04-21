@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；製品プロファイル；権限の管理
 solution: Experience Platform
 title: 製品プロファイルの権限の管理
-topic: user guide
+topic-legacy: user guide
 description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントは、Platformの製品プロファイルの権限を管理する方法のガイドとして機能します。
+exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 64%
 
 ---
-
 
 # 製品プロファイルに対する権限の管理
 
