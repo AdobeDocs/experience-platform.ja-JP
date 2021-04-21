@@ -2,17 +2,17 @@
 keywords: Experience Platform；モデルのスコア；データサイエンスワークスペース；人気の高いトピック；先生の機械学習api
 solution: Experience Platform
 title: Senesie Machine Learning APIを使用したモデルのスコア設定
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Senesie Machine Learning APIを使用して、テストとテストの実行を作成する方法を説明します。
+exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 91%
 
 ---
-
 
 # [!DNL Sensei Machine Learning API]
 
