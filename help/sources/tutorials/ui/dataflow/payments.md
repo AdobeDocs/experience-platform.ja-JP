@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；支払コネクタ
 solution: Experience Platform
 title: UIでの支払元接続のデータフローの構成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みタスクです。 このチュートリアルでは、支払い勘定を使用して新しいデータフローを構成する手順を説明します。
+exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1463'
 ht-degree: 3%
 
 ---
-
 
 # UIでの支払い接続用のデータフローの構成
 
@@ -181,4 +181,4 @@ ht-degree: 3%
 
 ### [!DNL Profile]母集団の受信データをアクティブ化
 
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
+ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むのに使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
