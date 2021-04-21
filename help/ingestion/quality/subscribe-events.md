@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データ取り込み通知；通知；購読イベント；データ取り込みステータスイベント；ステータスイベント；購読；ステータス通知；
 solution: Experience Platform
 title: データ取り込み通知
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platformは、取り込みプロセスの監視を支援するため、プロセスの各ステップで公開された一連のイベントを登録し、取り込まれたデータの状態と発生し得る障害を通知する。
+exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 29%
 
 ---
-
 
 # データ取得通知
 
@@ -73,7 +73,7 @@ Webフックの登録が完了し、新しいデータが取り込まれると�
 
 ## 次の手順
 
-プロジェクトに[!DNL Platform]通知を登録すると、[!UICONTROL プロジェクトの概要]から表示が受け取ったイベントを確認できます。 イベントのトレース方法の詳細な手順については、[Adobe I/Oイベント](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)のトレースのガイドを参照してください。
+プロジェクトに[!DNL Platform]通知を登録すると、[!UICONTROL プロジェクトの概要]から表示が受け取ったイベントを確認できます。 イベントのトレース方法の詳細な手順については、[Adobe I/Oイベント](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md)のトレースガイドを参照してください。
 
 ## 付録
 
