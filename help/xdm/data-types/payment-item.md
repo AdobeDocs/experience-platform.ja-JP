@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；支払い項目；データ型；データ型；
 solution: Experience Platform
 title: 支払品目データタイプ
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、支払品目エクスペリエンスデータモデル(XDM)のデータタイプの概要を説明します。
+exl-id: d25a358b-73c1-468b-a9c5-808385689932
 translation-type: tm+mt
-source-git-commit: 8bbb062df47b6e94630626d0a89a179d759d922d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 24%
 
 ---
-
 
 # [!UICONTROL 支払] 項目データタイプ
 
