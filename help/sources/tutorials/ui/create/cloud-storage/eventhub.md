@@ -7,18 +7,15 @@ type: Tutorial
 description: Adobe Experience PlatformUIを使用してAzureイベントハブのソース接続を作成する方法を説明します。
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '480'
 ht-degree: 9%
 
 ---
 
-# UIに[!DNL Azure Event Hubs]ソース接続を作成する
 
->[!NOTE]
->
-> [!DNL Azure Event Hubs]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+# UIに[!DNL Azure Event Hubs]ソース接続を作成する
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Azure Event Hubs] （以下「[!DNL Event Hubs]」と呼びます）ソースコネクタを[!DNL Platform]ユーザーインターフェイスを使用して認証する手順を説明します。
 
