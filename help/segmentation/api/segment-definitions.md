@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；セグメント定義；セグメント定義；api;API;
 solution: Experience Platform
 title: セグメント定義APIエンドポイント
-topic: developer guide
+topic-legacy: developer guide
 description: Adobe Experience PlatformSegmentation Service APIのセグメント定義エンドポイントは、組織のセグメント定義をプログラムで管理できるようにします。
+exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 translation-type: tm+mt
-source-git-commit: 4e4672f4101f92f035985d187512d917890aab6b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1172'
 ht-degree: 48%
 
 ---
-
 
 # セグメント定義エンドポイント
 
@@ -152,7 +152,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
 }
 ```
 
-## 新しいセグメント定義の作成 {#create}
+## 新しいセグメント定義の作成  {#create}
 
 新しいセグメント定義を作成するには、`/segment/definitions` エンドポイントに POST リクエストを実行します。
 
@@ -545,7 +545,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }'
 ```
 
-**応答** 
+**応答**
 
 リクエストが成功した場合は、更新したセグメント定義の詳細と HTTP ステータス 200 が返されます。勤務先住所の国が米国からカナダ(CA)に更新されたことに注目してください。
 
@@ -629,7 +629,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
     }'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、HTTPステータス200が返され、新しく変換されたセグメント定義の詳細が返されます。
 
