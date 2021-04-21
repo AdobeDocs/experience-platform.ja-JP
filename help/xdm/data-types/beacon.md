@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；ビーコン；インタラクションの詳細；データ型；データ型；
 solution: Experience Platform
 title: ビーコンのデータタイプ
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、XDM Individualプロファイルクラスの概要を説明します。
+exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 6%
 
 ---
-
 
 #  Beacondata型
 
