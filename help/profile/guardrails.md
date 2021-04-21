@@ -3,17 +3,17 @@ keywords: Experience Platform;プロファイル；リアルタイム顧客プ�
 title: リアルタイム顧客プロファイルデータのガードレール
 solution: Experience Platform
 product: experience platform
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 'Adobe Experience Platformは、リアルタイム顧客プロファイルがサポートできないデータモデルの作成を回避するための一連のガードレールを提供しています。 このドキュメントでは、プロファイルデータをモデリングする際に留意すべきベストプラクティスと制約について説明します。 '
+description: Adobe Experience Platformは、リアルタイム顧客プロファイルがサポートできないデータモデルの作成を回避するための一連のガードレールを提供しています。 このドキュメントでは、プロファイルデータをモデリングする際に留意すべきベストプラクティスと制約について説明します。
+exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 translation-type: tm+mt
-source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1456'
 ht-degree: 4%
 
 ---
-
 
 # [!DNL Real-time Customer Profile]データのガードレール
 
