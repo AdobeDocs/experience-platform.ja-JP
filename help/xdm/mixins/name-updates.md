@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM;ExperienceEvent；フィールド；スキーマ;スキーマ;スキーマデザイン；mixin;mixin;enduserids;end-user;ids;updates;
 solution: Experience Platform
 title: Mixin名の更新
-topic: overview
+topic-legacy: overview
 description: 最近のXDMミックスイン名の変更のリストです。
+exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 2%
 
 ---
-
 
 # Mixin名の更新
 
