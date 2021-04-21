@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ID名前空間;ID名前空間
 solution: Experience Platform
 title: IDサービストラブルシューティングガイド
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Platform ID サービスに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。
+exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2189'
 ht-degree: 79%
 
 ---
-
 
 # ID サービストラブルシューティングガイド
 
@@ -73,7 +73,7 @@ ID フィールドは、作成時に既存の ID 名前空間に関連付ける�
 
 API を使用して ID 記述子を作成する際に名前空間を定義する手順については、『スキーマレジストリ開発者ガイド』の「[記述子の作成](../xdm/tutorials/create-schema-ui.md)」の節を参照してください。UI でスキーマフィールドを ID としてマークする場合は、『[スキーマエディタのチュートリアル](../xdm/tutorials/create-schema-api.md)』の手順に従います。
 
-## Experience Platform が提供する標準 ID 名前空間は何ですか。 {#standard-namespaces}
+## Experience Platform が提供する標準 ID 名前空間は何ですか。  {#standard-namespaces}
 
 標準ID名前空間は、すべての組織が使用できる名前空間です。 使用可能な標準名前空間の完全なリストについては、[ID名前空間の概要](./namespaces.md)を参照してください。
 
