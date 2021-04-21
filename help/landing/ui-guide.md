@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform；ユーザーガイド；uiガイド；プラットフォームuiガイド；プラットフォームの紹介；ダッシュボード;
 solution: Experience Platform
 title: Experience PlatformUIの概要
-topic: ui guide
-description: 'Adobe Experience Platform '
+topic-legacy: ui guide
+description: Adobe Experience Platform
+exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1755'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
-
 
 # Adobe Experience PlatformUIガイド
 
@@ -131,9 +131,9 @@ Adobe Experience Platformにログインした後、[!UICONTROL ホーム]ペー
 
 「**[!UICONTROL ポリシー]**」セクションでは、データ使用ポリシーを作成および管理できます。 「ポリシー」セクションの使用方法の詳細については、[データ使用ポリシーユーザーガイド](../data-governance/policies/user-guide.md)を参照してください。 データ使用ポリシーの詳細については、[データ使用ポリシーの概要](../data-governance/policies/overview.md)を参照してください。
 
-「**[!UICONTROL リクエスト]**」セクションでは、プライバシーリクエストを作成および管理できます。 Privacy ServiceUIにアクセスするには、リストに記載されている必要があります。 「リクエスト」の節の使い方について詳しくは、[Privacy Serviceユーザーガイド](../privacy-service/ui/user-guide.md)をお読みください。 Privacy Serviceに関する詳細は、[Privacy Serviceの概要](../privacy-service/home.md)を参照してください。
+「**[!UICONTROL リクエスト]**」セクションでは、プライバシーリクエストを作成および管理できます。 Privacy ServiceUIにアクセスするには、許可リストに加えるUIが必要です。 「リクエスト」の節の使い方について詳しくは、[Privacy Serviceユーザーガイド](../privacy-service/ui/user-guide.md)をお読みください。 Privacy Serviceに関する詳細は、[Privacy Serviceの概要](../privacy-service/home.md)を参照してください。
 
-### [!UICONTROL データ科学]
+### [!UICONTROL データサイエンス]
 
 **[!UICONTROL ノートブック]**&#x200B;セクションは、データの調査、分析、モデル化を可能にするインタラクティブな開発環境であるJupterLabへのアクセスを提供します。 「ノートブック」セクションの使い方の詳細については、[JupyterLabユーザーガイド](../data-science-workspace/jupyterlab/overview.md)を参照してください。 Data Science Workspaceの詳細については、[データサイエンスワークスペースの概要](../data-science-workspace/home.md)を参照してください
 
@@ -153,7 +153,7 @@ Adobe Experience Platformにログインした後、[!UICONTROL ホーム]ペー
 
 ### [!UICONTROL 判定]
 
-Offer Decisioningは、Adobe Experience Platformと統合された申し込みサービスです。 これにより、 Experience Platform を活用して、あらゆるタッチポイントで最高のオファーとエクスペリエンスを適切なタイミングで顧客に提供できます。[!UICONTROL オファー]や[!UICONTROL アクティビティ]との連携を含め、Offer Decisioningの詳細については、[Offer Decisioningのドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning.html)を参照してください。
+Offer Decisioning は、Adobe Experience Platform と統合されたアプリケーションサービスです。これにより、 Experience Platform を活用して、あらゆるタッチポイントで最高のオファーとエクスペリエンスを適切なタイミングで顧客に提供できます。[!UICONTROL オファー]と[!UICONTROL アクティビティ]の使用など、Offer decisioningに関する詳細は、[Offer decisioningドキュメント](https://experienceleague.adobe.com/docs/offer-decisioning.html)を参照してください。
 
 ### [!UICONTROL 管理]
 
