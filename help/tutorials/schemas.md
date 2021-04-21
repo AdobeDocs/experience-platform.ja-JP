@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: XDM スキーマおよび記述子
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 標準化と相互運用性は、Adobe Experience Platform を支える重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、カスタマーエクスペリエンスデータを標準化し、カスタマーエクスペリエンス管理のスキーマを定義する取り組みです。スキーマは Experience Platform でデータを記述する標準的な方法であり、スキーマに準拠するすべてのデータを、組織全体で競合することなく再利用でき、複数の組織間で共有することもできます。
+exl-id: 1cdc45d7-57ca-4a2d-99a4-9a8cd885a511
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 59%
 
 ---
-
 
 # [!DNL Experience Data Model] (XDM)スキーマと関係記述子を扱う
 
