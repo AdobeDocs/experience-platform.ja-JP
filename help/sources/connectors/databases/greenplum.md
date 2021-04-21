@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；グリーンプラム；GreenPlum
 solution: Experience Platform
 title: GreenPlumソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してGreenPlumをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 41757062-9ac8-42d3-91f6-a00866195882
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # （ベータ版） [!DNL GreenPlum]コネクタ
 
