@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；GDPR;gdpr;CCPA;ccpa;PDPA;LGPD;lgpd;overview;Overview;regulation;Regulation;Regulations;Regulations;Privacy;Privacy;
 solution: Experience Platform
 title: プライバシー規制の概要
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: このドキュメントでは、Adobe Experience Cloudがサポートする各種プライバシー規制の概要を説明します。
+exl-id: 2ca946cf-94f8-4fd8-bb1a-7f06a5ab1256
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 18%
 
 ---
-
 
 # プライバシー規制の概要
 
