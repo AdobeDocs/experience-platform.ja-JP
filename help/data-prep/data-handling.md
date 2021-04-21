@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；CSVのマップ；CSVファイルのマップ；CSVファイルのxdmへのマップ；CSVのxdmへのマップ；ui guide；マッピング；マッピング；データ準備；データ準備；データの準備；データの準備；
 solution: Experience Platform
 title: データ準備でのデータ形式の処理
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、データ準備での様々なデータタイプの処理方法の概要を説明します。
+exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 translation-type: tm+mt
-source-git-commit: 41656d204f7227388ee1a0a7cad01f737fb96c4f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 13%
 
 ---
-
 
 # データ準備でのデータ形式の処理
 
