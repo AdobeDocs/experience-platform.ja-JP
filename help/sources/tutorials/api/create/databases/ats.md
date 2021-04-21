@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ATS;ats;Azureテーブルストレージ
 solution: Experience Platform
 title: Flow Service APIを使用してAzureテーブルストレージソース接続を作成する
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してAzure TableストレージをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 25%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Azure Table Storage]ソース接続を作成する
 
@@ -46,7 +46,7 @@ ht-degree: 25%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -107,7 +107,7 @@ curl -X POST \
 | `auth.params.connectionString` | ATSインスタンスへの接続に使用する接続文字列です。 ATSの接続文字列パターンは次のとおりです。`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | ATS接続仕様IDは次のとおりです。`ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
