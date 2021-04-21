@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: データガバナンスとプライバシーのチュートリアル
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このドキュメントでは、Adobe Experience PlatformデータガバナンスとAdobe Experience Platform Privacy Serviceに関する各種チュートリアルの概要を説明します。
+exl-id: c3cef447-b343-445b-a3ed-54f873f6dfb9
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 50%
 
 ---
-
 
 # [!DNL Data Governance] および [!DNL Privacy] Tutorials
 
@@ -36,6 +36,6 @@ Adobe Experience Platform[!DNL Privacy Service]は、RESTful APIとユーザー�
 
 [!DNL Real-time Customer Profile]で使用できるセグメントは、セグメント定義内にマージポリシーIDを含みます。 この結合ポリシーには、セグメントに含めるデータセットに関する情報があります。さらに、データセットには適用可能なデータ使用ラベルが含まれています。オーディエンスセグメントでデータ使用のコンプライアンスを徹底するための具体的な手順については、[セグメントでデータ使用のコンプライアンスを徹底するためのチュートリアル](../segmentation/tutorials/governance.md)を参照してください。
 
-## [!DNL Privacy Service] の基本を学ぶ 
+## 基本を学ぶ： [!DNL Privacy Service]
 
 [!DNL Privacy Service] は、Adobe Experience Cloud アプリケーション全体でデータのサブジェクト（顧客）の個人データを管理する RESTful API とユーザーインターフェイスを提供します。[!DNL Privacy Service]また、 は、 アプリケーションに関連するジョブのステータスと結果にアクセスできる、中央監査とログのメカニズムも提供します。[!DNL Experience Cloud][!DNL Privacy Service]ジョブの作成および監視方法の手順については、[Privacy Service開発者ガイド](../privacy-service/api/getting-started.md)または[Privacy Serviceユーザーガイド](../privacy-service/ui/overview.md)に記載されている手順に従ってください。
