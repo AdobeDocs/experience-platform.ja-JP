@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；IAB;IAB 2.0；同意；同意
 solution: Experience Platform
 title: IAB TCF 2.0同意データを取り込むためのデータセットの作成
-topic: privacy events
+topic-legacy: privacy events
 description: このドキュメントでは、IAB TCF 2.0の同意データを収集するために必要な2つのデータセットを設定する手順を説明します。
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1646'
 ht-degree: 3%
 
 ---
-
 
 # IAB TCF 2.0の同意データを取り込むためのデータセットの作成
 
@@ -29,7 +29,7 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework] (TCF) 2.
 このチュートリアルは、Adobe Experience Platform の次のコンポーネントを実際に利用および理解しているユーザーを対象としています。
 
 * [エクスペリエンスデータモデル（XDM）](../../../../xdm/home.md)[!DNL Experience Platform]： が顧客エクスペリエンスデータを整理する際に使用する標準化されたフレームワーク。
-   * [Basics of schema composition](../../../../xdm/schema/composition.md)：XDM スキーマの基本的な構成要素について説明しています。
+   * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：XDM スキーマの基本的な構成要素について説明します。
 * [Adobe Experience Platform・アイデンティティ・サービス](../../../../identity-service/home.md):デバイスやシステム間で異なるデータソースの顧客IDをブリッジできます。
    * [ID名前空間](../../../../identity-service/namespaces.md):顧客IDデータは、IDサービスで認識される特定のID名前空間で提供する必要があります。
 * [リアルタイム顧客プロファイル](../../../../profile/home.md):を使用 [!DNL Identity Service] すると、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。[!DNL Real-time Customer Profile] data Lakeからデータを取り込み、顧客プロファイルを個別のデータストアに維持します。
