@@ -7,18 +7,14 @@ type: Tutorial
 description: Adobe Experience PlatformUIを使用してOracleDBソース接続を作成する方法を説明します。
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '465'
 ht-degree: 9%
 
 ---
 
 # UIに[!DNL Oracle DB]ソース接続を作成する
-
->[!NOTE]
->
-> [!DNL Oracle DB]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用して[!DNL Oracle DB]ソースコネクタを作成する手順を説明します。
 
