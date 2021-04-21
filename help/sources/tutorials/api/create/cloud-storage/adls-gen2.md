@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure Data LakeストレージGen2;Azure Data Lakeストレージ;Azure
 solution: Experience Platform
 title: Flow Service APIを使用してAzure Data LakeストレージGen2ソース接続を作成する
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをAzure Data LakeストレージGen2に接続する方法を説明します。
+exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 24%
 
 ---
-
 
 # [!DNL Azure] APIを使用してData LakeストレージGen2ソース接続を作成する[!DNL Flow Service]
 
@@ -44,7 +44,7 @@ ht-degree: 24%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -111,7 +111,7 @@ curl -X POST \
 | `auth.params.tenant` | ADLS Gen2アカウントのテナント情報。 |
 | `connectionSpec.id` | ADLS Gen2接続仕様ID:`0ed90a81-07f4-4586-8190-b40eccef1c5a1`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次の手順でクラウドストレージを調査するために必要です。
 
