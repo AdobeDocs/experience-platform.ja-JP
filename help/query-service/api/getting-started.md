@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ
 solution: Experience Platform
 title: クエリサービスAPIガイド
-topic: query templates
+topic-legacy: query templates
 description: クエリサービスAPIを使用すると、開発者は標準SQLを使用してAdobe Experience Platformデータのクエリを行うことができます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
+exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '395'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
-
-# [!DNL Query Service] APIガイド
+# [!DNL Query Service] API ガイド
 
 この開発者ガイドは、Adobe Experience Platform[!DNL Query Service] APIの様々な操作を実行する手順を提供します。
 
