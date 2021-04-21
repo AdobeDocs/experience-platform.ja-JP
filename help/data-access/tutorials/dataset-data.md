@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；データアクセスapi;クエリデータアクセス
 solution: Experience Platform
 title: Data Access APIを使用した表示データセットデータ
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience PlatformのData Access APIを使用して、データセット内に保存されているデータの検索、アクセス、ダウンロードの方法を説明します。 また、ページングや部分的なダウンロードなど、データアクセス API の固有の機能の一部も紹介します。
+exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1398'
 ht-degree: 72%
 
 ---
-
 
 # [!DNL Data Access] APIを使用した表示データセットデータ
 
@@ -26,7 +26,7 @@ ht-degree: 72%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
