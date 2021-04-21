@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ラベルapi；ポリシーサービスapi；サポートされるデータ使用ラベル；契約ラベル；IDラベル；機密ラベル
 solution: Experience Platform
 title: データ使用ラベルの用語集
-topic: labels
+topic-legacy: labels
 description: このドキュメントでは、Adobe Experience Platformが現在サポートしているすべてのデータ使用ラベルについて概説します。
+exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 81%
 
 ---
-
 
 # データ使用ラベルの用語集
 
