@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クラウドストレージ；クラウドストレージ
 solution: Experience Platform
 title: Flow Service APIを使用したCloudストレージシステムの調査
-topic: overview
+topic-legacy: overview
 description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムを調査します。
+exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 translation-type: tm+mt
-source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '820'
 ht-degree: 18%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用したクラウドストレージシステムの調査
 
@@ -42,7 +42,7 @@ ht-degree: 18%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
