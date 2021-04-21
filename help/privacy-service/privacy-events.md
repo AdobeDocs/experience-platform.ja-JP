@@ -2,20 +2,20 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Privacy Serviceイベントの購読
-topic: privacy events
+topic-legacy: privacy events
 description: 事前に設定されたWebフックを使用してPrivacy Serviceイベントを登録する方法を学びます。
+exl-id: 9bd34313-3042-46e7-b670-7a330654b178
 translation-type: tm+mt
-source-git-commit: 2b919a3b6cbbd59521874cfd2d11e20de3077740
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 7%
 
 ---
 
-
 # [!DNL Privacy Service Events]に登録
 
-[!DNL Privacy Service Events] は、設定されたwebフックに送信されるAdobe I/Oのイベント [!DNL Privacy Service]を活用して、効率的なジョブリクエストの自動化を容易にする、Adobe Experience Platformから提供されるメッセージです。ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために、[!DNL Privacy Service] APIをポーリングする必要が少なくなるか、なくなります。
+[!DNL Privacy Service Events] は、設定済みのwebフックに送信されるAdobe I/Oイベントを活用して、効率的なジョブリクエストの自動化を促進する、Adobe Experience Platformが提供するメッセージです。 [!DNL Privacy Service]ジョブが完了したか、またはワークフロー内の特定のマイルストーンに達したかを確認するために、[!DNL Privacy Service] APIをポーリングする必要が少なくなるか、なくなります。
 
 現在、プライバシージョブリクエストのライフサイクルに関連する通知には、次の 4 種類があります。
 
