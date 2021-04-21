@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；アカウントの削除；削除；api
 solution: Experience Platform
 title: Flow Service APIを使用したアカウントの削除
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してアカウントを削除する方法を説明します。
+exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
 translation-type: tm+mt
-source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '592'
 ht-degree: 27%
 
 ---
-
 
 # Flow Service APIを使用したアカウントの削除
 
@@ -35,7 +35,7 @@ Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外�
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -83,7 +83,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、資格情報、一意の識別子(`id`)、バージョンを含む、接続の現在の詳細が返されます。
 
