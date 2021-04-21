@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；測定；データ型；データ型；
 solution: Experience Platform
 title: 測定データタイプ
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Measure Experience Data Model(XDM)データタイプの概要を説明します。
+exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 5%
 
 ---
-
 
 #  Measuredata型
 
