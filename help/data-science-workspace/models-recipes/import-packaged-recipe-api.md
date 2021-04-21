@@ -2,17 +2,17 @@
 keywords: Experience Platform；パッケージレシピの読み込み；Data Science Workspace；人気のあるトピック；レシピ；api;senesie機械学習；エンジンの作成
 solution: Experience Platform
 title: Senesie Machine Learning APIを使用したパッケージ化されたレシピの読み込み
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 'このチュートリアルでは Sensei 機械学習 API を使用して、ユーザーインターフェイスの「レシピ」としても知られるエンジンを作成します。 '
+description: このチュートリアルでは Sensei 機械学習 API を使用して、ユーザーインターフェイスの「レシピ」としても知られるエンジンを作成します。
+exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 62%
 
 ---
-
 
 # Senesie Machine Learning APIを使用して、パッケージ化されたレシピを読み込みます
 
@@ -170,7 +170,7 @@ curl -X POST \
 | `artifacts.default.image.location` | Docker URL によってリンクされた Docker イメージの場所。 |
 | `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Dockerイメージが「Spark」に構築される言語に対応します。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成されたエンジンの一意の ID（`id`）を含む詳細を含むペイロードを返します。次の例は、[!DNL Python]エンジンに対する応答です。 `executionType`キーと`type`キーは、指定されたPOSTに基づいて変更されます。
 
@@ -201,6 +201,6 @@ curl -X POST \
 
 成功応答は、新しく作成されたエンジンに関する情報を含む JSON ペイロードが表示されます。`id` キーは、一意のエンジン識別子を表し、次のチュートリアルで MLInstance を作成するために必要となります。次の手順に進む前に、エンジン識別子が保存されていることを確認します。
 
-## 次の手順 {#next-steps}
+## 次の手順  {#next-steps}
 
 API を使用してエンジンを作成し、応答本文の一部として一意のエンジン識別子を取得しました。次のチュートリアルでは、[API を使用してモデルの作成、トレーニング、評価をおこなう](./train-evaluate-model-api.md)方法について学習しながら、このエンジン識別子を使用できます。
