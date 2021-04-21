@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；OracleDB;oracleDB
 solution: Experience Platform
 title: UIでのOracleDBソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してOracleDBソース接続を作成する方法を説明します。
+exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 9%
 
 ---
-
 
 # UIに[!DNL Oracle DB]ソース接続を作成する
 
@@ -42,7 +42,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 | `connectionString` | [!DNL Oracle DB]への接続に使用する接続文字列。 [!DNL Oracle DB]接続文字列パターンは次のとおりです。`Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 [!DNL Oracle DB]の接続指定IDは`d6b52d86-f0f8-475f-89d4-ce54c8527328`です。 |
 
-開始方法の詳細については、[このOracleドキュメント](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)を参照してください。
+使い始める方法の詳細については、[このOracleドキュメント](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)を参照してください。
 
 ## [!DNL Oracle DB]アカウントに接続
 
@@ -52,7 +52,7 @@ Adobe Experience Platformのソースコネクタは、外部ソースのデー�
 
 画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
 
-**[!UICONTROL Databases]**&#x200B;カテゴリの下で、**[!UICONTROL OracleDB]**&#x200B;を選択します。 このコネクタを初めて使用する場合は、**[!UICONTROL 設定]**&#x200B;を選択します。 それ以外の場合は、**[!UICONTROL 追加data]**&#x200B;を選択して新しい[!DNL Oracle DB]コネクタを作成します。
+**[!UICONTROL Databases]**&#x200B;カテゴリーの下で、**[!UICONTROL OracleDB]**&#x200B;を選択します。 このコネクタを初めて使用する場合は、**[!UICONTROL 設定]**&#x200B;を選択します。 それ以外の場合は、**[!UICONTROL 追加data]**&#x200B;を選択して新しい[!DNL Oracle DB]コネクタを作成します。
 
 ![カタログ](../../../../images/tutorials/create/oracle/catalog.png)
 
