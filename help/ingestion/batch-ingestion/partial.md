@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；部分取り込み；部分取り込み；エラーの取り込み；部分的なバッチ取り込み；部分的なバッチ取り込み；取り込み；取り込み；
 solution: Experience Platform
 title: 部分的なバッチ取り込みの概要
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、部分バッチ取得を管理するためのチュートリアルを提供します。
+exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 40%
 
 ---
-
 
 # 部分バッチ取得
 
@@ -30,7 +30,7 @@ ht-degree: 40%
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
