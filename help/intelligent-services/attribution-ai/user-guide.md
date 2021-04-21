@@ -2,13 +2,13 @@
 keywords: Experience Platform；ユーザーガイド；アトリビューションai；人気のあるトピック；地域
 solution: Experience Platform, Intelligent Services
 title: Attribution AIUIガイド
-topic: User guide 
+topic-legacy: User guide
 description: このドキュメントは、インテリジェントサービスユーザーインターフェイスの Attribution AI を操作するためのガイドとなります。
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt
-source-git-commit: 013f8d99fc394477177fdbf7eb9dd9b8ce94b88f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1765'
 ht-degree: 78%
 
 ---
