@@ -2,10 +2,10 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Apache Cassandra;apache cassandra;cassandra;Cassandra
 solution: Experience Platform
 title: Apache Cassandraソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIを使用してApache CassandraをAdobe Experience Platformに接続する方法を説明します。
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 18%
