@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ；フィールド；フィールド；標準フィールド；標準フィールド；辞書；マップ；マップ
 solution: Experience Platform
 title: エクスペリエンスデータモデル(XDM)フィールドディクショナリ
-topic: overviews
+topic-legacy: overviews
 description: エクスペリエンスデータモデル（XDM）は、Adobe Experience Platform のスキーマを構成する際に使用できる一連の標準フィールドを定義します。これらのフィールドを使用すると、XDM を使用するすべてのサービスが、これらのフィールドで提供される特定の定義を明示的に理解するので、Platform サービス全体で一貫した動作が行われます。
+exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '25239'
+source-wordcount: '25238'
 ht-degree: 98%
 
 ---
-
 
 # XDM フィールド辞書
 
@@ -466,7 +466,7 @@ ht-degree: 98%
 | xdm:subscriptionDate | 購読日 | エンドユーザーが通知トピックを購読した日時。エンドユーザーが購読日を持ち、`unsubscriptiondetails/unsubscriptionDate` が空の場合、購読しています。 | 文字列 | date-time | date-time | https://ns.adobe.com/experience/campaign/notificationsubscription, https://ns.adobe.com/experience/campaign/profile-all |
 | xdm:subscriptions | 購読 | このプロファイルが資格を持つ購読には、終了、期限切れ、または終了した購読が含まれます。 | 配列 |  | 配列 | https://ns.adobe.com/experience/campaign/experienceevent-profile-subscriptions, https://ns.adobe.com/xdm/context/profile-subscriptions |
 | xdm:supplierName | 仕入先名 | 製品の配布元。 | 文字列 |  | 文字列 | https://ns.adobe.com/xdm/context/product |
-| xdm:syncedRemarketingAudiences | 同期されたセグメント | [!DNL adCloud]パートナーと同期してプラットフォーム上にオーディエンスを構築する検索リターゲティングエンティティのリスト（例：[!DNL Google]のRLSA、FacebookのWCA） | 配列 |  | 配列 | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
+| xdm:syncedRemarketingAudiences | 同期されたセグメント | [!DNL adCloud]パートナーと同期し、プラットフォーム上にオーディエンスを構築するために、[!DNL Google]のRLSAやFacebookのWCAなどの検索リターゲティングエンティティのリスト | 配列 |  | 配列 | https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/adcloud/profile-all |
 | xdm:tags | タグ | タグは、特定のデータソースによって表されるエイリアスが、それらのエイリアスを使用するアプリケーションによってどのように解釈されるかを示すために使用されます。例：* `isAVID`： の訪問者 ID を表すデータソース。[!DNL Analytics]* `isCRSKey`：CRS.タグでキーとして使用する必要があるエイリアスを表すデータソースは、データソースの作成時に設定されますが、特定のデータソースを参照するときにパイプラインメッセージにも含まれます。 | 配列 |  | 配列 | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all, https://ns.adobe.com/experience/campaign/offer-detail, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/experienceevent-technical-details |
 | xdm:templateID | テンプレートの識別子 | この配信の初期化に使用される配信テンプレートの ID。Adobe Campaign で使用されるテンプレートのタイプは、`messageClass` を使用して識別できます。* `messageClass` = `oneTime`：テンプレートは標準配信テンプレートです。* `messageClass` = `continuous`：テンプレートは定期配信です。* `messageClass` = `transactional`：テンプレートはトランザクションメッセージテンプレートです。 | 整数 |  | int | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
 | xdm:templateName | 配信テンプレートの内部名 | このメッセージを発信するキャンペーンアクティビティの親エンティティのわかりやすい識別子（イベントベースまたは継続的なメッセージクラスの場合）。 | 文字列 |  | 文字列 | https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-all |
