@@ -2,16 +2,16 @@
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；ユーザインターフェイス；UI；カスタマイズ；プロファイルダッシュボード;ダッシュボード
 title: プロファイルダッシュボード
 description: Adobe Experience PlatformUIは、リアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 2c99cbb3-515f-4982-9f2a-84e1ab14542e
 translation-type: tm+mt
-source-git-commit: 077525d597d457ab2c3b8733490920da89f15ebb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 6%
 
 ---
-
 
 # （ベータ版）[!UICONTROL プロファイル]ダッシュボード{#profile-dashboard}
 
