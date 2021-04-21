@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；ルッカー；ルッカー；クエリサービスに接続；
 solution: Experience Platform
 title: Lookerをクエリサービスに接続
-topic: connect
+topic-legacy: connect
 description: このドキュメントでは、LookerとAdobe Experience Platformクエリサービスを接続する手順について説明します。
+exl-id: 806e9077-533a-4546-b5ca-8124751957f5
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 22%
 
 ---
-
 
 # [!DNL Looker]をクエリサービスに接続
 
