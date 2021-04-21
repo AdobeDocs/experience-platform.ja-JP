@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Oracle;oracle
+keywords: Experience Platform；ホーム；人気の高いトピック；Oracle;oracle
 solution: Experience Platform
-title: フローサービスAPIを使用したOracleソース接続の作成
-topic: overview
+title: Flow Service APIを使用したOracleソース接続の作成
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してOracleをExperience Platformに接続する方法を説明します。
+exl-id: b1cea714-93ff-425f-8e12-6061da97d094
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 26%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Oracle]ソース接続を作成する
 
@@ -38,11 +38,11 @@ ht-degree: 26%
 | `connectionString` | [!DNL Oracle]への接続に使用する接続文字列。 [!DNL Oracle]接続文字列パターンは次のとおりです。`Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 [!DNL Oracle]の接続指定IDは`d6b52d86-f0f8-475f-89d4-ce54c8527328`です。 |
 
-使い始めについての詳細は、[このOracleドキュメント](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)を参照してください。
+開始方法の詳細については、[このOracleドキュメント](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)を参照してください。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -103,7 +103,7 @@ curl -X POST \
 | `auth.params.connectionString` | [!DNL Oracle]データベースへの接続に使用する接続文字列です。 [!DNL Oracle]接続文字列パターンは次のとおりです。`Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | [!DNL Oracle]接続指定ID:`d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
