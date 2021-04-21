@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；接続；クエリサービスへの接続；アクアデータスタジオ；Aqua Data Studio;Looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;
 solution: Experience Platform
 title: クライアントをクエリサービスに接続
-topic: connect
+topic-legacy: connect
 description: このドキュメントでは、様々なデスクトップクライアントアプリケーションからクエリサービスに接続する方法と、それらの接続を検証する方法について説明します。
+exl-id: 2ba20179-5adb-4259-a120-231a40e78054
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 6%
 
 ---
-
 
 # クライアントを[!DNL Query Service]に接続
 
