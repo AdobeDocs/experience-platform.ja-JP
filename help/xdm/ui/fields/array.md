@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気のあるトピック；API;AP
 solution: Experience Platform
 title: UIでの配列フィールドの定義
 description: Experience Platformユーザーインターフェイスで配列フィールドを定義する方法を説明します。
-topic: user guide
+topic-legacy: user guide
+exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 1%
 
 ---
-
 
 # UIでの配列フィールドの定義
 
