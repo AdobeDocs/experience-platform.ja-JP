@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform ヘルプのサンドボックス
 breadcrumb-title: サンドボックスガイド
 user-guide-description: 開発、テスト、およびアプリケーションのデプロイメント用に、Platform インスタンスを仮想環境へとパーティション化します。
-feature: Data Management
+feature: データ管理
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 96%
