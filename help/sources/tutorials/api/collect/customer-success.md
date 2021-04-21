@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；顧客の成功を収集；顧客の成功
 solution: Experience Platform
 title: ソースコネクタとAPIを使用した顧客成功システムからのデータ収集
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、顧客の成功システムからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1579'
 ht-degree: 16%
 
 ---
