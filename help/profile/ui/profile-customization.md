@@ -2,15 +2,15 @@
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；ユーザインターフェイス；UI；カスタマイズ；プロファイルの詳細；詳細
 title: UIのプロファイル詳細のカスタマイズ
 description: 'このガイドでは、Adobe Experience PlatformUI内でリアルタイム顧客プロファイルデータが表示される方法をカスタマイズする手順を順を追って説明します。 '
-topic: guide
+topic-legacy: guide
+exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
 translation-type: tm+mt
-source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] 詳細カスタマイズ  {#profile-detail-customization}
 
