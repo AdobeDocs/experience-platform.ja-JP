@@ -2,16 +2,16 @@
 keywords: 視覚的類似性；視覚的類似性；ccai api
 solution: Experience Platform, Intelligent Services
 title: コンテンツとコマースのAI APIの視覚の類似性
-topic: Developer guide
+topic-legacy: Developer guide
 description: 視覚類似性サービスは、画像を指定すると、カタログから視覚的に類似した画像を自動的に見つけ出します。
+exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%
 
 ---
-
 
 # 視覚的類似性
 
@@ -88,7 +88,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `custom` | 渡す任意のカスタムパラメーター。 | × |
 | `historic-metadata` | メタデータを渡すことができる配列。 | × |
 
-**応答** 
+**応答**
 
 正常に応答すると、カタログ内の視覚的に類似した各画像の`feature_value`と`feature_name`を含む`response`配列が返されます。
 
@@ -160,4 +160,3 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
   "error": []
 }
 ```
-
