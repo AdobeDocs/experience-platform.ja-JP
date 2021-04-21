@@ -2,16 +2,16 @@
 keywords: Experience Platform；スコアのダウンロード；顧客ai；人気のあるトピック；エクスポート；エクスポート；顧客aiダウンロード；顧客aiスコア
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: 顧客AIでのスコアのダウンロード
-topic: Downloading scores
+topic-legacy: Downloading scores
 description: 顧客AIでは、スコアをParketファイル形式でダウンロードできます。
+exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 85%
 
 ---
-
 
 # 顧客AIでのスコアのダウンロード
 
@@ -38,7 +38,7 @@ ht-degree: 85%
 
 ![データセット ID](../images/download-scores/access-scores.png)
 
-## バッチ ID を取得する {#retrieve-your-batch-id}
+## バッチ ID を取得する  {#retrieve-your-batch-id}
 
 前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、limitクエリーパラメーターの値を、返す金額に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../../catalog/api/filter-data.md)に関するガイドを参照してください。
 
