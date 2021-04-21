@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気の高いトピック；ui;UI;
 solution: Experience Platform
 title: スキーマエディタを使用した2つのスキーマ間の関係の定義
 description: このドキュメントでは、Experience Platformユーザーインターフェイスのスキーマエディタを使用して、2つのスキーマ間の関係を定義するためのチュートリアルを提供します。
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 31%
 
 ---
-
 
 # [!DNL Schema Editor]
 
