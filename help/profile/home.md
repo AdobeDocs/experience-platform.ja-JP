@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイムの顧客プロファイル；トラブルシューティング；API；統合プロファイル；統合プロファイル；統合；プロファイル;rtcp;XDMグラフ
 title: リアルタイム顧客プロファイルの概要
-topic: guide
+topic-legacy: guide
 description: リアルタイム顧客プロファイルは、様々な企業データアセットのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形でそのデータにアクセスできる汎用参照エンティティストアです。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
+exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1826'
 ht-degree: 35%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] の概要
 
