@@ -2,17 +2,17 @@
 keywords: Experience Platform；パッケージソースファイル；Data Science Workspace；人気の高いトピック；Docker;Docker画像
 solution: Experience Platform
 title: ソースファイルのレシピへのパッケージ化
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、用意されている Retail Sales サンプルソースファイルをアーカイブファイルにパッケージ化する方法について説明します。このアーカイブファイルは、UI のレシピインポートワークフローに従うか API を使用して、Adobe Experience Platform の Data Science Workspace でレシピを作成するのに使用できます。
+exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 47%
 
 ---
-
 
 # ソースファイルのレシピへのパッケージ化
 
