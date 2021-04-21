@@ -6,18 +6,14 @@ topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してOracleをAdobe Experience Platformに接続する方法について説明します。
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# （ベータ版） [!DNL Oracle]コネクタ
-
->[!NOTE]
->
->[!DNL Oracle]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# [!DNL Oracle] コネクタ
 
 Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure]などのデータベースプロバイダに対してネイティブの接続を提供します。 これらのシステムのデータを[!DNL Platform]に取り込むことができます。
 
