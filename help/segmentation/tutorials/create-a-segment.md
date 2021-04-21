@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント；セグメント；セグメントの作成；セグメント；セグメントの作成；セグメントの作成；Segmentation Service;
 solution: Experience Platform
 title: Segmentation Service APIを使用したセグメントの作成
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience PlatformセグメントサービスAPIを使用したセグメント定義の開発、テスト、プレビュー、保存の方法を学びます。
+exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 59%
 
 ---
-
 
 # Segmentation Service APIを使用してセグメントを作成する
 
@@ -32,7 +32,7 @@ ht-degree: 59%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
