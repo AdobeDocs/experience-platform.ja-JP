@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Apache Distributed File System;Apache Emator;hdfs;HDFS
+keywords: Experience Platform；ホーム；人気の高いトピック；ApacheHadoop分散ファイルシステム；Apachehadoop;hdfs;HDFS
 solution: Experience Platform
 title: Flow Service APIを使用したApache HDFSソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してApacheHadoop分散ファイルシステムをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 26%
 
 ---
-
 
 # [!DNL Apache] APIを使って[!DNL Flow Service] HDFSソース接続を作成する
 
@@ -22,7 +22,7 @@ ht-degree: 26%
 
 [!DNL Flow Service] 様々な異なるソースから顧客データを収集して一元化し、Adobe Experience Platformに持ち込むために使用します。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、ApacheHadoop分散ファイルシステム（以下「HDFS」と呼ばれます）を[!DNL Experience Platform]に接続する手順を順を追って説明します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、ApacheHadoop分散ファイルシステム（以下「HDFS」と呼ばれる）を[!DNL Experience Platform]に接続する手順を順を追って説明します。
 
 ## はじめに
 
@@ -42,7 +42,7 @@ ht-degree: 26%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -103,7 +103,7 @@ curl -X POST \
 | `auth.params.url` | HDFSへの匿名接続に必要な認証パラメーターを定義するURLです |
 | `connectionSpec.id` | HDFS接続仕様ID:`54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
