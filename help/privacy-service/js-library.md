@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: AdobeプライバシーJavaScriptライブラリの概要
-topic: overview
+topic-legacy: overview
 description: AdobeのプライバシーJavaScriptライブラリを使用すると、Privacy Serviceで使用するデータの件名を取得できます。
+exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 70%
 
 ---
-
 
 # アドビのプライバシー JavaScript ライブラリの概要
 
