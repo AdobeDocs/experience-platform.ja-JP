@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；アドビ定義関数；sql;
 solution: Experience Platform
 title: クエリ・サービスのAdobe定義SQL関数
-topic: functions
+topic-legacy: functions
 description: このドキュメントでは、Adobe Experience Platformクエリサービスで使用できるAdobe定義関数について説明します。
+exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2913'
 ht-degree: 26%
 
 ---
-
 
 # クエリサービスのAdobe定義SQL関数
 
