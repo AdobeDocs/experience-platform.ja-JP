@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM;ExperienceEvent；フィールド；スキーマ;スキーマ;スキーマデザイン；mixin;mixin;enduserids;end-user;ids;
 solution: Experience Platform
 title: エンドユーザーIDの詳細Mixin
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、「エンドユーザーIDの詳細」ミックスインの概要を説明します。
+exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 6%
 
 ---
-
 
 # [!UICONTROL エンドユーザーID] 詳細Mixin
 
