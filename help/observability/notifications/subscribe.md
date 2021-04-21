@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；日付範囲
 solution: Experience Platform
-title: Adobe I/Oイベントの通知を受信
-topic: developer guide
+title: Adobe I/Oイベント通知のサブスクライブ
+topic-legacy: developer guide
 description: このドキュメントでは、Adobe Experience PlatformサービスのAdobe I/Oイベント通知を登録する方法について手順を説明します。 使用可能なイベントタイプに関するリファレンス情報と、該当する [!DNL Platform] サービスごとに返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクも提供されています。
+exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 4%
 
 ---
 
+# Adobe I/Oイベント通知のサブスクライブ
 
-# Adobe I/Oイベントの通知を購読する
-
-[!DNL Observability Insights] Adobe Experience Platformアクティビティに関するAdobe I/Oイベントの通知を購読できます。これらのイベントは、アクティビティ監視の効率的な自動化を容易にするために、設定済みのWebフックに送信されます。
+[!DNL Observability Insights] Adobe Experience Platformアクティビティに関するAdobe I/Oイベント通知を購読できます。これらのイベントは、アクティビティ監視の効率的な自動化を容易にするために、設定済みのWebフックに送信されます。
 
 このドキュメントでは、Adobe Experience PlatformサービスのAdobe I/Oイベント通知を登録する方法について手順を説明します。 利用可能なイベントタイプに関するリファレンス情報と、該当する[!DNL Platform]サービスごとに返されたイベントデータを解釈する方法に関する詳細なドキュメントへのリンクも提供されています。
 
