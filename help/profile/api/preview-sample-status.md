@@ -2,15 +2,15 @@
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API;プレビュー；サンプル
 title: プレビューサンプルステータス(プロファイルプレビュー)APIエンドポイント
 description: Real-time Customer Comment Endpoint APIの一部であるプレビューサンプルステータスエンドポイントを使用すると、プロファイルデータの最新の成功したサンプルをプレビューでき、データセット別、Adobe Experience Platform内のID名前空間別にリストプロファイルの配布を測定できます。
-topic: guide
+topic-legacy: guide
+exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 translation-type: tm+mt
-source-git-commit: 5266c393b034d1744134522cf1769304f39733da
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1655'
 ht-degree: 4%
 
 ---
-
 
 # プレビューサンプルステータスエンドポイント(プロファイルプレビュー)
 
@@ -131,7 +131,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**応答** 
+**応答**
 
 この応答には、データセットオブジェクトのリストを含む`data`配列が含まれます。 表示された応答は、3つのデータセットを表示するように切り捨てられました。
 
@@ -228,7 +228,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**応答** 
+**応答**
 
 応答には`data`配列が含まれ、各名前空間の詳細が個々のオブジェクトに含まれます。 4つの名前空間が表示されるように、表示される応答は切り捨てられました。
 
