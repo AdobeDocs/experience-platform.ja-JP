@@ -2,16 +2,16 @@
 keywords: Experience Platform；開発者ガイド；SDK；データアクセスSDK；データサイエンスワークスペース；人気の高いトピック
 solution: Experience Platform
 title: Adobe Experience PlatformプラットフォームSDKを使用したモデルオーサリング
-topic: SDK authoring
+topic-legacy: SDK authoring
 description: このチュートリアルでは、PythonとRの両方でdata_access_sdk_pythonを新しいPythonプラットフォームSdkに変換する方法について説明します。
+exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 79%
 
 ---
-
 
 # Adobe Experience Platform[!DNL Platform] SDKを使用したモデルオーサリング
 
@@ -21,7 +21,7 @@ ht-degree: 79%
 - [データの基本読み取り](#basic-reading-of-data)
 - [データの基本書き込み](#basic-writing-of-data)
 
-## 認証の構築 {#build-authentication}
+## 認証の構築  {#build-authentication}
 
 認証は、[!DNL Adobe Experience Platform]を呼び出すために必要で、APIキー、IMS組織ID、ユーザートークン、サービストークンで構成されます。
 
