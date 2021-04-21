@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；取得失敗したバッチ；取得失敗したバッチ；失敗したバッチ；バッチ取り込み；失敗したバッチ；取得失敗したバッチ；ダウンロード失敗したバッチ；
 solution: Experience Platform
 title: データアクセスAPIを使用した失敗したバッチの取得
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、データ取得 API を使用して、失敗したバッチに関する情報を取得する手順を説明します。
+exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '653'
 ht-degree: 76%
 
 ---
-
 
 # データアクセスAPIを使用して失敗したバッチを取得する
 
@@ -29,7 +29,7 @@ Adobe Experience Platform でのデータのアップロードと取得には 2 
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
