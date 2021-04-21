@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Apache hive;hive;Hive
 solution: Experience Platform
 title: Flow Service APIを使用したAzure HDInsights Source ConnectionでのApache Hiveの作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Azure HDInsightsのApache HiveをAdobe Experience Platformに接続する方法を説明します。
+exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 25%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Azure HDInsights]ソース接続上に[!DNL Apache Hive]を作成する
 
@@ -48,7 +48,7 @@ ht-degree: 25%
 
 #### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -109,7 +109,7 @@ curl -X POST \
 | `auth.params.connectionString` | [!DNL Hive]アカウントに関連付けられている接続文字列。 |
 | `connectionSpec.id` | [!DNL Hive]接続指定ID:`aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
