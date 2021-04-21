@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；検索；データ型；データ型；
 solution: Experience Platform
 title: Search Data Type
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Search Experience Data Model(XDM)データタイプの概要を説明します。
+exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 16%
 
 ---
-
 
 # [!UICONTROL Searchdata] 型
 
