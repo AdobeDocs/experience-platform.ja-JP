@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フェニックス；フェニックス
 solution: Experience Platform
 title: フェニックスソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してフェニックスをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 22%
 
 ---
-
 
 # （ベータ版） [!DNL Phoenix]コネクタ
 
