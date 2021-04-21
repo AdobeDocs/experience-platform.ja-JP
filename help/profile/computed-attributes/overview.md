@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: 計算済み属性の概要
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計する関数です。 これらの関数は自動的に計算され、セグメント化、アクティベーションおよびパーソナライゼーションで使用できます。
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '728'
 ht-degree: 41%
 
 ---
-
 
 # （アルファ）計算済み属性の概要
 
