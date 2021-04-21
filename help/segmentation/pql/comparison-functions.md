@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；比較関数；比較；
 solution: Experience Platform
 title: PQL比較関数
-topic: developer guide
+topic-legacy: developer guide
 description: 様々な式と値を比較する際に、比較関数を使用します。結果は、「true」または「false」です。
+exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 85%
 
 ---
-
 
 # 比較関数
 
