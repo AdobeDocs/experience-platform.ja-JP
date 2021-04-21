@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；マーケティング自動化システム；マーケティング自動化データの収集
 solution: Experience Platform
 title: ソースコネクタとAPIを使用したマーケティング自動化データの収集
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタとAPIを使用してそれらをAdobe Experience Platformに取り込む手順を説明します。
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1576'
 ht-degree: 19%
 
 ---
