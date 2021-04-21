@@ -2,16 +2,16 @@
 keywords: Experience Platform；開発者ガイド；エンドポイント；Data Science Workspace；人気の高いトピック；エンジン；先生の機械学習api
 solution: Experience Platform
 title: エンジンAPIエンドポイント
-topic: Developer guide
+topic-legacy: Developer guide
 description: エンジンは、Data Science Workspace　での機械学習モデルの基礎です。特定の問題を解決する機械学習アルゴリズム、特徴エンジニアリングを実行する特徴パイプライン、またはその両方が含まれます。
+exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 69%
 
 ---
-
 
 # エンジンエンドポイント
 
@@ -142,7 +142,7 @@ curl -X POST \
 | `artifacts.default.image.location` | Dockerイメージの場所。 Azure ACRまたはパブリック（未認証）Dockerhubのみがサポートされています。 |
 | `artifacts.default.image.executionType` | エンジンの実行タイプ。この値は、Dockerイメージを構築する言語に対応します。 これは&quot;Spark&quot;か&quot;PySpark&quot;のどちらかです。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成されたエンジンの一意の ID（`id`）を含む詳細を含むペイロードを返します。次に示すのは、Pythonエンジンの応答例です。 すべてのエンジンの応答は次の形式に従います。
 
@@ -224,7 +224,7 @@ curl -X POST \
 | `artifacts.default.image.packagingType` | エンジンのパッケージタイプ。 この値は`docker`に設定する必要があります。 |
 | `artifacts.default.defaultMLInstanceConfigs` | `pipeline.json`構成ファイルのパラメーター。 |
 
-**応答** 
+**応答**
 
 成功した応答は、新たに作成されたフィーチャーパイプラインエンジンの詳細を含むペイロードを返します。この詳細には、一意の識別子(`id`)が含まれます。 次に示すのは、PySpark機能のパイプラインエンジンの応答例です。
 
