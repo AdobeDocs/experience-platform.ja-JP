@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；マーケティングアクションapi;APIベースの適用；データガバナンス
 solution: Experience Platform
 title: マーケティングアクションAPIエンドポイント
-topic: developer guide
+topic-legacy: developer guide
 description: マーケティングアクションは、Adobe Experience Platform データガバナンスのコンテキストでは、Experience Platform データコンシューマーがおこなうアクションのことで、そのため、データ使用ポリシーの違反がないかを確認する必要があります。
+exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 10%
 
 ---
-
 
 # マーケティングアクションエンドポイント
 
@@ -47,7 +47,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 成功した応答は、取得した各マーケティングアクションの詳細（`name`と`href`を含む）を返します。 `href`値は、[データ使用ポリシー](policies.md#create-policy)を作成する際のマーケティングアクションの識別に使用されます。
 
@@ -134,7 +134,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 responseオブジェクトには、マーケティングアクションの詳細が含まれます。この中には、[データ使用ポリシー](policies.md#create-policy) (`marketingActionsRefs`)を定義する際に、マーケティングアクションを参照するために必要なパス(`_links.self.href`)が含まれます。
 
@@ -194,7 +194,7 @@ curl -X PUT \
 | `name` | 作成または更新するマーケティングアクションの名前。 <br><br>**重要**:このプロパティはパス `{MARKETING_ACTION_NAME}` 内のものと一致する必要があります。一致しない場合は、HTTP 400(Bad Request)エラーが発生します。つまり、マーケティングアクションが作成されると、その`name`プロパティは変更できません。 |
 | `description` | マーケティングアクションの詳細なコンテキストを提供する説明です（オプション）。 |
 
-**応答** 
+**応答**
 
 成功した応答は、マーケティングアクションの詳細を返します。 既存のマーケティングアクションが更新された場合、応答はHTTPステータス200(OK)を返します。 新しいマーケティングアクションが作成された場合、応答はHTTPステータス201（作成済み）を返します。
 
