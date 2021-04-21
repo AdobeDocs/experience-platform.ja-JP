@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；データセットの生成；データセットの生成；データセットの作成；
 solution: Experience Platform
 title: クエリサービスの結果からデータセットを生成
-topic: queries
+topic-legacy: queries
 type: Tutorial
-description: 'Adobe Experience Platformクエリサービスを使用すると、UIからデータセットを作成できます。 作成したデータセットは、Data Lake内の他のデータセットと同様にアクセスでき、様々な使用例で使用できます。 '
+description: Adobe Experience Platformクエリサービスを使用すると、UIからデータセットを作成できます。 作成したデータセットは、Data Lake内の他のデータセットと同様にアクセスでき、様々な使用例で使用できます。
+exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 43%
 
 ---
-
 
 # クエリサービスの結果からデータセットを生成
 
