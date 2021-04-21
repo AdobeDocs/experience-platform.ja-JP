@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング接続；ストリーミング接続の作成；uiガイド；チュートリアル；ストリーミング接続の作成；ストリーミング取り込み；取り込み；
 solution: Experience Platform
 title: UIを使用したストリーミング接続の作成
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: この UI ガイドは、Adobe Experience Platform を使用してストリーミング接続を作成する際に役立ちます。
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 translation-type: tm+mt
-source-git-commit: 3b71f1399a770e097cf75827e626d6d4e289ab77
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1060'
 ht-degree: 9%
 
 ---
