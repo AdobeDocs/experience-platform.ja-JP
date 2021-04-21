@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；順序；データ型；データ型；
 solution: Experience Platform
 title: 注文データタイプ
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Order Experience Data Model(XDM)データタイプの概要を説明します。
+exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
 translation-type: tm+mt
-source-git-commit: 8bbb062df47b6e94630626d0a89a179d759d922d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 22%
 
 ---
-
 
 #  Orderdata型
 
