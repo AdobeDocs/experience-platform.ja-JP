@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリ;クエリエディタ；クエリエディタ；クエリエディタ；
 solution: Experience Platform
 title: クエリサービスUIガイド
-topic: guide
+topic-legacy: guide
 description: Adobe Experience Platformクエリサービスは、クエリの書き込みと実行、表示が以前に実行したクエリ、IMS組織内でユーザーによって保存されたクエリへのアクセスに使用できるユーザーインターフェイスを提供します。
+exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 53%
 
 ---
-
 
 # [!DNL Query Service] ガイド
 
