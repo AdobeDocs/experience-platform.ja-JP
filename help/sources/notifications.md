@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；通知
-description: Adobe I/Oイベントを登録すると、Webフックを使用して、ソース接続のフロー実行ステータスに関する通知を受信できます。 これらの通知には、フローの実行の成功に関する情報や、実行の失敗に貢献したエラーに関する情報が含まれます。
+description: Adobe I/Oイベントをサブスクライブすると、Webフックを使用して、ソース接続のフロー実行ステータスに関する通知を受信できます。 これらの通知には、フローの実行の成功に関する情報や、実行の失敗に貢献したエラーに関する情報が含まれます。
 solution: Experience Platform
 title: フロー実行通知
-topic: overview
+topic-legacy: overview
+exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 5%
 
 ---
-
 
 # フロー実行通知
 
@@ -19,7 +19,7 @@ Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外�
 
 [[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) は、社内のさまざまなソースから顧客データを収集し、一元化するために使用 [!DNL Platform]します。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
-Adobe I/Oイベントでは、イベントを登録し、Webフックを使用して、フロー実行の状態に関する通知を受信できます。 これらの通知には、フローの実行の成功に関する情報や、実行の失敗に貢献したエラーに関する情報が含まれます。
+Adobe I/Oイベントを使用すると、イベントをサブスクライブし、Webフックを使用して、フロー実行の状態に関する通知を受信できます。 これらの通知には、フローの実行の成功に関する情報や、実行の失敗に貢献したエラーに関する情報が含まれます。
 
 このドキュメントでは、イベントの登録、Webフックの登録、およびフロー実行のステータスに関する情報を含む通知の受信の手順を説明します。
 
