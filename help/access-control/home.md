@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform；ホーム；人気の高いトピック；アクセス制御;adobe admin console
 solution: Experience Platform
-topic: overview
+topic-legacy: overview
 title: アクセス制御の概要
 description: Adobe Experience Platformのアクセス制御はAdobe Admin Consoleを通じて提供される。 この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
+exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 translation-type: tm+mt
-source-git-commit: c277caabe851c81f66b822c07a25f4b94466eef0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 53%
 
 ---
-
 
 # アクセス制御の概要
 
