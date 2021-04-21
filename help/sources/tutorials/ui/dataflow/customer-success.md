@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；設定dataflow；顧客成功コネクタ
 solution: Experience Platform
 title: UIでの顧客成功ソース接続のデータフローの設定
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: データフローとは、ソースからデータを取得し、 [!DNL Platform] データセットにデータを取り込む、スケジュール設定されたタスクです。 このチュートリアルでは、顧客成功アカウントを使用して新しいデータフローを構成する手順を説明します。
+exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 3%
 
 ---
-
 
 # UIでの顧客成功接続のデータフローの設定
 
@@ -181,4 +181,4 @@ ht-degree: 3%
 
 ### [!DNL Profile]母集団の受信データをアクティブ化
 
-ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むために使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
+ソースコネクタからの受信データは、[!DNL Real-time Customer Profile]データを豊かにし、埋め込むのに使用できます。 [!DNL Real-time Customer Profile]データの入力について詳しくは、[プロファイルの母集団](../profile.md)のチュートリアルを参照してください。
