@@ -7,18 +7,14 @@ type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをAmazonKinesisアカウントに接続する方法を説明します。
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 26%
+source-wordcount: '543'
+ht-degree: 27%
 
 ---
 
 # Flow Service APIを使用して[!DNL Amazon Kinesis]ソース接続を作成する
-
->[!NOTE]
->
->[!DNL Amazon Kineses]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 [!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
 
