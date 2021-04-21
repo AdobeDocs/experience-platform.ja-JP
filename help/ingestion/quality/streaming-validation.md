@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング；ストリーミング取り込み；ストリーミング取り込みの検証；検証；ストリーミング取り込みの検証；検証；同期検証；非同期検証；非同期検証；
 solution: Experience Platform
 title: ストリーミング取り込みの検証
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: ストリーミング取り込みを使用すると、リアルタイムでストリーミングエンドポイントを使用してデータをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
+exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '898'
 ht-degree: 81%
 
 ---
-
 
 # ストリーミング取り込みの検証
 
@@ -27,7 +27,7 @@ ht-degree: 81%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
