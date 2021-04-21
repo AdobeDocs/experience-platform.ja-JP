@@ -3,12 +3,12 @@ keywords: Experience Platform；ホーム；人気の高いトピック；API;AP
 solution: Experience Platform
 title: スキーマレジストリAPIの使い始めに
 description: このドキュメントでは、スキーマレジストリAPIを呼び出す前に知っておく必要があるコア概念の概要を説明します。
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1363'
 ht-degree: 39%
 
 ---
