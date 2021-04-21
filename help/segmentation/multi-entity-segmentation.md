@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化；セグメント化；セグメント；セグメント；マルチエンティティ；マルチエンティティセグメント化；マルチエンティティセグメント化；
 solution: Experience Platform
 title: マルチエンティティセグメントの概要
-topic: overview
+topic-legacy: overview
 description: 複数エンティティのセグメント化は、製品、店舗または他の非プロファイルクラスに基づいて、プロファイルデータを拡張する機能です。接続されると、追加のクラスのデータは、プロファイルスキーマにネイティブであるかのように使用できるようになります。
+exl-id: 01a37fdc-2abe-4a84-b7da-fcbd141ff51f
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '675'
 ht-degree: 13%
 
 ---
-
 
 # マルチエンティティセグメントの概要
 
