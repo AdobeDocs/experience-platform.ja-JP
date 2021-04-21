@@ -2,16 +2,16 @@
 keywords: テキスト分類；テキスト分類
 solution: Experience Platform, Intelligent Services
 title: コンテンツとコマースAI APIのテキスト分類
-topic: Developer guide
+topic-legacy: Developer guide
 description: テキスト分類サービスは、テキストフラグメントを指定した場合、1つ以上のラベルに分類できます。 分類は、単一のラベル、複数のラベル、階層のいずれかです。
+exl-id: f240519a-0d83-4309-91e4-4e48be7955a1
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 4%
 
 ---
-
 
 # テキストの分類
 
@@ -74,7 +74,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `content-id` | 応答で返されるデータ要素の一意のID。 この値が渡されない場合は、自動生成IDが割り当てられます。 | × |
 | `content` | テキスト分類サービスで使用されるコンテンツ。 コンテンツは生のテキスト（「inline」コンテンツタイプ）にすることができます。 <br> コンテンツがS3上のファイル(「s3-bucket」 content-type)の場合、署名済みURLを渡します。 | ○ |
 
-**応答** 
+**応答**
 
 成功した応答は、分類されたテキストを応答配列で返します。
 
