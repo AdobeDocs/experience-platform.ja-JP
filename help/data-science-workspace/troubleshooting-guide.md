@@ -2,16 +2,16 @@
 keywords: Experience Platform；トラブルシューティング；Data Science Workspace；よく読まれるトピック
 solution: Experience Platform
 title: Data Science Workspaceトラブルシューティングガイド
-topic: Troubleshooting
+topic-legacy: Troubleshooting
 description: このドキュメントでは、Adobe Experience Platform Data Science Workspace に関するよくある質問に対する回答を示します。
+exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 translation-type: tm+mt
-source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '925'
 ht-degree: 29%
 
 ---
-
 
 # [!DNL Data Science Workspace] トラブルシューティングガイド
 
