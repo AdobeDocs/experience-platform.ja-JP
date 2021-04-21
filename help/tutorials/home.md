@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ワークフロー
 solution: Experience Platform
 title: Adobe Experience Platform クエリサービス
-topic: overview
+topic-legacy: overview
 description: これらのチュートリアルは、Experience Platform のドキュメントに記載されている情報を補完する目的で設計されているので、最良の結果を得るために、チュートリアルを完了する際にドキュメントを手元に置いておくことをお勧めします。
+exl-id: dc4d02a2-ab76-47fc-8875-951cbdbd796e
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 76%
 
 ---
-
 
 # Adobe Experience Platform チュートリアルの概要
 
