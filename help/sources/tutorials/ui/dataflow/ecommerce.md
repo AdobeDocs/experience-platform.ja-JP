@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；eCommerceコネクタ；eCommerce
 solution: Experience Platform
 title: UIでのeコマースソース接続のデータフローの構成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: データフローとは、ソースからデータを取得し、 [!DNL Platform] データセットにデータを取り込む、スケジュール設定されたタスクです。 このチュートリアルでは、eCommerceアカウントを使用して新しいデータフローを構成する手順を説明します。
+exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1317'
 ht-degree: 3%
 
 ---
-
 
 # UIでのeコマース接続用のデータフローの構成
 
