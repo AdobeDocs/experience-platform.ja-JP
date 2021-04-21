@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；自動適用；APIベースの適用；データガバナンス
 solution: Experience Platform
 title: ポリシー評価APIエンドポイント
-topic: developer guide
+topic-legacy: developer guide
 description: マーケティングアクションが作成され、ポリシーが定義されたら、Policy Service API を使用して、特定のアクションによってポリシーが違反したかどうかを評価できます。返される制約は、データ使用ラベルを含む指定されたデータに対してマーケティングアクションを試みることで違反するポリシーのセットの形をとります。
+exl-id: f9903939-268b-492c-aca7-63200bfe4179
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 17%
 
 ---
-
 
 # ポリシー評価エンドポイント
 
@@ -170,7 +170,7 @@ curl -X POST \
 | `entityType` | 兄弟`entityId`プロパティでIDが示されるエンティティのタイプ。 現在、`dataSet`の値のみが許可されています。 |
 | `entityId` | マーケティングアクションをテストするデータセットのID。 データセットとそれに対応するIDのリストは、[!DNL Catalog Service] APIの`/dataSets`エンドポイントにGETリクエストを行うことで取得できます。 詳しくは、[ [!DNL Catalog] オブジェクト](../../catalog/api/list-objects.md)のリストを参照してください。 |
 
-**応答** 
+**応答**
 
 成功した応答には`violatedPolicies`配列が含まれます。この配列には、指定されたデータセットに対するマーケティングアクションの実行の結果として違反されたポリシーの詳細が含まれます。 ポリシーに違反しない場合は、`violatedPolicies`配列は空になります。
 
@@ -419,7 +419,7 @@ curl -X POST \
 | `entityId` | マーケティングアクションに対してフィールドが評価されるデータセットのID。 データセットとそれに対応するIDのリストは、[!DNL Catalog Service] APIの`/dataSets`エンドポイントにGETリクエストを行うことで取得できます。 詳しくは、[ [!DNL Catalog] オブジェクト](../../catalog/api/list-objects.md)のリストを参照してください。 |
 | `entityMeta.fields` | データセットのスキーマ内の特定のフィールドへのパスの配列。JSONポインター文字列の形式で提供されます。 これらの文字列に許可された構文の詳細については、APIの基本原則ガイドの[JSONポインタ](../../landing/api-fundamentals.md#json-pointer)の節を参照してください。 |
 
-**応答** 
+**応答**
 
 成功した応答には`violatedPolicies`配列が含まれます。この配列には、指定されたデータセットフィールドに対するマーケティングアクションの実行結果として違反されたポリシーの詳細が含まれます。 ポリシーに違反しない場合は、`violatedPolicies`配列は空になります。
 
@@ -587,7 +587,7 @@ curl -X POST \
 | `entityId` | マーケティングアクションをテストするデータセットのID。 |
 | `entityMeta.fields` | （オプション）マーケティングアクションをテストするデータセット内の特定のフィールドのリスト。 |
 
-**応答** 
+**応答**
 
 成功した応答は、評価結果の配列を返します。リクエストで送信されたポリシー評価ジョブごとに1つ。
 
