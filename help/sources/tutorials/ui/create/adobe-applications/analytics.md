@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Analyticsソースコネクタ；Analyticsコネクタ；Analyticsソース；Analyticsソース；Analytics
 solution: Experience Platform
 title: UIでのAdobe Analyticsソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: UIでAdobe Analyticsソース接続を作成し、ユーザーデータをAdobe Experience Platformに取り込む方法を説明します。
+exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '801'
 ht-degree: 13%
 
 ---
-
 
 # UIでのAdobe Analyticsソース接続の作成
 
@@ -113,4 +113,3 @@ Analyticsからのデータにラベルを付ける方法について詳しく�
 > 次のビデオに示す[!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
-
