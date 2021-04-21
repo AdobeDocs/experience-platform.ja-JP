@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Privacy Serviceリリースノート
-topic: release notes
+topic-legacy: release notes
 description: Adobe Experience Platform Privacy Serviceの最新のリリースノートです。
+exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 60%
 
 ---
-
 
 # [!DNL Privacy Service] リリースノート
 
@@ -21,7 +21,7 @@ ht-degree: 60%
 >
 >他の[!DNL Experience Platform]サービスに関する最新のリリースノートは、[こちら](../release-notes/latest/latest.md)を参照してください。
 
-## 2020 年 9 月 9 日
+## 2020 年 9 月 9 日（PT）
 
 ### 新機能
 
