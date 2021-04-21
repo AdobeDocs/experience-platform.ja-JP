@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データ使用の準拠；適用；データ使用の準拠；適用；Segmentation Service；セグメント化；セグメント化；
 solution: Experience Platform
 title: APIを使用したオーディエンスセグメントに対するデータ使用量コンプライアンスの実施
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、API を使用して、リアルタイム顧客プロファイルのオーディエンスセグメントでデータ使用のコンプライアンスを徹底する方法について説明します。
+exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1362'
 ht-degree: 45%
 
 ---
-
 
 # API を使用して、オーディエンスセグメントでデータ使用のコンプライアンスを徹底する
 
@@ -35,7 +35,7 @@ ht-degree: 45%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -126,7 +126,7 @@ curl -X GET \
 | -------- | ----------- |
 | `mergePolicyId` | セグメント定義に使用される結合ポリシーの ID。これは次の手順で使用します。 |
 
-## 結合ポリシーからソースデータセットを検索する {#datasets}
+## 結合ポリシーからソースデータセットを検索する  {#datasets}
 
 マージ・ポリシーには、ソース・データセットに関する情報が含まれ、ソース・データセットにはデータ使用ラベルが含まれます。 [!DNL Profile] APIにGETリクエストでマージポリシーIDを指定すると、マージポリシーの詳細を参照できます。 結合ポリシーの詳細については、[結合ポリシーエンドポイントガイド](../../profile/api/merge-policies.md)を参照してください。
 
