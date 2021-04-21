@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloudストレージ;Google Cloudストレージ;GCS;gcs
 solution: Experience Platform
 title: UIでのGoogle Cloudストレージソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してGoogle Cloudストレージソース接続を作成する方法を説明します。
+exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
 translation-type: tm+mt
-source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '594'
 ht-degree: 8%
 
 ---
-
 
 # UIに[!DNL Google Cloud Storage]ソース接続を作成する
 
