@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform;apiガイド；プラットフォームapiガイド；プラットフォームの紹介；開発者ガイド
 solution: Experience Platform
 title: Adobe Experience PlatformAPIの使い始めに
-topic: api guide
+topic-legacy: api guide
 description: Adobe Experience Platformは互いに密接に関連したAPIサービスを提供しています。 このガイドには、使用可能なサービス、CRUD操作に必要なヘッダー、エラーメッセージ、Postmanコレクション、サンプルAPI呼び出しに関する情報が含まれています。
+exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
 translation-type: tm+mt
-source-git-commit: 85d2ae5ccf1b27baaafe839f1d3f00d588abe4fc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1427'
-ht-degree: 25%
+source-wordcount: '1425'
+ht-degree: 26%
 
 ---
-
 
 # Adobe Experience PlatformAPIの使い始めに
 
@@ -119,23 +119,23 @@ curl -X GET \
 
 ## プラットフォームAPIガイド{#api-guides}
 
-| APIガイド | 説明 |
+| API ガイド | 説明 |
 | --- | --- |
-| [[!DNL Access Control] APIガイド](.././access-control/api/getting-started.md) | [!DNL Access Control] APIエンドポイントは、指定されたサンドボックス内の特定のリソースに対してユーザーが有効になっている現在のポリシーを取得できます。 その他すべてのアクセス制御機能は、[Adobe Admin Console](https://adminconsole.adobe.com/)を通じて提供されます。 |
+| [[!DNL Access Control] API ガイド](.././access-control/api/getting-started.md) | [!DNL Access Control] APIエンドポイントは、指定されたサンドボックス内の特定のリソースに対してユーザーが有効になっている現在のポリシーを取得できます。 その他すべてのアクセス制御機能は、[Adobe Admin Console](https://adminconsole.adobe.com/)を通じて提供されます。 |
 | [バッチ取り込みAPIガイド](.././ingestion/batch-ingestion/api-overview.md) | Adobe Experience Platform[!DNL Data Ingestion] APIを使用すると、データをバッチファイルとしてプラットフォームに取り込むことができます。 取り込まれるデータは、CRMシステムのフラットファイル（Parketファイルなど）のプロファイルデータ、またはスキーマレジストリ(XDM)の既知のスキーマに準拠するデータのいずれかです。 |
-| [[!DNL Catalog Service] APIガイド](.././catalog/api/getting-started.md) | [!DNL Catalog Service] APIを使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 これには、データの場所、処理ステージ、処理中に発生したエラーおよびデータレポートが含まれます。 |
-| [[!DNL Data Access] APIガイド](.././data-access/api.md) | [!DNL Data Access] APIを使用すると、Experience Platform内で取り込んだデータセットに関する情報を開発者が取得できます。 これには、データセットファイルのアクセスとダウンロード、ヘッダー情報の取得、失敗したバッチと成功したバッチの一覧表示、プレビューCSV / Parketファイルのダウンロードが含まれます。 |
-| [[!DNL Dataset Service] APIガイド](.././data-governance/labels/dataset-api.md) | Dataset Service APIを使用すると、データセットの使用ラベルを適用および編集できます。 これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理するCatalog Service APIとは別のものです。 |
+| [[!DNL Catalog Service] API ガイド](.././catalog/api/getting-started.md) | [!DNL Catalog Service] APIを使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 これには、データの場所、処理ステージ、処理中に発生したエラーおよびデータレポートが含まれます。 |
+| [[!DNL Data Access] API ガイド](.././data-access/api.md) | [!DNL Data Access] APIを使用すると、Experience Platform内で取り込んだデータセットに関する情報を開発者が取得できます。 これには、データセットファイルのアクセスとダウンロード、ヘッダー情報の取得、失敗したバッチと成功したバッチの一覧表示、プレビューCSV / Parketファイルのダウンロードが含まれます。 |
+| [[!DNL Dataset Service] API ガイド](.././data-governance/labels/dataset-api.md) | Dataset Service APIを使用すると、データセットの使用ラベルを適用および編集できます。 これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理するCatalog Service APIとは別のものです。 |
 | [[!DNL Flow Service] APIガイド](.././sources/tutorials/api/create-dataset-base-connection.md) <br> （ソースと宛先） | [!DNL Flow Service] APIは、さまざまな異なるソースからデータを収集および一元化するために使用され、Adobe Experience Platform内の様々な宛先にデータを作成およびアクティブ化するために使用されます。 このサービスはRESTful APIを提供し、サポートされるすべてのソースを接続できます。 |
-| [[!DNL Identity Service] APIガイド](.././identity-service/api/getting-started.md) | [!DNL Identity Service] APIを使用すると、開発者は、Adobe Experience PlatformのIDグラフを使用して、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理できます。 |
-| [[!DNL Observability Insights] APIガイド](.././observability/api/overview.md) | [!DNL Observability Insights] は、開発者がAdobe Experience Platformで主要な監視可能な指標を公開できるRESTful APIです。これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。 |
+| [[!DNL Identity Service] API ガイド](.././identity-service/api/getting-started.md) | [!DNL Identity Service] APIを使用すると、開発者は、Adobe Experience PlatformのIDグラフを使用して、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理できます。 |
+| [[!DNL Observability Insights] API ガイド](.././observability/api/overview.md) | [!DNL Observability Insights] は、開発者がAdobe Experience Platformで主要な監視可能な指標を公開できるRESTful APIです。これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。 |
 | [[!DNL Policy Service] APIガイド](.././data-governance/api/overview.md) <br> （データガバナンス） | [!DNL Policy Service] APIを使用すると、データ使用ラベルとポリシーを作成および管理し、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。 データセットとフィールドにラベルを適用する方法については、[[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md)ガイドを参照してください |
-| [[!DNL Privacy Service] APIガイド](.././privacy-service/api/getting-started.md) | [!DNL Privacy Service] APIを使用すると、開発者は、プライバシーに関する法的規制に準拠して、Experience Cloudアプリケーション全体で個人データにアクセスしたり削除したりするための顧客リクエストを作成および管理できます。 |
-| [[!DNL Query Service] APIガイド](.././query-service/api/getting-started.md) | [!DNL Query Service] APIを使うと、開発者は標準SQLを使ってAdobe Experience Platformデータをクエリできます。 |
-| [[!DNL Real-time Customer Profile] APIガイド](.././profile/api/overview.md) | Real-time Customer CustomerプロファイルAPIを使用すると、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプリング、不要になった、またはエラーになったプロファイルデータの削除など、プロファイルデータの調査と操作が可能です。 |
+| [[!DNL Privacy Service] API ガイド](.././privacy-service/api/getting-started.md) | [!DNL Privacy Service] APIを使用すると、開発者は、プライバシーに関する法的規制に準拠して、Experience Cloudアプリケーション全体で個人データにアクセスしたり削除したりするための顧客リクエストを作成および管理できます。 |
+| [[!DNL Query Service] API ガイド](.././query-service/api/getting-started.md) | [!DNL Query Service] APIを使うと、開発者は標準SQLを使ってAdobe Experience Platformデータをクエリできます。 |
+| [[!DNL Real-time Customer Profile] API ガイド](.././profile/api/overview.md) | Real-time Customer CustomerプロファイルAPIを使用すると、プロファイルの表示、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプリング、不要になった、またはエラーになったプロファイルデータの削除など、プロファイルデータの調査と操作が可能です。 |
 | [Sandbox APIガイド](.././sandboxes/api/getting-started.md) | Sandbox APIを使用すると、開発者はAdobe Experience Platformの個別の仮想Sandbox環境をプログラムで管理できます。 |
 | [[!DNL Schema Registry] APIガイド](.././xdm/api/overview.md) <br> (XDM) | [!DNL Schema Registry] APIを使用すると、開発者は、Adobe Experience Platform内のすべてのスキーマおよび関連するExperience Data Model(XDM)リソースをプログラムで管理できます。 |
-| [[!DNL Segmentation Service] APIガイド](.././segmentation/api/overview.md) | [!DNL Segmentation Service] APIを使用すると、開発者はAdobe Experience Platformでセグメント化操作をプログラム的に管理できます。 これには、セグメントの作成や、リアルタイム顧客プロファイルデータからのオーディエンスの生成が含まれます。 |
+| [[!DNL Segmentation Service] API ガイド](.././segmentation/api/overview.md) | [!DNL Segmentation Service] APIを使用すると、開発者はAdobe Experience Platformでセグメント化操作をプログラム的に管理できます。 これには、セグメントの作成や、リアルタイム顧客プロファイルデータからのオーディエンスの生成が含まれます。 |
 | [[!DNL Sensei Machine Learning] APIガイド](.././data-science-workspace/api/getting-started.md) <br> (Data Science Workspace) | [!DNL Sensei Machine Learning] APIは、データ科学者がアルゴリズムのオンボーディング、実験、およびサービスの展開から機械学習(ML)サービスを編成および管理するメカニズムを提供します。 |
 
 各サービスで使用できる特定のエンドポイントと操作について詳しくは、Adobe I/Oの[APIリファレンスドキュメント](http://www.adobe.com/go/platform-api-reference-en)を参照してください。
@@ -147,4 +147,3 @@ curl -X GET \
 よくある質問に対する回答は、[プラットフォームのトラブルシューティングガイド](troubleshooting.md)を参照してください。
 
 Postman環境を設定し、使用可能なPostmanコレクションを調べるには、『[Platform Postmanガイド](postman.md)』を参照してください。
-
