@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: ポリシーの結合APIエンドポイント
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 'Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、統合ポリシーは、データの優先順位付け方法と統合表示を作成するデータをPlatformが決定する際に使用するルールです。 '
+description: Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、統合ポリシーは、データの優先順位付け方法と統合表示を作成するデータをPlatformが決定する際に使用するルールです。
+exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2560'
 ht-degree: 54%
 
 ---
-
 
 # ポリシーエンドポイントの結合
 
@@ -274,7 +274,7 @@ curl -X POST \
       }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、HTTP Status 207(Multi-Status)と、POSTリクエストでIDが提供されたマージポリシーの詳細を返します。
 
@@ -534,7 +534,7 @@ curl -X POST \
 
 結合ポリシーを構成する個々の要素の詳細については、このドキュメントの最初にある「[結合ポリシーのコンポーネント](#components-of-merge-policies)」の節を参照してください。
 
-## 結合ポリシーの更新 {#update}
+## 結合ポリシーの更新  {#update}
 
 既存の結合ポリシーを変更するには、個々の属性を編集するか（PATCH）、結合ポリシー全体を新しい属性で上書きします（PUT）。それぞれの例を以下に示します。
 
@@ -777,7 +777,3 @@ UIを使用してカスタムタイムスタンプを操作するには、『[me
   "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
  }
 ```
-
-
-
-
