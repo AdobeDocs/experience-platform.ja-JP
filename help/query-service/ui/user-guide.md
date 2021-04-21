@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリエディタ；クエリエディタ；クエリサービス；クエリサービス；
 solution: Experience Platform
 title: クエリエディターUIガイド
-topic: query editor
+topic-legacy: query editor
 description: クエリエディターは、Adobe Experience Platformクエリサービスが提供するインタラクティブなツールです。このツールを使用すると、Experience Platformユーザーインターフェイス内で顧客体験データのクエリを作成、検証、実行できます。 クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
+exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 53%
 
 ---
-
 
 # [!DNL Query Editor] UIガイド
 
