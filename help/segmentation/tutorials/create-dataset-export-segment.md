@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Segmentation Service;Segmentation;Segmentation；データセットの作成；オーディエンスセグメントのエクスポート；セグメントのエクスポート；
 solution: Experience Platform
 title: オーディエンスセグメントエクスポート用のデータセットの作成
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Experience Platform UI で、オーディエンスセグメントのエクスポートに使用できるデータセットを作成する手順を説明します。
+exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 54%
 
 ---
-
 
 # オーディエンスセグメントをエクスポートするためのデータセットの作成
 
