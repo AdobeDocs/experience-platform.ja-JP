@@ -2,16 +2,16 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace；人気のあるトピック；jupyterlab
 solution: Experience Platform
 title: JupterLab UIの概要
-topic: Overview
+topic-legacy: Overview
 description: JupyterLab は、プロジェクト Jupyter の Web ベースのユーザーインターフェイスで、Adobe Experience Platform に緊密に統合されています。これは、データ科学者がJupter Notebooks、コード、データを扱うための対話型の開発環境を提供します。 このドキュメントでは、JupyterLab とその機能の概要と、一般的なアクションを実行する手順を説明します。
+exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1819'
 ht-degree: 56%
 
 ---
-
 
 # [!DNL JupyterLab] UI の概要
 
@@ -28,7 +28,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 | 機能 | 説明 |
 | --- | --- |
 | **カーネル** | カーネルは、ノートブックや他の[!DNL JupyterLab]フロントエンドに、異なるプログラミング言語でコードを実行したり内観したりする機能を提供します。 [!DNL Experience Platform] は、 [!DNL Python]、R、PySpark、およびでの開発をサポートする追加カーネルを提供 [!DNL Spark]します。詳しくは「[カーネル](#kernels)」の節を参照してください。 |
-| **データアクセス** | 読み取り/書き込み機能を完全にサポートし、[!DNL JupyterLab]内から既存のデータセットに直接アクセスできます。 |
+| **データアクセス** | 読み取り/書き込み機能を完全にサポートし、既存のデータセットに[!DNL JupyterLab]内から直接アクセスできます。 |
 | **[!DNL Platform]サービス統合** | 組み込みの統合により、[!DNL JupyterLab]内から直接他の[!DNL Platform]サービスを利用できます。 サポートされる統合の完全なリストは、「[他の Platform サービスとの統合](#service-integration)」の節に記載されています。 |
 | **認証** | <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab の組み込みのセキュリティモデル</a>に加えて、Platform のサービス間通信を含む、アプリケーションと Experience Platform の間のすべてのやり取りは、<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System]（IMS）</a>を通じて暗号化され、認証されます。 |
 | **開発ライブラリ** | [!DNL Experience Platform]では、[!DNL JupyterLab]は、[!DNL Python]、R、PySpark用のプリインストールライブラリを提供します。 サポートされているライブラリの完全なリストについては、[付録](#supported-libraries)を参照してください。 |
@@ -42,7 +42,7 @@ Experience Platform の JupyterLab 統合には、アーキテクチャの変更
 
 標準化と相互運用性は、[!DNL Experience Platform]の背後にある重要な概念です。 [!DNL JupyterLab]を組み込みIDEとして[!DNL Platform]に統合すると、他の[!DNL Platform]サービスとやり取りでき、[!DNL Platform]を最大限に活用できます。 [!DNL JupyterLab]では、次の[!DNL Platform]サービスを利用できます。
 
-* **[!DNL Catalog Service]：読み取り/書き込み機能を備えたデータセットに** アクセスし、データセットを表示します。
+* **[!DNL Catalog Service]：読み取り/書き込み機能を備えたデータセットに** アクセスし、データセットを参照します。
 * **[!DNL Query Service]:SQLを使用してデータセットに** アクセスし、データ量の多いデータを処理する際に、データアクセスのオーバーヘッドを低減できます。
 * **[!DNL Sensei ML Framework]：データのトレーニングとスコア付け、および1回のクリックでレシピを作成できるモデル開発。** 
 * **[!DNL Experience Data Model (XDM)]:** 標準化と相互運用性は、Adobe Experience Platformの主な概念です。[Adobeに基づくExperience Data Model(XDM)](https://www.adobe.com/go/xdm-home-en)は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
