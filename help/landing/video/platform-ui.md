@@ -1,21 +1,19 @@
 ---
 title: Experience PlatformUIツアー
 description: このビデオでは、Adobe Experience Platformのユーザーインターフェイスを簡単に見て、Experience Cloud、ホームページのダッシュボード、インターフェイスの有効化機能、サンドボックスの切り替え要素、ナビゲーション要素からExperience Platformに移動する方法を紹介します。
-feature: interface
-topics: null
 kt: 4821
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32792.jpg
+exl-id: 514b73cd-d1f1-472d-8021-ecfb2abeb411
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
-
 
 # Experience PlatformUIツアー
 
