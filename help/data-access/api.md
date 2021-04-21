@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；Python sdk;Spark sdk；データアクセスapi；エクスポート；Export
 solution: Experience Platform
 title: データアクセスAPIガイド
-topic: developer guide
+topic-legacy: developer guide
 description: Data Access APIは、Experience Platform内で取り込まれたデータセットの検出性とアクセス性に重点を置いたRESTfulインターフェイスを開発者に提供することで、Adobe Experience Platformをサポートします。
+exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 78%
 
 ---
-
 
 # データアクセスAPIガイド
 
