@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: エンティティ(プロファイルアクセス) APIエンドポイント
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform を使用すると、RESTful API またはユーザーインターフェイスを使用して、リアルタイムの顧客プロファイルデータにアクセスできます。このガイドでは、プロファイルAPIを使用して、一般的に「プロファイル」と呼ばれるエンティティにアクセスする方法について概説します。
+exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1737'
 ht-degree: 87%
 
 ---
-
 
 # エンティティエンドポイント(プロファイルアクセス)
 
