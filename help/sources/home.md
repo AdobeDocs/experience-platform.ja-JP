@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
+source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '975'
 ht-degree: 55%
 
 ---
@@ -115,6 +115,13 @@ Experience Platform は、サードパーティのマーケティング自動化
 Experience Platformは、サードパーティの支払いシステムからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL PayPal] コネクタ](connectors/payments/paypal.md)
+
+### ストリーミング
+
+Experience Platformは、ストリーミングソースからデータを取り込むためのサポートを提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### プロトコル
 
