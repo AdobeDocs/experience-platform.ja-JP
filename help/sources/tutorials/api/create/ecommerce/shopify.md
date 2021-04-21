@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Shopify;shopify;eコマース
 solution: Experience Platform
 title: Flow Service APIを使用したShopifyコネクタソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してShopifyをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 translation-type: tm+mt
-source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '549'
 ht-degree: 27%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Shopify]ソース接続を作成する
 
@@ -106,7 +106,7 @@ curl -X POST \
 | `auth.params.accessToken` | [!DNL Shopify]ユーザーアカウントのアクセストークンです。 |
 | `connectionSpec.id` | [!DNL Shopify]接続指定ID:`4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続が返されます。この接続には、一意の接続識別子(`id`)が含まれます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
