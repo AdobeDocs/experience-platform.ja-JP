@@ -1,12 +1,11 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
-feature: Destinations
+feature: 宛先
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 59%
