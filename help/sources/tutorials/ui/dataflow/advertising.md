@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；設定，データフロー；広告コネクタ
 solution: Experience Platform
 title: UIでの広告ソース接続用のデータフローの設定
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: データフローとは、ソースからAdobe Experience Platformデータセットにデータを取得し、取り込むスケジュール済みタスクです。 このチュートリアルでは、広告アカウントを使用して新しいデータフローを設定する手順を説明します。
+exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 3%
 
 ---
-
 
 # UIでの広告接続用のデータフローの設定
 
