@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気のあるトピック；API;AP
 solution: Experience Platform
 title: APIエンドポイントの書き出し/読み込み
 description: スキーマレジストリAPIの/exportエンドポイントと/importエンドポイントを使用すると、IMS組織とサンドボックス間でXDMリソースを共有できます。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '500'
 ht-degree: 4%
 
 ---
-
 
 # エンドポイントの書き出し/読み込み
 
@@ -51,7 +51,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-**応答** 
+**応答**
 
 成功した応答は、ターゲットXDMリソースとその依存するすべてのリソースを表すオブジェクトの配列を返します。 この例では、配列の最初のオブジェクトはテナントが作成した`Property`データ型で、`Restaurant`ミックスインが使用します。一方、2番目のオブジェクトは`Restaurant`ミックスイン自体です。 その後、このペイロードを使用して、リソース](#import)を別のサンドボックスまたはIMS組織に[インポートできます。
 
@@ -356,7 +356,7 @@ curl -X POST \
       ]'
 ```
 
-**応答** 
+**応答**
 
 正常な応答が返されると、インポートされたリソースのリストが返され、適切なテナントIDとIMS Orgの値が適用されます。
 
