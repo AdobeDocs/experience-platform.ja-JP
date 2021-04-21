@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；プロトコルデータの収集；プロトコルデータ
 solution: Experience Platform
 title: ソースコネクタとAPIを使用したプロトコルデータの収集
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、プロトコルアプリケーションからデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1547'
 ht-degree: 20%
 
 ---
