@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；サービスノー；ServiceNow
 solution: Experience Platform
 title: Flow Service APIを使用したServiceNowソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをServiceNowサーバーに接続する方法を説明します。
+exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 25%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL ServiceNow]ソース接続を作成する
 
@@ -47,7 +47,7 @@ ht-degree: 25%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -112,7 +112,7 @@ curl -X POST \
 | `auth.params.password` | 認証用に[!DNL ServiceNow]サーバーに接続するためのパスワードです。 |
 | `connectionSpec.id` | [!DNL ServiceNow]に関連付けられている接続指定ID。 |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続が、一意の識別子(`id`)を含めて返されます。 このIDは、次の手順でCRMシステムを調査するために必要です。
 
