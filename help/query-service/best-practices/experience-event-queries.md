@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；エクスペリエンスイベントクエリ；エクスペリエンスイベントクエリ；エクスペリエンスイベントクエリ;
 solution: Experience Platform
 title: エクスペリエンスイベントのサンプルクエリ
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: 次のドキュメントは、Adobe Experience Platformクエリサービスのエクスペリエンスイベントに関するクエリの例を示しています。
+exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 58%
 
 ---
-
 
 # [!DNL Experience Events]のサンプルクエリ
 
@@ -190,4 +190,3 @@ ORDER BY pageViews DESC;
 ## 次の手順
 
 アドビ定義関数（ADF）を使用したクエリ例について詳しくは、『アドビ定義関数ガイド』を参照してください。クエリの実行に関する一般的なガイダンスについては、[クエリサービスでのクエリのー実行に関するガイド](./writing-queries.md)を参照してください。
-
