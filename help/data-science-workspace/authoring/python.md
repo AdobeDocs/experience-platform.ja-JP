@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；Python sdk；データアクセスapi;Read Python;Write Python
 solution: Experience Platform
 title: Data Science WorkspaceでPythonを使用してデータにアクセスする
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: 次のドキュメントは、Data Science Workspaceで使用するPythonのデータにアクセスする方法の例を示しています。
+exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 2%
 
 ---
-
 
 # Data Science WorkspaceのPythonを使用したデータへのアクセス
 
