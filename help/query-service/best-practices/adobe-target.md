@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；サンプルクエリ；サンプルクエリ；アドビターゲット;
 solution: Experience Platform
 title: Adobe Targetデータのサンプルクエリ
-topic: queries
+topic-legacy: queries
 description: Adobe Target のデータは ExperienceEvent スキーマに変換され、ユーザーのデータセットとして Experience Platform に取り込まれます。このドキュメントには、クエリサービスをAdobe Targetのデータセットと共に使用するためのサンプルクエリが含まれています。
+exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 51%
 
 ---
-
 
 # Adobe Target データのサンプルクエリ
 
