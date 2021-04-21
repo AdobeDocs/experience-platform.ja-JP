@@ -3,17 +3,17 @@ keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Privacy ServiceAPIガイド
 description: Privacy ServiceAPIを使用すると、開発者は、法的なプライバシー規制に準拠して、Experience Cloudアプリケーション全体で個人データにアクセスしたり削除したりするための顧客リクエストを作成および管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
-
-# [!DNL Privacy Service] APIガイド
+# [!DNL Privacy Service] API ガイド
 
 Adobe Experience Platform[!DNL Privacy Service]は、RESTful APIとユーザーインターフェイスを提供し、Adobe Experience Cloudのアプリケーションを介してデータサブジェクト（お客様）の個人データを管理（アクセスおよび削除）できます。 [!DNL Privacy Service]また、 は、 アプリケーションに関連するジョブのステータスと結果にアクセスできる、中央監査とログのメカニズムも提供します。[!DNL Experience Cloud]
 
@@ -29,7 +29,7 @@ Adobe Experience Platform[!DNL Privacy Service]は、RESTful APIとユーザー�
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md)に関する節を参照してください。
 
 ## 必須ヘッダーの値の収集
 
