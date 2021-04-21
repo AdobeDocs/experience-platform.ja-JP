@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；サンプルクエリ；サンプルクエリ;adobe analytics;
 solution: Experience Platform
 title: Adobe Analyticsデータのサンプルクエリ
-topic: queries
+topic-legacy: queries
 description: 選択した Adobe Analytics レポートスイートのデータは XDM ExperienceEvents に変換され、データセットとして Adobe Experience Platform に取得されます。このドキュメントでは、Adobe Experience Platform クエリサービスがこのデータを利用する多くの使用例を説明し、付属のクエリ例が Adobe Analytics データセットと連携するようにします。
+exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 58%
 
 ---
-
 
 # Adobe Analytics データのクエリ例
 
@@ -215,8 +215,8 @@ Adobe Analyticsにある別のタイプのマーチャンダイジング変数�
 
 | eVar6（製品検索方法） | 売上高 | 注文件数 | 製品表示 | 買い物かごへの追加 |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| 内部検索：夏のシャツ | 19.99 | 1 | 1 | 1 |
-| 内部検索：冬帽子 | 12.99 | 3 | 1 | 1 |
+| 内部検索：夏のシャツ | 19.99 | 1 | 3 | 3 |
+| 内部検索：冬帽子 | 12.99 | 3 | 3 | 3 |
 
 変換構文の使用について詳しくは、[コンバージョン構文](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax)を使用したeVarの実装に関するAdobe Analyticsのドキュメントを参照してください。
 
