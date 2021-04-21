@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: セグメント化のチュートリアル
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform セグメント化サービスは、セグメントを作成し、リアルタイム顧客プロファイルデータからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、プラットフォーム上で一元的に設定および管理され、アドビのどのソリューションからでも簡単にアクセスできます。
+exl-id: e45de6b5-ff71-4908-ad79-898084763704
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 55%
 
 ---
-
 
 # セグメント化のチュートリアル
 
