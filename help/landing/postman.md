@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform;apiガイド；プラットフォームapiガイド；プラットフォームの紹介；開発者ガイド
 solution: Experience Platform
 title: Adobe Experience Platformの郵便配達人
-topic: api guide
+topic-legacy: api guide
 description: このドキュメントでは、Postman環境の設定、Postmanコレクションの読み込み、各Platformサービスで使用可能なコレクションのリストの手順を説明します。
+exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 translation-type: tm+mt
-source-git-commit: effc8fef666ffbf62c2e0874d048245f19c12111
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience Platformの郵便配達人
 
