@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ID;XDMグラフ；IDサービス；IDサービス
 solution: Experience Platform
 title: IDサービスの概要
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform・アイデンティティ・サービスは、デバイスやシステム間でIDをつなぐことで、顧客と行動の表示を向上させ、効果的な個人のデジタル体験をリアルタイムで提供します。
+exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 translation-type: tm+mt
-source-git-commit: bb218fc0cca6fe74693e99747963058bd0dc962a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1717'
 ht-degree: 67%
 
 ---
-
 
 # [!DNL Identity Service] の概要
 
