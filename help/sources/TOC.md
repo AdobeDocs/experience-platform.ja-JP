@@ -5,9 +5,9 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: データ取り込み、ソース
 translation-type: tm+mt
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '606'
 ht-degree: 16%
 
 ---
@@ -65,6 +65,7 @@ ht-degree: 16%
       - [GreenPlumコネクタ](connectors/databases/greenplum.md)
       - [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
       - [IBM DB2コネクタ](connectors/databases/ibm-db2.md)
+      - [MariaDBコネクタ](connectors/databases/mariadb.md)
       - [Microsoft SQL Serverコネクタ](connectors/databases/sql-server.md)
       - [MySQLコネクタ](connectors/databases/mysql.md)
       - [Oracleコネクタ](connectors/databases/oracle.md)
@@ -113,6 +114,7 @@ ht-degree: 16%
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+         - [MariaDB](tutorials/api/create/databases/mariadb.md)
          - [MySQL](tutorials/api/create/databases/mysql.md)
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [フェニックス](tutorials/api/create/databases/phoenix.md)
@@ -198,6 +200,7 @@ ht-degree: 16%
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+         - [MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [MySQL](tutorials/ui/create/databases/mysql.md)
          - [Oracle](tutorials/ui/create/databases/oracle.md)
