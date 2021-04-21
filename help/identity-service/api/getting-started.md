@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；IDサービスAPI;IDサービス開発者ガイド；地域
 solution: Experience Platform
 title: IDサービスAPIガイド
-topic: API guide
+topic-legacy: API guide
 description: Identity Service APIを使用すると、開発者は、Adobe Experience PlatformのIDグラフを使用して、デバイス間、チャネル間、およびほぼリアルタイムでの顧客の識別を管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
+exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
 translation-type: tm+mt
-source-git-commit: 69c3106070e31377ea8571cd14dc33aa9b6f7037
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 65%
+source-wordcount: '771'
+ht-degree: 66%
 
 ---
 
-
-# [!DNL Identity Service] APIガイド
+# [!DNL Identity Service] API ガイド
 
 Adobe Experience Platform[!DNL Identity Service]は、Adobe Experience Platform内のIDグラフと呼ばれる、デバイス間、チャネル間、お客様のリアルタイムな識別を管理します。
 
@@ -29,7 +29,7 @@ Adobe Experience Platform[!DNL Identity Service]は、Adobe Experience Platform�
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
