@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 73ecf6e6f9796088e2d14f9dc3d9667104b22a8e
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 36%
+source-wordcount: '728'
+ht-degree: 32%
 
 ---
 
@@ -21,6 +21,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Intelligent Services]](#intelligent-services)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -61,6 +62,21 @@ Attribution AI は、コンバージョンイベントにつながるタッチ�
 | Adobe Analyticsデータのサポート | Analyticsソースコネクターを介したAdobe Analyticsデータセットをサポートする機能が更新されました。コンシューマーエクスペリエンスイベント(CEE)スキーマに準拠するために、データをETLする必要はありません。 |
 
 サポートされるデータセットの詳細については、[[!DNL Intelligent Services] データ準備ドキュメント](../../intelligent-services/data-preparation.md)を参照してください。
+
+## セグメント化サービス {#segmentation}
+
+Adobe Experience Platformセグメントサービスは、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントは[!DNL Platform]上で一元的に構成および管理され、どのAdobeアプリケーションでも容易にアクセスできます。
+
+[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| その他の集計関数 | セグメントビルダーにカウント機能が追加されました。 カウント関数を使用すると、指定したイベントが実行された回数をカウントできます。 カウント関数について詳しくは、[セグメントビルダーガイド](../../segmentation/ui/segment-builder.md#count-functions)のカウント関数の節を参照してください |
+
+[!DNL Segmentation Service]について詳しくは、[セグメントの概要](../../segmentation/home.md)を参照してください。
+
 
 ## [!DNL Sources] {#sources}
 
