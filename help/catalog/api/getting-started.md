@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログサービス；カタログ；カタログサービス；カタログサービス；カタログ
 solution: Experience Platform
 title: カタログサービスAPIガイド
-topic: developer guide
+topic-legacy: developer guide
 description: Catalog Service APIを使用すると、開発者はAdobe Experience Platformでデータセットメタデータを管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
+exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 45%
+source-wordcount: '600'
+ht-degree: 46%
 
 ---
 
-
-# [!DNL Catalog Service] APIガイド
+# [!DNL Catalog Service] API ガイド
 
 [!DNL Catalog Service] は、Adobe Experience Platform内のデータの位置と系統に関する記録システムです。[!DNL Catalog] は、データ自体にアクセスすることなく、データに関する情報を検索できるメタデータストア（「カタログ」） [!DNL Experience Platform]として機能します。詳しくは、[[!DNL Catalog] 概要](../home.md)を参照してください。
 
@@ -31,7 +31,7 @@ ht-degree: 45%
 
 ## API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ## 必須ヘッダーの値の収集
 
@@ -63,7 +63,7 @@ ht-degree: 45%
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Catalog] APIを呼び出すために必要な前提条件に関する知識を説明しました。 次に、この開発者ガイドに記載されているサンプル呼び出しに進み、その手順に従うことができます。
+このドキュメントでは、[!DNL Catalog] APIを呼び出すために必要な前提条件に関する知識を説明しました。 これで、この開発者ガイドに記載されているサンプル呼び出しに進んで、その手順に従うことができます。
 
 このガイドの例のほとんどは`/dataSets`エンドポイントを使用していますが、この原則は[!DNL Catalog]内の他のエンドポイント（`/batches`や`/accounts`など）に適用できます。 各エンドポイントで使用できるすべての呼び出しと操作の完全なリストについては、『[カタログサービス API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)』を参照してください。
 
