@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Oracleオブジェクトストレージ;oracleオブジェクトストレージ
+keywords: Experience Platform；ホーム；人気の高いトピック；Oracleオブジェクトストレージ;oracleオブジェクトストレージ
 solution: Experience Platform
 title: Flow Service APIを使用したOracleオブジェクトストレージソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをOracleオブジェクトストレージに接続する方法を説明します。
+exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
 translation-type: tm+mt
-source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '623'
 ht-degree: 28%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Oracle Object Storage]ソース接続を作成する
 
@@ -112,7 +112,7 @@ curl -X POST \
 | `auth.params.folderPath` | ユーザーが制限付きアクセス権を持つ場合に必要な許可されたフォルダーパスです。 |
 | `connectionSpec.id` | [!DNL Oracle Object Storage]接続仕様ID:`c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
-**応答** 
+**応答**
 
 正常に完了した場合は、新たに作成された接続の接続IDが返されます。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
 
