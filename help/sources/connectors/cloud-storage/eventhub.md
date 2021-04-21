@@ -6,18 +6,15 @@ topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してAzureイベントハブをAdobe Experience Platformに接続する方法を説明します。
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6dac267be93241bffb4eb5092a6e8da5093c63a6
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '226'
 ht-degree: 1%
 
 ---
 
-# （ベータ版）Azureイベントハブコネクタ
 
->[!NOTE]
->
->Azureイベントハブコネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+# [!DNL Azure Event Hubs] コネクタ
 
 Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]などのクラウドプロバイダーに対してネイティブの接続を提供します。 これらのシステムのデータを[!DNL Platform]に取り込むことができます。
 
