@@ -2,15 +2,15 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；フローサービス；広告；google adwords;advertising
 solution: Experience Platform
 title: ソースコネクタとAPIを使用した広告データの収集
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、サードパーティの広告アプリケーションからデータを取得し、ソースコネクタとFlow Service APIを使用してプラットフォームに取り込む手順について説明します。
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 20%
+source-wordcount: '1551'
+ht-degree: 19%
 
 ---
 
