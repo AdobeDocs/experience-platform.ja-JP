@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Google Cloudストレージ;Googleクラウドストレージ
 solution: Experience Platform
 title: Google Cloudストレージソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してGoogle CloudストレージをAdobe Experience Platformに接続する方法を説明します。
+exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '541'
 ht-degree: 5%
 
 ---
-
 
 # Google Cloudストレージコネクタ
 
