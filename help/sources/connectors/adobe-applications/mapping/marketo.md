@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Marketo Engage；マーケティング担当；Marketo；マッピング
 solution: Experience Platform
 title: Marketo Engageソースのフィールドのマッピング
-topic: 概要
+topic-legacy: overview
 description: 以下の表に、Marketoデータセット内のフィールドと、対応するXDMフィールドとのマッピングを示します。
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '425'
 ht-degree: 3%
 
 ---
