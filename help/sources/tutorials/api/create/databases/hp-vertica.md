@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Vertica;vertica
 solution: Experience Platform
 title: Flow Service APIを使用したHP Verticaソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してHP VerticaをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 27%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用してHP [!DNL Vertica]ソース接続を作成する
 
@@ -46,7 +46,7 @@ ht-degree: 27%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -107,7 +107,7 @@ curl -X POST \
 | `auth.params.connectionString` | HP [!DNL Vertica]アカウントに関連付けられている接続文字列。 HP [!DNL Vertica]の接続文字列パターンは次のとおりです。`Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | HP [!DNL Vertica]接続仕様ID:`a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
