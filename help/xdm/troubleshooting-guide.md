@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気の高いトピック；XDM;XD
 solution: Experience Platform
 title: XDMシステムトラブルシューティングガイド
 description: このドキュメントでは、Adobe Experience PlatformのExperience Data Model(XDM)とXDM Systemに関するよくある質問と、一般的なエラーのトラブルシューティングガイドについて回答します。
-topic: troubleshooting
+topic-legacy: troubleshooting
+exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1879'
 ht-degree: 60%
 
 ---
-
 
 # XDMシステムトラブルシューティングガイド
 
