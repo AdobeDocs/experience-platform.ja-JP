@@ -2,16 +2,16 @@
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；ユーザインターフェイス；UI；カスタマイズ；プロファイルダッシュボード;ダッシュボード
 title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな目的地に関する重要な情報を表示できるダッシュボードを提供します。
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 6a34a796-24a1-450a-af39-60113928873e
 translation-type: tm+mt
-source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 1%
 
 ---
-
 
 # （ベータ版）[!UICONTROL 宛先]ダッシュボード
 
