@@ -2,16 +2,16 @@
 keywords: Experience Platform；はじめに；コンテンツai；コマースai；コンテンツとコマースai
 solution: Experience Platform, Intelligent Services
 title: コンテンツとコマースの使用の手引きAI
-topic: Getting started 
-description: コンテンツ&コマースAIはAdobe I/OAPIを活用。 Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず認証のチュートリアルを完了する必要があります。
+topic-legacy: Getting started
+description: コンテンツおよびコマースAIはAdobe I/OAPIを利用します。 Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず認証のチュートリアルを完了する必要があります。
+exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 13%
 
 ---
-
 
 # コンテンツとコマースのAI使用の手引き
 
@@ -19,13 +19,13 @@ ht-degree: 13%
 >
 >コンテンツとコマースAIはベータ版です。 このドキュメントは変更されることがあります。
 
-[!DNL Content and Commerce AI] Adobe I/OAPIを利用。Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。
+[!DNL Content and Commerce AI] Adobe I/OAPIを使用します。Adobe I/OAPIとI/Oコンソール統合を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。
 
 ただし、**追加 API**&#x200B;の手順に進むと、次のスクリーンショットに示すように、APIはAdobe Experience PlatformではなくExperience Cloudの下に配置されます。
 
 ![コンテンツおよびコマースAIの追加](./images/add-api.png)
 
-次に示すように、認証チュートリアルで、すべてのAdobe I/OAPI呼び出しに必要な各ヘッダーの値を指定します。
+次に示すように、Adobe I/OAPIのすべての呼び出しに必要な各ヘッダーの値を認証チュートリアルで説明します。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -63,7 +63,7 @@ Adobeデベロッパーコンソール内でプロジェクトとAPIを設定し
 
 ![example](./images/select-environment.png)
 
-Postmanを使用したAdobe I/OAPIの操作について詳しくは、[Adobe I/OでのJWT認証にPostmanを使用した場合のMediumの投稿](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)を参照してください。
+Postmanを使用したAdobe I/OAPIの操作について詳しくは、[Postmanを使用したAdobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)のJWT認証に関する記事（中）を参照してください。
 
 ## API 呼び出し例の読み取り
 
