@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；人；データ型；データ型；
 solution: Experience Platform
 title: 個人データタイプ
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Person Experience Data Model(XDM)データタイプの概要を説明します。
+exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 translation-type: tm+mt
-source-git-commit: 194b604d4b23f2acfaa4243155b04a6793fb0727
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 16%
 
 ---
-
 
 #  Persondata型
 
