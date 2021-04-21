@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ECID;ecid
 solution: Experience Platform
 title: プライバシー要求のIDデータ
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、データ操作を設定し、アドビのテクノロジーを活用して、顧客のプライバシー要求に適した ID 情報を効果的に取得する方法について、一般的なガイダンスを提供しています。
+exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 44%
 
 ---
-
 
 # プライバシーリクエストの ID データ
 
