@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Google Bigクエリ;Googleビッグクエリ;GBQ;gbq
 solution: Experience Platform
 title: UIでのGoogle Bigクエリソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してGoogle Bigクエリソース接続を作成する方法を説明します。
+exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 8%
 
 ---
-
 
 # UIに[!DNL Google Big Query]ソース接続を作成する
 
