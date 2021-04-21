@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab；レシピ；ノートブック；Data Science Workspace；人気の高いトピック；レシピの作成
 solution: Experience Platform
 title: ジャプターノートブックを使用したレシピの作成
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、2 つの主なセクションについて説明します。まず、JupyterLab ノートブック内のテンプレートを使用して機械学習モデルを作成します。次に、JupyterLab 内でノートブックをレシピワークフローに導き、Data Science Workspace 内でレシピを作成します。
+exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2366'
+source-wordcount: '2364'
 ht-degree: 79%
 
 ---
-
 
 # Jupyter Notebooksを使用してレシピを作成する
 
@@ -65,7 +65,7 @@ ht-degree: 79%
 - [評価ファイル](#evaluator-file)
 - [データセーバーファイル](#data-saver-file)
 
-### 要件ファイル {#requirements-file}
+### 要件ファイル  {#requirements-file}
 
 要件ファイルは、レシピで使用する追加のライブラリを宣言するために使用されます。依存関係がある場合は、バージョン番号を指定できます。追加のライブラリを探すには、[anaconda.org](https://anaconda.org)にアクセスしてください。 要件ファイルの形式設定については、[Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually)を参照してください。 既に使用されている主なライブラリのリストは次のとおりです。
 
@@ -500,5 +500,3 @@ def save(configProperties, prediction):
 次のビデオは、モデルの構築とデプロイに関する理解を深めるためのものです。
 
 >[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
-
-
