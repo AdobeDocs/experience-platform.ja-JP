@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ;スキーマ設計；ミックスイン；人；人；人；プロファイルの詳細；人；人；
 solution: Experience Platform
 title: 人口統計詳細ミックスイン
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、人口統計の詳細ミックスインの概要を説明します。
+exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 22%
 
 ---
-
 
 # [!UICONTROL 人口統計] 詳細Mixin
 
