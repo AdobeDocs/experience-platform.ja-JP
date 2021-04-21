@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；CJA;ジャーニー分析；顧客ジャーニー分析；キャンペーンの調整；オーケストレーション；顧客ジャーニー;ジャーニー;ジャーニーの調整；機能；地域
 solution: Experience Platform
 title: Adobe Experience Platform 概要
-topic: getting started
+topic-legacy: getting started
 description: Adobe Experience Platformを使用すると、組織は顧客データを一元化および標準化してから、データサイエンスと機械学習を適用し、パーソナライズされた豊富なエクスペリエンスの設計と配信を大幅に改善できます。
+exl-id: edcce353-338a-440e-99eb-a64e2abca579
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 35%
 
 ---
-
 
 # Adobe Experience Platform 概要
 
@@ -23,7 +23,7 @@ Adobe Experience Platform は、顧客体験を促進する完全なソリュー
 
 [!DNL Experience Platform]はRESTful APIを基に構築され、開発者にシステムの全機能を公開し、使い慣れたツールを使用したエンタープライズソリューションの簡単な統合をサポートします。 [!DNL Experience Platform] また、必要に応じて独自の製品とテクノロジーを構築および統合するパートナーもサポートします。このパワーと柔軟性により、[!DNL Experience Platform]は市場で独自の存在となります。 パートナー、顧客、開発者のコミュニティに、「エクスペリエンスビジネス」を推進する革新を構築するための基盤を提供します。あらゆる角度からの顧客の表示と個々の好みから引き出され、継続的に改善され完全にパーソナライズされたエクスペリエンスを提供することで、顧客の期待を上回る成果を得ることができます。
 
-## [!DNL Experience Platform]ドキュメント
+## [!DNL Experience Platform] ドキュメント
 
 [!DNL Experience Platform] ドキュメントは、様々な機能やサービスのために複数の形式で提供されています。使用可能なドキュメントの種類について詳しくは、[プラットフォームドキュメントの概要](documentation/overview.md)を参照してください。
 
