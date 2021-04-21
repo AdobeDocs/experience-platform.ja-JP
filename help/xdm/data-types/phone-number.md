@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ;phoneNumber;xdm:phoneNumber；データ型；データ型；
 solution: Experience Platform
 title: 電話番号データタイプ
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、電話番号XDMデータタイプの概要を説明します。
+exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 9%
 
 ---
-
 
 # [!UICONTROL 電話番号] のデータ型
 
