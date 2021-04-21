@@ -2,16 +2,16 @@
 keywords: Experience Platform；はじめに；コンテンツai；コマースai；コンテンツとコマースai；キーワードの抽出；キーワードの抽出
 solution: Experience Platform, Intelligent Services
 title: コンテンツおよびコマースAI APIのキーワード抽出
-topic: Developer guide
+topic-legacy: Developer guide
 description: キーワード抽出サービスは、テキストドキュメントを指定すると、ドキュメントの主題を最も記述したキーワードまたはキーパースを自動的に抽出します。 キーワードを抽出するために、名前付きエンティティ認識(NER)と監視されていないキーワード抽出アルゴリズムの組み合わせが使用されます。
+exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 4%
 
 ---
-
 
 # キーワード抽出
 
@@ -126,7 +126,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `content-id` | 応答で返されるデータ要素の一意のID。 この値が渡されない場合は、自動生成IDが割り当てられます。 | × |
 | `content` | キーワード抽出サービスで使用されるコンテンツ。 コンテンツは生のテキスト（「inline」コンテンツタイプ）にすることができます。 <br> コンテンツがS3上のファイル(「s3-bucket」 content-type)の場合、署名済みURLを渡します。コンテンツがリクエスト本文の一部である場合、データ要素のリストには1つのオブジェクトしか含めないでください。 複数のオブジェクトが渡された場合は、最初のオブジェクトのみが処理されます。 | ○ |
 
-**応答** 
+**応答**
 
 正常に応答すると、`response`配列に抽出されたキーワードが含まれるJSONオブジェクトが返されます。
 
@@ -288,7 +288,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `content-id` | 応答で返されるデータ要素の一意のID。 この値が渡されない場合は、自動生成IDが割り当てられます。 | × |
 | `content` | これは`file`に設定する必要があります。 | ○ |
 
-**応答** 
+**応答**
 
 正常に応答すると、`response`配列に抽出されたキーワードが含まれるJSONオブジェクトが返されます。
 
