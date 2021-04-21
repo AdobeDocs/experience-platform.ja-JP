@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックス開発者ガイド
 solution: Experience Platform
 title: Sandbox APIガイド
-topic: developer guide
+topic-legacy: developer guide
 description: Sandbox APIを使用すると、開発者はAdobe Experience Platformのサンドボックスをプログラムで管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
+exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 88%
 
 ---
-
 
 # Sandbox APIガイド
 
