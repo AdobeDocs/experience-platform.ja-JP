@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；Aqua Data Studio;Aqua data studio;クエリサービスに接続；
 solution: Experience Platform
 title: Aqua Data Studioをクエリサービスに接続
-topic: connect
+topic-legacy: connect
 description: このドキュメントでは、Aqua Data Studio と Adobe Experience Platform クエリサービスを接続する手順について説明します。
+exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 30%
 
 ---
-
 
 # [!DNL Aqua Data Studio]をクエリサービスに接続
 
