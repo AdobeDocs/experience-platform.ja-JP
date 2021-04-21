@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
 title: リアルタイム顧客プロファイルAPI使用の手引き
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: プロファイルAPIの概要ガイドでは、プロファイルデータに対して基本的なCRUD操作を実行する際にリアルタイム顧客プロファイルAPIエンドポイントを使用する場合に知っておく必要がある、主要な概念と基本的な機能について説明します。
+exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 25%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] API {#getting-started}の使い始めに
 
@@ -29,7 +29,7 @@ ht-degree: 25%
 
 ## API 呼び出し例の読み取り
 
-[!DNL Real-time Customer Profile] APIドキュメントには、リクエストを正しくフォーマットする方法を示すAPI呼び出しの例が記載されています。 この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+[!DNL Real-time Customer Profile] APIドキュメントには、リクエストを正しくフォーマットする方法を示すAPI呼び出しの例が記載されています。 この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ## 必須ヘッダー
 
