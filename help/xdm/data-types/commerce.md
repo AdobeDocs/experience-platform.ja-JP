@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ；コマース；データ型；データ型；データ型；
 solution: Experience Platform
 title: コマースデータタイプ
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Commerce Experience Data Model(XDM)データタイプの概要を説明します。
+exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 translation-type: tm+mt
-source-git-commit: 8bbb062df47b6e94630626d0a89a179d759d922d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Commercedata] 型
 
