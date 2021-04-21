@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ;Webインタラクション；データ型；データ型；
 solution: Experience Platform
 title: Webインタラクションデータ型
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Webインタラクションエクスペリエンスデータモデル(XDM)のデータタイプの概要を説明します。
+exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Web] インタラクションデータ型
 
