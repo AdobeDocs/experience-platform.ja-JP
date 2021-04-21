@@ -7,18 +7,14 @@ type: Tutorial
 description: Adobe Experience PlatformUIを使用してAmazonKinesisのソース接続を作成する方法を説明します。
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '466'
 ht-degree: 9%
 
 ---
 
 # UIに[!DNL Amazon Kinesis]ソース接続を作成する
-
->[!NOTE]
->
->[!DNL Amazon Kinesis]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用して[!DNL Amazon Kinesis]（以下[!DNL "Kinesis"]と呼ばれる）ソースコネクタを認証する手順を説明します。
 
