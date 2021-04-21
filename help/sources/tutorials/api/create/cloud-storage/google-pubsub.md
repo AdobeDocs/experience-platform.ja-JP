@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Google PubSub;google pubsub
 solution: Experience Platform
 title: Flow Service APIを使用したGoogle PubSubソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをGoogle PubSubアカウントに接続する方法を説明します。
+exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 translation-type: tm+mt
-source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '611'
 ht-degree: 32%
 
 ---
-
 
 # Flow Service APIを使用した[!DNL Google PubSub]ソース接続の作成
 
@@ -118,7 +118,7 @@ curl -X POST \
 | `auth.params.credentials` | [!DNL PubSub]の認証に必要な秘密鍵またはキーです。 |
 | `connectionSpec.id` | [!DNL PubSub]接続仕様ID:`70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された[!DNL PubSub]接続の接続IDが返されます。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
 
