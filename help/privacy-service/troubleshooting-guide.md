@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Privacy Serviceトラブルシューティングガイド
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: このドキュメントでは、Privacy Serviceに関するよくある質問と、APIでよく発生するエラーに関する情報に回答します。
+exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 42%
 
 ---
-
 
 # [!DNL Privacy Service] トラブルシューティングガイド
 
