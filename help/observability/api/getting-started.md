@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；日付範囲
 solution: Experience Platform
 title: 観察性インサイトAPI使用の手引き
-topic: developer guide
+topic-legacy: developer guide
 description: Observibility Insights APIを使用すると、Adobe Experience Platformの様々な機能の指標データを取得できます。 このドキュメントでは、Observibility Insights APIを呼び出す前に知っておく必要があるコア概念の紹介を行います。
+exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 24%
 
 ---
-
 
 # [!DNL Observability Insights] API使用の手引き
 
