@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Oracle;oracle
+keywords: Experience Platform；ホーム；人気の高いトピック；Oracle;oracle
 solution: Experience Platform
 title: Oracleソースコネクタの概要
-topic: overview
-description: APIまたはユーザーインターフェイスを使用してOracleをAdobe Experience Platformに接続する方法を説明します。
+topic-legacy: overview
+description: APIまたはユーザーインターフェイスを使用してOracleをAdobe Experience Platformに接続する方法について説明します。
+exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # （ベータ版） [!DNL Oracle]コネクタ
 
@@ -31,7 +31,7 @@ IPアドレスのリストは、ソースコネクタを使用する前に許可
 
 ## APIを使用して[!DNL Oracle]を[!DNL Platform]に接続
 
-- [Flow Service APIを使用したOracleソース接続の作成](../../tutorials/api/create/databases/oracle.md)
+- [Flow Service APIを使用してOracleソース接続を作成する](../../tutorials/api/create/databases/oracle.md)
 - [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
 - [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
 
