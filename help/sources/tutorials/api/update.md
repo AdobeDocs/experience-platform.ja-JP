@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；アカウントの更新
 solution: Experience Platform
 title: Flow Service APIを使用したアカウントの更新
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、Flow Service APIを使用してアカウントの詳細と秘密鍵証明書を更新する手順について説明します。
+exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 translation-type: tm+mt
-source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '687'
 ht-degree: 31%
 
 ---
-
 
 # Flow Service APIを使用してアカウントを更新する
 
@@ -78,7 +78,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常に応答すると、資格情報、一意の識別子(`id`)、バージョンを含む、接続の現在の詳細が返されます。 接続を更新するには、バージョンの値が必要です。
 
@@ -175,7 +175,7 @@ curl -X PATCH \
 | `path` | 更新するパラメーターのパス。 |
 | `value` | パラメーターの更新に使用する新しい値。 |
 
-**応答** 
+**応答**
 
 応答が成功すると、接続IDと更新されたeタグが返されます。 接続IDを指定しながら[!DNL Flow Service] APIにGETリクエストを行うことで、更新を検証できます。
 
