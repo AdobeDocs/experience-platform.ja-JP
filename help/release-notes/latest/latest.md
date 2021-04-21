@@ -1,25 +1,27 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: 2021年3月31日Experience Platformリリースノート
+description: 2021年4月22日Experience Platformリリースノート
 doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
+source-git-commit: 0c9b60fe0777286819841c520a41007634622578
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 36%
+source-wordcount: '729'
+ht-degree: 35%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2021年3月31日**
+**リリース日：2021 年 4 月 21 日**
 
 Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -27,16 +29,44 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 [!DNL Data Prep] データエンジニアがエクスペリエンスデータモデル(XDM)との間でデータのマッピング、変換、検証を行えるようにします。
 
+**新機能**
+
 | 機能 | 説明 |
 | ------- | ----------- |
-| `add_to_array` 関数 | パラメータとして配列をサポートする機能を更新。 |
-| `to_array` 関数 | オブジェクトをパラメーターとしてサポートする機能を更新しました。 |
+| 既存のデータフローのマッピングの編集のサポート | 既存のデータフローのマッピング・セットを更新できるようになりました。 1回の取り込みにスケジュールされたデータフローのマッピングセットは更新できません。 この機能は、HTTP API、Adobe Analytics、Adobe Audience Manager、および[!DNL Marketo Engage]ではサポートされていません。 詳しくは、UI](../../sources/tutorials/ui/update-dataflows.md)の[ソースデータフローの更新に関するチュートリアルを参照してください。 |
+| ストリーミング取り込みのサポート | ストリーミングソース接続の作成時に、データ準備機能を使用できるようになりました。 詳しくは、UI](../../sources/tutorials/ui/create/streaming/http.md)での[ストリーミングソース接続の作成に関するチュートリアルを参照してください。 |
 
 詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
 
+## [!DNL Intelligent Services] {#intelligent-services}
+
+インテリジェントサービスは、マーケティングアナリストや実践者に対して、顧客体験の使用事例で人工知能と機械学習の機能を活用する機能を提供します。これにより、マーケティングアナリストは、データ科学の専門知識を必要とせずに、ビジネスレベルの設定を使用して、会社のニーズに固有の予測を設定できます。
+
+### 顧客 AI
+
+リアルタイム顧客データプラットフォームで利用できる顧客AIは、個々のプロファイルの傾向スコア（チャーンやコンバージョンなど）を規模別に生成する場合に使用します。 ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイは必要ありません。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| Adobe Analyticsデータのサポート | Analyticsソースコネクターを介したAdobe Analyticsデータセットをサポートする機能が更新されました。コンシューマーエクスペリエンスイベント(CEE)スキーマに準拠するために、データをETLする必要はありません。 |
+| Adobe Audience Managerデータのサポート | Audience Managerソースコネクタを介したAdobe Audience Managerデータセットをサポートする機能が更新されました。コンシューマーエクスペリエンスイベント(CEE)スキーマに準拠するために、データをETLで送信する必要はありません。 |
+| モデルのパフォーマンスの概要 | 顧客AIのサービスインスタンスインサイトページ内に、[モデルのパフォーマンスの概要タブ](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics)が表示されるようになりました。 [モデルのパフォーマンス]タブには、実際のコンバージョン率と可変コンバージョン率がすべて表示されます。 これにより、各傾向グループで発生していることを判断し、把握できます。 |
+
+サポートされるデータセットの詳細については、[[!DNL Intelligent Services] データ準備ドキュメント](../../intelligent-services/data-preparation.md)を参照してください。
+
+### Attribution AI
+
+Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、カスタマージャーニーにわたる個々のマーケティングタッチポイントのマーケティング効果をマーケターが定量化するのに役立ちます。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| Adobe Analyticsデータのサポート | Analyticsソースコネクターを介したAdobe Analyticsデータセットをサポートする機能が更新されました。コンシューマーエクスペリエンスイベント(CEE)スキーマに準拠するために、データをETLする必要はありません。 |
+
+サポートされるデータセットの詳細については、[[!DNL Intelligent Services] データ準備ドキュメント](../../intelligent-services/data-preparation.md)を参照してください。
+
 ## セグメント化サービス {#segmentation}
 
-Adobe Experience Platformセグメントサービスは、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントは[!DNL Platform]上で一元的に構成および管理され、どのAdobeアプリケーションでも容易にアクセスできます。
+Adobe Experience Platformセグメントサービスは、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントは、Platform 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
 
 [!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
 
@@ -44,8 +74,7 @@ Adobe Experience Platformセグメントサービスは、セグメントを作�
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| （ベータ版）エッジセグメント | エッジセグメント化では、セグメントをリアルタイムで評価するので、同じページと次のページのパーソナライゼーションで使用できます。 エッジセグメントについて詳しくは、[セグメントUIの概要](../../segmentation/ui/overview.md)を参照してください。 |
-| （ベータ版）増分セグメント | バッチセグメントで評価される既存のセグメント定義の有効期限が1時間まで増加します。 |
+| その他の集計関数 | セグメントビルダーにカウント機能が追加されました。 カウント関数を使用すると、指定したイベントが実行された回数をカウントできます。 カウント関数について詳しくは、[セグメントビルダーガイド](../../segmentation/ui/segment-builder.md#count-functions)のカウント関数の節を参照してください |
 
 [!DNL Segmentation Service]について詳しくは、[セグメントの概要](../../segmentation/home.md)を参照してください。
 
@@ -57,8 +86,6 @@ Experience Platform には、様々なデータプロバイダーへのソース
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| ベータ版ソースをGAに移行 | 以下の資料はベータ版からGA版に進められている。 <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
-| 圧縮ファイル取り込みのためのAPIのサポート | クラウドストレージソースを使用して、圧縮されたJSONまたは区切り形式のファイルをプレビューおよび取り込めるようになりました。 詳しくは、[API](../../sources/tutorials/api/collect/cloud-storage.md)を使用したクラウドストレージデータの収集に関するチュートリアルを参照してください。 |
-| 再帰的なファイルのアップロードに対するUIのサポート | クラウドストレージソースを使用する場合に、フォルダー全体を再帰的に取り込めるようになりました。 フォルダー全体を取り込む場合は、そのコンテンツが同じスキーマーを共有していることを確認する必要があります。 詳しくは、UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)で、[クラウドストレージコネクタ用のデータフローの設定に関するチュートリアルを参照してください。 |
+| [!DNL Marketo Engage] (ベータ) | UIを使って[!DNL Marketo Engage]ソース接続を作成し、B2Bデータをプラットフォームに送り、プラットフォームに接続されたアプリケーションを使ってこのデータを最新の状態に保つことができるようになりました。 詳しくは、[[!DNL Marketo Engage] ソースコネクタのドキュメント](../../sources/connectors/adobe-applications/marketo/marketo.md)を参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
