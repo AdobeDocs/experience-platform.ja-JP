@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: 業界データモデルの概要
-topic: overview
+topic-legacy: overview
 description: 標準的なExperience Data Model(XDM)コンポーネントを使用して構築できる、様々な業種向けの標準化されたデータモデルについて説明します。
+exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 translation-type: tm+mt
-source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
-
 
 # 業界データモデルの概要
 
