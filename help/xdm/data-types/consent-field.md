@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: 汎用同意フィールドデータ型
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、汎用同意フィールドのXDMデータ型の概要を説明します。
+exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 translation-type: tm+mt
-source-git-commit: ebcd8900687b6e91d3f06690a9db0e118bbc3b58
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '473'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL 汎用同意] フィールドデータ型
 
