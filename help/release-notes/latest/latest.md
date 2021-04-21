@@ -6,10 +6,10 @@ last-update: April 21, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 9b63a47a8da07830313c0a8e690c7247dc3fbe6b
+source-git-commit: f0350be580394516016373b1754a49951b58e846
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '883'
+ht-degree: 33%
 
 ---
 
@@ -96,5 +96,6 @@ Experience Platform には、様々なデータプロバイダーへのソース
 | 機能 | 説明 |
 | ------- | ----------- |
 | [!DNL Marketo Engage] (ベータ) | UIを使って[!DNL Marketo Engage]ソース接続を作成し、B2Bデータをプラットフォームに送り、プラットフォームに接続されたアプリケーションを使ってこのデータを最新の状態に保つことができるようになりました。 詳しくは、[[!DNL Marketo Engage] ソースコネクタのドキュメント](../../sources/connectors/adobe-applications/marketo/marketo.md)を参照してください。 |
+| ベータ版ソースをGAに移行 | 以下の資料はベータ版からGA版に進められている。 <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
