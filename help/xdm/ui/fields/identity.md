@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気のあるトピック；API;AP
 solution: Experience Platform
 title: UIでのIDフィールドの定義
 description: Experience PlatformユーザーインターフェイスでIDフィールドを定義する方法を説明します。
-topic: user guide
+topic-legacy: user guide
+exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 5%
 
 ---
-
 
 # UIでのIDフィールドの定義
 
