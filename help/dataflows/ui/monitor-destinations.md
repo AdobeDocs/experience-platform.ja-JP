@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気のあるトピック；モニ
 description: 目的地では、Adobe Experience Platformから数え切れないほどの外部パートナーにデータをアクティブにできます。 このチュートリアルでは、Experience Platform・ユーザー・インタフェースを使用して、宛先のデータ・フローを監視する方法について説明します。
 solution: Experience Platform
 title: UIの宛先のデータフローの監視
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 4%
 
 ---
-
 
 # UIの宛先のデータフローの監視
 
