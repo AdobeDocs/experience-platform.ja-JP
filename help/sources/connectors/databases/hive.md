@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Apache Hive;Hive;hive;Azure HDInsights;azure hdinsights;
 solution: Experience Platform
 title: Azure HDInsightsのApache Hiveソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用して、Azure HDInsightsのApache HiveをAdobe Experience Platformに接続する方法を説明します。
+exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 10%
 
 ---
-
 
 # （ベータ版） [!DNL Azure HDInsights]コネクタ上[!DNL Apache Hive]
 
