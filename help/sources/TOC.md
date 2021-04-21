@@ -5,10 +5,10 @@ breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: データ取り込み、ソース
 translation-type: tm+mt
-source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
+source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 16%
+source-wordcount: '610'
+ht-degree: 15%
 
 ---
 
@@ -79,6 +79,8 @@ ht-degree: 16%
       - [PayPalコネクタ](connectors/payments/paypal.md)
    - プロトコル{#protocols}
       - [汎用ODataコネクタ](connectors/protocols/odata.md)
+   - ストリーミング{#streaming}
+      - [HTTP APIコネクタ](connectors/streaming/http.md)
 - API チュートリアル {#api-tutorials}
    - ソース接続の作成{#create}
       - 広告 {#advertising}
