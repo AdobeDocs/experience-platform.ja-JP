@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；トラブルシューティングガイド；faq；トラブルシューティング；
 solution: Experience Platform
 title: クエリサービストラブルシューティングガイド
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: このドキュメントには、発生する一般的なエラーコードと考えられる原因に関する情報が含まれています。
+exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 82%
 
 ---
-
 
 # [!DNL Query Service] トラブルシューティングガイド
 
