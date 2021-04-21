@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ポリシーユーザーガイド
 solution: Experience Platform
 title: UIでのデータ使用ポリシーの管理
-topic: policies
+topic-legacy: policies
 description: Adobe Experience Platform データガバナンスは、データ使用ポリシーを作成および管理できるユーザーインターフェイスを提供します。このドキュメントでは、Experience Platformユーザーインターフェイスのポリシーワークスペースで実行できるアクションの概要を説明します。
+exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 31%
 
 ---
-
 
 # UI でのデータ使用ポリシーの管理
 
