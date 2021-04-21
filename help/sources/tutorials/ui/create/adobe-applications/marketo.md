@@ -2,14 +2,14 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Marketoソースコネクタ；Marketoコネクタ；Marketoソース；Marketo
 solution: Experience Platform
 title: UIでMarketo Engageソースコネクタを作成する
-topic: 概要
+topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、B2BデータをAdobe Experience Platformに取り込むためのMarketo EngageソースコネクタをUIで作成する手順を説明します。
 translation-type: tm+mt
-source-git-commit: 5d4d88f88ab184c679a4cf425283a71983c929f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1384'
-ht-degree: 5%
+source-wordcount: '1383'
+ht-degree: 4%
 
 ---
 
