@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；広告システム；広告システム
 solution: Experience Platform
 title: Flow Service APIを使用した広告システムの調査
-topic: overview
+topic-legacy: overview
 description: フローサービスは、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元管理するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。 このチュートリアルでは、Flow Service APIを使用して広告システムを調査します。
+exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 23%
 
 ---
-
 
 # [!DNL Flow Service] APIを使って広告システムを探る
 
@@ -34,7 +34,7 @@ ht-degree: 23%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
