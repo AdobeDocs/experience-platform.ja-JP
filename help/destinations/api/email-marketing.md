@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: 電子メールマーケティングの宛先に接続し、Flow Service APIを使用してデータをアクティブ化する
 description: このドキュメントでは、Adobe Experience PlatformAPIを使用した電子メールマーケティングの宛先の作成について説明します
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1705'
 ht-degree: 71%
 
 ---
-
 
 # 電子メールマーケティングの宛先に接続し、Flow Service APIを使用してデータをアクティブ化する
 
@@ -43,7 +43,7 @@ Platformのユーザインターフェイスを使用して宛先を接続し、
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーおよびオプションヘッダーの値の収集
 
@@ -259,7 +259,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{BASE_CONNECTION_ID}`：前述の手順で取得した ID を使用します。
 * `{CONNECTION_SPEC_ID}`:「 — 」の接続仕様IDを使用 [!DNL Unified Profile Service] し `8a9c3494-9708-43d7-ae3f-cda01e5030e1`ます。
 
-**応答** 
+**応答**
 
 正常に応答すると、[!DNL Unified Profile Service]に対して新しく作成されたソース接続の固有な識別子(`id`)が返されます。 これで、[!DNL Experience Platform]データに正常に接続できたことが確認できます。 この値は、後の手順で必要になるため保存します。
 
