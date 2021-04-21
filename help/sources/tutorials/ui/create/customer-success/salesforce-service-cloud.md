@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce Service Cloud;salesforceサービスクラウド
 solution: Experience Platform
 title: UIでのSalesforceサービスクラウドソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してSalesforceサービスクラウドのソース接続を作成する方法を説明します。
+exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
 translation-type: tm+mt
-source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '482'
 ht-degree: 9%
 
 ---
-
 
 # UIに[!DNL Salesforce Service Cloud]ソース接続を作成する
 
