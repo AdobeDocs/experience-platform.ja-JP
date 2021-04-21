@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データ取り込み；バッチ；バッチ；有効なデータセット；バッチ取り込みの概要；概要；バッチ取り込みの概要；
 solution: Experience Platform
 title: バッチ取り込みの概要
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platformデータ取り込みAPIを使用すると、データをバッチファイルとしてプラットフォームに取り込むことができます。 取り込まれるデータは、CRMシステムのフラットファイル（Parketファイルなど）のプロファイルデータ、またはエクスペリエンスデータモデル(XDM)レジストリの既知のスキーマに準拠するデータです。
+exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 75%
 
 ---
-
 
 # バッチ取り込みの概要
 
@@ -48,7 +48,7 @@ Adobe Experience Platformデータ取り込みAPIを使用すると、データ�
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
