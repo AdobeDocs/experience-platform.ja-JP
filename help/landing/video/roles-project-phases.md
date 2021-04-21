@@ -1,21 +1,19 @@
 ---
 title: 役割とプロジェクトのフェーズ
 description: このビデオでは、Experience Platformプロジェクトの成功に関わる役割、フェーズ、主な成果の概要を説明します。
-feature: null
-topics: null
 kt: 4338
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32807.jpg
+exl-id: c4f913cd-ac84-49e4-a7e8-21abd7a82800
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
-
 
 # 役割とプロジェクトのフェーズ
 
