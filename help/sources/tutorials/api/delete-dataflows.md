@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フローサービス；API;api；削除；データフローの削除
 solution: Experience Platform
 title: Flow Service APIを使用したデータフローの削除
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用してバッチおよびストリーミングデータフローを削除する方法を説明します。
+exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 28%
 
 ---
-
 
 # Flow Service APIを使用したデータフローの削除
 
@@ -33,7 +33,7 @@ ht-degree: 28%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
