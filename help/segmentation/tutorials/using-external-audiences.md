@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: 外部オーディエンスの読み込みと使用
 description: Adobe Experience Platformで外部オーディエンスを使用する方法を学ぶには、このチュートリアルに従ってください。
-topic: tutorial
+topic-legacy: tutorial
+exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 translation-type: tm+mt
-source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 9%
 
 ---
-
 
 # 外部オーディエンスの読み込みと使用
 
