@@ -2,16 +2,16 @@
 keywords: Experience Platform;プロファイル；セグメント；セグメント；セグメント化；ユーザインターフェイス；UI；カスタマイズ；セグメントダッシュボード;ダッシュボード
 title: セグメントダッシュボード
 description: 'Adobe Experience Platformは、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードを提供します。 '
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 translation-type: tm+mt
-source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 1%
 
 ---
-
 
 # （ベータ版）セグメントダッシュボード{#segment-dashboard}
 
