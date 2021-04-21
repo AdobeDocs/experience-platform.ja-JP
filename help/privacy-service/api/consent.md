@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: 同意APIエンドポイント
-topic: developer guide
+topic-legacy: developer guide
 description: Privacy ServiceAPIを使用して、Experience Cloudアプリに対する顧客の同意要求を管理する方法について説明します。
+exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 2%
 
 ---
-
 
 # 同意エンドポイント
 
@@ -71,6 +71,6 @@ curl -X POST \
 >
 >[!DNL Privacy Service]に送信する顧客ID値を決定する方法について詳しくは、[IDデータ](../identity-data.md)の提供ガイドを参照してください。
 
-**応答** 
+**応答**
 
 正常な応答は、ペイロードなしのHTTPステータス202 (Accepted)を返し、その要求が[!DNL Privacy Service]によって受け入れられ、処理中であることを示します。
