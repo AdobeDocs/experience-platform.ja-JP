@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；有効データセット；データセット；データセット
 solution: Experience Platform
 title: データセットUIガイド
-topic: datasets
+topic-legacy: datasets
 description: Adobe Experience Platformユーザーインターフェイスでデータセットを操作する際に、一般的なアクションを実行する方法を説明します。
+exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 translation-type: tm+mt
-source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1140'
 ht-degree: 69%
 
 ---
-
 
 # データセットUIガイド
 
@@ -54,7 +54,7 @@ ht-degree: 69%
 * [クエリサービスの概要](../../query-service/home.md)
 * [JupyterLab ユーザガイド](../../data-science-workspace/jupyterlab/overview.md)
 
-## データセットの作成 {#create}
+## データセットの作成  {#create}
 
 新しいデータセットを作成するには、まず、「**[!UICONTROL データセット]**」ダッシュボードの「**[!UICONTROL データセットを作成]**」をクリックします。
 
