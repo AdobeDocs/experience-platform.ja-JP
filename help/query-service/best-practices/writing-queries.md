@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；クエリの書き込み；クエリの書き込み；
 solution: Experience Platform
 title: クエリ業務におけるクエリの実施に関する一般指導
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: このドキュメントでは、Adobe Experience Platform クエリサービスでクエリを記述する際に知っておく必要のある重要な詳細について説明します。
+exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 50%
 
 ---
-
 
 # [!DNL Query Service]でのクエリの実行に関する一般的なガイダンス
 
