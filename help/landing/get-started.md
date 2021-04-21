@@ -2,10 +2,10 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: はじめに —Adobe Experience Platform
-topic: getting started
+topic-legacy: getting started
 description: このビデオでは、Experience Platform の概要と、解決するビジネス上の課題の概要を簡単に説明します。
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 44%
