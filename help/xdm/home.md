@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；XDM;XDMプロファイル;XDM個人システム；XDM個人イベント;XDM ExperienceEvent;XDM ExperienceEvent；エクスペリエンスイベント;ExperienceEvent;Mixin;Mixin;Experienceイベント;XDMerienceEvent;event;event;XDM Experienceevent;Experience Data Model;Experience Data Model;Data Model;Data Model;スキーマレジストリ；スキーマレジストリ；イベントライブラリ；スキーマ；レコードデータ；時系列；時系列
 solution: Experience Platform
 title: XDMシステムの概要
-topic: overview
-description: '標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。 '
+topic-legacy: overview
+description: 標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
+exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 47%
 
 ---
-
 
 # XDM システムの概要
 
@@ -119,4 +119,3 @@ Adobe Experience Platform[!DNL Data Science Workspace]は、機械学習と人�
 [!DNL Experience Platform]の[!DNL XDM System]に対する理解を深めるには、次のビデオをご覧ください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
-
