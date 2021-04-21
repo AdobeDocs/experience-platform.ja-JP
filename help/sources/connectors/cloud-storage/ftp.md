@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；FTP;ftp;
 solution: Experience Platform
 title: FTPソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してFTPサーバーをAdobe Experience Platformに接続する方法を説明します。
+exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 3%
+source-wordcount: '447'
+ht-degree: 2%
 
 ---
-
 
 # （ベータ版）FTPコネクタ
 
