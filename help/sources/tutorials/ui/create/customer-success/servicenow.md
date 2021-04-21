@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ServiceNow;servicenow
 solution: Experience Platform
 title: UIでのServiceNowソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してServiceNowソース接続を作成する方法を説明します。
+exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 9%
 
 ---
-
 
 # UIに[!DNL ServiceNow]ソース接続を作成する
 
