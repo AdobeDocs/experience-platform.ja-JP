@@ -2,17 +2,17 @@
 keywords: Experience Platform；機械学習モデル；Data Science Workspace；一般的なトピック；モデルの作成と公開
 solution: Experience Platform
 title: 機械学習モデルの作成と公開
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace は、事前に作成された製品推奨レシピを使用して目標を達成する手段を提供します。このチュートリアルに従って、小売データにアクセスして理解し、機械学習モデルを作成して最適化し、Data Science Workspaceでインサイトを生成する方法を確認します。
+exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 translation-type: tm+mt
-source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1578'
 ht-degree: 41%
 
 ---
-
 
 # マシンラーニングモデルの作成と公開
 
@@ -77,7 +77,7 @@ ht-degree: 41%
 | Recommendations の入力データセット | Recommendations の入力スキーマ | [!DNL Analytics]データは、機能パイプラインを使用してトレーニングデータセットに変換されます。 このデータは、製品レコメンデーションの機械学習モデルのトレーニングに使用されます。`itemid` および `userid` は、その顧客が購入した製品に対応しています。 |
 | Recommendations の出力データセット | Recommendations の出力スキーマ | スコア付け結果が保存されるデータセットには、各顧客にお勧めする製品のリストが含まれます。 |
 
-## モデルのオーサリング {#author-your-model}
+## モデルのオーサリング  {#author-your-model}
 
 [!DNL Data Science Workspace]ライフサイクルの2番目の要素は、レシピとモデルの作成です。 製品 Recommendations レシピは、過去の購入データと機械学習を利用して、製品 Recommendations を大規模に生成できるように作られています。
 
