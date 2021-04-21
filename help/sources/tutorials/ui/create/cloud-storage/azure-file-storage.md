@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azureファイルストレージ;Azureファイルストレージコネクタ
 solution: Experience Platform
 title: UIにAzureファイルストレージソース接続を作成する
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してAzure Fileストレージソース接続を作成する方法を説明します。
+exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 9%
 
 ---
-
 
 # UIに[!DNL Azure File Storage]ソース接続を作成する
 
