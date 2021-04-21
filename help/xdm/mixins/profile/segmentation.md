@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ；セグメント；メンバーシップ；セグメントのメンバーシップ；スキーマデザイン；マップ；
 solution: Experience Platform
 title: セグメントメンバーシップの詳細Mixin
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、セグメントメンバーシップの詳細ミックスインの概要を説明します。
+exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL セグメントのメンバーシップ] の詳細Mixin
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->`segmentMembership`フィールドは、このミックスインを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドに手動で入力したり、更新したりしないでください。 セグメント化ジョブの実行時に、各プロファイルの`segmentMembership`マップが自動的に更新されます。
+>`segmentMembership`フィールドは、このミックスインを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドの入力や更新を手動で行うことは避けてください。 セグメント化ジョブの実行時に、各プロファイルの`segmentMembership`マップが自動的に更新されます。
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
