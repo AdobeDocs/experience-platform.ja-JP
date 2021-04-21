@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Microsoft SQL Server;SQL Server;sql server
 solution: Experience Platform
 title: UIでのMicrosoft SQL Serverソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してMicrosoft SQL Serverソース接続を作成する方法を説明します。
+exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 9%
 
 ---
-
 
 # UIに[!DNL Microsoft SQL Server]ソース接続を作成する
 
