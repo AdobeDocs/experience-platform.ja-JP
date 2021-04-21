@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；PSQL;psql;クエリサービス；クエリサービス；メタデータ；コマンド；メタデータコマンド；
 solution: Experience Platform
 title: クエリサービスのMetadata PostgreSQLコマンド
-topic: metadata
+topic-legacy: metadata
 description: 現在、Adobe Experience Platformクエリサービス内のメタデータのクエリに対してサポートされているPostgreSQLコマンドのリストです。
+exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 77%
 
 ---
-
 
 # クエリサービスのMetadata PostgreSQLコマンド
 
@@ -45,4 +45,3 @@ ht-degree: 77%
 `\d` で開始するすべてのコマンドを組み合わせることができます。例えば、すべてのテーブル、シーケンスおよびリストの `\dtsn` スキーマを表示できます。`\d` を使用すると、すべての表示可能な表、表示、マテリアライズドビュー、シーケンスが表示されます。
 
 上記のコマンドの詳細は、[postgresql.org](https://www.postgresql.org/docs/10/app-psql.html) にあるドキュメントを参照してください。ただし、PostgreSQLのドキュメントに示すすべてのオプションが[!DNL Experience Platform]でサポートされているわけではありません。
-
