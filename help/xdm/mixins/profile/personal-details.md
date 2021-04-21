@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ；個人の詳細；スキーマデザイン；ミックスイン；Mixin;
 solution: Experience Platform
 title: 個人の連絡先の詳細Mixin
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、個人の連絡先の詳細ミックスインの概要を説明します。
+exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 9%
 
 ---
-
 
 # [!UICONTROL 個人連絡先] の詳細Mixin
 
