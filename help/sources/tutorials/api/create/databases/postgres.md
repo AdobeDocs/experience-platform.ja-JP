@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Flow Service APIを使用したPostgreSQLソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して、Adobe Experience PlatformをPostgreSQLに接続する方法を学びます。
+exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 27%
+source-wordcount: '560'
+ht-degree: 26%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL PostgreSQL]ソース接続を作成する
 
@@ -42,7 +42,7 @@ ht-degree: 27%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -103,7 +103,7 @@ curl -X POST \
 | `auth.params.connectionString` | PSQLアカウントに関連付けられている接続文字列です。 PSQL接続文字列パターンは次のとおりです。`Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | PSQLの接続仕様ID:`74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
-**応答** 
+**応答**
 
 正常な応答は、新たに作成されたベース接続の固有な識別子(`id`)を返します。 このIDは、次のチュートリアルでPSQLデータベースを調べるために必要です。
 
