@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；ID;ID
 solution: Experience Platform
 title: リストIDのマッピング
-topic: API guide
+topic-legacy: API guide
 description: マッピングは、クラスターにある、指定した名前空間の全 ID の集まりです。
+exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 96%
 
 ---
-
 
 # ID マッピングのリストの表示
 
