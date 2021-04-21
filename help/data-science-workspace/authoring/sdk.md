@@ -2,16 +2,16 @@
 keywords: Experience Platform；開発者ガイド；SDK；モデルオーサリング；Data Science Workspace；人気のあるトピック；テスト
 solution: Experience Platform
 title: モデルオーサリング SDK
-topic: Overview
+topic-legacy: Overview
 description: モデルオーサリングSDKを使用すると、PySparkとSpark (Scala)で実装可能なテンプレートを提供する、Adobe Experience Platformデータサイエンスワークスペースで使用できるカスタム機械学習レシピと機能パイプラインを開発できます。
+exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 70%
 
 ---
-
 
 # モデルオーサリング SDK
 
@@ -454,7 +454,7 @@ DatasetTransformer クラスは、データセットの構造を変更および�
     </tbody>
 </table>
 
-## FeaturePipelineFactory {#featurepipelinefactory}
+## FeaturePipelineFactory  {#featurepipelinefactory}
 
 FeaturePipelineFactory クラスには、特徴抽出アルゴリズムが含まれ、特徴パイプラインのステージを開始から終了まで定義します。
 
