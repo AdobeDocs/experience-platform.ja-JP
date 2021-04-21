@@ -2,16 +2,16 @@
 keywords: Experience Platform；はじめに；コンテンツai；コマースai；コンテンツとコマースai；カラー抽出；カラー抽出
 solution: Experience Platform, Intelligent Services
 title: Content and Commerce AI APIのカラー抽出
-topic: Developer guide
+topic-legacy: Developer guide
 description: カラー抽出サービスは、画像を与えられると、ピクセル色のヒストグラムを計算して、主色でグループに分けることができます。
+exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 2%
 
 ---
-
 
 # カラー抽出
 
@@ -99,7 +99,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `custom` | 渡す任意のカスタムパラメーター。 | × |
 | `historic-metadata` | メタデータを渡すことができる配列。 | × |
 
-**応答** 
+**応答**
 
 正常に応答すると、抽出された色の詳細が返されます。 各色は`feature_value`キーで表され、次の情報が含まれます。
 
