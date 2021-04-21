@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；オプトアウト；Segmentation;Segmentationサービス；Segmentationサービス；名誉のオプトアウト；オプトアウト；オプトアウト；オプトアウト；
 solution: Experience Platform
 title: セグメントでのオプトアウトリクエストの実行
-topic: overview
-description: 'Adobe Experience Platformでは、顧客がデータの使用状況やストレージに関するオプトアウトリクエストをリアルタイム顧客プロファイル内に送信することを許可しています。] これらのオプトアウトリクエストは、カリフォルニア州消費者プライバシー法（CCPA）に含まれています。CCPA は、カリフォルニア州の在住者に対して、個人データにアクセスし削除する権利や、個人データが販売または開示されたか（そして誰に対して）を知る権利を付与しています。 '
+topic-legacy: overview
+description: Adobe Experience Platformでは、顧客がデータの使用状況やストレージに関するオプトアウトリクエストをリアルタイム顧客プロファイル内に送信することを許可しています。] これらのオプトアウトリクエストは、カリフォルニア州消費者プライバシー法（CCPA）に含まれています。CCPA は、カリフォルニア州の在住者に対して、個人データにアクセスし削除する権利や、個人データが販売または開示されたか（そして誰に対して）を知る権利を付与しています。
+exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1032'
 ht-degree: 62%
 
 ---
-
 
 # セグメントでのオプトアウトリクエストの遵守
 
