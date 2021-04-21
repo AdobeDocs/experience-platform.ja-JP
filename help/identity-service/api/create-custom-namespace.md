@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；名前空間;名前空間;名前空間;名前空間;ID名前空間;ID名前空間;ID;ID
 solution: Experience Platform
 title: IDサービスAPIでのカスタム名前空間の作成
-topic: API guide
+topic-legacy: API guide
 description: ID 名前空間 API を使用して、組織でのみ使用可能なカスタム ID 名前空間を作成できます。
+exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 57%
 
 ---
-
 
 # IDサービスAPIでのカスタム名前空間の作成
 
