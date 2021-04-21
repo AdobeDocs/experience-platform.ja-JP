@@ -2,14 +2,14 @@
 title: Adobe Experience Platform リリースノート
 description: 2021年4月22日Experience Platformリリースノート
 doc-type: release notes
-last-update: March 31, 2021
-author: ens70167
+last-update: April 21, 2021
+author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 0c9b60fe0777286819841c520a41007634622578
+source-git-commit: 9b63a47a8da07830313c0a8e690c7247dc3fbe6b
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 35%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 35%
 Adobe Experience Platform の既存の機能のアップデート：
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -37,6 +38,14 @@ Adobe Experience Platform の既存の機能のアップデート：
 | ストリーミング取り込みのサポート | ストリーミングソース接続の作成時に、データ準備機能を使用できるようになりました。 詳しくは、UI](../../sources/tutorials/ui/create/streaming/http.md)での[ストリーミングソース接続の作成に関するチュートリアルを参照してください。 |
 
 詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+Experience Data Model(XDM)は、デジタルエクスペリエンスのパワーを向上させるように設計されたオープンソース仕様です。 Adobe Experience Platform 上のサービスと通信するすべてのアプリケーションに共通の構造と定義を提供します。XDM標準に準拠することで、すべての顧客体験データを共通の表現に組み込み、より迅速で統合的な方法でインサイトを提供できます。 顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+
+| 機能 | 説明 |
+| --- | --- |
+| 業界別スキーマ推奨 | スキーマエディタのUIでクラスとミックスインを選択する場合、新しいフィルタを使用して、推奨される標準コンポーネントを、貴社の特定の業界に基づいて表示することができます。 各業界の使用例でのコンポーネントの相互関連付けの詳細については、[業界データモデル](https://www.adobe.com/go/xdm-industry-erds-en)のドキュメントを参照してください。 |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
