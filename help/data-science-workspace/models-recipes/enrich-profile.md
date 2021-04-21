@@ -2,17 +2,17 @@
 keywords: Experience Platform；機械学習モデル；データ科学ワークスペース；リアルタイム顧客プロファイル；人気の高いトピック；機械学習インサイト
 solution: Experience Platform
 title: 機械学習インサイトによるリアルタイムの顧客プロファイルの強化
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: このドキュメントでは、リアルタイム顧客プロファイルを機械学習インサイトに強化する方法のガイドを提供します。
+exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 22%
 
 ---
-
 
 # 機械学習のインサイトで[!DNL Real-time Customer Profile]を拡張
 
