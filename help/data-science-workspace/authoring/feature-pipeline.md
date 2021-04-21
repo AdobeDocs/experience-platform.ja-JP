@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform；チュートリアル；フィーチャパイプライン；データサイエンスワークスペース；人気の高いトピック
 title: モデルオーサリングSDKを使用したフィーチャパイプラインの作成
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platformでは、カスタムフィーチャパイプラインを作成して作成し、Senei Machine Learning Framework Runtimeを通じて尺度を変更してフィーチャエンジニアリングを実行できます。 このドキュメントでは、フィーチャパイプラインにある各種クラスについて説明し、PySparkのModel Authoring SDKを使用してカスタムフィーチャパイプラインを作成するための手順を説明します。
+exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 28%
 
 ---
-
 
 # モデルオーサリングSDKを使用したフィーチャパイプラインの作成
 
@@ -61,7 +61,7 @@ Feature Pipelineジョブが開始されると、Runtimeは最初にDataLoader�
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## 機能パイプラインのクラスを実装する {#implement-your-feature-pipeline-classes}
+## 機能パイプラインのクラスを実装する  {#implement-your-feature-pipeline-classes}
 
 以下の節では、機能パイプラインに必要なクラスの説明とその実装例を示します。
 
