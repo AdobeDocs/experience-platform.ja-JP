@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；api;
 solution: Experience Platform
 title: Segmentation Service APIの概要
-topic: developer guide
+topic-legacy: developer guide
 description: セグメントAPIを正しく機能させるために必要な追加情報については、次のドキュメントを参照してください。
+exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 26%
 
 ---
-
 
 # Segmentation Service APIの使い始めに{#getting-started}
 
@@ -28,7 +28,7 @@ Adobe Experience Platform[!DNL Segmentation Service]では、セグメントを�
 
 ## API 呼び出し例の読み取り
 
-[!DNL Segmentation Service] APIドキュメントには、リクエストをフォーマットする方法を示すAPI呼び出しの例が記載されています。 この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+[!DNL Segmentation Service] APIドキュメントには、リクエストをフォーマットする方法を示すAPI呼び出しの例が記載されています。 この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ## 必須ヘッダー
 
