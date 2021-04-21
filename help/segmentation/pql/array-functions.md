@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；配列関数；配列；
 solution: Experience Platform
 title: アレイ、リスト、および設定PQL関数
-topic: developer guide
+topic-legacy: developer guide
 description: プロファイルクエリ言語（PQL）は、配列、リスト、および文字列とのやり取りを容易にする関数を提供します。
+exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 93%
 
 ---
-
 
 # 配列、リスト、およびセットの関数
 
@@ -229,7 +229,7 @@ array.map(expression)
 numbers.map(square)
 ```
 
-## First `n` in array {#first-n}
+## First `n` in array  {#first-n}
 
 `topN` 関数は、指定した数値式に基づいて昇順で並べ替えられた場合、配列の最初の `N` 項目を返すために使用します。
 
