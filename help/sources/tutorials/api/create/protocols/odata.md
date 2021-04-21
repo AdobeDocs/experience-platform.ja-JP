@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；汎用OData；汎用odata
 solution: Experience Platform
 title: フローサービスAPIを使用した汎用ODataソース接続の作成
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Flow Service APIを使用して汎用ODataをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 27%
 
 ---
-
 
 # [!DNL Flow Service] APIを使用して[!DNL Generic OData]ソース接続を作成する
 
@@ -107,7 +107,7 @@ curl -X POST \
 | `auth.params.url` | [!DNL OData]サーバーのホスト。 |
 | `connectionSpec.id` | [!DNL OData]接続指定ID:`8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
-**応答** 
+**応答**
 
 正常に応答すると、新たに作成された接続が返されます。この接続には、一意の接続識別子(`id`)が含まれます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
