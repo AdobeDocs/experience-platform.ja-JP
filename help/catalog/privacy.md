@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；Data Lakeのプライバシー；アイデンティティ名前空間；プライバシー；Data Lake
 solution: Experience Platform
 title: データレークでのプライバシー要求の処理
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform Privacy Serviceは、法的および組織のプライバシーに関する規則に基づオプトアウトいて記述された個人データにアクセス、販売、または削除するように顧客の要求を処理します。 このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
+exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 27%
 
 ---
-
 
 # [!DNL Data Lake]のプライバシーリクエスト処理
 
@@ -111,7 +111,7 @@ curl -X POST \
 | `xdm:property` | `xdm:namespace`で使用される名前空間に応じて、&quot;xdm:id&quot;または&quot;xdm:code&quot;を指定します。 |
 | `xdm:isPrimary` | オプションのブール値。trueの場合は、フィールドが主IDであることを示します。 スキーマには、1 つのプライマリ ID のみを含めることができます。含めない場合のデフォルトはfalseです。 |
 
-**応答** 
+**応答**
 
 応答が成功すると、HTTPステータス201（作成済み）と、新たに作成された記述子の詳細が返されます。
 
