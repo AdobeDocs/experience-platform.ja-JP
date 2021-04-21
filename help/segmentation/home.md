@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメントサービス；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント；セグメント
 solution: Experience Platform
 title: Segmentation Serviceの概要
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platformセグメントサービスと、それがプラットフォームエコシステムで果たす役割について説明します。
+exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 translation-type: tm+mt
-source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1581'
+source-wordcount: '1580'
 ht-degree: 57%
 
 ---
-
 
 # [!DNL Segmentation Service] の概要
 
