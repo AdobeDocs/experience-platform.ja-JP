@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；AmazonS3;Azure Blob
 solution: Experience Platform
 title: UIにAzure BLOBまたはAmazonS3ソース接続を作成する
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してAzure BlobまたはAmazonS3のソース接続を作成する方法を説明します。
+exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
 
 ---
-
 
 # UIに[!DNL Azure Blob]または[!DNL Amazon] S3ソース接続を作成する
 
