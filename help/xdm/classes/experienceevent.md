@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ;identityMap；アイデンティティマップ；スキーマ設計；マップ；和集合スキーマ;和集合
 solution: Experience Platform
 title: XDM ExperienceEventクラス
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、XDM ExperienceEventクラスの概要を説明します。
+exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 6%
 
 ---
-
 
 # [!DNL XDM ExperienceEvent] class
 
