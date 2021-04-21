@@ -2,16 +2,16 @@
 keywords: Experience Platform；小売の販売レシピ；データサイエンスワークスペース；人気の高いトピック；レシピ；プレビルドレシピ
 solution: Experience Platform
 title: 小売売上のレシピ
-topic: overview
+topic-legacy: overview
 description: 小売販売レシピを使用すると、特定の期間にシードされたすべての店舗の売上高を予測できます。正確な予測モデルを使用すると、小売業者は、需要および価格設定ポリシーの関係を見い出し、販売と売上高を最大化するために最適化された価格決定をおこなうことができます。
+exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 92%
 
 ---
-
 
 # 小売販売レシピ
 
