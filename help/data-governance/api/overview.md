@@ -2,18 +2,18 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Policy Service APIガイド
-topic: developer guide
+topic-legacy: developer guide
 description: Policy Service APIを使用すると、開発者はExperience Platformでデータ使用ラベルとポリシーを管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
+exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 14%
+ht-degree: 15%
 
 ---
 
-
-# [!DNL Policy Service] APIガイド
+# [!DNL Policy Service] API ガイド
 
 Adobe Experience Platform[!DNL Data Governance]では、顧客データを管理し、データの使用に適した規制、制限、ポリシーの遵守を確保できます。 [!DNL Experience Platform]内では、カタログ化、データ系列、データ使用のラベル付け、データ使用ポリシー、マーケティング活動のデータ使用の制御など、様々なレベルで重要な役割を果たします。
 
