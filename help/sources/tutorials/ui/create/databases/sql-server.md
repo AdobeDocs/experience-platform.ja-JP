@@ -7,18 +7,14 @@ type: Tutorial
 description: Adobe Experience PlatformUIを使用してMicrosoft SQL Serverソース接続を作成する方法を説明します。
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '461'
 ht-degree: 9%
 
 ---
 
 # UIに[!DNL Microsoft SQL Server]ソース接続を作成する
-
->[!NOTE]
->
-> [!DNL Microsoft SQL Server]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
 
 Adobe Experience Platformのソースコネクタは、外部ソースのデータをスケジュールに基づいて取り込む機能を提供します。 このチュートリアルでは、[!DNL Platform]ユーザーインターフェイスを使用して[!DNL Microsoft SQL Server] （以下「[!DNL SQL Server]」と呼びます）ソースコネクタを作成する手順を説明します。
 
