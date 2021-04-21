@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；データ保護；暗号化データレーク
 solution: Experience Platform
 title: Adobe Experience Platformのデータ保護
-topic: data protection
+topic-legacy: data protection
 description: データレイクに保持されるすべてのデータは、組織に固有の独立した Azure Data Lake Storage アカウントで暗号化、保存、管理されます。次のプロセスフロー図は、データがExperience Platformによって取り込まれ、処理、暗号化され、持続される方法を示しています。
+exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 24%
 
 ---
-
 
 # Adobe Experience Platform でのデータ保護
 
