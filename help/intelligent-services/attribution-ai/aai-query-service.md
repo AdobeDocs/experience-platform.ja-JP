@@ -2,16 +2,16 @@
 keywords: インサイト；アトリビューションai；アトリビューションaiインサイト；AAIクエリサービス；アトリビューションクエリ；アトリビューションスコア
 solution: Intelligent Services, Experience Platform
 title: クエリサービスを使用したアトリビューションスコアの分析
-topic: Attribution AI queries
+topic-legacy: Attribution AI queries
 description: Adobe Experience Platformクエリサービスを使用してAttribution AIスコアを分析する方法を説明します。
+exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 translation-type: tm+mt
-source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
-
 
 # クエリサービスを使用したアトリビューションスコアの分析
 
@@ -37,7 +37,7 @@ Adobe Experience PlatformのUIで、左側のナビゲーションにある&#x20
 
 ![プレビューデータセット](./images/aai-query/preview_dataset.JPG)
 
-データをプレビューした後、右側のパネルでスキーマを選択します。 スキーマ名と説明が付いたポーバーが表示されます。 スキーマ名ハイパーリンクを選択して、スコアリングスキーマにリダイレクトします。
+データをプレビューした後、右側のパネルでスキーマを選択します。 スキーマ名と説明が付いたポーバーが表示されます。 スキーマ名のハイパーリンクを選択して、スコアリングスキーマにリダイレクトします。
 
 ![スキーマの選択](./images/aai-query/select_schema.png)
 
