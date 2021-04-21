@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ;スキーマ設計；ミックスイン；ミックスイン；作業の詳細；プロファイル作業；
 solution: Experience Platform
 title: 勤務先の連絡先の詳細Mixin
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、作業担当者の詳細ミックスインの概要を説明します。
+exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 5%
 
 ---
-
 
 # [!UICONTROL 勤務先担当者の] 詳細Mixin
 
