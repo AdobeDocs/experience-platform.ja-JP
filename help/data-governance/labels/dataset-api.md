@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データセットapi；データ使用の管理；データ使用api
 solution: Experience Platform
 title: 'APIを使用したデータセットのデータ使用ラベルの管理 '
-topic: developer guide
+topic-legacy: developer guide
 description: Dataset Service APIを使用すると、データセットの使用ラベルを適用および編集できます。 これはAdobe Experience Platformのデータカタログ機能の一部ですが、データセットメタデータを管理するCatalog Service APIとは別のものです。
+exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 6%
 
 ---
-
 
 # APIを使用したデータセットのデータ使用ラベルの管理
 
@@ -130,7 +130,7 @@ curl -X PUT \
 | `labels` | データセットに追加するデータ使用ラベルのリストです。 |
 | `optionalLabels` | データセット内でラベルを追加する個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。<br/><br/>`option`:フィールドの[!DNL Experience Data Model] (XDM)属性を含むオブジェクト。 次の3つのプロパティが必要です。<ul><li>id</code>:フィールドに関連付けられているスキーマのURI $id</code>値。</li><li>contentType</code>:スキーマのコンテンツタイプとバージョン番号。 XDMルックアップ要求に対しては、有効な<a href="../../xdm/api/getting-started.md#accept">Accept headers</a>のいずれかの形式で行う必要があります。</li><li>schemaPath</code>:データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`:フィールドに追加するデータ使用ラベルのリストです。 |
 
-**応答** 
+**応答**
 
 正常に完了すると、データセットに追加されたラベルが返されます。
 
@@ -182,7 +182,7 @@ curl -X DELETE \
   -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
 ```
 
-**応答** 
+**応答**
 
 成功した応答HTTPステータス200 (OK)。ラベルが削除されたことを示します。 別の呼び出しで、データセットの既存のラベル[を参照し、これを確認できます。](#look-up)
 
