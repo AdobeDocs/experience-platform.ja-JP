@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；データガバナンス；データ使用ポリシー
 solution: Experience Platform
 title: APIでのデータ使用ポリシーの作成
-topic: policies
+topic-legacy: policies
 type: Tutorial
 description: Policy Service APIを使用すると、データ使用ポリシーを作成および管理して、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。 このドキュメントでは、Policy Service APIを使用してポリシーを作成するための手順を説明するチュートリアルを提供します。
+exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 translation-type: tm+mt
-source-git-commit: 55a54463e918fc62378c660ef17f36e2ede471e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 49%
 
 ---
-
 
 # APIでのデータ使用ポリシーの作成
 
