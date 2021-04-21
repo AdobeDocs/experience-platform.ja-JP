@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；クエリ
 solution: Experience Platform
 title: Adobe Experience Platformクエリサービスクイックスタートガイド
-topic: quickstart
+topic-legacy: quickstart
 description: Adobe Experience Platformクエリサービスクイックスタートガイド。
+exl-id: 77941755-8292-43ee-8ae3-09065f39ace7
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 34%
 
 ---
-
 
 # クイックスタートガイド
 
@@ -21,4 +21,3 @@ ht-degree: 34%
 
 
 [!DNL Query Service] また、外部ツールを接続してクエリを発行する方法も提供します。Business Intelligence ツールやコマンドラインインターフェイスなどのツールに接続する手順については、[ツールの接続に関するドキュメント](clients/overview.md)を参照してください。
-
