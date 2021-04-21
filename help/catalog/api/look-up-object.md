@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；カタログ；オブジェクト参照；api
 solution: Experience Platform
 title: カタログオブジェクトの検索
-topic: developer guide
-description: '特定のカタログオブジェクトの一意の ID がわかっている場合は、GET リクエストを実行してそのオブジェクトの詳細を表示できます。 '
+topic-legacy: developer guide
+description: 特定のカタログオブジェクトの一意の ID がわかっている場合は、GET リクエストを実行してそのオブジェクトの詳細を表示できます。
+exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 71%
 
 ---
-
 
 # カタログオブジェクトの検索
 
