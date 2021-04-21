@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；スキーマ;スキーマ；列挙；プライマリID；プライマリID;XDM個々のプロファイル；エクスペリエンスイベント;XDMエクスペリエンスイベント；エクスペリエンスイベント；XDMエクスペリエンスイベント；スキーマデザイン；ベストプラクティス
 solution: Experience Platform
 title: データモデリングのベストプラクティス
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
+exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2507'
 ht-degree: 2%
 
 ---
-
 
 # データモデリングのベストプラクティス
 
@@ -75,7 +75,7 @@ Experience Platformで使用するデータモデルを設計する際に推奨�
 | --- | --- | --- | --- | --- |
 | 1234567 | Add | 275098 | 2 | 10月1日10:32 AM |
 | 1234567 | 削除 | 275098 | 1 | 10月1日10:33 AM |
-| 1234567 | 追加 | 486502 | 1 | 10月1日10:41 AM |
+| 1234567 | 追加 | 486502 | 3 | 10月1日10:41 AM |
 | 1234567 | 追加 | 910482 | 5 | 10月3日2:15 PM |
 
 #### セグメントの使用例
