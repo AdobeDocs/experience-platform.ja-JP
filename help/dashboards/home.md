@@ -1,17 +1,17 @@
 ---
 solution: Experience Platform
 title: Experience Platformダッシュボードの概要
-topic: overview
+topic-legacy: overview
 type: Documentation
-description: 'Adobe Experience Platformの複数のダッシュボードを調査し、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示します。 '
+description: Adobe Experience Platformの複数のダッシュボードを調査し、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示します。
+exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 translation-type: tm+mt
-source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 3%
 
 ---
-
 
 # （ベータ版）ダッシュボードの概要{#dashboards}
 
