@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメント化サービス；ql;PQL;プロファイルクエリ言語；論理量指定子；論理量指定子；
 solution: Experience Platform
 title: PQL論理量指定子
-topic: developer guide
+topic-legacy: developer guide
 description: 論理量指定子を使用すると、プロファイルクエリ言語（PQL）で配列にチェック条件を付けることができます。
+exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 79%
 
 ---
-
 
 # 論理量指定子関数
 
