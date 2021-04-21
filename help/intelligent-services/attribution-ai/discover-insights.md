@@ -2,16 +2,16 @@
 keywords: Experience Platform；インサイト；アトリビューションai；人気のあるトピック；アトリビューションaiインサイト
 solution: Intelligent Services, Experience Platform
 title: Attribution AI内のDiscoverインサイト
-topic: Attribution AI insights
+topic-legacy: Attribution AI insights
 description: このドキュメントは、アドビインテリジェントサービスのユーザーインターフェイスでサービスインスタンスのインサイトを操作する際のガイドとして提供されています。
+exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 49%
 
 ---
-
 
 # Attribution AI内のインサイトの検出
 
@@ -60,7 +60,7 @@ Attribution AI サービスページが表示されます。このページに�
 
 ![編集ポップオーバー](./images/insights/edit-popover.png)
 
-### その他のアクション {#more-actions}
+### その他のアクション  {#more-actions}
 
 右上のナビゲーションの「**[!UICONTROL 編集]**」の横に「**[!UICONTROL その他のアクション]**」ボタンがあります。「**[!UICONTROL その他のアクション]**」を選択すると、次の操作の1つを選択できるドロップダウンが開きます。
 
