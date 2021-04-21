@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気のあるトピック；API;AP
 solution: Experience Platform
 title: UIでのクラスの作成と編集
 description: Experience Platformユーザーインターフェイスでクラスを作成および編集する方法を説明します。
-topic: user guide
+topic-legacy: user guide
+exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 7%
 
 ---
-
 
 # UIでのクラスの作成と編集
 
