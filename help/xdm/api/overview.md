@@ -3,17 +3,17 @@ keywords: Experience Platform；ホーム；人気の高いトピック；API;AP
 solution: Experience Platform
 title: スキーマレジストリAPIガイド
 description: スキーマレジストリAPIを使用すると、開発者はAdobe Experience Platform内のすべてのスキーマおよび関連するExperience Data Model(XDM)リソースをプログラムで管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 2%
 
 ---
 
-
-# [!DNL Schema Registry] APIガイド
+# [!DNL Schema Registry] API ガイド
 
 [!DNL Schema Registry]は、Adobe Experience Platform内のスキーマライブラリにアクセスするために使用され、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスとRESTful APIを提供します。
 
