@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；フェニックス；フェニックス
 solution: Experience Platform
 title: UIでPhoenixソース接続を作成する
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Adobe Experience PlatformUIを使用してフェニックスのソース接続を作成する方法を説明します。
+exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 8%
 
 ---
-
 
 # UIに[!DNL Phoenix]ソース接続を作成する
 
