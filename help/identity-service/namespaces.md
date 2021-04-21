@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；名前空間;名前空間;名前空間;名前空間;ID名前空間;ID名前空間;ID;ID;IDサービス；IDサービス
 solution: Experience Platform
 title: ID名前空間の概要
-topic: overview
-description: 'ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」という値は電子メールアドレスとして、または「443522」という数値のCRM IDとして区別されます。 '
+topic-legacy: overview
+description: ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」という値は電子メールアドレスとして、または「443522」という数値のCRM IDとして区別されます。
+exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1475'
+source-wordcount: '1474'
 ht-degree: 20%
 
 ---
-
 
 # ID 名前空間の概要
 
