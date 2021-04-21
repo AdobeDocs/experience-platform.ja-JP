@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；製品プロファイル
 solution: Experience Platform
 title: Adobe Admin Consoleで新しい商品プロファイルを作成
-topic: user guide
+topic-legacy: user guide
 description: このドキュメントでは、Adobe Admin Consoleで新しい商品プロファイルを作成する際に必要な手順を説明します。 新しいプロファイルの作成を開始するには、「製品プロファイル」タブに移動し、「新しいプロファイル」をクリックします。
+exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 70%
 
 ---
-
 
 # Adobe Admin Consoleで新しい商品プロファイルを作成する
 
