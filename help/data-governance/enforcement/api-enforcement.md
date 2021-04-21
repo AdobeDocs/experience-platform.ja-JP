@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；ポリシーの適用；自動適用；APIベースの適用；データガバナンス；テスト
 solution: Experience Platform
 title: Policy Service APIを使用したデータ使用ポリシーの実施
-topic: guide
+topic-legacy: guide
 type: Tutorial
 description: データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、Policy Service APIを使用して、データセットまたは任意のラベルグループに対するマーケティングアクションがポリシー違反かどうかを評価できます。 その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
+exl-id: 093db807-c49d-4086-a676-1426426b43fd
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 39%
 
 ---
-
 
 # [!DNL Policy Service] APIを使用してデータ使用ポリシーを強制する
 
@@ -187,7 +187,7 @@ curl -X POST \
 | `entityId` | ペイロード配列の各項目は、データセットの一意の ID を提供する必要があります。 |
 | `entityMeta.fields` | （オプション）データセットのスキーマー内の特定のフィールドを参照する[JSONポインター](../../landing/api-fundamentals.md#json-pointer)文字列の配列。 この配列を含めると、配列に含まれるフィールドのみが評価に使用されます。 アレイに含まれていないスキーマフィールドは評価に関与しません。<br><br>このフィールドを含めない場合は、データセットスキーマ内のすべてのフィールドが評価対象に含まれます。 |
 
-**応答** 
+**応答**
 
 正常な応答は、マーケティングアクションのURL、指定されたデータセットから収集された使用ラベル、およびこれらのラベルに対するアクションのテストの結果として違反されたポリシーのリストを返します。 この例では、「サードパーティへのデータ書き出し」ポリシーが `violatedPolicies` 配列に表示され、マーケティングアクションによって予期されるポリシー違反がトリガーされたことが示されています。
 
