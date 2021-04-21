@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: プライバシージョブAPIエンドポイント
-topic: developer guide
+topic-legacy: developer guide
 description: Privacy ServiceAPIを使用してExperience Cloudアプリのプライバシージョブを管理する方法について説明します。
+exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1344'
 ht-degree: 66%
 
 ---
-
 
 # プライバシージョブエンドポイント
 
