@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；支払い
 solution: Experience Platform
 title: フローサービスAPIを使用した支払いシステムの調査
-topic: overview
+topic-legacy: overview
 description: このチュートリアルでは、Flow Service APIを使用して支払い申請を調べます。
+exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 25%
 
 ---
-
 
 # [!DNL Flow Service] APIを使って支払いシステムを調べます。
 
@@ -34,7 +34,7 @@ ht-degree: 25%
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。[!DNL Experience Platform]
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ### 必須ヘッダーの値の収集
 
@@ -138,7 +138,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、指定されたテーブルの構造を返します。 各テーブルの列に関する詳細は、`columns`配列の要素内にあります。
 
