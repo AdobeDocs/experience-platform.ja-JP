@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: リアルタイム顧客プロファイルでのプライバシーリクエストの処理
-topic: overview
+topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Serviceは、多数のプライバシー規制に基づオプトアウトく説明に従って、個人データのアクセス、販売、削除を求める顧客の要求を処理します。 このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する重要な概念について説明します。
+exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 16%
 
 ---
-
 
 # [!DNL Real-time Customer Profile]でのプライバシー要求の処理
 
