@@ -3,15 +3,15 @@ keywords: Experience Platform；ホーム；人気のあるトピック；API;XD
 solution: Experience Platform
 title: 監査ログAPIエンドポイント
 description: スキーマレジストリAPIの/auditlogエンドポイントを使用すると、既存のXDMリソースに対して行われた変更の時系列リストを取得できます。
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 4%
 
 ---
-
 
 # 監査ログエンドポイント
 
@@ -50,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常に完了した場合は、リソースに対して行われた変更を最新から最新の順に時系列でリストして返します。
 
