@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Azure Tableストレージ;Azureテーブルストレージ;ATS;ats
 solution: Experience Platform
 title: Azureテーブルストレージソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してAzure TableストレージをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 9%
 
 ---
-
 
 # （ベータ版） [!DNL Azure Table Storage]コネクタ
 
