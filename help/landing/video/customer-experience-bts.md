@@ -1,21 +1,19 @@
 ---
 title: Scenes&#58の背後Adobe Experience Platformを活用した顧客体験
 description: 前のビデオでは、例のブランドルマが、豊かで実り多い関連性のある顧客エクスペリエンスを作り出すことができました。 このビデオでは、Adobe Experience Platformがこのジャーニーを達成するためにどのように使用されているかを見てみます。
-feature: platform
-topics: null
 kt: 4340
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 28144.jpg
+exl-id: 8562e0da-7aac-418a-8e93-f0339d3ffc66
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
-
 
 # Experience Platformによる顧客体験の背後
 
