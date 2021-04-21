@@ -2,17 +2,17 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；認証；アクセス
 solution: Experience Platform
 title: Experience Platform API の認証とアクセス
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 'このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。 '
+description: このドキュメントでは、Experience Platform API を呼び出すために Adobe Experience Platform 開発者アカウントにアクセスするための順を追ったチュートリアルを提供します。
+exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '906'
 ht-degree: 41%
 
 ---
-
 
 # [!DNL Experience Platform] APIの認証とアクセス
 
