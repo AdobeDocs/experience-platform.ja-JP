@@ -3,16 +3,16 @@ keywords: Experience Platform；ホーム；人気の高いトピック；API;XD
 solution: Experience Platform
 title: スキーマレジストリAPIを使用した2つのスキーマ間の関係の定義
 description: このドキュメントでは、スキーマレジストリ API を使用して、組織が定義した 2 つのスキーマ間の 1 対 1 の関係を定義するためのチュートリアルを提供します。
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1337'
 ht-degree: 47%
 
 ---
-
 
 # [!DNL Schema Registry] APIを使用して2つのスキーマ間の関係を定義する
 
