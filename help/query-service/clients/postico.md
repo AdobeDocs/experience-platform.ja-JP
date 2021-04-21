@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；ポスティコ；ポスティコ；クエリサービスに接続；
 solution: Experience Platform
 title: Posticoをクエリサービスに接続
-topic: connect
+topic-legacy: connect
 description: このドキュメントには、Adobe Experience Platformクエリサービス用のバックアップクライアントPosticoをインストールするためのリンクが含まれています。
+exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 16%
 
 ---
-
 
 # [!DNL Postico]をクエリサービス(Mac)に接続
 
