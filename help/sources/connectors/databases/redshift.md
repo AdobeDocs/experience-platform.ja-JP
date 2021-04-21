@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；AmazonRedshift;AmazonRedshift;Redshift;Redshift
 solution: Experience Platform
 title: AmazonRedshiftソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用して、AmazonRedshiftをAdobe Experience Platformに接続する方法を説明します。
+exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 11%
 
 ---
-
 
 # （ベータ版） [!DNL Amazon Redshift]コネクタ
 
