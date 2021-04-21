@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；Audience Managerコネクタ；オーディエンスマネージャ；オーディエンスマネージャ
 solution: Experience Platform
 title: Audience Managerソースコネクタの概要
-topic: overview
+topic-legacy: overview
 description: Adobe Audience Managerソースコネクタは、Audience Managerに収集されたファーストパーティデータをAdobe Experience Platformにストリーミングします。
+exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 45%
 
 ---
-
 
 # Audience Manager コネクタ
 
