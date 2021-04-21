@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace；人気の高いトピック；クエリサービス
 solution: Experience Platform
 title: ジュピターノートのクエリサービス
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform を使用すると、クエリサービスを標準機能として JupyterLab に統合することにより、Data Science Workspace で構造化照会言語（SQL）を使用できます。このチュートリアルでは、Adobe Analyticsデータを調査、変換、分析する一般的な使用例のサンプルSQLクエリを示します。
+exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 translation-type: tm+mt
-source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '822'
 ht-degree: 58%
 
 ---
-
 
 # ジュピターノートのクエリサービス
 
@@ -96,7 +96,7 @@ ht-degree: 58%
    >
    > これらの値はいつでも変更できます。値を変更する場合は、変数セルを実行して、変更を適用する必要があります。
 
-## データのクエリ {#query-your-data}
+## データのクエリ  {#query-your-data}
 
 個々のノートブックセルに次の SQL クエリを入力します。クエリを実行するには、セルで選択し、**[!UICONTROL 再生]**&#x200B;ボタンを選択します。 成功したクエリの結果またはエラーログは、実行されたセルの下に表示されます。
 
