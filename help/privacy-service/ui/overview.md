@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: Privacy ServiceUIの概要
-topic: UI guide
+topic-legacy: UI guide
 description: Privacy Serviceユーザーインターフェイスを使用して、様々なExperience Cloudアプリケーション間でプライバシーリクエストを調整および監視し始めます。
+exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 31%
 
 ---
-
 
 # [!DNL Privacy Service] UI の概要
 
