@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気の高いトピック；PSQL;クエリサービスへのpsqlconnect;クエリサービス；クエリサービス；
 solution: Experience Platform
 title: PSQLをクエリサービスに接続
-topic: connect
-description: 'PSQLは、PostgreSQLをマシンにインストールする際に提供されるコマンドラインインターフェイスです。 次の手順に従ってインストールできます。 '
+topic-legacy: connect
+description: PSQLは、PostgreSQLをマシンにインストールする際に提供されるコマンドラインインターフェイスです。 次の手順に従ってインストールできます。
+exl-id: ceb07128-409e-42be-8143-0cf681d435de
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 13%
 
 ---
-
 
 # PSQLをクエリサービスに接続
 
