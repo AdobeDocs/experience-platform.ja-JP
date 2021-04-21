@@ -2,13 +2,13 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；取り込み；開発者ガイド；apiガイド；アップロード；取り込みパーケット；取り込みjson;
 solution: Experience Platform
 title: Batch Ingest APIガイド
-topic: developer guide
+topic-legacy: developer guide
 description: このドキュメントでは、バッチ取得 API の使用に関する包括的な概要を説明します。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt
-source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2558'
+source-wordcount: '2556'
 ht-degree: 89%
 
 ---
