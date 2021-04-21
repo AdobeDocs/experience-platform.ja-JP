@@ -2,16 +2,16 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；データフロー；データフロー；データフロー；監視；監視データフロー；監視；監視データフロー；監視データフロー；監視データフロー；フロー；フローサービス；
 solution: Experience Platform
 title: データフローの概要
-topic: overview
+topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platformでのデータの使い方を表すデータフローを紹介します。
+exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 translation-type: tm+mt
-source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 5%
 
 ---
-
 
 # データフローの概要
 
@@ -32,4 +32,3 @@ Adobe Experience Platformでは、様々なソースからデータを取り込�
 ## データフローの監視
 
 データフローの監視は、プラットフォームAPIまたはプラットフォームUIを使用して行うことができます。 APIを使用してデータフローを監視する方法を学ぶには、[モニタリングデータフローAPIチュートリアル](./api/monitor.md)をお読みください。 プラットフォームUI内のデータフローを監視する方法を学ぶには、[sources](./ui/monitor-sources.md)の監視データフロー[およびdestinations](./ui/monitor-destinations.md)の監視データフローのチュートリアルをお読みください。
-
