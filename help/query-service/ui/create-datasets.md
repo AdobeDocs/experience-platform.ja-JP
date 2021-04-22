@@ -7,10 +7,10 @@ type: Tutorial
 description: Adobe Experience Platformクエリサービスを使用すると、UIからデータセットを作成できます。 作成したデータセットは、Data Lake内の他のデータセットと同様にアクセスでき、様々な使用例で使用できます。
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
 workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 43%
+ht-degree: 40%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 43%
 1. 接続されたクライアントを使用してクエリを記述し、出力を検証します。
 2. [!DNL Platform] UIにログインし、クエリに移動します。
 3. リストでクエリを探し、その行にカーソルを合わせます。
-4. 「**[!UICONTROL データセットを作成]**」をクリックします。![画像](../images/ui/output-dataset.png)
+4. 「**[!UICONTROL データセットを作成]**」を選択します。 ![画像](../images/ui/create-datasets/output-dataset.png)
 5. LDAP ID の後にデータセット名を入力します（一意である必要も、SQL セーフである必要もありません。システムは、ここで指定した名前に基づいて「テーブル名」を生成します）。
-6. データセットの説明を入力し、「**[!UICONTROL クエリを実行]**」をクリックします。![画像](../images/ui/run-query.png)
+6. データセットの説明を入力し、「**[!UICONTROL クエリを実行]**」を選択します。![画像](../images/ui/create-datasets/run-query.png)
 7. クエリの完了を確認し、データセットのリストページに移動して、作成したデータセットを確認します。
 
 作成したデータセットは、[!DNL Data Lake]内の他のデータセットと同様にアクセスし、様々な使用例で使用できます。
