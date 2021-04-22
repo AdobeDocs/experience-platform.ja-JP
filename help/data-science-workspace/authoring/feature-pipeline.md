@@ -6,7 +6,7 @@ type: Tutorial
 description: Adobe Experience Platformでは、カスタムフィーチャパイプラインを作成して作成し、Senei Machine Learning Framework Runtimeを通じて尺度を変更してフィーチャエンジニアリングを実行できます。 このドキュメントでは、フィーチャパイプラインにある各種クラスについて説明し、PySparkのModel Authoring SDKを使用してカスタムフィーチャパイプラインを作成するための手順を説明します。
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 28%
@@ -163,7 +163,6 @@ class MyDataLoader(DataLoader):
 DatasetTransformer は、入力 DataFrame を変換するロジックを提供し、新しい派生 DataFrame を返します。このクラスは、FeaturePipelineFactory と協働するように、または唯一の機能エンジニアリングコンポーネントとして動作するように実装できます。また、このクラスを実装しないことも可能です。
 
 次の例は、DatasetTransformerクラスを拡張したものです。
-
 
 **PySpark の例**
 
