@@ -7,7 +7,7 @@ type: Tutorial
 description: このチュートリアルでは、Senesie Machine Learning APIを使用して、モデルをサービスとして公開するプロセスについて説明します。
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 47%
@@ -39,7 +39,7 @@ ht-degree: 47%
 次の表に、このチュートリアルで使用される一般的な用語の概要を示します。
 
 | 用語 | 定義 |
---- | ---
+| --- | --- |
 | **機械学習インスタンス（ML インスタンス）** | 特定のテナント用の[!DNL Sensei]エンジンのインスタンス。特定のデータ、パラメーター、および[!DNL Sensei]コードを含みます。 |
 | **Experiment** | トレーニング Experiment Run、スコアリングExperiment Run、またはその両方を保持するための包括的なエンティティ。 |
 | **スケジュールに沿った Experiment** | トレーニング Experiment Run またはスコアリング Experiment Run の自動化を表す用語。これらの実験は、ユーザー定義のスケジュールに従って実行されます。 |
@@ -83,7 +83,7 @@ curl -X POST
 ```
 
 | プロパティ | 説明 |
---- | ---
+| --- | --- |
 | `mlInstanceId` | 既存のMLインスタンスのID。MLサービスの作成に使用するトレーニング・テストの実行は、この特定のMLインスタンスに対応する必要があります。 |
 | `trainingExperimentId` | MLインスタンスの識別に対応するテストの識別。 |
 | `trainingExperimentRunId` | MLサービスの公開に使用するトレーニング実験の実行。 |
