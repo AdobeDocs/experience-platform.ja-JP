@@ -7,7 +7,7 @@ type: Tutorial
 description: モデルインサイトフレームワークは、Data Science Workspace　のツールをデータサイエンティストに提供し、実験に基づく最適な機械学習モデルのための迅速で十分な情報に基づいた選択を可能にします。
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 88%
@@ -77,7 +77,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 次の表に、各クラスのデフォルト指標を示します。また、`evaluation.metric` 列の値を使用して、特定の指標を有効にすることもできます。
 
 | `evaluator.class` | デフォルトの指標 | `evaluation.metric` |
---- | --- | ---
+| --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `DefaultMultiClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX`<br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` |  - MAP（Mean Average Precision）<br>- 正規割引累積利益<br>- 平均逆数ランク<br>- 指標 K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
@@ -161,7 +161,7 @@ class Evaluator(AbstractEvaluator):
 [!DNL Sensei Model Insights Framework]は、機械学習アルゴリズムのタイプごとに1つのデフォルトテンプレートをサポートします。 次の表に、一般的な高レベルの機械学習アルゴリズムクラスと、対応する評価指標およびビジュアライゼーションを示します。
 
 | ML アルゴリズムの種類 | 評価指標 | ビジュアライゼーション |
---- | --- | ---
+| --- | --- | --- |
 | 回帰 | - RMSE<br>- MAPE<br>- MASE<br>- MAE | 予測値と実際の値のオーバーレイ曲線 |
 | バイナリ分類 |  — 混同行列<br>- Precision-recall<br>- 精度<br>- F　スコア（具体的にはF1、F2）<br>- AUC<br>- ROC | ROC 曲線と混同行列 |
 | 複数クラスの分類 |  — 混同行列<br>— 各クラス：<br>— precision-recall accuracy <br>- Fスコア（特にF1、F2） | ROC 曲線と混同行列 |
