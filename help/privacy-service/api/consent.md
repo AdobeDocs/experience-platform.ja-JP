@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Privacy ServiceAPIを使用して、Experience Cloudアプリに対する顧客の同意要求を管理する方法について説明します。
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -66,6 +66,8 @@ curl -X POST \
 | `entities` | 同意要求が適用されるユーザーを示すオブジェクトの配列。 各オブジェクトには、`namespace`と`values`の配列が含まれ、各名前空間に対応付けられます。 |
 | `nameSpace` | `entities`配列内の各オブジェクトには、Privacy ServiceAPIで認識される[標準ID名前空間](./appendix.md#standard-namespaces)の1つが含まれている必要があります。 |
 | `values` | 指定された`nameSpace`に対応する、各ユーザーの値の配列。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
