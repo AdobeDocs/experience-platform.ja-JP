@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Privacy ServiceAPIを使用してExperience Cloudアプリのプライバシージョブを管理する方法について説明します。
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 66%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -41,6 +41,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{REGULATION}` | クエリする規制の種類。次の値を指定できます。 <ul><li>`gdpr` (ヨーロッパ和集合)</li><li>`ccpa` （カリフォルニア）</li><li>`lgpd_bra` （ブラジル）</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` （タイ）</li></ul> |
 | `{PAGE}` | 0 を基準とする番号を使用した、表示するデータのページ。デフォルトは `0` です。 |
 | `{SIZE}` | 各ページに表示する結果の数。デフォルトは `1` で、最大は `100` です。最大値を超えると、API は 400 コードエラーを返します。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
@@ -160,6 +162,8 @@ curl -X POST \
 | `analyticsDeleteMethod` | Adobe Analytics での個人データの処理方法を指定するオプションのプロパティです。この属性には、次の 2 つの値を指定できます。 <ul><li>`anonymize`：特定のユーザー ID のコレクションによって参照されるすべてのデータは匿名になります。`analyticsDeleteMethod` を省略した場合のデフォルトの動作です。</li><li>`purge`：すべてのデータが完全に削除されます。</li></ul> |
 | `regulation` **(必須)** | プライバシー業務に関する規則。 次の値を指定できます。 <ul><li>`gdpr` (ヨーロッパ和集合)</li><li>`ccpa` （カリフォルニア）</li><li>`lgpd_bra` （ブラジル）</li><li>`nzpa_nzl` （ニュージーランド）</li><li>`pdpa_tha` （タイ）</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 **応答** 
 
 正常な応答は、新しく作成されたジョブの詳細を返します。
@@ -210,6 +214,8 @@ curl -X POST \
 | --- | --- |
 | `jobId` | ジョブの読み取り専用の、一意のシステム生成 ID。この値は、特定のジョブを検索する次の手順で使用されます。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ジョブリクエストの送信が完了したら、次の、[ジョブのステータスを確認する](#check-status)手順に進むことができます。
 
 ## ジョブのステータスの確認 {#check-status}
@@ -229,6 +235,8 @@ GET /jobs/{JOB_ID}
 | パラメーター | 説明 |
 | --- | --- |
 | `{JOB_ID}` | 検索するジョブのID。 [ジョブ](#create-job)および[すべてのジョブ](#list)をリストするジョブとの作成に成功したAPI応答で、`jobId`の下にこのIDが返されます。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
@@ -326,6 +334,8 @@ curl -X GET \
 | `productStatusResponse.results` | 特定のステータスの場合、一部の製品は`responseMsgDetail`では扱われない追加情報を提供する`results`オブジェクトを返す場合があります。 |
 | `downloadURL` | ジョブのステータスが `complete` の場合、この属性はジョブの結果を ZIP ファイルとしてダウンロードする URL を指定します。このファイルは、ジョブの完了後 60 日間ダウンロードできます。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### ジョブステータスカテゴリ{#status-categories}
 
 次の表に、様々なジョブステータスカテゴリと、それに対応する意味を示します。
@@ -336,6 +346,8 @@ curl -X GET \
 | `processing` | アプリケーションはジョブを確認し、現在処理中です。 |
 | `submitted` | ジョブは、該当するすべてのアプリケーションに送信されます。 |
 | `error` | ジョブを処理できませんでした。個々のジョブの詳細を取得することで、より具体的な情報を取得できます。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
