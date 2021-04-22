@@ -6,7 +6,7 @@ topic-legacy: overview
 description: 製品購入予測レシピを使用すると、特定のタイプの顧客購入イベント（製品購入など）の確率を予測できます。
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 94%
@@ -36,7 +36,7 @@ ht-degree: 94%
 このレシピでは、[XDM スキーマ](../../xdm/home.md)を使用してデータをモデル化します。このレシピに使用するスキーマを次に示します。
 
 | フィールド名 | タイプ |
---- | ---
+| --- | --- |
 | userId | 文字列 |
 | genderRatio | 数値 |
 | ageY | 数値 |
