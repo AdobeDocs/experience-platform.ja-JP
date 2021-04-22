@@ -6,10 +6,10 @@ description: Privacy ServiceAPIを使用すると、開発者は、法的なプ�
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 27%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -35,9 +35,9 @@ Adobe Experience Platform[!DNL Privacy Service]は、RESTful APIとユーザー�
 
 [!DNL Privacy Service] APIを呼び出すには、まずアクセス資格情報を収集して、必要なヘッダーで使用する必要があります。
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 これには、Adobe Admin Consoleで[!DNL Experience Platform]の開発者権限を取得し、Adobeデベロッパーコンソールで資格情報を生成する必要があります。
 
