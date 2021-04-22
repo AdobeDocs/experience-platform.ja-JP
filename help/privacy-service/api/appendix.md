@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: このドキュメントには、Privacy ServiceAPIを使用するための追加情報が含まれています。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -25,15 +25,17 @@ ht-degree: 0%
 
 | ID タイプ | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| 電子メール | 電子メール | 6 |
-| 電話番号 | 電話番号 | 7 |
-| Adobe Advertising Cloud ID | AdCloud | 411 |
-| Adobe Audience Manager UUID | CORE | 0 |
-| Adobe Experience Cloud ID | ECID | 4 |
-| Adobe Target ID | TNTID | 9 |
-| [!DNL Apple] 広告主の ID | IDFA | 20915 |
-| [!DNL Google] 広告 ID | GAID | 20914 |
-| [!DNL Windows] AID | WAID | 8 |
+| 電子メール | `Email` | `6` |
+| Phone | `Phone` | `7` |
+| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| Adobe Audience Manager UUID | `CORE` | `0` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
+| Adobe Target ID | `TNTID` | `9` |
+| [!DNL Apple] 広告主の ID | `IDFA` | `20915` |
+| [!DNL Google] 広告 ID | `GAID` | `20914` |
+| [!DNL Windows] AID | `WAID` | `8` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
@@ -47,13 +49,15 @@ ht-degree: 0%
 
 | 修飾子 | 定義 |
 | --------- | ---------- |
-| standard | 個々の組織データセット（E メールアドレス、電話番号など）に関連付けられていない、グローバルに定義された標準名前空間の 1 つです。名前空間 ID が指定されています。 |
-| custom | 組織のコンテキストで作成された一意の名前空間で、[!DNL Experience Cloud]間で共有されるものではありません。 この値は、検索の対象となるわかりやすい名前（「name」フィールド）を表します。名前空間 ID が指定されています。 |
-| integrationCode | 「custom」に似ていますが、特に、検索対象となるデータソースの統合コードとして定義されています。名前空間 ID が指定されています。 |
-| namespaceId | 値が、名前空間サービスを通じて作成またはマッピングされた名前空間の実際の ID であることを示します。 |
-| unregistered | 名前空間サービスで定義されておらず、「現状のまま」解釈されるフリーフォーム文字列です。この種の名前空間を処理するアプリケーションは、名前空間をチェックし、会社のコンテキストおよびデータセットに適している場合は処理します。名前空間 IDが指定されていません。 |
-| analytics | 名前空間サービスではなく、[!DNL Analytics]で内部的にマップされるカスタム名前空間。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
-| target | [!DNL Target]が内部的に理解したカスタム名前空間で、名前空間サービスには含まれません。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
+| `standard` | 個々の組織データセット（E メールアドレス、電話番号など）に関連付けられていない、グローバルに定義された標準名前空間の 1 つです。名前空間 ID が指定されています。 |
+| `custom` | 組織のコンテキストで作成された一意の名前空間で、[!DNL Experience Cloud]間で共有されるものではありません。 この値は、検索の対象となるわかりやすい名前（「name」フィールド）を表します。名前空間 ID が指定されています。 |
+| `integrationCode` | 「custom」に似ていますが、特に、検索対象となるデータソースの統合コードとして定義されています。名前空間 ID が指定されています。 |
+| `namespaceId` | 値が、名前空間サービスを通じて作成またはマッピングされた名前空間の実際の ID であることを示します。 |
+| `unregistered` | 名前空間サービスで定義されておらず、「現状のまま」解釈されるフリーフォーム文字列です。この種の名前空間を処理するアプリケーションは、名前空間をチェックし、会社のコンテキストおよびデータセットに適している場合は処理します。名前空間 IDが指定されていません。 |
+| `analytics` | 名前空間サービスではなく、[!DNL Analytics]で内部的にマップされるカスタム名前空間。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
+| `target` | [!DNL Target]が内部的に理解したカスタム名前空間で、名前空間サービスには含まれません。 これは、名前空間 ID なしで、元のリクエストで指定されたとおりに直接渡されます。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 使用可能な製品値
 
@@ -70,3 +74,5 @@ ht-degree: 0%
 | Adobe Target | `Target` |
 | 顧客レコードサービス | `CRS` |
 | リアルタイム顧客プロファイル | `ProfileService` |
+
+{style=&quot;table-layout:auto&quot;}
