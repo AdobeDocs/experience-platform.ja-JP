@@ -6,7 +6,7 @@ topic-legacy: overview
 description: 製品レコメンデーションレシピを使用すると、顧客のニーズや関心に合わせてカスタマイズした製品レコメンデーションを提供できます。正確な予測モデルを使用すると、顧客の購入履歴から、興味を持つ可能性のある製品に関するインサイトを得ることができます。
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 90%
@@ -39,7 +39,7 @@ Adobe Experience Platform ラボのチュートリアル（下のラボリンク
 ### 入力データスキーマ
 
 | フィールド名 | タイプ |
---- | ---
+| --- | --- |
 | itemId | 文字列 |
 | interactionType | 文字列 |
 | timestamp | 文字列 |
@@ -48,7 +48,7 @@ Adobe Experience Platform ラボのチュートリアル（下のラボリンク
 ### 出力データスキーマ
 
 | フィールド名 | タイプ |
---- | ---
+| --- | --- |
 | recommendations | 文字列 |
 | userId | 整数 |
 
