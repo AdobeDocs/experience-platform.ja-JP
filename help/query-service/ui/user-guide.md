@@ -6,10 +6,10 @@ topic-legacy: query editor
 description: クエリエディターは、Adobe Experience Platformクエリサービスが提供するインタラクティブなツールです。このツールを使用すると、Experience Platformユーザーインターフェイス内で顧客体験データのクエリを作成、検証、実行できます。 クエリエディターでは、分析およびデータ調査のためのクエリを開発できます。また、開発目的でインタラクティブクエリを実行できるほか、非インタラクティブクエリを実行して Experience Platform のデータセットに入力することもできます。
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
 workflow-type: tm+mt
 source-wordcount: '1082'
-ht-degree: 53%
+ht-degree: 50%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 53%
 
 [!DNL Query Editor] が初期化され、開かれた [!DNL Query Service] ときに接続されるまでに数秒かかります。クエリサービスに接続されると、コンソールに示されます（以下を参照）。エディターがクエリサービスに接続される前にクエリを実行しようとすると、接続が完了するまで実行が待機されます。
 
-![画像](../images/queries/query-editor-overview/initializing-connection.png)
+![画像](../images/ui/query-editor/connect.png)
 
 ### [!DNL Query Editor]からのクエリの実行方法
 
@@ -39,15 +39,15 @@ ht-degree: 53%
 
 ### [!DNL Query Editor] へのアクセス
 
-[!DNL Experience Platform] UIで、左側のナビゲーションメニューの&#x200B;**[!UICONTROL クエリ]**&#x200B;をクリックして[!DNL Query Service]ワークスペースを開きます。 次に、画面の右上にある「**[!UICONTROL クエリを作成]**」をクリックして、クエリの記述を開始します。このリンクは[!DNL Query Service]ワークスペースの任意のページから利用できます。
+[!DNL Experience Platform] UIで、左側のナビゲーションメニューの&#x200B;**[!UICONTROL クエリ]**&#x200B;を選択して[!DNL Query Service]ワークスペースを開きます。 次に、画面の右上にある「クエリ&#x200B;**[!UICONTROL 作成]**」を選択して、クエリを書き込む開始を選択します。 このリンクは[!DNL Query Service]ワークスペースの任意のページから利用できます。
 
-![画像](../images/queries/query-editor-overview/create-query.png)
+![画像](../images/ui/query-editor/create-query.png)
 
 ### クエリの記述
 
 [!UICONTROL クエリエディターは、クエリをできるだけ簡単に記述できるように構成されています。]次のスクリーンショットは、UI でエディターがどのように表示されるかを示しています。ここでは、**プレイする**&#x200B;ボタンと SQL 入力フィールドがハイライトされています。
 
-![画像](../images/queries/query-editor-overview/editor.png)
+![画像](../images/ui/query-editor/editor.png)
 
 開発時間を最小限に抑えるために、返される行を制限してクエリを開発することをお勧めします。たとえば、`SELECT fields FROM table WHERE conditions LIMIT number_of_rows` のように設定します。クエリが目的どおりの出力を生成することを確認したら、制限を解除して、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行し、データセットを生成します。
 
@@ -55,37 +55,37 @@ ht-degree: 53%
 
 - **構文の自動ハイライト：** SQL の読み取りと構成が容易になります。
 
-![画像](../images/queries/query-editor-overview/syntax-highlight.png)
+![画像](../images/ui/query-editor/syntax-highlight.png)
 
 - **SQL キーワードのオートコンプリート：**&#x200B;クエリの入力を開始し、矢印キーを使用して目的の用語に移動して、**Enter** キーを押します。
 
-![画像](../images/queries/query-editor-overview/syntax-auto.png)
+![画像](../images/ui/query-editor/syntax-auto.png)
 
 - **テーブルとフィールドのオートコンプリート**：`SELECT` 元のテーブル名の入力を開始し、矢印キーを使用して目的の表に移動して、**Enter** キーを押します。テーブルを選択すると、オートコンプリートによってそのテーブルのフィールドが認識されます。
 
-![画像](../images/queries/query-editor-overview/tables-auto.png)
+![画像](../images/ui/query-editor/tables-auto.png)
 
 ### エラーの検出
 
 [!DNL Query Editor] クエリの書き込み時に自動的に検証され、汎用のSQL検証と特定の実行検証が提供されます。以下の画像のように、クエリの下に赤い下線が表示される場合は、クエリ内にエラーがあります。
 
-![画像](../images/queries/query-editor-overview/syntax-error-highlight.png)
+![画像](../images/ui/query-editor/syntax-error-highlight.png)
 
 エラーが検出された場合、SQL コードの上にカーソルを置くと、特定のエラーメッセージが表示されます。
 
-![画像](../images/queries/query-editor-overview/linting-error.png)
+![画像](../images/ui/query-editor/linting-error.png)
 
 ### クエリの詳細
 
 [!DNL Query Editor]でクエリを表示している間、**[!UICONTROL クエリの詳細]**&#x200B;パネルには、選択したクエリを管理するためのツールが表示されます。
 
-![画像](../images/queries/query-editor-overview/query-details.png)
+![画像](../images/ui/query-editor/query-details.png)
 
-このパネルでは、UI から出力データセットを直接生成したり、表示されたクエリを削除したり、クエリに名前を付けたりすることができます。また、「**[!UICONTROL SQL クエリ]**」タブには、SQL コードが簡単にコピーできる形式で表示されます。このパネルには、クエリの最終変更日時や最終変更者（該当する場合）などの有効なメタデータも表示されます。データセットを生成するには、「**[!UICONTROL データセットを出力]**」をクリックします。**[!UICONTROL データセットを出力]**&#x200B;ダイアログが表示されます。名前と説明を入力し、「**[!UICONTROL クエリを実行]**」をクリックします。新しいデータセットは、[!DNL Platform]の[!DNL Query Service]ユーザーインターフェイスの&#x200B;**[!UICONTROL Datasets]**&#x200B;タブに表示されます。
+このパネルでは、UI から出力データセットを直接生成したり、表示されたクエリを削除したり、クエリに名前を付けたりすることができます。また、「**[!UICONTROL SQL クエリ]**」タブには、SQL コードが簡単にコピーできる形式で表示されます。このパネルには、クエリの最終変更日時や最終変更者（該当する場合）などの有効なメタデータも表示されます。データセットを生成するには、**[!UICONTROL 出力データセット]**&#x200B;を選択します。 **[!UICONTROL データセットを出力]**&#x200B;ダイアログが表示されます。名前と説明を入力し、[**[!UICONTROL クエリを実行]**]を選択します。 新しいデータセットは、[!DNL Platform]の[!DNL Query Service]ユーザーインターフェイスの&#x200B;**[!UICONTROL Datasets]**&#x200B;タブに表示されます。
 
 ### クエリの保存
 
-[!DNL Query Editor] には、クエリを保存して後で操作できる保存関数があります。クエリを保存するには、[!DNL Query Editor]の右上隅にある「**[!UICONTROL 保存]**」をクリックします。 クエリを保存する前に、**[!UICONTROL クエリの詳細]**&#x200B;パネルを使用してクエリに名前を付ける必要があります。
+[!DNL Query Editor] には、クエリを保存して後で操作できる保存関数があります。クエリを保存するには、[!DNL Query Editor]の右上隅にある「**[!UICONTROL 保存]**」を選択します。 クエリを保存する前に、**[!UICONTROL クエリの詳細]**&#x200B;パネルを使用してクエリに名前を付ける必要があります。
 
 ### 以前のクエリを検索する方法
 
@@ -99,13 +99,13 @@ ht-degree: 53%
 
 ## クエリエディターを使用してクエリを実行する
 
-[!DNL Query Editor]でクエリを実行するには、エディターでSQLを入力するか、「**[!UICONTROL ログ]**」または「**[!UICONTROL 参照]**」タブから前のクエリを読み込み、**再生**&#x200B;をクリックします。 クエリ実行のステータスは下の「**[!UICONTROL コンソール]**」タブに表示され、出力データは「**[!UICONTROL 結果]**」タブに表示されます。
+[!DNL Query Editor]でクエリを実行するには、エディターでSQLを入力するか、「**[!UICONTROL ログ]**」または「**[!UICONTROL 参照]**」タブから前のクエリを読み込み、**再生**&#x200B;を選択します。 クエリ実行のステータスは下の「**[!UICONTROL コンソール]**」タブに表示され、出力データは「**[!UICONTROL 結果]**」タブに表示されます。
 
 ### コンソール
 
 コンソールは[!DNL Query Service]の状態と操作に関する情報を提供します。 コンソールには、[!DNL Query Service]への接続ステータス、実行中のクエリ操作、およびこれらのクエリから発生するエラーメッセージが表示されます。
 
-![画像](../images/queries/query-editor-overview/console.png)
+![画像](../images/ui/query-editor/console.png)
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ ht-degree: 53%
 
 クエリが完了すると、結果が「**[!UICONTROL コンソール]**」タブの横の「**[!UICONTROL 結果]**」タブに表示されます。このビューには、クエリの出力が表形式で出力され、最大 100 行まで表示されます。このビューを使用すると、クエリが目的どおりの出力を生成することを確認できます。クエリでデータセットを生成するには、返される行の制限を解除し、`CREATE TABLE tablename AS SELECT` と設定してクエリを実行します。[!DNL Query Editor]のクエリ結果からデータセットを生成する方法については、[データセットの生成のチュートリアル][query-service-create-datasets]を参照してください。
 
-![画像](../images/queries/query-editor-overview/query-results.png)
+![画像](../images/ui/query-editor/query-results.png)
 
 ## [!DNL Query Service]チュートリアルビデオでクエリを実行
 
