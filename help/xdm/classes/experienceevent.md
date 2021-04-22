@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、XDM ExperienceEventクラスの概要を説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '869'
 ht-degree: 6%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 6%
 | `eventMergeId` | レコードを作成した、取り込んだバッチのID。 このフィールドは、データ取り込み時にシステムによって自動的に入力されます。 |
 | `eventType` | レコードの主イベントタイプを示す文字列。 受け入れられた値とその定義は、[付録セクション](#eventType)に記載されています。 |
 | `identityMap` | イベントが適用される個々の名前空間IDのセットが含まれるmapフィールド。 このフィールドは、IDデータが取り込まれると自動的に更新されます。 このフィールドを[リアルタイム顧客プロファイル](../../profile/home.md)に適切に利用するため、データ操作でフィールドの内容を手動で更新しないでください。<br /><br />使用事例の詳細については、「スキーマ [合成の](../schema/composition.md#identityMap) 基本」の「IDマップ」の節を参照してください。 |
-| `timestamp` | イベントまたは観測が発生した時刻。[RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)に従ってフォーマットされます。 |
+| `timestamp` | イベントが発生した時のISO 8601タイムスタンプ。[RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)に従ってフォーマットされます。<br><br>このタイムスタンプは、イベント自体の観察を **** 示すものであり、過去に発生する必要があります。セグメントの使用例で、将来発生する可能性のあるタイムスタンプ（出発日など）を使用する必要がある場合、これらの値はエクスペリエンスイベントスキーマの他の場所で制限する必要があります。 |
 
 ## 互換性のあるミックスイン{#mixins}
 
