@@ -7,10 +7,10 @@ type: Tutorial
 description: このチュートリアルでは、Senesie Machine Learning API呼び出しを使用して、モデルを作成、トレーニング、評価する方法について説明します。
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1237'
-ht-degree: 94%
+source-wordcount: '1235'
+ht-degree: 92%
 
 ---
 
@@ -41,16 +41,14 @@ API を使用したモデルのトレーニングと評価に必要なエンジ�
 
 >[!NOTE]
 >
->「エンジン」、「MLInstance」、「MLService」、「Experiment」、「モデル」という用語は、UI では別の用語になります。次の表に、UI から見た場合の違いを示します。
-> 
-> | UI 用語 | API 用語 |
-> --- | ---
-> | レシピ | エンジン |
-> | モデル | MLInstance |
-> | トレーニングの実行 | Experiment |
-> | サービス | MLService |
+>「エンジン」、「MLInstance」、「MLService」、「Experiment」、「モデル」という用語は、UI では別の用語になります。UIからアクセスしている場合、次の表に相違点を示します。
 
-
+| UI 用語 | API 用語 |
+| --- | --- |
+| レシピ | エンジン |
+| モデル | MLInstance |
+| トレーニングの実行 | Experiment |
+| サービス | MLService |
 
 ### MLInstance の作成
 
@@ -128,7 +126,7 @@ curl -X POST \
 >
 >`{JSON_PAYLOAD}` では、トレーニングとスコアリングに使用するパラメーターを `tasks` 配列で定義します。`{ENGINE_ID}` は使用するエンジンの ID で、`tag` フィールドはインスタンスの識別に使用するオプションのパラメーターです。
 
-レスポンスには、作成された MLInstance を表す `{INSTANCE_ID}` が含まれます。設定が異なる複数のモデル MLInstance を作成できます。
+応答には、作成されたMLInstanceを表す`{INSTANCE_ID}`が含まれます。 設定が異なる複数のモデル MLInstance を作成できます。
 
 **応答** 
 
