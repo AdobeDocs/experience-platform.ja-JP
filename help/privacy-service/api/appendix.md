@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: このドキュメントには、Privacy ServiceAPIを使用するための追加情報が含まれています。
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 72%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -60,13 +60,13 @@ ht-degree: 72%
 ジョブ作成リクエストの `include` 属性でアドビ製品を指定するために使用できる値の概要を次の表に示します。
 
 | 製品 | `include` 属性で使用する値 |
---- | ---
-| Adobe Advertising Cloud | &quot;AdCloud&quot; |
-| Adobe Analytics | &quot;Analytics&quot; |
-| Adobe Audience Manager | &quot;AudienceManager&quot; |
-| Adobe Campaign | &quot;Campaign&quot; |
-| Adobe Experience Platform | &quot;aepDataLake&quot; |
-| Adobe Primetime Authentication | &quot;primetimeAuthentication&quot; |
-| Adobe Target | &quot;Target&quot; |
-| 顧客レコードサービス | &quot;CRS&quot; |
-| リアルタイム顧客プロファイル | &quot;ProfileService&quot; |
+| --- | --- |
+| Adobe Advertising Cloud | `AdCloud` |
+| Adobe Analytics | `Analytics` |
+| Adobe Audience Manager | `AudienceManager` |
+| Adobe Campaign | `Campaign` |
+| Adobe Experience Platform | `aepDataLake` |
+| Adobe Primetime Authentication | `primetimeAuthentication` |
+| Adobe Target | `Target` |
+| 顧客レコードサービス | `CRS` |
+| リアルタイム顧客プロファイル | `ProfileService` |
