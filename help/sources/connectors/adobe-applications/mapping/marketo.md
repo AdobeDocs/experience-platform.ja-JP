@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Marketo Engageソースのフィールドのマッピング
 topic-legacy: overview
 description: 以下の表に、Marketoデータセット内のフィールドと、対応するXDMフィールドとのマッピングを示します。
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '456'
 ht-degree: 3%
 
 ---
-
 
 # （ベータ版） [!DNL Marketo Engage]フィールドのマッピング
 
@@ -158,6 +158,7 @@ ht-degree: 3%
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,8 +178,8 @@ ht-degree: 3%
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | プライマリID |
-| `marketingListID` | `staticListID` | Relationship |
+| `staticListMemberID` | `marketingListMemberID` | プライマリID |
+| `staticListID` | `marketingListID` | Relationship |
 | `personID` | `personID` | Relationship |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -234,7 +235,7 @@ ht-degree: 3%
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Salesforce統合を使用する場合にのみ推奨されます。 |
+| `mktoCdpSourceCampaignId` | `campaignID` | Salesforce統合を使用する場合にのみ推奨されます。 |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -279,7 +280,7 @@ ht-degree: 3%
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | セカンダリ同一性 |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | セカンダリ同一性 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -308,8 +309,13 @@ ht-degree: 3%
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>`to_object('ECID',arrays_to_objects('id',explode(ecids)))`ソースフィールドは、プラットフォームUIの[!UICONTROL 追加計算済みフィールド]オプションを使用して追加する必要がある計算済みフィールドです。 詳細については、[計算済みフィールドの追加](../../../../ingestion/tutorials/map-a-csv-file.md)のチュートリアルを参照してください。
 
 ## 次の手順
 
