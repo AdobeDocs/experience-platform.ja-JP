@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Adobe Experience Platformセグメントサービスは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 23%
@@ -32,7 +32,7 @@ ht-degree: 23%
 
 ## 概要
 
-[[!DNL Experience Platform] UI](http://platform.adobe.com/)で、左側のナビゲーションの「**[!UICONTROL セグメント]**」を選択し、「**[!UICONTROL 概要]**」タブを開きます。 このタブには、セグメントの理解と操作の開始に役立つドキュメントとビデオへのリンクが含まれています。
+[[!DNL Experience Platform] UI](https://platform.adobe.com/)で、左側のナビゲーションの「**[!UICONTROL セグメント]**」を選択し、「**[!UICONTROL 概要]**」タブを開きます。 このタブには、セグメントの理解と操作の開始に役立つドキュメントとビデオへのリンクが含まれています。
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -44,14 +44,14 @@ ht-degree: 23%
 
 この表示リストでは、分類、切り捨て、プロファイル数、評価方法、作成日、最終変更日など、セグメント定義に関する情報を説明します。
 
-内訳には、次の各ステータスに属するプロファイルの割合を示す棒グラフが表示されます。[!UICONTROL 入力]、[!UICONTROL 実現]、[!UICONTROL 終了]。
+内訳には、次の各ステータスに属するプロファイルの割合を示す棒グラフが表示されます。[!UICONTROL 実現]、[!UICONTROL 既存]、[!UICONTROL 既存]。
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | ステータス | 説明 |
 | ------ | ----------- |
-| 入力済み | セグメント内の新しいプロファイル。 |
-| 実現 | セグメント内に残った既存のプロファイル。 |
+| 実現 | セグメント内の新しいプロファイル。 |
+| 既存 | セグメント内に残った既存のプロファイル。 |
 | 終了 | セグメントから離れる既存のプロファイル。 |
 
 チャーンは、セグメント定義内でセグメントジョブを最後に実行した時と比較して変化するプロファイルの割合を表し、プロファイル数は、そのセグメントに該当するプロファイルの合計数を表します。
