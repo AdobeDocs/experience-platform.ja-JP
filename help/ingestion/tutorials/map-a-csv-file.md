@@ -7,7 +7,7 @@ type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformのユーザーインターフェイスを使用してCSVファイルをXDMスキーマにマップする方法について説明します。
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 0e79d339ddc0301486ea3e53a3fd52877ff6a2c8
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 14%
@@ -85,7 +85,7 @@ CSVデータを新しいデータセットに取り込むには、**[!UICONTROL 
 
 マッピングの1つを削除する場合は、そのマッピングの上にマウスポインターを置いて、マイナスアイコンを選択します。
 
-### 追加計算フィールド
+### 追加計算済みフィールド{#add-calculated-field}
 
 計算済みフィールドでは、入力スキーマーの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して、参照しやすくすることができます。
 
