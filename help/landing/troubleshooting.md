@@ -8,10 +8,10 @@ topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 70%
+source-wordcount: '1768'
+ht-degree: 68%
 
 ---
 
@@ -179,6 +179,16 @@ UI と API のどちらを使用しているかによって、次の必要シス
 
 このエラーメッセージは、POST、PUT、PATCH リクエストの `Content-Type` ヘッダーが無効か、見つからない場合に表示されます。ヘッダーがリクエストに含まれ、その値が `application/json` であることを確認します。
 
+### ユーザー領域が見つかりません
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+このエラーメッセージは、アカウント（指定した認証資格情報で表される）がExperience Platform用の製品プロファイルに関連付けられていない場合に表示されます。 プラットフォームAPI認証チュートリアルの[アクセス資格情報の生成](./api-authentication.md#authentication-for-each-session)の手順に従って、アカウントにプラットフォームを追加し、それに応じて認証資格情報を更新します。
 
 ## サービストラブルシューティングディレクトリ {#service-troubleshooting-directory}
 
