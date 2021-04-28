@@ -5,9 +5,9 @@ type: Documentation
 description: このページには、許可リストに追加できるIP範囲が含まれています。このIP範囲は、Experience PlatformからSFTPサーバー、AmazonS3、またはAzure Blobストレージに安全にデータをエクスポートするために使用できます。
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 translation-type: tm+mt
-source-git-commit: ac62ebcc7b00a96f718a3c39725bcf21ce3d56cf
+source-git-commit: 4cc7fb2714f6df8065a0531f7e507983940d662c
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 概要 {#overview}
 
-このページには、許可リストに追加できるIP範囲があり、Experience Platformから[SFTPサーバー](./sftp.md)、[AmazonS3](./amazon-s3.md)、または[Azure BLOB](./azure-blob.md)ストレージに安全にデータをエクスポートできます。
+このページには、許可リストに追加できるIP範囲が含まれており、Experience Platformから[SFTPサーバ](./sftp.md)に安全にデータをエクスポートできます。
 
 ネットワークアクセス制御は、ネットワークファイアウォールを通じて定義できます。 適切なIP範囲を指定することで、データ転送サービスのトラフィックを許可できます。
 
