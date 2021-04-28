@@ -2,14 +2,14 @@
 keywords: 電子メール；電子メール；電子メール；電子メールの送信先；oracleの検索；oracle
 title: OracleEloqua接続
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
+exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 33%
+source-wordcount: '674'
+ht-degree: 30%
 
 ---
-
 
 # [!DNL Oracle Eloqua] connection
 
@@ -20,6 +20,12 @@ ht-degree: 33%
 ## エクスポートの種類{#export-type}
 
 **プロファイルベース**  — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](../../ui/activate-destinations.md#select-attributes)。
+
+## IPアドレス許可リスト{#allow-list}
+
+SFTPストレージを使用して電子メールマーケティングの宛先を設定する場合、Adobeでは許可リストに特定のIP範囲を追加することを推奨します。
+
+許可リストにAdobeIPを追加する必要がある場合は、[IPアドレスの許可リストを参照して、クラウドストレージの宛先](../cloud-storage/ip-address-allow-list.md)を確認してください。
 
 ## 宛先に接続 {#connect-destination}
 
