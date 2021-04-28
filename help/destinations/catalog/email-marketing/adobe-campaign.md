@@ -2,14 +2,14 @@
 keywords: 電子メール；電子メール；電子メール；電子メールの送信先；アドビのキャンペーン;キャンペーン
 title: Adobe Campaign接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
+exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '873'
 ht-degree: 21%
 
 ---
-
 
 # Adobe Campaign接続
 
@@ -23,6 +23,12 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 **プロファイルベース**  — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 **[!UICONTROL 宛先アクティベーションワークフローの]** 属性を [選択手順で選択され](../../ui/activate-destinations.md#select-attributes)ます。
 
+## IPアドレス許可リスト{#allow-list}
+
+SFTPストレージを使用して電子メールマーケティングの宛先を設定する場合、Adobeでは許可リストに特定のIP範囲を追加することを推奨します。
+
+許可リストにAdobeIPを追加する必要がある場合は、[IPアドレスの許可リストを参照して、クラウドストレージの宛先](../cloud-storage/ip-address-allow-list.md)を確認してください。
+
 ## 宛先の接続 {#connect-destination}
 
 **[!UICONTROL 接続]**/**[!UICONTROL 宛先]**&#x200B;で、「Adobe Campaign」を選択し、「**[!UICONTROL 設定]**」を選択します。
@@ -31,7 +37,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 >
 >この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「[!UICONTROL アクティブ化]」と「[!UICONTROL 設定]」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
-![Adobe Campaignに接続](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
+![Adobe Campaign への接続](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
 接続先ワークフローの&#x200B;**[!UICONTROL アカウント]**&#x200B;手順で、ストレージの場所に対して&#x200B;**[!UICONTROL 接続の種類]**&#x200B;を選択します。 Adobe Campaignの場合は、**[!UICONTROL AmazonS3]**、**[!UICONTROL SFTP with Password]**、**[!UICONTROL SFTP with SSH Key]**、**[!UICONTROL Azure Blob]**&#x200B;のいずれかを選択できます。 Adobe Campaignにデータを送信するには、[!DNL Amazon S3]または[!DNL Azure Blob]を使用することをお勧めします。 接続タイプに応じて以下の情報を入力し、「**[!UICONTROL 接続]**」を選択します。
 
