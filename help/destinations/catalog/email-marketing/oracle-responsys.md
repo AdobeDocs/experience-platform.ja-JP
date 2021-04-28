@@ -2,14 +2,14 @@
 keywords: 電子メール；電子メール；電子メール；電子メールの送信先；oracleの応答先
 title: Oracle応答
 description: Responsys は、Oracle が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向け電子メールマーケティングツールで、電子メール、モバイル、ディスプレイおよびソーシャルでのインタラクションをパーソナライズします。
+exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 31%
+source-wordcount: '618'
+ht-degree: 28%
 
 ---
-
 
 # [!DNL Oracle Responsys] connection
 
@@ -22,6 +22,12 @@ ht-degree: 31%
 ## エクスポートの種類{#export-type}
 
 **プロファイルベース**  — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](../../ui/activate-destinations.md#select-attributes)。
+
+## IPアドレス許可リスト{#allow-list}
+
+SFTPストレージを使用して電子メールマーケティングの宛先を設定する場合、Adobeでは許可リストに特定のIP範囲を追加することを推奨します。
+
+許可リストにAdobeIPを追加する必要がある場合は、[IPアドレスの許可リストを参照して、クラウドストレージの宛先](../cloud-storage/ip-address-allow-list.md)を確認してください。
 
 ## 宛先の接続 {#connect-destination}
 
