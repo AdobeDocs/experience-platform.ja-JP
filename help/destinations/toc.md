@@ -5,9 +5,9 @@ user-guide-description: チャネル間のマーケティングキャンペー�
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 feature: 宛先
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 59%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 59%
    * クラウドストレージの宛先 {#cloud-storage}
       * [クラウドストレージの宛先の概要](./catalog/cloud-storage/overview.md)
       * [クラウドストレージの保存先の作成](./catalog/cloud-storage/workflow.md)
-      * [AmazonKinesis接続](./catalog/cloud-storage/amazon-kinesis.md)
+      * [（ベータ）AmazonKinesis接続](./catalog/cloud-storage/amazon-kinesis.md)
       * [AmazonS3接続](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob接続](./catalog/cloud-storage/azure-blob.md)
       * [（ベータ版）Azureイベントハブ接続](./catalog/cloud-storage/azure-event-hubs.md)
@@ -122,7 +122,7 @@ ht-degree: 59%
       * [ソーシャルターゲットの作成](./catalog/social/workflow.md)
       * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
       * [Facebook接続](./catalog/social/facebook.md)
-      * [Linkedinがオーディエンス接続に一致しました](./catalog/social/linkedin.md)
+      * [linkedInが一致したオーディエンス接続](./catalog/social/linkedin.md)
    * 調査先 {#survey}
       * [調査先の概要](./catalog/survey/overview.md)
       * [Forese拡張の宛先](./catalog/survey/foresee.md)
