@@ -1,15 +1,15 @@
 ---
 keywords: Azureイベントハブの宛先；azureイベントハブ；azure eventhub
-title: （ベータ版）Azureイベントハブ接続
-description: Azureイベントハブストレージへのリアルタイムアウトバウンド接続を作成して、Experience Platformからデータをストリーミングします。
+title: （ベータ版）!DNL Azureイベントハブ]接続
+description: Experience Platformからデータをストリーミングするために、!DNL Azureイベントハブ]ストレージへのリアルタイム送信接続を作成します。
+exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '545'
 ht-degree: 6%
 
 ---
-
 
 # （ベータ版） [!DNL Azure Event Hubs]接続
 
@@ -113,3 +113,4 @@ ht-degree: 6%
 >* [Azureイベントハブに接続し、Flow Service APIを使用してデータをアクティブにする](../../api/streaming-destinations.md)
 >* [AWSKinesisの宛先](./amazon-kinesis.md)
 >* [宛先のタイプとカテゴリ](../../destination-types.md)
+
