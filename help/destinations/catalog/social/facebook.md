@@ -4,10 +4,10 @@ title: Facebook接続
 description: ハッシュされた電子メールに基づいて、オーディエンスのターゲット設定、パーソナライゼーション、および抑制のために、Facebookキャンペーンのプロファイルをアクティブにします。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 16%
+source-wordcount: '1102'
+ht-degree: 17%
 
 ---
 
@@ -36,12 +36,6 @@ ht-degree: 16%
 ソーシャルメディア全体で顧客をターゲットするには、CRMの顧客データをAdobe Experience Platformに乗せ、電子メールアドレスを識別子として使用します。
 
 次に、関連するメンバーシップIDや顧客層を含むオフラインデータを使用して、[!DNL Facebook]宛先を通じてターゲットできる新しいオーディエンスセグメントを作成できます。
-
-## [!DNL Facebook]宛先{#data-governance}のデータ・ガバナンス
-
->[!IMPORTANT]
->
->[!DNL Facebook]に送信されたデータには、ステッチIDを含めることはできません。 お客様は、この義務を守る責任があります。アクティベーション用に選択したセグメントが、マージポリシーでステッチオプションを使用しないようにすることで、義務を守ることができます。 [マージポリシー](/help/profile/ui/merge-policies.md)の詳細を表示します。
 
 ## サポートされるID{#supported-identities}
 
