@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、XDM Individualプロファイルクラスの概要を説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 81d96b629ce628f663a86701d8f076eb771fdf77
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,10 @@ ht-degree: 0%
 | プロパティ | 説明 |
 | --- | --- |
 | `_repo` | 次の[!UICONTROL DateTime]フィールドを含むオブジェクト： <ul><li>`createDate`:データが最初に取り込まれた日時など、データストアでリソースが作成された日時。</li><li>`modifyDate`:リソースが最後に変更された日時。</li></ul> |
-| `_id` | レコードに対する、システム生成の一意の文字列識別子。 このフィールドは、個々のレコードの一意性の追跡、データの重複の防止およびダウンストリームサービスでのそのレコードの検索に使用します。 このフィールドはシステム生成なので、データ取り込み中に明示的な値を指定しないでください。<br><br>このフィールドは、個々の人に関連するアイデンティティ **ではなく、データの記録自体を表しているのではな** いことを区別することが重要です。個人に関するIDデータは、代わりに[IDフィールド](../schema/composition.md#identity)に左右する必要があります。 |
+| `_id` | レコードの一意の識別子。 このフィールドは、個々のレコードの一意性の追跡、データの重複の防止およびダウンストリームサービスでのそのレコードの検索に使用します。<br><br>このフィールドは、個々の人に関連するアイデンティティ **ではなく、データの記録自体を表しているのではな** いことを区別することが重要です。個人に関するIDデータは、代わりに[IDフィールド](../schema/composition.md#identity)に左右する必要があります。 |
 | `createdByBatchID` | レコードを作成した、取り込んだバッチのID。 |
 | `modifiedByBatchID` | レコードを更新した最後に取り込んだバッチのID。 |
+| `personID` | このレコードが関連付けられる個人の一意の識別子。 [IDフィールド](../schema/composition.md#identity)としても指定されていない限り、このフィールドは必ずしも個人に関連するIDを表すものではありません。 |
 | `repositoryCreatedBy` | レコードを作成したユーザーのID。 |
 | `repositoryLastModifiedBy` | レコードを最後に変更したユーザーのID。 |
 
@@ -38,10 +39,12 @@ ht-degree: 0%
 >
 >いくつかのミックスインの名前が変更されました。 詳しくは、[mixin name updates](../mixins/name-updates.md)のドキュメントを参照してください。
 
-Adobeは、[!DNL XDM Individual Profile]クラスで使用するいくつかの標準ミックスインを提供します。 以下は、このクラスで最も一般的に使用されるミックスインのリストです。
+Adobeは、[!DNL XDM Individual Profile]クラスで使用するいくつかの標準ミックスインを提供します。 以下は、このクラスで一般的に使用されるミックスインのリストです。
 
 * [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
 * [[!UICONTROL 人口統計の詳細]](../mixins/profile/person-details.md)
 * [[!UICONTROL 個人の連絡先の詳細]](../mixins/profile/personal-details.md)
 * [[!UICONTROL 勤務先担当者の詳細]](../mixins/profile/work-details.md)
 * [[!UICONTROL セグメントのメンバーシップの詳細]](../mixins/profile/segmentation.md)
+
+[!DNL XDM Individual Profile]用の互換性のあるミックスインの完全なリストについては、[XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile)を参照してください。
