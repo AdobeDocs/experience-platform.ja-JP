@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Marketoソースコネクタ；名前空間;スキーマ
 solution: Experience Platform
-title: 'Marketo名前空間 '
+title: Marketo名前空間
 topic-legacy: overview
 description: このドキュメントでは、Marketo Engageソースコネクタを作成する際に必要なカスタム名前空間の概要を説明します。
+exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 translation-type: tm+mt
-source-git-commit: bea6b35627b0e913c894c38ba9553085ba0aa26f
+source-git-commit: 5322adb4b3a244de92300e7ce9d942ad4b968454
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 16%
+source-wordcount: '1161'
+ht-degree: 18%
 
 ---
-
 
 # （ベータ版） [!DNL Marketo Engage]名前空間とスキーマ
 
@@ -80,7 +80,7 @@ ID名前空間は、IDが関連付けられるコンテキストのインジケ�
 
 | 表示名 | 識別記号 | ID タイプ | 発行者のタイプ | 発行者のエンティティタイプ | [!DNL Salesforce] 購読組織IDの例 |
 | --- | --- | --- | --- | --- | --- |
-| `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | 自動生成された | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
+| `salesforce_lead_{SALESFORCE_ORGANIZATION_ID}` | 自動生成された | `CROSS_DEVICE` | [!DNL Salesforce] | `lead` | `00DA0000000Hz79` |
 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | 自動生成された | `B2B_ACCOUNT` | [!DNL Salesforce] | `account` | `00DA0000000Hz79` |
 | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | 自動生成された | `B2B_OPPORTUNITY` | [!DNL Salesforce] | `opportunity` | `00DA0000000Hz79` |
 | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | 自動生成された | `B2B_OPPORTUNITY_PERSON` | [!DNL Salesforce] | `opportunity contact role` | `00DA0000000Hz79` |
@@ -124,24 +124,20 @@ Experience Platform では、スキーマを使用して、一貫性のある再
 >
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
-| スキーマ名 | 基本クラス | Mixin | プライマリ同一性 | プライマリ同一性名前空間 | セカンダリ同一性 | セカンダリ同一性名前空間 | Relationship | 備考 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [!DNL Marketo] 会社{MUNCHKIN_ID} | XDMビジネスアカウント | XDMビジネスアカウントの詳細 | `accountID` 基本クラスで | `marketo_company_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` (XDM Business Account Details Mixin)</li><li>タイプ：1対1</li><li>参照スキーマ:Marketo会社{MUNCHKIN_ID}</li><li>名前空間: `marketo_company_{MUNCHKIN_ID}`</li></ul> |
-| [!DNL Marketo] ユーザー{MUNCHKIN_ID} | XDM 個人プロファイル | <ul><li>XDMビジネス・パーソンの詳細</li><li>XDM Business Personコンポーネント</li></ul> | `personID` 基本クラスで | `marketo_person_{MUNCHKIN_ID}` | <ol><li>`extSourceSystemAudit.externalID` (XDM Business Person Details Mixin)</li><li>`workEmail.address` (XDM Business Person Details Mixin)</li><li>`identityMap` IDマップミックスインの</ol></li> | <ol><li>`salesforce_person_{SALESFORCE_ORGANIZATION_ID}`</li><li>Email</li><li>ECID</li></ol> | <ul><li>`personComponents.sourceAccountID` （XDM Business PersonコンポーネントMixin）</li><li>タイプ：多対1</li><li>参照スキーマ:Marketo会社{MUNCHKIN_ID}</li><li>名前空間: `marketo_company_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`accountID`</li><li>現在のスキーマからの関係名：アカウント</li><li>参照スキーマからの関係名：ユーザー</li></ul> |
-| [!DNL Marketo] オポチュニティ{MUNCHKIN_ID} | XDMビジネス・オポチュニティ | XDMビジネス・オポチュニティの詳細 | `opportunityID` 基本クラスで | `marketo_opportunity_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:Marketo会社{MUNCHKIN_ID}</li><li>名前空間: `marketo_company_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`accountID`</li><li>現在のスキーマからの関係名：アカウント</li><li>参照スキーマからの関係名：オポチュニティ</li></ul> |
-| [!DNL Marketo] オポチュニティ連絡先ロール{MUNCHKIN_ID} | XDM Business Opportunity Person関係 | なし | `opportunityPersonID` 基本クラスで | `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | 最初の関係<ul><li>`personID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:Marketoの人{MUNCHKIN_ID}</li><li>名前空間: `marketo_person_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`personID`</li><li>現在のスキーマからの関係名：人</li><li>参照スキーマからの関係名：オポチュニティ</li></ul>第2の関係<ul><li>`opportunityID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:Marketoオポチュニティ{MUNCHKIN_ID}</li><li>名前空間: `marketo_opportunity_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`opportunityID`</li><li>現在のスキーマからの関係名：オポチュニティ</li><li>参照スキーマからの関係名：ユーザー</li></ul> |
-| [!DNL Marketo] プログラム{MUNCHKIN_ID} | XDMビジネスキャンペーン | XDMビジネスキャンペーンの詳細 | `campaignID` 基本クラスで | `marketo_program_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_campaign_SALESFORCE_ORGANIZATION_ID}` |
-| [!DNL Marketo] プログラムメンバ{MUNCHKIN_ID} | XDMビジネスキャンペーンメンバ | XDMビジネスキャンペーンメンバの詳細 | `campaignMemberID` 基本クラスで | `marketo_program_member_{MUNCHKIN_ID}` | なし | なし | 最初の関係<ul><li>`personID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:Marketoの人{MUNCHKIN_ID}</li><li>名前空間: `marketo_person_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`personID`</li><li>現在のスキーマからの関係名：人</li><li>参照スキーマからの関係名：プログラム</li></ul>第2の関係<ul><li>`campaignID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:Marketoプログラム{MUNCHKIN_ID}</li><li>名前空間: `marketo_program_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：campaignID</li><li>現在のスキーマからの関係名：プログラム</li><li>参照スキーマからの関係名：ユーザー</li></ul> |
-| [!DNL Marketo] 静的リスト{MUNCHKIN_ID} | XDMビジネスマーケティングリスト | なし | `marketingListID` 基本クラスで | `marketo_static_list_{MUNCHKIN_ID}` | なし | なし | なし | 静的なリストは[!DNL Salesforce]と同期されないため、セカンダリIDを持ちません |
-| [!DNL Marketo] 静的リストメンバ{MUNCHKIN_ID} | XDMビジネスマーケティングリストメンバー | なし | `marketingListMemberID` 基本クラスで | `marketo_static_list_member_{MUNCHKIN_ID}` | なし | なし | 最初の関係<ul><li>`personID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:Marketoの人{MUNCHKIN_ID}</li><li>名前空間: `marketo_person_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`personID`</li><li>現在のスキーマからの関係名：人</li><li>参照スキーマからの関係名：リスト</li></ul>第2の関係<ul><li>`marketingListID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:Marketo静的リスト{MUNCHKIN_ID}</li><li>名前空間: `marketo_static_list_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`marketingListID`</li><li>現在のスキーマからの関係名：リスト</li><li>参照スキーマからの関係名：ユーザー</li></ul> |
-| [!DNL Marketo] 指定されたアカウント{MUNCHKIN_ID} | XDMビジネスアカウント | XDMビジネスアカウントの詳細 | `accountID` 基本クラスで | `marketo_named_account_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` (XDM Business Account Details Mixin)</li><li>タイプ：1対1</li><li>参照スキーマ:Marketoがアカウント{MUNCHKIN_ID}に指定</li><li>名前空間: `marketo_named_account_{MUNCHKIN_ID}` |
-| [!DNL Marketo] アクティビティ{MUNCHKIN ID} | XDMエクスペリエンスイベント | <ul><li>Webページにアクセス</li><li>新しいリード</li><li>リードの変換</li><li>リスト追加へ</li><li>リストから削除</li><li>To Opportunity</li><li>オポチュニティから削除</li><li>入力済みのフォーム</li><li>リンククリック数</li><li>電子メール配信</li><li>開封済み電子メール</li><li>電子メールがクリックされました</li><li>電子メールのバウンス</li><li>電子メールのバウンス（ソフト）</li><li>Email Unsubscribed</li><li>スコアの変更</li><li>オポチュニティの更新</li><li>キャンペーンの進行状況の変更</li><li>個人ID</li><li>MarketoウェブURL | `personID` （個人識別子Mixin） | marketo_person_{MUNCHKIN_ID} | なし | なし | 最初の関係<ul><li>`listOperations.listID` field</li><li>タイプ：1対1</li><li>参照スキーマ:Marketo静的リスト{MUNCHKIN_ID}</li><li>名前空間: `marketo_static_list_{MUNCHKIN_ID}`</li></ul>第2の関係<ul><li>`opportunityEvent.opportunityID` field</li><li>タイプ：1対1</li><li>参照スキーマ:Marketoオポチュニティ{MUNCHKIN_ID}</li><li>名前空間: `marketo_opportunity_{MUNCHKIN_ID}`</li></ul>3番目の関係<ul><li>`leadOperation.campaignProgression.campaignID` field</li><li>タイプ：1対1</li><li>参照スキーマ:Marketoプログラム{MUNCHKIN_ID}</li><li>名前空間: `marketo_program_{MUNCHKIN_ID}`</li></ul> |
+| スキーマ名 | 基本クラス | Mixin | [!DNL Profile] スキーマで | プライマリ同一性 | プライマリ同一性名前空間 | セカンダリ同一性 | セカンダリ同一性名前空間 | Relationship | 備考 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `[!DNL Marketo] Company {MUNCHKIN_ID}` | XDMビジネスアカウント | XDMビジネスアカウントの詳細 | 有効 | `accountID` 基本クラスで | `marketo_company_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` (XDM Business Account Details Mixin)</li><li>タイプ：1対1</li><li>参照スキーマ:`[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>名前空間: `marketo_company_{MUNCHKIN_ID}`</li></ul> |
+| `[!DNL Marketo] Person {MUNCHKIN_ID}` | XDM 個人プロファイル | <ul><li>XDMビジネス・パーソンの詳細</li><li>XDM Business Personコンポーネント</li><li>IdentityMap</li></ul> | 有効 | `personID` 基本クラスで | `marketo_person_{MUNCHKIN_ID}` | <ol><li>`extSourceSystemAudit.externalID` (XDM Business Person Details Mixin)</li><li>`workEmail.address` (XDM Business Person Details Mixin)</li><li>`identityMap` IDマップミックスインの</ol></li> | <ol><li>`salesforce_lead_{SALESFORCE_ORGANIZATION_ID}`</li><li>Email</li><li>ECID</li></ol> | <ul><li>`personComponents.sourceAccountID` （XDM Business PersonコンポーネントMixin）</li><li>タイプ：多対1</li><li>参照スキーマ:`[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>名前空間: `marketo_company_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`accountID`</li><li>現在のスキーマからの関係名：アカウント</li><li>参照スキーマからの関係名：ユーザー</li></ul> |
+| `[!DNL Marketo] Opportunity {MUNCHKIN_ID}` | XDMビジネス・オポチュニティ | XDMビジネス・オポチュニティの詳細 | 有効 | `opportunityID` 基本クラスで | `marketo_opportunity_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:`[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>名前空間: `marketo_company_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`accountID`</li><li>現在のスキーマからの関係名：アカウント</li><li>参照スキーマからの関係名：オポチュニティ</li></ul> |
+| `[!DNL Marketo] Opportunity Contact Role {MUNCHKIN_ID}` | XDM Business Opportunity Person関係 | なし | 有効 | `opportunityPersonID` 基本クラスで | `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | 最初の関係<ul><li>`personID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:`[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>名前空間: `marketo_person_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`personID`</li><li>現在のスキーマからの関係名：人</li><li>参照スキーマからの関係名：オポチュニティ</li></ul>第2の関係<ul><li>`opportunityID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:`[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>名前空間: `marketo_opportunity_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`opportunityID`</li><li>現在のスキーマからの関係名：オポチュニティ</li><li>参照スキーマからの関係名：ユーザー</li></ul> |
+| `[!DNL Marketo] Program {MUNCHKIN_ID}` | XDMビジネスキャンペーン | XDMビジネスキャンペーンの詳細 | 有効 | `campaignID` 基本クラスで | `marketo_program_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_campaign_{SALESFORCE_ORGANIZATION_ID}` |
+| `[!DNL Marketo] Program Member {MUNCHKIN_ID}` | XDMビジネスキャンペーンメンバ | XDMビジネスキャンペーンメンバの詳細 | 有効 | `campaignMemberID` 基本クラスで | `marketo_program_member_{MUNCHKIN_ID}` | なし | なし | 最初の関係<ul><li>`personID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:Marketoの人{MUNCHKIN_ID}</li><li>名前空間: `marketo_person_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`personID`</li><li>現在のスキーマからの関係名：人</li><li>参照スキーマからの関係名：プログラム</li></ul>第2の関係<ul><li>`campaignID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:`[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>名前空間: `marketo_program_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`campaignID`</li><li>現在のスキーマからの関係名：プログラム</li><li>参照スキーマからの関係名：ユーザー</li></ul> |
+| `[!DNL Marketo] Static List {MUNCHKIN_ID}` | XDMビジネスマーケティングリスト | なし | 有効 | `marketingListID` 基本クラスで | `marketo_static_list_{MUNCHKIN_ID}` | なし | なし | なし | 静的なリストは[!DNL Salesforce]と同期されないため、セカンダリIDを持ちません。 |
+| `[!DNL Marketo] Static List Member {MUNCHKIN_ID}` | XDMビジネスマーケティングリストメンバー | なし | 有効 | `marketingListMemberID` 基本クラスで | `marketo_static_list_member_{MUNCHKIN_ID}` | なし | なし | 最初の関係<ul><li>`personID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:`[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>名前空間: `marketo_person_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`personID`</li><li>現在のスキーマからの関係名：人</li><li>参照スキーマからの関係名：リスト</li></ul>第2の関係<ul><li>`marketingListID` 基本クラスで</li><li>タイプ：多対1</li><li>参照スキーマ:`[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>名前空間: `marketo_static_list_{MUNCHKIN_ID}`</li><li>Destinationプロパティ：`marketingListID`</li><li>現在のスキーマからの関係名：リスト</li><li>参照スキーマからの関係名：ユーザー</li></ul> | 静的なリストメンバは[!DNL Salesforce]と同期されないため、セカンダリIDを持ちません。 |
+| `[!DNL Marketo] Named Account {MUNCHKIN_ID}` | XDMビジネスアカウント | XDMビジネスアカウントの詳細 | 有効 | `accountID` 基本クラスで | `marketo_named_account_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` 基本クラスで | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` (XDM Business Account Details Mixin)</li><li>タイプ：1対1</li><li>参照スキーマ:`[!DNL Marketo] Named Account {MUNCHKIN_ID}`</li><li>名前空間: `marketo_named_account_{MUNCHKIN_ID}` |
+| [!DNL Marketo] アクティビティ `{MUNCHKIN ID}` | XDM ExperienceEvent | <ul><li>Webページにアクセス</li><li>新しいリード</li><li>リードの変換</li><li>リスト追加へ</li><li>リストから削除</li><li>To Opportunity</li><li>オポチュニティから削除</li><li>入力済みのフォーム</li><li>リンククリック数</li><li>電子メール配信</li><li>開封済み電子メール</li><li>電子メールがクリックされました</li><li>電子メールのバウンス</li><li>電子メールのバウンス（ソフト）</li><li>Email Unsubscribed</li><li>スコアの変更</li><li>オポチュニティの更新</li><li>キャンペーンの進行状況の変更</li><li>個人ID</li><li>MarketoウェブURL | 有効 | `personID` （個人識別子Mixin） | `marketo_person_{MUNCHKIN_ID}` | なし | なし | 最初の関係<ul><li>`listOperations.listID` field</li><li>タイプ：1対1</li><li>参照スキーマ:`[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>名前空間: `marketo_static_list_{MUNCHKIN_ID}`</li></ul>第2の関係<ul><li>`opportunityEvent.opportunityID` field</li><li>タイプ：1対1</li><li>参照スキーマ:`[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>名前空間: `marketo_opportunity_{MUNCHKIN_ID}`</li></ul>3番目の関係<ul><li>`leadOperation.campaignProgression.campaignID` field</li><li>タイプ：1対1</li><li>参照スキーマ:`[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>名前空間: `marketo_program_{MUNCHKIN_ID}`</li></ul> | `[!DNL Marketo] Activity {MUNCHKIN_ID}`スキーマの主IDは`personID`です。これは`[!DNL Marketo] Person {MUNCHKIN_ID}`スキーマの主IDと同じです。 |
 
 {style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->[!DNL Real-time Customer Profile]のすべてのスキーマを有効にします
 
 ## 次の手順
 
