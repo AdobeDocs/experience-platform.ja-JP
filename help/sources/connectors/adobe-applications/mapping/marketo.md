@@ -6,10 +6,10 @@ topic-legacy: overview
 description: 以下の表に、Marketoデータセット内のフィールドと、対応するXDMフィールドとのマッピングを示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
+source-git-commit: 5d37c9664f60e9d962e866c6d480d2ef2e0bfff3
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 3%
+source-wordcount: '333'
+ht-degree: 4%
 
 ---
 
@@ -259,10 +259,6 @@ ht-degree: 3%
 
 ## ユーザー{#persons}
 
-プラットフォームUIの[!DNL Profiles]ダッシュボードで、参照に使用した結合ポリシーでのIDのステッチの値が`None`に設定されている場合、リンクされたIDウィンドウにはプライマリID属性のみが表示されます。
-
-回避策として、[!DNL Profile]へのリンクされたIDをすべて表示するために、IDの切り替えフィールドを`None`から`Private graph`に更新できます。 または、新しい結合ポリシーを作成するか、`Private graph`に設定されたIDの切り替え値を含む別の結合ポリシーを使用することもできます。 新しい結合ポリシーを作成する場合、または別の結合ポリシーを使用する場合は、ポリシーに、[!DNL Marketo]個人マッピングセットに使用されるのと同じスキーマの種類が含まれていることを確認する必要があります。 詳しくは、[merge policies UIガイド](../../../../profile/ui/merge-policies.md)を参照してください。
-
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | プライマリ同一性 |
@@ -313,7 +309,7 @@ ht-degree: 3%
 
 {style=&quot;table-layout:auto&quot;}
 
->[!TIP]
+>[!NOTE]
 >
 >`to_object('ECID',arrays_to_objects('id',explode(ecids)))`ソースフィールドは、プラットフォームUIの[!UICONTROL 追加計算済みフィールド]オプションを使用して追加する必要がある計算済みフィールドです。 詳細については、[計算済みフィールドの追加](../../../../ingestion/tutorials/map-a-csv-file.md)のチュートリアルを参照してください。
 
