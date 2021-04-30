@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: Adobe Experience Platformでのセグメント化のストリーミングにより、データの豊富性に重点を置き、ほぼリアルタイムでセグメント化を行うことができます。 ストリーミングセグメント化では、セグメント化ジョブのスケジュールや実行の必要性が軽減され、データがプラットフォームに到着するとセグメントの認定が行われるようになりました。 この機能を使用すると、ほとんどのセグメントルールを、データがプラットフォームに渡される際に評価できるようになりました。つまり、セグメントのメンバーシップは、スケジュール済みのセグメント化ジョブを実行せずに最新の状態に維持されます。
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '818'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 1%
 | プロファイルのみ | プロファイル属性のみを参照するセグメント定義。 |  |
 | プロファイルを参照する着信ヒット | 時間制限のない、1つの着信イベント、および1つ以上のプロファイル属性を参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | 相対的な時間枠内のプロファイルを参照する着信ヒット | 1つの受信イベントと1つ以上のプロファイル属性を参照するセグメント定義。 | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| セグメント | 1つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 | ![](../images/ui/streaming-segmentation/two-batches.png) |
+| セグメント | 1つ以上のバッチセグメントまたはストリーミングセグメントを含むセグメント定義。 **注意：セグメントのセグメントを使用** する場合、プロファイルの除斥は24時間 **ごとに発生します**。 | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | プロファイルを参照する複数のイベント | 過去24時間以内に複数のイベント&#x200B;**を参照するセグメント定義には、1つ以上のプロファイル属性が含まれます。**（オプション） | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 次のシナリオでは、セグメント定義はストリーミングセグメントに対して&#x200B;**有効になりません**。
