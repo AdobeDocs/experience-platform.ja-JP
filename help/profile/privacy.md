@@ -2,12 +2,11 @@
 keywords: Experience Platform；ホーム；人気の高いトピック
 solution: Experience Platform
 title: リアルタイム顧客プロファイルでのプライバシーリクエストの処理
-topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Serviceは、多数のプライバシー規制に基づオプトアウトく説明に従って、個人データのアクセス、販売、削除を求める顧客の要求を処理します。 このドキュメントでは、リアルタイム顧客プロファイルのプライバシーリクエストの処理に関する重要な概念について説明します。
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 16%
@@ -24,9 +23,9 @@ Adobe Experience Platform[!DNL Privacy Service]は、一般的なデータ保護
 
 このガイドを読む前に、次の[!DNL Experience Platform]サービスに関する作業を理解しておくことをお勧めします。
 
-* [[!DNL Privacy Service]](home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
+* [[!DNL Privacy Service]](../privacy-service/home.md) ：Adobe Experience Cloud アプリケーションをまたいで、自身の個人データのアクセス、販売のオプトアウト、または削除に対する顧客リクエストを管理します。
 * [[!DNL Identity Service]](../identity-service/home.md):デバイスやシステム間でIDをブリッジ化することによって顧客体験データを断片化することによって生じる基本的な課題を解決します。
-* [[!DNL Real-time Customer Profile]](../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
+* [[!DNL Real-time Customer Profile]](home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
 
 ## ID 名前空間について {#namespaces}
 
