@@ -7,9 +7,9 @@ type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してプラットフォームにストリーミングデータを取り込む手順を説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f35c59843451267d0a054cfd594aea3e5d5ea8c6
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1526'
 ht-degree: 22%
 
 ---
@@ -202,7 +202,6 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/sourceConnecti
 }
 ```
 
-
 ## ターゲットXDMスキーマの作成{#target-schema}
 
 [!DNL Platform]でソースデータを使用するには、ターゲットスキーマを作成し、必要に応じてソースデータを構成する必要があります。 次に、このターゲットスキーマを使用して、ソースデータが含まれる[!DNL Platform]データセットを作成します。 このターゲットXDMスキーマはXDM [!DNL Individual Profile]クラスを拡張します。
@@ -334,6 +333,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
+        "name": "Test streaming dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -345,15 +345,15 @@ curl -X POST \
             "profile": [
             "enabled:true"
             ]
-        },
-        "name": "Test streaming dataset"
+        }
     }'
 ```
 
 | プロパティ | 説明 |
 | --- | --- |
-| `schemaRef.id` | ターゲットXDMスキーマのID。 |
-| `schemaRef.contentType` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full-notext+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 |
+| `name` | 作成するデータセットの名前。 |
+| `schemaRef.id` | データセットの基となるXDMスキーマのURI `$id`。 |
+| `schemaRef.contentType` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full-notext+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 詳しくは、XDM APIガイドの[スキーマのバージョン管理](../../../../xdm/api/getting-started.md#versioning)の節を参照してください。 |
 
 **応答**
 
