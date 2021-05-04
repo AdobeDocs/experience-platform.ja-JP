@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、人口統計の詳細ミックスインの概要を説明します。
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 87b638df8a3b27fb6df5dee60b57d817d5e34a80
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '264'
 ht-degree: 22%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 22%
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
 | `person.name` | [個人名](../../data-types/person-name.md) | サブフィールドに、人の名前の様々な要素が記述されるオブジェクト。 |
-| `person.birthDate` | Date | ISO 8601のタイムスタンプの形式で、人が生まれた完全な日付。 |
+| `person.birthDate` | 日付 | ISO 8601のタイムスタンプの形式で、人が生まれた完全な日付。 |
 | `person.birthDayAndMonth` | 文字列 | 生年月日（月日）。MM-DD 形式で指定します。このフィールドは、生年月日の日と月がわかるが、年がわからない場合に使用します。 |
 | `person.birthYear` | 整数 | 1989年など、人が生まれた年。 このフィールドは、正式な生年月日ではなく、年齢のみがわかる場合に使用します。 |
 | `person.gender` | 文字列 | 個人の性別ID。 |
@@ -37,5 +37,4 @@ ht-degree: 22%
 Mixinの詳細については、パブリックXDMリポジトリを参照してください。
 
 * [入力済みの例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
-* [完全な](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
-スキーマオングストローム
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
