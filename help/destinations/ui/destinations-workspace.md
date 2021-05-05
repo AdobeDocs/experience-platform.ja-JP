@@ -5,7 +5,7 @@ description: 宛先ワークスペースは、カタログ、参照、アカウ�
 seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択し、宛先ワークスペースにアクセスします。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
+source-git-commit: eaa4a7efc248104d823267eca574f2eca16edc3f
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 22%
@@ -38,7 +38,7 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 宛先カードには、**[!UICONTROL Configure]**&#x200B;または&#x200B;**[!UICONTROL Activate]**&#x200B;コントロールと、より多くのオプションを表示するセカンダリコントロールが含まれます。 以下に、これらのコントロールを示します。
 
 | 制御 | 説明 |
----------|----------
+|---------|----------|
 | [!UICONTROL 設定] | 宛先への接続を作成できます。 |
 | [!UICONTROL アクティブ化] | 宛先への接続を確立すると、セグメントをアクティブ化できます。 |
 | [!UICONTROL 表示勘定] | 宛先に接続したアカウントの表示。 |
@@ -72,7 +72,7 @@ Adobe Experience Platformで、左のナビゲーションバーから「**[!UIC
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
 
 | 要素 | 説明 |
----------|----------
+|---------|----------|
 | 名前 | この宛先へのアクティベーションフローに指定した名前。同じ列には、次の2つのコントロールが含まれます。と[!UICONTROL 宛先]を削除します。 |
 | [!UICONTROL 最後のフロー実行ステータス] | 最後のデータフロー実行のステータス。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
 | [!UICONTROL 最終フロー実行日] | 最後のデータフロー実行が発生した日時。 データフローの実行の詳細については、[表示宛先の詳細](destination-details-page.md)を参照してください。 |
