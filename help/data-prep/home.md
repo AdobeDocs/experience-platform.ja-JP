@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform内でのデータ準備について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 0%
 ## マッピングセット
 
 あるスキーマを別のマッピングに変換する一連のマッピングは、まとめてマッピングセットと呼ばれます。 各データ・フローの一部として、単一のマッピング・セットが作成されます。 マッピングセットは、データフローの一部であり、データフローの一部として作成、編集および監視されます。
+
+マッピングセット内のフィールドの使用方法など、マッピングセットの詳細については、[マッピングセットガイド](./mapping-set.md)を参照してください。 マッピングセットの作成方法、およびマッピングセットに関連する他のAPI呼び出しの使用方法を学ぶには、[開発者ガイド](./api/mapping-set.md)のマッピングセットの節をお読みください。
 
 ## データ形式の処理
 
