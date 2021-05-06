@@ -7,10 +7,10 @@ type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 66%
+source-wordcount: '1349'
+ht-degree: 65%
 
 ---
 
@@ -290,9 +290,16 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
+
+## ストリーミング接続の作成
+
+スキーマとデータセットを作成したら、データを取り込むためのストリーミング接続を作成する必要があります。
+
+ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
+
 ## 時系列データのストリーミング接続への取得
 
-データセットとストリーミング接続が確立された状態で、XDM形式のJSONレコードを取り込み、[!DNL Platform]内の時系列データを取り込むことができます。
+データセット、ストリーミング接続、およびデータフローを作成すると、XDM形式のJSONレコードを[!DNL Platform]内の時系列データに取り込むことができます。
 
 **API 形式**
 
@@ -326,7 +333,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "id": "{SCHEMA_REF_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "flowId": "{FLOW_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -413,7 +420,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | 以前に作成したストリーミング接続の ID。 |
+| `{CONNECTION_ID}` | 以前に作成したストリーミング接続の`inletId`。 |
 | `xactionId` | 送信したレコードに対してサーバー側で生成された一意の ID です。この ID は、様々なシステムやデバッグを通じて、アドビがこのレコードのライフサイクルを追跡するのに役立ちます。 |
 | `receivedTimeMs`：リクエストが受信された時刻を示すタイムスタンプ（ミリ秒単位のエポック）。 |
 | `synchronousValidation.status` | クエリーパラメーター `synchronousValidation=true` が追加されたので、この値が表示されます。検証が成功した場合、ステータスは `pass` になります。 |
@@ -445,7 +452,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
+  https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
