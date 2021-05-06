@@ -7,10 +7,10 @@ type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 42%
+source-wordcount: '1090'
+ht-degree: 33%
 
 ---
 
@@ -27,6 +27,8 @@ ht-degree: 42%
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md):エクスペリエンスデータを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された消費者プロファイルを提供します。
+
+また、ストリーミング接続を作成するには、ターゲットXDMスキーマとデータセットが必要です。 これらの作成方法を学ぶには、[ストリーミングレコードデータ](../../../../../ingestion/tutorials/streaming-record-data.md)のチュートリアル、または[ストリーミング時系列データ](../../../../../ingestion/tutorials/streaming-time-series-data.md)のチュートリアルをお読みください。
 
 以下の節では、ストリーミング取得 API の呼び出しを正常におこなうために知っておく必要がある追加情報を示します。
 
@@ -54,9 +56,9 @@ ht-degree: 42%
 
 - Content-Type: application/json
 
-## 接続の作成
+## ベース接続を作成する
 
-接続ではソースを指定します。また、接続には、Streaming Ingestion API と互換性があるフローを作成するために必要な情報を含めます。接続を作成する場合、非認証接続と認証済み接続を作成するオプションがあります。
+ベース接続は、ソースを指定し、フローをストリーミング取り込みAPIと互換性を持たせるために必要な情報を含みます。 ベース接続を作成する場合、非認証接続と認証済み接続を作成できます。
 
 ### 非認証接続
 
@@ -95,7 +97,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
              "name": "Sample connection"
          }
      }
- }
+ }'
 ```
 
 | プロパティ | 説明 |
@@ -189,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 ## ストリーミングエンドポイントURLの取得
 
-接続を作成すると、ストリーミングエンドポイントのURLを取得できるようになります。
+ベース接続を作成すると、ストリーミングエンドポイントのURLを取得できるようになります。
 
 **API 形式**
 
@@ -247,6 +249,142 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
             "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
         }
     ]
+}
+```
+
+## ソース接続の作成
+
+ベース接続を作成した後、ソース接続を作成する必要があります。 ソース接続を作成する場合は、作成したベース接続の`id`値が必要です。
+
+**API 形式**
+
+```http
+POST /flowservice/sourceConnections
+```
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample source connection",
+    "description": "Sample source connection description",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    }
+}'
+```
+
+**応答** 
+
+正常に応答すると、HTTPステータス201が返され、一意の識別子(`id`)を含む、新たに作成されたソース接続の詳細が返されます。
+
+```json
+{
+    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
+    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+}
+```
+
+## ターゲット接続の作成
+
+ソース接続を作成したら、ターゲット接続を作成できます。 ターゲット接続を作成する場合は、以前に作成したデータセットの`id`値が必要です。
+
+**API 形式**
+
+```http
+POST /flowservice/targetConnections
+```
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample target connection",
+    "description": "Sample target connection description",
+    "connectionSpec": {
+        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "parquet_xdm"
+    },
+    "params": {
+        "dataSetId": "{DATASET_ID}"
+    }
+}'
+```
+
+**応答** 
+
+正常に応答すると、新たに作成されたターゲット接続の詳細(一意の識別子(`id`)を含む)と共に、HTTPステータス201が返されます。
+
+```json
+{
+    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
+    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+}
+```
+
+## データフローの作成
+
+ソース接続とターゲット接続を作成した後、データフローを作成できます。 データフローは、ソースからデータをスケジューリングおよび収集する役割を持ちます。 `/flows`エンドポイントに対してPOST要求を実行すると、データフローを作成できます。
+
+**API 形式**
+
+```http
+POST /flows
+```
+
+**リクエスト**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample flow",
+    "description": "Sample flow description",
+    "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "{SOURCE_CONNECTION_ID}"
+    ],
+    "targetConnectionIds": [
+        "{TARGET_CONNECTION_ID}"
+    ]
+}'
+```
+
+**応答** 
+
+正常に応答すると、HTTPステータス201が返され、一意の識別子(`id`)を含む新しく作成されたデータフローの詳細が返されます。
+
+```json
+{
+    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
+    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
 }
 ```
 
