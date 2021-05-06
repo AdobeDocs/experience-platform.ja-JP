@@ -5,9 +5,9 @@ user-guide-description: チャネル間のマーケティングキャンペー�
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 feature: 宛先
 translation-type: tm+mt
-source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
+source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 59%
 
 ---
@@ -104,9 +104,9 @@ ht-degree: 59%
       * [Adobe Experience Platform Launch拡張機能の概要](./catalog/launch-extensions/overview.md)
    * モバイルエンゲージメント先{#mobile-engagement}
       * [モバイルエンゲージメントの宛先の概要](./catalog/mobile-engagement/overview.md)
-      * [航空船属性接続](./catalog/mobile-engagement/airship-attributes.md)
-      * [航空船タグの接続](./catalog/mobile-engagement/airship-tags.md)
-      * [ブレーズ接続](./catalog/mobile-engagement/braze.md)
+      * [（ベータ版）航空船属性接続](./catalog/mobile-engagement/airship-attributes.md)
+      * [（ベータ版）航空船タグ接続](./catalog/mobile-engagement/airship-tags.md)
+      * [（ベータ）ブレーズ接続](./catalog/mobile-engagement/braze.md)
    * パーソナライズ機能の宛先 {#personalization}
       * [パーソナライズ機能の宛先の概要](./catalog/personalization/overview.md)
       * [Adobe Target 拡張機能](./catalog/personalization/adobe-target.md)
