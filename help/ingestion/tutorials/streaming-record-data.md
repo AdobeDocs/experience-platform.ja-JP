@@ -7,12 +7,13 @@ type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 69%
+source-wordcount: '1168'
+ht-degree: 68%
 
 ---
+
 
 # ストリーミング取り込みAPIを使用したストリームレコードデータ
 
@@ -23,10 +24,8 @@ ht-degree: 69%
 このチュートリアルでは、Adobe Experience Platform の各種サービスに関する実用的な知識が必要です。このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):エクスペリエンスデータを [!DNL Platform] 編成する際に使用される標準化されたフレームワーク。
+   - [スキーマレジストリ開発ガイド](../../xdm/api/getting-started.md):APIの使用可能な各エンドポイントと、それらの [!DNL Schema Registry] APIを呼び出す方法をカバーする包括的なガイドです。これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
 - [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された消費者プロファイルを提供します。
-- [スキーマレジストリ開発ガイド](../../xdm/api/getting-started.md):APIの使用可能な各エンドポイントと、それらの [!DNL Schema Registry] APIを呼び出す方法をカバーする包括的なガイドです。これには、このチュートリアル全体の呼び出しで表示される `{TENANT_ID}` の理解と、取得用のデータセットの作成に使用されるスキーマの作成方法の理解が含まれます。
-
-また、このチュートリアルでは、既にストリーミング接続を作成している必要があります。ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
 
 以下の節では、ストリーミング取得 API の呼び出しを正常におこなうために知っておく必要がある追加情報を示します。
 
@@ -256,7 +255,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 **応答** 
 
-成功時の応答は、HTTP ステータス 201 と共に、新しく作成されたデータセットの ID を `@/dataSets/{DATASET_ID}` の形式で含む配列を返します。
+正常な応答は、HTTP ステータス 201 と、新しく作成されたデータセットの ID を `@/dataSets/{DATASET_ID}` の形式で含む配列を返します。
 
 ```json
 [
@@ -264,7 +263,13 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 ]
 ```
 
-## ストリーミング接続へのレコードデータの取り込み  {#ingest-data}
+## ストリーミング接続の作成
+
+スキーマとデータセットを作成したら、ストリーミング接続を作成できます
+
+ストリーミング接続の作成について詳しくは、『[ストリーミング接続作成のチュートリアル](./create-streaming-connection.md)』を参照してください。
+
+## ストリーミング接続へのレコードデータの取り込み {#ingest-data}
 
 データセットとストリーミング接続が確立された状態で、XDM形式のJSONレコードを取り込み、レコードデータを[!DNL Platform]に取り込むことができます。
 
@@ -276,7 +281,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | 作成済みのストリーミング接続の `id` 値です。 |
+| `{CONNECTION_ID}` | 作成済みのストリーミング接続の `inletId` 値です。 |
 | `synchronousValidation` | 開発用のクエリパラメーター（オプション）。`true` に設定した場合、リクエストが正常に送信されたかどうかを確認するために、即座のフィードバックに使用できます。デフォルトでは、この値は `false` に設定されています。 |
 
 **リクエスト**
