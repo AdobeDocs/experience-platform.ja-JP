@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、XDM Individualプロファイルクラスの概要を説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: 81d96b629ce628f663a86701d8f076eb771fdf77
+source-git-commit: 612917b23d1841556a71f6378497e1d033bc3b62
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 プロファイルには、匿名の行動シグナル（ブラウザーのcookieなど）から、名前、生年月日、場所、電子メールアドレスなどの詳細情報を含む高度に識別されるプロファイルまで様々な種類があります。 プロファイルが増えるにつれて、個人情報、個人情報、連絡先の詳細、コミュニケーションに関する個人の好みの強力なリポジトリとなります。 プラットフォームエコシステムでのこのクラスの使用に関する詳細は、[XDMの概要](../home.md#data-behaviors)を参照してください。
 
-[!DNL XDM Individual Profile]クラス自体は、データの取り込み時に自動的に設定されるシステム生成値をいくつか提供しますが、他のすべてのフィールドは、[互換性のあるミックスイン](#mixins)を使用して追加する必要があります。
+[!DNL XDM Individual Profile]クラス自体は、データの取り込み時に自動的に設定されるシステム生成値をいくつか提供します。それ以外のすべてのフィールドは、[互換性のあるスキーマフィールドグループ](#field-groups)を使用して追加する必要があります。
 
 ![](../images/classes/individual-profile.png)
 
@@ -33,18 +33,18 @@ ht-degree: 0%
 | `repositoryCreatedBy` | レコードを作成したユーザーのID。 |
 | `repositoryLastModifiedBy` | レコードを最後に変更したユーザーのID。 |
 
-## 互換性のあるミックスイン{#mixins}
+## 互換性のあるフィールドグループ{#field-groups}
 
 >[!NOTE]
 >
->いくつかのミックスインの名前が変更されました。 詳しくは、[mixin name updates](../mixins/name-updates.md)のドキュメントを参照してください。
+>複数のフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../field-groups/name-updates.md)のドキュメントを参照してください。
 
-Adobeは、[!DNL XDM Individual Profile]クラスで使用するいくつかの標準ミックスインを提供します。 以下は、このクラスで一般的に使用されるミックスインのリストです。
+Adobeは、[!DNL XDM Individual Profile]クラスで使用するいくつかの標準フィールドグループを提供します。 次に、このクラスでよく使用されるフィールドグループのリストを示します。
 
-* [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL 人口統計の詳細]](../mixins/profile/person-details.md)
-* [[!UICONTROL 個人の連絡先の詳細]](../mixins/profile/personal-details.md)
-* [[!UICONTROL 勤務先担当者の詳細]](../mixins/profile/work-details.md)
-* [[!UICONTROL セグメントのメンバーシップの詳細]](../mixins/profile/segmentation.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL 人口統計の詳細]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL 個人の連絡先の詳細]](../field-groups/profile/personal-contact-details.md)
+* [[!UICONTROL 勤務先担当者の詳細]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL セグメントのメンバーシップの詳細]](../field-groups/profile/segmentation.md)
 
-[!DNL XDM Individual Profile]用の互換性のあるミックスインの完全なリストについては、[XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile)を参照してください。
+[!DNL XDM Individual Profile]の互換性のあるすべてのフィールドグループの完全なリストについては、[XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile)を参照してください。
