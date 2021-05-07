@@ -1,14 +1,14 @@
 ---
 title: platform launchとプラットフォームWeb SDK Extensionを使用したIAB TCF 2.0サポートの統合
 description: IAB TCF 2.0の同意を、Adobe Experience Platform LaunchおよびAdobe Experience PlatformWeb SDK拡張と共に設定する方法について説明します。
+exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
-
 
 # platform launchとプラットフォームWeb SDK拡張を使用してIAB TCF 2.0サポートを統合
 
@@ -73,7 +73,7 @@ addEventListener();
 
 ## エクスペリエンスイベント用のXDMデータ要素の作成
 
-同意文字列は、XDMエクスペリエンスイベントに含める必要があります。 これを行うには、XDM Objectデータ要素を使用します。 新しいXDMオブジェクトデータ要素を作成して開始するか、既に作成したイベント送信用のXDMオブジェクト要素を使用します。 スキーマにエクスペリエンスイベントのプライバシーミックスインを追加した場合は、XDMオブジェクトに`consentStrings`キーが必要です。
+同意文字列は、XDMエクスペリエンスイベントに含める必要があります。 これを行うには、XDM Objectデータ要素を使用します。 新しいXDMオブジェクトデータ要素を作成して開始するか、既に作成したイベント送信用のXDMオブジェクト要素を使用します。 エクスペリエンスイベントのプライバシースキーマフィールドグループをスキーマに追加した場合は、XDMオブジェクトに`consentStrings`キーが必要です。
 
 1. **[!UICONTROL consentStrings]**&#x200B;を選択します。
 
