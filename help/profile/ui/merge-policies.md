@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、統合ポリシーは、データの優先順位付け方法と統合表示を作成するデータをPlatformが決定する際に使用するルールです。
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3017'
+source-wordcount: '3021'
 ht-degree: 8%
 
 ---
@@ -49,15 +49,15 @@ RESTful API またはユーザーインターフェイスを介すると、新�
 
 場合によっては、カスタムタイムスタンプを指定し、マージポリシーでシステムタイムスタンプではなくカスタムタイムスタンプが適用される必要がある場合があります。 例えば、データのバックフィルや、レコードが不適切に取り込まれた場合のイベントの正しい順序の確保などがあります。
 
-カスタムタイムスタンプを使用するには、**[!UICONTROL External Source System Audit Details Mixin]**&#x200B;をプロファイルスキーマに追加する必要があります。 追加したカスタムタイムスタンプは、`lastUpdatedDate`フィールドを使用して入力できます。 `lastUpdatedDate`フィールドにデータを入力してレコードを取り込むと、Experience Platformはそのフィールドを使用して、データセット間のレコードの結合を行います。 `lastUpdatedDate`が存在しない場合、または入力されていない場合、プラットフォームは引き続きシステムタイムスタンプを使用します。
+カスタムタイムスタンプを使用するには、**[!UICONTROL External Source System Audit Details]スキーマフィールドグループ**&#x200B;をプロファイルスキーマに追加する必要があります。 追加したカスタムタイムスタンプは、`lastUpdatedDate`フィールドを使用して入力できます。 `lastUpdatedDate`フィールドにデータを入力してレコードを取り込むと、Experience Platformはそのフィールドを使用して、データセット間のレコードの結合を行います。 `lastUpdatedDate`が存在しない場合、または入力されていない場合、プラットフォームは引き続きシステムタイムスタンプを使用します。
 
 >[!NOTE]
 >
 >同じレコードに更新を取り込む場合は、`lastUpdatedDate`タイムスタンプが設定されていることを確認する必要があります。
 
-次のスクリーンショットは、[!UICONTROL External Source System Audit Details Mixin]のフィールドを示しています。 プラットフォームUIを使用したスキーマの操作手順(スキーマにミックスインを追加する方法など)については、[UI](../../xdm/tutorials/create-schema-ui.md)を使用したスキーマ作成のチュートリアルを参照してください。
+次のスクリーンショットは、[!UICONTROL External Source System Audit Details]フィールドグループのフィールドを示しています。 プラットフォームUIを使用したスキーマの操作手順(スキーマにフィールドグループを追加する方法など)については、[UI](../../xdm/tutorials/create-schema-ui.md)を使用したスキーマ作成のチュートリアルを参照してください。
 
-![](../images/merge-policies/custom-timestamp-mixin.png)
+![](../images/merge-policies/custom-timestamp-field-group.png)
 
 APIを使用してカスタムのタイムスタンプを操作するには、[merge policies endpoint guideのカスタムタイムスタンプ](../api/merge-policies.md#custom-timestamps)の使用に関するセクションを参照してください。
 
