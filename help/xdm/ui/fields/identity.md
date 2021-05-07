@@ -6,9 +6,9 @@ description: Experience PlatformユーザーインターフェイスでIDフィ�
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '575'
 ht-degree: 5%
 
 ---
@@ -43,7 +43,7 @@ UIで[新しいフィールド](./overview.md#define)を定義する場合、右
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-キャンバスが更新され、変更が反映され、選択したフィールドに指紋記号(![](../../images/ui/fields/special/identity-symbol.png))が付き、IDとして指定されます。 左側のレールで、IDフィールドが、スキーマにフィールドを提供するクラスまたはミックスインの名前の下にリストされます。
+キャンバスが更新され、変更が反映され、選択したフィールドに指紋記号(![](../../images/ui/fields/special/identity-symbol.png))が付き、IDとして指定されます。 左側のレールで、IDフィールドが、スキーマにフィールドを提供するクラスまたはスキーマフィールドグループの名前の下にリストされます。
 
 すべてのIDフィールドはデフォルトで必須なので、左側のナビゲーションバーの&#x200B;**[!UICONTROL 必須フィールド]**&#x200B;の下にリストされます。 IDフィールドがスキーマ構造内でネストされている場合は、必須フィールドとしてすべての親フィールドも一覧表示されます。
 
