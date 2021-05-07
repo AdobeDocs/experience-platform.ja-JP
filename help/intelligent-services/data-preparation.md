@@ -6,9 +6,9 @@ topic-legacy: Intelligent Services
 description: インテリジェントサービスがマーケティングイベントデータからインサイトを見つけるには、そのデータがセマンティックに強化され、標準構造で維持されている必要があります。 Intelligent Servicesでは、Experience Data Model(XDM)スキーマを使用してこれを実現します。
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2398'
+source-wordcount: '2410'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 1%
 
 顧客AIとAttribution AIは、Adobe Analyticsデータをネイティブでサポートします。 Adobe Analyticsデータを使用するには、ドキュメントに記載されている手順に従って[Analyticsソースコネクタ](../sources/tutorials/ui/create/adobe-applications/analytics.md)を設定します。
 
-ソースコネクタがデータをExperience Platformにストリーミングすると、インスタンス設定時に、データソースとしてAdobe Analyticsを選択し、その後データセットを選択することができます。 すべての必須スキーマフィールドとミックスインは、接続の設定時に自動的に作成されます。 データセットをCEE形式にETL（抽出、変換、ロード）する必要はありません。
+ソースコネクタがデータをExperience Platformにストリーミングすると、インスタンス設定時に、データソースとしてAdobe Analyticsを選択し、その後データセットを選択することができます。 すべての必須スキーマフィールドグループと個々のフィールドは、接続の設定時に自動的に作成されます。 データセットをCEE形式にETL（抽出、変換、ロード）する必要はありません。
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ ht-degree: 1%
 
 顧客AIは、Adobe Audience Managerデータをネイティブでサポートします。 Audience Managerデータを使用するには、ドキュメントに記載されている手順に従って[Audience Managerソースコネクタ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md)を設定します。
 
-ソースコネクタがデータをExperience Platformにストリーミングすると、Customer AIの設定時に、データソースとしてAdobe Audience Managerを選択し、その後データセットを選択することができます。 すべての必須スキーマフィールドとミックスインは、接続の設定時に自動的に作成されます。 データセットをCEE形式にETL（抽出、変換、ロード）する必要はありません。
+ソースコネクタがデータをExperience Platformにストリーミングすると、Customer AIの設定時に、データソースとしてAdobe Audience Managerを選択し、その後データセットを選択することができます。 すべてのスキーマフィールドグループと個々のフィールドは、接続の設定時に自動的に作成されます。 データセットをCEE形式にETL（抽出、変換、ロード）する必要はありません。
 
 >[!IMPORTANT]
 >
@@ -68,13 +68,13 @@ CEEスキーマは、すべてのXDM ExperienceEventスキーマと同様に、�
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-すべてのXDMスキーマと同様、CEEミックスインも拡張可能です。 つまり、CEEミックスインにはフィールドを追加でき、必要に応じて複数のスキーマに異なるバリエーションを含めることができます。
+すべてのXDMスキーマと同様、CEEスキーマフィールドグループも拡張可能です。 つまり、CEEフィールドグループにフィールドを追加し、必要に応じて複数のスキーマに異なるバリエーションを含めることができます。
 
-mixinの完全な例は、[パブリックXDMリポジトリ](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)にあります。 また、次の[JSONファイル](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)を表示してコピーすると、CEEスキーマに準拠するようにデータを構造化する方法の例を確認できます。 独自のデータをスキーマにマップする方法を決定するには、次の節で説明する主なフィールドについて学習する際に、これらの例を両方参照してください。
+フィールドグループの完全な例は、[パブリックXDMリポジトリ](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)にあります。 また、次の[JSONファイル](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json)を表示してコピーすると、CEEスキーマに準拠するようにデータを構造化する方法の例を確認できます。 独自のデータをスキーマにマップする方法を決定するには、次の節で説明する主なフィールドについて学習する際に、これらの例を両方参照してください。
 
 ## キーフィールド
 
-CEEミックスインにはいくつかの重要なフィールドがあり、[!DNL Intelligent Services]が有用な洞察を生成するために利用する必要があります。 この節では、これらのフィールドの使用事例と期待されるデータについて説明し、その他の例に関するリファレンスドキュメントへのリンクを示します。
+[!DNL Intelligent Services]が有用な洞察を生成するために利用する必要があるCEEフィールドグループ内のいくつかの重要なフィールドがあります。 この節では、これらのフィールドの使用事例と期待されるデータについて説明し、その他の例に関するリファレンスドキュメントへのリンクを示します。
 
 ### 必須フィールド
 
@@ -297,16 +297,16 @@ CEEミックスインにはいくつかの重要なフィールドがあり、[!
 
 #### CEEスキーマとデータセットの作成
 
-取り込み用にデータを準備する際に開始が発生する準備が整ったら、最初の手順は、CEEミックスインを使用する新しいXDMスキーマを作成することです。 次のチュートリアルでは、UIまたはAPIで新しいスキーマを作成するプロセスについて説明します。
+取り込み用にデータを準備する際に開始が発生する準備が整ったら、最初の手順は、CEEフィールドグループを使用する新しいXDMスキーマを作成することです。 次のチュートリアルでは、UIまたはAPIで新しいスキーマを作成するプロセスについて説明します。
 
 * [UIでのスキーマの作成](../xdm/tutorials/create-schema-ui.md)
 * [APIでのスキーマの作成](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >
->上記のチュートリアルは、スキーマを作成するための一般的なワークフローに従っています。 スキーマ用のクラスを選択する場合は、**XDM ExperienceEventクラス**&#x200B;を使用する必要があります。 このクラスを選択したら、CEEミックスインをスキーマに追加できます。
+>上記のチュートリアルは、スキーマを作成するための一般的なワークフローに従っています。 スキーマ用のクラスを選択する場合は、**XDM ExperienceEventクラス**&#x200B;を使用する必要があります。 このクラスを選択したら、CEEフィールドグループをスキーマに追加できます。
 
-CEEミックスインをスキーマに追加した後、データ内の追加フィールドに必要に応じて他のミックスインを追加できます。
+CEEフィールドグループをスキーマに追加した後、データ内の追加のフィールドに必要に応じて、他のフィールドグループを追加できます。
 
 スキーマを作成して保存したら、そのスキーマに基づいて新しいデータセットを作成できます。 以下のチュートリアルでは、UIまたはAPIで新しいデータセットを作成するプロセスについて説明します。
 
