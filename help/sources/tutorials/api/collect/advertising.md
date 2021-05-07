@@ -7,7 +7,7 @@ type: Tutorial
 description: このチュートリアルでは、サードパーティの広告アプリケーションからデータを取得し、ソースコネクタとFlow Service APIを使用してプラットフォームに取り込む手順について説明します。
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c7cbf6812e2c600aa1e831b91f15982d7bf82cdb
 workflow-type: tm+mt
 source-wordcount: '1551'
 ht-degree: 19%
@@ -346,7 +346,7 @@ curl -X POST \
         "params": {
             "dataSetId": "5e9681e389b80418ad4b3df0"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
