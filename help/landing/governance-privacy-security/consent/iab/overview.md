@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: Adobe Experience Platformの宛先にセグメントをアクティブ化する際に、顧客の同意を伝えるためのデータ操作とスキーマの設定方法を説明します。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2470'
+source-wordcount: '2477'
 ht-degree: 1%
 
 ---
@@ -104,7 +104,7 @@ TCF仕様では、ポリシーおよびベンダーの定義に従って、顧�
 
 同意データ収集用の[!DNL Profile]対応のデータセットを作成したら、結合ポリシーが顧客プロファイルに常にTCF同意フィールドを含むように設定されていることを確認する必要があります。 これには、競合する可能性のある他のデータセットよりも同意データセットの優先順位を優先するように、データセットの優先順位を設定する必要があります。
 
-結合ポリシーの使用方法の詳細については、[merge policies user guide](../../../../profile/ui/merge-policies.md)を参照してください。 マージポリシーを設定する場合は、データセットの準備に関するガイドで概要を説明しているように、[XDMプライバシーミックスイン](./dataset.md#privacy-mixin)が提供する必要な同意属性がすべてセグメントに含まれていることを確認する必要があります。
+結合ポリシーの使用方法の詳細については、[merge policies user guide](../../../../profile/ui/merge-policies.md)を参照してください。 結合ポリシーを設定する場合は、データセットの準備に関するガイドで概要を説明しているように、[XDMプライバシースキーマフィールドグループ](./dataset.md#privacy-field-group)が提供する必要な同意属性がすべてセグメントに含まれていることを確認する必要があります。
 
 ## Experience PlatformWeb SDKを統合して、顧客の同意データを収集{#sdk}
 
@@ -196,7 +196,7 @@ OneTrust.OnConsentChanged(function () {
 
 >[!NOTE]
 >
->このメソッドを使用するには、[!DNL Experience Event Privacy mixin]を[!DNL Profile]-enabled [!DNL XDM ExperienceEvent]スキーマに追加しておく必要があります。 この設定方法の手順については、データセット準備ガイドの[ExperienceEventスキーマの更新](./dataset.md#event-schema)に関する節を参照してください。
+>この方法を使用するには、エクスペリエンスイベントのプライバシーフィールドグループを[!DNL Profile]対応[!DNL XDM ExperienceEvent]スキーマに追加しておく必要があります。 この設定方法の手順については、データセット準備ガイドの[ExperienceEventスキーマの更新](./dataset.md#event-schema)に関する節を参照してください。
 
 `sendEvent`コマンドは、Webサイト上の適切なイベントリスナーのコールバックとして使用する必要があります。 コマンドには2つの引数が必要です。(1)コマンドタイプ（この場合は`sendEvent`）、(2)必須の同意フィールドをJSONとして提供する`xdm`オブジェクトを含むペイロードを示す文字列。
 
