@@ -4,14 +4,14 @@ description: 2021年2月25日Experience Platformリリースノート
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
+exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
 translation-type: tm+mt
-source-git-commit: 398e55f442a2c8ecab0c3d9315fbdd5c02946e45
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1140'
 ht-degree: 34%
 
 ---
-
 
 # Adobe Experience Platform リリースノート
 
@@ -89,7 +89,7 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 
 | 機能 | 説明 |
 | --- | --- |
-| アップグレードされた検索UI | [!UICONTROL スキーマ]ワークスペースの[!UICONTROL 参照]タブと[!DNL Schema Editor]のミックスイン選択ダイアログで、検索機能が強化されました。<br><br>以前にキーワードを検索した場合、検索クエリと名前が一致するXDMリソースのみが結果に含まれます。現在は、クエリと名前が一致するリソースに加えて、キーワードに一致する個々の属性を含むリソースも含まれます。 これにより、XDMリソースを、リソース名ではなく、属性を含むXDMリソースに基づいて検索できます。<br><br>詳細は、XDM [リソースの](../../xdm/ui/explore.md) 調査とUIでのスキーマの [](../../xdm/ui/resources/schemas.md) 管理に関するドキュメントを参照してください。 |
+| アップグレードされた検索UI | [!UICONTROL スキーマ]ワークスペースの[!UICONTROL 「参照]」タブと、[!DNL Schema Editor]の「スキーマフィールドグループの選択」ダイアログで、検索機能が強化されました。<br><br>以前にキーワードを検索した場合、検索クエリと名前が一致するXDMリソースのみが結果に含まれます。現在は、クエリと名前が一致するリソースに加えて、キーワードに一致する個々の属性を含むリソースも含まれます。 これにより、XDMリソースを、リソース名ではなく、属性を含むXDMリソースに基づいて検索できます。<br><br>詳細は、XDM [リソースの](../../xdm/ui/explore.md) 調査とUIでのスキーマの [](../../xdm/ui/resources/schemas.md) 管理に関するドキュメントを参照してください。 |
 
 XDMの一般的な情報については、[XDMシステム概要](../../xdm/home.md)を参照してください。
 
