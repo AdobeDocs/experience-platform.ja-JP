@@ -6,10 +6,10 @@ topic-legacy: overview
 description: AdobeのプライバシーJavaScriptライブラリを使用すると、Privacy Serviceで使用するデータの件名を取得できます。
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 70%
+source-wordcount: '953'
+ht-degree: 68%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 70%
 [!DNL Privacy JS Library]を使用して開始を行うには、次のいずれかの方法を使用して、マシンにインストールする必要があります。
 
 * `npm install @adobe/adobe-privacy` コマンドを実行して、npm を使用してインストールする。
-* Adobe Launch の拡張機能を `AdobePrivacy` という名前で使用する
+* `AdobePrivacy`という名前の下に[Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)を使用してAdobeプライバシー拡張機能をインストールします。
 * [Experience CloudGitHubリポジトリ](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)からダウンロード
 
 ## [!DNL Privacy JS Library]をインスタンス化する
@@ -67,7 +67,7 @@ var adobePrivacy = new AdobePrivacy({
 
 ## コードサンプル
 
-次のコード例は、[!DNL Launch]やDTMを使用しない場合に、一般的なシナリオのいくつかで[!DNL Privacy JS Library]の使用方法を示しています。
+次のコード例は、[!DNL Platform Launch]を使用しない場合に、一般的なシナリオのいくつかで[!DNL Privacy JS Library]の使用方法を示しています。
 
 ### ID の取得
 
