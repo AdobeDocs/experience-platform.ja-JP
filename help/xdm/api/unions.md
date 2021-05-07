@@ -6,7 +6,7 @@ description: スキーマレジストリAPIの/和集合エンドポイントを
 topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 47%
@@ -147,7 +147,7 @@ curl -X GET \
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/477bb01d7125b015b4feba7bccc2e599"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/477bb01d7125b015b4feba7bccc2e599"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
@@ -160,7 +160,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/extensible",
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/477bb01d7125b015b4feba7bccc2e599",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/477bb01d7125b015b4feba7bccc2e599",
         "https://ns.adobe.com/xdm/context/profile-personal-details"
     ],
     "title": "Union object for https://ns.adobe.com/xdm/context/profile",
