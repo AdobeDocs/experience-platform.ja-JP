@@ -6,16 +6,16 @@ description: この概要では、Experience Platformのスキーマワークス
 topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '296'
 ht-degree: 3%
 
 ---
 
 #  スキーマUIの概要
 
-Adobe Experience Platformユーザーインターフェイスの[!UICONTROL スキーマ]ワークスペースを使用すると、スキーマ、クラス、ミックスイン、データ型などのExperience Data Model(XDM)リソースを管理できます。 Adobeが提供するコアリソースの表示や調査を行ったり、組織のカスタムリソースやスキーマを作成したりできます。
+Adobe Experience Platformユーザーインターフェイスの[!UICONTROL スキーマ]ワークスペースを使用すると、スキーマ、クラス、スキーマフィールドグループ、データタイプなどのExperience Data Model(XDM)リソースを管理できます。 Adobeが提供するコアリソースの表示や調査を行ったり、組織のカスタムリソースやスキーマを作成したりできます。
 
 プラットフォームUIのワークスペースにアクセスするには、左側のナビゲーションバーの&#x200B;**[!UICONTROL スキーマ]**&#x200B;を選択します。
 
@@ -33,12 +33,12 @@ Adobe Experience Platformユーザーインターフェイスの[!UICONTROL ス�
 
 * [スキーマ](./resources/schemas.md)
 * [クラス](./resources/classes.md)
-* [Mixin](./resources/mixins.md)
+* [フィールドグループ](./resources/field-groups.md)
 * [データタイプ](./resources/data-types.md)
 
 ## XDMフィールドの定義
 
-クラス、ミックスイン、データ型はすべて、フィールドをスキーマに提供します。 これらのリソースにフィールドを追加する場合は、標準フィールドタイプのリストから選択できます。また、特定の用途に特化したフィールドを定義することもできます。 詳細は、[UI](./fields/overview.md)のXDMフィールドの定義に関するガイドを参照してください。
+クラス、フィールドグループ、データ型は、すべてスキーマにフィールドを提供します。 これらのリソースにフィールドを追加する場合は、標準フィールドタイプのリストから選択できます。また、特定の用途に特化したフィールドを定義することもできます。 詳細は、[UI](./fields/overview.md)のXDMフィールドの定義に関するガイドを参照してください。
 
 ## 次の手順
 
