@@ -6,9 +6,9 @@ topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->スキーマレジストリAPIを使用して、クラス、ミックスイン、データ型などのスキーマに加えて、他のリソースも書き出すことができます。 詳しくは、[export/import endpoints](../api/export-import.md)のガイドを参照してください。
+>スキーマレジストリAPIを使用して、クラス、スキーマフィールドグループ、データ型などのスキーマに加えて、他のリソースもエクスポートできます。 詳しくは、[export/import endpoints](../api/export-import.md)のガイドを参照してください。
 
 ## 前提条件
 
@@ -44,9 +44,9 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +171,12 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +189,8 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/mixins/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,7 +203,7 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
 ]
 ```
 
-ペイロードは配列の形をとり、各配列項目は、エクスポートするカスタムXDMリソースを表すオブジェクトです。 上記の例では、「[!DNL Loyalty details]」カスタムミックスインと「[!DNL Loyalty Members]」スキーマが含まれています。 スキーマが使用するコアリソースは、すべてのサンドボックスおよびIMS組織で使用できるので、エクスポートに含まれません。
+ペイロードは配列の形をとり、各配列項目は、エクスポートするカスタムXDMリソースを表すオブジェクトです。 上記の例では、「[!DNL Loyalty details]」カスタムフィールドグループと「[!DNL Loyalty Members]」スキーマが含まれています。 スキーマが使用するコアリソースは、すべてのサンドボックスおよびIMS組織で使用できるので、エクスポートに含まれません。
 
 組織のテナントIDの各インスタンスは、ペイロードに`<XDM_TENANTID_PLACEHOLDER>`と表示されます。 これらのプレースホルダは、次の手順でスキーマを読み込んだ場所に応じて、適切なテナントID値に自動的に置き換えられます。
 
