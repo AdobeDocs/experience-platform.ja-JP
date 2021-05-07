@@ -5,9 +5,9 @@ topic-legacy: overview
 description: このドキュメントでは、汎用マーケティングプリファレンスフィールドのXDMデータ型の概要を説明します。
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '535'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->このデータ型は、[[!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）]ミックスイン](../mixins/profile/consents.md)をベースラインとして使用し、組織の同意スキーマの構造をカスタマイズするために使用します。
+>このデータ型は、[[!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）]フィールドグループ](../field-groups/profile/consents.md)をベースラインとして使用し、組織の同意スキーマの構造をカスタマイズするために使用します。
 >
 >特定のマーケティング環境設定フィールドに対して`subscriptions`マップが必要な場合は、購読データ型](./marketing-field-subscriptions.md)の[マーケティングフィールドを代わりに使用する必要があります。
 
