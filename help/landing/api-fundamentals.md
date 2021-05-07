@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: このドキュメントでは、Experience PlatformAPIに関連する基盤となるテクノロジーと構文の一部について簡単に説明します。
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '516'
 ht-degree: 52%
 
 ---
@@ -23,7 +23,7 @@ JSON ポインターは、JSON ドキュメント内の特定の値を識別す�
 
 ### JSON スキーマオブジェクトの例
 
-以下のJSONは、JSONポインタ文字列を使用して参照できるフィールドを持つシンプルなXDMスキーマを表しています。 カスタムミックスイン（`loyaltyLevel`など）を使用して追加されたすべてのフィールドは`_{TENANT_ID}`オブジェクトの下に名前が割り当てられますが、コアミックスイン（`fullName`など）を使用して追加されたフィールドは割り当てられません。
+以下のJSONは、JSONポインタ文字列を使用して参照できるフィールドを持つシンプルなXDMスキーマを表しています。 カスタムスキーマフィールドグループ（`loyaltyLevel`など）を使用して追加されたすべてのフィールドは`_{TENANT_ID}`オブジェクトの下に名前が付けられますが、コアフィールドグループ（`fullName`など）を使用して追加されたフィールドはありません。
 
 ```json
 {
@@ -87,8 +87,8 @@ JSON ポインターは、JSON ドキュメント内の特定の値を識別す�
 | JSON ポインター | 解決先 |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | （コアミックスインが提供する`fullName`フィールドへの参照を返します）。 |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | （カスタムミックスインで提供される`loyaltyLevel`フィールドへの参照を返します）。 |
+| `"/properties/person/properties/name/properties/fullName"` | （コアフィールドグループが提供する`fullName`フィールドへの参照を返します）。 |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | （カスタムフィールドグループから提供される`loyaltyLevel`フィールドへの参照を返します）。 |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
