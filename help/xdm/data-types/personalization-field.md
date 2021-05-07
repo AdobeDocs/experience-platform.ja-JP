@@ -5,9 +5,9 @@ topic-legacy: overview
 description: このドキュメントでは、汎用パーソナライゼーション環境設定フィールドのXDMデータ型の概要を説明します。
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '479'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->このデータ型は、[[!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）]ミックスイン](../mixins/profile/consents.md)をベースラインとして使用し、組織の同意スキーマの構造をカスタマイズするために使用します。
+>このデータ型は、[[!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）]フィールドグループ](../field-groups/profile/consents.md)をベースラインとして使用し、組織の同意スキーマの構造をカスタマイズするために使用します。
 
 ![](../images/data-types/personalization-field.png)
 
