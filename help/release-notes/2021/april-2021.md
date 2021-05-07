@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: f0350be580394516016373b1754a49951b58e846
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '885'
 ht-degree: 33%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 33%
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2021 年 4 月 21 日**
+**リリース日：2021 年 4 月 21 日（PT）**
 
 Adobe Experience Platform の既存の機能のアップデート：
 
@@ -44,7 +44,7 @@ Experience Data Model(XDM)は、デジタルエクスペリエンスのパワー
 
 | 機能 | 説明 |
 | --- | --- |
-| 業界別スキーマ推奨 | スキーマエディタのUIでクラスとミックスインを選択する場合、新しいフィルタを使用して、推奨される標準コンポーネントを、貴社の特定の業界に基づいて表示することができます。 各業界の使用例でのコンポーネントの相互関連付けの詳細については、[業界データモデル](https://www.adobe.com/go/xdm-industry-erds-en)のドキュメントを参照してください。 |
+| 業界別スキーマ推奨 | スキーマエディタのUIでクラスおよびスキーマフィールドグループを選択する場合、新しいフィルタを使用して、お客様の業界に応じて、推奨される標準コンポーネントを表示できます。 各業界の使用例でのコンポーネントの相互関連付けの詳細については、[業界データモデル](https://www.adobe.com/go/xdm-industry-erds-en)のドキュメントを参照してください。 |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
