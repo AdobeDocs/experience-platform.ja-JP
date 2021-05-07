@@ -7,9 +7,9 @@ type: Tutorial
 description: このドキュメントでは、関連する手順について説明し、各ワークフローを完了するためのチュートリアルへのリンクを示しています。
 exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '796'
 ht-degree: 25%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 25%
 **このガイドは次の目的に役立ちます。**
 - 既存のスキーマを参照します。
 - スキーマの作成と命名.
-- XDMミッ追加クスインを定義します。
+- XDM追加スキーマフィールドグループを定義します。
 - スキーマフィールドをIDフィールドとして設定します。
 - スキーマのプロファイルを有効にします。
 
