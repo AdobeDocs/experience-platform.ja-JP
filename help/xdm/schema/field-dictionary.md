@@ -6,9 +6,9 @@ topic-legacy: overviews
 description: エクスペリエンスデータモデル（XDM）は、Adobe Experience Platform のスキーマを構成する際に使用できる一連の標準フィールドを定義します。これらのフィールドを使用すると、XDM を使用するすべてのサービスが、これらのフィールドで提供される特定の定義を明示的に理解するので、Platform サービス全体で一貫した動作が行われます。
 exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '25238'
+source-wordcount: '25240'
 ht-degree: 98%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 98%
 
 [!DNL Experience Platform]のスキーマ定義の原則とベストプラクティスなど、スキーマの構成要素に関する詳細は、スキーマ構成の基本事項[を参照してください。](composition.md)
 
-以下の表に、フィールド名（すべての XDM フィールドの名前空間に「xdm」が使用されているわけではありません）と、必要なタイトル、説明、タイプ、形式、および対応する XDM 型と、フィールドが見つかるスキーマ（Mixin、データタイプ、リソース）を示します。
+以下の表に、フィールド名（すべてのXDMフィールドが「xdm」を使用して名前が付けられるわけではありません）と、必要に応じてタイトルと説明、タイプ、形式、および対応するXDM型と、そのフィールドが見つかるリソース(スキーマ、スキーマフィールドグループ、データ型)を示します。
 
 [!DNL Schema Editor]の検索機能を使用して、これらのリソースの詳細を表示できます。詳しくは、[スキーマエディターチュートリアル](../tutorials/create-schema-ui.md#browse)を参照してください。
 
