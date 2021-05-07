@@ -6,14 +6,21 @@ description: スキーマレジストリAPIの/mixinsエンドポイントを使
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 13%
+source-wordcount: '1193'
+ht-degree: 12%
 
 ---
 
-# ミックスインエンドポイント
+
+# Mixinsエンドポイント（非推奨）
+
+>[!IMPORTANT]
+>
+>ミックスインの名前がスキーマフィールドグループに変更されたので、`/mixins`エンドポイントの代わりに`/fieldgroups`エンドポイントを使用するようになりました。
+>
+>`/mixins`は引き続きレガシーエンドポイントとして維持されますが、エクスペリエンスアプリケーションでスキーマレジストリAPIの新しい実装には`/fieldgroups`を使用することを強くお勧めします。 詳しくは、[フィールドグループエンドポイントガイド](./field-groups.md)を参照してください。
 
 ミックスインは、個人、住所、Webブラウザー環境など、特定の概念を表す1つ以上のフィールドを定義する再利用可能なコンポーネントです。 ミックスインは、表すデータの動作（レコードまたは時系列）に応じて、互換性のあるクラスを実装するスキーマの一部として含めることを意図しています。 [!DNL Schema Registry] APIの`/mixins`エンドポイントを使用すると、エクスペリエンスアプリケーション内のミックスインをプログラムで管理できます。
 
@@ -154,7 +161,7 @@ curl -X GET \
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -300,7 +307,7 @@ curl -X POST \
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -480,7 +487,7 @@ curl -X PUT \
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -621,7 +628,7 @@ curl -X PATCH \
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
