@@ -7,10 +7,10 @@ type: Tutorial
 description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2373'
-ht-degree: 79%
+source-wordcount: '2426'
+ht-degree: 48%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 79%
 
 ## 標準クラスでのスキーマを構成
 
-スキーマは[!DNL Experience Platform]に取り込むデータの青写真と考えることができます。 各スキーマは、クラスと 0 個以上の mixin で構成されます。つまり、スキーマを定義するために mixin を追加する必要はありませんが、ほとんどの場合は少なくとも 1 つの mixin が使用されます。
+スキーマは[!DNL Experience Platform]に取り込むデータの青写真と考えることができます。 各スキーマは、1つのクラスと0個以上のスキーマフィールドグループで構成されます。 つまり、スキーマを定義するためにフィールドグループを追加する必要はありませんが、ほとんどの場合は少なくとも1つのフィールドグループが使用されます。
 
 ### クラスの割り当て
 
@@ -177,13 +177,13 @@ curl -X GET \
 }
 ```
 
-### Mixin の追加 {#add-a-mixin}
+### フィ追加ールドグループ{#add-a-field-group}
 
-「ロイヤルティメンバー」スキーマが作成され、確認されたので、mixin を追加できます。
+ロイヤルティメンバースキーマが作成され、確認されたので、フィールドグループを追加できます。
 
-選択したスキーマのクラスに応じて、使用できるさまざまな標準 mixin があります。各 mixin には、その mixin と互換性があるクラスを定義する `intendedToExtend` フィールドが含まれています。
+選択したスキーマのクラスに応じて、使用できる標準フィールドグループが異なります。 各フィールドグループには`intendedToExtend`フィールドが含まれており、このフィールドグループと互換性のあるクラスを定義します。
 
-mixin は、「名前」や「住所」など、同じ情報を取り込む必要のあるスキーマで再利用できる概念を定義します。
+フィールドグループは、「名前」や「住所」など、同じ情報を取り込む必要のある任意のスキーマで再利用できる概念を定義します。
 
 **API 形式**
 
@@ -193,9 +193,9 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **リクエスト**
 
-このリクエストは、「ロイヤルティメンバー」スキーマを更新（PATCH）し、「プロファイル — 人 — 詳細」mixin 内のフィールドを含めます。
+この要求は、忠誠度メンバースキーマを更新(PATCH)し、「プロファイル — 人 — 詳細」フィールドグループ内のフィールドを含めます。
 
-「プロファイル — 個人 — 詳細」mixin を追加することで、「ロイヤルティメンバー」スキーマは、姓、名、誕生日などのロイヤルティプログラムメンバーに関する情報を取り込むようになります。
+「プロファイル — 人物 — 詳細」フィールドグループを追加することで、忠誠度メンバースキーマは、ロイヤルティプログラムメンバー（名、姓、誕生日など）に関する情報を取得できるようになりました。
 
 ```SHELL
 curl -X PATCH \
@@ -210,9 +210,9 @@ curl -X PATCH \
       ]'
 ```
 
-**応答** 
+**応答**
 
-応答では、`meta:extends` 配列には新しく追加された mixin が含まれ、`allOf` 属性には mixin に対する `$ref` が含まれます。
+応答は、新しく追加されたフィールドグループを`meta:extends`配列に表示し、`allOf`属性のフィールドグループに対する`$ref`を含みます。
 
 ```JSON
 {
@@ -254,17 +254,17 @@ curl -X PATCH \
 }
 ```
 
-### 別の mixin の追加
+### 追加別のフィールドグループ
 
-次に、別の mixin を使用して手順を繰り返すことで、別の標準 mixin を追加できます。
+これで、別のフィールドグループを使用して手順を繰り返すことで、別の標準フィールドグループを追加できるようになりました。
 
 >[!TIP]
 >
-> 使用可能なすべての mixin を確認して、各 mixin に含まれるフィールドに慣れておくことをお勧めします。「グローバル」コンテナと「テナント」コンテナのそれぞれに対してリクエストを実行し、「meta:intendedToExtend」フィールドが使用中のクラスと一致する mixins のみを返すことにより、特定のクラスで使用できるすべての mixins をリスト（GET）できます。この場合、[!DNL XDM Individual Profile]クラスなので、[!DNL XDM Individual Profile] `$id`が使用されます。
+>各フィールドに含まれるフィールドについて理解するために、利用可能なすべてのフィールドグループを確認することをお勧めします。 「グローバル」と「テナント」の各コンテナに対してリクエストを実行し、使用しているクラスと「meta:intendedToExtend」フィールドが一致するフィールドグループのみを返すことで、特定のクラスで使用できるすべてのフィールドグループをリスト(GET)できます。 この場合、[!DNL XDM Individual Profile]クラスなので、[!DNL XDM Individual Profile] `$id`が使用されます。
 
 ```http
-GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
-GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
 **API 形式**
@@ -275,7 +275,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **リクエスト**
 
-このリクエストは、「ロイヤルティメンバー」スキーマを更新（PATCH）し、「プロファイル — 人 — 詳細」mixin 内のフィールドを含め、スキーマに「ホームアドレス」、「電子メールアドレス」、「ホーム電話」フィールドを追加します。
+この要求では、忠誠度メンバースキーマが更新(PATCH)され、「プロファイル — 個人 — 詳細」フィールドグループ内のフィールドが含まれ、「ホームアドレス」、「電子メールアドレス」および「ホーム電話」フィールドがスキーマに追加されます。
 
 ```SHELL
 curl -X PATCH \
@@ -290,9 +290,9 @@ curl -X PATCH \
       ]'  
 ```
 
-**応答** 
+**応答**
 
-応答では、`meta:extends` 配列には新しく追加された mixin が含まれ、`allOf` 属性には mixin に対する `$ref` が含まれます。
+応答は、新しく追加されたフィールドグループを`meta:extends`配列に表示し、`allOf`属性のフィールドグループに対する`$ref`を含みます。
 
 「ロイヤルティメンバー」スキーマには、「プロファイル」、「プロファイル — 個人 — 詳細」、「プロファイル — 個人 — 詳細」の 3 つの `$ref` 値が `allOf` 配列に含まれている必要があります。
 
@@ -340,29 +340,29 @@ curl -X PATCH \
 }
 ```
 
-### 新しい mixin の定義
+### 新しいフィールドグループを定義する
 
-「ロイヤルティメンバー」スキーマは、ロイヤルティプログラムに固有の情報を取り込む必要があります。この情報は、標準 mixin には含まれません。
+「ロイヤルティメンバー」スキーマは、ロイヤルティプログラムに固有の情報を取り込む必要があります。この情報は、標準フィールドグループには含まれません。
 
-[!DNL Schema Registry]は、テナントコンテナ内で独自のミックスインを定義できるので、これを説明します。 これらの mixin は組織に固有のもので、IMS 組織外のユーザーは表示したり編集したりすることはできません。
+[!DNL Schema Registry]は、テナントコンテナ内に独自のフィールドグループを定義できるので、これを説明します。 これらのフィールドグループは組織に固有のもので、IMS組織外の誰もが表示したり編集したりすることはできません。
 
-新しい mixin を作成（POST）するには、リクエストに、mixin に互換性がある基本クラスの `$id` を含む `meta:intendedToExtend` フィールドと、mixin に含めるプロパティを含める必要があります。 
+新しいフィールドグループを作成(POST)するには、リクエストに、フィールドグループと互換性のある基本クラスの`$id`を含む`meta:intendedToExtend`フィールドと、フィールドグループに含めるプロパティを含める必要があります。
 
-他の mixin やフィールドとの衝突を避けるために、すべてのカスタムプロパティをユーザーの `TENANT_ID` 下にネストする必要があります。
+他のフィールドグループやフィールドとの衝突を避けるために、すべてのカスタムプロパティは`TENANT_ID`の下にネストする必要があります。
 
 **API 形式**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **リクエスト**
 
-このリクエストは、「loyaltyId」、「loyaltyLevel」、「loyaltyPoints」、「memberSince」の 4 つのポイントプログラム固有のフィールドを含む「loyalty」オブジェクトを持つ新しい mixin を作成します。
+このリクエストにより、4つの忠誠度プログラム固有のフィールドを含む「忠誠度」オブジェクトを持つ新しいフィールドグループが作成されます。&quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;および&quot;memberSince&quot;。
 
 ```SHELL
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -372,7 +372,7 @@ curl -X POST\
         "type": "object",
         "title": "Loyalty Member Details",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Loyalty Program Mixin.",
+        "description": "Loyalty Program Field Group.",
         "definitions": {
             "loyalty": {
               "properties": {
@@ -417,9 +417,9 @@ curl -X POST\
       }'
 ```
 
-**応答** 
+**応答**
 
-リクエストが成功すると、HTTP 応答ステータス 201（作成済み）が返され、応答本文に `$id`、`meta:altIt`、および `version`を含む新しく作成された mixin の詳細が含まれています。これらの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
+リクエストが成功すると、HTTP応答ステータス201（作成済み）が返されます。この状態には、新しく作成されたフィールドグループの詳細（`$id`、`meta:altIt`、`version`など）が含まれます。 これらの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
 
 ```JSON
 {
@@ -428,7 +428,7 @@ curl -X POST\
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -482,11 +482,11 @@ curl -X POST\
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -496,9 +496,9 @@ curl -X POST\
 }
 ```
 
-### スキーマへのカスタム mixin の追加
+### カス追加タムフィールドグループからスキーマ
 
-[標準 mixin を追加](#add-a-mixin)する同じ手順で、この新しく作成した mixin をスキーマに追加できます。
+現在は、[標準のフィールドグループ](#add-a-field-group)を追加する場合も同じ手順に従って、新しく作成したフィールドグループをスキーマに追加できます。
 
 **API 形式**
 
@@ -508,7 +508,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **リクエスト**
 
-このリクエストは、「ロイヤルティメンバー」スキーマを更新（PATCH）し、「ロイヤルティメンバー詳細」mixin 内のフィールドを含めます。
+この要求は、忠誠度メンバースキーマを更新(PATCH)し、新しい[忠誠度メンバーの詳細]フィールドグループ内のフィールドを含めます。
 
 ```SHELL
 curl -X PATCH \
@@ -519,13 +519,13 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
-**応答** 
+**応答**
 
-応答の `meta:extends` 配列には新しく追加された mixin が含まれて、`allOf` 属性には mixin への `$ref` が含まれているので、mixin が正常に追加されたことを確認できます。
+応答は、新しく追加されたフィールドグループを`meta:extends`配列に表示し、`allOf`属性のフィールドグループに対する`$ref`を含むので、フィールドグループが正常に追加されたことがわかります。
 
 ```JSON
 {
@@ -543,7 +543,7 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -557,7 +557,7 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -577,7 +577,7 @@ curl -X PATCH \
 
 ### 現在のスキーマの表示
 
-GET 要求を実行して現在のスキーマを表示し、追加した mixin がスキーマの全体的な構造にどのように貢献したかを確認できるようになりました。
+現在のスキーマを表示するためのGETリクエストを実行し、追加したフィールドグループがスキーマの全体的な構造にどのように貢献したかを確認できるようになりました。
 
 **API 形式**
 
@@ -599,9 +599,9 @@ curl -X GET \
 
 **応答** 
 
-`application/vnd.adobe.xed-full+json; version=1` Accept ヘッダーを使用すると、すべてのプロパティを含む完全なスキーマを表示できます。これらのプロパティは、スキーマの作成に使用されたクラスと mixin によって提供されるフィールドです。この応答例では、スペースを節約するために個々のプロパティ属性が最小化されています。ドキュメント末尾の[付録](#appendix)では、すべてのプロパティとその属性を含む完全なスキーマを参照できます。
+`application/vnd.adobe.xed-full+json; version=1` Accept ヘッダーを使用すると、すべてのプロパティを含む完全なスキーマを表示できます。これらのプロパティは、スキーマの構成に使用されたクラスおよびフィールドグループによって提供されるフィールドです。 この応答例では、スペースを節約するために個々のプロパティ属性が最小化されています。ドキュメント末尾の[付録](#appendix)では、すべてのプロパティとその属性を含む完全なスキーマを参照できます。
 
-`"properties"`の下に、カスタム mixin を追加したときに作成された `_{TENANT_ID}` 名前空間が表示されます。この名前空間内には、「loyalty」オブジェクトと、mixin の作成時に定義されたフィールドが含まれます。
+`"properties"`の下には、カスタムフィールドグループを追加したときに作成された`_{TENANT_ID}`名前空間が表示されます。 この名前空間内には、「忠誠度」オブジェクトと、フィールドグループの作成時に定義されたフィールドが含まれます。
 
 ```JSON
 {
@@ -619,7 +619,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -691,11 +691,11 @@ curl -X GET \
 
 ### データタイプの作成
 
-作成した「Loyalty」mixin には、他のスキーマに役立つ特定のロイヤルティプロパティが含まれています。例えば、データはエクスペリエンスイベントの一部として取得されたり、別のクラスを実装するスキーマによって使用されたりします。この場合、オブジェクト階層をデータ型として保存し、別の場所で簡単に定義を再利用できるようにすると効果的です。
+作成した[忠誠度]フィールドグループには、他のスキーマで役立つ特定の忠誠度プロパティが含まれています。 例えば、データはエクスペリエンスイベントの一部として取得されたり、別のクラスを実装するスキーマによって使用されたりします。この場合、オブジェクト階層をデータ型として保存し、別の場所で簡単に定義を再利用できるようにすると効果的です。
 
 データ型を使用すると、1 つのオブジェクト階層を 1 回定義し、他のスカラ型と同様にフィールド内で参照できます。
 
-つまり、データ型を使用すると、フィールドの「型」として追加してスキーマの任意の場所に含めることができるため、mixin よりも柔軟にマルチフィールド構造を一貫して使用できます。
+つまり、データ型を使用すると、複数フィールド構造を「型」として追加することでスキーマ内のどこにでも含めることができるので、フィールドグループよりも柔軟に、一貫した形で使用できます。
 
 **API 形式**
 
@@ -822,19 +822,19 @@ URL エンコードされた `$id` URI を使用して参照（GET）リクエ�
 
 ### スキーマでのデータ型の使用
 
-「Loyalty Details」データ型が作成されたので、作成した mixin の「loyalty」フィールドを更新（PATCH）して、以前のフィールドの代わりにデータ型を参照できます。
+忠誠度の詳細データ型が作成されたので、作成したフィールドグループの「忠誠度」フィールドを更新(PATCH)し、以前に作成したフィールドの代わりにデータ型を参照できます。
 
 **API 形式**
 
 ```http
-PATCH /tenant/mixins/{mixin meta:altId or URL encoded $id URI}
+PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 ```
 
 **リクエスト**
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -867,7 +867,7 @@ curl -X PATCH \
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -896,11 +896,11 @@ curl -X PATCH \
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -1068,7 +1068,7 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1082,7 +1082,7 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1171,9 +1171,9 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従うことで、標準の mixin と定義した mixin の両方を使用してスキーマを正常に構成することができました。これで、このスキーマを使用して、データセットを作成し、レコードデータを Adobe Experience Platform に取得することができます。
+このチュートリアルに従うと、標準のフィールドグループと、定義したフィールドグループの両方を使用して、スキーマを正しく構成できます。 これで、このスキーマを使用して、データセットを作成し、レコードデータを Adobe Experience Platform に取得することができます。
 
-このチュートリアル全体で作成した「ロイヤルティメンバー」スキーマは、次の付録で完全に参照できます。スキーマを見ると、mixin が全体的な構造にどのように貢献しているか、およびデータ取得に使用できるフィールドを確認できます。
+このチュートリアル全体で作成した「ロイヤルティメンバー」スキーマは、次の付録で完全に参照できます。スキーマを見ると、フィールドグループが全体的な構造にどのように貢献しているか、およびデータ取り込みに使用できるフィールドは何かがわかります。
 
 複数のリレーションを作成したら、関係記述子を使用して、スキーマ間の関係を定義できます。詳しくは、[2 つのスキーマの関係を定義する](relationship-api.md)ためのチュートリアルを参照してください 。レジストリ内のすべての操作（GET、POST、PUT、PATCH、DELETE）を実行する方法の詳細な例については、API を使用する際に、『[スキーマレジストリ開発者ガイド](../api/getting-started.md)』を参照してください。
 
@@ -1185,7 +1185,7 @@ curl -X GET \
 
 このチュートリアル全体で、スキーマは小売ロイヤルティメンバープログラムを説明するために構成されています。
 
-スキーマは[!DNL XDM Individual Profile]クラスを実装し、複数のミックスインを組み合わせます。標準の「個人の詳細」と「個人の詳細」ミックスインを使用し、また、チュートリアルで定義された「忠誠度の詳細」ミックスインを使用して、忠誠度メンバーに関する情報を取り込みます。
+スキーマは[!DNL XDM Individual Profile]クラスを実装し、複数のフィールドグループを結合します。標準の「個人詳細」フィールドグループと「個人詳細」フィールドグループを使用して、また、チュートリアルで定義した「忠誠度の詳細」フィールドグループを使用して、忠誠度メンバーに関する情報を取り込みます。
 
 以下に、完全な「ロイヤルティメンバー」スキーマを JSON 形式で示します。
 
@@ -1205,7 +1205,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
