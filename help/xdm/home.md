@@ -6,7 +6,7 @@ topic-legacy: overview
 description: 標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 44%
@@ -17,7 +17,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->「mixin」という用語は、理解を促進するために「スキーマフィールドグループ」に更新されました。 フィールドグループは、ビジネスでの使用例をサポートする再利用可能なフィールドのセットです。 この変更は、スキーマレジストリAPI、Adobe Experience PlatformUI、およびすべてのプラットフォームドキュメントに反映されます。
+>「mixin」という用語は、理解を促進するためにスキーマ「フィールドグループ」に更新されました。 フィールドグループは、ビジネスでの使用例をサポートする再利用可能なフィールドのセットです。 この変更は、スキーマレジストリAPI、Adobe Experience PlatformUI、およびすべてのプラットフォームドキュメントに反映されます。
 
 標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。[!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 
