@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ui;UI;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；エクスプローラ；クラス；ミックスイン；データ型；スキーマ;
+keywords: Experience Platform；ホーム；人気の高いトピック；ui;UI;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；エクスプローラ；クラス；フィールドグループ；スキーマ;
 solution: Experience Platform
 title: UIでのXDMリソースの参照
-description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、ミックスイン、およびデータタイプを調べる方法について説明します。
+description: Experience Platformユーザーインターフェイスで既存のスキーマ、クラス、スキーマフィールドグループおよびデータタイプを調べる方法について説明します。
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
 
 # UIでのXDMリソースの参照
 
-Adobe Experience Platformでは、すべてのExperience Data Model(XDM)リソースが[!DNL Schema Library]に保存されます。これには、組織が提供する標準リソースや、Adobeが定義するカスタムリソースが含まれます。 Experience PlatformUIで、[!DNL Schema Library]内の任意の既存のスキーマ、クラス、ミックスイン、またはデータ型の構造とフィールドを表示できます。 これは、データ取り込みの計画と準備を行う際に特に便利です。UIは、これらのXDMリソースが提供する各フィールドに必要なデータタイプと使用例に関する情報を提供します。
+Adobe Experience Platformでは、すべてのExperience Data Model(XDM)リソースが[!DNL Schema Library]に保存されます。これには、組織が提供する標準リソースや、Adobeが定義するカスタムリソースが含まれます。 Experience PlatformUIでは、[!DNL Schema Library]内の任意の既存のスキーマ、クラス、スキーマフィールドグループ、またはデータ型の構造とフィールドを表示できます。 これは、データ取り込みの計画と準備を行う際に特に便利です。UIは、これらのXDMリソースが提供する各フィールドに必要なデータタイプと使用例に関する情報を提供します。
 
-このチュートリアルでは、Experience PlatformUIの既存のスキーマ、クラス、ミックスイン、データタイプを調べる手順を説明します。
+このチュートリアルでは、Experience PlatformUIの既存のスキーマ、クラス、フィールドグループ、データタイプを調べる手順を説明します。
 
 ## XDMリソース{#lookup}を検索します。
 
-Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択します。 [!UICONTROL スキーマ]ワークスペースには、**[!UICONTROL 「参照]**」タブがあり、組織内のすべての既存のXDMリソースを調査できます。また、特に&#x200B;**[!UICONTROL クラス]**、**[!UICONTROL ミックスイン]**、**[!UICONTROL データ型]**&#x200B;を調査できます。
+Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択します。 [!UICONTROL スキーマ]ワークスペースには、**[!UICONTROL 「参照]**」タブがあり、組織内のすべての既存のXDMリソースを調査できます。また、**[!UICONTROL クラス]**、**[!UICONTROL フィールドグループ]**、**[!UICONTROL データ型]**&#x200B;を調査する専用タブもあります。
 
 ![](../images/ui/explore/tabs.png)
 
@@ -80,7 +80,7 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
 
 ### IDフィールド{#identity}
 
-IDフィールドを含むスキーマを検査する場合、これらのフィールドは、スキーマに提供するクラスまたはミックスインの下の左側のレールに表示されます。 左側のレールでIDフィールド名を選択すると、階層化の深さに関係なく、カンバスにフィールドが表示されます。
+IDフィールドを含むスキーマを検査する場合、これらのフィールドは、スキーマに提供するクラスまたはフィールドグループの左側のナビゲーションバーに表示されます。 左側のレールでIDフィールド名を選択すると、階層化の深さに関係なく、カンバスにフィールドが表示されます。
 
 キャンバス内のIDフィールドは、指紋アイコン（![指紋アイコン画像](../images/ui/explore/identity-symbol.png)）で強調表示されます。 IDフィールドの名前を選択すると、[ID名前空間](../../identity-service/namespaces.md)や、そのフィールドがスキーマの主IDかどうかなどの追加情報を表示できます。
 
