@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、Device XDMデータタイプの概要を説明します。
 exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '326'
 ht-degree: 18%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 18%
 | `typeID` | 文字列 | デバイスの識別子。これは、DeviceAtlasまたは使用中のハードウェアを識別する別のサービスからの識別子である可能性があります。 |
 | `typeIDService` | 文字列 | デバイスタイプを識別するために使用されるサービスの名前空間。使用できる値の詳細については、[付録](#typeIDService)を参照してください。 |
 
-Mixinの詳細については、パブリックXDMリポジトリを参照してください。
+フィールドグループの詳細については、public XDM repositoryを参照してください。
 
 * [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)
