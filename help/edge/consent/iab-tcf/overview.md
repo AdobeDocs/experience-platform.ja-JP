@@ -1,15 +1,15 @@
 ---
 title: Adobe Experience PlatformWeb SDKでのIAB TCF 2.0のサポート
 description: Adobe Experience PlatformWeb SDKを使用してIAB TCF 2.0の同意の環境設定をサポートする方法を学びます。
-keywords: 同意；setConsent;プロファイルプライバシーMixin；エクスペリエンスイベントプライバシーMixin；プライバシーMixin;IAB TCF 2.0；リアルタイムCDP；リアルタイム顧客データプロファイル
+keywords: 同意；setConsent;プロファイルプライバシーフィールドグループ；エクスペリエンスイベントプライバシーフィールドグループ；プライバシーフィールドグループ；IAB TCF 2.0；リアルタイムCDP；リアルタイム顧客データプロファイル
+exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 translation-type: tm+mt
-source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Experience PlatformWeb SDKでのIAB TCF 2.0のサポート
 
@@ -49,7 +49,7 @@ Adobe Audience Manager(AAM)は、IAB TCF 2.0のサポートを含みます。IAB
 
 イベントの同意情報を収集するには、次の情報が必要です。
 
-- [!DNL XDM Experience Event]クラスに基づくデータセット（[!DNL Experience Event]プライバシーミックスインを含む）。
+- [!DNL XDM Experience Event]クラスに基づくデータセット。[!DNL Experience Event]プライバシースキーマフィールドグループを持ちます。
 - 上記の[!DNL XDM Experience Event]データセットを使用して設定されたエッジ設定。
 
 XDMエクスペリエンスイベントをAnalyticsヒットに変換する方法について詳しくは、[Analyticsの概要](../../data-collection/adobe-analytics/analytics-overview.md)のドキュメントを参照し、開始を参照してください。
