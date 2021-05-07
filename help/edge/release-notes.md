@@ -4,9 +4,9 @@ description: Adobe Experience Platform Web SDK の最新のリリースノート
 keywords: Adobe Experience PlatformWeb SDK；プラットフォームWeb SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 * SDKをnpmパッケージ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)として[インストールできるようになりました。
 * [デフォルトの同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)の設定時に、`out`オプションのサポートが追加され、同意が得られるまですべてのイベントが削除されます(既存の`pending`オプションはイベントをキューに入れ、同意が得られたら送信します)。
 * [onBeforeEventSendコールバック](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend)を使用して、イベントの送信を防ぐことができるようになりました。
-* レンダリングまたはクリックされるパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization`の代わりにXDMミックスインを使用するようになりました。
+* レンダリングまたはクリックされるパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization`の代わりにXDMスキーマフィールドグループを使用するようになりました。
 * [getIdentityコマンド](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id)は、IDと共にエッジ領域IDを返すようになりました。
 * サーバーから受け取った警告およびエラーは改善され、より適切な方法で処理されました。
 * [Adobeの同意2.0基準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)のサポートを追加しました。
