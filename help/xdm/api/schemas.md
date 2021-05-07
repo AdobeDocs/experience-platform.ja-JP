@@ -6,16 +6,16 @@ description: スキーマレジストリAPIの/スキーマエンドポイント
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 18%
+source-wordcount: '1431'
+ht-degree: 16%
 
 ---
 
 # スキーマエンドポイント
 
-スキーマは、Adobe Experience Platformに取り込むデータの青写真と考えることができます。 各スキーマは、クラスと 0 個以上の mixin で構成されます。[!DNL Schema Registry] APIの`/schemas`エンドポイントを使用すると、エクスペリエンスアプリケーション内のスキーマをプログラムで管理できます。
+スキーマは、Adobe Experience Platformに取り込むデータの青写真と考えることができます。 各スキーマは、1つのクラスと0個以上のスキーマフィールドグループで構成されます。 [!DNL Schema Registry] APIの`/schemas`エンドポイントを使用すると、エクスペリエンスアプリケーション内のスキーマをプログラムで管理できます。
 
 ## はじめに
 
@@ -154,7 +154,7 @@ curl -X GET \
           "meta:xdmType": "object"
       },
       {
-          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
           "type": "object",
           "meta:xdmType": "object"
       }
@@ -163,7 +163,7 @@ curl -X GET \
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
-      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile"
@@ -193,7 +193,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->以下の呼び出し例は、クラスの組版要件を最小限にし、ミックスインを使用しないで、APIでのスキーマの作成方法のベースラインの例に過ぎません。 ミックスインやデータ型を使用してフィールドを割り当てる方法など、APIでスキーマを作成する方法に関する完全な手順については、[スキーマ作成のチュートリアル](../tutorials/create-schema-api.md)を参照してください。
+>以下の呼び出し例は、APIでのスキーマの作成方法のベースラインの例です。クラスの組版要件は最小限で、フィールドグループは不要です。 フィールドグループとデータ型を使用してフィールドを割り当てる方法など、APIでスキーマを作成する手順について詳しくは、[スキーマ作成のチュートリアル](../tutorials/create-schema-api.md)を参照してください。
 
 **API 形式**
 
@@ -227,7 +227,7 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `allOf` | オブジェクトの配列。各オブジェクトは、スキーマがフィールドを実装するクラスまたはミックスインを参照します。 各オブジェクトには1つのプロパティ(`$ref`)が含まれ、その値は新しいスキーマで実装するクラスまたはミックスの`$id`を表します。 1つのクラスを指定し、0個以上の追加ミックスインを追加する必要があります。 上記の例では、`allOf`配列内の1つのオブジェクトがスキーマのクラスです。 |
+| `allOf` | オブジェクトの配列。各オブジェクトは、スキーマがフィールドを実装するクラスまたはフィールドグループを参照します。 各オブジェクトには1つのプロパティ(`$ref`)が含まれ、その値は新しいスキーマが実装するクラスまたはフィールドグループの`$id`を表します。 1つのクラスを指定し、0個以上のフィールドグループを追加する必要があります。 上記の例では、`allOf`配列内の1つのオブジェクトがスキーマのクラスです。 |
 
 **応答**
 
@@ -268,7 +268,7 @@ curl -X POST \
 
 テナントコンテナ内のすべてのスキーマ](#list)に対して[リストに対するGETリクエストを実行すると、新しいスキーマが含まれるようになりました。 URLエンコードされた`$id` URIを使用して[ルックアップ(GET)リクエスト](#lookup)を実行し、新しいスキーマを直接表示できます。
 
-スキーマにフィールドを追加するには、[PATCH演算](#patch)を実行して、スキーマの`allOf`配列と`meta:extends`配列にミックスインを追加します。
+スキーマにフィールドを追加するには、[PATCH演算](#patch)を実行して、スキーマの`allOf`配列と`meta:extends`配列にフィールドグループを追加します。
 
 ## スキーマの更新{#put}
 
@@ -357,7 +357,7 @@ PATCHリクエストを使用して、スキーマの一部を更新できます
 >
 >個々のフィールドを更新する代わりに、リソース全体を新しい値に置き換える場合は、[PUT演算](#put)を使用したスキーマの置き換えの節を参照してください。
 
-最も一般的なPATCH操作の1つに、以下の例に示すように、スキーマに以前に定義したミックスインを追加する方法があります。
+最も一般的なPATCH操作の1つに、次の例に示すように、以前に定義したフィールドグループをスキーマに追加することがあります。
 
 **API 形式**
 
@@ -371,7 +371,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 **リクエスト**
 
-以下のリクエスト例では、スキーマに新しいミックスインを追加します。そのミックスインの`$id`値を`meta:extends`配列と`allOf`配列の両方に追加します。
+以下のリクエスト例では、新しいフィールドグループをスキーマに追加します。そのフィールドグループの`$id`値を`meta:extends`配列と`allOf`配列の両方に追加します。
 
 リクエスト本体は配列の形をとり、リストに表示された各オブジェクトは個々のフィールドに対する特定の変更を表します。 各オブジェクトは、実行する操作(`op`)、操作を実行するフィールド(`path`)、およびその操作に含める情報(`value`)を含む。
 
@@ -387,13 +387,13 @@ curl -X PATCH\
         { 
           "op": "add",
           "path": "/meta:extends/-",
-          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+          "value":  "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         },
         {
           "op": "add",
           "path": "/allOf/-",
           "value":  {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
           }
         }
       ]'
@@ -401,7 +401,7 @@ curl -X PATCH\
 
 **応答**
 
-応答には、両方の操作が正常に実行されたことが示されます。Mixin `$id` が `meta:extends` 配列に追加され、mixin `$id` への参照（`$ref`）が `allOf` 配列に表示されます。
+応答には、両方の操作が正常に実行されたことが示されます。フィールドグループ`$id`が`meta:extends`配列に追加され、フィールドグループ`$id`への参照(`$ref`)が`allOf`配列に表示されるようになりました。
 
 ```JSON
 {
@@ -413,7 +413,7 @@ curl -X PATCH\
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -422,7 +422,7 @@ curl -X PATCH\
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -493,7 +493,7 @@ curl -X PATCH\
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -502,7 +502,7 @@ curl -X PATCH\
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
