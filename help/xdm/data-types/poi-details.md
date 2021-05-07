@@ -6,10 +6,10 @@ topic-legacy: overview
 description: このドキュメントでは、目標地点の詳細XDMデータ型の概要を説明します。
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 14%
+source-wordcount: '201'
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 14%
 | `poiID` | 文字列 | POIを表す一意の識別子です。 |
 | `type` | 文字列 | POI 定義の管理者が選択したタイピングスキーマを使用した POI の一般的なタイプ。 |
 
-Mixinの詳細については、パブリックXDMリポジトリを参照してください。
+データ型の詳細については、パブリックXDMリポジトリを参照してください。
 
 * [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)
