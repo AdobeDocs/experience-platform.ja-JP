@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、ID XDMデータ型の概要を説明します。
 exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '284'
 ht-degree: 10%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 10%
 | `primary` | Boolean | これが個人の主要IDであるかどうかを示します。 各個人が持つことのできる主IDは1つだけです。 |
 | `xid` | 文字列 | 存在する場合、この値は、すべての名前空間内のすべての名前空間スコープ識別子全体で一意の名前空間間識別子を表します。 |
 
-Mixinの詳細については、パブリックXDMリポジトリを参照してください。
+データ型の詳細については、パブリックXDMリポジトリを参照してください。
 
 * [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
