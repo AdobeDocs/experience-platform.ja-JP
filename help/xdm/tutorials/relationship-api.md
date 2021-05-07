@@ -7,10 +7,10 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 47%
+source-wordcount: '1354'
+ht-degree: 35%
 
 ---
 
@@ -111,35 +111,35 @@ curl -X GET \
 
 ## ソーススキーマの参照フィールドの定義
 
-[!DNL Schema Registry]内では、リレーショナル・データベース・テーブルの外部キーと同様に関係記述子が機能します。ソーススキーマ内のフィールドは、宛先スキーマのプライマリIDフィールドへの参照として機能します。 ソーススキーマにこの目的のフィールドがない場合は、新しいフィールドを使用してミックスインを作成し、スキーマに追加する必要があります。 この新しいフィールドには、`type`値&quot;[!DNL string]&quot;が必要です。
+[!DNL Schema Registry]内では、リレーショナル・データベース・テーブルの外部キーと同様に関係記述子が機能します。ソーススキーマ内のフィールドは、宛先スキーマのプライマリIDフィールドへの参照として機能します。 ソーススキーマにこの目的のフィールドがない場合は、新しいフィールドを含むスキーマフィールドグループを作成し、スキーマに追加する必要があります。 この新しいフィールドには、`type`値&quot;[!DNL string]&quot;が必要です。
 
 >[!IMPORTANT]
 >
 >宛先スキーマとは異なり、ソーススキーマは、その主IDを参照フィールドとして使用できません。
 
-このチュートリアルでは、宛先スキーマ「[!DNL Hotels]」には、スキーマのプライマリIDとして機能する`hotelId`フィールドが含まれているので、参照フィールドとしても機能します。 ただし、ソーススキーマ&quot;[!DNL Loyalty Members]&quot;には参照として使用する専用のフィールドがないため、スキーマに新しいフィールドを追加する新しいミックスインを与える必要があります。`favoriteHotel`.
+このチュートリアルでは、宛先スキーマ「[!DNL Hotels]」には、スキーマのプライマリIDとして機能する`hotelId`フィールドが含まれているので、参照フィールドとしても機能します。 ただし、ソーススキーマ&quot;[!DNL Loyalty Members]&quot;には、参照として使用する専用のフィールドがないため、スキーマに新しいフィールドを追加する新しいフィールドグループを指定する必要があります。`favoriteHotel`.
 
 >[!NOTE]
 >
 >ソーススキーマに、参照フィールドとして使用する専用のフィールドが既に存在する場合は、[参照記述子](#reference-identity)の作成の手順に進むことができます。
 
-### 新しい mixin の作成
+### 新しいフィールドグループを作成する
 
-スキーマに新しいフィールドを追加するには、まず mixin で定義する必要があります。`/tenant/mixins` エンドポイントに対して POST リクエストを作成することで、新しい mixin を作成できます。
+スキーマに新しいフィールドを追加するには、まずフィールドグループで定義する必要があります。 `/tenant/fieldgroups`エンドポイントにPOSTリクエストを行うことで、新しいフィールドグループを作成できます。
 
 **API 形式**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **リクエスト**
 
-次のリクエストでは、新しい mixin を作成し、追加先の任意のスキーマの `_{TENANT_ID}` 名前空間の下に `favoriteHotel` フィールドを追加します。
+次のリクエストは、追加先の任意のスキーマの`_{TENANT_ID}`名前空間の下に`favoriteHotel`フィールドを追加する新しいフィールドグループを作成します。
 
 ```shell
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +149,7 @@ curl -X POST\
         "type": "object",
         "title": "Favorite Hotel",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Favorite hotel mixin for the Loyalty Members schema.",
+        "description": "Favorite hotel field group for the Loyalty Members schema.",
         "definitions": {
             "favoriteHotel": {
               "properties": {
@@ -174,22 +174,22 @@ curl -X POST\
       }'
 ```
 
-**応答** 
+**応答**
 
-正常な応答は、新しく作成された mixin の詳細を返します。
+正常に完了すると、新しく作成されたフィールドグループの詳細が返されます。
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Favorite hotel mixin for the Loyalty Members schema.",
+    "description": "Favorite hotel field group for the Loyalty Members schema.",
     "definitions": {
         "favoriteHotel": {
             "properties": {
@@ -229,13 +229,13 @@ curl -X POST\
 
 | プロパティ | 説明 |
 | --- | --- |
-| `$id` | 新しい mixin の一意の ID（システムで生成され、読み取り専用）。URI の形式を取ります。 |
+| `$id` | 読み取り専用で、システムによって生成された新しいフィールドグループの一意の識別子。 URI の形式を取ります。 |
 
-次の手順で mixin をソーススキーマに追加する際に使用する、mixin の `$id` URI を記録します。
+フィールドグループをソーススキーマに追加する次の手順で使用する、フィールドグループの`$id` URIを記録します。
 
-### ソーススキーマへの mixin の追加
+### フィ追加ールドグループを元のスキーマに変換します。
 
-Mixin を作成したら、`/tenant/schemas/{SCHEMA_ID}` エンドポイントに対して PATCH リクエストを作成して、その mixin をソーススキーマに追加できます。
+フィールドグループを作成したら、`/tenant/schemas/{SCHEMA_ID}`エンドポイントにPATCHリクエストを行って、ソーススキーマに追加できます。
 
 **API 形式**
 
@@ -249,7 +249,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **リクエスト**
 
-次のリクエストは、&quot;[!DNL Favorite Hotel]&quot;ミックスインを&quot;[!DNL Loyalty Members]&quot;スキーマに追加します。
+次のリクエストは、「[!DNL Favorite Hotel]」フィールドグループを「[!DNL Loyalty Members]」スキーマに追加します。
 
 ```shell
 curl -X PATCH \
@@ -264,7 +264,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -273,12 +273,12 @@ curl -X PATCH \
 | プロパティ | 説明 |
 | --- | --- |
 | `op` | 実行する PATCH 操作。このリクエストでは、`add` 操作が使用されます。 |
-| `path` | 新しいリソースを追加するスキーマフィールドへのパス。スキーマにミックスインを追加する場合、値は「/allOf/ — 」にする必要があります。 |
-| `value.$ref` | 追加する mixin の `$id`。 |
+| `path` | 新しいリソースを追加するスキーマフィールドへのパス。フィールドグループをスキーマに追加する場合、値は「/allOf/ — 」にする必要があります。 |
+| `value.$ref` | 追加するフィールドグループの`$id`。 |
 
-**応答** 
+**応答**
 
-正常な応答は、更新されたスキーマの詳細を返します。これには、追加された mixin の `$ref` 値が `allOf` 配列に含まれます。
+正常に応答すると、更新されたスキーマの詳細が返されます。この内容には、追加されたフィールドグループの`$ref`値が`allOf`配列の下に含まれます。
 
 ```json
 {
@@ -300,13 +300,13 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -323,8 +323,8 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
