@@ -6,10 +6,10 @@ description: このドキュメントでは、スキーマレジストリAPIを�
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 39%
+source-wordcount: '1367'
+ht-degree: 38%
 
 ---
 
@@ -85,16 +85,16 @@ curl -X GET \
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -109,9 +109,9 @@ curl -X GET \
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -160,7 +160,7 @@ curl -X GET \
 
 ### グローバルコンテナ
 
-`global`コンテナは、すべての標準Adobeと[!DNL Experience Platform]パートナーが提供するクラス、ミックスイン、データ型、スキーマを保持します。 `global`コンテナに対してのみリストおよび参照(GET)要求を実行できます。
+`global`コンテナは、すべての標準Adobeと[!DNL Experience Platform]パートナーが提供するクラス、スキーマフィールドグループ、データ型、スキーマを保持します。 `global`コンテナに対してのみリストおよび参照(GET)要求を実行できます。
 
 `global`コンテナを使用した呼び出しの例を次に示します。
 
@@ -170,15 +170,15 @@ GET /global/classes
 
 ### テナントコンテナ
 
-`tenant`コンテナは、IMS組織が定義するすべてのクラス、ミックスイン、データ型、スキーマ、および記述子を保持し、独自の`TENANT_ID`と混同しないでください。 これらは各組織に固有のもので、他の IMS 組織では表示も管理もできません。`tenant`コンテナで作成するリソースに対して、すべてのCRUD操作(GET、POST、PUT、PATCH、DELETE)を実行できます。
+`tenant`コンテナは、IMS組織が定義するすべてのクラス、フィールドグループ、データ型、スキーマ、および記述子を保持し、独自の`TENANT_ID`と混同しないでください。 これらは各組織に固有のもので、他の IMS 組織では表示も管理もできません。`tenant`コンテナで作成するリソースに対して、すべてのCRUD操作(GET、POST、PUT、PATCH、DELETE)を実行できます。
 
 `tenant`コンテナを使用した呼び出しの例を次に示します。
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-`tenant`コンテナーにクラス、ミックスイン、スキーマ、またはデータ型を作成すると、そのクラスは[!DNL Schema Registry]に保存され、`TENANT_ID`を含む`$id` URIが割り当てられます。 この `$id` は、API 全体で特定のリソースを参照する際に使用されます。`$id` 値の例については、次の節で説明します。
+`tenant`コンテナーにクラス、フィールドグループ、スキーマ、またはデータ型を作成すると、そのクラスは[!DNL Schema Registry]に保存され、`TENANT_ID`を含む`$id` URIが割り当てられます。 この `$id` は、API 全体で特定のリソースを参照する際に使用されます。`$id` 値の例については、次の節で説明します。
 
 ## リソースID {#resource-identification}
 
