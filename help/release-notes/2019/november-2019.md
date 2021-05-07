@@ -4,14 +4,14 @@ description: Experience Platform リリースノート 2019 年 11 月 18 日
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
+exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1878'
-ht-degree: 67%
+source-wordcount: '1883'
+ht-degree: 66%
 
 ---
-
 
 # Adobe Experience Platform リリースノート
 
@@ -83,7 +83,7 @@ Adobe Experience Cloud とのネイティブな統合に加え、アドビはパ
 * 現在、宛先またはストレージアカウントに接続する際に、アカウントの詳細、パス、または資格情報は検証されません。正しい資格情報を入力していることを確認し、スペルミスや入力ミスをもう一度確認してください。
 * 初期リリースでは、資格情報の更新は行われません。アカウントの有効期限が切れるか、更新が必要な場合は、新しい宛先接続を作成し、以前にマッピングしたセグメントを再マッピングする必要があります。
 
-## ソース {#sources}
+## ソース  {#sources}
 
 Adobe Experience Platformは外部ソースからデータを取り込みながら、[!DNL Platform]サービスを使ってデータの構造、ラベル付け、拡張を行うことができます。 アドビソリューション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
@@ -128,8 +128,8 @@ XDM はパブリックに文書化された仕様であり、デジタルエク�
 | ---------- | ------------ |
 | 通知スキーマ | データ取得プロセス中に送信される通知データを表す新しいスキーマ。 |
 | Adobe AdCloud DSP スキーマ | Adobe Advertising Cloud ディスプレイ広告（DSP）メタデータを表すための 5 つの新しいスキーマ（配置、キャンペーン、パッケージ、広告主、アカウント）が追加されました。 |
-| ExperienceEvent の実装の詳細 Mixin | イベントの収集に使用するソフトウェアに関する情報を保存するための標準フィールドを追加する新しい ExperienceEvent Mixin。 |
-| [!DNL Profile Privacy] ミックスイン | [!DNL Real-time Customer Profile]に対する一般的なアウトおよび販売/共有オプトアウトシグナルを受け入れるフィールドを追加する新しいプロファイルミックスイン。 |
+| ExperienceEvent実装の詳細スキーマフィールドグループ | イベントの収集に使用されるソフトウェアに関する情報を保存するための標準フィールドを追加する、新しいExperienceEventフィールドグループ。 |
+| [!DNL Profile Privacy] フィールドグループ | 新しいプロファイルフィールドグループ。[!DNL Real-time Customer Profile]に対する一般的な出力および販売/共有のオプトアウトシグナルを受け入れるフィールドを追加します。 |
 | `xdm:alternateDisplayInfo` の形式制限 | `xdm:alternateDisplayInfo` の「タイトル」フィールドと「説明」フィールドは、両方とも検証に合格する文字列である必要があります。 |
 | 名前の変更：XDM [!DNL Individual Profile] | &quot;XDM [!DNL Profile]&quot;クラスの&quot;title&quot;が&quot;XDM [!DNL Individual Profile]&quot;に更新されました。 クラスの公式 `$id` は変更されていません。 |
 
