@@ -7,7 +7,7 @@ type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してプラットフォームにストリーミングデータを取り込む手順を説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: f35c59843451267d0a054cfd594aea3e5d5ea8c6
+source-git-commit: c7cbf6812e2c600aa1e831b91f15982d7bf82cdb
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 22%
@@ -395,7 +395,11 @@ curl -X POST \
             "version": "1.0"
         },
         "data": {
-            "format": "parquet_xdm"
+            "format": "parquet_xdm",
+            "schema": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+                "version": "application/vnd.adobe.xed-full+json;version=1"
+            }
         },
         "params": {
         "dataSetId": "5f7187bac6d00f194fb937c0"
