@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: このドキュメントでは、IAB TCF 2.0の同意データを収集するために必要な2つのデータセットを設定する手順を説明します。
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1670'
 ht-degree: 3%
 
 ---
@@ -34,15 +34,15 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework] (TCF) 2.
    * [ID名前空間](../../../../identity-service/namespaces.md):顧客IDデータは、IDサービスで認識される特定のID名前空間で提供する必要があります。
 * [リアルタイム顧客プロファイル](../../../../profile/home.md):を使用 [!DNL Identity Service] すると、データセットから詳細な顧客プロファイルをリアルタイムで作成できます。[!DNL Real-time Customer Profile] data Lakeからデータを取り込み、顧客プロファイルを個別のデータストアに維持します。
 
-## [!UICONTROL プライバシー] の詳細Mixinの構造  {#structure}
+## [!UICONTROL プライバシー] の詳細フィールドグループ構造  {#structure}
 
-[!UICONTROL プライバシーの詳細]ミックスインは、TCF 2.0のサポートに必要な顧客の同意フィールドを提供します。 このミックスインには2つのバージョンがあります。1つは[!DNL XDM Individual Profile]クラスと互換性があり、もう1つは[!DNL XDM ExperienceEvent]クラスと互換性があります。
+[!UICONTROL プライバシーの詳細]スキーマフィールドグループは、TCF 2.0のサポートに必要な顧客の同意フィールドを提供します。 このフィールドグループには2つのバージョンがあります。1つは[!DNL XDM Individual Profile]クラスと互換性があり、もう1つは[!DNL XDM ExperienceEvent]クラスと互換性があります。
 
-以下の節では、取り込み時に予想されるデータを含め、これらの各ミックスインの構造について説明します。
+以下の節では、取り込み時に予想されるデータを含め、これらの各フィールドグループの構造について説明します。
 
-### プロファイルミックスイン{#profile-mixin}
+### プロファイルフィールドグループ{#profile-field-group}
 
-[!DNL XDM Individual Profile]に基づくスキーマの場合、[!UICONTROL プライバシーの詳細]ミックスインには、顧客IDをTCFの同意の環境設定にマッピングする、単一のマップタイプフィールド`xdm:identityPrivacyInfo`が用意されています。 次のJSONは、データ取り込み時に`xdm:identityPrivacyInfo`が期待するデータの種類の例です。
+[!DNL XDM Individual Profile]に基づくスキーマの場合、[!UICONTROL プライバシーの詳細]フィールドグループには、顧客IDをTCFの同意の環境設定にマッピングする、単一のマップタイプフィールド`xdm:identityPrivacyInfo`が用意されています。 次のJSONは、データ取り込み時に`xdm:identityPrivacyInfo`が期待するデータの種類の例です。
 
 ```json
 {
@@ -78,9 +78,9 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework] (TCF) 2.
 | `xdm:consentTimestamp` | TCFの同意値が変更されたときの[ISO 8601](https://www.ietf.org/rfc/rfc3339.txt)タイムスタンプ。 |
 | `xdm:consentString` | 顧客の更新された同意データおよびその他のコンテキスト情報を含むオブジェクト。 このオブジェクトの必須サブプロパティについては、[同意文字列プロパティ](#consent-string)のセクションを参照してください。 |
 
-### イベントミックスイン{#event-mixin}
+### イベントフィールドグループ{#event-field-group}
 
-[!DNL XDM ExperienceEvent]に基づくスキーマの場合、[!UICONTROL プライバシーの詳細]ミックスインには、単一の配列型フィールドが用意されています。`xdm:consentStrings`。 この配列の各項目は、プロファイルミックスインの`xdm:consentString`フィールドと同様、TCF同意文字列に必要なプロパティを含むオブジェクトである必要があります。 これらのサブプロパティの詳細については、[次のセクション](#consent-string)を参照してください。
+[!DNL XDM ExperienceEvent]に基づくスキーマの場合、[!UICONTROL Privacy Details]フィールドグループには、次の1つのarray-typeフィールドが用意されています。`xdm:consentStrings`。 この配列の各項目は、プロファイルフィールドグループの`xdm:consentString`フィールドと同様、TCF同意文字列に必要なプロパティを含むオブジェクトである必要があります。 これらのサブプロパティの詳細については、[次のセクション](#consent-string)を参照してください。
 
 ```json
 {
@@ -98,7 +98,7 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework] (TCF) 2.
 
 ### 同意文字列プロパティ{#consent-string}
 
-[!UICONTROL プライバシーの詳細]ミックスインの両方のバージョンには、顧客のTCF同意文字列を説明する必要なフィールドを取り込む1つ以上のオブジェクトが必要です。 以下に、これらのプロパティについて説明します。
+[!UICONTROL プライバシーの詳細]フィールドグループのどちらのバージョンでも、顧客のTCF同意文字列を説明する必要なフィールドを取り込むオブジェクトが少なくとも1つ必要です。 以下に、これらのプロパティについて説明します。
 
 | プロパティ | 説明 |
 | --- | --- |
@@ -126,11 +126,11 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework] (TCF) 2.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-[!DNL Schema Editor]が表示され、キャンバスのスキーマの構造が示されます。 右側のレールを使用してスキーマの名前と説明を入力し、キャンバスの左側の&#x200B;**[!UICONTROL ミックスイン]**&#x200B;セクションの追加下の&#x200B;****&#x200B;を選択します。
+[!DNL Schema Editor]が表示され、キャンバスのスキーマの構造が示されます。 右側のレールを使用してスキーマの名前と説明を入力し、キャンバスの左側の&#x200B;**[!UICONTROL フィールドグループ]**&#x200B;セクションの追加下の&#x200B;****&#x200B;を選択します。
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-**[!UICONTROL mixin追加]**&#x200B;ダイアログが表示されます。 ここから、リストから「**[!UICONTROL プライバシーの詳細]**」を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、**[!UICONTROL ミックスイン追加]**&#x200B;を選択します。
+**[!UICONTROL 追加フィールドグループ]**&#x200B;ダイアログが表示されます。 ここから、リストから「**[!UICONTROL プライバシーの詳細]**」を選択します。 オプションで検索バーを使用して結果を絞り込み、フィールドグループを見つけやすくすることができます。 フィールドグループを選択したら、**[!UICONTROL 追加フィールドグループ]**&#x200B;を選択します。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -138,14 +138,14 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework] (TCF) 2.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
-ここから上記の手順を繰り返し、以下のミックスインをスキーマに追加します。
+ここから上記の手順を繰り返し、次のフィールドグループをスキーマに追加します。
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL プロファイル用のデータ取得領域]
 * [!UICONTROL 人口統計の詳細]
 * [!UICONTROL 個人の連絡先の詳細]
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 既に[!DNL Real-time Customer Profile]での使用が有効になっている既存のスキーマを編集する場合は、**[!UICONTROL 「保存]**」を選択して変更を確認し、[同意スキーマ](#dataset)に基づくデータセットの作成の節に進みます。 新しいスキーマを作成する場合は、次のサブセクションで説明されている手順に従ってください。
 
@@ -177,11 +177,11 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework] (TCF) 2.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-[!DNL Schema Editor]が表示され、キャンバスのスキーマの構造が示されます。 右側のレールを使用してスキーマの名前と説明を入力し、キャンバスの左側の&#x200B;**[!UICONTROL ミックスイン]**&#x200B;セクションの追加下の&#x200B;****&#x200B;を選択します。
+[!DNL Schema Editor]が表示され、キャンバスのスキーマの構造が示されます。 右側のレールを使用してスキーマの名前と説明を入力し、キャンバスの左側の&#x200B;**[!UICONTROL フィールドグループ]**&#x200B;セクションの追加下の&#x200B;****&#x200B;を選択します。
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-**[!UICONTROL mixin追加]**&#x200B;ダイアログが表示されます。 ここから、リストから「**[!UICONTROL プライバシーの詳細]**」を選択します。 オプションで、検索バーを使用して結果を絞り込み、Mixinを見つけやすくすることができます。 ミックスインを選択したら、**[!UICONTROL ミックスイン追加]**&#x200B;を選択します。
+**[!UICONTROL 追加フィールドグループ]**&#x200B;ダイアログが表示されます。 ここから、リストから「**[!UICONTROL プライバシーの詳細]**」を選択します。 オプションで検索バーを使用して結果を絞り込み、フィールドグループを見つけやすくすることができます。 フィールドグループを選択したら、**[!UICONTROL 追加フィールドグループ]**&#x200B;を選択します。
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -189,16 +189,16 @@ Adobe Experience PlatformがIAB [!DNL Transparency & Consent Framework] (TCF) 2.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
-ここから上記の手順を繰り返し、以下のミックスインをスキーマに追加します。
+ここから上記の手順を繰り返し、次のフィールドグループをスキーマに追加します。
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL 環境の詳細]
 * [!UICONTROL Web詳細]
 * [!UICONTROL 実装の詳細]
 
-ミックスインを追加したら、「**[!UICONTROL 保存]**」を選択して終了します。
+フィールドグループを追加したら、「**[!UICONTROL 保存]**」を選択して終了します。
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
 ## 同意スキーマに基づいてデータセットを作成する{#datasets}
 
