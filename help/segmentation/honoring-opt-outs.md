@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Adobe Experience Platformでは、顧客がデータの使用状況やストレージに関するオプトアウトリクエストをリアルタイム顧客プロファイル内に送信することを許可しています。] これらのオプトアウトリクエストは、カリフォルニア州消費者プライバシー法（CCPA）に含まれています。CCPA は、カリフォルニア州の在住者に対して、個人データにアクセスし削除する権利や、個人データが販売または開示されたか（そして誰に対して）を知る権利を付与しています。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 62%
+source-wordcount: '1049'
+ht-degree: 48%
 
 ---
 
@@ -28,33 +28,33 @@ Adobe Experience Platformは、顧客が[!DNL Real-time Customer Profile]内で�
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md):組織が、内部の顧客データに関するデータのプライバシー規制へのコンプライアンスを自動化できるよう支援 [!DNL Platform]します。
 
-## オプトアウト mixin 
+## オプトアウトスキーマフィールドグループ
 
-CCPAオプトアウト要求を受け入れるために、和集合スキーマの一部であるスキーマの1つに、必要な[!DNL Experience Data Model](XDM)オプトアウトフィールドが含まれている必要があります。 スキーマにオプトアウトフィールドを追加するために使用できる mixin が 2 つあります。それぞれの mixin については、以下の節で詳しく説明します。
+CCPAオプトアウト要求を受け入れるために、和集合スキーマの一部であるスキーマの1つに、必要な[!DNL Experience Data Model](XDM)オプトアウトフィールドが含まれている必要があります。 スキーマにオプトアウトフィールドを追加するために使用できるスキーマフィールドグループは2つあります。それぞれ以下の節で詳しく説明します。
 
 - [プロファイルプライバシー](#profile-privacy)：様々なオプトアウトタイプ（一般または販売 / 共有）を取得するために使用します。
 - [プロファイル環境設定の詳細](#profile-preferences-details)：特定の XDM チャネルのオプトアウトリクエストを取得するために使用します。
 
-スキーマに mixin を追加するための詳細な手順については、次の XDM ドキュメントの「mixin の追加」の節を参照してください。
+フィールドグループをスキーマに追加する手順については、次のXDMドキュメントの「追加a field group」の節を参照してください。
 - [スキーマレジストリ API のチュートリアル](../xdm/api/getting-started.md)：スキーマレジストリ API を使用したスキーマの構築。
 - [スキーマエディタのチュートリアル](../xdm/tutorials/create-schema-ui.md)：Platform のユーザーインターフェイスを使用したスキーマの構築。
 
-ユーザーインターフェイスでオプトアウト mixin をスキーマに追加した例を次に示します。
+次の例は、ユーザーインターフェイスのスキーマに追加されたオプトアウトフィールドグループを示しています。
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
-各 mixin の構造と、スキーマに寄与するフィールドについては、以下の節で概要を説明します。
+各フィールドグループの構造、および各フィールドグループがスキーマに貢献するフィールドの説明を、以下の節で詳しく説明します。
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-[!DNL Profile Privacy]ミックスインを使用すると、顧客から2種類のCCPAオプトアウトリクエストを取得できます。
+[!DNL Profile Privacy]フィールドグループを使用すると、顧客から2種類のCCPAオプトアウト要求を取得できます。
 
 1. 一般的なオプトアウト
 2. 販売 / 共有のオプトアウト
 
 ![](images/opt-outs/profile-privacy.png)
 
-[!DNL Profile Privacy]ミックスインには次のフィールドが含まれています。
+[!DNL Profile Privacy]フィールドグループには次のフィールドが含まれています。
 
 - プライバシーオプトアウト（`privacyOptOuts`）：オプトアウトオブジェクトのリストを含む配列。
 - オプトアウトタイプ（`optOutType`）：オプトアウトのタイプ。このフィールドは、次の 2 つの値を持つ可能性がある列挙型です。
@@ -67,15 +67,15 @@ CCPAオプトアウト要求を受け入れるために、和集合スキーマ�
    - オプトイン（`in`）：顧客がオプトインしました。
 - オプトアウトタイムスタンプ（`timestamp`）：受信したオプトアウト信号のタイムスタンプ。
 
-[!DNL Profile Privacy]ミックスインの完全な構造を表示するには、[XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json)を参照するか、Platform UIを使用してmixinのプレビューを参照してください。
+[!DNL Profile Privacy]フィールドグループの完全な構造を表示するには、[XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json)を参照するか、Platform UIを使用してフィールドグループをプレビューしてください。
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-[!DNL Profile Preferences Details]ミックスインには、顧客プロファイルの環境設定を表すフィールドがいくつか用意されています(E メールフォーマット、優先言語、タイムゾーンなど)。 この mixin に含まれるフィールドの 1 つである OptInOut （`optInOut`）を使用すると、個々のチャネルに対してオプトアウト値を設定できます。
+[!DNL Profile Preferences Details]フィールドグループには、顧客プロファイルに対する環境設定を表すフィールドがいくつか用意されています(E メールフォーマット、優先言語、タイムゾーンなど)。 このフィールドグループに含まれるフィールドの1つであるOptInOut (`optInOut`)を使用すると、個々のチャネルに対してオプトアウト値を設定できます。
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-[!DNL Profile Preferences Details]ミックスインには、オプトアウトに関連する次のフィールドが含まれています。
+[!DNL Profile Preferences Details]フィールドグループには、オプトアウトに関連する次のフィールドが含まれます。
 
 - OptInOut （`optInOut`）：各キーが通信チャネルの有効な既知の URI と、各チャネルのオプトアウトのアクティブ状態を表しているオブジェクト。各チャネルには、次の 4 つの値のいずれかを指定できます。
    - 指定なし（`not_provided`）：このチャネルにオプトアウトリクエストが指定されていません。
@@ -100,7 +100,7 @@ CCPAオプトアウト要求を受け入れるために、和集合スキーマ�
 }
 ```
 
-プロファイル環境設定の詳細の mixin の完全な構造を把握するには、[XDM パブリック GitHub リポジトリー](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json)を参照するか、 UI を使用した mixin を確認してください。[!DNL Platform]
+プロファイルの環境設定の詳細フィールドグループの構造を完全に表示するには、[XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json)にアクセスするか、[!DNL Platform] UIを使用してフィールドグループをプレビューしてください。
 
 ## セグメント化でのオプトアウトの処理
 
