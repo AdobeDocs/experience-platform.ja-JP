@@ -7,10 +7,10 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 31%
+source-wordcount: '956'
+ht-degree: 26%
 
 ---
 
@@ -54,23 +54,23 @@ ht-degree: 31%
 
 ![](../images/tutorials/relationship/hotels.png)
 
-## 関係の mixin の作成
+## 関連スキーマフィールドグループの作成
 
 >[!NOTE]
 >
 >この手順は、ソーススキーマに、ターゲットスキーマへの参照として使用する専用の文字列型フィールドがない場合にのみ必要です。 このフィールドがソーススキーマで既に定義されている場合は、次の[関係フィールドを定義](#relationship-field)する手順に進んでください。
 
-2 つのスキーマ間の関係を定義するには、ソーススキーマに、ターゲットスキーマへの参照として使用する専用のフィールドが必要です。新しい mixin を作成して、このフィールドをソーススキーマに追加することができます。
+2 つのスキーマ間の関係を定義するには、ソーススキーマに、ターゲットスキーマへの参照として使用する専用のフィールドが必要です。新しいスキーマフィールドグループを作成して、このフィールドをソーススキーマに追加できます。
 
-**[!UICONTROL ミックスイン]**&#x200B;セクションで&#x200B;**[!UICONTROL 追加]**&#x200B;を選択して開始します。
+**[!UICONTROL フィールドグループ]**&#x200B;セクションで&#x200B;**[!UICONTROL 追加]**&#x200B;を選択して開始します。
 
-![](../images/tutorials/relationship/loyalty-add-mixin.png)
+![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-[!UICONTROL Mixin を追加]ダイアログが表示されます。ここから、「**[!UICONTROL 新しいミックスインを作成]**」を選択します。 表示されるテキストフィールドに、新しい mixin の表示名と説明を入力します。終了したら、**[!UICONTROL ミ追加ックスイン]**&#x200B;を選択します。
+[!UICONTROL 追加フィールドグループ]ダイアログが表示されます。 ここから、「**[!UICONTROL 新しいフィールドグループを作成]**」を選択します。 表示されるテキストフィールドに、新しいフィールドグループの表示名と説明を入力します。 終了したら、**[!UICONTROL 追加フィールドグループ]**&#x200B;を選択します。
 
-<img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
+![](../images/tutorials/relationship/create-field-group.png)
 
-キャンバスが再表示され、「[!DNL Favorite Hotel]」が&#x200B;**[!UICONTROL ミックスイン]**&#x200B;セクションに表示されます。 ミックスイン名を選択し、ルートレベル`Loyalty Members`フィールドの横にある追加&#x200B;**[!UICONTROL フィールド]**&#x200B;を選択します。
+キャンバスが再表示され、**[!UICONTROL フィールドグループ]**&#x200B;セクションに「[!DNL Favorite Hotel]」が表示されます。 フィールドグループ名を選択し、ルートレベル`Loyalty Members`フィールドの横にある追加&#x200B;**[!UICONTROL フィールド]**&#x200B;を選択します。
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
