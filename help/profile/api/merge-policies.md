@@ -6,9 +6,9 @@ type: Documentation
 description: Adobe Experience Platformでは、複数のソースからデータフラグメントをまとめ、それらを組み合わせて、個々の顧客の完全な表示を確認できます。 このデータを統合する際、統合ポリシーは、データの優先順位付け方法と統合表示を作成するデータをPlatformが決定する際に使用するルールです。
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2569'
 ht-degree: 54%
 
 ---
@@ -752,19 +752,19 @@ curl -X DELETE \
 
 場合によっては、データのバックフィルや、レコードが順番に取り込まれない場合のイベントの正しい順序の確認など、カスタムタイムスタンプを指定し、マージポリシーでシステムタイムスタンプではなくカスタムタイムスタンプが適用される場合があります。
 
-カスタムタイムスタンプを使用するには、プロファイルスキーマに[[!DNL External Source System Audit Details Mixin]](#mixin-details)を追加する必要があります。 追加したカスタムタイムスタンプは、`xdm:lastUpdatedDate`フィールドを使用して入力できます。 `xdm:lastUpdatedDate`フィールドにデータを入力してレコードを取り込むと、Experience Platformはそのフィールドを使用して、データセット内およびデータセット間でレコードまたはプロファイルフラグメントを結合します。 `xdm:lastUpdatedDate`が存在しない場合、または入力されていない場合、プラットフォームは引き続きシステムタイムスタンプを使用します。
+カスタムタイムスタンプを使用するには、[[!DNL External Source System Audit Details] スキーマフィールドグループ](#field-group-details)をプロファイルスキーマに追加する必要があります。 追加したカスタムタイムスタンプは、`xdm:lastUpdatedDate`フィールドを使用して入力できます。 `xdm:lastUpdatedDate`フィールドにデータを入力してレコードを取り込むと、Experience Platformはそのフィールドを使用して、データセット内およびデータセット間でレコードまたはプロファイルフラグメントを結合します。 `xdm:lastUpdatedDate`が存在しない場合、または入力されていない場合、プラットフォームは引き続きシステムタイムスタンプを使用します。
 
 >[!NOTE]
 >
 >同じレコードでPATCHを送信する場合は、`xdm:lastUpdatedDate`タイムスタンプが設定されていることを確認する必要があります。
 
-スキーマレジストリAPIを使用したスキーマの操作手順(スキーマへのミックスインの追加方法など)については、[API](../../xdm/tutorials/create-schema-api.md)を使用したスキーマの作成のチュートリアルを参照してください。
+スキーマレジストリAPIを使用したスキーマの操作手順(スキーマへのフィールドグループの追加方法など)については、[API](../../xdm/tutorials/create-schema-api.md)を使用したスキーマの作成のチュートリアルを参照してください。
 
 UIを使用してカスタムタイムスタンプを操作するには、『[merge policies user guide](../ui/merge-policies.md)』の「using custom timestamps](../ui/merge-policies.md#custom-timestamps)」の節を参照してください。[
 
-#### [!DNL External Source System Audit Details Mixin] details  {#mixin-details}
+#### [!DNL External Source System Audit Details] フィールドグループの詳細  {#field-group-details}
 
-次の例は、[!DNL External Source System Audit Details Mixin]に正しく入力されたフィールドを示しています。 完全なミックスインJSONは、GitHubの[パブリックエクスペリエンスデータモデル(XDM)リポジトリ](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json)でも表示できます。
+次の例は、[!DNL External Source System Audit Details]フィールドグループに正しく入力されたフィールドを示しています。 完全なフィールドグループJSONは、GitHubの[パブリックエクスペリエンスデータモデル(XDM)レポ](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json)でも表示できます。
 
 ```json
 {
