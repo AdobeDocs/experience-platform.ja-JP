@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、Geo XDMデータタイプの概要を説明します。
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '197'
 ht-degree: 36%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 36%
 | `postalCode` | 文字列 | 場所の郵便番号。一部の国には郵便番号がありません。一部の国では、郵便番号の一部のみが含まれます。 |
 | `stateProvince` | 文字列 | 観測される州、または都道府県の部分。この形式は、[ISO 3166-2（国およびサブディビジョン）](http://www.unece.org/cefact/locode/subdivisions.html)規格に従います。 |
 
-Mixinの詳細については、パブリックXDMリポジトリを参照してください。
+データ型の詳細については、パブリックXDMリポジトリを参照してください。
 
 * [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
