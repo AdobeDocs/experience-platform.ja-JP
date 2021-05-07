@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、環境XDMデータ型の概要を説明します。
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '465'
 ht-degree: 14%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 14%
 | `viewportHeight` | 整数 | エクスペリエンスが表示されたウィンドウの縦方向のサイズ（ピクセル単位）。 Web表示イベントの場合、これはブラウザビューポートの高さです。 |
 | `viewPortWidth` | 整数 | エクスペリエンスが表示されたウィンドウの水平方向のサイズ（ピクセル単位）。 Web表示イベントの場合、これはブラウザビューポートの幅です。 |
 
-Mixinの詳細については、パブリックXDMリポジトリを参照してください。
+データ型の詳細については、パブリックXDMリポジトリを参照してください。
 
 * [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
