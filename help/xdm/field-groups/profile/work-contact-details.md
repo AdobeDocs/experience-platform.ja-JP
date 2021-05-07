@@ -1,0 +1,37 @@
+---
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ;スキーマ設計；ミックスイン；ミックスイン；作業の詳細；プロファイル作業；
+solution: Experience Platform
+title: 勤務先詳細スキーマフィールドグループ
+topic-legacy: overview
+description: このドキュメントでは、「Work Contact Details」スキーマフィールドグループの概要を示します。
+exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
+translation-type: tm+mt
+source-git-commit: 4755f9b7666efd8354a5f15aeed40a7da4a06efe
+workflow-type: tm+mt
+source-wordcount: '190'
+ht-degree: 5%
+
+---
+
+
+# [!UICONTROL Work Contact ] Detailsスキーマフィールドグループ
+
+>[!NOTE]
+>
+>複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
+
+[!UICONTROL [作業連絡先の] 詳細]は、 [[!DNL XDM Individual Profile] クラスの標準スキーマフィールドグループ](../../classes/individual-profile.md)です。フィールドグループは、勤務先住所、勤務先電子メール、勤務先電話番号、個人が属する組織など、個人に関する職業情報を取得する複数のフィールドを提供します。
+
+![](../../images/field-groups/work-contact-details.png)
+
+| プロパティ | データタイプ | 説明 |
+| --- | --- | --- |
+| `workAddress` | [住所](../../data-types/postal-address.md) | 個人の勤務先の住所を示します。 |
+| `workEmail` | [電子メールアドレス](../../data-types/email-address.md) | ユーザーの勤務先の電子メールアドレスを示します。 |
+| `workPhone` | [電話番号](../../data-types/phone-number.md) | その人の勤務先の電話番号を示します。 |
+| `organizations` | 文字列（配列） | 個人が属する組織を表す自由形式の文字列の配列です。 |
+
+フィールドグループの詳細については、public XDM repositoryを参照してください。
+
+* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.schema.json)
