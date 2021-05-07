@@ -6,16 +6,16 @@ description: スキーマレジストリAPIの/exportエンドポイントと/im
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '507'
 ht-degree: 4%
 
 ---
 
 # エンドポイントの書き出し/読み込み
 
-[!DNL Schema Library]内のすべてのリソースは、IMS組織内の特定のサンドボックスに含まれています。 場合によっては、サンドボックスとIMS組織の間でエクスペリエンスデータモデル(XDM)リソースを共有する必要があります。 [!DNL Schema Registry] APIは2つのエンドポイントを提供し、[!DNL  Schema Library]内の任意のスキーマ、mixin、またはデータ型に対する書き出しペイロードを生成し、そのペイロードを使用してターゲットサンドボックスとIMS組織に読み込みます。
+[!DNL Schema Library]内のすべてのリソースは、IMS組織内の特定のサンドボックスに含まれています。 場合によっては、サンドボックスとIMS組織の間でエクスペリエンスデータモデル(XDM)リソースを共有する必要があります。 [!DNL Schema Registry] APIは2つのエンドポイントを提供し、[!DNL  Schema Library]内で任意のスキーマ、スキーマフィールドグループまたはデータ型の書き出しペイロードを生成し、そのペイロードを使用してターゲットサンドボックスとIMS組織に読み込みます。
 
 ## はじめに
 
@@ -25,7 +25,7 @@ ht-degree: 4%
 
 ## リソース{#export}のエクスポートペイロードを取得します
 
-[!DNL Schema Library]内の既存のスキーマ、ミックスイン、またはデータタイプの場合、`/export`エンドポイントにGETリクエストを行い、パス内のリソースのIDを指定することで、エクスポートペイロードを生成できます。
+[!DNL Schema Library]内の既存のスキーマ、フィールドグループまたはデータタイプの場合は、`/export`エンドポイントにGETリクエストを行い、パス内のリソースのIDを指定することで、エクスポートペイロードを生成できます。
 
 **API 形式**
 
@@ -39,11 +39,11 @@ GET /rpc/export/{RESOURCE_ID}
 
 **リクエスト**
 
-次のリクエストは、`Restaurant`ミックスインのエクスポートペイロードを取得します。
+次のリクエストは、`Restaurant`フィールドグループのエクスポートペイロードを取得します。
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -53,7 +53,7 @@ curl -X GET \
 
 **応答**
 
-成功した応答は、ターゲットXDMリソースとその依存するすべてのリソースを表すオブジェクトの配列を返します。 この例では、配列の最初のオブジェクトはテナントが作成した`Property`データ型で、`Restaurant`ミックスインが使用します。一方、2番目のオブジェクトは`Restaurant`ミックスイン自体です。 その後、このペイロードを使用して、リソース](#import)を別のサンドボックスまたはIMS組織に[インポートできます。
+成功した応答は、ターゲットXDMリソースとその依存するすべてのリソースを表すオブジェクトの配列を返します。 この例では、配列の最初のオブジェクトがテナントで作成された`Property`データ型で、`Restaurant`フィールドグループが使用します。一方、2番目のオブジェクトは`Restaurant`フィールドグループ自体です。 その後、このペイロードを使用して、リソース](#import)を別のサンドボックスまたはIMS組織に[インポートできます。
 
 リソースのテナントIDのすべてのインスタンスは`<XDM_TENANTID_PLACEHOLDER>`に置き換えられます。 これにより、スキーマレジストリは、後続のインポート呼び出しでの送信先に応じて、リソースに正しいテナントIDを自動的に適用できます。
 
@@ -129,9 +129,9 @@ curl -X GET \
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -207,7 +207,7 @@ POST /rpc/import
 
 **リクエスト**
 
-次のリクエストは、前の[エクスポート例](#export)で返されたペイロードを使用して、`Restaurant`ミックスインを新しいIMS Orgとサンドボックスにインポートします。これは、それぞれ`x-gw-ims-org-id`と`x-sandbox-name`のヘッダーで決定されます。
+次のリクエストは、前の[エクスポート例](#export)で返されたペイロードを使用して、`x-gw-ims-org-id`ヘッダーと`x-sandbox-name`ヘッダーでそれぞれ決定される、新しいIMS OrgとSandboxに`Restaurant`フィールドグループをインポートします。
 
 ```shell
 curl -X POST \
@@ -288,9 +288,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "mixins",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "fieldgroups",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -446,9 +446,9 @@ curl -X POST \
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
