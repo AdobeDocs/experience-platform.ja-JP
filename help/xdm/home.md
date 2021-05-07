@@ -1,19 +1,23 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；XDM;XDMプロファイル;XDM個人システム；XDM個人イベント;XDM ExperienceEvent;XDM ExperienceEvent；エクスペリエンスイベント;ExperienceEvent;Mixin;Mixin;Experienceイベント;XDMerienceEvent;event;event;XDM Experienceevent;Experience Data Model;Experience Data Model;Data Model;Data Model;スキーマレジストリ；スキーマレジストリ；イベントライブラリ；スキーマ；レコードデータ；時系列；時系列
+keywords: Experience Platform；ホーム；人気の高いトピック；XDM;XDMプロファイル;XDM個人イベント;XDM ExperienceEvent;XDM ExperienceEvent;XDM ExperienceEvent;ExperienceEvent;Field groups;Field group;Experienceイベント;XDMeniceEvent;event;XDM Experienceevent;Experience Data Model;Experience Data Model;Data Model;Data Model;スキーマレジストリ；スキーマレジストリ；イベントライブラリ；イベント；レコードデータ；時系列；時系列
 solution: Experience Platform
 title: XDMシステムの概要
 topic-legacy: overview
 description: 標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。アドビが推進するエクスペリエンスデータモデル（XDM）は、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
 workflow-type: tm+mt
-source-wordcount: '1642'
-ht-degree: 47%
+source-wordcount: '1694'
+ht-degree: 44%
 
 ---
 
 # XDM システムの概要
+
+>[!NOTE]
+>
+>「mixin」という用語は、理解を促進するために「スキーマフィールドグループ」に更新されました。 フィールドグループは、ビジネスでの使用例をサポートする再利用可能なフィールドのセットです。 この変更は、スキーマレジストリAPI、Adobe Experience PlatformUI、およびすべてのプラットフォームドキュメントに反映されます。
 
 標準化と相互運用性は、Adobe Experience Platform の背後にある重要な概念です。[!DNL Experience Data Model] (XDM)は、Adobeに基づいて、顧客体験データを標準化し、顧客体験管理のスキーマを定義する取り組みです。
 
@@ -27,7 +31,7 @@ XDMは、[!DNL Experience Platform]の力を借りたAdobe Experience Cloudが�
 
 [!DNL Experience Platform] では、スキーマを使用して、一貫性のある再利用可能な方法でデータの構造を記述します。システムをまたいで一貫したデータを定義することで、意味を保有しやすくなり、データから価値を得ることができます。
 
-データを[!DNL Platform]に取り込む前に、スキーマを構成して、データの構造を記述し、各フィールドに含めることができるデータの種類に制約を与える必要があります。 スキーマは、基本クラスと 0 個以上の Mixin で構成されます。
+データを[!DNL Platform]に取り込む前に、スキーマを構成して、データの構造を記述し、各フィールドに含めることができるデータの種類に制約を与える必要があります。 スキーマは、基本クラスと、0個以上のスキーマフィールドグループで構成されます。
 
 デザインの原則やベストプラクティスなど、スキーマ構成モデルについて詳しくは、[スキーマ構成の基本](schema/composition.md)を参照してください。
 
