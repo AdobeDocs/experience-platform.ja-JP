@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
 breadcrumb-title: Experience Data Model（XDM）ガイド
-user-guide-description: エクスペリエンスデータモデル（XDM）クラスと Mixin を使用して、エクスペリエンスデータを標準化します。
+user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: スキーマ
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 49%
+source-wordcount: '292'
+ht-degree: 43%
 
 ---
 
@@ -30,18 +30,18 @@ ht-degree: 49%
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [セグメント定義](./classes/segment-definition.md)
-* Mixin {#mixins}
-   * プロファイルミックスイン{#profile}
-      * [IdentityMap](./mixins/profile/identitymap.md)
-      * [人口統計の詳細](./mixins/profile/person-details.md)
-      * [個人の連絡先の詳細](./mixins/profile/personal-details.md)
-      * [プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）](./mixins/profile/consents.md)
-      * [セグメントのメンバーシップの詳細](./mixins/profile/segmentation.md)
-      * [勤務先担当者の詳細](./mixins/profile/work-details.md)
-   * イベントミックスイン{#event}
-      * [エンドユーザーIDの詳細](./mixins/event/enduserids.md)
-      * [環境の詳細](./mixins/event/environment-details.md)
-   * [Mixin名の更新](./mixins/name-updates.md)
+* スキーマフィールドグループ{#field-groups}
+   * プロファイルフィールドグループ{#profile}
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [人口統計の詳細](./field-groups/profile/demographic-details.md)
+      * [個人の連絡先の詳細](./field-groups/profile/personal-contact-details.md)
+      * [セグメントのメンバーシップの詳細](./field-groups/profile/segmentation.md)
+      * [勤務先担当者の詳細](./field-groups/profile/work-contact-details.md)
+      * [プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）](./field-groups/profile/consents.md)
+   * イベントフィールドグループ{#event}
+      * [エンドユーザーIDの詳細](./field-groups/event/enduserids.md)
+      * [環境の詳細](./field-groups/event/environment-details.md)
+   * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
    * [アプリケーション](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
@@ -77,11 +77,11 @@ ht-degree: 49%
    * [ウェブページの詳細](./data-types/webpage-details.md)
 *  SchemasUI  {#ui}
    * [概要](./ui/overview.md)
-   * [XDMリソースの参照](./ui/explore.md)
+   * [XDM リソースの参照](./ui/explore.md)
    * リソースの作成と編集{#resources}
       * [スキーマ](./ui/resources/schemas.md)
       * [クラス](./ui/resources/classes.md)
-      * [Mixin](./ui/resources/mixins.md)
+      * [フィールドグループ](./ui/resources/field-groups.md)
       * [データタイプ](./ui/resources/data-types.md)
    * フィールドの定義{#fields}
       * [概要](./ui/fields/overview.md)
@@ -99,7 +99,7 @@ ht-degree: 49%
    * [スキーマ](api/schemas.md)
    * [動作](api/behaviors.md)
    * [クラス](api/classes.md)
-   * [Mixin](api/mixins.md)
+   * [スキーマフィールドグループ](api/field-groups.md)
    * [データタイプ](api/data-types.md)
    * [記述子](api/descriptors.md)
    * [和集合](api/unions.md)
@@ -107,6 +107,7 @@ ht-degree: 49%
    * [サンプルデータ](api/sample-data.md)
    * [監査ログ](api/audit-log.md)
    * [アドホックスキーマ](api/ad-hoc.md)
+   * [Mixins（非推奨）](api/mixins.md)
    * [付録](api/appendix.md)
 * チュートリアル {#tutorials}
    * [スキーマの作成（UI）](tutorials/create-schema-ui.md)
