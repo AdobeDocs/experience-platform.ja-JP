@@ -2,20 +2,20 @@
 title: Adobe Experience PlatformWeb SDKを使用したコマースおよび製品情報の収集
 description: Adobe Experience PlatformWeb SDKを使用して、商品や買い物かごに関連するデータを追加する方法を説明します。
 keywords: 製品；コマース；測定；測定；注文；買い物かご放棄；チェックアウト；productListAdds;productListOpens;productListReopens;productListReopens;productViews;purchases;saveForLaters;currencyCode;paymentAmount;tancamentID;transationID;priceTotal;purchaseID;purchaseOrderNumber;
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 95%
+source-wordcount: '1324'
+ht-degree: 93%
 
 ---
-
 
 # コマースおよび製品情報の収集
 
 サイト上に製品がある場合は、アドビのほとんどの機能を有効にするために、このデフォルトのセットを送信することができます。これは提案ですが、最初から非常に強力なデータセットを提供します。
 
-このドキュメントでは、[ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) mixin を使用します。`commerce` mixin は　2　つの部分（`commerce` オブジェクトと `productListItems` 配列）に分類されます。`commerce` オブジェクトを使用すると、`productListItems` 配列に対してどのアクションが発生しているかを指定できます。
+このドキュメントは、[ExperienceEventコマースの詳細](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md)スキーマフィールドグループを使用します。 `commerce`フィールドグループは2つの部分に分かれています。`commerce`オブジェクトと`productListItems`配列。 `commerce` オブジェクトを使用すると、`productListItems` 配列に対してどのアクションが発生しているかを指定できます。
 
 >[!TIP]
 >
