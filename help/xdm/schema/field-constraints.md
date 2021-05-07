@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ；ミックスイン；ミックスイン；ミックスイン；データ型；データ型；データ型；データ型；スキーマ型；データ型；データ型；スキーマ;スキーマ;スキーマ設計；マップ；
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ；フィールドグループ；フィールドグループ；フィールドグループ；データ型；データ型；データ型；スキーマ型；データ型；データ型；データ型；スキーマ;スキーマ;スキーマ設計；マップ；
 solution: Experience Platform
 title: XDM Field Typeの制約
 topic-legacy: overview
 description: Experience Data Model(XDM)のフィールドタイプ制約のリファレンスです。マッピングできるその他のシリアル化形式や、APIで独自のフィールドタイプを定義する方法が含まれます。
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1094'
 ht-degree: 18%
 
 ---
@@ -19,9 +19,9 @@ Experience Data Model(XDM)スキーマでは、フィールドに格納できる
 
 ## はじめに
 
-このガイドを使用する前に、XDMスキーマ、クラス、ミックスインの紹介について、[スキーマ構成の基本事項](./composition.md)を参照してください。
+このガイドを使用する前に、XDMスキーマ、クラス、スキーマフィールドグループの紹介について、[スキーマ構成の基本事項](./composition.md)を参照してください。
 
-APIで独自のフィールドの種類を定義する場合は、カスタムフィールドを含めるミックスインとデータ型の作成方法について、『[スキーマレジストリ開発者ガイド](../api/getting-started.md)』に開始することを強くお勧めします。 Experience PlatformUIを使用してスキーマを作成する場合は、[UI](../ui/fields/overview.md)でのフィールドの定義のガイドを参照して、カスタムミックスインとデータ型内で定義するフィールドに制約を適用する方法を確認してください。
+APIで独自のフィールドの種類を定義する場合は、[スキーマレジストリ開発者ガイド](../api/getting-started.md)に開始して、カスタムフィールドを含むフィールドグループとデータ型の作成方法を学ぶことを強くお勧めします。 Experience PlatformUIを使用してスキーマを作成する場合は、[UI](../ui/fields/overview.md)でのフィールドの定義のガイドを参照して、カスタムフィールドグループおよびデータ型内で定義するフィールドに制約を適用する方法を確認してください。
 
 ## 基本構造と例
 
@@ -214,7 +214,7 @@ XDMはJSONスキーマの上に構築されているので、XDMフィールド�
 
 次の表に、オプションのプロパティを含む、様々なフィールドの種類を定義するための適切な形式設定の概要を示します。 オプションのプロパティとタイプ固有のキーワードに関する詳細については、[JSON スキーマのドキュメント](https://json-schema.org/understanding-json-schema/reference/type.html)を参照してください。
 
-最初に、目的のフィールドタイプを探し、提供されたサンプルコードを使用して[mixin](../api/mixins.md#create)または[creating a data type](../api/data-types.md#create)のAPIリクエストを作成します。
+最初に、目的のフィールドタイプを探し、提供されたサンプルコードを使用して[フィールドグループ](../api/field-groups.md#create)または[データ型](../api/data-types.md#create)の作成のAPIリクエストを作成します。
 
 <table style="table-layout:auto">
   <tr>
