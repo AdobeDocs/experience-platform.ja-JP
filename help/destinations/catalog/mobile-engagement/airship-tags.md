@@ -2,14 +2,14 @@
 keywords: 飛行船タグ；飛行船の目的地
 title: 航空船タグの接続
 description: AdobeオーディエンスデータをAirship内でのターゲティング用のオーディエンスタグとしてAirshipにシームレスに渡します。
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1183'
 ht-degree: 13%
 
 ---
-
 
 # （ベータ版） [!DNL Airship Tags]接続{#airship-tags-destination}
 
@@ -43,7 +43,7 @@ Adobe Experience Platformセグメントを[!DNL Airship]に送信する前に�
 
 ## タググループ
 
-Adobe Experience Platformのセグメントの概念は、Airshipの[タグ](https://docs.airship.com/guides/audience/tags/)と似ていますが、実装にわずかな違いがあります。 この統合は、Experience Platformセグメント](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins)のユーザーの[メンバーシップのステータスを、[!DNL Airship]タグの存在または存在しない状態にマッピングします。 例えば、`xdm:status`が`realized`に変わるプラットフォームセグメントでは、タグは[!DNL Airship]チャネルに追加されるか、このプロファイルがマッピングされる名前を付けます。 `xdm:status`が`exited`に変更されると、タグは削除されます。
+Adobe Experience Platformのセグメントの概念は、Airshipの[タグ](https://docs.airship.com/guides/audience/tags/)と似ていますが、実装にわずかな違いがあります。 この統合は、Experience Platformセグメント](../../../xdm/field-groups/profile/segmentation.md)のユーザーの[メンバーシップのステータスを、[!DNL Airship]タグの存在または存在しない状態にマッピングします。 例えば、`xdm:status`が`realized`に変わるプラットフォームセグメントでは、タグは[!DNL Airship]チャネルに追加されるか、このプロファイルがマッピングされる名前を付けます。 `xdm:status`が`exited`に変更されると、タグは削除されます。
 
 この統合を有効にするには、*タググループ*&#x200B;を[!DNL Airship]内に`adobe-segments`という名前で作成します。
 
@@ -158,4 +158,3 @@ Adobe Experience Platformのセグメントの概念は、Airshipの[タグ](htt
 ## データの使用とガバナンス{#data-usage-governance}
 
 すべての[!DNL Adobe Experience Platform]宛先は、データ処理時のデータ使用ポリシーに準拠しています。 [!DNL Adobe Experience Platform]によるデータガバナンスの適用方法について詳しくは、[データガバナンスの概要](../../../data-governance/home.md)を参照してください。
-
