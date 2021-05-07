@@ -6,9 +6,9 @@ topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2507'
+source-wordcount: '2515'
 ht-degree: 2%
 
 ---
@@ -193,26 +193,26 @@ Experience Platformでは、IDとしてマークされたXDMフィールドは�
 
 スキーマを設計する際、リレーショナル・データベース表の主キーは、主IDの候補と見なされる場合があります。 該当するIDフィールドのその他の例としては、顧客の電子メールアドレス、電話番号、アカウントID、[ECID](../../identity-service/ecid.md)があります。
 
-### Adobeアプリケーションミックスイン
+### Adobe申し込みスキーマフィールドグループ
 
-Experience Platformは、次のAdobeアプリケーションに関連するデータを取り込むための、標準搭載されたXDMミックスインをいくつか提供しています。
+Experience Platformは、次のAdobeアプリケーションに関連するデータを取り込むための、標準搭載されたXDMスキーマフィールドグループをいくつか提供しています。
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-例えば、[[!UICONTROL Adobe Analyticsエクスペリエンスイベントテンプレートミックスイン]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)を使用すると、[!DNL Analytics]固有のフィールドをXDMスキーマにマップできます。 使用しているAdobeアプリケーションに応じて、スキーマでこれらのAdobe提供ミックスインを使用する必要があります。
+例えば、[[!UICONTROL Adobe Analyticsエクスペリエンスイベントテンプレート]フィールドグループ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json)では、[!DNL Analytics]固有のフィールドをXDMスキーマにマップできます。 使用しているAdobeアプリケーションに応じて、スキーマでAdobeが提供するフィールドグループを使用する必要があります。
 
-<img src="../images/best-practices/analytics-mixin.png" width="700"><br>
+<img src="../images/best-practices/analytics-field-group.png" width="700"><br>
 
-Adobeアプリケーションミックスインは、`identityMap`フィールドを使用して、デフォルトのプライマリIDを自動的に割り当てます。このフィールドは、個々の顧客の標準ID値をマップする、システム生成の読み取り専用オブジェクトです。
+Adobeアプリケーションフィールドグループは、`identityMap`フィールドを使用して、デフォルトのプライマリIDを自動的に割り当てます。このフィールドは、個々の顧客の標準ID値をマッピングする、システム生成の読み取り専用オブジェクトです。
 
 Adobe Analyticsの場合、ECIDはデフォルトのプライマリIDです。 ECID値が顧客によって提供されない場合、プライマリIDはデフォルトでAIDに設定されます。
 
 >[!IMPORTANT]
 >
->Adobeアプリケーションミックスインを使用する場合、他のフィールドを主IDとしてマークする必要はありません。 IDとしてマークする必要がある追加のプロパティがある場合は、これらのフィールドをセカンダリIDとして割り当てる必要があります。
+>Adobeアプリのフィールドグループを使用する場合、他のフィールドを主IDとしてマークしないでください。 IDとしてマークする必要がある追加のプロパティがある場合は、これらのフィールドをセカンダリIDとして割り当てる必要があります。
 
 ## 次の手順
 
