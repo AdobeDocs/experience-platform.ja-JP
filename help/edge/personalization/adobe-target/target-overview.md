@@ -2,14 +2,14 @@
 title: Adobe TargetとプラットフォームWeb SDKの連携
 description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 keywords: ターゲット;adobeターゲット;アクティビティ.id；エクスペリエンス.id；レンダリング決定；決定範囲；スニペットの事前非表示；vec；フォームベースのExperience Composer;xdm;オーディエンス；決定；スコープ；スキーマ;
+exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 translation-type: tm+mt
-source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
+source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 3%
+source-wordcount: '659'
+ht-degree: 4%
 
 ---
-
 
 # Adobe TargetとプラットフォームWeb SDKの連携
 
@@ -19,7 +19,7 @@ Adobe Experience Platform[!DNL Web SDK]は、Adobe Targetで管理されるパ�
 
 * A/Bテスト
 * A4Tインプレッションとコンバージョンのレポート
-* 自動パーソナライゼーション
+* Automated Personalization
 * エクスペリエンスのターゲット設定
 * 多変量分析テスト
 * ネイティブのターゲットインプレッションとコンバージョンレポート
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 ## XDMでのオーディエンス
 
-Adobe Experience PlatformWeb SDK経由で配信されるターゲットアクティビティのオーディエンスを定義する場合は、[XDM](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/home.html)を定義して使用する必要があります。 XDMスキーマ、クラス、ミックスインを定義した後、ターゲティング用のXDMデータで定義されたターゲットオーディエンスルールを作成できます。 ターゲット内では、XDMデータはカスタムオーディエンスーとしてパラメータービルダーに表示されます。 XDMはドット表記（例えば`web.webPageDetails.name`）を使用してシリアル化されます。
+Adobe Experience PlatformWeb SDK経由で配信されるターゲットアクティビティのオーディエンスを定義する場合は、[XDM](https://docs.adobe.com/content/help/ja-JP/experience-platform/xdm/home.html)を定義して使用する必要があります。 XDMスキーマ、クラス、スキーマフィールドグループを定義した後で、ターゲティング用のXDMデータで定義されたターゲットオーディエンスルールを作成できます。 ターゲット内では、XDMデータはカスタムオーディエンスーとしてパラメータービルダーに表示されます。 XDMはドット表記（例えば`web.webPageDetails.name`）を使用してシリアル化されます。
 
 ターゲットアクティビティに、カスタムパラメーターまたはユーザープロファイルを使用する定義済みのオーディエンスがある場合、それらはSDKを介して正しく配信されません。 カスタムパラメータやユーザプロファイルを使用する代わりに、XDMを使用する必要があります。 ただし、XDMを必要としない、Adobe Experience PlatformWeb SDKを介してサポートされる、すぐに使用できるオーディエンスターゲットフィールドがあります。 XDMを必要としないターゲットUIでは、次のフィールドを使用できます。
 
