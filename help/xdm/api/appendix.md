@@ -6,9 +6,9 @@ description: このドキュメントでは、スキーマレジストリ API �
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 49%
 
 ---
@@ -52,7 +52,7 @@ ht-degree: 49%
 
 >[!TIP]
 >
->`property`パラメーターを使用して、互換性のあるクラスでミックスインをフィルタリングできます。 例えば、`property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`は[!DNL XDM Individual Profile]クラスと互換性のあるミックスインのみを返します。
+>`property`パラメーターを使用すると、互換性のあるクラスでスキーマフィールドグループをフィルタリングできます。 例えば、`property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`は、[!DNL XDM Individual Profile]クラスと互換性のあるフィールドグループのみを返します。
 
 ## 互換性モード
 
@@ -131,4 +131,4 @@ Adobe Experience Platform は、複数のソリューションやサービスと
 
 標準のXDMと[!DNL Experience Platform]での動作との間でマッピングが行われることを知っておく価値はありますが、[!DNL Platform]サービスの使用に影響を与えることはありません。
 
-オープンソースプロジェクトは利用できますが、[!DNL Schema Registry]を通じてリソースとやり取りする際には、このドキュメントのAPIの例が、知り、従うべきベストプラクティスを示しています。
+オープンソースプロジェクトは利用できますが、[!DNL Schema Registry]を通じてリソースと対話する際には、このドキュメントのAPIの例が、知り、従うべきベストプラクティスを提供します。
