@@ -6,10 +6,10 @@ topic-legacy: overview
 description: ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」という値は電子メールアドレスとして、または「443522」という数値のCRM IDとして区別されます。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 20%
+source-wordcount: '1550'
+ht-degree: 19%
 
 ---
 
@@ -35,7 +35,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 
 ### ID タイプ
 
-データは、複数の異なる ID タイプで識別できます。ID タイプは、ID 名前空間の作成時に指定されます。この ID タイプによって、データを ID グラフに保持するかどうか、およびそのデータの処理方法の手順が決まります。
+データは、複数の異なる ID タイプで識別できます。ID タイプは、ID 名前空間の作成時に指定されます。この ID タイプによって、データを ID グラフに保持するかどうか、およびそのデータの処理方法の手順が決まります。**Non-people identifier**&#x200B;を除くすべてのIDタイプは、名前空間と対応するID値をIDグラフクラスターにステッチするのと同じ動作に従います。 **人物以外の識別子**&#x200B;を使用する場合、データは結合されません。
 
 [!DNL Platform]内では次のIDタイプを使用できます。
 
@@ -58,7 +58,7 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | ------------ | ----------- |
 | AdCloud | AdobeAdCloudを表す名前空間。 |
 | Adobe Analytics（レガシーID） | Adobe Analyticsを表す名前空間。 詳しくは、[Adobe Analytics名前空間](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces)の次のドキュメントを参照してください。 |
-| Apple IDFA（広告主のID） | 広告主のApple IDを表す名前空間です。 詳しくは、[関心ベースの広告](https://support.apple.com/en-us/HT202074)に関する以下のドキュメントを参照してください。 |
+| Apple IDFA（広告主のID） | 広告主のApple IDを表す名前空間です。 詳しくは、[関心ベースの広告](https://support.apple.com/ja-jp/HT202074)に関する以下のドキュメントを参照してください。 |
 | Apple Push Notificationサービス | Apple Push Notificationサービスを使用して収集されたIDを表す名前空間ーです。 詳しくは、[Apple Push Notification service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1)の次のドキュメントを参照してください。 |
 | CORE | Adobe Audience Managerを表す名前空間。 この名前空間は、従来の名前で参照することもできます。「Adobe AudienceManager」 詳しくは、[Audience ManagerID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids)の次のドキュメントを参照してください。 |
 | ECID | ECIDを表す名前空間。 この名前空間は、次の別名でも参照できます。&quot;Adobe Marketing CloudID&quot;、&quot;Adobe Experience CloudID&quot;、&quot;Adobe Experience PlatformID&quot;の3種類のIDを使用できます。 詳しくは、[ECID](./ecid.md)の次のドキュメントを参照してください。 |
@@ -92,7 +92,9 @@ UIを使用してカスタム名前空間を作成するには、**[!UICONTROL I
 
 ![](./images/create.png)
 
-**[!UICONTROL ID名前空間の作成]**&#x200B;ダイアログボックスが表示されます。 一意の&#x200B;**[!UICONTROL 表示名]**&#x200B;と&#x200B;**[!UICONTROL 識別記号]**&#x200B;を指定し、作成するIDの種類を選択します。 オプションで、名前空間に関する詳細情報に説明を追加することもできます。 終了したら、「**[!UICONTROL 作成]**」を選択します。
+**[!UICONTROL ID名前空間の作成]**&#x200B;ダイアログボックスが表示されます。 一意の&#x200B;**[!UICONTROL 表示名]**&#x200B;と&#x200B;**[!UICONTROL 識別記号]**&#x200B;を指定し、作成するIDの種類を選択します。 オプションで、名前空間に関する詳細情報に説明を追加することもできます。 **人物以外の識別子**&#x200B;を除くすべてのIDタイプは、ステッチの同じ動作に従います。 名前空間の作成時に「**人物以外の識別子**」をIDタイプとして選択した場合、ステッチは行われません。 各IDタイプに関する具体的な情報については、[IDタイプ](#identity-types)の表を参照してください。
+
+終了したら、「**[!UICONTROL 作成]**」を選択します。
 
 >[!IMPORTANT]
 >
