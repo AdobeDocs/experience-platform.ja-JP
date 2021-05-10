@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Analytics分類データコネクタ
+keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Analytics分類ソースコネクタ
 solution: Experience Platform
 title: 分類データ用Adobe Analyticsソースコネクタ
 topic-legacy: overview
 description: ユーザーインターフェイスを使用してAnalytics分類をプラットフォームに接続する方法を説明します。
 exl-id: c26002df-dce4-415e-93e9-268e0efebc9f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 10%
