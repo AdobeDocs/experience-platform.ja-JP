@@ -4,7 +4,7 @@ title: AmazonS3接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 translation-type: tm+mt
-source-git-commit: d77cd063e61118631b757d9821267b2fd6ab0148
+source-git-commit: 7780a2b3b518ab976ec14531892e0734a6342e4c
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 14%
@@ -36,16 +36,11 @@ ht-degree: 14%
 データを[!DNL Amazon S3]ストレージの場所に正常に接続して書き出すには、[!DNL Amazon S3]に[!DNL Platform]のIAMユーザーを作成し、次の操作に対するアクセス許可を割り当てます。
 
 * `s3:DeleteObject`
-* `s3:DeleteObjectVersion`
 * `s3:GetBucketLocation`
 * `s3:GetObject`
-* `s3:GetObjectVersion`
 * `s3:ListBucket`
-* `s3:ListBuckets`
-* `s3:PutBucketVersioning`
 * `s3:PutObject`
-* `s3:ReplicateObject`
-* `s3:RestoreObject`
+* `s3:ListMultipartUploadParts`
 
 
 <!--
