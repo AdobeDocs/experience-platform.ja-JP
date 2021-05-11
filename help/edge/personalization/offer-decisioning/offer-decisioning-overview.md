@@ -2,14 +2,14 @@
 title: offer decisioningとプラットフォームWeb SDKの使用
 description: Adobe Experience PlatformWeb SDKは、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 offer decisioningのUIまたはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
 keywords: offer decisioning；判定；Web SDK；プラットフォームWeb SDK；パーソナライズされたオファー；配信オファー;オファー配信;オファーのパーソナライズ；
+exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 16%
 
 ---
-
 
 # offer decisioningとプラットフォームWeb SDKの使用
 
@@ -78,6 +78,7 @@ offer decisioningを有効にするには、次の手順を実行する必要が
           ]
       })
       ```
+
    * platform launchがインストールしたSDK
       1. [platform launchプロパティの作成](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html)
       2. [platform launch追加埋め込みコード](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
@@ -93,6 +94,7 @@ offer decisioningを有効にするには、次の手順を実行する必要が
          * プ追加ラットフォームWeb SDKのイベント送信アクションを追加し、関連する`decisionScopes`をそのアクションの設定に追加します
             ![send-イベント-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
       6. [作成して発行するライブラリには、設定したすべての関連するルール、データ要素、拡張が含まれています](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/publish/libraries.html) 
+
 
 
 ## リクエストと応答のサンプル
