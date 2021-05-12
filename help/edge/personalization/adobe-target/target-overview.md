@@ -3,10 +3,9 @@ title: Adobe TargetとプラットフォームWeb SDKの連携
 description: Adobe Targetを使用してExperience PlatformWeb SDKを使用し、パーソナライズされたコンテンツをレンダリングする方法を学びます
 keywords: ターゲット;adobeターゲット;アクティビティ.id；エクスペリエンス.id；レンダリング決定；決定範囲；スニペットの事前非表示；vec；フォームベースのExperience Composer;xdm;オーディエンス；決定；スコープ；スキーマ;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-translation-type: tm+mt
-source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '658'
 ht-degree: 4%
 
 ---
@@ -29,7 +28,7 @@ Adobe Experience Platform[!DNL Web SDK]は、Adobe Targetで管理されるパ�
 
 [!DNL Target]を有効にするには、次の手順を実行します。
 
-1. [エッジ設定](../../fundamentals/edge-configuration.md)のターゲットを、適切なクライアントコードで有効にします。
+1. [datastream](../../fundamentals/datastreams.md)のターゲットを適切なクライアントコードで有効にします。
 1. イベント追加に対する`renderDecisions`オプション。
 
 次のオプションも追加できます。
