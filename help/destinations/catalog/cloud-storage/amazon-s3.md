@@ -3,11 +3,10 @@ keywords: AmazonS3;S3宛先；s3;amazon s3
 title: AmazonS3接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-translation-type: tm+mt
-source-git-commit: 7780a2b3b518ab976ec14531892e0734a6342e4c
+source-git-commit: 49a59e5b081243679f5d94b03a63d30df22cdc6a
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 14%
+source-wordcount: '270'
+ht-degree: 12%
 
 ---
 
@@ -31,9 +30,13 @@ ht-degree: 14%
 
 * **[!DNL Amazon S3]アクセスキーと [!DNL Amazon S3] 秘密鍵**:で、 [!DNL Amazon S3]ペアを生成して、プラットフォームに `access key - secret access key`  [!DNL Amazon S3] アカウントへのアクセスを許可します。詳しくは、[AmazonWebサービスドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 
+>[!TIP]
+>
+>接続先のワークフローでは、書き出したセグメントファイルごとに、AmazonS3ストレージにカスタムフォルダを作成できます。 「[マクロを使用してストレージーの場所](./workflow.md#use-macros)にフォルダーを作成する」を読み、手順を確認します。
+
 ## 必要な[!DNL Amazon S3]権限{#required-s3-permission}
 
-データを[!DNL Amazon S3]ストレージの場所に正常に接続して書き出すには、[!DNL Amazon S3]に[!DNL Platform]のIAMユーザーを作成し、次の操作に対するアクセス許可を割り当てます。
+データを[!DNL Amazon S3]ストレージの場所に正常に接続して書き出すには、[!DNL Amazon S3]に[!DNL Platform]のIdentity and Access Management (IAM)ユーザーを作成し、次の操作に対する権限を割り当てます。
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
