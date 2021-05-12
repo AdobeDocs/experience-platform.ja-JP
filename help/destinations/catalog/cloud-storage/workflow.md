@@ -5,10 +5,9 @@ type: Tutorial
 description: クラウドストレージの場所への接続手順
 seo-description: クラウドストレージの場所への接続手順
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
-translation-type: tm+mt
-source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
+source-git-commit: 4dff8a95af79d14cf0c79fa1468df36f040ab1ad
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '630'
 ht-degree: 32%
 
 ---
@@ -27,7 +26,7 @@ ht-degree: 32%
 >
 >この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
 
-## アカウントステップ{#account}
+## アカウントステップ {#account}
 
 **[!UICONTROL アカウント]**&#x200B;の手順で、クラウドストレージの接続先への接続を事前に設定している場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。 または、「**[!UICONTROL 新しいアカウント]**」を選択して、クラウドストレージの宛先への新しい接続を設定できます。アカウント認証資格情報を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。必要に応じて、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、[!DNL Base64]エンコードされた文字列として書き込む必要があります。
 
@@ -39,7 +38,7 @@ ht-degree: 32%
 
 ![クラウドストレージの接続先に接続 — アカウント手順](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-## 認証手順{#authentication}
+## 認証手順 {#authentication}
 
 **[!UICONTROL 認証]**&#x200B;手順で、アクティベーションフローの&#x200B;**[!UICONTROL 名前]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;を入力します。
 
