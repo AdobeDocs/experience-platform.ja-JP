@@ -5,8 +5,7 @@ title: 同意データと優先データを取り込むためのデータセッ�
 topic-legacy: getting started
 description: Adobe Experience Platformで同意と嗜好データを取り込むためのExperience Data Model(XDM)スキーマおよびデータセットの設定方法について説明します。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-translation-type: tm+mt
-source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '1503'
 ht-degree: 3%
@@ -42,7 +41,7 @@ Adobe Experience Platformが顧客の同意/嗜好データを処理するには
 >
 >このチュートリアルでは、顧客属性情報の取得に使用するプラットフォームの[!DNL Profile]スキーマを理解していることを前提としています。 同意データの収集方法にかかわらず、このスキーマは、リアルタイム顧客プロファイル](../../../../xdm/ui/resources/schemas.md#profile)に対して[有効にする必要があります。 また、スキーマの主要IDを、電子メールアドレスなどの関心に基づく広告での使用を禁止される、直接識別可能なフィールドにすることはできません。 制限されているフィールドが不明な場合は、弁護士にお問い合わせください。
 
-## 同意と環境設定のフィールドグループ構造{#structure}
+## 「同意と環境設定」フィールドのグループ構造 {#structure}
 
 [!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）]フィールドグループ（以下「同意と環境設定フィールドグループ」といいます）は、スキーマに対して標準化された同意フィールドを提供します。 現在、このフィールドグループは[!DNL XDM Individual Profile]クラスに基づくスキーマとのみ互換性があります。
 
@@ -121,7 +120,7 @@ Adobe Experience Platformが顧客の同意/嗜好データを処理するには
 
 このスキーマのデータセットをまだ作成していない場合は、次の節の手順に従ってください。
 
-## 同意スキーマ{#dataset}に基づいてデータセットを作成します
+## 同意スキーマに基づいてデータセットを作成する {#dataset}
 
 同意フィールドを持つスキーマを作成したら、最終的に顧客の同意データを取り込むデータセットを作成する必要があります。 このデータセットは[!DNL Real-time Customer Profile]で有効にする必要があります。
 
@@ -151,7 +150,7 @@ Adobe Experience Platformが顧客の同意/嗜好データを処理するには
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-データセットが保存され、[!DNL Profile]での使用が可能になります。 Platform Web SDKを使用してプロファイルに同意データを送信する場合は、[エッジ設定](../../../../edge/fundamentals/edge-configuration.md)の設定時に、このデータセットを[!UICONTROL プロファイルデータセット]として選択する必要があります。
+データセットが保存され、[!DNL Profile]での使用が可能になります。 Platform Web SDKを使用してプロファイルに同意データを送信する場合は、[エッジ設定](../../../../edge/fundamentals/datastreams.md)の設定時に、このデータセットを[!UICONTROL プロファイルデータセット]として選択する必要があります。
 
 ## 次の手順
 
