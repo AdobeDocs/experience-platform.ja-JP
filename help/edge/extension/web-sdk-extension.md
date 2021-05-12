@@ -1,16 +1,15 @@
 ---
-title: Adobe Experience Platform Web SDK 拡張機能 概要
+title: Adobe Experience Platform Web SDK 拡張機能の概要
 description: Adobe Experience Platform Launch向けAdobe Experience PlatformWeb SDK Extensionについて
-translation-type: tm+mt
-source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
+exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
+source-git-commit: b70fe5f3a4de2501730cc799125a7181b61186c0
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 13%
+source-wordcount: '581'
+ht-degree: 15%
 
 ---
 
-
-# Adobe Experience PlatformWeb SDK拡張機能の概要
+# Adobe Experience Platform Web SDK 拡張機能の概要
 
 Adobe Experience PlatformWeb SDK拡張は、Adobe Experience Platformエッジネットワークを介して、WebプロパティからAdobe Experience Cloudにデータを送信します。 この拡張機能を使用すると、データをプラットフォームにストリーミングしたり、IDを同期したり、顧客の同意シグナルを処理したり、コンテキストデータを自動的に収集したりできます。
 
@@ -48,11 +47,12 @@ Adobe Experience PlatformWeb SDK拡張機能は、ページ上の複数のイン
 
 [!UICONTROL Edge Domain]は、Adobe Experience Platform拡張がデータを送受信するドメインです。 拡張機能では、実稼動用トラフィックにファーストパーティの CNAME を使用する必要があります。デフォルトのサードパーティドメインは開発環境で使用できますが、実稼動環境には適していません。ファーストパーティ CNAME の設定方法については、[ここ](https://docs.adobe.com/content/help/ja-JP/core-services/interface/ec-cookies/cookies-first-party.html)で説明します。
 
-## [!UICONTROL エッジ設定]
+## [!UICONTROL データストリーム]
 
-要求がAdobe Experience Platformエッジネットワークに送信されると、エッジ設定IDを使用してサーバ側設定が参照されます。 Webサイトでコードを変更しなくても、設定を更新できます。
+リクエストがAdobe Experience Platformエッジネットワークに送信されると、データストリームIDを使用してサーバー側の設定が参照されます。 Webサイトでコードを変更しなくても、設定を更新できます。
 
-詳しくは、[エッジ設定](../fundamentals/edge-configuration.md)のガイドを参照してください。
+詳しくは、[datastreams](../fundamentals/datastreams.md)のガイドを参照してください。
+
 
 ## [!UICONTROL プライバシー]
 
