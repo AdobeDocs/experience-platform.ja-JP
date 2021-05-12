@@ -1,14 +1,13 @@
 ---
 title: Adobe Experience PlatformWeb SDK FAQ
 description: Adobe Experience PlatformWeb SDKに関するよくある質問への回答を示します。
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
+source-git-commit: 5ead9dc72b8b9fe89e0a1bc8365ceff8affd3c85
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1847'
 ht-degree: 2%
 
 ---
-
 
 # よくある質問
 
@@ -75,7 +74,7 @@ Adobe Experience Platform Launchではこれらのライブラリの展開と管
 
 **最新で将来に備えたもの：Web SDK** とExperience Edge Networkへの接続により、Adobeはデータ収集、パーソナライゼーション、同意およびサードパーティCookieの将来に対するAdobeの取り組みを大幅に最新化できました。(Adobeが管理するファーストパーティドメインを有効にします)。
 
-**Time-to-value:** Adobeは、Experience Platform Launchを介したWeb SDKのデプロイを可能な限り簡単にし、クライアント側のデータをXDMにマッピングするために、懸命に作業を続けていきます。その後、他のすべてのAdobeソリューションおよびAdobe Experience Platformサービスをサーバ側でオンまたはオフにできます。 例えば、Adobe Analyticsに対してこれを使用し、ターゲットやExperience Platformを有効にする場合は、Experience Edge設定を切り替えて使用例を明るくします。
+**Time-to-value:** Adobeは、Experience Platform Launchを介したWeb SDKのデプロイを可能な限り簡単にし、クライアント側のデータをXDMにマッピングするために、懸命に作業を続けていきます。その後、他のすべてのAdobeソリューションおよびAdobe Experience Platformサービスをサーバ側でオンまたはオフにできます。 例えば、Adobe Analyticsに対してこれを使用し、ターゲットやExperience Platformを有効にする場合は、データストリームの設定を切り替えて使用例を明るくします。
 
 ## アロイとは？
 
@@ -104,7 +103,7 @@ Adobe Experience PlatformウェブSDKは、以下の人々を対象に開発さ�
 
 ## Adobe Experience PlatformWeb SDKを使用して開始にアクセスする方法を教えてください。
 
-Web SDKは、現在一般向けに提供されており、Adobe Experience Cloud製品にデータを送信する際に使用できます。 サードパーティのソリューションにデータを送信する機能は、近い将来、提供される予定です。 SDKは無料で、無料でAdobeがホストし、ダウンロードして独自のサーバーでホストすることもできます。必要に応じて、無料で提供されます。 プラットフォームWeb SDKは、AdobeのサーバーがSDKからの受信データを正しく処理できるように、プラットフォームエッジスキーマの設定とAdobe Experience PlatformXDMネットワークビルダーへのアクセスを必要とします。 アクセスを取得したい場合は、Customer Success Manager(CSM)に問い合わせて、リクエストプロセスを開始してください。
+Web SDKは、現在一般向けに提供されており、Adobe Experience Cloud製品にデータを送信する際に使用できます。 サードパーティのソリューションにデータを送信する機能は、近い将来、提供される予定です。 SDKは無料で、無料でAdobeがホストし、ダウンロードして独自のサーバーでホストすることもできます。必要に応じて、無料で提供されます。 プラットフォームWeb SDKは、AdobeのサーバーがSDKから受信データを正しく処理できるように、Datastreamの設定とAdobe Experience PlatformXDMスキーマビルダーへのアクセスを必要とします。 アクセスを取得したい場合は、Customer Success Manager(CSM)に問い合わせて、リクエストプロセスを開始してください。
 
 ## Web SDKが現在サポートしている使用例を教えてください。
 
@@ -138,7 +137,7 @@ Web SDKは、急速に発展しています。 その他の使用例が検討中
 
 ただし、
 
-* Adobe Experience PlatformWeb SDKでは、エッジネットワークがストリームを識別し、データの処理を決定できるように、エクスペリエンスエッジ設定IDと呼ばれる要素が必要です。 このIDはExperience Platform Launch内で作成されます。 これは、プロパティの作成やJavaScriptコードの導入にExperience Platform Launchを使用する必要がないという意味ではありませんが、設定IDの作成にはExperience Platform Launchを使用する必要はありません。
+* Adobe Experience PlatformWeb SDKでは、エッジネットワークがストリームを識別し、データの処理を決定できるように、データストリームIDと呼ばれる要素が必要です。 このIDはExperience Platform Launch内で作成されます。 これは、プロパティの作成やJavaScriptコードの導入にExperience Platform Launchを使用する必要がないという意味ではありませんが、設定IDの作成にはExperience Platform Launchを使用する必要はありません。
 
 * Adobe Experience Platform Launchは、最高の利用可能なタグとSDK Managerだけでなく、`alloy.js`のデプロイやXDMスキーマへのデータのマッピングを非常に簡単に行えます。 Experience Platform Launchを使用しない場合は、送信する前に、`alloy.js`のデプロイ、イベント、XDMへのデータのマッピングを管理する必要があります。 これは、Experience Platform Launchを使うよりも&#x200B;_ずっと_&#x200B;難しい処理です。
 
@@ -163,6 +162,10 @@ CNAMEに関する詳細は、[Adobeドキュメント](https://docs.adobe.com/co
 **kndctr_orgid_personalization:** このcookieには、Adobe Targetがwebページのパーソナライズに使用するセッション情報が含まれます。
 
 **kndctr_orgid_consentcheck:** このセッションベースのcookieは、サーバーに対して、同意の環境設定サーバー側を調べるように通知します。
+
+## Adobe Experience PlatformWeb SDKはどのブラウザーをサポートしていますか。
+
+Adobe Experience PlatformWeb SDKは、Google Chrome、Safari、Firefox、Internet Explorer 11、Microsoft Edge Chromの最新バージョンで最適に動作するように設計されています。 古いバージョンのブラウザーでは、特定の機能の使用に問題が生じる場合があります。
 
 ## Adobe Experience PlatformWeb SDKに関する詳細情報はどこで入手できますか？
 
