@@ -6,10 +6,10 @@ topic-legacy: overview
 description: このドキュメントでは、Marketo Engageソースコネクタを作成する際に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
 workflow-type: tm+mt
-source-wordcount: '1171'
-ht-degree: 17%
+source-wordcount: '1602'
+ht-degree: 12%
 
 ---
 
@@ -21,22 +21,39 @@ ht-degree: 17%
 
 このドキュメントは、[!DNL Marketo Engage]で使用されるB2B名前空間とスキーマ（以下「[!DNL Marketo]」と呼ばれる）の基になる設定に関する情報を提供します。 このドキュメントでは、[!DNL Marketo] B2B名前空間とスキーマの生成に必要なPostmanオートメーションユーティリティの設定に関する詳細も説明します。
 
-## 前提条件
+## [!DNL Marketo]名前空間およびスキーマ自動生成ユーティリティの設定
 
-B2B名前空間とスキーマを生成する前に、まずプラットフォーム開発者コンソールと[!DNL Postman]環境を設定する必要があります。 詳しくは、[デベロッパーコンソールの設定と [!DNL Postman]](../../../../landing/postman.md)のチュートリアルを参照してください。
+[!DNL Marketo]名前空間とスキーマ自動生成ユーティリティを使用する最初の手順は、プラットフォーム開発者コンソールと[!DNL Postman]環境を設定することです。
 
-プラットフォーム開発者コンソールと[!DNL Postman]を設定したら、[!DNL Marketo]環境に次の変数を適用します。
+- この[GitHubリポジトリ](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility)から、名前空間とスキーマの自動生成ユーティリティの収集と環境をダウンロードできます。
+- 必要なヘッダーの値の収集方法やサンプルAPI呼び出しを読む方法など、プラットフォームAPIの使用に関する詳細は、[プラットフォームAPIの使用の手引き](../../../../landing/api-guide.md)のガイドを参照してください。
+- プラットフォームAPI用の資格情報を生成する方法について詳しくは、[Experience PlatformAPIの認証とアクセス](../../../../landing/api-authentication.md)のチュートリアルを参照してください。
+- プラットフォームAPI用に[!DNL Postman]を設定する方法について詳しくは、[開発者コンソールと [!DNL Postman]](../../../../landing/postman.md)の設定に関するチュートリアルを参照してください。
 
-| 環境変数 | 値の例 | 備考 |
+プラットフォーム開発者コンソールと[!DNL Postman]の設定により、適切な環境値を[!DNL Postman]環境に適用する開始が可能になりました。
+
+次の表に、値の例と、[!DNL Postman]環境の入力に関する追加情報を示します。
+
+| 変数 | 説明 | 例 |
 | --- | --- | --- |
-| `PRIVATE_KEY` | `{PRIVATE_KEY}` |
-| `SANDBOX_NAME` | `prod` |
-| `TENANT_ID` | `b2bcdpproductiontest` |
-| `munchkinId` | `123-ABC-456 ` | 詳しくは、[ [!DNL Marketo] インスタンス](./marketo-auth.md)の認証のチュートリアルを参照してください。 |
-| `sfdc_org_id` | `00D4W000000FgYJUA0` | 組織IDの取得について詳しくは、次の[[!DNL Salesforce] ガイド](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1)を参照してください。 |
-| `msd_org_id` | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` | 組織IDの取得について詳しくは、次の[[!DNL Microsoft Dynamics] ガイド](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name)を参照してください。 |
-| `has_abm` | `false` | アカウントベースのマーケティングを登録している場合、この値は`true`に設定されます。 |
-| `has_msi` | `false` | [!DNL Marketo Sales Insight]をサブスクライブしている場合、この値は`true`に設定されます。 |
+| `CLIENT_SECRET` | `{ACCESS_TOKEN}`の生成に使用される一意の識別子。 `{CLIENT_SECRET}`を取得する方法については、[Experience PlatformAPIの認証とアクセス](../../../../landing/api-authentication.md)のチュートリアルを参照してください。 | `{CLIENT_SECRET}` |
+| `JWT_TOKEN` | JSON Web Token(JWT)は、{ACCESS_TOKEN}の生成に使用する認証資格情報です。 `{JWT_TOKEN}`を生成する方法については、[Experience PlatformAPIの認証とアクセス](../../../../landing/api-authentication.md)のチュートリアルを参照してください。 | `{JWT_TOKEN}` |
+| `API_KEY` | Experience PlatformAPIへの呼び出しを認証するために使用される一意の識別子。 `{API_KEY}`を取得する方法については、[Experience PlatformAPIの認証とアクセス](../../../../landing/api-authentication.md)のチュートリアルを参照してください。 | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `ACCESS_TOKEN` | Experience PlatformAPIへの呼び出しを完了するのに必要な認証トークン。 `{ACCESS_TOKEN}`を取得する方法については、[Experience PlatformAPIの認証とアクセス](../../../../landing/api-authentication.md)のチュートリアルを参照してください。 | `Bearer {ACCESS_TOKEN}` |
+| `META_SCOPE` | [!DNL Marketo]に関しては、この値は固定値で、常に次に設定されます。`ent_dataservices_sdk`. | `ent_dataservices_sdk` |
+| `CONTAINER_ID` | `global`コンテナは、標準AdobeとExperience Platformパートナーが提供するクラス、スキーマフィールドグループ、データ型、スキーマをすべて保持します。 [!DNL Marketo]に関しては、この値は固定値で、常に`global`に設定されます。 | `global` |
+| `PRIVATE_KEY` | [!DNL Postman]インスタンスをExperience PlatformAPIに対して認証するために使用する秘密鍵証明書です。 {PRIVATE_KEY}の取得方法については、開発者コンソールの設定のチュートリアルと[開発者コンソールと [!DNL Postman]](../../../../landing/postman.md)の設定のチュートリアルを参照してください。 | `{PRIVATE_KEY}` |
+| `TECHNICAL_ACCOUNT_ID` | Adobe I/Oへの統合に使用する秘密鍵証明書です。 | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
+| `IMS` | Identity Managementシステム(IMS)は、Adobeサービスに対する認証のフレームワークを提供します。 [!DNL Marketo]に関しては、この値は固定値で、常に次に設定されます。`ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
+| `IMS_ORG` | 製品やサービスを所有またはライセンスし、そのメンバーにアクセスを許可できる企業体。 `{IMS_ORG}`情報を取得する方法については、[開発者コンソールの設定と [!DNL Postman]](../../../../landing/postman.md)のチュートリアルを参照してください。 | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `SANDBOX_NAME` | 使用している仮想サンドボックスパーティションの名前です。 | `prod` |
+| `TENANT_ID` | 作成するリソースの名前が正しく指定され、IMS組織内に含まれていることを確認するために使用されるID。 | `b2bcdpproductiontest` |
+| `PLATFORM_URL` | API呼び出しを行うURLエンドポイント。 この値は固定値で、常に次の値に設定されます。`http://platform.adobe.io/`. | `http://platform.adobe.io/` |
+| `munchkinId` | [!DNL Marketo]アカウントの一意のID。 `munchkinId`を取得する方法については、[ [!DNL Marketo] インスタンス](./marketo-auth.md)の認証のチュートリアルを参照してください。 | `123-ABC-456` |
+| `sfdc_org_id` | [!DNL Salesforce]アカウントの組織ID。 [!DNL Salesforce]組織IDの取得について詳しくは、次の[[!DNL Salesforce] ガイド](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1)を参照してください。 | `00D4W000000FgYJUA0` |
+| `msd_org_id` | [!DNL Dynamics]アカウントの組織ID。 [!DNL Dynamics]組織IDの取得について詳しくは、次の[[!DNL Microsoft Dynamics] ガイド](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name)を参照してください。 | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` |
+| `has_abm` | [!DNL Marketo Account-Based Marketing]をサブスクライブしているかどうかを示すboolean値です。 | `false` |
+| `has_msi` | [!DNL Marketo Sales Insight]にサブスクライブされているかどうかを示すboolean値です。 | `false` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -99,7 +116,7 @@ ID名前空間は、IDが関連付けられるコンテキストのインジケ�
 >
 >テーブルのコンテンツをすべて表示するには、左右にスクロールしてください。
 
-| 表示名 | 識別記号 | ID タイプ | 発行者のタイプ | 発行者のエンティティタイプ | [!DNL Salesforce] 購読組織IDの例 |
+| 表示名 | 識別記号 | ID タイプ | 発行者のタイプ | 発行者のエンティティタイプ | [!DNL Dynamics] 購読組織IDの例 |
 | --- | --- | --- | --- | --- | --- |
 | `microsoft_person_{DYNAMICS_ID}` | 自動生成された | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_account_{DYNAMICS_ID}` | 自動生成された | `B2B_ACCOUNT` | [!DNL Microsoft] | `account` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
