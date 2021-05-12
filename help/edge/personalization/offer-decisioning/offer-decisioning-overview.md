@@ -3,10 +3,9 @@ title: offer decisioningとプラットフォームWeb SDKの使用
 description: Adobe Experience PlatformWeb SDKは、Offer decisioningで管理されるパーソナライズされたオファーを配信およびレンダリングできます。 offer decisioningのUIまたはAPIを使用して、オファーやその他の関連オブジェクトを作成できます。
 keywords: offer decisioning；判定；Web SDK；プラットフォームWeb SDK；パーソナライズされたオファー；配信オファー;オファー配信;オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-translation-type: tm+mt
-source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '842'
 ht-degree: 16%
 
 ---
@@ -23,7 +22,7 @@ Adobe Experience Platform[!DNL Web SDK]は、Offer decisioningで管理される
 
 * IMS組織がedge decisioningに対して有効になっている
 * オファー、作成されたアクティビティ
-* エッジ設定が公開されている
+* データストリームが発行される
 
 ## 用語
 
@@ -54,7 +53,7 @@ offer decisioningを扱う際は、次の用語を理解することが重要で
 
    ![](assets/decision-scope-copy.png)
 
-* **エッジの設定：** 詳しくは、 [エッジの](../../fundamentals/edge-configuration.md) 設定に関するドキュメントを参照してください。
+* **データストリーム：** 詳しくは、 [](../../fundamentals/datastreams.md) datastreamsのドキュメントをお読みください。
 
 * **ID**:詳しくは、 [プラットフォームWeb SDKがIdentity Serviceを利用する方法を説明するドキュメントをお読みください](../../identity/overview.md)。
 
@@ -62,7 +61,7 @@ offer decisioningを扱う際は、次の用語を理解することが重要で
 
 offer decisioningを有効にするには、次の手順を実行する必要があります。
 
-1. [エッジ設定](../../fundamentals/edge-configuration.md)でAdobe Experience Platformを有効にし、「Offer decisioning」ボックスをオンにします
+1. [データストリーム](../../fundamentals/datastreams.md)のAdobe Experience Platformを有効にし、「Offer decisioning」ボックスをオンにします
    ![オファー判定エッジ設定](./assets/offer-decisioning-edge-config.png)
 2. [SDK](../../fundamentals/installing-the-sdk.md)のインストールの指示に従います(SDKは、スタンドアロンまたは[Adobe Experience Platform Launch](http://launch.adobe.com/jp)を介してインストールできます)。 以下に、[Platform launch](https://docs.adobe.com/content/help/ja-JP/launch/using/intro/get-started/quick-start.html)のクイック開始ガイドを示します。
 3. [offer decisioning用の](../../fundamentals/configuring-the-sdk.md) SDKを設定します。その他のOffer decisioning固有の手順を以下に示します。
@@ -82,11 +81,11 @@ offer decisioningを有効にするには、次の手順を実行する必要が
    * platform launchがインストールしたSDK
       1. [platform launchプロパティの作成](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/admin/companies-and-properties.html)
       2. [platform launch追加埋め込みコード](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. 先ほど作成したエッジ設定で、「エッジ設定」ドロップダウンから設定を選択して、Platform Web SDK Extensionをインストールし、設定します。 [拡張子](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/overview.html)に関する有用なドキュメント。
+      3. 先ほど作成したデータストリームを使用して、「Datastream」ドロップダウンから設定を選択し、Platform Web SDK Extensionをインストールして設定します。 [拡張子](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/extensions/overview.html)のドキュメントを参照してください。
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. 必要な[データ要素](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/data-elements.html)を作成します。 最低でも、プラットフォームWeb SDK Identity MapとプラットフォームWeb SDK XDMオブジェクトデータ要素を作成する必要があります。
+      4. 必要な[データ要素](https://docs.adobe.com/content/help/ja-JP/launch/using/reference/manage-resources/data-elements.html)を作成します。 少なくとも、プラットフォームWeb SDK Identity MapとプラットフォームWeb SDK XDMオブジェクトデータ要素を作成する必要があります。
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
