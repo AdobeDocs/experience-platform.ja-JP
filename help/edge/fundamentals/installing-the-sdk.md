@@ -2,14 +2,13 @@
 title: Adobe Experience PlatformWeb SDKのインストール
 description: Experience Platform Web SDK のインストール方法について説明します.
 keywords: Web sdkのインストール；Web sdkのインストール；internet explorer;promise;npmパッケージ
-translation-type: tm+mt
-source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 33%
+source-wordcount: '939'
+ht-degree: 32%
 
 ---
-
 
 # SDKのインストール{#installing-the-sdk}
 
@@ -70,7 +69,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 このベースコードは、グローバル関数を作成するだけでなく、サーバ上でホストされる外部ファイル（`alloy.js`）に含まれる追加のコードも読み込みます。デフォルトでは、このコードは非同期で読み込まれ、Web ページのパフォーマンスを可能な限り高めます。これは推奨される実装です。
 
-### Internet Explorer のサポート {#support-internet-explore}
+### Internet Explorer のサポート  {#support-internet-explore}
 
 このSDKは、プロミスを使用します。プロミスは、非同期タスクの完了を通信する方法です。 SDKが使用する[Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise)実装は、[!DNL Internet Explorer]を除くすべてのターゲットブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]でSDKを使用するには、`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill)が必要です。
 
@@ -130,6 +129,10 @@ const alloy = createInstance({ name: "alloy" });
 alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
+
+>[!NOTE]
+>
+>NPMパッケージはCommonJSモジュールに依存しています。したがって、bundlerを使用する場合は、bundlerがCommonJSモジュールをサポートしていることを確認してください。 [ロールアップ](https://rollupjs.org)など、一部のバンドラーには、CommonJSのサポートを提供する[プラグイン](https://www.npmjs.com/package/@rollup/plugin-commonjs)が必要です。
 
 ### ECMAScript 5モジュールとしてのパッケージの使用
 
