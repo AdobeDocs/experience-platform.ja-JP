@@ -5,8 +5,7 @@ title: スキーマレジストリAPIガイド付録
 description: このドキュメントでは、スキーマレジストリ API の使用に関する補足情報を提供します。
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 49%
@@ -54,7 +53,7 @@ ht-degree: 49%
 >
 >`property`パラメーターを使用すると、互換性のあるクラスでスキーマフィールドグループをフィルタリングできます。 例えば、`property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile`は、[!DNL XDM Individual Profile]クラスと互換性のあるフィールドグループのみを返します。
 
-## 互換性モード
+## 互換性モード {#compatibility}
 
 [!DNL Experience Data Model] （XDM）は、アドビが推進する公式に文書化された仕様であり、デジタルエクスペリエンスの相互運用性、表現力およびパワーを向上させます。アドビは、[GitHub のオープンソースプロジェクト](https://github.com/adobe/xdm/)でソースコードと公式の XDM 定義を公開しています。これらの定義は XDM 標準表記で記述され、JSON-LD （JavaScript Object Notation for Linked Data）および JSON スキーマを XDM スキーマを定義する文法として使用しています。
 
