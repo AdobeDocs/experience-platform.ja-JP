@@ -4,10 +4,9 @@ title: セグメント定義クラス
 topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル(XDM)のセグメント定義クラスの概要を説明します。
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -28,7 +27,7 @@ ht-degree: 0%
 | `_id` | レコードに対する、システム生成の一意の文字列識別子。 このフィールドは、個々のレコードの一意性の追跡、データの重複の防止およびダウンストリームサービスでのそのレコードの検索に使用します。<br><br>このフィールドはシステム生成なので、データ取り込み中に明示的な値を指定することはありません。ただし、必要に応じて独自の一意のID値を指定することもできます。<br><br>このフィールドは、個々の人に関連するアイデンティティ **ではなく、データの記録自体を表しているのではな** いことを区別することが重要です。個人に関するIDデータは、代わりに[IDフィールド](../schema/composition.md#identity)に左右する必要があります。 |
 | `createdByBatchID` | レコードを作成した、取り込んだバッチのID。 |
 | `description` | セグメント定義の説明。 |
-| `identityMap` | セグメントが適用される個人の名前空間IDのセットが含まれるmapフィールド。 このフィールドは、IDデータが取り込まれると自動的に更新されます。<br /><br />使用事例の詳細については、「スキーマ [合成の](../schema/composition.md#identityMap) 基本」の「IDマップ」の節を参照してください。 |
+| `identityMap` | セグメントが適用される個人の名前空間IDのセットが含まれるmapフィールド。 使用事例の詳細については、[スキーマ構成の基本](../schema/composition.md#identityMap)のIDマップに関する節を参照してください。 |
 | `modifiedByBatchID` | レコードを更新した最後に取り込んだバッチのID。 |
 | `repositoryCreatedBy` | レコードを作成したユーザーのID。 |
 | `repositoryLastModifiedBy` | レコードを最後に変更したユーザーのID。 |
