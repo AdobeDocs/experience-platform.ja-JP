@@ -5,17 +5,16 @@ title: XDM個別プロファイルクラス
 topic-legacy: overview
 description: このドキュメントでは、XDM Individualプロファイルクラスの概要を説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-translation-type: tm+mt
-source-git-commit: 612917b23d1841556a71f6378497e1d033bc3b62
+source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
 
 # [!DNL XDM Individual Profile] class
 
-[!DNL XDM Individual Profile] は、識別された個人と部分的に識別された個人の両方の属性と利害の単数表現(すなわち「プロファイル」)を形成する標準的なXDMクラスです。
+[!DNL XDM Individual Profile] は、個々の人の単数表現(「プロファイル」)を形成する標準的なExperience Data Model(XDM)クラスです。特に、クラス（およびその互換性のあるミックスイン）は、ブランドとやり取りする、特定された個人と部分的に識別された個人の両方の属性と興味をキャプチャします。
 
 プロファイルには、匿名の行動シグナル（ブラウザーのcookieなど）から、名前、生年月日、場所、電子メールアドレスなどの詳細情報を含む高度に識別されるプロファイルまで様々な種類があります。 プロファイルが増えるにつれて、個人情報、個人情報、連絡先の詳細、コミュニケーションに関する個人の好みの強力なリポジトリとなります。 プラットフォームエコシステムでのこのクラスの使用に関する詳細は、[XDMの概要](../home.md#data-behaviors)を参照してください。
 
