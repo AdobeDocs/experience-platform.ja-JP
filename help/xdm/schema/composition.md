@@ -5,11 +5,10 @@ title: スキーマ組成の基礎
 topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '3538'
-ht-degree: 33%
+source-wordcount: '3621'
+ht-degree: 32%
 
 ---
 
@@ -60,9 +59,13 @@ XDMスキーマは、大量の複雑なデータを独立した形式で保存�
 
 可能な限り堅牢なプロファイルを構築するためにデータを統合できるように、スキーマ計画段階で顧客のIDを考えることが重要です。 ユーザーにデジタルエクスペリエンスを提供する際にID情報がどのように役立つかについて詳しくは、[Adobe Experience PlatformIDサービス](../../identity-service/home.md)の概要を参照してください。
 
-#### `xdm:identityMap` {#identityMap}
+#### `identityMap` {#identityMap}
 
-`xdm:identityMap` は、個人の様々なID値と関連する名前空間を説明するmap-typeフィールドです。このフィールドは、スキーマ自体の構造内でidentity値を定義する代わりに、スキーマの識別情報を提供するために使用できます。
+`identityMap` は、個人の様々なID値と関連する名前空間を説明するmap-typeフィールドです。このフィールドは、スキーマ自体の構造内でidentity値を定義する代わりに、スキーマの識別情報を提供するために使用できます。
+
+`identityMap`を使用する主な欠点は、IDがデータに埋め込まれ、結果として表示されなくなることです。 生データを取り込む場合は、個々のIDフィールドを実際のスキーマ構造内で定義する必要があります。
+
+ただし、IDを格納するソース([!DNL Airship]やAdobe Audience Managerなど)のデータを取り込む場合は、IDマップが特に役立ちます。 また、[Adobe Experience PlatformモバイルSDK](https://aep-sdks.gitbook.io/docs/)を使用する場合は、IDマップが必要です。
 
 単純なIDマップの例を次に示します。
 
