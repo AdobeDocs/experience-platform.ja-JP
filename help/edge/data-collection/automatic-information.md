@@ -2,14 +2,13 @@
 title: Adobe Experience PlatformWeb SDKで自動的に収集された情報
 description: Adobe Experience PlatformSDKが自動的に収集する各情報の概要です。
 keywords: 情報の収集；コンテキスト；設定；デバイス；画面の高さ；画面の向き；画面の向き；画面の幅；環境；ビューポートの幅；ビューポートの高さ；ビューポートの幅；ビューポートの幅；ブラウザの詳細；実装の詳細；名前；タイムゾーン；ローカル時間；ローカルオフセット；ローカルタイムゾーンオフセット；タイムスタンプ；web;url;webPageDetails;webPage Details;webReferrer;web転送者;landscape;portrait;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 901df786-df36-4986-9c74-a32d29c11b71
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 73%
+source-wordcount: '515'
+ht-degree: 58%
 
 ---
-
 
 # 自動的に収集された情報
 
@@ -25,7 +24,7 @@ Adobe Experience PlatformWeb SDKは、特別な設定なしで多数の情報を
 | ---------------------------------- | ------------ |
 | `events[].xdm.device.screenHeight` | `900` |
 
-画面の高さをピクセル単位で指定します。
+画面の高さ（ピクセル単位）。
 
 ### 画面の向き
 
@@ -83,7 +82,7 @@ Adobe Experience PlatformWeb SDKは、特別な設定なしで多数の情報を
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-ソフトウェア開発キット（SDK）の ID。このフィールドでは、URI を使用で、異なるソフトウェアライブラリで提供される ID 間の一意性を改善します。
+ソフトウェア開発キット（SDK）の ID。このフィールドでは、URI を使用で、異なるソフトウェアライブラリで提供される ID 間の一意性を改善します。スタンドアロンライブラリを使用する場合、値は`https://ns.adobe.com/experience/alloy`です。 ライブラリをPlatform launch拡張子の一部として使用する場合、値は`https://ns.adobe.com/experience/alloy+reactor`です。
 
 ### バージョン
 
@@ -91,12 +90,15 @@ Adobe Experience PlatformWeb SDKは、特別な設定なしで多数の情報を
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
+スタンドアロンライブラリを使用する場合、値は単にライブラリのバージョンになります。 ライブラリをPlatform launch拡張子の一部として使用する場合、これがライブラリバージョンとPlatform launch拡張バージョンで、「+」で結合されます。 例えば、ライブラリのバージョンが2.1.0で、Platform launchの拡張子のバージョンが2.1.3の場合、値は`2.1.0+2.1.3`になります。
+
 ### 環境
 
 | **ペイロード内のパス：** | **例：** |
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
+データが収集された環境。 これは常に`browser`に設定されます。
 
 ## 場所コンテキスト（`placeContext`）
 
