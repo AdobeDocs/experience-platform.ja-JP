@@ -2,14 +2,13 @@
 title: Adobe Experience PlatformWeb SDKでのデバッグ
 description: Experience PlatformWeb SDKのデバッグ機能を切り替える方法を学びます。
 keywords: デバッグWeb sdk；デバッグ；設定；設定；設定コマンド；デバッグコマンド；edgeConfigId;setDebug;debugEnabled;debug;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 84%
+source-wordcount: '446'
+ht-degree: 73%
 
 ---
-
 
 # デバッグ
 
@@ -79,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 現在、指定された `libraryInfo` オブジェクトには次のプロパティが含まれています。
 
-* `version`：読み込まれたライブラリのバージョンです。例えば、読み込まれるライブラリのバージョンが 1.0.0 の場合、値は `1.0.0` になります。
+* `version`：読み込まれたライブラリのバージョンです。例えば、読み込まれるライブラリのバージョンが 1.0.0 の場合、値は `1.0.0` になります。ライブラリがAdobe Experience Platform Launch拡張機能（「AEP Web SDK」という名前）内で実行される場合、バージョンはライブラリバージョンで、Platform launch拡張バージョンは「+」記号で結合されます。 例えば、ライブラリのバージョンが1.0.0で、Platform launch拡張のバージョンが1.2.0の場合、値は`1.0.0+1.2.0`になります。
