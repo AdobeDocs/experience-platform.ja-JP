@@ -3,10 +3,9 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: SalesforceMarketing Cloud接続
 seo-description: Salesforce Marketing Cloud（旧称 ExactTarget）は、訪問者や顧客がエクスペリエンスをパーソナライズするためのジャーニーを構築し、カスタマイズできるデジタルマーケティングスイートです。
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '629'
 ht-degree: 30%
 
 ---
@@ -77,8 +76,8 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## エクスポートされたデータ{#exported-data}
 
-[!DNL Salesforce Marketing Cloud]宛先の場合、Platformは、指定したストレージーの場所にタブ区切りの`.txt`ファイルまたは`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
+[!DNL Salesforce Marketing Cloud]宛先の場合、Platformは、指定したストレージーの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
 
 ## [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}へのデータインポートの設定
 
-[!DNL Platform]をSFTPストレージに接続した後、ストレージの場所から[!DNL Salesforce Marketing Cloud]にデータインポートを設定する必要があります。 これを達成する方法については、[[!DNL Salesforce Help Center]の「ファイル](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5)からMarketing Cloudにサブスクライバをインポートする」を参照してください。
+[!DNL Platform]を[!DNL SFTP]ストレージに接続した後、ストレージの場所から[!DNL Salesforce Marketing Cloud]にデータインポートを設定する必要があります。 これを達成する方法については、[[!DNL Salesforce Help Center]の「ファイル](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5)からMarketing Cloudにサブスクライバをインポートする」を参照してください。
