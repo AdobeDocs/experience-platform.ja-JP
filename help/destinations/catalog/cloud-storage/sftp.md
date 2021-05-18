@@ -2,14 +2,13 @@
 keywords: SFTP;sftp
 title: SFTP接続
 description: 区切り形式のデータファイルをAdobe Experience Platformから定期的にエクスポートするには、SFTPサーバーへのライブ送信接続を作成します。
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: 27abfc38-ec19-4321-b743-169370d585a0
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '230'
 ht-degree: 8%
 
 ---
-
 
 # SFTP接続
 
@@ -39,7 +38,7 @@ SFTP の宛先については、宛先の作成ワークフローの&#x200B;**�
 
 ## エクスポートされたデータ{#exported-data}
 
-SFTPの送信先の場合、プラットフォームは、指定したストレージーの場所にタブ区切りの`.txt`ファイルまたは`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
+[!DNL SFTP]宛先の場合、Platformは、指定したストレージーの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
 
 ## IPアドレス許可リスト
 
