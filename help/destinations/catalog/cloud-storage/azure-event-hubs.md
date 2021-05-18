@@ -3,8 +3,7 @@ keywords: Azureイベントハブの宛先；azureイベントハブ；azure eve
 title: （ベータ版）!DNL Azureイベントハブ]接続
 description: Experience Platformからデータをストリーミングするために、!DNL Azureイベントハブ]ストレージへのリアルタイム送信接続を作成します。
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-translation-type: tm+mt
-source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 6%
@@ -45,21 +44,21 @@ ht-degree: 6%
 
 [!DNL Azure Event Hubs]宛先に対して、宛先を作成ワークフローで次の情報を入力します。
 
-## 認証手順{#authentication-step}
+## アカウントステップ{#account-step}
 
 * **[!UICONTROL SASキー]** 名と **[!UICONTROL SASキー]**:SASキーの名前とキーを入力します。[Microsoftのドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)で、SASキーを使用した[!DNL Azure Event Hubs]への認証について説明します。
 * **[!UICONTROL 名前空間]**: [!DNL Azure Event Hubs] 名前空間を入力します。[Microsoftドキュメント](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)の[!DNL Azure Event Hubs]名前空間について説明します。
 
-![認証手順で必要な入力](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
+![アカウントステップで必要な入力](../../assets/catalog/cloud-storage/event-hubs/account.png)
 
-## 設定手順{#setup-step}
+## 認証手順{#authentication-step}
 
 * **[!UICONTROL 名前]**:接続先の名前を入力し [!DNL Azure Event Hubs]ます。
 * **[!UICONTROL 説明]**:接続の説明を入力します。例：「Premium tier customers」、「Osins in kitesurfing」
 * **[!UICONTROL eventHubName]**:目的のストリームの名前を指定し [!DNL Azure Event Hubs] ます。
 * **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
-![設定手順で必要なデータ](../../assets/catalog/cloud-storage/event-hubs/setup.png)
+![認証手順で必要なデータ](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
 ## セグメントのアクティブ化 {#activate-segments}
 
@@ -111,6 +110,6 @@ ht-degree: 6%
 >[!MORELIKETHIS]
 >
 >* [Azureイベントハブに接続し、Flow Service APIを使用してデータをアクティブにする](../../api/streaming-destinations.md)
->* [AWSKinesisの宛先](./amazon-kinesis.md)
->* [宛先のタイプとカテゴリ](../../destination-types.md)
+* [AWSKinesisの宛先](./amazon-kinesis.md)
+* [宛先のタイプとカテゴリ](../../destination-types.md)
 
