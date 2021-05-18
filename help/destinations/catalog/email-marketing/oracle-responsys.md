@@ -3,11 +3,10 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: Oracle応答
 description: Responsys は、Oracle が提供するクロスチャネルマーケティングキャンペーン用の大規模法人向け電子メールマーケティングツールで、電子メール、モバイル、ディスプレイおよびソーシャルでのインタラクションをパーソナライズします。
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '618'
-ht-degree: 28%
+source-wordcount: '616'
+ht-degree: 29%
 
 ---
 
@@ -77,8 +76,8 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## エクスポートされたデータ{#exported-data}
 
-[!DNL Oracle Responsys]宛先の場合、Platformは、指定したストレージーの場所にタブ区切りの`.txt`ファイルまたは`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
+[!DNL Oracle Responsys]宛先の場合、Platformは、指定したストレージーの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
 
 ## [!DNL Oracle Responsys] {#import-data-into-responsys}へのデータインポートの設定
 
-[!DNL Platform]をSFTPストレージに接続した後、ストレージの場所から[!DNL Oracle Responsys]にデータインポートを設定する必要があります。 これを達成する方法については、[!DNL Oracle Responsys Help Center]の[連絡先またはアカウントのインポート](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)を参照してください。
+[!DNL Platform]を[!DNL SFTP]ストレージに接続した後、ストレージの場所から[!DNL Oracle Responsys]にデータインポートを設定する必要があります。 これを達成する方法については、[!DNL Oracle Responsys Help Center]の[連絡先またはアカウントのインポート](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm)を参照してください。
