@@ -3,10 +3,9 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: Adobe Campaign接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '871'
 ht-degree: 21%
 
 ---
@@ -76,13 +75,13 @@ Adobe Campaign先に対して[セグメント](../../ui/activate-destinations.md
 
 ## エクスポートされたデータ{#exported-data}
 
-[!DNL Adobe Campaign]宛先の場合、[!DNL Platform]は、指定したストレージーの場所にタブ区切りの`.txt`ファイルまたは`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
+[!DNL Adobe Campaign]宛先の場合、[!DNL Platform]は、指定したストレージーの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
 
 ## Adobe Campaign へのデータインポートの設定 {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
->- この統合を実行する際は、Adobe Campaign契約に従って、SFTPストレージの制限、データベースストレージの制限およびアクティブなプロファイルの制限に注意してください。
+>- この統合を実行する際は、Adobe Campaign契約に従って、[!DNL SFTP]ストレージの制限、データベースストレージの制限、およびアクティブなプロファイルの制限に注意してください。
 >- [!DNL Campaign]ワークフローーを使用して、Adobe Campaignーでエクスポートしたセグメントのスケジュール、インポート、およびマッピングを行う必要があります。 Adobe Campaign Classicのドキュメントの[定期的なインポート](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html)の設定、およびAdobe Campaign Standardのドキュメントの[データ管理アクティビティ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html)についてを参照してください。
 >- Adobe Campaignにデータを送信するには、[!DNL Amazon S3]または[!DNL Azure Blob]を使用することをお勧めします。
 
