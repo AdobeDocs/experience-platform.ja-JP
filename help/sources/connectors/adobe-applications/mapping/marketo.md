@@ -5,8 +5,7 @@ title: Marketo Engageソースのフィールドのマッピング
 topic-legacy: overview
 description: 以下の表に、Marketoデータセット内のフィールドと、対応するXDMフィールドとのマッピングを示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-translation-type: tm+mt
-source-git-commit: e4823a2b787667fc181f8a4d474c7d2eb73c8eec
+source-git-commit: db7fde343b3ebf4428020c8256df2b9cfa1486ad
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 4%
@@ -210,7 +209,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## オポチュニティ{#opportunities}
+## オポチュニティ {#opportunities}
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
@@ -256,14 +255,11 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## ユーザー{#persons}
+## 人 {#persons}
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | プライマリ同一性 |
-| `emailSuspended` | `b2b.personOptInOut._channels.email` |
-| `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
-| `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
