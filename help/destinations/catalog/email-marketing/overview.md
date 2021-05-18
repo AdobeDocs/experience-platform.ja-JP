@@ -3,14 +3,13 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: 電子メールマーケティングの宛先の概要
 type: Tutorial
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
-translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 23%
+source-wordcount: '790'
+ht-degree: 21%
 
 ---
-
 
 # 電子メールマーケティングの宛先の概要 {#email-marketing-destinations}
 
@@ -20,7 +19,7 @@ ht-degree: 23%
 
 電子メールマーケティングの宛先への接続は、3つの手順で行います([宛先](#connect-destination)を設定[セグメント](#select-segments)をアクティブ化[し、ストレージの場所から宛先](#import-data-into-destination)にデータをインポートします)。 各手順について、このページで詳しく説明します。
 
-次の節で説明する接続フローで、Amazon S3 または SFTP に接続します。プラットフォームは、セグメントを`.csv`または`.txt`ファイルとして書き出し、希望の場所に配信します。 Platformで有効になっているストレージーの場所から、電子メールマーケティングプラットフォームでデータのインポートをスケジュールします。 データをインポートするプロセスは、パートナーごとに異なります。個々のリンク先の記事を読むと、詳細が表示されます。
+次の節で説明する接続先フローで、[!DNL Amazon S3]または[!DNL SFTP]に接続します。 プラットフォームは、セグメントを`.csv`ファイルとして書き出し、希望の場所に配信します。 [!DNL Platform]で有効になっているストレージーの場所から、電子メールマーケティングプラットフォームでデータのインポートをスケジュールします。 データをインポートするプロセスは、パートナーごとに異なります。個々のリンク先の記事を読むと、詳細が表示されます。
 
 ## 宛先を構成{#connect-destination}
 
@@ -97,7 +96,7 @@ Adobeでは、[和集合スキーマ](../../../profile/home.md#profile-fragments
 
 電子メールマーケティングの宛先に対してセグメントをアクティブにする方法については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
-## その他のリソース
+## 追加のリソース
 
 - [宛先へのデータのアクティブ化](../../ui/activate-destinations.md)
 - [Flow Service APIを使用して、電子メールマーケティングの宛先を作成し、データをアクティブ化する](../../api/email-marketing.md)
