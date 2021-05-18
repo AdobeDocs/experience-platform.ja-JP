@@ -5,10 +5,9 @@ title: Marketo名前空間
 topic-legacy: overview
 description: このドキュメントでは、Marketo Engageソースコネクタを作成する際に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-translation-type: tm+mt
-source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
+source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1670'
 ht-degree: 12%
 
 ---
@@ -56,6 +55,20 @@ ht-degree: 12%
 | `has_msi` | [!DNL Marketo Sales Insight]にサブスクライブされているかどうかを示すboolean値です。 | `false` |
 
 {style=&quot;table-layout:auto&quot;}
+
+### スクリプトの実行
+
+[!DNL Postman]コレクションと環境を設定すると、[!DNL Postman]インターフェイスを通じてスクリプトを実行できるようになります。
+
+[!DNL Postman]インターフェイスで、auto-generatorユーティリティのルートフォルダを選択し、一番上のヘッダから&#x200B;**[!DNL Run]**&#x200B;を選択します。
+
+![root-folder](../images/marketo/root-folder.png)
+
+[!DNL Runner]インターフェイスが表示されます。 ここから、すべてのチェックボックスが選択されていることを確認し、**[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**&#x200B;を選択します。
+
+![ランジェネレータ](../images/marketo/run-generator.png)
+
+リクエストが成功すると、ベータ仕様に従ってB2B名前空間とスキーマが作成されます。
 
 ## [!DNL Marketo] 名前空間
 
