@@ -3,10 +3,9 @@ keywords: 電子メール；電子メール；電子メール；電子メール�
 title: OracleEloqua接続
 description: Oracle Eloqua は、Oracle が提供するマーケティング自動処理向けの SaaS（サービスとしてのソフトウェア）プラットフォームで、B2B マーケターや組織がマーケティングキャンペーンや販売リードジェネレーションを管理するのを支援します。
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '672'
 ht-degree: 30%
 
 ---
@@ -79,8 +78,8 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## エクスポートされたデータ{#exported-data}
 
-[!DNL Oracle Eloqua]宛先の場合、Platformは、指定したストレージーの場所にタブ区切りの`.txt`ファイルまたは`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
+[!DNL Oracle Eloqua]宛先の場合、Platformは、指定したストレージーの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
 
 ## [!DNL Oracle Eloqua] {#import-data-into-eloqua}へのデータインポートの設定
 
-[!DNL Platform]をSFTPストレージに接続した後、ストレージの場所から[!DNL Oracle Eloqua]にデータインポートを設定する必要があります。 これを達成する方法については、[!DNL Oracle Eloqua Help Center]の[連絡先またはアカウントのインポート](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)を参照してください。
+[!DNL Platform]を[!DNL SFTP]ストレージに接続した後、ストレージの場所から[!DNL Oracle Eloqua]にデータインポートを設定する必要があります。 これを達成する方法については、[!DNL Oracle Eloqua Help Center]の[連絡先またはアカウントのインポート](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm)を参照してください。
