@@ -2,14 +2,13 @@
 keywords: AmazonKinesis;kinesis宛先；kinesis
 title: AmazonKinesis接続
 description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
+source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 6%
 
 ---
-
 
 # （ベータ版） [!DNL Amazon Kinesis]接続
 
@@ -45,21 +44,21 @@ ht-degree: 6%
 
 [!DNL Amazon Kinesis]宛先に対して、宛先を作成ワークフローで次の情報を入力します。
 
-## 認証手順{#authentication-step}
+## アカウントステップ{#account-step}
 
 * **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:で、 [!DNL Amazon Web Services]ペアを生成して、プラットフォームに `access key - secret access key`  [!DNL Amazon Kinesis] アカウントへのアクセスを許可します。詳しくは、[AmazonWebサービスドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
 * **region**:データをストリーミングする [!DNL Amazon Web Services] 領域を指定します。
 
 ![アカウント手順の入力フィールド](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-## 設定手順{#setup-step}
+## 認証手順{#authentication-step}
 
 * **名前**:接続先の名前を指定  [!DNL Amazon Kinesis]
 * **説明**:への接続の説明を入力し [!DNL Amazon Kinesis]ます。
 * **stream**:ア [!DNL Amazon Kinesis] カウント内の既存のデータストリームの名前を指定します。プラットフォームは、このストリームにデータをエクスポートします。
 * **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
 
-![認証手順の入力フィールド](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
+![認証手順の入力フィールド](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 
@@ -120,6 +119,6 @@ ht-degree: 6%
 >[!MORELIKETHIS]
 >
 >* [AmazonKinesisに接続し、Flow Service APIを使用してデータをアクティブにする](../../api/streaming-destinations.md)
->* [Azureイベントハブの宛先](./azure-event-hubs.md)
->* [宛先のタイプとカテゴリ](../../destination-types.md)
+* [Azureイベントハブの宛先](./azure-event-hubs.md)
+* [宛先のタイプとカテゴリ](../../destination-types.md)
 
