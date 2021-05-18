@@ -5,9 +5,9 @@ title: Marketo名前空間
 topic-legacy: overview
 description: このドキュメントでは、Marketo Engageソースコネクタを作成する際に必要なカスタム名前空間の概要を説明します。
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
+source-git-commit: 609b951cbde880a9f354b343adb1796def0a812c
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1677'
 ht-degree: 12%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 12%
 
 [!DNL Marketo]名前空間とスキーマ自動生成ユーティリティを使用する最初の手順は、プラットフォーム開発者コンソールと[!DNL Postman]環境を設定することです。
 
-- この[GitHubリポジトリ](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility)から、名前空間とスキーマの自動生成ユーティリティの収集と環境をダウンロードできます。
+- この[GitHubリポジトリ](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility)から、名前空間とスキーマの自動生成ユーティリティの収集と環境をダウンロードできます。
 - 必要なヘッダーの値の収集方法やサンプルAPI呼び出しを読む方法など、プラットフォームAPIの使用に関する詳細は、[プラットフォームAPIの使用の手引き](../../../../landing/api-guide.md)のガイドを参照してください。
 - プラットフォームAPI用の資格情報を生成する方法について詳しくは、[Experience PlatformAPIの認証とアクセス](../../../../landing/api-authentication.md)のチュートリアルを参照してください。
 - プラットフォームAPI用に[!DNL Postman]を設定する方法について詳しくは、[開発者コンソールと [!DNL Postman]](../../../../landing/postman.md)の設定に関するチュートリアルを参照してください。
