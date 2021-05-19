@@ -4,10 +4,9 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントは、Adobe Experience Platformの目的地の目次をリストします
 feature: 宛先
-translation-type: tm+mt
-source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
+source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '476'
 ht-degree: 59%
 
 ---
@@ -16,7 +15,8 @@ ht-degree: 59%
 # 宛先 {#destinations}
 
 * [Destinations overview](./home.md)
-* [宛先の種類とカテゴリ ](./destination-types.md)
+* [宛先のタイプとカテゴリ](./destination-types.md)
+* [宛先FAQ](./destinations-faq.md)
 * API チュートリアル {#api}
    * [Flow Service APIを使用して、ストリーミング送信先に接続し、データをアクティブにします](./api/streaming-destinations.md)
    * [電子メールマーケティングの宛先に接続し、Flow Service APIを使用してデータをアクティブ化する](./api/email-marketing.md)
@@ -50,12 +50,12 @@ ht-degree: 59%
       * [Google Ad Manager接続](./catalog/advertising/google-ad-manager.md)
       * [Google Customer Match接続](./catalog/advertising/google-customer-match.md)
       * [Google Display &amp; Video 360接続](./catalog/advertising/google-dv360.md)
-      * [Google タグ拡張機能](./catalog/advertising/gtag-advertising.md)
+      * [Google gtag 拡張](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight タグ拡張機能](./catalog/advertising/linkedin.md)
       * [Microsoft Bing接続](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest.md)
       * [トレードデスクの接続](./catalog/advertising/tradedesk.md)
-      * [Twitter Universal Website Tag 拡張機能](./catalog/advertising/twitter-uwt.md)
+      * [Twitter ユニバーサルウェブサイトタグ拡張](./catalog/advertising/twitter-uwt.md)
    * Analytics の宛先 {#analytics}
       * [Analytics の宛先の概要](./catalog/analytics/overview.md)
       * [Adform Website Tracking 拡張機能](./catalog/analytics/adform.md)
@@ -71,12 +71,12 @@ ht-degree: 59%
       * [JW Player Analytics（ベータ版）拡張機能](./catalog/analytics/jw-player-analytics.md)
       * [Nielsen BSDK 拡張機能](./catalog/analytics/nielsen-bsdk.md)
       * [Nielsen IMA Handler 拡張機能](./catalog/analytics/nielsen-ima.md)
-      * [Nielsen VideoJS プレイヤーハンドラー拡張機能](./catalog/analytics/nielsen-videojs.md)
+      * [Nielsen VideoJS Player Handler 拡張機能](./catalog/analytics/nielsen-videojs.md)
       * [Parse.ly Analytics 拡張機能](./catalog/analytics/parsely.md)
       * [Quantum Metric 拡張機能](./catalog/analytics/quantum-metric.md)
       * [SessionCam 拡張機能](./catalog/analytics/sessioncam.md)
       * [TMMData 拡張機能](./catalog/analytics/tmmdata.md)
-      * [Yext Conversion Tracking 拡張機能](./catalog/analytics/yext.md)
+      * [Yext コンバージョントラッキング拡張機能](./catalog/analytics/yext.md)
    * クラウドストレージの宛先 {#cloud-storage}
       * [クラウドストレージの宛先の概要](./catalog/cloud-storage/overview.md)
       * [クラウドストレージの保存先の作成](./catalog/cloud-storage/workflow.md)
@@ -112,11 +112,11 @@ ht-degree: 59%
       * [Adobe Target 拡張機能](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2 拡張機能](./catalog/personalization/adobe-target-v2.md)
       * [Beemray 拡張機能](./catalog/personalization/beemray.md)
-      * [D&amp;B Visitor Intelligence 拡張機能](./catalog/personalization/dnb.md)
+      * [D&amp;B 訪問者インテリジェンス拡張機能](./catalog/personalization/dnb.md)
       * [Experience Cloud ID サービス拡張機能](./catalog/personalization/adobe-ecid.md)
       * [Gainsight 拡張機能](./catalog/personalization/gainsight.md)
       * [KickFire 拡張機能](./catalog/personalization/kickfire.md)
-      * [Marketto Web パーソナリゼーション拡張機能](./catalog/personalization/marketo-web-personalization.md)
+      * [Marketo Web パーソナライゼーション拡張機能](./catalog/personalization/marketo-web-personalization.md)
    * ソーシャルの宛先{#social}
       * [ソーシャルリンク先の概要](./catalog/social/overview.md)
       * [ソーシャルターゲットの作成](./catalog/social/workflow.md)
@@ -127,7 +127,7 @@ ht-degree: 59%
       * [調査先の概要](./catalog/survey/overview.md)
       * [Forese拡張の宛先](./catalog/survey/foresee.md)
       * [InMoment 拡張機能](./catalog/survey/inmoment.md)
-      * [Qualtrics Web サイトフィードバック拡張機能](./catalog/survey/qualtrics.md)
+      * [Qualtrics Website Feedback 拡張機能](./catalog/survey/qualtrics.md)
       * [QuestionPro Intercept Surveys 拡張機能](./catalog/survey/web-intercept-surveys.md)
    * 顧客の声の宛先 {#voice}
       * [顧客の宛先の概要の音声](./catalog/voice/overview.md)
