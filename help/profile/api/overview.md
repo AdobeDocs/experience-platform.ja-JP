@@ -1,11 +1,9 @@
 ---
 keywords: Experience Platform;プロファイル；リアルタイムの顧客プロファイル；トラブルシューティング；API；統合プロファイル；統合プロファイル；統合；プロファイル;rtcp;プロファイルの有効化；プロファイルの有効化
 title: リアルタイム顧客プロファイルAPIガイド
-topic-legacy: guide
 description: Real-time Customer Commenter APIを使用すると、表示プロファイル、結合ポリシーの作成と更新、プロファイルデータの書き出しとサンプル、不要になった、または誤って追加されたプロファイルデータの削除など、プロファイルデータを参照および操作できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 77bf6f4634987900bea1280290e8049120bb8856
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 14%
