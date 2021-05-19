@@ -4,9 +4,9 @@ title: 宛先FAQ
 seo-title: 宛先FAQ
 description: Adobe Experience Platformの目的地に関して最もよくある質問への回答
 seo-description: Adobe Experience Platformの目的地に関して最もよくある質問への回答
-source-git-commit: 117f0f82adb764cedaa048e718cd72fa033845a0
+source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '597'
 ht-degree: 16%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 16%
 
 # 宛先FAQ {#faq}
 
-## [!DNL Facebook Custom Audiences] (#facebook-faq)
+## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 **でオーディエンスをアクティベートする前に、何を行う必要があり [!DNL Facebook Custom Audiences]ますか？**
 
