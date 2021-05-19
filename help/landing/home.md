@@ -5,19 +5,14 @@ title: Adobe Experience Platform 概要
 topic-legacy: getting started
 description: Adobe Experience Platformを使用すると、組織は顧客データを一元化および標準化してから、データサイエンスと機械学習を適用し、パーソナライズされた豊富なエクスペリエンスの設計と配信を大幅に改善できます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5fae56fcfc395984d29c74e90cb56b3964d99767
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 35%
+source-wordcount: '437'
+ht-degree: 31%
 
 ---
 
 # Adobe Experience Platform 概要
-
->[!NOTE]
->
->Adobe Experience Platform のドキュメントが最近移動されました。新しいナビゲーションを確認し、既存のブックマークを更新してください。
 
 Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。[!DNL Experience Platform] を使用すると、あらゆるシステムから顧客データおよびコンテンツを一元化および標準化して、データサイエンスと機械学習を適用し、パーソナライズされた豊富なエクスペリエンスのデザインおよび配信を大幅に強化できます。
 
