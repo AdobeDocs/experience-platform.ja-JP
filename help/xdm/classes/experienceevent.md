@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ;identityMap；アイデンティティマップ；スキーマ設計；マップ；和集合スキーマ;和集合
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；フィールド；スキーマ;スキーマ;IDマップ；IDマップ；スキーマ設計；マップ；マップ；イベントモデリング；イベントモデリング；ベストプラクティス；イベント;イベント;
 solution: Experience Platform
 title: XDM ExperienceEventクラス
 topic-legacy: overview
-description: このドキュメントでは、XDM ExperienceEventクラスの概要を説明します。
+description: このドキュメントでは、XDM ExperienceEventクラスの概要と、イベントデータモデリングのベストプラクティスを示します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
+source-git-commit: 4f1fe7ca5f09bb1e8e1b913d1dee1cff347d6a24
 workflow-type: tm+mt
-source-wordcount: '1466'
+source-wordcount: '1476'
 ht-degree: 4%
 
 ---
