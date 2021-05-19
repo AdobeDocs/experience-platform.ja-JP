@@ -6,13 +6,13 @@ topic-legacy: Customer AI Overview
 description: 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイは必要ありません。
 landing-page-description: 顧客 AI は、個々のプロファイルのカスタム傾向スコア（チャーンやコンバージョンなど）を大規模に生成するために使用されます。
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 85%
 
 ---
+
 
 # 顧客 AI の概要
 
