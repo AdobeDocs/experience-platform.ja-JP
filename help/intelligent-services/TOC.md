@@ -1,22 +1,21 @@
 ---
 solution: Experience Platform, Intelligent Services
 audience: user
-user-guide-title: Intelligent Services のヘルプ
+user-guide-title: インテリジェントサービスのヘルプ
 breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、スコアの生成、インサイトの発見、マーケティングイベントデータからのセグメントの作成をおこないます。
 feature: Data Science Workspace
-translation-type: tm+mt
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 50%
+source-wordcount: '124'
+ht-degree: 49%
 
 ---
 
 
-# Adobe Intelligent Services {#intelligent-services}
+# Adobe インテリジェントサービス {#intelligent-services}
 
-- [Intelligent Services の概要](home.md)
+- [インテリジェントサービスの概要](home.md)
 - [Intelligent Servicesで使用するデータの準備](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [概要](attribution-ai/overview.md)
@@ -44,4 +43,5 @@ ht-degree: 50%
       - [Discoverインサイト](customer-ai/user-guide/discover-insights.md)
       - [顧客AIスコアを使用したセグメントの作成](customer-ai/user-guide/create-segment.md)
       - [スコアのダウンロード](customer-ai/user-guide/download-scores.md)
+   - [エラーのトラブルシューティング](customer-ai/troubleshooting.md)
 - [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
