@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；製品プロファイル
+keywords: Experience Platform;ホーム;人気のトピック;製品プロファイル
 solution: Experience Platform
 title: 製品プロファイルのユーザー管理
 topic-legacy: user guide
-description: このドキュメントでは、Adobe Experience PlatformのUIで製品プロファイルのユーザーを管理する方法を示します。
+description: このドキュメントでは、Adobe Experience Platform の UI で製品プロファイルのユーザーを管理する方法を示します。
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
-# 製品プロファイルのユーザーの管理
+# 製品プロファイルのユーザー管理
 
 製品プロファイルにユーザーを割り当てたり、製品プロファイルからユーザーを削除したりするには、プロファイルの詳細ページを開き、「**[!UICONTROL ユーザー]**」タブに移動します。このタブで、「**[!UICONTROL ユーザーの追加]**」をクリックします。
 
@@ -37,4 +36,4 @@ ht-degree: 66%
 
 ## 次の手順
 
-[!DNL Admin Console]を通じて[!DNL Platform]機能へのアクセスを制御する方法を学んだら、[アクセス制御の概要](../home.md)の付録の節を参照して、個々の権限と[!DNL Platform]機能のアクセスを許可する方法を確認してください。
+これで、[!DNL Admin Console] を使用して、[!DNL Platform] 機能へのアクセスを制御する方法を学びました。個々の権限と、アクセス権が付与される [!DNL Platform] 機能の詳細については、[アクセス制御の概要](../home.md)の付録の節を参照してください。
