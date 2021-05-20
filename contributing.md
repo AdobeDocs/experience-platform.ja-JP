@@ -1,9 +1,9 @@
 ---
 source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
+translation-type: ht
 source-wordcount: '296'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 # コントリビューション
@@ -20,7 +20,7 @@ ht-degree: 97%
 
 ## コントリビューターガイドドキュメント
 
-「[コントリビューターガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)」を参照してください。
+「[コントリビューターガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja)」を参照してください。
 
 ## 質問がある場合
 
