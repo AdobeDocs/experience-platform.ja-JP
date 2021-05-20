@@ -3,25 +3,24 @@ audience: user
 user-guide-title: Adobe Experience Platform リリースノート
 breadcrumb-title: Platform リリースノート
 user-guide-description: Adobe Experience Platform の月次リリースノートです。
-translation-type: tm+mt
 source-git-commit: 8f38e009adcae6d045b8353c6d2276a2c3bd0213
 workflow-type: tm+mt
 source-wordcount: '49'
-ht-degree: 89%
+ht-degree: 91%
 
 ---
 
 
 # Adobe Experience Platform リリースノート {#release-notes}
 
-* [最新のプラットフォームのリリースノート](latest/latest.md)
+* [最新のPlatformリリースノート](latest/latest.md)
 * 2021 {#2021}
    * [2021 年 4 月](2021/april-2021.md)
    * [2021 年 3 月](2021/march-2021.md)
    * [2021 年 2 月](2021/february-2021.md)
    * [2021 年 1 月](2021/january-2021.md)
 * 2020 年 {#2020}
-   * [2020年12月](2020/december-2020.md)
+   * [2020 年 12 月 日](2020/december-2020.md)
    * [2020 年 11 月](2020/november-2020.md)
    * [2020 年 10 月](2020/october-2020.md)
    * [2020 年 9 月](2020/september-2020.md)
@@ -34,7 +33,7 @@ ht-degree: 89%
    * [2020 年 2 月](2020/february-2020.md)
    * [2020 年 1 月](2020/january-2020.md)
 * 2019 {#2019}
-   * [2019 年 12 月](2019/december-2019.md)
+   * [12 月 2019 日（PT）](2019/december-2019.md)
    * [2019 年 11 月](2019/november-2019.md)
    * [2019 年 9 月](2019/september-2019.md)
    * [2019 年 7 月](2019/july-2019.md)
