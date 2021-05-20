@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；効果的なポリシー；アクセス制御api
+keywords: Experience Platform;ホーム;人気のトピック;効果的なポリシー;access control api
 solution: Experience Platform
-title: 有効なポリシーAPIエンドポイント
+title: 有効なポリシー API エンドポイント
 topic-legacy: developer guide
-description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントは、Adobe Experience Platform向けアクセス制御APIを使用して効果的なポリシーを表示する方法のガイドとして機能します。
+description: Adobe Experience Platform のアクセス制御では、Adobe Admin Console を使用して、様々な Platform 機能のロールと権限を管理できます。このドキュメントでは、Adobe Experience Platform 向けアクセス制御 API を使用して効果的なポリシーを表示する方法について説明します。
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +24,7 @@ POST /acl/effective-policies
 
 **リクエスト**
 
-次のリクエストは、「[!UICONTROL データセットを管理]」権限に関する情報を取得し、現在のユーザーの「[!UICONTROL スキーマ]」リソースタイプにアクセスします。
+次のリクエストは、「[!UICONTROL データセットの管理]」権限に関する情報と、現在のユーザーの「[!UICONTROL スキーマ]」リソースタイプへのアクセスに関する情報を取得します。
 
 ```shell
 curl -X POST \
@@ -66,11 +65,11 @@ curl -X POST \
 
 ## 次の手順
 
-このドキュメントでは、[!DNL Access Control] APIを呼び出して、アクティブなアクセス許可とリソースタイプの関連ポリシーに関する情報を返す方法を説明しました。 [!DNL Experience Platform]のアクセス制御について詳しくは、[アクセス制御の概要](../home.md)を参照してください。
+このドキュメントでは、[!DNL Access Control] API への呼び出しを実行して、アクティブな権限についての情報およびリソースタイプの関連ポリシーについての情報を返す方法について説明しました。[!DNL Experience Platform] のアクセス制御について詳しくは、[アクセス制御の概要](../home.md)を参照してください。
 
 ## 付録
 
-この節では、[!DNL Access Control] APIの使用に関する補足情報を提供します。
+この節では、[!DNL Access Control] API の使用に関する補足情報を提供します。
 
 ### 許可された権限とリソースの種類
 
