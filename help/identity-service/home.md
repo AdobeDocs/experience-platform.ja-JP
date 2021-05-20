@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ID;XDMグラフ；IDサービス；IDサービス
+keywords: Experience Platform;ホーム;人気のトピック;ID;ID;XDM グラフ;ID サービス;ID サービス
 solution: Experience Platform
-title: IDサービスの概要
+title: ID サービスの概要
 topic-legacy: overview
-description: Adobe Experience Platform・アイデンティティ・サービスは、デバイスやシステム間でIDをつなぐことで、顧客と行動の表示を向上させ、効果的な個人のデジタル体験をリアルタイムで提供します。
+description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1717'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
 # [!DNL Identity Service] の概要
 
-関連性のあるデジタルエクスペリエンスを提供するには、顧客を完全に理解しておく必要があります。これは、顧客データが異なる複数のシステムに断片化され、各顧客が複数の「ID」を持つように見える場合に、より難しくなります。Adobe Experience Platform[!DNL Identity Service]は、デバイスやシステム間でIDをつなぐことで、顧客とその行動をより良く表示できるように支援します。これにより、インパクトなパーソナルデジタルエクスペリエンスをリアルタイムで提供できます。
+関連性のあるデジタルエクスペリエンスを提供するには、顧客を完全に理解しておく必要があります。これは、顧客データが異なる複数のシステムに断片化され、各顧客が複数の「ID」を持つように見える場合に、より難しくなります。Adobe Experience Platform [!DNL Identity Service]を利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客と行動をよりよく把握できます。これによって、インパクトのある個人のデジタルエクスペリエンスをリアルタイムで提供できます。
 
 ## [!DNL Identity Service]について 
 
-毎日、顧客はビジネスとやり取りし、ブランドとの関係を高め続けています。典型的な顧客は、E コマース、ロイヤリティ、ヘルプデスクシステムなど、組織のデータインフラストラクチャ内の任意の数のシステムでアクティブである場合があります。同じ顧客が任意の数のデバイスに匿名で関与する場合もあります。[!DNL Identity Service] お客様の全体像をまとめ、異なる複数のシステムに分散させる可能性のある関連データを集計できます。
+毎日、顧客はビジネスとやり取りし、ブランドとの関係を高め続けています。典型的な顧客は、E コマース、ロイヤリティ、ヘルプデスクシステムなど、組織のデータインフラストラクチャ内の任意の数のシステムでアクティブである場合があります。同じ顧客が任意の数のデバイスに匿名で関与する場合もあります。[!DNL Identity Service]を使用すると、顧客の全体像をまとめ、異なる複数のシステムに分散される可能性があった関連データを集計できます。
 
 消費者とブランドとの関係の日常的な例を考えてみましょう。
 
@@ -27,11 +26,11 @@ Mary は、過去に注文を数件完了した e コマースサイトのアカ
 
 この時点で、Mary のアクティビティは、e コマースログインとタブレットデバイス（デバイス ID で識別される場合もあります）の 2 つの異なるプロファイルとして表示されます。
 
-Mary は後でタブレットセッションを再開し、ニュースレターを購読するためにメールアドレスを提供します。この場合、ストリーミング取得によって、新しい ID がレコードデータとして Mary のプロファイルに追加されます。その結果、[!DNL Identity Service]はMaryのタブレットデバイスアクティビティをeコマースアカウントの履歴と関連付けるようになりました。
+Mary は後でタブレットセッションを再開し、ニュースレターを購読するためにメールアドレスを提供します。この場合、ストリーミング取得によって、新しい ID がレコードデータとして Mary のプロファイルに追加されます。その結果、[!DNL Identity Service]により、Mary のタブレットデバイスのアクティビティと e コマースのアカウント履歴が関連付けられました。
 
 Mary がタブレットを次にクリックするまでには、ターゲットコンテンツは、知らない買い物客が使用するタブレットではなく、Mary の完全なプロファイルと履歴を反映できる可能性があります。
 
-[!DNL Identity Service]が定義し維持するアイデンティティー関係は、[!DNL Real-time Customer Profile]が顧客の全体像を構築し、ブランドとのやり取りを支援します。 詳しくは、「[リアルタイム顧客プロファイルの概要](../profile/home.md)」を参照してください。
+定義および維持する ID 関係は、[!DNL Identity Service]顧客の全体像とブランドとのインタラクションを構築するために[!DNL Real-time Customer Profile]活用されます。 詳しくは、「[リアルタイム顧客プロファイルの概要](../profile/home.md)」を参照してください。
 
 ### ID
 
@@ -62,7 +61,7 @@ ID とは、エンティティ（通常は個人）に固有のデータです�
 
 [!DNL Experience Platform] は、[ID 名前空間](#identity-namespaces)と [ID グラフ](#identity-graphs)の 2 つの概念を通じてこの課題に対処します。。
 
-次のビデオでは、IDとIDのグラフについて理解していただくことを目的としています。 次のビデオでは、ID収集、IDグラフ、APIの3つの機能をカバーしています。 また、決定論的アルゴリズムと確率的アルゴリズムを使用してプライベートIDグラフを構築する方法や、プライベートIDグラフ、Adobe Experience PlatformIDサービス協力グラフ、サードパーティグラフの役割についても説明します。
+次のビデオでは、ID と ID のグラフについての理解をサポートすることを目的としています。 次のビデオでは、ID 収集、ID グラフ、および API の 3 つの機能について説明します。 また、決定論的アルゴリズムと確率的アルゴリズムを使用してプライベート ID グラフを作成する方法や、プライベート ID グラフ、Adobe Experience Platform ID サービス Co-Op グラフ、およびサードパーティグラフの役割についても説明します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
@@ -77,17 +76,17 @@ ID 名前空間は、データの送信元のコンテキストを提供する�
 
 ID グラフは、異なる ID 名前空間間の関係のマップで、顧客が様々なチャネルを通じてブランドとどのようにやり取りするかを視覚的に示します。
 
-すべての顧客IDグラフは、顧客のアクティビティに応じてほぼリアルタイムで[!DNL Identity Service]によってまとめて管理および更新されます。
+すべての顧客 ID グラフは、顧客の活動に応じて、[!DNL Identity Service]によって、ほぼリアルタイムでまとめて管理および更新されます。
 
-[!DNL Identity Service] 組織のみが表示し、自分のデータ（「個人用グラフ」と呼ばれる）に基づいて作成した身分証明書を管理します。[!DNL Identity Service] 取り込まれたデータレコードに複数のIDが含まれる場合にプライベートグラフが増加し、見つかったID間の関係が追加されます。
+[!DNL Identity Service]は、プライベートグラフと呼ばれる、組織のみが表示できる、データに基づいて構築された ID グラフを管理します。 [!DNL Identity Service]は、取り込んだデータレコードに複数の ID が含まれている場合にプライベートグラフを拡張し、見つかった ID 間の関係を追加します。
 
 ID データを提供してラベルを付けるときに考慮する必要がある可能性のある要素の例として、「職場の電話」などの電話番号を使用すると、ID グラフで意図したよりも多くの関係が生じる場合があります。多くの従業員が同じ職場の電話番号を持つ一方、「自宅」と「携帯」は関係をできるだけ正確に保つために役立ちます。
 
-詳しくは、[IDグラフビューアへのアクセス](./ui/identity-graph-viewer.md)のチュートリアルを参照してください
+詳しくは、[ID グラフビューアへのアクセス](./ui/identity-graph-viewer.md)に関するチュートリアルを参照してください
 
-## [!DNL Identity Service]にIDデータを提供する
+## [!DNL Identity Service]に ID データを提供する
 
-この節では、Adobe Experience Platformに提供されるデータが、顧客ごとにIDグラフを作成するために[!DNL Identity Service]が使用される前にどのように処理されるかについて説明します。
+この節では、Adobe Experience Platform に提供されるデータが、[!DNL Identity Service]で使用される前に処理されて各顧客の ID グラフが作成される仕組みについて説明します。
 
 ### ID フィールドの決定
 
@@ -99,15 +98,15 @@ ID データを提供してラベルを付けるときに考慮する必要が�
 
 ### 追加の ID 名前空間
 
-[!DNL Experience Platform]は様々な標準名前空間をオファーしますが、IDを適切に分類するために、追加の名前空間を作成する必要がある場合があります。 詳しくは、「ID 名前空間の概要」の、[組織の名前空間の表示と作成](./namespaces.md)に関する節を参照してください。
+[!DNL Experience Platform]は様々な標準の名前空間を提供しますが、ID を適切に分類するには、追加の名前空間を作成する必要がある場合があります。 詳しくは、「ID 名前空間の概要」の、[組織の名前空間の表示と作成](./namespaces.md)に関する節を参照してください。
 
 >[!NOTE]
 >
 > ID 名前空間は ID の修飾子です。その結果、一度作成した名前空間は削除できません。
 
-### [!DNL Experience Data Model] (XDM)にIDデータを含める
+### [!DNL Experience Data Model]（XDM）に ID データを含める
 
-[!DNL Platform]が顧客データを編成する標準化されたフレームワークとして、[!DNL Experience Data Model] (XDM)は、[!DNL Experience Platform]と[!DNL Platform]とやり取りする他のサービスとの間でデータを共有し、理解することを可能にします。 詳しくは、「[XDM システムの概要](../xdm/home.md)を参照してください」。
+[!DNL Platform] が顧客データの整理に使用する標準化されたフレームワークとして、[!DNL Experience Data Model]（XDM）は、 [!DNL Experience Platform] が、[!DNL Platform] と対話する他のサービスとの間でデータを共有および理解できるようにします。 詳しくは、「[XDM システムの概要](../xdm/home.md)を参照してください」。
 
 レコードスキーマと時系列スキーマは両方、ID データを含める手段を備えています。データが取得されると、異なる名前空間のデータフラグメントが共通の ID データを共有していることが判明した場合、ID グラフはデータフラグメント間に新しい関係を作成します。
 
@@ -116,7 +115,7 @@ ID データを提供してラベルを付けるときに考慮する必要が�
 レコードまたは時系列の XDM クラスを実装するスキーマ内の `string` タイプのフィールドは、ID フィールドとしてラベル付けできます。その結果、そのフィールドに取得されたすべてのデータは、ID データと見なされます。
 
 ID フィールドでは、共通の PII データを共有している ID をリンクすることもできます。
-例えば、電話番号フィールドをIDフィールドとしてラベル付けすると、[!DNL Identity Service]は、同じ電話番号を使用している他の個人との関係を自動的にグラフ化します。
+例えば、電話番号フィールドを ID フィールドとしてラベル付けすると、[!DNL Identity Service] は同じ電話番号を使用している他の個人との関係を自動的にグラフ化します。
 
 >[!NOTE]
 >
@@ -124,24 +123,24 @@ ID フィールドでは、共通の PII データを共有している ID を�
 
 ### [!DNL Identity Service]のデータセットの設定
 
-ストリーミング取り込み処理中に、[!DNL Identity Service ]レコードと時系列データからアイデンティティデータを自動的に抽出します。 ただし、データを取り込む前に、[!DNL Identity Service]に対して有効にする必要があります。 詳しくは、[API を使用したリアルタイム顧客プロファイルおよび ID サービスのデータセットの設定](../profile/tutorials/dataset-configuration.md)に関するチュートリアルを参照してください。
+ストリーミング取得プロセス中、[!DNL Identity Service ]はレコードおよび時系列データから ID データを自動的に抽出します。 ただし、データを取得する前に、[!DNL Identity Service]を有効にする必要があります。 詳しくは、[API を使用したリアルタイム顧客プロファイルおよび ID サービスのデータセットの設定](../profile/tutorials/dataset-configuration.md)に関するチュートリアルを参照してください。
 
-### データを[!DNL Identity Service]に取り込む
+### データを [!DNL Identity Service]に取り込みます
 
-[!DNL Identity Service] は、XDM準拠のデータをバッチインゲストまたはストリーミングインジェスト [!DNL Experience Platform] によって [送信](../ingestion/batch-ingestion/overview.md)  [](../ingestion/streaming-ingestion/overview.md)します。
+[!DNL Identity Service]は、[バッチ取得](../ingestion/batch-ingestion/overview.md)または[ストリーミング取得](../ingestion/streaming-ingestion/overview.md)のいずれかによって [!DNL Experience Platform] に送信される XDM 準拠のデータを使用します。
 
-次のビデオは、IDサービスについての理解を深めるためのものです。 このビデオでは、データフィールドにIDとしてラベルを付け、IDデータを取り込み、データがAdobe Experience PlatformIDサービスのプライベートグラフに送信されたことを確認する方法を示します。
+次のビデオは、 ID サービスを理解できるようサポートすることを目的としています。 このビデオでは、データフィールドに ID としてラベルを付け、ID データを取り込んで、データが Adobe Experience Platform ID サービスのプライベートグラフに到達したことを確認する方法を説明します。
 
 >[!WARNING]
 >
->次のビデオに示す[!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、ドキュメントを参照してください。
+>次のビデオに示す [!DNL Platform] UI は古くなっています。 最新の UI のスクリーンショットと機能については、ドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
 
 ## データガバナンス
 
-Adobe Experience Platform はプライバシーを考慮して構築され、顧客 PII データを保護するデータガバナンスフレームワークを含んでいます。「email」または「phone」名前空間のIDデータはデフォルトで暗号化されますが、機密データが保持される前に確実に暗号化されるように、データ使用ラベルをデータの取り込み時または[!DNL Platform]に到着後に適用できます。 詳しくは、「[データガバナンスの概要](../data-governance/home.md)」を参照してください。
+Adobe Experience Platform はプライバシーを考慮して構築され、顧客 PII データを保護するデータガバナンスフレームワークを含んでいます。「email」または「phone」名前空間の ID データはデフォルトで暗号化されますが、機密データを永続化する前に確実に暗号化するために、データ取得時または [!DNL Platform] への到着時に、データにデータ使用ラベルを適用できます。 詳しくは、「[データガバナンスの概要](../data-governance/home.md)」を参照してください。
 
 ## 次の手順
 
-[!DNL Identity Service]の主要概念と[!DNL Experience Platform]内での役割を理解したら、[[!DNL Identity Service API]](./api/getting-started.md)を使ってIDグラフの使い方を学ぶことができます。
+これで、[!DNL Identity Service]の主要な概念と [!DNL Experience Platform] 内での役割について説明しました。次に、[[!DNL Identity Service API]](./api/getting-started.md)を使用して ID グラフを操作する方法を学習します。
