@@ -3,11 +3,10 @@ audience: user
 user-guide-title: カタログおよびデータセットガイド
 user-guide-description: データレイク内でデータ系列、メタデータ、ファイル記述、ディレクトリ、データセットを調べます。
 feature: データ管理
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '108'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -17,8 +16,8 @@ ht-degree: 97%
 * [カタログサービスの概要](home.md)
 * Catalog Service API {#api}
    * [はじめに](api/getting-started.md)
-   * [クエリパラメーターを使用したカタログデータのフィルタリング](api/filter-data.md)
-   * [リストオブジェクト](api/list-objects.md)
+   * [クエリパラメータ－を使用したカタログデータのフィルター](api/filter-data.md)
+   * [オブジェクトリスト](api/list-objects.md)
    * [オブジェクトの検索](api/look-up-object.md)
    * [複数のオブジェクトの検索](api/look-up-multiple-objects.md)
    * [オブジェクトの更新](api/update-object.md)
@@ -35,4 +34,4 @@ ht-degree: 97%
 * [データレイクでのプライバシーリクエストの処理](privacy.md)
 * [Experience Platform でのデータ保護](data-protection.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-* [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
