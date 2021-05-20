@@ -4,18 +4,18 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: リアルタイムの顧客データプラットフォームガイド
 user-guide-description: 複数のエンタープライズソースから既知のデータや匿名データをまとめて顧客プロファイルを作成、それらのプロファイルからオーディエンスセグメントを作成し、それらのセグメントをサードパーティの宛先に活用します。
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '103'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 
 # リアルタイム顧客データプラットフォームのヘルプ {#rtcdp}
 
-* [リアルタイムCDPの概要](overview.md)
+* [リアルタイム CDP の概要](overview.md)
 * はじめに {#intro}
    * [はじめに](get-started.md)
    * [指標の概要](home-page-dashboards.md)
@@ -40,5 +40,5 @@ ht-degree: 93%
    * [顧客 AI](segmentation/customer-ai.md)
 * ソース {#sources}
    * [ソースの概要](sources/sources-overview.md)
-* [Experience Platformリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [Experience Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
 * [Experience Platform の用語](https://docs.adobe.com/content/help/ja-JP/experience-platform/landing/glossary.html)
