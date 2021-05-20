@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック
+keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: アクセス制御権限を編集する製品プロファイルの選択
+title: 製品プロファイルを選択してアクセス制御権限を編集する
 topic-legacy: user guide
 description: このドキュメントでは、アクセス制御ワークスペースを参照するために必要な手順について説明します。 Adobe Admin Console を使用して Experience Platform のアクセス制御を設定するには、Experience Platform のサブスクリプションを取得している IMS 組織の管理者である必要があります。
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '315'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
-# 製品プロファイルを選択して、アクセス制御権限を管理します
+# 製品プロファイルを選択してアクセス制御権限を管理する
 
-Adobe Admin Console経由で[!DNL Experience Platform]のアクセス制御を設定するには、[!DNL Experience Platform]への購読を持つIMS組織の管理者である必要があります。 アドビは IMS 組織に柔軟性のある管理者階層を提供していますが、アクセス制御を設定するにはシステム管理者、製品管理者または製品プロファイル管理者の権限が必要です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関するアドビ ヘルプセンターの記事を参照してください。
+Adobe Admin Console を使用して [!DNL Experience Platform] のアクセス制御を設定するには、[!DNL Experience Platform] のサブスクリプションを取得している IMS 組織の管理者である必要があります。アドビは IMS 組織に柔軟性のある管理者階層を提供していますが、アクセス制御を設定するにはシステム管理者、製品管理者または製品プロファイル管理者の権限が必要です。詳しくは、[管理者の役割](https://helpx.adobe.com/jp/enterprise/using/admin-roles.html)に関するアドビ ヘルプセンターの記事を参照してください。
 
 管理者権限がない場合は、システム管理者に問い合わせてアクセス権を取得してください。
 
@@ -27,7 +26,7 @@ Adobe Experience Platform のアクセス制御ワークスペースが開き、
 
 ![プラットフォームのアクセス制御](../images/platform-access-control.png)
 
-このユーザーガイドでは、[!DNL Admin Console]を使用して[!DNL Platform]のアクセス権限を割り当てる方法に焦点を当てます。 [!DNL Admin Console]を操作する方法の一般的な情報については、[Admin Consoleユーザーガイド](https://helpx.adobe.com/jp/enterprise/using/admin-console.html)を参照してください。
+このユーザガイドでは、[!DNL Admin Console] を使用して [!DNL Platform] へのアクセス権限を割り当てる方法について説明しています。[!DNL Admin Console] のナビゲーション方法に関する一般情報については、「[Admin Console ユーザーガイド](https://helpx.adobe.com/jp/enterprise/using/admin-console.html)」を参照してください。
 
 ## 次の手順
 
