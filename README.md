@@ -1,12 +1,12 @@
 ---
 source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
+translation-type: ht
 source-wordcount: '508'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
-# 貢献しているコンテンツ
+# コンテンツの投稿
 
 アドビのコミュニティや、ドキュメントチーム以外のアドビ従業員からのコンテンツのコントリビューションを歓迎します。
 
@@ -14,9 +14,9 @@ ht-degree: 79%
 
 このプロジェクトでは、[Adobe Open Source Code of Actions](code-of-conduct.md) または [.NET Foundation Code の実施を採用してい](https://dotnetfoundation.org/code-of-conduct)ます。詳しくは、[投稿](contributing.md)の記事を参照してください。
 
-## Adobeコンテンツへの貢献方法
+## アドビコンテンツへの投稿方法
 
-「[Adobe Docs寄稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en)」を参照してください。
+「[Adobe Docs寄稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja)」を参照してください。
 
 投稿方法は、誰がどのような変更を投稿するかに応じて異なります。
 
@@ -36,15 +36,15 @@ ht-degree: 79%
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Adobeの従業員による主な変更または新規記事
+### アドビ社員による大きな変更または新規記事
 
-Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャーまたは開発者が、業務として技術記事の執筆やコントリビューションをする場合は、`https://git.corp.adobe.com/AdobeDocs` にあるプライベートリポジトリを使用する必要があります。詳細については、『[内部コラボレーションガイド](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en)』を参照してください。
+Adobe Experience Cloud ソリューションの製品チームのテクニカルライター、プログラムマネージャーまたは開発者が、業務として技術記事の執筆やコントリビューションをする場合は、`https://git.corp.adobe.com/AdobeDocs` にあるプライベートリポジトリを使用する必要があります。詳しくは、『[社内コラボレーションガイド](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en)』を参照してください。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## Experience Platformドキュメントチームへの問い合わせ
+## Experience Platform ドキュメントチームへの問い合わせ
 
-上述の通り、Adobeコミュニティのメンバーは、適切な作者に割り当てられる問題を提出できます。 Adobeの従業員は、雑誌号を送信するか、Experience Platformのドキュメントチームに直接問い合わせることができます。 特定のプラットフォーム領域のリードライターを見つけるには、[Adobe Experience Platformのドキュメントwiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)を参照してください。
+上述の通り、アドビコミュニティのメンバーは問題を提出でき、提出された問題は適切な作者に割り当てられます。 アドビの従業員は、問題を送信するか、Experience Platform のドキュメントチームに直接問い合わせることができます。 特定の Platform 領域のリードライターを見つけるには、[Adobe Experience Platform のドキュメント wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation) を参照してください。
 
 ## ツールとセットアップ
 
@@ -52,7 +52,7 @@ Adobe Experience Cloud ソリューションの製品チームのテクニカル
 
 コミュニティ寄稿者は、基本的な編集に GitHub UI を使用したり、レポをフォークしてメジャー貢献度を確保したりできます。
 
-詳しくは、[Adobe Docs 寄稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)を参照してください。
+詳しくは、[Adobe Docs 寄稿者ガイド](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ja)を参照してください。
 
 ### Markdown
 
