@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック
+keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
-title: ラベルAPIエンドポイント
+title: ラベル API エンドポイント
 topic-legacy: developer guide
-description: Policy Service APIを使用してExperience Platformのデータ使用ラベルを管理する方法を説明します。
+description: Policy Service API を使用して Experience Platform のデータ使用ラベルを管理する方法を説明します。
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# ラベルの端点
+# ラベルのエンドポイント
 
-データ使用ラベルを使用すると、そのデータに適用される使用ポリシーに従ってデータを分類できます。 [!DNL Policy Service API]の`/labels`エンドポイントを使用すると、エクスペリエンスアプリケーション内のデータ使用ラベルをプログラムで管理できます。
+データ使用ラベルを使用すると、データに適用される使用ポリシーに従ってデータを分類できます。 [!DNL Policy Service API] の `/labels` エンドポイントを使用すると、エクスペリエンスアプリケーション内のデータ使用ラベルをプログラムで管理できます。
 
 >[!NOTE]
 >
->`/labels`エンドポイントは、データ使用量ラベルの取得、作成、更新のみに使用されます。 API呼び出しを使用してデータセットとフィールドにラベルを追加する手順については、[データセットラベルの管理](../labels/dataset-api.md)のガイドを参照してください。
+>`/labels` エンドポイントは、データ使用ラベルの取得、作成、更新のみに使用されます。 API 呼び出しを使用してデータセットとフィールドにラベルを追加する方法の手順については、[データセットラベルの管理](../labels/dataset-api.md)のガイドを参照してください。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、[[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) の一部です。 先に進む前に、関連ドキュメントへのリンクの[はじめる前に](getting-started.md)、このドキュメントのサンプル API 呼び出しを読むためのガイド、および [!DNL Experience Platform] API を正常に呼び出すために必要な必須ヘッダーに関する重要な情報を確認してください。
 
-## ラベルのリストを取得{#list}
+## ラベルのリストの取得 {#list}
 
-`/labels/core`または`/labels/custom`に対してGETリクエストを行うことで、`core`または`custom`のすべてのラベルをリストできます。
+`/labels/core` または `/labels/custom` に対してそれぞれ GET リクエストをおこなうことで、`core` または `custom` のすべてのラベルをリストできます。
 
 **API 形式**
 
@@ -49,9 +48,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-正常に応答すると、システムから取得されたカスタムラベルのリストが返されます。 上記のリクエスト例は`/labels/custom`に対して行われたので、以下の応答はカスタムラベルのみを示しています。
+正常に応答すると、システムから取得したカスタムラベルのリストが返されます。 上記のリクエスト例は `/labels/custom` に対しておこなわれたので、以下の応答はカスタムラベルのみを示しています。
 
 ```json
 {
@@ -107,9 +106,9 @@ curl -X GET \
 }
 ```
 
-## ラベルを検索{#look-up}
+## ラベルの検索 {#look-up}
 
-特定のラベルを検索するには、そのラベルの`name`プロパティを[!DNL Policy Service] APIへのGET要求のパスに含めます。
+特定のラベルを検索するには、そのラベルの `name` プロパティを [!DNL Policy Service] API への GET リクエストのパスに含めます。
 
 **API 形式**
 
@@ -120,11 +119,11 @@ GET /labels/custom/{LABEL_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LABEL_NAME}` | 検索するカスタムラベルの`name`プロパティ。 |
+| `{LABEL_NAME}` | 検索するサンドボックスの `name` プロパティ。 |
 
 **リクエスト**
 
-次のリクエストは、パスに示されているカスタムラベル`L2`を取得します。
+次のリクエストは、パスに示されているカスタムラベル `L2` を取得します。
 
 ```shell
 curl -X GET \
@@ -135,9 +134,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-正常に応答すると、カスタムラベルの詳細が返されます。
+正常に応答すると、カスタムラベルの詳細を返します。
 
 ```json
 {
@@ -161,9 +160,9 @@ curl -X GET \
 }
 ```
 
-## カスタムラベル{#create-update}の作成または更新
+## カスタムラベル の作成または更新 {#create-update}
 
-カスタムラベルを作成または更新するには、[!DNL Policy Service] APIにPUTリクエストを行う必要があります。
+カスタムラベルを作成または更新するには、[!DNL Policy Service] API に PUT リクエストをおこなう必要があります。
 
 **API 形式**
 
@@ -173,11 +172,11 @@ PUT /labels/custom/{LABEL_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LABEL_NAME}` | カスタムラベルの`name`プロパティ。 この名前のカスタムラベルが存在しない場合は、新しいラベルが作成されます。 存在する場合は、そのラベルが更新されます。 |
+| `{LABEL_NAME}` | カスタムラベルの `name` プロパティ。この名前のカスタムラベルが存在しない場合は、新しいラベルが作成されます。 存在する場合は、そのラベルが更新されます。 |
 
 **リクエスト**
 
-次のリクエストは、顧客が選択した支払計画に関する情報を含むデータを記述するための新しいラベル`L3`を作成します。
+次のリクエストは、顧客が選択した支払計画に関する情報を含むデータを記述するための新しいラベル `L3` を作成します。
 
 ```shell
 curl -X PUT \
@@ -196,14 +195,14 @@ curl -X PUT \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | ラベルの一意の文字列識別子。 この値は参照目的で使用され、ラベルをデータセットやフィールドに適用するので、短く簡潔にすることをお勧めします。 |
-| `category` | ラベルのカテゴリ。 カスタムラベル用に独自のカテゴリを作成することもできますが、ラベルをUIに表示する場合は`Custom`を使用することを強くお勧めします。 |
-| `friendlyName` | ラベルのわかりやすい名前。表示目的で使用されます。 |
+| `name` | ラベルの一意の文字列識別子。 この値は検索目的で使用され、ラベルをデータセットとフィールドに適用します。そのため、短く簡潔にすることをお勧めします。 |
+| `category` | ラベルのカテゴリ。 カスタムラベル用に独自のカテゴリを作成することもできますが、ラベルを UI に表示する場合は `Custom` を使用することを強くお勧めします。 |
+| `friendlyName` | 表示目的で使用される、ラベルのわかりやすい名前。 |
 | `description` | （オプション）詳細なコンテキストを提供するラベルの説明です。 |
 
-**応答**
+**応答** 
 
-正常な応答は、カスタムラベルの詳細を返します。既存のラベルが更新された場合はHTTPコード200(OK)、新しいラベルが作成された場合は201（作成済み）を返します。
+正常な応答は、カスタムラベルの詳細を返します。既存のラベルが更新された場合は HTTP コード 200 (OK)、新しいラベルが作成された場合は 201（作成済み）を返します。
 
 ```json
 {
@@ -229,4 +228,4 @@ curl -X PUT \
 
 ## 次の手順
 
-このガイドでは、Policy Service APIの`/labels`エンドポイントの使用について説明しました。 データセットとフィールドにラベルを適用する手順については、[データセットラベルAPIガイド](../labels/dataset-api.md)を参照してください。
+このガイドでは、Policy Service API の `/labels` エンドポイントの使用について説明しました。 データセットとフィールドにラベルを適用する方法の手順については、[データセットラベル API ガイド](../labels/dataset-api.md)を参照してください。
