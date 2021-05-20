@@ -4,18 +4,17 @@ user-guide-title: Adobe Experience Platformでのデータ取得のヘルプ
 breadcrumb-title: データ取り込みガイド
 user-guide-description: バッチまたはストリーミング取り込みを使用して、データを Platform に取り込みます。
 feature: データ取得
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
 
 # Adobe Experience Platformでのデータ取得 {#ingestion}
 
-- [データ取得の概要](home.md)
+- [データ取り込みの概要](home.md)
 - ストリーミング取得 {#streaming}
    - [概要](streaming-ingestion/overview.md)
    - [Kafka コネクタ](streaming-ingestion/kafka.md)
@@ -23,7 +22,7 @@ ht-degree: 91%
 - バッチ取得 {#batch}
    - [概要](batch-ingestion/overview.md)
    - [バッチ取得 API](batch-ingestion/api-overview.md)
-   - [部分的なバッチ取得](batch-ingestion/partial.md)
+   - [部分バッチ取得](batch-ingestion/partial.md)
    - [トラブルシューティング](batch-ingestion/troubleshooting.md)
 - チュートリアル {#tutorials}
    - [XDM への CSV ファイルのマッピング](tutorials/map-a-csv-file.md)
@@ -34,13 +33,13 @@ ht-degree: 91%
    - [レコードデータのストリーミング](tutorials/streaming-record-data.md)
    - [時系列データのストリーミング](tutorials/streaming-time-series-data.md)
    - [複数のメッセージのストリーミング](tutorials/streaming-multiple-messages.md)
-- データの品質と監視{#quality}
+- データ品質と監視 {#quality}
    - [概要](quality/overview.md)
    - [データ取得の監視](quality/monitor-data-ingestion.md)
    - [エラー診断の取得](quality/error-diagnostics.md)
    - [失敗したバッチの取得](quality/retrieve-failed-batches.md)
-   - [ストリーミング取得の検証](quality/streaming-validation.md)
+   - [ストリーミング取り込みの検証](quality/streaming-validation.md)
    - [データ取得通知](quality/subscribe-events.md)
 - [ソースコネクタ](source-connectors.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
-- [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+- [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
