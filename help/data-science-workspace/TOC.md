@@ -1,32 +1,32 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Data Science ワークスペースヘルプ
+user-guide-title: Adobe Experience Platform Data Science Workspace のヘルプ
 breadcrumb-title: Data Science Workspace ガイド
 user-guide-description: 機械学習を利用して、Adobe Sensei とJupyterLab Notebooks でモデルとレシピを開発、トレーニング、評価します。
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '240'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
 
-# Data Science ワークスペース {#data-science-workspace}
+# Data Science Workspace {#data-science-workspace}
 
-* [Data Science ワークスペースの概要](home.md)
-* [Data Science Workspaceのアクセスと機能](access-features-dsw.md)
-* [Data Science ワークスペースのチュートリアル](walkthrough.md)
+* [Data Science Workspace の概要](home.md)
+* [Data Science Workspace のアクセスと機能](access-features-dsw.md)
+* [Data Science Workspace のチュートリアル](walkthrough.md)
 * JupyterLab ノートブック {#jupyterlab}
    * [概要](jupyterlab/overview.md)
    * [データアクセス](jupyterlab/access-notebook-data.md)
    * [データの分析](jupyterlab/analyze-your-data.md)
    * [クエリサービス](jupyterlab/query-service.md)
-   * [探索的データ分析(EDA)](jupyterlab/eda-notebook.md)
+   * [探索的データ分析（EDA）](jupyterlab/eda-notebook.md)
    * [レシピの作成](jupyterlab/create-a-recipe.md)
-   * [Gitを使用したJupyterLabでのコラボレーション](jupyterlab/using-git-for-collaboration.md)
+   * [Git を使用した JupyterLab でのコラボレーション](jupyterlab/using-git-for-collaboration.md)
 * Senesi Machine Learning API {#api}
    * [はじめに](api/getting-started.md)
    * [エンジン](api/engines.md)
@@ -48,9 +48,9 @@ ht-degree: 78%
 * モデルオーサリング {#authoring}
    * [モデルオーサリング SDK](authoring/sdk.md)
    * [フィーチャパイプラインの作成](authoring/feature-pipeline.md)
-   * [プラットフォームSDK(Python)を使用したモデルオーサリング](authoring/platform-sdk.md)
-   * [Pythonデータアクセス](authoring/python.md)
-   * [Sparkデータアクセス](authoring/spark.md)
+   * [Platform SDK（Python）を使用したモデル制作](authoring/platform-sdk.md)
+   * [Python データアクセス](authoring/python.md)
+   * [Spark データアクセス](authoring/spark.md)
 * モデルとレシピのチュートリアル {#models-recipes}
    * [機械学習モデルの作成と公開](models-recipes/create-publish-model.md)
    * [小売売上データセットとスキーマの作成](models-recipes/create-retails-sales-dataset.md)
@@ -69,4 +69,4 @@ ht-degree: 78%
    * [サービス（UI）の自動トレーニングとスコアリングのスケジュール設定](models-recipes/schedule-models-ui.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
-* [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
