@@ -1,21 +1,19 @@
 ---
-keywords: マージポリシーrtcdp;rtcdpマージポリシー
+keywords: 結合ポリシーrtcdp;rtcdp結合ポリシー
 title: リアルタイム顧客データプラットフォームでのポリシーの結合
 description: リアルタイム顧客データプラットフォームでの結合ポリシーの使用
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+exl-id: 1a9d9549-a7de-46d7-a23e-dd41829839c5
+source-git-commit: 36f64b3a1e75c9badaee29e28408504eabac64fe
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 47%
+source-wordcount: '162'
+ht-degree: 17%
 
 ---
 
-
 # リアルタイム顧客データプラットフォームでのポリシーの結合
 
-[!DNL Real-time Customer Data Platform]はAdobe Experience Platformの上に構築されており、複数のソースからデータを集め、それを組み合わせて個々の顧客の完全な表示を確認できます。 このデータを統合する際、マージポリシーは、[!DNL Platform]がデータの優先順位付け方法と、どのデータを組み合わせて統合表示を作成するかを決定するために使用するルールです。
+[!DNL Real-time Customer Data Platform]はAdobe Experience Platform上に構築されており、複数のソースからデータを統合して、個々の顧客の全体像を把握できます。 このデータを統合する場合、結合ポリシーは、データの優先順位付け方法と、統合された顧客ビューを作成するために組み合わされるデータを決定するために[!DNL Platform]が使用するルールです。
 
-ユーザーインターフェイスを介すると、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなえます。また、データソースに関する環境設定を指定し、結合中に競合が発生した場合にどのデータの優先順位を持つかを指定することもできます。
+RESTful APIとExperience Platformユーザーインターフェイスを使用して、新しい結合ポリシーの作成、既存のポリシーの管理、組織のデフォルトの結合ポリシーの設定をおこなうことができます。 また、データソースに関する環境設定を指定し、結合中に競合が発生した場合にどのデータの優先順位を持つかを指定することもできます。
 
-[結合ポリシーユーザーガイド](../../profile/ui/merge-policies.md)に従うことで、Adobe Experience Platform ユーザーインターフェイスを使用した結合ポリシーの操作手順を見つけることができます。
-
+結合ポリシーとExperience Platform内での役割について詳しくは、まず[結合ポリシーの概要](../../profile/merge-policies/overview.md)をお読みください。
