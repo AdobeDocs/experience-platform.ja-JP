@@ -2,13 +2,12 @@
 audience: user
 user-guide-title: Adobe Experience Platform のチュートリアル
 breadcrumb-title: Platform チュートリアル
-user-guide-description: 取り込み用のデータの準備から高度な機械学習アルゴリズムの使用まで、あらゆる作業について説明するチュートリアルに従い、すばやく簡単にプラットフォームを開始できます。
+user-guide-description: 取り込み用のデータの準備から高度な機械学習アルゴリズムの使用まで、あらゆる内容をカバーするステップバイステップのチュートリアルに従って、Platformをすばやく簡単に使い始めます。
 type: Tutorial
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 56%
+source-wordcount: '71'
+ht-degree: 60%
 
 ---
 
@@ -16,13 +15,12 @@ ht-degree: 56%
 # Adobe Experience Platform のチュートリアル {#tutorials}
 
 * [チュートリアルの概要](home.md)
-* [Experience Platform API に対する認証](https://www.adobe.com/go/platform-api-authentication-en)
+* [Experience Platform API に対する認証](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)
 * [Platform データへのアクセス](data-access.md)
 * [データガバナンスとプライバシー](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)
 * [宛先](destinations-tutorials.md)
 * [データの Platform への取得](data-ingestion.md)
-* [プロファイルと ID](configure-profile.md)
 * [スキーマと関係記述子](schemas.md)
 * [セグメントとオーディエンス](segmentation.md)
 
