@@ -3,10 +3,10 @@ audience: user
 user-guide-title: リアルタイム顧客プロファイルガイド
 user-guide-description: 顧客データを結合し、複数のチャネルをまたいで顧客インタラクションの全体像を作り出します。
 feature: プロファイル
-source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
+source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 96%
+source-wordcount: '135'
+ht-degree: 91%
 
 ---
 
@@ -15,29 +15,32 @@ ht-degree: 96%
 
 * [[!DNL Profile] の概要](home.md)
 * [プロファイルの概要（ビデオ）](video/profile-overview.md)
-* [[!DNL Profile] ガードレール](guardrails.md)
+* [[!DNL Profile] とセグメント化ガードレール](guardrails.md)
+* [[!DNL Profile] dashboard](ui/profile-dashboard.md)
 * [!DNL Profile] API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
    * [エッジ投影](api/edge-projections.md)
    * [エンティティ（[!DNL Profile] アクセス）](api/entities.md)
    * [書き出しジョブ（[!DNL Profile] 書き出し）](api/export-jobs.md)
-   * [結合ポリシー](api/merge-policies.md)
    * [プレビューサンプルのステータス（[!DNL Profile] プレビュー）](api/preview-sample-status.md)
    * [[!DNL Profile]システムジョブ（削除リクエスト）](api/profile-system-jobs.md)
-* プロファイル UI ガイド {#ui}
+* プロファイル UI {#ui}
    * [[!DNL Profile] UI ガイド](ui/user-guide.md)
-   * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
    * [[!DNL Profile] 詳細なカスタマイズ](ui/profile-customization.md)
-   * [結合ポリシー UI ガイド](ui/merge-policies.md)
-   * [結合ポリシーの作成（動画）](video/create-merge-policies.md)
-   * [結合スキーマ UI ガイド](ui/union-schema.md)
-   * [結合スキーマの概要（動画）](video/union-schemas-overview.md)
 * （アルファ）計算済み属性 {#computed-attributes}
    * [概要](computed-attributes/overview.md)
    * [Computed attributes API](computed-attributes/ca-api.md)
    * [計算属性フィールドの設定](computed-attributes/configure-api.md)
    * [サンプル式](computed-attributes/expressions.md)
+* 結合ポリシー {#merge-policies}
+   * [概要](merge-policies/overview.md)
+   * [結合ポリシーAPI](api/merge-policies.md)
+   * [結合ポリシー UI ガイド](merge-policies/ui-guide.md)
+   * [結合ポリシーの作成（動画）](video/create-merge-policies.md)
+* 結合スキーマ {#union-schemas}
+   * [結合スキーマ UI ガイド](ui/union-schema.md)
+   * [結合スキーマの概要（動画）](video/union-schemas-overview.md)
 * チュートリアル {#tutorials}
    * [ [!DNL Profile] へのデータの追加](tutorials/add-profile-data.md)
    * [ サービス [!DNL Profile] & [!DNL Identity] 用データセットの設定](tutorials/dataset-configuration.md)
