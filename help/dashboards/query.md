@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Experience Platformダッシュボードを支える未加工データセットの調査と処理
 type: Documentation
 description: クエリサービスを使用して、プロファイル、セグメント、宛先ダッシュボードを機能させる生のデータセットを調査し、処理する方法をExperience Platformで説明します。
-source-git-commit: 743367431144e9714a967b0340c755bf2120559c
+source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -29,27 +29,27 @@ Adobe Experience Platformクエリサービスは、標準のSQLを使用して�
 
 リアルタイム顧客プロファイルのアクティブな結合ポリシーごとに、データレイクで使用できるプロファイル属性データセットがあります。
 
-このデータセットの命名規則は、**プロファイル属性**&#x200B;の後に英数字の値が続きます。 例：`Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+これらのデータセットの命名規則は、**プロファイル属性**&#x200B;の後に英数字の値が続きます。 例：`Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-データセットの完全なスキーマを理解するには、Experience PlatformUIのデータセットビューアを使用して、スキーマをプレビューし、調査します。
+各データセットの完全なスキーマを理解するには、Experience PlatformUIのデータセットビューアを使用して、データセットをプレビューし、調査します。
 
 ### セグメントメタデータデータセット
 
-各組織のセグメントのデータレイクには、セグメントメタデータデータセットがあります。
+組織の各セグメントのメタデータを含むデータレイクで使用できるセグメントメタデータデータセットがあります。
 
 このデータセットの命名規則は、**プロファイルセグメント定義**&#x200B;の後に英数字の値が続きます。 例：`Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-次の画像は、セグメントメタデータデータセットのスキーマを示しています。
+データセットの完全なスキーマを理解するには、Experience PlatformUIのデータセットビューアを使用して、スキーマをプレビューし、調査します。
 
 ![](images/query/segment-metadata.png)
 
 ### 宛先メタデータデータセット
 
-アクティブ化した宛先のメタデータは、データレイクで生のデータセットとして使用できます。
+組織でアクティブ化されたすべての宛先のメタデータは、データレイクで生のデータセットとして使用できます。
 
 このデータセットの命名規則は&#x200B;**DIM_Destination**&#x200B;です。
 
-次の画像は、宛先メタデータデータセットのスキーマを示しています。
+データセットの完全なスキーマを理解するには、Experience PlatformUIのデータセットビューアを使用して、スキーマをプレビューし、調査します。
 
 ![](images/query/destinations-metadata.png)
 
@@ -102,8 +102,6 @@ Select
       group by
       segment_id
 ```
-
-### すべての宛先で宛先ごとにアクティブ化されたセグメントの数
 
 ## 次の手順
 
