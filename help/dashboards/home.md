@@ -1,22 +1,18 @@
 ---
 solution: Experience Platform
 title: Experience Platform のダッシュボードの概要
-topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform の複数のダッシュボードを調べ、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示します。
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 100%
+source-wordcount: '252'
+ht-degree: 90%
 
 ---
 
-# （ベータ版）ダッシュボードの概要  {#dashboards}
 
->[!IMPORTANT]
->
->ダッシュボード機能は現在ベータ版であり、すべてのユーザーが利用できるわけではありません。ドキュメントと機能は変更される場合があります。
+# ダッシュボードの概要 {#dashboards}
 
 Adobe Experience Platform は複数のダッシュボードを提供しており、毎日のスナップショットでキャプチャされた、組織のデータに関する重要な情報を表示できます。
 
@@ -38,4 +34,4 @@ Adobe Experience Platform は複数のダッシュボードを提供しており
 
 現在、Experience Platform 内では複数のダッシュボードを使用でき、それぞれが組織の顧客データに対して透明性を持たせます。
 
-これらのダッシュボードと使用可能な指標の詳細については、ドキュメントのナビゲーションで利用可能なダッシュボードのリストから選択してください。
+これらのダッシュボードとその指標の詳細を確認するには、ドキュメントナビゲーションで利用可能なダッシュボードのリストからダッシュボードを選択してください。
