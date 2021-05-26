@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
+source-git-commit: 91f75f5b6a8e5adb251455f65bc2b693934ef8e2
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 37%
+source-wordcount: '1070'
+ht-degree: 34%
 
 ---
 
@@ -62,6 +62,8 @@ Adobe Experience Platformは、毎日のスナップショットでキャプチ�
 | 機能 | 説明 |
 | ------- | ----------- |
 | 監視の向上（ベータ版） | バッチ宛先とストリーミング宛先の両方の情報を含む、宛先の監視機能の向上 |
+| [高速な増分ファイルエクスポート（ベータ版）](../../destinations/ui/activate-destinations.md#export-incremental-files) | 3、6、8、12時間ごとに増分ファイルを宛先に書き出す機能が追加されました。<br> <br>この機能は現在ベータ版で、一部のお客様のみご利用いただけます。ベータ版以外のお客様は、増分ファイルを1日に1回書き出すことができます。 |
+| [重複排除キーのサポート（ベータ版）](../../destinations/ui/activate-destinations.md#deduplication-keys) | ID名前空間またはプロファイル属性を重複排除キーとして設定する機能を追加しました。 重複排除キーを使用すると、同じプロファイルの複数のレコードを1つのエクスポートファイルに含める可能性を排除できます。<br> <br>この機能は現在ベータ版で、一部のお客様のみご利用いただけます。 |
 
 宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
