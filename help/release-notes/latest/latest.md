@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
+source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 31%
+source-wordcount: '978'
+ht-degree: 37%
 
 ---
 
@@ -27,6 +27,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [リアルタイム顧客プロファイル](#profile)
+- [ソース](#sources)
 
 ## ダッシュボード {#dashboards}
 
@@ -82,3 +83,15 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 | データセット重複レポート | データセット重複レポートは、アドレス可能なオーディエンスに最も貢献するデータセットを公開することで、プロファイルストアの構成を視覚的に確認できます。 このレポートは、プロファイルデータに関するインサイトを提供するだけでなく、特定のデータの有効期限を設定するなど、ライセンスの使用を最適化する操作を実行するのに役立ちます。 詳しくは、[データセット重複レポート](../../profile/tutorials/dataset-overlap-report.md)の生成に関するチュートリアルに従ってください。 |
 
 [!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
+
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+
+Experience Platform には、様々なデータプロバイダーへのソース接続を簡単に設定できる RESTful API とインタラクティブ UI が用意されています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| 圧縮ファイル取り込みのUIのサポート | UIのクラウドストレージソースを使用して、圧縮されたJSONまたは区切られたファイルをプレビューおよび取り込めるようになりました。 詳しくは、UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)でのクラウドストレージソース接続用のデータフローの設定に関するチュートリアル([)を参照してください。 |
+
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
