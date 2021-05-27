@@ -1,26 +1,25 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM;ExperienceEvent；フィールド；スキーマ;スキーマ;スキーマデザイン；フィールドグループ；フィールドグループ；エンドユーザID；エンドユーザ；ID;
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；XDM;ExperienceEvent；フィールド；スキーマ；スキーマ；スキーマデザイン；フィールドグループ；フィールドグループ；enduserids;end-user;end user;ids;
 solution: Experience Platform
 title: エンドユーザーID詳細スキーマフィールドグループ
 topic-legacy: overview
-description: このドキュメントでは、「End User ID Details」スキーマフィールドグループの概要を説明します。
+description: このドキュメントでは、エンドユーザーID詳細スキーマフィールドグループの概要を説明します。
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 5%
+source-wordcount: '214'
+ht-degree: 7%
 
 ---
 
 
-# [!UICONTROL End User ID ] Detailsschemaフィールドグループ
+# [!UICONTROL エンドユーザーID詳細スキ] ーマフィールドグループ
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL エンドユーザーID] の詳細： [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md)クラスの標準スキーマフィールドグループです。複数のAdobeアプリケーションにわたる個人のID情報の説明に使用されます。フィールドグループはルートレベルの`endUserIDs`オブジェクトを提供します。このオブジェクト自体には読み取り専用の`_experience`フィールドが含まれ、その値はデータの取り込み時に自動的に更新されます。
+[!UICONTROL エンドAdobeID ] Detailsは、クラスの標準スキーマフィールドグループで [[!DNL XDM ExperienceEvent] す](../../classes/individual-profile.md)。複数のスキーマアプリケーションをまたいで個人のID情報を記述するために使用されます。フィールドグループにはルートレベルの`endUserIDs`オブジェクトが用意されています。このオブジェクト自体には読み取り専用の`_experience`フィールドが含まれ、その値はデータの取り込み時に自動的に更新されます。
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
@@ -31,11 +30,13 @@ ht-degree: 5%
 | `acid` | [ID](../../data-types/identity.md) | Adobe CampaignのエンドユーザーID。 |
 | `adcloud` | [ID](../../data-types/identity.md) | Adobe Advertising CloudのエンドユーザーID。 |
 | `emailid` | [ID](../../data-types/identity.md) | 電子メールアドレスID。 |
-| `mcid` | [ID](../../data-types/identity.md) | Adobe Marketing CloudID。 |
+| `mcid` | [ID](../../data-types/identity.md) | Adobe Marketing Cloud ID。 |
 | `phonenumberid` | [ID](../../data-types/identity.md) | 電話番号ID。 |
 | `tntid` | [ID](../../data-types/identity.md) | Adobe TargetのエンドユーザーID。 |
 
-フィールドグループの詳細については、public XDM repositoryを参照してください。
+{style=&quot;table-layout:auto&quot;}
+
+フィールドグループについて詳しくは、パブリックXDMリポジトリを参照してください。
 
 * [入力済みの例](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.example.1.json)
 * [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.schema.json)
