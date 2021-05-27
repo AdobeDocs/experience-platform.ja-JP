@@ -5,10 +5,10 @@ title: Data Lake でのプライバシーリクエストの処理
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 100%
+source-wordcount: '1351'
+ht-degree: 95%
 
 ---
 
@@ -17,6 +17,12 @@ ht-degree: 100%
 Adobe Experience Platform [!DNL Privacy Service] は、法的および組織のプライバシーに関する規則に従って、個人データに対するアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。
 
 このドキュメントでは、[!DNL Data Lake] に保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
+
+>[!NOTE]
+>
+>このガイドでは、Experience Platformのデータレイクに対してプライバシーリクエストをおこなう方法についてのみ説明します。 リアルタイム顧客プロファイルデータストアのプライバシーリクエストもおこなう予定がある場合は、このチュートリアルに加えて、プロファイル](../profile/privacy.md)のプライバシーリクエスト処理に関するガイドを参照してください。[
+>
+>他のAdobe Experience Cloudアプリケーションにプライバシーリクエストを送信する手順については、[Privacy Serviceのドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
 ## はじめに
 
