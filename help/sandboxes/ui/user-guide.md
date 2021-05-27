@@ -5,10 +5,10 @@ title: サンドボックスUIガイド
 topic-legacy: user guide
 description: このドキュメントでは、Adobe Experience Platform ユーザーインターフェイスのサンドボックスに関連する様々な操作を実行する手順について説明します。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 8c1c7b6b01b55bd15c492b0f62d280c1e9a98070
+source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 23%
+source-wordcount: '833'
+ht-degree: 20%
 
 ---
 
@@ -84,6 +84,28 @@ Experience Platformでのサンドボックスの使用方法の概要につい�
 
 ![reset-confirm](../images/ui/reset-confirm.png)
 
+しばらくすると、リセットの成功を確認する確認ボックスが画面の下部に表示されます。
+
+![成功](../images/ui/success.png)
+
+### エラーメッセージ
+
+CDAデータを含むデフォルトの実稼動サンドボックスはリセットできず、次のエラーが返されます。
+
+![cda](../images/ui/cda.png)
+
+PBDデータを含むデフォルトの実稼動サンドボックスもリセットできず、次のエラーが返されます。
+
+![pbd](../images/ui/pbd.png)
+
+CDAとPBDの両方のデータを含むデフォルトの実稼動サンドボックスもリセットできず、次のエラーが返されます。
+
+![both](../images/ui/both.png)
+
+Adobe Audience ManagerまたはAudience Core Serviceとの双方向セグメント共有に使用される実稼動用サンドボックスもリセットできず、次のエラーが返されます。
+
+![seg](../images/ui/seg.png)
+
 ## サンドボックスの削除
 
 >[!IMPORTANT]
@@ -103,6 +125,10 @@ Experience Platformでのサンドボックスの使用方法の概要につい�
 最後の確認ウィンドウで、ダイアログボックスにサンドボックスの名前を入力し、「**[!UICONTROL 続行]**」を選択します。
 
 ![delete-confirm](../images/ui/delete-confirm.png)
+
+Adobe Audience ManagerまたはAudience Core Serviceとの双方向セグメント共有に使用される実稼動用サンドボックスは削除できず、次のエラーが返されます。
+
+![seg](../images/ui/seg.png)
 
 ## 次の手順
 
