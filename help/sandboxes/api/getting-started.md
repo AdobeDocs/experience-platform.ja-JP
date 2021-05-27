@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；サンドボックス開発者ガイド
+keywords: Experience Platform；ホーム；人気のあるトピック；サンドボックス開発者ガイド
 solution: Experience Platform
-title: Sandbox APIガイド
+title: サンドボックスAPIガイド
 topic-legacy: developer guide
-description: Sandbox APIを使用すると、開発者はAdobe Experience Platformのサンドボックスをプログラムで管理できます。 このガイドに従って、APIを使用した主な操作の実行方法を学習します。
+description: サンドボックスAPIを使用すると、開発者はAdobe Experience Platformのサンドボックスをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 88%
+source-wordcount: '375'
+ht-degree: 87%
 
 ---
 
-# Sandbox APIガイド
+# サンドボックスAPIガイド
 
 Adobe Experience Platform のサンドボックスは、独立した開発環境を提供し、実稼働環境に影響を与えることなく、機能のテスト、実験の実行、カスタム設定をおこなうことができます。
 
@@ -21,7 +20,7 @@ Adobe Experience Platform のサンドボックスは、独立した開発環境
 
 ## サンドボックス API - はじめに
 
-IMS 組織のサンドボックスを管理するには「サンドボックス管理」権限が必要です。アクセス権限のないユーザーは、[現在のユーザーのアクティブなサンドボックスを一覧表示するための ](./list-active-sandboxes.md) エンドポイントのみを使用できます。Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
+IMS 組織のサンドボックスを管理するには「サンドボックス管理」権限が必要です。アクセス権限のないユーザーは、[使用可能なサンドボックスエンドポイント](./available.md)を使用して、現在のユーザーのアクティブなサンドボックスを一覧表示するだけです。 Experience Platform のサンドボックス権限を割り当てる方法について詳しくは、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
 
 ### API 呼び出し例の読み取り
 
@@ -29,10 +28,10 @@ IMS 組織のサンドボックスを管理するには「サンドボックス�
 
 ### 必要なヘッダーの値の収集
 
-このガイドでは、Platform API を正しく呼び出すために[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了している必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+このガイドでは、Platform API を正しく呼び出すために[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了している必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
+* x-api-key： `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
 認証ヘッダーに加えて、すべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
