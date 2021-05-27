@@ -4,11 +4,10 @@ user-guide-title: Adobe Experience Platform ヘルプのサンドボックス
 breadcrumb-title: サンドボックスガイド
 user-guide-description: 開発、テスト、およびアプリケーションのデプロイメント用に、Platform インスタンスを仮想環境へとパーティション化します。
 feature: データ管理
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 96%
+source-wordcount: '66'
+ht-degree: 90%
 
 ---
 
@@ -18,17 +17,14 @@ ht-degree: 96%
 * [サンドボックスの概要](home.md)
 * サンドボックス UI {#ui}
    * [サンドボックス UI の概要](ui/overview.md)
-   * [サンドボックスユーザガイド](ui/user-guide.md)
+   * [サンドボックスユーザーガイド](ui/user-guide.md)
 * サンドボックス API {#api}
+   * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
-   * [サポートされるサンドボックスタイプを一覧表示](api/list-sandbox-types.md)
-   * [すべてのサンドボックスを一覧表示](api/list-all-sandboxes.md)
-   * [現在のユーザーのアクティブなサンドボックスを一覧表示](api/list-active-sandboxes.md)
-   * [サンドボックスの検索](api/look-up-sandbox.md)
-   * [サンドボックスの作成](api/create-sandbox.md)
-   * [サンドボックスの更新](api/update-sandbox.md)
-   * [サンドボックスのリセット](api/reset-sandbox.md)
-   * [サンドボックスの削除](api/delete-sandbox.md)
+   * [使用可能なサンドボックス](api/available.md)
+   * [サンドボックス管理](api/sandboxes.md)
+   * [サンドボックスのタイプ](api/types.md)
+   * [付録](api/appendix.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
-* [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
