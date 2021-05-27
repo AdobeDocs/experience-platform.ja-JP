@@ -5,9 +5,9 @@ title: ID名前空間の概要
 topic-legacy: overview
 description: ID 名前空間は、ID が関連するコンテキストのインジケーターとして機能する ID サービスのコンポーネントです。例えば、「name@email.com」の値を電子メールアドレスとして、または「443522」を数値CRM IDとして区別します。
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
+source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1638'
 ht-degree: 18%
 
 ---
@@ -73,6 +73,8 @@ ID 名前空間を使用するには、関連する様々な Adobe Experience Pl
 | TNTID | Adobe Targetを表す名前空間。 詳しくは、[Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en)に関する次のドキュメントを参照してください。 |
 | Windows AID | Windows広告IDを表す名前空間。 詳しくは、[Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041)の次のドキュメントを参照してください。 |
 
+### ID名前空間の表示
+
 UIでID名前空間を表示するには、左側のナビゲーションで「**[!UICONTROL ID]**」を選択し、「**[!UICONTROL 参照]**」を選択します。
 
 ![参照](./images/browse.png)
@@ -89,7 +91,7 @@ Platformは、統合のための名前空間も提供します。 これらの�
 
 ![select-namespace](./images/select-namespace.png)
 
-## カスタム名前空間{#manage-namespaces}の管理
+## カスタム名前空間{#manage-namespaces}を管理します
 
 組織のデータや使用事例によっては、カスタム名前空間が必要な場合があります。カスタム名前空間は、[[!DNL Identity Service]](./api/create-custom-namespace.md) APIを使用して、またはUIを使用して作成できます。
 
