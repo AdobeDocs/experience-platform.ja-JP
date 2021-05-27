@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；サンプルデータ；rpc;
+keywords: Experience Platform；ホーム；人気のあるトピック；api;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；サンプルデータ；サンプルデータ；rpc;
 solution: Experience Platform
 title: サンプルデータAPIエンドポイント
 description: スキーマレジストリAPIの/sampledataエンドポイントを使用すると、既存のXDMスキーマの構造にマッピングされたサンプルデータを生成できます。
 topic-legacy: developer guide
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 5%
+source-wordcount: '322'
+ht-degree: 9%
 
 ---
 
 # サンプルデータエンドポイント
 
-データをAdobe Experience Platformに取り込むには、データの形式と構造が既存のExperience Data Model(XDM)スキーマに準拠している必要があります。 特定のデータセットのスキーマの複雑さに応じて、取り込み時にデータセットが予測するデータの正確な形状を判断するのは困難な場合があります。
+データをAdobe Experience Platformに取り込むには、データの形式と構造が既存のエクスペリエンスデータモデル(XDM)スキーマに準拠している必要があります。 特定のデータセットのスキーマが複雑な場合は、取得時にデータセットが予測するデータの正確な形状を判断するのが困難な場合があります。
 
-[!DNL Schema Registry] APIの`/sampledata`エンドポイントを使用して、以前に作成したスキーマのサンプルインジェストオブジェクトを生成できます。
+[!DNL Schema Registry] APIの`/sampledata`エンドポイントを使用して、以前に作成した任意のスキーマのサンプル取得オブジェクトを生成できます。
 
 ## はじめに
 
-このガイドで使用されるエンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)の一部です。 先に進む前に、[はじめに](./getting-started.md)を読んで、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しを読むためのガイド、Experience PlatformAPIの呼び出しを正常に行うために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
-サンプルデータエンドポイントは、[!DNL Schema Registry]でサポートされるリモートプロシージャコール(RPC)の一部です。 [!DNL Schema Registry] APIの他のエンドポイントとは異なり、RPCエンドポイントでは、`Accept`や`Content-Type`のような追加のヘッダーは必要ありません。また、`CONTAINER_ID`を使用しません。 代わりに、以下のAPI呼び出しで示すように、`/rpc`名前空間を使用する必要があります。
+サンプルデータエンドポイントは、[!DNL Schema Registry]でサポートされるリモートプロシージャコール(RPC)の一部です。 [!DNL Schema Registry] APIの他のエンドポイントとは異なり、RPCエンドポイントは、`Accept`や`Content-Type`のような追加のヘッダーを必要とせず、`CONTAINER_ID`を使用しません。 代わりに、以下のAPI呼び出しで示すように、名前空間`/rpc`を使用する必要があります。
 
 ## スキーマのサンプルデータの取得
 
-エンドポイントへのGET要求のパスでスキーマのIDを指定すると、スキーマライブラリ内の任意のスキーマのサンプルデータを取得できます。
+エンドポイントへのGETリクエストのパスでスキーマのIDを指定することで、スキーマライブラリ内の任意のスキーマのサンプルデータを取得できます。
 
 **API 形式**
 
@@ -39,9 +38,11 @@ GET /rpc/sampledata/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | サンプルデータを生成するスキーマの`meta:altId`またはURLエンコードされた`$id`。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 **リクエスト**
 
-次のリクエストは、忠誠度メンバースキーマのサンプルデータを生成します。
+次のリクエストは、「ロイヤルティメンバー」スキーマのサンプルデータを生成します。
 
 ```shell
 curl -X GET \
@@ -52,9 +53,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した応答は、指定したスキーマのサンプルデータオブジェクトを返します。
+リクエストが成功した場合は、指定したスキーマのサンプルデータオブジェクトが返されます。
 
 ```json
 {
