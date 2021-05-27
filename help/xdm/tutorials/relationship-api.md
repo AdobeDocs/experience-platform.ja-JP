@@ -1,49 +1,48 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDM system；エクスペリエンスデータモデル；エクスペリエンスデータモデル；Experience Data Model；データモデル；スキーマレジストリ；スキーマ;スキーマ;スキーマ;スキーマ;Relationship;Relationship;Identity;Reference;
+keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマ；スキーマ；スキーマ；関係；関係記述子；参照ID;
 solution: Experience Platform
 title: スキーマレジストリAPIを使用した2つのスキーマ間の関係の定義
 description: このドキュメントでは、スキーマレジストリ API を使用して、組織が定義した 2 つのスキーマ間の 1 対 1 の関係を定義するためのチュートリアルを提供します。
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 35%
+source-wordcount: '1369'
+ht-degree: 38%
 
 ---
 
 # [!DNL Schema Registry] APIを使用して2つのスキーマ間の関係を定義する
 
-様々なチャネルでの顧客とブランドとの関係を理解する能力は、Adobe Experience Platform の重要な部分です。[!DNL Experience Data Model] (XDM)スキーマの構造内でこれらの関係を定義すると、顧客データに対する複雑な洞察を得ることができます。
+様々なチャネルでの顧客とブランドとの関係を理解する能力は、Adobe Experience Platform の重要な部分です。[!DNL Experience Data Model](XDM)スキーマの構造内でこれらの関係を定義すると、顧客データに関する複雑なインサイトを得ることができます。
 
-スキーマの関係は、和集合スキーマと[!DNL Real-time Customer Profile]を使用して推定できますが、これは同じクラスを共有するスキーマにのみ当てはまります。 異なるクラスに属する2つのスキーマ間の関係を確立するには、目的のスキーマのIDを参照するソーススキーマに、専用の関係フィールドを追加する必要があります。
+和集合スキーマと[!DNL Real-time Customer Profile]を使用してスキーマの関係を推論することはできますが、これは同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する2つのスキーマ間の関係を確立するには、宛先スキーマのIDを参照するソーススキーマに、専用の関係フィールドを追加する必要があります。
 
-このドキュメントでは、[[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)を使用して、組織で定義されている2つのスキーマ間の1対1の関係を定義するためのチュートリアルを提供します。
+このドキュメントでは、[[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)を使用して、組織で定義された2つのスキーマ間の1対1の関係を定義するためのチュートリアルを提供します。
 
 ## はじめに
 
-このチュートリアルでは、[!DNL Experience Data Model] (XDM)と[!DNL XDM System]についての十分な理解が必要です。 このチュートリアルを始める前に、次のドキュメントを確認してください。
+このチュートリアルでは、[!DNL Experience Data Model](XDM)と[!DNL XDM System]に関する十分な知識が必要です。 このチュートリアルを始める前に、次のドキュメントを確認してください。
 
-* [Experience PlatformのXDMシステム](../home.md):XDMとその実装の概要を、で説明し [!DNL Experience Platform]ます。
+* [Experience PlatformのXDMシステム](../home.md):XDMと、での実装の概要で [!DNL Experience Platform]す。
    * [スキーマ構成の基本](../schema/composition.md)：XDM スキーマの構築ブロックの紹介。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-このチュートリアルを開始する前に、[開発者ガイド](../api/getting-started.md)を参照し、[!DNL Schema Registry] APIを正しく呼び出すために知っておく必要がある重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（ ヘッダーとその可能な値に特に注意）が含まれます。[!DNL Accept]
+このチュートリアルを開始する前に、『[開発者ガイド](../api/getting-started.md)』を参照し、[!DNL Schema Registry] APIを正しく呼び出すために知っておく必要がある重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（ ヘッダーとその可能な値に特に注意）が含まれます。[!DNL Accept]
 
 ## ソースと宛先スキーマの定義 {#define-schemas}
 
-この関係で定義される 2 つのスキーマが既に作成されていると想定されます。このチュートリアルでは、組織の現在の忠誠度プログラム(「[!DNL Loyalty Members]」スキーマで定義)のメンバーと、お気に入りのホテル(「[!DNL Hotels]」スキーマで定義)との間に関係を作成します。
+この関係で定義される 2 つのスキーマが既に作成されていると想定されます。このチュートリアルでは、組織の現在のロイヤルティプログラム（「[!DNL Loyalty Members]」スキーマで定義）のメンバーと、お気に入りのホテル（「[!DNL Hotels]」スキーマで定義）との間に関係を作成します。
 
-スキーマ関係は、**宛先スキーマ**&#x200B;内の別のフィールドを参照するフィールドを有する&#x200B;**ソーススキーマ**&#x200B;で表されます。次の手順では、&quot;[!DNL Loyalty Members]&quot;がソーススキーマ、&quot;[!DNL Hotels]&quot;がターゲットスキーマとして機能します。
+スキーマ関係は、**宛先スキーマ**&#x200B;内の別のフィールドを参照するフィールドを有する&#x200B;**ソーススキーマ**&#x200B;で表されます。次の手順では、「[!DNL Loyalty Members]」がソーススキーマで、「[!DNL Hotels]」が宛先スキーマとして機能します。
 
 >[!IMPORTANT]
 >
->関係を確立するには、両方のスキーマがプライマリIDを定義し、[!DNL Real-time Customer Profile]に対して有効にしている必要があります。 スキーマの設定方法に関するガイダンスが必要な場合は、スキーマの作成チュートリアルの[プロファイルでのスキーマの使用を有効にする方法の節を参照してください。](./create-schema-api.md#profile)
+>関係を確立するには、両方のスキーマでプライマリIDが定義され、[!DNL Real-time Customer Profile]に対して有効になっている必要があります。 スキーマを適切に設定する方法に関するガイダンスが必要な場合は、『スキーマ作成チュートリアル』の「プロファイル](./create-schema-api.md#profile)でのスキーマの使用」に関する節を参照してください。[
 
-2 つのスキーマ間の関係を定義するには、まず両方のスキーマの `$id` 値を取得する必要があります。スキーマの表示名(`title`)がわかっている場合は、[!DNL Schema Registry] APIの`/tenant/schemas`エンドポイントにGETリクエストを行うことで、`$id`の値を見つけることができます。
+2 つのスキーマ間の関係を定義するには、まず両方のスキーマの `$id` 値を取得する必要があります。スキーマの表示名(`title`)がわかっている場合は、[!DNL Schema Registry] APIの`/tenant/schemas`エンドポイントにGETリクエストを送信して、`$id`の値を見つけることができます。
 
 **API 形式**
 
@@ -65,7 +64,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->[!DNL Accept]ヘッダー`application/vnd.adobe.xed-id+json`は、結果のスキーマのタイトル、ID、バージョンのみを返します。
+>[!DNL Accept]ヘッダー`application/vnd.adobe.xed-id+json`は、結果として得られるスキーマのタイトル、IDおよびバージョンのみを返します。
 
 **応答** 
 
@@ -111,13 +110,13 @@ curl -X GET \
 
 ## ソーススキーマの参照フィールドの定義
 
-[!DNL Schema Registry]内では、リレーショナル・データベース・テーブルの外部キーと同様に関係記述子が機能します。ソーススキーマ内のフィールドは、宛先スキーマのプライマリIDフィールドへの参照として機能します。 ソーススキーマにこの目的のフィールドがない場合は、新しいフィールドを含むスキーマフィールドグループを作成し、スキーマに追加する必要があります。 この新しいフィールドには、`type`値&quot;[!DNL string]&quot;が必要です。
+[!DNL Schema Registry]内では、リレーショナルデータベーステーブルの外部キーと同様に関係記述子が機能します。ソーススキーマ内のフィールドは、宛先スキーマのプライマリidフィールドへの参照として機能します。 ソーススキーマにこの目的のフィールドがない場合は、新しいフィールドを含むスキーマフィールドグループを作成し、スキーマに追加する必要があります。 この新しいフィールドの値は、「[!DNL string]」にする必要があります。`type`
 
 >[!IMPORTANT]
 >
->宛先スキーマとは異なり、ソーススキーマは、その主IDを参照フィールドとして使用できません。
+>宛先スキーマとは異なり、ソーススキーマはプライマリIDを参照フィールドとして使用できません。
 
-このチュートリアルでは、宛先スキーマ「[!DNL Hotels]」には、スキーマのプライマリIDとして機能する`hotelId`フィールドが含まれているので、参照フィールドとしても機能します。 ただし、ソーススキーマ&quot;[!DNL Loyalty Members]&quot;には、参照として使用する専用のフィールドがないため、スキーマに新しいフィールドを追加する新しいフィールドグループを指定する必要があります。`favoriteHotel`.
+このチュートリアルでは、宛先スキーマ「[!DNL Hotels]」には、スキーマのプライマリIDとして機能する`hotelId`フィールドが含まれているので、参照フィールドとしても機能します。 ただし、ソーススキーマ「[!DNL Loyalty Members]」には参照として使用する専用のフィールドがないので、スキーマに新しいフィールドを追加する新しいフィールドグループを指定する必要があります。`favoriteHotel`.
 
 >[!NOTE]
 >
@@ -125,7 +124,7 @@ curl -X GET \
 
 ### 新しいフィールドグループを作成する
 
-スキーマに新しいフィールドを追加するには、まずフィールドグループで定義する必要があります。 `/tenant/fieldgroups`エンドポイントにPOSTリクエストを行うことで、新しいフィールドグループを作成できます。
+スキーマに新しいフィールドを追加するには、まずフィールドグループで定義する必要があります。 `/tenant/fieldgroups`エンドポイントにPOSTリクエストを送信して、新しいフィールドグループを作成できます。
 
 **API 形式**
 
@@ -135,7 +134,7 @@ POST /tenant/fieldgroups
 
 **リクエスト**
 
-次のリクエストは、追加先の任意のスキーマの`_{TENANT_ID}`名前空間の下に`favoriteHotel`フィールドを追加する新しいフィールドグループを作成します。
+次のリクエストでは、新しいフィールドグループを作成し、追加先のスキーマの`_{TENANT_ID}`名前空間の下に`favoriteHotel`フィールドを追加します。
 
 ```shell
 curl -X POST\
@@ -174,9 +173,9 @@ curl -X POST\
       }'
 ```
 
-**応答**
+**応答** 
 
-正常に完了すると、新しく作成されたフィールドグループの詳細が返されます。
+正常な応答は、新しく作成されたフィールドグループの詳細を返します。
 
 ```json
 {
@@ -229,13 +228,15 @@ curl -X POST\
 
 | プロパティ | 説明 |
 | --- | --- |
-| `$id` | 読み取り専用で、システムによって生成された新しいフィールドグループの一意の識別子。 URI の形式を取ります。 |
+| `$id` | 新しいフィールドグループの一意の識別子（システムで生成された読み取り専用）。 URI の形式を取ります。 |
 
-フィールドグループをソーススキーマに追加する次の手順で使用する、フィールドグループの`$id` URIを記録します。
+{style=&quot;table-layout:auto&quot;}
 
-### フィ追加ールドグループを元のスキーマに変換します。
+次の手順でフィールドグループをソーススキーマに追加する際に使用する、フィールドグループの`$id` URIを記録します。
 
-フィールドグループを作成したら、`/tenant/schemas/{SCHEMA_ID}`エンドポイントにPATCHリクエストを行って、ソーススキーマに追加できます。
+### フィールドグループをソーススキーマに追加する
+
+フィールドグループを作成したら、`/tenant/schemas/{SCHEMA_ID}`エンドポイントにPATCHリクエストを送信して、そのフィールドグループをソーススキーマに追加できます。
 
 **API 形式**
 
@@ -247,9 +248,11 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | URL エンコードされた `$id` URI またはソーススキーマの `meta:altId`。 |
 
+{style=&quot;table-layout:auto&quot;}
+
 **リクエスト**
 
-次のリクエストは、「[!DNL Favorite Hotel]」フィールドグループを「[!DNL Loyalty Members]」スキーマに追加します。
+次のリクエストでは、「[!DNL Favorite Hotel]」フィールドグループを「[!DNL Loyalty Members]」スキーマに追加します。
 
 ```shell
 curl -X PATCH \
@@ -276,9 +279,11 @@ curl -X PATCH \
 | `path` | 新しいリソースを追加するスキーマフィールドへのパス。フィールドグループをスキーマに追加する場合、値は「/allOf/ — 」にする必要があります。 |
 | `value.$ref` | 追加するフィールドグループの`$id`。 |
 
-**応答**
+{style=&quot;table-layout:auto&quot;}
 
-正常に応答すると、更新されたスキーマの詳細が返されます。この内容には、追加されたフィールドグループの`$ref`値が`allOf`配列の下に含まれます。
+**応答** 
+
+正常な応答は、更新されたスキーマの詳細を返します。この詳細には、追加されたフィールドグループの`$ref`値が`allOf`配列に含まれます。
 
 ```json
 {
@@ -339,7 +344,7 @@ curl -X PATCH \
 
 ## 参照 ID 記述子の作成 {#reference-identity}
 
-スキーマフィールドは、関係内の他の要素からの参照として使用される場合、参照 ID 記述子を適用する必要があります。&quot;[!DNL Loyalty Members]&quot;の`favoriteHotel`フィールドは&quot;[!DNL Hotels]&quot;の`hotelId`フィールドを参照するので、`hotelId`に参照ID記述子を指定する必要があります。
+スキーマフィールドは、関係内の他の要素からの参照として使用される場合、参照 ID 記述子を適用する必要があります。「[!DNL Loyalty Members]」の`favoriteHotel`フィールドは「[!DNL Hotels]」の`hotelId`フィールドを参照するので、`hotelId`には参照ID記述子を指定する必要があります。
 
 `/tenant/descriptors` エンドポイントに対して POST リクエストをおこなって、宛先スキーマの参照記述子を作成します。
 
@@ -351,7 +356,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストは、宛先スキーマー&quot;[!DNL Hotels]&quot;に`hotelId`フィールドの参照記述子を作成します。
+次のリクエストは、宛先スキーマ「[!DNL Hotels]」の`hotelId`フィールドの参照記述子を作成します。
 
 ```shell
 curl -X POST \
@@ -372,11 +377,13 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --- | --- |
-| `@type` | 定義する記述子のタイプ。参照記述子の場合、値は&quot;xdm:descriptorReferenceIdentity&quot;でなければなりません。 |
+| `@type` | 定義する記述子のタイプ。参照記述子の場合、値は「xdm:descriptorReferenceIdentity」である必要があります。 |
 | `xdm:sourceSchema` | 宛先スキーマの `$id` URL。 |
 | `xdm:sourceVersion` | 宛先スキーマのバージョン番号。 |
 | `sourceProperty` | 宛先スキーマのプライマリ ID フィールドへのパス。 |
-| `xdm:identityNamespace` | 参照フィールドの ID 名前空間。この名前空間は、フィールドをスキーマのプライマリIDとして定義する場合と同じにする必要があります。 詳しくは、「[ID 名前空間の概要](../../identity-service/home.md)」を参照してください。 |
+| `xdm:identityNamespace` | 参照フィールドの ID 名前空間。これは、フィールドをスキーマのプライマリIDとして定義する際に使用する名前空間と同じにする必要があります。 詳しくは、「[ID 名前空間の概要](../../identity-service/home.md)」を参照してください。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 **応答** 
 
@@ -396,7 +403,7 @@ curl -X POST \
 
 ## 関係記述子の作成 {#create-descriptor}
 
-関係記述子は、ソース記述子と宛先スキーマとの間に 1 対 1 の関係を確立します。宛先スキーマの参照記述子を定義すると、`/tenant/descriptors`エンドポイントにPOSTリクエストを作成して、新しい関係記述子を作成できます。
+関係記述子は、ソース記述子と宛先スキーマとの間に 1 対 1 の関係を確立します。宛先スキーマの参照記述子を定義したら、`/tenant/descriptors`エンドポイントにPOSTリクエストを作成して、新しい関係記述子を作成できます。
 
 **API 形式**
 
@@ -406,7 +413,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストは、新しい関係記述子を作成します。この際、ソーススキーマとして「[!DNL Loyalty Members]」を、宛先スキーマとして「[!DNL Legacy Loyalty Members]」を指定します。
+次のリクエストは、ソーススキーマが「[!DNL Loyalty Members]」、宛先スキーマが「[!DNL Legacy Loyalty Members]」の新しい関係記述子を作成します。
 
 ```shell
 curl -X POST \
@@ -429,13 +436,15 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --- | --- |
-| `@type` | 作成する記述子のタイプ。関係記述子の`@type`値は&quot;xdm:descriptorOneToOne&quot;です。 |
+| `@type` | 作成する記述子のタイプ。関係記述子の`@type`値は「xdm:descriptorOneToOne」です。 |
 | `xdm:sourceSchema` | ソーススキーマの `$id` URL。 |
 | `xdm:sourceVersion` | ソーススキーマのバージョン番号。 |
-| `xdm:sourceProperty` | ソーススキーマの参照フィールドへのパス。 |
+| `xdm:sourceProperty` | ソーススキーマ内の参照フィールドへのパス。 |
 | `xdm:destinationSchema` | 宛先スキーマの `$id` URL。 |
 | `xdm:destinationVersion` | 宛先スキーマのバージョン番号。 |
-| `xdm:destinationProperty` | コピー先スキーマの参照フィールドへのパス。 |
+| `xdm:destinationProperty` | 宛先スキーマ内の参照フィールドへのパス。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### 応答
 
@@ -457,4 +466,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルでは、2 つのスキーマ間に 1 対 1 の関係を作成しました。[!DNL Schema Registry] APIを使用した記述子の操作について詳しくは、[スキーマレジストリ開発者ガイド](../api/descriptors.md)を参照してください。 UI でスキーマの関係を定義する手順については、[スキーマエディタを使用したスキーマの関係の定義](relationship-ui.md)に関するチュートリアルを参照してください。
+このチュートリアルでは、2 つのスキーマ間に 1 対 1 の関係を作成しました。[!DNL Schema Registry] APIを使用した記述子の操作について詳しくは、『[スキーマレジストリ開発者ガイド](../api/descriptors.md)』を参照してください。 UI でスキーマの関係を定義する手順については、[スキーマエディタを使用したスキーマの関係の定義](relationship-ui.md)に関するチュートリアルを参照してください。
