@@ -1,74 +1,60 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Google PubSub;google pubsub
 solution: Experience Platform
-title: Flow Service APIを使用したGoogle PubSubソース接続の作成
+title: フローサービスAPIを使用したGoogle PubSubソース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Flow Service APIを使用して、Adobe Experience PlatformをGoogle PubSubアカウントに接続する方法を説明します。
+description: フローサービスAPIを使用してAdobe Experience PlatformをGoogle PubSubアカウントに接続する方法を説明します。
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f13afbd70db18e5faa1a101300f3dc7ec944baa3
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 32%
+source-wordcount: '744'
+ht-degree: 9%
 
 ---
 
-# Flow Service APIを使用した[!DNL Google PubSub]ソース接続の作成
+# フローサービスAPIを使用した[!DNL Google PubSub]ソース接続の作成
 
 >[!NOTE]
 >
->[!DNL Google PubSub]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Google PubSub]コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ソースの概要](../../../../home.md#terms-and-conditions)」を参照してください。
 
-このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して、[!DNL Google PubSub]（以下「[!DNL PubSub]」と呼ばれる）をAdobe Experience Platformに接続する手順を順を追って説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Google PubSub]（以下「[!DNL PubSub]」と呼びます）をExperience Platformに接続する手順について説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込むことができ、Platform Servicesを使用して、データの構造化、ラベル付け、および入力データの拡張を行うことができます。
+* [ソース](../../../../home.md):Experience Platformを使用すると、様々なソースからデータを取り込みながら、Platformサービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Flow Service] APIを使用して[!DNL PubSub]ソース接続を正しく作成するために知っておく必要がある追加情報を紹介します。
+以下の節では、[!DNL Flow Service] APIを使用して[!DNL PubSub]をPlatformに正しく接続するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
 [!DNL Flow Service]が[!DNL PubSub]に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| Credential | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `projectId` | [!DNL PubSub]の認証に必要なプロジェクトID。 |
-| `credentials` | [!DNL PubSub]の認証に必要な秘密鍵またはキーです。 |
+| `credentials` | [!DNL PubSub]の認証に必要な資格情報またはキー。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソースターゲット接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL PubSub]接続仕様IDは次のとおりです。`70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-これらの値について詳しくは、次の[PubSub authentication](https://cloud.google.com/pubsub/docs/authentication)ドキュメントを参照してください。 サービスアカウントベースの認証を使用している場合は、資格情報の生成方法に関する手順について、次の[PubSubガイド](https://cloud.google.com/docs/authentication/production#create_service_account)を参照してください。
+これらの値について詳しくは、この[[!DNL PubSub] 認証](https://cloud.google.com/pubsub/docs/authentication)ドキュメントを参照してください。 サービスアカウントベースの認証を使用するには、この[[!DNL PubSub] サービスアカウントの作成に関するガイド](https://cloud.google.com/docs/authentication/production#create_service_account)を参照して、資格情報の生成手順を確認してください。
 
 >[!TIP]
 >
->サービスアカウントベースの認証を使用している場合は、秘密鍵証明書をコピーして貼り付ける際に、サービスアカウントへの十分なユーザーアクセス権限を付与済みで、JSONに余分な空白がないことを確認してください。
+>サービスアカウントベースの認証を使用している場合、資格情報をコピー&amp;ペーストする際に、サービスアカウントへの十分なユーザーアクセス権が付与され、JSONに余分な空白がないことを確認します。
 
-### API 呼び出し例の読み取り
+### Platform APIの使用
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+Platform APIを正常に呼び出す方法について詳しくは、[Platform APIの使用の手引き](../../../../../landing/api-guide.md)を参照してください。
 
-### 必須ヘッダーの値の収集
+## ベース接続を作成する
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+ソース接続を作成する最初の手順は、[!DNL PubSub]ソースを認証し、ベース接続IDを生成することです。 ベース接続IDを使用すると、ソース内からファイルを参照およびナビゲートし、取り込む特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Flow Service]に属するリソースを含む、Experience Platform内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 Platform API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
-
-* `Content-Type: application/json`
-
-## 接続の作成
-
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のデータフローの作成に使用できるため、[!DNL PubSub]アカウントごとに必要な接続は1つだけです。
+ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL PubSub]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
 
 **API 形式**
 
@@ -77,14 +63,6 @@ POST /connections
 ```
 
 **リクエスト**
-
-[!DNL PubSub]接続を作成するには、POST要求の一部としてプロバイダーIDと接続指定IDを指定する必要があります。 プロバイダーIDは`521eee4d-8cbe-4906-bb48-fb6bd4450033`で、接続指定IDは`70116022-a743-464a-bbfe-e226a7f8210c`です。
-
-**API 形式**
-
-```http
-POST /connections
-```
 
 ```shell
 curl -X POST \
@@ -97,7 +75,6 @@ curl -X POST \
     -d '{
         "name": "Google PubSub connection",
         "description": "Google PubSub connection",
-        "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "auth": {
             "specName": "Google PubSub authentication credentials",
             "params": {
@@ -115,12 +92,12 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.projectId` | [!DNL PubSub]の認証に必要なプロジェクトID。 |
-| `auth.params.credentials` | [!DNL PubSub]の認証に必要な秘密鍵またはキーです。 |
+| `auth.params.credentials` | [!DNL PubSub]の認証に必要な資格情報またはキー。 |
 | `connectionSpec.id` | [!DNL PubSub]接続仕様ID:`70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-**応答**
+**応答** 
 
-正常に応答すると、新たに作成された[!DNL PubSub]接続の接続IDが返されます。 このIDは、次のチュートリアルでクラウドストレージデータを調べるために必要です。
+正常な応答は、新しく作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このベース接続IDは、次の手順でソース接続を作成する際に必要になります。
 
 ```json
 {
@@ -129,6 +106,69 @@ curl -X POST \
 }
 ```
 
+## ソース接続の作成 {#source}
+
+ソース接続は、データの取得元となる外部ソースへの接続を作成し、管理します。 ソース接続は、データソース、データ形式、データフローの作成に必要なソース接続IDなどの情報で構成されます。 ソース接続インスタンスは、テナントとIMS組織に固有です。
+
+ソース接続を作成するには、[!DNL Flow Service] APIの`/sourceConnections`エンドポイントにPOSTリクエストを送信します。
+
+**API 形式**
+
+```http
+POST /sourceConnections
+```
+
+**リクエスト**
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'content-type: application/json' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_Org}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -d '{
+        "name": "Google PubSub source connection",
+        "description": "A source connection for Google PubSub",
+        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
+        "connectionSpec": {
+            "id": "70116022-a743-464a-bbfe-e226a7f8210c",
+            "version": "1.0"
+        },
+        "data": {
+            "format": "json"
+        },
+        "params": {
+            "topicId": "{TOPIC_ID}",
+            "subscriptionId": "{SUBSCRIPTION_ID}",
+            "dataType": "raw"
+        }
+    }'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `name` | ソース接続の名前。 ソース接続の情報を検索する際に、ソース接続の名前がわかりやすい名前になっていることを確認します。 |
+| `description` | ソース接続に関する詳細情報を含めるために指定できるオプションの値です。 |
+| `baseConnectionId` | 前の手順で生成された[!DNL PubSub]ソースのベース接続ID。 |
+| `connectionSpec.id` | [!DNL PubSub]の固定接続仕様ID。 このIDは、です。`70116022-a743-464a-bbfe-e226a7f8210c` |
+| `data.format` | 取り込む[!DNL PubSub]データの形式。 現在、サポートされているデータ形式は`json`のみです。 |
+| `params.topicId` | トピックIDは、パブリッシャーから送信されるメッセージに固有の名前付きリソースを定義します |
+| `params.subscriptionId` | 購読IDは、購読アプリケーションに配信される単一の特定のトピックからのメッセージストリームを表す、特定の名前付きリソースを定義します。 |
+| `params.dataType` | このパラメーターは、取り込まれるデータのタイプを定義します。 次のようなデータタイプがサポートされています。`raw`と`xdm`が表示されます。 |
+
+**応答** 
+
+正常な応答は、新しく作成されたソース接続の一意の識別子(`id`)を返します。 このIDは、次のチュートリアルでデータフローを作成する際に必要になります。
+
+```json
+{
+    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
+    "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
+}
+```
+
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用して[!DNL PubSub]接続を作成し、一意の接続IDを取得します。 この接続IDを使用して[Flow Service API](../../collect/streaming.md)を使用してストリーミングデータを収集できます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL PubSub]ソース接続を作成しました。 次のチュートリアルでこのソース接続IDを使用して、 [!DNL Flow Service] API](../../collect/streaming.md)を使用してストリーミングデータフローを作成できます。[
