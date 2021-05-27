@@ -1,36 +1,38 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ;スキーマ;XDM；個々のプロファイル；フィールド；スキーマ;スキーマ;identityMap；アイデンティティマップ；スキーマ設計；マップ；和集合スキーマ;和集合
+keywords: Experience Platform；ホーム；人気のあるトピック；スキーマ；スキーマ；スキーマ；XDM；個々のプロファイル；フィールド；スキーマ；スキーマ；identityMap;IDマップ；IDマップ；スキーマデザイン；マップ；マップ；和集合スキーマ；和集合
 solution: Experience Platform
-title: XDM個別プロファイルクラス
+title: XDM Individual Profileクラス
 topic-legacy: overview
-description: このドキュメントでは、XDM Individualプロファイルクラスの概要を説明します。
+description: このドキュメントでは、XDM Individual Profileクラスの概要を説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 0%
+source-wordcount: '455'
+ht-degree: 1%
 
 ---
 
 # [!DNL XDM Individual Profile] class
 
-[!DNL XDM Individual Profile] は、個々の人の単数表現(「プロファイル」)を形成する標準的なExperience Data Model(XDM)クラスです。特に、クラス（およびその互換性のあるミックスイン）は、ブランドとやり取りする、特定された個人と部分的に識別された個人の両方の属性と興味をキャプチャします。
+[!DNL XDM Individual Profile] は、個人の単一の表現（「プロファイル」）を形成する標準のエクスペリエンスデータモデル(XDM)クラスです。特に、クラス（およびその互換性のあるMixin）は、ブランドとやり取りする、特定された個人と部分的に識別された個人の両方の属性と関心を取り込みます。
 
-プロファイルには、匿名の行動シグナル（ブラウザーのcookieなど）から、名前、生年月日、場所、電子メールアドレスなどの詳細情報を含む高度に識別されるプロファイルまで様々な種類があります。 プロファイルが増えるにつれて、個人情報、個人情報、連絡先の詳細、コミュニケーションに関する個人の好みの強力なリポジトリとなります。 プラットフォームエコシステムでのこのクラスの使用に関する詳細は、[XDMの概要](../home.md#data-behaviors)を参照してください。
+プロファイルには、匿名の行動シグナル（ブラウザーのCookieなど）から、名前、生年月日、場所、Eメールアドレスなどの詳細情報を含む、高度に識別されたプロファイルまで多岐にわたります。 プロファイルが増えるにつれ、個人情報、ID、連絡先の詳細、個人のコミュニケーション設定の堅牢なリポジトリになります。 プラットフォームエコシステムでのこのクラスの使用に関する概要については、[XDMの概要](../home.md#data-behaviors)を参照してください。
 
-[!DNL XDM Individual Profile]クラス自体は、データの取り込み時に自動的に設定されるシステム生成値をいくつか提供します。それ以外のすべてのフィールドは、[互換性のあるスキーマフィールドグループ](#field-groups)を使用して追加する必要があります。
+[!DNL XDM Individual Profile]クラス自体は、データの取得時に自動的に入力される、システム生成値を複数提供します。一方、他のすべてのフィールドは、[互換性のあるスキーマフィールドグループ](#field-groups)を使用して追加する必要があります。
 
 ![](../images/classes/individual-profile.png)
 
 | プロパティ | 説明 |
 | --- | --- |
-| `_repo` | 次の[!UICONTROL DateTime]フィールドを含むオブジェクト： <ul><li>`createDate`:データが最初に取り込まれた日時など、データストアでリソースが作成された日時。</li><li>`modifyDate`:リソースが最後に変更された日時。</li></ul> |
-| `_id` | レコードの一意の識別子。 このフィールドは、個々のレコードの一意性の追跡、データの重複の防止およびダウンストリームサービスでのそのレコードの検索に使用します。<br><br>このフィールドは、個々の人に関連するアイデンティティ **ではなく、データの記録自体を表しているのではな** いことを区別することが重要です。個人に関するIDデータは、代わりに[IDフィールド](../schema/composition.md#identity)に左右する必要があります。 |
-| `createdByBatchID` | レコードを作成した、取り込んだバッチのID。 |
-| `modifiedByBatchID` | レコードを更新した最後に取り込んだバッチのID。 |
-| `personID` | このレコードが関連付けられる個人の一意の識別子。 [IDフィールド](../schema/composition.md#identity)としても指定されていない限り、このフィールドは必ずしも個人に関連するIDを表すものではありません。 |
+| `_repo` | 次の[!UICONTROL DateTime]フィールドを含むオブジェクト： <ul><li>`createDate`:データが最初に取り込まれた日時など、リソースがデータストアで作成された日時。</li><li>`modifyDate`:リソースが最後に変更された日時。</li></ul> |
+| `_id` | レコードの一意の識別子。 このフィールドは、個々のレコードの一意性を追跡し、データの重複を防ぎ、ダウンストリームサービスでそのレコードを検索するために使用します。<br><br>このフィールドは、個人に関連するIDで **はな** く、データ自体のレコードを表すことを区別することが重要です。個人に関するIDデータは、代わりに[IDフィールド](../schema/composition.md#identity)に置き換える必要があります。 |
+| `createdByBatchID` | レコードが作成される原因となった取得済みバッチのID。 |
+| `modifiedByBatchID` | レコードを更新した最後に取得したバッチのID。 |
+| `personID` | このレコードが関連する個人の一意の識別子。 このフィールドは、[IDフィールド](../schema/composition.md#identity)とも指定されていない限り、必ずしも個人に関連するIDを表すわけではありません。 |
 | `repositoryCreatedBy` | レコードを作成したユーザーのID。 |
 | `repositoryLastModifiedBy` | レコードを最後に変更したユーザーのID。 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## 互換性のあるフィールドグループ{#field-groups}
 
@@ -38,12 +40,12 @@ ht-degree: 0%
 >
 >複数のフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../field-groups/name-updates.md)のドキュメントを参照してください。
 
-Adobeは、[!DNL XDM Individual Profile]クラスで使用するいくつかの標準フィールドグループを提供します。 次に、このクラスでよく使用されるフィールドグループのリストを示します。
+Adobeは、[!DNL XDM Individual Profile]クラスで使用するいくつかの標準フィールドグループを提供します。 次に、クラスで一般的に使用されるフィールドグループのリストを示します。
 
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL 人口統計の詳細]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL 個人の連絡先の詳細]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL 勤務先担当者の詳細]](../field-groups/profile/work-contact-details.md)
-* [[!UICONTROL セグメントのメンバーシップの詳細]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL 勤務先の詳細]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL セグメントメンバーシップの詳細]](../field-groups/profile/segmentation.md)
 
-[!DNL XDM Individual Profile]の互換性のあるすべてのフィールドグループの完全なリストについては、[XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile)を参照してください。
+[!DNL XDM Individual Profile]の互換性のあるすべてのフィールドグループの完全なリストについては、[XDM GitHubリポジトリ](https://github.com/adobe/xdm/tree/master/components/mixins/profile)を参照してください。
