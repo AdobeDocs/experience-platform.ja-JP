@@ -1,41 +1,36 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ハブスポット；ハブスポット；HubSpot
+keywords: Experience Platform；ホーム；人気のあるトピック；hubspot;Hubspot;HubSpot
 solution: Experience Platform
 title: HubSpotソースコネクタの概要
 topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してHubSpotをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 12%
+source-wordcount: '215'
+ht-degree: 13%
 
 ---
 
-# （ベータ版） [!DNL HubSpot]コネクタ
+# [!DNL HubSpot] コネクタ
 
->[!NOTE]
->
->[!DNL HubSpot]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+Adobe Experience Platformを使用すると、[!DNL Platform]サービスを使用して、受信データの構造化、ラベル付け、拡張を行いながら、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
-
-[!DNL Experience Platform ] は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。マーケティング自動化プロバイダーのサポートには[!DNL HubSpot]が含まれます。
+[!DNL Experience Platform ] は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。マーケティング自動化プロバイダーのサポートは[!DNL HubSpot]です。
 
 ## IPアドレス許可リスト
 
-IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IPアドレスのリストを許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加しないと、ソースを使用する際にエラーやパフォーマンスが低下する可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)のページを参照してください。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL HubSpot]を[!DNL Platform]に接続する方法に関する情報を提供しています。
+以下のドキュメントでは、APIまたはユーザーインターフェイスを使用して[!DNL HubSpot]を[!DNL Platform]に接続する方法について説明します。
 
-## APIを使用して[!DNL HubSpot]を[!DNL Platform]に接続
+## APIを使用して[!DNL HubSpot]を[!DNL Platform]に接続します
 
-- [Flow Service APIを使用したHubSpotソース接続の作成](../../tutorials/api/create/marketing-automation/hubspot.md)
-- [Flow Service APIを使用したマーケティング自動化システムの調査](../../tutorials/api/explore/marketing-automation.md)
-- [Flow Service APIを使用してマーケティング自動化データを収集する](../../tutorials/api/collect/marketing-automation.md)
+- [フローサービスAPIを使用したHubSpotソース接続の作成](../../tutorials/api/create/marketing-automation/hubspot.md)
+- [フローサービスAPIを使用したマーケティング自動化システムの調査](../../tutorials/api/explore/marketing-automation.md)
+- [フローサービスAPIを使用したマーケティング自動データの収集](../../tutorials/api/collect/marketing-automation.md)
 
-## UIを使用して[!DNL HubSpot]を[!DNL Platform]に接続
+## UIを使用して[!DNL HubSpot]を[!DNL Platform]に接続します
 
 - [UIでのHubSpotソース接続の作成](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [UIでのマーケティング自動化接続用のデータフローの設定](../../tutorials/ui/dataflow/marketing-automation.md)
+- [UIでのマーケティング自動化接続のデータフローの設定](../../tutorials/ui/dataflow/marketing-automation.md)
