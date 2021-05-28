@@ -1,41 +1,40 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Azure synapse分析；azure synapse分析；シナプス；シナプス
+keywords: Experience Platform；ホーム；人気のあるトピック；Azure synapse分析；azure synapse分析；Synapse;synapse
 solution: Experience Platform
 title: azure synapse分析ソースコネクタの概要
 topic-legacy: overview
-description: APIまたはユーザーインターフェイスを使用して、Azure synapse分析をAdobe Experience Platformに接続する方法について説明します。
+description: APIまたはユーザーインターフェイスを使用してAzure synapseAnalyticsをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '288'
 ht-degree: 9%
 
 ---
 
-# （ベータ版） [!DNL Azure Synapse Analytics]コネクタ
+# [!DNL Azure Synapse Analytics] コネクタ
 
-Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformを使用すると、[!DNL Platform]サービスを使用して、受信データの構造化、ラベル付け、拡張を行いながら、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。データベースプロバイダのサポートは[!DNL Azure Synapse Analytics]です。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] は、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。データベースプロバイダのサポートは[!DNL Azure Synapse Analytics]です。
 
 ## IPアドレス許可リスト
 
-IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IPアドレスのリストを許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加しないと、ソースを使用する際にエラーやパフォーマンスが低下する可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)のページを参照してください。
 
 >[!IMPORTANT]
 >
->[!DNL Azure Synapse Analytics]ソースコネクタは、現在、プラットフォームとの同じ領域接続をサポートしていません。 つまり、Azureインスタンスがプラットフォームと同じネットワーク領域を使用している場合、プラットフォームソースへの接続を確立できません。 現在、クロスリージョン接続のみがサポートされています。 詳しくは、Adobeのアカウントマネージャーにお問い合わせください。
+>[!DNL Azure Synapse Analytics]ソースコネクタは、現在、Platformへの同じ領域接続をサポートしていません。 つまり、AzureインスタンスがPlatformと同じネットワーク領域を使用している場合、Platformソースへの接続を確立できません。 現在、クロスリージョン接続のみがサポートされています。 詳しくは、担当のAdobeアカウントマネージャーにお問い合わせください。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL Azure Synapse Analytics]を[!DNL Platform]に接続する方法に関する情報を提供しています。
+以下のドキュメントでは、APIまたはユーザーインターフェイスを使用して[!DNL Azure Synapse Analytics]を[!DNL Platform]に接続する方法について説明します。
 
-## APIを使用して[!DNL Azure Synapse Analytics]を[!DNL Platform]に接続
+## APIを使用して[!DNL Azure Synapse Analytics]を[!DNL Platform]に接続します
 
-- [Flow Service APIを使用してAzure synapse分析ソース接続を作成する](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
-- [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
+- [フローサービスAPIを使用したAzure synapse分析ソース接続の作成](../../tutorials/api/create/databases/synapse-analytics.md)
+- [フローサービスAPIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
+- [フローサービスAPIを使用したデータベースからのデータの収集](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用して[!DNL Azure Synapse Analytics]を[!DNL Platform]に接続
+## UIを使用して[!DNL Azure Synapse Analytics]を[!DNL Platform]に接続します
 
-- [UIでのAzure synapse分析ソース接続の作成](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
+- [UIでのAzure synapseAnalyticsソース接続の作成](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [UIでのデータベース接続のデータフローの設定](../../tutorials/ui/dataflow/databases.md)
