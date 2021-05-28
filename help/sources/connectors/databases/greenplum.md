@@ -1,41 +1,36 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；グリーンプラム；GreenPlum
+keywords: Experience Platform；ホーム；人気のあるトピック；greenplum;GreenPlum
 solution: Experience Platform
 title: GreenPlumソースコネクタの概要
 topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してGreenPlumをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
-# （ベータ版） [!DNL GreenPlum]コネクタ
+# [!DNL GreenPlum] コネクタ
 
->[!NOTE]
->
->[!DNL GreenPlum]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure]などのデータベースプロバイダーに対してネイティブ接続を提供します。 これらのシステムのデータを[!DNL Platform]に取り込むことができます。
 
-Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure]などのデータベースプロバイダに対してネイティブの接続を提供します。 これらのシステムのデータを[!DNL Platform]に取り込むことができます。
-
-リレーショナル、NoSQL、データ・ウェアハウスなど、サード・パーティ製のデータベースは、それぞれ異なるタイプがサポートされます。 データベースプロバイダーのサポートには[!DNL GreenPlum]が含まれます。
+リレーショナル、NoSQL、データウェアハウスなど、様々な種類のサードパーティデータベースがサポートされています。 データベースプロバイダのサポートには[!DNL GreenPlum]が含まれます。
 
 ## IPアドレス許可リスト
 
-IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IPアドレスのリストを許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加しないと、ソースを使用する際にエラーやパフォーマンスが低下する可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)のページを参照してください。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL GreenPlum]を[!DNL Platform]に接続する方法に関する情報を提供しています。
+以下のドキュメントでは、APIまたはユーザーインターフェイスを使用して[!DNL GreenPlum]を[!DNL Platform]に接続する方法について説明します。
 
-## APIを使用して[!DNL GreenPlum]を[!DNL Platform]に接続
+## APIを使用して[!DNL GreenPlum]を[!DNL Platform]に接続します
 
-- [Flow Service APIを使用したGreenPlumソース接続の作成](../../tutorials/api/create/databases/greenplum.md)
-- [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
-- [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
+- [フローサービスAPIを使用したGreenPlumソース接続の作成](../../tutorials/api/create/databases/greenplum.md)
+- [フローサービスAPIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
+- [フローサービスAPIを使用したデータベースからのデータの収集](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用して[!DNL GreenPlum]を[!DNL Platform]に接続
+## UIを使用して[!DNL GreenPlum]を[!DNL Platform]に接続します
 
 - [UIでのGreenPlumソース接続の作成](../../tutorials/ui/create/databases/greenplum.md)
-- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
+- [UIでのデータベース接続のデータフローの設定](../../tutorials/ui/dataflow/databases.md)
