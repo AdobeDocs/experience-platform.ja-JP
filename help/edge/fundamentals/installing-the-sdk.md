@@ -1,32 +1,32 @@
 ---
-title: Adobe Experience PlatformWeb SDKのインストール
+title: Adobe Experience Platform Web SDKのインストール
 description: Experience Platform Web SDK のインストール方法について説明します.
-keywords: Web sdkのインストール；Web sdkのインストール；internet explorer;promise;npmパッケージ
+keywords: web sdkのインストール；web sdkのインストール；internet explorer;promise;npmパッケージ
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 32%
+source-wordcount: '937'
+ht-degree: 31%
 
 ---
 
-# SDKのインストール{#installing-the-sdk}
+# SDK のインストール {#installing-the-sdk}
 
-Adobe Experience PlatformWeb SDKの使用には、次の3つのサポートされている方法があります。
+Adobe Experience Platform Web SDKの使用方法は3つあります。
 
-1. Adobe Experience PlatformWeb SDKの使い方は、[Adobe Experience Platform Launch](https://launch.adobe.com/)を経由することをお勧めします。
-1. Adobe Experience PlatformWeb SDKは、コンテンツ配信ネットワーク(CDN)でも使用できます。
+1. Adobe Experience Platform Web SDKを使用する推奨される方法は、[Adobe Experience Platform Launch](https://launch.adobe.com/)を使用することです。
+1. Adobe Experience Platform Web SDKは、コンテンツ配信ネットワーク(CDN)でも使用できます。
 1. EcmaScript 5およびEcmaScript 2015(ES6)モジュールを書き出すNPMライブラリを使用します。
 
 ## オプション1:Adobe Experience Platform Launch拡張機能のインストール
 
-Adobe Experience Platform Launchの拡張機能に関するドキュメントについては、[起動ドキュメント](https://docs.adobe.com/content/help/ja-JP/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)を参照してください
+Adobe Experience Platform Launch拡張機能に関するドキュメントについては、[launchのドキュメント](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)を参照してください。
 
-## オプション2:プレビルトスタンドアロンバージョンのインストール
+## オプション2:事前にビルドされたスタンドアロンバージョンのインストール
 
-事前にビルドされたバージョンは、CDNで利用できます。 CDN上のライブラリを直接ページで参照することも、独自のインフラストラクチャでダウンロードしてホストすることもできます。 縮小および縮小されていない形式で使用できます。 縮小されていないバージョンは、デバッグの目的に役立ちます。
+事前にビルドされたバージョンは、CDNで使用できます。 CDN上のライブラリを直接ページで参照することも、独自のインフラストラクチャでダウンロードしてホストすることもできます。 縮小および非縮小形式で使用できます。 非縮小バージョンは、デバッグに役立ちます。
 
-URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまたはalloy.js（縮小されていないバージョン用）
+URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまたはalloy.js （非縮小版）
 
 次に例を示します。
 
@@ -35,9 +35,9 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 * 縮小解除：[https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.4.0/alloy.js)
 
 
-### コードの追加{#adding-the-code}
+### コード{#adding-the-code}の追加
 
-プレビルトスタンドアロンバージョンでは、ページに直接「ベースコード」を追加する必要があります。 次の「ベースコード」を、HTMLの`<head>`タグ内でできる限り高い位置にコピー&amp;ペーストします。
+事前にビルドされたスタンドアロンバージョンには、ページに直接追加された「ベースコード」が必要です。 次の「ベースコード」を、HTMLの`<head>`タグ内のできる限り上位にコピーして貼り付けます。
 
 ```markup
 <script>
@@ -49,7 +49,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 <script src="https://cdn1.adoberesources.net/alloy/2.4.0/alloy.min.js" async></script>
 ```
 
-「ベースコード」は、`alloy`という名前のグローバル関数を作成します。 この関数を使用して SDK を操作します。グローバル関数に別の名前を付けたい場合は、`alloy`名前を次のように変更します。
+「ベースコード」は、`alloy`という名前のグローバル関数を作成します。 この関数を使用して SDK を操作します。グローバル関数に別の名前を付ける場合は、`alloy`名前を次のように変更します。
 
 ```markup
 <script>
@@ -71,7 +71,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 ### Internet Explorer のサポート  {#support-internet-explore}
 
-このSDKは、プロミスを使用します。プロミスは、非同期タスクの完了を通信する方法です。 SDKが使用する[Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise)実装は、[!DNL Internet Explorer]を除くすべてのターゲットブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]でSDKを使用するには、`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill)が必要です。
+このSDKは、非同期タスクの完了を伝える方法であるpromiseを使用します。 SDKで使用される[Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise)実装は、[!DNL Internet Explorer]を除くすべてのターゲットブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]でSDKを使用するには、`window.Promise` [ポリフィル](https://remysharp.com/2010/10/08/what-is-a-polyfill)が必要です。
 
 既に `window.Promise` がポリフィルされているかどうかを判断するには、次の手順を実行します。
 
@@ -81,7 +81,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 `undefined` 以外が表示された場合は、既に `window.Promise`　がポリフィルされている可能性があります。上記のインストール手順を完了した後に Web サイトを読み込むことで、`window.Promise` がポリフィルされているかどうかを判断する方法もあります。SDK が promise に関するエラーをスローした場合、`window.Promise` がポリフィルされていない可能性が高くなります。
 
-`window.Promise`をポリフィルする必要があると判断した場合は、前に提供したベースコードの上に次のスクリプトタグを含めます。
+`window.Promise`のポリフィルが必要と判断した場合は、前述のベースコードの上に次のスクリプトタグを含めます。
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
@@ -95,7 +95,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 ### JavaScript ファイルの同期読み込み {#loading-javascript-synchronously}
 
-「[コード](#adding-the-code)を追加」で説明したように、コピーしてWebサイトのHTMLに貼り付けたベースコードは、外部ファイルを読み込みます。 外部ファイルには、SDKのコア機能が含まれています。 このファイルの読み込み中に実行を試みたコマンドは、キューに登録され、ファイルの読み込み後に処理されます。 ファイルの非同期読み込みは、インストールで最もパフォーマンスの高い方法です。
+[コード](#adding-the-code)の追加で説明したように、WebサイトのHTMLにコピー&amp;ペーストしたベースコードは、外部ファイルを読み込みます。 外部ファイルには、SDKのコア機能が含まれています。 このファイルの読み込み中に実行しようとしたコマンドは、キューに入れられ、ファイルの読み込み後に処理されます。 ファイルを非同期で読み込むことが、最もパフォーマンスの高いインストール方法です。
 
 ただし、特定の状況では、ファイルを同期的に読み込むことが望ましい場合もあります（これらの状況に関する詳細は後で説明します）。これをおこなうと、外部ファイルが読み込まれて実行されるまで、HTML ドキュメントの残りの部分がブラウザーで解析およびレンダリングされなくなります。通常、プライマリコンテンツをユーザーに表示する前にこの遅延が発生するのはお勧めしませんが、状況によっては合理的な場合もあります。
 
@@ -113,13 +113,13 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 ## オプション3:NPMパッケージの使用
 
-Adobe Experience PlatformWeb SDKは、NPMパッケージとしても利用できます。 [](https://www.npmjs.com) NPMは、JavaScriptのパッケージマネージャーです。NPMパッケージをインストールすると、Adobe Experience PlatformWeb SDK JavaScriptのビルドプロセスを制御できます。 NPMパッケージは、ブラウザーで実行するEcmaScriptバージョン5モジュールまたはEcmaScriptバージョン2015(ES6)モジュールを公開します。
+Adobe Experience Platform Web SDKは、NPMパッケージとしても使用できます。 [](https://www.npmjs.com) NPMは、JavaScript用パッケージマネージャーです。NPMパッケージをインストールすると、Adobe Experience Platform Web SDK JavaScriptのビルドプロセスを制御できます。 NPMパッケージは、ブラウザーで実行するEcmaScriptバージョン5モジュールまたはEcmaScriptバージョン2015(ES6)モジュールを公開します。
 
 ```bash
 npm install @adobe/alloy
 ```
 
-Adobe Experience PlatformWeb SDKのNPMパッケージは、`createInstance`関数を公開します。 この関数は、インスタンスの作成に使用されます。 関数に渡されるnameオプションは、ログで使用されるプレフィックスを制御します。 パッケージの使用例を以下に示します。
+Adobe Experience Platform Web SDKのNPMパッケージは、`createInstance`関数を公開します。 この関数は、インスタンスの作成に使用されます。 関数に渡されるnameオプションは、ログに使用されるプレフィックスを制御します。 パッケージの使用例を以下に示します。
 
 ### ECMAScript 2015(ES6)モジュールとしてのパッケージの使用
 
@@ -132,7 +132,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->NPMパッケージはCommonJSモジュールに依存しています。したがって、bundlerを使用する場合は、bundlerがCommonJSモジュールをサポートしていることを確認してください。 [ロールアップ](https://rollupjs.org)など、一部のバンドラーには、CommonJSのサポートを提供する[プラグイン](https://www.npmjs.com/package/@rollup/plugin-commonjs)が必要です。
+>NPMパッケージは、CommonJSモジュールに依存しています。したがって、bundlerを使用する場合は、bundlerがCommonJSモジュールをサポートしていることを確認してください。 [Rollup](https://rollupjs.org)など、一部のバンドラーには、CommonJSをサポートする[プラグイン](https://www.npmjs.com/package/@rollup/plugin-commonjs)が必要です。
 
 ### ECMAScript 5モジュールとしてのパッケージの使用
 
@@ -145,9 +145,9 @@ alloy("sendEvent", { ... });
 
 ### Internet Explorer のサポート
 
-Adobe Experience PlatformSDKは、プロミスを使用します。これは、非同期タスクの完了を伝える手段です。 SDKが使用する[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)実装は、[!DNL Internet Explorer]を除くすべてのターゲットブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]でSDKを使用するには、`window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill)が必要です。
+Adobe Experience Platform SDKは、非同期タスクの完了を伝える方法であるpromiseを使用します。 SDKで使用される[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)実装は、[!DNL Internet Explorer]を除くすべてのターゲットブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]でSDKを使用するには、`window.Promise` [ポリフィル](https://remysharp.com/2010/10/08/what-is-a-polyfill)が必要です。
 
-PolyFill約束のために使用できるライブラリの1つは、Promise-Polyfillです。 NPMでのインストール方法の詳細については、[promise-polyfillのドキュメント](https://www.npmjs.com/package/promise-polyfill)を参照してください。
+Promiseのポリフィルに使用できるライブラリの1つに、promise-polyfillがあります。 NPMを使用したインストール方法の詳細については、[promise-polyfillのドキュメント](https://www.npmjs.com/package/promise-polyfill)を参照してください。
 
 >[!NOTE]
 >
