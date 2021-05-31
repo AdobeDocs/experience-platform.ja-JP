@@ -1,19 +1,18 @@
 ---
-title: Adobe Experience PlatformWeb SDK Extensionリリースノート
+title: Adobe Experience Platform Web SDK拡張機能のリリースノート
 description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
 seo-description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
-translation-type: tm+mt
-source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 79%
+source-wordcount: '1130'
+ht-degree: 77%
 
 ---
 
+# Adobe Experience Platform Web SDK拡張機能のリリースノート
 
-# Adobe Experience PlatformWeb SDK拡張機能リリースノート
-
-このドキュメントでは、Adobe Experience Platform Launch向けAdobe Experience PlatformWeb SDK extensionのリリースノートをカバーしています。 SDK自体の最新のリリースノートについては、[プラットフォームWeb SDKリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/edge/release-notes.html)を参照してください。
+このドキュメントでは、 Adobe Experience Platform Launch用Adobe Experience Platform Web SDK拡張機能のリリースノートについて説明します。 SDK自体の最新のリリースノートについては、[Platform Web SDKリリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)を参照してください。
 
 ## 2020 年 3 月 9 日
 
@@ -21,12 +20,12 @@ ht-degree: 79%
 
 Adobe Experience Platform Web SDK ライブラリのバージョン 2.4.0 が含まれます。
 
-* 「イベントアクションUIを送信」に、[「ドキュメントのアンロード中」](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)チェックボックスが追加されました。
-* [デフォルトの同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)を設定すると、同意を受けるまですべてのイベントを破棄する`out`オプションのサポートを追加しました(既存の`pending`オプションは、同意を受けたらイベントをキューに入れ、送信します)。
+* 「イベント送信」アクションUIに[「ドキュメントのアンロード」](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)チェックボックスを追加しました。
+* [同意を受けるまですべてのイベントを破棄するデフォルトの同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)を設定する際の`out`オプションのサポートを追加しました（既存の`pending`オプションはイベントをキューに追加し、同意を得た後に送信します）。
 * デフォルトの同意フィールドにツールチップを追加しました。
-* [Adobeの同意2.0基準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)のサポートを追加しました。
-* ユーザーのアクセストークンが無効であるか、適切にプロビジョニングされていない場合に、XDMオブジェクトのデータ要素のUIにより適切なエラーが表示されるようになりました。
-* XDMオブジェクトデータ要素を表示するとブラウザー開発者コンソールに表示される、接触チャネル間のエラー（拡張機能の動作には影響しません）を修正しました。
+* [Adobeの同意2.0標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)のサポートを追加しました。
+* ユーザーのアクセストークンが無効か不適切にプロビジョニングされた場合、XDMオブジェクトデータ要素のUIに、より良いエラーが表示されるようになりました。
+* XDMオブジェクトデータ要素を表示した際にブラウザー開発者コンソールに表示されるクロスオリジンエラー（拡張機能の操作には影響しません）を修正しました。
 
 ## 2020 年 11 月 4 日
 
@@ -46,7 +45,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 
 #### バグの修正
 
-* お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。Platformを呼び出すAPIは、環境を認識するようになったので、編集にアクセスできるスキーマのみが表示されます。
+* お客様がサンドボックススキーマから XDM オブジェクトを作成しようとすると、認証の問題が発生していました。Platformを呼び出すAPIは環境を認識するようになったので、ユーザーには、編集にアクセスできるスキーマのみが表示されます。
 
 #### 機能
 
@@ -70,12 +69,12 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 #### 機能
 
 * 重大な変更：`syncIdentity` アクションを削除し、代わりに `sendEvent` アクションにこれらの ID を渡すことをサポートします。拡張機能をアップグレードする前に、この操作を使用する既存のルールを無効にしてください。
-* Ally v. 2.1.0 へのアップデート（[リリースノート](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html)）。
+* Ally v. 2.1.0 へのアップデート（[リリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)）。
 * `setConsent` アクションでの IAB 2.0 Consent Standard をサポートします。
 * `sendEvent` アクションでのデータセット ID の上書きをサポートします。
 * タイプ `IdentityMap` の新しいデータ要素を追加します。これは、現在有効になっている XDM オブジェクトデータ要素と `setConsent` アクションに `identityMap` エントリを入力するために使用できます。
 * `setConsent` アクションで ID マップを渡す機能をサポートします。
-* XDMオブジェクトデータ要素でのプラットフォームサンドボックスの選択をサポートします。
+* XDMオブジェクトデータ要素でのPlatformサンドボックスの選択をサポートします。
 
 
 ## 2020 年 5 月 27 日
@@ -104,7 +103,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 * データ要素が参照されるたびにイベント結合 ID がリセットされる問題を修正しました。
 * `setCustomerIds` アクションの名前を `syncIdentity` に変更しました。
 * `getIdentity` コマンドを追加しました。現在のところ、カスタムコードでのみ使用できます。
-* `_satellite`を使用してデバッグを有効にすると、Adobe Experience PlatformWeb SDKでのデバッグが有効になります。
+* `_satellite`を使用したデバッグを有効にすると、Adobe Experience Platform Web SDKでデバッグが有効になります。
 * XDM オブジェクトに入力された値（ブール値、数字、および小数）のサポートを追加しました。
 
 ## 2020 年 3 月 17 日
@@ -181,7 +180,7 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 * 拡張機能を追加。
 * 追加のライブラリやネットワーク呼び出しが不要な ECID サポート。
 * オプトインのサポート。
-* XDMをプラットフォームに送信するサポート
+* PlatformへのXDMの送信のサポート
 * ファーストパーティドメインのサポート。
 * ブラウザーコンテキストを自動的に収集。
 * 完全なオープンソース（[拡張機能](https://github.com/adobe/reactor-extension-alloy)、[SDK](https://github.com/adobe/reactor-extension-alloy)）。
