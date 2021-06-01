@@ -1,52 +1,58 @@
 ---
 title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
-keywords: Adobe Experience PlatformWeb SDK；プラットフォームWeb SDK;Web SDK；リリースノート；
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 5%
+source-wordcount: '562'
+ht-degree: 4%
 
 ---
 
 # リリースノート
 
-## バージョン2.4.0、2021年3月
+## バージョン2.5.0（2021年6月）
 
-* SDKをnpmパッケージ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)として[インストールできるようになりました。
-* [デフォルトの同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)の設定時に、`out`オプションのサポートが追加され、同意が得られるまですべてのイベントが削除されます(既存の`pending`オプションはイベントをキューに入れ、同意が得られたら送信します)。
+* リダイレクトパーソナライゼーションオファーのサポートを追加しました。
+* 自動的に収集されたビューポートの幅と高さが負の値の場合、サーバーに送信されなくなります。
+* `onBeforeEventSend`コールバックから`false`を返してイベントがキャンセルされた場合に、メッセージがログに記録されるようになりました。
+* 単一のイベントを対象とする特定のXDMデータが複数のイベントにまたがって含まれる問題を修正しました。
+
+## バージョン2.4.0（2021年3月）
+
+* これで、SDKをnpmパッケージ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)として[インストールできます。
+* [デフォルトの同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)を設定する際の`out`オプションのサポートが追加され、同意が得られるまですべてのイベントが破棄されます（既存の`pending`オプションはイベントをキューに追加し、同意が得られると送信します）。
 * [onBeforeEventSendコールバック](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend)を使用して、イベントの送信を防ぐことができるようになりました。
-* レンダリングまたはクリックされるパーソナライズされたコンテンツに関するイベントを送信する際に、`meta.personalization`の代わりにXDMスキーマフィールドグループを使用するようになりました。
+* レンダリングまたはクリックされるパーソナライズされたコンテンツに関するイベントを送信する際に、 `meta.personalization`の代わりにXDMスキーマフィールドグループを使用するようになりました。
 * [getIdentityコマンド](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id)は、IDと共にエッジ領域IDを返すようになりました。
-* サーバーから受け取った警告およびエラーは改善され、より適切な方法で処理されました。
-* [Adobeの同意2.0基準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)のサポートを追加しました。
-* 同意の環境設定を受け取ると、ハッシュ化されてローカルストレージに保存され、CMP、Platform Web SDK、Platform Edge Networkの間で最適化された統合を実現します。 同意の環境設定を収集する場合は、ページの読み込みごとに`setConsent`を呼び出すことをお勧めします。
-* [監視フック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)、`onCommandResolved`、`onCommandRejected`の2つが追加されました。
-* バグ修正：パーソナライゼーションインタラクション通知イベントには、ユーザーが新しい単一ページのアプリ表示に移動し、元の表示に戻り、コンバージョンに該当する重複をクリックした場合に、同じアクティビティに関する情報が含まれます。
-* バグ修正：SDKから送信された最初のイベントが`documentUnloading`を`true`に設定していた場合、[`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon)を使用してイベントが送信され、IDが確立されていないというエラーが発生します。
+* サーバーから受信した警告とエラーは改善され、より適切に処理されました。
+* [Adobeの同意2.0標準](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard)のサポートを追加しました。
+* 同意の環境設定を受け取ると、CMP、Platform Web SDK、Platform Edge Network間で最適化された統合のために、ハッシュ化されてローカルストレージに保存されます。 同意設定を収集する場合は、ページの読み込みごとに`setConsent`を呼び出すことをお勧めします。
+* 2つの[監視フック](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)、`onCommandResolved`、`onCommandRejected`が追加されました。
+* バグ修正：ユーザーが新しい単一ページのアプリビューに移動して元のビューに戻り、コンバージョンに適した要素をクリックした場合、パーソナライズ機能のインタラクション通知イベントに同じアクティビティに関する重複情報が含まれます。
+* バグ修正：SDKから送信された最初のイベントの`documentUnloading`が`true`に設定されていた場合、[`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon)を使用してイベントが送信され、IDが確立されないことに関するエラーが発生します。
 
-## バージョン2.3.0、2020年11月
+## バージョン2.3.0（2020年11月）
 
-* より厳密なコンテンツセキュリティポリシーを許可するために、nonceのサポートを追加しました。
-* シングルページアプリのパーソナライゼーションサポートを追加しました。
-* `window.console` APIを上書きする可能性のある他のページ上のJavaScriptコードとの互換性を改善しました。
+* コンテンツセキュリティポリシーをより厳格にするために、nonceのサポートを追加しました。
+* シングルページアプリケーションのパーソナライゼーションのサポートを追加しました。
+* `window.console` APIを上書きする可能性のある、他のページ上のJavaScriptコードとの互換性を改善しました。
 * バグ修正：`documentUnloading`が`true`に設定された場合や、リンクのクリックが自動的に追跡された場合は、`sendBeacon`が使用されていませんでした。
 * バグ修正：アンカー要素にHTMLコンテンツが含まれている場合、リンクは自動的に追跡されません。
-* バグ修正：読み取り専用の`message`プロパティを含むブラウザーのエラーが適切に処理されなかったため、お客様に表示されるエラーが異なりました。
-* バグ修正：iframe内でSDKを実行すると、iframeのHTMLページが親ウィンドウのHTMLページとは異なるサブドメインからのものである場合に、エラーが発生します。
+* バグ修正：読み取り専用の`message`プロパティを含むブラウザーエラーの一部が適切に処理されず、結果として異なるエラーがお客様に表示されていました。
+* バグ修正：iframeのHTMLページが親ウィンドウのHTMLページとは異なるサブドメインからのものである場合、iframe内でSDKを実行するとエラーが発生します。
 
-## バージョン2.2.0、2020年10月
+## バージョン2.2.0（2020年10月）
 
-* バグ修正：`idMigrationEnabled`が`true`の場合、オプトインオブジェクトはAlyが呼び出しを行うのをブロックしていました。
-* バグ修正：ちらつきの問題を防ぐために、パーソナライズオファーが返される必要がある要求をAllyに認識させます。
+* バグ修正：`idMigrationEnabled`が`true`の場合、オプトインオブジェクトはAlloyが呼び出しを行うのをブロックしていました。
+* バグ修正：ちらつきの問題を防ぐために、パーソナライゼーションオファーを返す必要があるリクエストをAlloyに認識させます。
 
-## バージョン2.1.0、2020年8月
+## バージョン2.1.0（2020年8月）
 
-* `syncIdentity`コマンドを削除し、`sendEvent`コマンドにこれらのIDを渡すことをサポートします。
-* IAB 2.0同意基準をサポートします。
+* `syncIdentity`コマンドを削除し、`sendEvent`コマンドでこれらのIDを渡すことをサポートします。
+* IAB 2.0 Consent Standardをサポートします。
 * `setConsent`コマンドで追加のIDを渡す機能をサポートします。
-* `sendEvent`コマンドで`datasetId`の上書きをサポートします。
-* サポート合金モニタ（[詳細情報](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
+* `sendEvent`コマンドでの`datasetId`の上書きをサポートします。
+* サポート合金モニタ（[詳細](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)）
 * 実装の詳細コンテキストデータで`environment: browser`を渡します。
