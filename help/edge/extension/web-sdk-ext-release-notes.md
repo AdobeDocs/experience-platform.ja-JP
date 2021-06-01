@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDK拡張機能のリリースノート
 description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
 seo-description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: ec841a028d2a6acbdb1c1406026bbd4574cbc2ee
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 77%
+source-wordcount: '1232'
+ht-degree: 72%
 
 ---
 
@@ -14,7 +14,17 @@ ht-degree: 77%
 
 このドキュメントでは、 Adobe Experience Platform Launch用Adobe Experience Platform Web SDK拡張機能のリリースノートについて説明します。 SDK自体の最新のリリースノートについては、[Platform Web SDKリリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)を参照してください。
 
-## 2020 年 3 月 9 日
+## 2021 年 6 月 1 日
+
+### Adobe Experience Platform Web SDK 2.5.0
+
+Adobe Experience Platform Web SDK ライブラリのバージョン 2.5.0 が含まれます。
+
+* 「イベントを送信」アクションに`data`フィールドを追加しました。 今後のドキュメントでは、特定のシナリオでこの機能を使用する方法を説明します。
+* XDMオブジェクトデータ要素ビューで、ユーザーがAdobe Experience Platformサンドボックスにアクセスできるが、組織のデフォルトとして設定されたサンドボックスにアクセスできない場合にエラーがスローされる問題が修正されました。
+* XDMオブジェクトデータ要素ビューで、親オブジェクトに値が含まれていない場合でも、必須のスキーマフィールドが無効と見なされる問題が修正されました。
+
+## 2021 年 3 月 9 日（PT）
 
 ### Adobe Experience Platform Web SDK 2.4.0
 
