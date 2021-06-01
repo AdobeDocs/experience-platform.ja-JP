@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；apiガイド；クエリ;クエリ;クエリサービス；
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；apiガイド；クエリ；クエリ；クエリサービス；
 solution: Experience Platform
 title: クエリAPIエンドポイント
 topic-legacy: queries
-description: 以下の節では、クエリサービスAPIの/クエリエンドポイントを使用して行う呼び出しについて説明します。
+description: 以降の節では、クエリサービスAPIの/querysエンドポイントを使用しておこなう呼び出しについて説明します。
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 92%
@@ -17,7 +16,7 @@ ht-degree: 92%
 
 ## サンプル API 呼び出し
 
-以下の節では、[!DNL Query Service] APIの`/queries`エンドポイントを使用して行える呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+以降の節では、[!DNL Query Service] APIの`/queries`エンドポイントを使用しておこなう呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### クエリのリストの取得
 
@@ -142,7 +141,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -d '{
         "dbName": "prod:all",
         "sql": "SELECT * FROM accounts;",
-        "name": "Sample Query"
+        "name": "Sample Query",
         "description": "Sample Description"
     }  
 ```
