@@ -4,10 +4,10 @@ title: よくある質問
 seo-title: よくある質問
 description: Adobe Experience Platformの宛先に関するよくある質問への回答
 seo-description: Adobe Experience Platformの宛先に関するよくある質問への回答
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: a01b53758f4ad42272c39f71a08021d30900e7af
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 17%
+source-wordcount: '733'
+ht-degree: 14%
 
 ---
 
@@ -17,6 +17,18 @@ ht-degree: 17%
 ## 概要 {#overview}
 
 このドキュメントでは、Adobe Experience Platformの宛先に関するよくある質問に対する回答を示します。 すべての[!DNL Platform] APIで発生する問題を含め、他の[!DNL Platform]サービスに関する質問とトラブルシューティングについては、[Experience Platformのトラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
+
+## 宛先に関する一般的な質問 {#general}
+
+**Experience PlatformUIと書き出されたCSVファイルで、異なるプロファイル数が表示されるのはなぜですか？**
+
+これは、セグメント化の実行方法による通常のExperience Platformです。
+
+ストリーミングセグメント化では、1日を通じてストリーミングセグメントのプロファイル数が更新され、バッチセグメント化では、24時間に1回、バッチセグメントのプロファイル数が更新されます。
+
+セグメントの書き出しスケジュールがセグメント化スケジュールと異なる場合、特にストリーミングセグメントに関しては、UIと書き出された[!DNL CSV]ファイルの間のプロファイル数が異なります。
+
+詳しくは、[セグメント化サービスのドキュメント](../segmentation/home.md)を参照してください。
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
