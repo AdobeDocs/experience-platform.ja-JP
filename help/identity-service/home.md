@@ -5,10 +5,10 @@ title: ID サービスの概要
 topic-legacy: overview
 description: Adobe Experience Platform ID サービスを利用すると、デバイスやシステム間で ID を橋渡しすることで、顧客とその行動をよりよく把握できます。これによって、インパクトのある個人的なデジタルエクスペリエンスをリアルタイムで提供できます。
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 288f24351788ed4b8a0c68cffe5eb5c91ed01691
 workflow-type: tm+mt
-source-wordcount: '1717'
-ht-degree: 100%
+source-wordcount: '1734'
+ht-degree: 99%
 
 ---
 
@@ -113,6 +113,10 @@ ID データを提供してラベルを付けるときに考慮する必要が�
 ### ID としての XDM フィールドの指定
 
 レコードまたは時系列の XDM クラスを実装するスキーマ内の `string` タイプのフィールドは、ID フィールドとしてラベル付けできます。その結果、そのフィールドに取得されたすべてのデータは、ID データと見なされます。
+
+>[!NOTE]
+>
+>配列およびマップタイプのフィールドはサポートされておらず、IDフィールドとしてマークおよびラベル付けできません。
 
 ID フィールドでは、共通の PII データを共有している ID をリンクすることもできます。
 例えば、電話番号フィールドを ID フィールドとしてラベル付けすると、[!DNL Identity Service] は同じ電話番号を使用している他の個人との関係を自動的にグラフ化します。
