@@ -3,7 +3,7 @@ title: Platform Web SDKでのAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDKでパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースのExperience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 835fbee335c1b125f22a33f1806680514dfd9a6f
+source-git-commit: 202a77e4f9e8c7d5515ea0a5004b1c339f1d58ba
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 3%
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 [!DNL Target]プロファイルを更新するには、次の情報を使用してプロファイルデータが渡されていることを確認します。
 
 * 「`“data {“`
-* 「`“__adobe”`
+* 「`“__adobe.target”`
 * プレフィックス`“profile.”`(例：
 
 | キー | タイプ | 説明 |
