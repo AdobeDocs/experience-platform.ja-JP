@@ -4,11 +4,10 @@ user-guide-title: Adobe Experience Platform セグメント化サービス
 breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイムの顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 feature: セグメント
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 74%
+source-wordcount: '164'
+ht-degree: 79%
 
 ---
 
@@ -16,13 +15,13 @@ ht-degree: 74%
 # Adobe Experience Platform セグメント化サービス {#segmentation}
 
 - [セグメント化サービスの概要](home.md)
-- [セグメントデータタイプ](data-types.md)
+- [セグメント化のデータタイプ](data-types.md)
 - セグメント化 API {#api}
    - [概要](api/overview.md)
    - [はじめに](api/getting-started.md)
-   - [エッジセグメント](api/edge-segmentation.md)
+   - [エッジセグメント化](api/edge-segmentation.md)
    - [ジョブの書き出し](api/export-jobs.md)
-   - [プレビューと予測](api/previews-and-estimates.md)
+   - [プレビューと推定](api/previews-and-estimates.md)
    - [スケジュール](api/schedules.md)
    - [セグメントの定義](api/segment-definitions.md)
    - [セグメントジョブ](api/segment-jobs.md)
@@ -32,34 +31,35 @@ ht-degree: 74%
    - [概要](ui/overview.md)
    - [セグメントダッシュボード](ui/segment-dashboard.md)
    - [セグメントビルダー](ui/segment-builder.md)
-   - [エッジセグメント](ui/edge-segmentation.md)
+   - [セグメントの一致](ui/segment-match.md)
+   - [エッジセグメント化](ui/edge-segmentation.md)
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
-   - [ストリーミングセグメント（ビデオ）](video/streaming-segmentation-overview.md)
-   - [時間制約リファクタリング](ui/segment-refactoring.md)
-- [オプトアウトの実行](honoring-opt-outs.md)
-- [マルチエンティティセグメント化](multi-entity-segmentation.md)
+   - [ストリーミングセグメント化 (ビデオ)](video/streaming-segmentation-overview.md)
+   - [時間制約のリファクタリング](ui/segment-refactoring.md)
+- [オプトアウトの遵守](honoring-opt-outs.md)
+- [マルチエンティティのセグメント化](multi-entity-segmentation.md)
 - プロファイルクエリ言語 {#pql}
    - [概要](pql/overview.md)
    - [ブール関数](pql/boolean-functions.md)
    - [比較関数](pql/comparison-functions.md)
-   - [配列、リスト、セット関数](pql/array-functions.md)
-   - [マップ関数](pql/map-functions.md)
+   - [配列、リスト、およびセットの関数](pql/array-functions.md)
+   - [map 関数](pql/map-functions.md)
    - [文字列関数](pql/string-functions.md)
    - [オブジェクト関数](pql/object-functions.md)
    - [演算関数](pql/arithmetic-functions.md)
    - [集計関数](pql/aggregation-functions.md)
-   - [日付と時間関数](pql/datetime-functions.md)
+   - [日付および時間関数](pql/datetime-functions.md)
    - [フィルター関数](pql/filter-functions.md)
    - [論理量指定子](pql/logical-quantifiers.md)
    - [その他の関数](pql/misc-functions.md)
 - チュートリアル {#tutorials}
    - [セグメントの作成](tutorials/create-a-segment.md)
-   - [セグメントの作成（ビデオ）](video/create-segment.md)
+   - [セグメントの作成 (ビデオ)](video/create-segment.md)
    - [動的セグメントの作成（ビデオ）](video/create-a-dynamic-segment.md)
    - [マルチエンティティセグメントの作成（ビデオ）](video/create-multi-entity-segments.md)
    - [セグメントの評価](tutorials/evaluate-a-segment.md)
-   - [外部オーディエンスの読み込みと使用](tutorials/using-external-audiences.md)
+   - [外部オーディエンスのインポートと使用](tutorials/using-external-audiences.md)
    - [データを書き出すデータセットの作成](tutorials/create-dataset-export-segment.md)
-   - [セグメントのデータ使用コンプライアンスの実施](tutorials/governance.md)
+   - [セグメントでデータ使用のコンプライアンスを徹底する](tutorials/governance.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+- [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
