@@ -5,9 +5,9 @@ title: XDM ExperienceEventクラス
 topic-legacy: overview
 description: このドキュメントでは、XDM ExperienceEventクラスの概要と、イベントデータモデリングのベストプラクティスを説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: c5b15cf23801457c3846499185d7dfd61cfa5291
+source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1576'
 ht-degree: 4%
 
 ---
@@ -65,8 +65,12 @@ UIを使用して手動でPlatformにデータを取り込む場合、計算フ�
 
 Adobeは、[!DNL XDM ExperienceEvent]クラスで使用するいくつかの標準フィールドグループを提供します。 次に、クラスで一般的に使用されるフィールドグループのリストを示します。
 
+* [[!UICONTROL キャンペーンマーケティングの詳細]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL チャネルの詳細]](../field-groups/event/channel-details.md)
+* [[!UICONTROL コマースの詳細]](../field-groups/event/commerce-details.md)
 * [[!UICONTROL エンドユーザーIDの詳細]](../field-groups/event/enduserids.md)
 * [[!UICONTROL 環境の詳細]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Webの詳細]](../field-groups/event/web-details.md)
 
 ## 付録
 
