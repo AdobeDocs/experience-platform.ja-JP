@@ -5,9 +5,9 @@ title: XDM Individual Profileクラス
 topic-legacy: overview
 description: このドキュメントでは、XDM Individual Profileクラスの概要を説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 | プロパティ | 説明 |
 | --- | --- |
 | `_repo` | 次の[!UICONTROL DateTime]フィールドを含むオブジェクト： <ul><li>`createDate`:データが最初に取り込まれた日時など、リソースがデータストアで作成された日時。</li><li>`modifyDate`:リソースが最後に変更された日時。</li></ul> |
-| `_id` | レコードの一意の識別子。 このフィールドは、個々のレコードの一意性を追跡し、データの重複を防ぎ、ダウンストリームサービスでそのレコードを検索するために使用します。<br><br>このフィールドは、個人に関連するIDで **はな** く、データ自体のレコードを表すことを区別することが重要です。個人に関するIDデータは、代わりに[IDフィールド](../schema/composition.md#identity)に置き換える必要があります。 |
+| `_id` | レコードの一意の文字列識別子。 このフィールドは、個々のレコードの一意性を追跡し、データの重複を防ぎ、ダウンストリームサービスでそのレコードを検索するために使用します。 場合によっては、`_id`を[Universally Unique Identifier(UUID)](https://tools.ietf.org/html/rfc4122)または[Globally Unique Identifier(GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0)にすることができます。<br><br>ソース接続からデータをストリーミングする場合、またはParquetファイルから直接取り込む場合は、プライマリID、タイムスタンプ、レコードタイプなど、レコードを一意にするフィールドの組み合わせを連結して、この値を生成する必要があります。連結された値は、`uri-reference`形式の文字列である必要があります。つまり、コロン文字は削除する必要があります。 その後、連結された値は、SHA-256または任意の別のアルゴリズムを使用してハッシュ化する必要があります。<br><br>このフィールドは、個人 **に関連するIDではなく、データ自体のレコードを表すという点を区別することが重要です**。個人に関するIDデータは、互換性のあるフィールドグループから提供される[IDフィールド](../schema/composition.md#identity)に置き換える必要があります。 |
 | `createdByBatchID` | レコードが作成される原因となった取得済みバッチのID。 |
 | `modifiedByBatchID` | レコードを更新した最後に取得したバッチのID。 |
 | `personID` | このレコードが関連する個人の一意の識別子。 このフィールドは、[IDフィールド](../schema/composition.md#identity)とも指定されていない限り、必ずしも個人に関連するIDを表すわけではありません。 |
