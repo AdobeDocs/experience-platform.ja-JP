@@ -5,7 +5,7 @@ title: エンドユーザーID詳細スキーマフィールドグループ
 topic-legacy: overview
 description: このドキュメントでは、エンドユーザーID詳細スキーマフィールドグループの概要を説明します。
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 7%
@@ -19,7 +19,7 @@ ht-degree: 7%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL エンドAdobeID ] Detailsは、クラスの標準スキーマフィールドグループで [[!DNL XDM ExperienceEvent] す](../../classes/individual-profile.md)。複数のスキーマアプリケーションをまたいで個人のID情報を記述するために使用されます。フィールドグループにはルートレベルの`endUserIDs`オブジェクトが用意されています。このオブジェクト自体には読み取り専用の`_experience`フィールドが含まれ、その値はデータの取り込み時に自動的に更新されます。
+[!UICONTROL エンドAdobeID ] Detailsは、クラスの標準スキーマフィールドグループで [[!DNL XDM ExperienceEvent] す](../../classes/experienceevent.md)。複数のスキーマアプリケーションをまたいで個人のID情報を記述するために使用されます。フィールドグループにはルートレベルの`endUserIDs`オブジェクトが用意されています。このオブジェクト自体には読み取り専用の`_experience`フィールドが含まれ、その値はデータの取り込み時に自動的に更新されます。
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
