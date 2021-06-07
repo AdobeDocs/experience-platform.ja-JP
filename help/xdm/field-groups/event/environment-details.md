@@ -5,7 +5,7 @@ title: 環境詳細スキーマフィールドグループ
 topic-legacy: overview
 description: このドキュメントでは、「 ExperienceEvent環境の詳細」スキーマフィールドグループの概要を説明します。
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 4%
@@ -19,7 +19,7 @@ ht-degree: 4%
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL 環境の詳]  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) 細：デバイスの詳細、ブラウザー情報、ローカル時間、その他の地理情報など、エクスペリエンスイベントに関連する環境の詳細に関する情報を取得するために使用される、クラスの標準スキーマフィールドグループです。
+[!UICONTROL 環境の詳]  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) 細：デバイスの詳細、ブラウザー情報、ローカル時間、その他の地理情報など、エクスペリエンスイベントに関連する環境の詳細に関する情報を取得するために使用される、クラスの標準スキーマフィールドグループです。
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
