@@ -5,7 +5,7 @@ title: Webページの詳細データタイプ
 topic-legacy: overview
 description: このドキュメントでは、Webページの詳細に関するエクスペリエンスデータモデル(XDM)データタイプの概要を説明します。
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 11%
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 [!UICONTROL Webページの詳] 細は、ExperienceEventによって記録される、読み込まれて表示されたWebページに関する詳細を記述する標準のExperience Data Model(XDM)データ型です。
 
-このデータ型は、シングルページWebアプリケーション(SPA)の完全なページの詳細と最初のページ読み込みを目的としています。 読み込まれたページで発生するインタラクションで、新しいページ読み込みをトリガーしない場合は、[Webインタラクション](./web-interactions.md)データ型を参照してください。
+このデータ型は、シングルページWebアプリケーション(SPA)の完全なページの詳細と最初のページ読み込みを目的としています。 読み込まれたページで発生するインタラクションで、新しいページ読み込みをトリガーしない場合は、[Webインタラクション](./web-interaction.md)データ型を参照してください。
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
