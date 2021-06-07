@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: スキーマ
-source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
+source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 43%
+source-wordcount: '305'
+ht-degree: 44%
 
 ---
 
@@ -18,64 +18,73 @@ ht-degree: 43%
 * スキーマ {#schema}
    * [スキーマ合成の基本](schema/composition.md)
    * [データモデリングのベストプラクティス](schema/best-practices.md)
-   * [XDMフィールド型の制約](schema/field-constraints.md)
+   * [XDMフィールドタイプの制約](schema/field-constraints.md)
    * [XDMでの名前空間](./schema/namespaces.md)
    * [XDM フィールド辞書](schema/field-dictionary.md)
    * 業界データモデル{#industries}
       * [概要](./schema/industries/overview.md)
-      * [小売データモデルERD](./schema/industries/retail.md)
-      * [金融サービスデータモデルERD](./schema/industries/financial.md)
-      * [旅行および接客のデータモデルERD](./schema/industries/travel-hospitality.md)
+      * [小売](./schema/industries/retail.md)
+      * [金融サービス](./schema/industries/financial.md)
+      * [旅行と接客業](./schema/industries/travel-hospitality.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [セグメント定義](./classes/segment-definition.md)
 * スキーマフィールドグループ{#field-groups}
    * プロファイルフィールドグループ{#profile}
-      * [IdentityMap](./field-groups/profile/identitymap.md)
       * [人口統計の詳細](./field-groups/profile/demographic-details.md)
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [ロイヤルティの詳細](./field-groups/profile/loyalty-details.md)
       * [個人の連絡先の詳細](./field-groups/profile/personal-contact-details.md)
-      * [セグメントのメンバーシップの詳細](./field-groups/profile/segmentation.md)
-      * [勤務先担当者の詳細](./field-groups/profile/work-contact-details.md)
       * [プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）](./field-groups/profile/consents.md)
+      * [セグメントメンバーシップの詳細](./field-groups/profile/segmentation.md)
+      * [勤務先の詳細](./field-groups/profile/work-contact-details.md)
    * イベントフィールドグループ{#event}
+      * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
+      * [チャネルの詳細](./field-groups/event/channel-details.md)
+      * [コマースの詳細](./field-groups/event/commerce-details.md)
       * [エンドユーザーIDの詳細](./field-groups/event/enduserids.md)
       * [環境の詳細](./field-groups/event/environment-details.md)
+      * [Webの詳細](./field-groups/event/web-details.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
    * [アプリケーション](./data-types/application.md)
-   * [Beacon](./data-types/beacon.md)
+   * [ビーコン](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
    * [コマース](./data-types/commerce.md)
    * [同意と環境設定](./data-types/consents.md)
    * [デバイス](./data-types/device.md)
    * [電子メールアドレス](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
-   * [汎用同意フィールド](./data-types/consent-field.md)
-   * [汎用マーケティング基本設定フィールド](./data-types/marketing-field.md)
+   * [エクスペリエンスチャネル](./data-types/experience-channel.md)
+   * [一般的な同意フィールド](./data-types/consent-field.md)
+   * [汎用マーケティング環境設定フィールド](./data-types/marketing-field.md)
    * [購読付きの汎用マーケティング環境設定フィールド](./data-types/marketing-field-subscriptions.md)
    * [汎用パーソナライゼーション設定フィールド](./data-types/personalization-field.md)
    * [地域](./data-types/geo.md)
-   * [地域サークル](./data-types/geo-circle.md)
+   * [ジオサークル](./data-types/geo-circle.md)
    * [地理座標](./data-types/geo-coordinates.md)
-   * [地域とのやり取りの詳細](./data-types/geo-interaction-details.md)
+   * [地域インタラクションの詳細](./data-types/geo-interaction-details.md)
    * [ジオシェイプ](./data-types/geo-shape.md)
    * [ID](./data-types/identity.md)
+   * [マーケティング](./data-types/marketing.md)
    * [測定](./data-types/measure.md)
    * [Order](./data-types/order.md)
-   * [支払項目](./data-types/payment-item.md)
+   * [支払品目](./data-types/payment-item.md)
    * [ユーザー](./data-types/person.md)
-   * [個人名](./data-types/person-name.md)
+   * [ユーザー名](./data-types/person-name.md)
    * [電話番号](./data-types/phone-number.md)
-   * [配置コンテキスト](./data-types/place-context.md)
+   * [場所コンテキスト](./data-types/place-context.md)
    * [POIの詳細](./data-types/poi-details.md)
-   * [POI相互作用](./data-types/poi-interaction.md)
+   * [POIインタラクション](./data-types/poi-interaction.md)
    * [住所](./data-types/postal-address.md)
+   * [製品リスト項目](./data-types/product-list-item.md)
    * [検索](./data-types/search.md)
    * [購読](./data-types/subscription.md)
-   * [Webインタラクション](./data-types/web-interactions.md)
-   * [ウェブページの詳細](./data-types/webpage-details.md)
-*  SchemasUI  {#ui}
+   * [Web情報](./data-types/web-information.md)
+   * [Webインタラクション](./data-types/web-interaction.md)
+   * [Webページの詳細](./data-types/webpage-details.md)
+*  スキーマUI  {#ui}
    * [概要](./ui/overview.md)
    * [XDM リソースの参照](./ui/explore.md)
    * リソースの作成と編集{#resources}
@@ -83,13 +92,13 @@ ht-degree: 43%
       * [クラス](./ui/resources/classes.md)
       * [フィールドグループ](./ui/resources/field-groups.md)
       * [データタイプ](./ui/resources/data-types.md)
-   * フィールドの定義{#fields}
+   * フィールド{#fields}を定義します。
       * [概要](./ui/fields/overview.md)
       * [必須フィールド](./ui/fields/required.md)
       * [オブジェクトフィールド](./ui/fields/object.md)
       * [配列フィールド](./ui/fields/array.md)
       * [列挙フィールド](./ui/fields/enum.md)
-      * [IDフィールド](./ui/fields/identity.md)
+      * [ID フィールド](./ui/fields/identity.md)
       * [関係フィールド](./ui/fields/relationship.md)
    * [サンプルXDMデータの生成](./ui/sample.md)
    * [XDMスキーマの書き出し](./ui/export.md)
@@ -107,7 +116,7 @@ ht-degree: 43%
    * [サンプルデータ](api/sample-data.md)
    * [監査ログ](api/audit-log.md)
    * [アドホックスキーマ](api/ad-hoc.md)
-   * [Mixins（非推奨）](api/mixins.md)
+   * [Mixin（非推奨）](api/mixins.md)
    * [付録](api/appendix.md)
 * チュートリアル {#tutorials}
    * [スキーマの作成（UI）](tutorials/create-schema-ui.md)
@@ -117,4 +126,4 @@ ht-degree: 43%
    * [アドホックスキーマの作成（API）](tutorials/ad-hoc.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
 * [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
-* [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+* [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
