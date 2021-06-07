@@ -5,9 +5,9 @@ title: XDM Individual Profileクラス
 topic-legacy: overview
 description: このドキュメントでは、XDM Individual Profileクラスの概要を説明します。
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
+source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -42,10 +42,12 @@ ht-degree: 1%
 
 Adobeは、[!DNL XDM Individual Profile]クラスで使用するいくつかの標準フィールドグループを提供します。 次に、クラスで一般的に使用されるフィールドグループのリストを示します。
 
-* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL 人口統計の詳細]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL ロイヤルティの詳細]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL 個人の連絡先の詳細]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL 勤務先の詳細]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）]](../field-groups/profile/consents.md)
 * [[!UICONTROL セグメントメンバーシップの詳細]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL 勤務先の詳細]](../field-groups/profile/work-contact-details.md)
 
 [!DNL XDM Individual Profile]の互換性のあるすべてのフィールドグループの完全なリストについては、[XDM GitHubリポジトリ](https://github.com/adobe/xdm/tree/master/components/mixins/profile)を参照してください。
