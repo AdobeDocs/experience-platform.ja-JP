@@ -5,9 +5,9 @@ title: データ準備マッピング関数
 topic-legacy: overview
 description: このドキュメントでは、データ準備で使用するマッピング関数を紹介します。
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 8193045079bbd8a61c4bc2aee0bf9412e4e2ae31
+source-git-commit: 1133580d6d4d8df352ab901d5106f0bb6c1f2a08
 workflow-type: tm+mt
-source-wordcount: '3934'
+source-wordcount: '3935'
 ht-degree: 18%
 
 ---
@@ -115,7 +115,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 | now | 現在の時刻を取得します。 |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | 現在の Unix 時間を取得します。 |  | timestamp() | timestamp() | 1571850624571 |
 | format | 指定された形式に従って入力日をフォーマットします。 | <ul><li>日付：**必須**&#x200B;形式を設定するZonedDateTimeオブジェクトとしての入力日。</li><li>形式：**必須**&#x200B;日付を変更する形式です。</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;yyyy-MM-dd HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
-| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>タイムスタンプ：**必須**&#x200B;形式を設定するタイムスタンプ。 これはミリ秒単位で記述されます。</li><li>形式：**必須**&#x200B;タイムスタンプの変更先の形式。</li></ul> | dformat(&#x200B;TIMESTAMP, FORMAT) | dformat(1571829875, &quot;dd-MMM-yyyy hh:mm&quot;) | &quot;23-Oct-2019 11:24&quot; |
+| dformat | 指定された形式に従ってタイムスタンプを日付文字列に変換します。 | <ul><li>タイムスタンプ：**必須**&#x200B;形式を設定するタイムスタンプ。 これはミリ秒単位で記述されます。</li><li>形式：**必須**&#x200B;タイムスタンプの変更先の形式。</li></ul> | dformat(&#x200B;TIMESTAMP, FORMAT) | dformat(1571829875000, &quot;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSX&quot;) | &quot;2019-10-23T11:24:35.000Z&quot; |
 | date | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付：**必須**&#x200B;日付を表す文字列。</li><li>形式：**必須**&#x200B;日付の形式を表す文字列。</li><li>DEFAULT_DATE:**必須**&#x200B;指定された日付がnullの場合に返されるデフォルトの日付。</li></ul> | date(DATE, FORMAT, DEFAULT_DATE) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;, now()) | &quot;2019-10-23T11:24Z&quot; |
 | 日付 | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付：**必須**&#x200B;日付を表す文字列。</li><li>形式：**必須**&#x200B;日付の形式を表す文字列。</li></ul> | date(DATE, FORMAT) | date(&quot;2019-10-23 11:24&quot;, &quot;yyyy-MM-dd HH:mm&quot;) | &quot;2019-10-23T11:24Z&quot; |
 | 日付 | 日付文字列を ZonedDateTime オブジェクト（ISO 8601 形式）に変換します。 | <ul><li>日付：**必須**&#x200B;日付を表す文字列。</li></ul> | date(DATE) | date(&quot;2019-10-23 11:24&quot;) | &quot;2019-10-23T11:24Z&quot; |
