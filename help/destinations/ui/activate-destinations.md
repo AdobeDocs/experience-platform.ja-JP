@@ -6,10 +6,10 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
+source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
 workflow-type: tm+mt
-source-wordcount: '2565'
-ht-degree: 13%
+source-wordcount: '2688'
+ht-degree: 12%
 
 ---
 
@@ -48,6 +48,11 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 ![segments-to-destination](../assets/ui/activate-destinations/email-select-segments.png)
 
 ##  マッピング手順 {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="変換の適用"
+>abstract="非ハッシュ化のソースフィールドを使用する場合は、このオプションをオンにして、Adobe Experience Platformでアクティベーション時に自動的にハッシュ化するようにします。"
 
 適用対象：ソーシャルの宛先とGoogleカスタマーマッチの広告の宛先
 
@@ -239,6 +244,12 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 ### 必須属性{#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatorykey"
+>title="必須属性について"
+>abstract="書き出されたすべてのプロファイルに含める必要があるXDMスキーマ属性を選択します。 必須キーのないプロファイルは、宛先にエクスポートされません。 必須キーを選択しない場合、属性に関係なく、対象となるすべてのプロファイルがエクスポートされます。"
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="詳しくは、ドキュメントを参照してください。"
+
 [!DNL Platform]が特定の属性を含むプロファイルのみを書き出すように、属性を必須としてマークできます。 その結果、追加のフィルタリング形式として使用できます。 属性を必須としてマークする必要は&#x200B;**ありません**。
 
 必須の属性を選択しない場合、属性に関係なく、すべての適合済みプロファイルがエクスポートされます。
@@ -246,6 +257,12 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 属性の1つを、スキーマの[一意の識別子](../../destinations/catalog/email-marketing/overview.md#identity)にすることをお勧めします。 必須属性について詳しくは、[Eメールマーケティングの宛先](../../destinations/catalog/email-marketing/overview.md#identity)ドキュメントのIDに関する節を参照してください。
 
 ### 重複排除キー{#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationkey"
+>title="重複排除キーについて"
+>abstract="重複排除キーを選択することで、エクスポートファイル内の同じプロファイルの複数のレコードを排除します。 1つの名前空間または最大2つのXDMスキーマ属性を重複排除キーとして選択します。 重複排除キーを選択しないと、エクスポートファイルでプロファイルエントリが重複する場合があります。"
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="詳しくは、ドキュメントを参照してください。"
 
 >[!IMPORTANT]
 >
@@ -353,7 +370,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 [!DNL Email]名前空間による重複排除を想定すると、書き出しファイルには次のエントリが含まれます。 プロファイルBはセグメントに適合する最新のものなので、書き出されるのはプロファイルBのみです。
 
-| Email* | personalEmail | firstName | lastName |
+| メール* | personalEmail | firstName | lastName |
 |---|---|---|---|
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
