@@ -3,10 +3,10 @@ title: Platform Web SDKでのAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDKでパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースのExperience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 202a77e4f9e8c7d5515ea0a5004b1c339f1d58ba
+source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 3%
+source-wordcount: '918'
+ht-degree: 5%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 3%
 * [Automated Personalizationアクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [エクスペリエンスのターゲット設定アクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [多変量分析テスト(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Recommendationsアクティビティ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [ネイティブのTargetインプレッションおよびコンバージョンレポート](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VECサポート](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -176,13 +177,42 @@ alloy("sendEvent", {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30
+        "profile.age": 30,
+	"entity.id" : "123",
+	"entity.genre" : "Drama"
       }
     }
   }
 }) 
 .then(console.log);
 ```
+
+## 推奨のリクエスト
+
+次の表に、[!DNL Recommendations]属性と、それぞれが[!DNL Platform Web SDK]を介してサポートされているかどうかを示します。
+
+| カテゴリ | 属性 | サポート状況 |
+| --- | --- | --- |
+| Recommendations — デフォルトのエンティティ属性 | entity.id | サポートあり |
+|  | entity.name | サポートあり |
+|  | entity.categoryId | サポートあり |
+|  | entity.pageUrl | サポートあり |
+|  | entity.thumbnailUrl | サポートあり |
+|  | entity.message | サポートあり |
+|  | entity.value | サポートあり |
+|  | entity.inventory | サポートあり |
+|  | entity.brand | サポートあり |
+|  | entity.margin | サポートあり |
+|  | entity.event.detailsOnly | サポートあり |
+| Recommendations — カスタムエンティティの属性 | entity.yourCustomAttributeName | サポートあり |
+| Recommendations — 予約mbox/ページパラメーター | excludedIds | サポートあり |
+|  | cartIds | サポートあり |
+|  | productPurchasedId | サポートあり |
+| カテゴリ親和性のページまたは品目カテゴリ | user.categoryId | サポートあり |
+
+## デバッグ
+
+mboxTraceとmboxDebugは非推奨（廃止予定）となりました。 [[!DNL Platform Web SDK] デバッグ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html)を使用します。
 
 ## 用語
 
