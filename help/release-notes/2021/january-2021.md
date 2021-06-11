@@ -4,14 +4,13 @@ description: Experience Platform リリースノート 2021 年 1 月 27 日（P
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
-translation-type: ht
-source-git-commit: 18712835b2408b24cd2735b19c94bf1b1fe50df1
+exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: ht
 source-wordcount: '712'
 ht-degree: 100%
 
 ---
-
 
 # Adobe Experience Platform リリースノート
 
@@ -38,7 +37,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 ## 宛先 {#destinations}
 
-[!DNL Destinations] は、Adobe Experience Platform からのデータのシームレスなアクティベーションを可能にする宛先プラットフォームとの事前に構築された統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
 
 **新しい宛先**
 
@@ -50,19 +49,19 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 高度な ID 照合 | 外部 ID、電話番号、モバイルデバイス ID などの追加 ID の照合サポートを追加し、[!DNL Facebook Custom Audiences] と [!DNL Google Customer Match] のオーディエンスマッチ率機能を強化しました。 詳しくは、以下のドキュメントを参照してください。 <ul><li>[Facebook の宛先](../../destinations/catalog/social/facebook.md)</li><li>[Google カスタマーマッチの宛先](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[宛先へのプロファイルとセグメントのアクティブ化](../../destinations/ui/activate-destinations.md)</li></ul> |
+| 高度な ID 照合 | 外部 ID、電話番号、モバイルデバイス ID などの追加 ID の照合サポートを追加し、[!DNL Facebook Custom Audiences] と [!DNL Google Customer Match] のオーディエンスマッチ率機能を強化しました。詳しくは、以下のドキュメントを参照してください。 <ul><li>[Facebook の宛先](../../destinations/catalog/social/facebook.md)</li><li>[Google カスタマーマッチの宛先](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[宛先へのプロファイルとセグメントのアクティブ化](../../destinations/ui/activate-destinations.md)</li></ul> |
 
 詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## リアルタイム顧客プロファイル {#profile}
 
-Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。[!DNL Profile] を使用すると、顧客データを統合ビューに統合し、顧客インタラクションごとに、アクションにつながるタイムスタンプ付きのアカウントを提供できます。
+Adobe Experience Platform を使用すると、いつでもどこでもブランドとのやり取りが顧客に対して調整され、一貫性と関連性のあるエクスペリエンスを提供できます。リアルタイム顧客プロファイルでは、オンライン、オフライン、CRM、サードパーティデータなど、複数のチャネルのデータを組み合わせた、各顧客の全体像を確認できます。[!DNL Profile] を使用すると、個別の顧客データを統合ビューに取り込み、顧客インタラクションごとにアクションにつながる、タイムスタンプ付きのアカウントを提供できます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| プロファイルストアからのデータセットの削除 | Experience Platform Data Lake からデータセットを削除すると、データセットはプロファイルストアからも自動的に削除されます。 プロファイルストアからデータセットを明示的に削除する削除リクエストをおこなう場合に、Profile System jobs API エンドポイントを使用する必要がなくなりました。 詳しくは、[プロファイルシステムジョブ API エンドポイントのガイド](../../profile/api/profile-system-jobs.md)を参照してください。 |
+| プロファイルストアからのデータセットの削除 | Experience Platform Data Lake からデータセットを削除すると、データセットはプロファイルストアからも自動的に削除されます。プロファイルストアからデータセットを明示的に削除する削除リクエストをおこなう場合に、Profile System jobs API エンドポイントを使用する必要がなくなりました。詳しくは、[プロファイルシステムジョブ API エンドポイントのガイド](../../profile/api/profile-system-jobs.md)を参照してください。 |
 | 特定のセグメントに対する ID 名前空間の推定数 | プロファイルの推定数について、プレビュー API が次の情報をレポートするようになりました。<ul><li>特定の名前空間のセグメントにおける推定プロファイルの合計数。</li><li>特定の名前空間のプロファイル和集合スキーマにおける推定プロファイルの合計数。</li></ul>詳しくは、[プロファイルプレビュー API エンドポイントのガイド](../../profile/api/preview-sample-status.md)を参照してください。 |
 
 [!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
@@ -77,10 +76,10 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| Adobe Audience Manager ソースコネクタの機能強化 | Audience Manager から個々のファーストパーティセグメントをフィルタリングして選択し、Platform に取り込んだり、ファーストパーティの特性を除外したりできるようになりました。 詳細については、[Audience Manager ソースコネクタの作成](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)に関するチュートリアルを参照してください。 |
-| [!DNL Google BigQuery] ソースコネクタの機能強化 | [!DNL BigQuery] ソースコネクタを使用して、1 回のフロー実行で 10 GB を超えるファイルを取り込めるようになりました。 詳しくは、[[!DNL BigQuery] ソースコネクタの概要](../../sources/connectors/databases/bigquery.md)を参照してください。 |
-| クラウドストレージ用の複雑なデータ型のサポート | クラウドストレージソースコネクタを使用する場合、JSON ファイル内の配列などの複雑なデータ型を取り込めるようになりました。 詳しくは、[UI での](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)、または[  [!DNL Flow Service]  API を使用した](../../sources/tutorials/api/collect/cloud-storage.md)クラウドストレージのデータフロー の作成に関するチュートリアルを参照してください。 |
-| [!DNL Microsoft Dynamics] ソースのサービスプリンシパルキーベースの認証のサポート | パスワードベースの認証の代わりに、サービスプリンシパルキーを使用して [!DNL Dynamics] アカウントを認証できるようになりました。 詳しくは、[[!DNL Dynamics] ソースコネクタの概要](../../sources/connectors/crm/ms-dynamics.md)を参照してください。 |
-| クラウドストレージソースでのカスタム区切り文字の UI のサポート | コンマ（`,`）、タブ（`\t`）、パイプ（`|`）などのカスタム列区切り記号を設定して、UI から区切りファイルを収集できるようになりました。 詳しくは、[クラウドストレージソースコネクタを使用したデータフローの作成](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)のチュートリアルを参照してください。 |
+| Adobe Audience Manager ソースコネクタの機能強化 | Audience Manager から個々のファーストパーティセグメントをフィルタリングして選択し、Platform に取り込んだり、ファーストパーティの特性を除外したりできるようになりました。詳細については、[Audience Manager ソースコネクタの作成](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)に関するチュートリアルを参照してください。 |
+| [!DNL Google BigQuery] ソースコネクタの機能強化 | [!DNL BigQuery] ソースコネクタを使用して、1 回のフロー実行で 10 GB を超えるファイルを取り込めるようになりました。詳しくは、[[!DNL BigQuery] ソースコネクタの概要](../../sources/connectors/databases/bigquery.md)を参照してください。 |
+| クラウドストレージ用の複雑なデータ型のサポート | クラウドストレージソースコネクタを使用する場合、JSON ファイル内の配列などの複雑なデータ型を取り込めるようになりました。詳しくは、[UI での](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)、または[  [!DNL Flow Service] API を使用した](../../sources/tutorials/api/collect/cloud-storage.md)クラウドストレージのデータフロー の作成に関するチュートリアルを参照してください。 |
+| [!DNL Microsoft Dynamics] ソースのサービスプリンシパルキーベースの認証のサポート | パスワードベースの認証の代わりに、サービスプリンシパルキーを使用して [!DNL Dynamics] アカウントを認証できるようになりました。詳しくは、[[!DNL Dynamics] ソースコネクタの概要](../../sources/connectors/crm/ms-dynamics.md)を参照してください。 |
+| クラウドストレージソースでのカスタム区切り文字の UI のサポート | コンマ（`,`）、タブ（`\t`）、パイプ（`|`）などのカスタム列区切り記号を設定して、UI から区切りファイルを収集できるようになりました。詳しくは、[クラウドストレージソースコネクタを使用したデータフローの作成](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)のチュートリアルを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
