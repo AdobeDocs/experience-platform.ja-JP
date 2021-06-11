@@ -8,7 +8,7 @@ feature: データ管理
 source-git-commit: bcb80d7d27ab88e56450ddd99102871db23fbca8
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 94%
    * [サポートされる使用例](fundamentals/supported-use-cases.md)
 * ID {#identity}
    * [概要](identity/overview.md)
-* データの収集 {#data-collection}
+* データ収集 {#data-collection}
    * [自動的に収集された情報](data-collection/automatic-information.md)
    * [リンクのトラッキング](data-collection/track-links.md)
    * [コマースおよび製品データの収集](data-collection/collect-commerce-data.md)
@@ -57,7 +57,7 @@ ht-degree: 94%
    * [Web SDK 拡張機能](extension/web-sdk-extension.md)
    * [アクションタイプ](extension/action-types.md)
    * [データ要素タイプ](extension/data-element-types.md)
-   * [ECIDへのアクセス](extension/accessing-the-ecid.md)
+   * [ECID へのアクセス](extension/accessing-the-ecid.md)
    * [Web SDK 拡張機能リリースノート](extension/web-sdk-ext-release-notes.md)
 * [リリースノート](release-notes.md)
 * [よくある質問](web-sdk-faq.md)
