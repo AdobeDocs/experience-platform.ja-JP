@@ -4,7 +4,7 @@ user-guide-title: データフローガイド
 user-guide-description: データフローは、Platform 間でデータを移動するデータジョブを表します。
 feature: データ管理、データ取得
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '47'
 ht-degree: 100%
 
