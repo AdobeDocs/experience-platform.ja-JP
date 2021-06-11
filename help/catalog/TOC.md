@@ -13,7 +13,7 @@ ht-degree: 100%
 
 # カタログとデータセット {#catalog}
 
-* [カタログサービスの概要](home.md)
+* [Catalog Service の概要](home.md)
 * Catalog Service API {#api}
    * [はじめに](api/getting-started.md)
    * [クエリパラメータ－を使用したカタログデータのフィルター](api/filter-data.md)
