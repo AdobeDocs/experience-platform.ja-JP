@@ -1,14 +1,13 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: 2021年4月22日Experience Platformリリースノート
+description: 2021 年 4 月 21 日（PT）の Experience Platform リリースノート。
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
-translation-type: tm+mt
 source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '885'
-ht-degree: 33%
+ht-degree: 100%
 
 ---
 
@@ -27,24 +26,24 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] データエンジニアがエクスペリエンスデータモデル(XDM)との間でデータのマッピング、変換、検証を行えるようにします。
+[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータのマッピング、変換、検証をおこなうことができます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 既存のデータフローのマッピングの編集のサポート | 既存のデータフローのマッピング・セットを更新できるようになりました。 1回の取り込みにスケジュールされたデータフローのマッピングセットは更新できません。 この機能は、HTTP API、Adobe Analytics、Adobe Audience Manager、および[!DNL Marketo Engage]ではサポートされていません。 詳しくは、UI](../../sources/tutorials/ui/update-dataflows.md)の[ソースデータフローの更新に関するチュートリアルを参照してください。 |
-| ストリーミング取り込みのサポート | ストリーミングソース接続の作成時に、データ準備機能を使用できるようになりました。 詳しくは、UI](../../sources/tutorials/ui/create/streaming/http.md)での[ストリーミングソース接続の作成に関するチュートリアルを参照してください。 |
+| 既存のデータフローのマッピング編集のサポート | 既存のデータフローのマッピングセットを更新できるようになりました。1 回限りの取り込み用にスケジュールされたデータフローのマッピングセットは更新できません。この機能は、HTTP API、Adobe Analytics、Adobe Audience Manager、および [!DNL Marketo Engage] ではサポートされていません。詳しくは、[UI でのソースデータフローの更新](../../sources/tutorials/ui/update-dataflows.md)に関するチュートリアルを参照してください。 |
+| ストリーミング取得のサポート | ストリーミングソース接続を作成する際に、データ準備関数を使用できるようになりました。詳しくは、[UI でのストリーミングソースデータ接続の作成](../../sources/tutorials/ui/create/streaming/http.md)に関するチュートリアルを参照してください。 |
 
-詳しくは、[[!DNL Data Prep] 概要](../../data-prep/home.md)を参照してください。
+詳しくは、[[!DNL Data Prep]  の概要](../../data-prep/home.md)を参照してください。
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
-Experience Data Model(XDM)は、デジタルエクスペリエンスのパワーを向上させるように設計されたオープンソース仕様です。 Adobe Experience Platform 上のサービスと通信するすべてのアプリケーションに共通の構造と定義を提供します。XDM標準に準拠することで、すべての顧客体験データを共通の表現に組み込み、より迅速で統合的な方法でインサイトを提供できます。 顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+エクスペリエンスデータモデル（XDM）は、デジタルエクスペリエンスを向上するよう設計されたオープンソースの仕様です。Adobe Experience Platform 上のサービスと通信するすべてのアプリケーションに共通の構造と定義を提供します。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
 
 | 機能 | 説明 |
 | --- | --- |
-| 業界別スキーマ推奨 | スキーマエディタのUIでクラスおよびスキーマフィールドグループを選択する場合、新しいフィルタを使用して、お客様の業界に応じて、推奨される標準コンポーネントを表示できます。 各業界の使用例でのコンポーネントの相互関連付けの詳細については、[業界データモデル](https://www.adobe.com/go/xdm-industry-erds-en)のドキュメントを参照してください。 |
+| 業界別のスキーマレコメンデーション | スキーマエディターの UI でクラスとスキーマフィールドグループを選択する場合、新しいフィルターを使用すると、特定の業界に基づいて推奨される標準コンポーネントを表示できます。様々な業界の使用例については、これらのコンポーネントの相関関係について詳しくは、[業界データモデル](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html?lang=ja)のドキュメントを参照してください。 |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
@@ -52,49 +51,49 @@ Experience Data Model(XDM)は、デジタルエクスペリエンスのパワー
 
 ### 顧客 AI
 
-リアルタイム顧客データプラットフォームで利用できる顧客AIは、個々のプロファイルの傾向スコア（チャーンやコンバージョンなど）を規模別に生成する場合に使用します。 ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイは必要ありません。
+リアルタイム顧客データプラットフォームで使用できる顧客 AI は、個々のプロファイルのチャーンやコンバージョンなどのカスタム傾向スコアを大規模に生成するために使用します。ビジネスニーズから機械学習の問題への変換、アルゴリズムの選択、トレーニング、デプロイは必要ありません。
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| Adobe Analyticsデータのサポート | Analyticsソースコネクターを介したAdobe Analyticsデータセットをサポートする機能が更新されました。コンシューマーエクスペリエンスイベント(CEE)スキーマに準拠するために、データをETLする必要はありません。 |
-| Adobe Audience Managerデータのサポート | Audience Managerソースコネクタを介したAdobe Audience Managerデータセットをサポートする機能が更新されました。コンシューマーエクスペリエンスイベント(CEE)スキーマに準拠するために、データをETLで送信する必要はありません。 |
-| モデルのパフォーマンスの概要 | 顧客AIのサービスインスタンスインサイトページ内に、[モデルのパフォーマンスの概要タブ](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics)が表示されるようになりました。 [モデルのパフォーマンス]タブには、実際のコンバージョン率と可変コンバージョン率がすべて表示されます。 これにより、各傾向グループで発生していることを判断し、把握できます。 |
+| Adobe Analytics データのサポート | サポート機能が更新され、消費者エクスペリエンスイベント（CEE）スキーマに従ってデータの ETL を実行しなくても、Analytics ソースコネクタ経由で Adobe Analytics データセットをサポートするようになりました。 |
+| Adobe Audience Manager データのサポート | サポート機能が更新され、消費者エクスペリエンスイベント（CEE）スキーマに従ってデータの ETL を実行しなくても、Analytics Manager ソースコネクタ経由で Adobe Audience Manager データセットをサポートするようになりました。 |
+| モデルのパフォーマンスの概要 | 顧客 AI のサービスインスタンスインサイトページに[「モデルパフォーマンスの概要」タブ](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics)が表示されるようになりました。「モデルパフォーマンス」タブには、実際のコンバージョン率とチャーン率がすべて表示されます。これにより、各傾向バケットで何が起きているかを読み解き、把握できます。 |
 
-サポートされるデータセットの詳細については、[[!DNL Intelligent Services] データ準備ドキュメント](../../intelligent-services/data-preparation.md)を参照してください。
+サポートされるデータセットの詳細については、[[!DNL Intelligent Services] データ準備のドキュメント](../../intelligent-services/data-preparation.md)を参照してください。
 
 ### Attribution AI
 
-Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、カスタマージャーニーにわたる個々のマーケティングタッチポイントのマーケティング効果をマーケターが定量化するのに役立ちます。
+Attribution AI は、コンバージョンイベントにつながるタッチポイントの貢献度を明らかにするために使用します。これは、マーケターが、カスタマージャーニーをまたいだ個別マーケティングタッチポイントのマーケティング効果を、マーケターが、定量化する際に役立ちます。
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| Adobe Analyticsデータのサポート | Analyticsソースコネクターを介したAdobe Analyticsデータセットをサポートする機能が更新されました。コンシューマーエクスペリエンスイベント(CEE)スキーマに準拠するために、データをETLする必要はありません。 |
+| Adobe Analytics データのサポート | サポート機能が更新され、消費者エクスペリエンスイベント（CEE）スキーマに従ってデータの ETL を実行しなくても、Analytics ソースコネクタ経由で Adobe Analytics データセットをサポートするようになりました。 |
 
-サポートされるデータセットの詳細については、[[!DNL Intelligent Services] データ準備ドキュメント](../../intelligent-services/data-preparation.md)を参照してください。
+サポートされるデータセットの詳細については、[[!DNL Intelligent Services] データ準備のドキュメント](../../intelligent-services/data-preparation.md)を参照してください。
 
 ## セグメント化サービス {#segmentation}
 
-Adobe Experience Platformセグメントサービスは、セグメントを作成して[!DNL Real-time Customer Profile]データからオーディエンスを生成するためのユーザーインターフェイスおよびRESTful APIを提供します。 これらのセグメントは、Platform 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
+Adobe Experience Platform セグメント化サービスは、セグメントを作成し、[!DNL Real-time Customer Profile] データからオーディエンスを生成できるユーザーインターフェイスおよび RESTful API を提供します。これらのセグメントは、Platform 上で一元的に設定および管理され、アドビのアプリケーションから簡単にアクセスできます。
 
-[!DNL Segmentation Service] 顧客ベース内のマーケティング可能な人々のグループを区別する基準を説明することで、特定のプロファイルのサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
+[!DNL Segmentation Service] は、顧客ベース内のマーケティング可能なユーザーグループを区別する基準を記述することで、プロファイルの特定のサブセットを定義します。セグメントは、レコードデータ（人口統計情報など）や、顧客によるブランドとのやり取りを表す時系列イベントに基づいて作成できます。
 
 **新機能**
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| その他の集計関数 | セグメントビルダーにカウント機能が追加されました。 カウント関数を使用すると、指定したイベントが実行された回数をカウントできます。 カウント関数について詳しくは、[セグメントビルダーガイド](../../segmentation/ui/segment-builder.md#count-functions)のカウント関数の節を参照してください |
+| その他の集計関数 | セグメントビルダーにカウント関数が追加されました。カウント関数を使用すると、指定したイベントがおこなわれた回数をカウントできます。カウント関数について詳しくは、『[セグメントビルダーガイド](../../segmentation/ui/segment-builder.md#count-functions)』の「カウント関数」の節を参照してください。 |
 
-[!DNL Segmentation Service]について詳しくは、[セグメントの概要](../../segmentation/home.md)を参照してください。
+[!DNL Segmentation Service] について詳しくは、[セグメント化の概要](../../segmentation/home.md)を参照してください。
 
 ## [!DNL Sources] {#sources}
 
 Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform には、様々なデータプロバイダーへのソース接続を簡単に設定できる RESTful API とインタラクティブ UI が用意されています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (ベータ) | UIを使って[!DNL Marketo Engage]ソース接続を作成し、B2Bデータをプラットフォームに送り、プラットフォームに接続されたアプリケーションを使ってこのデータを最新の状態に保つことができるようになりました。 詳しくは、[[!DNL Marketo Engage] ソースコネクタのドキュメント](../../sources/connectors/adobe-applications/marketo/marketo.md)を参照してください。 |
-| ベータ版ソースをGAに移行 | 以下の資料はベータ版からGA版に進められている。 <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
+| [!DNL Marketo Engage] （ベータ版） | UI を使用して [!DNL Marketo Engage] ソース接続を作成し、B2B データを Platform に取り込み、Platform 接続アプリケーションでこのデータを最新の状態に保つことができるようになりました。詳しくは、[[!DNL Marketo Engage] ソースコネクタのドキュメント](../../sources/connectors/adobe-applications/marketo/marketo.md)を参照してください。 |
+| ベータ版ソースの一般公開（GA） | 以下のソースがベータ版から一般公開（GA）に昇格しました。 <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
