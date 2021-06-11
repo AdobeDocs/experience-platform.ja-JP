@@ -8,14 +8,14 @@ exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
 workflow-type: tm+mt
 source-wordcount: '1355'
-ht-degree: 33%
+ht-degree: 37%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2021 年 5 月 26 日**
+**リリース日：2021 年 5 月 26 日（PT）**
 
 Adobe Experience Platform の新機能：
 
@@ -70,7 +70,7 @@ Adobe Experience Platformは、毎日のスナップショットでキャプチ�
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
-エクスペリエンスデータモデル(XDM)は、デジタルエクスペリエンスのパワーを向上させるように設計されたオープンソース仕様です。 Adobe Experience Platform 上のサービスと通信するすべてのアプリケーションに共通の構造と定義を提供します。XDM標準に準拠することで、すべての顧客体験データを共通の表現に組み込み、より迅速で統合的な方法でインサイトを提供できます。 顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
+エクスペリエンスデータモデル（XDM）は、デジタルエクスペリエンスを向上するよう設計されたオープンソースの仕様です。Adobe Experience Platform 上のサービスと通信するすべてのアプリケーションに共通の構造と定義を提供します。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
 
 | 機能 | 説明 |
 | --- | --- |
@@ -107,11 +107,11 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
-Experience Platform には、様々なデータプロバイダーへのソース接続を簡単に設定できる RESTful API とインタラクティブ UI が用意されています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
 | 機能 | 説明 |
 | ------- | ----------- |
 | 圧縮ファイル取り込みのUIのサポート | UIのクラウドストレージソースを使用して、圧縮されたJSONまたは区切られたファイルをプレビューおよび取り込めるようになりました。 詳しくは、UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)でのクラウドストレージソース接続用のデータフローの設定に関するチュートリアル([)を参照してください。 |
-| ベータ版ソースの一般公開(GA) | 以下のソースがベータ版からGA版にプロモーションされました。 <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
+| ベータ版ソースの一般公開（GA） | 以下のソースがベータ版から一般公開（GA）に昇格しました。 <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
