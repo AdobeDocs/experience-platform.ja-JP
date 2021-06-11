@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;日付範囲
 solution: Experience Platform
 title: Observability Insights の概要
 topic-legacy: overview
-description: Adobe Experience Platform Observability Insights は、Platform アクティビティに主要指標を公開できる RESTful API です。 これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
+description: Adobe Experience Platform Observability Insights は、Platform アクティビティに主要指標を公開できる RESTful API です。これらの指標は、Platform の使用状況の統計、Platform サービスのヘルスチェック、様々な Platform 機能の過去の傾向とパフォーマンス指標に関する洞察を提供します。
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '223'
 ht-degree: 100%
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # [!DNL Observability Insights] の概要
 
-Adobe Experience Platform [!DNL Observability Insights] では、統計的な指標とイベント通知を使用して、Platform アクティビティを監視できます。 このドキュメントでは、サービスが提供する様々な機能の概要と、詳細についてのドキュメントへのリンクを示します。
+Adobe Experience Platform [!DNL Observability Insights] では、統計的な指標とイベント通知を使用して、Platform アクティビティを監視できます。このドキュメントでは、サービスが提供する様々な機能の概要と、詳細についてのドキュメントへのリンクを示します。
 
 ## [!DNL Observability Insights] API
 
