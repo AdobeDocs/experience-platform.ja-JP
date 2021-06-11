@@ -5,7 +5,7 @@ breadcrumb-title: ETL ガイド
 user-guide-description: データを Platform に取り込むための、安全な高性能コネクターを作成する一般的な手順について説明します。
 feature: データ管理、データ取得
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '47'
 ht-degree: 100%
 
