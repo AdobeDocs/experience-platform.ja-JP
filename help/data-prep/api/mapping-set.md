@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；マッピングセット；
+keywords: Experience Platform;ホーム;人気のあるトピック;data prep;apiガイド;マッピングセット;
 solution: Experience Platform
-title: マッピングセットAPIエンドポイント
+title: マッピングセット API のエンドポイント
 topic-legacy: mapping sets
-description: Adobe Experience PlatformAPIの`/mappingSets`エンドポイントを使用すると、マッピングセットをプログラムによって取得、作成、更新および検証できます。
+description: Adobe Experience Platform API で「/mappingSets」エンドポイントを使用すると、マッピングセットをプログラムにより取得、作成、更新および検証できます。
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '807'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# マッピングでエンドポイントを設定
+# マッピングセットのエンドポイント
 
-マッピング・セットは、ソース・スキーマ内のデータと宛先スキーマ内のデータとのマッピング方法を定義するために使用できます。 データ準備APIの`/mappingSets`エンドポイントを使用して、マッピングセットをプログラムによって取得、作成、更新および検証できます。
+マッピングセットを使用すると、ソーススキーマ内のデータと宛先スキーマのデータとのマッピング方法を定義できます。Data Prep API の `/mappingSets` エンドポイントを使用して、マッピングセットをプログラムにより取得、作成、更新、検証できます。
 
-## リストマッピングセット
+## マッピングセットのリスト
 
-`/mappingSets`エンドポイントにGETリクエストを行うことで、IMS組織のすべてのマッピングセットのリストを取得できます。
+IMS 組織で利用可能なすべてのマッピングセットのリストを取得するには、`/mappingSets` エンドポイントに対して GET リクエストをおこないます。
 
 **API 形式**
 
-`/mappingSets`エンドポイントは、結果のフィルタリングに役立ついくつかのクエリパラメーターをサポートしています。 これらのパラメーターのほとんどはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 ただし、リクエストの一部に`start`パラメーターと`limit`パラメーターの両方を含める必要があります。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
+`/mappingSets` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターのほとんどはオプションですが、高価なオーバーヘッドの削減に役立てるため、使用することを強くお勧めします。ただし、リクエストの一部に `start` パラメーターと `limit` パラメーターの両方を含める必要があります。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -35,14 +34,14 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{LIMIT}` | （**必須**）返されるマッピングセットの数を指定します。 |
-| `{START}` | （**必須**）結果のページのオフセットを指定します。 結果の最初のページを取得するには、値を`start=0`に設定します。 |
-| `{NAME}` | マッピングが名前で設定するフィルター。 |
-| `{ORDER_BY}` | 結果の順序を並べ替えます。 サポートされているフィールドは`createdDate`と`updatedDate`のみです。 プロパティの前に`+`または`-`を付けて、昇順または降順で並べ替えることができます。 |
-| `{EXPAND_SCHEMA}` | 完全な出力スキーマが応答の一部として返されるかどうかを決定するbooleanです。 |
+| `{START}` | （**必須**）結果のページのオフセットを指定します。結果の最初のぺージを取得するには、値を `start=0` に設定します。 |
+| `{NAME}` | マッピングセットを名前でフィルターします。 |
+| `{ORDER_BY}` | 結果の順序を並べ替えます。サポートされているフィールドは `createdDate` と `updatedDate` のみです。プロパティの前に `+` または `-` を付けると、昇順または降順で並べ替えることができます。 |
+| `{EXPAND_SCHEMA}` | 応答の一部として完全な出力スキーマを返すかどうかを決定するブール値です。 |
 
 **リクエスト**
 
-次の要求は、IMS組織内の最後の2つのマッピングセットを取得します。
+次のリクエストは、IMS 組織内の最後の 2 つのマッピングセットを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
@@ -52,7 +51,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
 ```json
 {
@@ -167,7 +166,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 
 ## マッピングセットの作成
 
-`/mappingSets`エンドポイントにPOSTリクエストを行うことで、新しいマッピングセットを作成できます。
+`/mappingSets` エンドポイントに POST リクエストをおこなうと、新しいマッピングセットを作成できます。
 
 **API 形式**
 
@@ -177,7 +176,7 @@ POST /mappingSets
 
 **リクエスト**
 
-次のリクエストは、ペイロードで提供されるパラメーターによって設定された新しいマッピングセットを作成します。
+次のリクエストは、ペイロードで指定されたパラメーターによって設定された、新しいクエリを作成します。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
@@ -218,15 +217,15 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `outputSchema.schemaRef.id` | 参照しているXDMスキーマのID。 |
-| `outputSchema.schemaRef.contentType` | 参照先スキーマの応答形式を決定します。 このフィールドの詳細については、『スキーマレジストリ開発者ガイド[』を参照してください。](../../xdm/api/schemas.md#lookup) |
-| `mappings.sourceType` | ソースタイプは、値がソースから宛先に抽出される方法を示します。 |
-| `mappings.source` | データのマッピング元の場所。 |
-| `mappings.destination` | データのマッピング先の場所。 |
+| `outputSchema.schemaRef.id` | 参照する XDM スキーマの ID。 |
+| `outputSchema.schemaRef.contentType` | 参照されるスキーマの応答形式を決定します。このフィールドについて詳しくは、[スキーマレジストリ開発者ガイド](../../xdm/api/schemas.md#lookup)を参照してください。 |
+| `mappings.sourceType` | ソースタイプは、ソースから宛先に値を抽出する方法を示します。 |
+| `mappings.source` | データのマッピング元となる場所。 |
+| `mappings.destination` | データのマッピング先となる場所。 |
 
 **応答**
 
-正常に応答すると、HTTPステータス200が返され、新しく作成されたマッピングセットに関する情報が返されます。
+応答に成功すると、HTTP ステータス 200 と、新しく作成されたマッピングセットに関する情報が返されます。
 
 ```json
 {
@@ -241,7 +240,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 
 ## マッピングの検証
 
-`/mappingSets/validate`エンドポイントにPOSTリクエストを行うことで、マッピングが正しく機能することを検証できます。
+`/mappingSets/validate` エンドポイントに対して POST リクエストをおこなうと、マッピングが正しく機能することを検証できます。
 
 **API 形式**
 
@@ -251,7 +250,7 @@ POST /mappingSets/validate
 
 **リクエスト**
 
-次の要求は、ペイロードで提供されたマッピングを検証します。
+次のリクエストは、ペイロードで指定されたマッピングを検証します。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/validate \
@@ -292,7 +291,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 
 **応答**
 
-応答が成功すると、HTTPステータス200が返され、提示されたマッピングの検証情報が返されます。
+応答に成功すると、HTTP ステータス 200 と、提案されたマッピングの検証に関する情報が返されます。
 
 ```json
 {
@@ -313,9 +312,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 }
 ```
 
-## マッピングのプレビューデータ
+## マッピングデータのプレビュー
 
-`/mappingSets/preview`エンドポイントにPOSTリクエストを行うと、データのマッピング先をプレビューできます。
+`/mappingSets/preview` エンドポイントに POST リクエストをおこなうと、データのマッピング先をプレビューできます。
 
 **API 形式**
 
@@ -373,7 +372,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 
 **応答** 
 
-正常に応答すると、マッピングされたデータのプレビューと共にHTTPステータス200が返されます。
+応答に成功すると、HTTPステータス 200 と、マッピングされたデータのプレビューが返されます。
 
 ```json
 [
@@ -394,7 +393,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 
 ## マッピングセットの検索
 
-`/mappingSets`エンドポイントへのGET要求のパスにIDを指定することで、特定のマッピングセットを取得できます。 また、このエンドポイントでは、指定したマッピングセットのバージョンに関する詳細を取得するのに役立つ、複数のクエリパラメーターもサポートされています。
+特定のマッピングセットを取得するには、`/mappingSets` エンドポイントに対する GET リクエストのパスで ID を指定します。また、このエンドポイントは、指定されたマッピングセットバージョンに関する詳細を取得するのに役立つ、複数のクエリパラメーターもサポートします。
 
 **API 形式**
 
@@ -406,13 +405,13 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | （**必須**）取得するマッピングセットのID。 |
-| `{EXPAND_SCHEMA}` | 出力クエリーを応答の一部として返すかどうかを決定するbooleanスキーマー。 |
-| `{VERSION}` | 取得するマッピングセットのバージョンを決定する整数クエリパラメーター。 |
+| `{MAPPING_SET_ID}` | （**必須**）取得するマッピングセットの ID。 |
+| `{EXPAND_SCHEMA}` | 出力スキーマを応答の一部として返すかどうかを決定する、ブール型クエリパラメーター。 |
+| `{VERSION}` | 取得するマッピングセットのバージョンを決定する、整数クエリパラメーター。 |
 
 **リクエスト**
 
-次のリクエストは、指定されたマッピングセットに関する詳細情報を取得します。
+次のリクエストは、指定したマッピングセットに関する詳細情報を取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635 \
@@ -422,13 +421,13 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-正常に応答すると、HTTPステータス200が返され、取得するマッピングセットに関する詳細情報が返されます。
+応答に成功すると、HTTP ステータス 200と、取得するマッピングセットに関する詳細情報が返されます。
 
 >[!NOTE]
 >
->次の応答は、領域のために切り捨てられました。
+>次の応答はスペースを節約するために切り捨てられています。
 
 ```json
 {
@@ -585,7 +584,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 ## マッピングセットの更新
 
-マッピングセットを更新するには、`PUT`エンドポイントへの`mappingSets`リクエストのパスにIDを指定します。
+マッピングセットを更新するには、`PUT`リクエストのパスに`mappingSets`エンドポイントに ID を指定します。
 
 **API 形式**
 
@@ -595,7 +594,7 @@ PUT /mappingSets/{MAPPING_SET_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | 更新するマッピングセットのID。 |
+| `{MAPPING_SET_ID}` | 更新するマッピングセットの ID。 |
 
 **リクエスト**
 
@@ -643,11 +642,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **応答** 
 
-正常に応答すると、HTTPステータス200が返され、新たに更新されたマッピングセットに関する詳細情報が返されます。
+応答に成功すると、HTTP ステータス 200 と、新しくなったマッピングセットに関する詳細情報が返されます。
 
 >[!NOTE]
 >
->次の応答は、領域のために切り捨てられました。
+>次の応答はスペースを節約するために切り捨てられています。
 
 ```json
 {
@@ -810,9 +809,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 }
 ```
 
-## マッピング・セットのマッピングのリスト
+## マッピングセットのマッピングのリスト
 
-次のエンドポイントへのGET要求のパスにIDを指定することで、特定のマッピングセットに属するすべてのマッピングを表示できます。
+次のエンドポイントへの GET リクエストのパスに ID を指定することで、特定のマッピングセットに属するすべてのマッピングを表示できます。
 
 **API 形式**
 
@@ -822,11 +821,11 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | マッピングを取得するマッピング・セットのID。 |
+| `{MAPPING_SET_ID}` | マッピングを取得するマッピングセットの ID。 |
 
 **リクエスト**
 
-次の要求は、指定されたマッピングセット内のすべてのマッピングを返します。
+次のリクエストは、指定されたマッピングセット内のすべてのマッピングを返します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings \
@@ -913,9 +912,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 ]
 ```
 
-## マッピングセット内のマッピングを検索します
+## マッピングセット内でのマッピングの検索
 
-マッピングセットに対する特定のマッピングを取得するには、GET要求のパスにIDを指定し、次のエンドポイントに送信します。
+マッピングセットに特定のマッピングを取得するには、次のエンドポイントに対する GET リクエストのパスで ID を指定します。
 
 **API 形式**
 
@@ -925,8 +924,8 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | マッピング情報を検索するマッピングセットのID。 |
-| `{MAPPING_ID}` | 検索するマッピングのID。 |
+| `{MAPPING_SET_ID}` | マッピング情報を検索するマッピングセットの ID。 |
+| `{MAPPING_ID}` | 検索するマッピングの ID。 |
 
 **リクエスト**
 
@@ -940,9 +939,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-応答が成功すると、HTTPステータス200が返され、指定されたマッピングに関する詳細情報が返されます。
+応答が成功すると、指定されたマッピングの詳細情報とともに HTTP ステータス 200 が返されます。
 
 ```json
 {
