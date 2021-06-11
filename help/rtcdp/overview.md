@@ -4,14 +4,13 @@ title: リアルタイムの顧客データプラットフォームの概要
 seo-title: リアルタイムの顧客データプラットフォームの概要
 description: リアルタイム顧客データプラットフォームの概要
 seo-description: リアルタイム顧客データプラットフォームの概要
-translation-type: ht
-source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
+exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: ht
 source-wordcount: '306'
 ht-degree: 100%
 
 ---
-
 
 # リアルタイムの顧客データプラットフォームの概要
 
