@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；サンプルデータ；
+keywords: Experience Platform;ホーム;人気のあるトピック;データ準備;apiガイド;サンプルデータ;
 solution: Experience Platform
-title: サンプルデータAPIエンドポイント
+title: サンプルデータ API エンドポイント
 topic-legacy: sample data
-description: 'Adobe Experience PlatformAPIの「/samples」エンドポイントを使用すると、マッピングされたサンプルデータをプログラムによって取得、作成、更新および検証できます。 '
-translation-type: tm+mt
+description: 'Adobe Experience Platform API で「/samples」エンドポイントを使用し、マッピングのサンプルデータをプログラムにより取得、作成、更新および検証できます。 '
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '401'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 
 # サンプルデータエンドポイント
 
-マッピングセットのスキーマを作成する場合は、サンプルデータを使用できます。 データ準備APIの`/samples`エンドポイントを使用して、サンプルデータをプログラムによって取得、作成および更新できます。
+マッピングセットのスキーマを作成する際に、サンプルデータを使用できます。データ準備 API で `/samples` エンドポイントを使用し、サンプルデータをプログラムにより取得、作成、更新できます。
 
-## リストサンプルデータ
+## サンプルデータのリスト
 
-`/samples`エンドポイントにGETリクエストを行うことで、IMS組織のすべてのマッピングサンプルデータのリストを取得できます。
+IMS 組織で利用可能なすべてのマッピングサンプルデータのリストを取得するには、`/samples` エンドポイントに対して GET リクエストをおこないます。
 
 **API 形式**
 
-`/samples`エンドポイントは、結果のフィルタリングに役立ついくつかのクエリパラメーターをサポートしています。 現在、リクエストには、`start`パラメーターと`limit`パラメーターの両方を含める必要があります。
+`/samples` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。現在、リクエストの一部に `start` パラメーターと `limit` パラメーターの両方を含める必要があります。
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -31,12 +30,12 @@ GET /samples?limit={LIMIT}&start={START}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{LIMIT}` | **必須**. 返されるマッピングサンプルデータの数を指定します。 |
-| `{START}` | **必須**. 結果のページのオフセットを指定します。結果の最初のページを取得するには、値を`start=0`に設定します。 |
+| `{LIMIT}` | **必須**。返されるマッピングサンプルデータの数を指定します。 |
+| `{START}` | **必須**。結果のページのオフセットを指定します。結果の最初のぺージを取得するには、値を `start=0` に設定します。 |
 
 **リクエスト**
 
-次のリクエストは、IMS組織内の最後の2つのマッピングサンプルデータを取得します。
+次のリクエストでは、IMS 組織内の最後の 2 つのマッピングサンプルデータを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
@@ -46,9 +45,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-応答が成功すると、HTTPステータス200が返され、マッピングされたサンプルデータの最後の2つのオブジェクトに関する情報が返されます。
+応答が成功すると、HTTP ステータス 200 と、マッピングサンプルデータの最後の 2 つのオブジェクトに関する情報が返されます。
 
 ```json
 {
@@ -88,7 +87,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 
 ## サンプルデータの作成
 
-`/samples`エンドポイントにPOSTリクエストを行うことで、サンプルデータを作成できます。
+`/samples` エンドポイントに対して POST リクエストをおこなうと、サンプルデータを作成できます。
 
 ```http
 POST /samples
@@ -112,7 +111,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **応答** 
 
-正常に応答すると、新たに作成されたサンプルデータに関する情報と共にHTTPステータス200が返されます。
+応答が成功すると、HTTP ステータス 200 と、新しく作成されたサンプルデータに関する情報が返されます。
 
 ```json
 {
@@ -129,7 +128,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 ## ファイルをアップロードしてサンプルデータを作成する
 
-`/samples/upload`エンドポイントにPOSTリクエストを行うことで、ファイルを使用してサンプルデータを作成できます。
+`/samples/upload` エンドポイントに POST リクエストをおこなうと、ファイルを使用してサンプルデータを作成できます。
 
 **API 形式**
 
@@ -151,7 +150,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **応答** 
 
-正常に応答すると、新たに作成されたサンプルデータに関する情報と共にHTTPステータス200が返されます。
+応答が成功すると、HTTP ステータス 200 と、新しく作成されたサンプルデータに関する情報が返されます。
 
 ```json
 {
@@ -166,9 +165,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 }
 ```
 
-## 特定のサンプルデータオブジェクトを検索する
+## 特定のサンプルデータオブジェクトの検索
 
-`/samples`エンドポイントへのGETリクエストのパスにサンプルデータの特定のオブジェクトのIDを指定すると、サンプルデータの特定のオブジェクトを検索できます。
+`/samples` エンドポイントに対する GET リクエストのパスで ID を指定することで、サンプルデータの特定のオブジェクトを検索できます。
 
 **API 形式**
 
@@ -178,7 +177,7 @@ GET /samples/{SAMPLE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | 取得するサンプルデータオブジェクトのID。 |
+| `{SAMPLE_ID}` | 取得するサンプルデータオブジェクトの ID。 |
 
 **リクエスト**
 
@@ -192,7 +191,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 **応答** 
 
-正常な応答は、取得したいサンプルデータオブジェクトの情報と共にHTTPステータス200を返します。
+応答が成功すると、HTTP ステータス 200 と、取得するサンプルデータオブジェクトの情報が返されます。
 
 ```json
 {
@@ -209,7 +208,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 ## サンプルデータの更新
 
-`/samples`エンドポイントへのPUTリクエストのパスにIDを指定することで、特定のサンプルデータオブジェクトを更新できます。
+特定のサンプルデータオブジェクトを更新するには、`/samples` エンドポイントに対する PUT リクエストのパスで ID を指定します。
 
 **API 形式**
 
@@ -219,11 +218,11 @@ PUT /samples/{SAMPLE_ID}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | 更新するサンプルデータオブジェクトのID。 |
+| `{SAMPLE_ID}` | 更新するサンプルデータオブジェクトの ID。 |
 
 **リクエスト**
 
-次のリクエストは、指定されたサンプルデータを更新します。 特に、姓を「Smith」から「Lee」に更新します。
+次のリクエストは、指定されたサンプルデータを更新します。特に、姓を「Smith」から「Lee」に更新します。
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
@@ -238,9 +237,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
   }'
 ```
 
-**応答**
+**応答** 
 
-応答が成功すると、更新されたサンプルデータに関する情報と共にHTTPステータス200が返されます。
+応答が成功すると、HTTP ステータス 200 と、更新されたサンプルデータに関する情報が返されます。
 
 ```json
 {
