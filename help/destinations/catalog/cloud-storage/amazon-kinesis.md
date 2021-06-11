@@ -1,12 +1,12 @@
 ---
-keywords: AmazonKinesis;kinesis宛先；kinesis
-title: AmazonKinesis接続
-description: Adobe Experience Platformからのデータをストリーミングするために、AmazonKinesisストレージへのリアルタイムの発信接続を作成します。
+keywords: Amazon Kinesis;kinesis宛先；kinesis
+title: Amazon Kinesis接続
+description: Amazon Kinesisストレージへのリアルタイムアウトバウンド接続を作成し、Adobe Experience Platformからデータをストリーミングします。
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
+source-git-commit: 4febcef82c6da4534051cbe68820984814786224
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 6%
+source-wordcount: '624'
+ht-degree: 5%
 
 ---
 
@@ -16,47 +16,86 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->プラットフォームの[!DNL Amazon Kinesis]宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
+>Platformの[!DNL Amazon Kinesis]宛先は現在ベータ版です。 ドキュメントと機能は変更される場合があります。
 
-[!DNL Amazon Web Services]の[!DNL Kinesis Data Streams]サービスを使用すると、大量のデータレコードをリアルタイムで収集して処理できます。
+[!DNL Amazon Web Services]による[!DNL Kinesis Data Streams]サービスを使用すると、大量のデータレコードをリアルタイムで収集し、処理できます。
 
-[!DNL Amazon Kinesis]ストレージへのリアルタイムの送信接続を作成して、Adobe Experience Platformからデータをストリーミングできます。
+[!DNL Amazon Kinesis]ストレージへのリアルタイム送信接続を作成して、Adobe Experience Platformからデータをストリーミングできます。
 
 * [!DNL Amazon Kinesis]について詳しくは、[Amazonのドキュメント](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)を参照してください。
-* プログラム的に[!DNL Amazon Kinesis]に接続するには、[ストリーミング送信先APIのチュートリアル](../../api/streaming-destinations.md)を参照してください。
-* プラットフォームユーザーインターフェイスを使用して[!DNL Amazon Kinesis]に接続するには、以下の節を参照してください。
+* プログラムで[!DNL Amazon Kinesis]に接続するには、『[ストリーミング宛先APIのチュートリアル](../../api/streaming-destinations.md)』を参照してください。
+* Platformユーザーインターフェイスを使用して[!DNL Amazon Kinesis]に接続するには、以下の節を参照してください。
 
-![AmazonKinesisUI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![Amazon KinesisとUI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## 使用例 {#use-cases}
 
-[!DNL Amazon Kinesis]などのストリーミング送信先を使用すると、高価値のセグメントイベントや関連するプロファイル属性を、簡単に任意のシステムにフィードできます。
+[!DNL Amazon Kinesis]などのストリーミング宛先を使用すると、価値の高いセグメント化イベントや関連するプロファイル属性を、選択したシステムに簡単にフィードできます。
 
-例えば、見込み客が、「コンバージョンする傾向が高い」セグメントに該当するホワイトペーパーをダウンロードしたとします。 見込み客が属するセグメントを[!DNL Amazon Kinesis]宛先にマッピングすると、[!DNL Amazon Kinesis]にこのイベントが表示されます。 企業のITシステムで最も効果的に機能すると考えられるように、Do-It-Yoursenアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
+例えば、見込み客がホワイトペーパーをダウンロードし、それを「コンバージョン傾向が高い」セグメントに認定したとします。 見込み客が属するセグメントを[!DNL Amazon Kinesis]の宛先にマッピングすると、このイベントは[!DNL Amazon Kinesis]で受け取ります。 企業のITシステムと最適に連携すると考えられるように、Do-It-Yoursellアプローチを採用し、イベントの上にビジネスロジックを記述することができます。
 
-## エクスポートの種類{#export-type}
+## 書き出しタイプ{#export-type}
 
-**プロファイルベース**  — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](../../ui/activate-destinations.md#select-attributes)。
+**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。宛先のアクティベーションワークフローの属性を選択画面 [から選択します](../../ui/activate-destinations.md#select-attributes)。
+
+## 必要な[!DNL Amazon Kinesis]権限{#required-kinesis-permission}
+
+[!DNL Amazon Kinesis]ストリームにデータを正常に接続してエクスポートするには、次のアクションに対するExperience Platformの権限が必要です。
+
+* `kinesis:ListStreams`
+* `kinesis:PutRecord`
+* `kinesis:PutRecords`
+
+これらの権限は、[!DNL Kinesis]コンソールを通じて設定され、PlatformユーザーインターフェイスでKinesisの宛先を設定すると、Platformによって確認されます。
+
+次の例は、データを[!DNL Kinesis]宛先に正常にエクスポートするために必要な最小限のアクセス権を示しています。
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kinesis:ListStreams",
+                "kinesis:PutRecord",
+                "kinesis:PutRecords"
+            ],
+            "Resource": [
+                "arn:aws:kinesis:us-east-2:901341027596:stream/*"
+            ]
+        }
+    ]
+}
+```
+
+| プロパティ | 説明 |
+| -------- | ----------- |
+| `kinesis:ListStreams` | Amazon Kinesisデータストリームをリストするアクション。 |
+| `kinesis:PutRecord` | 単一のデータレコードをKinesisデータストリームに書き込むアクション。 |
+| `kinesis:PutRecords` | 1回の呼び出しで複数のデータレコードをKinesisデータストリームに書き込むアクション。 |
+
+[!DNL Kinesis]データストリームのアクセス制御の詳細については、以下の[[!DNL Kinesis] ドキュメント](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html)を参照してください。
 
 ## 宛先の接続 {#connect-destination}
 
-[!DNL Amazon]でサポートされるものも含め、クラウドストレージへの接続方法については、[クラウドストレージの接続先ワークフロー](./workflow.md)を参照してください。
+クラウドストレージの宛先への接続方法（[!DNL Amazon]でサポートされる宛先を含む）については、[クラウドストレージの宛先のワークフロー](./workflow.md)を参照してください。
 
-[!DNL Amazon Kinesis]宛先に対して、宛先を作成ワークフローで次の情報を入力します。
+[!DNL Amazon Kinesis]宛先の場合は、宛先の作成ワークフローで次の情報を入力します。
 
-## アカウントステップ{#account-step}
+## アカウントの手順{#account-step}
 
-* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:で、 [!DNL Amazon Web Services]ペアを生成して、プラットフォームに `access key - secret access key`  [!DNL Amazon Kinesis] アカウントへのアクセスを許可します。詳しくは、[AmazonWebサービスドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
-* **region**:データをストリーミングする [!DNL Amazon Web Services] 領域を指定します。
+* **[!DNL Amazon Web Services]アクセスキーと秘密鍵**:で、 [!DNL Amazon Web Services]アカウントへの `access key - secret access key` アクセスをPlatformに付与するペアを生成 [!DNL Amazon Kinesis] します。詳しくは、[Amazon Webサービスのドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
+* **地域**:データをスト [!DNL Amazon Web Services] リーミングする地域を指定します。
 
 ![アカウント手順の入力フィールド](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
 ## 認証手順{#authentication-step}
 
-* **名前**:接続先の名前を指定  [!DNL Amazon Kinesis]
-* **説明**:への接続の説明を入力し [!DNL Amazon Kinesis]ます。
-* **stream**:ア [!DNL Amazon Kinesis] カウント内の既存のデータストリームの名前を指定します。プラットフォームは、このストリームにデータをエクスポートします。
-* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+* **名前**:接続先の名前を指定します。  [!DNL Amazon Kinesis]
+* **説明**:への接続の説明を入力しま [!DNL Amazon Kinesis]す。
+* **ストリーム**:アカウント内の既存のデータストリームの名前を指定 [!DNL Amazon Kinesis] します。プラットフォームは、このストリームにデータを書き出します。
+* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、宛先にデータを書き出す目的を示します。Adobe定義のマーケティングアクションから選択することも、独自のマーケティングアクションを作成することもできます。 マーケティングアクションについて詳しくは、「Adobe Experience Platformの[データガバナンス](../../../data-governance/policies/overview.md) 」ページを参照してください。 個々のAdobe定義マーケティングアクションについて詳しくは、「[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)」を参照してください。
 
 ![認証手順の入力フィールド](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
@@ -74,7 +113,7 @@ ht-degree: 6%
 
 ## エクスポートされたデータ{#exported-data}
 
-書き出した[!DNL Experience Platform]データは、JSON形式で[!DNL Amazon Kinesis]に格納されます。 例えば、次のイベントには、特定のセグメントに該当し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性が含まれています。 この見込み客のIDは、ECIDと電子メールです。
+書き出された[!DNL Experience Platform]データは、JSON形式で[!DNL Amazon Kinesis]に格納されます。 例えば、以下のイベントは、特定のセグメントに適合し、別のセグメントから離脱したオーディエンスの電子メールアドレスプロファイル属性を含みます。 この見込み客のIDはECIDと電子メールです。
 
 ```json
 {
@@ -118,7 +157,7 @@ ht-degree: 6%
 
 >[!MORELIKETHIS]
 >
->* [AmazonKinesisに接続し、Flow Service APIを使用してデータをアクティブにする](../../api/streaming-destinations.md)
-* [Azureイベントハブの宛先](./azure-event-hubs.md)
+>* [Amazon Kinesisに接続し、フローサービスAPIを使用してデータをアクティブ化する](../../api/streaming-destinations.md)
+* [Azure Event Hubsの宛先](./azure-event-hubs.md)
 * [宛先のタイプとカテゴリ](../../destination-types.md)
 
