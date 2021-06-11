@@ -6,7 +6,7 @@ topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform でのデータの使い方を示すデータフローを紹介します。
 exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '238'
 ht-degree: 100%
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 # データフローの概要
 
-Adobe Experience Platform では、様々なソースからデータを取り込み、Experience Platform 内で分析し、様々な目的でアクティブ化します。 プラットフォームでは、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
+Adobe Experience Platform では、様々なソースからデータを取り込み、Experience Platform 内で分析し、様々な目的でアクティブ化します。Platform では、データフローに透明性を提供することで、この非線形の可能性があるデータフローのトラッキングプロセスを容易にします。
 
 ## データフローの使用
 
@@ -24,9 +24,9 @@ Adobe Experience Platform では、様々なソースからデータを取り込
 
 ## データの準備
 
-データ準備を使用すると、データエンジニアはエクスペリエンスデータモデル（XDM）との間でデータのマッピング、変換、検証をおこなうことができます。
+Data Prep を使用すると、データエンジニアはエクスペリエンスデータモデル（XDM）との間でデータのマッピング、変換、検証をおこなうことができます。
 
-データの取り込み後にデータを準備する方法の詳細については、[データ準備の概要](../data-prep/home.md)を参照してください。
+データの取り込み後にデータを準備する方法の詳細については、[Data Prep の概要](../data-prep/home.md)を参照してください。
 
 ## データフローの監視
 
