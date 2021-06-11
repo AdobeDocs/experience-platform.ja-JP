@@ -5,7 +5,7 @@ breadcrumb-title: アクセス制御ガイド
 user-guide-description: Adobe Admin Console の製品プロファイルを活用して、ユーザーを、権限やサンドボックスとリンクさせます。
 feature: アクセス制御
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '100'
 ht-degree: 100%
 
@@ -19,7 +19,7 @@ ht-degree: 100%
    * [概要](ui/overview.md)
    * [製品プロファイルの選択](ui/browse.md)
    * [製品プロファイルに対する権限の管理](ui/permissions.md)
-   * [製品プロファイルの詳細と追加のサービスの管理](ui/details-and-services.md)
+   * [製品プロファイルの詳細と追加サービスの管理](ui/details-and-services.md)
    * [製品プロファイルの新規作成](ui/create-profile.md)
    * [製品プロファイルのユーザー管理](ui/users.md)
 * アクセス制御 API {#api}
