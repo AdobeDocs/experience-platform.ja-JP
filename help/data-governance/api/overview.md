@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: Policy Service API ガイド
 topic-legacy: developer guide
-description: Policy Service API を使用すると、開発者は Experience Platform でデータ使用ラベルとポリシーを管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
+description: Policy Service API を使用すると、開発者は Experience Platform でデータ使用ラベルとポリシーを管理できます。このガイドに従って、API を使用した主な操作の実行方法を学習します。
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '504'
 ht-degree: 100%
 
@@ -16,17 +16,17 @@ ht-degree: 100%
 
 Adobe Experience Platform [!DNL Data Governance]を使用すると、顧客データを管理し、データの使用に適用される規制、制限、ポリシーへのコンプライアンスを確保できます。[!DNL Experience Platform] 内の様々なレベルで重要な役割を果たします（例えば、カタログ化、データ系列、データ使用ラベル、データ使用ポリシー、マーケティングアクションのデータの使用制御など）。
 
-[!DNL Policy Service] API は複数のエンドポイントを提供し、データ使用ラベルとポリシーをプログラム的に管理したり、ポリシー違反のマーケティングアクションを評価したりできます。 これらのエンドポイントの概要を以下に示します。 詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル AP I呼び出しの読み取りなどに関する重要な情報については、[はじめに](./getting-started.md)のガイドを参照してください。
+[!DNL Policy Service] API は複数のエンドポイントを提供し、データ使用ラベルとポリシーをプログラム的に管理したり、ポリシー違反のマーケティングアクションを評価したりできます。これらのエンドポイントの概要を以下に示します。詳しくは、個々のエンドポイントのガイドを参照し、必要なヘッダー、サンプル API 呼び出しの読み取りなどに関する重要な情報については、[はじめに](./getting-started.md)のガイドを参照してください。
 
 使用可能なすべてのエンドポイントと CRUD 操作を表示するには、[[!DNL Policy Service] API swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) を参照してください。
 
 ## ラベル
 
-データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。ベストプラクティスでは、データが [!DNL Experience Platform] に取得されるか [!DNL Platform] で使用できるようになるとすぐに、データのラベル付けが推奨されます。`/labels` エンドポイントを使用して、ラベルの作成、表示、編集、および削除をおこなうことができます。 このエンドポイントの使用方法については、[ラベルエンドポイントガイド](./labels.md)を参照してください。
+データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。ラベルはいつでも適用でき、データの管理方法を柔軟に選択できます。ベストプラクティスでは、データが [!DNL Experience Platform] に取得されるとすぐに、またはデータが [!DNL Platform] で使用できるようになるとすぐに、データのラベル付けが推奨されます。`/labels` エンドポイントを使用して、ラベルの作成、表示、編集、および削除をおこなうことができます。このエンドポイントの使用方法については、[ラベルエンドポイントガイド](./labels.md)を参照してください。
 
 ## マーケティングアクション
 
-マーケティングアクション （マーケティングの使用例とも呼ばれます）は、[!DNL Data Governance] フレームワークのコンテキストにおいては [!DNL Experience Platform] データコンシューマーが実行できるアクションです。組織は、このアクションに対してデータ使用を制限する必要があります。マーケティングアクションの操作について詳しくは、[マーケティングアクションエンドポイントガイド](./marketing-actions.md)を参照してください。
+マーケティングアクション（マーケティングの使用例とも呼ばれます）は、[!DNL Data Governance] フレームワークのコンテキストにおいては [!DNL Experience Platform] データコンシューマーが実行できるアクションです。組織は、このアクションに対してデータ使用を制限する必要があります。マーケティングアクションの操作について詳しくは、[マーケティングアクションエンドポイントガイド](./marketing-actions.md)を参照してください。
 
 ## ポリシー
 
