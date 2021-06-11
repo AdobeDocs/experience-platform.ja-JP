@@ -16,17 +16,17 @@ ht-degree: 100%
 
 Adobe Experience Platform は、顧客体験を促進する完全なソリューションを構築し、管理するための、市場で最も強力で柔軟性の高いオープンシステムです。[!DNL Experience Platform] を使用すると、あらゆるシステムから顧客データおよびコンテンツを一元化および標準化して、データサイエンスと機械学習を適用し、パーソナライズされた豊富なエクスペリエンスのデザインおよび配信を大幅に強化できます。
 
-RESTful API に基づいて構築された [!DNL Experience Platform] は、システムの全機能を開発者に公開し、使い慣れたツールを使用してエンタープライズソリューションを簡単に統合できるようにサポートします。 また、[!DNL Experience Platform] は、パートナーが必要に応じて独自の製品とテクノロジーを構築し、統合することもサポートします。 この機能と柔軟性により、[!DNL Experience Platform] は市場での独自性を発揮します。パートナー、顧客、開発者のコミュニティに、「エクスペリエンスビジネス」を推進する革新を構築するための基盤を提供します。あらゆる角度からの顧客の表示と個々の好みから引き出され、継続的に改善され完全にパーソナライズされたエクスペリエンスを提供することで、顧客の期待を上回る成果を得ることができます。
+RESTful API に基づいて構築された [!DNL Experience Platform] は、システムの全機能を開発者に公開し、使い慣れたツールを使用してエンタープライズソリューションを簡単に統合できるようにサポートします。また、[!DNL Experience Platform] は、パートナーが必要に応じて独自の製品とテクノロジーを構築し、統合することもサポートします。この機能と柔軟性により、[!DNL Experience Platform] は市場での独自性を発揮します。パートナー、顧客、開発者のコミュニティに、「エクスペリエンスビジネス」を推進する革新を構築するための基盤を提供します。あらゆる角度からの顧客の表示と個々の好みから引き出され、継続的に改善され完全にパーソナライズされたエクスペリエンスを提供することで、顧客の期待を上回る成果を得ることができます。
 
 ## [!DNL Experience Platform]ドキュメント
 
-[!DNL Experience Platform] ドキュメントは、様々な機能やサービスのために複数の形式で提供されています。使用可能なドキュメントの種類について詳しくは、[プラットフォームドキュメントの概要](documentation/overview.md)を参照してください。
+[!DNL Experience Platform] ドキュメントは、様々な機能やサービスのために複数の形式で提供されています。使用可能なドキュメントの種類について詳しくは、[Platform ドキュメントの概要](documentation/overview.md)を参照してください。
 
 特定の [!DNL Platform] サービスに関する詳細な情報を得るには、[ドキュメントランディングページ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja)に戻って、適切なガイドを選択します。
 
 ### [!DNL Experience Platform] 上で構築されたアプリケーションサービスのドキュメント
 
-アドビは、Experience Platform 上に複数のアプリケーションサービスを構築しました。 これらのサービスのドキュメントは、以下にリンクされている独自のガイドで確認できます。
+アドビは、Experience Platform 上に複数のアプリケーションサービスを構築しました。これらのサービスのドキュメントは、以下にリンクされている独自のガイドで確認できます。
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=ja)
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=ja)
@@ -35,7 +35,7 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 
 ## [!DNL Experience Platform] チュートリアル
 
-取り込み用のデータの準備から高度な機械学習アルゴリズムまで、すべてをカバーするステップバイステップのチュートリアルに従うことで、[!DNL Platform] をすばやく簡単に開始できます。 これらのチュートリアルは、[!DNL Experience Platform] のドキュメントに記載されている情報を補完する目的でデザインされているので、最良の結果を得るためには、チュートリアルの利用中はドキュメントを手元に置いておくことをお勧めします。
+取り込み用のデータの準備から高度な機械学習アルゴリズムまで、すべてをカバーするステップバイステップのチュートリアルに従うことで、[!DNL Platform] をすばやく簡単に開始できます。これらのチュートリアルは、[!DNL Experience Platform] のドキュメントに記載されている情報を補完する目的でデザインされているので、最良の結果を得るためには、チュートリアルの利用中はドキュメントを手元に置いておくことをお勧めします。
 
 使い始めるには、[Experience Platform のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)のランディングページにアクセスしてください。
 
