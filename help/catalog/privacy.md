@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;ホーム;人気のトピック;Data Lake のプライバシー;ID 名前空間;プライバシー;Data Lake
 solution: Experience Platform
-title: Data Lake でのプライバシーリクエストの処理
+title: データレイクでのプライバシーリクエストの処理
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service は、法的および組織のプライバシーに関する規則に従って、個人データへのアクセス、販売のオプトアウト、または削除を求める顧客のリクエストを処理します。このドキュメントでは、データレイクに保存された顧客データのプライバシーリクエストの処理に関する基本的な概念について説明します。
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
@@ -43,13 +43,13 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 
 ## ID データをデータセットに追加
 
-[!DNL Data Lake] のプライバシーリクエストを作成する場合、データを見つけて処理するには、有効な ID 値（および関連する名前空間）を各顧客に指定する必要があります。 したがって、プライバシーリクエストの対象となるすべてのデータセットには、関連する XDM スキーマに ID 記述子が含まれている必要があります。
+[!DNL Data Lake] のプライバシーリクエストを作成する場合、データを見つけて処理するには、有効な ID 値（および関連する名前空間）を各顧客に指定する必要があります。したがって、プライバシーリクエストの対象となるすべてのデータセットには、関連する XDM スキーマに ID 記述子が含まれている必要があります。
 
 >[!NOTE]
 >
 >現在、ID 記述子メタデータ（アドホックデータセットなど）をサポートしないスキーマに基づくデータセットは、プライバシーリクエストで処理できません。
 
-この節では、既存のデータセットの XDM スキーマに ID 記述子を追加する手順を説明します。 ID 記述子を持つデータセットが既に存在する場合は、[次の節](#nested-maps)に進みます。
+この節では、既存のデータセットの XDM スキーマに ID 記述子を追加する手順を説明します。ID 記述子を持つデータセットが既に存在する場合は、[次の節](#nested-maps)に進みます。
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 
 ### UI の使用 {#identity-ui}
 
-[!DNL Experience Platform ]ユーザーインターフェイスでは、**[!UICONTROL スキーマ]**&#x200B;ワークスペースを使用して、既存の XDM スキーマを編集できます。 スキーマに ID 記述子を追加するには、リストからスキーマを選択し、[!DNL Schema Editor] チュートリアルの[ID フィールドとしてスキーマフィールドを設定する](../xdm/tutorials/create-schema-ui.md#identity-field)の手順に従います。
+[!DNL Experience Platform ]ユーザーインターフェイスでは、**[!UICONTROL スキーマ]**&#x200B;ワークスペースを使用して、既存の XDM スキーマを編集できます。スキーマに ID 記述子を追加するには、リストからスキーマを選択し、[!DNL Schema Editor] チュートリアルの[ID フィールドとしてスキーマフィールドを設定する](../xdm/tutorials/create-schema-ui.md#identity-field)の手順に従います。
 
 スキーマ内の適切なフィールドを ID フィールドとして設定したら、[プライバシーリクエストの送信](#submit)に関する次の節に進むことができます。
 
@@ -70,9 +70,9 @@ Adobe Experience Platform [!DNL Identity Service] は、システムやデバイ
 
 >[!NOTE]
 >
->この節では、データセットの XDM スキーマの固有の URI ID 値を把握していることを前提としています。 この値がわからない場合は、[!DNL Catalog Service] API を使用して取得できます。 デベロッパーガイドの[はじめに](./api/getting-started.md)の節を読んだ後、[!DNL Catalog] オブジェクトの[リスト](./api/list-objects.md)または[検索](./api/look-up-object.md)で概説されている手順に従ってください。スキーマ ID は `schemaRef.id` の下にあります。
+>この節では、データセットの XDM スキーマの固有の URI ID 値を把握していることを前提としています。この値がわからない場合は、[!DNL Catalog Service] API を使用して取得できます。デベロッパーガイドの[はじめに](./api/getting-started.md)の節を読んだ後、[!DNL Catalog] オブジェクトの[リスト](./api/list-objects.md)または[検索](./api/look-up-object.md)で概説されている手順に従ってください。スキーマ ID は `schemaRef.id` の下にあります。
 >
-> この節には、スキーマレジストリ API の呼び出しが含まれます。 `{TENANT_ID}` やコンテナの概念を把握するなど、API の使用に関する重要な情報については、デベロッパーガイドの[はじめに](../xdm/api/getting-started.md)の節を参照してください。
+> この節には、スキーマレジストリ API の呼び出しが含まれます。`{TENANT_ID}` やコンテナの概念を把握するなど、API の使用に関する重要な情報については、デベロッパーガイドの[はじめに](../xdm/api/getting-started.md)の節を参照してください。
 
 [!DNL Schema Registry] API の `/descriptors` エンドポイントに POST リクエストをおこなうことで、データセットの XDM スキーマに ID 記述子を追加できます。
 
@@ -114,11 +114,11 @@ curl -X POST \
 | `xdm:sourceProperty` | 記述子を適用するスキーマフィールドへのパス。 |
 | `xdm:namespace` | [!DNL Privacy Service] が認識する[標準 ID 名前空間](../privacy-service/api/appendix.md#standard-namespaces)の 1 つ、または組織が定義するカスタム名前空間。 |
 | `xdm:property` | `xdm:namespace` で使用される名前空間に応じて、「xdm:id」または「xdm:code」を指定します。 |
-| `xdm:isPrimary` | オプションのブール値。true の場合は、フィールドがプライマリ ID であることを示します。 スキーマには、1 つのプライマリ ID のみを含めることができます。含めない場合のデフォルトは false です。 |
+| `xdm:isPrimary` | オプションのブール値。true の場合は、フィールドがプライマリ ID であることを示します。スキーマには、1 つのプライマリ ID のみを含めることができます。含めない場合のデフォルトは false です。 |
 
 **応答** 
 
-正常な応答は、HTTP ステータス 201（作成済み）と、新しく作成された記述子の詳細を返します。
+応答が成功すると、HTTP ステータス 201（作成済み）と、新しく作成された記述子の詳細が返されます。
 
 ```json
 {
@@ -144,7 +144,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->プライバシーリクエストが完了するまでに要する時間を確定することはできません。 リクエストの処理中に Data Lake 内で変更が発生した場合、それらのレコードが処理されるか同課は保証されません。
+>プライバシーリクエストが完了するまでに要する時間を確定することはできません。リクエストの処理中に Data Lake 内で変更が発生した場合、それらのレコードが処理されるか同課は保証されません。
 
 ### UI の使用
 
