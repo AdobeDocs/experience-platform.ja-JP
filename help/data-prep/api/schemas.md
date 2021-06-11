@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；スキーマ;
+keywords: Experience Platform;ホーム;人気のあるトピック;データ準備;api ガイド;スキーマ;
 solution: Experience Platform
-title: スキーマAPIエンドポイント
+title: スキーマ API エンドポイント
 topic-legacy: schemas
-description: 'Adobe Experience PlatformAPIの「/スキーマ」エンドポイントを使用すると、プラットフォームのMapperで使用するスキーマをプログラムによって取得、作成、更新できます。 '
-translation-type: tm+mt
+description: 'Adobe Experience Platform API で「/schemas」エンドポイントを使用し、Platform のマッパーで使用するスキーマをプログラムにより取得、作成および更新できます。 '
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '613'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
@@ -16,19 +15,19 @@ ht-degree: 9%
 
 # スキーマエンドポイント
 
-スキーマをMapperと組み合わせて使用すると、Adobe Experience Platformに取り込んだデータが取り込むデータと一致することを確認できます。 `/schemas`エンドポイントを使用すると、プラットフォームのMapperで使用するカスタムスキーマをプログラムで作成、リスト、取得できます。
+マッパーでスキーマを使用すると、Adobe Experience Platform に取り込んだデータが、取り込みたいデータと一致していることを確認できます。`/schemas` エンドポイントを使用すると、Platform のマッパーで使用するカスタムスキーマをプログラムによって作成、リスト化、取得できます。
 
 >[!NOTE]
 >
->このエンドポイントを使用して作成されたスキーマは、マッパーとマッピングセットでのみ使用されます。 他のプラットフォームサービスがアクセスできるスキーマを作成するには、『スキーマレジストリ開発者ガイド](../../xdm/api/schemas.md)』を読んでください。[
+>このエンドポイントを使用して作成されたスキーマは、マッパーとマッピングセットでのみ使用されます。他の Platform サービスからアクセス可能なスキーマを作成するには、『[スキーマレジストリ開発者ガイド](../../xdm/api/schemas.md)』を参照してください。
 
-## すべてのスキーマの取得
+## すべてのスキーマを取得
 
-`/schemas`エンドポイントにGETリクエストを行うことで、IMS組織で使用可能なすべてのマッパースキーマのリストを取得できます。
+IMS 組織で利用可能なすべてのマッパースキーマのリストを取得するには、`/schemas` エンドポイントに対して GET リクエストをおこないます。
 
 **API 形式**
 
-`/schemas`エンドポイントは、結果のフィルタリングに役立ついくつかのクエリパラメーターをサポートしています。 これらのパラメーターのほとんどはオプションですが、高価なオーバーヘッドを削減するために、このパラメーターの使用を強くお勧めします。 ただし、リクエストの一部に`start`パラメーターと`limit`パラメーターの両方を含める必要があります。 複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
+`/schemas` エンドポイントは、結果を絞り込むのに役立つ、複数のクエリパラメーターをサポートしています。これらのパラメーターのほとんどはオプションですが、高価なオーバーヘッドの削減に役立てるため、使用することを強くお勧めします。ただし、リクエストの一部に `start` パラメーターと `limit` パラメーターの両方を含める必要があります。複数のパラメーターを使用する場合は、アンパサンド（`&`）で区切ります。
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -38,14 +37,14 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `{LIMIT}` | **必須**. 返されるスキーマの数を指定します。 |
-| `{START}` | **必須**. 結果のページのオフセットを指定します。結果の最初のページを取得するには、値を`start=0`に設定します。 |
-| `{NAME}` | 名前に基づいてスキーマをフィルターします。 |
-| `{ORDER_BY}` | 結果の順序を並べ替えます。 サポートされているフィールドは `modifiedDate` と `createdDate` です。プロパティの前に`+`または`-`を付けて、昇順または降順で並べ替えることができます。 |
+| `{LIMIT}` | **必須**。返されるスキーマの数を指定します。 |
+| `{START}` | **必須**。結果のページのオフセットを指定します。結果の最初のぺージを取得するには、値を `start=0` に設定します。 |
+| `{NAME}` | 名前に基づいてスキーマをフィルタリングします。 |
+| `{ORDER_BY}` | 結果の順序を並べ替えます。サポートされているフィールドは `modifiedDate` と `createdDate` です。プロパティの前に `+` または `-` を付けると、昇順または降順で並べ替えることができます。 |
 
 **リクエスト**
 
-次のリクエストは、IMS組織で作成された最後の2つのスキーマを取得します。
+次のリクエストでは、IMS 組織用に作成された最後の 2 つのスキーマを取得します。
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
@@ -57,11 +56,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 **応答**
 
-次の応答は、要求されたスキーマのリストと共にHTTPステータス200を返します。
+次の応答は、HTTP ステータス 200 と、リクエストされたスキーマのリストを返します。
 
 >[!NOTE]
 >
->次の応答は、領域のために切り捨てられました。
+>次の応答はスペースを節約するために切り捨てられています。
 
 ```json
 {
@@ -134,17 +133,17 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 ## スキーマの作成
 
-`/schemas`エンドポイントにPOSTリクエストを行うことで、検証対象のスキーマを作成できます。 スキーマを作成する方法は3つあります。[JSONスキーマ](https://json-schema.org/)を送信、サンプルデータを使用、または既存のXDMスキーマを参照。
+`/schemas` エンドポイントに対して POST リクエストを作成することで、検証に使用するスキーマを作成できます。スキーマの作成方法は 3 つあります。サンプルデータを使用して [JSON スキーマ](https://json-schema.org/)を送信するか、既存の XDM スキーマを参照します。
 
 ```http
 POST /schemas
 ```
 
-### JSONスキーマの使用
+### JSON スキーマの使用
 
 **リクエスト**
 
-次のリクエストでは、[JSONスキーマ](https://json-schema.org/)を送信してスキーマを作成できます。
+次のリクエストでは、[JSON スキーマ](https://json-schema.org/)を送信してスキーマを作成できます。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -165,7 +164,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 **応答**
 
-正常に応答すると、新しく作成したスキーマに関する情報と共にHTTPステータス200が返されます。
+応答に成功すると、HTTP ステータス 200 と、新しく作成されたスキーマに関する情報が返されます。
 
 ```json
 {
@@ -200,11 +199,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `sampleId` | スキーマ元のサンプルデータのID。 |
+| `sampleId` | スキーマのベースとして使用するサンプルデータの ID。 |
 
-**応答**
+**応答** 
 
-正常に応答すると、新しく作成したスキーマに関する情報と共にHTTPステータス200が返されます。
+応答に成功すると、HTTP ステータス 200 と、新しく作成されたスキーマに関する情報が返されます。
 
 ```json
 {
@@ -244,11 +243,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 }
 ```
 
-### XDMスキーマを参照
+### XDM スキーマを参照します。
 
 **リクエスト**
 
-次のリクエストでは、既存のXDMスキーマを参照してスキーマを作成できます。
+次のリクエストでは、既存の XDM スキーマを参照することでスキーマを作成できます。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -270,16 +269,16 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `name` | 作成するスキーマの名前。 |
-| `schemaRef.id` | 参照しているスキーマのID。 |
-| `schemaRef.contentType` | 参照先スキーマの応答形式を決定します。 このフィールドの詳細については、[スキーマレジストリ開発者ガイド](../../xdm/api/schemas.md#lookup)を参照してください。 |
+| `schemaRef.id` | 参照するスキーマの ID。 |
+| `schemaRef.contentType` | 参照されるスキーマの応答形式を決定します。このフィールドについて詳しくは、『[スキーマレジストリ開発者ガイド](../../xdm/api/schemas.md#lookup)』を参照してください。 |
 
-**応答**
+**応答** 
 
-正常に応答すると、新しく作成したスキーマに関する情報と共にHTTPステータス200が返されます。
+応答に成功すると、HTTP ステータス 200 と、新しく作成されたスキーマに関する情報が返されます。
 
 >[!NOTE]
 >
->次の応答は、領域のために切り捨てられました。
+>次の応答はスペースを節約するために切り捨てられています。
 
 ```json
 {
@@ -296,7 +295,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 ## ファイルのアップロードを使用したスキーマの作成
 
-変換元のJSONファイルをアップロードしてスキーマを作成できます。
+変換元の JSON ファイルをアップロードすることで、スキーマを作成できます。
 
 **API 形式**
 
@@ -306,7 +305,7 @@ POST /schemas/upload
 
 **リクエスト**
 
-次のリクエストでは、アップロードされたJSONファイルからスキーマを作成できます。
+次のリクエストでは、アップロードされた JSON ファイルからスキーマを作成できます。
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
@@ -318,9 +317,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
  -F 'file=@{PATH_TO_FILE}.json'
 ```
 
-**応答**
+**応答** 
 
-正常に応答すると、新しく作成したスキーマに関する情報と共にHTTPステータス200が返されます。
+応答に成功すると、HTTP ステータス 200 と、新しく作成されたスキーマに関する情報が返されます。
 
 ```json
 {
@@ -336,7 +335,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 
 ## 特定のスキーマの取得
 
-`/schemas`エンドポイントにGETリクエストを送信し、取得するスキーマのIDをリクエストパスに指定することで、特定のスキーマに関する情報を取得できます。
+`/schemas` エンドポイントに対して GET リクエストを送信し、取得するスキーマの ID をリクエストパスで指定することで、特定のスキーマに関する情報を取得できます。
 
 **API 形式**
 
@@ -346,7 +345,7 @@ GET /schemas/{SCHEMA_ID}
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `{SCHEMA_ID}` | 検索するスキーマのID。 |
+| `{SCHEMA_ID}` | 検索するスキーマの ID。 |
 
 **リクエスト**
 
@@ -360,9 +359,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答**
+**応答** 
 
-成功した場合、指定されたスキーマに関する情報と共にHTTPステータス200が返されます。
+応答が成功すると、指定されたスキーマの情報とともに HTTP ステータス 200 が返されます。
 
 ```json
 {
