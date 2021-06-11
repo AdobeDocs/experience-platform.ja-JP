@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム;人気のトピック;製品プロファ
 solution: Experience Platform
 title: Adobe Admin Console で新しい製品プロファイルを作成
 topic-legacy: user guide
-description: このドキュメントでは、Adobe Admin Console で新しい製品プロファイルを作成するための手順について説明します。 新しいプロファイルの作成を開始するには、「製品プロファイル」タブに移動し、「新しいプロファイル」をクリックします。
+description: このドキュメントでは、Adobe Admin Console で新しい製品プロファイルを作成するための手順について説明します。新しいプロファイルの作成を開始するには、「製品プロファイル」タブに移動し、「新しいプロファイル」をクリックします。
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
 ht-degree: 100%
 
