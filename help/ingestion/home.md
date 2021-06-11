@@ -3,7 +3,7 @@ keywords: Experience Platform;ホーム;人気のトピック;データ取り込
 solution: Experience Platform
 title: データ取り込みの概要
 topic-legacy: overview
-description: このドキュメントでは、データをプラットフォームに取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
+description: このドキュメントでは、データを Platform に取り込む 3 つの主な方法を紹介し、詳細については、それぞれの概要ドキュメントへのリンクを示します。
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -26,11 +26,11 @@ Adobe Experience Platform では、複数のソースからのデータを統合
 
 詳しくは、[バッチ取り込みの概要](./batch-ingestion/overview.md)を参照してください。
 
-## ストリーミング取り込み
+## ストリーミング取得
 
-ストリーミング取り込みでは、クライアントサイドおよびサーバーサイドのデバイスから、リアルタイムで [!DNL Experience Platform] にデータを送信できます。[!DNL Platform] では、受信したエクスペリエンスデータをストリーミングするためのデータインレットの使用をサポートしています。このデータインレットは、データレイク内のストリーミング対応データセットで保持されます。データインレットは、収集したデータを自動的に認証するように設定でき、信頼できるソースからのデータであることを確認できます。
+ストリーミング取得では、クライアントサイドおよびサーバーサイドのデバイスから、リアルタイムで [!DNL Experience Platform] にデータを送信できます。[!DNL Platform] では、受信したエクスペリエンスデータをストリーミングするためのデータインレットの使用をサポートしています。このデータインレットは、データレイク内のストリーミング対応データセットで保持されます。データインレットは、収集したデータを自動的に認証するように設定でき、信頼できるソースからのデータであることを確認できます。
 
-詳しくは、[ストリーミング取り込みの概要](./streaming-ingestion/overview.md)を参照してください。
+詳しくは、[ストリーミング取得の概要](./streaming-ingestion/overview.md)を参照してください。
 
 ## ソース
 
@@ -42,10 +42,10 @@ Adobe Experience Platform では、複数のソースからのデータを統合
 
 ## 次の手順とその他のリソース
 
-このドキュメントでは、[!DNL Experience Platform] での [!DNL Data Ingestion] の様々な側面について簡単に説明しました。各取り込み方法の概要ドキュメントを引き続き参照して、それぞれの機能、ユースケース、ベストプラクティスをよく理解してください。また、次の取り込みの概要ビデオを見ることで、理解を補うこともできます。 取り込んだレコードのメタデータを [!DNL Experience Platform] で追跡する方法について詳しくは、[Catalog Service の概要](../catalog/home.md) を参照してください。
+このドキュメントでは、[!DNL Experience Platform] での [!DNL Data Ingestion] の様々な側面について簡単に説明しました。各取り込み方法の概要ドキュメントを引き続き参照して、それぞれの機能、ユースケース、ベストプラクティスをよく理解してください。また、次の取り込みの概要ビデオを見ることで、理解を補うこともできます。取り込んだレコードのメタデータを [!DNL Experience Platform] で追跡する方法について詳しくは、[Catalog Service の概要](../catalog/home.md) を参照してください。
 
 >[!WARNING]
 >
->次のビデオで使用されている「統合プロファイル」という用語は、今は使われていません。 [!DNL "Profile"]または[!DNL "Real-time Customer Profile"]という用語は、[!DNL Experience Platform] のドキュメントで使用されている正しい用語です。最新の機能については、ドキュメントを参照してください。
+>次のビデオで使用されている「統合プロファイル」という用語は、今は使われていません。[!DNL "Profile"]または[!DNL "Real-time Customer Profile"]という用語は、[!DNL Experience Platform] のドキュメントで使用されている正しい用語です。最新の機能については、ドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
