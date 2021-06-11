@@ -6,7 +6,7 @@ topic-legacy: user guide
 description: このドキュメントでは、Adobe Experience Platform の UI で製品プロファイルのユーザーを管理する方法を示します。
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '206'
 ht-degree: 100%
 
