@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Adobe Experience Platform [!DNL Data Governance]を使用すると、データセットとフィールドにデータ使用ラベルを付けて、関連するデータ使用ポリシーに従って各データを分類できます。
 
-このドキュメントでは、[!DNL Experience Platform] のデータ使用ラベルの概要を説明します。 データガバナンスフレームワークのより詳しい説明については、このガイドを読む前に、[データガバナンスの概要](../home.md)を参照してください。
+このドキュメントでは、[!DNL Experience Platform] のデータ使用ラベルの概要を説明します。データガバナンスフレームワークのより詳しい説明については、このガイドを読む前に、[データガバナンスの概要](../home.md)を参照してください。
 
 ## データ使用ラベルについて
 
@@ -48,11 +48,11 @@ Platform での自動適用の動作方法について詳しくは、[自動ポ�
 
 ### UI の使用
 
-[!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースでは、組織のコアとカスタムラベルの表示と管理が可能です。 **[!DNL Datasets]** ワークスペースでは、データセットとフィールドにラベルを適用できます。詳しくは、『[ラベルのユーザガイド](user-guide.md)』を参照してください。
+[!DNL Experience Platform] UI の&#x200B;**[!UICONTROL ポリシー]**&#x200B;ワークスペースでは、組織のコアとカスタムラベルの表示と管理が可能です。**[!DNL Datasets]** ワークスペースでは、データセットとフィールドにラベルを適用できます。詳しくは、『[ラベルのユーザガイド](user-guide.md)』を参照してください。
 
 ### API の使用
 
-[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) の `/labels` エンドポイントを使用すると、カスタムラベルの作成など、データ使用ラベルをプログラムに従って管理できます。 詳しくは、『[ラベルのエンドポイントガイド](../api/labels.md)』を参照してください。
+[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) の `/labels` エンドポイントを使用すると、カスタムラベルの作成など、データ使用ラベルをプログラムに従って管理できます。詳しくは、『[ラベルのエンドポイントガイド](../api/labels.md)』を参照してください。
 
 [データセットサービス API ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml)は、データセットとフィールドのラベルの管理に使用します。詳しくは、[データセットラベルの管理](./dataset-api.md)のガイドを参照してください。
 
