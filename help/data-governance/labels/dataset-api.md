@@ -3,10 +3,10 @@ keywords: Experience Platform;ホーム人気のトピック;データセット 
 solution: Experience Platform
 title: 'API を使用したデータセットのデータ使用ラベルの管理 '
 topic-legacy: developer guide
-description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。 これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
+description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '961'
 ht-degree: 100%
 
@@ -14,15 +14,15 @@ ht-degree: 100%
 
 # API を使用したデータセットのデータ使用ラベルの管理
 
-[[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) では、データセットの使用ラベルを適用および編集できます。 これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] API とは別のものです。
+[[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) では、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] API とは別のものです。
 
-このドキュメントでは、[!DNL Dataset Service API] を使用してデータセットとフィールドのラベルを管理する方法を説明します。 API 呼び出しを使用してデータ使用ラベル自体を管理する手順については、[!DNL Policy Service API] の[ラベルエンドポイントガイド](../api/labels.md)を参照してください。
+このドキュメントでは、[!DNL Dataset Service API] を使用してデータセットとフィールドのラベルを管理する方法を説明します。API 呼び出しを使用してデータ使用ラベル自体を管理する手順については、[!DNL Policy Service API] の[ラベルエンドポイントガイド](../api/labels.md)を参照してください。
 
 ## はじめに
 
 このガイドを読む前に、カタログ開発者ガイドの「[はじめに](../../catalog/api/getting-started.md)」で説明されている手順に従って、[!DNL Platform] API を呼び出すために必要な資格情報を収集します。
 
-このドキュメントで説明しているエンドポイントを呼び出すには、特定のデータセットに対して一意の `id` 値を持つ必要があります。 この値がない場合は、[カタログオブジェクトのリスト](../../catalog/api/list-objects.md)に関するガイドを参照し、既存のデータセットの ID を確認してください。
+このドキュメントで説明しているエンドポイントを呼び出すには、特定のデータセットに対して一意の `id` 値を持つ必要があります。この値がない場合は、[カタログオブジェクトのリスト](../../catalog/api/list-objects.md)に関するガイドを参照し、既存のデータセットの ID を確認してください。
 
 ## データセットのラベルの検索 {#look-up}
 
@@ -94,11 +94,11 @@ PUT /datasets/{DATASET_ID}/labels
 
 **リクエスト**
 
-次の PUT リクエストは、データセットの既存のラベルと、そのデータセット内の特定のフィールドを更新します。 ペイロードに指定されるフィールドは、POST リクエストに必要なフィールドと同じです。
+次の PUT リクエストは、データセットの既存のラベルと、そのデータセット内の特定のフィールドを更新します。ペイロードに指定されるフィールドは、POST リクエストに必要なフィールドと同じです。
 
 >[!IMPORTANT]
 >
->`/datasets/{DATASET_ID}/labels` エンドポイントに対して PUT リクエストをおこなう場合は、有効な `If-Match` ヘッダーを指定する必要があります。 必要なヘッダーの使い方の詳細については、[付録の節](#if-match)を参照してください。
+>`/datasets/{DATASET_ID}/labels` エンドポイントに対して PUT リクエストをおこなう場合は、有効な `If-Match` ヘッダーを指定する必要があります。必要なヘッダーの使い方の詳細については、[付録の節](#if-match)を参照してください。
 
 ```shell
 curl -X PUT \
@@ -127,11 +127,11 @@ curl -X PUT \
 | プロパティ | 説明 |
 | --- | --- |
 | `labels` | データセットに追加するデータ使用ラベルのリスト。 |
-| `optionalLabels` | ラベルを追加するデータセット内の個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。<br/><br/>`option`：フィールドの [!DNL Experience Data Model]（XDM）属性を含むオブジェクト。次の 3 つのプロパティが必要です。<ul><li>id</code>：フィールドに関連付けられているスキーマのURI $id</code>値。</li><li>contentType</code>：スキーマのコンテンツタイプとバージョン番号。XDM ルックアップリクエストに対しては、有効な <a href="../../xdm/api/getting-started.md#accept">Accept ヘッダー</a>のいずれかの形式でおこなう必要があります。</li><li>schemaPath</code>：データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`：フィールドに追加するデータ使用ラベルのリスト。 |
+| `optionalLabels` | ラベルを追加するデータセット内の個々のフィールドのリスト。この配列の各アイテムは、次のプロパティを持つ必要があります。<br/><br/>`option`：フィールドの [!DNL Experience Data Model]（XDM）属性を含むオブジェクト。次の 3 つのプロパティが必要です。<ul><li>id</code>：フィールドに関連付けられているスキーマのURI $id</code>値。</li><li>contentType</code>：スキーマのコンテンツタイプとバージョン番号。XDM ルックアップリクエストに対しては、有効な <a href="../../xdm/api/getting-started.md#accept">Accept ヘッダー</a>のいずれかの形式でおこなう必要があります。</li><li>schemaPath</code>：データセットのスキーマ内のフィールドへのパス。</li></ul>`labels`：フィールドに追加するデータ使用ラベルのリスト。 |
 
 **応答** 
 
-正常な応答では、データセットに追加されたラベルが返されます。
+応答が成功すると、データセットに追加されたラベルが返されます。
 
 ```json
 {
@@ -169,7 +169,7 @@ DELETE /datasets/{DATASET_ID}/labels
 
 >[!IMPORTANT]
 >
->`/datasets/{DATASET_ID}/labels` エンドポイントに DELETE リクエストをおこなう場合は、有効な `If-Match` ヘッダーを指定する必要があります。 必要なヘッダーの使い方の詳細については、[付録の節](#if-match)を参照してください。
+>`/datasets/{DATASET_ID}/labels` エンドポイントに DELETE リクエストをおこなう場合は、有効な `If-Match` ヘッダーを指定する必要があります。必要なヘッダーの使い方の詳細については、[付録の節](#if-match)を参照してください。
 
 ```shell
 curl -X DELETE \
@@ -183,7 +183,7 @@ curl -X DELETE \
 
 **応答** 
 
-正常な応答は、ラベルが削除されたことを示す HTTP ステータス 200（OK）を返します。別の呼び出しで、データセットの[既存のラベルを参照](#look-up)し、これを確認できます。
+応答が成功すると、ラベルが削除されたことを示す HTTP ステータス 200（OK）が返されます。別の呼び出しで、データセットの[既存のラベルを参照](#look-up)し、これを確認できます。
 
 ## 次の手順
 
@@ -205,6 +205,6 @@ curl -X DELETE \
 
 >[!NOTE]
 >
->現在、該当するデータセットにラベルが存在しない場合、新しいラベルは POST リクエストを通じてのみ追加でき、`If-Match` ヘッダーは不要です。 ラベルがデータセットに追加されると、`etag` 値が割り当てられ、後でラベルの更新や削除に使用できます。
+>現在、該当するデータセットにラベルが存在しない場合、新しいラベルは POST リクエストを通じてのみ追加でき、`If-Match` ヘッダーは不要です。ラベルがデータセットに追加されると、`etag` 値が割り当てられ、後でラベルの更新や削除に使用できます。
 
-データセットラベルエンティティの最新バージョンを取得するには、`/datasets/{DATASET_ID}/labels` エンドポイントに対して [GET リクエスト](#look-up)を実行します。現在の値は、応答の `etag` ヘッダーの下で返されます。 既存のデータセットラベルを更新する場合、最新の `etag` 値を取得するためにデータセットのルックアップリクエストを実行してから、その値を後続の PUT または DELETE リクエストの `If-Match` ヘッダーで使用することをお勧めします。
+データセットラベルエンティティの最新バージョンを取得するには、`/datasets/{DATASET_ID}/labels` エンドポイントに対して [GET リクエスト](#look-up)を実行します。現在の値は、応答の `etag` ヘッダーの下で返されます。既存のデータセットラベルを更新する場合、最新の `etag` 値を取得するためにデータセットのルックアップリクエストを実行してから、その値を後続の PUT または DELETE リクエストの `If-Match` ヘッダーで使用することをお勧めします。
