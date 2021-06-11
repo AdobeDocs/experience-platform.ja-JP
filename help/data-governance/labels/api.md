@@ -3,11 +3,11 @@ keywords: Experience Platform;ホーム;人気のトピック;データガバナ
 solution: Experience Platform
 title: 'API を使用したデータ使用ラベルの管理 '
 topic-legacy: developer guide
-description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。 これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
+description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1145'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 86%
 
 ## はじめに
 
-このガイドを読む前に、『カタログ開発者ガイド』の[はじめに](../../catalog/api/getting-started.md)に説明されている手順に従って、[!DNL Platform] APIを呼び出すために必要な資格情報を収集します。
+このガイドを読む前に、カタログ開発者ガイドの「[はじめに](../../catalog/api/getting-started.md)」で説明されている手順に従って、[!DNL Platform] API を呼び出すために必要な資格情報を収集します。
 
 このドキュメントで説明する [!DNL Dataset Service] エンドポイントを呼び出すには、特定のデータセットに対する一意の `id` 値が必要です。この値がない場合は、[カタログオブジェクトのリスト](../../catalog/api/list-objects.md)に関するガイドを参照し、既存のデータセットの ID を確認してください。
 
@@ -52,7 +52,7 @@ curl -X GET \
 
 **応答** 
 
-正常に応答すると、システムから取得したカスタムラベルのリストが返されます。 上記のリクエスト例は `/labels/custom` に対しておこなわれたので、以下の応答はカスタムラベルのみを示しています。
+応答が成功すると、システムから取得したカスタムラベルのリストが返されます。上記のリクエスト例は `/labels/custom` に対しておこなわれたので、以下の応答はカスタムラベルのみを示しています。
 
 ```json
 {
@@ -138,7 +138,7 @@ curl -X GET \
 
 **応答** 
 
-正常に応答すると、カスタムラベルの詳細を返します。
+応答が成功すると、カスタムラベルの詳細が返されます。
 
 ```json
 {
@@ -174,7 +174,7 @@ PUT /labels/custom/{LABEL_NAME}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LABEL_NAME}` | カスタムラベルの `name` プロパティ。この名前のカスタムラベルが存在しない場合は、新しいラベルが作成されます。 存在する場合は、そのラベルが更新されます。 |
+| `{LABEL_NAME}` | カスタムラベルの `name` プロパティ。この名前のカスタムラベルが存在しない場合は、新しいラベルが作成されます。存在する場合は、そのラベルが更新されます。 |
 
 **リクエスト**
 
@@ -197,14 +197,14 @@ curl -X PUT \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | ラベルの一意の文字列識別子。 この値は検索目的で使用され、ラベルをデータセットとフィールドに適用します。そのため、短く簡潔にすることをお勧めします。 |
-| `category` | ラベルのカテゴリ。 カスタムラベル用に独自のカテゴリを作成することもできますが、ラベルを UI に表示する場合は `Custom` を使用することを強くお勧めします。 |
+| `name` | ラベルの一意の文字列識別子。この値は検索目的で使用され、ラベルをデータセットとフィールドに適用します。そのため、短く簡潔にすることをお勧めします。 |
+| `category` | ラベルのカテゴリ。カスタムラベル用に独自のカテゴリを作成することもできますが、ラベルを UI に表示する場合は `Custom` を使用することを強くお勧めします。 |
 | `friendlyName` | 表示目的で使用される、ラベルのわかりやすい名前。 |
 | `description` | （オプション）詳細なコンテキストを提供するラベルの説明です。 |
 
-**応答** 
+**応答**
 
-正常な応答は、カスタムラベルの詳細を返します。既存のラベルが更新された場合は HTTP コード 200 (OK)、新しいラベルが作成された場合は 201（作成済み）を返します。
+応答が成功すると、カスタムラベルの詳細が返されます。既存のラベルが更新された場合は HTTP コード 200（OK）、新しいラベルが作成された場合は 201（作成済み）が返されます。
 
 ```json
 {
@@ -228,7 +228,7 @@ curl -X PUT \
 }
 ```
 
-## データセット のラベルを検索 {#look-up-dataset-labels}
+## データセットのラベルの検索 {#look-up-dataset-labels}
 
 [!DNL Dataset Service] API に GET リクエストをおこなうことで、既存のデータセットに適用されているデータ使用ラベルを調べることができます。
 
@@ -253,7 +253,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 成功した応答は、データセットに適用されたデータ使用ラベルを返します。
 
@@ -279,11 +279,11 @@ curl -X GET \
 | プロパティ | 説明 |
 | --- | --- |
 | `labels` | データセットに適用されたデータ使用ラベルのリスト。 |
-| `optionalLabels` | データ使用ラベルが適用されたデータセット内の個々のフィールドのリスト。次のサブプロパティが必要です。<br/><br/>`option`:フィールドの[!DNL Experience Data Model] (XDM)属性を含むオブジェクト。 次の 3 つのプロパティが必要です。<ul><li>`id`:フィール `$id` ドに関連付けられたスキーマのURI値。</li><li>`contentType`:スキーマの形式とバージョンを示します。詳しくは、XDM APIガイドの「[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)」の節を参照してください。</li><li>`schemaPath`:問題のスキーマプロパティへのパス(JSONポインター構文で [記述](../../landing/api-fundamentals.md#json-pointer) )。</li></ul>`labels`：フィールドに追加するデータ使用ラベルのリスト。 |
+| `optionalLabels` | データ使用ラベルが適用されたデータセット内の個々のフィールドのリスト。次のサブプロパティが必要です。<br/><br/>`option`：フィールドの[!DNL Experience Data Model] （XDM）属性を含むオブジェクト。次の 3 つのプロパティが必要です。<ul><li>`id`：フィールドに関連付けられているスキーマの URI `$id` 値。</li><li>`contentType`：スキーマの形式とバージョンを示します。詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。</li><li>`schemaPath`：問題のスキーマプロパティへのパス（[JSON ポインター](../../landing/api-fundamentals.md#json-pointer)構文で記述）。</li></ul>`labels`：フィールドに追加するデータ使用ラベルのリスト。 |
 
-- id:データセットの基となるXDMスキーマのURI $id値。
-- contentType:スキーマの形式とバージョンを示します。 詳しくは、XDM APIガイドの「[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)」の節を参照してください。
-- schemaPath:問題のスキーマプロパティへのパス（[JSONポインター](../../landing/api-fundamentals.md#json-pointer)構文で記述）。
+- id：データセットの基となる XDM スキーマの URI $id 値。
+- contentType：スキーマの形式とバージョンを示します。詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。
+- schemaPath：問題のスキーマプロパティへのパス（[JSON ポインター](../../landing/api-fundamentals.md#json-pointer)構文で記述）。
 
 ## データセットにラベルを適用する {#apply-dataset-labels}
 
@@ -330,11 +330,11 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `labels` | データセットに追加するデータ使用ラベルのリスト。 |
-| `optionalLabels` | ラベルを追加するデータセット内の個々のフィールドのリスト。 この配列の各アイテムは、次のプロパティを持つ必要があります。<br/><br/>`option`：フィールドの [!DNL Experience Data Model]（XDM）属性を含むオブジェクト。次の 3 つのプロパティが必要です。<ul><li>`id`:フィール `$id` ドに関連付けられたスキーマのURI値。</li><li>`contentType`:スキーマの形式とバージョンを示します。詳しくは、XDM APIガイドの「[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)」の節を参照してください。</li><li>`schemaPath`:問題のスキーマプロパティへのパス(JSONポインター構文で [記述](../../landing/api-fundamentals.md#json-pointer) )。</li></ul>`labels`：フィールドに追加するデータ使用ラベルのリスト。 |
+| `optionalLabels` | ラベルを追加するデータセット内の個々のフィールドのリスト。この配列の各アイテムは、次のプロパティを持つ必要があります。<br/><br/>`option`：フィールドの [!DNL Experience Data Model]（XDM）属性を含むオブジェクト。次の 3 つのプロパティが必要です。<ul><li>`id`：フィールドに関連付けられているスキーマの URI `$id` 値。</li><li>`contentType`：スキーマの形式とバージョンを示します。詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../xdm/api/getting-started.md#versioning)の節を参照してください。</li><li>`schemaPath`：問題のスキーマプロパティへのパス（[JSON ポインター](../../landing/api-fundamentals.md#json-pointer)構文で記述）。</li></ul>`labels`：フィールドに追加するデータ使用ラベルのリスト。 |
 
 **応答** 
 
-正常な応答では、データセットに追加されたラベルが返されます。
+応答が成功すると、データセットに追加されたラベルが返されます。
 
 ```json
 {
@@ -377,15 +377,15 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
-正常な応答は、ラベルが削除されたことを示す HTTP ステータス 200（OK）を返します。別の呼び出しで、データセットの[既存のラベルを参照](#look-up-dataset-labels)し、これを確認できます。
+応答が成功すると、ラベルが削除されたことを示す HTTP ステータス 200（OK）が返されます。別の呼び出しで、データセットの[既存のラベルを参照](#look-up-dataset-labels)し、これを確認できます。
 
 ## 次の手順
 
 このドキュメントでは、API を使用したデータ使用ラベルの管理方法を学びました。
 
-データセットレベルとフィールドレベルでデータ使用ラベルを追加したら、データを [!DNL Experience Platform] に取り込み始めます。詳しくは、[データ取得ドキュメント](../../ingestion/home.md)を参照してください。
+データセットレベルとフィールドレベルでデータ使用ラベルを追加したら、データを [!DNL Experience Platform] に取り込み始めることができます。詳しくは、[データ取得ドキュメント](../../ingestion/home.md)を参照してください。
 
 適用したラベルに基づいてデータ使用状況ポリシーを定義することもできます。詳しくは、「[データ使用状況ポリシーの概要](../policies/overview.md)」を参照してください。
 
