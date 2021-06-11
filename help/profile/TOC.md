@@ -6,7 +6,7 @@ feature: プロファイル
 source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 91%
+ht-degree: 95%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 91%
 * [[!DNL Profile] の概要](home.md)
 * [プロファイルの概要（ビデオ）](video/profile-overview.md)
 * [[!DNL Profile] とセグメント化ガードレール](guardrails.md)
-* [[!DNL Profile] dashboard](ui/profile-dashboard.md)
+* [[!DNL Profile] ダッシュボード](ui/profile-dashboard.md)
 * [!DNL Profile] API {#api}
    * [概要](api/overview.md)
    * [はじめに](api/getting-started.md)
@@ -30,7 +30,7 @@ ht-degree: 91%
    * [[!DNL Profile] 詳細なカスタマイズ](ui/profile-customization.md)
 * （アルファ）計算済み属性 {#computed-attributes}
    * [概要](computed-attributes/overview.md)
-   * [Computed attributes API](computed-attributes/ca-api.md)
+   * [計算属性 API](computed-attributes/ca-api.md)
    * [計算属性フィールドの設定](computed-attributes/configure-api.md)
    * [サンプル式](computed-attributes/expressions.md)
 * 結合ポリシー {#merge-policies}
@@ -43,7 +43,7 @@ ht-degree: 91%
    * [結合スキーマの概要（動画）](video/union-schemas-overview.md)
 * チュートリアル {#tutorials}
    * [ [!DNL Profile] へのデータの追加](tutorials/add-profile-data.md)
-   * [ サービス [!DNL Profile] & [!DNL Identity] 用データセットの設定](tutorials/dataset-configuration.md)
+   * [サービス [!DNL Profile] & [!DNL Identity] 用データセットの設定](tutorials/dataset-configuration.md)
    * [データセットの重複レポートの生成](tutorials/dataset-overlap-report.md)
    * [その他のチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=ja)
 * [プライバシーリクエストの処理](privacy.md)
