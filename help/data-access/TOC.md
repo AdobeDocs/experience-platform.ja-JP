@@ -5,7 +5,7 @@ breadcrumb-title: データアクセスガイド
 user-guide-description: 取り込まれたデータセットを Platform 内で検出し、それらのデータにアクセスします。
 feature: データ管理、データ取得
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '41'
 ht-degree: 100%
 
