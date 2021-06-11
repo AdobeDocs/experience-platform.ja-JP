@@ -38,7 +38,7 @@ ht-degree: 100%
    - [データ取得の監視](quality/monitor-data-ingestion.md)
    - [エラー診断の取得](quality/error-diagnostics.md)
    - [失敗したバッチの取得](quality/retrieve-failed-batches.md)
-   - [ストリーミング取り込みの検証](quality/streaming-validation.md)
+   - [ストリーミング取得検証](quality/streaming-validation.md)
    - [データ取得通知](quality/subscribe-events.md)
 - [ソースコネクタ](source-connectors.md)
 - [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
