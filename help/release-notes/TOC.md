@@ -6,14 +6,14 @@ user-guide-description: Adobe Experience Platform の月次リリースノート
 source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 
 # Adobe Experience Platform リリースノート {#release-notes}
 
-* [最新のPlatformリリースノート](latest/latest.md)
+* [現在の Platform リリースノート](latest/latest.md)
 * 2021 {#2021}
    * [2021 年 5 月](2021/may-2021.md)
    * [2021 年 4 月](2021/april-2021.md)
@@ -21,7 +21,7 @@ ht-degree: 92%
    * [2021 年 2 月](2021/february-2021.md)
    * [2021 年 1 月](2021/january-2021.md)
 * 2020 年 {#2020}
-   * [2020 年 12 月 日](2020/december-2020.md)
+   * [2020 年 12 月](2020/december-2020.md)
    * [2020 年 11 月](2020/november-2020.md)
    * [2020 年 10 月](2020/october-2020.md)
    * [2020 年 9 月](2020/september-2020.md)
@@ -34,7 +34,7 @@ ht-degree: 92%
    * [2020 年 2 月](2020/february-2020.md)
    * [2020 年 1 月](2020/january-2020.md)
 * 2019 {#2019}
-   * [12 月 2019 日（PT）](2019/december-2019.md)
+   * [2019 年 12 月](2019/december-2019.md)
    * [2019 年 11 月](2019/november-2019.md)
    * [2019 年 9 月](2019/september-2019.md)
    * [2019 年 7 月](2019/july-2019.md)
