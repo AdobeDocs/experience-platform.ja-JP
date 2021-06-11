@@ -33,7 +33,7 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 ### プロファイルガードレール
 
-Experience Platform は、リアルタイム顧客プロファイルがサポートできない[エクスペリエンスデータモデル（XDM）スキーマ](../xdm/home.md)の作成を回避するための一連のガードレールを提供します。 これには、パフォーマンスの低下を引き起こすソフトリミットや、エラーやシステムの破損を引き起こすハードリミットが含まれます。ガイドラインのリストや使用例など、詳細については、[プロファイルガードレール](guardrails.md)のドキュメントをお読みください。
+Experience Platform は、リアルタイム顧客プロファイルがサポートできない[エクスペリエンスデータモデル（XDM）スキーマ](../xdm/home.md)の作成を回避するための一連のガードレールを提供します。これには、パフォーマンスの低下を引き起こすソフトリミットや、エラーやシステムの破損を引き起こすハードリミットが含まれます。ガイドラインのリストや使用例など、詳細については、[プロファイルガードレール](guardrails.md)のドキュメントをお読みください。
 
 ### （ベータ版）プロファイルダッシュボード {#profile-dashboard}
 
@@ -79,7 +79,7 @@ UI の結合スキーマへのアクセス方法など、結合スキーマに�
 
 >[!IMPORTANT]
 >
->計算済み属性の機能はアルファ版です。 ドキュメントと機能は変更される場合があります。
+>計算済み属性の機能はアルファ版です。ドキュメントと機能は変更される場合があります。
 
 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。これらの関数は自動的に計算され、セグメント化、アクティブ化およびパーソナライズ機能で使用できます。これらの計算により、ライフタイム購入値、購入間隔、アプリケーションを開いた数などに関する質問に簡単に答えることができます。情報が必要になるたびに複雑な計算を手動で実行する必要はありません。Adobe Experience Platform 内での計算済み属性の役割の理解など、計算済み属性の詳細については、まず[計算属性の概要](computed-attributes/overview.md)をお読みください。
 
@@ -105,7 +105,7 @@ Adobe Experience Platform [!DNL Segmentation Service] は、個々の顧客向�
 
 ### プロファイル取得指標
 
-観察性インサイトを使用すると、Adobe Experience Platform で主要指標を公開できます。様々な [!DNL Platform] 機能の [!DNL Experience Platform] の使用統計とパフォーマンス指標に加え、プロファイル関連の特定の指標を使用して、受信リクエストの割合、成功した取得の割合、取得済みレコードサイズなどを把握できます。詳しくは、[Observability Insights API の概要](../observability/api/overview.md)を読み、リアルタイム顧客プロファイル指標の完全なリストについては、[利用可能な指標](../observability/api/metrics.md#available-metrics)に関するドキュメントを参照してください。
+Observability Insights を使用すると、Adobe Experience Platform で主要指標を公開できます。様々な [!DNL Platform] 機能の [!DNL Experience Platform] の使用統計とパフォーマンス指標に加え、プロファイル関連の特定の指標を使用して、受信リクエストの割合、成功した取得の割合、取得済みレコードサイズなどを把握できます。詳しくは、[Observability Insights API の概要](../observability/api/overview.md)を読み、リアルタイム顧客プロファイル指標の完全なリストについては、[利用可能な指標](../observability/api/metrics.md#available-metrics)に関するドキュメントを参照してください。
 
 ## [!DNL Data governance] および [!DNL Privacy]
 
@@ -116,11 +116,11 @@ Adobe Experience Platform [!DNL Segmentation Service] は、個々の顧客向�
 * データアクセスポリシー
 * マーケティングアクションのデータのアクセス制御
 
-[!DNL Data governance] は、いくつかのポイントで管理されます。 これには、[!DNL Platform]に取り込むデータと、特定のマーケティングアクションの取り込み後にアクセスできるデータの決定が含まれます。 詳しくは、まず「[データガバナンスの概要](../data-governance/home.md)」を参照してください。
+[!DNL Data governance] は、いくつかのポイントで管理されます。これには、[!DNL Platform]に取り込むデータと、特定のマーケティングアクションの取り込み後にアクセスできるデータの決定が含まれます。詳しくは、まず「[データガバナンスの概要](../data-governance/home.md)」を参照してください。
 
 ### オプトアウトおよびデータのプライバシー要求の処理
 
-[!DNL Experience Platform] を使用すると、顧客は[!DNL Real-time Customer Profile]内でのデータの使用と保存に関連するオプトアウトリクエストを送信できます。 オプトアウトリクエストの処理方法について詳しくは、[オプトアウトリクエストの処理](../segmentation/honoring-opt-outs.md)に関するドキュメントを参照してください。
+[!DNL Experience Platform] を使用すると、顧客は[!DNL Real-time Customer Profile]内でのデータの使用と保存に関連するオプトアウトリクエストを送信できます。オプトアウトリクエストの処理方法について詳しくは、[オプトアウトリクエストの処理](../segmentation/honoring-opt-outs.md)に関するドキュメントを参照してください。
 
 ## 次の手順とその他のリソース
 
