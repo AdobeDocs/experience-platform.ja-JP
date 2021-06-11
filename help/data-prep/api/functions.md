@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データ準備；apiガイド；スキーマ;
+keywords: Experience Platform;ホーム;人気のあるトピック;データ準備;api ガイド;スキーマ;
 solution: Experience Platform
-title: スキーマAPIエンドポイント
+title: スキーマ API エンドポイント
 topic-legacy: schemas
-description: Adobe Experience PlatformAPIの`/functions'エンドポイントを使用すると、マッピング式とリストで使用可能なマッピングセット関数を検証できます。
+description: Adobe Experience Platform API で「/functions」エンドポイントを使用して、マッピング式を検証し、使用可能なマッピングセット関数をリストできます。
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '210'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
 # 関数エンドポイント
 
-マッピングセット関数を使用すると、ソーススキーマとターゲットノードの間でデータを変換できます。 `/languages/el`エンドポイントを使用して式を検証でき、使用可能なすべてのマッピングセット関数のリストを取得できます。
+マッピングセット関数を使用すると、ソーススキーマと宛先スキーマの間でデータを変換できます。`/languages/el` エンドポイントを使用すると、式を検証し、使用可能なすべてのマッピングセット関数のリストを取得できます。
 
-## 式の検証
+## 数式の検証
 
-`/languages/el/validate`エンドポイントにPOSTリクエストを行うことで、現在の式が有効かどうかを検証できます。
+`/languages/el/validate` エンドポイントに POST リクエストを送信すると、現在の式が有効かどうかを検証できます。
 
 **API 形式**
 
@@ -42,9 +41,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   }'
 ```
 
-**応答** 
+**応答**
 
-成功した応答は、式の検証ステータスと共にHTTPステータス200を返します。
+応答に成功すると、HTTP ステータス 200 と式の検証ステータスが返されます。
 
 ```json
 {
@@ -53,9 +52,9 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 }
 ```
 
-## リストマッピングセット関数
+## マッピングセットのリスト関数
 
-`/languages/el/functions`エンドポイントにGETリクエストを行うことで、使用可能なすべてのマッピングセット関数のリストを取得できます。
+`/languages/el/functions`エンドポイントに対して GET リクエストをおこなうと、使用可能なすべてのマッピングセット関数のリストを取得できます。
 
 **API 形式**
 
@@ -75,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 **応答** 
 
-応答が成功すると、使用可能なすべてのマッピングセット関数のリストと共にHTTPステータス200が返されます。
+応答に成功すると、HTTP ステータス 200 と、使用可能なマッピングセット関数のリストが返されます。
 
 >[!NOTE]
 >
@@ -120,7 +119,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 ## リストマッピングセット演算子
 
-`/languages/el/operators`エンドポイントにGETリクエストを行うことで、使用可能なすべてのマッピングセット演算子のリストを取得できます。
+`/languages/el/operators`エンドポイントに対して GET リクエストをおこなうと、使用可能なすべてのマッピングセット演算子のリストを取得できます。
 
 **API 形式**
 
@@ -140,7 +139,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/op
 
 **応答** 
 
-応答が成功すると、使用可能なすべてのマッピングセット演算子のリストと共にHTTPステータス200が返されます。
+応答に成功すると、HTTP ステータス 200 と、使用可能なマッピングセット演算子のリストが返されます。
 
 >[!NOTE]
 >
