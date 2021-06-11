@@ -6,9 +6,9 @@ breadcrumb-title: インテリジェントサービスガイド
 user-guide-description: インテリジェントな AI サービスを利用して、スコアの生成、インサイトの発見、マーケティングイベントデータからのセグメントの作成をおこないます。
 feature: Data Science Workspace
 source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '124'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
