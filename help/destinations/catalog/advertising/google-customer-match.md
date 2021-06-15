@@ -3,7 +3,7 @@ keywords: googleカスタマーマッチ；Googleカスタマーマッチ；Goog
 title: Googleカスタマーマッチ接続
 description: Googleカスタマーマッチを使用すると、オンラインデータとオフラインデータを使用して、Googleが所有し、運用するSearch、Shopping、Gmail、YouTubeなどのプロパティをまたいで顧客にリーチし、再び関与させることができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 6c4e68e2f347cadaf3bf36de73c74e1240ed975b
+source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 4%
@@ -34,7 +34,7 @@ ht-degree: 4%
 
 ## [!DNL Google Customer Match]の宛先{#data-governance}のデータガバナンス
 
-Experience Platform内の一部の宛先には、宛先プラットフォームに送信または宛先プラットフォームから受信するデータに対する特定のルールと義務があります。 お客様は、データの制限事項と義務、およびAdobe Experience Platformと宛先プラットフォームでのそのデータの使用方法について理解する必要があります。 Adobe Experience Platformは、データ使用上の義務の一部を管理するのに役立つデータガバナンスツールを提供します。 [データガバ](../../..//data-governance/labels/overview.md) ナンスツールとポリシーについて詳しく説明します。
+Experience Platform内の一部の宛先には、宛先プラットフォームに送信または宛先プラットフォームから受信するデータに対する特定のルールと義務があります。 お客様は、データの制限事項と義務、およびAdobe Experience Platformと宛先プラットフォームでのそのデータの使用方法について理解する必要があります。 Adobe Experience Platformは、データ使用上の義務の一部を管理するのに役立つデータガバナンスツールを提供します。 [データガバ](../../../data-governance/labels/overview.md) ナンスツールとポリシーについて詳しく説明します。
 
 ## サポートされているID{#supported-identities}
 
