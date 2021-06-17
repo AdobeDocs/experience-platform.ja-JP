@@ -5,9 +5,9 @@ title: Jupyterlabノートブックでのデータアクセス
 topic-legacy: Developer Guide
 description: このガイドでは、Data Science Workspaceに組み込まれているJupyterノートブックを使用してデータにアクセスする方法に焦点を当てます。
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
+source-git-commit: 9e41db60580146fa90542ed00ceedd4eecb88b47
 workflow-type: tm+mt
-source-wordcount: '3290'
+source-wordcount: '3294'
 ht-degree: 23%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 23%
 
 サポートされる各カーネルは、ノートブック内のデータセットから Platform データを読み取るための組み込み機能を備えてます。現在、Adobe Experience Platform Data Science WorkspaceのJupyterLabは、[!DNL Python]、R、PySpark、Scalaのノートブックをサポートしています。 ただし、ページ番号付けデータのサポートは、[!DNL Python]ノートブックとRノートブックに限られます。 このガイドでは、JupyterLabノートブックを使用してデータにアクセスする方法に焦点を当てます。
 
-## はじめに
+## 概要
 
 このガイドを読む前に、[[!DNL JupyterLab] ユーザーガイド](./overview.md)を参照し、[!DNL JupyterLab]とData Science Workspace内での役割の概要を確認してください。
 
@@ -362,7 +362,7 @@ spark = SparkSession.builder.getOrCreate()
 **用途**
 
 ```scala
-%dataset {action} --datasetId {id} --dataFrame {df}`
+%dataset {action} --datasetId {id} --dataFrame {df} --mode batch
 ```
 
 **説明**
@@ -373,8 +373,8 @@ spark = SparkSession.builder.getOrCreate()
 | --- | --- | --- |
 | `{action}` | データセットに対して実行するアクションのタイプ。 「読み取り」と「書き込み」の2つのアクションを使用できます。 | ○ |
 | `--datasetId {id}` | 読み取りまたは書き込みを行うデータセットのIDを指定するために使用します。 | ○ |
-| `--dataFrame {df}` | pandasデータフレーム。 <ul><li> アクションが「read」の場合、 {df}は、データセット読み取り操作の結果を使用できる変数です。 </li><li> アクションが「write」の場合、このデータフレーム{df}はデータセットに書き込まれます。 </li></ul> | ○ |
-| `--mode` | データの読み取り方法を変更する追加のパラメーター。 使用できるパラメーターは、「batch」および「interactive」です。 デフォルトでは、モードは「interactive」に設定されています。 大量のデータを読み取る場合は、「バッチ」モードを使用することをお勧めします。 | × |
+| `--dataFrame {df}` | pandasデータフレーム。 <ul><li> アクションが「read」の場合、{df}は、データセット読み取り操作の結果（データフレームなど）を使用できる変数です。 </li><li> アクションが「write」の場合、このデータフレーム{df}はデータセットに書き込まれます。 </li></ul> | ○ |
+| `--mode` | データの読み取り方法を変更する追加のパラメーター。 使用できるパラメーターは、「batch」および「interactive」です。 デフォルトでは、モードは「batch」に設定されています。<br> 小規模なデータセットでクエリのパフォーマンスを向上させるには、「インタラクティブ」モードをお勧めします。 | ○ |
 
 >[!TIP]
 >
@@ -382,8 +382,8 @@ spark = SparkSession.builder.getOrCreate()
 
 **例**
 
-- **読み取り例**:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **記述例**:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+- **読み取り例**:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0 --mode batch`
+- **記述例**:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode batch`
 
 >[!IMPORTANT]
 >
@@ -449,7 +449,7 @@ PySparkノートブック内の[!DNL ExperienceEvent]データセットにアク
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-%dataset read --datasetId {DATASET_ID} --dataFrame df
+%dataset read --datasetId {DATASET_ID} --dataFrame df --mode batch
 
 df.createOrReplaceTempView("event")
 timepd = spark.sql("""
@@ -511,7 +511,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
 
@@ -568,12 +568,12 @@ df1.write.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
 ```
 
-| element | 説明 |
+| element | description |
 | ------- | ----------- |
 | df1 | データの読み取りと書き込みに使用されるPandasデータフレームを表す変数。 |
 | user-token | `clientContext.getUserToken()`を使用して自動的に取得されたユーザートークン。 |
