@@ -4,10 +4,10 @@ solution: Experience Platform
 title: サンドボックス管理APIエンドポイント
 topic-legacy: developer guide
 description: サンドボックスAPIの/sandboxesエンドポイントを使用すると、Adobe Experience Platformのサンドボックスをプログラムで管理できます。
-source-git-commit: f84898a87a8a86783220af7f74e17f464a780918
+source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 53%
+source-wordcount: '1440'
+ht-degree: 49%
 
 ---
 
@@ -348,11 +348,7 @@ curl -X PATCH \
 
 ## サンドボックスのリセット {#reset}
 
->[!IMPORTANT]
->
->デフォルトの実稼動用サンドボックスは、ホストされているIDグラフがAdobe Analyticsで[クロスデバイス分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)機能にも使用されている場合、またはAdobe Audience ManagerでホストされているIDグラフが[People Based Destinations(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)機能にも使用されている場合は、リセットできません。
-
-開発サンドボックスには「出荷時リセット」機能があり、この機能によりサンドボックスからデフォルト以外のすべてのリソースが削除されます。サンドボックスをリセットするには、そのサンドボックスの `name` をリクエストパスに含む PUT リクエストを作成する必要があります。
+サンドボックスには、デフォルト以外のすべてのリソースをサンドボックスから削除する「ファクトリリセット」機能があります。 サンドボックスをリセットするには、そのサンドボックスの `name` をリクエストパスに含む PUT リクエストを作成する必要があります。
 
 **API 形式**
 
@@ -363,6 +359,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | パラメーター | 説明 |
 | --- | --- |
 | `{SANDBOX_NAME}` | リセットするサンドボックスの `name` プロパティです。 |
+| `validationOnly` | 実際のリクエストをおこなうことなく、サンドボックスのリセット操作に対してプリフライトチェックを実行できるオプションのパラメーター。 リセットしようとしているサンドボックスにAdobe Analytics、Adobe Audience Manager、またはセグメントの共有データが含まれているかどうかを確認するには、このパラメーターを`validationOnly=true`に設定します。 |
 
 **リクエスト**
 
@@ -370,7 +367,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -386,6 +383,10 @@ curl -X PUT \
 
 **応答**
 
+>[!NOTE]
+>
+>サンドボックスがリセットされると、システムによってプロビジョニングされるまで約30秒かかります。
+
 正常な応答は、更新されたサンドボックスの詳細を返し、`state` が「リセット中」であることを示します。
 
 ```json
@@ -399,18 +400,76 @@ curl -X PUT \
 }
 ```
 
->[!NOTE]
->
->サンドボックスがリセットされると、システムによってプロビジョニングされるまで約30秒かかります。 プロビジョニングが完了すると、サンドボックスの `state` は「アクティブ」または「失敗」になります。
+デフォルトの実稼動サンドボックスとユーザー作成の実稼動サンドボックスは、そのIDグラフがAdobe Analyticsで[クロスデバイス分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)機能にも使用されている場合、またはAdobe Audience ManagerでホストされているIDグラフも[People Based Destinations(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)機能にも使用されている場合は、リセットできません。
 
-次の表に、サンドボックスのリセットを妨げる可能性のある例外を示します。
+サンドボックスのリセットを妨げる可能性がある、考えられる例外のリストを次に示します。
 
-| エラーコード | 説明 |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+リクエストに`ignoreWarnings`パラメーターを追加することで、[!DNL Audience Manager]または[!DNL Audience Core Service]との双方向セグメント共有に使用する実稼動用サンドボックスのリセットに進むことができます。
+
+**API 形式**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
+```
+
+| パラメーター | 説明 |
 | --- | --- |
-| `2074-400` | このサンドボックスでホストされているIDグラフは、Adobe Analyticsでクロスデバイス分析(CDA)機能にも使用されているので、このサンドボックスをリセットできません。 |
-| `2075-400` | このサンドボックスでホストされているIDグラフは、Adobe Audience ManagerでPeople Based Destinations(PBD)機能にも使用されているので、このサンドボックスをリセットできません。 |
-| `2076-400` | このサンドボックスでホストされるIDグラフは、Adobe Audience ManagerでPeople Based Destinations(PBD)機能にも、Adobe Analyticsでクロスデバイス分析(CDA)機能にも使用されているので、このサンドボックスをリセットできません。 |
-| `2077-400` | 警告：サンドボックス`{SANDBOX_NAME}`は、Adobe Audience ManagerまたはAudience Core Serviceとの双方向のセグメント共有に使用されます。 |
+| `{SANDBOX_NAME}` | リセットするサンドボックスの `name` プロパティです。 |
+| `ignoreWarnings` | 検証チェックをスキップし、[!DNL Audience Manager]または[!DNL Audience Core Service]との双方向のセグメント共有に使用される実稼動用サンドボックスを強制的にリセットできるオプションのパラメーター。 このパラメーターは、デフォルトの実稼動用サンドボックスに適用できません。 |
+
+**リクエスト**
+
+次のリクエストは、「acme」という名前の実稼動用サンドボックスをリセットします。
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**応答**
+
+正常な応答は、更新されたサンドボックスの詳細を返し、`state` が「リセット中」であることを示します。
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## サンドボックスの削除 {#delete}
 
@@ -433,14 +492,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | パラメーター | 説明 |
 | --- | --- |
 | `{SANDBOX_NAME}` | 削除するサンドボックスの `name`。 |
+| `validationOnly` | 実際のリクエストをおこなうことなく、サンドボックスの削除操作に対してプリフライトチェックを実行できるオプションのパラメーター。 リセットしようとしているサンドボックスにAdobe Analytics、Adobe Audience Manager、またはセグメントの共有データが含まれているかどうかを確認するには、このパラメーターを`validationOnly=true`に設定します。 |
+| `ignoreWarnings` | 検証チェックをスキップし、[!DNL Audience Manager]または[!DNL Audience Core Service]との双方向のセグメント共有に使用されるユーザー作成の実稼動用サンドボックスを強制的に削除できるオプションのパラメーター。 このパラメーターは、デフォルトの実稼動用サンドボックスに適用できません。 |
 
 **リクエスト**
 
-次のリクエストは、「acme-dev」という名前のサンドボックスを削除します。
+次のリクエストは、「acme」という実稼動用サンドボックスを削除します。
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -452,8 +513,8 @@ curl -X DELETE \
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"
