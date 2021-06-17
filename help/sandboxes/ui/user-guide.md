@@ -5,10 +5,10 @@ title: サンドボックスUIガイド
 topic-legacy: user guide
 description: このドキュメントでは、Adobe Experience Platform ユーザーインターフェイスのサンドボックスに関連する様々な操作を実行する手順について説明します。
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
+source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 20%
+source-wordcount: '779'
+ht-degree: 21%
 
 ---
 
@@ -68,7 +68,7 @@ Experience Platformでのサンドボックスの使用方法の概要につい�
 
 >[!IMPORTANT]
 >
->デフォルトの実稼動用サンドボックスは、ホストされているIDグラフがAdobe Analyticsで[クロスデバイス分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)機能にも使用されている場合、またはAdobe Audience ManagerでホストされているIDグラフが[People Based Destinations(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)機能にも使用されている場合は、リセットできません。 Adobe Audience ManagerまたはAudience Core Serviceとの双方向セグメント共有に使用される実稼動用サンドボックスもリセットできません。
+>デフォルトの実稼動用サンドボックスは、ホストされているIDグラフがAdobe Analyticsで[クロスデバイス分析(CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html)機能にも使用されている場合、またはAdobe Audience ManagerでホストされているIDグラフが[People Based Destinations(PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html)機能にも使用されている場合は、リセットできません。
 
 実稼動用サンドボックスまたは開発用サンドボックスをリセットすると、そのサンドボックスに関連付けられたすべてのリソース（スキーマ、データセットなど）が削除され、サンドボックスの名前と関連する権限が維持されます。 この「クリーンな」サンドボックスは、引き続き、アクセス権を持つユーザーと同じ名前で使用できます。
 
@@ -88,29 +88,29 @@ Experience Platformでのサンドボックスの使用方法の概要につい�
 
 ![成功](../images/ui/success.png)
 
-### エラーメッセージ
+### 警告
 
-CDAデータを含むデフォルトの実稼動サンドボックスはリセットできず、次のエラーが返されます。
+CDAデータを含むデフォルトの実稼動サンドボックスはリセットできず、次の警告が返されます。
 
 ![cda](../images/ui/cda.png)
 
-PBDデータを含むデフォルトの実稼動サンドボックスもリセットできず、次のエラーが返されます。
+PBDデータを含むデフォルトの実稼動サンドボックスもリセットできず、次の警告が返されます。
 
 ![pbd](../images/ui/pbd.png)
 
-CDAとPBDの両方のデータを含むデフォルトの実稼動サンドボックスもリセットできず、次のエラーが返されます。
+CDAとPBDの両方のデータを含むデフォルトの実稼動用サンドボックスもリセットできず、次の警告が返されます。
 
 ![both](../images/ui/both.png)
 
-Adobe Audience ManagerまたはAudience Core Serviceとの双方向セグメント共有に使用される実稼動用サンドボックスもリセットできず、次のエラーが返されます。
+[!DNL Audience Manager]または[!DNL Audience Core Service]との双方向セグメント共有に使用する実稼動用サンドボックスをリセットできます。 「[!UICONTROL 続行]」を選択して、リセットを続行します。
 
-![seg](../images/ui/seg.png)
+![both](../images/ui/seg.png)
 
 ## サンドボックスの削除
 
 >[!IMPORTANT]
 >
->デフォルトの実稼動用サンドボックスは削除できず、Adobe Audience ManagerまたはAudience Core Serviceとの双方向セグメント共有に使用される実稼動用サンドボックスも削除できません。
+>デフォルトの実稼動用サンドボックスは削除できません。
 
 実稼動用サンドボックスまたは開発用サンドボックスを削除すると、権限を含め、そのサンドボックスに関連付けられているすべてのリソースが完全に削除されます。
 
@@ -126,9 +126,9 @@ Adobe Audience ManagerまたはAudience Core Serviceとの双方向セグメン�
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-Adobe Audience ManagerまたはAudience Core Serviceとの双方向セグメント共有に使用される実稼動用サンドボックスは削除できず、次のエラーが返されます。
+[!DNL Audience Manager]または[!DNL Audience Core Service]との双方向セグメント共有に使用される、ユーザーが作成した実稼動用サンドボックスは、次の警告の後でも削除できます。
 
-![seg](../images/ui/seg.png)
+![seg](../images/ui/delete-seg.png)
 
 ## 次の手順
 
