@@ -1,13 +1,12 @@
 ---
-keywords: Experience Platform；最適化；モデル；データサイエンスワークスペース；人気の高いトピック；モデルの洞察
+keywords: Experience Platform；最適化；モデル；Data Science Workspace；人気のあるトピック；モデルインサイト
 solution: Experience Platform
 title: モデルインサイトフレームワークを使用したモデルの最適化
 topic-legacy: tutorial
 type: Tutorial
 description: モデルインサイトフレームワークは、Data Science Workspace　のツールをデータサイエンティストに提供し、実験に基づく最適な機械学習モデルのための迅速で十分な情報に基づいた選択を可能にします。
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-translation-type: tm+mt
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 88%
@@ -16,7 +15,7 @@ ht-degree: 88%
 
 # モデルインサイトフレームワークを使用したモデルの最適化
 
-Model Insights Frameworkは、データサイエンティストに[!DNL Data Science Workspace]のツールを提供し、実験に基づく最適な機械学習モデルに対して迅速かつ十分な情報に基づく選択を行います。 このフレームワークにより、機械学習ワークフローの速度と効果だけでなく、データサイエンティストによる使いやすさも向上します。これは、モデルの調整を支援するために、機械学習アルゴリズムのタイプごとにデフォルトのテンプレートを提供することによっておこなわれます。結果的に、データサイエンティストと市民データサイエンティストは、エンドカスタマーに対してより適切なモデル最適化の決定をおこなうことができます。
+モデルインサイトフレームワークは、データサイエンティストに[!DNL Data Science Workspace]のツールを提供し、実験に基づく最適な機械学習モデルのための迅速で十分な情報に基づいた選択を行います。 このフレームワークにより、機械学習ワークフローの速度と効果だけでなく、データサイエンティストによる使いやすさも向上します。これは、モデルの調整を支援するために、機械学習アルゴリズムのタイプごとにデフォルトのテンプレートを提供することによっておこなわれます。結果的に、データサイエンティストと市民データサイエンティストは、エンドカスタマーに対してより適切なモデル最適化の決定をおこなうことができます。
 
 ## 指標とは
 
@@ -44,7 +43,7 @@ Model Insights Frameworkは、データサイエンティストに[!DNL Data Sci
 デフォルトの評価は、分類アルゴリズムの一部として計算されます。現在実装されている評価演算子のデフォルト値を次に示します。
 
 | エバリュエータークラス | `evaluation.class` |
---- | ---
+|--- | ---|
 | DefaultBinaryClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator` |
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
@@ -79,7 +78,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 | `evaluator.class` | デフォルトの指標 | `evaluation.metric` |
 | --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `DefaultMultiClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX`<br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultMultiClassificationEvaluator` | - 精度<br>- リコール<br>- 混同行列 <br>- Fスコア<br>- 正解率 <br>- レシーバー動作特性<br>- レシーバー動作特性の領域 | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `RecommendationsEvaluator` |  - MAP（Mean Average Precision）<br>- 正規割引累積利益<br>- 平均逆数ランク<br>- 指標 K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 
@@ -101,19 +100,19 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-[!DNL Data Science Workspace]では、テストページの「評価指標」タブにインサイトが表示されます。
+[!DNL Data Science Workspace]では、実験ページの「評価指標」タブでインサイトを確認できます。
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-現在のところ、[!DNL Python]または[!DNL Tensorflow]のデフォルトの評価指標はありません。 したがって、[!DNL Python]または[!DNL Tensorflow]の評価指標を取得するには、カスタム評価指標を作成する必要があります。 これは、`Evaluator` クラスを実装することで実行できます。
+現時点では、[!DNL Python]または[!DNL Tensorflow]のデフォルトの評価指標はありません。 したがって、[!DNL Python]または[!DNL Tensorflow]の評価指標を取得するには、カスタム評価指標を作成する必要があります。 これは、`Evaluator` クラスを実装することで実行できます。
 
 ####  のカスタム評価指標[!DNL Python]
 
 カスタム評価指標の場合、評価基準に実装する必要がある主なメソッドは `split()` と `evaluate()` の 2 つです。
 
-[!DNL Python]の場合、これらのメソッドは[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)で`Evaluator`クラスに定義されます。 `Evaluator` の例については、[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) リンクを参照してください。
+[!DNL Python]の場合、これらのメソッドは`Evaluator`クラスの[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py)に定義されます。 `Evaluator` の例については、[evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) リンクを参照してください。
 
-[!DNL Python]で評価指標を作成するには、ユーザーが`evaluate()`メソッドと`split()`メソッドを実装する必要があります。
+[!DNL Python]で評価指標を作成するには、`evaluate()`メソッドと`split()`メソッドを実装する必要があります。
 
 `evaluate()` メソッドは、`name`、`value`、`valueType` プロパティを持つ指標オブジェクトの配列を含む指標オブジェクトを返します。
 
@@ -123,7 +122,7 @@ evaluation.class=com.adobe.platform.ml.Evaluator
 
 #### Tensorflow のカスタム評価指標
 
-[!DNL Tensorflow]の場合は、[!DNL Python]と同様、`Evaluator`クラスのメソッド`evaluate()`と`split()`を実装する必要があります。 `evaluate()` については指標を返し、`split()` はトレーニングとテストのデータセットを返す必要があります。
+[!DNL Tensorflow]の場合は、[!DNL Python]と同様に、`Evaluator`クラスのメソッド`evaluate()`と`split()`を実装する必要があります。 `evaluate()` については指標を返し、`split()` はトレーニングとテストのデータセットを返す必要があります。
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
