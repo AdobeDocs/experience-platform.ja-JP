@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform セグメント化サービス
 breadcrumb-title: セグメント化サービスガイド
 user-guide-description: リアルタイムの顧客プロファイルデータからセグメントを構築し、オーディエンスを生成します。
 feature: セグメント
-source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 79%
+ht-degree: 78%
 
 ---
 
@@ -36,14 +36,14 @@ ht-degree: 79%
    - [ストリーミングセグメント化](ui/streaming-segmentation.md)
    - [ストリーミングセグメント化 (ビデオ)](video/streaming-segmentation-overview.md)
    - [時間制約のリファクタリング](ui/segment-refactoring.md)
-- [オプトアウトの遵守](honoring-opt-outs.md)
+- [同意の遵守](consents.md)
 - [マルチエンティティのセグメント化](multi-entity-segmentation.md)
 - プロファイルクエリ言語 {#pql}
    - [概要](pql/overview.md)
    - [ブール関数](pql/boolean-functions.md)
    - [比較関数](pql/comparison-functions.md)
    - [配列、リスト、およびセットの関数](pql/array-functions.md)
-   - [map 関数](pql/map-functions.md)
+   - [マップ関数](pql/map-functions.md)
    - [文字列関数](pql/string-functions.md)
    - [オブジェクト関数](pql/object-functions.md)
    - [演算関数](pql/arithmetic-functions.md)
