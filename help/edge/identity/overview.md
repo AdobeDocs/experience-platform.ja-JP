@@ -4,20 +4,28 @@ description: Adobe Experience Platform Web SDKを使用してAdobe Experience Cl
 seo-description: Adobe Experience Cloud Idの取得方法を説明します。
 keywords: ID；ファーストパーティID;IDサービス；サードパーティID;IDの移行；訪問者ID；サードパーティID;thirdPartyCookiesEnabled;idMigrationEnabled;getId；同期ID;syncEvent;identityMap；プライマリ；ID名前空間；ID；認証状態hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d753cfca6f518dfe2cafa1cb30ad26bd0b591c54
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 3%
+source-wordcount: '1217'
+ht-degree: 5%
 
 ---
 
-# Adobe Experience Cloud IDの取得
+# Adobe Experience Cloud ID
 
 Adobe Experience Platform Web SDKは、[AdobeIDサービス](../../identity-service/ecid.md)を利用します。 これにより、各デバイスには、デバイス上で保持される一意の識別子が割り当てられ、ページ間のアクティビティを結び付けることができます。
 
 ## ファーストパーティID
 
-[!DNL Identity Service]は、IDをファーストパーティドメインのcookieに保存します。 [!DNL Identity Service]は、ドメインのHTTPヘッダーを使用してCookieの設定を試みます。 失敗した場合、[!DNL Identity Service]はJavaScriptを使用したcookieの設定にフォールバックされます。 Adobeでは、クライアント側のITP制限によってCookieの上限が設定されないように、CNAMEを設定することをお勧めします。
+[!DNL Identity Service]は、IDをファーストパーティドメインのcookieに保存します。 [!DNL Identity Service]は、ドメインのHTTPヘッダーを使用してCookieの設定を試みます。 失敗した場合、[!DNL Identity Service]はJavaScriptでのcookieの設定にフォールバックします。 [Edgeドメイン設定](../fundamentals/configuring-the-sdk.md#edgeConfigId)にCNAMEを設定することをお勧めします。
+
+Platform Web SDKからのすべてのヒットには、Edgeネットワーク上のIDサービスによってECIDが追加されます。 初回訪問者の場合、ECIDが生成され、ペイロードに追加されます。 繰り返し訪問者の場合、ECIDは`kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` Cookieから取得され、ペイロードに追加されます。
+
+ECIDは`xdm`の`identityMap`フィールドに追加されます。 ブラウザーの開発ツールを使用して、タイプのペイロードの下で応答のECIDを表示できます。`identity:result`ですが、リクエスト内のECIDは確認できません。
+
+CNAME 実装を使用すると、アドビで使用される収集ドメインをカスタマイズして、独自のドメインと一致させることができます。 これにより、アドビは JavaScript を使用して、クライアントサイドではなくサーバーサイドでファーストパーティ Cookie を設定できます。 以前は、これらのサーバー側ファーストパーティcookieには、Safariブラウザー上のAppleのIntelligent Tracking Prevention(ITP)ポリシーに基づいて課された制限は適用されていませんでした。 ただし、2020年11月に、Appleは、CNAMEを使用して設定されたCookieにもこれらの制限が適用されるようにポリシーを更新しました。 現在、CNAMEによってサーバー側に設定されたCookieとJavaScriptによってクライアント側に設定されたCookieの両方が、ITPでの7日間または24時間の有効期限に制限されています。 ITPポリシーについて詳しくは、[tracking prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp)に関するAppleのドキュメントを参照してください。
+
+CNAME実装はcookieの有効期間に関してメリットを提供しませんが、広告ブロッカーや一般的でないブラウザーなど、データがトラッカーとして分類するドメインに送信されないというメリットがあります。 このような場合、CNAMEを使用すると、これらのツールを使用するユーザーのデータ収集が中断されるのを防ぐことができます。
 
 ## サードパーティID
 
