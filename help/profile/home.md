@@ -4,7 +4,7 @@ title: リアルタイム顧客プロファイルの概要
 topic-legacy: guide
 description: リアルタイム顧客プロファイルは、様々な企業データアセットのデータを結合し、個々の顧客プロファイルおよび関連する時系列イベントの形でそのデータにアクセスできる汎用参照エンティティストアです。この機能を使用すると、マーケターは、複数のチャネルにわたって、オーディエンスとの調整された一貫した関連性のあるエクスペリエンスを促進できます。
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 96%
@@ -120,7 +120,7 @@ Observability Insights を使用すると、Adobe Experience Platform で主要�
 
 ### オプトアウトおよびデータのプライバシー要求の処理
 
-[!DNL Experience Platform] を使用すると、顧客は[!DNL Real-time Customer Profile]内でのデータの使用と保存に関連するオプトアウトリクエストを送信できます。オプトアウトリクエストの処理方法について詳しくは、[オプトアウトリクエストの処理](../segmentation/honoring-opt-outs.md)に関するドキュメントを参照してください。
+[!DNL Experience Platform] を使用すると、顧客は[!DNL Real-time Customer Profile]内でのデータの使用と保存に関連するオプトアウトリクエストを送信できます。オプトアウトリクエストの処理方法について詳しくは、[オプトアウトリクエストの処理](../segmentation/consents.md)に関するドキュメントを参照してください。
 
 ## 次の手順とその他のリソース
 
