@@ -1,49 +1,48 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データソース接続
+keywords: Experience Platform；ホーム；人気のあるトピック；データソース接続
 solution: Experience Platform
-title: Flow Service APIを使用したサードパーティのクラウドストレージシステムからのパーケットデータの取り込み
+title: フローサービスAPIを使用したサードパーティのクラウドストレージシステムからのParquetデータの取り込み
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、サードパーティのクラウドストレージシステムからApache Parketデータを取り込む手順を順を追って説明します。
+description: このチュートリアルでは、フローサービスAPIを使用して、サードパーティのクラウドストレージシステムからApache Parquetデータを取り込む手順を説明します。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 20%
+source-wordcount: '1099'
+ht-degree: 25%
 
 ---
 
-# [!DNL Flow Service] APIを使用して、サードパーティのクラウドストレージシステムからParketデータを取り込む
+# [!DNL Flow Service] APIを使用して、サードパーティのクラウドストレージシステムからParquetデータを取り込む
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、サードパーティのクラウドストレージシステムからParketデータを取り込む手順を説明します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、サードパーティのクラウドストレージシステムからParquetデータを取り込む手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-- [ソース](../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-- [サンドボックス](../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [ソース](../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことがで [!DNL Platform] きます。
+- [サンドボックス](../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してサードパーティのクラウドストレージからParketデータを正しく取り込むために必要な追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用してサードパーティのクラウドストレージからParquetデータを正しく取り込むために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- `x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
 
@@ -51,21 +50,21 @@ ht-degree: 20%
 
 ## 接続の作成
 
-[!DNL Platform] APIを使用してParketデータを取り込むには、アクセスするサードパーティのクラウドストレージソースに対して有効な接続が必要です。 操作するストレージにまだ接続していない場合は、次のチュートリアルを使用して接続を作成できます。
+[!DNL Platform] APIを使用してParquetデータを取り込むには、アクセスするサードパーティのクラウドストレージソースに対して有効な接続が必要です。 使用するストレージの接続がまだない場合は、次のチュートリアルを通じてストレージを作成できます。
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure BLOB](./create/cloud-storage/blob.md)
-- [Azure Data LakeストレージGen2](./create/cloud-storage/adls-gen2.md)
+- [Azure Data Lake Storage Gen2](./create/cloud-storage/adls-gen2.md)
 - [Google Cloud Store](./create/cloud-storage/google.md)
 - [SFTP](./create/cloud-storage/sftp.md)
 
-接続の固有な識別子(`$id`)を取得して保存し、次の手順に進みます。
+接続の一意の識別子(`$id`)を取得して保存し、このチュートリアルの次の手順に進みます。
 
 ## ターゲットスキーマの作成
 
-[!DNL Platform]でソースデータを使用するには、必要に応じてソースデータを構造化するターゲットスキーマも作成する必要があります。 次に、このターゲットスキーマを使用して、ソースデータが含まれる[!DNL Platform]データセットを作成します。
+[!DNL Platform]でソースデータを使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマも作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが格納される[!DNL Platform]データセットを作成します。
 
-[!DNL Experience Platform]でユーザインターフェイスを使用したい場合は、[スキーマエディタのチュートリアル](../../../xdm/tutorials/create-schema-ui.md)で、スキーマエディタで同様の操作を実行するための手順を順を追って説明します。
+[!DNL Experience Platform]でユーザーインターフェイスを使用したい場合は、[スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md)で、スキーマエディターで同様の操作を実行する手順を順を追って説明します。
 
 **API 形式**
 
@@ -118,7 +117,7 @@ curl -X POST \
 
 **応答**
 
-正常に応答すると、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を返します。 このIDは、次の手順でソース接続を作成する際に必要です。
+正常な応答は、新しく作成されたスキーマの一意の識別子(`$id`)を含む詳細を返します。 このIDは、次の手順でソース接続を作成する際に必要になります。
 
 ```json
 {
@@ -198,9 +197,9 @@ curl -X POST \
 }
 ```
 
-## ソース接続の作成{#source}
+## ソース接続の作成 {#source}
 
-ターゲットXDMスキーマを作成すると、[!DNL Flow Service] APIへのPOST要求を使用してソース接続を作成できるようになりました。 ソース接続は、APIの接続、ソースデータ形式、前の手順で取得したターゲットXDMスキーマへの参照で構成されます。
+ターゲットXDMスキーマを作成したら、[!DNL Flow Service] APIへのPOSTリクエストを使用してソース接続を作成できるようになりました。 ソース接続は、APIの接続、ソースデータ形式、前の手順で取得したターゲットXDMスキーマへの参照で構成されます。
 
 **API 形式**
 
@@ -242,13 +241,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | クラウドストレージを表すAPIへの接続。 |
-| `data.schema.id` | 前の手順でターゲットxdmスキーマを取得した場合は(`$id`)。 |
+| `baseConnectionId` | クラウドストレージを表すAPIの接続。 |
+| `data.schema.id` | (`$id`)（前の手順で取得したターゲットxdmスキーマの場合）。 |
 | `params.path` | ソースファイルのパス。 |
 
 **応答**
 
-正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 この値は、後の手順でターゲット接続を作成する際に必要となるので保存します。
+正常な応答は、新しく作成されたソース接続の一意の識別子(`id`)を返します。 この値は、後の手順でターゲット接続を作成する際に必要になるので保存します。
 
 ```json
 {
@@ -257,17 +256,17 @@ curl -X POST \
 }
 ```
 
-## データセットベースの接続の作成
+## データセットベース接続の作成
 
-[!DNL Platform]に外部データを取り込むには、まず[!DNL Experience Platform]データセットベースの接続を取得する必要があります。
+外部データを[!DNL Platform]に取り込むには、まず[!DNL Experience Platform]データセットのベース接続を取得する必要があります。
 
-データセットベースの接続を作成するには、[データセットベースの接続のチュートリアル](./create-dataset-base-connection.md)で概要を説明している手順に従ってください。
+データセットベースの接続を作成するには、[データセットベースの接続に関するチュートリアル](./create-dataset-base-connection.md)で説明している手順に従います。
 
-開発ガイドに説明されている手順に従って、データセットベースの接続を作成してから、続行します。 一意の識別子(`$id`)を取得して保存し、次の手順でターゲット接続を作成する際に、それをベース接続IDとして使用します。
+データセットベースの接続を作成するまで、開発者ガイドで説明されている手順に従います。 一意の識別子(`$id`)を取得して保存し、次の手順でターゲット接続を作成する際に、ベース接続IDとして使用します。
 
 ## ターゲットデータセットの作成
 
-ターゲットデータセットは、[カタログサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを指定することで作成できます。
+[カタログサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを指定することで、ターゲットデータセットを作成できます。
 
 **API 形式**
 
@@ -300,7 +299,7 @@ curl -X POST \
 
 **応答**
 
-正常に完了すると、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列が返されます。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順でターゲットデータセット接続とデータフローを作成する際に必要なターゲットデータセットIDを保存します。
+正常な応答は、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列を返します。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順でターゲット接続とデータフローを作成する際に必要になるターゲットデータセットIDを保存します。
 
 ```json
 [
@@ -308,9 +307,9 @@ curl -X POST \
 ]
 ```
 
-## ターゲット接続の作成{#target}
+## ターゲット接続の作成 {#target}
 
-これで、データセットベースの接続、ターゲットスキーマ、ターゲットデータセットに対して一意のIDを割り当てることができます。 これらの識別子を使用して、[!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを含むデータセットを指定できます。
+データセットベース接続、ターゲットスキーマ、ターゲットデータセットに固有の識別子が割り当てられました。 これらの識別子を使用して、[!DNL Flow Service] APIを使用してターゲット接続を作成し、受信ソースデータを格納するデータセットを指定できます。
 
 **API 形式**
 
@@ -350,14 +349,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | データセットベースの接続のID。 |
+| `baseConnectionId` | データセットベース接続のID。 |
 | `data.schema.id` | ターゲットXDMスキーマの`$id`。 |
 | `params.dataSetId` | ターゲットデータセットのID。 |
-| `connectionSpec.id` | クラウドストレージの接続指定ID。 |
+| `connectionSpec.id` | クラウドストレージの接続仕様ID。 |
 
 **応答**
 
-正常に応答すると、新しいターゲット接続の一意の識別子(`id`)が返されます。 この値は、後の手順で必要になるため保存します。
+正常な応答は、新しいターゲット接続の一意の識別子(`id`)を返します。 この値は、後の手順で必要になるため保存します。
 
 ```json
 {
@@ -368,12 +367,12 @@ curl -X POST \
 
 ## データフローの作成
 
-サードパーティのクラウドストレージからParketデータを取り込む最後の手順は、データフローを作成することです。 現時点では、次の必須の値を用意しておきます。
+サードパーティのクラウドストレージからParquetデータを取り込む最後の手順は、データフローを作成することです。 現時点では、次の必要な値が用意されています。
 
 - [ソース接続ID](#source)
 - [ターゲット接続ID](#target)
 
-データフローは、ソースからのデータのスケジュールおよび収集を担当します。 POST内で前述の値を提供しながらペイロードリクエストを実行すると、データフローを作成できます。
+データフローは、ソースからデータをスケジュールおよび収集する役割を担います。 データフローを作成するには、前述の値をPOST内に提供しながらペイロードリクエストを実行します。
 
 **API 形式**
 
@@ -418,7 +417,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答が返されると、新たに作成されたデータフローのID(`id`)が返されます。
+リクエストが成功した場合は、新しく作成したデータフローのID(`id`)が返されます。
 
 ```json
 {
@@ -429,7 +428,7 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従って、サードパーティのクラウドストレージシステムからParketデータをスケジュールに基づいて収集するソースコネクタを作成しました。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリーム[!DNL Platform]サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルに従って、ソースコネクタを作成し、サードパーティのクラウドストレージシステムからParquetデータをスケジュールに従って収集しました。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]など、ダウンストリームの[!DNL Platform]サービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 - [リアルタイム顧客プロファイルの概要](../../../profile/home.md)
-- [Data Science ワークスペースの概要](../../../data-science-workspace/home.md)
+- [Data Science Workspace の概要](../../../data-science-workspace/home.md)
