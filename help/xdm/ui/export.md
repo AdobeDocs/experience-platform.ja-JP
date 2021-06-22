@@ -1,12 +1,11 @@
 ---
 solution: Experience Platform
 title: UIでのXDMスキーマの書き出し
-description: Adobe Experience Platformユーザーインターフェイスで、既存のスキーマを別のサンドボックスまたはIMS組織にエクスポートする方法を説明します。
+description: Adobe Experience Platformユーザーインターフェイスで、既存のスキーマを別のサンドボックスまたはIMS組織に書き出す方法を説明します。
 topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
@@ -15,38 +14,38 @@ ht-degree: 0%
 
 # UIでのXDMスキーマの書き出し
 
-スキーマライブラリ内のすべてのリソースは、IMS組織内の特定のサンドボックスに含まれます。 場合によっては、サンドボックスとIMS組織の間でエクスペリエンスデータモデル(XDM)リソースを共有する必要があります。
+スキーマライブラリ内のすべてのリソースは、IMS組織内の特定のサンドボックスに含まれます。 サンドボックスとIMS組織の間でエクスペリエンスデータモデル(XDM)リソースを共有する必要が生じる場合があります。
 
-このニーズに対処するために、Adobe Experience PlatformUIの[!UICONTROL スキーマ]ワークスペースを使用して、スキーマライブラリ内の任意のスキーマに対するエクスポートペイロードを生成できます。 その後、このペイロードをスキーマレジストリAPIの呼び出しで使用して、スキーマ（およびすべての依存リソース）をターゲットサンドボックスとIMS組織にインポートできます。
+このニーズに対処するために、Adobe Experience Platform UIの[!UICONTROL スキーマ]ワークスペースでは、スキーマライブラリ内の任意のスキーマに対する書き出しペイロードを生成できます。 その後、このペイロードをスキーマレジストリAPIの呼び出しで使用して、スキーマ（およびすべての依存リソース）をターゲットサンドボックスとIMS組織に読み込むことができます。
 
 >[!NOTE]
 >
->スキーマレジストリAPIを使用して、クラス、スキーマフィールドグループ、データ型などのスキーマに加えて、他のリソースもエクスポートできます。 詳しくは、[export/import endpoints](../api/export-import.md)のガイドを参照してください。
+>また、スキーマレジストリAPIを使用して、クラス、スキーマフィールドグループ、データ型など、スキーマに加えて他のリソースを書き出すこともできます。 詳しくは、[書き出し/読み込みエンドポイント](../api/export-import.md)のガイドを参照してください。
 
 ## 前提条件
 
-Platform UIではXDMリソースの書き出しが可能ですが、ワークフローを完了するには、スキーマレジストリAPIを使用して他のサンドボックスまたはIMS Orgsにこれらのリソースを読み込む必要があります。 このガイドに従う前に、必要な認証ヘッダーに関する重要な情報については、[スキーマレジストリAPI](../api/getting-started.md)の使い始めに関するガイドを参照してください。
+Platform UIではXDMリソースを書き出すことができますが、ワークフローを完了するには、スキーマレジストリAPIを使用して、これらのリソースを他のサンドボックスまたはIMS組織に読み込む必要があります。 このガイドに従う前に、必要な認証ヘッダーに関する重要な情報については、[スキーマレジストリAPI](../api/getting-started.md)の使用の手引きを参照してください。
 
-## エクスポートペイロードの生成
+## 書き出しペイロードの生成
 
-Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**」を選択します。 [!UICONTROL スキーマ]ワークスペース内で、エクスポートするスキーマを探し、[!DNL Schema Editor]で開きます。
+プラットフォームUIで、左側のナビゲーションから「**[!UICONTROL スキーマ]**」を選択します。 [!UICONTROL スキーマ]ワークスペース内で、エクスポートするスキーマを探し、[!DNL Schema Editor]で開きます。
 
 >[!TIP]
 >
->XDMリソースを探す方法の詳細は、[XDMリソース](./explore.md)のガイドを参照してください。
+>探しているXDMリソースの見つけ方について詳しくは、[XDMリソース](./explore.md)のガイドを参照してください。
 
-スキーマを開いたら、キャンバスの右上にある「JSONをコピー&#x200B;]**」アイコン（![コピーアイコン](../images/ui/export/icon.png)）を選択します。**[!UICONTROL 
+スキーマを開いたら、キャンバスの右上にある「**[!UICONTROL JSONをコピー]**」アイコン（![アイコンをコピー](../images/ui/export/icon.png)）を選択します。
 
 ![](../images/ui/export/copy-json.png)
 
-これにより、スキーマー構造に基づいて生成されたJSONペイロードをクリップボードにコピーします。 上記の「[!DNL Loyalty Members]」スキーマに対して、次のJSONが生成されます。
+これにより、JSONペイロードがクリップボードにコピーされ、スキーマ構造に基づいて生成されます。 上記の「[!DNL Loyalty Members]」スキーマの場合、次のJSONが生成されます。
 
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "fieldgroups",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "mixins",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +170,12 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +188,8 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/mixins/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,14 +202,14 @@ Platform UIの左側のナビゲーションで「**[!UICONTROL スキーマ]**�
 ]
 ```
 
-ペイロードは配列の形をとり、各配列項目は、エクスポートするカスタムXDMリソースを表すオブジェクトです。 上記の例では、「[!DNL Loyalty details]」カスタムフィールドグループと「[!DNL Loyalty Members]」スキーマが含まれています。 スキーマが使用するコアリソースは、すべてのサンドボックスおよびIMS組織で使用できるので、エクスポートに含まれません。
+ペイロードは配列の形式を取り、各配列項目は書き出すカスタムXDMリソースを表すオブジェクトです。 上記の例では、「[!DNL Loyalty details]」カスタムフィールドグループと「[!DNL Loyalty Members]」スキーマが含まれます。 スキーマが使用するコアリソースは、すべてのサンドボックスとIMS組織で使用できるので、書き出しには含まれません。
 
-組織のテナントIDの各インスタンスは、ペイロードに`<XDM_TENANTID_PLACEHOLDER>`と表示されます。 これらのプレースホルダは、次の手順でスキーマを読み込んだ場所に応じて、適切なテナントID値に自動的に置き換えられます。
+組織のテナントIDの各インスタンスは、ペイロードに`<XDM_TENANTID_PLACEHOLDER>`と表示されます。 これらのプレースホルダーは、次の手順でスキーマを読み込む場所に応じて、適切なテナントID値に自動的に置き換えられます。
 
 ## APIを使用したリソースの読み込み
 
-スキーマの書き出しJSONをコピーしたら、スキーマレジストリAPIの`/import`エンドポイントへのPOSTリクエストのペイロードとして使用できます。 スキーマを目的のIMS組織とサンドボックスに送信する呼び出しを設定する方法の詳細については、API](../api/export-import.md#import)での[XDMリソースのインポートに関するセクションを参照してください。
+スキーマの書き出しJSONをコピーしたら、その書き出しJSONを、スキーマレジストリAPIの`/import`エンドポイントへのPOSTリクエストのペイロードとして使用できます。 目的のIMS Orgおよびサンドボックスにスキーマを送信するための呼び出しの設定方法について詳しくは、「APIでのXDMリソースの読み込み](../api/export-import.md#import)」の節を参照してください。[
 
 ## 次の手順
 
-このガイドに従うことで、XDMスキーマを別のIMS組織またはサンドボックスに正常に書き出すことができます。 [!UICONTROL スキーマ] UIの機能について詳しくは、[[!UICONTROL スキーマ] UIの概要](./overview.md)を参照してください。
+このガイドに従うことで、XDMスキーマを別のIMS組織またはサンドボックスに正常に書き出すことができました。 [!UICONTROL スキーマ] UIの機能について詳しくは、[[!UICONTROL スキーマ] UIの概要](./overview.md)を参照してください。
