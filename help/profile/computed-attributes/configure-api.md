@@ -1,31 +1,30 @@
 ---
-keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
-title: 計算済み属性フィールドの構成方法
+keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
+title: 計算済み属性フィールドの設定方法
 topic-legacy: guide
 type: Documentation
-description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。 計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、スキーマレジストリAPIを使用して、計算済み属性フィールドを保持するスキーマとカスタムフィールドグループを定義するために作成できます。
+description: 計算済み属性は、イベントレベルのデータをプロファイルレベルの属性に集計するために使用される関数です。計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、スキーマレジストリAPIを使用して作成し、計算済み属性フィールドを保持するスキーマとカスタムフィールドグループを定義できます。
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-translation-type: tm+mt
-source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '736'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
-# （アルファ）スキーマレジストリAPIを使用して、計算済み属性フィールドを設定する
+# （アルファ）スキーマレジストリAPIを使用した計算済み属性フィールドの設定
 
 >[!IMPORTANT]
 >
->計算済み属性機能は現在アルファベットで表示されており、すべてのユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
+>計算済み属性機能は現在アルファ版で、一部のユーザーが使用できるわけではありません。 ドキュメントと機能は変更される場合があります。
 
-計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、スキーマレジストリAPIを使用して、スキーマと、計算済み属性フィールドを保持するカスタムスキーマフィールドグループを定義するために作成できます。 「計算済み属性」スキーマとフィールドグループを個別に作成し、計算済み属性として使用する属性を組織で追加できるようにすることをお勧めします。 これにより、計算された属性スキーマを、データ取り込みに使用されている他のスキーマから完全に分離できます。
+計算済み属性を設定するには、まず、計算済み属性値を保持するフィールドを特定する必要があります。このフィールドは、スキーマレジストリAPIを使用して作成し、計算済み属性フィールドを保持するスキーマとカスタムスキーマフィールドグループを定義できます。 「計算済み属性」スキーマとフィールドグループを個別に作成し、組織で計算済み属性として使用する属性を追加することをお勧めします。 これにより、計算済み属性スキーマを、データ取得に使用されている他のスキーマから明確に分離できます。
 
-このドキュメントのワークフローでは、スキーマレジストリAPIを使用して、カスタムフィールドグループを参照するプロファイル対応の「計算済み属性」スキーマを作成する方法について概説します。 このドキュメントには、計算済み属性に固有のサンプルコードが含まれていますが、APIを使用したフィールドグループおよびスキーマの定義の詳細については、『[スキーマレジストリAPIガイド](../../xdm/api/overview.md)』を参照してください。
+このドキュメントのワークフローでは、スキーマレジストリAPIを使用して、カスタムフィールドグループを参照するプロファイル対応の「計算済み属性」スキーマを作成する方法について説明します。 このドキュメントには、計算済み属性に固有のサンプルコードが含まれていますが、APIを使用したフィールドグループとスキーマの定義について詳しくは、『[スキーマレジストリAPIガイド](../../xdm/api/overview.md)』を参照してください。
 
 ## 計算済み属性フィールドグループの作成
 
-スキーマレジストリAPIを使用してフィールドグループを作成するには、まず`/tenant/fieldgroups`エンドポイントにPOSTリクエストを行い、リクエスト本文にフィールドグループの詳細を入力します。 スキーマレジストリAPIを使用したフィールドグループの操作について詳しくは、[フィールドグループAPIエンドポイントガイド](../../xdm/api/field-groups.md)を参照してください。
+Schema Registry APIを使用してフィールドグループを作成するには、まず`/tenant/fieldgroups`エンドポイントにPOSTリクエストを送信し、リクエスト本文にフィールドグループの詳細を指定します。 スキーマレジストリAPIを使用したフィールドグループの操作について詳しくは、『[フィールドグループAPIエンドポイントガイド](../../xdm/api/field-groups.md)』を参照してください。
 
 **API 形式**
 
@@ -81,17 +80,17 @@ curl -X POST \
 | プロパティ | 説明 |
 |---|---|
 | `title` | 作成するフィールドグループの名前。 |
-| `meta:intendedToExtend` | フィールドグループを使用できるXDMクラスです。 |
+| `meta:intendedToExtend` | フィールドグループを使用できるXDMクラス。 |
 
 **応答**
 
-リクエストが成功すると、HTTP応答ステータス201（作成済み）が返されます。この状態には、新しく作成されたフィールドグループの詳細（`$id`、`meta:altIt`、`version`など）が含まれます。 これらの値は読み取り専用で、スキーマレジストリによって割り当てられます。
+リクエストが成功すると、HTTP応答ステータス201（作成済み）が返され、応答本文に`$id`、`meta:altIt`および`version`を含む新しく作成されたフィールドグループの詳細が含まれます。 これらの値は読み取り専用で、スキーマレジストリによって割り当てられます。
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "mixins",
   "version": "1.0",
   "title": "Computed Attributes Field Group",
   "type": "object",
@@ -145,11 +144,11 @@ curl -X POST \
 }
 ```
 
-## 計算済み属性を追加してフィールドグループを更新する
+## 追加の計算済み属性でフィールドグループを更新
 
-計算済み属性がさらに必要になる場合は、`/tenant/fieldgroups`エンドポイントにPUTリクエストを作成して、計算済み属性フィールドグループを追加の属性で更新できます。 このリクエストを行うには、パスに作成したフィールドグループの固有のIDと、本文に追加するすべての新しいフィールドを含める必要があります。
+計算済み属性がさらに必要になったら、`/tenant/fieldgroups`エンドポイントにPUTリクエストを実行して、計算済み属性フィールドグループを追加の属性で更新できます。 このリクエストでは、パスで作成したフィールドグループの一意のIDと、本文に追加するすべての新しいフィールドを含める必要があります。
 
-スキーマレジストリAPIを使用したフィールドグループの更新について詳しくは、[フィールドグループAPIエンドポイントガイド](../../xdm/api/field-groups.md)を参照してください。
+スキーマレジストリAPIを使用したフィールドグループの更新について詳しくは、『[フィールドグループAPIエンドポイントガイド](../../xdm/api/field-groups.md)』を参照してください。
 
 **API 形式**
 
@@ -163,11 +162,11 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 >[!NOTE]
 >
->PUT要求を通じてフィールドグループを更新する場合、本文には、POST要求で新しいフィールドグループを作成する際に必要となるフィールドをすべて含める必要があります。
+>PUTリクエストを通じてフィールドグループを更新する場合、本文には、POSTリクエストで新しいフィールドグループを作成する際に必要となるすべてのフィールドを含める必要があります。
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -230,13 +229,13 @@ curl -X PUT \
 
 **応答**
 
-正常に応答すると、更新されたフィールドグループの詳細が返されます。
+正常な応答は、更新されたフィールドグループの詳細を返します。
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "mixins",
   "version": "1.0",
   "title": "Computed Attributes Field Group",
   "type": "object",
@@ -312,9 +311,9 @@ curl -X PUT \
 
 ## プロファイル対応スキーマの作成
 
-スキーマレジストリAPIを使用してスキーマを作成するには、まず`/tenant/schemas`エンドポイントにPOSTリクエストを行い、リクエスト本文にスキーマの詳細を入力します。 スキーマは[!DNL Profile]に対しても有効にする必要があり、スキーマクラスの和集合スキーマの一部として表示されます。
+スキーマレジストリAPIを使用してスキーマを作成するには、まず`/tenant/schemas`エンドポイントにPOSTリクエストを送信し、リクエスト本文にスキーマの詳細を指定します。 このスキーマは[!DNL Profile]に対しても有効で、スキーマクラスの和集合スキーマの一部として表示される必要があります。
 
-[!DNL Profile]対応スキーマと和集合スキーマについて詳しくは、[[!DNL Schema Registry] APIガイド](../../xdm/api/overview.md)および[スキーマ構成の基本ドキュメント](../../xdm/schema/composition.md)を参照してください。
+[!DNL Profile]が有効なスキーマと和集合スキーマの詳細については、『[[!DNL Schema Registry] APIガイド](../../xdm/api/overview.md)』および『[スキーマ構成の基本ドキュメント](../../xdm/schema/composition.md)』を参照してください。
 
 **API 形式**
 
@@ -324,7 +323,7 @@ POST /tenants/schemas
 
 **リクエスト**
 
-次の要求では、このドキュメントで前に作成された`computedAttributesFieldGroup`を参照する新しいスキーマが作成され（一意のIDを使用）、プロファイル和集合スキーマに対して有効になります（`meta:immutableTags`配列を使用）。 スキーマレジストリAPIを使用してスキーマを作成する方法について詳しくは、[スキーマAPIエンドポイントガイド](../../xdm/api/schemas.md)を参照してください。
+次のリクエストは、このドキュメントで先ほど作成した`computedAttributesFieldGroup`を（一意のIDを使用して）参照し、プロファイルの和集合スキーマ（`meta:immutableTags`配列を使用して）に対して有効にする新しいスキーマを作成します。 スキーマレジストリAPIを使用してスキーマを作成する方法について詳しくは、『[スキーマAPIエンドポイントガイド](../../xdm/api/schemas.md)』を参照してください。
 
 ```shell
 curl -X POST \
@@ -345,7 +344,7 @@ curl -X POST \
         "meta:extends": [
           "https://ns.adobe.com/xdm/context/profile",
           "https://ns.adobe.com/xdm/context/identitymap",
-          "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+          "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
         ],
         "description": "Description of schema.",
         "definitions": {
@@ -358,7 +357,7 @@ curl -X POST \
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
           },
           {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
           }
         ],
         "meta:class": "https://ns.adobe.com/xdm/context/profile"
@@ -391,7 +390,7 @@ curl -X POST \
       "meta:xdmType": "object"
     },
     {
-      "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+      "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -399,7 +398,7 @@ curl -X POST \
   "refs": [
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "imsOrg": "{IMS_ORG}",
   "meta:extensible": false,
@@ -409,7 +408,7 @@ curl -X POST \
     "https://ns.adobe.com/xdm/data/record",
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "meta:xdmType": "object",
   "meta:registryMetadata": {
@@ -435,4 +434,4 @@ curl -X POST \
 
 ## 次の手順
 
-計算済み属性が格納されるスキーマとフィールドグループを作成したら、`/computedattributes` APIエンドポイントを使用して計算済み属性を作成できます。 APIで計算済み属性を作成する詳細な手順については、[計算済み属性APIエンドポイントガイド](ca-api.md)に記載されている手順に従ってください。
+これで、計算済み属性の格納先となるスキーマおよびフィールドグループを作成したので、`/computedattributes` APIエンドポイントを使用して計算済み属性を作成できます。 APIで計算済み属性を作成する詳細な手順については、『[計算済み属性APIエンドポイントガイド](ca-api.md)』の手順に従ってください。
