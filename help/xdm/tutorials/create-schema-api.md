@@ -1,24 +1,23 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；API;XDM;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；スキーマレジストリ；スキーマレジストリ；スキーマ;スキーマ；作成
+keywords: Experience Platform；ホーム；人気のあるトピック；API;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；スキーマレジストリ；スキーマ；スキーマ；スキーマ；スキーマ；スキーマ；作成
 solution: Experience Platform
 title: スキーマレジストリAPIを使用したスキーマの作成
 topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、スキーマレジストリ API を使用して、標準クラスを使用してスキーマを作成する手順を説明します。
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '2426'
-ht-degree: 48%
+ht-degree: 49%
 
 ---
 
 # [!DNL Schema Registry] APIを使用したスキーマの作成
 
-[!DNL Schema Registry]は、Adobe Experience Platform内の[!DNL Schema Library]にアクセスするために使用されます。 [!DNL Schema Library]には、Adobe、[!DNL Experience Platform]パートナー、および使用するアプリケーションのベンダーが提供するリソースが含まれています。 レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
+[!DNL Schema Registry]は、Adobe Experience Platform内の[!DNL Schema Library]にアクセスするために使用されます。 [!DNL Schema Library]には、Adobe、[!DNL Experience Platform]パートナー、使用するアプリケーションのベンダーが提供するリソースが含まれます。 レジストリは、使用可能なすべてのライブラリリソースにアクセスできるユーザーインターフェイスと RESTful API を提供します。
 
-このチュートリアルでは、[!DNL Schema Registry] APIを使って、標準クラスを使用してスキーマを構成する手順を順を追って説明します。 [!DNL Experience Platform]でユーザインターフェイスを使用したい場合は、[スキーマエディタのチュートリアル](create-schema-ui.md)で、スキーマエディタで同様の操作を実行するための手順を順を追って説明します。
+このチュートリアルでは、[!DNL Schema Registry] APIを使用して、標準クラスを使用してスキーマを作成する手順を説明します。 [!DNL Experience Platform]でユーザーインターフェイスを使用したい場合は、スキーマエディターで同様の操作を実行するための手順を、「[スキーマエディターのチュートリアル](create-schema-ui.md)」で参照できます。
 
 ## はじめに
 
@@ -26,22 +25,22 @@ ht-degree: 48%
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
    * [スキーマ構成の基本](../schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-* [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合されたリアルタイムの消費者プロファイルを提供します。
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [[!DNL Real-time Customer Profile]](../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、単一のインスタンスを別々の仮想環境に分割 [!DNL Platform] し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-このチュートリアルを開始する前に、[開発者ガイド](../api/getting-started.md)を参照し、[!DNL Schema Registry] APIを正しく呼び出すために知っておく必要がある重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
+このチュートリアルを開始する前に、『[開発者ガイド](../api/getting-started.md)』を参照し、[!DNL Schema Registry] APIを正しく呼び出すために知っておく必要がある重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
 
 このチュートリアルでは、小売ロイヤルティプログラムのメンバーに関連するデータを記述する「ロイヤルティメンバー」スキーマを作成する手順について説明します。開始する前に、付録にある[完全なロイヤルティメンバースキーマ](#complete-schema)をプレビューできます。
 
 ## 標準クラスでのスキーマを構成
 
-スキーマは[!DNL Experience Platform]に取り込むデータの青写真と考えることができます。 各スキーマは、1つのクラスと0個以上のスキーマフィールドグループで構成されます。 つまり、スキーマを定義するためにフィールドグループを追加する必要はありませんが、ほとんどの場合は少なくとも1つのフィールドグループが使用されます。
+スキーマは、[!DNL Experience Platform]に取り込むデータのブループリントと考えることができます。 各スキーマは、クラスと0個以上のスキーマフィールドグループで構成されます。 つまり、スキーマを定義するためにフィールドグループを追加する必要はありませんが、ほとんどの場合、少なくとも1つのフィールドグループが使用されます。
 
 ### クラスの割り当て
 
 スキーマ構成プロセスは、クラスの選択から始まります。このクラスは、データの主要な動作面（レコードと時系列）、および取得されるデータを説明するために必要な最小フィールドを定義します。
 
-このチュートリアルで作成するスキーマは、[!DNL XDM Individual Profile]クラスを使用します。 [!DNL XDM Individual Profile] は、Adobeがレコード動作を定義するために提供する標準クラスです。動作に関する詳細については、「[スキーマ合成の基本](../schema/composition.md)」を参照してください。
+このチュートリアルで作成するスキーマでは、[!DNL XDM Individual Profile]クラスを使用します。 [!DNL XDM Individual Profile] は、レコードの動作を定義するためにAdobeが提供する標準クラスです。動作に関する詳細については、「[スキーマ合成の基本](../schema/composition.md)」を参照してください。
 
 クラスを割り当てるために、API 呼び出しが行われ、テナントコンテナ内に新しいスキーマが作成（POST）されます。この呼び出しには、スキーマが実装するクラスが含まれます。各スキーマは、1 つのクラスのみを実装できます。
 
@@ -137,7 +136,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**応答** 
+**応答**
 
 応答オブジェクトの形式は、リクエストと送信される Accept ヘッダーによって異なります。異なる Accept ヘッダーを試してみて、どのヘッダーがニーズに最も適しているかを確認してください。
 
@@ -177,13 +176,13 @@ curl -X GET \
 }
 ```
 
-### フィ追加ールドグループ{#add-a-field-group}
+### フィールドグループ{#add-a-field-group}を追加します
 
-ロイヤルティメンバースキーマが作成され、確認されたので、フィールドグループを追加できます。
+「ロイヤルティメンバー」スキーマが作成され、確認されたので、フィールドグループを追加できます。
 
-選択したスキーマのクラスに応じて、使用できる標準フィールドグループが異なります。 各フィールドグループには`intendedToExtend`フィールドが含まれており、このフィールドグループと互換性のあるクラスを定義します。
+選択したスキーマのクラスに応じて、使用できる標準フィールドグループが異なります。 各フィールドグループには、そのフィールドグループと互換性があるクラスを定義する`intendedToExtend`フィールドが含まれています。
 
-フィールドグループは、「名前」や「住所」など、同じ情報を取り込む必要のある任意のスキーマで再利用できる概念を定義します。
+フィールドグループは、「名前」や「住所」など、同じ情報を取り込む必要のあるスキーマで再利用できる概念を定義します。
 
 **API 形式**
 
@@ -193,9 +192,9 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **リクエスト**
 
-この要求は、忠誠度メンバースキーマを更新(PATCH)し、「プロファイル — 人 — 詳細」フィールドグループ内のフィールドを含めます。
+このリクエストは、「ロイヤルティメンバー」スキーマを更新(PATCH)し、「プロファイル — 個人 — 詳細」フィールドグループ内のフィールドを含めます。
 
-「プロファイル — 人物 — 詳細」フィールドグループを追加することで、忠誠度メンバースキーマは、ロイヤルティプログラムメンバー（名、姓、誕生日など）に関する情報を取得できるようになりました。
+「プロファイル — 個人 — 詳細」フィールドグループを追加することで、「ロイヤルティメンバー」スキーマは、姓、名、誕生日など、ロイヤルティプログラムメンバーに関する情報を取り込むようになりました。
 
 ```SHELL
 curl -X PATCH \
@@ -212,7 +211,7 @@ curl -X PATCH \
 
 **応答**
 
-応答は、新しく追加されたフィールドグループを`meta:extends`配列に表示し、`allOf`属性のフィールドグループに対する`$ref`を含みます。
+応答では、新しく追加されたフィールドグループが`meta:extends`配列に表示され、`allOf`属性にフィールドグループへの`$ref`が含まれます。
 
 ```JSON
 {
@@ -254,13 +253,13 @@ curl -X PATCH \
 }
 ```
 
-### 追加別のフィールドグループ
+### 別のフィールドグループの追加
 
-これで、別のフィールドグループを使用して手順を繰り返すことで、別の標準フィールドグループを追加できるようになりました。
+次に、別のフィールドグループを使用して手順を繰り返すことで、別の標準フィールドグループを追加できます。
 
 >[!TIP]
 >
->各フィールドに含まれるフィールドについて理解するために、利用可能なすべてのフィールドグループを確認することをお勧めします。 「グローバル」と「テナント」の各コンテナに対してリクエストを実行し、使用しているクラスと「meta:intendedToExtend」フィールドが一致するフィールドグループのみを返すことで、特定のクラスで使用できるすべてのフィールドグループをリスト(GET)できます。 この場合、[!DNL XDM Individual Profile]クラスなので、[!DNL XDM Individual Profile] `$id`が使用されます。
+>使用可能なすべてのフィールドグループを確認して、各フィールドに含まれるフィールドに慣れておくことをお勧めします。 「グローバル」コンテナと「テナント」コンテナのそれぞれに対してリクエストを実行し、「meta:intentedToExtend」フィールドが使用しているクラスと一致するフィールドグループのみを返すことで、特定のクラスで使用できるすべてのフィールドグループをリスト(GET)できます。 この場合は[!DNL XDM Individual Profile]クラスなので、 [!DNL XDM Individual Profile] `$id`が使用されます。
 
 ```http
 GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -275,7 +274,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **リクエスト**
 
-この要求では、忠誠度メンバースキーマが更新(PATCH)され、「プロファイル — 個人 — 詳細」フィールドグループ内のフィールドが含まれ、「ホームアドレス」、「電子メールアドレス」および「ホーム電話」フィールドがスキーマに追加されます。
+このリクエストは、「ロイヤルティメンバー」スキーマを更新(PATCH)し、「profile-personal-details」フィールドグループ内のフィールドを含め、「自宅住所」、「電子メールアドレス」、「自宅電話番号」の各フィールドをスキーマに追加します。
 
 ```SHELL
 curl -X PATCH \
@@ -292,7 +291,7 @@ curl -X PATCH \
 
 **応答**
 
-応答は、新しく追加されたフィールドグループを`meta:extends`配列に表示し、`allOf`属性のフィールドグループに対する`$ref`を含みます。
+応答では、新しく追加されたフィールドグループが`meta:extends`配列に表示され、`allOf`属性にフィールドグループへの`$ref`が含まれます。
 
 「ロイヤルティメンバー」スキーマには、「プロファイル」、「プロファイル — 個人 — 詳細」、「プロファイル — 個人 — 詳細」の 3 つの `$ref` 値が `allOf` 配列に含まれている必要があります。
 
@@ -340,15 +339,15 @@ curl -X PATCH \
 }
 ```
 
-### 新しいフィールドグループを定義する
+### 新しいフィールドグループの定義
 
 「ロイヤルティメンバー」スキーマは、ロイヤルティプログラムに固有の情報を取り込む必要があります。この情報は、標準フィールドグループには含まれません。
 
-[!DNL Schema Registry]は、テナントコンテナ内に独自のフィールドグループを定義できるので、これを説明します。 これらのフィールドグループは組織に固有のもので、IMS組織外の誰もが表示したり編集したりすることはできません。
+[!DNL Schema Registry]は、テナントコンテナ内で独自のフィールドグループを定義できるので、これを考慮します。 これらのフィールドグループは組織に固有で、IMS組織外のユーザーは表示したり編集したりすることはできません。
 
-新しいフィールドグループを作成(POST)するには、リクエストに、フィールドグループと互換性のある基本クラスの`$id`を含む`meta:intendedToExtend`フィールドと、フィールドグループに含めるプロパティを含める必要があります。
+新しいフィールドグループを作成(POST)するには、リクエストに、フィールドグループと互換性がある基本クラスの`$id`を含む`meta:intendedToExtend`フィールドと、フィールドグループに含めるプロパティを含める必要があります。
 
-他のフィールドグループやフィールドとの衝突を避けるために、すべてのカスタムプロパティは`TENANT_ID`の下にネストする必要があります。
+他のフィールドグループやフィールドとの競合を避けるために、すべてのカスタムプロパティを`TENANT_ID`の下にネストする必要があります。
 
 **API 形式**
 
@@ -358,7 +357,7 @@ POST /tenant/fieldgroups
 
 **リクエスト**
 
-このリクエストにより、4つの忠誠度プログラム固有のフィールドを含む「忠誠度」オブジェクトを持つ新しいフィールドグループが作成されます。&quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;および&quot;memberSince&quot;。
+このリクエストは、4つのロイヤルティプログラム固有のフィールドを含む「loyalty」オブジェクトを持つ新しいフィールドグループを作成します。&quot;loyaltyId&quot;、&quot;loyaltyLevel&quot;、&quot;loyaltyPoints&quot;および&quot;memberSince&quot;。
 
 ```SHELL
 curl -X POST\
@@ -419,7 +418,7 @@ curl -X POST\
 
 **応答**
 
-リクエストが成功すると、HTTP応答ステータス201（作成済み）が返されます。この状態には、新しく作成されたフィールドグループの詳細（`$id`、`meta:altIt`、`version`など）が含まれます。 これらの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
+リクエストが成功すると、HTTP応答ステータス201（作成済み）が返され、応答本文に`$id`、`meta:altIt`および`version`を含む新しく作成されたフィールドグループの詳細が含まれます。 これらの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
 
 ```JSON
 {
@@ -482,11 +481,11 @@ curl -X POST\
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "fieldgroups",
+    "meta:resourceType": "mixins",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -496,9 +495,9 @@ curl -X POST\
 }
 ```
 
-### カス追加タムフィールドグループからスキーマ
+### カスタムフィールドグループをスキーマに追加
 
-現在は、[標準のフィールドグループ](#add-a-field-group)を追加する場合も同じ手順に従って、新しく作成したフィールドグループをスキーマに追加できます。
+[標準のフィールドグループ](#add-a-field-group)を追加して、この新しく作成したフィールドグループをスキーマに追加するのと同じ手順に従うことができます。
 
 **API 形式**
 
@@ -508,7 +507,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **リクエスト**
 
-この要求は、忠誠度メンバースキーマを更新(PATCH)し、新しい[忠誠度メンバーの詳細]フィールドグループ内のフィールドを含めます。
+このリクエストは、「ロイヤルティメンバー」スキーマを更新(PATCH)し、新しい「ロイヤルティメンバーの詳細」フィールドグループ内のフィールドを含めます。
 
 ```SHELL
 curl -X PATCH \
@@ -519,13 +518,13 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
 **応答**
 
-応答は、新しく追加されたフィールドグループを`meta:extends`配列に表示し、`allOf`属性のフィールドグループに対する`$ref`を含むので、フィールドグループが正常に追加されたことがわかります。
+応答の`meta:extends`配列には新しく追加されたフィールドグループが含まれ、`allOf`属性にはフィールドグループに対する`$ref`が含まれているので、フィールドグループが正常に追加されたことがわかります。
 
 ```JSON
 {
@@ -543,7 +542,7 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -557,7 +556,7 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -577,7 +576,7 @@ curl -X PATCH \
 
 ### 現在のスキーマの表示
 
-現在のスキーマを表示するためのGETリクエストを実行し、追加したフィールドグループがスキーマの全体的な構造にどのように貢献したかを確認できるようになりました。
+これで、GETリクエストを実行して、現在のスキーマを表示し、追加したフィールドグループがスキーマの全体的な構造にどのように貢献したかを確認できます。
 
 **API 形式**
 
@@ -599,9 +598,9 @@ curl -X GET \
 
 **応答** 
 
-`application/vnd.adobe.xed-full+json; version=1` Accept ヘッダーを使用すると、すべてのプロパティを含む完全なスキーマを表示できます。これらのプロパティは、スキーマの構成に使用されたクラスおよびフィールドグループによって提供されるフィールドです。 この応答例では、スペースを節約するために個々のプロパティ属性が最小化されています。ドキュメント末尾の[付録](#appendix)では、すべてのプロパティとその属性を含む完全なスキーマを参照できます。
+`application/vnd.adobe.xed-full+json; version=1` Accept ヘッダーを使用すると、すべてのプロパティを含む完全なスキーマを表示できます。これらのプロパティは、スキーマの作成に使用されたクラスおよびフィールドグループが提供するフィールドです。 この応答例では、スペースを節約するために個々のプロパティ属性が最小化されています。ドキュメント末尾の[付録](#appendix)では、すべてのプロパティとその属性を含む完全なスキーマを参照できます。
 
-`"properties"`の下には、カスタムフィールドグループを追加したときに作成された`_{TENANT_ID}`名前空間が表示されます。 この名前空間内には、「忠誠度」オブジェクトと、フィールドグループの作成時に定義されたフィールドが含まれます。
+`"properties"`の下に、カスタムフィールドグループを追加したときに作成された`_{TENANT_ID}`名前空間が表示されます。 その名前空間内には、「loyalty」オブジェクトと、フィールドグループの作成時に定義されたフィールドが含まれます。
 
 ```JSON
 {
@@ -619,7 +618,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -691,11 +690,11 @@ curl -X GET \
 
 ### データタイプの作成
 
-作成した[忠誠度]フィールドグループには、他のスキーマで役立つ特定の忠誠度プロパティが含まれています。 例えば、データはエクスペリエンスイベントの一部として取得されたり、別のクラスを実装するスキーマによって使用されたりします。この場合、オブジェクト階層をデータ型として保存し、別の場所で簡単に定義を再利用できるようにすると効果的です。
+作成した「ロイヤルティ」フィールドグループには、他のスキーマで役立つ特定のロイヤルティプロパティが含まれています。 例えば、データはエクスペリエンスイベントの一部として取得されたり、別のクラスを実装するスキーマによって使用されたりします。この場合、オブジェクト階層をデータ型として保存し、別の場所で簡単に定義を再利用できるようにすると効果的です。
 
 データ型を使用すると、1 つのオブジェクト階層を 1 回定義し、他のスカラ型と同様にフィールド内で参照できます。
 
-つまり、データ型を使用すると、複数フィールド構造を「型」として追加することでスキーマ内のどこにでも含めることができるので、フィールドグループよりも柔軟に、一貫した形で使用できます。
+つまり、データ型を使用すると、フィールドの「型」として追加することでスキーマの任意の場所に含めることができるので、フィールドグループよりも柔軟に複数フィールド構造を一貫して使用できます。
 
 **API 形式**
 
@@ -822,7 +821,7 @@ URL エンコードされた `$id` URI を使用して参照（GET）リクエ�
 
 ### スキーマでのデータ型の使用
 
-忠誠度の詳細データ型が作成されたので、作成したフィールドグループの「忠誠度」フィールドを更新(PATCH)し、以前に作成したフィールドの代わりにデータ型を参照できます。
+「Loyalty Details」データ型が作成されたので、作成したフィールドグループの「loyalty」フィールドを更新(PATCH)して、以前のフィールドの代わりにデータ型を参照できます。
 
 **API 形式**
 
@@ -834,7 +833,7 @@ PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -896,11 +895,11 @@ curl -X PATCH \
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "fieldgroups",
+    "meta:resourceType": "mixins",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -956,9 +955,9 @@ GET 要求を実行してスキーマを参照すると、次に示すように�
 
 ### ID 記述子の定義
 
-スキーマは、[!DNL Experience Platform]にデータを取り込むために使用されます。 このデータは、最終的に複数のサービスで使用され、個人の単一の統合表示を作成します。この処理を支援するために、主要フィールドを「ID」としてマークし、データ取得時に、これらのフィールド内のデータをその個人の「ID グラフ」に挿入できます。次に、[[!DNL Real-time Customer Profile]](../../profile/home.md)および他の[!DNL Experience Platform]サービスによってグラフデータにアクセスし、各顧客の組み合わせ表示を提供することができます。
+スキーマは、データを[!DNL Experience Platform]に取り込むために使用されます。 このデータは、最終的に複数のサービスで使用され、個人の単一の統合表示を作成します。この処理を支援するために、主要フィールドを「ID」としてマークし、データ取得時に、これらのフィールド内のデータをその個人の「ID グラフ」に挿入できます。その後、グラフデータは、各顧客の表示をつなぎ合わせるために、[[!DNL Real-time Customer Profile]](../../profile/home.md)および他の[!DNL Experience Platform]サービスによってアクセスされます。
 
-「ID」として一般的にマークされるフィールドには、次のものがあります。電子メールアドレス、電話番号、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)、CRM IDまたはその他の一意のIDフィールド。
+一般に「ID」とマークされるフィールドは次のとおりです。電子メールアドレス、電話番号、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)、CRM IDまたはその他の一意のIDフィールド。
 
 組織に固有の識別子は、適切な ID フィールドである場合もあるので、それらを考慮します。
 
@@ -974,7 +973,7 @@ POST /tenant/descriptors
 
 **リクエスト**
 
-次のリクエストは、「loyaltyId」フィールドに ID 記述子を定義します。これは、[!DNL Experience Platform]に対して、一意の忠誠度プログラムメンバ識別子（この場合、メンバの電子メールアドレス）を使用して、個々の情報を結合するのに役立つように指示します。
+次のリクエストは、「loyaltyId」フィールドに ID 記述子を定義します。これにより、[!DNL Experience Platform]は一意のロイヤルティプログラムメンバー識別子（この場合はメンバーの電子メールアドレス）を使用して、個人に関する情報を組み合わせるのに役立ちます。
 
 ```SHELL
 curl -X POST \
@@ -997,11 +996,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->[[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)を使って、&quot;xdm:名前空間&quot;の値をリストしたり、新しい値を作成したりできます。 「xdm:property」の値は、使用する「xdm:namespace」によって「xdm:code」または「xdm:id」になります。
+>使用可能な「xdm:namespace」値をリストするか、[[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)を使用して新しい値を作成できます。 「xdm:property」の値は、使用する「xdm:namespace」によって「xdm:code」または「xdm:id」になります。
 
 **応答** 
 
-正常な応答では、新しく作成された記述子の詳細（`@id` を含む）とと共に、HTTP ステータス 201（作成済み）が返されます。`@id`は、[!DNL Schema Registry]によって割り当てられる読み取り専用のフィールドで、APIの記述子を参照するために使用されます。
+正常な応答では、新しく作成された記述子の詳細（`@id` を含む）とと共に、HTTP ステータス 201（作成済み）が返されます。`@id`は読み取り専用のフィールドで、[!DNL Schema Registry]によって割り当てられ、APIで記述子を参照するために使用されます。
 
 ```JSON
 {
@@ -1017,11 +1016,11 @@ curl -X POST \
 }
 ```
 
-## スキーマを[!DNL Real-time Customer Profile] {#profile}で使用可能にする
+## [!DNL Real-time Customer Profile]でのスキーマの使用を有効にする {#profile}
 
-`meta:immutableTags`属性に「和集合」タグを追加すると、[!DNL Real-time Customer Profile]で使用する忠誠度メンバースキーマを有効にできます。
+`meta:immutableTags`属性に「和集合」タグを追加することで、[!DNL Real-time Customer Profile]による「ロイヤルティメンバー」スキーマの使用を有効にできます。
 
-和集合表示の使用に関する詳細は、『[!DNL Schema Registry]開発者ガイド』の「[和集合](../api/unions.md)」の節を参照してください。
+和集合表示の使用に関する詳細については、『[!DNL Schema Registry]開発者ガイド』の「[和集合](../api/unions.md)」の節を参照してください。
 
 ### 「追加和集合」タグの追加
 
@@ -1068,7 +1067,7 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1082,7 +1081,7 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1105,7 +1104,7 @@ curl -X PATCH \
 
 ### 和集合でのスキーマのリスト
 
-これで、スキーマが[!DNL XDM Individual Profile]和集合に正常に追加されました。 同じ和集合に属するすべてのスキーマのリストを表示するには、クエリーパラメーターを使用して GET 要求を実行し、応答をフィルタリングします。
+これで、[!DNL XDM Individual Profile]和集合にスキーマが正常に追加されました。 同じ和集合に属するすべてのスキーマのリストを表示するには、クエリーパラメーターを使用して GET 要求を実行し、応答をフィルタリングします。
 
 `property` クエリーパラメーターを使用して、 クラスの `meta:immutableTags` と等しい `meta:class` を持つ `$id` フィールドを含むプロファイルのみが返されるように指定できます。[!DNL XDM Individual Profile]
 
@@ -1171,9 +1170,9 @@ curl -X GET \
 
 ## 次の手順
 
-このチュートリアルに従うと、標準のフィールドグループと、定義したフィールドグループの両方を使用して、スキーマを正しく構成できます。 これで、このスキーマを使用して、データセットを作成し、レコードデータを Adobe Experience Platform に取得することができます。
+このチュートリアルでは、標準フィールドグループと定義したフィールドグループの両方を使用して、スキーマを正しく構成しました。 これで、このスキーマを使用して、データセットを作成し、レコードデータを Adobe Experience Platform に取得することができます。
 
-このチュートリアル全体で作成した「ロイヤルティメンバー」スキーマは、次の付録で完全に参照できます。スキーマを見ると、フィールドグループが全体的な構造にどのように貢献しているか、およびデータ取り込みに使用できるフィールドは何かがわかります。
+このチュートリアル全体で作成した「ロイヤルティメンバー」スキーマは、次の付録で完全に参照できます。スキーマを見ると、フィールドグループが全体的な構造にどのように貢献しているか、およびデータ取り込みに使用できるフィールドを確認できます。
 
 複数のリレーションを作成したら、関係記述子を使用して、スキーマ間の関係を定義できます。詳しくは、[2 つのスキーマの関係を定義する](relationship-api.md)ためのチュートリアルを参照してください 。レジストリ内のすべての操作（GET、POST、PUT、PATCH、DELETE）を実行する方法の詳細な例については、API を使用する際に、『[スキーマレジストリ開発者ガイド](../api/getting-started.md)』を参照してください。
 
@@ -1185,7 +1184,7 @@ curl -X GET \
 
 このチュートリアル全体で、スキーマは小売ロイヤルティメンバープログラムを説明するために構成されています。
 
-スキーマは[!DNL XDM Individual Profile]クラスを実装し、複数のフィールドグループを結合します。標準の「個人詳細」フィールドグループと「個人詳細」フィールドグループを使用して、また、チュートリアルで定義した「忠誠度の詳細」フィールドグループを使用して、忠誠度メンバーに関する情報を取り込みます。
+スキーマは[!DNL XDM Individual Profile]クラスを実装し、複数のフィールドグループを組み合わせます。標準の「個人の詳細」フィールドグループと「個人の詳細」フィールドグループを使用してロイヤルティメンバーに関する情報を取り込むほか、チュートリアル中に定義された「ロイヤルティの詳細」フィールドグループを使用します。
 
 以下に、完全な「ロイヤルティメンバー」スキーマを JSON 形式で示します。
 
@@ -1205,7 +1204,7 @@ curl -X GET \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
