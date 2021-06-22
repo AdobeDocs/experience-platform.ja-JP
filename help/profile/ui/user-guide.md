@@ -4,10 +4,10 @@ title: リアルタイム顧客プロファイルUIガイド
 topic-legacy: guide
 description: リアルタイム顧客プロファイルは、オンライン、オフライン、CRM、サードパーティデータなど複数のチャネルからのデータを組み合わせて、個々の顧客の全体像を作成します。このドキュメントは、Adobe Experience Platform ユーザーインターフェイスでリアルタイム顧客プロファイルと対話するためのガイドとして機能します。
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 11%
+source-wordcount: '1319'
+ht-degree: 10%
 
 ---
 
@@ -25,15 +25,19 @@ ht-degree: 11%
 
 ## 概要
 
-Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL プロファイル]**」を選択し、「**[!UICONTROL 概要]**」タブを開きます。 このタブには、プロファイルの理解と操作を開始するのに役立つドキュメントとビデオへのリンクが表示されます。
+Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL プロファイル]**」を選択し、「**[!UICONTROL 概要]**」タブを開いて「[!UICONTROL プロファイル]」ダッシュボードを表示します。
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>組織がPlatformを初めて使用する場合で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、「[!UICONTROL Profiles]」ダッシュボードは表示されません。 代わりに、「[!UICONTROL 概要]」タブには、リアルタイム顧客プロファイルを使い始めるのに役立つリンクとドキュメントが表示されます。
 
-### プロファイルダッシュボード
+###  Profilesdashboard  {#profile-dashboard}
 
-一部のユーザーは、左側のナビゲーションで「**[!UICONTROL プロファイル]**」を選択し、「**[!UICONTROL 概要]**」タブを開くと、プロファイルデータに関連する主要指標の概要を示すダッシュボードが表示されます。
+**[!UICONTROL プロファイル]**&#x200B;ダッシュボードでは、組織のプロファイルデータに関連する主要指標の概要を説明します。
 
-詳しくは、[プロファイルダッシュボードガイド](profile-dashboard.md)を参照してください。
+詳しくは、[プロファイルダッシュボードガイド](../../dashboards/guides/profiles.md)を参照してください。
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## 参照
 
