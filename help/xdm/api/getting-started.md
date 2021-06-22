@@ -5,10 +5,10 @@ title: スキーマレジストリAPIの概要
 description: このドキュメントでは、スキーマレジストリAPIを呼び出す前に知っておく必要がある中心概念の概要を説明します。
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1370'
-ht-degree: 44%
+ht-degree: 45%
 
 ---
 
@@ -29,7 +29,7 @@ XDMでは、JSONスキーマの形式を使用して、取り込んだ顧客体�
 
 ## API 呼び出し例の読み取り
 
-[!DNL Schema Registry] API ドキュメントには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+[!DNL Schema Registry] API ドキュメントには、API 呼び出しの例とリクエストの形式を指定する方法が示されています。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
 
 ## 必須ヘッダーの値の収集
 
@@ -74,7 +74,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、組織の[!DNL Schema Registry]の使用に関する情報を返します。 この中には `TENANT_ID` の値である `tenantId` 属性が含まれています。
 
@@ -84,7 +84,7 @@ curl -X GET \
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "fieldgroups": 3,
+    "mixins": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
@@ -93,7 +93,7 @@ curl -X GET \
     {
       "title": "Sample Field Group",
       "description": "New Sample Field Group.",
-      "meta:resourceType": "fieldgroups",
+      "meta:resourceType": "mixins",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -110,7 +110,7 @@ curl -X GET \
     {
       "title": "Sample Field Group",
       "description": "New Sample Field Group.",
-      "meta:resourceType": "fieldgroups",
+      "meta:resourceType": "mixins",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -270,4 +270,4 @@ APIで異なるフィールドタイプを定義する方法について詳し�
 
 ## 次の手順
 
-[!DNL Schema Registry] APIを使用して呼び出しを開始するには、使用可能なエンドポイントガイドの1つを選択します。
+[!DNL Schema Registry] API を使用した呼び出しを開始するには、使用可能なエンドポイントガイドの 1 つを選択します。
