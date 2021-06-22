@@ -6,7 +6,7 @@ description: このドキュメントでは、スキーマレジストリ API �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 38%
@@ -173,15 +173,15 @@ curl -X POST\
       }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成されたフィールドグループの詳細を返します。
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "fieldgroups",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "mixins",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
@@ -267,7 +267,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -281,7 +281,7 @@ curl -X PATCH \
 
 {style=&quot;table-layout:auto&quot;}
 
-**応答** 
+**応答**
 
 正常な応答は、更新されたスキーマの詳細を返します。この詳細には、追加されたフィールドグループの`$ref`値が`allOf`配列に含まれます。
 
@@ -305,13 +305,13 @@ curl -X PATCH \
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -328,8 +328,8 @@ curl -X PATCH \
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
