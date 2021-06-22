@@ -4,10 +4,10 @@ title: セグメントダッシュボード
 description: 'Adobe Experience Platformには、組織が作成したセグメントに関する重要な情報を表示できるダッシュボードが用意されています。 '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 3%
+source-wordcount: '940'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,11 @@ Platformユーザーインターフェイス内のAdobe Experience Platform Segm
 
 ## セグメントダッシュボードの詳細
 
-Platform UI内のセグメントダッシュボードに移動するには、左側のレールで「**[!UICONTROL セグメント]**」を選択し、「**[!UICONTROL 概要]**」タブを選択してダッシュボードを表示します。
+Platform UI内の[!UICONTROL セグメント]ダッシュボードに移動するには、左側のレールで「**[!UICONTROL セグメント]**」を選択し、「**[!UICONTROL 概要]**」タブを選択してダッシュボードを表示します。
+
+>[!NOTE]
+>
+>組織がPlatformを初めて使用する場合で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、「[!UICONTROL Segments]」ダッシュボードは表示されません。 代わりに、「[!UICONTROL 概要]」タブには、セグメント化を開始するのに役立つリンクとドキュメントが表示されます。
 
 ![](../images/segments/dashboard-overview.png)
 
