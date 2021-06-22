@@ -5,7 +5,7 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: データ管理
-source-git-commit: bcb80d7d27ab88e56450ddd99102871db23fbca8
+source-git-commit: 8fd779d9fa73c178e8a8660a6cef01cfa112ecdc
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 98%
@@ -54,7 +54,7 @@ ht-degree: 98%
       * [Adobe Experience Platform Launch との統合](consent/iab-tcf/with-launch.md)
       * [Adobe Experience Platform Launch なしでの統合](consent/iab-tcf/without-launch.md)
 * Adobe Experience Platform Launch の Web SDK 拡張機能 {#extension}
-   * [Web SDK 拡張機能](extension/web-sdk-extension.md)
+   * [Web SDK 拡張機能](extension/web-sdk-extension-configuration.md)
    * [アクションタイプ](extension/action-types.md)
    * [データ要素タイプ](extension/data-element-types.md)
    * [ECID へのアクセス](extension/accessing-the-ecid.md)
