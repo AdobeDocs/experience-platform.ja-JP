@@ -5,10 +5,10 @@ title: セグメント化サービスUIガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Serviceは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1547'
-ht-degree: 24%
+source-wordcount: '1561'
+ht-degree: 23%
 
 ---
 
@@ -31,15 +31,19 @@ ht-degree: 24%
 
 ## 概要
 
-[[!DNL Experience Platform] UI](https://platform.adobe.com/)で、左側のナビゲーションから「**[!UICONTROL セグメント]**」を選択し、「**[!UICONTROL 概要]**」タブを開きます。 このタブには、セグメントを理解し、使用を開始するのに役立つドキュメントとビデオへのリンクが表示されます。
+Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL セグメント]**」を選択し、「**[!UICONTROL 概要]**」タブを開いて[!UICONTROL セグメント]ダッシュボードを表示します。
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>組織がPlatformを初めて使用する場合で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、「[!UICONTROL Segments]」ダッシュボードは表示されません。 代わりに、「[!UICONTROL 概要]」タブには、セグメントの使用を開始するのに役立つリンクとドキュメントが表示されます。
 
-### セグメントダッシュボード
+###  Segmentsdashboard  {#segments-dashboard}
 
-一部のユーザーは、左側のナビゲーションで「**[!UICONTROL セグメント]**」を選択し、「**[!UICONTROL 概要]**」タブを開くと、セグメントデータに関連する主要指標の概要を示すダッシュボードが表示されます。
+**[!UICONTROL セグメント]**&#x200B;ダッシュボードでは、組織のセグメントデータに関連する主要指標の概要を説明します。
 
-詳しくは、[セグメントダッシュボードガイド](segment-dashboard.md)を参照してください。
+詳しくは、[セグメントダッシュボードガイド](../../dashboards/guides/segments.md)を参照してください。
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## 参照
 
