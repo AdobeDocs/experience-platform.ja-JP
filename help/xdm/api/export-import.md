@@ -5,7 +5,7 @@ title: APIエンドポイントの書き出し/読み込み
 description: スキーマレジストリAPIの/exportエンドポイントと/importエンドポイントを使用すると、IMS組織とサンドボックスの間でXDMリソースを共有できます。
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 6%
@@ -44,7 +44,7 @@ GET /rpc/export/{RESOURCE_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -52,7 +52,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-**応答** 
+**応答**
 
 リクエストが成功した場合は、ターゲットXDMリソースとその依存リソースをすべて表す、オブジェクトの配列が返されます。 この例では、配列の最初のオブジェクトは、 `Restaurant`フィールドグループが採用するテナントで作成された`Property`データ型で、2番目のオブジェクトは`Restaurant`フィールドグループ自体です。 このペイロードは、その後、[リソース](#import)を別のサンドボックスまたはIMS組織にインポートするために使用できます。
 
@@ -130,9 +130,9 @@ curl -X GET \
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "fieldgroups",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "mixins",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -289,9 +289,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "fieldgroups",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "mixins",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -357,7 +357,7 @@ curl -X POST \
       ]'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、読み込まれたリソースのリストと、適切なテナントIDおよびIMS Org値が適用された状態を返します。
 
@@ -447,9 +447,9 @@ curl -X POST \
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "fieldgroups",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "mixins",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
