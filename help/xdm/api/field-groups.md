@@ -4,7 +4,7 @@ solution: Experience Platform
 title: フィールドグループAPIエンドポイント
 description: スキーマレジストリAPIの/fieldgroupsエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDMスキーマフィールドグループをプログラムで管理できます。
 topic: 開発者ガイド
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1217'
 ht-degree: 11%
@@ -64,7 +64,7 @@ curl -X GET \
 
 {style=&quot;table-layout:auto&quot;}
 
-**応答** 
+**応答**
 
 上記のリクエストでは`application/vnd.adobe.xed-id+json` `Accept`ヘッダーが使用されていたので、応答には各フィールドグループの`title`、`$id`、`meta:altId`および`version`属性のみが含まれています。 他の`Accept`ヘッダー(`application/vnd.adobe.xed+json`)を使用すると、各フィールドグループのすべての属性が返されます。 応答で必要な情報に応じて、適切な`Accept`ヘッダーを選択します。
 
@@ -72,26 +72,26 @@ curl -X GET \
 {
   "results": [
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/6ece98e9842907c78c651f5b249d9f09",
-      "meta:altId": "_{TENANT_ID}.fieldgroups.6ece98e9842907c78c651f5b249d9f09",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/6ece98e9842907c78c651f5b249d9f09",
+      "meta:altId": "_{TENANT_ID}.mixins.6ece98e9842907c78c651f5b249d9f09",
       "version": "1.0",
       "title": "CRM Data"
     },
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/6386ee478a30914964c6e676ad55603c",
-      "meta:altId": "_{TENANT_ID}.fieldgroups.6386ee478a30914964c6e676ad55603c",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/6386ee478a30914964c6e676ad55603c",
+      "meta:altId": "_{TENANT_ID}.mixins.6386ee478a30914964c6e676ad55603c",
       "version": "1.9",
       "title": "Loyalty Member Details"
     },
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/67626b2830db3d3ea6c8f9d007aa5797",
-      "meta:altId": "_{TENANT_ID}.fieldgroups.67626b2830db3d3ea6c8f9d007aa5797",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/67626b2830db3d3ea6c8f9d007aa5797",
+      "meta:altId": "_{TENANT_ID}.mixins.67626b2830db3d3ea6c8f9d007aa5797",
       "version": "1.0",
       "title": "Restaurant"
     },
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/2583b25b613fec704da6ef70cf527688",
-      "meta:altId": "_{TENANT_ID}.fieldgroups.2583b25b613fec704da6ef70cf527688",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/2583b25b613fec704da6ef70cf527688",
+      "meta:altId": "_{TENANT_ID}.mixins.2583b25b613fec704da6ef70cf527688",
       "version": "1.1",
       "title": "Retail Customer Preferences"
     },
@@ -133,7 +133,7 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Accept: application/vnd.adobe.xed+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -153,15 +153,15 @@ curl -X GET \
 
 {style=&quot;table-layout:auto&quot;}
 
-**応答** 
+**応答**
 
 正常な応答は、フィールドグループの詳細を返します。 返されるフィールドは、リクエストで送信される`Accept`ヘッダーに応じて異なります。 様々な`Accept`ヘッダーを試して、応答を比較し、使用事例に最適なヘッダーを判断します。
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -299,15 +299,15 @@ curl -X POST \
 }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、HTTPステータス201（作成済み）と、新しく作成されたフィールドグループの詳細（`$id`、`meta:altId`、`version`など）を含むペイロードを返します。 これらの値は読み取り専用で、[!DNL Schema Registry]によって割り当てられます。
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -413,7 +413,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 ```SHELL
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -481,15 +481,15 @@ curl -X PUT \
       }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、更新されたフィールドグループの詳細を返します。
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -600,7 +600,7 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -630,9 +630,9 @@ curl -X PATCH \
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -735,14 +735,14 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.d5cc04eb8d50190001287e4c869ebe67 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
 
