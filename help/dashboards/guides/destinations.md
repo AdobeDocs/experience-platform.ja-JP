@@ -4,9 +4,9 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '792'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ Experience Platformの概要、および宛先内で使用可能なすべての�
 
 ##  宛先ダッシュボードデータ  {#destinations-dashboard-data}
 
-[!UICONTROL 宛先]ダッシュボードには、組織がエクスペリエンスプロファイル内で有効にした宛先のスナップショットが表示されます。 スナップショット内のデータは、スナップショットが作成された特定の時点でのデータとまったく同じ内容を示します。 つまり、スナップショットはデータの近似やサンプルではなく、宛先ダッシュボードはリアルタイムで更新されません。
+[!UICONTROL 宛先]ダッシュボードには、組織がエクスペリエンスプロファイル内で有効にした宛先のスナップショットが表示されます。 スナップショット内のデータは、スナップショットが作成された特定の時点でのデータとまったく同じ内容を示します。つまり、スナップショットはデータの近似やサンプルではなく、宛先ダッシュボードはリアルタイムで更新されません。
 
 >[!NOTE]
 >
@@ -28,6 +28,10 @@ Experience Platformの概要、および宛先内で使用可能なすべての�
 ## 宛先ダッシュボードの詳細
 
 Platform UI内で宛先ダッシュボードに移動するには、左側のレールで「**[!UICONTROL 宛先]**」を選択し、「**[!UICONTROL 概要]**」タブを選択してダッシュボードを表示します。
+
+>[!NOTE]
+>
+>組織がExperience Platformを初めて使用し、まだアクティブな宛先がない場合、「[!UICONTROL 宛先]」ダッシュボードと「[!UICONTROL 概要]」タブは表示されません。 代わりに、左のナビゲーションから「[!UICONTROL 宛先]」を選択すると、「[!UICONTROL カタログ]」タブが表示されます。 「[!UICONTROL カタログ]」タブについて詳しくは、『[[!UICONTROL 宛先]ワークスペースガイド](../../destinations/ui/destinations-workspace.md)』を参照してください。
 
 ![](../images/destinations/dashboard-overview.png)
 
