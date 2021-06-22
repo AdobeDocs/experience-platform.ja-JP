@@ -4,9 +4,9 @@ title: プロファイルダッシュボード
 description: Adobe Experience Platformは、組織のリアルタイム顧客プロファイルデータに関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1192'
 ht-degree: 2%
 
 ---
@@ -30,6 +30,10 @@ Experience Platformユーザーインターフェイス内のすべてのプロ�
 ## [!UICONTROL プロファイル]ダッシュボードの詳細
 
 Platform UI内の[!UICONTROL Profiles]ダッシュボードに移動するには、左側のレールで「**[!UICONTROL Profiles]**」を選択し、「**[!UICONTROL 概要]**」タブを選択してダッシュボードを表示します。
+
+>[!NOTE]
+>
+>組織がPlatformを初めて使用する場合で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、「[!UICONTROL Profiles]」ダッシュボードは表示されません。 代わりに、「[!UICONTROL 概要]」タブには、リアルタイム顧客プロファイルを使い始めるのに役立つリンクとドキュメントが表示されます。
 
 ![](../images/profiles/dashboard-overview.png)
 
