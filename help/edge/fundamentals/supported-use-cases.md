@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDKでサポートされる使用例
 description: Adobe Experience Platform Web SDKでサポートされる使用例を説明します。
 keywords: web sdk；使用例
-source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
+source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 17%
+source-wordcount: '574'
+ht-degree: 16%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 17%
 | --- | --- |
 | エクスペリエンスイベントの送信 |  |
 | Offer Decisioning | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| リアルタイム顧客データプロファイルへのデータ送信（待ち時間が短い） |
+| プロファイルに対してデータセットが有効になっている場合、リアルタイム顧客データプロファイルにデータを送信する機能 |  |
 | データをCustomer Journey Analyticsにリアルタイムで送信 |  |
 | プロファイルへの書き込み同意 | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | サーバーサイドでリアルタイムにサードパーティにデータを転送する | [ドキュメント](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -87,6 +87,10 @@ ht-degree: 17%
 | 訪問者属性のサポート |  |
 | プロファイルスクリプト |  |
 | XDMがmboxパラメーターになる |  |
+| A4Tレポートでサポートされるリダイレクトオファー | [ドキュメント](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| Targetプロファイルの更新 | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| 推奨事項 |  |
+| mboxサードパーティID |  |
 
 {style=&quot;table-layout:auto&quot;}
 
