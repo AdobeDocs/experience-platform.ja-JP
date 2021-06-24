@@ -5,10 +5,10 @@ title: レポートスイートデータ用のAdobe Analytics Source Connector
 topic-legacy: overview
 description: このドキュメントでは、 Analytics の概要と、Analytics データの使用例を説明します。
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 9defe1c3087c2f1284ceedede9d274a51cf97b96
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 25%
+source-wordcount: '542'
+ht-degree: 27%
 
 ---
 
@@ -44,6 +44,8 @@ Platformユーザーインターフェイスを使用して[!DNL Analytics]デ�
 
 ## Platform の Analytics データで予想される遅延はどのくらいですか。
 
+次の表に、Platform上のAnalyticsデータで予想される遅延を示します。  遅延は、顧客の構成、データ量、消費者のアプリケーションによって異なります。例えば、Analytics の実装が `A4T` で設定されている場合、パイプラインの遅延が 5 ～ 10 分に増えます。
+
 | Analytics データ | 予想される遅延 |
 | -------------- | ---------------- |
 | [!DNL Real-time Customer Profile]への新しいデータ（A4T **not**&#x200B;有効） | &lt; 2 分 |
@@ -53,7 +55,7 @@ Platformユーザーインターフェイスを使用して[!DNL Analytics]デ�
 
 >[!NOTE]
 >
-> 遅延は、顧客の構成、データ量、消費者のアプリケーションによって異なります。例えば、[!DNL Analytics]実装が`A4T`で設定されている場合、パイプラインの待ち時間は5 ～ 10分に増えます。
+>Analyticsバックフィルデータは[!DNL Profile]に取り込まれないので、ライセンスプロファイルには反映されません。
 
 ## [!DNL Analytics]データのプライマリ識別子
 
