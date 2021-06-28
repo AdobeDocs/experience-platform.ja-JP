@@ -3,12 +3,11 @@ audience: user
 user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
-feature: データ取り込み、ソース
-translation-type: tm+mt
-source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
+feature: データ取得、ソース
+source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
 workflow-type: tm+mt
-source-wordcount: '612'
-ht-degree: 15%
+source-wordcount: '616'
+ht-degree: 17%
 
 ---
 
@@ -22,31 +21,31 @@ ht-degree: 15%
       - [Analyticsソースコネクタ](connectors/adobe-applications/analytics.md)
       - [Audience Managerソースコネクタ](connectors/adobe-applications/audience-manager.md)
       - [顧客属性ソースコネクタ](connectors/adobe-applications/customer-attributes.md)
-      - Adobeアプリケーションフィールドマッピング{#mapping}
+      - Adobeアプリケーションフィールドのマッピング{#mapping}
          - [Analyticsフィールドのマッピング](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Managerフィールドのマッピング](connectors/adobe-applications/mapping/audience-manager.md)
          - [ターゲットフィールドのマッピング](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engageフィールドのマッピング](connectors/adobe-applications/mapping/marketo.md)
-      - Marketo Engage{#marketo}
+      - Marketo Engage {#marketo}
          - [Marketo Engageコネクタ](connectors/adobe-applications/marketo/marketo.md)
          - [Marketo Engage認証ガイド](connectors/adobe-applications/marketo/marketo-auth.md)
-         - [Marketo Engage名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
+         - [Marketo Engageの名前空間とスキーマ](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - 広告 {#advertising}
       - [Google AdWordsコネクタ](connectors/advertising/ads.md)
    - クラウドストレージ{#cloud-storage}
-      - [AmazonKinesisコネクタ](connectors/cloud-storage/kinesis.md)
-      - [AmazonS3コネクタ](connectors/cloud-storage/s3.md)
+      - [Amazon Kinesisコネクタ](connectors/cloud-storage/kinesis.md)
+      - [Amazon S3コネクタ](connectors/cloud-storage/s3.md)
       - [Apache HDFSコネクタ](connectors/cloud-storage/hdfs.md)
-      - [Azure Data LakeストレージGen2コネクタ](connectors/cloud-storage/adls-gen2.md)
+      - [Azure Data Lake Storage Gen2コネクタ](connectors/cloud-storage/adls-gen2.md)
       - [Azure Blob コネクタ](connectors/cloud-storage/blob.md)
       - [Azureイベントハブコネクタ](connectors/cloud-storage/eventhub.md)
-      - [Azure Fileストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
+      - [Azureファイルストレージコネクタ](connectors/cloud-storage/azure-file-storage.md)
       - [FTPコネクタ](connectors/cloud-storage/ftp.md)
-      - [Google Cloudストレージコネクタ](connectors/cloud-storage/google-cloud-storage.md)
+      - [Google Cloud Storageコネクタ](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Oracleオブジェクトストレージ](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTPコネクタ](connectors/cloud-storage/sftp.md)
-      - [AmazonS3およびAzure Blobコネクタ](connectors/cloud-storage/blob-s3.md)
+      - [Amazon S3およびAzure Blobコネクタ](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Microsoft Dynamics コネクタ](connectors/crm/ms-dynamics.md)
       - [Salesforceコネクタ](connectors/crm/salesforce.md)
@@ -54,14 +53,14 @@ ht-degree: 15%
       - [Salesforce Service Cloudコネクタ](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNowコネクタ](connectors/customer-success/servicenow.md)
    - データベース{#databases}
-      - [Amazon赤方偏移コネクタ](connectors/databases/redshift.md)
-      - [Azure HDInsightsコネクタのApache Hive](connectors/databases/hive.md)
+      - [Amazon Redshiftコネクタ](connectors/databases/redshift.md)
+      - [Azure HDInsightsコネクタ上のApache Hive](connectors/databases/hive.md)
       - [Azure HDInsightsコネクタ上のApache Spark](connectors/databases/spark.md)
       - [AzureData Explorerコネクタ](connectors/databases/data-explorer.md)
       - [azure synapse分析コネクタ](connectors/databases/synapse-analytics.md)
       - [Azureテーブルストレージコネクタ](connectors/databases/ats.md)
       - [Couchbaseコネクタ](connectors/databases/couchbase.md)
-      - [Google BigQuery Connector](connectors/databases/bigquery.md)
+      - [Google BigQueryコネクタ](connectors/databases/bigquery.md)
       - [GreenPlumコネクタ](connectors/databases/greenplum.md)
       - [HP Verticaコネクタ](connectors/databases/hp-vertica.md)
       - [IBM DB2コネクタ](connectors/databases/ibm-db2.md)
@@ -82,7 +81,7 @@ ht-degree: 15%
    - ストリーミング{#streaming}
       - [HTTP APIコネクタ](connectors/streaming/http.md)
 - API チュートリアル {#api-tutorials}
-   - ソース接続の作成{#create}
+   - ソース接続{#create}を作成します。
       - 広告 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - クラウドストレージ{#cloud-storage}
@@ -90,11 +89,11 @@ ht-degree: 15%
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Azure BLOB](tutorials/api/create/cloud-storage/blob.md)
-         - [Azure Data LakeストレージGen2](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Azureイベントハブ](tutorials/api/create/cloud-storage/eventhub.md)
-         - [Azure Fileストレージ](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [Azureファイルストレージ](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Google Cloudストレージ](tutorials/api/create/cloud-storage/google.md)
+         - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracleオブジェクトストレージ](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -102,15 +101,15 @@ ht-degree: 15%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
       - 顧客の成功{#customer-success}
-         - [Salesforceサービスクラウド](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - データベース{#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Azure HDInsightsのApache Hive](tutorials/api/create/databases/hive.md)
-         - [Azure HDInsightsでのApache Spark](tutorials/api/create/databases/spark.md)
+         - [Ache Spark on Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [AzureData Explorer](tutorials/api/create/databases/data-explorer.md)
          - [azure synapse分析](tutorials/api/create/databases/synapse-analytics.md)
-         - [Azureテーブルストレージ](tutorials/api/create/databases/ats.md)
+         - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [GreenPlum](tutorials/api/create/databases/greenplum.md)
@@ -133,11 +132,11 @@ ht-degree: 15%
       - ストリーミング{#streaming}
          - [HTTP API](tutorials/api/create/streaming/http.md)
    - データの調査 {#explore}
-      - [広告データの調査](tutorials/api/explore/advertising.md)
+      - [広告データの参照](tutorials/api/explore/advertising.md)
       - [クラウドストレージデータの調査](tutorials/api/explore/cloud-storage.md)
       - [CRMデータの調査](tutorials/api/explore/crm.md)
       - [顧客成功データの調査](tutorials/api/explore/customer-success.md)
-      - [データベースまたはNoSQLデータの参照](tutorials/api/explore/database-nosql.md)
+      - [データベースまたはNoSQLデータの調査](tutorials/api/explore/database-nosql.md)
       - [eコマースデータの参照](tutorials/api/explore/ecommerce.md)
       - [マーケティング自動化データの調査](tutorials/api/explore/marketing-automation.md)
       - [支払データの調査](tutorials/api/explore/payments.md)
@@ -153,7 +152,7 @@ ht-degree: 15%
       - [支払データの収集](tutorials/api/collect/payments.md)
       - [プロトコルデータの収集](tutorials/api/collect/protocols.md)
       - [ストリーミングデータの収集](tutorials/api/collect/streaming.md)
-   - [サードパーティのクラウドストレージシステムからParketデータを取り込む](tutorials/api/cloud-storage-parquet.md)
+   - [サードパーティのクラウドストレージシステムからのParquetデータの取り込み](tutorials/api/cloud-storage-parquet.md)
    - [データセット接続の作成](tutorials/api/create-dataset-base-connection.md)
    - [データフローの監視](tutorials/api/monitor.md)
    - [アカウントの更新](tutorials/api/update.md)
@@ -161,7 +160,7 @@ ht-degree: 15%
    - [アカウントの削除](tutorials/api/delete.md)
    - [データフローの削除](tutorials/api/delete-dataflows.md)
 - UIチュートリアル{#ui-tutorials}
-   - ソース接続の作成{#create}
+   - ソース接続{#create}を作成します。
       - アドビアプリケーション {#adobe-applications}
          - [Adobe Analytics（レポートスイートデータ）](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics（分類データ）](tutorials/ui/create/adobe-applications/classifications.md)
@@ -172,33 +171,33 @@ ht-degree: 15%
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - クラウドストレージ{#cloud-storage}
          - [AmazonKinesis](tutorials/ui/create/cloud-storage/kinesis.md)
-         - [AmazonS3](tutorials/ui/create/cloud-storage/s3.md)
+         - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
-         - [Azure Data LakeストレージGen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
+         - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Azure BLOB](tutorials/ui/create/cloud-storage/blob.md)
          - [Azureイベントハブ](tutorials/ui/create/cloud-storage/eventhub.md)
-         - [Azure Fileストレージ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+         - [Azureファイルストレージ](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
-         - [Google Cloudストレージ](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
          - [Oracleオブジェクトストレージ](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
-         - [AmazonS3とブロブ](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Amazon S3とBlob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
       - 顧客の成功{#customer-success}
-         - [Salesforceサービスクラウド](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - データベース{#databases}
-         - [Amazon赤方偏移](tutorials/ui/create/databases/redshift.md)
+         - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Azure HDInsightsのApache Hive](tutorials/ui/create/databases/hive.md)
-         - [Azure HDInsightsでのApache Spark](tutorials/ui/create/databases/spark.md)
+         - [Ache Spark on Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [AzureData Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [azure synapse分析](tutorials/ui/create/databases/synapse-analytics.md)
-         - [Azureテーブルストレージ](tutorials/ui/create/databases/ats.md)
+         - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
-         - [Googleビッグクエリ](tutorials/ui/create/databases/bigquery.md)
+         - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
          - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
          - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
@@ -218,24 +217,25 @@ ht-degree: 15%
          - [汎用OData](tutorials/ui/create/protocols/odata.md)
       - ストリーミング{#streaming}
          - [HTTP API](tutorials/ui/create/streaming/http.md)
-   - データフローの構成{#dataflow}
+   - データフロー{#dataflow}の設定
       - [広告接続のデータフロー](tutorials/ui/dataflow/advertising.md)
       - [バッチクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [ストリーミングクラウドストレージ接続のデータフロー](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+      - [Streaming Cloudストレージ接続のデータフロー](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [CRM接続のデータフロー](tutorials/ui/dataflow/crm.md)
       - [顧客成功接続のデータフロー](tutorials/ui/dataflow/customer-success.md)
       - [データベース接続のデータフロー](tutorials/ui/dataflow/databases.md)
       - [eコマース接続のデータフロー](tutorials/ui/dataflow/ecommerce.md)
-      - [マーケティング自動化接続のデータフロー](tutorials/ui/dataflow/marketing-automation.md)
+      - [マーケティング自動接続のデータフロー](tutorials/ui/dataflow/marketing-automation.md)
       - [支払接続のデータフロー](tutorials/ui/dataflow/payments.md)
       - [プロトコル接続のデータフロー](tutorials/ui/dataflow/protocols.md)
-   - [受信データをアクティブ化して顧客プロファイルを入力します](tutorials/ui/profile.md)
-   - [データフローの監視](tutorials/ui/monitor.md)
+   - [顧客プロファイルに入力するインバウンドデータのアクティブ化](tutorials/ui/profile.md)
+   - [バッチデータフローの監視](tutorials/ui/monitor.md)
+   - [ストリーミングデータフローの監視](tutorials/ui/monitor-streaming.md)
    - [アカウントの更新](tutorials/ui/update.md)
    - [データフローの更新](tutorials/ui/update-dataflows.md)
    - [アカウントの削除](tutorials/ui/delete-accounts.md)
    - [データフローの削除](tutorials/ui/delete.md)
-- [フロー実行通知](notifications.md)
+- [フロー実行の通知](notifications.md)
 - [IPアドレス許可リスト](ip-address-allow-list.md)
 - [よくある質問](./troubleshooting.md)
-- [プラットフォームのリリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
+- [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
