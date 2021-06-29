@@ -6,7 +6,7 @@ feature: プロファイル
 source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 95%
    * [サンプル式](computed-attributes/expressions.md)
 * 結合ポリシー {#merge-policies}
    * [概要](merge-policies/overview.md)
-   * [結合ポリシーAPI](api/merge-policies.md)
+   * [結合ポリシー API](api/merge-policies.md)
    * [結合ポリシー UI ガイド](merge-policies/ui-guide.md)
    * [結合ポリシーの作成（動画）](video/create-merge-policies.md)
 * 結合スキーマ {#union-schemas}
