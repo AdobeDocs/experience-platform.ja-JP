@@ -6,10 +6,10 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
+source-git-commit: 0f0a71d8c1c3f36d6966ab37bd9749a59bc4aecf
 workflow-type: tm+mt
-source-wordcount: '2826'
-ht-degree: 12%
+source-wordcount: '2674'
+ht-degree: 13%
 
 ---
 
@@ -149,9 +149,9 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
    >
    >特定の時刻にファイルをエクスポートするオプションは、現在ベータ版で、ご利用のお客様は限定できます。
 
-   >[!IMPORTANT]
-   >
-   >プロファイル書き出しジョブの実行がいつ終了し、宛先サービスがセグメントアクティベーションジョブを開始したかによっては、最初の増分ファイル書き出しまたは完全ファイル書き出しに必要なバックフィルデータがすべて含まれない場合があります。 完全ファイルと増分ファイルの両方に対して完全で最新のバックフィルデータの書き出しを確実におこなうには、次の日の午後12時(GMT)以降の最初のファイル書き出し時間を設定することをお勧めします。 これは、今後のリリースで対処される予定の制限です。
+   <!-- >[!IMPORTANT]
+      >
+      >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
 
 3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、エクスポートを実行する日または間隔を選択します。
 4. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
@@ -180,9 +180,9 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
    >
    >エクスポートの時刻を選択するオプションは、一部の顧客にのみ使用できます。
 
-   >[!IMPORTANT]
-   >
-   >プロファイル書き出しジョブの実行がいつ終了し、宛先サービスがセグメントアクティベーションジョブを開始したかによっては、最初の増分ファイル書き出しまたは完全ファイル書き出しに必要なバックフィルデータがすべて含まれない場合があります。 完全ファイルと増分ファイルの両方に対して完全で最新のバックフィルデータの書き出しを確実におこなうには、次の日の午後12時(GMT)以降の最初のファイル書き出し時間を設定することをお勧めします。 これは、今後のリリースで対処される予定の制限です。
+   <!-- >[!IMPORTANT]
+     >
+     >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
 
 3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、エクスポートを実行する日または間隔を選択します。
 4. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
