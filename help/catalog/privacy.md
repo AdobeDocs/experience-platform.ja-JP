@@ -8,7 +8,7 @@ exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
 source-wordcount: '1351'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -20,9 +20,9 @@ Adobe Experience Platform [!DNL Privacy Service] は、法的および組織の�
 
 >[!NOTE]
 >
->このガイドでは、Experience Platformのデータレイクに対してプライバシーリクエストをおこなう方法についてのみ説明します。 リアルタイム顧客プロファイルデータストアのプライバシーリクエストもおこなう予定がある場合は、このチュートリアルに加えて、プロファイル](../profile/privacy.md)のプライバシーリクエスト処理に関するガイドを参照してください。[
+>このガイドでは、Experience Platform のデータレイクに対してプライバシーリクエストをおこなう方法についてのみ説明します。リアルタイム顧客プロファイルデータストアのプライバシーリクエストもおこなう予定がある場合は、このチュートリアルに加えて[プロファイルのプライバシーリクエスト処理](../profile/privacy.md)に関するガイドを参照してください。
 >
->他のAdobe Experience Cloudアプリケーションにプライバシーリクエストを送信する手順については、[Privacy Serviceのドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
+>他の Adobe Experience Cloud アプリケーションにプライバシーリクエストを送信する手順については、[Privacy Service のドキュメント](../privacy-service/experience-cloud-apps.md)を参照してください。
 
 ## はじめに
 
