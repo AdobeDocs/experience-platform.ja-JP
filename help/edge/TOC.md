@@ -8,7 +8,7 @@ feature: データ管理
 source-git-commit: 8fd779d9fa73c178e8a8660a6cef01cfa112ecdc
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 98%
    * [イベントデータの結合](fundamentals/merging-event-data.md)
    * [CSP の設定](fundamentals/configuring-a-csp.md)
    * [複数のプロパティの操作](fundamentals/interacting-with-multiple-properties.md)
-   * [サポートされる使用例](fundamentals/supported-use-cases.md)
+   * [サポートされるユースケース](fundamentals/supported-use-cases.md)
 * ID {#identity}
    * [概要](identity/overview.md)
 * データ収集 {#data-collection}
