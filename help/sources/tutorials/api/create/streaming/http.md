@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルは、Adobe Experience Platform データ取得サービス API の一部であるストリーミング取得 API の使用を開始する際に役に立ちます。
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
 workflow-type: tm+mt
 source-wordcount: '1206'
 ht-degree: 39%
@@ -33,7 +33,7 @@ ht-degree: 39%
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
@@ -106,7 +106,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.name` | 作成するストリーミング接続の名前。 |
 | `connectionSpec.id` | ストリーミング接続の接続仕様`id`。 |
 
-**応答** 
+**応答**
 
 正常な応答は、HTTPステータス201と、新しく作成された接続の詳細(一意の識別子(`id`)を返します。
 
@@ -172,7 +172,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.authenticationRequired` | 作成したストリーミング接続を指定するパラメーター |
 | `connectionSpec.id` | ストリーミング接続の接続仕様`id`。 |
 
-**応答** 
+**応答**
 
 正常な応答は、HTTPステータス201と、新しく作成された接続の詳細(一意の識別子(`id`)を返します。
 
@@ -282,7 +282,7 @@ curl -X POST \
 }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、HTTPステータス201と、新しく作成されたソース接続の詳細(一意の識別子(`id`)を返します。
 
@@ -329,7 +329,7 @@ curl -X POST \
 }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、HTTPステータス201と、新しく作成されたターゲット接続の詳細(一意の識別子(`id`)を返します。
 
@@ -376,7 +376,7 @@ curl -X POST \
 }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、HTTPステータス201と、新しく作成したデータフローの詳細(一意の識別子(`id`)を返します。
 
@@ -416,7 +416,7 @@ curl -X POST \
 }
 ```
 
-### Platformに取り込む生データの後処理{#ingest-data}
+### Platformに取り込む生データの後処理 {#ingest-data}
 
 フローを作成したら、以前に作成したストリーミングエンドポイントにJSONメッセージを送信できます。
 
@@ -445,16 +445,16 @@ curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076
           "country": "United State of America",
           "address": "3692 Main Street"
       },
-      "gender": "Male"
+      "gender": "Male",
       "birthday": {
-          "year": 1984
-          "month": 6
+          "year": 1984,
+          "month": 6,
           "day": 9
       }
   }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、HTTPステータス200と、新しく取り込んだ情報の詳細を返します。
 
