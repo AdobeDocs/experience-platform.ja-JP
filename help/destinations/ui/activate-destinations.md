@@ -6,9 +6,9 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
+source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2826'
 ht-degree: 12%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 12%
 
 アクティベーションワークフローの手順は、宛先のタイプによって若干異なります。 すべての宛先タイプの完全なワークフローを以下に示します。
 
-## {#select-destination}に対してデータをアクティブ化する宛先を選択します
+## データをアクティブ化する宛先の選択 {#select-destination}
 
 適用対象：すべての宛先
 
@@ -37,7 +37,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 次の節の手順に従って、アクティブ化するセグメントを選択します。
 
-## [!UICONTROL Segmentsstepを] 選択  {#select-segments}
+## [!UICONTROL Segmentsstepを] 選択 {#select-segments}
 
 適用対象：すべての宛先
 
@@ -60,7 +60,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 ソーシャルの宛先の場合、宛先でターゲットIDとしてマッピングするソース属性またはID名前空間を選択する必要があります。
 
-## 例：[!DNL Facebook Custom Audience] {#example-facebook}でのオーディエンスデータのアクティブ化
+## 例：[!DNL Facebook Custom Audience]でのオーディエンスデータのアクティブ化 {#example-facebook}
 
 以下に、[!DNL Facebook]でオーディエンスデータをアクティブ化する際の正しいIDマッピングの例を示します。
 
@@ -90,7 +90,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
  
 
-## 例：[!DNL Google Customer Match] {#example-gcm}でのオーディエンスデータのアクティブ化
+## 例：[!DNL Google Customer Match]でのオーディエンスデータのアクティブ化 {#example-gcm}
 
 これは、[!DNL Google Customer Match]でオーディエンスデータをアクティブ化する際の正しいIDマッピングの例です。
 
@@ -136,7 +136,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 ![「スケジュールを作成」ボタン](../assets/ui/activate-destinations/create-schedule-button.png)
 
-### 完全なファイル{#export-full-files}を書き出す
+### 完全なファイルの書き出し {#export-full-files}
 
 「**[!UICONTROL 完全なファイルをエクスポート]**」を選択すると、エクスポートしたファイルに、そのセグメントに適合するすべてのプロファイルの完全なスナップショットが含まれます。
 
@@ -149,10 +149,15 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
    >
    >特定の時刻にファイルをエクスポートするオプションは、現在ベータ版で、ご利用のお客様は限定できます。
 
+   >[!IMPORTANT]
+   >
+   >プロファイル書き出しジョブの実行がいつ終了し、宛先サービスがセグメントアクティベーションジョブを開始したかによっては、最初の増分ファイル書き出しまたは完全ファイル書き出しに必要なバックフィルデータがすべて含まれない場合があります。 完全ファイルと増分ファイルの両方に対して完全で最新のバックフィルデータの書き出しを確実におこなうには、次の日の午後12時(GMT)以降の最初のファイル書き出し時間を設定することをお勧めします。 これは、今後のリリースで対処される予定の制限です。
+
 3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、エクスポートを実行する日または間隔を選択します。
 4. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
 
-### 増分ファイル{#export-incremental-files}を書き出す
+
+### 増分ファイルの書き出し {#export-incremental-files}
 
 「**[!UICONTROL 増分ファイルを書き出し]**」を選択すると、書き出したファイルには、最後の書き出し以降にそのセグメントで認定されたプロファイルのみが含まれます。
 
@@ -167,18 +172,22 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
       >[!IMPORTANT]
       >
-      >増分ファイルを3時間、6時間、8時間または12時間ごとに書き出すオプションは現在ベータ版で、限られた数のお客様のみが利用できます。 ベータ版以外のお客様は、増分ファイルを1日に1回書き出すことができます。
+      >増分ファイルを3時間、6時間、8時間または12時間ごとに書き出すオプションは現在ベータ版で、限られた数のお客様のみが利用できます。 ベータ版以外のお客様は、増分ファイルを 1 日に 1 回エクスポートできます。
 
 2. **[!UICONTROL 時間]**&#x200B;セレクターを使用して、エクスポートを実行する時刻を[!DNL UTC]形式で選択します。
 
    >[!IMPORTANT]
    >
-   >エクスポートの時刻を選択するオプションは、一部の顧客にのみ使用できます。 ベータ版以外のお客様は、増分ファイルを1日1回(UTCの午後12:00（ESTの午前7時）に書き出すことができます。
+   >エクスポートの時刻を選択するオプションは、一部の顧客にのみ使用できます。
+
+   >[!IMPORTANT]
+   >
+   >プロファイル書き出しジョブの実行がいつ終了し、宛先サービスがセグメントアクティベーションジョブを開始したかによっては、最初の増分ファイル書き出しまたは完全ファイル書き出しに必要なバックフィルデータがすべて含まれない場合があります。 完全ファイルと増分ファイルの両方に対して完全で最新のバックフィルデータの書き出しを確実におこなうには、次の日の午後12時(GMT)以降の最初のファイル書き出し時間を設定することをお勧めします。 これは、今後のリリースで対処される予定の制限です。
 
 3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、エクスポートを実行する日または間隔を選択します。
 4. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
 
-### ファイル名{#file-names}を設定します。
+### ファイル名の設定 {#file-names}
 
 デフォルトのファイル名は、宛先名、セグメントID、日時インジケーターで構成されます。 例えば、エクスポートしたファイル名を編集して、異なるキャンペーンを区別したり、データのエクスポート時間をファイルに追加したりできます。
 
@@ -204,7 +213,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 すべてのセグメントの設定が完了したら、「**[!UICONTROL 次へ]**」を選択して続行します。
 
-## **[!UICONTROL セグメントスケジュ]** ール  {#segment-schedule}
+## **[!UICONTROL セグメントスケジュ]** ール {#segment-schedule}
 
 適用対象：広告の宛先，ソーシャルの宛先
 
@@ -224,7 +233,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 ![アプリidの入力](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL 属性の]** 選択  {#select-attributes}
+## **[!UICONTROL 属性の]** 選択 {#select-attributes}
 
 適用対象：eメールマーケティングの宛先とクラウドストレージの宛先
 
@@ -242,7 +251,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 ![推奨属性](../assets/ui/activate-destinations/mandatory-deduplication.png)
 
-### 必須属性{#mandatory-attributes}
+### 必須属性 {#mandatory-attributes}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_mandatorykey"
@@ -256,7 +265,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 属性の1つを、スキーマの[一意の識別子](../../destinations/catalog/email-marketing/overview.md#identity)にすることをお勧めします。 必須属性について詳しくは、[Eメールマーケティングの宛先](../../destinations/catalog/email-marketing/overview.md#identity)ドキュメントのIDに関する節を参照してください。
 
-### 重複排除キー{#deduplication-keys}
+### 重複排除キー {#deduplication-keys}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_deduplicationkey"
@@ -268,7 +277,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 >
 >重複排除キーを使用するオプションは現在ベータ版で、ご利用いただけるお客様は限定版です。
 
-重複排除キーを使用すると、同じプロファイルの複数のレコードを1つのエクスポートファイルに含める可能性を排除できます。
+重複排除キーを使用すると、同じプロファイルの複数のレコードが 1 つのエクスポートファイルに含まれる可能性がなくなります。
 
 [!DNL Platform]で重複排除キーを使用する方法は3つあります。
 
@@ -282,7 +291,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 > 
 > ID名前空間とプロファイル属性の組み合わせを重複排除キーとして使用することはできません。
 
-### 重複排除の例{#deduplication-example}
+### 重複排除の例 {#deduplication-example}
 
 次の例は、選択した重複排除キーに応じた重複排除の仕組みを示しています。
 
@@ -425,9 +434,9 @@ Adobeでは、すべてのプロファイルレコードが一意に識別され
 
 ![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
 
-## セグメントのアクティベーションが成功したことを確認します。 {#verify-activation}
+## セグメントのアクティベーションが成功したことを確認します。  {#verify-activation}
 
-### 電子メールマーケティングの宛先およびクラウドストレージの宛先  {#esp-and-cloud-storage}
+### 電子メールマーケティングの宛先とクラウドストレージの宛先 {#esp-and-cloud-storage}
 
 電子メールマーケティングの宛先とクラウドストレージの宛先の場合、Adobe Experience Platformはストレージの指定した場所にタブ区切りの`.csv`ファイルを作成します。 新しいファイルはストレージの場所に毎日作成されます。デフォルトのファイル形式は次のとおりです。
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
