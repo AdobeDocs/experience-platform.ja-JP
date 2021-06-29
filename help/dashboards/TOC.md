@@ -7,7 +7,7 @@ feature: データ管理
 source-git-commit: a07658709f28783612cf9d53b2be65bc127c866e
 workflow-type: tm+mt
 source-wordcount: '46'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 86%
    * [ライセンス使用状況](guides/license-usage.md)
 * [ダッシュボードの変更](modify.md)
 * [ウィジェットライブラリ](widget-library.md)
-* [クエリダッシュボードデータセット](query.md)
+* [ダッシュボードデータセットのクエリ](query.md)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
