@@ -5,9 +5,9 @@ title: スキーマ構成の基本
 topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
+source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3708'
 ht-degree: 32%
 
 ---
@@ -59,13 +59,18 @@ XDMスキーマは、大量の複雑なデータを自己完結型の形式で�
 
 スキーマ計画段階で顧客IDを考慮し、可能な限り堅牢なプロファイルを構築するためにデータを統合できるようにすることが重要です。 ID情報で顧客にデジタルエクスペリエンスを提供する方法について詳しくは、[Adobe Experience Platform IDサービス](../../identity-service/home.md)の概要を参照してください。
 
+IDデータをPlatformに送信する方法は2つあります。
+
+1. [スキーマエディターのUI](../ui/fields/identity.md)または[スキーマレジストリAPI](../api/descriptors.md#create)を使用して、ID記述子を個々のフィールドに追加する
+1. [`identityMap`フィールド](#identityMap)の使用
+
 #### `identityMap` {#identityMap}
 
 `identityMap` は、個人の様々なID値と、関連する名前空間を説明するマップタイプのフィールドです。このフィールドは、スキーマ自体の構造内でID値を定義する代わりに、スキーマのID情報を提供するために使用できます。
 
-`identityMap`を使用する主な欠点は、IDがデータに埋め込まれ、結果として見えなくなることです。 生データを取り込む場合は、個々のIDフィールドを実際のスキーマ構造内で定義する必要があります。
+`identityMap`を使用する主な欠点は、IDがデータに埋め込まれ、結果として見えなくなることです。 生データを取り込む場合は、個々のIDフィールドを実際のスキーマ構造内で定義する必要があります。 `identityMap`を利用するスキーマも関係に参加できません。
 
-ただし、IDを格納するソース([!DNL Airship]やAdobe Audience Managerなど)からデータを取り込む場合は、IDマップが特に役立ちます。 また、[Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)を使用する場合は、IDマップが必要です。
+ただし、IDを一緒に保存するソースからデータを取り込む場合([!DNL Airship]やAdobe Audience Managerなど)や、スキーマのID数が可変の場合は、IDマップが特に役立ちます。 また、[Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)を使用する場合は、IDマップが必要です。
 
 単純なIDマップの例を次に示します。
 
@@ -146,7 +151,7 @@ Adobeは、いくつかの標準（「コア」）XDMクラスを提供します
 
 使用可能な標準XDMクラスの最新のリストについては、[公式のXDMリポジトリ](https://github.com/adobe/xdm/tree/master/components/classes)を参照してください。 また、UIでリソースを表示したい場合は、 [XDMコンポーネントの詳細](../ui/explore.md)に関するガイドを参照することもできます。
 
-### フィールドグループ{#field-group}
+### [フィールド]領域 {#field-group}
 
 フィールドグループは、個人の詳細、ホテルの環境設定、住所など、特定の機能を実装する1つ以上のフィールドを定義する再利用可能なコンポーネントです。 フィールドグループは、互換性のあるクラスを実装するスキーマの一部として含まれるように意図されています。
 
@@ -235,7 +240,7 @@ Webサイトトラフィックを追跡する別のスキーマは、「[!UICONT
 
 ![](../images/schema-composition/composition.png)
 
-### 和集合 {#union}
+### 結合 {#union}
 
 [!DNL Experience Platform]では特定の使用例のスキーマを作成できますが、特定のクラスタイプのスキーマの「和集合」を確認することもできます。 上の図は、XDM ExperienceEventクラスに基づく2つのスキーマと、[!DNL XDM Individual Profile]クラスに基づく2つのスキーマを示しています。 次に示す和集合は、同じクラス（それぞれ[!DNL XDM ExperienceEvent]と[!DNL XDM Individual Profile]）を共有するすべてのスキーマのフィールドを集計します。
 
@@ -287,7 +292,7 @@ XDMスキーマは、埋め込みオブジェクトを使用することで、�
 
 スキーマは、複数のソースからのデータの統合、共通の構造や定義による標準化、複数のソリューション間での共有を可能にすることで、この問題を解決します。これにより、後続のプロセスとサービスは、データについて尋ねられるあらゆるタイプの質問に答えることができます。これは、データについて尋ねられるすべての質問が事前にわかっていて、データがそれらの期待に準拠するようにモデル化される従来のデータモデリングアプローチとは異なります。
 
-### オブジェクトとフリーフォームフィールド{#objects-v-freeform}
+### オブジェクトとフリーフォームフィールド {#objects-v-freeform}
 
 スキーマをデザインする際に、フリーフォームのフィールド上でオブジェクトを選択する際に考慮すべき重要な要因は次のとおりです。
 
