@@ -5,7 +5,7 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9c8f19e8b5259bcef526273addbd7711ef6082fb
+source-git-commit: 8236fb3a5786a6990fe85482c2fee0eda48bcf1f
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 55%
@@ -67,6 +67,7 @@ CRM システムは顧客との関係を築くのに役立つデータを提供�
 
 - [[!DNL Microsoft Dynamics] コネクタ](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] コネクタ](connectors/crm/salesforce.md)
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 
 ### 顧客の成功
 
