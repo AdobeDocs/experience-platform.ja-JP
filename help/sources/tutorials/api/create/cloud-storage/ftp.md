@@ -1,73 +1,57 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；ファイル転送プロトコル；ファイル転送プロトコル
+keywords: Experience Platform；ホーム；人気のあるトピック；ファイル転送プロトコル；ファイル転送プロトコル
 solution: Experience Platform
-title: フローサービスAPIを使用したFTPソース接続の作成
+title: フローサービスAPIを使用したFTPベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Flow Service APIを使用して、Adobe Experience PlatformをFTP（ファイル転送プロトコル）サーバーに接続する方法を説明します。
+description: フローサービスAPIを使用してAdobe Experience PlatformをFTP（ファイル転送プロトコル）サーバーに接続する方法を説明します。
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 26%
+source-wordcount: '489'
+ht-degree: 13%
 
 ---
 
-# [!DNL Flow Service] APIを使用したFTPソース接続の作成
+# [!DNL Flow Service] APIを使用したFTPベース接続の作成
 
 >[!NOTE]
 >
->FTPコネクタはベータ版です。 機能とドキュメントは変更される場合があります。ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>FTPコネクタはベータ版です。 機能とドキュメントは変更される場合があります。ベータラベルのコネクタの使用について詳しくは、「[ソースの概要](../../../../home.md#terms-and-conditions)」を参照してください。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Experience Platform]をFTP(File Transfer Protocol)サーバに接続する手順を順を追って説明します。
+ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
+
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL FTP]（ファイル転送プロトコル）のベース接続を作成する手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことがで [!DNL Platform] きます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してFTPサーバに正しく接続するために必要な追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用して[!DNL FTP]サーバーに正常に接続するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
-[!DNL Flow Service]がFTPに接続するには、次の接続プロパティの値を指定する必要があります。
+[!DNL Flow Service]が[!DNL FTP]に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| Credential | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
-| `host` | FTPサーバーに関連付けられている名前またはIPアドレス。 |
-| `username` | FTPサーバーへのアクセス権を持つユーザー名。 |
-| `password` | FTPサーバーのパスワードです。 |
+| `host` | [!DNL FTP]サーバーに関連付けられている名前またはIPアドレス。 |
+| `username` | [!DNL FTP]サーバーへのアクセス権を持つユーザー名。 |
+| `password` | [!DNL FTP]サーバーのパスワード。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL FTP]の接続仕様IDは次のとおりです。`fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
 
-### API 呼び出し例の読み取り
+### Platform APIの使用
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+Platform APIを正常に呼び出す方法について詳しくは、[Platform APIの使用の手引き](../../../../../landing/api-guide.md)を参照してください。
 
-### 必須ヘッダーの値の収集
+## ベース接続を作成する
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+ベース接続は、ソースとプラットフォームの間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続IDなど）を保持します。 ベース接続IDを使用すると、ソース内からファイルを参照およびナビゲートし、取得する特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
-
-* `Content-Type: application/json`
-
-## 接続の作成
-
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、FTPアカウントごとに1つの接続が必要です。
-
-### 基本認証を使用したFTP接続の作成
-
-基本的な認証を使用してFTPPOSTを作成するには、[!DNL Flow Service] APIに接続リクエストを行い、接続の`host`、`userName`、`password`に値を指定します。
+ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL FTP]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
 
 **API 形式**
 
@@ -77,7 +61,7 @@ POST /connections
 
 **リクエスト**
 
-FTP接続を作成するには、POSTリクエストの一部として、一意の接続指定IDを指定する必要があります。 FTPの接続指定IDは`fb2e94c9-c031-467d-8103-6bd6e0a432f2`です。
+次のリクエストは、[!DNL FTP]のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -107,14 +91,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `auth.params.host` | FTPサーバーのホスト名です。 |
-| `auth.params.username` | FTPサーバに関連付けられているユーザ名。 |
-| `auth.params.password` | FTPサーバーに関連付けられているパスワードです。 |
+| `auth.params.host` | FTPサーバーのホスト名。 |
+| `auth.params.username` | FTPサーバーに関連付けられているユーザー名。 |
+| `auth.params.password` | FTPサーバーに関連付けられているパスワード。 |
 | `connectionSpec.id` | FTPサーバー接続仕様ID:`fb2e94c9-c031-467d-8103-6bd6e0a432f2` |
 
 **応答**
 
-正常な応答は、新たに作成された接続の固有な識別子(`id`)を返します。 このIDは、次のチュートリアルでFTPサーバを調べるために必要です。
+正常な応答は、新しく作成された接続の一意の識別子(`id`)を返します。 このIDは、次のチュートリアルでFTPサーバーを調べるために必要です。
 
 ```json
 {
@@ -125,4 +109,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用してFTP接続を作成し、接続の固有のID値を取得したことになります。 この接続IDを使用して、Flow Service API](../../explore/cloud-storage.md)または[Flow Service API](../../cloud-storage-parquet.md)を使用してParketストレージを[調査できます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用してFTP接続を作成し、接続の一意のID値を取得しました。 この接続IDを使用して[フローサービスAPI](../../explore/cloud-storage.md)または[フローサービスAPI](../../cloud-storage-parquet.md)を使用してParquetデータを取り込み、クラウドストレージを調べることができます。
