@@ -5,9 +5,9 @@ title: ServiceNow Source Connectorの概要
 topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してServiceNowをAdobe Experience Platformに接続する方法を説明します。
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '224'
 ht-degree: 8%
 
 ---
@@ -26,11 +26,11 @@ Adobe Experience Platformを使用すると、[!DNL Platform]サービスを使�
 
 ## APIを使用して[!DNL ServiceNow]を[!DNL Platform]に接続します
 
-- [フローサービスAPIを使用したServiceNowソース接続の作成](../../tutorials/api/create/customer-success/servicenow.md)
-- [フローサービスAPIを使用した顧客成功システムの調査](../../tutorials/api/explore/customer-success.md)
-- [フローサービスAPIを使用した顧客成功システムからのデータの収集](../../tutorials/api/collect/customer-success.md)
+- [フローサービスAPIを使用したServiceNowベース接続の作成](../../tutorials/api/create/customer-success/servicenow.md)
+- [フローサービスAPIを使用した顧客成功ソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/customer-success.md)
+- [フローサービスAPIを使用した顧客成功ソースのデータフローの作成](../../tutorials/api/collect/customer-success.md)
 
 ## UIを使用して[!DNL ServiceNow]を[!DNL Platform]に接続します
 
 - [UIでのServiceNowソース接続の作成](../../tutorials/ui/create/customer-success/servicenow.md)
-- [UIでの顧客成功接続のデータフローの設定](../../tutorials/ui/dataflow/customer-success.md)
+- [UIでの顧客成功ソース接続のデータフローの作成](../../tutorials/ui/dataflow/customer-success.md)
