@@ -1,80 +1,27 @@
 ---
 title: Adobe Experience Platform リリースノート
-description: 2021 年 5 月 26 日（PT）の Experience Platform リリースノート。
+description: Experience Platformリリースノート（2021年6月31日）
 doc-type: release notes
-last-update: May 26, 2021
-author: ens72741
+last-update: June 30, 2021
+author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
+source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 100%
+source-wordcount: '530'
+ht-degree: 68%
 
 ---
 
 
 # Adobe Experience Platform リリースノート
 
-**リリース日：2021 年 5 月 26 日（PT）**
-
-Adobe Experience Platform の新機能：
-
-- [ダッシュボード](#dashboards)
+**リリース日：2021 年 6 月 30 日**
 
 Adobe Experience Platform の既存の機能のアップデート：
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [リアルタイム顧客プロファイル](#profile)
 - [サンドボックス](#sandboxes)
 - [ソース](#sources)
-
-## ダッシュボード {#dashboards}
-
-Adobe Experience Platform では、毎日のスナップショットで得られた、組織のデータに関する重要なインサイトを表示できる複数のダッシュボードを提供しています。
-
-| 機能 | 説明 |
-| --- | --- |
-| プロファイルインサイト | プロファイルダッシュボードには、Experience Platform における組織の結合ポリシーごとに、リアルタイム顧客プロファイル指標の日別概要が表示されます。 これらのプロファイルインサイトは、Platform 内のプロファイルデータにアクセスして表示できるすべてのユーザーが利用できます。 |
-| オーディエンスインサイト | セグメントダッシュボードでは、Platform 内のセグメントにアクセスして表示できるすべてのユーザーに対して、オーディエンス関連のインサイトを提供します。 このダッシュボードには、セグメントビルダー UI で作成されたオーディエンス、または Adobe Audience Manager からインポートされたオーディエンスのオーディエンス指標の日別概要が表示されます。 |
-| アクティベーションインサイト | 宛先ダッシュボードは、宛先にアクセスして表示できるすべてのユーザーが利用できます。 このダッシュボードには、すべての宛先におけるアクティベーションのアクティベーション指標の日別概要が表示されます。 |
-| ユーザー固有のインサイト | ダッシュボードのルックアンドフィールは、ウィジェットの追加、削除、サイズ変更および並べ替えによってダッシュボードのレイアウトを変更できるなど、ユーザーごとにパーソナライズできます。 |
-| ウィジェットの作成と管理 | インサイトの作成と共有を「民主化」するための一元的なリポジトリーで、マーケターはすべての標準ウィジェットとカスタムウィジェットにアクセスできます。<br/><ul><li>標準タブには、ダッシュボードコンテキスト内でアクセス可能なアドビ提供のウィジェットが含まれています。 </li><li>カスタムタブには、ウィジェットを非表示にするオプションを含め、組織で作成されたカスタムウィジェットが含まれています。</li><li>プロファイルインサイトとオーディエンスインサイト内のウィジェット作成ワークフローにより、カスタムウィジェットの編集、選択、プレビューおよび公開が可能になります。</li></ul> |
-| カスタムインサイト | アクセス権限があれば、データエンジニアとマーケティングスペシャリストが、ウィジェットの作成に使用できるプロファイル属性をカスタマイズできます。 |
-
-アクセス権限の付与方法やカスタムウィジェットの作成方法など、ダッシュボードの詳細については、まず[ダッシュボードの概要](../../dashboards/home.md)をお読みください。
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] を使用すると、データエンジニアは Experience Data Model（XDM）との間でデータのマッピング、変換、検証をおこなうことができます。
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| エラー警告の緩和 | エラーではなく警告を表示することと部分的に変換された行により、Data Prep Mapper のエラーメッセージが緩やかになりました。 |
-| 新しい関数 | キーの取得、既存の配列への要素の追加、既存の配列への複数配列の要素の追加、オブジェクトを使用した配列の作成、JSON オブジェクト名の文字列リテラルとしての使用を目的とする関数をそれぞれ追加しました。 |
-
-詳しくは、[[!DNL Data Prep]  の概要](../../data-prep/home.md)を参照してください。
-
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] は、Adobe Experience Platform からのデータの円滑なアクティベーションを可能にする、事前定義済みの出力先プラットフォームとの統合です。宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
-
-| 機能 | 説明 |
-| ------- | ----------- |
-| 監視の向上（ベータ版） | バッチ宛先とストリーミング宛先の両方の情報を含む、宛先の監視機能の向上 |
-| [増分ファイルエクスポートの高速化（ベータ版）](../../destinations/ui/activate-destinations.md#export-incremental-files) | 3 時間、6 時間、8 時間、12 時間ごとに増分ファイルを宛先にエクスポートする機能が追加されました。<br> <br>この機能は現在ベータ版で、一部のお客様のみご利用いただけます。ベータ版以外のお客様は、増分ファイルを 1 日に 1 回エクスポートできます。 |
-| [重複排除キーのサポート（ベータ版）](../../destinations/ui/activate-destinations.md#deduplication-keys) | ID 名前空間またはプロファイル属性を重複排除キーとして設定できる機能を追加しました。 重複排除キーを使用すると、同じプロファイルの複数のレコードが 1 つのエクスポートファイルに含まれる可能性がなくなります。<br> <br>この機能は現在ベータ版で、一部のお客様のみご利用いただけます。 |
-
-宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
-
-## [!DNL Experience Data Model (XDM)] {#xdm}
-
-エクスペリエンスデータモデル（XDM）は、デジタルエクスペリエンスを向上するよう設計されたオープンソースの仕様です。Adobe Experience Platform 上のサービスと通信するすべてのアプリケーションに共通の構造と定義を提供します。XDM 標準規格に準拠しているため、すべての顧客体験データを共通の表現に反映させて、迅速かつ統合的な方法でインサイトを提供できます。顧客行動から有益なインサイトを得たり、セグメントを通じて顧客オーディエンスを定義したり、パーソナライズ機能のために顧客属性を使用したりできます。
-
-| 機能 | 説明 |
-| --- | --- |
-| スキーマフィールドグループ | 「Mixin」という用語が「フィールドグループ」に更新されました。 この変更は、Adobe Experience Platform UI 全体に反映されます。 さらに、スキーマレジストリ API には新しい[「フィールドグループ」エンドポイント](../../xdm/api/field-groups.md)が含まれる一方、Mixin エンドポイントはレガシーエンドポイントとして非推奨（廃止予定）になりました。詳しくは、[XDM のドキュメント](../../xdm/home.md)を参照してください。 |
 
 ## リアルタイム顧客プロファイル {#profile}
 
@@ -82,27 +29,20 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| データセット重複レポート | データセット重複レポートは、アドレス可能なオーディエンスに最も寄与するデータセットを公開することで、プロファイルストアの構成を可視化します。 このレポートは、プロファイルデータへのインサイトを提供するだけでなく、特定のデータの有効期限を設定するなど、ライセンスの使用を最適化するアクションを実行するのに役立ちます。詳しくは、[データセット重複レポートの生成](../../profile/tutorials/dataset-overlap-report.md)に関するチュートリアルに従ってください。 |
+| 結合ポリシーワークフローの更新 | UI で結合ポリシーを作成および更新する際に、和集合スキーマに基づいた 20 個のサンプルプロファイルをプレビューできるようになりました。これにより、結合ポリシー設定を保存する前に、顧客プロファイルがどのように表示されるかをプレビューできます。 詳しくは、 [結合ポリシー UI ガイド](../../profile/merge-policies/ui-guide.md)を参照してください。 |
+| ID重複レポート | ID重複レポートは、リアルタイム顧客プロファイルAPIの一部で、プロファイルストアの構成を視覚的に確認できます。 `/previewsamplestatus`エンドポイントを使用すると、ID重複レポートは、アドレス可能なオーディエンスに最も貢献するIDを表示します。 詳しくは、[プレビューのサンプルステータスAPIエンドポイントガイド](../../profile/api/preview-sample-status.md)を参照してください。 |
 
 [!DNL Profile] データを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、[リアルタイム顧客プロファイルの概要](../../profile/home.md)を参照してください。
 
-## [!DNL Sandboxes] {#sandboxes}
+## サンドボックス {#sandboxes}
 
 Adobe Experience Platform は、デジタルエクスペリエンスアプリケーションをグローバルな規模で強化するように設計されています。企業ではしばしば複数のデジタルエクスペリエンスアプリケーションを並行して運用し、運用コンプライアンスを確保しながら、アプリケーションの開発、テスト、導入に注力する必要があります。このニーズに対応するために、Experience Platform は、サンドボックスを提供します。サンドボックスでは、単一の Platform インスタンスを別々の仮想環境に分割することができ、デジタルエクスペリエンスアプリケーションの開発と発展に役立ちます。
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 複数の実稼動用サンドボックス | IMS 組織内で複数の実稼動用サンドボックスを作成および管理し、特定の実稼動用サンドボックスを異なる事業部門、ブランド、プロジェクトまたは地域の専用サンドボックスにすることができるようになりました。詳しくは、[UI での](../../sandboxes/ui/user-guide.md)、または [API を使用した](../../sandboxes/api/overview.md)実稼働用サンドボックスの作成に関するチュートリアルを参照してください。 |
+| 実稼働用サンドボックス リセット機能 | Adobe Audience ManagerまたはAudience Core Serviceとの双方向のセグメント共有に使用する実稼動用サンドボックスをリセットできるようになりました。 これは、UIから実行するか、APIの新しい`validationOnly`パラメーターと`ignoreWarnings`パラメーターを使用して実行できます。 詳しくは、 [UIでのサンドボックスのリセット](../../sandboxes/ui/user-guide.md)と[APIでのサンドボックスのリセット](../../sandboxes/api/sandboxes.md)に関するチュートリアルを参照してください。 |
 
-### 既知の制限事項
-
-- すべての Experience Cloud 組織には、事前に作成されたデフォルトの実稼働用サンドボックスが用意されています。このサンドボックスは、（まだ）サンドボックスに準拠していない別のアドビアプリケーションまたはアドビ以外のアプリケーションから Platform に送信されるすべてのリクエストのデフォルトの宛先として機能します。デフォルトの実稼動用サンドボックスは、その中にホストされている ID グラフが Adobe Analytics で[クロスデバイス分析（CDA）](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=ja)機能にも使用されている場合や Adobe Audience Manager で [People Based Destinations（PBD）](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=ja)機能にも使用されている場合は、リセットできません。
-- Adobe Audience Manager または Audience Core Service との双方向セグメント共有に使用される実稼動用サンドボックスは、リセットも削除もできません。
-- デフォルトの実稼働用サンドボックスを除き、ユーザーが作成した実稼働用サンドボックスと開発用サンドボックスはすべて削除できます。
-
-サンドボックスについて詳しくは、「[サンドボックスの概要](../../sandboxes/home.md)」を参照してください。
-
-## [!DNL Sources] {#sources}
+## ソース {#sources}
 
 Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
 
@@ -110,7 +50,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| UI での圧縮ファイル取り込みのサポート | UI でクラウドストレージソースを使用して、圧縮 JSON ファイルまたは区切り形式ファイルのプレビューと取り込みを行えるようになりました。詳しくは、[UI でのクラウドストレージソース接続用データフローの設定](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md)に関するチュートリアルを参照してください。 |
-| ベータ版ソースの一般公開（GA） | 以下のソースがベータ版から一般公開（GA）に昇格しました。 <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
+| [!DNL Veeva CRM] （ベータ版） | [!DNL Flow Service] APIまたはUIを使用して、[!DNL Veeva CRM]をExperience Platformに接続できるようになりました。 詳しくは、[[!DNL Veeva CRM] コネクタの概要](../../sources/connectors/crm/veeva.md)を参照してください。 |
+| ストリーミングデータフローの監視のサポート | ソースUIワークスペースを使用して、対応する指標とステータスを持つストリーミングソースからのデータ取り込みアクティビティを監視できるようになりました。 詳しくは、[ストリーミングデータフローの監視](../../sources/tutorials/ui/monitor-streaming.md)に関するチュートリアルを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
