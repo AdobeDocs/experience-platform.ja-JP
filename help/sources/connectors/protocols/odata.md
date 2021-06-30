@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；OData;odata;oData;Generic OData;generic odata
+keywords: Experience Platform；ホーム；人気のあるトピック；OData;odata;oData；汎用OData；汎用odata
 solution: Experience Platform
 title: 汎用ODataソースコネクタの概要
 topic-legacy: overview
-description: APIまたはユーザーインターフェイスを使用して、汎用ODataをAdobe Experience Platformに接続する方法を説明します。
+description: APIまたはユーザーインターフェイスを使用して汎用ODataをAdobe Experience Platformに接続する方法を説明します。
 exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '246'
 ht-degree: 7%
 
 ---
@@ -17,25 +16,25 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->[!DNL Generic OData]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Generic OData]コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ソースの概要](../../home.md#terms-and-conditions)」を参照してください。
 
-Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformを使用すると、[!DNL Platform]サービスを使用して、受信データの構造化、ラベル付け、拡張を行いながら、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティのプロトコルアプリケーションからデータを取り込むためのサポートを提供します。プロトコルプロバイダのサポートは[!DNL Generic OData]です。
+[!DNL Experience Platform] は、サードパーティのプロトコルアプリケーションからデータを取り込む機能を備えています。プロトコルプロバイダーのサポートは[!DNL Generic OData]です。
 
 ## IPアドレス許可リスト
 
-IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IPアドレスのリストを許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加しないと、ソースを使用する際にエラーやパフォーマンスが低下する可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)のページを参照してください。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL Generic OData]を[!DNL Platform]に接続する方法に関する情報を提供しています。
+以下のドキュメントでは、APIまたはユーザーインターフェイスを使用して[!DNL Generic OData]を[!DNL Platform]に接続する方法について説明します。
 
-## APIを使用して[!DNL Generic OData]を[!DNL Platform]に接続
+## APIを使用して[!DNL Generic OData]を[!DNL Platform]に接続します
 
-- [Flow Service APIを使用した汎用ODataソース接続の作成](../../tutorials/api/create/protocols/odata.md)
-- [Flow Service APIを使用したプロトコルアプリケーションの調査](../../tutorials/api/explore/protocols.md)
-- [Flow Service APIを使用したプロトコルアプリケーションからのデータ収集](../../tutorials/api/collect/protocols.md)
+- [フローサービスAPIを使用した汎用ODataベース接続の作成](../../tutorials/api/create/protocols/odata.md)
+- [フローサービスAPIを使用したプロトコルソースのデータ構造と内容の調査](../../tutorials/api/explore/protocols.md)
+- [フローサービスAPIを使用したプロトコルソースのデータフローの作成](../../tutorials/api/collect/protocols.md)
 
-## UIを使用して[!DNL Generic OData]を[!DNL Platform]に接続
+## UIを使用して[!DNL Generic OData]を[!DNL Platform]に接続します
 
 - [UIでの汎用ODataソース接続の作成](../../tutorials/ui/create/protocols/odata.md)
-- [UIでのプロトコル接続用のデータフローの構成](../../tutorials/ui/dataflow/protocols.md)
+- [UIでのプロトコルソース接続のデータフローの作成](../../tutorials/ui/dataflow/protocols.md)
