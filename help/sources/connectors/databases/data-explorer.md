@@ -3,12 +3,11 @@ keywords: Experience Platform；ホーム；人気のあるトピック；AzureD
 solution: Experience Platform
 title: AzureData Explorerソースコネクタの概要
 topic-legacy: overview
-description: APIまたはユーザーインターフェイスを使用してAzureData ExplorerをAdobe Experience Platformに接続する方法を説明します。
+description: APIまたはユーザーインターフェイスを使用してAzureData ExplorerをAdobe Experience Platformに接続する方法について説明します。
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -17,29 +16,29 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[!DNL Azure Data Explorer]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Azure Data Explorer]コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ソースの概要](../../home.md#terms-and-conditions)」を参照してください。
 
-Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure]などのデータベースプロバイダに対してネイティブの接続を提供します。 これらのシステムのデータを[!DNL Platform]に取り込むことができます。
+Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure]などのデータベースプロバイダーに対してネイティブ接続を提供します。 これらのシステムのデータを[!DNL Platform]に取り込むことができます。
 
-リレーショナル、NoSQL、データ・ウェアハウスなど、サード・パーティ製のデータベースは、それぞれ異なるタイプがサポートされます。 データベースプロバイダーのサポートには[!DNL Azure Data Explorer]が含まれます。
+リレーショナル、NoSQL、データウェアハウスなど、様々な種類のサードパーティデータベースがサポートされています。 データベースプロバイダのサポートには[!DNL Azure Data Explorer]が含まれます。
 
 ## IPアドレス許可リスト
 
-IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IPアドレスのリストを許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加しないと、ソースを使用する際にエラーやパフォーマンスが低下する可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)のページを参照してください。
 
 >[!IMPORTANT]
 >
->[!DNL Azure Data Explorer]ソースコネクタは、現在、プラットフォームとの同じ領域接続をサポートしていません。 つまり、Azureインスタンスがプラットフォームと同じネットワーク領域を使用している場合、プラットフォームソースへの接続を確立できません。 現在、クロスリージョン接続のみがサポートされています。 詳しくは、Adobeのアカウントマネージャーにお問い合わせください。
+>[!DNL Azure Data Explorer]ソースコネクタは、現在、Platformへの同じ領域接続をサポートしていません。 つまり、AzureインスタンスがPlatformと同じネットワーク領域を使用している場合、Platformソースへの接続を確立できません。 現在、クロスリージョン接続のみがサポートされています。 詳しくは、担当のAdobeアカウントマネージャーにお問い合わせください。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL Azure Data Explorer]を[!DNL Platform]に接続する方法に関する情報を提供しています。
+以下のドキュメントでは、APIまたはユーザーインターフェイスを使用して[!DNL Azure Data Explorer]を[!DNL Platform]に接続する方法について説明します。
 
-## APIを使用して[!DNL Azure Data Explorer]を[!DNL Platform]に接続
+## APIを使用して[!DNL Azure Data Explorer]を[!DNL Platform]に接続します
 
-- [Flow Service APIを使用してAzureData Explorerソース接続を作成する](../../tutorials/api/create/databases/data-explorer.md)
-- [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
-- [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
+- [フローサービスAPIを使用したAzureData Explorerベース接続の作成](../../tutorials/api/create/databases/data-explorer.md)
+- [フローサービスAPIを使用したデータベースソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/database-nosql.md)
+- [フローサービスAPIを使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用して[!DNL Azure Data Explorer]を[!DNL Platform]に接続
+## UIを使用して[!DNL Azure Data Explorer]を[!DNL Platform]に接続します
 
-- [UIでAzureData Explorerソース接続を作成する](../../tutorials/ui/create/databases/data-explorer.md)
-- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
+- [UIでのAzureData Explorerソース接続の作成](../../tutorials/ui/create/databases/data-explorer.md)
+- [UIでのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
