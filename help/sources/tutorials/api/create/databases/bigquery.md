@@ -1,84 +1,70 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；bigquery;Google;google;Google BigQuery
 solution: Experience Platform
-title: Flow Service APIを使用したGoogle BigQueryソース接続の作成
+title: フローサービスAPIを使用したGoogle BigQueryベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Flow Service APIを使用してAdobe Experience PlatformをGoogle BigQueryに接続する方法を説明します。
+description: フローサービスAPIを使用してAdobe Experience PlatformをGoogle BigQueryに接続する方法を説明します。
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e8c6620a6d2447a577bd56192030ff4353c62c62
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 23%
+source-wordcount: '526'
+ht-degree: 11%
 
 ---
 
-# [!DNL Flow Service] APIを使用して[!DNL Google BigQuery]ソース接続を作成する
+# [!DNL Flow Service] APIを使用して[!DNL Google BigQuery]ベース接続を作成する
 
 >[!NOTE]
 >
->[!DNL Google BigQuery]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Google BigQuery]コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ソースの概要](../../../../home.md#terms-and-conditions)」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、[!DNL Experience Platform]を[!DNL Google BigQuery]に接続する手順（以下「BigQuery」と呼びます）を順を追って説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Google BigQuery]（以下「[!DNL BigQuery]」と呼びます）のベース接続を作成する手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことがで [!DNL Platform] きます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してBigQueryに正しく接続するために知っておく必要がある追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用して[!DNL BigQuery]に正常に接続するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
-[!DNL Flow Service]がBigQueryをプラットフォームに接続するには、次のOAuth 2.0認証値を指定する必要があります。
+[!DNL Flow Service]が[!DNL BigQuery]をPlatformに接続するには、次のOAuth 2.0認証値を指定する必要があります。
 
-| Credential | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
-| `project` | クエリするデフォルトの[!DNL BigQuery]プロジェクトのプロジェクトID。 |
-| `clientID` | 更新トークンの生成に使用されるID値。 |
-| `clientSecret` | 更新トークンの生成に使用されるシークレット値。 |
-| `refreshToken` | [!DNL BigQuery]へのアクセスを許可するために使用される[!DNL Google]から取得される更新トークン。 |
+| `project` | クエリを実行するデフォルトの[!DNL BigQuery]プロジェクトのプロジェクトID。 |
+| `clientID` | 更新トークンの生成に使用するID値。 |
+| `clientSecret` | 更新トークンの生成に使用するシークレット値。 |
+| `refreshToken` | [!DNL BigQuery]へのアクセスを承認するために使用される[!DNL Google]から取得された更新トークン。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL BigQuery]の接続仕様IDは次のとおりです。`3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
-これらの値の詳細については、[このBigQueryドキュメント](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)を参照してください。
+これらの値の詳細については、この[[!DNL BigQuery] ドキュメント](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)を参照してください。
 
-### API 呼び出し例の読み取り
+### Platform APIの使用
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+Platform APIを正常に呼び出す方法について詳しくは、[Platform APIの使用の手引き](../../../../../landing/api-guide.md)を参照してください。
 
-### 必須ヘッダーの値の収集
+## ベース接続を作成する
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+ベース接続は、ソースとプラットフォームの間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続IDなど）を保持します。 ベース接続IDを使用すると、ソース内からファイルを参照およびナビゲートし、取得する特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
-
-* `Content-Type: application/json`
-
-## 接続の作成
-
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込む複数のデータフローの作成に使用できるため、[!DNL BigQuery]アカウントごとに必要な接続は1つだけです。
+ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL BigQuery]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
 
 **API 形式**
 
-```http
+```https
 POST /connections
 ```
 
 **リクエスト**
 
-[!DNL BigQuery]接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 [!DNL BigQuery]の接続指定IDは`3c9b37f8-13a6-43d8-bad3-b863b941fedd`です。
+次のリクエストは、[!DNL BigQuery]のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -110,15 +96,15 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.project` | クエリするデフォルトの[!DNL BigQuery]プロジェクトのプロジェクトID。 対して |
-| `auth.params.clientId` | 更新トークンの生成に使用されるID値。 |
-| `auth.params.clientSecret` | 更新トークンの生成に使用されるクライアント値。 |
-| `auth.params.refreshToken` | [!DNL BigQuery]へのアクセスを許可するために使用される[!DNL Google]から取得される更新トークン。 |
-| `connectionSpec.id` | 前の手順で取得した[!DNL BigQuery]アカウントの接続仕様`id`。 |
+| `auth.params.project` | クエリを実行するデフォルトの[!DNL BigQuery]プロジェクトのプロジェクトID。 対して |
+| `auth.params.clientId` | 更新トークンの生成に使用するID値。 |
+| `auth.params.clientSecret` | 更新トークンの生成に使用するクライアント値。 |
+| `auth.params.refreshToken` | [!DNL BigQuery]へのアクセスを承認するために使用される[!DNL Google]から取得された更新トークン。 |
+| `connectionSpec.id` | [!DNL Google BigQuery]接続仕様ID:`3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 **応答**
 
-正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常な応答は、新しく作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -129,4 +115,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用して[!DNL BigQuery]接続を作成し、接続の一意のID値を取得したことになります。 この接続IDは、Flow Service API](../../explore/database-nosql.md)を使用して[データベースやNoSQLシステムを探索する方法を学ぶ際に、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL BigQuery]接続を作成し、接続の一意のID値を取得しました。 次のチュートリアルでは、フローサービスAPI](../../explore/database-nosql.md)を使用してデータベースやNoSQLシステムを調べる方法を学ぶ際に、この接続IDを使用できます。[
