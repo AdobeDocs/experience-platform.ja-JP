@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;プロファイル;リアルタイム顧客プロファイル;トラブルシューティング;API;統合プロファイル;統合プロファイル;統合;プロファイル;rtcp;XDMグラフ
 title: Experience Platformのアクセシビリティ機能の概要
-topic: ガイド
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platformは、すべての個人に対して、アクセシブルで包括的な機能を提供することに取り組んでいます。
-source-git-commit: 81db01c3e8d332e1fc8127d779c3a584bb498858
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '311'
 ht-degree: 20%
 
 ---
