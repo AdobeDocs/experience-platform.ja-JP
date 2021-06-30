@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Veeva CRM;Veeva crm;veeva;crm
 solution: Experience Platform
-title: ソースコネクタの概要
+title: Veeva CRMソースコネクタの概要
 topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してVeeva CRMをAdobe Experience Platformに接続する方法を説明します。
-source-git-commit: 5b8c6ae7c45048e026b018b6c91478648fdbea85
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '247'
 ht-degree: 8%
 
 ---
@@ -29,11 +29,11 @@ Experience Platformは、サードパーティのCRMシステムからデータ�
 
 ## APIを使用して[!DNL Veeva CRM]を[!DNL Platform]に接続します
 
-- [フローサービスAPIを使用したVeeva CRMソース接続の作成](../../tutorials/api/create/crm/veeva.md)
-- [フローサービスAPIを使用したCRMシステムの調査](../../tutorials/api/explore/crm.md)
-- [フローサービスAPIを使用したCRMデータの収集](../../tutorials/api/collect/crm.md)
+- [フローサービスAPIを使用したVeeva CRMベース接続の作成](../../tutorials/api/create/crm/veeva.md)
+- [フローサービスAPIを使用したCRMソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/crm.md)
+- [フローサービスAPIを使用したCRMソースのデータフローの作成](../../tutorials/api/collect/crm.md)
 
 ## UIを使用して[!DNL Veeva CRM]を[!DNL Platform]に接続します
 
 - [UIでのMicrosoft Dynamicsソース接続の作成](../../tutorials/ui/create/crm/veeva.md)
-- [UIでのCRM接続のデータフローの設定](../../tutorials/ui/dataflow/crm.md)
+- [UIでのCRMソース接続のデータフローの作成](../../tutorials/ui/dataflow/crm.md)
