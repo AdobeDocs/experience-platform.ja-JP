@@ -1,70 +1,57 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce;salesforce
+keywords: Experience Platform；ホーム；人気のあるトピック；Salesforce;Salesforce
 solution: Experience Platform
-title: フローサービスAPIを使用したSalesforceソース接続の作成
+title: フローサービスAPIを使用したSalesforceベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Flow Service APIを使用して、Adobe Experience PlatformをSalesforceアカウントに接続する方法を説明します。
+description: フローサービスAPIを使用してAdobe Experience PlatformをSalesforceアカウントに接続する方法を説明します。
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8035539321f5016521208aa110a4ee2881cb5d1e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 26%
+source-wordcount: '470'
+ht-degree: 12%
 
 ---
 
-# [!DNL Flow Service] APIを使用して[!DNL Salesforce]ソース接続を作成する
+# [!DNL Flow Service] APIを使用して[!DNL Salesforce]ベース接続を作成する
 
-フローサービスは、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元管理するために使用されます。 このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、Flow Service APIを使用して[!DNL Platform]を[!DNL Salesforce]アカウントに接続する手順を順を追って説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Salesforce]の基本接続を作成する手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことがで [!DNL Platform] きます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用して[!DNL Platform]を[!DNL Salesforce]アカウントに正しく接続するために知っておく必要がある追加情報について、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用して[!DNL Platform]を[!DNL Salesforce]アカウントに正しく接続するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
 [!DNL Flow Service]が[!DNL Salesforce]に接続するには、次の接続プロパティの値を指定する必要があります。
 
-| Credential | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `environmentUrl` | [!DNL Salesforce]ソースインスタンスのURL。 |
-| `username` | [!DNL Salesforce]ユーザーアカウントのユーザー名です。 |
-| `password` | [!DNL Salesforce]ユーザーアカウントのパスワードです。 |
+| `username` | [!DNL Salesforce]ユーザーアカウントのユーザー名。 |
+| `password` | [!DNL Salesforce]ユーザーアカウントのパスワード。 |
 | `securityToken` | [!DNL Salesforce]ユーザーアカウントのセキュリティトークン。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL AdWords]の接続仕様IDは次のとおりです。`cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 開始方法の詳細については、[このSalesforceドキュメント](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm)を参照してください。
 
-### API 呼び出し例の読み取り
+### Platform APIの使用
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+Platform APIを正常に呼び出す方法について詳しくは、[Platform APIの使用の手引き](../../../../../landing/api-guide.md)を参照してください。
 
-### 必須ヘッダーの値の収集
+## ベース接続を作成する
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+ベース接続は、ソースとプラットフォームの間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続IDなど）を保持します。 ベース接続IDを使用すると、ソース内からファイルを参照およびナビゲートし、取得する特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL Salesforce]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
 
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
-
-* `Content-Type: application/json`
-
-## 接続の作成
-
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するのに使用できるため、[!DNL Salesforce]アカウントごとに1つの接続のみが必要です。
 
 **API 形式**
 
@@ -74,7 +61,7 @@ POST /connections
 
 **リクエスト**
 
-[!DNL Salesforce]接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 [!DNL Salesforce]の接続指定IDは`cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`です。
+次のリクエストは、[!DNL Salesforce]のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -105,13 +92,13 @@ curl -X POST \
 | プロパティ | 説明 |
 | -------- | ----------- |
 | `auth.params.username` | [!DNL Salesforce]アカウントに関連付けられているユーザー名。 |
-| `auth.params.password` | [!DNL Salesforce]アカウントに関連付けられているパスワードです。 |
-| `auth.params.securityToken` | [!DNL Salesforce]アカウントに関連付けられているセキュリティトークン。 |
-| `connectionSpec.id` | 前の手順で取得した[!DNL Salesforce]アカウントの接続仕様`id`。 |
+| `auth.params.password` | [!DNL Salesforce]アカウントに関連付けられているパスワード。 |
+| `auth.params.securityToken` | [!DNL Salesforce]アカウントに関連付けられたセキュリティトークン。 |
+| `connectionSpec.id` | [!DNL Salesforce]接続仕様ID:`cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 **応答**
 
-正常に応答すると、新たに作成された接続が、一意の識別子(`id`)を含めて返されます。 このIDは、次の手順でCRMシステムを調査するために必要です。
+正常な応答は、新しく作成された接続を、一意の識別子(`id`)を含めて返します。 このIDは、次の手順でCRMシステムを調べるために必要です。
 
 ```json
 {
@@ -122,4 +109,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用して[!DNL Salesforce]接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service API](../../explore/crm.md)を使用して[CRMシステムを調べる方法を学習する際に、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Salesforce]接続を作成し、接続の一意のID値を取得しました。 このIDは、次のチュートリアルでフローサービスAPI](../../explore/crm.md)を使用してCRMシステムを調べる方法を学ぶ際に使用できます。[
