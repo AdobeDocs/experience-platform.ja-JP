@@ -5,10 +5,10 @@ title: Google BigQueryソースコネクタの概要
 topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してGoogle BigQueryをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 9d68e54baa894ebeff4603c7df01a1fe42aa217f
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 16%
+source-wordcount: '395'
+ht-degree: 15%
 
 ---
 
@@ -49,11 +49,11 @@ Adobe Experience Platform を使用すると、データを外部ソースから
 
 ### API の使用
 
-- [フローサービスAPIを使用したGoogle BigQueryソース接続の作成](../../tutorials/api/create/databases/bigquery.md)
-- [フローサービスAPIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
-- [フローサービスAPIを使用したデータベースからのデータの収集](../../tutorials/api/collect/database-nosql.md)
+- [フローサービスAPIを使用したGoogle BigQueryベース接続の作成](../../tutorials/api/create/databases/bigquery.md)
+- [フローサービスAPIを使用したデータベースソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/database-nosql.md)
+- [フローサービスAPIを使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
 ### UI の使用
 
 - [UIでのGoogle BigQueryソース接続の作成](../../tutorials/ui/create/databases/bigquery.md)
-- [UIでのデータベース接続のデータフローの設定](../../tutorials/ui/dataflow/databases.md)
+- [UIでのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
