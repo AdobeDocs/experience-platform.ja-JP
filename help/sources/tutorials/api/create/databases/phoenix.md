@@ -1,87 +1,72 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；フェニックス；フェニックス
+keywords: Experience Platform；ホーム；人気のあるトピック；フェニックス；フェニックス
 solution: Experience Platform
-title: Flow Service APIを使用したPhoenixソース接続の作成
+title: フローサービスAPIを使用したPhoenixベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Flow Service APIを使用してPhoenixデータベースをAdobe Experience Platformに接続する方法を説明します。
+description: フローサービスAPIを使用してPhoenixデータベースをAdobe Experience Platformに接続する方法を説明します。
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 22%
+source-wordcount: '561'
+ht-degree: 8%
 
 ---
 
-# [!DNL Flow Service] APIを使用して[!DNL Phoenix]ソース接続を作成する
+# [!DNL Flow Service] APIを使用して[!DNL Phoenix]ベース接続を作成する
 
 >[!NOTE]
 >
->[!DNL Phoenix]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Phoenix]コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ソースの概要](../../../../home.md#terms-and-conditions)」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Phoenix]データベースを[!DNL Experience Platform]に接続する手順を順を追って説明します。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して、[!DNL Phoenix]データベースを[!DNL Experience Platform]に接続する手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことがで [!DNL Platform] きます。
+* [サンドボックス](../../../../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用して[!DNL Phoenix]に正しく接続するために知っておく必要のある追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用して[!DNL Phoenix]に正常に接続するために知っておく必要がある追加情報を示します。
 
 ### 必要な資格情報の収集
 
 [!DNL Flow Service]が[!DNL Phoenix]と接続するには、次の接続プロパティの値を指定する必要があります。
 
-| Credential | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
 | `host` | [!DNL Phoenix]サーバーのIPアドレスまたはホスト名。 |
-| `username` | [!DNL Phoenix]サーバーへのアクセスに使用するユーザー名です。 |
+| `username` | [!DNL Phoenix]サーバーにアクセスするために使用するユーザー名。 |
 | `password` | ユーザーに対応するパスワード。 |
-| `port` | [!DNL Phoenix]サーバーがクライアント接続をリッスンするために使用するTCPポート。 [!DNL Azure] HDInsightsに接続する場合は、ポートを443に指定します。 |
-| `httpPath` | [!DNL Phoenix]サーバーに対応する部分的なURLです。 [!DNL Azure] HDInsightsクラスターを使用する場合は、/hbasephoenix0を指定します。 |
+| `port` | [!DNL Phoenix]サーバーがクライアント接続をリッスンするTCPポート。 [!DNL Azure] HDInsightsに接続する場合は、ポートを443に指定します。 |
+| `httpPath` | [!DNL Phoenix]サーバーに対応するURLの一部。 [!DNL Azure] HDInsightsクラスターを使用する場合は、/hbasephoenix0を指定します。 |
 | `enableSsl` | boolean値。 サーバーへの接続をSSLを使用して暗号化するかどうかを指定します。 |
-| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 [!DNL Phoenix]の接続指定IDは次のとおりです。`102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Phoenix]の接続仕様IDは次のとおりです。`102706fb-a5cd-42ee-afe0-bc42f017ff43` |
 
-使い始めについての詳細は、[このフェニックスドキュメント](https://python-phoenixdb.readthedocs.io/en/latest/api.html)を参照してください。
+開始方法の詳細は、[このPhoenixのドキュメント](https://python-phoenixdb.readthedocs.io/en/latest/api.html)を参照してください。
 
-### API 呼び出し例の読み取り
+### Platform APIの使用
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+Platform APIを正常に呼び出す方法について詳しくは、[Platform APIの使用の手引き](../../../../../landing/api-guide.md)を参照してください。
 
-### 必須ヘッダーの値の収集
+## ベース接続を作成する
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+ベース接続は、ソースとプラットフォームの間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続IDなど）を保持します。 ベース接続IDを使用すると、ソース内からファイルを参照およびナビゲートし、取得する特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
-
-* `Content-Type: application/json`
-
-## 接続の作成
-
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成するのに使用できるため、[!DNL Phoenix]アカウントごとに1つの接続のみが必要です。
+ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL Phoenix]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
 
 **API 形式**
 
-```http
+```https
 POST /connections
 ```
 
 **リクエスト**
 
-[!DNL Phoenix]接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 [!DNL Phoenix]の接続指定IDは`102706fb-a5cd-42ee-afe0-bc42f017ff43`です。
+次のリクエストは、[!DNL Phoenix]のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -114,17 +99,17 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --------- | ----------- |
-| `auth.params.host` | [!DNL Phoenix]サーバーのホスト。 |
-| `auth.params.username` | [!DNL Phoenix]接続に関連付けられているユーザー名。 |
-| `auth.params.password` | [!DNL Phoenix]接続に関連付けられているパスワードです。 |
+| `auth.params.host` | [!DNL Phoenix]サーバのホスト。 |
+| `auth.params.username` | [!DNL Phoenix]接続に関連付けられたユーザー名。 |
+| `auth.params.password` | [!DNL Phoenix]接続に関連付けられたパスワード。 |
 | `auth.params.port` | [!DNL Phoenix]接続用のTCPポート。 |
-| `auth.params.httpPath` | [!DNL Phoenix]接続の部分的なhttpパスです。 |
+| `auth.params.httpPath` | [!DNL Phoenix]接続のHTTPパスの一部。 |
 | `auth.params.enableSsl` | サーバーへの接続がSSLを使用して暗号化されるかどうかを指定するboolean値です。 |
-| `connectionSpec.id` | [!DNL Phoenix]接続指定ID:`102706fb-a5cd-42ee-afe0-bc42f017ff43`. |
+| `connectionSpec.id` | [!DNL Phoenix]接続仕様ID:`102706fb-a5cd-42ee-afe0-bc42f017ff43`. |
 
 **応答**
 
-正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常な応答は、新しく作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -135,4 +120,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用して[!DNL Phoenix]接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service API ](../../explore/database-nosql.md)を使用して[データベースを調査する方法を学習する際に、次のチュートリアルで使用できます。
+このチュートリアルでは、[!DNL Flow Service] APIを使用して[!DNL Phoenix]接続を作成し、接続の一意のID値を取得しました。 このIDは、次のチュートリアルでフローサービスAPI](../../explore/database-nosql.md)を使用してデータベースを調べる方法を学ぶ際に使用できます。[
