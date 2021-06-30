@@ -5,9 +5,9 @@ title: Azureファイルストレージソースコネクタの概要
 topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してAzure File StorageをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 3%
 
 ---
@@ -43,11 +43,11 @@ Adobe Experience Platformは、AWS、[!DNL Google Cloud Platform]、[!DNL Azure]
 
 ### API の使用
 
-- [フローサービスAPIを使用したAzureファイルストレージソース接続の作成](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
-- [フローサービスAPIを使用したクラウドストレージシステムの調査](../../tutorials/api/explore/cloud-storage.md)
-- [フローサービスAPIを使用したクラウドストレージデータの収集](../../tutorials/api/collect/cloud-storage.md)
+- [フローサービスAPIを使用したAzureファイルストレージベース接続の作成](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [フローサービスAPIを使用したクラウドストレージソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/cloud-storage.md)
+- [フローサービスAPIを使用したクラウドストレージソースのデータフローの作成](../../tutorials/api/collect/cloud-storage.md)
 
 ### UI の使用
 
 - [UIでのAzureファイルストレージソース接続の作成](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [UIでのクラウドストレージ接続のデータフローの設定](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [UIでのクラウドストレージ接続のデータフローの作成](../../tutorials/ui/dataflow/batch/cloud-storage.md)
