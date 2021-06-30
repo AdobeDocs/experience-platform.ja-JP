@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；AmazonRedshift;AmazonRedshift;Redshift;Redshift
+keywords: Experience Platform；ホーム；人気のあるトピック；Amazon Redshift;Amazon redshift;redshift;Redshift
 solution: Experience Platform
-title: AmazonRedshiftソースコネクタの概要
+title: Amazon Redshiftソースコネクタの概要
 topic-legacy: overview
-description: APIまたはユーザーインターフェイスを使用して、AmazonRedshiftをAdobe Experience Platformに接続する方法を説明します。
+description: APIまたはユーザーインターフェイスを使用してAmazon RedshiftをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 11%
+source-wordcount: '258'
+ht-degree: 10%
 
 ---
 
@@ -17,25 +16,25 @@ ht-degree: 11%
 
 >[!NOTE]
 >
->[!DNL Amazon Redshift]コネクタはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../home.md#terms-and-conditions)を参照してください。
+>[!DNL Amazon Redshift]コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ソースの概要](../../home.md#terms-and-conditions)」を参照してください。
 
-Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
+Adobe Experience Platformを使用すると、[!DNL Platform]サービスを使用して、受信データの構造化、ラベル付け、拡張を行いながら、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 
-[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。データベースプロバイダのサポートは[!DNL Amazon Redshift]です。
+[!DNL Experience Platform] は、サードパーティのデータベースからデータを取得する機能を備えています。[!DNL Platform] は、リレーショナル、NoSQL、データ・ウェアハウスなど、様々なタイプのデータベースに接続できます。データベースプロバイダのサポートは[!DNL Amazon Redshift]です。
 
 ## IPアドレス許可リスト
 
-IPアドレスのリストは、ソースコネクタを使用する前に許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加できないと、ソースを使用する際にエラーが発生したり、パフォーマンスが低下したりする可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)ページを参照してください。
+ソースコネクタを操作する前に、IPアドレスのリストを許可リストに追加する必要があります。 地域固有のIPアドレスを許可リストに追加しないと、ソースを使用する際にエラーやパフォーマンスが低下する可能性があります。 詳しくは、[IPアドレスの許可リスト](../../ip-address-allow-list.md)のページを参照してください。
 
-次のドキュメントは、APIまたはユーザーインターフェイスを使用して[!DNL Amazon Redshift]を[!DNL Platform]に接続する方法に関する情報を提供しています。
+以下のドキュメントでは、APIまたはユーザーインターフェイスを使用して[!DNL Amazon Redshift]を[!DNL Platform]に接続する方法について説明します。
 
-## APIを使用して[!DNL Amazon Redshift]を[!DNL Platform]に接続
+## APIを使用して[!DNL Amazon Redshift]を[!DNL Platform]に接続します
 
-- [Flow Service APIを使用して、AmazonRedshiftソース接続を作成する](../../tutorials/api/create/databases/redshift.md)
-- [Flow Service APIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
-- [Flow Service APIを使用してデータベースからデータを収集する](../../tutorials/api/collect/database-nosql.md)
+- [フローサービスAPIを使用したAmazon Redshiftベース接続の作成](../../tutorials/api/create/databases/redshift.md)
+- [フローサービスAPIを使用したデータベースソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/database-nosql.md)
+- [フローサービスAPIを使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
-## UIを使用して[!DNL Amazon Redshift]を[!DNL Platform]に接続
+## UIを使用して[!DNL Amazon Redshift]を[!DNL Platform]に接続します
 
-- [UIでのAmazonRedshiftソース接続の作成](../../tutorials/ui/create/databases/redshift.md)
-- [UIでのデータベース接続用のデータフローの構成](../../tutorials/ui/dataflow/databases.md)
+- [UIでのAmazon Redshiftソース接続の作成](../../tutorials/ui/create/databases/redshift.md)
+- [UIでのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
