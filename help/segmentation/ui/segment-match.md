@@ -2,12 +2,12 @@
 keywords: Experience Platform；ホーム；人気のあるトピック；セグメント化；セグメント化；セグメントの一致；セグメントの一致
 solution: Experience Platform
 title: セグメントマッチの概要
-topic: 概要
+topic-legacy: overview
 description: セグメントマッチは、2人以上のPlatformユーザーが、安全で管理され、プライバシーに優れた方法でセグメントデータを交換できる、Adobe Experience Platformのセグメント共有サービスです。
-source-git-commit: 481160f83e82c80ea5b73e9b56003dc625a34b5e
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 5%
+source-wordcount: '1900'
+ht-degree: 6%
 
 ---
 
@@ -71,7 +71,7 @@ ID名前空間は、[Adobe Experience Platform IDサービス](../../identity-se
 
 データ使用状況ラベルを使用すると、データに適用される使用ポリシーに従ってデータセットとフィールドを分類できます。ラベルはいつでも付けることができ、それによってデータの管理方法を柔軟に選択できます。ベストプラクティスとしては、データが Experience Platform に取り込まれたときや Experience Platform で使用可能になったときに、すぐにデータにラベルを付けることをお勧めします。
 
-[!DNL Segment Match] はC11ラベルを使用します。C11ラベルはに固有の契約ラベルで [!DNL Segment Match] す。データセットや属性を手動で追加すると、パートナー共有プロセスから除外さ [!DNL Segment Match] れます。C11ラベルは、[!DNL Segment Match]プロセスで使用すべきでないデータを示します。 [!DNL Segment Match]から除外するデータセットやフィールドを決定し、それに応じてC11ラベルを追加したら、[!DNL Segment Match]ワークフローによってラベルが自動的に適用されます。 [!DNL Segment Match] は、「データの共有を制 [!UICONTROL 限」コアポリ] シーを自動的に有効にします。データ使用ラベルをデータセットに適用する方法について詳しくは、UIでのデータ使用ラベルの管理に関するチュートリアル([)を参照してください。](../../data-governance/labels/user-guide.md)
+[!DNL Segment Match] はC11ラベルを使用します。C11ラベルはに固有の契約ラベルで [!DNL Segment Match] す。データセットや属性を手動で追加すると、パートナー共有プロセスから除外さ [!DNL Segment Match] れます。C11 ラベルは、[!DNL Segment Match] プロセスで使用すべきでないデータを示します。[!DNL Segment Match]から除外するデータセットやフィールドを決定し、それに応じてC11ラベルを追加したら、[!DNL Segment Match]ワークフローによってラベルが自動的に適用されます。 [!DNL Segment Match] は、「データの共有を制 [!UICONTROL 限」コアポリ] シーを自動的に有効にします。データ使用ラベルをデータセットに適用する方法について詳しくは、UIでのデータ使用ラベルの管理に関するチュートリアル([)を参照してください。](../../data-governance/labels/user-guide.md)
 
 データ使用ラベルとその定義のリストについては、[データ使用ラベルの用語集](../../data-governance/labels/reference.md)を参照してください。 データ使用ポリシーについて詳しくは、「[データ使用ポリシーの概要](../../data-governance/policies/overview.md)」を参照してください。
 
@@ -125,7 +125,7 @@ Platform UIで、左側のナビゲーションから「**[!UICONTROL セグメ�
 * [!UICONTROL サードパーティへの書き出し]
 * [!UICONTROL オンサイト広告]
 * [!UICONTROL オンサイトのパーソナライゼーション]
-* [!UICONTROL セグメントの一致]
+* [!UICONTROL Segment Match]
 * [!UICONTROL 単一のIDパーソナライゼーション]
 
 最後に、フィードに適したID名前空間を選択します。 [!DNL Segment Match]でサポートされている特定の名前空間について詳しくは、[IDデータと名前空間の表](#namespaces)を参照してください。 終了したら、「**[!UICONTROL 次へ]**」を選択します。
