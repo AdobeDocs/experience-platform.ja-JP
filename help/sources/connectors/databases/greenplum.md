@@ -5,9 +5,9 @@ title: GreenPlumソースコネクタの概要
 topic-legacy: overview
 description: APIまたはユーザーインターフェイスを使用してGreenPlumをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Adobe Experience Platformは、[!DNL Microsoft]、MySQL、[!DNL Azure]などの�
 
 ## APIを使用して[!DNL GreenPlum]を[!DNL Platform]に接続します
 
-- [フローサービスAPIを使用したGreenPlumソース接続の作成](../../tutorials/api/create/databases/greenplum.md)
-- [フローサービスAPIを使用したデータベースシステムの調査](../../tutorials/api/explore/database-nosql.md)
-- [フローサービスAPIを使用したデータベースからのデータの収集](../../tutorials/api/collect/database-nosql.md)
+- [フローサービスAPIを使用したGreenPlumベース接続の作成](../../tutorials/api/create/databases/greenplum.md)
+- [フローサービスAPIを使用したデータベースソースのデータ構造とコンテンツの調査](../../tutorials/api/explore/database-nosql.md)
+- [フローサービスAPIを使用したデータベースソースのデータフローの作成](../../tutorials/api/collect/database-nosql.md)
 
 ## UIを使用して[!DNL GreenPlum]を[!DNL Platform]に接続します
 
 - [UIでのGreenPlumソース接続の作成](../../tutorials/ui/create/databases/greenplum.md)
-- [UIでのデータベース接続のデータフローの設定](../../tutorials/ui/dataflow/databases.md)
+- [UIでのデータベースソース接続のデータフローの作成](../../tutorials/ui/dataflow/databases.md)
