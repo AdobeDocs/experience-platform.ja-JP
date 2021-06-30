@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；Azure;Azure File Storage;Azureファイルストレージ
 solution: Experience Platform
-title: フローサービスAPIを使用したAzureファイルストレージソース接続の作成
+title: フローサービスAPIを使用したAzureファイルストレージベース接続の作成
 topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してAzureファイルストレージをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 35%
+source-wordcount: '477'
+ht-degree: 12%
 
 ---
 
-# [!DNL Flow Service] APIを使用して[!DNL Azure File Storage]ソース接続を作成する
+# [!DNL Flow Service] APIを使用して[!DNL Azure File Storage]ベース接続を作成する
 
-[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。
+ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、[!DNL Azure File Storage]を[!DNL Experience Platform]に接続する手順を順を追って説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL Azure File Storage]の基本接続を作成する手順を説明します。
 
 ## はじめに
 
@@ -37,33 +37,19 @@ ht-degree: 35%
 | `host` | アクセスする[!DNL Azure File Storag]インスタンスのエンドポイント。 |
 | `userId` | [!DNL Azure File Storage]エンドポイントへの十分なアクセス権を持つユーザー。 |
 | `password` | [!DNL Azure File Storage]インスタンスのパスワード |
-| 接続仕様ID | 接続の作成に必要な一意の識別子。 [!DNL Azure File Storage]の接続仕様IDは次のとおりです。`be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Azure File Storage]の接続仕様IDは次のとおりです。`be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 使い始める方法の詳細については、[このAzure File Storageドキュメント](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)を参照してください。
 
-### API 呼び出し例の読み取り
+### Platform APIの使用
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
+Platform APIを正常に呼び出す方法について詳しくは、[Platform APIの使用の手引き](../../../../../landing/api-guide.md)を参照してください。
 
-### 必須ヘッダーの値の収集
+## ベース接続を作成する
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+ベース接続は、ソースとプラットフォームの間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続IDなど）を保持します。 ベース接続IDを使用すると、ソース内からファイルを参照およびナビゲートし、取得する特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
-
-* `Content-Type: application/json`
-
-## 接続の作成
-
-接続では、ソースを指定し、そのソースの資格情報を含めます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、[!DNL Azure File Storage]アカウントごとに1つの接続のみが必要です。
+ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL Azure File Storage]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
 
 **API 形式**
 
@@ -73,7 +59,7 @@ POST /connections
 
 **リクエスト**
 
-[!DNL Azure File Storage]接続を作成するには、一意の接続仕様IDをPOSTリクエストの一部として指定する必要があります。 [!DNL Azure File Storage]の接続仕様IDは`be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`です。
+次のリクエストは、[!DNL Azure File Storage]のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -108,9 +94,9 @@ curl -X POST \
 | `auth.params.password` | [!DNL Azure File Storage]アクセスキー。 |
 | `connectionSpec.id` | [!DNL Azure File Storage]接続仕様ID:`be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
-**応答** 
+**応答**
 
-正常な応答は、新しく作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常な応答は、新しく作成されたベース接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次の手順でソース接続を作成する際に必要になります。
 
 ```json
 {
