@@ -3,10 +3,10 @@ keywords: Experience Platform；ホーム；人気のあるトピック；API;AP
 solution: Experience Platform
 title: フィールドグループAPIエンドポイント
 description: スキーマレジストリAPIの/fieldgroupsエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDMスキーマフィールドグループをプログラムで管理できます。
-topic: 開発者ガイド
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+topic-legacy: developer guide
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1215'
 ht-degree: 11%
 
 ---
