@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；hubspot;Hubspot
 solution: Experience Platform
-title: フローサービスAPIを使用したHubSpotソース接続の作成
+title: フローサービスAPIを使用したHubSpotベース接続の作成
 topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してAdobe Experience PlatformをHubSpotに接続する方法を説明します。
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 143f3b4a113c6f36cb1bb0c3624c8503f158a16d
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 33%
+source-wordcount: '486'
+ht-degree: 11%
 
 ---
 
-# [!DNL Flow Service] APIを使用して[!DNL HubSpot]ソース接続を作成する
+# [!DNL Flow Service] APIを使用して[!DNL HubSpot]ベース接続を作成する
 
-[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、サポートされているすべてのソースが接続可能なユーザーインターフェイスとRESTful APIを提供します。
+ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、[!DNL Experience Platform]を[!DNL HubSpot]に接続する手順を順を追って説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL HubSpot]の基本接続を作成する手順を説明します。
 
 ## はじめに
 
@@ -38,33 +38,19 @@ ht-degree: 33%
 | `clientSecret` | [!DNL HubSpot]アプリケーションに関連付けられたクライアント秘密鍵。 |
 | `accessToken` | OAuth統合を最初に認証したときに取得されるアクセストークン。 |
 | `refreshToken` | OAuth統合を最初に認証したときに取得される更新トークン。 |
-| `connectionSpec` | 接続の作成に必要な一意の識別子。 [!DNL HubSpot]の接続仕様IDは次のとおりです。`cc6a4487-9e91-433e-a3a3-9cf6626c1806` |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL HubSpot]の接続仕様IDは次のとおりです。`cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 使い始める方法については、[HubSpotのドキュメント](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview)を参照してください。
 
-### API 呼び出し例の読み取り
+### Platform APIの使用
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、Experience Platform トラブルシューテングガイドの[API 呼び出し例の読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+Platform APIを正常に呼び出す方法について詳しくは、[Platform APIの使用の手引き](../../../../../landing/api-guide.md)を参照してください。
 
-### 必須ヘッダーの値の収集
+## ベース接続を作成する
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+ベース接続は、ソースとプラットフォームの間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続IDなど）を保持します。 ベース接続IDを使用すると、ソース内からファイルを参照およびナビゲートし、取得する特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
-
-* `Content-Type: application/json`
-
-## 接続の作成
-
-接続では、ソースを指定し、そのソースの資格情報を含めます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるので、[!DNL HubSpot]アカウントごとに1つの接続のみが必要です。
+ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL HubSpot]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
 
 **API 形式**
 
@@ -74,7 +60,7 @@ POST /connections
 
 **リクエスト**
 
-[!DNL HubSpot]接続を作成するには、一意の接続仕様IDをPOSTリクエストの一部として指定する必要があります。 [!DNL HubSpot]の接続仕様IDは`cc6a4487-9e91-433e-a3a3-9cf6626c1806`です。
+次のリクエストは、[!DNL HubSpot]のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -85,8 +71,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "connection for hubspot",
-        "description": "connection for hubspot",
+        "name": "connection for HubSpot",
+        "description": "connection for HubSpot",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -109,8 +95,9 @@ curl -X POST \
 | `auth.params.clientSecret` | [!DNL HubSpot]アプリケーションに関連付けられたクライアント秘密鍵。 |
 | `auth.params.accessToken` | OAuth統合を最初に認証したときに取得されるアクセストークン。 |
 | `auth.params.refreshToken` | OAuth統合を最初に認証したときに取得される更新トークン。 |
+| `connectionSpec.id` | [!DNL HubSpot]接続仕様ID:`cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成された接続を返します。この接続には、一意の接続識別子(`id`)が含まれます。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
