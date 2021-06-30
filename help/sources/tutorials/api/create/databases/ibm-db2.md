@@ -1,81 +1,66 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；IBM DB2;IBM;ibm db2;db2;DB2
+keywords: Experience Platform；ホーム；人気のあるトピック；IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
-title: Flow Service APIを使用したIBM DB2ソース接続の作成
+title: フローサービスAPIを使用したIBM [!DNL IBM DB2] ベース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: Flow Service APIを使用してIBM DB2をAdobe Experience Platformに接続する方法を説明します。
+description: フローサービスAPIを使用してIBM [!DNL IBM DB2] をAdobe Experience Platformに接続する方法を説明します。
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 24%
+source-wordcount: '466'
+ht-degree: 7%
 
 ---
 
-# [!DNL Flow Service] APIを使用したIBM DB2ソース接続の作成
+# [!DNL Flow Service] APIを使用したIBM [!DNL IBM DB2]ベース接続の作成
 
 >[!NOTE]
 >
->IBM DB2 Connectorはベータ版です。 ベータラベル付きコネクタの使用方法の詳細については、[ソースの概要](../../../../home.md#terms-and-conditions)を参照してください。
+>IBM [!DNL IBM DB2]コネクタはベータ版です。 ベータラベルのコネクタの使用について詳しくは、「[ソースの概要](../../../../home.md#terms-and-conditions)」を参照してください。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、ユーザーインターフェイスとRESTful APIを提供し、サポートされるすべてのソースを接続できます。
+ベース接続は、ソースとAdobe Experience Platform間の認証済み接続を表します。
 
-このチュートリアルでは、[!DNL Flow Service] APIを使用して、IBM DB2（以下「DB2」と呼ばれます）を[!DNL Experience Platform]に接続する手順を順を追って説明します。
+このチュートリアルでは、[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して[!DNL IBM DB2]の基本接続を作成する手順を説明します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
-* [ソース](../../../../home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+* [ソース](../../../../home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、Platformサービスを使用して、受信データの構造化、ラベル付け、拡張をおこなうことができます。
+* [サンドボックス](../../../../../sandboxes/home.md): [!DNL Experience Platform] は、単一のPlatformインスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してDB2に正しく接続するために必要な追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用して[!DNL IBM DB2]に正常に接続するために知っておく必要がある追加情報を示します。
 
-| Credential | 説明 |
+| 資格情報 | 説明 |
 | ---------- | ----------- |
-| `server` | DB2サーバーの名前。 サーバー名の後に、コロンで区切ったポート番号を指定できます。 次に例を示します。server:port. |
-| `database` | DB2データベースの名前。 |
-| `username` | DB2データベースへの接続に使用するユーザー名。 |
+| `server` | [!DNL IBM DB2]サーバの名前。 サーバー名の後にコロンで区切ったポート番号を指定できます。 例：server:port. |
+| `database` | [!DNL IBM DB2]データベースの名前。 |
+| `username` | [!DNL IBM DB2]データベースへの接続に使用するユーザー名。 |
 | `password` | ユーザー名に指定したユーザーアカウントのパスワード。 |
-| `connectionSpec.id` | 接続を作成するために必要な一意の識別子。 DB2の接続指定IDは`09182899-b429-40c9-a15a-bf3ddbc8ced7`です。 |
+| `connectionSpec.id` | 接続の作成に必要な一意の識別子。 [!DNL IBM DB2]の接続仕様IDは`09182899-b429-40c9-a15a-bf3ddbc8ced7`です。 |
 
-開始方法の詳細については、[このDB2ドキュメント](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html)を参照してください。
+使い始める方法について詳しくは、[this [!DNL IBM DB2] document](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html)を参照してください。
 
-### API 呼び出し例の読み取り
+### Platform APIの使用
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+Platform APIを正常に呼び出す方法について詳しくは、[Platform APIの使用の手引き](../../../../../landing/api-guide.md)を参照してください。
 
-### 必須ヘッダーの値の収集
+## ベース接続を作成する
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+ベース接続は、ソースとプラットフォームの間の情報（ソースの認証資格情報、接続の現在の状態、一意のベース接続IDなど）を保持します。 ベース接続IDを使用すると、ソース内からファイルを参照およびナビゲートし、取得する特定の項目（データのタイプや形式に関する情報を含む）を特定できます。
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、メディアのタイプを指定する以下のような追加ヘッダーが必要です。
-
-* `Content-Type: application/json`
-
-## 接続の作成
-
-接続は、ソースを指定し、そのソースの資格情報を含みます。 異なるデータを取り込むために複数のソースコネクタを作成する場合に使用できるため、DB2アカウントごとに必要なコネクタは1つだけです。
+ベースPOSTIDを作成するには、リクエストパラメーターの一部として[!DNL IBM DB2]認証資格情報を指定しながら、`/connections`エンドポイントに接続リクエストを実行します。
 
 **API 形式**
 
-```http
+```https
 POST /connections
 ```
 
 **リクエスト**
 
-DB2接続を作成するには、POST要求の一部として一意の接続指定IDを指定する必要があります。 DB2の接続指定IDは`09182899-b429-40c9-a15a-bf3ddbc8ced7`です。
+次のリクエストは、[!DNL IBM DB2]のベース接続を作成します。
 
 ```shell
 curl -X POST \
@@ -86,8 +71,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "DB2 connection",
-        "description": "DB2 test connection",
+        "name": "[!DNL IBM DB2] connection",
+        "description": "[!DNL IBM DB2] test connection",
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -107,12 +92,12 @@ curl -X POST \
 
 | パラメーター | 説明 |
 | --------- | ----------- |
-| `auth.params.connectionString` | DB2アカウントに関連付けられている接続文字列。 |
-| `connectionSpec.id` | DB2接続仕様ID:`09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `auth.params.connectionString` | [!DNL IBM DB2]アカウントに関連付けられた接続文字列。 |
+| `connectionSpec.id` | [!DNL IBM DB2]接続仕様ID:`09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 **応答**
 
-正常に応答すると、新たに作成された接続の詳細(一意の識別子(`id`)が返されます。 このIDは、次のチュートリアルでデータを調べるために必要です。
+正常な応答は、新しく作成された接続の詳細(一意の識別子(`id`)を含む)を返します。 このIDは、次のチュートリアルでデータを調べるために必要です。
 
 ```json
 {
@@ -123,4 +108,4 @@ curl -X POST \
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用してIBM DB2接続を作成し、接続の一意のID値を取得したことになります。 このIDは、Flow Service API ](../../explore/database-nosql.md)を使用して[データベースを調査する方法を学習する際に、次のチュートリアルで使用できます。
+このチュートリアルに従って、[!DNL Flow Service] APIを使用してIBM [!DNL IBM DB2]接続を作成し、接続の一意のID値を取得しました。 このIDは、次のチュートリアルでフローサービスAPI](../../explore/database-nosql.md)を使用してデータベースを調べる方法を学ぶ際に使用できます。[
