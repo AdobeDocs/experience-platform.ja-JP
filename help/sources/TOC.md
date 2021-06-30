@@ -4,9 +4,9 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: データ取得、ソース
-source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
+source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '619'
 ht-degree: 17%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 17%
    - ストリーミング{#streaming}
       - [HTTP APIコネクタ](connectors/streaming/http.md)
 - API チュートリアル {#api-tutorials}
-   - ソース接続{#create}を作成します。
+   - ベース接続{#create}を作成します。
       - 広告 {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - クラウドストレージ{#cloud-storage}
@@ -138,7 +138,7 @@ ht-degree: 17%
       - [クラウドストレージデータの調査](tutorials/api/explore/cloud-storage.md)
       - [CRMデータの調査](tutorials/api/explore/crm.md)
       - [顧客成功データの調査](tutorials/api/explore/customer-success.md)
-      - [データベースまたはNoSQLデータの調査](tutorials/api/explore/database-nosql.md)
+      - [データベースデータの調査](tutorials/api/explore/database-nosql.md)
       - [eコマースデータの参照](tutorials/api/explore/ecommerce.md)
       - [マーケティング自動化データの調査](tutorials/api/explore/marketing-automation.md)
       - [支払データの調査](tutorials/api/explore/payments.md)
@@ -148,7 +148,7 @@ ht-degree: 17%
       - [クラウドストレージデータの収集](tutorials/api/collect/cloud-storage.md)
       - [CRMデータの収集](tutorials/api/collect/crm.md)
       - [顧客成功データの収集](tutorials/api/collect/customer-success.md)
-      - [データベースまたはNoSQLデータの収集](tutorials/api/collect/database-nosql.md)
+      - [データベースデータの収集](tutorials/api/collect/database-nosql.md)
       - [eコマースデータの収集](tutorials/api/collect/ecommerce.md)
       - [マーケティング自動化データの収集](tutorials/api/collect/marketing-automation.md)
       - [支払データの収集](tutorials/api/collect/payments.md)
