@@ -4,10 +4,10 @@ description: Experience PlatformWeb SDKの処理ルールを使用して、Adobe
 seo-description: Web SDKでの処理ルールを使用したAdobe Analyticsへの変数の手動マッピング
 keywords: adobe analytics;analytics；変数；マッピング変数；map変数；contextData；コンテキストデータ；処理ルール；xdm；スキーマ；
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
+source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 16%
+source-wordcount: '403'
+ht-degree: 15%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 16%
 
 Adobe Experience Platform [!DNL Web SDK]では、特定の変数を自動的にマッピングできますが、カスタム変数は手動でマッピングする必要があります。
 
-[!DNL Analytics]に自動的にマッピングされないXDMデータの場合、[コンテキストデータ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html)を使用して、[スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html)と一致させることができます。 次に、[処理ルール](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)を使用して[!DNL Analytics]にマッピングし、[!DNL Analytics]変数を設定できます。
+[!DNL Analytics]に自動的にマッピングされないXDMデータの場合、[コンテキストデータ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html)を使用して、[スキーマ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=ja)と一致させることができます。 次に、[処理ルール](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html)を使用して[!DNL Analytics]にマッピングし、[!DNL Analytics]変数を設定できます。
 
 また、デフォルトのアクションと製品リストのセットを使用して、Adobe Experience Platform Web SDKでデータを送信または取得できます。 これをおこなうには、[コマースおよび製品情報の収集](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html)を参照してください。
 
 ## コンテキストデータ
 
-[!DNL Analytics]で使用するために、XDMデータはドット表記を使用してフラット化され、`contextData`として使用できます。 次の値のペアのリストは、`context data` の例を示しています。
+[!DNL Analytics]で使用するために、XDMデータはドット表記を使用してフラット化され、`contextData`として使用できます。 次の値のペアのリストは、フラット化された場合の`context data`の例を示しています。
 
 ```json
 {
