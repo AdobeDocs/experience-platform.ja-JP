@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDKを使用したイベントの追跡
 description: Adobe Experience Platform Web SDKのイベントの追跡方法について説明します。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
+source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
 workflow-type: tm+mt
-source-wordcount: '1462'
-ht-degree: 32%
+source-wordcount: '1460'
+ht-degree: 31%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 32%
 Adobe Experience Cloud に送信されるデータは、次の 2 つのカテゴリに分類されます。
 
 * XDM データ
-* XDM 以外のデータ（現在はサポートされていません）
+* XDM以外のデータ
 
 ## XDM データの送信
 
@@ -75,7 +75,7 @@ dataLayer.commerce = null;
 >XDMフィールドの各イベントで送信できるデータには、32 KBの制限があります。
 
 
-### XDM　以外のデータの送信
+## XDM　以外のデータの送信
 
 XDMスキーマと一致しないデータは、`sendEvent`コマンドの`data`オプションを使用して送信する必要があります。 この機能は、Web SDKのバージョン2.5.0以降でサポートされています。
 
@@ -85,7 +85,7 @@ XDMスキーマと一致しないデータは、`sendEvent`コマンドの`data`
 
 **プロファイル属性とRecommendations属性をAdobe Targetに送信する方法：**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
@@ -101,7 +101,7 @@ alloy("sendEvent", {
 ```
 
 
-### 設定 `eventType` {#event-types}
+### `eventType` の設定 {#event-types}
 
 XDMエクスペリエンスイベントには、オプションの`eventType`フィールドがあります。 ここには、レコードのプライマリイベントタイプが表示されます。イベントタイプを設定すると、送信する様々なイベントを区別するのに役立ちます。 XDMには、使用できる定義済みのイベントタイプがいくつか用意されています。また、使用事例に合わせて独自のカスタムイベントタイプを常に作成することもできます。 XDMが提供するすべての事前定義済みイベントタイプのリストを以下に示します。 [詳しくは、XDMパブリックリポジトリー](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)を参照してください。
 
