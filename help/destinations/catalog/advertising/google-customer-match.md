@@ -3,9 +3,9 @@ keywords: googleカスタマーマッチ；Googleカスタマーマッチ；Goog
 title: Googleカスタマーマッチ接続
 description: Googleカスタマーマッチを使用すると、オンラインデータとオフラインデータを使用して、Googleが所有し、運用するSearch、Shopping、Gmail、YouTubeなどのプロパティをまたいで顧客にリーチし、再び関与させることができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
+source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1548'
 ht-degree: 4%
 
 ---
@@ -32,11 +32,11 @@ ht-degree: 4%
 
 このリリースを昇格するには、電子メールアドレスを識別子として使用して、CRMデータベースからExperience Platformに電子メールアドレスをアップロードします。 セグメントは、古い電話モデルを所有する顧客に基づいて作成されます。 次に、セグメントが[!DNL Google Customer Match]に送信されるので、現在の顧客、古い電話モデルを所有している顧客、および[!DNL YouTube]上で類似の顧客をターゲットに設定できます。
 
-## [!DNL Google Customer Match]の宛先{#data-governance}のデータガバナンス
+## [!DNL Google Customer Match]宛先のデータガバナンス {#data-governance}
 
 Experience Platform内の一部の宛先には、宛先プラットフォームに送信または宛先プラットフォームから受信するデータに対する特定のルールと義務があります。 お客様は、データの制限事項と義務、およびAdobe Experience Platformと宛先プラットフォームでのそのデータの使用方法について理解する必要があります。 Adobe Experience Platformは、データ使用上の義務の一部を管理するのに役立つデータガバナンスツールを提供します。 [データガバ](../../../data-governance/labels/overview.md) ナンスツールとポリシーについて詳しく説明します。
 
-## サポートされているID{#supported-identities}
+## サポートされるID {#supported-identities}
 
 [!DNL Google Customer Match] では、以下の表で説明するIDのアクティブ化をサポートしています。[ID](/help/identity-service/namespaces.md)の詳細を説明します。
 
@@ -48,13 +48,15 @@ Experience Platform内の一部の宛先には、宛先プラットフォーム�
 | email_lc_sha256 | SHA256アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストとSHA256ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 「[ID一致要件](#id-matching-requirements-id-matching-requirements)」の手順に従い、プレーンテキストとハッシュ化された電子メールアドレスにそれぞれ適切な名前空間を使用します。 ソースフィールドにハッシュ化されていない属性が含まれている場合、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に[!DNL Platform]でデータを自動的にハッシュ化します。 |
 | user_id | カスタムユーザーID | ソースIDがカスタム名前空間の場合は、このターゲットIDを選択します。 |
 
-## エクスポートタイプ{#export-type}
+## 書き出しタイプ {#export-type}
 
 **セグメントの書き出し**  — 宛先で使用されている識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出 [!DNL Google Customer Match] します。
 
-## [!DNL Google Customer Match] アカウントの前提条件  {#google-account-prerequisites}
+## [!DNL Google Customer Match] アカウントの前提条件 {#google-account-prerequisites}
 
 Experience Platformで[!DNL Google Customer Match]の宛先を設定する前に、[Googleサポートドキュメント](https://support.google.com/google-ads/answer/6299717)で概要を説明しているGoogleの[!DNL Customer Match]使用ポリシーを読み、順守していることを確認してください。
+
+次に、[!DNL Google]アカウントが[!DNL Standard]以上のアクセスレベルに設定されていることを確認します。 詳しくは、[Google広告のドキュメント](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1)を参照してください。
 
 ### 許可リスト {#allowlist}
 
@@ -62,13 +64,13 @@ Experience Platformで[!DNL Google Customer Match]の宛先を作成する前に
 
 準拠しているアカウントを持つお客様は、Googleによって自動的に許可リストが表示されます。
 
-## ID一致要件{#id-matching-requirements}
+## ID一致の要件 {#id-matching-requirements}
 
 [!DNL Google] では、個人を特定できる情報(PII)を明確に送信しないことが求められます。したがって、[!DNL Google Customer Match]に対してアクティブ化されたオーディエンスは、電子メールアドレスや電話番号など、*ハッシュ化された*&#x200B;識別子をキーオフにできます。
 
 Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件を満たす必要があります。
 
-## 電話番号のハッシュ要件{#phone-number-hashing-requirements}
+## 電話番号のハッシュ要件 {#phone-number-hashing-requirements}
 
 [!DNL Google Customer Match]で電話番号をアクティブにする方法は2つあります。
 
@@ -79,7 +81,7 @@ Adobe Experience Platformに取り込むIDのタイプに応じて、対応す�
 >
 >`Phone`名前空間に取り込まれた電話番号は、[!DNL Google Customer Match]で有効化できません。
 
-## 電子メールのハッシュ要件{#hashing-requirements}
+## 電子メールのハッシュ要件 {#hashing-requirements}
 
 電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、Experience Platform内で明確に電子メールアドレスを使用し、アクティブ化時に[!DNL Platform]ハッシュ化したりできます。
 
@@ -95,7 +97,7 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 自分で電子メールアドレスをハッシュ化する場合は、上記のリンクで概要を説明したGoogleの要件に従ってください。
 
-## カスタム名前空間{#custom-namespaces}の使用
+## カスタム名前空間の使用 {#custom-namespaces}
 
 `User_ID`名前空間を使用してGoogleにデータを送信する前に、[!DNL gTag]を使用して独自の識別子を同期させてください。 詳しくは、[Google公式ドキュメント](https://support.google.com/google-ads/answer/9199250)を参照してください。
 
@@ -148,7 +150,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。どちらの場合も、残りのワークフローについては、次の「[ [!DNL Google Customer Match]](#activate-segments)に対してセグメントをアクティブ化する」の節を参照してください。
 
-## [!DNL Google Customer Match] {#activate-segments}に対してセグメントをアクティブ化
+## [!DNL Google Customer Match]に対してセグメントをアクティブ化 {#activate-segments}
 
 [!DNL Google Customer Match]に対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
 
@@ -159,12 +161,12 @@ Attribute source data is not automatically hashed. When your source field contai
 
 [!DNL App ID]の見つけ方について詳しくは、[Google公式ドキュメント](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid)を参照してください。
 
-## セグメントのアクティベーションが成功したことを確認します。 {#verify-activation}
+## セグメントのアクティベーションが成功したことを確認します。  {#verify-activation}
 
 アクティベーションフローが完了したら、**[!UICONTROL Google広告]**&#x200B;アカウントに切り替えます。 アクティブ化されたセグメントは、顧客リストとしてGoogleアカウントに表示されます。 セグメントサイズによっては、提供するアクティブなユーザーが100人を超えない限り、一部のオーディエンスが設定されないことに注意してください。
 
 セグメントを[!DNL IDFA]と[!DNL GAID]の両方のモバイルIDにマッピングする場合、 [!DNL Google Customer Match]はIDマッピングごとに別のセグメントを作成します。 [!DNL Google Ads]アカウントには、[!DNL IDFA]用と[!DNL GAID]用の2つの異なるセグメントが表示されます。
 
-## 追加リソース{#additional-resources}
+## その他のリソース {#additional-resources}
 
 * [Googleカスタマーマッチの統合 — ビデオチュートリアル](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
