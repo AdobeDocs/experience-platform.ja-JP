@@ -4,7 +4,7 @@ solution: Experience Platform
 title: コマース詳細スキーマフィールドグループ
 topic-legacy: overview
 description: このドキュメントでは、「コマース詳細」スキーマフィールドグループの概要を説明します。
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 4%
@@ -12,24 +12,24 @@ ht-degree: 4%
 ---
 
 
-# [!UICONTROL コマース詳細] スキーマフィールドグループ
+# [!UICONTROL Commerce Details] schema field group
 
 >[!NOTE]
 >
->複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
+>The names of several schema field groups have changed. 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL コマー] スクラスの標準スキーマフィールドグループ [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md)。商品情報（SKU、名前、数量）や買い物かごの標準操作（注文、チェックアウト、放棄）などのコマースデータを説明するのに使用されます。
+[!UICONTROL Commerce Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), used to describe commerce data such as product information (SKU, name, quantity), and standard cart operations (order, checkout, abandon).
 
 ![](../../images/field-groups/commerce-details.png)
 
 | プロパティ | データタイプ | 説明 |
 | --- | --- | --- |
-| `commerce` | [コマース](../../data-types/commerce.md) | 製品返品、保証登録、買い物かご/注文プロセスを説明するオブジェクト。 |
-| `productListItems` | [製品リスト項目](../../data-types/product-list-item.md)の配列 | 顧客が選択した製品を表す項目のリスト。特定の時点での特定のオプションと価格（製品レコードと異なる場合があります）が表示されます。 |
+| `commerce` | [コマース](../../data-types/commerce.md) | An object that describes product returns, warranty registration, and shopping cart/order processes. |
+| `productListItems` | Array of [Product list items](../../data-types/product-list-item.md) | 顧客が選択した製品を表す項目のリスト。特定の時点での特定のオプションと価格（製品レコードと異なる場合があります）が表示されます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 フィールドグループについて詳しくは、パブリックXDMリポジトリを参照してください。
 
-* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-commerce.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-commerce.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-commerce.example.1.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-commerce.schema.json)
