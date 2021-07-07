@@ -5,7 +5,7 @@ title: セグメントメンバーシップの詳細スキーマフィールド�
 topic-legacy: overview
 description: このドキュメントでは、「セグメントメンバーシップの詳細」スキーマフィールドグループの概要を説明します。
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 3%
@@ -13,17 +13,17 @@ ht-degree: 3%
 ---
 
 
-# [!UICONTROL Segment Membership ] Detailsschemaフィールドグループ
+# [!UICONTROL Segment Membership Details] schema field group
 
 >[!NOTE]
 >
 >複数のスキーマフィールドグループの名前が変更されました。 詳しくは、[フィールドグループ名の更新](../name-updates.md)のドキュメントを参照してください。
 
-[!UICONTROL セグメントのメン] バーシップ： [[!DNL XDM Individual Profile] クラスの標準スキーマフィールドグル](../../classes/individual-profile.md)ープを説明します。フィールドグループは、セグメントのメンバーシップに関する情報（個人が属するセグメント、最終認定時間、メンバーシップが有効になるまで）を取得する単一のマップフィールドを提供します。
+[!UICONTROL Segment Membership Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). フィールドグループは、セグメントのメンバーシップに関する情報（個人が属するセグメント、最終認定時間、メンバーシップが有効になるまで）を取得する単一のマップフィールドを提供します。
 
 >[!WARNING]
 >
->`segmentMembership`フィールドは、このフィールドグループを使用してプロファイルスキーマに手動で追加する必要がありますが、このフィールドに手動で入力または更新しないでください。 セグメント化ジョブの実行時に、各プロファイルの`segmentMembership`マップが自動的に更新されます。
+>While the `segmentMembership` field must be manually added to your profile schema using this field group, you should not attempt to manually populate or update this field. セグメント化ジョブの実行時に、各プロファイルの`segmentMembership`マップが自動的に更新されます。
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -74,15 +74,15 @@ ht-degree: 3%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `xdm:version` | このプロファイルが適合するセグメントのバージョン。 |
-| `xdm:lastQualificationTime` | このプロファイルが最後にセグメントで認定された時刻のタイムスタンプ。 |
-| `xdm:validUntil` | セグメントのメンバーシップが有効と見なされなくなった時点を示すタイムスタンプ。 |
+| `xdm:version` | The version of the segment that this profile qualified for. |
+| `xdm:lastQualificationTime` | A timestamp of the last time this profile qualified for the segment. |
+| `xdm:validUntil` | A timestamp of when the segment membership should no longer be assumed to be valid. |
 | `xdm:status` | セグメントのメンバーシップが現在のリクエストの一部として認識されたかどうかを示します。 次の値を使用できます。 <ul><li>`existing`:プロファイルは、リクエストの前に既にセグメントに含まれていて、引き続きメンバーシップを維持します。</li><li>`realized`:プロファイルは、現在のリクエストの一部としてセグメントに入っています。</li><li>`exited`:プロファイルは、現在のリクエストの一部としてセグメントから退出しています。</li></ul> |
-| `xdm:payload` | 一部のセグメントメンバーシップには、メンバーシップに直接関連する追加の値を記述するペイロードが含まれています。 各メンバーシップに対して指定された型のペイロードを1つだけ指定できます。 `xdm:payloadType` ペイロードのタイプ(`boolean`、 `number`、 `propensity`または `string`)を示し、兄弟プロパティはペイロードタイプの値を提供します。 |
+| `xdm:payload` | Some segment memberships include a payload that describes additional values directly related to the membership. Only one payload of a given type can be provided for each membership. `xdm:payloadType` ペイロードのタイプ(`boolean`、 `number`、 `propensity`または `string`)を示し、兄弟プロパティはペイロードタイプの値を提供します。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-フィールドグループについて詳しくは、パブリックXDMリポジトリを参照してください。
+For more details on the field group, refer to the public XDM repository:
 
-* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
