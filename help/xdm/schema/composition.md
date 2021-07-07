@@ -5,7 +5,7 @@ title: スキーマ構成の基本
 topic-legacy: overview
 description: このドキュメントでは、エクスペリエンスデータモデル（XDM）スキーマの概要と、Adobe Experience Platform で使用するスキーマを構成するための構成要素、原則およびベストプラクティスを紹介します。
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '3726'
 ht-degree: 31%
@@ -22,7 +22,7 @@ ht-degree: 31%
 
 スキーマは、データの構造を説明するだけでなく、制約や期待をデータに適用し、システム間の移動時に検証できるようにします。これらの標準的な定義により、接触チャネルに関係なくデータを一貫して解釈でき、アプリケーション間での翻訳の必要性を排除できます。
 
-[!DNL Experience Platform] スキーマを使用して、このセマンティックの正規化を維持します。スキーマは[!DNL Experience Platform]でデータを記述する標準的な方法で、スキーマに準拠するすべてのデータを、競合なく組織全体で再利用したり、複数の組織間で共有したりできます。
+[!DNL Experience Platform] スキーマを使用して、このセマンティックの正規化を維持します。Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reused across an organization without conflicts, or even shared between multiple organizations.
 
 XDMスキーマは、大量の複雑なデータを自己完結型の形式で保存するのに最適です。 XDMがこれをどのように実現するかについて詳しくは、このドキュメントの付録にある[埋め込みオブジェクト](#embedded)と[ビッグデータ](#big-data)の節を参照してください。
 
@@ -30,7 +30,7 @@ XDMスキーマは、大量の複雑なデータを自己完結型の形式で�
 
 標準化は、[!DNL Experience Platform]の背後にある重要な概念です。 アドビが推進する XDM は、顧客エクスペリエンスデータを標準化し、顧客エクスペリエンス管理の標準スキーマを定義する取り組みです。
 
-[!DNL Experience Platform]が構築されるインフラストラクチャ（[!DNL XDM System]と呼ばれます）は、スキーマベースのワークフローを容易にし、[!DNL Schema Registry]、[!DNL Schema Editor]、スキーマメタデータ、サービス消費パターンを含みます。 詳しくは、「[XDM システムの概要](../home.md)」を参照してください。
+The infrastructure on which [!DNL Experience Platform] is built, known as [!DNL XDM System], facilitates schema-based workflows and includes the [!DNL Schema Registry], [!DNL Schema Editor], schema metadata, and service consumption patterns. 詳しくは、「[XDM システムの概要](../home.md)」を参照してください。
 
 [!DNL Experience Platform]でスキーマを活用する主なメリットはいくつかあります。 第1に、スキーマは、より優れたデータガバナンスとデータ最小化を可能にします。これは、プライバシー規制で特に重要です。 第2に、Adobeの標準コンポーネントを使用してスキーマを作成すると、カスタマイズを最小限に抑えながら、標準のインサイトとAI/MLサービスの使用が可能になります。 最後に、スキーマは、データ共有のインサイトと効率的なオーケストレーションのためのインフラストラクチャを提供します。
 
@@ -38,7 +38,7 @@ XDMスキーマは、大量の複雑なデータを自己完結型の形式で�
 
 スキーマを構築する最初の手順は、スキーマ内で捕捉しようとする概念、すなわち現実世界のオブジェクトを決定することです。説明しようとしている概念を特定したら、データのタイプ、潜在的な ID フィールド、将来のスキーマの発展について考え、スキーマの計画を始めることができます。
 
-### [!DNL Experience Platform]でのデータ動作
+### Data behaviors in [!DNL Experience Platform]
 
 [!DNL Experience Platform]での使用を意図したデータは、次の2つの動作タイプにグループ化されます。
 
@@ -55,9 +55,9 @@ XDMスキーマは、大量の複雑なデータを自己完結型の形式で�
 
 この処理を支援するために、スキーマ内のキーフィールドをIDとしてマークできます。 データ取り込み時に、これらのフィールドのデータがその個人の「[!UICONTROL IDグラフ]」に挿入されます。 その後、グラフデータは、各顧客の関連付けられた表示を提供するために、[[!DNL Real-time Customer Profile]](../../profile/home.md)および他の[!DNL Experience Platform]サービスによってアクセスされます。
 
-一般的に「[!UICONTROL ID]」とマークされるフィールドは次のとおりです。電子メールアドレス、電話番号、[[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)、CRM IDまたはその他の一意のIDフィールド。 また、「[!UICONTROL ID]」フィールドにも適切な場合があるので、組織固有の一意の識別子も考慮する必要があります。
+Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja), CRM ID, or other unique ID fields. また、「[!UICONTROL ID]」フィールドにも適切な場合があるので、組織固有の一意の識別子も考慮する必要があります。
 
-スキーマ計画段階で顧客IDを考慮し、可能な限り堅牢なプロファイルを構築するためにデータを統合できるようにすることが重要です。 ID情報で顧客にデジタルエクスペリエンスを提供する方法について詳しくは、[Adobe Experience Platform IDサービス](../../identity-service/home.md)の概要を参照してください。
+スキーマ計画段階で顧客IDを考慮し、可能な限り堅牢なプロファイルを構築するためにデータを統合できるようにすることが重要です。 See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
 IDデータをPlatformに送信する方法は2つあります。
 
@@ -70,7 +70,7 @@ IDデータをPlatformに送信する方法は2つあります。
 
 `identityMap`を使用する主な欠点は、IDがデータに埋め込まれ、結果として見えなくなることです。 生データを取り込む場合は、個々のIDフィールドを実際のスキーマ構造内で定義する必要があります。 `identityMap`を使用するスキーマも関係に参加できません。
 
-ただし、IDを一緒に保存するソースからデータを取り込む場合([!DNL Airship]やAdobe Audience Managerなど)や、スキーマのID数が可変の場合は、IDマップが特に役立ちます。 また、[Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)を使用する場合は、IDマップが必要です。
+However, identity maps can be particularly useful if you are bringing in data from sources that store identities together (such as [!DNL Airship] or Adobe Audience Manager), or when there are a variable number of identities for a schema. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 単純なIDマップの例を次に示します。
 
@@ -111,17 +111,17 @@ IDデータをPlatformに送信する方法は2つあります。
 
 デジタルエクスペリエンスの本質が進化し続けるにつれ、デジタルエクスペリエンスを表すスキーマが必要になります。したがって、適切に設計されたスキーマは、必要に応じて適応し、進化し、以前のバージョンのスキーマに破壊的な変更を加えることなく使用できます。
 
-スキーマの進化には後方互換性の維持が重要なので、[!DNL Experience Platform]では、純粋に加算的なバージョン管理原則が適用されます。 この原則により、スキーマのリビジョンは、非破壊的な更新と変更のみを生み出します。 つまり、**後方互換性を壊すような変更**&#x200B;はサポートされません。
+Since maintaining backwards compatibility is crucial for schema evolution, [!DNL Experience Platform] enforces a purely additive versioning principle. この原則により、スキーマのリビジョンは、非破壊的な更新と変更のみを生み出します。 つまり、**後方互換性を壊すような変更**&#x200B;はサポートされません。
 
 >[!NOTE]
 >
->スキーマがまだ[!DNL Experience Platform]へのデータの取り込みに使用されておらず、リアルタイム顧客プロファイルでの使用が有効になっていない場合は、そのスキーマに重大な変更を導入できます。 ただし、[!DNL Platform]でスキーマを使用した後は、追加のバージョン管理ポリシーに従う必要があります。
+>If a schema has not yet been used to ingest data into [!DNL Experience Platform] and hasn&#39;t been enabled for use in Real-time Customer Profile, you may introduce a breaking change to that schema. ただし、[!DNL Platform]でスキーマを使用した後は、追加のバージョン管理ポリシーに従う必要があります。
 
 次の表に、スキーマ、フィールドグループおよびデータタイプの編集時にサポートされる変更を示します。
 
 | サポートされる変更 | 後方互換性のない変更（サポートなし） |
 | --- | --- |
-| <ul><li>リソースへの新しいフィールドの追加</li><li>必須フィールドのオプション化</li><li>リソースの表示名と説明の変更</li><li>スキーマのプロファイルへの参加の有効化</li></ul> | <ul><li>以前に定義したフィールドの削除</li><li>新しい必須フィールドの紹介</li><li>既存のフィールドの名前の変更または再定義</li><li>以前にサポートされていたフィールド値の削除または制限</li><li>既存のフィールドをツリー内の別の場所に移動する</li><li>スキーマの削除</li><li>プロファイルへのスキーマの参加の無効化</li></ul> |
+| <ul><li>リソースへの新しいフィールドの追加</li><li>必須フィールドのオプション化</li><li>リソースの表示名と説明の変更</li><li>スキーマのプロファイルへの参加の有効化</li></ul> | <ul><li>以前に定義したフィールドの削除</li><li>新しい必須フィールドの紹介</li><li>既存のフィールドの名前の変更または再定義</li><li>以前にサポートされていたフィールド値の削除または制限</li><li>Moving existing fields to a different location in the tree</li><li>スキーマの削除</li><li>プロファイルへのスキーマの参加の無効化</li></ul> |
 
 ### スキーマとデータの取得
 
@@ -133,23 +133,23 @@ IDデータをPlatformに送信する方法は2つあります。
 
 スキーマは、次の式を使用して構成されます。
 
-**Class + Schema Field Group&amp;ast;= XDMスキーマ**
+**Class + Schema Field Group&amp;ast; = XDM Schema**
 
-&amp;ast；スキーマは、クラスと0個以上のスキーマフィールドグループで構成されます。 つまり、フィールドグループをまったく使用せずに、データセットスキーマを作成できます。
+&amp;ast；スキーマは、クラスと0個以上のスキーマフィールドグループで構成されます。 This means that you could compose a dataset schema without using field groups at all.
 
 ### クラス {#class}
 
 クラスを割り当てることで、スキーマの構成が開始されます。クラスは、スキーマに含まれるデータ（レコードまたは時系列）の行動面を定義します。これに加えて、クラスは、そのクラスに基づくすべてのスキーマに含める必要のある共通のプロパティの最小数を記述し、複数の互換性のあるデータセットを結合する方法を提供します。
 
-スキーマのクラスは、そのスキーマで使用する資格のあるフィールドグループを決定します。 これについては、[次の節](#field-group)で詳しく説明します。
+A schema&#39;s class determines which field groups will be eligible for use in that schema. これについては、[次の節](#field-group)で詳しく説明します。
 
-Adobeは、いくつかの標準（「コア」）XDMクラスを提供します。 これらのクラスのうち、[!DNL XDM Individual Profile]と[!DNL XDM ExperienceEvent]の2つは、ほぼすべてのダウンストリームPlatformプロセスに必要です。 これらのコアクラスに加えて、独自のカスタムクラスを作成して、組織の具体的な使用例を説明することもできます。 カスタムクラスは、一意の使用例を説明するAdobe定義のコアクラスがない場合に、組織によって定義されます。
+Adobe provides several standard (&quot;core&quot;) XDM classes. これらのクラスのうち、[!DNL XDM Individual Profile]と[!DNL XDM ExperienceEvent]の2つは、ほぼすべてのダウンストリームPlatformプロセスに必要です。 In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. カスタムクラスは、一意の使用例を説明するAdobe定義のコアクラスがない場合に、組織によって定義されます。
 
 次のスクリーンショットは、Platform UIでクラスがどのように表されるかを示しています。 表示されるサンプルスキーマにはフィールドグループが含まれていないので、表示されるすべてのフィールドは、スキーマのクラス([!UICONTROL XDM Individual Profile])によって提供されます。
 
 ![](../images/schema-composition/class.png)
 
-使用可能な標準XDMクラスの最新のリストについては、[公式のXDMリポジトリ](https://github.com/adobe/xdm/tree/master/components/classes)を参照してください。 また、UIでリソースを表示したい場合は、 [XDMコンポーネントの詳細](../ui/explore.md)に関するガイドを参照することもできます。
+使用可能な標準XDMクラスの最新のリストについては、[公式のXDMリポジトリ](https://github.com/adobe/xdm/tree/master/components/classes)を参照してください。 Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
 
 ### [フィールド]領域 {#field-group}
 
@@ -167,11 +167,11 @@ Adobeは、いくつかの標準（「コア」）XDMクラスを提供します
 
 ![](../images/schema-composition/field-group.png)
 
-使用可能な標準XDMフィールドグループの最新のリストについては、[公式のXDMリポジトリ](https://github.com/adobe/xdm/tree/master/components/mixins)を参照してください。 また、UIでリソースを表示したい場合は、 [XDMコンポーネントの詳細](../ui/explore.md)に関するガイドを参照することもできます。
+使用可能な標準XDMフィールドグループの最新のリストについては、[公式のXDMリポジトリ](https://github.com/adobe/xdm/tree/master/components/fieldgroups)を参照してください。 Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
 
 ### データタイプ {#data-type}
 
-データタイプは、基本リテラルフィールドと同様に、クラスやスキーマの参照フィールド型として使用されます。主な違いは、データタイプが複数のサブフィールドを定義できる点です。フィールドグループと同様に、データ型を使用すると、複数フィールド構造を一貫して使用できますが、フィールドの「データ型」として追加することでスキーマの任意の場所にデータ型を含めることができるので、フィールドグループよりも柔軟性が高くなります。
+データタイプは、基本リテラルフィールドと同様に、クラスやスキーマの参照フィールド型として使用されます。主な違いは、データタイプが複数のサブフィールドを定義できる点です。Similar to a field group, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a field group because a data type can be included anywhere in a schema by adding it as the &quot;data type&quot; of a field.
 
 [!DNL Experience Platform] には、共通のデータ構造を記述するための標準パタ [!DNL Schema Registry] ーンの使用をサポートするために、の一部として多数の一般的なデータ型が用意されています。これについては、 [!DNL Schema Registry]のチュートリアルで詳しく説明しています。このチュートリアルでは、データタイプを定義する手順を実行すると、より明確になります。
 
@@ -183,7 +183,7 @@ Adobeは、いくつかの標準（「コア」）XDMクラスを提供します
 
 ### フィールド
 
-フィールドは、スキーマの最も基本的な構成要素です。フィールドには、特定のデータタイプを定義することで含めることができるデータの種類に関する制約が含まれます。これらの基本的なデータタイプは単一のフィールドを定義しますが、前述の[データタイプ](#data-type)では複数のサブフィールドを定義し、様々なスキーマで同じ複数フィールド構造を再利用できます。したがって、フィールドの「データ型」をレジストリで定義されたデータ型の1つとして定義する以外に、[!DNL Experience Platform]は、次のような基本的なスカラー型をサポートします。
+フィールドは、スキーマの最も基本的な構成要素です。フィールドには、特定のデータタイプを定義することで含めることができるデータの種類に関する制約が含まれます。これらの基本的なデータタイプは単一のフィールドを定義しますが、前述の[データタイプ](#data-type)では複数のサブフィールドを定義し、様々なスキーマで同じ複数フィールド構造を再利用できます。So, in addition to defining a field&#39;s &quot;data type&quot; as one of the data types defined in the registry, [!DNL Experience Platform] supports basic scalar types such as:
 
 * 文字列
 * 整数
@@ -224,25 +224,25 @@ Adobeは、いくつかの標準（「コア」）XDMクラスを提供します
 
 XDMは、基本的なフィールドと独自のデータ型を定義する機能に加えて、[!DNL Experience Platform]サービスで暗黙的に認識されるフィールドとデータ型の標準セットを提供し、[!DNL Platform]コンポーネント間で使用する場合に一貫性を高めます。
 
-「名」や「電子メールアドレス」などのフィールドには、基本的なスカラーフィールド型以外に、同じXDMデータ型を共有するすべてのフィールドが同じように動作することを[!DNL Platform]に伝える追加の記述が含まれます。 この動作は、データの送信元や、データが使用されている[!DNL Platform]サービスに関係なく、一貫性を保つために信頼できます。
+These fields, such as &quot;First Name&quot; and &quot;Email Address&quot; contain added connotations beyond basic scalar field types, telling [!DNL Platform] that any fields sharing the same XDM data type will behave in the same way. この動作は、データの送信元や、データが使用されている[!DNL Platform]サービスに関係なく、一貫性を保つために信頼できます。
 
 使用可能な XDM フィールドの完全なリストについては [XDM フィールドディクショナリ](field-dictionary.md)を参照してください。[!DNL Experience Platform]全体での一貫性と標準化をサポートするために、可能な限りXDMフィールドとデータ型を使用することをお勧めします。
 
 ## 合成の例
 
-スキーマは、[!DNL Platform]に取り込まれるデータの形式と構造を表し、構成モデルを使用して構築されます。 前述のように、これらのスキーマは、クラスと、そのクラスと互換性のある0個以上のフィールドグループで構成されます。
+Schemas represent the format and structure of data that will be ingested into [!DNL Platform], and are built using a composition model. 前述のように、これらのスキーマは、クラスと、そのクラスと互換性のある0個以上のフィールドグループで構成されます。
 
-例えば、小売店で行われた購入を記述するスキーマを、「[!UICONTROL 店舗トランザクション]」と呼ぶことができます。 このスキーマは、標準の[!UICONTROL Commerce]フィールドグループと、ユーザー定義の[!UICONTROL Product Info]フィールドグループを組み合わせた[!DNL XDM ExperienceEvent]クラスを実装します。
+例えば、小売店で行われた購入を記述するスキーマを、「[!UICONTROL 店舗トランザクション]」と呼ぶことができます。 The schema implements the [!DNL XDM ExperienceEvent] class combined with the standard [!UICONTROL Commerce] field group and a user-defined [!UICONTROL Product Info] field group.
 
 Webサイトトラフィックを追跡する別のスキーマは、「[!UICONTROL Web訪問回数]」と呼ばれる場合があります。 また、[!DNL XDM ExperienceEvent]クラスも実装しますが、今回は標準の[!UICONTROL Web]フィールドグループを組み合わせます。
 
-次の図に、これらのスキーマと各フィールドグループが提供するフィールドを示します。 また、このガイドで前述した「[!UICONTROL ロイヤルティメンバー]」スキーマを含む、[!DNL XDM Individual Profile]クラスに基づく2つのスキーマが含まれます。
+The diagram below shows these schemas and the fields contributed by each field group. また、このガイドで前述した「[!UICONTROL ロイヤルティメンバー]」スキーマを含む、[!DNL XDM Individual Profile]クラスに基づく2つのスキーマが含まれます。
 
 ![](../images/schema-composition/composition.png)
 
 ### 結合 {#union}
 
-[!DNL Experience Platform]では特定の使用例のスキーマを作成できますが、特定のクラスタイプのスキーマの「和集合」を確認することもできます。 上の図は、XDM ExperienceEventクラスに基づく2つのスキーマと、[!DNL XDM Individual Profile]クラスに基づく2つのスキーマを示しています。 次に示す和集合は、同じクラス（それぞれ[!DNL XDM ExperienceEvent]と[!DNL XDM Individual Profile]）を共有するすべてのスキーマのフィールドを集計します。
+[!DNL Experience Platform]では特定の使用例のスキーマを作成できますが、特定のクラスタイプのスキーマの「和集合」を確認することもできます。 上の図は、XDM ExperienceEventクラスに基づく2つのスキーマと、[!DNL XDM Individual Profile]クラスに基づく2つのスキーマを示しています。 The union, shown below, aggregates the fields of all schemas that share the same class ([!DNL XDM ExperienceEvent] and [!DNL XDM Individual Profile], respectively).
 
 ![](../images/schema-composition/union.png)
 
@@ -252,7 +252,7 @@ Webサイトトラフィックを追跡する別のスキーマは、「[!UICONT
 
 ## XDM スキーマへのデータファイルのマッピング
 
-[!DNL Experience Platform]に取り込まれるすべてのデータファイルは、XDMスキーマの構造に準拠している必要があります。 XDM 階層（サンプルファイルを含む）に準拠するようにデータファイルをフォーマットする方法の詳細は、[ETL 変換のサンプル](../../etl/transformations.md)に関するドキュメントを参照してください。データファイルの[!DNL Experience Platform]への取り込みに関する一般的な情報については、「[バッチ取り込みの概要](../../ingestion/batch-ingestion/overview.md)」を参照してください。
+[!DNL Experience Platform]に取り込まれるすべてのデータファイルは、XDMスキーマの構造に準拠している必要があります。 XDM 階層（サンプルファイルを含む）に準拠するようにデータファイルをフォーマットする方法の詳細は、[ETL 変換のサンプル](../../etl/transformations.md)に関するドキュメントを参照してください。For general information about ingesting datafiles into [!DNL Experience Platform], see the [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
 
 ## 外部セグメントのスキーマ
 
@@ -278,13 +278,13 @@ UI を使用してスキーマの構成を開始するには、[スキーマエ�
 
 ## 付録
 
-以下の節では、スキーマ構成の原則に関する追加情報を示します。
+The following sections contain additional information regarding the principles of schema composition.
 
 ### リレーショナルテーブルと埋め込みオブジェクト {#embedded}
 
 リレーショナルデータベースを使用する場合のベストプラクティスには、データの正規化、またはエンティティを取得してそれを個別のピースに分割し、複数のテーブルに表示することが含まれます。データ全体の読み取りやエンティティの更新を行うには、JOIN を使用して、多くの個々のテーブルに対して読み取りおよび書き込み操作をおこなう必要があります。
 
-XDMスキーマは、埋め込みオブジェクトを使用することで、複雑なデータを直接表現し、階層構造を持つ自己完結型のドキュメントに保存できます。 この構造の主な利点の 1 つは、複数の非正規化テーブルへの高価な結合によってエンティティを再構築しなくても、データをクエリできる点です。スキーマ階層のレベル数に対して厳しい制限はありません。
+Through the use of embedded objects, XDM schemas can directly represent complex data and store it in self-contained documents with a hierarchical structure. この構造の主な利点の 1 つは、複数の非正規化テーブルへの高価な結合によってエンティティを再構築しなくても、データをクエリできる点です。There are no hard restrictions to how many levels your schema hierarchy can be.
 
 ### スキーマとビッグデータ {#big-data}
 
@@ -292,25 +292,25 @@ XDMスキーマは、埋め込みオブジェクトを使用することで、�
 
 スキーマは、複数のソースからのデータの統合、共通の構造や定義による標準化、複数のソリューション間での共有を可能にすることで、この問題を解決します。これにより、後続のプロセスとサービスは、データについて尋ねられるあらゆるタイプの質問に答えることができます。これは、データについて尋ねられるすべての質問が事前にわかっていて、データがそれらの期待に準拠するようにモデル化される従来のデータモデリングアプローチとは異なります。
 
-### オブジェクトとフリーフォームフィールド {#objects-v-freeform}
+### Objects versus free-form fields {#objects-v-freeform}
 
 スキーマをデザインする際に、フリーフォームのフィールド上でオブジェクトを選択する際に考慮すべき重要な要因は次のとおりです。
 
 | オブジェクト | 自由形式のフィールド |
 | --- | --- |
 | ネストが増加 | ネストが少ない、またはない |
-| 論理フィールドのグループ化を作成します | フィールドはアドホックな場所に配置されます |
+| Creates logical field groupings | フィールドはアドホックな場所に配置されます |
 
 {style=&quot;table-layout:auto&quot;}
 
 #### オブジェクト
 
-フリーフォームフィールド上でオブジェクトを使用する場合の長所と短所を次に示します。
+The pros and cons of using objects over free-form fields are listed below.
 
 **長所**:
 
 * オブジェクトは、特定のフィールドの論理的なグループを作成する場合に最も適しています。
-* オブジェクトは、より構造化された方法でスキーマを編成します。
+* Objects organize the schema in a more structured manner.
 * オブジェクトは、セグメントビルダーUIで適切なメニュー構造を間接的に作成するのに役立ちます。 スキーマ内のグループ化されたフィールドは、セグメントビルダーUIで提供されるフォルダー構造に直接反映されます。
 
 **短所**:
