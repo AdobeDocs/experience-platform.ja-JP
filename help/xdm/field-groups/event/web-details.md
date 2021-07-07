@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Web詳細スキーマフィールドグループ
 topic-legacy: overview
 description: このドキュメントでは、Web詳細スキーマフィールドグループの概要を説明します。
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 4%
@@ -30,5 +30,5 @@ ht-degree: 4%
 
 フィールドグループについて詳しくは、パブリックXDMリポジトリを参照してください。
 
-* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-web.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-web.schema.json)
+* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.example.1.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-web.schema.json)
