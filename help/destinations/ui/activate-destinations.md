@@ -6,9 +6,9 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
+source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
 workflow-type: tm+mt
-source-wordcount: '2806'
+source-wordcount: '2928'
 ht-degree: 12%
 
 ---
@@ -152,6 +152,9 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、エクスポートを実行する日または間隔を選択します。
 4. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
 
+>[!IMPORTANT]
+>
+>ファイル書き出しスケジュールを任意のスケジュール設定から完全なファイル書き出しに変更した場合、**[!UICONTROL 頻度]**&#x200B;を&#x200B;**[!UICONTROL 1回]**&#x200B;に設定しても、既に書き出されているセグメントでは、新しいバックフィルファイルは書き出されません。 別のスケジュールで新しいバックフィルファイルを書き出すには、新しい宛先インスタンスを作成する必要があります。 これは、今後のリリースで対処される予定の制限です。
 
 ### 増分ファイルの書き出し {#export-incremental-files}
 
@@ -178,6 +181,10 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 3. **[!UICONTROL 日付]**&#x200B;セレクターを使用して、エクスポートを実行する日または間隔を選択します。
 4. 「**[!UICONTROL 作成]**」を選択してスケジュールを保存します。
+
+>[!IMPORTANT]
+>
+>ファイル書き出しスケジュールを任意のスケジュール設定から完全なファイル書き出しに変更した場合、**[!UICONTROL 頻度]**&#x200B;を&#x200B;**[!UICONTROL 1回]**&#x200B;に設定しても、既に書き出されているセグメントでは、新しいバックフィルファイルは書き出されません。 別のスケジュールで新しいバックフィルファイルを書き出すには、新しい宛先インスタンスを作成する必要があります。 これは、今後のリリースで対処される予定の制限です。
 
 ### ファイル名の設定 {#file-names}
 
@@ -255,7 +262,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 必須の属性を選択しない場合、属性に関係なく、すべての適合済みプロファイルがエクスポートされます。
 
-属性の1つを、スキーマの[一意の識別子](../../destinations/catalog/email-marketing/overview.md#identity)にすることをお勧めします。 必須属性について詳しくは、[Eメールマーケティングの宛先](../../destinations/catalog/email-marketing/overview.md#identity)ドキュメントのIDに関する節を参照してください。
+属性の1つをスキーマの[一意の識別子](../../destinations/catalog/email-marketing/overview.md#identity)にすることをお勧めします。 必須属性について詳しくは、[Eメールマーケティングの宛先](../../destinations/catalog/email-marketing/overview.md#identity)ドキュメントのIDに関する節を参照してください。
 
 ### 重複排除キー {#deduplication-keys}
 
