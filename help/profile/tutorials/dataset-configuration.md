@@ -5,7 +5,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform APIを使用して、リアルタイム顧客プロファイルおよびIDサービスでデータセットを有効にする方法について説明します。
 exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
-source-git-commit: bcca4d6212ee3f0d661549eca359ab8c8aaf905c
+source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
 workflow-type: tm+mt
 source-wordcount: '1061'
 ht-degree: 57%
@@ -73,9 +73,6 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "fileDescription" : {
-        "persisted": true
-    },
     "fields":[],
     "schemaRef" : {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -167,9 +164,6 @@ curl -X GET \
         "updatedUser": "{CREATED_BY}",
         "viewId": "5b020a27e7040801dedbf46f",
         "status": "enabled",
-        "fileDescription": {
-            "persisted": true
-        },
         "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
         "schema": "@/xdms/context/experienceevent",
