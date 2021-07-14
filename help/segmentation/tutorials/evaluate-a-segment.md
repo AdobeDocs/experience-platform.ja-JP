@@ -1,47 +1,46 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；セグメント評価；セグメント化；セグメント化；セグメントの評価；セグメント結果のアクセス；セグメントの評価とアクセス；
+keywords: Experience Platform；ホーム；人気のあるトピック；セグメント評価；セグメント化サービス；セグメント化；セグメントの評価；セグメント結果へのアクセス；セグメントの評価；セグメントの評価とアクセス；セグメントの評価とアクセス；
 solution: Experience Platform
 title: セグメント結果の評価とアクセス
 topic-legacy: tutorial
 type: Tutorial
-description: このチュートリアルでは、Adobe Experience PlatformSegmentation Service APIを使用してセグメントを評価し、セグメントの結果にアクセスする方法を学びます。
+description: このチュートリアルでは、Adobe Experience Platform Segmentation Service APIを使用してセグメントを評価し、セグメント結果にアクセスする方法について説明します。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 61%
+source-wordcount: '1552'
+ht-degree: 64%
 
 ---
 
 # セグメント結果の評価とアクセス
 
-このドキュメントでは、セグメントを評価し、[[!DNL Segmentation API]](../api/getting-started.md)を使用してセグメント結果にアクセスするためのチュートリアルを提供します。
+このドキュメントでは、[[!DNL Segmentation API]](../api/getting-started.md)を使用してセグメントを評価し、セグメント結果にアクセスするためのチュートリアルを提供します。
 
 ## はじめに
 
-このチュートリアルでは、オーディエンスセグメントの作成に関わる様々な[!DNL Adobe Experience Platform]サービスについて、十分に理解している必要があります。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
+このチュートリアルでは、オーディエンスセグメントの作成に関わる様々な[!DNL Adobe Experience Platform]サービスに関する十分な知識が必要です。 このチュートリアルを開始する前に、次のサービスのドキュメントを確認してください。
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、リアルタイムで統合された顧客プロファイルを提供します。
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):デー [!DNL Real-time Customer Profile] タからオーディエンスセグメントを作成できます。
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):プラットフォームが顧客体験データを編成する際に使用する標準化されたフレームワーク。
-- [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md):複数のソースからの集計データに基づいて、統合された顧客プロファイルをリアルタイムで提供します。
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md):データからオーディエンスセグメントを作成 [!DNL Real-time Customer Profile] できます。
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md):Platformが顧客体験データを整理する際に使用する標準化されたフレームワーク。
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 ### 必須ヘッダー
 
-また、このチュートリアルでは、 API の呼び出しを正常におこなうために、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了している必要があります。[!DNL Platform]次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+また、このチュートリアルでは、 API の呼び出しを正常におこなうために、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了している必要があります。[!DNL Platform]次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- Authorization： Bearer `{ACCESS_TOKEN}`
+- x-api-key： `{API_KEY}`
+- x-gw-ims-org-id： `{IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへの要求には、操作が実行されるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] APIへのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
+>[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 すべての POST、PUT、および PATCH リクエストには、次の追加ヘッダーが必要です。
 
@@ -53,7 +52,7 @@ ht-degree: 61%
 
 [スケジュールされた評価](#scheduled-evaluation) （「スケジュールされたセグメント化」とも呼ばれる）では、特定の時間にエクスポートジョブを実行する定期的なスケジュールを作成できます。[オンデマンド評価](#on-demand-evaluation)では、オーディエンスを即座に構築するセグメントジョブを作成できます。それぞれの評価の手順を以下に示します。
 
-まだセグメントAPI](./create-a-segment.md)チュートリアルを使用して[セグメントを作成していない場合、または[セグメントビルダー](../ui/overview.md)を使用してセグメント定義を作成していない場合は、このチュートリアルに進む前に作成してください。
+まだセグメント化API](./create-a-segment.md)を使用した[セグメントの作成のチュートリアルを完了していない場合、または[セグメントビルダー](../ui/overview.md)を使用してセグメント定義を作成している場合は、このチュートリアルに進む前に作成してください。
 
 ## スケジュールされた評価 {#scheduled-evaluation}
 
@@ -61,25 +60,25 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 >[!NOTE]
 >
->[!DNL XDM Individual Profile]に対して、最大5個のマージポリシーを持つサンドボックスに対して、スケジュールされた評価を有効にできます。 1つのサンドボックス環境内に[!DNL XDM Individual Profile]のマージポリシーが5つを超える場合、スケジュールされた評価を使用できません。
+>[!DNL XDM Individual Profile]の結合ポリシーが最大5個あるサンドボックスに対して、スケジュールされた評価を有効にすることができます。 1つのサンドボックス環境内に[!DNL XDM Individual Profile]の結合ポリシーが6つ以上ある場合、スケジュールされた評価を使用することはできません。
 
 ### スケジュールの作成
 
 `/config/schedules` エンドポイントに対して POST リクエストを実行することにより、スケジュールを作成し、スケジュールをトリガーする必要がある特定の時間を指定することができます。
 
-このエンドポイントの使用に関する詳細は、[スケジュールエンドポイントガイド](../api/schedules.md#create)を参照してください
+このエンドポイントの使用に関する詳細については、『[スケジュールエンドポイントガイド](../api/schedules.md#create)』を参照してください。
 
 ### スケジュールの有効化
 
 デフォルトでは、作成（POST）リクエスト本文で `state` プロパティが `active` に設定されていない限り、スケジュールは作成時に非アクティブになります。`/config/schedules` エンドポイントに対して PATCH リクエストを実行し、パスにスケジュールの ID を含めることで、スケジュールを有効にする（`state` を `active` に設定する）ことができます。
 
-このエンドポイントの使用に関する詳細は、[スケジュールエンドポイントガイド](../api/schedules.md#update-state)を参照してください
+このエンドポイントの使用に関する詳細については、『[スケジュールエンドポイントガイド](../api/schedules.md#update-state)』を参照してください。
 
 ### スケジュール時間の更新
 
 `/config/schedules` エンドポイントに対して PATCH リクエストを実行し、スケジュールの ID をパスに含めることで、スケジュールのタイミングを更新できます。
 
-このエンドポイントの使用に関する詳細は、[スケジュールエンドポイントガイド](../api/schedules.md#update-schedule)を参照してください
+このエンドポイントの使用に関する詳細については、『[スケジュールエンドポイントガイド](../api/schedules.md#update-schedule)』を参照してください。
 
 ## オンデマンド評価
 
@@ -87,22 +86,22 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 ### セグメントジョブの作成
 
-セグメントジョブは、新しいオーディエンスセグメントを作成する非同期プロセスです。セグメント定義と、[!DNL Real-time Customer Profile]がプロファイルフラグメント間で重なり合う属性を結合する方法を制御する結合ポリシーを参照します。 セグメントジョブが正常に完了したら、処理中に発生したエラーやオーディエンスの最大サイズなど、セグメントに関する様々な情報を収集できます。
+セグメントジョブは、新しいオーディエンスセグメントを作成する非同期プロセスです。セグメント定義と、[!DNL Real-time Customer Profile]によって複数のプロファイルフラグメント間で重なり合う属性を結合する方法を制御する結合ポリシーを参照します。 セグメントジョブが正常に完了したら、処理中に発生したエラーやオーディエンスの最大サイズなど、セグメントに関する様々な情報を収集できます。
 
-[!DNL Real-time Customer Profile] APIの`/segment/jobs`エンドポイントにPOSTリクエストを行うことで、新しいセグメントジョブを作成できます。
+[!DNL Real-time Customer Profile] APIの`/segment/jobs`エンドポイントにPOSTリクエストを送信して、新しいセグメントジョブを作成できます。
 
-このエンドポイントの使用に関する詳細は、[セグメントジョブエンドポイントガイド](../api/segment-jobs.md#create)を参照してください
+このエンドポイントの使用に関する詳細については、『[セグメントジョブエンドポイントガイド](../api/segment-jobs.md#create)』を参照してください。
 
 
 ### セグメントジョブステータスの検索
 
 特定のセグメントジョブの `id` を使用して、ルックアップリクエスト（GET）を実行すると、ジョブの現在のステータスを表示できます。
 
-このエンドポイントの使用に関する詳細は、[セグメントジョブエンドポイントガイド](../api/segment-jobs.md#get)を参照してください
+このエンドポイントの使用に関する詳細については、『[セグメントジョブエンドポイントガイド](../api/segment-jobs.md#get)』を参照してください。
 
 ## セグメント結果の解釈
 
-セグメントジョブが正常に実行されると、セグメント内に含まれる各プロファイルの `segmentMembership` マップが更新されます。`segmentMembership` また、に取り込まれた評価済みオーディエンスセグメントが保存され [!DNL Platform]、などの他のソリューションと統合でき [!DNL Adobe Audience Manager]ます。
+セグメントジョブが正常に実行されると、セグメント内に含まれる各プロファイルの `segmentMembership` マップが更新されます。`segmentMembership` には、に取り込まれた評価済みのオーディエンスセグメントも格納さ [!DNL Platform]れ、などの他のソリューションと統合できま [!DNL Adobe Audience Manager]す。
 
 次の例は、個々のプロファイルレコードの `segmentMembership` 属性がどのように記述されるかを示しています。
 
@@ -142,9 +141,9 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 ## プロファイルの検索
 
-アクセスしたい特定のプロファイルを知っている場合は、[!DNL Real-time Customer Profile] APIを使ってアクセスできます。 個々のプロファイルにアクセスするための完全な手順については、[プロファイル API を使用したリアルタイム顧客プロファイルデータへのアクセス](../../profile/api/entities.md)のチュートリアルで説明しています。
+アクセスする特定のプロファイルがわかっている場合は、[!DNL Real-time Customer Profile] APIを使用してアクセスできます。 個々のプロファイルにアクセスするための完全な手順については、[プロファイル API を使用したリアルタイム顧客プロファイルデータへのアクセス](../../profile/api/entities.md)のチュートリアルで説明しています。
 
-## セグメントのエクスポート  {#export}
+## セグメントのエクスポート {#export}
 
 セグメントジョブが正常に完了したら（`status` 属性の値は「SUCCEEDED」）、オーディエンスをデータセットにエクスポートして、オーディエンスにアクセスし、処理をおこなうことができます。
 
@@ -163,7 +162,7 @@ IMS 組織では、スケジュールされた評価を通じて、エクスポ�
 
 必要なデータセットを作成する方法は 2 つあります。
 
-- **APIの使用：** このチュートリアルでは、 [!DNL XDM Individual Profile Union Schema] APIを使用して、データセットを参照するデータセットの作成方法につい [!DNL Catalog] て説明します。
+- **APIの使用：** このチュートリアルの以降の手順では、APIを使用してを参照するデータセットを作成する方法につ [!DNL XDM Individual Profile Union Schema] いて説明 [!DNL Catalog] します。
 - **UI の使用：**[!DNL Adobe Experience Platform] のユーザーインターフェイスを使用して、和集合スキーマを参照するデータセットを作成するには、[UI のチュートリアル](../ui/overview.md)の手順を実行してから、このチュートリアルに戻り、[オーディエンスプロファイルを生成する](#generate-xdm-profiles-for-audience-members)手順に進みます。
 
 互換性のあるデータセットが既に存在し、その ID がわかっている場合は、[オーディエンスプロファイルを生成する](#generate-xdm-profiles-for-audience-members)手順に直接進むことができます。
@@ -191,9 +190,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/xdm/context/profile__union",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true
     }
 }'
 ```
@@ -202,7 +198,6 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | データセットのわかりやすい名前。 |
 | `schemaRef.id` | データセットが関連付けられる和集合表示（スキーマ）の ID。 |
-| `fileDescription.persisted` | ブール値。`true` に設定した場合、データセットが和集合表示に保持されます。 |
 
 **応答** 
 
@@ -214,24 +209,24 @@ curl -X POST \
 ] 
 ```
 
-### オーディエンスメンバーのプロファイルの生成  {#generate-profiles}
+### オーディエンスメンバーのプロファイルの生成 {#generate-profiles}
 
-和集合持続性データセットを取得したら、[!DNL Real-time Customer Profile] APIの`/export/jobs`エンドポイントにPOSTリクエストを送信し、エクスポートするセグメントのデータセットIDとセグメント情報を提供することで、オーディエンスをデータセットに永続化するエクスポートジョブを作成できます。
+和集合永続化データセットを取得したら、[!DNL Real-time Customer Profile] APIの`/export/jobs`エンドポイントにPOSTリクエストを送信し、書き出すセグメントのデータセットIDとセグメント情報を提供することで、オーディエンスメンバーをデータセットに永続化する書き出しジョブを作成できます。
 
-このエンドポイントの使用に関する詳細は、[export jobs endpoint guide](../api/export-jobs.md#create)を参照してください
+このエンドポイントの使用に関する詳細については、『[エクスポートジョブエンドポイントガイド](../api/export-jobs.md#create)』を参照してください。
 
 ### エクスポートの進行状況の監視
 
 エクスポートジョブを処理するときに、`/export/jobs` エンドポイントに対して GET リクエストを実行し、エクスポートジョブの `id` をパスを含めることで、エクスポートジョブのステータスを監視することができます。`status` フィールドによって値「SUCCEEDED」が返されると、エクスポートジョブが完了します。
 
-このエンドポイントの使用に関する詳細は、[export jobs endpoint guide](../api/export-jobs.md#get)を参照してください
+このエンドポイントの使用に関する詳細については、『[エクスポートジョブエンドポイントガイド](../api/export-jobs.md#get)』を参照してください。
 
 ## 次の手順
 
-エクスポートが正常に完了すると、[!DNL Experience Platform]の[!DNL Data Lake]内でデータを使用できます。 その後、[[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)を使用して、エクスポートに関連付けられた`batchId`を使用してデータにアクセスできます。 セグメントのサイズに応じて、データがチャンクに格納され、バッチが複数のファイルで構成される場合があります。
+エクスポートが正常に完了すると、データは[!DNL Experience Platform]の[!DNL Data Lake]内で使用できます。 その後、エクスポートに関連付けられた`batchId`を使用して、[[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)を使用してデータにアクセスできます。 セグメントのサイズに応じて、データがチャンクに格納され、バッチが複数のファイルで構成される場合があります。
 
-[!DNL Data Access] APIを使用してバッチファイルにアクセスし、ダウンロードする手順については、[データアクセスチュートリアル](../../data-access/tutorials/dataset-data.md)に従ってください。
+[!DNL Data Access] APIを使用してバッチファイルにアクセスしてダウンロードする手順については、『[データアクセスのチュートリアル](../../data-access/tutorials/dataset-data.md)』に従ってください。
 
-[!DNL Adobe Experience Platform Query Service]を使用して、正常にエクスポートされたセグメントデータにアクセスすることもできます。 [!DNL Query Service]では、UIまたはRESTful APIを使用して、[!DNL Data Lake]内のデータに対してクエリの書き込み、検証、実行を行うことができます。
+[!DNL Adobe Experience Platform Query Service]を使用して、正常にエクスポートされたセグメントデータにアクセスすることもできます。 [!DNL Query Service]では、UIまたはRESTful APIを使用して、[!DNL Data Lake]内のデータに対してクエリの書き込み、検証、実行をおこなうことができます。
 
-オーディエンスデータのクエリ方法の詳細については、[[!DNL Query Service]](../../query-service/home.md)のドキュメントを参照してください。
+オーディエンスデータに対してクエリを実行する方法の詳細については、[[!DNL Query Service]](../../query-service/home.md)のドキュメントを参照してください。
