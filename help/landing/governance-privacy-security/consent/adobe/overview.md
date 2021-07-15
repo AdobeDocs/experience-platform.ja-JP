@@ -5,9 +5,9 @@ title: Adobe Experience Platformでの同意処理
 topic-legacy: getting started
 description: Adobe2.0標準を使用して、Adobe Experience Platformで顧客の同意シグナルを処理する方法を説明します。
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1572'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,11 @@ Platformでの同意処理のサポートの現在のリリースでは、Platfo
 
 >[!NOTE]
 >
->上記のXDM同意フィールドの構造について詳しくは、[同意と環境設定のデータタイプ](../../../../xdm/data-types/consents.md)に関するガイドを参照してください。
+>上記のXDM同意フィールドの構造について詳しくは、[[!UICONTROL 同意と環境設定]データタイプ](../../../../xdm/data-types/consents.md)のガイドを参照してください。
 
 システムが設定されると、Platform Web SDKは、現在のユーザーのデータ収集の同意値を解釈し、データをAdobe Experience Platform Edgeネットワークに送信するか、クライアントから削除するか、データ収集権限が「はい」または「いいえ」に設定されるまで保持するかを決定します。
 
-## CMP {#consent-data}内で顧客の同意データを生成する方法を決定します。
+## CMP内で顧客の同意データを生成する方法の決定 {#consent-data}
 
 各CMPシステムは固有なので、顧客がサービスとやり取りする際に同意を得る最適な方法を決定する必要があります。 これを実現する一般的な方法は、次の例のようなCookieの同意ダイアログを使用することです。
 
@@ -68,7 +68,7 @@ Platformでの同意処理のサポートの現在のリリースでは、Platfo
 
 このガイドに進む前に、[同意データを取得するためのデータセット](./dataset.md)の設定に関するチュートリアルを参照して、これらの必須フィールドを[!DNL Profile]対応のデータセットに追加する方法の詳細を確認してください。
 
-## [!DNL Profile]結合ポリシーを更新して、同意データ{#merge-policies}を含めます。
+## [!DNL Profile]結合ポリシーを更新して同意データを含める {#merge-policies}
 
 同意データを処理するための[!DNL Profile]対応のデータセットを作成したら、結合ポリシーが各顧客プロファイルに常に同意フィールドを含むように設定されていることを確認する必要があります。 これには、競合する可能性がある他のデータセットよりも同意データセットの優先順位を優先するように、データセットの優先順位を設定する必要があります。
 
@@ -76,7 +76,7 @@ Platformでの同意処理のサポートの現在のリリースでは、Platfo
 >
 >競合するデータセットがない場合は、結合ポリシーのタイムスタンプの優先順位を代わりに設定する必要があります。 これにより、顧客が指定した最新の同意が、使用される同意設定になるようになります。
 
-結合ポリシーの操作方法の詳細については、まず[結合ポリシーの概要](../../../../profile/merge-policies/overview.md)をお読みください。 結合ポリシーを設定する場合、[データセットの準備](./dataset.md)のガイドで説明されているように、プロファイルに同意と環境設定スキーマフィールドグループから提供される必要な同意属性がすべて含まれていることを確認する必要があります。
+結合ポリシーの操作方法の詳細については、まず[結合ポリシーの概要](../../../../profile/merge-policies/overview.md)をお読みください。 結合ポリシーを設定する場合、[データセットの準備](./dataset.md)のガイドで説明されているように、[!UICONTROL 同意と環境設定]スキーマフィールドグループが提供する必要な同意属性がすべてプロファイルに含まれていることを確認する必要があります。
 
 ## 同意データをPlatformに取り込む
 
@@ -86,11 +86,11 @@ Platformでの同意処理のサポートの現在のリリースでは、Platfo
 
 これらの各メソッドの詳細については、以下のサブセクションで説明します。
 
-### 同意データを処理するようにExperience PlatformWeb SDKを設定する{#web-sdk}
+### 同意データを処理するExperience PlatformWeb SDKの設定 {#web-sdk}
 
 Webサイト上の同意変更イベントをリッスンするようにCMPを設定したら、Experience PlatformWeb SDKを統合して、更新された同意設定を受け取り、ページの読み込みのたびに、同意変更イベントが発生したときにPlatformに送信できます。 詳しくは、[顧客の同意データを処理するためのWeb SDKの設定](./sdk.md)に関するガイドを参照してください。
 
-### 同意データを処理するようにExperience PlatformMobile SDKを設定する{#mobile-sdk}
+### 同意データを処理するExperience PlatformMobile SDKの設定 {#mobile-sdk}
 
 モバイルアプリケーションで顧客の同意の設定が必要な場合は、Experience PlatformMobile SDKを統合して同意設定を取得および更新し、同意APIが呼び出されるたびにそれらの設定をPlatformに送信できます。
 
@@ -102,7 +102,7 @@ Webサイト上の同意変更イベントをリッスンするようにCMPを�
 
 [CSVファイルのXDM](../../../../ingestion/tutorials/map-a-csv-file.md)へのマッピングのチュートリアルに従って、データフィールドをXDMに変換し、Platformに取り込む方法を学びます。 マッピングに[!UICONTROL 宛先]を選択する場合は、必ず「**[!UICONTROL 既存のデータセット]**&#x200B;を使用」オプションを選択し、前に作成した[!DNL Profile]対応の同意データセットを選択します。
 
-## 実装をテストします。 {#test-implementation}
+## 実装のテスト {#test-implementation}
 
 顧客の同意データを[!DNL Profile]対応データセットに取り込んだら、更新したプロファイルに同意の属性が含まれているかどうかを確認できます。
 
