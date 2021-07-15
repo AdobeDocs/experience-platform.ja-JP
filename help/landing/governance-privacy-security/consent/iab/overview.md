@@ -5,10 +5,10 @@ title: Experience PlatformでのIAB TCF 2.0のサポート
 topic-legacy: privacy events
 description: Adobe Experience Platformの宛先にセグメントをアクティブ化する際に、顧客の同意に基づく選択肢を伝えるためのデータ操作とスキーマの設定方法について説明します。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
 workflow-type: tm+mt
-source-wordcount: '2476'
-ht-degree: 1%
+source-wordcount: '2564'
+ht-degree: 2%
 
 ---
 
@@ -62,7 +62,7 @@ Platformでは、次のプロセスを通じて顧客の同意データを収集
 
 CMPの同意変更フックでトリガーされるSDKコマンドに加えて、同意データは、[!DNL Profile]対応のデータセットに直接アップロードされた、顧客が生成したXDMデータを通じてExperience Platformに送ることもできます。
 
-適切なフィールドが[!DNL Experience Cloud Identity Service]を通じてこれらのセグメントに適用されている場合、Adobe Audience Managerによって（[!DNL Audience Manager]ソースコネクタを通じて）Platformと共有されるセグメントには、同意データも含まれる可能性があります。 [!DNL Audience Manager]での同意データの収集について詳しくは、IAB TCF用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html)[Adobe Audience Managerプラグインのドキュメントを参照してください。
+適切なフィールドが[!DNL Experience Cloud Identity Service]を通じてこれらのセグメントに適用されている場合、Adobe Audience Managerによって（[!DNL Audience Manager]ソースコネクタを通じて）Platformと共有されるセグメントには、同意データも含まれる可能性があります。 [!DNL Audience Manager]での同意データの収集について詳しくは、IAB TCF用](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=ja)[Adobe Audience Managerプラグインのドキュメントを参照してください。
 
 ### ダウンストリームの同意の実施
 
@@ -74,7 +74,7 @@ TCFの同意データが正常に取り込まれると、ダウンストリー�
 
 このドキュメントの残りの節では、前述の収集要件と実施要件を満たすようにPlatformとデータ操作を設定する方法に関するガイダンスを提供します。
 
-## CMP {#consent-data}内で顧客の同意データを生成する方法を決定します。
+## CMP内で顧客の同意データを生成する方法の決定 {#consent-data}
 
 各CMPシステムは固有なので、顧客がサービスとやり取りする際に同意を得る最適な方法を決定する必要があります。 これを実現する一般的な方法は、次の例のようなCookie同意ダイアログを使用することです。
 
@@ -87,7 +87,7 @@ TCFの同意データが正常に取り込まれると、ダウンストリー�
 | **目的** | 目的は、ブランドが顧客のデータを使用できる広告技術の目的を定義します。 プラットフォームで顧客IDを処理するには、次の目的をオプトインする必要があります。 <ul><li>**目的1**:デバイス上での情報の保存/アクセス</li><li>**目的10**:製品の開発と改善</li></ul> |
 | **ベンダー権限** | 広告技術の目的に加えて、このダイアログでは、Adobe Experience Platform(565)を含む特定のベンダーが自社のデータを使用することを顧客がオプトインまたはオプトアウトできるようにする必要があります。 |
 
-### 同意文字列{#consent-strings}
+### 同意文字列 {#consent-strings}
 
 データの収集に使用する方法に関係なく、目標は、お客様が選択した同意オプション（同意文字列）に基づいて文字列値を生成することです。
 
@@ -97,9 +97,9 @@ TCF仕様では、同意文字列を使用して、ポリシーやベンダー�
 
 ## TCF同意フィールドを使用したデータセットの作成 {#datasets}
 
-顧客の同意データは、スキーマにTCF同意フィールドが含まれるデータセットに送信する必要があります。 このガイドを続行する前に、TCF 2.0の同意](./dataset.md)を取得するための[データセットの作成に関するチュートリアルを参照してください。
+顧客の同意データは、スキーマにTCF同意フィールドが含まれるデータセットに送信する必要があります。 このガイドに進む前に、必要なプロファイルデータセット（およびオプションのExperience Eventデータセット）の作成方法について、TCF 2.0同意](./dataset.md)を取得するための[データセットの作成に関するチュートリアルを参照してください。
 
-## [!DNL Profile]結合ポリシーを更新して、同意データ{#merge-policies}を含めます。
+## [!DNL Profile]結合ポリシーを更新して同意データを含める {#merge-policies}
 
 同意データを収集するための[!DNL Profile]対応のデータセットを作成したら、結合ポリシーが顧客プロファイルに常にTCF同意フィールドを含むように設定されていることを確認する必要があります。 これには、競合する可能性がある他のデータセットよりも同意データセットの優先順位を優先するように、データセットの優先順位を設定する必要があります。
 
@@ -127,8 +127,8 @@ SDKがExperience Platformにデータを送信するには、まず[!DNL Adobe E
 | --- | --- |
 | [!UICONTROL サンドボックス] | 必要なストリーミング接続と、エッジ設定を設定するデータセットを含む、プラットフォーム[サンドボックス](../../../../sandboxes/home.md)の名前。 |
 | [!UICONTROL ストリーミングインレット] | Experience Platformの有効なストリーミング接続。 既存のストリーミングインレットがない場合は、[ストリーミング接続](../../../../ingestion/tutorials/create-streaming-connection-ui.md)の作成に関するチュートリアルを参照してください。 |
-| [!UICONTROL イベントデータセット] | [前の手順](#datasets)で作成した[!DNL XDM ExperienceEvent]データセットを選択します。 |
-| [!UICONTROL プロファイルデータセット] | [前の手順](#datasets)で作成した[!DNL XDM Individual Profile]データセットを選択します。 |
+| [!UICONTROL イベントデータセット] | [前の手順](#datasets)で作成した[!DNL XDM ExperienceEvent]データセットを選択します。 このデータセットのスキーマに[[!UICONTROL IAB TCF 2.0 Consent]フィールドグループ](../../../../xdm/field-groups/event/iab.md)を含めた場合は、 [`sendEvent`](#sendEvent)コマンドを使用して、経時的に同意変更イベントを追跡し、そのデータをこのデータセットに保存できます。 このデータセットに保存される同意の値は、自動強制ワークフローでは&#x200B;**使用**&#x200B;されないことに注意してください。 |
+| [!UICONTROL プロファイルデータセット] | [前の手順](#datasets)で作成した[!DNL XDM Individual Profile]データセットを選択します。 [`setConsent`](#setConsent)コマンドを使用してCMP同意変更フックに応答する場合、収集されたデータはこのデータセットに保存されます。 このデータセットはプロファイル対応なので、自動実施ワークフローの間、このデータセットに保存される同意値は保持されます。 |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -142,7 +142,7 @@ SDKがExperience Platformにデータを送信するには、まず[!DNL Adobe E
 >
 >すべてのPlatform SDKコマンドの一般的な構文の紹介については、[コマンド](../../../../edge/fundamentals/executing-commands.md)の実行に関するドキュメントを参照してください。
 
-#### CMP同意変更フックの使用
+#### CMP同意変更フックの使用 {#setConsent}
 
 多くのCMPには、同意変更イベントをリッスンする標準のフックが用意されています。 これらのイベントが発生したら、`setConsent`コマンドを使用して、その顧客の同意データを更新できます。
 
@@ -189,7 +189,7 @@ OneTrust.OnConsentChanged(function () {
 });
 ```
 
-#### イベントの使用
+#### イベントの使用 {#sendEvent}
 
 また、`sendEvent`コマンドを使用して、Platformでトリガーされるすべてのイベントに関するTCF 2.0の同意データを収集できます。
 
@@ -245,7 +245,7 @@ alloy("sendEvent", {
 >
 >Adobe Audience Managerと共有されるセグメントには、対応するプラットフォームと同じTCF 2.0同意値が含まれます。 [!DNL Audience Manager]はプラットフォーム(565)と同じベンダーIDを共有するので、同じ目的とベンダー権限が必要です。 詳しくは、IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html)用[Adobe Audience Managerプラグインのドキュメントを参照してください。
 
-## 実装をテストします。 {#test-implementation}
+## 実装のテスト {#test-implementation}
 
 TCF 2.0実装を設定し、宛先にセグメントを書き出した後は、同意の要件を満たさないデータは書き出されません。 ただし、書き出し中に適切な顧客プロファイルがフィルターされたかどうかを確認するには、宛先のデータストアを手動で確認して、同意が適切に適用されたかどうかを確認する必要があります。
 
