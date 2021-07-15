@@ -4,9 +4,9 @@ title: 汎用マーケティング環境設定フィールドのデータ型
 topic-legacy: overview
 description: このドキュメントでは、汎用マーケティング環境設定フィールドXDMデータタイプの概要を説明します。
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '539'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->このデータ型は、[[!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）]フィールドグループ](../field-groups/profile/consents.md)をベースラインとして使用し、組織の同意スキーマの構造をカスタマイズするために使用されます。
+>このデータ型は、[[!UICONTROL 同意と環境設定]フィールドグループ](../field-groups/profile/consents.md)をベースラインとして使用し、組織の同意スキーマの構造をカスタマイズするために使用されます。
 >
 >特定のマーケティング環境設定フィールドに`subscriptions`マップが必要な場合は、代わりに[マーケティングフィールドをサブスクリプションデータ型](./marketing-field-subscriptions.md)と共に使用する必要があります。
 
