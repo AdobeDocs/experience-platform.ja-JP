@@ -1,24 +1,23 @@
 ---
-title: Adobe Experience PlatformWeb SDKを使用した顧客同意の環境設定のサポート
-description: Adobe Experience PlatformWeb SDKを使用して、同意の環境設定をサポートする方法を説明します。
-keywords: 同意；defaultConsent；デフォルトの同意；setConsent;プロファイルのプライバシーフィールドグループ；エクスペリエンスのイベントのプライバシーフィールドグループ；プライバシーフィールドグループ；
+title: Adobe Experience Platform Web SDKを使用した顧客の同意設定のサポート
+description: Adobe Experience Platform Web SDKを使用して、同意設定をサポートする方法について説明します。
+keywords: 同意；defaultConsent；デフォルトの同意；setConsent;Profile Privacyフィールドグループ；Experience Event Privacyフィールドグループ；Privacyフィールドグループ；
 exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '987'
 ht-degree: 32%
 
 ---
 
-# 顧客の同意に関する基本設定のサポート
+# 顧客の同意設定のサポート
 
 ユーザーのプライバシーを尊重するため、SDK に対して特定の目的でユーザー固有のデータを使用することを許可する前に、ユーザーの同意を求めることができます。現在、SDK はユーザーに対し、あらゆる目的に対するオプトインまたはオプトアウトのみを許可していますが、アドビでは、将来的に、特定の目的でより詳細な制御を提供したいと考えています。
 
 ユーザーがすべての目的をオプトインした場合、SDK は次のタスクを実行できます。
 
 * アドビのサーバーとの間でデータを送信する。
-* CookieまたはWebストレージー項目を読み取って書き込みます。
+* CookieまたはWebストレージ項目の読み取りと書き込み。
 
 ユーザーがすべての目的をオプトアウトした場合、SDK は次のタスクを実行しません。
 
@@ -38,25 +37,25 @@ alloy("configure", {
 
 >[!NOTE]
 >
->コマンドは、メモリ内のキューにのみ格納されます。 ページの読み込み時には保存されません。
+>コマンドは、メモリ内にのみキューに入れられます。 ページの読み込み時には保存されません。
 
-ユーザーのオプトインの環境設定が設定される前に発生したイベントを収集したくない場合は、SDKの設定中に`"defaultConsent": "out"`を渡すことができます。 ユーザーのオプトイン設定に依存するコマンドを実行しようとしても、ユーザーのオプトイン設定がSDKに伝わるまで、何も起こりません。
+ユーザーのオプトインの環境設定がおこなわれる前に発生したイベントを収集したくない場合は、SDKの設定時に`"defaultConsent": "out"`を渡すことができます。 ユーザーのオプトイン設定に依存するコマンドを実行しようとしても、そのユーザーのオプトイン設定をSDKに伝えるまでは効果がありません。
 
 >[!NOTE]
 >
->現在、SDKは、1つのオールオアナッシングの目的のみをサポートしています。 アドビでは、様々な機能や製品に対応する、さらに堅牢な目的やカテゴリのセットを構築する予定ですが、現在の実装アプリーチでは、すべてをオプトインするか、すべてをオプトインしないかのいずれかです。これは、Adobe Experience Platform[!DNL Web SDK]にのみ当てはまり、他のAdobeのJavaScriptライブラリには当てはまりません。
+>現在、SDKは、すべての目的または何の目的も1つしかサポートしていません。 アドビでは、様々な機能や製品に対応する、さらに堅牢な目的やカテゴリのセットを構築する予定ですが、現在の実装アプリーチでは、すべてをオプトインするか、すべてをオプトインしないかのいずれかです。これは、Adobe Experience Platform [!DNL Web SDK]にのみ適用され、他のAdobeJavaScriptライブラリには適用されません。
 
 この時点で、ユーザーインターフェイス内のどこかでユーザーにオプトインを求めることをお勧めします。ユーザーの環境設定を収集した後、これらの環境設定を SDK に伝えます。
 
-## 同意設定の連絡 Adobe Experience Platform標準を経て
+## 同意設定の連絡 Adobe Experience Platform標準を使用
 
-SDKは、Adobe Experience Platformの同意規格のバージョン1.0と2.0をサポートしています。 現在、1.0および2.0の標準は、すべてまたはすべての同意プリファレンスの自動強制のみをサポートしています。 1.0基準は2.0基準に近い段階で廃止されています。 2.0標準では、追加の同意の環境設定を追加できます。この環境設定は、手動で同意の優先順位を強制するのに使用できます。
+SDKは、Adobe Experience Platform Consent Standardのバージョン1.0および2.0をサポートしています。 現在、1.0および2.0標準は、すべての同意設定または何も同意設定の自動適用のみをサポートしています。 1.0標準は廃止され、2.0標準に置き換えられています。 2.0標準では、同意設定を手動で適用するために使用できる同意設定を追加できます。
 
 ### Adobe標準バージョン2.0の使用
 
-Adobe Experience Platformを使用している場合は、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe標準バージョン2.0の詳細については、[Adobe Experience Platform](../../landing/governance-privacy-security/overview.md)のGovernance, privacy, and securityを参照してください。Consents &amp; Preferencesプロファイルフィールドグループの`consents`フィールドのスキーマに対応する下の値オブジェクト内にデータを追加できます。
+Adobe Experience Platformを使用している場合、プロファイルスキーマにプライバシースキーマフィールドグループを含める必要があります。 Adobe標準バージョン2.0について詳しくは、[Adobe Experience Platformのガバナンス、プライバシー、セキュリティ](../../landing/governance-privacy-security/overview.md)を参照してください。[!UICONTROL 同意と環境設定]プロファイルフィールドグループの`consents`フィールドのスキーマに対応する下のvalueオブジェクト内にデータを追加できます。
 
-ユーザーがオプトインする場合は、次のようにcollect preferenceを`y`に設定して`setConsent`コマンドを実行します。
+ユーザーがオプトインした場合は、次のように、collectプリファレンスを`y`に設定して`setConsent`コマンドを実行します。
 
 ```javascript
 alloy("setConsent", {
@@ -75,7 +74,7 @@ alloy("setConsent", {
 });
 ```
 
-時間フィールドには、ユーザーが最後に同意の環境設定を更新した日時を指定する必要があります。 ユーザーが選択した場合は、次のようにオプトアウト`n`に設定したcollect環境設定で`setConsent`コマンドを実行します。
+時間フィールドには、ユーザーが同意設定を最後に更新した日時を指定する必要があります。 ユーザーがオプトアウトを選択した場合は、次のように、collect環境設定を`n`に設定して`setConsent`コマンドを実行します。
 
 ```javascript
 alloy("setConsent", {
@@ -96,7 +95,7 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->ユーザーがオプトアウトした後、SDKは、ユーザーが`y`に対する収集同意を設定することを許可しません。
+>ユーザーがオプトアウトした後、SDKでは、ユーザーが`y`に対する同意を収集するように設定できません。
 
 ### Adobe標準バージョン1.0の使用
 
@@ -132,9 +131,9 @@ alloy("setConsent", {
 >
 >ユーザーがオプトアウトすると、SDK では `in` に対するユーザーの同意を設定できません。
 
-## IAB TCF標準を使用して同意の環境設定を伝える
+## IAB TCF標準を使用した同意設定の伝達
 
-SDKは、Interactive Advertising Bureau(IAB)Transparency and Consent Framework(TCF)標準を通じて提供されるユーザーの同意の環境設定の記録をサポートしています。 同意文字列は、上記と同じ`setConsent`コマンドを使用して次のように設定できます。
+SDKは、Interactive Advertising Bureau Europe(IAB)のTransparency and Consent Framework(TCF)標準を通じて提供される、ユーザーの同意設定の記録をサポートします。 次のように、同じ`setConsent`コマンドを使用して、同意文字列を設定できます。
 
 ```javascript
 alloy("setConsent", {
@@ -147,11 +146,11 @@ alloy("setConsent", {
 });
 ```
 
-このように同意が設定されると、リアルタイム顧客プロファイルは同意情報で更新されます。 この処理を行うには、プロファイルXDMスキーマに[プロファイルプライバシースキーマフィールドグループ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)が含まれている必要があります。 イベントを送信する場合、IABの同意情報をイベントXDMオブジェクトに手動で追加する必要があります。 SDKは、イベントに同意情報を自動的に含めません。 同意情報をイベントに送信するには、エクスペリエンスイベントスキーマに[エクスペリエンスイベントのプライバシーフィールドグループ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md)を追加する必要があります。
+この方法で同意が設定されると、リアルタイム顧客プロファイルが同意情報で更新されます。 これを機能させるには、プロファイルXDMスキーマに[プロファイルプライバシースキーマフィールドグループ](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md)を含める必要があります。 イベントを送信する場合は、IAB同意情報をイベントXDMオブジェクトに手動で追加する必要があります。 SDKでは、イベントに同意情報が自動的に含まれるわけではありません。 同意情報をイベントで送信するには、エクスペリエンスイベントプライバシーフィールドグループ[をエクスペリエンスイベントスキーマに追加する必要があります。](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md)
 
-## 1回のリクエストで複数の標準を送信する
+## 1回のリクエストで複数の標準を送信
 
-また、SDKは、リクエスト内での複数の同意オブジェクトの送信もサポートしています。
+また、SDKは、1回のリクエストで複数の同意オブジェクトを送信することもできます。
 
 ```javascript
 alloy("setConsent", {
@@ -177,10 +176,10 @@ alloy("setConsent", {
 
 ## 同意設定の保持
 
-`setConsent` コマンドを使用してユーザー設定を SDK に伝えた後、SDK はユーザー設定を Cookie に保持します。次回ユーザーがWebサイトをブラウザーに読み込むと、SDKは、これらの永続的な環境設定を取得して使用し、イベントをAdobeに送信できるかどうかを決定します。
+`setConsent` コマンドを使用してユーザー設定を SDK に伝えた後、SDK はユーザー設定を Cookie に保持します。次回ユーザーがブラウザーにWebサイトを読み込む際に、SDKはこれらの永続的な環境設定を取得して使用し、イベントをAdobeに送信できるかどうかを判断します。
 
-現在の環境設定で同意ダイアログを表示できるようにするには、ユーザーの環境設定を個別に保存する必要があります。 SDKからユーザーの環境設定を取得する方法はありません。 ユーザー環境設定をSDKと同期させるために、ページの読み込みごとに`setConsent`コマンドを呼び出すことができます。 SDKは、環境設定が変更された場合にのみ、サーバー呼び出しを行います。
+現在の環境設定で同意ダイアログを表示するには、ユーザーの環境設定を個別に保存する必要があります。 SDKからユーザーの環境設定を取得する方法はありません。 ユーザーの環境設定がSDKと同期するように、ページの読み込みごとに`setConsent`コマンドを呼び出すことができます。 SDKは、環境設定が変更された場合にのみサーバー呼び出しをおこないます。
 
-## 同意の設定時にIDを同期する
+## 同意の設定時のIDの同期
 
-デフォルトの同意が保留または送信されている場合、`setConsent`は、最初に送信され、IDを確立する要求である可能性があります。 このため、最初の要求時にIDを同期することが重要な場合があります。 IDマップは、`sendEvent`コマンドと同様に`setConsent`コマンドに追加できます。 [Experience CloudIDの取得](../identity/overview.md)を参照
+デフォルトの同意が保留または終了した場合、`setConsent`は、最初に送信され、IDを確立する要求になる場合があります。 このため、最初のリクエストでIDを同期することが重要な場合があります。 IDマップは、`sendEvent`コマンドと同様に`setConsent`コマンドに追加できます。 [Experience CloudIDの取得](../identity/overview.md)を参照
