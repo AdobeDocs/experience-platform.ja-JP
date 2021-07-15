@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: スキーマ
-source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 44%
+source-wordcount: '311'
+ht-degree: 45%
 
 ---
 
@@ -30,13 +30,14 @@ ht-degree: 44%
    * [XDM 個人プロファイル](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [セグメント定義](./classes/segment-definition.md)
-* スキーマフィールドグループ{#field-groups}
+* スキーマフィールドグループ {#field-groups}
    * プロファイルフィールドグループ{#profile}
       * [人口統計の詳細](./field-groups/profile/demographic-details.md)
+      * [IAB TCF 2.0の同意](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
       * [ロイヤルティの詳細](./field-groups/profile/loyalty-details.md)
       * [個人の連絡先の詳細](./field-groups/profile/personal-contact-details.md)
-      * [プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）](./field-groups/profile/consents.md)
+      * [同意と環境設定](./field-groups/profile/consents.md)
       * [セグメントメンバーシップの詳細](./field-groups/profile/segmentation.md)
       * [勤務先の詳細](./field-groups/profile/work-contact-details.md)
    * イベントフィールドグループ{#event}
@@ -45,6 +46,7 @@ ht-degree: 44%
       * [コマースの詳細](./field-groups/event/commerce-details.md)
       * [エンドユーザーIDの詳細](./field-groups/event/enduserids.md)
       * [環境の詳細](./field-groups/event/environment-details.md)
+      * [IAB TCF 2.0の同意](./field-groups/event/iab.md)
       * [Webの詳細](./field-groups/event/web-details.md)
    * [フィールドグループ名の更新](./field-groups/name-updates.md)
 * データタイプ {#data-types}
@@ -52,6 +54,7 @@ ht-degree: 44%
    * [ビーコン](./data-types/beacon.md)
    * [ブラウザーの詳細](./data-types/browser-details.md)
    * [コマース](./data-types/commerce.md)
+   * [Consent String](./data-types/consent-string.md)
    * [同意と環境設定](./data-types/consents.md)
    * [デバイス](./data-types/device.md)
    * [電子メールアドレス](./data-types/email-address.md)
