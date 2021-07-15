@@ -5,9 +5,9 @@ title: セグメントでの同意の遵守
 topic-legacy: overview
 description: セグメント操作での個人データの収集と共有に関する顧客の同意設定を遵守する方法を説明します。
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 6d11a94d45b4a089ca6960aaf1ce78ae654ebc3f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 顧客が個人データの共有に関する同意を撤回または拒否した場合、マーケティング活動のオーディエンスを生成する際に、組織がその優先度に従うことが重要です。 このドキュメントでは、顧客ユーザーインターフェイスを使用して、セグメント定義に顧客の同意値を統合するExperience Platformを説明します。
 
-## 概要
+## はじめに
 
 顧客の同意値を守るには、関連する様々な[!DNL Adobe Experience Platform]サービスに関する理解が必要です。 このチュートリアルを開始する前に、次のサービスに関する詳細を必ず理解しておく必要があります。
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## 同意スキーマのフィールド
 
-顧客の同意と環境設定を守るために、[!UICONTROL XDM個人プロファイル]の和集合スキーマに含まれるスキーマの1つに、標準フィールドグループ&#x200B;**[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]**&#x200B;が含まれている必要があります。
+顧客の同意と環境設定を遵守するために、[!UICONTROL XDM個別プロファイル]の和集合スキーマに含まれるスキーマの1つに、標準フィールドグループ&#x200B;**[!UICONTROL 同意と環境設定]**&#x200B;が含まれている必要があります。
 
 フィールドグループが提供する各属性の構造と使用例について詳しくは、[同意と環境設定のリファレンスガイド](../xdm/field-groups/profile/consents.md)を参照してください。 フィールドグループをスキーマに追加する手順については、『[XDM UIガイド](../xdm/ui/resources/schemas.md#add-field-groups)』を参照してください。
 
