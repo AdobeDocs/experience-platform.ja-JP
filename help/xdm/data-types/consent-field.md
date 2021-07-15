@@ -4,9 +4,9 @@ title: 汎用同意フィールドデータタイプ
 topic-legacy: overview
 description: このドキュメントでは、汎用同意フィールドXDMデータタイプの概要を説明します。
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '478'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->このデータ型は、[[!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）]フィールドグループ](../field-groups/profile/consents.md)をベースラインとして使用し、組織の同意スキーマの構造をカスタマイズするために使用されます。
+>このデータ型は、[[!UICONTROL 同意と環境設定]フィールドグループ](../field-groups/profile/consents.md)をベースラインとして使用し、組織の同意スキーマの構造をカスタマイズするために使用されます。
 
 ![](../images/data-types/consent-field.png)
 
