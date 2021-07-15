@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）スキーマフィールドグループ
+title: 同意と環境設定スキーマフィールドグループ
 topic-legacy: overview
-description: このドキュメントでは、「プライバシー/パーソナライゼーション/マーケティングの環境設定（同意） 」スキーマフィールドグループの概要を説明します。
+description: このドキュメントでは、「同意と環境設定」スキーマフィールドグループの概要を説明します。
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '2304'
+source-wordcount: '2316'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）] フィールドグループ
+# [!UICONTROL [同意と環境設定]] フィールドグループ
 
-[!UICONTROL プライバシー/パーソナライゼーション/マーケティングの環境設定（同意）] (以下「フィールドグループ」と呼ばれま [!DNL Privacy & Consents] す)は、クラス [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md)の標準フィールドグループで、顧客の同意と環境設定の情報を取り込むために使用されます。
+[!UICONTROL 同意と環境設定]は、顧客の同意と好みの情報を取り込むために [[!DNL XDM Individual Profile] 使用される、クラス](../../classes/individual-profile.md)の標準フィールドグループです。
 
 >[!NOTE]
 >
@@ -23,9 +23,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Consents & Preferences]フィールドグループは、同意と環境設定の管理に関する様々な使用例を対象とするように設計されています。 そのため、このドキュメントでは、フィールドグループのフィールドの一般的な用語の使用について説明し、これらのフィールドの使用方法を解釈する方法についての提案のみを行います。 組織がこれらの同意や好みの選択をどのように解釈し、顧客に提示するかについては、プライバシー法務チームに相談して、フィールドグループの構造を整合させてください。
+>[!UICONTROL 同意と環境設定]フィールドグループは、同意と環境設定の管理に関する様々な使用例を対象とするように設計されています。 そのため、このドキュメントでは、フィールドグループのフィールドの一般的な用語の使用について説明し、これらのフィールドの使用方法を解釈する方法についての提案のみを行います。 組織がこれらの同意や好みの選択をどのように解釈し、顧客に提示するかについては、プライバシー法務チームに相談して、フィールドグループの構造を整合させてください。
 
-[!DNL Consents & Preferences]フィールドグループは、**同意**&#x200B;および&#x200B;**環境設定**&#x200B;の情報を取り込むためのフィールドを提供します。
+[!UICONTROL 同意と環境設定]フィールドグループには、**同意**&#x200B;および&#x200B;**環境設定**&#x200B;の情報を取り込むためのフィールドがいくつか用意されています。
 
 同意とは、お客様がデータの使用方法を指定できるオプションです。 ほとんどの同意には法的側面があり、特定の方法でデータを使用するには、一部の管轄区域で許可を得る必要がある場合や、肯定的な同意が不要な場合は、お客様にその使用を停止する（オプトアウトする）オプションが必要です。
 
@@ -42,7 +42,7 @@ ht-degree: 2%
 >
 >XDMリソースを検索し、Platform UIで構造を調べる手順については、 [XDMリソース](../../ui/explore.md)ののを参照してください。
 
-次のJSONは、[!DNL Consents & Preferences]フィールドグループが処理できるデータのタイプの例を示しています。 これらの各フィールドの具体的な使用方法に関する情報は、以降の節で説明します。
+次のJSONは、[!UICONTROL 同意と環境設定]フィールドグループが処理できるデータのタイプの例を示しています。 これらの各フィールドの具体的な使用方法に関する情報は、以降の節で説明します。
 
 ```json
 {
@@ -343,12 +343,12 @@ Adobe Experience Platform Mobile SDKは、必要に応じて自動的に設定�
 
 ## フィールドグループを使用したデータの取り込み {#ingest}
 
-[!DNL Consents & Preferences]フィールドグループを使用して顧客から同意データを取り込むには、そのフィールドグループを含むスキーマに基づいてデータセットを作成する必要があります。
+[!UICONTROL 同意と環境設定]フィールドグループを使用して顧客から同意データを取り込むには、そのフィールドグループを含むスキーマに基づいてデータセットを作成する必要があります。
 
-フィールドグループをフィールドに割り当てる手順については、UIでの[スキーマの作成に関するチュートリアル](http://www.adobe.com/go/xdm-schema-editor-tutorial-en)を参照してください。 [!DNL Consents & Preferences]フィールドグループを持つフィールドを含むスキーマを作成したら、既存のスキーマでデータセットを作成する手順に従って、『データセットユーザガイド』の[データセット](../../../catalog/datasets/user-guide.md#create)の作成の節を参照してください。
+フィールドグループをフィールドに割り当てる手順については、UIでの[スキーマの作成に関するチュートリアル](http://www.adobe.com/go/xdm-schema-editor-tutorial-en)を参照してください。 [!UICONTROL Consents and Preferences]フィールドグループを持つフィールドを含むスキーマを作成したら、既存のスキーマでデータセットを作成する手順に従って、『データセットユーザーガイド』の[データセット](../../../catalog/datasets/user-guide.md#create)の作成の節を参照します。
 
 >[!IMPORTANT]
-[!DNL Real-time Customer Profile]に同意データを送信する場合は、[!DNL Consents & Preferences]フィールドグループを含む[!DNL XDM Individual Profile]クラスに基づいて[!DNL Profile]対応のスキーマを作成する必要があります。 そのスキーマに基づいて作成するデータセットも、[!DNL Profile]に対して有効にする必要があります。 スキーマとデータセットの[!DNL Real-time Customer Profile]要件に関する具体的な手順については、上記にリンクされたチュートリアルを参照してください。
+[!DNL Real-time Customer Profile]に同意データを送信する場合は、[!UICONTROL 同意と環境設定]フィールドグループを含む[!DNL XDM Individual Profile]クラスに基づいて[!DNL Profile]対応のスキーマを作成する必要があります。 そのスキーマに基づいて作成するデータセットも、[!DNL Profile]に対して有効にする必要があります。 スキーマとデータセットの[!DNL Real-time Customer Profile]要件に関する具体的な手順については、上記にリンクされたチュートリアルを参照してください。
 また、顧客プロファイルを正しく更新するために、最新の同意データと環境設定データを含むデータセットに優先順位を付けるように結合ポリシーが設定されていることを確認する必要があります。 詳しくは、[結合ポリシー](../../../rtcdp/profile/merge-policies.md)の概要を参照してください。
 
 ## 同意と環境設定の変更の処理
@@ -357,9 +357,9 @@ Adobe Experience Platform Mobile SDKは、必要に応じて自動的に設定�
 
 ## 付録 {#appendix}
 
-以下の節では、[!DNL Consents & Preferences]フィールドグループに関する追加情報を示します。
+以下の節では、[!UICONTROL 同意と環境設定]フィールドグループに関する追加情報を示します。
 
-### `val` {#choice-values}に指定できる値
+### `val`に指定できる値 {#choice-values}
 
 次の表に、`val`で使用できる値の概要を示します。
 
@@ -377,16 +377,16 @@ Adobe Experience Platform Mobile SDKは、必要に応じて自動的に設定�
 
 {style=&quot;table-layout:auto&quot;}
 
-### `preferred` {#preferred-values}に指定できる値
+### `preferred`に指定できる値 {#preferred-values}
 
 次の表に、`preferred`で使用できる値の概要を示します。
 
 | 値 | 説明 |
 | --- | --- |
-| `email` | 電子メールメッセージ。 |
+| `email` | 電子メール メッセージ。 |
 | `push` | プッシュ通知. |
 | `inApp` | アプリ内メッセージ. |
-| `sms` | SMSメッセージ。 |
+| `sms` | SMS メッセージ. |
 | `phone` | 電話の操作。 |
 | `phyMail` | 物理的なメール。 |
 | `inVehicle` | 車載メッセージ。 |
@@ -399,6 +399,6 @@ Adobe Experience Platform Mobile SDKは、必要に応じて自動的に設定�
 
 {style=&quot;table-layout:auto&quot;}
 
-### 完全な[!DNL Consents & Preferences]スキーマ{#full-schema}
+### [!UICONTROL 同意と環境設定]スキーマ全体 {#full-schema}
 
-[!DNL Consents & Preferences]フィールドグループの完全なスキーマを表示するには、[公式のXDMリポジトリ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)を参照してください。
+[!UICONTROL 同意と環境設定]フィールドグループの完全なスキーマを表示するには、[公式のXDMリポジトリ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)を参照してください。
