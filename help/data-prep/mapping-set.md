@@ -5,7 +5,7 @@ title: マッピングセットの概要
 topic-legacy: overview
 description: Adobe Experience Platform Data Prep でのマッピングセットの使用方法を説明します。
 source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '959'
 ht-degree: 100%
 
