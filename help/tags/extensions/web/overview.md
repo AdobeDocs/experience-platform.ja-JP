@@ -1,0 +1,36 @@
+---
+title: アドビ拡張機能リファレンス
+description: Adobe Experience PlatformのAdobe製品のタグ拡張に関するドキュメントを見つけます。
+source-git-commit: 5da1fd18e0032c5e3d6695639f98a7ee683819f1
+workflow-type: tm+mt
+source-wordcount: '142'
+ht-degree: 71%
+
+---
+
+# アドビ拡張機能リファレンス
+
+>[!NOTE]
+>
+>Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+
+以下は、タグソリューションが提供するタグ拡張機能のドキュメントのAdobeリストです。
+
+* [Analytics 拡張機能](analytics/overview.md)
+* [Adobe Analytics Product String 拡張機能](product-string/overview.md)
+* [Adobe Media Analytics (3.x SDK) for Audio and Video 拡張機能](media-analytics-3x/overview.md)
+* [Adobe Audience Manager 拡張機能](./audience-manager/overview.md)
+* [Adobe ContextHub 拡張機能](./contexthub/overview.md)
+* [Adobe Privacy 拡張機能](./privacy/overview.md)
+* [Adobe Target 拡張機能](target/overview.md)
+* [Adobe Target v2 拡張機能](target-v2/overview.md)
+* [Common Analytics Plugins 拡張機能](plugins/overview.md)
+* [Core 拡張機能](core/overview.md)
+* [Experience Cloud ID サービス拡張機能](id-service/overview.md)
+* [Adobe Experience Platform デモ拡張機能](./platform-demo/overview.md)
+* [Adobe Experience Platform 拡張機能](sdk/overview.md)
+* [AEM Asset Insights 拡張機能](asset-insights/overview.md)
+* [Marketo Munchkin 拡張機能](marketo/overview.md)
+* [ビデオトラッキング BrightCove 拡張機能](brightcove/overview.md)
+
+<!--  previously empty parent topic. -->
