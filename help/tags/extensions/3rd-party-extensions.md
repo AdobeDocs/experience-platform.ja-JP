@@ -1,0 +1,19 @@
+---
+title: サードパーティの拡張機能
+description: Adobe Experience Platformのサードパーティの拡張機能について説明します。
+source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+workflow-type: tm+mt
+source-wordcount: '140'
+ht-degree: 78%
+
+---
+
+# サードパーティの拡張機能
+
+>[!NOTE]
+>
+>Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+
+アドビソリューションで提供される拡張機能に加え、Adobe Experience Platform のサードパーティ製拡張機能も利用できます。
+
+アドビでは、サードパーティデベロッパーによる拡張機能は保証しません。そのため、拡張機能の作成者は、自分の拡張機能のライセンスおよびサポートプロセスを選択する必要があります。 多くの開発者は、 ユーザーが都合のよいときに確認できる公開 GitHub リポジトリーに拡張機能パッケージのソースコードを投稿することを選択しています。 詳しくは、[タグ開発者リポジトリ](https://github.com/Launch-Developers)を参照してください。
