@@ -5,9 +5,9 @@ title: Privacy ServiceとExperience Cloudの適用
 topic-legacy: overview
 description: このドキュメントでは、プライバシー関連の操作用に様々なExperience Cloudアプリケーションを設定する方法について説明します。
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 55d6d8ad7b0fc5457dc0fdc981aaa92717adbe68
+source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '594'
 ht-degree: 44%
 
 ---
@@ -49,9 +49,9 @@ Adobe Experience Platform [!DNL Privacy Service]は、複数のAdobe Experience 
 | [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Adobe Campaign Classic の GDPR 機能の概要。 |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | 顧客プライバシー管理者または AEM 管理者が GDPR リクエストを処理する方法の概要。 |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Livefyre を使用して GDPR にアクセスしたり、リクエストを削除したりする手順。 |
-| [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/client-side-info/deploy-javascript-tags-to-opt-in-to-launch.html) | 拡張機能とルールビルダーを使用してオプトインおよびオプトアウトソリューションを定義する方法。 |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | お使いのMagento Commerceインストールが、特定のプライバシー法の要件に準拠していることを確認します。 |
 | [Marketo](https://www.marketo.com/company/trust/gdpr/) | Marketoに対するプライバシー規制の適用方法を説明します。 |
+| [Adobe Experience Platformのタグ](../tags/ui/client-side/consent.md) | 拡張機能とルールビルダーを使用してオプトインおよびオプトアウトソリューションを定義する方法。 |
 | [Workfront](https://www.workfront.com/privacy-notice) | Workfrontが個人データを収集する方法、およびデータ主体がフォームを使用してプライバシーリクエストを送信する方法について説明します。 |
 
 {style=&quot;table-layout:auto&quot;}
