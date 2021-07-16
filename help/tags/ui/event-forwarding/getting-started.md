@@ -1,0 +1,142 @@
+---
+title: イベント転送の概要
+description: Adobe Experience Platformでのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
+source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+workflow-type: tm+mt
+source-wordcount: '915'
+ht-degree: 49%
+
+---
+
+# イベント転送の概要
+
+>[!NOTE]
+>
+>Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+
+Adobe Experience Platformでイベント転送を使用するには、次の3つのオプションの1つ以上を使用して、データをAdobe Experience Platform Edge Networkに送信する必要があります。
+
+* [Adobe Experience Platform Web SDK](../../extensions/web/sdk/overview.md)
+* [Adobe Experience Platform モバイル SDK](https://sdkdocs.com)
+* [サーバー間API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+
+>[!NOTE]
+>Platform Web SDKおよびPlatform Mobile SDKは、Adobe Experience Platformのタグを使用したデプロイメントは必要ありません。 ただし、タグを使用したこれらのSDKのデプロイが推奨されるアプローチです。
+
+Edge ネットワークにデータを送信した後、Adobeソリューションをオンにすることで、Edge ネットワークでデータを送信できます。データを非イベントソリューションに送信するには、Adobe転送でそれを設定します。
+
+## 前提条件
+
+* Adobe Experience Platform Collection Enterprise（価格については担当のアカウントマネージャーにお問い合わせください）
+* Adobe Experience Platformでのイベント転送
+* Edge ネットワークにデータを送信するように設定された Adobe Experience Platform Web SDK または Mobile SDK
+* エクスペリエンスデータモデル(XDM)へのデータのマッピング（このマッピングはタグを使用しておこなうことができます）
+
+## XDM スキーマの作成
+
+Adobe Experience Platform で、スキーマを作成します。
+
+1. **[!UICONTROL スキーマ]**／**[!UICONTROL スキーマを作成]**&#x200B;を選択し、「**[!UICONTROL XDM ExperienceEvent]**」オプションを選択して、スキーマを作成します。
+
+1. スキーマに名前を付け、簡単な説明を追加します。
+
+1. 「**[!UICONTROL フィールドグループ]**」の横にある「**[!UICONTROL 追加]**」を選択して、「ExperienceEvent web details」フィールドグループを追加できます。
+
+   >[!NOTE]
+   >
+   >必要に応じて、複数のフィールドグループを追加できます。
+
+1. スキーマを保存し、付けた名前をメモします。
+
+スキーマについて詳しくは、[Experience Data Model（XDM）システムのヘルプ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=ja)を参照してください。
+
+## イベント転送プロパティの作成
+
+データ収集UIで、「Edge」タイプのプロパティを作成します。
+
+1. 「**[!UICONTROL 新しいプロパティ]**」を選択します。
+
+1. プロパティに名前を付けます。
+
+1. 「Edge」プラットフォームタイプを選択します。
+
+1. 「**[!UICONTROL 保存]**」を選択します。
+
+プロパティを作成したら、新しいプロパティの「**[!UICONTROL 環境]**」タブに移動し、
+環境 ID をメモします。データストリームで使用されるAdobe組織がAdobe転送で使用されるイベント組織と異なる場合は、**[!UICONTROL 「環境]**」タブから環境IDをコピーし、データストリームの作成時に貼り付けることができます。 それ以外の場合は、ドロップダウンメニューから環境を選択できます。
+
+## データストリームの作成
+
+Adobe Experience Platformでデータストリームを作成するには、イベント転送プロパティの作成時に生成された環境IDを使用します。
+
+1. データ収集UIの左側のレールにあるリンクを使用して、データストリームインターフェイスを開きます。
+
+1. **[!UICONTROL Datastreams]**&#x200B;を選択します。
+
+1. 設定に名前を付け、必要に応じて説明を入力します。
+この説明は、複数の設定を含むリストで目的の設定を識別するのに役立ちます。
+
+1. 「**[!UICONTROL 保存]**」を選択します。
+
+
+
+## イベント転送の有効化
+
+次に、Edgeネットワークを設定して、イベント転送や他のAdobe製品にデータを送信します。
+
+1. データストリームUIで、作成したプロパティを選択します。
+
+1. 「開発」、「実稼働」、または「ステージング」環境を選択します。
+
+   または、Adobe組織外のイベント転送環境にデータを送信する場合は、「**[!UICONTROL 詳細設定モードに切り替え]**」を選択し、IDを貼り付けます。 このIDは、イベント転送プロパティを作成すると提供されます。
+
+1. 必要なツールをオンにして、必要に応じて設定します。
+
+   * Adobe Analytics では、レポートスイート ID が必要です。
+
+   * Adobe Experience Platformでのイベント転送には、プロパティIDと環境IDが必要です。 これは、イベント転送プロパティのパブリッシュパスです。
+
+設定後、新しいプロパティの環境 ID をメモします。
+
+## タグWeb SDK拡張機能を設定して、前に作成したデータストリームにデータを送信します。
+
+データ収集UIでプロパティを作成し、Adobe Experience Platform Web SDK拡張機能を使用して設定します。
+
+1. プロパティに名前を付けます。
+
+   Alloy の複数のインスタンスを使用することができます。例えば、ペイウォール前とペイウォール後のトラッキングプロパティが異なる場合があります。
+
+1. 組織 ID を選択します。
+
+1. Edge ドメインを選択します。
+
+設定オプションについて詳しくは、[Web SDK 拡張機能のドキュメント](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html?lang=ja)を参照してください。
+
+## Platform Web SDKにデータを送信するタグルールを作成する
+
+上記の手順を実行した後、イベント転送とタグを使用し、ページからのリクエストを1つだけ必要とするデータ定義やルールなどを作成します。
+
+Platform Web SDK 拡張機能と「イベントを送信」アクションタイプを使用して、ページ読み込みルールを作成します。
+
+1. 「**[!UICONTROL ルール]**」タブを開き、「**[!UICONTROL 新しいルールを作成]**」を選択します。
+
+1. ルール名を設定します。
+
+1. 「**[!UICONTROL イベントを追加]**」を選択します。
+
+1. 拡張機能とその拡張機能で使用可能なイベントタイプを 1 つ選択してイベントを追加し、そのイベントの設定を指定します。例えば、「**[!UICONTROL Core - Window 搭載]**」を選択します。
+
+1. Platform Web SDK 拡張機能を使用してアクションを追加します。「**[!UICONTROL アクションタイプ]**」リストから「**[!UICONTROL イベントを送信]**」を選択し、目的のインスタンス（以前設定した Alloy インスタンス）を選択して、Alloy ヒット内の XDM データブロックに追加するデータ要素を選択します。
+
+1. この例では、残りの設定をデフォルトのままにして「**[!UICONTROL 保存]**」を選択します。
+
+別の例では、ユーザーが特定のボタンの上にカーソルを置くと、データレイヤーが Edge に送信されるルールを作成できます。
+
+## 概要
+
+以下の設定が完了したら、イベント転送ルールを作成して、データをAdobe以外の宛先に転送できます。
+
+* エクスペリエンスデータモデルスキーマ（付けた名前をメモします）
+* イベント転送プロパティ（プロパティIDと環境IDを追跡します）。
+* データストリーム（環境IDをメモしておきます。イベント転送の環境IDと混同しないでください）
+* タグのプロパティ
