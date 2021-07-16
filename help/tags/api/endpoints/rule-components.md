@@ -1,0 +1,997 @@
+---
+title: ルールコンポーネントエンドポイント
+description: Reactor APIで/rule_componentsエンドポイントを呼び出す方法を説明します。
+source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+workflow-type: tm+mt
+source-wordcount: '1211'
+ht-degree: 7%
+
+---
+
+# ルールコンポーネントエンドポイント
+
+データ収集タグでは、[ルール](./rules.md)は、デプロイ済みの[ライブラリ](./libraries.md)内のリソースの動作を制御します。 **ルール** コンポーネントは、ルールを構成する個々のパーツです。ルールがレシピの場合、ルールコンポーネントは材料の1つです。 Reactor APIの`/rule_components`エンドポイントを使用すると、ルールコンポーネントをプログラムで管理できます。
+
+>[!NOTE]
+>
+>このドキュメントでは、Reactor APIのルールコンポーネントを管理する方法について説明します。 データ収集UIでのルールおよびルールコンポーネントの操作方法について詳しくは、[UIガイド](../../ui/managing-resources/rules.md)を参照してください。
+
+ルールコンポーネントには、次の3つの基本的なタイプがあります。
+
+| ルールコンポーネントタイプ | 説明 |
+| --- | --- |
+| イベント | イベントは、ルールのトリガーです。 ルールは、クライアントデバイスで実行時にイベントが発生すると開始します。 「[!UICONTROL ライブラリ読み込み]」、「[!UICONTROL ページ上部]」、「[!UICONTROL クリック]」などがイベントの例です。 |
+| 条件 | 条件とは、アクションが実行される前に特定の条件が満たされたかどうかを評価するためのものです。 イベントが発生すると、条件が評価されます。 ルールのアクションは、すべての条件が満たされた場合にのみ実行されます。 |
+| アクション | これらは、Adobe Analyticsビーコンの送信、カスタム訪問者IDの取得、特定のmboxの実行など、ルールで実際に実行するアクションです。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+ルールコンポーネントは、1つのルールに属しています。 ルールには、多くのルールコンポーネントを含めることができます（および必要です）。
+
+ルールコンポーネントは、1つの[extension](./extensions.md)で提供されます。 拡張機能では、多くのルールコンポーネントタイプを提供できます。
+
+## はじめに
+
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
+
+## ルールコンポーネントのリストの取得 {#list}
+
+ルールのIDをGETリクエストのパスに含めることで、ルールに属するルールコンポーネントのリストを取得できます。
+
+**API 形式**
+
+```http
+GET /rules/{RULE_ID}/rule_components
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `RULE_ID` | コンポーネントのリストを表示するルールの`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+>[!NOTE]
+>
+>クエリパラメーターを使用して、リストされたルールコンポーネントを次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
+
+**リクエスト**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/rules/RL14dc6a8c37b14b619ddb2b3ba489a1f51/rule_components \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**応答**
+
+正常な応答は、指定されたルールのルールコンポーネントのリストを返します。
+
+```json
+{
+  "data": [
+    {
+      "id": "RC45944086902c4828b6e14ffbb40017f4",
+      "type": "rule_components",
+      "attributes": {
+        "created_at": "2020-12-14T17:54:34.976Z",
+        "delegate_descriptor_id": "kessel-test::events::click",
+        "deleted_at": null,
+        "dirty": true,
+        "name": "My Example Click Event",
+        "negate": false,
+        "order": 0,
+        "rule_order": 50.0,
+        "timeout": 2000,
+        "delay_next": true,
+        "published": false,
+        "published_at": null,
+        "revision_number": 0,
+        "updated_at": "2020-12-14T17:54:34.976Z",
+        "settings": "{\"elementSelector\":\".accordion\",\"bubbleFireIfChildFired\":true}"
+      },
+      "relationships": {
+        "updated_with_extension_package": {
+          "links": {
+            "related": "https://reactor.adobe.io/rule_components/RC45944086902c4828b6e14ffbb40017f4/updated_with_extension_package"
+          },
+          "data": {
+            "id": "EP75db2452065b44e2b8a38ca883ce369a",
+            "type": "extension_packages"
+          }
+        },
+        "updated_with_extension": {
+          "links": {
+            "related": "https://reactor.adobe.io/rule_components/RC45944086902c4828b6e14ffbb40017f4/updated_with_extension"
+          },
+          "data": {
+            "id": "EX6312cea676de47ad9f70b42f7c0fbf02",
+            "type": "extensions"
+          }
+        },
+        "extension": {
+          "links": {
+            "related": "https://reactor.adobe.io/rule_components/RC45944086902c4828b6e14ffbb40017f4/extension"
+          },
+          "data": {
+            "id": "EXbfd099788024423ebdd49cf06b52e50a",
+            "type": "extensions"
+          }
+        },
+        "notes": {
+          "links": {
+            "related": "https://reactor.adobe.io/rule_components/RC45944086902c4828b6e14ffbb40017f4/notes"
+          }
+        },
+        "origin": {
+          "links": {
+            "related": "https://reactor.adobe.io/rule_components/RC45944086902c4828b6e14ffbb40017f4/origin"
+          },
+          "data": {
+            "id": "RC45944086902c4828b6e14ffbb40017f4",
+            "type": "rule_components"
+          }
+        },
+        "rule component": {
+          "links": {
+            "related": "https://reactor.adobe.io/properties/PRb1090b7443e948ac91650964b490e622"
+          },
+          "data": {
+            "id": "PRb1090b7443e948ac91650964b490e622",
+            "type": "properties"
+          }
+        },
+        "rules": {
+          "links": {
+            "related": "https://reactor.adobe.io/rule_components/RC45944086902c4828b6e14ffbb40017f4/rules"
+          }
+        }
+      },
+      "links": {
+        "extension": "https://reactor.adobe.io/extensions/EXbfd099788024423ebdd49cf06b52e50a",
+        "origin": "https://reactor.adobe.io/rule_components/RC45944086902c4828b6e14ffbb40017f4",
+        "rules": "https://reactor.adobe.io/rule_components/RC45944086902c4828b6e14ffbb40017f4/rules",
+        "self": "https://reactor.adobe.io/rule_components/RC45944086902c4828b6e14ffbb40017f4"
+      },
+      "meta": {
+        "latest_revision_number": 0
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "current_page": 1,
+      "next_page": null,
+      "prev_page": null,
+      "total_pages": 1,
+      "total_count": 1
+    }
+  }
+}
+```
+
+## ルールコンポーネントの検索 {#lookup}
+
+ルールコンポーネントを検索するには、GETリクエストのパスにIDを指定します。
+
+**API 形式**
+
+```http
+GET /rule_components/{RULE_COMPONENT_ID}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `RULE_COMPONENT_ID` | 検索するルールコンポーネントの`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**リクエスト**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**応答**
+
+正常な応答は、ルールコンポーネントの詳細を返します。
+
+```json
+{
+  "data": {
+    "id": "RC7be169fcfd534ffc82acc7bffdc50128",
+    "type": "rule_components",
+    "attributes": {
+      "created_at": "2020-12-14T17:54:18.551Z",
+      "delegate_descriptor_id": "kessel-test::events::click",
+      "deleted_at": null,
+      "dirty": true,
+      "name": "My Example Click Event",
+      "negate": false,
+      "order": 0,
+      "rule_order": 50.0,
+      "timeout": 2000,
+      "delay_next": true,
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:54:18.551Z",
+      "settings": "{\"elementSelector\":\".accordion\",\"bubbleFireIfChildFired\":true}"
+    },
+    "relationships": {
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "updated_with_extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128/updated_with_extension"
+        },
+        "data": {
+          "id": "EXa11e168f2ff2485197a493095269f964",
+          "type": "extensions"
+        }
+      },
+      "extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128/extension"
+        },
+        "data": {
+          "id": "EXa76eb16dd86849318b743494e75c33a1",
+          "type": "extensions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128/notes"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128/origin"
+        },
+        "data": {
+          "id": "RC7be169fcfd534ffc82acc7bffdc50128",
+          "type": "rule_components"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PR00a35a74381443dc994e6b30b7152106"
+        },
+        "data": {
+          "id": "PR00a35a74381443dc994e6b30b7152106",
+          "type": "properties"
+        }
+      },
+      "rules": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128/rules"
+        }
+      }
+    },
+    "links": {
+      "extension": "https://reactor.adobe.io/extensions/EXa76eb16dd86849318b743494e75c33a1",
+      "origin": "https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128",
+      "rules": "https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128/rules",
+      "self": "https://reactor.adobe.io/rule_components/RC7be169fcfd534ffc82acc7bffdc50128"
+    },
+    "meta": {
+      "latest_revision_number": 0
+    }
+  }
+}
+```
+
+## ルールコンポーネントの作成 {#create}
+
+ルールリクエストを作成することで、新しいルールコンポーネントをPOSTできます。
+
+**API 形式**
+
+```http
+POST /rules/{RULE_ID}/rule_components
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `RULE_ID` | ルールコンポーネントを定義するルールの`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**リクエスト**
+
+次のリクエストは、指定されたルールの新しいルールコンポーネントを作成します。 また、この呼び出しは、 `relationships`プロパティを通じてルールコンポーネントを既存の拡張に関連付けます。 詳しくは、[関係](../guides/relationships.md)のガイドを参照してください。
+
+```shell
+curl -X POST \
+  https://reactor.adobe.io/rules/RLf7b4f416b2e04ae1ba857ae681fee5bc/rule_components \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "data": {
+          "attributes": {
+            "delegate_descriptor_id": "kessel-test::events::click",
+            "name": "My Example Click Event",
+            "delay_next": true,
+            "order": 0,
+            "rule_order": 50.0,
+            "settings": "{\"elementSelector\":\".accordion\",\"bubbleFireIfChildFired\":true}",
+            "timeout": 2000
+          },
+          "relationships": {
+            "extension": {
+              "data": {
+                "id": "EX31b8c49f134b4307924d71a64204099e",
+                "type": "extensions"
+              }
+            },
+            "rules": {
+              "data": [
+                {
+                  "id": "RLf7b4f416b2e04ae1ba857ae681fee5bc",
+                  "type": "rules"
+                }
+              ]
+            }
+          },
+          "type": "rule_components"
+        }
+      }'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `attributes.delegate_descriptor_id` | **（必須）** 定義できるルールコンポーネントのタイプは、拡張機能パッケージによ [って提供されます](./extension-packages.md)。新しいルールコンポーネントを作成する場合は、このルールコンポーネントの基になる拡張パッケージ、コンポーネントのタイプ（イベント、条件、またはアクション）、拡張で定義された特定のコンポーネントの名前（Core拡張機能の「Click」イベントなど）を示すデリゲート記述子IDを指定する必要があります。<br><br>詳しくは、デリゲート記 [述子IDのガ](../guides/delegate-descriptor-ids.md) イドを参照してください。 |
+| `attributes.name` | **（必須）** ルールコンポーネントのわかりやすい名前。 |
+| `attributes.delay_next` | 後でのアクションを遅延するかどうかを示すboolean。 |
+| `attributes.order` | タイプ別にコンポーネントを読み込む順序を示す整数。 |
+| `attributes.rule_order` | 関連付けられたルールが起動する優先度を示す整数。 |
+| `attributes.settings` | 文字列として表される設定JSONオブジェクト。 |
+| `attributes.timeout` | 順に実行されるアクションのタイムアウトを示す整数。 |
+| `relationships` | ルールコンポーネントに必要な関係を確立するオブジェクト。 次の2つの関係を確立する必要があります。 <ol><li>`extension`:このルールコンポーネントを定義する拡張機能。これは、拡張パッケージが`delegate_descriptor_id`で示される拡張と同じである必要があります。</li><li>`rules`:このコンポーネントが定義されるルール。リクエストパスで指定されているのと同じルールIDである必要があります。</li></ol>関係の詳細については、[関係ガイド](../guides/relationships.md)を参照してください。 |
+| `type` | 作成するリソースのタイプ。 このエンドポイントでは、値を`rule_components`にする必要があります。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**応答**
+
+正常な応答は、新しく作成されたルールコンポーネントの詳細を返します。
+
+```json
+{
+  "data": {
+    "id": "RC78c44af3cf7644e5927fc0ad61e88940",
+    "type": "rule_components",
+    "attributes": {
+      "created_at": "2020-12-14T17:54:00.232Z",
+      "delegate_descriptor_id": "kessel-test::events::click",
+      "deleted_at": null,
+      "dirty": true,
+      "name": "My Example Click Event",
+      "negate": false,
+      "order": 0,
+      "rule_order": 50.0,
+      "timeout": 2000,
+      "delay_next": true,
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:54:00.232Z",
+      "settings": "{\"elementSelector\":\".accordion\",\"bubbleFireIfChildFired\":true}"
+    },
+    "relationships": {
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC78c44af3cf7644e5927fc0ad61e88940/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "updated_with_extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC78c44af3cf7644e5927fc0ad61e88940/updated_with_extension"
+        },
+        "data": {
+          "id": "EX0019a115a74f401fa0b9bb8f57a0196b",
+          "type": "extensions"
+        }
+      },
+      "extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC78c44af3cf7644e5927fc0ad61e88940/extension"
+        },
+        "data": {
+          "id": "EX31b8c49f134b4307924d71a64204099e",
+          "type": "extensions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC78c44af3cf7644e5927fc0ad61e88940/notes"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC78c44af3cf7644e5927fc0ad61e88940/origin"
+        },
+        "data": {
+          "id": "RC78c44af3cf7644e5927fc0ad61e88940",
+          "type": "rule_components"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PR97596432a82549ceb8e2a5d9df05c0e1"
+        },
+        "data": {
+          "id": "PR97596432a82549ceb8e2a5d9df05c0e1",
+          "type": "properties"
+        }
+      },
+      "rules": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC78c44af3cf7644e5927fc0ad61e88940/rules"
+        }
+      }
+    },
+    "links": {
+      "extension": "https://reactor.adobe.io/extensions/EX31b8c49f134b4307924d71a64204099e",
+      "origin": "https://reactor.adobe.io/rule_components/RC78c44af3cf7644e5927fc0ad61e88940",
+      "rules": "https://reactor.adobe.io/rule_components/RC78c44af3cf7644e5927fc0ad61e88940/rules",
+      "self": "https://reactor.adobe.io/rule_components/RC78c44af3cf7644e5927fc0ad61e88940"
+    },
+    "meta": {
+      "latest_revision_number": 0
+    }
+  }
+}
+```
+
+## ルールコンポーネントの更新 {#update}
+
+ルールコンポーネントを更新するには、ルールリクエストのパスにIDをPATCHします。
+
+>[!NOTE]
+>
+>ルールコンポーネントを更新すると、親ルールの`updated_at`タイムスタンプも更新されます。
+
+**API 形式**
+
+```http
+PATCH /rule_components/{RULE_COMPONENT_ID}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `RULE_COMPONENT_ID` | 更新するルールコンポーネントの`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**リクエスト**
+
+次のリクエストは、既存のルールコンポーネントの`order`属性と`settings`属性を更新します。
+
+```shell
+curl -X PUT \
+  https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "data": {
+          "attributes": {
+            "order": 1,
+            "settings": "{\"elementSelector\":\".accordion\",\"bubbleFireIfChildFired\":false}"
+          },
+          "type": "rule_components",
+          "id": "RC9af052ee231346f28d1e44865ab62c04"
+        }
+      }'
+```
+
+| プロパティ | 説明 |
+| --- | --- |
+| `attributes` | ルールコンポーネントが、ルールコンポーネント用に更新される属性を表すオブジェクト。 ルールコンポーネントの次の属性を更新できます。 <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
+| `id` | 更新するルールコンポーネントの`id`。 これは、リクエストパスで指定された`{RULE_COMPONENT_ID}`値と一致する必要があります。 |
+| `type` | 更新するリソースのタイプ。 このエンドポイントでは、値を`rule_components`にする必要があります。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**応答**
+
+正常な応答は、更新されたルールコンポーネントの詳細を返します。
+
+```json
+{
+  "data": {
+    "id": "RC9af052ee231346f28d1e44865ab62c04",
+    "type": "rule_components",
+    "attributes": {
+      "created_at": "2020-12-14T17:54:50.887Z",
+      "delegate_descriptor_id": "kessel-test::events::click",
+      "deleted_at": null,
+      "dirty": true,
+      "name": "My Example Click Event",
+      "negate": false,
+      "order": 1,
+      "rule_order": 50.0,
+      "timeout": 2000,
+      "delay_next": true,
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:54:52.553Z",
+      "settings": "{\"elementSelector\":\".accordion\",\"bubbleFireIfChildFired\":false}"
+    },
+    "relationships": {
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "updated_with_extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/updated_with_extension"
+        },
+        "data": {
+          "id": "EX468796dd09d743858f17d4c5ca52f3e0",
+          "type": "extensions"
+        }
+      },
+      "extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/extension"
+        },
+        "data": {
+          "id": "EXcedb08a8265c488e8bb98b46245b2486",
+          "type": "extensions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/notes"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/origin"
+        },
+        "data": {
+          "id": "RC9af052ee231346f28d1e44865ab62c04",
+          "type": "rule_components"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PR986402dc07834fbeb4789c56060dbf41"
+        },
+        "data": {
+          "id": "PR986402dc07834fbeb4789c56060dbf41",
+          "type": "properties"
+        }
+      },
+      "rules": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/rules"
+        }
+      }
+    },
+    "links": {
+      "extension": "https://reactor.adobe.io/extensions/EXcedb08a8265c488e8bb98b46245b2486",
+      "origin": "https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04",
+      "rules": "https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/rules",
+      "self": "https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04"
+    },
+    "meta": {
+      "latest_revision_number": 0
+    }
+  }
+}
+```
+
+## ルールコンポーネントの削除
+
+ルールコンポーネントを削除するには、ルールリクエストのパスにIDをDELETEします。
+
+**API 形式**
+
+```http
+DELETE /rule_components/{RULE_COMPONENT_ID}
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `RULE_COMPONENT_ID` | 削除するルールコンポーネントの`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**リクエスト**
+
+```shell
+curl -X DELETE \
+  https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**応答**
+
+正常な応答は、応答本文がないHTTPステータス204（コンテンツなし）を返し、ルールコンポーネントが削除されたことを示します。
+
+## ルールコンポーネントのメモの管理 {#notes}
+
+ルールコンポーネントは、「注目すべき」リソースです。つまり、個々のリソースでテキストベースのメモを作成し、取得することができます。 ルールコンポーネントや他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモのエンドポイントガイド](./notes.md)を参照してください。
+
+## ルールコンポーネントの関連リソースの取得 {#related}
+
+次の呼び出しは、ルールコンポーネントの関連リソースを取得する方法を示しています。 [ルールコンポーネント](#lookup)を検索すると、これらの関係は`relationships`ルールコンポーネントの下に表示されます。
+
+Reactor APIの関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+
+### ルールコンポーネントの関連ルールのリスト {#rules}
+
+参照リクエストのパスに`/rules`を追加すると、特定のルールコンポーネントを利用するルールをリストできます。
+
+**API 形式**
+
+```http
+GET  /rule_components/{RULE_COMPONENT_ID}/rules
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{RULE_COMPONENT_ID}` | ルールをリストするルールコンポーネントの`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**リクエスト**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/rules \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**応答**
+
+正常な応答は、指定されたルールコンポーネントを使用するルールのリストを返します。
+
+```json
+{
+  "data": [
+    {
+      "id": "RLf1baa571748941db88f54de8efd119aa",
+      "type": "rules",
+      "attributes": {
+        "created_at": "2020-12-14T17:58:36.072Z",
+        "deleted_at": null,
+        "dirty": true,
+        "enabled": true,
+        "name": "Example Rule",
+        "published": false,
+        "published_at": null,
+        "revision_number": 0,
+        "updated_at": "2020-12-14T17:58:37.452Z",
+        "review_status": "unsubmitted"
+      },
+      "relationships": {
+        "libraries": {
+          "links": {
+            "related": "https://reactor.adobe.io/rules/RLf1baa571748941db88f54de8efd119aa/libraries"
+          }
+        },
+        "revisions": {
+          "links": {
+            "related": "https://reactor.adobe.io/rules/RLf1baa571748941db88f54de8efd119aa/revisions"
+          }
+        },
+        "notes": {
+          "links": {
+            "related": "https://reactor.adobe.io/rules/RLf1baa571748941db88f54de8efd119aa/notes"
+          }
+        },
+        "property": {
+          "links": {
+            "related": "https://reactor.adobe.io/rules/RLf1baa571748941db88f54de8efd119aa/property"
+          },
+          "data": {
+            "id": "PR966c4a501e1a43a48cb55e104b4de935",
+            "type": "properties"
+          }
+        },
+        "origin": {
+          "links": {
+            "related": "https://reactor.adobe.io/rules/RLf1baa571748941db88f54de8efd119aa/origin"
+          },
+          "data": {
+            "id": "RLf1baa571748941db88f54de8efd119aa",
+            "type": "rules"
+          }
+        },
+        "rule_components": {
+          "links": {
+            "related": "https://reactor.adobe.io/rules/RLf1baa571748941db88f54de8efd119aa/rule_components"
+          }
+        }
+      },
+      "links": {
+        "property": "https://reactor.adobe.io/properties/PR966c4a501e1a43a48cb55e104b4de935",
+        "origin": "https://reactor.adobe.io/rules/RLf1baa571748941db88f54de8efd119aa",
+        "self": "https://reactor.adobe.io/rules/RLf1baa571748941db88f54de8efd119aa",
+        "rule_components": "https://reactor.adobe.io/rules/RLf1baa571748941db88f54de8efd119aa/rule_components"
+      },
+      "meta": {
+        "latest_revision_number": 0
+      }
+    }
+  ]
+}
+```
+
+### ルールコンポーネントの関連する拡張機能を検索する {#extension}
+
+ルックアップリクエストのパスに`/extension`を追加することで、ルールコンポーネントを提供する拡張機能を検索できます。
+
+**API 形式**
+
+```http
+GET /rule_components/{RULE_COMPONENT_ID}/extension
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{RULE_COMPONENT_ID}` | 検索する拡張子を持つルールコンポーネントの`id`。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**リクエスト**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04/extension \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**応答**
+
+正常な応答は、指定されたルールコンポーネントの拡張の詳細を返します。
+
+```json
+{
+  "data": {
+    "id": "EX5644c3eed97d46b39cb2279ea11dde29",
+    "type": "extensions",
+    "attributes": {
+      "created_at": "2020-12-14T17:55:22.634Z",
+      "deleted_at": null,
+      "dirty": false,
+      "enabled": true,
+      "name": "kessel-test",
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:55:22.634Z",
+      "delegate_descriptor_id": null,
+      "display_name": "Kessel Test",
+      "review_status": "unsubmitted",
+      "version": "1.2.0",
+      "settings": "{}"
+    },
+    "relationships": {
+      "libraries": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX5644c3eed97d46b39cb2279ea11dde29/libraries"
+        }
+      },
+      "revisions": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX5644c3eed97d46b39cb2279ea11dde29/revisions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX5644c3eed97d46b39cb2279ea11dde29/notes"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX5644c3eed97d46b39cb2279ea11dde29/property"
+        },
+        "data": {
+          "id": "PRcdb3d12504ce48ecbfa4fbbe5b80b6dd",
+          "type": "properties"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX5644c3eed97d46b39cb2279ea11dde29/origin"
+        },
+        "data": {
+          "id": "EX5644c3eed97d46b39cb2279ea11dde29",
+          "type": "extensions"
+        }
+      },
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX5644c3eed97d46b39cb2279ea11dde29/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/extensions/EX5644c3eed97d46b39cb2279ea11dde29/extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      }
+    },
+    "links": {
+      "property": "https://reactor.adobe.io/properties/PRcdb3d12504ce48ecbfa4fbbe5b80b6dd",
+      "origin": "https://reactor.adobe.io/extensions/EX5644c3eed97d46b39cb2279ea11dde29",
+      "self": "https://reactor.adobe.io/extensions/EX5644c3eed97d46b39cb2279ea11dde29",
+      "extension_package": "https://reactor.adobe.io/extension_packages/EP75db2452065b44e2b8a38ca883ce369a",
+      "latest_extension_package": "https://reactor.adobe.io/extension_packages/EP75db2452065b44e2b8a38ca883ce369a"
+    },
+    "meta": {
+      "latest_revision_number": 1
+    }
+  }
+}
+```
+
+### ルールコンポーネントの関連する接触チャネルを検索する {#origin}
+
+ルックアップリクエストのパスに`/origin`を追加することで、ルールコンポーネントの接触チャネル（以前のリビジョン）を調べることができます。
+
+**API 形式**
+
+```http
+GET /rule_components/{RULE_COMPONENT_ID}/origin
+```
+
+| パラメーター | 説明 |
+| --- | --- |
+| `{RULE_COMPONENT_ID}` | ルールコンポーネントの`id`で、検索元を指定します。 |
+
+{style=&quot;table-layout:auto&quot;}
+
+**リクエスト**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/origin \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**応答**
+
+正常な応答は、指定されたルールコンポーネントの接触チャネルの詳細を返します。
+
+```json
+{
+  "data": {
+    "id": "RC3d0805fde85d42db8988090bc074bb44",
+    "type": "rule_components",
+    "attributes": {
+      "created_at": "2020-12-14T17:55:40.016Z",
+      "delegate_descriptor_id": "kessel-test::events::click",
+      "deleted_at": null,
+      "dirty": false,
+      "name": "My Example Click Event",
+      "negate": false,
+      "order": 0,
+      "rule_order": 50.0,
+      "timeout": 2000,
+      "delay_next": true,
+      "published": false,
+      "published_at": null,
+      "revision_number": 0,
+      "updated_at": "2020-12-14T17:55:40.016Z",
+      "settings": "{\"elementSelector\":\".accordion\",\"bubbleFireIfChildFired\":true}"
+    },
+    "relationships": {
+      "updated_with_extension_package": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/updated_with_extension_package"
+        },
+        "data": {
+          "id": "EP75db2452065b44e2b8a38ca883ce369a",
+          "type": "extension_packages"
+        }
+      },
+      "updated_with_extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/updated_with_extension"
+        },
+        "data": {
+          "id": "EXb713fc209ce344c996bdeb377685e2c4",
+          "type": "extensions"
+        }
+      },
+      "extension": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/extension"
+        },
+        "data": {
+          "id": "EXd6e1dce006b2412f874301e24d58ce24",
+          "type": "extensions"
+        }
+      },
+      "notes": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/notes"
+        }
+      },
+      "origin": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/origin"
+        },
+        "data": {
+          "id": "RC3d0805fde85d42db8988090bc074bb44",
+          "type": "rule_components"
+        }
+      },
+      "property": {
+        "links": {
+          "related": "https://reactor.adobe.io/properties/PR89c66a560ec44928889b439333255efe"
+        },
+        "data": {
+          "id": "PR89c66a560ec44928889b439333255efe",
+          "type": "properties"
+        }
+      },
+      "rules": {
+        "links": {
+          "related": "https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/rules"
+        }
+      }
+    },
+    "links": {
+      "extension": "https://reactor.adobe.io/extensions/EXd6e1dce006b2412f874301e24d58ce24",
+      "origin": "https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44",
+      "rules": "https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44/rules",
+      "self": "https://reactor.adobe.io/rule_components/RC3d0805fde85d42db8988090bc074bb44"
+    },
+    "meta": {
+      "latest_revision_number": 1
+    }
+  }
+}
+```
