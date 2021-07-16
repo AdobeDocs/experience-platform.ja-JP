@@ -6,7 +6,7 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 4ad261c4ca5878f7ef5abb2c2957b5714cf3101a
+source-git-commit: 7a1cd379eb002f92c19fbe0e569d5fac90ab5334
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 12%
@@ -47,7 +47,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 
 ![segments-to-destination](../assets/ui/activate-destinations/email-select-segments.png)
 
-##  マッピング手順 {#mapping}
+## マッピング手順 {#mapping}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
