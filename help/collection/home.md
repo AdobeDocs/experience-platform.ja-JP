@@ -5,10 +5,10 @@ title: データ収集の概要
 topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: a150c23dffde9431953a019509e9554159052d21
-workflow-type: ht
-source-wordcount: '320'
-ht-degree: 100%
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 95%
 
 ---
 
@@ -43,6 +43,6 @@ Platform Edge Network は、データを大規模に受信および処理でき�
 
 ## データの迅速かつ安全な変換、拡張、送信
 
-[Adobe Experience Platform Launch サーバーサイド](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=ja)では、任意の Platform データストリームを活用できます。クライアントデバイスにサードパーティのコードを追加することなく、アドビ以外の任意の宛先に対して、非常に少ない遅延でデータを変換、拡張、および送信することができるため、より高速で安全なデータ収集と配信が実現します。
+[Adobe Experience Platformのイベント転送では、任意のPlatform](../tags/ui/event-forwarding/overview.md) データストリームをタップできます。クライアントデバイスにサードパーティのコードを追加することなく、アドビ以外の任意の宛先に対して、非常に少ない遅延でデータを変換、拡張、および送信することができるため、より高速で安全なデータ収集と配信が実現します。
 
 ![](./images/launch.png)
