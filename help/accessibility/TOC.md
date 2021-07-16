@@ -16,5 +16,5 @@ ht-degree: 100%
 * [アクセシビリティ機能](features.md)
 * [Platform のカスタムアクセシビリティ](custom.md)
 * [Platform ドキュメント](https://experienceleague.adobe.com/docs/experience-platform.html?lang=ja)
-* [Platform の概要](https://www.adobe.com/go/platform-overview-en)
+* [Platform の概要](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=ja)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)
