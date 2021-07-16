@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform リリースノート
 breadcrumb-title: Platform リリースノート
 user-guide-description: Adobe Experience Platform の月次リリースノートです。
 source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '51'
 ht-degree: 100%
 
