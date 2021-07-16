@@ -2,15 +2,15 @@
 title: Adobe Experience Platform Web SDKでサポートされる使用例
 description: Adobe Experience Platform Web SDKでサポートされる使用例を説明します。
 keywords: web sdk；使用例
-source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '565'
 ht-degree: 16%
 
 ---
 
 
-# サポートされる使用例
+# サポートされるユースケース
 
 このページでは、Web SDKでサポートされる使用例と追加情報へのリンクを示します。
 
@@ -43,7 +43,7 @@ ht-degree: 16%
 | プロファイルに対してデータセットが有効になっている場合、リアルタイム顧客データプロファイルにデータを送信する機能 |  |
 | データをCustomer Journey Analyticsにリアルタイムで送信 |  |
 | プロファイルへの書き込み同意 | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
-| サーバーサイドでリアルタイムにサードパーティにデータを転送する | [ドキュメント](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
+| サーバーサイドでリアルタイムにサードパーティにデータを転送する | [ドキュメント](../../tags/ui/event-forwarding/overview.md) |
 | ID名前空間のサポート |  |
 
 {style=&quot;table-layout:auto&quot;}
