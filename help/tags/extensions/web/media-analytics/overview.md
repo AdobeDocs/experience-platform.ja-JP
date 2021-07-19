@@ -1,9 +1,9 @@
 ---
 title: Adobe Media Analytics for Audio and Video 拡張機能の概要
 description: Adobe Experience PlatformのAnalytics for Audio and VideoAdobe Mediumタグ拡張について説明します。
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '991'
 ht-degree: 93%
 
 ---
@@ -52,7 +52,7 @@ Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 2.
 | Export APIs to Window Object | グローバルスコープへの Media Analytics API の書き出しを有効または無効にします |
 | Variable Name | `window` オブジェクトの下の Media Analytics API を書き出すために使用する変数 |
 
-**リマインダー：** MA 拡張機能には、[ Analytics](../analytics/overview.md) および [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html?lang=ja) 拡張機能が必要です。また、拡張機能プロパティにこれらの拡張機能を追加して設定する必要があります。
+**リマインダー：** MA 拡張機能には、[ Analytics](../analytics/overview.md) および [Experience Cloud ID](../id-service/overview.md) 拡張機能が必要です。また、拡張機能プロパティにこれらの拡張機能を追加して設定する必要があります。
 
 ## MA 拡張機能の使用
 
@@ -176,7 +176,7 @@ MA 拡張機能は、`get-instance` および `media-heartbeat` 共有モジュ�
 
 >[!NOTE]
 >
->**テスト：**&#x200B;このリリースでは、拡張機能をテストするには、すべての独立した拡張機能にアクセスできる [ Platform ](https://github.com/Adobe-Marketing-Cloud/reactor-user-docs/tree/73a73bd5ff53162339ce5ded3f4bba4712146d20/extension-reference/launch.adobe.com) に拡張機能をアップロードする必要があります。
+>**テスト：**&#x200B;このリリースでは、拡張機能をテストするには、すべての独立した拡張機能にアクセスできる [ Platform ](../../../extension-dev/submit/upload-and-test.md) に拡張機能をアップロードする必要があります。
 
 
 <!--
