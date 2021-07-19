@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Web情報データ型
 topic-legacy: overview
 description: このドキュメントでは、Web情報エクスペリエンスデータモデル(XDM)データタイプの概要を説明します。
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '190'
 ht-degree: 4%
 
 ---
@@ -27,5 +27,5 @@ ht-degree: 4%
 
 データタイプについて詳しくは、パブリックXDMリポジトリを参照してください。
 
-* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.schema.json)
+* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.example.1.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.schema.json)
