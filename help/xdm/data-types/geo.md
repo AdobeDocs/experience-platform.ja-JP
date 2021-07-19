@@ -5,10 +5,10 @@ title: 地域データタイプ
 topic-legacy: overview
 description: このドキュメントでは、地域XDMデータタイプの概要を説明します。
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 37%
+source-wordcount: '202'
+ht-degree: 36%
 
 ---
 
@@ -33,5 +33,5 @@ ht-degree: 37%
 
 データタイプについて詳しくは、パブリックXDMリポジトリを参照してください。
 
-* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
+* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)
