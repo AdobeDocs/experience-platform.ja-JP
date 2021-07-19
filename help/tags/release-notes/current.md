@@ -1,10 +1,10 @@
 ---
 title: リリースノート
 description: Adobe Experience Platformのタグに関する最新のリリースノートです。
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 67%
+source-wordcount: '498'
+ht-degree: 54%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 67%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+
+## 2021 年 7 月 19 日
+
+**「プロパティの管理」権限の調整**  — プロパティの管理権限で、ユーザーが新しいプロパティを作成する権限を持っているが、作成後に表示できない問題が発生しました(こちらのコミュニティスレッドで説明していま [す](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176))。記事の説明に従って、修正が有効になり、権限が適用されるようになりました。
+
+>[!NOTE]
+>
+>新しい「プロパティを編集」権限をユーザーグループに割り当てた場合、UIは更新されず、プロパティ設定画面のフィールドが有効になりません。 この問題の修正は、今後のリリースで実装されます。
 
 ## 2021 年 5 月 17 日（PT）
 
