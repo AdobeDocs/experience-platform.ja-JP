@@ -1,10 +1,10 @@
 ---
 title: イベント転送の概要
 description: Adobe Experience Platformでのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '915'
-ht-degree: 49%
+source-wordcount: '906'
+ht-degree: 48%
 
 ---
 
@@ -110,7 +110,7 @@ Adobe Experience Platformでデータストリームを作成するには、イ�
 
 1. Edge ドメインを選択します。
 
-設定オプションについて詳しくは、[Web SDK 拡張機能のドキュメント](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html?lang=ja)を参照してください。
+設定オプションについて詳しくは、[Web SDK 拡張機能のドキュメント](../../extensions/web/sdk/overview.md)を参照してください。
 
 ## Platform Web SDKにデータを送信するタグルールを作成する
 
