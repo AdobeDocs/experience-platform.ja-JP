@@ -1,10 +1,10 @@
 ---
 title: コンテンツセキュリティポリシー（CSP）のサポート
 description: Adobe Experience PlatformでWebサイトをタグと統合する際の、コンテンツセキュリティポリシー(CSP)の制限への対処方法について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1087'
-ht-degree: 59%
+source-wordcount: '1079'
+ht-degree: 58%
 
 ---
 
@@ -64,7 +64,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>`タグ**
 
 
-非常に重要な前提条件は次のとおりです。タグライブラリ[非同期で](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/asynchronous-deployment.html?lang=ja)を読み込む必要があります。 タグライブラリの同期読み込みでは動作しません（コンソールエラーやルールが正しく実行されない原因となります）。
+非常に重要な前提条件は次のとおりです。タグライブラリ[非同期で](./asynchronous-deployment.md)を読み込む必要があります。 タグライブラリの同期読み込みでは動作しません（コンソールエラーやルールが正しく実行されない原因となります）。
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
