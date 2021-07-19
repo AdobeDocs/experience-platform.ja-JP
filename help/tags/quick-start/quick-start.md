@@ -1,10 +1,10 @@
 ---
 title: クイックスタートガイド
 description: Adobe Experience Platformでタグをすばやく使い始める方法を説明します。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1562'
-ht-degree: 45%
+source-wordcount: '1533'
+ht-degree: 44%
 
 ---
 
@@ -134,8 +134,6 @@ Webページ、ホスティング場所、タグの間の関係を理解する�
 ## その他のリソース
 
 タグについて詳しくは、次のリソースを参照してください。
-
-[https://forums.adobe.com/community/experience-cloud/platform/launchAsk](https://forums.adobe.com/community/experience-cloud/platform/launchAsk) を参照して質問に回答、アイデアを共有、他のユーザーのアイデアに投票します。Adobe IDでログインします。
 
 * **[データ収集コミュニティ](https://forums.adobe.com/community/experience-cloud/platform/launch)**:質問に回答、アイデアを送信、他のユーザーのアイデアに投票します。Adobe IDでログインします。
 * **[開発者向けドキュメント](https://developer.adobelaunch.com/)**:タグ開発者コミュニティに参加し、拡張機能を作成またはタグAPIを使用する
