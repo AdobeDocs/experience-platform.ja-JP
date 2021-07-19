@@ -1,9 +1,9 @@
 ---
 title: Adobe Analytics Product String 拡張機能の概要
 description: Adobe Experience PlatformのAdobe Analytics Product Stringタグ拡張について説明します。
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '524'
 ht-degree: 95%
 
 ---
@@ -93,4 +93,4 @@ digitalData.transaction.item.productInfo.productName
 ### 要件
 
 * すべての製品関連データ（製品 ID、数量、価格など）の変数を含む、オブジェクトベースの[データレイヤー](https://theblog.adobe.com/data-layers-buzzword-best-practice/)。この拡張機能は、アレイベースのデータレイヤーでは機能しません。
-* [Adobe Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html?lang=ja) 拡張機能がインストールされている必要があります。
+* [Adobe Analytics](../analytics/overview.md) 拡張機能がインストールされている必要があります。
