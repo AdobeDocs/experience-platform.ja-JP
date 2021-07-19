@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDKのインストール
 description: Experience Platform Web SDK のインストール方法について説明します.
 keywords: web sdkのインストール；web sdkのインストール；internet explorer;promise;npmパッケージ
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 31%
+source-wordcount: '928'
+ht-degree: 32%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform Web SDKの使用方法は3つあります。
 
 ## オプション1:Adobe Experience Platform Launch拡張機能のインストール
 
-Adobe Experience Platform Launch拡張機能に関するドキュメントについては、[launchのドキュメント](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)を参照してください。
+Adobe Experience Platform Launch拡張機能に関するドキュメントについては、[launchのドキュメント](../../tags/extensions/web/sdk/overview.md)を参照してください。
 
 ## オプション2:事前にビルドされたスタンドアロンバージョンのインストール
 
@@ -35,7 +35,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 * 縮小解除：[https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js)
 
 
-### コード{#adding-the-code}の追加
+### コードの追加 {#adding-the-code}
 
 事前にビルドされたスタンドアロンバージョンには、ページに直接追加された「ベースコード」が必要です。 次の「ベースコード」を、HTMLの`<head>`タグ内のできる限り上位にコピーして貼り付けます。
 
@@ -69,7 +69,7 @@ URL構造：https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.jsまた�
 
 このベースコードは、グローバル関数を作成するだけでなく、サーバ上でホストされる外部ファイル（`alloy.js`）に含まれる追加のコードも読み込みます。デフォルトでは、このコードは非同期で読み込まれ、Web ページのパフォーマンスを可能な限り高めます。これは推奨される実装です。
 
-### Internet Explorer のサポート  {#support-internet-explore}
+### Internet Explorer のサポート {#support-internet-explore}
 
 このSDKは、非同期タスクの完了を伝える方法であるpromiseを使用します。 SDKで使用される[Promise](https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Global_Objects/Promise)実装は、[!DNL Internet Explorer]を除くすべてのターゲットブラウザーでネイティブにサポートされます。 [!DNL Internet Explorer]でSDKを使用するには、`window.Promise` [ポリフィル](https://remysharp.com/2010/10/08/what-is-a-polyfill)が必要です。
 
