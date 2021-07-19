@@ -8,7 +8,7 @@ exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
 workflow-type: tm+mt
 source-wordcount: '530'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ Adobe Experience Platform は、デジタルエクスペリエンスアプリケ
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 実稼働用サンドボックス リセット機能 | Adobe Audience ManagerまたはAudience Core Serviceとの双方向のセグメント共有に使用する実稼動用サンドボックスをリセットできるようになりました。 これは、UIから実行するか、APIの新しい`validationOnly`パラメーターと`ignoreWarnings`パラメーターを使用して実行できます。 詳しくは、 [UIでのサンドボックスのリセット](../../sandboxes/ui/user-guide.md)と[APIでのサンドボックスのリセット](../../sandboxes/api/sandboxes.md)に関するチュートリアルを参照してください。 |
+| 実稼働用サンドボックス リセット機能の強化 | Adobe Audience Manager または Audience Core Service との双方向のセグメント共有に使用される実稼動用サンドボックスをリセットできるようになりました。これは、UI から実行するか、API の新しい `validationOnly` パラメーターと `ignoreWarnings` パラメーターを使用して実行できます。詳しくは、[UI でのサンドボックスのリセット](../../sandboxes/ui/user-guide.md)と [API でのサンドボックスのリセット](../../sandboxes/api/sandboxes.md)に関するチュートリアルを参照してください。 |
 
 ## ソース {#sources}
 
@@ -50,7 +50,7 @@ Experience Platform は、様々なデータプロバイダーのソース接続
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| [!DNL Veeva CRM] （ベータ版） | [!DNL Flow Service] APIまたはUIを使用して、[!DNL Veeva CRM]をExperience Platformに接続できるようになりました。 詳しくは、[[!DNL Veeva CRM] コネクタの概要](../../sources/connectors/crm/veeva.md)を参照してください。 |
-| ストリーミングデータフローの監視のサポート | ソースUIワークスペースを使用して、対応する指標とステータスを持つストリーミングソースからのデータ取り込みアクティビティを監視できるようになりました。 詳しくは、[ストリーミングデータフローの監視](../../sources/tutorials/ui/monitor-streaming.md)に関するチュートリアルを参照してください。 |
+| [!DNL Veeva CRM] （ベータ版） | [!DNL Flow Service] API または UI を使用して、[!DNL Veeva CRM] を Experience Platform に接続できるようになりました。詳しくは、[[!DNL Veeva CRM] コネクタの概要](../../sources/connectors/crm/veeva.md)を参照してください。 |
+| ストリーミングデータフローの監視のサポート | ソース UI ワークスペースを使用して、対応する指標とステータスでストリーミングソースからのデータ取り込みアクティビティを監視できるようになりました。詳しくは、[ストリーミングデータフローの監視](../../sources/tutorials/ui/monitor-streaming.md)に関するチュートリアルを参照してください。 |
 
 ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
