@@ -3,16 +3,16 @@ title: Adobe Experience Platform Web SDKの概要
 description: Adobe Experience Platform Web SDKを使用して、Platform機能をWebサイトに統合する方法を説明します。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 7607f01109de1f6207f2e910a8620698c60b89d4
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '665'
 ht-degree: 14%
 
 ---
 
 # Adobe Experience Platform Web SDKの概要
 
-Adobe Experience Platform Web SDKは、Adobe Experience Cloudのお客様がAdobe Experience Platform Edgeネットワークを通じて[!DNL Experience Cloud]内の様々なサービスを操作できる、クライアントサイドJavaScriptライブラリです。 JavaScriptライブラリに加えて、Web SDKの設定に役立つ[Experience Platform Launch拡張](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)があります。
+Adobe Experience Platform Web SDKは、Adobe Experience Cloudのお客様がAdobe Experience Platform Edgeネットワークを通じて[!DNL Experience Cloud]内の様々なサービスを操作できる、クライアントサイドJavaScriptライブラリです。 JavaScriptライブラリに加えて、Web SDKの設定に役立つ[Experience Platform Launch拡張](../tags/extensions/web/sdk/overview.md)があります。
 
 ## Experience Edge
 
