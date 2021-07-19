@@ -1,19 +1,79 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；トラブルシューティングガイド；faq；トラブルシューティング；
+keywords: Experience Platform；ホーム；人気のあるトピック；クエリサービス；クエリサービス；トラブルシューティングガイド；faq；トラブルシューティング；
 solution: Experience Platform
 title: クエリサービストラブルシューティングガイド
 topic-legacy: troubleshooting
 description: このドキュメントには、発生する一般的なエラーコードと考えられる原因に関する情報が含まれています。
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e3557fe75680153f051b8a864ad8f6aca5f743ee
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 82%
+source-wordcount: '418'
+ht-degree: 40%
 
 ---
 
 # [!DNL Query Service] トラブルシューティングガイド
+
+このドキュメントでは、クエリサービスに関するよくある質問に対する回答を示し、クエリサービスを使用する際によく見られるエラーコードのリストを示します。 Adobe Experience Platform の他のサービスに関する質問やトラブルシューティングについては、[Experience Platform のトラブルシューティングガイド](../landing/troubleshooting.md)を参照してください。
+
+## よくある質問
+
+次に、クエリサービスに関するよくある質問に対する回答のリストを示します。
+
+### クエリのメタデータのみを取得するにはどうすればよいですか？
+
+クエリのメタデータのみを取得するには、次のように、0行を返すクエリを実行します。
+
+```sql
+SELECT * FROM <table> WHERE 1=0
+```
+
+このクエリは、指定したテーブルのメタデータのみを返します。
+
+### CTAS(Create Table as Select)クエリを実体化せずに、すばやく繰り返し処理する方法を教えてください。
+
+一時テーブルを作成して、クエリを実現する前にクエリをすばやく繰り返し実行できます。 また、一時テーブルを使用して、クエリが機能しているかどうかを検証することもできます。
+
+例えば、一時テーブルを作成できます。
+
+```sql
+CREATE temp TABLE temp_dataset AS
+SELECT *
+FROM actual_dataset
+WHERE 1 = 0;
+```
+
+次に、一時テーブルを次のように使用します。
+
+```sql
+INSERT INTO temp_dataset
+SELECT a._company AS _company,
+a._id AS _id,
+a.timestamp AS timestamp
+FROM actual_dataset a
+WHERE timestamp >= To_timestamp('2021-01-21 12:00:00')
+AND timestamp < To_timestamp('2021-01-21 13:00:00')
+LIMIT 100;
+```
+
+### 時系列データのフィルタリングはどのように行う必要がありますか。
+
+時系列データを使用してクエリを実行する場合、より正確な分析をおこなうには、可能な限りタイムスタンプフィルターを使用する必要があります。
+
+タイムスタンプフィルターの使用例を以下に示します。
+
+```sql
+SELECT a._company  AS _company,
+       a._id       AS _id,
+       a.timestamp AS timestamp
+FROM   dataset a
+WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
+       AND timestamp < To_timestamp('2021-01-21 13:00:00')
+```
+
+### データセットからすべての行を取得する場合は、ワイルドカード（*など）を使用する必要がありますか？
+
+クエリサービスは、従来の行ベースのストアシステムではなく、**column-store**&#x200B;として扱う必要があるので、ワイルドカードを使用して行からすべてのデータを取得することはできません。
 
 ## REST API エラー
 
