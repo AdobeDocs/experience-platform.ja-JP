@@ -4,9 +4,9 @@ title: 同意と環境設定のデータタイプ
 description: プライバシー、パーソナライゼーション、マーケティングの環境設定のデータ型の同意は、お客様のデータ操作から、CMP（同意管理プラットフォーム）やその他のソースによって生成された顧客の権限や設定を収集することを目的としています。
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1905'
 ht-degree: 3%
 
 ---
@@ -309,4 +309,4 @@ ht-degree: 3%
 
 ### [!UICONTROL 同意と環境設定]スキーマ全体 {#full-schema}
 
-[!UICONTROL 同意と環境設定]データタイプの完全なスキーマを表示するには、[公式のXDMリポジトリ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)を参照してください。
+[!UICONTROL 同意と環境設定]データタイプの完全なスキーマを表示するには、[公式のXDMリポジトリ](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json)を参照してください。
