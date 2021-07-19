@@ -1,9 +1,9 @@
 ---
 title: Tags Satellite Object Reference
 description: クライアント側の_satelliteオブジェクトと、それを使用してAdobe Experience Platformで実行できる様々な機能について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1123'
 ht-degree: 51%
 
 ---
@@ -86,7 +86,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-プロパティに [!DNL Adobe Experience Cloud ID] 拡張機能がインストールされている場合、このメソッドは訪問者 ID インスタンスを返します。詳しくは、[Experience Cloud ID サービスのドキュメント](https://forums.adobe.com/external-link.jspa?url=https%3A%2F%2Fmarketing.adobe.com%2Fresources%2Fhelp%2Fja_JP%2Fmcvid%2F)を参照してください。
+プロパティに [!DNL Adobe Experience Cloud ID] 拡張機能がインストールされている場合、このメソッドは訪問者 ID インスタンスを返します。詳しくは、[Experience Cloud ID サービスのドキュメント](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ja)を参照してください。
 
 ## `logger`
 
