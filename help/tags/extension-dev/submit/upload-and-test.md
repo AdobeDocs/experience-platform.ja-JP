@@ -1,7 +1,7 @@
 ---
 title: 拡張機能のエンドツーエンドテストのアップロードと実装
 description: Adobe Experience Platformで拡張機能を検証、アップロード、テストする方法について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 35%
@@ -228,9 +228,3 @@ facebook拡張機能の例を使用して、テストサイトでページが読
 1. リソースを変更します。拡張機能コンポーネントの設定が変更されている場合は、データ収集UIでこれらのリソースを更新する必要があります。
 1. ライブラリに最新の変更を追加して、再びビルドします。
 1. 別のテストを実施します。
-
-<!--
-## Document {#document}
-
-Your [exchange listing](./create-listing.md) is a great place for marketing and support information for your extension, but our tags [Help Docs](https://experienceleague.adobe.com/docs/launch/using/overview.html) are used every day by our customers. We encourage you to submit a pull request to [add your extension documentation](https://github.com/AdobeDocs/launch.en/blob/master/help/extension-reference/3rd-party-extensions.md) into the tags user docs. Open source docs for the win! 🚀
--->
