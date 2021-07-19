@@ -3,9 +3,9 @@ title: Platform Web SDKでのOffer decisioningの使用
 description: Adobe Experience Platform Web SDKは、Offer decisioningで管理されるパーソナライズされたオファーを配信し、レンダリングできます。 オファーUIまたはAPIを使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 6b3548e2db596d56aeacec8f2d5cdd29ddc09bf2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '779'
 ht-degree: 9%
 
 ---
@@ -65,7 +65,7 @@ offer decisioningを有効にするには、次の手順を実行する必要が
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. [SDK](../../fundamentals/installing-the-sdk.md)のインストールの手順に従います(SDKは、スタンドアロンで、または[Adobe Experience Platform Launch](http://launch.adobe.com/jp)を通じてインストールできます)。 以下に、Platform launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)のクイックスタートガイドを示します。[
+1. [SDK](../../fundamentals/installing-the-sdk.md)のインストールの手順に従います(SDKは、スタンドアロンで、または[Adobe Experience Platform Launch](http://launch.adobe.com/jp)を通じてインストールできます)。 以下に、Platform launch](../../../tags/quick-start/quick-start.md)のクイックスタートガイドを示します。[
 1. [SDKを](../../fundamentals/configuring-the-sdk.md) Offer decisioningその他のOffer decisioning固有の手順を以下に示します。
 
    * スタンドアロンでインストールされたSDK
@@ -83,26 +83,26 @@ offer decisioningを有効にするには、次の手順を実行する必要が
          ```
    * platform launchがインストールしたSDK
 
-      1. [platform launchプロパティの作成](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
+      1. [platform launchプロパティの作成](../../../tags/ui/administration/companies-and-properties.md)
       1. [埋め込みコードのPlatform launch](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. 先ほど作成したデータストリームを使用して、「Datastream」ドロップダウンから設定を選択し、Platform Web SDK拡張機能をインストールして設定します。 [拡張機能](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html)に関するドキュメントを参照してください。
+      1. 先ほど作成したデータストリームを使用して、「Datastream」ドロップダウンから設定を選択し、Platform Web SDK拡張機能をインストールして設定します。 [拡張機能](../../../tags/ui/managing-resources/extensions/overview.md)に関するドキュメントを参照してください。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. 必要な[データ要素](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html)を作成します。 少なくとも、Platform Web SDK Identity MapとPlatform Web SDK XDMオブジェクトデータ要素を作成する必要があります。
+      1. 必要な[データ要素](../../../tags/ui/managing-resources/data-elements.md)を作成します。 少なくとも、Platform Web SDK Identity MapとPlatform Web SDK XDMオブジェクトデータ要素を作成する必要があります。
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. [ルール](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html)を作成します。
+      1. [ルール](../../../tags/ui/managing-resources/rules.md)を作成します。
 
          * Platform Web SDKの「イベントを送信」アクションを追加し、関連する`decisionScopes`をそのアクションの設定に追加します。
 
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-      1. [設定したすべての関連](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) するルール、データ要素および拡張機能を含むライブラリを作成して公開します。
+      1. [設定したすべての関連](../../../tags/ui/publishing/libraries.md) するルール、データ要素および拡張機能を含むライブラリを作成して公開します。
 
 
 
