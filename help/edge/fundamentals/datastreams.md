@@ -3,10 +3,10 @@ title: Experience PlatformWeb SDK用のDatastreamの設定
 description: 'データストリームの設定方法を説明します。 '
 keywords: 設定；datastreams;datastreamId;edge;edge設定id；環境設定；edgeConfigId;ID同期有効；ID同期コンテナID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲット；クライアントコード；Target環境ID;Cookie宛先；Analytics設定ブロックレポートスイートID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 0%
+source-wordcount: '896'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Adobe Experience Platform Web SDKの設定は、2つの場所に分かれてい�
 
 >[!NOTE]
 >
->データストリーム設定ツールは、許可リストで[!DNL Experience Platform Launch]をタグマネージャーとして使用しているかどうかに関係なく、ユーザーが使用できます。 さらに、ユーザーには[!DNL Experience Platform Launch]で開発権限が必要です。 詳しくは、 [!DNL Experience Platform Launch]ドキュメントの[ユーザー権限](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html)の記事を参照してください。
+>データストリーム設定ツールは、許可リストで[!DNL Experience Platform Launch]をタグマネージャーとして使用しているかどうかに関係なく、ユーザーが使用できます。 さらに、ユーザーには[!DNL Experience Platform Launch]で開発権限が必要です。 詳しくは、 [!DNL Experience Platform Launch]ドキュメントの[ユーザー権限](../../tags/ui/administration/user-permissions.md)の記事を参照してください。
 
 画面の右上にある「**[!UICONTROL 新しいデータストリーム]**」をクリックして、データストリームを作成します。 名前と説明を入力すると、各環境のデフォルト設定が求められます。 以下に、使用可能な設定について説明します。
 
@@ -83,7 +83,7 @@ Adobe Targetを設定するには、クライアントコードを指定する�
 
 ### [!UICONTROL プロパティトークン]
 
-[!DNL Target] では、プロパティを使用して権限を制御できます。詳しくは、[!DNL Target]ドキュメントの[Enterprise権限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html)の節を参照してください。
+[!DNL Target] では、プロパティを使用して権限を制御できます。詳しくは、[!DNL Target]ドキュメントの[Enterprise権限](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=ja)の節を参照してください。
 
 プロパティトークンは、[!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL プロパティ]にあります。
 
