@@ -5,9 +5,9 @@ title: 電子メールアドレスのデータタイプ
 topic-legacy: overview
 description: このドキュメントでは、 EメールアドレスXDMデータタイプの概要を説明します。
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '192'
 ht-degree: 2%
 
 ---
@@ -32,5 +32,5 @@ ht-degree: 2%
 
 Eメールアドレスのデータタイプについて詳しくは、パブリックXDMリポジトリを参照してください。
 
-* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.schema.json)
+* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)
