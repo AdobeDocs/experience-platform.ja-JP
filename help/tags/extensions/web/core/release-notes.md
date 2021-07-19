@@ -1,9 +1,9 @@
 ---
 title: コア拡張機能のリリースノート
 description: Adobe Experience PlatformのCore拡張機能の最新のリリースノートです。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1211'
 ht-degree: 89%
 
 ---
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **CSP nonce のサポート**：コア拡張機能にオプションの構成パラメーターが追加されました。nonce を参照するデータ要素を追加できます。設定した場合、タグがページに追加するすべてのインラインスクリプトで、設定したナンスが使用されます。 この変更は、コンテンツセキュリティポリシーと nonce を併用し、Platform Launch スクリプトを CSP 環境で引き続き読み込めるようにするためのものです。CSP での Platform Launch の使用について詳しくは、[こちら](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/content-security-policy.html)を参照してください。
+* **CSP nonce のサポート**：コア拡張機能にオプションの構成パラメーターが追加されました。nonce を参照するデータ要素を追加できます。設定した場合、タグがページに追加するすべてのインラインスクリプトで、設定したナンスが使用されます。 この変更は、コンテンツセキュリティポリシーと nonce を併用し、Platform Launch スクリプトを CSP 環境で引き続き読み込めるようにするためのものです。CSP での Platform Launch の使用について詳しくは、[こちら](../../../ui/client-side/content-security-policy.md)を参照してください。
 
 ## 2019 年 6 月 18 日（PT）
 
