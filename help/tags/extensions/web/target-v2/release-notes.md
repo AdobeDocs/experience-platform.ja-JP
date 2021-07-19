@@ -1,9 +1,9 @@
 ---
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience PlatformのAdobe Target v2タグ拡張の最新のリリースノートです。
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '438'
 ht-degree: 78%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 78%
 
 ### Adobe Target v2 Extension 0.14
 
-- [On-Device Decisioning](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html?lang=ja#load-target-with-on-device-decisioning) を使用した Load Target の新しいアクションが追加されました。このアクションは、On-Device Decisioning 機能を備えた at.js 2.5 を読み込みます。
+- [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning) を使用した Load Target の新しいアクションが追加されました。このアクションは、On-Device Decisioning 機能を備えた at.js 2.5 を読み込みます。
 - at.js を 2.5 にアップデートしました。
 
 
