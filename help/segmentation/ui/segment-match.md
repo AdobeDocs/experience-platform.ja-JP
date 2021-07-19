@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントマッチの概要
 topic-legacy: overview
 description: セグメントマッチは、2人以上のPlatformユーザーが、安全で管理され、プライバシーに優れた方法でセグメントデータを交換できる、Adobe Experience Platformのセグメント共有サービスです。
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1901'
 ht-degree: 6%
 
 ---
@@ -63,7 +63,7 @@ ID名前空間は、[Adobe Experience Platform IDサービス](../../identity-se
 
 [!DNL Segment Match]のデフォルトの同意設定は`opt-out`に設定されます。 データに対してオプトインモデルを強制するには、担当のAdobeアカウントマネージャーに電子メールでリクエストを送信してください。
 
-データ共有の同意値の設定に使用される`share`属性について詳しくは、[privacy and consents field group](../../xdm/field-groups/profile/consents.md)に関する次のドキュメントを参照してください。 プライバシー、パーソナライゼーション、マーケティングの環境設定に関するデータの収集と使用に関する消費者の同意を取り込むために使用する特定のフィールドグループについて詳しくは、次の[GitHubの例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md)を参照してください。
+データ共有の同意値の設定に使用される`share`属性について詳しくは、[privacy and consents field group](../../xdm/field-groups/profile/consents.md)に関する次のドキュメントを参照してください。 プライバシー、パーソナライゼーション、マーケティングの環境設定に関するデータの収集と使用に関する消費者の同意を取り込むために使用する特定のフィールドグループについて詳しくは、次の[GitHubの例](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md)を参照してください。
 
 ### データ使用ラベルの設定
 
