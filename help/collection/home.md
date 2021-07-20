@@ -5,10 +5,10 @@ title: データ収集の概要
 topic-legacy: overview
 description: Adobe Experience Platform での顧客体験に関するデータ収集で使用される様々なテクノロジーについて説明します。
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 95%
+source-wordcount: '312'
+ht-degree: 84%
 
 ---
 
@@ -37,7 +37,7 @@ Adobe Experience Platform Web およびモバイル SDK では、すべてのア
 
 ## アドビテクノロジーをデプロイするためのスイッチ切り替えプロセス
 
-Platform Edge Network は、データを大規模に受信および処理できる、世界中に分散した高速で信頼性の高いサーバーのネットワークです。Platform Launch を使用すると、Adobe Target、Adobe Audience Manager、Adobe Analytics などの製品に対して[エッジ構成](../edge/fundamentals/datastreams.md)を設定できます。これにより、クライアントサイドのコードを変更せずに、サーバサイドでこれらの製品をアクティブ化できます。
+Platform Edge Network は、データを大規模に受信および処理できる、世界中に分散した高速で信頼性の高いサーバーのネットワークです。platform launchを使用して、Adobe Target、Adobe Audience Manager、Adobe Analyticsなどの製品に[datastreams](../edge/fundamentals/datastreams.md)を設定し、クライアント側のコードを変更せずに、サーバー側でこれらの製品をアクティブ化できます。
 
 ![](./images/deploy.png)
 
