@@ -1,11 +1,11 @@
 ---
 title: Experience PlatformWeb SDK用のDatastreamの設定
 description: 'データストリームの設定方法を説明します。 '
-keywords: 設定；datastreams;datastreamId;edge;edge設定id；環境設定；edgeConfigId;ID同期有効；ID同期コンテナID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲット；クライアントコード；Target環境ID;Cookie宛先；Analytics設定ブロックレポートスイートID;
+keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID同期有効；ID同期コンテナID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Target環境ID;Cookie宛先；Analytics設定ブロックレポートスイートID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '895'
 ht-degree: 1%
 
 ---
