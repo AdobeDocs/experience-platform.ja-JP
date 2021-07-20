@@ -5,9 +5,9 @@ title: 同意データと環境設定データを取り込むためのデータ�
 topic-legacy: getting started
 description: Adobe Experience Platformで同意データと環境設定データを取り込むためのExperience Data Model(XDM)スキーマとデータセットの設定方法について説明します。
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: ff793c207a181ca6d2486e7fd6ef5c4f57744fba
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1480'
 ht-degree: 4%
 
 ---
@@ -116,7 +116,7 @@ Adobe Experience Platformが顧客の同意/環境設定データを処理する
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-編集したスキーマが、Platform Web SDKエッジ設定で指定された[!UICONTROL プロファイルデータセット]で使用されている場合、そのデータセットには新しい同意フィールドが含まれるようになります。 これで、[同意処理ガイド](./overview.md#merge-policies)に戻り、同意データを処理するためのExperience Platformの設定プロセスを続行できます。
+編集したスキーマが、Platform Web SDKデータストリームで指定された[!UICONTROL プロファイルデータセット]で使用されている場合、そのデータセットには新しい同意フィールドが含まれるようになります。 これで、[同意処理ガイド](./overview.md#merge-policies)に戻り、同意データを処理するためのExperience Platformの設定プロセスを続行できます。
 
 このスキーマのデータセットをまだ作成していない場合は、次の節の手順に従います。
 
@@ -150,7 +150,7 @@ Adobe Experience Platformが顧客の同意/環境設定データを処理する
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-これで、データセットが保存され、[!DNL Profile]での使用が有効になります。 Platform Web SDKを使用して同意データをプロファイルに送信する場合は、[エッジ設定](../../../../edge/fundamentals/datastreams.md)を設定する際に、このデータセットを[!UICONTROL プロファイルデータセット]として選択する必要があります。
+これで、データセットが保存され、[!DNL Profile]での使用が有効になります。 Platform Web SDKを使用して同意データをプロファイルに送信する場合は、[datastream](../../../../edge/fundamentals/datastreams.md)を設定する際に、このデータセットを[!UICONTROL プロファイルデータセット]として選択する必要があります。
 
 ## 次の手順
 
