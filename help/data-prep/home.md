@@ -5,10 +5,10 @@ title: Data Prep の概要
 topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform 内でのData Prep について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
-workflow-type: ht
-source-wordcount: '437'
-ht-degree: 100%
+source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+workflow-type: tm+mt
+source-wordcount: '492'
+ht-degree: 88%
 
 ---
 
@@ -24,6 +24,10 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 - Data Prep 内で操作されたデータをプレビューする
 
 また、Data Prep では、組み込みのデータ検証をいくつか適用して、データの整合性が取り込まれたときに整合性が確実に維持されるようにします。可能な場合、Data Prep は入力データスキーマを XDM に自動的にマッピングします。データエンジニアは、推奨されたマッピングを変更、修正、および削除し、必要に応じてマッピングに置き換えることができます。
+
+>[!NOTE]
+>
+>結果のメッセージが無効なXDMでない限り、データ準備で変換エラーが発生すると、これらの属性は`null`に設定され、残りの行は取り込まれます。 行が無効なXDMと解決された場合、行は取り込まれません。**** どちらの場合も、エラーはドキュメントに記載されます。
 
 ## マッピング
 
