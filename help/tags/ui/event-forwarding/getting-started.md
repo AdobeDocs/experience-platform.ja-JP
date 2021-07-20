@@ -1,7 +1,7 @@
 ---
 title: イベント転送の概要
 description: Adobe Experience Platformでのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 48%
