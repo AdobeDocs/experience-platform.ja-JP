@@ -1,9 +1,9 @@
 ---
 title: 拡張機能マニフェスト
 description: 拡張機能の適切な使用方法を Adobe Experience Platform に知らせる JSON マニフェストファイルの設定方法について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2646'
 ht-degree: 77%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 77%
 
 | プロパティ | 説明 |
 | --- | --- |
-| `name` | 拡張機能の名前。他のすべての Reactor 拡張機能とは異なる名前を使用し、[命名規則](#naming-rules)に従う必要があります。 **これはタグで識別子として使用され、拡張機能を公開した後は変更しないでください。** |
+| `name` | 拡張機能の名前。他のすべての 拡張機能とは異なる名前を使用し、[命名規則](#naming-rules)に従う必要があります。 **これはタグで識別子として使用され、拡張機能を公開した後は変更しないでください。** |
 | `platform` | 拡張機能のプラットフォーム。 現時点で使用できる値は `web` のみです。 |
 | `version` | 拡張機能のバージョン。 [semver](http://semver.org/) のバージョニング形式に従う必要があります。 これは、[npm バージョンフィールド](https://docs.npmjs.com/files/package.json#version)と一致します。 |
 | `displayName` | 人間が判読できる、拡張機能の名前。これは、Platformユーザーに表示されます。 「tags」や「Extension」に言及する必要はありません。のユーザーは、タグ拡張が表示されていることを既に把握しています。 |
