@@ -4,10 +4,10 @@ title: 宛先ダッシュボード
 description: Adobe Experience Platformは、組織のアクティブな宛先に関する重要な情報を表示できるダッシュボードを提供します。
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 6%
+source-wordcount: '895'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platformユーザーインターフェイス(UI)は、毎日の
 
 Experience Platformの概要、および宛先内で使用可能なすべての宛先のカタログについては、[宛先のドキュメント](../../destinations/home.md)を参照してください。
 
-##  宛先ダッシュボードデータ  {#destinations-dashboard-data}
+##  宛先ダッシュボードデータ {#destinations-dashboard-data}
 
 [!UICONTROL 宛先]ダッシュボードには、組織がエクスペリエンスプロファイル内で有効にした宛先のスナップショットが表示されます。 スナップショット内のデータは、スナップショットが作成された特定の時点でのデータとまったく同じ内容を示します。つまり、スナップショットはデータの近似やサンプルではなく、宛先ダッシュボードはリアルタイムで更新されません。
 
@@ -35,9 +35,17 @@ Platform UI内で宛先ダッシュボードに移動するには、左側のレ
 
 ![](../images/destinations/dashboard-overview.png)
 
-## 使用可能なウィジェット
+### 宛先ダッシュボードの変更
 
-Experience Platformは、宛先に関連する様々な指標を視覚化するために使用できる、複数のウィジェットを提供します。 詳しくは、以下のウィジェットの名前を選択してください。
+「**[!UICONTROL ダッシュボードを変更]**」を選択して、宛先ダッシュボードの外観を変更できます。 これにより、ダッシュボードからウィジェットを移動、追加、削除したり、**[!UICONTROL ウィジェットライブラリ]**&#x200B;にアクセスして使用可能なウィジェットを調べたり、組織のカスタムウィジェットを作成したりできます。
+
+詳しくは、[ダッシュボード](../customize/modify.md)と[ウィジェットライブラリの概要](../customize/widget-library.md)のドキュメントを参照してください。
+
+## 標準ウィジェット
+
+Adobeは、宛先に関連する様々な指標を視覚化するために使用できる、複数の標準ウィジェットを提供します。 [!UICONTROL ウィジェットライブラリ]を使用して、組織と共有するカスタムウィジェットを作成することもできます。 カスタムウィジェットの作成の詳細については、まず[ウィジェットライブラリの概要](../customize/widget-library.md)をお読みください。
+
+使用可能な各標準ウィジェットの詳細を確認するには、次のリストからウィジェットの名前を選択します。
 
 * [[!UICONTROL 最も使用される宛先]](#most-used-destinations)
 * [[!UICONTROL 最近作成した宛先]](#recently-created-destinations)
