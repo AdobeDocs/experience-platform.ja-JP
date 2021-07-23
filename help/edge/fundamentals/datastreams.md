@@ -3,7 +3,7 @@ title: Experience PlatformWeb SDK用のDatastreamの設定
 description: 'データストリームの設定方法を説明します。 '
 keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID同期有効；ID同期コンテナID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Target環境ID;Cookie宛先；Analytics設定ブロックレポートスイートID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Adobe Experience Platform Web SDKの設定は、2つの場所に分かれてい�
 
 データストリームは、Adobe[!DNL Experience Platform Launch]でデータストリーム設定ツールを使用して作成できます。
 
-![datastreamsツールのナビゲーション](../../assets/datastreams_config.png)
+![datastreamsツールのナビゲーション](../images/datastreams/config.png)
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ SDKで`edgeConfigId`として使用されるIDは、設定と環境を指定す�
 
 サードパーティIDセクションは、常にオンになる唯一のセクションです。 次の2つの設定を使用できます。&quot;[!UICONTROL サードパーティID同期が有効]&quot;および&quot;[!UICONTROL サードパーティID同期コンテナID]&quot;。
 
-![設定UIのIDセクション](../../assets/edge_configuration_identity.png)
+![設定UIのIDセクション](../images/datastreams/edge_configuration_identity.png)
 
 ### [!UICONTROL サードパーティID同期が有効]
 
@@ -53,7 +53,7 @@ ID同期をコンテナにグループ化して、異なるID同期を異なる�
 
 ここに示す設定を使用すると、Adobe Experience Platformにデータを送信できます。 Adobe Experience Platformを購入済みの場合にのみ、このセクションを有効にする必要があります。
 
-![Adobe Experience Platform設定ブロック](../../assets/edge_configuration_aep.png)
+![Adobe Experience Platform設定ブロック](../images/datastreams/edge_configuration_aep.png)
 
 ### [!UICONTROL サンドボックス]
 
@@ -71,7 +71,7 @@ ID同期をコンテナにグループ化して、異なるID同期を異なる�
 
 Adobe Targetを設定するには、クライアントコードを指定する必要があります。 その他のフィールドはオプションです。
 
-![Adobe Target設定ブロック](../../assets/edge_configuration_target.png)
+![Adobe Target設定ブロック](../images/datastreams/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ Adobeでは、この設定を`dev`、`stage`、`prod`の各データストリー
 
 Adobe Audience Managerにデータを送信するために必要な操作は、この節を有効にすることだけです。 その他の設定はオプションですが、推奨されます。
 
-![Adobeオーディエンス管理設定ブロック](../../assets/edge_configuration_aam.png)
+![Adobeオーディエンス管理設定ブロック](../images/datastreams/edge_configuration_aam.png)
 
 ### [!UICONTROL Cookieの宛先が有効]
 
@@ -111,7 +111,7 @@ SDKが[URLの宛先](https://experienceleague.adobe.com/docs/audience-manager/us
 
 データをAdobe Analyticsに送信するかどうかを制御します。 追加の詳細については、[Analyticsの概要](../data-collection/adobe-analytics/analytics-overview.md)を参照してください。
 
-![Adobe Analytics設定ブロック](../../assets/edge_configuration_aa.png)
+![Adobe Analytics設定ブロック](../images/datastreams/edge_configuration_aa.png)
 
 ### [!UICONTROL レポートスイート ID]
 
