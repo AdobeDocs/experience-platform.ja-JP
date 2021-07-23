@@ -4,9 +4,9 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: スキーマ
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '312'
 ht-degree: 45%
 
 ---
@@ -25,6 +25,7 @@ ht-degree: 45%
       * [概要](./schema/industries/overview.md)
       * [小売](./schema/industries/retail.md)
       * [金融サービス](./schema/industries/financial.md)
+      * [通信業](./schema/industries/telecom.md)
       * [旅行と接客業](./schema/industries/travel-hospitality.md)
 * クラス {#classes}
    * [XDM 個人プロファイル](./classes/individual-profile.md)
