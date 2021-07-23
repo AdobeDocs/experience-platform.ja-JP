@@ -5,7 +5,7 @@ title: Adobe Experience Platform 概要
 topic-legacy: getting started
 description: Adobe Experience Platform を使用すると、組織はデータサイエンスと機械学習を適用する前に顧客データを一元化および標準化して、パーソナライズされた豊かなエクスペリエンスの設計と配信を劇的に改善することができます。
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 5fae56fcfc395984d29c74e90cb56b3964d99767
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 100%
@@ -50,7 +50,7 @@ RESTful API に基づいて構築された [!DNL Experience Platform] は、シ�
 * [**用語集**](glossary.md)\
    Adobe Experience Platform の用語を確認します。
 
-* [**リリースノート**](https://www.adobe.com/go/platform-release-notes.en)\
+* [**リリースノート**](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)\
    最新の [!DNL Experience Platform] リリースに関する情報を検索し、過去のリリースを確認します。
 
 * [**トラブルシューティングガイド**](troubleshooting.md)\
