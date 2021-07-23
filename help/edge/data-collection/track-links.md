@@ -1,19 +1,18 @@
 ---
-title: Adobe Experience PlatformWeb SDKを使用したリンクの追跡
-description: Experience PlatformWeb SDKを使用してリンクデータをAdobe Analyticsに送信する方法を学びます
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page表示;link tracking;links;track links;clickCollection;click collection;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Adobe Experience Platform Web SDKを使用したリンクの追跡
+description: Experience PlatformWeb SDKを使用してAdobe Analyticsにリンクデータを送信する方法を説明します
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webインタラクション；ページビュー；リンクトラッキング；リンク；clickCollection;click collection;
+exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
+source-git-commit: b22eccb34e98ca2da47fe849492ee464d679d2a0
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
+# リンクのトラッキング
 
-# リンクの追跡
-
-リンクは手動で設定するか、[自動的に](#automaticLinkTracking)追跡することができます。 手動トラッキングは、スキーマの`web.webInteraction`部分に詳細を追加することで行います。 次の3つの必須変数があります。
+リンクは、手動で設定することも、[自動的に](#automaticLinkTracking)追跡することもできます。 手動トラッキングは、スキーマの`web.webInteraction`部分に詳細を追加することでおこなわれます。 次の3つの必須変数があります。
 
 * `web.webInteraction.name`
 * `web.webInteraction.type`
@@ -27,8 +26,8 @@ alloy("sendEvent", {
         "linkClicks": {
             "value":1
       },
-      "name":"My Custom Link", //Name that shows up in the custom links report
-      "URL":"https://myurl.com", //the URL of the link
+      "name":"My Custom Link", // Name that shows up in the custom links report
+      "URL":"https://myurl.com", // The URL of the link
       "type":"other", // values: other, download, exit
       }
     }
@@ -42,9 +41,11 @@ alloy("sendEvent", {
 * **`download`:** ダウンロードリンク
 * **`exit`:** 離脱リンク
 
-## 自動リンクトラッキング{#automaticLinkTracking}
+[設定](adobe-analytics/analytics-overview.md)した場合、これらの値は[自動的にAdobe Analyticsにマッピングされます。](adobe-analytics/automatically-mapped-vars.md)
 
-デフォルトでは、Web SDKは、該当するリンクタグのクリックをキャプチャ、ラベル付けおよび記録します。 クリック数は、ドキュメントに接続されている[キャプチャ](https://www.w3.org/TR/uievents/#capture-phase)クリックイベントリスナーを使用してキャプチャされます。
+## 自動リンクトラッキング {#automaticLinkTracking}
+
+デフォルトでは、Web SDKは、対象となるリンクタグのクリックをキャプチャ、ラベル付けおよび記録します。 クリック数は、ドキュメントに添付された[キャプチャ](https://www.w3.org/TR/uievents/#capture-phase)クリックイベントリスナーを使用してキャプチャされます。
 
 自動リンクトラッキングは、Web SDKを[設定](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled)することで無効にできます。
 
@@ -52,18 +53,40 @@ alloy("sendEvent", {
 clickCollectionEnabled: false
 ```
 
-### どのタグがリンクトラッキングに適合しますか？{#qualifyingLinks}
+### リンクトラッキングに適したタグは何ですか？{#qualifyingLinks}
 
-アンカー`A`タグと`AREA`タグに対して、自動リンクトラッキングが実行されます。 ただし、これらのタグに`onclick`ハンドラーがアタッチされている場合、リンクトラッキングは考慮されません。
+自動リンクトラッキングは、アンカー`A`タグと`AREA`タグに対しておこなわれます。 ただし、`onclick`ハンドラーが添付されている場合、これらのタグはリンクトラッキングの対象と見なされません。
 
-### リンクのラベルは？{#labelingLinks}
+### リンクにラベルは付きますか？{#labelingLinks}
 
-アンカータグにdownload属性が含まれている場合、またはリンクが人気のあるファイル拡張子で終わる場合、リンクはダウンロードリンクとしてラベル付けされます。 ダウンロードリンク修飾子は、正規式を使用して[設定](../fundamentals/configuring-the-sdk.md)できます。
+アンカータグにダウンロード属性が含まれる場合、またはリンクが一般的なファイル拡張子で終わる場合、リンクにダウンロードリンクというラベルが付けられます。 ダウンロードリンク修飾子は、正規表現を使用して[設定](../fundamentals/configuring-the-sdk.md)できます。
 
 ```javascript
 downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
 ```
 
-リンクターゲットドメインが現在の`window.location.hostname`と異なる場合、リンクは離脱リンクとしてラベル付けされます。
+リンクターゲットドメインが現在の`window.location.hostname`と異なる場合、リンクに出口リンクというラベルが付けられます。
 
 ダウンロードリンクまたは離脱リンクと見なされないリンクは、「その他」とラベル付けされます。
+
+### リンクトラッキングの値は、どのようにフィルタリングできますか？
+
+自動リンクトラッキングで収集されたデータを調べ、フィルタリングするには、[onBeforeEventSendコールバック関数](../fundamentals/tracking-events.md#modifying-events-globally)を指定します。
+
+リンクトラッキングデータのフィルタリングは、Analyticsレポート用のデータを準備する際に役立ちます。 自動リンクトラッキングでは、リンク名とリンクURLの両方がキャプチャされます。 Analyticsレポートでは、リンク名がリンクURLよりも優先されます。 リンクURLを報告する場合は、リンク名を削除する必要があります。 次の例は、ダウンロードリンクのリンク名を削除する`onBeforeEventSend`関数を示しています。
+
+```javascript
+alloy("configure", {
+  onBeforeEventSend: function(options) {
+    if (options
+      && options.xdm
+      && options.xdm.web
+      && options.xdm.web.webInteraction) {
+        if (options.xdm.web.webInteraction.type === "download") {
+          options.xdm.web.webInteraction.name = undefined;
+        }
+    }
+  }
+});
+```
+
