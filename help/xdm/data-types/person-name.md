@@ -5,10 +5,10 @@ title: ユーザー名データタイプ
 topic-legacy: overview
 description: このドキュメントでは、ユーザー名XDMデータタイプの概要を説明します。
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 22%
+source-wordcount: '256'
+ht-degree: 21%
 
 ---
 
@@ -33,5 +33,5 @@ ht-degree: 22%
 
 ユーザー名データタイプについて詳しくは、パブリックXDMリポジトリを参照してください。
 
-* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.example.1.json)
-* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.schema.json)
+* [入力済みの例](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
+* [フルスキーマ](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)
