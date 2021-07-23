@@ -1,9 +1,9 @@
 ---
 title: Adobe Media Analytics for Audio and Video 拡張機能の概要
 description: Adobe Experience PlatformのAnalytics for Audio and VideoAdobe Mediumタグ拡張について説明します。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '986'
 ht-degree: 93%
 
 ---
@@ -108,7 +108,7 @@ MA 拡張機能は、[!UICONTROL 設定] ページ内の「Windows オブジェ�
 
 ### 他の拡張機能からの使用
 
-MA 拡張機能は、`get-instance` および `media-heartbeat` 共有モジュールを他の拡張機能に公開します。（共有モジュールについて詳しくは、[共有モジュールのドキュメント](https://developer.adobelaunch.com/extensions/shared_modules/)/を参照してください。）
+MA 拡張機能は、`get-instance` および `media-heartbeat` 共有モジュールを他の拡張機能に公開します。（共有モジュールについて詳しくは、[共有モジュールのドキュメント](../../../extension-dev/web/shared.md)/を参照してください。）
 
 >[!IMPORTANT]
 >
