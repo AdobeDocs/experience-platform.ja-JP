@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDKでサポートされる使用例
 description: Adobe Experience Platform Web SDKでサポートされる使用例を説明します。
 keywords: web sdk；使用例
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 16%
+source-wordcount: '555'
+ht-degree: 15%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 16%
 | ページ上の複数の組織へのデータ送信 | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
 | 詳細なエラーレポートとログ |  |
 | クライアント側およびサーバー側の要求をトレースする |  |
-| Adobe Experience Platform Launch拡張機能 | [Web SDK拡張機能のドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html?lang=en#extension) |
+| Adobe Experience Platform Launch拡張機能 | [Web SDK拡張機能のドキュメント](../../tags/extensions/web/sdk/overview.md) |
 | 使用可能なデバッグツール | [Debugger拡](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) 張機能と [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
 {style=&quot;table-layout:auto&quot;}
