@@ -4,9 +4,9 @@ title: 業界データモデルの概要
 topic-legacy: overview
 description: 標準のエクスペリエンスデータモデル(XDM)コンポーネントを使用して構築できる、様々な業種向けの標準化されたデータモデルについて説明します。
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
+source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -38,6 +38,7 @@ ERDは、次の業種向けに提供されています。
 
 * [[!UICONTROL 小売]](./retail.md)
 * [[!UICONTROL 金融サービス]](./financial.md)
+* [[!UICONTROL 通信業]](./telecom.md)
 * [[!UICONTROL 旅行と接客業]](./travel-hospitality.md)
 
 ## 次の手順
