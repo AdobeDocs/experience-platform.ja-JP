@@ -1,40 +1,39 @@
 ---
-title: Adobe Experience PlatformWeb SDKで自動的にマッピングされたAdobe Analytics変数
-description: Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について学習します。
-seo-description: Adobe Experience PlatformWeb SDKを使用してAdobe Analyticsで自動的にマッピングされる変数を学習します。
-keywords: adobe analytics；変数；analytics；自動マップ；自動マップ；
+title: Adobe Experience Platform Web SDKで自動的にマッピングされたAdobe Analytics変数
+description: Adobe AnalyticsでExperience PlatformWeb SDKを使用して自動的にマッピングされる変数について説明します。
+seo-description: Adobe Experience Platform Web SDKを使用してAdobe Analyticsで自動的にマッピングされる変数について説明します
+keywords: adobe analytics；変数；analytics；自動マップ；自動マッピング；
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-translation-type: tm+mt
-source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
+source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '708'
 ht-degree: 35%
 
 ---
 
 # [!DNL Analytics]に自動的にマッピングされる変数
 
-以下は、Adobe Experience Platformエッジネットワークが自動的にAdobe Analyticsにマッピングする変数のリストです。
+以下に、Adobe Experience Platform Edge NetworkがAdobe Analyticsに自動的にマッピングする変数のリストを示します。 Adobe Analyticsデータ収集クエリーパラメーターに関する詳細については、『Analytics導入ガイド](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html)』を参照してください。[
 
 | XDM フィールドパス | [!DNL Analytics Query String] / HTTP ヘッダー | 説明 |
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | AppMeasurement コンテキストデータ `c.a.appid` のマッピング。 |
 | `application.launches.value` | `c.a.launches` | AppMeasurement コンテキストデータ `c.a.launches` のマッピング。 |
-| `commerce.checkouts.id` | `events` | `scCheckout` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.checkouts.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_SC_CHECKOUTとのAppMeasurementクエリパラメーターイベントー_リスト_FULLのマッピング。 |
+| `commerce.checkouts.id` | `events` | `scCheckout` イベントのシリアル化。このフィールドを除外すると（つまり、シリアル化されていないイベントの場合）、システムは独自のID値を生成し、エンティティに割り当てます。 |
+| `commerce.checkouts.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_SC_CHECKOUTを使用したAppMeasurementクエリパラメーターEVENT_LIST_FULLのマッピング。 |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement クエリパラメーター CURRENCY のマッピング。 |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement クエリパラメーター PURCHASEID のマッピング。 |
-| `commerce.productListAdds.id` | `events` | `scAdd` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productListAdds.value` | `events` | イベント`,`を使用した、コンバージョンCOMMERCE_SC_とのAppMeasurementクエリパラメーター追加_リスト_FULLのマッピング。 |
-| `commerce.productListOpens.id` | `events` | `scOpen` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productListOpens.value` | `events` | イベント`,`を使用した、コンバージョンCOMMERCE_SC_OPENとのAppMeasurementクエリパラメーターのリスト__FULLのマッピング。 |
-| `commerce.productListRemovals.id` | `events` | `scRemove` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productListRemovals.value` | `events` | イベント`,`を使用した、コンバージョンCOMMERCE_SC_REMOVEとのAppMeasurementクエリパラメーターのリスト__FULLのマッピング。 |
-| `commerce.productListViews.id` | `events` | `scView` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productListViews.value` | `events` | イベント`,`を使用した、コンバージョンCOMMERCE_SC_表示とのAppMeasurementクエリパラメーターのリスト__FULLのマッピング。 |
-| `commerce.productViews.id` | `events` | `prodView` イベントのシリアル化。このフィールドを除外すると(シリアライズされていないイベントの場合など)、独自のID値が生成され、エンティティに割り当てられます。 |
-| `commerce.productViews.value` | `events` | AppMeasurementクエリパラメータイベント_リスト_FULLのマッピング(コンバージョンCOMMERCE_PROD_表示とのマッピング)。区切り文字`,`を使用します。 |
-| `commerce.purchases.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_PURCHASEとのAppMeasurementクエリパラメーターイベントー_リスト_FULLのマッピング。 |
+| `commerce.productListAdds.id` | `events` | `scAdd` イベントのシリアル化。このフィールドを除外すると（つまり、シリアル化されていないイベントの場合）、システムは独自のID値を生成し、エンティティに割り当てます。 |
+| `commerce.productListAdds.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_SC_ADDを使用したAppMeasurementクエリパラメーターEVENT_LIST_FULLのマッピング。 |
+| `commerce.productListOpens.id` | `events` | `scOpen` イベントのシリアル化。このフィールドを除外すると（つまり、シリアル化されていないイベントの場合）、システムは独自のID値を生成し、エンティティに割り当てます。 |
+| `commerce.productListOpens.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_SC_OPENを使用したAppMeasurementクエリパラメーターEVENT_LIST_FULLのマッピング。 |
+| `commerce.productListRemovals.id` | `events` | `scRemove` イベントのシリアル化。このフィールドを除外すると（つまり、シリアル化されていないイベントの場合）、システムは独自のID値を生成し、エンティティに割り当てます。 |
+| `commerce.productListRemovals.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_SC_REMOVEを使用したAppMeasurementクエリパラメーターEVENT_LIST_FULLのマッピング。 |
+| `commerce.productListViews.id` | `events` | `scView` イベントのシリアル化。このフィールドを除外すると（つまり、シリアル化されていないイベントの場合）、システムは独自のID値を生成し、エンティティに割り当てます。 |
+| `commerce.productListViews.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_SC_VIEWとのAppMeasurementクエリパラメーターEVENT_LIST_FULLのマッピング。 |
+| `commerce.productViews.id` | `events` | `prodView` イベントのシリアル化。このフィールドを除外すると（つまり、シリアル化されていないイベントの場合）、システムは独自のID値を生成し、エンティティに割り当てます。 |
+| `commerce.productViews.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_PROD_VIEWとのAppMeasurementクエリパラメーターEVENT_LIST_FULLのマッピング。 |
+| `commerce.purchases.value` | `events` | 区切り文字`,`を使用した、コンバージョンCOMMERCE_PURCHASEとのAppMeasurementクエリパラメーターEVENT_LIST_FULLのマッピング。 |
 | `device.colorDepth` | `c` | AppMeasurement クエリパラメーター C_COLOR のマッピング。 |
 | `device.screenHeight` | `s` | AppMeasurementクエリパラメーターの画面解像度のマッピング。 |
 | `device.screenWidth` | `s` | AppMeasurementクエリパラメーターの画面解像度のマッピング。 |
@@ -67,7 +66,7 @@ ht-degree: 35%
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | AppMeasurement コンテキストデータ `a.media.name` のマッピング。 |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name` | `c.a.media.show` | AppMeasurement コンテキストデータ `c.a.media.show` のマッピング。 |
 | `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | コンバージョン VEDIO_SHOW_TYPE を使用した AppMeasurement コンテキストデータ `c.a.media.type` のマッピング。 |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurementコンテキストデータ`c.a.media.type`とコンバージョンVIDEO_SHOW_TYPEとのマッピング。 |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | コンバージョンVIDEO_SHOW_TYPEを使用したAppMeasurementコンテキストデータ`c.a.media.type`のマッピング。 |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | AppMeasurement コンテキストデータ `c.a.media.length` のマッピング。 |
 | `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | AppMeasurementコンテキストデータ。 |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastChannel` | `c.a.media.channel` | AppMeasurement コンテキストデータ `c.a.media.channel` のマッピング。 |
@@ -89,19 +88,19 @@ ht-degree: 35%
 | `placeContext.geo.longitude` | `lon` | AppMeasurement クエリパラメーター LONGITUDE のマッピング。 |
 | `placeContext.geo.postalCode` | `zip` | AppMeasurement クエリパラメーター ZIP のマッピング。 |
 | `placeContext.geo.stateProvince` | `state` | AppMeasurement クエリパラメーター STATE のマッピング。 |
-| `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurementクエリパラメータ製品のマーチャンダイジングイベント/Evarのマッピング。 |
-| `productlistitems.[N].name` | `products` | AppMeasurementクエリパラメーターの製品名のマッピング。 |
-| `productlistitems.[N].priceTotal` | `products` | AppMeasurementクエリパラメーターの製品価格のマッピング。 |
-| `productlistitems.[N].quantity` | `products` | AppMeasurementクエリパラメーターの製品数量のマッピング。 |
-| `web.webInteraction.URL` | `pev1` | AppMeasurementクエリパラメーターPAGE_イベント_VAR1のマッピング。 |
-| `web.webInteraction.name` | `pev2` | AppMeasurementクエリパラメーターPAGE_イベント_VAR2のマッピング。 |
-| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` に変更 `pe=lnk_o`します。 `web.webInteraction.type=download` に変更 `pe=lnk_d`します。 `web.webInteraction.type=exit` to  `pe=lnk_e` |
+| `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurementクエリパラメーター「製品」の「商品イベント/Evars」のマッピング。 |
+| `productlistitems.[N].name` | `products` | AppMeasurementクエリパラメーター「製品名」のマッピング。 |
+| `productlistitems.[N].priceTotal` | `products` | AppMeasurementクエリパラメーター「製品価格」のマッピング。 |
+| `productlistitems.[N].quantity` | `products` | AppMeasurementクエリパラメーター「製品数量」のマッピング。 |
+| `web.webInteraction.URL` | `pev1` | AppMeasurementクエリパラメーターPAGE_EVENT_VAR1のマッピング。 |
+| `web.webInteraction.name` | `pev2` | AppMeasurementクエリパラメーターPAGE_EVENT_VAR2のマッピング。 |
+| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` を次の値に設定 `pe=lnk_o`します。 `web.webInteraction.type=download` を次の値に設定 `pe=lnk_d`します。 `web.webInteraction.type=exit` を  `pe=lnk_e` |
 | `web.webPageDetails.URL` | `g` | AppMeasurement クエリパラメーター PAGE_URL のマッピング。 |
-| `web.webPageDetails.errorPage` | `pageType` | 変換ERROR_PAGE_TYPEを伴うAppMeasurementクエリパラメーターPAGE_TYPE_FULLのマッピング。 |
+| `web.webPageDetails.errorPage` | `pageType` | コンバージョンERROR_PAGE_TYPEを使用したAppMeasurementクエリパラメーターPAGE_TYPE_FULLのマッピング。 |
 | `web.webPageDetails.homePage` | `hp` | コンバージョン BOOLEAN_TO_YN を使用した AppMeasurement クエリパラメーター HOMEPAGE のマッピング。 |
 | `web.webPageDetails.name` | `gn` | AppMeasurement クエリパラメーター PAGENAME のマッピング。 |
 | `web.webPageDetails.server` | `sv` | AppMeasurement クエリパラメーター USER_SERVER のマッピング。 |
-| `web.webPageDetails.siteSection` | `ch` | AppMeasurementクエリパラメーターのチャネルマッピング。 |
+| `web.webPageDetails.siteSection` | `ch` | AppMeasurementクエリパラメーターCHANNELのマッピング。 |
 | `web.webReferrer.URL` | `r` | AppMeasurement クエリパラメーター REFERRER のマッピング。 |
 
 {style=&quot;table-layout:auto&quot;}
