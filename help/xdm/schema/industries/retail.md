@@ -4,16 +4,20 @@ title: 小売業界データモデル
 topic-legacy: overview
 description: Adobe Experience Platformで使用するエクスペリエンスデータモデル(XDM)と互換性のある、小売業界用の標準化されたデータモデルを表示します。
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
-source-git-commit: 9c5a4e064af0b46ff30b41afef71ca2fd3503a82
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 6%
+source-wordcount: '530'
+ht-degree: 5%
 
 ---
 
 #  小売業界のデータモデル
 
 次のエンティティ関係図(ERD)は、小売業界向けの標準化されたデータモデルを表しています。 ERDは、Adobe Experience Platformでのデータの格納方法を考慮して、意図的に非正規化方式で提示されます。
+
+>[!NOTE]
+>
+>説明に従うERDは、この業界の使用例に合わせてデータをモデル化する方法を推奨します。 Platformでこのデータモデルを利用するには、推奨されるスキーマとその関係を自分で作成する必要があります。 詳しくは、UIでの[スキーマ](../../ui/resources/schemas.md)と[関係](../../tutorials/relationship-ui.md)の管理に関するガイドを参照してください。
 
 次の凡例を使用して、このERDを解釈します。
 
