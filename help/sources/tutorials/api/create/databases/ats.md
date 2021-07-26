@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: フローサービスAPIを使用してAzure Table StorageをAdobe Experience Platformに接続する方法を説明します。
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 12%
@@ -39,7 +39,7 @@ ht-degree: 12%
 | 資格情報 | 説明 |
 | ---------- | ----------- |
 | `connectionString` | [!DNL Azure Table Storage]インスタンスへの接続に使用する接続文字列。 [!DNL Azure Table Storage]の接続文字列パターンは次のとおりです。`DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Azure Table Storage]の接続仕様IDは`ecde33f2-c56f-46cc-bdea-ad151c16cd69`です。 |
+| `connectionSpec.id` | 接続仕様は、ベース接続とソース接続の作成に関連する認証仕様を含む、ソースのコネクタプロパティを返します。 [!DNL Azure Table Storage]の接続仕様IDは`ecde33f2-c56f-46cc-bdea-ad151c16cd69`です。 |
 
 接続文字列の取得について詳しくは、[この [!DNL Azure Table Storage] ドキュメント](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)を参照してください。
 
