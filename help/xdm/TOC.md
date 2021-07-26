@@ -4,10 +4,10 @@ user-guide-title: エクスペリエンスデータモデル（XDM）システ�
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
 feature: スキーマ
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 45%
+source-wordcount: '320'
+ht-degree: 44%
 
 ---
 
@@ -40,11 +40,13 @@ ht-degree: 45%
       * [個人の連絡先の詳細](./field-groups/profile/personal-contact-details.md)
       * [同意と環境設定](./field-groups/profile/consents.md)
       * [セグメントメンバーシップの詳細](./field-groups/profile/segmentation.md)
+      * [通信購読](./field-groups/profile/telecom-subscription.md)
       * [勤務先の詳細](./field-groups/profile/work-contact-details.md)
    * イベントフィールドグループ{#event}
       * [キャンペーンマーケティングの詳細](./field-groups/event/campaign-marketing-details.md)
       * [チャネルの詳細](./field-groups/event/channel-details.md)
       * [コマースの詳細](./field-groups/event/commerce-details.md)
+      * [デバイスのトレードインの詳細](./field-groups/event/device-trade-in-details.md)
       * [エンドユーザーIDの詳細](./field-groups/event/enduserids.md)
       * [環境の詳細](./field-groups/event/environment-details.md)
       * [IAB TCF 2.0の同意](./field-groups/event/iab.md)
@@ -57,6 +59,7 @@ ht-degree: 45%
    * [コマース](./data-types/commerce.md)
    * [Consent String](./data-types/consent-string.md)
    * [同意と環境設定](./data-types/consents.md)
+   * [通貨](./data-types/currency.md)
    * [デバイス](./data-types/device.md)
    * [電子メールアドレス](./data-types/email-address.md)
    * [環境](./data-types/environment.md)
@@ -85,6 +88,7 @@ ht-degree: 45%
    * [製品リスト項目](./data-types/product-list-item.md)
    * [検索](./data-types/search.md)
    * [購読](./data-types/subscription.md)
+   * [通信購読](./data-types/telecom-subscription.md)
    * [Web情報](./data-types/web-information.md)
    * [Webインタラクション](./data-types/web-interaction.md)
    * [Webページの詳細](./data-types/webpage-details.md)
