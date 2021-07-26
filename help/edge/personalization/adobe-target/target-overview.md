@@ -3,9 +3,9 @@ title: Platform Web SDKでのAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDKでパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースのExperience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
+source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '1220'
 ht-degree: 5%
 
 ---
@@ -17,13 +17,29 @@ ht-degree: 5%
 次の機能はテスト済みで、現在[!DNL Target]でサポートされています。
 
 * [A/Bテスト](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [A4Tインプレッションおよびコンバージョンレポート](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [A4Tインプレッションおよびコンバージョンレポート](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=ja)
 * [Automated Personalizationアクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [エクスペリエンスのターゲット設定アクティビティ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [多変量分析テスト(MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 * [Recommendationsアクティビティ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [ネイティブのTargetインプレッションおよびコンバージョンレポート](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VECサポート](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+
+## [!DNL Platform Web SDK] システム図
+
+次の図は、[!DNL Target]と[!DNL Platform Web SDK]エッジ判定のワークフローを理解するのに役立ちます。
+
+![Platform Web SDKを使用したAdobe Target Edge Decisioningの図](./assets/target-platform-web-sdk.png)
+
+| を呼び出します | 詳細 |
+| --- | --- |
+| 1 | デバイスが[!DNL Platform Web SDK]を読み込みます。 [!DNL Platform Web SDK]は、XDMデータ、データストリーム環境ID、渡されたパラメーターおよび顧客ID（オプション）を使用して、エッジネットワークにリクエストを送信します。 ページ（またはコンテナ）は事前に非表示になっています。 |
+| 2 | エッジネットワークは、エッジサービスにリクエストを送信し、訪問者ID、同意、その他の訪問者コンテキスト情報（位置情報やデバイスのわかりやすい名前など）を含めてエッジをエンリッチメントします。 |
+| 3 | エッジネットワークは、訪問者IDと渡されたパラメーターを使用して、エンリッチメントされたパーソナライゼーションリクエストを[!DNL Target]エッジに送信します。 |
+| 4 | プロファイルスクリプトが実行され、[!DNL Target]プロファイルストレージにフィードされます。 プロファイルストレージは、[!UICONTROL オーディエンスライブラリ]からセグメントを取得します（例えば、[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]から共有されたセグメント）。 |
+| 5 | [!DNL Target]は、URLリクエストパラメーターとプロファイルデータに基づいて、現在のページビューと今後のプリフェッチされたビューで、訪問者に表示するアクティビティとエクスペリエンスを決定します。 [!DNL Target] 次に、これをedgeネットワークに送り返します。 |
+| 6 | a.Edgeネットワークは、追加のパーソナライゼーション用のプロファイル値を含めて、パーソナライゼーション応答をページに返します。 デフォルトコンテンツがちらつくことなく、可能な限り迅速に現在のページにパーソナライズされたコンテンツが表示されます。<br>b.シングルページアプリケーション(SPA)のユーザーアクションの結果として表示されるビュー用にパーソナライズされたコンテンツはキャッシュされるので、ビューがトリガーされたときに追加のサーバー呼び出しを必要とせずに、即座に適用できま&#x200B;す。<br>c.エッジネットワークは、同意、セッションID、ID、Cookieチェック、パーソナライゼーションなど、訪問者IDとその他の値をCookieで送信します。 |
+| 7 | エッジネットワークは、[!UICONTROL Analytics for Target](A4T)の詳細（アクティビティ、エクスペリエンス、コンバージョンのメタデータ）を[!DNL Analytics]エッジに転送しま&#x200B;す。 |
 
 ## [!DNL Adobe Target]を有効にする
 
@@ -128,7 +144,7 @@ alloy("sendEvent", {
 * ネットワーク
 * Operating System
 * サイトのページ
-* Browser
+* ブラウザー
 * トラフィックソース
 * 時間枠
 
