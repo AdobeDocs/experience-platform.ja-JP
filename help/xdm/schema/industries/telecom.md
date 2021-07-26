@@ -3,9 +3,9 @@ solution: Experience Platform
 title: 通信業界データモデルERD
 topic-legacy: overview
 description: Adobe Experience Platformで使用するエクスペリエンスデータモデル(XDM)と互換性のある、電気通信業界の標準化されたデータモデルを示すエンティティ関係図(ERD)を表示します。
-source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 #  通信業界データモデルERD
 
 次のエンティティ関係図(ERD)は、通信業界向けの標準化されたデータモデルを表しています。 ERDは、Adobe Experience Platformでのデータの格納方法を考慮して、意図的に非正規化方式で提示されます。
+
+>[!NOTE]
+>
+>説明に従うERDは、この業界の使用例に合わせてデータをモデル化する方法を推奨します。 Platformでこのデータモデルを利用するには、推奨されるスキーマとその関係を自分で作成する必要があります。 詳しくは、UIでの[スキーマ](../../ui/resources/schemas.md)と[関係](../../tutorials/relationship-ui.md)の管理に関するガイドを参照してください。
 
 次の凡例を使用して、このERDを解釈します。
 
