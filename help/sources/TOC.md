@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ソースコネクタのヘルプ
 breadcrumb-title: ソースコネクタガイド
 user-guide-description: 様々なソースや構造、ラベルからデータを取り込み、取り込んだデータを拡張します。
 feature: データ取得、ソース
-source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
+source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 17%
+source-wordcount: '628'
+ht-degree: 18%
 
 ---
 
@@ -75,6 +75,7 @@ ht-degree: 17%
       - [Shopifyコネクタ](connectors/ecommerce/shopify.md)
    - マーケティングの自動化{#marketing-automation}
       - [HubSpotコネクタ](connectors/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - 支払{#payments}
       - [PayPalコネクタ](connectors/payments/paypal.md)
    - プロトコル{#protocols}
@@ -127,6 +128,7 @@ ht-degree: 17%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - マーケティングの自動化{#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [SalesforceMarketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払{#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - プロトコル{#protocols}
@@ -214,6 +216,7 @@ ht-degree: 17%
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - マーケティングの自動化{#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [SalesforceMarketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - 支払{#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - プロトコル{#protocols}
