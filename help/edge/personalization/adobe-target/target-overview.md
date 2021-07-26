@@ -1,11 +1,11 @@
 ---
 title: Platform Web SDKでのAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDKでパーソナライズされたコンテンツをレンダリングする方法を説明します
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースのExperience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースのExperience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；図
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
+source-git-commit: c99bc94226b296463e92340723d1318e0775f6a7
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1223'
 ht-degree: 5%
 
 ---
