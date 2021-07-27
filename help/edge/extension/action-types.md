@@ -4,9 +4,9 @@ description: Adobe Experience Platform LaunchのAdobe Experience Platform Web SD
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 17ebf50965136f2c075f21eb3ecdcb1ce6da0b7d
+source-git-commit: 53864097af7d3278f56a3f23186de4eb405bcb51
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '585'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Adobe[!DNL Experience Platform]にイベントを送信し、Adobe Experience Pl
 
 - **タイプ：** このフィールドでは、XDMスキーマに記録されるイベントタイプを指定できます。デフォルトのイベントタイプについて詳しくは、[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api)を参照してください。
 - **データ：** XDMスキーマと一致しないデータは、このフィールドを使用して送信できます。このフィールドは、Adobe Targetプロファイルを更新しようとする場合や、Target Recommendations属性を送信しようとする場合に役立ちます。 例については、[ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en)を参照してください。
-- **結合ID:** イベントの結合IDを指 [定す](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) る場合は、このフィールドで指定できます。現時点では、ソリューションダウンストリームではイベントデータを結合できないことに注意してください。
+- **結合ID:** イベントの結合IDを指定する場合は、このフィールドで指定できます。現時点では、ソリューションダウンストリームではイベントデータを結合できないことに注意してください。
 - **データセットID:** データストリームで指定したデータセット以外のデータセットにデータを送信する必要がある場合は、ここでそのデータセットIDを指定できます。
 - **ドキュメントのアンロード：** ユーザーがページから離れた場合でもイベントがサーバーに到達することを確認するには、「ドキュメントはアンロードします」チェックボッ **[!UICONTROL クスをオン]** にします。これにより、イベントはサーバーに到達できますが、応答は無視されます。
 - **視覚的なパーソナライゼーションの決定をレンダリングする：** ページ上でパーソナライズされたコンテンツをレンダリングする場合は、「視覚的なパーソナライゼーションの決定 **[!UICONTROL をレンダリング」チェックボ]** ックスをオンにします。必要に応じて、判定範囲を指定することもできます。 パーソナライズされたコンテンツのレンダリングについて詳しくは、[パーソナライゼーションのドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content)を参照してください。
