@@ -3,25 +3,29 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
+source-git-commit: e158b8129fe5afe71af48b7c64ca34b00e79965c
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # リリースノート
 
-## バージョン2.5.0（2021年6月）
+## バージョン2.6.0 - 2021年7月28日
+
+* Adobe Targetのレスポンストークンなど、 `sendEvent`で解決されたプロミスに、より多くのパーソナライゼーションコンテンツを提供します。 `sendEvent`コマンドが実行されると、プロミスが返され、サーバーから受信した情報を含む`result`オブジェクトを使用して解決されます。 この結果オブジェクトには、 `decisions`という名前のプロパティが含まれます。 この`decisions`プロパティは非推奨です。 新しいプロパティ`propositions`が追加されました。 この新しいプロパティを使用すると、レスポンストークンなど、パーソナライゼーションに関するコンテンツにアクセスできます。 近日中に、その他のドキュメントも提供される予定です。
+
+## バージョン2.5.0 - 2021年6月
 
 * リダイレクトパーソナライゼーションオファーのサポートを追加しました。
 * 自動的に収集されたビューポートの幅と高さが負の値の場合、サーバーに送信されなくなります。
 * `onBeforeEventSend`コールバックから`false`を返してイベントがキャンセルされた場合に、メッセージがログに記録されるようになりました。
 * 単一のイベントを対象とする特定のXDMデータが複数のイベントにまたがって含まれる問題を修正しました。
 
-## バージョン2.4.0（2021年3月）
+## バージョン2.4.0 - 2021年3月
 
-* これで、SDKをnpmパッケージ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html)として[インストールできます。
+* これで、SDKをnpmパッケージ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=ja)として[インストールできます。
 * [デフォルトの同意](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent)を設定する際の`out`オプションのサポートが追加され、同意が得られるまですべてのイベントが破棄されます（既存の`pending`オプションはイベントをキューに追加し、同意が得られると送信します）。
 * [onBeforeEventSendコールバック](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend)を使用して、イベントの送信を防ぐことができるようになりました。
 * レンダリングまたはクリックされるパーソナライズされたコンテンツに関するイベントを送信する際に、 `meta.personalization`の代わりにXDMスキーマフィールドグループを使用するようになりました。
@@ -33,7 +37,7 @@ ht-degree: 4%
 * バグ修正：ユーザーが新しい単一ページのアプリビューに移動して元のビューに戻り、コンバージョンに適した要素をクリックした場合、パーソナライズ機能のインタラクション通知イベントに同じアクティビティに関する重複情報が含まれます。
 * バグ修正：SDKから送信された最初のイベントの`documentUnloading`が`true`に設定されていた場合、[`sendBeacon`](https://developer.mozilla.org/ja-JP/docs/Web/API/Navigator/sendBeacon)を使用してイベントが送信され、IDが確立されないことに関するエラーが発生します。
 
-## バージョン2.3.0（2020年11月）
+## バージョン2.3.0 - 2020年11月
 
 * コンテンツセキュリティポリシーをより厳格にするために、nonceのサポートを追加しました。
 * シングルページアプリケーションのパーソナライゼーションのサポートを追加しました。
@@ -43,12 +47,12 @@ ht-degree: 4%
 * バグ修正：読み取り専用の`message`プロパティを含むブラウザーエラーの一部が適切に処理されず、結果として異なるエラーがお客様に表示されていました。
 * バグ修正：iframeのHTMLページが親ウィンドウのHTMLページとは異なるサブドメインからのものである場合、iframe内でSDKを実行するとエラーが発生します。
 
-## バージョン2.2.0（2020年10月）
+## バージョン2.2.0 - 2020年10月
 
 * バグ修正：`idMigrationEnabled`が`true`の場合、オプトインオブジェクトはAlloyが呼び出しを行うのをブロックしていました。
 * バグ修正：ちらつきの問題を防ぐために、パーソナライゼーションオファーを返す必要があるリクエストをAlloyに認識させます。
 
-## バージョン2.1.0（2020年8月）
+## バージョン2.1.0 - 2020年8月
 
 * `syncIdentity`コマンドを削除し、`sendEvent`コマンドでこれらのIDを渡すことをサポートします。
 * IAB 2.0 Consent Standardをサポートします。
