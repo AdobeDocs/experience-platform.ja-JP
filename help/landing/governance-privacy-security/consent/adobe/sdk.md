@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDKを使用した顧客の同意データ�
 topic-legacy: getting started
 description: Adobe2.0標準を使用して、Adobe Experience Platform Web SDKを統合し、Adobe Experience Platformで顧客の同意データを処理する方法について説明します。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1285'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 3%
 Adobe Experience Platform Web SDKを使用すると、同意管理プラットフォーム(CMP)によって生成された顧客の同意シグナルを取得し、同意変更イベントが発生するたびにAdobe Experience Platformに送信できます。
 
 **SDKは、標準の** CMPとのインターフェイスを提供しません。SDKをWebサイトに統合する方法を決定し、CMPで同意の変更をリッスンして、適切なコマンドを呼び出す必要があります。 このドキュメントでは、CMPをPlatform Web SDKと統合する方法に関する一般的なガイダンスを提供します。
+
+>[!NOTE]
+>
+>このガイドでは、データ収集UIのタグ拡張機能を使用してSDKを統合する手順について説明します。 代わりにスタンドアロンバージョンのSDKを使用する場合は、次のドキュメントを参照してください。
+>
+>* [データストリームの設定](../../../../edge/fundamentals/datastreams.md)
+* [SDK のインストール](../../../../edge/fundamentals/installing-the-sdk.md)
+* [SDK の設定 同意コマンド](../../../../edge/consent/supporting-consent.md)
+
 
 ## 前提条件
 
@@ -44,7 +53,7 @@ SDKがExperience Platformにデータを送信するには、Adobe Experience Pl
 終了したら、画面の下部にある「**[!UICONTROL 保存]**」を選択し、追加のプロンプトに従って設定を完了します。
 
 
-## Platform Web SDK拡張機能のインストールと設定
+## Platform Web SDKのインストールと設定
 
 前の節で説明したようにデータストリームを作成したら、最終的にサイトにデプロイするPlatform Web SDK拡張機能を設定する必要があります。 SDK拡張機能がPlatform launchプロパティにインストールされていない場合は、左側のナビゲーションで「**[!UICONTROL 拡張機能]**」を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 次に、使用可能な拡張機能のリストで、「Platform SDK拡張機能」の下の「**[!UICONTROL インストール]**」を選択します。
 
@@ -86,7 +95,7 @@ platform launchUIでデータ要素を作成するには、左側のナビゲー
 
 拡張機能の設定が完了したら、Webサイトに統合できます。 更新されたライブラリビルドのデプロイ方法について詳しくは、Platform launchドキュメントの[パブリッシュガイド](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)を参照してください。
 
-## 同意変更コマンドの実行
+## 同意変更コマンドの実行 {#commands}
 
 SDK拡張機能をWebサイトに統合したら、 Platform Web SDK `setConsent`コマンドを使用して、Platformに同意データを送信できます。
 
@@ -96,8 +105,7 @@ SDK拡張機能をWebサイトに統合したら、 Platform Web SDK `setConsent
 1. 同意設定の変更を検出するCMPフックまたはイベントリスナーの一部として
 
 >[!NOTE]
->
->Platform SDKコマンドの一般的な構文の紹介については、[コマンド](../../../../edge/fundamentals/executing-commands.md)の実行に関するドキュメントを参照してください。
+Platform SDKコマンドの一般的な構文の紹介については、[コマンド](../../../../edge/fundamentals/executing-commands.md)の実行に関するドキュメントを参照してください。
 
 `setConsent`コマンドは、次の2つの引数を受け取ります。
 
@@ -138,8 +146,7 @@ alloy("setConsent", {
 | `value` | プロファイルが有効なデータセットの同意フィールドの構造に準拠するXDMオブジェクトとして提供される、顧客の更新された同意情報。 |
 
 >[!NOTE]
->
->`Adobe`（`IAB TCF`など）と組み合わせて他の同意標準を使用する場合は、各標準の`consent`配列にオブジェクトを追加できます。 各オブジェクトには、表す同意基準の`standard`、`version`および`value`に対する適切な値が含まれている必要があります。
+`Adobe`（`IAB TCF`など）と組み合わせて他の同意標準を使用する場合は、各標準の`consent`配列にオブジェクトを追加できます。 各オブジェクトには、表す同意基準の`standard`、`version`および`value`に対する適切な値が含まれている必要があります。
 
 次のJavaScriptは、Webサイト上で同意設定の変更を処理する関数の例を示しています。この関数は、イベントリスナーまたはCMPフック内のコールバックとして使用できます。
 
