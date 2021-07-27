@@ -3,9 +3,9 @@ title: Platform Web SDKでのAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDKでパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースのExperience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；図
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: c99bc94226b296463e92340723d1318e0775f6a7
+source-git-commit: 1d2f1651dc9d9ab41507e65fd4b2bb84e9660187
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1256'
 ht-degree: 5%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 5%
 # [!DNL Adobe Target]と[!DNL Platform Web SDK]の使用
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] では、で管理されるパーソナライズされたエクスペリエンスを配 [!DNL Adobe Target] 信し、レンダリングできます。[Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)(VEC)、または非ビジュアルインターフェイスである[フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)と呼ばれるWYSIWYGエディターを使用して、アクティビティとパーソナライゼーションエクスペリエンスを作成、アクティブ化、配信できます。
+
+>[!IMPORTANT]
+>
+>[Adobe Targetのドキュメント](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en)には、Targetの機能に関連する、Platform Web SDKに固有の情報を含むトピックが含まれています。
 
 次の機能はテスト済みで、現在[!DNL Target]でサポートされています。
 
