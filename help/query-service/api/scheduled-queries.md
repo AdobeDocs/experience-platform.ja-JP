@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；クエリサービス；クエリサービス；スケジュールされたクエリ；スケジュールされたクエリ;
+keywords: Experience Platform、ホーム、人気のあるトピック、クエリサービス、クエリサービス、スケジュール済みクエリ、スケジュール済みクエリ、
 solution: Experience Platform
-title: スケジュールされたクエリAPIエンドポイント
+title: スケジュール済みクエリAPIエンドポイント
 topic-legacy: scheduled queries
-description: 以下の節では、クエリサービスAPIを使用してスケジュール済みのクエリに対して実行できる様々なAPI呼び出しについて説明します。
+description: 以降の節では、クエリサービスAPIを使用してスケジュール済みクエリに対して実行できる様々なAPI呼び出しについて説明します。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e99b57706bb5bdb0abaf4209a259b478d9406783
 workflow-type: tm+mt
-source-wordcount: '977'
-ht-degree: 92%
+source-wordcount: '1010'
+ht-degree: 89%
 
 ---
 
-# スケジュールされたクエリエンドポイント
+# スケジュール済みクエリエンドポイント
 
 ## サンプル API 呼び出し
 
-これで、使用するヘッダーがわかったので、[!DNL Query Service] APIを呼び出す準備が整いました。 以下の節では、[!DNL Query Service] APIを使用して実行できる様々なAPI呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
+これで、使用するヘッダーを理解できたので、[!DNL Query Service] APIの呼び出しを開始できます。 以降の節では、[!DNL Query Service] APIを使用しておこなえる様々なAPI呼び出しについて説明します。 各呼び出しでは一般的な API 形式、必須ヘッダーを示すリクエスト例および応答例が示されています。
 
 ### スケジュールされたクエリのリストの取得
 
@@ -125,7 +124,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 ### 新しいスケジュール済みクエリの作成
 
-`/schedules` エンドポイントに POST リクエストを送信することで、新しいスケジュール済みクエリを作成できます。
+`/schedules` エンドポイントに POST リクエストを送信することで、新しいスケジュール済みクエリを作成できます。APIでスケジュール済みクエリを作成すると、クエリエディターでもクエリを表示できます。 UIでのスケジュール済みクエリの詳細については、[クエリエディターのドキュメント](../ui/user-guide.md#scheduled-queries)を参照してください。
 
 **API 形式**
 
