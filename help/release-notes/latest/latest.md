@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
+source-git-commit: ab868a813815e10b520cda2a0abe76e3acdd2ac6
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 65%
+source-wordcount: '531'
+ht-degree: 53%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 65%
 Adobe Experience Platform の既存の機能のアップデート：
 
 - [Data Science Workspace](#dsw)
+- [宛先](#destinations)
 - [エクスペリエンスデータモデル（XDM）](#xdm)
 - [ソース](#sources)
 
@@ -34,6 +35,17 @@ Data Science Workspace は、機械学習と人工知能を使用して、デー
 | ライブラリとOSのアップデート | Data Science Workspaceは、機能と操作性を向上させるために、重要なライブラリとOSの更新をおこないました。 これには、JupyterLab 1.2.20、Python 3.7、Pandas 1.2.4、CUDA 11およびCUDN 8をサポートするTensorflow 2.4.1などが含まれます。 JupyterLab内で使用可能なライブラリを表示する方法については、JupyterLabノートブックの概要ドキュメントの[サポートされるライブラリ](../../data-science-workspace/jupyterlab/overview.md#supported-libraries)の節を参照してください。 |
 
 Data Science Workspace の一般的な情報については、[Data Science Workspace の概要](../../data-science-workspace/home.md)を参照してください。
+
+## 宛先 {#destinations}
+
+宛先は、Adobe Experience Platformからのデータのシームレスなアクティブ化を可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| [増分ファイルエクスポートの高速化](../../destinations/ui/activate-destinations.md#export-incremental-files) | 3、6、8、12時間ごとに、ファイルベースの宛先の増分ファイル書き出しをスケジュールできるようになりました。 既に保存されているセグメントのファイルエクスポートスケジュールの変更は、現在サポートされていません。 別のスケジュールでセグメントを再書き出しするには、新しい宛先インスタンスを作成する必要があります。 これは、今後のリリースで対処される予定の制限です。 |
+| [重複排除キーのサポート](../../destinations/ui/activate-destinations.md#deduplication-keys) | 重複排除キーを選択することで、エクスポートファイル内の同じプロファイルの複数のレコードを排除します。 重複排除キーとして、1つの名前空間または最大2つのXDMスキーマ属性を選択できます。 |
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
