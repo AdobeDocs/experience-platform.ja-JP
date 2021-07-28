@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform ダッシュボードのヘルプ
 breadcrumb-title: ダッシュボードガイド
 user-guide-description: カスタマイズ可能なダッシュボードで Experience Platform データを視覚化します。
 feature: データ管理
-source-git-commit: bf09332681d309b41a924c4c29ee8f66078816f9
+source-git-commit: 168960692605b96324533ca295544c2f855481b1
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 85%
+source-wordcount: '60'
+ht-degree: 83%
 
 ---
 
@@ -16,12 +16,13 @@ ht-degree: 85%
 
 * [ダッシュボードの概要](home.md)
 * [ダッシュボードへのアクセス権限](permissions.md)
+* [ダッシュボードをPDFにダウンロード](download.md)
 * 使用可能なダッシュボード {#guides}
    * [プロファイル](guides/profiles.md)
    * [セグメント](guides/segments.md)
    * [宛先](guides/destinations.md)
    * [ライセンス使用状況](guides/license-usage.md)
-* ダッシュボードのカスタマイズ{#customize}
+* ダッシュボードのカスタマイズ {#customize}
    * [カスタマイズの概要](customize/overview.md)
    * [ダッシュボードの変更](customize/modify.md)
    * [ウィジェットライブラリ](customize/widget-library.md)
