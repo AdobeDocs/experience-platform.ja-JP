@@ -1,7 +1,7 @@
 ---
 title: ユーザー権限
 description: Adobe Experience Platformユーザーが使用できる様々なタグ権限について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 74%
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ## 権限タイプ
 
@@ -76,7 +76,7 @@ Adobe Experience Platformでタグを使用する際の理解が必要なユー�
 
 * **プロパティの管理：** データ収集UIで新しいプロパティを作成し、プロパティレベルでメタデータと設定を変更できます。プロパティを削除することもできます。詳しくは、[プロパティのドキュメント](companies-and-properties.md)を参照してください。 管理者は通常、この役割を実行します。
 * 
-* [!DNL Platform Launch]に新しいプロパティを作成し、プロパティレベルでメタデータと設定を変更する機能を付与します。 プロパティを削除することもできます。プロパティについて詳しくは、[こちら](companies-and-properties.md)を参照してください。管理者は通常、この役割を実行します。
+* 新しいプロパティを作成し、プロパティレベルでメタデータと設定を変更する機能を付与します。 プロパティを削除することもできます。プロパティについて詳しくは、[こちら](companies-and-properties.md)を参照してください。管理者は通常、この役割を実行します。
 * **拡張機能の開発：**&#x200B;非公開リリースや公開リリースのリクエストなど、会社が所有する拡張機能パッケージを作成および変更する能力を付与します。
 * **アプリ設定の管理：** Adobe Journey Optimizer のライセンスを持つ顧客、またはその他のソリューションでモバイルアプリ内メッセージやプッシュメッセージにアクセスできる顧客のみが利用できます。これにより、Experience Cloudが把握しているアプリを、Firebase Cloud MessagingサービスおよびApple Push Notification Serviceとの通信に必要なプッシュ資格情報と共に管理できます。
 
