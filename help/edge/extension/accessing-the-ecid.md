@@ -1,24 +1,24 @@
 ---
-title: 'ECIDへのアクセス '
-description: Adobe Experience Platform LaunchのECIDを活用したAdobe Experience PlatformWeb SDK拡張機能
-source-git-commit: 3002036d7366e2f7310aa62e53c7c391d9ff7a07
+title: 'ECID へのアクセス '
+description: Adobe Experience Platform Web SDK拡張機能（タグ内のECIDを活用）
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 5%
+source-wordcount: '134'
+ht-degree: 9%
 
 ---
 
 
-# ECIDへのアクセス
+# ECID へのアクセス
 
-[!DNL Experience Cloud Identity (ECID)]は、Webサイトへの訪問者の永続的な識別子です。 場合によっては、（例えばサードパーティに送信するために）ECIDにアクセスすることをお勧めします。
+[!DNL Experience Cloud Identity (ECID)]は、Webサイトの訪問者の永続的な識別子です。 状況によっては、ECIDにアクセスして（例えばサードパーティに送信するため）、
 
-Adobeは、Adobe Experience Platform Launch内のECIDにアクセスする場合、以下の操作を推奨します。
+タグ内のECIDにアクセスするには、Adobeで次の操作をお勧めします。
 
-1. プロパティが[ルールコンポーネントシーケンス](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing)が有効に設定されていることを確認します。
+1. プロパティで、[ルールコンポーネントのシーケンス](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing)が有効になっていることを確認します。
 1. 新しいルールを作成します。
-1. ルールに対する追加[!UICONTROL ライブラリの読み込み済み]イベントです。
-1. 次のコード追加を持つルールに対する[!UICONTROL カスタム条件]アクション（SDKインスタンス用に設定した名前が`alloy`であると仮定）:
+1. [!UICONTROL Library Loaded]イベントをルールに追加します。
+1. 次のコードを使用して、[!UICONTROL Custom Condition]アクションをルールに追加します（SDKインスタンスに設定した名前は`alloy`とします）。
 
    ```javascript
     return alloy("getIdentity")
@@ -29,4 +29,4 @@ Adobeは、Adobe Experience Platform Launch内のECIDにアクセスする場合
 
 1. ルールを保存します。
 
-その後、他のデータ要素と同様に、`%ECID%`や`_satellite.getVar("ECID")`を使用して、後続のルールのECIDにアクセスできるようになります。
+その後、他のデータ要素と同様に、`%ECID%`または`_satellite.getVar("ECID")`を使用して後続のルールのECIDにアクセスできるようになります。
