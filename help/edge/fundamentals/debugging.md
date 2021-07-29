@@ -1,12 +1,12 @@
 ---
-title: Adobe Experience PlatformWeb SDKでのデバッグ
-description: Experience PlatformWeb SDKのデバッグ機能を切り替える方法を学びます。
-keywords: デバッグWeb sdk；デバッグ；設定；設定；設定コマンド；デバッグコマンド；edgeConfigId;setDebug;debugEnabled;debug;
+title: Adobe Experience Platform Web SDKでのデバッグ
+description: Web SDKのデバッグ機能を切り替える方法についてExperience Platformします。
+keywords: Web sdkのデバッグ；デバッグ；設定；コマンドの設定；debugコマンド；edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 73%
+source-wordcount: '441'
+ht-degree: 74%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 73%
 
 デバッグが有効になっている場合、SDK は、実装のデバッグや SDK の動作の理解に役立つメッセージをブラウザーコンソールに出力します。また、デバッグをおこなうと、設定したスキーマに対して収集されるデータの、サーバーサイド同期検証がおこなわれます。
 
-デバッグはデフォルトで無効になっていますが、次の3つの方法でオンに切り替えることができます。
+デバッグはデフォルトで無効になっていますが、次の3つの方法で有効に切り替えることができます。
 
 * `configure` コマンド
 * `setDebug` コマンド
@@ -60,7 +60,7 @@ http://example.com/?alloy_debug=true
 
 ## 優先度と期間
 
-デバッグを `debug` コマンドまたはクエリ文字列パラメーターで設定すると、`configure` コマンドで設定された `debug` オプションが上書きされます。この2つの場合、セッション中、デバッグもオンのままです。 つまり、debug コマンドまたはクエリ文字列パラメーターを使用してデバッグを有効にした場合、次のいずれかが実行されるまで、デバッグは有効なままになります。
+デバッグを `debug` コマンドまたはクエリ文字列パラメーターで設定すると、`configure` コマンドで設定された `debug` オプションが上書きされます。この2つの場合、セッション中もデバッグはオンのままになります。 つまり、debug コマンドまたはクエリ文字列パラメーターを使用してデバッグを有効にした場合、次のいずれかが実行されるまで、デバッグは有効なままになります。
 
 * セッションの終了
 * `debug` コマンドを実行します
@@ -78,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 現在、指定された `libraryInfo` オブジェクトには次のプロパティが含まれています。
 
-* `version`：読み込まれたライブラリのバージョンです。例えば、読み込まれるライブラリのバージョンが 1.0.0 の場合、値は `1.0.0` になります。ライブラリがAdobe Experience Platform Launch拡張機能（「AEP Web SDK」という名前）内で実行される場合、バージョンはライブラリバージョンで、Platform launch拡張バージョンは「+」記号で結合されます。 例えば、ライブラリのバージョンが1.0.0で、Platform launch拡張のバージョンが1.2.0の場合、値は`1.0.0+1.2.0`になります。
+* `version`：読み込まれたライブラリのバージョンです。例えば、読み込まれるライブラリのバージョンが 1.0.0 の場合、値は `1.0.0` になります。ライブラリをタグ拡張（「AEP Web SDK」という名前）内で実行すると、バージョンはライブラリバージョンとなり、「+」記号で結合されたタグ拡張バージョンになります。 例えば、ライブラリのバージョンが1.0.0で、タグ拡張のバージョンが1.2.0の場合、値は`1.0.0+1.2.0`になります。
