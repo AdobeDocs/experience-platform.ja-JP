@@ -1,10 +1,10 @@
 ---
 title: データ要素
 description: データ要素は、データディクショナリ（またはデータマップ）の構築ブロックです。データ要素を使用して、マーケティングおよび広告テクノロジー全体でデータを収集、整理、配信します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1637'
-ht-degree: 79%
+source-wordcount: '1631'
+ht-degree: 78%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 データ要素は、データディクショナリ（またはデータマップ）の構築ブロックです。データ要素を使用して、マーケティングおよび広告テクノロジー全体でデータを収集、整理、配信します。
 
@@ -38,8 +38,6 @@ ht-degree: 79%
 
 1. [データ要素を作成します](#create-a-data-element)（まだ作成していない場合）。
 1. [ルール](./rules.md)またはカスタムスクリプトでデータ要素を使用します。
-
-紹介ビデオについては、「[データ要素](../../quick-start/videos.md)」を参照してください。
 
 ## データ要素の使用方法
 
