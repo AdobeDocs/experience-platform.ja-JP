@@ -3,9 +3,9 @@ title: Experience PlatformWeb SDK用のDatastreamの設定
 description: 'データストリームの設定方法を説明します。 '
 keywords: 設定；datastreams;datastreamId;edge;datastream id；環境設定；edgeConfigId;ID同期有効；ID同期コンテナID；サンドボックス；ストリーミングインレット；イベントデータセット；ターゲットコード；クライアントコード；Target環境ID;Cookie宛先；Analytics設定ブロックレポートスイートID;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -19,17 +19,17 @@ Adobe Experience Platform Web SDKの設定は、2つの場所に分かれてい�
 
 ## データストリーム設定の作成
 
-データストリームは、Adobe[!DNL Experience Platform Launch]でデータストリーム設定ツールを使用して作成できます。
+データストリームは、データ収集UIでデータストリーム設定ツールを使用して作成できます。
 
 ![datastreamsツールのナビゲーション](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->データストリーム設定ツールは、許可リストで[!DNL Experience Platform Launch]をタグマネージャーとして使用しているかどうかに関係なく、ユーザーが使用できます。 さらに、ユーザーには[!DNL Experience Platform Launch]で開発権限が必要です。 詳しくは、 [!DNL Experience Platform Launch]ドキュメントの[ユーザー権限](../../tags/ui/administration/user-permissions.md)の記事を参照してください。
+>データストリーム設定ツールは、Platformをタグマネージャーとして使用しているかどうかに関係なく、許可リスト上のお客様が使用できます。 また、ユーザーには開発権限が必要です。 詳しくは、タグのドキュメントの[ユーザー権限](../../tags/ui/administration/user-permissions.md)の記事を参照してください。
 
 画面の右上にある「**[!UICONTROL 新しいデータストリーム]**」をクリックして、データストリームを作成します。 名前と説明を入力すると、各環境のデフォルト設定が求められます。 以下に、使用可能な設定について説明します。
 
-データストリームを作成する場合、同じ設定で3つの環境が自動的に作成されます。 これら3つの環境は、*dev*、*stage*、*prod*&#x200B;です。 [!DNL Experience Platform Launch]の3つのデフォルト環境に一致します。 開発環境に[!DNL Experience Platform Launch]ライブラリをビルドすると、ライブラリは設定の開発環境を自動的に使用します。 個々の環境の設定は、好きなだけ編集できます。
+データストリームを作成する場合、同じ設定で3つの環境が自動的に作成されます。 これら3つの環境は、*dev*、*stage*、*prod*&#x200B;です。 タグの3つのデフォルト環境に一致します。 開発環境にタグライブラリを構築すると、ライブラリは設定の開発環境を自動的に使用します。 個々の環境の設定は、好きなだけ編集できます。
 
 SDKで`edgeConfigId`として使用されるIDは、設定と環境を指定する複合IDです（例：`1c86778b-cdba-4684-9903-750e52912ad1:stage`）。 複合IDに環境が存在しない場合（前の例では`stage` ）、実稼動環境が使用されます。
 
