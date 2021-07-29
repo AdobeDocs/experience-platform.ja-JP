@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: 宛先
-source-git-commit: 3ab15ceaf33a33f8bbda80cbf09228d16ce5a374
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 62%
+source-wordcount: '476'
+ht-degree: 61%
 
 ---
 
@@ -100,8 +100,8 @@ ht-degree: 62%
       * [OracleEloqua接続](./catalog/email-marketing/oracle-eloqua.md)
       * [OracleResponsys接続](./catalog/email-marketing/oracle-responsys.md)
       * [SalesforceMarketing Cloud接続](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Experience Platform Launch の拡張機能 {#launch-extensions}
-      * [Adobe Experience Platform Launch拡張機能の概要](./catalog/launch-extensions/overview.md)
+   * タグ拡張{#launch-extensions}
+      * [タグ拡張の概要](./catalog/launch-extensions/overview.md)
    * モバイルエンゲージメントの宛先{#mobile-engagement}
       * [モバイルエンゲージメントの宛先の概要](./catalog/mobile-engagement/overview.md)
       * [（ベータ版）飛行船属性の接続](./catalog/mobile-engagement/airship-attributes.md)
