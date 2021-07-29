@@ -1,10 +1,10 @@
 ---
 title: Web 拡張機能用のコアライブラリモジュール
 description: web拡張機能内で使用できるコアライブラリモジュールについて説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 92%
+source-wordcount: '350'
+ht-degree: 87%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 このドキュメントでは、Web 拡張機能内で使用できるコアライブラリモジュールの一覧を示します。これらのモジュールには `require('@adobe/{MODULE}')` を使ってアクセスできます。`{MODULE}` は、使用するコアモジュールの名前です。
 
