@@ -1,10 +1,10 @@
 ---
 title: エッジ拡張機能モジュールのコンテキスト
 description: コンテキストオブジェクトと、エッジプロパティのタグ拡張におけるライブラリモジュールとのインタラクションでの役割について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 84%
+source-wordcount: '747'
+ht-degree: 82%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+> Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 エッジ拡張機能内のすべてのライブラリモジュールには、実行時に `context` オブジェクトが提供されます。 このドキュメントでは、`context` オブジェクトによって提供されるプロパティと、それらがライブラリモジュールで果たす役割について説明します。
 
