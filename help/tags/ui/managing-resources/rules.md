@@ -1,10 +1,10 @@
 ---
 title: ルール
 description: Adobe Experience Platformでのタグ拡張の機能について説明します。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1983'
-ht-degree: 83%
+source-wordcount: '1977'
+ht-degree: 82%
 
 ---
 
@@ -12,13 +12,11 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platformのタグは、ルールベースのシステムに従います。 ユーザーの操作と関連データを探します。 ルールで設定された条件が満たされると、ルールは、特定した拡張機能、スクリプトまたはクライアント側コードをトリガーします。
 
 異なる製品を 1 つのソリューションに統合するマーケティングおよび広告テクノロジーのデータと機能を統合するためのルールを構築します。
-
-紹介ビデオについては、[ルールビルダー](../../quick-start/videos.md)を参照してください。
 
 ## ルール構造
 
