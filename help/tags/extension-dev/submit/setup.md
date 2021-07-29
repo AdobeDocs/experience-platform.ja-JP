@@ -1,10 +1,10 @@
 ---
 title: Experience Cloud 組織の設定
 description: Adobe Experience Platform用の拡張機能の開発を開始するためにAdobe Experience Cloud組織を登録する方法について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 50%
+source-wordcount: '608'
+ht-degree: 48%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 50%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platformでタグ拡張を開発するには、Adobe Experience Cloud組織を登録する必要があります。
 
