@@ -1,10 +1,10 @@
 ---
 title: イベント転送の概要
 description: Adobe Experience Platformでのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 48%
+source-wordcount: '907'
+ht-degree: 46%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 48%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platformでイベント転送を使用するには、次の3つのオプションの1つ以上を使用して、データをAdobe Experience Platform Edge Networkに送信する必要があります。
 
