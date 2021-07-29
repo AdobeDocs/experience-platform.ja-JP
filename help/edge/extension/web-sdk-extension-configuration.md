@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform Web SDKの設定
-description: Adobe Experience Platform Launch向けAdobe Experience Platform Web SDK拡張機能について説明します。
+description: Adobe Experience Platform Web SDKタグ拡張について説明します。
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: e5b43a65bb9907f333f1ffedfbeed00f02f8ef39
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1034'
 ht-degree: 8%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 8%
 
 Adobe Experience Platform Web SDK拡張機能は、Adobe Experience Platform Edge Networkを通じて、WebプロパティからAdobe Experience Cloudにデータを送信します。 拡張機能を使用すると、データをPlatformにストリーミングし、IDを同期し、顧客の同意シグナルを処理して、コンテキストデータを自動的に収集できます。
 
-このドキュメントでは、Adobe Experience Platform Launchユーザーインターフェイスで拡張機能を設定する方法について説明します。
+このドキュメントでは、データ収集UIで拡張機能を設定する方法について説明します。
 
 ## 拡張機能の設定
 
-Platform Web SDK拡張機能が既にプロパティ用にインストールされている場合は、Platform launchUIでプロパティを開き、「**[!UICONTROL 拡張機能]**」タブを選択します。 Platform Web SDKで、「**[!UICONTROL 設定]**」を選択します。
+Platform Web SDK拡張機能が既にプロパティ用にインストールされている場合は、データ収集UIでプロパティを開き、「**[!UICONTROL 拡張機能]**」タブを選択します。 Platform Web SDKで、「**[!UICONTROL 設定]**」を選択します。
 
 ![](../images/extension/overview/configure.png)
 
@@ -35,7 +35,7 @@ Platform Web SDK拡張機能が既にプロパティ用にインストールさ�
 
 ### [!UICONTROL 名前]
 
-Adobe Experience Platform Web SDK拡張機能は、ページ上の複数のインスタンスをサポートします。 この名前は、1つの組織設定で複数の組織にデータをPlatform launchする場合に使用します。
+Adobe Experience Platform Web SDK拡張機能は、ページ上の複数のインスタンスをサポートします。 この名前は、タグ設定を使用して複数の組織にデータを送信する場合に使用します。
 
 拡張機能の名前は、デフォルトで「[!DNL alloy]」に設定されます。 ただし、インスタンス名は任意の有効な JavaScript オブジェクト名に変更できます。
 
