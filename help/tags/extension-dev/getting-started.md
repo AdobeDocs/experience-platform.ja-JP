@@ -1,10 +1,10 @@
 ---
 title: 拡張機能開発の概要
 description: Adobe Experience Platformで独自のタグ拡張機能を開発する。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 94%
+source-wordcount: '430'
+ht-degree: 90%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 拡張機能を起動して構築するには、Adobe のエンジニアが提供するオープンソース基礎モードツールを使用して、拡張機能パッケージに必要なファイルやファイル構造を作成します。このため、実際にコードを記述するという重要な作業のみを実行するだけで済みます。
 
