@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Cloud ID サービス拡張機能のリリースノート
 description: Adobe Experience PlatformのAdobe Experience Cloud Identity Serviceタグ拡張の最新のリリースノートです。
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 86%
+source-wordcount: '521'
+ht-degree: 83%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 86%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Adobe Experience Platformタグ拡張だけでなく、Experience CloudIDサービス自体のリリースノートについては、次を参照してください。[https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja)
 
