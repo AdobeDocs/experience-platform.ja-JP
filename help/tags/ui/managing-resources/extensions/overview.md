@@ -1,10 +1,10 @@
 ---
 title: 拡張機能
 description: Adobe Experience Platformでのタグ拡張の機能について説明します。
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 77%
+source-wordcount: '497'
+ht-degree: 70%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 拡張機能は、タグやイベント転送で提供される機能を拡張する、パッケージ化されたコードセットです。
 
@@ -26,15 +26,13 @@ ht-degree: 77%
 
 拡張機能リストの上部にあるリンクを使用して、インストールされている拡張機能、拡張機能カタログ、またはアップデートを表示します。
 
-拡張機能、「[!UICONTROL 設定]」の順に選択し、拡張機能の設定を表示して変更します。拡張機能オプションについて詳しくは、「[新しい拡張の追加](#add-a-new-extension)」を参照してください。
+拡張機能、「[!UICONTROL 設定]」の順に選択し、拡張機能の設定を表示して変更します。詳しくは、拡張オプションについて、「[新しい拡張機能の追加](#add-a-new-extension)」の節を参照してください。
 
 >[!IMPORTANT]
 >
 > 変更は[公開](../../publishing/overview.md)されるまでは反映されません。
 
 デフォルトでは、Adobeは一般的な統合をサポートする拡張機能を提供します。 拡張機能は、カスタム設定で変更できます。設定は拡張機能を通じて提供されます。設定を作成するには、拡張機能カードを選択してから「**[!UICONTROL 新しい設定を追加]**」をクリックします。
-
-ビデオの紹介については、「[拡張機能](../../../quick-start/videos.md)」を参照してください。
 
 ## 拡張機能カタログ
 
