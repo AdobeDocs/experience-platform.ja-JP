@@ -1,9 +1,9 @@
 ---
 title: 件数（Web 拡張機能）
 description: Adobe Experience Platform Web 拡張機能のライブラリモジュールのビューを定義する方法について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2063'
 ht-degree: 77%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 イベント、条件、アクション、データ要素の各タイプには、ユーザーが設定を指定できる表示が用意されています。 また、この拡張機能には最上位の[拡張機能設定表示](../configuration.md)が含まれていて、拡張機能全体に対してグローバル設定を指定できます。表示の構築プロセスは、すべてのタイプの表示で同じです。
 
