@@ -1,10 +1,10 @@
 ---
 title: コンテンツセキュリティポリシー（CSP）のサポート
 description: Adobe Experience PlatformでWebサイトをタグと統合する際の、コンテンツセキュリティポリシー(CSP)の制限への対処方法について説明します。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 58%
+source-wordcount: '1080'
+ht-degree: 57%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 コンテンツセキュリティポリシー（CSP）は、クロスサイトスクリプティング攻撃（XSS）を防ぐセキュリティ機能です。これは、悪意のあるコンテンツが、実際は別の場所から送られたのに、信頼できるソースから来たように見せかけ、ブラウザーを騙して実行させた場合に発生します。 CSP を使用すれば、ブラウザーは（ユーザーの代理として）、スクリプトが実際に信頼できるソースから送られたものであることを検証できます。
 
