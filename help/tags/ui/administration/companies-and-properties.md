@@ -1,10 +1,10 @@
 ---
 title: プロパティ
 description: Adobe Experience Platformで、組織の拡張機能、環境、ライブラリを整理およびグループ化する方法について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 69%
+source-wordcount: '1178'
+ht-degree: 67%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ## Web プロパティ
 
@@ -21,8 +21,6 @@ Web プロパティは、ルール、データ要素、設定された拡張機�
 ## モバイルプロパティ
 
 モバイルプロパティタイプには複数のアプリケーションを含めることができます。例えば、モバイルプロパティでは、複数の iOS および Android アプリケーションをまたいで同じルールや拡張機能を管理できます。
-
-ビデオチュートリアルについては、[最初のプロパティを作成する](../../quick-start/videos.md)を参照してください。
 
 ## プロパティの計画のベストプラクティス {#best-practices-for-planning-properties}
 
