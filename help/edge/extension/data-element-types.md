@@ -1,17 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK拡張機能のデータ要素のタイプ
-description: Adobe Experience Platform LaunchのAdobe Experience Platform Web SDK拡張機能で提供される様々なデータ要素タイプについて説明します。
+description: Adobe Experience Platform Web SDKタグ拡張機能で提供される様々なデータ要素のタイプについて説明します。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 5a295a1f6e64c33ac4a48e1d74253d0527f495f9
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 47%
+source-wordcount: '293'
+ht-degree: 49%
 
 ---
 
 # データ要素タイプ
 
-[Adobe Experience Platform Web SDK拡張機能](web-sdk-extension-configuration.md)で[アクションタイプ](action-types.md)を[Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)に設定したら、データ要素タイプを設定します。
+[Adobe Experience Platform Web SDKタグ拡張機能](web-sdk-extension-configuration.md)で[アクションタイプ](action-types.md)を設定した後、データ要素タイプを設定します。
 
 このページでは、使用可能なデータ要素のタイプについて説明します。
 
