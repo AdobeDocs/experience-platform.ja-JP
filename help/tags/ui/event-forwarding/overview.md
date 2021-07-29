@@ -1,10 +1,10 @@
 ---
 title: イベント転送の概要
 description: Adobe Experience Platformでのイベント転送について説明します。これにより、タグ実装を変更せずに、Platform Edge Networkを使用してタスクを実行できます。
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 42%
+source-wordcount: '547'
+ht-degree: 39%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 Adobe Experience Platformでのイベント転送は、Adobe Experience Platform Edge Networkを使用して通常クライアントでおこなわれるタスクを実行することで、Webページとアプリの重み付けを軽減します。 イベント転送ルールでは、クライアント側の実装を変更することなく、データを変換して新しい宛先に送信できます。
 
