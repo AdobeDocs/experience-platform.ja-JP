@@ -1,10 +1,10 @@
 ---
 title: Tags Satellite Object Reference
 description: クライアント側の_satelliteオブジェクトと、それを使用してAdobe Experience Platformで実行できる様々な機能について説明します。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1123'
-ht-degree: 51%
+source-wordcount: '1124'
+ht-degree: 49%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 このドキュメントは、クライアント側の`_satellite`オブジェクトと、それを使用して実行できる様々な機能の参照として機能します。
 
