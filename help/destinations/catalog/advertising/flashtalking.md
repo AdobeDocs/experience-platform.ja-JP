@@ -3,9 +3,9 @@ keywords: Flashtalking OneTag拡張機能；Flashtalking OneTag拡張機能；Fl
 title: Flashtalking OneTag 拡張機能
 description: Flashtalking OneTag拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: e0dcbe9d-6fed-4b86-839e-661b7df8580e
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '487'
 ht-degree: 21%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 21%
 
 ## 概要 {#overview}
 
-[!DNL Flashtalking OneTag]タグ拡張を使用すると、サイトのアクションを簡単に属性化して、表示、ビデオ、モバイルの広告アクティビティを表示できます。 Launchを使用して、Webプロパティに[!DNL Flashtalking OneTag]をデプロイします。
+[!DNL Flashtalking OneTag]タグ拡張を使用すると、サイトのアクションを簡単に属性化して、表示、ビデオ、モバイルの広告アクティビティを表示できます。 タグを使用して、Webプロパティに[!DNL Flashtalking OneTag]をデプロイします。
 
 [!DNL Flashtalking OneTag] は、Adobe Experience Platformの広告拡張機能です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html) の拡張機能のページを参照してください。
 
@@ -26,7 +26,7 @@ ht-degree: 21%
 
 この拡張機能は、Platformを購入したすべての顧客の[!DNL Destinations]カタログで利用できます。
 
-この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されるタグ。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。 拡張機能をインストールするために、**[!UICONTROL manage_properties]**&#x200B;権限を付与するように依頼します。
+この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。 拡張機能をインストールするために、**[!UICONTROL manage_properties]**&#x200B;権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
