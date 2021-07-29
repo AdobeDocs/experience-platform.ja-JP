@@ -1,10 +1,10 @@
 ---
 title: Adobe Target 拡張機能のリリースノート
 description: Adobe Experience PlatformのAdobe Targetタグ拡張機能に関する最新のリリースノートです。
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '505'
-ht-degree: 77%
+source-wordcount: '506'
+ht-degree: 74%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2020 年 7 月 24 日（PT）
 
