@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDKを使用したイベントの追跡
 description: Adobe Experience Platform Web SDKのイベントの追跡方法について説明します。
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1460'
-ht-degree: 31%
+source-wordcount: '1451'
+ht-degree: 32%
 
 ---
 
@@ -68,7 +68,7 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-この例では、データレイヤーをJSONにシリアライズし、デシリアライズすることで、データレイヤーを複製します。 次に、クローン結果が`sendEvent`コマンドに渡されます。 これにより、`sendEvent`コマンドが実行されたときのデータレイヤーのスナップショットが`sendEvent`コマンドに含まれ、後で元のデータレイヤーオブジェクトに対する変更がサーバーに送信されたデータに反映されなくなります。 イベント駆動型データレイヤーを使用している場合、データのクローンは既に自動的に処理されている可能性が高くなります。 例えば、[Adobeクライアントデータレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)を使用している場合、`getState()`メソッドは、以前のすべての変更に関する計算済みのクローンスナップショットを提供します。 また、Adobe Experience Platform LaunchでAdobe Experience Platform Web SDK拡張機能を使用している場合は、これも自動的に処理されます。
+この例では、データレイヤーをJSONにシリアライズし、デシリアライズすることで、データレイヤーを複製します。 次に、クローン結果が`sendEvent`コマンドに渡されます。 これにより、`sendEvent`コマンドが実行されたときのデータレイヤーのスナップショットが`sendEvent`コマンドに含まれ、後で元のデータレイヤーオブジェクトに対する変更がサーバーに送信されたデータに反映されなくなります。 イベント駆動型データレイヤーを使用している場合、データのクローンは既に自動的に処理されている可能性が高くなります。 例えば、[Adobeクライアントデータレイヤー](https://github.com/adobe/adobe-client-data-layer/wiki)を使用している場合、`getState()`メソッドは、以前のすべての変更に関する計算済みのクローンスナップショットを提供します。 また、Adobe Experience Platform Web SDKタグ拡張機能を使用している場合は、自動的に処理されます。
 
 >[!NOTE]
 >
@@ -132,7 +132,7 @@ XDMエクスペリエンスイベントには、オプションの`eventType`フ
 | delivery.feedback | 配信のフィードバックイベント。 Eメール配信のフィードバックイベントの例 |
 
 
-Adobe Experience Platform Launch拡張機能を使用している場合、または拡張機能を使用せずにいつでも渡すことができる場合、これらのイベントタイプはドロップダウンに表示されます。 これらは、`xdm`オプションの一部として渡すことができます。
+これらのイベントタイプは、タグ拡張を使用する場合や、タグを使用せずに常に渡すことができる場合に、ドロップダウンに表示されます。 これらは、`xdm`オプションの一部として渡すことができます。
 
 
 ```javascript
