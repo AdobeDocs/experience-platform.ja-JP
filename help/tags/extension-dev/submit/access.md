@@ -1,10 +1,10 @@
 ---
 title: ユーザーアクセスの許可
 description: チームメンバーのタグ付けユーザーアカウントと権限をAdobe Experience Platformで設定します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 25%
+source-wordcount: '738'
+ht-degree: 23%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 25%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 拡張機能パッケージを使用する前に、チームメンバーのユーザーアカウントおよび権限を設定する必要があります。それには、[Adobe Admin Console](https://adminconsole.adobe.com/) を使用します。
 
@@ -39,7 +39,7 @@ Adobe Experience Cloud の組織管理者は、[Admin Console](https://admincons
 
 製品プロファイルはグループです。 個々の権限が製品プロファイルに割り当てられ、プロファイル内のすべてのユーザーがそれらの権限を継承します。
 
-上部にある&#x200B;**[!UICONTROL Products]**&#x200B;リンクを選択し、左側に&#x200B;**[!UICONTROL Experience Cloud]**&#x200B;を選択します。 Adobe Experience Platform Launchがリストに表示されない場合、顧客はアカウントチームに連絡し、パートナーは<ExchangeTechEC@adobe.com>に電子メールを送信する必要があります。
+上部にある&#x200B;**[!UICONTROL Products]**&#x200B;リンクを選択し、左側に&#x200B;**[!UICONTROL Experience Cloud]**&#x200B;を選択します。 データ収集UIが表示されない場合、顧客はアカウントチームに、パートナーは<ExchangeTechEC@adobe.com>に電子メールを送信する必要があります。
 
 ![Admin Consoleの「製品」タブ](../images/getting-started/admin-console-products-launch.png)
 
