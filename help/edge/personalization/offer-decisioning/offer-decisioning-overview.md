@@ -3,10 +3,10 @@ title: Platform Web SDKでのOffer decisioningの使用
 description: Adobe Experience Platform Web SDKは、Offer decisioningで管理されるパーソナライズされたオファーを配信し、レンダリングできます。 オファーUIまたはAPIを使用して、オファーやその他の関連オブジェクトをOffer decisioningできます。
 keywords: offer decisioning；判定；Web SDK;Platform Web SDK；パーソナライズされたオファー；オファーの配信；オファーの配信；オファーのパーソナライズ；
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '779'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -65,10 +65,10 @@ offer decisioningを有効にするには、次の手順を実行する必要が
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. [SDK](../../fundamentals/installing-the-sdk.md)のインストールの手順に従います(SDKは、スタンドアロンで、または[Adobe Experience Platform Launch](http://launch.adobe.com/jp)を通じてインストールできます)。 以下に、Platform launch](../../../tags/quick-start/quick-start.md)のクイックスタートガイドを示します。[
+1. [SDK](../../fundamentals/installing-the-sdk.md)のインストールの手順に従います（SDKは、スタンドアロンで、または[データ収集UI](https://experience.adobe.com/#/data-collection/)を使用してインストールできます）。 詳しくは、[タグのクイックスタートガイド](../../../tags/quick-start/quick-start.md)を参照してください。
 1. [SDKを](../../fundamentals/configuring-the-sdk.md) Offer decisioningその他のOffer decisioning固有の手順を以下に示します。
 
-   * スタンドアロンでインストールされたSDK
+   * スタンドアロンSDKのインストール
 
       1. `decisionScopes`で「sendEvent」アクションを設定します。
 
@@ -81,10 +81,10 @@ offer decisioningを有効にするには、次の手順を実行する必要が
              ]
           })
          ```
-   * platform launchがインストールしたSDK
+   * タグを使用したSDKのインストール
 
-      1. [platform launchプロパティの作成](../../../tags/ui/administration/companies-and-properties.md)
-      1. [埋め込みコードのPlatform launch](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [タグプロパティの作成](../../../tags/ui/administration/companies-and-properties.md)
+      1. [ 埋め込みコードの追加](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       1. 先ほど作成したデータストリームを使用して、「Datastream」ドロップダウンから設定を選択し、Platform Web SDK拡張機能をインストールして設定します。 [拡張機能](../../../tags/ui/managing-resources/extensions/overview.md)に関するドキュメントを参照してください。
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
