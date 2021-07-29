@@ -5,9 +5,9 @@ title: Experience PlatformでのIAB TCF 2.0のサポート
 topic-legacy: privacy events
 description: Adobe Experience Platformの宛先にセグメントをアクティブ化する際に、顧客の同意に基づく選択肢を伝えるためのデータ操作とスキーマの設定方法について説明します。
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2559'
+source-wordcount: '2563'
 ht-degree: 2%
 
 ---
@@ -119,9 +119,9 @@ TCF仕様では、同意文字列を使用して、ポリシーやベンダー�
 
 ### 新しいデータストリームの作成
 
-SDKがExperience Platformにデータを送信するには、まず[!DNL Adobe Experience Platform Launch]でPlatformの新しいデータストリームを作成する必要があります。 新しい設定の作成方法に関する具体的な手順は、SDKのドキュメント[に記載されています。](../../../../edge/fundamentals/datastreams.md)
+SDKがExperience Platformにデータを送信するには、まずデータ収集UIでPlatform用の新しいデータストリームを作成する必要があります。 新しいデータストリームの作成方法に関する具体的な手順は、[SDKのドキュメント](../../../../edge/fundamentals/datastreams.md)に記載されています。
 
-設定に一意の名前を指定した後、**[!UICONTROL Adobe Experience Platform]**&#x200B;の横にある切り替えボタンを選択します。 次に、次の値を使用して、フォームの残りの部分を完了します。
+データストリームに一意の名前を指定した後、**[!UICONTROL Adobe Experience Platform]**&#x200B;の横にある切り替えボタンを選択します。 次に、次の値を使用して、フォームの残りの部分を完了します。
 
 | Datastreamフィールド | 値 |
 | --- | --- |
