@@ -1,10 +1,10 @@
 ---
 title: Edge 拡張機能の条件のタイプ
 description: Adobe Experience Platformのエッジ拡張機能に条件タイプライブラリモジュールを定義する方法について説明します。
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 53%
+source-wordcount: '408'
+ht-degree: 49%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 53%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+> Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 タグルールでは、条件はイベントの発生後に評価されます。 ルールの処理を続行するには、すべての条件が true を返す必要があります。 条件タイプは拡張機能によって提供され、trueかfalseかを評価し、ブール値を返します。
 
