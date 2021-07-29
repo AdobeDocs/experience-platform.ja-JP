@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDKでのIAB TCF 2.0のサポート
 description: Adobe Experience Platform Web SDKを使用して、IAB TCF 2.0の同意設定をサポートする方法について説明します。
 keywords: 同意；setConsent；プロファイルプライバシーフィールドグループ；エクスペリエンスイベントプライバシーフィールドグループ；プライバシーフィールドグループ；IAB TCF 2.0；リアルタイムCDP；リアルタイム顧客データプロファイル
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 Adobe Experience Platform Web SDKは、Interactive Advertising Bureau Transparency &amp; Consent Frameworkバージョン2.0(IAB TCF 2.0)をサポートしています。 このガイドでは、リアルタイム顧客データプラットフォーム、Audience Manager、Experience Events、Adobe Analytics、Experience Edgeと統合した、Adobe Experience Platform Web SDKを通じてIAB TCF 2.0をサポートするための要件を示します。
 
-さらに、IAB TCF 2.0とAdobe Experience Platform Launchの統合方法と非統合方法の学習に役立つガイドを以下に示します。
+さらに、タグの有無に関わらずIAB TCF 2.0を統合する方法を学ぶのに役立つガイドを次に示します。
 
-- [Adobe Experience Platform Launch](./with-launch.md)
-- [Adobe Experience Platform Launchなし](./without-launch.md)
+- [タグ付き](./with-launch.md)
+- [タグなし](./without-launch.md)
 
 ## はじめに
 
@@ -90,4 +90,4 @@ Adobe Experience Platform Web SDKには、エクスペリエンスイベント�
 
 ## 次の手順
 
-IAB Transparency &amp; Consent Framework 2.0に関する基本的な理解ができたので、IAB TCF 2.0 [をAdobe Experience Platform Launch](./with-launch.md)と共に使用する方法と、Adobe Experience Platform Launch](./without-launch.md)を使用しない方法のどちらかを参照してください。[
+IAB Transparency &amp; Consent Framework 2.0に関する基本的な知識が整ったので、IAB TCF 2.0 [をタグ](./with-launch.md)または[をタグ](./without-launch.md)なしで使用する方法に関するガイドを参照してください。
