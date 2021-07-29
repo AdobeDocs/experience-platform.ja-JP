@@ -1,10 +1,10 @@
 ---
 title: 拡張機能マニフェスト
 description: 拡張機能の適切な使用方法を Adobe Experience Platform に知らせる JSON マニフェストファイルの設定方法について説明します。
-source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 77%
+source-wordcount: '2647'
+ht-degree: 76%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 拡張機能の基本ディレクトリには、`extension.json` という名前のファイルを作成する必要があります。 このファイルには、Adobe Experience Platform が拡張機能を適切に使用できるようにするための重要な詳細が含まれています。 内容の一部は、[npm の`package.json`](https://docs.npmjs.com/files/package.json) の形式に従って構成されます。
 
