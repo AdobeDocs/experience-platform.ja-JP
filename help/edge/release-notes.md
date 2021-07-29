@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e158b8129fe5afe71af48b7c64ca34b00e79965c
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '670'
+ht-degree: 5%
 
 ---
 
 # リリースノート
+
+## バージョン2.6.1 - 2021年7月30日
+
+* パーソナライゼーションコンテンツを持たないシングルページアプリビュー用にパーソナライゼーションをレンダリングするとエラーが発生し、`sendEvent`コマンドから返されたプロミスが拒否される問題を修正しました。
 
 ## バージョン2.6.0 - 2021年7月28日
 
