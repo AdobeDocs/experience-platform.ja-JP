@@ -1,10 +1,10 @@
 ---
 title: 拡張機能のリリース
 description: Adobe Experience Platformでタグ拡張を非公開または公開でリリースする方法について説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 50%
+source-wordcount: '321'
+ht-degree: 44%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 50%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 テストとドキュメント化が完了すると、拡張機能はリリース可能になります。 現在、2 種類のリリースを実行できます。
 
