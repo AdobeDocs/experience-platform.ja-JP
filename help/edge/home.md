@@ -3,22 +3,22 @@ title: Adobe Experience Platform Web SDKの概要
 description: Adobe Experience Platform Web SDKを使用して、Platform機能をWebサイトに統合する方法を説明します。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '664'
 ht-degree: 14%
 
 ---
 
 # Adobe Experience Platform Web SDKの概要
 
-Adobe Experience Platform Web SDKは、Adobe Experience Cloudのお客様がAdobe Experience Platform Edgeネットワークを通じて[!DNL Experience Cloud]内の様々なサービスを操作できる、クライアントサイドJavaScriptライブラリです。 JavaScriptライブラリに加えて、Web SDKの設定に役立つ[Experience Platform Launch拡張](../tags/extensions/web/sdk/overview.md)があります。
+Adobe Experience Platform Web SDKは、Adobe Experience Cloudのお客様がAdobe Experience Platform Edgeネットワークを通じて[!DNL Experience Cloud]内の様々なサービスを操作できる、クライアントサイドJavaScriptライブラリです。 JavaScriptライブラリに加えて、Web SDKの設定に役立つ[タグ拡張](../tags/extensions/web/sdk/overview.md)があります。
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] は、Experience Edgeを構成するコレクションの一部です。Experience Edgeは、次の3つのテクノロジーで構成されます。
 
-* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDKおよび拡張機能を使用し [!DNL Experience Platform Launch] て、テクノロジーの導入を大幅に簡略化 [!DNL Adobe] できます
+* **[!DNL Adobe Experience Platform Web SDK]:** JavaScript SDKおよびタグ拡張により、テクノロジーの導入が大幅に簡略化さ [!DNL Adobe] れます
 * **Adobe Experience Platform Mobile SDK:** v5モバイルSDKの拡張機能で、新しいデプロイメント手法を使用できます。
 * **[!DNL Adobe Experience Platform Edge Network]:** 製品の導入に関する新しい方法論を可能にする、サーバーのグローバル分散ネットワ [!DNL Adobe] ーク
 
