@@ -1,10 +1,10 @@
 ---
 title: Web 拡張機能のデータ要素タイプ
 description: Webプロパティのタグ拡張用にデータ要素タイプライブラリモジュールを定義する方法について説明します。
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 63%
+source-wordcount: '596'
+ht-degree: 60%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 データ収集タグでは、データ要素は基本的にページ上のデータに対するエイリアスです。 このデータは、クエリー文字列パラメーター、Cookie、DOM要素、その他の場所にあります。 データ要素は、ルールから参照でき、これらのデータにアクセスするための抽象型として機能します。 
 
