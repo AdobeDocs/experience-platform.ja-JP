@@ -2,29 +2,28 @@
 keywords: 宛先；宛先；宛先タイプ
 title: 宛先のタイプとカテゴリ
 seo-title: 宛先のタイプとカテゴリ
-description: Adobe Experience Platformの様々な目的地のタイプやカテゴリについて学びます。
-translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+description: Adobe Experience Platformの宛先の様々なタイプとカテゴリについて説明します。
+exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 64%
+source-wordcount: '504'
+ht-degree: 63%
 
 ---
 
-
 # 宛先のタイプとカテゴリ
 
-Adobe Experience Platformの目的地の様々なタイプやカテゴリについて理解するには、このページを参照してください。
+Adobe Experience Platformの宛先の様々なタイプとカテゴリについては、このページを参照してください。
 
 ## 宛先のタイプ
 
-Adobe Experience Platformでは、接続と拡張の2種類の宛先を区別します。 接続の宛先には、プロファイルの書き出しの宛先と、セグメントの書き出しの宛先があります。
+Adobe Experience Platformでは、接続と拡張機能の2つの宛先タイプを区別します。 接続の宛先には、プロファイルの書き出しの宛先と、セグメントの書き出しの宛先があります。
 
 ![宛先のタイプ](./assets/destination-types/types-of-destinations.png)
 
 ## 接続 {#connections}
 
-**[!UICONTROL Adobe Experience Platformのプロファイル]** エクスポートおよび **[!UICONTROL セグメントエクスポートイベントデータを取得し、他のデータソースと組み合わせて、リアルタイム顧客プロファイル]**  [](../profile/home.md)、セグメント化およびエクスポートセグメントおよび条件付きプロファイルを作成します。
+**[!UICONTROL Adobe Experience Platformのプ]** ロファイ **[!UICONTROL ルの書き出しとセグメントの書き出しでは、イベントデータを取り込み、他のデータソースと組み合わせてリアルタイム顧客プロファイルを形成]**  [](../profile/home.md)し、セグメント化を適用し、セグメントと認定済みプロファイルを宛先に書き出します。
 
 ## プロファイルの書き出し先
 
@@ -32,7 +31,7 @@ Adobe Experience Platformでは、接続と拡張の2種類の宛先を区別し
 
 ## セグメントの書き出し先
 
-セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。[[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md)や[[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md)などの広告先がその例です。
+セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。[[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md)や[[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md)などの広告の宛先が、このタイプの宛先の一例です。
 
 ## プロファイルの書き出しとセグメントの書き出し先 - ビデオの概要
 
@@ -42,15 +41,15 @@ Adobe Experience Platformでは、接続と拡張の2種類の宛先を区別し
 
 ## 拡張機能 {#extensions}
 
-プラットフォームは、プラットフォームインターフェイスにPlatform launch拡張機能を組み込むため、Adobe Experience Platform Launchの能力と柔軟性を活用します。
+Platformは、タグ管理の機能と柔軟性を活用し、データ収集UIでタグ拡張を設定できます。
 
 >[!TIP]
 >
->使用例やインターフェイス内での検索方法など、Adobe Experience Platform Launch拡張機能に関する詳細については、[Adobe Experience Platform Launch拡張機能の概要](./catalog/launch-extensions/overview.md)を参照してください。
+>使用例を含むタグ拡張について詳しくは、[タグ拡張の概要](./catalog/launch-extensions/overview.md)を参照してください。
 
-platform launch拡張は、生のイベントデータを複数のタイプの宛先に転送します。 この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](./catalog/personalization/gainsight.md)や [Confirmit Voice of the Customer 拡張機能](./catalog/voice/confirmit-digital-feedback.md)などがあります。
+タグ拡張は、生のイベントデータを複数のタイプの宛先に転送します。 この拡張機能は、**イベント転送**&#x200B;タイプの宛先であると考えることができます。これは、宛先プラットフォームと単純に統合された機能で、イベントの生データを転送するだけです。例としては、[Gainsight パーソナライズ機能拡張機能](./catalog/personalization/gainsight.md)や [Confirmit Voice of the Customer 拡張機能](./catalog/voice/confirmit-digital-feedback.md)などがあります。
 
-![Experience Platform Launch の拡張機能と他の宛先との比較](./assets/common/launch-and-other-destinations.png)
+![他の宛先とのタグ拡張](./assets/common/launch-and-other-destinations.png)
 
 ## 接続と拡張機能を使用するタイミング
 
@@ -62,7 +61,6 @@ platform launch拡張は、生のイベントデータを複数のタイプの�
 
 ## 宛先カテゴリ
 
-[宛先カタログ](https://platform.adobe.com/destination/catalog)内のカテゴリと拡張子は、目的のマーケティング活動に応じて、宛先ストレージ(**広告**、**クラウド調査**、**広告プラットフォーム**、**電子メールマーケティング**&#x200B;など)ごとにグループ化されます。 各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](./catalog/overview.md)を参照してください。
+[宛先カタログ](https://platform.adobe.com/destination/catalog)の接続と拡張は、達成に役立つマーケティングアクションに応じて、宛先カテゴリ（**Advertising**、**Cloud storage**、**Surveyプラットフォーム**、**Email marketing**&#x200B;など）でグループ化されます。 各カテゴリについて、および各カテゴリに含まれる宛先について詳しくは、[宛先カタログのドキュメント](./catalog/overview.md)を参照してください。
 
 ![宛先カテゴリ](./assets/destination-types/destination-categories-menu.png)
-
