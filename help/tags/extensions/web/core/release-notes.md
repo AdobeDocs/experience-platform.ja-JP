@@ -1,10 +1,10 @@
 ---
 title: コア拡張機能のリリースノート
 description: Adobe Experience PlatformのCore拡張機能の最新のリリースノートです。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 89%
+source-wordcount: '1210'
+ht-degree: 85%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2021 年 5 月 20 日（PT）
 
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **CSP nonce のサポート**：コア拡張機能にオプションの構成パラメーターが追加されました。nonce を参照するデータ要素を追加できます。設定した場合、タグがページに追加するすべてのインラインスクリプトで、設定したナンスが使用されます。 この変更は、コンテンツセキュリティポリシーと nonce を併用し、Platform Launch スクリプトを CSP 環境で引き続き読み込めるようにするためのものです。CSP での Platform Launch の使用について詳しくは、[こちら](../../../ui/client-side/content-security-policy.md)を参照してください。
+* **CSP nonce のサポート**：コア拡張機能にオプションの構成パラメーターが追加されました。nonce を参照するデータ要素を追加できます。設定した場合、タグがページに追加するすべてのインラインスクリプトで、設定したナンスが使用されます。 この変更は、タグスクリプトをCSP環境で引き続き読み込めるように、コンテンツセキュリティポリシーとnonceの使用をサポートします。 CSPでのタグの使用について詳しくは、[こちら](../../../ui/client-side/content-security-policy.md)を参照してください。
 
 ## 2019 年 6 月 18 日（PT）
 
