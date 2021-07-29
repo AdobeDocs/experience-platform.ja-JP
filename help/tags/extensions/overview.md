@@ -1,12 +1,11 @@
 ---
 title: アドビ拡張機能
-seo-title: Adobe Experience Platform Launch のアドビ拡張機能
 description: Adobe Experience Platformのタグ拡張のドキュメント。
-seo-description: アドビソリューションが提供する Adobe Experience Platform Launch 拡張機能のドキュメントです。
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+seo-description: タグソリューションが提供するAdobe拡張のドキュメント。
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 62%
+source-wordcount: '81'
+ht-degree: 24%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 [!DNL Adobe Experience Platform]拡張機能ライブラリで使用可能なタグ拡張機能について説明します。
 
