@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDKを使用した顧客の同意データ�
 topic-legacy: getting started
 description: Adobe2.0標準を使用して、Adobe Experience Platform Web SDKを統合し、Adobe Experience Platformで顧客の同意データを処理する方法について説明します。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 8b58bb60ae40f224433f3513060f4ae7ddc7d5b3
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 3%
+source-wordcount: '1254'
+ht-degree: 2%
 
 ---
 
@@ -29,15 +29,15 @@ Adobe Experience Platform Web SDKを使用すると、同意管理プラット�
 
 このチュートリアルは、CMP内で同意データを生成する方法が既に決定済みであることと、リアルタイム顧客プロファイルに対して有効になった同意フィールドを含むデータセットが作成済みであることを前提としています。 これらの手順の詳細については、このガイドに戻る前に、Experience Platform](./overview.md)の[同意処理の概要を参照してください。
 
-さらに、このガイドでは、Adobe Experience Platform Launchの拡張機能と、Webアプリケーションでの拡張機能のインストール方法に関する十分な知識が必要です。 詳しくは、次のドキュメントを参照してください。
+また、このガイドでは、タグの拡張機能と、Webアプリケーションでのタグのインストール方法に関する十分な知識が必要です。 詳しくは、次のドキュメントを参照してください。
 
-* [platform launchの概要](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=ja)
-* [クイックスタートガイド](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html?lang=ja)
-* [パブリッシュの概要](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=ja)
+* [タグの概要](../../../../tags/home.md)
+* [クイックスタートガイド](../../../../tags/quick-start/quick-start.md)
+* [公開の概要](../../../../tags/ui/publishing/overview.md)
 
 ## データストリームの設定
 
-SDKがExperience Platformにデータを送信するには、Adobe Experience Platform LaunchでPlatform用の既存のデータストリームを設定する必要があります。 さらに、設定に対して選択する[!UICONTROL プロファイルデータセット]には、標準化された同意フィールドが含まれている必要があります。
+SDKがデータをExperience Platformに送信するには、データ収集UIでPlatform用の既存のデータストリームを設定する必要があります。 さらに、設定に対して選択する[!UICONTROL プロファイルデータセット]には、標準化された同意フィールドが含まれている必要があります。
 
 新しい設定を作成するか、編集する既存の設定を選択したら、**[!UICONTROL Adobe Experience Platform]**&#x200B;の横にある切り替えボタンを選択します。 次に、以下に示す値を使用してフォームに入力します。
 
@@ -55,7 +55,7 @@ SDKがExperience Platformにデータを送信するには、Adobe Experience Pl
 
 ## Platform Web SDKのインストールと設定
 
-前の節で説明したようにデータストリームを作成したら、最終的にサイトにデプロイするPlatform Web SDK拡張機能を設定する必要があります。 SDK拡張機能がPlatform launchプロパティにインストールされていない場合は、左側のナビゲーションで「**[!UICONTROL 拡張機能]**」を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 次に、使用可能な拡張機能のリストで、「Platform SDK拡張機能」の下の「**[!UICONTROL インストール]**」を選択します。
+前の節で説明したようにデータストリームを作成したら、最終的にサイトにデプロイするPlatform Web SDK拡張機能を設定する必要があります。 タグプロパティにSDK拡張機能がインストールされていない場合は、左側のナビゲーションで「**[!UICONTROL 拡張機能]**」を選択し、「**[!UICONTROL カタログ]**」タブを選択します。 次に、使用可能な拡張機能のリストで、「Platform SDK拡張機能」の下の「**[!UICONTROL インストール]**」を選択します。
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
@@ -72,16 +72,16 @@ SDK拡張機能がインストールされている場合は、ユーザーの�
 この使用例では、次の方法を導入して、ユーザーの地域に基づいてデフォルトの同意を設定できます。
 
 1. Webサーバー上のユーザーの地域を特定します。
-1. WebページでPlatform launchスクリプトタグ（埋め込みコード）を実行する前に、ユーザーの地域に基づいて`adobeDefaultConsent`変数を設定する別のスクリプトタグをレンダリングします。
+1. Webページ上の`script`タグ（埋め込みコード）の前に、ユーザーの地域に基づいて`adobeDefaultConsent`変数を設定する別の`script`タグをレンダリングします。
 1. `adobeDefaultConsent` JavaScript変数を使用するデータ要素を設定し、このデータ要素をユーザーのデフォルトの同意値として使用します。
 
 ユーザーの領域がCMPによって決定される場合は、次の手順を使用できます。
 
 1. ページ上の「CMP読み込み」イベントを処理します。
-1. イベントハンドラーで、ユーザーの地域に基づいて`adobeDefaultConsent`変数を設定し、JavaScriptを使用してPlatform launchライブラリスクリプトを読み込みます。
+1. イベントハンドラーで、ユーザーの地域に基づいて`adobeDefaultConsent`変数を設定し、JavaScriptを使用してタグライブラリスクリプトを読み込みます。
 1. `adobeDefaultConsent` JavaScript変数を使用するデータ要素を設定し、このデータ要素をユーザーのデフォルトの同意値として使用します。
 
-platform launchUIでデータ要素を作成するには、左側のナビゲーションで「**[!UICONTROL データ要素]**」を選択し、「**[!UICONTROL データ要素を追加]**」を選択して、データ要素作成ダイアログに移動します。
+データ収集UIでデータ要素を作成するには、左側のナビゲーションで「**[!UICONTROL データ要素]**」を選択し、「**[!UICONTROL データ要素を追加]**」を選択して、データ要素作成ダイアログに移動します。
 
 ここから、`adobeDefaultConsent`に基づく[!UICONTROL JavaScript変数]データ要素を作成する必要があります。 完了したら、「**[!UICONTROL 保存]**」をクリックします。
 
@@ -93,7 +93,7 @@ platform launchUIでデータ要素を作成するには、左側のナビゲー
 
 ### Webサイトに拡張機能をデプロイする
 
-拡張機能の設定が完了したら、Webサイトに統合できます。 更新されたライブラリビルドのデプロイ方法について詳しくは、Platform launchドキュメントの[パブリッシュガイド](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)を参照してください。
+拡張機能の設定が完了したら、Webサイトに統合できます。 更新されたライブラリビルドのデプロイ方法について詳しくは、タグドキュメントの[パブリッシュガイド](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=ja)を参照してください。
 
 ## 同意変更コマンドの実行 {#commands}
 
