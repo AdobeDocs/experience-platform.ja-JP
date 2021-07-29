@@ -1,10 +1,10 @@
 ---
 title: 非同期デプロイメント
 description: WebサイトにAdobe Experience Platformタグライブラリを非同期的にデプロイする方法を説明します。
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1009'
-ht-degree: 59%
+source-wordcount: '1010'
+ht-degree: 57%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 製品で必要となるJavaScriptライブラリのパフォーマンスと、ノンブロッキングデプロイメントは、Adobe Experience Cloudユーザーにとってますます重要になっています。 [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/)などのツールでは、サイトでのAdobeライブラリのデプロイ方法を変更するユーザーをお勧めします。 この記事では、非同期的にAdobeJavaScriptライブラリを使用する方法を説明します。
 
