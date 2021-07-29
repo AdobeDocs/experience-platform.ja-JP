@@ -3,9 +3,9 @@ keywords: メダリア；メダリア
 title: Medallia 拡張機能
 description: Medalia拡張機能は、Adobe Experience Platformの顧客の声の宛先になります。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '495'
 ht-degree: 20%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 20%
 
 この拡張機能は、Platformを購入したすべての顧客の[!DNL Destinations]カタログで利用できます。
 
-この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されるタグ。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。 拡張機能をインストールするために、**[!UICONTROL manage_properties]**&#x200B;権限を付与するように依頼します。
+この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。 拡張機能をインストールするために、**[!UICONTROL manage_properties]**&#x200B;権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
