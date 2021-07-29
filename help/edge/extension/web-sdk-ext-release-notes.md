@@ -1,18 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK拡張機能のリリースノート
-description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
-seo-description: Adobe Experience Platform Launch の Adobe Experience Platform Web SDK 拡張機能
+description: Adobe Experience Platform Web SDKタグ拡張
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1071'
+ht-degree: 52%
 
 ---
 
 # Adobe Experience Platform Web SDK拡張機能のリリースノート
 
-このドキュメントでは、 Adobe Experience Platform Launch用Adobe Experience Platform Web SDK拡張機能のリリースノートについて説明します。 SDK自体の最新のリリースノートについては、[Platform Web SDKリリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)を参照してください。
+このドキュメントでは、 Adobe Experience Platform Web SDKタグ拡張のリリースノートについて説明します。 SDK自体の最新のリリースノートについては、[Platform Web SDKリリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)を参照してください。
 
 ## バージョン2.6.0 - 2021年7月28日
 
@@ -102,14 +101,14 @@ Adobe Experience Platform Web SDK ライブラリのバージョン 2.3.0 が含
 * ID の移行中におこなわれるリクエストは、demdex cookie が設定されていない場合にクロスドメイン識別を改善するために demdex エンドポイントに送信されます。
 * ID の移行中におこなわれるリクエストでは常に、ID cookie が設定されることを確認する応答を必要とします。
 * 無効なコマンドを実行すると、有効なコマンド名のリストがコンソールに記録されます。
-* サードパーティ cookie のサポートを Adobe Experience Platform Launch 拡張機能に切り替えるためのチェックボックスが追加されました。これにより、demdex.net への呼び出しが無効になります。
+* サードパーティcookieのサポートをタグ拡張に切り替えるためのチェックボックスが追加されました。 これにより、demdex.net への呼び出しが無効になります。
 
 ## バージョン0.0.5 - 2019年12月21日
 
-* アクティビティトラッカーの設定を Platform Launch 拡張機能に追加
+* アクティビティトラッカーの設定をタグ拡張に追加
 * イベントコマンドで EventType と EventMergeId を公開。
-* Platform Launch 拡張機能に onBeforeEventSend 設定を追加
-* Platform Launch 拡張機能に edgeBasePath 設定を追加
+* タグ拡張にonBeforeEventSend設定を追加
+* タグ拡張にedgeBasePath設定を追加
 
 ## バージョン0.0.3 - 2019年11月26日
 
