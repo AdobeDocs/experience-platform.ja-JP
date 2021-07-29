@@ -3,9 +3,9 @@ keywords: dialogtech拡張機能；dialogtech;dialogtech宛先；DialogTech;Dial
 title: DialogTech 拡張機能
 description: DialogTech拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 9cab2f99-bab5-48b2-b893-f974a1886407
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '429'
 ht-degree: 17%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 17%
 
 この拡張機能は、Platformを購入したすべての顧客の宛先カタログで利用できます。
 
-この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されるタグ。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。 拡張機能をインストールするために、**[!UICONTROL manage_properties]**&#x200B;権限を付与するように依頼します。
+この拡張機能を使用するには、Adobe Experience Platformのタグにアクセスする必要があります。 タグは、Adobe Experience Cloudのお客様に、付属の付加価値機能として提供されます。 組織の管理者に問い合わせてタグへのアクセス権を取得し、タグに拡張機能のインストールに必要な&#x200B;**[!UICONTROL manage_properties]**&#x200B;権限を付与するよう依頼します。 拡張機能をインストールするために、**[!UICONTROL manage_properties]**&#x200B;権限を付与するように依頼します。
 
 ## 拡張機能のインストール {#install-extension}
 
