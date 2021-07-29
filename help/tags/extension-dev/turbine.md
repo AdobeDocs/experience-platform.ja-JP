@@ -1,10 +1,10 @@
 ---
 title: turbine 自由変数
 description: Adobe Experience Platformタグランタイムに固有の情報とユーティリティを提供する自由変数であるturbineオブジェクトについて説明します。
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 58%
+source-wordcount: '577'
+ht-degree: 51%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 `turbine` オブジェクトは、拡張機能のライブラリモジュールの範囲内の「自由変数」です。Adobe Experience Platformタグランタイム専用の情報とユーティリティを提供し、`require()`を使用しなくても、常にライブラリモジュールで使用できます。
 
@@ -90,7 +90,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 turbine.logger.error('Error!');
 ```
 
-ログユーティリティは、メッセージをコンソールに記録するために使用します。 ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、[Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda) または [ Launch and DTM Switch](https://chrome.google.com/webstore/detail/adobe-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk) Chrome 拡張機能を使用することをお勧めします。別の方法として、ユーザーはブラウザー開発者コンソール内で次のコマンド`_satellite.setDebug(true)`を実行できます。 ロガーには次のメソッドがあります。
+ログユーティリティは、メッセージをコンソールに記録するために使用します。 ユーザーがデバッグを有効にしている場合、メッセージはコンソールのみに表示されます。デバッグを有効にするには、[Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda)を使用することをお勧めします。 別の方法として、ユーザーはブラウザー開発者コンソール内で次のコマンド`_satellite.setDebug(true)`を実行できます。 ロガーには次のメソッドがあります。
 
 * `logger.log(message: string)`：コンソールにメッセージを記録します。
 * `logger.info(message: string)`：コンソールに情報メッセージを記録します。
