@@ -1,19 +1,19 @@
 ---
 title: Adobe Experience Platform Web SDK拡張機能のアクションタイプ
-description: Adobe Experience Platform LaunchのAdobe Experience Platform Web SDK拡張機能で提供される様々なアクションタイプについて説明します。
+description: Adobe Experience Platform Web SDKタグ拡張機能で提供される様々なアクションタイプについて説明します。
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 53864097af7d3278f56a3f23186de4eb405bcb51
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 3%
+source-wordcount: '573'
+ht-degree: 4%
 
 ---
 
 # アクションタイプ
 
-[Adobe Experience Platform Web SDK拡張機能](web-sdk-extension-configuration.md)を[Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html)用に設定したら、アクションタイプを設定します。
+[Adobe Experience Platform Web SDKタグ拡張](web-sdk-extension-configuration.md)を設定した後、アクションタイプを設定します。
 
 このページでは、使用可能なアクションタイプについて説明します。
 
