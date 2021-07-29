@@ -1,10 +1,10 @@
 ---
 title: Adobe Target v2 拡張機能のリリースノート
 description: Adobe Experience PlatformのAdobe Target v2タグ拡張の最新のリリースノートです。
-source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 62%
+ht-degree: 59%
 
 ---
 
@@ -12,15 +12,15 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-## 2021 年 7 月 20 日
+## 2021 年 7 月 20 日（PT）
 
 ### Adobe Target v2 Extension 0.15.1
 
 - `stringify`関数名のクラッシュが原因で、`sessionId`や`requestId`に対して誤ったUUID値が生成されていた問題を修正しました。
 
-## 2021 年 7 月 16 日
+## 2021 年 7 月 16 日（PT）
 
 ### Adobe Target v2 Extension 0.15.0
 
@@ -36,7 +36,7 @@ ht-degree: 62%
 
 ### Adobe Target v2 Extension 0.14.2
 
-- 最終的なLaunchバンドルに2つのat.jsバージョン（1つはオンデバイス判定付き、もう1つは非デバイス）が含まれるバグを修正します。
+- 最終的なバンドルに2つのat.jsバージョン（1つはオンデバイス判定付き、もう1つは非デバイス）が含まれるバグを修正します。
 
 ## 2021 年 5 月 19 日（PT）
 
