@@ -5,7 +5,7 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 55%
@@ -26,7 +26,7 @@ Experience Platform のソースは、次のカテゴリに分類されます。
 
 ### アドビアプリケーション
 
-Experience Platformを使用すると、Adobe Analytics、Adobe Audience Manager、[!DNL Experience Platform Launch]など、他のAdobeアプリケーションからデータを取り込むことができます。 詳しくは、次の関連ドキュメントを参照してください。
+Experience Platformを使用すると、Adobe Analytics、Adobe Audience Managerなどの他のAdobeアプリケーションからデータを取り込むことができます。 詳しくは、次の関連ドキュメントを参照してください。
 
 - [Adobe Audience Manager コネクタの概要](connectors/adobe-applications/audience-manager.md)
 - [UIでのAdobe Audience Managerソース接続の作成](./tutorials/ui/create/adobe-applications/audience-manager.md)
