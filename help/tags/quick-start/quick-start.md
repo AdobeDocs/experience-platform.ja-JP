@@ -1,10 +1,10 @@
 ---
 title: クイックスタートガイド
 description: Adobe Experience Platformでタグをすばやく使い始める方法を説明します。
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 44%
+source-wordcount: '1532'
+ht-degree: 42%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
 タグは、Adobe Experience Platformが提供する次世代タグ管理テクノロジーです。 このテクノロジーは、誰でも独自の統合を構築してAdobeのお客様が自社のサイトにデプロイできる、オープンで持続可能なエコシステムをサポートするように作られています。 これは API ファーストのアプリケーションです。UI 経由で実行できるすべての操作は API 経由で行うことができます。
 
@@ -26,8 +26,6 @@ ht-degree: 44%
 6. 開発環境でテストする。
 7. 実稼動環境へのプロモーション。
 
-紹介ビデオについては、[紹介ビデオ](videos.md)のドキュメントを参照してください。
-
 ## 1. グループとユーザーを設定する
 
 タグはAdobe IDと完全に統合されています。 ユーザー権限は、他のAdobe製品や[!DNL Creative Cloud]、[!DNL Document Cloud]、Experience CloudのソリューションとのAdmin Consoleを通じて管理されます。
@@ -38,7 +36,7 @@ ht-degree: 44%
 
 ## 2. にログインする
 
-タグ権限がAdobe IDに追加されたら、データ収集UIにログインする必要があります。 これをおこなうには、[Experience Cloudのログイン画面](https://experiencecloud.adobe.com)に直接移動し、「クイックアクセス」タブから「**[!UICONTROL Launch / Data Collection]**」を選択します。
+タグ権限がAdobe IDに追加されたら、データ収集UIにログインする必要があります。 これをおこなうには、[Experience Cloudのログイン画面](https://experiencecloud.adobe.com)に直接移動し、「クイックアクセス」タブから「データ収集UI」を選択します。
 
 >[!NOTE]
 >
@@ -56,7 +54,7 @@ ht-degree: 44%
 
 すべての新しいプロパティには、[Core 拡張機能](../extensions/web/core/overview.md)がインストールされています。モバイルプロパティには、追加の拡張機能が付属しています。Core拡張機能は、ルールのデータレイヤーとイベントタイプに対して堅牢なデフォルトのデータ要素タイプを提供するために、Adobeによって構築されています。 実行するアクション（ECID の取得、[!DNL Adobe Analytics] ビーコンの送信、[!DNL Target] グローバル mbo x など）のほとんどは、カタログからインストールする拡張機能のものです。
 
-Platformのタグを本当に一意にするのは、誰でもこれらの拡張機能を構築できることです。 サイトに Facebook リマーケティングピクセルをドロップする必要がある場合は、Facebook が構築した拡張機能をご確認ください。Twitter や Linked In でも同じ機能が必要な場合は、これらの拡張を機能を使用してください。サーベイを実施する必要がある場合は、Question Pro または Foresee をご覧ください。[!DNL GDPR]に対処するために、エンドユーザーのプライバシーと同意を管理する必要があるか。 Evidon および Trust Arc をご確認ください。サイト上の個々のユーザーの行動に関する詳細なインサイトを確認したい場合は、 Clicktale をご覧ください。詳しくは、「[新しい拡張機能の追加](../ui/managing-resources/extensions/overview.md#add-a-new-extension)」を参照してください。
+Platformのタグを本当に一意にするのは、誰でもこれらの拡張機能を構築できることです。 サイトに Facebook リマーケティングピクセルをドロップする必要がある場合は、Facebook が構築した拡張機能をご確認ください。Twitter や Linked In でも同じ機能が必要な場合は、これらの拡張を機能を使用してください。サーベイを実施する必要がある場合は、Question Pro または Foresee をご覧ください。[!DNL GDPR]に対処するために、エンドユーザーのプライバシーと同意を管理する必要があるか。 Evidon および Trust Arc をご確認ください。サイト上の個々のユーザーの行動に関する詳細なインサイトを確認したい場合は、 Clicktale をご覧ください。詳しくは、[新しい拡張子の追加](../ui/managing-resources/extensions/overview.md#add-a-new-extension)の節を参照してください。
 
 ## 5. データ要素とルールを作成する
 
