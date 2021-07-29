@@ -1,10 +1,10 @@
 ---
 title: Web 拡張機能のイベントタイプ
 description: Adobe Experience PlatformのWeb拡張機能のイベントタイプライブラリモジュールを定義する方法について説明します。
-source-git-commit: 5a6549577c61817f6fe239e1e9e47ab06d2bc807
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 31%
+source-wordcount: '1048'
+ht-degree: 30%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 31%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 タグルールでは、イベントとは、ルールを起動するために発生する必要があるアクティビティです。 例えば、Web拡張機能は、特定のマウスまたはタッチジェスチャーが発生するのを監視する「ジェスチャー」イベントタイプを提供できます。 このジェスチャーが発生すると、イベントロジックによってルールが実行されます。
 
