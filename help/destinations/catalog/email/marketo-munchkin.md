@@ -3,10 +3,10 @@ keywords: Marketo Munchkin;marketo munchkin;Marketo Munchkin拡張機能；marke
 title: Marketo Munchkin 拡張機能
 description: Marketo Munchkin拡張機能は、Adobe Experience Platformのパーソナライゼーションの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 24%
+source-wordcount: '481'
+ht-degree: 17%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 24%
 
 [!DNL Marketo’s Munchkin][!DNL Marketo] JavaScript を使用すると、 ランディングページと外部 We bページに対するエンドユーザーのページ訪問回数およびクリック数を追跡できます。
 
-[!DNL Marketo Munchkin] は、Adobe Experience Platformの電子メール拡張です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html) の拡張機能のページを参照してください。
+[!DNL Marketo Munchkin] は、Adobe Experience Platformの電子メール拡張です。Marketo Munchkinの詳細については、Marketoのドキュメントの[リードトラッキング](https://developers.marketo.com/javascript-api/lead-tracking/)をお読みください。
 
 この宛先はタグ拡張です。 Platformでのタグ拡張の動作について詳しくは、「[タグ拡張の概要](../launch-extensions/overview.md)」を参照してください。
 
@@ -43,8 +43,6 @@ ht-degree: 24%
 拡張機能をインストールするプロパティを選択します。 また、新しいプロパティを作成することもできます。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、タグドキュメントの[プロパティページの節](../../../tags/ui/administration/companies-and-properties.md#properties-page)を参照してください。
 
 このワークフローでは、インストールを完了する手順について説明します。
-
-拡張機能の設定オプションとインストールのサポートについて詳しくは、[Adobe Exchange の Marketo Munchkin のページ](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html)を参照してください。
 
 拡張機能は、[データ収集UI](https://experience.adobe.com/#/data-collection/)に直接インストールすることもできます。 詳しくは、タグのドキュメントの[新しい拡張子](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)の追加に関する節を参照してください。
 
