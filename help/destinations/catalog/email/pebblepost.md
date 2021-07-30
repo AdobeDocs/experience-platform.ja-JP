@@ -3,10 +3,10 @@ keywords: PebblePost;pebblepost;PebblePostプログラムダイレクトメー�
 title: PebblePost 拡張機能
 description: PebblePost拡張機能は、Adobe Experience Platformの電子メールの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 24%
+source-wordcount: '485'
+ht-degree: 17%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 24%
 
 [!DNL PebblePost's Programmatic Direct Mail®] ソリューションは、デジタルマーケターがオンラインでの関心と意図を、コンバージョンをおこなうオフラインの有形メディアに結び付けるのに役立ちます。マーケティング担当者は、アドビで作成したカスタムデータセグメントを活用して、関連性の高い、長期間持続する社内メディアのインプレッションをターゲット消費者に提供できます。応答パスのアクティビティとオンサイトコンバージョンに基づいて、パフォーマンスをリアルタイムで分析します。
 
-[!DNL PebblePost] は、Adobe Experience Platformの電子メール拡張です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html) の拡張機能のページを参照してください。
+[!DNL PebblePost] は、Adobe Experience Platformの電子メール拡張です。PebblePostの詳細については、[統合ブログの投稿](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq)を参照してください。
 
 この宛先はタグ拡張です。 Platformでのタグ拡張の動作について詳しくは、「[タグ拡張の概要](../launch-extensions/overview.md)」を参照してください。
 
@@ -41,8 +41,6 @@ ht-degree: 24%
 拡張機能をインストールするプロパティを選択します。 また、新しいプロパティを作成することもできます。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、タグドキュメントの[プロパティページの節](../../../tags/ui/administration/companies-and-properties.md#properties-page)を参照してください。
 
 このワークフローでは、インストールを完了する手順について説明します。
-
-拡張機能の設定オプションとインストールのサポートについて詳しくは、Adobe Exchange の [PebblePost ページ](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html)を参照してください。
 
 拡張機能は、[データ収集UI](https://experience.adobe.com/#/data-collection/)に直接インストールすることもできます。 詳しくは、タグのドキュメントの[新しい拡張子](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)の追加に関する節を参照してください。
 
