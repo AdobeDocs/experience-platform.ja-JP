@@ -3,10 +3,10 @@ keywords: twitter;Twitter;twitterユニバーサルwebサイトタグ；Twitter�
 title: Twitter ユニバーサルウェブサイトタグ拡張
 description: twitter Universal Website Tag拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 18%
+source-wordcount: '462'
+ht-degree: 14%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 18%
 
 [!DNL Twitter Universal Website Tag] は、Twitter UWTタグにビーコンを送信するアクションを提供します。
 
-[!DNL Twitter Universal Website Tag] は、Adobe Experience Platformの広告拡張機能です。拡張機能について詳しくは、「[高度なコンバージョントラッキング](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html)」を参照してください。
+[!DNL Twitter Universal Website Tag] は、Adobe Experience Platformの広告拡張機能です。拡張機能について詳しくは、Twitterのドキュメントの[コンバージョントラッキング](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)を参照してください。
 
 この宛先はタグ拡張です。 Platformでのタグ拡張の動作について詳しくは、「[タグ拡張の概要](../launch-extensions/overview.md)」を参照してください。
 
