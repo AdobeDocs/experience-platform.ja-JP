@@ -1,7 +1,7 @@
 ---
 title: ユーザー権限
 description: Adobe Experience Platformユーザーが使用できる様々なタグ権限について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e93cb075dc8c8d01fcda3edf0014f86a47b5b710
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 74%
@@ -75,7 +75,6 @@ Adobe Experience Platformでタグを使用する際の理解が必要なユー�
 会社権限は、複数のプロパティにまたがるアクセス許可に適用されます。現在、次の 3 つがあります。
 
 * **プロパティの管理：** データ収集UIで新しいプロパティを作成し、プロパティレベルでメタデータと設定を変更できます。プロパティを削除することもできます。詳しくは、[プロパティのドキュメント](companies-and-properties.md)を参照してください。 管理者は通常、この役割を実行します。
-* 
 * 新しいプロパティを作成し、プロパティレベルでメタデータと設定を変更する機能を付与します。 プロパティを削除することもできます。プロパティについて詳しくは、[こちら](companies-and-properties.md)を参照してください。管理者は通常、この役割を実行します。
 * **拡張機能の開発：**&#x200B;非公開リリースや公開リリースのリクエストなど、会社が所有する拡張機能パッケージを作成および変更する能力を付与します。
 * **アプリ設定の管理：** Adobe Journey Optimizer のライセンスを持つ顧客、またはその他のソリューションでモバイルアプリ内メッセージやプッシュメッセージにアクセスできる顧客のみが利用できます。これにより、Experience Cloudが把握しているアプリを、Firebase Cloud MessagingサービスおよびApple Push Notification Serviceとの通信に必要なプッシュ資格情報と共に管理できます。
