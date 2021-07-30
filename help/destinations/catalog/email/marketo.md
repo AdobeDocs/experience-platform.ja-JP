@@ -3,10 +3,10 @@ keywords: Marketo;marketo;Marketo拡張機能；marketo拡張機能
 title: Marketo 拡張機能
 description: Marketo拡張機能は、Adobe Experience Platformの電子メールの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
 source-wordcount: '471'
-ht-degree: 21%
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 21%
 
 [!DNL Marketo]の強力なマーケティング自動化ソフトウェアは、マーケターがデジタルマーケティングの技術と科学を習得し、顧客や見込み客を惹きつけるのに役立ちます。
 
-[!DNL Marketo] は、Adobe Experience Platformの電子メール拡張です。拡張機能について詳しくは、[Adobe Exchange の拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html)を参照してください。
+[!DNL Marketo] は、Adobe Experience Platformの電子メール拡張です。拡張機能について詳しくは、[Adobe Exchange の拡張機能ページ](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html)を参照してください。
 
 この宛先はタグ拡張です。 Platformでのタグ拡張の動作について詳しくは、「[タグ拡張の概要](../launch-extensions/overview.md)」を参照してください。
 
@@ -38,7 +38,7 @@ ht-degree: 21%
 4. 拡張機能をインストールするプロパティを選択します。 また、新しいプロパティを作成することもできます。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。プロパティについては、タグドキュメントの[プロパティページの節](../../../tags/ui/administration/companies-and-properties.md#properties-page)を参照してください。
 5. このワークフローでは、インストールを完了する手順について説明します。
 
-拡張機能の設定オプションとインストールのサポートについて詳しくは、[Adobe Exchange の Marketo ページ](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html)を参照してください。
+拡張機能の設定オプションとインストールのサポートについて詳しくは、[Adobe Exchange の Marketo ページ](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html)を参照してください。
 
 拡張機能は、[データ収集UI](https://experience.adobe.com/#/data-collection/)に直接インストールすることもできます。 詳しくは、タグのドキュメントの[新しい拡張子](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)の追加に関する節を参照してください。
 
