@@ -3,10 +3,10 @@ keywords: livefyre; livefyre拡張機能
 title: Adobe Livefyre 拡張機能
 description: AdobeLivefyre拡張機能は、Adobe Experience Platformのソーシャルの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 29%
+source-wordcount: '452'
+ht-degree: 21%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 29%
 
 Adobe Livefyre を使用すれば、一定量のユーザー作成コンテンツを発見、整理し、Webサイトに公開して、高度にパーソナライズされた本物のエクスペリエンスを作成することができます。
 
-AdobeLivefyreは、Adobe Experience Platformのソーシャル拡張機能です。 拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html) の拡張機能のページを参照してください。
+AdobeLivefyreは、Adobe Experience Platformのソーシャル拡張機能です。 LivefyreのAdobeについて詳しくは、『Livefyre実装ガイド](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en)』を参照してください。[
 
 この宛先はタグ拡張です。 Platformでのタグ拡張の動作について詳しくは、「[タグ拡張の概要](../launch-extensions/overview.md)」を参照してください。
 
@@ -42,10 +42,7 @@ Adobe Livefyre 拡張機能をインストールするには：
 
 ワークフローに従って、データ収集UIが表示され、インストールが完了します。
 
-拡張機能の設定オプションとインストールのサポートについて詳しくは、[Adobe Exchange の Adobe Livefyre](https://exchange.adobe.com/experiencecloud.details.100464.html) のページを参照してください。
-
 拡張機能は、[データ収集UI](https://experience.adobe.com/#/data-collection/)に直接インストールすることもできます。 詳しくは、[新しい拡張機能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)の追加に関するガイドを参照してください。
-
 
 ## 拡張機能の使用方法 {#how-to-use}
 
