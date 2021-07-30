@@ -3,10 +3,10 @@ keywords: Bizible;Bizible拡張機能；Bizible宛先
 title: Bizible 拡張機能
 description: Bizible拡張機能は、Adobe Experience Platformの電子メールの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 27%
+source-wordcount: '446'
+ht-degree: 13%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 27%
 
 ## 概要 {#overview}
 
-[!DNL Bizible] は、業界をリードする B2B アトリビューションソリューションであり、データに対する比類のない可視性を提供するため、成長を促進するスマートな意思決定をおこなうことができます。
+[!DNL Bizible] は、業界をリードするB2Bアトリビューションソリューションで、データを比類のない目に留まる可能性を提供し、成長を促進するスマートな意思決定をおこなえます。
 
-[!DNL Bizible] は、Adobe Experience Platformの電子メール拡張です。拡張機能について詳しくは、[Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html) の拡張機能のページを参照してください。
+[!DNL Bizible] は、Adobe Experience Platformの電子メール拡張です。Bizibleの詳細については、Bizibleの概要に関するリソースの「[マーケティングアトリビューション](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en)」を参照してください。
 
 この宛先はタグ拡張です。 Platformでのタグ拡張の動作について詳しくは、「[タグ拡張の概要](../launch-extensions/overview.md)」を参照してください。
 
@@ -41,8 +41,6 @@ ht-degree: 27%
 拡張機能をインストールするタグプロパティを選択します。 また、新しいプロパティを作成することもできます。 プロパティは、ルール、データ要素、設定された拡張機能、環境およびライブラリの集まりです。[タグのドキュメント](../../../tags/ui/administration/companies-and-properties.md)のプロパティについて説明します。
 
 ワークフローに従って、データ収集UIが表示され、インストールが完了します。
-
-拡張機能の設定オプションとインストールのサポートについて詳しくは、[Adobe Exchange の Bizible ページ](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html)を参照してください。
 
 拡張機能は、[データ収集UI](https://experience.adobe.com/#/data-collection/)に直接インストールすることもできます。 詳しくは、[新しい拡張機能](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension)の追加に関するガイドを参照してください。
 
