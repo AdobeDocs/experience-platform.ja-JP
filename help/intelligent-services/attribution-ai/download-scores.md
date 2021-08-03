@@ -1,31 +1,30 @@
 ---
-keywords: Experience Platform；アトリビューションai；アクセススコア；人気のあるトピック；スコアのダウンロード；アトリビューションaiスコア；エクスポート；エクスポート
+keywords: Experience Platform、attribution ai、アクセススコア、人気のあるトピック、ダウンロードスコア、attribution aiスコア、書き出し、書き出し
 solution: Experience Platform, Intelligent Services
-title: Attribution AIのスコアのダウンロード
+title: ダウンロードスコア(Attribution AI)
 topic-legacy: Downloading scores
 description: このドキュメントは、Attribution AIのスコアをダウンロードする際のガイドとして機能します。
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7219c44e1d8812506ee97367f27076b55a40203b
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 67%
+source-wordcount: '1053'
+ht-degree: 68%
 
 ---
 
-# Attribution AIのスコアのダウンロード
+# スコアのAttribution AI
 
 このドキュメントは、Attribution AIのスコアをダウンロードする際のガイドとして機能します。
 
 ## はじめに
 
-Attribution AIを使用すると、Parketファイル形式のスコアをダウンロードできます。 このチュートリアルでは、[はじめに](./getting-started.md)ガイドのAttribution AIスコアのセクションを読み終えている必要があります。
+Attribution AIを使用すると、Parquetファイル形式でスコアをダウンロードできます。 このチュートリアルでは、[はじめに](./getting-started.md)ガイドのAttribution AIスコアのダウンロードに関する節を読み終えている必要があります。
 
-また、Attribution AIのスコアにアクセスするには、正常な実行ステータスのサービスインスタンスを使用できる状態にする必要があります。 新しいサービスインスタンスを作成するには、[Attribution AIユーザーガイド](./user-guide.md)を参照してください。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
+また、Attribution AIのスコアにアクセスするには、正常に実行されたステータスを持つサービスインスタンスが必要です。 新しいサービスインスタンスを作成するには、『[Attribution AIユーザーガイド](./user-guide.md)』を参照してください。 サービスインスタンスを作成したばかりで、まだトレーニングとスコア測定を行っている場合は、実行が終了するまで 24 時間お待ちください。
 
 ## データセット ID を見つける {#dataset-id}
 
-Attribution AIインサイトのサービスインスタンス内で、右上のナビゲーションの「*その他のアクション*」ドロップダウンをクリックし、「**[!UICONTROL スコアへのアクセス]**」を選択します。
+Attribution AIインサイトのサービスインスタンス内で、右上のナビゲーションの「*その他のアクション*」ドロップダウンをクリックし、「**[!UICONTROL アクセススコア]**」を選択します。
 
 ![その他のアクション](./images/download-scores/more-actions.png)
 
@@ -33,9 +32,9 @@ Attribution AIインサイトのサービスインスタンス内で、右上の
 
 ![データセット ID](../customer-ai/images/download-scores/access-scores.png)
 
-## バッチ ID を取得する  {#retrieve-your-batch-id}
+## バッチ ID を取得する {#retrieve-your-batch-id}
 
-前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。組織に属するバッチのリストではなく、成功した最新のバッチを返すために、このAPI呼び出しに追加のクエリパラメーターが使用されます。 追加のバッチを返すには、`limit`クエリパラメーターの数を、返す金額に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
+前の手順で取得したデータセット ID を使用してバッチ ID を取得するには、Catalog API への呼び出しを実行する必要があります。追加のクエリパラメーターは、組織に属するバッチのリストではなく、最新の成功したバッチを返すために、このAPI呼び出しに使用されます。 追加のバッチを返すには、`limit`クエリパラメーターの数を、返す量に増やします。 使用可能なクエリパラメーターの種類について詳しくは、[クエリパラメーターを使用したカタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。
 
 **API 形式**
 
@@ -57,13 +56,13 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
-成功した応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチID `01E5QSWCAASFQ054FNBKYV6TIQ`です。 バッチ ID をコピーして、次の API 呼び出しで使用します。
+正常な応答は、バッチIDオブジェクトを含むペイロードを返します。 この例では、返されるオブジェクトのキー値はバッチID `01E5QSWCAASFQ054FNBKYV6TIQ`です。 バッチ ID をコピーして、次の API 呼び出しで使用します。
 
 >[!NOTE]
 >
-> 次の応答では、`tags`オブジェクトが読みやすくなるように変更されました。
+> 次の応答では、読みやすくするために`tags`オブジェクトを形式変更しました。
 
 ```json
 {
@@ -166,7 +165,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 }
 ```
 
-## ファイルを取得する  {#retrieving-your-files}
+## ファイルを取得する {#retrieving-your-files}
 
 前の手順で取得した `href` 値を API 呼び出しとして使用して、新しい GET リクエストを実行し、ファイルディレクトリを取得します。
 
@@ -257,23 +256,23 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
 
 **応答**
 
-現在のディレクトリにある、要求したファイルがダウンロードされます。この例では、ファイル名は「file.parket」です。
+現在のディレクトリにある、要求したファイルがダウンロードされます。この例では、ファイル名は「file.parquet」です。
 
 ![端末](./images/download-scores/terminal-output.png)
 
-ダウンロードされるスコアはParquet形式で、スコアを表示するには[!DNL Spark]-shellまたはParquet Readerが必要です。 生のスコア表示の場合は、[Apache Parket tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools)を使用できます。 パーケツールは[!DNL Spark]を使ってデータを分析できます。
+ダウンロードしたスコアはParquet形式で、スコアを表示するには[!DNL Spark]シェルまたはParquetリーダーが必要です。 生のスコア表示には、[Apache Parquetツール](https://parquet.apache.org/documentation/latest/)を使用できます。 Parquetツールは、[!DNL Spark]を使用してデータを分析できます。
 
 ## 次の手順
 
-このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順を説明しています。 スコア出力の詳細については、[Attribution AI input and output](./input-output.md)のドキュメントを参照してください。
+このドキュメントでは、Attribution AIスコアのダウンロードに必要な手順について説明しました。 スコア出力の詳細については、[Attribution AI input and output](./input-output.md)のドキュメントを参照してください。
 
-## Snowflakeを使用したスコアへのアクセス
+## Snowflake
 
 >[!IMPORTANT]
 >
->Snowflakeを使用したスコアへのアクセスについて詳しくは、attributionai-support@adobe.comにお問い合わせください。
+>Snowflakeを使用したスコアへのアクセスについて詳しくは、 attributionai-support@adobe.comにお問い合わせください。
 
-Snowflakeを使用して、集計されたAttribution AIスコアにアクセスできます。 現在、Snowflake のリーダーアカウントを設定して、その資格情報を受け取るには、アドビサポート（attributionai-support@adobe.com）に電子メールでお問い合わせいただく必要があります。
+Snowflakeを使用して、集計Attribution AIスコアにアクセスできます。 現在、Snowflake のリーダーアカウントを設定して、その資格情報を受け取るには、アドビサポート（attributionai-support@adobe.com）に電子メールでお問い合わせいただく必要があります。
 
 アドビサポートがリクエストを処理すると、Snowflake のリーダーアカウントの URL と、それに対応する資格情報が提供されます（以下を参照）。
 
@@ -285,7 +284,7 @@ Snowflakeを使用して、集計されたAttribution AIスコアにアクセス
 >
 >リーダーアカウントは、JDBC コネクタをサポートする SQL クライアント、ワークシート、BI ソリューションを使用してデータを照会するためのアカウントです。
 
-資格情報とURLを取得したら、モデル表をクエリし、タッチポイント日またはコンバージョン日別に集計できます。
+資格情報とURLを取得したら、タッチポイントの日付またはコンバージョンの日付で集計したモデルテーブルをクエリできます。
 
 ### Snowflake でスキーマを探す
 
