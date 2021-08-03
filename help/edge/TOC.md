@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Web SDK ヘルプ
 breadcrumb-title: Web SDK ガイド
 user-guide-description: Edge ネットワーク経由で Experience Cloud サービスを操作します。
 feature: データ管理
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 92%
+source-wordcount: '144'
+ht-degree: 90%
 
 ---
 
@@ -44,6 +44,7 @@ ht-degree: 92%
    * Adobe Target {#adobe-target}
       * [概要](personalization/adobe-target/target-overview.md)
       * [シングルページアプリケーションの実装](personalization/adobe-target/spa-implementation.md)
+      * [レスポンストークンへのアクセス](personalization/adobe-target/accessing-response-tokens.md)
    * Offer Decisioning {#offer-decisioning}
       * [概要](personalization/offer-decisioning/offer-decisioning-overview.md)
 * 同意 {#consent}
@@ -54,6 +55,7 @@ ht-degree: 92%
       * [タグなしでの統合](consent/iab-tcf/without-launch.md)
 * Web SDKタグ拡張{#extension}
    * [Web SDK 拡張機能](extension/web-sdk-extension-configuration.md)
+   * [イベントタイプ](extension/event-types.md)
    * [アクションタイプ](extension/action-types.md)
    * [データ要素タイプ](extension/data-element-types.md)
    * [ECID へのアクセス](extension/accessing-the-ecid.md)
