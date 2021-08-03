@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK拡張機能のデータ要素のタイプ
 description: Adobe Experience Platform Web SDKタグ拡張機能で提供される様々なデータ要素のタイプについて説明します。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 49%
+source-wordcount: '292'
+ht-degree: 43%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 49%
 [Adobe Experience Platform Web SDKタグ拡張機能](web-sdk-extension-configuration.md)で[アクションタイプ](action-types.md)を設定した後、データ要素タイプを設定します。
 
 このページでは、使用可能なデータ要素のタイプについて説明します。
+
 
 ## イベント結合 ID
 
@@ -31,7 +32,7 @@ XDM形式を使用して、任意のデータをAdobe Experience Platform Web SD
 
 ![](./assets/XDM-object.png)
 
-スキーマの特定のフィールド（`web.webPageDetails.URL` など）を開くと、一部の項目が自動的に収集されることに注意してください。複数の項目が自動的に収集される場合でも、必要に応じて項目を上書きできます。 すべての値は、手動で入力することも、他のデータ要素を使用して入力することもできます。
+`web.webPageDetails.URL`など、スキーマの特定のフィールドを開くと、一部の項目が自動的に収集されます。 複数の項目が自動的に収集される場合でも、必要に応じて項目を上書きできます。 すべての値は、手動で入力することも、他のデータ要素を使用して入力することもできます。
 
 >[!NOTE]
 >
