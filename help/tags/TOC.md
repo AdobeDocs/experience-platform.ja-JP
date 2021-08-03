@@ -4,10 +4,10 @@ user-guide-title: タグのヘルプ
 breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: データ収集
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: bddad4476d6943c7549028e93c84c8ca29059dc0
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 80%
+source-wordcount: '385'
+ht-degree: 81%
 
 ---
 
@@ -88,6 +88,9 @@ ht-degree: 80%
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [概要](./extensions/web/asset-insights/overview.md)
          * [リリースノート](./extensions/web/asset-insights/release-notes.md)
+      * Adobe Experience Manager Forms {#forms}
+         * [概要](./extensions/web/forms/overview.md)
+         * [リリースノート](./extensions/web/forms/release-notes.md)
       * Adobe Medium分析（オーディオおよびビデオ用） {#media-analytics}
          * [概要](./extensions/web/media-analytics/overview.md)
          * [リリースノート](./extensions/web/media-analytics/release-notes.md)
