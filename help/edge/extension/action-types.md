@@ -4,7 +4,7 @@ description: Adobe Experience Platform Web SDKタグ拡張機能で提供され�
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 4%
@@ -16,6 +16,7 @@ ht-degree: 4%
 [Adobe Experience Platform Web SDKタグ拡張](web-sdk-extension-configuration.md)を設定した後、アクションタイプを設定します。
 
 このページでは、使用可能なアクションタイプについて説明します。
+
 
 ## イベントの送信
 
