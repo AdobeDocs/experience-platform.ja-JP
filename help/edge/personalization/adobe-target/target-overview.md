@@ -3,9 +3,9 @@ title: Platform Web SDKでのAdobe Targetの使用
 description: Adobe Targetを使用してExperience PlatformWeb SDKでパーソナライズされたコンテンツをレンダリングする方法を説明します
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes；事前非表示スニペット；vec；フォームベースのExperience Composer;xdm；オーディエンス；決定；スコープ；スキーマ；システム図；図
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 1d2f1651dc9d9ab41507e65fd4b2bb84e9660187
+source-git-commit: 930756b4e10c42edf2d58be16c51d71df207d1af
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1273'
 ht-degree: 5%
 
 ---
@@ -42,8 +42,8 @@ ht-degree: 5%
 | 3 | エッジネットワークは、訪問者IDと渡されたパラメーターを使用して、エンリッチメントされたパーソナライゼーションリクエストを[!DNL Target]エッジに送信します。 |
 | 4 | プロファイルスクリプトが実行され、[!DNL Target]プロファイルストレージにフィードされます。 プロファイルストレージは、[!UICONTROL オーディエンスライブラリ]からセグメントを取得します（例えば、[!DNL Adobe Analytics]、[!DNL Adobe Audience Manager]、[!DNL Adobe Experience Platform]から共有されたセグメント）。 |
 | 5 | [!DNL Target]は、URLリクエストパラメーターとプロファイルデータに基づいて、現在のページビューと今後のプリフェッチされたビューで、訪問者に表示するアクティビティとエクスペリエンスを決定します。 [!DNL Target] 次に、これをedgeネットワークに送り返します。 |
-| 6 | a.Edgeネットワークは、追加のパーソナライゼーション用のプロファイル値を含めて、パーソナライゼーション応答をページに返します。 デフォルトコンテンツがちらつくことなく、可能な限り迅速に現在のページにパーソナライズされたコンテンツが表示されます。<br>b.シングルページアプリケーション(SPA)のユーザーアクションの結果として表示されるビュー用にパーソナライズされたコンテンツはキャッシュされるので、ビューがトリガーされたときに追加のサーバー呼び出しを必要とせずに、即座に適用できま&#x200B;す。<br>c.エッジネットワークは、同意、セッションID、ID、Cookieチェック、パーソナライゼーションなど、訪問者IDとその他の値をCookieで送信します。 |
-| 7 | エッジネットワークは、[!UICONTROL Analytics for Target](A4T)の詳細（アクティビティ、エクスペリエンス、コンバージョンのメタデータ）を[!DNL Analytics]エッジに転送しま&#x200B;す。 |
+| 6 | a.Edgeネットワークは、追加のパーソナライゼーション用のプロファイル値を含めて、パーソナライゼーション応答をページに返します。 デフォルトコンテンツがちらつくことなく、可能な限り迅速に現在のページにパーソナライズされたコンテンツが表示されます。<br>b.シングルページアプリケーション(SPA)のユーザーアクションの結果として表示されるビュー用にパーソナライズされたコンテンツはキャッシュされるので、ビューがトリガーされたときに追加のサーバー呼び出しを必要とせずに、即座に適用できます。<br>c.エッジネットワークは、同意、セッションID、ID、Cookieチェック、パーソナライゼーションなど、訪問者IDとその他の値をCookieで送信します。 |
+| 7 | エッジネットワークは、[!UICONTROL Analytics for Target](A4T)の詳細（アクティビティ、エクスペリエンス、コンバージョンのメタデータ）を[!DNL Analytics]エッジに転送します。 |
 
 ## [!DNL Adobe Target]を有効にする
 
@@ -63,79 +63,9 @@ ht-degree: 5%
 
 詳しくは、『*Adobe Targetガイド*』の「[Visual Experience Composerヘルパー拡張機能](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)」を参照してください。
 
-## VECアクティビティの自動レンダリング
+## パーソナライズされたコンテンツのレンダリング
 
-[!DNL Adobe Experience Platform Web SDK]は、ユーザーに対して、Web上の[!DNL Adobe Target]のVECを介して定義されたエクスペリエンスを自動的にレンダリングする機能を備えています。 VECアクティビティを自動レンダリングするように[!DNL Experience Platform Web SDK]に指示するには、`renderDecisions = true`を含むイベントを送信します。
-
-```javascript
-alloy
-("sendEvent", 
-  { 
-  "renderDecisions": true, 
-  "xdm": {
-    "commerce": { 
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3", 
-         "purchaseOrderNumber": "VAU3123", 
-         "currencyCode": "USD", 
-         "priceTotal": 999.98 
-         } 
-      } 
-    }
-  }
-);
-```
-
-## フォームベースのコンポーザーの使用
-
-[フォームベースのExperience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)は、JSONなどの応答タイプの異なる[!UICONTROL A/Bテスト]、[!UICONTROL エクスペリエンスターゲット設定]、[!UICONTROL Automated Personalization]、[!UICONTROL Recommendations]アクティビティの設定に役立つ非視覚的なインターフェイスですHTML、画像など [!DNL Target]から返される応答のタイプや決定に応じて、コアビジネスロジックを実行できます。 フォームベースのComposerアクティビティの決定を取得するには、決定を取得するすべての「decisionScopes」を含むイベントを送信します。
-
-```javascript
-alloy
-  ("sendEvent", { 
-    decisionScopes: [
-      "foo", "bar"], 
-      "xdm": {
-        "commerce": { 
-          "order": { 
-            "purchaseID": "a8g784hjq1mnp3", 
-            "purchaseOrderNumber": "VAU3123", 
-            "currencyCode": "USD", 
-            "priceTotal": 999.98 
-          } 
-        } 
-      } 
-    }
-  );
-```
-
-## 判定範囲
-
-`decisionScopes` パーソナライズされたエクスペリエンスをレンダリングするページのセクション、場所または部分を定義します。これらの`decisionScopes`はカスタマイズ可能で、ユーザー定義です。 現在の[!DNL Target]のお客様の場合、`decisionScopes`は「mbox」とも呼ばれます。 [!DNL Target] UIでは、`decisionScopes`が「場所」として表示されます。
-
-## `__view__`スコープ
-
-[!DNL Experience Platform Web SDK]は、VECアクションをレンダリングするSDKに依存せずにVECアクションを取得する機能を提供します。 `__view__`を`decisionScopes`として定義したイベントを送信します。
-
-```javascript
-alloy("sendEvent", {
-      "decisionScopes": ["__view__", "foo", "bar"], 
-      "xdm": { 
-        "web": { 
-          "webPageDetails": { 
-            "name": "Home Page"
-          }
-        } 
-      }
-    }
-  ).then(function(results) {
-    for (decision of results.decisions) {
-      if (decision.decisionScope === "__view__") {
-        console.log(decision.content)
-      }
-    }
-  });
-```
+詳しくは、[パーソナライゼーションコンテンツ](../rendering-personalization-content.md)のレンダリングを参照してください。
 
 ## XDMのオーディエンス
 
@@ -153,6 +83,86 @@ alloy("sendEvent", {
 * 時間枠
 
 詳しくは、『*Adobe Targetガイド*』の[オーディエンスのカテゴリ](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en)を参照してください。
+
+### レスポンストークン
+
+レスポンストークンは、主にGoogle、Facebookなどのサードパーティにメタデータを送信するために使用されます。 レスポンストークンが返されます
+を`propositions` -> `items`内の`meta`フィールドに入力します。 次にサンプルを示します。
+
+```
+{
+  "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+  "scope": "__view__",
+  "scopeDetails": ...,
+  "renderAttempted": true,
+  "items": [
+    {
+      "id": "0",
+      "schema": "https://ns.adobe.com/personalization/dom-action",
+      "meta": {
+        "experience.id": "0",
+        "activity.id": "126736",
+        "offer.name": "Default Content",
+        "offer.id": "0"
+      }
+    }
+  ]
+}
+```
+
+レスポンストークンを収集するには、`alloy.sendEvent`プロミスをサブスクライブし、`propositions`を繰り返し処理する必要があります
+`items` -> `meta`から詳細を抽出します。 すべての`proposition`には`renderAttempted`ブール値フィールドがあります
+`proposition`がレンダリングされたかどうかを示す 以下のサンプルを参照してください。
+
+```
+alloy("sendEvent",
+  {
+    renderDecisions: true,
+    decisionScopes: [
+      "hero-container"
+    ]
+  }).then(result => {
+    const { propositions } = result;
+
+    // filter rendered propositions
+    const renderedPropositions = propositions.filter(proposition => proposition.renderAttempted === true);
+
+    // collect the item metadata that represents the response tokens
+    const collectMetaData = (items) => {
+      return items.filter(item => item.meta !== undefined).map(item => item.meta);
+    }
+
+    const pageLoadResponseTokens = renderedPropositions
+      .map(proposition => collectMetaData(proposition.items))
+      .filter(e => e.length > 0)
+      .flatMap(e => e);
+  });
+  
+```
+
+自動レンダリングが有効な場合、提案配列には次が含まれます。
+
+#### ページ読み込み時：
+
+* `renderAttempted`フラグを`false`に設定したフォームベースのコンポーザーベースの`propositions`
+* `renderAttempted`フラグが`true`に設定されたVisual Experience Composerベースの提案
+* `renderAttempted`フラグが`true`に設定されたシングルページアプリケーションビューのVisual Experience Composerベースの提案
+
+#### 表示時 — 変更時（キャッシュ表示用）:
+
+* `renderAttempted`フラグが`true`に設定されたシングルページアプリケーションビューのVisual Experience Composerベースの提案
+
+自動レンダリングが無効な場合、提案配列には次の値が含まれます。
+
+#### ページ読み込み時：
+
+* `renderAttempted`フラグを`false`に設定したフォームベースのコンポーザーベースの`propositions`
+* `renderAttempted`フラグが`false`に設定されたVisual Experience Composerベースの提案
+* `renderAttempted`フラグが`false`に設定されたシングルページアプリケーションビューのVisual Experience Composerベースの提案
+
+#### 表示時 — 変更時（キャッシュ表示用）:
+
+* `renderAttempted`フラグが`false`に設定されたシングルページアプリケーションビューのVisual Experience Composerベースの提案
 
 ### 単一プロファイルの更新
 
@@ -244,7 +254,7 @@ mboxTraceとmboxDebugは非推奨（廃止予定）となりました。 [[!DNL 
 
 ## 用語
 
-__決定：__ では、 [!DNL Target]決定はアクティビティから選択されたエクスペリエンスと相関関係にあります。
+__提案：__ では、提案は [!DNL Target]アクティビティから選択されたエクスペリエンスと関連付けられます。
 
 __スキーマ：__ 決定のスキーマは、でのオファーのタイプで [!DNL Target]す。
 
