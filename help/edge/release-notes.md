@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
+source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 5%
+source-wordcount: '714'
+ht-degree: 4%
 
 ---
 
 # リリースノート
+
+## バージョン2.6.2 - 2021年8月5日
+
+* `result.decisions`プロパティにアクセスしていない場合でも、`result.decisions`の廃止に関する警告（`sendEvent`コマンドで提供）がコンソールに記録される問題を修正しました。 `result.decisions`プロパティにアクセスする際には警告は記録されませんが、プロパティは非推奨です。
 
 ## バージョン2.6.1 - 2021年7月30日
 
