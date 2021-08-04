@@ -3,7 +3,7 @@ keywords: adform拡張機能；adform
 title: Adform Website Tracking 拡張機能
 description: Adform拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: f616ecbf-6833-40cd-86be-7c13afe31180
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 24%
@@ -32,7 +32,7 @@ Adform Website Tracking拡張機能を使用すると、広告主はAdform Track
 
 Adform 拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
