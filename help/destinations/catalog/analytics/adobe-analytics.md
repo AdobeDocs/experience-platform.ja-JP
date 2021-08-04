@@ -3,7 +3,7 @@ keywords: Analytics拡張機能， analytics拡張機能，宛先分析
 title: Adobe Analytics 拡張機能
 description: Adobe Analytics拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 23%
@@ -32,7 +32,7 @@ Adobe Analyticsは、Adobe Experience Platformのanalytics拡張機能です。 
 
 Adobe Analytics 拡張機能をインストールするには、以下をおこないます。
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
