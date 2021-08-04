@@ -3,7 +3,7 @@ keywords: QuestionPro Intercept Surveys;questionpro intercept surveys;Questionpr
 title: QuestionPro Intercept Surveys 拡張機能
 description: QuestionPro Intercept Surveys拡張機能は、Adobe Experience Platformの調査の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: a0d6d46b-caac-48ae-94bc-4ebf24f9c94a
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 26%
@@ -32,7 +32,7 @@ ht-degree: 26%
 
 [!DNL QuestionPro Intercept Surveys]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
