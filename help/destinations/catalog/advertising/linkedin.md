@@ -3,7 +3,7 @@ keywords: linkedIn;linkedin;Linkedin;LinkedIn Insightタグ；insightタグ；In
 title: LinkedIn Insight タグ拡張機能
 description: LinkedIn Insight Tag拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 21%
@@ -32,7 +32,7 @@ ht-degree: 21%
 
 [!DNL LinkedIn Insight Tag]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
