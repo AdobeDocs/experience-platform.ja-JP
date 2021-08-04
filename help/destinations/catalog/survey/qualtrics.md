@@ -3,7 +3,7 @@ keywords: Qualtrics;Qualtrics;Qualtrics Webサイトフィードバック；Qual
 title: Qualtrics Website Feedback 拡張機能
 description: Qualtrics Website Feedback拡張機能は、Adobe Experience Platformの調査の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 70cf315c-2c96-4c3a-bf80-511024964986
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 30%
@@ -34,7 +34,7 @@ ht-degree: 30%
 
 [!DNL Qualtrics Website Feedback]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
