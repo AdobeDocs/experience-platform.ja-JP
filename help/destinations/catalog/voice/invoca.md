@@ -3,7 +3,7 @@ keywords: Invoca;invoca
 title: Invoca Tags 拡張機能
 description: Invoca Tags拡張機能は、Adobe Experience Platformの顧客の宛先の音声です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: f66a2e74-8d94-4b3a-9627-083ca875fad7
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 22%
@@ -32,7 +32,7 @@ ht-degree: 22%
 
 [!DNL Invoca Tags]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
