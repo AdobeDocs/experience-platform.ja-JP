@@ -3,7 +3,7 @@ keywords: Audience ManagerDIL拡張機能；宛先audience manager;dil拡張機�
 title: Audience Manager DIL 拡張機能
 description: Audience ManagerDIL拡張機能は、Adobe Experience Platformのデータ管理プラットフォーム(DMP)の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 20%
@@ -32,7 +32,7 @@ ht-degree: 20%
 
 [!DNL Audience Manager]拡張機能をインストールするには、次のDILを使用します。
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
