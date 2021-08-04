@@ -3,7 +3,7 @@ keywords: media analytics拡張機能；media analytics;audio and video拡張機
 title: Adobe Media Analytics for Audio and Video 拡張機能
 description: Adobe MediumAnalytics for Audio and Video拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: bf33e3e8-a95b-47e3-a1dc-c8f68f80b080
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 26%
@@ -32,7 +32,7 @@ Adobe MediumAnalytics for Audio and Videoは、Adobe Experience Platformの分�
 
 Adobe Analytics for Video 拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
