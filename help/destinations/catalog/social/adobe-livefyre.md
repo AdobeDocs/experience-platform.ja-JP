@@ -3,7 +3,7 @@ keywords: livefyre; livefyre拡張機能
 title: Adobe Livefyre 拡張機能
 description: AdobeLivefyre拡張機能は、Adobe Experience Platformのソーシャルの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 21%
@@ -32,7 +32,7 @@ AdobeLivefyreは、Adobe Experience Platformのソーシャル拡張機能です
 
 Adobe Livefyre 拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
