@@ -2,7 +2,7 @@
 title: Adobe Experience Platform Web SDKを使用したレスポンストークンへのアクセス
 description: Adobe Experience Platform Web SDKを使用してレスポンストークンにアクセスする方法について説明します。
 keywords: パーソナライゼーション；target;adobe target;renderDecisions;sendEvent;decisionScopes;result.decisions,response tokens;
-source-git-commit: 5ae7488e715ff97d2b667c40505b79433eb74f49
+source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 1%
@@ -55,7 +55,7 @@ alloy("sendEvent", {
             var activityName = item.meta["activity.name"];
             // Ignore duplicates
             if (activityNames.indexOf(activityName) === -1) {
-              activityNames.push(item.meta);
+              activityNames.push(activityName);
             }
           }
         });
