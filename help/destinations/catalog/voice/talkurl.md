@@ -3,7 +3,7 @@ keywords: Talk URL Inbox;Talk URL Inbox;Talk URL inbox;Talk URL inbox;Talk URL;T
 title: Talk URL Inbox 拡張機能
 description: Talk URL Inbox拡張機能は、Adobe Experience Platformの顧客の声の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 25%
@@ -30,7 +30,7 @@ Web ページ訪問者から音声メッセージを受信します。ホスト 
 
 [!DNL Talk URL Inbox]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
