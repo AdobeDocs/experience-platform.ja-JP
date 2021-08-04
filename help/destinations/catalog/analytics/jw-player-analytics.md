@@ -3,7 +3,7 @@ keywords: JWプレーヤー；JWプレーヤー；JWプレーヤー；JW拡張�
 title: JW Player Analytics（ベータ版）拡張機能
 description: JW Player Analytics（ベータ版）拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 32bdb2db-5c1b-4184-b6d3-b07dc4d0b324
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 20%
@@ -32,7 +32,7 @@ ht-degree: 20%
 
 [!DNL JW Player Analytics]（ベータ版）拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
