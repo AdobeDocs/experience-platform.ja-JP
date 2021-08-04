@@ -3,7 +3,7 @@ keywords: 分岐；分岐拡張；分岐先
 title: Branch 拡張機能
 description: Branch拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 19cbd410-e1c9-4510-8b04-b4c0bf7ff6a7
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 22%
@@ -32,7 +32,7 @@ Branchは、Adobe Experience Platformの広告拡張機能です。 この拡張
 
 [!DNL Branch]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
