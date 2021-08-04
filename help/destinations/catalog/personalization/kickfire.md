@@ -3,7 +3,7 @@ keywords: kickfire;Kickfire;kickfire拡張機能；Kickfire拡張機能
 title: KickFire 拡張機能
 description: KickFire拡張機能は、Adobe Experience Platformのパーソナライズ機能の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 16%
@@ -32,7 +32,7 @@ ht-degree: 16%
 
 [!DNL KickFire]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
