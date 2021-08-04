@@ -3,7 +3,7 @@ keywords: Nielsen IMA Handler;nielsen ima handler;nielsen ima;Nielsen ima;Nielse
 title: Nielsen IMA Handler 拡張機能
 description: Nielsen IMA Handler拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: a6f8260b-063d-4784-9f26-8b3dacd4ba58
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 15%
@@ -30,7 +30,7 @@ ht-degree: 15%
 
 [!DNL Nielsen IMA Handler]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
