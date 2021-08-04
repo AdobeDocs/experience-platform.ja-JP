@@ -3,9 +3,9 @@ keywords: googleカスタマーマッチ；Googleカスタマーマッチ；Goog
 title: Googleカスタマーマッチ接続
 description: Googleカスタマーマッチを使用すると、オンラインデータとオフラインデータを使用して、Googleが所有し、運用するSearch、Shopping、Gmail、YouTubeなどのプロパティをまたいで顧客にリーチし、再び関与させることができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
+source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1568'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 ![Adobe Experience Platform UIでのGoogleカスタマーマッチの宛先](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## 使用例
+## ユースケース
 
 [!DNL Google Customer Match]の宛先をいつどのように使用するかをより深く理解できるように、Adobe Experience Platformのお客様がこの機能を使用して解決できる使用例を以下に示します。
 
@@ -108,7 +108,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## 宛先の設定 — ビデオチュートリアル {#video}
 
-次のビデオでは、[!DNL Google Customer Match]の宛先を設定し、セグメントをアクティブ化する手順を示します。 次の節でも、手順を順番に説明します。
+次のビデオでは、ソーシャルの宛先を設定し、セグメントをアクティブ化する手順を示します。 このビデオではLinkedInを例として使用していますが、手順は[!DNL Google Customer Match]を含むソーシャルの宛先間で似ています。 ビデオの手順も、次の節で順番にレイアウトします。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
