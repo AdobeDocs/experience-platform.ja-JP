@@ -3,7 +3,7 @@ keywords: twitter;Twitter;twitterユニバーサルwebサイトタグ；Twitter�
 title: Twitter ユニバーサルウェブサイトタグ拡張
 description: twitter Universal Website Tag拡張機能は、Adobe Experience Platformの広告先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 14%
@@ -32,7 +32,7 @@ ht-degree: 14%
 
 [!DNL Twitter Universal Website Tag]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
