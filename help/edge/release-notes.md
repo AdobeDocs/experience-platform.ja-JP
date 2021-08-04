@@ -3,9 +3,9 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
+source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '717'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## バージョン2.6.0 - 2021年7月28日
 
-* Adobe Targetのレスポンストークンなど、 `sendEvent`で解決されたプロミスに、より多くのパーソナライゼーションコンテンツを提供します。 `sendEvent`コマンドが実行されると、プロミスが返され、サーバーから受信した情報を含む`result`オブジェクトを使用して解決されます。 この結果オブジェクトには、 `decisions`という名前のプロパティが含まれます。 この`decisions`プロパティは非推奨です。 新しいプロパティ`propositions`が追加されました。 この新しいプロパティを使用すると、レスポンストークンなど、パーソナライゼーションに関するコンテンツにアクセスできます。 近日中に、その他のドキュメントも提供される予定です。
+* Adobe Targetのレスポンストークンなど、 `sendEvent`で解決されたプロミスに、より多くのパーソナライゼーションコンテンツを提供します。 `sendEvent`コマンドが実行されると、プロミスが返され、サーバーから受信した情報を含む`result`オブジェクトを使用して解決されます。 以前は、この結果オブジェクトには`decisions`という名前のプロパティが含まれていました。 この`decisions`プロパティは非推奨です。 新しいプロパティ`propositions`が追加されました。 この新しいプロパティは、[レスポンストークン](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html)など、より多くのパーソナライゼーションコンテンツにアクセスできるようにします。
 
 ## バージョン2.5.0 - 2021年6月
 
