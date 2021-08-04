@@ -3,7 +3,7 @@ keywords: Marketo Webパーソナライゼーション；marketo webパーソナ
 title: Marketo Web パーソナライゼーション拡張機能
 description: Marketo Webパーソナライゼーション拡張機能は、Adobe Experience Platformのパーソナライゼーションの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 2f194a5e-13b7-460a-a968-29131771efca
-source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 22%
@@ -32,7 +32,7 @@ ht-degree: 22%
 
 [!DNL Marketo Web Personalization]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
