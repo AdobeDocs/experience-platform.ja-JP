@@ -3,7 +3,7 @@ keywords: Nielsen VideoJS Player Handler;nielsenビデオjsプレーヤー；nie
 title: Nielsen VideoJS Player Handler 拡張機能
 description: Nielsen VideoJS Player Handler拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: d640bf40-c6af-4aff-8303-933fe71f4a7e
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 32%
@@ -36,7 +36,7 @@ DTVR：これは、参加しているプログラミングソースのデスク�
 
 [!DNL Nielsen VideoJS Player Handler]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
