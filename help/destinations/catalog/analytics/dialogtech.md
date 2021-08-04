@@ -3,7 +3,7 @@ keywords: dialogtech拡張機能；dialogtech;dialogtech宛先；DialogTech;Dial
 title: DialogTech 拡張機能
 description: DialogTech拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 9cab2f99-bab5-48b2-b893-f974a1886407
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 17%
@@ -30,7 +30,7 @@ ht-degree: 17%
 
 [!DNL DialogTech]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
