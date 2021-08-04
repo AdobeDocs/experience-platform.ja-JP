@@ -3,7 +3,7 @@ keywords: Decibel拡張機能；Decibel;Decibel宛先
 title: Decibel 拡張機能
 description: Decibel拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 0508f8f8-d512-48f1-b2ea-1429f59079db
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 24%
@@ -32,7 +32,7 @@ Webプロパティに[!DNL Decibel]を迅速かつシームレスにデプロイ
 
 [!DNL Decibel]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
