@@ -3,7 +3,7 @@ keywords: D&B訪問者インテリジェンス；D&B；訪問者インテリジ�
 title: D&B 訪問者インテリジェンス拡張機能
 description: D&B訪問者インテリジェンス拡張機能は、Adobe Experience Platformのパーソナライゼーションの宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: e06833d9-51d7-4b0c-a9ce-28e0fadc2b62
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 21%
@@ -32,7 +32,7 @@ ht-degree: 21%
 
 D&amp;B 訪問者インテリジェンス拡張機能をインストールするには、以下を実行します。
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
