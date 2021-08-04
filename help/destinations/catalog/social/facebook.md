@@ -3,9 +3,9 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
+source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1176'
 ht-degree: 16%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 16%
 
 ![Adobe Experience Platform UIでのfacebookの宛先](../../assets/catalog/social/facebook/catalog.png)
 
-## 使用例
+## ユースケース
 
 [!DNL Facebook]の宛先をいつどのように使用するかを理解しやすくするために、Adobe Experience Platformのお客様がこの機能を使用して解決できる、2つの使用例を以下に示します。
 
@@ -36,7 +36,7 @@ ht-degree: 16%
 
 次に、関連するメンバーシップIDや顧客層を含むオフラインデータを使用して、[!DNL Facebook]宛先を通じてターゲットに設定できる新しいオーディエンスセグメントを構築できます。
 
-## サポートされているID{#supported-identities}
+## サポートされるID {#supported-identities}
 
 [!DNL Facebook Custom Audiences] では、以下の表で説明するIDのアクティブ化をサポートしています。[ID](/help/identity-service/namespaces.md)の詳細を説明します。
 
@@ -48,11 +48,11 @@ ht-degree: 16%
 | email_lc_sha256 | SHA256アルゴリズムでハッシュ化された電子メールアドレス | プレーンテキストとSHA256ハッシュ化された電子メールアドレスの両方が、Adobe Experience Platformでサポートされています。 「[ID一致要件](#id-matching-requirements-id-matching-requirements)」の手順に従い、プレーンテキストとハッシュ化された電子メールアドレスにそれぞれ適切な名前空間を使用します。 ソースフィールドにハッシュ化されていない属性が含まれている場合、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に[!DNL Platform]でデータを自動的にハッシュ化します。 |
 | extern_id | カスタムユーザーID | ソースIDがカスタム名前空間の場合は、このターゲットIDを選択します。 |
 
-## エクスポートタイプ{#export-type}
+## 書き出しタイプ {#export-type}
 
 **セグメントの書き出し**  - Facebookの宛先で使用されている識別子（名前、電話番号など）を使用して、セグメント（オーディエンス）のすべてのメンバーを書き出します。
 
-## Facebookアカウントの前提条件{#facebook-account-prerequisites}
+## Facebookアカウントの前提条件 {#facebook-account-prerequisites}
 
 オーディエンスセグメントを [!DNL Facebook] に送信する前に、次の要件を満たしていることを確認してください。
 
@@ -63,13 +63,13 @@ ht-degree: 16%
    > Adobe Experience Cloud の権限を設定する場合は、**キャンペーンの管理**&#x200B;権限を有効にする必要があります。[!DNL Adobe Experience Platform]統合には権限が必要です。
 - [!DNL Facebook Custom Audiences] 利用規約を読み、署名します。これをおこなうには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`に移動します。`accountID`は[!DNL Facebook Ad Account ID]です。
 
-## ID一致要件{#id-matching-requirements}
+## ID一致の要件 {#id-matching-requirements}
 
 [!DNL Facebook] では、個人を特定できる情報(PII)を明確に送信しないことが求められます。したがって、[!DNL Facebook]に対してアクティブ化されたオーディエンスは、電子メールアドレスや電話番号など、*ハッシュ化された*&#x200B;識別子をキーオフにできます。
 
 Adobe Experience Platformに取り込むIDのタイプに応じて、対応する要件を満たす必要があります。
 
-## 電話番号のハッシュ要件{#phone-number-hashing-requirements}
+## 電話番号のハッシュ要件 {#phone-number-hashing-requirements}
 
 [!DNL Facebook]で電話番号をアクティブにする方法は2つあります。
 
@@ -81,7 +81,7 @@ Adobe Experience Platformに取り込むIDのタイプに応じて、対応す�
 >`Phone`名前空間に取り込まれた電話番号は、[!DNL Facebook]で有効化できません。
 
 
-## 電子メールのハッシュ要件{#email-hashing-requirements}
+## 電子メールのハッシュ要件 {#email-hashing-requirements}
 
 電子メールアドレスをAdobe Experience Platformに取り込む前にハッシュ化したり、Experience Platform内で明確に電子メールアドレスを使用し、アクティブ化時に[!DNL Platform]ハッシュ化したりできます。
 
@@ -104,7 +104,7 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 ![IDマッピング変換](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## カスタム名前空間{#custom-namespaces}の使用
+## カスタム名前空間の使用 {#custom-namespaces}
 
 `Extern_ID`名前空間を使用して[!DNL Facebook]にデータを送信する前に、[!DNL Facebook Pixel]を使用して独自の識別子を同期させてください。 詳しくは、[Facebookの公式ドキュメント](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)を参照してください。
 
@@ -112,11 +112,11 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 [!DNL Facebook]の宛先に接続するには、[ソーシャルの宛先認証ワークフロー](./workflow.md)を参照してください。
 
-次のビデオでも、[!DNL Facebook]の宛先を設定し、セグメントをアクティブ化する手順を示します。
+次のビデオでも、ソーシャルの宛先を設定し、セグメントをアクティブ化する手順を示します。 このビデオではLinkedInを例として使用していますが、手順はソーシャルの宛先間で似ています。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## [!DNL Facebook] {#activate-segments}に対してセグメントをアクティブ化
+## [!DNL Facebook]に対してセグメントをアクティブ化 {#activate-segments}
 
 [!DNL Facebook]に対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
 
@@ -124,7 +124,7 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 ![Facebook Origin of Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
-## エクスポートされたデータ{#exported-data}
+## エクスポートされたデータ {#exported-data}
 
 [!DNL Facebook]の場合、アクティブ化が成功すると、[[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/)にプログラム的に[!DNL Facebook]カスタムオーディエンスが作成されます。 ユーザーがアクティブ化されたセグメントに対してオーディエンスが資格を持つかどうかによって、ユーザーのセグメントメンバーシップが追加および削除されます。
 
@@ -134,7 +134,7 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 ## トラブルシューティング {#troubleshooting}
 
-### 400 Bad Requestエラーメッセージ{#bad-request}
+### 400 Bad Requestエラーメッセージ {#bad-request}
 
 [!DNL Facebook]に対してセグメントをアクティブ化すると、次のエラーが表示される場合があります。
 
