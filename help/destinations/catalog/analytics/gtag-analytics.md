@@ -3,7 +3,7 @@ keywords: Google Global Site Tag;gtag;google gtag;google拡張機能；google gt
 title: Google Global Site Tag 拡張機能
 description: Google Global Site Tag拡張機能は、Adobe Experience Platformの分析の宛先です。 拡張機能について詳しくは、Adobe Exchange の拡張機能のページを参照してください。
 exl-id: 9643adc5-997d-45b3-a2b6-e365164022b8
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 22%
@@ -32,7 +32,7 @@ ht-degree: 22%
 
 [!DNL Google Global Site Tag]拡張機能をインストールするには：
 
-[Platformインターフェイス](http://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
+[Platformインターフェイス](https://platform.adobe.com/)で、**[!UICONTROL 宛先]**/**[!UICONTROL カタログ]**&#x200B;に移動します。
 
 カタログから拡張機能を選択するか、検索バーを使用します。
 
