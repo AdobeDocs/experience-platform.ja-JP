@@ -1,10 +1,10 @@
 ---
 title: Tags Satellite Object Reference
 description: クライアント側の_satelliteオブジェクトと、それを使用してAdobe Experience Platformで実行できる様々な機能について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 49%
+source-wordcount: '1258'
+ht-degree: 43%
 
 ---
 
@@ -130,7 +130,13 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 これにより、ブラウザーコンソールに警告が記録されます。 ユーザーがタグデバッグを有効にしているかどうかに関係なく、メッセージが表示されます。
 
-## `cookie`
+## `cookie` {#cookie}
+
+`_satellite.cookie` には、Cookieの読み取りと書き込みを行う関数が含まれます。これは、サードパーティライブラリのjs-cookieの公開済みコピーです。 このライブラリのより高度な使用方法の詳細については、[js-cookieのドキュメント](https://www.npmjs.com/package/js-cookie#basic-usage)を参照してください。
+
+### cookieの設定 {#cookie-set}
+
+Cookieを設定するには、`_satellite.cookie.set()`を使用します。
 
 **コード**
 
@@ -138,9 +144,41 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 _satellite.cookie.set(name: string, value: string[, attributes: Object])
 ```
 
+>[!NOTE]
+>
+>古い[`setCookie`](#setCookie)メソッドでは、この関数呼び出しの3番目の（オプション）引数は、cookieの有効期間(TTL)を日数で示す整数でした。 この新しいメソッドでは、「attributes」オブジェクトを3番目の引数として受け取ります。 新しいメソッドを使用してCookieのTTLを設定するには、attributesオブジェクトに`expires`プロパティを指定し、目的の値に設定する必要があります。 これは、次の例で示されます。
+
+**例**
+
+次の関数呼び出しは、1週間で期限切れになるCookieを書き込みます。
+
+```javascript
+_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
+```
+
+### Cookieの取得 {#cookie-get}
+
+Cookieを取得するには、`_satellite.cookie.get()`を使用します。
+
+**コード**
+
 ```javascript
 _satellite.cookie.get(name: string) => string
 ```
+
+**例**
+
+次の関数呼び出しは、以前に設定されたCookieを読み取ります。
+
+```javascript
+var product = _satellite.cookie.get('product');
+```
+
+### cookieの削除 {#cookie-remove}
+
+cookieを削除するには、`_satellite.cookie.remove()`を使用します。
+
+**コード**
 
 ```javascript
 _satellite.cookie.remove(name: string)
@@ -148,22 +186,11 @@ _satellite.cookie.remove(name: string)
 
 **例**
 
-```javascript
-// Writing a cookie that expires in one week.
-_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
-```
+次の関数呼び出しは、以前に設定されたCookieを削除します。
 
 ```javascript
-// Reading a previously set cookie.
-var product = _satellite.cookie.get('product');
-```
-
-```javascript
-// Removing a previously set cookie.
 _satellite.cookie.remove('product');
 ```
-
-これは、Cookieの読み取りと書き込みを行うユーティリティです。 これは、サードパーティライブラリのjs-cookieの公開済みコピーです。 より高度な使用方法については、[js-cookie の使用に関するドキュメント](https://www.npmjs.com/package/js-cookie#basic-usage)を参照してください。
 
 ## `buildInfo`
 
@@ -236,11 +263,11 @@ _satellite.notify('Hello world!');
 
 ログレベルを指定しない場合や、その他のレベルの値を渡す場合、メッセージは通常のメッセージとして記録されます。
 
-## `setCookie`
+## `setCookie` {#setCookie}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->このメソッドは廃止されました。代わりに `_satellite.cookie.set()` を使用してください。
+>このメソッドは廃止されました。代わりに [`_satellite.cookie.set()`](#cookie-set) を使用してください。
 
 **コード**
 
@@ -258,9 +285,9 @@ _satellite.setCookie('product', 'Circuit Pro', 3);
 
 ## `readCookie`
 
->[!NOTE]
+>[!IMPORTANT]
 >
->このメソッドは廃止されました。代わりに `_satellite.cookie.get()` を使用してください。
+>このメソッドは廃止されました。代わりに [`_satellite.cookie.get()`](#cookie-get) を使用してください。
 
 **コード**
 
@@ -280,7 +307,7 @@ var product = _satellite.readCookie('product');
 
 >[!NOTE]
 >
->このメソッドは廃止されました。代わりに `_satellite.cookie.remove()` を使用してください。
+>このメソッドは廃止されました。代わりに [`_satellite.cookie.remove()`](#cookie-remove) を使用してください。
 
 **コード**
 
