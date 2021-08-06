@@ -1,22 +1,21 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Analyticsソースコネクタ；Analyticsコネクタ；Analyticsソース；Analyticsソース；Analytics
+keywords: Experience Platform；ホーム；人気のあるトピック；Analyticsソースコネクタ；Analyticsコネクタ；Analyticsソース；Analytics
 solution: Experience Platform
 title: UIでのAdobe Analyticsソース接続の作成
 topic-legacy: overview
 type: Tutorial
-description: UIでAdobe Analyticsソース接続を作成し、ユーザーデータをAdobe Experience Platformに取り込む方法を説明します。
+description: UIでAdobe Analyticsソース接続を作成して、消費者データをAdobe Experience Platformに取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-translation-type: tm+mt
-source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
+source-git-commit: 952b2caa6983b331c046618aff255131a6480e67
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 13%
+source-wordcount: '1450'
+ht-degree: 8%
 
 ---
 
 # UIでのAdobe Analyticsソース接続の作成
 
-このチュートリアルでは、UIでユーザーデータをAdobe Experience Platformに取り込むためのAdobe Analyticsソース接続を作成する手順を説明します。
+このチュートリアルでは、UIでAdobe Analyticsソース接続を作成し、[!DNL Analytics]レポートスイートデータをAdobe Experience Platformに取り込む手順を説明します。
 
 ## はじめに
 
@@ -26,90 +25,173 @@ ht-degree: 13%
 * [リアルタイム顧客プロファイル](../../../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムのプロファイルを顧客に提供します。
 * [サンドボックス](../../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
+### 主要用語
+
+このドキュメント全体で使用される以下の主要用語を理解しておくことが重要です。
+
+* **標準属性**:標準属性は、Adobeで事前定義された属性です。これらは、すべての顧客に対して同じ意味を持ち、[!DNL Analytics]ソースデータと[!DNL Analytics]スキーマフィールドグループで使用できます。
+* **カスタム属性**:カスタム属性は、のカスタムディメンション階層の任意の属性で [!DNL Analytics]す。また、スキーマ定義のAdobeにも含まれますが、お客様によって異なる解釈が可能です。 カスタム属性には、eVar、prop、リストが含まれます。 eVarについて詳しくは、次の[[!DNL Analytics] コンバージョン変数](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en)のドキュメントを参照してください。
+* **カスタムフィールドグループの属性**:顧客が作成したフィールドグループから派生する属性はすべてユーザー定義で、標準属性とカスタム属性のどちらでもありません。
+* **わかりやすい名前**:わかりやすい名前は、実装内のカスタム変数に対して人が指定するラベル [!DNL Analytics] です。わかりやすい名前について詳しくは、次の[[!DNL Analytics] コンバージョン変数](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en)のドキュメントを参照してください。
+
 ## Adobe Analyticsとのソース接続の作成
 
-[Adobe Experience Platform](https://platform.adobe.com)にログインし、左のナビゲーションバーで「**[!UICONTROL ソース]**」を選択してソースワークスペースにアクセスします。 **カタログ**&#x200B;画面には、受信接続を作成するために利用できるソースが表示され、各ソースには、それらに関連付けられた既存のアカウント数とデータセットフローが表示されます。
+プラットフォームUIで、左側のナビゲーションから「**[!UICONTROL ソース]**」を選択して、「[!UICONTROL ソース]」ワークスペースにアクセスします。 [!UICONTROL カタログ]画面には、アカウントを作成できる様々なソースが表示されます。
 
-画面の左側にあるカタログから適切なカテゴリを選択できます。 または、検索オプションを使用して、使用する特定のソースを見つけることもできます。
+画面の左側にあるカタログから適切なカテゴリを選択できます。 検索バーを使用して、表示するソースを絞り込むこともできます。
 
-**[!UICONTROL Adobeアプリ]**&#x200B;カテゴリの下で、**[!UICONTROL Adobe Analytics]**&#x200B;を選択して、情報バーを画面の右側に表示します。 情報バーには、選択したソースの簡単な説明と、ソースまたは表示のドキュメントに接続するためのオプションが表示されます。 既存のアカウントを表示するには、「**[!UICONTROL アカウント]**」を選択します。
+「**[!UICONTROL Adobeアプリケーション]**」カテゴリで「**[!UICONTROL Adobe Analytics]**」を選択し、「**[!UICONTROL データを追加]**」を選択します。
 
-![](../../../../images/tutorials/create/analytics/catalog.png)
+![カタログ](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### データの選択
 
-**[!UICONTROL Adobe Analytics]**&#x200B;の手順が表示されます。 この画面には、Analyticsで事前に設定されたデータセットフローが表示されます。 新しいデータセットフローを作成するには、**[!UICONTROL 「データを選択]**」をクリックします。
+**[!UICONTROL Analyticsソースのデータ追加]**&#x200B;手順が表示されます。 **[!UICONTROL レポートスイート]**&#x200B;を選択してAnalyticsレポートスイートデータのソース接続の作成を開始し、取り込むレポートスイートを選択します。 「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
 >[!NOTE]
 >
->異なるデータを取り込むために、1つのソースに対して複数のインバウンド接続を作成できます。
+>1つのソースに対する複数のインバウンド接続を、異なるデータを取り込むために作成できます。
 
-![](../../../../images/tutorials/create/analytics/dataset-flows.png)
+![](../../../../images/tutorials/create/analytics/add-data.png)
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-使用可能なレポートスイートのリストから、プラットフォームに取り込むレポートスイートを選択し、「**[!UICONTROL 次へ]**」をクリックします。
+### マッピング
 
-![](../../../../images/tutorials/create/analytics/select-data.png)
+>[!IMPORTANT]
+>
+>[!DNL Analytics]ソースのデータ準備サポート機能はベータ版です。
 
-### データセットフローの名前を指定する
+[!UICONTROL マッピング]ページは、ソースフィールドを適切なターゲットスキーマフィールドにマッピングするためのインターフェイスを提供します。 ここから、カスタム変数を新しいスキーマフィールドグループにマッピングし、データ準備でサポートされているように計算を適用できます。 マッピング処理を開始するターゲットスキーマを選択します。
 
-**[!UICONTROL データセットフローの詳細]**&#x200B;の手順が表示されます。データセットフローの名前とオプションの説明を入力する必要があります。 終了したら「**[!UICONTROL 次へ]**」を選択します。
+>[!TIP]
+>
+>スキーマ選択メニューには、[!DNL Analytics]テンプレートフィールドグループを持つスキーマのみが表示されます。 その他のスキーマは省略されます。 使用するレポートスイートデータに適したスキーマがない場合は、新しいスキーマを作成する必要があります。 スキーマの作成の詳細な手順については、UIでの[スキーマの作成と編集に関するガイドを参照してください。](../../../../../xdm/ui/resources/schemas.md)
 
-![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
+![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
-### データセットのフローの確認
+[!UICONTROL 標準フィールドをマップ]セクションに、[!UICONTROL 標準マッピングが適用された]、[!UICONTROL 標準マッピングと一致しない]、[!UICONTROL カスタムマッピング]のパネルが表示されます。 各カテゴリに関する具体的な情報については、次の表を参照してください。
 
-**[!UICONTROL レビュー]**&#x200B;の手順が表示され、新しいAnalyticsのインバウンドデータセットフローを作成前に確認できます。 接続の詳細は、次のようなカテゴリ別にグループ化されます。
+| 標準フィールドのマッピング | 説明 |
+| --- | --- |
+| [!UICONTROL 標準マッピングの適用] | [!UICONTROL 適用された標準マッピング]パネルには、マッピングされた標準属性の合計数が表示されます。 標準マッピングとは、ソース[!DNL Analytics]データの標準属性と[!DNL Analytics]フィールドグループの標準属性との間のマッピングセットを指します。 これらは事前にマッピングされており、編集できません。 |
+| [!UICONTROL 非一致の標準マッピング] | [!UICONTROL 標準マッピング]パネルに一致しないと、わかりやすい名前の競合を含む、マッピングされた標準属性の数が表示されます。 これらの競合は、既にフィールド記述子のセットが入力されているスキーマを再利用する際に発生します。 わかりやすい名前の競合があっても、[!DNL Analytics]データフローを続行できます。 |
+| [!UICONTROL カスタムマッピング] | [!UICONTROL カスタムマッピング]パネルには、eVar、prop、リストを含む、マッピングされたカスタム属性の数が表示されます。 カスタムマッピングとは、ソース[!DNL Analytics]データのカスタム属性と[!DNL Analytics]フィールドグループのカスタム属性とのマッピングセットを指します。 カスタム属性は、標準属性だけでなく、他のカスタム属性にマッピングできます。 |
 
-* **[!UICONTROL 接続]**:ソース接続のタイプと選択したレポートスイートが表示されます。
-* **[!UICONTROL データセットとマップのフィールドの割り当て]**:その他のソースコネクタを作成する場合、このコンテナには、データセットが適用するスキーマなど、ソースデータが取り込むデータセットが表示されます。出力スキーマとデータセットは、Analyticsデータセットフローに対して自動的に設定されます。
+![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
-![](../../../../images/tutorials/create/analytics/review.png)
+[!DNL Analytics] ExperienceEventテンプレートスキーマフィールドグループをプレビューするには、[!UICONTROL 適用された標準マッピング]パネルで「**[!UICONTROL 表示]**」を選択します。
 
-### データセットフローの監視
+![view](../../../../images/tutorials/create/analytics/view.png)
 
-データセットフローが作成されたら、データを通じて取り込まれるデータを監視できます。 **[!UICONTROL カタログ]**&#x200B;画面で、**[!UICONTROL データセットフロー]**&#x200B;を選択し、Analyticsアカウントに関連付けられた確立済みフローのリストを表示します。
+[!UICONTROL Adobe Analytics ExperienceEventテンプレートスキーマフィールドグループ]ページに、スキーマの構造の検査に使用するインターフェイスが表示されます。 終了したら、「**[!UICONTROL 閉じる]**」を選択します。
 
-![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
+![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-**データセットフロー**&#x200B;画面が表示されます。 このページには、名前、ソースデータ、作成時間およびステータスに関する情報を含むデータセットフローのペアが表示されます。
+Platformは、わかりやすい名前の競合に対して、マッピングセットを自動的に検出します。 マッピングセットと競合しない場合は、「**[!UICONTROL 次へ]**」を選択して次に進みます。
 
-コネクタは、2つのデータセットフローをインスタンス化します。 一方のフローはバックフィルデータを表し、もう一方のフローはライブデータを表します。 埋め戻しデータはプロファイル用に設定されていませんが、分析およびデータ科学の使用例のためにデータレークに送信されます。
+![マッピング](../../../../images/tutorials/create/analytics/mapping.png)
+
+マッピングセット内にわかりやすい名前の競合がある場合は、引き続き[!DNL Analytics]データフローを使用し、フィールド記述子が同じであることを確認できます。 または、空の記述子のセットを持つ新しいスキーマを作成することもできます。
+
+「**[!UICONTROL 次へ]**」を選択して次に進みます。
+
+![注意](../../../../images/tutorials/create/analytics/caution.png)
+
+#### カスタムマッピング
+
+データ準備関数を使用し、カスタム属性に新しいマッピングまたは計算フィールドを追加するには、「**[!UICONTROL カスタム・マッピングを表示]**」を選択します。
+
+![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+
+次に、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。
+
+必要に応じて、表示されるオプションから「**[!UICONTROL 新しいマッピングを追加]**」または「**[!UICONTROL 計算フィールドを追加]**」を選択できます。
+
+![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
+
+空のマッピングセットが表示されます。 マッピングアイコンを選択して、ソースフィールドを追加します。
+
+![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
+
+インターフェイスを使用して、ソーススキーマ構造内を移動し、使用する新しいソースフィールドを特定できます。 マップするソースフィールドを選択したら、「****&#x200B;を選択」を選択します。
+
+![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
+
+次に、「[!UICONTROL ターゲットフィールド]」の下のマッピングアイコンを選択し、選択したソースフィールドを適切なターゲットフィールドにマッピングします。
+
+![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
+
+ソーススキーマと同様に、インターフェイスを使用してターゲットスキーマ構造内を移動し、マッピング先のターゲットフィールドを選択できます。 適切なターゲットフィールドを選択したら、「**[!UICONTROL 選択]**」を選択します。
+
+![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
+
+カスタムマッピングセットが完了したら、「**[!UICONTROL 次へ]**」を選択して次に進みます。
+
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
+
+次のドキュメントでは、データ準備、計算フィールド、およびマッピング関数の理解に関する詳細なリソースを提供します。
+
+* [Data Prep の概要](../../../../../data-prep/home.md)
+* [データ準備マッピング関数](../../../../../data-prep/functions.md)
+* [XDMスキーマへのCSVファイルのマッピングと計算フィールドの追加](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+
+### データフローの詳細の入力
+
+**[!UICONTROL データフローの詳細]**&#x200B;手順が表示され、データフローの名前と説明（オプション）を指定する必要があります。 完了したら、「**[!UICONTROL 次へ]**」をクリックします。
+
+![データフローの詳細](../../../../images/tutorials/create/analytics/dataflow-detail.png)
+
+### レビュー
+
+「[!UICONTROL レビュー]」手順が表示され、新しいAnalyticsデータフローを作成前にレビューできます。 接続の詳細は、次のようなカテゴリ別にグループ化されます。
+
+* [!UICONTROL 接続]:接続のソースプラットフォームを表示します。
+* [!UICONTROL データタイプ]:選択したレポートスイートと、対応するレポートスイートIDが表示されます。
+
+![レビュー](../../../../images/tutorials/create/analytics/review.png)
+
+### データフローの監視
+
+データフローを作成したら、そのデータフローを通じて取り込まれるデータを監視できます。 [!UICONTROL カタログ]画面で、**[!UICONTROL データフロー]**&#x200B;を選択して、Analyticsアカウントに関連付けられた確立済みフローのリストを表示します。
+
+![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+
+**データフロー**&#x200B;画面が表示されます。 このページは、名前、ソースデータ、作成時間、ステータスに関する情報を含む、データセットフローのペアです。
+
+コネクタは、2つのデータセットフローをインスタンス化します。 一方のフローはバックフィルデータを表し、もう一方のフローはライブデータを表します。 バックフィルデータは、プロファイルに対して設定されていませんが、分析およびデータサイエンスの使用例のためにデータレイクに送信されます。
 
 バックフィル、ライブデータおよびそれぞれの待ち時間について詳しくは、[Analytics Data Connectorの概要](../../../../connectors/adobe-applications/analytics.md)を参照してください。
 
 リストから表示するデータセットフローを選択します。
 
-![](../../../../images/tutorials/create/analytics/backfill.png)
+![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-**データセットアクティビティ**&#x200B;ページが表示されます。 このページには、グラフの形式で消費されるメッセージの割合が表示されます。 ラベル付けフィールドにアクセスするには、上部のヘッダーから「*Data governance*」を選択します。
+**[!UICONTROL データセットアクティビティ]**&#x200B;ページが表示されます。 このページには、グラフの形式で消費されるメッセージの割合が表示されます。 ラベル付けフィールドにアクセスするには、上部のヘッダーから「**[!UICONTROL データガバナンス]**」を選択します。
 
-![](../../../../images/tutorials/create/analytics/batches.png)
+![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-データセットフローに継承されたラベルは、*Data governance*&#x200B;画面から表示できます。 特定のラベルにアクセスするには、右上の「編集」ボタンを選択します。
+データセットフローに継承されたラベルは、[!UICONTROL データガバナンス]画面から表示できます。 Analyticsからのデータにラベルを付ける方法について詳しくは、『[データ使用ラベルのガイド](../../../../../data-governance/labels/user-guide.md)』を参照してください。
 
-![](../../../../images/tutorials/create/analytics/data-gov.png)
+![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
 
-**Edit governance labels**&#x200B;パネルが表示されます。 この画面では、データセットフローの契約、ID、機密ラベルにアクセスして編集できます。
+データフローを削除するには、[!UICONTROL Dataflows]ページに移動し、データフロー名の横にある省略記号(`...`)を選択して、「[!UICONTROL Delete]」を選択します。
 
-Analyticsからのデータにラベルを付ける方法について詳しくは、[データ使用ラベルガイド](../../../../../data-governance/labels/user-guide.md)を参照してください。
-
-![](../../../../images/tutorials/create/analytics/labels.png)
+![次を削除します。](../../../../images/tutorials/create/analytics/delete.png)
 
 ## 次の手順とその他のリソース
 
-接続が作成されると、ターゲットスキーマとデータセットフローが自動的に作成され、受信データが格納されます。 さらに、データのバックフィルが発生し、最大 13 か月の履歴データが取り込まれます。初回取り込みが完了すると、Analyticsデータが使用され、リアルタイム顧客プロファイルやセグメント化サービスなどの下流のプラットフォームサービスで使用されます。 詳しくは、次のドキュメントを参照してください。
+接続が作成されると、ターゲットスキーマとデータフローが自動的に作成され、受信データが格納されます。 さらに、データのバックフィルが発生し、最大 13 か月の履歴データが取り込まれます。最初の取り込みが完了すると、[!DNL Analytics]データが作成され、[!DNL Real-time Customer Profile]やセグメント化サービスなど、ダウンストリームのPlatformサービスで使用されます。 詳しくは、次のドキュメントを参照してください。
 
-* [リアルタイム顧客プロファイルの概要](../../../../../profile/home.md)
-* [セグメント化サービスの概要](../../../../../segmentation/home.md)
-* [Data Science ワークスペースの概要](../../../../../data-science-workspace/home.md)
-* [クエリサービスの概要](../../../../../query-service/home.md)
+* [[!DNL Real-time Customer Profile] の概要](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] の概要](../../../../../segmentation/home.md)
+* [[!DNL Data Science Workspace] の概要](../../../../../data-science-workspace/home.md)
+* [[!DNL Query Service] の概要](../../../../../query-service/home.md)
 
-次のビデオは、Adobe Analyticsソースコネクタを使用した取り込みデータについて理解を深めることを目的としています。
+次のビデオは、Adobe Analytics Sourceコネクタを使用したデータの取り込みに関する理解を深めることを目的としています。
 
 >[!WARNING]
 >
-> 次のビデオに示す[!DNL Platform] UIは古いです。 最新のUIのスクリーンショットと機能については、上記のドキュメントを参照してください。
+> 次のビデオに示す [!DNL Platform] UI は古くなっています。最新のUIスクリーンショットと機能については、上記のドキュメントを参照してください。
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
