@@ -1,14 +1,14 @@
 ---
-title: Tags Satellite Object Reference
-description: クライアント側の_satelliteオブジェクトと、それを使用してAdobe Experience Platformで実行できる様々な機能について説明します。
-source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
+title: Satelliteオブジェクトの参照
+description: クライアント側の_satelliteオブジェクトと、タグで実行できる様々な機能について説明します。
+source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1251'
 ht-degree: 43%
 
 ---
 
-# Adobe Experience Platform tags Satelliteオブジェクトリファレンス
+# Satelliteオブジェクトのリファレンス
 
 >[!NOTE]
 >
