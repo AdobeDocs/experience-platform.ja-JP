@@ -5,9 +5,9 @@ title: セグメント化サービスUIガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Serviceは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1577'
 ht-degree: 23%
 
 ---
@@ -37,7 +37,7 @@ Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL セ
 >
 >組織がPlatformを初めて使用する場合で、アクティブなプロファイルデータセットや結合ポリシーが作成されていない場合は、「[!UICONTROL Segments]」ダッシュボードは表示されません。 代わりに、「[!UICONTROL 概要]」タブには、セグメントの使用を開始するのに役立つリンクとドキュメントが表示されます。
 
-###  Segmentsdashboard  {#segments-dashboard}
+###  Segmentsdashboard {#segments-dashboard}
 
 **[!UICONTROL セグメント]**&#x200B;ダッシュボードでは、組織のセグメントデータに関連する主要指標の概要を説明します。
 
@@ -83,9 +83,13 @@ Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL セ
 
 セグメント定義の行を選択すると、セグメントの編集または削除のオプション、セグメントの対象オーディエンス、合計オーディエンスサイズ、セグメント名、説明、評価方法、作成日、最終変更日など、セグメント定義の概要が表示されます。
 
+>[!NOTE]
+>
+> 宛先のアクティベーションで使用されているセグメントを削除することは&#x200B;**できません**。
+
 ![](../images/ui/overview/segment-browse-details.png)
 
-## セグメント定義の詳細{#segment-details}
+## セグメント定義の詳細 {#segment-details}
 
 特定のセグメント定義の詳細を表示するには、「**[!UICONTROL 参照]**」タブでセグメントの名前を選択します。
 
@@ -177,7 +181,7 @@ Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL セ
 >
 >ストリーミングセグメント化を機能させるには、組織のスケジュールされたセグメント化を有効にする必要があります。 スケジュールに沿ったセグメント化を有効にする方法について詳しくは、このユーザーガイドの](#scheduled-segmentation)のストリーミングセグメント化の節を参照してください。[
 
-## エッジセグメント{#edge-segmentation}
+## エッジセグメント化 {#edge-segmentation}
 
 エッジのセグメント化は、Platform内のセグメントを即座にエッジ上で評価する機能で、同じページおよび次のページのパーソナライゼーションの使用例を可能にします。
 
