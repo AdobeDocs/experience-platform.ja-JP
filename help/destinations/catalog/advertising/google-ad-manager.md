@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager接続
 description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 4df2e7ce9c7e94da4ea0be50ba21232c639e2587
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 25%
+source-wordcount: '732'
+ht-degree: 23%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 25%
 * アクティブ化されたオーディエンスは、プラットフォーム[!DNL Google]でプログラムによって作成されます。
 * [!DNL Platform] は、現在、アクティブ化の成功を検証するための測定指標を含んでいません。統合を検証し、オーディエンスターゲット設定サイズについて理解するには、Google でのオーディエンス数を参照します。
 
-## サポートされているID{#supported-identities}
+## サポートされるID {#supported-identities}
 
 [!DNL Google Ad Manager] では、以下の表で説明するIDのアクティブ化をサポートしています。
 
@@ -37,7 +37,7 @@ ht-degree: 25%
 | MAID | Microsoft広告ID。 このIDは、Windows 10を実行しているデバイスを一意に識別します。 |  |
 | Amazon Fire TV ID | このIDは、Amazon Fire TVを一意に識別します。 |  |
 
-## 書き出しタイプ{#export-type}
+## 書き出しタイプ {#export-type}
 
 **セグメントの書き出し**  — セグメント（オーディエンス）のすべてのメンバーをGoogleの宛先に書き出します。
 
@@ -53,8 +53,8 @@ ht-degree: 25%
 
 Platformで[!DNL Google Ad Manager]の宛先を作成する前に、[!DNL Google]に連絡して、許可されたデータプロバイダーのリストにAdobeを登録し、お使いのアカウントを許可リストに追加する必要があります。 [!DNL Google]に連絡し、次の情報を提供します。
 
-* **アカウントID** :これは、AdobeのアカウントIDで [!DNL Google]す。アドビカスタマーケアまたは Adobe 担当者に問い合わせて、この ID を取得してください。
-* **顧客ID** :これは、Adobeの顧客アカウントIDで [!DNL Google]す。アドビカスタマーケアまたは Adobe 担当者に問い合わせて、この ID を取得してください。
+* **アカウントID**:AdobeのアカウントIDがGoogleに設定されている。アカウントID:87933855.
+* **顧客ID**:Adobeの顧客アカウントID（Googleを使用）。顧客ID:89690775.
 * **ネットワーク ID**：これは のアカウントです。[!DNL Google Ad Manager]
 * **オーディエンスリンク ID**：これは のアカウントです。[!DNL Google Ad Manager]
 * アカウントの種類。Google DFP または AdX 購入者。
