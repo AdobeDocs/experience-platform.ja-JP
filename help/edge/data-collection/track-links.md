@@ -3,7 +3,7 @@ title: Adobe Experience Platform Web SDKを使用したリンクの追跡
 description: Experience PlatformWeb SDKを使用してAdobe Analyticsにリンクデータを送信する方法を説明します
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webインタラクション；ページビュー；リンクトラッキング；リンク；clickCollection;click collection;
 exl-id: d5a1804c-8f91-4083-a46e-ea8f7edf36b6
-source-git-commit: b22eccb34e98ca2da47fe849492ee464d679d2a0
+source-git-commit: d6460e442a136bf9bd26582f228017a6fb52138c
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
@@ -24,12 +24,12 @@ alloy("sendEvent", {
     "web": {
       "webInteraction": {
         "linkClicks": {
-            "value":1
+            "value": 1
+        }
       },
-      "name":"My Custom Link", // Name that shows up in the custom links report
-      "URL":"https://myurl.com", // The URL of the link
-      "type":"other", // values: other, download, exit
-      }
+      "name": "My Custom Link", // Name that shows up in the custom links report
+      "URL": "https://myurl.com", // The URL of the link
+      "type": "other" // values: other, download, exit
     }
   }
 });
