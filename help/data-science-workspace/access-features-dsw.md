@@ -5,9 +5,9 @@ title: Data Science Workspaceのアクセスと機能
 topic-legacy: Access and features for data science workspace
 description: 次のドキュメントでは、Data Science Workspaceの権限と機能へのアクセスの概要を説明します。
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
+source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 18%
 
 ---
