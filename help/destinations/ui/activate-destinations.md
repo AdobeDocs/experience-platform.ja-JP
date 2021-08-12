@@ -6,9 +6,9 @@ seo-title: 宛先へのプロファイルとセグメントのアクティブ化
 description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 seo-description: セグメントを宛先にマッピングして、Adobe Experience Platformで保有するデータをアクティブ化します。 これをおこなうには、次の手順に従います。
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: bbb33287b82d348811852f4ad17a9c7b24a33b44
+source-git-commit: dd9e822fd485d26d5101e12e241465c354db5ad3
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2957'
 ht-degree: 11%
 
 ---
@@ -52,7 +52,7 @@ Adobe Experience Platformユーザーインターフェイスで、 **[!UICONTRO
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="変換の適用"
->abstract="非ハッシュ化のソースフィールド（*personalEmail.address* **personalEmail.address** `personalEmail.address`など）を使用する場合は、このオプションをオンにして、Adobe Experience Platformでアクティベーション時に自動的にハッシュ化します。"
+>abstract="非ハッシュ化のソースフィールドを使用する場合は、このオプションをオンにして、Adobe Experience Platformでアクティベーション時に自動的にハッシュ化するようにします。"
 
 適用対象：ソーシャルの宛先とGoogleカスタマーマッチの広告の宛先
 
