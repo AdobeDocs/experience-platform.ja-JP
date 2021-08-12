@@ -1,49 +1,48 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング；ストリーミング取り込み；ストリーミング取り込みの検証；検証；ストリーミング取り込みの検証；検証；同期検証；非同期検証；非同期検証；
+keywords: Experience Platform；ホーム；人気のあるトピック；ストリーミング；ストリーミング取得；ストリーミング取得の検証；検証；ストリーミング取得の検証；検証；同期検証；同期検証；非同期検証；非同期検証；
 solution: Experience Platform
-title: ストリーミング取り込みの検証
+title: ストリーミング取得の検証
 topic-legacy: tutorial
 type: Tutorial
-description: ストリーミング取り込みを使用すると、リアルタイムでストリーミングエンドポイントを使用してデータをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
+description: ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用してAdobe Experience Platformにデータをアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
 workflow-type: tm+mt
 source-wordcount: '898'
-ht-degree: 81%
+ht-degree: 85%
 
 ---
 
-# ストリーミング取り込みの検証
+# ストリーミング取得検証
 
-ストリーミング取り込みを使用すると、リアルタイムでストリーミングエンドポイントを使用してデータをAdobe Experience Platformにアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
+ストリーミング取り込みを使用すると、ストリーミングエンドポイントをリアルタイムで使用してAdobe Experience Platformにデータをアップロードできます。 ストリーミング取り込み API は、同期と非同期の 2 つの検証モードをサポートしています。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md):データの送信先のメソッドの1つ [!DNL Experience Platform]。
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md):データをに送信する方法の1つ [!DNL Experience Platform]。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- Authorization： Bearer `{ACCESS_TOKEN}`
+- x-api-key： `{API_KEY}`
+- x-gw-ims-org-id： `{IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Schema Registry]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Schema Registry]に属するリソースを含む、[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
+>[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
@@ -51,7 +50,7 @@ ht-degree: 81%
 
 ### 検証の範囲
 
-[!DNL Streaming Validation Service] は、次の領域の検証について説明します。
+[!DNL Streaming Validation Service] 次の領域での検証について説明します。
 - 範囲
 - 配置
 - 列挙
@@ -63,18 +62,18 @@ ht-degree: 81%
 
 同期検証は、取り込みが失敗した理由に関するフィードバックを即座に提供する検証方法です。ただし、検証に失敗すると、検証に失敗したレコードは破棄され、ダウンストリームに送信されなくなります。そのため、同期検証は開発プロセス中にのみ使用する必要があります。同期検証をおこなうと、呼び出し元には、XDM 検証の結果が通知され、失敗した場合はさらに失敗の理由も通知されます。
 
-デフォルトでは、同期検証はオンになっていません。有効にするには、API 呼び出しをおこなう際に、オプションのクエリパラメーター `synchronousValidation=true` を渡す必要があります。また、現時点では、同期検証は、ストリームエンドポイントが VA7 データセンターにある場合にのみ使用できます。
+デフォルトでは、同期検証はオンになっていません。有効にするには、API 呼び出しをおこなう際に、オプションのクエリパラメーター `syncValidation=true` を渡す必要があります。また、現時点では、同期検証は、ストリームエンドポイントが VA7 データセンターにある場合にのみ使用できます。
 
 同期検証中にメッセージが失敗した場合、そのメッセージは出力キューに書き込まれず、ユーザーに対して即座にフィードバックが提供されます。
 
 >[!NOTE]
 >
->変更がキャッシュされるため、スキーマの変更はすぐに利用できない場合があります。 キャッシュが更新されるまで最大15分間かかります。
+>変更はキャッシュされるので、スキーマの変更はすぐには利用できない場合があります。 キャッシュが更新されるまで最大15分かかります。
 
 **API 形式**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | パラメーター | 説明 |
@@ -86,7 +85,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 同期検証を使用してデータをデータインレットに取り込むには、次のリクエストを送信します。
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
   -d '{JSON_PAYLOAD}'
 ```
@@ -146,7 +145,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 ## 非同期検証
 
-非同期検証は、即座にフィードバックを提供しない検証方法です。代わりに、データの損失を防ぐために、[!DNL Data Lake]内の失敗したバッチにデータが送信されます。 この失敗したデータを、後で取得して、さらに分析と再現をおこなうことができます。この方法は、実稼働環境で使用する必要があります。特に要求されない限り、ストリーミング取り込みは非同期検証モードで動作します。
+非同期検証は、即座にフィードバックを提供しない検証方法です。代わりに、[!DNL Data Lake]の失敗したバッチにデータが送信され、データの損失を防ぎます。 この失敗したデータを、後で取得して、さらに分析と再現をおこなうことができます。この方法は、実稼働環境で使用する必要があります。特に要求されない限り、ストリーミング取り込みは非同期検証モードで動作します。
 
 **API 形式**
 
@@ -185,7 +184,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
     "inletId": "f6ca9706d61de3b78be69e2673ad68ab9fb2cece0c1e1afc071718a0033e6877",
     "xactionId": "1555445493896:8600:8",
     "receivedTimeMs": 1555445493932,
-    "synchronousValidation": {
+    "syncValidation": {
         "skipped": true
     }
 }
