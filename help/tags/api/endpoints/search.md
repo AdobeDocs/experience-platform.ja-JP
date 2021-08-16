@@ -1,9 +1,9 @@
 ---
 title: 検索エンドポイント
 description: Reactor APIで/searchエンドポイントを呼び出す方法を説明します。
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '662'
 ht-degree: 2%
 
 ---
@@ -43,25 +43,15 @@ Reactor APIの`/search`エンドポイントは、必要な条件に一致する
 
 このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
 
-## ルールのリストの取得 {#list}
+## 検索の実行 {#perform}
 
-プロパティに属するルールのリストを取得するには、GETリクエストを作成して、を含めます。
+検索は、検索リクエストを実行することでPOSTできます。
 
 **API 形式**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| パラメーター | 説明 |
-| --- | --- |
-| `PROPERTY_ID` | コンポーネントを一覧表示するプロパティの`id`。 |
-
-{style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->クエリパラメーターを使用して、リストされたルールを次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
 
 **リクエスト**
 
@@ -71,6 +61,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {
