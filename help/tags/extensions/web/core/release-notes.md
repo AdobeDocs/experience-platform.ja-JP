@@ -1,10 +1,10 @@
 ---
 title: コア拡張機能のリリースノート
 description: Adobe Experience PlatformのCore拡張機能の最新のリリースノートです。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 85%
+source-wordcount: '1293'
+ht-degree: 80%
 
 ---
 
@@ -13,6 +13,16 @@ ht-degree: 85%
 >[!NOTE]
 >
 >Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+
+## 2021 年 8 月 11 日（PT）
+
+v3.0.0
+
+* PDCL-6153:キャッシュされたカスタムコードアクションの完全修飾URLを確実に取り込むためのサポートを追加しました。
+
+Core拡張機能のv3.0.0と[v27.2.0の変更](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0)が組み合わされ、Adobeが管理するホスティング地域（Premium CDNをサポートしている場合）にライブラリを読み込むことができます。
+
+このアップグレードは、Premium CDNを使用しないユーザーに対してはオプションで後方互換性があり、会社でPremium CDNを有効にしているお客様には必須です。
 
 ## 2021 年 5 月 20 日（PT）
 
