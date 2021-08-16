@@ -3,14 +3,18 @@ title: Adobe Experience Platform Web SDK リリースノート
 description: Adobe Experience Platform Web SDK の最新のリリースノートです。
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK；リリースノート；
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
+source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '738'
 ht-degree: 4%
 
 ---
 
 # リリースノート
+
+## バージョン2.6.3 - 2021年8月17日
+
+* `configure`コマンドで解決されたプロミスによって、公開用でないオブジェクトが公開される問題を修正しました。
 
 ## バージョン2.6.2 - 2021年8月5日
 
