@@ -2,16 +2,24 @@
 title: Adobe Experience Platform Web SDK拡張機能のリリースノート
 description: Adobe Experience Platform Web SDKタグ拡張
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c30df7ea126ec7c7c794b8daaf3d2b813873b98
+source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 53%
+source-wordcount: '1173'
+ht-degree: 51%
 
 ---
 
 # Adobe Experience Platform Web SDK拡張機能のリリースノート
 
 このドキュメントでは、 Adobe Experience Platform Web SDKタグ拡張のリリースノートについて説明します。 SDK自体の最新のリリースノートについては、[Platform Web SDKリリースノート](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html)を参照してください。
+
+## バージョン2.7.0 - 2021年8月17日
+
+Adobe Experience Platform Web SDK ライブラリのバージョン 2.6.3 が含まれます。
+
+* IDマップデータ要素タイプを使用する場合、文字列が設定されていない値に解決されるIDを持つIDは、IDマップから自動的に削除されるようになりました。
+* XDMオブジェクトデータ要素タイプを使用してスキーマが選択されていないデータ要素を保存しようとすると発生するエラーを修正しました。
+* ユーザーインターフェイスタイポグラフィを改善しました。
 
 ## バージョン2.6.2 - 2021年8月5日
 
