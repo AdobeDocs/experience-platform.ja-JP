@@ -3,9 +3,9 @@ keywords: '広告；bing; '
 title: Microsoft Bing接続
 description: Microsoft Bingの接続先を使用すると、Microsoftディスプレイ広告全体で再ターゲティングとオーディエンスターゲティングされたデジタルキャンペーンを実行できます。
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '384'
 ht-degree: 2%
 
 ---
@@ -56,9 +56,9 @@ ht-degree: 2%
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-[セグメントスケジュール](../../ui/activate-destinations.md#segment-schedule)の手順で、宛先の対応するIDまたはわかりやすい名前にセグメントを手動でマッピングする必要があります。
+[セグメントスケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling)の手順で、宛先の対応するIDまたはわかりやすい名前にセグメントを手動でマッピングする必要があります。
 
 セグメントをマッピングする場合は、使いやすくするために、[!DNL Platform]セグメント名または短い形式を使用することをお勧めします。 ただし、宛先のセグメントIDまたは名前が[!DNL Platform]アカウントのIDと一致する必要はありません。 マッピングフィールドに挿入した値は、宛先に反映されます。
 
