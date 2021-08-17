@@ -3,9 +3,9 @@ keywords: Amazon S3;S3の宛先；s3;amazon s3
 title: Amazon S3接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '366'
 ht-degree: 9%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 9%
 
 ## 書き出しタイプ {#export-type}
 
-**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。宛先のアクティベーションワークフローの属性を選択画面 [から選択します](../../ui/activate-destinations.md#select-attributes)。
+**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。宛先のアクティベーションワークフローの属性を選択画面 [から選択します](../../ui/activate-segment-streaming-destinations.md#mapping)。
 
 ![Amazon S3プロファイルベースの書き出しタイプ](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
@@ -65,8 +65,8 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対するオーディエンスセグメントをアクティブ化する手順については、[プロファイルの一括書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
 
 ## エクスポートされたデータ {#exported-data}
 
-[!DNL Amazon S3]の宛先の場合、[!DNL Platform]は、指定したストレージの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントのアクティベーションに関するチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先](../../ui/activate-destinations.md#esp-and-cloud-storage) 」を参照してください。[
+[!DNL Amazon S3]の宛先の場合、[!DNL Platform]は、指定したストレージの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションのチュートリアルの「 [プロファイルのバッチ書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) 」を参照してください。
