@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；Marketo Engage；マーケティング担当；Marketo；マッピング
+keywords: Experience Platform；ホーム；人気のあるトピック；Marketo Engage;marketo engage;Marketo；マッピング
 solution: Experience Platform
-title: Marketo Engageソースのフィールドのマッピング
+title: Marketo Engage・ソースのフィールドのマッピング
 topic-legacy: overview
-description: 以下の表に、Marketoデータセット内のフィールドと、対応するXDMフィールドとのマッピングを示します。
+description: 次の表に、Marketoデータセットのフィールドと、対応するXDMフィールドのマッピングを示します。
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
-# （ベータ版） [!DNL Marketo Engage]フィールドのマッピング
+# （ベータ版） [!DNL Marketo Engage]フィールドマッピング
 
 >[!IMPORTANT]
 >
->[!DNL Marketo Engage]ソースは現在ベータ版です。 機能とドキュメントは変更される可能性があります。
+>[!DNL Marketo Engage]ソースは現在ベータ版です。 機能とドキュメントは変更される場合があります。
 
-次の表に、9つの[!DNL Marketo]データセット内のフィールドと、対応するエクスペリエンスデータモデル(XDM)フィールドのマッピングを示します。
+次のテーブルには、9つの[!DNL Marketo]データセット内のフィールドと、対応するExperience Data Model(XDM)フィールド間のマッピングが含まれています。
 
 ## アクティビティ {#activities}
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
-| `personID` | `personID` | プライマリ同一性 |
+| `personID` | `personID` | プライマリID |
 | `eventType` | `eventType` |
 | `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
@@ -111,13 +111,13 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## プログラムメンバーシップ{#program-memberships}
+## プログラムメンバーシップ {#program-memberships}
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `id` | `campaignMemberID` | プライマリID |
-| `programId` | `campaignID` | Relationship |
-| `leadId` | `personID` | Relationship |
+| `programId` | `campaignID` | 関係 |
+| `leadId` | `personID` | 関係 |
 | `acquiredByCampaignID` | `acquiredByCampaignID` |
 | `reachedSuccess` | `hasReachedSuccess` |
 | `isExhausted` | `isExhausted` |
@@ -164,7 +164,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 静的リスト{#static-lists}
+## 静的リスト {#static-lists}
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
@@ -176,18 +176,18 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## 静的リストメンバーシップ{#static-list-memnberships}
+## 静的リストのメンバーシップ {#static-list-memnberships}
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `staticListMemberID` | `marketingListMemberID` | プライマリID |
-| `staticListID` | `marketingListID` | Relationship |
-| `personID` | `personID` | Relationship |
+| `staticListID` | `marketingListID` | 関係 |
+| `personID` | `personID` | 関係 |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
 {style=&quot;table-layout:auto&quot;}
 
-## 名前付きアカウント{#named-accounts}
+## 名前付きアカウント {#named-accounts}
 
 >[!IMPORTANT]
 >
@@ -213,13 +213,13 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## オポチュニティ {#opportunities}
+## 機会 {#opportunities}
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `id` | `opportunityID` | プライマリID |
 | `externalOpportunityId` | `extSourceSystemAudit.externalID` | セカンダリID |
-| `mktoCdpAccountOrgId` | `accountID` | Relationship |
+| `mktoCdpAccountOrgId` | `accountID` | 関係 |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
@@ -244,14 +244,14 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-## オポチュニティ連絡先の役割{#opportunity-contact-roles}
+## 営業案件の連絡先の役割 {#opportunity-contact-roles}
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
 | `id` | `opportunityPersonID` | プライマリID |
 | `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | セカンダリID |
-| `mktoCdpOpptyId` | `opportunityID` | Relationship |
-| `leadId` | `personID` | Relationship |
+| `mktoCdpOpptyId` | `opportunityID` | 関係 |
+| `leadId` | `personID` | 関係 |
 | `role` | `personRole` |
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -263,7 +263,7 @@ ht-degree: 4%
 
 | ソースデータセット | XDMターゲットフィールド | 備考 |
 | -------------- | ---------------- | ----- |
-| `id` | `personID` | プライマリ同一性 |
+| `id` | `personID` | プライマリID |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
@@ -275,7 +275,7 @@ ht-degree: 4%
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcLeadId` | `extSourceSystemAudit.externalID` | セカンダリ同一性 |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | セカンダリ |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -310,8 +310,8 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->`to_object('ECID',arrays_to_objects('id',explode(ecids)))`ソースフィールドは、プラットフォームUIの[!UICONTROL 追加計算済みフィールド]オプションを使用して追加する必要がある計算済みフィールドです。 詳細については、[計算済みフィールドの追加](../../../../ingestion/tutorials/map-a-csv-file.md)のチュートリアルを参照してください。
+>`to_object('ECID',arrays_to_objects('id',explode(ecids)))`ソースフィールドは、Platform UIの「[!UICONTROL 計算済みフィールド]を追加」オプションを使用して追加する必要がある計算済みフィールドです。 詳しくは、[計算フィールド](../../../../data-prep/calculated-fields.md)の追加に関するチュートリアルを参照してください。
 
 ## 次の手順
 
-このドキュメントを読むと、[!DNL Marketo]データセットと対応するXDMフィールドとのマッピングの関係を理解できます。 [ [!DNL Marketo] ソース接続](../../../tutorials/ui/create/adobe-applications/marketo.md)の作成のチュートリアルを参照して、[!DNL Marketo]データフローを完成させてください。
+このドキュメントでは、[!DNL Marketo]データセットと対応するXDMフィールドの間のマッピング関係に関する洞察を得ました。 [ [!DNL Marketo] ソース接続](../../../tutorials/ui/create/adobe-applications/marketo.md)の作成に関するチュートリアルを参照して、[!DNL Marketo]データフローを完了してください。
