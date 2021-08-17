@@ -4,7 +4,7 @@ title: 新しい宛先接続の作成
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformで宛先に接続する手順を示します
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 1c67d9eb1b7762ecfcad5b0b7db5c317621f144e
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 1%
@@ -65,4 +65,4 @@ ht-degree: 1%
 
    ![宛先に接続](../assets/ui/connect-destinations/connect-destination.png)
 
-1. 「**[!UICONTROL 保存して終了]**」を選択して宛先設定を保存するか、「**[!UICONTROL 次へ]**」を選択してオーディエンスデータ[アクティベーションフロー](activate-destinations.md)に進みます。
+1. 「**[!UICONTROL 保存して終了]**」を選択して宛先設定を保存するか、「**[!UICONTROL 次へ]**」を選択してオーディエンスデータ[アクティベーションフロー](activation-overview.md)に進みます。
