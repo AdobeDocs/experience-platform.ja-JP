@@ -3,10 +3,10 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 16%
+source-wordcount: '1257'
+ht-degree: 15%
 
 ---
 
@@ -56,12 +56,12 @@ ht-degree: 16%
 
 オーディエンスセグメントを [!DNL Facebook] に送信する前に、次の要件を満たしていることを確認してください。
 
-- お使いの[!DNL Facebook]ユーザーアカウントで、使用する予定の広告アカウントに対する&#x200B;**[!DNL Manage campaigns]**&#x200B;権限が有効になっている必要があります。
-- **Adobe Experience Cloud**&#x200B;ビジネスアカウントは、[!DNL Facebook Ad Account]に広告パートナーとして追加する必要があります。 `business ID=206617933627973`.を使用します。詳しくは、Facebookのドキュメントの「[Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897)」を参照してください。
+* お使いの[!DNL Facebook]ユーザーアカウントで、使用する予定の広告アカウントに対する&#x200B;**[!DNL Manage campaigns]**&#x200B;権限が有効になっている必要があります。
+* **Adobe Experience Cloud**&#x200B;ビジネスアカウントは、[!DNL Facebook Ad Account]に広告パートナーとして追加する必要があります。 `business ID=206617933627973`.を使用します。詳しくは、Facebookのドキュメントの「[Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897)」を参照してください。
    >[!IMPORTANT]
    >
    > Adobe Experience Cloud の権限を設定する場合は、**キャンペーンの管理**&#x200B;権限を有効にする必要があります。[!DNL Adobe Experience Platform]統合には権限が必要です。
-- [!DNL Facebook Custom Audiences] 利用規約を読み、署名します。これをおこなうには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`に移動します。`accountID`は[!DNL Facebook Ad Account ID]です。
+* [!DNL Facebook Custom Audiences] 利用規約を読み、署名します。これをおこなうには、`https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`に移動します。`accountID`は[!DNL Facebook Ad Account ID]です。
 
 ## ID一致の要件 {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Adobe Experience Platformに取り込むIDのタイプに応じて、対応す�
 
 [!DNL Facebook]で電話番号をアクティブにする方法は2つあります。
 
-- **生の電話番号の取り込み**:形式の生の電話番号をに取り込むこ [!DNL E.164] とができま [!DNL Platform]す。アクティベーション時に自動的にハッシュ化されます。 このオプションを選択する場合は、生の電話番号を必ず`Phone_E.164`名前空間に取り込んでください。
-- **ハッシュ化された電話番号の取り込み**:に取り込む前に電話番号を事前にハッシュ化できま [!DNL Platform]す。このオプションを選択する場合は、必ずハッシュ化された電話番号を`Phone_SHA256`名前空間に取り込んでください。
+* **生の電話番号の取り込み**:形式の生の電話番号をに取り込むこ [!DNL E.164] とができま [!DNL Platform]す。アクティベーション時に自動的にハッシュ化されます。 このオプションを選択する場合は、生の電話番号を必ず`Phone_E.164`名前空間に取り込んでください。
+* **ハッシュ化された電話番号の取り込み**:に取り込む前に電話番号を事前にハッシュ化できま [!DNL Platform]す。このオプションを選択する場合は、必ずハッシュ化された電話番号を`Phone_SHA256`名前空間に取り込んでください。
 
 >[!NOTE]
 >
@@ -89,12 +89,12 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 自分で電子メールアドレスをハッシュ化する場合は、次の要件に従ってください。
 
-- 電子メール文字列から先頭および末尾の空白文字をすべてトリミングします。例：`johndoe@example.com`（`<space>johndoe@example.com<space>` ではない）
-- 電子メール文字列をハッシュする場合は、必ず小文字の文字列をハッシュ化するようにしてください。
-   - 例：`example@email.com`（`EXAMPLE@EMAIL.COM` ではない）
-- ハッシュ化された文字列がすべて小文字であることを確認します。
-   - 例：`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`（`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149` ではない）
-- 文字列にソルトを使用しないでください。
+* 電子メール文字列から先頭および末尾の空白文字をすべてトリミングします。例：`johndoe@example.com`（`<space>johndoe@example.com<space>` ではない）
+* 電子メール文字列をハッシュする場合は、必ず小文字の文字列をハッシュ化するようにしてください。
+   * 例：`example@email.com`（`EXAMPLE@EMAIL.COM` ではない）
+* ハッシュ化された文字列がすべて小文字であることを確認します。
+   * 例：`55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`（`55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149` ではない）
+* 文字列にソルトを使用しないでください。
 
 >[!NOTE]
 >
@@ -108,17 +108,29 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 `Extern_ID`名前空間を使用して[!DNL Facebook]にデータを送信する前に、[!DNL Facebook Pixel]を使用して独自の識別子を同期させてください。 詳しくは、[Facebookの公式ドキュメント](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers)を参照してください。
 
-## 宛先に接続 {#connect-destination}
+## 宛先に接続 {#connect}
 
-[!DNL Facebook]の宛先に接続するには、[ソーシャルの宛先認証ワークフロー](./workflow.md)を参照してください。
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
 
-次のビデオでも、ソーシャルの宛先を設定し、セグメントをアクティブ化する手順を示します。 このビデオではLinkedInを例として使用していますが、手順はソーシャルの宛先間で似ています。
+次のビデオでも、[!DNL Facebook]の宛先を設定し、セグメントをアクティブ化する手順を示します。
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## [!DNL Facebook]に対してセグメントをアクティブ化 {#activate-segments}
+>[!NOTE]
+>
+>Experience Platformのユーザーインターフェイスは頻繁に更新され、このビデオの録画以降に変更された可能性があります。 最新の情報については、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
 
-[!DNL Facebook]に対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
+### 接続パラメーター {#parameters}
+
+[この宛先を設定](../../ui/connect-destination.md)する際に、次の情報を指定する必要があります。
+
+* **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
+* **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL アカウントID]**:お使 [!DNL Facebook Ad Account ID]いのこのIDは[!DNL Facebook Ads Manager]アカウントで確認できます。 このIDを入力する場合は、必ず`act_`というプレフィックスを付けます。
+
+## この宛先へのセグメントのアクティブ化 {#activate}
+
+宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
 **[!UICONTROL セグメントスケジュール]**&#x200B;の手順で、[!DNL Facebook Custom Audiences]にセグメントを送信する際に、[!UICONTROL オーディエンスの接触チャネル]を指定する必要があります。
 
