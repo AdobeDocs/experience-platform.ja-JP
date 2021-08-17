@@ -1,9 +1,9 @@
 ---
 title: 環境
 description: タグ環境の概念と、Adobe Experience Platform内でのタグ環境の機能について説明します。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1468'
 ht-degree: 79%
 
 ---
@@ -128,7 +128,7 @@ Web プロパティを使用する場合は、ドキュメントの `<head>` タ
 
 #### 同期デプロイメント
 
-ブラウザーは、同期デプロイメントを使用して埋め込みコードを読み取る際に、タグライブラリを取得して実行した後で、ページの読み込みを続行します。 また、[Dynamic Tag Management（DTM）](https://docs.adobe.com/content/help/ja-JP/experience-cloud/user-guides/home.translate.html)のしくみも同様です。
+ブラウザーは、同期デプロイメントを使用して埋め込みコードを読み取る際に、タグライブラリを取得して実行した後で、ページの読み込みを続行します。
 
 同期埋め込みコードは、Web サイトの HTML 内に配置する必要がある 2 つの `<script>` タグで構成されます。一方の `<script>` タグはドキュメント `<head>` 内、もう一方のタグは `</body>` 終了タグの直前に配置する必要があります。
 
