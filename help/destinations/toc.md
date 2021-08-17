@@ -4,10 +4,10 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: 宛先
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 63%
+source-wordcount: '492'
+ht-degree: 58%
 
 ---
 
@@ -21,9 +21,13 @@ ht-degree: 63%
    * [電子メールマーケティングの宛先に接続し、フローサービスAPIを使用してデータをアクティブ化する](./api/email-marketing.md)
 * UI ガイド {#ui}
    * [宛先ワークスペース](./ui/destinations-workspace.md)
-   * [宛先に接続](./ui/connect-destination.md)
+   * [新しい宛先接続の作成](./ui/connect-destination.md)
+   * 宛先へのオーディエンスデータのアクティブ化{#activate}
+      * [Activation の概要](./ui/activation-overview.md)
+      * [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-segment-streaming-destinations.md)
+      * [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-streaming-profile-destinations.md)
+      * [プロファイルの一括書き出し先へのオーディエンスデータのアクティブ化](./ui/activate-batch-profile-destinations.md)
    * [宛先の詳細の表示](./ui/destination-details-page.md)
-   * [宛先へのプロファイルとセグメントのアクティブ化](./ui/activate-destinations.md)
    * [宛先アカウントの更新](./ui/update-accounts.md)
    * [アクティベーションフローの編集](./ui/edit-activation.md)
    * [宛先の削除](./ui/delete-destinations.md)
