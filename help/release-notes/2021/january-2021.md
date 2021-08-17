@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
-workflow-type: ht
-source-wordcount: '712'
-ht-degree: 100%
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+workflow-type: tm+mt
+source-wordcount: '713'
+ht-degree: 98%
 
 ---
 
@@ -49,7 +49,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 | 機能 | 説明 |
 | ------- | ----------- |
-| 高度な ID 照合 | 外部 ID、電話番号、モバイルデバイス ID などの追加 ID の照合サポートを追加し、[!DNL Facebook Custom Audiences] と [!DNL Google Customer Match] のオーディエンスマッチ率機能を強化しました。詳しくは、以下のドキュメントを参照してください。 <ul><li>[Facebook の宛先](../../destinations/catalog/social/facebook.md)</li><li>[Google カスタマーマッチの宛先](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[宛先へのプロファイルとセグメントのアクティブ化](../../destinations/ui/activate-destinations.md)</li></ul> |
+| 高度な ID 照合 | 外部 ID、電話番号、モバイルデバイス ID などの追加 ID の照合サポートを追加し、[!DNL Facebook Custom Audiences] と [!DNL Google Customer Match] のオーディエンスマッチ率機能を強化しました。詳しくは、以下のドキュメントを参照してください。 <ul><li>[Facebook の宛先](../../destinations/catalog/social/facebook.md)</li><li>[Google カスタマーマッチの宛先](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
 詳しくは、[宛先の概要](../../destinations/home.md)を参照してください。
 
