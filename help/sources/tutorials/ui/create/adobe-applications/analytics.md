@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: UIでAdobe Analyticsソース接続を作成して、消費者データをAdobe Experience Platformに取り込む方法を説明します。
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 952b2caa6983b331c046618aff255131a6480e67
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1441'
 ht-degree: 8%
 
 ---
@@ -134,7 +134,7 @@ Platformは、わかりやすい名前の競合に対して、マッピングセ
 
 * [Data Prep の概要](../../../../../data-prep/home.md)
 * [データ準備マッピング関数](../../../../../data-prep/functions.md)
-* [XDMスキーマへのCSVファイルのマッピングと計算フィールドの追加](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+* [計算フィールドの追加](../../../../../data-prep/calculated-fields.md)
 
 ### データフローの詳細の入力
 
