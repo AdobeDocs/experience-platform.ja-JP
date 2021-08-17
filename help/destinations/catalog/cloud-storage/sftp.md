@@ -1,12 +1,12 @@
 ---
 keywords: SFTP;sftp
 title: SFTP接続
-description: 区切り形式のデータファイルをAdobe Experience Platformから定期的にエクスポートするには、SFTPサーバーへのライブ送信接続を作成します。
+description: SFTPサーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
+source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 8%
+source-wordcount: '281'
+ht-degree: 1%
 
 ---
 
@@ -14,32 +14,39 @@ ht-degree: 8%
 
 ## 概要 {#overview}
 
-区切り形式のデータファイルをAdobe Experience Platformから定期的にエクスポートするには、SFTPサーバーへのライブ送信接続を作成します。
+SFTPサーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的にAdobe Experience Platformから書き出します。
 
 >[!IMPORTANT]
 >
-> AdobeはSFTPサーバーへのデータのエクスポートをサポートしていますが、データのエクスポートに推奨されるクラウドストレージの場所は[!DNL Amazon S3]と[!DNL Azure Blob]です。
+> AdobeではSFTPサーバーへのデータの書き出しがサポートされていますが、データを書き出すための推奨されるクラウドストレージの場所は[!DNL Amazon S3]と[!DNL Azure Blob]です。
 
-## エクスポートの種類{#export-type}
+## 書き出しタイプ {#export-type}
 
-**プロファイルベース**  — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](../../ui/activate-destinations.md#select-attributes)。
+**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。宛先のアクティベーションワークフローの属性を選択画面 [から選択します](../../ui/activate-destinations.md#select-attributes)。
 
-![SFTPプロファイルベースのエクスポートタイプ](../../assets/catalog/cloud-storage/sftp/catalog.png)
+![SFTPプロファイルベースの書き出しタイプ](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## 宛先の接続 {#connect-destination}
+## 宛先に接続 {#connect}
 
-SFTPを含むクラウドストレージの接続先への接続方法については、[クラウドストレージの接続先ワークフロー](./workflow.md)を参照してください。
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
 
-SFTP の宛先については、宛先の作成ワークフローの&#x200B;**認証**&#x200B;手順で次の情報を入力します 。
+### 接続パラメーター {#parameters}
+
+[この宛先を設定](../../ui/connect-destination.md)する際に、次の情報を指定する必要があります。
 
 * **ホスト**:SFTPストレージの場所のアドレス
-* **ユーザー名**:SFTPストレージの場所にログインするためのユーザー名
+* **ユーザー名**:SFTPストレージの場所にログインするユーザー名
 * **パスワード**:SFTPストレージの場所にログインするためのパスワード
+* **[!UICONTROL 名前]**:この宛先を識別するのに役立つ名前を入力します。
+* **[!UICONTROL 説明]**:この宛先の説明を入力します。
+* **[!UICONTROL フォルダーパス]**:書き出すファイルをホストする宛先フォルダーのパスを入力します。
 
-## エクスポートされたデータ{#exported-data}
+必要に応じて、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、[!DNL Base64]エンコードされた文字列として書き込む必要があります。
 
-[!DNL SFTP]宛先の場合、Platformは、指定したストレージーの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
+## エクスポートされたデータ {#exported-data}
+
+[!DNL SFTP]の宛先の場合、Platformは指定したストレージの場所に、タブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントのアクティベーションに関するチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先](../../ui/activate-destinations.md#esp-and-cloud-storage) 」を参照してください。[
 
 ## IPアドレス許可リスト
 
-許可リストにAdobeIPを追加する必要がある場合は、[IPアドレスの許可リストを参照して、クラウドストレージの宛先](./ip-address-allow-list.md)を確認してください。
+許可リストにAdobeIPを追加する必要がある場合は、[クラウドストレージの宛先](ip-address-allow-list.md)のIPアドレス許可リストを参照してください。
