@@ -4,17 +4,17 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: 宛先
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 61%
+source-wordcount: '467'
+ht-degree: 63%
 
 ---
 
 
 # 宛先 {#destinations}
 
-* [宛先概要](./home.md)
+* [Destinations overview](./home.md)
 * [宛先のタイプとカテゴリ](./destination-types.md)
 * API チュートリアル {#api}
    * [フローサービスAPIを使用したストリーミング宛先への接続とデータのアクティブ化](./api/streaming-destinations.md)
@@ -79,7 +79,6 @@ ht-degree: 61%
       * [Yext コンバージョントラッキング拡張機能](./catalog/analytics/yext.md)
    * クラウドストレージの宛先 {#cloud-storage}
       * [クラウドストレージの宛先の概要](./catalog/cloud-storage/overview.md)
-      * [クラウドストレージの宛先の作成](./catalog/cloud-storage/workflow.md)
       * [（ベータ版）Amazon Kinesis接続](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3接続](./catalog/cloud-storage/amazon-s3.md)
       * [Azure BLOB接続](./catalog/cloud-storage/azure-blob.md)
@@ -119,7 +118,6 @@ ht-degree: 61%
       * [Marketo Web パーソナライゼーション拡張機能](./catalog/personalization/marketo-web-personalization.md)
    * ソーシャルの宛先{#social}
       * [ソーシャルの宛先の概要](./catalog/social/overview.md)
-      * [ソーシャルの宛先の作成](./catalog/social/workflow.md)
       * [Adobe Livefyre 拡張機能](./catalog/social/adobe-livefyre.md)
       * [Facebook接続](./catalog/social/facebook.md)
       * [linkedIn Matched Audiences接続](./catalog/social/linkedin.md)
