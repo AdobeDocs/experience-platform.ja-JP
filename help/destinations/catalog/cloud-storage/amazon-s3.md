@@ -1,42 +1,50 @@
 ---
-keywords: AmazonS3;S3宛先；s3;amazon s3
-title: AmazonS3接続
+keywords: Amazon S3;S3の宛先；s3;amazon s3
+title: Amazon S3接続
 description: Amazon Web Services（AWS）S3 ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたは CSV データファイルを Adobe Experience Platform から S3 バケットへと定期的に書き出します。
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 12%
+source-wordcount: '363'
+ht-degree: 9%
 
 ---
 
-# [!DNL Amazon S3] connection  {#s3-connection}
+# [!DNL Amazon S3] 接続 {#s3-connection}
 
 ## 概要 {#overview}
 
-[!DNL Amazon Web Services] (AWS) S3ストレージへのライブアウトバウンド接続を作成し、タブ区切りファイルまたはCSVデータファイルをAdobe Experience PlatformからS3バケットに定期的にエクスポートします。
+[!DNL Amazon Web Services](AWS)S3ストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたはCSVデータファイルをAdobe Experience Platformから独自のS3バケットに定期的に書き出します。
 
-## エクスポートの種類{#export-type}
+## 書き出しタイプ {#export-type}
 
-**プロファイルベース**  — セグメントのすべてのメンバーを、必要なスキーマフィールド(例：電子メールアドレス、電話番号、姓)。 [宛先アクティベーションワークフローの属性を選択画面で選択](../../ui/activate-destinations.md#select-attributes)。
+**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。宛先のアクティベーションワークフローの属性を選択画面 [から選択します](../../ui/activate-destinations.md#select-attributes)。
 
-![AmazonS3プロファイルベースの書き出しタイプ](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Amazon S3プロファイルベースの書き出しタイプ](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
-## 宛先の接続 {#connect-destination}
+## 宛先に接続 {#connect}
 
-[を含むクラウドストレージの接続先への接続方法については、[!DNL Amazon S3]クラウドストレージの接続先ワークフロー](./workflow.md)を参照してください。
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
 
-[!DNL Amazon S3]宛先に対して、宛先を作成ワークフローで次の情報を入力します。
+### 接続パラメーター {#parameters}
 
-* **[!DNL Amazon S3]アクセスキーと [!DNL Amazon S3] 秘密鍵**:で、 [!DNL Amazon S3]ペアを生成して、プラットフォームに `access key - secret access key`  [!DNL Amazon S3] アカウントへのアクセスを許可します。詳しくは、[AmazonWebサービスドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
+[この宛先を設定](../../ui/connect-destination.md)する際に、次の情報を指定する必要があります。
+
+* **[!DNL Amazon S3]アクセ** スキー **[!DNL Amazon S3]と秘密鍵**:で、 [!DNL Amazon S3]アカウントへの `access key - secret access key` アクセスをPlatformに付与するペアを生成 [!DNL Amazon S3] します。詳しくは、[Amazon Webサービスのドキュメント](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)を参照してください。
+* **[!UICONTROL 名前]**:この宛先を識別するのに役立つ名前を入力します。
+* **[!UICONTROL 説明]**:この宛先の説明を入力します。
+* **[!UICONTROL バケット名]**:この宛先で使用 [!DNL Amazon S3] するバケットの名前を入力します。
+* **[!UICONTROL フォルダーパス]**:書き出すファイルをホストする宛先フォルダーのパスを入力します。
+
+必要に応じて、RSA形式の公開鍵を添付して、書き出したファイルに暗号化を追加できます。 公開鍵は、[!DNL Base64]エンコードされた文字列として書き込む必要があります。
 
 >[!TIP]
 >
->接続先のワークフローでは、書き出したセグメントファイルごとに、AmazonS3ストレージにカスタムフォルダを作成できます。 「[マクロを使用してストレージーの場所](./workflow.md#use-macros)にフォルダーを作成する」を読み、手順を確認します。
+>「宛先の接続」ワークフローでは、書き出したセグメントファイルごとにAmazon S3ストレージにカスタムフォルダーを作成できます。 [マクロを使用して、ストレージの場所](overview.md#use-macros)にフォルダーを作成する手順をお読みください。
 
-## 必要な[!DNL Amazon S3]権限{#required-s3-permission}
+### 必要な[!DNL Amazon S3]権限 {#required-s3-permission}
 
-データを[!DNL Amazon S3]ストレージの場所に正常に接続して書き出すには、[!DNL Amazon S3]に[!DNL Platform]のIdentity and Access Management (IAM)ユーザーを作成し、次の操作に対する権限を割り当てます。
+データを[!DNL Amazon S3]ストレージの場所に正常に接続して書き出すには、[!DNL Amazon S3]の[!DNL Platform]のIdentity and Access Management(IAM)ユーザーを作成し、次の操作の権限を割り当てます。
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -44,7 +52,6 @@ ht-degree: 12%
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
-
 
 <!--
 
@@ -56,7 +63,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
+## この宛先へのセグメントのアクティブ化 {#activate}
 
-## エクスポートされたデータ{#exported-data}
+宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
-[!DNL Amazon S3]宛先の場合、[!DNL Platform]は、指定したストレージーの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先」[を参照してください。](../../ui/activate-destinations.md#esp-and-cloud-storage)
+## エクスポートされたデータ {#exported-data}
+
+[!DNL Amazon S3]の宛先の場合、[!DNL Platform]は、指定したストレージの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントのアクティベーションに関するチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先](../../ui/activate-destinations.md#esp-and-cloud-storage) 」を参照してください。[
