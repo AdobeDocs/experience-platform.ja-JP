@@ -3,9 +3,9 @@ keywords: 飛行船タグ、飛行船の宛先
 title: 航空船タグ接続
 description: AdobeのオーディエンスデータをAirshipにAudience Tagsとしてシームレスに渡し、Airship内でターゲティングをおこないます。
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: e413933920028e3239f6044111d9cf215c865eba
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ Adobe Experience Platformのセグメントの概念は、Airshipの[タグ](htt
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## マッピングに関する考慮事項 {#mapping-considerations}
 
