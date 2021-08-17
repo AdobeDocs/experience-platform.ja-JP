@@ -3,10 +3,10 @@ title: Adobe Experience Platform Web SDKを使用した顧客の同意データ�
 topic-legacy: getting started
 description: Adobe2.0標準を使用して、Adobe Experience Platform Web SDKを統合し、Adobe Experience Platformで顧客の同意データを処理する方法について説明します。
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1254'
-ht-degree: 2%
+source-wordcount: '1247'
+ht-degree: 1%
 
 ---
 
@@ -93,7 +93,7 @@ SDK拡張機能がインストールされている場合は、ユーザーの�
 
 ### Webサイトに拡張機能をデプロイする
 
-拡張機能の設定が完了したら、Webサイトに統合できます。 更新されたライブラリビルドのデプロイ方法について詳しくは、タグドキュメントの[パブリッシュガイド](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=ja)を参照してください。
+拡張機能の設定が完了したら、Webサイトに統合できます。 更新されたライブラリビルドのデプロイ方法について詳しくは、タグドキュメントの[パブリッシュガイド](../../../../tags/ui/publishing/overview.md)を参照してください。
 
 ## 同意変更コマンドの実行 {#commands}
 
