@@ -3,10 +3,10 @@ keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager接続
 description: Google Ad Manager（以前は DoubleClick for Publishers または DoubleClick AdX と呼ばれていました）は Google の広告提供プラットフォームです。パブリッシャーはビデオやモバイルアプリを通じて、Web サイト上の広告の表示を管理することができます。
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 23%
+source-wordcount: '651'
+ht-degree: 25%
 
 ---
 
@@ -59,19 +59,13 @@ Platformで[!DNL Google Ad Manager]の宛先を作成する前に、[!DNL Google
 * **オーディエンスリンク ID**：これは のアカウントです。[!DNL Google Ad Manager]
 * アカウントの種類。Google DFP または AdX 購入者。
 
-## 宛先の設定
+## 宛先に接続 {#connect}
 
-**[!UICONTROL 接続]** > **[!UICONTROL 宛先]**&#x200B;で、「**[!DNL Google Ad Manager]**」を選択し、「**[!UICONTROL 設定]**」を選択します。
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
 
-![Google Ad Manager の宛先の接続](../../assets/catalog/advertising/google-ad-manager/catalog.png)
+### 接続パラメーター {#parameters}
 
->[!NOTE]
->
->この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL アクティブ化]**」ボタンが表示されます。 **[!UICONTROL アクティブ化]**&#x200B;と&#x200B;**[!UICONTROL 設定]**&#x200B;の違いについて詳しくは、宛先ワークスペースのドキュメントの[カタログ](../../ui/destinations-workspace.md#catalog)の節を参照してください。
-
-宛先の作成ワークフローの&#x200B;**設定**&#x200B;手順で、宛先の[!UICONTROL 基本情報]を入力します。
-
-![Google Ad Manager の基本情報](../../assets/catalog/advertising/google-ad-manager/setup.png)
+[この宛先を設定](../../ui/connect-destination.md)する際に、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**：この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
@@ -79,15 +73,14 @@ Platformで[!DNL Google Ad Manager]の宛先を作成する前に、[!DNL Google
    *  for Publishers - `DFP by Google` を使用[!DNL DoubleClick]
    * [!DNL Google AdX]には`AdX buyer`を使用します。
 * **[!UICONTROL アカウントID]**:アカウントIDにを入力しま [!DNL Google]す。これは、ネットワーク ID またはオーディエンスリンク ID です。通常、これは 8 桁の ID です。
-* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、宛先にデータを書き出す目的を示します。Adobe定義のマーケティングアクションから選択することも、独自のマーケティングアクションを作成することもできます。 マーケティングアクションについて詳しくは、「[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)」を参照してください。
 
 >[!NOTE]
 >
->[!DNL Google Ad Manager]の宛先を設定する際は、[!DNL Google Account Manager]またはAdobe担当者に問い合わせて、お持ちのアカウントの種類を確認してください。
+>[!DNL Google Ad Manager]の宛先を設定する際は、[!DNL Google Account Manager]またはAdobeの担当者にお問い合わせのうえ、お持ちのアカウントの種類をご確認ください。
 
-## [!DNL Google Ad Manager]に対してセグメントをアクティブ化
+## この宛先へのセグメントのアクティブ化 {#activate}
 
-[!DNL Google Ad Manager]に対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
+宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
 ## エクスポートされたデータ
 
