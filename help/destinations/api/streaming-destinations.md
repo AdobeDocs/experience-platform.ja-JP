@@ -6,9 +6,9 @@ description: このドキュメントでは、Adobe Experience Platform APIを�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2025'
 ht-degree: 53%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 53%
 
 ![概要 — ストリーミング宛先の作成手順とセグメントのアクティブ化の手順](../assets/api/streaming-destination/overview.png)
 
-Platformのユーザーインターフェイスを使用して宛先に接続し、データをアクティブ化する場合は、「 [宛先の接続](../ui/connect-destination.md) 」と「 [宛先へのプロファイルとセグメントのアクティブ化](../ui/activate-destinations.md) 」のチュートリアルを参照してください。
+Platformのユーザーインターフェイスを使用して宛先に接続し、データをアクティブ化する場合は、 [宛先の接続](../ui/connect-destination.md)と[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../ui/activate-segment-streaming-destinations.md)のチュートリアルを参照してください。
 
 ## はじめに
 
