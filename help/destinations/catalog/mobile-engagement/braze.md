@@ -3,10 +3,10 @@ keywords: モバイル；勇気づけメッセージ
 title: 接続をブレーズ
 description: Brazeは、顧客と顧客が好むブランドとの間の関連性の高い思い出に残るエクスペリエンスを強化する、包括的な顧客エンゲージメントプラットフォームです。
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 4%
+source-wordcount: '789'
+ht-degree: 2%
 
 ---
 
@@ -34,11 +34,11 @@ ht-degree: 4%
 >
 >追加のカスタム属性を[!DNL Braze]に送信すると、[!DNL Braze]データポイントの消費が増加する場合があることに注意してください。 追加のカスタム属性を送信する前に、[!DNL Braze]アカウントマネージャーにお問い合わせください。
 
-## 使用例 {#use-cases}
+## ユースケース {#use-cases}
 
 マーケティング担当者の場合、[!DNL Adobe Experience Platform]でセグメントを構築し、モバイルエンゲージメントの宛先でユーザーをターゲットにしたいと考えています。 さらに、[!DNL Adobe Experience Platform]でセグメントとプロファイルが更新されしだい、[!DNL Adobe Experience Platform]プロファイルの属性に基づいて、パーソナライズされたエクスペリエンスをユーザーに提供したいと考えています。
 
-## サポートされているID{#supported-identities}
+## サポートされるID {#supported-identities}
 
 [!DNL Braze] では、以下の表で説明するIDのアクティブ化をサポートしています。
 
@@ -46,41 +46,28 @@ ht-degree: 4%
 |---|---|---|
 | external_id | 任意のIDのマッピングをサポートするカスタムの[!DNL Braze]識別子。 | [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation)にマッピングしている限り、任意の[ID](../../../identity-service/namespaces.md)を[!DNL Braze]宛先に送信できます。 |
 
-## エクスポートタイプ{#export-type}
+## 書き出しタイプ {#export-type}
 
 **[!DNL Profile-based]** ：セグメントのすべてのメンバーを、目的のスキーマフィールド(例：フィールドマッピングに従って、電子メールアドレス、電話番号、姓)やID（またはその両方）を表示します。[!DNL Adobe Experience Platform] セグメントは、属性のにエ [!DNL Braze] クスポート `AdobeExperiencePlatformSegments` されます。
 
-## 宛先に接続 {#connect-destination}
+## 宛先に接続 {#connect}
 
-**[!UICONTROL 接続]** > **[!UICONTROL 宛先]**&#x200B;で、「[!DNL Braze]」を選択し、「**[!UICONTROL 設定]**」を選択します。
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
 
-![Brazeの宛先の設定](../../assets/catalog/mobile-engagement/braze/configure.png)
+### 接続パラメーター {#parameters}
 
->[!NOTE]
->
->この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL アクティブ化]**」ボタンが表示されます。 **[!UICONTROL アクティブ化]**&#x200B;と&#x200B;**[!UICONTROL 設定]**&#x200B;の違いについて詳しくは、宛先ワークスペースのドキュメントの[カタログ](../../ui/destinations-workspace.md#catalog)の節を参照してください。
->
->![ブレーズ先を有効化](../../assets/catalog/mobile-engagement/braze/activate.png)
+[この宛先を設定](../../ui/connect-destination.md)する際に、次の情報を指定する必要があります。
 
-[!UICONTROL アカウント]の手順で、[!DNL Braze]アカウントトークンを指定する必要があります。 これは[!DNL Braze] [!DNL API]キーです。 [!DNL API]キーの入手方法の詳細は、次のURLを参照してください。[REST APIキーの概要](https://www.braze.com/docs/api/api_key/)。 トークンを入力し、「**[!UICONTROL 宛先に接続]**」をクリックします。
-
-![宛先アカウントの分類手順](../../assets/catalog/mobile-engagement/braze/account.png)
-
-「**[!UICONTROL 次へ]**」をクリックします。[!UICONTROL 認証]手順で、[!DNL Braze]接続の詳細を入力する必要があります。
+* **[!UICONTROL アカウントトークンのブレーズ]**:これが鍵 [!DNL Braze] [!DNL API] です。[!DNL API]キーの入手方法の詳細は、次のURLを参照してください。[REST APIキーの概要](https://www.braze.com/docs/api/api_key/)。
 * **[!UICONTROL 名前]**:この宛先が将来認識される名前を入力します。
 * **[!UICONTROL 説明]**:この宛先を将来識別するのに役立つ説明を入力します。
 * **[!UICONTROL エンドポイントインスタンス]**:使用する必要のあ [!DNL Braze] るエンドポイントインスタンスを担当者に問い合わせてください。
-* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、宛先に書き出すデータの目的を示します。Adobe定義のマーケティングアクションから選択することも、独自のマーケティングアクションを作成することもできます。 マーケティングアクションについて詳しくは、「Adobe Experience Platformの[データガバナンス](../../../data-governance/policies/overview.md) 」ページを参照してください。 個々のAdobe定義マーケティングアクションについて詳しくは、「[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)」を参照してください。
 
-![認証ステップをブレーズ](../../assets/catalog/mobile-engagement/braze/authentication.png)
+## この宛先へのセグメントのアクティブ化 {#activate}
 
-「**[!UICONTROL 宛先を作成]**」をクリックします。 これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」をクリックします。または、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択します。 どちらの場合も、残りのワークフローについては、次の「[セグメントのアクティブ化](#activate-segments)」の節を参照してください。
+宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
-## セグメントのアクティブ化 {#activate-segments}
-
-セグメントのアクティベーションワークフローについて詳しくは、「[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md#select-attributes)」を参照してください。
-
-## フィールドマッピング{#field-mapping}
+## マッピングに関する考慮事項 {#mapping-considerations}
 
 オーディエンスデータを[!DNL Adobe Experience Platform]から[!DNL Braze]の宛先に正しく送信するには、フィールドマッピングの手順を実行する必要があります。
 
@@ -127,7 +114,7 @@ XDMフィールドを[!DNL Braze]宛先フィールドに正しくマッピン�
 
 マッピングをさらに追加するには、上記の手順を繰り返します。
 
-## マッピングの例{#mapping-example}
+## マッピングの例 {#mapping-example}
 
 例えば、XDMプロファイルスキーマと[!DNL Braze]インスタンスに次の属性とIDが含まれているとします。
 
@@ -140,10 +127,10 @@ XDMフィールドを[!DNL Braze]宛先フィールドに正しくマッピン�
 
 ![宛先マッピングのブレーズの例](../../assets/catalog/mobile-engagement/braze/mapping-example.png)
 
-## エクスポートされたデータ{#exported-data}
+## エクスポートされたデータ {#exported-data}
 
 データが[!DNL Braze]の宛先に正常に書き出されたかどうかを確認するには、[!DNL Braze]アカウントを確認します。 [!DNL Adobe Experience Platform] セグメントは、属性のにエ [!DNL Braze] クスポート `AdobeExperiencePlatformSegments` されます。
 
-## データの使用とガバナンス{#data-usage-governance}
+## データの使用とガバナンス {#data-usage-governance}
 
 すべての[!DNL Adobe Experience Platform]宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 [!DNL Adobe Experience Platform]によるデータガバナンスの強制方法について詳しくは、「[データガバナンスの概要](../../../data-governance/home.md)」を参照してください。
