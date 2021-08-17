@@ -1,7 +1,7 @@
 ---
 title: ルール
 description: Adobe Experience Platformでのタグ拡張の機能について説明します。
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1977'
 ht-degree: 82%
@@ -168,7 +168,7 @@ Adobeでは、1 ～ 100の正の数でルールを並べ替えることを強く
 * **JavaScript：** JavaScript は、サーバーから通常のテキストとして読み込まれ、script タグで囲まれ、Postscribe を使用してドキュメントに追加されます。ルールに複数の JavaScript カスタムスクリプトがある場合、それらはサーバーから並行して読み込まれますが、ルール内の設定と同じ順序で実行されます。
 * **HTML：** HTML はサーバーから読み込まれ、Postscribe を使用してドキュメントに追加されます。ルールに複数のカスタムHTML スクリプトがある場合、それらはサーバーから並行して読み込まれますが、ルール内の設定と同じ順序で実行されます。
 
-## ルールコンポーネントの優先順位
+## ルールコンポーネントの優先順位 {#sequencing}
 
 タグランタイム環境の動作は、プロパティに対して&#x200B;**[!UICONTROL シーケンス]**&#x200B;のルールコンポーネントを実行するかオフにするかによって異なります。
 
