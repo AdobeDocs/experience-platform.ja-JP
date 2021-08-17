@@ -1,35 +1,65 @@
 ---
-keywords: クラウドのストレージ先；クラウドのストレージ
+keywords: クラウドストレージの宛先；クラウドストレージ
 title: クラウドストレージの宛先の概要
-description: Adobe Experience Platformは、セグメントをデータファイルとしてAmazonS3、AWSKinesis、Azureイベントハブ、またはSFTPクラウドストレージの場所に配信できます。
-translation-type: tm+mt
-source-git-commit: 4f636de9f0cac647793564ce37c6589d096b61f7
+description: Adobe Experience Platformは、セグメントをデータファイルとしてAmazon S3、AWS Kinesis、Azure Event Hubs、またはSFTPクラウドのストレージの場所に配信できます。
+exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 22%
+source-wordcount: '297'
+ht-degree: 2%
 
 ---
 
-
 # クラウドストレージの宛先の概要 {#cloud-storage-destinations}
 
-Adobe Experience Platformは、セグメントをデータファイルとしてクラウドストレージの場所に配信できます。 これにより、オーディエンスとそのプロファイル属性を、[!DNL Amazon S3]、[!DNL Azure Blob]、SFTP用のCSVまたはタブ区切りファイルを使用して、社内システムに送信できます。 [!DNL Amazon Kinesis]と[!DNL Azure Event Hubs]の宛先の場合、データはJSON形式でExperience Platformからストリーミングされます。
+## 概要 {#overview}
 
-![Adobeクラウドのストレージ先](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+Adobe Experience Platformは、セグメントをデータファイルとしてクラウドストレージの場所に配信できます。 これにより、 [!DNL Amazon S3]、[!DNL Azure Blob]およびSFTP用のCSVまたはタブ区切りファイルを使用して、オーディエンスとそのプロファイル属性を内部システムに送信できます。 [!DNL Amazon Kinesis]および[!DNL Azure Event Hubs]の宛先の場合、データはExperience Platformから[!DNL JSON]形式でストリーミングされます。
 
-クラウドストレージの宛先への接続方法について詳しくは、「[クラウドストレージの宛先を作成するためのワークフロー](./workflow.md)」を参照してください。
+![Adobeクラウドストレージの宛先](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
-## データのエクスポートのタイプ
+## サポートされるクラウドストレージの宛先 {#supported-destinations}
 
-**プロファイルベースの書き出し** - オーディエンスの個人に関する情報を書き出します。これらの詳細はパーソナライゼーションに必要で、属性、イベント、セグメントのメンバーシップなどを含めることができます。
+Adobe Experience Platformは、次のクラウドストレージの宛先をサポートしています。
 
-## 利用可能なクラウドストレージの宛先
+* [Amazon Kinesis接続](amazon-kinesis.md)
+* [Amazon S3接続](amazon-s3.md)
+* [Azure BLOB接続](azure-blob.md)
+* [Azure Event Hubs接続](azure-event-hubs.md)
+* [SFTP接続](sftp.md)
 
-- [AmazonS3接続](./amazon-s3.md)
-- [Azure Blob接続](./azure-blob.md)
-- [SFTP接続](./sftp.md)
+## 新しいクラウドストレージの宛先への接続 {#connect-destination}
 
-## 利用可能なクラウドストレージストリーミング先
+キャンペーンのクラウドストレージの宛先にセグメントを送信するには、まずPlatformが宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
 
-- [AmazonKinesis接続](./amazon-kinesis.md)
-- [Azureイベントハブ接続](./azure-event-hubs.md)
+
+## マクロを使用したストレージの場所へのフォルダーの作成 {#use-macros}
+
+>[!NOTE]
+>
+> この節で説明する機能は、現在、[Amazon S3](amazon-s3.md)の宛先でのみ使用できます。
+
+ストレージの場所にあるセグメントファイルごとにカスタムフォルダーを作成するには、フォルダーパスの入力フィールドにマクロを使用します。 次に示すように、入力フィールドの最後にマクロを挿入します。
+
+![マクロを使用してストレージにフォルダーを作成する方法](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+以下の例では、IDが`25768be6-ebd5-45cc-8913-12fb3f348615`のサンプルセグメント`Luxury Audience`を参照しています。
+
+**マクロ1:`%SEGMENT_NAME%`**
+
+入力：`acme/campaigns/2021/%SEGMENT_NAME%`
+ストレージの場所のフォルダーパス：`acme/campaigns/2021/Luxury Audience`
+
+**マクロ2:`%SEGMENT_ID%`**
+
+入力：`acme/campaigns/2021/%SEGMENT_ID%`
+ストレージの場所のフォルダーパス：`acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**マクロ3:`%SEGMENT_NAME%/%SEGMENT_ID%`**
+
+入力：`acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+ストレージの場所のフォルダーパス：`acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+## データのエクスポートのタイプ {#export-type}
+
+クラウドストレージの宛先は、**プロファイルベースの書き出し**&#x200B;をサポートします。 つまり、オーディエンス内の個人に関する詳細をエクスポートします。 これらの詳細はパーソナライゼーションに必要で、属性、イベント、セグメントのメンバーシップなどを含めることができます。
