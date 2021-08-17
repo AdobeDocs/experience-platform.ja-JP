@@ -3,9 +3,9 @@ keywords: linkedin接続；linkedin接続；linkedinの宛先；linkedin;
 title: Linkedinが一致したオーディエンス接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのLinkedInキャンペーンのプロファイルをアクティブ化します。
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '768'
 ht-degree: 10%
 
 ---
@@ -71,7 +71,7 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 >ハッシュ化されていない名前空間のデータは、アクティブ化時に[!DNL Platform]によって自動的にハッシュ化されます。
 > 属性ソースのデータは自動的にハッシュ化されません。
 > 
-> [IDマッピング](../../ui/activate-destinations.md#mapping)の手順で、ソースフィールドにハッシュ化されていない属性が含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に[!DNL Platform]でデータを自動的にハッシュ化します。
+> [IDマッピング](../../ui/activate-segment-streaming-destinations.md#mapping)の手順で、ソースフィールドにハッシュ化されていない属性が含まれている場合は、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に[!DNL Platform]でデータを自動的にハッシュ化します。
 > 
 > 「**[!UICONTROL 変換を適用]**」オプションは、ソースフィールドとして属性を選択した場合にのみ表示されます。 名前空間を選択した場合は表示されません。
 
@@ -99,7 +99,7 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## エクスポートされたデータ {#exported-data}
 
