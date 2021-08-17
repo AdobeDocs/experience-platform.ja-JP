@@ -5,9 +5,9 @@ title: XDM ExperienceEventクラス
 topic-legacy: overview
 description: このドキュメントでは、XDM ExperienceEventクラスの概要と、イベントデータモデリングのベストプラクティスを説明します。
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1573'
 ht-degree: 4%
 
 ---
@@ -53,11 +53,11 @@ ht-degree: 4%
 
 [Adobe Experience Platform Data ](../../data-prep/home.md) Prepaloes XDMとの間で、データのマッピング、変換、検証をおこなうことができます。Experience Platformに取り込まれる際に、論理演算子を呼び出して、複数イベントレコードのデータの優先順位付け、変換、統合をおこなうことができます。 [](../../data-prep/functions.md)上記の例では、「製品表示」と「ページ表示」の両方が発生したときに優先順位を付ける計算フィールドとして`eventType`を指定できます。
 
-UIを使用して手動でPlatformにデータを取り込む場合、計算フィールドの作成方法に関する具体的な手順については、 [CSVファイルのXDM](../../ingestion/tutorials/map-a-csv-file.md)へのマッピングに関するガイドを参照してください。
+UIを使用してデータをPlatformに手動で取り込む場合、計算フィールドの作成方法に関する具体的な手順については、『[計算フィールドガイド](../../data-prep/calculated-fields.md)』を参照してください。
 
 ソース接続を使用してPlatformにデータをストリーミングする場合は、代わりに計算フィールドを使用するようにソースを設定できます。 接続を設定する際の計算フィールドの実装方法については、特定のソース](../../sources/home.md)の[ドキュメントを参照してください。
 
-## 互換性のあるスキーマフィールドグループ{#field-groups}
+## 互換性のあるスキーマフィールドグループ {#field-groups}
 
 >[!NOTE]
 >
