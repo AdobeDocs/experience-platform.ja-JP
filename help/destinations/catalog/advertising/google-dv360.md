@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & 
 title: Google DisplayとVideo 360の接続
 description: Display & Video 360（旧称 DoubleClick Bid Manager）は、ディスプレイ広告、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングと、オーディエンスにターゲットを絞ったデジタルキャンペーンの実行に使用できるツールです。
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 37%
+source-wordcount: '671'
+ht-degree: 41%
 
 ---
 
@@ -59,19 +59,13 @@ Platformで[!DNL Google Display & Video 360]の宛先を作成する前に、Goo
 * **顧客ID**:Adobeの顧客アカウントID（Googleを使用）。顧客ID:89690775.
 * **アカウントの種類**：**[!DNL Invite advertiser]** を使用して、Display &amp; Video 360 アカウントにある特定のブランドにのみオーディエンスを共有するか、**[!DNL Invite partner]** を使用して Display &amp; Video 360 アカウントのすべてのブランドにオーディエンスを共有します。
 
-## 宛先の設定
+## 宛先に接続 {#connect}
 
-**[!UICONTROL 接続]** > **[!UICONTROL 宛先]**&#x200B;で、「[!DNL Google Display & Video 360]」を選択し、「**[!UICONTROL 設定]**」を選択します。
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
 
-![Google Display &amp; Video 360 の宛先への接続](../../assets/catalog/advertising/google-dv360/catalog.png)
+### 接続パラメーター {#parameters}
 
->[!NOTE]
->
->この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL アクティブ化]**」ボタンが表示されます。 [!UICONTROL アクティブ化]と[!UICONTROL 設定]の違いについて詳しくは、宛先ワークスペースのドキュメントの[カタログ](../../ui/destinations-workspace.md#catalog)の節を参照してください。
-
-宛先の作成ワークフローの&#x200B;**設定**&#x200B;手順で、宛先の[!UICONTROL 基本情報]と、この宛先に適用するマーケティングアクションを入力します。
-
-![Google Display &amp; Video 360 の基本情報](../../assets/catalog/advertising/google-dv360/setup.png)
+[この宛先を設定](../../ui/connect-destination.md)する際に、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**：この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
@@ -79,15 +73,14 @@ Platformで[!DNL Google Display & Video 360]の宛先を作成する前に、Goo
    * Display &amp; Video 360 アカウントにある特定のブランドにのみオーディエンスを共有するには、`Invite Advertiser` を使用します。
    * Display &amp; Video 360 アカウントのすべてのブランドにオーディエンスを共有するには、`Invite Partner` を使用します。
 * **[!UICONTROL アカウント ID]**：**[!DNL Invite partner]** または **[!DNL Invite advertiser]** のアカウント ID に Google アカウントの ID を入力します。通常、これは 6 桁または 7 桁の ID です。
-* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、宛先にデータを書き出す目的を示します。Adobe定義のマーケティングアクションから選択することも、独自のマーケティングアクションを作成することもできます。 マーケティングアクションについて詳しくは、「[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)」を参照してください。
 
 >[!NOTE]
 >
->[!DNL Google Display & Video 360]の宛先を設定する際は、[!DNL Google Account Manager]またはAdobe担当者に問い合わせて、お持ちのアカウントの種類を確認してください。
+>[!DNL Google Display & Video 360]の宛先を設定する際は、[!DNL Google Account Manager]またはAdobeの担当者にお問い合わせのうえ、お持ちのアカウントの種類をご確認ください。
 
-## [!DNL Google Display & Video 360]に対してセグメントをアクティブ化
+## この宛先へのセグメントのアクティブ化 {#activate}
 
-[!DNL Google Display & Video 360]に対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
+宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
 ## エクスポートされたデータ
 
