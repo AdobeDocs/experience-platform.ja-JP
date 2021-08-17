@@ -1,10 +1,10 @@
 ---
 title: Marketo Engage先
 description: Marketo Engageは、マーケティング、広告、分析、コマースに対応する、エンドツーエンドのカスタマーエクスペリエンス管理(CXM)ソリューションの1つです。 CRMのリード管理や顧客エンゲージメントから、アカウントベースのマーケティングや売上高アトリビューションに至るまで、アクティビティを自動化および管理できます。
-source-git-commit: 9b1c805f0717d0ed2c5759420d20abf5dcdeaabc
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 4%
+source-wordcount: '325'
+ht-degree: 3%
 
 ---
 
@@ -36,6 +36,14 @@ Marketo Engageは、マーケティング、広告、分析、コマースに対
 
 宛先[の設定方法に関する説明は、](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en)を参照してください。
 
+## 宛先に接続 {#connect}
+
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
+
 ## データの使用とガバナンス {#data-usage-governance}
 
 すべての[!DNL Adobe Experience Platform]宛先は、データを処理する際のデータ使用ポリシーに準拠しています。 [!DNL Adobe Experience Platform]によるデータガバナンスの強制方法について詳しくは、「[データガバナンスの概要](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)」を参照してください。
+
+## この宛先へのセグメントのアクティブ化 {#activate}
+
+宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
