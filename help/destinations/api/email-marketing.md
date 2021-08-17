@@ -6,9 +6,9 @@ description: このドキュメントでは、Adobe Experience Platform APIを�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1705'
 ht-degree: 72%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 72%
 
 ![概要 - 宛先の作成手順とセグメントのアクティブ化の手順](../assets/api/email-marketing/overview.png)
 
-Platformのユーザーインターフェイスを使用して宛先を接続し、データをアクティブ化する場合は、「 [宛先の接続](../ui/connect-destination.md) 」と「 [宛先へのプロファイルとセグメントのアクティブ化](../ui/activate-destinations.md) 」のチュートリアルを参照してください。
+Platformのユーザーインターフェイスを使用して宛先を接続し、データをアクティブ化する場合は、 [宛先の接続](../ui/connect-destination.md)と[オーディエンスデータをバッチプロファイル書き出し先にアクティブ化](../ui/activate-batch-profile-destinations.md)のチュートリアルを参照してください。
 
 ## はじめに
 
