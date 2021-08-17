@@ -3,10 +3,10 @@ keywords: Azure Blob;BLOB宛先；s3;azure BLOB宛先
 title: Azure BLOB接続
 description: Azure BLOBストレージへのライブアウトバウンド接続を作成し、タブ区切りのデータファイルまたはCSVデータファイルをAdobe Experience Platformから定期的に書き出します。
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 13%
+source-wordcount: '400'
+ht-degree: 14%
 
 ---
 
@@ -25,13 +25,13 @@ ht-degree: 13%
    * [スキーマエディターのチュートリアル](../../../xdm/tutorials/create-schema-ui.md):スキーマエディターのUIを使用してカスタムスキーマを作成する方法を説明します。
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md)：複数のソースからの集計データに基づいて、統合されたリアルタイムの顧客プロファイルを提供します。
 
-有効な[!DNL Blob]宛先が既にある場合は、このドキュメントの残りの部分をスキップして、[宛先へのセグメントのアクティブ化](../../ui/activate-destinations.md)に関するチュートリアルに進んでください。
+有効な[!DNL Blob]宛先が既にある場合は、このドキュメントの残りの部分をスキップして、[宛先へのセグメントのアクティブ化](../../ui/activate-batch-profile-destinations.md)に関するチュートリアルに進んでください。
 
 ## サポートされているファイル形式 {#file-formats}
 
 [!DNL Experience Platform] は、次のファイル形式への書き出しをサポートしていま [!DNL Blob]す。
 
-* 区切り文字区切り値(DSV):DSV形式のデータ・ファイルのサポートは、現在、コンマ区切り値に制限されています。 一般的なDSVファイルのサポートは、今後提供される予定です。 サポートされるファイルの詳細については、[宛先](../../ui/activate-destinations.md#esp-and-cloud-storage)のアクティベートに関するチュートリアルの「クラウドストレージ」の節を参照してください。
+* 区切り文字区切り値(DSV):DSV形式のデータ・ファイルのサポートは、現在、コンマ区切り値に制限されています。 一般的なDSVファイルのサポートは、今後提供される予定です。
 
 ## 宛先に接続 {#connect}
 
@@ -54,4 +54,4 @@ ht-degree: 13%
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対するオーディエンスセグメントをアクティブ化する手順については、[プロファイルの一括書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
