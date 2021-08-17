@@ -5,10 +5,10 @@ title: Data Prep の概要
 topic-legacy: overview
 description: このドキュメントでは、Adobe Experience Platform 内でのData Prep について説明します。
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 88%
+source-wordcount: '547'
+ht-degree: 80%
 
 ---
 
@@ -34,6 +34,12 @@ Data Prep を使用すると、データエンジニアはエクスペリエン�
 マッピングとは、1 つの XDM 属性に対する入力属性または計算済みフィールドの関連付けです。個々のマッピングを作成することで、単一の属性を複数の XDM 属性にマッピングできます。
 
 様々なマッピング関数の詳細については、[マッピング関数ガイド](./functions.md)を参照してください。
+
+### 計算フィールド
+
+計算フィールドでは、入力スキーマの属性に基づいて値を作成できます。 これらの値をターゲットスキーマの属性に割り当て、名前と説明を指定して参照を容易にできます。
+
+計算フィールドの詳細については、『[計算フィールドガイド](./functions.md#calculated-fields)』を参照してください。
 
 ## マッピングセット
 
