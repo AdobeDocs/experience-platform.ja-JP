@@ -3,9 +3,9 @@ keywords: Azureイベントハブの宛先；azureイベントハブ；azure eve
 title: （ベータ版）!DNL Azure Event Hubs]接続
 description: '!DNL Azure Event Hubs]ストレージへのリアルタイムアウトバウンド接続を作成し、Experience Platformからデータをストリーミングします。'
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '476'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 3%
 
 ## 書き出しタイプ {#export-type}
 
-**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。宛先のアクティベーションワークフローの属性を選択画面 [から選択します](../../ui/activate-destinations.md#select-attributes)。
+**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。オーディエンスアクティベーションワークフローの属性を選択画面 [から選択します](../../ui/activate-streaming-profile-destinations.md#select-attributes)。
 
 ## 宛先に接続 {#connect}
 
@@ -54,7 +54,7 @@ ht-degree: 3%
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングプロファイルの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-streaming-profile-destinations.md)を参照してください。
 
 ## エクスポートされたデータ {#exported-data}
 
