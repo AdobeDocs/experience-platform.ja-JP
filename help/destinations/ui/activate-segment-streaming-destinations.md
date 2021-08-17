@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化
 description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1165'
 ht-degree: 4%
 
 ---
@@ -42,6 +42,11 @@ ht-degree: 4%
 ![セグメントの選択](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
 ## 属性とIDのマッピング {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="変換の適用"
+>abstract="非ハッシュ化のソースフィールドを使用する場合は、このオプションをオンにして、Adobe Experience Platformでアクティベーション時に自動的にハッシュ化するようにします。"
 
 >[!IMPORTANT]
 >
