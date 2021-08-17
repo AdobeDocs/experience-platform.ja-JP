@@ -4,9 +4,9 @@ title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の4つのセクションで構成されます。 以下の節で説明します。
 seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '861'
 ht-degree: 20%
 
 ---
@@ -72,7 +72,7 @@ Adobe Experience Platformで、左側のナビゲーションバーから「**[!
 
 >[!TIP]
 >
-> * ![**[!UICONTROL 名前]**&#x200B;列のセグメントを追加ボタン](../assets/ui/workspace/add-data-symbol.png)を使用して、その宛先に対して[さらにセグメントをアクティブ化](activate-destinations.md)します。
+> * **[!UICONTROL 「名前」]**&#x200B;列に![「セグメントを追加」ボタン](../assets/ui/workspace/add-data-symbol.png)を使用して、セグメントをその宛先に送信します。
 > * **[!UICONTROL 名前]**&#x200B;列の![宛先の削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)を使用して、宛先への既存の接続を[削除](delete-destinations.md)します。
 
 
@@ -88,7 +88,7 @@ Adobe Experience Platformで、左側のナビゲーションバーから「**[!
 | [!UICONTROL ユーザー名] | 宛先フローに対して選択したアカウント資格情報。 |
 | [!UICONTROL アクティベーションデータ] | この宛先に対してアクティブ化されるセグメントの数を示します。 このコントロールを選択して、アクティブ化されたセグメントの詳細を確認します。 アクティブ化されたセグメントの詳細については、宛先の詳細ページの「 [アクティブ化データ](/help/destinations/ui/destination-details-page.md#activation-data) 」を参照してください。 |
 | [!UICONTROL 作成] | 宛先へのアクティベーションフローが作成された日時（UTC 時間）。 |
-| [!UICONTROL ステータス] | `Active` または `Inactive`.この宛先に対してデータがアクティブ化されているかどうかを示します。 ステータスを編集するには、「[アクティベーションの無効化](./activate-destinations.md#disable-activation)」を参照してください。 |
+| [!UICONTROL ステータス] | `Active` または `Inactive`.この宛先に対してデータがアクティブ化されているかどうかを示します。 |
 
 目的の行をクリックすると、目的の行に関する詳細情報が右側のレールに表示されます。
 
@@ -96,7 +96,7 @@ Adobe Experience Platformで、左側のナビゲーションバーから「**[!
 
 宛先名を選択して、この宛先に対してアクティブ化されたセグメントに関する情報を表示します。「**[!UICONTROL アクティベーションの編集]**」をクリックして、この宛先に送信されるセグメントを変更または追加します。
 
-## [!UICONTROL システム表示]{#system-view}
+## [!UICONTROL システム表示] {#system-view}
 
 「**[!UICONTROL システムビュー]**」タブには、Adobe Experience Platformで設定したアクティベーションフローの図が表示されます。
 
