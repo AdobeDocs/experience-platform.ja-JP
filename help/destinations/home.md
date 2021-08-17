@@ -5,10 +5,10 @@ seo-title: 宛先の概要
 description: クロスチャネルマーケティングキャンペーン、電子メール、ターゲット広告などの宛先に対してAdobe Experience Platformデータをアクティブ化する方法を説明します。
 seo-description: 宛先は、Adobe Experience Platformからのデータのシームレスなアクティブ化を可能にする、宛先プラットフォームとの事前定義済みの統合です。 Adobe Experience Platformの宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に関する既知および不明なデータをアクティブ化できます。
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 38%
+source-wordcount: '507'
+ht-degree: 37%
 
 ---
 
@@ -25,7 +25,7 @@ Platformの主な機能の1つは、ファーストパーティデータを取�
 ## 宛先の手順 {#steps}
 
 * Platformで使用可能なすべての宛先の[セルフサービスカタログ](./catalog/overview.md)から選択します。
-* 宛先を使用して[アクティブ化](./ui/activate-destinations.md)し、プロファイルやセグメントをマーケティング自動化プラットフォーム、デジタル広告プラットフォームなどに送信します。
+* 宛先を使用して、プロファイルやセグメントをマーケティング自動化プラットフォームやデジタル広告プラットフォームに送信します。
 * データを希望の宛先に定期的に書き出しするようにスケジュールします。
 
 ## コントロール {#controls}
@@ -66,4 +66,8 @@ Platformの宛先機能は、Adobe Experience Platformのアクセス制御権�
 * [電子メールマーケティングの宛先](./catalog/email-marketing/overview.md)
 * [ソーシャルの宛先](./catalog/social/overview.md)
 
-セグメントのアクティベーションワークフローでのデータポリシー違反について詳しくは、「[宛先へのプロファイルとセグメントのアクティブ化](./ui/activate-destinations.md#review)」の「確認」の手順を参照してください。
+セグメントのアクティベーションワークフローでのデータポリシー違反について詳しくは、次のガイドの「確認」の手順を参照してください。
+
+* [ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-segment-streaming-destinations.md#review)
+* [ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化](./ui/activate-streaming-profile-destinations.md#review)
+* [プロファイルの一括書き出し先へのオーディエンスデータのアクティブ化](./ui/activate-batch-profile-destinations.md#review)
