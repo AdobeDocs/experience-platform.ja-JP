@@ -3,9 +3,9 @@ keywords: ストリーミング；
 title: HTTP接続
 description: Adobe Experience PlatformのHTTP宛先を使用すると、プロファイルデータをサードパーティのHTTPエンドポイントに送信できます。
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '357'
 ht-degree: 9%
 
 ---
@@ -56,11 +56,11 @@ ht-degree: 9%
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../ui/activate-destinations.md#select-attributes)を参照してください。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングプロファイルの書き出し先へのオーディエンスデータのアクティブ化](../ui/activate-streaming-profile-destinations.md)を参照してください。
 
-## 宛先属性 {#attributes}
+### 宛先属性 {#attributes}
 
-[[!UICONTROL 属性]](../ui/activate-destinations.md#select-attributes)を選択の手順で、[アクティブ化したセグメント](../ui/activate-destinations.md)を[!DNL HTTP]の宛先に対して実行する場合は、[和集合スキーマ](../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをAdobeが推奨します。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
+[[!UICONTROL 属性を選択]](../ui/activate-streaming-profile-destinations.md#select-attributes)の手順では、[和集合スキーマ](../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをAdobeにお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。
 
 ## エクスポートされたデータ {#exported-data}
 
