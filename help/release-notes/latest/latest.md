@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: c06e7b5c70613dc560fb5c0dcc28590206fc1734
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '802'
 ht-degree: 53%
@@ -60,8 +60,8 @@ Platformでは、データは様々なソースから取り込まれ、システ
 
 | 機能 | 説明 |
 | --- | --- |
-| [増分ファイルエクスポートの高速化](../../destinations/ui/activate-destinations.md#export-incremental-files) | 3、6、8、12時間ごとに、ファイルベースの宛先の増分ファイル書き出しをスケジュールできるようになりました。 既に保存されているセグメントのファイルエクスポートスケジュールの変更は、現在サポートされていません。 別のスケジュールでセグメントを再書き出しするには、新しい宛先インスタンスを作成する必要があります。 これは、今後のリリースで対処される予定の制限です。 |
-| [重複排除キーのサポート](../../destinations/ui/activate-destinations.md#deduplication-keys) | 重複排除キーを選択することで、エクスポートファイル内の同じプロファイルの複数のレコードを排除します。 重複排除キーとして、1つの名前空間または最大2つのXDMスキーマ属性を選択できます。 |
+| [増分ファイルエクスポートの高速化](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | 3、6、8、12時間ごとに、ファイルベースの宛先の増分ファイル書き出しをスケジュールできるようになりました。 既に保存されているセグメントのファイルエクスポートスケジュールの変更は、現在サポートされていません。 別のスケジュールでセグメントを再書き出しするには、新しい宛先インスタンスを作成する必要があります。 これは、今後のリリースで対処される予定の制限です。 |
+| [重複排除キーのサポート](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | 重複排除キーを選択することで、エクスポートファイル内の同じプロファイルの複数のレコードを排除します。 重複排除キーとして、1つの名前空間または最大2つのXDMスキーマ属性を選択できます。 |
 
 ## エクスペリエンスデータモデル（XDM） {#xdm}
 
