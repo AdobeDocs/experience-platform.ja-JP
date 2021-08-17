@@ -3,9 +3,9 @@ keywords: Eメール；Eメール；Eメール；Eメールの宛先；Adobe Cam
 title: Adobe Campaign接続
 description: Adobe Campaign は、オンラインおよびオフラインのすべてのチャネルにまたがるキャンペーンをカスタマイズし、実施するのに役立つソリューションセットです。
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '722'
 ht-degree: 20%
 
 ---
@@ -20,7 +20,7 @@ Adobe Campaign は、オンラインおよびオフラインのすべてのチ�
 
 ## 書き出しタイプ {#export-type}
 
-**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。宛先のアクティベーションワークフ **[!UICONTROL ロー]** の「属性を選 [択」手順で選択します](../../ui/activate-destinations.md#select-attributes)。
+**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。オーディエンスのアクティベーションワ **[!UICONTROL ークフ]** ローの「属性を選 [択」手順で選択します](../../ui/activate-batch-profile-destinations.md#select-attributes)。
 
 ## IPアドレス許可リスト {#allow-list}
 
@@ -59,15 +59,15 @@ Adobe Campaignにデータを送信する方法は、[!DNL Amazon S3]または[!
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対するオーディエンスセグメントをアクティブ化する手順については、[プロファイルの一括書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)を参照してください。
 
-## 宛先属性 {#destination-attributes}
+### 宛先属性 {#destination-attributes}
 
-[この宛先に対してセグメント](../../ui/activate-destinations.md)をアクティブ化する場合は、[和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをAdobeにお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、[書き出したファイルの宛先属性として使用するスキーマフィールドの選択](./overview.md#destination-attributes)を参照してください。
+この宛先に対してセグメントをアクティブ化する場合、Adobeでは、[和集合スキーマ](../../../profile/home.md#profile-fragments-and-union-schemas)から一意の識別子を選択することをお勧めします。 宛先に書き出す一意の ID およびその他の XDM フィールドを選択します。詳しくは、電子メールマーケティングの宛先](overview.md#best-practices)に対してオーディエンスをアクティブ化する際のベストプラクティス[を参照してください。
 
 ## エクスポートされたデータ {#exported-data}
 
-[!DNL Adobe Campaign]の宛先の場合、[!DNL Platform]は、指定したストレージの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントのアクティベーションに関するチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先](../../ui/activate-destinations.md#esp-and-cloud-storage) 」を参照してください。[
+[!DNL Adobe Campaign]の宛先の場合、[!DNL Platform]は、指定したストレージの場所にタブ区切りの`.csv`ファイルを作成します。 ファイルの詳細については、『セグメントのアクティベーションのチュートリアル』の「[セグメントのアクティベーションの検証](../../ui/activate-batch-profile-destinations.md#verify)」を参照してください。
 
 ## Adobe Campaign へのデータインポートの設定 {#import-data-into-campaign}
 
