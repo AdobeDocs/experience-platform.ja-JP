@@ -3,9 +3,9 @@ keywords: SFTP;sftp
 title: SFTP接続
 description: SFTPサーバーへのライブアウトバウンド接続を作成し、区切られたデータファイルを定期的にAdobe Experience Platformから書き出します。
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '282'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ SFTPサーバーへのライブアウトバウンド接続を作成し、区切�
 
 ## 書き出しタイプ {#export-type}
 
-**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。宛先のアクティベーションワークフローの属性を選択画面 [から選択します](../../ui/activate-destinations.md#select-attributes)。
+**プロファイルベースの**  — セグメントのすべてのメンバーを、目的のスキーマフィールド(例：電子メールアドレス、電話番号、姓)。宛先のアクティベーションワークフローの属性を選択画面 [から選択します](../../ui/activate-batch-profile-destinations.md)。
 
 ![SFTPプロファイルベースの書き出しタイプ](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
@@ -45,7 +45,7 @@ SFTPサーバーへのライブアウトバウンド接続を作成し、区切�
 
 ## エクスポートされたデータ {#exported-data}
 
-[!DNL SFTP]の宛先の場合、Platformは指定したストレージの場所に、タブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントのアクティベーションに関するチュートリアルの「電子メールマーケティングの宛先とクラウドストレージの宛先](../../ui/activate-destinations.md#esp-and-cloud-storage) 」を参照してください。[
+[!DNL SFTP]の宛先の場合、Platformは指定したストレージの場所に、タブ区切りの`.csv`ファイルを作成します。 ファイルについて詳しくは、セグメントアクティベーションのチュートリアルの「 [プロファイルのバッチ書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) 」を参照してください。
 
 ## IPアドレス許可リスト
 
