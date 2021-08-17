@@ -1,22 +1,29 @@
 ---
 keywords: ソーシャル；ソーシャルの宛先；Livefyre;facebook;Facebook
-title: ソーシャルリンク先の概要
-description: ソーシャルリンク先を使用すると、ハッシュされた電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、および抑制に使用するキャンペーンのプロファイルをアクティブ化できます。
+title: ソーシャルの宛先の概要
+description: ソーシャルの宛先を使用すると、ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのキャンペーンのプロファイルをアクティブ化できます。
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 5%
+source-wordcount: '109'
+ht-degree: 4%
 
 ---
 
-# ソーシャル宛先の概要{#social-network-destinations}
+# ソーシャルの宛先の概要 {#social-network-destinations}
 
-ソーシャルリンク先を使用すると、ハッシュされた電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーション、および抑制に使用するキャンペーンのプロファイルをアクティブ化できます。
+## 概要 {#overview}
 
-Adobe Experience Platformは現在、以下のソーシャルリンク先をサポートしています。
+ソーシャルの宛先を使用すると、ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのキャンペーンのプロファイルをアクティブ化できます。
 
-- [Adobe Livefyre 拡張機能](./adobe-livefyre.md)
-- [[!DNL Facebook] 拡張機能](./facebook.md)
-- [Linkedinがオーディエンス接続に一致しました](./linkedin.md)
+## サポートされるソーシャルの宛先 {#supported-destinations}
+
+Adobe Experience Platformは現在、次のソーシャルの宛先をサポートしています。
+
+* [Adobe Livefyre 拡張機能](adobe-livefyre.md)
+* [[!DNL Facebook] 拡張機能](facebook.md)
+* [Linkedinが一致したオーディエンス接続](linkedin.md)
+
+## 新しいソーシャルの宛先に接続 {#connect-destination}
+
+キャンペーンのソーシャルの宛先にセグメントを送信するには、まずPlatformが宛先に接続する必要があります。 新しい宛先の設定について詳しくは、[宛先の作成に関するチュートリアル](../../ui/connect-destination.md)を参照してください。
