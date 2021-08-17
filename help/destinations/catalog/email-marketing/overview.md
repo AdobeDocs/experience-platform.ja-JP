@@ -4,9 +4,9 @@ title: 電子メールマーケティングの宛先の概要
 type: Tutorial
 description: 電子メールサービスプロバイダー（ESP）を使用すると、プロモーション電子メールキャンペーンの送信など、電子メールマーケティング活動を管理できます。
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 39%
 
 ---
@@ -70,9 +70,9 @@ Adobeでは、[和集合スキーマ](../../../profile/home.md#profile-fragments
 
 ## 電子メールマーケティングの宛先へのセグメントのアクティブ化 {#activate}
 
-電子メールマーケティングの宛先に対してセグメントをアクティブ化する方法については、「[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
+電子メールマーケティングの宛先に対してセグメントをアクティブ化する方法については、「 [プロファイルの一括書き出し先に対するオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md) 」を参照してください。
 
 ## その他のリソース
 
-* [宛先へのデータのアクティブ化](../../ui/activate-destinations.md)
+* [プロファイルの一括書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-batch-profile-destinations.md)
 * [フローサービスAPIを使用した、電子メールマーケティングの宛先の作成とデータのアクティブ化](../../api/email-marketing.md)
