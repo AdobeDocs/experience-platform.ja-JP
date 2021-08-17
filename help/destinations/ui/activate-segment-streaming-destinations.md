@@ -1,0 +1,176 @@
+---
+keywords: セグメントのストリーミング宛先のアクティブ化；セグメントのストリーミング宛先のアクティブ化；データのアクティブ化
+title: ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化
+type: Tutorial
+seo-title: ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化
+description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
+seo-description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+workflow-type: tm+mt
+source-wordcount: '1145'
+ht-degree: 4%
+
+---
+
+
+# ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化
+
+## 概要 {#overview}
+
+この記事では、Adobe Experience Platformのセグメントストリーミング宛先でオーディエンスデータをアクティブ化するために必要なワークフローについて説明します。
+
+## 前提条件 {#prerequisites}
+
+宛先へのデータをアクティブ化するには、宛先](./connect-destination.md)に[接続している必要があります。 まだの場合は、[宛先カタログ](../catalog/overview.md)に移動し、サポートされている宛先を参照して、使用する宛先を設定します。
+
+## 宛先の選択 {#select-destination}
+
+1. **[!UICONTROL 接続/宛先]**&#x200B;に移動し、「**[!UICONTROL 参照]**」タブを選択します。
+
+   ![「宛先の参照」タブ](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+
+1. 次の図に示すように、セグメントをアクティブ化する宛先に対応する「**[!UICONTROL Add segments]**」ボタンを選択します。
+
+   ![ボタンの有効化](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+
+1. 次のセクションに移動して[セグメントを選択します](#select-segments)。
+
+## セグメントの選択 {#select-segments}
+
+セグメント名の左側にあるチェックボックスを使用して、宛先に対してアクティブ化するセグメントを選択し、「**[!UICONTROL 次へ]**」を選択します。
+
+![セグメントの選択](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
+
+## 属性とIDのマッピング {#mapping}
+
+>[!IMPORTANT]
+>
+>この手順は、一部のセグメントストリーミング宛先にのみ適用されます。 宛先に&#x200B;**[!UICONTROL マッピング]**&#x200B;手順がない場合は、「[セグメントの書き出しをスケジュール](#scheduling)」にスキップします。
+
+一部のセグメントストリーミング宛先では、宛先のターゲットIDとしてマッピングするために、ソース属性またはID名前空間を選択する必要があります。
+
+1. **[!UICONTROL マッピング]**&#x200B;ページで、「**[!UICONTROL 新しいマッピングを追加]**」を選択します。
+
+   ![新しいマッピングの追加](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+
+1. **[!UICONTROL ソースフィールド]**&#x200B;エントリの右側にある矢印を選択します。
+
+   ![ソースフィールドの選択](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+
+1. **[!UICONTROL ソースフィールド]**&#x200B;を選択ページで、**[!UICONTROL 属性を選択]**&#x200B;または&#x200B;**[!UICONTROL ID名前空間を選択]**&#x200B;オプションを使用して、使用可能なソースフィールドの2つのカテゴリを切り替えます。 使用可能な[!DNL XDM]プロファイル属性とID名前空間から、宛先にマッピングするプロファイル属性を選択し、「****」を選択します。
+
+   ![ソースフィールドページを選択](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+
+1. 「**[!UICONTROL ターゲットフィールド]**」エントリの右側にあるボタンを選択します。
+
+   ![ターゲットフィールドの選択](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+
+1. **[!UICONTROL ターゲットフィールド]**&#x200B;を選択ページで、ソースフィールドのマッピング先のターゲットID名前空間を選択し、「**[!UICONTROL 選択]**」を選択します。
+
+   ![ターゲットフィールドページを選択](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+
+1. マッピングをさらに追加するには、手順1 ～ 5を繰り返します。
+
+### マッピングの例：[!DNL Facebook Custom Audience]でのオーディエンスデータのアクティブ化 {#example-facebook}
+
+以下に、[!DNL Facebook Custom Audience]でオーディエンスデータをアクティブ化する際の正しいIDマッピングの例を示します。
+
+ソースフィールドの選択：
+
+* 使用している電子メールアドレスがハッシュ化されていない場合は、`Email`名前空間をソースIDとして選択します。
+* [!DNL Facebook] [電子メールハッシュ要件](../catalog/social/facebook.md#email-hashing-requirements)に従って、[!DNL Platform]にデータを取り込む際に顧客の電子メールアドレスをハッシュ化した場合は、`Email_LC_SHA256`名前空間をソースIDとして選択します。
+* データがハッシュ化されていない電話番号で構成されている場合は、`PHONE_E.164`名前空間をソースIDとして選択します。 [!DNL Platform] は、要件に従って電話番号をハッシュ化 [!DNL Facebook] します。
+* [!DNL Facebook] [電話番号のハッシュ要件](../catalog/social/facebook.md#phone-number-hashing-requirements)に従って[!DNL Platform]にデータを取り込む際に電話番号をハッシュ化した場合は、`Phone_SHA256`名前空間をソースIDとして選択します。
+* データが[!DNL Apple]デバイスIDで構成されている場合は、`IDFA`名前空間をソースIDとして選択します。
+* データが[!DNL Android]デバイスIDで構成されている場合は、`GAID`名前空間をソースIDとして選択します。
+* データが他のタイプの識別子で構成されている場合は、`Custom`名前空間をソースIDとして選択します。
+
+ターゲットフィールドの選択：
+
+* ソース名前空間が`Email`または`Email_LC_SHA256`の場合、`Email_LC_SHA256`名前空間をターゲットIDとして選択します。
+* ソース名前空間が`PHONE_E.164`または`Phone_SHA256`の場合、`Phone_SHA256`名前空間をターゲットIDとして選択します。
+* ソース名前空間が`IDFA`または`GAID`の場合、`IDFA`または`GAID`の名前空間をターゲットIDとして選択します。
+* ソース名前空間がカスタムの場合は、`Extern_ID`名前空間をターゲットIDとして選択します。
+
+>[!IMPORTANT]
+>
+>ハッシュ化されていない名前空間のデータは、アクティブ化時に[!DNL Platform]によって自動的にハッシュ化されます。
+> 
+>属性ソースのデータは自動的にハッシュ化されません。 ソースフィールドにハッシュ化されていない属性が含まれている場合、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に[!DNL Platform]でデータを自動的にハッシュ化します。
+
+![IDマッピング](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+
+### マッピングの例：[!DNL Google Customer Match]でのオーディエンスデータのアクティブ化 {#example-gcm}
+
+これは、[!DNL Google Customer Match]でオーディエンスデータをアクティブ化する際の正しいIDマッピングの例です。
+
+ソースフィールドの選択：
+
+* 使用している電子メールアドレスがハッシュ化されていない場合は、`Email`名前空間をソースIDとして選択します。
+* [!DNL Google Customer Match] [電子メールハッシュ要件](../catalog/social/../advertising/google-customer-match.md)に従って、[!DNL Platform]にデータを取り込む際に顧客の電子メールアドレスをハッシュ化した場合は、`Email_LC_SHA256`名前空間をソースIDとして選択します。
+* データがハッシュ化されていない電話番号で構成されている場合は、`PHONE_E.164`名前空間をソースIDとして選択します。 [!DNL Platform] は、要件に従って電話番号をハッシュ化 [!DNL Google Customer Match] します。
+* [!DNL Facebook] [電話番号のハッシュ要件](../catalog/social/../advertising/google-customer-match.md)に従って[!DNL Platform]にデータを取り込む際に電話番号をハッシュ化した場合は、`Phone_SHA256_E.164`名前空間をソースIDとして選択します。
+* データが[!DNL Apple]デバイスIDで構成されている場合は、`IDFA`名前空間をソースIDとして選択します。
+* データが[!DNL Android]デバイスIDで構成されている場合は、`GAID`名前空間をソースIDとして選択します。
+* データが他のタイプの識別子で構成されている場合は、`Custom`名前空間をソースIDとして選択します。
+
+ターゲットフィールドの選択：
+
+* ソース名前空間が`Email`または`Email_LC_SHA256`の場合、`Email_LC_SHA256`名前空間をターゲットIDとして選択します。
+* ソース名前空間が`PHONE_E.164`または`Phone_SHA256_E.164`の場合、`Phone_SHA256_E.164`名前空間をターゲットIDとして選択します。
+* ソース名前空間が`IDFA`または`GAID`の場合、`IDFA`または`GAID`の名前空間をターゲットIDとして選択します。
+* ソース名前空間がカスタムの場合は、`User_ID`名前空間をターゲットIDとして選択します。
+
+![IDマッピング](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+
+ハッシュ化されていない名前空間のデータは、アクティブ化時に[!DNL Platform]によって自動的にハッシュ化されます。
+
+属性ソースのデータは自動的にハッシュ化されません。 ソースフィールドにハッシュ化されていない属性が含まれている場合、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に[!DNL Platform]でデータを自動的にハッシュ化します。
+
+![IDマッピング変換](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
+## スケジュールセグメントの書き出し {#scheduling}
+
+1. **[!UICONTROL セグメントスケジュール]**&#x200B;ページで、各セグメントを選択し、**[!UICONTROL 開始日]**&#x200B;および&#x200B;**[!UICONTROL 終了日]**&#x200B;セレクターを使用して、宛先にデータを送信する時間間隔を設定します。
+
+   ![セグメントスケジュール](../assets/ui/activate-segment-streaming-destinations/segment-schedule.png)
+
+   * 一部の宛先では、カレンダーセレクターの下にあるドロップダウンメニューを使用して、各セグメントの&#x200B;**[!UICONTROL オーディエンスの接触チャネル]**&#x200B;を選択する必要があります。 宛先にこのセレクターが含まれていない場合は、この手順をスキップします。
+
+      ![マッピング ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+
+   * 一部の宛先では、[!DNL Platform]セグメントをターゲットの宛先の対応するセグメントに手動でマッピングする必要があります。 それには、各セグメントを選択し、宛先プラットフォームから対応するセグメントIDを「**[!UICONTROL マッピングID]**」フィールドに入力します。 宛先にこのフィールドが含まれていない場合は、この手順をスキップします。
+
+      ![マッピング ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+
+   * 一部の宛先では、[!DNL IDFA]または[!DNL GAID]セグメントをアクティブ化する際に、**[!UICONTROL アプリID]**&#x200B;を入力する必要があります。 宛先にこのフィールドが含まれていない場合は、この手順をスキップします。
+
+      ![アプリ ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+
+1. **[!UICONTROL 次へ]**&#x200B;を選択して、[!UICONTROL レビュー]ページに移動します。
+
+## レビュー {#review}
+
+「**[!UICONTROL 確認]**」ページには、選択の概要が表示されます。「**[!UICONTROL キャンセル]**」を選択してフローを分割するか、「**[!UICONTROL 戻る]**」を選択して設定を変更する、または、「**[!UICONTROL 完了]**」を選択して確定し、宛先へのデータの送信を開始します。
+
+>[!IMPORTANT]
+>
+>この手順では、Adobe Experience Platformはデータ使用ポリシーの違反を確認します。 次に、ポリシーに違反する例を示します。 違反を解決するまで、セグメントのアクティベーションワークフローを完了することはできません。 ポリシー違反の解決方法について詳しくは、データガバナンスのドキュメントの節の「[ポリシーの適用](../../rtcdp/privacy/data-governance-overview.md#enforcement)」を参照してください。
+
+![データポリシー違反](../assets/common/data-policy-violation.png)
+
+ポリシー違反が検出されなかった場合は、「**[!UICONTROL 完了]**」を選択して選択内容を確認し、宛先へのデータの送信を開始します。
+
+![レビュー](../assets/ui/activate-segment-streaming-destinations/review.png)
+
+## セグメントのアクティベーションの検証 {#verify}
+
+宛先アカウントを確認します。 アクティブ化に成功した場合、オーディエンスは宛先プラットフォームに入力されます。
+
+<!-- 
+For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
+
+>[!TIP]
+>
+>The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications are sent to [!DNL Facebook] when you activate the segments to the destination.
+-->
