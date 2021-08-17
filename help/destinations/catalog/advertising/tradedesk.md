@@ -3,9 +3,9 @@ keywords: 広告；交易所広告業務机
 title: トレードデスクの接続
 description: トレードデスクは、広告購入者がディスプレイ、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングを実行し、対象を絞ったデジタルキャンペーンをオーディエンスするためのセルフサービスプラットフォームです。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 2%
 
 ---
@@ -63,9 +63,9 @@ ht-degree: 2%
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
-[セグメントスケジュール](../../ui/activate-destinations.md#segment-schedule)の手順で、宛先プラットフォームの対応するIDまたはわかりやすい名前にセグメントを手動でマッピングする必要があります。
+[セグメントスケジュール](../../ui/activate-segment-streaming-destinations.md#scheduling)の手順で、宛先プラットフォームの対応するIDまたはわかりやすい名前にセグメントを手動でマッピングする必要があります。
 
 セグメントをマッピングする場合は、使いやすくするために、Platformセグメント名または短い形式を使用することをお勧めします。 ただし、宛先のセグメントIDまたは名前が、PlatformアカウントのセグメントIDまたは名前と一致する必要はありません。 マッピングフィールドに挿入した値は、宛先に反映されます。
 
