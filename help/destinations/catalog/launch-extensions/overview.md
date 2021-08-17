@@ -3,9 +3,9 @@ keywords: タグ拡張機能；タグ拡張；Launchの宛先；platform tag ext
 title: Adobe Experience Platformのタグ拡張
 description: Adobe Experience Platformは、次世代のタグ管理機能をAdobeから提供します。 Platformは、顧客体験の実現に必要なすべての分析、マーケティングおよび広告のタグをデプロイおよび管理するためのシンプルな手段を提供します。
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '508'
 ht-degree: 35%
 
 ---
@@ -16,7 +16,7 @@ Adobe Experience Platformは、次世代のタグ管理機能をAdobeから提�
 
 タグの概要については、以下のリソースを参照してください。
 
-- [タグの概要](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=ja)
+- [タグの概要](../../../tags/home.md)
 - [クイックスタートガイド](../../../tags/quick-start/quick-start.md)
 
 ## Platformインターフェイスでタグ拡張を見つける方法 {#how-to-find-extensions-in-interface}
