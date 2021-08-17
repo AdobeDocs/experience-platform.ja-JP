@@ -3,9 +3,9 @@ keywords: facebook接続；facebook接続；facebookの宛先；facebook;instagr
 title: Facebook接続
 description: ハッシュ化された電子メールに基づいて、オーディエンスのターゲティング、パーソナライゼーションおよび抑制のためのFacebookキャンペーンのプロファイルをアクティブ化します。
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1259'
 ht-degree: 15%
 
 ---
@@ -130,7 +130,7 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 **[!UICONTROL セグメントスケジュール]**&#x200B;の手順で、[!DNL Facebook Custom Audiences]にセグメントを送信する際に、[!UICONTROL オーディエンスの接触チャネル]を指定する必要があります。
 
