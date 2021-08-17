@@ -1,67 +1,59 @@
 ---
-keywords: 広告；業者の机広告業務机
+keywords: 広告；交易所広告業務机
 title: トレードデスクの接続
-description: トレードデスクは、ディスプレイ、ビデオ、モバイル在庫のソースを対象としたデジタルキャンペーンのリターゲティングとオーディエンスを、広告購入者が実行するセルフサービスプラットフォームです。
+description: トレードデスクは、広告購入者がディスプレイ、ビデオ、モバイルの在庫ソースをまたいで、再ターゲティングを実行し、対象を絞ったデジタルキャンペーンをオーディエンスするためのセルフサービスプラットフォームです。
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 5%
+source-wordcount: '482'
+ht-degree: 2%
 
 ---
 
-# [!DNL The Trade Desk] connection
+# [!DNL The Trade Desk] 接続
 
 ## 概要 {#overview}
 
-[!DNL The Trade Desk] destinationは、プロファイルデータの送信先にな [!DNL The Trade Desk]ります。
+[!DNL The Trade Desk] の宛先は、プロファイルデータをに送信する際に役立ち [!DNL The Trade Desk]ます。
 
-[!DNL The Trade Desk] は、ディスプレイ、ビデオ、モバイル在庫ソースにわたって、デジタルキャンペーンをターゲットにした再ターゲット化やオーディエンスを広告購入者が実行するためのセルフサービスプラットフォームです。
+[!DNL The Trade Desk] は、広告購入者がディスプレイ、ビデオ、モバイルの在庫ソースをまたいで、リターゲティングとオーディエンスをターゲット化したデジタルキャンペーンを実行するためのセルフサービスプラットフォームです。
 
 プロファイルデータを[!DNL Trade Desk]に送信するには、まず宛先に接続する必要があります。
 
-## 使用例 {#use-cases}
+## ユースケース {#use-cases}
 
-マーケティング担当者として、[!DNL Trade Desk IDs]やデバイスIDから構築されたセグメントを使用して、デジタルキャンペーンをターゲットにした再ターゲット化やオーディエンスを作成できるようにしたいと思います。
+マーケターは、[!DNL Trade Desk IDs]やデバイスIDで構築されたセグメントを使用して、再ターゲティングやオーディエンスターゲット化されたデジタルキャンペーンを作成できます。
 
-## サポートされるID{#supported-identities}
+## サポートされるID {#supported-identities}
 
-[!DNL The Trade Desk] は、次の表に示すIDのアクティベーションをサポートしています。[ID](/help/identity-service/namespaces.md)の詳細を表示します。
+[!DNL The Trade Desk] では、以下の表で説明するIDのアクティブ化をサポートしています。[ID](/help/identity-service/namespaces.md)の詳細を説明します。
 
 | ターゲットID | 説明 |
 |---|---|
 | GAID | [!DNL Google Advertising ID] |
 | IDFA | [!DNL Apple ID for Advertisers] |
-| トレードデスクID | Advertiser ID in the Trade Desk platform |
+| トレードデスクID | トレードデスクプラットフォームの広告主ID |
 
-## エクスポートタイプ{#export-type}
+## 書き出しタイプ {#export-type}
 
-**[!DNL Segment export]**  — セグメント(オーディエンス)のすべてのメンバーをエクスポート先にエクスポートします。
+**[!DNL Segment export]** ：セグメント（オーディエンス）のすべてのメンバーを宛先に書き出します。
 
 ## 前提条件 {#prerequisites}
 
-[!DNL The Trade Desk]で最初の宛先を作成したい場合で、以前(Adobe Audience Managerや他のアプリケーションで)Experience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングかカスタマーケアにご連絡ください。 以前にAudience Managerで[!DNL The Trade Desk]統合を設定していた場合、設定したID同期はPlatformに持ち越します。
+[!DNL The Trade Desk]で最初の宛先を作成したい場合で、(Adobe Audience Managerや他のアプリケーションで)以前にExperience CloudIDサービスで[ID同期機能](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html)を有効にしていない場合は、Adobeコンサルティングまたはカスタマーケアに連絡してID同期を有効にしてください。 以前にAudience Managerで[!DNL The Trade Desk]統合を設定していた場合、設定したID同期はPlatformに引き継がれます。
 
-## 宛先に接続 {#connect-destination}
+## 宛先に接続 {#connect}
 
-**[!UICONTROL 接続]**/**[!UICONTROL 宛先]**&#x200B;で、[!DNL The Trade Desk]を選択し、**[!UICONTROL 設定]**&#x200B;を選択します。
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
 
-![トレードデスクの宛先の設定](../../assets/catalog/advertising/tradedesk/configure.png)
+### 接続パラメーター {#parameters}
 
-この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 「**[!UICONTROL アクティブ化]**」と「**[!UICONTROL 設定]**」の違いについて詳しくは、保存先のワークスペースドキュメントの「[カタログ](../../ui/destinations-workspace.md#catalog)」の節を参照してください。
+[この宛先を設定](../../ui/connect-destination.md)する際に、次の情報を指定する必要があります。
 
-![トレードデスクの宛先を有効にする](../../assets/catalog/advertising/tradedesk/activate.png)
-
-## 認証手順{#authentication}
-
-**[!UICONTROL 認証]**&#x200B;手順で、[!DNL The Trade Desk]接続の詳細を入力する必要があります。
-
-* **[!UICONTROL 名前]**:この宛先が将来認識される名前。
-* **[!UICONTROL 説明]**:この宛先を将来特定するのに役立つ説明です。
-* **[!UICONTROL アカウントID]**:アカウント [!DNL Trade Desk] [!UICONTROL ID]。
-* **[!UICONTROL サーバーの場所]**:どの地域サーバーを使用する [!DNL Trade Desk] かを担当者に問い合わせてください。以下は、選択可能な地域サーバーです。
-
+* **[!UICONTROL 名前]**:将来この宛先を認識するための名前。
+* **[!UICONTROL 説明]**:今後この宛先を識別するのに役立つ説明。
+* **[!UICONTROL アカウントID]**:アカウ [!DNL Trade Desk] [!UICONTROL ントID]。
+* **[!UICONTROL サーバーの場所]**:使用する地域 [!DNL Trade Desk] サーバーを担当者に問い合わせてください。次の中から選択できる地域サーバーを選択します。
    * **[!UICONTROL ヨーロッパ]**
    * **[!UICONTROL シンガポール]**
    * **[!UICONTROL 東京]**
@@ -69,24 +61,18 @@ ht-degree: 5%
    * **[!UICONTROL 北米西部]**
    * **[!UICONTROL ラテンアメリカ]**
 
-* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、データをエクスポート先にエクスポートする意図を示します。Adobe定義のマーケティングアクションから選択するか、独自のマーケティングアクションを作成することができます。 マーケティング活動の詳細については、「[Adobe Experience Platform](../../../data-governance/policies/overview.md)のデータガバナンス」ページを参照してください。 Adobe定義の個々のマーケティングアクションについて詳しくは、[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)を参照してください。
+## この宛先へのセグメントのアクティブ化 {#activate}
 
-![トレードデスクの認証手順](../../assets/catalog/advertising/tradedesk/authenticate.png)
+宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
-「**[!UICONTROL 宛先を作成]**」をクリックします。 これで宛先が作成されました。後でセグメントをアクティブにする場合は、「[!UICONTROL 保存して終了]」をクリックできます。または、「[!UICONTROL 次へ]」を選択してワークフローを続行し、アクティブにするセグメントを選択できます。 どちらの場合も、残りのワークフローについては、次の「[セグメントをアクティブにする](#activate-segments)」の節を参照してください。
+[セグメントスケジュール](../../ui/activate-destinations.md#segment-schedule)の手順で、宛先プラットフォームの対応するIDまたはわかりやすい名前にセグメントを手動でマッピングする必要があります。
 
-## セグメントのアクティブ化 {#activate-segments}
+セグメントをマッピングする場合は、使いやすくするために、Platformセグメント名または短い形式を使用することをお勧めします。 ただし、宛先のセグメントIDまたは名前が、PlatformアカウントのセグメントIDまたは名前と一致する必要はありません。 マッピングフィールドに挿入した値は、宛先に反映されます。
 
-セグメントのアクティベーションワークフローについて詳しくは、「[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md#select-attributes)」を参照してください。
+複数のデバイスマッピング(cookie ID、[!DNL IDFA]、[!DNL GAID])を使用する場合は、3つのマッピングすべてで同じマッピング値を使用するようにしてください。 [!DNL The Trade Desk] は、すべてを1つのセグメントに集計し、デバイスレベルの分類をおこないます。
 
-[セグメントスケジュール](../../ui/activate-destinations.md#segment-schedule)の手順では、セグメントを宛先の対応するIDまたはフレンドリ名に手動でマップする必要があります。
+![Segment Mapping ID](../../assets/common/segment-mapping-id.png)
 
-セグメントをマッピングする際は、使いやすいように、[!DNL Platform]セグメント名を使用するか、それより短い形式を使用することをお勧めします。 ただし、宛先のセグメントIDまたは名前が[!DNL Platform]アカウントのセグメントIDまたは名前と一致している必要はありません。 マッピングフィールドに挿入した値は、すべて宛先に反映されます。
+## エクスポートされたデータ {#exported-data}
 
-複数のデバイスマッピング(cookie ID、[!DNL IDFA]、[!DNL GAID])を使用する場合は、3つのマッピングすべてに同じマッピング値を使用するようにします。 [!DNL The Trade Desk] は、すべてのセグメントを1つのセグメントに集計し、デバイスレベルの分類を表示します。
-
-![セグメントマッピングID](../../assets/common/segment-mapping-id.png)
-
-## エクスポートされたデータ{#exported-data}
-
-データが[!DNL The Trade Desk]宛先に正常にエクスポートされたかどうかを確認するには、[!DNL Trade Desk]アカウントを確認してください。 アクティベーションに成功すると、オーディエンスがアカウントに入力されます。
+データが[!DNL The Trade Desk]の宛先に正常に書き出されたかどうかを確認するには、[!DNL Trade Desk]アカウントを確認します。 アクティブ化に成功した場合、オーディエンスがアカウントに入力されます。
