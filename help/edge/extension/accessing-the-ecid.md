@@ -1,10 +1,10 @@
 ---
 title: 'ECID へのアクセス '
 description: Adobe Experience Platform Web SDK拡張機能（タグ内のECIDを活用）
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: befe1efa884706165b8d65803d06f6370a8a60f2
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 9%
+source-wordcount: '124'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 タグ内のECIDにアクセスするには、Adobeで次の操作をお勧めします。
 
-1. プロパティで、[ルールコンポーネントのシーケンス](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing)が有効になっていることを確認します。
+1. プロパティで、[ルールコンポーネントのシーケンス](../../tags/ui/managing-resources/rules.md#sequencing)が有効になっていることを確認します。
 1. 新しいルールを作成します。
 1. [!UICONTROL Library Loaded]イベントをルールに追加します。
 1. 次のコードを使用して、[!UICONTROL Custom Condition]アクションをルールに追加します（SDKインスタンスに設定した名前は`alloy`とします）。
