@@ -3,10 +3,10 @@ keywords: Google広告；google広告；google adwords;Google AdWords;Google Adw
 title: Google広告接続
 description: Google 広告（旧称 Google AdWords）は、テキストベースの検索、グラフィック表示、YouTube ビデオ、アプリ内モバイルディスプレイをまたいで、企業がクリック課金広告を利用できるオンライン広告サービスです。
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: ca388912d6634f72cab15a6bfb3e9f92264e52db
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 17%
+source-wordcount: '637'
+ht-degree: 18%
 
 ---
 
@@ -66,29 +66,22 @@ Platformで[!DNL Google Ads]の宛先を作成する前に、[!DNL Google]に連
 * アカウントのタイプ：**AdWords**
 * **Google AdWords ID**:これは、を使用したIDで [!DNL Google]す。通常、ID の形式は 123-456-7890 です。
 
-## 宛先の設定
+## 宛先に接続 {#connect}
 
-**[!UICONTROL 接続]** > **[!UICONTROL 宛先]**&#x200B;で、「[!DNL Google Ads]」を選択し、「**[!UICONTROL 設定]**」を選択します。
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
 
-![Google 広告の宛先への接続](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+### 接続パラメーター {#parameters}
 
->[!NOTE]
->
->この宛先との接続が既に存在する場合は、宛先カードに「**[!UICONTROL アクティブ化]**」ボタンが表示されます。 **[!UICONTROL アクティブ化]**&#x200B;と&#x200B;**[!UICONTROL 設定]**&#x200B;の違いについて詳しくは、宛先ワークスペースのドキュメントの[カタログ](../../ui/destinations-workspace.md#catalog)の節を参照してください。
-
-宛先の作成ワークフローの&#x200B;**設定**&#x200B;手順で、宛先の[!UICONTROL 基本情報]を入力します。
-
-![Google 広告の基本情報](../../assets/catalog/advertising/google-ads-destination/setup.png)
+[この宛先を設定](../../ui/connect-destination.md)する際に、次の情報を指定する必要があります。
 
 * **[!UICONTROL 名前]**：この宛先の名前を入力します。
 * **[!UICONTROL 説明]**：オプション。例えば、この宛先を使用しているキャンペーンを指定できます。
 * **[!UICONTROL アカウントのタイプ]**：AdWords は利用可能な唯一のオプションです。
 * **[!UICONTROL アカウントID]**:アカウントIDにを入力しま [!DNL Google Ads]す。通常、ID の形式は 123-456-7890 です。
-* **[!UICONTROL マーケティングアクション]**:マーケティングアクションは、宛先にデータを書き出す目的を示します。Adobe定義のマーケティングアクションから選択することも、独自のマーケティングアクションを作成することもできます。 マーケティングアクションについて詳しくは、「[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)」を参照してください。
 
-## [!DNL Google Ads]に対してセグメントをアクティブ化
+## この宛先へのセグメントのアクティブ化 {#activate}
 
-[!DNL Google Ads]に対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
+宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
 ## エクスポートされたデータ
 
