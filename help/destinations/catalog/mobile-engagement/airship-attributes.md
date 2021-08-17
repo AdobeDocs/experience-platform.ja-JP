@@ -3,9 +3,9 @@ keywords: 飛行船の属性；飛行船の宛先
 title: 飛行船属性の接続
 description: Airship内でターゲティングをおこなうために、Adobeのオーディエンスデータをオーディエンス属性としてAirshipにシームレスに渡します。
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '726'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ Adobe Experience Platformの属性を活用して、[!DNL Airship]プロファ�
 
 ## 宛先に接続 {#connect}
 
-この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ### 接続パラメーター {#parameters}
 
@@ -82,7 +82,7 @@ Adobe Experience Platformの属性を活用して、[!DNL Airship]プロファ�
 
 ## この宛先へのセグメントのアクティブ化 {#activate}
 
-宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
+この宛先に対してオーディエンスセグメントをアクティブ化する手順については、[ストリーミングセグメントの書き出し先へのオーディエンスデータのアクティブ化](../../ui/activate-segment-streaming-destinations.md)を参照してください。
 
 ## マッピングに関する考慮事項 {#mapping-considerations}
 
