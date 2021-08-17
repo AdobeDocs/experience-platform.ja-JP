@@ -1,23 +1,26 @@
 ---
-keywords: 調査先；調査；予測；瞬間；Web切片調査;Qualtrics
+keywords: 調査の宛先；調査；予測；瞬間；Web切片調査；Qualtrics
 title: 調査先の概要
-description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックを捕捉し、Adobe Experience Platformとデータを共有します。
-translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+description: 調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックをキャプチャし、Adobe Experience Platformとデータを共有します。
+exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 35%
+source-wordcount: '95'
+ht-degree: 34%
 
 ---
 
-
 # 調査先の概要 {#survey-destinations}
 
-調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックを捕捉し、Adobe Experience Platformとデータを共有します。
+## 概要 {#overview}
 
-現在、プラットフォームは、以下に示す調査先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+調査プラットフォームは、調査イベントを検出し、データ要素を通じてリアルタイムで顧客のフィードバックをキャプチャし、Adobe Experience Platformとデータを共有します。
 
-- [Forese 拡張機能](./foresee.md)
-- [InMoment 拡張機能](./inmoment.md)
-- [Qualtrics Web サイトフィードバック拡張機能](./qualtrics.md)
-- [Web Intercept Surveys - QuestionPro 拡張機能](./web-intercept-surveys.md)
+## サポートされる調査先 {#supported-destinations}
+
+現在、Platformは、以下に示す調査先をサポートしています。 これらの宛先への接続方法について詳しくは、個々のリンクを参照してください。
+
+* [Forese 拡張機能](./foresee.md)
+* [InMoment 拡張機能](./inmoment.md)
+* [Qualtrics Website Feedback 拡張機能](./qualtrics.md)
+* [Web Intercept Surveys - QuestionPro 拡張機能](./web-intercept-surveys.md)
