@@ -3,10 +3,10 @@ keywords: googleカスタマーマッチ；Googleカスタマーマッチ；Goog
 title: Googleカスタマーマッチ接続
 description: Googleカスタマーマッチを使用すると、オンラインデータとオフラインデータを使用して、Googleが所有し、運用するSearch、Shopping、Gmail、YouTubeなどのプロパティをまたいで顧客にリーチし、再び関与させることができます。
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 4%
+source-wordcount: '1250'
+ht-degree: 1%
 
 ---
 
@@ -106,54 +106,32 @@ Experience PlatformでのEメールアドレスの取り込みについて詳し
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
-## 宛先の設定 — ビデオチュートリアル {#video}
+<!-- ## Configure destination - video walkthrough {#video}
 
-次のビデオでは、ソーシャルの宛先を設定し、セグメントをアクティブ化する手順を示します。 このビデオではLinkedInを例として使用していますが、手順は[!DNL Google Customer Match]を含むソーシャルの宛先間で似ています。 ビデオの手順も、次の節で順番にレイアウトします。
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
-## 宛先に接続 {#connect-destination}
+## 宛先に接続 {#connect}
 
-**[!UICONTROL 宛先]** > **[!UICONTROL カタログ]**&#x200B;で、**[!UICONTROL 広告]**&#x200B;カテゴリまでスクロールします。 「[!DNL Google Customer Match]」を選択し、「**[!UICONTROL 設定]**」を選択します。
+この宛先に接続するには、[宛先の設定に関するチュートリアル](../../ui/connect-destination.md)で説明されている手順に従います。
 
-![Googleカスタマーマッチの宛先への接続](../../assets/catalog/advertising/google-customer-match/connect.png)
+### 接続パラメーター {#parameters}
 
->[!NOTE]
->
->この宛先との接続が存在する場合は、宛先カードに「**[!UICONTROL Activate]**」ボタンが表示されます。 **[!UICONTROL アクティブ化]**&#x200B;と&#x200B;**[!UICONTROL 設定]**&#x200B;の違いについて詳しくは、宛先ワークスペースのドキュメントの[カタログ](../../ui/destinations-workspace.md#catalog)の節を参照してください。
+[この宛先を設定](../../ui/connect-destination.md)する際に、次の情報を指定する必要があります。
 
-**アカウント**&#x200B;手順で、[!DNL Google Customer Match]宛先への接続を既に設定している場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。 または、「**[!UICONTROL 新しいアカウント]**」を選択して、[!DNL Google Customer Match]への新しい接続を設定できます。 ログインしてAdobe Experience Cloudを[!DNL Google Ad]アカウントに接続するには、「**[!UICONTROL 宛先に接続]**」を選択します。
-
->[!NOTE]
->
->Experience Platformは、認証プロセスでの資格情報の検証をサポートします。 [!DNL Google Ad]アカウントに間違った資格情報を入力すると、誤った資格情報でワークフローを完了しないように、エラーメッセージが表示されます。
-
-![Googleカスタマーマッチの宛先への接続 — 認証手順](../../assets/catalog/advertising/google-customer-match/connection.png)
-
-資格情報が確認され、Adobe Experience CloudがGoogleアカウントに接続されたら、「**[!UICONTROL 次へ]**」を選択して&#x200B;**[!UICONTROL 認証]**&#x200B;手順に進むことができます。
-
-![資格情報の確認](../../assets/catalog/advertising/google-customer-match/connection-success.png)
-
-**[!UICONTROL 認証]**&#x200B;手順で、**[!UICONTROL 名前]**&#x200B;と&#x200B;**[!UICONTROL 説明]**&#x200B;をアクティベートフローに入力し、Googleの&#x200B;**[!UICONTROL アカウントID]**&#x200B;に入力します。
-
-この手順では、この宛先に適用する任意の&#x200B;**[!UICONTROL マーケティングアクション]**&#x200B;を選択することもできます。 マーケティングアクションは、宛先にデータを書き出す目的を示します。 Adobe定義のマーケティングアクションから選択することも、独自のマーケティングアクションを作成することもできます。 マーケティングアクションについて詳しくは、「[データ使用ポリシーの概要](../../../data-governance/policies/overview.md)」を参照してください。
-
-上記のフィールドに入力した後、「**[!UICONTROL 宛先を作成]**」を選択します。
+* **[!UICONTROL 名前]**:この宛先接続の名前を指定する
+* **[!UICONTROL 説明]**:この宛先接続の説明を入力します
+* **[!UICONTROL アカウントID]**:Google顧客クライアントID。IDの形式はxxx-xxx-xxxxです。
 
 >[!IMPORTANT]
 >
 > * **[!UICONTROL 「PIIと結合]**」マーケティングアクションは、デフォルトで[!DNL Google Customer Match]の宛先に対して選択され、削除できません。
-> * [!DNL Google Customer Match]の宛先の場合。 **[!UICONTROL アカウ]** ントIDは、Googleの顧客クライアントIDです。IDの形式はxxx-xxx-xxxxです。
 
 
-![Googleカスタマーマッチの接続 — 認証手順](../../assets/catalog/advertising/google-customer-match/authentication.png)
+## この宛先へのセグメントのアクティブ化 {#activate}
 
-これで宛先が作成されました。後でセグメントをアクティブにする場合は、「**[!UICONTROL 保存して終了]**」を選択します。また、「**[!UICONTROL 次へ]**」を選択してワークフローを続行し、アクティブ化するセグメントを選択することもできます。どちらの場合も、残りのワークフローについては、次の「[ [!DNL Google Customer Match]](#activate-segments)に対してセグメントをアクティブ化する」の節を参照してください。
-
-## [!DNL Google Customer Match]に対してセグメントをアクティブ化 {#activate-segments}
-
-[!DNL Google Customer Match]に対してセグメントをアクティブ化する方法については、「[宛先へのデータのアクティブ化](../../ui/activate-destinations.md)」を参照してください。
-
+宛先に対するオーディエンスセグメントをアクティブ化する手順については、[宛先へのプロファイルとセグメントのアクティブ化](../../ui/activate-destinations.md)を参照してください。
 
 **[!UICONTROL セグメントスケジュール]**&#x200B;の手順で、[!DNL IDFA]または[!DNL GAID]セグメントを[!DNL Google Customer Match]に送信する際に、[!UICONTROL アプリID]を指定する必要があります。
 
