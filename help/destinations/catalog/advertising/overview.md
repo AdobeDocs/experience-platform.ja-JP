@@ -5,7 +5,7 @@ seo-title: 広告の宛先の概要
 description: Adobe Experience Platformをサードパーティの広告プラットフォーム(DSP、広告ネットワーク、SSPなど)に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 seo-description: Adobe Experience Platformをサードパーティの広告プラットフォーム(DSP、広告ネットワーク、SSPなど)に接続し、偽名のオーディエンスをこれらのプラットフォームと共有します。
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 35%
@@ -48,7 +48,7 @@ Adobe Experience Platformを、需要側プラットフォーム(DSP)、サプ�
 * [Google 広告拡張機能](google-ads-extension.md)
 * [Google gtag 拡張](gtag-advertising.md)
 * [LinkedIn Insight タグ拡張機能](linkedin.md)
-* [Pinterest Conversion Tracking 拡張機能](pinterest.md)
+* [Pinterest Conversion Tracking 拡張機能](pinterest-extension.md)
 * [Twitter ユニバーサルウェブサイトタグ拡張](twitter-uwt.md)
 
 ## 新しい広告の宛先への接続 {#connect-destination}
