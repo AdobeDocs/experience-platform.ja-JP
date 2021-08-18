@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: プロファイルの一括書き出し先へのオーディエンスデータのアクティブ化
 description: プロファイルベースの宛先をバッチ送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: プロファイルベースの宛先をバッチ送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2008'
 ht-degree: 7%
 
 ---
@@ -270,7 +270,7 @@ ht-degree: 7%
 }
 ```
 
-### 重複排除の使用例1:重複排除なし
+### 重複排除の使用例1:重複排除なし {#deduplication-use-case-1}
 
 重複排除を使用しない場合、エクスポートファイルには次のエントリが含まれます。
 
@@ -280,7 +280,7 @@ ht-degree: 7%
 | johndoe@example.com | John | D |
 
 
-### 重複排除の使用例2:id名前空間に基づく重複排除
+### 重複排除の使用例2:id名前空間に基づく重複排除 {#deduplication-use-case-2}
 
 [!DNL Email]名前空間による重複排除を想定すると、書き出しファイルには次のエントリが含まれます。 プロファイルBはセグメントに適合する最新のものなので、書き出されるのはプロファイルBのみです。
 
@@ -289,7 +289,7 @@ ht-degree: 7%
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
 
-### 重複排除の使用例3:単一のプロファイル属性に基づく重複排除
+### 重複排除の使用例3:単一のプロファイル属性に基づく重複排除 {#deduplication-use-case-3}
 
 `personal Email`属性による重複排除を想定すると、書き出しファイルには次のエントリが含まれます。 プロファイルBはセグメントに適合する最新のものなので、書き出されるのはプロファイルBのみです。
 
@@ -298,7 +298,7 @@ ht-degree: 7%
 | johndoe@example.com | John | D |
 
 
-### 重複排除の使用例4:2つのプロファイル属性に基づく重複排除（複合重複排除キー）
+### 重複排除の使用例4:2つのプロファイル属性に基づく重複排除 {#deduplication-use-case-4}
 
 複合キー`personalEmail + lastName`による重複排除を想定すると、エクスポートファイルには次のエントリが含まれます。
 
