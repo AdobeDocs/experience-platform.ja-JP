@@ -4,7 +4,7 @@ user-guide-title: 宛先ガイド
 user-guide-description: チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告など、様々な用途に使用する既知または不明なデータをアクティブ化します。
 description: このドキュメントでは、Adobe Experience Platformの宛先の目次を示します
 feature: 宛先
-source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 58%
@@ -57,7 +57,7 @@ ht-degree: 58%
       * [Google gtag 拡張](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight タグ拡張機能](./catalog/advertising/linkedin.md)
       * [Microsoft Bing接続](./catalog/advertising/bing.md)
-      * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest.md)
+      * [Pinterest Conversion Tracking 拡張機能](./catalog/advertising/pinterest-extension.md)
       * [トレードデスクの接続](./catalog/advertising/tradedesk.md)
       * [Twitter ユニバーサルウェブサイトタグ拡張](./catalog/advertising/twitter-uwt.md)
    * Analytics の宛先 {#analytics}
