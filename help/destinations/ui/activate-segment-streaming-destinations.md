@@ -5,10 +5,10 @@ type: Tutorial
 seo-title: ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化
 description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
-source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
+source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
 workflow-type: tm+mt
-source-wordcount: '1165'
-ht-degree: 4%
+source-wordcount: '684'
+ht-degree: 6%
 
 ---
 
@@ -76,63 +76,9 @@ ht-degree: 4%
 
 1. マッピングをさらに追加するには、手順1 ～ 5を繰り返します。
 
-### マッピングの例：[!DNL Facebook Custom Audience]でのオーディエンスデータのアクティブ化 {#example-facebook}
 
-以下に、[!DNL Facebook Custom Audience]でオーディエンスデータをアクティブ化する際の正しいIDマッピングの例を示します。
 
-ソースフィールドの選択：
 
-* 使用している電子メールアドレスがハッシュ化されていない場合は、`Email`名前空間をソースIDとして選択します。
-* [!DNL Facebook] [電子メールハッシュ要件](../catalog/social/facebook.md#email-hashing-requirements)に従って、[!DNL Platform]にデータを取り込む際に顧客の電子メールアドレスをハッシュ化した場合は、`Email_LC_SHA256`名前空間をソースIDとして選択します。
-* データがハッシュ化されていない電話番号で構成されている場合は、`PHONE_E.164`名前空間をソースIDとして選択します。 [!DNL Platform] は、要件に従って電話番号をハッシュ化 [!DNL Facebook] します。
-* [!DNL Facebook] [電話番号のハッシュ要件](../catalog/social/facebook.md#phone-number-hashing-requirements)に従って[!DNL Platform]にデータを取り込む際に電話番号をハッシュ化した場合は、`Phone_SHA256`名前空間をソースIDとして選択します。
-* データが[!DNL Apple]デバイスIDで構成されている場合は、`IDFA`名前空間をソースIDとして選択します。
-* データが[!DNL Android]デバイスIDで構成されている場合は、`GAID`名前空間をソースIDとして選択します。
-* データが他のタイプの識別子で構成されている場合は、`Custom`名前空間をソースIDとして選択します。
-
-ターゲットフィールドの選択：
-
-* ソース名前空間が`Email`または`Email_LC_SHA256`の場合、`Email_LC_SHA256`名前空間をターゲットIDとして選択します。
-* ソース名前空間が`PHONE_E.164`または`Phone_SHA256`の場合、`Phone_SHA256`名前空間をターゲットIDとして選択します。
-* ソース名前空間が`IDFA`または`GAID`の場合、`IDFA`または`GAID`の名前空間をターゲットIDとして選択します。
-* ソース名前空間がカスタムの場合は、`Extern_ID`名前空間をターゲットIDとして選択します。
-
->[!IMPORTANT]
->
->ハッシュ化されていない名前空間のデータは、アクティブ化時に[!DNL Platform]によって自動的にハッシュ化されます。
-> 
->属性ソースのデータは自動的にハッシュ化されません。 ソースフィールドにハッシュ化されていない属性が含まれている場合、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に[!DNL Platform]でデータを自動的にハッシュ化します。
-
-![IDマッピング](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
-### マッピングの例：[!DNL Google Customer Match]でのオーディエンスデータのアクティブ化 {#example-gcm}
-
-これは、[!DNL Google Customer Match]でオーディエンスデータをアクティブ化する際の正しいIDマッピングの例です。
-
-ソースフィールドの選択：
-
-* 使用している電子メールアドレスがハッシュ化されていない場合は、`Email`名前空間をソースIDとして選択します。
-* [!DNL Google Customer Match] [電子メールハッシュ要件](../catalog/social/../advertising/google-customer-match.md)に従って、[!DNL Platform]にデータを取り込む際に顧客の電子メールアドレスをハッシュ化した場合は、`Email_LC_SHA256`名前空間をソースIDとして選択します。
-* データがハッシュ化されていない電話番号で構成されている場合は、`PHONE_E.164`名前空間をソースIDとして選択します。 [!DNL Platform] は、要件に従って電話番号をハッシュ化 [!DNL Google Customer Match] します。
-* [!DNL Facebook] [電話番号のハッシュ要件](../catalog/social/../advertising/google-customer-match.md)に従って[!DNL Platform]にデータを取り込む際に電話番号をハッシュ化した場合は、`Phone_SHA256_E.164`名前空間をソースIDとして選択します。
-* データが[!DNL Apple]デバイスIDで構成されている場合は、`IDFA`名前空間をソースIDとして選択します。
-* データが[!DNL Android]デバイスIDで構成されている場合は、`GAID`名前空間をソースIDとして選択します。
-* データが他のタイプの識別子で構成されている場合は、`Custom`名前空間をソースIDとして選択します。
-
-ターゲットフィールドの選択：
-
-* ソース名前空間が`Email`または`Email_LC_SHA256`の場合、`Email_LC_SHA256`名前空間をターゲットIDとして選択します。
-* ソース名前空間が`PHONE_E.164`または`Phone_SHA256_E.164`の場合、`Phone_SHA256_E.164`名前空間をターゲットIDとして選択します。
-* ソース名前空間が`IDFA`または`GAID`の場合、`IDFA`または`GAID`の名前空間をターゲットIDとして選択します。
-* ソース名前空間がカスタムの場合は、`User_ID`名前空間をターゲットIDとして選択します。
-
-![IDマッピング](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
-
-ハッシュ化されていない名前空間のデータは、アクティブ化時に[!DNL Platform]によって自動的にハッシュ化されます。
-
-属性ソースのデータは自動的にハッシュ化されません。 ソースフィールドにハッシュ化されていない属性が含まれている場合、「**[!UICONTROL 変換を適用]**」オプションをオンにして、アクティブ化時に[!DNL Platform]でデータを自動的にハッシュ化します。
-
-![IDマッピング変換](../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## スケジュールセグメントの書き出し {#scheduling}
 
