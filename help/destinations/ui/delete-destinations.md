@@ -4,9 +4,9 @@ title: 宛先の削除
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform UIで既存の宛先を削除する手順を示します
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '437'
 ht-degree: 1%
 
 ---
@@ -40,10 +40,10 @@ Adobe Experience Platformユーザーインターフェイスで、宛先への�
 
    ![宛先のフィルター](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. 既存の宛先を削除するには、**[!UICONTROL プラットフォーム]**&#x200B;列で![削除ボタン](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL 削除]**ボタンを選択します。
+3. 「名前」列で「![さらにボタン](../assets/ui/delete-destinations/more-icon.png)」ボタンを選択し、「![削除ボタン](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL 削除]**」を選択して、既存の宛先接続を削除します。
    ![宛先の削除](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. 「**[!UICONTROL 削除]**」を選択して、宛先の削除を確定します。
+4. 「**[!UICONTROL 削除]**」を選択して、宛先接続の削除を確定します。
 
    ![宛先の削除の確認](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
