@@ -4,9 +4,9 @@ title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の4つのセクションで構成されます。 以下の節で説明します。
 seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '873'
 ht-degree: 20%
 
 ---
@@ -72,8 +72,8 @@ Adobe Experience Platformで、左側のナビゲーションバーから「**[!
 
 >[!TIP]
 >
-> * **[!UICONTROL 「名前」]**&#x200B;列に![「セグメントを追加」ボタン](../assets/ui/workspace/add-data-symbol.png)を使用して、セグメントをその宛先に送信します。
-> * **[!UICONTROL 名前]**&#x200B;列の![宛先の削除ボタン](../assets/ui/workspace/delete-destination-symbol.png)を使用して、宛先への既存の接続を[削除](delete-destinations.md)します。
+> * 「[!UICONTROL 名前]」列の3つのドットを選択し、「![セグメントを追加」ボタン](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 「]**をアクティブ化」ボタンを使用して、セグメントをその宛先に送信します。
+> * 「[!UICONTROL 名前]」列の3つのドットを選択し、「![宛先を削除」ボタン](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 「]**を削除」ボタンを使用して、宛先への既存の接続を[削除](delete-destinations.md)します。
 
 
 ![「参照」タブ](../assets/ui/workspace/browse-tab.png)
@@ -102,6 +102,6 @@ Adobe Experience Platformで、左側のナビゲーションバーから「**[!
 
 ![Data-flows1](../assets/ui/workspace/data-flows1.png)
 
-ページに表示される任意の宛先を選択し、「**[!UICONTROL フローを表示]**」をクリックして、各宛先に設定したすべての接続に関する情報を表示します。
+ページに表示される任意の宛先を選択し、「**[!UICONTROL データフローを表示]**」をクリックして、各宛先に設定したすべての接続に関する情報を表示します。
 
 ![Data-flows2](../assets/ui/workspace/data-flows2.png)
