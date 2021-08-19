@@ -1,10 +1,10 @@
 ---
-title: FAQ
+title: タグトラブルシューティングガイド
 description: Adobe Experience Platformのタグに関するよくある質問への回答を得ます。
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 30%
+source-wordcount: '1055'
+ht-degree: 26%
 
 ---
 
@@ -92,6 +92,16 @@ ht-degree: 30%
 ## タグはネイティブのモバイルアプリで機能しますか。
 
 できます。新しいAdobe Experience Platform [Mobile SDK](https://sdkdocs.com)で、ネイティブのモバイルアプリ環境でデータ収集と配信を実装するためのモバイルプロパティと設定がタグでサポートされるようになりました。 詳しくは、[ドキュメント](https://sdkdocs.com)を参照してください。
+
+## アカウントの読み込み中にUIでエラーが発生した理由を教えてください。
+
+アカウントの読み込み中にエラーが発生したというメッセージが表示された場合は、アカウントがタグの製品プロファイルに属していないことを意味します。 Adobe Admin Consoleで製品プロファイルを設定してデータ収集UIへのアクセスを許可する方法については、[権限の管理](./ui/administration/manage-permissions.md)に関するガイドを参照してください。
+
+## UIにプロパティを追加できないのはなぜですか？
+
+データ収集UIにログインしたときに新しいプロパティを作成できない場合は、お使いのアカウントが、プロパティの管理権限を持つ製品プロファイルに属していません。
+
+Adobe Admin Consoleで製品プロファイルを設定してプロパティの管理権限を付与する方法については、[権限の管理](./ui/administration/manage-permissions.md)に関するガイドを参照してください。 タグの様々な権限について詳しくは、[tags](./ui/administration/user-permissions.md)のユーザー権限の概要を参照してください。
 
 ## 他に質問がある場合
 
