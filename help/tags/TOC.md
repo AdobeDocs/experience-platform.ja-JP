@@ -4,9 +4,9 @@ user-guide-title: タグのヘルプ
 breadcrumb-title: タグ
 user-guide-description: 顧客体験を向上させるための、分析、マーケティングおよび広告タグのデプロイと管理について説明します。
 feature: データ収集
-source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
+source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '380'
 ht-degree: 80%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 80%
    * [概要](./ui/administration/overview.md)
    * [会社とプロパティ](./ui/administration/companies-and-properties.md)
    * [ユーザー権限](./ui/administration/user-permissions.md)
+   * [権限の管理](./ui/administration/manage-permissions.md)
 * 拡張機能 {#extensions}
    * [概要](./extensions/overview.md)
    * アドビ拡張機能 {#adobe}
