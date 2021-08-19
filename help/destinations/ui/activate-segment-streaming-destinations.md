@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化
 description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
-source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
+source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '740'
 ht-degree: 6%
 
 ---
@@ -43,14 +43,9 @@ ht-degree: 6%
 
 ## 属性とIDのマッピング {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="変換の適用"
->abstract="非ハッシュ化のソースフィールドを使用する場合は、このオプションをオンにして、Adobe Experience Platformでアクティベーション時に自動的にハッシュ化するようにします。"
-
 >[!IMPORTANT]
 >
->この手順は、一部のセグメントストリーミング宛先にのみ適用されます。 宛先に&#x200B;**[!UICONTROL マッピング]**&#x200B;手順がない場合は、「[セグメントの書き出しをスケジュール](#scheduling)」にスキップします。
+>この手順は、一部のセグメントストリーミング宛先にのみ適用されます。 宛先に&#x200B;**[!UICONTROL マッピング]**&#x200B;手順がない場合は、「[セグメントのエクスポートをスケジュール](#scheduling)」にスキップします。
 
 一部のセグメントストリーミング宛先では、宛先のターゲットIDとしてマッピングするために、ソース属性またはID名前空間を選択する必要があります。
 
@@ -76,8 +71,17 @@ ht-degree: 6%
 
 1. マッピングをさらに追加するには、手順1 ～ 5を繰り返します。
 
+### 変換の適用 {#apply-transformation}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="変換の適用"
+>abstract="非ハッシュ化のソースフィールドを使用する場合は、このオプションをオンにして、Adobe Experience Platformでアクティベーション時に自動的にハッシュ化するようにします。"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="詳しくは、ドキュメントを参照してください。"
 
+ハッシュ化されていないソース属性を、宛先でハッシュ化が必要なターゲット属性にマッピングする場合(例：`email_lc_sha256`または`phone_sha256`)で、「**変換を適用**」オプションをオンにして、Adobe Experience Platformがアクティブ化時にソース属性を自動的にハッシュ化するようにします。
+
+![IDマッピング](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 
 ## スケジュールセグメントの書き出し {#scheduling}
