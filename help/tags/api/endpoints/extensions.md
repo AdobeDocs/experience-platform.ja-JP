@@ -1,26 +1,26 @@
 ---
 title: 拡張機能エンドポイント
-description: Reactor APIで/extensionsエンドポイントを呼び出す方法を説明します。
+description: Reactor API で /extensions エンドポイントを呼び出す方法について説明します。
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '981'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # 拡張機能エンドポイント
 
-Reactor APIでは、拡張機能は[拡張機能パッケージ](./extension-packages.md)のインストール済みインスタンスを表します。 拡張機能は、拡張機能パッケージで定義された機能を[プロパティ](./properties.md)で使用できるようにします。 これらの機能は、[拡張機能](./data-elements.md)と[ルールコンポーネント](./rule-components.md)を作成する際に利用されます。
+Reactor API では、拡張機能は[拡張機能パッケージ](./extension-packages.md)のインストール済みインスタンスを表します。拡張機能は、拡張機能パッケージで定義された機能を[プロパティ](./properties.md)で使用できるようにします。これらの機能は、[拡張機能](./data-elements.md)と[ルールコンポーネント](./rule-components.md)を作成する際に利用されます。
 
-拡張機能は、1つのプロパティにのみ属します。 プロパティには多数の拡張機能を含めることができますが、特定の拡張機能パッケージのインスタンスは1つまでです。
+拡張機能は、1 つのプロパティにのみ属します。プロパティには多数の拡張機能を含めることができますが、特定の拡張機能パッケージのインストール済みインスタンスは 1 つだけ含めることができます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
 
 ## 拡張機能のリストの取得 {#list}
 
-プロパティの拡張機能のリストを取得するには、GETリクエストを作成します。
+プロパティの拡張機能のリストを取得するには、GET リクエストを実行します。
 
 **API 形式**
 
@@ -30,13 +30,13 @@ GET properties/{PROPERTY_ID}/extensions
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{PROPERTY_ID}` | リストする拡張子を持つプロパティの`id`。 |
+| `{PROPERTY_ID}` | 拡張機能のリストを取得するプロパティの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->クエリパラメーターを使用して、リストに表示された拡張機能を、次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
+>クエリパラメーターを使用して、リストされた拡張機能を、次の属性に基づいてフィルターできます。<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
 
 **リクエスト**
 
@@ -52,7 +52,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたプロパティの下に定義された拡張のリストを返します。
+応答が成功すると、指定されたプロパティの下に定義された拡張機能のリストが返されます。
 
 ```json
 {
@@ -155,11 +155,11 @@ curl -X GET \
 
 ## 拡張機能の検索 {#lookup}
 
-拡張機能を検索するには、拡張機能リクエストのパスにIDを指定します。GET
+拡張機能を検索するには、GET リクエストのパスにその ID を指定します。
 
 >[!NOTE]
 >
->拡張機能が削除されると、システムでは削除済みとフラグが付けられますが、実際には削除されません。 したがって、削除された拡張機能を取得できます。 削除された拡張は、返された拡張データの`meta`に`deleted_at`プロパティが存在することで識別できます。
+>拡張機能を削除すると、システムにおいて削除済みのフラグが付けられますが、実際には削除されていません。このため、削除された拡張機能を取得できます。削除された拡張機能は、返された拡張機能データの `meta` に `deleted_at` プロパティが存在するかどうかで識別できます。
 
 **API 形式**
 
@@ -169,7 +169,7 @@ GET /extensions/{EXTENSION_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `EXTENSION_ID` | 検索する拡張機能の`id`。 |
+| `EXTENSION_ID` | 検索する拡張機能の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、拡張機能の詳細を返します。
+応答が成功すると、拡張機能の詳細が返されます。
 
 ```json
 {
@@ -279,7 +279,7 @@ curl -X GET \
 
 ## 拡張機能の作成または更新 {#create}
 
-拡張機能は、[拡張機能パッケージ](./extension-packages.md)を参照し、インストールされた拡張機能をプロパティに追加することで作成されます。 インストールタスクが完了すると、拡張機能が正常にインストールされたかどうかを示す応答が返されます。
+拡張機能は、[拡張機能パッケージ](./extension-packages.md)を参照し、インストール済みの拡張機能をプロパティに追加することで作成されます。インストールタスクが完了すると、拡張機能が正常にインストールされたかどうかを示す応答が返されます。
 
 **API 形式**
 
@@ -289,7 +289,7 @@ POST /properties/{PROPERTY_ID}/extensions
 
 | パラメーター | 説明 |
 | --- | --- |
-| `PROPERTY_ID` | 拡張機能をインストールするプロパティの`id`。 |
+| `PROPERTY_ID` | 拡張機能をインストールするプロパティの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -324,16 +324,16 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `relationships.extension_package` | **（必須）** インストールする拡張機能パッケージのIDを参照するオブジェクト。 |
-| `attributes.delegate_descriptor_id` | 拡張機能にカスタム設定が必要な場合は、デリゲート記述子IDも必要です。 詳しくは、 [デリゲート記述子ID](../guides/delegate-descriptor-ids.md)のガイドを参照してください。 |
+| `relationships.extension_package` | **（必須）**&#x200B;インストールする拡張機能パッケージの ID を参照するオブジェクト。 |
+| `attributes.delegate_descriptor_id` | 拡張機能でカスタム設定が必要な場合、デリゲート記述子 ID も必要になります。詳しくは、[デリゲート記述子 ID](../guides/delegate-descriptor-ids.md) に関するガイドを参照してください。 |
 | `attributes.enabled` | 拡張機能が有効かどうかを示すブール値。 |
-| `attributes.settings` | 文字列として表される設定JSONオブジェクト。 |
+| `attributes.settings` | 文字列として表される設定 JSON オブジェクト。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、新しく作成された拡張機能の詳細を返します。
+応答が成功すると、新しく作成した拡張機能の詳細が返されます。
 
 ```json
 {
@@ -423,9 +423,9 @@ curl -X POST \
 }
 ```
 
-## 拡張機能の改訂 {#revise}
+## 拡張機能の変更 {#revise}
 
-拡張機能リクエストのパスにIDを含めると、拡張機能をPATCHできます。
+拡張機能を変更するには、PATCH リクエストのパスにその ID を含めます。
 
 **API 形式**
 
@@ -435,13 +435,13 @@ PATCH /extensions/{EXTENSION_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `EXTENSION_ID` | 改訂する拡張機能の`id`。 |
+| `EXTENSION_ID` | 変更する拡張機能の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-[拡張機能](#create)の作成と同様に、改訂されたパッケージのローカルバージョンをフォームデータを使用してアップロードする必要があります。
+[拡張機能を作成](#create)したときと同様に、変更したパッケージのローカルバージョンをフォームデータを使用してアップロードする必要があります。
 
 ```shell
 curl -X PATCH \
@@ -466,14 +466,14 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `attributes` | 改訂する属性。 拡張機能の場合は、 `delegate_descriptor_id`、 `enabled`および`settings`属性を変更できます。 |
-| `meta.action` | リビジョンを作成する場合は、値`revise`にを含める必要があります。 |
+| `attributes` | 変更する属性。拡張機能の場合は、`delegate_descriptor_id`、`enabled` および `settings` の各属性を変更できます。 |
+| `meta.action` | リビジョンを作成する場合は、値 `revise` を含める必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、改訂された拡張機能の詳細を返し、`meta.latest_revision_number`プロパティの値が1ずつ増えます。
+応答が成功すると、変更された拡張機能の詳細が返され、`meta.latest_revision_number`プロパティの値が 1 ずつ増えます。
 
 ```json
 {
@@ -565,7 +565,7 @@ curl -X PATCH \
 
 ## 拡張機能の削除 {#private-release}
 
-拡張機能リクエストのパスに拡張機能のIDを含めると、DELETEを削除できます。
+拡張機能を削除するには、DELETE リクエストのパスにその ID を含めます。
 
 **API 形式**
 
@@ -575,7 +575,7 @@ DELETE /extensions/{EXTENSION_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `EXTENSION_ID` | 削除する拡張機能の`id`。 |
+| `EXTENSION_ID` | 削除する拡張機能の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -591,21 +591,21 @@ curl -X DELETE \
 
 **応答**
 
-正常な応答は、応答本文がないHTTPステータス204（コンテンツなし）を返し、拡張機能が削除されたことを示します。
+応答が成功すると、応答本文のない HTTP ステータス 204（コンテンツなし）が返され、拡張機能が削除されたことが示されます。
 
 ## 拡張機能のメモの管理 {#notes}
 
-拡張機能は「注目すべき」リソースで、個々のリソースでテキストベースのメモを作成および取得できます。 拡張機能や他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモのエンドポイントガイド](./notes.md)を参照してください。
+拡張機能は「注目すべき」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。拡張機能や他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモエンドポイントガイド](./notes.md)を参照してください。
 
-## 拡張機能の関連リソースの取得 {#related}
+## 拡張機能に関連するリソースの取得 {#related}
 
-次の呼び出しは、拡張機能の関連リソースを取得する方法を示しています。 [拡張子](#lookup)を検索すると、これらの関係は`relationships`プロパティの下にリストされます。
+次の呼び出しは、拡張機能の関連リソースを取得する方法を示しています。[拡張子を検索](#lookup)すると、`relationships` プロパティの下にこれらの関係がリストされます。
 
-Reactor APIの関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、[関係に関するガイド](../guides/relationships.md)を参照してください。
 
 ### 拡張機能の関連ライブラリのリスト {#libraries}
 
-参照リクエストのパスに`/libraries`を追加すると、拡張機能を利用するライブラリをリストできます。
+拡張機能を利用するライブラリのリストを取得するには、参照リクエストのパスに `/libraries` を追加します。
 
 **API 形式**
 
@@ -615,7 +615,7 @@ GET  /extensions/{EXTENSION_ID}/libraries
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{EXTENSION_ID}` | リストするライブラリの拡張機能の`id`。 |
+| `{EXTENSION_ID}` | ライブラリのリストを取得する拡張機能の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -633,7 +633,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された拡張機能を使用するライブラリのリストを返します。
+応答が成功すると、指定された拡張機能を使用するライブラリのリストが返されます。
 
 ```json
 {
@@ -727,7 +727,7 @@ curl -X GET \
 
 ### 拡張機能の関連リビジョンのリスト {#revisions}
 
-参照リクエストのパスに`/revisions`を追加すると、拡張機能の以前のリビジョンをリストできます。
+拡張機能の以前のリビジョンのリストを取得するには、参照リクエストのパスに `/revisions` を追加します。
 
 **API 形式**
 
@@ -737,7 +737,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{EXTENSION_ID}` | リストするリビジョンを含む拡張機能の`id`。 |
+| `{EXTENSION_ID}` | リビジョンのリストを取得する拡張機能の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -755,7 +755,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された拡張機能のリビジョンのリストを返します。
+応答が成功すると、指定された拡張機能のリビジョンのリストが返されます。
 
 ```json
 {
@@ -939,9 +939,9 @@ curl -X GET \
 }
 ```
 
-### 拡張機能に関連する拡張機能パッケージを検索する {#extension}
+### 拡張機能に関連する拡張機能パッケージの検索 {#extension}
 
-GETリクエストのパスに`/extension_package`を追加することで、拡張機能のベースとなる拡張機能パッケージを検索できます。
+拡張機能の基になっている拡張機能パッケージを検索するには、GET リクエストのパスに `/extension_package` を追加します。
 
 **API 形式**
 
@@ -951,7 +951,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 検索する拡張機能の`id`。 |
+| `{EXTENSION_ID}` | 拡張機能を検索する拡張機能の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -969,7 +969,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された拡張機能の基となる拡張機能パッケージの詳細を返します。 以下の応答例は、スペースを節約するために切り捨てられています。
+応答が成功すると、指定された拡張機能の基となっている拡張機能パッケージの詳細が返されます。次の応答はスペースを節約するために省略されています。
 
 ```json
 {
@@ -1174,9 +1174,9 @@ curl -X GET \
 }
 ```
 
-### 拡張機能の関連する出所を検索する {#origin}
+### 拡張機能に関連するオリジンの検索 {#origin}
 
-GETリクエストのパスに`/origin`を追加して、拡張機能の起源を調べることができます。 拡張機能の起点は、現在のリビジョンを作成するために更新された以前のリビジョンです。
+拡張機能のオリジンを検索するには、GET リクエストのパスに `/origin` を追加します。拡張機能のオリジンは、現在のリビジョンを作成するために更新された以前のリビジョンです。
 
 **API 形式**
 
@@ -1186,7 +1186,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{EXTENSION_ID}` | 検索する接触チャネルの拡張の`id`。 |
+| `{EXTENSION_ID}` | オリジンを検索する拡張機能の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1204,7 +1204,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された拡張機能の接触チャネルの詳細を返します。
+応答が成功すると、指定された拡張機能のオリジンの詳細が返されます。
 
 ```json
 {
@@ -1294,9 +1294,9 @@ curl -X GET \
 }
 ```
 
-### 拡張機能の関連プロパティを検索する {#property}
+### 拡張機能の関連プロパティの検索 {#property}
 
-GETリクエストのパスに`/property`を追加して、拡張機能を所有するプロパティを検索できます。
+拡張機能を持つプロパティを検索するには、GET リクエストのパスに `/property` を追加します。
 
 **API 形式**
 
@@ -1306,7 +1306,7 @@ GET  /extensions/{EXTENSION_ID}/property
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{EXTENSION_ID}` | プロパティを検索する拡張機能の`id`。 |
+| `{EXTENSION_ID}` | プロパティを検索する拡張機能の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1324,7 +1324,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された拡張を所有するプロパティの詳細を返します。
+応答が成功すると、指定された拡張機能を持つプロパティの詳細が返されます。
 
 ```json
 {
