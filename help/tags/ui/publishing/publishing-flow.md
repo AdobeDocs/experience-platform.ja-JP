@@ -1,10 +1,10 @@
 ---
 title: 公開フロー
-description: ライブラリの作成、ビルドのテスト、およびAdobe Experience Platformでの実稼動用の承認のプロセスについて説明します。
+description: ライブラリを作成し、ビルドをテストして、Adobe Experience Platform の実稼動環境を承認するプロセスについて説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1499'
-ht-degree: 90%
+ht-degree: 98%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
-Adobe Experience Platformのタグ公開フローは、ライブラリを作成し、ビルドをテストして、実稼動用に承認するプロセスを指します。
+Adobe Experience Platform のタグ公開フローは、ライブラリを作成し、ビルドをテストして、実稼動用に承認するプロセスを指します。
 
 ライブラリで実行できるアクションは、ライブラリの状態と権限のレベルによって異なります。 また、ライブラリの状態は、公開フローのアップストリームの内容に応じて、ライブラリに含まれるリソース（ルール、データ要素、拡張機能）にも影響します。
 
@@ -41,7 +41,7 @@ Adobe Experience Platformのタグ公開フローは、ライブラリを作成�
 * [[!UICONTROL Approved]](#approved)
 * [[!UICONTROL Published]](#published)
 
-これらの4つの状態は、データ収集UIの「**[!UICONTROL 公開フロー]**」タブ内の列として表されます。
+これらの 4 つの状態は、データ収集 UI の「**[!UICONTROL 公開フロー]**」タブ内に列として表示されます。
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -111,7 +111,7 @@ Adobe Experience Platformのタグ公開フローは、ライブラリを作成�
 
 ![](./images/approval-workflow/upstream.png)
 
-データ収集UIでライブラリを編集する場合、アップストリームから継承されたすべてのリソースが、**[!UICONTROL リソースのアップストリーム]**&#x200B;セクションに表示されます。 これらのリソースを表示するには、セクションの見出しの下にある「拡張」タブを選択します。
+データ収集 UI でライブラリを編集する際、アップストリームから継承されたすべてのリソースが「**[!UICONTROL リソースのアップストリーム]**」セクションに表示されます。これらのリソースを表示するには、セクションの見出しの下にある「拡張」タブを選択します。
 
 ![](./images/approval-workflow/upstream-collapse.png)
 
@@ -121,4 +121,4 @@ Adobe Experience Platformのタグ公開フローは、ライブラリを作成�
 
 ## 次の手順
 
-このガイドでは、Adobe Experience Platformのライブラリの公開フローの概要を説明しました。 ライブラリの公開方法について詳しくは、「[公開の概要](./overview.md)」を参照してください。
+このガイドでは、Adobe Experience Platform におけるライブラリの公開フローの概要を詳細に示しました。ライブラリの公開方法について詳しくは、「[公開の概要](./overview.md)」を参照してください。
