@@ -1,10 +1,10 @@
 ---
 title: 拡張パッケージエンドポイント
-description: Reactor APIで/extension_packagesエンドポイントを呼び出す方法を説明します。
+description: Reactor API で /extension_packages エンドポイントを呼び出す方法を説明します。
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '955'
-ht-degree: 7%
+ht-degree: 73%
 
 ---
 
@@ -12,17 +12,17 @@ ht-degree: 7%
 
 >[!WARNING]
 >
->フィーチャが追加、削除、およびリワークされると、`/extension_packages`エンドポイントの実装は不安定になります。
+>機能を追加、削除または修正すると、`/extension_packages` エンドポイントの実装が不安定になります。
 
-拡張機能パッケージは、拡張機能開発者が作成した拡張機能[](./extensions.md)を表します。 拡張機能パッケージは、ユーザーにタグ付けできる追加機能を定義します。 最も一般的に、これらの機能は、[ルールコンポーネント](./rule-components.md)（イベント、条件、アクション）および[データ要素](./data-elements.md)の形式で提供されますが、メインモジュールや共有モジュールを含めることもできます。
+拡張機能パッケージは、拡張機能開発者が作成した[拡張機能](./extensions.md)を表します。 拡張機能パッケージは、ユーザーにタグ付けできる追加機能を定義します。 通常、これらの機能は、[ルールコンポーネント](./rule-components.md)（イベント、条件、アクション）および[データ要素](./data-elements.md)の形式で提供されますが、メインモジュールや共有モジュールを含めることもできます。
 
-拡張機能パッケージは、ユーザーがインストールできるよう、データ収集UI内の拡張機能カタログに表示されます。 プロパティに拡張機能パッケージを追加するには、拡張機能パッケージへのリンクを含む拡張機能を作成します。
+拡張機能パッケージは、ユーザーがインストールできるよう、データ収集 UI 内の拡張機能カタログに表示されます。プロパティに拡張機能パッケージを追加するには、拡張機能パッケージへのリンクを含む拡張機能を作成します。
 
-拡張パッケージは、そのパッケージを作成した開発者の[会社](./companies.md)に属しています。
+拡張パッケージは、作成した開発者の[会社](./companies.md)に属しています。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
 
 Reactor APIの呼び出し方法を理解するだけでなく、拡張機能パッケージの`status`属性と`availability`属性が、Reactor APIに対して実行できるアクションに与える影響も理解することが重要です。 これらは、以下の節で説明します。
 
@@ -52,7 +52,7 @@ Reactor APIの呼び出し方法を理解するだけでなく、拡張機能パ
 
 ## 拡張機能パッケージのリストの取得 {#list}
 
-`/extension_packages`に対してGETリクエストを実行すると、拡張機能パッケージのリストを取得できます。
+`/extension_packages` に対して GET リクエストを実行すると、拡張機能パッケージのリストを取得できます。
 
 **API 形式**
 
@@ -78,7 +78,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、拡張機能パッケージのリストを返します。
+応答が成功すると、拡張機能パッケージのリストが返されます。
 
 ```json
 {
@@ -236,7 +236,7 @@ curl -X GET \
 
 ## 拡張機能パッケージの検索 {#lookup}
 
-拡張機能パッケージを検索するには、GETリクエストのパスにIDを指定します。
+拡張機能パッケージを検索するには、GET リクエストのパスに ID を指定します。
 
 **API 形式**
 
@@ -246,7 +246,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 検索する拡張機能パッケージの`id`。 |
+| `EXTENSION_PACKAGE_ID` | 検索する拡張機能パッケージの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -264,7 +264,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、拡張機能パッケージの詳細（`actions`、`conditions`、`data_elements`などのデリゲートリソースを含む）を返します。 以下の応答例は、スペースを節約するために切り捨てられています。
+応答が成功すると、拡張機能パッケージの詳細（`actions`、`conditions`、`data_elements` などのデリゲートリソースを含む）が返されます。 次の応答はスペースを節約するために省略されています。
 
 ```json
 {
@@ -471,9 +471,9 @@ curl -X GET \
 
 ## 拡張機能パッケージの作成 {#create}
 
-拡張機能パッケージは、Node.jsの基礎モードツールを使用して作成され、Reactor APIに送信される前にローカルマシンに保存されます。 拡張機能パッケージの設定について詳しくは、[拡張機能の開発の手引き](../../extension-dev/getting-started.md)を参照してください。
+拡張機能パッケージは、Node.js の基礎モードツールを使用して作成され、Reactor API に送信される前にローカルマシンに保存されます。 拡張機能パッケージの設定について詳しくは、[拡張機能の開発の概要](../../extension-dev/getting-started.md)を参照してください。
 
-拡張機能パッケージファイルを作成したら、POSTリクエストを通じてReactor APIに送信できます。
+拡張機能パッケージファイルを作成したら、POST リクエストを通じて Reactor API に送信できます。 
 
 **API 形式**
 
@@ -483,7 +483,7 @@ POST /extension_packages
 
 **リクエスト**
 
-次のリクエストは、新しい拡張機能パッケージを作成します。 アップロードされるパッケージファイルへのローカルパスは、フォームデータ(`package`)として参照されるので、このエンドポイントには`multipart/form-data`の`Content-Type`ヘッダーが必要です。
+次のリクエストは、新しい拡張機能パッケージを作成します。 アップロードされるパッケージファイルへのローカルパスは、フォームデータ（`package`）として参照されるので、このエンドポイントには `multipart/form-data` の `Content-Type` ヘッダーが必要です。
 
 ```shell
 curl -X POST \
@@ -497,7 +497,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新しく作成された拡張機能パッケージの詳細を返します。
+成功した応答は、新しく作成した拡張機能パッケージの詳細を返します。
 
 ```json
 {
@@ -714,13 +714,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 更新する拡張機能パッケージの`id`。 |
+| `EXTENSION_PACKAGE_ID` | 更新する拡張機能パッケージの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-[拡張機能パッケージ](#create)の作成と同様に、更新されたパッケージのローカルバージョンをフォームデータを使用してアップロードする必要があります。
+[拡張機能パッケージの作成](#create)と同様に、更新されたパッケージのローカルバージョンをフォームデータを使用してアップロードする必要があります。
 
 ```shell
 curl -X PATCH \
@@ -734,7 +734,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、更新された拡張機能パッケージの詳細を返します。
+応答が成功すると、更新された拡張機能パッケージの詳細が返されます。
 
 ```json
 {
@@ -941,7 +941,7 @@ curl -X PATCH \
 
 ## 拡張機能パッケージの非公開リリース {#private-release}
 
-拡張機能パッケージのテストが完了したら、その拡張機能を非公開でリリースできます。 これにより、会社内の任意のプロパティで使用できるようになります。
+拡張機能パッケージのテストが完了したら、非公開でリリースできます。 これにより、会社内の任意のプロパティで使用できるようになります。
 
 非公開でリリースした後は、[公開リリースリクエストフォーム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U)に入力して、公開リリースプロセスを開始できます。
 
@@ -953,13 +953,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 非公開でリリースする拡張機能パッケージの`id`。 |
+| `EXTENSION_PACKAGE_ID` | 非公開でリリースする拡張機能パッケージの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-プライベートリリースは、要求データの`meta`に`release_private`の値を`action`に与えることで達成されます。
+プライベートリリースは、要求データの `meta` に `release_private` の値を `action` に与えることで達成されます。
 
 ```shell
 curl -X PATCH \
@@ -981,7 +981,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、拡張機能パッケージの詳細を返します。
+応答が成功すると、拡張機能パッケージの詳細が返されます。
 
 ```json
 {
@@ -1188,7 +1188,7 @@ curl -X PATCH \
 
 ## 拡張機能パッケージの停止 {#discontinue}
 
-PATCHリクエストを通じて、拡張機能パッケージの`discontinued`属性を`true`に設定することで、拡張機能パッケージを停止できます。
+PATCH リクエストを通じて、拡張機能パッケージの `discontinued` 属性を `true` に設定することで、拡張機能パッケージを停止できます。
 
 **API 形式**
 
@@ -1198,13 +1198,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | 停止する拡張機能パッケージの`id`。 |
+| `EXTENSION_PACKAGE_ID` | 停止する拡張機能パッケージの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-プライベートリリースは、要求データの`meta`に`release_private`の値を`action`に与えることで達成されます。
+プライベートリリースは、要求データの `meta` に `release_private` の値を `action` に与えることで達成されます。
 
 ```shell
 curl -X PATCH \
@@ -1226,7 +1226,7 @@ curl -X PATCH \
 
 **応答**
 
-正常な応答は、拡張機能パッケージの詳細を返します。
+応答が成功すると、拡張機能パッケージの詳細が返されます。
 
 ```json
 {
@@ -1281,7 +1281,7 @@ curl -X PATCH \
 
 ## 拡張機能パッケージのバージョンのリスト
 
-参照リクエストのパスに`/versions`を追加すると、拡張機能パッケージのバージョンをリストできます。
+参照リクエストのパスに `/versions` を追加すると、拡張機能パッケージのバージョンをリストできます。
 
 **API 形式**
 
@@ -1291,7 +1291,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 
 | パラメーター | 説明 |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | バージョンのリストを表示する拡張パッケージの`id`。 |
+| `EXTENSION_PACKAGE_ID` | バージョンのリストを取得する拡張パッケージの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1309,4 +1309,4 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、拡張機能パッケージの以前のバージョンの配列を返します。 スペースに対する応答の例が省略されました。
+応答が成功すると、拡張機能パッケージの以前のバージョンの配列が返されます。スペースに対する応答の例が省略されました。
