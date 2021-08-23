@@ -1,10 +1,10 @@
 ---
 title: Adobe Target v2 拡張機能のリリースノート
-description: Adobe Experience PlatformのAdobe Target v2タグ拡張の最新のリリースノートです。
+description: Adobe Experience Platform の Adobe Target v2 タグ拡張機能の最新リリースノートです。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 59%
+ht-degree: 76%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2021 年 7 月 20 日（PT）
 
@@ -57,7 +57,7 @@ ht-degree: 59%
 ### Adobe Target v2 Extension 0.13.7
 
 - mbox リクエストに `targetPageParams` が含まれる問題を修正しました。 `targetPageParams` は `pageLoad` リクエストにのみ含めてください。
-- グローバルオブジェクトの依存関係を直接参照に置き換えることで、タグ拡張のドキュメントおよびウィンドウのグローバルオブジェクトに関する問題を修正しました。
+- グローバルオブジェクトの依存関係を直接参照に置き換えることで、タグ拡張機能のドキュメントおよびウィンドウのグローバルオブジェクトに関する問題を修正しました。
 - at.js を 2.4.1 に更新しました。
 
 ## 2021 年 1 月 25 日（PT）
@@ -89,7 +89,7 @@ ht-degree: 59%
 ### Adobe Target v2 Extension 0.13.2
 
 - CNAME とエッジの上書きを使用している際に、at.js 1.x で誤ってサーバードメインが作成され、Target リクエストが失敗することがあった問題を修正しました。
-- TargetおよびAdobe Analyticsタグ拡張用のv2タグ拡張を使用する際に、TargetによってAnalyticsのsendBeacon呼び出しで遅延が発生する問題を修正しました
+- Target および Adobe Analytics タグ拡張機能用の v2 タグ拡張機能を使用する際に、Target によって Analytics の sendBeacon 呼び出しで遅延が発生する問題を修正しました
 - `deviceIdLifetime` 設定を向上し、`targetGlobalSettings` 経由で上書きできるようにしました。
 
 ## 2020 年 3 月 25 日（PT）
@@ -109,7 +109,7 @@ ht-degree: 59%
 - 以前、ECID ライブラリは、at.js がエクスペリエンスを取得する前に、2 回のブロック呼び出しをおこなっていました。これを 1 回の呼び出しに短縮し、パフォーマンスが大幅に向上しました。
 
 >[!NOTE]
->このパフォーマンス強化を利用するには、ECIDタグ拡張機能をv4.4.1にアップグレードしてください。
+>このパフォーマンス強化を利用するには、ECID タグ拡張機能を v4.4.1 にアップグレードしてください。
 
 ## 2019 年 7 月 31 日（PT）
 
@@ -122,4 +122,4 @@ ht-degree: 59%
 
 ### Adobe Target v2 Extension 0.11.0
 
-- at.js 2.1をサポートする新しいタグ拡張
+- at.js 2.1 をサポートする新しいタグ拡張機能
