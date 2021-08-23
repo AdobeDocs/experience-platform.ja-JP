@@ -1,10 +1,10 @@
 ---
 title: Web 拡張機能の条件のタイプ
-description: Webプロパティでタグ拡張の条件タイプライブラリモジュールを定義する方法について説明します。
+description: Web プロパティでタグ拡張機能の条件タイプライブラリモジュールを定義する方法について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 64%
+ht-degree: 69%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 64%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 ルールのコンテキストでは、条件はイベントの発生後に評価されます。 ルールの処理を続行するには、すべての条件が true を返す必要があります。 例外は、ユーザーが「例外」バケットに条件を明示的に配置する場合です。その場合、ルールの処理を続行するには、バケット内のすべての条件がfalseを返す必要があります。
 
