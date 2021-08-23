@@ -1,25 +1,25 @@
 ---
 title: 環境エンドポイント
-description: Reactor APIで/environmentsエンドポイントを呼び出す方法を説明します。
+description: Reactor API で /environments エンドポイントを呼び出す方法を説明します。
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '1042'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
 # 環境エンドポイント
 
-[ライブラリ](./libraries.md)をReactor APIで[ビルド](./builds.md)にコンパイルする場合、ビルドの正確な内容は、ライブラリに含まれる環境設定とリソースによって異なります。 特に、環境によって次のことが決まります。
+[ライブラリ](./libraries.md)を Reactor API で[ビルド](./builds.md)にコンパイルする場合、ビルドの正確な内容は、環境設定とライブラリに含まれるリソースによって異なります。具体的には、環境によって次のことが決まります。
 
-1. **宛先**:ビルドをデプロイする場所。これは、使用する環境の[ホスト](./hosts.md)を選択することで制御します。
-1. **アーカイブ**:ビルドをデプロイ可能なファイルのセットとして取得するか、アーカイブ形式で圧縮するかを選択できます。これは、環境の`archive`設定で制御します。
+1. **宛先**：ビルドをデプロイする場所です。使用する環境の[ホスト](./hosts.md)を選択して制御します。
+1. **アーカイブ**：ビルドをデプロイ可能なファイルセットとして取得するか、アーカイブ形式で zip 圧縮するかを選択できます。環境の `archive` 設定で制御します。
 
-環境で設定される宛先とアーカイブの形式によって、アプリケーションでのビルドの参照方法が変わります（参照は[埋め込みコード](../../ui/publishing/environments.md#embed-code)）。 宛先やファイル形式に変更を加えた場合は、新しい参照を使用するために、アプリケーションに合致する更新を行う必要があります。
+環境で設定される宛先とアーカイブの形式によって、アプリケーションでのビルドの参照方法が変わります（参照は[埋め込みコード](../../ui/publishing/environments.md#embed-code)）。 宛先やファイル形式を変更する場合は、新しい参照を使用するために、アプリケーションにマッチする更新を行う必要があります。
 
-環境は3つのタイプ（またはステージ）で構成され、各タイプは、使用できる合計数に対して異なる制限を持ちます。
+環境には 3 つのタイプ（またはステージ）があり、タイプごとに使用できる総数に対する制限が異なります。
 
-| 環境タイプ | 許可された番号 |
+| 環境タイプ | 許可された数 |
 | --- | --- |
 | 開発 | （制限なし） |
 | ステージング | 1 |
@@ -29,17 +29,17 @@ ht-degree: 9%
 
 これらの環境タイプは同様の動作をしますが、[タグ公開ワークフロー](../../ui/publishing/publishing-flow.md)の様々な段階で使用されます。
 
-環境は、[プロパティ](./properties.md)に1つだけ属しています。
+環境は、1 つの[プロパティ](./properties.md)のみに属しています。
 
 環境に関する一般的な情報については、公開ドキュメントの[環境](../../ui/publishing/environments.md)に関する節を参照してください。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
 
 ## 環境のリストの取得 {#list}
 
-プロパティの環境のリストを取得するには、GETリクエストのパスにプロパティのIDを含めます。
+GET リクエストのパスにプロパティの ID を含めることで、プロパティの環境のリストを取得できます。
 
 **API 形式**
 
@@ -49,7 +49,7 @@ GET /properties/{PROPERTY_ID}/environments
 
 | パラメーター | 説明 |
 | --- | --- |
-| `PROPERTY_ID` | 環境を所有するプロパティの`id`。 |
+| `PROPERTY_ID` | 環境を所有するプロパティの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -71,7 +71,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたプロパティの環境のリストを返します。
+応答が成功すると、指定されたプロパティの環境のリストが返されます。
 
 ```json
 {
@@ -163,7 +163,7 @@ curl -X GET \
 
 ## 環境の検索 {#lookup}
 
-環境を検索するには、環境リクエストのパスにIDを指定します。GET
+GET リクエストのパスで ID を指定することで、環境を検索できます。
 
 **API 形式**
 
@@ -173,7 +173,7 @@ GET /environments/{ENVIRONMENT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `ENVIRONMENT_ID` | 検索する環境の`id`。 |
+| `ENVIRONMENT_ID` | 検索する環境の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -191,7 +191,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、環境の詳細を返します。
+応答が成功すると、環境の詳細が返されます。
 
 ```json
 {
@@ -272,7 +272,7 @@ curl -X GET \
 
 ## 環境の作成 {#create}
 
-環境リクエストを作成することで、新しいPOSTを作成できます。
+POST リクエストをおこなうことで、新しい環境を作成できます。
 
 **API 形式**
 
@@ -282,13 +282,13 @@ POST /properties/{PROPERTY_ID}/environments
 
 | パラメーター | 説明 |
 | --- | --- |
-| `PROPERTY_ID` | 環境を定義する[プロパティ](./properties.md)の`id`。 |
+| `PROPERTY_ID` | 環境を定義する[プロパティ](./properties.md)の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、指定されたプロパティの新しい環境を作成します。 また、この呼び出しは、 `relationships`プロパティを通じて環境を既存のホストに関連付けます。 詳しくは、[関係](../guides/relationships.md)のガイドを参照してください。
+次のリクエストは、指定されたプロパティの新しい環境を作成します。また、この呼び出しは、`relationships` プロパティを通じて環境を既存のホストに関連付けます。詳しくは、[関係](../guides/relationships.md)に関するガイドを参照してください。
 
 ```shell
 curl -X POST \
@@ -321,19 +321,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `attributes.name` | **（必須）** 人間が判読できる環境の名前。 |
-| `attributes.archive` | ビルドがアーカイブ形式かどうかを示すboolean値。 |
+| `attributes.name` | **（必須）**&#x200B;人間が判読できる環境の名前。 |
+| `attributes.archive` | ビルドがアーカイブ形式かどうかを示すブール値。 |
 | `attributes.archive_passphrase` | アーカイブファイルのロックを解除するために使用できる文字列パスワード。 |
-| `attributes.path` | 環境のホストURLからのパス。 |
+| `attributes.path` | 環境のホスト URL からのパス。 |
 | `attributes.stage` | 環境のステージ（開発、ステージングまたは実稼動）。 |
-| `id` | 更新する環境の`id`。 これは、リクエストパスで指定された`{ENVIRONMENT_ID}`値と一致する必要があります。 |
-| `type` | 更新するリソースのタイプ。 このエンドポイントでは、値を`environments`にする必要があります。 |
+| `id` | 更新する環境の `id`。この値は、リクエストパスで指定された `{ENVIRONMENT_ID}` 値と一致する必要があります。 |
+| `type` | 更新するリソースのタイプ。このエンドポイントの場合は、値を `environments` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、新しく作成された環境の詳細を返します。
+応答が成功すると、新しく作成したスケジュールの詳細が返されます。
 
 ```json
 {
@@ -414,7 +414,7 @@ curl -X POST \
 
 ## 環境の更新 {#update}
 
-環境を更新するには、環境リクエストのパスにIDを含めます。PATCH
+PATCH リクエストのパスに ID を含めることで、環境を更新できます。
 
 **API 形式**
 
@@ -424,13 +424,13 @@ PATCH /environments/{ENVIRONMENT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `ENVIRONMENT_ID` | 更新する環境の`id`。 |
+| `ENVIRONMENT_ID` | 更新する環境の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、既存の環境の`name`を更新します。
+次のリクエストは、既存の環境の `name` を更新します。
 
 ```shell
 curl -X PATCH \
@@ -452,15 +452,15 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `attributes` | 環境用に更新する属性を表すプロパティを持つオブジェクト。 次の環境属性を更新できます。 <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> 属性のリストとその使用例については、 [環境](#create)の呼び出し例を参照してください。 |
-| `id` | 更新する環境の`id`。 これは、リクエストパスで指定された`{ENVIRONMENT_ID}`値と一致する必要があります。 |
-| `type` | 更新するリソースのタイプ。 このエンドポイントでは、値を`environments`にする必要があります。 |
+| `attributes` | 環境用に更新する属性を表すプロパティを持つオブジェクト。次の環境属性を更新できます。 <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> 属性のリストとその使用例については、[環境の作成](#create)の呼び出し例を参照してください。 |
+| `id` | 更新する環境の `id`。この値は、リクエストパスで指定された `{ENVIRONMENT_ID}` 値と一致する必要があります。 |
+| `type` | 更新するリソースのタイプ。このエンドポイントの場合は、値を `environments` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、更新された環境の詳細を返します。
+応答が成功すると、更新されたポリシーの詳細が返されます。
 
 ```json
 {
@@ -541,7 +541,7 @@ curl -X PATCH \
 
 ## 環境の削除
 
-環境リクエストのパスに環境のIDを含めることで、DELETEを削除できます。
+DELETE リクエストのパスに ID を含めることで、環境を削除できます。
 
 **API 形式**
 
@@ -551,7 +551,7 @@ DELETE /environments/{ENVIRONMENT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `ENVIRONMENT_ID` | 削除する環境の`id`。 |
+| `ENVIRONMENT_ID` | 削除する環境の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -567,17 +567,17 @@ curl -X DELETE \
 
 **応答**
 
-正常な応答は、応答本文がないHTTPステータス204（コンテンツなし）を返し、環境が削除されたことを示します。
+応答が成功すると、応答本文のない HTTP ステータス 204（コンテンツなし）が返され、環境が削除されたことを示します。
 
 ## 環境の関連リソースの取得 {#related}
 
-次の呼び出しは、環境の関連リソースを取得する方法を示しています。 [環境](#lookup)を検索すると、これらの関係は`relationships`プロパティの下に表示されます。
+次の呼び出しは、環境の関連リソースを取得する方法を示しています。[環境を検索](#lookup)すると、これらの関係は `relationships` プロパティの下に表示されます。
 
-Reactor APIの関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、[関係に関するガイド](../guides/relationships.md)を参照してください。
 
 ### 環境の関連ビルドのリスト {#builds}
 
-検索リクエストのパスに`/builds`を追加すると、環境を使用するビルドをリストできます。
+検索リクエストのパスに `/builds` を追加することで、環境を使用するビルドをリストできます。
 
 **API 形式**
 
@@ -587,7 +587,7 @@ GET  /environments/{ENVIRONMENT_ID}/builds
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | ビルドのリストを表示する環境の`id`。 |
+| `{ENVIRONMENT_ID}` | ビルドのリストを取得する環境の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -605,7 +605,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された環境を使用するビルドのリストを返します。
+応答が成功すると、指定された環境を使用するビルドのリストが返されます。
 
 ```json
 {
@@ -690,11 +690,11 @@ curl -X GET \
 
 ### 環境の関連ホストの検索 {#host}
 
-環境を利用するホストを検索するには、GETリクエストのパスに`/host`を追加します。
+GET リクエストのパスに `/host` を追加することで、環境を利用するホストを検索できます。
 
 >[!NOTE]
 >
->[個別の呼び出し](#host-relationship)を使用して、ホストの関係オブジェクト自体を検索できます。
+>[別の呼び出し](#host-relationship)を介して、ホストの関係オブジェクト自体を検索できます。
 
 **API 形式**
 
@@ -704,7 +704,7 @@ GET  /environments/{ENVIRONMENT_ID}/host
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | ホストを検索する環境の`id`。 |
+| `{ENVIRONMENT_ID}` | ホストを検索する環境の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -722,7 +722,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された環境を使用するホストの詳細を返します。
+応答が成功すると、指定された環境を使用するホストの詳細が返されます。
 
 ```json
 {
@@ -761,7 +761,7 @@ curl -X GET \
 
 ### 環境の関連ライブラリの検索 {#library}
 
-環境を使用するライブラリを検索するには、GETリクエストのパスに`/library`を追加します。
+GETリクエストのパスに `/library` を追加することで、環境を使用するライブラリを検索できます。
 
 **API 形式**
 
@@ -771,7 +771,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | 検索するライブラリの環境の`id`。 |
+| `{ENVIRONMENT_ID}` | 検索するライブラリを持つ環境の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -789,7 +789,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された環境を使用するライブラリの詳細を返します。
+応答が成功すると、指定された環境を使用するライブラリの詳細が返されます。
 
 ```json
 {
@@ -876,7 +876,7 @@ curl -X GET \
 
 ### 環境の関連プロパティの検索 {#property}
 
-環境を所有するプロパティを検索するには、GETリクエストのパスに`/property`を追加します。
+GET リクエストのパスに `/property` を追加することで、環境を所有するプロパティを検索できます。
 
 **API 形式**
 
@@ -886,7 +886,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | プロパティを検索する環境の`id`。 |
+| `{ENVIRONMENT_ID}` | 検索するプロパティを持つ環境の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -904,7 +904,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定された環境を所有するプロパティの詳細を返します。
+応答が成功すると、指定した環境を所有するプロパティの詳細が返されます。
 
 ```json
 {
