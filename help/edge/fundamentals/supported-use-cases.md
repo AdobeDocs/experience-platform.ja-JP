@@ -2,9 +2,9 @@
 title: Adobe Experience Platform Web SDKでサポートされる使用例
 description: Adobe Experience Platform Web SDKでサポートされる使用例を説明します。
 keywords: web sdk；使用例
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '565'
 ht-degree: 15%
 
 ---
@@ -91,6 +91,7 @@ ht-degree: 15%
 | Targetプロファイルの更新 | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | 推奨事項 |  |
 | mboxサードパーティID |  |
+| レスポンストークン | [ドキュメント](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style=&quot;table-layout:auto&quot;}
 
