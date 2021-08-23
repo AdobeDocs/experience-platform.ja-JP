@@ -1,26 +1,26 @@
 ---
 title: プロファイルエンドポイント
-description: Reactor APIで/profilesエンドポイントを呼び出す方法を説明します。
+description: Reactor API で /profiles エンドポイントを呼び出す方法を説明します。
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # プロファイルエンドポイント
 
-Reactor APIでは、プロファイルはAdobe Experience Platformユーザーを表します。 Reactor APIは、ユーザーと権限の独自のAdobeを維持するのではなく、[AdobeのID管理システム(IMS)](https://helpx.adobe.com/jp/enterprise/using/identity.html)によって管理されるデータベースIDに依存します。
+Reactor API では、プロファイルは Adobe Experience Platform ユーザーを表します。Reactor API は、ユーザーと権限の独自のデータベースを維持せず、代わりに[アドビの ID 管理システム（IMS）](https://helpx.adobe.com/jp/enterprise/using/identity.html)によって管理される Adobe ID に依存します。
 
-プロファイルには、ログインしたユーザーに関するすべての情報（所属するすべてのIMS組織、各組織内に属する製品プロファイル、各製品プロファイルからの権限など）が含まれます。
+プロファイルには、ログインしたユーザーに関するすべての情報（所属するすべての IMS 組織、各組織内に属する製品プロファイル、各製品プロファイルからの権限など）が含まれます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
 
 ## 現在のプロファイルの取得 {#lookup}
 
-`/profile`エンドポイントにGETリクエストを送信することで、現在ログインしているプロファイルの詳細を取得できます。
+`/profile` エンドポイントに GET リクエストを送信することで、現在ログインしているプロファイルの詳細を取得できます。
 
 **API 形式**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、プロファイルの詳細を返します。
+応答が成功すると、プロファイルの詳細が返されます。
 
 ```json
 {
