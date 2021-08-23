@@ -1,10 +1,10 @@
 ---
 title: Adobe Media Analytics for Audio and Video 拡張機能の概要
-description: Adobe Experience PlatformのAnalytics for Audio and VideoAdobe Mediumタグ拡張について説明します。
+description: Adobe Experience Platform の Adobe Media Analytics for Audio and Video タグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このドキュメントには、Adobe Media Analytics for Audio and Video 拡張機能（Media Analytics 拡張機能）のインストール、設定および実装に関する情報が含まれています。この拡張機能を使用してルールを作成し、サンプルやサンプルへのリンクを作成する場合に使用できるオプションについても説明します。
 
-Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 2.x SDK）を追加します。この拡張機能は、タグサイトまたはプロジェクトに`MediaHeartbeat`トラッカーインスタンスを追加する機能を提供します。 MA 拡張機能には、次の 2 つの拡張拡張機能が必要です。
+Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 2.x SDK）を追加します。この拡張機能では、タグサイトまたはプロジェクトに `MediaHeartbeat` トラッカーインスタンスを追加する機能を提供します。MA 拡張機能には、次の 2 つの拡張拡張機能が必要です。
 
 * [Analytics 拡張機能](../analytics/overview.md)
 * [Experience Cloud ID 拡張機能](../id-service/overview.md)
@@ -25,7 +25,7 @@ Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 2.
 >
 > オーディオトラッキングには、Analytics 拡張機能 v1.6 以上が必要です。
 
-タグプロジェクトに前述の3つの拡張機能をすべて含めたら、次の2つの方法のいずれかを実行できます。
+タグプロジェクトに前述の 3 つの拡張機能すべてを含めたら、次の 2 つの方法のいずれかを実行できます。
 
 * Web アプリケーションから `MediaHeartbeat` API を使用する
 * 特定のメディアプレイヤーイベントを `MediaHeartbeat` トラッカーインスタンス上の API にマッピングする、プレーヤー固有の拡張機能を含めたりビルドしたりします。このインスタンスは、MA 拡張機能を通じて公開されます。
