@@ -1,10 +1,10 @@
 ---
 title: Adobe Audience Manager 拡張機能の概要
-description: Adobe Experience PlatformのAdobe Audience Managerタグ拡張について説明します。
+description: Adobe Experience Platform の Adobe Audience Manager タグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 82%
+ht-degree: 96%
 
 ---
 
@@ -12,15 +12,15 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-Audience Managerタグ拡張を使用すれば、Audience Managerが使用するDILコードをAdobe Experience Platformのプロパティと統合できます。
+Audience Manager タグ拡張機能を使用すれば、Audience Manager が使用する DIL コードを Adobe Experience Platform のプロパティと統合できます。
 
 このリファレンスは、この拡張機能を使用してルールを作成するときに使用できるオプションに関する情報です。
 
 >[!NOTE]
 >
->この拡張機能は、Adobe Analyticsデータのイベント転送には使用されません。 イベント転送の場合は、[Adobe Analytics拡張機能](../analytics/overview.md)を使用します。
+>この拡張機能は、Adobe Analytics データのイベント転送には使用されません。イベント転送の場合は、[Adobe Analytics 拡張機能](../analytics/overview.md)を使用します。
 
 ## Adobe Audience Manager 拡張機能を設定する
 
