@@ -8,7 +8,7 @@ exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
 workflow-type: tm+mt
 source-wordcount: '332'
-ht-degree: 77%
+ht-degree: 81%
 
 ---
 
@@ -48,6 +48,6 @@ Platform Edge Network は、データを大規模に受信および処理でき�
 
 ## データの迅速かつ安全な変換、拡張、送信
 
-[Adobe Experience Platformのイベント転送では、任意のPlatform](../tags/ui/event-forwarding/overview.md) データストリームをタップできます。クライアントデバイスにサードパーティのコードを追加することなく、アドビ以外の任意の宛先に対して、非常に少ない遅延でデータを変換、拡張、および送信することができるため、より高速で安全なデータ収集と配信が実現します。
+[Adobe Experience Platform のイベント転送](../tags/ui/event-forwarding/overview.md)では、任意の Platform データストリームを利用できます。クライアントデバイスにサードパーティのコードを追加することなく、アドビ以外の任意の宛先に対して、非常に少ない遅延でデータを変換、拡張、および送信することができるため、より高速で安全なデータ収集と配信が実現します。
 
 ![](./images/launch.png)
