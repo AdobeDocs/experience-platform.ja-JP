@@ -1,10 +1,10 @@
 ---
 title: Adobe Privacy 拡張機能の概要
-description: Adobe Experience PlatformのAdobeプライバシータグ拡張について説明します。
+description: Adobe Experience Platform の Adobe Privacy タグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 92%
+ht-degree: 96%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 Adobe Privacy 拡張機能は、アドビソリューションによってエンドユーザーに割り当てられているユーザー ID を収集および削除する機能を提供します。
 
