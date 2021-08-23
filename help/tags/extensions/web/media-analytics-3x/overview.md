@@ -1,10 +1,10 @@
 ---
 title: Adobe MediumAnalytics (3.x SDK) for Audio and Video拡張機能の概要
-description: Adobe Experience PlatformのAnalytics (3.x SDK) for Audio and Videoタグ拡張について説明します。
+description: Adobe Experience Platform の Adobe Media Analytics (3.x SDK) for Audio and Video タグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 85%
+ht-degree: 96%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このドキュメントには、Adobe Media Analytics (3.x SDK) for Audio and Video 拡張機能（Media Analytics 拡張機能）のインストール、設定および実装に関する情報が含まれています。この拡張機能を使用してルールを作成し、サンプルやサンプルへのリンクを作成する場合に使用できるオプションについても説明します。
 
-Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 3.x SDK）を追加します。この拡張機能は、タグが有効なサイトまたはプロジェクトに`Media`トラッカーインスタンスを追加する機能を提供します。 MA 拡張機能には、次の 2 つの拡張拡張機能が必要です。
+Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 3.x SDK）を追加します。この拡張機能では、タグが有効なサイトまたはプロジェクトに `Media` トラッカーインスタンスを追加する機能を提供します。MA 拡張機能には、次の 2 つの拡張拡張機能が必要です。
 
 * [Analytics 拡張機能](../analytics/overview.md)
 * [Experience Cloud ID 拡張機能](../id-service/overview.md)
@@ -25,7 +25,7 @@ Media Analytics（MA）拡張機能は、コアe JavaScript Media SDK（Media 3.
 >
 >この拡張機能は、Media 3.x SDK でデプロイされ、Media 2.x SDK との下位互換性はありません。ページで既に Media 2.x SDK を使用している場合は、この拡張機能の代わりに [Adobe Media Analytics for Audio and Video 拡張機能](../media-analytics/overview.md)を使用します。
 
-タグを有効にしたプロジェクトに上記の3つの拡張機能をすべて含めたら、次の2つの方法のいずれかを実行できます。
+タグが有効なプロジェクトに前述の 3 つの拡張機能すべてを含めたら、次の 2 つの方法のいずれかを実行できます。
 
 * Web アプリケーションから `Media` API を使用する
 * 特定のメディアプレイヤーイベントを `Media` トラッカーインスタンス上の API にマッピングする、プレーヤー固有の拡張機能を含めたりビルドしたりします。このインスタンスは、MA 拡張機能を通じて公開されます。
@@ -84,7 +84,7 @@ MA 拡張機能は、[!UICONTROL 設定]ページ内の「Window オブジェク
 
 ### 他の拡張機能からの使用
 
-MA拡張は、`media`を共有モジュールとして他の拡張機能に公開します。 （共有モジュールについて詳しくは、[共有モジュールのドキュメント](../../../extension-dev/web/shared.md)/を参照してください。）
+MA 拡張機能は、`media` を共有モジュールとして他の拡張機能に公開します。（共有モジュールについて詳しくは、[共有モジュールのドキュメント](../../../extension-dev/web/shared.md)/を参照してください。）
 
 >[!IMPORTANT]
 >
