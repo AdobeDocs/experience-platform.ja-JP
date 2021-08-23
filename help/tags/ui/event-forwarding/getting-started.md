@@ -1,10 +1,10 @@
 ---
 title: イベント転送の概要
-description: Adobe Experience Platformでのイベント転送の使用を開始するには、このステップバイステップのチュートリアルに従ってください。
+description: このステップバイステップのチュートリアルに従って、Adobe Experience Platform でイベント転送の使用を開始してください。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 46%
+ht-degree: 94%
 
 ---
 
@@ -12,25 +12,25 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
-Adobe Experience Platformでイベント転送を使用するには、次の3つのオプションの1つ以上を使用して、データをAdobe Experience Platform Edge Networkに送信する必要があります。
+Adobe Experience Platform でイベント転送を使用するには、次の 3 つのオプションの 1 つ以上を使用して、データを Adobe Experience Platform Edge ネットワークに送信する必要があります。
 
 * [Adobe Experience Platform Web SDK](../../extensions/web/sdk/overview.md)
 * [Adobe Experience Platform モバイル SDK](https://sdkdocs.com)
-* [サーバー間API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+* [サーバー間 API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=ja)
 
 >[!NOTE]
->Platform Web SDKおよびPlatform Mobile SDKは、Adobe Experience Platformのタグを使用したデプロイメントは必要ありません。 ただし、タグを使用したこれらのSDKのデプロイが推奨されるアプローチです。
+>Platform web SDK および Platform Mobile SDK は、Adobe Experience Platform のタグを介したデプロイメントは必要ありません。ただし、タグを使用してこれらの SDK をデプロイすることが推奨されるアプローチです。
 
-Edge ネットワークにデータを送信した後、Adobeソリューションをオンにすることで、Edge ネットワークでデータを送信できます。データを非イベントソリューションに送信するには、Adobe転送でそれを設定します。
+Edge ネットワークにデータを送信した後、Adobeソリューションをオンにすることで、Edge ネットワークでデータを送信できます。アドビ以外のソリューションにデータを送信するには、イベント転送で設定します。
 
 ## 前提条件
 
 * Adobe Experience Platform Collection Enterprise（価格については担当のアカウントマネージャーにお問い合わせください）
-* Adobe Experience Platformでのイベント転送
+* Adobe Experience Platform でのイベント転送
 * Edge ネットワークにデータを送信するように設定された Adobe Experience Platform Web SDK または Mobile SDK
-* エクスペリエンスデータモデル(XDM)へのデータのマッピング（このマッピングはタグを使用しておこなうことができます）
+* Experience Data Model（XDM）へのデータのマッピング（このマッピングはタグを使用して実行できます）
 
 ## XDM スキーマの作成
 
@@ -40,7 +40,7 @@ Adobe Experience Platform で、スキーマを作成します。
 
 1. スキーマに名前を付け、簡単な説明を追加します。
 
-1. 「**[!UICONTROL フィールドグループ]**」の横にある「**[!UICONTROL 追加]**」を選択して、「ExperienceEvent web details」フィールドグループを追加できます。
+1. 「**[!UICONTROL フィールドグループ]**」の横にある「**[!UICONTROL 追加]**」を選択して、「ExperienceEvent Web の詳細」フィールドグループを追加できます。
 
    >[!NOTE]
    >
@@ -52,7 +52,7 @@ Adobe Experience Platform で、スキーマを作成します。
 
 ## イベント転送プロパティの作成
 
-データ収集UIで、「Edge」タイプのプロパティを作成します。
+データ収集 UI で、「Edge」タイプのプロパティを作成します。
 
 1. 「**[!UICONTROL 新しいプロパティ]**」を選択します。
 
@@ -67,11 +67,11 @@ Adobe Experience Platform で、スキーマを作成します。
 
 ## データストリームの作成
 
-Adobe Experience Platformでデータストリームを作成するには、イベント転送プロパティの作成時に生成された環境IDを使用します。
+Adobe Experience Platform でデータストリームを作成するには、イベント転送プロパティの作成時に生成された環境 ID を使用します。
 
-1. データ収集UIの左側のレールにあるリンクを使用して、データストリームインターフェイスを開きます。
+1. データ収集 UI の左側のレールにあるリンクを使用して、データストリームインターフェイスを開きます。
 
-1. **[!UICONTROL Datastreams]**&#x200B;を選択します。
+1. **[!UICONTROL データストリーム]**&#x200B;を選択します。
 
 1. 設定に名前を付け、必要に応じて説明を入力します。
 この説明は、複数の設定を含むリストで目的の設定を識別するのに役立ちます。
@@ -82,25 +82,25 @@ Adobe Experience Platformでデータストリームを作成するには、イ�
 
 ## イベント転送の有効化
 
-次に、Edgeネットワークを設定して、イベント転送や他のAdobe製品にデータを送信します。
+次に、Edge ネットワークを設定して、イベント転送や他のアドビ製品にデータを送信します。
 
-1. データストリームUIで、作成したプロパティを選択します。
+1. データストリーム UI で、作成したプロパティを選択します。
 
 1. 「開発」、「実稼働」、または「ステージング」環境を選択します。
 
-   または、Adobe組織外のイベント転送環境にデータを送信する場合は、「**[!UICONTROL 詳細設定モードに切り替え]**」を選択し、IDを貼り付けます。 このIDは、イベント転送プロパティを作成すると提供されます。
+   または、アドビ組織外のイベント転送環境にデータを送信する場合は、「**[!UICONTROL 詳細設定モードに切り替え]**」を選択して、ID を貼り付けます。この ID は、イベント転送プロパティの作成時に提供されます。
 
 1. 必要なツールをオンにして、必要に応じて設定します。
 
    * Adobe Analytics では、レポートスイート ID が必要です。
 
-   * Adobe Experience Platformでのイベント転送には、プロパティIDと環境IDが必要です。 これは、イベント転送プロパティのパブリッシュパスです。
+   * Adobe Experience Platform でのイベント転送には、プロパティ ID と環境 ID が必要です。 これは、イベント転送プロパティの公開パスです。
 
 設定後、新しいプロパティの環境 ID をメモします。
 
-## タグWeb SDK拡張機能を設定して、前に作成したデータストリームにデータを送信します。
+## タグ Web SDK 拡張機能を設定して、前に作成したデータストリームにデータを送信します。
 
-データ収集UIでプロパティを作成し、Adobe Experience Platform Web SDK拡張機能を使用して設定します。
+データ収集 UI でプロパティを作成し、Adobe Experience Platform Web SDK 拡張機能を使用して設定します。
 
 1. プロパティに名前を付けます。
 
@@ -112,9 +112,9 @@ Adobe Experience Platformでデータストリームを作成するには、イ�
 
 設定オプションについて詳しくは、[Web SDK 拡張機能のドキュメント](../../extensions/web/sdk/overview.md)を参照してください。
 
-## Platform Web SDKにデータを送信するタグルールを作成する
+## Platform web SDK にデータを送信するタグルールを作成する
 
-上記の手順を実行した後、イベント転送とタグを使用し、ページからのリクエストを1つだけ必要とするデータ定義やルールなどを作成します。
+上記を完了した後、データ定義やルールなどを作成します。その中ではイベント転送とタグを使用しますが、ページから必要なリクエストは 1 つだけです。
 
 Platform Web SDK 拡張機能と「イベントを送信」アクションタイプを使用して、ページ読み込みルールを作成します。
 
@@ -134,9 +134,9 @@ Platform Web SDK 拡張機能と「イベントを送信」アクションタイ
 
 ## 概要
 
-以下の設定が完了したら、イベント転送ルールを作成して、データをAdobe以外の宛先に転送できます。
+以下の設定を完了すると、アドビ以外の宛先にデータを転送するイベント転送ルールを作成できるようになります。
 
 * エクスペリエンスデータモデルスキーマ（付けた名前をメモします）
-* イベント転送プロパティ（プロパティIDと環境IDを追跡します）。
-* データストリーム（環境IDをメモしておきます。イベント転送の環境IDと混同しないでください）
+* イベント転送プロパティ（プロパティ ID と環境 ID を追跡します。）
+* データストリーム（イベント転送からの環境 ID と混同しないように、環境 ID に注意します。）
 * タグのプロパティ
