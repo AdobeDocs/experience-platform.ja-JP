@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Cloud ID サービス拡張機能の概要
-description: Adobe Experience PlatformのAdobe Experience Cloud IDサービスタグ拡張について説明します。
+description: Adobe Experience Platform の Adobe Experience Cloud ID サービスタグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 94%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 このリファレンスでは、Experience Cloud ID 拡張機能の設定と、この拡張機能を使用してルールを作成するときに使用できるオプションについて説明します。
 
@@ -48,7 +48,7 @@ URL が指定されたパスと一致する場合、Experience Cloud ID は読�
 
 「Opt In」オプションを使用して、訪問者がサイトでアドビのサービスをオプトインする必要があるかどうか（訪問者のアクティビティを追跡する cookie を作成するかどうかなど）を決定します。
 
-オプトインは、すべてのプラットフォームソリューションのクライアント側ライブラリで一元的に参照され、サイトの訪問時にユーザーのデバイスまたはブラウザーで cookie を作成できるかどうかを判断します。オプトインでは、ユーザーの同意の環境設定を収集または保存することはできません。
+オプトインは、すべての Platform ソリューションのクライアント側ライブラリで一元的に参照され、サイトの訪問時にユーザーのデバイスまたはブラウザーで cookie を作成できるかどうかを判断します。オプトインでは、ユーザーの同意の環境設定を収集または保存することはできません。
 
 **オプトインを有効にしますか？**
 
