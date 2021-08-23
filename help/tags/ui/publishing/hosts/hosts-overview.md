@@ -1,10 +1,10 @@
 ---
 title: ホストの概要
-description: Adobe Experience Platformで使用できる様々なホスティングオプションについて説明します。
+description: Adobe Experience Platform で利用可能な各種ホスティングオプションについて説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 74%
+ht-degree: 89%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 拡張機能、ルールおよびデータ要素は、構築ブロックです。アプリケーションで何らかの処理を実行する場合、これらの構築ブロックはライブラリに追加され、ライブラリはビルドへと「構築」されます。これらのビルドはホスト場所に配信されます。
 
