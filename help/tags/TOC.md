@@ -7,7 +7,7 @@ feature: データ収集
 source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
 workflow-type: tm+mt
 source-wordcount: '380'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 80%
 * はじめに {#get-started}
    * [クイックスタートガイド](./quick-start/quick-start.md)
    * [実装ガイド](./quick-start/implementation-guides.md)
-* データ収集UI {#ui}
+* データ収集 UI {#ui}
    * [概要](./ui/managing-resources/overview.md)
    * 拡張機能 {#extensions}
       * [概要](./ui/managing-resources/extensions/overview.md)
@@ -47,7 +47,7 @@ ht-degree: 80%
 * クライアント側の情報 {#client-side}
    * [概要](./ui/client-side/overview.md)
    * [非同期デプロイメント](./ui/client-side/asynchronous-deployment.md)
-   * [Satelliteオブジェクトのリファレンス](./ui/client-side/satellite-object.md)
+   * [サテライトオブジェクトのリファレンス](./ui/client-side/satellite-object.md)
    * [顧客の同意を管理する JavaScript タグのデプロイ](./ui/client-side/consent.md)
    * [コンテンツセキュリティポリシー（CSP）のサポート](./ui/client-side/content-security-policy.md)
    * [サブリソースの整合性（SRI）のサポート](./ui/client-side/sri.md)
@@ -67,7 +67,7 @@ ht-degree: 80%
          * [概要](./extensions/web/analytics/overview.md)
          * [共有モジュール](./extensions/web/analytics/shared-modules.md)
          * [リリースノート](./extensions/web/analytics/release-notes.md)
-      * Adobe Analytics Product String {#product-string}
+      * Adobe Analytics 製品文字列 {#product-string}
          * [概要](./extensions/web/product-string/overview.md)
          * [リリースノート](./extensions/web/product-string/release-notes.md)
       * Adobe Audience Manager {#audience-manager}
@@ -75,27 +75,27 @@ ht-degree: 80%
       * Adobe Client Data Layer {#client-data-layer}
          * [概要](./extensions/web/client-data-layer/overview.md)
          * [リリースノート](./extensions/web/client-data-layer/release-notes.md)
-      * AdobeContextHub {#contexthub}
+      * Adobe ContextHub {#contexthub}
          * [概要](./extensions/web/contexthub/overview.md)
       * Adobe Experience Cloud ID サービス {#id-service}
          * [概要](./extensions/web/id-service/overview.md)
          * [リリースノート](./extensions/web/id-service/release-notes.md)
-      * Adobe Experience Platformデモ{#platform-demo}
+      * Adobe Experience Platform デモ {#platform-demo}
          * [概要](./extensions/web/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#sdk}
          * [概要](./extensions/web/sdk/overview.md)
-      * Adobe Experience Platform Cloudコネクタ{#cloud-connector}
+      * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [概要](./extensions/web/cloud-connector/overview.md)
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [概要](./extensions/web/asset-insights/overview.md)
          * [リリースノート](./extensions/web/asset-insights/release-notes.md)
-      * Adobe Medium分析（オーディオおよびビデオ用） {#media-analytics}
+      * Adobe Media Analytics for Audio and Video {#media-analytics}
          * [概要](./extensions/web/media-analytics/overview.md)
          * [リリースノート](./extensions/web/media-analytics/release-notes.md)
-      * Adobe Medium分析(3.x SDK) {#media-analytics-3x}
+      * Adobe Media Analytics（3.x SDK） {#media-analytics-3x}
          * [概要](./extensions/web/media-analytics-3x/overview.md)
          * [リリースノート](./extensions/web/media-analytics-3x/release-notes.md)
-      * Adobeプライバシー{#privacy}
+      * アドビプライバシー {#privacy}
          * [概要](./extensions/web/privacy/overview.md)
       * Adobe Target {#target}
          * [概要](./extensions/web/target/overview.md)
@@ -103,7 +103,7 @@ ht-degree: 80%
       * Adobe Target v2 {#target-v2}
          * [概要](./extensions/web/target-v2/overview.md)
          * [リリースノート](./extensions/web/target-v2/release-notes.md)
-      * 共通のAnalyticsプラグイン{#plugins}
+      * Common Analytics Plugins {#plugins}
          * [概要](./extensions/web/plugins/overview.md)
          * [リリースノート](./extensions/web/plugins/release-notes.md)
       * コア {#core}
@@ -113,7 +113,7 @@ ht-degree: 80%
       * [!DNL Marketo Munchkin] {#marketo}
          * [概要](./extensions/web/marketo/overview.md)
          * [リリースノート](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] ビデオトラッキング  {#brightcove}
+      * [!DNL BrightCove] ビデオトラッキング {#brightcove}
          * [概要](./extensions/web/brightcove/overview.md)
          * [リリースノート](./extensions/web/brightcove/release-notes.md)
       * [!DNL YouTube] ビデオトラッキング拡張機能 {#youtube}
@@ -169,18 +169,18 @@ ht-degree: 80%
       * [ビルド](./api/endpoints/builds.md)
       * [環境](./api/endpoints/environments.md)
       * [ホスト](./api/endpoints/hosts.md)
-      * [アプリの設定](./api/endpoints/app-configurations.md)
-      * [監査イベント](./api/endpoints/audit-events.md)
+      * [アプリ設定](./api/endpoints/app-configurations.md)
+      * [イベントの監査](./api/endpoints/audit-events.md)
       * [コールバック](./api/endpoints/callbacks.md)
       * [備考](./api/endpoints/notes.md)
       * [プロファイル](./api/endpoints/profile.md)
       * [検索](./api/endpoints/search.md)
    * ガイド {#guides}
-      * [デリゲート記述子ID](./api/guides/delegate-descriptor-ids.md)
+      * [デリゲート記述子 ID](./api/guides/delegate-descriptor-ids.md)
       * [値の暗号化](./api/guides/encrypting-values.md)
       * [エラー処理](./api/guides/error-handling.md)
-      * [回答のフィルタリング](./api/guides/filtering.md)
-      * [応答のページ番号付け](./api/guides/pagination.md)
+      * [応答のフィルタリング](./api/guides/filtering.md)
+      * [応答のページ分割](./api/guides/pagination.md)
       * [応答の並べ替え](./api/guides/sorting.md)
       * [関係](./api/guides/relationships.md)
       * [リソースの検索](./api/guides/search.md)
