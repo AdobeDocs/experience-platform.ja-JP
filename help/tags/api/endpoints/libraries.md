@@ -1,28 +1,28 @@
 ---
 title: ライブラリエンドポイント
-description: Reactor APIで/librariesエンドポイントを呼び出す方法を説明します。
+description: Reactor API で /libraries エンドポイントを呼び出す方法について説明します。
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '1588'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # ライブラリエンドポイント
 
-ライブラリは、[property](./properties.md)の目的の動作を表すタグリソース（[extensions](./extensions.md)、[rules](./rules.md)、および[data要素](./data-elements.md)）のコレクションです。 Reactor APIの`/libraries`エンドポイントを使用すると、タグプロパティ内のライブラリをプログラムで管理できます。
+ライブラリは、[プロパティ](./properties.md)の目的の動作を表すタグリソース（[拡張機能](./extensions.md)、[ルール](./rules.md)および[データ要素](./data-elements.md)）のコレクションです。Reactor API の `/libraries` エンドポイントを使用すると、タグプロパティ内のライブラリをプログラムで管理できます。
 
-ライブラリは、1つのプロパティに属しています。 プロパティには多くのライブラリを含めることができます。
+ライブラリは、1 つのプロパティにのみ属します。プロパティには多くのライブラリを含めることができます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、[はじめる前に](../getting-started.md)を参照して、API への認証方法に関する重要な情報を確認してください。
 
-Reactor APIでライブラリを操作する前に、特定のライブラリに対して実行できるアクションを決定する際にライブラリの状態と環境が果たす役割を理解しておくことが重要です。 詳しくは、[ライブラリの公開フロー](../../ui/publishing/publishing-flow.md)のガイドを参照してください。
+Reactor API でライブラリを操作する前に、特定のライブラリに対して実行できるアクションの決定において、ライブラリの状態と環境が果たす役割を理解しておくことが重要です。詳しくは、[ライブラリの公開フロー](../../ui/publishing/publishing-flow.md)に関するガイドを参照してください。
 
 ## ライブラリのリストの取得 {#list}
 
-プロパティのライブラリのリストを取得するには、GETリクエストのパスにプロパティのIDを含めます。
+プロパティのライブラリのリストを取得するには、GET リクエストのパスにプロパティの ID を含めます。
 
 **API 形式**
 
@@ -32,13 +32,13 @@ GET /properties/{PROPERTY_ID}/libraries
 
 | パラメーター | 説明 |
 | --- | --- |
-| `PROPERTY_ID` | ライブラリを所有するプロパティの`id`。 |
+| `PROPERTY_ID` | ライブラリを所有するプロパティの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->クエリパラメーターを使用して、リストされたライブラリを次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
+>クエリパラメーターを使用し、リストされたライブラリを次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
 
 **リクエスト**
 
@@ -54,7 +54,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたプロパティのライブラリのリストを返します。
+応答が成功すると、指定されたプロパティのライブラリのリストが返されます。
 
 ```json
 {
@@ -148,7 +148,7 @@ curl -X GET \
 
 ## ライブラリの検索 {#lookup}
 
-ライブラリを検索するには、ライブラリリクエストのパスにIDを指定します。GET
+ライブラリを検索するには、GET リクエストのパスでその ID を指定します。
 
 **API 形式**
 
@@ -158,7 +158,7 @@ GET /libraries/{LIBRARY_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `LIBRARY_ID` | 検索するライブラリの`id`。 |
+| `LIBRARY_ID` | 検索するライブラリの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -176,7 +176,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、ライブラリの詳細を返します。
+応答が成功すると、ライブラリの詳細が返されます。
 
 ```json
 {
@@ -259,7 +259,7 @@ curl -X GET \
 
 ## ライブラリの作成 {#create}
 
-ライブラリリクエストを作成して、新しいPOSTを作成できます。
+新しいライブラリを作成するには、POST リクエストを実行します。
 
 **API 形式**
 
@@ -269,13 +269,13 @@ POST /properties/{PROPERTY_ID}/libraries
 
 | パラメーター | 説明 |
 | --- | --- |
-| `PROPERTY_ID` | ライブラリを定義する[プロパティ](./properties.md)の`id`。 |
+| `PROPERTY_ID` | ライブラリを定義する[プロパティ](./properties.md)の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、指定されたプロパティの新しいライブラリを作成します。 ライブラリを最初に作成するときは、`name`属性のみを設定できます。 データ要素、拡張機能、ルールをライブラリに追加するには、関係を作成する必要があります。 詳しくは、[ライブラリリソースの管理](#resources)の節を参照してください。
+次のリクエストでは、指定されたプロパティのライブラリが新しく作成されます。ライブラリを初めて作成する際には、`name` 属性のみを設定できます。データ要素、拡張機能およびルールをライブラリに追加するには、関係を作成する必要があります。詳しくは、[ライブラリリソースの管理](#resources)に関する節を参照してください。
 
 ```shell
 curl -X POST \
@@ -296,14 +296,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `attributes.name` | **（必須）** ライブラリのわかりやすい名前。 |
-| `type` | 更新するリソースのタイプ。 このエンドポイントでは、値を`libraries`にする必要があります。 |
+| `attributes.name` | **（必須）**&#x200B;人間が判読できるライブラリの名前。 |
+| `type` | 更新するリソースのタイプ。このエンドポイントの場合は、値を `libraries` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、新しく作成されたライブラリの詳細を返します。
+応答が成功すると、新しく作成したライブラリの詳細が返されます。
 
 ```json
 {
@@ -405,11 +405,11 @@ curl -X POST \
 
 ## ライブラリのリソースの管理 {#resources}
 
-ライブラリに関連付けられたデータ要素、拡張機能、ルール、環境は、関係を通じて確立されます。 以下の節では、API呼び出しを使用してこれらの関係を管理する方法について説明します。
+ライブラリに関連付けられたデータ要素、拡張機能、ルールおよび環境は、関係を通じて確立されます。以下の節では、API 呼び出しを使用してこれらの関係を管理する方法について説明します。
 
 ### ライブラリへのリソースの追加 {#add-resources}
 
-POSTリクエストのパスに`/relationships`を追加し、その後にリソースタイプを追加することで、ライブラリにリソースを追加できます。
+ライブラリにリソースを追加するには、POST リクエストのパスに `/relationships` を追加し、リソースタイプを続けて入力します。
 
 **API 形式**
 
@@ -419,14 +419,14 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | リソースを追加するライブラリのID。 |
-| `{RESOURCE_TYPE}` | ライブラリに追加するリソースのタイプ。 次の値を使用できます。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{LIBRARY_ID}` | リソースを追加するライブラリの ID。 |
+| `{RESOURCE_TYPE}` | ライブラリに追加するリソースのタイプ。次の値を使用できます。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、2つのデータ要素をライブラリに追加します。
+次のリクエストでは、2 つのデータ要素がライブラリに追加されます。
 
 ```shell
 curl -X POST \
@@ -452,14 +452,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | ライブラリに追加するリソースのID。 |
+| `id` | ライブラリに追加するリソースの ID。 |
 | `type` | ライブラリに追加するリソースのタイプ。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、追加された関係の詳細を返します。 ライブラリに対して[ルックアップリクエスト](#lookup)を実行すると、`relationships`プロパティに追加された関係が表示されます。
+応答が成功すると、追加された関係の詳細が返されます。ライブラリに対して[参照リクエスト](#lookup)を実行すると、追加された関係が `relationships` プロパティの下に表示されます。
 
 ```json
 {
@@ -480,9 +480,9 @@ curl -X POST \
 }
 ```
 
-### ライブラリのリソースの置き換え {#replace-resources}
+### ライブラリのリソースの置換 {#replace-resources}
 
-PATCHリクエストのパスに`/relationships`を追加し、置き換えるリソースタイプを追加することで、ライブラリの特定のタイプの既存のリソースをすべて置き換えることができます。
+ライブラリの特定のタイプの既存リソースをすべて置き換えるには、PATCH リクエストのパスに `/relationships` を追加し、置き換えるリソースタイプを続けて入力します。
 
 **API 形式**
 
@@ -492,14 +492,14 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 関係を置き換えるライブラリのID。 |
-| `{RESOURCE_TYPE}` | 置き換えるリソースのタイプ。 次の値を使用できます。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{LIBRARY_ID}` | 関係を置き換えるライブラリの ID。 |
+| `{RESOURCE_TYPE}` | 置き換えるリソースのタイプ。次の値を使用できます。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、ライブラリの拡張を`data`配列で指定された拡張に置き換えます。
+次のリクエストでは、ライブラリの拡張機能が `data` 配列で指定された拡張機能に置き換えられます。
 
 ```shell
 curl -X PATCH \
@@ -521,14 +521,14 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | ライブラリに追加するリソースのID。 |
+| `id` | ライブラリに追加するリソースの ID。 |
 | `type` | ライブラリに追加するリソースのタイプ。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、更新された関係の詳細を返します。 ライブラリに対して[ルックアップリクエスト](#lookup)を実行すると、`relationships`プロパティの下に関係が表示されます。
+応答が成功すると、更新された関係の詳細が返されます。ライブラリに対して[参照リクエスト](#lookup)を実行すると、`relationships` プロパティの下に関係が表示されます。
 
 ```json
 {
@@ -547,7 +547,7 @@ curl -X PATCH \
 
 ### ライブラリのリソースの削除 {#remove-resources}
 
-DELETEリクエストのパスに`/relationships`を追加し、その後で削除するリソースタイプを追加することで、ライブラリから既存のリソースを削除できます。
+ライブラリから既存のリソースを削除するには、DELETE リクエストのパスに `/relationships` を追加し、削除するリソースタイプを続けて入力します。
 
 **API 形式**
 
@@ -557,14 +557,14 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | リソースを削除するライブラリのID。 |
-| `{RESOURCE_TYPE}` | 削除するリソースのタイプ。 次の値を使用できます。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
+| `{LIBRARY_ID}` | リソースを削除するライブラリの ID。 |
+| `{RESOURCE_TYPE}` | 削除するリソースのタイプ。次の値を使用できます。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`rules`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、ライブラリからルールを削除します。 `data`配列に含まれていない既存のルールは削除されません。
+次のリクエストでは、ライブラリからルールが削除されます。`data` 配列に含まれていない既存のルールは削除されません。
 
 ```shell
 curl -X DELETE \
@@ -586,14 +586,14 @@ curl -X DELETE \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | ライブラリから削除するリソースのID。 |
+| `id` | ライブラリから削除するリソースの ID。 |
 | `type` | ライブラリから削除するリソースのタイプ。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、リソースタイプの更新された関係の詳細を返します。 このリソースタイプに関係が存在しない場合、`data`プロパティは空の配列として返されます。 ライブラリに対して[ルックアップリクエスト](#lookup)を実行すると、`relationships`プロパティの下に関係が表示されます。
+応答が成功すると、リソースタイプの更新された関係の詳細が返されます。このリソースタイプに関係が存在しない場合、`data` プロパティは空の配列として返されます。ライブラリに対して[参照リクエスト](#lookup)を実行すると、`relationships` プロパティの下に関係が表示されます。
 
 ```json
 {
@@ -609,7 +609,7 @@ curl -X DELETE \
 
 ## 環境へのライブラリの割り当て {#environment}
 
-ライブラリリクエストのパスに、環境`/relationships/environment`にPOSTを割り当てることができます。
+環境にライブラリを割り当てるには、POST リクエストのパスに `/relationships/environment` を追加します。
 
 **API 形式**
 
@@ -619,7 +619,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 割り当てるライブラリのID。 |
+| `{LIBRARY_ID}` | 割り当てるライブラリの ID。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -643,14 +643,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `id` | ライブラリを割り当てる環境のID。 |
-| `type` | `environments`に設定する必要があります。 |
+| `id` | ライブラリを割り当てる環境の ID。 |
+| `type` | `environments` に設定する必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、関係の詳細を返します。 ライブラリに対して[ルックアップリクエスト](#lookup)を実行すると、追加された関係が`relationships`プロパティに表示されます。
+応答が成功すると、関係の詳細が返されます。ライブラリに対して[参照リクエスト](#lookup)を実行すると、追加された関係が `relationships` プロパティの下に表示されます。
 
 ```json
 {
@@ -665,9 +665,9 @@ curl -X POST \
 }
 ```
 
-## ライブラリの移行 {#transition}
+## ライブラリのトランジション {#transition}
 
-PATCHリクエストのパスにIDを含め、ペイロードに適切な`meta.action`値を指定することで、ライブラリを別の公開状態に移行できます。
+ライブラリを別の公開状態にトランジションするには、PATCH リクエストのパスにその ID を含め、ペイロードに適切な `meta.action` 値を指定します。
 
 **API 形式**
 
@@ -677,13 +677,13 @@ PATCH /libraries/{LIBRARY_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `LIBRARY_ID` | 移行するライブラリの`id`。 |
+| `LIBRARY_ID` | トランジションをおこなうライブラリの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、ペイロードで提供された`meta.action`の値に基づいて、既存のライブラリの状態をトランジションします。 ライブラリで使用できるアクションは、[公開フロー](../../ui/publishing/publishing-flow.md#state)で説明されているように、現在の公開状態によって異なります。
+次のリクエストでは、ペイロードで指定された `meta.action` の値に基づいて、既存ライブラリの状態のトランジションをおこないます。[公開フロー](../../ui/publishing/publishing-flow.md#state)のページで説明されているように、ライブラリで使用できるアクションは現在の公開状態によって異なります。
 
 ```shell
 curl -X PATCH \
@@ -705,15 +705,15 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `meta.action` | ライブラリに対して実行する特定のトランジションアクション。 ライブラリの現在の公開状態に応じて、次のアクションを使用できます。 <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | 更新するライブラリの`id`。 これは、リクエストパスで指定された`{LIBRARY_ID}`値と一致する必要があります。 |
-| `type` | 更新するリソースのタイプ。 このエンドポイントでは、値を`libraries`にする必要があります。 |
+| `meta.action` | ライブラリに対して実行する特定のトランジションアクション。ライブラリの現在の公開状態に応じて、次のアクションを実行できます。 <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
+| `id` | 更新するライブラリの `id`。この値は、リクエストパスで指定された `{LIBRARY_ID}` 値と一致する必要があります。 |
+| `type` | 更新するリソースのタイプ。このエンドポイントの場合は、値を `libraries` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、更新されたライブラリの詳細を返します。
+応答が成功すると、更新されたライブラリの詳細が返されます。
 
 ```json
 {
@@ -813,7 +813,7 @@ POST /libraries/{LIBRARY_ID}/builds
 
 | パラメーター | 説明 |
 | --- | --- |
-| `LIBRARY_ID` | 公開するライブラリの`id`。 |
+| `LIBRARY_ID` | 公開するライブラリの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -904,17 +904,17 @@ curl -X POST \
 
 ## ライブラリのメモの管理 {#notes}
 
-ライブラリは「注目すべき」リソースで、個々のリソースでテキストベースのメモを作成し、取得できます。 ライブラリや他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモのエンドポイントガイド](./notes.md)を参照してください。
+ライブラリは「注目すべき」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。ライブラリや他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモエンドポイントガイド](./notes.md)を参照してください。
 
-## ライブラリの関連リソースの取得 {#related}
+## ライブラリに関連するリソースの取得 {#related}
 
-以下の呼び出しは、ライブラリの関連リソースを取得する方法を示しています。 [ライブラリ](#lookup)を検索すると、これらの関係は`relationships`プロパティの下に表示されます。
+以下の呼び出しは、ライブラリの関連リソースの取得方法を示しています。[ライブラリを検索する](#lookup)と、これらの関係が `relationships` プロパティの下に表示されます。
 
-Reactor APIの関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、[関係に関するガイド](../guides/relationships.md)を参照してください。
 
 ### ライブラリの関連データ要素のリスト {#data-elements}
 
-ライブラリが使用するデータ要素のリストを作成するには、ルックアップリクエストのパスに`/data_elements`を追加します。
+ライブラリが使用するデータ要素のリストを表示するには、参照リクエストのパスに `/data_elements` を追加します。
 
 **API 形式**
 
@@ -924,7 +924,7 @@ GET  /libraries/{LIBRARY_ID}/data_elements
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | リストするデータ要素を持つライブラリの`id`。 |
+| `{LIBRARY_ID}` | リストを取得するデータ要素があるライブラリの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -942,7 +942,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたライブラリを使用するデータ要素のリストを返します。
+応答が成功すると、指定されたライブラリを使用するデータ要素のリストが返されます。
 
 ```json
 {
@@ -1053,9 +1053,9 @@ curl -X GET \
 }
 ```
 
-### ライブラリの関連する拡張機能のリスト {#extensions}
+### ライブラリの関連拡張機能のリスト {#extensions}
 
-ライブラリが使用する拡張機能は、ルックアップリクエストのパスに`/extensions`を追加することでリストできます。
+ライブラリが使用する拡張機能のリストを表示するには、参照リクエストのパスに `/extensions` を追加します。
 
 **API 形式**
 
@@ -1065,7 +1065,7 @@ GET  /libraries/{LIBRARY_ID}/extensions
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | リストする拡張機能を持つライブラリの`id`。 |
+| `{LIBRARY_ID}` | 拡張機能のリストを取得するライブラリの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1083,7 +1083,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたライブラリを使用する拡張機能のリストを返します。
+応答が成功すると、指定されたライブラリを使用する拡張機能のリストが返されます。
 
 ```json
 {
@@ -1186,7 +1186,7 @@ curl -X GET \
 
 ### ライブラリの関連ルールのリスト {#rules}
 
-ライブラリで使用するルールは、ルックアップリクエストのパスに`/rules`を追加することでリストできます。
+ライブラリで使用するルールのリストを取得するには、参照リクエストのパスに `/rules` を追加します。
 
 **API 形式**
 
@@ -1196,7 +1196,7 @@ GET  /libraries/{LIBRARY_ID}/rules
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | ルールをリストするライブラリの`id`。 |
+| `{LIBRARY_ID}` | ルールのリストを取得するライブラリの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1214,7 +1214,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたライブラリを使用するルールのリストを返します。
+応答が成功すると、指定されたライブラリを使用するルールのリストが返されます。
 
 ```json
 {
@@ -1299,7 +1299,7 @@ curl -X GET \
 
 ### ライブラリの関連環境の検索 {#related-environment}
 
-GETリクエストのパスに`/environment`を追加すると、ライブラリが割り当てられている環境を検索できます。
+ライブラリが割り当てられている環境を検索するには、GET リクエストのパスに `/environment` を追加します。
 
 **API 形式**
 
@@ -1309,7 +1309,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | 環境を検索するライブラリの`id`。 |
+| `{LIBRARY_ID}` | 環境を検索するライブラリの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1327,7 +1327,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたライブラリが割り当てられている環境の詳細を返します。
+応答が成功すると、指定されたライブラリが割り当てられている環境の詳細が返されます。
 
 ```json
 {
@@ -1411,7 +1411,7 @@ curl -X GET \
 
 ### ライブラリの関連プロパティの検索 {#property}
 
-GETリクエストのパスに`/property`を追加して、ライブラリを所有するプロパティを検索できます。
+ライブラリを持つプロパティを検索するには、GET リクエストのパスに `/property` を追加します。
 
 **API 形式**
 
@@ -1421,7 +1421,7 @@ GET  /libraries/{LIBRARY_ID}/property
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | プロパティを検索するライブラリの`id`。 |
+| `{LIBRARY_ID}` | 検索するプロパティがあるライブラリの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1439,7 +1439,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたライブラリを所有するプロパティの詳細を返します。
+応答が成功すると、指定されたライブラリを持つプロパティの詳細が返されます。
 
 ```json
 {
@@ -1534,7 +1534,7 @@ curl -X GET \
 
 ### ライブラリのアップストリームの検索 {#upstream}
 
-GETリクエストのパスに`/upstream_library`を追加することで、ライブラリから次のライブラリをアップストリームで検索できます。
+ライブラリから次のライブラリアップストリームを検索するには、GET リクエストのパスに `/upstream_library` を追加します。
 
 **API 形式**
 
@@ -1544,7 +1544,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{LIBRARY_ID}` | アップストリームライブラリを検索するライブラリの`id`。 |
+| `{LIBRARY_ID}` | アップストリームライブラリを検索するライブラリの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1562,7 +1562,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、アップストリームライブラリの詳細を返します。
+応答が成功すると、アップストリームライブラリの詳細が返されます。
 
 ```json
 {
