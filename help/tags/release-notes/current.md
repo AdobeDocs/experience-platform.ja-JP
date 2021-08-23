@@ -1,10 +1,10 @@
 ---
 title: リリースノート
-description: Adobe Experience Platformのタグに関する最新のリリースノートです。
+description: Adobe Experience Platform のタグに関する最新のリリースノートです。
 source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 54%
+ht-degree: 80%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 54%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
+>Adobe Experience Platform Launch は、Experience Platform のデータ収集テクノロジースイートとしてリブランドされています。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../term-updates.md)を参照してください。
 
-## 2021 年 7 月 19 日
+## 2021 年 7 月 19 日（PT）
 
 **「プロパティの管理」権限の調整**  — プロパティの管理権限で、ユーザーが新しいプロパティを作成する権限を持っているが、作成後に表示できない問題が発生しました(こちらのコミュニティスレッドで説明していま [す](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176))。記事の説明に従って、修正が有効になり、権限が適用されるようになりました。
 
@@ -32,14 +32,14 @@ ht-degree: 54%
 
 ## 2021 年 4 月 22 日（PT）
 
-**Adobe Experience Platformでのデータ収集**  -Adobeにデータを送信することは、サイトや設定をアプリにデプロイすることだけではありません。Experience Platform SDK と Edge Network を使用するには、他の Platform 機能にアクセスする必要があります。以前はこのために、いくつかの異なるツールにログインする必要がありましたが、現在では、ツールが 1 か所にまとめられています。
+**Adobe Experience Platform データ収集** - アドビへのデータ送信は、タグをサイトにデプロイしたり、設定をアプリにデプロイしたりすることだけではありません。Experience Platform SDK と Edge Network を使用するには、他の Platform 機能にアクセスする必要があります。以前はこのために、いくつかの異なるツールにログインする必要がありましたが、現在では、ツールが 1 か所にまとめられています。
 
-Platformでのデータ収集は6つの機能で構成され、新しく合理化されたナビゲーションには、会社およびユーザーアカウントがアクセスできる項目のみが含まれます。  機能名の一部は、Experience Platform の命名パターンに合わせて更新されています。
+Platform のデータ収集は 6 つの機能で構成され、新しく合理化されたナビゲーションには、会社およびユーザーアカウントがアクセスできる項目のみが含まれます。機能名の一部は、Experience Platform の命名パターンに合わせて更新されています。
 
 * クライアント（以前はクライアントサイドとしてアクセス）
 * データストリーム（以前はエッジ設定としてアクセス）
 * サーバー（以前はサーバーサイドとしてアクセス）
-* アプリの設定
+* アプリ設定
 * スキーマ
 * ID
 
@@ -47,12 +47,12 @@ Experience Platform とデータ収集の進化にともない、さらに多く
 
 ## 2021 年 2 月 18 日（PT）
 
-* データ収集UIがreact-spectrum v3に更新されました。
+* データ収集 UI が react-spectrum v3 に更新されました。
 * 最新の Spectrum パターンに適合するように拡張機能カードを更新しました
 * アプリ全体で名前フィールドのサイズを大きくしました
 
 ## 2021 年 1 月 13 日（PT）
 
-**一般公開：Event** ForwardingSendイベントレベルのデータをAdobe Experience Platform Edge Networkに送信し、イベント転送を使用して、クライアントではなくAdobeのサーバーを使用して、低遅延でデータを変換、エンリッチメントおよび非Adobeエンドポイントに送信します。
+**一般提供：イベント転送** Adobe Experience Platform Edge Network にイベントレベルのデータを送信し、イベント転送を使用してデータを変換、強化し、クライアントではなくアドビのサーバーを使用してアドビ以外のエンドポイントにそのデータを低遅延で送信します。
 
-詳しくは、[イベント転送の概要](../ui/event-forwarding/overview.md)および[入門ガイド](../ui/event-forwarding/getting-started.md)を参照してください。
+詳しくは、[イベント転送の概要](../ui/event-forwarding/overview.md)および[はじめる前に](../ui/event-forwarding/getting-started.md)を参照してください。
