@@ -1,10 +1,10 @@
 ---
 title: コア拡張機能のリリースノート
-description: Adobe Experience PlatformのCore拡張機能の最新のリリースノートです。
+description: Adobe Experience Platform の Core 拡張機能に関する最新のリリースノートです。
 source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
 workflow-type: tm+mt
 source-wordcount: '1293'
-ht-degree: 80%
+ht-degree: 89%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2021 年 8 月 11 日（PT）
 
@@ -49,7 +49,7 @@ v2.0.4
 
 * さまざまなフィールドにデータ要素のサポートを追加しました - 次のイベントにデータ要素のサポートが追加されました：「ページ滞在時間」、「ビューポートに入る」、「ホバー」、「メディアの再生時間」。次の条件もあります：「サイト滞在時間」と「値の比較」
 * リンクディレイの使用時の Ctrl／Command キーを押しながらクリック、およびマウスの中ボタンのクリックに対するデフォルト動作のサポートを追加します。
-* **クリックイベントでのリンクディレイを「サポートされなくなりました」とマークしました。**  — 詳しくは、 Adobe Experience Platformのデータ収集ブログを [参照してく](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) ださい
+* **クリックイベントでのリンクディレイを「サポートされなくなりました」とマークしました。** - 詳しくは、Adobe Experience Platform の[データ収集ブログ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403)を参照してください
 
 ## 2021 年 1 月 6 日（PT）
 
@@ -113,7 +113,7 @@ v1.6.2
 
 v1.6.1
 
-* **CSP nonce のサポート**：コア拡張機能にオプションの構成パラメーターが追加されました。nonce を参照するデータ要素を追加できます。設定した場合、タグがページに追加するすべてのインラインスクリプトで、設定したナンスが使用されます。 この変更は、タグスクリプトをCSP環境で引き続き読み込めるように、コンテンツセキュリティポリシーとnonceの使用をサポートします。 CSPでのタグの使用について詳しくは、[こちら](../../../ui/client-side/content-security-policy.md)を参照してください。
+* **CSP nonce のサポート**：コア拡張機能にオプションの構成パラメーターが追加されました。nonce を参照するデータ要素を追加できます。設定した場合、タグがページに追加するすべてのインラインスクリプトで、指定した nonce を使用します。この変更は、タグスクリプトをCSP環境で引き続き読み込めるように、コンテンツセキュリティポリシーとnonceの使用をサポートします。 CSPでのタグの使用について詳しくは、[こちら](../../../ui/client-side/content-security-policy.md)を参照してください。
 
 ## 2019 年 6 月 18 日（PT）
 
@@ -141,8 +141,8 @@ v1.4.2
 ## 2018 年 11 月 8 日（PT）
 
 * **コホート保持オプション**：コホートを持続するオプションがサンプリング条件に追加されました。これにより、セッションをまたいでサンプルコホートにユーザーを保持したり、サンプルコホートから削除できるようになります。例えば、「persist cohort」チェックボックスがオンになっており、条件が特定の訪問者に対して最初に実行されたときに true を返す場合、同じ訪問者に対して、その後のすべての条件の実行時に true が返されます。同様に、「persist cohort」チェックボックスがオンになっており、条件が特定の訪問者に対して最初に実行されたときに false を返す場合、同じ訪問者に対して、その後のすべての条件の実行時に false が返されます。
-* **バグ修正** ：タグが同期的に読み込まれるが適切にインストールされていない（への呼び出しがない）ページでPage BottomイベントとCustom Codeアクションを使用するルールがWebサイトのコンテンツを消去する問題を修正しま `_satellite.pageBottom()`した。
-* **バグ修正** ：タグライブラリが非同期で読み込まれ、ブラウザーのDOMContentLoadedイベントが実行された後に読み込みを終了した場合、「Enters Viewport」が機能しない問題を修正しました。
+* **バグ修正**：タグが同時に読み込まれるけれど、正常にインストールされない（`_satellite.pageBottom()` への呼び出しをおこなわない）ページにおいて、「Page Bottom」イベントと「Custom Code」アクションを使用するルールによって Web サイトのコンテンツが消去される問題を修正しました。
+* **バグ修正**：タグライブラリが非同期で読み込まれ、ブラウザーの DOMContentLoaded イベントが実行された後に読み込みを終了した場合、「Enters Viewport」が機能しない問題を修正しました。
 
 ## 2018 年 5 月 24 日（PT）
 
