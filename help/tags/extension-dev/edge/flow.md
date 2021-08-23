@@ -1,10 +1,10 @@
 ---
 title: Edge 拡張機能のフロー
-description: Adobe Experience Platformのエッジ拡張機能のコンポーネントが実行時に相互にやり取りする方法を説明します。
+description: Adobe Experience Platform のエッジ拡張機能のコンポーネントが実行時に相互にやり取りする方法を説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 51%
+ht-degree: 93%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 エッジ拡張機能の各条件、アクション、およびデータ要素のタイプには、ユーザーが設定を変更できるビューと、これらのユーザー定義の設定に基づいて動作するライブラリモジュールの両方が用意されています。
 
-次の概要図に示すように、拡張機能のアクションタイプビューは、Adobe Experience Platformと統合されたアプリケーションのiframe内に表示されます。 このビューを使用して設定が変更され、Platform内に保存されます。 タグランタイムライブラリを構築すると、エッジノードにデプロイされるランタイムライブラリに、拡張機能のアクションタイプライブラリモジュールとユーザー定義の設定の両方が含まれます。 Platformのユーザー定義設定は、実行時にライブラリモジュールに挿入されます。
+次の概要図に示すように、拡張機能のアクションタイプビューは、Adobe Experience Platform と統合されたアプリケーションの iframe 内に表示されます。次に、ビューを使用して設定を変更し、Platform 内に保存します。タグランタイムライブラリを構築する場合、エッジノードにデプロイされるランタイムライブラリには、拡張機能のアクションタイプライブラリモジュールとユーザー定義の設定の両方が含まれます。Platform のユーザー定義設定は、実行時にライブラリモジュールに挿入されます。
 
 ![拡張機能のフロー図](../images/flow/edge/event-processing-flow.png)
 
