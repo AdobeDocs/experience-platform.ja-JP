@@ -1,26 +1,26 @@
 ---
 title: 会社エンドポイント
-description: Reactor APIで/companiesエンドポイントを呼び出す方法を説明します。
+description: Reactor API で /companies エンドポイントを呼び出す方法を説明します。
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '247'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # 会社エンドポイント
 
-会社は、顧客組織（通常はビジネス）を表します。 Reactor APIでは、これらの会社はIMS組織IDを持つ1:1と一致します。 APIユーザーは、アクセス権のある会社のみを表示できます。 会社には、多くの[プロパティ](./properties.md)が含まれる場合があります。 プロパティは、1つの会社に属します。
+会社は、顧客組織（通常はビジネス）を表します。Reactor API では、これらの企業は IMS 組織 ID と 1 対 1 で一致します。API ユーザーは、自身がアクセス権を持つ会社のみを表示できます。会社には、多くの[プロパティ](./properties.md)が含まれる場合があります。プロパティは、厳密に 1 つの会社に属します。
 
-Reactor APIの`/companies`エンドポイントを使用すると、エクスペリエンスアプリケーション内でアクセス権のある会社をプログラムで取得できます。
+Reactor API の `/companies` エンドポイントを使用すると、エクスペリエンスアプリケーション内で、自身がアクセス権を持つ会社をプログラムによって取得できます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
 
 ## 会社のリストの取得 {#list}
 
-`/companies`エンドポイントにGETリクエストを送信することで、使用権限のある会社のリストを作成できます。 ほとんどの場合、1つだけです。
+`/companies` エンドポイントに GET リクエストを送信することで、使用権限のある会社のリストを作成できます。ほとんどの場合、1 つのみです。
 
 **API 形式**
 
@@ -46,7 +46,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、アクセス権のある会社のリストを返します。
+応答が成功すると、アクセス権のある会社のリストが返されます。
 
 ```json
 {
@@ -108,7 +108,7 @@ curl -X GET \
 
 ## 会社の検索 {#lookup}
 
-特定の会社を検索するには、会社のIDをGETリクエストのパスに含めます。
+GET リクエストのパスにその ID を含めることで、特定の会社を検索できます。
 
 **API 形式**
 
@@ -118,7 +118,7 @@ GET /companies/{COMPANY_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{COMPANY_ID}` | 検索する会社の`id`値。 |
+| `{COMPANY_ID}` | 検索する会社の `id` 値です。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -136,7 +136,7 @@ curl -X GET \
 
 **応答**
 
-成功応答は、会社の詳細を返します。
+応答が成功すると、会社の詳細が返されます。
 
 ```json
 {
