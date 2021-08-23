@@ -1,10 +1,10 @@
 ---
 title: Common Analytics Plugins 拡張機能のリリースノート
-description: Adobe Experience PlatformのCommon Analytics Pluginsタグ拡張機能に関する最新のリリースノートです。
+description: Adobe Experience Platform の Common Analytics Plugins タグ拡張機能に関する最新のリリースノートです。
 source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
 workflow-type: tm+mt
 source-wordcount: '314'
-ht-degree: 92%
+ht-degree: 96%
 
 ---
 
