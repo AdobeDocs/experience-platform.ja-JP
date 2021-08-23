@@ -1,10 +1,10 @@
 ---
 title: Adobe Target 拡張機能のリリースノート
-description: Adobe Experience PlatformのAdobe Targetタグ拡張機能に関する最新のリリースノートです。
+description: Adobe Experience Platform の Adobe Target タグ拡張機能に関する最新のリリースノートです。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '506'
-ht-degree: 74%
+ht-degree: 96%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2020 年 7 月 24 日（PT）
 
@@ -42,13 +42,13 @@ ht-degree: 74%
 * 以前、ECID ライブラリは、at.js がエクスペリエンスを取得する前に、2 回のブロック呼び出しをおこなっていました。これを 1 回の呼び出しに短縮し、パフォーマンスが大幅に向上しました。
 
 >[!NOTE]
->このパフォーマンス強化を利用するには、Adobe Experience PlatformのECIDタグ拡張機能をv4.4.1にアップグレードしてください。
+>このパフォーマンス強化を利用するには、Adobe Experience Platform の ECID タグ拡張機能を v4.4.1 にアップグレードしてください。
 
 ## 2019 年 7 月 31 日（PT）
 
 ### Adobe Target Extension 0.10.1
 
-* Adobe Targetのタグ拡張を処理するパラメーターのホットフィックス
+* Adobe Target のタグ拡張機能を処理するパラメーターのホットフィックス
 
 ## 2019 年 5 月 4 日（PT）
 
@@ -74,7 +74,7 @@ ht-degree: 74%
 
 #### **機能**
 
-* 拡張機能が更新され、タグを介してオプトインプライバシー機能がサポートされるat.js 1.7.0を使用して、Targetタグを実行する方法とタイミングを制御できるようになりました。 オプトインの実装を設定する方法については、タグのドキュメントを参照してください。 空の値を持つ mbox パラメーターが Target に送信されるかどうかをカスタマイズできます。
+* Target タグが実行される方法とタイミングを制御するために、タグを介してサポートされるオプトインプライバシー機能がサポートされている at.js 1.7.0 を使用するよう拡張機能を更新しました。オプトインの実装をセットアップする方法については、タグドキュメントを確認してください。空の値を持つ mbox パラメーターが Target に送信されるかどうかをカスタマイズできます。
 
 ## 2019 年 1 月 23 日（PT）
 
@@ -140,7 +140,7 @@ ht-degree: 74%
 
 #### **バグの修正**
 
-* Adobe Target拡張機能で、タグを使用してVisual Experience Composerをデプロイするとページを非表示にできないエラーを修正しました。
+* タグを通じて Visual Experience Composer をデプロイすると、ページを非表示にできなかった Adobe Target 拡張機能のエラーを修正しました。
 
 ## 2018 年 2 月 8 日（PT）
 
