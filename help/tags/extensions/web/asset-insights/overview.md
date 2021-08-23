@@ -1,10 +1,10 @@
 ---
 title: AEM Asset Insights 拡張機能の概要
-description: Adobe Experience PlatformのAEM Asset Insightsタグ拡張について説明します。
+description: Adobe Experience Platform の AEM Asset Insights タグ拡張機能について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1118'
-ht-degree: 88%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 この拡張機能は、[AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=ja) と共に使用することを意図しています。具体的には、「pageTracker」プロセスと埋め込みコードが置き換えられます。設定すると、この拡張機能によって Asset *Impression* と *Click* 指標が Adobe Analytics に送信され、その後、AEM Asset Insights レポートに読み込まれます。その後、AEM Asset Insights または Adobe Analytics プロジェクトの Workspace を使用して、アセット指標をレポートできます。
 
@@ -32,7 +32,7 @@ Analytics の AEM Asset レポートには、次の 3 つのディメンショ�
 
 この拡張機能を使用してレポートを入力するには、Analytics Administrator（**[!UICONTROL Analytics]／[!UICONTROL 管理]／[!UICONTROL レポートスイート]／`<report suite>`／[!UICONTROL 設定を編集]／[!UICONTROL AEM]／[!UICONTROL AEM Assets レポート]**）を使用してこれらのレポートを有効にする必要があります。
 
-Adobe Experience Platformの「*Adobe Analytics*」タグ拡張は、同じWebプロパティにインストールする必要があります。
+Adobe Experience Platform 用の「*Adobe Analytics*」 タグ拡張機能は、同じ Web プロパティにインストールする必要があります。
 
 ### Adobe Experience Manager（AEM）
 
@@ -48,15 +48,15 @@ Adobe Experience Platformの「*Adobe Analytics*」タグ拡張は、同じWeb�
 
 ## Adobe Experience Manager（AEM）の設定
 
-この節では、Adobe Experience Platformでタグ付きのAEMを設定する方法、AEMでAsset Insightを有効にする方法、アセットのUUID追跡を有効にする方法について説明します。
+ここでは、Adobe Experience Platform のタグを使用した AEM の設定方法、AEM での Asset Insight の有効化方法、アセットの UUID トラッキングの有効化方法を説明します。
 
-### タグとAEMの統合
+### タグと AEM の統合
 
-[Platform ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja) を Adobe Experience Manager と統合する場合、Adobe I/O を使用して実行することをお勧めします。
+[Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=ja) を Adobe Experience Manager と統合する場合、Adobe I/O を使用して実行することをお勧めします。
 
-1. [Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=ja)を使用して、AEMをタグに接続します。
+1. [Adobe I/O を使用して AEM とタグを接続します](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=ja)。
 
-2. [Adobe Experience PlatformCloud Service設定の作成](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=ja)
+2. [Adobe Experience Platform Cloud Service 設定を作成します](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=ja)。
 
 ### AEM での Asset Insight の有効化
 
@@ -86,7 +86,7 @@ UUID を有効にしたら、「data-asset-id」データ要素にアセット�
 
 ### アセットのインプレッション
 
-すべてのページで実行され、Analyticsイメージリクエストを送信する新しいタグルールまたは既存のタグルールに「AA変数を設定」アクションを追加します。 「AA 変数の設定」アクションは、「Adobe Analytics - ビーコンの送信」アクションの&#x200B;**前**&#x200B;に記述する必要があります。必要に応じて、追加のアクションを追加できます。
+すべてのページで実行され、Analytics イメージリクエストを送信する新規または既存のタグルールに「AA 変数の設定」アクションを追加します。「AA 変数の設定」アクションは、「Adobe Analytics - ビーコンの送信」アクションの&#x200B;**前**&#x200B;に記述する必要があります。必要に応じて、追加のアクションを追加できます。
 
 **[AA 変数の設定]**&#x200B;設定ページで、「**[表示されたアセット]**」（デフォルト）オプションを選択します。これは、訪問者が実際に表示するアセットのインプレッションイベントのみを設定します。
 
