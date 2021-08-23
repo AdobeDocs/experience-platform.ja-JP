@@ -1,26 +1,26 @@
 ---
 title: メモエンドポイント
-description: Reactor APIで/notesエンドポイントを呼び出す方法を説明します。
+description: Reactor API で /notes エンドポイントを呼び出す方法を説明します。
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '530'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 # メモエンドポイント
 
-Reactor APIでは、メモは、特定のリソースに追加できるテキスト注釈です。 メモとは、基本的に、それぞれのリソースに関するコメントです。 メモの内容は、リソースの動作に影響を与えず、次のような様々な使用例に使用できます。
+Reactor API では、メモは特定のリソースに追加できるテキスト注釈です。 メモとは基本的に、それぞれのリソースに関するコメントです。 メモの内容は、リソースの動作に影響を与えず、次のような様々なユースケースに使用できます。
 
 * 背景情報の提供
-* TODOリストとしての機能
+* TODO リストとしての機能
 * リソース使用状況に関するアドバイスを渡す
 * 他のチームメンバーに指示を与える
 * 履歴コンテキストの記録
 
-Reactor APIの`/notes`エンドポイントを使用すると、これらのノートをプログラムで管理できます。
+Reactor API の `/notes` エンドポイントを使用すると、これらのメモをプログラムで管理できます。
 
-メモは、次のリソースに適用できます。
+メモは、次のリソースに添付できます。
 
 * [データ要素](./data-elements.md)
 * [拡張機能](./extensions.md)
@@ -29,21 +29,21 @@ Reactor APIの`/notes`エンドポイントを使用すると、これらのノ�
 * [ルールコンポーネント](./rule-components.md)
 * [ルール](./rules.md)
 
-これら6種類をまとめて「注目すべき」リソースと呼びます。 注目すべきリソースを削除すると、関連付けられたメモも削除されます。
+これら 6 種類をまとめて「メモ機能のある」リソースと呼びます。 メモ機能のあるリソースを削除すると、関連付けられたメモも削除されます。
 
 >[!NOTE]
 >
->複数のリビジョンを持つことができるリソースの場合は、現在の（ヘッド）リビジョンでメモを作成する必要があります。 他のリビジョンには添付できない場合があります。
+>複数のリビジョンを持つことができるリソースの場合は、現在の（head）リビジョンでメモを作成する必要があります。他のリビジョンには添付できない場合があります。
 >
->ただし、メモは引き続きリビジョンから読み取ることができます。 この場合、APIはリビジョンの作成前に存在したメモのみを返します。 リビジョンが切り取られたときと同じように、アノテーションのスナップショットが表示されます。 これに対し、現在の(head)リビジョンからメモを読むと、すべてのメモが返されます。
+>ただし、メモは引き続きリビジョンから読み取ることができます。 この場合、API はリビジョンの作成前に存在したメモのみを返します。リビジョンが切り取られたときと同じように、注釈のスナップショットが表示されます。 これに対し、現在の（head）リビジョンからメモを読むと、すべてのメモが返されます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を参照してください。
 
 ## メモのリストの取得 {#list}
 
-リソースのメモのリストを取得するには、該当するリソースのGETリクエストのパスに`/notes`を追加します。
+リソースのメモのリストを取得するには、該当するリソースの GET リクエストのパスに `/notes` を追加します。
 
 **API 形式**
 
@@ -53,14 +53,14 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | パラメーター | 説明 |
 | --- | --- |
-| `RESOURCE_TYPE` | メモを取得するリソースのタイプ。 次のいずれかの値にする必要があります。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | メモを一覧表示する特定のリソースの`id`。 |
+| `RESOURCE_TYPE` | メモを取得するリソースのタイプ。 次の値のいずれかである必要があります。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_ID` | メモのリストを取得する特定のリソースの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストでは、ライブラリに添付されているメモの一覧を示します。
+次のリクエストでは、ライブラリに添付されているメモをリストします。
 
 ```shell
 curl -X GET \
@@ -74,7 +74,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、指定されたリソースに添付されたメモのリストを返します。
+応答が成功すると、指定されたリソースに添付されたメモのリストが返されます。
 
 ```json
 {
@@ -119,7 +119,7 @@ curl -X GET \
 
 ## メモの検索 {#lookup}
 
-メモを検索するには、メモリクエストのパスにIDを指定します。GETリクエストのパスにIDを指定します。
+メモを検索するには、GET リクエストのパスに ID を指定します。
 
 **API 形式**
 
@@ -129,7 +129,7 @@ GET /notes/{NOTE_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `NOTE_ID` | 検索するメモの`id`。 |
+| `NOTE_ID` | 検索するメモの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -147,7 +147,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、メモの詳細を返します。
+応答が成功すると、メモの詳細が返されます。
 
 ```json
 {
@@ -183,9 +183,9 @@ curl -X GET \
 
 >[!WARNING]
 >
->新しいメモを作成する前に、メモは編集できないので、メモを削除するには、対応するリソースを削除するだけです。
+>新しいメモを作成する前に、メモは編集できず、メモを削除するには対応するリソースを削除する必要があるということを覚えておいてください。
 
-新しいメモを作成するには、該当するリソースのPOSTリクエストのパスに`/notes`を追加します。
+新しいメモを作成するには、該当するリソースの POST リクエストのパスに `/notes` を追加します。
 
 **API 形式**
 
@@ -195,8 +195,8 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | パラメーター | 説明 |
 | --- | --- |
-| `RESOURCE_TYPE` | メモを作成するリソースのタイプ。 次のいずれかの値にする必要があります。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | メモを作成する特定のリソースの`id`。 |
+| `RESOURCE_TYPE` | メモを作成するリソースのタイプ。 次の値のいずれかである必要があります。 <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_ID` | メモを作成する特定のリソースの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -223,14 +223,14 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `type` | **（必須）** 更新するリソースのタイプ。このエンドポイントでは、値を`notes`にする必要があります。 |
-| `attributes.text` | **（必須）** メモを含むテキスト。各メモは、512文字のUnicode文字に制限されています。 |
+| `type` | **（必須）**&#x200B;更新するリソースのタイプ。このエンドポイントの場合は、値を `notes` にする必要があります。 |
+| `attributes.text` | **（必須）**&#x200B;メモを含むテキスト。各メモは、512 文字の Unicode 文字に制限されています。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-正常な応答は、新しく作成されたメモの詳細を返します。
+応答が成功すると、新しく作成したメモの詳細が返されます。
 
 ```json
 {
