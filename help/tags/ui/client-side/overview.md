@@ -1,10 +1,10 @@
 ---
 title: 'クライアントサイドの情報 '
-description: Webまたはモバイルアプリケーションのクライアント側でタグ操作を管理する方法を説明します。
+description: Web またはモバイルアプリケーションのクライアントサイドでタグ操作を管理する方法を説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '198'
-ht-degree: 40%
+ht-degree: 90%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 40%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
-この節では、Adobe Experience Platformでクライアント側のタグ操作を管理する際に役立つ情報について説明します。
+この節では、Adobe Experience Platform でクライアントサイドのタグ操作を管理する際に役立つ情報について説明します。
 
 * [**タグ「_satellite」オブジェクト参照**](satellite-object.md)
 
@@ -22,6 +22,6 @@ ht-degree: 40%
 
 * [**Experience Cloud JavaScript の非同期デプロイメント**](asynchronous-deployment.md)
 
-   製品で必要となるJavaScriptライブラリのパフォーマンスと、ノンブロッキングデプロイメントは、Adobe Experience Cloudユーザーにとってますます重要になっています。 [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) などのツールは、自分たちのサイトでの [!DNL Adobe] ライブラリのデプロイ方法を変更するユーザーにお勧めです。この記事では、非同期的にAdobeJavaScriptライブラリを使用する方法を説明します。
+   アドビの製品で必要となる JavaScript ライブラリのパフォーマンスとノンブロッキングデプロイメントは、 Adobe Experience Cloud ユーザーにとってますます重要となっています。[[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) などのツールは、自分たちのサイトでの [!DNL Adobe] ライブラリのデプロイ方法を変更するユーザーにお勧めです。この記事では、アドビの JavaScript ライブラリを非同期で使用する方法について説明します。
 
-* [**コンテンツセキュリティポリシー**](content-security-policy.md)（CSP）は、クロスサイトスクリプティング（XSS）などの特定タイプのブラウザーベースの攻撃を検出し、軽減するためのツールです。この記事では、タグ実装に対するCSPの影響と、それに関して何ができるかについて説明します。
+* [**コンテンツセキュリティポリシー**](content-security-policy.md)（CSP）は、クロスサイトスクリプティング（XSS）などの特定タイプのブラウザーベースの攻撃を検出し、軽減するためのツールです。この記事では、タグの実装に対する CSP の影響と、それに関して何ができるかについて説明します。
