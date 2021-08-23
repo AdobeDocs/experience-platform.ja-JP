@@ -5,16 +5,16 @@ title: ソースコネクタの概要
 topic-legacy: overview
 description: Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '979'
-ht-degree: 55%
+source-wordcount: '1007'
+ht-degree: 56%
 
 ---
 
 # ソースコネクタの概要
 
-Adobe Experience Platform を使用すると、データを外部ソースから取得しながら、Platform サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことができます。Adobe・アプリケーション、クラウド・ベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
+Adobe Experience Platform を使用すると、外部ソースからデータを取り込みながら、Platform サービスを使用して受信データの構造化、ラベル付けおよび拡張を行うことができます。アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取り込むことができます。
 
 [!DNL Flow Service] は、Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、様々なデータプロバイダーへのソース接続を簡単に設定できるユーザーインターフェイスとRESTful APIを提供します。 これらのソース接続を使用すると、サードパーティ製システムの認証、取得の実行時間の設定、データ取得スループットの管理をおこなうことができます。
 
@@ -104,6 +104,12 @@ Experience Platformは、サードパーティのeコマースシステムから
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
+### ローカルシステム
+
+Experience Platformは、ローカルシステムからデータを取り込む機能を提供します。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
+
+- [ローカルファイルのアップロード](connectors/local-system/local-file-upload.md)
+
 ### マーケティングの自動処理
 
 Experience Platform は、サードパーティのマーケティング自動化システムからデータを取得する機能を備えています。特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
@@ -122,7 +128,6 @@ Experience Platformは、サードパーティの支払いシステムからデ�
 Experience Platformは、ストリーミングソースからデータを取り込む機能を備えています。 特定のソースコネクタの詳細については、次の関連ドキュメントを参照してください。
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
-
 
 ### プロトコル
 
