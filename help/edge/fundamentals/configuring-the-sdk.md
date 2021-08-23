@@ -4,10 +4,10 @@ description: Adobe Experience Platform Web SDKの設定方法について説明�
 seo-description: Experience Platform Web SDK の設定方法について説明します
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；web；デバイス；環境；placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk設定；prehidingStyle;opacity;cookieDestinationsEnabled;DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
+source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 43%
+source-wordcount: '856'
+ht-degree: 42%
 
 ---
 
@@ -31,6 +31,10 @@ alloy("configure", {
 ## 一般オプション
 
 ### `edgeConfigId`
+
+>[!NOTE]
+>
+>**エッジ設定は、データストリームにリブランドされました。データストリームIDは構成IDと同じです。**
 
 | **タイプ** | **必須** | **デフォルト値** |
 | -------- | ------------ | ----------------- |
