@@ -1,10 +1,10 @@
 ---
 title: Marketo Munchkin 拡張機能のリリースノート
-description: Adobe Experience PlatformのMarketo Munchkinタグ拡張の最新のリリースノートです。
+description: Adobe Experience Platform の Marketo Munchkin タグ拡張機能に関する最新のリリースノートです。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '140'
-ht-degree: 67%
+ht-degree: 87%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2020 年 12 月 2 日（PT）
 
