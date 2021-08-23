@@ -1,10 +1,10 @@
 ---
 title: Adobe Analytics 拡張機能のリリースノート
-description: Adobe Experience PlatformのAdobe Analyticsタグ拡張機能に関する最新のリリースノートです。
+description: Adobe Experience Platform の Adobe Analytics タグ拡張機能に関する最新のリリースノートです。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1221'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2020 年 8 月 6 日（PT）
 
@@ -255,7 +255,7 @@ ht-degree: 94%
 #### **機能**
 
 * AppMeasurement はバージョン 2.6 に更新されました
-* 初期化されたAnalyticsトラッカーが、Adobe Experience Platformタグ拡張の共有モジュールを通じて公開されるようになり、他の拡張機能は、やり取りするコードを含めることができます。
+* 初期化された Analytics トラッカーが Adobe Experience Platform タグ拡張機能の共有モジュールを使用して公開されるようになりました。これにより、やり取りするコードを他の拡張機能に含めることができます。
 
 #### **バグの修正**
 
