@@ -1,10 +1,10 @@
 ---
 title: エッジ拡張機能モジュールのコンテキスト
-description: コンテキストオブジェクトと、エッジプロパティのタグ拡張におけるライブラリモジュールとのインタラクションでの役割について説明します。
+description: コンテキストオブジェクト、およびそれがエッジプロパティのタグ拡張機能のライブラリモジュールとのやり取りで果たす役割について説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 82%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
+> Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../term-updates.md)を参照してください。
 
 エッジ拡張機能内のすべてのライブラリモジュールには、実行時に `context` オブジェクトが提供されます。 このドキュメントでは、`context` オブジェクトによって提供されるプロパティと、それらがライブラリモジュールで果たす役割について説明します。
 
@@ -95,15 +95,15 @@ module.exports = (context) => {
 
 >[!NOTE]
 >
->この方法を使用する場合は、常に完全な拡張機能ルールを返すように注意してください。 値のみを返す場合は、設定した他のプロパティが上書きされます。
+>この方法を使用する場合は、常に完全な拡張機能ルールを返すように注意する必要があります。代わりに、値のみを返すと、以前に設定した他のプロパティが上書きされます。
 
 ## ユーティリティ
 
-`utils`プロパティは、タグランタイムに固有のユーティリティを提供するオブジェクトを表します。
+`utils` プロパティは、タグランタイムに固有のユーティリティを提供するオブジェクトを表します。
 
 ### [!DNL logger]
 
-`logger`ユーティリティを使用すると、[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)を使用したデバッグセッション中に表示されるメッセージをログに記録できます。
+`logger` ユーティリティを使用すると、[Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) を使用したデバッグセッション中に表示されるメッセージをログに記録できます。
 
 ```js
 context.utils.logger.error('Error!');
