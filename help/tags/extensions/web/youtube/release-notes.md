@@ -1,10 +1,10 @@
 ---
 title: YouTube ビデオトラッキング拡張機能のリリースノート
-description: Adobe Experience PlatformのYouTube Video Trackingタグ拡張機能に関する最新のリリースノートです。
+description: Adobe Experience Platform の YouTube ビデオトラッキングタグ拡張機能に関する最新のリリースノートです。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 56%
+ht-degree: 86%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 ## 2021 年 6 月 4 日（PT）
 
@@ -20,7 +20,7 @@ ht-degree: 56%
 
 #### 機能
 
-* 複数のiFrameを含むページのバグ修正
+* 複数の iFrame を含むページのバグ修正
 * ブランディングの名前の変更
 
 ## 2021 年 4 月 23 日（PT）
