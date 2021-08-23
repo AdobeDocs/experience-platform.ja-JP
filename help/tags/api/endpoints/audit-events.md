@@ -1,10 +1,10 @@
 ---
 title: 監査イベントエンドポイント
-description: Reactor APIで/audit_eventsエンドポイントを呼び出す方法を説明します。
+description: Reactor API で /audit_events エンドポイントを呼び出す方法を説明します。
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 5%
 
 >[!WARNING]
 >
->フィーチャが追加、削除、およびリワークされると、`/audit_events`エンドポイントの実装は不安定になります。
+>機能を追加、削除または修正すると、`/audit_events` エンドポイントの実装が不安定になります。
 
-監査イベントは、Reactor API内の別のリソースに対する特定の変更を記録したもので、変更の際に生成されます。 これらは、[callback](./callbacks.md)を使用してサブスクライブできるシステムイベントです。 Reactor APIの`/audit_events`エンドポイントを使用すると、エクスペリエンスアプリケーション内の監査イベントをプログラムで管理できます。
+監査イベントは、Reactor API 内の別のリソースに対する特定の変更の記録であり、変更が加えられたタイミングで生成されます。これらは、[コールバック](./callbacks.md)を使用してサブスクライブできるシステムイベントです。Reactor API の `/audit_events` エンドポイントを使用すると、エクスペリエンスアプリケーション内の監査イベントをプログラムで管理できます。
 
-監査イベントは、`build.created`や`rule.updated`など、`{RESOURCE_TYPE}.{EVENT}`の形式で構成されます。
+監査イベントは、`{RESOURCE_TYPE}.{EVENT}` の形式（`build.created` や `rule.updated` など）で構成されます。
 
 リソースタイプは、次のいずれかになります。
 
@@ -38,11 +38,11 @@ ht-degree: 5%
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml)の一部です。 続行する前に、APIへの認証方法に関する重要な情報について、[はじめにのガイド](../getting-started.md)を参照してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
 
 ## 監査イベントのリストの取得 {#list}
 
-`/audit_events`エンドポイントにGETリクエストを実行することで、組織が所有するすべてのプロパティの監査イベントのリストを取得できます。
+`/audit_events` エンドポイントに GET リクエストをおこなうことで、組織が所有するすべてのプロパティの監査イベントのリストを取得できます。
 
 **API 形式**
 
@@ -64,7 +64,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、監査イベントのリストを返します。 以下の応答例は、スペースを節約するために切り捨てられています。
+応答が成功すると、監査イベントのリストが返されます。 次の応答はスペースを節約するために省略されています。
 
 ```json
 {
@@ -159,7 +159,7 @@ curl -X GET \
 
 ## 監査イベントの検索 {#lookup}
 
-監査イベントを検索するには、GETリクエストのパスにIDを指定します。
+GET リクエストのパスで ID を指定することで、監査イベントを検索できます。
 
 **API 形式**
 
@@ -169,7 +169,7 @@ GET /audit_events/{AUDIT_EVENT_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `AUDIT_EVENT_ID` | 検索する監査イベントの`id`。 |
+| `AUDIT_EVENT_ID` | 検索する監査イベントの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、監査イベントの詳細を返します。
+応答に成功すると、監査イベントの詳細が返されます。
 
 ```json
 {
