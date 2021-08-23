@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Cloud ID サービス拡張機能のリリースノート
-description: Adobe Experience PlatformのAdobe Experience Cloud Identity Serviceタグ拡張の最新のリリースノートです。
+description: Adobe Experience Platform の Adobe Experience Cloud ID サービスタグ拡張機能に関する最新のリリースノートです。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 83%
+ht-degree: 96%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
-Adobe Experience Platformタグ拡張だけでなく、Experience CloudIDサービス自体のリリースノートについては、次を参照してください。[https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja)
+Adobe Experience Platform タグ拡張機能だけでなく、Experience Cloud ID サービス自体のリリースノートについては、[https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=ja) を参照してください。
 
 ## 2020 年 11 月 3 日（PT）
 
@@ -123,7 +123,7 @@ Adobe Experience Platformタグ拡張だけでなく、Experience CloudIDサー�
 #### **機能**
 
 * visitor.js を 4.3 に更新しました
-* タグ拡張の一部として、ECIDにデータ要素タイプを追加しました
+* タグ拡張機能の一部として、ECID にデータ要素タイプを追加しました
 
    ![](../../../images/ecid-data-element.png)
 
