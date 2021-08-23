@@ -1,10 +1,10 @@
 ---
 title: Adobe Analytics 拡張機能の共有モジュール
-description: Adobe Experience PlatformのAdobe Analyticsタグ拡張機能が提供する共有ライブラリモジュールについて説明します。
+description: Adobe Experience Platform の Adobe Analytics タグ拡張機能で提供される共有ライブラリモジュールについて説明します。
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '431'
-ht-degree: 74%
+ht-degree: 95%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。 用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
+>Adobe Experience Platform Launchは、Adobe Experience Platformのデータ収集テクノロジーのスイートとしてリブランドされました。 その結果、製品ドキュメント全体でいくつかの用語の変更がロールアウトされました。用語の変更点の一覧については、次の[ドキュメント](../../../term-updates.md)を参照してください。
 
 [Adobe Analytics 拡張機能](./overview.md)では、エクスペリエンスアプリケーションに統合できる 2 つの異なる[共有モジュール](../../../extension-dev/web/shared.md)が提供されます。これらのモジュールについては、以下の節で説明します。
 
@@ -32,7 +32,7 @@ getTracker().then(function(tracker) {
 
 ### Adobe Analytics がインストールされていることを確認する
 
-Adobe Analyticsがインストールされていない、または拡張機能と同じタグライブラリに含まれていない可能性があります。 このため、コードでそれを確認して、適切に処理することを強くお勧めします。以下の JavaScript は実装例です。
+Adobe Analytics がインストールされていない、または拡張機能と同じタグライブラリに含まれていない可能性があります。このため、コードでそれを確認して、適切に処理することを強くお勧めします。以下の JavaScript は実装例です。
 
 ```js
 var getTracker = turbine.getSharedModule('adobe-analytics', 'get-tracker');
@@ -46,12 +46,12 @@ if (getTracker) {
 }
 ```
 
-`getTracker`が`undefined`の場合、Adobe Analytics拡張機能はタグライブラリに存在しません。 ログに記録されたメッセージをカスタマイズして、Adobe Analytics がインストールされていない場合に失われる可能性がある機能を正確に示すことができます。
+`getTracker` が `undefined` の場合、Adobe Analytics 拡張機能はタグライブラリに存在しません。ログに記録されたメッセージをカスタマイズして、Adobe Analytics がインストールされていない場合に失われる可能性がある機能を正確に示すことができます。
 
 
 ## [!DNL augment-tracker]
 
-トラッカーオブジェクト初期化したら、プロセスの次の手順は強化です。この手順を使用すると、Adobe Analytics拡張機能の設定から、またはビーコンが送信される前に、必要な情報を拡張機能がトラッカーに追加できます。
+トラッカーオブジェクト初期化したら、プロセスの次の手順は強化です。この手順では、Adobe Analytics 拡張機能の設定から変数が適用される前、またはビーコンが送信される前に、拡張機能でトラッカーに必要なものをすべて追加することができます。
 
 また、拡張機能では、サーバーからのデータや JavaScript の取得など、独自の非同期タスクを実行している間、トラッカーの初期化プロセスを一時停止することができます。
 
