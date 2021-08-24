@@ -1,58 +1,57 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；部分取り込み；部分取り込みエラー；部分取り込みエラー；部分的なバッチ取り込み；取り込み；取り込み；エラー診断；エラー診断の取り込み；エラーの取り込み；
+keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取得；バッチ取得；部分取得；部分取得；エラーの取得；部分バッチ取得；部分バッチ取得；部分バッチ取得；取得；取得；エラー診断；エラー診断の取得；エラーの取得；エラーの取得；エラーの取得；
 solution: Experience Platform
-title: データ取り込みエラー診断の取得
+title: データ取得エラーの診断の取得
 topic-legacy: overview
-description: このドキュメントでは、バッチ取り込みの監視、部分的なバッチ取り込みエラーの管理、および部分的なバッチ取り込みタイプの参照に関する情報を提供します。
+description: このドキュメントでは、バッチ取得の監視、部分バッチ取得エラーの管理、および部分バッチ取得タイプに関するリファレンスを提供します。
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 104e6eb258136caa2192b61c793697baf95b55eb
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 35%
+source-wordcount: '979'
+ht-degree: 40%
 
 ---
 
-# データ取り込みエラー診断を取り出しています
+# データ取得エラー診断の取得
 
-Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。バッチインジェストを使用すると、様々なファイルタイプ（CSVなど）を使用してデータを挿入できます。また、ストリーミングエンドポイントを使用して[!DNL Platform]にデータをリアルタイムで挿入できます。
+Adobe Experience Platform でのデータのアップロードと取得には 2 つの方法があります。バッチ取得を使用して、様々なファイルタイプ（CSVなど）を使用してデータを挿入することも、ストリーミング取得を使用して、ストリーミングエンドポイントをリアルタイムで使用して[!DNL Platform]にデータを挿入することもできます。
 
-このドキュメントでは、バッチ取り込みの監視、部分的なバッチ取り込みエラーの管理、および部分的なバッチ取り込みタイプの参照に関する情報を提供します。
+このドキュメントでは、バッチ取得の監視、部分バッチ取得エラーの管理、および部分バッチ取得タイプに関するリファレンスを提供します。
 
 ## はじめに
 
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する作業を理解している必要があります。
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md)：顧客体験データを編成する際に [!DNL Experience Platform] に使用される標準化されたフレームワーク。
-- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md):データの送信先のメソッド [!DNL Experience Platform]。
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md)：[!DNL Experience Platform] にデータを送信するメソッド。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Schema Registry]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Schema Registry]に属するリソースを含む、[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されます。 [!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
+>[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
-## エラー診断{#download-diagnostics}をダウンロード中
+## エラー診断のダウンロード {#download-diagnostics}
 
-Adobe Experience Platformでは、入力ファイルのエラー診断をダウンロードできます。 診断は[!DNL Platform]内に最大30日間保持されます。
+Adobe Experience Platformを使用すると、ユーザーは入力ファイルのエラー診断をダウンロードできます。 診断は[!DNL Platform]以内に最大30日間保持されます。
 
-### リスト入力ファイル{#list-files}
+### 入力ファイルのリスト {#list-files}
 
-次の要求は、ファイナライズされたバッチで提供されるすべてのファイルのリストを取得します。
+次のリクエストは、ファイナライズされたバッチで提供されるすべてのファイルのリストを取得します。
 
 **API 形式**
 
@@ -74,9 +73,9 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
-正常に応答すると、診断が保存された場所の詳細を示すJSONオブジェクトが返されます。
+正常な応答は、診断が保存された場所を詳細に示すJSONオブジェクトを返します。
 
 ```json
 {
@@ -107,7 +106,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 }
 ```
 
-### 入力ファイルの診断を取得{#retrieve-diagnostics}
+### 入力ファイルの診断を取得 {#retrieve-diagnostics}
 
 すべての異なる入力ファイルのリストを取得したら、次のリクエストを使用して、個々のファイルの診断を取得できます。
 
@@ -132,32 +131,34 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
-正常に応答すると、診断が保存された場所を詳細に示す`path`オブジェクトを含むJSONオブジェクトが返されます。 応答は、[JSON行](https://jsonlines.org/)形式の`path`オブジェクトを返します。
+正常な応答は、診断が保存された場所を詳細に記述した`path`オブジェクトを含むJSONオブジェクトを返します。 応答は、`path`オブジェクトを[JSON行](https://jsonlines.org/)形式で返します。
 
 ```json
 {"path": "F1.json"}
 {"path": "etc/F2.json"}
 ```
 
-## バッチインジェストエラーを取得{#retrieve-errors}
+## バッチ取得エラーの取得 {#retrieve-errors}
 
-バッチにエラーが含まれる場合は、これらのエラーに関するエラー情報を取得して、データを再取り込みできるようにする必要があります。
+バッチにエラーが含まれる場合は、これらのエラーに関するエラー情報を取得して、データを再取得する必要があります。
 
 ### ステータスの確認 {#check-status}
 
-取得したバッチのステータスを確認するには、GET リクエストのパスにバッチの ID を指定する必要があります。
+取得したバッチのステータスを確認するには、GET リクエストのパスにバッチの ID を指定する必要があります。このAPI呼び出しの使用方法について詳しくは、『[カタログエンドポイントガイド](../../catalog/api/list-objects.md)』を参照してください。
 
 **API 形式**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
+GET /catalog/batches/{BATCH_ID}?{FILTER}
 ```
 
 | パラメーター | 説明 |
 | --------- | ----------- |
 | `{BATCH_ID}` | ステータスを確認するバッチの `id` 値。 |
+| `{FILTER}` | 応答で返された結果をフィルターするために使用されるクエリパラメーター。複数のパラメーターはアンパサンド（`&`）で区切られます。詳しくは、[カタログデータのフィルタリング](../../catalog/api/filter-data.md)に関するガイドを参照してください。 |
 
 **リクエスト**
 
@@ -171,7 +172,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 **エラーのない応答**
 
-成功した応答は、バッチのステータスに関する詳細情報と共に返されます。
+正常な応答は、バッチのステータスに関する詳細情報と共に返されます。
 
 ```json
 {
@@ -214,11 +215,11 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | 解析、変換、または検証の結果、処理できなかった行の数です。 この値は、`outputRecordCount`から`inputRecordCount`を引くことで得られます。 この値は、`errorDiagnostics`が有効になっているかどうかに関係なく、すべてのバッチで生成されます。 |
+| `metrics.failedRecordCount` | 解析、変換、または検証が原因で処理できなかった行の数。 この値は、`outputRecordCount`から`inputRecordCount`を引くことで得られます。 この値は、`errorDiagnostics`が有効かどうかに関係なく、すべてのバッチで生成されます。 |
 
 **エラーのある応答**
 
-バッチに1つ以上のエラーがあり、エラー診断が有効になっている場合、応答は、ペイロード内およびダウンロード可能なエラーファイル内のエラーに関する詳細情報を返します。 エラーを含むバッチのステータスは、成功のステータスのままである場合があります。
+バッチに1つ以上のエラーがあり、エラー診断が有効な場合、応答は、ペイロード自体およびダウンロード可能なエラーファイル内の両方で、エラーに関する詳細を返します。 エラーを含むバッチのステータスは、引き続き成功のステータスになる場合があります。
 
 ```json
 {
@@ -277,12 +278,12 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | 解析、変換、または検証の結果、処理できなかった行の数です。 この値は、`outputRecordCount`から`inputRecordCount`を引くことで得られます。 この値は、`errorDiagnostics`が有効になっているかどうかに関係なく、すべてのバッチで生成されます。 |
-| `errors.recordCount` | 指定したエラーコードが失敗した行数です。 `errorDiagnostics`が有効な場合、この値は&#x200B;****&#x200B;のみ生成されます。 |
+| `metrics.failedRecordCount` | 解析、変換、または検証が原因で処理できなかった行の数。 この値は、`outputRecordCount`から`inputRecordCount`を引くことで得られます。 この値は、`errorDiagnostics`が有効かどうかに関係なく、すべてのバッチで生成されます。 |
+| `errors.recordCount` | 指定したエラーコードで失敗した行の数。 この値は、`errorDiagnostics`が有効な場合に&#x200B;**のみ**&#x200B;生成されます。 |
 
 >[!NOTE]
 >
->エラー診断が使用できない場合は、代わりに次のエラーメッセージが表示されます。
+>エラー診断が利用できない場合は、代わりに次のエラーメッセージが表示されます。
 >
 ```json
 >{
@@ -295,15 +296,15 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 ## 次の手順 {#next-steps}
 
-このチュートリアルでは、部分的なバッチ取り込みエラーを監視する方法について説明しました。 バッチ取得について詳しくは、『[バッチ取得開発者ガイド](../batch-ingestion/api-overview.md)』を参照してください。
+このチュートリアルでは、部分バッチ取得エラーを監視する方法について説明しました。 バッチ取得について詳しくは、『[バッチ取得開発者ガイド](../batch-ingestion/api-overview.md)』を参照してください。
 
 ## 付録 {#appendix}
 
-ここでは、取り込みエラータイプに関する補足情報を提供します。
+この節では、取得エラータイプに関する補足情報を提供します。
 
 ### 部分バッチ取得エラータイプ {#partial-ingestion-types}
 
-部分的なバッチ取り込みでは、データを取り込む際に次の3つの異なるエラータイプが発生します。
+部分バッチ取得では、データを取得する際に次の3つの異なるエラータイプが発生します。
 
 - [読み取り不能なファイル](#unreadable)
 - [無効なスキーマまたはヘッダー](#schemas-headers)
@@ -319,7 +320,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 ### 解析不可の行 {#unparsable}
 
-取り込んだバッチに解析できない行がある場合は、次の要求を使用して、エラーを含むファイルのリストを表示できます。
+取り込んだバッチに解析できない行がある場合は、次のリクエストを使用して、エラーを含むファイルのリストを表示できます。
 
 **API 形式**
 
@@ -341,9 +342,9 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
-正常に応答すると、エラーのあるファイルのリストが返されます。
+正常な応答は、エラーが発生したファイルのリストを返します。
 
 ```json
 {
@@ -376,7 +377,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203P
 
 その後、[診断の取得エンドポイント](#retrieve-diagnostics)を使用して、エラーに関する詳細な情報を取得できます。
 
-エラーファイルの取得に関する応答の例を次に示します。
+次に、エラーファイルの取得の応答例を示します。
 
 ```json
 {
