@@ -4,9 +4,9 @@ solution: Experience Platform
 title: セグメントマッチの概要
 topic-legacy: overview
 description: セグメントマッチは、2人以上のPlatformユーザーが、安全で管理され、プライバシーに優れた方法でセグメントデータを交換できる、Adobe Experience Platformのセグメント共有サービスです。
-source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
+source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1982'
 ht-degree: 6%
 
 ---
@@ -74,6 +74,17 @@ ID名前空間は、[Adobe Experience Platform IDサービス](../../identity-se
 [!DNL Segment Match] はC11ラベルを使用します。C11ラベルはに固有の契約ラベルで [!DNL Segment Match] す。データセットや属性を手動で追加すると、パートナー共有プロセスから除外さ [!DNL Segment Match] れます。C11 ラベルは、[!DNL Segment Match] プロセスで使用すべきでないデータを示します。[!DNL Segment Match]から除外するデータセットやフィールドを決定し、それに応じてC11ラベルを追加したら、[!DNL Segment Match]ワークフローによってラベルが自動的に適用されます。 [!DNL Segment Match] は、「データの共有を制 [!UICONTROL 限」コアポリ] シーを自動的に有効にします。データ使用ラベルをデータセットに適用する方法について詳しくは、UIでのデータ使用ラベルの管理に関するチュートリアル([)を参照してください。](../../data-governance/labels/user-guide.md)
 
 データ使用ラベルとその定義のリストについては、[データ使用ラベルの用語集](../../data-governance/labels/reference.md)を参照してください。 データ使用ポリシーについて詳しくは、「[データ使用ポリシーの概要](../../data-governance/policies/overview.md)」を参照してください。
+
+### [!DNL Segment Match]権限について
+
+[!DNL Segment Match]には、次の2つの権限が関連付けられています。
+
+| 権限 | 説明 |
+| --- | --- |
+| オーディエンス共有接続の管理 | この権限を使用すると、2つのIMS組織を接続して[!DNL Segment Match]フローを有効にするパートナーハンドシェイクプロセスを完了できます。 |
+| オーディエンス共有の管理 | この権限を持つユーザーは、アクティブなパートナー（**[!UICONTROL Audience Share Connections]**&#x200B;アクセス権を持つ管理者ユーザーによって接続されたパートナー）とのフィード（[!DNL Segment Match]で使用されるデータのパッケージ）を作成、編集および公開できます。 |
+
+アクセス制御と権限の詳細については、「[アクセス制御の概要](../../access-control/home.md)」を参照してください。
 
 ## [!DNL Segment Match] エンドツーエンドのワークフロー
 
