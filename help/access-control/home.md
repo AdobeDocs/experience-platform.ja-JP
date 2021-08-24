@@ -5,10 +5,10 @@ topic-legacy: overview
 title: アクセス制御の概要
 description: Adobe Experience Platform のアクセス制御は、Adobe Admin Console を通じて提供されます。この機能は、Admin Console の製品プロファイルを利用して、ユーザーを権限およびサンドボックスにリンクします。
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: f340ecfb850ef50504938a5db136e70b8bede61a
+source-git-commit: 4425f7d61aa5ff357c7ba25cf986201fefeacd67
 workflow-type: tm+mt
-source-wordcount: '1320'
-ht-degree: 99%
+source-wordcount: '1347'
+ht-degree: 97%
 
 ---
 
@@ -105,6 +105,8 @@ Adobe Admin Console は、アドビ製品の権限を管理し、組織のアク
 | [!DNL Destinations] | [!UICONTROL 宛先のアクティブ化] | 作成済みのアクティブな宛先に対するデータのアクティブ化機能この権限を持つユーザーは、宛先をアクティブ化するユーザーに、「宛先の表示」または「[!UICONTROL 宛先]の管理」のいずれかを付与する必要があります。 |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの管理] | ソースへの読み取り、作成、編集、無効化アクセス |
 | [!DNL Data Ingestion] | [!UICONTROL ソースの表示] | 「**[!UICONTROL カタログ]**」タブでの使用可能なソースおよび「**[!UICONTROL 参照]**」タブでの認証済みのソースへの読み取り専用アクセス |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | パートナーが2つのIMS組織を接続し、[!DNL Segment Match]フローを有効にするための手作業を作成、受け入れ、拒否するアクセス。 |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | アクティブなパートナーとの[!DNL Segment Match]フィードの読み取り、作成、編集および公開にアクセスできます。 |
 | [!DNL Data Science Workspace] | [!UICONTROL Data Science Workspace の管理] | [!DNL Data Science Workspace] での読み取り、作成、編集、および削除へのアクセス。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ラベルの適用] | 使用ラベルを読み取り、作成および削除するアクセス権。 |
 | [!DNL Data Governance] | [!UICONTROL データ使用ポリシーの管理] | データ使用ポリシーの読み取り、作成、編集、および削除へのアクセス。 |
