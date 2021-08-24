@@ -4,10 +4,10 @@ description: Experience Platformリリースノート（2021年8月26日）
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
+source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 30%
+source-wordcount: '457'
+ht-degree: 42%
 
 ---
 
@@ -20,6 +20,7 @@ Adobe Experience Platform の既存の機能のアップデート：
 
 - [Observability Insights](#observability)
 - [リアルタイム顧客プロファイル](#profile)
+- [ソース](#sources)
 
 ## 観察性インサイト {#observability}
 
@@ -42,3 +43,15 @@ Adobe Experience Platform を使用すると、いつでもどこでもブラン
 | 結合ポリシーまたはIDによるプロファイルの参照 | Experience Platformでプロファイルを参照する際に、結合ポリシーで参照して、選択した結合ポリシーに基づいて20件のサンプルプロファイルをプレビューできるようになりました。 また、ID名前空間と関連するID値を使用して特定のプロファイルを検索するために、IDで参照することもできます。 詳しくは、[リアルタイム顧客プロファイルUIガイド](../../profile/ui/user-guide.md)を参照してください。 |
 
 プロファイルデータを操作するためのチュートリアルやベストプラクティスなど、リアルタイム顧客プロファイルの詳細については、まず「[リアルタイム顧客プロファイルの概要](../../profile/home.md)」をお読みください。
+
+## ソース {#sources}
+
+Adobe Experience Platform では、外部ソースからデータを取り込むときに、Platform サービスを使用して、そのデータの構造化、ラベル付け、拡張をおこなうことができます。アドビのアプリケーション、クラウドベースのストレージ、サードパーティのソフトウェア、CRM システムなど、様々なソースからデータを取り込むことができます。
+
+Experience Platform は、様々なデータプロバイダーのソース接続を簡単に設定できる RESTful API とインタラクティブ UI を備えています。これらのソース接続を使用すると、外部ストレージシステムおよび CRM サービスの認証と接続、取得実行時間の設定、データ取得スループットの管理をおこなうことができます。
+
+| 機能 | 説明 |
+| ------- | ----------- |
+| ローカルファイルアップロードソースコネクタ | ファイル取り込みカテゴリの名前がローカルシステムに変更され、ローカルファイルアップロードコネクタを使用してローカルファイルをPlatformに直接取り込めるようになりました。 このコネクタを使用して取り込まれるデータは、監視ダッシュボードで監視できます。 詳しくは、[ローカルファイルアップロードソースの概要](../../sources/connectors/local-system/local-file-upload.md)を参照してください。 |
+
+ソースについて詳しくは、[ソースの概要](../../sources/home.md)を参照してください。
