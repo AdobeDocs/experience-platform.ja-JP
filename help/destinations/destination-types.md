@@ -4,10 +4,10 @@ title: 宛先のタイプとカテゴリ
 seo-title: 宛先のタイプとカテゴリ
 description: Adobe Experience Platformの宛先の様々なタイプとカテゴリについて説明します。
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a6f14ba65584a6bd61d62c4fb0b46e8f9e8e96d
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 63%
+source-wordcount: '534'
+ht-degree: 45%
 
 ---
 
@@ -23,17 +23,28 @@ Adobe Experience Platformでは、接続と拡張機能の2つの宛先タイプ
 
 ## 接続 {#connections}
 
-**[!UICONTROL Adobe Experience Platformのプ]** ロファイ **[!UICONTROL ルの書き出しとセグメントの書き出しでは、イベントデータを取り込み、他のデータソースと組み合わせてリアルタイム顧客プロファイルを形成]**  [](../profile/home.md)し、セグメント化を適用し、セグメントと認定済みプロファイルを宛先に書き出します。
+**[!UICONTROL Adobe Experience Platformのプ]** ロファイル書き出しとストリーミ **[!UICONTROL ングセグメント書き出し]** 宛先は、イベントデータをキャプチャし、他のデータソースと組み合わせてリアルタイム顧客プロファイルを形成 [](../profile/home.md)し、セグメント化を適用し、セグメントと絞り込まれたプロファイルを宛先に書き出します。
 
 ## プロファイルの書き出し先
 
-プロファイル書き出し先は、プロファイルや属性を含むファイルを生成します。これらの宛先は生データを使用し、多くの場合、電子メールアドレスを主キーとして使用します。[Amazon S3 クラウドストレージの宛先](./catalog/cloud-storage/amazon-s3.md)は、プロファイルの書き出しを含むファイルを配置できる、宛先の一例です。
+プロファイルの書き出し先は、生データを受け取り、多くの場合、電子メールアドレスをプライマリキーとして使用します。 Experience Platformは、現在、次の2種類のプロファイル書き出し先をサポートしています。
 
-## セグメントの書き出し先
+* [ストリーミングプロファイルの書き出し先](#streaming-profile-export)
+* [ファイルベースの宛先](#file-based)
 
-セグメントの書き出し先は、プロファイルとそれらが宛先プラットフォームとして認定したセグメントを送信します。これらの宛先では、セグメント ID またはユーザー ID を使用します。[[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md)や[[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md)などの広告の宛先が、このタイプの宛先の一例です。
+### ストリーミングプロファイルの書き出し先 {#streaming-profile-export}
 
-## プロファイルの書き出しとセグメントの書き出し先 - ビデオの概要
+ストリーミングプロファイルの書き出し先は、セグメントデータとプロファイルデータをExperience Platformデータストリームとして受け取ります。 [Amazon Kinesisと](catalog/cloud-storage/amazon-kinesis.md) Azure Event  [](catalog/cloud-storage/azure-event-hubs.md) Hubsareは、このような宛先の例です。
+
+### ファイルベースの宛先 {#file-based}
+
+ファイルベースの宛先は、プロファイルや属性を含む`.csv`ファイルを受け取ります。 [Amazon S3](catalog/cloud-storage/amazon-s3.md) は、プロファイルの書き出しを含むファイルを配置できる宛先の例です。
+
+## ストリーミングセグメントの書き出し先
+
+セグメントの書き出し先は、セグメントセグメントExperience Platformデータを受け取ります。 これらの宛先は、セグメントIDまたはユーザーIDを使用します。 [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) および [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) は、このような宛先の例です。
+
+## プロファイルの書き出しおよびセグメントの書き出し先 — ビデオの概要
 
 次のビデオでは、2 種類の宛先の詳細について説明します。
 
