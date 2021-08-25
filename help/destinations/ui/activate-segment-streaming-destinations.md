@@ -2,12 +2,12 @@
 keywords: セグメントのストリーミング宛先のアクティブ化；セグメントのストリーミング宛先のアクティブ化；データのアクティブ化
 title: ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化
 type: Tutorial
-seo-title: ストリーミングセグメントの書き出し先に対するオーディエンスデータのアクティブ化
+seo-title: Activate audience data to streaming segment export destinations
 description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
-seo-description: セグメントをセグメントストリーミング宛先にマッピングして、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法を説明します。
-source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '781'
 ht-degree: 6%
 
 ---
@@ -25,13 +25,17 @@ ht-degree: 6%
 
 ## 宛先の選択 {#select-destination}
 
-1. **[!UICONTROL 接続/宛先]**&#x200B;に移動し、「**[!UICONTROL 参照]**」タブを選択します。
+1. **[!UICONTROL 接続/宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![「宛先の参照」タブ](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+   ![「宛先カタログ」タブ](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. 次の図に示すように、セグメントをアクティブ化する宛先に対応する「**[!UICONTROL Add segments]**」ボタンを選択します。
+1. 次の図に示すように、セグメントをアクティブ化する宛先に対応するカードで、「**[!UICONTROL セグメントをアクティブ化]**」を選択します。
 
-   ![ボタンの有効化](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+   ![ボタンの有効化](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+
+1. セグメントのアクティブ化に使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
+
+   ![宛先の選択](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. 次のセクションに移動して[セグメントを選択します](#select-segments)。
 
@@ -81,10 +85,17 @@ ht-degree: 6%
 
 ハッシュ化されていないソース属性を、宛先でハッシュ化が必要なターゲット属性にマッピングする場合(例：`email_lc_sha256`または`phone_sha256`)で、「**変換を適用**」オプションをオンにして、Adobe Experience Platformがアクティブ化時にソース属性を自動的にハッシュ化するようにします。
 
-![IDマッピング](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
+![IDマッピング](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## スケジュールセグメントの書き出し {#scheduling}
+
+デフォルトでは、[!UICONTROL セグメントスケジュール]ページには、現在のアクティベーションフローで選択した新しく選択されたセグメントのみが表示されます。
+
+![新しいセグメント](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+
+宛先に対してアクティブ化されているすべてのセグメントを表示するには、フィルタリングオプションを使用して、「**[!UICONTROL Show new segments only]**」フィルターを無効にします。
+
+![すべてのセグメント](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
 
 1. **[!UICONTROL セグメントスケジュール]**&#x200B;ページで、各セグメントを選択し、**[!UICONTROL 開始日]**&#x200B;および&#x200B;**[!UICONTROL 終了日]**&#x200B;セレクターを使用して、宛先にデータを送信する時間間隔を設定します。
 
@@ -120,7 +131,7 @@ ht-degree: 6%
 
 ## セグメントのアクティベーションの検証 {#verify}
 
-宛先アカウントを確認します。 アクティブ化に成功した場合、オーディエンスは宛先プラットフォームに入力されます。
+宛先へのデータのフローを監視する方法の詳細については、[宛先の監視に関するドキュメント](../../dataflows/ui/monitor-destinations.md)を参照してください。
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
