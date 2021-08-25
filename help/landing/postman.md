@@ -1,59 +1,58 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；Adobe Experience Platform;apiガイド；プラットフォームapiガイド；プラットフォームの紹介；開発者ガイド
+keywords: Experience Platform；ホーム；人気のあるトピック；Adobe Experience Platform;apiガイド；プラットフォームapiガイド；プラットフォームの概要；開発者ガイド
 solution: Experience Platform
 title: Adobe Experience Platformの郵便配達人
 topic-legacy: api guide
-description: このドキュメントでは、Postman環境の設定、Postmanコレクションの読み込み、各Platformサービスで使用可能なコレクションのリストの手順を説明します。
+description: このドキュメントでは、Postman環境の設定方法、Postmanコレクションの読み込み方法、および各Platformサービスで使用可能なコレクションのリストを説明する手順を説明します。
 exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '550'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Adobe Experience Platformの郵便配達人
 
-PostmanはAPI開発のコラボレーションプラットフォームで、プリセット変数を使用した環境の設定、APIコレクションの共有、CRUDリクエストの合理化などを可能にします。 ほとんどのプラットフォームAPIサービスにはPostmanコレクションがあり、API呼び出しの作成に役立てるのに使用できます。
+Postmanは、API開発の共同作業プラットフォームで、プリセット変数を使用して環境を設定したり、APIコレクションを共有したり、CRUDリクエストを合理化したりできます。 ほとんどのPlatform APIサービスには、API呼び出しの実行に役立つPostmanコレクションがあります。
 
-## Experience Platform用にポストマン環境を設定する方法
+## Experience Platform用のPostman環境の設定方法
 
-次のビデオガイドは、Postman環境の作成と設定の概要を説明しています。 Postman環境には、以下に示す様々なコレクションに対してAPI呼び出しを行うのに必要なすべてのヘッダーが含まれています。 設定が完了すると、値の有効期限（`ACCESS_TOKEN`など）が切れるたびに、環境内の現在の値を更新でき、この新しい値がすべてのコレクションで使用されます。
+次のビデオガイドでは、Postman環境の作成と設定の概要を説明します。 Postman環境には、以下に示す様々なコレクションに対してAPI呼び出しをおこなう必要のあるすべてのヘッダーが含まれています。 設定が完了したら、いつでも値の有効期限が切れる（`ACCESS_TOKEN`など）ようになれば、環境内の現在の値を更新でき、この新しい値がすべてのコレクションで使用されます。
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## ポストマンコレクション{#collections}
+## Postmanコレクション {#collections}
 
-[Experience PlatformポストマンサンプルGitHubリポジトリ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)にアクセスすると、利用可能なすべてのPostmanコレクションを含むフォルダーが見つかります。 または、Adobe I/O上の[APIリファレンスドキュメント](http://www.adobe.com/go/platform-api-reference-en)内の個々のSwaggerファイルにPostmanコレクションリンクがあります。
+使用可能なすべてのPostmanExperience Platformを含むフォルダーは、 [PostmanサンプルGitHubリポジトリ](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)にアクセスして、で見つけることができます。 または、Adobe I/O上の[APIリファレンスドキュメント](https://www.adobe.com/go/platform-api-reference-en)の各SwaggerファイルにPostmanコレクションリンクが含まれています。
 
-Postmanコレクションをダウンロードするには、GitHubページから&#x200B;**[!DNL Raw]**&#x200B;を選択して、新しいタブに生のJSONファイルを読み込みます。 次に、右クリックし、**[!DNL Save as]**&#x200B;を選択して、選択したローカルの保存先にファイルを保存します。
+Postmanコレクションをダウンロードするには、GitHubページから&#x200B;**[!DNL Raw]**&#x200B;を選択し、新しいタブに生のJSONファイルを読み込みます。 次に、右クリックして&#x200B;**[!DNL Save as]**&#x200B;を選択し、選択したローカルの宛先にファイルを保存します。
 
-![raw JSON](./images/api-guide/raw-collection.PNG)
+![生のJSON](./images/api-guide/raw-collection.PNG)
 
-## Postmanコレクションを読み込む{#import}
+## Postmanコレクションの読み込み {#import}
 
 [Postmanコレクション](#collections)を利用するには、環境を設定する必要があります。 環境の設定が完了したら、右上隅の&#x200B;**[!DNL Manage Environments]**&#x200B;セレクターを選択します。
 
-![環境選択の管理](./images/api-guide/environment-selector.png)
+![環境セレクターの管理](./images/api-guide/environment-selector.png)
 
-ポーバーが表示され、現在の環境がすべて表示されます。 コレクションを読み込むには、**[!DNL import]**&#x200B;を選択します。
+ポップオーバーが表示され、現在の環境がすべて表示されます。 コレクションを読み込むには、「 **[!DNL import]** 」を選択します。
 
-![読み込みボタン](./images/api-guide/import-collection.png)
+![インポートボタン](./images/api-guide/import-collection.png)
 
-読み込むファイルを選択するよう求められます。 読み込むPostmanコレクションファイルを選択します。 選択すると、左側のナビゲーションバーの「コレクション」タブの下にコレクションが設定されます。
+インポートするファイルを選択するよう求められます。 読み込むPostmanコレクションファイルを選択します。 選択すると、左側のレールの「コレクション」タブにコレクションが設定されます。
 
-![埋め込みコレクション](./images/api-guide/imported-collection.png)
+![収集](./images/api-guide/imported-collection.png)
 
-コレクションごとに、CRUD操作を正常に実行するために必要なキーと値のペアが異なります。 必要な値、ヒント、および例を参照するには、サービスの[API開発者ガイド](api-guide.md#api-guides)を参照してください。
+各コレクションには、CRUD操作を正常に実行するために必要なキーと値のペアが異なる場合があります。 必要な値、ヒント、および例については、サービスの[API開発者ガイド](api-guide.md#api-guides)を参照してください。
 
-Postman UIと使用可能な機能について詳しくは、[Postmanドキュメント](https://learning.postman.com/docs/getting-started/navigating-postman/)を参照してください。
+Postman UIと使用可能な機能について詳しくは、[Postmanのドキュメント](https://learning.postman.com/docs/getting-started/navigating-postman/)を参照してください。
 
-### 非実稼働用のPostmanを使用したアクセストークンの生成
+### 非実稼動用のPostmanでのアクセストークンの生成
 
 >[!WARNING]
 >
->Adobe I/Oアクセストークン生成ポストマンコレクションで述べられているように、示す生成方式は、**非実稼働での使用**&#x200B;に適しています。 ローカル署名では、サードパーティのホストからJavaScriptライブラリが読み込まれ、リモート署名では、Adobeが所有および操作するWebサービスに秘密鍵が送信されます。 Adobeはこの秘密鍵を保存しませんが、プロダクションキーを他のユーザーと共有することは避けてください。
+>Adobe I/Oアクセストークン生成のPostmanコレクションで述べたように、指定された生成方法は、**非実稼動環境での使用**&#x200B;に適しています。 ローカル署名は、サードパーティのホストからJavaScriptライブラリを読み込み、リモート署名は、Adobeが所有および操作するWebサービスに秘密鍵を送信します。 Adobeはこの秘密鍵を保存しませんが、プロダクションキーは誰とも共有しないでください。
 
 以下のビデオでは、パブリックGitHubリポジトリからダウンロードできる[Adobe I/Oアクセストークン生成コレクション](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json)を使用しています。
 
@@ -61,4 +60,4 @@ Postman UIと使用可能な機能について詳しくは、[Postmanドキュ�
 
 ## 次の手順
 
-このドキュメントでは、Postman環境、コレクション、およびコレクションの読み込み方法が導入されました。 Postmanの準備ができたので、[Platform getting started guide](api-guide.md)にアクセスし、必要なヘッダー、例、および各プラットフォームサービスで利用可能な[APIガイド](api-guide.md#api-guides)のリストを確認してください。
+このドキュメントでは、Postman環境、コレクション、コレクションの読み込み方法について説明しました。 Postmanの準備が整ったので、必要なヘッダー、例、各Platformサービスで使用できる[APIガイド](api-guide.md#api-guides)のリストについては、[Platform入門ガイド](api-guide.md)を参照してください。
