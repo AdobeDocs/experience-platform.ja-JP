@@ -2,10 +2,10 @@
 title: Adobe Experience Platform リリースノート
 description: Adobe Experience Platformの最新のリリースノートです。
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 42%
+source-wordcount: '536'
+ht-degree: 44%
 
 ---
 
@@ -16,9 +16,22 @@ ht-degree: 42%
 
 Adobe Experience Platform の既存の機能のアップデート：
 
+- [宛先](#destinations)
 - [Observability Insights](#observability)
 - [リアルタイム顧客プロファイル](#profile)
 - [ソース](#sources)
+
+## 宛先 {#destinations}
+
+宛先は、Adobe Experience Platformからのデータのシームレスなアクティブ化を可能にする、宛先プラットフォームとの事前定義済みの統合です。 宛先を使用して、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用事例に関する既知および不明なデータをアクティブ化できます。
+
+**新機能**
+
+| 機能 | 説明 |
+| --- | --- |
+| [宛先のユーザビリティの改善](../../destinations/ui/activation-overview.md) | 宛先のユーザビリティの改善により、マーケターは既存の宛先に対するセグメントをシームレスにアクティブ化できます。 |
+
+宛先の一般的な情報については、[宛先の概要](../../destinations/home.md)を参照してください。
 
 ## 観察性インサイト {#observability}
 
