@@ -5,10 +5,10 @@ title: スケジュール済みクエリAPIエンドポイント
 topic-legacy: scheduled queries
 description: 以降の節では、クエリサービスAPIを使用してスケジュール済みクエリに対して実行できる様々なAPI呼び出しについて説明します。
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 0b1afcb23e070209006383d27eb68edcf92d02cd
+source-git-commit: 34a3b71ace2f9ece02e4368b6bd7eab716330ee1
 workflow-type: tm+mt
 source-wordcount: '1113'
-ht-degree: 81%
+ht-degree: 80%
 
 ---
 
@@ -161,7 +161,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | スケジュール済みクエリを作成するデータベースの名前。 |
 | `query.sql` | 作成する SQL クエリ。 |
 | `query.name` | スケジュール済みクエリの名前。 |
-| `schedule.schedule` | クエリの cron スケジュール。Cron スケジュールの詳細については、[cron 式形式のドキュメント](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。この例では、「30 * * * *」は、クエリが毎時 30 分に実行されることを意味します。<br><br>また、次の短縮形の式を使用することもできます。<ul><li>`@once`:クエリは1回だけ実行されます。</li><li>`@hourly`:クエリは、1時間ごとに1時間ごとに実行されます。これは、Cron式`0 * * * *`と同じです。</li><li>`@daily`:クエリは、1日1回、午前0時に実行されます。これは、Cron式`0 0 * * *`と同じです。</li><li>`@weekly`:クエリは、週に1回、日曜日の午前0時に実行されます。これは、Cron式`0 0 * * 0`と同じです。</li><li>`@monthly`:クエリは、月に1回、月の最初の日の午前0時に実行されます。これは、Cron式`0 0 1 * *`と同じです。</li><li>`@yearly`:クエリは、年に1回、1月1日、午前0時に実行されます。これは、Cron式`1 0 0 1 1 *`と同じです。 |
+| `schedule.schedule` | クエリの cron スケジュール。Cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。この例では、「30 * * * *」は、クエリが毎時 30 分に実行されることを意味します。<br><br>また、次の短縮形の式を使用することもできます。<ul><li>`@once`:クエリは1回だけ実行されます。</li><li>`@hourly`:クエリは、1時間ごとに1時間ごとに実行されます。これは、Cron式`0 * * * *`と同じです。</li><li>`@daily`:クエリは、1日1回、午前0時に実行されます。これは、Cron式`0 0 * * *`と同じです。</li><li>`@weekly`:クエリは、週に1回、日曜日の午前0時に実行されます。これは、Cron式`0 0 * * 0`と同じです。</li><li>`@monthly`:クエリは、月に1回、月の最初の日の午前0時に実行されます。これは、Cron式`0 0 1 * *`と同じです。</li><li>`@yearly`:クエリは、年に1回、1月1日、午前0時に実行されます。これは、Cron式`1 0 0 1 1 *`と同じです。 |
 | `schedule.startDate` | スケジュール済みクエリの開始日（UTC タイムスタンプ形式）です。 |
 
 **応答**
@@ -364,7 +364,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 ### スケジュール済みクエリスケジュールの更新
 
-`/schedule/schedule`を使用して、スケジュールされたクエリの cron スケジュールを更新できます。cron スケジュールの詳細については、[cron 式形式のドキュメント](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。
+`/schedule/schedule`を使用して、スケジュールされたクエリの cron スケジュールを更新できます。cron スケジュールの詳細については、[cron 式形式のドキュメント](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html)を参照してください。
 
 **API 形式**
 
