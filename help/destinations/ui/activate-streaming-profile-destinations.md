@@ -2,12 +2,12 @@
 keywords: プロファイルの宛先のアクティブ化、宛先のアクティブ化、データのアクティブ化電子メールマーケティングの宛先をアクティブ化する。クラウドストレージの宛先のアクティブ化
 title: ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化
 type: Tutorial
-seo-title: ストリーミングプロファイルの書き出し先に対するオーディエンスデータのアクティブ化
+seo-title: Activate audience data to streaming profile export destinations
 description: ストリーミングプロファイルベースの宛先にセグメントを送信して、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法について説明します。
-seo-description: ストリーミングプロファイルベースの宛先にセグメントを送信して、Adobe Experience Platformで保有するオーディエンスデータをアクティブ化する方法について説明します。
-source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
+source-git-commit: d13920250fafd2ba4ff37dd5d4a45d417ed3ecc7
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '524'
 ht-degree: 7%
 
 ---
@@ -25,13 +25,17 @@ ht-degree: 7%
 
 ## 宛先の選択 {#select-destination}
 
-1. **[!UICONTROL 接続/宛先]**&#x200B;に移動し、「**[!UICONTROL 参照]**」タブを選択します。
+1. **[!UICONTROL 接続/宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![「宛先の参照」タブ](../assets/ui/activate-streaming-profile-destinations/browse-tab.png)
+   ![「宛先カタログ」タブ](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. 次の図に示すように、セグメントをアクティブ化する宛先に対応する「**[!UICONTROL Add segments]**」ボタンを選択します。
+1. 次の図に示すように、セグメントをアクティブ化する宛先に対応するカードで、「**[!UICONTROL セグメントをアクティブ化]**」を選択します。
 
-   ![ボタンの有効化](../assets/ui/activate-streaming-profile-destinations/activate-buttons-browse.png)
+   ![「セグメントをアクティブ化」ボタン](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+
+1. セグメントのアクティブ化に使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
+
+   ![宛先の選択](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. 次のセクションに移動して[セグメントを選択します](#select-segments)。
 
