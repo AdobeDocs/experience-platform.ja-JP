@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: プロファイルベースの宛先をバッチ送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
+source-git-commit: 7c10f39e7452481a00fb4269925c80aab34a7319
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1925'
 ht-degree: 7%
 
 ---
@@ -25,13 +25,17 @@ ht-degree: 7%
 
 ## 宛先の選択 {#select-destination}
 
-1. **[!UICONTROL 接続/宛先]**&#x200B;に移動し、「**[!UICONTROL 参照]**」タブを選択します。
+1. **[!UICONTROL 接続/宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
-   ![「宛先の参照」タブ](../assets/ui/activate-batch-profile-destinations/browse-tab.png)
+   ![「宛先カタログ」タブ](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. 次の図に示すように、セグメントをアクティブ化する宛先に対応する「**[!UICONTROL Add segments]**」ボタンを選択します。
+1. 次の図に示すように、セグメントをアクティブ化する宛先に対応するカードで、「**[!UICONTROL セグメントをアクティブ化]**」を選択します。
 
-   ![ボタンの有効化](../assets/ui/activate-batch-profile-destinations/activate-buttons-browse.png)
+   ![「セグメントをアクティブ化」ボタン](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+
+1. セグメントのアクティブ化に使用する宛先接続を選択し、「**[!UICONTROL 次へ]**」を選択します。
+
+   ![宛先の選択](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. 次のセクションに移動して[セグメントを選択します](#select-segments)。
 
@@ -144,9 +148,7 @@ ht-degree: 7%
 
    ![ソースフィールドページを選択](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-
 1. マッピングをさらに追加するには、手順1 ～ 3を繰り返します。
-
 
 >[!NOTE]
 >
