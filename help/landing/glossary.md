@@ -5,7 +5,7 @@ title: Adobe Experience Platform用語集
 topic-legacy: getting started
 description: Experience Platform の重要な用語集。
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
 source-wordcount: '7386'
 ht-degree: 12%
@@ -262,7 +262,7 @@ ht-degree: 12%
 
 **ホスト**:タグのコンテキストでは、ホストは、システムがビルドを配信するのに必要な場所、ドメイン、ユーザー資格情報を指定します。
 
-**1時間ごと**:スケジュールされたファイルエクスポートのコンテキストでは、3、6、7、12時間ごとに増分ファイルエクスポートのスケジュールを設定します。
+**1時間ごと**:スケジュールされたファイルエクスポートのコンテキストでは、3、6、8、12時間ごとに増分ファイルエクスポートのスケジュールを設定します。
 
 ## I
 
