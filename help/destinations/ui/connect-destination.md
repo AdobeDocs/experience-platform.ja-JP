@@ -4,10 +4,10 @@ title: 新しい宛先接続の作成
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platformで宛先に接続する手順を示します
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 1%
+source-wordcount: '326'
+ht-degree: 3%
 
 ---
 
@@ -19,50 +19,40 @@ ht-degree: 1%
 
 ## 新しい宛先接続の作成 {#setup}
 
-### 宛先の選択 {#select-destination}
-
 1. **[!UICONTROL 接続]** > **[!UICONTROL 宛先]**&#x200B;に移動し、「**[!UICONTROL カタログ]**」タブを選択します。
 
    ![カタログページ](../assets/ui/connect-destinations/catalog.png)
 
-1. 宛先への接続が既にあるかどうかに応じて、宛先カードに「**[!UICONTROL Configure]**」ボタンと「**[!UICONTROL Activate]**」ボタンが表示されます。 **[!UICONTROL アクティブ化]**&#x200B;と&#x200B;**[!UICONTROL 設定]**&#x200B;の違いについて詳しくは、宛先ワークスペースのドキュメントの[カタログ](../ui/destinations-workspace.md#catalog)の節を参照してください。 使用可能なボタンに応じて、「**[!UICONTROL 設定]**」または「**[!UICONTROL アクティブ化]**」を選択します。
+1. 宛先への接続が既にあるかどうかに応じて、宛先カードに「**[!UICONTROL Set up]**」ボタンと「**[!UICONTROL Activate segments]**」ボタンが表示されます。 **[!UICONTROL Activate segments]**&#x200B;と&#x200B;**[!UICONTROL Set up]**&#x200B;の違いについて詳しくは、宛先ワークスペースのドキュメントの「[Catalog](../ui/destinations-workspace.md#catalog)」の節を参照してください。
+
+   使用可能なボタンに応じて、「**[!UICONTROL Set up]**」または「**[!UICONTROL Activate segments]**」を選択します。
 
    ![カタログページ](../assets/ui/connect-destinations/set-up.png)
 
    ![セグメントのアクティブ化](../assets/ui/connect-destinations/activate-segments.png)
 
-<!-- 1. If you selected **[!UICONTROL Set up]**, skip this step. If you selected **[!UICONTROL Activate segments]**, you can now see a list of the existing destination connections. Select **[!UICONTROL Configure new destination]**.
+1. 「**[!UICONTROL 設定]**」を選択した場合は、次の手順に進みます。
 
-   ![Configure new destination](../assets/ui/connect-destinations/configure-new-destination.png) -->
+   「**[!UICONTROL セグメントをアクティブ化]**」を選択した場合は、既存の宛先接続のリストが表示されます。
 
-### アカウントの手順 {#account}
+   「**[!UICONTROL 新しい宛先を設定]**」を選択します。
 
-「**[!UICONTROL 新しいアカウント]**」を選択して、宛先への新しい接続を設定します。 または、宛先への接続を既に設定している場合は、「**[!UICONTROL 既存のアカウント]**」を選択し、既存の接続を選択します。
+   ![新しい宛先の設定](../assets/ui/connect-destinations/configure-new-destination.png)
 
-アカウント手順で入力する必要がある資格情報は、宛先と認証の種類によって異なります。
+1. 宛先プラットフォーム接続の詳細を入力し、「**[!UICONTROL 宛先に接続]**」を選択します。
 
-* クラウドストレージの宛先の場合、ストレージの場所に接続するためのExperience Platformの資格情報を指定する必要があります。
+   >[!NOTE]
+   >
+   >以下の画像は説明用にのみ使用されています。 宛先の接続の詳細は、宛先によって異なります。 宛先の接続の詳細について詳しくは、各[宛先カタログ](../catalog/overview.md)ページの&#x200B;**接続パラメーター**&#x200B;の節を参照してください（例：[Googleカスタマーマッチ](..//catalog/advertising/google-customer-match.md#parameters)）。
 
-   ![クラウドストレージの宛先のアカウントタイプの選択](../assets/ui/connect-destinations/new-account-cloud-storage.png)
+   ![宛先に接続](../assets/ui/connect-destinations/connect-destination.png)
 
-* facebookやその他の複数のソーシャルおよび広告の宛先の場合は、「 **[!UICONTROL 新しいアカウント]** 」を選択し、「 **[!UICONTROL 宛先に接続]** 」を選択します。 これにより、宛先のログインページが表示され、宛先にExperience Platformを接続できます。
+1. 「**[!UICONTROL Next]**」を選択します。
 
-   ![ソーシャルの宛先のアカウントタイプの選択](../assets/ui/connect-destinations/new-account.png)
-
->[!IMPORTANT]
->
->この手順で必要なパラメーターの詳細については、各宛先カタログページの&#x200B;**[!UICONTROL 接続パラメーター]**&#x200B;の節を参照してください（例：[Azure Blob](../catalog/cloud-storage/azure-blob.md#parameters)には接続文字列が必要）。
-
-### 認証手順 {#authentication}
-
-宛先プラットフォーム接続の詳細を入力し、「**[!UICONTROL 宛先を作成]**」を選択します。
+   ![宛先に接続](../assets/ui/connect-destinations/next.png)
 
 1. 宛先に書き出すデータに適用できるマーケティングアクションを選択します。 マーケティングアクションは、宛先にデータを書き出す目的を示します。 Adobe定義のマーケティングアクションから選択することも、独自のマーケティングアクションを作成することもできます。 マーケティングアクションについて詳しくは、「[データ使用ポリシーの概要](../../data-governance/policies/overview.md)」ページを参照してください。
 
-   >[!IMPORTANT]
-   >
-   >以下の画像は説明用にのみ使用されています。 宛先の接続の詳細は、宛先によって異なります。 宛先の接続の詳細について詳しくは、各[宛先カタログ](../catalog/overview.md)ページの&#x200B;**[!UICONTROL 接続パラメーター]**&#x200B;の節を参照してください（例：[Googleカスタマーマッチ](../catalog/advertising/google-customer-match.md#parameters)）。
-
-   ![宛先に接続](../assets/ui/connect-destinations/connect-destination.png)
+   ![マーケティングアクションの選択](../assets/ui/connect-destinations/governance.png)
 
 1. 「**[!UICONTROL 保存して終了]**」を選択して宛先設定を保存するか、「**[!UICONTROL 次へ]**」を選択してオーディエンスデータ[アクティベーションフロー](activation-overview.md)に進みます。
