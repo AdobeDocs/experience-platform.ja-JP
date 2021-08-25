@@ -1,13 +1,13 @@
 ---
 title: Adobe Experience Platform Web SDKの設定
 description: Adobe Experience Platform Web SDKの設定方法について説明します。
-seo-description: Experience Platform Web SDK の設定方法について説明します
+seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: 設定；設定；SDK；エッジ；Web SDK；設定；edgeConfigId；コンテキスト；web；デバイス；環境；placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk設定；prehidingStyle;opacity;cookieDestinationsEnabled;DestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: 549203c8ddc94e00cf4e4ba432f367ddc371cb27
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 42%
+source-wordcount: '826'
+ht-degree: 40%
 
 ---
 
@@ -66,7 +66,6 @@ alloy("configure", {
 
 | **機能** | **関数** |
 | ---------------------- | ------------------ |
-| 同期検証 | 収集されたデータをスキーマと照らし合わせて検証し、ラベル `collect:error OR success` の下の応答でエラーを返します。 |
 | コンソールログ | ブラウザーの JavaScript コンソールにデバッグメッセージを表示できるようにします |
 
 {style=&quot;table-layout:auto&quot;}
