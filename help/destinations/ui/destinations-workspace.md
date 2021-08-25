@@ -2,11 +2,11 @@
 keywords: プラットフォーム；宛先；宛先ワークスペース；ワークスペース；ui；宛先ui；カタログ；宛先カタログ；
 title: 宛先ワークスペース
 description: 「宛先」ワークスペースは、「カタログ」、「参照」、「アカウント」、「システム表示」の4つのセクションで構成されます。 以下の節で説明します。
-seo-description: Adobe Experience Platformで、左側のナビゲーションバーから「宛先」を選択して、宛先ワークスペースにアクセスします。
+seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 20%
 
 ---
@@ -40,14 +40,14 @@ Adobe Experience Platformで、左側のナビゲーションバーから「**[!
 * [!UICONTROL すべての宛先]と[!UICONTROL My destinations]を切り替えます。 「**[!UICONTROL すべての宛先]**」を選択すると、使用可能な[!DNL Platform]宛先がすべて表示されます。 「**[!UICONTROL 宛先]**」を選択すると、接続を確立した宛先のみを表示できます。
 * **[!UICONTROL 接続]**&#x200B;や&#x200B;**[!UICONTROL 拡張]**&#x200B;を表示する場合に選択します。 2つのカテゴリの違いを理解するには、「[宛先のタイプとカテゴリ](../destination-types.md)」を参照してください。
 
-![宛先のフィルタリングとデモの検索](../assets/ui/workspace/destinations-search-and-filter.gif)
+![カタログ](../assets/ui/workspace/catalog.png)
 
-宛先カードには、**[!UICONTROL Configure]**&#x200B;または&#x200B;**[!UICONTROL Activate]**&#x200B;コントロールと、より多くのオプションを表示するセカンダリコントロールが含まれます。 以下に、これらのコントロールについて説明します。
+宛先カードには、**[!UICONTROL Set up]**&#x200B;または&#x200B;**[!UICONTROL Activate segments]**&#x200B;コントロールと、より多くのオプションを表示するセカンダリコントロールが含まれます。 以下に、これらのコントロールについて説明します。
 
 | 制御 | 説明 |
 |---------|----------|
 | [!UICONTROL 設定] | 宛先への接続を作成できます。 |
-| [!UICONTROL アクティブ化] | 宛先への接続を確立したら、セグメントをアクティブ化できます。 |
+| [!UICONTROL セグメントのアクティブ化] | 宛先への接続を確立したら、セグメントをアクティブ化できます。 |
 | [!UICONTROL アカウントの表示] | 宛先に接続したアカウントを表示します。 |
 | [!UICONTROL データフローの表示] | 宛先に存在するデータアクティベーションフローを表示します。 |
 | [!UICONTROL ドキュメントを表示] | その特定の宛先のドキュメントページへのリンクを開きます。詳細情報や設定に役立ちます。 |
@@ -72,7 +72,7 @@ Adobe Experience Platformで、左側のナビゲーションバーから「**[!
 
 >[!TIP]
 >
-> * 「[!UICONTROL 名前]」列の3つのドットを選択し、「![セグメントを追加」ボタン](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 「]**をアクティブ化」ボタンを使用して、セグメントをその宛先に送信します。
+> * 「[!UICONTROL 名前]」列の3つのドットを選択し、「![セグメントを追加」ボタン](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL 「セグメントをアクティブ化&#x200B;]**」ボタンを使用して、セグメントをその宛先に送信します。
 > * 「[!UICONTROL 名前]」列の3つのドットを選択し、「![宛先を削除」ボタン](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL 「]**を削除」ボタンを使用して、宛先への既存の接続を[削除](delete-destinations.md)します。
 
 
