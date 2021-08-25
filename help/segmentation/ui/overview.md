@@ -5,9 +5,9 @@ title: セグメント化サービスUIガイド
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Serviceは、セグメント定義を作成および管理するためのユーザーインターフェイスを提供します。
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: fc59ad026a746bc75192fc6b314989894f8f6c45
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1613'
 ht-degree: 23%
 
 ---
@@ -81,7 +81,7 @@ Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL セ
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
-セグメント定義の行を選択すると、セグメントの編集または削除のオプション、セグメントの対象オーディエンス、合計オーディエンスサイズ、セグメント名、説明、評価方法、作成日、最終変更日など、セグメント定義の概要が表示されます。
+セグメント定義の行を選択すると、セグメントの編集または削除、宛先へのセグメントのアクティブ化、セグメントの対象オーディエンス、合計オーディエンスサイズ、セグメント名、説明、評価方法、作成日、最終変更日など、セグメント定義の概要が表示されます。
 
 >[!NOTE]
 >
@@ -101,7 +101,13 @@ Experience PlatformUIで、左側のナビゲーションで「**[!UICONTROL セ
 
 **[!UICONTROL セグメントの概要]**&#x200B;セクションには、ID、名前、説明、属性の詳細などの情報が表示されます。
 
-また、セグメントを編集するオプションも提供されます。 「**[!UICONTROL セグメントを編集]**」を選択すると、[!DNL Segment Builder]が表示されます。 [!DNL Segment Builder]ワークスペースの使用に関する詳細は、[[!DNL Segment Builder] ユーザーガイド](./segment-builder.md)を参照してください。
+さらに、宛先に対してセグメントをアクティブ化するか、セグメントを編集するかのどちらかのオプションが提供されます。 「**[!UICONTROL 宛先に対して有効化]**」を選択すると、宛先へのセグメントを有効化できます。 宛先へのセグメントのアクティブ化の詳細については、[アクティブ化の概要](../../destinations/ui/activation-overview.md)を参照してください。
+
+![](../images/ui/overview/segment-details-activate.png)
+
+「**[!UICONTROL セグメントを編集]**」を選択すると、[!DNL Segment Builder]が表示されます。 [!DNL Segment Builder]ワークスペースの使用に関する詳細は、[[!DNL Segment Builder] ユーザーガイド](./segment-builder.md)を参照してください。
+
+![](../images/ui/overview/segment-details-edit-segment.png)
 
 ### セグメント内の合計オーディエンス
 
