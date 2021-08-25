@@ -2,12 +2,12 @@
 keywords: プロファイルの宛先のアクティブ化、宛先のアクティブ化、データのアクティブ化電子メールマーケティングの宛先をアクティブ化する。クラウドストレージの宛先のアクティブ化
 title: プロファイルの一括書き出し先へのオーディエンスデータのアクティブ化
 type: Tutorial
-seo-title: プロファイルの一括書き出し先へのオーディエンスデータのアクティブ化
+seo-title: Activate audience data to batch profile export destinations
 description: プロファイルベースの宛先をバッチ送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
-seo-description: プロファイルベースの宛先をバッチ送信して、Adobe Experience Platformでのオーディエンスデータをアクティブ化する方法を説明します。
-source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1905'
 ht-degree: 7%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 7%
 1. **[!UICONTROL 頻度]**&#x200B;セレクターを使用して、書き出し頻度を選択します。
 
    * **[!UICONTROL 毎日]**:増分ファイルエクスポートのスケジュールを、指定した時刻に毎日1回設定します。
-   * **[!UICONTROL 1時間ごと]**:3、6、7、12時間ごとに差分ファイルエクスポートをスケジュールします。
+   * **[!UICONTROL 1時間ごと]**:3、6、8、12時間ごとに差分ファイルエクスポートをスケジュールします。
 
 2. **[!UICONTROL 時間]**&#x200B;セレクターを使用して、エクスポートを実行する時刻を[!DNL UTC]形式で選択します。
 
@@ -320,8 +320,7 @@ Adobeでは、すべてのプロファイルレコードが一意に識別され
 >* フィールドは、ターゲット先の予測属性として設定されます。
 
 >
-> 
-例えば、フィールド`person.name.firstName`に、宛先のマーケティングアクションと競合する特定のデータ使用ラベルが含まれている場合、レビュー手順でデータ使用ポリシー違反が表示されます。 詳しくは、「[Adobe Experience Platformのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations)」を参照してください。
+> 例えば、フィールド`person.name.firstName`に、宛先のマーケティングアクションと競合する特定のデータ使用ラベルが含まれている場合、レビュー手順でデータ使用ポリシー違反が表示されます。 詳しくは、「[Adobe Experience Platformのデータガバナンス](../../rtcdp/privacy/data-governance-overview.md#destinations)」を参照してください。
 
 ## レビュー {#review}
 
