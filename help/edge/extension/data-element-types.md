@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK拡張機能のデータ要素のタイプ
 description: Adobe Experience Platform Web SDKタグ拡張機能で提供される様々なデータ要素のタイプについて説明します。
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
+source-git-commit: 4caab19e1f58fc5cec5a3c56c43e47786d49c3dc
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 43%
+source-wordcount: '511'
+ht-degree: 19%
 
 ---
 
@@ -22,7 +22,19 @@ ht-degree: 43%
 
 ## ID マップ
 
-ID マップデータ要素を使用すると、他のデータ要素や指定した他の値から ID を作成できます。作成するすべての ID は、対応する名前空間に関連付ける必要があります。このデータ要素には、すべてのデフォルト名前空間と、作成した名前空間を示すドロップダウンが表示されます。
+IDマップを使用すると、Webページの訪問者のIDを設定できます。 IDマップは、_phone_&#x200B;や&#x200B;_email_&#x200B;などの名前空間で構成され、各名前空間には1つ以上の識別子が含まれます。 例えば、Webサイト上の個人が2つの電話番号を指定した場合、電話の名前空間には2つの識別子を含める必要があります。
+
+[!UICONTROL IDマップ]データ要素で、各識別子に関する次の情報を提供します。
+
+* **[!UICONTROL ID]**:訪問者を識別する値。例えば、識別子が&#x200B;_phone_&#x200B;名前空間に属する場合、[!UICONTROL ID]は&#x200B;_555-555-5555_&#x200B;になります。 この値は、通常、ページ上のJavaScript変数または他のデータから得られるので、ページデータを参照するデータ要素を作成し、[!UICONTROL IDマップ]データ要素内の[!UICONTROL ID]フィールドでデータ要素を参照することをお勧めします。 ページ上で実行する場合、ID値が設定された文字列以外の値の場合、識別子はIDマップから自動的に削除されます。
+* **[!UICONTROL 認証状態]**:訪問者が認証されたかどうかを示す選択。
+* **[!UICONTROL プライマリ]**:識別子を個人の主識別子として使用する必要があるかどうかを示す選択。プライマリとしてマークされた識別子がない場合は、ECIDがプライマリ識別子として使用されます。
+
+IDマップを作成する際には、ECIDを指定しないでください。 SDKを使用する場合、ECIDはサーバーで自動的に生成され、IDマップに含まれます。
+
+IDマップデータ要素は、多くの場合、[[!UICONTROL XDMオブジェクト]データ要素タイプ](#xdm-object)および[[!UICONTROL Set consent]アクションタイプ](action-types.md#set-consent)と組み合わせて使用されます。
+
+詳しくは、[Adobe Experience Platform IDサービス](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=ja)を参照してください。
 
 ![](./assets/identity-map-data-element.png)
 
