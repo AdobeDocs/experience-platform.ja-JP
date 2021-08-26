@@ -5,9 +5,9 @@ title: クエリサービスのSQL構文
 topic-legacy: syntax
 description: このドキュメントでは、Adobe Experience PlatformクエリサービスでサポートされるSQL構文を示します。
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
+source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2154'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 
 Adobe Experience Platformクエリサービスは、`SELECT`文やその他の制限付きコマンドに標準のANSI SQLを使用する機能を提供します。 このドキュメントでは、[!DNL Query Service]でサポートされるSQL構文について説明します。
 
-## SELECTクエリ{#select-queries}
+## SELECTクエリ {#select-queries}
 
 次の構文は、[!DNL Query Service]でサポートされる`SELECT`クエリを定義します。
 
@@ -117,6 +117,15 @@ SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Cus
 `SNAPSHOT`句はテーブルまたはテーブルのエイリアスで使用できますが、サブクエリやビューの上にはありません。 `SNAPSHOT`句は、テーブルの`SELECT`クエリを適用できる場所であればどこでも機能します。
 
 また、スナップショット句の特別なオフセット値として`HEAD`と`TAIL`を使用することもできます。 `HEAD`を使用すると最初のスナップショットの前のオフセットを参照し、 `TAIL`は最後のスナップショットの後のオフセットを参照します。
+
+>[!NOTE]
+>
+>2つのスナップショットID間でクエリを実行し、開始スナップショットの有効期限が切れた場合、オプションのフォールバック動作フラグ(`resolve_fallback_snapshot_on_failure`)が設定されているかどうかに応じて、次の2つのシナリオが発生する可能性があります。
+>
+>- オプションのフォールバック動作フラグが設定されている場合、クエリサービスは最も古い使用可能なスナップショットを選択し、開始スナップショットとして設定し、最も古い使用可能なスナップショットと指定した終了スナップショットの間のデータを返します。 このデータは、最も古いスナップショットの&#x200B;****&#x200B;を含みます。
+>
+>- オプションのフォールバック動作フラグが設定されていない場合、エラーが返されます。
+
 
 ### WHERE句
 
