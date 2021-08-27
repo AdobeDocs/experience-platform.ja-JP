@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースのデータを統合し、Adobe Experience Platform内の個々の顧客の単一のビューを構築できます。 その後、プロファイルデータをデータセットにエクスポートして、さらに処理することができます。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1521'
 ht-degree: 66%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 66%
 
 [!DNL Real-time Customer Profile] を使用すると、属性データと行動データの両方を含む複数のソースのデータを統合し、個々の顧客の単一のビューを構築できます。その後、プロファイルデータをデータセットにエクスポートして、さらに処理することができます。 例えば、[!DNL Profile]データのオーディエンスセグメントをアクティブ化用にエクスポートしたり、プロファイル属性をレポート用にエクスポートしたりできます。
 
-このドキュメントでは、[プロファイルAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)を使用してエクスポートジョブを作成および管理する手順を順を追って説明します。
+このドキュメントでは、[プロファイルAPI](https://www.adobe.com/go/profile-apis-en)を使用してエクスポートジョブを作成および管理する手順を順を追って説明します。
 
 >[!NOTE]
 >

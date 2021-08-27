@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;プロファイル；リアルタイム顧客プロファイル；トラブルシューティング；API
-title: エンティティ(プロファイルアクセス) APIエンドポイント
+keywords: Experience Platform、プロファイル、リアルタイム顧客プロファイル、トラブルシューティング、API
+title: エンティティ（プロファイルアクセス）APIエンドポイント
 topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform を使用すると、RESTful API またはユーザーインターフェイスを使用して、リアルタイムの顧客プロファイルデータにアクセスできます。このガイドでは、プロファイルAPIを使用して、一般的に「プロファイル」と呼ばれるエンティティにアクセスする方法について概説します。
+description: Adobe Experience Platform を使用すると、RESTful API またはユーザーインターフェイスを使用して、リアルタイムの顧客プロファイルデータにアクセスできます。このガイドでは、プロファイルAPIを使用してエンティティ（より一般的には「プロファイル」と呼ばれます）にアクセスする方法について説明します。
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1737'
-ht-degree: 87%
+source-wordcount: '1732'
+ht-degree: 90%
 
 ---
 
-# エンティティエンドポイント(プロファイルアクセス)
+# エンティティエンドポイント（プロファイルアクセス）
 
-Adobe Experience Platformでは、RESTful APIまたはユーザーインターフェイスを使用して[!DNL Real-time Customer Profile]データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Platform] UIを使用したプロファイルへのアクセスについて詳しくは、[プロファイルユーザーガイド](../ui/user-guide.md)を参照してください。
+Adobe Experience Platformでは、RESTful APIまたはユーザーインターフェイスを使用して[!DNL Real-time Customer Profile]データにアクセスできます。 このガイドでは、API を使用してエンティティ（より一般的には「プロファイル」として知られています）にアクセスする方法について説明します。[!DNL Platform] UIを使用したプロファイルへのアクセスについて詳しくは、『[プロファイルユーザーガイド](../ui/user-guide.md)』を参照してください。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)の一部です。 先に進む前に、[はじめにガイド](getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## ID によるプロファイルデータへのアクセス
 
@@ -778,7 +777,7 @@ curl -X POST \
 
 ## 複数スキーマエンティティの時系列イベントへのアクセス
 
-関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、[!DNL Schema Registry] API開発者ガイド[記述子エンドポイントガイド](../../xdm/api/descriptors.md)を参照してください。
+関係記述子を介して接続された複数のエンティティにアクセスできます。次の API 呼び出しの例では、2 つのスキーマ間の関係が既に定義されていると仮定しています。関係記述子の詳細については、『[!DNL Schema Registry] API開発者ガイド[記述子エンドポイントガイド](../../xdm/api/descriptors.md)』を参照してください。
 
 リクエストパスにクエリパラメーターを含めて、アクセスするデータを指定できます。複数のパラメーターを含め、アンパサンド（&amp;）で区切ることができます。有効なリストの完全なパラメーターは、付録の「[クエリパラメータ](#query-parameters)」の節に記載されています。
 
@@ -888,11 +887,11 @@ curl -X GET \
 
 ## 次の手順
 
-このガイドに従うと、[!DNL Real-time Customer Profile]データフィールド、プロファイル、および時系列データに正常にアクセスできます。 [!DNL Platform]に保存されている他のデータリソースへのアクセス方法については、[データアクセスの概要](../../data-access/home.md)を参照してください。
+このガイドでは、[!DNL Real-time Customer Profile]データフィールド、プロファイル、時系列データにアクセスしました。 [!DNL Platform]に格納されている他のデータリソースにアクセスする方法については、「[データアクセスの概要](../../data-access/home.md)」を参照してください。
 
 ## 付録 {#appendix}
 
-次の節では、APIを使用して[!DNL Profile]データにアクセスする場合の補足情報を説明します。
+次の節では、APIを使用した[!DNL Profile]データへのアクセスに関する補足情報を示します。
 
 ### クエリパラメーター {#query-parameters}
 
@@ -912,5 +911,5 @@ curl -X GET \
 | `startTime` | 時系列オブジェクトのフィルターを開始する時間をミリ秒単位で指定します。 | `startTime=1539838505` |
 | `endTime` | 時系列オブジェクトのフィルターを終了する時間をミリ秒単位で指定します。 | `endTime=1539838510` |
 | `limit` | 返すオブジェクトの最大数を指定する数値。デフォルトは 1000 です。 | `limit=100` |
-| `property` | プロパティ値別のフィルター。 次の評価演算子をサポートします。=、!=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大3つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
+| `property` | プロパティ値でフィルターします。 次の評価演算子をサポートします。=、!=、&lt;、&lt;=、>、>=。 エクスペリエンスイベントでのみ使用でき、最大3つのプロパティがサポートされます。 | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | 参照の計算済み属性を有効にする機能フラグ。デフォルトは false です。 | `withCA=true` |
