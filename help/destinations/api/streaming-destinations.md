@@ -6,10 +6,10 @@ description: このドキュメントでは、Adobe Experience Platform APIを�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2025'
-ht-degree: 53%
+source-wordcount: '2021'
+ht-degree: 52%
 
 ---
 
@@ -70,7 +70,7 @@ Experience Platform のリソースは、特定の仮想サンドボックスに
 
 ### Swagger のドキュメント {#swagger-docs}
 
-このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)に関する[フローサービスAPIのドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
+このチュートリアルに含まれるすべての API 呼び出しについての参照ドキュメンは、Swagger のホームページにあります。Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/)に関する[フローサービスAPIのドキュメントを参照してください。 このチュートリアルと Swagger のドキュメントページを並行して使用することをお勧めします。
 
 ## 使用可能なストリーミング宛先のリストを取得する {#get-the-list-of-available-streaming-destinations}
 

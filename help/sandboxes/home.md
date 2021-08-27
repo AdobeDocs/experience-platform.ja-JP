@@ -5,9 +5,9 @@ title: サンドボックスの概要
 topic-legacy: overview
 description: サンドボックスは、Experience Platform の単一のインスタンス内の仮想パーティションで、デジタルエクスペリエンスアプリケーションの開発プロセスとシームレスに統合できます。
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1005'
 ht-degree: 60%
 
 ---
@@ -60,7 +60,7 @@ Experience Platformインスタンスは、複数の実稼動および開発サ�
 
 ## Experience Platform API でのサンドボックス
 
-Experience Platform API を呼び出す場合は、ヘッダーの `x-sandbox-name` でサンドボックス名を指定する必要があります。例えば、 [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)を呼び出して実稼動用サンドボックス内のすべてのデータセットを表示する場合、サンドボックスの名前(「prod」)はAPIリクエストのヘッダーとして提供されます。
+Experience Platform API を呼び出す場合は、ヘッダーの `x-sandbox-name` でサンドボックス名を指定する必要があります。例えば、 [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/)を呼び出して実稼動用サンドボックス内のすべてのデータセットを表示する場合、サンドボックスの名前(「prod」)はAPIリクエストのヘッダーとして提供されます。
 
 ```shell
 curl -X GET \

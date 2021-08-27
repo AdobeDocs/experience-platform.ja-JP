@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: リアルタイム顧客プロファイルを使用すると、属性データと行動データの両方を含む複数のソースのデータを統合し、Adobe Experience Platform内の個々の顧客の単一のビューを構築できます。 その後、プロファイルデータをデータセットにエクスポートして、さらに処理することができます。
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b47a52920f82a962ff044a0dacf9777b6eeae447
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 66%
+source-wordcount: '1517'
+ht-degree: 65%
 
 ---
 
@@ -433,7 +433,7 @@ curl -X POST \
 
 ## 次の手順
 
-エクスポートが正常に完了すると、データは Experience Platform のデータレイク内で使用できます。その後、エクスポートに関連付けられた `batchId` を使用して、[データアクセス API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) でデータにアクセスできます。エクスポートのサイズに応じて、データがチャンクに格納され、バッチが複数のファイルで構成される場合があります。
+エクスポートが正常に完了すると、データは Experience Platform のデータレイク内で使用できます。その後、エクスポートに関連付けられた `batchId` を使用して、[データアクセス API](https://www.adobe.io/experience-platform-apis/references/data-access/) でデータにアクセスできます。エクスポートのサイズに応じて、データがチャンクに格納され、バッチが複数のファイルで構成される場合があります。
 
 データアクセス API を使用してバッチファイルにアクセスしてダウンロードする手順については、[データアクセスのチュートリアル](../../data-access/tutorials/dataset-data.md)を参照してください。
 

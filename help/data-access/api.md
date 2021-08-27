@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；データアクセス；Python sdk;Spark sdk；データアクセスapi；エクスポート；Export
+keywords: Experience Platform：ホーム;人気のトピック;データアクセス;python sdk;spark sdk;data access api；書き出し；書き出し
 solution: Experience Platform
 title: データアクセスAPIガイド
 topic-legacy: developer guide
-description: Data Access APIは、Experience Platform内で取り込まれたデータセットの検出性とアクセス性に重点を置いたRESTfulインターフェイスを開発者に提供することで、Adobe Experience Platformをサポートします。
+description: データアクセスAPIは、Adobe Experience Platformをサポートし、Experience Platform内で取り込んだデータセットの検出性とアクセシビリティに重点を置いたRESTfulインターフェイスを開発者に提供します。
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 78%
+source-wordcount: '524'
+ht-degree: 84%
 
 ---
 
 # データアクセスAPIガイド
 
-Data Access APIは、[!DNL Experience Platform]内の取り込んだデータセットの検出性とアクセシビリティに重点を置いたRESTfulインターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートしています。
+データアクセスAPIは、[!DNL Experience Platform]内で取り込んだデータセットの検出性とアクセシビリティに重点を置いたRESTfulインターフェイスをユーザーに提供することで、Adobe Experience Platformをサポートします。
 
 ![Experience Platform でのデータアクセス](images/Data_Access_Experience_Platform.png)
 
 ## API 仕様リファレンス
 
-Swagger API リファレンスドキュメントは、[こちら](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)を参照してください。
+Swagger API リファレンスドキュメントは、[こちら](https://www.adobe.io/experience-platform-apis/references/data-access/)を参照してください。
 
 ## 用語
 
@@ -204,7 +203,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 ## ファイルのコンテンツへのアクセス
 
-[!DNL Data Access] APIを使用してファイルのコンテンツにアクセスすることもできます。 これを使用して、コンテンツを外部ソースにダウンロードできます。
+[!DNL Data Access] APIを使用して、ファイルのコンテンツにアクセスすることもできます。 これを使用して、コンテンツを外部ソースにダウンロードできます。
 
 **API 形式**
 
@@ -239,6 +238,6 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 その他のサンプルについては、[データアクセスのチュートリアル](tutorials/dataset-data.md)を参照してください。
 
-## データ取り込みイベントへの登録
+## データ取得イベントへのサブスクライブ
 
-[!DNL Platform] は、 [Adobeデベロッパーコンソールを通じて特定の高価値イベントを購読用に使用できるようにします](https://www.adobe.com/go/devs_console_ui)。例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[データインジェスト通知のサブスクライブ](../ingestion/quality/subscribe-events.md)のチュートリアルを参照してください。
+[!DNL Platform] は、 [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) を介して特定の価値の高いイベントをサブスクリプションで利用できるようにします。例えば、データ取り込みイベントに登録して、遅延や障害の可能性についての通知を受け取ることができます。詳しくは、[データ取得通知のサブスクライブ](../ingestion/quality/subscribe-events.md)のチュートリアルを参照してください。

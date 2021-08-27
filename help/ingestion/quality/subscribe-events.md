@@ -5,16 +5,16 @@ title: データ取得通知
 topic-legacy: overview
 description: インジェストプロセスの監視を支援するために、Adobe Experience Platformでは、プロセスの各手順で公開された一連のイベントをサブスクライブし、取り込んだデータのステータスと考えられるエラーを通知できます。
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 29%
+source-wordcount: '677'
+ht-degree: 27%
 
 ---
 
 # データ取得通知
 
-Adobe Experience Platform でデータを取得するプロセスは、複数の手順で構成されます。[!DNL Platform]に取り込む必要のあるデータファイルを特定したら、取り込みプロセスが開始され、データが正常に取り込まれるか、取り込まれないまで各手順が連続して実行されます。 取得処理は、[Adobe データ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) を使用するか、Experience Platform のユーザーインターフェイスを使用して開始することができます。[!DNL Experience Platform]
+Adobe Experience Platform でデータを取得するプロセスは、複数の手順で構成されます。[!DNL Platform]に取り込む必要のあるデータファイルを特定したら、取り込みプロセスが開始され、データが正常に取り込まれるか、取り込まれないまで各手順が連続して実行されます。 取得処理は、[Adobe データ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) を使用するか、Experience Platform のユーザーインターフェイスを使用して開始することができます。[!DNL Experience Platform]
 
 [!DNL Platform]に読み込まれるデータは、宛先、[!DNL Data Lake]または[!DNL Real-time Customer Profile]データストアに到達するために、複数の手順を実行する必要があります。 各手順では、データの処理やデータの検証が行われ、データが次の手順に渡される前にデータが保存されます。取得されるデータの量によっては、この処理に時間がかかる場合があり、検証、セマンティクスまたは処理エラーが原因でプロセスが失敗する可能性が常にあります。失敗した場合は、データの問題を修正し、修正したデータファイルを使用して取得プロセス全体を再開する必要があります。
 

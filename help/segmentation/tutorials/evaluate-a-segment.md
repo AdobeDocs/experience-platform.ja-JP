@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、Adobe Experience Platform Segmentation Service APIを使用してセグメントを評価し、セグメント結果にアクセスする方法について説明します。
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1548'
 ht-degree: 64%
 
 ---
@@ -223,7 +223,7 @@ curl -X POST \
 
 ## 次の手順
 
-エクスポートが正常に完了すると、データは[!DNL Experience Platform]の[!DNL Data Lake]内で使用できます。 その後、エクスポートに関連付けられた`batchId`を使用して、[[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)を使用してデータにアクセスできます。 セグメントのサイズに応じて、データがチャンクに格納され、バッチが複数のファイルで構成される場合があります。
+エクスポートが正常に完了すると、データは[!DNL Experience Platform]の[!DNL Data Lake]内で使用できます。 その後、エクスポートに関連付けられた`batchId`を使用して、[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/)を使用してデータにアクセスできます。 セグメントのサイズに応じて、データがチャンクに格納され、バッチが複数のファイルで構成される場合があります。
 
 [!DNL Data Access] APIを使用してバッチファイルにアクセスしてダウンロードする手順については、『[データアクセスのチュートリアル](../../data-access/tutorials/dataset-data.md)』に従ってください。
 

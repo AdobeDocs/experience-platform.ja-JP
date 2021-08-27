@@ -4,34 +4,33 @@ solution: Experience Platform
 title: ソースコネクタとAPIを使用した支払データの収集
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、支払い申込書からデータを取得し、ソースコネクタとAPIを使用してプラットフォームに取り込む手順を説明します。
+description: このチュートリアルでは、支払い申請からデータを取得し、ソースコネクタとAPIを使用してPlatformに取り込む手順について説明します。
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1598'
+source-wordcount: '1594'
 ht-degree: 19%
 
 ---
 
 # ソースコネクタとAPIを使用して支払データを収集する
 
-このチュートリアルでは、サードパーティの支払い申込書からデータを取得し、ソースコネクタと[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してプラットフォームに取り込む手順を説明します。
+このチュートリアルでは、サードパーティの支払い申請書からデータを取得し、ソースコネクタと[[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) APIを使用してPlatformに取り込む手順について説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効な接続を通じて支払い申請にアクセスできるほか、プラットフォームに組み込むファイル（ファイルのパスと構造など）に関する情報が必要です。 この情報がない場合は、このチュートリアルを試みる前に、[Flow Service API](../explore/payments.md)を使用した支払い申し込みの調査のチュートリアルを参照してください。
+このチュートリアルでは、有効な接続を通じて支払いアプリケーションにアクセスできるほか、Platformに取り込むファイルに関する情報（ファイルのパスと構造を含む）を入手できる必要があります。 この情報がない場合は、このチュートリアルを試す前に、[フローサービスAPI](../explore/payments.md)を使用した支払い申請の調査に関するチュートリアルを参照してください。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):Experience Platformが顧客体験データを編成する際に使用する標準化されたフレームワーク。
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md):顧客体験データを整理する際に使用する標準化されたExperience Platformフレームワーク。
    * [スキーマ構成の基本](../../../../xdm/schema/composition.md)：スキーマ構成の主要な原則やベストプラクティスなど、XDM スキーマの基本的な構成要素について学びます。
-   * [スキーマレジストリ開発ガイド](../../../../xdm/api/getting-started.md):スキーマレジストリAPIの呼び出しを正常に実行するために知っておく必要がある重要な情報が含まれます。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
-* [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、Experience Platform内のデータの場所と系列の記録システムです。
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):Batch Ingestion APIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
+   * [スキーマレジストリ開発者ガイド](../../../../xdm/api/getting-started.md):スキーマレジストリAPIへの呼び出しを正しく実行するために知っておく必要がある重要な情報を含みます。これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（Accept ヘッダーとその可能な値に特に注意）が含まれます。
+* [[!DNL Catalog Service]](../../../../catalog/home.md):カタログは、データの場所とリネージのExperience Platformです。
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md):バッチ取得APIを使用すると、データをバッチファイルとしてExperience Platformに取り込むことができます。
 * [サンドボックス](../../../../sandboxes/home.md)：Experience Platform は、単一の Platform インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用して支払い申し込みに正しく接続するために知っておく必要のある追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用して支払い申し込みに正しく接続するために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
@@ -39,7 +38,7 @@ ht-degree: 19%
 
 ### 必須ヘッダーの値の収集
 
-Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
+Platform API への呼び出しを実行する前に、[認証に関するチュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。認証に関するチュートリアルを完了すると、すべての Experience Platform API 呼び出しで使用する、以下のような各必須ヘッダーの値が提供されます。
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -53,21 +52,21 @@ Platform API への呼び出しを実行する前に、[認証に関するチュ
 
 * `Content-Type: application/json`
 
-## ソース接続の作成{#source}
+## ソース接続の作成 {#source}
 
-[!DNL Flow Service] APIにPOSTリクエストを行うことで、ソース接続を作成できます。 ソース接続は、接続ID、ソースデータファイルのパス、および接続仕様IDで構成されます。
+[!DNL Flow Service] APIにPOSTリクエストを送信して、ソース接続を作成できます。 ソース接続は、接続ID、ソースデータファイルへのパス、接続仕様IDで構成されます。
 
 ソース接続を作成するには、データ形式属性の列挙値も定義する必要があります。
 
-ファイルベースのコネクタの列挙値は、次のとおりです。
+ファイルベースのコネクタには、次の列挙値を使用します。
 
 | データフォーマット | 列挙値 |
 | ----------- | ---------- |
 | 区切り | `delimited` |
 | JSON | `json` |
-| パーケ | `parquet` |
+| Parquet | `parquet` |
 
-テーブルベースのすべてのコネクタで、値を`tabular`に設定します。
+すべてのテーブルベースのコネクタで、値を`tabular`に設定します。
 
 **API 形式**
 
@@ -137,13 +136,13 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | -------- | ----------- |
-| `baseConnectionId` | アクセスしているサードパーティ支払い申し込みの一意の接続ID。 |
+| `baseConnectionId` | アクセスするサードパーティの支払い申し込みの一意の接続ID。 |
 | `params.path` | ソースファイルのパス。 |
-| `connectionSpec.id` | 支払い申請の接続仕様ID。 |
+| `connectionSpec.id` | 支払い申し込みの接続仕様ID。 |
 
 **応答**
 
-正常な応答は、新たに作成されたソース接続の固有な識別子(`id`)を返します。 このIDは、後の手順でターゲット接続を作成する際に必要となります。
+正常な応答は、新しく作成されたソース接続の一意の識別子(`id`)を返します。 このIDは、後の手順でターゲット接続を作成する際に必要になります。
 
 ```json
 {
@@ -152,11 +151,11 @@ curl -X POST \
 }
 ```
 
-## ターゲットXDMスキーマの作成{#target-schema}
+## ターゲットXDMスキーマの作成 {#target-schema}
 
-Platformでソースデータを使用するには、必要に応じてソースデータを構造化するターゲットスキーマを作成する必要があります。 次に、このターゲットスキーマを使用して、ソースデータが含まれるプラットフォームデータセットを作成します。 このターゲットXDMスキーマはXDM [!DNL Individual Profile]クラスを拡張します。
+ソースデータをPlatformで使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマを作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるPlatformデータセットを作成します。 このターゲットXDMスキーマは、XDM [!DNL Individual Profile]クラスも拡張します。
 
-ターゲットXDMスキーマは、[スキーマレジストリAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)に対するPOST要求を実行することで作成できます。
+[スキーマレジストリAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)に対してPOSTリクエストを実行すると、ターゲットXDMスキーマを作成できます。
 
 **API 形式**
 
@@ -203,7 +202,7 @@ curl -X POST \
 
 **応答**
 
-正常に応答すると、新たに作成されたスキーマの詳細(一意の識別子(`$id`)を返します。 このIDは、後の手順でターゲットデータセット、マッピング、データフローを作成する際に必要となります。
+正常な応答は、新しく作成されたスキーマの一意の識別子(`$id`)を含む詳細を返します。 このIDは、後の手順で、ターゲットデータセット、マッピング、データフローを作成する際に必要になります。
 
 ```json
 {
@@ -269,7 +268,7 @@ curl -X POST \
 
 ## ターゲットデータセットの作成
 
-ターゲットデータセットは、[カタログサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを指定することで作成できます。
+[カタログサービスAPI](https://www.adobe.io/experience-platform-apis/references/catalog/)に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを指定することで、ターゲットデータセットを作成できます。
 
 **API 形式**
 
@@ -303,7 +302,7 @@ curl -X POST \
 
 **応答**
 
-正常に完了すると、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列が返されます。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順でターゲットデータセット接続とデータフローを作成する際に必要なターゲットデータセットIDを保存します。
+正常な応答は、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列を返します。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。後の手順でターゲット接続とデータフローを作成する際に必要になるターゲットデータセットIDを保存します。
 
 ```json
 [
@@ -311,11 +310,11 @@ curl -X POST \
 ]
 ```
 
-## ターゲット接続の作成{#target-connection}
+## ターゲット接続の作成 {#target-connection}
 
-ターゲット接続は、取り込まれたデータが到着した宛先への接続を表します。 ターゲット接続を作成するには、Data Lakeに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+ターゲット接続は、取り込んだデータの宛先への接続を表します。 ターゲット接続を作成するには、データレイクに関連付けられた固定接続仕様IDを指定する必要があります。 この接続仕様IDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-ターゲットスキーマ、ターゲットデータセット、データレークへの接続仕様IDに固有の識別子が追加されました。 [!DNL Flow Service] APIを使用して、これらのIDと、受信ソースデータを含むターゲットセットを指定することで、データ接続を作成できます。
+これで、ターゲットスキーマとターゲットデータセット、およびデータレイクへの接続仕様IDの一意の識別子が得られます。 [!DNL Flow Service] APIを使用して、これらの識別子を、受信ソースデータを格納するデータセットと共に指定することで、ターゲット接続を作成できます。
 
 **API 形式**
 
@@ -357,11 +356,11 @@ curl -X POST \
 | `data.schema.id` | ターゲットXDMスキーマの`$id`。 |
 | `data.schema.version` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 |
 | `params.dataSetId` | ターゲットデータセットのID。 |
-| `connectionSpec.id` | Data Lakeへの接続に使用する接続仕様ID。 このIDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | データレイクへの接続に使用する接続仕様ID。 このIDは次のとおりです。`c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **応答**
 
-正常に応答すると、新しいターゲット接続の一意の識別子(`id`)が返されます。 この値は、後の手順でデータフローを作成する際に必要になります。
+正常な応答は、新しいターゲット接続の一意の識別子(`id`)を返します。 この値は、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -370,9 +369,9 @@ curl -X POST \
 }
 ```
 
-## マッピングを作成{#mapping}
+## マッピングの作成 {#mapping}
 
-ソースデータをターゲットデータセットに取り込むには、まず、ターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、リクエストペイロード内で定義されたデータマッピングを使用して[Conversion Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml)に対するPOSTリクエストを実行することで達成されます。
+ソースデータをターゲットデータセットに取り込むには、まずターゲットデータセットが準拠するターゲットスキーマにマッピングする必要があります。 これは、リクエストペイロード内で定義されたデータマッピングを使用して、[POSTサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml)に対して変換リクエストを実行することで実現されます。
 
 **API 形式**
 
@@ -438,7 +437,7 @@ curl -X POST \
 
 **応答**
 
-正常な応答は、新たに作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 このIDは、後の手順でデータフローを作成する際に必要です。
+正常な応答は、新しく作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 このIDは、後の手順でデータフローを作成する際に必要になります。
 
 ```json
 {
@@ -451,9 +450,9 @@ curl -X POST \
 }
 ```
 
-## データフロー仕様を検索{#specs}
+## データフロー仕様の検索 {#specs}
 
-データフローは、ソースからデータを収集し、プラットフォームに取り込む役割を持ちます。 データフローを作成するには、まず[!DNL Flow Service] APIに対してGETリクエストを実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を持ちます。
+データフローは、ソースからデータを収集し、Platformに取り込む役割を果たします。 GETフローを作成するには、まず[!DNL Flow Service] APIに対してデータリクエストを実行して、データフロー仕様を取得する必要があります。 データフロー仕様は、外部データベースまたはNoSQLシステムからデータを収集する役割を果たします。
 
 **API 形式**
 
@@ -471,9 +470,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
-正常な応答を得ると、ソースからプラットフォームにデータを取り込む処理を行うデータフロー仕様の詳細が返されます。 この応答には、新しいデータフローの作成に必要な一意のフロー仕様`id`が含まれます。
+正常な応答は、ソースからPlatformにデータを取り込む必要があるデータフロー仕様の詳細を返します。 この応答には、新しいデータフローの作成に必要な固有のフロー仕様`id`が含まれます。
 
 ```json
 {
@@ -704,16 +703,16 @@ curl -X GET \
 
 ## データフローの作成
 
-データ収集に向けた最後の手順は、データフローを作成することです。 この時点で、次の必須値を準備する必要があります。
+データを収集するための最後の手順は、データフローを作成することです。 この時点で、次の必要な値を準備しておく必要があります。
 
 * [ソース接続ID](#source)
 * [ターゲット接続ID](#target)
 * [マッピング ID](#mapping)
 * [データフロー仕様ID](#specs)
 
-データフローは、ソースからのデータのスケジュールおよび収集を担当します。 POST内で前述の値を提供しながらペイロードリクエストを実行すると、データフローを作成できます。
+データフローは、ソースからデータをスケジュールおよび収集する役割を担います。 データフローを作成するには、前述の値をPOST内に提供しながらペイロードリクエストを実行します。
 
-取り込みのスケジュールを設定するには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day`、または`week`です。 interval値は、2つの連続したインジェスションの間の期間を指定し、1回限りのインジェストを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の場合、間隔の値は`15`以上に設定する必要があります。
+取り込みをスケジュールするには、まず開始時間の値を秒単位のエポック時間に設定する必要があります。 次に、頻度の値を次の5つのオプションのいずれかに設定する必要があります。`once`、`minute`、`hour`、`day`、または`week`。 interval値は、2つの連続した取り込みの間隔を指定し、1回限りの取り込みを作成する場合に、間隔を設定する必要はありません。 その他のすべての周波数の間隔の値は、`15`以上に設定する必要があります。
 
 **API 形式**
 
@@ -776,15 +775,15 @@ curl -X POST \
 | `sourceConnectionIds` | 前の手順で取得した[ソース接続ID](#source)。 |
 | `targetConnectionIds` | 前の手順で取得した[ターゲット接続ID](#target-connection)。 |
 | `transformations.params.mappingId` | 前の手順で取得した[マッピングID](#mapping)。 |
-| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 `deltaColumn`でサポートされている日付形式は`yyyy-MM-dd HH:mm:ss`です。 |
-| `transformations.params.mappingId` | データベースに関連付けられているマッピングID。 |
-| `scheduleParams.startTime` | エポック時間のデータフローの開始時間。 |
-| `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。`once`、`minute`、`hour`、`day`、または`week`です。 |
-| `scheduleParams.interval` | この間隔は、連続する2つのフローの実行間隔を指定します。 間隔の値は、ゼロ以外の整数である必要があります。 頻度が`once`として設定されている場合は間隔は不要で、他の頻度の値は`15`以上にする必要があります。 |
+| `transformations.params.deltaColum` | 新しいデータと既存のデータを区別するために使用される指定された列。 増分データは、選択した列のタイムスタンプに基づいて取り込まれます。 `deltaColumn`でサポートされている日付形式は`yyyy-MM-dd HH:mm:ss`です。 |
+| `transformations.params.mappingId` | データベースに関連付けられたマッピングID。 |
+| `scheduleParams.startTime` | エポックタイムでのデータフローの開始時間。 |
+| `scheduleParams.frequency` | データフローがデータを収集する頻度。 指定できる値は次のとおりです。`once`、`minute`、`hour`、`day`、または`week`。 |
+| `scheduleParams.interval` | この間隔は、2つの連続したフロー実行の間隔を指定します。 間隔の値はゼロ以外の整数にする必要があります。 頻度が`once`に設定されている場合は間隔は不要で、他の頻度値の場合は`15`以上にする必要があります。 |
 
 **応答**
 
-正常な応答が返されると、新しく作成されたデータフローのID `id`が返されます。
+リクエストが成功した場合は、新しく作成したデータフローのID `id`が返されます。
 
 ```json
 {
@@ -795,11 +794,11 @@ curl -X POST \
 
 ## データフローの監視
 
-データフローを作成したら、データフローを介して取り込まれるデータを監視し、フローの実行、完了状態、エラーに関する情報を確認できます。 データフローの監視方法の詳細については、API ](../monitor.md)の[データフローの監視に関するチュートリアルを参照してください
+データフローを作成したら、そのデータを通じて取り込まれるデータを監視して、フロー実行、完了ステータス、エラーに関する情報を確認できます。 データフローの監視方法について詳しくは、API ](../monitor.md)での[データフローの監視に関するチュートリアルを参照してください。
 
 ## 次の手順
 
-このチュートリアルに従って、ソースコネクタを作成し、支払い申請から予定通りにデータを収集します。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]などのダウンストリームプラットフォームサービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
+このチュートリアルでは、支払い申請からスケジュールに基づいてデータを収集するソースコネクタを作成しました。 受信データは、[!DNL Real-time Customer Profile]や[!DNL Data Science Workspace]など、ダウンストリームのPlatformサービスで使用できるようになりました。 詳しくは、次のドキュメントを参照してください。
 
 * [リアルタイム顧客プロファイルの概要](../../../../profile/home.md)
-* [Data Science ワークスペースの概要](../../../../data-science-workspace/home.md)
+* [Data Science Workspace の概要](../../../../data-science-workspace/home.md)

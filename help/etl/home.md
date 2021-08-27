@@ -5,10 +5,10 @@ title: Adobe Experience Platform 用 ETL 統合の開発
 topic-legacy: overview
 description: ETL 統合ガイドでは、Experience Platform 用の高パフォーマンスで安全なコネクタを作成し、データを Platform に取得するための一般的な手順について説明しています。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '4143'
-ht-degree: 100%
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+workflow-type: tm+mt
+source-wordcount: '4083'
+ht-degree: 98%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 100%
 ETL 統合ガイドでは、[!DNL Experience Platform] 用の高パフォーマンスで安全なコネクタを作成し、データを [!DNL Platform] に取り込むための一般的な手順について説明しています。
 
 
-- [[!DNL Catalog]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
-- [[!DNL Data Access]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
-- [[!DNL Data Ingestion]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
+- [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
+- [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Experience Platform API の認証と承認](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)
 - [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
@@ -56,7 +56,7 @@ ETL コネクタ統合には、複数の Experience Platform コンポーネン�
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - Authorization： Bearer `{ACCESS_TOKEN}`
 - x-api-key： `{API_KEY}`
@@ -90,7 +90,7 @@ ETL ツールで適切な接続を設定した後（ユーザーの資格情報�
 
 ### データセットリストの表示
 
-マッピングにデータのソースを使用すると、使用可能なすべてのデータセットのリストを [[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) を使用して取得できます。
+マッピングにデータのソースを使用すると、使用可能なすべてのデータセットのリストを [[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/) を使用して取得できます。
 
 1 つの API リクエストを発行して、使用可能なすべてのデータセット（`GET /dataSets`）を表示することができます。ベストプラクティスは応答のサイズを制限するクエリパラメーターを含めることです。
 
@@ -127,7 +127,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3&
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
 
-[[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) を呼び出す方法を示す詳細な例については、[Catalog Service の概要](../catalog/home.md)を参照してください。
+[[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/) を呼び出す方法を示す詳細な例については、[Catalog Service の概要](../catalog/home.md)を参照してください。
 
 **応答** 
 
@@ -229,7 +229,7 @@ curl -X GET \
 }
 ```
 
-データセットの「schema」プロパティに値が入力された場合、これはスキーマが非推奨の `/xdms` スキーマであることを示します。また、サポートされている場合、ETL コネクタは `/xdms` エンドポイント（[[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) の非推奨のエンドポイント）の「schema」プロパティの値を使用してレガシースキーマを取得します。
+データセットの「schema」プロパティに値が入力された場合、これはスキーマが非推奨の `/xdms` スキーマであることを示します。また、サポートされている場合、ETL コネクタは `/xdms` エンドポイント（[[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/) の非推奨のエンドポイント）の「schema」プロパティの値を使用してレガシースキーマを取得します。
 
 **API 形式**
 
@@ -477,7 +477,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 -H "x-api-key : {API_KEY}"
 ```
 
-**応答** 
+**応答**
 
 ```JSON
 {
@@ -491,13 +491,13 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-データは、[データ取得 API ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)を使用して [!DNL Experience Platform] に書き込まれます。  データの書き込みは非同期的なプロセスです。データが Adobe Experience Platform に書き込まれると、データが完全に書き込まれた後でのみ、バッチが作成され、成功に指定されます。
+データは、[データ取得 API ](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)を使用して [!DNL Experience Platform] に書き込まれます。  データの書き込みは非同期的なプロセスです。データが Adobe Experience Platform に書き込まれると、データが完全に書き込まれた後でのみ、バッチが作成され、成功に指定されます。
 
 [!DNL Experience Platform] のデータは、Parquet ファイル形式で書き込む必要があります。
 
 ## 実行段階
 
-実行を開始すると、コネクタ（ソースコンポーネントで定義）は、[[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) を使用して [!DNL Experience Platform] からデータを読み取ります。変換プロセスは、特定の時間範囲のデータを読み取ります。内部的には、ソースデータセットのバッチをクエリします。クエリ中に、パラメーター化された（時系列データの場合はローリング、または増分データ）開始日を使用し、それらのバッチのデータセットファイルをリストし、それらのデータセットファイルのデータのリクエストを開始します。
+実行を開始すると、コネクタ（ソースコンポーネントで定義）は、[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) を使用して [!DNL Experience Platform] からデータを読み取ります。変換プロセスは、特定の時間範囲のデータを読み取ります。内部的には、ソースデータセットのバッチをクエリします。クエリ中に、パラメーター化された（時系列データの場合はローリング、または増分データ）開始日を使用し、それらのバッチのデータセットファイルをリストし、それらのデータセットファイルのデータのリクエストを開始します。
 
 ### 変換の例
 
@@ -505,7 +505,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 
 ### [!DNL Experience Platform] からのデータの読み取り
 
-[[!DNL Catalog API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) を使用すると、指定した開始時間と終了時間の間にあるすべてのバッチを取得し、作成順に並べ替えることができます。
+[[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/references/catalog/) を使用すると、指定した開始時間と終了時間の間にあるすべてのバッチを取得し、作成順に並べ替えることができます。
 
 **リクエスト**
 
@@ -522,7 +522,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=D
 
 ### バッチからのファイルの取得
 
-探しているバッチの ID を取得したら（`{BATCH_ID}`）、[[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) を使用して、特定のバッチに属するファイルのリストを取得できます。詳しくは、[[!DNL Data Access] チュートリアル](../data-access/tutorials/dataset-data.md)を参照してください。
+探しているバッチの ID を取得したら（`{BATCH_ID}`）、[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) を使用して、特定のバッチに属するファイルのリストを取得できます。詳しくは、[[!DNL Data Access] チュートリアル](../data-access/tutorials/dataset-data.md)を参照してください。
 
 **リクエスト**
 
@@ -536,7 +536,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 ### ファイル ID を使用したファイルへのアクセス
 
-ファイルの一意の ID（`{FILE_ID`）と [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) を使用して、ファイルの名前、バイト単位のサイズ、ダウンロードリンクなど、ファイルの特定の詳細にアクセスできます。
+ファイルの一意の ID（`{FILE_ID`）と [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) を使用して、ファイルの名前、バイト単位のサイズ、ダウンロードリンクなど、ファイルの特定の詳細にアクセスできます。
 
 **リクエスト**
 
@@ -552,7 +552,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
 
 ### ファイルコンテンツへのアクセス
 
-[[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) は、特定のファイルのコンテンツにアクセスするために使用できます。コンテンツを取り込むには、ファイル ID を用いてファイルにアクセスする際に `_links.self.href` に返された値を用いて GET リクエストを実行します。
+[[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) は、特定のファイルのコンテンツにアクセスするために使用できます。コンテンツを取り込むには、ファイル ID を用いてファイルにアクセスする際に `_links.self.href` に返された値を用いて GET リクエストを実行します。
 
 **リクエスト**
 
@@ -580,7 +580,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{DATASET_FIL
 
 ### バッチの作成
 
-データが処理されると、ETL ツールは、[バッチ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) を使用してデータを [!DNL Experience Platform] に書き戻します。データセットにデータを追加する前に、そのデータをバッチにリンクし、後で特定のデータセットにアップロードする必要があります。
+データが処理されると、ETL ツールは、[バッチ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) を使用してデータを [!DNL Experience Platform] に書き戻します。データセットにデータを追加する前に、そのデータをバッチにリンクし、後で特定のデータセットにアップロードする必要があります。
 
 **リクエスト**
 
@@ -640,7 +640,7 @@ ETL ツールは、データの読み取り時に、ソースデータセット�
 
 ### 最後のバッチ状態の取得
 
-ETL ツールで新しいタスクを実行する前に、最後のバッチが正常に完了したことを確認する必要があります。[[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) は、関連するバッチの詳細を提供するバッチ固有のオプションを提供します。
+ETL ツールで新しいタスクを実行する前に、最後のバッチが正常に完了したことを確認する必要があります。[[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) は、関連するバッチの詳細を提供するバッチ固有のオプションを提供します。
 
 **リクエスト**
 
@@ -674,7 +674,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?limit=1&s
 
 ### ID 別の最後のバッチステータスの取得
 
-個々のバッチステータスは、`{BATCH_ID}` を使用して GET リクエストを発行することで、[[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) を介して取得できます。使用される `{BATCH_ID}` は、バッチの作成時に返された ID と同じです。
+個々のバッチステータスは、`{BATCH_ID}` を使用して GET リクエストを発行することで、[[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) を介して取得できます。使用される `{BATCH_ID}` は、バッチの作成時に返された ID と同じです。
 
 **リクエスト**
 

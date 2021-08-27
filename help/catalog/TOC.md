@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: カタログおよびデータセットガイド
 user-guide-description: データレイク内でデータ系列、メタデータ、ファイル記述、ディレクトリ、データセットを調べます。
-feature: データ管理
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Management
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 100%
+source-wordcount: '102'
+ht-degree: 95%
 
 ---
 
@@ -33,5 +33,5 @@ ht-degree: 100%
    * [API を使用したデータセットの作成および入力](datasets/create.md)
 * [データレイクでのプライバシーリクエストの処理](privacy.md)
 * [Experience Platform でのデータ保護](data-protection.md)
-* [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [API リファレンス](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

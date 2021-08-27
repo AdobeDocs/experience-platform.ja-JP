@@ -1,52 +1,51 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；監視データフロー；フローサービスapi；フローサービス
+keywords: Experience Platform、ホーム、人気のあるトピック、データフローの監視、フローサービスapi、フローサービス
 solution: Experience Platform
-title: Flow Service APIを使用したデータフローの監視
+title: フローサービスAPIを使用したデータフローの監視
 topic-legacy: overview
 type: Tutorial
-description: このチュートリアルでは、Flow Service APIを使用して、完全性、エラーおよび指標に関するフロー実行データを監視する手順を説明します。
+description: このチュートリアルでは、フローサービスAPIを使用して、完全性、エラーおよび指標のフロー実行データを監視する手順を説明します。
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 20%
+source-wordcount: '718'
+ht-degree: 28%
 
 ---
 
-# Flow Service APIを使用してデータフローを監視する
+# フローサービスAPIを使用したデータフローの監視
 
-Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外部ソースからデータを取り込むと同時に、受信データの構造化、ラベル付け、拡張を行うことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。さらに、Experience Platformでは、データを外部パートナーに対してアクティブ化できます。
+Adobe Experience Platformを使用すると、[!DNL Platform]サービスを使用して、受信データの構造化、ラベル付け、拡張を行いながら、外部ソースからデータを取り込むことができます。 アドビのアプリケーション、クラウドベースのストレージ、データベースなど、様々なソースからデータを取得することができます。さらに、Experience Platformでは、外部のパートナーに対してデータをアクティブ化することもできます。
 
-[!DNL Flow Service] は、Adobe Experience Platform内のさまざまな異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、サポートされるすべてのソースと宛先が接続可能なユーザーインターフェイスおよびRESTful APIを提供します。
+[!DNL Flow Service] は、Adobe Experience Platform内の様々な異なるソースから顧客データを収集し、一元化するために使用されます。このサービスは、サポートされるすべてのソースと宛先が接続可能なユーザーインターフェイスとRESTful APIを提供します。
 
-このチュートリアルでは、フローの実行データを監視し、完全性、エラー、および指標を[[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)を使用して監視する手順について説明します。
+このチュートリアルでは、[[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/)を使用して、完全性、エラーおよび指標のフロー実行データを監視する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、有効なデータフローのID値が必要です。 有効なデータフローIDがない場合は、[ソース概要](../../sources/home.md)または[宛先概要](../../destinations/catalog/overview.md)から選択したコネクタを選択し、このチュートリアルを試みる前に概要を説明した手順に従ってください。
+このチュートリアルでは、有効なデータフローのID値が必要です。 有効なデータフローIDがない場合は、[ソースの概要](../../sources/home.md)または[宛先の概要](../../destinations/catalog/overview.md)から目的のコネクタを選択し、このチュートリアルを試す前に説明した手順に従います。
 
-また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントについて、十分に理解している必要があります。
+また、このチュートリアルでは、Adobe Experience Platformの次のコンポーネントに関する十分な知識が必要です。
 
-- [宛先](../../destinations/home.md):宛先は、一般的に使用されるアプリケーションとの統合が事前に構築されており、チャネル間のマーケティングキャンペーン、電子メールキャンペーン、ターゲットを絞った広告など、様々な用途で、プラットフォームのデータをシームレスにアクティベーションできます。
-- [ソース](../../sources/home.md): [!DNL Experience Platform] 様々なソースからデータを取り込むことができ、 [!DNL Platform] サービスを使用してデータの構造化、ラベル付け、および入力データの拡張を行うことができます。
-- [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [宛先](../../destinations/home.md):宛先は、クロスチャネルマーケティングキャンペーン、電子メールキャンペーン、ターゲット広告、その他多くの使用例に対して、Platformからデータをシームレスにアクティブ化できる、一般的に使用されるアプリケーションとの事前に構築された統合です。
+- [ソース](../../sources/home.md): [!DNL Experience Platform] を使用すると、様々なソースからデータを取り込みながら、サービスを使用して受信データの構造化、ラベル付け、拡張をおこなうことがで [!DNL Platform] きます。
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-[!DNL Flow Service] APIを使用してフローの実行を正しく監視するために知っておく必要がある追加情報については、以下の節で説明します。
+以下の節では、[!DNL Flow Service] APIを使用してフローの実行を正しく監視するために必要な追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソース（[!DNL Flow Service]に属するリソースを含む）は、特定の仮想サンドボックスに分離されます。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Flow Service]に属するリソースを含む、[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されます。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -54,7 +53,7 @@ Adobe Experience Platformは、[!DNL Platform]サービスを使用して、外�
 
 - `Content-Type: application/json`
 
-## フローの実行の監視
+## フロー実行の監視
 
 データフローを作成したら、[!DNL Flow Service] APIに対してGETリクエストを実行します。
 
@@ -83,7 +82,7 @@ curl -X GET \
 
 **応答**
 
-正常な応答は、作成日、ソース接続、ターゲット接続、およびフロー実行の固有な識別子(`id`)など、フロー実行に関する詳細を返します。
+正常な応答は、作成日、ソース接続、ターゲット接続に関する情報、およびフロー実行の一意の識別子(`id`)を含む、フロー実行に関する詳細を返します。
 
 ```json
 {
@@ -192,14 +191,14 @@ curl -X GET \
 | -------- | ----------- |
 | `items` | 特定のフロー実行に関連付けられたメタデータの単一のペイロードが含まれます。 |
 | `metrics` | フロー実行のデータの特性。 |
-| `activities` | データの変換方法を示します。 |
-| `durationSummary` | フロー実行の開始と終了時間。 |
+| `activities` | データの変換方法を表示します。 |
+| `durationSummary` | フロー実行の開始時刻と終了時刻。 |
 | `sizeSummary` | データのボリューム（バイト単位）。 |
 | `recordSummary` | データのレコード数。 |
 | `fileSummary` | データのファイル数。 |
-| `fileSummary.extensions` | アクティビティに固有の情報が含まれます。 例えば、`manifest`は「プロモーションアクティビティ」の一部にすぎず、`extensions`オブジェクトに含まれます。 |
-| `statusSummary` | フローの実行が成功か失敗かを示します。 |
+| `fileSummary.extensions` | アクティビティに固有の情報が含まれます。 例えば、`manifest`は「プロモーションアクティビティ」の一部に過ぎないので、`extensions`オブジェクトに含まれます。 |
+| `statusSummary` | フロー実行が成功か失敗かを示します。 |
 
 ## 次の手順
 
-このチュートリアルに従うと、[!DNL Flow Service] APIを使用してデータフローの指標とエラー情報を取得できます。 これで、取り込みスケジュールに応じてデータフローを監視し続け、ステータスと取り込み率を追跡できます。 ソースのデータフローを監視する方法の詳細については、ユーザーインターフェイス](../ui/monitor-sources.md)のチュートリアルを使用して、ソースの[監視データフローを読んでください。 宛先のデータフローを監視する方法の詳細については、ユーザー・インタフェース](../ui/monitor-destinations.md)のチュートリアルを使用して、宛先の[監視データフローを参照してください。
+このチュートリアルでは、[!DNL Flow Service] APIを使用してデータフローの指標とエラー情報を取得しました。 これで、取得スケジュールに応じて、データフローを引き続き監視し、ステータスと取得率を追跡できます。 ソースのデータフローを監視する方法の詳細については、ユーザーインターフェイス](../ui/monitor-sources.md)を使用したソースの[データフローの監視に関するチュートリアルを参照してください。 宛先のデータフローを監視する方法の詳細については、ユーザーインターフェイス](../ui/monitor-destinations.md)を使用した宛先の[データフローの監視に関するチュートリアルを参照してください。

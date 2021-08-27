@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してPlatformに取り込む手順について説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1111'
-ht-degree: 15%
+source-wordcount: '1107'
+ht-degree: 16%
 
 ---
 
@@ -40,7 +40,7 @@ Platform APIを正常に呼び出す方法について詳しくは、[Platform A
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
 - [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
-## ターゲットXDMスキーマ{#target-schema}を作成します。
+## ターゲットXDMスキーマの作成 {#target-schema}
 
 ソースデータをPlatformで使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマを作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるPlatformデータセットを作成します。 このターゲットXDMスキーマは、XDM [!DNL Individual Profile]クラスも拡張します。
 
@@ -86,7 +86,7 @@ curl -X POST \
     }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成されたスキーマの一意の識別子(`$id`)を含む詳細を返します。 このIDは、後の手順で、ターゲットデータセット、マッピング、データフローを作成する際に必要になります。
 
@@ -152,7 +152,7 @@ curl -X POST \
 
 ## ターゲットデータセットの作成
 
-ターゲットXDMスキーマが作成され、その一意の`$id`を使用して、ソースデータを格納するターゲットデータセットを作成できます。 ターゲットデータセットを作成するには、[カタログサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)の`dataSets`エンドポイントにPOSTリクエストを送信し、ペイロード内でターゲットスキーマのIDを指定します。
+ターゲットXDMスキーマが作成され、その一意の`$id`を使用して、ソースデータを格納するターゲットデータセットを作成できます。 ターゲットデータセットを作成するには、[カタログサービスAPI](https://www.adobe.io/experience-platform-apis/references/catalog/)の`dataSets`エンドポイントにPOSTリクエストを送信し、ペイロード内でターゲットスキーマのIDを指定します。
 
 **API 形式**
 
@@ -191,9 +191,9 @@ curl -X POST \
 | --- | --- |
 | `name` | 作成するデータセットの名前。 |
 | `schemaRef.id` | データセットの基となるXDMスキーマのURI `$id`。 |
-| `schemaRef.contentType` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full-notext+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 詳しくは、XDM APIガイドの「[スキーマのバージョン管理](../../../../xdm/api/getting-started.md#versioning)」の節を参照してください。 |
+| `schemaRef.contentType` | スキーマのバージョン。 この値は`application/vnd.adobe.xed-full-notext+json;version=1`に設定する必要があります。これにより、スキーマの最新のマイナーバージョンが返されます。 詳しくは、XDM API ガイドの[スキーマのバージョン管理](../../../../xdm/api/getting-started.md#versioning)の節を参照してください。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成されたデータセットのIDを`"@/datasets/{DATASET_ID}"`の形式で含む配列を返します。 データセット ID は、API 呼び出しでデータセットを参照するために使用される、読み取り専用のシステム生成文字列です。ターゲットデータセットIDは、後の手順で、ターゲット接続とデータフローを作成する際に必要になります。
 
@@ -203,7 +203,7 @@ curl -X POST \
 ]
 ```
 
-## ターゲット接続{#target-connection}を作成します。
+## ターゲット接続の作成 {#target-connection}
 
 ターゲット接続は、Platformへの宛先接続、または転送されたデータが送られる任意の場所を作成および管理します。 ターゲット接続には、データ宛先、データ形式、データフローの作成に必要なターゲット接続IDに関する情報が含まれます。 Target接続インスタンスは、テナントとIMS組織に固有です。
 
@@ -251,7 +251,7 @@ curl -X POST \
 | `data.format` | [!DNL Data Lake]に送信するデータの指定された形式。 |
 | `params.dataSetId` | 前の手順で取得したターゲットデータセットのID。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新しいターゲット接続の一意の識別子(`id`)を返します。 このIDは、後の手順で必要になります。
 
@@ -309,7 +309,7 @@ curl -X POST \
 | -------- | ----------- |
 | `xdmSchema` | ターゲットXDMスキーマの`$id`。 |
 
-**応答** 
+**応答**
 
 正常な応答は、新しく作成されたマッピングの詳細(一意の識別子(`id`)を含む)を返します。 このIDは、後の手順でデータフローを作成する際に必要になります。
 
@@ -344,7 +344,7 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、データフロー仕様のリストを返します。 [!DNL Amazon Kinesis]、[!DNL Azure Event Hubs]または[!DNL Google PubSub]のいずれかを使用してデータフローを作成するために取得する必要があるデータフロー仕様IDは`d69717ba-71b4-4313-b654-49f9cf126d7a`です。
 
@@ -472,7 +472,7 @@ curl -X POST \
 | `targetConnectionIds` | 前の手順で取得した[ターゲット接続ID](#target-connection)。 |
 | `transformations.params.mappingId` | 前の手順で取得した[マッピングID](#mapping)。 |
 
-**応答** 
+**応答**
 
 リクエストが成功した場合は、新しく作成したデータフローのID(`id`)が返されます。
 

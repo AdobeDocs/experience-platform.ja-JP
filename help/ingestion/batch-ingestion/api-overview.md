@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取り込み；バッチ取り込み；取り込み；開発者ガイド；apiガイド；アップロード；取り込みパーケット；取り込みjson;
+keywords: Experience Platform；ホーム；人気のあるトピック；バッチ取得；バッチ取得；取得；開発者ガイド；apiガイド；アップロード；Parquetの取り込み；jsonの取り込み；
 solution: Experience Platform
-title: Batch Ingest APIガイド
+title: バッチ取得APIガイド
 topic-legacy: developer guide
 description: このドキュメントでは、バッチ取得 API の使用に関する包括的な概要を説明します。
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2556'
+source-wordcount: '2552'
 ht-degree: 89%
 
 ---
 
-# バッチ取り込みAPIガイド
+# バッチ取得APIガイド
 
-このドキュメントでは、[バッチ取得 API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) の使用に関する包括的な概要を説明します。
+このドキュメントでは、[バッチ取得 API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) の使用に関する包括的な概要を説明します。
 
 このドキュメントの付録では、CSV 例や JSON データファイル例など、[取得に使用するデータの形式設定](#data-transformation-for-batch-ingestion)に関する情報を提供します。
 
@@ -28,38 +27,38 @@ ht-degree: 89%
 このガイドでは、Adobe Experience Platform の次のコンポーネントに関する十分な知識が必要です。
 
 - [バッチ取得](./overview.md)：データをバッチファイルとして Adobe Experience Platform に取得することができます。
-- [[!DNL Experience Data Model (XDM)] システム](../../xdm/home.md):顧客体験データを [!DNL Experience Platform] 編成する際に使用される標準化されたフレームワーク。
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [[!DNL Experience Data Model (XDM)] システム](../../xdm/home.md):顧客体験データを整理する際に使用す [!DNL Experience Platform] る標準化されたフレームワーク。
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] は、単一のインスタンスを別々の仮想環境に分割 [!DNL Platform] し、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
 ### API 呼び出し例の読み取り
 
-ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切に書式設定されたリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+ここでは、リクエストの形式を説明するために API 呼び出しの例を示します。これには、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
+>[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むリクエストには、追加の `Content-Type` ヘッダーが必要な場合があります。各呼び出しに固有の受け入れられた値は、呼び出しパラメーターで提供されます。
 
 ## タイプ
 
-データを取り込む際には、[!DNL Experience Data Model] (XDM)スキーマの動作を理解することが重要です。 XDM のフィールドタイプを様々な形式にマップする方法について詳しくは、『[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
+データを取り込む際は、[!DNL Experience Data Model](XDM)スキーマの動作を理解することが重要です。 XDM のフィールドタイプを様々な形式にマップする方法について詳しくは、『[スキーマレジストリ開発者ガイド](../../xdm/api/getting-started.md)』を参照してください。
 
 データ取得には柔軟性があります。ターゲットスキーマ内のデータとタイプが一致しない場合、データは表現されたターゲットタイプに変換されます。  できない場合は、バッチが `TypeCompatibilityException` で失敗します。
 
-例えば、JSON も CSV も日付や時刻のタイプを持ちません。その結果、これらの値は [ISO 8061 形式の文字列](https://www.iso.org/iso-8601-date-and-time-format.html)（「2018-07-10T15:05:59.000-08:00」）または Unix 時間形式のミリ秒（1531263959000）を使用して表され、取得時にターゲット XDM タイプに変換されます。
+例えば、JSON も CSV も日付や時刻のタイプを持ちません。その結果、これらの値は[ISO 8061形式の文字列](https://www.iso.org/iso-8601-date-and-time-format.html)(&quot;2018-07-10T15:05:59.000-08:00&quot;)またはUnix時間形式のミリ秒(1531263959000)を使用して表され、取り込み時にターゲットXDMタイプに変換されます。
 
 次の表に、データの取得時にサポートされる変換を示します。
 
@@ -69,10 +68,10 @@ ht-degree: 89%
 | バイト | X | X | X | X | X | X |  |  |  |  |
 | Short | X | X | X | X | X | X |  |  |  |  |
 | 整数 | X | X | X | X | X | X |  |  |  |  |
-| ロング | X | X | X | X | X | X | X | X |  |  |
-| 重複 | X | X | X | X | X | X |  |  |  |  |
+| Long | X | X | X | X | X | X | X | X |  |  |
+| ダブル | X | X | X | X | X | X |  |  |  |  |
 | 日付 |  |  |  |  |  |  | X |  |  |  |
-| 日時 |  |  |  |  |  |  |  | X |  |  |
+| Date-Time |  |  |  |  |  |  |  | X |  |  |
 | オブジェクト |  |  |  |  |  |  |  |  | X | X |
 | マップ |  |  |  |  |  |  |  |  | X | X |
 
@@ -174,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
 
 **リクエスト**
 
@@ -309,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
 
 **リクエスト**
 
@@ -482,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
 
 **リクエスト**
 
@@ -698,7 +697,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
 
 **リクエスト**
 
@@ -783,7 +782,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## バッチの削除  {#delete-a-batch}
+## バッチの削除 {#delete-a-batch}
 
 `action=REVERT` クエリパラメーターを使用して、削除するバッチの ID に対して次の POST リクエストを実行すると、バッチを削除できます。バッチは「非アクティブ」と指定され、ガベージコレクションの対象となります。バッチは非同期で収集され、その時点で「削除済み」と指定されます。
 
@@ -905,7 +904,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | アップロード先のバッチの ID。 |
 | `{DATASET_ID}` | バッチの参照データセットの ID。 |
-| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、Adobe側でファイルが保存される場所です。 |
+| `{FILE_NAME}` | アップロードするファイルの名前。このファイルパスは、ファイルがAdobe側で保存される場所です。 |
 
 **リクエスト**
 
@@ -967,7 +966,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### バッチ取得用のデータ変換
 
-データファイルを[!DNL Experience Platform]に取り込むためには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた[エクスペリエンスデータモデル(XDM)](../../xdm/home.md)スキーマに準拠している必要があります。
+データファイルを[!DNL Experience Platform]に取り込むには、ファイルの階層構造が、アップロード先のデータセットに関連付けられた[エクスペリエンスデータモデル(XDM)](../../xdm/home.md)スキーマに準拠している必要があります。
 
 XDM スキーマに準拠する CSV ファイルのマッピング方法に関する情報は、[サンプル変換](../../etl/transformations.md)ドキュメントに記載されている情報と、適切に書式設定された JSON データファイルの例を参照してください。このドキュメントのサンプルファイルは、次の場所にあります。
 

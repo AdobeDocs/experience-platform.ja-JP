@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、フローサービスAPIを使用して、サードパーティのクラウドストレージシステムからApache Parquetデータを取り込む手順を説明します。
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1099'
-ht-degree: 25%
+source-wordcount: '1095'
+ht-degree: 24%
 
 ---
 
@@ -266,7 +266,7 @@ curl -X POST \
 
 ## ターゲットデータセットの作成
 
-[カタログサービスAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを指定することで、ターゲットデータセットを作成できます。
+[カタログサービスAPI](https://www.adobe.io/experience-platform-apis/references/catalog/)に対してPOSTリクエストを実行し、ペイロード内のターゲットスキーマのIDを指定することで、ターゲットデータセットを作成できます。
 
 **API 形式**
 
