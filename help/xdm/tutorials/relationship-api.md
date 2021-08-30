@@ -6,10 +6,10 @@ description: このドキュメントでは、スキーマレジストリ API �
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 38%
+source-wordcount: '1365'
+ht-degree: 37%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 38%
 
 和集合スキーマと[!DNL Real-time Customer Profile]を使用してスキーマの関係を推論することはできますが、これは同じクラスを共有するスキーマにのみ適用されます。 異なるクラスに属する2つのスキーマ間の関係を確立するには、宛先スキーマのIDを参照するソーススキーマに、専用の関係フィールドを追加する必要があります。
 
-このドキュメントでは、[[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)を使用して、組織で定義された2つのスキーマ間の1対1の関係を定義するためのチュートリアルを提供します。
+このドキュメントでは、[[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)を使用して、組織で定義された2つのスキーマ間の1対1の関係を定義するためのチュートリアルを提供します。
 
 ## はじめに
 
@@ -32,7 +32,7 @@ ht-degree: 38%
 
 このチュートリアルを開始する前に、『[開発者ガイド](../api/getting-started.md)』を参照し、[!DNL Schema Registry] APIを正しく呼び出すために知っておく必要がある重要な情報を確認してください。 これには、`{TENANT_ID}`、「コンテナ」の概念、リクエストをおこなうために必要なヘッダー（ ヘッダーとその可能な値に特に注意）が含まれます。[!DNL Accept]
 
-## ソースと宛先スキーマの定義 {#define-schemas}
+## ソースと宛先のスキーマの定義 {#define-schemas}
 
 この関係で定義される 2 つのスキーマが既に作成されていると想定されます。このチュートリアルでは、組織の現在のロイヤルティプログラム（「[!DNL Loyalty Members]」スキーマで定義）のメンバーと、お気に入りのホテル（「[!DNL Hotels]」スキーマで定義）との間に関係を作成します。
 
@@ -385,7 +385,7 @@ curl -X POST \
 
 {style=&quot;table-layout:auto&quot;}
 
-**応答** 
+**応答**
 
 正常な応答は、宛先スキーマの新しく作成された参照記述子の詳細を返します。
 

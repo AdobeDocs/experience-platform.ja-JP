@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、顧客成功システムからデータを取得し、ソースコネクタとAPIを使用してPlatformに取り込む手順について説明します。
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1575'
-ht-degree: 20%
+source-wordcount: '1571'
+ht-degree: 19%
 
 ---
 
@@ -154,7 +154,7 @@ curl -X POST \
 
 ソースデータをPlatformで使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマを作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるPlatformデータセットを作成します。
 
-[スキーマレジストリAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)に対してPOSTリクエストを実行すると、ターゲットXDMスキーマを作成できます。
+[スキーマレジストリAPI](https://www.adobe.io/experience-platform-apis/references/schema-registry/)に対してPOSTリクエストを実行すると、ターゲットXDMスキーマを作成できます。
 
 **API 形式**
 

@@ -5,16 +5,16 @@ title: 'API を使用したデータセットのデータ使用ラベルの管�
 topic-legacy: developer guide
 description: Dataset Service API を使用すると、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する Catalog Service API とは別のものです。
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '961'
-ht-degree: 100%
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+workflow-type: tm+mt
+source-wordcount: '957'
+ht-degree: 99%
 
 ---
 
 # API を使用したデータセットのデータ使用ラベルの管理
 
-[[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) では、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] API とは別のものです。
+[[!DNL Dataset Service API]](https://www.adobe.io/experience-platform-apis/references/dataset-service/) では、データセットの使用ラベルを適用および編集できます。これは Adobe Experience Platform のデータカタログ機能の一部ですが、データセットメタデータを管理する [!DNL Catalog Service] API とは別のものです。
 
 このドキュメントでは、[!DNL Dataset Service API] を使用してデータセットとフィールドのラベルを管理する方法を説明します。API 呼び出しを使用してデータ使用ラベル自体を管理する手順については、[!DNL Policy Service API] の[ラベルエンドポイントガイド](../api/labels.md)を参照してください。
 
@@ -49,7 +49,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 成功した応答は、データセットに適用されたデータ使用ラベルを返します。
 

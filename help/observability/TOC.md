@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Observability Insights ガイド
 user-guide-description: 統計指標とイベント通知を使用して、Platform アクティビティを監視します。
-feature: データ管理
-source-git-commit: 905d364796911f35111d42c46c91744bc18304f2
+feature: Data Management
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 95%
+source-wordcount: '54'
+ht-degree: 85%
 
 ---
 
@@ -23,5 +23,5 @@ ht-degree: 95%
    * [標準のアラートルール](./alerts/rules.md)
    * [UI ガイド](./alerts/ui.md)
    * [I/O イベント通知のサブスクライブ](./alerts/subscribe.md)
-* [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
+* [API リファレンス](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

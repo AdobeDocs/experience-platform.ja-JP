@@ -5,10 +5,10 @@ title: ポリシー API エンドポイント
 topic-legacy: developer guide
 description: データ使用ポリシーは組織が導入するルールで、Experience Platform 内のデータに対して実行を許可（／制限）するマーケティングアクションの種類を記述するものです。データ使用ポリシーの表示、作成、更新、削除に関する API 呼び出しには、すべて /policies エンドポイントを使用します。
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1817'
-ht-degree: 100%
+source-wordcount: '1813'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Policy Service] API](https://www.adobe.io/experience-platform-apis/references/policy-service/) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## ポリシーのリストの取得 {#list}
 

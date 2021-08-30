@@ -4,10 +4,10 @@ solution: Experience Platform
 title: データタイプAPIエンドポイント
 description: スキーマレジストリAPIの/datatypesエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDMデータ型をプログラムで管理できます。
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 15%
+source-wordcount: '1168'
+ht-degree: 14%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 15%
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## データ型のリストの取得 {#list}
 
@@ -63,7 +63,7 @@ curl -X GET \
 
 {style=&quot;table-layout:auto&quot;}
 
-**応答** 
+**応答**
 
 上記のリクエストでは`application/vnd.adobe.xed-id+json` `Accept`ヘッダーが使用されていたので、応答には各データタイプの`title`、`$id`、`meta:altId`および`version`属性のみが含まれています。 他の`Accept`ヘッダー(`application/vnd.adobe.xed+json`)を使用すると、各データ型のすべての属性が返されます。 応答で必要な情報に応じて、適切な`Accept`ヘッダーを選択します。
 
@@ -140,7 +140,7 @@ curl -X GET \
 
 {style=&quot;table-layout:auto&quot;}
 
-**応答** 
+**応答**
 
 正常な応答は、データ型の詳細を返します。 返されるフィールドは、リクエストで送信される`Accept`ヘッダーに応じて異なります。 様々な`Accept`ヘッダーを試して、応答を比較し、使用事例に最適なヘッダーを判断します。
 
@@ -399,7 +399,7 @@ curl -X PUT \
       }'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、更新されたデータ型の詳細を返します。
 
@@ -634,7 +634,7 @@ curl -X DELETE \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 正常な応答は、空白の本文とともに HTTP ステータス 204（コンテンツなし）を返します。
 

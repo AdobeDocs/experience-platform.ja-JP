@@ -3,11 +3,11 @@ audience: user
 user-guide-title: エクスペリエンスデータモデル（XDM）システムヘルプ
 breadcrumb-title: Experience Data Model（XDM）ガイド
 user-guide-description: エクスペリエンスデータモデル(XDM)クラスとスキーマフィールドグループを使用して、エクスペリエンスデータを標準化します。
-feature: スキーマ
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+feature: Schemas
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 44%
+source-wordcount: '315'
+ht-degree: 41%
 
 ---
 
@@ -133,5 +133,5 @@ ht-degree: 44%
    * [2 つのスキーマ間の関係の定義（API）](tutorials/relationship-api.md)
    * [アドホックスキーマの作成（API）](tutorials/ad-hoc.md)
 * [トラブルシューティングガイド](troubleshooting-guide.md)
-* [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+* [API リファレンス](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

@@ -5,10 +5,10 @@ title: Mixin APIエンドポイント
 description: スキーマレジストリAPIの/mixinsエンドポイントを使用すると、エクスペリエンスアプリケーション内のXDM mixinをプログラムで管理できます。
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 15%
+source-wordcount: '1210'
+ht-degree: 14%
 
 ---
 
@@ -25,7 +25,7 @@ Mixinは、個人、郵送先住所、Webブラウザー環境など、特定の
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 ## Mixinのリストの取得 {#list}
 

@@ -1,26 +1,26 @@
 ---
 title: 会社エンドポイント
 description: Reactor API で /companies エンドポイントを呼び出す方法を説明します。
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 100%
+source-wordcount: '243'
+ht-degree: 97%
 
 ---
 
 # 会社エンドポイント
 
-会社は、顧客組織（通常はビジネス）を表します。Reactor API では、これらの企業は IMS 組織 ID と 1 対 1 で一致します。API ユーザーは、自身がアクセス権を持つ会社のみを表示できます。会社には、多くの[プロパティ](./properties.md)が含まれる場合があります。プロパティは、厳密に 1 つの会社に属します。
+会社は、顧客組織（通常はビジネス）を表します。Reactor API では、これらの会社は IMS 組織 ID と 1:1 で一致します。API ユーザーは、自身がアクセス権を持つ会社のみを表示できます。会社には、多くの [プロパティ](./properties.md) を含めることができます。プロパティは、1 つの会社のみに属します。
 
-Reactor API の `/companies` エンドポイントを使用すると、エクスペリエンスアプリケーション内で、自身がアクセス権を持つ会社をプログラムによって取得できます。
+Reactor API の `/companies` エンドポイントを使用すると、エクスペリエンスアプリケーション内で自身がアクセス権を持つ会社を、プログラムによって取得できます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) の一部です。続行する前に、 [はじめる前に](../getting-started.md) で、API への認証方法に関する重要な情報を確認してください。
 
 ## 会社のリストの取得 {#list}
 
-`/companies` エンドポイントに GET リクエストを送信することで、使用権限のある会社のリストを作成できます。ほとんどの場合、1 つのみです。
+`/companies` エンドポイントに GET リクエストを送信することで、自身が使用権限を持つ会社のリストを作成できます。ほとんどの場合、1 つだけです。
 
 **API 形式**
 
@@ -30,7 +30,7 @@ GET /companies
 
 >[!NOTE]
 >
->クエリパラメーターを使用して、リストに表示される会社を次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
+>クエリパラメーターを使用して、リストに表示される会社を次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>詳しくは、 [応答のフィルタリング](../guides/filtering.md) に関するガイドを参照してください。
 
 **リクエスト**
 
@@ -108,7 +108,7 @@ curl -X GET \
 
 ## 会社の検索 {#lookup}
 
-GET リクエストのパスにその ID を含めることで、特定の会社を検索できます。
+特定の会社を検索するには、会社の ID を GET リクエストのパスに含めます。
 
 **API 形式**
 
@@ -118,7 +118,7 @@ GET /companies/{COMPANY_ID}
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{COMPANY_ID}` | 検索する会社の `id` 値です。 |
+| `{COMPANY_ID}` | 検索する会社の `id` 値。 |
 
 {style=&quot;table-layout:auto&quot;}
 

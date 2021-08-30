@@ -1,10 +1,10 @@
 ---
 title: アプリ設定エンドポイント
-description: Reactor API で /app_configurations エンドポイントを呼び出す方法について説明します。
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+description: Reactor API で /app_configurations エンドポイントを呼び出す方法を説明します。
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 100%
+source-wordcount: '586'
+ht-degree: 99%
 
 ---
 
@@ -12,13 +12,13 @@ ht-degree: 100%
 
 >[!WARNING]
 >
->機能を追加、削除または修正すると、`/app_configurations` エンドポイントの実装が不安定になります。
+>機能が追加、削除、およびリワークされると、`/app_configurations` エンドポイントの実装は不安定になります。
 
-アプリ設定を使用すると、認証情報を保存および取得して後で使用できます。Reactor API の `/app_configurations` エンドポイントを使用すると、エクスペリエンスアプリケーション内のアプリ設定をプログラムで管理できます。
+アプリ設定を使用すると、資格情報を保存し、取得して後で使用できます。 Reactor API の `/app_configurations` エンドポイントを使用すると、エクスペリエンスアプリケーション内のアプリ設定をプログラムで管理できます。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) の一部です。続行する前に、 [はじめる前に](../getting-started.md) で、API への認証方法に関する重要な情報を確認してください。
 
 ## アプリ設定のリストの取得 {#list}
 
@@ -36,7 +36,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 
 >[!NOTE]
 >
->クエリパラメーターを使用して、リストされたアプリ設定を次の属性に基づいてフィルターできます。<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
+>クエリパラメーターを使用して、リストされたアプリ設定を次の属性に基づいてフィルタリングできます。<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>詳しくは、 [応答のフィルタリング](../guides/filtering.md) に関するガイドを参照してください。
 
 **リクエスト**
 
@@ -100,7 +100,7 @@ curl -X GET \
 
 ## アプリ設定の検索 {#lookup}
 
-アプリ設定を検索するには、GET リクエストのパスでその ID を指定します。
+GET リクエストのパスで ID を指定することで、アプリ設定を検索できます。
 
 **API 形式**
 
@@ -128,7 +128,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、アプリ設定の詳細が返されます。
+応答が成功すると、アプリ構成の詳細が返されます。
 
 ```json
 {
@@ -165,7 +165,7 @@ curl -X GET \
 
 ## アプリ設定の作成 {#create}
 
-アプリ設定を新規作成するには、POST リクエストを実行します。
+POST リクエストをおこなうことで、新しいアプリ設定を作成できます。
 
 **API 形式**
 
@@ -175,7 +175,7 @@ POST /companies/{COMPANY_ID}/app_configurations
 
 | パラメーター | 説明 |
 | --- | --- |
-| `COMPANY_ID` | アプリ設定を定義する[会社](./companies.md)の `id`。 |
+| `COMPANY_ID` | アプリ設定を定義している[会社](./companies.md)の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -210,10 +210,10 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `platform` | アプリケーションが実行されるプラットフォーム（Web またはモバイル）。これで、使用可能なメッセージングサービスが決定されます。 |
-| `messaging_service` | [Apple プッシュ通知サービス（APN）](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html)や [Firebase Cloud Messaging（FCM）](https://firebase.google.com/docs/cloud-messaging)といった、アプリに関連付けられているメッセージングサービス。これで、使用できるキーの種類が決定されます。 |
-| `key_type` | プッシュサービスベンダーがサポートするプロトコルを表し、`push_credential` オブジェクトの形式を決定します。メッセージングサービスのプロトコルの進化に合わせて、更新されたプロトコルをサポートする新しい `key_type` 値が作成されます。 |
-| `push_credential` | 実際の証明書の値。保存時に暗号化されます。通常、このフィールドは復号化されたり、API 応答に含まれたりすることはありません。復号化されたプッシュ証明書を含む応答を取得できるのは、特定の Adobe サービスのみです。 |
+| `platform` | アプリケーションが実行されるプラットフォーム（Web またはモバイル）。使用可能なメッセージングサービスを決定します。 |
+| `messaging_service` | [Apple プッシュ通知サービス（APN）](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html)や[Firebase Cloud Messaging（FCM）](https://firebase.google.com/docs/cloud-messaging)など、アプリに関連付けられたメッセージングサービスです。使用できるキーのタイプを決定します。 |
+| `key_type` | プッシュサービスベンダーがサポートするプロトコルを表し、`push_credential` オブジェクトの形式を決定します。メッセージングサービスのプロトコルが進化するにつれ、更新されたプロトコルをサポートする新しい `key_type` 値が作成されます。 |
+| `push_credential` | 保存時に暗号化される、実際の秘密鍵証明書の値。このフィールドは通常、復号化されたり、API 応答に含まれたりすることはありません。 特定の Adobe サービスのみが、復号化されたプッシュ秘密鍵証明書を含む応答を取得できます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -256,7 +256,7 @@ curl -X POST \
 
 ## アプリ設定の更新
 
-アプリ設定を更新するには、PUT リクエストのパスにその ID を含めます。
+PUT リクエストのパスに ID を含めることで、アプリの設定を更新できます。
 
 **API 形式**
 
@@ -272,7 +272,7 @@ PUT /app_configurations/{APP_CONFIGURATION_ID}
 
 **リクエスト**
 
-次のリクエストでは、既存のアプリ設定の `app_id` が更新されます。
+次のリクエストは、既存のアプリ設定の `app_id` を更新します。
 
 ```shell
 curl -X PUT \
@@ -294,9 +294,9 @@ curl -X PUT \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `attributes` | 更新するアプリ設定の属性を表すプロパティを持つオブジェクト。各キーは、更新する特定のアプリ設定の属性と、更新後の対応する値を表します。<br><br>更新可能なアプリ設定の属性は次のとおりです。<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
+| `attributes` | アプリ設定用に更新する属性を表すプロパティを持つオブジェクト。 各キーは、更新する特定のアプリ設定属性と、更新先の対応する値を表します。<br><br>アプリ設定では、次の属性を更新できます。<ul><li>`app_id`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`push_credential`</li></ul> |
 | `id` | 更新するアプリ設定の `id`。この値は、リクエストパスで指定された `{APP_CONFIGURATION_ID}` 値と一致する必要があります。 |
-| `type` | 更新するリソースのタイプ。このエンドポイントの場合は、値を `app_configurations` にする必要があります。 |
+| `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `app_configurations` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -339,7 +339,7 @@ curl -X PUT \
 
 ## アプリ設定の削除
 
-アプリ設定を削除するには、DELETE リクエストのパスにその ID を含めます。
+DELETE リクエストのパスに ID を含めることで、アプリ設定を削除できます。
 
 **API 形式**
 
@@ -365,4 +365,4 @@ curl -X DELETE \
 
 **応答**
 
-応答が成功すると、応答本文のない HTTP ステータス 204（コンテンツなし）が返され、アプリ設定が削除されたことが示されます。
+応答が成功すると、応答本文なしで HTTP ステータス 204（コンテンツなし）が返され、アプリ設定が削除されたことを示します。

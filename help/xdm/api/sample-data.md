@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform；ホーム；人気のあるトピック；api;API;XDM;XDMシステム；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；エクスペリエンスデータモデル；データモデル；データモデル；サンプルデータ；サンプルデータ；rpc;
 solution: Experience Platform
-title: サンプルデータAPIエンドポイント
+title: サンプルデータ API エンドポイント
 description: スキーマレジストリAPIの/sampledataエンドポイントを使用すると、既存のXDMスキーマの構造にマッピングされたサンプルデータを生成できます。
 topic-legacy: developer guide
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '318'
 ht-degree: 9%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 9%
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 サンプルデータエンドポイントは、[!DNL Schema Registry]でサポートされるリモートプロシージャコール(RPC)の一部です。 [!DNL Schema Registry] APIの他のエンドポイントとは異なり、RPCエンドポイントは、`Accept`や`Content-Type`のような追加のヘッダーを必要とせず、`CONTAINER_ID`を使用しません。 代わりに、以下のAPI呼び出しで示すように、名前空間`/rpc`を使用する必要があります。
 
@@ -53,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 リクエストが成功した場合は、指定したスキーマのサンプルデータオブジェクトが返されます。
 

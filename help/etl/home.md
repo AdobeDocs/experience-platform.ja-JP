@@ -5,10 +5,10 @@ title: Adobe Experience Platform 用 ETL 統合の開発
 topic-legacy: overview
 description: ETL 統合ガイドでは、Experience Platform 用の高パフォーマンスで安全なコネクタを作成し、データを Platform に取得するための一般的な手順について説明しています。
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '4083'
-ht-degree: 98%
+source-wordcount: '4075'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ ETL 統合ガイドでは、[!DNL Experience Platform] 用の高パフォーマ�
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Experience Platform API の認証と承認](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)
-- [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 このガイドには、ETL コネクタの設計時に使用する API 呼び出しの例も含まれています。また、各 [!DNL Experience Platform] サービスの概要と API の使用について詳しく説明したドキュメントへのリンクも含まれています。
 
@@ -257,7 +257,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 >[!NOTE]
 >
->「schema」フィールドが空の場合や完全に存在しない場合は、コネクタは「schemaRef」フィールドを読み取り、前の手順で示した[スキーマレジストリ API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) を使用して、[データセットスキーマを表示](#view-dataset-schema)する必要があります。
+>「schema」フィールドが空の場合や完全に存在しない場合は、コネクタは「schemaRef」フィールドを読み取り、前の手順で示した[スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) を使用して、[データセットスキーマを表示](#view-dataset-schema)する必要があります。
 
 ### 「observableSchema」プロパティ
 

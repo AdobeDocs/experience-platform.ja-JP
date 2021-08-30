@@ -1,10 +1,10 @@
 ---
 title: ホストエンドポイント
 description: Reactor API で /hosts エンドポイントを呼び出す方法を説明します。
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 100%
+source-wordcount: '765'
+ht-degree: 99%
 
 ---
 
@@ -12,19 +12,19 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->このドキュメントでは、Reactor API でホストを管理する方法を説明します。タグのホストの一般的な情報について詳しくは、公開ドキュメントの[ホストの概要](../../ui/publishing/hosts/hosts-overview.md)に関するガイドを参照してください。
+>このドキュメントでは、Reactor API でホストを管理する方法について説明します。タグのホストに関する一般的な情報については、公開ドキュメントの [ホストの概要](../../ui/publishing/hosts/hosts-overview.md) に関するガイドを参照してください。
 
 Reactor API では、ホストが[ビルド](./builds.md)を配信できる宛先を定義します。
 
-Adobe Experience Platform のタグユーザーがビルドを要求すると、システムはライブラリをチェックし、ライブラリをビルドする[環境](./environments.md)を決定します。各環境はホストと関係があり、ビルドの配信先を示します。
+Adobe Experience Platform のタグユーザーがビルドを要求すると、システムはライブラリをチェックし、ライブラリをビルドする[環境](./environments.md)を決定します。各環境はホストとの関係があり、ビルドの配信先を示します。
 
-ホストは厳密に [プロパティ](./properties.md)のみに属しますが、プロパティは複数のホストを持つことができます。公開するには、プロパティに少なくとも 1 つのホストが必要です。
+ホストは 1 つの[プロパティ](./properties.md)のみに属しますが、プロパティは複数のホストを持つことができます。公開するには、プロパティに 1 つ以上のホストが必要です。
 
-ホストは、1 つのプロパティ内の複数の環境で使用できます。1 つのプロパティに 1 つのホストを持ち、そのプロパティのすべての環境が同じホストを使用するのが一般的です。
+ホストは、プロパティ内の複数の環境で使用できます。プロパティに単一のホストがあり、そのプロパティのすべての環境で同じホストを使用するのが一般的です。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
 
 ## ホストのリストの取得 {#list}
 
@@ -44,7 +44,7 @@ GET /properties/{PROPERTY_ID}/hosts
 
 >[!NOTE]
 >
->クエリーパラメーターを使用して、リストされているホストを次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
+>クエリーパラメーターを使用して、リストされているホストを次の属性に基づいてフィルタリングできます。<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>詳しくは、 [応答のフィルタリング](../guides/filtering.md) に関するガイドを参照してください。
 
 **リクエスト**
 
@@ -187,13 +187,13 @@ POST /properties/{PROPERTY_ID}/hosts
 
 | パラメーター | 説明 |
 | --- | --- |
-| `PROPERTY_ID` | ホストを定義する[プロパティ](./properties.md)の `id`。 |
+| `PROPERTY_ID` | ホストを定義している[プロパティ](./properties.md)の `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **リクエスト**
 
-次のリクエストは、指定されたプロパティの新しいホストを作成します。 また、この呼び出しは、`relationships` プロパティを通じてホストを既存の拡張機能と関連付けます。 詳しくは、[関係](../guides/relationships.md)に関するガイドを参照してください。
+次のリクエストは、指定されたプロパティの新しいホストを作成します。また、この呼び出しは、 `relationships` プロパティを通じてホストを既存の拡張機能と関連付けます。 詳しくは、 [関係](../guides/relationships.md) に関するガイドを参照してください。
 
 ```shell
 curl -X POST \
@@ -221,19 +221,19 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `attributes.name` | **（必須）**&#x200B;人間が判読できるホスト名。 |
-| `attributes.type_of` | **（必須）**&#x200B;ホストのタイプ。次の 2 つのオプションのいずれかになります。 <ul><li>[アドビが管理するホスト](../../ui/publishing/hosts/managed-by-adobe-host.md)用 `akamai`</li><li> [SFTP ホスト](../../ui/publishing/hosts/sftp-host.md)用 `sftp`</li></ul> |
-| `attributes.encrypted_private_key` | ホスト認証に使用するオプションの秘密キー。 |
+| `attributes.type_of` | **（必須）**&#x200B;ホストのタイプ。次の 2 つのオプションのいずれかを指定できます。 <ul><li>[アドビが管理するホスト](../../ui/publishing/hosts/managed-by-adobe-host.md)用 `akamai`</li><li>`sftp`[SFTP ホスト用](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.encrypted_private_key` | ホスト認証に使用するオプションの秘密鍵。 |
 | `attributes.path` | `server` URL に追加するパス。 |
 | `attributes.port` | 使用する特定のサーバーポートを示す整数。 |
 | `attributes.server` | サーバーのホスト URL。 |
 | `attributes.username` | 認証用のオプションのユーザー名。 |
-| `type` | 更新するリソースのタイプ。このエンドポイントの場合は、値を `hosts` にする必要があります。 |
+| `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `hosts` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-応答が成功すると、新しく作成されたスケジュールの詳細が返されます。
+応答が成功すると、新しく作成されたホストの詳細が返されます。
 
 ```json
 {
@@ -314,9 +314,9 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `attributes` | ホストに対して更新する属性を表すプロパティを持つオブジェクト。 ホストに対して更新できる属性は次のとおりです。 <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
-| `id` | 更新するホストの `id`。この値は、リクエストパスで指定された `{HOST_ID}` 値と一致する必要があります。 |
-| `type` | 更新するリソースのタイプ。このエンドポイントの場合は、値を `hosts` にする必要があります。 |
+| `attributes` | プロパティがホストの更新される属性を表すオブジェクト。ホストに対して更新できる属性は次のとおりです。 <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
+| `id` | 更新するホストの `id` 。この値は、リクエストパスで指定された `{HOST_ID}` 値と一致する必要があります。 |
+| `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `hosts` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -387,17 +387,17 @@ curl -X DELETE \
 
 **応答**
 
-応答が成功すると、応答本文のない HTTP ステータス 204（コンテンツなし）が返され、ホストが削除されたことを示します。
+応答が成功すると、応答本文なしで HTTP ステータス 204（コンテンツなし）が返され、ホストが削除されたことを示します。
 
 ## ホストの関連リソースの取得 {#related}
 
-次の呼び出しは、ホストの関連リソースを取得する方法を示しています。 [ホストを検索](#lookup)すると、これらの関係は `relationships` プロパティの下に表示されます。
+次の呼び出しは、ホストの関連リソースを取得する方法を示しています。 [ホストを検索](#lookup)すると、これらの関係が `relationships` プロパティの下に表示されます。
 
-Reactor API の関係について詳しくは、[関係に関するガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
 
-### ホストに関連するプロパティの検索 {#property}
+### ホストの関連プロパティの検索 {#property}
 
-検索リクエストのパスに `/property` を追加して、ホストを所有するプロパティを検索できます。
+検索リクエストのパスに `/property` を追加することで、ホストを所有するプロパティを検索できます。
 
 **API 形式**
 
@@ -425,7 +425,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定されたホストのプロパティの詳細が返されます。
+応答が成功すると、指定したホストのプロパティの詳細が返されます。
 
 ```json
 {

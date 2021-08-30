@@ -5,10 +5,10 @@ title: スキーマレジストリAPIガイド
 description: スキーマレジストリAPIを使用すると、開発者は、Adobe Experience Platform内のすべてのスキーマと関連するExperience Data Model(XDM)リソースをプログラムで管理できます。 このガイドに従って、API を使用した主な操作の実行方法を学習します。
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
+source-git-commit: 6ba8da07a4fb36c6e8bd2ede8ac415edaabe0ef6
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 9%
+source-wordcount: '983'
+ht-degree: 8%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 9%
 >
 >XDMでは、JSONスキーマの形式を使用して、取り込んだ顧客体験データの構造を記述し、検証します。 スキーマレジストリAPIを使用する前に、[JSONスキーマの公式ドキュメント](https://json-schema.org/)を参照して、この基盤となるテクノロジーの理解を深めることを強くお勧めします。
 
-使用可能なすべてのエンドポイントとCRUD操作を表示するには、[スキーマレジストリAPIリファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)を参照してください。
+使用可能なすべてのエンドポイントとCRUD操作を表示するには、[スキーマレジストリAPIリファレンス](https://www.adobe.io/experience-platform-apis/references/schema-registry/)を参照してください。
 
 ## スキーマ
 

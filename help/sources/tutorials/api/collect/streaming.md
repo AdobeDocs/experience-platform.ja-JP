@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、ストリーミングデータを取得し、ソースコネクタとAPIを使用してPlatformに取り込む手順について説明します。
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 16%
+source-wordcount: '1103'
+ht-degree: 15%
 
 ---
 
@@ -44,7 +44,7 @@ Platform APIを正常に呼び出す方法について詳しくは、[Platform A
 
 ソースデータをPlatformで使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマを作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるPlatformデータセットを作成します。 このターゲットXDMスキーマは、XDM [!DNL Individual Profile]クラスも拡張します。
 
-ターゲットXDMスキーマを作成するには、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)の`/schemas`エンドポイントにPOSTリクエストを送信します。
+ターゲットXDMスキーマを作成するには、[[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)の`/schemas`エンドポイントにPOSTリクエストを送信します。
 
 **API 形式**
 

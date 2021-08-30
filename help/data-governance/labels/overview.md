@@ -5,10 +5,10 @@ title: データ使用ラベルの概要
 topic-legacy: labels
 description: Adobe Experience Platform データガバナンスを使用すると、データセットとフィールドにデータ使用ラベルを適用し、関連するデータ使用ポリシーに従って各データを分類できます。このドキュメントでは、Experience Platform でのデータ使用ラベルの概要を説明します。
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 100%
+source-wordcount: '611'
+ht-degree: 98%
 
 ---
 
@@ -52,9 +52,9 @@ Platform での自動適用の動作方法について詳しくは、[自動ポ�
 
 ### API の使用
 
-[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) の `/labels` エンドポイントを使用すると、カスタムラベルの作成など、データ使用ラベルをプログラムに従って管理できます。詳しくは、『[ラベルのエンドポイントガイド](../api/labels.md)』を参照してください。
+[Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) の `/labels` エンドポイントを使用すると、カスタムラベルの作成など、データ使用ラベルをプログラムに従って管理できます。詳しくは、『[ラベルのエンドポイントガイド](../api/labels.md)』を参照してください。
 
-[データセットサービス API ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml)は、データセットとフィールドのラベルの管理に使用します。詳しくは、[データセットラベルの管理](./dataset-api.md)のガイドを参照してください。
+[データセットサービス API ](https://www.adobe.io/experience-platform-apis/references/dataset-service/)は、データセットとフィールドのラベルの管理に使用します。詳しくは、[データセットラベルの管理](./dataset-api.md)のガイドを参照してください。
 
 ## 次の手順
 

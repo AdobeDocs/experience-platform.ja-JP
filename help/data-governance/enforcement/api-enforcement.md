@@ -6,16 +6,16 @@ topic-legacy: guide
 type: Tutorial
 description: データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、Policy Service API を使用して、データセットまたはラベルの任意のグループに対して実行されたマーケティングアクションがポリシー違反となるかどうかを評価します。その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1006'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1002'
+ht-degree: 99%
 
 ---
 
 # [!DNL Policy Service] API を使用してデータ使用ポリシーを適用する
 
-データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、[[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) を使用して、データセットまたはラベルの任意のグループに対して実行されたマーケティングアクションがポリシー違反となるかどうかを評価します。その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
+データのデータ使用ラベルを作成し、これらのラベルに対するマーケティングアクションの使用ポリシーを作成したら、[[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) を使用して、データセットまたはラベルの任意のグループに対して実行されたマーケティングアクションがポリシー違反となるかどうかを評価します。その後、API 応答に基づいてポリシー違反を処理する独自の内部プロトコルを設定できます。
 
 >[!NOTE]
 >

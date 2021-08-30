@@ -5,10 +5,10 @@ title: ラベル API エンドポイント
 topic-legacy: developer guide
 description: Policy Service API を使用して Experience Platform のデータ使用ラベルを管理する方法を説明します。
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '510'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '506'
+ht-degree: 99%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 ## はじめに
 
-このガイドで使用する API エンドポイントは、[[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) の一部です。先に進む前に、[はじめる前に](getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## ラベルのリストの取得 {#list}
 
@@ -200,7 +200,7 @@ curl -X PUT \
 | `friendlyName` | 表示目的で使用される、ラベルのわかりやすい名前。 |
 | `description` | （オプション）詳細なコンテキストを提供するラベルの説明です。 |
 
-**応答** 
+**応答**
 
 応答が成功すると、カスタムラベルの詳細が返されます。既存のラベルが更新された場合は HTTP コード 200（OK）、新しいラベルが作成された場合は 201（作成済み）が返されます。
 

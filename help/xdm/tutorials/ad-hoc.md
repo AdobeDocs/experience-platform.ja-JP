@@ -6,10 +6,10 @@ description: 特定の状況において、1 つのデータセットでのみ�
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 76%
+source-wordcount: '828'
+ht-degree: 75%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 76%
 
 特定の状況で、1つのデータセットでのみ使用するために名前空間が使用されたフィールドを持つ[!DNL Experience Data Model] (XDM)スキーマを作成する必要が生じる場合があります。 これは「アドホック」スキーマと呼ばれます。アドホックスキーマは、CSVファイルの取り込みや特定の種類のソース接続の作成など、[!DNL Experience Platform]の様々なデータ取り込みワークフローで使用されます。
 
-このドキュメントでは、[スキーマレジストリ API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) を使用してアドホックスキーマを作成する一般的な手順を示します。ワークフローの一部としてアドホックスキーマを作成する必要がある他の[!DNL Experience Platform]チュートリアルと組み合わせて使用することを目的としています。 これらの各ドキュメントには、特定の使用例に合わせてアドホックスキーマを適切に設定する方法に関する詳細が記載されています。
+このドキュメントでは、[スキーマレジストリ API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) を使用してアドホックスキーマを作成する一般的な手順を示します。ワークフローの一部としてアドホックスキーマを作成する必要がある他の[!DNL Experience Platform]チュートリアルと組み合わせて使用することを目的としています。 これらの各ドキュメントには、特定の使用例に合わせてアドホックスキーマを適切に設定する方法に関する詳細が記載されています。
 
 ## はじめに
 

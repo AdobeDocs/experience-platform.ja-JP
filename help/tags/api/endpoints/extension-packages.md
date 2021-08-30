@@ -1,9 +1,9 @@
 ---
 title: 拡張パッケージエンドポイント
 description: Reactor API で /extension_packages エンドポイントを呼び出す方法を説明します。
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '951'
 ht-degree: 73%
 
 ---
@@ -12,17 +12,17 @@ ht-degree: 73%
 
 >[!WARNING]
 >
->機能を追加、削除または修正すると、`/extension_packages` エンドポイントの実装が不安定になります。
+>機能が追加、削除、およびリワークされると、`/extension_packages` エンドポイントの実装は不安定になります。
 
 拡張機能パッケージは、拡張機能開発者が作成した[拡張機能](./extensions.md)を表します。 拡張機能パッケージは、ユーザーにタグ付けできる追加機能を定義します。 通常、これらの機能は、[ルールコンポーネント](./rule-components.md)（イベント、条件、アクション）および[データ要素](./data-elements.md)の形式で提供されますが、メインモジュールや共有モジュールを含めることもできます。
 
-拡張機能パッケージは、ユーザーがインストールできるよう、データ収集 UI 内の拡張機能カタログに表示されます。プロパティに拡張機能パッケージを追加するには、拡張機能パッケージへのリンクを含む拡張機能を作成します。
+拡張機能パッケージは、ユーザーがインストールできるよう、データ収集 UI 内の拡張機能カタログに表示されます。 プロパティに拡張機能パッケージを追加するには、拡張機能パッケージへのリンクを含む拡張機能を作成します。
 
-拡張パッケージは、作成した開発者の[会社](./companies.md)に属しています。
+拡張パッケージは、そのパッケージを作成した開発者の[会社](./companies.md)に属しています。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) の一部です。続行する前に、 [はじめる前に](../getting-started.md) で、API への認証方法に関する重要な情報を確認してください。
 
 Reactor APIの呼び出し方法を理解するだけでなく、拡張機能パッケージの`status`属性と`availability`属性が、Reactor APIに対して実行できるアクションに与える影響も理解することが重要です。 これらは、以下の節で説明します。
 
@@ -62,7 +62,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->クエリパラメーターを使用して、リストに表示される拡張機能パッケージを、次の属性に基づいてフィルタリングできます。<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
+>クエリパラメーターを使用して、リストに表示される拡張機能パッケージを、次の属性に基づいてフィルタリングできます。<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>詳しくは、 [応答のフィルタリング](../guides/filtering.md) に関するガイドを参照してください。
 
 **リクエスト**
 
@@ -236,7 +236,7 @@ curl -X GET \
 
 ## 拡張機能パッケージの検索 {#lookup}
 
-拡張機能パッケージを検索するには、GET リクエストのパスに ID を指定します。
+拡張機能パッケージを検索するには、GET リクエストのパスで ID を指定します。
 
 **API 形式**
 
@@ -264,7 +264,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、拡張機能パッケージの詳細（`actions`、`conditions`、`data_elements` などのデリゲートリソースを含む）が返されます。 次の応答はスペースを節約するために省略されています。
+応答が成功すると、拡張機能パッケージの詳細（`actions`、`conditions`、`data_elements` などのデリゲートリソースを含む）が返されます。次の応答の例は、スペースを節約するために切り捨てられています。
 
 ```json
 {
@@ -471,7 +471,7 @@ curl -X GET \
 
 ## 拡張機能パッケージの作成 {#create}
 
-拡張機能パッケージは、Node.js の基礎モードツールを使用して作成され、Reactor API に送信される前にローカルマシンに保存されます。 拡張機能パッケージの設定について詳しくは、[拡張機能の開発の概要](../../extension-dev/getting-started.md)を参照してください。
+拡張機能パッケージは、Node.js の基礎モードツールを使用して作成され、ローカルマシンに保存後、Reactor API に送信されます。 拡張機能パッケージの設定について詳しくは、[拡張機能の開発の手引き](../../extension-dev/getting-started.md)を参照してください。
 
 拡張機能パッケージファイルを作成したら、POST リクエストを通じて Reactor API に送信できます。 
 
@@ -497,7 +497,7 @@ curl -X POST \
 
 **応答**
 
-成功した応答は、新しく作成した拡張機能パッケージの詳細を返します。
+応答が成功すると、新しく作成した拡張機能パッケージの詳細が返されます。
 
 ```json
 {
@@ -720,7 +720,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **リクエスト**
 
-[拡張機能パッケージの作成](#create)と同様に、更新されたパッケージのローカルバージョンをフォームデータを使用してアップロードする必要があります。
+[拡張機能パッケージの作成](#create)と同様に、フォームデータを使用して、更新されたパッケージのローカルバージョンをアップロードする必要があります。
 
 ```shell
 curl -X PATCH \
@@ -941,9 +941,9 @@ curl -X PATCH \
 
 ## 拡張機能パッケージの非公開リリース {#private-release}
 
-拡張機能パッケージのテストが完了したら、非公開でリリースできます。 これにより、会社内の任意のプロパティで使用できるようになります。
+拡張機能パッケージのテストが完了したら、その拡張機能を非公開でリリースできます。 これにより、会社内の任意のプロパティで使用できるようになります。
 
-非公開でリリースした後は、[公開リリースリクエストフォーム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U)に入力して、公開リリースプロセスを開始できます。
+非公開でリリースした後、[公開リリースリクエストフォーム](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U)に入力して、公開リリースプロセスを開始できます。
 
 **API 形式**
 
@@ -959,7 +959,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **リクエスト**
 
-プライベートリリースは、要求データの `meta` に `release_private` の値を `action` に与えることで達成されます。
+プライベートリリースは、リクエストデータの `meta` で、`action` に `release_private` の値を提供することで実現されます。
 
 ```shell
 curl -X PATCH \
@@ -1204,7 +1204,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **リクエスト**
 
-プライベートリリースは、要求データの `meta` に `release_private` の値を `action` に与えることで達成されます。
+プライベートリリースは、リクエストデータの `meta` で、`action` に `release_private` の値を提供することで実現されます。
 
 ```shell
 curl -X PATCH \
@@ -1309,4 +1309,4 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、拡張機能パッケージの以前のバージョンの配列が返されます。スペースに対する応答の例が省略されました。
+応答が成功すると、拡張機能パッケージの以前のバージョンの配列が返されます。スペースのため応答の例が省略されました。

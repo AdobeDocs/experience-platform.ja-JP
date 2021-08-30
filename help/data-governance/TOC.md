@@ -3,16 +3,16 @@ audience: user
 user-guide-title: Adobe Experience Platform データガバナンスのヘルプ
 breadcrumb-title: データガバナンスガイド
 user-guide-description: ラベル、マーケティングアクション、ポリシーを使用して、データ使用に関する制限を実施します。
-feature: データガバナンス
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Data Governance
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 100%
+source-wordcount: '94'
+ht-degree: 94%
 
 ---
 
 
-# Adobe Experience Platform データガバナンス {#data-governance}
+# Adobe Experience Platform のデータガバナンス {#data-governance}
 
 * [データガバナンスの概要](home.md)
 * データ使用ラベル {#labels}
@@ -35,5 +35,5 @@ ht-degree: 100%
    * [ポリシー](api/policies.md)
    * [マーケティングアクション](api/marketing-actions.md)
    * [評価](api/evaluation.md)
-* [API リファレンス](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [API リファレンス](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 * [Platform リリースノート](https://docs.adobe.com/content/help/ja-JP/experience-platform/release-notes/latest.html)

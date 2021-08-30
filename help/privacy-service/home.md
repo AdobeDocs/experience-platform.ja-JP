@@ -5,10 +5,10 @@ title: Privacy Service の概要
 topic-legacy: overview
 description: Privacy Service を使用すると、Experience Cloud データの運用に関する法的プライバシー規制への自動コンプライアンスを容易におこなうことができます。
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1394'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1390'
+ht-degree: 99%
 
 ---
 
@@ -73,7 +73,7 @@ CRM システムが利用する [!DNL Experience Cloud] アプリケーション
 
 #### API の使用
 
-[[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) は、RESTful API の呼び出しを使用して、プライバシージョブを作成および管理するためのいくつかのエンドポイントを提供します。これにより、[!DNL Experience Cloud] アプリケーションのプライバシー規制への準拠をプログラムによって実現できます。API の使用方法に関する詳細な手順については、「[Privacy Service API 開発者ガイド](api/getting-started.md)」を参照してください。
+[[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) は、RESTful API の呼び出しを使用して、プライバシージョブを作成および管理するためのいくつかのエンドポイントを提供します。これにより、[!DNL Experience Cloud] アプリケーションのプライバシー規制への準拠をプログラムによって実現できます。API の使用方法に関する詳細な手順については、「[Privacy Service API 開発者ガイド](api/getting-started.md)」を参照してください。
 
 #### UI の使用
 

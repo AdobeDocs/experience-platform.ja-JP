@@ -1,18 +1,18 @@
 ---
 title: プロパティエンドポイント
 description: Reactor API で /properties エンドポイントを呼び出す方法を説明します。
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 100%
+source-wordcount: '1146'
+ht-degree: 99%
 
 ---
 
 # プロパティエンドポイント
 
-プロパティは、Reactor API 内で利用可能な他のリソースの大部分を保持するコンテナ構造です。`/properties` エンドポイントを使用して、プログラムでプロパティを管理します。
+プロパティは、Reactor API 内で使用可能なその他のリソースのほとんどを保持するコンテナ構成体です。`/properties` エンドポイントを使用してプログラムでプロパティを管理します。
 
-リソース階層では、プロパティは次の所有者です。
+リソース階層では、プロパティは以下の所有者になります。
 
 * [ビルド](./builds.md)
 * [コールバック](./callbacks.md)
@@ -24,13 +24,13 @@ ht-degree: 100%
 * [ルールコンポーネント](./rule-components.md)
 * [ルール](./rules.md)
 
-プロパティは、1 つの[会社](./companies.md)のみに属しています。会社は多くのプロパティを持つことができます。
+プロパティは、1 つの[会社](./companies.md)のみに属します。 会社は多くのプロパティを持つことができます。
 
-プロパティとタグ管理での役割に関する一般情報について詳しくは、[会社とプロパティ](../../ui/administration/companies-and-properties.md)の概要を参照してください。
+プロパティとそのタグ管理での役割に関する一般的な情報について詳しくは、[会社とプロパティ](../../ui/administration/companies-and-properties.md)の概要を参照してください。
 
 ## はじめに
 
-このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) の一部です。続行する前に、API への認証方法に関する重要な情報について、[はじめる前に](../getting-started.md)を確認してください。
+このガイドで使用するエンドポイントは、[Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/) の一部です。続行する前に、 [はじめる前に](../getting-started.md) で、API への認証方法に関する重要な情報を確認してください。
 
 ## プロパティのリストの取得 {#list}
 
@@ -50,7 +50,7 @@ GET /companies/{COMPANY_ID}/properties
 
 >[!NOTE]
 >
->クエリパラメーターを使用して、リストされたプロパティを次の属性に基づいてフィルタリングできます。<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>詳しくは、[応答のフィルタリング](../guides/filtering.md)に関するガイドを参照してください。
+>クエリパラメーターを使用し、リストされたプロパティを次の属性に基づいてフィルタリングできます。<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>詳しくは、 [応答のフィルタリング](../guides/filtering.md) に関するガイドを参照してください。
 
 **リクエスト**
 
@@ -258,7 +258,7 @@ curl -X GET \
 
 ## プロパティの検索 {#lookup}
 
-GET リクエストのパスに ID を指定することで、プロパティを検索できます。
+GET リクエストのパスで ID を指定することで、プロパティを検索できます。
 
 **API 形式**
 
@@ -397,7 +397,7 @@ POST /company/{COMPANY_ID}/properties
 
 **リクエスト**
 
-次のリクエストは、指定されたプロパティの新しいプロパティを作成します。また、この呼び出しは、 `relationships` プロパティを介してプロパティを既存の拡張機能と関連付けます。詳しくは、[関係](../guides/relationships.md)に関するガイドを参照してください。
+次のリクエストは、指定されたプロパティに対して新しいプロパティを作成します。また、この呼び出しは、 `relationships` プロパティを介して、プロパティを既存の拡張機能と関連付けます。詳しくは、 [関係](../guides/relationships.md) に関するガイドを参照してください。
 
 ```shell
 curl -X POST \
@@ -427,14 +427,14 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `attributes.name` | **（必須）**&#x200B;人間が判読できるプロパティの名前。 |
-| `attributes.platform` | **（必須）**&#x200B;プロパティのプラットフォーム。Web プロパティの場合は `web`、モバイルプロパティの場合は `mobile` または `edge` を指定できます。 |
+| `attributes.platform` | **（必須）**&#x200B;プロパティのプラットフォーム。Web プロパティの場合は `web`、モバイルプロパティの場合は `mobile` または `edge` のいずれかになります。 |
 | `attributes.domains` | **（Web プロパティの場合は必須）**&#x200B;プロパティの URL ドメインの配列。 |
-| `attributes.development` | これが開発プロパティであるかどうかを示すブール値。 |
+| `attributes.development` | 開発プロパティであるかどうかを示すブール値。 |
 | `attributes.privacy` | プロパティのプライバシー関連の考慮事項を参照するために使用できる文字列。 |
-| `attributes.rule_component_sequencing_enabled` | ルールコンポーネントの優先順位をこのプロパティに対して有効にする必要があるかどうかを示すブール値。 |
-| `attributes.ssl_enabled` | このプロパティに対して Secure Sockets Layer（SSL）を有効にする必要があるかどうかを示すブール値。 |
-| `attributes.undefined_vars_return_empty` | このプロパティに対して、未定義の変数を空として返す必要があるかどうかを示すブール値。 |
-| `type` | 更新するリソースのタイプ。このエンドポイントの場合は、値を `properties` にする必要があります。 |
+| `attributes.rule_component_sequencing_enabled` | このプロパティでルールコンポーネントの順序付けを有効にする必要があるかどうかを示すブール値。 |
+| `attributes.ssl_enabled` | このプロパティで Secure Sockets Layer（SSL）を有効にする必要があるかどうかを示すブール値。 |
+| `attributes.undefined_vars_return_empty` | このプロパティの未定義変数を空として返すかどうかのブール値。 |
+| `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `properties` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -576,15 +576,15 @@ curl -X PATCH \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `attributes` | プロパティが、プロパティに対して更新される属性を表すオブジェクト。プロパティの次の属性を更新できます。 <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
+| `attributes` | プロパティが、そのプロパティに対して更新される属性を表すオブジェクト。プロパティの次の属性を更新できます。 <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
 | `id` | 更新するプロパティの `id`。この値は、リクエストパスで指定された `{PROPERTY_ID}` 値と一致する必要があります。 |
-| `type` | 更新するリソースのタイプ。このエンドポイントの場合は、値を `properties` にする必要があります。 |
+| `type` | 更新するリソースのタイプ。 このエンドポイントの場合は、値を `properties` にする必要があります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-応答が成功すると、更新されたポリシーの詳細が返されます。
+応答が成功すると、更新されたプロパティの詳細が返されます。
 
 ```json
 {
@@ -705,19 +705,19 @@ curl -X DELETE \
 
 **応答**
 
-応答が成功すると、応答本文のない HTTP ステータス 204（コンテンツなし）が返され、プロパティが削除されたことを示します。
+応答が成功すると、応答本文なしで HTTP ステータス 204（コンテンツなし）が返され、プロパティが削除されたことを示します。
 
 ## プロパティのメモの管理 {#notes}
 
-プロパティは「注目すべき」リソースで、個々のリソースでテキストベースのメモを作成および取得できます。プロパティやその他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモエンドポイントガイド](./notes.md)を参照してください。
+プロパティは「メモ機能のある」リソースのため、個々のリソースでテキストベースのメモを作成し、取得することができます。 プロパティやその他の互換性のあるリソースのメモを管理する方法について詳しくは、[メモエンドポイントガイド](./notes.md)を参照してください。
 
-## プロパティに関連するリソースの取得 {#related}
+## プロパティの関連リソースの取得 {#related}
 
-次の呼び出しは、プロパティの関連リソースを取得する方法を示しています。[プロパティを検索](#lookup)すると、これらの関係は `relationships` プロパティの下に表示されます。
+次の呼び出しは、プロパティの関連リソースを取得する方法を示しています。 [プロパティを検索](#lookup)すると、これらの関係は `relationships` プロパティの下に表示されます。
 
-Reactor API の関係について詳しくは、[関係に関するガイド](../guides/relationships.md)を参照してください。
+Reactor API の関係について詳しくは、[関係ガイド](../guides/relationships.md)を参照してください。
 
-### プロパティの関連コールバックのリスト {#callbacks}
+### プロパティに関連する callbacks のリスト {#callbacks}
 
 検索リクエストのパスに `/callbacks` を追加することで、プロパティに登録されている[コールバック](./callbacks.md)をリストできます。
 
@@ -747,7 +747,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定されたプロパティが所有するコールバックのリストが返されます。
+応答が成功すると、指定したプロパティが所有する callbacks のリストが返されます。
 
 ```json
 {
@@ -792,9 +792,9 @@ curl -X GET \
 }
 ```
 
-### プロパティの関連データ要素のリスト {#data-elements}
+### プロパティに関連するデータ要素のリスト {#data-elements}
 
-参照リクエストのパスに `/data_elements` を追加することで、プロパティが所有する[データ要素](./data-elements.md)をリストできます。
+検索リクエストのパスに `/data_elements` を追加することで、プロパティが所有する[データ要素](./data-elements.md)をリストできます。
 
 **API 形式**
 
@@ -822,7 +822,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定されたプロパティが所有するデータ要素のリストが返されます。
+応答が成功すると、指定したプロパティが所有するデータ要素のリストが返されます。
 
 ```json
 {
@@ -963,7 +963,7 @@ curl -X GET \
 
 **応答**
 
-応答に成功すると、指定されたプロパティが所有する環境のリストが返されます。
+応答が成功すると、指定したプロパティが所有する環境のリストが返されます。
 
 ```json
 {
@@ -1055,7 +1055,7 @@ curl -X GET \
 
 ### プロパティに関連する拡張機能のリスト {#extensions}
 
-参照リクエストのパスに `/extensions` を追加することで、プロパティが所有する[拡張機能](./extensions.md)をリストできます。
+検索リクエストのパスに `/extensions` を追加することで、プロパティが所有する[拡張機能](./extensions.md)をリストできます。
 
 **API 形式**
 
@@ -1083,7 +1083,7 @@ curl -X GET \
 
 **応答**
 
-応答が成功すると、指定されたプロパティが所有する拡張機能のリストが返されます。
+応答が成功すると、指定したプロパティが所有する拡張機能のリストが返されます。
 
 ```json
 {
@@ -1184,9 +1184,9 @@ curl -X GET \
 }
 ```
 
-### プロパティの関連ホストのリスト {#hosts}
+### プロパティに関連するホストのリスト {#hosts}
 
-参照リクエストのパスに `/hosts` を追加することで、プロパティで使用される[ホスト](./hosts.md)をリストできます。
+検索リクエストのパスに `/hosts` を追加することで、プロパティで使用される[ホスト](./hosts.md)をリストできます。
 
 **API 形式**
 
@@ -1262,9 +1262,9 @@ curl -X GET \
 }
 ```
 
-### プロパティの関連ルールのリスト {#rules}
+### プロパティに関連するルールのリスト {#rules}
 
-参照リクエストのパスに `/rules` を追加することで、プロパティで使用される[ルール](./rules.md)をリストできます。
+検索リクエストのパスに `/rules` を追加することで、プロパティで使用される[ルール](./rules.md)をリストできます。
 
 **API 形式**
 
@@ -1274,7 +1274,7 @@ GET  /properties/{PROPERTY_ID}/rules
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{PROPERTY_ID}` | ルールのリストを取得するロパティの `id`。 |
+| `{PROPERTY_ID}` | ルールのリストを取得するプロパティの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1375,9 +1375,9 @@ curl -X GET \
 }
 ```
 
-### プロパティに関連すうる会社の検索 {#company}
+### プロパティの関連会社の検索 {#company}
 
-検索リクエストのパスに `/company` を追加して、プロパティを所有する会社を検索できます。
+検索リクエストのパスに `/company` を追加することで、プロパティを所有する会社を検索できます。
 
 **API 形式**
 
@@ -1387,7 +1387,7 @@ GET /properties/{PROPERTY_ID}/company
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{PROPERTY_ID}` | 会社を検索するプロパティの `id`。 |
+| `{PROPERTY_ID}` | 検索する会社を持つプロパティの `id`。 |
 
 {style=&quot;table-layout:auto&quot;}
 

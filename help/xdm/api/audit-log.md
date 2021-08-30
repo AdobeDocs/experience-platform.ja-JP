@@ -5,10 +5,10 @@ title: 監査ログAPIエンドポイント
 description: スキーマレジストリAPIの/auditlogエンドポイントを使用すると、既存のXDMリソースに対して行われた変更のリストを時系列で取得できます。
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 8%
+source-wordcount: '402'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 8%
 
 ## はじめに
 
-このガイドで使用する エンドポイントは、[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用するエンドポイントは、[[!DNL Schema Registry]  API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) の一部です。続行する前に、[はじめにのガイド](./getting-started.md)を参照して、関連ドキュメントへのリンク、このドキュメントのAPI呼び出し例の読み方、およびExperience PlatformAPIを正しく呼び出すために必要なヘッダーに関する重要な情報を確認してください。
 
 `/auditlog`エンドポイントは、[!DNL Schema Registry]でサポートされるリモートプロシージャコール(RPC)の一部です。 [!DNL Schema Registry] APIの他のエンドポイントとは異なり、RPCエンドポイントは、`Accept`や`Content-Type`のような追加のヘッダーを必要とせず、`CONTAINER_ID`を使用しません。 代わりに、以下のAPI呼び出しで示すように、名前空間`/rpc`を使用する必要があります。
 

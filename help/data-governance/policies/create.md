@@ -6,16 +6,16 @@ topic-legacy: policies
 type: Tutorial
 description: Policy Service API を使用すると、データ使用ポリシーを作成および管理し、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。このドキュメントでは、Policy Service API を使用してポリシーを作成する、順を追ったチュートリアルを提供します。
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1219'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1215'
+ht-degree: 99%
 
 ---
 
 # API でデータ使用ポリシーを作成する
 
-[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) を使用すると、データ使用ポリシーを作成および管理し、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
+[Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) を使用すると、データ使用ポリシーを作成および管理し、特定のデータ使用ラベルを含むデータに対して実行できるマーケティングアクションを決定できます。
 
 このドキュメントでは、[!DNL Policy Service] API を使用してデータポリシーを作成する、順を追ったチュートリアルを提供します。API で利用可能な様々な操作についての詳しいガイドは、『[ポリシーサービス開発者ガイド](../api/getting-started.md)』を参照してください。
 

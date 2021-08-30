@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: このチュートリアルでは、マーケティング自動化システムからデータを取得し、ソースコネクタとAPIを使用してAdobe Experience Platformにデータを取り込む手順を説明します。
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1568'
 ht-degree: 19%
 
 ---
@@ -122,7 +122,7 @@ curl -X POST \
 
 ソースデータをPlatformで使用するには、必要に応じてソースデータを構造化するために、ターゲットスキーマを作成する必要があります。 次に、ターゲットスキーマを使用して、ソースデータが含まれるPlatformデータセットを作成します。 このターゲットXDMスキーマは、XDM [!DNL Individual Profile]クラスも拡張します。
 
-[スキーマレジストリAPI](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)に対してPOSTリクエストを実行すると、ターゲットXDMスキーマを作成できます。
+[スキーマレジストリAPI](https://www.adobe.io/experience-platform-apis/references/schema-registry/)に対してPOSTリクエストを実行すると、ターゲットXDMスキーマを作成できます。
 
 **API 形式**
 

@@ -1,9 +1,9 @@
 ---
 title: 監査ログの概要
 description: 監査ログを使用して、Adobe Experience Platformで誰が何のアクションを実行したかを確認する方法を説明します。
-source-git-commit: eb8144ace087c68a159aab89195832860df431e2
+source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '463'
 ht-degree: 4%
 
 ---
@@ -58,7 +58,7 @@ Select **[!UICONTROL Download log]** to export an audit log.
 
 ## APIでの監査ログの管理
 
-UIで実行できるすべてのアクションは、API呼び出しを使用して実行することもできます。 詳しくは、[APIリファレンスドキュメント](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/audit-query.yaml)を参照してください。
+UIで実行できるすべてのアクションは、API呼び出しを使用して実行することもできます。 詳しくは、[APIリファレンスドキュメント](https://www.adobe.io/experience-platform-apis/references/audit-query/)を参照してください。
 
 ## Adobe Admin Consoleの監査ログの管理
 

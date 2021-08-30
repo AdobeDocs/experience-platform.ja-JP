@@ -1,67 +1,66 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック；データ使用の準拠；適用；データ使用の準拠；適用；Segmentation Service；セグメント化；セグメント化；
+keywords: Experience Platform、ホーム、人気のあるトピック、データ使用コンプライアンス、実施、データ使用コンプライアンスの実施、セグメント化サービス、セグメント化、
 solution: Experience Platform
-title: APIを使用したオーディエンスセグメントに対するデータ使用量コンプライアンスの実施
+title: APIを使用したオーディエンスセグメントでのデータ使用コンプライアンスの実施
 topic-legacy: tutorial
 type: Tutorial
 description: このチュートリアルでは、API を使用して、リアルタイム顧客プロファイルのオーディエンスセグメントでデータ使用のコンプライアンスを徹底する方法について説明します。
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 45%
+source-wordcount: '1358'
+ht-degree: 51%
 
 ---
 
 # API を使用して、オーディエンスセグメントでデータ使用のコンプライアンスを徹底する
 
-このチュートリアルでは、APIを使用して[!DNL Real-time Customer Profile]オーディエンスセグメントのデータ使用に関するコンプライアンスを適用する手順を説明します。
+このチュートリアルでは、APIを使用して[!DNL Real-time Customer Profile]オーディエンスセグメントでデータ使用のコンプライアンスを徹底する手順を説明します。
 
 ## はじめに
 
-このチュートリアルでは、[!DNL Adobe Experience Platform]の次のコンポーネントについて十分に理解している必要があります。
+このチュートリアルでは、[!DNL Adobe Experience Platform]の次のコンポーネントに関する十分な知識が必要です。
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] は汎用の参照エンティティストアで、内の [!DNL Experience Data Model (XDM)] データの管理に使用され [!DNL Platform]ます。プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
-   - [ポリシーの結合](../../profile/api/merge-policies.md):特定の条件下で統合表示 [!DNL Real-time Customer Profile] に統合できるデータを決定するためにに使用されるルール。マージポリシーは[!DNL Data Governance]の目的で設定できます。
-- [[!DNL Segmentation]](../home.md):プロファイルストアに含まれる多数の個人グループを、同様の特性を共有し、マーケティング戦略と同様に対応する小さなグループに [!DNL Real-time Customer Profile] 分割する方法。
-- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] は、次のコンポーネントを使用して、データ使用のラベル付けと実行のためのインフラストラクチャを提供します。
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] は汎用ルックアップエンティティストアで、内のデータの管理に [!DNL Experience Data Model (XDM)] 使用されま [!DNL Platform]す。プロファイルでは、様々な企業データアセットのデータが結合され、統合されたプレゼンテーションでそのデータにアクセスできます。
+   - [結合ポリシー](../../profile/api/merge-policies.md):特定の条件下で統 [!DNL Real-time Customer Profile] 合ビューに結合できるデータを決定するためにで使用されるルール。結合ポリシーは、[!DNL Data Governance]の目的で設定できます。
+- [[!DNL Segmentation]](../home.md):プロファ [!DNL Real-time Customer Profile] イルストアに含まれる大きな個人グループを、類似した特性を共有し、マーケティング戦略と同様に応答する小さな個人グループに分割する方法です。
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] は、次のコンポーネントを使用して、データ使用のラベル付けと実施のインフラストラクチャを提供します。
    - [データ使用ラベル](../../data-governance/labels/user-guide.md)：データセットとフィールドを、それぞれのデータを処理する際に適用する機密性のレベルの観点から説明する際に使用されるラベルです。
    - [データ使用ポリシー](../../data-governance/policies/overview.md)：特定のデータ使用ラベルで分類されたデータで、どのマーケティングアクションが許可されるかを示す設定です。
    - [ポリシーの適用](../../data-governance/enforcement/overview.md):データ使用ポリシーを適用し、ポリシー違反を構成するデータ操作を防止できます。
-- [サンドボックス](../../sandboxes/home.md): [!DNL Experience Platform] は、1つの [!DNL Platform] インスタンスを個別の仮想環境に分割し、デジタルエクスペリエンスアプリケーションの開発と発展に役立つ仮想サンドボックスを提供します。
+- [サンドボックス](../../sandboxes/home.md)：[!DNL Experience Platform] は、単一の [!DNL Platform] インスタンスを別々の仮想環境に分割して、デジタルエクスペリエンスアプリケーションの開発と発展を支援する仮想サンドボックスを提供します。
 
-以下の節では、[!DNL Platform] APIを正しく呼び出すために知っておく必要がある追加情報について説明します。
+以下の節では、[!DNL Platform] APIを正しく呼び出すために知っておく必要がある追加情報を示します。
 
 ### API 呼び出し例の読み取り
 
-このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。サンプル API 呼び出しのドキュメントで使用されている規則については、[!DNL Experience Platform] トラブルシューテングガイドの[サンプル API 呼び出しの読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください。
+このチュートリアルでは、API 呼び出しの例を提供し、リクエストの形式を設定する方法を示します。この中には、パス、必須ヘッダー、適切な形式のリクエストペイロードが含まれます。また、API レスポンスで返されるサンプル JSON も示されています。ドキュメントで使用される API 呼び出し例の表記について詳しくは、 トラブルシューテングガイドの[API 呼び出し例の読み方](../../landing/troubleshooting.md#how-do-i-format-an-api-request)に関する節を参照してください[!DNL Experience Platform]。
 
 ### 必須ヘッダーの値の収集
 
-[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://www.adobe.com/go/platform-api-authentication-en)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
+[!DNL Platform] API を呼び出すには、まず[認証チュートリアル](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=ja#platform-apis)を完了する必要があります。次に示すように、すべての [!DNL Experience Platform] API 呼び出しに必要な各ヘッダーの値は認証チュートリアルで説明されています。
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- Authorization： Bearer `{ACCESS_TOKEN}`
+- x-api-key： `{API_KEY}`
+- x-gw-ims-org-id： `{IMS_ORG}`
 
-[!DNL Experience Platform]内のすべてのリソースは、特定の仮想サンドボックスに分離されています。 [!DNL Platform] APIへのすべてのリクエストには、操作が行われるサンドボックスの名前を指定するヘッダーが必要です。
+[!DNL Experience Platform] のすべてのリソースは、特定の仮想サンドボックスに分離されています。[!DNL Platform] API へのすべてのリクエストには、操作がおこなわれるサンドボックスの名前を指定するヘッダーが必要です。
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- x-sandbox-name： `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->[!DNL Platform]のサンドボックスについて詳しくは、[サンドボックスの概要ドキュメント](../../sandboxes/home.md)を参照してください。
+>[!DNL Platform] のサンドボックスについて詳しくは、[サンドボックスの概要に関するドキュメント](../../sandboxes/home.md)を参照してください。
 
 ペイロード（POST、PUT、PATCH）を含むすべてのリクエストには、以下のような追加ヘッダーが必要です。
 
-- Content-Type: application/json
+- Content-Type： application/json
 
-## セグメント定義{#merge-policy}の結合ポリシーを検索します
+## セグメント定義の結合ポリシーの検索 {#merge-policy}
 
-このワークフローでは、最初に既知のオーディエンスセグメントにアクセスします。[!DNL Real-time Customer Profile]で使用できるセグメントは、セグメント定義内にマージポリシーIDを含みます。 この結合ポリシーには、セグメントに含めるデータセットに関する情報があります。さらに、データセットには適用可能なデータ使用ラベルが含まれています。
+このワークフローでは、最初に既知のオーディエンスセグメントにアクセスします。[!DNL Real-time Customer Profile]で使用できるセグメントのセグメント定義には、結合ポリシーIDが含まれます。 この結合ポリシーには、セグメントに含めるデータセットに関する情報があります。さらに、データセットには適用可能なデータ使用ラベルが含まれています。
 
-[!DNL Segmentation] APIを使用して、IDでセグメント定義を検索し、関連付けられている結合ポリシーを見つけることができます。
+[!DNL Segmentation] APIを使用して、IDでセグメント定義を検索し、関連する結合ポリシーを見つけることができます。
 
 **API 形式**
 
@@ -84,7 +83,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**応答** 
+**応答**
 
 リクエストが成功した場合は、セグメント定義の詳細が返されます。
 
@@ -126,9 +125,9 @@ curl -X GET \
 | -------- | ----------- |
 | `mergePolicyId` | セグメント定義に使用される結合ポリシーの ID。これは次の手順で使用します。 |
 
-## 結合ポリシーからソースデータセットを検索する  {#datasets}
+## 結合ポリシーからソースデータセットを検索する {#datasets}
 
-マージ・ポリシーには、ソース・データセットに関する情報が含まれ、ソース・データセットにはデータ使用ラベルが含まれます。 [!DNL Profile] APIにGETリクエストでマージポリシーIDを指定すると、マージポリシーの詳細を参照できます。 結合ポリシーの詳細については、[結合ポリシーエンドポイントガイド](../../profile/api/merge-policies.md)を参照してください。
+結合ポリシーには、ソースデータセットに関する情報が含まれ、ソースデータセットにはデータ使用ラベルが含まれます。 [!DNL Profile] APIへのGETリクエストで結合ポリシーIDを指定することで、結合ポリシーの詳細を検索できます。 結合ポリシーの詳細については、『[結合ポリシーエンドポイントガイド](../../profile/api/merge-policies.md)』を参照してください。
 
 **API 形式**
 
@@ -183,15 +182,15 @@ curl -X GET \
 | `attributeMerge.type` | 結合ポリシーのデータ優先の設定タイプ。値が `dataSetPrecedence` の場合、この結合ポリシーに関連付けられているデータセットが `attributeMerge > data > order` の下に表示されます。値が `timestampOrdered` の場合、`schema.name` で参照されているスキーマに関連付けられているすべてのデータセットが結合ポリシーで使用されます。 |
 | `attributeMerge.data.order` | `attributeMerge.type` が `dataSetPrecedence` の場合、この属性は、結合ポリシーで使用されるデータセットの IDを含む配列になります。これらの ID は次の手順で使用します。 |
 
-## ポリシー違反のデータセットを評価
+## データセットのポリシー違反の評価
 
 >[!NOTE]
 >
-> この手順では、特定のラベルを含むデータに対して特定のマーケティング操作が実行されないようにする、アクティブなデータ使用ポリシーが少なくとも1つあることを前提としています。 評価対象のデータセットに対して適切な使用ポリシーがない場合は、[ポリシー作成チュートリアル](../../data-governance/policies/create.md)に従って作成し、次の手順に進んでください。
+> この手順では、特定のラベルを含むデータに対して特定のマーケティングアクションが実行されるのを防ぐ、少なくとも1つのアクティブなデータ使用ポリシーがあることを前提としています。 評価するデータセットに適用可能な使用ポリシーがない場合は、[ポリシー作成のチュートリアル](../../data-governance/policies/create.md)に従ってポリシーを作成してから、この手順を続行してください。
 
-マージポリシーのソースデータセットのIDを取得したら、[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)を使用して、データ使用ポリシーの違反を確認するために、特定のマーケティング操作に対するデータセットを評価できます。
+結合ポリシーのソースデータセットのIDを取得したら、[ポリシーサービスAPI](https://www.adobe.io/experience-platform-apis/references/policy-service/)を使用して、特定のマーケティングアクションに対してこれらのデータセットを評価し、データ使用ポリシー違反を確認できます。
 
-データセットを評価するには、次の例に示すように、POSTリクエストのパスにマーケティングアクションの名前を指定し、リクエスト本文内にデータセットIDを指定する必要があります。
+POSTを評価するには、次の例に示すように、データセット本文内にデータセットIDを指定しながら、データセットリクエストのパスにマーケティングアクションの名前を指定する必要があります。
 
 **API 形式**
 
@@ -202,11 +201,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | パラメーター | 説明 |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | データセットを評価するデータ使用ポリシーに関連付けられたマーケティングアクションの名前。 ポリシーがAdobeによって定義されたか組織で定義されたかに応じて、それぞれ`/marketingActions/core`または`/marketingActions/custom`を使用する必要があります。 |
+| `{MARKETING_ACTION_NAME}` | データセットを評価するデータ使用ポリシーに関連付けられたマーケティングアクションの名前。 ポリシーがAdobeによって定義されたか組織によって定義されたかに応じて、 `/marketingActions/core`または`/marketingActions/custom`を使用する必要があります。 |
 
 **リクエスト**
 
-次のリクエストは、[前の手順](#datasets)で取得したデータセットに対して`exportToThirdParty`マーケティングアクションをテストします。 リクエストペイロードは、各データセットのIDを含む配列です。
+次のリクエストは、`exportToThirdParty`マーケティングアクションを、[前の手順](#datasets)で取得したデータセットに対してテストします。 リクエストペイロードは、各データセットのIDを含む配列です。
 
 ```shell
 curl -X POST \
@@ -235,7 +234,7 @@ curl -X POST \
 
 **応答**
 
-成功した応答は、マーケティングアクションのURI、指定されたデータセットから収集されたデータ使用ラベル、およびこれらのラベルに対するアクションのテストの結果として違反されたデータ使用ポリシーのリストを返します。 この例では、`violatedPolicies`配列に「データをサードパーティにエクスポート」ポリシーが表示され、マーケティング操作がポリシー違反をトリガーしたことを示しています。
+正常な応答は、マーケティングアクションのURI、提供されたデータセットから収集されたデータ使用ラベル、およびこれらのラベルに対するアクションのテストの結果として違反されたデータ使用ポリシーのリストを返します。 この例では、「サードパーティへのデータ書き出し」ポリシーが`violatedPolicies`配列に表示され、マーケティングアクションによってポリシー違反がトリガーされたことを示しています。
 
 ```json
 {
@@ -362,22 +361,22 @@ curl -X POST \
 | プロパティ | 説明 |
 | --- | --- |
 | `duleLabels` | 提供されたデータセットから抽出されたデータ使用ラベルのリスト。 |
-| `discoveredLabels` | リクエストペイロードで提供されたデータセットのリスト。各ペイロードで見つかったデータセットレベルとフィールドレベルのラベルが表示されます。 |
-| `violatedPolicies` | 指定された`duleLabels`に対するマーケティングアクション（`marketingActionRef`で指定）のテストで違反したデータ使用ポリシーをリストした配列。 |
+| `discoveredLabels` | リクエストペイロードで提供されたデータセットのリスト。それぞれに見つかったデータセットレベルとフィールドレベルのラベルを表示します。 |
+| `violatedPolicies` | 指定された`duleLabels`に対して（`marketingActionRef`で指定された）マーケティングアクションのテストに違反したデータ使用ポリシーをリストする配列です。 |
 
-API応答で返されるデータを使用して、エクスペリエンスアプリケーション内でプロトコルを設定し、ポリシー違反が発生した場合に適切にポリシー違反を適用することができます。
+API応答で返されるデータを使用して、エクスペリエンスアプリケーション内でプロトコルを設定し、ポリシー違反が発生した場合に適切にポリシー違反を実施できます。
 
 ## データフィールドをフィルタリングする
 
-オーディエンスセグメントが評価に合格しない場合は、次に示す2つの方法のいずれかを使用して、セグメントに含まれるデータを調整できます。
+オーディエンスセグメントが評価に合格しない場合、以下の2つの方法のいずれかを使用して、セグメントに含まれるデータを調整できます。
 
 ### セグメント定義の結合ポリシーを更新する
 
-セグメント定義の結合ポリシーを更新すると、セグメントジョブの実行時に含まれるデータセットとフィールドが調整されます。詳しくは、APIマージポリシーチュートリアルの既存のマージポリシー](../../profile/api/merge-policies.md#update)の更新に関する節を参照してください。[
+セグメント定義の結合ポリシーを更新すると、セグメントジョブの実行時に含まれるデータセットとフィールドが調整されます。詳しくは、 API結合ポリシーのチュートリアルで、既存の結合ポリシー](../../profile/api/merge-policies.md#update)の更新に関する節を参照してください。[
 
 ### セグメントの書き出し時に特定のデータフィールドを制限する
 
-[!DNL Segmentation] APIを使用してセグメントをデータセットにエクスポートする場合、`fields`パラメーターを使用して、エクスポートに含まれるデータをフィルターできます。 このパラメーターに追加したデータフィールドは書き出しに含まれ、その他のデータフィールドはすべて除外されます。
+[!DNL Segmentation] APIを使用してセグメントをデータセットに書き出す場合は、`fields`パラメーターを使用して、書き出しに含まれるデータをフィルタリングできます。 このパラメーターに追加したデータフィールドは書き出しに含まれ、その他のデータフィールドはすべて除外されます。
 
 「A」、「B」および「C」という名前のデータフィールドを持つセグメントについて考えてみます。フィールド「C」のみを書き出す場合、`fields` パラメーターにはフィールド「C」だけを指定します。こうすることで、セグメントを書き出す際に、「A」と「B」のフィールドが除外されます。
 
@@ -385,4 +384,4 @@ API応答で返されるデータを使用して、エクスペリエンスア�
 
 ## 次の手順
 
-このチュートリアルでは、オーディエンスセグメントに関連付けられているデータ使用ラベルを検索し、特定のマーケティングアクションに対してポリシー違反の有無をテストしました。[!DNL Experience Platform]の[!DNL Data Governance]についての詳細は、[[!DNL Data Governance]](../../data-governance/home.md)の概要をお読みください。
+このチュートリアルでは、オーディエンスセグメントに関連付けられているデータ使用ラベルを検索し、特定のマーケティングアクションに対してポリシー違反の有無をテストしました。[!DNL Experience Platform]の[!DNL Data Governance]の詳細については、[[!DNL Data Governance]](../../data-governance/home.md)の概要を参照してください。

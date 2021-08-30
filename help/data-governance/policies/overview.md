@@ -5,10 +5,10 @@ title: データ使用ポリシーの概要
 topic-legacy: policies
 description: データ使用ラベルがデータのコンプライアンスを効果的にサポートするためには、データ使用ポリシーを実装する必要があります。データ使用ポリシーは、Experience Platform 内のデータに対して実行を許可または制限するマーケティングアクションの種類を記述するルールです
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1077'
-ht-degree: 100%
+source-wordcount: '1073'
+ht-degree: 99%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 100%
 >
 >マーケティングアクション自体は、データの使用を制限しません。これらのアクションのポリシー違反を評価するには、有効なデータ使用ポリシーに含める必要があります。
 
-組織のサービスでデータの使用が発生した場合、ポリシー違反を識別できるように、関連するマーケティングアクションを示す必要があります。その後、[Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) を使用して、統合内のポリシー違反を確認できます。
+組織のサービスでデータの使用が発生した場合、ポリシー違反を識別できるように、関連するマーケティングアクションを示す必要があります。その後、[Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) を使用して、統合内のポリシー違反を確認できます。
 
 >[!NOTE]
 >

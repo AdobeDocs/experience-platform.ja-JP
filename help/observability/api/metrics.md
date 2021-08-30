@@ -1,40 +1,39 @@
 ---
-keywords: Experience Platform；ホーム；人気の高いトピック
+keywords: Experience Platform;ホーム;人気のトピック
 solution: Experience Platform
 title: 指標APIエンドポイント
 topic-legacy: developer guide
-description: Observibility Insights APIを使用して、Experience Platformで観察可能な指標を取得する方法を説明します。
+description: 観察性インサイトAPIを使用して、Experience Platformの観察性指標を取得する方法を説明します。
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '2054'
-ht-degree: 41%
+source-wordcount: '2050'
+ht-degree: 45%
 
 ---
 
 # 指標エンドポイント
 
-観察性指標は、Adobe Experience Platformの様々な機能の使用状況の統計、過去の傾向、およびパフォーマンス指標に関する洞察を提供します。 [!DNL Observability Insights API]の`/metrics`エンドポイントを使用すると、[!DNL Platform]の組織のアクティビティの指標データをプログラムで取得できます。
+観察性指標は、Adobe Experience Platformの様々な機能の使用状況統計、過去の傾向、パフォーマンス指標に関するインサイトを提供します。 [!DNL Observability Insights API]の`/metrics`エンドポイントを使用すると、[!DNL Platform]内の組織のアクティビティの指標データをプログラムで取得できます。
 
 ## はじめに
 
-このガイドで使用されるAPIエンドポイントは、[[!DNL Observability Insights] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)の一部です。 先に進む前に、[はじめにガイド](./getting-started.md)を参照し、関連ドキュメントへのリンク、このドキュメントのサンプルAPI呼び出しの読み方、および任意の[!DNL Experience Platform] APIの呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
+このガイドで使用する API エンドポイントは、[[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/) の一部です。先に進む前に、[はじめる前に](./getting-started.md)のガイドを参照し、関連ドキュメントへのリンク、このドキュメントのサンプル API 呼び出しを読み取るためのガイドおよび任意の [!DNL Experience Platform] API の呼び出しを成功させるのに必要なヘッダーに関する重要な情報を確認してください。
 
 ## 観察性指標の取得
 
-APIを使用して指標データを取得する方法は2つあります。
+APIを使用して指標データを取得する方法は、次の2つがサポートされています。
 
 * [バージョン1](#v1):クエリパラメーターを使用して指標を指定します。
-* [バージョン2](#v2):JSONペイロードを使用してフィルターを指定し、指標に適用します。
+* [バージョン2](#v2):JSONペイロードを使用して指標に対してフィルターを指定し、適用する。
 
-### バージョン1 {#v1}
+### バージョン 1 {#v1}
 
-クエリパラメーターを使用して指標を指定し、`/metrics`エンドポイントにGETリクエストを行うことで、指標データを取得できます。
+`/metrics`エンドポイントにGETリクエストを送信し、クエリパラメーターを使用して指標を指定することで、指標データを取得できます。
 
 **API 形式**
 
-`metric`パラメーターに少なくとも1つの指標を指定する必要があります。 その他のクエリパラメーターはオプションで、結果をフィルタリングするためのものです。
+`metric`パラメーターには、少なくとも1つの指標を指定する必要があります。 その他のクエリパラメーターはオプションで、結果をフィルタリングするためのものです。
 
 ```http
 GET /metrics?metric={METRIC}
@@ -47,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | パラメーター | 説明 |
 | --- | --- |
 | `{METRIC}` | 表示する指標。1 回の呼び出しで複数の指標を組み合わせる場合、アンパサンド（`&`）を使用して個々の指標を区切る必要があります。例：`metric={METRIC_1}&metric={METRIC_2}`。 |
-| `{ID}` | 指標を公開する特定の[!DNL Platform]リソースの識別子。 この ID は、使用する指標に応じて、オプション/必須/該当しない場合があります。各指標でサポートされているID（必須と任意の両方）を含む、使用可能な指標のリストについては、[付録](#available-metrics)を参照してください。 |
+| `{ID}` | 指標を表示する特定の[!DNL Platform]リソースの識別子。 この ID は、使用する指標に応じて、オプション/必須/該当しない場合があります。使用可能な指標のリストについては、[付録](#available-metrics)を参照してください。各指標でサポートされるID（必須とオプションの両方）も含まれます。 |
 | `{DATE_RANGE}` | ISO 8601 形式（例：`2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`）で公開する指標の日付範囲。 |
 
 **リクエスト**
@@ -115,9 +114,9 @@ curl -X GET \
 }
 ```
 
-### バージョン2 {#v2}
+### バージョン 2 {#v2}
 
-ペイロードで取得する指標を指定し、`/metrics`エンドポイントにPOSTリクエストを行うことで、指標データを取得できます。
+`/metrics`エンドポイントにPOSTリクエストを送信し、ペイロードで取得する指標を指定することで、指標データを取得できます。
 
 **API 形式**
 
@@ -171,18 +170,18 @@ curl -X POST \
 | --- | --- |
 | `start` | 指標データを取得する最も早い日時。 |
 | `end` | 指標データを取得する最新の日時。 |
-| `granularity` | 指標データを分割する時間間隔を示すオプションのフィールドです。 例えば、`DAY`という値を指定すると、`start` ～ `end`の間の各日の指標が返されますが、`MONTH`という値を指定すると、月別に指標の結果がグループ化されます。 このフィールドを使用する場合、データをグループ化する集計関数を示すために、対応する`downsample`プロパティも指定する必要があります。 |
-| `metrics` | 取得する指標ごとに1つずつ、オブジェクトの配列。 |
-| `name` | 観察性インサイトで認識される指標の名前。 使用できる指標名の完全なリストについては、付録[](#available-metrics)を参照してください。 |
-| `filters` | 特定のデータセットで指標をフィルターできるオプションのフィールドです。 このフィールドはオブジェクトの配列（各フィルターに1つずつ）で、各オブジェクトには次のプロパティが含まれています。 <ul><li>`name`:指標をフィルターするエンティティのタイプ。現在は、`dataSets` のみがサポートされています。</li><li>`value`:1つ以上のデータセットのID。複数のデータセットIDを1つの文字列として指定できます。各IDは縦棒グラフ文字(`|`)で区切ります。</li><li>`groupBy`:trueに設定した場合、対応するデータセットが、指標の結果を別々に返す必要がある複数のデータセットを `value` 表すことを示します。falseに設定した場合、これらのデータセットの指標結果はグループ化されます。</li></ul> |
-| `aggregator` | 複数の時系列レコードを単一の結果にグループ化するために使用する集計関数を指定します。 使用可能なアグリゲータの詳細については、[OpenTSDBドキュメント](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html)を参照してください。 |
-| `downsample` | フィールドを間隔（「グループ」）に分けて並べ替えることで、指標データのサンプリング率を減らす集計関数を指定できるオプションのフィールドです。 ダウンサンプリングの間隔は`granularity`プロパティで決定します。 ダウンサンプリングの詳細については、[OpenTSDBドキュメント](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html)を参照してください。 |
+| `granularity` | 指標データを除算する時間間隔を示すオプションのフィールド。 例えば、値`DAY`は`start`から`end`の間の各日の指標を返しますが、値`MONTH`は指標の結果を月別にグループ化します。 このフィールドを使用する場合、データをグループ化する集計機能を示す`downsample`プロパティも指定する必要があります。 |
+| `metrics` | オブジェクトの配列。取得する各指標に対して1つ。 |
+| `name` | 観察性インサイトで認識される指標の名前。 使用可能な指標名の完全なリストについては、[付録](#available-metrics)を参照してください。 |
+| `filters` | 特定のデータセットで指標をフィルタリングできるオプションのフィールド。 フィールドはオブジェクトの配列（各フィルターに対して1つ）で、各オブジェクトには次のプロパティが含まれます。 <ul><li>`name`:指標をフィルターするエンティティのタイプ。現在は、`dataSets` のみがサポートされています。</li><li>`value`:1つ以上のデータセットのID。複数のデータセットIDを1つの文字列として指定でき、各IDを縦棒文字(`|`)で区切ります。</li><li>`groupBy`:trueに設定した場合、は、対応するが、指標の結果を別 `value` 々に返す必要がある複数のデータセットを表すことを示します。falseに設定した場合、これらのデータセットの指標の結果はグループ化されます。</li></ul> |
+| `aggregator` | 複数の時系列レコードを1つの結果にグループ化する場合に使用する集計関数を指定します。 利用可能な集積の詳細については、[OpenTSDBのドキュメント](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html)を参照してください。 |
+| `downsample` | フィールドを間隔（「グループ」）に並べ替えることで、集計関数を指定して、指標データのサンプリング率を減らすことができるオプションのフィールドです。 ダウンサンプリングの間隔は`granularity`プロパティで決まります。 ダウンサンプリングについて詳しくは、[OpenTSDBのドキュメント](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html)を参照してください。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 **応答**
 
-成功した応答は、リクエストで指定された指標とフィルターの結果のデータポイントを返します。
+リクエストが成功した場合は、リクエストで指定された指標およびフィルターの結果のデータポイントが返されます。
 
 ```json
 {
@@ -265,30 +264,30 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `metricResponses` | オブジェクトが、リクエストで指定された各指標を表す配列。 各オブジェクトには、フィルター設定と返された指標データに関する情報が含まれます。 |
+| `metricResponses` | リクエストで指定された各指標を表すオブジェクトを持つ配列。 各オブジェクトには、フィルター設定と返される指標データに関する情報が含まれます。 |
 | `metric` | リクエストで提供される指標の1つの名前。 |
 | `filters` | 指定した指標のフィルター設定。 |
-| `datapoints` | オブジェクトが指定した指標とフィルターの結果を表す配列。 配列内のオブジェクトの数は、リクエストで指定されたフィルタオプションに応じて異なります。 フィルターが指定されない場合、配列にはすべてのデータセットを表す1つのオブジェクトのみが含まれます。 |
-| `groupBy` | 指標の`filter`プロパティで複数のデータセットが指定され、リクエストで`groupBy`オプションがtrueに設定された場合、このオブジェクトには、対応する`dps`プロパティが適用されるデータセットのIDが含まれます。<br><br>このオブジェクトが応答で空の場合、対応する `dps` プロパティは、 `filters` 配列で指定されたすべてのデータセット(フィルターが指定されていない場合は、内のすべてのデータセット) [!DNL Platform] に適用されます。 |
-| `dps` | 指定した指標、フィルターおよび時間範囲に対して返されるデータ。 このオブジェクトの各キーは、指定した指標に対応する値を持つタイムスタンプを表します。 各データポイント間の時間は、リクエストで指定された`granularity`値に応じて異なります。 |
+| `datapoints` | 指定した指標とフィルターの結果を表すオブジェクトを持つ配列。 配列内のオブジェクトの数は、リクエストで指定したフィルターオプションによって異なります。 フィルターが指定されなかった場合、配列にはすべてのデータセットを表す1つのオブジェクトのみが含まれます。 |
+| `groupBy` | 1つの指標の`filter`プロパティで複数のデータセットが指定され、リクエストで`groupBy`オプションがtrueに設定された場合、このオブジェクトには、対応する`dps`プロパティが適用されるデータセットのIDが含まれます。<br><br>応答でこのオブジェクトが空の場合、対応するプロパティ `dps` は、配列で指定されたすべてのデータセット（またはフィルターが指定されていない場合はのすべてのデータセット）に適用されま `filters`  [!DNL Platform] す。 |
+| `dps` | 指定された指標、フィルターおよび時間範囲の返されたデータ。 このオブジェクトの各キーは、指定した指標に対応する値を持つタイムスタンプを表します。 各データポイント間の期間は、リクエストで指定された`granularity`値に応じて異なります。 |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## 付録
 
-次の節では、`/metrics`エンドポイントの使用に関する追加情報について説明します。
+次の節では、`/metrics`エンドポイントの使用に関する追加情報を示します。
 
 ### 使用可能な指標 {#available-metrics}
 
-次の表に、[!DNL Observability Insights]によって公開されるすべての指標を[!DNL Platform]サービスによって分類したリストを示します。 各指標には、説明と受け入れられた ID クエリーパラメーターが含まれます。
+次の表に、[!DNL Observability Insights]によって公開されるすべての指標を[!DNL Platform]サービス別に示します。 各指標には、説明と受け入れられた ID クエリーパラメーターが含まれます。
 
 >[!NOTE]
 >
->リストに表示されているIDクエリパラメーターは、別途記述しない限り、すべてオプションです。
+>特に指定のない限り、リストに表示されるIDクエリパラメーターはすべてオプションです。
 
 #### [!DNL Data Ingestion] {#ingestion}
 
-次の表に、Adobe Experience Platform[!DNL Data Ingestion]の指標の概要を示します。 **太字**&#x200B;の指標はストリーミング取得指標です。
+次の表に、Adobe Experience Platform [!DNL Data Ingestion]の指標の概要を示します。 **太字**&#x200B;の指標はストリーミング取得指標です。
 
 | インサイト指標 | 説明 | ID クエリーパラメーター |
 | ---- | ---- | ---- |
@@ -318,12 +317,12 @@ curl -X POST \
 
 #### [!DNL Identity Service] {#identity}
 
-次の表に、Adobe Experience Platform[!DNL Identity Service]の指標の概要を示します。
+次の表に、Adobe Experience Platform [!DNL Identity Service]の指標の概要を示します。
 
 | インサイト指標 | 説明 | ID クエリーパラメーター |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | 1つのデータセットまたはすべてのデータセットに対して[!DNL Identity Service]によってデータソースに書き込まれたレコードの数。 | データセット ID |
-| timeseries.identity.dataset.recordfailed.count | [!DNL Identity Service]が失敗したレコードの数（1つのデータセットまたはすべてのデータセット）。 | データセット ID |
+| timeseries.identity.dataset.recordsuccess.count | 1つのデータセットまたはすべてのデータセットに対して、[!DNL Identity Service]によってデータソースに書き込まれたレコードの数。 | データセット ID |
+| timeseries.identity.dataset.recordfailed.count | 1つのデータセットまたはすべてのデータセットに対して、[!DNL Identity Service]が失敗したレコードの数。 | データセット ID |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | ユーザーが正常に取得した ID レコードの名前空間数。 | 名前空間 ID（**必須**） |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | 名前空間が失敗した ID レコードの数。 | 名前空間 ID（**必須**） |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | 名前空間がスキップした ID レコードの数。 | 名前空間 ID（**必須**） |
@@ -336,7 +335,7 @@ curl -X POST \
 
 #### [!DNL Privacy Service] {#privacy}
 
-次の表に、Adobe Experience Platform[!DNL Privacy Service]の指標の概要を示します。
+次の表に、Adobe Experience Platform [!DNL Privacy Service]の指標の概要を示します。
 
 | インサイト指標 | 説明 | ID クエリーパラメーター |
 | ---- | ---- | ---- |
@@ -348,7 +347,7 @@ curl -X POST \
 
 #### [!DNL Query Service] {#query}
 
-次の表に、Adobe Experience Platform[!DNL Query Service]の指標の概要を示します。
+次の表に、Adobe Experience Platform [!DNL Query Service]の指標の概要を示します。
 
 | インサイト指標 | 説明 | ID クエリーパラメーター |
 | ---- | ---- | ---- |
@@ -367,11 +366,11 @@ curl -X POST \
 
 | インサイト指標 | 説明 | ID クエリーパラメーター |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | [!DNL Data Lake]から[!DNL Profile]によって読み取られた、1つのデータセットまたはすべてのデータセットに対するレコード数。 | データセット ID |
-| timeseries.profiles.dataset.recordsuccess.count | [!DNL Profile]によってデータソースに書き込まれたレコードの数（1つのデータセットまたはすべてのデータセット）。 | データセット ID |
-| timeseries.profiles.dataset.recordfailed.count | [!DNL Profile]が失敗したレコードの数（1つのデータセットまたはすべてのデータセット）。 | データセット ID |
-| timeseries.profiles.dataset.batchsuccess.count | データセットまたはすべてのデータセットに取り込む[!DNL Profile]バッチの数。 | データセット ID |
-| timeseries.profiles.dataset.batchfailed.count | 1つのデータセットまたはすべてのデータセットに対して失敗した[!DNL Profile]バッチの数。 | データセット ID |
+| timeseries.profiles.dataset.recordread.count | 1つのデータセット、またはすべてのデータセットに対して、[!DNL Data Lake]から[!DNL Profile]によって読み取られたレコードの数。 | データセット ID |
+| timeseries.profiles.dataset.recordsuccess.count | 1つのデータセットまたはすべてのデータセットに対して、[!DNL Profile]によってデータソースに書き込まれたレコードの数。 | データセット ID |
+| timeseries.profiles.dataset.recordfailed.count | 1つのデータセットまたはすべてのデータセットに対して、[!DNL Profile]が失敗したレコードの数。 | データセット ID |
+| timeseries.profiles.dataset.batchsuccess.count | 1つのデータセットまたはすべてのデータセットに対して取り込まれた[!DNL Profile]バッチの数。 | データセット ID |
+| timeseries.profiles.dataset.batchfailed.count | 1つのデータセットまたはすべてのデータセットで失敗した[!DNL Profile]バッチの数。 | データセット ID |
 | platform.ups.ingest.streaming.request.m1_rate | 受信要求の速度。 | IMS 組織 (**必須**) |
 | platform.ups.ingest.streaming.access.put.success.m1_rate | 取得成功率。 | IMS 組織 (**必須**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | データセットに対して取得された新しいレコードの割合。 | データセット ID (**必須**) |
@@ -386,7 +385,7 @@ curl -X POST \
 
 ### エラーメッセージ
 
-`/metrics`エンドポイントからの応答は、特定の条件下でエラーメッセージを返す場合があります。 これらのエラーメッセージは、次の形式で返されます。
+`/metrics`エンドポイントからの応答は、特定の条件下でエラーメッセージを返す場合があります。 これらのエラーメッセージは次の形式で返されます。
 
 ```json
 {
@@ -414,19 +413,19 @@ curl -X POST \
 
 | プロパティ | 説明 |
 | --- | --- |
-| `title` | エラーメッセージと発生した可能性のある理由を含む文字列です。 |
+| `title` | エラーメッセージと、エラーが発生した可能性のある理由を含む文字列。 |
 | `report` | エラーをトリガーした操作で使用されているサンドボックスやIMS組織など、エラーに関するコンテキスト情報が含まれます。 |
 
 {style=&quot;table-layout:auto&quot;}
 
-次の表に、APIから返される可能性のある様々なエラーコードをリストします。
+次の表に、APIから返される様々なエラーコードを示します。
 
 | エラーコード | タイトル | 説明 |
 | --- | --- | --- |
-| `INSGHT-1000-400` | 不正な要求ペイロード | 要求のペイロードに問題がありました。 ペイロードの書式が[上](#v2)に示すとおりに一致することを確認してください。 考えられる理由のいずれかによって、このエラーがトリガーする場合があります。<ul><li>`aggregator`などの必須フィールドがありません</li><li>無効な指標</li><li>要求に無効なアグリゲータが含まれています</li><li>開始日は、終了日の後に発生します</li></ul> |
-| `INSGHT-1001-400` | 指標のクエリに失敗しました | リクエストが正しくないか、クエリ自体を解析できないため、指標データベースのクエリを試みたときにエラーが発生しました。 再試行する前に、リクエストの形式が正しく設定されていることを確認してください。 |
-| `INSGHT-1001-500` | 指標のクエリに失敗しました | サーバーエラーが原因で、指標データベースのクエリを試行中にエラーが発生しました。 もう一度要求してみて、問題が解決しない場合は、Adobeサポートに問い合わせてください。 |
-| `INSGHT-1002-500` | サービスエラー | 内部エラーが原因で要求を処理できませんでした。 もう一度要求してみて、問題が解決しない場合は、Adobeサポートに問い合わせてください。 |
-| `INSGHT-1003-401` | Sandbox検証エラー | サンドボックス検証エラーが原因で、要求を処理できませんでした。 `x-sandbox-name`ヘッダーに入力したSandbox名が、IMS組織に対して有効な有効なSandboxであることを確認してから、要求を再試行してください。 |
+| `INSGHT-1000-400` | 不正なリクエストペイロード | リクエストペイロードに問題がありました。 [上記](#v2)に示すように、ペイロードの形式が完全に一致していることを確認してください。 考えられる理由のいずれかで、次のエラーがトリガーする場合があります。<ul><li>`aggregator`などの必須フィールドがありません</li><li>無効な指標</li><li>リクエストに無効な集計が含まれています</li><li>開始日は、終了日の後に設定されます</li></ul> |
+| `INSGHT-1001-400` | 指標のクエリに失敗しました | リクエストが正しくないか、クエリ自体を解析できないため、指標データベースをクエリしようとしたときにエラーが発生しました。 再試行する前に、リクエストが正しい形式になっていることを確認してください。 |
+| `INSGHT-1001-500` | 指標のクエリに失敗しました | サーバーエラーが原因で、指標データベースに対してクエリを実行しようとしたときにエラーが発生しました。 要求をもう一度試してみてください。問題が解決しない場合は、Adobeサポートにお問い合わせください。 |
+| `INSGHT-1002-500` | サービスエラー | 内部エラーが原因で、要求を処理できませんでした。 要求をもう一度試してみてください。問題が解決しない場合は、Adobeサポートにお問い合わせください。 |
+| `INSGHT-1003-401` | サンドボックス検証エラー | サンドボックス検証エラーが原因で、要求を処理できませんでした。 要求を再試行する前に、`x-sandbox-name`ヘッダーで指定したサンドボックス名が、IMS組織に対して有効な有効なサンドボックスを表していることを確認してください。 |
 
 {style=&quot;table-layout:auto&quot;}
